@@ -33,12 +33,12 @@ public final class ViewDefinitionResponse {
      */
     private final List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources;
 
-    @OutputCustomType.Constructor({"query","useExplicitColumnNames","useLegacySql","userDefinedFunctionResources"})
+    @OutputCustomType.Constructor
     private ViewDefinitionResponse(
-        String query,
-        Boolean useExplicitColumnNames,
-        Boolean useLegacySql,
-        List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("useExplicitColumnNames") Boolean useExplicitColumnNames,
+        @OutputCustomType.Parameter("useLegacySql") Boolean useLegacySql,
+        @OutputCustomType.Parameter("userDefinedFunctionResources") List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
         this.query = query;
         this.useExplicitColumnNames = useExplicitColumnNames;
         this.useLegacySql = useLegacySql;
@@ -100,22 +100,22 @@ public final class ViewDefinitionResponse {
     	      this.userDefinedFunctionResources = defaults.userDefinedFunctionResources;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setUseExplicitColumnNames(Boolean useExplicitColumnNames) {
+        public Builder useExplicitColumnNames(Boolean useExplicitColumnNames) {
             this.useExplicitColumnNames = Objects.requireNonNull(useExplicitColumnNames);
             return this;
         }
 
-        public Builder setUseLegacySql(Boolean useLegacySql) {
+        public Builder useLegacySql(Boolean useLegacySql) {
             this.useLegacySql = Objects.requireNonNull(useLegacySql);
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(List<UserDefinedFunctionResourceResponse> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }

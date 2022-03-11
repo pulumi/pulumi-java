@@ -15,8 +15,8 @@ public final class NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"pubsubTopic"})
-    private NotificationConfigResponse(String pubsubTopic) {
+    @OutputCustomType.Constructor
+    private NotificationConfigResponse(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 
@@ -48,7 +48,7 @@ public final class NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

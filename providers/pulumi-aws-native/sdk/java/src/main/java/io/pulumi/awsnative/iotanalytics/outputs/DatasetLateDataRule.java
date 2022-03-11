@@ -15,10 +15,10 @@ public final class DatasetLateDataRule {
     private final DatasetLateDataRuleConfiguration ruleConfiguration;
     private final @Nullable String ruleName;
 
-    @OutputCustomType.Constructor({"ruleConfiguration","ruleName"})
+    @OutputCustomType.Constructor
     private DatasetLateDataRule(
-        DatasetLateDataRuleConfiguration ruleConfiguration,
-        @Nullable String ruleName) {
+        @OutputCustomType.Parameter("ruleConfiguration") DatasetLateDataRuleConfiguration ruleConfiguration,
+        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName) {
         this.ruleConfiguration = ruleConfiguration;
         this.ruleName = ruleName;
     }
@@ -52,12 +52,12 @@ public final class DatasetLateDataRule {
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setRuleConfiguration(DatasetLateDataRuleConfiguration ruleConfiguration) {
+        public Builder ruleConfiguration(DatasetLateDataRuleConfiguration ruleConfiguration) {
             this.ruleConfiguration = Objects.requireNonNull(ruleConfiguration);
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }

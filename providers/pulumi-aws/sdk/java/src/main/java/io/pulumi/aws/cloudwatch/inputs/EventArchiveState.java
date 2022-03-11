@@ -135,62 +135,62 @@ public final class EventArchiveState extends io.pulumi.resources.ResourceArgs {
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Input<String> eventPattern) {
+        public Builder eventPattern(@Nullable Input<String> eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable String eventPattern) {
+        public Builder eventPattern(@Nullable String eventPattern) {
             this.eventPattern = Input.ofNullable(eventPattern);
             return this;
         }
 
-        public Builder setEventSourceArn(@Nullable Input<String> eventSourceArn) {
+        public Builder eventSourceArn(@Nullable Input<String> eventSourceArn) {
             this.eventSourceArn = eventSourceArn;
             return this;
         }
 
-        public Builder setEventSourceArn(@Nullable String eventSourceArn) {
+        public Builder eventSourceArn(@Nullable String eventSourceArn) {
             this.eventSourceArn = Input.ofNullable(eventSourceArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Input<Integer> retentionDays) {
+        public Builder retentionDays(@Nullable Input<Integer> retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }

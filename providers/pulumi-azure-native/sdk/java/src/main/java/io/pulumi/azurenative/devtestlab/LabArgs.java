@@ -240,122 +240,122 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnnouncement(@Nullable Input<LabAnnouncementPropertiesArgs> announcement) {
+        public Builder announcement(@Nullable Input<LabAnnouncementPropertiesArgs> announcement) {
             this.announcement = announcement;
             return this;
         }
 
-        public Builder setAnnouncement(@Nullable LabAnnouncementPropertiesArgs announcement) {
+        public Builder announcement(@Nullable LabAnnouncementPropertiesArgs announcement) {
             this.announcement = Input.ofNullable(announcement);
             return this;
         }
 
-        public Builder setEnvironmentPermission(@Nullable Input<Either<String,EnvironmentPermission>> environmentPermission) {
+        public Builder environmentPermission(@Nullable Input<Either<String,EnvironmentPermission>> environmentPermission) {
             this.environmentPermission = environmentPermission;
             return this;
         }
 
-        public Builder setEnvironmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
+        public Builder environmentPermission(@Nullable Either<String,EnvironmentPermission> environmentPermission) {
             this.environmentPermission = Input.ofNullable(environmentPermission);
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Input<Map<String,String>> extendedProperties) {
+        public Builder extendedProperties(@Nullable Input<Map<String,String>> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Map<String,String> extendedProperties) {
+        public Builder extendedProperties(@Nullable Map<String,String> extendedProperties) {
             this.extendedProperties = Input.ofNullable(extendedProperties);
             return this;
         }
 
-        public Builder setLabStorageType(@Nullable Input<Either<String,StorageType>> labStorageType) {
+        public Builder labStorageType(@Nullable Input<Either<String,StorageType>> labStorageType) {
             this.labStorageType = labStorageType;
             return this;
         }
 
-        public Builder setLabStorageType(@Nullable Either<String,StorageType> labStorageType) {
+        public Builder labStorageType(@Nullable Either<String,StorageType> labStorageType) {
             this.labStorageType = Input.ofNullable(labStorageType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsLinux(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux) {
+        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = mandatoryArtifactsResourceIdsLinux;
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
+        public Builder mandatoryArtifactsResourceIdsLinux(@Nullable List<String> mandatoryArtifactsResourceIdsLinux) {
             this.mandatoryArtifactsResourceIdsLinux = Input.ofNullable(mandatoryArtifactsResourceIdsLinux);
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsWindows(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows) {
+        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable Input<List<String>> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = mandatoryArtifactsResourceIdsWindows;
             return this;
         }
 
-        public Builder setMandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
+        public Builder mandatoryArtifactsResourceIdsWindows(@Nullable List<String> mandatoryArtifactsResourceIdsWindows) {
             this.mandatoryArtifactsResourceIdsWindows = Input.ofNullable(mandatoryArtifactsResourceIdsWindows);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPremiumDataDisks(@Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks) {
+        public Builder premiumDataDisks(@Nullable Input<Either<String,PremiumDataDisk>> premiumDataDisks) {
             this.premiumDataDisks = premiumDataDisks;
             return this;
         }
 
-        public Builder setPremiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
+        public Builder premiumDataDisks(@Nullable Either<String,PremiumDataDisk> premiumDataDisks) {
             this.premiumDataDisks = Input.ofNullable(premiumDataDisks);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSupport(@Nullable Input<LabSupportPropertiesArgs> support) {
+        public Builder support(@Nullable Input<LabSupportPropertiesArgs> support) {
             this.support = support;
             return this;
         }
 
-        public Builder setSupport(@Nullable LabSupportPropertiesArgs support) {
+        public Builder support(@Nullable LabSupportPropertiesArgs support) {
             this.support = Input.ofNullable(support);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

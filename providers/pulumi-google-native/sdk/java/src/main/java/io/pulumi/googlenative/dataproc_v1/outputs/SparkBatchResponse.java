@@ -41,14 +41,14 @@ public final class SparkBatchResponse {
      */
     private final String mainJarFileUri;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","mainClass","mainJarFileUri"})
+    @OutputCustomType.Constructor
     private SparkBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        String mainClass,
-        String mainJarFileUri) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("mainClass") String mainClass,
+        @OutputCustomType.Parameter("mainJarFileUri") String mainJarFileUri) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -130,32 +130,32 @@ public final class SparkBatchResponse {
     	      this.mainJarFileUri = defaults.mainJarFileUri;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setMainClass(String mainClass) {
+        public Builder mainClass(String mainClass) {
             this.mainClass = Objects.requireNonNull(mainClass);
             return this;
         }
 
-        public Builder setMainJarFileUri(String mainJarFileUri) {
+        public Builder mainJarFileUri(String mainJarFileUri) {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }

@@ -37,13 +37,13 @@ public final class PolicyDefinitionGroupResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"additionalMetadataId","category","description","displayName","name"})
+    @OutputCustomType.Constructor
     private PolicyDefinitionGroupResponse(
-        @Nullable String additionalMetadataId,
-        @Nullable String category,
-        @Nullable String description,
-        @Nullable String displayName,
-        String name) {
+        @OutputCustomType.Parameter("additionalMetadataId") @Nullable String additionalMetadataId,
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.additionalMetadataId = additionalMetadataId;
         this.category = category;
         this.description = description;
@@ -115,27 +115,27 @@ public final class PolicyDefinitionGroupResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAdditionalMetadataId(@Nullable String additionalMetadataId) {
+        public Builder additionalMetadataId(@Nullable String additionalMetadataId) {
             this.additionalMetadataId = additionalMetadataId;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

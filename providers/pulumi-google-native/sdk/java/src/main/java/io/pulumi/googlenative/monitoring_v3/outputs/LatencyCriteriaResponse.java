@@ -15,8 +15,8 @@ public final class LatencyCriteriaResponse {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor({"threshold"})
-    private LatencyCriteriaResponse(String threshold) {
+    @OutputCustomType.Constructor
+    private LatencyCriteriaResponse(@OutputCustomType.Parameter("threshold") String threshold) {
         this.threshold = threshold;
     }
 
@@ -48,7 +48,7 @@ public final class LatencyCriteriaResponse {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setThreshold(String threshold) {
+        public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

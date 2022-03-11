@@ -21,10 +21,10 @@ public final class ImageFormatResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"filenamePattern","odataType"})
+    @OutputCustomType.Constructor
     private ImageFormatResponse(
-        String filenamePattern,
-        String odataType) {
+        @OutputCustomType.Parameter("filenamePattern") String filenamePattern,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.filenamePattern = filenamePattern;
         this.odataType = odataType;
     }
@@ -67,12 +67,12 @@ public final class ImageFormatResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setFilenamePattern(String filenamePattern) {
+        public Builder filenamePattern(String filenamePattern) {
             this.filenamePattern = Objects.requireNonNull(filenamePattern);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

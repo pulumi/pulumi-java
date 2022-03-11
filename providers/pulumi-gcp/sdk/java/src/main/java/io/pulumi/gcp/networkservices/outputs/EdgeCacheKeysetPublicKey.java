@@ -24,10 +24,10 @@ public final class EdgeCacheKeysetPublicKey {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"id","value"})
+    @OutputCustomType.Constructor
     private EdgeCacheKeysetPublicKey(
-        String id,
-        String value) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("value") String value) {
         this.id = id;
         this.value = value;
     }
@@ -73,12 +73,12 @@ public final class EdgeCacheKeysetPublicKey {
     	      this.value = defaults.value;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

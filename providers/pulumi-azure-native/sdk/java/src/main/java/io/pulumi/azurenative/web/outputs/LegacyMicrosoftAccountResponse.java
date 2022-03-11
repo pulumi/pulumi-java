@@ -35,12 +35,12 @@ public final class LegacyMicrosoftAccountResponse {
      */
     private final @Nullable AllowedAudiencesValidationResponse validation;
 
-    @OutputCustomType.Constructor({"enabled","login","registration","validation"})
+    @OutputCustomType.Constructor
     private LegacyMicrosoftAccountResponse(
-        @Nullable Boolean enabled,
-        @Nullable LoginScopesResponse login,
-        @Nullable ClientRegistrationResponse registration,
-        @Nullable AllowedAudiencesValidationResponse validation) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration,
+        @OutputCustomType.Parameter("validation") @Nullable AllowedAudiencesValidationResponse validation) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;
@@ -102,22 +102,22 @@ public final class LegacyMicrosoftAccountResponse {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesResponse login) {
+        public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRegistration(@Nullable ClientRegistrationResponse registration) {
+        public Builder registration(@Nullable ClientRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setValidation(@Nullable AllowedAudiencesValidationResponse validation) {
+        public Builder validation(@Nullable AllowedAudiencesValidationResponse validation) {
             this.validation = validation;
             return this;
         }

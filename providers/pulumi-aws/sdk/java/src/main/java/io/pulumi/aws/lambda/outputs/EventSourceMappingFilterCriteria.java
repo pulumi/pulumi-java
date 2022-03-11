@@ -17,8 +17,8 @@ public final class EventSourceMappingFilterCriteria {
      */
     private final @Nullable List<EventSourceMappingFilterCriteriaFilter> filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private EventSourceMappingFilterCriteria(@Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingFilterCriteria(@OutputCustomType.Parameter("filters") @Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
         this.filters = filters;
     }
 
@@ -50,7 +50,7 @@ public final class EventSourceMappingFilterCriteria {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
+        public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilter> filters) {
             this.filters = filters;
             return this;
         }

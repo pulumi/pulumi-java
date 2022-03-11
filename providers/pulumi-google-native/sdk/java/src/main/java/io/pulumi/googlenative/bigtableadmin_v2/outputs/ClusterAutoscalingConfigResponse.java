@@ -21,10 +21,10 @@ public final class ClusterAutoscalingConfigResponse {
      */
     private final AutoscalingTargetsResponse autoscalingTargets;
 
-    @OutputCustomType.Constructor({"autoscalingLimits","autoscalingTargets"})
+    @OutputCustomType.Constructor
     private ClusterAutoscalingConfigResponse(
-        AutoscalingLimitsResponse autoscalingLimits,
-        AutoscalingTargetsResponse autoscalingTargets) {
+        @OutputCustomType.Parameter("autoscalingLimits") AutoscalingLimitsResponse autoscalingLimits,
+        @OutputCustomType.Parameter("autoscalingTargets") AutoscalingTargetsResponse autoscalingTargets) {
         this.autoscalingLimits = autoscalingLimits;
         this.autoscalingTargets = autoscalingTargets;
     }
@@ -66,12 +66,12 @@ public final class ClusterAutoscalingConfigResponse {
     	      this.autoscalingTargets = defaults.autoscalingTargets;
         }
 
-        public Builder setAutoscalingLimits(AutoscalingLimitsResponse autoscalingLimits) {
+        public Builder autoscalingLimits(AutoscalingLimitsResponse autoscalingLimits) {
             this.autoscalingLimits = Objects.requireNonNull(autoscalingLimits);
             return this;
         }
 
-        public Builder setAutoscalingTargets(AutoscalingTargetsResponse autoscalingTargets) {
+        public Builder autoscalingTargets(AutoscalingTargetsResponse autoscalingTargets) {
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
         }

@@ -52,13 +52,13 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
      */
     private final @Nullable List<String> queryStringWhitelists;
 
-    @OutputCustomType.Constructor({"includeHost","includeProtocol","includeQueryString","queryStringBlacklists","queryStringWhitelists"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceCdnPolicyCacheKeyPolicy(
-        @Nullable Boolean includeHost,
-        @Nullable Boolean includeProtocol,
-        @Nullable Boolean includeQueryString,
-        @Nullable List<String> queryStringBlacklists,
-        @Nullable List<String> queryStringWhitelists) {
+        @OutputCustomType.Parameter("includeHost") @Nullable Boolean includeHost,
+        @OutputCustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @OutputCustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
+        @OutputCustomType.Parameter("queryStringBlacklists") @Nullable List<String> queryStringBlacklists,
+        @OutputCustomType.Parameter("queryStringWhitelists") @Nullable List<String> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;
@@ -143,27 +143,27 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicy {
     	      this.queryStringWhitelists = defaults.queryStringWhitelists;
         }
 
-        public Builder setIncludeHost(@Nullable Boolean includeHost) {
+        public Builder includeHost(@Nullable Boolean includeHost) {
             this.includeHost = includeHost;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setQueryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
+        public Builder queryStringBlacklists(@Nullable List<String> queryStringBlacklists) {
             this.queryStringBlacklists = queryStringBlacklists;
             return this;
         }
 
-        public Builder setQueryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
+        public Builder queryStringWhitelists(@Nullable List<String> queryStringWhitelists) {
             this.queryStringWhitelists = queryStringWhitelists;
             return this;
         }

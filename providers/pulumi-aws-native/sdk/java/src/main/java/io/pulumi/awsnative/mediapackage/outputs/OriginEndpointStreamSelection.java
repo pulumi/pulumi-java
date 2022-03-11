@@ -28,11 +28,11 @@ public final class OriginEndpointStreamSelection {
      */
     private final @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor({"maxVideoBitsPerSecond","minVideoBitsPerSecond","streamOrder"})
+    @OutputCustomType.Constructor
     private OriginEndpointStreamSelection(
-        @Nullable Integer maxVideoBitsPerSecond,
-        @Nullable Integer minVideoBitsPerSecond,
-        @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
+        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @OutputCustomType.Parameter("streamOrder") @Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;
@@ -84,17 +84,17 @@ public final class OriginEndpointStreamSelection {
     	      this.streamOrder = defaults.streamOrder;
         }
 
-        public Builder setMaxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
+        public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setMinVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
+        public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setStreamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
+        public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }

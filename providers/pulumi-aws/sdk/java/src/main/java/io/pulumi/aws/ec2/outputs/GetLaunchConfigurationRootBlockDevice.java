@@ -42,14 +42,14 @@ public final class GetLaunchConfigurationRootBlockDevice {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","throughput","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetLaunchConfigurationRootBlockDevice(
-        Boolean deleteOnTermination,
-        Boolean encrypted,
-        Integer iops,
-        Boolean throughput,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("throughput") Boolean throughput,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;
@@ -131,32 +131,32 @@ public final class GetLaunchConfigurationRootBlockDevice {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setDeleteOnTermination(Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(Boolean deleteOnTermination) {
             this.deleteOnTermination = Objects.requireNonNull(deleteOnTermination);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setIops(Integer iops) {
+        public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
 
-        public Builder setThroughput(Boolean throughput) {
+        public Builder throughput(Boolean throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
 
-        public Builder setVolumeSize(Integer volumeSize) {
+        public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

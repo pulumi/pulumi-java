@@ -47,14 +47,14 @@ public final class ContainerResourceRequirementsResponse {
      */
     private final @Nullable Double memoryInGBLimit;
 
-    @OutputCustomType.Constructor({"cpu","cpuLimit","fpga","gpu","memoryInGB","memoryInGBLimit"})
+    @OutputCustomType.Constructor
     private ContainerResourceRequirementsResponse(
-        @Nullable Double cpu,
-        @Nullable Double cpuLimit,
-        @Nullable Integer fpga,
-        @Nullable Integer gpu,
-        @Nullable Double memoryInGB,
-        @Nullable Double memoryInGBLimit) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("cpuLimit") @Nullable Double cpuLimit,
+        @OutputCustomType.Parameter("fpga") @Nullable Integer fpga,
+        @OutputCustomType.Parameter("gpu") @Nullable Integer gpu,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB,
+        @OutputCustomType.Parameter("memoryInGBLimit") @Nullable Double memoryInGBLimit) {
         this.cpu = cpu;
         this.cpuLimit = cpuLimit;
         this.fpga = fpga;
@@ -140,32 +140,32 @@ public final class ContainerResourceRequirementsResponse {
     	      this.memoryInGBLimit = defaults.memoryInGBLimit;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpuLimit(@Nullable Double cpuLimit) {
+        public Builder cpuLimit(@Nullable Double cpuLimit) {
             this.cpuLimit = cpuLimit;
             return this;
         }
 
-        public Builder setFpga(@Nullable Integer fpga) {
+        public Builder fpga(@Nullable Integer fpga) {
             this.fpga = fpga;
             return this;
         }
 
-        public Builder setGpu(@Nullable Integer gpu) {
+        public Builder gpu(@Nullable Integer gpu) {
             this.gpu = gpu;
             return this;
         }
 
-        public Builder setMemoryInGB(@Nullable Double memoryInGB) {
+        public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
-        public Builder setMemoryInGBLimit(@Nullable Double memoryInGBLimit) {
+        public Builder memoryInGBLimit(@Nullable Double memoryInGBLimit) {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
         }

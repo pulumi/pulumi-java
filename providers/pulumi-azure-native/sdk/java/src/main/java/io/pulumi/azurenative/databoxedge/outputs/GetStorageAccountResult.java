@@ -64,18 +64,18 @@ public final class GetStorageAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blobEndpoint","containerCount","dataPolicy","description","id","name","storageAccountCredentialId","storageAccountStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetStorageAccountResult(
-        String blobEndpoint,
-        Integer containerCount,
-        String dataPolicy,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable String storageAccountCredentialId,
-        @Nullable String storageAccountStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @OutputCustomType.Parameter("containerCount") Integer containerCount,
+        @OutputCustomType.Parameter("dataPolicy") String dataPolicy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountCredentialId") @Nullable String storageAccountCredentialId,
+        @OutputCustomType.Parameter("storageAccountStatus") @Nullable String storageAccountStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.blobEndpoint = blobEndpoint;
         this.containerCount = containerCount;
         this.dataPolicy = dataPolicy;
@@ -197,52 +197,52 @@ public final class GetStorageAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBlobEndpoint(String blobEndpoint) {
+        public Builder blobEndpoint(String blobEndpoint) {
             this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
             return this;
         }
 
-        public Builder setContainerCount(Integer containerCount) {
+        public Builder containerCount(Integer containerCount) {
             this.containerCount = Objects.requireNonNull(containerCount);
             return this;
         }
 
-        public Builder setDataPolicy(String dataPolicy) {
+        public Builder dataPolicy(String dataPolicy) {
             this.dataPolicy = Objects.requireNonNull(dataPolicy);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(@Nullable String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
             this.storageAccountCredentialId = storageAccountCredentialId;
             return this;
         }
 
-        public Builder setStorageAccountStatus(@Nullable String storageAccountStatus) {
+        public Builder storageAccountStatus(@Nullable String storageAccountStatus) {
             this.storageAccountStatus = storageAccountStatus;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

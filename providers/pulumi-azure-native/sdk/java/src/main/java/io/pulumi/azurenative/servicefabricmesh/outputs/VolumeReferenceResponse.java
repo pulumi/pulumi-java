@@ -28,11 +28,11 @@ public final class VolumeReferenceResponse {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"destinationPath","name","readOnly"})
+    @OutputCustomType.Constructor
     private VolumeReferenceResponse(
-        String destinationPath,
-        String name,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("destinationPath") String destinationPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.destinationPath = destinationPath;
         this.name = name;
         this.readOnly = readOnly;
@@ -84,17 +84,17 @@ public final class VolumeReferenceResponse {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setDestinationPath(String destinationPath) {
+        public Builder destinationPath(String destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

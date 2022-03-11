@@ -33,8 +33,8 @@ public final class NotificationConfigStreamingConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private NotificationConfigStreamingConfig(String filter) {
+    @OutputCustomType.Constructor
+    private NotificationConfigStreamingConfig(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 
@@ -84,7 +84,7 @@ public final class NotificationConfigStreamingConfig {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

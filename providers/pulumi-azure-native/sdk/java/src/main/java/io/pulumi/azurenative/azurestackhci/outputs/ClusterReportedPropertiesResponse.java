@@ -37,13 +37,13 @@ public final class ClusterReportedPropertiesResponse {
      */
     private final List<ClusterNodeResponse> nodes;
 
-    @OutputCustomType.Constructor({"clusterId","clusterName","clusterVersion","lastUpdated","nodes"})
+    @OutputCustomType.Constructor
     private ClusterReportedPropertiesResponse(
-        String clusterId,
-        String clusterName,
-        String clusterVersion,
-        String lastUpdated,
-        List<ClusterNodeResponse> nodes) {
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
+        @OutputCustomType.Parameter("lastUpdated") String lastUpdated,
+        @OutputCustomType.Parameter("nodes") List<ClusterNodeResponse> nodes) {
         this.clusterId = clusterId;
         this.clusterName = clusterName;
         this.clusterVersion = clusterVersion;
@@ -115,27 +115,27 @@ public final class ClusterReportedPropertiesResponse {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setLastUpdated(String lastUpdated) {
+        public Builder lastUpdated(String lastUpdated) {
             this.lastUpdated = Objects.requireNonNull(lastUpdated);
             return this;
         }
 
-        public Builder setNodes(List<ClusterNodeResponse> nodes) {
+        public Builder nodes(List<ClusterNodeResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }

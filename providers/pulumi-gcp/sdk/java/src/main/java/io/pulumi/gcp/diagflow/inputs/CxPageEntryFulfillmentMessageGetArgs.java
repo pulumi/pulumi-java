@@ -53,12 +53,12 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text) {
+        public Builder text(@Nullable Input<CxPageEntryFulfillmentMessageTextGetArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable CxPageEntryFulfillmentMessageTextGetArgs text) {
+        public Builder text(@Nullable CxPageEntryFulfillmentMessageTextGetArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

@@ -31,11 +31,11 @@ public final class InboundSamlConfigSpConfig {
      */
     private final @Nullable String spEntityId;
 
-    @OutputCustomType.Constructor({"callbackUri","spCertificates","spEntityId"})
+    @OutputCustomType.Constructor
     private InboundSamlConfigSpConfig(
-        @Nullable String callbackUri,
-        @Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates,
-        @Nullable String spEntityId) {
+        @OutputCustomType.Parameter("callbackUri") @Nullable String callbackUri,
+        @OutputCustomType.Parameter("spCertificates") @Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates,
+        @OutputCustomType.Parameter("spEntityId") @Nullable String spEntityId) {
         this.callbackUri = callbackUri;
         this.spCertificates = spCertificates;
         this.spEntityId = spEntityId;
@@ -89,17 +89,17 @@ public final class InboundSamlConfigSpConfig {
     	      this.spEntityId = defaults.spEntityId;
         }
 
-        public Builder setCallbackUri(@Nullable String callbackUri) {
+        public Builder callbackUri(@Nullable String callbackUri) {
             this.callbackUri = callbackUri;
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates) {
+        public Builder spCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificate> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
 
-        public Builder setSpEntityId(@Nullable String spEntityId) {
+        public Builder spEntityId(@Nullable String spEntityId) {
             this.spEntityId = spEntityId;
             return this;
         }

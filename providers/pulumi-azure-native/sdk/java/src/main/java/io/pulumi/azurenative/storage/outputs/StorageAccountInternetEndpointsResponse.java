@@ -30,12 +30,12 @@ public final class StorageAccountInternetEndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor({"blob","dfs","file","web"})
+    @OutputCustomType.Constructor
     private StorageAccountInternetEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String web) {
+        @OutputCustomType.Parameter("blob") String blob,
+        @OutputCustomType.Parameter("dfs") String dfs,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;
@@ -97,22 +97,22 @@ public final class StorageAccountInternetEndpointsResponse {
     	      this.web = defaults.web;
         }
 
-        public Builder setBlob(String blob) {
+        public Builder blob(String blob) {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
 
-        public Builder setDfs(String dfs) {
+        public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setWeb(String web) {
+        public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
         }

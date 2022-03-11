@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
      */
     private final Integer minInstanceCount;
 
-    @OutputCustomType.Constructor({"maxInstanceCount","minInstanceCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2RevisionScalingResponse(
-        Integer maxInstanceCount,
-        Integer minInstanceCount) {
+        @OutputCustomType.Parameter("maxInstanceCount") Integer maxInstanceCount,
+        @OutputCustomType.Parameter("minInstanceCount") Integer minInstanceCount) {
         this.maxInstanceCount = maxInstanceCount;
         this.minInstanceCount = minInstanceCount;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
     	      this.minInstanceCount = defaults.minInstanceCount;
         }
 
-        public Builder setMaxInstanceCount(Integer maxInstanceCount) {
+        public Builder maxInstanceCount(Integer maxInstanceCount) {
             this.maxInstanceCount = Objects.requireNonNull(maxInstanceCount);
             return this;
         }
 
-        public Builder setMinInstanceCount(Integer minInstanceCount) {
+        public Builder minInstanceCount(Integer minInstanceCount) {
             this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
             return this;
         }

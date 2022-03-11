@@ -22,10 +22,10 @@ public final class SigningJobDestinationS3 {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","prefix"})
+    @OutputCustomType.Constructor
     private SigningJobDestinationS3(
-        String bucket,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.prefix = prefix;
     }
@@ -67,12 +67,12 @@ public final class SigningJobDestinationS3 {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

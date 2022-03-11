@@ -70,22 +70,22 @@ public final class UserPoolDeviceConfigurationArgs extends io.pulumi.resources.R
     	      this.deviceOnlyRememberedOnUserPrompt = defaults.deviceOnlyRememberedOnUserPrompt;
         }
 
-        public Builder setChallengeRequiredOnNewDevice(@Nullable Input<Boolean> challengeRequiredOnNewDevice) {
+        public Builder challengeRequiredOnNewDevice(@Nullable Input<Boolean> challengeRequiredOnNewDevice) {
             this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
 
-        public Builder setChallengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
+        public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
             this.challengeRequiredOnNewDevice = Input.ofNullable(challengeRequiredOnNewDevice);
             return this;
         }
 
-        public Builder setDeviceOnlyRememberedOnUserPrompt(@Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt) {
+        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Input<Boolean> deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
         }
 
-        public Builder setDeviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
+        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = Input.ofNullable(deviceOnlyRememberedOnUserPrompt);
             return this;
         }

@@ -13,10 +13,10 @@ public final class ExperimentTreatmentToWeight {
     private final Integer splitWeight;
     private final String treatment;
 
-    @OutputCustomType.Constructor({"splitWeight","treatment"})
+    @OutputCustomType.Constructor
     private ExperimentTreatmentToWeight(
-        Integer splitWeight,
-        String treatment) {
+        @OutputCustomType.Parameter("splitWeight") Integer splitWeight,
+        @OutputCustomType.Parameter("treatment") String treatment) {
         this.splitWeight = splitWeight;
         this.treatment = treatment;
     }
@@ -50,12 +50,12 @@ public final class ExperimentTreatmentToWeight {
     	      this.treatment = defaults.treatment;
         }
 
-        public Builder setSplitWeight(Integer splitWeight) {
+        public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }
 
-        public Builder setTreatment(String treatment) {
+        public Builder treatment(String treatment) {
             this.treatment = Objects.requireNonNull(treatment);
             return this;
         }

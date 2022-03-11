@@ -36,13 +36,13 @@ public final class InsightsConfigResponse {
      */
     private final Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor({"queryInsightsEnabled","queryPlansPerMinute","queryStringLength","recordApplicationTags","recordClientAddress"})
+    @OutputCustomType.Constructor
     private InsightsConfigResponse(
-        Boolean queryInsightsEnabled,
-        Integer queryPlansPerMinute,
-        Integer queryStringLength,
-        Boolean recordApplicationTags,
-        Boolean recordClientAddress) {
+        @OutputCustomType.Parameter("queryInsightsEnabled") Boolean queryInsightsEnabled,
+        @OutputCustomType.Parameter("queryPlansPerMinute") Integer queryPlansPerMinute,
+        @OutputCustomType.Parameter("queryStringLength") Integer queryStringLength,
+        @OutputCustomType.Parameter("recordApplicationTags") Boolean recordApplicationTags,
+        @OutputCustomType.Parameter("recordClientAddress") Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryPlansPerMinute = queryPlansPerMinute;
         this.queryStringLength = queryStringLength;
@@ -114,27 +114,27 @@ public final class InsightsConfigResponse {
     	      this.recordClientAddress = defaults.recordClientAddress;
         }
 
-        public Builder setQueryInsightsEnabled(Boolean queryInsightsEnabled) {
+        public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
             this.queryInsightsEnabled = Objects.requireNonNull(queryInsightsEnabled);
             return this;
         }
 
-        public Builder setQueryPlansPerMinute(Integer queryPlansPerMinute) {
+        public Builder queryPlansPerMinute(Integer queryPlansPerMinute) {
             this.queryPlansPerMinute = Objects.requireNonNull(queryPlansPerMinute);
             return this;
         }
 
-        public Builder setQueryStringLength(Integer queryStringLength) {
+        public Builder queryStringLength(Integer queryStringLength) {
             this.queryStringLength = Objects.requireNonNull(queryStringLength);
             return this;
         }
 
-        public Builder setRecordApplicationTags(Boolean recordApplicationTags) {
+        public Builder recordApplicationTags(Boolean recordApplicationTags) {
             this.recordApplicationTags = Objects.requireNonNull(recordApplicationTags);
             return this;
         }
 
-        public Builder setRecordClientAddress(Boolean recordClientAddress) {
+        public Builder recordClientAddress(Boolean recordClientAddress) {
             this.recordClientAddress = Objects.requireNonNull(recordClientAddress);
             return this;
         }

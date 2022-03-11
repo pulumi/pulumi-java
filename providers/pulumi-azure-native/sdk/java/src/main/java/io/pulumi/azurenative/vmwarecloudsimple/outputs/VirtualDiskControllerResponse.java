@@ -30,12 +30,12 @@ public final class VirtualDiskControllerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","subType","type"})
+    @OutputCustomType.Constructor
     private VirtualDiskControllerResponse(
-        String id,
-        String name,
-        String subType,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subType") String subType,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.subType = subType;
@@ -97,22 +97,22 @@ public final class VirtualDiskControllerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubType(String subType) {
+        public Builder subType(String subType) {
             this.subType = Objects.requireNonNull(subType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

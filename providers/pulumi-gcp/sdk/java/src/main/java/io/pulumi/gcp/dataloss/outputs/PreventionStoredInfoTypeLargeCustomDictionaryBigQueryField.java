@@ -23,10 +23,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      */
     private final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table;
 
-    @OutputCustomType.Constructor({"field","table"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(
-        PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
-        PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
+        @OutputCustomType.Parameter("field") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
+        @OutputCustomType.Parameter("table") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
         this.field = field;
         this.table = table;
     }
@@ -70,12 +70,12 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
     	      this.table = defaults.table;
         }
 
-        public Builder setField(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field) {
+        public Builder field(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setTable(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
+        public Builder table(PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

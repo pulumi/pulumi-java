@@ -21,10 +21,10 @@ public final class ExplainQueryStepResponse {
      */
     private final List<String> substeps;
 
-    @OutputCustomType.Constructor({"kind","substeps"})
+    @OutputCustomType.Constructor
     private ExplainQueryStepResponse(
-        String kind,
-        List<String> substeps) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("substeps") List<String> substeps) {
         this.kind = kind;
         this.substeps = substeps;
     }
@@ -66,12 +66,12 @@ public final class ExplainQueryStepResponse {
     	      this.substeps = defaults.substeps;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSubsteps(List<String> substeps) {
+        public Builder substeps(List<String> substeps) {
             this.substeps = Objects.requireNonNull(substeps);
             return this;
         }

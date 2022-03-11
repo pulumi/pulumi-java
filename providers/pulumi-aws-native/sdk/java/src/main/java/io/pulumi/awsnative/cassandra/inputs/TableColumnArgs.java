@@ -61,22 +61,22 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.columnType = defaults.columnType;
         }
 
-        public Builder setColumnName(Input<String> columnName) {
+        public Builder columnName(Input<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Input.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder setColumnType(Input<String> columnType) {
+        public Builder columnType(Input<String> columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }
 
-        public Builder setColumnType(String columnType) {
+        public Builder columnType(String columnType) {
             this.columnType = Input.of(Objects.requireNonNull(columnType));
             return this;
         }

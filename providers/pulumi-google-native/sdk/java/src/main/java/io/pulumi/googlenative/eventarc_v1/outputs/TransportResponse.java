@@ -15,8 +15,8 @@ public final class TransportResponse {
      */
     private final PubsubResponse pubsub;
 
-    @OutputCustomType.Constructor({"pubsub"})
-    private TransportResponse(PubsubResponse pubsub) {
+    @OutputCustomType.Constructor
+    private TransportResponse(@OutputCustomType.Parameter("pubsub") PubsubResponse pubsub) {
         this.pubsub = pubsub;
     }
 
@@ -48,7 +48,7 @@ public final class TransportResponse {
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder setPubsub(PubsubResponse pubsub) {
+        public Builder pubsub(PubsubResponse pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }

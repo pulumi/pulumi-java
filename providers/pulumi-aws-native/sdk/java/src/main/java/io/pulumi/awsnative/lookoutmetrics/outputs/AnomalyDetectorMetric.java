@@ -20,11 +20,11 @@ public final class AnomalyDetectorMetric {
     private final String metricName;
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"aggregationFunction","metricName","namespace"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetric(
-        AnomalyDetectorMetricAggregationFunction aggregationFunction,
-        String metricName,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("aggregationFunction") AnomalyDetectorMetricAggregationFunction aggregationFunction,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.aggregationFunction = aggregationFunction;
         this.metricName = metricName;
         this.namespace = namespace;
@@ -68,17 +68,17 @@ public final class AnomalyDetectorMetric {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setAggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
+        public Builder aggregationFunction(AnomalyDetectorMetricAggregationFunction aggregationFunction) {
             this.aggregationFunction = Objects.requireNonNull(aggregationFunction);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ClusterResourceUsageExportConfigBigqueryDestination {
     private final String datasetId;
 
-    @OutputCustomType.Constructor({"datasetId"})
-    private ClusterResourceUsageExportConfigBigqueryDestination(String datasetId) {
+    @OutputCustomType.Constructor
+    private ClusterResourceUsageExportConfigBigqueryDestination(@OutputCustomType.Parameter("datasetId") String datasetId) {
         this.datasetId = datasetId;
     }
 
@@ -40,7 +40,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestination {
     	      this.datasetId = defaults.datasetId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }

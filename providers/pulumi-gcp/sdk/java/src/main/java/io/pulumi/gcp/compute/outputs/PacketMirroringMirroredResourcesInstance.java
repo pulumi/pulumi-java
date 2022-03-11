@@ -15,8 +15,8 @@ public final class PacketMirroringMirroredResourcesInstance {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private PacketMirroringMirroredResourcesInstance(String url) {
+    @OutputCustomType.Constructor
+    private PacketMirroringMirroredResourcesInstance(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 
@@ -48,7 +48,7 @@ public final class PacketMirroringMirroredResourcesInstance {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

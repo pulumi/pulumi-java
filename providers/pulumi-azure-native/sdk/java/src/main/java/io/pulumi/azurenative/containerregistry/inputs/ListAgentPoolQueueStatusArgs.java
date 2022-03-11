@@ -84,17 +84,17 @@ public final class ListAgentPoolQueueStatusArgs extends io.pulumi.resources.Invo
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAgentPoolName(String agentPoolName) {
+        public Builder agentPoolName(String agentPoolName) {
             this.agentPoolName = Objects.requireNonNull(agentPoolName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

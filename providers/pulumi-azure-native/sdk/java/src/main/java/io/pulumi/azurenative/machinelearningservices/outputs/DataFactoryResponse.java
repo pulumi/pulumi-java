@@ -51,15 +51,15 @@ public final class DataFactoryResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"computeLocation","computeType","description","isAttachedCompute","provisioningErrors","provisioningState","resourceId"})
+    @OutputCustomType.Constructor
     private DataFactoryResponse(
-        @Nullable String computeLocation,
-        String computeType,
-        @Nullable String description,
-        Boolean isAttachedCompute,
-        List<MachineLearningServiceErrorResponse> provisioningErrors,
-        String provisioningState,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("computeLocation") @Nullable String computeLocation,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isAttachedCompute") Boolean isAttachedCompute,
+        @OutputCustomType.Parameter("provisioningErrors") List<MachineLearningServiceErrorResponse> provisioningErrors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.computeLocation = computeLocation;
         this.computeType = computeType;
         this.description = description;
@@ -152,37 +152,37 @@ public final class DataFactoryResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setComputeLocation(@Nullable String computeLocation) {
+        public Builder computeLocation(@Nullable String computeLocation) {
             this.computeLocation = computeLocation;
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsAttachedCompute(Boolean isAttachedCompute) {
+        public Builder isAttachedCompute(Boolean isAttachedCompute) {
             this.isAttachedCompute = Objects.requireNonNull(isAttachedCompute);
             return this;
         }
 
-        public Builder setProvisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
+        public Builder provisioningErrors(List<MachineLearningServiceErrorResponse> provisioningErrors) {
             this.provisioningErrors = Objects.requireNonNull(provisioningErrors);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

@@ -15,10 +15,10 @@ public final class ProviderBatchingArgs {
     private final @Nullable Input<Boolean> enableBatching;
     private final @Nullable Input<String> sendAfter;
 
-    @OutputCustomType.Constructor({"enableBatching","sendAfter"})
+    @OutputCustomType.Constructor
     private ProviderBatchingArgs(
-        @Nullable Input<Boolean> enableBatching,
-        @Nullable Input<String> sendAfter) {
+        @OutputCustomType.Parameter("enableBatching") @Nullable Input<Boolean> enableBatching,
+        @OutputCustomType.Parameter("sendAfter") @Nullable Input<String> sendAfter) {
         this.enableBatching = enableBatching;
         this.sendAfter = sendAfter;
     }
@@ -52,12 +52,12 @@ public final class ProviderBatchingArgs {
     	      this.sendAfter = defaults.sendAfter;
         }
 
-        public Builder setEnableBatching(@Nullable Input<Boolean> enableBatching) {
+        public Builder enableBatching(@Nullable Input<Boolean> enableBatching) {
             this.enableBatching = enableBatching;
             return this;
         }
 
-        public Builder setSendAfter(@Nullable Input<String> sendAfter) {
+        public Builder sendAfter(@Nullable Input<String> sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }

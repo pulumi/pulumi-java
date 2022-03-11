@@ -22,10 +22,10 @@ public final class ClusterDatabaseEncryption {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"keyName","state"})
+    @OutputCustomType.Constructor
     private ClusterDatabaseEncryption(
-        @Nullable String keyName,
-        String state) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("state") String state) {
         this.keyName = keyName;
         this.state = state;
     }
@@ -67,12 +67,12 @@ public final class ClusterDatabaseEncryption {
     	      this.state = defaults.state;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -37,12 +37,12 @@ public final class AccessPointPublicAccessBlockConfiguration {
      */
     private final @Nullable Boolean restrictPublicBuckets;
 
-    @OutputCustomType.Constructor({"blockPublicAcls","blockPublicPolicy","ignorePublicAcls","restrictPublicBuckets"})
+    @OutputCustomType.Constructor
     private AccessPointPublicAccessBlockConfiguration(
-        @Nullable Boolean blockPublicAcls,
-        @Nullable Boolean blockPublicPolicy,
-        @Nullable Boolean ignorePublicAcls,
-        @Nullable Boolean restrictPublicBuckets) {
+        @OutputCustomType.Parameter("blockPublicAcls") @Nullable Boolean blockPublicAcls,
+        @OutputCustomType.Parameter("blockPublicPolicy") @Nullable Boolean blockPublicPolicy,
+        @OutputCustomType.Parameter("ignorePublicAcls") @Nullable Boolean ignorePublicAcls,
+        @OutputCustomType.Parameter("restrictPublicBuckets") @Nullable Boolean restrictPublicBuckets) {
         this.blockPublicAcls = blockPublicAcls;
         this.blockPublicPolicy = blockPublicPolicy;
         this.ignorePublicAcls = ignorePublicAcls;
@@ -109,22 +109,22 @@ public final class AccessPointPublicAccessBlockConfiguration {
     	      this.restrictPublicBuckets = defaults.restrictPublicBuckets;
         }
 
-        public Builder setBlockPublicAcls(@Nullable Boolean blockPublicAcls) {
+        public Builder blockPublicAcls(@Nullable Boolean blockPublicAcls) {
             this.blockPublicAcls = blockPublicAcls;
             return this;
         }
 
-        public Builder setBlockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
+        public Builder blockPublicPolicy(@Nullable Boolean blockPublicPolicy) {
             this.blockPublicPolicy = blockPublicPolicy;
             return this;
         }
 
-        public Builder setIgnorePublicAcls(@Nullable Boolean ignorePublicAcls) {
+        public Builder ignorePublicAcls(@Nullable Boolean ignorePublicAcls) {
             this.ignorePublicAcls = ignorePublicAcls;
             return this;
         }
 
-        public Builder setRestrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
+        public Builder restrictPublicBuckets(@Nullable Boolean restrictPublicBuckets) {
             this.restrictPublicBuckets = restrictPublicBuckets;
             return this;
         }

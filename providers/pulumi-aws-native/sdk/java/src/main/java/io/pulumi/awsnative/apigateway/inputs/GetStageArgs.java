@@ -68,12 +68,12 @@ public final class GetStageArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

@@ -56,16 +56,16 @@ public final class BucketReplicationConfigurationRule {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"deleteMarkerReplicationStatus","destination","filter","id","prefix","priority","sourceSelectionCriteria","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRule(
-        @Nullable String deleteMarkerReplicationStatus,
-        BucketReplicationConfigurationRuleDestination destination,
-        @Nullable BucketReplicationConfigurationRuleFilter filter,
-        @Nullable String id,
-        @Nullable String prefix,
-        @Nullable Integer priority,
-        @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria,
-        String status) {
+        @OutputCustomType.Parameter("deleteMarkerReplicationStatus") @Nullable String deleteMarkerReplicationStatus,
+        @OutputCustomType.Parameter("destination") BucketReplicationConfigurationRuleDestination destination,
+        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationConfigurationRuleFilter filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria,
+        @OutputCustomType.Parameter("status") String status) {
         this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
         this.destination = destination;
         this.filter = filter;
@@ -167,42 +167,42 @@ public final class BucketReplicationConfigurationRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplicationStatus(@Nullable String deleteMarkerReplicationStatus) {
+        public Builder deleteMarkerReplicationStatus(@Nullable String deleteMarkerReplicationStatus) {
             this.deleteMarkerReplicationStatus = deleteMarkerReplicationStatus;
             return this;
         }
 
-        public Builder setDestination(BucketReplicationConfigurationRuleDestination destination) {
+        public Builder destination(BucketReplicationConfigurationRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationConfigurationRuleFilter filter) {
+        public Builder filter(@Nullable BucketReplicationConfigurationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketReplicationConfigurationRuleSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

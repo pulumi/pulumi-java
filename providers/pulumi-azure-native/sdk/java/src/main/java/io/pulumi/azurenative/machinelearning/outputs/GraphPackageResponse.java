@@ -31,11 +31,11 @@ public final class GraphPackageResponse {
      */
     private final @Nullable Map<String,GraphNodeResponse> nodes;
 
-    @OutputCustomType.Constructor({"edges","graphParameters","nodes"})
+    @OutputCustomType.Constructor
     private GraphPackageResponse(
-        @Nullable List<GraphEdgeResponse> edges,
-        @Nullable Map<String,GraphParameterResponse> graphParameters,
-        @Nullable Map<String,GraphNodeResponse> nodes) {
+        @OutputCustomType.Parameter("edges") @Nullable List<GraphEdgeResponse> edges,
+        @OutputCustomType.Parameter("graphParameters") @Nullable Map<String,GraphParameterResponse> graphParameters,
+        @OutputCustomType.Parameter("nodes") @Nullable Map<String,GraphNodeResponse> nodes) {
         this.edges = edges;
         this.graphParameters = graphParameters;
         this.nodes = nodes;
@@ -87,17 +87,17 @@ public final class GraphPackageResponse {
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setEdges(@Nullable List<GraphEdgeResponse> edges) {
+        public Builder edges(@Nullable List<GraphEdgeResponse> edges) {
             this.edges = edges;
             return this;
         }
 
-        public Builder setGraphParameters(@Nullable Map<String,GraphParameterResponse> graphParameters) {
+        public Builder graphParameters(@Nullable Map<String,GraphParameterResponse> graphParameters) {
             this.graphParameters = graphParameters;
             return this;
         }
 
-        public Builder setNodes(@Nullable Map<String,GraphNodeResponse> nodes) {
+        public Builder nodes(@Nullable Map<String,GraphNodeResponse> nodes) {
             this.nodes = nodes;
             return this;
         }

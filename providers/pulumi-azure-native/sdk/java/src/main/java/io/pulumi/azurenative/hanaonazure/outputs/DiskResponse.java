@@ -28,11 +28,11 @@ public final class DiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"diskSizeGB","lun","name"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        @Nullable Integer diskSizeGB,
-        Integer lun,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.diskSizeGB = diskSizeGB;
         this.lun = lun;
         this.name = name;
@@ -84,17 +84,17 @@ public final class DiskResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -15,8 +15,8 @@ public final class NodePoolDefaultsResponse {
      */
     private final NodeConfigDefaultsResponse nodeConfigDefaults;
 
-    @OutputCustomType.Constructor({"nodeConfigDefaults"})
-    private NodePoolDefaultsResponse(NodeConfigDefaultsResponse nodeConfigDefaults) {
+    @OutputCustomType.Constructor
+    private NodePoolDefaultsResponse(@OutputCustomType.Parameter("nodeConfigDefaults") NodeConfigDefaultsResponse nodeConfigDefaults) {
         this.nodeConfigDefaults = nodeConfigDefaults;
     }
 
@@ -48,7 +48,7 @@ public final class NodePoolDefaultsResponse {
     	      this.nodeConfigDefaults = defaults.nodeConfigDefaults;
         }
 
-        public Builder setNodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
+        public Builder nodeConfigDefaults(NodeConfigDefaultsResponse nodeConfigDefaults) {
             this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
             return this;
         }

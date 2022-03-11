@@ -14,10 +14,10 @@ public final class StackAccessEndpoint {
     private final String endpointType;
     private final @Nullable String vpceId;
 
-    @OutputCustomType.Constructor({"endpointType","vpceId"})
+    @OutputCustomType.Constructor
     private StackAccessEndpoint(
-        String endpointType,
-        @Nullable String vpceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("vpceId") @Nullable String vpceId) {
         this.endpointType = endpointType;
         this.vpceId = vpceId;
     }
@@ -51,12 +51,12 @@ public final class StackAccessEndpoint {
     	      this.vpceId = defaults.vpceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setVpceId(@Nullable String vpceId) {
+        public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = vpceId;
             return this;
         }

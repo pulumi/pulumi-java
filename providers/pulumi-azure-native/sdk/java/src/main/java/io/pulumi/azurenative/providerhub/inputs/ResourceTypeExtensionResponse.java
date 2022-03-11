@@ -75,17 +75,17 @@ public final class ResourceTypeExtensionResponse extends io.pulumi.resources.Inv
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setExtensionCategories(@Nullable List<String> extensionCategories) {
+        public Builder extensionCategories(@Nullable List<String> extensionCategories) {
             this.extensionCategories = extensionCategories;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

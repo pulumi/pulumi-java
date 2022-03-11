@@ -17,8 +17,8 @@ public final class TemplateDataSetSchema {
      */
     private final @Nullable List<TemplateColumnSchema> columnSchemaList;
 
-    @OutputCustomType.Constructor({"columnSchemaList"})
-    private TemplateDataSetSchema(@Nullable List<TemplateColumnSchema> columnSchemaList) {
+    @OutputCustomType.Constructor
+    private TemplateDataSetSchema(@OutputCustomType.Parameter("columnSchemaList") @Nullable List<TemplateColumnSchema> columnSchemaList) {
         this.columnSchemaList = columnSchemaList;
     }
 
@@ -50,7 +50,7 @@ public final class TemplateDataSetSchema {
     	      this.columnSchemaList = defaults.columnSchemaList;
         }
 
-        public Builder setColumnSchemaList(@Nullable List<TemplateColumnSchema> columnSchemaList) {
+        public Builder columnSchemaList(@Nullable List<TemplateColumnSchema> columnSchemaList) {
             this.columnSchemaList = columnSchemaList;
             return this;
         }

@@ -19,10 +19,10 @@ public final class ContainerPublicDomainName {
      */
     private final @Nullable List<String> domainNames;
 
-    @OutputCustomType.Constructor({"certificateName","domainNames"})
+    @OutputCustomType.Constructor
     private ContainerPublicDomainName(
-        @Nullable String certificateName,
-        @Nullable List<String> domainNames) {
+        @OutputCustomType.Parameter("certificateName") @Nullable String certificateName,
+        @OutputCustomType.Parameter("domainNames") @Nullable List<String> domainNames) {
         this.certificateName = certificateName;
         this.domainNames = domainNames;
     }
@@ -60,12 +60,12 @@ public final class ContainerPublicDomainName {
     	      this.domainNames = defaults.domainNames;
         }
 
-        public Builder setCertificateName(@Nullable String certificateName) {
+        public Builder certificateName(@Nullable String certificateName) {
             this.certificateName = certificateName;
             return this;
         }
 
-        public Builder setDomainNames(@Nullable List<String> domainNames) {
+        public Builder domainNames(@Nullable List<String> domainNames) {
             this.domainNames = domainNames;
             return this;
         }

@@ -65,12 +65,12 @@ public final class RuleGroupTextTransformation extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setType(RuleGroupTextTransformationType type) {
+        public Builder type(RuleGroupTextTransformationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

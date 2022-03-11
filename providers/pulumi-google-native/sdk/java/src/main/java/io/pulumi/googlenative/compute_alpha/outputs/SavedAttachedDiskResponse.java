@@ -95,24 +95,24 @@ public final class SavedAttachedDiskResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKey","diskSizeGb","diskType","guestOsFeatures","index","$interface","kind","licenses","mode","source","storageBytes","storageBytesStatus","type"})
+    @OutputCustomType.Constructor
     private SavedAttachedDiskResponse(
-        Boolean autoDelete,
-        Boolean boot,
-        String deviceName,
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Integer index,
-        String $interface,
-        String kind,
-        List<String> licenses,
-        String mode,
-        String source,
-        String storageBytes,
-        String storageBytesStatus,
-        String type) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") Boolean boot,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes,
+        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -294,82 +294,82 @@ public final class SavedAttachedDiskResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(Boolean autoDelete) {
+        public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
 
-        public Builder setBoot(Boolean boot) {
+        public Builder boot(Boolean boot) {
             this.boot = Objects.requireNonNull(boot);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDiskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
+        public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setGuestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
+        public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setStorageBytes(String storageBytes) {
+        public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
 
-        public Builder setStorageBytesStatus(String storageBytesStatus) {
+        public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -164,72 +164,72 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.properties = defaults.properties;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setErrorThreshold(@Nullable Input<Integer> errorThreshold) {
+        public Builder errorThreshold(@Nullable Input<Integer> errorThreshold) {
             this.errorThreshold = errorThreshold;
             return this;
         }
 
-        public Builder setErrorThreshold(@Nullable Integer errorThreshold) {
+        public Builder errorThreshold(@Nullable Integer errorThreshold) {
             this.errorThreshold = Input.ofNullable(errorThreshold);
             return this;
         }
 
-        public Builder setMiniBatchSize(@Nullable Input<Double> miniBatchSize) {
+        public Builder miniBatchSize(@Nullable Input<Double> miniBatchSize) {
             this.miniBatchSize = miniBatchSize;
             return this;
         }
 
-        public Builder setMiniBatchSize(@Nullable Double miniBatchSize) {
+        public Builder miniBatchSize(@Nullable Double miniBatchSize) {
             this.miniBatchSize = Input.ofNullable(miniBatchSize);
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable Input<List<String>> partitionKeys) {
+        public Builder partitionKeys(@Nullable Input<List<String>> partitionKeys) {
             this.partitionKeys = partitionKeys;
             return this;
         }
 
-        public Builder setPartitionKeys(@Nullable List<String> partitionKeys) {
+        public Builder partitionKeys(@Nullable List<String> partitionKeys) {
             this.partitionKeys = Input.ofNullable(partitionKeys);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

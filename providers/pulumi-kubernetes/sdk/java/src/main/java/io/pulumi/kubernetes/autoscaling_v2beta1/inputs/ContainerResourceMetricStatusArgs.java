@@ -107,42 +107,42 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
     	      this.name = defaults.name;
         }
 
-        public Builder setContainer(Input<String> container) {
+        public Builder container(Input<String> container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Input.of(Objects.requireNonNull(container));
             return this;
         }
 
-        public Builder setCurrentAverageUtilization(@Nullable Input<Integer> currentAverageUtilization) {
+        public Builder currentAverageUtilization(@Nullable Input<Integer> currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
 
-        public Builder setCurrentAverageUtilization(@Nullable Integer currentAverageUtilization) {
+        public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = Input.ofNullable(currentAverageUtilization);
             return this;
         }
 
-        public Builder setCurrentAverageValue(Input<String> currentAverageValue) {
+        public Builder currentAverageValue(Input<String> currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
 
-        public Builder setCurrentAverageValue(String currentAverageValue) {
+        public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Input.of(Objects.requireNonNull(currentAverageValue));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

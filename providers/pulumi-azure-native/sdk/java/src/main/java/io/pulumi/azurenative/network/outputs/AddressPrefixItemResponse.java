@@ -22,10 +22,10 @@ public final class AddressPrefixItemResponse {
      */
     private final @Nullable String addressPrefixType;
 
-    @OutputCustomType.Constructor({"addressPrefix","addressPrefixType"})
+    @OutputCustomType.Constructor
     private AddressPrefixItemResponse(
-        @Nullable String addressPrefix,
-        @Nullable String addressPrefixType) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("addressPrefixType") @Nullable String addressPrefixType) {
         this.addressPrefix = addressPrefix;
         this.addressPrefixType = addressPrefixType;
     }
@@ -67,12 +67,12 @@ public final class AddressPrefixItemResponse {
     	      this.addressPrefixType = defaults.addressPrefixType;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefixType(@Nullable String addressPrefixType) {
+        public Builder addressPrefixType(@Nullable String addressPrefixType) {
             this.addressPrefixType = addressPrefixType;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BotSampleUtterance {
     private final String utterance;
 
-    @OutputCustomType.Constructor({"utterance"})
-    private BotSampleUtterance(String utterance) {
+    @OutputCustomType.Constructor
+    private BotSampleUtterance(@OutputCustomType.Parameter("utterance") String utterance) {
         this.utterance = utterance;
     }
 
@@ -40,7 +40,7 @@ public final class BotSampleUtterance {
     	      this.utterance = defaults.utterance;
         }
 
-        public Builder setUtterance(String utterance) {
+        public Builder utterance(String utterance) {
             this.utterance = Objects.requireNonNull(utterance);
             return this;
         }

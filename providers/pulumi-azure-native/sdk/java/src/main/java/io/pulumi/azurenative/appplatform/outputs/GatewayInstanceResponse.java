@@ -20,10 +20,10 @@ public final class GatewayInstanceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"name","status"})
+    @OutputCustomType.Constructor
     private GatewayInstanceResponse(
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.name = name;
         this.status = status;
     }
@@ -65,12 +65,12 @@ public final class GatewayInstanceResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

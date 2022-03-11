@@ -12,10 +12,10 @@ public final class GetAmiProductCode {
     private final String productCodeId;
     private final String productCodeType;
 
-    @OutputCustomType.Constructor({"productCodeId","productCodeType"})
+    @OutputCustomType.Constructor
     private GetAmiProductCode(
-        String productCodeId,
-        String productCodeType) {
+        @OutputCustomType.Parameter("productCodeId") String productCodeId,
+        @OutputCustomType.Parameter("productCodeType") String productCodeType) {
         this.productCodeId = productCodeId;
         this.productCodeType = productCodeType;
     }
@@ -49,12 +49,12 @@ public final class GetAmiProductCode {
     	      this.productCodeType = defaults.productCodeType;
         }
 
-        public Builder setProductCodeId(String productCodeId) {
+        public Builder productCodeId(String productCodeId) {
             this.productCodeId = Objects.requireNonNull(productCodeId);
             return this;
         }
 
-        public Builder setProductCodeType(String productCodeType) {
+        public Builder productCodeType(String productCodeType) {
             this.productCodeType = Objects.requireNonNull(productCodeType);
             return this;
         }

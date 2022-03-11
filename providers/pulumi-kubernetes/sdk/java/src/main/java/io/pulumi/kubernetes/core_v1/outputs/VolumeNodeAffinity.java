@@ -17,8 +17,8 @@ public final class VolumeNodeAffinity {
      */
     private final @Nullable NodeSelector required;
 
-    @OutputCustomType.Constructor({"required"})
-    private VolumeNodeAffinity(@Nullable NodeSelector required) {
+    @OutputCustomType.Constructor
+    private VolumeNodeAffinity(@OutputCustomType.Parameter("required") @Nullable NodeSelector required) {
         this.required = required;
     }
 
@@ -50,7 +50,7 @@ public final class VolumeNodeAffinity {
     	      this.required = defaults.required;
         }
 
-        public Builder setRequired(@Nullable NodeSelector required) {
+        public Builder required(@Nullable NodeSelector required) {
             this.required = required;
             return this;
         }

@@ -31,12 +31,12 @@ public final class GetAnalysisResult {
      */
     private final String requestTime;
 
-    @OutputCustomType.Constructor({"analysisResult","createTime","name","requestTime"})
+    @OutputCustomType.Constructor
     private GetAnalysisResult(
-        GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
-        String createTime,
-        String name,
-        String requestTime) {
+        @OutputCustomType.Parameter("analysisResult") GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requestTime") String requestTime) {
         this.analysisResult = analysisResult;
         this.createTime = createTime;
         this.name = name;
@@ -98,22 +98,22 @@ public final class GetAnalysisResult {
     	      this.requestTime = defaults.requestTime;
         }
 
-        public Builder setAnalysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
+        public Builder analysisResult(GoogleCloudContactcenterinsightsV1AnalysisResultResponse analysisResult) {
             this.analysisResult = Objects.requireNonNull(analysisResult);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequestTime(String requestTime) {
+        public Builder requestTime(String requestTime) {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }

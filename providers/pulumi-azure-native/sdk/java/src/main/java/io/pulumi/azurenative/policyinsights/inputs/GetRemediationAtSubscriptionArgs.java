@@ -51,7 +51,7 @@ public final class GetRemediationAtSubscriptionArgs extends io.pulumi.resources.
     	      this.remediationName = defaults.remediationName;
         }
 
-        public Builder setRemediationName(String remediationName) {
+        public Builder remediationName(String remediationName) {
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }

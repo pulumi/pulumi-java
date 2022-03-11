@@ -20,10 +20,10 @@ public final class DetectorModelSetVariable {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor({"value","variableName"})
+    @OutputCustomType.Constructor
     private DetectorModelSetVariable(
-        String value,
-        String variableName) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.value = value;
         this.variableName = variableName;
     }
@@ -65,12 +65,12 @@ public final class DetectorModelSetVariable {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

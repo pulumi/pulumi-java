@@ -34,12 +34,12 @@ public final class CSINodeDriver {
      */
     private final @Nullable List<String> topologyKeys;
 
-    @OutputCustomType.Constructor({"allocatable","name","nodeID","topologyKeys"})
+    @OutputCustomType.Constructor
     private CSINodeDriver(
-        @Nullable VolumeNodeResources allocatable,
-        String name,
-        String nodeID,
-        @Nullable List<String> topologyKeys) {
+        @OutputCustomType.Parameter("allocatable") @Nullable VolumeNodeResources allocatable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeID") String nodeID,
+        @OutputCustomType.Parameter("topologyKeys") @Nullable List<String> topologyKeys) {
         this.allocatable = allocatable;
         this.name = name;
         this.nodeID = nodeID;
@@ -101,22 +101,22 @@ public final class CSINodeDriver {
     	      this.topologyKeys = defaults.topologyKeys;
         }
 
-        public Builder setAllocatable(@Nullable VolumeNodeResources allocatable) {
+        public Builder allocatable(@Nullable VolumeNodeResources allocatable) {
             this.allocatable = allocatable;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeID(String nodeID) {
+        public Builder nodeID(String nodeID) {
             this.nodeID = Objects.requireNonNull(nodeID);
             return this;
         }
 
-        public Builder setTopologyKeys(@Nullable List<String> topologyKeys) {
+        public Builder topologyKeys(@Nullable List<String> topologyKeys) {
             this.topologyKeys = topologyKeys;
             return this;
         }

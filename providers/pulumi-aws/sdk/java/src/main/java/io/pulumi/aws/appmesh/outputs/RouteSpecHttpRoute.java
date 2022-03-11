@@ -35,12 +35,12 @@ public final class RouteSpecHttpRoute {
      */
     private final @Nullable RouteSpecHttpRouteTimeout timeout;
 
-    @OutputCustomType.Constructor({"action","match","retryPolicy","timeout"})
+    @OutputCustomType.Constructor
     private RouteSpecHttpRoute(
-        RouteSpecHttpRouteAction action,
-        RouteSpecHttpRouteMatch match,
-        @Nullable RouteSpecHttpRouteRetryPolicy retryPolicy,
-        @Nullable RouteSpecHttpRouteTimeout timeout) {
+        @OutputCustomType.Parameter("action") RouteSpecHttpRouteAction action,
+        @OutputCustomType.Parameter("match") RouteSpecHttpRouteMatch match,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RouteSpecHttpRouteRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable RouteSpecHttpRouteTimeout timeout) {
         this.action = action;
         this.match = match;
         this.retryPolicy = retryPolicy;
@@ -102,22 +102,22 @@ public final class RouteSpecHttpRoute {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAction(RouteSpecHttpRouteAction action) {
+        public Builder action(RouteSpecHttpRouteAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMatch(RouteSpecHttpRouteMatch match) {
+        public Builder match(RouteSpecHttpRouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RouteSpecHttpRouteRetryPolicy retryPolicy) {
+        public Builder retryPolicy(@Nullable RouteSpecHttpRouteRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setTimeout(@Nullable RouteSpecHttpRouteTimeout timeout) {
+        public Builder timeout(@Nullable RouteSpecHttpRouteTimeout timeout) {
             this.timeout = timeout;
             return this;
         }

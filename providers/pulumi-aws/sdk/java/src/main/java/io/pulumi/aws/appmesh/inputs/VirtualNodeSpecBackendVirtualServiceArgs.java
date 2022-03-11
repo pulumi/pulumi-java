@@ -71,22 +71,22 @@ public final class VirtualNodeSpecBackendVirtualServiceArgs extends io.pulumi.re
     	      this.virtualServiceName = defaults.virtualServiceName;
         }
 
-        public Builder setClientPolicy(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy) {
+        public Builder clientPolicy(@Nullable Input<VirtualNodeSpecBackendVirtualServiceClientPolicyArgs> clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyArgs clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyArgs clientPolicy) {
             this.clientPolicy = Input.ofNullable(clientPolicy);
             return this;
         }
 
-        public Builder setVirtualServiceName(Input<String> virtualServiceName) {
+        public Builder virtualServiceName(Input<String> virtualServiceName) {
             this.virtualServiceName = Objects.requireNonNull(virtualServiceName);
             return this;
         }
 
-        public Builder setVirtualServiceName(String virtualServiceName) {
+        public Builder virtualServiceName(String virtualServiceName) {
             this.virtualServiceName = Input.of(Objects.requireNonNull(virtualServiceName));
             return this;
         }

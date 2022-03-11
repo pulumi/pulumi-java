@@ -73,22 +73,22 @@ public final class LabelingJobImagePropertiesArgs extends io.pulumi.resources.Re
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setAnnotationType(@Nullable Input<Either<String,ImageAnnotationType>> annotationType) {
+        public Builder annotationType(@Nullable Input<Either<String,ImageAnnotationType>> annotationType) {
             this.annotationType = annotationType;
             return this;
         }
 
-        public Builder setAnnotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
+        public Builder annotationType(@Nullable Either<String,ImageAnnotationType> annotationType) {
             this.annotationType = Input.ofNullable(annotationType);
             return this;
         }
 
-        public Builder setMediaType(Input<Either<String,MediaType>> mediaType) {
+        public Builder mediaType(Input<Either<String,MediaType>> mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }
 
-        public Builder setMediaType(Either<String,MediaType> mediaType) {
+        public Builder mediaType(Either<String,MediaType> mediaType) {
             this.mediaType = Input.of(Objects.requireNonNull(mediaType));
             return this;
         }

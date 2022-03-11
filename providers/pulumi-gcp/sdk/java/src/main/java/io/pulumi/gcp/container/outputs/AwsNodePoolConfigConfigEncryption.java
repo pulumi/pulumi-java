@@ -15,8 +15,8 @@ public final class AwsNodePoolConfigConfigEncryption {
      */
     private final String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"kmsKeyArn"})
-    private AwsNodePoolConfigConfigEncryption(String kmsKeyArn) {
+    @OutputCustomType.Constructor
+    private AwsNodePoolConfigConfigEncryption(@OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
     }
 
@@ -48,7 +48,7 @@ public final class AwsNodePoolConfigConfigEncryption {
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }

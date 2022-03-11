@@ -21,10 +21,10 @@ public final class AssetModelExpressionVariable {
      */
     private final AssetModelVariableValue value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private AssetModelExpressionVariable(
-        String name,
-        AssetModelVariableValue value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") AssetModelVariableValue value) {
         this.name = name;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class AssetModelExpressionVariable {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(AssetModelVariableValue value) {
+        public Builder value(AssetModelVariableValue value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

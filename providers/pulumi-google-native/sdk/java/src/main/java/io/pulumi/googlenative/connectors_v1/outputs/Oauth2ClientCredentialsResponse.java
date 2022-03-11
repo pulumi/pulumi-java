@@ -21,10 +21,10 @@ public final class Oauth2ClientCredentialsResponse {
      */
     private final SecretResponse clientSecret;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret"})
+    @OutputCustomType.Constructor
     private Oauth2ClientCredentialsResponse(
-        String clientId,
-        SecretResponse clientSecret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") SecretResponse clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }
@@ -66,12 +66,12 @@ public final class Oauth2ClientCredentialsResponse {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(SecretResponse clientSecret) {
+        public Builder clientSecret(SecretResponse clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }

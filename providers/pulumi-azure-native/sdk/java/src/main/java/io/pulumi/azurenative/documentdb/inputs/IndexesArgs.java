@@ -94,32 +94,32 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.precision = defaults.precision;
         }
 
-        public Builder setDataType(@Nullable Input<Either<String,DataType>> dataType) {
+        public Builder dataType(@Nullable Input<Either<String,DataType>> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable Either<String,DataType> dataType) {
+        public Builder dataType(@Nullable Either<String,DataType> dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Either<String,IndexKind>> kind) {
+        public Builder kind(@Nullable Input<Either<String,IndexKind>> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Either<String,IndexKind> kind) {
+        public Builder kind(@Nullable Either<String,IndexKind> kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setPrecision(@Nullable Input<Integer> precision) {
+        public Builder precision(@Nullable Input<Integer> precision) {
             this.precision = precision;
             return this;
         }
 
-        public Builder setPrecision(@Nullable Integer precision) {
+        public Builder precision(@Nullable Integer precision) {
             this.precision = Input.ofNullable(precision);
             return this;
         }

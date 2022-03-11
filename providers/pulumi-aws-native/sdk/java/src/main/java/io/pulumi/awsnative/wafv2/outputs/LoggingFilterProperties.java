@@ -22,10 +22,10 @@ public final class LoggingFilterProperties {
      */
     private final List<LoggingConfigurationFilter> filters;
 
-    @OutputCustomType.Constructor({"defaultBehavior","filters"})
+    @OutputCustomType.Constructor
     private LoggingFilterProperties(
-        LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior,
-        List<LoggingConfigurationFilter> filters) {
+        @OutputCustomType.Parameter("defaultBehavior") LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior,
+        @OutputCustomType.Parameter("filters") List<LoggingConfigurationFilter> filters) {
         this.defaultBehavior = defaultBehavior;
         this.filters = filters;
     }
@@ -67,12 +67,12 @@ public final class LoggingFilterProperties {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
+        public Builder defaultBehavior(LoggingConfigurationLoggingFilterPropertiesDefaultBehavior defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setFilters(List<LoggingConfigurationFilter> filters) {
+        public Builder filters(List<LoggingConfigurationFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }

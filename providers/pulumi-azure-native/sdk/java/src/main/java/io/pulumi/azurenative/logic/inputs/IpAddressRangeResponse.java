@@ -57,7 +57,7 @@ public final class IpAddressRangeResponse extends io.pulumi.resources.InvokeArgs
     	      this.addressRange = defaults.addressRange;
         }
 
-        public Builder setAddressRange(@Nullable String addressRange) {
+        public Builder addressRange(@Nullable String addressRange) {
             this.addressRange = addressRange;
             return this;
         }

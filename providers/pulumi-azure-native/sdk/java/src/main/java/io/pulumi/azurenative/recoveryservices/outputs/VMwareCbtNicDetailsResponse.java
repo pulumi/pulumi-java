@@ -57,17 +57,17 @@ public final class VMwareCbtNicDetailsResponse {
      */
     private final @Nullable String targetSubnetName;
 
-    @OutputCustomType.Constructor({"isPrimaryNic","isSelectedForMigration","nicId","sourceIPAddress","sourceIPAddressType","sourceNetworkId","targetIPAddress","targetIPAddressType","targetSubnetName"})
+    @OutputCustomType.Constructor
     private VMwareCbtNicDetailsResponse(
-        @Nullable String isPrimaryNic,
-        @Nullable String isSelectedForMigration,
-        String nicId,
-        String sourceIPAddress,
-        String sourceIPAddressType,
-        String sourceNetworkId,
-        @Nullable String targetIPAddress,
-        @Nullable String targetIPAddressType,
-        @Nullable String targetSubnetName) {
+        @OutputCustomType.Parameter("isPrimaryNic") @Nullable String isPrimaryNic,
+        @OutputCustomType.Parameter("isSelectedForMigration") @Nullable String isSelectedForMigration,
+        @OutputCustomType.Parameter("nicId") String nicId,
+        @OutputCustomType.Parameter("sourceIPAddress") String sourceIPAddress,
+        @OutputCustomType.Parameter("sourceIPAddressType") String sourceIPAddressType,
+        @OutputCustomType.Parameter("sourceNetworkId") String sourceNetworkId,
+        @OutputCustomType.Parameter("targetIPAddress") @Nullable String targetIPAddress,
+        @OutputCustomType.Parameter("targetIPAddressType") @Nullable String targetIPAddressType,
+        @OutputCustomType.Parameter("targetSubnetName") @Nullable String targetSubnetName) {
         this.isPrimaryNic = isPrimaryNic;
         this.isSelectedForMigration = isSelectedForMigration;
         this.nicId = nicId;
@@ -179,47 +179,47 @@ public final class VMwareCbtNicDetailsResponse {
     	      this.targetSubnetName = defaults.targetSubnetName;
         }
 
-        public Builder setIsPrimaryNic(@Nullable String isPrimaryNic) {
+        public Builder isPrimaryNic(@Nullable String isPrimaryNic) {
             this.isPrimaryNic = isPrimaryNic;
             return this;
         }
 
-        public Builder setIsSelectedForMigration(@Nullable String isSelectedForMigration) {
+        public Builder isSelectedForMigration(@Nullable String isSelectedForMigration) {
             this.isSelectedForMigration = isSelectedForMigration;
             return this;
         }
 
-        public Builder setNicId(String nicId) {
+        public Builder nicId(String nicId) {
             this.nicId = Objects.requireNonNull(nicId);
             return this;
         }
 
-        public Builder setSourceIPAddress(String sourceIPAddress) {
+        public Builder sourceIPAddress(String sourceIPAddress) {
             this.sourceIPAddress = Objects.requireNonNull(sourceIPAddress);
             return this;
         }
 
-        public Builder setSourceIPAddressType(String sourceIPAddressType) {
+        public Builder sourceIPAddressType(String sourceIPAddressType) {
             this.sourceIPAddressType = Objects.requireNonNull(sourceIPAddressType);
             return this;
         }
 
-        public Builder setSourceNetworkId(String sourceNetworkId) {
+        public Builder sourceNetworkId(String sourceNetworkId) {
             this.sourceNetworkId = Objects.requireNonNull(sourceNetworkId);
             return this;
         }
 
-        public Builder setTargetIPAddress(@Nullable String targetIPAddress) {
+        public Builder targetIPAddress(@Nullable String targetIPAddress) {
             this.targetIPAddress = targetIPAddress;
             return this;
         }
 
-        public Builder setTargetIPAddressType(@Nullable String targetIPAddressType) {
+        public Builder targetIPAddressType(@Nullable String targetIPAddressType) {
             this.targetIPAddressType = targetIPAddressType;
             return this;
         }
 
-        public Builder setTargetSubnetName(@Nullable String targetSubnetName) {
+        public Builder targetSubnetName(@Nullable String targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }

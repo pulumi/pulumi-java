@@ -38,13 +38,13 @@ public final class WorkspaceFeaturesResponse {
      */
     private final @Nullable Boolean immediatePurgeDataOn30Days;
 
-    @OutputCustomType.Constructor({"clusterResourceId","disableLocalAuth","enableDataExport","enableLogAccessUsingOnlyResourcePermissions","immediatePurgeDataOn30Days"})
+    @OutputCustomType.Constructor
     private WorkspaceFeaturesResponse(
-        @Nullable String clusterResourceId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable Boolean enableDataExport,
-        @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
-        @Nullable Boolean immediatePurgeDataOn30Days) {
+        @OutputCustomType.Parameter("clusterResourceId") @Nullable String clusterResourceId,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("enableDataExport") @Nullable Boolean enableDataExport,
+        @OutputCustomType.Parameter("enableLogAccessUsingOnlyResourcePermissions") @Nullable Boolean enableLogAccessUsingOnlyResourcePermissions,
+        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days) {
         this.clusterResourceId = clusterResourceId;
         this.disableLocalAuth = disableLocalAuth;
         this.enableDataExport = enableDataExport;
@@ -116,27 +116,27 @@ public final class WorkspaceFeaturesResponse {
     	      this.immediatePurgeDataOn30Days = defaults.immediatePurgeDataOn30Days;
         }
 
-        public Builder setClusterResourceId(@Nullable String clusterResourceId) {
+        public Builder clusterResourceId(@Nullable String clusterResourceId) {
             this.clusterResourceId = clusterResourceId;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setEnableDataExport(@Nullable Boolean enableDataExport) {
+        public Builder enableDataExport(@Nullable Boolean enableDataExport) {
             this.enableDataExport = enableDataExport;
             return this;
         }
 
-        public Builder setEnableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
+        public Builder enableLogAccessUsingOnlyResourcePermissions(@Nullable Boolean enableLogAccessUsingOnlyResourcePermissions) {
             this.enableLogAccessUsingOnlyResourcePermissions = enableLogAccessUsingOnlyResourcePermissions;
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }

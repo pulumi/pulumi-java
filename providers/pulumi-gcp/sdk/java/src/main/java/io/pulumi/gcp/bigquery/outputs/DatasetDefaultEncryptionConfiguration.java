@@ -17,8 +17,8 @@ public final class DatasetDefaultEncryptionConfiguration {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private DatasetDefaultEncryptionConfiguration(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private DatasetDefaultEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
@@ -52,7 +52,7 @@ public final class DatasetDefaultEncryptionConfiguration {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

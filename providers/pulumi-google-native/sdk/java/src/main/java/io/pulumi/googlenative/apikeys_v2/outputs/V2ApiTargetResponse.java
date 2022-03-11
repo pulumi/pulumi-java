@@ -21,10 +21,10 @@ public final class V2ApiTargetResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"methods","service"})
+    @OutputCustomType.Constructor
     private V2ApiTargetResponse(
-        List<String> methods,
-        String service) {
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("service") String service) {
         this.methods = methods;
         this.service = service;
     }
@@ -66,12 +66,12 @@ public final class V2ApiTargetResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setMethods(List<String> methods) {
+        public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

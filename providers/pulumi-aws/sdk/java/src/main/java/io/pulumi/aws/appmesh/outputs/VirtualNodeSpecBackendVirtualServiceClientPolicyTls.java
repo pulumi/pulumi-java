@@ -36,12 +36,12 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTls {
      */
     private final VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","enforce","ports","validation"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendVirtualServiceClientPolicyTls(
-        @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate,
-        @Nullable Boolean enforce,
-        @Nullable List<Integer> ports,
-        VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") @Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate,
+        @OutputCustomType.Parameter("enforce") @Nullable Boolean enforce,
+        @OutputCustomType.Parameter("ports") @Nullable List<Integer> ports,
+        @OutputCustomType.Parameter("validation") VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
         this.certificate = certificate;
         this.enforce = enforce;
         this.ports = ports;
@@ -103,22 +103,22 @@ public final class VirtualNodeSpecBackendVirtualServiceClientPolicyTls {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate) {
+        public Builder certificate(@Nullable VirtualNodeSpecBackendVirtualServiceClientPolicyTlsCertificate certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setEnforce(@Nullable Boolean enforce) {
+        public Builder enforce(@Nullable Boolean enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<Integer> ports) {
+        public Builder ports(@Nullable List<Integer> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setValidation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
+        public Builder validation(VirtualNodeSpecBackendVirtualServiceClientPolicyTlsValidation validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }

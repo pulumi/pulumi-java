@@ -17,8 +17,8 @@ public final class ApiVersionConstraintResponse {
      */
     private final @Nullable String minApiVersion;
 
-    @OutputCustomType.Constructor({"minApiVersion"})
-    private ApiVersionConstraintResponse(@Nullable String minApiVersion) {
+    @OutputCustomType.Constructor
+    private ApiVersionConstraintResponse(@OutputCustomType.Parameter("minApiVersion") @Nullable String minApiVersion) {
         this.minApiVersion = minApiVersion;
     }
 
@@ -50,7 +50,7 @@ public final class ApiVersionConstraintResponse {
     	      this.minApiVersion = defaults.minApiVersion;
         }
 
-        public Builder setMinApiVersion(@Nullable String minApiVersion) {
+        public Builder minApiVersion(@Nullable String minApiVersion) {
             this.minApiVersion = minApiVersion;
             return this;
         }

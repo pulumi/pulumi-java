@@ -89,32 +89,32 @@ public final class InstanceGroupManagerStatusGetArgs extends io.pulumi.resources
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder setIsStable(@Nullable Input<Boolean> isStable) {
+        public Builder isStable(@Nullable Input<Boolean> isStable) {
             this.isStable = isStable;
             return this;
         }
 
-        public Builder setIsStable(@Nullable Boolean isStable) {
+        public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = Input.ofNullable(isStable);
             return this;
         }
 
-        public Builder setStatefuls(@Nullable Input<List<InstanceGroupManagerStatusStatefulGetArgs>> statefuls) {
+        public Builder statefuls(@Nullable Input<List<InstanceGroupManagerStatusStatefulGetArgs>> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
-        public Builder setStatefuls(@Nullable List<InstanceGroupManagerStatusStatefulGetArgs> statefuls) {
+        public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStatefulGetArgs> statefuls) {
             this.statefuls = Input.ofNullable(statefuls);
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable Input<List<InstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets) {
+        public Builder versionTargets(@Nullable Input<List<InstanceGroupManagerStatusVersionTargetGetArgs>> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable List<InstanceGroupManagerStatusVersionTargetGetArgs> versionTargets) {
+        public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTargetGetArgs> versionTargets) {
             this.versionTargets = Input.ofNullable(versionTargets);
             return this;
         }

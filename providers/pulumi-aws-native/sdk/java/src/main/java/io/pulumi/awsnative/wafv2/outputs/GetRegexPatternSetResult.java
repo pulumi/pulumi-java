@@ -31,13 +31,13 @@ public final class GetRegexPatternSetResult {
     private final @Nullable List<String> regularExpressionList;
     private final @Nullable List<RegexPatternSetTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","regularExpressionList","tags"})
+    @OutputCustomType.Constructor
     private GetRegexPatternSetResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable List<String> regularExpressionList,
-        @Nullable List<RegexPatternSetTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("regularExpressionList") @Nullable List<String> regularExpressionList,
+        @OutputCustomType.Parameter("tags") @Nullable List<RegexPatternSetTag> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -101,27 +101,27 @@ public final class GetRegexPatternSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRegularExpressionList(@Nullable List<String> regularExpressionList) {
+        public Builder regularExpressionList(@Nullable List<String> regularExpressionList) {
             this.regularExpressionList = regularExpressionList;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RegexPatternSetTag> tags) {
+        public Builder tags(@Nullable List<RegexPatternSetTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -117,42 +117,42 @@ public final class ApplicationMetricDescriptionArgs extends io.pulumi.resources.
     	      this.totalApplicationCapacity = defaults.totalApplicationCapacity;
         }
 
-        public Builder setMaximumCapacity(@Nullable Input<Double> maximumCapacity) {
+        public Builder maximumCapacity(@Nullable Input<Double> maximumCapacity) {
             this.maximumCapacity = maximumCapacity;
             return this;
         }
 
-        public Builder setMaximumCapacity(@Nullable Double maximumCapacity) {
+        public Builder maximumCapacity(@Nullable Double maximumCapacity) {
             this.maximumCapacity = Input.ofNullable(maximumCapacity);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setReservationCapacity(@Nullable Input<Double> reservationCapacity) {
+        public Builder reservationCapacity(@Nullable Input<Double> reservationCapacity) {
             this.reservationCapacity = reservationCapacity;
             return this;
         }
 
-        public Builder setReservationCapacity(@Nullable Double reservationCapacity) {
+        public Builder reservationCapacity(@Nullable Double reservationCapacity) {
             this.reservationCapacity = Input.ofNullable(reservationCapacity);
             return this;
         }
 
-        public Builder setTotalApplicationCapacity(@Nullable Input<Double> totalApplicationCapacity) {
+        public Builder totalApplicationCapacity(@Nullable Input<Double> totalApplicationCapacity) {
             this.totalApplicationCapacity = totalApplicationCapacity;
             return this;
         }
 
-        public Builder setTotalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
+        public Builder totalApplicationCapacity(@Nullable Double totalApplicationCapacity) {
             this.totalApplicationCapacity = Input.ofNullable(totalApplicationCapacity);
             return this;
         }

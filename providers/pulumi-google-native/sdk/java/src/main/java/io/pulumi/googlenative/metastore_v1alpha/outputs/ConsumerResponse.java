@@ -20,10 +20,10 @@ public final class ConsumerResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"endpointUri","subnetwork"})
+    @OutputCustomType.Constructor
     private ConsumerResponse(
-        String endpointUri,
-        String subnetwork) {
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.endpointUri = endpointUri;
         this.subnetwork = subnetwork;
     }
@@ -65,12 +65,12 @@ public final class ConsumerResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

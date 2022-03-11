@@ -15,8 +15,8 @@ public final class HintResponse {
      */
     private final String humanReadableName;
 
-    @OutputCustomType.Constructor({"humanReadableName"})
-    private HintResponse(String humanReadableName) {
+    @OutputCustomType.Constructor
+    private HintResponse(@OutputCustomType.Parameter("humanReadableName") String humanReadableName) {
         this.humanReadableName = humanReadableName;
     }
 
@@ -48,7 +48,7 @@ public final class HintResponse {
     	      this.humanReadableName = defaults.humanReadableName;
         }
 
-        public Builder setHumanReadableName(String humanReadableName) {
+        public Builder humanReadableName(String humanReadableName) {
             this.humanReadableName = Objects.requireNonNull(humanReadableName);
             return this;
         }

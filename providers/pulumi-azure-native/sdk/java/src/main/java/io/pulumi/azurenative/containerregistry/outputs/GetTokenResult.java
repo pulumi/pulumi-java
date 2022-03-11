@@ -59,17 +59,17 @@ public final class GetTokenResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationDate","credentials","id","name","provisioningState","scopeMapId","status","systemData","type"})
+    @OutputCustomType.Constructor
     private GetTokenResult(
-        String creationDate,
-        @Nullable TokenCredentialsPropertiesResponse credentials,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String scopeMapId,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("credentials") @Nullable TokenCredentialsPropertiesResponse credentials,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scopeMapId") @Nullable String scopeMapId,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationDate = creationDate;
         this.credentials = credentials;
         this.id = id;
@@ -181,47 +181,47 @@ public final class GetTokenResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setCredentials(@Nullable TokenCredentialsPropertiesResponse credentials) {
+        public Builder credentials(@Nullable TokenCredentialsPropertiesResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScopeMapId(@Nullable String scopeMapId) {
+        public Builder scopeMapId(@Nullable String scopeMapId) {
             this.scopeMapId = scopeMapId;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

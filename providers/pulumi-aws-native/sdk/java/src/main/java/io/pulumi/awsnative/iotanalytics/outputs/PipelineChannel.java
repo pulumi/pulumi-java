@@ -15,11 +15,11 @@ public final class PipelineChannel {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"channelName","name","next"})
+    @OutputCustomType.Constructor
     private PipelineChannel(
-        String channelName,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.channelName = channelName;
         this.name = name;
         this.next = next;
@@ -59,17 +59,17 @@ public final class PipelineChannel {
     	      this.next = defaults.next;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

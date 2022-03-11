@@ -114,27 +114,27 @@ public final class GetNodeTypeResult {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"applicationPorts","capacities","dataDiskSizeGB","ephemeralPorts","id","isPrimary","name","placementProperties","provisioningState","tags","type","vmExtensions","vmImageOffer","vmImagePublisher","vmImageSku","vmImageVersion","vmInstanceCount","vmSecrets","vmSize"})
+    @OutputCustomType.Constructor
     private GetNodeTypeResult(
-        @Nullable EndpointRangeDescriptionResponse applicationPorts,
-        @Nullable Map<String,String> capacities,
-        Integer dataDiskSizeGB,
-        @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
-        String id,
-        Boolean isPrimary,
-        String name,
-        @Nullable Map<String,String> placementProperties,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VMSSExtensionResponse> vmExtensions,
-        @Nullable String vmImageOffer,
-        @Nullable String vmImagePublisher,
-        @Nullable String vmImageSku,
-        @Nullable String vmImageVersion,
-        Integer vmInstanceCount,
-        @Nullable List<VaultSecretGroupResponse> vmSecrets,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("applicationPorts") @Nullable EndpointRangeDescriptionResponse applicationPorts,
+        @OutputCustomType.Parameter("capacities") @Nullable Map<String,String> capacities,
+        @OutputCustomType.Parameter("dataDiskSizeGB") Integer dataDiskSizeGB,
+        @OutputCustomType.Parameter("ephemeralPorts") @Nullable EndpointRangeDescriptionResponse ephemeralPorts,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isPrimary") Boolean isPrimary,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("placementProperties") @Nullable Map<String,String> placementProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmExtensions") @Nullable List<VMSSExtensionResponse> vmExtensions,
+        @OutputCustomType.Parameter("vmImageOffer") @Nullable String vmImageOffer,
+        @OutputCustomType.Parameter("vmImagePublisher") @Nullable String vmImagePublisher,
+        @OutputCustomType.Parameter("vmImageSku") @Nullable String vmImageSku,
+        @OutputCustomType.Parameter("vmImageVersion") @Nullable String vmImageVersion,
+        @OutputCustomType.Parameter("vmInstanceCount") Integer vmInstanceCount,
+        @OutputCustomType.Parameter("vmSecrets") @Nullable List<VaultSecretGroupResponse> vmSecrets,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.applicationPorts = applicationPorts;
         this.capacities = capacities;
         this.dataDiskSizeGB = dataDiskSizeGB;
@@ -346,97 +346,97 @@ public final class GetNodeTypeResult {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setApplicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
+        public Builder applicationPorts(@Nullable EndpointRangeDescriptionResponse applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
-        public Builder setCapacities(@Nullable Map<String,String> capacities) {
+        public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = capacities;
             return this;
         }
 
-        public Builder setDataDiskSizeGB(Integer dataDiskSizeGB) {
+        public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionResponse ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsPrimary(Boolean isPrimary) {
+        public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Map<String,String> placementProperties) {
+        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmExtensions(@Nullable List<VMSSExtensionResponse> vmExtensions) {
+        public Builder vmExtensions(@Nullable List<VMSSExtensionResponse> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
 
-        public Builder setVmImageOffer(@Nullable String vmImageOffer) {
+        public Builder vmImageOffer(@Nullable String vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
 
-        public Builder setVmImagePublisher(@Nullable String vmImagePublisher) {
+        public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
 
-        public Builder setVmImageSku(@Nullable String vmImageSku) {
+        public Builder vmImageSku(@Nullable String vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
 
-        public Builder setVmImageVersion(@Nullable String vmImageVersion) {
+        public Builder vmImageVersion(@Nullable String vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
 
-        public Builder setVmInstanceCount(Integer vmInstanceCount) {
+        public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
 
-        public Builder setVmSecrets(@Nullable List<VaultSecretGroupResponse> vmSecrets) {
+        public Builder vmSecrets(@Nullable List<VaultSecretGroupResponse> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

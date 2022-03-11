@@ -33,12 +33,12 @@ public final class ManagedClusterHTTPProxyConfigResponse {
      */
     private final @Nullable String trustedCa;
 
-    @OutputCustomType.Constructor({"httpProxy","httpsProxy","noProxy","trustedCa"})
+    @OutputCustomType.Constructor
     private ManagedClusterHTTPProxyConfigResponse(
-        @Nullable String httpProxy,
-        @Nullable String httpsProxy,
-        @Nullable List<String> noProxy,
-        @Nullable String trustedCa) {
+        @OutputCustomType.Parameter("httpProxy") @Nullable String httpProxy,
+        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @OutputCustomType.Parameter("noProxy") @Nullable List<String> noProxy,
+        @OutputCustomType.Parameter("trustedCa") @Nullable String trustedCa) {
         this.httpProxy = httpProxy;
         this.httpsProxy = httpsProxy;
         this.noProxy = noProxy;
@@ -100,22 +100,22 @@ public final class ManagedClusterHTTPProxyConfigResponse {
     	      this.trustedCa = defaults.trustedCa;
         }
 
-        public Builder setHttpProxy(@Nullable String httpProxy) {
+        public Builder httpProxy(@Nullable String httpProxy) {
             this.httpProxy = httpProxy;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setNoProxy(@Nullable List<String> noProxy) {
+        public Builder noProxy(@Nullable List<String> noProxy) {
             this.noProxy = noProxy;
             return this;
         }
 
-        public Builder setTrustedCa(@Nullable String trustedCa) {
+        public Builder trustedCa(@Nullable String trustedCa) {
             this.trustedCa = trustedCa;
             return this;
         }

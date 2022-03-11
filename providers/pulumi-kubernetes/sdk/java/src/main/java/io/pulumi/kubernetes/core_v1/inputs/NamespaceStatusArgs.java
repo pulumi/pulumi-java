@@ -80,22 +80,22 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
     	      this.phase = defaults.phase;
         }
 
-        public Builder setConditions(@Nullable Input<List<NamespaceConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<NamespaceConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<NamespaceConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<NamespaceConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setPhase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Input<String> phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = Input.ofNullable(phase);
             return this;
         }

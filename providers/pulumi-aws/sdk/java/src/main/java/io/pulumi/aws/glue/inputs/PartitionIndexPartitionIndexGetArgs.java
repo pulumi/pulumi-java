@@ -83,32 +83,32 @@ public final class PartitionIndexPartitionIndexGetArgs extends io.pulumi.resourc
     	      this.keys = defaults.keys;
         }
 
-        public Builder setIndexName(@Nullable Input<String> indexName) {
+        public Builder indexName(@Nullable Input<String> indexName) {
             this.indexName = indexName;
             return this;
         }
 
-        public Builder setIndexName(@Nullable String indexName) {
+        public Builder indexName(@Nullable String indexName) {
             this.indexName = Input.ofNullable(indexName);
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable Input<String> indexStatus) {
+        public Builder indexStatus(@Nullable Input<String> indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable String indexStatus) {
+        public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = Input.ofNullable(indexStatus);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Input<List<String>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<String> keys) {
+        public Builder keys(@Nullable List<String> keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }

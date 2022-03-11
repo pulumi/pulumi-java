@@ -28,10 +28,10 @@ public final class ServiceTemplateSpecContainerResources {
      */
     private final @Nullable Map<String,String> requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerResources(
-        @Nullable Map<String,String> limits,
-        @Nullable Map<String,String> requests) {
+        @OutputCustomType.Parameter("limits") @Nullable Map<String,String> limits,
+        @OutputCustomType.Parameter("requests") @Nullable Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }
@@ -79,12 +79,12 @@ public final class ServiceTemplateSpecContainerResources {
     	      this.requests = defaults.requests;
         }
 
-        public Builder setLimits(@Nullable Map<String,String> limits) {
+        public Builder limits(@Nullable Map<String,String> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setRequests(@Nullable Map<String,String> requests) {
+        public Builder requests(@Nullable Map<String,String> requests) {
             this.requests = requests;
             return this;
         }

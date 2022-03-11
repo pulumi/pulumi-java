@@ -14,10 +14,10 @@ public final class WorkGroupEngineVersion {
     private final @Nullable String effectiveEngineVersion;
     private final @Nullable String selectedEngineVersion;
 
-    @OutputCustomType.Constructor({"effectiveEngineVersion","selectedEngineVersion"})
+    @OutputCustomType.Constructor
     private WorkGroupEngineVersion(
-        @Nullable String effectiveEngineVersion,
-        @Nullable String selectedEngineVersion) {
+        @OutputCustomType.Parameter("effectiveEngineVersion") @Nullable String effectiveEngineVersion,
+        @OutputCustomType.Parameter("selectedEngineVersion") @Nullable String selectedEngineVersion) {
         this.effectiveEngineVersion = effectiveEngineVersion;
         this.selectedEngineVersion = selectedEngineVersion;
     }
@@ -51,12 +51,12 @@ public final class WorkGroupEngineVersion {
     	      this.selectedEngineVersion = defaults.selectedEngineVersion;
         }
 
-        public Builder setEffectiveEngineVersion(@Nullable String effectiveEngineVersion) {
+        public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
             this.effectiveEngineVersion = effectiveEngineVersion;
             return this;
         }
 
-        public Builder setSelectedEngineVersion(@Nullable String selectedEngineVersion) {
+        public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
             this.selectedEngineVersion = selectedEngineVersion;
             return this;
         }

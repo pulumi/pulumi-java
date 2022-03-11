@@ -32,12 +32,12 @@ public final class Template {
      */
     private final @Nullable String textPart;
 
-    @OutputCustomType.Constructor({"htmlPart","subjectPart","templateName","textPart"})
+    @OutputCustomType.Constructor
     private Template(
-        @Nullable String htmlPart,
-        String subjectPart,
-        @Nullable String templateName,
-        @Nullable String textPart) {
+        @OutputCustomType.Parameter("htmlPart") @Nullable String htmlPart,
+        @OutputCustomType.Parameter("subjectPart") String subjectPart,
+        @OutputCustomType.Parameter("templateName") @Nullable String templateName,
+        @OutputCustomType.Parameter("textPart") @Nullable String textPart) {
         this.htmlPart = htmlPart;
         this.subjectPart = subjectPart;
         this.templateName = templateName;
@@ -99,22 +99,22 @@ public final class Template {
     	      this.textPart = defaults.textPart;
         }
 
-        public Builder setHtmlPart(@Nullable String htmlPart) {
+        public Builder htmlPart(@Nullable String htmlPart) {
             this.htmlPart = htmlPart;
             return this;
         }
 
-        public Builder setSubjectPart(String subjectPart) {
+        public Builder subjectPart(String subjectPart) {
             this.subjectPart = Objects.requireNonNull(subjectPart);
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTextPart(@Nullable String textPart) {
+        public Builder textPart(@Nullable String textPart) {
             this.textPart = textPart;
             return this;
         }

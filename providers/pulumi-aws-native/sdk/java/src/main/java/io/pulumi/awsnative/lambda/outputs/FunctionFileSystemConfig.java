@@ -20,10 +20,10 @@ public final class FunctionFileSystemConfig {
      */
     private final String localMountPath;
 
-    @OutputCustomType.Constructor({"arn","localMountPath"})
+    @OutputCustomType.Constructor
     private FunctionFileSystemConfig(
-        String arn,
-        String localMountPath) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("localMountPath") String localMountPath) {
         this.arn = arn;
         this.localMountPath = localMountPath;
     }
@@ -65,12 +65,12 @@ public final class FunctionFileSystemConfig {
     	      this.localMountPath = defaults.localMountPath;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setLocalMountPath(String localMountPath) {
+        public Builder localMountPath(String localMountPath) {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }

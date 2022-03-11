@@ -38,13 +38,13 @@ public final class SqlStoredProcedureGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"body","etag","id","rid","ts"})
+    @OutputCustomType.Constructor
     private SqlStoredProcedureGetPropertiesResponseResource(
-        @Nullable String body,
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.body = body;
         this.etag = etag;
         this.id = id;
@@ -116,27 +116,27 @@ public final class SqlStoredProcedureGetPropertiesResponseResource {
     	      this.ts = defaults.ts;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }

@@ -21,10 +21,10 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
      */
     private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"name","properties"})
+    @OutputCustomType.Constructor
     private LoadBalancerFrontendIPConfigurationResponse(
-        String name,
-        LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
         this.name = name;
         this.properties = properties;
     }
@@ -66,12 +66,12 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
+        public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

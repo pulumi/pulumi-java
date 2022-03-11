@@ -15,8 +15,8 @@ public final class ServiceAccessPolicyEntryResponse {
      */
     private final String objectId;
 
-    @OutputCustomType.Constructor({"objectId"})
-    private ServiceAccessPolicyEntryResponse(String objectId) {
+    @OutputCustomType.Constructor
+    private ServiceAccessPolicyEntryResponse(@OutputCustomType.Parameter("objectId") String objectId) {
         this.objectId = objectId;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceAccessPolicyEntryResponse {
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }

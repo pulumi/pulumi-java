@@ -28,11 +28,11 @@ public final class ConnectorS3LogDelivery {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private ConnectorS3LogDelivery(
-        @Nullable String bucket,
-        Boolean enabled,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;
@@ -84,17 +84,17 @@ public final class ConnectorS3LogDelivery {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

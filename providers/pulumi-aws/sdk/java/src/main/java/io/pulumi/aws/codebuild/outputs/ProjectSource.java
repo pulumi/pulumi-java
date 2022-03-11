@@ -66,17 +66,17 @@ public final class ProjectSource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auth","buildStatusConfig","buildspec","gitCloneDepth","gitSubmodulesConfig","insecureSsl","location","reportBuildStatus","type"})
+    @OutputCustomType.Constructor
     private ProjectSource(
-        @Nullable ProjectSourceAuth auth,
-        @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
-        @Nullable String buildspec,
-        @Nullable Integer gitCloneDepth,
-        @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
-        @Nullable Boolean insecureSsl,
-        @Nullable String location,
-        @Nullable Boolean reportBuildStatus,
-        String type) {
+        @OutputCustomType.Parameter("auth") @Nullable ProjectSourceAuth auth,
+        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSourceBuildStatusConfig buildStatusConfig,
+        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
+        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig,
+        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @OutputCustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;
@@ -192,47 +192,47 @@ public final class ProjectSource {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable ProjectSourceAuth auth) {
+        public Builder auth(@Nullable ProjectSourceAuth auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setBuildStatusConfig(@Nullable ProjectSourceBuildStatusConfig buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable ProjectSourceBuildStatusConfig buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
 
-        public Builder setBuildspec(@Nullable String buildspec) {
+        public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = buildspec;
             return this;
         }
 
-        public Builder setGitCloneDepth(@Nullable Integer gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
 
-        public Builder setGitSubmodulesConfig(@Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable ProjectSourceGitSubmodulesConfig gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
 
-        public Builder setInsecureSsl(@Nullable Boolean insecureSsl) {
+        public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setReportBuildStatus(@Nullable Boolean reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

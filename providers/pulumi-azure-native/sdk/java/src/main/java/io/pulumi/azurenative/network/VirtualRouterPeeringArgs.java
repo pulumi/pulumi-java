@@ -151,72 +151,72 @@ public final class VirtualRouterPeeringArgs extends io.pulumi.resources.Resource
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Input<Double> peerAsn) {
+        public Builder peerAsn(@Nullable Input<Double> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Double peerAsn) {
+        public Builder peerAsn(@Nullable Double peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder setPeerIp(@Nullable Input<String> peerIp) {
+        public Builder peerIp(@Nullable Input<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
 
-        public Builder setPeerIp(@Nullable String peerIp) {
+        public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = Input.ofNullable(peerIp);
             return this;
         }
 
-        public Builder setPeeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Input<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Input.ofNullable(peeringName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualRouterName(Input<String> virtualRouterName) {
+        public Builder virtualRouterName(Input<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
 
-        public Builder setVirtualRouterName(String virtualRouterName) {
+        public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }

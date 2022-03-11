@@ -22,10 +22,10 @@ public final class ProxyServerPropertiesResponse {
      */
     private final @Nullable String port;
 
-    @OutputCustomType.Constructor({"ip","port"})
+    @OutputCustomType.Constructor
     private ProxyServerPropertiesResponse(
-        @Nullable String ip,
-        @Nullable String port) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("port") @Nullable String port) {
         this.ip = ip;
         this.port = port;
     }
@@ -67,12 +67,12 @@ public final class ProxyServerPropertiesResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }

@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
      */
     private final List<String> text;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ResponseMessageTextResponse(
-        Boolean allowPlaybackInterruption,
-        List<String> text) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("text") List<String> text) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.text = text;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTextResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setText(List<String> text) {
+        public Builder text(List<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

@@ -110,42 +110,42 @@ public final class ContainerHttpGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHttpHeaders(@Nullable Input<HttpHeadersArgs> httpHeaders) {
+        public Builder httpHeaders(@Nullable Input<HttpHeadersArgs> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable HttpHeadersArgs httpHeaders) {
+        public Builder httpHeaders(@Nullable HttpHeadersArgs httpHeaders) {
             this.httpHeaders = Input.ofNullable(httpHeaders);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setScheme(@Nullable Input<Either<String,Scheme>> scheme) {
+        public Builder scheme(@Nullable Input<Either<String,Scheme>> scheme) {
             this.scheme = scheme;
             return this;
         }
 
-        public Builder setScheme(@Nullable Either<String,Scheme> scheme) {
+        public Builder scheme(@Nullable Either<String,Scheme> scheme) {
             this.scheme = Input.ofNullable(scheme);
             return this;
         }

@@ -172,82 +172,82 @@ public final class GoogleCloudDialogflowV2IntentParameterArgs extends io.pulumi.
     	      this.value = defaults.value;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEntityTypeDisplayName(@Nullable Input<String> entityTypeDisplayName) {
+        public Builder entityTypeDisplayName(@Nullable Input<String> entityTypeDisplayName) {
             this.entityTypeDisplayName = entityTypeDisplayName;
             return this;
         }
 
-        public Builder setEntityTypeDisplayName(@Nullable String entityTypeDisplayName) {
+        public Builder entityTypeDisplayName(@Nullable String entityTypeDisplayName) {
             this.entityTypeDisplayName = Input.ofNullable(entityTypeDisplayName);
             return this;
         }
 
-        public Builder setIsList(@Nullable Input<Boolean> isList) {
+        public Builder isList(@Nullable Input<Boolean> isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = Input.ofNullable(isList);
             return this;
         }
 
-        public Builder setMandatory(@Nullable Input<Boolean> mandatory) {
+        public Builder mandatory(@Nullable Input<Boolean> mandatory) {
             this.mandatory = mandatory;
             return this;
         }
 
-        public Builder setMandatory(@Nullable Boolean mandatory) {
+        public Builder mandatory(@Nullable Boolean mandatory) {
             this.mandatory = Input.ofNullable(mandatory);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrompts(@Nullable Input<List<String>> prompts) {
+        public Builder prompts(@Nullable Input<List<String>> prompts) {
             this.prompts = prompts;
             return this;
         }
 
-        public Builder setPrompts(@Nullable List<String> prompts) {
+        public Builder prompts(@Nullable List<String> prompts) {
             this.prompts = Input.ofNullable(prompts);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

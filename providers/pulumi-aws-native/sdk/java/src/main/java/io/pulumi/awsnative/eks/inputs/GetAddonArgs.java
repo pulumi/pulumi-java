@@ -68,12 +68,12 @@ public final class GetAddonArgs extends io.pulumi.resources.InvokeArgs {
     	      this.clusterName = defaults.clusterName;
         }
 
-        public Builder setAddonName(String addonName) {
+        public Builder addonName(String addonName) {
             this.addonName = Objects.requireNonNull(addonName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }

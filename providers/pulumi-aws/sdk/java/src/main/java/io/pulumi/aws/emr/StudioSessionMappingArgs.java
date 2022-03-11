@@ -118,52 +118,52 @@ public final class StudioSessionMappingArgs extends io.pulumi.resources.Resource
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setIdentityId(@Nullable Input<String> identityId) {
+        public Builder identityId(@Nullable Input<String> identityId) {
             this.identityId = identityId;
             return this;
         }
 
-        public Builder setIdentityId(@Nullable String identityId) {
+        public Builder identityId(@Nullable String identityId) {
             this.identityId = Input.ofNullable(identityId);
             return this;
         }
 
-        public Builder setIdentityName(@Nullable Input<String> identityName) {
+        public Builder identityName(@Nullable Input<String> identityName) {
             this.identityName = identityName;
             return this;
         }
 
-        public Builder setIdentityName(@Nullable String identityName) {
+        public Builder identityName(@Nullable String identityName) {
             this.identityName = Input.ofNullable(identityName);
             return this;
         }
 
-        public Builder setIdentityType(Input<String> identityType) {
+        public Builder identityType(Input<String> identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Input.of(Objects.requireNonNull(identityType));
             return this;
         }
 
-        public Builder setSessionPolicyArn(Input<String> sessionPolicyArn) {
+        public Builder sessionPolicyArn(Input<String> sessionPolicyArn) {
             this.sessionPolicyArn = Objects.requireNonNull(sessionPolicyArn);
             return this;
         }
 
-        public Builder setSessionPolicyArn(String sessionPolicyArn) {
+        public Builder sessionPolicyArn(String sessionPolicyArn) {
             this.sessionPolicyArn = Input.of(Objects.requireNonNull(sessionPolicyArn));
             return this;
         }
 
-        public Builder setStudioId(Input<String> studioId) {
+        public Builder studioId(Input<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Input.of(Objects.requireNonNull(studioId));
             return this;
         }

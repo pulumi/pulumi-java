@@ -48,14 +48,14 @@ public final class ListenerRuleCondition {
      */
     private final @Nullable ListenerRuleConditionSourceIp sourceIp;
 
-    @OutputCustomType.Constructor({"hostHeader","httpHeader","httpRequestMethod","pathPattern","queryStrings","sourceIp"})
+    @OutputCustomType.Constructor
     private ListenerRuleCondition(
-        @Nullable ListenerRuleConditionHostHeader hostHeader,
-        @Nullable ListenerRuleConditionHttpHeader httpHeader,
-        @Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod,
-        @Nullable ListenerRuleConditionPathPattern pathPattern,
-        @Nullable List<ListenerRuleConditionQueryString> queryStrings,
-        @Nullable ListenerRuleConditionSourceIp sourceIp) {
+        @OutputCustomType.Parameter("hostHeader") @Nullable ListenerRuleConditionHostHeader hostHeader,
+        @OutputCustomType.Parameter("httpHeader") @Nullable ListenerRuleConditionHttpHeader httpHeader,
+        @OutputCustomType.Parameter("httpRequestMethod") @Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod,
+        @OutputCustomType.Parameter("pathPattern") @Nullable ListenerRuleConditionPathPattern pathPattern,
+        @OutputCustomType.Parameter("queryStrings") @Nullable List<ListenerRuleConditionQueryString> queryStrings,
+        @OutputCustomType.Parameter("sourceIp") @Nullable ListenerRuleConditionSourceIp sourceIp) {
         this.hostHeader = hostHeader;
         this.httpHeader = httpHeader;
         this.httpRequestMethod = httpRequestMethod;
@@ -137,32 +137,32 @@ public final class ListenerRuleCondition {
     	      this.sourceIp = defaults.sourceIp;
         }
 
-        public Builder setHostHeader(@Nullable ListenerRuleConditionHostHeader hostHeader) {
+        public Builder hostHeader(@Nullable ListenerRuleConditionHostHeader hostHeader) {
             this.hostHeader = hostHeader;
             return this;
         }
 
-        public Builder setHttpHeader(@Nullable ListenerRuleConditionHttpHeader httpHeader) {
+        public Builder httpHeader(@Nullable ListenerRuleConditionHttpHeader httpHeader) {
             this.httpHeader = httpHeader;
             return this;
         }
 
-        public Builder setHttpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod) {
+        public Builder httpRequestMethod(@Nullable ListenerRuleConditionHttpRequestMethod httpRequestMethod) {
             this.httpRequestMethod = httpRequestMethod;
             return this;
         }
 
-        public Builder setPathPattern(@Nullable ListenerRuleConditionPathPattern pathPattern) {
+        public Builder pathPattern(@Nullable ListenerRuleConditionPathPattern pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable List<ListenerRuleConditionQueryString> queryStrings) {
+        public Builder queryStrings(@Nullable List<ListenerRuleConditionQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }
 
-        public Builder setSourceIp(@Nullable ListenerRuleConditionSourceIp sourceIp) {
+        public Builder sourceIp(@Nullable ListenerRuleConditionSourceIp sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }

@@ -28,11 +28,11 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
      */
     private final @Nullable String recoveryFabricLocation;
 
-    @OutputCustomType.Constructor({"instanceType","primaryFabricLocation","recoveryFabricLocation"})
+    @OutputCustomType.Constructor
     private AzureToAzureNetworkMappingSettingsResponse(
-        String instanceType,
-        @Nullable String primaryFabricLocation,
-        @Nullable String recoveryFabricLocation) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("primaryFabricLocation") @Nullable String primaryFabricLocation,
+        @OutputCustomType.Parameter("recoveryFabricLocation") @Nullable String recoveryFabricLocation) {
         this.instanceType = instanceType;
         this.primaryFabricLocation = primaryFabricLocation;
         this.recoveryFabricLocation = recoveryFabricLocation;
@@ -85,17 +85,17 @@ public final class AzureToAzureNetworkMappingSettingsResponse {
     	      this.recoveryFabricLocation = defaults.recoveryFabricLocation;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPrimaryFabricLocation(@Nullable String primaryFabricLocation) {
+        public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
             this.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
 
-        public Builder setRecoveryFabricLocation(@Nullable String recoveryFabricLocation) {
+        public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
             this.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }

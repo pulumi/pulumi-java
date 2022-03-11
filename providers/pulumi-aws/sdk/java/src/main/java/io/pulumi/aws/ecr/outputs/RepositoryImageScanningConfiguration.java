@@ -15,8 +15,8 @@ public final class RepositoryImageScanningConfiguration {
      */
     private final Boolean scanOnPush;
 
-    @OutputCustomType.Constructor({"scanOnPush"})
-    private RepositoryImageScanningConfiguration(Boolean scanOnPush) {
+    @OutputCustomType.Constructor
+    private RepositoryImageScanningConfiguration(@OutputCustomType.Parameter("scanOnPush") Boolean scanOnPush) {
         this.scanOnPush = scanOnPush;
     }
 
@@ -48,7 +48,7 @@ public final class RepositoryImageScanningConfiguration {
     	      this.scanOnPush = defaults.scanOnPush;
         }
 
-        public Builder setScanOnPush(Boolean scanOnPush) {
+        public Builder scanOnPush(Boolean scanOnPush) {
             this.scanOnPush = Objects.requireNonNull(scanOnPush);
             return this;
         }

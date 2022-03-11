@@ -108,42 +108,42 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGetArgs e
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable Input<List<Integer>> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable Input<List<Integer>> allowedSuccessCodes) {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = Input.ofNullable(allowedSuccessCodes);
             return this;
         }
 
-        public Builder setGcsObject(@Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject) {
+        public Builder gcsObject(@Nullable Input<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs> gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
 
-        public Builder setGcsObject(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs gcsObject) {
+        public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectGetArgs gcsObject) {
             this.gcsObject = Input.ofNullable(gcsObject);
             return this;
         }
 
-        public Builder setInterpreter(@Nullable Input<String> interpreter) {
+        public Builder interpreter(@Nullable Input<String> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable String interpreter) {
+        public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = Input.ofNullable(interpreter);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }

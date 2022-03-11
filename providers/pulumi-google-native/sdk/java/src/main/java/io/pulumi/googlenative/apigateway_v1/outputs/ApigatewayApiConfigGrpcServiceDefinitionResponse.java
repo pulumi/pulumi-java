@@ -21,10 +21,10 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
      */
     private final List<ApigatewayApiConfigFileResponse> source;
 
-    @OutputCustomType.Constructor({"fileDescriptorSet","source"})
+    @OutputCustomType.Constructor
     private ApigatewayApiConfigGrpcServiceDefinitionResponse(
-        ApigatewayApiConfigFileResponse fileDescriptorSet,
-        List<ApigatewayApiConfigFileResponse> source) {
+        @OutputCustomType.Parameter("fileDescriptorSet") ApigatewayApiConfigFileResponse fileDescriptorSet,
+        @OutputCustomType.Parameter("source") List<ApigatewayApiConfigFileResponse> source) {
         this.fileDescriptorSet = fileDescriptorSet;
         this.source = source;
     }
@@ -66,12 +66,12 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setFileDescriptorSet(ApigatewayApiConfigFileResponse fileDescriptorSet) {
+        public Builder fileDescriptorSet(ApigatewayApiConfigFileResponse fileDescriptorSet) {
             this.fileDescriptorSet = Objects.requireNonNull(fileDescriptorSet);
             return this;
         }
 
-        public Builder setSource(List<ApigatewayApiConfigFileResponse> source) {
+        public Builder source(List<ApigatewayApiConfigFileResponse> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

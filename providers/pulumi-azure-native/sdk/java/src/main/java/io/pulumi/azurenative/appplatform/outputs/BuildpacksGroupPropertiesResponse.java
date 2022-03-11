@@ -24,10 +24,10 @@ public final class BuildpacksGroupPropertiesResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"buildpacks","name"})
+    @OutputCustomType.Constructor
     private BuildpacksGroupPropertiesResponse(
-        @Nullable List<BuildpackPropertiesResponse> buildpacks,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("buildpacks") @Nullable List<BuildpackPropertiesResponse> buildpacks,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.buildpacks = buildpacks;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class BuildpacksGroupPropertiesResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setBuildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
+        public Builder buildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
             this.buildpacks = buildpacks;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

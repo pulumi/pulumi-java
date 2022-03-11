@@ -101,25 +101,25 @@ public final class ComputeEngineTargetDetailsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"additionalLicenses","appliedLicense","bootOption","computeScheduling","diskType","labels","licenseType","machineType","machineTypeSeries","metadata","networkInterfaces","networkTags","project","secureBoot","serviceAccount","vmName","zone"})
+    @OutputCustomType.Constructor
     private ComputeEngineTargetDetailsResponse(
-        List<String> additionalLicenses,
-        AppliedLicenseResponse appliedLicense,
-        String bootOption,
-        ComputeSchedulingResponse computeScheduling,
-        String diskType,
-        Map<String,String> labels,
-        String licenseType,
-        String machineType,
-        String machineTypeSeries,
-        Map<String,String> metadata,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        List<String> networkTags,
-        String project,
-        Boolean secureBoot,
-        String serviceAccount,
-        String vmName,
-        String zone) {
+        @OutputCustomType.Parameter("additionalLicenses") List<String> additionalLicenses,
+        @OutputCustomType.Parameter("appliedLicense") AppliedLicenseResponse appliedLicense,
+        @OutputCustomType.Parameter("bootOption") String bootOption,
+        @OutputCustomType.Parameter("computeScheduling") ComputeSchedulingResponse computeScheduling,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseType") String licenseType,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("machineTypeSeries") String machineTypeSeries,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secureBoot") Boolean secureBoot,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("vmName") String vmName,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.additionalLicenses = additionalLicenses;
         this.appliedLicense = appliedLicense;
         this.bootOption = bootOption;
@@ -311,87 +311,87 @@ public final class ComputeEngineTargetDetailsResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalLicenses(List<String> additionalLicenses) {
+        public Builder additionalLicenses(List<String> additionalLicenses) {
             this.additionalLicenses = Objects.requireNonNull(additionalLicenses);
             return this;
         }
 
-        public Builder setAppliedLicense(AppliedLicenseResponse appliedLicense) {
+        public Builder appliedLicense(AppliedLicenseResponse appliedLicense) {
             this.appliedLicense = Objects.requireNonNull(appliedLicense);
             return this;
         }
 
-        public Builder setBootOption(String bootOption) {
+        public Builder bootOption(String bootOption) {
             this.bootOption = Objects.requireNonNull(bootOption);
             return this;
         }
 
-        public Builder setComputeScheduling(ComputeSchedulingResponse computeScheduling) {
+        public Builder computeScheduling(ComputeSchedulingResponse computeScheduling) {
             this.computeScheduling = Objects.requireNonNull(computeScheduling);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenseType(String licenseType) {
+        public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMachineTypeSeries(String machineTypeSeries) {
+        public Builder machineTypeSeries(String machineTypeSeries) {
             this.machineTypeSeries = Objects.requireNonNull(machineTypeSeries);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkTags(List<String> networkTags) {
+        public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecureBoot(Boolean secureBoot) {
+        public Builder secureBoot(Boolean secureBoot) {
             this.secureBoot = Objects.requireNonNull(secureBoot);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

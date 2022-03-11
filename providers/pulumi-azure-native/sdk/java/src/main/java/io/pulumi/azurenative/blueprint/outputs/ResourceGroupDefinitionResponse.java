@@ -49,15 +49,15 @@ public final class ResourceGroupDefinitionResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"dependsOn","description","displayName","location","name","strongType","tags"})
+    @OutputCustomType.Constructor
     private ResourceGroupDefinitionResponse(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String strongType,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("strongType") @Nullable String strongType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
@@ -149,37 +149,37 @@ public final class ResourceGroupDefinitionResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDependsOn(@Nullable List<String> dependsOn) {
+        public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

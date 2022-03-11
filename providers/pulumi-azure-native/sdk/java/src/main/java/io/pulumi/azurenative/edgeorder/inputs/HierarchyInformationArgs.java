@@ -106,42 +106,42 @@ public final class HierarchyInformationArgs extends io.pulumi.resources.Resource
     	      this.productName = defaults.productName;
         }
 
-        public Builder setConfigurationName(@Nullable Input<String> configurationName) {
+        public Builder configurationName(@Nullable Input<String> configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = Input.ofNullable(configurationName);
             return this;
         }
 
-        public Builder setProductFamilyName(@Nullable Input<String> productFamilyName) {
+        public Builder productFamilyName(@Nullable Input<String> productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
 
-        public Builder setProductFamilyName(@Nullable String productFamilyName) {
+        public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = Input.ofNullable(productFamilyName);
             return this;
         }
 
-        public Builder setProductLineName(@Nullable Input<String> productLineName) {
+        public Builder productLineName(@Nullable Input<String> productLineName) {
             this.productLineName = productLineName;
             return this;
         }
 
-        public Builder setProductLineName(@Nullable String productLineName) {
+        public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = Input.ofNullable(productLineName);
             return this;
         }
 
-        public Builder setProductName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Input<String> productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = Input.ofNullable(productName);
             return this;
         }

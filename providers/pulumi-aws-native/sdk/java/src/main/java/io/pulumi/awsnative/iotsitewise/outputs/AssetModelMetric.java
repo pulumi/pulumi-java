@@ -28,11 +28,11 @@ public final class AssetModelMetric {
      */
     private final AssetModelMetricWindow window;
 
-    @OutputCustomType.Constructor({"expression","variables","window"})
+    @OutputCustomType.Constructor
     private AssetModelMetric(
-        String expression,
-        List<AssetModelExpressionVariable> variables,
-        AssetModelMetricWindow window) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables,
+        @OutputCustomType.Parameter("window") AssetModelMetricWindow window) {
         this.expression = expression;
         this.variables = variables;
         this.window = window;
@@ -84,17 +84,17 @@ public final class AssetModelMetric {
     	      this.window = defaults.window;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setVariables(List<AssetModelExpressionVariable> variables) {
+        public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
 
-        public Builder setWindow(AssetModelMetricWindow window) {
+        public Builder window(AssetModelMetricWindow window) {
             this.window = Objects.requireNonNull(window);
             return this;
         }

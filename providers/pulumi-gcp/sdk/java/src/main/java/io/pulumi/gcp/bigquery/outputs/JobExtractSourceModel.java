@@ -25,11 +25,11 @@ public final class JobExtractSourceModel {
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor({"datasetId","modelId","projectId"})
+    @OutputCustomType.Constructor
     private JobExtractSourceModel(
-        String datasetId,
-        String modelId,
-        String projectId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("modelId") String modelId,
+        @OutputCustomType.Parameter("projectId") String projectId) {
         this.datasetId = datasetId;
         this.modelId = modelId;
         this.projectId = projectId;
@@ -81,17 +81,17 @@ public final class JobExtractSourceModel {
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }

@@ -15,8 +15,8 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
      */
     private final String baseEntitlement;
 
-    @OutputCustomType.Constructor({"baseEntitlement"})
-    private GoogleCloudChannelV1AssociationInfoResponse(String baseEntitlement) {
+    @OutputCustomType.Constructor
+    private GoogleCloudChannelV1AssociationInfoResponse(@OutputCustomType.Parameter("baseEntitlement") String baseEntitlement) {
         this.baseEntitlement = baseEntitlement;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudChannelV1AssociationInfoResponse {
     	      this.baseEntitlement = defaults.baseEntitlement;
         }
 
-        public Builder setBaseEntitlement(String baseEntitlement) {
+        public Builder baseEntitlement(String baseEntitlement) {
             this.baseEntitlement = Objects.requireNonNull(baseEntitlement);
             return this;
         }

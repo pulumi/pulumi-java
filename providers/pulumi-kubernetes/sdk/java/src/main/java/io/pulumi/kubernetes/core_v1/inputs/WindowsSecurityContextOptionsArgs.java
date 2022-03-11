@@ -107,42 +107,42 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
     	      this.runAsUserName = defaults.runAsUserName;
         }
 
-        public Builder setGmsaCredentialSpec(@Nullable Input<String> gmsaCredentialSpec) {
+        public Builder gmsaCredentialSpec(@Nullable Input<String> gmsaCredentialSpec) {
             this.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
 
-        public Builder setGmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
+        public Builder gmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
             this.gmsaCredentialSpec = Input.ofNullable(gmsaCredentialSpec);
             return this;
         }
 
-        public Builder setGmsaCredentialSpecName(@Nullable Input<String> gmsaCredentialSpecName) {
+        public Builder gmsaCredentialSpecName(@Nullable Input<String> gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
 
-        public Builder setGmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
+        public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = Input.ofNullable(gmsaCredentialSpecName);
             return this;
         }
 
-        public Builder setHostProcess(@Nullable Input<Boolean> hostProcess) {
+        public Builder hostProcess(@Nullable Input<Boolean> hostProcess) {
             this.hostProcess = hostProcess;
             return this;
         }
 
-        public Builder setHostProcess(@Nullable Boolean hostProcess) {
+        public Builder hostProcess(@Nullable Boolean hostProcess) {
             this.hostProcess = Input.ofNullable(hostProcess);
             return this;
         }
 
-        public Builder setRunAsUserName(@Nullable Input<String> runAsUserName) {
+        public Builder runAsUserName(@Nullable Input<String> runAsUserName) {
             this.runAsUserName = runAsUserName;
             return this;
         }
 
-        public Builder setRunAsUserName(@Nullable String runAsUserName) {
+        public Builder runAsUserName(@Nullable String runAsUserName) {
             this.runAsUserName = Input.ofNullable(runAsUserName);
             return this;
         }

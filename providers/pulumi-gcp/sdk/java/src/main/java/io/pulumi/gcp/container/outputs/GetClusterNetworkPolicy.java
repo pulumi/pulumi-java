@@ -13,10 +13,10 @@ public final class GetClusterNetworkPolicy {
     private final Boolean enabled;
     private final String provider;
 
-    @OutputCustomType.Constructor({"enabled","provider"})
+    @OutputCustomType.Constructor
     private GetClusterNetworkPolicy(
-        Boolean enabled,
-        String provider) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("provider") String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }
@@ -50,12 +50,12 @@ public final class GetClusterNetworkPolicy {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }

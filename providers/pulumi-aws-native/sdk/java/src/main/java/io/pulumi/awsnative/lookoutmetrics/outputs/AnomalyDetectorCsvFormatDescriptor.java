@@ -21,14 +21,14 @@ public final class AnomalyDetectorCsvFormatDescriptor {
     private final @Nullable List<String> headerList;
     private final @Nullable String quoteSymbol;
 
-    @OutputCustomType.Constructor({"charset","containsHeader","delimiter","fileCompression","headerList","quoteSymbol"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorCsvFormatDescriptor(
-        @Nullable String charset,
-        @Nullable Boolean containsHeader,
-        @Nullable String delimiter,
-        @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
-        @Nullable List<String> headerList,
-        @Nullable String quoteSymbol) {
+        @OutputCustomType.Parameter("charset") @Nullable String charset,
+        @OutputCustomType.Parameter("containsHeader") @Nullable Boolean containsHeader,
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("fileCompression") @Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression,
+        @OutputCustomType.Parameter("headerList") @Nullable List<String> headerList,
+        @OutputCustomType.Parameter("quoteSymbol") @Nullable String quoteSymbol) {
         this.charset = charset;
         this.containsHeader = containsHeader;
         this.delimiter = delimiter;
@@ -86,32 +86,32 @@ public final class AnomalyDetectorCsvFormatDescriptor {
     	      this.quoteSymbol = defaults.quoteSymbol;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setContainsHeader(@Nullable Boolean containsHeader) {
+        public Builder containsHeader(@Nullable Boolean containsHeader) {
             this.containsHeader = containsHeader;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setFileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
+        public Builder fileCompression(@Nullable AnomalyDetectorCsvFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }
 
-        public Builder setHeaderList(@Nullable List<String> headerList) {
+        public Builder headerList(@Nullable List<String> headerList) {
             this.headerList = headerList;
             return this;
         }
 
-        public Builder setQuoteSymbol(@Nullable String quoteSymbol) {
+        public Builder quoteSymbol(@Nullable String quoteSymbol) {
             this.quoteSymbol = quoteSymbol;
             return this;
         }

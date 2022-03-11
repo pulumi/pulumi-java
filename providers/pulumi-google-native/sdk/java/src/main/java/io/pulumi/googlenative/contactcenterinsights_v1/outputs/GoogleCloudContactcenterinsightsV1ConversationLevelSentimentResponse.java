@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      */
     private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
-    @OutputCustomType.Constructor({"channelTag","sentimentData"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(
-        Integer channelTag,
-        GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
+        @OutputCustomType.Parameter("channelTag") Integer channelTag,
+        @OutputCustomType.Parameter("sentimentData") GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
         this.channelTag = channelTag;
         this.sentimentData = sentimentData;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
     	      this.sentimentData = defaults.sentimentData;
         }
 
-        public Builder setChannelTag(Integer channelTag) {
+        public Builder channelTag(Integer channelTag) {
             this.channelTag = Objects.requireNonNull(channelTag);
             return this;
         }
 
-        public Builder setSentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
+        public Builder sentimentData(GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData) {
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }

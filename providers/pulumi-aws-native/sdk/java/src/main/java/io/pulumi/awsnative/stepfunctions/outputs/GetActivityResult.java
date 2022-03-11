@@ -16,10 +16,10 @@ public final class GetActivityResult {
     private final @Nullable String arn;
     private final @Nullable List<ActivityTagsEntry> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetActivityResult(
-        @Nullable String arn,
-        @Nullable List<ActivityTagsEntry> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ActivityTagsEntry> tags) {
         this.arn = arn;
         this.tags = tags;
     }
@@ -53,12 +53,12 @@ public final class GetActivityResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ActivityTagsEntry> tags) {
+        public Builder tags(@Nullable List<ActivityTagsEntry> tags) {
             this.tags = tags;
             return this;
         }

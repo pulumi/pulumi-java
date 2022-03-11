@@ -29,11 +29,11 @@ public final class UsagePlanApiStageThrottle {
      */
     private final @Nullable Double rateLimit;
 
-    @OutputCustomType.Constructor({"burstLimit","path","rateLimit"})
+    @OutputCustomType.Constructor
     private UsagePlanApiStageThrottle(
-        @Nullable Integer burstLimit,
-        String path,
-        @Nullable Double rateLimit) {
+        @OutputCustomType.Parameter("burstLimit") @Nullable Integer burstLimit,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("rateLimit") @Nullable Double rateLimit) {
         this.burstLimit = burstLimit;
         this.path = path;
         this.rateLimit = rateLimit;
@@ -85,17 +85,17 @@ public final class UsagePlanApiStageThrottle {
     	      this.rateLimit = defaults.rateLimit;
         }
 
-        public Builder setBurstLimit(@Nullable Integer burstLimit) {
+        public Builder burstLimit(@Nullable Integer burstLimit) {
             this.burstLimit = burstLimit;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRateLimit(@Nullable Double rateLimit) {
+        public Builder rateLimit(@Nullable Double rateLimit) {
             this.rateLimit = rateLimit;
             return this;
         }

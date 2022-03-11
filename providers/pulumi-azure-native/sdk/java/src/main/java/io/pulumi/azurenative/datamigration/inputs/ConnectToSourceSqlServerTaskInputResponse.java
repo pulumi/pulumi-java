@@ -108,22 +108,22 @@ public final class ConnectToSourceSqlServerTaskInputResponse extends io.pulumi.r
     	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
         }
 
-        public Builder setCheckPermissionsGroup(@Nullable String checkPermissionsGroup) {
+        public Builder checkPermissionsGroup(@Nullable String checkPermissionsGroup) {
             this.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
 
-        public Builder setCollectAgentJobs(@Nullable Boolean collectAgentJobs) {
+        public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
             this.collectAgentJobs = collectAgentJobs;
             return this;
         }
 
-        public Builder setCollectLogins(@Nullable Boolean collectLogins) {
+        public Builder collectLogins(@Nullable Boolean collectLogins) {
             this.collectLogins = collectLogins;
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }

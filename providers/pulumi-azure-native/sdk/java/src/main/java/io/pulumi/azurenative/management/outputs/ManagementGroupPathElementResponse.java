@@ -22,10 +22,10 @@ public final class ManagementGroupPathElementResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"displayName","name"})
+    @OutputCustomType.Constructor
     private ManagementGroupPathElementResponse(
-        @Nullable String displayName,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.displayName = displayName;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class ManagementGroupPathElementResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

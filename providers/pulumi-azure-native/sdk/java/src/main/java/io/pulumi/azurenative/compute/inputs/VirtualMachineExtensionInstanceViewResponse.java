@@ -124,27 +124,27 @@ public final class VirtualMachineExtensionInstanceViewResponse extends io.pulumi
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setSubstatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
+        public Builder substatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

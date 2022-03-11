@@ -77,22 +77,22 @@ public final class AzureFilesIdentityBasedAuthenticationArgs extends io.pulumi.r
     	      this.directoryServiceOptions = defaults.directoryServiceOptions;
         }
 
-        public Builder setActiveDirectoryProperties(@Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties) {
+        public Builder activeDirectoryProperties(@Nullable Input<ActiveDirectoryPropertiesArgs> activeDirectoryProperties) {
             this.activeDirectoryProperties = activeDirectoryProperties;
             return this;
         }
 
-        public Builder setActiveDirectoryProperties(@Nullable ActiveDirectoryPropertiesArgs activeDirectoryProperties) {
+        public Builder activeDirectoryProperties(@Nullable ActiveDirectoryPropertiesArgs activeDirectoryProperties) {
             this.activeDirectoryProperties = Input.ofNullable(activeDirectoryProperties);
             return this;
         }
 
-        public Builder setDirectoryServiceOptions(Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
+        public Builder directoryServiceOptions(Input<Either<String,DirectoryServiceOptions>> directoryServiceOptions) {
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
 
-        public Builder setDirectoryServiceOptions(Either<String,DirectoryServiceOptions> directoryServiceOptions) {
+        public Builder directoryServiceOptions(Either<String,DirectoryServiceOptions> directoryServiceOptions) {
             this.directoryServiceOptions = Input.of(Objects.requireNonNull(directoryServiceOptions));
             return this;
         }

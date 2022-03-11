@@ -75,21 +75,21 @@ public final class InstanceGroupManagerActionsSummaryResponse {
      */
     private final Integer verifying;
 
-    @OutputCustomType.Constructor({"abandoning","creating","creatingWithoutRetries","deleting","none","recreating","refreshing","restarting","resuming","starting","stopping","suspending","verifying"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerActionsSummaryResponse(
-        Integer abandoning,
-        Integer creating,
-        Integer creatingWithoutRetries,
-        Integer deleting,
-        Integer none,
-        Integer recreating,
-        Integer refreshing,
-        Integer restarting,
-        Integer resuming,
-        Integer starting,
-        Integer stopping,
-        Integer suspending,
-        Integer verifying) {
+        @OutputCustomType.Parameter("abandoning") Integer abandoning,
+        @OutputCustomType.Parameter("creating") Integer creating,
+        @OutputCustomType.Parameter("creatingWithoutRetries") Integer creatingWithoutRetries,
+        @OutputCustomType.Parameter("deleting") Integer deleting,
+        @OutputCustomType.Parameter("none") Integer none,
+        @OutputCustomType.Parameter("recreating") Integer recreating,
+        @OutputCustomType.Parameter("refreshing") Integer refreshing,
+        @OutputCustomType.Parameter("restarting") Integer restarting,
+        @OutputCustomType.Parameter("resuming") Integer resuming,
+        @OutputCustomType.Parameter("starting") Integer starting,
+        @OutputCustomType.Parameter("stopping") Integer stopping,
+        @OutputCustomType.Parameter("suspending") Integer suspending,
+        @OutputCustomType.Parameter("verifying") Integer verifying) {
         this.abandoning = abandoning;
         this.creating = creating;
         this.creatingWithoutRetries = creatingWithoutRetries;
@@ -241,67 +241,67 @@ public final class InstanceGroupManagerActionsSummaryResponse {
     	      this.verifying = defaults.verifying;
         }
 
-        public Builder setAbandoning(Integer abandoning) {
+        public Builder abandoning(Integer abandoning) {
             this.abandoning = Objects.requireNonNull(abandoning);
             return this;
         }
 
-        public Builder setCreating(Integer creating) {
+        public Builder creating(Integer creating) {
             this.creating = Objects.requireNonNull(creating);
             return this;
         }
 
-        public Builder setCreatingWithoutRetries(Integer creatingWithoutRetries) {
+        public Builder creatingWithoutRetries(Integer creatingWithoutRetries) {
             this.creatingWithoutRetries = Objects.requireNonNull(creatingWithoutRetries);
             return this;
         }
 
-        public Builder setDeleting(Integer deleting) {
+        public Builder deleting(Integer deleting) {
             this.deleting = Objects.requireNonNull(deleting);
             return this;
         }
 
-        public Builder setNone(Integer none) {
+        public Builder none(Integer none) {
             this.none = Objects.requireNonNull(none);
             return this;
         }
 
-        public Builder setRecreating(Integer recreating) {
+        public Builder recreating(Integer recreating) {
             this.recreating = Objects.requireNonNull(recreating);
             return this;
         }
 
-        public Builder setRefreshing(Integer refreshing) {
+        public Builder refreshing(Integer refreshing) {
             this.refreshing = Objects.requireNonNull(refreshing);
             return this;
         }
 
-        public Builder setRestarting(Integer restarting) {
+        public Builder restarting(Integer restarting) {
             this.restarting = Objects.requireNonNull(restarting);
             return this;
         }
 
-        public Builder setResuming(Integer resuming) {
+        public Builder resuming(Integer resuming) {
             this.resuming = Objects.requireNonNull(resuming);
             return this;
         }
 
-        public Builder setStarting(Integer starting) {
+        public Builder starting(Integer starting) {
             this.starting = Objects.requireNonNull(starting);
             return this;
         }
 
-        public Builder setStopping(Integer stopping) {
+        public Builder stopping(Integer stopping) {
             this.stopping = Objects.requireNonNull(stopping);
             return this;
         }
 
-        public Builder setSuspending(Integer suspending) {
+        public Builder suspending(Integer suspending) {
             this.suspending = Objects.requireNonNull(suspending);
             return this;
         }
 
-        public Builder setVerifying(Integer verifying) {
+        public Builder verifying(Integer verifying) {
             this.verifying = Objects.requireNonNull(verifying);
             return this;
         }

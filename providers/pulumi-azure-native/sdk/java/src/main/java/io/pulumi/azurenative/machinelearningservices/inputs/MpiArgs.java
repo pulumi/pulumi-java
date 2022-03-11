@@ -76,22 +76,22 @@ public final class MpiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.processCountPerInstance = defaults.processCountPerInstance;
         }
 
-        public Builder setDistributionType(Input<String> distributionType) {
+        public Builder distributionType(Input<String> distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Input.of(Objects.requireNonNull(distributionType));
             return this;
         }
 
-        public Builder setProcessCountPerInstance(@Nullable Input<Integer> processCountPerInstance) {
+        public Builder processCountPerInstance(@Nullable Input<Integer> processCountPerInstance) {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
 
-        public Builder setProcessCountPerInstance(@Nullable Integer processCountPerInstance) {
+        public Builder processCountPerInstance(@Nullable Integer processCountPerInstance) {
             this.processCountPerInstance = Input.ofNullable(processCountPerInstance);
             return this;
         }

@@ -20,10 +20,10 @@ public final class JobReferenceResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"jobId","project"})
+    @OutputCustomType.Constructor
     private JobReferenceResponse(
-        String jobId,
-        String project) {
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("project") String project) {
         this.jobId = jobId;
         this.project = project;
     }
@@ -65,12 +65,12 @@ public final class JobReferenceResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

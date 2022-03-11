@@ -70,22 +70,22 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleGet
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setHoursInCycle(Input<Integer> hoursInCycle) {
+        public Builder hoursInCycle(Input<Integer> hoursInCycle) {
             this.hoursInCycle = Objects.requireNonNull(hoursInCycle);
             return this;
         }
 
-        public Builder setHoursInCycle(Integer hoursInCycle) {
+        public Builder hoursInCycle(Integer hoursInCycle) {
             this.hoursInCycle = Input.of(Objects.requireNonNull(hoursInCycle));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

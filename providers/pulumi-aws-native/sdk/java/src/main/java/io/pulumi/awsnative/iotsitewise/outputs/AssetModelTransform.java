@@ -22,10 +22,10 @@ public final class AssetModelTransform {
      */
     private final List<AssetModelExpressionVariable> variables;
 
-    @OutputCustomType.Constructor({"expression","variables"})
+    @OutputCustomType.Constructor
     private AssetModelTransform(
-        String expression,
-        List<AssetModelExpressionVariable> variables) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("variables") List<AssetModelExpressionVariable> variables) {
         this.expression = expression;
         this.variables = variables;
     }
@@ -67,12 +67,12 @@ public final class AssetModelTransform {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setVariables(List<AssetModelExpressionVariable> variables) {
+        public Builder variables(List<AssetModelExpressionVariable> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }

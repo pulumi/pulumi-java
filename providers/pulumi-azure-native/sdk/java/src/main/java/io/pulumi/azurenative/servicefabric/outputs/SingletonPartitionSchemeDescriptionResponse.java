@@ -16,8 +16,8 @@ public final class SingletonPartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor({"partitionScheme"})
-    private SingletonPartitionSchemeDescriptionResponse(String partitionScheme) {
+    @OutputCustomType.Constructor
+    private SingletonPartitionSchemeDescriptionResponse(@OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
         this.partitionScheme = partitionScheme;
     }
 
@@ -50,7 +50,7 @@ public final class SingletonPartitionSchemeDescriptionResponse {
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder setPartitionScheme(String partitionScheme) {
+        public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }

@@ -136,62 +136,62 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAllowProtectedAppendWrites(@Nullable Input<Boolean> allowProtectedAppendWrites) {
+        public Builder allowProtectedAppendWrites(@Nullable Input<Boolean> allowProtectedAppendWrites) {
             this.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
 
-        public Builder setAllowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
+        public Builder allowProtectedAppendWrites(@Nullable Boolean allowProtectedAppendWrites) {
             this.allowProtectedAppendWrites = Input.ofNullable(allowProtectedAppendWrites);
             return this;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setImmutabilityPeriodSinceCreationInDays(@Nullable Input<Integer> immutabilityPeriodSinceCreationInDays) {
+        public Builder immutabilityPeriodSinceCreationInDays(@Nullable Input<Integer> immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
 
-        public Builder setImmutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
+        public Builder immutabilityPeriodSinceCreationInDays(@Nullable Integer immutabilityPeriodSinceCreationInDays) {
             this.immutabilityPeriodSinceCreationInDays = Input.ofNullable(immutabilityPeriodSinceCreationInDays);
             return this;
         }
 
-        public Builder setImmutabilityPolicyName(@Nullable Input<String> immutabilityPolicyName) {
+        public Builder immutabilityPolicyName(@Nullable Input<String> immutabilityPolicyName) {
             this.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
 
-        public Builder setImmutabilityPolicyName(@Nullable String immutabilityPolicyName) {
+        public Builder immutabilityPolicyName(@Nullable String immutabilityPolicyName) {
             this.immutabilityPolicyName = Input.ofNullable(immutabilityPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -51,15 +51,15 @@ public final class SoftwareRecipeStepResponse {
      */
     private final SoftwareRecipeStepRunScriptResponse scriptRun;
 
-    @OutputCustomType.Constructor({"archiveExtraction","dpkgInstallation","fileCopy","fileExec","msiInstallation","rpmInstallation","scriptRun"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepResponse(
-        SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
-        SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
-        SoftwareRecipeStepCopyFileResponse fileCopy,
-        SoftwareRecipeStepExecFileResponse fileExec,
-        SoftwareRecipeStepInstallMsiResponse msiInstallation,
-        SoftwareRecipeStepInstallRpmResponse rpmInstallation,
-        SoftwareRecipeStepRunScriptResponse scriptRun) {
+        @OutputCustomType.Parameter("archiveExtraction") SoftwareRecipeStepExtractArchiveResponse archiveExtraction,
+        @OutputCustomType.Parameter("dpkgInstallation") SoftwareRecipeStepInstallDpkgResponse dpkgInstallation,
+        @OutputCustomType.Parameter("fileCopy") SoftwareRecipeStepCopyFileResponse fileCopy,
+        @OutputCustomType.Parameter("fileExec") SoftwareRecipeStepExecFileResponse fileExec,
+        @OutputCustomType.Parameter("msiInstallation") SoftwareRecipeStepInstallMsiResponse msiInstallation,
+        @OutputCustomType.Parameter("rpmInstallation") SoftwareRecipeStepInstallRpmResponse rpmInstallation,
+        @OutputCustomType.Parameter("scriptRun") SoftwareRecipeStepRunScriptResponse scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;
@@ -151,37 +151,37 @@ public final class SoftwareRecipeStepResponse {
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
+        public Builder archiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
             this.archiveExtraction = Objects.requireNonNull(archiveExtraction);
             return this;
         }
 
-        public Builder setDpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
+        public Builder dpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
             this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation);
             return this;
         }
 
-        public Builder setFileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
+        public Builder fileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
             this.fileCopy = Objects.requireNonNull(fileCopy);
             return this;
         }
 
-        public Builder setFileExec(SoftwareRecipeStepExecFileResponse fileExec) {
+        public Builder fileExec(SoftwareRecipeStepExecFileResponse fileExec) {
             this.fileExec = Objects.requireNonNull(fileExec);
             return this;
         }
 
-        public Builder setMsiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
+        public Builder msiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
             this.msiInstallation = Objects.requireNonNull(msiInstallation);
             return this;
         }
 
-        public Builder setRpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
+        public Builder rpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
             this.rpmInstallation = Objects.requireNonNull(rpmInstallation);
             return this;
         }
 
-        public Builder setScriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
+        public Builder scriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
         }

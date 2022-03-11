@@ -37,13 +37,13 @@ public final class ImageOutputResourceAmi {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"accountId","description","image","name","region"})
+    @OutputCustomType.Constructor
     private ImageOutputResourceAmi(
-        @Nullable String accountId,
-        @Nullable String description,
-        @Nullable String image,
-        @Nullable String name,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.accountId = accountId;
         this.description = description;
         this.image = image;
@@ -115,27 +115,27 @@ public final class ImageOutputResourceAmi {
     	      this.region = defaults.region;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

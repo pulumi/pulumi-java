@@ -17,8 +17,8 @@ public final class CreatorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private CreatorPropertiesResponse(@Nullable String provisioningState) {
+    @OutputCustomType.Constructor
+    private CreatorPropertiesResponse(@OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.provisioningState = provisioningState;
     }
 
@@ -50,7 +50,7 @@ public final class CreatorPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

@@ -44,14 +44,14 @@ public final class VirtualHubRouteTableV2Response {
      */
     private final @Nullable List<VirtualHubRouteV2Response> routes;
 
-    @OutputCustomType.Constructor({"attachedConnections","etag","id","name","provisioningState","routes"})
+    @OutputCustomType.Constructor
     private VirtualHubRouteTableV2Response(
-        @Nullable List<String> attachedConnections,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable List<VirtualHubRouteV2Response> routes) {
+        @OutputCustomType.Parameter("attachedConnections") @Nullable List<String> attachedConnections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routes") @Nullable List<VirtualHubRouteV2Response> routes) {
         this.attachedConnections = attachedConnections;
         this.etag = etag;
         this.id = id;
@@ -133,32 +133,32 @@ public final class VirtualHubRouteTableV2Response {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setAttachedConnections(@Nullable List<String> attachedConnections) {
+        public Builder attachedConnections(@Nullable List<String> attachedConnections) {
             this.attachedConnections = attachedConnections;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<VirtualHubRouteV2Response> routes) {
+        public Builder routes(@Nullable List<VirtualHubRouteV2Response> routes) {
             this.routes = routes;
             return this;
         }

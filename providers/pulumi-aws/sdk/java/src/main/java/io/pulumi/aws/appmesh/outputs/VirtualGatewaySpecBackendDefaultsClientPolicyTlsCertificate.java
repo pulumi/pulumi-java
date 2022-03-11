@@ -23,10 +23,10 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate(
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file,
-        @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
         this.file = file;
         this.sds = sds;
     }
@@ -68,12 +68,12 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificate {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

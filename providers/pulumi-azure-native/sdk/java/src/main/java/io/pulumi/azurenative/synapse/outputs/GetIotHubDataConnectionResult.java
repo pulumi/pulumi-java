@@ -85,22 +85,22 @@ public final class GetIotHubDataConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroup","dataFormat","eventSystemProperties","id","iotHubResourceId","kind","location","mappingRuleName","name","provisioningState","sharedAccessPolicyName","systemData","tableName","type"})
+    @OutputCustomType.Constructor
     private GetIotHubDataConnectionResult(
-        String consumerGroup,
-        @Nullable String dataFormat,
-        @Nullable List<String> eventSystemProperties,
-        String id,
-        String iotHubResourceId,
-        String kind,
-        @Nullable String location,
-        @Nullable String mappingRuleName,
-        String name,
-        String provisioningState,
-        String sharedAccessPolicyName,
-        SystemDataResponse systemData,
-        @Nullable String tableName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroup") String consumerGroup,
+        @OutputCustomType.Parameter("dataFormat") @Nullable String dataFormat,
+        @OutputCustomType.Parameter("eventSystemProperties") @Nullable List<String> eventSystemProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubResourceId") String iotHubResourceId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mappingRuleName") @Nullable String mappingRuleName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroup = consumerGroup;
         this.dataFormat = dataFormat;
         this.eventSystemProperties = eventSystemProperties;
@@ -263,72 +263,72 @@ public final class GetIotHubDataConnectionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConsumerGroup(String consumerGroup) {
+        public Builder consumerGroup(String consumerGroup) {
             this.consumerGroup = Objects.requireNonNull(consumerGroup);
             return this;
         }
 
-        public Builder setDataFormat(@Nullable String dataFormat) {
+        public Builder dataFormat(@Nullable String dataFormat) {
             this.dataFormat = dataFormat;
             return this;
         }
 
-        public Builder setEventSystemProperties(@Nullable List<String> eventSystemProperties) {
+        public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
             this.eventSystemProperties = eventSystemProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIotHubResourceId(String iotHubResourceId) {
+        public Builder iotHubResourceId(String iotHubResourceId) {
             this.iotHubResourceId = Objects.requireNonNull(iotHubResourceId);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMappingRuleName(@Nullable String mappingRuleName) {
+        public Builder mappingRuleName(@Nullable String mappingRuleName) {
             this.mappingRuleName = mappingRuleName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = Objects.requireNonNull(sharedAccessPolicyName);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

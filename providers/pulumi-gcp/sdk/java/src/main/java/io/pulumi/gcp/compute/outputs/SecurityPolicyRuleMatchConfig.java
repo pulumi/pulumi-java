@@ -18,8 +18,8 @@ public final class SecurityPolicyRuleMatchConfig {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"srcIpRanges"})
-    private SecurityPolicyRuleMatchConfig(List<String> srcIpRanges) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRuleMatchConfig(@OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.srcIpRanges = srcIpRanges;
     }
 
@@ -53,7 +53,7 @@ public final class SecurityPolicyRuleMatchConfig {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }

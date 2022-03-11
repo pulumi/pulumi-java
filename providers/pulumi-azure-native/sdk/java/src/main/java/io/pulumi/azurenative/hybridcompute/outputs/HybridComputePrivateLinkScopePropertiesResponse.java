@@ -27,11 +27,11 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"privateLinkScopeId","provisioningState","publicNetworkAccess"})
+    @OutputCustomType.Constructor
     private HybridComputePrivateLinkScopePropertiesResponse(
-        String privateLinkScopeId,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
+        @OutputCustomType.Parameter("privateLinkScopeId") String privateLinkScopeId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.privateLinkScopeId = privateLinkScopeId;
         this.provisioningState = provisioningState;
         this.publicNetworkAccess = publicNetworkAccess;
@@ -83,17 +83,17 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder setPrivateLinkScopeId(String privateLinkScopeId) {
+        public Builder privateLinkScopeId(String privateLinkScopeId) {
             this.privateLinkScopeId = Objects.requireNonNull(privateLinkScopeId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }

@@ -48,15 +48,15 @@ public final class AzureResourceProtectionIntentResponse {
      */
     private final @Nullable String sourceResourceId;
 
-    @OutputCustomType.Constructor({"backupManagementType","friendlyName","itemId","policyId","protectionIntentItemType","protectionState","sourceResourceId"})
+    @OutputCustomType.Constructor
     private AzureResourceProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String friendlyName,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("itemId") @Nullable String itemId,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
         this.backupManagementType = backupManagementType;
         this.friendlyName = friendlyName;
         this.itemId = itemId;
@@ -149,37 +149,37 @@ public final class AzureResourceProtectionIntentResponse {
     	      this.sourceResourceId = defaults.sourceResourceId;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setItemId(@Nullable String itemId) {
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectionIntentItemType(String protectionIntentItemType) {
+        public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }

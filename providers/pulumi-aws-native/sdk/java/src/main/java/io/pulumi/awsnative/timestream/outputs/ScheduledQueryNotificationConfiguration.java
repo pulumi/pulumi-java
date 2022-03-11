@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryNotificationConfiguration {
     private final ScheduledQuerySnsConfiguration snsConfiguration;
 
-    @OutputCustomType.Constructor({"snsConfiguration"})
-    private ScheduledQueryNotificationConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryNotificationConfiguration(@OutputCustomType.Parameter("snsConfiguration") ScheduledQuerySnsConfiguration snsConfiguration) {
         this.snsConfiguration = snsConfiguration;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduledQueryNotificationConfiguration {
     	      this.snsConfiguration = defaults.snsConfiguration;
         }
 
-        public Builder setSnsConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
+        public Builder snsConfiguration(ScheduledQuerySnsConfiguration snsConfiguration) {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }

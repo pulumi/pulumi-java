@@ -26,11 +26,11 @@ public final class EndpointResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"allowCors","name","target"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        Boolean allowCors,
-        String name,
-        String target) {
+        @OutputCustomType.Parameter("allowCors") Boolean allowCors,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") String target) {
         this.allowCors = allowCors;
         this.name = name;
         this.target = target;
@@ -82,17 +82,17 @@ public final class EndpointResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setAllowCors(Boolean allowCors) {
+        public Builder allowCors(Boolean allowCors) {
             this.allowCors = Objects.requireNonNull(allowCors);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

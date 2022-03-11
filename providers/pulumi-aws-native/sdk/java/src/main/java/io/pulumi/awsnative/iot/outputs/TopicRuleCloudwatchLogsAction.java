@@ -12,10 +12,10 @@ public final class TopicRuleCloudwatchLogsAction {
     private final String logGroupName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleCloudwatchLogsAction(
-        String logGroupName,
-        String roleArn) {
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.logGroupName = logGroupName;
         this.roleArn = roleArn;
     }
@@ -49,12 +49,12 @@ public final class TopicRuleCloudwatchLogsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

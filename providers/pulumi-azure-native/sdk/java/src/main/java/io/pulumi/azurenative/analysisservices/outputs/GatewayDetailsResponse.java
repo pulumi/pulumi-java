@@ -27,11 +27,11 @@ public final class GatewayDetailsResponse {
      */
     private final @Nullable String gatewayResourceId;
 
-    @OutputCustomType.Constructor({"dmtsClusterUri","gatewayObjectId","gatewayResourceId"})
+    @OutputCustomType.Constructor
     private GatewayDetailsResponse(
-        String dmtsClusterUri,
-        String gatewayObjectId,
-        @Nullable String gatewayResourceId) {
+        @OutputCustomType.Parameter("dmtsClusterUri") String dmtsClusterUri,
+        @OutputCustomType.Parameter("gatewayObjectId") String gatewayObjectId,
+        @OutputCustomType.Parameter("gatewayResourceId") @Nullable String gatewayResourceId) {
         this.dmtsClusterUri = dmtsClusterUri;
         this.gatewayObjectId = gatewayObjectId;
         this.gatewayResourceId = gatewayResourceId;
@@ -83,17 +83,17 @@ public final class GatewayDetailsResponse {
     	      this.gatewayResourceId = defaults.gatewayResourceId;
         }
 
-        public Builder setDmtsClusterUri(String dmtsClusterUri) {
+        public Builder dmtsClusterUri(String dmtsClusterUri) {
             this.dmtsClusterUri = Objects.requireNonNull(dmtsClusterUri);
             return this;
         }
 
-        public Builder setGatewayObjectId(String gatewayObjectId) {
+        public Builder gatewayObjectId(String gatewayObjectId) {
             this.gatewayObjectId = Objects.requireNonNull(gatewayObjectId);
             return this;
         }
 
-        public Builder setGatewayResourceId(@Nullable String gatewayResourceId) {
+        public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }

@@ -34,12 +34,12 @@ public final class AuthenticationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"allowWithoutCredential","oauth","requirements","selector"})
+    @OutputCustomType.Constructor
     private AuthenticationRuleResponse(
-        Boolean allowWithoutCredential,
-        OAuthRequirementsResponse oauth,
-        List<AuthRequirementResponse> requirements,
-        String selector) {
+        @OutputCustomType.Parameter("allowWithoutCredential") Boolean allowWithoutCredential,
+        @OutputCustomType.Parameter("oauth") OAuthRequirementsResponse oauth,
+        @OutputCustomType.Parameter("requirements") List<AuthRequirementResponse> requirements,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.allowWithoutCredential = allowWithoutCredential;
         this.oauth = oauth;
         this.requirements = requirements;
@@ -101,22 +101,22 @@ public final class AuthenticationRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAllowWithoutCredential(Boolean allowWithoutCredential) {
+        public Builder allowWithoutCredential(Boolean allowWithoutCredential) {
             this.allowWithoutCredential = Objects.requireNonNull(allowWithoutCredential);
             return this;
         }
 
-        public Builder setOauth(OAuthRequirementsResponse oauth) {
+        public Builder oauth(OAuthRequirementsResponse oauth) {
             this.oauth = Objects.requireNonNull(oauth);
             return this;
         }
 
-        public Builder setRequirements(List<AuthRequirementResponse> requirements) {
+        public Builder requirements(List<AuthRequirementResponse> requirements) {
             this.requirements = Objects.requireNonNull(requirements);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

@@ -110,42 +110,42 @@ public final class AuthenticationRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAllowWithoutCredential(@Nullable Input<Boolean> allowWithoutCredential) {
+        public Builder allowWithoutCredential(@Nullable Input<Boolean> allowWithoutCredential) {
             this.allowWithoutCredential = allowWithoutCredential;
             return this;
         }
 
-        public Builder setAllowWithoutCredential(@Nullable Boolean allowWithoutCredential) {
+        public Builder allowWithoutCredential(@Nullable Boolean allowWithoutCredential) {
             this.allowWithoutCredential = Input.ofNullable(allowWithoutCredential);
             return this;
         }
 
-        public Builder setOauth(@Nullable Input<OAuthRequirementsArgs> oauth) {
+        public Builder oauth(@Nullable Input<OAuthRequirementsArgs> oauth) {
             this.oauth = oauth;
             return this;
         }
 
-        public Builder setOauth(@Nullable OAuthRequirementsArgs oauth) {
+        public Builder oauth(@Nullable OAuthRequirementsArgs oauth) {
             this.oauth = Input.ofNullable(oauth);
             return this;
         }
 
-        public Builder setRequirements(@Nullable Input<List<AuthRequirementArgs>> requirements) {
+        public Builder requirements(@Nullable Input<List<AuthRequirementArgs>> requirements) {
             this.requirements = requirements;
             return this;
         }
 
-        public Builder setRequirements(@Nullable List<AuthRequirementArgs> requirements) {
+        public Builder requirements(@Nullable List<AuthRequirementArgs> requirements) {
             this.requirements = Input.ofNullable(requirements);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

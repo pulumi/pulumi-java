@@ -62,16 +62,16 @@ public final class InstanceBootDisk {
      */
     private final @Nullable String source;
 
-    @OutputCustomType.Constructor({"autoDelete","deviceName","diskEncryptionKeyRaw","diskEncryptionKeySha256","initializeParams","kmsKeySelfLink","mode","source"})
+    @OutputCustomType.Constructor
     private InstanceBootDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable String deviceName,
-        @Nullable String diskEncryptionKeyRaw,
-        @Nullable String diskEncryptionKeySha256,
-        @Nullable InstanceBootDiskInitializeParams initializeParams,
-        @Nullable String kmsKeySelfLink,
-        @Nullable String mode,
-        @Nullable String source) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
+        @OutputCustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
+        @OutputCustomType.Parameter("initializeParams") @Nullable InstanceBootDiskInitializeParams initializeParams,
+        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") @Nullable String source) {
         this.autoDelete = autoDelete;
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
@@ -181,42 +181,42 @@ public final class InstanceBootDisk {
     	      this.source = defaults.source;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDiskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
+        public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
             this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
             return this;
         }
 
-        public Builder setDiskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
+        public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
             this.diskEncryptionKeySha256 = diskEncryptionKeySha256;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable InstanceBootDiskInitializeParams initializeParams) {
+        public Builder initializeParams(@Nullable InstanceBootDiskInitializeParams initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }

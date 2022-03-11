@@ -59,17 +59,17 @@ public final class NetworkConfigResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"datapathProvider","defaultSnatStatus","dnsConfig","enableIntraNodeVisibility","enableL4ilbSubsetting","network","privateIpv6GoogleAccess","serviceExternalIpsConfig","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String datapathProvider,
-        DefaultSnatStatusResponse defaultSnatStatus,
-        DNSConfigResponse dnsConfig,
-        Boolean enableIntraNodeVisibility,
-        Boolean enableL4ilbSubsetting,
-        String network,
-        String privateIpv6GoogleAccess,
-        ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
-        String subnetwork) {
+        @OutputCustomType.Parameter("datapathProvider") String datapathProvider,
+        @OutputCustomType.Parameter("defaultSnatStatus") DefaultSnatStatusResponse defaultSnatStatus,
+        @OutputCustomType.Parameter("dnsConfig") DNSConfigResponse dnsConfig,
+        @OutputCustomType.Parameter("enableIntraNodeVisibility") Boolean enableIntraNodeVisibility,
+        @OutputCustomType.Parameter("enableL4ilbSubsetting") Boolean enableL4ilbSubsetting,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("serviceExternalIpsConfig") ServiceExternalIPsConfigResponse serviceExternalIpsConfig,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.datapathProvider = datapathProvider;
         this.defaultSnatStatus = defaultSnatStatus;
         this.dnsConfig = dnsConfig;
@@ -181,47 +181,47 @@ public final class NetworkConfigResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setDatapathProvider(String datapathProvider) {
+        public Builder datapathProvider(String datapathProvider) {
             this.datapathProvider = Objects.requireNonNull(datapathProvider);
             return this;
         }
 
-        public Builder setDefaultSnatStatus(DefaultSnatStatusResponse defaultSnatStatus) {
+        public Builder defaultSnatStatus(DefaultSnatStatusResponse defaultSnatStatus) {
             this.defaultSnatStatus = Objects.requireNonNull(defaultSnatStatus);
             return this;
         }
 
-        public Builder setDnsConfig(DNSConfigResponse dnsConfig) {
+        public Builder dnsConfig(DNSConfigResponse dnsConfig) {
             this.dnsConfig = Objects.requireNonNull(dnsConfig);
             return this;
         }
 
-        public Builder setEnableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
+        public Builder enableIntraNodeVisibility(Boolean enableIntraNodeVisibility) {
             this.enableIntraNodeVisibility = Objects.requireNonNull(enableIntraNodeVisibility);
             return this;
         }
 
-        public Builder setEnableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
+        public Builder enableL4ilbSubsetting(Boolean enableL4ilbSubsetting) {
             this.enableL4ilbSubsetting = Objects.requireNonNull(enableL4ilbSubsetting);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setServiceExternalIpsConfig(ServiceExternalIPsConfigResponse serviceExternalIpsConfig) {
+        public Builder serviceExternalIpsConfig(ServiceExternalIPsConfigResponse serviceExternalIpsConfig) {
             this.serviceExternalIpsConfig = Objects.requireNonNull(serviceExternalIpsConfig);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
-    @OutputCustomType.Constructor({"quasiIds","sensitiveAttribute"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LDiversityConfigResponse(
-        List<GooglePrivacyDlpV2FieldIdResponse> quasiIds,
-        GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds,
+        @OutputCustomType.Parameter("sensitiveAttribute") GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
         this.quasiIds = quasiIds;
         this.sensitiveAttribute = sensitiveAttribute;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse {
     	      this.sensitiveAttribute = defaults.sensitiveAttribute;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setSensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
+        public Builder sensitiveAttribute(GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute) {
             this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
             return this;
         }

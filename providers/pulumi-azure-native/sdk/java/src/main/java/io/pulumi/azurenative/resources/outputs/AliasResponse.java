@@ -46,14 +46,14 @@ public final class AliasResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultMetadata","defaultPath","defaultPattern","name","paths","type"})
+    @OutputCustomType.Constructor
     private AliasResponse(
-        AliasPathMetadataResponse defaultMetadata,
-        @Nullable String defaultPath,
-        @Nullable AliasPatternResponse defaultPattern,
-        @Nullable String name,
-        @Nullable List<AliasPathResponse> paths,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultMetadata") AliasPathMetadataResponse defaultMetadata,
+        @OutputCustomType.Parameter("defaultPath") @Nullable String defaultPath,
+        @OutputCustomType.Parameter("defaultPattern") @Nullable AliasPatternResponse defaultPattern,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("paths") @Nullable List<AliasPathResponse> paths,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultMetadata = defaultMetadata;
         this.defaultPath = defaultPath;
         this.defaultPattern = defaultPattern;
@@ -135,32 +135,32 @@ public final class AliasResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultMetadata(AliasPathMetadataResponse defaultMetadata) {
+        public Builder defaultMetadata(AliasPathMetadataResponse defaultMetadata) {
             this.defaultMetadata = Objects.requireNonNull(defaultMetadata);
             return this;
         }
 
-        public Builder setDefaultPath(@Nullable String defaultPath) {
+        public Builder defaultPath(@Nullable String defaultPath) {
             this.defaultPath = defaultPath;
             return this;
         }
 
-        public Builder setDefaultPattern(@Nullable AliasPatternResponse defaultPattern) {
+        public Builder defaultPattern(@Nullable AliasPatternResponse defaultPattern) {
             this.defaultPattern = defaultPattern;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<AliasPathResponse> paths) {
+        public Builder paths(@Nullable List<AliasPathResponse> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

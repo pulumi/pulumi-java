@@ -74,22 +74,22 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileMissing = defaults.fileMissing;
         }
 
-        public Builder setDataInconsistency(@Nullable Input<Object> dataInconsistency) {
+        public Builder dataInconsistency(@Nullable Input<Object> dataInconsistency) {
             this.dataInconsistency = dataInconsistency;
             return this;
         }
 
-        public Builder setDataInconsistency(@Nullable Object dataInconsistency) {
+        public Builder dataInconsistency(@Nullable Object dataInconsistency) {
             this.dataInconsistency = Input.ofNullable(dataInconsistency);
             return this;
         }
 
-        public Builder setFileMissing(@Nullable Input<Object> fileMissing) {
+        public Builder fileMissing(@Nullable Input<Object> fileMissing) {
             this.fileMissing = fileMissing;
             return this;
         }
 
-        public Builder setFileMissing(@Nullable Object fileMissing) {
+        public Builder fileMissing(@Nullable Object fileMissing) {
             this.fileMissing = Input.ofNullable(fileMissing);
             return this;
         }

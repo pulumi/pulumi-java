@@ -35,12 +35,12 @@ public final class GetDeviceFleetResult {
      */
     private final @Nullable List<DeviceFleetTag> tags;
 
-    @OutputCustomType.Constructor({"description","outputConfig","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDeviceFleetResult(
-        @Nullable String description,
-        @Nullable DeviceFleetEdgeOutputConfig outputConfig,
-        @Nullable String roleArn,
-        @Nullable List<DeviceFleetTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("outputConfig") @Nullable DeviceFleetEdgeOutputConfig outputConfig,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceFleetTag> tags) {
         this.description = description;
         this.outputConfig = outputConfig;
         this.roleArn = roleArn;
@@ -102,22 +102,22 @@ public final class GetDeviceFleetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setOutputConfig(@Nullable DeviceFleetEdgeOutputConfig outputConfig) {
+        public Builder outputConfig(@Nullable DeviceFleetEdgeOutputConfig outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceFleetTag> tags) {
+        public Builder tags(@Nullable List<DeviceFleetTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -24,10 +24,10 @@ public final class ListListTenantConfigurationViolationResult {
      */
     private final @Nullable List<ViolationResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListListTenantConfigurationViolationResult(
-        @Nullable String nextLink,
-        @Nullable List<ViolationResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ViolationResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListListTenantConfigurationViolationResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<ViolationResponse> value) {
+        public Builder value(@Nullable List<ViolationResponse> value) {
             this.value = value;
             return this;
         }

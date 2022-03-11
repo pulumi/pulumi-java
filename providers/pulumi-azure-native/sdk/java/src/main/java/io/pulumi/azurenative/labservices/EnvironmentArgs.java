@@ -200,102 +200,102 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setEnvironmentName(@Nullable Input<String> environmentName) {
+        public Builder environmentName(@Nullable Input<String> environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = Input.ofNullable(environmentName);
             return this;
         }
 
-        public Builder setEnvironmentSettingName(Input<String> environmentSettingName) {
+        public Builder environmentSettingName(Input<String> environmentSettingName) {
             this.environmentSettingName = Objects.requireNonNull(environmentSettingName);
             return this;
         }
 
-        public Builder setEnvironmentSettingName(String environmentSettingName) {
+        public Builder environmentSettingName(String environmentSettingName) {
             this.environmentSettingName = Input.of(Objects.requireNonNull(environmentSettingName));
             return this;
         }
 
-        public Builder setLabAccountName(Input<String> labAccountName) {
+        public Builder labAccountName(Input<String> labAccountName) {
             this.labAccountName = Objects.requireNonNull(labAccountName);
             return this;
         }
 
-        public Builder setLabAccountName(String labAccountName) {
+        public Builder labAccountName(String labAccountName) {
             this.labAccountName = Input.of(Objects.requireNonNull(labAccountName));
             return this;
         }
 
-        public Builder setLabName(Input<String> labName) {
+        public Builder labName(Input<String> labName) {
             this.labName = Objects.requireNonNull(labName);
             return this;
         }
 
-        public Builder setLabName(String labName) {
+        public Builder labName(String labName) {
             this.labName = Input.of(Objects.requireNonNull(labName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceSets(@Nullable Input<ResourceSetArgs> resourceSets) {
+        public Builder resourceSets(@Nullable Input<ResourceSetArgs> resourceSets) {
             this.resourceSets = resourceSets;
             return this;
         }
 
-        public Builder setResourceSets(@Nullable ResourceSetArgs resourceSets) {
+        public Builder resourceSets(@Nullable ResourceSetArgs resourceSets) {
             this.resourceSets = Input.ofNullable(resourceSets);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable Input<String> uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }

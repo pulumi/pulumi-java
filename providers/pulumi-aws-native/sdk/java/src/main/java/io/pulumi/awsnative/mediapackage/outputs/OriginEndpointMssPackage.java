@@ -26,12 +26,12 @@ public final class OriginEndpointMssPackage {
     private final @Nullable Integer segmentDurationSeconds;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"encryption","manifestWindowSeconds","segmentDurationSeconds","streamSelection"})
+    @OutputCustomType.Constructor
     private OriginEndpointMssPackage(
-        @Nullable OriginEndpointMssEncryption encryption,
-        @Nullable Integer manifestWindowSeconds,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointMssEncryption encryption,
+        @OutputCustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.manifestWindowSeconds = manifestWindowSeconds;
         this.segmentDurationSeconds = segmentDurationSeconds;
@@ -85,22 +85,22 @@ public final class OriginEndpointMssPackage {
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointMssEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointMssEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

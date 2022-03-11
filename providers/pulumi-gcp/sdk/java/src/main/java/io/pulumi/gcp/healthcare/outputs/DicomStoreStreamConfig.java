@@ -16,8 +16,8 @@ public final class DicomStoreStreamConfig {
      */
     private final DicomStoreStreamConfigBigqueryDestination bigqueryDestination;
 
-    @OutputCustomType.Constructor({"bigqueryDestination"})
-    private DicomStoreStreamConfig(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
+    @OutputCustomType.Constructor
+    private DicomStoreStreamConfig(@OutputCustomType.Parameter("bigqueryDestination") DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
     }
 
@@ -50,7 +50,7 @@ public final class DicomStoreStreamConfig {
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder setBigqueryDestination(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
+        public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestination bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }

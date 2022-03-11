@@ -28,11 +28,11 @@ public final class SafetyRuleGatingRule {
      */
     private final Integer waitPeriodMs;
 
-    @OutputCustomType.Constructor({"gatingControls","targetControls","waitPeriodMs"})
+    @OutputCustomType.Constructor
     private SafetyRuleGatingRule(
-        List<String> gatingControls,
-        List<String> targetControls,
-        Integer waitPeriodMs) {
+        @OutputCustomType.Parameter("gatingControls") List<String> gatingControls,
+        @OutputCustomType.Parameter("targetControls") List<String> targetControls,
+        @OutputCustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
         this.gatingControls = gatingControls;
         this.targetControls = targetControls;
         this.waitPeriodMs = waitPeriodMs;
@@ -85,17 +85,17 @@ public final class SafetyRuleGatingRule {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setGatingControls(List<String> gatingControls) {
+        public Builder gatingControls(List<String> gatingControls) {
             this.gatingControls = Objects.requireNonNull(gatingControls);
             return this;
         }
 
-        public Builder setTargetControls(List<String> targetControls) {
+        public Builder targetControls(List<String> targetControls) {
             this.targetControls = Objects.requireNonNull(targetControls);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }

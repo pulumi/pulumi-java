@@ -109,17 +109,17 @@ public final class ServiceTemplateSpecContainer {
         @Deprecated /* Not supported by Cloud Run fully managed */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor({"args","commands","envFroms","envs","image","ports","resources","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainer(
-        @Nullable List<String> args,
-        @Nullable List<String> commands,
-        @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
-        @Nullable List<ServiceTemplateSpecContainerEnv> envs,
-        String image,
-        @Nullable List<ServiceTemplateSpecContainerPort> ports,
-        @Nullable ServiceTemplateSpecContainerResources resources,
-        @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
-        @Nullable String workingDir) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("commands") @Nullable List<String> commands,
+        @OutputCustomType.Parameter("envFroms") @Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms,
+        @OutputCustomType.Parameter("envs") @Nullable List<ServiceTemplateSpecContainerEnv> envs,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("ports") @Nullable List<ServiceTemplateSpecContainerPort> ports,
+        @OutputCustomType.Parameter("resources") @Nullable ServiceTemplateSpecContainerResources resources,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.commands = commands;
         this.envFroms = envFroms;
@@ -277,47 +277,47 @@ public final class ServiceTemplateSpecContainer {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setCommands(@Nullable List<String> commands) {
+        public Builder commands(@Nullable List<String> commands) {
             this.commands = commands;
             return this;
         }
 
-        public Builder setEnvFroms(@Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms) {
+        public Builder envFroms(@Nullable List<ServiceTemplateSpecContainerEnvFrom> envFroms) {
             this.envFroms = envFroms;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<ServiceTemplateSpecContainerEnv> envs) {
+        public Builder envs(@Nullable List<ServiceTemplateSpecContainerEnv> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ServiceTemplateSpecContainerPort> ports) {
+        public Builder ports(@Nullable List<ServiceTemplateSpecContainerPort> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setResources(@Nullable ServiceTemplateSpecContainerResources resources) {
+        public Builder resources(@Nullable ServiceTemplateSpecContainerResources resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<ServiceTemplateSpecContainerVolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable String workingDir) {
+        public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = workingDir;
             return this;
         }

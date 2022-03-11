@@ -124,52 +124,52 @@ public final class SuppressionScheduleArgs extends io.pulumi.resources.ResourceA
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setRecurrenceValues(@Nullable Input<List<Integer>> recurrenceValues) {
+        public Builder recurrenceValues(@Nullable Input<List<Integer>> recurrenceValues) {
             this.recurrenceValues = recurrenceValues;
             return this;
         }
 
-        public Builder setRecurrenceValues(@Nullable List<Integer> recurrenceValues) {
+        public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
             this.recurrenceValues = Input.ofNullable(recurrenceValues);
             return this;
         }
 
-        public Builder setStartDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Input<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = Input.ofNullable(startDate);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

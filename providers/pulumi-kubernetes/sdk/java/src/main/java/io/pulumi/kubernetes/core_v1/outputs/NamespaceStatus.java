@@ -28,10 +28,10 @@ public final class NamespaceStatus {
      */
     private final @Nullable String phase;
 
-    @OutputCustomType.Constructor({"conditions","phase"})
+    @OutputCustomType.Constructor
     private NamespaceStatus(
-        @Nullable List<NamespaceCondition> conditions,
-        @Nullable String phase) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<NamespaceCondition> conditions,
+        @OutputCustomType.Parameter("phase") @Nullable String phase) {
         this.conditions = conditions;
         this.phase = phase;
     }
@@ -77,12 +77,12 @@ public final class NamespaceStatus {
     	      this.phase = defaults.phase;
         }
 
-        public Builder setConditions(@Nullable List<NamespaceCondition> conditions) {
+        public Builder conditions(@Nullable List<NamespaceCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }

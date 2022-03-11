@@ -12,10 +12,10 @@ public final class GlobalTableKeySchema {
     private final String attributeName;
     private final String keyType;
 
-    @OutputCustomType.Constructor({"attributeName","keyType"})
+    @OutputCustomType.Constructor
     private GlobalTableKeySchema(
-        String attributeName,
-        String keyType) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("keyType") String keyType) {
         this.attributeName = attributeName;
         this.keyType = keyType;
     }
@@ -49,12 +49,12 @@ public final class GlobalTableKeySchema {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setKeyType(String keyType) {
+        public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

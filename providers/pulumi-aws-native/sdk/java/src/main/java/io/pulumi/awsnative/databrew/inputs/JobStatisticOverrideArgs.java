@@ -62,22 +62,22 @@ public final class JobStatisticOverrideArgs extends io.pulumi.resources.Resource
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setParameters(Input<JobParameterMapArgs> parameters) {
+        public Builder parameters(Input<JobParameterMapArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(JobParameterMapArgs parameters) {
+        public Builder parameters(JobParameterMapArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setStatistic(Input<String> statistic) {
+        public Builder statistic(Input<String> statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Input.of(Objects.requireNonNull(statistic));
             return this;
         }

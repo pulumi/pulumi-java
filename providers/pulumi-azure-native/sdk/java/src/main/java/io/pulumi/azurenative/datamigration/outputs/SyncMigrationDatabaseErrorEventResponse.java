@@ -25,11 +25,11 @@ public final class SyncMigrationDatabaseErrorEventResponse {
      */
     private final String timestampString;
 
-    @OutputCustomType.Constructor({"eventText","eventTypeString","timestampString"})
+    @OutputCustomType.Constructor
     private SyncMigrationDatabaseErrorEventResponse(
-        String eventText,
-        String eventTypeString,
-        String timestampString) {
+        @OutputCustomType.Parameter("eventText") String eventText,
+        @OutputCustomType.Parameter("eventTypeString") String eventTypeString,
+        @OutputCustomType.Parameter("timestampString") String timestampString) {
         this.eventText = eventText;
         this.eventTypeString = eventTypeString;
         this.timestampString = timestampString;
@@ -81,17 +81,17 @@ public final class SyncMigrationDatabaseErrorEventResponse {
     	      this.timestampString = defaults.timestampString;
         }
 
-        public Builder setEventText(String eventText) {
+        public Builder eventText(String eventText) {
             this.eventText = Objects.requireNonNull(eventText);
             return this;
         }
 
-        public Builder setEventTypeString(String eventTypeString) {
+        public Builder eventTypeString(String eventTypeString) {
             this.eventTypeString = Objects.requireNonNull(eventTypeString);
             return this;
         }
 
-        public Builder setTimestampString(String timestampString) {
+        public Builder timestampString(String timestampString) {
             this.timestampString = Objects.requireNonNull(timestampString);
             return this;
         }

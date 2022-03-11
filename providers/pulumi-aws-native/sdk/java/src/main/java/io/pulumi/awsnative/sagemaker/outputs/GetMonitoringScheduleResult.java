@@ -54,17 +54,17 @@ public final class GetMonitoringScheduleResult {
      */
     private final @Nullable List<MonitoringScheduleTag> tags;
 
-    @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","lastMonitoringExecutionSummary","monitoringScheduleArn","monitoringScheduleConfig","monitoringScheduleStatus","tags"})
+    @OutputCustomType.Constructor
     private GetMonitoringScheduleResult(
-        @Nullable String creationTime,
-        @Nullable String endpointName,
-        @Nullable String failureReason,
-        @Nullable String lastModifiedTime,
-        @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
-        @Nullable String monitoringScheduleArn,
-        @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
-        @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
-        @Nullable List<MonitoringScheduleTag> tags) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
+        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("lastMonitoringExecutionSummary") @Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary,
+        @OutputCustomType.Parameter("monitoringScheduleArn") @Nullable String monitoringScheduleArn,
+        @OutputCustomType.Parameter("monitoringScheduleConfig") @Nullable MonitoringScheduleConfig monitoringScheduleConfig,
+        @OutputCustomType.Parameter("monitoringScheduleStatus") @Nullable MonitoringScheduleStatus monitoringScheduleStatus,
+        @OutputCustomType.Parameter("tags") @Nullable List<MonitoringScheduleTag> tags) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;
@@ -168,47 +168,47 @@ public final class GetMonitoringScheduleResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary) {
+        public Builder lastMonitoringExecutionSummary(@Nullable MonitoringScheduleMonitoringExecutionSummary lastMonitoringExecutionSummary) {
             this.lastMonitoringExecutionSummary = lastMonitoringExecutionSummary;
             return this;
         }
 
-        public Builder setMonitoringScheduleArn(@Nullable String monitoringScheduleArn) {
+        public Builder monitoringScheduleArn(@Nullable String monitoringScheduleArn) {
             this.monitoringScheduleArn = monitoringScheduleArn;
             return this;
         }
 
-        public Builder setMonitoringScheduleConfig(@Nullable MonitoringScheduleConfig monitoringScheduleConfig) {
+        public Builder monitoringScheduleConfig(@Nullable MonitoringScheduleConfig monitoringScheduleConfig) {
             this.monitoringScheduleConfig = monitoringScheduleConfig;
             return this;
         }
 
-        public Builder setMonitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
+        public Builder monitoringScheduleStatus(@Nullable MonitoringScheduleStatus monitoringScheduleStatus) {
             this.monitoringScheduleStatus = monitoringScheduleStatus;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MonitoringScheduleTag> tags) {
+        public Builder tags(@Nullable List<MonitoringScheduleTag> tags) {
             this.tags = tags;
             return this;
         }

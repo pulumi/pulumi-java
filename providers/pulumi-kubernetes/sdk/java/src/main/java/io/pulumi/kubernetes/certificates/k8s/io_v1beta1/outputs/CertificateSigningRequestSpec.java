@@ -56,15 +56,15 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"extra","groups","request","signerName","uid","usages","username"})
+    @OutputCustomType.Constructor
     private CertificateSigningRequestSpec(
-        @Nullable Map<String,List<String>> extra,
-        @Nullable List<String> groups,
-        String request,
-        @Nullable String signerName,
-        @Nullable String uid,
-        @Nullable List<String> usages,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("extra") @Nullable Map<String,List<String>> extra,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("signerName") @Nullable String signerName,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("usages") @Nullable List<String> usages,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.extra = extra;
         this.groups = groups;
         this.request = request;
@@ -163,37 +163,37 @@ public final class CertificateSigningRequestSpec {
     	      this.username = defaults.username;
         }
 
-        public Builder setExtra(@Nullable Map<String,List<String>> extra) {
+        public Builder extra(@Nullable Map<String,List<String>> extra) {
             this.extra = extra;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setSignerName(@Nullable String signerName) {
+        public Builder signerName(@Nullable String signerName) {
             this.signerName = signerName;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsages(@Nullable List<String> usages) {
+        public Builder usages(@Nullable List<String> usages) {
             this.usages = usages;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

@@ -18,10 +18,10 @@ public final class ApplicationCloudwatchLoggingOptions {
      */
     private final String logStreamArn;
 
-    @OutputCustomType.Constructor({"cloudwatchLoggingOptionId","logStreamArn"})
+    @OutputCustomType.Constructor
     private ApplicationCloudwatchLoggingOptions(
-        @Nullable String cloudwatchLoggingOptionId,
-        String logStreamArn) {
+        @OutputCustomType.Parameter("cloudwatchLoggingOptionId") @Nullable String cloudwatchLoggingOptionId,
+        @OutputCustomType.Parameter("logStreamArn") String logStreamArn) {
         this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
         this.logStreamArn = logStreamArn;
     }
@@ -59,12 +59,12 @@ public final class ApplicationCloudwatchLoggingOptions {
     	      this.logStreamArn = defaults.logStreamArn;
         }
 
-        public Builder setCloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
+        public Builder cloudwatchLoggingOptionId(@Nullable String cloudwatchLoggingOptionId) {
             this.cloudwatchLoggingOptionId = cloudwatchLoggingOptionId;
             return this;
         }
 
-        public Builder setLogStreamArn(String logStreamArn) {
+        public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }

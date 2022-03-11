@@ -76,15 +76,15 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
      */
     private final @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices;
 
-    @OutputCustomType.Constructor({"corsPolicy","faultInjectionPolicy","requestMirrorPolicy","retryPolicy","timeout","urlRewrite","weightedBackendServices"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteAction(
-        @Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
-        @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        @OutputCustomType.Parameter("corsPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy,
+        @OutputCustomType.Parameter("faultInjectionPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy,
+        @OutputCustomType.Parameter("requestMirrorPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy,
+        @OutputCustomType.Parameter("timeout") @Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout,
+        @OutputCustomType.Parameter("urlRewrite") @Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite,
+        @OutputCustomType.Parameter("weightedBackendServices") @Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
         this.corsPolicy = corsPolicy;
         this.faultInjectionPolicy = faultInjectionPolicy;
         this.requestMirrorPolicy = requestMirrorPolicy;
@@ -198,37 +198,37 @@ public final class URLMapPathMatcherRouteRuleRouteAction {
     	      this.weightedBackendServices = defaults.weightedBackendServices;
         }
 
-        public Builder setCorsPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy) {
+        public Builder corsPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionCorsPolicy corsPolicy) {
             this.corsPolicy = corsPolicy;
             return this;
         }
 
-        public Builder setFaultInjectionPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy) {
+        public Builder faultInjectionPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy faultInjectionPolicy) {
             this.faultInjectionPolicy = faultInjectionPolicy;
             return this;
         }
 
-        public Builder setRequestMirrorPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy) {
+        public Builder requestMirrorPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy requestMirrorPolicy) {
             this.requestMirrorPolicy = requestMirrorPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy) {
+        public Builder retryPolicy(@Nullable URLMapPathMatcherRouteRuleRouteActionRetryPolicy retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setTimeout(@Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout) {
+        public Builder timeout(@Nullable URLMapPathMatcherRouteRuleRouteActionTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setUrlRewrite(@Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
+        public Builder urlRewrite(@Nullable URLMapPathMatcherRouteRuleRouteActionUrlRewrite urlRewrite) {
             this.urlRewrite = urlRewrite;
             return this;
         }
 
-        public Builder setWeightedBackendServices(@Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
+        public Builder weightedBackendServices(@Nullable List<URLMapPathMatcherRouteRuleRouteActionWeightedBackendService> weightedBackendServices) {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }

@@ -25,11 +25,11 @@ public final class SelectionSelectionTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","type","value"})
+    @OutputCustomType.Constructor
     private SelectionSelectionTag(
-        String key,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.type = type;
         this.value = value;
@@ -81,17 +81,17 @@ public final class SelectionSelectionTag {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

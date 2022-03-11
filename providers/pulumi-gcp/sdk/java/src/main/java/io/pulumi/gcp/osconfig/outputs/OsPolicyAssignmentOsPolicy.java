@@ -40,13 +40,13 @@ public final class OsPolicyAssignmentOsPolicy {
      */
     private final List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups;
 
-    @OutputCustomType.Constructor({"allowNoResourceGroupMatch","description","id","mode","resourceGroups"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicy(
-        @Nullable Boolean allowNoResourceGroupMatch,
-        @Nullable String description,
-        String id,
-        String mode,
-        List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
+        @OutputCustomType.Parameter("allowNoResourceGroupMatch") @Nullable Boolean allowNoResourceGroupMatch,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("resourceGroups") List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.id = id;
@@ -118,27 +118,27 @@ public final class OsPolicyAssignmentOsPolicy {
     	      this.resourceGroups = defaults.resourceGroups;
         }
 
-        public Builder setAllowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(@Nullable Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setResourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
+        public Builder resourceGroups(List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }

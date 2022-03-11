@@ -91,32 +91,32 @@ public final class AsymmetricEncryptedSecretArgs extends io.pulumi.resources.Res
     	      this.value = defaults.value;
         }
 
-        public Builder setEncryptionAlgorithm(Input<EncryptionAlgorithm> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(Input<EncryptionAlgorithm> encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
             this.encryptionAlgorithm = Input.of(Objects.requireNonNull(encryptionAlgorithm));
             return this;
         }
 
-        public Builder setEncryptionCertThumbprint(@Nullable Input<String> encryptionCertThumbprint) {
+        public Builder encryptionCertThumbprint(@Nullable Input<String> encryptionCertThumbprint) {
             this.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
 
-        public Builder setEncryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
+        public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
             this.encryptionCertThumbprint = Input.ofNullable(encryptionCertThumbprint);
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

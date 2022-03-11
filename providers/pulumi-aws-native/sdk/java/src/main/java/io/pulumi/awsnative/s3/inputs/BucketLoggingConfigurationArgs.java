@@ -66,22 +66,22 @@ public final class BucketLoggingConfigurationArgs extends io.pulumi.resources.Re
     	      this.logFilePrefix = defaults.logFilePrefix;
         }
 
-        public Builder setDestinationBucketName(@Nullable Input<String> destinationBucketName) {
+        public Builder destinationBucketName(@Nullable Input<String> destinationBucketName) {
             this.destinationBucketName = destinationBucketName;
             return this;
         }
 
-        public Builder setDestinationBucketName(@Nullable String destinationBucketName) {
+        public Builder destinationBucketName(@Nullable String destinationBucketName) {
             this.destinationBucketName = Input.ofNullable(destinationBucketName);
             return this;
         }
 
-        public Builder setLogFilePrefix(@Nullable Input<String> logFilePrefix) {
+        public Builder logFilePrefix(@Nullable Input<String> logFilePrefix) {
             this.logFilePrefix = logFilePrefix;
             return this;
         }
 
-        public Builder setLogFilePrefix(@Nullable String logFilePrefix) {
+        public Builder logFilePrefix(@Nullable String logFilePrefix) {
             this.logFilePrefix = Input.ofNullable(logFilePrefix);
             return this;
         }

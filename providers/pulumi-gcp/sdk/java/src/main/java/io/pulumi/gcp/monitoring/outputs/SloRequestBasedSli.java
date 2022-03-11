@@ -33,10 +33,10 @@ public final class SloRequestBasedSli {
      */
     private final @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio;
 
-    @OutputCustomType.Constructor({"distributionCut","goodTotalRatio"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSli(
-        @Nullable SloRequestBasedSliDistributionCut distributionCut,
-        @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
+        @OutputCustomType.Parameter("distributionCut") @Nullable SloRequestBasedSliDistributionCut distributionCut,
+        @OutputCustomType.Parameter("goodTotalRatio") @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }
@@ -88,12 +88,12 @@ public final class SloRequestBasedSli {
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder setDistributionCut(@Nullable SloRequestBasedSliDistributionCut distributionCut) {
+        public Builder distributionCut(@Nullable SloRequestBasedSliDistributionCut distributionCut) {
             this.distributionCut = distributionCut;
             return this;
         }
 
-        public Builder setGoodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
+        public Builder goodTotalRatio(@Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
             this.goodTotalRatio = goodTotalRatio;
             return this;
         }

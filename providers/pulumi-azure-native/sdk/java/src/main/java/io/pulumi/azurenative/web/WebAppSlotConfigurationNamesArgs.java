@@ -135,62 +135,62 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAppSettingNames(@Nullable Input<List<String>> appSettingNames) {
+        public Builder appSettingNames(@Nullable Input<List<String>> appSettingNames) {
             this.appSettingNames = appSettingNames;
             return this;
         }
 
-        public Builder setAppSettingNames(@Nullable List<String> appSettingNames) {
+        public Builder appSettingNames(@Nullable List<String> appSettingNames) {
             this.appSettingNames = Input.ofNullable(appSettingNames);
             return this;
         }
 
-        public Builder setAzureStorageConfigNames(@Nullable Input<List<String>> azureStorageConfigNames) {
+        public Builder azureStorageConfigNames(@Nullable Input<List<String>> azureStorageConfigNames) {
             this.azureStorageConfigNames = azureStorageConfigNames;
             return this;
         }
 
-        public Builder setAzureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
+        public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
             this.azureStorageConfigNames = Input.ofNullable(azureStorageConfigNames);
             return this;
         }
 
-        public Builder setConnectionStringNames(@Nullable Input<List<String>> connectionStringNames) {
+        public Builder connectionStringNames(@Nullable Input<List<String>> connectionStringNames) {
             this.connectionStringNames = connectionStringNames;
             return this;
         }
 
-        public Builder setConnectionStringNames(@Nullable List<String> connectionStringNames) {
+        public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
             this.connectionStringNames = Input.ofNullable(connectionStringNames);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

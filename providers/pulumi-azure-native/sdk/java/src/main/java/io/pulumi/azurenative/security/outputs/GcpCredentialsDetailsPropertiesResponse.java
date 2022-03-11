@@ -82,22 +82,22 @@ public final class GcpCredentialsDetailsPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authProviderX509CertUrl","authUri","authenticationProvisioningState","authenticationType","clientEmail","clientId","clientX509CertUrl","grantedPermissions","organizationId","privateKey","privateKeyId","projectId","tokenUri","type"})
+    @OutputCustomType.Constructor
     private GcpCredentialsDetailsPropertiesResponse(
-        String authProviderX509CertUrl,
-        String authUri,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String clientEmail,
-        String clientId,
-        String clientX509CertUrl,
-        List<String> grantedPermissions,
-        String organizationId,
-        String privateKey,
-        String privateKeyId,
-        String projectId,
-        String tokenUri,
-        String type) {
+        @OutputCustomType.Parameter("authProviderX509CertUrl") String authProviderX509CertUrl,
+        @OutputCustomType.Parameter("authUri") String authUri,
+        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("clientEmail") String clientEmail,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientX509CertUrl") String clientX509CertUrl,
+        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions,
+        @OutputCustomType.Parameter("organizationId") String organizationId,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("privateKeyId") String privateKeyId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tokenUri") String tokenUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.authProviderX509CertUrl = authProviderX509CertUrl;
         this.authUri = authUri;
         this.authenticationProvisioningState = authenticationProvisioningState;
@@ -260,72 +260,72 @@ public final class GcpCredentialsDetailsPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthProviderX509CertUrl(String authProviderX509CertUrl) {
+        public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
             this.authProviderX509CertUrl = Objects.requireNonNull(authProviderX509CertUrl);
             return this;
         }
 
-        public Builder setAuthUri(String authUri) {
+        public Builder authUri(String authUri) {
             this.authUri = Objects.requireNonNull(authUri);
             return this;
         }
 
-        public Builder setAuthenticationProvisioningState(String authenticationProvisioningState) {
+        public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setClientEmail(String clientEmail) {
+        public Builder clientEmail(String clientEmail) {
             this.clientEmail = Objects.requireNonNull(clientEmail);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientX509CertUrl(String clientX509CertUrl) {
+        public Builder clientX509CertUrl(String clientX509CertUrl) {
             this.clientX509CertUrl = Objects.requireNonNull(clientX509CertUrl);
             return this;
         }
 
-        public Builder setGrantedPermissions(List<String> grantedPermissions) {
+        public Builder grantedPermissions(List<String> grantedPermissions) {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setPrivateKeyId(String privateKeyId) {
+        public Builder privateKeyId(String privateKeyId) {
             this.privateKeyId = Objects.requireNonNull(privateKeyId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setTokenUri(String tokenUri) {
+        public Builder tokenUri(String tokenUri) {
             this.tokenUri = Objects.requireNonNull(tokenUri);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -35,13 +35,13 @@ public final class GetOrganizationAccount {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","email","id","name","status"})
+    @OutputCustomType.Constructor
     private GetOrganizationAccount(
-        String arn,
-        String email,
-        String id,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.email = email;
         this.id = id;
@@ -113,27 +113,27 @@ public final class GetOrganizationAccount {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

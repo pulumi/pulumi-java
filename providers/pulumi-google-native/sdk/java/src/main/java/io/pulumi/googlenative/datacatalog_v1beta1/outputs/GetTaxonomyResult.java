@@ -43,14 +43,14 @@ public final class GetTaxonomyResult {
      */
     private final GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps;
 
-    @OutputCustomType.Constructor({"activatedPolicyTypes","description","displayName","name","policyTagCount","taxonomyTimestamps"})
+    @OutputCustomType.Constructor
     private GetTaxonomyResult(
-        List<String> activatedPolicyTypes,
-        String description,
-        String displayName,
-        String name,
-        Integer policyTagCount,
-        GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
+        @OutputCustomType.Parameter("activatedPolicyTypes") List<String> activatedPolicyTypes,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyTagCount") Integer policyTagCount,
+        @OutputCustomType.Parameter("taxonomyTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
         this.activatedPolicyTypes = activatedPolicyTypes;
         this.description = description;
         this.displayName = displayName;
@@ -132,32 +132,32 @@ public final class GetTaxonomyResult {
     	      this.taxonomyTimestamps = defaults.taxonomyTimestamps;
         }
 
-        public Builder setActivatedPolicyTypes(List<String> activatedPolicyTypes) {
+        public Builder activatedPolicyTypes(List<String> activatedPolicyTypes) {
             this.activatedPolicyTypes = Objects.requireNonNull(activatedPolicyTypes);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyTagCount(Integer policyTagCount) {
+        public Builder policyTagCount(Integer policyTagCount) {
             this.policyTagCount = Objects.requireNonNull(policyTagCount);
             return this;
         }
 
-        public Builder setTaxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
+        public Builder taxonomyTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse taxonomyTimestamps) {
             this.taxonomyTimestamps = Objects.requireNonNull(taxonomyTimestamps);
             return this;
         }

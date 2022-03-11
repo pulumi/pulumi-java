@@ -62,12 +62,12 @@ public final class GetSecretReplicationUserManagedReplica extends io.pulumi.reso
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryptions(List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions) {
+        public Builder customerManagedEncryptions(List<GetSecretReplicationUserManagedReplicaCustomerManagedEncryption> customerManagedEncryptions) {
             this.customerManagedEncryptions = Objects.requireNonNull(customerManagedEncryptions);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

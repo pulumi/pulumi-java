@@ -92,32 +92,32 @@ public final class DevicePoolRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setAttribute(@Nullable Input<DevicePoolRuleAttribute> attribute) {
+        public Builder attribute(@Nullable Input<DevicePoolRuleAttribute> attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setAttribute(@Nullable DevicePoolRuleAttribute attribute) {
+        public Builder attribute(@Nullable DevicePoolRuleAttribute attribute) {
             this.attribute = Input.ofNullable(attribute);
             return this;
         }
 
-        public Builder setOperator(@Nullable Input<DevicePoolRuleOperator> operator) {
+        public Builder operator(@Nullable Input<DevicePoolRuleOperator> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable DevicePoolRuleOperator operator) {
+        public Builder operator(@Nullable DevicePoolRuleOperator operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

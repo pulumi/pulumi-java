@@ -23,10 +23,10 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"endpointType","resourceId"})
+    @OutputCustomType.Constructor
     private HybridConnectionEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.resourceId = resourceId;
     }
@@ -69,12 +69,12 @@ public final class HybridConnectionEventSubscriptionDestinationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

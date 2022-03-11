@@ -70,22 +70,22 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAutoscalingGroupName(Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(Input<String> autoscalingGroupName) {
             this.autoscalingGroupName = Objects.requireNonNull(autoscalingGroupName);
             return this;
         }
 
-        public Builder setAutoscalingGroupName(String autoscalingGroupName) {
+        public Builder autoscalingGroupName(String autoscalingGroupName) {
             this.autoscalingGroupName = Input.of(Objects.requireNonNull(autoscalingGroupName));
             return this;
         }
 
-        public Builder setTag(Input<TagTagArgs> tag) {
+        public Builder tag(Input<TagTagArgs> tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setTag(TagTagArgs tag) {
+        public Builder tag(TagTagArgs tag) {
             this.tag = Input.of(Objects.requireNonNull(tag));
             return this;
         }

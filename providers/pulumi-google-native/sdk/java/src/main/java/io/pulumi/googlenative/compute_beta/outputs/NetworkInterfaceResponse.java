@@ -84,22 +84,22 @@ public final class NetworkInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"accessConfigs","aliasIpRanges","fingerprint","ipv6AccessConfigs","ipv6AccessType","ipv6Address","kind","name","network","networkIP","nicType","queueCount","stackType","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        List<AccessConfigResponse> accessConfigs,
-        List<AliasIpRangeResponse> aliasIpRanges,
-        String fingerprint,
-        List<AccessConfigResponse> ipv6AccessConfigs,
-        String ipv6AccessType,
-        String ipv6Address,
-        String kind,
-        String name,
-        String network,
-        String networkIP,
-        String nicType,
-        Integer queueCount,
-        String stackType,
-        String subnetwork) {
+        @OutputCustomType.Parameter("accessConfigs") List<AccessConfigResponse> accessConfigs,
+        @OutputCustomType.Parameter("aliasIpRanges") List<AliasIpRangeResponse> aliasIpRanges,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("ipv6AccessConfigs") List<AccessConfigResponse> ipv6AccessConfigs,
+        @OutputCustomType.Parameter("ipv6AccessType") String ipv6AccessType,
+        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkIP") String networkIP,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("queueCount") Integer queueCount,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.accessConfigs = accessConfigs;
         this.aliasIpRanges = aliasIpRanges;
         this.fingerprint = fingerprint;
@@ -261,72 +261,72 @@ public final class NetworkInterfaceResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setAccessConfigs(List<AccessConfigResponse> accessConfigs) {
+        public Builder accessConfigs(List<AccessConfigResponse> accessConfigs) {
             this.accessConfigs = Objects.requireNonNull(accessConfigs);
             return this;
         }
 
-        public Builder setAliasIpRanges(List<AliasIpRangeResponse> aliasIpRanges) {
+        public Builder aliasIpRanges(List<AliasIpRangeResponse> aliasIpRanges) {
             this.aliasIpRanges = Objects.requireNonNull(aliasIpRanges);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setIpv6AccessConfigs(List<AccessConfigResponse> ipv6AccessConfigs) {
+        public Builder ipv6AccessConfigs(List<AccessConfigResponse> ipv6AccessConfigs) {
             this.ipv6AccessConfigs = Objects.requireNonNull(ipv6AccessConfigs);
             return this;
         }
 
-        public Builder setIpv6AccessType(String ipv6AccessType) {
+        public Builder ipv6AccessType(String ipv6AccessType) {
             this.ipv6AccessType = Objects.requireNonNull(ipv6AccessType);
             return this;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkIP(String networkIP) {
+        public Builder networkIP(String networkIP) {
             this.networkIP = Objects.requireNonNull(networkIP);
             return this;
         }
 
-        public Builder setNicType(String nicType) {
+        public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
-        public Builder setQueueCount(Integer queueCount) {
+        public Builder queueCount(Integer queueCount) {
             this.queueCount = Objects.requireNonNull(queueCount);
             return this;
         }
 
-        public Builder setStackType(String stackType) {
+        public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

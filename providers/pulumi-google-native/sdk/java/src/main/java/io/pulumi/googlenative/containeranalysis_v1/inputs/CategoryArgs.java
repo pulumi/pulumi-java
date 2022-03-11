@@ -74,22 +74,22 @@ public final class CategoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCategoryId(@Nullable Input<String> categoryId) {
+        public Builder categoryId(@Nullable Input<String> categoryId) {
             this.categoryId = categoryId;
             return this;
         }
 
-        public Builder setCategoryId(@Nullable String categoryId) {
+        public Builder categoryId(@Nullable String categoryId) {
             this.categoryId = Input.ofNullable(categoryId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

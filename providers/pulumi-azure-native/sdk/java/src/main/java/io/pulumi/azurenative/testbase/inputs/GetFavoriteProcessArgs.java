@@ -100,22 +100,22 @@ public final class GetFavoriteProcessArgs extends io.pulumi.resources.InvokeArgs
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder setFavoriteProcessResourceName(String favoriteProcessResourceName) {
+        public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
             this.favoriteProcessResourceName = Objects.requireNonNull(favoriteProcessResourceName);
             return this;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTestBaseAccountName(String testBaseAccountName) {
+        public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }

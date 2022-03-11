@@ -16,8 +16,8 @@ public final class TableDisplayOptionsResponse {
      */
     private final List<String> shownColumns;
 
-    @OutputCustomType.Constructor({"shownColumns"})
-    private TableDisplayOptionsResponse(List<String> shownColumns) {
+    @OutputCustomType.Constructor
+    private TableDisplayOptionsResponse(@OutputCustomType.Parameter("shownColumns") List<String> shownColumns) {
         this.shownColumns = shownColumns;
     }
 
@@ -49,7 +49,7 @@ public final class TableDisplayOptionsResponse {
     	      this.shownColumns = defaults.shownColumns;
         }
 
-        public Builder setShownColumns(List<String> shownColumns) {
+        public Builder shownColumns(List<String> shownColumns) {
             this.shownColumns = Objects.requireNonNull(shownColumns);
             return this;
         }

@@ -47,14 +47,14 @@ public final class ScheduleTriggerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","pipelines","recurrence","runtimeState","type"})
+    @OutputCustomType.Constructor
     private ScheduleTriggerResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable List<TriggerPipelineReferenceResponse> pipelines,
-        ScheduleTriggerRecurrenceResponse recurrence,
-        String runtimeState,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("pipelines") @Nullable List<TriggerPipelineReferenceResponse> pipelines,
+        @OutputCustomType.Parameter("recurrence") ScheduleTriggerRecurrenceResponse recurrence,
+        @OutputCustomType.Parameter("runtimeState") String runtimeState,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.pipelines = pipelines;
@@ -137,32 +137,32 @@ public final class ScheduleTriggerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setPipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
+        public Builder pipelines(@Nullable List<TriggerPipelineReferenceResponse> pipelines) {
             this.pipelines = pipelines;
             return this;
         }
 
-        public Builder setRecurrence(ScheduleTriggerRecurrenceResponse recurrence) {
+        public Builder recurrence(ScheduleTriggerRecurrenceResponse recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setRuntimeState(String runtimeState) {
+        public Builder runtimeState(String runtimeState) {
             this.runtimeState = Objects.requireNonNull(runtimeState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

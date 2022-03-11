@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AssistantServerSideEncryptionConfiguration {
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"kmsKeyId"})
-    private AssistantServerSideEncryptionConfiguration(@Nullable String kmsKeyId) {
+    @OutputCustomType.Constructor
+    private AssistantServerSideEncryptionConfiguration(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 
@@ -42,7 +42,7 @@ public final class AssistantServerSideEncryptionConfiguration {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }

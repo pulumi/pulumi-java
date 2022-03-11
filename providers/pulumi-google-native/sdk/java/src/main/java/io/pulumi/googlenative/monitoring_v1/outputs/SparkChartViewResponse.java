@@ -20,10 +20,10 @@ public final class SparkChartViewResponse {
      */
     private final String sparkChartType;
 
-    @OutputCustomType.Constructor({"minAlignmentPeriod","sparkChartType"})
+    @OutputCustomType.Constructor
     private SparkChartViewResponse(
-        String minAlignmentPeriod,
-        String sparkChartType) {
+        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @OutputCustomType.Parameter("sparkChartType") String sparkChartType) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.sparkChartType = sparkChartType;
     }
@@ -65,12 +65,12 @@ public final class SparkChartViewResponse {
     	      this.sparkChartType = defaults.sparkChartType;
         }
 
-        public Builder setMinAlignmentPeriod(String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setSparkChartType(String sparkChartType) {
+        public Builder sparkChartType(String sparkChartType) {
             this.sparkChartType = Objects.requireNonNull(sparkChartType);
             return this;
         }

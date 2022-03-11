@@ -178,82 +178,82 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     	      this.surrogateType = defaults.surrogateType;
         }
 
-        public Builder setDetectionRules(@Nullable Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules) {
+        public Builder detectionRules(@Nullable Input<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules) {
             this.detectionRules = detectionRules;
             return this;
         }
 
-        public Builder setDetectionRules(@Nullable List<GooglePrivacyDlpV2DetectionRuleArgs> detectionRules) {
+        public Builder detectionRules(@Nullable List<GooglePrivacyDlpV2DetectionRuleArgs> detectionRules) {
             this.detectionRules = Input.ofNullable(detectionRules);
             return this;
         }
 
-        public Builder setDictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
+        public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setExclusionType(@Nullable Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType) {
+        public Builder exclusionType(@Nullable Input<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType) {
             this.exclusionType = exclusionType;
             return this;
         }
 
-        public Builder setExclusionType(@Nullable GooglePrivacyDlpV2CustomInfoTypeExclusionType exclusionType) {
+        public Builder exclusionType(@Nullable GooglePrivacyDlpV2CustomInfoTypeExclusionType exclusionType) {
             this.exclusionType = Input.ofNullable(exclusionType);
             return this;
         }
 
-        public Builder setInfoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
+        public Builder infoType(@Nullable Input<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
             this.infoType = infoType;
             return this;
         }
 
-        public Builder setInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
+        public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
             this.infoType = Input.ofNullable(infoType);
             return this;
         }
 
-        public Builder setLikelihood(@Nullable Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood) {
+        public Builder likelihood(@Nullable Input<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood) {
             this.likelihood = likelihood;
             return this;
         }
 
-        public Builder setLikelihood(@Nullable GooglePrivacyDlpV2CustomInfoTypeLikelihood likelihood) {
+        public Builder likelihood(@Nullable GooglePrivacyDlpV2CustomInfoTypeLikelihood likelihood) {
             this.likelihood = Input.ofNullable(likelihood);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        public Builder regex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
+        public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }
 
-        public Builder setStoredType(@Nullable Input<GooglePrivacyDlpV2StoredTypeArgs> storedType) {
+        public Builder storedType(@Nullable Input<GooglePrivacyDlpV2StoredTypeArgs> storedType) {
             this.storedType = storedType;
             return this;
         }
 
-        public Builder setStoredType(@Nullable GooglePrivacyDlpV2StoredTypeArgs storedType) {
+        public Builder storedType(@Nullable GooglePrivacyDlpV2StoredTypeArgs storedType) {
             this.storedType = Input.ofNullable(storedType);
             return this;
         }
 
-        public Builder setSurrogateType(@Nullable Input<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType) {
+        public Builder surrogateType(@Nullable Input<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType) {
             this.surrogateType = surrogateType;
             return this;
         }
 
-        public Builder setSurrogateType(@Nullable GooglePrivacyDlpV2SurrogateTypeArgs surrogateType) {
+        public Builder surrogateType(@Nullable GooglePrivacyDlpV2SurrogateTypeArgs surrogateType) {
             this.surrogateType = Input.ofNullable(surrogateType);
             return this;
         }

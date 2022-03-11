@@ -27,11 +27,11 @@ public final class QueryParameterResponse {
      */
     private final QueryParameterValueResponse parameterValue;
 
-    @OutputCustomType.Constructor({"name","parameterType","parameterValue"})
+    @OutputCustomType.Constructor
     private QueryParameterResponse(
-        String name,
-        QueryParameterTypeResponse parameterType,
-        QueryParameterValueResponse parameterValue) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameterType") QueryParameterTypeResponse parameterType,
+        @OutputCustomType.Parameter("parameterValue") QueryParameterValueResponse parameterValue) {
         this.name = name;
         this.parameterType = parameterType;
         this.parameterValue = parameterValue;
@@ -83,17 +83,17 @@ public final class QueryParameterResponse {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameterType(QueryParameterTypeResponse parameterType) {
+        public Builder parameterType(QueryParameterTypeResponse parameterType) {
             this.parameterType = Objects.requireNonNull(parameterType);
             return this;
         }
 
-        public Builder setParameterValue(QueryParameterValueResponse parameterValue) {
+        public Builder parameterValue(QueryParameterValueResponse parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

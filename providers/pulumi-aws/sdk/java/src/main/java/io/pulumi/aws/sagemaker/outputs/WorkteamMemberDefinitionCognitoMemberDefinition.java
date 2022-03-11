@@ -25,11 +25,11 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
      */
     private final String userPool;
 
-    @OutputCustomType.Constructor({"clientId","userGroup","userPool"})
+    @OutputCustomType.Constructor
     private WorkteamMemberDefinitionCognitoMemberDefinition(
-        String clientId,
-        String userGroup,
-        String userPool) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("userGroup") String userGroup,
+        @OutputCustomType.Parameter("userPool") String userPool) {
         this.clientId = clientId;
         this.userGroup = userGroup;
         this.userPool = userPool;
@@ -81,17 +81,17 @@ public final class WorkteamMemberDefinitionCognitoMemberDefinition {
     	      this.userPool = defaults.userPool;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setUserGroup(String userGroup) {
+        public Builder userGroup(String userGroup) {
             this.userGroup = Objects.requireNonNull(userGroup);
             return this;
         }
 
-        public Builder setUserPool(String userPool) {
+        public Builder userPool(String userPool) {
             this.userPool = Objects.requireNonNull(userPool);
             return this;
         }

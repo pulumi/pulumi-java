@@ -23,14 +23,14 @@ public final class DataSourceDatabaseConfiguration {
     private final @Nullable DataSourceSqlConfiguration sqlConfiguration;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"aclConfiguration","columnConfiguration","connectionConfiguration","databaseEngineType","sqlConfiguration","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceDatabaseConfiguration(
-        @Nullable DataSourceAclConfiguration aclConfiguration,
-        DataSourceColumnConfiguration columnConfiguration,
-        DataSourceConnectionConfiguration connectionConfiguration,
-        DataSourceDatabaseEngineType databaseEngineType,
-        @Nullable DataSourceSqlConfiguration sqlConfiguration,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("aclConfiguration") @Nullable DataSourceAclConfiguration aclConfiguration,
+        @OutputCustomType.Parameter("columnConfiguration") DataSourceColumnConfiguration columnConfiguration,
+        @OutputCustomType.Parameter("connectionConfiguration") DataSourceConnectionConfiguration connectionConfiguration,
+        @OutputCustomType.Parameter("databaseEngineType") DataSourceDatabaseEngineType databaseEngineType,
+        @OutputCustomType.Parameter("sqlConfiguration") @Nullable DataSourceSqlConfiguration sqlConfiguration,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.aclConfiguration = aclConfiguration;
         this.columnConfiguration = columnConfiguration;
         this.connectionConfiguration = connectionConfiguration;
@@ -88,32 +88,32 @@ public final class DataSourceDatabaseConfiguration {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setAclConfiguration(@Nullable DataSourceAclConfiguration aclConfiguration) {
+        public Builder aclConfiguration(@Nullable DataSourceAclConfiguration aclConfiguration) {
             this.aclConfiguration = aclConfiguration;
             return this;
         }
 
-        public Builder setColumnConfiguration(DataSourceColumnConfiguration columnConfiguration) {
+        public Builder columnConfiguration(DataSourceColumnConfiguration columnConfiguration) {
             this.columnConfiguration = Objects.requireNonNull(columnConfiguration);
             return this;
         }
 
-        public Builder setConnectionConfiguration(DataSourceConnectionConfiguration connectionConfiguration) {
+        public Builder connectionConfiguration(DataSourceConnectionConfiguration connectionConfiguration) {
             this.connectionConfiguration = Objects.requireNonNull(connectionConfiguration);
             return this;
         }
 
-        public Builder setDatabaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
+        public Builder databaseEngineType(DataSourceDatabaseEngineType databaseEngineType) {
             this.databaseEngineType = Objects.requireNonNull(databaseEngineType);
             return this;
         }
 
-        public Builder setSqlConfiguration(@Nullable DataSourceSqlConfiguration sqlConfiguration) {
+        public Builder sqlConfiguration(@Nullable DataSourceSqlConfiguration sqlConfiguration) {
             this.sqlConfiguration = sqlConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }

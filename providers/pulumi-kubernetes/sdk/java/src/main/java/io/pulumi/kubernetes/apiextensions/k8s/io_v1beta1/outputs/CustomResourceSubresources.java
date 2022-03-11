@@ -23,10 +23,10 @@ public final class CustomResourceSubresources {
      */
     private final @Nullable JsonElement status;
 
-    @OutputCustomType.Constructor({"scale","status"})
+    @OutputCustomType.Constructor
     private CustomResourceSubresources(
-        @Nullable CustomResourceSubresourceScale scale,
-        @Nullable JsonElement status) {
+        @OutputCustomType.Parameter("scale") @Nullable CustomResourceSubresourceScale scale,
+        @OutputCustomType.Parameter("status") @Nullable JsonElement status) {
         this.scale = scale;
         this.status = status;
     }
@@ -68,12 +68,12 @@ public final class CustomResourceSubresources {
     	      this.status = defaults.status;
         }
 
-        public Builder setScale(@Nullable CustomResourceSubresourceScale scale) {
+        public Builder scale(@Nullable CustomResourceSubresourceScale scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setStatus(@Nullable JsonElement status) {
+        public Builder status(@Nullable JsonElement status) {
             this.status = status;
             return this;
         }

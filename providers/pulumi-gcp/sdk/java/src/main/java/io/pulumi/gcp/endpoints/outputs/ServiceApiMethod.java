@@ -16,12 +16,12 @@ public final class ServiceApiMethod {
     private final @Nullable String responseType;
     private final @Nullable String syntax;
 
-    @OutputCustomType.Constructor({"name","requestType","responseType","syntax"})
+    @OutputCustomType.Constructor
     private ServiceApiMethod(
-        @Nullable String name,
-        @Nullable String requestType,
-        @Nullable String responseType,
-        @Nullable String syntax) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("requestType") @Nullable String requestType,
+        @OutputCustomType.Parameter("responseType") @Nullable String responseType,
+        @OutputCustomType.Parameter("syntax") @Nullable String syntax) {
         this.name = name;
         this.requestType = requestType;
         this.responseType = responseType;
@@ -67,22 +67,22 @@ public final class ServiceApiMethod {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRequestType(@Nullable String requestType) {
+        public Builder requestType(@Nullable String requestType) {
             this.requestType = requestType;
             return this;
         }
 
-        public Builder setResponseType(@Nullable String responseType) {
+        public Builder responseType(@Nullable String responseType) {
             this.responseType = responseType;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
         }

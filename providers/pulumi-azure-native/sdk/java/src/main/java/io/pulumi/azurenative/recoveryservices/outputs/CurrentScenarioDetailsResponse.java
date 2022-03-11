@@ -27,11 +27,11 @@ public final class CurrentScenarioDetailsResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"jobId","scenarioName","startTime"})
+    @OutputCustomType.Constructor
     private CurrentScenarioDetailsResponse(
-        @Nullable String jobId,
-        @Nullable String scenarioName,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("jobId") @Nullable String jobId,
+        @OutputCustomType.Parameter("scenarioName") @Nullable String scenarioName,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.jobId = jobId;
         this.scenarioName = scenarioName;
         this.startTime = startTime;
@@ -83,17 +83,17 @@ public final class CurrentScenarioDetailsResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setScenarioName(@Nullable String scenarioName) {
+        public Builder scenarioName(@Nullable String scenarioName) {
             this.scenarioName = scenarioName;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

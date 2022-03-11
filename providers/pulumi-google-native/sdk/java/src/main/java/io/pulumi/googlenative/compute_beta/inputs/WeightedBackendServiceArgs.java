@@ -92,32 +92,32 @@ public final class WeightedBackendServiceArgs extends io.pulumi.resources.Resour
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBackendService(@Nullable Input<String> backendService) {
+        public Builder backendService(@Nullable Input<String> backendService) {
             this.backendService = backendService;
             return this;
         }
 
-        public Builder setBackendService(@Nullable String backendService) {
+        public Builder backendService(@Nullable String backendService) {
             this.backendService = Input.ofNullable(backendService);
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable HttpHeaderActionArgs headerAction) {
+        public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

@@ -56,17 +56,17 @@ public final class ExecutionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","executionTemplate","jobUri","name","outputNotebookFile","state","updateTime"})
+    @OutputCustomType.Constructor
     private ExecutionResponse(
-        String createTime,
-        String description,
-        String displayName,
-        ExecutionTemplateResponse executionTemplate,
-        String jobUri,
-        String name,
-        String outputNotebookFile,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("executionTemplate") ExecutionTemplateResponse executionTemplate,
+        @OutputCustomType.Parameter("jobUri") String jobUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputNotebookFile") String outputNotebookFile,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;
@@ -178,47 +178,47 @@ public final class ExecutionResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExecutionTemplate(ExecutionTemplateResponse executionTemplate) {
+        public Builder executionTemplate(ExecutionTemplateResponse executionTemplate) {
             this.executionTemplate = Objects.requireNonNull(executionTemplate);
             return this;
         }
 
-        public Builder setJobUri(String jobUri) {
+        public Builder jobUri(String jobUri) {
             this.jobUri = Objects.requireNonNull(jobUri);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputNotebookFile(String outputNotebookFile) {
+        public Builder outputNotebookFile(String outputNotebookFile) {
             this.outputNotebookFile = Objects.requireNonNull(outputNotebookFile);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

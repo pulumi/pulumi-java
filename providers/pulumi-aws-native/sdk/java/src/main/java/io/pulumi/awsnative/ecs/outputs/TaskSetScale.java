@@ -23,10 +23,10 @@ public final class TaskSetScale {
      */
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private TaskSetScale(
-        @Nullable TaskSetScaleUnit unit,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("unit") @Nullable TaskSetScaleUnit unit,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.unit = unit;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class TaskSetScale {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(@Nullable TaskSetScaleUnit unit) {
+        public Builder unit(@Nullable TaskSetScaleUnit unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

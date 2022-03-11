@@ -22,10 +22,10 @@ public final class GetCertificateResult {
      */
     private final @Nullable String certificate;
 
-    @OutputCustomType.Constructor({"arn","certificate"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        @Nullable String arn,
-        @Nullable String certificate) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate) {
         this.arn = arn;
         this.certificate = certificate;
     }
@@ -67,12 +67,12 @@ public final class GetCertificateResult {
     	      this.certificate = defaults.certificate;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }

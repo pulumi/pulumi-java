@@ -25,11 +25,11 @@ public final class NetworkResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"network","project","subnetwork"})
+    @OutputCustomType.Constructor
     private NetworkResponse(
-        String network,
-        String project,
-        String subnetwork) {
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.network = network;
         this.project = project;
         this.subnetwork = subnetwork;
@@ -81,17 +81,17 @@ public final class NetworkResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

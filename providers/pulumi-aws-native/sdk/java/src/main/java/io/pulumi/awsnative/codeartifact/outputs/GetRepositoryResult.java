@@ -50,15 +50,15 @@ public final class GetRepositoryResult {
      */
     private final @Nullable List<String> upstreams;
 
-    @OutputCustomType.Constructor({"arn","description","externalConnections","name","permissionsPolicyDocument","tags","upstreams"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<String> externalConnections,
-        @Nullable String name,
-        @Nullable Object permissionsPolicyDocument,
-        @Nullable List<RepositoryTag> tags,
-        @Nullable List<String> upstreams) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("externalConnections") @Nullable List<String> externalConnections,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<RepositoryTag> tags,
+        @OutputCustomType.Parameter("upstreams") @Nullable List<String> upstreams) {
         this.arn = arn;
         this.description = description;
         this.externalConnections = externalConnections;
@@ -150,37 +150,37 @@ public final class GetRepositoryResult {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable List<String> externalConnections) {
+        public Builder externalConnections(@Nullable List<String> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RepositoryTag> tags) {
+        public Builder tags(@Nullable List<RepositoryTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUpstreams(@Nullable List<String> upstreams) {
+        public Builder upstreams(@Nullable List<String> upstreams) {
             this.upstreams = upstreams;
             return this;
         }

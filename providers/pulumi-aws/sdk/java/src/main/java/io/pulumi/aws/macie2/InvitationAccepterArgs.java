@@ -52,12 +52,12 @@ public final class InvitationAccepterArgs extends io.pulumi.resources.ResourceAr
     	      this.administratorAccountId = defaults.administratorAccountId;
         }
 
-        public Builder setAdministratorAccountId(Input<String> administratorAccountId) {
+        public Builder administratorAccountId(Input<String> administratorAccountId) {
             this.administratorAccountId = Objects.requireNonNull(administratorAccountId);
             return this;
         }
 
-        public Builder setAdministratorAccountId(String administratorAccountId) {
+        public Builder administratorAccountId(String administratorAccountId) {
             this.administratorAccountId = Input.of(Objects.requireNonNull(administratorAccountId));
             return this;
         }

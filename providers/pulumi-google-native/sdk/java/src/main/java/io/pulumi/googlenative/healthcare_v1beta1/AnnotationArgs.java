@@ -187,102 +187,102 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.textAnnotation = defaults.textAnnotation;
         }
 
-        public Builder setAnnotationSource(@Nullable Input<AnnotationSourceArgs> annotationSource) {
+        public Builder annotationSource(@Nullable Input<AnnotationSourceArgs> annotationSource) {
             this.annotationSource = annotationSource;
             return this;
         }
 
-        public Builder setAnnotationSource(@Nullable AnnotationSourceArgs annotationSource) {
+        public Builder annotationSource(@Nullable AnnotationSourceArgs annotationSource) {
             this.annotationSource = Input.ofNullable(annotationSource);
             return this;
         }
 
-        public Builder setAnnotationStoreId(Input<String> annotationStoreId) {
+        public Builder annotationStoreId(Input<String> annotationStoreId) {
             this.annotationStoreId = Objects.requireNonNull(annotationStoreId);
             return this;
         }
 
-        public Builder setAnnotationStoreId(String annotationStoreId) {
+        public Builder annotationStoreId(String annotationStoreId) {
             this.annotationStoreId = Input.of(Objects.requireNonNull(annotationStoreId));
             return this;
         }
 
-        public Builder setCustomData(@Nullable Input<Map<String,String>> customData) {
+        public Builder customData(@Nullable Input<Map<String,String>> customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomData(@Nullable Map<String,String> customData) {
+        public Builder customData(@Nullable Map<String,String> customData) {
             this.customData = Input.ofNullable(customData);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setImageAnnotation(@Nullable Input<ImageAnnotationArgs> imageAnnotation) {
+        public Builder imageAnnotation(@Nullable Input<ImageAnnotationArgs> imageAnnotation) {
             this.imageAnnotation = imageAnnotation;
             return this;
         }
 
-        public Builder setImageAnnotation(@Nullable ImageAnnotationArgs imageAnnotation) {
+        public Builder imageAnnotation(@Nullable ImageAnnotationArgs imageAnnotation) {
             this.imageAnnotation = Input.ofNullable(imageAnnotation);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setResourceAnnotation(@Nullable Input<ResourceAnnotationArgs> resourceAnnotation) {
+        public Builder resourceAnnotation(@Nullable Input<ResourceAnnotationArgs> resourceAnnotation) {
             this.resourceAnnotation = resourceAnnotation;
             return this;
         }
 
-        public Builder setResourceAnnotation(@Nullable ResourceAnnotationArgs resourceAnnotation) {
+        public Builder resourceAnnotation(@Nullable ResourceAnnotationArgs resourceAnnotation) {
             this.resourceAnnotation = Input.ofNullable(resourceAnnotation);
             return this;
         }
 
-        public Builder setTextAnnotation(@Nullable Input<SensitiveTextAnnotationArgs> textAnnotation) {
+        public Builder textAnnotation(@Nullable Input<SensitiveTextAnnotationArgs> textAnnotation) {
             this.textAnnotation = textAnnotation;
             return this;
         }
 
-        public Builder setTextAnnotation(@Nullable SensitiveTextAnnotationArgs textAnnotation) {
+        public Builder textAnnotation(@Nullable SensitiveTextAnnotationArgs textAnnotation) {
             this.textAnnotation = Input.ofNullable(textAnnotation);
             return this;
         }

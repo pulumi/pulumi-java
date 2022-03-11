@@ -78,32 +78,32 @@ public final class BotPostFulfillmentStatusSpecificationArgs extends io.pulumi.r
     	      this.timeoutResponse = defaults.timeoutResponse;
         }
 
-        public Builder setFailureResponse(@Nullable Input<BotResponseSpecificationArgs> failureResponse) {
+        public Builder failureResponse(@Nullable Input<BotResponseSpecificationArgs> failureResponse) {
             this.failureResponse = failureResponse;
             return this;
         }
 
-        public Builder setFailureResponse(@Nullable BotResponseSpecificationArgs failureResponse) {
+        public Builder failureResponse(@Nullable BotResponseSpecificationArgs failureResponse) {
             this.failureResponse = Input.ofNullable(failureResponse);
             return this;
         }
 
-        public Builder setSuccessResponse(@Nullable Input<BotResponseSpecificationArgs> successResponse) {
+        public Builder successResponse(@Nullable Input<BotResponseSpecificationArgs> successResponse) {
             this.successResponse = successResponse;
             return this;
         }
 
-        public Builder setSuccessResponse(@Nullable BotResponseSpecificationArgs successResponse) {
+        public Builder successResponse(@Nullable BotResponseSpecificationArgs successResponse) {
             this.successResponse = Input.ofNullable(successResponse);
             return this;
         }
 
-        public Builder setTimeoutResponse(@Nullable Input<BotResponseSpecificationArgs> timeoutResponse) {
+        public Builder timeoutResponse(@Nullable Input<BotResponseSpecificationArgs> timeoutResponse) {
             this.timeoutResponse = timeoutResponse;
             return this;
         }
 
-        public Builder setTimeoutResponse(@Nullable BotResponseSpecificationArgs timeoutResponse) {
+        public Builder timeoutResponse(@Nullable BotResponseSpecificationArgs timeoutResponse) {
             this.timeoutResponse = Input.ofNullable(timeoutResponse);
             return this;
         }

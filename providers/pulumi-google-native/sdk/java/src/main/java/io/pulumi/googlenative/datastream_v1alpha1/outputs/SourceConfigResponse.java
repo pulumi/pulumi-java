@@ -27,11 +27,11 @@ public final class SourceConfigResponse {
      */
     private final String sourceConnectionProfileName;
 
-    @OutputCustomType.Constructor({"mysqlSourceConfig","oracleSourceConfig","sourceConnectionProfileName"})
+    @OutputCustomType.Constructor
     private SourceConfigResponse(
-        MysqlSourceConfigResponse mysqlSourceConfig,
-        OracleSourceConfigResponse oracleSourceConfig,
-        String sourceConnectionProfileName) {
+        @OutputCustomType.Parameter("mysqlSourceConfig") MysqlSourceConfigResponse mysqlSourceConfig,
+        @OutputCustomType.Parameter("oracleSourceConfig") OracleSourceConfigResponse oracleSourceConfig,
+        @OutputCustomType.Parameter("sourceConnectionProfileName") String sourceConnectionProfileName) {
         this.mysqlSourceConfig = mysqlSourceConfig;
         this.oracleSourceConfig = oracleSourceConfig;
         this.sourceConnectionProfileName = sourceConnectionProfileName;
@@ -83,17 +83,17 @@ public final class SourceConfigResponse {
     	      this.sourceConnectionProfileName = defaults.sourceConnectionProfileName;
         }
 
-        public Builder setMysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
             this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
             return this;
         }
 
-        public Builder setOracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
+        public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
             this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
             return this;
         }
 
-        public Builder setSourceConnectionProfileName(String sourceConnectionProfileName) {
+        public Builder sourceConnectionProfileName(String sourceConnectionProfileName) {
             this.sourceConnectionProfileName = Objects.requireNonNull(sourceConnectionProfileName);
             return this;
         }

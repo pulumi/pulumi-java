@@ -52,12 +52,12 @@ public final class StandardEncoderPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"codecs","filters","formats","odataType"})
+    @OutputCustomType.Constructor
     private StandardEncoderPresetResponse(
-        List<Object> codecs,
-        @Nullable FiltersResponse filters,
-        List<Object> formats,
-        String odataType) {
+        @OutputCustomType.Parameter("codecs") List<Object> codecs,
+        @OutputCustomType.Parameter("filters") @Nullable FiltersResponse filters,
+        @OutputCustomType.Parameter("formats") List<Object> formats,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.codecs = codecs;
         this.filters = filters;
         this.formats = formats;
@@ -120,22 +120,22 @@ public final class StandardEncoderPresetResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCodecs(List<Object> codecs) {
+        public Builder codecs(List<Object> codecs) {
             this.codecs = Objects.requireNonNull(codecs);
             return this;
         }
 
-        public Builder setFilters(@Nullable FiltersResponse filters) {
+        public Builder filters(@Nullable FiltersResponse filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFormats(List<Object> formats) {
+        public Builder formats(List<Object> formats) {
             this.formats = Objects.requireNonNull(formats);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

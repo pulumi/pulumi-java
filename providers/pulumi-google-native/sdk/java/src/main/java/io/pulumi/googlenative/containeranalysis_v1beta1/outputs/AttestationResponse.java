@@ -17,10 +17,10 @@ public final class AttestationResponse {
      */
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor({"genericSignedAttestation","pgpSignedAttestation"})
+    @OutputCustomType.Constructor
     private AttestationResponse(
-        GenericSignedAttestationResponse genericSignedAttestation,
-        PgpSignedAttestationResponse pgpSignedAttestation) {
+        @OutputCustomType.Parameter("genericSignedAttestation") GenericSignedAttestationResponse genericSignedAttestation,
+        @OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.genericSignedAttestation = genericSignedAttestation;
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
@@ -58,12 +58,12 @@ public final class AttestationResponse {
     	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
         }
 
-        public Builder setGenericSignedAttestation(GenericSignedAttestationResponse genericSignedAttestation) {
+        public Builder genericSignedAttestation(GenericSignedAttestationResponse genericSignedAttestation) {
             this.genericSignedAttestation = Objects.requireNonNull(genericSignedAttestation);
             return this;
         }
 
-        public Builder setPgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }

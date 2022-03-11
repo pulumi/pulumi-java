@@ -18,10 +18,10 @@ public final class OrganizationRootPolicyType {
     private final @Nullable String status;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"status","type"})
+    @OutputCustomType.Constructor
     private OrganizationRootPolicyType(
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.status = status;
         this.type = type;
     }
@@ -59,12 +59,12 @@ public final class OrganizationRootPolicyType {
     	      this.type = defaults.type;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

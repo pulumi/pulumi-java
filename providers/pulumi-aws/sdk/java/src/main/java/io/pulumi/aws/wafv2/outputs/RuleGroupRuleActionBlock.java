@@ -17,8 +17,8 @@ public final class RuleGroupRuleActionBlock {
      */
     private final @Nullable RuleGroupRuleActionBlockCustomResponse customResponse;
 
-    @OutputCustomType.Constructor({"customResponse"})
-    private RuleGroupRuleActionBlock(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionBlock(@OutputCustomType.Parameter("customResponse") @Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleActionBlock {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
+        public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

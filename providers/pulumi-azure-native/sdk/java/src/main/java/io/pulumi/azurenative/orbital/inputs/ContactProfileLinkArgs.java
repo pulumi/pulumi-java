@@ -128,52 +128,52 @@ public final class ContactProfileLinkArgs extends io.pulumi.resources.ResourceAr
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setChannels(Input<List<ContactProfileLinkChannelArgs>> channels) {
+        public Builder channels(Input<List<ContactProfileLinkChannelArgs>> channels) {
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
 
-        public Builder setChannels(List<ContactProfileLinkChannelArgs> channels) {
+        public Builder channels(List<ContactProfileLinkChannelArgs> channels) {
             this.channels = Input.of(Objects.requireNonNull(channels));
             return this;
         }
 
-        public Builder setDirection(Input<Either<String,Direction>> direction) {
+        public Builder direction(Input<Either<String,Direction>> direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDirection(Either<String,Direction> direction) {
+        public Builder direction(Either<String,Direction> direction) {
             this.direction = Input.of(Objects.requireNonNull(direction));
             return this;
         }
 
-        public Builder setEirpdBW(@Nullable Input<Double> eirpdBW) {
+        public Builder eirpdBW(@Nullable Input<Double> eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
 
-        public Builder setEirpdBW(@Nullable Double eirpdBW) {
+        public Builder eirpdBW(@Nullable Double eirpdBW) {
             this.eirpdBW = Input.ofNullable(eirpdBW);
             return this;
         }
 
-        public Builder setGainOverTemperature(@Nullable Input<Double> gainOverTemperature) {
+        public Builder gainOverTemperature(@Nullable Input<Double> gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
-        public Builder setGainOverTemperature(@Nullable Double gainOverTemperature) {
+        public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             this.gainOverTemperature = Input.ofNullable(gainOverTemperature);
             return this;
         }
 
-        public Builder setPolarization(Input<Either<String,Polarization>> polarization) {
+        public Builder polarization(Input<Either<String,Polarization>> polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
 
-        public Builder setPolarization(Either<String,Polarization> polarization) {
+        public Builder polarization(Either<String,Polarization> polarization) {
             this.polarization = Input.of(Objects.requireNonNull(polarization));
             return this;
         }

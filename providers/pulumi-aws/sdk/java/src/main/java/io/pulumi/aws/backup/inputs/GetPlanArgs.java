@@ -71,12 +71,12 @@ public final class GetPlanArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPlanId(String planId) {
+        public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

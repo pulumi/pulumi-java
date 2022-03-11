@@ -55,7 +55,7 @@ public final class EdifactMessageFilterResponse extends io.pulumi.resources.Invo
     	      this.messageFilterType = defaults.messageFilterType;
         }
 
-        public Builder setMessageFilterType(String messageFilterType) {
+        public Builder messageFilterType(String messageFilterType) {
             this.messageFilterType = Objects.requireNonNull(messageFilterType);
             return this;
         }

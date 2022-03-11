@@ -13,11 +13,11 @@ public final class FeatureGroupDataCatalogConfig {
     private final String database;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalog","database","tableName"})
+    @OutputCustomType.Constructor
     private FeatureGroupDataCatalogConfig(
-        String catalog,
-        String database,
-        String tableName) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;
@@ -57,17 +57,17 @@ public final class FeatureGroupDataCatalogConfig {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalog(String catalog) {
+        public Builder catalog(String catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

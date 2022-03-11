@@ -27,11 +27,11 @@ public final class AutoScalingPolicyResponse {
      */
     private final AverageLoadScalingTriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"mechanism","name","trigger"})
+    @OutputCustomType.Constructor
     private AutoScalingPolicyResponse(
-        AddRemoveReplicaScalingMechanismResponse mechanism,
-        String name,
-        AverageLoadScalingTriggerResponse trigger) {
+        @OutputCustomType.Parameter("mechanism") AddRemoveReplicaScalingMechanismResponse mechanism,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("trigger") AverageLoadScalingTriggerResponse trigger) {
         this.mechanism = mechanism;
         this.name = name;
         this.trigger = trigger;
@@ -83,17 +83,17 @@ public final class AutoScalingPolicyResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setMechanism(AddRemoveReplicaScalingMechanismResponse mechanism) {
+        public Builder mechanism(AddRemoveReplicaScalingMechanismResponse mechanism) {
             this.mechanism = Objects.requireNonNull(mechanism);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTrigger(AverageLoadScalingTriggerResponse trigger) {
+        public Builder trigger(AverageLoadScalingTriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

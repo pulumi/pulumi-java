@@ -20,10 +20,10 @@ public final class RequestUtilizationResponse {
      */
     private final Integer targetRequestCountPerSecond;
 
-    @OutputCustomType.Constructor({"targetConcurrentRequests","targetRequestCountPerSecond"})
+    @OutputCustomType.Constructor
     private RequestUtilizationResponse(
-        Integer targetConcurrentRequests,
-        Integer targetRequestCountPerSecond) {
+        @OutputCustomType.Parameter("targetConcurrentRequests") Integer targetConcurrentRequests,
+        @OutputCustomType.Parameter("targetRequestCountPerSecond") Integer targetRequestCountPerSecond) {
         this.targetConcurrentRequests = targetConcurrentRequests;
         this.targetRequestCountPerSecond = targetRequestCountPerSecond;
     }
@@ -65,12 +65,12 @@ public final class RequestUtilizationResponse {
     	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
         }
 
-        public Builder setTargetConcurrentRequests(Integer targetConcurrentRequests) {
+        public Builder targetConcurrentRequests(Integer targetConcurrentRequests) {
             this.targetConcurrentRequests = Objects.requireNonNull(targetConcurrentRequests);
             return this;
         }
 
-        public Builder setTargetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
+        public Builder targetRequestCountPerSecond(Integer targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = Objects.requireNonNull(targetRequestCountPerSecond);
             return this;
         }

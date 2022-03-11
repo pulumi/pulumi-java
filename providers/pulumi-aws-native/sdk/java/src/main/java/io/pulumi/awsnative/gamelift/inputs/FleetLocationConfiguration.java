@@ -67,12 +67,12 @@ public final class FleetLocationConfiguration extends io.pulumi.resources.Invoke
     	      this.locationCapacity = defaults.locationCapacity;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocationCapacity(@Nullable FleetLocationCapacity locationCapacity) {
+        public Builder locationCapacity(@Nullable FleetLocationCapacity locationCapacity) {
             this.locationCapacity = locationCapacity;
             return this;
         }

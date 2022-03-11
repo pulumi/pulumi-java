@@ -187,41 +187,41 @@ public final class GetApiManagementServiceResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalLocations","apiVersionConstraint","certificates","createdAtUtc","customProperties","developerPortalUrl","disableGateway","enableClientCertificate","etag","gatewayRegionalUrl","gatewayUrl","hostnameConfigurations","id","identity","location","managementApiUrl","name","notificationSenderEmail","portalUrl","privateIPAddresses","provisioningState","publicIPAddresses","publisherEmail","publisherName","restore","scmUrl","sku","tags","targetProvisioningState","type","virtualNetworkConfiguration","virtualNetworkType","zones"})
+    @OutputCustomType.Constructor
     private GetApiManagementServiceResult(
-        @Nullable List<AdditionalLocationResponse> additionalLocations,
-        @Nullable ApiVersionConstraintResponse apiVersionConstraint,
-        @Nullable List<CertificateConfigurationResponse> certificates,
-        String createdAtUtc,
-        @Nullable Map<String,String> customProperties,
-        String developerPortalUrl,
-        @Nullable Boolean disableGateway,
-        @Nullable Boolean enableClientCertificate,
-        String etag,
-        String gatewayRegionalUrl,
-        String gatewayUrl,
-        @Nullable List<HostnameConfigurationResponse> hostnameConfigurations,
-        String id,
-        @Nullable ApiManagementServiceIdentityResponse identity,
-        String location,
-        String managementApiUrl,
-        String name,
-        @Nullable String notificationSenderEmail,
-        String portalUrl,
-        List<String> privateIPAddresses,
-        String provisioningState,
-        List<String> publicIPAddresses,
-        String publisherEmail,
-        String publisherName,
-        @Nullable Boolean restore,
-        String scmUrl,
-        ApiManagementServiceSkuPropertiesResponse sku,
-        @Nullable Map<String,String> tags,
-        String targetProvisioningState,
-        String type,
-        @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @Nullable String virtualNetworkType,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("additionalLocations") @Nullable List<AdditionalLocationResponse> additionalLocations,
+        @OutputCustomType.Parameter("apiVersionConstraint") @Nullable ApiVersionConstraintResponse apiVersionConstraint,
+        @OutputCustomType.Parameter("certificates") @Nullable List<CertificateConfigurationResponse> certificates,
+        @OutputCustomType.Parameter("createdAtUtc") String createdAtUtc,
+        @OutputCustomType.Parameter("customProperties") @Nullable Map<String,String> customProperties,
+        @OutputCustomType.Parameter("developerPortalUrl") String developerPortalUrl,
+        @OutputCustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
+        @OutputCustomType.Parameter("enableClientCertificate") @Nullable Boolean enableClientCertificate,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
+        @OutputCustomType.Parameter("gatewayUrl") String gatewayUrl,
+        @OutputCustomType.Parameter("hostnameConfigurations") @Nullable List<HostnameConfigurationResponse> hostnameConfigurations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ApiManagementServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managementApiUrl") String managementApiUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationSenderEmail") @Nullable String notificationSenderEmail,
+        @OutputCustomType.Parameter("portalUrl") String portalUrl,
+        @OutputCustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
+        @OutputCustomType.Parameter("publisherEmail") String publisherEmail,
+        @OutputCustomType.Parameter("publisherName") String publisherName,
+        @OutputCustomType.Parameter("restore") @Nullable Boolean restore,
+        @OutputCustomType.Parameter("scmUrl") String scmUrl,
+        @OutputCustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetProvisioningState") String targetProvisioningState,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @OutputCustomType.Parameter("virtualNetworkType") @Nullable String virtualNetworkType,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalLocations = additionalLocations;
         this.apiVersionConstraint = apiVersionConstraint;
         this.certificates = certificates;
@@ -573,167 +573,167 @@ public final class GetApiManagementServiceResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalLocations(@Nullable List<AdditionalLocationResponse> additionalLocations) {
+        public Builder additionalLocations(@Nullable List<AdditionalLocationResponse> additionalLocations) {
             this.additionalLocations = additionalLocations;
             return this;
         }
 
-        public Builder setApiVersionConstraint(@Nullable ApiVersionConstraintResponse apiVersionConstraint) {
+        public Builder apiVersionConstraint(@Nullable ApiVersionConstraintResponse apiVersionConstraint) {
             this.apiVersionConstraint = apiVersionConstraint;
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<CertificateConfigurationResponse> certificates) {
+        public Builder certificates(@Nullable List<CertificateConfigurationResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCreatedAtUtc(String createdAtUtc) {
+        public Builder createdAtUtc(String createdAtUtc) {
             this.createdAtUtc = Objects.requireNonNull(createdAtUtc);
             return this;
         }
 
-        public Builder setCustomProperties(@Nullable Map<String,String> customProperties) {
+        public Builder customProperties(@Nullable Map<String,String> customProperties) {
             this.customProperties = customProperties;
             return this;
         }
 
-        public Builder setDeveloperPortalUrl(String developerPortalUrl) {
+        public Builder developerPortalUrl(String developerPortalUrl) {
             this.developerPortalUrl = Objects.requireNonNull(developerPortalUrl);
             return this;
         }
 
-        public Builder setDisableGateway(@Nullable Boolean disableGateway) {
+        public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
-        public Builder setEnableClientCertificate(@Nullable Boolean enableClientCertificate) {
+        public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
             this.enableClientCertificate = enableClientCertificate;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setGatewayRegionalUrl(String gatewayRegionalUrl) {
+        public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
             return this;
         }
 
-        public Builder setGatewayUrl(String gatewayUrl) {
+        public Builder gatewayUrl(String gatewayUrl) {
             this.gatewayUrl = Objects.requireNonNull(gatewayUrl);
             return this;
         }
 
-        public Builder setHostnameConfigurations(@Nullable List<HostnameConfigurationResponse> hostnameConfigurations) {
+        public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationResponse> hostnameConfigurations) {
             this.hostnameConfigurations = hostnameConfigurations;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ApiManagementServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ApiManagementServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagementApiUrl(String managementApiUrl) {
+        public Builder managementApiUrl(String managementApiUrl) {
             this.managementApiUrl = Objects.requireNonNull(managementApiUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable String notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
-        public Builder setPortalUrl(String portalUrl) {
+        public Builder portalUrl(String portalUrl) {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }
 
-        public Builder setPrivateIPAddresses(List<String> privateIPAddresses) {
+        public Builder privateIPAddresses(List<String> privateIPAddresses) {
             this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddresses(List<String> publicIPAddresses) {
+        public Builder publicIPAddresses(List<String> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
 
-        public Builder setPublisherEmail(String publisherEmail) {
+        public Builder publisherEmail(String publisherEmail) {
             this.publisherEmail = Objects.requireNonNull(publisherEmail);
             return this;
         }
 
-        public Builder setPublisherName(String publisherName) {
+        public Builder publisherName(String publisherName) {
             this.publisherName = Objects.requireNonNull(publisherName);
             return this;
         }
 
-        public Builder setRestore(@Nullable Boolean restore) {
+        public Builder restore(@Nullable Boolean restore) {
             this.restore = restore;
             return this;
         }
 
-        public Builder setScmUrl(String scmUrl) {
+        public Builder scmUrl(String scmUrl) {
             this.scmUrl = Objects.requireNonNull(scmUrl);
             return this;
         }
 
-        public Builder setSku(ApiManagementServiceSkuPropertiesResponse sku) {
+        public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetProvisioningState(String targetProvisioningState) {
+        public Builder targetProvisioningState(String targetProvisioningState) {
             this.targetProvisioningState = Objects.requireNonNull(targetProvisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setVirtualNetworkType(@Nullable String virtualNetworkType) {
+        public Builder virtualNetworkType(@Nullable String virtualNetworkType) {
             this.virtualNetworkType = virtualNetworkType;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

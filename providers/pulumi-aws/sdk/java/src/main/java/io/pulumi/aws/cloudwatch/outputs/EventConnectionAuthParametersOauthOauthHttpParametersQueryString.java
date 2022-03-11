@@ -28,11 +28,11 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersQueryStr
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"isValueSecret","key","value"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersOauthOauthHttpParametersQueryString(
-        @Nullable Boolean isValueSecret,
-        @Nullable String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.isValueSecret = isValueSecret;
         this.key = key;
         this.value = value;
@@ -84,17 +84,17 @@ public final class EventConnectionAuthParametersOauthOauthHttpParametersQueryStr
     	      this.value = defaults.value;
         }
 
-        public Builder setIsValueSecret(@Nullable Boolean isValueSecret) {
+        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

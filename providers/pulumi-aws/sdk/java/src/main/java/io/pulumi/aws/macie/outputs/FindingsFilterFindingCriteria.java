@@ -17,8 +17,8 @@ public final class FindingsFilterFindingCriteria {
      */
     private final @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor({"criterions"})
-    private FindingsFilterFindingCriteria(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
+    @OutputCustomType.Constructor
+    private FindingsFilterFindingCriteria(@OutputCustomType.Parameter("criterions") @Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 
@@ -50,7 +50,7 @@ public final class FindingsFilterFindingCriteria {
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder setCriterions(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
+        public Builder criterions(@Nullable List<FindingsFilterFindingCriteriaCriterion> criterions) {
             this.criterions = criterions;
             return this;
         }

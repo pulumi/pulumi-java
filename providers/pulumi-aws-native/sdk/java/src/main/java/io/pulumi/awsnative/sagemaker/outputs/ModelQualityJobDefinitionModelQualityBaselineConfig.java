@@ -15,10 +15,10 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
     private final @Nullable String baseliningJobName;
     private final @Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource;
 
-    @OutputCustomType.Constructor({"baseliningJobName","constraintsResource"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionModelQualityBaselineConfig(
-        @Nullable String baseliningJobName,
-        @Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
+        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @OutputCustomType.Parameter("constraintsResource") @Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
     }
@@ -52,12 +52,12 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
     	      this.constraintsResource = defaults.constraintsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable ModelQualityJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }

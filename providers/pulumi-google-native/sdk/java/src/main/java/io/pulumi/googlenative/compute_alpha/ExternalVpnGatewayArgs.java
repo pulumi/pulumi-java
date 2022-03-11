@@ -146,72 +146,72 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInterfaces(@Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
+        public Builder interfaces(@Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
 
-        public Builder setInterfaces(@Nullable List<ExternalVpnGatewayInterfaceArgs> interfaces) {
+        public Builder interfaces(@Nullable List<ExternalVpnGatewayInterfaceArgs> interfaces) {
             this.interfaces = Input.ofNullable(interfaces);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRedundancyType(@Nullable Input<ExternalVpnGatewayRedundancyType> redundancyType) {
+        public Builder redundancyType(@Nullable Input<ExternalVpnGatewayRedundancyType> redundancyType) {
             this.redundancyType = redundancyType;
             return this;
         }
 
-        public Builder setRedundancyType(@Nullable ExternalVpnGatewayRedundancyType redundancyType) {
+        public Builder redundancyType(@Nullable ExternalVpnGatewayRedundancyType redundancyType) {
             this.redundancyType = Input.ofNullable(redundancyType);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

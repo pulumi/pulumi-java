@@ -27,11 +27,11 @@ public final class CustomDomainPropertiesResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"appName","certName","thumbprint"})
+    @OutputCustomType.Constructor
     private CustomDomainPropertiesResponse(
-        String appName,
-        @Nullable String certName,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("appName") String appName,
+        @OutputCustomType.Parameter("certName") @Nullable String certName,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.appName = appName;
         this.certName = certName;
         this.thumbprint = thumbprint;
@@ -83,17 +83,17 @@ public final class CustomDomainPropertiesResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setCertName(@Nullable String certName) {
+        public Builder certName(@Nullable String certName) {
             this.certName = certName;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

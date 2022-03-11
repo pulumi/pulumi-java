@@ -84,32 +84,32 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setConfigMap(@Nullable Input<ConfigMapVolumeSourceArgs> configMap) {
+        public Builder configMap(@Nullable Input<ConfigMapVolumeSourceArgs> configMap) {
             this.configMap = configMap;
             return this;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
+        public Builder configMap(@Nullable ConfigMapVolumeSourceArgs configMap) {
             this.configMap = Input.ofNullable(configMap);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSecret(@Nullable Input<SecretVolumeSourceArgs> secret) {
+        public Builder secret(@Nullable Input<SecretVolumeSourceArgs> secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setSecret(@Nullable SecretVolumeSourceArgs secret) {
+        public Builder secret(@Nullable SecretVolumeSourceArgs secret) {
             this.secret = Input.ofNullable(secret);
             return this;
         }

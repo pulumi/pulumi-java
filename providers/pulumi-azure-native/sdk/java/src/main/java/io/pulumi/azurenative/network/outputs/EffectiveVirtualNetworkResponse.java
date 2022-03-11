@@ -27,11 +27,11 @@ public final class EffectiveVirtualNetworkResponse {
      */
     private final @Nullable String membershipType;
 
-    @OutputCustomType.Constructor({"id","location","membershipType"})
+    @OutputCustomType.Constructor
     private EffectiveVirtualNetworkResponse(
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable String membershipType) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("membershipType") @Nullable String membershipType) {
         this.id = id;
         this.location = location;
         this.membershipType = membershipType;
@@ -83,17 +83,17 @@ public final class EffectiveVirtualNetworkResponse {
     	      this.membershipType = defaults.membershipType;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMembershipType(@Nullable String membershipType) {
+        public Builder membershipType(@Nullable String membershipType) {
             this.membershipType = membershipType;
             return this;
         }

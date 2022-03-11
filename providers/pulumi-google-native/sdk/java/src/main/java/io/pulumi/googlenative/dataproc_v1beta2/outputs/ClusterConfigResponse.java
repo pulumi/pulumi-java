@@ -97,23 +97,23 @@ public final class ClusterConfigResponse {
      */
     private final InstanceGroupConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"autoscalingConfig","configBucket","encryptionConfig","endpointConfig","gceClusterConfig","gkeClusterConfig","initializationActions","lifecycleConfig","masterConfig","metastoreConfig","secondaryWorkerConfig","securityConfig","softwareConfig","tempBucket","workerConfig"})
+    @OutputCustomType.Constructor
     private ClusterConfigResponse(
-        AutoscalingConfigResponse autoscalingConfig,
-        String configBucket,
-        EncryptionConfigResponse encryptionConfig,
-        EndpointConfigResponse endpointConfig,
-        GceClusterConfigResponse gceClusterConfig,
-        GkeClusterConfigResponse gkeClusterConfig,
-        List<NodeInitializationActionResponse> initializationActions,
-        LifecycleConfigResponse lifecycleConfig,
-        InstanceGroupConfigResponse masterConfig,
-        MetastoreConfigResponse metastoreConfig,
-        InstanceGroupConfigResponse secondaryWorkerConfig,
-        SecurityConfigResponse securityConfig,
-        SoftwareConfigResponse softwareConfig,
-        String tempBucket,
-        InstanceGroupConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("autoscalingConfig") AutoscalingConfigResponse autoscalingConfig,
+        @OutputCustomType.Parameter("configBucket") String configBucket,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("endpointConfig") EndpointConfigResponse endpointConfig,
+        @OutputCustomType.Parameter("gceClusterConfig") GceClusterConfigResponse gceClusterConfig,
+        @OutputCustomType.Parameter("gkeClusterConfig") GkeClusterConfigResponse gkeClusterConfig,
+        @OutputCustomType.Parameter("initializationActions") List<NodeInitializationActionResponse> initializationActions,
+        @OutputCustomType.Parameter("lifecycleConfig") LifecycleConfigResponse lifecycleConfig,
+        @OutputCustomType.Parameter("masterConfig") InstanceGroupConfigResponse masterConfig,
+        @OutputCustomType.Parameter("metastoreConfig") MetastoreConfigResponse metastoreConfig,
+        @OutputCustomType.Parameter("secondaryWorkerConfig") InstanceGroupConfigResponse secondaryWorkerConfig,
+        @OutputCustomType.Parameter("securityConfig") SecurityConfigResponse securityConfig,
+        @OutputCustomType.Parameter("softwareConfig") SoftwareConfigResponse softwareConfig,
+        @OutputCustomType.Parameter("tempBucket") String tempBucket,
+        @OutputCustomType.Parameter("workerConfig") InstanceGroupConfigResponse workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.configBucket = configBucket;
         this.encryptionConfig = encryptionConfig;
@@ -285,77 +285,77 @@ public final class ClusterConfigResponse {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setAutoscalingConfig(AutoscalingConfigResponse autoscalingConfig) {
+        public Builder autoscalingConfig(AutoscalingConfigResponse autoscalingConfig) {
             this.autoscalingConfig = Objects.requireNonNull(autoscalingConfig);
             return this;
         }
 
-        public Builder setConfigBucket(String configBucket) {
+        public Builder configBucket(String configBucket) {
             this.configBucket = Objects.requireNonNull(configBucket);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setEndpointConfig(EndpointConfigResponse endpointConfig) {
+        public Builder endpointConfig(EndpointConfigResponse endpointConfig) {
             this.endpointConfig = Objects.requireNonNull(endpointConfig);
             return this;
         }
 
-        public Builder setGceClusterConfig(GceClusterConfigResponse gceClusterConfig) {
+        public Builder gceClusterConfig(GceClusterConfigResponse gceClusterConfig) {
             this.gceClusterConfig = Objects.requireNonNull(gceClusterConfig);
             return this;
         }
 
-        public Builder setGkeClusterConfig(GkeClusterConfigResponse gkeClusterConfig) {
+        public Builder gkeClusterConfig(GkeClusterConfigResponse gkeClusterConfig) {
             this.gkeClusterConfig = Objects.requireNonNull(gkeClusterConfig);
             return this;
         }
 
-        public Builder setInitializationActions(List<NodeInitializationActionResponse> initializationActions) {
+        public Builder initializationActions(List<NodeInitializationActionResponse> initializationActions) {
             this.initializationActions = Objects.requireNonNull(initializationActions);
             return this;
         }
 
-        public Builder setLifecycleConfig(LifecycleConfigResponse lifecycleConfig) {
+        public Builder lifecycleConfig(LifecycleConfigResponse lifecycleConfig) {
             this.lifecycleConfig = Objects.requireNonNull(lifecycleConfig);
             return this;
         }
 
-        public Builder setMasterConfig(InstanceGroupConfigResponse masterConfig) {
+        public Builder masterConfig(InstanceGroupConfigResponse masterConfig) {
             this.masterConfig = Objects.requireNonNull(masterConfig);
             return this;
         }
 
-        public Builder setMetastoreConfig(MetastoreConfigResponse metastoreConfig) {
+        public Builder metastoreConfig(MetastoreConfigResponse metastoreConfig) {
             this.metastoreConfig = Objects.requireNonNull(metastoreConfig);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(InstanceGroupConfigResponse secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(InstanceGroupConfigResponse secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setSecurityConfig(SecurityConfigResponse securityConfig) {
+        public Builder securityConfig(SecurityConfigResponse securityConfig) {
             this.securityConfig = Objects.requireNonNull(securityConfig);
             return this;
         }
 
-        public Builder setSoftwareConfig(SoftwareConfigResponse softwareConfig) {
+        public Builder softwareConfig(SoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
 
-        public Builder setTempBucket(String tempBucket) {
+        public Builder tempBucket(String tempBucket) {
             this.tempBucket = Objects.requireNonNull(tempBucket);
             return this;
         }
 
-        public Builder setWorkerConfig(InstanceGroupConfigResponse workerConfig) {
+        public Builder workerConfig(InstanceGroupConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }

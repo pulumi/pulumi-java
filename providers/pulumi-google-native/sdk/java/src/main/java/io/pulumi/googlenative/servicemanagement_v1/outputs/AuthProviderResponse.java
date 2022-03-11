@@ -37,13 +37,13 @@ public final class AuthProviderResponse {
      */
     private final List<JwtLocationResponse> jwtLocations;
 
-    @OutputCustomType.Constructor({"audiences","authorizationUrl","issuer","jwksUri","jwtLocations"})
+    @OutputCustomType.Constructor
     private AuthProviderResponse(
-        String audiences,
-        String authorizationUrl,
-        String issuer,
-        String jwksUri,
-        List<JwtLocationResponse> jwtLocations) {
+        @OutputCustomType.Parameter("audiences") String audiences,
+        @OutputCustomType.Parameter("authorizationUrl") String authorizationUrl,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("jwksUri") String jwksUri,
+        @OutputCustomType.Parameter("jwtLocations") List<JwtLocationResponse> jwtLocations) {
         this.audiences = audiences;
         this.authorizationUrl = authorizationUrl;
         this.issuer = issuer;
@@ -115,27 +115,27 @@ public final class AuthProviderResponse {
     	      this.jwtLocations = defaults.jwtLocations;
         }
 
-        public Builder setAudiences(String audiences) {
+        public Builder audiences(String audiences) {
             this.audiences = Objects.requireNonNull(audiences);
             return this;
         }
 
-        public Builder setAuthorizationUrl(String authorizationUrl) {
+        public Builder authorizationUrl(String authorizationUrl) {
             this.authorizationUrl = Objects.requireNonNull(authorizationUrl);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setJwksUri(String jwksUri) {
+        public Builder jwksUri(String jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
 
-        public Builder setJwtLocations(List<JwtLocationResponse> jwtLocations) {
+        public Builder jwtLocations(List<JwtLocationResponse> jwtLocations) {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }

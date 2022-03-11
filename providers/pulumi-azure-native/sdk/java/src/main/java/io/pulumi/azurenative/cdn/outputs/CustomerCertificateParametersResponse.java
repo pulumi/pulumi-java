@@ -46,14 +46,14 @@ public final class CustomerCertificateParametersResponse {
      */
     private final @Nullable Boolean useLatestVersion;
 
-    @OutputCustomType.Constructor({"certificateAuthority","secretSource","secretVersion","subjectAlternativeNames","type","useLatestVersion"})
+    @OutputCustomType.Constructor
     private CustomerCertificateParametersResponse(
-        @Nullable String certificateAuthority,
-        ResourceReferenceResponse secretSource,
-        @Nullable String secretVersion,
-        @Nullable List<String> subjectAlternativeNames,
-        String type,
-        @Nullable Boolean useLatestVersion) {
+        @OutputCustomType.Parameter("certificateAuthority") @Nullable String certificateAuthority,
+        @OutputCustomType.Parameter("secretSource") ResourceReferenceResponse secretSource,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<String> subjectAlternativeNames,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useLatestVersion") @Nullable Boolean useLatestVersion) {
         this.certificateAuthority = certificateAuthority;
         this.secretSource = secretSource;
         this.secretVersion = secretVersion;
@@ -136,32 +136,32 @@ public final class CustomerCertificateParametersResponse {
     	      this.useLatestVersion = defaults.useLatestVersion;
         }
 
-        public Builder setCertificateAuthority(@Nullable String certificateAuthority) {
+        public Builder certificateAuthority(@Nullable String certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setSecretSource(ResourceReferenceResponse secretSource) {
+        public Builder secretSource(ResourceReferenceResponse secretSource) {
             this.secretSource = Objects.requireNonNull(secretSource);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseLatestVersion(@Nullable Boolean useLatestVersion) {
+        public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
             this.useLatestVersion = useLatestVersion;
             return this;
         }

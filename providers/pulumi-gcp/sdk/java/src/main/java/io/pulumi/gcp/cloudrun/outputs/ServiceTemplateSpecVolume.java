@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecVolume {
      */
     private final ServiceTemplateSpecVolumeSecret secret;
 
-    @OutputCustomType.Constructor({"name","secret"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecVolume(
-        String name,
-        ServiceTemplateSpecVolumeSecret secret) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") ServiceTemplateSpecVolumeSecret secret) {
         this.name = name;
         this.secret = secret;
     }
@@ -72,12 +72,12 @@ public final class ServiceTemplateSpecVolume {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(ServiceTemplateSpecVolumeSecret secret) {
+        public Builder secret(ServiceTemplateSpecVolumeSecret secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

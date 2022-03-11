@@ -58,7 +58,7 @@ public final class DiskEncryptionConfigurationResponse extends io.pulumi.resourc
     	      this.targets = defaults.targets;
         }
 
-        public Builder setTargets(@Nullable List<String> targets) {
+        public Builder targets(@Nullable List<String> targets) {
             this.targets = targets;
             return this;
         }

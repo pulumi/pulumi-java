@@ -16,8 +16,8 @@ public final class CloudConnectorsResponse {
      */
     private final String awsExternalId;
 
-    @OutputCustomType.Constructor({"awsExternalId"})
-    private CloudConnectorsResponse(String awsExternalId) {
+    @OutputCustomType.Constructor
+    private CloudConnectorsResponse(@OutputCustomType.Parameter("awsExternalId") String awsExternalId) {
         this.awsExternalId = awsExternalId;
     }
 
@@ -50,7 +50,7 @@ public final class CloudConnectorsResponse {
     	      this.awsExternalId = defaults.awsExternalId;
         }
 
-        public Builder setAwsExternalId(String awsExternalId) {
+        public Builder awsExternalId(String awsExternalId) {
             this.awsExternalId = Objects.requireNonNull(awsExternalId);
             return this;
         }

@@ -29,11 +29,11 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"ipAddress","location","region"})
+    @OutputCustomType.Constructor
     private GetUptimeCheckIPsUptimeCheckIp(
-        String ipAddress,
-        String location,
-        String region) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("region") String region) {
         this.ipAddress = ipAddress;
         this.location = location;
         this.region = region;
@@ -89,17 +89,17 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
     	      this.region = defaults.region;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

@@ -22,10 +22,10 @@ public final class BucketLifecycleRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"storageClass","type"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleAction(
-        @Nullable String storageClass,
-        String type) {
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass,
+        @OutputCustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class BucketLifecycleRuleAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

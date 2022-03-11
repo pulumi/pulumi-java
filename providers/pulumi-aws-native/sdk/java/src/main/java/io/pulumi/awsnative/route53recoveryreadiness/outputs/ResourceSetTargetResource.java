@@ -15,10 +15,10 @@ public final class ResourceSetTargetResource {
     private final @Nullable ResourceSetNLBResource nLBResource;
     private final @Nullable ResourceSetR53ResourceRecord r53Resource;
 
-    @OutputCustomType.Constructor({"nLBResource","r53Resource"})
+    @OutputCustomType.Constructor
     private ResourceSetTargetResource(
-        @Nullable ResourceSetNLBResource nLBResource,
-        @Nullable ResourceSetR53ResourceRecord r53Resource) {
+        @OutputCustomType.Parameter("nLBResource") @Nullable ResourceSetNLBResource nLBResource,
+        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetR53ResourceRecord r53Resource) {
         this.nLBResource = nLBResource;
         this.r53Resource = r53Resource;
     }
@@ -52,12 +52,12 @@ public final class ResourceSetTargetResource {
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder setNLBResource(@Nullable ResourceSetNLBResource nLBResource) {
+        public Builder nLBResource(@Nullable ResourceSetNLBResource nLBResource) {
             this.nLBResource = nLBResource;
             return this;
         }
 
-        public Builder setR53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
+        public Builder r53Resource(@Nullable ResourceSetR53ResourceRecord r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }

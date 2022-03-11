@@ -65,18 +65,18 @@ public final class GetVendorSkusResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentMode","id","managedApplicationParameters","managedApplicationTemplate","name","networkFunctionTemplate","preview","provisioningState","skuType","type"})
+    @OutputCustomType.Constructor
     private GetVendorSkusResult(
-        @Nullable String deploymentMode,
-        String id,
-        @Nullable Object managedApplicationParameters,
-        @Nullable Object managedApplicationTemplate,
-        String name,
-        @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
-        @Nullable Boolean preview,
-        String provisioningState,
-        @Nullable String skuType,
-        String type) {
+        @OutputCustomType.Parameter("deploymentMode") @Nullable String deploymentMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("managedApplicationParameters") @Nullable Object managedApplicationParameters,
+        @OutputCustomType.Parameter("managedApplicationTemplate") @Nullable Object managedApplicationTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFunctionTemplate") @Nullable NetworkFunctionTemplateResponse networkFunctionTemplate,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("skuType") @Nullable String skuType,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentMode = deploymentMode;
         this.id = id;
         this.managedApplicationParameters = managedApplicationParameters;
@@ -198,52 +198,52 @@ public final class GetVendorSkusResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeploymentMode(@Nullable String deploymentMode) {
+        public Builder deploymentMode(@Nullable String deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setManagedApplicationParameters(@Nullable Object managedApplicationParameters) {
+        public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
             this.managedApplicationParameters = managedApplicationParameters;
             return this;
         }
 
-        public Builder setManagedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
+        public Builder managedApplicationTemplate(@Nullable Object managedApplicationTemplate) {
             this.managedApplicationTemplate = managedApplicationTemplate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkFunctionTemplate(@Nullable NetworkFunctionTemplateResponse networkFunctionTemplate) {
+        public Builder networkFunctionTemplate(@Nullable NetworkFunctionTemplateResponse networkFunctionTemplate) {
             this.networkFunctionTemplate = networkFunctionTemplate;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSkuType(@Nullable String skuType) {
+        public Builder skuType(@Nullable String skuType) {
             this.skuType = skuType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

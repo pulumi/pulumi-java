@@ -25,11 +25,11 @@ public final class ACIServiceResponseResponseEncryptionProperties {
      */
     private final String vaultBaseUrl;
 
-    @OutputCustomType.Constructor({"keyName","keyVersion","vaultBaseUrl"})
+    @OutputCustomType.Constructor
     private ACIServiceResponseResponseEncryptionProperties(
-        String keyName,
-        String keyVersion,
-        String vaultBaseUrl) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVersion") String keyVersion,
+        @OutputCustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.vaultBaseUrl = vaultBaseUrl;
@@ -81,17 +81,17 @@ public final class ACIServiceResponseResponseEncryptionProperties {
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVersion(String keyVersion) {
+        public Builder keyVersion(String keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }

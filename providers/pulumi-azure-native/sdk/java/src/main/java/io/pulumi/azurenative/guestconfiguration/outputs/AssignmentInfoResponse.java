@@ -23,10 +23,10 @@ public final class AssignmentInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"configuration","name"})
+    @OutputCustomType.Constructor
     private AssignmentInfoResponse(
-        @Nullable ConfigurationInfoResponse configuration,
-        String name) {
+        @OutputCustomType.Parameter("configuration") @Nullable ConfigurationInfoResponse configuration,
+        @OutputCustomType.Parameter("name") String name) {
         this.configuration = configuration;
         this.name = name;
     }
@@ -68,12 +68,12 @@ public final class AssignmentInfoResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setConfiguration(@Nullable ConfigurationInfoResponse configuration) {
+        public Builder configuration(@Nullable ConfigurationInfoResponse configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

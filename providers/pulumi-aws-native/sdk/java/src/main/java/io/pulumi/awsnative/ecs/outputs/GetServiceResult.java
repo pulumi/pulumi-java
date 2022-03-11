@@ -30,19 +30,19 @@ public final class GetServiceResult {
     private final @Nullable List<ServiceTag> tags;
     private final @Nullable String taskDefinition;
 
-    @OutputCustomType.Constructor({"capacityProviderStrategy","deploymentConfiguration","desiredCount","enableExecuteCommand","healthCheckGracePeriodSeconds","name","networkConfiguration","platformVersion","serviceArn","tags","taskDefinition"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
-        @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
-        @Nullable Integer desiredCount,
-        @Nullable Boolean enableExecuteCommand,
-        @Nullable Integer healthCheckGracePeriodSeconds,
-        @Nullable String name,
-        @Nullable ServiceNetworkConfiguration networkConfiguration,
-        @Nullable String platformVersion,
-        @Nullable String serviceArn,
-        @Nullable List<ServiceTag> tags,
-        @Nullable String taskDefinition) {
+        @OutputCustomType.Parameter("capacityProviderStrategy") @Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy,
+        @OutputCustomType.Parameter("deploymentConfiguration") @Nullable ServiceDeploymentConfiguration deploymentConfiguration,
+        @OutputCustomType.Parameter("desiredCount") @Nullable Integer desiredCount,
+        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @OutputCustomType.Parameter("healthCheckGracePeriodSeconds") @Nullable Integer healthCheckGracePeriodSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable ServiceNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServiceTag> tags,
+        @OutputCustomType.Parameter("taskDefinition") @Nullable String taskDefinition) {
         this.capacityProviderStrategy = capacityProviderStrategy;
         this.deploymentConfiguration = deploymentConfiguration;
         this.desiredCount = desiredCount;
@@ -130,57 +130,57 @@ public final class GetServiceResult {
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setCapacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy) {
+        public Builder capacityProviderStrategy(@Nullable List<ServiceCapacityProviderStrategyItem> capacityProviderStrategy) {
             this.capacityProviderStrategy = capacityProviderStrategy;
             return this;
         }
 
-        public Builder setDeploymentConfiguration(@Nullable ServiceDeploymentConfiguration deploymentConfiguration) {
+        public Builder deploymentConfiguration(@Nullable ServiceDeploymentConfiguration deploymentConfiguration) {
             this.deploymentConfiguration = deploymentConfiguration;
             return this;
         }
 
-        public Builder setDesiredCount(@Nullable Integer desiredCount) {
+        public Builder desiredCount(@Nullable Integer desiredCount) {
             this.desiredCount = desiredCount;
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
-        public Builder setHealthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
+        public Builder healthCheckGracePeriodSeconds(@Nullable Integer healthCheckGracePeriodSeconds) {
             this.healthCheckGracePeriodSeconds = healthCheckGracePeriodSeconds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
+        public Builder networkConfiguration(@Nullable ServiceNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setServiceArn(@Nullable String serviceArn) {
+        public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServiceTag> tags) {
+        public Builder tags(@Nullable List<ServiceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskDefinition(@Nullable String taskDefinition) {
+        public Builder taskDefinition(@Nullable String taskDefinition) {
             this.taskDefinition = taskDefinition;
             return this;
         }

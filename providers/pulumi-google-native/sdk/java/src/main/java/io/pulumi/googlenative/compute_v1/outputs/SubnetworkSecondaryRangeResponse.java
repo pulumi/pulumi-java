@@ -20,10 +20,10 @@ public final class SubnetworkSecondaryRangeResponse {
      */
     private final String rangeName;
 
-    @OutputCustomType.Constructor({"ipCidrRange","rangeName"})
+    @OutputCustomType.Constructor
     private SubnetworkSecondaryRangeResponse(
-        String ipCidrRange,
-        String rangeName) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("rangeName") String rangeName) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
     }
@@ -65,12 +65,12 @@ public final class SubnetworkSecondaryRangeResponse {
     	      this.rangeName = defaults.rangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setRangeName(String rangeName) {
+        public Builder rangeName(String rangeName) {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }

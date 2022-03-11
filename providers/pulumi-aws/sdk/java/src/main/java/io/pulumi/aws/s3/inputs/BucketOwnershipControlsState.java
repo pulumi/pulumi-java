@@ -71,22 +71,22 @@ public final class BucketOwnershipControlsState extends io.pulumi.resources.Reso
     	      this.rule = defaults.rule;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setRule(@Nullable Input<BucketOwnershipControlsRuleGetArgs> rule) {
+        public Builder rule(@Nullable Input<BucketOwnershipControlsRuleGetArgs> rule) {
             this.rule = rule;
             return this;
         }
 
-        public Builder setRule(@Nullable BucketOwnershipControlsRuleGetArgs rule) {
+        public Builder rule(@Nullable BucketOwnershipControlsRuleGetArgs rule) {
             this.rule = Input.ofNullable(rule);
             return this;
         }

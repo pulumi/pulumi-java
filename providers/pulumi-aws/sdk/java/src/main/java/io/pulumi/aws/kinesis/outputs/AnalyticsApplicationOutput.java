@@ -48,14 +48,14 @@ public final class AnalyticsApplicationOutput {
      */
     private final AnalyticsApplicationOutputSchema schema;
 
-    @OutputCustomType.Constructor({"id","kinesisFirehose","kinesisStream","lambda","name","schema"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationOutput(
-        @Nullable String id,
-        @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
-        @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
-        @Nullable AnalyticsApplicationOutputLambda lambda,
-        String name,
-        AnalyticsApplicationOutputSchema schema) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose,
+        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationOutputKinesisStream kinesisStream,
+        @OutputCustomType.Parameter("lambda") @Nullable AnalyticsApplicationOutputLambda lambda,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationOutputSchema schema) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
@@ -139,32 +139,32 @@ public final class AnalyticsApplicationOutput {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable AnalyticsApplicationOutputKinesisFirehose kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable AnalyticsApplicationOutputKinesisStream kinesisStream) {
+        public Builder kinesisStream(@Nullable AnalyticsApplicationOutputKinesisStream kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
-        public Builder setLambda(@Nullable AnalyticsApplicationOutputLambda lambda) {
+        public Builder lambda(@Nullable AnalyticsApplicationOutputLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationOutputSchema schema) {
+        public Builder schema(AnalyticsApplicationOutputSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }

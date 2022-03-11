@@ -24,10 +24,10 @@ public final class RegionalAvailabilityResponse {
      */
     private final @Nullable List<SizeAvailabilityResponse> sizeAvailabilities;
 
-    @OutputCustomType.Constructor({"region","sizeAvailabilities"})
+    @OutputCustomType.Constructor
     private RegionalAvailabilityResponse(
-        @Nullable String region,
-        @Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("sizeAvailabilities") @Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
         this.region = region;
         this.sizeAvailabilities = sizeAvailabilities;
     }
@@ -69,12 +69,12 @@ public final class RegionalAvailabilityResponse {
     	      this.sizeAvailabilities = defaults.sizeAvailabilities;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSizeAvailabilities(@Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
+        public Builder sizeAvailabilities(@Nullable List<SizeAvailabilityResponse> sizeAvailabilities) {
             this.sizeAvailabilities = sizeAvailabilities;
             return this;
         }

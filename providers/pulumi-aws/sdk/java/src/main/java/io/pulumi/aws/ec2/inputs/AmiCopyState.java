@@ -492,302 +492,302 @@ public final class AmiCopyState extends io.pulumi.resources.ResourceArgs {
     	      this.virtualizationType = defaults.virtualizationType;
         }
 
-        public Builder setArchitecture(@Nullable Input<String> architecture) {
+        public Builder architecture(@Nullable Input<String> architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setArchitecture(@Nullable String architecture) {
+        public Builder architecture(@Nullable String architecture) {
             this.architecture = Input.ofNullable(architecture);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationOutpostArn(@Nullable Input<String> destinationOutpostArn) {
+        public Builder destinationOutpostArn(@Nullable Input<String> destinationOutpostArn) {
             this.destinationOutpostArn = destinationOutpostArn;
             return this;
         }
 
-        public Builder setDestinationOutpostArn(@Nullable String destinationOutpostArn) {
+        public Builder destinationOutpostArn(@Nullable String destinationOutpostArn) {
             this.destinationOutpostArn = Input.ofNullable(destinationOutpostArn);
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable Input<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable Input<List<AmiCopyEbsBlockDeviceGetArgs>> ebsBlockDevices) {
             this.ebsBlockDevices = ebsBlockDevices;
             return this;
         }
 
-        public Builder setEbsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceGetArgs> ebsBlockDevices) {
+        public Builder ebsBlockDevices(@Nullable List<AmiCopyEbsBlockDeviceGetArgs> ebsBlockDevices) {
             this.ebsBlockDevices = Input.ofNullable(ebsBlockDevices);
             return this;
         }
 
-        public Builder setEnaSupport(@Nullable Input<Boolean> enaSupport) {
+        public Builder enaSupport(@Nullable Input<Boolean> enaSupport) {
             this.enaSupport = enaSupport;
             return this;
         }
 
-        public Builder setEnaSupport(@Nullable Boolean enaSupport) {
+        public Builder enaSupport(@Nullable Boolean enaSupport) {
             this.enaSupport = Input.ofNullable(enaSupport);
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Input<Boolean> encrypted) {
+        public Builder encrypted(@Nullable Input<Boolean> encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = Input.ofNullable(encrypted);
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable Input<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable Input<List<AmiCopyEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = ephemeralBlockDevices;
             return this;
         }
 
-        public Builder setEphemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
+        public Builder ephemeralBlockDevices(@Nullable List<AmiCopyEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
             this.ephemeralBlockDevices = Input.ofNullable(ephemeralBlockDevices);
             return this;
         }
 
-        public Builder setHypervisor(@Nullable Input<String> hypervisor) {
+        public Builder hypervisor(@Nullable Input<String> hypervisor) {
             this.hypervisor = hypervisor;
             return this;
         }
 
-        public Builder setHypervisor(@Nullable String hypervisor) {
+        public Builder hypervisor(@Nullable String hypervisor) {
             this.hypervisor = Input.ofNullable(hypervisor);
             return this;
         }
 
-        public Builder setImageLocation(@Nullable Input<String> imageLocation) {
+        public Builder imageLocation(@Nullable Input<String> imageLocation) {
             this.imageLocation = imageLocation;
             return this;
         }
 
-        public Builder setImageLocation(@Nullable String imageLocation) {
+        public Builder imageLocation(@Nullable String imageLocation) {
             this.imageLocation = Input.ofNullable(imageLocation);
             return this;
         }
 
-        public Builder setImageOwnerAlias(@Nullable Input<String> imageOwnerAlias) {
+        public Builder imageOwnerAlias(@Nullable Input<String> imageOwnerAlias) {
             this.imageOwnerAlias = imageOwnerAlias;
             return this;
         }
 
-        public Builder setImageOwnerAlias(@Nullable String imageOwnerAlias) {
+        public Builder imageOwnerAlias(@Nullable String imageOwnerAlias) {
             this.imageOwnerAlias = Input.ofNullable(imageOwnerAlias);
             return this;
         }
 
-        public Builder setImageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Input<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = Input.ofNullable(imageType);
             return this;
         }
 
-        public Builder setKernelId(@Nullable Input<String> kernelId) {
+        public Builder kernelId(@Nullable Input<String> kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = Input.ofNullable(kernelId);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setManageEbsSnapshots(@Nullable Input<Boolean> manageEbsSnapshots) {
+        public Builder manageEbsSnapshots(@Nullable Input<Boolean> manageEbsSnapshots) {
             this.manageEbsSnapshots = manageEbsSnapshots;
             return this;
         }
 
-        public Builder setManageEbsSnapshots(@Nullable Boolean manageEbsSnapshots) {
+        public Builder manageEbsSnapshots(@Nullable Boolean manageEbsSnapshots) {
             this.manageEbsSnapshots = Input.ofNullable(manageEbsSnapshots);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<String> platform) {
+        public Builder platform(@Nullable Input<String> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }
 
-        public Builder setPlatformDetails(@Nullable Input<String> platformDetails) {
+        public Builder platformDetails(@Nullable Input<String> platformDetails) {
             this.platformDetails = platformDetails;
             return this;
         }
 
-        public Builder setPlatformDetails(@Nullable String platformDetails) {
+        public Builder platformDetails(@Nullable String platformDetails) {
             this.platformDetails = Input.ofNullable(platformDetails);
             return this;
         }
 
-        public Builder set$public(@Nullable Input<Boolean> $public) {
+        public Builder $public(@Nullable Input<Boolean> $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = Input.ofNullable($public);
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable Input<String> ramdiskId) {
+        public Builder ramdiskId(@Nullable Input<String> ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable String ramdiskId) {
+        public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = Input.ofNullable(ramdiskId);
             return this;
         }
 
-        public Builder setRootDeviceName(@Nullable Input<String> rootDeviceName) {
+        public Builder rootDeviceName(@Nullable Input<String> rootDeviceName) {
             this.rootDeviceName = rootDeviceName;
             return this;
         }
 
-        public Builder setRootDeviceName(@Nullable String rootDeviceName) {
+        public Builder rootDeviceName(@Nullable String rootDeviceName) {
             this.rootDeviceName = Input.ofNullable(rootDeviceName);
             return this;
         }
 
-        public Builder setRootSnapshotId(@Nullable Input<String> rootSnapshotId) {
+        public Builder rootSnapshotId(@Nullable Input<String> rootSnapshotId) {
             this.rootSnapshotId = rootSnapshotId;
             return this;
         }
 
-        public Builder setRootSnapshotId(@Nullable String rootSnapshotId) {
+        public Builder rootSnapshotId(@Nullable String rootSnapshotId) {
             this.rootSnapshotId = Input.ofNullable(rootSnapshotId);
             return this;
         }
 
-        public Builder setSourceAmiId(@Nullable Input<String> sourceAmiId) {
+        public Builder sourceAmiId(@Nullable Input<String> sourceAmiId) {
             this.sourceAmiId = sourceAmiId;
             return this;
         }
 
-        public Builder setSourceAmiId(@Nullable String sourceAmiId) {
+        public Builder sourceAmiId(@Nullable String sourceAmiId) {
             this.sourceAmiId = Input.ofNullable(sourceAmiId);
             return this;
         }
 
-        public Builder setSourceAmiRegion(@Nullable Input<String> sourceAmiRegion) {
+        public Builder sourceAmiRegion(@Nullable Input<String> sourceAmiRegion) {
             this.sourceAmiRegion = sourceAmiRegion;
             return this;
         }
 
-        public Builder setSourceAmiRegion(@Nullable String sourceAmiRegion) {
+        public Builder sourceAmiRegion(@Nullable String sourceAmiRegion) {
             this.sourceAmiRegion = Input.ofNullable(sourceAmiRegion);
             return this;
         }
 
-        public Builder setSriovNetSupport(@Nullable Input<String> sriovNetSupport) {
+        public Builder sriovNetSupport(@Nullable Input<String> sriovNetSupport) {
             this.sriovNetSupport = sriovNetSupport;
             return this;
         }
 
-        public Builder setSriovNetSupport(@Nullable String sriovNetSupport) {
+        public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
             this.sriovNetSupport = Input.ofNullable(sriovNetSupport);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUsageOperation(@Nullable Input<String> usageOperation) {
+        public Builder usageOperation(@Nullable Input<String> usageOperation) {
             this.usageOperation = usageOperation;
             return this;
         }
 
-        public Builder setUsageOperation(@Nullable String usageOperation) {
+        public Builder usageOperation(@Nullable String usageOperation) {
             this.usageOperation = Input.ofNullable(usageOperation);
             return this;
         }
 
-        public Builder setVirtualizationType(@Nullable Input<String> virtualizationType) {
+        public Builder virtualizationType(@Nullable Input<String> virtualizationType) {
             this.virtualizationType = virtualizationType;
             return this;
         }
 
-        public Builder setVirtualizationType(@Nullable String virtualizationType) {
+        public Builder virtualizationType(@Nullable String virtualizationType) {
             this.virtualizationType = Input.ofNullable(virtualizationType);
             return this;
         }

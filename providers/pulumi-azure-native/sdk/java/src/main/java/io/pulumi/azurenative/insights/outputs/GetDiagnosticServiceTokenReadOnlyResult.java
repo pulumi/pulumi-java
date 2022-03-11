@@ -17,8 +17,8 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"token"})
-    private GetDiagnosticServiceTokenReadOnlyResult(@Nullable String token) {
+    @OutputCustomType.Constructor
+    private GetDiagnosticServiceTokenReadOnlyResult(@OutputCustomType.Parameter("token") @Nullable String token) {
         this.token = token;
     }
 
@@ -50,7 +50,7 @@ public final class GetDiagnosticServiceTokenReadOnlyResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

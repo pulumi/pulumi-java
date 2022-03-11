@@ -13,10 +13,10 @@ public final class CertificateAuthorityAccessDescription {
     private final CertificateAuthorityGeneralName accessLocation;
     private final CertificateAuthorityAccessMethod accessMethod;
 
-    @OutputCustomType.Constructor({"accessLocation","accessMethod"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityAccessDescription(
-        CertificateAuthorityGeneralName accessLocation,
-        CertificateAuthorityAccessMethod accessMethod) {
+        @OutputCustomType.Parameter("accessLocation") CertificateAuthorityGeneralName accessLocation,
+        @OutputCustomType.Parameter("accessMethod") CertificateAuthorityAccessMethod accessMethod) {
         this.accessLocation = accessLocation;
         this.accessMethod = accessMethod;
     }
@@ -50,12 +50,12 @@ public final class CertificateAuthorityAccessDescription {
     	      this.accessMethod = defaults.accessMethod;
         }
 
-        public Builder setAccessLocation(CertificateAuthorityGeneralName accessLocation) {
+        public Builder accessLocation(CertificateAuthorityGeneralName accessLocation) {
             this.accessLocation = Objects.requireNonNull(accessLocation);
             return this;
         }
 
-        public Builder setAccessMethod(CertificateAuthorityAccessMethod accessMethod) {
+        public Builder accessMethod(CertificateAuthorityAccessMethod accessMethod) {
             this.accessMethod = Objects.requireNonNull(accessMethod);
             return this;
         }

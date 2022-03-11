@@ -56,13 +56,13 @@ public final class QueueRetryConfig {
      */
     private final @Nullable String minBackoff;
 
-    @OutputCustomType.Constructor({"maxAttempts","maxBackoff","maxDoublings","maxRetryDuration","minBackoff"})
+    @OutputCustomType.Constructor
     private QueueRetryConfig(
-        @Nullable Integer maxAttempts,
-        @Nullable String maxBackoff,
-        @Nullable Integer maxDoublings,
-        @Nullable String maxRetryDuration,
-        @Nullable String minBackoff) {
+        @OutputCustomType.Parameter("maxAttempts") @Nullable Integer maxAttempts,
+        @OutputCustomType.Parameter("maxBackoff") @Nullable String maxBackoff,
+        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoff") @Nullable String minBackoff) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;
@@ -152,27 +152,27 @@ public final class QueueRetryConfig {
     	      this.minBackoff = defaults.minBackoff;
         }
 
-        public Builder setMaxAttempts(@Nullable Integer maxAttempts) {
+        public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
-        public Builder setMaxBackoff(@Nullable String maxBackoff) {
+        public Builder maxBackoff(@Nullable String maxBackoff) {
             this.maxBackoff = maxBackoff;
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Integer maxDoublings) {
+        public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable String maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
 
-        public Builder setMinBackoff(@Nullable String minBackoff) {
+        public Builder minBackoff(@Nullable String minBackoff) {
             this.minBackoff = minBackoff;
             return this;
         }

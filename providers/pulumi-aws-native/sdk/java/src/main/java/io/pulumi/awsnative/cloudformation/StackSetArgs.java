@@ -284,152 +284,152 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateURL = defaults.templateURL;
         }
 
-        public Builder setAdministrationRoleARN(@Nullable Input<String> administrationRoleARN) {
+        public Builder administrationRoleARN(@Nullable Input<String> administrationRoleARN) {
             this.administrationRoleARN = administrationRoleARN;
             return this;
         }
 
-        public Builder setAdministrationRoleARN(@Nullable String administrationRoleARN) {
+        public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
             this.administrationRoleARN = Input.ofNullable(administrationRoleARN);
             return this;
         }
 
-        public Builder setAutoDeployment(@Nullable Input<StackSetAutoDeploymentArgs> autoDeployment) {
+        public Builder autoDeployment(@Nullable Input<StackSetAutoDeploymentArgs> autoDeployment) {
             this.autoDeployment = autoDeployment;
             return this;
         }
 
-        public Builder setAutoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
+        public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
             this.autoDeployment = Input.ofNullable(autoDeployment);
             return this;
         }
 
-        public Builder setCallAs(@Nullable Input<StackSetCallAs> callAs) {
+        public Builder callAs(@Nullable Input<StackSetCallAs> callAs) {
             this.callAs = callAs;
             return this;
         }
 
-        public Builder setCallAs(@Nullable StackSetCallAs callAs) {
+        public Builder callAs(@Nullable StackSetCallAs callAs) {
             this.callAs = Input.ofNullable(callAs);
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Input<List<StackSetCapability>> capabilities) {
+        public Builder capabilities(@Nullable Input<List<StackSetCapability>> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<StackSetCapability> capabilities) {
+        public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExecutionRoleName(@Nullable Input<String> executionRoleName) {
+        public Builder executionRoleName(@Nullable Input<String> executionRoleName) {
             this.executionRoleName = executionRoleName;
             return this;
         }
 
-        public Builder setExecutionRoleName(@Nullable String executionRoleName) {
+        public Builder executionRoleName(@Nullable String executionRoleName) {
             this.executionRoleName = Input.ofNullable(executionRoleName);
             return this;
         }
 
-        public Builder setManagedExecution(@Nullable Input<ManagedExecutionPropertiesArgs> managedExecution) {
+        public Builder managedExecution(@Nullable Input<ManagedExecutionPropertiesArgs> managedExecution) {
             this.managedExecution = managedExecution;
             return this;
         }
 
-        public Builder setManagedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
+        public Builder managedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
             this.managedExecution = Input.ofNullable(managedExecution);
             return this;
         }
 
-        public Builder setOperationPreferences(@Nullable Input<StackSetOperationPreferencesArgs> operationPreferences) {
+        public Builder operationPreferences(@Nullable Input<StackSetOperationPreferencesArgs> operationPreferences) {
             this.operationPreferences = operationPreferences;
             return this;
         }
 
-        public Builder setOperationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
+        public Builder operationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
             this.operationPreferences = Input.ofNullable(operationPreferences);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<StackSetParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<StackSetParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<StackSetParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<StackSetParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissionModel(Input<StackSetPermissionModel> permissionModel) {
+        public Builder permissionModel(Input<StackSetPermissionModel> permissionModel) {
             this.permissionModel = Objects.requireNonNull(permissionModel);
             return this;
         }
 
-        public Builder setPermissionModel(StackSetPermissionModel permissionModel) {
+        public Builder permissionModel(StackSetPermissionModel permissionModel) {
             this.permissionModel = Input.of(Objects.requireNonNull(permissionModel));
             return this;
         }
 
-        public Builder setStackInstancesGroup(@Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
+        public Builder stackInstancesGroup(@Nullable Input<List<StackSetStackInstancesArgs>> stackInstancesGroup) {
             this.stackInstancesGroup = stackInstancesGroup;
             return this;
         }
 
-        public Builder setStackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
+        public Builder stackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
             this.stackInstancesGroup = Input.ofNullable(stackInstancesGroup);
             return this;
         }
 
-        public Builder setStackSetName(@Nullable Input<String> stackSetName) {
+        public Builder stackSetName(@Nullable Input<String> stackSetName) {
             this.stackSetName = stackSetName;
             return this;
         }
 
-        public Builder setStackSetName(@Nullable String stackSetName) {
+        public Builder stackSetName(@Nullable String stackSetName) {
             this.stackSetName = Input.ofNullable(stackSetName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StackSetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StackSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StackSetTagArgs> tags) {
+        public Builder tags(@Nullable List<StackSetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Input<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Input.ofNullable(templateBody);
             return this;
         }
 
-        public Builder setTemplateURL(@Nullable Input<String> templateURL) {
+        public Builder templateURL(@Nullable Input<String> templateURL) {
             this.templateURL = templateURL;
             return this;
         }
 
-        public Builder setTemplateURL(@Nullable String templateURL) {
+        public Builder templateURL(@Nullable String templateURL) {
             this.templateURL = Input.ofNullable(templateURL);
             return this;
         }

@@ -17,8 +17,8 @@ public final class NodeGroupResourceAutoscalingGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private NodeGroupResourceAutoscalingGroup(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private NodeGroupResourceAutoscalingGroup(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 
@@ -50,7 +50,7 @@ public final class NodeGroupResourceAutoscalingGroup {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

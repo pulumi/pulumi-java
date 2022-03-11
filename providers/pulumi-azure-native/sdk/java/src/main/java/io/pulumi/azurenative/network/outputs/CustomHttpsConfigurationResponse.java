@@ -48,15 +48,15 @@ public final class CustomHttpsConfigurationResponse {
      */
     private final @Nullable KeyVaultCertificateSourceParametersResponseVault vault;
 
-    @OutputCustomType.Constructor({"certificateSource","certificateType","minimumTlsVersion","protocolType","secretName","secretVersion","vault"})
+    @OutputCustomType.Constructor
     private CustomHttpsConfigurationResponse(
-        String certificateSource,
-        @Nullable String certificateType,
-        String minimumTlsVersion,
-        String protocolType,
-        @Nullable String secretName,
-        @Nullable String secretVersion,
-        @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("certificateType") @Nullable String certificateType,
+        @OutputCustomType.Parameter("minimumTlsVersion") String minimumTlsVersion,
+        @OutputCustomType.Parameter("protocolType") String protocolType,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("vault") @Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
         this.certificateSource = certificateSource;
         this.certificateType = certificateType;
         this.minimumTlsVersion = minimumTlsVersion;
@@ -148,37 +148,37 @@ public final class CustomHttpsConfigurationResponse {
     	      this.vault = defaults.vault;
         }
 
-        public Builder setCertificateSource(String certificateSource) {
+        public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
 
-        public Builder setCertificateType(@Nullable String certificateType) {
+        public Builder certificateType(@Nullable String certificateType) {
             this.certificateType = certificateType;
             return this;
         }
 
-        public Builder setMinimumTlsVersion(String minimumTlsVersion) {
+        public Builder minimumTlsVersion(String minimumTlsVersion) {
             this.minimumTlsVersion = Objects.requireNonNull(minimumTlsVersion);
             return this;
         }
 
-        public Builder setProtocolType(String protocolType) {
+        public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setVault(@Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
+        public Builder vault(@Nullable KeyVaultCertificateSourceParametersResponseVault vault) {
             this.vault = vault;
             return this;
         }

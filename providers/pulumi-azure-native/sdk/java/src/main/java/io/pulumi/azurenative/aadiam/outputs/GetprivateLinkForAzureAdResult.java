@@ -65,18 +65,18 @@ public final class GetprivateLinkForAzureAdResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allTenants","id","name","ownerTenantId","resourceGroup","resourceName","subscriptionId","tags","tenants","type"})
+    @OutputCustomType.Constructor
     private GetprivateLinkForAzureAdResult(
-        @Nullable Boolean allTenants,
-        String id,
-        @Nullable String name,
-        @Nullable String ownerTenantId,
-        @Nullable String resourceGroup,
-        @Nullable String resourceName,
-        @Nullable String subscriptionId,
-        @Nullable Map<String,String> tags,
-        @Nullable List<String> tenants,
-        String type) {
+        @OutputCustomType.Parameter("allTenants") @Nullable Boolean allTenants,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ownerTenantId") @Nullable String ownerTenantId,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenants") @Nullable List<String> tenants,
+        @OutputCustomType.Parameter("type") String type) {
         this.allTenants = allTenants;
         this.id = id;
         this.name = name;
@@ -198,52 +198,52 @@ public final class GetprivateLinkForAzureAdResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllTenants(@Nullable Boolean allTenants) {
+        public Builder allTenants(@Nullable Boolean allTenants) {
             this.allTenants = allTenants;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwnerTenantId(@Nullable String ownerTenantId) {
+        public Builder ownerTenantId(@Nullable String ownerTenantId) {
             this.ownerTenantId = ownerTenantId;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenants(@Nullable List<String> tenants) {
+        public Builder tenants(@Nullable List<String> tenants) {
             this.tenants = tenants;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -28,11 +28,11 @@ public final class ServiceEndpointPropertiesFormatResponse {
      */
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor({"locations","provisioningState","service"})
+    @OutputCustomType.Constructor
     private ServiceEndpointPropertiesFormatResponse(
-        @Nullable List<String> locations,
-        String provisioningState,
-        @Nullable String service) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("service") @Nullable String service) {
         this.locations = locations;
         this.provisioningState = provisioningState;
         this.service = service;
@@ -84,17 +84,17 @@ public final class ServiceEndpointPropertiesFormatResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }

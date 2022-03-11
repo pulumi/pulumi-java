@@ -105,42 +105,42 @@ public final class RouteSpecGrpcRouteArgs extends io.pulumi.resources.ResourceAr
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAction(Input<RouteSpecGrpcRouteActionArgs> action) {
+        public Builder action(Input<RouteSpecGrpcRouteActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(RouteSpecGrpcRouteActionArgs action) {
+        public Builder action(RouteSpecGrpcRouteActionArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setMatch(@Nullable Input<RouteSpecGrpcRouteMatchArgs> match) {
+        public Builder match(@Nullable Input<RouteSpecGrpcRouteMatchArgs> match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMatch(@Nullable RouteSpecGrpcRouteMatchArgs match) {
+        public Builder match(@Nullable RouteSpecGrpcRouteMatchArgs match) {
             this.match = Input.ofNullable(match);
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable Input<RouteSpecGrpcRouteRetryPolicyArgs> retryPolicy) {
+        public Builder retryPolicy(@Nullable Input<RouteSpecGrpcRouteRetryPolicyArgs> retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RouteSpecGrpcRouteRetryPolicyArgs retryPolicy) {
+        public Builder retryPolicy(@Nullable RouteSpecGrpcRouteRetryPolicyArgs retryPolicy) {
             this.retryPolicy = Input.ofNullable(retryPolicy);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<RouteSpecGrpcRouteTimeoutArgs> timeout) {
+        public Builder timeout(@Nullable Input<RouteSpecGrpcRouteTimeoutArgs> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable RouteSpecGrpcRouteTimeoutArgs timeout) {
+        public Builder timeout(@Nullable RouteSpecGrpcRouteTimeoutArgs timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }

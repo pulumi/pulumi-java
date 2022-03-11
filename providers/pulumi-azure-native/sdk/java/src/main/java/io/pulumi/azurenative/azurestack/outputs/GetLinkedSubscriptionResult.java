@@ -89,23 +89,23 @@ public final class GetLinkedSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceConnectionStatus","deviceId","deviceLinkState","deviceObjectId","etag","id","kind","lastConnectedTime","linkedSubscriptionId","location","name","registrationResourceId","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetLinkedSubscriptionResult(
-        String deviceConnectionStatus,
-        String deviceId,
-        String deviceLinkState,
-        String deviceObjectId,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastConnectedTime,
-        @Nullable String linkedSubscriptionId,
-        String location,
-        String name,
-        @Nullable String registrationResourceId,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deviceConnectionStatus") String deviceConnectionStatus,
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("deviceLinkState") String deviceLinkState,
+        @OutputCustomType.Parameter("deviceObjectId") String deviceObjectId,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastConnectedTime") String lastConnectedTime,
+        @OutputCustomType.Parameter("linkedSubscriptionId") @Nullable String linkedSubscriptionId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registrationResourceId") @Nullable String registrationResourceId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceConnectionStatus = deviceConnectionStatus;
         this.deviceId = deviceId;
         this.deviceLinkState = deviceLinkState;
@@ -277,77 +277,77 @@ public final class GetLinkedSubscriptionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeviceConnectionStatus(String deviceConnectionStatus) {
+        public Builder deviceConnectionStatus(String deviceConnectionStatus) {
             this.deviceConnectionStatus = Objects.requireNonNull(deviceConnectionStatus);
             return this;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setDeviceLinkState(String deviceLinkState) {
+        public Builder deviceLinkState(String deviceLinkState) {
             this.deviceLinkState = Objects.requireNonNull(deviceLinkState);
             return this;
         }
 
-        public Builder setDeviceObjectId(String deviceObjectId) {
+        public Builder deviceObjectId(String deviceObjectId) {
             this.deviceObjectId = Objects.requireNonNull(deviceObjectId);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastConnectedTime(String lastConnectedTime) {
+        public Builder lastConnectedTime(String lastConnectedTime) {
             this.lastConnectedTime = Objects.requireNonNull(lastConnectedTime);
             return this;
         }
 
-        public Builder setLinkedSubscriptionId(@Nullable String linkedSubscriptionId) {
+        public Builder linkedSubscriptionId(@Nullable String linkedSubscriptionId) {
             this.linkedSubscriptionId = linkedSubscriptionId;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegistrationResourceId(@Nullable String registrationResourceId) {
+        public Builder registrationResourceId(@Nullable String registrationResourceId) {
             this.registrationResourceId = registrationResourceId;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

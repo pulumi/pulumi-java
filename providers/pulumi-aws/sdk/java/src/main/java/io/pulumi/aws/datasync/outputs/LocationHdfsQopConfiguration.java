@@ -22,10 +22,10 @@ public final class LocationHdfsQopConfiguration {
      */
     private final @Nullable String rpcProtection;
 
-    @OutputCustomType.Constructor({"dataTransferProtection","rpcProtection"})
+    @OutputCustomType.Constructor
     private LocationHdfsQopConfiguration(
-        @Nullable String dataTransferProtection,
-        @Nullable String rpcProtection) {
+        @OutputCustomType.Parameter("dataTransferProtection") @Nullable String dataTransferProtection,
+        @OutputCustomType.Parameter("rpcProtection") @Nullable String rpcProtection) {
         this.dataTransferProtection = dataTransferProtection;
         this.rpcProtection = rpcProtection;
     }
@@ -67,12 +67,12 @@ public final class LocationHdfsQopConfiguration {
     	      this.rpcProtection = defaults.rpcProtection;
         }
 
-        public Builder setDataTransferProtection(@Nullable String dataTransferProtection) {
+        public Builder dataTransferProtection(@Nullable String dataTransferProtection) {
             this.dataTransferProtection = dataTransferProtection;
             return this;
         }
 
-        public Builder setRpcProtection(@Nullable String rpcProtection) {
+        public Builder rpcProtection(@Nullable String rpcProtection) {
             this.rpcProtection = rpcProtection;
             return this;
         }

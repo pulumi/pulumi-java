@@ -20,10 +20,10 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
      */
     private final String wafService;
 
-    @OutputCustomType.Constructor({"wafFeature","wafService"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1WafSettingsResponse(
-        String wafFeature,
-        String wafService) {
+        @OutputCustomType.Parameter("wafFeature") String wafFeature,
+        @OutputCustomType.Parameter("wafService") String wafService) {
         this.wafFeature = wafFeature;
         this.wafService = wafService;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudRecaptchaenterpriseV1WafSettingsResponse {
     	      this.wafService = defaults.wafService;
         }
 
-        public Builder setWafFeature(String wafFeature) {
+        public Builder wafFeature(String wafFeature) {
             this.wafFeature = Objects.requireNonNull(wafFeature);
             return this;
         }
 
-        public Builder setWafService(String wafService) {
+        public Builder wafService(String wafService) {
             this.wafService = Objects.requireNonNull(wafService);
             return this;
         }

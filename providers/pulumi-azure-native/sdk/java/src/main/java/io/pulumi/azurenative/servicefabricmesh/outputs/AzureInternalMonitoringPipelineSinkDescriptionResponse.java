@@ -54,16 +54,16 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"accountName","autoKeyConfigUrl","description","fluentdConfigUrl","kind","maConfigUrl","name","namespace"})
+    @OutputCustomType.Constructor
     private AzureInternalMonitoringPipelineSinkDescriptionResponse(
-        @Nullable String accountName,
-        @Nullable String autoKeyConfigUrl,
-        @Nullable String description,
-        @Nullable Object fluentdConfigUrl,
-        String kind,
-        @Nullable String maConfigUrl,
-        @Nullable String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("autoKeyConfigUrl") @Nullable String autoKeyConfigUrl,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fluentdConfigUrl") @Nullable Object fluentdConfigUrl,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("maConfigUrl") @Nullable String maConfigUrl,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.accountName = accountName;
         this.autoKeyConfigUrl = autoKeyConfigUrl;
         this.description = description;
@@ -166,42 +166,42 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAutoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
+        public Builder autoKeyConfigUrl(@Nullable String autoKeyConfigUrl) {
             this.autoKeyConfigUrl = autoKeyConfigUrl;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
+        public Builder fluentdConfigUrl(@Nullable Object fluentdConfigUrl) {
             this.fluentdConfigUrl = fluentdConfigUrl;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMaConfigUrl(@Nullable String maConfigUrl) {
+        public Builder maConfigUrl(@Nullable String maConfigUrl) {
             this.maConfigUrl = maConfigUrl;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

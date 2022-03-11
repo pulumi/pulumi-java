@@ -126,52 +126,52 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Input<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Input.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder setFrontendPort(Input<Integer> frontendPort) {
+        public Builder frontendPort(Input<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
-        public Builder setFrontendPort(Integer frontendPort) {
+        public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Input.of(Objects.requireNonNull(frontendPort));
             return this;
         }
 
-        public Builder setProbeProtocol(Input<Either<String,ProbeProtocol>> probeProtocol) {
+        public Builder probeProtocol(Input<Either<String,ProbeProtocol>> probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
 
-        public Builder setProbeProtocol(Either<String,ProbeProtocol> probeProtocol) {
+        public Builder probeProtocol(Either<String,ProbeProtocol> probeProtocol) {
             this.probeProtocol = Input.of(Objects.requireNonNull(probeProtocol));
             return this;
         }
 
-        public Builder setProbeRequestPath(@Nullable Input<String> probeRequestPath) {
+        public Builder probeRequestPath(@Nullable Input<String> probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
 
-        public Builder setProbeRequestPath(@Nullable String probeRequestPath) {
+        public Builder probeRequestPath(@Nullable String probeRequestPath) {
             this.probeRequestPath = Input.ofNullable(probeRequestPath);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,Protocol>> protocol) {
+        public Builder protocol(Input<Either<String,Protocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,Protocol> protocol) {
+        public Builder protocol(Either<String,Protocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

@@ -27,11 +27,11 @@ public final class BuildApprovalResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","result","state"})
+    @OutputCustomType.Constructor
     private BuildApprovalResponse(
-        ApprovalConfigResponse config,
-        ApprovalResultResponse result,
-        String state) {
+        @OutputCustomType.Parameter("config") ApprovalConfigResponse config,
+        @OutputCustomType.Parameter("result") ApprovalResultResponse result,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.result = result;
         this.state = state;
@@ -83,17 +83,17 @@ public final class BuildApprovalResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(ApprovalConfigResponse config) {
+        public Builder config(ApprovalConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setResult(ApprovalResultResponse result) {
+        public Builder result(ApprovalResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

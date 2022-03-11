@@ -75,22 +75,22 @@ public final class NetworkInterfaceDnsSettingsArgs extends io.pulumi.resources.R
     	      this.internalDnsNameLabel = defaults.internalDnsNameLabel;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setInternalDnsNameLabel(@Nullable Input<String> internalDnsNameLabel) {
+        public Builder internalDnsNameLabel(@Nullable Input<String> internalDnsNameLabel) {
             this.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
 
-        public Builder setInternalDnsNameLabel(@Nullable String internalDnsNameLabel) {
+        public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
             this.internalDnsNameLabel = Input.ofNullable(internalDnsNameLabel);
             return this;
         }

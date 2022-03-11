@@ -27,11 +27,11 @@ public final class RecordGeolocationRoutingPolicy {
      */
     private final @Nullable String subdivision;
 
-    @OutputCustomType.Constructor({"continent","country","subdivision"})
+    @OutputCustomType.Constructor
     private RecordGeolocationRoutingPolicy(
-        @Nullable String continent,
-        @Nullable String country,
-        @Nullable String subdivision) {
+        @OutputCustomType.Parameter("continent") @Nullable String continent,
+        @OutputCustomType.Parameter("country") @Nullable String country,
+        @OutputCustomType.Parameter("subdivision") @Nullable String subdivision) {
         this.continent = continent;
         this.country = country;
         this.subdivision = subdivision;
@@ -83,17 +83,17 @@ public final class RecordGeolocationRoutingPolicy {
     	      this.subdivision = defaults.subdivision;
         }
 
-        public Builder setContinent(@Nullable String continent) {
+        public Builder continent(@Nullable String continent) {
             this.continent = continent;
             return this;
         }
 
-        public Builder setCountry(@Nullable String country) {
+        public Builder country(@Nullable String country) {
             this.country = country;
             return this;
         }
 
-        public Builder setSubdivision(@Nullable String subdivision) {
+        public Builder subdivision(@Nullable String subdivision) {
             this.subdivision = subdivision;
             return this;
         }

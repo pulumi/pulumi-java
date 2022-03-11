@@ -20,10 +20,10 @@ public final class ApplianceNetworkConfigurationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"macAddress","name"})
+    @OutputCustomType.Constructor
     private ApplianceNetworkConfigurationResponse(
-        String macAddress,
-        String name) {
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("name") String name) {
         this.macAddress = macAddress;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class ApplianceNetworkConfigurationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setMacAddress(String macAddress) {
+        public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

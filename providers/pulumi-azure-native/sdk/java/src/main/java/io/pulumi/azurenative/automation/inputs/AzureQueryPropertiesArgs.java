@@ -92,32 +92,32 @@ public final class AzureQueryPropertiesArgs extends io.pulumi.resources.Resource
     	      this.tagSettings = defaults.tagSettings;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<List<String>> scope) {
+        public Builder scope(@Nullable Input<List<String>> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setTagSettings(@Nullable Input<TagSettingsPropertiesArgs> tagSettings) {
+        public Builder tagSettings(@Nullable Input<TagSettingsPropertiesArgs> tagSettings) {
             this.tagSettings = tagSettings;
             return this;
         }
 
-        public Builder setTagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
+        public Builder tagSettings(@Nullable TagSettingsPropertiesArgs tagSettings) {
             this.tagSettings = Input.ofNullable(tagSettings);
             return this;
         }

@@ -95,23 +95,23 @@ public final class SourceInstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor({"canIpForward","deletionProtection","description","disks","guestAccelerators","keyRevocationActionType","labels","machineType","metadata","minCpuPlatform","networkInterfaces","postKeyRevocationActionType","scheduling","serviceAccounts","tags"})
+    @OutputCustomType.Constructor
     private SourceInstancePropertiesResponse(
-        Boolean canIpForward,
-        Boolean deletionProtection,
-        String description,
-        List<SavedAttachedDiskResponse> disks,
-        List<AcceleratorConfigResponse> guestAccelerators,
-        String keyRevocationActionType,
-        Map<String,String> labels,
-        String machineType,
-        MetadataResponse metadata,
-        String minCpuPlatform,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        String postKeyRevocationActionType,
-        SchedulingResponse scheduling,
-        List<ServiceAccountResponse> serviceAccounts,
-        TagsResponse tags) {
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<SavedAttachedDiskResponse> disks,
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("keyRevocationActionType") String keyRevocationActionType,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("postKeyRevocationActionType") String postKeyRevocationActionType,
+        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @OutputCustomType.Parameter("tags") TagsResponse tags) {
         this.canIpForward = canIpForward;
         this.deletionProtection = deletionProtection;
         this.description = description;
@@ -283,77 +283,77 @@ public final class SourceInstancePropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setDeletionProtection(Boolean deletionProtection) {
+        public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisks(List<SavedAttachedDiskResponse> disks) {
+        public Builder disks(List<SavedAttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setGuestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
+        public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setKeyRevocationActionType(String keyRevocationActionType) {
+        public Builder keyRevocationActionType(String keyRevocationActionType) {
             this.keyRevocationActionType = Objects.requireNonNull(keyRevocationActionType);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setPostKeyRevocationActionType(String postKeyRevocationActionType) {
+        public Builder postKeyRevocationActionType(String postKeyRevocationActionType) {
             this.postKeyRevocationActionType = Objects.requireNonNull(postKeyRevocationActionType);
             return this;
         }
 
-        public Builder setScheduling(SchedulingResponse scheduling) {
+        public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setServiceAccounts(List<ServiceAccountResponse> serviceAccounts) {
+        public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
 
-        public Builder setTags(TagsResponse tags) {
+        public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

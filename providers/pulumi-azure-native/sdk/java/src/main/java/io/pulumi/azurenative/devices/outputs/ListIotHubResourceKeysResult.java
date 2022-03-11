@@ -23,10 +23,10 @@ public final class ListIotHubResourceKeysResult {
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListIotHubResourceKeysResult(
-        String nextLink,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class ListIotHubResourceKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
+        public Builder value(@Nullable List<SharedAccessSignatureAuthorizationRuleResponse> value) {
             this.value = value;
             return this;
         }

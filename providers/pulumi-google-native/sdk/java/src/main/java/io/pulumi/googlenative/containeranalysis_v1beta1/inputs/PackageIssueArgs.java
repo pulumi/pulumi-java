@@ -91,32 +91,32 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageType = defaults.packageType;
         }
 
-        public Builder setAffectedLocation(Input<VulnerabilityLocationArgs> affectedLocation) {
+        public Builder affectedLocation(Input<VulnerabilityLocationArgs> affectedLocation) {
             this.affectedLocation = Objects.requireNonNull(affectedLocation);
             return this;
         }
 
-        public Builder setAffectedLocation(VulnerabilityLocationArgs affectedLocation) {
+        public Builder affectedLocation(VulnerabilityLocationArgs affectedLocation) {
             this.affectedLocation = Input.of(Objects.requireNonNull(affectedLocation));
             return this;
         }
 
-        public Builder setFixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
+        public Builder fixedLocation(@Nullable Input<VulnerabilityLocationArgs> fixedLocation) {
             this.fixedLocation = fixedLocation;
             return this;
         }
 
-        public Builder setFixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
+        public Builder fixedLocation(@Nullable VulnerabilityLocationArgs fixedLocation) {
             this.fixedLocation = Input.ofNullable(fixedLocation);
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Input<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }

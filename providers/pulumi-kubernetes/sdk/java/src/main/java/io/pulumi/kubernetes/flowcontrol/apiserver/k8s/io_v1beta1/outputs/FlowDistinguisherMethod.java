@@ -15,8 +15,8 @@ public final class FlowDistinguisherMethod {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private FlowDistinguisherMethod(String type) {
+    @OutputCustomType.Constructor
+    private FlowDistinguisherMethod(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -48,7 +48,7 @@ public final class FlowDistinguisherMethod {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

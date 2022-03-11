@@ -22,10 +22,10 @@ public final class SourceResponse {
      */
     private final @Nullable String instanceID;
 
-    @OutputCustomType.Constructor({"addr","instanceID"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        @Nullable String addr,
-        @Nullable String instanceID) {
+        @OutputCustomType.Parameter("addr") @Nullable String addr,
+        @OutputCustomType.Parameter("instanceID") @Nullable String instanceID) {
         this.addr = addr;
         this.instanceID = instanceID;
     }
@@ -67,12 +67,12 @@ public final class SourceResponse {
     	      this.instanceID = defaults.instanceID;
         }
 
-        public Builder setAddr(@Nullable String addr) {
+        public Builder addr(@Nullable String addr) {
             this.addr = addr;
             return this;
         }
 
-        public Builder setInstanceID(@Nullable String instanceID) {
+        public Builder instanceID(@Nullable String instanceID) {
             this.instanceID = instanceID;
             return this;
         }

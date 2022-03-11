@@ -22,10 +22,10 @@ public final class DeliveryRulePostArgsConditionResponse {
      */
     private final PostArgsMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRulePostArgsConditionResponse(
-        String name,
-        PostArgsMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") PostArgsMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class DeliveryRulePostArgsConditionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(PostArgsMatchConditionParametersResponse parameters) {
+        public Builder parameters(PostArgsMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

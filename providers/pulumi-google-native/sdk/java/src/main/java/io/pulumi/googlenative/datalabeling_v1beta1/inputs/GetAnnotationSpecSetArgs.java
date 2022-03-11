@@ -62,12 +62,12 @@ public final class GetAnnotationSpecSetArgs extends io.pulumi.resources.InvokeAr
     	      this.project = defaults.project;
         }
 
-        public Builder setAnnotationSpecSetId(String annotationSpecSetId) {
+        public Builder annotationSpecSetId(String annotationSpecSetId) {
             this.annotationSpecSetId = Objects.requireNonNull(annotationSpecSetId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

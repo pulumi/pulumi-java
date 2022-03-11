@@ -90,23 +90,23 @@ public final class GetRosettaNetProcessConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activitySettings","changedTime","createdTime","description","id","initiatorRoleSettings","location","metadata","name","processCode","processName","processVersion","responderRoleSettings","tags","type"})
+    @OutputCustomType.Constructor
     private GetRosettaNetProcessConfigurationResult(
-        RosettaNetPipActivitySettingsResponse activitySettings,
-        String changedTime,
-        String createdTime,
-        @Nullable String description,
-        String id,
-        RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
-        @Nullable String location,
-        @Nullable Map<String,String> metadata,
-        String name,
-        String processCode,
-        String processName,
-        String processVersion,
-        RosettaNetPipRoleSettingsResponse responderRoleSettings,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("activitySettings") RosettaNetPipActivitySettingsResponse activitySettings,
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("initiatorRoleSettings") RosettaNetPipRoleSettingsResponse initiatorRoleSettings,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processCode") String processCode,
+        @OutputCustomType.Parameter("processName") String processName,
+        @OutputCustomType.Parameter("processVersion") String processVersion,
+        @OutputCustomType.Parameter("responderRoleSettings") RosettaNetPipRoleSettingsResponse responderRoleSettings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.activitySettings = activitySettings;
         this.changedTime = changedTime;
         this.createdTime = createdTime;
@@ -278,77 +278,77 @@ public final class GetRosettaNetProcessConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActivitySettings(RosettaNetPipActivitySettingsResponse activitySettings) {
+        public Builder activitySettings(RosettaNetPipActivitySettingsResponse activitySettings) {
             this.activitySettings = Objects.requireNonNull(activitySettings);
             return this;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInitiatorRoleSettings(RosettaNetPipRoleSettingsResponse initiatorRoleSettings) {
+        public Builder initiatorRoleSettings(RosettaNetPipRoleSettingsResponse initiatorRoleSettings) {
             this.initiatorRoleSettings = Objects.requireNonNull(initiatorRoleSettings);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProcessCode(String processCode) {
+        public Builder processCode(String processCode) {
             this.processCode = Objects.requireNonNull(processCode);
             return this;
         }
 
-        public Builder setProcessName(String processName) {
+        public Builder processName(String processName) {
             this.processName = Objects.requireNonNull(processName);
             return this;
         }
 
-        public Builder setProcessVersion(String processVersion) {
+        public Builder processVersion(String processVersion) {
             this.processVersion = Objects.requireNonNull(processVersion);
             return this;
         }
 
-        public Builder setResponderRoleSettings(RosettaNetPipRoleSettingsResponse responderRoleSettings) {
+        public Builder responderRoleSettings(RosettaNetPipRoleSettingsResponse responderRoleSettings) {
             this.responderRoleSettings = Objects.requireNonNull(responderRoleSettings);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

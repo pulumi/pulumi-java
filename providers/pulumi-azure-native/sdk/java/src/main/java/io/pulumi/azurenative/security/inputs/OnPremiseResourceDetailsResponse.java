@@ -121,27 +121,27 @@ public final class OnPremiseResourceDetailsResponse extends io.pulumi.resources.
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceComputerId(String sourceComputerId) {
+        public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
-        public Builder setVmuuid(String vmuuid) {
+        public Builder vmuuid(String vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

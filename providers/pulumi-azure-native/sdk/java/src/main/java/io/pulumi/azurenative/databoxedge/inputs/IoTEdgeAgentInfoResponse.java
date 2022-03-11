@@ -91,17 +91,17 @@ public final class IoTEdgeAgentInfoResponse extends io.pulumi.resources.InvokeAr
     	      this.tag = defaults.tag;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
+        public Builder imageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

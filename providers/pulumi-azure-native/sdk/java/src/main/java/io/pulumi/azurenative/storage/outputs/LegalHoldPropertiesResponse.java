@@ -23,10 +23,10 @@ public final class LegalHoldPropertiesResponse {
      */
     private final @Nullable List<TagPropertyResponse> tags;
 
-    @OutputCustomType.Constructor({"hasLegalHold","tags"})
+    @OutputCustomType.Constructor
     private LegalHoldPropertiesResponse(
-        Boolean hasLegalHold,
-        @Nullable List<TagPropertyResponse> tags) {
+        @OutputCustomType.Parameter("hasLegalHold") Boolean hasLegalHold,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagPropertyResponse> tags) {
         this.hasLegalHold = hasLegalHold;
         this.tags = tags;
     }
@@ -68,12 +68,12 @@ public final class LegalHoldPropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setHasLegalHold(Boolean hasLegalHold) {
+        public Builder hasLegalHold(Boolean hasLegalHold) {
             this.hasLegalHold = Objects.requireNonNull(hasLegalHold);
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagPropertyResponse> tags) {
+        public Builder tags(@Nullable List<TagPropertyResponse> tags) {
             this.tags = tags;
             return this;
         }

@@ -97,24 +97,24 @@ public final class SqlDWSinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor({"allowCopyCommand","allowPolyBase","copyCommandSettings","disableMetricsCollection","maxConcurrentConnections","polyBaseSettings","preCopyScript","sinkRetryCount","sinkRetryWait","sqlWriterUseTableLock","tableOption","type","upsertSettings","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SqlDWSinkResponse(
-        @Nullable Object allowCopyCommand,
-        @Nullable Object allowPolyBase,
-        @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable PolybaseSettingsResponse polyBaseSettings,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object sqlWriterUseTableLock,
-        @Nullable Object tableOption,
-        String type,
-        @Nullable SqlDWUpsertSettingsResponse upsertSettings,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
+        @OutputCustomType.Parameter("allowCopyCommand") @Nullable Object allowCopyCommand,
+        @OutputCustomType.Parameter("allowPolyBase") @Nullable Object allowPolyBase,
+        @OutputCustomType.Parameter("copyCommandSettings") @Nullable DWCopyCommandSettingsResponse copyCommandSettings,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("polyBaseSettings") @Nullable PolybaseSettingsResponse polyBaseSettings,
+        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlDWUpsertSettingsResponse upsertSettings,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.allowCopyCommand = allowCopyCommand;
         this.allowPolyBase = allowPolyBase;
         this.copyCommandSettings = copyCommandSettings;
@@ -297,82 +297,82 @@ public final class SqlDWSinkResponse {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setAllowCopyCommand(@Nullable Object allowCopyCommand) {
+        public Builder allowCopyCommand(@Nullable Object allowCopyCommand) {
             this.allowCopyCommand = allowCopyCommand;
             return this;
         }
 
-        public Builder setAllowPolyBase(@Nullable Object allowPolyBase) {
+        public Builder allowPolyBase(@Nullable Object allowPolyBase) {
             this.allowPolyBase = allowPolyBase;
             return this;
         }
 
-        public Builder setCopyCommandSettings(@Nullable DWCopyCommandSettingsResponse copyCommandSettings) {
+        public Builder copyCommandSettings(@Nullable DWCopyCommandSettingsResponse copyCommandSettings) {
             this.copyCommandSettings = copyCommandSettings;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPolyBaseSettings(@Nullable PolybaseSettingsResponse polyBaseSettings) {
+        public Builder polyBaseSettings(@Nullable PolybaseSettingsResponse polyBaseSettings) {
             this.polyBaseSettings = polyBaseSettings;
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Object preCopyScript) {
+        public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
-        public Builder setTableOption(@Nullable Object tableOption) {
+        public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable SqlDWUpsertSettingsResponse upsertSettings) {
+        public Builder upsertSettings(@Nullable SqlDWUpsertSettingsResponse upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }

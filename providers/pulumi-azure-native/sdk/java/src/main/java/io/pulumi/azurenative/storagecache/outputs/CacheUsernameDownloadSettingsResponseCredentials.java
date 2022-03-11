@@ -22,10 +22,10 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
      */
     private final @Nullable String bindPassword;
 
-    @OutputCustomType.Constructor({"bindDn","bindPassword"})
+    @OutputCustomType.Constructor
     private CacheUsernameDownloadSettingsResponseCredentials(
-        @Nullable String bindDn,
-        @Nullable String bindPassword) {
+        @OutputCustomType.Parameter("bindDn") @Nullable String bindDn,
+        @OutputCustomType.Parameter("bindPassword") @Nullable String bindPassword) {
         this.bindDn = bindDn;
         this.bindPassword = bindPassword;
     }
@@ -67,12 +67,12 @@ public final class CacheUsernameDownloadSettingsResponseCredentials {
     	      this.bindPassword = defaults.bindPassword;
         }
 
-        public Builder setBindDn(@Nullable String bindDn) {
+        public Builder bindDn(@Nullable String bindDn) {
             this.bindDn = bindDn;
             return this;
         }
 
-        public Builder setBindPassword(@Nullable String bindPassword) {
+        public Builder bindPassword(@Nullable String bindPassword) {
             this.bindPassword = bindPassword;
             return this;
         }

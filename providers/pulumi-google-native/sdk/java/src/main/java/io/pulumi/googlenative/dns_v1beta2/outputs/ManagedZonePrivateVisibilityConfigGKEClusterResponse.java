@@ -16,10 +16,10 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse {
     private final String gkeClusterName;
     private final String kind;
 
-    @OutputCustomType.Constructor({"gkeClusterName","kind"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigGKEClusterResponse(
-        String gkeClusterName,
-        String kind) {
+        @OutputCustomType.Parameter("gkeClusterName") String gkeClusterName,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.gkeClusterName = gkeClusterName;
         this.kind = kind;
     }
@@ -57,12 +57,12 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setGkeClusterName(String gkeClusterName) {
+        public Builder gkeClusterName(String gkeClusterName) {
             this.gkeClusterName = Objects.requireNonNull(gkeClusterName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

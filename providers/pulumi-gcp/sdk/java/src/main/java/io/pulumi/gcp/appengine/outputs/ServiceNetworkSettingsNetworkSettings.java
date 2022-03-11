@@ -19,8 +19,8 @@ public final class ServiceNetworkSettingsNetworkSettings {
      */
     private final @Nullable String ingressTrafficAllowed;
 
-    @OutputCustomType.Constructor({"ingressTrafficAllowed"})
-    private ServiceNetworkSettingsNetworkSettings(@Nullable String ingressTrafficAllowed) {
+    @OutputCustomType.Constructor
+    private ServiceNetworkSettingsNetworkSettings(@OutputCustomType.Parameter("ingressTrafficAllowed") @Nullable String ingressTrafficAllowed) {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
     }
 
@@ -54,7 +54,7 @@ public final class ServiceNetworkSettingsNetworkSettings {
     	      this.ingressTrafficAllowed = defaults.ingressTrafficAllowed;
         }
 
-        public Builder setIngressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
+        public Builder ingressTrafficAllowed(@Nullable String ingressTrafficAllowed) {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }

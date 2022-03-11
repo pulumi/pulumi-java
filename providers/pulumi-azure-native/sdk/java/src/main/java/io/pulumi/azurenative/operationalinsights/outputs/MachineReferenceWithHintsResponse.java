@@ -41,14 +41,14 @@ public final class MachineReferenceWithHintsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayNameHint","id","kind","name","osFamilyHint","type"})
+    @OutputCustomType.Constructor
     private MachineReferenceWithHintsResponse(
-        String displayNameHint,
-        String id,
-        String kind,
-        String name,
-        String osFamilyHint,
-        String type) {
+        @OutputCustomType.Parameter("displayNameHint") String displayNameHint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osFamilyHint") String osFamilyHint,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayNameHint = displayNameHint;
         this.id = id;
         this.kind = kind;
@@ -131,32 +131,32 @@ public final class MachineReferenceWithHintsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayNameHint(String displayNameHint) {
+        public Builder displayNameHint(String displayNameHint) {
             this.displayNameHint = Objects.requireNonNull(displayNameHint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsFamilyHint(String osFamilyHint) {
+        public Builder osFamilyHint(String osFamilyHint) {
             this.osFamilyHint = Objects.requireNonNull(osFamilyHint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

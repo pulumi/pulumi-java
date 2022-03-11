@@ -21,11 +21,11 @@ public final class GetTransferProjectServieAccountResult {
     private final String id;
     private final String project;
 
-    @OutputCustomType.Constructor({"email","id","project"})
+    @OutputCustomType.Constructor
     private GetTransferProjectServieAccountResult(
-        String email,
-        String id,
-        String project) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project) {
         this.email = email;
         this.id = id;
         this.project = project;
@@ -73,17 +73,17 @@ public final class GetTransferProjectServieAccountResult {
     	      this.project = defaults.project;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

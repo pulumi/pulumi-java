@@ -20,10 +20,10 @@ public final class GaugeViewResponse {
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor({"lowerBound","upperBound"})
+    @OutputCustomType.Constructor
     private GaugeViewResponse(
-        Double lowerBound,
-        Double upperBound) {
+        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
+        @OutputCustomType.Parameter("upperBound") Double upperBound) {
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
     }
@@ -65,12 +65,12 @@ public final class GaugeViewResponse {
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder setLowerBound(Double lowerBound) {
+        public Builder lowerBound(Double lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
 
-        public Builder setUpperBound(Double upperBound) {
+        public Builder upperBound(Double upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }

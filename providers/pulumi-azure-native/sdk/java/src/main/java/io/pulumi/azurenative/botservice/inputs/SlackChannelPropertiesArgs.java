@@ -139,62 +139,62 @@ public final class SlackChannelPropertiesArgs extends io.pulumi.resources.Resour
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Input<String> clientSecret) {
+        public Builder clientSecret(@Nullable Input<String> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = Input.ofNullable(clientSecret);
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setLandingPageUrl(@Nullable Input<String> landingPageUrl) {
+        public Builder landingPageUrl(@Nullable Input<String> landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
 
-        public Builder setLandingPageUrl(@Nullable String landingPageUrl) {
+        public Builder landingPageUrl(@Nullable String landingPageUrl) {
             this.landingPageUrl = Input.ofNullable(landingPageUrl);
             return this;
         }
 
-        public Builder setSigningSecret(@Nullable Input<String> signingSecret) {
+        public Builder signingSecret(@Nullable Input<String> signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
 
-        public Builder setSigningSecret(@Nullable String signingSecret) {
+        public Builder signingSecret(@Nullable String signingSecret) {
             this.signingSecret = Input.ofNullable(signingSecret);
             return this;
         }
 
-        public Builder setVerificationToken(@Nullable Input<String> verificationToken) {
+        public Builder verificationToken(@Nullable Input<String> verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }
 
-        public Builder setVerificationToken(@Nullable String verificationToken) {
+        public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = Input.ofNullable(verificationToken);
             return this;
         }

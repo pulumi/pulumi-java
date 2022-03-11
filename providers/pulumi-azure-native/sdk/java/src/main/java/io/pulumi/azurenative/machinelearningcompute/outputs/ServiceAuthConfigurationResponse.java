@@ -20,10 +20,10 @@ public final class ServiceAuthConfigurationResponse {
      */
     private final String secondaryAuthKeyHash;
 
-    @OutputCustomType.Constructor({"primaryAuthKeyHash","secondaryAuthKeyHash"})
+    @OutputCustomType.Constructor
     private ServiceAuthConfigurationResponse(
-        String primaryAuthKeyHash,
-        String secondaryAuthKeyHash) {
+        @OutputCustomType.Parameter("primaryAuthKeyHash") String primaryAuthKeyHash,
+        @OutputCustomType.Parameter("secondaryAuthKeyHash") String secondaryAuthKeyHash) {
         this.primaryAuthKeyHash = primaryAuthKeyHash;
         this.secondaryAuthKeyHash = secondaryAuthKeyHash;
     }
@@ -65,12 +65,12 @@ public final class ServiceAuthConfigurationResponse {
     	      this.secondaryAuthKeyHash = defaults.secondaryAuthKeyHash;
         }
 
-        public Builder setPrimaryAuthKeyHash(String primaryAuthKeyHash) {
+        public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
             this.primaryAuthKeyHash = Objects.requireNonNull(primaryAuthKeyHash);
             return this;
         }
 
-        public Builder setSecondaryAuthKeyHash(String secondaryAuthKeyHash) {
+        public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             this.secondaryAuthKeyHash = Objects.requireNonNull(secondaryAuthKeyHash);
             return this;
         }

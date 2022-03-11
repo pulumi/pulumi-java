@@ -20,15 +20,15 @@ public final class IndexJwtTokenTypeConfiguration {
     private final @Nullable String uRL;
     private final @Nullable String userNameAttributeField;
 
-    @OutputCustomType.Constructor({"claimRegex","groupAttributeField","issuer","keyLocation","secretManagerArn","uRL","userNameAttributeField"})
+    @OutputCustomType.Constructor
     private IndexJwtTokenTypeConfiguration(
-        @Nullable String claimRegex,
-        @Nullable String groupAttributeField,
-        @Nullable String issuer,
-        IndexKeyLocation keyLocation,
-        @Nullable String secretManagerArn,
-        @Nullable String uRL,
-        @Nullable String userNameAttributeField) {
+        @OutputCustomType.Parameter("claimRegex") @Nullable String claimRegex,
+        @OutputCustomType.Parameter("groupAttributeField") @Nullable String groupAttributeField,
+        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
+        @OutputCustomType.Parameter("keyLocation") IndexKeyLocation keyLocation,
+        @OutputCustomType.Parameter("secretManagerArn") @Nullable String secretManagerArn,
+        @OutputCustomType.Parameter("uRL") @Nullable String uRL,
+        @OutputCustomType.Parameter("userNameAttributeField") @Nullable String userNameAttributeField) {
         this.claimRegex = claimRegex;
         this.groupAttributeField = groupAttributeField;
         this.issuer = issuer;
@@ -92,37 +92,37 @@ public final class IndexJwtTokenTypeConfiguration {
     	      this.userNameAttributeField = defaults.userNameAttributeField;
         }
 
-        public Builder setClaimRegex(@Nullable String claimRegex) {
+        public Builder claimRegex(@Nullable String claimRegex) {
             this.claimRegex = claimRegex;
             return this;
         }
 
-        public Builder setGroupAttributeField(@Nullable String groupAttributeField) {
+        public Builder groupAttributeField(@Nullable String groupAttributeField) {
             this.groupAttributeField = groupAttributeField;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setKeyLocation(IndexKeyLocation keyLocation) {
+        public Builder keyLocation(IndexKeyLocation keyLocation) {
             this.keyLocation = Objects.requireNonNull(keyLocation);
             return this;
         }
 
-        public Builder setSecretManagerArn(@Nullable String secretManagerArn) {
+        public Builder secretManagerArn(@Nullable String secretManagerArn) {
             this.secretManagerArn = secretManagerArn;
             return this;
         }
 
-        public Builder setURL(@Nullable String uRL) {
+        public Builder uRL(@Nullable String uRL) {
             this.uRL = uRL;
             return this;
         }
 
-        public Builder setUserNameAttributeField(@Nullable String userNameAttributeField) {
+        public Builder userNameAttributeField(@Nullable String userNameAttributeField) {
             this.userNameAttributeField = userNameAttributeField;
             return this;
         }

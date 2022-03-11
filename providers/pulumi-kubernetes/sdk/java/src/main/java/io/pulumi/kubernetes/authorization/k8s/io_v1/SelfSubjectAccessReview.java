@@ -142,8 +142,8 @@ public class SelfSubjectAccessReview extends io.pulumi.resources.CustomResource 
     private static SelfSubjectAccessReviewArgs makeArgs(SelfSubjectAccessReviewArgs args) {
         var builder = args == null ? SelfSubjectAccessReviewArgs.builder() : SelfSubjectAccessReviewArgs.builder(args);
         return builder
-            .setApiVersion("authorization.k8s.io/v1")
-            .setKind("SelfSubjectAccessReview")
+            .apiVersion("authorization.k8s.io/v1")
+            .kind("SelfSubjectAccessReview")
             .build();
     }
 

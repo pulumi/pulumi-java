@@ -20,10 +20,10 @@ public final class X12AgreementContentResponse {
      */
     private final X12OneWayAgreementResponse sendAgreement;
 
-    @OutputCustomType.Constructor({"receiveAgreement","sendAgreement"})
+    @OutputCustomType.Constructor
     private X12AgreementContentResponse(
-        X12OneWayAgreementResponse receiveAgreement,
-        X12OneWayAgreementResponse sendAgreement) {
+        @OutputCustomType.Parameter("receiveAgreement") X12OneWayAgreementResponse receiveAgreement,
+        @OutputCustomType.Parameter("sendAgreement") X12OneWayAgreementResponse sendAgreement) {
         this.receiveAgreement = receiveAgreement;
         this.sendAgreement = sendAgreement;
     }
@@ -65,12 +65,12 @@ public final class X12AgreementContentResponse {
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder setReceiveAgreement(X12OneWayAgreementResponse receiveAgreement) {
+        public Builder receiveAgreement(X12OneWayAgreementResponse receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
-        public Builder setSendAgreement(X12OneWayAgreementResponse sendAgreement) {
+        public Builder sendAgreement(X12OneWayAgreementResponse sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }

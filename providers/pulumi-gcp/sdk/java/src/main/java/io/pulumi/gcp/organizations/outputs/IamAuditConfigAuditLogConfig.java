@@ -27,10 +27,10 @@ public final class IamAuditConfigAuditLogConfig {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"exemptedMembers","logType"})
+    @OutputCustomType.Constructor
     private IamAuditConfigAuditLogConfig(
-        @Nullable List<String> exemptedMembers,
-        String logType) {
+        @OutputCustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }
@@ -77,12 +77,12 @@ public final class IamAuditConfigAuditLogConfig {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(@Nullable List<String> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

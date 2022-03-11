@@ -20,10 +20,10 @@ public final class DatabaseEncryptionResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"keyName","state"})
+    @OutputCustomType.Constructor
     private DatabaseEncryptionResponse(
-        String keyName,
-        String state) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("state") String state) {
         this.keyName = keyName;
         this.state = state;
     }
@@ -65,12 +65,12 @@ public final class DatabaseEncryptionResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

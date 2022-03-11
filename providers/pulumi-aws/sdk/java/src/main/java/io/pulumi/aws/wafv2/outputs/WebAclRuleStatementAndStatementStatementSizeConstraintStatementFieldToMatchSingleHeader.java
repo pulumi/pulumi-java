@@ -15,8 +15,8 @@ public final class WebAclRuleStatementAndStatementStatementSizeConstraintStateme
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(String name) {
+    @OutputCustomType.Constructor
+    private WebAclRuleStatementAndStatementStatementSizeConstraintStatementFieldToMatchSingleHeader(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -48,7 +48,7 @@ public final class WebAclRuleStatementAndStatementStatementSizeConstraintStateme
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

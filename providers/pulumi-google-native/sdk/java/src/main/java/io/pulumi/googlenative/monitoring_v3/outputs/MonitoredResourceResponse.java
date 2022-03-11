@@ -21,10 +21,10 @@ public final class MonitoredResourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"labels","type"})
+    @OutputCustomType.Constructor
     private MonitoredResourceResponse(
-        Map<String,String> labels,
-        String type) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("type") String type) {
         this.labels = labels;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class MonitoredResourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

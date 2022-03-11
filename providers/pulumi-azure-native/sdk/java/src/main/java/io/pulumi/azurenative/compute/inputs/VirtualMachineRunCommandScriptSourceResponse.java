@@ -90,17 +90,17 @@ public final class VirtualMachineRunCommandScriptSourceResponse extends io.pulum
     	      this.scriptUri = defaults.scriptUri;
         }
 
-        public Builder setCommandId(@Nullable String commandId) {
+        public Builder commandId(@Nullable String commandId) {
             this.commandId = commandId;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }

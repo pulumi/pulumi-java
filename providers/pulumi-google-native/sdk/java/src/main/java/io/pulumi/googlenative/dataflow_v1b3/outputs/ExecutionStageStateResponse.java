@@ -25,11 +25,11 @@ public final class ExecutionStageStateResponse {
      */
     private final String executionStageState;
 
-    @OutputCustomType.Constructor({"currentStateTime","executionStageName","executionStageState"})
+    @OutputCustomType.Constructor
     private ExecutionStageStateResponse(
-        String currentStateTime,
-        String executionStageName,
-        String executionStageState) {
+        @OutputCustomType.Parameter("currentStateTime") String currentStateTime,
+        @OutputCustomType.Parameter("executionStageName") String executionStageName,
+        @OutputCustomType.Parameter("executionStageState") String executionStageState) {
         this.currentStateTime = currentStateTime;
         this.executionStageName = executionStageName;
         this.executionStageState = executionStageState;
@@ -81,17 +81,17 @@ public final class ExecutionStageStateResponse {
     	      this.executionStageState = defaults.executionStageState;
         }
 
-        public Builder setCurrentStateTime(String currentStateTime) {
+        public Builder currentStateTime(String currentStateTime) {
             this.currentStateTime = Objects.requireNonNull(currentStateTime);
             return this;
         }
 
-        public Builder setExecutionStageName(String executionStageName) {
+        public Builder executionStageName(String executionStageName) {
             this.executionStageName = Objects.requireNonNull(executionStageName);
             return this;
         }
 
-        public Builder setExecutionStageState(String executionStageState) {
+        public Builder executionStageState(String executionStageState) {
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
         }

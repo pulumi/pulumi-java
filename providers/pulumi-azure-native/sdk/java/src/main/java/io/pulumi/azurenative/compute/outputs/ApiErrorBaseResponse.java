@@ -27,11 +27,11 @@ public final class ApiErrorBaseResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","message","target"})
+    @OutputCustomType.Constructor
     private ApiErrorBaseResponse(
-        @Nullable String code,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.message = message;
         this.target = target;
@@ -83,17 +83,17 @@ public final class ApiErrorBaseResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

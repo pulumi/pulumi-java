@@ -15,8 +15,8 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
      */
     private final String alarmName;
 
-    @OutputCustomType.Constructor({"alarmName"})
-    private EndpointDeploymentConfigAutoRollbackConfigurationAlarm(String alarmName) {
+    @OutputCustomType.Constructor
+    private EndpointDeploymentConfigAutoRollbackConfigurationAlarm(@OutputCustomType.Parameter("alarmName") String alarmName) {
         this.alarmName = alarmName;
     }
 
@@ -48,7 +48,7 @@ public final class EndpointDeploymentConfigAutoRollbackConfigurationAlarm {
     	      this.alarmName = defaults.alarmName;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }

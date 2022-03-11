@@ -25,11 +25,11 @@ public final class ScaleCapacityResponse {
      */
     private final String minimum;
 
-    @OutputCustomType.Constructor({"$default","maximum","minimum"})
+    @OutputCustomType.Constructor
     private ScaleCapacityResponse(
-        String $default,
-        String maximum,
-        String minimum) {
+        @OutputCustomType.Parameter("default") String $default,
+        @OutputCustomType.Parameter("maximum") String maximum,
+        @OutputCustomType.Parameter("minimum") String minimum) {
         this.$default = $default;
         this.maximum = maximum;
         this.minimum = minimum;
@@ -81,17 +81,17 @@ public final class ScaleCapacityResponse {
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder set$default(String $default) {
+        public Builder $default(String $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder setMaximum(String maximum) {
+        public Builder maximum(String maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMinimum(String minimum) {
+        public Builder minimum(String minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }

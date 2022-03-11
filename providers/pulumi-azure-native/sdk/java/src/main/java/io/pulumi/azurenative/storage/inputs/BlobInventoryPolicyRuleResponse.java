@@ -90,17 +90,17 @@ public final class BlobInventoryPolicyRuleResponse extends io.pulumi.resources.I
     	      this.name = defaults.name;
         }
 
-        public Builder setDefinition(BlobInventoryPolicyDefinitionResponse definition) {
+        public Builder definition(BlobInventoryPolicyDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

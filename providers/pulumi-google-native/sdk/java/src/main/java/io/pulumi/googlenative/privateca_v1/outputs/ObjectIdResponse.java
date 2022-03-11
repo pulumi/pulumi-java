@@ -16,8 +16,8 @@ public final class ObjectIdResponse {
      */
     private final List<Integer> objectIdPath;
 
-    @OutputCustomType.Constructor({"objectIdPath"})
-    private ObjectIdResponse(List<Integer> objectIdPath) {
+    @OutputCustomType.Constructor
+    private ObjectIdResponse(@OutputCustomType.Parameter("objectIdPath") List<Integer> objectIdPath) {
         this.objectIdPath = objectIdPath;
     }
 
@@ -49,7 +49,7 @@ public final class ObjectIdResponse {
     	      this.objectIdPath = defaults.objectIdPath;
         }
 
-        public Builder setObjectIdPath(List<Integer> objectIdPath) {
+        public Builder objectIdPath(List<Integer> objectIdPath) {
             this.objectIdPath = Objects.requireNonNull(objectIdPath);
             return this;
         }

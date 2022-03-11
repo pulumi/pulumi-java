@@ -15,10 +15,10 @@ public final class TemplateSourceEntity {
     private final @Nullable TemplateSourceAnalysis sourceAnalysis;
     private final @Nullable TemplateSourceTemplate sourceTemplate;
 
-    @OutputCustomType.Constructor({"sourceAnalysis","sourceTemplate"})
+    @OutputCustomType.Constructor
     private TemplateSourceEntity(
-        @Nullable TemplateSourceAnalysis sourceAnalysis,
-        @Nullable TemplateSourceTemplate sourceTemplate) {
+        @OutputCustomType.Parameter("sourceAnalysis") @Nullable TemplateSourceAnalysis sourceAnalysis,
+        @OutputCustomType.Parameter("sourceTemplate") @Nullable TemplateSourceTemplate sourceTemplate) {
         this.sourceAnalysis = sourceAnalysis;
         this.sourceTemplate = sourceTemplate;
     }
@@ -52,12 +52,12 @@ public final class TemplateSourceEntity {
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceAnalysis(@Nullable TemplateSourceAnalysis sourceAnalysis) {
+        public Builder sourceAnalysis(@Nullable TemplateSourceAnalysis sourceAnalysis) {
             this.sourceAnalysis = sourceAnalysis;
             return this;
         }
 
-        public Builder setSourceTemplate(@Nullable TemplateSourceTemplate sourceTemplate) {
+        public Builder sourceTemplate(@Nullable TemplateSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }

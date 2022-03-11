@@ -15,8 +15,8 @@ public final class GoogleCloudStorageResponse {
      */
     private final String gcsPath;
 
-    @OutputCustomType.Constructor({"gcsPath"})
-    private GoogleCloudStorageResponse(String gcsPath) {
+    @OutputCustomType.Constructor
+    private GoogleCloudStorageResponse(@OutputCustomType.Parameter("gcsPath") String gcsPath) {
         this.gcsPath = gcsPath;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudStorageResponse {
     	      this.gcsPath = defaults.gcsPath;
         }
 
-        public Builder setGcsPath(String gcsPath) {
+        public Builder gcsPath(String gcsPath) {
             this.gcsPath = Objects.requireNonNull(gcsPath);
             return this;
         }

@@ -32,14 +32,14 @@ public final class GetBillingAccountResult {
      */
     private final List<String> projectIds;
 
-    @OutputCustomType.Constructor({"billingAccount","displayName","id","name","open","projectIds"})
+    @OutputCustomType.Constructor
     private GetBillingAccountResult(
-        @Nullable String billingAccount,
-        String displayName,
-        String id,
-        String name,
-        Boolean open,
-        List<String> projectIds) {
+        @OutputCustomType.Parameter("billingAccount") @Nullable String billingAccount,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("open") Boolean open,
+        @OutputCustomType.Parameter("projectIds") List<String> projectIds) {
         this.billingAccount = billingAccount;
         this.displayName = displayName;
         this.id = id;
@@ -109,32 +109,32 @@ public final class GetBillingAccountResult {
     	      this.projectIds = defaults.projectIds;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOpen(Boolean open) {
+        public Builder open(Boolean open) {
             this.open = Objects.requireNonNull(open);
             return this;
         }
 
-        public Builder setProjectIds(List<String> projectIds) {
+        public Builder projectIds(List<String> projectIds) {
             this.projectIds = Objects.requireNonNull(projectIds);
             return this;
         }

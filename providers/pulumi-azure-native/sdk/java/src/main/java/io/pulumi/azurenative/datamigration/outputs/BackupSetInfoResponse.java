@@ -65,18 +65,18 @@ public final class BackupSetInfoResponse {
      */
     private final @Nullable List<BackupFileInfoResponse> listOfBackupFiles;
 
-    @OutputCustomType.Constructor({"backupFinishedDate","backupSetId","backupStartDate","backupType","databaseName","firstLsn","isBackupRestored","lastLsn","lastModifiedTime","listOfBackupFiles"})
+    @OutputCustomType.Constructor
     private BackupSetInfoResponse(
-        @Nullable String backupFinishedDate,
-        @Nullable String backupSetId,
-        @Nullable String backupStartDate,
-        @Nullable String backupType,
-        @Nullable String databaseName,
-        @Nullable String firstLsn,
-        @Nullable Boolean isBackupRestored,
-        @Nullable String lastLsn,
-        @Nullable String lastModifiedTime,
-        @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
+        @OutputCustomType.Parameter("backupFinishedDate") @Nullable String backupFinishedDate,
+        @OutputCustomType.Parameter("backupSetId") @Nullable String backupSetId,
+        @OutputCustomType.Parameter("backupStartDate") @Nullable String backupStartDate,
+        @OutputCustomType.Parameter("backupType") @Nullable String backupType,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("firstLsn") @Nullable String firstLsn,
+        @OutputCustomType.Parameter("isBackupRestored") @Nullable Boolean isBackupRestored,
+        @OutputCustomType.Parameter("lastLsn") @Nullable String lastLsn,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("listOfBackupFiles") @Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
         this.backupFinishedDate = backupFinishedDate;
         this.backupSetId = backupSetId;
         this.backupStartDate = backupStartDate;
@@ -198,52 +198,52 @@ public final class BackupSetInfoResponse {
     	      this.listOfBackupFiles = defaults.listOfBackupFiles;
         }
 
-        public Builder setBackupFinishedDate(@Nullable String backupFinishedDate) {
+        public Builder backupFinishedDate(@Nullable String backupFinishedDate) {
             this.backupFinishedDate = backupFinishedDate;
             return this;
         }
 
-        public Builder setBackupSetId(@Nullable String backupSetId) {
+        public Builder backupSetId(@Nullable String backupSetId) {
             this.backupSetId = backupSetId;
             return this;
         }
 
-        public Builder setBackupStartDate(@Nullable String backupStartDate) {
+        public Builder backupStartDate(@Nullable String backupStartDate) {
             this.backupStartDate = backupStartDate;
             return this;
         }
 
-        public Builder setBackupType(@Nullable String backupType) {
+        public Builder backupType(@Nullable String backupType) {
             this.backupType = backupType;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setFirstLsn(@Nullable String firstLsn) {
+        public Builder firstLsn(@Nullable String firstLsn) {
             this.firstLsn = firstLsn;
             return this;
         }
 
-        public Builder setIsBackupRestored(@Nullable Boolean isBackupRestored) {
+        public Builder isBackupRestored(@Nullable Boolean isBackupRestored) {
             this.isBackupRestored = isBackupRestored;
             return this;
         }
 
-        public Builder setLastLsn(@Nullable String lastLsn) {
+        public Builder lastLsn(@Nullable String lastLsn) {
             this.lastLsn = lastLsn;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setListOfBackupFiles(@Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
+        public Builder listOfBackupFiles(@Nullable List<BackupFileInfoResponse> listOfBackupFiles) {
             this.listOfBackupFiles = listOfBackupFiles;
             return this;
         }

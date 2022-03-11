@@ -98,27 +98,27 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
     	      this.taskId = defaults.taskId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
 
-        public Builder setResponseView(@Nullable String responseView) {
+        public Builder responseView(@Nullable String responseView) {
             this.responseView = responseView;
             return this;
         }
 
-        public Builder setTaskId(String taskId) {
+        public Builder taskId(String taskId) {
             this.taskId = Objects.requireNonNull(taskId);
             return this;
         }

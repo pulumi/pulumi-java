@@ -71,22 +71,22 @@ public final class VirtualNodeSpecListenerTlsValidationGetArgs extends io.pulumi
     	      this.trust = defaults.trust;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable Input<VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesGetArgs subjectAlternativeNames) {
             this.subjectAlternativeNames = Input.ofNullable(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setTrust(Input<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust) {
+        public Builder trust(Input<VirtualNodeSpecListenerTlsValidationTrustGetArgs> trust) {
             this.trust = Objects.requireNonNull(trust);
             return this;
         }
 
-        public Builder setTrust(VirtualNodeSpecListenerTlsValidationTrustGetArgs trust) {
+        public Builder trust(VirtualNodeSpecListenerTlsValidationTrustGetArgs trust) {
             this.trust = Input.of(Objects.requireNonNull(trust));
             return this;
         }

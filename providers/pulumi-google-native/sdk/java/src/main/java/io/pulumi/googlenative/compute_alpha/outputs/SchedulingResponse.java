@@ -100,25 +100,25 @@ public final class SchedulingResponse {
      */
     private final String terminationTime;
 
-    @OutputCustomType.Constructor({"automaticRestart","availabilityDomain","currentCpus","currentMemoryMb","hostErrorTimeoutSeconds","instanceTerminationAction","latencyTolerant","locationHint","maintenanceFreezeDurationHours","maintenanceInterval","maxRunDuration","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible","provisioningModel","terminationTime"})
+    @OutputCustomType.Constructor
     private SchedulingResponse(
-        Boolean automaticRestart,
-        Integer availabilityDomain,
-        Integer currentCpus,
-        String currentMemoryMb,
-        Integer hostErrorTimeoutSeconds,
-        String instanceTerminationAction,
-        Boolean latencyTolerant,
-        String locationHint,
-        Integer maintenanceFreezeDurationHours,
-        String maintenanceInterval,
-        DurationResponse maxRunDuration,
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        Boolean preemptible,
-        String provisioningModel,
-        String terminationTime) {
+        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @OutputCustomType.Parameter("availabilityDomain") Integer availabilityDomain,
+        @OutputCustomType.Parameter("currentCpus") Integer currentCpus,
+        @OutputCustomType.Parameter("currentMemoryMb") String currentMemoryMb,
+        @OutputCustomType.Parameter("hostErrorTimeoutSeconds") Integer hostErrorTimeoutSeconds,
+        @OutputCustomType.Parameter("instanceTerminationAction") String instanceTerminationAction,
+        @OutputCustomType.Parameter("latencyTolerant") Boolean latencyTolerant,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("maintenanceFreezeDurationHours") Integer maintenanceFreezeDurationHours,
+        @OutputCustomType.Parameter("maintenanceInterval") String maintenanceInterval,
+        @OutputCustomType.Parameter("maxRunDuration") DurationResponse maxRunDuration,
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("provisioningModel") String provisioningModel,
+        @OutputCustomType.Parameter("terminationTime") String terminationTime) {
         this.automaticRestart = automaticRestart;
         this.availabilityDomain = availabilityDomain;
         this.currentCpus = currentCpus;
@@ -310,87 +310,87 @@ public final class SchedulingResponse {
     	      this.terminationTime = defaults.terminationTime;
         }
 
-        public Builder setAutomaticRestart(Boolean automaticRestart) {
+        public Builder automaticRestart(Boolean automaticRestart) {
             this.automaticRestart = Objects.requireNonNull(automaticRestart);
             return this;
         }
 
-        public Builder setAvailabilityDomain(Integer availabilityDomain) {
+        public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }
 
-        public Builder setCurrentCpus(Integer currentCpus) {
+        public Builder currentCpus(Integer currentCpus) {
             this.currentCpus = Objects.requireNonNull(currentCpus);
             return this;
         }
 
-        public Builder setCurrentMemoryMb(String currentMemoryMb) {
+        public Builder currentMemoryMb(String currentMemoryMb) {
             this.currentMemoryMb = Objects.requireNonNull(currentMemoryMb);
             return this;
         }
 
-        public Builder setHostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
+        public Builder hostErrorTimeoutSeconds(Integer hostErrorTimeoutSeconds) {
             this.hostErrorTimeoutSeconds = Objects.requireNonNull(hostErrorTimeoutSeconds);
             return this;
         }
 
-        public Builder setInstanceTerminationAction(String instanceTerminationAction) {
+        public Builder instanceTerminationAction(String instanceTerminationAction) {
             this.instanceTerminationAction = Objects.requireNonNull(instanceTerminationAction);
             return this;
         }
 
-        public Builder setLatencyTolerant(Boolean latencyTolerant) {
+        public Builder latencyTolerant(Boolean latencyTolerant) {
             this.latencyTolerant = Objects.requireNonNull(latencyTolerant);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setMaintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
+        public Builder maintenanceFreezeDurationHours(Integer maintenanceFreezeDurationHours) {
             this.maintenanceFreezeDurationHours = Objects.requireNonNull(maintenanceFreezeDurationHours);
             return this;
         }
 
-        public Builder setMaintenanceInterval(String maintenanceInterval) {
+        public Builder maintenanceInterval(String maintenanceInterval) {
             this.maintenanceInterval = Objects.requireNonNull(maintenanceInterval);
             return this;
         }
 
-        public Builder setMaxRunDuration(DurationResponse maxRunDuration) {
+        public Builder maxRunDuration(DurationResponse maxRunDuration) {
             this.maxRunDuration = Objects.requireNonNull(maxRunDuration);
             return this;
         }
 
-        public Builder setMinNodeCpus(Integer minNodeCpus) {
+        public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
+        public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setProvisioningModel(String provisioningModel) {
+        public Builder provisioningModel(String provisioningModel) {
             this.provisioningModel = Objects.requireNonNull(provisioningModel);
             return this;
         }
 
-        public Builder setTerminationTime(String terminationTime) {
+        public Builder terminationTime(String terminationTime) {
             this.terminationTime = Objects.requireNonNull(terminationTime);
             return this;
         }

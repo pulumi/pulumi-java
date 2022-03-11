@@ -76,22 +76,22 @@ public final class EncoderSystemPresetArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setName(Input<Either<String,EncoderSystemPresetType>> name) {
+        public Builder name(Input<Either<String,EncoderSystemPresetType>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,EncoderSystemPresetType> name) {
+        public Builder name(Either<String,EncoderSystemPresetType> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

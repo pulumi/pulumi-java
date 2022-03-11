@@ -57,12 +57,12 @@ public final class PosixFilesystemArgs extends io.pulumi.resources.ResourceArgs 
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setRootDirectory(@Nullable Input<String> rootDirectory) {
+        public Builder rootDirectory(@Nullable Input<String> rootDirectory) {
             this.rootDirectory = rootDirectory;
             return this;
         }
 
-        public Builder setRootDirectory(@Nullable String rootDirectory) {
+        public Builder rootDirectory(@Nullable String rootDirectory) {
             this.rootDirectory = Input.ofNullable(rootDirectory);
             return this;
         }

@@ -26,11 +26,11 @@ public final class SecureIotDeviceRemoteTunnelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deviceId","iotHubName","type"})
+    @OutputCustomType.Constructor
     private SecureIotDeviceRemoteTunnelResponse(
-        String deviceId,
-        String iotHubName,
-        String type) {
+        @OutputCustomType.Parameter("deviceId") String deviceId,
+        @OutputCustomType.Parameter("iotHubName") String iotHubName,
+        @OutputCustomType.Parameter("type") String type) {
         this.deviceId = deviceId;
         this.iotHubName = iotHubName;
         this.type = type;
@@ -83,17 +83,17 @@ public final class SecureIotDeviceRemoteTunnelResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeviceId(String deviceId) {
+        public Builder deviceId(String deviceId) {
             this.deviceId = Objects.requireNonNull(deviceId);
             return this;
         }
 
-        public Builder setIotHubName(String iotHubName) {
+        public Builder iotHubName(String iotHubName) {
             this.iotHubName = Objects.requireNonNull(iotHubName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

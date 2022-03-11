@@ -33,12 +33,12 @@ public final class KeyVaultCredentialSettingsResponse {
      */
     private final @Nullable String servicePrincipalName;
 
-    @OutputCustomType.Constructor({"azureKeyVaultUrl","credentialName","enable","servicePrincipalName"})
+    @OutputCustomType.Constructor
     private KeyVaultCredentialSettingsResponse(
-        @Nullable String azureKeyVaultUrl,
-        @Nullable String credentialName,
-        @Nullable Boolean enable,
-        @Nullable String servicePrincipalName) {
+        @OutputCustomType.Parameter("azureKeyVaultUrl") @Nullable String azureKeyVaultUrl,
+        @OutputCustomType.Parameter("credentialName") @Nullable String credentialName,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("servicePrincipalName") @Nullable String servicePrincipalName) {
         this.azureKeyVaultUrl = azureKeyVaultUrl;
         this.credentialName = credentialName;
         this.enable = enable;
@@ -100,22 +100,22 @@ public final class KeyVaultCredentialSettingsResponse {
     	      this.servicePrincipalName = defaults.servicePrincipalName;
         }
 
-        public Builder setAzureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
+        public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
             this.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
 
-        public Builder setCredentialName(@Nullable String credentialName) {
+        public Builder credentialName(@Nullable String credentialName) {
             this.credentialName = credentialName;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setServicePrincipalName(@Nullable String servicePrincipalName) {
+        public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
             this.servicePrincipalName = servicePrincipalName;
             return this;
         }

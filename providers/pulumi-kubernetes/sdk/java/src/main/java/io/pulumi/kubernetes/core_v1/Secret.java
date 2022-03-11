@@ -179,8 +179,8 @@ public class Secret extends io.pulumi.resources.CustomResource {
     private static SecretArgs makeArgs(@Nullable SecretArgs args) {
         var builder = args == null ? SecretArgs.builder() : SecretArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Secret")
+            .apiVersion("v1")
+            .kind("Secret")
             .build();
     }
 

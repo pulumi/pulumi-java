@@ -43,14 +43,14 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
      */
     private final @Nullable String spotMaxPrice;
 
-    @OutputCustomType.Constructor({"onDemandAllocationStrategy","onDemandBaseCapacity","onDemandPercentageAboveBaseCapacity","spotAllocationStrategy","spotInstancePools","spotMaxPrice"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyInstancesDistribution(
-        @Nullable String onDemandAllocationStrategy,
-        @Nullable Integer onDemandBaseCapacity,
-        @Nullable Integer onDemandPercentageAboveBaseCapacity,
-        @Nullable String spotAllocationStrategy,
-        @Nullable Integer spotInstancePools,
-        @Nullable String spotMaxPrice) {
+        @OutputCustomType.Parameter("onDemandAllocationStrategy") @Nullable String onDemandAllocationStrategy,
+        @OutputCustomType.Parameter("onDemandBaseCapacity") @Nullable Integer onDemandBaseCapacity,
+        @OutputCustomType.Parameter("onDemandPercentageAboveBaseCapacity") @Nullable Integer onDemandPercentageAboveBaseCapacity,
+        @OutputCustomType.Parameter("spotAllocationStrategy") @Nullable String spotAllocationStrategy,
+        @OutputCustomType.Parameter("spotInstancePools") @Nullable Integer spotInstancePools,
+        @OutputCustomType.Parameter("spotMaxPrice") @Nullable String spotMaxPrice) {
         this.onDemandAllocationStrategy = onDemandAllocationStrategy;
         this.onDemandBaseCapacity = onDemandBaseCapacity;
         this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -132,32 +132,32 @@ public final class GroupMixedInstancesPolicyInstancesDistribution {
     	      this.spotMaxPrice = defaults.spotMaxPrice;
         }
 
-        public Builder setOnDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
+        public Builder onDemandAllocationStrategy(@Nullable String onDemandAllocationStrategy) {
             this.onDemandAllocationStrategy = onDemandAllocationStrategy;
             return this;
         }
 
-        public Builder setOnDemandBaseCapacity(@Nullable Integer onDemandBaseCapacity) {
+        public Builder onDemandBaseCapacity(@Nullable Integer onDemandBaseCapacity) {
             this.onDemandBaseCapacity = onDemandBaseCapacity;
             return this;
         }
 
-        public Builder setOnDemandPercentageAboveBaseCapacity(@Nullable Integer onDemandPercentageAboveBaseCapacity) {
+        public Builder onDemandPercentageAboveBaseCapacity(@Nullable Integer onDemandPercentageAboveBaseCapacity) {
             this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
             return this;
         }
 
-        public Builder setSpotAllocationStrategy(@Nullable String spotAllocationStrategy) {
+        public Builder spotAllocationStrategy(@Nullable String spotAllocationStrategy) {
             this.spotAllocationStrategy = spotAllocationStrategy;
             return this;
         }
 
-        public Builder setSpotInstancePools(@Nullable Integer spotInstancePools) {
+        public Builder spotInstancePools(@Nullable Integer spotInstancePools) {
             this.spotInstancePools = spotInstancePools;
             return this;
         }
 
-        public Builder setSpotMaxPrice(@Nullable String spotMaxPrice) {
+        public Builder spotMaxPrice(@Nullable String spotMaxPrice) {
             this.spotMaxPrice = spotMaxPrice;
             return this;
         }

@@ -17,11 +17,11 @@ public final class Laser {
     private final @Nullable Boolean batteries;
     private final @Nullable Double light;
 
-    @OutputCustomType.Constructor({"animal","batteries","light"})
+    @OutputCustomType.Constructor
     private Laser(
-        @Nullable Cat animal,
-        @Nullable Boolean batteries,
-        @Nullable Double light) {
+        @OutputCustomType.Parameter("animal") @Nullable Cat animal,
+        @OutputCustomType.Parameter("batteries") @Nullable Boolean batteries,
+        @OutputCustomType.Parameter("light") @Nullable Double light) {
         this.animal = animal;
         this.batteries = batteries;
         this.light = light;
@@ -61,17 +61,17 @@ public final class Laser {
     	      this.light = defaults.light;
         }
 
-        public Builder setAnimal(@Nullable Cat animal) {
+        public Builder animal(@Nullable Cat animal) {
             this.animal = animal;
             return this;
         }
 
-        public Builder setBatteries(@Nullable Boolean batteries) {
+        public Builder batteries(@Nullable Boolean batteries) {
             this.batteries = batteries;
             return this;
         }
 
-        public Builder setLight(@Nullable Double light) {
+        public Builder light(@Nullable Double light) {
             this.light = light;
             return this;
         }

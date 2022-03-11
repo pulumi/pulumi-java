@@ -21,14 +21,14 @@ public final class RuleGroupMatchAttributes {
     private final @Nullable List<RuleGroupAddress> sources;
     private final @Nullable List<RuleGroupTCPFlagField> tCPFlags;
 
-    @OutputCustomType.Constructor({"destinationPorts","destinations","protocols","sourcePorts","sources","tCPFlags"})
+    @OutputCustomType.Constructor
     private RuleGroupMatchAttributes(
-        @Nullable List<RuleGroupPortRange> destinationPorts,
-        @Nullable List<RuleGroupAddress> destinations,
-        @Nullable List<Integer> protocols,
-        @Nullable List<RuleGroupPortRange> sourcePorts,
-        @Nullable List<RuleGroupAddress> sources,
-        @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<RuleGroupPortRange> destinationPorts,
+        @OutputCustomType.Parameter("destinations") @Nullable List<RuleGroupAddress> destinations,
+        @OutputCustomType.Parameter("protocols") @Nullable List<Integer> protocols,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<RuleGroupPortRange> sourcePorts,
+        @OutputCustomType.Parameter("sources") @Nullable List<RuleGroupAddress> sources,
+        @OutputCustomType.Parameter("tCPFlags") @Nullable List<RuleGroupTCPFlagField> tCPFlags) {
         this.destinationPorts = destinationPorts;
         this.destinations = destinations;
         this.protocols = protocols;
@@ -86,32 +86,32 @@ public final class RuleGroupMatchAttributes {
     	      this.tCPFlags = defaults.tCPFlags;
         }
 
-        public Builder setDestinationPorts(@Nullable List<RuleGroupPortRange> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<RuleGroupPortRange> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<RuleGroupAddress> destinations) {
+        public Builder destinations(@Nullable List<RuleGroupAddress> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<Integer> protocols) {
+        public Builder protocols(@Nullable List<Integer> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<RuleGroupPortRange> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<RuleGroupPortRange> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
-        public Builder setSources(@Nullable List<RuleGroupAddress> sources) {
+        public Builder sources(@Nullable List<RuleGroupAddress> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTCPFlags(@Nullable List<RuleGroupTCPFlagField> tCPFlags) {
+        public Builder tCPFlags(@Nullable List<RuleGroupTCPFlagField> tCPFlags) {
             this.tCPFlags = tCPFlags;
             return this;
         }

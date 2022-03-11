@@ -13,10 +13,10 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     private final String key;
     private final InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private InstanceAccessControlAttributeConfigurationAccessControlAttribute(
-        String key,
-        InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
         this.key = key;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
+        public Builder value(InstanceAccessControlAttributeConfigurationAccessControlAttributeValue value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

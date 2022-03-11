@@ -28,11 +28,11 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingO
      */
     private final @Nullable String logStreamName;
 
-    @OutputCustomType.Constructor({"enabled","logGroupName","logStreamName"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingOptions(
-        @Nullable Boolean enabled,
-        @Nullable String logGroupName,
-        @Nullable String logStreamName) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @OutputCustomType.Parameter("logStreamName") @Nullable String logStreamName) {
         this.enabled = enabled;
         this.logGroupName = logGroupName;
         this.logStreamName = logStreamName;
@@ -84,17 +84,17 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationCloudwatchLoggingO
     	      this.logStreamName = defaults.logStreamName;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogStreamName(@Nullable String logStreamName) {
+        public Builder logStreamName(@Nullable String logStreamName) {
             this.logStreamName = logStreamName;
             return this;
         }

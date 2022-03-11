@@ -109,42 +109,42 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setWebhooks(@Nullable Input<List<MutatingWebhookArgs>> webhooks) {
+        public Builder webhooks(@Nullable Input<List<MutatingWebhookArgs>> webhooks) {
             this.webhooks = webhooks;
             return this;
         }
 
-        public Builder setWebhooks(@Nullable List<MutatingWebhookArgs> webhooks) {
+        public Builder webhooks(@Nullable List<MutatingWebhookArgs> webhooks) {
             this.webhooks = Input.ofNullable(webhooks);
             return this;
         }

@@ -20,10 +20,10 @@ public final class ManagementSettingsResponse {
      */
     private final String transferLockState;
 
-    @OutputCustomType.Constructor({"renewalMethod","transferLockState"})
+    @OutputCustomType.Constructor
     private ManagementSettingsResponse(
-        String renewalMethod,
-        String transferLockState) {
+        @OutputCustomType.Parameter("renewalMethod") String renewalMethod,
+        @OutputCustomType.Parameter("transferLockState") String transferLockState) {
         this.renewalMethod = renewalMethod;
         this.transferLockState = transferLockState;
     }
@@ -65,12 +65,12 @@ public final class ManagementSettingsResponse {
     	      this.transferLockState = defaults.transferLockState;
         }
 
-        public Builder setRenewalMethod(String renewalMethod) {
+        public Builder renewalMethod(String renewalMethod) {
             this.renewalMethod = Objects.requireNonNull(renewalMethod);
             return this;
         }
 
-        public Builder setTransferLockState(String transferLockState) {
+        public Builder transferLockState(String transferLockState) {
             this.transferLockState = Objects.requireNonNull(transferLockState);
             return this;
         }

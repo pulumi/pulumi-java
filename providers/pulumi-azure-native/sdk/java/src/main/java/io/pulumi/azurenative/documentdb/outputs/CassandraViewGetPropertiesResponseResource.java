@@ -36,13 +36,13 @@ public final class CassandraViewGetPropertiesResponseResource {
      */
     private final String viewDefinition;
 
-    @OutputCustomType.Constructor({"etag","id","rid","ts","viewDefinition"})
+    @OutputCustomType.Constructor
     private CassandraViewGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        String viewDefinition) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("viewDefinition") String viewDefinition) {
         this.etag = etag;
         this.id = id;
         this.rid = rid;
@@ -114,27 +114,27 @@ public final class CassandraViewGetPropertiesResponseResource {
     	      this.viewDefinition = defaults.viewDefinition;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
 
-        public Builder setViewDefinition(String viewDefinition) {
+        public Builder viewDefinition(String viewDefinition) {
             this.viewDefinition = Objects.requireNonNull(viewDefinition);
             return this;
         }

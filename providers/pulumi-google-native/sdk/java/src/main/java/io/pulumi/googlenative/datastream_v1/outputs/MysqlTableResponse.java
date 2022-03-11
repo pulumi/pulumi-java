@@ -22,10 +22,10 @@ public final class MysqlTableResponse {
      */
     private final String table;
 
-    @OutputCustomType.Constructor({"mysqlColumns","table"})
+    @OutputCustomType.Constructor
     private MysqlTableResponse(
-        List<MysqlColumnResponse> mysqlColumns,
-        String table) {
+        @OutputCustomType.Parameter("mysqlColumns") List<MysqlColumnResponse> mysqlColumns,
+        @OutputCustomType.Parameter("table") String table) {
         this.mysqlColumns = mysqlColumns;
         this.table = table;
     }
@@ -67,12 +67,12 @@ public final class MysqlTableResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setMysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
+        public Builder mysqlColumns(List<MysqlColumnResponse> mysqlColumns) {
             this.mysqlColumns = Objects.requireNonNull(mysqlColumns);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

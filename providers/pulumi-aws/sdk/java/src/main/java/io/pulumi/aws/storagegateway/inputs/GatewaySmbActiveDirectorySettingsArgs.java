@@ -150,72 +150,72 @@ public final class GatewaySmbActiveDirectorySettingsArgs extends io.pulumi.resou
     	      this.username = defaults.username;
         }
 
-        public Builder setActiveDirectoryStatus(@Nullable Input<String> activeDirectoryStatus) {
+        public Builder activeDirectoryStatus(@Nullable Input<String> activeDirectoryStatus) {
             this.activeDirectoryStatus = activeDirectoryStatus;
             return this;
         }
 
-        public Builder setActiveDirectoryStatus(@Nullable String activeDirectoryStatus) {
+        public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
             this.activeDirectoryStatus = Input.ofNullable(activeDirectoryStatus);
             return this;
         }
 
-        public Builder setDomainControllers(@Nullable Input<List<String>> domainControllers) {
+        public Builder domainControllers(@Nullable Input<List<String>> domainControllers) {
             this.domainControllers = domainControllers;
             return this;
         }
 
-        public Builder setDomainControllers(@Nullable List<String> domainControllers) {
+        public Builder domainControllers(@Nullable List<String> domainControllers) {
             this.domainControllers = Input.ofNullable(domainControllers);
             return this;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable Input<String> organizationalUnit) {
+        public Builder organizationalUnit(@Nullable Input<String> organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = Input.ofNullable(organizationalUnit);
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

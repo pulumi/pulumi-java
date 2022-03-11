@@ -27,11 +27,11 @@ public final class TopicRuleKinesis {
      */
     private final String streamName;
 
-    @OutputCustomType.Constructor({"partitionKey","roleArn","streamName"})
+    @OutputCustomType.Constructor
     private TopicRuleKinesis(
-        @Nullable String partitionKey,
-        String roleArn,
-        String streamName) {
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("streamName") String streamName) {
         this.partitionKey = partitionKey;
         this.roleArn = roleArn;
         this.streamName = streamName;
@@ -83,17 +83,17 @@ public final class TopicRuleKinesis {
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStreamName(String streamName) {
+        public Builder streamName(String streamName) {
             this.streamName = Objects.requireNonNull(streamName);
             return this;
         }

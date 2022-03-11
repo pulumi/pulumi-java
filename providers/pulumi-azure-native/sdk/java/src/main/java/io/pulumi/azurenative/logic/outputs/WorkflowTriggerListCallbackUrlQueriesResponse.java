@@ -37,13 +37,13 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
      */
     private final @Nullable String sv;
 
-    @OutputCustomType.Constructor({"apiVersion","se","sig","sp","sv"})
+    @OutputCustomType.Constructor
     private WorkflowTriggerListCallbackUrlQueriesResponse(
-        @Nullable String apiVersion,
-        @Nullable String se,
-        @Nullable String sig,
-        @Nullable String sp,
-        @Nullable String sv) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("se") @Nullable String se,
+        @OutputCustomType.Parameter("sig") @Nullable String sig,
+        @OutputCustomType.Parameter("sp") @Nullable String sp,
+        @OutputCustomType.Parameter("sv") @Nullable String sv) {
         this.apiVersion = apiVersion;
         this.se = se;
         this.sig = sig;
@@ -115,27 +115,27 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse {
     	      this.sv = defaults.sv;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setSe(@Nullable String se) {
+        public Builder se(@Nullable String se) {
             this.se = se;
             return this;
         }
 
-        public Builder setSig(@Nullable String sig) {
+        public Builder sig(@Nullable String sig) {
             this.sig = sig;
             return this;
         }
 
-        public Builder setSp(@Nullable String sp) {
+        public Builder sp(@Nullable String sp) {
             this.sp = sp;
             return this;
         }
 
-        public Builder setSv(@Nullable String sv) {
+        public Builder sv(@Nullable String sv) {
             this.sv = sv;
             return this;
         }

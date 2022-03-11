@@ -37,13 +37,13 @@ public final class RequiredTrafficResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"direction","fqdns","ips","port","protocol"})
+    @OutputCustomType.Constructor
     private RequiredTrafficResponse(
-        String direction,
-        List<String> fqdns,
-        List<String> ips,
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("fqdns") List<String> fqdns,
+        @OutputCustomType.Parameter("ips") List<String> ips,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.direction = direction;
         this.fqdns = fqdns;
         this.ips = ips;
@@ -115,27 +115,27 @@ public final class RequiredTrafficResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setFqdns(List<String> fqdns) {
+        public Builder fqdns(List<String> fqdns) {
             this.fqdns = Objects.requireNonNull(fqdns);
             return this;
         }
 
-        public Builder setIps(List<String> ips) {
+        public Builder ips(List<String> ips) {
             this.ips = Objects.requireNonNull(ips);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

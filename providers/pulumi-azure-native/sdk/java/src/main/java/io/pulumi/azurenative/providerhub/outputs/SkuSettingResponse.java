@@ -29,20 +29,20 @@ public final class SkuSettingResponse {
     private final @Nullable String size;
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capabilities","capacity","costs","family","kind","locationInfo","locations","name","requiredFeatures","requiredQuotaIds","size","tier"})
+    @OutputCustomType.Constructor
     private SkuSettingResponse(
-        @Nullable List<SkuCapabilityResponse> capabilities,
-        @Nullable SkuSettingResponseCapacity capacity,
-        @Nullable List<SkuCostResponse> costs,
-        @Nullable String family,
-        @Nullable String kind,
-        @Nullable List<SkuLocationInfoResponse> locationInfo,
-        @Nullable List<String> locations,
-        String name,
-        @Nullable List<String> requiredFeatures,
-        @Nullable List<String> requiredQuotaIds,
-        @Nullable String size,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<SkuCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("capacity") @Nullable SkuSettingResponseCapacity capacity,
+        @OutputCustomType.Parameter("costs") @Nullable List<SkuCostResponse> costs,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("locationInfo") @Nullable List<SkuLocationInfoResponse> locationInfo,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("requiredQuotaIds") @Nullable List<String> requiredQuotaIds,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capabilities = capabilities;
         this.capacity = capacity;
         this.costs = costs;
@@ -136,62 +136,62 @@ public final class SkuSettingResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapabilities(@Nullable List<SkuCapabilityResponse> capabilities) {
+        public Builder capabilities(@Nullable List<SkuCapabilityResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapacity(@Nullable SkuSettingResponseCapacity capacity) {
+        public Builder capacity(@Nullable SkuSettingResponseCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCosts(@Nullable List<SkuCostResponse> costs) {
+        public Builder costs(@Nullable List<SkuCostResponse> costs) {
             this.costs = costs;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocationInfo(@Nullable List<SkuLocationInfoResponse> locationInfo) {
+        public Builder locationInfo(@Nullable List<SkuLocationInfoResponse> locationInfo) {
             this.locationInfo = locationInfo;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setRequiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
+        public Builder requiredQuotaIds(@Nullable List<String> requiredQuotaIds) {
             this.requiredQuotaIds = requiredQuotaIds;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

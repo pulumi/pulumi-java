@@ -61,16 +61,16 @@ public final class PersistentVolumeClaimSpec {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"accessModes","dataSource","dataSourceRef","resources","selector","storageClassName","volumeMode","volumeName"})
+    @OutputCustomType.Constructor
     private PersistentVolumeClaimSpec(
-        @Nullable List<String> accessModes,
-        @Nullable TypedLocalObjectReference dataSource,
-        @Nullable TypedLocalObjectReference dataSourceRef,
-        @Nullable ResourceRequirements resources,
-        @Nullable LabelSelector selector,
-        @Nullable String storageClassName,
-        @Nullable String volumeMode,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @OutputCustomType.Parameter("dataSource") @Nullable TypedLocalObjectReference dataSource,
+        @OutputCustomType.Parameter("dataSourceRef") @Nullable TypedLocalObjectReference dataSourceRef,
+        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("storageClassName") @Nullable String storageClassName,
+        @OutputCustomType.Parameter("volumeMode") @Nullable String volumeMode,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.accessModes = accessModes;
         this.dataSource = dataSource;
         this.dataSourceRef = dataSourceRef;
@@ -177,42 +177,42 @@ public final class PersistentVolumeClaimSpec {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setDataSource(@Nullable TypedLocalObjectReference dataSource) {
+        public Builder dataSource(@Nullable TypedLocalObjectReference dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSourceRef(@Nullable TypedLocalObjectReference dataSourceRef) {
+        public Builder dataSourceRef(@Nullable TypedLocalObjectReference dataSourceRef) {
             this.dataSourceRef = dataSourceRef;
             return this;
         }
 
-        public Builder setResources(@Nullable ResourceRequirements resources) {
+        public Builder resources(@Nullable ResourceRequirements resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setStorageClassName(@Nullable String storageClassName) {
+        public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
 
-        public Builder setVolumeMode(@Nullable String volumeMode) {
+        public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }

@@ -63,18 +63,18 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","privateIPAddress","privateIPAllocationMethod","privateLinkConfiguration","provisioningState","publicIPAddress","subnet","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayFrontendIPConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String privateIPAddress,
-        @Nullable String privateIPAllocationMethod,
-        @Nullable SubResourceResponse privateLinkConfiguration,
-        String provisioningState,
-        @Nullable SubResourceResponse publicIPAddress,
-        @Nullable SubResourceResponse subnet,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("privateIPAllocationMethod") @Nullable String privateIPAllocationMethod,
+        @OutputCustomType.Parameter("privateLinkConfiguration") @Nullable SubResourceResponse privateLinkConfiguration,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddress") @Nullable SubResourceResponse publicIPAddress,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -196,52 +196,52 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateLinkConfiguration(@Nullable SubResourceResponse privateLinkConfiguration) {
+        public Builder privateLinkConfiguration(@Nullable SubResourceResponse privateLinkConfiguration) {
             this.privateLinkConfiguration = privateLinkConfiguration;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
+        public Builder publicIPAddress(@Nullable SubResourceResponse publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceResponse subnet) {
+        public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

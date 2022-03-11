@@ -14,10 +14,10 @@ public final class GameServerGroupInstanceDefinition {
     private final String instanceType;
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor({"instanceType","weightedCapacity"})
+    @OutputCustomType.Constructor
     private GameServerGroupInstanceDefinition(
-        String instanceType,
-        @Nullable String weightedCapacity) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.weightedCapacity = weightedCapacity;
     }
@@ -51,12 +51,12 @@ public final class GameServerGroupInstanceDefinition {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable String weightedCapacity) {
+        public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

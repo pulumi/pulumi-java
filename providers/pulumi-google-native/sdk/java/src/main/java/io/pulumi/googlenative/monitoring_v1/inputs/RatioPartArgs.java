@@ -75,22 +75,22 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setAggregation(@Nullable Input<AggregationArgs> aggregation) {
+        public Builder aggregation(@Nullable Input<AggregationArgs> aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setAggregation(@Nullable AggregationArgs aggregation) {
+        public Builder aggregation(@Nullable AggregationArgs aggregation) {
             this.aggregation = Input.ofNullable(aggregation);
             return this;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }

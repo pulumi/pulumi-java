@@ -12,10 +12,10 @@ public final class UpcomingMaintenanceTimeWindowResponse {
     private final String earliest;
     private final String latest;
 
-    @OutputCustomType.Constructor({"earliest","latest"})
+    @OutputCustomType.Constructor
     private UpcomingMaintenanceTimeWindowResponse(
-        String earliest,
-        String latest) {
+        @OutputCustomType.Parameter("earliest") String earliest,
+        @OutputCustomType.Parameter("latest") String latest) {
         this.earliest = earliest;
         this.latest = latest;
     }
@@ -49,12 +49,12 @@ public final class UpcomingMaintenanceTimeWindowResponse {
     	      this.latest = defaults.latest;
         }
 
-        public Builder setEarliest(String earliest) {
+        public Builder earliest(String earliest) {
             this.earliest = Objects.requireNonNull(earliest);
             return this;
         }
 
-        public Builder setLatest(String latest) {
+        public Builder latest(String latest) {
             this.latest = Objects.requireNonNull(latest);
             return this;
         }

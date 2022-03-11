@@ -28,11 +28,11 @@ public final class GroupWarmPool {
      */
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor({"maxGroupPreparedCapacity","minSize","poolState"})
+    @OutputCustomType.Constructor
     private GroupWarmPool(
-        @Nullable Integer maxGroupPreparedCapacity,
-        @Nullable Integer minSize,
-        @Nullable String poolState) {
+        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
+        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;
         this.poolState = poolState;
@@ -84,17 +84,17 @@ public final class GroupWarmPool {
     	      this.poolState = defaults.poolState;
         }
 
-        public Builder setMaxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setPoolState(@Nullable String poolState) {
+        public Builder poolState(@Nullable String poolState) {
             this.poolState = poolState;
             return this;
         }

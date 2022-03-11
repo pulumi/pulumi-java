@@ -390,222 +390,222 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAllInstancesConfig(@Nullable Input<InstanceGroupManagerAllInstancesConfigArgs> allInstancesConfig) {
+        public Builder allInstancesConfig(@Nullable Input<InstanceGroupManagerAllInstancesConfigArgs> allInstancesConfig) {
             this.allInstancesConfig = allInstancesConfig;
             return this;
         }
 
-        public Builder setAllInstancesConfig(@Nullable InstanceGroupManagerAllInstancesConfigArgs allInstancesConfig) {
+        public Builder allInstancesConfig(@Nullable InstanceGroupManagerAllInstancesConfigArgs allInstancesConfig) {
             this.allInstancesConfig = Input.ofNullable(allInstancesConfig);
             return this;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies) {
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable List<InstanceGroupManagerAutoHealingPolicyArgs> autoHealingPolicies) {
             this.autoHealingPolicies = Input.ofNullable(autoHealingPolicies);
             return this;
         }
 
-        public Builder setBaseInstanceName(@Nullable Input<String> baseInstanceName) {
+        public Builder baseInstanceName(@Nullable Input<String> baseInstanceName) {
             this.baseInstanceName = baseInstanceName;
             return this;
         }
 
-        public Builder setBaseInstanceName(@Nullable String baseInstanceName) {
+        public Builder baseInstanceName(@Nullable String baseInstanceName) {
             this.baseInstanceName = Input.ofNullable(baseInstanceName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributionPolicy(@Nullable Input<DistributionPolicyArgs> distributionPolicy) {
+        public Builder distributionPolicy(@Nullable Input<DistributionPolicyArgs> distributionPolicy) {
             this.distributionPolicy = distributionPolicy;
             return this;
         }
 
-        public Builder setDistributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
+        public Builder distributionPolicy(@Nullable DistributionPolicyArgs distributionPolicy) {
             this.distributionPolicy = Input.ofNullable(distributionPolicy);
             return this;
         }
 
-        public Builder setFailoverAction(@Nullable Input<RegionInstanceGroupManagerFailoverAction> failoverAction) {
+        public Builder failoverAction(@Nullable Input<RegionInstanceGroupManagerFailoverAction> failoverAction) {
             this.failoverAction = failoverAction;
             return this;
         }
 
-        public Builder setFailoverAction(@Nullable RegionInstanceGroupManagerFailoverAction failoverAction) {
+        public Builder failoverAction(@Nullable RegionInstanceGroupManagerFailoverAction failoverAction) {
             this.failoverAction = Input.ofNullable(failoverAction);
             return this;
         }
 
-        public Builder setInstanceLifecyclePolicy(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyArgs> instanceLifecyclePolicy) {
+        public Builder instanceLifecyclePolicy(@Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyArgs> instanceLifecyclePolicy) {
             this.instanceLifecyclePolicy = instanceLifecyclePolicy;
             return this;
         }
 
-        public Builder setInstanceLifecyclePolicy(@Nullable InstanceGroupManagerInstanceLifecyclePolicyArgs instanceLifecyclePolicy) {
+        public Builder instanceLifecyclePolicy(@Nullable InstanceGroupManagerInstanceLifecyclePolicyArgs instanceLifecyclePolicy) {
             this.instanceLifecyclePolicy = Input.ofNullable(instanceLifecyclePolicy);
             return this;
         }
 
-        public Builder setInstanceTemplate(@Nullable Input<String> instanceTemplate) {
+        public Builder instanceTemplate(@Nullable Input<String> instanceTemplate) {
             this.instanceTemplate = instanceTemplate;
             return this;
         }
 
-        public Builder setInstanceTemplate(@Nullable String instanceTemplate) {
+        public Builder instanceTemplate(@Nullable String instanceTemplate) {
             this.instanceTemplate = Input.ofNullable(instanceTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable Input<List<NamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Input<List<NamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable List<NamedPortArgs> namedPorts) {
+        public Builder namedPorts(@Nullable List<NamedPortArgs> namedPorts) {
             this.namedPorts = Input.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setStandbyPolicy(@Nullable Input<InstanceGroupManagerStandbyPolicyArgs> standbyPolicy) {
+        public Builder standbyPolicy(@Nullable Input<InstanceGroupManagerStandbyPolicyArgs> standbyPolicy) {
             this.standbyPolicy = standbyPolicy;
             return this;
         }
 
-        public Builder setStandbyPolicy(@Nullable InstanceGroupManagerStandbyPolicyArgs standbyPolicy) {
+        public Builder standbyPolicy(@Nullable InstanceGroupManagerStandbyPolicyArgs standbyPolicy) {
             this.standbyPolicy = Input.ofNullable(standbyPolicy);
             return this;
         }
 
-        public Builder setStatefulPolicy(@Nullable Input<StatefulPolicyArgs> statefulPolicy) {
+        public Builder statefulPolicy(@Nullable Input<StatefulPolicyArgs> statefulPolicy) {
             this.statefulPolicy = statefulPolicy;
             return this;
         }
 
-        public Builder setStatefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
+        public Builder statefulPolicy(@Nullable StatefulPolicyArgs statefulPolicy) {
             this.statefulPolicy = Input.ofNullable(statefulPolicy);
             return this;
         }
 
-        public Builder setTargetPools(@Nullable Input<List<String>> targetPools) {
+        public Builder targetPools(@Nullable Input<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
 
-        public Builder setTargetPools(@Nullable List<String> targetPools) {
+        public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Input.ofNullable(targetPools);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<Integer> targetSize) {
+        public Builder targetSize(@Nullable Input<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Integer targetSize) {
+        public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }
 
-        public Builder setTargetStoppedSize(@Nullable Input<Integer> targetStoppedSize) {
+        public Builder targetStoppedSize(@Nullable Input<Integer> targetStoppedSize) {
             this.targetStoppedSize = targetStoppedSize;
             return this;
         }
 
-        public Builder setTargetStoppedSize(@Nullable Integer targetStoppedSize) {
+        public Builder targetStoppedSize(@Nullable Integer targetStoppedSize) {
             this.targetStoppedSize = Input.ofNullable(targetStoppedSize);
             return this;
         }
 
-        public Builder setTargetSuspendedSize(@Nullable Input<Integer> targetSuspendedSize) {
+        public Builder targetSuspendedSize(@Nullable Input<Integer> targetSuspendedSize) {
             this.targetSuspendedSize = targetSuspendedSize;
             return this;
         }
 
-        public Builder setTargetSuspendedSize(@Nullable Integer targetSuspendedSize) {
+        public Builder targetSuspendedSize(@Nullable Integer targetSuspendedSize) {
             this.targetSuspendedSize = Input.ofNullable(targetSuspendedSize);
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
+        public Builder updatePolicy(@Nullable InstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Input.ofNullable(updatePolicy);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<List<InstanceGroupManagerVersionArgs>> versions) {
+        public Builder versions(@Nullable Input<List<InstanceGroupManagerVersionArgs>> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
+        public Builder versions(@Nullable List<InstanceGroupManagerVersionArgs> versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

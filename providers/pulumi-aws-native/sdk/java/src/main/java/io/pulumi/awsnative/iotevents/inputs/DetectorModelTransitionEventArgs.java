@@ -108,42 +108,42 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
     	      this.nextState = defaults.nextState;
         }
 
-        public Builder setActions(@Nullable Input<List<DetectorModelActionArgs>> actions) {
+        public Builder actions(@Nullable Input<List<DetectorModelActionArgs>> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable List<DetectorModelActionArgs> actions) {
+        public Builder actions(@Nullable List<DetectorModelActionArgs> actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setCondition(Input<String> condition) {
+        public Builder condition(Input<String> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder setEventName(Input<String> eventName) {
+        public Builder eventName(Input<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Input.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder setNextState(Input<String> nextState) {
+        public Builder nextState(Input<String> nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }
 
-        public Builder setNextState(String nextState) {
+        public Builder nextState(String nextState) {
             this.nextState = Input.of(Objects.requireNonNull(nextState));
             return this;
         }

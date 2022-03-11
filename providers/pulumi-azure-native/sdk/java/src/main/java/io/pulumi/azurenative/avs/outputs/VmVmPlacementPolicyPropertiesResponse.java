@@ -44,14 +44,14 @@ public final class VmVmPlacementPolicyPropertiesResponse {
      */
     private final List<String> vmMembers;
 
-    @OutputCustomType.Constructor({"affinityType","displayName","provisioningState","state","type","vmMembers"})
+    @OutputCustomType.Constructor
     private VmVmPlacementPolicyPropertiesResponse(
-        String affinityType,
-        @Nullable String displayName,
-        String provisioningState,
-        @Nullable String state,
-        String type,
-        List<String> vmMembers) {
+        @OutputCustomType.Parameter("affinityType") String affinityType,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmMembers") List<String> vmMembers) {
         this.affinityType = affinityType;
         this.displayName = displayName;
         this.provisioningState = provisioningState;
@@ -134,32 +134,32 @@ public final class VmVmPlacementPolicyPropertiesResponse {
     	      this.vmMembers = defaults.vmMembers;
         }
 
-        public Builder setAffinityType(String affinityType) {
+        public Builder affinityType(String affinityType) {
             this.affinityType = Objects.requireNonNull(affinityType);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmMembers(List<String> vmMembers) {
+        public Builder vmMembers(List<String> vmMembers) {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }

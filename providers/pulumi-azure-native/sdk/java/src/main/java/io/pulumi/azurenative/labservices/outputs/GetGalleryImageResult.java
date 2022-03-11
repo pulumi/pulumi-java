@@ -101,25 +101,25 @@ public final class GetGalleryImageResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"author","createdDate","description","icon","id","imageReference","isEnabled","isOverride","isPlanAuthorized","latestOperationResult","location","name","planId","provisioningState","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetGalleryImageResult(
-        String author,
-        String createdDate,
-        String description,
-        String icon,
-        String id,
-        GalleryImageReferenceResponse imageReference,
-        @Nullable Boolean isEnabled,
-        @Nullable Boolean isOverride,
-        @Nullable Boolean isPlanAuthorized,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        String planId,
-        @Nullable String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("author") String author,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("icon") String icon,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageReference") GalleryImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("isOverride") @Nullable Boolean isOverride,
+        @OutputCustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("planId") String planId,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.author = author;
         this.createdDate = createdDate;
         this.description = description;
@@ -311,87 +311,87 @@ public final class GetGalleryImageResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setAuthor(String author) {
+        public Builder author(String author) {
             this.author = Objects.requireNonNull(author);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIcon(String icon) {
+        public Builder icon(String icon) {
             this.icon = Objects.requireNonNull(icon);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageReference(GalleryImageReferenceResponse imageReference) {
+        public Builder imageReference(GalleryImageReferenceResponse imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsOverride(@Nullable Boolean isOverride) {
+        public Builder isOverride(@Nullable Boolean isOverride) {
             this.isOverride = isOverride;
             return this;
         }
 
-        public Builder setIsPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
+        public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
-        public Builder setLatestOperationResult(LatestOperationResultResponse latestOperationResult) {
+        public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlanId(String planId) {
+        public Builder planId(String planId) {
             this.planId = Objects.requireNonNull(planId);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }

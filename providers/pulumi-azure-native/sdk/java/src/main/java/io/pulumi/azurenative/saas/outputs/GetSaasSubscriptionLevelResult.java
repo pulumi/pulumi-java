@@ -38,13 +38,13 @@ public final class GetSaasSubscriptionLevelResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","tags","type"})
+    @OutputCustomType.Constructor
     private GetSaasSubscriptionLevelResult(
-        String id,
-        String name,
-        SaasResourceResponseProperties properties,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") SaasResourceResponseProperties properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;
@@ -116,27 +116,27 @@ public final class GetSaasSubscriptionLevelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(SaasResourceResponseProperties properties) {
+        public Builder properties(SaasResourceResponseProperties properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

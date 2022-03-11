@@ -51,16 +51,16 @@ public final class GetPeeringResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authorizedNetwork","createTime","domainResource","labels","name","state","statusMessage","updateTime"})
+    @OutputCustomType.Constructor
     private GetPeeringResult(
-        String authorizedNetwork,
-        String createTime,
-        String domainResource,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String statusMessage,
-        String updateTime) {
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("domainResource") String domainResource,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.domainResource = domainResource;
@@ -162,42 +162,42 @@ public final class GetPeeringResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAuthorizedNetwork(String authorizedNetwork) {
+        public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDomainResource(String domainResource) {
+        public Builder domainResource(String domainResource) {
             this.domainResource = Objects.requireNonNull(domainResource);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

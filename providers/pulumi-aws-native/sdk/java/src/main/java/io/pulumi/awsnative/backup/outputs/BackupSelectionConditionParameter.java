@@ -14,10 +14,10 @@ public final class BackupSelectionConditionParameter {
     private final @Nullable String conditionKey;
     private final @Nullable String conditionValue;
 
-    @OutputCustomType.Constructor({"conditionKey","conditionValue"})
+    @OutputCustomType.Constructor
     private BackupSelectionConditionParameter(
-        @Nullable String conditionKey,
-        @Nullable String conditionValue) {
+        @OutputCustomType.Parameter("conditionKey") @Nullable String conditionKey,
+        @OutputCustomType.Parameter("conditionValue") @Nullable String conditionValue) {
         this.conditionKey = conditionKey;
         this.conditionValue = conditionValue;
     }
@@ -51,12 +51,12 @@ public final class BackupSelectionConditionParameter {
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder setConditionKey(@Nullable String conditionKey) {
+        public Builder conditionKey(@Nullable String conditionKey) {
             this.conditionKey = conditionKey;
             return this;
         }
 
-        public Builder setConditionValue(@Nullable String conditionValue) {
+        public Builder conditionValue(@Nullable String conditionValue) {
             this.conditionValue = conditionValue;
             return this;
         }

@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"isControlGroup","trafficAllocation","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse(
-        Boolean isControlGroup,
-        Double trafficAllocation,
-        String version) {
+        @OutputCustomType.Parameter("isControlGroup") Boolean isControlGroup,
+        @OutputCustomType.Parameter("trafficAllocation") Double trafficAllocation,
+        @OutputCustomType.Parameter("version") String version) {
         this.isControlGroup = isControlGroup;
         this.trafficAllocation = trafficAllocation;
         this.version = version;
@@ -83,17 +83,17 @@ public final class GoogleCloudDialogflowCxV3beta1VersionVariantsVariantResponse 
     	      this.version = defaults.version;
         }
 
-        public Builder setIsControlGroup(Boolean isControlGroup) {
+        public Builder isControlGroup(Boolean isControlGroup) {
             this.isControlGroup = Objects.requireNonNull(isControlGroup);
             return this;
         }
 
-        public Builder setTrafficAllocation(Double trafficAllocation) {
+        public Builder trafficAllocation(Double trafficAllocation) {
             this.trafficAllocation = Objects.requireNonNull(trafficAllocation);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

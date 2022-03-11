@@ -39,13 +39,13 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"metricDimensions","metricName","namespace","statistic","unit"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingConfigurationCustomizedMetricSpecification(
-        @Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions,
-        String metricName,
-        String namespace,
-        String statistic,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("metricDimensions") @Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("statistic") String statistic,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.metricDimensions = metricDimensions;
         this.metricName = metricName;
         this.namespace = namespace;
@@ -117,27 +117,27 @@ public final class PolicyTargetTrackingConfigurationCustomizedMetricSpecificatio
     	      this.unit = defaults.unit;
         }
 
-        public Builder setMetricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions) {
+        public Builder metricDimensions(@Nullable List<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationMetricDimension> metricDimensions) {
             this.metricDimensions = metricDimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

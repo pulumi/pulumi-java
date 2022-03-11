@@ -17,8 +17,8 @@ public final class ListKustoPoolFollowerDatabasesResult {
      */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListKustoPoolFollowerDatabasesResult(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListKustoPoolFollowerDatabasesResult(@OutputCustomType.Parameter("value") @Nullable List<FollowerDatabaseDefinitionResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListKustoPoolFollowerDatabasesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+        public Builder value(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
             this.value = value;
             return this;
         }

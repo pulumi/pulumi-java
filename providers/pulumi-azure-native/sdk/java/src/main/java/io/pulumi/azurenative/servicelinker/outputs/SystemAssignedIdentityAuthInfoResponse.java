@@ -16,8 +16,8 @@ public final class SystemAssignedIdentityAuthInfoResponse {
      */
     private final String authType;
 
-    @OutputCustomType.Constructor({"authType"})
-    private SystemAssignedIdentityAuthInfoResponse(String authType) {
+    @OutputCustomType.Constructor
+    private SystemAssignedIdentityAuthInfoResponse(@OutputCustomType.Parameter("authType") String authType) {
         this.authType = authType;
     }
 
@@ -50,7 +50,7 @@ public final class SystemAssignedIdentityAuthInfoResponse {
     	      this.authType = defaults.authType;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }

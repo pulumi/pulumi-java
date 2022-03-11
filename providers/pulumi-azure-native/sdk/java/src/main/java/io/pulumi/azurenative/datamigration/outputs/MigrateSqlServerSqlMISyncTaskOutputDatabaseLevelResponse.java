@@ -80,21 +80,21 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
      */
     private final String startedOn;
 
-    @OutputCustomType.Constructor({"activeBackupSets","containerName","endedOn","errorPrefix","exceptionsAndWarnings","fullBackupSetInfo","id","isFullBackupRestored","lastRestoredBackupSetInfo","migrationState","resultType","sourceDatabaseName","startedOn"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(
-        List<BackupSetInfoResponse> activeBackupSets,
-        String containerName,
-        String endedOn,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        BackupSetInfoResponse fullBackupSetInfo,
-        String id,
-        Boolean isFullBackupRestored,
-        BackupSetInfoResponse lastRestoredBackupSetInfo,
-        String migrationState,
-        String resultType,
-        String sourceDatabaseName,
-        String startedOn) {
+        @OutputCustomType.Parameter("activeBackupSets") List<BackupSetInfoResponse> activeBackupSets,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("fullBackupSetInfo") BackupSetInfoResponse fullBackupSetInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isFullBackupRestored") Boolean isFullBackupRestored,
+        @OutputCustomType.Parameter("lastRestoredBackupSetInfo") BackupSetInfoResponse lastRestoredBackupSetInfo,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @OutputCustomType.Parameter("startedOn") String startedOn) {
         this.activeBackupSets = activeBackupSets;
         this.containerName = containerName;
         this.endedOn = endedOn;
@@ -247,67 +247,67 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse {
     	      this.startedOn = defaults.startedOn;
         }
 
-        public Builder setActiveBackupSets(List<BackupSetInfoResponse> activeBackupSets) {
+        public Builder activeBackupSets(List<BackupSetInfoResponse> activeBackupSets) {
             this.activeBackupSets = Objects.requireNonNull(activeBackupSets);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setErrorPrefix(String errorPrefix) {
+        public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setFullBackupSetInfo(BackupSetInfoResponse fullBackupSetInfo) {
+        public Builder fullBackupSetInfo(BackupSetInfoResponse fullBackupSetInfo) {
             this.fullBackupSetInfo = Objects.requireNonNull(fullBackupSetInfo);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsFullBackupRestored(Boolean isFullBackupRestored) {
+        public Builder isFullBackupRestored(Boolean isFullBackupRestored) {
             this.isFullBackupRestored = Objects.requireNonNull(isFullBackupRestored);
             return this;
         }
 
-        public Builder setLastRestoredBackupSetInfo(BackupSetInfoResponse lastRestoredBackupSetInfo) {
+        public Builder lastRestoredBackupSetInfo(BackupSetInfoResponse lastRestoredBackupSetInfo) {
             this.lastRestoredBackupSetInfo = Objects.requireNonNull(lastRestoredBackupSetInfo);
             return this;
         }
 
-        public Builder setMigrationState(String migrationState) {
+        public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }

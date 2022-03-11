@@ -14,10 +14,10 @@ public final class AssetModelTumblingWindow {
     private final String interval;
     private final @Nullable String offset;
 
-    @OutputCustomType.Constructor({"interval","offset"})
+    @OutputCustomType.Constructor
     private AssetModelTumblingWindow(
-        String interval,
-        @Nullable String offset) {
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("offset") @Nullable String offset) {
         this.interval = interval;
         this.offset = offset;
     }
@@ -51,12 +51,12 @@ public final class AssetModelTumblingWindow {
     	      this.offset = defaults.offset;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setOffset(@Nullable String offset) {
+        public Builder offset(@Nullable String offset) {
             this.offset = offset;
             return this;
         }

@@ -255,132 +255,132 @@ public final class VMwareCbtEnableMigrationInputArgs extends io.pulumi.resources
     	      this.vmwareMachineId = defaults.vmwareMachineId;
         }
 
-        public Builder setDataMoverRunAsAccountId(Input<String> dataMoverRunAsAccountId) {
+        public Builder dataMoverRunAsAccountId(Input<String> dataMoverRunAsAccountId) {
             this.dataMoverRunAsAccountId = Objects.requireNonNull(dataMoverRunAsAccountId);
             return this;
         }
 
-        public Builder setDataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
+        public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
             this.dataMoverRunAsAccountId = Input.of(Objects.requireNonNull(dataMoverRunAsAccountId));
             return this;
         }
 
-        public Builder setDisksToInclude(Input<List<VMwareCbtDiskInputArgs>> disksToInclude) {
+        public Builder disksToInclude(Input<List<VMwareCbtDiskInputArgs>> disksToInclude) {
             this.disksToInclude = Objects.requireNonNull(disksToInclude);
             return this;
         }
 
-        public Builder setDisksToInclude(List<VMwareCbtDiskInputArgs> disksToInclude) {
+        public Builder disksToInclude(List<VMwareCbtDiskInputArgs> disksToInclude) {
             this.disksToInclude = Input.of(Objects.requireNonNull(disksToInclude));
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,LicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,LicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,LicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setSnapshotRunAsAccountId(Input<String> snapshotRunAsAccountId) {
+        public Builder snapshotRunAsAccountId(Input<String> snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Objects.requireNonNull(snapshotRunAsAccountId);
             return this;
         }
 
-        public Builder setSnapshotRunAsAccountId(String snapshotRunAsAccountId) {
+        public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
             this.snapshotRunAsAccountId = Input.of(Objects.requireNonNull(snapshotRunAsAccountId));
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable Input<String> targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = Input.ofNullable(targetAvailabilitySetId);
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable Input<String> targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
-        public Builder setTargetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
+        public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
             this.targetBootDiagnosticsStorageAccountId = Input.ofNullable(targetBootDiagnosticsStorageAccountId);
             return this;
         }
 
-        public Builder setTargetNetworkId(Input<String> targetNetworkId) {
+        public Builder targetNetworkId(Input<String> targetNetworkId) {
             this.targetNetworkId = Objects.requireNonNull(targetNetworkId);
             return this;
         }
 
-        public Builder setTargetNetworkId(String targetNetworkId) {
+        public Builder targetNetworkId(String targetNetworkId) {
             this.targetNetworkId = Input.of(Objects.requireNonNull(targetNetworkId));
             return this;
         }
 
-        public Builder setTargetResourceGroupId(Input<String> targetResourceGroupId) {
+        public Builder targetResourceGroupId(Input<String> targetResourceGroupId) {
             this.targetResourceGroupId = Objects.requireNonNull(targetResourceGroupId);
             return this;
         }
 
-        public Builder setTargetResourceGroupId(String targetResourceGroupId) {
+        public Builder targetResourceGroupId(String targetResourceGroupId) {
             this.targetResourceGroupId = Input.of(Objects.requireNonNull(targetResourceGroupId));
             return this;
         }
 
-        public Builder setTargetSubnetName(@Nullable Input<String> targetSubnetName) {
+        public Builder targetSubnetName(@Nullable Input<String> targetSubnetName) {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
 
-        public Builder setTargetSubnetName(@Nullable String targetSubnetName) {
+        public Builder targetSubnetName(@Nullable String targetSubnetName) {
             this.targetSubnetName = Input.ofNullable(targetSubnetName);
             return this;
         }
 
-        public Builder setTargetVmName(@Nullable Input<String> targetVmName) {
+        public Builder targetVmName(@Nullable Input<String> targetVmName) {
             this.targetVmName = targetVmName;
             return this;
         }
 
-        public Builder setTargetVmName(@Nullable String targetVmName) {
+        public Builder targetVmName(@Nullable String targetVmName) {
             this.targetVmName = Input.ofNullable(targetVmName);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable Input<String> targetVmSize) {
+        public Builder targetVmSize(@Nullable Input<String> targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = Input.ofNullable(targetVmSize);
             return this;
         }
 
-        public Builder setVmwareMachineId(Input<String> vmwareMachineId) {
+        public Builder vmwareMachineId(Input<String> vmwareMachineId) {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
 
-        public Builder setVmwareMachineId(String vmwareMachineId) {
+        public Builder vmwareMachineId(String vmwareMachineId) {
             this.vmwareMachineId = Input.of(Objects.requireNonNull(vmwareMachineId));
             return this;
         }

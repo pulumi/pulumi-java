@@ -20,10 +20,10 @@ public final class CatalogDatabaseTargetDatabase {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName"})
+    @OutputCustomType.Constructor
     private CatalogDatabaseTargetDatabase(
-        String catalogId,
-        String databaseName) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
     }
@@ -65,12 +65,12 @@ public final class CatalogDatabaseTargetDatabase {
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }

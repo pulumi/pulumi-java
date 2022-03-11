@@ -55,7 +55,7 @@ public final class MonitoringScheduleStoppingCondition extends io.pulumi.resourc
     	      this.maxRuntimeInSeconds = defaults.maxRuntimeInSeconds;
         }
 
-        public Builder setMaxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
+        public Builder maxRuntimeInSeconds(Integer maxRuntimeInSeconds) {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }

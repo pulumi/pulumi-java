@@ -29,11 +29,11 @@ public final class EnvFromSource {
      */
     private final @Nullable SecretEnvSource secretRef;
 
-    @OutputCustomType.Constructor({"configMapRef","prefix","secretRef"})
+    @OutputCustomType.Constructor
     private EnvFromSource(
-        @Nullable ConfigMapEnvSource configMapRef,
-        @Nullable String prefix,
-        @Nullable SecretEnvSource secretRef) {
+        @OutputCustomType.Parameter("configMapRef") @Nullable ConfigMapEnvSource configMapRef,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretEnvSource secretRef) {
         this.configMapRef = configMapRef;
         this.prefix = prefix;
         this.secretRef = secretRef;
@@ -85,17 +85,17 @@ public final class EnvFromSource {
     	      this.secretRef = defaults.secretRef;
         }
 
-        public Builder setConfigMapRef(@Nullable ConfigMapEnvSource configMapRef) {
+        public Builder configMapRef(@Nullable ConfigMapEnvSource configMapRef) {
             this.configMapRef = configMapRef;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretEnvSource secretRef) {
+        public Builder secretRef(@Nullable SecretEnvSource secretRef) {
             this.secretRef = secretRef;
             return this;
         }

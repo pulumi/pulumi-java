@@ -38,12 +38,12 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor({"allowedSuccessCodes","gcsObject","interpreter","localPath"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigPreStepWindowsExecStepConfig(
-        @Nullable List<Integer> allowedSuccessCodes,
-        @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject gcsObject,
-        @Nullable String interpreter,
-        @Nullable String localPath) {
+        @OutputCustomType.Parameter("allowedSuccessCodes") @Nullable List<Integer> allowedSuccessCodes,
+        @OutputCustomType.Parameter("gcsObject") @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject gcsObject,
+        @OutputCustomType.Parameter("interpreter") @Nullable String interpreter,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;
@@ -108,22 +108,22 @@ public final class PatchDeploymentPatchConfigPreStepWindowsExecStepConfig {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
+        public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
             this.allowedSuccessCodes = allowedSuccessCodes;
             return this;
         }
 
-        public Builder setGcsObject(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject gcsObject) {
+        public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfigGcsObject gcsObject) {
             this.gcsObject = gcsObject;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable String interpreter) {
+        public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }

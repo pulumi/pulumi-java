@@ -23,10 +23,10 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"roles","state"})
+    @OutputCustomType.Constructor
     private SecurityContactPropertiesResponseNotificationsByRole(
-        @Nullable List<String> roles,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.roles = roles;
         this.state = state;
     }
@@ -68,12 +68,12 @@ public final class SecurityContactPropertiesResponseNotificationsByRole {
     	      this.state = defaults.state;
         }
 
-        public Builder setRoles(@Nullable List<String> roles) {
+        public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

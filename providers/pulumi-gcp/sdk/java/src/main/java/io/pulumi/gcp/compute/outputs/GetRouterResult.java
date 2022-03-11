@@ -29,18 +29,18 @@ public final class GetRouterResult {
     private final @Nullable String region;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bgps","creationTimestamp","description","encryptedInterconnectRouter","id","name","network","project","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRouterResult(
-        List<GetRouterBgp> bgps,
-        String creationTimestamp,
-        String description,
-        Boolean encryptedInterconnectRouter,
-        String id,
-        String name,
-        String network,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("bgps") List<GetRouterBgp> bgps,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bgps = bgps;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -126,52 +126,52 @@ public final class GetRouterResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBgps(List<GetRouterBgp> bgps) {
+        public Builder bgps(List<GetRouterBgp> bgps) {
             this.bgps = Objects.requireNonNull(bgps);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

@@ -21,10 +21,10 @@ public final class CapacityReservationPropertiesResponse {
      */
     private final Double minCapacity;
 
-    @OutputCustomType.Constructor({"lastSkuUpdate","minCapacity"})
+    @OutputCustomType.Constructor
     private CapacityReservationPropertiesResponse(
-        String lastSkuUpdate,
-        Double minCapacity) {
+        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @OutputCustomType.Parameter("minCapacity") Double minCapacity) {
         this.lastSkuUpdate = lastSkuUpdate;
         this.minCapacity = minCapacity;
     }
@@ -66,12 +66,12 @@ public final class CapacityReservationPropertiesResponse {
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setLastSkuUpdate(String lastSkuUpdate) {
+        public Builder lastSkuUpdate(String lastSkuUpdate) {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
 
-        public Builder setMinCapacity(Double minCapacity) {
+        public Builder minCapacity(Double minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }

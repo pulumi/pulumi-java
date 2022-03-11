@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
      */
     private final DeploymentResponse deployment;
 
-    @OutputCustomType.Constructor({"deployment"})
-    private GrafeasV1beta1DeploymentDetailsResponse(DeploymentResponse deployment) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1DeploymentDetailsResponse(@OutputCustomType.Parameter("deployment") DeploymentResponse deployment) {
         this.deployment = deployment;
     }
 
@@ -48,7 +48,7 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
     	      this.deployment = defaults.deployment;
         }
 
-        public Builder setDeployment(DeploymentResponse deployment) {
+        public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }

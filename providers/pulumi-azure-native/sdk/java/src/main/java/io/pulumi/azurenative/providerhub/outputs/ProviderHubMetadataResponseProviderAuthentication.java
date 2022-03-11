@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ProviderHubMetadataResponseProviderAuthentication {
     private final List<String> allowedAudiences;
 
-    @OutputCustomType.Constructor({"allowedAudiences"})
-    private ProviderHubMetadataResponseProviderAuthentication(List<String> allowedAudiences) {
+    @OutputCustomType.Constructor
+    private ProviderHubMetadataResponseProviderAuthentication(@OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences) {
         this.allowedAudiences = allowedAudiences;
     }
 
@@ -41,7 +41,7 @@ public final class ProviderHubMetadataResponseProviderAuthentication {
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(List<String> allowedAudiences) {
+        public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }

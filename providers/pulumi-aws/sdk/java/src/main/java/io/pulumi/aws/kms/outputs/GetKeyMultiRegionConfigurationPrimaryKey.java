@@ -12,10 +12,10 @@ public final class GetKeyMultiRegionConfigurationPrimaryKey {
     private final String arn;
     private final String region;
 
-    @OutputCustomType.Constructor({"arn","region"})
+    @OutputCustomType.Constructor
     private GetKeyMultiRegionConfigurationPrimaryKey(
-        String arn,
-        String region) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("region") String region) {
         this.arn = arn;
         this.region = region;
     }
@@ -49,12 +49,12 @@ public final class GetKeyMultiRegionConfigurationPrimaryKey {
     	      this.region = defaults.region;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

@@ -45,19 +45,19 @@ public final class GetNatGatewayResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"allocationId","connectivityType","filters","id","networkInterfaceId","privateIp","publicIp","state","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetNatGatewayResult(
-        String allocationId,
-        String connectivityType,
-        @Nullable List<GetNatGatewayFilter> filters,
-        String id,
-        String networkInterfaceId,
-        String privateIp,
-        String publicIp,
-        String state,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("allocationId") String allocationId,
+        @OutputCustomType.Parameter("connectivityType") String connectivityType,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetNatGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("publicIp") String publicIp,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.allocationId = allocationId;
         this.connectivityType = connectivityType;
         this.filters = filters;
@@ -165,57 +165,57 @@ public final class GetNatGatewayResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAllocationId(String allocationId) {
+        public Builder allocationId(String allocationId) {
             this.allocationId = Objects.requireNonNull(allocationId);
             return this;
         }
 
-        public Builder setConnectivityType(String connectivityType) {
+        public Builder connectivityType(String connectivityType) {
             this.connectivityType = Objects.requireNonNull(connectivityType);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetNatGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetNatGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

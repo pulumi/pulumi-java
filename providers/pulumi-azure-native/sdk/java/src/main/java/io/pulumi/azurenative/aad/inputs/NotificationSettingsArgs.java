@@ -94,32 +94,32 @@ public final class NotificationSettingsArgs extends io.pulumi.resources.Resource
     	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
         }
 
-        public Builder setAdditionalRecipients(@Nullable Input<List<String>> additionalRecipients) {
+        public Builder additionalRecipients(@Nullable Input<List<String>> additionalRecipients) {
             this.additionalRecipients = additionalRecipients;
             return this;
         }
 
-        public Builder setAdditionalRecipients(@Nullable List<String> additionalRecipients) {
+        public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
             this.additionalRecipients = Input.ofNullable(additionalRecipients);
             return this;
         }
 
-        public Builder setNotifyDcAdmins(@Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
+        public Builder notifyDcAdmins(@Nullable Input<Either<String,NotifyDcAdmins>> notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
-        public Builder setNotifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
+        public Builder notifyDcAdmins(@Nullable Either<String,NotifyDcAdmins> notifyDcAdmins) {
             this.notifyDcAdmins = Input.ofNullable(notifyDcAdmins);
             return this;
         }
 
-        public Builder setNotifyGlobalAdmins(@Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
+        public Builder notifyGlobalAdmins(@Nullable Input<Either<String,NotifyGlobalAdmins>> notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
 
-        public Builder setNotifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
+        public Builder notifyGlobalAdmins(@Nullable Either<String,NotifyGlobalAdmins> notifyGlobalAdmins) {
             this.notifyGlobalAdmins = Input.ofNullable(notifyGlobalAdmins);
             return this;
         }

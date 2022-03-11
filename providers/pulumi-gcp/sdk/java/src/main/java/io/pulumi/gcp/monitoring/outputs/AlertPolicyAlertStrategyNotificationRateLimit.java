@@ -17,8 +17,8 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor({"period"})
-    private AlertPolicyAlertStrategyNotificationRateLimit(@Nullable String period) {
+    @OutputCustomType.Constructor
+    private AlertPolicyAlertStrategyNotificationRateLimit(@OutputCustomType.Parameter("period") @Nullable String period) {
         this.period = period;
     }
 
@@ -50,7 +50,7 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }

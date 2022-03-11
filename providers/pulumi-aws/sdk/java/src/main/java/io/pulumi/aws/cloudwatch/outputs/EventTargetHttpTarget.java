@@ -28,11 +28,11 @@ public final class EventTargetHttpTarget {
      */
     private final @Nullable Map<String,String> queryStringParameters;
 
-    @OutputCustomType.Constructor({"headerParameters","pathParameterValues","queryStringParameters"})
+    @OutputCustomType.Constructor
     private EventTargetHttpTarget(
-        @Nullable Map<String,String> headerParameters,
-        @Nullable List<String> pathParameterValues,
-        @Nullable Map<String,String> queryStringParameters) {
+        @OutputCustomType.Parameter("headerParameters") @Nullable Map<String,String> headerParameters,
+        @OutputCustomType.Parameter("pathParameterValues") @Nullable List<String> pathParameterValues,
+        @OutputCustomType.Parameter("queryStringParameters") @Nullable Map<String,String> queryStringParameters) {
         this.headerParameters = headerParameters;
         this.pathParameterValues = pathParameterValues;
         this.queryStringParameters = queryStringParameters;
@@ -84,17 +84,17 @@ public final class EventTargetHttpTarget {
     	      this.queryStringParameters = defaults.queryStringParameters;
         }
 
-        public Builder setHeaderParameters(@Nullable Map<String,String> headerParameters) {
+        public Builder headerParameters(@Nullable Map<String,String> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
 
-        public Builder setPathParameterValues(@Nullable List<String> pathParameterValues) {
+        public Builder pathParameterValues(@Nullable List<String> pathParameterValues) {
             this.pathParameterValues = pathParameterValues;
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable Map<String,String> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable Map<String,String> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }

@@ -50,12 +50,12 @@ public final class StackSetInstanceDeploymentTargetsGetArgs extends io.pulumi.re
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = Input.ofNullable(organizationalUnitIds);
             return this;
         }

@@ -22,10 +22,10 @@ public final class ClusterClientAuthenticationSasl {
      */
     private final @Nullable Boolean scram;
 
-    @OutputCustomType.Constructor({"iam","scram"})
+    @OutputCustomType.Constructor
     private ClusterClientAuthenticationSasl(
-        @Nullable Boolean iam,
-        @Nullable Boolean scram) {
+        @OutputCustomType.Parameter("iam") @Nullable Boolean iam,
+        @OutputCustomType.Parameter("scram") @Nullable Boolean scram) {
         this.iam = iam;
         this.scram = scram;
     }
@@ -67,12 +67,12 @@ public final class ClusterClientAuthenticationSasl {
     	      this.scram = defaults.scram;
         }
 
-        public Builder setIam(@Nullable Boolean iam) {
+        public Builder iam(@Nullable Boolean iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setScram(@Nullable Boolean scram) {
+        public Builder scram(@Nullable Boolean scram) {
             this.scram = scram;
             return this;
         }

@@ -26,11 +26,11 @@ public final class GetInstancesResult {
      */
     private final List<String> identityStoreIds;
 
-    @OutputCustomType.Constructor({"arns","id","identityStoreIds"})
+    @OutputCustomType.Constructor
     private GetInstancesResult(
-        List<String> arns,
-        String id,
-        List<String> identityStoreIds) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityStoreIds") List<String> identityStoreIds) {
         this.arns = arns;
         this.id = id;
         this.identityStoreIds = identityStoreIds;
@@ -82,17 +82,17 @@ public final class GetInstancesResult {
     	      this.identityStoreIds = defaults.identityStoreIds;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityStoreIds(List<String> identityStoreIds) {
+        public Builder identityStoreIds(List<String> identityStoreIds) {
             this.identityStoreIds = Objects.requireNonNull(identityStoreIds);
             return this;
         }

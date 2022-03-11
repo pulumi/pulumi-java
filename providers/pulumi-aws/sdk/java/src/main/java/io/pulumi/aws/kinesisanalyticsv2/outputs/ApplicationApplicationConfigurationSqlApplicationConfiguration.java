@@ -30,11 +30,11 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource;
 
-    @OutputCustomType.Constructor({"input","outputs","referenceDataSource"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfiguration(
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
-        @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
-        @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
+        @OutputCustomType.Parameter("input") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input,
+        @OutputCustomType.Parameter("outputs") @Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs,
+        @OutputCustomType.Parameter("referenceDataSource") @Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
         this.input = input;
         this.outputs = outputs;
         this.referenceDataSource = referenceDataSource;
@@ -86,17 +86,17 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.referenceDataSource = defaults.referenceDataSource;
         }
 
-        public Builder setInput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input) {
+        public Builder input(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationInput input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs) {
+        public Builder outputs(@Nullable List<ApplicationApplicationConfigurationSqlApplicationConfigurationOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setReferenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
+        public Builder referenceDataSource(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource referenceDataSource) {
             this.referenceDataSource = referenceDataSource;
             return this;
         }

@@ -16,8 +16,8 @@ public final class ListenerRuleConditionSourceIp {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleConditionSourceIp(List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleConditionSourceIp(@OutputCustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 
@@ -49,7 +49,7 @@ public final class ListenerRuleConditionSourceIp {
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

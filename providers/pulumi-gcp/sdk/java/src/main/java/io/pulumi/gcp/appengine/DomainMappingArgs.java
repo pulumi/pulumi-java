@@ -108,42 +108,42 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sslSettings = defaults.sslSettings;
         }
 
-        public Builder setDomainName(Input<String> domainName) {
+        public Builder domainName(Input<String> domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Input.of(Objects.requireNonNull(domainName));
             return this;
         }
 
-        public Builder setOverrideStrategy(@Nullable Input<String> overrideStrategy) {
+        public Builder overrideStrategy(@Nullable Input<String> overrideStrategy) {
             this.overrideStrategy = overrideStrategy;
             return this;
         }
 
-        public Builder setOverrideStrategy(@Nullable String overrideStrategy) {
+        public Builder overrideStrategy(@Nullable String overrideStrategy) {
             this.overrideStrategy = Input.ofNullable(overrideStrategy);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSslSettings(@Nullable Input<DomainMappingSslSettingsArgs> sslSettings) {
+        public Builder sslSettings(@Nullable Input<DomainMappingSslSettingsArgs> sslSettings) {
             this.sslSettings = sslSettings;
             return this;
         }
 
-        public Builder setSslSettings(@Nullable DomainMappingSslSettingsArgs sslSettings) {
+        public Builder sslSettings(@Nullable DomainMappingSslSettingsArgs sslSettings) {
             this.sslSettings = Input.ofNullable(sslSettings);
             return this;
         }

@@ -20,10 +20,10 @@ public final class DatabaseTypeResponse {
      */
     private final String provider;
 
-    @OutputCustomType.Constructor({"engine","provider"})
+    @OutputCustomType.Constructor
     private DatabaseTypeResponse(
-        String engine,
-        String provider) {
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("provider") String provider) {
         this.engine = engine;
         this.provider = provider;
     }
@@ -65,12 +65,12 @@ public final class DatabaseTypeResponse {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }

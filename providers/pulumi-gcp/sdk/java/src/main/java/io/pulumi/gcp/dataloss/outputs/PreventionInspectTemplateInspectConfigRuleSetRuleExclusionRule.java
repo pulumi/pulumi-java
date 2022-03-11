@@ -39,12 +39,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex;
 
-    @OutputCustomType.Constructor({"dictionary","excludeInfoTypes","matchingType","regex"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
-        String matchingType,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
+        @OutputCustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
+        @OutputCustomType.Parameter("excludeInfoTypes") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
+        @OutputCustomType.Parameter("matchingType") String matchingType,
+        @OutputCustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;
@@ -110,22 +110,22 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary) {
+        public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setMatchingType(String matchingType) {
+        public Builder matchingType(String matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
 
-        public Builder setRegex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
+        public Builder regex(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
             this.regex = regex;
             return this;
         }

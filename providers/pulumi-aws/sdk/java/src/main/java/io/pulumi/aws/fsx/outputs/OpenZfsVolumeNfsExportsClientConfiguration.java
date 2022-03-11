@@ -21,10 +21,10 @@ public final class OpenZfsVolumeNfsExportsClientConfiguration {
      */
     private final List<String> options;
 
-    @OutputCustomType.Constructor({"clients","options"})
+    @OutputCustomType.Constructor
     private OpenZfsVolumeNfsExportsClientConfiguration(
-        String clients,
-        List<String> options) {
+        @OutputCustomType.Parameter("clients") String clients,
+        @OutputCustomType.Parameter("options") List<String> options) {
         this.clients = clients;
         this.options = options;
     }
@@ -66,12 +66,12 @@ public final class OpenZfsVolumeNfsExportsClientConfiguration {
     	      this.options = defaults.options;
         }
 
-        public Builder setClients(String clients) {
+        public Builder clients(String clients) {
             this.clients = Objects.requireNonNull(clients);
             return this;
         }
 
-        public Builder setOptions(List<String> options) {
+        public Builder options(List<String> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

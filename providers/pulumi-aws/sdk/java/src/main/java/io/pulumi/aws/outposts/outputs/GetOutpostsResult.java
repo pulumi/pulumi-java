@@ -30,15 +30,15 @@ public final class GetOutpostsResult {
     private final String ownerId;
     private final String siteId;
 
-    @OutputCustomType.Constructor({"arns","availabilityZone","availabilityZoneId","id","ids","ownerId","siteId"})
+    @OutputCustomType.Constructor
     private GetOutpostsResult(
-        List<String> arns,
-        String availabilityZone,
-        String availabilityZoneId,
-        String id,
-        List<String> ids,
-        String ownerId,
-        String siteId) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("siteId") String siteId) {
         this.arns = arns;
         this.availabilityZone = availabilityZone;
         this.availabilityZoneId = availabilityZoneId;
@@ -114,37 +114,37 @@ public final class GetOutpostsResult {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }

@@ -6,7 +6,8 @@ import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
 import io.pulumi.core.Input;
 import io.pulumi.core.annotations.InputImport;
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType.Constructor;
+import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.EngineLogger;
 import io.pulumi.resources.ResourceArgs;
@@ -133,10 +134,11 @@ public class PropertiesSerializerTests {
 
         @InputImport()
         @SuppressWarnings({"FieldCanBeLocal", "unused"})
-        private final @Nullable Input<Integer> intProp;
+        @Nullable
+        private final Input<Integer> intProp;
 
-        @OutputCustomType.Constructor({"intProp"})
-        private HelperArgs(@Nullable Input<Integer> intProp) {
+        @Constructor
+        private HelperArgs(@Nullable @Parameter("intProp") Input<Integer> intProp) {
             this.intProp = intProp;
         }
     }

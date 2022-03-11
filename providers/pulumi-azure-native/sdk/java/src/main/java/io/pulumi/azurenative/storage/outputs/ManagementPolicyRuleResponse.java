@@ -34,12 +34,12 @@ public final class ManagementPolicyRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","enabled","name","type"})
+    @OutputCustomType.Constructor
     private ManagementPolicyRuleResponse(
-        ManagementPolicyDefinitionResponse definition,
-        @Nullable Boolean enabled,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("definition") ManagementPolicyDefinitionResponse definition,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;
@@ -101,22 +101,22 @@ public final class ManagementPolicyRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(ManagementPolicyDefinitionResponse definition) {
+        public Builder definition(ManagementPolicyDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

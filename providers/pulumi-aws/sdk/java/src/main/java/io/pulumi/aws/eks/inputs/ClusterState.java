@@ -301,162 +301,162 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Input<ClusterCertificateAuthorityGetArgs> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable ClusterCertificateAuthorityGetArgs certificateAuthority) {
+        public Builder certificateAuthority(@Nullable ClusterCertificateAuthorityGetArgs certificateAuthority) {
             this.certificateAuthority = Input.ofNullable(certificateAuthority);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setEnabledClusterLogTypes(@Nullable Input<List<String>> enabledClusterLogTypes) {
+        public Builder enabledClusterLogTypes(@Nullable Input<List<String>> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = enabledClusterLogTypes;
             return this;
         }
 
-        public Builder setEnabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
+        public Builder enabledClusterLogTypes(@Nullable List<String> enabledClusterLogTypes) {
             this.enabledClusterLogTypes = Input.ofNullable(enabledClusterLogTypes);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<ClusterEncryptionConfigGetArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable ClusterEncryptionConfigGetArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable ClusterEncryptionConfigGetArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setIdentities(@Nullable Input<List<ClusterIdentityGetArgs>> identities) {
+        public Builder identities(@Nullable Input<List<ClusterIdentityGetArgs>> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentities(@Nullable List<ClusterIdentityGetArgs> identities) {
+        public Builder identities(@Nullable List<ClusterIdentityGetArgs> identities) {
             this.identities = Input.ofNullable(identities);
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable Input<ClusterKubernetesNetworkConfigGetArgs> kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = kubernetesNetworkConfig;
             return this;
         }
 
-        public Builder setKubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
+        public Builder kubernetesNetworkConfig(@Nullable ClusterKubernetesNetworkConfigGetArgs kubernetesNetworkConfig) {
             this.kubernetesNetworkConfig = Input.ofNullable(kubernetesNetworkConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Input<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Input.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable Input<ClusterVpcConfigGetArgs> vpcConfig) {
+        public Builder vpcConfig(@Nullable Input<ClusterVpcConfigGetArgs> vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ClusterVpcConfigGetArgs vpcConfig) {
+        public Builder vpcConfig(@Nullable ClusterVpcConfigGetArgs vpcConfig) {
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }

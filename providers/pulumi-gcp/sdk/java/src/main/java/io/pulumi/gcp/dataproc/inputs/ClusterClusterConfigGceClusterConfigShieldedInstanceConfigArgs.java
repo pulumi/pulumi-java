@@ -86,32 +86,32 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArg
     	      this.enableVtpm = defaults.enableVtpm;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Input<Boolean> enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Input<Boolean> enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Input.ofNullable(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Input<Boolean> enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Input<Boolean> enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
             return this;
         }
 
-        public Builder setEnableVtpm(@Nullable Input<Boolean> enableVtpm) {
+        public Builder enableVtpm(@Nullable Input<Boolean> enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
         }
 
-        public Builder setEnableVtpm(@Nullable Boolean enableVtpm) {
+        public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = Input.ofNullable(enableVtpm);
             return this;
         }

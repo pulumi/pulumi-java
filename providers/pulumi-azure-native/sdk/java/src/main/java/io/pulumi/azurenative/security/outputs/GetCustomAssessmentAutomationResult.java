@@ -68,19 +68,19 @@ public final class GetCustomAssessmentAutomationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assessmentKey","compressedQuery","description","displayName","id","name","remediationDescription","severity","supportedCloud","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCustomAssessmentAutomationResult(
-        @Nullable String assessmentKey,
-        @Nullable String compressedQuery,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable String remediationDescription,
-        @Nullable String severity,
-        @Nullable String supportedCloud,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("assessmentKey") @Nullable String assessmentKey,
+        @OutputCustomType.Parameter("compressedQuery") @Nullable String compressedQuery,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @OutputCustomType.Parameter("severity") @Nullable String severity,
+        @OutputCustomType.Parameter("supportedCloud") @Nullable String supportedCloud,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.assessmentKey = assessmentKey;
         this.compressedQuery = compressedQuery;
         this.description = description;
@@ -212,57 +212,57 @@ public final class GetCustomAssessmentAutomationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssessmentKey(@Nullable String assessmentKey) {
+        public Builder assessmentKey(@Nullable String assessmentKey) {
             this.assessmentKey = assessmentKey;
             return this;
         }
 
-        public Builder setCompressedQuery(@Nullable String compressedQuery) {
+        public Builder compressedQuery(@Nullable String compressedQuery) {
             this.compressedQuery = compressedQuery;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable String remediationDescription) {
+        public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSupportedCloud(@Nullable String supportedCloud) {
+        public Builder supportedCloud(@Nullable String supportedCloud) {
             this.supportedCloud = supportedCloud;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -54,12 +54,12 @@ public final class SecretReplicationUserManagedArgs extends io.pulumi.resources.
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(Input<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
+        public Builder replicas(Input<List<SecretReplicationUserManagedReplicaArgs>> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
 
-        public Builder setReplicas(List<SecretReplicationUserManagedReplicaArgs> replicas) {
+        public Builder replicas(List<SecretReplicationUserManagedReplicaArgs> replicas) {
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }

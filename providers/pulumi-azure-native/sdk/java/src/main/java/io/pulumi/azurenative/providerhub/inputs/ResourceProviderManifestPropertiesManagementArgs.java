@@ -137,82 +137,82 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     	      this.serviceTreeInfos = defaults.serviceTreeInfos;
         }
 
-        public Builder setIncidentContactEmail(@Nullable Input<String> incidentContactEmail) {
+        public Builder incidentContactEmail(@Nullable Input<String> incidentContactEmail) {
             this.incidentContactEmail = incidentContactEmail;
             return this;
         }
 
-        public Builder setIncidentContactEmail(@Nullable String incidentContactEmail) {
+        public Builder incidentContactEmail(@Nullable String incidentContactEmail) {
             this.incidentContactEmail = Input.ofNullable(incidentContactEmail);
             return this;
         }
 
-        public Builder setIncidentRoutingService(@Nullable Input<String> incidentRoutingService) {
+        public Builder incidentRoutingService(@Nullable Input<String> incidentRoutingService) {
             this.incidentRoutingService = incidentRoutingService;
             return this;
         }
 
-        public Builder setIncidentRoutingService(@Nullable String incidentRoutingService) {
+        public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
             this.incidentRoutingService = Input.ofNullable(incidentRoutingService);
             return this;
         }
 
-        public Builder setIncidentRoutingTeam(@Nullable Input<String> incidentRoutingTeam) {
+        public Builder incidentRoutingTeam(@Nullable Input<String> incidentRoutingTeam) {
             this.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
 
-        public Builder setIncidentRoutingTeam(@Nullable String incidentRoutingTeam) {
+        public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
             this.incidentRoutingTeam = Input.ofNullable(incidentRoutingTeam);
             return this;
         }
 
-        public Builder setManifestOwners(@Nullable Input<List<String>> manifestOwners) {
+        public Builder manifestOwners(@Nullable Input<List<String>> manifestOwners) {
             this.manifestOwners = manifestOwners;
             return this;
         }
 
-        public Builder setManifestOwners(@Nullable List<String> manifestOwners) {
+        public Builder manifestOwners(@Nullable List<String> manifestOwners) {
             this.manifestOwners = Input.ofNullable(manifestOwners);
             return this;
         }
 
-        public Builder setResourceAccessPolicy(@Nullable Input<String> resourceAccessPolicy) {
+        public Builder resourceAccessPolicy(@Nullable Input<String> resourceAccessPolicy) {
             this.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
 
-        public Builder setResourceAccessPolicy(@Nullable String resourceAccessPolicy) {
+        public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
             this.resourceAccessPolicy = Input.ofNullable(resourceAccessPolicy);
             return this;
         }
 
-        public Builder setResourceAccessRoles(@Nullable Input<List<Object>> resourceAccessRoles) {
+        public Builder resourceAccessRoles(@Nullable Input<List<Object>> resourceAccessRoles) {
             this.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
 
-        public Builder setResourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
+        public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
             this.resourceAccessRoles = Input.ofNullable(resourceAccessRoles);
             return this;
         }
 
-        public Builder setSchemaOwners(@Nullable Input<List<String>> schemaOwners) {
+        public Builder schemaOwners(@Nullable Input<List<String>> schemaOwners) {
             this.schemaOwners = schemaOwners;
             return this;
         }
 
-        public Builder setSchemaOwners(@Nullable List<String> schemaOwners) {
+        public Builder schemaOwners(@Nullable List<String> schemaOwners) {
             this.schemaOwners = Input.ofNullable(schemaOwners);
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoArgs> serviceTreeInfos) {
             this.serviceTreeInfos = Input.ofNullable(serviceTreeInfos);
             return this;
         }

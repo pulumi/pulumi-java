@@ -39,13 +39,13 @@ public final class EnumResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor({"enumvalue","name","options","sourceContext","syntax"})
+    @OutputCustomType.Constructor
     private EnumResponse(
-        List<EnumValueResponse> enumvalue,
-        String name,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax) {
+        @OutputCustomType.Parameter("enumvalue") List<EnumValueResponse> enumvalue,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @OutputCustomType.Parameter("syntax") String syntax) {
         this.enumvalue = enumvalue;
         this.name = name;
         this.options = options;
@@ -117,27 +117,27 @@ public final class EnumResponse {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setEnumvalue(List<EnumValueResponse> enumvalue) {
+        public Builder enumvalue(List<EnumValueResponse> enumvalue) {
             this.enumvalue = Objects.requireNonNull(enumvalue);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setSourceContext(SourceContextResponse sourceContext) {
+        public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }

@@ -28,11 +28,11 @@ public final class DocumentAttachmentsSource {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","name","values"})
+    @OutputCustomType.Constructor
     private DocumentAttachmentsSource(
-        String key,
-        @Nullable String name,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.name = name;
         this.values = values;
@@ -84,17 +84,17 @@ public final class DocumentAttachmentsSource {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

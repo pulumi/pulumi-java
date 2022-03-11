@@ -38,13 +38,13 @@ public final class JobScheduleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"enabled","endTime","interval","startTime","type"})
+    @OutputCustomType.Constructor
     private JobScheduleResponse(
-        @Nullable Boolean enabled,
-        @Nullable String endTime,
-        @Nullable String interval,
-        @Nullable String startTime,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.enabled = enabled;
         this.endTime = endTime;
         this.interval = interval;
@@ -116,27 +116,27 @@ public final class JobScheduleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

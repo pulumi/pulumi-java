@@ -26,11 +26,11 @@ public final class GoogleCloudMlV1__SchedulingResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"maxRunningTime","maxWaitTime","priority"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__SchedulingResponse(
-        String maxRunningTime,
-        String maxWaitTime,
-        Integer priority) {
+        @OutputCustomType.Parameter("maxRunningTime") String maxRunningTime,
+        @OutputCustomType.Parameter("maxWaitTime") String maxWaitTime,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.maxRunningTime = maxRunningTime;
         this.maxWaitTime = maxWaitTime;
         this.priority = priority;
@@ -82,17 +82,17 @@ public final class GoogleCloudMlV1__SchedulingResponse {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setMaxRunningTime(String maxRunningTime) {
+        public Builder maxRunningTime(String maxRunningTime) {
             this.maxRunningTime = Objects.requireNonNull(maxRunningTime);
             return this;
         }
 
-        public Builder setMaxWaitTime(String maxWaitTime) {
+        public Builder maxWaitTime(String maxWaitTime) {
             this.maxWaitTime = Objects.requireNonNull(maxWaitTime);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

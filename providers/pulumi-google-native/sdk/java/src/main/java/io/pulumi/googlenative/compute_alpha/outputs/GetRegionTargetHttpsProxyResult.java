@@ -97,25 +97,25 @@ public final class GetRegionTargetHttpsProxyResult {
      */
     private final String urlMap;
 
-    @OutputCustomType.Constructor({"authorizationPolicy","certificateMap","creationTimestamp","description","fingerprint","httpFilters","kind","name","proxyBind","quicOverride","region","selfLink","selfLinkWithId","serverTlsPolicy","sslCertificates","sslPolicy","urlMap"})
+    @OutputCustomType.Constructor
     private GetRegionTargetHttpsProxyResult(
-        String authorizationPolicy,
-        String certificateMap,
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        List<String> httpFilters,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String quicOverride,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        String serverTlsPolicy,
-        List<String> sslCertificates,
-        String sslPolicy,
-        String urlMap) {
+        @OutputCustomType.Parameter("authorizationPolicy") String authorizationPolicy,
+        @OutputCustomType.Parameter("certificateMap") String certificateMap,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("httpFilters") List<String> httpFilters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("quicOverride") String quicOverride,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("serverTlsPolicy") String serverTlsPolicy,
+        @OutputCustomType.Parameter("sslCertificates") List<String> sslCertificates,
+        @OutputCustomType.Parameter("sslPolicy") String sslPolicy,
+        @OutputCustomType.Parameter("urlMap") String urlMap) {
         this.authorizationPolicy = authorizationPolicy;
         this.certificateMap = certificateMap;
         this.creationTimestamp = creationTimestamp;
@@ -307,87 +307,87 @@ public final class GetRegionTargetHttpsProxyResult {
     	      this.urlMap = defaults.urlMap;
         }
 
-        public Builder setAuthorizationPolicy(String authorizationPolicy) {
+        public Builder authorizationPolicy(String authorizationPolicy) {
             this.authorizationPolicy = Objects.requireNonNull(authorizationPolicy);
             return this;
         }
 
-        public Builder setCertificateMap(String certificateMap) {
+        public Builder certificateMap(String certificateMap) {
             this.certificateMap = Objects.requireNonNull(certificateMap);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHttpFilters(List<String> httpFilters) {
+        public Builder httpFilters(List<String> httpFilters) {
             this.httpFilters = Objects.requireNonNull(httpFilters);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProxyBind(Boolean proxyBind) {
+        public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
 
-        public Builder setQuicOverride(String quicOverride) {
+        public Builder quicOverride(String quicOverride) {
             this.quicOverride = Objects.requireNonNull(quicOverride);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setServerTlsPolicy(String serverTlsPolicy) {
+        public Builder serverTlsPolicy(String serverTlsPolicy) {
             this.serverTlsPolicy = Objects.requireNonNull(serverTlsPolicy);
             return this;
         }
 
-        public Builder setSslCertificates(List<String> sslCertificates) {
+        public Builder sslCertificates(List<String> sslCertificates) {
             this.sslCertificates = Objects.requireNonNull(sslCertificates);
             return this;
         }
 
-        public Builder setSslPolicy(String sslPolicy) {
+        public Builder sslPolicy(String sslPolicy) {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
 
-        public Builder setUrlMap(String urlMap) {
+        public Builder urlMap(String urlMap) {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }

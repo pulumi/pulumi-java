@@ -17,11 +17,11 @@ public final class ConfigurationAggregatorAccountAggregationSource {
     private final @Nullable Boolean allAwsRegions;
     private final @Nullable List<String> awsRegions;
 
-    @OutputCustomType.Constructor({"accountIds","allAwsRegions","awsRegions"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorAccountAggregationSource(
-        List<String> accountIds,
-        @Nullable Boolean allAwsRegions,
-        @Nullable List<String> awsRegions) {
+        @OutputCustomType.Parameter("accountIds") List<String> accountIds,
+        @OutputCustomType.Parameter("allAwsRegions") @Nullable Boolean allAwsRegions,
+        @OutputCustomType.Parameter("awsRegions") @Nullable List<String> awsRegions) {
         this.accountIds = accountIds;
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
@@ -61,17 +61,17 @@ public final class ConfigurationAggregatorAccountAggregationSource {
     	      this.awsRegions = defaults.awsRegions;
         }
 
-        public Builder setAccountIds(List<String> accountIds) {
+        public Builder accountIds(List<String> accountIds) {
             this.accountIds = Objects.requireNonNull(accountIds);
             return this;
         }
 
-        public Builder setAllAwsRegions(@Nullable Boolean allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
-        public Builder setAwsRegions(@Nullable List<String> awsRegions) {
+        public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }

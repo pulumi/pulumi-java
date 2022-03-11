@@ -23,12 +23,12 @@ public final class AzureRetentionRuleResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"isDefault","lifecycles","name","objectType"})
+    @OutputCustomType.Constructor
     private AzureRetentionRuleResponse(
-        @Nullable Boolean isDefault,
-        List<SourceLifeCycleResponse> lifecycles,
-        String name,
-        String objectType) {
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("lifecycles") List<SourceLifeCycleResponse> lifecycles,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.isDefault = isDefault;
         this.lifecycles = lifecycles;
         this.name = name;
@@ -78,22 +78,22 @@ public final class AzureRetentionRuleResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setLifecycles(List<SourceLifeCycleResponse> lifecycles) {
+        public Builder lifecycles(List<SourceLifeCycleResponse> lifecycles) {
             this.lifecycles = Objects.requireNonNull(lifecycles);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

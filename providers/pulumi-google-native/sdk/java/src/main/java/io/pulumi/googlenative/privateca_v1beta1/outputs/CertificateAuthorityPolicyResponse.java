@@ -51,15 +51,15 @@ public final class CertificateAuthorityPolicyResponse {
      */
     private final ReusableConfigWrapperResponse overwriteConfigValues;
 
-    @OutputCustomType.Constructor({"allowedCommonNames","allowedConfigList","allowedIssuanceModes","allowedLocationsAndOrganizations","allowedSans","maximumLifetime","overwriteConfigValues"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityPolicyResponse(
-        List<String> allowedCommonNames,
-        AllowedConfigListResponse allowedConfigList,
-        IssuanceModesResponse allowedIssuanceModes,
-        List<SubjectResponse> allowedLocationsAndOrganizations,
-        AllowedSubjectAltNamesResponse allowedSans,
-        String maximumLifetime,
-        ReusableConfigWrapperResponse overwriteConfigValues) {
+        @OutputCustomType.Parameter("allowedCommonNames") List<String> allowedCommonNames,
+        @OutputCustomType.Parameter("allowedConfigList") AllowedConfigListResponse allowedConfigList,
+        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedLocationsAndOrganizations") List<SubjectResponse> allowedLocationsAndOrganizations,
+        @OutputCustomType.Parameter("allowedSans") AllowedSubjectAltNamesResponse allowedSans,
+        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @OutputCustomType.Parameter("overwriteConfigValues") ReusableConfigWrapperResponse overwriteConfigValues) {
         this.allowedCommonNames = allowedCommonNames;
         this.allowedConfigList = allowedConfigList;
         this.allowedIssuanceModes = allowedIssuanceModes;
@@ -151,37 +151,37 @@ public final class CertificateAuthorityPolicyResponse {
     	      this.overwriteConfigValues = defaults.overwriteConfigValues;
         }
 
-        public Builder setAllowedCommonNames(List<String> allowedCommonNames) {
+        public Builder allowedCommonNames(List<String> allowedCommonNames) {
             this.allowedCommonNames = Objects.requireNonNull(allowedCommonNames);
             return this;
         }
 
-        public Builder setAllowedConfigList(AllowedConfigListResponse allowedConfigList) {
+        public Builder allowedConfigList(AllowedConfigListResponse allowedConfigList) {
             this.allowedConfigList = Objects.requireNonNull(allowedConfigList);
             return this;
         }
 
-        public Builder setAllowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
             this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
             return this;
         }
 
-        public Builder setAllowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
+        public Builder allowedLocationsAndOrganizations(List<SubjectResponse> allowedLocationsAndOrganizations) {
             this.allowedLocationsAndOrganizations = Objects.requireNonNull(allowedLocationsAndOrganizations);
             return this;
         }
 
-        public Builder setAllowedSans(AllowedSubjectAltNamesResponse allowedSans) {
+        public Builder allowedSans(AllowedSubjectAltNamesResponse allowedSans) {
             this.allowedSans = Objects.requireNonNull(allowedSans);
             return this;
         }
 
-        public Builder setMaximumLifetime(String maximumLifetime) {
+        public Builder maximumLifetime(String maximumLifetime) {
             this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
             return this;
         }
 
-        public Builder setOverwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
+        public Builder overwriteConfigValues(ReusableConfigWrapperResponse overwriteConfigValues) {
             this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
             return this;
         }

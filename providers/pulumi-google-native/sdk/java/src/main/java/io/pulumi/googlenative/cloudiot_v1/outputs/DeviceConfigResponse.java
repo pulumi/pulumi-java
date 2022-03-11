@@ -30,12 +30,12 @@ public final class DeviceConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"binaryData","cloudUpdateTime","deviceAckTime","version"})
+    @OutputCustomType.Constructor
     private DeviceConfigResponse(
-        String binaryData,
-        String cloudUpdateTime,
-        String deviceAckTime,
-        String version) {
+        @OutputCustomType.Parameter("binaryData") String binaryData,
+        @OutputCustomType.Parameter("cloudUpdateTime") String cloudUpdateTime,
+        @OutputCustomType.Parameter("deviceAckTime") String deviceAckTime,
+        @OutputCustomType.Parameter("version") String version) {
         this.binaryData = binaryData;
         this.cloudUpdateTime = cloudUpdateTime;
         this.deviceAckTime = deviceAckTime;
@@ -97,22 +97,22 @@ public final class DeviceConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setBinaryData(String binaryData) {
+        public Builder binaryData(String binaryData) {
             this.binaryData = Objects.requireNonNull(binaryData);
             return this;
         }
 
-        public Builder setCloudUpdateTime(String cloudUpdateTime) {
+        public Builder cloudUpdateTime(String cloudUpdateTime) {
             this.cloudUpdateTime = Objects.requireNonNull(cloudUpdateTime);
             return this;
         }
 
-        public Builder setDeviceAckTime(String deviceAckTime) {
+        public Builder deviceAckTime(String deviceAckTime) {
             this.deviceAckTime = Objects.requireNonNull(deviceAckTime);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -47,14 +47,14 @@ public final class MetricSpec {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerResource","external","object","pods","resource","type"})
+    @OutputCustomType.Constructor
     private MetricSpec(
-        @Nullable ContainerResourceMetricSource containerResource,
-        @Nullable ExternalMetricSource external,
-        @Nullable ObjectMetricSource object,
-        @Nullable PodsMetricSource pods,
-        @Nullable ResourceMetricSource resource,
-        String type) {
+        @OutputCustomType.Parameter("containerResource") @Nullable ContainerResourceMetricSource containerResource,
+        @OutputCustomType.Parameter("external") @Nullable ExternalMetricSource external,
+        @OutputCustomType.Parameter("object") @Nullable ObjectMetricSource object,
+        @OutputCustomType.Parameter("pods") @Nullable PodsMetricSource pods,
+        @OutputCustomType.Parameter("resource") @Nullable ResourceMetricSource resource,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerResource = containerResource;
         this.external = external;
         this.object = object;
@@ -136,32 +136,32 @@ public final class MetricSpec {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerResource(@Nullable ContainerResourceMetricSource containerResource) {
+        public Builder containerResource(@Nullable ContainerResourceMetricSource containerResource) {
             this.containerResource = containerResource;
             return this;
         }
 
-        public Builder setExternal(@Nullable ExternalMetricSource external) {
+        public Builder external(@Nullable ExternalMetricSource external) {
             this.external = external;
             return this;
         }
 
-        public Builder setObject(@Nullable ObjectMetricSource object) {
+        public Builder object(@Nullable ObjectMetricSource object) {
             this.object = object;
             return this;
         }
 
-        public Builder setPods(@Nullable PodsMetricSource pods) {
+        public Builder pods(@Nullable PodsMetricSource pods) {
             this.pods = pods;
             return this;
         }
 
-        public Builder setResource(@Nullable ResourceMetricSource resource) {
+        public Builder resource(@Nullable ResourceMetricSource resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

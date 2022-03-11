@@ -27,11 +27,11 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","principalId","tenantId"})
+    @OutputCustomType.Constructor
     private ClusterIdentityResponseUserAssignedIdentities(
-        String clientId,
-        String principalId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.principalId = principalId;
         this.tenantId = tenantId;
@@ -83,17 +83,17 @@ public final class ClusterIdentityResponseUserAssignedIdentities {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

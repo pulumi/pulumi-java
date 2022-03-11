@@ -59,17 +59,17 @@ public final class FlowEntitlementEncryption {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"algorithm","constantInitializationVector","deviceId","keyType","region","resourceId","roleArn","secretArn","url"})
+    @OutputCustomType.Constructor
     private FlowEntitlementEncryption(
-        FlowEntitlementEncryptionAlgorithm algorithm,
-        @Nullable String constantInitializationVector,
-        @Nullable String deviceId,
-        @Nullable FlowEntitlementEncryptionKeyType keyType,
-        @Nullable String region,
-        @Nullable String resourceId,
-        String roleArn,
-        @Nullable String secretArn,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("algorithm") FlowEntitlementEncryptionAlgorithm algorithm,
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("keyType") @Nullable FlowEntitlementEncryptionKeyType keyType,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.algorithm = algorithm;
         this.constantInitializationVector = constantInitializationVector;
         this.deviceId = deviceId;
@@ -181,47 +181,47 @@ public final class FlowEntitlementEncryption {
     	      this.url = defaults.url;
         }
 
-        public Builder setAlgorithm(FlowEntitlementEncryptionAlgorithm algorithm) {
+        public Builder algorithm(FlowEntitlementEncryptionAlgorithm algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setKeyType(@Nullable FlowEntitlementEncryptionKeyType keyType) {
+        public Builder keyType(@Nullable FlowEntitlementEncryptionKeyType keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

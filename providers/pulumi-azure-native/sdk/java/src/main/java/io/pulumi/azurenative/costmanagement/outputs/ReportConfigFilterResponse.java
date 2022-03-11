@@ -43,14 +43,14 @@ public final class ReportConfigFilterResponse {
      */
     private final @Nullable ReportConfigComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor({"and","dimensions","or","tagKey","tagValue","tags"})
+    @OutputCustomType.Constructor
     private ReportConfigFilterResponse(
-        @Nullable List<ReportConfigFilterResponse> and,
-        @Nullable ReportConfigComparisonExpressionResponse dimensions,
-        @Nullable List<ReportConfigFilterResponse> or,
-        @Nullable ReportConfigComparisonExpressionResponse tagKey,
-        @Nullable ReportConfigComparisonExpressionResponse tagValue,
-        @Nullable ReportConfigComparisonExpressionResponse tags) {
+        @OutputCustomType.Parameter("and") @Nullable List<ReportConfigFilterResponse> and,
+        @OutputCustomType.Parameter("dimensions") @Nullable ReportConfigComparisonExpressionResponse dimensions,
+        @OutputCustomType.Parameter("or") @Nullable List<ReportConfigFilterResponse> or,
+        @OutputCustomType.Parameter("tagKey") @Nullable ReportConfigComparisonExpressionResponse tagKey,
+        @OutputCustomType.Parameter("tagValue") @Nullable ReportConfigComparisonExpressionResponse tagValue,
+        @OutputCustomType.Parameter("tags") @Nullable ReportConfigComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.or = or;
@@ -132,32 +132,32 @@ public final class ReportConfigFilterResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable List<ReportConfigFilterResponse> and) {
+        public Builder and(@Nullable List<ReportConfigFilterResponse> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setDimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
+        public Builder dimensions(@Nullable ReportConfigComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setOr(@Nullable List<ReportConfigFilterResponse> or) {
+        public Builder or(@Nullable List<ReportConfigFilterResponse> or) {
             this.or = or;
             return this;
         }
 
-        public Builder setTagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
+        public Builder tagKey(@Nullable ReportConfigComparisonExpressionResponse tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
+        public Builder tagValue(@Nullable ReportConfigComparisonExpressionResponse tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
-        public Builder setTags(@Nullable ReportConfigComparisonExpressionResponse tags) {
+        public Builder tags(@Nullable ReportConfigComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
         }

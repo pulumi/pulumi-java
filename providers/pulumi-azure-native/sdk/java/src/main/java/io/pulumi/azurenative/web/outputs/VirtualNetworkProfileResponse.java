@@ -32,12 +32,12 @@ public final class VirtualNetworkProfileResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","subnet","type"})
+    @OutputCustomType.Constructor
     private VirtualNetworkProfileResponse(
-        String id,
-        String name,
-        @Nullable String subnet,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.subnet = subnet;
@@ -99,22 +99,22 @@ public final class VirtualNetworkProfileResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

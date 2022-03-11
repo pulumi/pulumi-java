@@ -31,12 +31,12 @@ public final class GetParticipantResult {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"documentsMetadataFilters","name","obfuscatedExternalUserId","role"})
+    @OutputCustomType.Constructor
     private GetParticipantResult(
-        Map<String,String> documentsMetadataFilters,
-        String name,
-        String obfuscatedExternalUserId,
-        String role) {
+        @OutputCustomType.Parameter("documentsMetadataFilters") Map<String,String> documentsMetadataFilters,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @OutputCustomType.Parameter("role") String role) {
         this.documentsMetadataFilters = documentsMetadataFilters;
         this.name = name;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
@@ -98,22 +98,22 @@ public final class GetParticipantResult {
     	      this.role = defaults.role;
         }
 
-        public Builder setDocumentsMetadataFilters(Map<String,String> documentsMetadataFilters) {
+        public Builder documentsMetadataFilters(Map<String,String> documentsMetadataFilters) {
             this.documentsMetadataFilters = Objects.requireNonNull(documentsMetadataFilters);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObfuscatedExternalUserId(String obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

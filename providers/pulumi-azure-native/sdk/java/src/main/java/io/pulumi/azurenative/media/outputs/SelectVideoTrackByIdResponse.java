@@ -22,10 +22,10 @@ public final class SelectVideoTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor({"odataType","trackId"})
+    @OutputCustomType.Constructor
     private SelectVideoTrackByIdResponse(
-        String odataType,
-        Double trackId) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trackId") Double trackId) {
         this.odataType = odataType;
         this.trackId = trackId;
     }
@@ -68,12 +68,12 @@ public final class SelectVideoTrackByIdResponse {
     	      this.trackId = defaults.trackId;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTrackId(Double trackId) {
+        public Builder trackId(Double trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }

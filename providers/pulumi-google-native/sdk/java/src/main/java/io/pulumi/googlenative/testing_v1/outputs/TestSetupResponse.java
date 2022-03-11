@@ -51,15 +51,15 @@ public final class TestSetupResponse {
      */
     private final String networkProfile;
 
-    @OutputCustomType.Constructor({"account","additionalApks","directoriesToPull","dontAutograntPermissions","environmentVariables","filesToPush","networkProfile"})
+    @OutputCustomType.Constructor
     private TestSetupResponse(
-        AccountResponse account,
-        List<ApkResponse> additionalApks,
-        List<String> directoriesToPull,
-        Boolean dontAutograntPermissions,
-        List<EnvironmentVariableResponse> environmentVariables,
-        List<DeviceFileResponse> filesToPush,
-        String networkProfile) {
+        @OutputCustomType.Parameter("account") AccountResponse account,
+        @OutputCustomType.Parameter("additionalApks") List<ApkResponse> additionalApks,
+        @OutputCustomType.Parameter("directoriesToPull") List<String> directoriesToPull,
+        @OutputCustomType.Parameter("dontAutograntPermissions") Boolean dontAutograntPermissions,
+        @OutputCustomType.Parameter("environmentVariables") List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("filesToPush") List<DeviceFileResponse> filesToPush,
+        @OutputCustomType.Parameter("networkProfile") String networkProfile) {
         this.account = account;
         this.additionalApks = additionalApks;
         this.directoriesToPull = directoriesToPull;
@@ -151,37 +151,37 @@ public final class TestSetupResponse {
     	      this.networkProfile = defaults.networkProfile;
         }
 
-        public Builder setAccount(AccountResponse account) {
+        public Builder account(AccountResponse account) {
             this.account = Objects.requireNonNull(account);
             return this;
         }
 
-        public Builder setAdditionalApks(List<ApkResponse> additionalApks) {
+        public Builder additionalApks(List<ApkResponse> additionalApks) {
             this.additionalApks = Objects.requireNonNull(additionalApks);
             return this;
         }
 
-        public Builder setDirectoriesToPull(List<String> directoriesToPull) {
+        public Builder directoriesToPull(List<String> directoriesToPull) {
             this.directoriesToPull = Objects.requireNonNull(directoriesToPull);
             return this;
         }
 
-        public Builder setDontAutograntPermissions(Boolean dontAutograntPermissions) {
+        public Builder dontAutograntPermissions(Boolean dontAutograntPermissions) {
             this.dontAutograntPermissions = Objects.requireNonNull(dontAutograntPermissions);
             return this;
         }
 
-        public Builder setEnvironmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = Objects.requireNonNull(environmentVariables);
             return this;
         }
 
-        public Builder setFilesToPush(List<DeviceFileResponse> filesToPush) {
+        public Builder filesToPush(List<DeviceFileResponse> filesToPush) {
             this.filesToPush = Objects.requireNonNull(filesToPush);
             return this;
         }
 
-        public Builder setNetworkProfile(String networkProfile) {
+        public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }

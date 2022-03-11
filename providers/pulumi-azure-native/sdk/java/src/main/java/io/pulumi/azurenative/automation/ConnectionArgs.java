@@ -152,72 +152,72 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setConnectionType(Input<ConnectionTypeAssociationPropertyArgs> connectionType) {
+        public Builder connectionType(Input<ConnectionTypeAssociationPropertyArgs> connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setConnectionType(ConnectionTypeAssociationPropertyArgs connectionType) {
+        public Builder connectionType(ConnectionTypeAssociationPropertyArgs connectionType) {
             this.connectionType = Input.of(Objects.requireNonNull(connectionType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFieldDefinitionValues(@Nullable Input<Map<String,String>> fieldDefinitionValues) {
+        public Builder fieldDefinitionValues(@Nullable Input<Map<String,String>> fieldDefinitionValues) {
             this.fieldDefinitionValues = fieldDefinitionValues;
             return this;
         }
 
-        public Builder setFieldDefinitionValues(@Nullable Map<String,String> fieldDefinitionValues) {
+        public Builder fieldDefinitionValues(@Nullable Map<String,String> fieldDefinitionValues) {
             this.fieldDefinitionValues = Input.ofNullable(fieldDefinitionValues);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

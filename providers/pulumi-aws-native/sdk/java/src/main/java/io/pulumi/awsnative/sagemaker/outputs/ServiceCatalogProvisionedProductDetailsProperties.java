@@ -14,10 +14,10 @@ public final class ServiceCatalogProvisionedProductDetailsProperties {
     private final @Nullable String provisionedProductId;
     private final @Nullable String provisionedProductStatusMessage;
 
-    @OutputCustomType.Constructor({"provisionedProductId","provisionedProductStatusMessage"})
+    @OutputCustomType.Constructor
     private ServiceCatalogProvisionedProductDetailsProperties(
-        @Nullable String provisionedProductId,
-        @Nullable String provisionedProductStatusMessage) {
+        @OutputCustomType.Parameter("provisionedProductId") @Nullable String provisionedProductId,
+        @OutputCustomType.Parameter("provisionedProductStatusMessage") @Nullable String provisionedProductStatusMessage) {
         this.provisionedProductId = provisionedProductId;
         this.provisionedProductStatusMessage = provisionedProductStatusMessage;
     }
@@ -51,12 +51,12 @@ public final class ServiceCatalogProvisionedProductDetailsProperties {
     	      this.provisionedProductStatusMessage = defaults.provisionedProductStatusMessage;
         }
 
-        public Builder setProvisionedProductId(@Nullable String provisionedProductId) {
+        public Builder provisionedProductId(@Nullable String provisionedProductId) {
             this.provisionedProductId = provisionedProductId;
             return this;
         }
 
-        public Builder setProvisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
+        public Builder provisionedProductStatusMessage(@Nullable String provisionedProductStatusMessage) {
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
         }

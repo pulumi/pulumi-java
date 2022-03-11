@@ -41,14 +41,14 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activityId","errorCode","parameters","result","startTime","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeOperationResultResponse(
-        String activityId,
-        String errorCode,
-        List<String> parameters,
-        String result,
-        String startTime,
-        String type) {
+        @OutputCustomType.Parameter("activityId") String activityId,
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("parameters") List<String> parameters,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.activityId = activityId;
         this.errorCode = errorCode;
         this.parameters = parameters;
@@ -130,32 +130,32 @@ public final class ManagedIntegrationRuntimeOperationResultResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setActivityId(String activityId) {
+        public Builder activityId(String activityId) {
             this.activityId = Objects.requireNonNull(activityId);
             return this;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setParameters(List<String> parameters) {
+        public Builder parameters(List<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

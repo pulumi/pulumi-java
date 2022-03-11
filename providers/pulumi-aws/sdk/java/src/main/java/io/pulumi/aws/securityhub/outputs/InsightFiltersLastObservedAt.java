@@ -28,11 +28,11 @@ public final class InsightFiltersLastObservedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"dateRange","end","start"})
+    @OutputCustomType.Constructor
     private InsightFiltersLastObservedAt(
-        @Nullable InsightFiltersLastObservedAtDateRange dateRange,
-        @Nullable String end,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersLastObservedAtDateRange dateRange,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;
@@ -84,17 +84,17 @@ public final class InsightFiltersLastObservedAt {
     	      this.start = defaults.start;
         }
 
-        public Builder setDateRange(@Nullable InsightFiltersLastObservedAtDateRange dateRange) {
+        public Builder dateRange(@Nullable InsightFiltersLastObservedAtDateRange dateRange) {
             this.dateRange = dateRange;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = start;
             return this;
         }

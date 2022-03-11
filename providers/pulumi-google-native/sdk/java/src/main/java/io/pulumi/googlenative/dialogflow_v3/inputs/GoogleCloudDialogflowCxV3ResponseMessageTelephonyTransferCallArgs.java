@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setPhoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable String phoneNumber) {
+        public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Input.ofNullable(phoneNumber);
             return this;
         }

@@ -48,15 +48,15 @@ public final class GetSourceResult {
      */
     private final VmwareSourceDetailsResponse vmware;
 
-    @OutputCustomType.Constructor({"createTime","description","error","labels","name","updateTime","vmware"})
+    @OutputCustomType.Constructor
     private GetSourceResult(
-        String createTime,
-        String description,
-        StatusResponse error,
-        Map<String,String> labels,
-        String name,
-        String updateTime,
-        VmwareSourceDetailsResponse vmware) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vmware") VmwareSourceDetailsResponse vmware) {
         this.createTime = createTime;
         this.description = description;
         this.error = error;
@@ -148,37 +148,37 @@ public final class GetSourceResult {
     	      this.vmware = defaults.vmware;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVmware(VmwareSourceDetailsResponse vmware) {
+        public Builder vmware(VmwareSourceDetailsResponse vmware) {
             this.vmware = Objects.requireNonNull(vmware);
             return this;
         }

@@ -33,12 +33,12 @@ public final class OSPolicyResourceFileResponse {
      */
     private final OSPolicyResourceFileRemoteResponse remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceFileResponse(
-        Boolean allowInsecure,
-        OSPolicyResourceFileGcsResponse gcs,
-        String localPath,
-        OSPolicyResourceFileRemoteResponse remote) {
+        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") OSPolicyResourceFileGcsResponse gcs,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("remote") OSPolicyResourceFileRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;
@@ -100,22 +100,22 @@ public final class OSPolicyResourceFileResponse {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(Boolean allowInsecure) {
+        public Builder allowInsecure(Boolean allowInsecure) {
             this.allowInsecure = Objects.requireNonNull(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(OSPolicyResourceFileGcsResponse gcs) {
+        public Builder gcs(OSPolicyResourceFileGcsResponse gcs) {
             this.gcs = Objects.requireNonNull(gcs);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setRemote(OSPolicyResourceFileRemoteResponse remote) {
+        public Builder remote(OSPolicyResourceFileRemoteResponse remote) {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }

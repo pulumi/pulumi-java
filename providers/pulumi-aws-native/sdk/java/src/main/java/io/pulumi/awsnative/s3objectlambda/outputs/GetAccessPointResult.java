@@ -32,13 +32,13 @@ public final class GetAccessPointResult {
      */
     private final @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration;
 
-    @OutputCustomType.Constructor({"arn","creationDate","objectLambdaConfiguration","policyStatus","publicAccessBlockConfiguration"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String arn,
-        @Nullable String creationDate,
-        @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
-        @Nullable PolicyStatusProperties policyStatus,
-        @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("objectLambdaConfiguration") @Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration,
+        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus,
+        @OutputCustomType.Parameter("publicAccessBlockConfiguration") @Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.objectLambdaConfiguration = objectLambdaConfiguration;
@@ -102,27 +102,27 @@ public final class GetAccessPointResult {
     	      this.publicAccessBlockConfiguration = defaults.publicAccessBlockConfiguration;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setObjectLambdaConfiguration(@Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration) {
+        public Builder objectLambdaConfiguration(@Nullable AccessPointObjectLambdaConfiguration objectLambdaConfiguration) {
             this.objectLambdaConfiguration = objectLambdaConfiguration;
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable PolicyStatusProperties policyStatus) {
+        public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfiguration publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }

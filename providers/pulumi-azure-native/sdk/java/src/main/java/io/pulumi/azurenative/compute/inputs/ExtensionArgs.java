@@ -75,22 +75,22 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<CloudServiceExtensionPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<CloudServiceExtensionPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable CloudServiceExtensionPropertiesArgs properties) {
+        public Builder properties(@Nullable CloudServiceExtensionPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

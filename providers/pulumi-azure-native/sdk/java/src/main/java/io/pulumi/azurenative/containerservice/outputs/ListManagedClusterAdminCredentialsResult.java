@@ -16,8 +16,8 @@ public final class ListManagedClusterAdminCredentialsResult {
      */
     private final List<CredentialResultResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor({"kubeconfigs"})
-    private ListManagedClusterAdminCredentialsResult(List<CredentialResultResponse> kubeconfigs) {
+    @OutputCustomType.Constructor
+    private ListManagedClusterAdminCredentialsResult(@OutputCustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
         this.kubeconfigs = kubeconfigs;
     }
 
@@ -49,7 +49,7 @@ public final class ListManagedClusterAdminCredentialsResult {
     	      this.kubeconfigs = defaults.kubeconfigs;
         }
 
-        public Builder setKubeconfigs(List<CredentialResultResponse> kubeconfigs) {
+        public Builder kubeconfigs(List<CredentialResultResponse> kubeconfigs) {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }

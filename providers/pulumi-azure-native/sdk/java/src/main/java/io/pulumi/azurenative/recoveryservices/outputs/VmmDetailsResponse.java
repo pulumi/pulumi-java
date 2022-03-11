@@ -16,8 +16,8 @@ public final class VmmDetailsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor({"instanceType"})
-    private VmmDetailsResponse(String instanceType) {
+    @OutputCustomType.Constructor
+    private VmmDetailsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 
@@ -50,7 +50,7 @@ public final class VmmDetailsResponse {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }

@@ -19,10 +19,10 @@ public final class SecurityProfileMetricToRetain {
     private final String metric;
     private final @Nullable SecurityProfileMetricDimension metricDimension;
 
-    @OutputCustomType.Constructor({"metric","metricDimension"})
+    @OutputCustomType.Constructor
     private SecurityProfileMetricToRetain(
-        String metric,
-        @Nullable SecurityProfileMetricDimension metricDimension) {
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension) {
         this.metric = metric;
         this.metricDimension = metricDimension;
     }
@@ -60,12 +60,12 @@ public final class SecurityProfileMetricToRetain {
     	      this.metricDimension = defaults.metricDimension;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }

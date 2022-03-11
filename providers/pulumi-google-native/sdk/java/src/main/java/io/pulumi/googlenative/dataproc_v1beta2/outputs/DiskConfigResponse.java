@@ -26,11 +26,11 @@ public final class DiskConfigResponse {
      */
     private final Integer numLocalSsds;
 
-    @OutputCustomType.Constructor({"bootDiskSizeGb","bootDiskType","numLocalSsds"})
+    @OutputCustomType.Constructor
     private DiskConfigResponse(
-        Integer bootDiskSizeGb,
-        String bootDiskType,
-        Integer numLocalSsds) {
+        @OutputCustomType.Parameter("bootDiskSizeGb") Integer bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") String bootDiskType,
+        @OutputCustomType.Parameter("numLocalSsds") Integer numLocalSsds) {
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
         this.numLocalSsds = numLocalSsds;
@@ -82,17 +82,17 @@ public final class DiskConfigResponse {
     	      this.numLocalSsds = defaults.numLocalSsds;
         }
 
-        public Builder setBootDiskSizeGb(Integer bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(Integer bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(String bootDiskType) {
+        public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
 
-        public Builder setNumLocalSsds(Integer numLocalSsds) {
+        public Builder numLocalSsds(Integer numLocalSsds) {
             this.numLocalSsds = Objects.requireNonNull(numLocalSsds);
             return this;
         }

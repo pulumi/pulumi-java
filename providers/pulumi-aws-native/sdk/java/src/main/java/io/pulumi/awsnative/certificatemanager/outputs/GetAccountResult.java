@@ -15,10 +15,10 @@ public final class GetAccountResult {
     private final @Nullable String accountId;
     private final @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration;
 
-    @OutputCustomType.Constructor({"accountId","expiryEventsConfiguration"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable String accountId,
-        @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("expiryEventsConfiguration") @Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
         this.accountId = accountId;
         this.expiryEventsConfiguration = expiryEventsConfiguration;
     }
@@ -52,12 +52,12 @@ public final class GetAccountResult {
     	      this.expiryEventsConfiguration = defaults.expiryEventsConfiguration;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setExpiryEventsConfiguration(@Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
+        public Builder expiryEventsConfiguration(@Nullable AccountExpiryEventsConfiguration expiryEventsConfiguration) {
             this.expiryEventsConfiguration = expiryEventsConfiguration;
             return this;
         }

@@ -17,8 +17,8 @@ public final class GetBuildServiceBuildResultLogResult {
      */
     private final @Nullable String blobUrl;
 
-    @OutputCustomType.Constructor({"blobUrl"})
-    private GetBuildServiceBuildResultLogResult(@Nullable String blobUrl) {
+    @OutputCustomType.Constructor
+    private GetBuildServiceBuildResultLogResult(@OutputCustomType.Parameter("blobUrl") @Nullable String blobUrl) {
         this.blobUrl = blobUrl;
     }
 
@@ -50,7 +50,7 @@ public final class GetBuildServiceBuildResultLogResult {
     	      this.blobUrl = defaults.blobUrl;
         }
 
-        public Builder setBlobUrl(@Nullable String blobUrl) {
+        public Builder blobUrl(@Nullable String blobUrl) {
             this.blobUrl = blobUrl;
             return this;
         }

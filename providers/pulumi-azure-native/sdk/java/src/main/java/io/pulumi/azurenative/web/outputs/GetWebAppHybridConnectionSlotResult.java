@@ -74,20 +74,20 @@ public final class GetWebAppHybridConnectionSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostname","id","kind","name","port","relayArmUri","relayName","sendKeyName","sendKeyValue","serviceBusNamespace","serviceBusSuffix","type"})
+    @OutputCustomType.Constructor
     private GetWebAppHybridConnectionSlotResult(
-        @Nullable String hostname,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable Integer port,
-        @Nullable String relayArmUri,
-        @Nullable String relayName,
-        @Nullable String sendKeyName,
-        @Nullable String sendKeyValue,
-        @Nullable String serviceBusNamespace,
-        @Nullable String serviceBusSuffix,
-        String type) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("relayArmUri") @Nullable String relayArmUri,
+        @OutputCustomType.Parameter("relayName") @Nullable String relayName,
+        @OutputCustomType.Parameter("sendKeyName") @Nullable String sendKeyName,
+        @OutputCustomType.Parameter("sendKeyValue") @Nullable String sendKeyValue,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("serviceBusSuffix") @Nullable String serviceBusSuffix,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostname = hostname;
         this.id = id;
         this.kind = kind;
@@ -230,62 +230,62 @@ public final class GetWebAppHybridConnectionSlotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRelayArmUri(@Nullable String relayArmUri) {
+        public Builder relayArmUri(@Nullable String relayArmUri) {
             this.relayArmUri = relayArmUri;
             return this;
         }
 
-        public Builder setRelayName(@Nullable String relayName) {
+        public Builder relayName(@Nullable String relayName) {
             this.relayName = relayName;
             return this;
         }
 
-        public Builder setSendKeyName(@Nullable String sendKeyName) {
+        public Builder sendKeyName(@Nullable String sendKeyName) {
             this.sendKeyName = sendKeyName;
             return this;
         }
 
-        public Builder setSendKeyValue(@Nullable String sendKeyValue) {
+        public Builder sendKeyValue(@Nullable String sendKeyValue) {
             this.sendKeyValue = sendKeyValue;
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable String serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
-        public Builder setServiceBusSuffix(@Nullable String serviceBusSuffix) {
+        public Builder serviceBusSuffix(@Nullable String serviceBusSuffix) {
             this.serviceBusSuffix = serviceBusSuffix;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -92,32 +92,32 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.description = defaults.description;
         }
 
-        public Builder setCause(@Nullable Input<String> cause) {
+        public Builder cause(@Nullable Input<String> cause) {
             this.cause = cause;
             return this;
         }
 
-        public Builder setCause(@Nullable String cause) {
+        public Builder cause(@Nullable String cause) {
             this.cause = Input.ofNullable(cause);
             return this;
         }
 
-        public Builder setCode(Input<Either<String,AssessmentStatusCode>> code) {
+        public Builder code(Input<Either<String,AssessmentStatusCode>> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCode(Either<String,AssessmentStatusCode> code) {
+        public Builder code(Either<String,AssessmentStatusCode> code) {
             this.code = Input.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }

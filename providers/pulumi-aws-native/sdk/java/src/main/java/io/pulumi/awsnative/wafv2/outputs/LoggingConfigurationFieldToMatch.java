@@ -39,13 +39,13 @@ public final class LoggingConfigurationFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor({"jsonBody","method","queryString","singleHeader","uriPath"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFieldToMatch(
-        @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable Object uriPath) {
+        @OutputCustomType.Parameter("jsonBody") @Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody,
+        @OutputCustomType.Parameter("method") @Nullable Object method,
+        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader,
+        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.jsonBody = jsonBody;
         this.method = method;
         this.queryString = queryString;
@@ -117,27 +117,27 @@ public final class LoggingConfigurationFieldToMatch {
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setJsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody) {
+        public Builder jsonBody(@Nullable LoggingConfigurationFieldToMatchJsonBodyProperties jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
-        public Builder setMethod(@Nullable Object method) {
+        public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
 
-        public Builder setQueryString(@Nullable Object queryString) {
+        public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader) {
+        public Builder singleHeader(@Nullable LoggingConfigurationFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setUriPath(@Nullable Object uriPath) {
+        public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
         }

@@ -51,13 +51,13 @@ public final class GuestPoliciesAssignment {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"groupLabels","instanceNamePrefixes","instances","osTypes","zones"})
+    @OutputCustomType.Constructor
     private GuestPoliciesAssignment(
-        @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
-        @Nullable List<String> instanceNamePrefixes,
-        @Nullable List<String> instances,
-        @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("groupLabels") @Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") @Nullable List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") @Nullable List<String> instances,
+        @OutputCustomType.Parameter("osTypes") @Nullable List<GuestPoliciesAssignmentOsType> osTypes,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
         this.instances = instances;
@@ -141,27 +141,27 @@ public final class GuestPoliciesAssignment {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setGroupLabels(@Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels) {
+        public Builder groupLabels(@Nullable List<GuestPoliciesAssignmentGroupLabel> groupLabels) {
             this.groupLabels = groupLabels;
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(@Nullable List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = instanceNamePrefixes;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setOsTypes(@Nullable List<GuestPoliciesAssignmentOsType> osTypes) {
+        public Builder osTypes(@Nullable List<GuestPoliciesAssignmentOsType> osTypes) {
             this.osTypes = osTypes;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

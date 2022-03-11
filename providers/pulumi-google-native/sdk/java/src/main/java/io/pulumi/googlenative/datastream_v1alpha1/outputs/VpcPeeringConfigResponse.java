@@ -20,10 +20,10 @@ public final class VpcPeeringConfigResponse {
      */
     private final String vpcName;
 
-    @OutputCustomType.Constructor({"subnet","vpcName"})
+    @OutputCustomType.Constructor
     private VpcPeeringConfigResponse(
-        String subnet,
-        String vpcName) {
+        @OutputCustomType.Parameter("subnet") String subnet,
+        @OutputCustomType.Parameter("vpcName") String vpcName) {
         this.subnet = subnet;
         this.vpcName = vpcName;
     }
@@ -65,12 +65,12 @@ public final class VpcPeeringConfigResponse {
     	      this.vpcName = defaults.vpcName;
         }
 
-        public Builder setSubnet(String subnet) {
+        public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setVpcName(String vpcName) {
+        public Builder vpcName(String vpcName) {
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
         }

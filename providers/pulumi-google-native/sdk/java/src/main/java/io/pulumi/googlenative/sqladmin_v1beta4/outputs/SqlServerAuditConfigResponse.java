@@ -20,10 +20,10 @@ public final class SqlServerAuditConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"bucket","kind"})
+    @OutputCustomType.Constructor
     private SqlServerAuditConfigResponse(
-        String bucket,
-        String kind) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.bucket = bucket;
         this.kind = kind;
     }
@@ -65,12 +65,12 @@ public final class SqlServerAuditConfigResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

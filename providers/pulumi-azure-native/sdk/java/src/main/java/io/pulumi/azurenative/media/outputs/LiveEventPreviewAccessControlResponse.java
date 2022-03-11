@@ -17,8 +17,8 @@ public final class LiveEventPreviewAccessControlResponse {
      */
     private final @Nullable IPAccessControlResponse ip;
 
-    @OutputCustomType.Constructor({"ip"})
-    private LiveEventPreviewAccessControlResponse(@Nullable IPAccessControlResponse ip) {
+    @OutputCustomType.Constructor
+    private LiveEventPreviewAccessControlResponse(@OutputCustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
         this.ip = ip;
     }
 
@@ -50,7 +50,7 @@ public final class LiveEventPreviewAccessControlResponse {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setIp(@Nullable IPAccessControlResponse ip) {
+        public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
         }

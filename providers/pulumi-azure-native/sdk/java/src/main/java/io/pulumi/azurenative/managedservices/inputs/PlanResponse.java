@@ -104,22 +104,22 @@ public final class PlanResponse extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProduct(String product) {
+        public Builder product(String product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

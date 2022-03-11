@@ -25,10 +25,10 @@ public final class TriggerWebhookConfig {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"secret","state"})
+    @OutputCustomType.Constructor
     private TriggerWebhookConfig(
-        String secret,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.secret = secret;
         this.state = state;
     }
@@ -73,12 +73,12 @@ public final class TriggerWebhookConfig {
     	      this.state = defaults.state;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

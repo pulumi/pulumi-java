@@ -31,13 +31,13 @@ public final class DataSourceDynamodbConfig {
     private final @Nullable Boolean useCallerCredentials;
     private final @Nullable Boolean versioned;
 
-    @OutputCustomType.Constructor({"deltaSyncConfig","region","tableName","useCallerCredentials","versioned"})
+    @OutputCustomType.Constructor
     private DataSourceDynamodbConfig(
-        @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
-        @Nullable String region,
-        String tableName,
-        @Nullable Boolean useCallerCredentials,
-        @Nullable Boolean versioned) {
+        @OutputCustomType.Parameter("deltaSyncConfig") @Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("useCallerCredentials") @Nullable Boolean useCallerCredentials,
+        @OutputCustomType.Parameter("versioned") @Nullable Boolean versioned) {
         this.deltaSyncConfig = deltaSyncConfig;
         this.region = region;
         this.tableName = tableName;
@@ -101,27 +101,27 @@ public final class DataSourceDynamodbConfig {
     	      this.versioned = defaults.versioned;
         }
 
-        public Builder setDeltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig) {
+        public Builder deltaSyncConfig(@Nullable DataSourceDynamodbConfigDeltaSyncConfig deltaSyncConfig) {
             this.deltaSyncConfig = deltaSyncConfig;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setUseCallerCredentials(@Nullable Boolean useCallerCredentials) {
+        public Builder useCallerCredentials(@Nullable Boolean useCallerCredentials) {
             this.useCallerCredentials = useCallerCredentials;
             return this;
         }
 
-        public Builder setVersioned(@Nullable Boolean versioned) {
+        public Builder versioned(@Nullable Boolean versioned) {
             this.versioned = versioned;
             return this;
         }

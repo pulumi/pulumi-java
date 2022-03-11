@@ -17,13 +17,13 @@ public final class ResourceDataSyncS3Destination {
     private final @Nullable String kMSKeyArn;
     private final String syncFormat;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","bucketRegion","kMSKeyArn","syncFormat"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncS3Destination(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        String bucketRegion,
-        @Nullable String kMSKeyArn,
-        String syncFormat) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("bucketRegion") String bucketRegion,
+        @OutputCustomType.Parameter("kMSKeyArn") @Nullable String kMSKeyArn,
+        @OutputCustomType.Parameter("syncFormat") String syncFormat) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.bucketRegion = bucketRegion;
@@ -75,27 +75,27 @@ public final class ResourceDataSyncS3Destination {
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setBucketRegion(String bucketRegion) {
+        public Builder bucketRegion(String bucketRegion) {
             this.bucketRegion = Objects.requireNonNull(bucketRegion);
             return this;
         }
 
-        public Builder setKMSKeyArn(@Nullable String kMSKeyArn) {
+        public Builder kMSKeyArn(@Nullable String kMSKeyArn) {
             this.kMSKeyArn = kMSKeyArn;
             return this;
         }
 
-        public Builder setSyncFormat(String syncFormat) {
+        public Builder syncFormat(String syncFormat) {
             this.syncFormat = Objects.requireNonNull(syncFormat);
             return this;
         }

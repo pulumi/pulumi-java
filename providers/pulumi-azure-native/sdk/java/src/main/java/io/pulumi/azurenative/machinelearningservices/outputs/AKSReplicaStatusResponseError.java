@@ -15,8 +15,8 @@ public final class AKSReplicaStatusResponseError {
      */
     private final ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private AKSReplicaStatusResponseError(ErrorResponseResponse error) {
+    @OutputCustomType.Constructor
+    private AKSReplicaStatusResponseError(@OutputCustomType.Parameter("error") ErrorResponseResponse error) {
         this.error = error;
     }
 
@@ -48,7 +48,7 @@ public final class AKSReplicaStatusResponseError {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(ErrorResponseResponse error) {
+        public Builder error(ErrorResponseResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }

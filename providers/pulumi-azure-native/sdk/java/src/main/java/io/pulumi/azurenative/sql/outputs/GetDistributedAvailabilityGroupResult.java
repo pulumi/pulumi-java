@@ -77,21 +77,21 @@ public final class GetDistributedAvailabilityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"distributedAvailabilityGroupId","id","lastHardenedLsn","linkState","name","primaryAvailabilityGroupName","replicationMode","secondaryAvailabilityGroupName","sourceEndpoint","sourceReplicaId","targetDatabase","targetReplicaId","type"})
+    @OutputCustomType.Constructor
     private GetDistributedAvailabilityGroupResult(
-        String distributedAvailabilityGroupId,
-        String id,
-        String lastHardenedLsn,
-        String linkState,
-        String name,
-        @Nullable String primaryAvailabilityGroupName,
-        @Nullable String replicationMode,
-        @Nullable String secondaryAvailabilityGroupName,
-        @Nullable String sourceEndpoint,
-        String sourceReplicaId,
-        @Nullable String targetDatabase,
-        String targetReplicaId,
-        String type) {
+        @OutputCustomType.Parameter("distributedAvailabilityGroupId") String distributedAvailabilityGroupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHardenedLsn") String lastHardenedLsn,
+        @OutputCustomType.Parameter("linkState") String linkState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryAvailabilityGroupName") @Nullable String primaryAvailabilityGroupName,
+        @OutputCustomType.Parameter("replicationMode") @Nullable String replicationMode,
+        @OutputCustomType.Parameter("secondaryAvailabilityGroupName") @Nullable String secondaryAvailabilityGroupName,
+        @OutputCustomType.Parameter("sourceEndpoint") @Nullable String sourceEndpoint,
+        @OutputCustomType.Parameter("sourceReplicaId") String sourceReplicaId,
+        @OutputCustomType.Parameter("targetDatabase") @Nullable String targetDatabase,
+        @OutputCustomType.Parameter("targetReplicaId") String targetReplicaId,
+        @OutputCustomType.Parameter("type") String type) {
         this.distributedAvailabilityGroupId = distributedAvailabilityGroupId;
         this.id = id;
         this.lastHardenedLsn = lastHardenedLsn;
@@ -243,67 +243,67 @@ public final class GetDistributedAvailabilityGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDistributedAvailabilityGroupId(String distributedAvailabilityGroupId) {
+        public Builder distributedAvailabilityGroupId(String distributedAvailabilityGroupId) {
             this.distributedAvailabilityGroupId = Objects.requireNonNull(distributedAvailabilityGroupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHardenedLsn(String lastHardenedLsn) {
+        public Builder lastHardenedLsn(String lastHardenedLsn) {
             this.lastHardenedLsn = Objects.requireNonNull(lastHardenedLsn);
             return this;
         }
 
-        public Builder setLinkState(String linkState) {
+        public Builder linkState(String linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
+        public Builder primaryAvailabilityGroupName(@Nullable String primaryAvailabilityGroupName) {
             this.primaryAvailabilityGroupName = primaryAvailabilityGroupName;
             return this;
         }
 
-        public Builder setReplicationMode(@Nullable String replicationMode) {
+        public Builder replicationMode(@Nullable String replicationMode) {
             this.replicationMode = replicationMode;
             return this;
         }
 
-        public Builder setSecondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
+        public Builder secondaryAvailabilityGroupName(@Nullable String secondaryAvailabilityGroupName) {
             this.secondaryAvailabilityGroupName = secondaryAvailabilityGroupName;
             return this;
         }
 
-        public Builder setSourceEndpoint(@Nullable String sourceEndpoint) {
+        public Builder sourceEndpoint(@Nullable String sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
-        public Builder setSourceReplicaId(String sourceReplicaId) {
+        public Builder sourceReplicaId(String sourceReplicaId) {
             this.sourceReplicaId = Objects.requireNonNull(sourceReplicaId);
             return this;
         }
 
-        public Builder setTargetDatabase(@Nullable String targetDatabase) {
+        public Builder targetDatabase(@Nullable String targetDatabase) {
             this.targetDatabase = targetDatabase;
             return this;
         }
 
-        public Builder setTargetReplicaId(String targetReplicaId) {
+        public Builder targetReplicaId(String targetReplicaId) {
             this.targetReplicaId = Objects.requireNonNull(targetReplicaId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -71,22 +71,22 @@ public final class AccessPointRootDirectoryGetArgs extends io.pulumi.resources.R
     	      this.path = defaults.path;
         }
 
-        public Builder setCreationInfo(@Nullable Input<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo) {
+        public Builder creationInfo(@Nullable Input<AccessPointRootDirectoryCreationInfoGetArgs> creationInfo) {
             this.creationInfo = creationInfo;
             return this;
         }
 
-        public Builder setCreationInfo(@Nullable AccessPointRootDirectoryCreationInfoGetArgs creationInfo) {
+        public Builder creationInfo(@Nullable AccessPointRootDirectoryCreationInfoGetArgs creationInfo) {
             this.creationInfo = Input.ofNullable(creationInfo);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

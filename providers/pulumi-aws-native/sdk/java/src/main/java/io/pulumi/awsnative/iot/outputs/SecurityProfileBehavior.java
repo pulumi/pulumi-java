@@ -32,13 +32,13 @@ public final class SecurityProfileBehavior {
      */
     private final @Nullable Boolean suppressAlerts;
 
-    @OutputCustomType.Constructor({"criteria","metric","metricDimension","name","suppressAlerts"})
+    @OutputCustomType.Constructor
     private SecurityProfileBehavior(
-        @Nullable SecurityProfileBehaviorCriteria criteria,
-        @Nullable String metric,
-        @Nullable SecurityProfileMetricDimension metricDimension,
-        String name,
-        @Nullable Boolean suppressAlerts) {
+        @OutputCustomType.Parameter("criteria") @Nullable SecurityProfileBehaviorCriteria criteria,
+        @OutputCustomType.Parameter("metric") @Nullable String metric,
+        @OutputCustomType.Parameter("metricDimension") @Nullable SecurityProfileMetricDimension metricDimension,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("suppressAlerts") @Nullable Boolean suppressAlerts) {
         this.criteria = criteria;
         this.metric = metric;
         this.metricDimension = metricDimension;
@@ -102,27 +102,27 @@ public final class SecurityProfileBehavior {
     	      this.suppressAlerts = defaults.suppressAlerts;
         }
 
-        public Builder setCriteria(@Nullable SecurityProfileBehaviorCriteria criteria) {
+        public Builder criteria(@Nullable SecurityProfileBehaviorCriteria criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimension metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSuppressAlerts(@Nullable Boolean suppressAlerts) {
+        public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
             this.suppressAlerts = suppressAlerts;
             return this;
         }

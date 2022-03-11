@@ -15,10 +15,10 @@ public final class DeliveryStreamEncryptionConfigurationInput {
     private final @Nullable String keyARN;
     private final DeliveryStreamEncryptionConfigurationInputKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyARN","keyType"})
+    @OutputCustomType.Constructor
     private DeliveryStreamEncryptionConfigurationInput(
-        @Nullable String keyARN,
-        DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
+        @OutputCustomType.Parameter("keyARN") @Nullable String keyARN,
+        @OutputCustomType.Parameter("keyType") DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
         this.keyARN = keyARN;
         this.keyType = keyType;
     }
@@ -52,12 +52,12 @@ public final class DeliveryStreamEncryptionConfigurationInput {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyARN(@Nullable String keyARN) {
+        public Builder keyARN(@Nullable String keyARN) {
             this.keyARN = keyARN;
             return this;
         }
 
-        public Builder setKeyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
+        public Builder keyType(DeliveryStreamEncryptionConfigurationInputKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

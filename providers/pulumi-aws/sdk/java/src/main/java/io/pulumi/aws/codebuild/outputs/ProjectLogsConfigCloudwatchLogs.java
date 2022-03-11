@@ -27,11 +27,11 @@ public final class ProjectLogsConfigCloudwatchLogs {
      */
     private final @Nullable String streamName;
 
-    @OutputCustomType.Constructor({"groupName","status","streamName"})
+    @OutputCustomType.Constructor
     private ProjectLogsConfigCloudwatchLogs(
-        @Nullable String groupName,
-        @Nullable String status,
-        @Nullable String streamName) {
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("streamName") @Nullable String streamName) {
         this.groupName = groupName;
         this.status = status;
         this.streamName = streamName;
@@ -83,17 +83,17 @@ public final class ProjectLogsConfigCloudwatchLogs {
     	      this.streamName = defaults.streamName;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStreamName(@Nullable String streamName) {
+        public Builder streamName(@Nullable String streamName) {
             this.streamName = streamName;
             return this;
         }

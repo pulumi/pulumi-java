@@ -70,22 +70,22 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder setFirewallArn(Input<String> firewallArn) {
+        public Builder firewallArn(Input<String> firewallArn) {
             this.firewallArn = Objects.requireNonNull(firewallArn);
             return this;
         }
 
-        public Builder setFirewallArn(String firewallArn) {
+        public Builder firewallArn(String firewallArn) {
             this.firewallArn = Input.of(Objects.requireNonNull(firewallArn));
             return this;
         }
 
-        public Builder setLoggingConfiguration(Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(Input<LoggingConfigurationLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = Objects.requireNonNull(loggingConfiguration);
             return this;
         }
 
-        public Builder setLoggingConfiguration(LoggingConfigurationLoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(LoggingConfigurationLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.of(Objects.requireNonNull(loggingConfiguration));
             return this;
         }

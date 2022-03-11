@@ -28,15 +28,15 @@ public final class GetFeatureResult {
     private final @Nullable List<FeatureTag> tags;
     private final @Nullable List<FeatureVariationObject> variations;
 
-    @OutputCustomType.Constructor({"arn","defaultVariation","description","entityOverrides","evaluationStrategy","tags","variations"})
+    @OutputCustomType.Constructor
     private GetFeatureResult(
-        @Nullable String arn,
-        @Nullable String defaultVariation,
-        @Nullable String description,
-        @Nullable List<FeatureEntityOverride> entityOverrides,
-        @Nullable FeatureEvaluationStrategy evaluationStrategy,
-        @Nullable List<FeatureTag> tags,
-        @Nullable List<FeatureVariationObject> variations) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultVariation") @Nullable String defaultVariation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityOverrides") @Nullable List<FeatureEntityOverride> entityOverrides,
+        @OutputCustomType.Parameter("evaluationStrategy") @Nullable FeatureEvaluationStrategy evaluationStrategy,
+        @OutputCustomType.Parameter("tags") @Nullable List<FeatureTag> tags,
+        @OutputCustomType.Parameter("variations") @Nullable List<FeatureVariationObject> variations) {
         this.arn = arn;
         this.defaultVariation = defaultVariation;
         this.description = description;
@@ -104,37 +104,37 @@ public final class GetFeatureResult {
     	      this.variations = defaults.variations;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultVariation(@Nullable String defaultVariation) {
+        public Builder defaultVariation(@Nullable String defaultVariation) {
             this.defaultVariation = defaultVariation;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntityOverrides(@Nullable List<FeatureEntityOverride> entityOverrides) {
+        public Builder entityOverrides(@Nullable List<FeatureEntityOverride> entityOverrides) {
             this.entityOverrides = entityOverrides;
             return this;
         }
 
-        public Builder setEvaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
+        public Builder evaluationStrategy(@Nullable FeatureEvaluationStrategy evaluationStrategy) {
             this.evaluationStrategy = evaluationStrategy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FeatureTag> tags) {
+        public Builder tags(@Nullable List<FeatureTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVariations(@Nullable List<FeatureVariationObject> variations) {
+        public Builder variations(@Nullable List<FeatureVariationObject> variations) {
             this.variations = variations;
             return this;
         }

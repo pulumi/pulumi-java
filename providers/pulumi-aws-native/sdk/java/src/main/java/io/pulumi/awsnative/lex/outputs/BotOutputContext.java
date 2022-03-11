@@ -14,11 +14,11 @@ public final class BotOutputContext {
     private final Integer timeToLiveInSeconds;
     private final Integer turnsToLive;
 
-    @OutputCustomType.Constructor({"name","timeToLiveInSeconds","turnsToLive"})
+    @OutputCustomType.Constructor
     private BotOutputContext(
-        String name,
-        Integer timeToLiveInSeconds,
-        Integer turnsToLive) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeToLiveInSeconds") Integer timeToLiveInSeconds,
+        @OutputCustomType.Parameter("turnsToLive") Integer turnsToLive) {
         this.name = name;
         this.timeToLiveInSeconds = timeToLiveInSeconds;
         this.turnsToLive = turnsToLive;
@@ -58,17 +58,17 @@ public final class BotOutputContext {
     	      this.turnsToLive = defaults.turnsToLive;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeToLiveInSeconds(Integer timeToLiveInSeconds) {
+        public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
 
-        public Builder setTurnsToLive(Integer turnsToLive) {
+        public Builder turnsToLive(Integer turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }

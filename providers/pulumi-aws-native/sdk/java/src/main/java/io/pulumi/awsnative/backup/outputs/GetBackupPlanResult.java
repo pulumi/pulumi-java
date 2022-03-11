@@ -19,13 +19,13 @@ public final class GetBackupPlanResult {
     private final @Nullable Object backupPlanTags;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"backupPlan","backupPlanArn","backupPlanId","backupPlanTags","versionId"})
+    @OutputCustomType.Constructor
     private GetBackupPlanResult(
-        @Nullable BackupPlanResourceType backupPlan,
-        @Nullable String backupPlanArn,
-        @Nullable String backupPlanId,
-        @Nullable Object backupPlanTags,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("backupPlan") @Nullable BackupPlanResourceType backupPlan,
+        @OutputCustomType.Parameter("backupPlanArn") @Nullable String backupPlanArn,
+        @OutputCustomType.Parameter("backupPlanId") @Nullable String backupPlanId,
+        @OutputCustomType.Parameter("backupPlanTags") @Nullable Object backupPlanTags,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.backupPlan = backupPlan;
         this.backupPlanArn = backupPlanArn;
         this.backupPlanId = backupPlanId;
@@ -77,27 +77,27 @@ public final class GetBackupPlanResult {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setBackupPlan(@Nullable BackupPlanResourceType backupPlan) {
+        public Builder backupPlan(@Nullable BackupPlanResourceType backupPlan) {
             this.backupPlan = backupPlan;
             return this;
         }
 
-        public Builder setBackupPlanArn(@Nullable String backupPlanArn) {
+        public Builder backupPlanArn(@Nullable String backupPlanArn) {
             this.backupPlanArn = backupPlanArn;
             return this;
         }
 
-        public Builder setBackupPlanId(@Nullable String backupPlanId) {
+        public Builder backupPlanId(@Nullable String backupPlanId) {
             this.backupPlanId = backupPlanId;
             return this;
         }
 
-        public Builder setBackupPlanTags(@Nullable Object backupPlanTags) {
+        public Builder backupPlanTags(@Nullable Object backupPlanTags) {
             this.backupPlanTags = backupPlanTags;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }

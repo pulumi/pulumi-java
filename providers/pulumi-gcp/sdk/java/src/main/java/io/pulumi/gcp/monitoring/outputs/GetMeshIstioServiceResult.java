@@ -27,17 +27,17 @@ public final class GetMeshIstioServiceResult {
     private final String serviceNamespace;
     private final List<GetMeshIstioServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"displayName","id","meshUid","name","project","serviceId","serviceName","serviceNamespace","telemetries"})
+    @OutputCustomType.Constructor
     private GetMeshIstioServiceResult(
-        String displayName,
-        String id,
-        String meshUid,
-        String name,
-        @Nullable String project,
-        String serviceId,
-        String serviceName,
-        String serviceNamespace,
-        List<GetMeshIstioServiceTelemetry> telemetries) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("meshUid") String meshUid,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @OutputCustomType.Parameter("telemetries") List<GetMeshIstioServiceTelemetry> telemetries) {
         this.displayName = displayName;
         this.id = id;
         this.meshUid = meshUid;
@@ -117,47 +117,47 @@ public final class GetMeshIstioServiceResult {
     	      this.telemetries = defaults.telemetries;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMeshUid(String meshUid) {
+        public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setTelemetries(List<GetMeshIstioServiceTelemetry> telemetries) {
+        public Builder telemetries(List<GetMeshIstioServiceTelemetry> telemetries) {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }

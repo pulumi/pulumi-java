@@ -14,10 +14,10 @@ public final class LaunchStepConfig {
     private final List<LaunchGroupToWeight> groupWeights;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"groupWeights","startTime"})
+    @OutputCustomType.Constructor
     private LaunchStepConfig(
-        List<LaunchGroupToWeight> groupWeights,
-        String startTime) {
+        @OutputCustomType.Parameter("groupWeights") List<LaunchGroupToWeight> groupWeights,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.groupWeights = groupWeights;
         this.startTime = startTime;
     }
@@ -51,12 +51,12 @@ public final class LaunchStepConfig {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setGroupWeights(List<LaunchGroupToWeight> groupWeights) {
+        public Builder groupWeights(List<LaunchGroupToWeight> groupWeights) {
             this.groupWeights = Objects.requireNonNull(groupWeights);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

@@ -108,42 +108,42 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     	      this.location = defaults.location;
         }
 
-        public Builder setAllocationWeight(@Nullable Input<Integer> allocationWeight) {
+        public Builder allocationWeight(@Nullable Input<Integer> allocationWeight) {
             this.allocationWeight = allocationWeight;
             return this;
         }
 
-        public Builder setAllocationWeight(@Nullable Integer allocationWeight) {
+        public Builder allocationWeight(@Nullable Integer allocationWeight) {
             this.allocationWeight = Input.ofNullable(allocationWeight);
             return this;
         }
 
-        public Builder setApplyAllocationPolicy(@Nullable Input<Boolean> applyAllocationPolicy) {
+        public Builder applyAllocationPolicy(@Nullable Input<Boolean> applyAllocationPolicy) {
             this.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
-        public Builder setApplyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
+        public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
             this.applyAllocationPolicy = Input.ofNullable(applyAllocationPolicy);
             return this;
         }
 
-        public Builder setConnectionString(Input<String> connectionString) {
+        public Builder connectionString(Input<String> connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Input.of(Objects.requireNonNull(connectionString));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
      */
     private final List<String> terms;
 
-    @OutputCustomType.Constructor({"doNotAssociateTerms","queryTerms","terms"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse(
-        List<String> doNotAssociateTerms,
-        List<String> queryTerms,
-        List<String> terms) {
+        @OutputCustomType.Parameter("doNotAssociateTerms") List<String> doNotAssociateTerms,
+        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
+        @OutputCustomType.Parameter("terms") List<String> terms) {
         this.doNotAssociateTerms = doNotAssociateTerms;
         this.queryTerms = queryTerms;
         this.terms = terms;
@@ -82,17 +82,17 @@ public final class GoogleCloudRetailV2betaRuleDoNotAssociateActionResponse {
     	      this.terms = defaults.terms;
         }
 
-        public Builder setDoNotAssociateTerms(List<String> doNotAssociateTerms) {
+        public Builder doNotAssociateTerms(List<String> doNotAssociateTerms) {
             this.doNotAssociateTerms = Objects.requireNonNull(doNotAssociateTerms);
             return this;
         }
 
-        public Builder setQueryTerms(List<String> queryTerms) {
+        public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
 
-        public Builder setTerms(List<String> terms) {
+        public Builder terms(List<String> terms) {
             this.terms = Objects.requireNonNull(terms);
             return this;
         }

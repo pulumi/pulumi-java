@@ -26,11 +26,11 @@ public final class GatewayOperatorResourceRequestsResponse {
      */
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpu","instanceCount","memory"})
+    @OutputCustomType.Constructor
     private GatewayOperatorResourceRequestsResponse(
-        String cpu,
-        Integer instanceCount,
-        String memory) {
+        @OutputCustomType.Parameter("cpu") String cpu,
+        @OutputCustomType.Parameter("instanceCount") Integer instanceCount,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpu = cpu;
         this.instanceCount = instanceCount;
         this.memory = memory;
@@ -82,17 +82,17 @@ public final class GatewayOperatorResourceRequestsResponse {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(String cpu) {
+        public Builder cpu(String cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setInstanceCount(Integer instanceCount) {
+        public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = Objects.requireNonNull(instanceCount);
             return this;
         }
 
-        public Builder setMemory(String memory) {
+        public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }

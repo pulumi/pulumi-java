@@ -27,11 +27,11 @@ public final class RegistrationInfoResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"expirationTime","registrationTokenOperation","token"})
+    @OutputCustomType.Constructor
     private RegistrationInfoResponse(
-        @Nullable String expirationTime,
-        @Nullable String registrationTokenOperation,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @OutputCustomType.Parameter("registrationTokenOperation") @Nullable String registrationTokenOperation,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.expirationTime = expirationTime;
         this.registrationTokenOperation = registrationTokenOperation;
         this.token = token;
@@ -83,17 +83,17 @@ public final class RegistrationInfoResponse {
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setRegistrationTokenOperation(@Nullable String registrationTokenOperation) {
+        public Builder registrationTokenOperation(@Nullable String registrationTokenOperation) {
             this.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

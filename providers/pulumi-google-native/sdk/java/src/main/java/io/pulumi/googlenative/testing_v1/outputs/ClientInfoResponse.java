@@ -22,10 +22,10 @@ public final class ClientInfoResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"clientInfoDetails","name"})
+    @OutputCustomType.Constructor
     private ClientInfoResponse(
-        List<ClientInfoDetailResponse> clientInfoDetails,
-        String name) {
+        @OutputCustomType.Parameter("clientInfoDetails") List<ClientInfoDetailResponse> clientInfoDetails,
+        @OutputCustomType.Parameter("name") String name) {
         this.clientInfoDetails = clientInfoDetails;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class ClientInfoResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setClientInfoDetails(List<ClientInfoDetailResponse> clientInfoDetails) {
+        public Builder clientInfoDetails(List<ClientInfoDetailResponse> clientInfoDetails) {
             this.clientInfoDetails = Objects.requireNonNull(clientInfoDetails);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

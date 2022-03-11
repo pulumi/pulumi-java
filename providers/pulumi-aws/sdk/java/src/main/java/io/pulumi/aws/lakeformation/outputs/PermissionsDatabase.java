@@ -22,10 +22,10 @@ public final class PermissionsDatabase {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","name"})
+    @OutputCustomType.Constructor
     private PermissionsDatabase(
-        @Nullable String catalogId,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class PermissionsDatabase {
     	      this.name = defaults.name;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

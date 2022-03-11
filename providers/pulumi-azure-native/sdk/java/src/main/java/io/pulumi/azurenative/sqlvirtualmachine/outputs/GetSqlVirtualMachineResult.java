@@ -115,27 +115,27 @@ public final class GetSqlVirtualMachineResult {
      */
     private final @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials;
 
-    @OutputCustomType.Constructor({"autoBackupSettings","autoPatchingSettings","id","identity","keyVaultCredentialSettings","location","name","provisioningState","serverConfigurationsManagementSettings","sqlImageOffer","sqlImageSku","sqlManagement","sqlServerLicenseType","sqlVirtualMachineGroupResourceId","storageConfigurationSettings","tags","type","virtualMachineResourceId","wsfcDomainCredentials"})
+    @OutputCustomType.Constructor
     private GetSqlVirtualMachineResult(
-        @Nullable AutoBackupSettingsResponse autoBackupSettings,
-        @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
-        @Nullable String sqlImageOffer,
-        @Nullable String sqlImageSku,
-        @Nullable String sqlManagement,
-        @Nullable String sqlServerLicenseType,
-        @Nullable String sqlVirtualMachineGroupResourceId,
-        @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String virtualMachineResourceId,
-        @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
+        @OutputCustomType.Parameter("autoBackupSettings") @Nullable AutoBackupSettingsResponse autoBackupSettings,
+        @OutputCustomType.Parameter("autoPatchingSettings") @Nullable AutoPatchingSettingsResponse autoPatchingSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultCredentialSettings") @Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serverConfigurationsManagementSettings") @Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings,
+        @OutputCustomType.Parameter("sqlImageOffer") @Nullable String sqlImageOffer,
+        @OutputCustomType.Parameter("sqlImageSku") @Nullable String sqlImageSku,
+        @OutputCustomType.Parameter("sqlManagement") @Nullable String sqlManagement,
+        @OutputCustomType.Parameter("sqlServerLicenseType") @Nullable String sqlServerLicenseType,
+        @OutputCustomType.Parameter("sqlVirtualMachineGroupResourceId") @Nullable String sqlVirtualMachineGroupResourceId,
+        @OutputCustomType.Parameter("storageConfigurationSettings") @Nullable StorageConfigurationSettingsResponse storageConfigurationSettings,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachineResourceId") @Nullable String virtualMachineResourceId,
+        @OutputCustomType.Parameter("wsfcDomainCredentials") @Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
         this.autoBackupSettings = autoBackupSettings;
         this.autoPatchingSettings = autoPatchingSettings;
         this.id = id;
@@ -347,97 +347,97 @@ public final class GetSqlVirtualMachineResult {
     	      this.wsfcDomainCredentials = defaults.wsfcDomainCredentials;
         }
 
-        public Builder setAutoBackupSettings(@Nullable AutoBackupSettingsResponse autoBackupSettings) {
+        public Builder autoBackupSettings(@Nullable AutoBackupSettingsResponse autoBackupSettings) {
             this.autoBackupSettings = autoBackupSettings;
             return this;
         }
 
-        public Builder setAutoPatchingSettings(@Nullable AutoPatchingSettingsResponse autoPatchingSettings) {
+        public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsResponse autoPatchingSettings) {
             this.autoPatchingSettings = autoPatchingSettings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings) {
+        public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsResponse keyVaultCredentialSettings) {
             this.keyVaultCredentialSettings = keyVaultCredentialSettings;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServerConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings) {
+        public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsResponse serverConfigurationsManagementSettings) {
             this.serverConfigurationsManagementSettings = serverConfigurationsManagementSettings;
             return this;
         }
 
-        public Builder setSqlImageOffer(@Nullable String sqlImageOffer) {
+        public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
             this.sqlImageOffer = sqlImageOffer;
             return this;
         }
 
-        public Builder setSqlImageSku(@Nullable String sqlImageSku) {
+        public Builder sqlImageSku(@Nullable String sqlImageSku) {
             this.sqlImageSku = sqlImageSku;
             return this;
         }
 
-        public Builder setSqlManagement(@Nullable String sqlManagement) {
+        public Builder sqlManagement(@Nullable String sqlManagement) {
             this.sqlManagement = sqlManagement;
             return this;
         }
 
-        public Builder setSqlServerLicenseType(@Nullable String sqlServerLicenseType) {
+        public Builder sqlServerLicenseType(@Nullable String sqlServerLicenseType) {
             this.sqlServerLicenseType = sqlServerLicenseType;
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
+        public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
             this.sqlVirtualMachineGroupResourceId = sqlVirtualMachineGroupResourceId;
             return this;
         }
 
-        public Builder setStorageConfigurationSettings(@Nullable StorageConfigurationSettingsResponse storageConfigurationSettings) {
+        public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsResponse storageConfigurationSettings) {
             this.storageConfigurationSettings = storageConfigurationSettings;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachineResourceId(@Nullable String virtualMachineResourceId) {
+        public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
             this.virtualMachineResourceId = virtualMachineResourceId;
             return this;
         }
 
-        public Builder setWsfcDomainCredentials(@Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
+        public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsResponse wsfcDomainCredentials) {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }

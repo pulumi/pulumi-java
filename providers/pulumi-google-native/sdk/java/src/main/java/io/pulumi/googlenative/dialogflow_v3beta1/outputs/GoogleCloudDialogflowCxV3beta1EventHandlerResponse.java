@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment;
 
-    @OutputCustomType.Constructor({"event","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1EventHandlerResponse(
-        String event,
-        String name,
-        String targetFlow,
-        String targetPage,
-        GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetFlow") String targetFlow,
+        @OutputCustomType.Parameter("targetPage") String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
         this.event = event;
         this.name = name;
         this.targetFlow = targetFlow;
@@ -114,27 +114,27 @@ public final class GoogleCloudDialogflowCxV3beta1EventHandlerResponse {
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTargetFlow(String targetFlow) {
+        public Builder targetFlow(String targetFlow) {
             this.targetFlow = Objects.requireNonNull(targetFlow);
             return this;
         }
 
-        public Builder setTargetPage(String targetPage) {
+        public Builder targetPage(String targetPage) {
             this.targetPage = Objects.requireNonNull(targetPage);
             return this;
         }
 
-        public Builder setTriggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
+        public Builder triggerFulfillment(GoogleCloudDialogflowCxV3beta1FulfillmentResponse triggerFulfillment) {
             this.triggerFulfillment = Objects.requireNonNull(triggerFulfillment);
             return this;
         }

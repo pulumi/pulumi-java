@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigConfigConnectorConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterAddonsConfigConfigConnectorConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigConfigConnectorConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterAddonsConfigConfigConnectorConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

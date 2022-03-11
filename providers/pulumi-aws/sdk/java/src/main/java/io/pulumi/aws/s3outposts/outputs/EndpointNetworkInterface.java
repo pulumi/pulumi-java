@@ -17,8 +17,8 @@ public final class EndpointNetworkInterface {
      */
     private final @Nullable String networkInterfaceId;
 
-    @OutputCustomType.Constructor({"networkInterfaceId"})
-    private EndpointNetworkInterface(@Nullable String networkInterfaceId) {
+    @OutputCustomType.Constructor
+    private EndpointNetworkInterface(@OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
 
@@ -50,7 +50,7 @@ public final class EndpointNetworkInterface {
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }

@@ -50,16 +50,16 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","delegationEnabledDate","email","id","joinedMethod","joinedTimestamp","name","status"})
+    @OutputCustomType.Constructor
     private GetDelegatedAdministratorsDelegatedAdministrator(
-        String arn,
-        String delegationEnabledDate,
-        String email,
-        String id,
-        String joinedMethod,
-        String joinedTimestamp,
-        String name,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("joinedMethod") String joinedMethod,
+        @OutputCustomType.Parameter("joinedTimestamp") String joinedTimestamp,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.delegationEnabledDate = delegationEnabledDate;
         this.email = email;
@@ -161,42 +161,42 @@ public final class GetDelegatedAdministratorsDelegatedAdministrator {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDelegationEnabledDate(String delegationEnabledDate) {
+        public Builder delegationEnabledDate(String delegationEnabledDate) {
             this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJoinedMethod(String joinedMethod) {
+        public Builder joinedMethod(String joinedMethod) {
             this.joinedMethod = Objects.requireNonNull(joinedMethod);
             return this;
         }
 
-        public Builder setJoinedTimestamp(String joinedTimestamp) {
+        public Builder joinedTimestamp(String joinedTimestamp) {
             this.joinedTimestamp = Objects.requireNonNull(joinedTimestamp);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

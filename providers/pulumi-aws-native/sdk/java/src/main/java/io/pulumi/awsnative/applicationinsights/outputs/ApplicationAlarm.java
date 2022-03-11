@@ -23,10 +23,10 @@ public final class ApplicationAlarm {
      */
     private final @Nullable ApplicationAlarmSeverity severity;
 
-    @OutputCustomType.Constructor({"alarmName","severity"})
+    @OutputCustomType.Constructor
     private ApplicationAlarm(
-        String alarmName,
-        @Nullable ApplicationAlarmSeverity severity) {
+        @OutputCustomType.Parameter("alarmName") String alarmName,
+        @OutputCustomType.Parameter("severity") @Nullable ApplicationAlarmSeverity severity) {
         this.alarmName = alarmName;
         this.severity = severity;
     }
@@ -68,12 +68,12 @@ public final class ApplicationAlarm {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setSeverity(@Nullable ApplicationAlarmSeverity severity) {
+        public Builder severity(@Nullable ApplicationAlarmSeverity severity) {
             this.severity = severity;
             return this;
         }

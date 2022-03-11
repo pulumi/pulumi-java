@@ -95,16 +95,16 @@ public final class UntilActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"activities","dependsOn","description","expression","name","timeout","type","userProperties"})
+    @OutputCustomType.Constructor
     private UntilActivityResponse(
-        List<Object> activities,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        ExpressionResponse expression,
-        String name,
-        @Nullable Object timeout,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("activities") List<Object> activities,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") ExpressionResponse expression,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeout") @Nullable Object timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.activities = activities;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -207,42 +207,42 @@ public final class UntilActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setActivities(List<Object> activities) {
+        public Builder activities(List<Object> activities) {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(ExpressionResponse expression) {
+        public Builder expression(ExpressionResponse expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

@@ -80,21 +80,21 @@ public final class GetFuotaTaskResult {
      */
     private final @Nullable List<FuotaTaskTag> tags;
 
-    @OutputCustomType.Constructor({"arn","associateMulticastGroup","associateWirelessDevice","description","disassociateMulticastGroup","disassociateWirelessDevice","firmwareUpdateImage","firmwareUpdateRole","fuotaTaskStatus","id","loRaWAN","name","tags"})
+    @OutputCustomType.Constructor
     private GetFuotaTaskResult(
-        @Nullable String arn,
-        @Nullable String associateMulticastGroup,
-        @Nullable String associateWirelessDevice,
-        @Nullable String description,
-        @Nullable String disassociateMulticastGroup,
-        @Nullable String disassociateWirelessDevice,
-        @Nullable String firmwareUpdateImage,
-        @Nullable String firmwareUpdateRole,
-        @Nullable String fuotaTaskStatus,
-        @Nullable String id,
-        @Nullable FuotaTaskLoRaWAN loRaWAN,
-        @Nullable String name,
-        @Nullable List<FuotaTaskTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associateMulticastGroup") @Nullable String associateMulticastGroup,
+        @OutputCustomType.Parameter("associateWirelessDevice") @Nullable String associateWirelessDevice,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disassociateMulticastGroup") @Nullable String disassociateMulticastGroup,
+        @OutputCustomType.Parameter("disassociateWirelessDevice") @Nullable String disassociateWirelessDevice,
+        @OutputCustomType.Parameter("firmwareUpdateImage") @Nullable String firmwareUpdateImage,
+        @OutputCustomType.Parameter("firmwareUpdateRole") @Nullable String firmwareUpdateRole,
+        @OutputCustomType.Parameter("fuotaTaskStatus") @Nullable String fuotaTaskStatus,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable FuotaTaskLoRaWAN loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<FuotaTaskTag> tags) {
         this.arn = arn;
         this.associateMulticastGroup = associateMulticastGroup;
         this.associateWirelessDevice = associateWirelessDevice;
@@ -246,67 +246,67 @@ public final class GetFuotaTaskResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssociateMulticastGroup(@Nullable String associateMulticastGroup) {
+        public Builder associateMulticastGroup(@Nullable String associateMulticastGroup) {
             this.associateMulticastGroup = associateMulticastGroup;
             return this;
         }
 
-        public Builder setAssociateWirelessDevice(@Nullable String associateWirelessDevice) {
+        public Builder associateWirelessDevice(@Nullable String associateWirelessDevice) {
             this.associateWirelessDevice = associateWirelessDevice;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
+        public Builder disassociateMulticastGroup(@Nullable String disassociateMulticastGroup) {
             this.disassociateMulticastGroup = disassociateMulticastGroup;
             return this;
         }
 
-        public Builder setDisassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
+        public Builder disassociateWirelessDevice(@Nullable String disassociateWirelessDevice) {
             this.disassociateWirelessDevice = disassociateWirelessDevice;
             return this;
         }
 
-        public Builder setFirmwareUpdateImage(@Nullable String firmwareUpdateImage) {
+        public Builder firmwareUpdateImage(@Nullable String firmwareUpdateImage) {
             this.firmwareUpdateImage = firmwareUpdateImage;
             return this;
         }
 
-        public Builder setFirmwareUpdateRole(@Nullable String firmwareUpdateRole) {
+        public Builder firmwareUpdateRole(@Nullable String firmwareUpdateRole) {
             this.firmwareUpdateRole = firmwareUpdateRole;
             return this;
         }
 
-        public Builder setFuotaTaskStatus(@Nullable String fuotaTaskStatus) {
+        public Builder fuotaTaskStatus(@Nullable String fuotaTaskStatus) {
             this.fuotaTaskStatus = fuotaTaskStatus;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable FuotaTaskLoRaWAN loRaWAN) {
+        public Builder loRaWAN(@Nullable FuotaTaskLoRaWAN loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FuotaTaskTag> tags) {
+        public Builder tags(@Nullable List<FuotaTaskTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -13,10 +13,10 @@ public final class GetRestApiEndpointConfiguration {
     private final List<String> types;
     private final List<String> vpcEndpointIds;
 
-    @OutputCustomType.Constructor({"types","vpcEndpointIds"})
+    @OutputCustomType.Constructor
     private GetRestApiEndpointConfiguration(
-        List<String> types,
-        List<String> vpcEndpointIds) {
+        @OutputCustomType.Parameter("types") List<String> types,
+        @OutputCustomType.Parameter("vpcEndpointIds") List<String> vpcEndpointIds) {
         this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }
@@ -50,12 +50,12 @@ public final class GetRestApiEndpointConfiguration {
     	      this.vpcEndpointIds = defaults.vpcEndpointIds;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setVpcEndpointIds(List<String> vpcEndpointIds) {
+        public Builder vpcEndpointIds(List<String> vpcEndpointIds) {
             this.vpcEndpointIds = Objects.requireNonNull(vpcEndpointIds);
             return this;
         }

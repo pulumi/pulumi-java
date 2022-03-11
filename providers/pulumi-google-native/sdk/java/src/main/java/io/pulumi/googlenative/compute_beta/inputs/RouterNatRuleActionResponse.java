@@ -69,12 +69,12 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
     	      this.sourceNatDrainIps = defaults.sourceNatDrainIps;
         }
 
-        public Builder setSourceNatActiveIps(List<String> sourceNatActiveIps) {
+        public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
             this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
             return this;
         }
 
-        public Builder setSourceNatDrainIps(List<String> sourceNatDrainIps) {
+        public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }

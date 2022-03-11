@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
      */
     private final Integer maxFindingsPerRequest;
 
-    @OutputCustomType.Constructor({"maxFindingsPerInfoType","maxFindingsPerItem","maxFindingsPerRequest"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FindingLimitsResponse(
-        List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
-        Integer maxFindingsPerItem,
-        Integer maxFindingsPerRequest) {
+        @OutputCustomType.Parameter("maxFindingsPerInfoType") List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType,
+        @OutputCustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
+        @OutputCustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
         this.maxFindingsPerInfoType = maxFindingsPerInfoType;
         this.maxFindingsPerItem = maxFindingsPerItem;
         this.maxFindingsPerRequest = maxFindingsPerRequest;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse {
     	      this.maxFindingsPerRequest = defaults.maxFindingsPerRequest;
         }
 
-        public Builder setMaxFindingsPerInfoType(List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType) {
+        public Builder maxFindingsPerInfoType(List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType) {
             this.maxFindingsPerInfoType = Objects.requireNonNull(maxFindingsPerInfoType);
             return this;
         }
 
-        public Builder setMaxFindingsPerItem(Integer maxFindingsPerItem) {
+        public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             this.maxFindingsPerItem = Objects.requireNonNull(maxFindingsPerItem);
             return this;
         }
 
-        public Builder setMaxFindingsPerRequest(Integer maxFindingsPerRequest) {
+        public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }

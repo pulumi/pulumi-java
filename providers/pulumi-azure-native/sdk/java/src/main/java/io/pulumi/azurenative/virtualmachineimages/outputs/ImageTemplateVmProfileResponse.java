@@ -29,11 +29,11 @@ public final class ImageTemplateVmProfileResponse {
      */
     private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
-    @OutputCustomType.Constructor({"osDiskSizeGB","vmSize","vnetConfig"})
+    @OutputCustomType.Constructor
     private ImageTemplateVmProfileResponse(
-        @Nullable Integer osDiskSizeGB,
-        @Nullable String vmSize,
-        @Nullable VirtualNetworkConfigResponse vnetConfig) {
+        @OutputCustomType.Parameter("osDiskSizeGB") @Nullable Integer osDiskSizeGB,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize,
+        @OutputCustomType.Parameter("vnetConfig") @Nullable VirtualNetworkConfigResponse vnetConfig) {
         this.osDiskSizeGB = osDiskSizeGB;
         this.vmSize = vmSize;
         this.vnetConfig = vnetConfig;
@@ -85,17 +85,17 @@ public final class ImageTemplateVmProfileResponse {
     	      this.vnetConfig = defaults.vnetConfig;
         }
 
-        public Builder setOsDiskSizeGB(@Nullable Integer osDiskSizeGB) {
+        public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             this.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
+        public Builder vnetConfig(@Nullable VirtualNetworkConfigResponse vnetConfig) {
             this.vnetConfig = vnetConfig;
             return this;
         }

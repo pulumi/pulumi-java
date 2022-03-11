@@ -23,10 +23,10 @@ public final class KubernetesConnectionDetailsResponse {
      */
     private final @Nullable String kubeConfig;
 
-    @OutputCustomType.Constructor({"instanceType","kubeConfig"})
+    @OutputCustomType.Constructor
     private KubernetesConnectionDetailsResponse(
-        String instanceType,
-        @Nullable String kubeConfig) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("kubeConfig") @Nullable String kubeConfig) {
         this.instanceType = instanceType;
         this.kubeConfig = kubeConfig;
     }
@@ -69,12 +69,12 @@ public final class KubernetesConnectionDetailsResponse {
     	      this.kubeConfig = defaults.kubeConfig;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKubeConfig(@Nullable String kubeConfig) {
+        public Builder kubeConfig(@Nullable String kubeConfig) {
             this.kubeConfig = kubeConfig;
             return this;
         }

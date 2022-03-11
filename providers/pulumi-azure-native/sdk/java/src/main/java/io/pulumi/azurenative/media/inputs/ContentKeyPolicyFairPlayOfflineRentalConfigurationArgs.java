@@ -69,22 +69,22 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs extend
     	      this.storageDurationSeconds = defaults.storageDurationSeconds;
         }
 
-        public Builder setPlaybackDurationSeconds(Input<Double> playbackDurationSeconds) {
+        public Builder playbackDurationSeconds(Input<Double> playbackDurationSeconds) {
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
 
-        public Builder setPlaybackDurationSeconds(Double playbackDurationSeconds) {
+        public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
             this.playbackDurationSeconds = Input.of(Objects.requireNonNull(playbackDurationSeconds));
             return this;
         }
 
-        public Builder setStorageDurationSeconds(Input<Double> storageDurationSeconds) {
+        public Builder storageDurationSeconds(Input<Double> storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }
 
-        public Builder setStorageDurationSeconds(Double storageDurationSeconds) {
+        public Builder storageDurationSeconds(Double storageDurationSeconds) {
             this.storageDurationSeconds = Input.of(Objects.requireNonNull(storageDurationSeconds));
             return this;
         }

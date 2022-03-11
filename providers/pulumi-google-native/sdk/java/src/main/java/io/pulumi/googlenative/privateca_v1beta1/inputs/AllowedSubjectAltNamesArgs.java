@@ -140,62 +140,62 @@ public final class AllowedSubjectAltNamesArgs extends io.pulumi.resources.Resour
     	      this.allowedUris = defaults.allowedUris;
         }
 
-        public Builder setAllowCustomSans(@Nullable Input<Boolean> allowCustomSans) {
+        public Builder allowCustomSans(@Nullable Input<Boolean> allowCustomSans) {
             this.allowCustomSans = allowCustomSans;
             return this;
         }
 
-        public Builder setAllowCustomSans(@Nullable Boolean allowCustomSans) {
+        public Builder allowCustomSans(@Nullable Boolean allowCustomSans) {
             this.allowCustomSans = Input.ofNullable(allowCustomSans);
             return this;
         }
 
-        public Builder setAllowGlobbingDnsWildcards(@Nullable Input<Boolean> allowGlobbingDnsWildcards) {
+        public Builder allowGlobbingDnsWildcards(@Nullable Input<Boolean> allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
             return this;
         }
 
-        public Builder setAllowGlobbingDnsWildcards(@Nullable Boolean allowGlobbingDnsWildcards) {
+        public Builder allowGlobbingDnsWildcards(@Nullable Boolean allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = Input.ofNullable(allowGlobbingDnsWildcards);
             return this;
         }
 
-        public Builder setAllowedDnsNames(@Nullable Input<List<String>> allowedDnsNames) {
+        public Builder allowedDnsNames(@Nullable Input<List<String>> allowedDnsNames) {
             this.allowedDnsNames = allowedDnsNames;
             return this;
         }
 
-        public Builder setAllowedDnsNames(@Nullable List<String> allowedDnsNames) {
+        public Builder allowedDnsNames(@Nullable List<String> allowedDnsNames) {
             this.allowedDnsNames = Input.ofNullable(allowedDnsNames);
             return this;
         }
 
-        public Builder setAllowedEmailAddresses(@Nullable Input<List<String>> allowedEmailAddresses) {
+        public Builder allowedEmailAddresses(@Nullable Input<List<String>> allowedEmailAddresses) {
             this.allowedEmailAddresses = allowedEmailAddresses;
             return this;
         }
 
-        public Builder setAllowedEmailAddresses(@Nullable List<String> allowedEmailAddresses) {
+        public Builder allowedEmailAddresses(@Nullable List<String> allowedEmailAddresses) {
             this.allowedEmailAddresses = Input.ofNullable(allowedEmailAddresses);
             return this;
         }
 
-        public Builder setAllowedIps(@Nullable Input<List<String>> allowedIps) {
+        public Builder allowedIps(@Nullable Input<List<String>> allowedIps) {
             this.allowedIps = allowedIps;
             return this;
         }
 
-        public Builder setAllowedIps(@Nullable List<String> allowedIps) {
+        public Builder allowedIps(@Nullable List<String> allowedIps) {
             this.allowedIps = Input.ofNullable(allowedIps);
             return this;
         }
 
-        public Builder setAllowedUris(@Nullable Input<List<String>> allowedUris) {
+        public Builder allowedUris(@Nullable Input<List<String>> allowedUris) {
             this.allowedUris = allowedUris;
             return this;
         }
 
-        public Builder setAllowedUris(@Nullable List<String> allowedUris) {
+        public Builder allowedUris(@Nullable List<String> allowedUris) {
             this.allowedUris = Input.ofNullable(allowedUris);
             return this;
         }

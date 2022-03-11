@@ -171,112 +171,112 @@ public final class RailsAppLayerCloudwatchConfigurationLogStreamGetArgs extends 
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBatchCount(@Nullable Input<Integer> batchCount) {
+        public Builder batchCount(@Nullable Input<Integer> batchCount) {
             this.batchCount = batchCount;
             return this;
         }
 
-        public Builder setBatchCount(@Nullable Integer batchCount) {
+        public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = Input.ofNullable(batchCount);
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Input<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setBufferDuration(@Nullable Input<Integer> bufferDuration) {
+        public Builder bufferDuration(@Nullable Input<Integer> bufferDuration) {
             this.bufferDuration = bufferDuration;
             return this;
         }
 
-        public Builder setBufferDuration(@Nullable Integer bufferDuration) {
+        public Builder bufferDuration(@Nullable Integer bufferDuration) {
             this.bufferDuration = Input.ofNullable(bufferDuration);
             return this;
         }
 
-        public Builder setDatetimeFormat(@Nullable Input<String> datetimeFormat) {
+        public Builder datetimeFormat(@Nullable Input<String> datetimeFormat) {
             this.datetimeFormat = datetimeFormat;
             return this;
         }
 
-        public Builder setDatetimeFormat(@Nullable String datetimeFormat) {
+        public Builder datetimeFormat(@Nullable String datetimeFormat) {
             this.datetimeFormat = Input.ofNullable(datetimeFormat);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<String> encoding) {
+        public Builder encoding(@Nullable Input<String> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setFile(Input<String> file) {
+        public Builder file(Input<String> file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Input.of(Objects.requireNonNull(file));
             return this;
         }
 
-        public Builder setFileFingerprintLines(@Nullable Input<String> fileFingerprintLines) {
+        public Builder fileFingerprintLines(@Nullable Input<String> fileFingerprintLines) {
             this.fileFingerprintLines = fileFingerprintLines;
             return this;
         }
 
-        public Builder setFileFingerprintLines(@Nullable String fileFingerprintLines) {
+        public Builder fileFingerprintLines(@Nullable String fileFingerprintLines) {
             this.fileFingerprintLines = Input.ofNullable(fileFingerprintLines);
             return this;
         }
 
-        public Builder setInitialPosition(@Nullable Input<String> initialPosition) {
+        public Builder initialPosition(@Nullable Input<String> initialPosition) {
             this.initialPosition = initialPosition;
             return this;
         }
 
-        public Builder setInitialPosition(@Nullable String initialPosition) {
+        public Builder initialPosition(@Nullable String initialPosition) {
             this.initialPosition = Input.ofNullable(initialPosition);
             return this;
         }
 
-        public Builder setLogGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Input<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder setMultilineStartPattern(@Nullable Input<String> multilineStartPattern) {
+        public Builder multilineStartPattern(@Nullable Input<String> multilineStartPattern) {
             this.multilineStartPattern = multilineStartPattern;
             return this;
         }
 
-        public Builder setMultilineStartPattern(@Nullable String multilineStartPattern) {
+        public Builder multilineStartPattern(@Nullable String multilineStartPattern) {
             this.multilineStartPattern = Input.ofNullable(multilineStartPattern);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

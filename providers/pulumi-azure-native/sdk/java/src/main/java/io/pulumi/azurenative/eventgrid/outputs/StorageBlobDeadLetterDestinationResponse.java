@@ -28,11 +28,11 @@ public final class StorageBlobDeadLetterDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"blobContainerName","endpointType","resourceId"})
+    @OutputCustomType.Constructor
     private StorageBlobDeadLetterDestinationResponse(
-        @Nullable String blobContainerName,
-        String endpointType,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("blobContainerName") @Nullable String blobContainerName,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.blobContainerName = blobContainerName;
         this.endpointType = endpointType;
         this.resourceId = resourceId;
@@ -85,17 +85,17 @@ public final class StorageBlobDeadLetterDestinationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setBlobContainerName(@Nullable String blobContainerName) {
+        public Builder blobContainerName(@Nullable String blobContainerName) {
             this.blobContainerName = blobContainerName;
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

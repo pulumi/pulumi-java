@@ -90,17 +90,17 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
     	      this.sdsConfig = defaults.sdsConfig;
         }
 
-        public Builder setCertificatePaths(TlsCertificatePathsResponse certificatePaths) {
+        public Builder certificatePaths(TlsCertificatePathsResponse certificatePaths) {
             this.certificatePaths = Objects.requireNonNull(certificatePaths);
             return this;
         }
 
-        public Builder setCertificateSource(String certificateSource) {
+        public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
 
-        public Builder setSdsConfig(SdsConfigResponse sdsConfig) {
+        public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }

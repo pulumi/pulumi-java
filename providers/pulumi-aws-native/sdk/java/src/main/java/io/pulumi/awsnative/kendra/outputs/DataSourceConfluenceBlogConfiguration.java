@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceConfluenceBlogConfiguration {
     private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
 
-    @OutputCustomType.Constructor({"blogFieldMappings"})
-    private DataSourceConfluenceBlogConfiguration(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
+    @OutputCustomType.Constructor
+    private DataSourceConfluenceBlogConfiguration(@OutputCustomType.Parameter("blogFieldMappings") @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
         this.blogFieldMappings = blogFieldMappings;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceConfluenceBlogConfiguration {
     	      this.blogFieldMappings = defaults.blogFieldMappings;
         }
 
-        public Builder setBlogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
+        public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }

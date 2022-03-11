@@ -28,11 +28,11 @@ public final class GetUserGroupResult {
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor({"arn","status","userIds"})
+    @OutputCustomType.Constructor
     private GetUserGroupResult(
-        @Nullable String arn,
-        @Nullable String status,
-        @Nullable List<String> userIds) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.arn = arn;
         this.status = status;
         this.userIds = userIds;
@@ -84,17 +84,17 @@ public final class GetUserGroupResult {
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }

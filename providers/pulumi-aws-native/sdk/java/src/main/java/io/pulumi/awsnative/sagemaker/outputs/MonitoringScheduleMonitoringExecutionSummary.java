@@ -45,16 +45,16 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
      */
     private final String scheduledTime;
 
-    @OutputCustomType.Constructor({"creationTime","endpointName","failureReason","lastModifiedTime","monitoringExecutionStatus","monitoringScheduleName","processingJobArn","scheduledTime"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleMonitoringExecutionSummary(
-        String creationTime,
-        @Nullable String endpointName,
-        @Nullable String failureReason,
-        String lastModifiedTime,
-        MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
-        String monitoringScheduleName,
-        @Nullable String processingJobArn,
-        String scheduledTime) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
+        @OutputCustomType.Parameter("failureReason") @Nullable String failureReason,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("monitoringExecutionStatus") MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus,
+        @OutputCustomType.Parameter("monitoringScheduleName") String monitoringScheduleName,
+        @OutputCustomType.Parameter("processingJobArn") @Nullable String processingJobArn,
+        @OutputCustomType.Parameter("scheduledTime") String scheduledTime) {
         this.creationTime = creationTime;
         this.endpointName = endpointName;
         this.failureReason = failureReason;
@@ -148,42 +148,42 @@ public final class MonitoringScheduleMonitoringExecutionSummary {
     	      this.scheduledTime = defaults.scheduledTime;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setMonitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
+        public Builder monitoringExecutionStatus(MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus) {
             this.monitoringExecutionStatus = Objects.requireNonNull(monitoringExecutionStatus);
             return this;
         }
 
-        public Builder setMonitoringScheduleName(String monitoringScheduleName) {
+        public Builder monitoringScheduleName(String monitoringScheduleName) {
             this.monitoringScheduleName = Objects.requireNonNull(monitoringScheduleName);
             return this;
         }
 
-        public Builder setProcessingJobArn(@Nullable String processingJobArn) {
+        public Builder processingJobArn(@Nullable String processingJobArn) {
             this.processingJobArn = processingJobArn;
             return this;
         }
 
-        public Builder setScheduledTime(String scheduledTime) {
+        public Builder scheduledTime(String scheduledTime) {
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }

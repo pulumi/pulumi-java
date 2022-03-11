@@ -112,52 +112,52 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setActivatedPolicyTypes(@Nullable Input<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes) {
+        public Builder activatedPolicyTypes(@Nullable Input<List<TaxonomyActivatedPolicyTypesItem>> activatedPolicyTypes) {
             this.activatedPolicyTypes = activatedPolicyTypes;
             return this;
         }
 
-        public Builder setActivatedPolicyTypes(@Nullable List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
+        public Builder activatedPolicyTypes(@Nullable List<TaxonomyActivatedPolicyTypesItem> activatedPolicyTypes) {
             this.activatedPolicyTypes = Input.ofNullable(activatedPolicyTypes);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

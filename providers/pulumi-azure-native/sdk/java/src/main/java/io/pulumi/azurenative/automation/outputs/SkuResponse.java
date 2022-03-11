@@ -28,11 +28,11 @@ public final class SkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","family","name"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        @Nullable Integer capacity,
-        @Nullable String family,
-        String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;
@@ -84,17 +84,17 @@ public final class SkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

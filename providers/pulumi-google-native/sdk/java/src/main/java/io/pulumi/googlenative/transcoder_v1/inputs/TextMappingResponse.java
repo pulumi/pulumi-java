@@ -89,17 +89,17 @@ public final class TextMappingResponse extends io.pulumi.resources.InvokeArgs {
     	      this.inputTrack = defaults.inputTrack;
         }
 
-        public Builder setAtomKey(String atomKey) {
+        public Builder atomKey(String atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
-        public Builder setInputKey(String inputKey) {
+        public Builder inputKey(String inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
-        public Builder setInputTrack(Integer inputTrack) {
+        public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }

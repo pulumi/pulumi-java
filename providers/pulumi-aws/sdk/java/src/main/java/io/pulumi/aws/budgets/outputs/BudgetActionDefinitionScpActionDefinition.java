@@ -21,10 +21,10 @@ public final class BudgetActionDefinitionScpActionDefinition {
      */
     private final List<String> targetIds;
 
-    @OutputCustomType.Constructor({"policyId","targetIds"})
+    @OutputCustomType.Constructor
     private BudgetActionDefinitionScpActionDefinition(
-        String policyId,
-        List<String> targetIds) {
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("targetIds") List<String> targetIds) {
         this.policyId = policyId;
         this.targetIds = targetIds;
     }
@@ -66,12 +66,12 @@ public final class BudgetActionDefinitionScpActionDefinition {
     	      this.targetIds = defaults.targetIds;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setTargetIds(List<String> targetIds) {
+        public Builder targetIds(List<String> targetIds) {
             this.targetIds = Objects.requireNonNull(targetIds);
             return this;
         }

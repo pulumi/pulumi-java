@@ -49,15 +49,15 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
      */
     private final @Nullable Integer replicationInterval;
 
-    @OutputCustomType.Constructor({"activeStorageAccountId","applicationConsistentSnapshotFrequencyInHours","encryption","instanceType","onlineReplicationStartTime","recoveryPointHistoryDurationInHours","replicationInterval"})
+    @OutputCustomType.Constructor
     private HyperVReplicaAzurePolicyDetailsResponse(
-        @Nullable String activeStorageAccountId,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String encryption,
-        String instanceType,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPointHistoryDurationInHours,
-        @Nullable Integer replicationInterval) {
+        @OutputCustomType.Parameter("activeStorageAccountId") @Nullable String activeStorageAccountId,
+        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @OutputCustomType.Parameter("encryption") @Nullable String encryption,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @OutputCustomType.Parameter("recoveryPointHistoryDurationInHours") @Nullable Integer recoveryPointHistoryDurationInHours,
+        @OutputCustomType.Parameter("replicationInterval") @Nullable Integer replicationInterval) {
         this.activeStorageAccountId = activeStorageAccountId;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.encryption = encryption;
@@ -150,37 +150,37 @@ public final class HyperVReplicaAzurePolicyDetailsResponse {
     	      this.replicationInterval = defaults.replicationInterval;
         }
 
-        public Builder setActiveStorageAccountId(@Nullable String activeStorageAccountId) {
+        public Builder activeStorageAccountId(@Nullable String activeStorageAccountId) {
             this.activeStorageAccountId = activeStorageAccountId;
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
-        public Builder setEncryption(@Nullable String encryption) {
+        public Builder encryption(@Nullable String encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
-        public Builder setRecoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
+        public Builder recoveryPointHistoryDurationInHours(@Nullable Integer recoveryPointHistoryDurationInHours) {
             this.recoveryPointHistoryDurationInHours = recoveryPointHistoryDurationInHours;
             return this;
         }
 
-        public Builder setReplicationInterval(@Nullable Integer replicationInterval) {
+        public Builder replicationInterval(@Nullable Integer replicationInterval) {
             this.replicationInterval = replicationInterval;
             return this;
         }

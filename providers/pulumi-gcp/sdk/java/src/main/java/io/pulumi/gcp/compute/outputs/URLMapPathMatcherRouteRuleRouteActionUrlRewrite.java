@@ -26,10 +26,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewrite {
      */
     private final @Nullable String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionUrlRewrite(
-        @Nullable String hostRewrite,
-        @Nullable String pathPrefixRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }
@@ -75,12 +75,12 @@ public final class URLMapPathMatcherRouteRuleRouteActionUrlRewrite {
     	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }

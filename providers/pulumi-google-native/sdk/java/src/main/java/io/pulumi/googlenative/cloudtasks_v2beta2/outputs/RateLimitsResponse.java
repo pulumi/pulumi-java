@@ -26,11 +26,11 @@ public final class RateLimitsResponse {
      */
     private final Double maxTasksDispatchedPerSecond;
 
-    @OutputCustomType.Constructor({"maxBurstSize","maxConcurrentTasks","maxTasksDispatchedPerSecond"})
+    @OutputCustomType.Constructor
     private RateLimitsResponse(
-        Integer maxBurstSize,
-        Integer maxConcurrentTasks,
-        Double maxTasksDispatchedPerSecond) {
+        @OutputCustomType.Parameter("maxBurstSize") Integer maxBurstSize,
+        @OutputCustomType.Parameter("maxConcurrentTasks") Integer maxConcurrentTasks,
+        @OutputCustomType.Parameter("maxTasksDispatchedPerSecond") Double maxTasksDispatchedPerSecond) {
         this.maxBurstSize = maxBurstSize;
         this.maxConcurrentTasks = maxConcurrentTasks;
         this.maxTasksDispatchedPerSecond = maxTasksDispatchedPerSecond;
@@ -82,17 +82,17 @@ public final class RateLimitsResponse {
     	      this.maxTasksDispatchedPerSecond = defaults.maxTasksDispatchedPerSecond;
         }
 
-        public Builder setMaxBurstSize(Integer maxBurstSize) {
+        public Builder maxBurstSize(Integer maxBurstSize) {
             this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
             return this;
         }
 
-        public Builder setMaxConcurrentTasks(Integer maxConcurrentTasks) {
+        public Builder maxConcurrentTasks(Integer maxConcurrentTasks) {
             this.maxConcurrentTasks = Objects.requireNonNull(maxConcurrentTasks);
             return this;
         }
 
-        public Builder setMaxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
+        public Builder maxTasksDispatchedPerSecond(Double maxTasksDispatchedPerSecond) {
             this.maxTasksDispatchedPerSecond = Objects.requireNonNull(maxTasksDispatchedPerSecond);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ReplicationSetRegionConfiguration {
     private final String sseKmsKeyId;
 
-    @OutputCustomType.Constructor({"sseKmsKeyId"})
-    private ReplicationSetRegionConfiguration(String sseKmsKeyId) {
+    @OutputCustomType.Constructor
+    private ReplicationSetRegionConfiguration(@OutputCustomType.Parameter("sseKmsKeyId") String sseKmsKeyId) {
         this.sseKmsKeyId = sseKmsKeyId;
     }
 
@@ -40,7 +40,7 @@ public final class ReplicationSetRegionConfiguration {
     	      this.sseKmsKeyId = defaults.sseKmsKeyId;
         }
 
-        public Builder setSseKmsKeyId(String sseKmsKeyId) {
+        public Builder sseKmsKeyId(String sseKmsKeyId) {
             this.sseKmsKeyId = Objects.requireNonNull(sseKmsKeyId);
             return this;
         }

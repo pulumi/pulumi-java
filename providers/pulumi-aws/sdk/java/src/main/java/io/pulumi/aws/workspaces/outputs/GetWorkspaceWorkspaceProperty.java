@@ -36,13 +36,13 @@ public final class GetWorkspaceWorkspaceProperty {
      */
     private final Integer userVolumeSizeGib;
 
-    @OutputCustomType.Constructor({"computeTypeName","rootVolumeSizeGib","runningMode","runningModeAutoStopTimeoutInMinutes","userVolumeSizeGib"})
+    @OutputCustomType.Constructor
     private GetWorkspaceWorkspaceProperty(
-        String computeTypeName,
-        Integer rootVolumeSizeGib,
-        String runningMode,
-        Integer runningModeAutoStopTimeoutInMinutes,
-        Integer userVolumeSizeGib) {
+        @OutputCustomType.Parameter("computeTypeName") String computeTypeName,
+        @OutputCustomType.Parameter("rootVolumeSizeGib") Integer rootVolumeSizeGib,
+        @OutputCustomType.Parameter("runningMode") String runningMode,
+        @OutputCustomType.Parameter("runningModeAutoStopTimeoutInMinutes") Integer runningModeAutoStopTimeoutInMinutes,
+        @OutputCustomType.Parameter("userVolumeSizeGib") Integer userVolumeSizeGib) {
         this.computeTypeName = computeTypeName;
         this.rootVolumeSizeGib = rootVolumeSizeGib;
         this.runningMode = runningMode;
@@ -114,27 +114,27 @@ public final class GetWorkspaceWorkspaceProperty {
     	      this.userVolumeSizeGib = defaults.userVolumeSizeGib;
         }
 
-        public Builder setComputeTypeName(String computeTypeName) {
+        public Builder computeTypeName(String computeTypeName) {
             this.computeTypeName = Objects.requireNonNull(computeTypeName);
             return this;
         }
 
-        public Builder setRootVolumeSizeGib(Integer rootVolumeSizeGib) {
+        public Builder rootVolumeSizeGib(Integer rootVolumeSizeGib) {
             this.rootVolumeSizeGib = Objects.requireNonNull(rootVolumeSizeGib);
             return this;
         }
 
-        public Builder setRunningMode(String runningMode) {
+        public Builder runningMode(String runningMode) {
             this.runningMode = Objects.requireNonNull(runningMode);
             return this;
         }
 
-        public Builder setRunningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
+        public Builder runningModeAutoStopTimeoutInMinutes(Integer runningModeAutoStopTimeoutInMinutes) {
             this.runningModeAutoStopTimeoutInMinutes = Objects.requireNonNull(runningModeAutoStopTimeoutInMinutes);
             return this;
         }
 
-        public Builder setUserVolumeSizeGib(Integer userVolumeSizeGib) {
+        public Builder userVolumeSizeGib(Integer userVolumeSizeGib) {
             this.userVolumeSizeGib = Objects.requireNonNull(userVolumeSizeGib);
             return this;
         }

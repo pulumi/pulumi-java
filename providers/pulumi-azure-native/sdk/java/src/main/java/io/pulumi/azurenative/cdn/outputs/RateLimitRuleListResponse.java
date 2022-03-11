@@ -17,8 +17,8 @@ public final class RateLimitRuleListResponse {
      */
     private final @Nullable List<RateLimitRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private RateLimitRuleListResponse(@Nullable List<RateLimitRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private RateLimitRuleListResponse(@OutputCustomType.Parameter("rules") @Nullable List<RateLimitRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -50,7 +50,7 @@ public final class RateLimitRuleListResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<RateLimitRuleResponse> rules) {
+        public Builder rules(@Nullable List<RateLimitRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

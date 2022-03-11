@@ -29,11 +29,11 @@ public final class RecorderRecordingGroup {
      */
     private final @Nullable List<String> resourceTypes;
 
-    @OutputCustomType.Constructor({"allSupported","includeGlobalResourceTypes","resourceTypes"})
+    @OutputCustomType.Constructor
     private RecorderRecordingGroup(
-        @Nullable Boolean allSupported,
-        @Nullable Boolean includeGlobalResourceTypes,
-        @Nullable List<String> resourceTypes) {
+        @OutputCustomType.Parameter("allSupported") @Nullable Boolean allSupported,
+        @OutputCustomType.Parameter("includeGlobalResourceTypes") @Nullable Boolean includeGlobalResourceTypes,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes) {
         this.allSupported = allSupported;
         this.includeGlobalResourceTypes = includeGlobalResourceTypes;
         this.resourceTypes = resourceTypes;
@@ -85,17 +85,17 @@ public final class RecorderRecordingGroup {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setAllSupported(@Nullable Boolean allSupported) {
+        public Builder allSupported(@Nullable Boolean allSupported) {
             this.allSupported = allSupported;
             return this;
         }
 
-        public Builder setIncludeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
+        public Builder includeGlobalResourceTypes(@Nullable Boolean includeGlobalResourceTypes) {
             this.includeGlobalResourceTypes = includeGlobalResourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }

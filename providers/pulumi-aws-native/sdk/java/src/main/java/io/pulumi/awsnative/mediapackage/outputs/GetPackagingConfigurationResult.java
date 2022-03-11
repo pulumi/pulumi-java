@@ -53,15 +53,15 @@ public final class GetPackagingConfigurationResult {
      */
     private final @Nullable List<PackagingConfigurationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","cmafPackage","dashPackage","hlsPackage","mssPackage","packagingGroupId","tags"})
+    @OutputCustomType.Constructor
     private GetPackagingConfigurationResult(
-        @Nullable String arn,
-        @Nullable PackagingConfigurationCmafPackage cmafPackage,
-        @Nullable PackagingConfigurationDashPackage dashPackage,
-        @Nullable PackagingConfigurationHlsPackage hlsPackage,
-        @Nullable PackagingConfigurationMssPackage mssPackage,
-        @Nullable String packagingGroupId,
-        @Nullable List<PackagingConfigurationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("cmafPackage") @Nullable PackagingConfigurationCmafPackage cmafPackage,
+        @OutputCustomType.Parameter("dashPackage") @Nullable PackagingConfigurationDashPackage dashPackage,
+        @OutputCustomType.Parameter("hlsPackage") @Nullable PackagingConfigurationHlsPackage hlsPackage,
+        @OutputCustomType.Parameter("mssPackage") @Nullable PackagingConfigurationMssPackage mssPackage,
+        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable List<PackagingConfigurationTag> tags) {
         this.arn = arn;
         this.cmafPackage = cmafPackage;
         this.dashPackage = dashPackage;
@@ -153,37 +153,37 @@ public final class GetPackagingConfigurationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable PackagingConfigurationCmafPackage cmafPackage) {
+        public Builder cmafPackage(@Nullable PackagingConfigurationCmafPackage cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
-        public Builder setDashPackage(@Nullable PackagingConfigurationDashPackage dashPackage) {
+        public Builder dashPackage(@Nullable PackagingConfigurationDashPackage dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable PackagingConfigurationHlsPackage hlsPackage) {
+        public Builder hlsPackage(@Nullable PackagingConfigurationHlsPackage hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
-        public Builder setMssPackage(@Nullable PackagingConfigurationMssPackage mssPackage) {
+        public Builder mssPackage(@Nullable PackagingConfigurationMssPackage mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
-        public Builder setPackagingGroupId(@Nullable String packagingGroupId) {
+        public Builder packagingGroupId(@Nullable String packagingGroupId) {
             this.packagingGroupId = packagingGroupId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PackagingConfigurationTag> tags) {
+        public Builder tags(@Nullable List<PackagingConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }

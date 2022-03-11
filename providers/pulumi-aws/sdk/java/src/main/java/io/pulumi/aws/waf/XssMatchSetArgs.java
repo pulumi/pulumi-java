@@ -72,22 +72,22 @@ public final class XssMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xssMatchTuples = defaults.xssMatchTuples;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setXssMatchTuples(@Nullable Input<List<XssMatchSetXssMatchTupleArgs>> xssMatchTuples) {
+        public Builder xssMatchTuples(@Nullable Input<List<XssMatchSetXssMatchTupleArgs>> xssMatchTuples) {
             this.xssMatchTuples = xssMatchTuples;
             return this;
         }
 
-        public Builder setXssMatchTuples(@Nullable List<XssMatchSetXssMatchTupleArgs> xssMatchTuples) {
+        public Builder xssMatchTuples(@Nullable List<XssMatchSetXssMatchTupleArgs> xssMatchTuples) {
             this.xssMatchTuples = Input.ofNullable(xssMatchTuples);
             return this;
         }

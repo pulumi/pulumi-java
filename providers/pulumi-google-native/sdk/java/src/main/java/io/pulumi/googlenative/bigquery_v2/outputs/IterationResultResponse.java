@@ -37,13 +37,13 @@ public final class IterationResultResponse {
      */
     private final Double trainingLoss;
 
-    @OutputCustomType.Constructor({"durationMs","evalLoss","index","learnRate","trainingLoss"})
+    @OutputCustomType.Constructor
     private IterationResultResponse(
-        String durationMs,
-        Double evalLoss,
-        Integer index,
-        Double learnRate,
-        Double trainingLoss) {
+        @OutputCustomType.Parameter("durationMs") String durationMs,
+        @OutputCustomType.Parameter("evalLoss") Double evalLoss,
+        @OutputCustomType.Parameter("index") Integer index,
+        @OutputCustomType.Parameter("learnRate") Double learnRate,
+        @OutputCustomType.Parameter("trainingLoss") Double trainingLoss) {
         this.durationMs = durationMs;
         this.evalLoss = evalLoss;
         this.index = index;
@@ -115,27 +115,27 @@ public final class IterationResultResponse {
     	      this.trainingLoss = defaults.trainingLoss;
         }
 
-        public Builder setDurationMs(String durationMs) {
+        public Builder durationMs(String durationMs) {
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
 
-        public Builder setEvalLoss(Double evalLoss) {
+        public Builder evalLoss(Double evalLoss) {
             this.evalLoss = Objects.requireNonNull(evalLoss);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder setLearnRate(Double learnRate) {
+        public Builder learnRate(Double learnRate) {
             this.learnRate = Objects.requireNonNull(learnRate);
             return this;
         }
 
-        public Builder setTrainingLoss(Double trainingLoss) {
+        public Builder trainingLoss(Double trainingLoss) {
             this.trainingLoss = Objects.requireNonNull(trainingLoss);
             return this;
         }

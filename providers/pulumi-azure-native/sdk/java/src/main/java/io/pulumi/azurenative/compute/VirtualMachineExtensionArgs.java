@@ -266,142 +266,142 @@ public final class VirtualMachineExtensionArgs extends io.pulumi.resources.Resou
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Input<Boolean> autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
             return this;
         }
 
-        public Builder setAutoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
+        public Builder autoUpgradeMinorVersion(@Nullable Boolean autoUpgradeMinorVersion) {
             this.autoUpgradeMinorVersion = Input.ofNullable(autoUpgradeMinorVersion);
             return this;
         }
 
-        public Builder setEnableAutomaticUpgrade(@Nullable Input<Boolean> enableAutomaticUpgrade) {
+        public Builder enableAutomaticUpgrade(@Nullable Input<Boolean> enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = enableAutomaticUpgrade;
             return this;
         }
 
-        public Builder setEnableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
+        public Builder enableAutomaticUpgrade(@Nullable Boolean enableAutomaticUpgrade) {
             this.enableAutomaticUpgrade = Input.ofNullable(enableAutomaticUpgrade);
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable Input<String> forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable Input<String> forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = Input.ofNullable(forceUpdateTag);
             return this;
         }
 
-        public Builder setInstanceView(@Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView) {
+        public Builder instanceView(@Nullable Input<VirtualMachineExtensionInstanceViewArgs> instanceView) {
             this.instanceView = instanceView;
             return this;
         }
 
-        public Builder setInstanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
+        public Builder instanceView(@Nullable VirtualMachineExtensionInstanceViewArgs instanceView) {
             this.instanceView = Input.ofNullable(instanceView);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Input<Object> protectedSettings) {
+        public Builder protectedSettings(@Nullable Input<Object> protectedSettings) {
             this.protectedSettings = protectedSettings;
             return this;
         }
 
-        public Builder setProtectedSettings(@Nullable Object protectedSettings) {
+        public Builder protectedSettings(@Nullable Object protectedSettings) {
             this.protectedSettings = Input.ofNullable(protectedSettings);
             return this;
         }
 
-        public Builder setPublisher(@Nullable Input<String> publisher) {
+        public Builder publisher(@Nullable Input<String> publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = Input.ofNullable(publisher);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<Object> settings) {
+        public Builder settings(@Nullable Input<Object> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable Object settings) {
+        public Builder settings(@Nullable Object settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable Input<String> typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }
 
-        public Builder setVmExtensionName(@Nullable Input<String> vmExtensionName) {
+        public Builder vmExtensionName(@Nullable Input<String> vmExtensionName) {
             this.vmExtensionName = vmExtensionName;
             return this;
         }
 
-        public Builder setVmExtensionName(@Nullable String vmExtensionName) {
+        public Builder vmExtensionName(@Nullable String vmExtensionName) {
             this.vmExtensionName = Input.ofNullable(vmExtensionName);
             return this;
         }
 
-        public Builder setVmName(Input<String> vmName) {
+        public Builder vmName(Input<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Input.of(Objects.requireNonNull(vmName));
             return this;
         }

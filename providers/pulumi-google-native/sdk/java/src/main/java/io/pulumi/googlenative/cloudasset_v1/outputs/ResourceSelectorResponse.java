@@ -15,8 +15,8 @@ public final class ResourceSelectorResponse {
      */
     private final String fullResourceName;
 
-    @OutputCustomType.Constructor({"fullResourceName"})
-    private ResourceSelectorResponse(String fullResourceName) {
+    @OutputCustomType.Constructor
+    private ResourceSelectorResponse(@OutputCustomType.Parameter("fullResourceName") String fullResourceName) {
         this.fullResourceName = fullResourceName;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceSelectorResponse {
     	      this.fullResourceName = defaults.fullResourceName;
         }
 
-        public Builder setFullResourceName(String fullResourceName) {
+        public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }

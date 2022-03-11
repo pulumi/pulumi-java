@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorKafkaCluster {
     private final ConnectorApacheKafkaCluster apacheKafkaCluster;
 
-    @OutputCustomType.Constructor({"apacheKafkaCluster"})
-    private ConnectorKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
+    @OutputCustomType.Constructor
+    private ConnectorKafkaCluster(@OutputCustomType.Parameter("apacheKafkaCluster") ConnectorApacheKafkaCluster apacheKafkaCluster) {
         this.apacheKafkaCluster = apacheKafkaCluster;
     }
 
@@ -40,7 +40,7 @@ public final class ConnectorKafkaCluster {
     	      this.apacheKafkaCluster = defaults.apacheKafkaCluster;
         }
 
-        public Builder setApacheKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
+        public Builder apacheKafkaCluster(ConnectorApacheKafkaCluster apacheKafkaCluster) {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
         }

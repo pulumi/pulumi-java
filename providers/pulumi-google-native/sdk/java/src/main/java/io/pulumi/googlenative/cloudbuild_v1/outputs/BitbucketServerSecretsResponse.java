@@ -25,11 +25,11 @@ public final class BitbucketServerSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor({"adminAccessTokenVersionName","readAccessTokenVersionName","webhookSecretVersionName"})
+    @OutputCustomType.Constructor
     private BitbucketServerSecretsResponse(
-        String adminAccessTokenVersionName,
-        String readAccessTokenVersionName,
-        String webhookSecretVersionName) {
+        @OutputCustomType.Parameter("adminAccessTokenVersionName") String adminAccessTokenVersionName,
+        @OutputCustomType.Parameter("readAccessTokenVersionName") String readAccessTokenVersionName,
+        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.adminAccessTokenVersionName = adminAccessTokenVersionName;
         this.readAccessTokenVersionName = readAccessTokenVersionName;
         this.webhookSecretVersionName = webhookSecretVersionName;
@@ -81,17 +81,17 @@ public final class BitbucketServerSecretsResponse {
     	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
         }
 
-        public Builder setAdminAccessTokenVersionName(String adminAccessTokenVersionName) {
+        public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
             this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
             return this;
         }
 
-        public Builder setReadAccessTokenVersionName(String readAccessTokenVersionName) {
+        public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(String webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }

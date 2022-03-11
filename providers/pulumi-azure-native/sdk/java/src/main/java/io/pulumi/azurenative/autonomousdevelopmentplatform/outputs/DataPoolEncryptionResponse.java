@@ -32,12 +32,12 @@ public final class DataPoolEncryptionResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"keyName","keyVaultUri","keyVersion","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private DataPoolEncryptionResponse(
-        String keyName,
-        String keyVaultUri,
-        @Nullable String keyVersion,
-        String userAssignedIdentity) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
@@ -99,22 +99,22 @@ public final class DataPoolEncryptionResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }

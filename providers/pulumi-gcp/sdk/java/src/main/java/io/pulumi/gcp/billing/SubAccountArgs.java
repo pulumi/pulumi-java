@@ -89,32 +89,32 @@ public final class SubAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.masterBillingAccount = defaults.masterBillingAccount;
         }
 
-        public Builder setDeletionPolicy(@Nullable Input<String> deletionPolicy) {
+        public Builder deletionPolicy(@Nullable Input<String> deletionPolicy) {
             this.deletionPolicy = deletionPolicy;
             return this;
         }
 
-        public Builder setDeletionPolicy(@Nullable String deletionPolicy) {
+        public Builder deletionPolicy(@Nullable String deletionPolicy) {
             this.deletionPolicy = Input.ofNullable(deletionPolicy);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setMasterBillingAccount(Input<String> masterBillingAccount) {
+        public Builder masterBillingAccount(Input<String> masterBillingAccount) {
             this.masterBillingAccount = Objects.requireNonNull(masterBillingAccount);
             return this;
         }
 
-        public Builder setMasterBillingAccount(String masterBillingAccount) {
+        public Builder masterBillingAccount(String masterBillingAccount) {
             this.masterBillingAccount = Input.of(Objects.requireNonNull(masterBillingAccount));
             return this;
         }

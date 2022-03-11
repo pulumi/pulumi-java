@@ -122,28 +122,28 @@ public final class GetAzureFirewallResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalProperties","applicationRuleCollections","etag","firewallPolicy","hubIPAddresses","id","ipConfigurations","ipGroups","location","managementIpConfiguration","name","natRuleCollections","networkRuleCollections","provisioningState","sku","tags","threatIntelMode","type","virtualHub","zones"})
+    @OutputCustomType.Constructor
     private GetAzureFirewallResult(
-        @Nullable Map<String,String> additionalProperties,
-        @Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable HubIPAddressesResponse hubIPAddresses,
-        @Nullable String id,
-        @Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations,
-        List<AzureFirewallIpGroupsResponse> ipGroups,
-        @Nullable String location,
-        @Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration,
-        String name,
-        @Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections,
-        @Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections,
-        String provisioningState,
-        @Nullable AzureFirewallSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String threatIntelMode,
-        String type,
-        @Nullable SubResourceResponse virtualHub,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("additionalProperties") @Nullable Map<String,String> additionalProperties,
+        @OutputCustomType.Parameter("applicationRuleCollections") @Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @OutputCustomType.Parameter("hubIPAddresses") @Nullable HubIPAddressesResponse hubIPAddresses,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("ipGroups") List<AzureFirewallIpGroupsResponse> ipGroups,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managementIpConfiguration") @Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natRuleCollections") @Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections,
+        @OutputCustomType.Parameter("networkRuleCollections") @Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable AzureFirewallSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalProperties = additionalProperties;
         this.applicationRuleCollections = applicationRuleCollections;
         this.etag = etag;
@@ -365,102 +365,102 @@ public final class GetAzureFirewallResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalProperties(@Nullable Map<String,String> additionalProperties) {
+        public Builder additionalProperties(@Nullable Map<String,String> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setApplicationRuleCollections(@Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections) {
+        public Builder applicationRuleCollections(@Nullable List<AzureFirewallApplicationRuleCollectionResponse> applicationRuleCollections) {
             this.applicationRuleCollections = applicationRuleCollections;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setHubIPAddresses(@Nullable HubIPAddressesResponse hubIPAddresses) {
+        public Builder hubIPAddresses(@Nullable HubIPAddressesResponse hubIPAddresses) {
             this.hubIPAddresses = hubIPAddresses;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<AzureFirewallIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpGroups(List<AzureFirewallIpGroupsResponse> ipGroups) {
+        public Builder ipGroups(List<AzureFirewallIpGroupsResponse> ipGroups) {
             this.ipGroups = Objects.requireNonNull(ipGroups);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagementIpConfiguration(@Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration) {
+        public Builder managementIpConfiguration(@Nullable AzureFirewallIPConfigurationResponse managementIpConfiguration) {
             this.managementIpConfiguration = managementIpConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatRuleCollections(@Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections) {
+        public Builder natRuleCollections(@Nullable List<AzureFirewallNatRuleCollectionResponse> natRuleCollections) {
             this.natRuleCollections = natRuleCollections;
             return this;
         }
 
-        public Builder setNetworkRuleCollections(@Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections) {
+        public Builder networkRuleCollections(@Nullable List<AzureFirewallNetworkRuleCollectionResponse> networkRuleCollections) {
             this.networkRuleCollections = networkRuleCollections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable AzureFirewallSkuResponse sku) {
+        public Builder sku(@Nullable AzureFirewallSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable String threatIntelMode) {
+        public Builder threatIntelMode(@Nullable String threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceResponse virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

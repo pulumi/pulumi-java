@@ -113,28 +113,28 @@ public final class GetContactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contactProfile","endAzimuthDegrees","endElevationDegrees","errorMessage","etag","groundStationName","id","maximumElevationDegrees","name","reservationEndTime","reservationStartTime","rxEndTime","rxStartTime","startAzimuthDegrees","startElevationDegrees","status","systemData","txEndTime","txStartTime","type"})
+    @OutputCustomType.Constructor
     private GetContactResult(
-        ResourceReferenceResponse contactProfile,
-        Double endAzimuthDegrees,
-        Double endElevationDegrees,
-        String errorMessage,
-        String etag,
-        String groundStationName,
-        String id,
-        Double maximumElevationDegrees,
-        String name,
-        String reservationEndTime,
-        String reservationStartTime,
-        String rxEndTime,
-        String rxStartTime,
-        Double startAzimuthDegrees,
-        Double startElevationDegrees,
-        String status,
-        SystemDataResponse systemData,
-        String txEndTime,
-        String txStartTime,
-        String type) {
+        @OutputCustomType.Parameter("contactProfile") ResourceReferenceResponse contactProfile,
+        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("groundStationName") String groundStationName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reservationEndTime") String reservationEndTime,
+        @OutputCustomType.Parameter("reservationStartTime") String reservationStartTime,
+        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
+        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
+        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("txEndTime") String txEndTime,
+        @OutputCustomType.Parameter("txStartTime") String txStartTime,
+        @OutputCustomType.Parameter("type") String type) {
         this.contactProfile = contactProfile;
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;
@@ -356,102 +356,102 @@ public final class GetContactResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContactProfile(ResourceReferenceResponse contactProfile) {
+        public Builder contactProfile(ResourceReferenceResponse contactProfile) {
             this.contactProfile = Objects.requireNonNull(contactProfile);
             return this;
         }
 
-        public Builder setEndAzimuthDegrees(Double endAzimuthDegrees) {
+        public Builder endAzimuthDegrees(Double endAzimuthDegrees) {
             this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
             return this;
         }
 
-        public Builder setEndElevationDegrees(Double endElevationDegrees) {
+        public Builder endElevationDegrees(Double endElevationDegrees) {
             this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setGroundStationName(String groundStationName) {
+        public Builder groundStationName(String groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaximumElevationDegrees(Double maximumElevationDegrees) {
+        public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
             this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReservationEndTime(String reservationEndTime) {
+        public Builder reservationEndTime(String reservationEndTime) {
             this.reservationEndTime = Objects.requireNonNull(reservationEndTime);
             return this;
         }
 
-        public Builder setReservationStartTime(String reservationStartTime) {
+        public Builder reservationStartTime(String reservationStartTime) {
             this.reservationStartTime = Objects.requireNonNull(reservationStartTime);
             return this;
         }
 
-        public Builder setRxEndTime(String rxEndTime) {
+        public Builder rxEndTime(String rxEndTime) {
             this.rxEndTime = Objects.requireNonNull(rxEndTime);
             return this;
         }
 
-        public Builder setRxStartTime(String rxStartTime) {
+        public Builder rxStartTime(String rxStartTime) {
             this.rxStartTime = Objects.requireNonNull(rxStartTime);
             return this;
         }
 
-        public Builder setStartAzimuthDegrees(Double startAzimuthDegrees) {
+        public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
             this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
             return this;
         }
 
-        public Builder setStartElevationDegrees(Double startElevationDegrees) {
+        public Builder startElevationDegrees(Double startElevationDegrees) {
             this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTxEndTime(String txEndTime) {
+        public Builder txEndTime(String txEndTime) {
             this.txEndTime = Objects.requireNonNull(txEndTime);
             return this;
         }
 
-        public Builder setTxStartTime(String txStartTime) {
+        public Builder txStartTime(String txStartTime) {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

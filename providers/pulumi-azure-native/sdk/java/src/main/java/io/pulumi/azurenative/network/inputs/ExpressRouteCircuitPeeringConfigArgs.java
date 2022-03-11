@@ -124,52 +124,52 @@ public final class ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.resour
     	      this.routingRegistryName = defaults.routingRegistryName;
         }
 
-        public Builder setAdvertisedCommunities(@Nullable Input<List<String>> advertisedCommunities) {
+        public Builder advertisedCommunities(@Nullable Input<List<String>> advertisedCommunities) {
             this.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
-        public Builder setAdvertisedCommunities(@Nullable List<String> advertisedCommunities) {
+        public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
             this.advertisedCommunities = Input.ofNullable(advertisedCommunities);
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixes(@Nullable Input<List<String>> advertisedPublicPrefixes) {
+        public Builder advertisedPublicPrefixes(@Nullable Input<List<String>> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
+        public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = Input.ofNullable(advertisedPublicPrefixes);
             return this;
         }
 
-        public Builder setCustomerASN(@Nullable Input<Integer> customerASN) {
+        public Builder customerASN(@Nullable Input<Integer> customerASN) {
             this.customerASN = customerASN;
             return this;
         }
 
-        public Builder setCustomerASN(@Nullable Integer customerASN) {
+        public Builder customerASN(@Nullable Integer customerASN) {
             this.customerASN = Input.ofNullable(customerASN);
             return this;
         }
 
-        public Builder setLegacyMode(@Nullable Input<Integer> legacyMode) {
+        public Builder legacyMode(@Nullable Input<Integer> legacyMode) {
             this.legacyMode = legacyMode;
             return this;
         }
 
-        public Builder setLegacyMode(@Nullable Integer legacyMode) {
+        public Builder legacyMode(@Nullable Integer legacyMode) {
             this.legacyMode = Input.ofNullable(legacyMode);
             return this;
         }
 
-        public Builder setRoutingRegistryName(@Nullable Input<String> routingRegistryName) {
+        public Builder routingRegistryName(@Nullable Input<String> routingRegistryName) {
             this.routingRegistryName = routingRegistryName;
             return this;
         }
 
-        public Builder setRoutingRegistryName(@Nullable String routingRegistryName) {
+        public Builder routingRegistryName(@Nullable String routingRegistryName) {
             this.routingRegistryName = Input.ofNullable(routingRegistryName);
             return this;
         }

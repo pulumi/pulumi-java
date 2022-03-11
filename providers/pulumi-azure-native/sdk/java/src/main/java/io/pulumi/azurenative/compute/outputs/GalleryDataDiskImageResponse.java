@@ -34,12 +34,12 @@ public final class GalleryDataDiskImageResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor({"hostCaching","lun","sizeInGB","source"})
+    @OutputCustomType.Constructor
     private GalleryDataDiskImageResponse(
-        @Nullable String hostCaching,
-        Integer lun,
-        Integer sizeInGB,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
+        @OutputCustomType.Parameter("hostCaching") @Nullable String hostCaching,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("sizeInGB") Integer sizeInGB,
+        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.hostCaching = hostCaching;
         this.lun = lun;
         this.sizeInGB = sizeInGB;
@@ -101,22 +101,22 @@ public final class GalleryDataDiskImageResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setHostCaching(@Nullable String hostCaching) {
+        public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setSizeInGB(Integer sizeInGB) {
+        public Builder sizeInGB(Integer sizeInGB) {
             this.sizeInGB = Objects.requireNonNull(sizeInGB);
             return this;
         }
 
-        public Builder setSource(@Nullable GalleryArtifactVersionSourceResponse source) {
+        public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             this.source = source;
             return this;
         }

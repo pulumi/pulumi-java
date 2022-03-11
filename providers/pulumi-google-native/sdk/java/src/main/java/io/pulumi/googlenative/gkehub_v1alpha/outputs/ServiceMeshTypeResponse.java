@@ -20,10 +20,10 @@ public final class ServiceMeshTypeResponse {
      */
     private final String displayName;
 
-    @OutputCustomType.Constructor({"code","displayName"})
+    @OutputCustomType.Constructor
     private ServiceMeshTypeResponse(
-        String code,
-        String displayName) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("displayName") String displayName) {
         this.code = code;
         this.displayName = displayName;
     }
@@ -65,12 +65,12 @@ public final class ServiceMeshTypeResponse {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }

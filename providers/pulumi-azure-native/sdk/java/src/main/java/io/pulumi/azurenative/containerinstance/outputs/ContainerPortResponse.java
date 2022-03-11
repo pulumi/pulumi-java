@@ -23,10 +23,10 @@ public final class ContainerPortResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPortResponse(
-        Integer port,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.port = port;
         this.protocol = protocol;
     }
@@ -68,12 +68,12 @@ public final class ContainerPortResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

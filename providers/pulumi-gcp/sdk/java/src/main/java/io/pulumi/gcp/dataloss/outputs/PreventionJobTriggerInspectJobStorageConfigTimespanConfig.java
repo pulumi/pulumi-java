@@ -37,12 +37,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
      */
     private final PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField;
 
-    @OutputCustomType.Constructor({"enableAutoPopulationOfTimespanConfig","endTime","startTime","timestampField"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigTimespanConfig(
-        @Nullable Boolean enableAutoPopulationOfTimespanConfig,
-        @Nullable String endTime,
-        @Nullable String startTime,
-        PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
+        @OutputCustomType.Parameter("enableAutoPopulationOfTimespanConfig") @Nullable Boolean enableAutoPopulationOfTimespanConfig,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("timestampField") PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -107,22 +107,22 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfig {
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder setEnableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
+        public Builder timestampField(PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField timestampField) {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }

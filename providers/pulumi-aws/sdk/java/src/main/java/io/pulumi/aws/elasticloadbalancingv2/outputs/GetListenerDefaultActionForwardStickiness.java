@@ -13,10 +13,10 @@ public final class GetListenerDefaultActionForwardStickiness {
     private final Integer duration;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"duration","enabled"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionForwardStickiness(
-        Integer duration,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("duration") Integer duration,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }
@@ -50,12 +50,12 @@ public final class GetListenerDefaultActionForwardStickiness {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -56,16 +56,16 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases;
 
-    @OutputCustomType.Constructor({"description","displayName","isFallback","labels","name","parameters","priority","trainingPhrases"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1IntentResponse(
-        String description,
-        String displayName,
-        Boolean isFallback,
-        Map<String,String> labels,
-        String name,
-        List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters,
-        Integer priority,
-        List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isFallback") Boolean isFallback,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("trainingPhrases") List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
         this.description = description;
         this.displayName = displayName;
         this.isFallback = isFallback;
@@ -167,42 +167,42 @@ public final class GoogleCloudDialogflowCxV3beta1IntentResponse {
     	      this.trainingPhrases = defaults.trainingPhrases;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIsFallback(Boolean isFallback) {
+        public Builder isFallback(Boolean isFallback) {
             this.isFallback = Objects.requireNonNull(isFallback);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudDialogflowCxV3beta1IntentParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setTrainingPhrases(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
+        public Builder trainingPhrases(List<GoogleCloudDialogflowCxV3beta1IntentTrainingPhraseResponse> trainingPhrases) {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }

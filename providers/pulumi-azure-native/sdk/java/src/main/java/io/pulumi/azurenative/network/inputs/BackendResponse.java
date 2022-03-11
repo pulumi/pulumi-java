@@ -235,62 +235,62 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setBackendHostHeader(@Nullable String backendHostHeader) {
+        public Builder backendHostHeader(@Nullable String backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPrivateEndpointStatus(String privateEndpointStatus) {
+        public Builder privateEndpointStatus(String privateEndpointStatus) {
             this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
             return this;
         }
 
-        public Builder setPrivateLinkAlias(@Nullable String privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
-        public Builder setPrivateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

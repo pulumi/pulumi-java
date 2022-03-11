@@ -22,10 +22,10 @@ public final class DriveBitLockerKeyResponse {
      */
     private final @Nullable String driveId;
 
-    @OutputCustomType.Constructor({"bitLockerKey","driveId"})
+    @OutputCustomType.Constructor
     private DriveBitLockerKeyResponse(
-        @Nullable String bitLockerKey,
-        @Nullable String driveId) {
+        @OutputCustomType.Parameter("bitLockerKey") @Nullable String bitLockerKey,
+        @OutputCustomType.Parameter("driveId") @Nullable String driveId) {
         this.bitLockerKey = bitLockerKey;
         this.driveId = driveId;
     }
@@ -67,12 +67,12 @@ public final class DriveBitLockerKeyResponse {
     	      this.driveId = defaults.driveId;
         }
 
-        public Builder setBitLockerKey(@Nullable String bitLockerKey) {
+        public Builder bitLockerKey(@Nullable String bitLockerKey) {
             this.bitLockerKey = bitLockerKey;
             return this;
         }
 
-        public Builder setDriveId(@Nullable String driveId) {
+        public Builder driveId(@Nullable String driveId) {
             this.driveId = driveId;
             return this;
         }

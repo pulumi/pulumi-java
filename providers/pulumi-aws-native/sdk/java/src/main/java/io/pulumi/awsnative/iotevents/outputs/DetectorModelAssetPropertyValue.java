@@ -21,11 +21,11 @@ public final class DetectorModelAssetPropertyValue {
     private final @Nullable DetectorModelAssetPropertyTimestamp timestamp;
     private final DetectorModelAssetPropertyVariant value;
 
-    @OutputCustomType.Constructor({"quality","timestamp","value"})
+    @OutputCustomType.Constructor
     private DetectorModelAssetPropertyValue(
-        @Nullable String quality,
-        @Nullable DetectorModelAssetPropertyTimestamp timestamp,
-        DetectorModelAssetPropertyVariant value) {
+        @OutputCustomType.Parameter("quality") @Nullable String quality,
+        @OutputCustomType.Parameter("timestamp") @Nullable DetectorModelAssetPropertyTimestamp timestamp,
+        @OutputCustomType.Parameter("value") DetectorModelAssetPropertyVariant value) {
         this.quality = quality;
         this.timestamp = timestamp;
         this.value = value;
@@ -69,17 +69,17 @@ public final class DetectorModelAssetPropertyValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setQuality(@Nullable String quality) {
+        public Builder quality(@Nullable String quality) {
             this.quality = quality;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
+        public Builder timestamp(@Nullable DetectorModelAssetPropertyTimestamp timestamp) {
             this.timestamp = timestamp;
             return this;
         }
 
-        public Builder setValue(DetectorModelAssetPropertyVariant value) {
+        public Builder value(DetectorModelAssetPropertyVariant value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

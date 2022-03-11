@@ -15,8 +15,8 @@ public final class ClassifierJsonClassifier {
      */
     private final String jsonPath;
 
-    @OutputCustomType.Constructor({"jsonPath"})
-    private ClassifierJsonClassifier(String jsonPath) {
+    @OutputCustomType.Constructor
+    private ClassifierJsonClassifier(@OutputCustomType.Parameter("jsonPath") String jsonPath) {
         this.jsonPath = jsonPath;
     }
 
@@ -48,7 +48,7 @@ public final class ClassifierJsonClassifier {
     	      this.jsonPath = defaults.jsonPath;
         }
 
-        public Builder setJsonPath(String jsonPath) {
+        public Builder jsonPath(String jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }

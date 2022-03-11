@@ -75,22 +75,22 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.useSubDomainName = defaults.useSubDomainName;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setUseSubDomainName(@Nullable Input<Boolean> useSubDomainName) {
+        public Builder useSubDomainName(@Nullable Input<Boolean> useSubDomainName) {
             this.useSubDomainName = useSubDomainName;
             return this;
         }
 
-        public Builder setUseSubDomainName(@Nullable Boolean useSubDomainName) {
+        public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
             this.useSubDomainName = Input.ofNullable(useSubDomainName);
             return this;
         }

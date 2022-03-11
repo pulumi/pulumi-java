@@ -26,11 +26,11 @@ public final class DiscoveredResponse {
      */
     private final String continuousAnalysis;
 
-    @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis"})
+    @OutputCustomType.Constructor
     private DiscoveredResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis) {
+        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
+        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;
@@ -82,17 +82,17 @@ public final class DiscoveredResponse {
     	      this.continuousAnalysis = defaults.continuousAnalysis;
         }
 
-        public Builder setAnalysisStatus(String analysisStatus) {
+        public Builder analysisStatus(String analysisStatus) {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
 
-        public Builder setAnalysisStatusError(StatusResponse analysisStatusError) {
+        public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
 
-        public Builder setContinuousAnalysis(String continuousAnalysis) {
+        public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }

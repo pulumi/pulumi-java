@@ -38,13 +38,13 @@ public final class ImageTemplateManagedImageDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","imageId","location","runOutputName","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateManagedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String imageId,
-        String location,
-        String runOutputName,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.imageId = imageId;
         this.location = location;
@@ -117,27 +117,27 @@ public final class ImageTemplateManagedImageDistributorResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactTags(@Nullable Map<String,String> artifactTags) {
+        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRunOutputName(String runOutputName) {
+        public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

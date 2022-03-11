@@ -72,19 +72,19 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"internalIpOnly","metadata","network","nodeGroupAffinity","privateIpv6GoogleAccess","reservationAffinity","serviceAccount","serviceAccountScopes","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(
-        @Nullable Boolean internalIpOnly,
-        @Nullable Map<String,String> metadata,
-        @Nullable String network,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
-        @Nullable String privateIpv6GoogleAccess,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
-        @Nullable String serviceAccount,
-        @Nullable List<String> serviceAccountScopes,
-        @Nullable String subnetwork,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("nodeGroupAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") @Nullable String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("reservationAffinity") @Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;
@@ -216,57 +216,57 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInternalIpOnly(@Nullable Boolean internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNodeGroupAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity) {
+        public Builder nodeGroupAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity nodeGroupAffinity) {
             this.nodeGroupAffinity = nodeGroupAffinity;
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = privateIpv6GoogleAccess;
             return this;
         }
 
-        public Builder setReservationAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity) {
+        public Builder reservationAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity reservationAffinity) {
             this.reservationAffinity = reservationAffinity;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccountScopes(@Nullable List<String> serviceAccountScopes) {
+        public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
             this.serviceAccountScopes = serviceAccountScopes;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

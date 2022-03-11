@@ -22,10 +22,10 @@ public final class CodeConfigurationResponse {
      */
     private final String scoringScript;
 
-    @OutputCustomType.Constructor({"codeId","scoringScript"})
+    @OutputCustomType.Constructor
     private CodeConfigurationResponse(
-        @Nullable String codeId,
-        String scoringScript) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("scoringScript") String scoringScript) {
         this.codeId = codeId;
         this.scoringScript = scoringScript;
     }
@@ -67,12 +67,12 @@ public final class CodeConfigurationResponse {
     	      this.scoringScript = defaults.scoringScript;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setScoringScript(String scoringScript) {
+        public Builder scoringScript(String scoringScript) {
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }

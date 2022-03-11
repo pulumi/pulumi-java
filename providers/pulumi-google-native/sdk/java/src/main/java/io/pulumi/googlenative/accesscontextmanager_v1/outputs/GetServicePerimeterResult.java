@@ -47,15 +47,15 @@ public final class GetServicePerimeterResult {
      */
     private final Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor({"description","name","perimeterType","spec","status","title","useExplicitDryRunSpec"})
+    @OutputCustomType.Constructor
     private GetServicePerimeterResult(
-        String description,
-        String name,
-        String perimeterType,
-        ServicePerimeterConfigResponse spec,
-        ServicePerimeterConfigResponse status,
-        String title,
-        Boolean useExplicitDryRunSpec) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") String perimeterType,
+        @OutputCustomType.Parameter("spec") ServicePerimeterConfigResponse spec,
+        @OutputCustomType.Parameter("status") ServicePerimeterConfigResponse status,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("useExplicitDryRunSpec") Boolean useExplicitDryRunSpec) {
         this.description = description;
         this.name = name;
         this.perimeterType = perimeterType;
@@ -147,37 +147,37 @@ public final class GetServicePerimeterResult {
     	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerimeterType(String perimeterType) {
+        public Builder perimeterType(String perimeterType) {
             this.perimeterType = Objects.requireNonNull(perimeterType);
             return this;
         }
 
-        public Builder setSpec(ServicePerimeterConfigResponse spec) {
+        public Builder spec(ServicePerimeterConfigResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setStatus(ServicePerimeterConfigResponse status) {
+        public Builder status(ServicePerimeterConfigResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = Objects.requireNonNull(useExplicitDryRunSpec);
             return this;
         }

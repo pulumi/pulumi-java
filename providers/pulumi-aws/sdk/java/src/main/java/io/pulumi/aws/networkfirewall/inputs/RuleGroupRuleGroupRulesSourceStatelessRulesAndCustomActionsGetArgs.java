@@ -72,22 +72,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
     	      this.statelessRules = defaults.statelessRules;
         }
 
-        public Builder setCustomActions(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions) {
+        public Builder customActions(@Nullable Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions) {
             this.customActions = customActions;
             return this;
         }
 
-        public Builder setCustomActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
+        public Builder customActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
             this.customActions = Input.ofNullable(customActions);
             return this;
         }
 
-        public Builder setStatelessRules(Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules) {
+        public Builder statelessRules(Input<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs>> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }
 
-        public Builder setStatelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs> statelessRules) {
+        public Builder statelessRules(List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs> statelessRules) {
             this.statelessRules = Input.of(Objects.requireNonNull(statelessRules));
             return this;
         }

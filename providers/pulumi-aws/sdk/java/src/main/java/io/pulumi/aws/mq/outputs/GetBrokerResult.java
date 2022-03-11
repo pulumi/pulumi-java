@@ -46,30 +46,30 @@ public final class GetBrokerResult {
     private final Map<String,String> tags;
     private final List<GetBrokerUser> users;
 
-    @OutputCustomType.Constructor({"arn","authenticationStrategy","autoMinorVersionUpgrade","brokerId","brokerName","configuration","deploymentMode","encryptionOptions","engineType","engineVersion","hostInstanceType","id","instances","ldapServerMetadatas","logs","maintenanceWindowStartTime","publiclyAccessible","securityGroups","storageType","subnetIds","tags","users"})
+    @OutputCustomType.Constructor
     private GetBrokerResult(
-        String arn,
-        String authenticationStrategy,
-        Boolean autoMinorVersionUpgrade,
-        String brokerId,
-        String brokerName,
-        GetBrokerConfiguration configuration,
-        String deploymentMode,
-        List<GetBrokerEncryptionOption> encryptionOptions,
-        String engineType,
-        String engineVersion,
-        String hostInstanceType,
-        String id,
-        List<GetBrokerInstance> instances,
-        List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
-        GetBrokerLogs logs,
-        GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
-        Boolean publiclyAccessible,
-        List<String> securityGroups,
-        String storageType,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        List<GetBrokerUser> users) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("authenticationStrategy") String authenticationStrategy,
+        @OutputCustomType.Parameter("autoMinorVersionUpgrade") Boolean autoMinorVersionUpgrade,
+        @OutputCustomType.Parameter("brokerId") String brokerId,
+        @OutputCustomType.Parameter("brokerName") String brokerName,
+        @OutputCustomType.Parameter("configuration") GetBrokerConfiguration configuration,
+        @OutputCustomType.Parameter("deploymentMode") String deploymentMode,
+        @OutputCustomType.Parameter("encryptionOptions") List<GetBrokerEncryptionOption> encryptionOptions,
+        @OutputCustomType.Parameter("engineType") String engineType,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("hostInstanceType") String hostInstanceType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<GetBrokerInstance> instances,
+        @OutputCustomType.Parameter("ldapServerMetadatas") List<GetBrokerLdapServerMetadata> ldapServerMetadatas,
+        @OutputCustomType.Parameter("logs") GetBrokerLogs logs,
+        @OutputCustomType.Parameter("maintenanceWindowStartTime") GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime,
+        @OutputCustomType.Parameter("publiclyAccessible") Boolean publiclyAccessible,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("users") List<GetBrokerUser> users) {
         this.arn = arn;
         this.authenticationStrategy = authenticationStrategy;
         this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
@@ -227,112 +227,112 @@ public final class GetBrokerResult {
     	      this.users = defaults.users;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAuthenticationStrategy(String authenticationStrategy) {
+        public Builder authenticationStrategy(String authenticationStrategy) {
             this.authenticationStrategy = Objects.requireNonNull(authenticationStrategy);
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Objects.requireNonNull(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder setBrokerId(String brokerId) {
+        public Builder brokerId(String brokerId) {
             this.brokerId = Objects.requireNonNull(brokerId);
             return this;
         }
 
-        public Builder setBrokerName(String brokerName) {
+        public Builder brokerName(String brokerName) {
             this.brokerName = Objects.requireNonNull(brokerName);
             return this;
         }
 
-        public Builder setConfiguration(GetBrokerConfiguration configuration) {
+        public Builder configuration(GetBrokerConfiguration configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setDeploymentMode(String deploymentMode) {
+        public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }
 
-        public Builder setEncryptionOptions(List<GetBrokerEncryptionOption> encryptionOptions) {
+        public Builder encryptionOptions(List<GetBrokerEncryptionOption> encryptionOptions) {
             this.encryptionOptions = Objects.requireNonNull(encryptionOptions);
             return this;
         }
 
-        public Builder setEngineType(String engineType) {
+        public Builder engineType(String engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setHostInstanceType(String hostInstanceType) {
+        public Builder hostInstanceType(String hostInstanceType) {
             this.hostInstanceType = Objects.requireNonNull(hostInstanceType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstances(List<GetBrokerInstance> instances) {
+        public Builder instances(List<GetBrokerInstance> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setLdapServerMetadatas(List<GetBrokerLdapServerMetadata> ldapServerMetadatas) {
+        public Builder ldapServerMetadatas(List<GetBrokerLdapServerMetadata> ldapServerMetadatas) {
             this.ldapServerMetadatas = Objects.requireNonNull(ldapServerMetadatas);
             return this;
         }
 
-        public Builder setLogs(GetBrokerLogs logs) {
+        public Builder logs(GetBrokerLogs logs) {
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(GetBrokerMaintenanceWindowStartTime maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = Objects.requireNonNull(maintenanceWindowStartTime);
             return this;
         }
 
-        public Builder setPubliclyAccessible(Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(Boolean publiclyAccessible) {
             this.publiclyAccessible = Objects.requireNonNull(publiclyAccessible);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setStorageType(String storageType) {
+        public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUsers(List<GetBrokerUser> users) {
+        public Builder users(List<GetBrokerUser> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }

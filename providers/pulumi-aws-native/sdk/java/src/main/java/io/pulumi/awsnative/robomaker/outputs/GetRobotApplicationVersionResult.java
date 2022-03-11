@@ -14,10 +14,10 @@ public final class GetRobotApplicationVersionResult {
     private final @Nullable String applicationVersion;
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"applicationVersion","arn"})
+    @OutputCustomType.Constructor
     private GetRobotApplicationVersionResult(
-        @Nullable String applicationVersion,
-        @Nullable String arn) {
+        @OutputCustomType.Parameter("applicationVersion") @Nullable String applicationVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.applicationVersion = applicationVersion;
         this.arn = arn;
     }
@@ -51,12 +51,12 @@ public final class GetRobotApplicationVersionResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setApplicationVersion(@Nullable String applicationVersion) {
+        public Builder applicationVersion(@Nullable String applicationVersion) {
             this.applicationVersion = applicationVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

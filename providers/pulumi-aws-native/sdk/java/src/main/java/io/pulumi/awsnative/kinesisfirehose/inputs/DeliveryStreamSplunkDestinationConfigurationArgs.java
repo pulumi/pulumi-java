@@ -152,92 +152,92 @@ public final class DeliveryStreamSplunkDestinationConfigurationArgs extends io.p
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable Input<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = Input.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
 
-        public Builder setHECAcknowledgmentTimeoutInSeconds(@Nullable Input<Integer> hECAcknowledgmentTimeoutInSeconds) {
+        public Builder hECAcknowledgmentTimeoutInSeconds(@Nullable Input<Integer> hECAcknowledgmentTimeoutInSeconds) {
             this.hECAcknowledgmentTimeoutInSeconds = hECAcknowledgmentTimeoutInSeconds;
             return this;
         }
 
-        public Builder setHECAcknowledgmentTimeoutInSeconds(@Nullable Integer hECAcknowledgmentTimeoutInSeconds) {
+        public Builder hECAcknowledgmentTimeoutInSeconds(@Nullable Integer hECAcknowledgmentTimeoutInSeconds) {
             this.hECAcknowledgmentTimeoutInSeconds = Input.ofNullable(hECAcknowledgmentTimeoutInSeconds);
             return this;
         }
 
-        public Builder setHECEndpoint(Input<String> hECEndpoint) {
+        public Builder hECEndpoint(Input<String> hECEndpoint) {
             this.hECEndpoint = Objects.requireNonNull(hECEndpoint);
             return this;
         }
 
-        public Builder setHECEndpoint(String hECEndpoint) {
+        public Builder hECEndpoint(String hECEndpoint) {
             this.hECEndpoint = Input.of(Objects.requireNonNull(hECEndpoint));
             return this;
         }
 
-        public Builder setHECEndpointType(Input<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType) {
+        public Builder hECEndpointType(Input<DeliveryStreamSplunkDestinationConfigurationHECEndpointType> hECEndpointType) {
             this.hECEndpointType = Objects.requireNonNull(hECEndpointType);
             return this;
         }
 
-        public Builder setHECEndpointType(DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType) {
+        public Builder hECEndpointType(DeliveryStreamSplunkDestinationConfigurationHECEndpointType hECEndpointType) {
             this.hECEndpointType = Input.of(Objects.requireNonNull(hECEndpointType));
             return this;
         }
 
-        public Builder setHECToken(Input<String> hECToken) {
+        public Builder hECToken(Input<String> hECToken) {
             this.hECToken = Objects.requireNonNull(hECToken);
             return this;
         }
 
-        public Builder setHECToken(String hECToken) {
+        public Builder hECToken(String hECToken) {
             this.hECToken = Input.of(Objects.requireNonNull(hECToken));
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
+        public Builder processingConfiguration(@Nullable Input<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
             this.processingConfiguration = Input.ofNullable(processingConfiguration);
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable Input<DeliveryStreamSplunkRetryOptionsArgs> retryOptions) {
+        public Builder retryOptions(@Nullable Input<DeliveryStreamSplunkRetryOptionsArgs> retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamSplunkRetryOptionsArgs retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamSplunkRetryOptionsArgs retryOptions) {
             this.retryOptions = Input.ofNullable(retryOptions);
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable Input<String> s3BackupMode) {
+        public Builder s3BackupMode(@Nullable Input<String> s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = Input.ofNullable(s3BackupMode);
             return this;
         }
 
-        public Builder setS3Configuration(Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
+        public Builder s3Configuration(Input<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfigurationArgs s3Configuration) {
             this.s3Configuration = Input.of(Objects.requireNonNull(s3Configuration));
             return this;
         }

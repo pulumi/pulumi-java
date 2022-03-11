@@ -23,10 +23,10 @@ public final class BucketRedirectAllRequestsTo {
      */
     private final @Nullable BucketRedirectAllRequestsToProtocol protocol;
 
-    @OutputCustomType.Constructor({"hostName","protocol"})
+    @OutputCustomType.Constructor
     private BucketRedirectAllRequestsTo(
-        String hostName,
-        @Nullable BucketRedirectAllRequestsToProtocol protocol) {
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("protocol") @Nullable BucketRedirectAllRequestsToProtocol protocol) {
         this.hostName = hostName;
         this.protocol = protocol;
     }
@@ -68,12 +68,12 @@ public final class BucketRedirectAllRequestsTo {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setProtocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
+        public Builder protocol(@Nullable BucketRedirectAllRequestsToProtocol protocol) {
             this.protocol = protocol;
             return this;
         }

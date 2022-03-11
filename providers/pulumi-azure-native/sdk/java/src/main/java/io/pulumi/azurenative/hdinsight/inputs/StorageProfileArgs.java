@@ -58,12 +58,12 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageaccounts = defaults.storageaccounts;
         }
 
-        public Builder setStorageaccounts(@Nullable Input<List<StorageAccountArgs>> storageaccounts) {
+        public Builder storageaccounts(@Nullable Input<List<StorageAccountArgs>> storageaccounts) {
             this.storageaccounts = storageaccounts;
             return this;
         }
 
-        public Builder setStorageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
+        public Builder storageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
             this.storageaccounts = Input.ofNullable(storageaccounts);
             return this;
         }

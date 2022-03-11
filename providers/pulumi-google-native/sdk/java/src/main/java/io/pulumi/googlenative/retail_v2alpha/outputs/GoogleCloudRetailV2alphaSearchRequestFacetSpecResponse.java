@@ -34,12 +34,12 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse {
      */
     private final Integer limit;
 
-    @OutputCustomType.Constructor({"enableDynamicPosition","excludedFilterKeys","facetKey","limit"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse(
-        Boolean enableDynamicPosition,
-        List<String> excludedFilterKeys,
-        GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey,
-        Integer limit) {
+        @OutputCustomType.Parameter("enableDynamicPosition") Boolean enableDynamicPosition,
+        @OutputCustomType.Parameter("excludedFilterKeys") List<String> excludedFilterKeys,
+        @OutputCustomType.Parameter("facetKey") GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey,
+        @OutputCustomType.Parameter("limit") Integer limit) {
         this.enableDynamicPosition = enableDynamicPosition;
         this.excludedFilterKeys = excludedFilterKeys;
         this.facetKey = facetKey;
@@ -101,22 +101,22 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse {
     	      this.limit = defaults.limit;
         }
 
-        public Builder setEnableDynamicPosition(Boolean enableDynamicPosition) {
+        public Builder enableDynamicPosition(Boolean enableDynamicPosition) {
             this.enableDynamicPosition = Objects.requireNonNull(enableDynamicPosition);
             return this;
         }
 
-        public Builder setExcludedFilterKeys(List<String> excludedFilterKeys) {
+        public Builder excludedFilterKeys(List<String> excludedFilterKeys) {
             this.excludedFilterKeys = Objects.requireNonNull(excludedFilterKeys);
             return this;
         }
 
-        public Builder setFacetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey) {
+        public Builder facetKey(GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse facetKey) {
             this.facetKey = Objects.requireNonNull(facetKey);
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }

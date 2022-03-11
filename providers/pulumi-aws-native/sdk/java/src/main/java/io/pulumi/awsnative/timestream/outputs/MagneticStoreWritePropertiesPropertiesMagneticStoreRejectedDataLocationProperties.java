@@ -17,8 +17,8 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
      */
     private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration;
 
-    @OutputCustomType.Constructor({"s3Configuration"})
-    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
+    @OutputCustomType.Constructor
+    private MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties(@OutputCustomType.Parameter("s3Configuration") @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
         this.s3Configuration = s3Configuration;
     }
 
@@ -50,7 +50,7 @@ public final class MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDa
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder setS3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
+        public Builder s3Configuration(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesS3ConfigurationProperties s3Configuration) {
             this.s3Configuration = s3Configuration;
             return this;
         }

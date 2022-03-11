@@ -19,10 +19,10 @@ public final class OriginEndpointDashEncryption {
     private final @Nullable Integer keyRotationIntervalSeconds;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"keyRotationIntervalSeconds","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private OriginEndpointDashEncryption(
-        @Nullable Integer keyRotationIntervalSeconds,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
         this.spekeKeyProvider = spekeKeyProvider;
     }
@@ -60,12 +60,12 @@ public final class OriginEndpointDashEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

@@ -31,12 +31,12 @@ public final class StandardSchedulerSettingsResponse {
      */
     private final Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","targetCpuUtilization","targetThroughputUtilization"})
+    @OutputCustomType.Constructor
     private StandardSchedulerSettingsResponse(
-        Integer maxInstances,
-        Integer minInstances,
-        Double targetCpuUtilization,
-        Double targetThroughputUtilization) {
+        @OutputCustomType.Parameter("maxInstances") Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") Integer minInstances,
+        @OutputCustomType.Parameter("targetCpuUtilization") Double targetCpuUtilization,
+        @OutputCustomType.Parameter("targetThroughputUtilization") Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;
@@ -98,22 +98,22 @@ public final class StandardSchedulerSettingsResponse {
     	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
         }
 
-        public Builder setMaxInstances(Integer maxInstances) {
+        public Builder maxInstances(Integer maxInstances) {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
 
-        public Builder setMinInstances(Integer minInstances) {
+        public Builder minInstances(Integer minInstances) {
             this.minInstances = Objects.requireNonNull(minInstances);
             return this;
         }
 
-        public Builder setTargetCpuUtilization(Double targetCpuUtilization) {
+        public Builder targetCpuUtilization(Double targetCpuUtilization) {
             this.targetCpuUtilization = Objects.requireNonNull(targetCpuUtilization);
             return this;
         }
 
-        public Builder setTargetThroughputUtilization(Double targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(Double targetThroughputUtilization) {
             this.targetThroughputUtilization = Objects.requireNonNull(targetThroughputUtilization);
             return this;
         }

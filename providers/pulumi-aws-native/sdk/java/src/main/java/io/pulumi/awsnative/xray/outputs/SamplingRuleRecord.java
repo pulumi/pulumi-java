@@ -24,11 +24,11 @@ public final class SamplingRuleRecord {
     private final @Nullable String modifiedAt;
     private final @Nullable SamplingRule samplingRule;
 
-    @OutputCustomType.Constructor({"createdAt","modifiedAt","samplingRule"})
+    @OutputCustomType.Constructor
     private SamplingRuleRecord(
-        @Nullable String createdAt,
-        @Nullable String modifiedAt,
-        @Nullable SamplingRule samplingRule) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule) {
         this.createdAt = createdAt;
         this.modifiedAt = modifiedAt;
         this.samplingRule = samplingRule;
@@ -76,17 +76,17 @@ public final class SamplingRuleRecord {
     	      this.samplingRule = defaults.samplingRule;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setSamplingRule(@Nullable SamplingRule samplingRule) {
+        public Builder samplingRule(@Nullable SamplingRule samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }

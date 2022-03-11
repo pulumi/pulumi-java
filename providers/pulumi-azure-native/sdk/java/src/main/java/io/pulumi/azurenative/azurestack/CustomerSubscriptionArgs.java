@@ -102,42 +102,42 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setCustomerSubscriptionName(@Nullable Input<String> customerSubscriptionName) {
+        public Builder customerSubscriptionName(@Nullable Input<String> customerSubscriptionName) {
             this.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
 
-        public Builder setCustomerSubscriptionName(@Nullable String customerSubscriptionName) {
+        public Builder customerSubscriptionName(@Nullable String customerSubscriptionName) {
             this.customerSubscriptionName = Input.ofNullable(customerSubscriptionName);
             return this;
         }
 
-        public Builder setRegistrationName(Input<String> registrationName) {
+        public Builder registrationName(Input<String> registrationName) {
             this.registrationName = Objects.requireNonNull(registrationName);
             return this;
         }
 
-        public Builder setRegistrationName(String registrationName) {
+        public Builder registrationName(String registrationName) {
             this.registrationName = Input.of(Objects.requireNonNull(registrationName));
             return this;
         }
 
-        public Builder setResourceGroup(Input<String> resourceGroup) {
+        public Builder resourceGroup(Input<String> resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }

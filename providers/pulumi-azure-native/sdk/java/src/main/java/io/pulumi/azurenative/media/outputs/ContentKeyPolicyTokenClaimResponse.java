@@ -22,10 +22,10 @@ public final class ContentKeyPolicyTokenClaimResponse {
      */
     private final @Nullable String claimValue;
 
-    @OutputCustomType.Constructor({"claimType","claimValue"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyTokenClaimResponse(
-        @Nullable String claimType,
-        @Nullable String claimValue) {
+        @OutputCustomType.Parameter("claimType") @Nullable String claimType,
+        @OutputCustomType.Parameter("claimValue") @Nullable String claimValue) {
         this.claimType = claimType;
         this.claimValue = claimValue;
     }
@@ -67,12 +67,12 @@ public final class ContentKeyPolicyTokenClaimResponse {
     	      this.claimValue = defaults.claimValue;
         }
 
-        public Builder setClaimType(@Nullable String claimType) {
+        public Builder claimType(@Nullable String claimType) {
             this.claimType = claimType;
             return this;
         }
 
-        public Builder setClaimValue(@Nullable String claimValue) {
+        public Builder claimValue(@Nullable String claimValue) {
             this.claimValue = claimValue;
             return this;
         }

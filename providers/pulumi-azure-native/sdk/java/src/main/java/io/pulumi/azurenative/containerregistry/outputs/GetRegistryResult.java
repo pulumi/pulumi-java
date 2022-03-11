@@ -89,22 +89,22 @@ public final class GetRegistryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adminUserEnabled","creationDate","id","location","loginServer","name","networkRuleSet","policies","provisioningState","sku","status","storageAccount","tags","type"})
+    @OutputCustomType.Constructor
     private GetRegistryResult(
-        @Nullable Boolean adminUserEnabled,
-        String creationDate,
-        String id,
-        String location,
-        String loginServer,
-        String name,
-        @Nullable NetworkRuleSetResponse networkRuleSet,
-        @Nullable PoliciesResponse policies,
-        String provisioningState,
-        SkuResponse sku,
-        StatusResponse status,
-        @Nullable StorageAccountPropertiesResponse storageAccount,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("adminUserEnabled") @Nullable Boolean adminUserEnabled,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("loginServer") String loginServer,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkRuleSet") @Nullable NetworkRuleSetResponse networkRuleSet,
+        @OutputCustomType.Parameter("policies") @Nullable PoliciesResponse policies,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountPropertiesResponse storageAccount,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.adminUserEnabled = adminUserEnabled;
         this.creationDate = creationDate;
         this.id = id;
@@ -266,72 +266,72 @@ public final class GetRegistryResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdminUserEnabled(@Nullable Boolean adminUserEnabled) {
+        public Builder adminUserEnabled(@Nullable Boolean adminUserEnabled) {
             this.adminUserEnabled = adminUserEnabled;
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLoginServer(String loginServer) {
+        public Builder loginServer(String loginServer) {
             this.loginServer = Objects.requireNonNull(loginServer);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
+        public Builder networkRuleSet(@Nullable NetworkRuleSetResponse networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
-        public Builder setPolicies(@Nullable PoliciesResponse policies) {
+        public Builder policies(@Nullable PoliciesResponse policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setStatus(StatusResponse status) {
+        public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountPropertiesResponse storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountPropertiesResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
      */
     private final String processedCount;
 
-    @OutputCustomType.Constructor({"abortedCount","pendingCount","processedCount"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HybridInspectStatisticsResponse(
-        String abortedCount,
-        String pendingCount,
-        String processedCount) {
+        @OutputCustomType.Parameter("abortedCount") String abortedCount,
+        @OutputCustomType.Parameter("pendingCount") String pendingCount,
+        @OutputCustomType.Parameter("processedCount") String processedCount) {
         this.abortedCount = abortedCount;
         this.pendingCount = pendingCount;
         this.processedCount = processedCount;
@@ -81,17 +81,17 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse {
     	      this.processedCount = defaults.processedCount;
         }
 
-        public Builder setAbortedCount(String abortedCount) {
+        public Builder abortedCount(String abortedCount) {
             this.abortedCount = Objects.requireNonNull(abortedCount);
             return this;
         }
 
-        public Builder setPendingCount(String pendingCount) {
+        public Builder pendingCount(String pendingCount) {
             this.pendingCount = Objects.requireNonNull(pendingCount);
             return this;
         }
 
-        public Builder setProcessedCount(String processedCount) {
+        public Builder processedCount(String processedCount) {
             this.processedCount = Objects.requireNonNull(processedCount);
             return this;
         }

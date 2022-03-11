@@ -104,25 +104,25 @@ public final class GetCustomImageResult {
      */
     private final @Nullable CustomImagePropertiesFromVmResponse vm;
 
-    @OutputCustomType.Constructor({"author","creationDate","customImagePlan","dataDiskStorageInfo","description","id","isPlanAuthorized","location","managedImageId","managedSnapshotId","name","provisioningState","tags","type","uniqueIdentifier","vhd","vm"})
+    @OutputCustomType.Constructor
     private GetCustomImageResult(
-        @Nullable String author,
-        String creationDate,
-        @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
-        @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
-        @Nullable String description,
-        String id,
-        @Nullable Boolean isPlanAuthorized,
-        @Nullable String location,
-        @Nullable String managedImageId,
-        @Nullable String managedSnapshotId,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable CustomImagePropertiesCustomResponse vhd,
-        @Nullable CustomImagePropertiesFromVmResponse vm) {
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("customImagePlan") @Nullable CustomImagePropertiesFromPlanResponse customImagePlan,
+        @OutputCustomType.Parameter("dataDiskStorageInfo") @Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isPlanAuthorized") @Nullable Boolean isPlanAuthorized,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedImageId") @Nullable String managedImageId,
+        @OutputCustomType.Parameter("managedSnapshotId") @Nullable String managedSnapshotId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("vhd") @Nullable CustomImagePropertiesCustomResponse vhd,
+        @OutputCustomType.Parameter("vm") @Nullable CustomImagePropertiesFromVmResponse vm) {
         this.author = author;
         this.creationDate = creationDate;
         this.customImagePlan = customImagePlan;
@@ -314,87 +314,87 @@ public final class GetCustomImageResult {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = author;
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setCustomImagePlan(@Nullable CustomImagePropertiesFromPlanResponse customImagePlan) {
+        public Builder customImagePlan(@Nullable CustomImagePropertiesFromPlanResponse customImagePlan) {
             this.customImagePlan = customImagePlan;
             return this;
         }
 
-        public Builder setDataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo) {
+        public Builder dataDiskStorageInfo(@Nullable List<DataDiskStorageTypeInfoResponse> dataDiskStorageInfo) {
             this.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
+        public Builder isPlanAuthorized(@Nullable Boolean isPlanAuthorized) {
             this.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedImageId(@Nullable String managedImageId) {
+        public Builder managedImageId(@Nullable String managedImageId) {
             this.managedImageId = managedImageId;
             return this;
         }
 
-        public Builder setManagedSnapshotId(@Nullable String managedSnapshotId) {
+        public Builder managedSnapshotId(@Nullable String managedSnapshotId) {
             this.managedSnapshotId = managedSnapshotId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setVhd(@Nullable CustomImagePropertiesCustomResponse vhd) {
+        public Builder vhd(@Nullable CustomImagePropertiesCustomResponse vhd) {
             this.vhd = vhd;
             return this;
         }
 
-        public Builder setVm(@Nullable CustomImagePropertiesFromVmResponse vm) {
+        public Builder vm(@Nullable CustomImagePropertiesFromVmResponse vm) {
             this.vm = vm;
             return this;
         }

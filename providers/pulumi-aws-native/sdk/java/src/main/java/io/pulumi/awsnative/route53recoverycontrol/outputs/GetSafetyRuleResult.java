@@ -28,13 +28,13 @@ public final class GetSafetyRuleResult {
      */
     private final @Nullable SafetyRuleStatus status;
 
-    @OutputCustomType.Constructor({"assertionRule","gatingRule","name","safetyRuleArn","status"})
+    @OutputCustomType.Constructor
     private GetSafetyRuleResult(
-        @Nullable SafetyRuleAssertionRule assertionRule,
-        @Nullable SafetyRuleGatingRule gatingRule,
-        @Nullable String name,
-        @Nullable String safetyRuleArn,
-        @Nullable SafetyRuleStatus status) {
+        @OutputCustomType.Parameter("assertionRule") @Nullable SafetyRuleAssertionRule assertionRule,
+        @OutputCustomType.Parameter("gatingRule") @Nullable SafetyRuleGatingRule gatingRule,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("safetyRuleArn") @Nullable String safetyRuleArn,
+        @OutputCustomType.Parameter("status") @Nullable SafetyRuleStatus status) {
         this.assertionRule = assertionRule;
         this.gatingRule = gatingRule;
         this.name = name;
@@ -94,27 +94,27 @@ public final class GetSafetyRuleResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setAssertionRule(@Nullable SafetyRuleAssertionRule assertionRule) {
+        public Builder assertionRule(@Nullable SafetyRuleAssertionRule assertionRule) {
             this.assertionRule = assertionRule;
             return this;
         }
 
-        public Builder setGatingRule(@Nullable SafetyRuleGatingRule gatingRule) {
+        public Builder gatingRule(@Nullable SafetyRuleGatingRule gatingRule) {
             this.gatingRule = gatingRule;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSafetyRuleArn(@Nullable String safetyRuleArn) {
+        public Builder safetyRuleArn(@Nullable String safetyRuleArn) {
             this.safetyRuleArn = safetyRuleArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable SafetyRuleStatus status) {
+        public Builder status(@Nullable SafetyRuleStatus status) {
             this.status = status;
             return this;
         }

@@ -25,13 +25,13 @@ public final class GetKMSSecretResult {
      */
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"additionalAuthenticatedData","ciphertext","cryptoKey","id","plaintext"})
+    @OutputCustomType.Constructor
     private GetKMSSecretResult(
-        @Nullable String additionalAuthenticatedData,
-        String ciphertext,
-        String cryptoKey,
-        String id,
-        String plaintext) {
+        @OutputCustomType.Parameter("additionalAuthenticatedData") @Nullable String additionalAuthenticatedData,
+        @OutputCustomType.Parameter("ciphertext") String ciphertext,
+        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;
@@ -91,27 +91,27 @@ public final class GetKMSSecretResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setAdditionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
+        public Builder additionalAuthenticatedData(@Nullable String additionalAuthenticatedData) {
             this.additionalAuthenticatedData = additionalAuthenticatedData;
             return this;
         }
 
-        public Builder setCiphertext(String ciphertext) {
+        public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
 
-        public Builder setCryptoKey(String cryptoKey) {
+        public Builder cryptoKey(String cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

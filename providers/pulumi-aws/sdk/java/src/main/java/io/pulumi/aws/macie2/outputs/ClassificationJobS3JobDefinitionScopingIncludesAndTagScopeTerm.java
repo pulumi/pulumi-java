@@ -34,12 +34,12 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"comparator","key","tagValues","target"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTerm(
-        @Nullable String comparator,
-        @Nullable String key,
-        @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue> tagValues,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("comparator") @Nullable String comparator,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("tagValues") @Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue> tagValues,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.comparator = comparator;
         this.key = key;
         this.tagValues = tagValues;
@@ -101,22 +101,22 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTer
     	      this.target = defaults.target;
         }
 
-        public Builder setComparator(@Nullable String comparator) {
+        public Builder comparator(@Nullable String comparator) {
             this.comparator = comparator;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setTagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue> tagValues) {
+        public Builder tagValues(@Nullable List<ClassificationJobS3JobDefinitionScopingIncludesAndTagScopeTermTagValue> tagValues) {
             this.tagValues = tagValues;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

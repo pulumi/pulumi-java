@@ -85,32 +85,32 @@ public final class ContainerConfigurationArgs extends io.pulumi.resources.Resour
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerImageNames(@Nullable Input<List<String>> containerImageNames) {
+        public Builder containerImageNames(@Nullable Input<List<String>> containerImageNames) {
             this.containerImageNames = containerImageNames;
             return this;
         }
 
-        public Builder setContainerImageNames(@Nullable List<String> containerImageNames) {
+        public Builder containerImageNames(@Nullable List<String> containerImageNames) {
             this.containerImageNames = Input.ofNullable(containerImageNames);
             return this;
         }
 
-        public Builder setContainerRegistries(@Nullable Input<List<ContainerRegistryArgs>> containerRegistries) {
+        public Builder containerRegistries(@Nullable Input<List<ContainerRegistryArgs>> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
 
-        public Builder setContainerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
+        public Builder containerRegistries(@Nullable List<ContainerRegistryArgs> containerRegistries) {
             this.containerRegistries = Input.ofNullable(containerRegistries);
             return this;
         }
 
-        public Builder setType(Input<ContainerType> type) {
+        public Builder type(Input<ContainerType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ContainerType type) {
+        public Builder type(ContainerType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

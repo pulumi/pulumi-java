@@ -28,11 +28,11 @@ public final class GetDomainIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetDomainIamPolicyResult(
-        List<BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.version = version;
@@ -84,17 +84,17 @@ public final class GetDomainIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setBindings(List<BindingResponse> bindings) {
+        public Builder bindings(List<BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

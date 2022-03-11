@@ -20,10 +20,10 @@ public final class AcceleratorResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"acceleratorType","state"})
+    @OutputCustomType.Constructor
     private AcceleratorResponse(
-        String acceleratorType,
-        String state) {
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType,
+        @OutputCustomType.Parameter("state") String state) {
         this.acceleratorType = acceleratorType;
         this.state = state;
     }
@@ -65,12 +65,12 @@ public final class AcceleratorResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

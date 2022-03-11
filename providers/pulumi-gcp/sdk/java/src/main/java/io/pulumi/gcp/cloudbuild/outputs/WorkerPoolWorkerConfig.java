@@ -29,11 +29,11 @@ public final class WorkerPoolWorkerConfig {
      */
     private final @Nullable Boolean noExternalIp;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","noExternalIp"})
+    @OutputCustomType.Constructor
     private WorkerPoolWorkerConfig(
-        @Nullable Integer diskSizeGb,
-        @Nullable String machineType,
-        @Nullable Boolean noExternalIp) {
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("noExternalIp") @Nullable Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;
@@ -85,17 +85,17 @@ public final class WorkerPoolWorkerConfig {
     	      this.noExternalIp = defaults.noExternalIp;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setNoExternalIp(@Nullable Boolean noExternalIp) {
+        public Builder noExternalIp(@Nullable Boolean noExternalIp) {
             this.noExternalIp = noExternalIp;
             return this;
         }

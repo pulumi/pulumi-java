@@ -17,8 +17,8 @@ public final class ListIdentityProviderSecretsResult {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor({"clientSecret"})
-    private ListIdentityProviderSecretsResult(@Nullable String clientSecret) {
+    @OutputCustomType.Constructor
+    private ListIdentityProviderSecretsResult(@OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientSecret = clientSecret;
     }
 
@@ -50,7 +50,7 @@ public final class ListIdentityProviderSecretsResult {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }

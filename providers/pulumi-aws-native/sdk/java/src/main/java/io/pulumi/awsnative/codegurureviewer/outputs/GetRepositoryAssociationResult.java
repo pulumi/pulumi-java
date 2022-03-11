@@ -17,8 +17,8 @@ public final class GetRepositoryAssociationResult {
      */
     private final @Nullable String associationArn;
 
-    @OutputCustomType.Constructor({"associationArn"})
-    private GetRepositoryAssociationResult(@Nullable String associationArn) {
+    @OutputCustomType.Constructor
+    private GetRepositoryAssociationResult(@OutputCustomType.Parameter("associationArn") @Nullable String associationArn) {
         this.associationArn = associationArn;
     }
 
@@ -50,7 +50,7 @@ public final class GetRepositoryAssociationResult {
     	      this.associationArn = defaults.associationArn;
         }
 
-        public Builder setAssociationArn(@Nullable String associationArn) {
+        public Builder associationArn(@Nullable String associationArn) {
             this.associationArn = associationArn;
             return this;
         }

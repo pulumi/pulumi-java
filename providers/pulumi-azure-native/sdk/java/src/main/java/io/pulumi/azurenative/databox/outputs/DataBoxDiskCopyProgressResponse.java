@@ -32,12 +32,12 @@ public final class DataBoxDiskCopyProgressResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"bytesCopied","percentComplete","serialNumber","status"})
+    @OutputCustomType.Constructor
     private DataBoxDiskCopyProgressResponse(
-        Double bytesCopied,
-        Integer percentComplete,
-        String serialNumber,
-        String status) {
+        @OutputCustomType.Parameter("bytesCopied") Double bytesCopied,
+        @OutputCustomType.Parameter("percentComplete") Integer percentComplete,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("status") String status) {
         this.bytesCopied = bytesCopied;
         this.percentComplete = percentComplete;
         this.serialNumber = serialNumber;
@@ -99,22 +99,22 @@ public final class DataBoxDiskCopyProgressResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setBytesCopied(Double bytesCopied) {
+        public Builder bytesCopied(Double bytesCopied) {
             this.bytesCopied = Objects.requireNonNull(bytesCopied);
             return this;
         }
 
-        public Builder setPercentComplete(Integer percentComplete) {
+        public Builder percentComplete(Integer percentComplete) {
             this.percentComplete = Objects.requireNonNull(percentComplete);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

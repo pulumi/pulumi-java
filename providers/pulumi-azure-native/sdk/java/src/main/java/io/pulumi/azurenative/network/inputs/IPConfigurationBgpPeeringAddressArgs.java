@@ -75,22 +75,22 @@ public final class IPConfigurationBgpPeeringAddressArgs extends io.pulumi.resour
     	      this.ipconfigurationId = defaults.ipconfigurationId;
         }
 
-        public Builder setCustomBgpIpAddresses(@Nullable Input<List<String>> customBgpIpAddresses) {
+        public Builder customBgpIpAddresses(@Nullable Input<List<String>> customBgpIpAddresses) {
             this.customBgpIpAddresses = customBgpIpAddresses;
             return this;
         }
 
-        public Builder setCustomBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
+        public Builder customBgpIpAddresses(@Nullable List<String> customBgpIpAddresses) {
             this.customBgpIpAddresses = Input.ofNullable(customBgpIpAddresses);
             return this;
         }
 
-        public Builder setIpconfigurationId(@Nullable Input<String> ipconfigurationId) {
+        public Builder ipconfigurationId(@Nullable Input<String> ipconfigurationId) {
             this.ipconfigurationId = ipconfigurationId;
             return this;
         }
 
-        public Builder setIpconfigurationId(@Nullable String ipconfigurationId) {
+        public Builder ipconfigurationId(@Nullable String ipconfigurationId) {
             this.ipconfigurationId = Input.ofNullable(ipconfigurationId);
             return this;
         }

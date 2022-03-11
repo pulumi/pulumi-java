@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatasetJsonOptions {
     private final @Nullable Boolean multiLine;
 
-    @OutputCustomType.Constructor({"multiLine"})
-    private DatasetJsonOptions(@Nullable Boolean multiLine) {
+    @OutputCustomType.Constructor
+    private DatasetJsonOptions(@OutputCustomType.Parameter("multiLine") @Nullable Boolean multiLine) {
         this.multiLine = multiLine;
     }
 
@@ -42,7 +42,7 @@ public final class DatasetJsonOptions {
     	      this.multiLine = defaults.multiLine;
         }
 
-        public Builder setMultiLine(@Nullable Boolean multiLine) {
+        public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = multiLine;
             return this;
         }

@@ -22,10 +22,10 @@ public final class SettingsSectionDescriptionResponse {
      */
     private final List<SettingsParameterDescriptionResponse> parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private SettingsSectionDescriptionResponse(
-        String name,
-        List<SettingsParameterDescriptionResponse> parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<SettingsParameterDescriptionResponse> parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -67,12 +67,12 @@ public final class SettingsSectionDescriptionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<SettingsParameterDescriptionResponse> parameters) {
+        public Builder parameters(List<SettingsParameterDescriptionResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

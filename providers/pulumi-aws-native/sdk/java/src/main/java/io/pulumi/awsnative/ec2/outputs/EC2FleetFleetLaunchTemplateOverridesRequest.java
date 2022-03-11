@@ -23,16 +23,16 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
     private final @Nullable String subnetId;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"availabilityZone","instanceRequirements","instanceType","maxPrice","placement","priority","subnetId","weightedCapacity"})
+    @OutputCustomType.Constructor
     private EC2FleetFleetLaunchTemplateOverridesRequest(
-        @Nullable String availabilityZone,
-        @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String maxPrice,
-        @Nullable EC2FleetPlacement placement,
-        @Nullable Double priority,
-        @Nullable String subnetId,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("instanceRequirements") @Nullable EC2FleetInstanceRequirementsRequest instanceRequirements,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @OutputCustomType.Parameter("placement") @Nullable EC2FleetPlacement placement,
+        @OutputCustomType.Parameter("priority") @Nullable Double priority,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.availabilityZone = availabilityZone;
         this.instanceRequirements = instanceRequirements;
         this.instanceType = instanceType;
@@ -102,42 +102,42 @@ public final class EC2FleetFleetLaunchTemplateOverridesRequest {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable EC2FleetInstanceRequirementsRequest instanceRequirements) {
+        public Builder instanceRequirements(@Nullable EC2FleetInstanceRequirementsRequest instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setPlacement(@Nullable EC2FleetPlacement placement) {
+        public Builder placement(@Nullable EC2FleetPlacement placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPriority(@Nullable Double priority) {
+        public Builder priority(@Nullable Double priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

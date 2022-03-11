@@ -174,82 +174,82 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suid = defaults.suid;
         }
 
-        public Builder setAccess(Input<Either<String,NfsAccessRuleAccess>> access) {
+        public Builder access(Input<Either<String,NfsAccessRuleAccess>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setAccess(Either<String,NfsAccessRuleAccess> access) {
+        public Builder access(Either<String,NfsAccessRuleAccess> access) {
             this.access = Input.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder setAnonymousGID(@Nullable Input<String> anonymousGID) {
+        public Builder anonymousGID(@Nullable Input<String> anonymousGID) {
             this.anonymousGID = anonymousGID;
             return this;
         }
 
-        public Builder setAnonymousGID(@Nullable String anonymousGID) {
+        public Builder anonymousGID(@Nullable String anonymousGID) {
             this.anonymousGID = Input.ofNullable(anonymousGID);
             return this;
         }
 
-        public Builder setAnonymousUID(@Nullable Input<String> anonymousUID) {
+        public Builder anonymousUID(@Nullable Input<String> anonymousUID) {
             this.anonymousUID = anonymousUID;
             return this;
         }
 
-        public Builder setAnonymousUID(@Nullable String anonymousUID) {
+        public Builder anonymousUID(@Nullable String anonymousUID) {
             this.anonymousUID = Input.ofNullable(anonymousUID);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setRootSquash(@Nullable Input<Boolean> rootSquash) {
+        public Builder rootSquash(@Nullable Input<Boolean> rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
-        public Builder setRootSquash(@Nullable Boolean rootSquash) {
+        public Builder rootSquash(@Nullable Boolean rootSquash) {
             this.rootSquash = Input.ofNullable(rootSquash);
             return this;
         }
 
-        public Builder setScope(Input<Either<String,NfsAccessRuleScope>> scope) {
+        public Builder scope(Input<Either<String,NfsAccessRuleScope>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(Either<String,NfsAccessRuleScope> scope) {
+        public Builder scope(Either<String,NfsAccessRuleScope> scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSubmountAccess(@Nullable Input<Boolean> submountAccess) {
+        public Builder submountAccess(@Nullable Input<Boolean> submountAccess) {
             this.submountAccess = submountAccess;
             return this;
         }
 
-        public Builder setSubmountAccess(@Nullable Boolean submountAccess) {
+        public Builder submountAccess(@Nullable Boolean submountAccess) {
             this.submountAccess = Input.ofNullable(submountAccess);
             return this;
         }
 
-        public Builder setSuid(@Nullable Input<Boolean> suid) {
+        public Builder suid(@Nullable Input<Boolean> suid) {
             this.suid = suid;
             return this;
         }
 
-        public Builder setSuid(@Nullable Boolean suid) {
+        public Builder suid(@Nullable Boolean suid) {
             this.suid = Input.ofNullable(suid);
             return this;
         }

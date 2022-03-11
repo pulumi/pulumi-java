@@ -25,11 +25,11 @@ public final class ConnectionStatusResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"description","state","status"})
+    @OutputCustomType.Constructor
     private ConnectionStatusResponse(
-        String description,
-        String state,
-        String status) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status) {
         this.description = description;
         this.state = state;
         this.status = status;
@@ -81,17 +81,17 @@ public final class ConnectionStatusResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

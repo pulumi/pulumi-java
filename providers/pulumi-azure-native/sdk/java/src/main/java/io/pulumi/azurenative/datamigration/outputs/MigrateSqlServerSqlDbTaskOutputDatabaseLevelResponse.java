@@ -96,24 +96,24 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"databaseName","endedOn","errorCount","errorPrefix","exceptionsAndWarnings","id","message","numberOfObjects","numberOfObjectsCompleted","objectSummary","resultPrefix","resultType","stage","startedOn","state","statusMessage"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        Double errorCount,
-        String errorPrefix,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        Double numberOfObjects,
-        Double numberOfObjectsCompleted,
-        Map<String,DataItemMigrationSummaryResultResponse> objectSummary,
-        String resultPrefix,
-        String resultType,
-        String stage,
-        String startedOn,
-        String state,
-        String statusMessage) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorCount") Double errorCount,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("numberOfObjects") Double numberOfObjects,
+        @OutputCustomType.Parameter("numberOfObjectsCompleted") Double numberOfObjectsCompleted,
+        @OutputCustomType.Parameter("objectSummary") Map<String,DataItemMigrationSummaryResultResponse> objectSummary,
+        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.databaseName = databaseName;
         this.endedOn = endedOn;
         this.errorCount = errorCount;
@@ -296,82 +296,82 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setErrorCount(Double errorCount) {
+        public Builder errorCount(Double errorCount) {
             this.errorCount = Objects.requireNonNull(errorCount);
             return this;
         }
 
-        public Builder setErrorPrefix(String errorPrefix) {
+        public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setNumberOfObjects(Double numberOfObjects) {
+        public Builder numberOfObjects(Double numberOfObjects) {
             this.numberOfObjects = Objects.requireNonNull(numberOfObjects);
             return this;
         }
 
-        public Builder setNumberOfObjectsCompleted(Double numberOfObjectsCompleted) {
+        public Builder numberOfObjectsCompleted(Double numberOfObjectsCompleted) {
             this.numberOfObjectsCompleted = Objects.requireNonNull(numberOfObjectsCompleted);
             return this;
         }
 
-        public Builder setObjectSummary(Map<String,DataItemMigrationSummaryResultResponse> objectSummary) {
+        public Builder objectSummary(Map<String,DataItemMigrationSummaryResultResponse> objectSummary) {
             this.objectSummary = Objects.requireNonNull(objectSummary);
             return this;
         }
 
-        public Builder setResultPrefix(String resultPrefix) {
+        public Builder resultPrefix(String resultPrefix) {
             this.resultPrefix = Objects.requireNonNull(resultPrefix);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }

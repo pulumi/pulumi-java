@@ -84,24 +84,24 @@ public final class GetDirectoryResult {
     private final String type;
     private final List<GetDirectoryVpcSetting> vpcSettings;
 
-    @OutputCustomType.Constructor({"accessUrl","alias","connectSettings","description","directoryId","dnsIpAddresses","edition","enableSso","id","name","securityGroupId","shortName","size","tags","type","vpcSettings"})
+    @OutputCustomType.Constructor
     private GetDirectoryResult(
-        String accessUrl,
-        String alias,
-        List<GetDirectoryConnectSetting> connectSettings,
-        String description,
-        String directoryId,
-        List<String> dnsIpAddresses,
-        String edition,
-        Boolean enableSso,
-        String id,
-        String name,
-        String securityGroupId,
-        String shortName,
-        String size,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<GetDirectoryVpcSetting> vpcSettings) {
+        @OutputCustomType.Parameter("accessUrl") String accessUrl,
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("connectSettings") List<GetDirectoryConnectSetting> connectSettings,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("directoryId") String directoryId,
+        @OutputCustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
+        @OutputCustomType.Parameter("edition") String edition,
+        @OutputCustomType.Parameter("enableSso") Boolean enableSso,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
+        @OutputCustomType.Parameter("shortName") String shortName,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vpcSettings") List<GetDirectoryVpcSetting> vpcSettings) {
         this.accessUrl = accessUrl;
         this.alias = alias;
         this.connectSettings = connectSettings;
@@ -271,82 +271,82 @@ public final class GetDirectoryResult {
     	      this.vpcSettings = defaults.vpcSettings;
         }
 
-        public Builder setAccessUrl(String accessUrl) {
+        public Builder accessUrl(String accessUrl) {
             this.accessUrl = Objects.requireNonNull(accessUrl);
             return this;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setConnectSettings(List<GetDirectoryConnectSetting> connectSettings) {
+        public Builder connectSettings(List<GetDirectoryConnectSetting> connectSettings) {
             this.connectSettings = Objects.requireNonNull(connectSettings);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setDnsIpAddresses(List<String> dnsIpAddresses) {
+        public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
             return this;
         }
 
-        public Builder setEdition(String edition) {
+        public Builder edition(String edition) {
             this.edition = Objects.requireNonNull(edition);
             return this;
         }
 
-        public Builder setEnableSso(Boolean enableSso) {
+        public Builder enableSso(Boolean enableSso) {
             this.enableSso = Objects.requireNonNull(enableSso);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityGroupId(String securityGroupId) {
+        public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
 
-        public Builder setSize(String size) {
+        public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVpcSettings(List<GetDirectoryVpcSetting> vpcSettings) {
+        public Builder vpcSettings(List<GetDirectoryVpcSetting> vpcSettings) {
             this.vpcSettings = Objects.requireNonNull(vpcSettings);
             return this;
         }

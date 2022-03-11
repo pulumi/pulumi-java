@@ -61,21 +61,21 @@ public final class GetZoneResult {
     private final String vpcId;
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"arn","callerReference","comment","id","linkedServiceDescription","linkedServicePrincipal","name","nameServers","privateZone","resourceRecordSetCount","tags","vpcId","zoneId"})
+    @OutputCustomType.Constructor
     private GetZoneResult(
-        String arn,
-        String callerReference,
-        String comment,
-        String id,
-        String linkedServiceDescription,
-        String linkedServicePrincipal,
-        String name,
-        List<String> nameServers,
-        @Nullable Boolean privateZone,
-        Integer resourceRecordSetCount,
-        Map<String,String> tags,
-        String vpcId,
-        String zoneId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("callerReference") String callerReference,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedServiceDescription") String linkedServiceDescription,
+        @OutputCustomType.Parameter("linkedServicePrincipal") String linkedServicePrincipal,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("privateZone") @Nullable Boolean privateZone,
+        @OutputCustomType.Parameter("resourceRecordSetCount") Integer resourceRecordSetCount,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.arn = arn;
         this.callerReference = callerReference;
         this.comment = comment;
@@ -207,67 +207,67 @@ public final class GetZoneResult {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCallerReference(String callerReference) {
+        public Builder callerReference(String callerReference) {
             this.callerReference = Objects.requireNonNull(callerReference);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedServiceDescription(String linkedServiceDescription) {
+        public Builder linkedServiceDescription(String linkedServiceDescription) {
             this.linkedServiceDescription = Objects.requireNonNull(linkedServiceDescription);
             return this;
         }
 
-        public Builder setLinkedServicePrincipal(String linkedServicePrincipal) {
+        public Builder linkedServicePrincipal(String linkedServicePrincipal) {
             this.linkedServicePrincipal = Objects.requireNonNull(linkedServicePrincipal);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setPrivateZone(@Nullable Boolean privateZone) {
+        public Builder privateZone(@Nullable Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
         }
 
-        public Builder setResourceRecordSetCount(Integer resourceRecordSetCount) {
+        public Builder resourceRecordSetCount(Integer resourceRecordSetCount) {
             this.resourceRecordSetCount = Objects.requireNonNull(resourceRecordSetCount);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

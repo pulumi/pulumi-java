@@ -28,11 +28,11 @@ public final class PacketMirroringMirroredResourceInfoResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"instances","subnetworks","tags"})
+    @OutputCustomType.Constructor
     private PacketMirroringMirroredResourceInfoResponse(
-        List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
-        List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
-        List<String> tags) {
+        @OutputCustomType.Parameter("instances") List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances,
+        @OutputCustomType.Parameter("subnetworks") List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;
@@ -84,17 +84,17 @@ public final class PacketMirroringMirroredResourceInfoResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInstances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
+        public Builder instances(List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setSubnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
+        public Builder subnetworks(List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

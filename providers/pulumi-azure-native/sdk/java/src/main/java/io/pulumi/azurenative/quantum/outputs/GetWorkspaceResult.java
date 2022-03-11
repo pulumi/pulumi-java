@@ -77,20 +77,20 @@ public final class GetWorkspaceResult {
      */
     private final String usable;
 
-    @OutputCustomType.Constructor({"endpointUri","id","identity","location","name","providers","provisioningState","storageAccount","systemData","tags","type","usable"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String endpointUri,
-        String id,
-        @Nullable QuantumWorkspaceResponseIdentity identity,
-        String location,
-        String name,
-        @Nullable List<ProviderResponse> providers,
-        String provisioningState,
-        @Nullable String storageAccount,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String usable) {
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable QuantumWorkspaceResponseIdentity identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providers") @Nullable List<ProviderResponse> providers,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usable") String usable) {
         this.endpointUri = endpointUri;
         this.id = id;
         this.identity = identity;
@@ -232,62 +232,62 @@ public final class GetWorkspaceResult {
     	      this.usable = defaults.usable;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable QuantumWorkspaceResponseIdentity identity) {
+        public Builder identity(@Nullable QuantumWorkspaceResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviders(@Nullable List<ProviderResponse> providers) {
+        public Builder providers(@Nullable List<ProviderResponse> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsable(String usable) {
+        public Builder usable(String usable) {
             this.usable = Objects.requireNonNull(usable);
             return this;
         }

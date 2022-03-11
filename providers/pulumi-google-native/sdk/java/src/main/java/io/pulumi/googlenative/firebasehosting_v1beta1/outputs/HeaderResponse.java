@@ -26,11 +26,11 @@ public final class HeaderResponse {
      */
     private final String regex;
 
-    @OutputCustomType.Constructor({"glob","headers","regex"})
+    @OutputCustomType.Constructor
     private HeaderResponse(
-        String glob,
-        Map<String,String> headers,
-        String regex) {
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("regex") String regex) {
         this.glob = glob;
         this.headers = headers;
         this.regex = regex;
@@ -82,17 +82,17 @@ public final class HeaderResponse {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setGlob(String glob) {
+        public Builder glob(String glob) {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setRegex(String regex) {
+        public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }

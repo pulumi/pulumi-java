@@ -20,15 +20,15 @@ public final class EnvironmentConfigPrivateEnvironmentConfig {
     private final @Nullable String masterIpv4CidrBlock;
     private final @Nullable String webServerIpv4CidrBlock;
 
-    @OutputCustomType.Constructor({"cloudComposerConnectionSubnetwork","cloudComposerNetworkIpv4CidrBlock","cloudSqlIpv4CidrBlock","enablePrivateEndpoint","enablePrivatelyUsedPublicIps","masterIpv4CidrBlock","webServerIpv4CidrBlock"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigPrivateEnvironmentConfig(
-        @Nullable String cloudComposerConnectionSubnetwork,
-        @Nullable String cloudComposerNetworkIpv4CidrBlock,
-        @Nullable String cloudSqlIpv4CidrBlock,
-        @Nullable Boolean enablePrivateEndpoint,
-        @Nullable Boolean enablePrivatelyUsedPublicIps,
-        @Nullable String masterIpv4CidrBlock,
-        @Nullable String webServerIpv4CidrBlock) {
+        @OutputCustomType.Parameter("cloudComposerConnectionSubnetwork") @Nullable String cloudComposerConnectionSubnetwork,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") @Nullable String cloudComposerNetworkIpv4CidrBlock,
+        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") @Nullable String cloudSqlIpv4CidrBlock,
+        @OutputCustomType.Parameter("enablePrivateEndpoint") @Nullable Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("enablePrivatelyUsedPublicIps") @Nullable Boolean enablePrivatelyUsedPublicIps,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") @Nullable String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("webServerIpv4CidrBlock") @Nullable String webServerIpv4CidrBlock) {
         this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
@@ -92,37 +92,37 @@ public final class EnvironmentConfigPrivateEnvironmentConfig {
     	      this.webServerIpv4CidrBlock = defaults.webServerIpv4CidrBlock;
         }
 
-        public Builder setCloudComposerConnectionSubnetwork(@Nullable String cloudComposerConnectionSubnetwork) {
+        public Builder cloudComposerConnectionSubnetwork(@Nullable String cloudComposerConnectionSubnetwork) {
             this.cloudComposerConnectionSubnetwork = cloudComposerConnectionSubnetwork;
             return this;
         }
 
-        public Builder setCloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(@Nullable String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
             return this;
         }
 
-        public Builder setCloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(@Nullable String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
             return this;
         }
 
-        public Builder setEnablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
-        public Builder setEnablePrivatelyUsedPublicIps(@Nullable Boolean enablePrivatelyUsedPublicIps) {
+        public Builder enablePrivatelyUsedPublicIps(@Nullable Boolean enablePrivatelyUsedPublicIps) {
             this.enablePrivatelyUsedPublicIps = enablePrivatelyUsedPublicIps;
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setWebServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(@Nullable String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = webServerIpv4CidrBlock;
             return this;
         }

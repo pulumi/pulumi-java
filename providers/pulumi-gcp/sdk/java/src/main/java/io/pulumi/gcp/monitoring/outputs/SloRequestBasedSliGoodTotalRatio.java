@@ -44,11 +44,11 @@ public final class SloRequestBasedSliGoodTotalRatio {
      */
     private final @Nullable String totalServiceFilter;
 
-    @OutputCustomType.Constructor({"badServiceFilter","goodServiceFilter","totalServiceFilter"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSliGoodTotalRatio(
-        @Nullable String badServiceFilter,
-        @Nullable String goodServiceFilter,
-        @Nullable String totalServiceFilter) {
+        @OutputCustomType.Parameter("badServiceFilter") @Nullable String badServiceFilter,
+        @OutputCustomType.Parameter("goodServiceFilter") @Nullable String goodServiceFilter,
+        @OutputCustomType.Parameter("totalServiceFilter") @Nullable String totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;
@@ -117,17 +117,17 @@ public final class SloRequestBasedSliGoodTotalRatio {
     	      this.totalServiceFilter = defaults.totalServiceFilter;
         }
 
-        public Builder setBadServiceFilter(@Nullable String badServiceFilter) {
+        public Builder badServiceFilter(@Nullable String badServiceFilter) {
             this.badServiceFilter = badServiceFilter;
             return this;
         }
 
-        public Builder setGoodServiceFilter(@Nullable String goodServiceFilter) {
+        public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
             this.goodServiceFilter = goodServiceFilter;
             return this;
         }
 
-        public Builder setTotalServiceFilter(@Nullable String totalServiceFilter) {
+        public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }

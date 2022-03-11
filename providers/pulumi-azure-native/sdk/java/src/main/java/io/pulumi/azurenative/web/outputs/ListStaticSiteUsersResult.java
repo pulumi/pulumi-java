@@ -22,10 +22,10 @@ public final class ListStaticSiteUsersResult {
      */
     private final List<StaticSiteUserARMResourceResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListStaticSiteUsersResult(
-        String nextLink,
-        List<StaticSiteUserARMResourceResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<StaticSiteUserARMResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListStaticSiteUsersResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<StaticSiteUserARMResourceResponse> value) {
+        public Builder value(List<StaticSiteUserARMResourceResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

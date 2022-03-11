@@ -40,13 +40,13 @@ public final class CSIVolumeSource {
      */
     private final @Nullable Map<String,String> volumeAttributes;
 
-    @OutputCustomType.Constructor({"driver","fsType","nodePublishSecretRef","readOnly","volumeAttributes"})
+    @OutputCustomType.Constructor
     private CSIVolumeSource(
-        String driver,
-        @Nullable String fsType,
-        @Nullable LocalObjectReference nodePublishSecretRef,
-        @Nullable Boolean readOnly,
-        @Nullable Map<String,String> volumeAttributes) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable LocalObjectReference nodePublishSecretRef,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes) {
         this.driver = driver;
         this.fsType = fsType;
         this.nodePublishSecretRef = nodePublishSecretRef;
@@ -118,27 +118,27 @@ public final class CSIVolumeSource {
     	      this.volumeAttributes = defaults.volumeAttributes;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable LocalObjectReference nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable LocalObjectReference nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Map<String,String> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }

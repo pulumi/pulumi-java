@@ -96,23 +96,23 @@ public final class AzureFileStorageLinkedServiceResponse {
      */
     private final @Nullable Object userId;
 
-    @OutputCustomType.Constructor({"accountKey","annotations","connectVia","connectionString","description","encryptedCredential","fileShare","host","parameters","password","sasToken","sasUri","snapshot","type","userId"})
+    @OutputCustomType.Constructor
     private AzureFileStorageLinkedServiceResponse(
-        @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object connectionString,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object fileShare,
-        @Nullable Object host,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
-        @Nullable Object sasUri,
-        @Nullable Object snapshot,
-        String type,
-        @Nullable Object userId) {
+        @OutputCustomType.Parameter("accountKey") @Nullable AzureKeyVaultSecretReferenceResponse accountKey,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("connectionString") @Nullable Object connectionString,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("fileShare") @Nullable Object fileShare,
+        @OutputCustomType.Parameter("host") @Nullable Object host,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("sasToken") @Nullable AzureKeyVaultSecretReferenceResponse sasToken,
+        @OutputCustomType.Parameter("sasUri") @Nullable Object sasUri,
+        @OutputCustomType.Parameter("snapshot") @Nullable Object snapshot,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") @Nullable Object userId) {
         this.accountKey = accountKey;
         this.annotations = annotations;
         this.connectVia = connectVia;
@@ -285,77 +285,77 @@ public final class AzureFileStorageLinkedServiceResponse {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccountKey(@Nullable AzureKeyVaultSecretReferenceResponse accountKey) {
+        public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceResponse accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Object connectionString) {
+        public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setFileShare(@Nullable Object fileShare) {
+        public Builder fileShare(@Nullable Object fileShare) {
             this.fileShare = fileShare;
             return this;
         }
 
-        public Builder setHost(@Nullable Object host) {
+        public Builder host(@Nullable Object host) {
             this.host = host;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
+        public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceResponse sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setSasUri(@Nullable Object sasUri) {
+        public Builder sasUri(@Nullable Object sasUri) {
             this.sasUri = sasUri;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable Object snapshot) {
+        public Builder snapshot(@Nullable Object snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserId(@Nullable Object userId) {
+        public Builder userId(@Nullable Object userId) {
             this.userId = userId;
             return this;
         }

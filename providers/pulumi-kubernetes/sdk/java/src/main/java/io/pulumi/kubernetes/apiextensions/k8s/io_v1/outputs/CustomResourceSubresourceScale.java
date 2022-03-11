@@ -27,11 +27,11 @@ public final class CustomResourceSubresourceScale {
      */
     private final String statusReplicasPath;
 
-    @OutputCustomType.Constructor({"labelSelectorPath","specReplicasPath","statusReplicasPath"})
+    @OutputCustomType.Constructor
     private CustomResourceSubresourceScale(
-        @Nullable String labelSelectorPath,
-        String specReplicasPath,
-        String statusReplicasPath) {
+        @OutputCustomType.Parameter("labelSelectorPath") @Nullable String labelSelectorPath,
+        @OutputCustomType.Parameter("specReplicasPath") String specReplicasPath,
+        @OutputCustomType.Parameter("statusReplicasPath") String statusReplicasPath) {
         this.labelSelectorPath = labelSelectorPath;
         this.specReplicasPath = specReplicasPath;
         this.statusReplicasPath = statusReplicasPath;
@@ -83,17 +83,17 @@ public final class CustomResourceSubresourceScale {
     	      this.statusReplicasPath = defaults.statusReplicasPath;
         }
 
-        public Builder setLabelSelectorPath(@Nullable String labelSelectorPath) {
+        public Builder labelSelectorPath(@Nullable String labelSelectorPath) {
             this.labelSelectorPath = labelSelectorPath;
             return this;
         }
 
-        public Builder setSpecReplicasPath(String specReplicasPath) {
+        public Builder specReplicasPath(String specReplicasPath) {
             this.specReplicasPath = Objects.requireNonNull(specReplicasPath);
             return this;
         }
 
-        public Builder setStatusReplicasPath(String statusReplicasPath) {
+        public Builder statusReplicasPath(String statusReplicasPath) {
             this.statusReplicasPath = Objects.requireNonNull(statusReplicasPath);
             return this;
         }

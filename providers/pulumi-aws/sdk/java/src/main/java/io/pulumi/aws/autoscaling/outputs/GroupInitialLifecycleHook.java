@@ -24,15 +24,15 @@ public final class GroupInitialLifecycleHook {
     private final @Nullable String notificationTargetArn;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"defaultResult","heartbeatTimeout","lifecycleTransition","name","notificationMetadata","notificationTargetArn","roleArn"})
+    @OutputCustomType.Constructor
     private GroupInitialLifecycleHook(
-        @Nullable String defaultResult,
-        @Nullable Integer heartbeatTimeout,
-        String lifecycleTransition,
-        String name,
-        @Nullable String notificationMetadata,
-        @Nullable String notificationTargetArn,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("defaultResult") @Nullable String defaultResult,
+        @OutputCustomType.Parameter("heartbeatTimeout") @Nullable Integer heartbeatTimeout,
+        @OutputCustomType.Parameter("lifecycleTransition") String lifecycleTransition,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationMetadata") @Nullable String notificationMetadata,
+        @OutputCustomType.Parameter("notificationTargetArn") @Nullable String notificationTargetArn,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.defaultResult = defaultResult;
         this.heartbeatTimeout = heartbeatTimeout;
         this.lifecycleTransition = lifecycleTransition;
@@ -100,37 +100,37 @@ public final class GroupInitialLifecycleHook {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDefaultResult(@Nullable String defaultResult) {
+        public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = defaultResult;
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Integer heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
 
-        public Builder setLifecycleTransition(String lifecycleTransition) {
+        public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable String notificationMetadata) {
+        public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
 
-        public Builder setNotificationTargetArn(@Nullable String notificationTargetArn) {
+        public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
             this.notificationTargetArn = notificationTargetArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

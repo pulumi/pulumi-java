@@ -45,12 +45,12 @@ public final class ClusterIpAllocationPolicy {
      */
     private final @Nullable String servicesSecondaryRangeName;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName"})
+    @OutputCustomType.Constructor
     private ClusterIpAllocationPolicy(
-        @Nullable String clusterIpv4CidrBlock,
-        @Nullable String clusterSecondaryRangeName,
-        @Nullable String servicesIpv4CidrBlock,
-        @Nullable String servicesSecondaryRangeName) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") @Nullable String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") @Nullable String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") @Nullable String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") @Nullable String servicesSecondaryRangeName) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
@@ -125,22 +125,22 @@ public final class ClusterIpAllocationPolicy {
     	      this.servicesSecondaryRangeName = defaults.servicesSecondaryRangeName;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }

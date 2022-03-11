@@ -34,12 +34,12 @@ public final class BlobInventoryPolicyFilterResponse {
      */
     private final @Nullable List<String> prefixMatch;
 
-    @OutputCustomType.Constructor({"blobTypes","includeBlobVersions","includeSnapshots","prefixMatch"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicyFilterResponse(
-        List<String> blobTypes,
-        @Nullable Boolean includeBlobVersions,
-        @Nullable Boolean includeSnapshots,
-        @Nullable List<String> prefixMatch) {
+        @OutputCustomType.Parameter("blobTypes") List<String> blobTypes,
+        @OutputCustomType.Parameter("includeBlobVersions") @Nullable Boolean includeBlobVersions,
+        @OutputCustomType.Parameter("includeSnapshots") @Nullable Boolean includeSnapshots,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable List<String> prefixMatch) {
         this.blobTypes = blobTypes;
         this.includeBlobVersions = includeBlobVersions;
         this.includeSnapshots = includeSnapshots;
@@ -101,22 +101,22 @@ public final class BlobInventoryPolicyFilterResponse {
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setBlobTypes(List<String> blobTypes) {
+        public Builder blobTypes(List<String> blobTypes) {
             this.blobTypes = Objects.requireNonNull(blobTypes);
             return this;
         }
 
-        public Builder setIncludeBlobVersions(@Nullable Boolean includeBlobVersions) {
+        public Builder includeBlobVersions(@Nullable Boolean includeBlobVersions) {
             this.includeBlobVersions = includeBlobVersions;
             return this;
         }
 
-        public Builder setIncludeSnapshots(@Nullable Boolean includeSnapshots) {
+        public Builder includeSnapshots(@Nullable Boolean includeSnapshots) {
             this.includeSnapshots = includeSnapshots;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }

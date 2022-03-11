@@ -29,11 +29,11 @@ public final class MonitoringTagRulesPropertiesResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor({"logRules","provisioningState","systemData"})
+    @OutputCustomType.Constructor
     private MonitoringTagRulesPropertiesResponse(
-        @Nullable LogRulesResponse logRules,
-        String provisioningState,
-        SystemDataResponse systemData) {
+        @OutputCustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.logRules = logRules;
         this.provisioningState = provisioningState;
         this.systemData = systemData;
@@ -85,17 +85,17 @@ public final class MonitoringTagRulesPropertiesResponse {
     	      this.systemData = defaults.systemData;
         }
 
-        public Builder setLogRules(@Nullable LogRulesResponse logRules) {
+        public Builder logRules(@Nullable LogRulesResponse logRules) {
             this.logRules = logRules;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }

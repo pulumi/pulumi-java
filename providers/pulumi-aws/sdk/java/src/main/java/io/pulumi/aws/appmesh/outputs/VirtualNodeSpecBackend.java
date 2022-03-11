@@ -15,8 +15,8 @@ public final class VirtualNodeSpecBackend {
      */
     private final VirtualNodeSpecBackendVirtualService virtualService;
 
-    @OutputCustomType.Constructor({"virtualService"})
-    private VirtualNodeSpecBackend(VirtualNodeSpecBackendVirtualService virtualService) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackend(@OutputCustomType.Parameter("virtualService") VirtualNodeSpecBackendVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNodeSpecBackend {
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(VirtualNodeSpecBackendVirtualService virtualService) {
+        public Builder virtualService(VirtualNodeSpecBackendVirtualService virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }

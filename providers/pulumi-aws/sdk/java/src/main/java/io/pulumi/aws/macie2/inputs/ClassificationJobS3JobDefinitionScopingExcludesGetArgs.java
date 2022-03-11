@@ -54,12 +54,12 @@ public final class ClassificationJobS3JobDefinitionScopingExcludesGetArgs extend
     	      this.ands = defaults.ands;
         }
 
-        public Builder setAnds(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands) {
+        public Builder ands(@Nullable Input<List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs>> ands) {
             this.ands = ands;
             return this;
         }
 
-        public Builder setAnds(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs> ands) {
+        public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAndGetArgs> ands) {
             this.ands = Input.ofNullable(ands);
             return this;
         }

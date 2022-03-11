@@ -16,11 +16,11 @@ public final class BranchBasicAuthConfig {
     private final String password;
     private final String username;
 
-    @OutputCustomType.Constructor({"enableBasicAuth","password","username"})
+    @OutputCustomType.Constructor
     private BranchBasicAuthConfig(
-        @Nullable Boolean enableBasicAuth,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.enableBasicAuth = enableBasicAuth;
         this.password = password;
         this.username = username;
@@ -60,17 +60,17 @@ public final class BranchBasicAuthConfig {
     	      this.username = defaults.username;
         }
 
-        public Builder setEnableBasicAuth(@Nullable Boolean enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

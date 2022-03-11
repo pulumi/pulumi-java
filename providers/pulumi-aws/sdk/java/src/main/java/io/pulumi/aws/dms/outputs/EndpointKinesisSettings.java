@@ -58,17 +58,17 @@ public final class EndpointKinesisSettings {
      */
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor({"includeControlDetails","includeNullAndEmpty","includePartitionValue","includeTableAlterOperations","includeTransactionDetails","messageFormat","partitionIncludeSchemaTable","serviceAccessRoleArn","streamArn"})
+    @OutputCustomType.Constructor
     private EndpointKinesisSettings(
-        @Nullable Boolean includeControlDetails,
-        @Nullable Boolean includeNullAndEmpty,
-        @Nullable Boolean includePartitionValue,
-        @Nullable Boolean includeTableAlterOperations,
-        @Nullable Boolean includeTransactionDetails,
-        @Nullable String messageFormat,
-        @Nullable Boolean partitionIncludeSchemaTable,
-        @Nullable String serviceAccessRoleArn,
-        @Nullable String streamArn) {
+        @OutputCustomType.Parameter("includeControlDetails") @Nullable Boolean includeControlDetails,
+        @OutputCustomType.Parameter("includeNullAndEmpty") @Nullable Boolean includeNullAndEmpty,
+        @OutputCustomType.Parameter("includePartitionValue") @Nullable Boolean includePartitionValue,
+        @OutputCustomType.Parameter("includeTableAlterOperations") @Nullable Boolean includeTableAlterOperations,
+        @OutputCustomType.Parameter("includeTransactionDetails") @Nullable Boolean includeTransactionDetails,
+        @OutputCustomType.Parameter("messageFormat") @Nullable String messageFormat,
+        @OutputCustomType.Parameter("partitionIncludeSchemaTable") @Nullable Boolean partitionIncludeSchemaTable,
+        @OutputCustomType.Parameter("serviceAccessRoleArn") @Nullable String serviceAccessRoleArn,
+        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.includeControlDetails = includeControlDetails;
         this.includeNullAndEmpty = includeNullAndEmpty;
         this.includePartitionValue = includePartitionValue;
@@ -180,47 +180,47 @@ public final class EndpointKinesisSettings {
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setIncludeControlDetails(@Nullable Boolean includeControlDetails) {
+        public Builder includeControlDetails(@Nullable Boolean includeControlDetails) {
             this.includeControlDetails = includeControlDetails;
             return this;
         }
 
-        public Builder setIncludeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
+        public Builder includeNullAndEmpty(@Nullable Boolean includeNullAndEmpty) {
             this.includeNullAndEmpty = includeNullAndEmpty;
             return this;
         }
 
-        public Builder setIncludePartitionValue(@Nullable Boolean includePartitionValue) {
+        public Builder includePartitionValue(@Nullable Boolean includePartitionValue) {
             this.includePartitionValue = includePartitionValue;
             return this;
         }
 
-        public Builder setIncludeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
+        public Builder includeTableAlterOperations(@Nullable Boolean includeTableAlterOperations) {
             this.includeTableAlterOperations = includeTableAlterOperations;
             return this;
         }
 
-        public Builder setIncludeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
+        public Builder includeTransactionDetails(@Nullable Boolean includeTransactionDetails) {
             this.includeTransactionDetails = includeTransactionDetails;
             return this;
         }
 
-        public Builder setMessageFormat(@Nullable String messageFormat) {
+        public Builder messageFormat(@Nullable String messageFormat) {
             this.messageFormat = messageFormat;
             return this;
         }
 
-        public Builder setPartitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
+        public Builder partitionIncludeSchemaTable(@Nullable Boolean partitionIncludeSchemaTable) {
             this.partitionIncludeSchemaTable = partitionIncludeSchemaTable;
             return this;
         }
 
-        public Builder setServiceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(@Nullable String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = serviceAccessRoleArn;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
         }

@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
      */
     private final String endTime;
 
-    @OutputCustomType.Constructor({"callAnalysisMetadata","endTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnalysisResultResponse(
-        GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
-        String endTime) {
+        @OutputCustomType.Parameter("callAnalysisMetadata") GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata,
+        @OutputCustomType.Parameter("endTime") String endTime) {
         this.callAnalysisMetadata = callAnalysisMetadata;
         this.endTime = endTime;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultResponse {
     	      this.endTime = defaults.endTime;
         }
 
-        public Builder setCallAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
+        public Builder callAnalysisMetadata(GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisMetadataResponse callAnalysisMetadata) {
             this.callAnalysisMetadata = Objects.requireNonNull(callAnalysisMetadata);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }

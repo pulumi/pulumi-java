@@ -15,8 +15,8 @@ public final class EventSourceMappingDestinationConfigOnFailure {
      */
     private final String destinationArn;
 
-    @OutputCustomType.Constructor({"destinationArn"})
-    private EventSourceMappingDestinationConfigOnFailure(String destinationArn) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingDestinationConfigOnFailure(@OutputCustomType.Parameter("destinationArn") String destinationArn) {
         this.destinationArn = destinationArn;
     }
 
@@ -48,7 +48,7 @@ public final class EventSourceMappingDestinationConfigOnFailure {
     	      this.destinationArn = defaults.destinationArn;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }

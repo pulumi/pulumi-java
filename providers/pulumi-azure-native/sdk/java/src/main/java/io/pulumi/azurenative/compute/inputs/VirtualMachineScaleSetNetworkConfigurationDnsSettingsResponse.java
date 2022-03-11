@@ -58,7 +58,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
     	      this.dnsServers = defaults.dnsServers;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }

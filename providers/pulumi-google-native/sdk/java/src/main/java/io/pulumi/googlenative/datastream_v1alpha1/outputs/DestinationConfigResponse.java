@@ -21,10 +21,10 @@ public final class DestinationConfigResponse {
      */
     private final GcsDestinationConfigResponse gcsDestinationConfig;
 
-    @OutputCustomType.Constructor({"destinationConnectionProfileName","gcsDestinationConfig"})
+    @OutputCustomType.Constructor
     private DestinationConfigResponse(
-        String destinationConnectionProfileName,
-        GcsDestinationConfigResponse gcsDestinationConfig) {
+        @OutputCustomType.Parameter("destinationConnectionProfileName") String destinationConnectionProfileName,
+        @OutputCustomType.Parameter("gcsDestinationConfig") GcsDestinationConfigResponse gcsDestinationConfig) {
         this.destinationConnectionProfileName = destinationConnectionProfileName;
         this.gcsDestinationConfig = gcsDestinationConfig;
     }
@@ -66,12 +66,12 @@ public final class DestinationConfigResponse {
     	      this.gcsDestinationConfig = defaults.gcsDestinationConfig;
         }
 
-        public Builder setDestinationConnectionProfileName(String destinationConnectionProfileName) {
+        public Builder destinationConnectionProfileName(String destinationConnectionProfileName) {
             this.destinationConnectionProfileName = Objects.requireNonNull(destinationConnectionProfileName);
             return this;
         }
 
-        public Builder setGcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
+        public Builder gcsDestinationConfig(GcsDestinationConfigResponse gcsDestinationConfig) {
             this.gcsDestinationConfig = Objects.requireNonNull(gcsDestinationConfig);
             return this;
         }

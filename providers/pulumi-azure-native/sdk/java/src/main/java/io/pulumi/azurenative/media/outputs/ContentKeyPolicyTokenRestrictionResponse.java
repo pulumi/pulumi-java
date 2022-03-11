@@ -59,16 +59,16 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
      */
     private final String restrictionTokenType;
 
-    @OutputCustomType.Constructor({"alternateVerificationKeys","audience","issuer","odataType","openIdConnectDiscoveryDocument","primaryVerificationKey","requiredClaims","restrictionTokenType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyTokenRestrictionResponse(
-        @Nullable List<Object> alternateVerificationKeys,
-        String audience,
-        String issuer,
-        String odataType,
-        @Nullable String openIdConnectDiscoveryDocument,
-        Object primaryVerificationKey,
-        @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
-        String restrictionTokenType) {
+        @OutputCustomType.Parameter("alternateVerificationKeys") @Nullable List<Object> alternateVerificationKeys,
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("openIdConnectDiscoveryDocument") @Nullable String openIdConnectDiscoveryDocument,
+        @OutputCustomType.Parameter("primaryVerificationKey") Object primaryVerificationKey,
+        @OutputCustomType.Parameter("requiredClaims") @Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims,
+        @OutputCustomType.Parameter("restrictionTokenType") String restrictionTokenType) {
         this.alternateVerificationKeys = alternateVerificationKeys;
         this.audience = audience;
         this.issuer = issuer;
@@ -171,42 +171,42 @@ public final class ContentKeyPolicyTokenRestrictionResponse {
     	      this.restrictionTokenType = defaults.restrictionTokenType;
         }
 
-        public Builder setAlternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
+        public Builder alternateVerificationKeys(@Nullable List<Object> alternateVerificationKeys) {
             this.alternateVerificationKeys = alternateVerificationKeys;
             return this;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOpenIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
+        public Builder openIdConnectDiscoveryDocument(@Nullable String openIdConnectDiscoveryDocument) {
             this.openIdConnectDiscoveryDocument = openIdConnectDiscoveryDocument;
             return this;
         }
 
-        public Builder setPrimaryVerificationKey(Object primaryVerificationKey) {
+        public Builder primaryVerificationKey(Object primaryVerificationKey) {
             this.primaryVerificationKey = Objects.requireNonNull(primaryVerificationKey);
             return this;
         }
 
-        public Builder setRequiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
+        public Builder requiredClaims(@Nullable List<ContentKeyPolicyTokenClaimResponse> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
-        public Builder setRestrictionTokenType(String restrictionTokenType) {
+        public Builder restrictionTokenType(String restrictionTokenType) {
             this.restrictionTokenType = Objects.requireNonNull(restrictionTokenType);
             return this;
         }

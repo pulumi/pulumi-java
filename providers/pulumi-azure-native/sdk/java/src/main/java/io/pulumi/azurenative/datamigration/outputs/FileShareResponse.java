@@ -27,11 +27,11 @@ public final class FileShareResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"password","path","userName"})
+    @OutputCustomType.Constructor
     private FileShareResponse(
-        @Nullable String password,
-        String path,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.password = password;
         this.path = path;
         this.userName = userName;
@@ -83,17 +83,17 @@ public final class FileShareResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

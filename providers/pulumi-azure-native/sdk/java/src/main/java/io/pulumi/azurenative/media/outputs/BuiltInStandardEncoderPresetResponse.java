@@ -21,10 +21,10 @@ public final class BuiltInStandardEncoderPresetResponse {
      */
     private final String presetName;
 
-    @OutputCustomType.Constructor({"odataType","presetName"})
+    @OutputCustomType.Constructor
     private BuiltInStandardEncoderPresetResponse(
-        String odataType,
-        String presetName) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("presetName") String presetName) {
         this.odataType = odataType;
         this.presetName = presetName;
     }
@@ -67,12 +67,12 @@ public final class BuiltInStandardEncoderPresetResponse {
     	      this.presetName = defaults.presetName;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setPresetName(String presetName) {
+        public Builder presetName(String presetName) {
             this.presetName = Objects.requireNonNull(presetName);
             return this;
         }

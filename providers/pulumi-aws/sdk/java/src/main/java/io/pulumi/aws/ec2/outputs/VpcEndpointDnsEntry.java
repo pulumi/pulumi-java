@@ -22,10 +22,10 @@ public final class VpcEndpointDnsEntry {
      */
     private final @Nullable String hostedZoneId;
 
-    @OutputCustomType.Constructor({"dnsName","hostedZoneId"})
+    @OutputCustomType.Constructor
     private VpcEndpointDnsEntry(
-        @Nullable String dnsName,
-        @Nullable String hostedZoneId) {
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
         this.dnsName = dnsName;
         this.hostedZoneId = hostedZoneId;
     }
@@ -67,12 +67,12 @@ public final class VpcEndpointDnsEntry {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }

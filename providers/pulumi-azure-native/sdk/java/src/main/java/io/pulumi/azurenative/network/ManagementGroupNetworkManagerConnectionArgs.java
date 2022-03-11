@@ -102,42 +102,42 @@ public final class ManagementGroupNetworkManagerConnectionArgs extends io.pulumi
     	      this.networkManagerId = defaults.networkManagerId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManagementGroupId(Input<String> managementGroupId) {
+        public Builder managementGroupId(Input<String> managementGroupId) {
             this.managementGroupId = Objects.requireNonNull(managementGroupId);
             return this;
         }
 
-        public Builder setManagementGroupId(String managementGroupId) {
+        public Builder managementGroupId(String managementGroupId) {
             this.managementGroupId = Input.of(Objects.requireNonNull(managementGroupId));
             return this;
         }
 
-        public Builder setNetworkManagerConnectionName(@Nullable Input<String> networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(@Nullable Input<String> networkManagerConnectionName) {
             this.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
 
-        public Builder setNetworkManagerConnectionName(@Nullable String networkManagerConnectionName) {
+        public Builder networkManagerConnectionName(@Nullable String networkManagerConnectionName) {
             this.networkManagerConnectionName = Input.ofNullable(networkManagerConnectionName);
             return this;
         }
 
-        public Builder setNetworkManagerId(@Nullable Input<String> networkManagerId) {
+        public Builder networkManagerId(@Nullable Input<String> networkManagerId) {
             this.networkManagerId = networkManagerId;
             return this;
         }
 
-        public Builder setNetworkManagerId(@Nullable String networkManagerId) {
+        public Builder networkManagerId(@Nullable String networkManagerId) {
             this.networkManagerId = Input.ofNullable(networkManagerId);
             return this;
         }

@@ -30,11 +30,11 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
      */
     private final @Nullable List<String> repositories;
 
-    @OutputCustomType.Constructor({"packages","precachePackages","repositories"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponseSpark(
-        @Nullable List<SparkMavenPackageResponse> packages,
-        @Nullable Boolean precachePackages,
-        @Nullable List<String> repositories) {
+        @OutputCustomType.Parameter("packages") @Nullable List<SparkMavenPackageResponse> packages,
+        @OutputCustomType.Parameter("precachePackages") @Nullable Boolean precachePackages,
+        @OutputCustomType.Parameter("repositories") @Nullable List<String> repositories) {
         this.packages = packages;
         this.precachePackages = precachePackages;
         this.repositories = repositories;
@@ -86,17 +86,17 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark {
     	      this.repositories = defaults.repositories;
         }
 
-        public Builder setPackages(@Nullable List<SparkMavenPackageResponse> packages) {
+        public Builder packages(@Nullable List<SparkMavenPackageResponse> packages) {
             this.packages = packages;
             return this;
         }
 
-        public Builder setPrecachePackages(@Nullable Boolean precachePackages) {
+        public Builder precachePackages(@Nullable Boolean precachePackages) {
             this.precachePackages = precachePackages;
             return this;
         }
 
-        public Builder setRepositories(@Nullable List<String> repositories) {
+        public Builder repositories(@Nullable List<String> repositories) {
             this.repositories = repositories;
             return this;
         }

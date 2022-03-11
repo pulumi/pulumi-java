@@ -141,62 +141,62 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccountId = defaults.serviceAccountId;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setKeyAlgorithm(@Nullable Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable Input<String> keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
             return this;
         }
 
-        public Builder setKeyAlgorithm(@Nullable String keyAlgorithm) {
+        public Builder keyAlgorithm(@Nullable String keyAlgorithm) {
             this.keyAlgorithm = Input.ofNullable(keyAlgorithm);
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable Input<String> privateKeyType) {
+        public Builder privateKeyType(@Nullable Input<String> privateKeyType) {
             this.privateKeyType = privateKeyType;
             return this;
         }
 
-        public Builder setPrivateKeyType(@Nullable String privateKeyType) {
+        public Builder privateKeyType(@Nullable String privateKeyType) {
             this.privateKeyType = Input.ofNullable(privateKeyType);
             return this;
         }
 
-        public Builder setPublicKeyData(@Nullable Input<String> publicKeyData) {
+        public Builder publicKeyData(@Nullable Input<String> publicKeyData) {
             this.publicKeyData = publicKeyData;
             return this;
         }
 
-        public Builder setPublicKeyData(@Nullable String publicKeyData) {
+        public Builder publicKeyData(@Nullable String publicKeyData) {
             this.publicKeyData = Input.ofNullable(publicKeyData);
             return this;
         }
 
-        public Builder setPublicKeyType(@Nullable Input<String> publicKeyType) {
+        public Builder publicKeyType(@Nullable Input<String> publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }
 
-        public Builder setPublicKeyType(@Nullable String publicKeyType) {
+        public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = Input.ofNullable(publicKeyType);
             return this;
         }
 
-        public Builder setServiceAccountId(Input<String> serviceAccountId) {
+        public Builder serviceAccountId(Input<String> serviceAccountId) {
             this.serviceAccountId = Objects.requireNonNull(serviceAccountId);
             return this;
         }
 
-        public Builder setServiceAccountId(String serviceAccountId) {
+        public Builder serviceAccountId(String serviceAccountId) {
             this.serviceAccountId = Input.of(Objects.requireNonNull(serviceAccountId));
             return this;
         }

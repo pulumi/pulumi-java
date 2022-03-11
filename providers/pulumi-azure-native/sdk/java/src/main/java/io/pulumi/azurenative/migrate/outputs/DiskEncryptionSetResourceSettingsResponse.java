@@ -21,10 +21,10 @@ public final class DiskEncryptionSetResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private DiskEncryptionSetResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
     }
@@ -67,12 +67,12 @@ public final class DiskEncryptionSetResourceSettingsResponse {
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }

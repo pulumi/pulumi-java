@@ -67,19 +67,19 @@ public final class GetDatabaseAdvisorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"advisorStatus","autoExecuteStatus","autoExecuteStatusInheritedFrom","id","kind","lastChecked","location","name","recommendationsStatus","recommendedActions","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseAdvisorResult(
-        String advisorStatus,
-        String autoExecuteStatus,
-        String autoExecuteStatusInheritedFrom,
-        String id,
-        String kind,
-        String lastChecked,
-        String location,
-        String name,
-        String recommendationsStatus,
-        List<RecommendedActionResponse> recommendedActions,
-        String type) {
+        @OutputCustomType.Parameter("advisorStatus") String advisorStatus,
+        @OutputCustomType.Parameter("autoExecuteStatus") String autoExecuteStatus,
+        @OutputCustomType.Parameter("autoExecuteStatusInheritedFrom") String autoExecuteStatusInheritedFrom,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastChecked") String lastChecked,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendationsStatus") String recommendationsStatus,
+        @OutputCustomType.Parameter("recommendedActions") List<RecommendedActionResponse> recommendedActions,
+        @OutputCustomType.Parameter("type") String type) {
         this.advisorStatus = advisorStatus;
         this.autoExecuteStatus = autoExecuteStatus;
         this.autoExecuteStatusInheritedFrom = autoExecuteStatusInheritedFrom;
@@ -211,57 +211,57 @@ public final class GetDatabaseAdvisorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdvisorStatus(String advisorStatus) {
+        public Builder advisorStatus(String advisorStatus) {
             this.advisorStatus = Objects.requireNonNull(advisorStatus);
             return this;
         }
 
-        public Builder setAutoExecuteStatus(String autoExecuteStatus) {
+        public Builder autoExecuteStatus(String autoExecuteStatus) {
             this.autoExecuteStatus = Objects.requireNonNull(autoExecuteStatus);
             return this;
         }
 
-        public Builder setAutoExecuteStatusInheritedFrom(String autoExecuteStatusInheritedFrom) {
+        public Builder autoExecuteStatusInheritedFrom(String autoExecuteStatusInheritedFrom) {
             this.autoExecuteStatusInheritedFrom = Objects.requireNonNull(autoExecuteStatusInheritedFrom);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastChecked(String lastChecked) {
+        public Builder lastChecked(String lastChecked) {
             this.lastChecked = Objects.requireNonNull(lastChecked);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecommendationsStatus(String recommendationsStatus) {
+        public Builder recommendationsStatus(String recommendationsStatus) {
             this.recommendationsStatus = Objects.requireNonNull(recommendationsStatus);
             return this;
         }
 
-        public Builder setRecommendedActions(List<RecommendedActionResponse> recommendedActions) {
+        public Builder recommendedActions(List<RecommendedActionResponse> recommendedActions) {
             this.recommendedActions = Objects.requireNonNull(recommendedActions);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

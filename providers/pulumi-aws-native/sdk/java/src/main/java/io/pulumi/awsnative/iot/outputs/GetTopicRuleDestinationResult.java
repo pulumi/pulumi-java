@@ -28,11 +28,11 @@ public final class GetTopicRuleDestinationResult {
      */
     private final @Nullable String statusReason;
 
-    @OutputCustomType.Constructor({"arn","status","statusReason"})
+    @OutputCustomType.Constructor
     private GetTopicRuleDestinationResult(
-        @Nullable String arn,
-        @Nullable TopicRuleDestinationStatus status,
-        @Nullable String statusReason) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable TopicRuleDestinationStatus status,
+        @OutputCustomType.Parameter("statusReason") @Nullable String statusReason) {
         this.arn = arn;
         this.status = status;
         this.statusReason = statusReason;
@@ -84,17 +84,17 @@ public final class GetTopicRuleDestinationResult {
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable TopicRuleDestinationStatus status) {
+        public Builder status(@Nullable TopicRuleDestinationStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusReason(@Nullable String statusReason) {
+        public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = statusReason;
             return this;
         }

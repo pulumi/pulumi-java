@@ -27,11 +27,11 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"displayName","id","type"})
+    @OutputCustomType.Constructor
     private PolicyAssignmentPropertiesResponseRoleDefinition(
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.displayName = displayName;
         this.id = id;
         this.type = type;
@@ -83,17 +83,17 @@ public final class PolicyAssignmentPropertiesResponseRoleDefinition {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

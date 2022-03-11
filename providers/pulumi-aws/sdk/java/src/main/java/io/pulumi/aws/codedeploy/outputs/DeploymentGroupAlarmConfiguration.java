@@ -31,11 +31,11 @@ public final class DeploymentGroupAlarmConfiguration {
      */
     private final @Nullable Boolean ignorePollAlarmFailure;
 
-    @OutputCustomType.Constructor({"alarms","enabled","ignorePollAlarmFailure"})
+    @OutputCustomType.Constructor
     private DeploymentGroupAlarmConfiguration(
-        @Nullable List<String> alarms,
-        @Nullable Boolean enabled,
-        @Nullable Boolean ignorePollAlarmFailure) {
+        @OutputCustomType.Parameter("alarms") @Nullable List<String> alarms,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("ignorePollAlarmFailure") @Nullable Boolean ignorePollAlarmFailure) {
         this.alarms = alarms;
         this.enabled = enabled;
         this.ignorePollAlarmFailure = ignorePollAlarmFailure;
@@ -89,17 +89,17 @@ public final class DeploymentGroupAlarmConfiguration {
     	      this.ignorePollAlarmFailure = defaults.ignorePollAlarmFailure;
         }
 
-        public Builder setAlarms(@Nullable List<String> alarms) {
+        public Builder alarms(@Nullable List<String> alarms) {
             this.alarms = alarms;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setIgnorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
+        public Builder ignorePollAlarmFailure(@Nullable Boolean ignorePollAlarmFailure) {
             this.ignorePollAlarmFailure = ignorePollAlarmFailure;
             return this;
         }

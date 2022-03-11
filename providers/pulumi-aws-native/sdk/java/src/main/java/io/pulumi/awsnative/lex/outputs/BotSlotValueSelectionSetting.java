@@ -15,10 +15,10 @@ public final class BotSlotValueSelectionSetting {
     private final @Nullable BotSlotValueRegexFilter regexFilter;
     private final BotSlotValueResolutionStrategy resolutionStrategy;
 
-    @OutputCustomType.Constructor({"regexFilter","resolutionStrategy"})
+    @OutputCustomType.Constructor
     private BotSlotValueSelectionSetting(
-        @Nullable BotSlotValueRegexFilter regexFilter,
-        BotSlotValueResolutionStrategy resolutionStrategy) {
+        @OutputCustomType.Parameter("regexFilter") @Nullable BotSlotValueRegexFilter regexFilter,
+        @OutputCustomType.Parameter("resolutionStrategy") BotSlotValueResolutionStrategy resolutionStrategy) {
         this.regexFilter = regexFilter;
         this.resolutionStrategy = resolutionStrategy;
     }
@@ -52,12 +52,12 @@ public final class BotSlotValueSelectionSetting {
     	      this.resolutionStrategy = defaults.resolutionStrategy;
         }
 
-        public Builder setRegexFilter(@Nullable BotSlotValueRegexFilter regexFilter) {
+        public Builder regexFilter(@Nullable BotSlotValueRegexFilter regexFilter) {
             this.regexFilter = regexFilter;
             return this;
         }
 
-        public Builder setResolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
+        public Builder resolutionStrategy(BotSlotValueResolutionStrategy resolutionStrategy) {
             this.resolutionStrategy = Objects.requireNonNull(resolutionStrategy);
             return this;
         }

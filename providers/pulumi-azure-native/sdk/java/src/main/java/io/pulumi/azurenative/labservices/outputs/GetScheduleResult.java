@@ -64,18 +64,18 @@ public final class GetScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notes","provisioningState","recurrencePattern","startAt","stopAt","systemData","timeZoneId","type"})
+    @OutputCustomType.Constructor
     private GetScheduleResult(
-        String id,
-        String name,
-        @Nullable String notes,
-        String provisioningState,
-        @Nullable RecurrencePatternResponse recurrencePattern,
-        @Nullable String startAt,
-        String stopAt,
-        SystemDataResponse systemData,
-        String timeZoneId,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("recurrencePattern") @Nullable RecurrencePatternResponse recurrencePattern,
+        @OutputCustomType.Parameter("startAt") @Nullable String startAt,
+        @OutputCustomType.Parameter("stopAt") String stopAt,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("timeZoneId") String timeZoneId,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notes = notes;
@@ -197,52 +197,52 @@ public final class GetScheduleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRecurrencePattern(@Nullable RecurrencePatternResponse recurrencePattern) {
+        public Builder recurrencePattern(@Nullable RecurrencePatternResponse recurrencePattern) {
             this.recurrencePattern = recurrencePattern;
             return this;
         }
 
-        public Builder setStartAt(@Nullable String startAt) {
+        public Builder startAt(@Nullable String startAt) {
             this.startAt = startAt;
             return this;
         }
 
-        public Builder setStopAt(String stopAt) {
+        public Builder stopAt(String stopAt) {
             this.stopAt = Objects.requireNonNull(stopAt);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTimeZoneId(String timeZoneId) {
+        public Builder timeZoneId(String timeZoneId) {
             this.timeZoneId = Objects.requireNonNull(timeZoneId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -28,11 +28,11 @@ public final class DomainLogPublishingOption {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroupArn","enabled","logType"})
+    @OutputCustomType.Constructor
     private DomainLogPublishingOption(
-        String cloudwatchLogGroupArn,
-        @Nullable Boolean enabled,
-        String logType) {
+        @OutputCustomType.Parameter("cloudwatchLogGroupArn") String cloudwatchLogGroupArn,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.cloudwatchLogGroupArn = cloudwatchLogGroupArn;
         this.enabled = enabled;
         this.logType = logType;
@@ -84,17 +84,17 @@ public final class DomainLogPublishingOption {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setCloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
+        public Builder cloudwatchLogGroupArn(String cloudwatchLogGroupArn) {
             this.cloudwatchLogGroupArn = Objects.requireNonNull(cloudwatchLogGroupArn);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

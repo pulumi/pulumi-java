@@ -24,10 +24,10 @@ public final class TargetEligibilityResultResponse {
      */
     private final @Nullable List<TargetEligibilityErrorMessageResponse> messages;
 
-    @OutputCustomType.Constructor({"eligibilityStatus","messages"})
+    @OutputCustomType.Constructor
     private TargetEligibilityResultResponse(
-        @Nullable String eligibilityStatus,
-        @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
+        @OutputCustomType.Parameter("eligibilityStatus") @Nullable String eligibilityStatus,
+        @OutputCustomType.Parameter("messages") @Nullable List<TargetEligibilityErrorMessageResponse> messages) {
         this.eligibilityStatus = eligibilityStatus;
         this.messages = messages;
     }
@@ -69,12 +69,12 @@ public final class TargetEligibilityResultResponse {
     	      this.messages = defaults.messages;
         }
 
-        public Builder setEligibilityStatus(@Nullable String eligibilityStatus) {
+        public Builder eligibilityStatus(@Nullable String eligibilityStatus) {
             this.eligibilityStatus = eligibilityStatus;
             return this;
         }
 
-        public Builder setMessages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
+        public Builder messages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
             this.messages = messages;
             return this;
         }

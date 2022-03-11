@@ -40,13 +40,13 @@ public final class GetIntegrationResult {
      */
     private final @Nullable List<IntegrationTag> tags;
 
-    @OutputCustomType.Constructor({"createdAt","lastUpdatedAt","objectTypeName","objectTypeNames","tags"})
+    @OutputCustomType.Constructor
     private GetIntegrationResult(
-        @Nullable String createdAt,
-        @Nullable String lastUpdatedAt,
-        @Nullable String objectTypeName,
-        @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
-        @Nullable List<IntegrationTag> tags) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("objectTypeName") @Nullable String objectTypeName,
+        @OutputCustomType.Parameter("objectTypeNames") @Nullable List<IntegrationObjectTypeMapping> objectTypeNames,
+        @OutputCustomType.Parameter("tags") @Nullable List<IntegrationTag> tags) {
         this.createdAt = createdAt;
         this.lastUpdatedAt = lastUpdatedAt;
         this.objectTypeName = objectTypeName;
@@ -118,27 +118,27 @@ public final class GetIntegrationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setLastUpdatedAt(@Nullable String lastUpdatedAt) {
+        public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
-        public Builder setObjectTypeName(@Nullable String objectTypeName) {
+        public Builder objectTypeName(@Nullable String objectTypeName) {
             this.objectTypeName = objectTypeName;
             return this;
         }
 
-        public Builder setObjectTypeNames(@Nullable List<IntegrationObjectTypeMapping> objectTypeNames) {
+        public Builder objectTypeNames(@Nullable List<IntegrationObjectTypeMapping> objectTypeNames) {
             this.objectTypeNames = objectTypeNames;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IntegrationTag> tags) {
+        public Builder tags(@Nullable List<IntegrationTag> tags) {
             this.tags = tags;
             return this;
         }

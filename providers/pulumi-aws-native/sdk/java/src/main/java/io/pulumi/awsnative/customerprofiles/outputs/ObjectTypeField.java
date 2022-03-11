@@ -28,11 +28,11 @@ public final class ObjectTypeField {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"contentType","source","target"})
+    @OutputCustomType.Constructor
     private ObjectTypeField(
-        @Nullable ObjectTypeFieldContentType contentType,
-        @Nullable String source,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("contentType") @Nullable ObjectTypeFieldContentType contentType,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.contentType = contentType;
         this.source = source;
         this.target = target;
@@ -84,17 +84,17 @@ public final class ObjectTypeField {
     	      this.target = defaults.target;
         }
 
-        public Builder setContentType(@Nullable ObjectTypeFieldContentType contentType) {
+        public Builder contentType(@Nullable ObjectTypeFieldContentType contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

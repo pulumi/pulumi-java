@@ -95,32 +95,32 @@ public final class ServiceTemplateSpecContainerEnvArgs extends io.pulumi.resourc
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValueFrom(@Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
+        public Builder valueFrom(@Nullable Input<ServiceTemplateSpecContainerEnvValueFromArgs> valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
 
-        public Builder setValueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromArgs valueFrom) {
+        public Builder valueFrom(@Nullable ServiceTemplateSpecContainerEnvValueFromArgs valueFrom) {
             this.valueFrom = Input.ofNullable(valueFrom);
             return this;
         }

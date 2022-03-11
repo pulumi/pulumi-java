@@ -70,22 +70,22 @@ public final class ResolverRuleTargetAddressArgs extends io.pulumi.resources.Res
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(Input<String> ip) {
+        public Builder ip(Input<String> ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Input.of(Objects.requireNonNull(ip));
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }

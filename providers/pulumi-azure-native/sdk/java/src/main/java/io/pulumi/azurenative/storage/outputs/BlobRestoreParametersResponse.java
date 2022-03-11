@@ -22,10 +22,10 @@ public final class BlobRestoreParametersResponse {
      */
     private final String timeToRestore;
 
-    @OutputCustomType.Constructor({"blobRanges","timeToRestore"})
+    @OutputCustomType.Constructor
     private BlobRestoreParametersResponse(
-        List<BlobRestoreRangeResponse> blobRanges,
-        String timeToRestore) {
+        @OutputCustomType.Parameter("blobRanges") List<BlobRestoreRangeResponse> blobRanges,
+        @OutputCustomType.Parameter("timeToRestore") String timeToRestore) {
         this.blobRanges = blobRanges;
         this.timeToRestore = timeToRestore;
     }
@@ -67,12 +67,12 @@ public final class BlobRestoreParametersResponse {
     	      this.timeToRestore = defaults.timeToRestore;
         }
 
-        public Builder setBlobRanges(List<BlobRestoreRangeResponse> blobRanges) {
+        public Builder blobRanges(List<BlobRestoreRangeResponse> blobRanges) {
             this.blobRanges = Objects.requireNonNull(blobRanges);
             return this;
         }
 
-        public Builder setTimeToRestore(String timeToRestore) {
+        public Builder timeToRestore(String timeToRestore) {
             this.timeToRestore = Objects.requireNonNull(timeToRestore);
             return this;
         }

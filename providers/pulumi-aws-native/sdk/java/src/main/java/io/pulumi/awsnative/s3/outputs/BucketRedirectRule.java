@@ -38,13 +38,13 @@ public final class BucketRedirectRule {
      */
     private final @Nullable String replaceKeyWith;
 
-    @OutputCustomType.Constructor({"hostName","httpRedirectCode","protocol","replaceKeyPrefixWith","replaceKeyWith"})
+    @OutputCustomType.Constructor
     private BucketRedirectRule(
-        @Nullable String hostName,
-        @Nullable String httpRedirectCode,
-        @Nullable BucketRedirectRuleProtocol protocol,
-        @Nullable String replaceKeyPrefixWith,
-        @Nullable String replaceKeyWith) {
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("httpRedirectCode") @Nullable String httpRedirectCode,
+        @OutputCustomType.Parameter("protocol") @Nullable BucketRedirectRuleProtocol protocol,
+        @OutputCustomType.Parameter("replaceKeyPrefixWith") @Nullable String replaceKeyPrefixWith,
+        @OutputCustomType.Parameter("replaceKeyWith") @Nullable String replaceKeyWith) {
         this.hostName = hostName;
         this.httpRedirectCode = httpRedirectCode;
         this.protocol = protocol;
@@ -116,27 +116,27 @@ public final class BucketRedirectRule {
     	      this.replaceKeyWith = defaults.replaceKeyWith;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHttpRedirectCode(@Nullable String httpRedirectCode) {
+        public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
             this.httpRedirectCode = httpRedirectCode;
             return this;
         }
 
-        public Builder setProtocol(@Nullable BucketRedirectRuleProtocol protocol) {
+        public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setReplaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
+        public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
 
-        public Builder setReplaceKeyWith(@Nullable String replaceKeyWith) {
+        public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
             this.replaceKeyWith = replaceKeyWith;
             return this;
         }

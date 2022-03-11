@@ -17,10 +17,10 @@ public final class SubsettingResponse {
      */
     private final Integer subsetSize;
 
-    @OutputCustomType.Constructor({"policy","subsetSize"})
+    @OutputCustomType.Constructor
     private SubsettingResponse(
-        String policy,
-        Integer subsetSize) {
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("subsetSize") Integer subsetSize) {
         this.policy = policy;
         this.subsetSize = subsetSize;
     }
@@ -58,12 +58,12 @@ public final class SubsettingResponse {
     	      this.subsetSize = defaults.subsetSize;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setSubsetSize(Integer subsetSize) {
+        public Builder subsetSize(Integer subsetSize) {
             this.subsetSize = Objects.requireNonNull(subsetSize);
             return this;
         }

@@ -31,12 +31,12 @@ public final class ArgumentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"argumentKind","dataType","mode","name"})
+    @OutputCustomType.Constructor
     private ArgumentResponse(
-        String argumentKind,
-        StandardSqlDataTypeResponse dataType,
-        String mode,
-        String name) {
+        @OutputCustomType.Parameter("argumentKind") String argumentKind,
+        @OutputCustomType.Parameter("dataType") StandardSqlDataTypeResponse dataType,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("name") String name) {
         this.argumentKind = argumentKind;
         this.dataType = dataType;
         this.mode = mode;
@@ -98,22 +98,22 @@ public final class ArgumentResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setArgumentKind(String argumentKind) {
+        public Builder argumentKind(String argumentKind) {
             this.argumentKind = Objects.requireNonNull(argumentKind);
             return this;
         }
 
-        public Builder setDataType(StandardSqlDataTypeResponse dataType) {
+        public Builder dataType(StandardSqlDataTypeResponse dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -40,13 +40,13 @@ public final class MLAssistConfigurationResponse {
      */
     private final ComputeBindingResponse trainingComputeBinding;
 
-    @OutputCustomType.Constructor({"inferencingComputeBinding","mlAssistEnabled","modelNamePrefix","prelabelAccuracyThreshold","trainingComputeBinding"})
+    @OutputCustomType.Constructor
     private MLAssistConfigurationResponse(
-        ComputeBindingResponse inferencingComputeBinding,
-        @Nullable Boolean mlAssistEnabled,
-        String modelNamePrefix,
-        @Nullable Double prelabelAccuracyThreshold,
-        ComputeBindingResponse trainingComputeBinding) {
+        @OutputCustomType.Parameter("inferencingComputeBinding") ComputeBindingResponse inferencingComputeBinding,
+        @OutputCustomType.Parameter("mlAssistEnabled") @Nullable Boolean mlAssistEnabled,
+        @OutputCustomType.Parameter("modelNamePrefix") String modelNamePrefix,
+        @OutputCustomType.Parameter("prelabelAccuracyThreshold") @Nullable Double prelabelAccuracyThreshold,
+        @OutputCustomType.Parameter("trainingComputeBinding") ComputeBindingResponse trainingComputeBinding) {
         this.inferencingComputeBinding = inferencingComputeBinding;
         this.mlAssistEnabled = mlAssistEnabled;
         this.modelNamePrefix = modelNamePrefix;
@@ -118,27 +118,27 @@ public final class MLAssistConfigurationResponse {
     	      this.trainingComputeBinding = defaults.trainingComputeBinding;
         }
 
-        public Builder setInferencingComputeBinding(ComputeBindingResponse inferencingComputeBinding) {
+        public Builder inferencingComputeBinding(ComputeBindingResponse inferencingComputeBinding) {
             this.inferencingComputeBinding = Objects.requireNonNull(inferencingComputeBinding);
             return this;
         }
 
-        public Builder setMlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
+        public Builder mlAssistEnabled(@Nullable Boolean mlAssistEnabled) {
             this.mlAssistEnabled = mlAssistEnabled;
             return this;
         }
 
-        public Builder setModelNamePrefix(String modelNamePrefix) {
+        public Builder modelNamePrefix(String modelNamePrefix) {
             this.modelNamePrefix = Objects.requireNonNull(modelNamePrefix);
             return this;
         }
 
-        public Builder setPrelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
+        public Builder prelabelAccuracyThreshold(@Nullable Double prelabelAccuracyThreshold) {
             this.prelabelAccuracyThreshold = prelabelAccuracyThreshold;
             return this;
         }
 
-        public Builder setTrainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
+        public Builder trainingComputeBinding(ComputeBindingResponse trainingComputeBinding) {
             this.trainingComputeBinding = Objects.requireNonNull(trainingComputeBinding);
             return this;
         }

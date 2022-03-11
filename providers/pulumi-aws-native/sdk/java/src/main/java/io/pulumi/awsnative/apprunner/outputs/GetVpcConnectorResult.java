@@ -23,10 +23,10 @@ public final class GetVpcConnectorResult {
      */
     private final @Nullable Integer vpcConnectorRevision;
 
-    @OutputCustomType.Constructor({"vpcConnectorArn","vpcConnectorRevision"})
+    @OutputCustomType.Constructor
     private GetVpcConnectorResult(
-        @Nullable String vpcConnectorArn,
-        @Nullable Integer vpcConnectorRevision) {
+        @OutputCustomType.Parameter("vpcConnectorArn") @Nullable String vpcConnectorArn,
+        @OutputCustomType.Parameter("vpcConnectorRevision") @Nullable Integer vpcConnectorRevision) {
         this.vpcConnectorArn = vpcConnectorArn;
         this.vpcConnectorRevision = vpcConnectorRevision;
     }
@@ -68,12 +68,12 @@ public final class GetVpcConnectorResult {
     	      this.vpcConnectorRevision = defaults.vpcConnectorRevision;
         }
 
-        public Builder setVpcConnectorArn(@Nullable String vpcConnectorArn) {
+        public Builder vpcConnectorArn(@Nullable String vpcConnectorArn) {
             this.vpcConnectorArn = vpcConnectorArn;
             return this;
         }
 
-        public Builder setVpcConnectorRevision(@Nullable Integer vpcConnectorRevision) {
+        public Builder vpcConnectorRevision(@Nullable Integer vpcConnectorRevision) {
             this.vpcConnectorRevision = vpcConnectorRevision;
             return this;
         }

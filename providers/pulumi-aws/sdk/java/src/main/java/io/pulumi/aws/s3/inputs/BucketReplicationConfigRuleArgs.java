@@ -188,92 +188,92 @@ public final class BucketReplicationConfigRuleArgs extends io.pulumi.resources.R
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplication(@Nullable Input<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication) {
+        public Builder deleteMarkerReplication(@Nullable Input<BucketReplicationConfigRuleDeleteMarkerReplicationArgs> deleteMarkerReplication) {
             this.deleteMarkerReplication = deleteMarkerReplication;
             return this;
         }
 
-        public Builder setDeleteMarkerReplication(@Nullable BucketReplicationConfigRuleDeleteMarkerReplicationArgs deleteMarkerReplication) {
+        public Builder deleteMarkerReplication(@Nullable BucketReplicationConfigRuleDeleteMarkerReplicationArgs deleteMarkerReplication) {
             this.deleteMarkerReplication = Input.ofNullable(deleteMarkerReplication);
             return this;
         }
 
-        public Builder setDestination(Input<BucketReplicationConfigRuleDestinationArgs> destination) {
+        public Builder destination(Input<BucketReplicationConfigRuleDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(BucketReplicationConfigRuleDestinationArgs destination) {
+        public Builder destination(BucketReplicationConfigRuleDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setExistingObjectReplication(@Nullable Input<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication) {
+        public Builder existingObjectReplication(@Nullable Input<BucketReplicationConfigRuleExistingObjectReplicationArgs> existingObjectReplication) {
             this.existingObjectReplication = existingObjectReplication;
             return this;
         }
 
-        public Builder setExistingObjectReplication(@Nullable BucketReplicationConfigRuleExistingObjectReplicationArgs existingObjectReplication) {
+        public Builder existingObjectReplication(@Nullable BucketReplicationConfigRuleExistingObjectReplicationArgs existingObjectReplication) {
             this.existingObjectReplication = Input.ofNullable(existingObjectReplication);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketReplicationConfigRuleFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BucketReplicationConfigRuleFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationConfigRuleFilterArgs filter) {
+        public Builder filter(@Nullable BucketReplicationConfigRuleFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable Input<BucketReplicationConfigRuleSourceSelectionCriteriaArgs> sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaArgs sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketReplicationConfigRuleSourceSelectionCriteriaArgs sourceSelectionCriteria) {
             this.sourceSelectionCriteria = Input.ofNullable(sourceSelectionCriteria);
             return this;
         }
 
-        public Builder setStatus(Input<String> status) {
+        public Builder status(Input<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

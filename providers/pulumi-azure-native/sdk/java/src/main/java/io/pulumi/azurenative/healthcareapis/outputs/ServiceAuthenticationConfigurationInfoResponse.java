@@ -28,11 +28,11 @@ public final class ServiceAuthenticationConfigurationInfoResponse {
      */
     private final @Nullable Boolean smartProxyEnabled;
 
-    @OutputCustomType.Constructor({"audience","authority","smartProxyEnabled"})
+    @OutputCustomType.Constructor
     private ServiceAuthenticationConfigurationInfoResponse(
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable Boolean smartProxyEnabled) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("smartProxyEnabled") @Nullable Boolean smartProxyEnabled) {
         this.audience = audience;
         this.authority = authority;
         this.smartProxyEnabled = smartProxyEnabled;
@@ -84,17 +84,17 @@ public final class ServiceAuthenticationConfigurationInfoResponse {
     	      this.smartProxyEnabled = defaults.smartProxyEnabled;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setSmartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
+        public Builder smartProxyEnabled(@Nullable Boolean smartProxyEnabled) {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }

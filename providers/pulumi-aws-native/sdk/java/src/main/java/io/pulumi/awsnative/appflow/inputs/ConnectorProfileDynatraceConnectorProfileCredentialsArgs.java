@@ -52,12 +52,12 @@ public final class ConnectorProfileDynatraceConnectorProfileCredentialsArgs exte
     	      this.apiToken = defaults.apiToken;
         }
 
-        public Builder setApiToken(Input<String> apiToken) {
+        public Builder apiToken(Input<String> apiToken) {
             this.apiToken = Objects.requireNonNull(apiToken);
             return this;
         }
 
-        public Builder setApiToken(String apiToken) {
+        public Builder apiToken(String apiToken) {
             this.apiToken = Input.of(Objects.requireNonNull(apiToken));
             return this;
         }

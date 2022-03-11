@@ -39,13 +39,13 @@ public final class GetEntityTypeResult {
      */
     private final @Nullable List<EntityTypeTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","lastUpdatedTime","tags"})
+    @OutputCustomType.Constructor
     private GetEntityTypeResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<EntityTypeTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<EntityTypeTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -117,27 +117,27 @@ public final class GetEntityTypeResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EntityTypeTag> tags) {
+        public Builder tags(@Nullable List<EntityTypeTag> tags) {
             this.tags = tags;
             return this;
         }

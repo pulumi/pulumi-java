@@ -58,7 +58,7 @@ public final class DedicatedHostAvailableCapacityResponse extends io.pulumi.reso
     	      this.allocatableVMs = defaults.allocatableVMs;
         }
 
-        public Builder setAllocatableVMs(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
+        public Builder allocatableVMs(@Nullable List<DedicatedHostAllocatableVMResponse> allocatableVMs) {
             this.allocatableVMs = allocatableVMs;
             return this;
         }

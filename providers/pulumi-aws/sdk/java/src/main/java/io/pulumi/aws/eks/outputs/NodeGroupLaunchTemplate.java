@@ -27,11 +27,11 @@ public final class NodeGroupLaunchTemplate {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"id","name","version"})
+    @OutputCustomType.Constructor
     private NodeGroupLaunchTemplate(
-        @Nullable String id,
-        @Nullable String name,
-        String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.name = name;
         this.version = version;
@@ -83,17 +83,17 @@ public final class NodeGroupLaunchTemplate {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

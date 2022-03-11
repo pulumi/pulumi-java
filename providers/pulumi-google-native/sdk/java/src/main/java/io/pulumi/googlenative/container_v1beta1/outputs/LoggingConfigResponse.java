@@ -15,8 +15,8 @@ public final class LoggingConfigResponse {
      */
     private final LoggingComponentConfigResponse componentConfig;
 
-    @OutputCustomType.Constructor({"componentConfig"})
-    private LoggingConfigResponse(LoggingComponentConfigResponse componentConfig) {
+    @OutputCustomType.Constructor
+    private LoggingConfigResponse(@OutputCustomType.Parameter("componentConfig") LoggingComponentConfigResponse componentConfig) {
         this.componentConfig = componentConfig;
     }
 
@@ -48,7 +48,7 @@ public final class LoggingConfigResponse {
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder setComponentConfig(LoggingComponentConfigResponse componentConfig) {
+        public Builder componentConfig(LoggingComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }

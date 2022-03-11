@@ -76,22 +76,22 @@ public final class IncludedPathArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setIndexes(@Nullable Input<List<IndexesArgs>> indexes) {
+        public Builder indexes(@Nullable Input<List<IndexesArgs>> indexes) {
             this.indexes = indexes;
             return this;
         }
 
-        public Builder setIndexes(@Nullable List<IndexesArgs> indexes) {
+        public Builder indexes(@Nullable List<IndexesArgs> indexes) {
             this.indexes = Input.ofNullable(indexes);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

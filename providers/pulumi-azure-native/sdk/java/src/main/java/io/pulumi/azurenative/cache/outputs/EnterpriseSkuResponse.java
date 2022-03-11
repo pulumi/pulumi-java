@@ -23,10 +23,10 @@ public final class EnterpriseSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private EnterpriseSkuResponse(
-        @Nullable Integer capacity,
-        String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }
@@ -68,12 +68,12 @@ public final class EnterpriseSkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -100,42 +100,42 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setContainerRunOptions(@Nullable Input<String> containerRunOptions) {
+        public Builder containerRunOptions(@Nullable Input<String> containerRunOptions) {
             this.containerRunOptions = containerRunOptions;
             return this;
         }
 
-        public Builder setContainerRunOptions(@Nullable String containerRunOptions) {
+        public Builder containerRunOptions(@Nullable String containerRunOptions) {
             this.containerRunOptions = Input.ofNullable(containerRunOptions);
             return this;
         }
 
-        public Builder setImageName(Input<String> imageName) {
+        public Builder imageName(Input<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Input.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder setRegistry(@Nullable Input<ContainerRegistryArgs> registry) {
+        public Builder registry(@Nullable Input<ContainerRegistryArgs> registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRegistry(@Nullable ContainerRegistryArgs registry) {
+        public Builder registry(@Nullable ContainerRegistryArgs registry) {
             this.registry = Input.ofNullable(registry);
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<ContainerWorkingDirectory> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<ContainerWorkingDirectory> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
+        public Builder workingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

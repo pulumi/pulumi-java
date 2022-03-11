@@ -125,72 +125,72 @@ public final class IntegrationScheduledTriggerPropertiesArgs extends io.pulumi.r
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDataPullMode(@Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode) {
+        public Builder dataPullMode(@Nullable Input<IntegrationScheduledTriggerPropertiesDataPullMode> dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setDataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = Input.ofNullable(dataPullMode);
             return this;
         }
 
-        public Builder setFirstExecutionFrom(@Nullable Input<Double> firstExecutionFrom) {
+        public Builder firstExecutionFrom(@Nullable Input<Double> firstExecutionFrom) {
             this.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
 
-        public Builder setFirstExecutionFrom(@Nullable Double firstExecutionFrom) {
+        public Builder firstExecutionFrom(@Nullable Double firstExecutionFrom) {
             this.firstExecutionFrom = Input.ofNullable(firstExecutionFrom);
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Input<Double> scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = Input.ofNullable(scheduleEndTime);
             return this;
         }
 
-        public Builder setScheduleExpression(Input<String> scheduleExpression) {
+        public Builder scheduleExpression(Input<String> scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Input<Integer> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Input<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Integer scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = Input.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Input<Double> scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = Input.ofNullable(scheduleStartTime);
             return this;
         }
 
-        public Builder setTimezone(@Nullable Input<String> timezone) {
+        public Builder timezone(@Nullable Input<String> timezone) {
             this.timezone = timezone;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = Input.ofNullable(timezone);
             return this;
         }

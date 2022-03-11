@@ -18,8 +18,8 @@ public final class AiMetadataStoreEncryptionSpec {
      */
     private final @Nullable String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private AiMetadataStoreEncryptionSpec(@Nullable String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private AiMetadataStoreEncryptionSpec(@OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
@@ -52,7 +52,7 @@ public final class AiMetadataStoreEncryptionSpec {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }

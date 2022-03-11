@@ -26,11 +26,11 @@ public final class GeoReplicationStatsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"canFailover","lastSyncTime","status"})
+    @OutputCustomType.Constructor
     private GeoReplicationStatsResponse(
-        Boolean canFailover,
-        String lastSyncTime,
-        String status) {
+        @OutputCustomType.Parameter("canFailover") Boolean canFailover,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.canFailover = canFailover;
         this.lastSyncTime = lastSyncTime;
         this.status = status;
@@ -82,17 +82,17 @@ public final class GeoReplicationStatsResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCanFailover(Boolean canFailover) {
+        public Builder canFailover(Boolean canFailover) {
             this.canFailover = Objects.requireNonNull(canFailover);
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

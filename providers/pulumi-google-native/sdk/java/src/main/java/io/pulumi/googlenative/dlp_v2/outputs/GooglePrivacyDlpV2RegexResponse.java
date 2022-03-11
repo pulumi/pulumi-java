@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2RegexResponse {
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor({"groupIndexes","pattern"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RegexResponse(
-        List<Integer> groupIndexes,
-        String pattern) {
+        @OutputCustomType.Parameter("groupIndexes") List<Integer> groupIndexes,
+        @OutputCustomType.Parameter("pattern") String pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2RegexResponse {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setGroupIndexes(List<Integer> groupIndexes) {
+        public Builder groupIndexes(List<Integer> groupIndexes) {
             this.groupIndexes = Objects.requireNonNull(groupIndexes);
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }

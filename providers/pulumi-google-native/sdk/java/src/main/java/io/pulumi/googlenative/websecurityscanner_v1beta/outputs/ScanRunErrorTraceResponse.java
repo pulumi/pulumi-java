@@ -27,11 +27,11 @@ public final class ScanRunErrorTraceResponse {
      */
     private final ScanConfigErrorResponse scanConfigError;
 
-    @OutputCustomType.Constructor({"code","mostCommonHttpErrorCode","scanConfigError"})
+    @OutputCustomType.Constructor
     private ScanRunErrorTraceResponse(
-        String code,
-        Integer mostCommonHttpErrorCode,
-        ScanConfigErrorResponse scanConfigError) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("mostCommonHttpErrorCode") Integer mostCommonHttpErrorCode,
+        @OutputCustomType.Parameter("scanConfigError") ScanConfigErrorResponse scanConfigError) {
         this.code = code;
         this.mostCommonHttpErrorCode = mostCommonHttpErrorCode;
         this.scanConfigError = scanConfigError;
@@ -83,17 +83,17 @@ public final class ScanRunErrorTraceResponse {
     	      this.scanConfigError = defaults.scanConfigError;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setMostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
+        public Builder mostCommonHttpErrorCode(Integer mostCommonHttpErrorCode) {
             this.mostCommonHttpErrorCode = Objects.requireNonNull(mostCommonHttpErrorCode);
             return this;
         }
 
-        public Builder setScanConfigError(ScanConfigErrorResponse scanConfigError) {
+        public Builder scanConfigError(ScanConfigErrorResponse scanConfigError) {
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
         }

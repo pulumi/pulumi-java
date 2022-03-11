@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleMatchExpr {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"expression"})
-    private SecurityPolicyRuleMatchExpr(String expression) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRuleMatchExpr(@OutputCustomType.Parameter("expression") String expression) {
         this.expression = expression;
     }
 
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleMatchExpr {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

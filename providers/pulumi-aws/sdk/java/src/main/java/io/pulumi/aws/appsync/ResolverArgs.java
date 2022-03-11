@@ -218,112 +218,112 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setCachingConfig(@Nullable Input<ResolverCachingConfigArgs> cachingConfig) {
+        public Builder cachingConfig(@Nullable Input<ResolverCachingConfigArgs> cachingConfig) {
             this.cachingConfig = cachingConfig;
             return this;
         }
 
-        public Builder setCachingConfig(@Nullable ResolverCachingConfigArgs cachingConfig) {
+        public Builder cachingConfig(@Nullable ResolverCachingConfigArgs cachingConfig) {
             this.cachingConfig = Input.ofNullable(cachingConfig);
             return this;
         }
 
-        public Builder setDataSource(@Nullable Input<String> dataSource) {
+        public Builder dataSource(@Nullable Input<String> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable String dataSource) {
+        public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setField(Input<String> field) {
+        public Builder field(Input<String> field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Input.of(Objects.requireNonNull(field));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Input<Integer> maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Input<Integer> maxBatchSize) {
             this.maxBatchSize = maxBatchSize;
             return this;
         }
 
-        public Builder setMaxBatchSize(@Nullable Integer maxBatchSize) {
+        public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
             this.maxBatchSize = Input.ofNullable(maxBatchSize);
             return this;
         }
 
-        public Builder setPipelineConfig(@Nullable Input<ResolverPipelineConfigArgs> pipelineConfig) {
+        public Builder pipelineConfig(@Nullable Input<ResolverPipelineConfigArgs> pipelineConfig) {
             this.pipelineConfig = pipelineConfig;
             return this;
         }
 
-        public Builder setPipelineConfig(@Nullable ResolverPipelineConfigArgs pipelineConfig) {
+        public Builder pipelineConfig(@Nullable ResolverPipelineConfigArgs pipelineConfig) {
             this.pipelineConfig = Input.ofNullable(pipelineConfig);
             return this;
         }
 
-        public Builder setRequestTemplate(@Nullable Input<String> requestTemplate) {
+        public Builder requestTemplate(@Nullable Input<String> requestTemplate) {
             this.requestTemplate = requestTemplate;
             return this;
         }
 
-        public Builder setRequestTemplate(@Nullable String requestTemplate) {
+        public Builder requestTemplate(@Nullable String requestTemplate) {
             this.requestTemplate = Input.ofNullable(requestTemplate);
             return this;
         }
 
-        public Builder setResponseTemplate(@Nullable Input<String> responseTemplate) {
+        public Builder responseTemplate(@Nullable Input<String> responseTemplate) {
             this.responseTemplate = responseTemplate;
             return this;
         }
 
-        public Builder setResponseTemplate(@Nullable String responseTemplate) {
+        public Builder responseTemplate(@Nullable String responseTemplate) {
             this.responseTemplate = Input.ofNullable(responseTemplate);
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable Input<ResolverSyncConfigArgs> syncConfig) {
+        public Builder syncConfig(@Nullable Input<ResolverSyncConfigArgs> syncConfig) {
             this.syncConfig = syncConfig;
             return this;
         }
 
-        public Builder setSyncConfig(@Nullable ResolverSyncConfigArgs syncConfig) {
+        public Builder syncConfig(@Nullable ResolverSyncConfigArgs syncConfig) {
             this.syncConfig = Input.ofNullable(syncConfig);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -205,102 +205,102 @@ public final class OriginEndpointHlsManifestArgs extends io.pulumi.resources.Res
     	      this.url = defaults.url;
         }
 
-        public Builder setAdMarkers(@Nullable Input<OriginEndpointHlsManifestAdMarkers> adMarkers) {
+        public Builder adMarkers(@Nullable Input<OriginEndpointHlsManifestAdMarkers> adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setAdMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
             this.adMarkers = Input.ofNullable(adMarkers);
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable Input<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers) {
+        public Builder adTriggers(@Nullable Input<List<OriginEndpointHlsManifestAdTriggersItem>> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
             this.adTriggers = Input.ofNullable(adTriggers);
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable Input<OriginEndpointAdsOnDeliveryRestrictions> adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = Input.ofNullable(adsOnDeliveryRestrictions);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Input<Boolean> includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = Input.ofNullable(includeIframeOnlyStream);
             return this;
         }
 
-        public Builder setManifestName(@Nullable Input<String> manifestName) {
+        public Builder manifestName(@Nullable Input<String> manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = Input.ofNullable(manifestName);
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable Input<OriginEndpointHlsManifestPlaylistType> playlistType) {
+        public Builder playlistType(@Nullable Input<OriginEndpointHlsManifestPlaylistType> playlistType) {
             this.playlistType = playlistType;
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
+        public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
             this.playlistType = Input.ofNullable(playlistType);
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Input<Integer> playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Input<Integer> playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = Input.ofNullable(playlistWindowSeconds);
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Input<Integer> programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = Input.ofNullable(programDateTimeIntervalSeconds);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

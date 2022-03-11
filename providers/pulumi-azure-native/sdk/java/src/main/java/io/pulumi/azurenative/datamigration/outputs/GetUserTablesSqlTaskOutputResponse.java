@@ -29,11 +29,11 @@ public final class GetUserTablesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databasesToTables","id","validationErrors"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlTaskOutputResponse(
-        Map<String,List<DatabaseTableResponse>> databasesToTables,
-        String id,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databasesToTables") Map<String,List<DatabaseTableResponse>> databasesToTables,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databasesToTables = databasesToTables;
         this.id = id;
         this.validationErrors = validationErrors;
@@ -85,17 +85,17 @@ public final class GetUserTablesSqlTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setDatabasesToTables(Map<String,List<DatabaseTableResponse>> databasesToTables) {
+        public Builder databasesToTables(Map<String,List<DatabaseTableResponse>> databasesToTables) {
             this.databasesToTables = Objects.requireNonNull(databasesToTables);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

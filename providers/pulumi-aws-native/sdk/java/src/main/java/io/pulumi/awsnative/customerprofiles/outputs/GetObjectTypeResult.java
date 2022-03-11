@@ -68,18 +68,18 @@ public final class GetObjectTypeResult {
      */
     private final @Nullable String templateId;
 
-    @OutputCustomType.Constructor({"allowProfileCreation","createdAt","description","encryptionKey","expirationDays","fields","keys","lastUpdatedAt","tags","templateId"})
+    @OutputCustomType.Constructor
     private GetObjectTypeResult(
-        @Nullable Boolean allowProfileCreation,
-        @Nullable String createdAt,
-        @Nullable String description,
-        @Nullable String encryptionKey,
-        @Nullable Integer expirationDays,
-        @Nullable List<ObjectTypeFieldMap> fields,
-        @Nullable List<ObjectTypeKeyMap> keys,
-        @Nullable String lastUpdatedAt,
-        @Nullable List<ObjectTypeTag> tags,
-        @Nullable String templateId) {
+        @OutputCustomType.Parameter("allowProfileCreation") @Nullable Boolean allowProfileCreation,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @OutputCustomType.Parameter("expirationDays") @Nullable Integer expirationDays,
+        @OutputCustomType.Parameter("fields") @Nullable List<ObjectTypeFieldMap> fields,
+        @OutputCustomType.Parameter("keys") @Nullable List<ObjectTypeKeyMap> keys,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("tags") @Nullable List<ObjectTypeTag> tags,
+        @OutputCustomType.Parameter("templateId") @Nullable String templateId) {
         this.allowProfileCreation = allowProfileCreation;
         this.createdAt = createdAt;
         this.description = description;
@@ -201,52 +201,52 @@ public final class GetObjectTypeResult {
     	      this.templateId = defaults.templateId;
         }
 
-        public Builder setAllowProfileCreation(@Nullable Boolean allowProfileCreation) {
+        public Builder allowProfileCreation(@Nullable Boolean allowProfileCreation) {
             this.allowProfileCreation = allowProfileCreation;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setExpirationDays(@Nullable Integer expirationDays) {
+        public Builder expirationDays(@Nullable Integer expirationDays) {
             this.expirationDays = expirationDays;
             return this;
         }
 
-        public Builder setFields(@Nullable List<ObjectTypeFieldMap> fields) {
+        public Builder fields(@Nullable List<ObjectTypeFieldMap> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<ObjectTypeKeyMap> keys) {
+        public Builder keys(@Nullable List<ObjectTypeKeyMap> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setLastUpdatedAt(@Nullable String lastUpdatedAt) {
+        public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ObjectTypeTag> tags) {
+        public Builder tags(@Nullable List<ObjectTypeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = templateId;
             return this;
         }

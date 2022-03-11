@@ -57,12 +57,12 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
     	      this.cmk = defaults.cmk;
         }
 
-        public Builder setCmk(@Nullable Input<CustomerManagedKeyDetailsArgs> cmk) {
+        public Builder cmk(@Nullable Input<CustomerManagedKeyDetailsArgs> cmk) {
             this.cmk = cmk;
             return this;
         }
 
-        public Builder setCmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
+        public Builder cmk(@Nullable CustomerManagedKeyDetailsArgs cmk) {
             this.cmk = Input.ofNullable(cmk);
             return this;
         }

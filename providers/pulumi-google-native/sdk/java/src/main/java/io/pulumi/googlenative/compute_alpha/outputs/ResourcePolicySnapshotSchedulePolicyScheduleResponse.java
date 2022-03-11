@@ -15,11 +15,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
     private final ResourcePolicyHourlyCycleResponse hourlySchedule;
     private final ResourcePolicyWeeklyCycleResponse weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","hourlySchedule","weeklySchedule"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleResponse(
-        ResourcePolicyDailyCycleResponse dailySchedule,
-        ResourcePolicyHourlyCycleResponse hourlySchedule,
-        ResourcePolicyWeeklyCycleResponse weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") ResourcePolicyDailyCycleResponse dailySchedule,
+        @OutputCustomType.Parameter("hourlySchedule") ResourcePolicyHourlyCycleResponse hourlySchedule,
+        @OutputCustomType.Parameter("weeklySchedule") ResourcePolicyWeeklyCycleResponse weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;
@@ -59,17 +59,17 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(ResourcePolicyDailyCycleResponse dailySchedule) {
+        public Builder dailySchedule(ResourcePolicyDailyCycleResponse dailySchedule) {
             this.dailySchedule = Objects.requireNonNull(dailySchedule);
             return this;
         }
 
-        public Builder setHourlySchedule(ResourcePolicyHourlyCycleResponse hourlySchedule) {
+        public Builder hourlySchedule(ResourcePolicyHourlyCycleResponse hourlySchedule) {
             this.hourlySchedule = Objects.requireNonNull(hourlySchedule);
             return this;
         }
 
-        public Builder setWeeklySchedule(ResourcePolicyWeeklyCycleResponse weeklySchedule) {
+        public Builder weeklySchedule(ResourcePolicyWeeklyCycleResponse weeklySchedule) {
             this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
             return this;
         }

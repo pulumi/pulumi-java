@@ -44,15 +44,15 @@ public final class GetCodeSigningConfigResult {
      */
     private final List<GetCodeSigningConfigPolicy> policies;
 
-    @OutputCustomType.Constructor({"allowedPublishers","arn","configId","description","id","lastModified","policies"})
+    @OutputCustomType.Constructor
     private GetCodeSigningConfigResult(
-        List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
-        String arn,
-        String configId,
-        String description,
-        String id,
-        String lastModified,
-        List<GetCodeSigningConfigPolicy> policies) {
+        @OutputCustomType.Parameter("allowedPublishers") List<GetCodeSigningConfigAllowedPublisher> allowedPublishers,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("configId") String configId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("policies") List<GetCodeSigningConfigPolicy> policies) {
         this.allowedPublishers = allowedPublishers;
         this.arn = arn;
         this.configId = configId;
@@ -140,37 +140,37 @@ public final class GetCodeSigningConfigResult {
     	      this.policies = defaults.policies;
         }
 
-        public Builder setAllowedPublishers(List<GetCodeSigningConfigAllowedPublisher> allowedPublishers) {
+        public Builder allowedPublishers(List<GetCodeSigningConfigAllowedPublisher> allowedPublishers) {
             this.allowedPublishers = Objects.requireNonNull(allowedPublishers);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setPolicies(List<GetCodeSigningConfigPolicy> policies) {
+        public Builder policies(List<GetCodeSigningConfigPolicy> policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }

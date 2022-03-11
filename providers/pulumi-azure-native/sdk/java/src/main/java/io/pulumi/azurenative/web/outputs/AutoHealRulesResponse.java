@@ -23,10 +23,10 @@ public final class AutoHealRulesResponse {
      */
     private final @Nullable AutoHealTriggersResponse triggers;
 
-    @OutputCustomType.Constructor({"actions","triggers"})
+    @OutputCustomType.Constructor
     private AutoHealRulesResponse(
-        @Nullable AutoHealActionsResponse actions,
-        @Nullable AutoHealTriggersResponse triggers) {
+        @OutputCustomType.Parameter("actions") @Nullable AutoHealActionsResponse actions,
+        @OutputCustomType.Parameter("triggers") @Nullable AutoHealTriggersResponse triggers) {
         this.actions = actions;
         this.triggers = triggers;
     }
@@ -68,12 +68,12 @@ public final class AutoHealRulesResponse {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setActions(@Nullable AutoHealActionsResponse actions) {
+        public Builder actions(@Nullable AutoHealActionsResponse actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setTriggers(@Nullable AutoHealTriggersResponse triggers) {
+        public Builder triggers(@Nullable AutoHealTriggersResponse triggers) {
             this.triggers = triggers;
             return this;
         }

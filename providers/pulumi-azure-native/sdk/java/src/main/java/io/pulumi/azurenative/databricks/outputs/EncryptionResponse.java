@@ -32,12 +32,12 @@ public final class EncryptionResponse {
      */
     private final @Nullable String keyVersion;
 
-    @OutputCustomType.Constructor({"keyName","keySource","keyVaultUri","keyVersion"})
+    @OutputCustomType.Constructor
     private EncryptionResponse(
-        @Nullable String keyName,
-        @Nullable String keySource,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keySource") @Nullable String keySource,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion) {
         this.keyName = keyName;
         this.keySource = keySource;
         this.keyVaultUri = keyVaultUri;
@@ -99,22 +99,22 @@ public final class EncryptionResponse {
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeySource(@Nullable String keySource) {
+        public Builder keySource(@Nullable String keySource) {
             this.keySource = keySource;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }

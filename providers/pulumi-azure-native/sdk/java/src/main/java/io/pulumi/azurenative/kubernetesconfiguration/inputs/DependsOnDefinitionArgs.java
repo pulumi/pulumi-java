@@ -57,12 +57,12 @@ public final class DependsOnDefinitionArgs extends io.pulumi.resources.ResourceA
     	      this.kustomizationName = defaults.kustomizationName;
         }
 
-        public Builder setKustomizationName(@Nullable Input<String> kustomizationName) {
+        public Builder kustomizationName(@Nullable Input<String> kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
         }
 
-        public Builder setKustomizationName(@Nullable String kustomizationName) {
+        public Builder kustomizationName(@Nullable String kustomizationName) {
             this.kustomizationName = Input.ofNullable(kustomizationName);
             return this;
         }

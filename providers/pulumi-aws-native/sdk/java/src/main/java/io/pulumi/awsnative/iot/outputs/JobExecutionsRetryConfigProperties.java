@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class JobExecutionsRetryConfigProperties {
     private final @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
 
-    @OutputCustomType.Constructor({"retryCriteriaList"})
-    private JobExecutionsRetryConfigProperties(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
+    @OutputCustomType.Constructor
+    private JobExecutionsRetryConfigProperties(@OutputCustomType.Parameter("retryCriteriaList") @Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
         this.retryCriteriaList = retryCriteriaList;
     }
 
@@ -42,7 +42,7 @@ public final class JobExecutionsRetryConfigProperties {
     	      this.retryCriteriaList = defaults.retryCriteriaList;
         }
 
-        public Builder setRetryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
+        public Builder retryCriteriaList(@Nullable List<JobTemplateRetryCriteria> retryCriteriaList) {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }

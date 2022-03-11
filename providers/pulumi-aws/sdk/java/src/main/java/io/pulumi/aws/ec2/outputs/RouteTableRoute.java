@@ -77,21 +77,21 @@ public final class RouteTableRoute {
      */
     private final @Nullable String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"carrierGatewayId","cidrBlock","destinationPrefixListId","egressOnlyGatewayId","gatewayId","instanceId","ipv6CidrBlock","localGatewayId","natGatewayId","networkInterfaceId","transitGatewayId","vpcEndpointId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private RouteTableRoute(
-        @Nullable String carrierGatewayId,
-        @Nullable String cidrBlock,
-        @Nullable String destinationPrefixListId,
-        @Nullable String egressOnlyGatewayId,
-        @Nullable String gatewayId,
-        @Nullable String instanceId,
-        @Nullable String ipv6CidrBlock,
-        @Nullable String localGatewayId,
-        @Nullable String natGatewayId,
-        @Nullable String networkInterfaceId,
-        @Nullable String transitGatewayId,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("carrierGatewayId") @Nullable String carrierGatewayId,
+        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @OutputCustomType.Parameter("destinationPrefixListId") @Nullable String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyGatewayId") @Nullable String egressOnlyGatewayId,
+        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("localGatewayId") @Nullable String localGatewayId,
+        @OutputCustomType.Parameter("natGatewayId") @Nullable String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") @Nullable String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.cidrBlock = cidrBlock;
         this.destinationPrefixListId = destinationPrefixListId;
@@ -243,67 +243,67 @@ public final class RouteTableRoute {
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setCarrierGatewayId(@Nullable String carrierGatewayId) {
+        public Builder carrierGatewayId(@Nullable String carrierGatewayId) {
             this.carrierGatewayId = carrierGatewayId;
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setDestinationPrefixListId(@Nullable String destinationPrefixListId) {
+        public Builder destinationPrefixListId(@Nullable String destinationPrefixListId) {
             this.destinationPrefixListId = destinationPrefixListId;
             return this;
         }
 
-        public Builder setEgressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(@Nullable String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = egressOnlyGatewayId;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setLocalGatewayId(@Nullable String localGatewayId) {
+        public Builder localGatewayId(@Nullable String localGatewayId) {
             this.localGatewayId = localGatewayId;
             return this;
         }
 
-        public Builder setNatGatewayId(@Nullable String natGatewayId) {
+        public Builder natGatewayId(@Nullable String natGatewayId) {
             this.natGatewayId = natGatewayId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(@Nullable String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }

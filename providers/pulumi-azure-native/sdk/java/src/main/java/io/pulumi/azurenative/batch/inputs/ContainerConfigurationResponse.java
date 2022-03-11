@@ -84,17 +84,17 @@ public final class ContainerConfigurationResponse extends io.pulumi.resources.In
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerImageNames(@Nullable List<String> containerImageNames) {
+        public Builder containerImageNames(@Nullable List<String> containerImageNames) {
             this.containerImageNames = containerImageNames;
             return this;
         }
 
-        public Builder setContainerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
+        public Builder containerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

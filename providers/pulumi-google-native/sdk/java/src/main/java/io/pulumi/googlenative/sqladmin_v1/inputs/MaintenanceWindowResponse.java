@@ -105,22 +105,22 @@ public final class MaintenanceWindowResponse extends io.pulumi.resources.InvokeA
     	      this.updateTrack = defaults.updateTrack;
         }
 
-        public Builder setDay(Integer day) {
+        public Builder day(Integer day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setHour(Integer hour) {
+        public Builder hour(Integer hour) {
             this.hour = Objects.requireNonNull(hour);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setUpdateTrack(String updateTrack) {
+        public Builder updateTrack(String updateTrack) {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }

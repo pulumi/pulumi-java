@@ -26,11 +26,11 @@ public final class DiskResponse {
      */
     private final Integer sizeGb;
 
-    @OutputCustomType.Constructor({"diskType","mountPoint","sizeGb"})
+    @OutputCustomType.Constructor
     private DiskResponse(
-        String diskType,
-        String mountPoint,
-        Integer sizeGb) {
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("sizeGb") Integer sizeGb) {
         this.diskType = diskType;
         this.mountPoint = mountPoint;
         this.sizeGb = sizeGb;
@@ -82,17 +82,17 @@ public final class DiskResponse {
     	      this.sizeGb = defaults.sizeGb;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setSizeGb(Integer sizeGb) {
+        public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }

@@ -23,10 +23,10 @@ public final class BucketSourceSelectionCriteria {
      */
     private final @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects;
 
-    @OutputCustomType.Constructor({"replicaModifications","sseKmsEncryptedObjects"})
+    @OutputCustomType.Constructor
     private BucketSourceSelectionCriteria(
-        @Nullable BucketReplicaModifications replicaModifications,
-        @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+        @OutputCustomType.Parameter("replicaModifications") @Nullable BucketReplicaModifications replicaModifications,
+        @OutputCustomType.Parameter("sseKmsEncryptedObjects") @Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
         this.replicaModifications = replicaModifications;
         this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
     }
@@ -68,12 +68,12 @@ public final class BucketSourceSelectionCriteria {
     	      this.sseKmsEncryptedObjects = defaults.sseKmsEncryptedObjects;
         }
 
-        public Builder setReplicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
+        public Builder replicaModifications(@Nullable BucketReplicaModifications replicaModifications) {
             this.replicaModifications = replicaModifications;
             return this;
         }
 
-        public Builder setSseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
+        public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjects sseKmsEncryptedObjects) {
             this.sseKmsEncryptedObjects = sseKmsEncryptedObjects;
             return this;
         }

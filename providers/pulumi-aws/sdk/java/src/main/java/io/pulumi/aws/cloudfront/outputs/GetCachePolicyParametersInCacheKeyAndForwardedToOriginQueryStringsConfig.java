@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings;
 
-    @OutputCustomType.Constructor({"queryStringBehavior","queryStrings"})
+    @OutputCustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfig(
-        String queryStringBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
+        @OutputCustomType.Parameter("queryStringBehavior") String queryStringBehavior,
+        @OutputCustomType.Parameter("queryStrings") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
         this.queryStringBehavior = queryStringBehavior;
         this.queryStrings = queryStrings;
     }
@@ -67,12 +67,12 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginQuerySt
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setQueryStringBehavior(String queryStringBehavior) {
+        public Builder queryStringBehavior(String queryStringBehavior) {
             this.queryStringBehavior = Objects.requireNonNull(queryStringBehavior);
             return this;
         }
 
-        public Builder setQueryStrings(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
+        public Builder queryStrings(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryString> queryStrings) {
             this.queryStrings = Objects.requireNonNull(queryStrings);
             return this;
         }

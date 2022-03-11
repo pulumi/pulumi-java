@@ -36,13 +36,13 @@ public final class RetryConfigResponse {
      */
     private final Integer retryCount;
 
-    @OutputCustomType.Constructor({"maxBackoffDuration","maxDoublings","maxRetryDuration","minBackoffDuration","retryCount"})
+    @OutputCustomType.Constructor
     private RetryConfigResponse(
-        String maxBackoffDuration,
-        Integer maxDoublings,
-        String maxRetryDuration,
-        String minBackoffDuration,
-        Integer retryCount) {
+        @OutputCustomType.Parameter("maxBackoffDuration") String maxBackoffDuration,
+        @OutputCustomType.Parameter("maxDoublings") Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoffDuration") String minBackoffDuration,
+        @OutputCustomType.Parameter("retryCount") Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;
@@ -114,27 +114,27 @@ public final class RetryConfigResponse {
     	      this.retryCount = defaults.retryCount;
         }
 
-        public Builder setMaxBackoffDuration(String maxBackoffDuration) {
+        public Builder maxBackoffDuration(String maxBackoffDuration) {
             this.maxBackoffDuration = Objects.requireNonNull(maxBackoffDuration);
             return this;
         }
 
-        public Builder setMaxDoublings(Integer maxDoublings) {
+        public Builder maxDoublings(Integer maxDoublings) {
             this.maxDoublings = Objects.requireNonNull(maxDoublings);
             return this;
         }
 
-        public Builder setMaxRetryDuration(String maxRetryDuration) {
+        public Builder maxRetryDuration(String maxRetryDuration) {
             this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
             return this;
         }
 
-        public Builder setMinBackoffDuration(String minBackoffDuration) {
+        public Builder minBackoffDuration(String minBackoffDuration) {
             this.minBackoffDuration = Objects.requireNonNull(minBackoffDuration);
             return this;
         }
 
-        public Builder setRetryCount(Integer retryCount) {
+        public Builder retryCount(Integer retryCount) {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }

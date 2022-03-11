@@ -17,8 +17,8 @@ public final class AnalyticsApplicationInputsStartingPositionConfiguration {
      */
     private final @Nullable String startingPosition;
 
-    @OutputCustomType.Constructor({"startingPosition"})
-    private AnalyticsApplicationInputsStartingPositionConfiguration(@Nullable String startingPosition) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationInputsStartingPositionConfiguration(@OutputCustomType.Parameter("startingPosition") @Nullable String startingPosition) {
         this.startingPosition = startingPosition;
     }
 
@@ -50,7 +50,7 @@ public final class AnalyticsApplicationInputsStartingPositionConfiguration {
     	      this.startingPosition = defaults.startingPosition;
         }
 
-        public Builder setStartingPosition(@Nullable String startingPosition) {
+        public Builder startingPosition(@Nullable String startingPosition) {
             this.startingPosition = startingPosition;
             return this;
         }

@@ -23,10 +23,10 @@ public final class AmiCopyEphemeralBlockDevice {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","virtualName"})
+    @OutputCustomType.Constructor
     private AmiCopyEphemeralBlockDevice(
-        @Nullable String deviceName,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }
@@ -69,12 +69,12 @@ public final class AmiCopyEphemeralBlockDevice {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

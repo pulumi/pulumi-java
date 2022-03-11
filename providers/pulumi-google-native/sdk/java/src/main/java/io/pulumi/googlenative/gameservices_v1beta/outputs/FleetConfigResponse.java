@@ -20,10 +20,10 @@ public final class FleetConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"fleetSpec","name"})
+    @OutputCustomType.Constructor
     private FleetConfigResponse(
-        String fleetSpec,
-        String name) {
+        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
+        @OutputCustomType.Parameter("name") String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class FleetConfigResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setFleetSpec(String fleetSpec) {
+        public Builder fleetSpec(String fleetSpec) {
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

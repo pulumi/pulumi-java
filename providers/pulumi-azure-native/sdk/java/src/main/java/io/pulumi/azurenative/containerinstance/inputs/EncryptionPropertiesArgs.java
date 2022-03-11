@@ -89,32 +89,32 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setKeyName(Input<String> keyName) {
+        public Builder keyName(Input<String> keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Input.of(Objects.requireNonNull(keyName));
             return this;
         }
 
-        public Builder setKeyVersion(Input<String> keyVersion) {
+        public Builder keyVersion(Input<String> keyVersion) {
             this.keyVersion = Objects.requireNonNull(keyVersion);
             return this;
         }
 
-        public Builder setKeyVersion(String keyVersion) {
+        public Builder keyVersion(String keyVersion) {
             this.keyVersion = Input.of(Objects.requireNonNull(keyVersion));
             return this;
         }
 
-        public Builder setVaultBaseUrl(Input<String> vaultBaseUrl) {
+        public Builder vaultBaseUrl(Input<String> vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Input.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
         }

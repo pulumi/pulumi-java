@@ -76,20 +76,20 @@ public final class GetRouterResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bgp","bgpPeers","creationTimestamp","description","encryptedInterconnectRouter","interfaces","kind","name","nats","network","region","selfLink"})
+    @OutputCustomType.Constructor
     private GetRouterResult(
-        RouterBgpResponse bgp,
-        List<RouterBgpPeerResponse> bgpPeers,
-        String creationTimestamp,
-        String description,
-        Boolean encryptedInterconnectRouter,
-        List<RouterInterfaceResponse> interfaces,
-        String kind,
-        String name,
-        List<RouterNatResponse> nats,
-        String network,
-        String region,
-        String selfLink) {
+        @OutputCustomType.Parameter("bgp") RouterBgpResponse bgp,
+        @OutputCustomType.Parameter("bgpPeers") List<RouterBgpPeerResponse> bgpPeers,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encryptedInterconnectRouter") Boolean encryptedInterconnectRouter,
+        @OutputCustomType.Parameter("interfaces") List<RouterInterfaceResponse> interfaces,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nats") List<RouterNatResponse> nats,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bgp = bgp;
         this.bgpPeers = bgpPeers;
         this.creationTimestamp = creationTimestamp;
@@ -231,62 +231,62 @@ public final class GetRouterResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBgp(RouterBgpResponse bgp) {
+        public Builder bgp(RouterBgpResponse bgp) {
             this.bgp = Objects.requireNonNull(bgp);
             return this;
         }
 
-        public Builder setBgpPeers(List<RouterBgpPeerResponse> bgpPeers) {
+        public Builder bgpPeers(List<RouterBgpPeerResponse> bgpPeers) {
             this.bgpPeers = Objects.requireNonNull(bgpPeers);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEncryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
+        public Builder encryptedInterconnectRouter(Boolean encryptedInterconnectRouter) {
             this.encryptedInterconnectRouter = Objects.requireNonNull(encryptedInterconnectRouter);
             return this;
         }
 
-        public Builder setInterfaces(List<RouterInterfaceResponse> interfaces) {
+        public Builder interfaces(List<RouterInterfaceResponse> interfaces) {
             this.interfaces = Objects.requireNonNull(interfaces);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNats(List<RouterNatResponse> nats) {
+        public Builder nats(List<RouterNatResponse> nats) {
             this.nats = Objects.requireNonNull(nats);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

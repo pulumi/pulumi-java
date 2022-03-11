@@ -89,17 +89,17 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setSharePercentage(Double sharePercentage) {
+        public Builder sharePercentage(Double sharePercentage) {
             this.sharePercentage = Objects.requireNonNull(sharePercentage);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

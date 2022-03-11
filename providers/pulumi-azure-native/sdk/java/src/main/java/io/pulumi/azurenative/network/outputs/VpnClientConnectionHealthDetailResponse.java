@@ -71,20 +71,20 @@ public final class VpnClientConnectionHealthDetailResponse {
      */
     private final String vpnUserName;
 
-    @OutputCustomType.Constructor({"egressBytesTransferred","egressPacketsTransferred","ingressBytesTransferred","ingressPacketsTransferred","maxBandwidth","maxPacketsPerSecond","privateIpAddress","publicIpAddress","vpnConnectionDuration","vpnConnectionId","vpnConnectionTime","vpnUserName"})
+    @OutputCustomType.Constructor
     private VpnClientConnectionHealthDetailResponse(
-        Double egressBytesTransferred,
-        Double egressPacketsTransferred,
-        Double ingressBytesTransferred,
-        Double ingressPacketsTransferred,
-        Double maxBandwidth,
-        Double maxPacketsPerSecond,
-        String privateIpAddress,
-        String publicIpAddress,
-        Double vpnConnectionDuration,
-        String vpnConnectionId,
-        String vpnConnectionTime,
-        String vpnUserName) {
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("egressPacketsTransferred") Double egressPacketsTransferred,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("ingressPacketsTransferred") Double ingressPacketsTransferred,
+        @OutputCustomType.Parameter("maxBandwidth") Double maxBandwidth,
+        @OutputCustomType.Parameter("maxPacketsPerSecond") Double maxPacketsPerSecond,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("vpnConnectionDuration") Double vpnConnectionDuration,
+        @OutputCustomType.Parameter("vpnConnectionId") String vpnConnectionId,
+        @OutputCustomType.Parameter("vpnConnectionTime") String vpnConnectionTime,
+        @OutputCustomType.Parameter("vpnUserName") String vpnUserName) {
         this.egressBytesTransferred = egressBytesTransferred;
         this.egressPacketsTransferred = egressPacketsTransferred;
         this.ingressBytesTransferred = ingressBytesTransferred;
@@ -226,62 +226,62 @@ public final class VpnClientConnectionHealthDetailResponse {
     	      this.vpnUserName = defaults.vpnUserName;
         }
 
-        public Builder setEgressBytesTransferred(Double egressBytesTransferred) {
+        public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
 
-        public Builder setEgressPacketsTransferred(Double egressPacketsTransferred) {
+        public Builder egressPacketsTransferred(Double egressPacketsTransferred) {
             this.egressPacketsTransferred = Objects.requireNonNull(egressPacketsTransferred);
             return this;
         }
 
-        public Builder setIngressBytesTransferred(Double ingressBytesTransferred) {
+        public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
 
-        public Builder setIngressPacketsTransferred(Double ingressPacketsTransferred) {
+        public Builder ingressPacketsTransferred(Double ingressPacketsTransferred) {
             this.ingressPacketsTransferred = Objects.requireNonNull(ingressPacketsTransferred);
             return this;
         }
 
-        public Builder setMaxBandwidth(Double maxBandwidth) {
+        public Builder maxBandwidth(Double maxBandwidth) {
             this.maxBandwidth = Objects.requireNonNull(maxBandwidth);
             return this;
         }
 
-        public Builder setMaxPacketsPerSecond(Double maxPacketsPerSecond) {
+        public Builder maxPacketsPerSecond(Double maxPacketsPerSecond) {
             this.maxPacketsPerSecond = Objects.requireNonNull(maxPacketsPerSecond);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
 
-        public Builder setVpnConnectionDuration(Double vpnConnectionDuration) {
+        public Builder vpnConnectionDuration(Double vpnConnectionDuration) {
             this.vpnConnectionDuration = Objects.requireNonNull(vpnConnectionDuration);
             return this;
         }
 
-        public Builder setVpnConnectionId(String vpnConnectionId) {
+        public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
             return this;
         }
 
-        public Builder setVpnConnectionTime(String vpnConnectionTime) {
+        public Builder vpnConnectionTime(String vpnConnectionTime) {
             this.vpnConnectionTime = Objects.requireNonNull(vpnConnectionTime);
             return this;
         }
 
-        public Builder setVpnUserName(String vpnUserName) {
+        public Builder vpnUserName(String vpnUserName) {
             this.vpnUserName = Objects.requireNonNull(vpnUserName);
             return this;
         }

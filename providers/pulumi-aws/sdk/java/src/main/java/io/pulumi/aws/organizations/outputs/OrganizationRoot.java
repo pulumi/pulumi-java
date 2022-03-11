@@ -34,12 +34,12 @@ public final class OrganizationRoot {
      */
     private final @Nullable List<OrganizationRootPolicyType> policyTypes;
 
-    @OutputCustomType.Constructor({"arn","id","name","policyTypes"})
+    @OutputCustomType.Constructor
     private OrganizationRoot(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<OrganizationRootPolicyType> policyTypes) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyTypes") @Nullable List<OrganizationRootPolicyType> policyTypes) {
         this.arn = arn;
         this.id = id;
         this.name = name;
@@ -101,22 +101,22 @@ public final class OrganizationRoot {
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable List<OrganizationRootPolicyType> policyTypes) {
+        public Builder policyTypes(@Nullable List<OrganizationRootPolicyType> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }

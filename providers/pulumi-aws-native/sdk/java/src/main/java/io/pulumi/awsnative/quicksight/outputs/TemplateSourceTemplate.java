@@ -15,8 +15,8 @@ public final class TemplateSourceTemplate {
      */
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private TemplateSourceTemplate(String arn) {
+    @OutputCustomType.Constructor
+    private TemplateSourceTemplate(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 
@@ -48,7 +48,7 @@ public final class TemplateSourceTemplate {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }

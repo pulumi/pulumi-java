@@ -77,22 +77,22 @@ public final class StorageSettingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatastoreType(@Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType) {
+        public Builder datastoreType(@Nullable Input<Either<String,StorageSettingStoreTypes>> datastoreType) {
             this.datastoreType = datastoreType;
             return this;
         }
 
-        public Builder setDatastoreType(@Nullable Either<String,StorageSettingStoreTypes> datastoreType) {
+        public Builder datastoreType(@Nullable Either<String,StorageSettingStoreTypes> datastoreType) {
             this.datastoreType = Input.ofNullable(datastoreType);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,StorageSettingTypes>> type) {
+        public Builder type(@Nullable Input<Either<String,StorageSettingTypes>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,StorageSettingTypes> type) {
+        public Builder type(@Nullable Either<String,StorageSettingTypes> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

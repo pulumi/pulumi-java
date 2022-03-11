@@ -22,10 +22,10 @@ public final class FleetResourceCreationLimitPolicy {
      */
     private final @Nullable Integer policyPeriodInMinutes;
 
-    @OutputCustomType.Constructor({"newGameSessionsPerCreator","policyPeriodInMinutes"})
+    @OutputCustomType.Constructor
     private FleetResourceCreationLimitPolicy(
-        @Nullable Integer newGameSessionsPerCreator,
-        @Nullable Integer policyPeriodInMinutes) {
+        @OutputCustomType.Parameter("newGameSessionsPerCreator") @Nullable Integer newGameSessionsPerCreator,
+        @OutputCustomType.Parameter("policyPeriodInMinutes") @Nullable Integer policyPeriodInMinutes) {
         this.newGameSessionsPerCreator = newGameSessionsPerCreator;
         this.policyPeriodInMinutes = policyPeriodInMinutes;
     }
@@ -67,12 +67,12 @@ public final class FleetResourceCreationLimitPolicy {
     	      this.policyPeriodInMinutes = defaults.policyPeriodInMinutes;
         }
 
-        public Builder setNewGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
+        public Builder newGameSessionsPerCreator(@Nullable Integer newGameSessionsPerCreator) {
             this.newGameSessionsPerCreator = newGameSessionsPerCreator;
             return this;
         }
 
-        public Builder setPolicyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
+        public Builder policyPeriodInMinutes(@Nullable Integer policyPeriodInMinutes) {
             this.policyPeriodInMinutes = policyPeriodInMinutes;
             return this;
         }

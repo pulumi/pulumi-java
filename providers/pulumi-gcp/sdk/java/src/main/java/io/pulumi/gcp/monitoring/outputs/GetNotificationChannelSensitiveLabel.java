@@ -13,11 +13,11 @@ public final class GetNotificationChannelSensitiveLabel {
     private final String password;
     private final String serviceKey;
 
-    @OutputCustomType.Constructor({"authToken","password","serviceKey"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelSensitiveLabel(
-        String authToken,
-        String password,
-        String serviceKey) {
+        @OutputCustomType.Parameter("authToken") String authToken,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("serviceKey") String serviceKey) {
         this.authToken = authToken;
         this.password = password;
         this.serviceKey = serviceKey;
@@ -57,17 +57,17 @@ public final class GetNotificationChannelSensitiveLabel {
     	      this.serviceKey = defaults.serviceKey;
         }
 
-        public Builder setAuthToken(String authToken) {
+        public Builder authToken(String authToken) {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setServiceKey(String serviceKey) {
+        public Builder serviceKey(String serviceKey) {
             this.serviceKey = Objects.requireNonNull(serviceKey);
             return this;
         }

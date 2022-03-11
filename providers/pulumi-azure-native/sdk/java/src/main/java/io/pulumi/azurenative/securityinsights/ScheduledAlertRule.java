@@ -336,7 +336,7 @@ public class ScheduledAlertRule extends io.pulumi.resources.CustomResource {
     private static ScheduledAlertRuleArgs makeArgs(ScheduledAlertRuleArgs args) {
         var builder = args == null ? ScheduledAlertRuleArgs.builder() : ScheduledAlertRuleArgs.builder(args);
         return builder
-            .setKind("Scheduled")
+            .kind("Scheduled")
             .build();
     }
 

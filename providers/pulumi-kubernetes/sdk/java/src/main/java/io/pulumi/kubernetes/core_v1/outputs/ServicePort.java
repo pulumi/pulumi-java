@@ -49,14 +49,14 @@ public final class ServicePort {
      */
     private final @Nullable Either<Integer,String> targetPort;
 
-    @OutputCustomType.Constructor({"appProtocol","name","nodePort","port","protocol","targetPort"})
+    @OutputCustomType.Constructor
     private ServicePort(
-        @Nullable String appProtocol,
-        @Nullable String name,
-        @Nullable Integer nodePort,
-        Integer port,
-        @Nullable String protocol,
-        @Nullable Either<Integer,String> targetPort) {
+        @OutputCustomType.Parameter("appProtocol") @Nullable String appProtocol,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nodePort") @Nullable Integer nodePort,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("targetPort") @Nullable Either<Integer,String> targetPort) {
         this.appProtocol = appProtocol;
         this.name = name;
         this.nodePort = nodePort;
@@ -143,32 +143,32 @@ public final class ServicePort {
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder setAppProtocol(@Nullable String appProtocol) {
+        public Builder appProtocol(@Nullable String appProtocol) {
             this.appProtocol = appProtocol;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNodePort(@Nullable Integer nodePort) {
+        public Builder nodePort(@Nullable Integer nodePort) {
             this.nodePort = nodePort;
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Either<Integer,String> targetPort) {
+        public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
             this.targetPort = targetPort;
             return this;
         }

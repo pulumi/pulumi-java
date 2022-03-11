@@ -73,22 +73,22 @@ public final class DicomStoreIamPolicyArgs extends io.pulumi.resources.ResourceA
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setDicomStoreId(Input<String> dicomStoreId) {
+        public Builder dicomStoreId(Input<String> dicomStoreId) {
             this.dicomStoreId = Objects.requireNonNull(dicomStoreId);
             return this;
         }
 
-        public Builder setDicomStoreId(String dicomStoreId) {
+        public Builder dicomStoreId(String dicomStoreId) {
             this.dicomStoreId = Input.of(Objects.requireNonNull(dicomStoreId));
             return this;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }

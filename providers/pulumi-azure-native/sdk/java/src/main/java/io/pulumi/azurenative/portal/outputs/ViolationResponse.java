@@ -25,11 +25,11 @@ public final class ViolationResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"errorMessage","id","userId"})
+    @OutputCustomType.Constructor
     private ViolationResponse(
-        String errorMessage,
-        String id,
-        String userId) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.userId = userId;
@@ -81,17 +81,17 @@ public final class ViolationResponse {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

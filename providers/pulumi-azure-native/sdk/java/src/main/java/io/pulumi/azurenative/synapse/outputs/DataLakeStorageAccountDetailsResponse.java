@@ -22,10 +22,10 @@ public final class DataLakeStorageAccountDetailsResponse {
      */
     private final @Nullable String filesystem;
 
-    @OutputCustomType.Constructor({"accountUrl","filesystem"})
+    @OutputCustomType.Constructor
     private DataLakeStorageAccountDetailsResponse(
-        @Nullable String accountUrl,
-        @Nullable String filesystem) {
+        @OutputCustomType.Parameter("accountUrl") @Nullable String accountUrl,
+        @OutputCustomType.Parameter("filesystem") @Nullable String filesystem) {
         this.accountUrl = accountUrl;
         this.filesystem = filesystem;
     }
@@ -67,12 +67,12 @@ public final class DataLakeStorageAccountDetailsResponse {
     	      this.filesystem = defaults.filesystem;
         }
 
-        public Builder setAccountUrl(@Nullable String accountUrl) {
+        public Builder accountUrl(@Nullable String accountUrl) {
             this.accountUrl = accountUrl;
             return this;
         }
 
-        public Builder setFilesystem(@Nullable String filesystem) {
+        public Builder filesystem(@Nullable String filesystem) {
             this.filesystem = filesystem;
             return this;
         }

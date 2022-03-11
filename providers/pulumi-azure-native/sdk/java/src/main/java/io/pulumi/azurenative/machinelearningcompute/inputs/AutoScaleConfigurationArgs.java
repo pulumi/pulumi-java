@@ -126,52 +126,52 @@ public final class AutoScaleConfigurationArgs extends io.pulumi.resources.Resour
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setMaxReplicas(@Nullable Input<Integer> maxReplicas) {
+        public Builder maxReplicas(@Nullable Input<Integer> maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = Input.ofNullable(maxReplicas);
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Input<Integer> minReplicas) {
+        public Builder minReplicas(@Nullable Input<Integer> minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = Input.ofNullable(minReplicas);
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Input<Integer> refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Input<Integer> refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = Input.ofNullable(refreshPeriodInSeconds);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,Status>> status) {
+        public Builder status(@Nullable Input<Either<String,Status>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,Status> status) {
+        public Builder status(@Nullable Either<String,Status> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Input<Double> targetUtilization) {
+        public Builder targetUtilization(@Nullable Input<Double> targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Double targetUtilization) {
+        public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = Input.ofNullable(targetUtilization);
             return this;
         }

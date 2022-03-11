@@ -108,26 +108,26 @@ public final class DatasetResponseLatest {
      */
     private final String versionId;
 
-    @OutputCustomType.Constructor({"createdBy","createdTime","dataPath","dataflow","datasetDefinitionState","datasetId","description","etag","fileType","modifiedTime","notes","partitionFormatInPath","properties","savedDatasetId","tags","telemetryInfo","useDescriptionTagsFromDefinition","versionId"})
+    @OutputCustomType.Constructor
     private DatasetResponseLatest(
-        @Nullable UserInfoResponse createdBy,
-        String createdTime,
-        @Nullable DatasetResponseDataPath dataPath,
-        String dataflow,
-        @Nullable DatasetStateResponse datasetDefinitionState,
-        String datasetId,
-        String description,
-        String etag,
-        String fileType,
-        String modifiedTime,
-        String notes,
-        Boolean partitionFormatInPath,
-        @Nullable Map<String,Object> properties,
-        String savedDatasetId,
-        Map<String,String> tags,
-        Map<String,String> telemetryInfo,
-        Boolean useDescriptionTagsFromDefinition,
-        String versionId) {
+        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("dataPath") @Nullable DatasetResponseDataPath dataPath,
+        @OutputCustomType.Parameter("dataflow") String dataflow,
+        @OutputCustomType.Parameter("datasetDefinitionState") @Nullable DatasetStateResponse datasetDefinitionState,
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fileType") String fileType,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("notes") String notes,
+        @OutputCustomType.Parameter("partitionFormatInPath") Boolean partitionFormatInPath,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties,
+        @OutputCustomType.Parameter("savedDatasetId") String savedDatasetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("telemetryInfo") Map<String,String> telemetryInfo,
+        @OutputCustomType.Parameter("useDescriptionTagsFromDefinition") Boolean useDescriptionTagsFromDefinition,
+        @OutputCustomType.Parameter("versionId") String versionId) {
         this.createdBy = createdBy;
         this.createdTime = createdTime;
         this.dataPath = dataPath;
@@ -329,92 +329,92 @@ public final class DatasetResponseLatest {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDataPath(@Nullable DatasetResponseDataPath dataPath) {
+        public Builder dataPath(@Nullable DatasetResponseDataPath dataPath) {
             this.dataPath = dataPath;
             return this;
         }
 
-        public Builder setDataflow(String dataflow) {
+        public Builder dataflow(String dataflow) {
             this.dataflow = Objects.requireNonNull(dataflow);
             return this;
         }
 
-        public Builder setDatasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
+        public Builder datasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
             this.datasetDefinitionState = datasetDefinitionState;
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setNotes(String notes) {
+        public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
 
-        public Builder setPartitionFormatInPath(Boolean partitionFormatInPath) {
+        public Builder partitionFormatInPath(Boolean partitionFormatInPath) {
             this.partitionFormatInPath = Objects.requireNonNull(partitionFormatInPath);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,Object> properties) {
+        public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSavedDatasetId(String savedDatasetId) {
+        public Builder savedDatasetId(String savedDatasetId) {
             this.savedDatasetId = Objects.requireNonNull(savedDatasetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTelemetryInfo(Map<String,String> telemetryInfo) {
+        public Builder telemetryInfo(Map<String,String> telemetryInfo) {
             this.telemetryInfo = Objects.requireNonNull(telemetryInfo);
             return this;
         }
 
-        public Builder setUseDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
+        public Builder useDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
             this.useDescriptionTagsFromDefinition = Objects.requireNonNull(useDescriptionTagsFromDefinition);
             return this;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }

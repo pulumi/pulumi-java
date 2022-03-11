@@ -56,17 +56,17 @@ public final class PackageInfoOccurrenceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"comment","filename","homePage","licenseConcluded","packageType","sourceInfo","summaryDescription","title","version"})
+    @OutputCustomType.Constructor
     private PackageInfoOccurrenceResponse(
-        String comment,
-        String filename,
-        String homePage,
-        LicenseResponse licenseConcluded,
-        String packageType,
-        String sourceInfo,
-        String summaryDescription,
-        String title,
-        String version) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("filename") String filename,
+        @OutputCustomType.Parameter("homePage") String homePage,
+        @OutputCustomType.Parameter("licenseConcluded") LicenseResponse licenseConcluded,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("sourceInfo") String sourceInfo,
+        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("version") String version) {
         this.comment = comment;
         this.filename = filename;
         this.homePage = homePage;
@@ -178,47 +178,47 @@ public final class PackageInfoOccurrenceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setFilename(String filename) {
+        public Builder filename(String filename) {
             this.filename = Objects.requireNonNull(filename);
             return this;
         }
 
-        public Builder setHomePage(String homePage) {
+        public Builder homePage(String homePage) {
             this.homePage = Objects.requireNonNull(homePage);
             return this;
         }
 
-        public Builder setLicenseConcluded(LicenseResponse licenseConcluded) {
+        public Builder licenseConcluded(LicenseResponse licenseConcluded) {
             this.licenseConcluded = Objects.requireNonNull(licenseConcluded);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSourceInfo(String sourceInfo) {
+        public Builder sourceInfo(String sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
 
-        public Builder setSummaryDescription(String summaryDescription) {
+        public Builder summaryDescription(String summaryDescription) {
             this.summaryDescription = Objects.requireNonNull(summaryDescription);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

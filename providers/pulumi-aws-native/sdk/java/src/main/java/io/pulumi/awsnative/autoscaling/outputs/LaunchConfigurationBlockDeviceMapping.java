@@ -34,12 +34,12 @@ public final class LaunchConfigurationBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private LaunchConfigurationBlockDeviceMapping(
-        String deviceName,
-        @Nullable LaunchConfigurationBlockDevice ebs,
-        @Nullable Boolean noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("ebs") @Nullable LaunchConfigurationBlockDevice ebs,
+        @OutputCustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -101,22 +101,22 @@ public final class LaunchConfigurationBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setEbs(@Nullable LaunchConfigurationBlockDevice ebs) {
+        public Builder ebs(@Nullable LaunchConfigurationBlockDevice ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Boolean noDevice) {
+        public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

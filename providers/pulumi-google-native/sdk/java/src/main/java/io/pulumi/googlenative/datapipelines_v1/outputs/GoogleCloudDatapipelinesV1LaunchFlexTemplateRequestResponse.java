@@ -32,12 +32,12 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
      */
     private final Boolean validateOnly;
 
-    @OutputCustomType.Constructor({"launchParameter","location","project","validateOnly"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse(
-        GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
-        String location,
-        String project,
-        Boolean validateOnly) {
+        @OutputCustomType.Parameter("launchParameter") GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("validateOnly") Boolean validateOnly) {
         this.launchParameter = launchParameter;
         this.location = location;
         this.project = project;
@@ -99,22 +99,22 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestResponse {
     	      this.validateOnly = defaults.validateOnly;
         }
 
-        public Builder setLaunchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter) {
+        public Builder launchParameter(GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse launchParameter) {
             this.launchParameter = Objects.requireNonNull(launchParameter);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setValidateOnly(Boolean validateOnly) {
+        public Builder validateOnly(Boolean validateOnly) {
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }

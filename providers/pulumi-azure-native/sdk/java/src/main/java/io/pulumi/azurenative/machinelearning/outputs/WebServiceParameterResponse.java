@@ -23,10 +23,10 @@ public final class WebServiceParameterResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"certificateThumbprint","value"})
+    @OutputCustomType.Constructor
     private WebServiceParameterResponse(
-        @Nullable String certificateThumbprint,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.certificateThumbprint = certificateThumbprint;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class WebServiceParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setCertificateThumbprint(@Nullable String certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

@@ -45,15 +45,15 @@ public final class GetPolicyResult {
      */
     private final List<PolicyNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"alternativeNameServerConfig","description","enableInboundForwarding","enableLogging","kind","name","networks"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
-        String description,
-        Boolean enableInboundForwarding,
-        Boolean enableLogging,
-        String kind,
-        String name,
-        List<PolicyNetworkResponse> networks) {
+        @OutputCustomType.Parameter("alternativeNameServerConfig") PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableInboundForwarding") Boolean enableInboundForwarding,
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networks") List<PolicyNetworkResponse> networks) {
         this.alternativeNameServerConfig = alternativeNameServerConfig;
         this.description = description;
         this.enableInboundForwarding = enableInboundForwarding;
@@ -141,37 +141,37 @@ public final class GetPolicyResult {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setAlternativeNameServerConfig(PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig) {
+        public Builder alternativeNameServerConfig(PolicyAlternativeNameServerConfigResponse alternativeNameServerConfig) {
             this.alternativeNameServerConfig = Objects.requireNonNull(alternativeNameServerConfig);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableInboundForwarding(Boolean enableInboundForwarding) {
+        public Builder enableInboundForwarding(Boolean enableInboundForwarding) {
             this.enableInboundForwarding = Objects.requireNonNull(enableInboundForwarding);
             return this;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworks(List<PolicyNetworkResponse> networks) {
+        public Builder networks(List<PolicyNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

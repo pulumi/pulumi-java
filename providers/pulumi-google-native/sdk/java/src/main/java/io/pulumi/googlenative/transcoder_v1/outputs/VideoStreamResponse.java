@@ -27,11 +27,11 @@ public final class VideoStreamResponse {
      */
     private final Vp9CodecSettingsResponse vp9;
 
-    @OutputCustomType.Constructor({"h264","h265","vp9"})
+    @OutputCustomType.Constructor
     private VideoStreamResponse(
-        H264CodecSettingsResponse h264,
-        H265CodecSettingsResponse h265,
-        Vp9CodecSettingsResponse vp9) {
+        @OutputCustomType.Parameter("h264") H264CodecSettingsResponse h264,
+        @OutputCustomType.Parameter("h265") H265CodecSettingsResponse h265,
+        @OutputCustomType.Parameter("vp9") Vp9CodecSettingsResponse vp9) {
         this.h264 = h264;
         this.h265 = h265;
         this.vp9 = vp9;
@@ -83,17 +83,17 @@ public final class VideoStreamResponse {
     	      this.vp9 = defaults.vp9;
         }
 
-        public Builder setH264(H264CodecSettingsResponse h264) {
+        public Builder h264(H264CodecSettingsResponse h264) {
             this.h264 = Objects.requireNonNull(h264);
             return this;
         }
 
-        public Builder setH265(H265CodecSettingsResponse h265) {
+        public Builder h265(H265CodecSettingsResponse h265) {
             this.h265 = Objects.requireNonNull(h265);
             return this;
         }
 
-        public Builder setVp9(Vp9CodecSettingsResponse vp9) {
+        public Builder vp9(Vp9CodecSettingsResponse vp9) {
             this.vp9 = Objects.requireNonNull(vp9);
             return this;
         }

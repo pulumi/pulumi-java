@@ -22,10 +22,10 @@ public final class CxIntentTrainingPhrasePart {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"parameterId","text"})
+    @OutputCustomType.Constructor
     private CxIntentTrainingPhrasePart(
-        @Nullable String parameterId,
-        String text) {
+        @OutputCustomType.Parameter("parameterId") @Nullable String parameterId,
+        @OutputCustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }
@@ -67,12 +67,12 @@ public final class CxIntentTrainingPhrasePart {
     	      this.text = defaults.text;
         }
 
-        public Builder setParameterId(@Nullable String parameterId) {
+        public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = parameterId;
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

@@ -62,16 +62,16 @@ public final class JobExtract {
      */
     private final @Nullable Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"compression","destinationFormat","destinationUris","fieldDelimiter","printHeader","sourceModel","sourceTable","useAvroLogicalTypes"})
+    @OutputCustomType.Constructor
     private JobExtract(
-        @Nullable String compression,
-        @Nullable String destinationFormat,
-        List<String> destinationUris,
-        @Nullable String fieldDelimiter,
-        @Nullable Boolean printHeader,
-        @Nullable JobExtractSourceModel sourceModel,
-        @Nullable JobExtractSourceTable sourceTable,
-        @Nullable Boolean useAvroLogicalTypes) {
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("destinationFormat") @Nullable String destinationFormat,
+        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("printHeader") @Nullable Boolean printHeader,
+        @OutputCustomType.Parameter("sourceModel") @Nullable JobExtractSourceModel sourceModel,
+        @OutputCustomType.Parameter("sourceTable") @Nullable JobExtractSourceTable sourceTable,
+        @OutputCustomType.Parameter("useAvroLogicalTypes") @Nullable Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUris = destinationUris;
@@ -179,42 +179,42 @@ public final class JobExtract {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setDestinationFormat(@Nullable String destinationFormat) {
+        public Builder destinationFormat(@Nullable String destinationFormat) {
             this.destinationFormat = destinationFormat;
             return this;
         }
 
-        public Builder setDestinationUris(List<String> destinationUris) {
+        public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setPrintHeader(@Nullable Boolean printHeader) {
+        public Builder printHeader(@Nullable Boolean printHeader) {
             this.printHeader = printHeader;
             return this;
         }
 
-        public Builder setSourceModel(@Nullable JobExtractSourceModel sourceModel) {
+        public Builder sourceModel(@Nullable JobExtractSourceModel sourceModel) {
             this.sourceModel = sourceModel;
             return this;
         }
 
-        public Builder setSourceTable(@Nullable JobExtractSourceTable sourceTable) {
+        public Builder sourceTable(@Nullable JobExtractSourceTable sourceTable) {
             this.sourceTable = sourceTable;
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(@Nullable Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }

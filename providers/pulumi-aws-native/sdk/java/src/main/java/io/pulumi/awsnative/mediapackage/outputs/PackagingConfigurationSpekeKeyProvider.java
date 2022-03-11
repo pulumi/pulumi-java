@@ -22,11 +22,11 @@ public final class PackagingConfigurationSpekeKeyProvider {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"roleArn","systemIds","url"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationSpekeKeyProvider(
-        String roleArn,
-        List<String> systemIds,
-        String url) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("systemIds") List<String> systemIds,
+        @OutputCustomType.Parameter("url") String url) {
         this.roleArn = roleArn;
         this.systemIds = systemIds;
         this.url = url;
@@ -74,17 +74,17 @@ public final class PackagingConfigurationSpekeKeyProvider {
     	      this.url = defaults.url;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSystemIds(List<String> systemIds) {
+        public Builder systemIds(List<String> systemIds) {
             this.systemIds = Objects.requireNonNull(systemIds);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

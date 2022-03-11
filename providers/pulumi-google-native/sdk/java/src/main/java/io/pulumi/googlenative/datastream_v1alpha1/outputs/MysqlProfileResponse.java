@@ -37,13 +37,13 @@ public final class MysqlProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"hostname","password","port","sslConfig","username"})
+    @OutputCustomType.Constructor
     private MysqlProfileResponse(
-        String hostname,
-        String password,
-        Integer port,
-        MysqlSslConfigResponse sslConfig,
-        String username) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("sslConfig") MysqlSslConfigResponse sslConfig,
+        @OutputCustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;
@@ -115,27 +115,27 @@ public final class MysqlProfileResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setSslConfig(MysqlSslConfigResponse sslConfig) {
+        public Builder sslConfig(MysqlSslConfigResponse sslConfig) {
             this.sslConfig = Objects.requireNonNull(sslConfig);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

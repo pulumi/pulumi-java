@@ -51,7 +51,7 @@ public final class OriginEndpointMssEncryption extends io.pulumi.resources.Invok
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

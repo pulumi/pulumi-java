@@ -93,32 +93,32 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.platform = defaults.platform;
         }
 
-        public Builder setDockerImageUri(Input<String> dockerImageUri) {
+        public Builder dockerImageUri(Input<String> dockerImageUri) {
             this.dockerImageUri = Objects.requireNonNull(dockerImageUri);
             return this;
         }
 
-        public Builder setDockerImageUri(String dockerImageUri) {
+        public Builder dockerImageUri(String dockerImageUri) {
             this.dockerImageUri = Input.of(Objects.requireNonNull(dockerImageUri));
             return this;
         }
 
-        public Builder setDockerSpecificationType(Input<String> dockerSpecificationType) {
+        public Builder dockerSpecificationType(Input<String> dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
 
-        public Builder setDockerSpecificationType(String dockerSpecificationType) {
+        public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Input.of(Objects.requireNonNull(dockerSpecificationType));
             return this;
         }
 
-        public Builder setPlatform(@Nullable Input<DockerImagePlatformArgs> platform) {
+        public Builder platform(@Nullable Input<DockerImagePlatformArgs> platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPlatform(@Nullable DockerImagePlatformArgs platform) {
+        public Builder platform(@Nullable DockerImagePlatformArgs platform) {
             this.platform = Input.ofNullable(platform);
             return this;
         }

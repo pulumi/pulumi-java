@@ -34,12 +34,12 @@ public final class AzureBlobFSLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","fileSystem","folderPath","type"})
+    @OutputCustomType.Constructor
     private AzureBlobFSLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object fileSystem,
-        @Nullable Object folderPath,
-        String type) {
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("fileSystem") @Nullable Object fileSystem,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.fileSystem = fileSystem;
         this.folderPath = folderPath;
@@ -102,22 +102,22 @@ public final class AzureBlobFSLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable Object fileSystem) {
+        public Builder fileSystem(@Nullable Object fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

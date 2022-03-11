@@ -15,10 +15,10 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials;
     private final @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials;
 
-    @OutputCustomType.Constructor({"basicAuthCredentials","oAuthCredentials"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileCredentials(
-        @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
-        @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
+        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials,
+        @OutputCustomType.Parameter("oAuthCredentials") @Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.oAuthCredentials = oAuthCredentials;
     }
@@ -52,12 +52,12 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentials {
     	      this.oAuthCredentials = defaults.oAuthCredentials;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsProperties basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
-        public Builder setOAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
+        public Builder oAuthCredentials(@Nullable ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsProperties oAuthCredentials) {
             this.oAuthCredentials = oAuthCredentials;
             return this;
         }

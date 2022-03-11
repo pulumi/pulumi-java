@@ -22,10 +22,10 @@ public final class ObjectReferenceDefinitionResponse {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"name","namespace"})
+    @OutputCustomType.Constructor
     private ObjectReferenceDefinitionResponse(
-        @Nullable String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.name = name;
         this.namespace = namespace;
     }
@@ -67,12 +67,12 @@ public final class ObjectReferenceDefinitionResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

@@ -111,62 +111,62 @@ public final class ContainerUploadArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sourceHash = defaults.sourceHash;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setContentBase64(@Nullable Input<String> contentBase64) {
+        public Builder contentBase64(@Nullable Input<String> contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
 
-        public Builder setContentBase64(@Nullable String contentBase64) {
+        public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = Input.ofNullable(contentBase64);
             return this;
         }
 
-        public Builder setExecutable(@Nullable Input<Boolean> executable) {
+        public Builder executable(@Nullable Input<Boolean> executable) {
             this.executable = executable;
             return this;
         }
 
-        public Builder setExecutable(@Nullable Boolean executable) {
+        public Builder executable(@Nullable Boolean executable) {
             this.executable = Input.ofNullable(executable);
             return this;
         }
 
-        public Builder setFile(Input<String> file) {
+        public Builder file(Input<String> file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Input.of(Objects.requireNonNull(file));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSourceHash(@Nullable Input<String> sourceHash) {
+        public Builder sourceHash(@Nullable Input<String> sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }
 
-        public Builder setSourceHash(@Nullable String sourceHash) {
+        public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = Input.ofNullable(sourceHash);
             return this;
         }

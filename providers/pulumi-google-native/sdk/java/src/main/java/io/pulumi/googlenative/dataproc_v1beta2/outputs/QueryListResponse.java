@@ -16,8 +16,8 @@ public final class QueryListResponse {
      */
     private final List<String> queries;
 
-    @OutputCustomType.Constructor({"queries"})
-    private QueryListResponse(List<String> queries) {
+    @OutputCustomType.Constructor
+    private QueryListResponse(@OutputCustomType.Parameter("queries") List<String> queries) {
         this.queries = queries;
     }
 
@@ -49,7 +49,7 @@ public final class QueryListResponse {
     	      this.queries = defaults.queries;
         }
 
-        public Builder setQueries(List<String> queries) {
+        public Builder queries(List<String> queries) {
             this.queries = Objects.requireNonNull(queries);
             return this;
         }

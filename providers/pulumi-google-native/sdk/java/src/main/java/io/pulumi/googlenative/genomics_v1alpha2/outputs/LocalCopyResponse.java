@@ -20,10 +20,10 @@ public final class LocalCopyResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"disk","path"})
+    @OutputCustomType.Constructor
     private LocalCopyResponse(
-        String disk,
-        String path) {
+        @OutputCustomType.Parameter("disk") String disk,
+        @OutputCustomType.Parameter("path") String path) {
         this.disk = disk;
         this.path = path;
     }
@@ -65,12 +65,12 @@ public final class LocalCopyResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setDisk(String disk) {
+        public Builder disk(String disk) {
             this.disk = Objects.requireNonNull(disk);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

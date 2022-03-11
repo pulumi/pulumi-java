@@ -70,22 +70,22 @@ public final class DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs ex
     	      this.signingServiceName = defaults.signingServiceName;
         }
 
-        public Builder setSigningRegion(@Nullable Input<String> signingRegion) {
+        public Builder signingRegion(@Nullable Input<String> signingRegion) {
             this.signingRegion = signingRegion;
             return this;
         }
 
-        public Builder setSigningRegion(@Nullable String signingRegion) {
+        public Builder signingRegion(@Nullable String signingRegion) {
             this.signingRegion = Input.ofNullable(signingRegion);
             return this;
         }
 
-        public Builder setSigningServiceName(@Nullable Input<String> signingServiceName) {
+        public Builder signingServiceName(@Nullable Input<String> signingServiceName) {
             this.signingServiceName = signingServiceName;
             return this;
         }
 
-        public Builder setSigningServiceName(@Nullable String signingServiceName) {
+        public Builder signingServiceName(@Nullable String signingServiceName) {
             this.signingServiceName = Input.ofNullable(signingServiceName);
             return this;
         }

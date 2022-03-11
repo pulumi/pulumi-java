@@ -102,42 +102,42 @@ public final class UserPoolUICustomizationArgs extends io.pulumi.resources.Resou
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setClientId(@Nullable Input<String> clientId) {
+        public Builder clientId(@Nullable Input<String> clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
 
-        public Builder setCss(@Nullable Input<String> css) {
+        public Builder css(@Nullable Input<String> css) {
             this.css = css;
             return this;
         }
 
-        public Builder setCss(@Nullable String css) {
+        public Builder css(@Nullable String css) {
             this.css = Input.ofNullable(css);
             return this;
         }
 
-        public Builder setImageFile(@Nullable Input<String> imageFile) {
+        public Builder imageFile(@Nullable Input<String> imageFile) {
             this.imageFile = imageFile;
             return this;
         }
 
-        public Builder setImageFile(@Nullable String imageFile) {
+        public Builder imageFile(@Nullable String imageFile) {
             this.imageFile = Input.ofNullable(imageFile);
             return this;
         }
 
-        public Builder setUserPoolId(Input<String> userPoolId) {
+        public Builder userPoolId(Input<String> userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Input.of(Objects.requireNonNull(userPoolId));
             return this;
         }

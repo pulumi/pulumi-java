@@ -29,11 +29,11 @@ public final class GatewayRouteConfigPropertiesResponse {
      */
     private final @Nullable List<GatewayApiRouteResponse> routes;
 
-    @OutputCustomType.Constructor({"appResourceId","provisioningState","routes"})
+    @OutputCustomType.Constructor
     private GatewayRouteConfigPropertiesResponse(
-        @Nullable String appResourceId,
-        String provisioningState,
-        @Nullable List<GatewayApiRouteResponse> routes) {
+        @OutputCustomType.Parameter("appResourceId") @Nullable String appResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routes") @Nullable List<GatewayApiRouteResponse> routes) {
         this.appResourceId = appResourceId;
         this.provisioningState = provisioningState;
         this.routes = routes;
@@ -85,17 +85,17 @@ public final class GatewayRouteConfigPropertiesResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setAppResourceId(@Nullable String appResourceId) {
+        public Builder appResourceId(@Nullable String appResourceId) {
             this.appResourceId = appResourceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<GatewayApiRouteResponse> routes) {
+        public Builder routes(@Nullable List<GatewayApiRouteResponse> routes) {
             this.routes = routes;
             return this;
         }

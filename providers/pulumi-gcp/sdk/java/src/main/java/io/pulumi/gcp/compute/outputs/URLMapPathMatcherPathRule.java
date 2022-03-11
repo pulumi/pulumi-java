@@ -47,12 +47,12 @@ public final class URLMapPathMatcherPathRule {
      */
     private final @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"paths","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRule(
-        List<String> paths,
-        @Nullable URLMapPathMatcherPathRuleRouteAction routeAction,
-        @Nullable String service,
-        @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("routeAction") @Nullable URLMapPathMatcherPathRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;
@@ -126,22 +126,22 @@ public final class URLMapPathMatcherPathRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable URLMapPathMatcherPathRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable URLMapPathMatcherPathRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable URLMapPathMatcherPathRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

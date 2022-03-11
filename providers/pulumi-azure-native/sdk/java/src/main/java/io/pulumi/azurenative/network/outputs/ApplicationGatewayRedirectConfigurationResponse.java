@@ -75,20 +75,20 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
      */
     private final @Nullable List<SubResourceResponse> urlPathMaps;
 
-    @OutputCustomType.Constructor({"etag","id","includePath","includeQueryString","name","pathRules","redirectType","requestRoutingRules","targetListener","targetUrl","type","urlPathMaps"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRedirectConfigurationResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Boolean includePath,
-        @Nullable Boolean includeQueryString,
-        @Nullable String name,
-        @Nullable List<SubResourceResponse> pathRules,
-        @Nullable String redirectType,
-        @Nullable List<SubResourceResponse> requestRoutingRules,
-        @Nullable SubResourceResponse targetListener,
-        @Nullable String targetUrl,
-        String type,
-        @Nullable List<SubResourceResponse> urlPathMaps) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("includePath") @Nullable Boolean includePath,
+        @OutputCustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<SubResourceResponse> pathRules,
+        @OutputCustomType.Parameter("redirectType") @Nullable String redirectType,
+        @OutputCustomType.Parameter("requestRoutingRules") @Nullable List<SubResourceResponse> requestRoutingRules,
+        @OutputCustomType.Parameter("targetListener") @Nullable SubResourceResponse targetListener,
+        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("urlPathMaps") @Nullable List<SubResourceResponse> urlPathMaps) {
         this.etag = etag;
         this.id = id;
         this.includePath = includePath;
@@ -230,62 +230,62 @@ public final class ApplicationGatewayRedirectConfigurationResponse {
     	      this.urlPathMaps = defaults.urlPathMaps;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIncludePath(@Nullable Boolean includePath) {
+        public Builder includePath(@Nullable Boolean includePath) {
             this.includePath = includePath;
             return this;
         }
 
-        public Builder setIncludeQueryString(@Nullable Boolean includeQueryString) {
+        public Builder includeQueryString(@Nullable Boolean includeQueryString) {
             this.includeQueryString = includeQueryString;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<SubResourceResponse> pathRules) {
+        public Builder pathRules(@Nullable List<SubResourceResponse> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setRedirectType(@Nullable String redirectType) {
+        public Builder redirectType(@Nullable String redirectType) {
             this.redirectType = redirectType;
             return this;
         }
 
-        public Builder setRequestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
+        public Builder requestRoutingRules(@Nullable List<SubResourceResponse> requestRoutingRules) {
             this.requestRoutingRules = requestRoutingRules;
             return this;
         }
 
-        public Builder setTargetListener(@Nullable SubResourceResponse targetListener) {
+        public Builder targetListener(@Nullable SubResourceResponse targetListener) {
             this.targetListener = targetListener;
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable String targetUrl) {
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
+        public Builder urlPathMaps(@Nullable List<SubResourceResponse> urlPathMaps) {
             this.urlPathMaps = urlPathMaps;
             return this;
         }

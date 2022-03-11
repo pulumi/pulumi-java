@@ -25,11 +25,11 @@ public final class InconclusiveDetailResponse {
      */
     private final Boolean infrastructureFailure;
 
-    @OutputCustomType.Constructor({"abortedByUser","hasErrorLogs","infrastructureFailure"})
+    @OutputCustomType.Constructor
     private InconclusiveDetailResponse(
-        Boolean abortedByUser,
-        Boolean hasErrorLogs,
-        Boolean infrastructureFailure) {
+        @OutputCustomType.Parameter("abortedByUser") Boolean abortedByUser,
+        @OutputCustomType.Parameter("hasErrorLogs") Boolean hasErrorLogs,
+        @OutputCustomType.Parameter("infrastructureFailure") Boolean infrastructureFailure) {
         this.abortedByUser = abortedByUser;
         this.hasErrorLogs = hasErrorLogs;
         this.infrastructureFailure = infrastructureFailure;
@@ -81,17 +81,17 @@ public final class InconclusiveDetailResponse {
     	      this.infrastructureFailure = defaults.infrastructureFailure;
         }
 
-        public Builder setAbortedByUser(Boolean abortedByUser) {
+        public Builder abortedByUser(Boolean abortedByUser) {
             this.abortedByUser = Objects.requireNonNull(abortedByUser);
             return this;
         }
 
-        public Builder setHasErrorLogs(Boolean hasErrorLogs) {
+        public Builder hasErrorLogs(Boolean hasErrorLogs) {
             this.hasErrorLogs = Objects.requireNonNull(hasErrorLogs);
             return this;
         }
 
-        public Builder setInfrastructureFailure(Boolean infrastructureFailure) {
+        public Builder infrastructureFailure(Boolean infrastructureFailure) {
             this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
             return this;
         }

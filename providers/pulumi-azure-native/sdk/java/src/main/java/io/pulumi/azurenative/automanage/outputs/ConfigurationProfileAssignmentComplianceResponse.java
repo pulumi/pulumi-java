@@ -15,8 +15,8 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
      */
     private final String updateStatus;
 
-    @OutputCustomType.Constructor({"updateStatus"})
-    private ConfigurationProfileAssignmentComplianceResponse(String updateStatus) {
+    @OutputCustomType.Constructor
+    private ConfigurationProfileAssignmentComplianceResponse(@OutputCustomType.Parameter("updateStatus") String updateStatus) {
         this.updateStatus = updateStatus;
     }
 
@@ -48,7 +48,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse {
     	      this.updateStatus = defaults.updateStatus;
         }
 
-        public Builder setUpdateStatus(String updateStatus) {
+        public Builder updateStatus(String updateStatus) {
             this.updateStatus = Objects.requireNonNull(updateStatus);
             return this;
         }

@@ -39,13 +39,13 @@ public final class CacheNetworkSettingsResponse {
      */
     private final List<String> utilityAddresses;
 
-    @OutputCustomType.Constructor({"dnsSearchDomain","dnsServers","mtu","ntpServer","utilityAddresses"})
+    @OutputCustomType.Constructor
     private CacheNetworkSettingsResponse(
-        @Nullable String dnsSearchDomain,
-        @Nullable List<String> dnsServers,
-        @Nullable Integer mtu,
-        @Nullable String ntpServer,
-        List<String> utilityAddresses) {
+        @OutputCustomType.Parameter("dnsSearchDomain") @Nullable String dnsSearchDomain,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("mtu") @Nullable Integer mtu,
+        @OutputCustomType.Parameter("ntpServer") @Nullable String ntpServer,
+        @OutputCustomType.Parameter("utilityAddresses") List<String> utilityAddresses) {
         this.dnsSearchDomain = dnsSearchDomain;
         this.dnsServers = dnsServers;
         this.mtu = mtu;
@@ -117,27 +117,27 @@ public final class CacheNetworkSettingsResponse {
     	      this.utilityAddresses = defaults.utilityAddresses;
         }
 
-        public Builder setDnsSearchDomain(@Nullable String dnsSearchDomain) {
+        public Builder dnsSearchDomain(@Nullable String dnsSearchDomain) {
             this.dnsSearchDomain = dnsSearchDomain;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setNtpServer(@Nullable String ntpServer) {
+        public Builder ntpServer(@Nullable String ntpServer) {
             this.ntpServer = ntpServer;
             return this;
         }
 
-        public Builder setUtilityAddresses(List<String> utilityAddresses) {
+        public Builder utilityAddresses(List<String> utilityAddresses) {
             this.utilityAddresses = Objects.requireNonNull(utilityAddresses);
             return this;
         }

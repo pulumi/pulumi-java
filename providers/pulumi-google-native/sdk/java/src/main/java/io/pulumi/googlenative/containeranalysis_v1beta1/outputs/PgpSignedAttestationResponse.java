@@ -25,11 +25,11 @@ public final class PgpSignedAttestationResponse {
      */
     private final String signature;
 
-    @OutputCustomType.Constructor({"contentType","pgpKeyId","signature"})
+    @OutputCustomType.Constructor
     private PgpSignedAttestationResponse(
-        String contentType,
-        String pgpKeyId,
-        String signature) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("pgpKeyId") String pgpKeyId,
+        @OutputCustomType.Parameter("signature") String signature) {
         this.contentType = contentType;
         this.pgpKeyId = pgpKeyId;
         this.signature = signature;
@@ -81,17 +81,17 @@ public final class PgpSignedAttestationResponse {
     	      this.signature = defaults.signature;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setPgpKeyId(String pgpKeyId) {
+        public Builder pgpKeyId(String pgpKeyId) {
             this.pgpKeyId = Objects.requireNonNull(pgpKeyId);
             return this;
         }
 
-        public Builder setSignature(String signature) {
+        public Builder signature(String signature) {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }

@@ -13,11 +13,11 @@ public final class BasicPerfSampleSeriesResponse {
     private final String perfUnit;
     private final String sampleSeriesLabel;
 
-    @OutputCustomType.Constructor({"perfMetricType","perfUnit","sampleSeriesLabel"})
+    @OutputCustomType.Constructor
     private BasicPerfSampleSeriesResponse(
-        String perfMetricType,
-        String perfUnit,
-        String sampleSeriesLabel) {
+        @OutputCustomType.Parameter("perfMetricType") String perfMetricType,
+        @OutputCustomType.Parameter("perfUnit") String perfUnit,
+        @OutputCustomType.Parameter("sampleSeriesLabel") String sampleSeriesLabel) {
         this.perfMetricType = perfMetricType;
         this.perfUnit = perfUnit;
         this.sampleSeriesLabel = sampleSeriesLabel;
@@ -57,17 +57,17 @@ public final class BasicPerfSampleSeriesResponse {
     	      this.sampleSeriesLabel = defaults.sampleSeriesLabel;
         }
 
-        public Builder setPerfMetricType(String perfMetricType) {
+        public Builder perfMetricType(String perfMetricType) {
             this.perfMetricType = Objects.requireNonNull(perfMetricType);
             return this;
         }
 
-        public Builder setPerfUnit(String perfUnit) {
+        public Builder perfUnit(String perfUnit) {
             this.perfUnit = Objects.requireNonNull(perfUnit);
             return this;
         }
 
-        public Builder setSampleSeriesLabel(String sampleSeriesLabel) {
+        public Builder sampleSeriesLabel(String sampleSeriesLabel) {
             this.sampleSeriesLabel = Objects.requireNonNull(sampleSeriesLabel);
             return this;
         }

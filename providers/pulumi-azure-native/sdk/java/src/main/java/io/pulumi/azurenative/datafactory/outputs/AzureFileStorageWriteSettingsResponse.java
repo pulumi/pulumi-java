@@ -34,12 +34,12 @@ public final class AzureFileStorageWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private AzureFileStorageWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
@@ -102,22 +102,22 @@ public final class AzureFileStorageWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

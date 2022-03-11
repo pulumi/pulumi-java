@@ -56,7 +56,7 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
     	      this.clusterIds = defaults.clusterIds;
         }
 
-        public Builder setClusterIds(List<String> clusterIds) {
+        public Builder clusterIds(List<String> clusterIds) {
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }

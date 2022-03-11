@@ -53,12 +53,12 @@ public final class MeshSpecGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.egressFilter = defaults.egressFilter;
         }
 
-        public Builder setEgressFilter(@Nullable Input<MeshSpecEgressFilterGetArgs> egressFilter) {
+        public Builder egressFilter(@Nullable Input<MeshSpecEgressFilterGetArgs> egressFilter) {
             this.egressFilter = egressFilter;
             return this;
         }
 
-        public Builder setEgressFilter(@Nullable MeshSpecEgressFilterGetArgs egressFilter) {
+        public Builder egressFilter(@Nullable MeshSpecEgressFilterGetArgs egressFilter) {
             this.egressFilter = Input.ofNullable(egressFilter);
             return this;
         }

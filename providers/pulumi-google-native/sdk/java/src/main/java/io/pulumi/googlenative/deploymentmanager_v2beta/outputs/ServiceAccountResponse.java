@@ -15,8 +15,8 @@ public final class ServiceAccountResponse {
      */
     private final String email;
 
-    @OutputCustomType.Constructor({"email"})
-    private ServiceAccountResponse(String email) {
+    @OutputCustomType.Constructor
+    private ServiceAccountResponse(@OutputCustomType.Parameter("email") String email) {
         this.email = email;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceAccountResponse {
     	      this.email = defaults.email;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }

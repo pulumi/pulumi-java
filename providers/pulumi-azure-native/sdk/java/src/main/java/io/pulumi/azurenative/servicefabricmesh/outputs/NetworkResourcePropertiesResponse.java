@@ -38,13 +38,13 @@ public final class NetworkResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor({"description","kind","provisioningState","status","statusDetails"})
+    @OutputCustomType.Constructor
     private NetworkResourcePropertiesResponse(
-        @Nullable String description,
-        String kind,
-        String provisioningState,
-        String status,
-        String statusDetails) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
         this.description = description;
         this.kind = kind;
         this.provisioningState = provisioningState;
@@ -117,27 +117,27 @@ public final class NetworkResourcePropertiesResponse {
     	      this.statusDetails = defaults.statusDetails;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }

@@ -67,18 +67,18 @@ public final class PipelineRunResponseResponse {
      */
     private final @Nullable PipelineTriggerDescriptorResponse trigger;
 
-    @OutputCustomType.Constructor({"catalogDigest","finishTime","importedArtifacts","pipelineRunErrorMessage","progress","source","startTime","status","target","trigger"})
+    @OutputCustomType.Constructor
     private PipelineRunResponseResponse(
-        @Nullable String catalogDigest,
-        @Nullable String finishTime,
-        @Nullable List<String> importedArtifacts,
-        @Nullable String pipelineRunErrorMessage,
-        @Nullable ProgressPropertiesResponse progress,
-        @Nullable ImportPipelineSourcePropertiesResponse source,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable ExportPipelineTargetPropertiesResponse target,
-        @Nullable PipelineTriggerDescriptorResponse trigger) {
+        @OutputCustomType.Parameter("catalogDigest") @Nullable String catalogDigest,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("importedArtifacts") @Nullable List<String> importedArtifacts,
+        @OutputCustomType.Parameter("pipelineRunErrorMessage") @Nullable String pipelineRunErrorMessage,
+        @OutputCustomType.Parameter("progress") @Nullable ProgressPropertiesResponse progress,
+        @OutputCustomType.Parameter("source") @Nullable ImportPipelineSourcePropertiesResponse source,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("target") @Nullable ExportPipelineTargetPropertiesResponse target,
+        @OutputCustomType.Parameter("trigger") @Nullable PipelineTriggerDescriptorResponse trigger) {
         this.catalogDigest = catalogDigest;
         this.finishTime = finishTime;
         this.importedArtifacts = importedArtifacts;
@@ -200,52 +200,52 @@ public final class PipelineRunResponseResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setCatalogDigest(@Nullable String catalogDigest) {
+        public Builder catalogDigest(@Nullable String catalogDigest) {
             this.catalogDigest = catalogDigest;
             return this;
         }
 
-        public Builder setFinishTime(@Nullable String finishTime) {
+        public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
 
-        public Builder setImportedArtifacts(@Nullable List<String> importedArtifacts) {
+        public Builder importedArtifacts(@Nullable List<String> importedArtifacts) {
             this.importedArtifacts = importedArtifacts;
             return this;
         }
 
-        public Builder setPipelineRunErrorMessage(@Nullable String pipelineRunErrorMessage) {
+        public Builder pipelineRunErrorMessage(@Nullable String pipelineRunErrorMessage) {
             this.pipelineRunErrorMessage = pipelineRunErrorMessage;
             return this;
         }
 
-        public Builder setProgress(@Nullable ProgressPropertiesResponse progress) {
+        public Builder progress(@Nullable ProgressPropertiesResponse progress) {
             this.progress = progress;
             return this;
         }
 
-        public Builder setSource(@Nullable ImportPipelineSourcePropertiesResponse source) {
+        public Builder source(@Nullable ImportPipelineSourcePropertiesResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTarget(@Nullable ExportPipelineTargetPropertiesResponse target) {
+        public Builder target(@Nullable ExportPipelineTargetPropertiesResponse target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTrigger(@Nullable PipelineTriggerDescriptorResponse trigger) {
+        public Builder trigger(@Nullable PipelineTriggerDescriptorResponse trigger) {
             this.trigger = trigger;
             return this;
         }

@@ -98,42 +98,42 @@ public final class ContactListTopicArgs extends io.pulumi.resources.ResourceArgs
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setDefaultSubscriptionStatus(Input<String> defaultSubscriptionStatus) {
+        public Builder defaultSubscriptionStatus(Input<String> defaultSubscriptionStatus) {
             this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
             return this;
         }
 
-        public Builder setDefaultSubscriptionStatus(String defaultSubscriptionStatus) {
+        public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
             this.defaultSubscriptionStatus = Input.of(Objects.requireNonNull(defaultSubscriptionStatus));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setTopicName(Input<String> topicName) {
+        public Builder topicName(Input<String> topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }

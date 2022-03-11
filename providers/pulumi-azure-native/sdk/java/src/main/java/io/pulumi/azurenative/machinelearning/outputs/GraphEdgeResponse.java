@@ -32,12 +32,12 @@ public final class GraphEdgeResponse {
      */
     private final @Nullable String targetPortId;
 
-    @OutputCustomType.Constructor({"sourceNodeId","sourcePortId","targetNodeId","targetPortId"})
+    @OutputCustomType.Constructor
     private GraphEdgeResponse(
-        @Nullable String sourceNodeId,
-        @Nullable String sourcePortId,
-        @Nullable String targetNodeId,
-        @Nullable String targetPortId) {
+        @OutputCustomType.Parameter("sourceNodeId") @Nullable String sourceNodeId,
+        @OutputCustomType.Parameter("sourcePortId") @Nullable String sourcePortId,
+        @OutputCustomType.Parameter("targetNodeId") @Nullable String targetNodeId,
+        @OutputCustomType.Parameter("targetPortId") @Nullable String targetPortId) {
         this.sourceNodeId = sourceNodeId;
         this.sourcePortId = sourcePortId;
         this.targetNodeId = targetNodeId;
@@ -99,22 +99,22 @@ public final class GraphEdgeResponse {
     	      this.targetPortId = defaults.targetPortId;
         }
 
-        public Builder setSourceNodeId(@Nullable String sourceNodeId) {
+        public Builder sourceNodeId(@Nullable String sourceNodeId) {
             this.sourceNodeId = sourceNodeId;
             return this;
         }
 
-        public Builder setSourcePortId(@Nullable String sourcePortId) {
+        public Builder sourcePortId(@Nullable String sourcePortId) {
             this.sourcePortId = sourcePortId;
             return this;
         }
 
-        public Builder setTargetNodeId(@Nullable String targetNodeId) {
+        public Builder targetNodeId(@Nullable String targetNodeId) {
             this.targetNodeId = targetNodeId;
             return this;
         }
 
-        public Builder setTargetPortId(@Nullable String targetPortId) {
+        public Builder targetPortId(@Nullable String targetPortId) {
             this.targetPortId = targetPortId;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetStorageAccountCredentialArgs extends io.pulumi.resources.I
     	      this.storageAccountCredentialName = defaults.storageAccountCredentialName;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setStorageAccountCredentialName(String storageAccountCredentialName) {
+        public Builder storageAccountCredentialName(String storageAccountCredentialName) {
             this.storageAccountCredentialName = Objects.requireNonNull(storageAccountCredentialName);
             return this;
         }

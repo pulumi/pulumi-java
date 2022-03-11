@@ -121,29 +121,29 @@ public final class A2AProtectedDiskDetailsResponse {
      */
     private final @Nullable String secretIdentifier;
 
-    @OutputCustomType.Constructor({"allowedDiskLevelOperation","dataPendingAtSourceAgentInMB","dataPendingInStagingStorageAccountInMB","dekKeyVaultArmId","diskCapacityInBytes","diskName","diskState","diskType","diskUri","isDiskEncrypted","isDiskKeyEncrypted","kekKeyVaultArmId","keyIdentifier","monitoringJobType","monitoringPercentageCompletion","primaryDiskAzureStorageAccountId","primaryStagingAzureStorageAccountId","recoveryAzureStorageAccountId","recoveryDiskUri","resyncRequired","secretIdentifier"})
+    @OutputCustomType.Constructor
     private A2AProtectedDiskDetailsResponse(
-        @Nullable List<String> allowedDiskLevelOperation,
-        @Nullable Double dataPendingAtSourceAgentInMB,
-        @Nullable Double dataPendingInStagingStorageAccountInMB,
-        @Nullable String dekKeyVaultArmId,
-        @Nullable Double diskCapacityInBytes,
-        @Nullable String diskName,
-        @Nullable String diskState,
-        @Nullable String diskType,
-        @Nullable String diskUri,
-        @Nullable Boolean isDiskEncrypted,
-        @Nullable Boolean isDiskKeyEncrypted,
-        @Nullable String kekKeyVaultArmId,
-        @Nullable String keyIdentifier,
-        @Nullable String monitoringJobType,
-        @Nullable Integer monitoringPercentageCompletion,
-        @Nullable String primaryDiskAzureStorageAccountId,
-        @Nullable String primaryStagingAzureStorageAccountId,
-        @Nullable String recoveryAzureStorageAccountId,
-        @Nullable String recoveryDiskUri,
-        @Nullable Boolean resyncRequired,
-        @Nullable String secretIdentifier) {
+        @OutputCustomType.Parameter("allowedDiskLevelOperation") @Nullable List<String> allowedDiskLevelOperation,
+        @OutputCustomType.Parameter("dataPendingAtSourceAgentInMB") @Nullable Double dataPendingAtSourceAgentInMB,
+        @OutputCustomType.Parameter("dataPendingInStagingStorageAccountInMB") @Nullable Double dataPendingInStagingStorageAccountInMB,
+        @OutputCustomType.Parameter("dekKeyVaultArmId") @Nullable String dekKeyVaultArmId,
+        @OutputCustomType.Parameter("diskCapacityInBytes") @Nullable Double diskCapacityInBytes,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskState") @Nullable String diskState,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("diskUri") @Nullable String diskUri,
+        @OutputCustomType.Parameter("isDiskEncrypted") @Nullable Boolean isDiskEncrypted,
+        @OutputCustomType.Parameter("isDiskKeyEncrypted") @Nullable Boolean isDiskKeyEncrypted,
+        @OutputCustomType.Parameter("kekKeyVaultArmId") @Nullable String kekKeyVaultArmId,
+        @OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier,
+        @OutputCustomType.Parameter("monitoringJobType") @Nullable String monitoringJobType,
+        @OutputCustomType.Parameter("monitoringPercentageCompletion") @Nullable Integer monitoringPercentageCompletion,
+        @OutputCustomType.Parameter("primaryDiskAzureStorageAccountId") @Nullable String primaryDiskAzureStorageAccountId,
+        @OutputCustomType.Parameter("primaryStagingAzureStorageAccountId") @Nullable String primaryStagingAzureStorageAccountId,
+        @OutputCustomType.Parameter("recoveryAzureStorageAccountId") @Nullable String recoveryAzureStorageAccountId,
+        @OutputCustomType.Parameter("recoveryDiskUri") @Nullable String recoveryDiskUri,
+        @OutputCustomType.Parameter("resyncRequired") @Nullable Boolean resyncRequired,
+        @OutputCustomType.Parameter("secretIdentifier") @Nullable String secretIdentifier) {
         this.allowedDiskLevelOperation = allowedDiskLevelOperation;
         this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
         this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
@@ -375,107 +375,107 @@ public final class A2AProtectedDiskDetailsResponse {
     	      this.secretIdentifier = defaults.secretIdentifier;
         }
 
-        public Builder setAllowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
+        public Builder allowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
             this.allowedDiskLevelOperation = allowedDiskLevelOperation;
             return this;
         }
 
-        public Builder setDataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
+        public Builder dataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
             this.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
             return this;
         }
 
-        public Builder setDataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
+        public Builder dataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
             this.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
             return this;
         }
 
-        public Builder setDekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
+        public Builder dekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
             this.dekKeyVaultArmId = dekKeyVaultArmId;
             return this;
         }
 
-        public Builder setDiskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
+        public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             this.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskState(@Nullable String diskState) {
+        public Builder diskState(@Nullable String diskState) {
             this.diskState = diskState;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setIsDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
+        public Builder isDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
             this.isDiskEncrypted = isDiskEncrypted;
             return this;
         }
 
-        public Builder setIsDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
+        public Builder isDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
             this.isDiskKeyEncrypted = isDiskKeyEncrypted;
             return this;
         }
 
-        public Builder setKekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
+        public Builder kekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
             this.kekKeyVaultArmId = kekKeyVaultArmId;
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
-        public Builder setMonitoringJobType(@Nullable String monitoringJobType) {
+        public Builder monitoringJobType(@Nullable String monitoringJobType) {
             this.monitoringJobType = monitoringJobType;
             return this;
         }
 
-        public Builder setMonitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
+        public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             this.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
 
-        public Builder setPrimaryDiskAzureStorageAccountId(@Nullable String primaryDiskAzureStorageAccountId) {
+        public Builder primaryDiskAzureStorageAccountId(@Nullable String primaryDiskAzureStorageAccountId) {
             this.primaryDiskAzureStorageAccountId = primaryDiskAzureStorageAccountId;
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
+        public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryDiskUri(@Nullable String recoveryDiskUri) {
+        public Builder recoveryDiskUri(@Nullable String recoveryDiskUri) {
             this.recoveryDiskUri = recoveryDiskUri;
             return this;
         }
 
-        public Builder setResyncRequired(@Nullable Boolean resyncRequired) {
+        public Builder resyncRequired(@Nullable Boolean resyncRequired) {
             this.resyncRequired = resyncRequired;
             return this;
         }
 
-        public Builder setSecretIdentifier(@Nullable String secretIdentifier) {
+        public Builder secretIdentifier(@Nullable String secretIdentifier) {
             this.secretIdentifier = secretIdentifier;
             return this;
         }

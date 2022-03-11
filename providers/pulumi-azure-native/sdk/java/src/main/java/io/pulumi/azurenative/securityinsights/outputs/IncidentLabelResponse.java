@@ -20,10 +20,10 @@ public final class IncidentLabelResponse {
      */
     private final String labelType;
 
-    @OutputCustomType.Constructor({"labelName","labelType"})
+    @OutputCustomType.Constructor
     private IncidentLabelResponse(
-        String labelName,
-        String labelType) {
+        @OutputCustomType.Parameter("labelName") String labelName,
+        @OutputCustomType.Parameter("labelType") String labelType) {
         this.labelName = labelName;
         this.labelType = labelType;
     }
@@ -65,12 +65,12 @@ public final class IncidentLabelResponse {
     	      this.labelType = defaults.labelType;
         }
 
-        public Builder setLabelName(String labelName) {
+        public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
 
-        public Builder setLabelType(String labelType) {
+        public Builder labelType(String labelType) {
             this.labelType = Objects.requireNonNull(labelType);
             return this;
         }

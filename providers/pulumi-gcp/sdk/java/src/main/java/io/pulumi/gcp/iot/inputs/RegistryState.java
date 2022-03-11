@@ -201,92 +201,92 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
     	      this.stateNotificationConfig = defaults.stateNotificationConfig;
         }
 
-        public Builder setCredentials(@Nullable Input<List<RegistryCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<RegistryCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<RegistryCredentialGetArgs> credentials) {
+        public Builder credentials(@Nullable List<RegistryCredentialGetArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setEventNotificationConfigs(@Nullable Input<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable Input<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs) {
             this.eventNotificationConfigs = eventNotificationConfigs;
             return this;
         }
 
-        public Builder setEventNotificationConfigs(@Nullable List<RegistryEventNotificationConfigItemGetArgs> eventNotificationConfigs) {
+        public Builder eventNotificationConfigs(@Nullable List<RegistryEventNotificationConfigItemGetArgs> eventNotificationConfigs) {
             this.eventNotificationConfigs = Input.ofNullable(eventNotificationConfigs);
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable Input<Map<String,Object>> httpConfig) {
+        public Builder httpConfig(@Nullable Input<Map<String,Object>> httpConfig) {
             this.httpConfig = httpConfig;
             return this;
         }
 
-        public Builder setHttpConfig(@Nullable Map<String,Object> httpConfig) {
+        public Builder httpConfig(@Nullable Map<String,Object> httpConfig) {
             this.httpConfig = Input.ofNullable(httpConfig);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMqttConfig(@Nullable Input<Map<String,Object>> mqttConfig) {
+        public Builder mqttConfig(@Nullable Input<Map<String,Object>> mqttConfig) {
             this.mqttConfig = mqttConfig;
             return this;
         }
 
-        public Builder setMqttConfig(@Nullable Map<String,Object> mqttConfig) {
+        public Builder mqttConfig(@Nullable Map<String,Object> mqttConfig) {
             this.mqttConfig = Input.ofNullable(mqttConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setStateNotificationConfig(@Nullable Input<Map<String,Object>> stateNotificationConfig) {
+        public Builder stateNotificationConfig(@Nullable Input<Map<String,Object>> stateNotificationConfig) {
             this.stateNotificationConfig = stateNotificationConfig;
             return this;
         }
 
-        public Builder setStateNotificationConfig(@Nullable Map<String,Object> stateNotificationConfig) {
+        public Builder stateNotificationConfig(@Nullable Map<String,Object> stateNotificationConfig) {
             this.stateNotificationConfig = Input.ofNullable(stateNotificationConfig);
             return this;
         }

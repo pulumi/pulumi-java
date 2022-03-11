@@ -28,11 +28,11 @@ public final class ImageTemplateVhdDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","runOutputName","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateVhdDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        String runOutputName,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.runOutputName = runOutputName;
         this.type = type;
@@ -85,17 +85,17 @@ public final class ImageTemplateVhdDistributorResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactTags(@Nullable Map<String,String> artifactTags) {
+        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
-        public Builder setRunOutputName(String runOutputName) {
+        public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -14,10 +14,10 @@ public final class ProfilingGroupChannel {
     private final @Nullable String channelId;
     private final String channelUri;
 
-    @OutputCustomType.Constructor({"channelId","channelUri"})
+    @OutputCustomType.Constructor
     private ProfilingGroupChannel(
-        @Nullable String channelId,
-        String channelUri) {
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("channelUri") String channelUri) {
         this.channelId = channelId;
         this.channelUri = channelUri;
     }
@@ -51,12 +51,12 @@ public final class ProfilingGroupChannel {
     	      this.channelUri = defaults.channelUri;
         }
 
-        public Builder setChannelId(@Nullable String channelId) {
+        public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
 
-        public Builder setChannelUri(String channelUri) {
+        public Builder channelUri(String channelUri) {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }

@@ -171,82 +171,82 @@ public final class VpcIpamState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setOperatingRegions(@Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
+        public Builder operatingRegions(@Nullable Input<List<VpcIpamOperatingRegionGetArgs>> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
 
-        public Builder setOperatingRegions(@Nullable List<VpcIpamOperatingRegionGetArgs> operatingRegions) {
+        public Builder operatingRegions(@Nullable List<VpcIpamOperatingRegionGetArgs> operatingRegions) {
             this.operatingRegions = Input.ofNullable(operatingRegions);
             return this;
         }
 
-        public Builder setPrivateDefaultScopeId(@Nullable Input<String> privateDefaultScopeId) {
+        public Builder privateDefaultScopeId(@Nullable Input<String> privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
 
-        public Builder setPrivateDefaultScopeId(@Nullable String privateDefaultScopeId) {
+        public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
             this.privateDefaultScopeId = Input.ofNullable(privateDefaultScopeId);
             return this;
         }
 
-        public Builder setPublicDefaultScopeId(@Nullable Input<String> publicDefaultScopeId) {
+        public Builder publicDefaultScopeId(@Nullable Input<String> publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
 
-        public Builder setPublicDefaultScopeId(@Nullable String publicDefaultScopeId) {
+        public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
             this.publicDefaultScopeId = Input.ofNullable(publicDefaultScopeId);
             return this;
         }
 
-        public Builder setScopeCount(@Nullable Input<Integer> scopeCount) {
+        public Builder scopeCount(@Nullable Input<Integer> scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
 
-        public Builder setScopeCount(@Nullable Integer scopeCount) {
+        public Builder scopeCount(@Nullable Integer scopeCount) {
             this.scopeCount = Input.ofNullable(scopeCount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

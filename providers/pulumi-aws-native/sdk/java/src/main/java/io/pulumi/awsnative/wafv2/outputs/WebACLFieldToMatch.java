@@ -47,16 +47,16 @@ public final class WebACLFieldToMatch {
      */
     private final @Nullable Object uriPath;
 
-    @OutputCustomType.Constructor({"allQueryArguments","body","jsonBody","method","queryString","singleHeader","singleQueryArgument","uriPath"})
+    @OutputCustomType.Constructor
     private WebACLFieldToMatch(
-        @Nullable Object allQueryArguments,
-        @Nullable Object body,
-        @Nullable WebACLJsonBody jsonBody,
-        @Nullable Object method,
-        @Nullable Object queryString,
-        @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
-        @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
-        @Nullable Object uriPath) {
+        @OutputCustomType.Parameter("allQueryArguments") @Nullable Object allQueryArguments,
+        @OutputCustomType.Parameter("body") @Nullable Object body,
+        @OutputCustomType.Parameter("jsonBody") @Nullable WebACLJsonBody jsonBody,
+        @OutputCustomType.Parameter("method") @Nullable Object method,
+        @OutputCustomType.Parameter("queryString") @Nullable Object queryString,
+        @OutputCustomType.Parameter("singleHeader") @Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader,
+        @OutputCustomType.Parameter("singleQueryArgument") @Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument,
+        @OutputCustomType.Parameter("uriPath") @Nullable Object uriPath) {
         this.allQueryArguments = allQueryArguments;
         this.body = body;
         this.jsonBody = jsonBody;
@@ -150,42 +150,42 @@ public final class WebACLFieldToMatch {
     	      this.uriPath = defaults.uriPath;
         }
 
-        public Builder setAllQueryArguments(@Nullable Object allQueryArguments) {
+        public Builder allQueryArguments(@Nullable Object allQueryArguments) {
             this.allQueryArguments = allQueryArguments;
             return this;
         }
 
-        public Builder setBody(@Nullable Object body) {
+        public Builder body(@Nullable Object body) {
             this.body = body;
             return this;
         }
 
-        public Builder setJsonBody(@Nullable WebACLJsonBody jsonBody) {
+        public Builder jsonBody(@Nullable WebACLJsonBody jsonBody) {
             this.jsonBody = jsonBody;
             return this;
         }
 
-        public Builder setMethod(@Nullable Object method) {
+        public Builder method(@Nullable Object method) {
             this.method = method;
             return this;
         }
 
-        public Builder setQueryString(@Nullable Object queryString) {
+        public Builder queryString(@Nullable Object queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setSingleHeader(@Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader) {
+        public Builder singleHeader(@Nullable WebACLFieldToMatchSingleHeaderProperties singleHeader) {
             this.singleHeader = singleHeader;
             return this;
         }
 
-        public Builder setSingleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
+        public Builder singleQueryArgument(@Nullable WebACLFieldToMatchSingleQueryArgumentProperties singleQueryArgument) {
             this.singleQueryArgument = singleQueryArgument;
             return this;
         }
 
-        public Builder setUriPath(@Nullable Object uriPath) {
+        public Builder uriPath(@Nullable Object uriPath) {
             this.uriPath = uriPath;
             return this;
         }

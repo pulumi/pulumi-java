@@ -27,13 +27,13 @@ public final class GetCertificateResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","certificate","certificateAuthorityArn","certificateChain","id"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String certificate,
-        String certificateAuthorityArn,
-        String certificateChain,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("certificateAuthorityArn") String certificateAuthorityArn,
+        @OutputCustomType.Parameter("certificateChain") String certificateChain,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.certificate = certificate;
         this.certificateAuthorityArn = certificateAuthorityArn;
@@ -97,27 +97,27 @@ public final class GetCertificateResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificateAuthorityArn(String certificateAuthorityArn) {
+        public Builder certificateAuthorityArn(String certificateAuthorityArn) {
             this.certificateAuthorityArn = Objects.requireNonNull(certificateAuthorityArn);
             return this;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

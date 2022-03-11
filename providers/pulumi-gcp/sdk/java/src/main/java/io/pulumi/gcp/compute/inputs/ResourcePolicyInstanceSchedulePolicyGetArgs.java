@@ -123,52 +123,52 @@ public final class ResourcePolicyInstanceSchedulePolicyGetArgs extends io.pulumi
     	      this.vmStopSchedule = defaults.vmStopSchedule;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimeZone(Input<String> timeZone) {
+        public Builder timeZone(Input<String> timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Input.of(Objects.requireNonNull(timeZone));
             return this;
         }
 
-        public Builder setVmStartSchedule(@Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule) {
+        public Builder vmStartSchedule(@Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs> vmStartSchedule) {
             this.vmStartSchedule = vmStartSchedule;
             return this;
         }
 
-        public Builder setVmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs vmStartSchedule) {
+        public Builder vmStartSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStartScheduleGetArgs vmStartSchedule) {
             this.vmStartSchedule = Input.ofNullable(vmStartSchedule);
             return this;
         }
 
-        public Builder setVmStopSchedule(@Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule) {
+        public Builder vmStopSchedule(@Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs> vmStopSchedule) {
             this.vmStopSchedule = vmStopSchedule;
             return this;
         }
 
-        public Builder setVmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs vmStopSchedule) {
+        public Builder vmStopSchedule(@Nullable ResourcePolicyInstanceSchedulePolicyVmStopScheduleGetArgs vmStopSchedule) {
             this.vmStopSchedule = Input.ofNullable(vmStopSchedule);
             return this;
         }

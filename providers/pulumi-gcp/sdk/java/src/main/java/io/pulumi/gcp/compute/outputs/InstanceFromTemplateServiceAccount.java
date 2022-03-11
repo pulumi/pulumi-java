@@ -15,10 +15,10 @@ public final class InstanceFromTemplateServiceAccount {
     private final @Nullable String email;
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"email","scopes"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateServiceAccount(
-        @Nullable String email,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }
@@ -52,12 +52,12 @@ public final class InstanceFromTemplateServiceAccount {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }

@@ -28,13 +28,13 @@ public final class GetApplicationResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"appversionLifecycle","arn","description","id","name"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        GetApplicationAppversionLifecycle appversionLifecycle,
-        String arn,
-        String description,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("appversionLifecycle") GetApplicationAppversionLifecycle appversionLifecycle,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.appversionLifecycle = appversionLifecycle;
         this.arn = arn;
         this.description = description;
@@ -98,27 +98,27 @@ public final class GetApplicationResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAppversionLifecycle(GetApplicationAppversionLifecycle appversionLifecycle) {
+        public Builder appversionLifecycle(GetApplicationAppversionLifecycle appversionLifecycle) {
             this.appversionLifecycle = Objects.requireNonNull(appversionLifecycle);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -46,15 +46,15 @@ public final class ReadinessCheckResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"appStartTimeout","checkInterval","failureThreshold","host","path","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private ReadinessCheckResponse(
-        String appStartTimeout,
-        String checkInterval,
-        Integer failureThreshold,
-        String host,
-        String path,
-        Integer successThreshold,
-        String timeout) {
+        @OutputCustomType.Parameter("appStartTimeout") String appStartTimeout,
+        @OutputCustomType.Parameter("checkInterval") String checkInterval,
+        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.appStartTimeout = appStartTimeout;
         this.checkInterval = checkInterval;
         this.failureThreshold = failureThreshold;
@@ -146,37 +146,37 @@ public final class ReadinessCheckResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setAppStartTimeout(String appStartTimeout) {
+        public Builder appStartTimeout(String appStartTimeout) {
             this.appStartTimeout = Objects.requireNonNull(appStartTimeout);
             return this;
         }
 
-        public Builder setCheckInterval(String checkInterval) {
+        public Builder checkInterval(String checkInterval) {
             this.checkInterval = Objects.requireNonNull(checkInterval);
             return this;
         }
 
-        public Builder setFailureThreshold(Integer failureThreshold) {
+        public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSuccessThreshold(Integer successThreshold) {
+        public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

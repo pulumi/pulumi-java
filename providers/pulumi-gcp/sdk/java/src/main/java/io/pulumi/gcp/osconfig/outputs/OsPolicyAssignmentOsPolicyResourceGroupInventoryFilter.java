@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor({"osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(
-        String osShortName,
-        @Nullable String osVersion) {
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }
@@ -67,12 +67,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }

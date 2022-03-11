@@ -27,19 +27,19 @@ public final class EnvironmentConfigNodeConfig {
     private final @Nullable List<String> tags;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"diskSizeGb","enableIpMasqAgent","ipAllocationPolicy","machineType","maxPodsPerNode","network","oauthScopes","serviceAccount","subnetwork","tags","zone"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigNodeConfig(
-        @Nullable Integer diskSizeGb,
-        @Nullable Boolean enableIpMasqAgent,
-        @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
-        @Nullable String machineType,
-        @Nullable Integer maxPodsPerNode,
-        @Nullable String network,
-        @Nullable List<String> oauthScopes,
-        @Nullable String serviceAccount,
-        @Nullable String subnetwork,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("enableIpMasqAgent") @Nullable Boolean enableIpMasqAgent,
+        @OutputCustomType.Parameter("ipAllocationPolicy") @Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicy = ipAllocationPolicy;
@@ -127,57 +127,57 @@ public final class EnvironmentConfigNodeConfig {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setEnableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
+        public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
             this.enableIpMasqAgent = enableIpMasqAgent;
             return this;
         }
 
-        public Builder setIpAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicy ipAllocationPolicy) {
             this.ipAllocationPolicy = ipAllocationPolicy;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMaxPodsPerNode(@Nullable Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

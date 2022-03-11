@@ -21,10 +21,10 @@ public final class CurrentSpendResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor({"amount","unit"})
+    @OutputCustomType.Constructor
     private CurrentSpendResponse(
-        Double amount,
-        String unit) {
+        @OutputCustomType.Parameter("amount") Double amount,
+        @OutputCustomType.Parameter("unit") String unit) {
         this.amount = amount;
         this.unit = unit;
     }
@@ -66,12 +66,12 @@ public final class CurrentSpendResponse {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }

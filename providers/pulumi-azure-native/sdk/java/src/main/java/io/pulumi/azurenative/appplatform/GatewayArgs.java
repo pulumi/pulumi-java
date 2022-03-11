@@ -120,52 +120,52 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setGatewayName(@Nullable Input<String> gatewayName) {
+        public Builder gatewayName(@Nullable Input<String> gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
-        public Builder setGatewayName(@Nullable String gatewayName) {
+        public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = Input.ofNullable(gatewayName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<GatewayPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<GatewayPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable GatewayPropertiesArgs properties) {
+        public Builder properties(@Nullable GatewayPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

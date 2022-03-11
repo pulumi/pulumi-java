@@ -23,10 +23,10 @@ public final class LaunchTemplateTagSpecification {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private LaunchTemplateTagSpecification(
-        @Nullable String resourceType,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
@@ -68,12 +68,12 @@ public final class LaunchTemplateTagSpecification {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

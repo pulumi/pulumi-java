@@ -29,11 +29,11 @@ public final class DistributedNodesInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetail","nodeName","status"})
+    @OutputCustomType.Constructor
     private DistributedNodesInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable String nodeName,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.nodeName = nodeName;
         this.status = status;
@@ -86,17 +86,17 @@ public final class DistributedNodesInfoResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorDetail(@Nullable ErrorDetailResponse errorDetail) {
+        public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

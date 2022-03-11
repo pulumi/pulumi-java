@@ -39,13 +39,13 @@ public final class InTotoStatementResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"predicateType","provenance","slsaProvenance","subject","type"})
+    @OutputCustomType.Constructor
     private InTotoStatementResponse(
-        String predicateType,
-        InTotoProvenanceResponse provenance,
-        SlsaProvenanceResponse slsaProvenance,
-        List<SubjectResponse> subject,
-        String type) {
+        @OutputCustomType.Parameter("predicateType") String predicateType,
+        @OutputCustomType.Parameter("provenance") InTotoProvenanceResponse provenance,
+        @OutputCustomType.Parameter("slsaProvenance") SlsaProvenanceResponse slsaProvenance,
+        @OutputCustomType.Parameter("subject") List<SubjectResponse> subject,
+        @OutputCustomType.Parameter("type") String type) {
         this.predicateType = predicateType;
         this.provenance = provenance;
         this.slsaProvenance = slsaProvenance;
@@ -117,27 +117,27 @@ public final class InTotoStatementResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPredicateType(String predicateType) {
+        public Builder predicateType(String predicateType) {
             this.predicateType = Objects.requireNonNull(predicateType);
             return this;
         }
 
-        public Builder setProvenance(InTotoProvenanceResponse provenance) {
+        public Builder provenance(InTotoProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
-        public Builder setSlsaProvenance(SlsaProvenanceResponse slsaProvenance) {
+        public Builder slsaProvenance(SlsaProvenanceResponse slsaProvenance) {
             this.slsaProvenance = Objects.requireNonNull(slsaProvenance);
             return this;
         }
 
-        public Builder setSubject(List<SubjectResponse> subject) {
+        public Builder subject(List<SubjectResponse> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

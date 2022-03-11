@@ -161,72 +161,72 @@ public final class RouterInterfaceState extends io.pulumi.resources.ResourceArgs
     	      this.vpnTunnel = defaults.vpnTunnel;
         }
 
-        public Builder setInterconnectAttachment(@Nullable Input<String> interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable Input<String> interconnectAttachment) {
             this.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
-        public Builder setInterconnectAttachment(@Nullable String interconnectAttachment) {
+        public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
             this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
             return this;
         }
 
-        public Builder setIpRange(@Nullable Input<String> ipRange) {
+        public Builder ipRange(@Nullable Input<String> ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = Input.ofNullable(ipRange);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRouter(@Nullable Input<String> router) {
+        public Builder router(@Nullable Input<String> router) {
             this.router = router;
             return this;
         }
 
-        public Builder setRouter(@Nullable String router) {
+        public Builder router(@Nullable String router) {
             this.router = Input.ofNullable(router);
             return this;
         }
 
-        public Builder setVpnTunnel(@Nullable Input<String> vpnTunnel) {
+        public Builder vpnTunnel(@Nullable Input<String> vpnTunnel) {
             this.vpnTunnel = vpnTunnel;
             return this;
         }
 
-        public Builder setVpnTunnel(@Nullable String vpnTunnel) {
+        public Builder vpnTunnel(@Nullable String vpnTunnel) {
             this.vpnTunnel = Input.ofNullable(vpnTunnel);
             return this;
         }

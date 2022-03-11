@@ -150,33 +150,33 @@ public final class GetApplicationResult {
      */
     private final ApplicationClientDetailsResponse updatedBy;
 
-    @OutputCustomType.Constructor({"applicationDefinitionId","artifacts","authorizations","billingDetails","createdBy","customerSupport","id","identity","jitAccessPolicy","kind","location","managedBy","managedResourceGroupId","managementMode","name","outputs","parameters","plan","provisioningState","publisherTenantId","sku","supportUrls","tags","type","updatedBy"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationDefinitionId,
-        List<ApplicationArtifactResponse> artifacts,
-        List<ApplicationAuthorizationResponse> authorizations,
-        ApplicationBillingDetailsDefinitionResponse billingDetails,
-        ApplicationClientDetailsResponse createdBy,
-        ApplicationPackageContactResponse customerSupport,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
-        String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        @Nullable String managedResourceGroupId,
-        String managementMode,
-        String name,
-        Object outputs,
-        @Nullable Object parameters,
-        @Nullable PlanResponse plan,
-        String provisioningState,
-        String publisherTenantId,
-        @Nullable SkuResponse sku,
-        ApplicationPackageSupportUrlsResponse supportUrls,
-        @Nullable Map<String,String> tags,
-        String type,
-        ApplicationClientDetailsResponse updatedBy) {
+        @OutputCustomType.Parameter("applicationDefinitionId") @Nullable String applicationDefinitionId,
+        @OutputCustomType.Parameter("artifacts") List<ApplicationArtifactResponse> artifacts,
+        @OutputCustomType.Parameter("authorizations") List<ApplicationAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("billingDetails") ApplicationBillingDetailsDefinitionResponse billingDetails,
+        @OutputCustomType.Parameter("createdBy") ApplicationClientDetailsResponse createdBy,
+        @OutputCustomType.Parameter("customerSupport") ApplicationPackageContactResponse customerSupport,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("jitAccessPolicy") @Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("managedResourceGroupId") @Nullable String managedResourceGroupId,
+        @OutputCustomType.Parameter("managementMode") String managementMode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") Object outputs,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publisherTenantId") String publisherTenantId,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("supportUrls") ApplicationPackageSupportUrlsResponse supportUrls,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedBy") ApplicationClientDetailsResponse updatedBy) {
         this.applicationDefinitionId = applicationDefinitionId;
         this.artifacts = artifacts;
         this.authorizations = authorizations;
@@ -448,127 +448,127 @@ public final class GetApplicationResult {
     	      this.updatedBy = defaults.updatedBy;
         }
 
-        public Builder setApplicationDefinitionId(@Nullable String applicationDefinitionId) {
+        public Builder applicationDefinitionId(@Nullable String applicationDefinitionId) {
             this.applicationDefinitionId = applicationDefinitionId;
             return this;
         }
 
-        public Builder setArtifacts(List<ApplicationArtifactResponse> artifacts) {
+        public Builder artifacts(List<ApplicationArtifactResponse> artifacts) {
             this.artifacts = Objects.requireNonNull(artifacts);
             return this;
         }
 
-        public Builder setAuthorizations(List<ApplicationAuthorizationResponse> authorizations) {
+        public Builder authorizations(List<ApplicationAuthorizationResponse> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
 
-        public Builder setBillingDetails(ApplicationBillingDetailsDefinitionResponse billingDetails) {
+        public Builder billingDetails(ApplicationBillingDetailsDefinitionResponse billingDetails) {
             this.billingDetails = Objects.requireNonNull(billingDetails);
             return this;
         }
 
-        public Builder setCreatedBy(ApplicationClientDetailsResponse createdBy) {
+        public Builder createdBy(ApplicationClientDetailsResponse createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCustomerSupport(ApplicationPackageContactResponse customerSupport) {
+        public Builder customerSupport(ApplicationPackageContactResponse customerSupport) {
             this.customerSupport = Objects.requireNonNull(customerSupport);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setJitAccessPolicy(@Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy) {
+        public Builder jitAccessPolicy(@Nullable ApplicationJitAccessPolicyResponse jitAccessPolicy) {
             this.jitAccessPolicy = jitAccessPolicy;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setManagedResourceGroupId(@Nullable String managedResourceGroupId) {
+        public Builder managedResourceGroupId(@Nullable String managedResourceGroupId) {
             this.managedResourceGroupId = managedResourceGroupId;
             return this;
         }
 
-        public Builder setManagementMode(String managementMode) {
+        public Builder managementMode(String managementMode) {
             this.managementMode = Objects.requireNonNull(managementMode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputs(Object outputs) {
+        public Builder outputs(Object outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublisherTenantId(String publisherTenantId) {
+        public Builder publisherTenantId(String publisherTenantId) {
             this.publisherTenantId = Objects.requireNonNull(publisherTenantId);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSupportUrls(ApplicationPackageSupportUrlsResponse supportUrls) {
+        public Builder supportUrls(ApplicationPackageSupportUrlsResponse supportUrls) {
             this.supportUrls = Objects.requireNonNull(supportUrls);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedBy(ApplicationClientDetailsResponse updatedBy) {
+        public Builder updatedBy(ApplicationClientDetailsResponse updatedBy) {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }

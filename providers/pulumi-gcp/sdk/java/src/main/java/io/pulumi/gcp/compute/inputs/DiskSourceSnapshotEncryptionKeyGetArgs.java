@@ -110,42 +110,42 @@ public final class DiskSourceSnapshotEncryptionKeyGetArgs extends io.pulumi.reso
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable Input<String> kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable Input<String> kmsKeySelfLink) {
             this.kmsKeySelfLink = kmsKeySelfLink;
             return this;
         }
 
-        public Builder setKmsKeySelfLink(@Nullable String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
             this.kmsKeySelfLink = Input.ofNullable(kmsKeySelfLink);
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Input.ofNullable(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder setRawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Input<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Input.ofNullable(rawKey);
             return this;
         }
 
-        public Builder setSha256(@Nullable Input<String> sha256) {
+        public Builder sha256(@Nullable Input<String> sha256) {
             this.sha256 = sha256;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }

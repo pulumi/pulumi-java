@@ -15,8 +15,8 @@ public final class ControlResponse {
      */
     private final String environment;
 
-    @OutputCustomType.Constructor({"environment"})
-    private ControlResponse(String environment) {
+    @OutputCustomType.Constructor
+    private ControlResponse(@OutputCustomType.Parameter("environment") String environment) {
         this.environment = environment;
     }
 
@@ -48,7 +48,7 @@ public final class ControlResponse {
     	      this.environment = defaults.environment;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }

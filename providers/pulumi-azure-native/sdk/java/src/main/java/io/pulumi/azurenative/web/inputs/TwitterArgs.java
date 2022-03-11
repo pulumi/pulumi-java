@@ -75,22 +75,22 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setRegistration(@Nullable Input<TwitterRegistrationArgs> registration) {
+        public Builder registration(@Nullable Input<TwitterRegistrationArgs> registration) {
             this.registration = registration;
             return this;
         }
 
-        public Builder setRegistration(@Nullable TwitterRegistrationArgs registration) {
+        public Builder registration(@Nullable TwitterRegistrationArgs registration) {
             this.registration = Input.ofNullable(registration);
             return this;
         }

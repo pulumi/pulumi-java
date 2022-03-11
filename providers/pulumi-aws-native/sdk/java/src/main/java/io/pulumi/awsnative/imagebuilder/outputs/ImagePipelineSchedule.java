@@ -23,10 +23,10 @@ public final class ImagePipelineSchedule {
      */
     private final @Nullable String scheduleExpression;
 
-    @OutputCustomType.Constructor({"pipelineExecutionStartCondition","scheduleExpression"})
+    @OutputCustomType.Constructor
     private ImagePipelineSchedule(
-        @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition,
-        @Nullable String scheduleExpression) {
+        @OutputCustomType.Parameter("pipelineExecutionStartCondition") @Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition,
+        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }
@@ -68,12 +68,12 @@ public final class ImagePipelineSchedule {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setPipelineExecutionStartCondition(@Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(@Nullable ImagePipelineSchedulePipelineExecutionStartCondition pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }

@@ -24,10 +24,10 @@ public final class OpenAuthenticationAccessPolicyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"claims","type"})
+    @OutputCustomType.Constructor
     private OpenAuthenticationAccessPolicyResponse(
-        @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("claims") @Nullable List<OpenAuthenticationPolicyClaimResponse> claims,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.claims = claims;
         this.type = type;
     }
@@ -69,12 +69,12 @@ public final class OpenAuthenticationAccessPolicyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setClaims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
+        public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

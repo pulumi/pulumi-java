@@ -78,32 +78,32 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     	      this.turnsToLive = defaults.turnsToLive;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTimeToLiveInSeconds(Input<Integer> timeToLiveInSeconds) {
+        public Builder timeToLiveInSeconds(Input<Integer> timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Objects.requireNonNull(timeToLiveInSeconds);
             return this;
         }
 
-        public Builder setTimeToLiveInSeconds(Integer timeToLiveInSeconds) {
+        public Builder timeToLiveInSeconds(Integer timeToLiveInSeconds) {
             this.timeToLiveInSeconds = Input.of(Objects.requireNonNull(timeToLiveInSeconds));
             return this;
         }
 
-        public Builder setTurnsToLive(Input<Integer> turnsToLive) {
+        public Builder turnsToLive(Input<Integer> turnsToLive) {
             this.turnsToLive = Objects.requireNonNull(turnsToLive);
             return this;
         }
 
-        public Builder setTurnsToLive(Integer turnsToLive) {
+        public Builder turnsToLive(Integer turnsToLive) {
             this.turnsToLive = Input.of(Objects.requireNonNull(turnsToLive));
             return this;
         }

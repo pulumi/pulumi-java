@@ -46,15 +46,15 @@ public final class OnPremiseSqlResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"databaseName","machineName","serverName","source","sourceComputerId","vmuuid","workspaceId"})
+    @OutputCustomType.Constructor
     private OnPremiseSqlResourceDetailsResponse(
-        String databaseName,
-        String machineName,
-        String serverName,
-        String source,
-        String sourceComputerId,
-        String vmuuid,
-        String workspaceId) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @OutputCustomType.Parameter("vmuuid") String vmuuid,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.databaseName = databaseName;
         this.machineName = machineName;
         this.serverName = serverName;
@@ -147,37 +147,37 @@ public final class OnPremiseSqlResourceDetailsResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceComputerId(String sourceComputerId) {
+        public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
-        public Builder setVmuuid(String vmuuid) {
+        public Builder vmuuid(String vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

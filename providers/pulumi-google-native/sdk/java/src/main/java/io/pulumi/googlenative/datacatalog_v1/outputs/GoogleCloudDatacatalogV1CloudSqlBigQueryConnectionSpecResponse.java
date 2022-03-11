@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"database","instanceId","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse(
-        String database,
-        String instanceId,
-        String type) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.database = database;
         this.instanceId = instanceId;
         this.type = type;
@@ -81,17 +81,17 @@ public final class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecRespons
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

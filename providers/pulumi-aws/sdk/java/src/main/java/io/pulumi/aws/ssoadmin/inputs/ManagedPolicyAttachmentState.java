@@ -102,42 +102,42 @@ public final class ManagedPolicyAttachmentState extends io.pulumi.resources.Reso
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder setInstanceArn(@Nullable Input<String> instanceArn) {
+        public Builder instanceArn(@Nullable Input<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Input.ofNullable(instanceArn);
             return this;
         }
 
-        public Builder setManagedPolicyArn(@Nullable Input<String> managedPolicyArn) {
+        public Builder managedPolicyArn(@Nullable Input<String> managedPolicyArn) {
             this.managedPolicyArn = managedPolicyArn;
             return this;
         }
 
-        public Builder setManagedPolicyArn(@Nullable String managedPolicyArn) {
+        public Builder managedPolicyArn(@Nullable String managedPolicyArn) {
             this.managedPolicyArn = Input.ofNullable(managedPolicyArn);
             return this;
         }
 
-        public Builder setManagedPolicyName(@Nullable Input<String> managedPolicyName) {
+        public Builder managedPolicyName(@Nullable Input<String> managedPolicyName) {
             this.managedPolicyName = managedPolicyName;
             return this;
         }
 
-        public Builder setManagedPolicyName(@Nullable String managedPolicyName) {
+        public Builder managedPolicyName(@Nullable String managedPolicyName) {
             this.managedPolicyName = Input.ofNullable(managedPolicyName);
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable Input<String> permissionSetArn) {
+        public Builder permissionSetArn(@Nullable Input<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable String permissionSetArn) {
+        public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = Input.ofNullable(permissionSetArn);
             return this;
         }

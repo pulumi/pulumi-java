@@ -23,11 +23,11 @@ public final class GetSchedulingPolicyFairSharePolicy {
      */
     private final List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions;
 
-    @OutputCustomType.Constructor({"computeReservation","shareDecaySeconds","shareDistributions"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyFairSharePolicy(
-        Integer computeReservation,
-        Integer shareDecaySeconds,
-        List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        @OutputCustomType.Parameter("computeReservation") Integer computeReservation,
+        @OutputCustomType.Parameter("shareDecaySeconds") Integer shareDecaySeconds,
+        @OutputCustomType.Parameter("shareDistributions") List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
         this.computeReservation = computeReservation;
         this.shareDecaySeconds = shareDecaySeconds;
         this.shareDistributions = shareDistributions;
@@ -75,17 +75,17 @@ public final class GetSchedulingPolicyFairSharePolicy {
     	      this.shareDistributions = defaults.shareDistributions;
         }
 
-        public Builder setComputeReservation(Integer computeReservation) {
+        public Builder computeReservation(Integer computeReservation) {
             this.computeReservation = Objects.requireNonNull(computeReservation);
             return this;
         }
 
-        public Builder setShareDecaySeconds(Integer shareDecaySeconds) {
+        public Builder shareDecaySeconds(Integer shareDecaySeconds) {
             this.shareDecaySeconds = Objects.requireNonNull(shareDecaySeconds);
             return this;
         }
 
-        public Builder setShareDistributions(List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
+        public Builder shareDistributions(List<GetSchedulingPolicyFairSharePolicyShareDistribution> shareDistributions) {
             this.shareDistributions = Objects.requireNonNull(shareDistributions);
             return this;
         }

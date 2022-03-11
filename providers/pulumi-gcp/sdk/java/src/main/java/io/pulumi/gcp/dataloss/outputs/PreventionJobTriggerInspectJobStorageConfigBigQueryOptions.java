@@ -16,8 +16,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
      */
     private final PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference;
 
-    @OutputCustomType.Constructor({"tableReference"})
-    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
+    @OutputCustomType.Constructor
+    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(@OutputCustomType.Parameter("tableReference") PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
         this.tableReference = tableReference;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
     	      this.tableReference = defaults.tableReference;
         }
 
-        public Builder setTableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
+        public Builder tableReference(PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }

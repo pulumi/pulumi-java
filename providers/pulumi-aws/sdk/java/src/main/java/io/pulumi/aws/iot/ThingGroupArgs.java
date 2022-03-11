@@ -104,42 +104,42 @@ public final class ThingGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentGroupName(@Nullable Input<String> parentGroupName) {
+        public Builder parentGroupName(@Nullable Input<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
 
-        public Builder setParentGroupName(@Nullable String parentGroupName) {
+        public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = Input.ofNullable(parentGroupName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ThingGroupPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ThingGroupPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ThingGroupPropertiesArgs properties) {
+        public Builder properties(@Nullable ThingGroupPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

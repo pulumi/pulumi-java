@@ -36,13 +36,13 @@ public final class ExecutionConfigResponse {
      */
     private final String subnetworkUri;
 
-    @OutputCustomType.Constructor({"kmsKey","networkTags","networkUri","serviceAccount","subnetworkUri"})
+    @OutputCustomType.Constructor
     private ExecutionConfigResponse(
-        String kmsKey,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String subnetworkUri) {
+        @OutputCustomType.Parameter("kmsKey") String kmsKey,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetworkUri") String subnetworkUri) {
         this.kmsKey = kmsKey;
         this.networkTags = networkTags;
         this.networkUri = networkUri;
@@ -114,27 +114,27 @@ public final class ExecutionConfigResponse {
     	      this.subnetworkUri = defaults.subnetworkUri;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
-        public Builder setNetworkTags(List<String> networkTags) {
+        public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setSubnetworkUri(String subnetworkUri) {
+        public Builder subnetworkUri(String subnetworkUri) {
             this.subnetworkUri = Objects.requireNonNull(subnetworkUri);
             return this;
         }

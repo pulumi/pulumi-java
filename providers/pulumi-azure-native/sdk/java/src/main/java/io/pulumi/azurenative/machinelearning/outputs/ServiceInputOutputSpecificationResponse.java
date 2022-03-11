@@ -34,12 +34,12 @@ public final class ServiceInputOutputSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","properties","title","type"})
+    @OutputCustomType.Constructor
     private ServiceInputOutputSpecificationResponse(
-        @Nullable String description,
-        Map<String,TableSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") Map<String,TableSpecificationResponse> properties,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.properties = properties;
         this.title = title;
@@ -101,22 +101,22 @@ public final class ServiceInputOutputSpecificationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setProperties(Map<String,TableSpecificationResponse> properties) {
+        public Builder properties(Map<String,TableSpecificationResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

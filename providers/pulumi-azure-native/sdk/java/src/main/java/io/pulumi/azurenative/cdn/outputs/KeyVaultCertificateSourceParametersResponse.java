@@ -48,16 +48,16 @@ public final class KeyVaultCertificateSourceParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor({"deleteRule","odataType","resourceGroupName","secretName","secretVersion","subscriptionId","updateRule","vaultName"})
+    @OutputCustomType.Constructor
     private KeyVaultCertificateSourceParametersResponse(
-        String deleteRule,
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        @Nullable String secretVersion,
-        String subscriptionId,
-        String updateRule,
-        String vaultName) {
+        @OutputCustomType.Parameter("deleteRule") String deleteRule,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("secretVersion") @Nullable String secretVersion,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("updateRule") String updateRule,
+        @OutputCustomType.Parameter("vaultName") String vaultName) {
         this.deleteRule = deleteRule;
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;
@@ -155,42 +155,42 @@ public final class KeyVaultCertificateSourceParametersResponse {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setDeleteRule(String deleteRule) {
+        public Builder deleteRule(String deleteRule) {
             this.deleteRule = Objects.requireNonNull(deleteRule);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(@Nullable String secretVersion) {
+        public Builder secretVersion(@Nullable String secretVersion) {
             this.secretVersion = secretVersion;
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setUpdateRule(String updateRule) {
+        public Builder updateRule(String updateRule) {
             this.updateRule = Objects.requireNonNull(updateRule);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

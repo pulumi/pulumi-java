@@ -25,11 +25,11 @@ public final class VmImageResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"imageFamily","imageName","project"})
+    @OutputCustomType.Constructor
     private VmImageResponse(
-        String imageFamily,
-        String imageName,
-        String project) {
+        @OutputCustomType.Parameter("imageFamily") String imageFamily,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("project") String project) {
         this.imageFamily = imageFamily;
         this.imageName = imageName;
         this.project = project;
@@ -81,17 +81,17 @@ public final class VmImageResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setImageFamily(String imageFamily) {
+        public Builder imageFamily(String imageFamily) {
             this.imageFamily = Objects.requireNonNull(imageFamily);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

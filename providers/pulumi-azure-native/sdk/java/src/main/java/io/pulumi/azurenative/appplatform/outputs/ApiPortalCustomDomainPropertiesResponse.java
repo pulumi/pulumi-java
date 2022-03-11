@@ -17,8 +17,8 @@ public final class ApiPortalCustomDomainPropertiesResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"thumbprint"})
-    private ApiPortalCustomDomainPropertiesResponse(@Nullable String thumbprint) {
+    @OutputCustomType.Constructor
+    private ApiPortalCustomDomainPropertiesResponse(@OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.thumbprint = thumbprint;
     }
 
@@ -50,7 +50,7 @@ public final class ApiPortalCustomDomainPropertiesResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

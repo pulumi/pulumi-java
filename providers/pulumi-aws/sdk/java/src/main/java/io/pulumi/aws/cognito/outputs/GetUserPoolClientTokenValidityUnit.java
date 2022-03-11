@@ -25,11 +25,11 @@ public final class GetUserPoolClientTokenValidityUnit {
      */
     private final String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","idToken","refreshToken"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientTokenValidityUnit(
-        String accessToken,
-        String idToken,
-        String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("idToken") String idToken,
+        @OutputCustomType.Parameter("refreshToken") String refreshToken) {
         this.accessToken = accessToken;
         this.idToken = idToken;
         this.refreshToken = refreshToken;
@@ -81,17 +81,17 @@ public final class GetUserPoolClientTokenValidityUnit {
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setIdToken(String idToken) {
+        public Builder idToken(String idToken) {
             this.idToken = Objects.requireNonNull(idToken);
             return this;
         }
 
-        public Builder setRefreshToken(String refreshToken) {
+        public Builder refreshToken(String refreshToken) {
             this.refreshToken = Objects.requireNonNull(refreshToken);
             return this;
         }

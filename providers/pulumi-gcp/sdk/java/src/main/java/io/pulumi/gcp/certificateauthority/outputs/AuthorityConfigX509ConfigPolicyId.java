@@ -16,8 +16,8 @@ public final class AuthorityConfigX509ConfigPolicyId {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private AuthorityConfigX509ConfigPolicyId(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private AuthorityConfigX509ConfigPolicyId(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 
@@ -49,7 +49,7 @@ public final class AuthorityConfigX509ConfigPolicyId {
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder setObjectIdPaths(List<Integer> objectIdPaths) {
+        public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }

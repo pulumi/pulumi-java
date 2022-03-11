@@ -25,11 +25,11 @@ public final class PosixGroupResponse {
      */
     private final String systemId;
 
-    @OutputCustomType.Constructor({"gid","name","systemId"})
+    @OutputCustomType.Constructor
     private PosixGroupResponse(
-        String gid,
-        String name,
-        String systemId) {
+        @OutputCustomType.Parameter("gid") String gid,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemId") String systemId) {
         this.gid = gid;
         this.name = name;
         this.systemId = systemId;
@@ -81,17 +81,17 @@ public final class PosixGroupResponse {
     	      this.systemId = defaults.systemId;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSystemId(String systemId) {
+        public Builder systemId(String systemId) {
             this.systemId = Objects.requireNonNull(systemId);
             return this;
         }

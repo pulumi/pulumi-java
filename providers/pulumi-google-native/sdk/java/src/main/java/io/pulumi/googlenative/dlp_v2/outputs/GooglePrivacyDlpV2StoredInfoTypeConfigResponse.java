@@ -38,13 +38,13 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor({"description","dictionary","displayName","largeCustomDictionary","regex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2StoredInfoTypeConfigResponse(
-        String description,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String displayName,
-        GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
-        GooglePrivacyDlpV2RegexResponse regex) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("largeCustomDictionary") GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.description = description;
         this.dictionary = dictionary;
         this.displayName = displayName;
@@ -116,27 +116,27 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigResponse {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
+        public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
+        public Builder largeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse largeCustomDictionary) {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
 
-        public Builder setRegex(GooglePrivacyDlpV2RegexResponse regex) {
+        public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }

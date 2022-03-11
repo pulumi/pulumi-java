@@ -23,10 +23,10 @@ public final class JavaScriptFunctionBindingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"script","type"})
+    @OutputCustomType.Constructor
     private JavaScriptFunctionBindingResponse(
-        @Nullable String script,
-        String type) {
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("type") String type) {
         this.script = script;
         this.type = type;
     }
@@ -69,12 +69,12 @@ public final class JavaScriptFunctionBindingResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

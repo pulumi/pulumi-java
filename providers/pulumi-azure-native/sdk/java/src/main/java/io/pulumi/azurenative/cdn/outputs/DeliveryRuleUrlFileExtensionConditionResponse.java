@@ -22,10 +22,10 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
      */
     private final UrlFileExtensionMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleUrlFileExtensionConditionResponse(
-        String name,
-        UrlFileExtensionMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlFileExtensionMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class DeliveryRuleUrlFileExtensionConditionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(UrlFileExtensionMatchConditionParametersResponse parameters) {
+        public Builder parameters(UrlFileExtensionMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

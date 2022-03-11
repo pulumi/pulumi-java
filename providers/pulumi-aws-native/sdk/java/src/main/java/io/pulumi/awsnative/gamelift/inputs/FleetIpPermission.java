@@ -106,22 +106,22 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setProtocol(FleetIpPermissionProtocol protocol) {
+        public Builder protocol(FleetIpPermissionProtocol protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

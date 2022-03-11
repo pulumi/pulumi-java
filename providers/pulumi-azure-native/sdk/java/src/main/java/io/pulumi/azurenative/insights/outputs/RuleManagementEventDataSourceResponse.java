@@ -84,22 +84,22 @@ public final class RuleManagementEventDataSourceResponse {
      */
     private final @Nullable String subStatus;
 
-    @OutputCustomType.Constructor({"claims","eventName","eventSource","legacyResourceId","level","metricNamespace","odataType","operationName","resourceGroupName","resourceLocation","resourceProviderName","resourceUri","status","subStatus"})
+    @OutputCustomType.Constructor
     private RuleManagementEventDataSourceResponse(
-        @Nullable RuleManagementEventClaimsDataSourceResponse claims,
-        @Nullable String eventName,
-        @Nullable String eventSource,
-        @Nullable String legacyResourceId,
-        @Nullable String level,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String operationName,
-        @Nullable String resourceGroupName,
-        @Nullable String resourceLocation,
-        @Nullable String resourceProviderName,
-        @Nullable String resourceUri,
-        @Nullable String status,
-        @Nullable String subStatus) {
+        @OutputCustomType.Parameter("claims") @Nullable RuleManagementEventClaimsDataSourceResponse claims,
+        @OutputCustomType.Parameter("eventName") @Nullable String eventName,
+        @OutputCustomType.Parameter("eventSource") @Nullable String eventSource,
+        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceProviderName") @Nullable String resourceProviderName,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subStatus") @Nullable String subStatus) {
         this.claims = claims;
         this.eventName = eventName;
         this.eventSource = eventSource;
@@ -262,72 +262,72 @@ public final class RuleManagementEventDataSourceResponse {
     	      this.subStatus = defaults.subStatus;
         }
 
-        public Builder setClaims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
+        public Builder claims(@Nullable RuleManagementEventClaimsDataSourceResponse claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }
 
-        public Builder setEventSource(@Nullable String eventSource) {
+        public Builder eventSource(@Nullable String eventSource) {
             this.eventSource = eventSource;
             return this;
         }
 
-        public Builder setLegacyResourceId(@Nullable String legacyResourceId) {
+        public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceProviderName(@Nullable String resourceProviderName) {
+        public Builder resourceProviderName(@Nullable String resourceProviderName) {
             this.resourceProviderName = resourceProviderName;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubStatus(@Nullable String subStatus) {
+        public Builder subStatus(@Nullable String subStatus) {
             this.subStatus = subStatus;
             return this;
         }

@@ -91,23 +91,23 @@ public final class GetExperimentResult {
      */
     private final List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory;
 
-    @OutputCustomType.Constructor({"createTime","definition","description","displayName","endTime","experimentLength","lastUpdateTime","name","result","rolloutConfig","rolloutFailureReason","rolloutState","startTime","state","variantsHistory"})
+    @OutputCustomType.Constructor
     private GetExperimentResult(
-        String createTime,
-        GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
-        String description,
-        String displayName,
-        String endTime,
-        String experimentLength,
-        String lastUpdateTime,
-        String name,
-        GoogleCloudDialogflowCxV3ExperimentResultResponse result,
-        GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
-        String rolloutFailureReason,
-        GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
-        String startTime,
-        String state,
-        List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("definition") GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("experimentLength") String experimentLength,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("result") GoogleCloudDialogflowCxV3ExperimentResultResponse result,
+        @OutputCustomType.Parameter("rolloutConfig") GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig,
+        @OutputCustomType.Parameter("rolloutFailureReason") String rolloutFailureReason,
+        @OutputCustomType.Parameter("rolloutState") GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("variantsHistory") List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
         this.createTime = createTime;
         this.definition = definition;
         this.description = description;
@@ -279,77 +279,77 @@ public final class GetExperimentResult {
     	      this.variantsHistory = defaults.variantsHistory;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDefinition(GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition) {
+        public Builder definition(GoogleCloudDialogflowCxV3ExperimentDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setExperimentLength(String experimentLength) {
+        public Builder experimentLength(String experimentLength) {
             this.experimentLength = Objects.requireNonNull(experimentLength);
             return this;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResult(GoogleCloudDialogflowCxV3ExperimentResultResponse result) {
+        public Builder result(GoogleCloudDialogflowCxV3ExperimentResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setRolloutConfig(GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig) {
+        public Builder rolloutConfig(GoogleCloudDialogflowCxV3RolloutConfigResponse rolloutConfig) {
             this.rolloutConfig = Objects.requireNonNull(rolloutConfig);
             return this;
         }
 
-        public Builder setRolloutFailureReason(String rolloutFailureReason) {
+        public Builder rolloutFailureReason(String rolloutFailureReason) {
             this.rolloutFailureReason = Objects.requireNonNull(rolloutFailureReason);
             return this;
         }
 
-        public Builder setRolloutState(GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState) {
+        public Builder rolloutState(GoogleCloudDialogflowCxV3RolloutStateResponse rolloutState) {
             this.rolloutState = Objects.requireNonNull(rolloutState);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVariantsHistory(List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
+        public Builder variantsHistory(List<GoogleCloudDialogflowCxV3VariantsHistoryResponse> variantsHistory) {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }

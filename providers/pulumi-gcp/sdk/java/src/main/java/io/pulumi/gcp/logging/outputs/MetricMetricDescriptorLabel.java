@@ -30,11 +30,11 @@ public final class MetricMetricDescriptorLabel {
      */
     private final @Nullable String valueType;
 
-    @OutputCustomType.Constructor({"description","key","valueType"})
+    @OutputCustomType.Constructor
     private MetricMetricDescriptorLabel(
-        @Nullable String description,
-        String key,
-        @Nullable String valueType) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("valueType") @Nullable String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;
@@ -89,17 +89,17 @@ public final class MetricMetricDescriptorLabel {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValueType(@Nullable String valueType) {
+        public Builder valueType(@Nullable String valueType) {
             this.valueType = valueType;
             return this;
         }

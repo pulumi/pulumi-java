@@ -37,13 +37,13 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
      */
     private final String integrationType;
 
-    @OutputCustomType.Constructor({"allowAllDomains","allowAmpTraffic","allowedDomains","challengeSecurityPreference","integrationType"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse(
-        Boolean allowAllDomains,
-        Boolean allowAmpTraffic,
-        List<String> allowedDomains,
-        String challengeSecurityPreference,
-        String integrationType) {
+        @OutputCustomType.Parameter("allowAllDomains") Boolean allowAllDomains,
+        @OutputCustomType.Parameter("allowAmpTraffic") Boolean allowAmpTraffic,
+        @OutputCustomType.Parameter("allowedDomains") List<String> allowedDomains,
+        @OutputCustomType.Parameter("challengeSecurityPreference") String challengeSecurityPreference,
+        @OutputCustomType.Parameter("integrationType") String integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;
@@ -115,27 +115,27 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettingsResponse {
     	      this.integrationType = defaults.integrationType;
         }
 
-        public Builder setAllowAllDomains(Boolean allowAllDomains) {
+        public Builder allowAllDomains(Boolean allowAllDomains) {
             this.allowAllDomains = Objects.requireNonNull(allowAllDomains);
             return this;
         }
 
-        public Builder setAllowAmpTraffic(Boolean allowAmpTraffic) {
+        public Builder allowAmpTraffic(Boolean allowAmpTraffic) {
             this.allowAmpTraffic = Objects.requireNonNull(allowAmpTraffic);
             return this;
         }
 
-        public Builder setAllowedDomains(List<String> allowedDomains) {
+        public Builder allowedDomains(List<String> allowedDomains) {
             this.allowedDomains = Objects.requireNonNull(allowedDomains);
             return this;
         }
 
-        public Builder setChallengeSecurityPreference(String challengeSecurityPreference) {
+        public Builder challengeSecurityPreference(String challengeSecurityPreference) {
             this.challengeSecurityPreference = Objects.requireNonNull(challengeSecurityPreference);
             return this;
         }
 
-        public Builder setIntegrationType(String integrationType) {
+        public Builder integrationType(String integrationType) {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }

@@ -23,10 +23,10 @@ public final class CustomDnsConfigPropertiesFormatResponse {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor({"fqdn","ipAddresses"})
+    @OutputCustomType.Constructor
     private CustomDnsConfigPropertiesFormatResponse(
-        @Nullable String fqdn,
-        @Nullable List<String> ipAddresses) {
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.fqdn = fqdn;
         this.ipAddresses = ipAddresses;
     }
@@ -68,12 +68,12 @@ public final class CustomDnsConfigPropertiesFormatResponse {
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }

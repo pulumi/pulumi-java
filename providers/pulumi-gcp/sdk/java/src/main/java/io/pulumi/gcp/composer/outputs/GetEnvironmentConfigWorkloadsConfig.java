@@ -16,11 +16,11 @@ public final class GetEnvironmentConfigWorkloadsConfig {
     private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
     private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
-    @OutputCustomType.Constructor({"schedulers","webServers","workers"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfig(
-        List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
-        List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
-        List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
+        @OutputCustomType.Parameter("schedulers") List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers,
+        @OutputCustomType.Parameter("webServers") List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers,
+        @OutputCustomType.Parameter("workers") List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
         this.schedulers = schedulers;
         this.webServers = webServers;
         this.workers = workers;
@@ -60,17 +60,17 @@ public final class GetEnvironmentConfigWorkloadsConfig {
     	      this.workers = defaults.workers;
         }
 
-        public Builder setSchedulers(List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers) {
+        public Builder schedulers(List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers) {
             this.schedulers = Objects.requireNonNull(schedulers);
             return this;
         }
 
-        public Builder setWebServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
+        public Builder webServers(List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers) {
             this.webServers = Objects.requireNonNull(webServers);
             return this;
         }
 
-        public Builder setWorkers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
+        public Builder workers(List<GetEnvironmentConfigWorkloadsConfigWorker> workers) {
             this.workers = Objects.requireNonNull(workers);
             return this;
         }

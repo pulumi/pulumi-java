@@ -31,12 +31,12 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
      */
     private final Double ts;
 
-    @OutputCustomType.Constructor({"etag","id","rid","ts"})
+    @OutputCustomType.Constructor
     private GremlinDatabaseGetPropertiesResponseResource(
-        String etag,
-        String id,
-        String rid,
-        Double ts) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts) {
         this.etag = etag;
         this.id = id;
         this.rid = rid;
@@ -98,22 +98,22 @@ public final class GremlinDatabaseGetPropertiesResponseResource {
     	      this.ts = defaults.ts;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }

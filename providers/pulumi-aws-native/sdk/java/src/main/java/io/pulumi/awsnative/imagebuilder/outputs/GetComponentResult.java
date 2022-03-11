@@ -29,11 +29,11 @@ public final class GetComponentResult {
      */
     private final @Nullable ComponentType type;
 
-    @OutputCustomType.Constructor({"arn","encrypted","type"})
+    @OutputCustomType.Constructor
     private GetComponentResult(
-        @Nullable String arn,
-        @Nullable Boolean encrypted,
-        @Nullable ComponentType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("type") @Nullable ComponentType type) {
         this.arn = arn;
         this.encrypted = encrypted;
         this.type = type;
@@ -85,17 +85,17 @@ public final class GetComponentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setType(@Nullable ComponentType type) {
+        public Builder type(@Nullable ComponentType type) {
             this.type = type;
             return this;
         }

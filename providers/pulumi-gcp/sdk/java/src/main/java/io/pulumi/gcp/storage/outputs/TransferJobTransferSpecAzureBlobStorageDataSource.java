@@ -33,12 +33,12 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecAzureBlobStorageDataSource(
-        TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
-        String container,
-        @Nullable String path,
-        String storageAccount) {
+        @OutputCustomType.Parameter("azureCredentials") TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;
@@ -100,22 +100,22 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setAzureCredentials(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials) {
+        public Builder azureCredentials(TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials) {
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setStorageAccount(String storageAccount) {
+        public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }

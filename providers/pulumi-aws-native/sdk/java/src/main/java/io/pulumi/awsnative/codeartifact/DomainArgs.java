@@ -89,32 +89,32 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Input<Object> permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = Input.ofNullable(permissionsPolicyDocument);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DomainTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTagArgs> tags) {
+        public Builder tags(@Nullable List<DomainTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

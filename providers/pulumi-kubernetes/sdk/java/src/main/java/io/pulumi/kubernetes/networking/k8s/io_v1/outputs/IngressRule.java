@@ -26,10 +26,10 @@ public final class IngressRule {
     private final @Nullable String host;
     private final @Nullable HTTPIngressRuleValue http;
 
-    @OutputCustomType.Constructor({"host","http"})
+    @OutputCustomType.Constructor
     private IngressRule(
-        @Nullable String host,
-        @Nullable HTTPIngressRuleValue http) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("http") @Nullable HTTPIngressRuleValue http) {
         this.host = host;
         this.http = http;
     }
@@ -74,12 +74,12 @@ public final class IngressRule {
     	      this.http = defaults.http;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHttp(@Nullable HTTPIngressRuleValue http) {
+        public Builder http(@Nullable HTTPIngressRuleValue http) {
             this.http = http;
             return this;
         }

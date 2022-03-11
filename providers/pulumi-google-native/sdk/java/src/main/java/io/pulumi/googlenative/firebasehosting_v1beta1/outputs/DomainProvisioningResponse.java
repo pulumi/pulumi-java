@@ -53,16 +53,16 @@ public final class DomainProvisioningResponse {
      */
     private final List<String> expectedIps;
 
-    @OutputCustomType.Constructor({"certChallengeDiscoveredTxt","certChallengeDns","certChallengeHttp","certStatus","discoveredIps","dnsFetchTime","dnsStatus","expectedIps"})
+    @OutputCustomType.Constructor
     private DomainProvisioningResponse(
-        List<String> certChallengeDiscoveredTxt,
-        CertDnsChallengeResponse certChallengeDns,
-        CertHttpChallengeResponse certChallengeHttp,
-        String certStatus,
-        List<String> discoveredIps,
-        String dnsFetchTime,
-        String dnsStatus,
-        List<String> expectedIps) {
+        @OutputCustomType.Parameter("certChallengeDiscoveredTxt") List<String> certChallengeDiscoveredTxt,
+        @OutputCustomType.Parameter("certChallengeDns") CertDnsChallengeResponse certChallengeDns,
+        @OutputCustomType.Parameter("certChallengeHttp") CertHttpChallengeResponse certChallengeHttp,
+        @OutputCustomType.Parameter("certStatus") String certStatus,
+        @OutputCustomType.Parameter("discoveredIps") List<String> discoveredIps,
+        @OutputCustomType.Parameter("dnsFetchTime") String dnsFetchTime,
+        @OutputCustomType.Parameter("dnsStatus") String dnsStatus,
+        @OutputCustomType.Parameter("expectedIps") List<String> expectedIps) {
         this.certChallengeDiscoveredTxt = certChallengeDiscoveredTxt;
         this.certChallengeDns = certChallengeDns;
         this.certChallengeHttp = certChallengeHttp;
@@ -164,42 +164,42 @@ public final class DomainProvisioningResponse {
     	      this.expectedIps = defaults.expectedIps;
         }
 
-        public Builder setCertChallengeDiscoveredTxt(List<String> certChallengeDiscoveredTxt) {
+        public Builder certChallengeDiscoveredTxt(List<String> certChallengeDiscoveredTxt) {
             this.certChallengeDiscoveredTxt = Objects.requireNonNull(certChallengeDiscoveredTxt);
             return this;
         }
 
-        public Builder setCertChallengeDns(CertDnsChallengeResponse certChallengeDns) {
+        public Builder certChallengeDns(CertDnsChallengeResponse certChallengeDns) {
             this.certChallengeDns = Objects.requireNonNull(certChallengeDns);
             return this;
         }
 
-        public Builder setCertChallengeHttp(CertHttpChallengeResponse certChallengeHttp) {
+        public Builder certChallengeHttp(CertHttpChallengeResponse certChallengeHttp) {
             this.certChallengeHttp = Objects.requireNonNull(certChallengeHttp);
             return this;
         }
 
-        public Builder setCertStatus(String certStatus) {
+        public Builder certStatus(String certStatus) {
             this.certStatus = Objects.requireNonNull(certStatus);
             return this;
         }
 
-        public Builder setDiscoveredIps(List<String> discoveredIps) {
+        public Builder discoveredIps(List<String> discoveredIps) {
             this.discoveredIps = Objects.requireNonNull(discoveredIps);
             return this;
         }
 
-        public Builder setDnsFetchTime(String dnsFetchTime) {
+        public Builder dnsFetchTime(String dnsFetchTime) {
             this.dnsFetchTime = Objects.requireNonNull(dnsFetchTime);
             return this;
         }
 
-        public Builder setDnsStatus(String dnsStatus) {
+        public Builder dnsStatus(String dnsStatus) {
             this.dnsStatus = Objects.requireNonNull(dnsStatus);
             return this;
         }
 
-        public Builder setExpectedIps(List<String> expectedIps) {
+        public Builder expectedIps(List<String> expectedIps) {
             this.expectedIps = Objects.requireNonNull(expectedIps);
             return this;
         }

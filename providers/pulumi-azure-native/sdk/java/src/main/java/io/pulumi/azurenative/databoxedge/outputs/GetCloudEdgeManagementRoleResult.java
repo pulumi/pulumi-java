@@ -53,16 +53,16 @@ public final class GetCloudEdgeManagementRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"edgeProfile","id","kind","localManagementStatus","name","roleStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCloudEdgeManagementRoleResult(
-        EdgeProfileResponse edgeProfile,
-        String id,
-        String kind,
-        String localManagementStatus,
-        String name,
-        String roleStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("edgeProfile") EdgeProfileResponse edgeProfile,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localManagementStatus") String localManagementStatus,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.edgeProfile = edgeProfile;
         this.id = id;
         this.kind = kind;
@@ -165,42 +165,42 @@ public final class GetCloudEdgeManagementRoleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEdgeProfile(EdgeProfileResponse edgeProfile) {
+        public Builder edgeProfile(EdgeProfileResponse edgeProfile) {
             this.edgeProfile = Objects.requireNonNull(edgeProfile);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocalManagementStatus(String localManagementStatus) {
+        public Builder localManagementStatus(String localManagementStatus) {
             this.localManagementStatus = Objects.requireNonNull(localManagementStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoleStatus(String roleStatus) {
+        public Builder roleStatus(String roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -21,10 +21,10 @@ public final class SegmentSettingsResponse {
      */
     private final String segmentDuration;
 
-    @OutputCustomType.Constructor({"individualSegments","segmentDuration"})
+    @OutputCustomType.Constructor
     private SegmentSettingsResponse(
-        Boolean individualSegments,
-        String segmentDuration) {
+        @OutputCustomType.Parameter("individualSegments") Boolean individualSegments,
+        @OutputCustomType.Parameter("segmentDuration") String segmentDuration) {
         this.individualSegments = individualSegments;
         this.segmentDuration = segmentDuration;
     }
@@ -66,12 +66,12 @@ public final class SegmentSettingsResponse {
     	      this.segmentDuration = defaults.segmentDuration;
         }
 
-        public Builder setIndividualSegments(Boolean individualSegments) {
+        public Builder individualSegments(Boolean individualSegments) {
             this.individualSegments = Objects.requireNonNull(individualSegments);
             return this;
         }
 
-        public Builder setSegmentDuration(String segmentDuration) {
+        public Builder segmentDuration(String segmentDuration) {
             this.segmentDuration = Objects.requireNonNull(segmentDuration);
             return this;
         }

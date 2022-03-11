@@ -204,102 +204,102 @@ public final class IdentitySourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setBaseGroupDN(@Nullable Input<String> baseGroupDN) {
+        public Builder baseGroupDN(@Nullable Input<String> baseGroupDN) {
             this.baseGroupDN = baseGroupDN;
             return this;
         }
 
-        public Builder setBaseGroupDN(@Nullable String baseGroupDN) {
+        public Builder baseGroupDN(@Nullable String baseGroupDN) {
             this.baseGroupDN = Input.ofNullable(baseGroupDN);
             return this;
         }
 
-        public Builder setBaseUserDN(@Nullable Input<String> baseUserDN) {
+        public Builder baseUserDN(@Nullable Input<String> baseUserDN) {
             this.baseUserDN = baseUserDN;
             return this;
         }
 
-        public Builder setBaseUserDN(@Nullable String baseUserDN) {
+        public Builder baseUserDN(@Nullable String baseUserDN) {
             this.baseUserDN = Input.ofNullable(baseUserDN);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPrimaryServer(@Nullable Input<String> primaryServer) {
+        public Builder primaryServer(@Nullable Input<String> primaryServer) {
             this.primaryServer = primaryServer;
             return this;
         }
 
-        public Builder setPrimaryServer(@Nullable String primaryServer) {
+        public Builder primaryServer(@Nullable String primaryServer) {
             this.primaryServer = Input.ofNullable(primaryServer);
             return this;
         }
 
-        public Builder setSecondaryServer(@Nullable Input<String> secondaryServer) {
+        public Builder secondaryServer(@Nullable Input<String> secondaryServer) {
             this.secondaryServer = secondaryServer;
             return this;
         }
 
-        public Builder setSecondaryServer(@Nullable String secondaryServer) {
+        public Builder secondaryServer(@Nullable String secondaryServer) {
             this.secondaryServer = Input.ofNullable(secondaryServer);
             return this;
         }
 
-        public Builder setSsl(@Nullable Input<Either<String,SslEnum>> ssl) {
+        public Builder ssl(@Nullable Input<Either<String,SslEnum>> ssl) {
             this.ssl = ssl;
             return this;
         }
 
-        public Builder setSsl(@Nullable Either<String,SslEnum> ssl) {
+        public Builder ssl(@Nullable Either<String,SslEnum> ssl) {
             this.ssl = Input.ofNullable(ssl);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

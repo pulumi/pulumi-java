@@ -23,10 +23,10 @@ public final class RuntimeClassStrategyOptions {
      */
     private final @Nullable String defaultRuntimeClassName;
 
-    @OutputCustomType.Constructor({"allowedRuntimeClassNames","defaultRuntimeClassName"})
+    @OutputCustomType.Constructor
     private RuntimeClassStrategyOptions(
-        List<String> allowedRuntimeClassNames,
-        @Nullable String defaultRuntimeClassName) {
+        @OutputCustomType.Parameter("allowedRuntimeClassNames") List<String> allowedRuntimeClassNames,
+        @OutputCustomType.Parameter("defaultRuntimeClassName") @Nullable String defaultRuntimeClassName) {
         this.allowedRuntimeClassNames = allowedRuntimeClassNames;
         this.defaultRuntimeClassName = defaultRuntimeClassName;
     }
@@ -68,12 +68,12 @@ public final class RuntimeClassStrategyOptions {
     	      this.defaultRuntimeClassName = defaults.defaultRuntimeClassName;
         }
 
-        public Builder setAllowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
+        public Builder allowedRuntimeClassNames(List<String> allowedRuntimeClassNames) {
             this.allowedRuntimeClassNames = Objects.requireNonNull(allowedRuntimeClassNames);
             return this;
         }
 
-        public Builder setDefaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
+        public Builder defaultRuntimeClassName(@Nullable String defaultRuntimeClassName) {
             this.defaultRuntimeClassName = defaultRuntimeClassName;
             return this;
         }

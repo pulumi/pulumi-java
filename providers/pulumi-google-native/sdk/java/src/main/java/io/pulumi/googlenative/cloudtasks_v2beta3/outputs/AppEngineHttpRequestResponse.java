@@ -37,13 +37,13 @@ public final class AppEngineHttpRequestResponse {
      */
     private final String relativeUri;
 
-    @OutputCustomType.Constructor({"appEngineRouting","body","headers","httpMethod","relativeUri"})
+    @OutputCustomType.Constructor
     private AppEngineHttpRequestResponse(
-        AppEngineRoutingResponse appEngineRouting,
-        String body,
-        Map<String,String> headers,
-        String httpMethod,
-        String relativeUri) {
+        @OutputCustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("relativeUri") String relativeUri) {
         this.appEngineRouting = appEngineRouting;
         this.body = body;
         this.headers = headers;
@@ -115,27 +115,27 @@ public final class AppEngineHttpRequestResponse {
     	      this.relativeUri = defaults.relativeUri;
         }
 
-        public Builder setAppEngineRouting(AppEngineRoutingResponse appEngineRouting) {
+        public Builder appEngineRouting(AppEngineRoutingResponse appEngineRouting) {
             this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setRelativeUri(String relativeUri) {
+        public Builder relativeUri(String relativeUri) {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }

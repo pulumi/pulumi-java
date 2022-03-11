@@ -128,51 +128,51 @@ public final class JSONSchemaProps {
      */
     private final @Nullable Boolean x_kubernetes_preserve_unknown_fields;
 
-    @OutputCustomType.Constructor({"$ref","$schema","additionalItems","additionalProperties","allOf","anyOf","$default","definitions","dependencies","description","$enum","example","exclusiveMaximum","exclusiveMinimum","externalDocs","format","id","items","maxItems","maxLength","maxProperties","maximum","minItems","minLength","minProperties","minimum","multipleOf","not","nullable","oneOf","pattern","patternProperties","properties","required","title","type","uniqueItems","x_kubernetes_embedded_resource","x_kubernetes_int_or_string","x_kubernetes_list_map_keys","x_kubernetes_list_type","x_kubernetes_map_type","x_kubernetes_preserve_unknown_fields"})
+    @OutputCustomType.Constructor
     private JSONSchemaProps(
-        @Nullable String $ref,
-        @Nullable String $schema,
-        @Nullable Either<JSONSchemaProps,Boolean> additionalItems,
-        @Nullable Either<JSONSchemaProps,Boolean> additionalProperties,
-        @Nullable List<JSONSchemaProps> allOf,
-        @Nullable List<JSONSchemaProps> anyOf,
-        @Nullable JsonElement $default,
-        @Nullable Map<String,JSONSchemaProps> definitions,
-        @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies,
-        @Nullable String description,
-        @Nullable List<JsonElement> $enum,
-        @Nullable JsonElement example,
-        @Nullable Boolean exclusiveMaximum,
-        @Nullable Boolean exclusiveMinimum,
-        @Nullable ExternalDocumentation externalDocs,
-        @Nullable String format,
-        @Nullable String id,
-        @Nullable Either<JSONSchemaProps,List<JsonElement>> items,
-        @Nullable Integer maxItems,
-        @Nullable Integer maxLength,
-        @Nullable Integer maxProperties,
-        @Nullable Double maximum,
-        @Nullable Integer minItems,
-        @Nullable Integer minLength,
-        @Nullable Integer minProperties,
-        @Nullable Double minimum,
-        @Nullable Double multipleOf,
-        @Nullable JSONSchemaProps not,
-        @Nullable Boolean nullable,
-        @Nullable List<JSONSchemaProps> oneOf,
-        @Nullable String pattern,
-        @Nullable Map<String,JSONSchemaProps> patternProperties,
-        @Nullable Map<String,JSONSchemaProps> properties,
-        @Nullable List<String> required,
-        @Nullable String title,
-        @Nullable String type,
-        @Nullable Boolean uniqueItems,
-        @Nullable Boolean x_kubernetes_embedded_resource,
-        @Nullable Boolean x_kubernetes_int_or_string,
-        @Nullable List<String> x_kubernetes_list_map_keys,
-        @Nullable String x_kubernetes_list_type,
-        @Nullable String x_kubernetes_map_type,
-        @Nullable Boolean x_kubernetes_preserve_unknown_fields) {
+        @OutputCustomType.Parameter("$ref") @Nullable String $ref,
+        @OutputCustomType.Parameter("$schema") @Nullable String $schema,
+        @OutputCustomType.Parameter("additionalItems") @Nullable Either<JSONSchemaProps,Boolean> additionalItems,
+        @OutputCustomType.Parameter("additionalProperties") @Nullable Either<JSONSchemaProps,Boolean> additionalProperties,
+        @OutputCustomType.Parameter("allOf") @Nullable List<JSONSchemaProps> allOf,
+        @OutputCustomType.Parameter("anyOf") @Nullable List<JSONSchemaProps> anyOf,
+        @OutputCustomType.Parameter("default") @Nullable JsonElement $default,
+        @OutputCustomType.Parameter("definitions") @Nullable Map<String,JSONSchemaProps> definitions,
+        @OutputCustomType.Parameter("dependencies") @Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enum") @Nullable List<JsonElement> $enum,
+        @OutputCustomType.Parameter("example") @Nullable JsonElement example,
+        @OutputCustomType.Parameter("exclusiveMaximum") @Nullable Boolean exclusiveMaximum,
+        @OutputCustomType.Parameter("exclusiveMinimum") @Nullable Boolean exclusiveMinimum,
+        @OutputCustomType.Parameter("externalDocs") @Nullable ExternalDocumentation externalDocs,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("items") @Nullable Either<JSONSchemaProps,List<JsonElement>> items,
+        @OutputCustomType.Parameter("maxItems") @Nullable Integer maxItems,
+        @OutputCustomType.Parameter("maxLength") @Nullable Integer maxLength,
+        @OutputCustomType.Parameter("maxProperties") @Nullable Integer maxProperties,
+        @OutputCustomType.Parameter("maximum") @Nullable Double maximum,
+        @OutputCustomType.Parameter("minItems") @Nullable Integer minItems,
+        @OutputCustomType.Parameter("minLength") @Nullable Integer minLength,
+        @OutputCustomType.Parameter("minProperties") @Nullable Integer minProperties,
+        @OutputCustomType.Parameter("minimum") @Nullable Double minimum,
+        @OutputCustomType.Parameter("multipleOf") @Nullable Double multipleOf,
+        @OutputCustomType.Parameter("not") @Nullable JSONSchemaProps not,
+        @OutputCustomType.Parameter("nullable") @Nullable Boolean nullable,
+        @OutputCustomType.Parameter("oneOf") @Nullable List<JSONSchemaProps> oneOf,
+        @OutputCustomType.Parameter("pattern") @Nullable String pattern,
+        @OutputCustomType.Parameter("patternProperties") @Nullable Map<String,JSONSchemaProps> patternProperties,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,JSONSchemaProps> properties,
+        @OutputCustomType.Parameter("required") @Nullable List<String> required,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uniqueItems") @Nullable Boolean uniqueItems,
+        @OutputCustomType.Parameter("x_kubernetes_embedded_resource") @Nullable Boolean x_kubernetes_embedded_resource,
+        @OutputCustomType.Parameter("x_kubernetes_int_or_string") @Nullable Boolean x_kubernetes_int_or_string,
+        @OutputCustomType.Parameter("x_kubernetes_list_map_keys") @Nullable List<String> x_kubernetes_list_map_keys,
+        @OutputCustomType.Parameter("x_kubernetes_list_type") @Nullable String x_kubernetes_list_type,
+        @OutputCustomType.Parameter("x_kubernetes_map_type") @Nullable String x_kubernetes_map_type,
+        @OutputCustomType.Parameter("x_kubernetes_preserve_unknown_fields") @Nullable Boolean x_kubernetes_preserve_unknown_fields) {
         this.$ref = $ref;
         this.$schema = $schema;
         this.additionalItems = additionalItems;
@@ -517,217 +517,217 @@ public final class JSONSchemaProps {
     	      this.x_kubernetes_preserve_unknown_fields = defaults.x_kubernetes_preserve_unknown_fields;
         }
 
-        public Builder set$ref(@Nullable String $ref) {
+        public Builder $ref(@Nullable String $ref) {
             this.$ref = $ref;
             return this;
         }
 
-        public Builder set$schema(@Nullable String $schema) {
+        public Builder $schema(@Nullable String $schema) {
             this.$schema = $schema;
             return this;
         }
 
-        public Builder setAdditionalItems(@Nullable Either<JSONSchemaProps,Boolean> additionalItems) {
+        public Builder additionalItems(@Nullable Either<JSONSchemaProps,Boolean> additionalItems) {
             this.additionalItems = additionalItems;
             return this;
         }
 
-        public Builder setAdditionalProperties(@Nullable Either<JSONSchemaProps,Boolean> additionalProperties) {
+        public Builder additionalProperties(@Nullable Either<JSONSchemaProps,Boolean> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setAllOf(@Nullable List<JSONSchemaProps> allOf) {
+        public Builder allOf(@Nullable List<JSONSchemaProps> allOf) {
             this.allOf = allOf;
             return this;
         }
 
-        public Builder setAnyOf(@Nullable List<JSONSchemaProps> anyOf) {
+        public Builder anyOf(@Nullable List<JSONSchemaProps> anyOf) {
             this.anyOf = anyOf;
             return this;
         }
 
-        public Builder set$default(@Nullable JsonElement $default) {
+        public Builder $default(@Nullable JsonElement $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setDefinitions(@Nullable Map<String,JSONSchemaProps> definitions) {
+        public Builder definitions(@Nullable Map<String,JSONSchemaProps> definitions) {
             this.definitions = definitions;
             return this;
         }
 
-        public Builder setDependencies(@Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies) {
+        public Builder dependencies(@Nullable Map<String,Either<JSONSchemaProps,List<String>>> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder set$enum(@Nullable List<JsonElement> $enum) {
+        public Builder $enum(@Nullable List<JsonElement> $enum) {
             this.$enum = $enum;
             return this;
         }
 
-        public Builder setExample(@Nullable JsonElement example) {
+        public Builder example(@Nullable JsonElement example) {
             this.example = example;
             return this;
         }
 
-        public Builder setExclusiveMaximum(@Nullable Boolean exclusiveMaximum) {
+        public Builder exclusiveMaximum(@Nullable Boolean exclusiveMaximum) {
             this.exclusiveMaximum = exclusiveMaximum;
             return this;
         }
 
-        public Builder setExclusiveMinimum(@Nullable Boolean exclusiveMinimum) {
+        public Builder exclusiveMinimum(@Nullable Boolean exclusiveMinimum) {
             this.exclusiveMinimum = exclusiveMinimum;
             return this;
         }
 
-        public Builder setExternalDocs(@Nullable ExternalDocumentation externalDocs) {
+        public Builder externalDocs(@Nullable ExternalDocumentation externalDocs) {
             this.externalDocs = externalDocs;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setItems(@Nullable Either<JSONSchemaProps,List<JsonElement>> items) {
+        public Builder items(@Nullable Either<JSONSchemaProps,List<JsonElement>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setMaxItems(@Nullable Integer maxItems) {
+        public Builder maxItems(@Nullable Integer maxItems) {
             this.maxItems = maxItems;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Integer maxLength) {
+        public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMaxProperties(@Nullable Integer maxProperties) {
+        public Builder maxProperties(@Nullable Integer maxProperties) {
             this.maxProperties = maxProperties;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Double maximum) {
+        public Builder maximum(@Nullable Double maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMinItems(@Nullable Integer minItems) {
+        public Builder minItems(@Nullable Integer minItems) {
             this.minItems = minItems;
             return this;
         }
 
-        public Builder setMinLength(@Nullable Integer minLength) {
+        public Builder minLength(@Nullable Integer minLength) {
             this.minLength = minLength;
             return this;
         }
 
-        public Builder setMinProperties(@Nullable Integer minProperties) {
+        public Builder minProperties(@Nullable Integer minProperties) {
             this.minProperties = minProperties;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Double minimum) {
+        public Builder minimum(@Nullable Double minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setMultipleOf(@Nullable Double multipleOf) {
+        public Builder multipleOf(@Nullable Double multipleOf) {
             this.multipleOf = multipleOf;
             return this;
         }
 
-        public Builder setNot(@Nullable JSONSchemaProps not) {
+        public Builder not(@Nullable JSONSchemaProps not) {
             this.not = not;
             return this;
         }
 
-        public Builder setNullable(@Nullable Boolean nullable) {
+        public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = nullable;
             return this;
         }
 
-        public Builder setOneOf(@Nullable List<JSONSchemaProps> oneOf) {
+        public Builder oneOf(@Nullable List<JSONSchemaProps> oneOf) {
             this.oneOf = oneOf;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPatternProperties(@Nullable Map<String,JSONSchemaProps> patternProperties) {
+        public Builder patternProperties(@Nullable Map<String,JSONSchemaProps> patternProperties) {
             this.patternProperties = patternProperties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,JSONSchemaProps> properties) {
+        public Builder properties(@Nullable Map<String,JSONSchemaProps> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setRequired(@Nullable List<String> required) {
+        public Builder required(@Nullable List<String> required) {
             this.required = required;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUniqueItems(@Nullable Boolean uniqueItems) {
+        public Builder uniqueItems(@Nullable Boolean uniqueItems) {
             this.uniqueItems = uniqueItems;
             return this;
         }
 
-        public Builder setX_kubernetes_embedded_resource(@Nullable Boolean x_kubernetes_embedded_resource) {
+        public Builder x_kubernetes_embedded_resource(@Nullable Boolean x_kubernetes_embedded_resource) {
             this.x_kubernetes_embedded_resource = x_kubernetes_embedded_resource;
             return this;
         }
 
-        public Builder setX_kubernetes_int_or_string(@Nullable Boolean x_kubernetes_int_or_string) {
+        public Builder x_kubernetes_int_or_string(@Nullable Boolean x_kubernetes_int_or_string) {
             this.x_kubernetes_int_or_string = x_kubernetes_int_or_string;
             return this;
         }
 
-        public Builder setX_kubernetes_list_map_keys(@Nullable List<String> x_kubernetes_list_map_keys) {
+        public Builder x_kubernetes_list_map_keys(@Nullable List<String> x_kubernetes_list_map_keys) {
             this.x_kubernetes_list_map_keys = x_kubernetes_list_map_keys;
             return this;
         }
 
-        public Builder setX_kubernetes_list_type(@Nullable String x_kubernetes_list_type) {
+        public Builder x_kubernetes_list_type(@Nullable String x_kubernetes_list_type) {
             this.x_kubernetes_list_type = x_kubernetes_list_type;
             return this;
         }
 
-        public Builder setX_kubernetes_map_type(@Nullable String x_kubernetes_map_type) {
+        public Builder x_kubernetes_map_type(@Nullable String x_kubernetes_map_type) {
             this.x_kubernetes_map_type = x_kubernetes_map_type;
             return this;
         }
 
-        public Builder setX_kubernetes_preserve_unknown_fields(@Nullable Boolean x_kubernetes_preserve_unknown_fields) {
+        public Builder x_kubernetes_preserve_unknown_fields(@Nullable Boolean x_kubernetes_preserve_unknown_fields) {
             this.x_kubernetes_preserve_unknown_fields = x_kubernetes_preserve_unknown_fields;
             return this;
         }

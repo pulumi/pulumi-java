@@ -60,18 +60,18 @@ public final class GetVpcAttachmentResult {
      */
     private final String vpcOwnerId;
 
-    @OutputCustomType.Constructor({"applianceModeSupport","dnsSupport","filters","id","ipv6Support","subnetIds","tags","transitGatewayId","vpcId","vpcOwnerId"})
+    @OutputCustomType.Constructor
     private GetVpcAttachmentResult(
-        String applianceModeSupport,
-        String dnsSupport,
-        @Nullable List<GetVpcAttachmentFilter> filters,
-        String id,
-        String ipv6Support,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        String transitGatewayId,
-        String vpcId,
-        String vpcOwnerId) {
+        @OutputCustomType.Parameter("applianceModeSupport") String applianceModeSupport,
+        @OutputCustomType.Parameter("dnsSupport") String dnsSupport,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipv6Support") String ipv6Support,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("vpcOwnerId") String vpcOwnerId) {
         this.applianceModeSupport = applianceModeSupport;
         this.dnsSupport = dnsSupport;
         this.filters = filters;
@@ -189,52 +189,52 @@ public final class GetVpcAttachmentResult {
     	      this.vpcOwnerId = defaults.vpcOwnerId;
         }
 
-        public Builder setApplianceModeSupport(String applianceModeSupport) {
+        public Builder applianceModeSupport(String applianceModeSupport) {
             this.applianceModeSupport = Objects.requireNonNull(applianceModeSupport);
             return this;
         }
 
-        public Builder setDnsSupport(String dnsSupport) {
+        public Builder dnsSupport(String dnsSupport) {
             this.dnsSupport = Objects.requireNonNull(dnsSupport);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcAttachmentFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpv6Support(String ipv6Support) {
+        public Builder ipv6Support(String ipv6Support) {
             this.ipv6Support = Objects.requireNonNull(ipv6Support);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcOwnerId(String vpcOwnerId) {
+        public Builder vpcOwnerId(String vpcOwnerId) {
             this.vpcOwnerId = Objects.requireNonNull(vpcOwnerId);
             return this;
         }

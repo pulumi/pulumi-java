@@ -141,72 +141,72 @@ public final class AutoscalingPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setBasicAlgorithm(@Nullable Input<BasicAutoscalingAlgorithmArgs> basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable Input<BasicAutoscalingAlgorithmArgs> basicAlgorithm) {
             this.basicAlgorithm = basicAlgorithm;
             return this;
         }
 
-        public Builder setBasicAlgorithm(@Nullable BasicAutoscalingAlgorithmArgs basicAlgorithm) {
+        public Builder basicAlgorithm(@Nullable BasicAutoscalingAlgorithmArgs basicAlgorithm) {
             this.basicAlgorithm = Input.ofNullable(basicAlgorithm);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable Input<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable Input<InstanceGroupAutoscalingPolicyConfigArgs> secondaryWorkerConfig) {
             this.secondaryWorkerConfig = secondaryWorkerConfig;
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(@Nullable InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(@Nullable InstanceGroupAutoscalingPolicyConfigArgs secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Input.ofNullable(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(Input<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
+        public Builder workerConfig(Input<InstanceGroupAutoscalingPolicyConfigArgs> workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(InstanceGroupAutoscalingPolicyConfigArgs workerConfig) {
+        public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigArgs workerConfig) {
             this.workerConfig = Input.of(Objects.requireNonNull(workerConfig));
             return this;
         }

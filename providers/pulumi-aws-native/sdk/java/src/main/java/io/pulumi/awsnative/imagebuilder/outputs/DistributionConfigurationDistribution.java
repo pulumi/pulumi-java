@@ -41,13 +41,13 @@ public final class DistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"amiDistributionConfiguration","containerDistributionConfiguration","launchTemplateConfigurations","licenseConfigurationArns","region"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistribution(
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
-        @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
-        @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
-        @Nullable List<String> licenseConfigurationArns,
-        String region) {
+        @OutputCustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration,
+        @OutputCustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration,
+        @OutputCustomType.Parameter("launchTemplateConfigurations") @Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations,
+        @OutputCustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
+        @OutputCustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.launchTemplateConfigurations = launchTemplateConfigurations;
@@ -119,27 +119,27 @@ public final class DistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationProperties amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationProperties containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        public Builder setLaunchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
+        public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfiguration> launchTemplateConfigurations) {
             this.launchTemplateConfigurations = launchTemplateConfigurations;
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

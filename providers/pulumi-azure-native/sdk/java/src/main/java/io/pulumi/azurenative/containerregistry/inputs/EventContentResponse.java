@@ -158,37 +158,37 @@ public final class EventContentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setActor(@Nullable ActorResponse actor) {
+        public Builder actor(@Nullable ActorResponse actor) {
             this.actor = actor;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRequest(@Nullable RequestResponse request) {
+        public Builder request(@Nullable RequestResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setSource(@Nullable SourceResponse source) {
+        public Builder source(@Nullable SourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTarget(@Nullable TargetResponse target) {
+        public Builder target(@Nullable TargetResponse target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable String timestamp) {
+        public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
         }

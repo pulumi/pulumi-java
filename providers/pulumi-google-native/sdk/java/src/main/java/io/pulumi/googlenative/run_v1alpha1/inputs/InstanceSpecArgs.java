@@ -141,62 +141,62 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Input<String> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Input<String> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setContainers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ContainerArgs> containers) {
+        public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable Input<String> restartPolicy) {
+        public Builder restartPolicy(@Nullable Input<String> restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable String restartPolicy) {
+        public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = Input.ofNullable(restartPolicy);
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable Input<String> terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Input<String> terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable String terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable String terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Input.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

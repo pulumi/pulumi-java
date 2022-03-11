@@ -43,15 +43,15 @@ public final class GetOriginRequestPolicyResult {
      */
     private final List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs;
 
-    @OutputCustomType.Constructor({"comment","cookiesConfigs","etag","headersConfigs","id","name","queryStringsConfigs"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyResult(
-        String comment,
-        List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs,
-        String etag,
-        List<GetOriginRequestPolicyHeadersConfig> headersConfigs,
-        @Nullable String id,
-        @Nullable String name,
-        List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("cookiesConfigs") List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("headersConfigs") List<GetOriginRequestPolicyHeadersConfig> headersConfigs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("queryStringsConfigs") List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
         this.comment = comment;
         this.cookiesConfigs = cookiesConfigs;
         this.etag = etag;
@@ -135,37 +135,37 @@ public final class GetOriginRequestPolicyResult {
     	      this.queryStringsConfigs = defaults.queryStringsConfigs;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setCookiesConfigs(List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs) {
+        public Builder cookiesConfigs(List<GetOriginRequestPolicyCookiesConfig> cookiesConfigs) {
             this.cookiesConfigs = Objects.requireNonNull(cookiesConfigs);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHeadersConfigs(List<GetOriginRequestPolicyHeadersConfig> headersConfigs) {
+        public Builder headersConfigs(List<GetOriginRequestPolicyHeadersConfig> headersConfigs) {
             this.headersConfigs = Objects.requireNonNull(headersConfigs);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setQueryStringsConfigs(List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
+        public Builder queryStringsConfigs(List<GetOriginRequestPolicyQueryStringsConfig> queryStringsConfigs) {
             this.queryStringsConfigs = Objects.requireNonNull(queryStringsConfigs);
             return this;
         }

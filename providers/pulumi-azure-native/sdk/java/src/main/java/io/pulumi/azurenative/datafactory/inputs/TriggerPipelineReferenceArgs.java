@@ -77,22 +77,22 @@ public final class TriggerPipelineReferenceArgs extends io.pulumi.resources.Reso
     	      this.pipelineReference = defaults.pipelineReference;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPipelineReference(@Nullable Input<PipelineReferenceArgs> pipelineReference) {
+        public Builder pipelineReference(@Nullable Input<PipelineReferenceArgs> pipelineReference) {
             this.pipelineReference = pipelineReference;
             return this;
         }
 
-        public Builder setPipelineReference(@Nullable PipelineReferenceArgs pipelineReference) {
+        public Builder pipelineReference(@Nullable PipelineReferenceArgs pipelineReference) {
             this.pipelineReference = Input.ofNullable(pipelineReference);
             return this;
         }

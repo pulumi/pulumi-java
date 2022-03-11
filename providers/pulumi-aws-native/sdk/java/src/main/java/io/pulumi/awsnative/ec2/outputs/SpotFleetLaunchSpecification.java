@@ -41,26 +41,26 @@ public final class SpotFleetLaunchSpecification {
     private final @Nullable String userData;
     private final @Nullable Double weightedCapacity;
 
-    @OutputCustomType.Constructor({"blockDeviceMappings","ebsOptimized","iamInstanceProfile","imageId","instanceRequirements","instanceType","kernelId","keyName","monitoring","networkInterfaces","placement","ramdiskId","securityGroups","spotPrice","subnetId","tagSpecifications","userData","weightedCapacity"})
+    @OutputCustomType.Constructor
     private SpotFleetLaunchSpecification(
-        @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
-        @Nullable Boolean ebsOptimized,
-        @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
-        String imageId,
-        @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
-        @Nullable String instanceType,
-        @Nullable String kernelId,
-        @Nullable String keyName,
-        @Nullable SpotFleetMonitoring monitoring,
-        @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
-        @Nullable SpotFleetSpotPlacement placement,
-        @Nullable String ramdiskId,
-        @Nullable List<SpotFleetGroupIdentifier> securityGroups,
-        @Nullable String spotPrice,
-        @Nullable String subnetId,
-        @Nullable List<SpotFleetTagSpecification> tagSpecifications,
-        @Nullable String userData,
-        @Nullable Double weightedCapacity) {
+        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("ebsOptimized") @Nullable Boolean ebsOptimized,
+        @OutputCustomType.Parameter("iamInstanceProfile") @Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("instanceRequirements") @Nullable SpotFleetInstanceRequirementsRequest instanceRequirements,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("kernelId") @Nullable String kernelId,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("monitoring") @Nullable SpotFleetMonitoring monitoring,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces,
+        @OutputCustomType.Parameter("placement") @Nullable SpotFleetSpotPlacement placement,
+        @OutputCustomType.Parameter("ramdiskId") @Nullable String ramdiskId,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<SpotFleetGroupIdentifier> securityGroups,
+        @OutputCustomType.Parameter("spotPrice") @Nullable String spotPrice,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tagSpecifications") @Nullable List<SpotFleetTagSpecification> tagSpecifications,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable Double weightedCapacity) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.ebsOptimized = ebsOptimized;
         this.iamInstanceProfile = iamInstanceProfile;
@@ -190,92 +190,92 @@ public final class SpotFleetLaunchSpecification {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setEbsOptimized(@Nullable Boolean ebsOptimized) {
+        public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
             this.ebsOptimized = ebsOptimized;
             return this;
         }
 
-        public Builder setIamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
+        public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecification iamInstanceProfile) {
             this.iamInstanceProfile = iamInstanceProfile;
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setInstanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
+        public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequest instanceRequirements) {
             this.instanceRequirements = instanceRequirements;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setKernelId(@Nullable String kernelId) {
+        public Builder kernelId(@Nullable String kernelId) {
             this.kernelId = kernelId;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setMonitoring(@Nullable SpotFleetMonitoring monitoring) {
+        public Builder monitoring(@Nullable SpotFleetMonitoring monitoring) {
             this.monitoring = monitoring;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecification> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setPlacement(@Nullable SpotFleetSpotPlacement placement) {
+        public Builder placement(@Nullable SpotFleetSpotPlacement placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setRamdiskId(@Nullable String ramdiskId) {
+        public Builder ramdiskId(@Nullable String ramdiskId) {
             this.ramdiskId = ramdiskId;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
+        public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifier> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSpotPrice(@Nullable String spotPrice) {
+        public Builder spotPrice(@Nullable String spotPrice) {
             this.spotPrice = spotPrice;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
+        public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecification> tagSpecifications) {
             this.tagSpecifications = tagSpecifications;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable Double weightedCapacity) {
+        public Builder weightedCapacity(@Nullable Double weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

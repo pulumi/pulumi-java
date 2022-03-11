@@ -37,12 +37,12 @@ public final class LocationThresholdRuleConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor({"dataSource","failedLocationCount","odataType","windowSize"})
+    @OutputCustomType.Constructor
     private LocationThresholdRuleConditionResponse(
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        Integer failedLocationCount,
-        String odataType,
-        @Nullable String windowSize) {
+        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @OutputCustomType.Parameter("failedLocationCount") Integer failedLocationCount,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;
@@ -105,22 +105,22 @@ public final class LocationThresholdRuleConditionResponse {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setFailedLocationCount(Integer failedLocationCount) {
+        public Builder failedLocationCount(Integer failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
         }

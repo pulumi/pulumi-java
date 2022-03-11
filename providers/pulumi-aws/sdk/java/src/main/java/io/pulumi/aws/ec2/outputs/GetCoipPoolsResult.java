@@ -26,12 +26,12 @@ public final class GetCoipPoolsResult {
     private final List<String> poolIds;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","poolIds","tags"})
+    @OutputCustomType.Constructor
     private GetCoipPoolsResult(
-        @Nullable List<GetCoipPoolsFilter> filters,
-        String id,
-        List<String> poolIds,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetCoipPoolsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("poolIds") List<String> poolIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.poolIds = poolIds;
@@ -85,22 +85,22 @@ public final class GetCoipPoolsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetCoipPoolsFilter> filters) {
+        public Builder filters(@Nullable List<GetCoipPoolsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPoolIds(List<String> poolIds) {
+        public Builder poolIds(List<String> poolIds) {
             this.poolIds = Objects.requireNonNull(poolIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

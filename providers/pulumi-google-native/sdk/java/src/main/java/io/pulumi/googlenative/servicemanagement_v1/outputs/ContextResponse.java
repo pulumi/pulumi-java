@@ -16,8 +16,8 @@ public final class ContextResponse {
      */
     private final List<ContextRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ContextResponse(List<ContextRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private ContextResponse(@OutputCustomType.Parameter("rules") List<ContextRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -49,7 +49,7 @@ public final class ContextResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ContextRuleResponse> rules) {
+        public Builder rules(List<ContextRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

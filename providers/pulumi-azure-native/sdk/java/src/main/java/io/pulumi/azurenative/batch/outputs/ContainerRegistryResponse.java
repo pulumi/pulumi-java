@@ -19,11 +19,11 @@ public final class ContainerRegistryResponse {
     private final @Nullable String registryServer;
     private final String userName;
 
-    @OutputCustomType.Constructor({"password","registryServer","userName"})
+    @OutputCustomType.Constructor
     private ContainerRegistryResponse(
-        String password,
-        @Nullable String registryServer,
-        String userName) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("registryServer") @Nullable String registryServer,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.password = password;
         this.registryServer = registryServer;
         this.userName = userName;
@@ -67,17 +67,17 @@ public final class ContainerRegistryResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRegistryServer(@Nullable String registryServer) {
+        public Builder registryServer(@Nullable String registryServer) {
             this.registryServer = registryServer;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

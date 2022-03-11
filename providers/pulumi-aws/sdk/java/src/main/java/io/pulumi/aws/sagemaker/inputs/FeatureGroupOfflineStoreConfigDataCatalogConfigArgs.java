@@ -86,32 +86,32 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfigArgs extends i
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalog(@Nullable Input<String> catalog) {
+        public Builder catalog(@Nullable Input<String> catalog) {
             this.catalog = catalog;
             return this;
         }
 
-        public Builder setCatalog(@Nullable String catalog) {
+        public Builder catalog(@Nullable String catalog) {
             this.catalog = Input.ofNullable(catalog);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<String> database) {
+        public Builder database(@Nullable Input<String> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setTableName(@Nullable Input<String> tableName) {
+        public Builder tableName(@Nullable Input<String> tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = Input.ofNullable(tableName);
             return this;
         }

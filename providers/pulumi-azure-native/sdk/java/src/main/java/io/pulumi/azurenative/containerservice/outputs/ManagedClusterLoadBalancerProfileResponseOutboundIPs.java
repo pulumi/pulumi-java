@@ -17,8 +17,8 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
      */
     private final @Nullable List<ResourceReferenceResponse> publicIPs;
 
-    @OutputCustomType.Constructor({"publicIPs"})
-    private ManagedClusterLoadBalancerProfileResponseOutboundIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
+    @OutputCustomType.Constructor
+    private ManagedClusterLoadBalancerProfileResponseOutboundIPs(@OutputCustomType.Parameter("publicIPs") @Nullable List<ResourceReferenceResponse> publicIPs) {
         this.publicIPs = publicIPs;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterLoadBalancerProfileResponseOutboundIPs {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPublicIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
+        public Builder publicIPs(@Nullable List<ResourceReferenceResponse> publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }

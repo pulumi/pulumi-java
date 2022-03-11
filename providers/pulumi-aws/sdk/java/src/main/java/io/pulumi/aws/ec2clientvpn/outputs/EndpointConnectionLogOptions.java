@@ -28,11 +28,11 @@ public final class EndpointConnectionLogOptions {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroup","cloudwatchLogStream","enabled"})
+    @OutputCustomType.Constructor
     private EndpointConnectionLogOptions(
-        @Nullable String cloudwatchLogGroup,
-        @Nullable String cloudwatchLogStream,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("cloudwatchLogGroup") @Nullable String cloudwatchLogGroup,
+        @OutputCustomType.Parameter("cloudwatchLogStream") @Nullable String cloudwatchLogStream,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.cloudwatchLogGroup = cloudwatchLogGroup;
         this.cloudwatchLogStream = cloudwatchLogStream;
         this.enabled = enabled;
@@ -84,17 +84,17 @@ public final class EndpointConnectionLogOptions {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCloudwatchLogGroup(@Nullable String cloudwatchLogGroup) {
+        public Builder cloudwatchLogGroup(@Nullable String cloudwatchLogGroup) {
             this.cloudwatchLogGroup = cloudwatchLogGroup;
             return this;
         }
 
-        public Builder setCloudwatchLogStream(@Nullable String cloudwatchLogStream) {
+        public Builder cloudwatchLogStream(@Nullable String cloudwatchLogStream) {
             this.cloudwatchLogStream = cloudwatchLogStream;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

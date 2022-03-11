@@ -22,10 +22,10 @@ public final class RetentionPropertiesProperties {
      */
     private final @Nullable String memoryStoreRetentionPeriodInHours;
 
-    @OutputCustomType.Constructor({"magneticStoreRetentionPeriodInDays","memoryStoreRetentionPeriodInHours"})
+    @OutputCustomType.Constructor
     private RetentionPropertiesProperties(
-        @Nullable String magneticStoreRetentionPeriodInDays,
-        @Nullable String memoryStoreRetentionPeriodInHours) {
+        @OutputCustomType.Parameter("magneticStoreRetentionPeriodInDays") @Nullable String magneticStoreRetentionPeriodInDays,
+        @OutputCustomType.Parameter("memoryStoreRetentionPeriodInHours") @Nullable String memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }
@@ -67,12 +67,12 @@ public final class RetentionPropertiesProperties {
     	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
         }
 
-        public Builder setMagneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
+        public Builder magneticStoreRetentionPeriodInDays(@Nullable String magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
             return this;
         }
 
-        public Builder setMemoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
+        public Builder memoryStoreRetentionPeriodInHours(@Nullable String memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
             return this;
         }

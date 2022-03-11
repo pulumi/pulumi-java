@@ -16,8 +16,8 @@ public final class VirtualRouterSpec {
      */
     private final VirtualRouterSpecListener listener;
 
-    @OutputCustomType.Constructor({"listener"})
-    private VirtualRouterSpec(VirtualRouterSpecListener listener) {
+    @OutputCustomType.Constructor
+    private VirtualRouterSpec(@OutputCustomType.Parameter("listener") VirtualRouterSpecListener listener) {
         this.listener = listener;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualRouterSpec {
     	      this.listener = defaults.listener;
         }
 
-        public Builder setListener(VirtualRouterSpecListener listener) {
+        public Builder listener(VirtualRouterSpecListener listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }

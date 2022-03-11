@@ -158,72 +158,72 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setRequestStreaming(@Nullable Input<Boolean> requestStreaming) {
+        public Builder requestStreaming(@Nullable Input<Boolean> requestStreaming) {
             this.requestStreaming = requestStreaming;
             return this;
         }
 
-        public Builder setRequestStreaming(@Nullable Boolean requestStreaming) {
+        public Builder requestStreaming(@Nullable Boolean requestStreaming) {
             this.requestStreaming = Input.ofNullable(requestStreaming);
             return this;
         }
 
-        public Builder setRequestTypeUrl(@Nullable Input<String> requestTypeUrl) {
+        public Builder requestTypeUrl(@Nullable Input<String> requestTypeUrl) {
             this.requestTypeUrl = requestTypeUrl;
             return this;
         }
 
-        public Builder setRequestTypeUrl(@Nullable String requestTypeUrl) {
+        public Builder requestTypeUrl(@Nullable String requestTypeUrl) {
             this.requestTypeUrl = Input.ofNullable(requestTypeUrl);
             return this;
         }
 
-        public Builder setResponseStreaming(@Nullable Input<Boolean> responseStreaming) {
+        public Builder responseStreaming(@Nullable Input<Boolean> responseStreaming) {
             this.responseStreaming = responseStreaming;
             return this;
         }
 
-        public Builder setResponseStreaming(@Nullable Boolean responseStreaming) {
+        public Builder responseStreaming(@Nullable Boolean responseStreaming) {
             this.responseStreaming = Input.ofNullable(responseStreaming);
             return this;
         }
 
-        public Builder setResponseTypeUrl(@Nullable Input<String> responseTypeUrl) {
+        public Builder responseTypeUrl(@Nullable Input<String> responseTypeUrl) {
             this.responseTypeUrl = responseTypeUrl;
             return this;
         }
 
-        public Builder setResponseTypeUrl(@Nullable String responseTypeUrl) {
+        public Builder responseTypeUrl(@Nullable String responseTypeUrl) {
             this.responseTypeUrl = Input.ofNullable(responseTypeUrl);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<MethodSyntax> syntax) {
+        public Builder syntax(@Nullable Input<MethodSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable MethodSyntax syntax) {
+        public Builder syntax(@Nullable MethodSyntax syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }

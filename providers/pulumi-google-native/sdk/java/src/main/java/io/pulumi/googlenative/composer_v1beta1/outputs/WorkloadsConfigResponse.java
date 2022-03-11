@@ -27,11 +27,11 @@ public final class WorkloadsConfigResponse {
      */
     private final WorkerResourceResponse worker;
 
-    @OutputCustomType.Constructor({"scheduler","webServer","worker"})
+    @OutputCustomType.Constructor
     private WorkloadsConfigResponse(
-        SchedulerResourceResponse scheduler,
-        WebServerResourceResponse webServer,
-        WorkerResourceResponse worker) {
+        @OutputCustomType.Parameter("scheduler") SchedulerResourceResponse scheduler,
+        @OutputCustomType.Parameter("webServer") WebServerResourceResponse webServer,
+        @OutputCustomType.Parameter("worker") WorkerResourceResponse worker) {
         this.scheduler = scheduler;
         this.webServer = webServer;
         this.worker = worker;
@@ -83,17 +83,17 @@ public final class WorkloadsConfigResponse {
     	      this.worker = defaults.worker;
         }
 
-        public Builder setScheduler(SchedulerResourceResponse scheduler) {
+        public Builder scheduler(SchedulerResourceResponse scheduler) {
             this.scheduler = Objects.requireNonNull(scheduler);
             return this;
         }
 
-        public Builder setWebServer(WebServerResourceResponse webServer) {
+        public Builder webServer(WebServerResourceResponse webServer) {
             this.webServer = Objects.requireNonNull(webServer);
             return this;
         }
 
-        public Builder setWorker(WorkerResourceResponse worker) {
+        public Builder worker(WorkerResourceResponse worker) {
             this.worker = Objects.requireNonNull(worker);
             return this;
         }

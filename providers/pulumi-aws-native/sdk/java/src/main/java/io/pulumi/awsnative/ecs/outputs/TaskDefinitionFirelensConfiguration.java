@@ -15,10 +15,10 @@ public final class TaskDefinitionFirelensConfiguration {
     private final @Nullable Object options;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"options","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionFirelensConfiguration(
-        @Nullable Object options,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("options") @Nullable Object options,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.options = options;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class TaskDefinitionFirelensConfiguration {
     	      this.type = defaults.type;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

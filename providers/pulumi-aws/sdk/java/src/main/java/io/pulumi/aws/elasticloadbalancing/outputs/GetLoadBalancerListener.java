@@ -16,13 +16,13 @@ public final class GetLoadBalancerListener {
     private final String lbProtocol;
     private final String sslCertificateId;
 
-    @OutputCustomType.Constructor({"instancePort","instanceProtocol","lbPort","lbProtocol","sslCertificateId"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerListener(
-        Integer instancePort,
-        String instanceProtocol,
-        Integer lbPort,
-        String lbProtocol,
-        String sslCertificateId) {
+        @OutputCustomType.Parameter("instancePort") Integer instancePort,
+        @OutputCustomType.Parameter("instanceProtocol") String instanceProtocol,
+        @OutputCustomType.Parameter("lbPort") Integer lbPort,
+        @OutputCustomType.Parameter("lbProtocol") String lbProtocol,
+        @OutputCustomType.Parameter("sslCertificateId") String sslCertificateId) {
         this.instancePort = instancePort;
         this.instanceProtocol = instanceProtocol;
         this.lbPort = lbPort;
@@ -74,27 +74,27 @@ public final class GetLoadBalancerListener {
     	      this.sslCertificateId = defaults.sslCertificateId;
         }
 
-        public Builder setInstancePort(Integer instancePort) {
+        public Builder instancePort(Integer instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
 
-        public Builder setInstanceProtocol(String instanceProtocol) {
+        public Builder instanceProtocol(String instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
 
-        public Builder setLbPort(Integer lbPort) {
+        public Builder lbPort(Integer lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
 
-        public Builder setLbProtocol(String lbProtocol) {
+        public Builder lbProtocol(String lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
 
-        public Builder setSslCertificateId(String sslCertificateId) {
+        public Builder sslCertificateId(String sslCertificateId) {
             this.sslCertificateId = Objects.requireNonNull(sslCertificateId);
             return this;
         }

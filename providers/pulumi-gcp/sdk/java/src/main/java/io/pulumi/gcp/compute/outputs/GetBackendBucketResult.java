@@ -29,18 +29,18 @@ public final class GetBackendBucketResult {
     private final @Nullable String project;
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bucketName","cdnPolicies","creationTimestamp","customResponseHeaders","description","enableCdn","id","name","project","selfLink"})
+    @OutputCustomType.Constructor
     private GetBackendBucketResult(
-        String bucketName,
-        List<GetBackendBucketCdnPolicy> cdnPolicies,
-        String creationTimestamp,
-        List<String> customResponseHeaders,
-        String description,
-        Boolean enableCdn,
-        String id,
-        String name,
-        @Nullable String project,
-        String selfLink) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("cdnPolicies") List<GetBackendBucketCdnPolicy> cdnPolicies,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bucketName = bucketName;
         this.cdnPolicies = cdnPolicies;
         this.creationTimestamp = creationTimestamp;
@@ -126,52 +126,52 @@ public final class GetBackendBucketResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setCdnPolicies(List<GetBackendBucketCdnPolicy> cdnPolicies) {
+        public Builder cdnPolicies(List<GetBackendBucketCdnPolicy> cdnPolicies) {
             this.cdnPolicies = Objects.requireNonNull(cdnPolicies);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableCdn(Boolean enableCdn) {
+        public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

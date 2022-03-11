@@ -23,10 +23,10 @@ public final class NetworkPolicyEgressRule {
      */
     private final @Nullable List<NetworkPolicyPeer> to;
 
-    @OutputCustomType.Constructor({"ports","to"})
+    @OutputCustomType.Constructor
     private NetworkPolicyEgressRule(
-        @Nullable List<NetworkPolicyPort> ports,
-        @Nullable List<NetworkPolicyPeer> to) {
+        @OutputCustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports,
+        @OutputCustomType.Parameter("to") @Nullable List<NetworkPolicyPeer> to) {
         this.ports = ports;
         this.to = to;
     }
@@ -68,12 +68,12 @@ public final class NetworkPolicyEgressRule {
     	      this.to = defaults.to;
         }
 
-        public Builder setPorts(@Nullable List<NetworkPolicyPort> ports) {
+        public Builder ports(@Nullable List<NetworkPolicyPort> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setTo(@Nullable List<NetworkPolicyPeer> to) {
+        public Builder to(@Nullable List<NetworkPolicyPeer> to) {
             this.to = to;
             return this;
         }

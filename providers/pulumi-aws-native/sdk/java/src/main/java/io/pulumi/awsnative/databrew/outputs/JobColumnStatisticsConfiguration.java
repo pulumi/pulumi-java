@@ -15,10 +15,10 @@ public final class JobColumnStatisticsConfiguration {
     private final @Nullable List<JobColumnSelector> selectors;
     private final JobStatisticsConfiguration statistics;
 
-    @OutputCustomType.Constructor({"selectors","statistics"})
+    @OutputCustomType.Constructor
     private JobColumnStatisticsConfiguration(
-        @Nullable List<JobColumnSelector> selectors,
-        JobStatisticsConfiguration statistics) {
+        @OutputCustomType.Parameter("selectors") @Nullable List<JobColumnSelector> selectors,
+        @OutputCustomType.Parameter("statistics") JobStatisticsConfiguration statistics) {
         this.selectors = selectors;
         this.statistics = statistics;
     }
@@ -52,12 +52,12 @@ public final class JobColumnStatisticsConfiguration {
     	      this.statistics = defaults.statistics;
         }
 
-        public Builder setSelectors(@Nullable List<JobColumnSelector> selectors) {
+        public Builder selectors(@Nullable List<JobColumnSelector> selectors) {
             this.selectors = selectors;
             return this;
         }
 
-        public Builder setStatistics(JobStatisticsConfiguration statistics) {
+        public Builder statistics(JobStatisticsConfiguration statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }

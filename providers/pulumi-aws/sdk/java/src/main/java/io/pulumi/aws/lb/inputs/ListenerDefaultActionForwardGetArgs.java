@@ -72,22 +72,22 @@ public final class ListenerDefaultActionForwardGetArgs extends io.pulumi.resourc
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setStickiness(@Nullable Input<ListenerDefaultActionForwardStickinessGetArgs> stickiness) {
+        public Builder stickiness(@Nullable Input<ListenerDefaultActionForwardStickinessGetArgs> stickiness) {
             this.stickiness = stickiness;
             return this;
         }
 
-        public Builder setStickiness(@Nullable ListenerDefaultActionForwardStickinessGetArgs stickiness) {
+        public Builder stickiness(@Nullable ListenerDefaultActionForwardStickinessGetArgs stickiness) {
             this.stickiness = Input.ofNullable(stickiness);
             return this;
         }
 
-        public Builder setTargetGroups(Input<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups) {
+        public Builder targetGroups(Input<List<ListenerDefaultActionForwardTargetGroupGetArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
-        public Builder setTargetGroups(List<ListenerDefaultActionForwardTargetGroupGetArgs> targetGroups) {
+        public Builder targetGroups(List<ListenerDefaultActionForwardTargetGroupGetArgs> targetGroups) {
             this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
             return this;
         }

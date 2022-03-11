@@ -75,20 +75,20 @@ public final class LocalNetworkGatewayResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bgpSettings","etag","fqdn","gatewayIpAddress","id","localNetworkAddressSpace","location","name","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private LocalNetworkGatewayResponse(
-        @Nullable BgpSettingsResponse bgpSettings,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String gatewayIpAddress,
-        @Nullable String id,
-        @Nullable AddressSpaceResponse localNetworkAddressSpace,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("gatewayIpAddress") @Nullable String gatewayIpAddress,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("localNetworkAddressSpace") @Nullable AddressSpaceResponse localNetworkAddressSpace,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.bgpSettings = bgpSettings;
         this.etag = etag;
         this.fqdn = fqdn;
@@ -230,62 +230,62 @@ public final class LocalNetworkGatewayResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setGatewayIpAddress(@Nullable String gatewayIpAddress) {
+        public Builder gatewayIpAddress(@Nullable String gatewayIpAddress) {
             this.gatewayIpAddress = gatewayIpAddress;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocalNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
+        public Builder localNetworkAddressSpace(@Nullable AddressSpaceResponse localNetworkAddressSpace) {
             this.localNetworkAddressSpace = localNetworkAddressSpace;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

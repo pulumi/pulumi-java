@@ -13,10 +13,10 @@ public final class BackupVaultNotificationObjectType {
     private final List<String> backupVaultEvents;
     private final String sNSTopicArn;
 
-    @OutputCustomType.Constructor({"backupVaultEvents","sNSTopicArn"})
+    @OutputCustomType.Constructor
     private BackupVaultNotificationObjectType(
-        List<String> backupVaultEvents,
-        String sNSTopicArn) {
+        @OutputCustomType.Parameter("backupVaultEvents") List<String> backupVaultEvents,
+        @OutputCustomType.Parameter("sNSTopicArn") String sNSTopicArn) {
         this.backupVaultEvents = backupVaultEvents;
         this.sNSTopicArn = sNSTopicArn;
     }
@@ -50,12 +50,12 @@ public final class BackupVaultNotificationObjectType {
     	      this.sNSTopicArn = defaults.sNSTopicArn;
         }
 
-        public Builder setBackupVaultEvents(List<String> backupVaultEvents) {
+        public Builder backupVaultEvents(List<String> backupVaultEvents) {
             this.backupVaultEvents = Objects.requireNonNull(backupVaultEvents);
             return this;
         }
 
-        public Builder setSNSTopicArn(String sNSTopicArn) {
+        public Builder sNSTopicArn(String sNSTopicArn) {
             this.sNSTopicArn = Objects.requireNonNull(sNSTopicArn);
             return this;
         }

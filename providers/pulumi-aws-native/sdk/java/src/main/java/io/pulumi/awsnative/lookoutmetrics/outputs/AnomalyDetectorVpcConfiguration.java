@@ -13,10 +13,10 @@ public final class AnomalyDetectorVpcConfiguration {
     private final List<String> securityGroupIdList;
     private final List<String> subnetIdList;
 
-    @OutputCustomType.Constructor({"securityGroupIdList","subnetIdList"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorVpcConfiguration(
-        List<String> securityGroupIdList,
-        List<String> subnetIdList) {
+        @OutputCustomType.Parameter("securityGroupIdList") List<String> securityGroupIdList,
+        @OutputCustomType.Parameter("subnetIdList") List<String> subnetIdList) {
         this.securityGroupIdList = securityGroupIdList;
         this.subnetIdList = subnetIdList;
     }
@@ -50,12 +50,12 @@ public final class AnomalyDetectorVpcConfiguration {
     	      this.subnetIdList = defaults.subnetIdList;
         }
 
-        public Builder setSecurityGroupIdList(List<String> securityGroupIdList) {
+        public Builder securityGroupIdList(List<String> securityGroupIdList) {
             this.securityGroupIdList = Objects.requireNonNull(securityGroupIdList);
             return this;
         }
 
-        public Builder setSubnetIdList(List<String> subnetIdList) {
+        public Builder subnetIdList(List<String> subnetIdList) {
             this.subnetIdList = Objects.requireNonNull(subnetIdList);
             return this;
         }

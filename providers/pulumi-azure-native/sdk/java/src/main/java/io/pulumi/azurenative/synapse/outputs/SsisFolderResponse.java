@@ -34,12 +34,12 @@ public final class SsisFolderResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","name","type"})
+    @OutputCustomType.Constructor
     private SsisFolderResponse(
-        @Nullable String description,
-        @Nullable Double id,
-        @Nullable String name,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -102,22 +102,22 @@ public final class SsisFolderResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

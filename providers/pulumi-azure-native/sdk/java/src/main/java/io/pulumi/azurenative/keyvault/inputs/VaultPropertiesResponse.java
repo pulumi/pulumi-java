@@ -289,77 +289,77 @@ public final class VaultPropertiesResponse extends io.pulumi.resources.InvokeArg
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setAccessPolicies(@Nullable List<AccessPolicyEntryResponse> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<AccessPolicyEntryResponse> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
-        public Builder setEnableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
+        public Builder enableRbacAuthorization(@Nullable Boolean enableRbacAuthorization) {
             this.enableRbacAuthorization = enableRbacAuthorization;
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Boolean enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
-        public Builder setEnabledForDeployment(@Nullable Boolean enabledForDeployment) {
+        public Builder enabledForDeployment(@Nullable Boolean enabledForDeployment) {
             this.enabledForDeployment = enabledForDeployment;
             return this;
         }
 
-        public Builder setEnabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
+        public Builder enabledForDiskEncryption(@Nullable Boolean enabledForDiskEncryption) {
             this.enabledForDiskEncryption = enabledForDiskEncryption;
             return this;
         }
 
-        public Builder setEnabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
+        public Builder enabledForTemplateDeployment(@Nullable Boolean enabledForTemplateDeployment) {
             this.enabledForTemplateDeployment = enabledForTemplateDeployment;
             return this;
         }
 
-        public Builder setHsmPoolResourceId(String hsmPoolResourceId) {
+        public Builder hsmPoolResourceId(String hsmPoolResourceId) {
             this.hsmPoolResourceId = Objects.requireNonNull(hsmPoolResourceId);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
+        public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionItemResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionItemResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setVaultUri(@Nullable String vaultUri) {
+        public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }

@@ -20,10 +20,10 @@ public final class UserPoolLambdaConfigCustomSmsSender {
      */
     private final String lambdaVersion;
 
-    @OutputCustomType.Constructor({"lambdaArn","lambdaVersion"})
+    @OutputCustomType.Constructor
     private UserPoolLambdaConfigCustomSmsSender(
-        String lambdaArn,
-        String lambdaVersion) {
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn,
+        @OutputCustomType.Parameter("lambdaVersion") String lambdaVersion) {
         this.lambdaArn = lambdaArn;
         this.lambdaVersion = lambdaVersion;
     }
@@ -65,12 +65,12 @@ public final class UserPoolLambdaConfigCustomSmsSender {
     	      this.lambdaVersion = defaults.lambdaVersion;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }
 
-        public Builder setLambdaVersion(String lambdaVersion) {
+        public Builder lambdaVersion(String lambdaVersion) {
             this.lambdaVersion = Objects.requireNonNull(lambdaVersion);
             return this;
         }

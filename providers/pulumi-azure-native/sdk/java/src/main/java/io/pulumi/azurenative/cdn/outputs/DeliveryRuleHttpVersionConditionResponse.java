@@ -22,10 +22,10 @@ public final class DeliveryRuleHttpVersionConditionResponse {
      */
     private final HttpVersionMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleHttpVersionConditionResponse(
-        String name,
-        HttpVersionMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") HttpVersionMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class DeliveryRuleHttpVersionConditionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(HttpVersionMatchConditionParametersResponse parameters) {
+        public Builder parameters(HttpVersionMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

@@ -199,102 +199,102 @@ public final class GatewayHostnameConfigurationArgs extends io.pulumi.resources.
     	      this.tls11Enabled = defaults.tls11Enabled;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setGatewayId(Input<String> gatewayId) {
+        public Builder gatewayId(Input<String> gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Input.of(Objects.requireNonNull(gatewayId));
             return this;
         }
 
-        public Builder setHcId(@Nullable Input<String> hcId) {
+        public Builder hcId(@Nullable Input<String> hcId) {
             this.hcId = hcId;
             return this;
         }
 
-        public Builder setHcId(@Nullable String hcId) {
+        public Builder hcId(@Nullable String hcId) {
             this.hcId = Input.ofNullable(hcId);
             return this;
         }
 
-        public Builder setHostname(@Nullable Input<String> hostname) {
+        public Builder hostname(@Nullable Input<String> hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = Input.ofNullable(hostname);
             return this;
         }
 
-        public Builder setHttp2Enabled(@Nullable Input<Boolean> http2Enabled) {
+        public Builder http2Enabled(@Nullable Input<Boolean> http2Enabled) {
             this.http2Enabled = http2Enabled;
             return this;
         }
 
-        public Builder setHttp2Enabled(@Nullable Boolean http2Enabled) {
+        public Builder http2Enabled(@Nullable Boolean http2Enabled) {
             this.http2Enabled = Input.ofNullable(http2Enabled);
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Input<Boolean> negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Input<Boolean> negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = Input.ofNullable(negotiateClientCertificate);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTls10Enabled(@Nullable Input<Boolean> tls10Enabled) {
+        public Builder tls10Enabled(@Nullable Input<Boolean> tls10Enabled) {
             this.tls10Enabled = tls10Enabled;
             return this;
         }
 
-        public Builder setTls10Enabled(@Nullable Boolean tls10Enabled) {
+        public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
             this.tls10Enabled = Input.ofNullable(tls10Enabled);
             return this;
         }
 
-        public Builder setTls11Enabled(@Nullable Input<Boolean> tls11Enabled) {
+        public Builder tls11Enabled(@Nullable Input<Boolean> tls11Enabled) {
             this.tls11Enabled = tls11Enabled;
             return this;
         }
 
-        public Builder setTls11Enabled(@Nullable Boolean tls11Enabled) {
+        public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
             this.tls11Enabled = Input.ofNullable(tls11Enabled);
             return this;
         }

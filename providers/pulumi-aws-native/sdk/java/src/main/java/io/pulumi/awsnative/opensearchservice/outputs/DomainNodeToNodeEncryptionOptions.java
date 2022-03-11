@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DomainNodeToNodeEncryptionOptions {
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private DomainNodeToNodeEncryptionOptions(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private DomainNodeToNodeEncryptionOptions(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -42,7 +42,7 @@ public final class DomainNodeToNodeEncryptionOptions {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

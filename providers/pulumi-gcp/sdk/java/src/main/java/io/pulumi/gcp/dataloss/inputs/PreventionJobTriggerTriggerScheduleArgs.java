@@ -56,12 +56,12 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
     	      this.recurrencePeriodDuration = defaults.recurrencePeriodDuration;
         }
 
-        public Builder setRecurrencePeriodDuration(@Nullable Input<String> recurrencePeriodDuration) {
+        public Builder recurrencePeriodDuration(@Nullable Input<String> recurrencePeriodDuration) {
             this.recurrencePeriodDuration = recurrencePeriodDuration;
             return this;
         }
 
-        public Builder setRecurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
+        public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
             this.recurrencePeriodDuration = Input.ofNullable(recurrencePeriodDuration);
             return this;
         }

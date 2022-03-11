@@ -16,8 +16,8 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      */
     private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
-    @OutputCustomType.Constructor({"transcriptSegments"})
-    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
+    @OutputCustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(@OutputCustomType.Parameter("transcriptSegments") List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
         this.transcriptSegments = transcriptSegments;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
     	      this.transcriptSegments = defaults.transcriptSegments;
         }
 
-        public Builder setTranscriptSegments(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
+        public Builder transcriptSegments(List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments) {
             this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
             return this;
         }

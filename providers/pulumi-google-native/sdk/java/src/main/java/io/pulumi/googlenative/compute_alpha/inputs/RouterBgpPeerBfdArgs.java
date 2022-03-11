@@ -153,72 +153,72 @@ public final class RouterBgpPeerBfdArgs extends io.pulumi.resources.ResourceArgs
     	      this.slowTimerInterval = defaults.slowTimerInterval;
         }
 
-        public Builder setMinReceiveInterval(@Nullable Input<Integer> minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Input<Integer> minReceiveInterval) {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
 
-        public Builder setMinReceiveInterval(@Nullable Integer minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
             this.minReceiveInterval = Input.ofNullable(minReceiveInterval);
             return this;
         }
 
-        public Builder setMinTransmitInterval(@Nullable Input<Integer> minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Input<Integer> minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
 
-        public Builder setMinTransmitInterval(@Nullable Integer minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
             this.minTransmitInterval = Input.ofNullable(minTransmitInterval);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<RouterBgpPeerBfdMode> mode) {
+        public Builder mode(@Nullable Input<RouterBgpPeerBfdMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable RouterBgpPeerBfdMode mode) {
+        public Builder mode(@Nullable RouterBgpPeerBfdMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setMultiplier(@Nullable Input<Integer> multiplier) {
+        public Builder multiplier(@Nullable Input<Integer> multiplier) {
             this.multiplier = multiplier;
             return this;
         }
 
-        public Builder setMultiplier(@Nullable Integer multiplier) {
+        public Builder multiplier(@Nullable Integer multiplier) {
             this.multiplier = Input.ofNullable(multiplier);
             return this;
         }
 
-        public Builder setPacketMode(@Nullable Input<RouterBgpPeerBfdPacketMode> packetMode) {
+        public Builder packetMode(@Nullable Input<RouterBgpPeerBfdPacketMode> packetMode) {
             this.packetMode = packetMode;
             return this;
         }
 
-        public Builder setPacketMode(@Nullable RouterBgpPeerBfdPacketMode packetMode) {
+        public Builder packetMode(@Nullable RouterBgpPeerBfdPacketMode packetMode) {
             this.packetMode = Input.ofNullable(packetMode);
             return this;
         }
 
-        public Builder setSessionInitializationMode(@Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
+        public Builder sessionInitializationMode(@Nullable Input<RouterBgpPeerBfdSessionInitializationMode> sessionInitializationMode) {
             this.sessionInitializationMode = sessionInitializationMode;
             return this;
         }
 
-        public Builder setSessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
+        public Builder sessionInitializationMode(@Nullable RouterBgpPeerBfdSessionInitializationMode sessionInitializationMode) {
             this.sessionInitializationMode = Input.ofNullable(sessionInitializationMode);
             return this;
         }
 
-        public Builder setSlowTimerInterval(@Nullable Input<Integer> slowTimerInterval) {
+        public Builder slowTimerInterval(@Nullable Input<Integer> slowTimerInterval) {
             this.slowTimerInterval = slowTimerInterval;
             return this;
         }
 
-        public Builder setSlowTimerInterval(@Nullable Integer slowTimerInterval) {
+        public Builder slowTimerInterval(@Nullable Integer slowTimerInterval) {
             this.slowTimerInterval = Input.ofNullable(slowTimerInterval);
             return this;
         }

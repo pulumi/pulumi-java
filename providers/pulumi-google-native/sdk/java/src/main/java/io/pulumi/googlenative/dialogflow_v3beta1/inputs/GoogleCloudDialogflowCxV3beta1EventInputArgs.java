@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowCxV3beta1EventInputArgs extends io.pulum
     	      this.event = defaults.event;
         }
 
-        public Builder setEvent(@Nullable Input<String> event) {
+        public Builder event(@Nullable Input<String> event) {
             this.event = event;
             return this;
         }
 
-        public Builder setEvent(@Nullable String event) {
+        public Builder event(@Nullable String event) {
             this.event = Input.ofNullable(event);
             return this;
         }

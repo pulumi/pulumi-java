@@ -33,12 +33,12 @@ public final class FixedScaleSettingsResponse {
      */
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor({"nodeDeallocationOption","resizeTimeout","targetDedicatedNodes","targetLowPriorityNodes"})
+    @OutputCustomType.Constructor
     private FixedScaleSettingsResponse(
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
+        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;
         this.targetDedicatedNodes = targetDedicatedNodes;
@@ -100,22 +100,22 @@ public final class FixedScaleSettingsResponse {
     	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
         }
 
-        public Builder setNodeDeallocationOption(@Nullable String nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
-        public Builder setResizeTimeout(@Nullable String resizeTimeout) {
+        public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
 
-        public Builder setTargetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
-        public Builder setTargetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }

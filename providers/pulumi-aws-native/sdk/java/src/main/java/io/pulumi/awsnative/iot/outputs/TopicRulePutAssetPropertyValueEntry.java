@@ -19,13 +19,13 @@ public final class TopicRulePutAssetPropertyValueEntry {
     private final @Nullable String propertyId;
     private final List<TopicRuleAssetPropertyValue> propertyValues;
 
-    @OutputCustomType.Constructor({"assetId","entryId","propertyAlias","propertyId","propertyValues"})
+    @OutputCustomType.Constructor
     private TopicRulePutAssetPropertyValueEntry(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        List<TopicRuleAssetPropertyValue> propertyValues) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
+        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("propertyValues") List<TopicRuleAssetPropertyValue> propertyValues) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;
@@ -77,27 +77,27 @@ public final class TopicRulePutAssetPropertyValueEntry {
     	      this.propertyValues = defaults.propertyValues;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable String propertyAlias) {
+        public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyValues(List<TopicRuleAssetPropertyValue> propertyValues) {
+        public Builder propertyValues(List<TopicRuleAssetPropertyValue> propertyValues) {
             this.propertyValues = Objects.requireNonNull(propertyValues);
             return this;
         }

@@ -37,13 +37,13 @@ public final class GatewayApiMetadataPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"description","documentation","serverUrl","title","version"})
+    @OutputCustomType.Constructor
     private GatewayApiMetadataPropertiesResponse(
-        @Nullable String description,
-        @Nullable String documentation,
-        @Nullable String serverUrl,
-        @Nullable String title,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentation") @Nullable String documentation,
+        @OutputCustomType.Parameter("serverUrl") @Nullable String serverUrl,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.description = description;
         this.documentation = documentation;
         this.serverUrl = serverUrl;
@@ -115,27 +115,27 @@ public final class GatewayApiMetadataPropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentation(@Nullable String documentation) {
+        public Builder documentation(@Nullable String documentation) {
             this.documentation = documentation;
             return this;
         }
 
-        public Builder setServerUrl(@Nullable String serverUrl) {
+        public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

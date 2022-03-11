@@ -125,52 +125,52 @@ public final class GooglePrivacyDlpV2StoredInfoTypeConfigArgs extends io.pulumi.
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
+        public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLargeCustomDictionary(@Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable Input<GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
-        public Builder setLargeCustomDictionary(@Nullable GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs largeCustomDictionary) {
             this.largeCustomDictionary = Input.ofNullable(largeCustomDictionary);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        public Builder regex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
+        public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }

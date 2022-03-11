@@ -38,13 +38,13 @@ public final class VoiceConnectorOrganizationRoute {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"host","port","priority","protocol","weight"})
+    @OutputCustomType.Constructor
     private VoiceConnectorOrganizationRoute(
-        String host,
-        @Nullable Integer port,
-        Integer priority,
-        String protocol,
-        Integer weight) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.host = host;
         this.port = port;
         this.priority = priority;
@@ -116,27 +116,27 @@ public final class VoiceConnectorOrganizationRoute {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

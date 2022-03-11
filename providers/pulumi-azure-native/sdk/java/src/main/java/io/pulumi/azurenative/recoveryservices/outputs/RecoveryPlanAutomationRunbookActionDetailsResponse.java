@@ -33,12 +33,12 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"fabricLocation","instanceType","runbookId","timeout"})
+    @OutputCustomType.Constructor
     private RecoveryPlanAutomationRunbookActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        @Nullable String runbookId,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("fabricLocation") String fabricLocation,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("runbookId") @Nullable String runbookId,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.fabricLocation = fabricLocation;
         this.instanceType = instanceType;
         this.runbookId = runbookId;
@@ -101,22 +101,22 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFabricLocation(String fabricLocation) {
+        public Builder fabricLocation(String fabricLocation) {
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setRunbookId(@Nullable String runbookId) {
+        public Builder runbookId(@Nullable String runbookId) {
             this.runbookId = runbookId;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

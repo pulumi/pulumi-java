@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source;
 
-    @OutputCustomType.Constructor({"pullDeps","source"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb(
-        @Nullable Boolean pullDeps,
-        OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
+        @OutputCustomType.Parameter("pullDeps") @Nullable Boolean pullDeps,
+        @OutputCustomType.Parameter("source") OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
         this.pullDeps = pullDeps;
         this.source = source;
     }
@@ -68,12 +68,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb {
     	      this.source = defaults.source;
         }
 
-        public Builder setPullDeps(@Nullable Boolean pullDeps) {
+        public Builder pullDeps(@Nullable Boolean pullDeps) {
             this.pullDeps = pullDeps;
             return this;
         }
 
-        public Builder setSource(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
+        public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSource source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

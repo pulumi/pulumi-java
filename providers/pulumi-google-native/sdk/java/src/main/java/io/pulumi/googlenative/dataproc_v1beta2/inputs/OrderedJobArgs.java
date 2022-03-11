@@ -245,122 +245,122 @@ public final class OrderedJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setHadoopJob(@Nullable Input<HadoopJobArgs> hadoopJob) {
+        public Builder hadoopJob(@Nullable Input<HadoopJobArgs> hadoopJob) {
             this.hadoopJob = hadoopJob;
             return this;
         }
 
-        public Builder setHadoopJob(@Nullable HadoopJobArgs hadoopJob) {
+        public Builder hadoopJob(@Nullable HadoopJobArgs hadoopJob) {
             this.hadoopJob = Input.ofNullable(hadoopJob);
             return this;
         }
 
-        public Builder setHiveJob(@Nullable Input<HiveJobArgs> hiveJob) {
+        public Builder hiveJob(@Nullable Input<HiveJobArgs> hiveJob) {
             this.hiveJob = hiveJob;
             return this;
         }
 
-        public Builder setHiveJob(@Nullable HiveJobArgs hiveJob) {
+        public Builder hiveJob(@Nullable HiveJobArgs hiveJob) {
             this.hiveJob = Input.ofNullable(hiveJob);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPigJob(@Nullable Input<PigJobArgs> pigJob) {
+        public Builder pigJob(@Nullable Input<PigJobArgs> pigJob) {
             this.pigJob = pigJob;
             return this;
         }
 
-        public Builder setPigJob(@Nullable PigJobArgs pigJob) {
+        public Builder pigJob(@Nullable PigJobArgs pigJob) {
             this.pigJob = Input.ofNullable(pigJob);
             return this;
         }
 
-        public Builder setPrerequisiteStepIds(@Nullable Input<List<String>> prerequisiteStepIds) {
+        public Builder prerequisiteStepIds(@Nullable Input<List<String>> prerequisiteStepIds) {
             this.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
 
-        public Builder setPrerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
+        public Builder prerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = Input.ofNullable(prerequisiteStepIds);
             return this;
         }
 
-        public Builder setPrestoJob(@Nullable Input<PrestoJobArgs> prestoJob) {
+        public Builder prestoJob(@Nullable Input<PrestoJobArgs> prestoJob) {
             this.prestoJob = prestoJob;
             return this;
         }
 
-        public Builder setPrestoJob(@Nullable PrestoJobArgs prestoJob) {
+        public Builder prestoJob(@Nullable PrestoJobArgs prestoJob) {
             this.prestoJob = Input.ofNullable(prestoJob);
             return this;
         }
 
-        public Builder setPysparkJob(@Nullable Input<PySparkJobArgs> pysparkJob) {
+        public Builder pysparkJob(@Nullable Input<PySparkJobArgs> pysparkJob) {
             this.pysparkJob = pysparkJob;
             return this;
         }
 
-        public Builder setPysparkJob(@Nullable PySparkJobArgs pysparkJob) {
+        public Builder pysparkJob(@Nullable PySparkJobArgs pysparkJob) {
             this.pysparkJob = Input.ofNullable(pysparkJob);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<JobSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<JobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable JobSchedulingArgs scheduling) {
+        public Builder scheduling(@Nullable JobSchedulingArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setSparkJob(@Nullable Input<SparkJobArgs> sparkJob) {
+        public Builder sparkJob(@Nullable Input<SparkJobArgs> sparkJob) {
             this.sparkJob = sparkJob;
             return this;
         }
 
-        public Builder setSparkJob(@Nullable SparkJobArgs sparkJob) {
+        public Builder sparkJob(@Nullable SparkJobArgs sparkJob) {
             this.sparkJob = Input.ofNullable(sparkJob);
             return this;
         }
 
-        public Builder setSparkRJob(@Nullable Input<SparkRJobArgs> sparkRJob) {
+        public Builder sparkRJob(@Nullable Input<SparkRJobArgs> sparkRJob) {
             this.sparkRJob = sparkRJob;
             return this;
         }
 
-        public Builder setSparkRJob(@Nullable SparkRJobArgs sparkRJob) {
+        public Builder sparkRJob(@Nullable SparkRJobArgs sparkRJob) {
             this.sparkRJob = Input.ofNullable(sparkRJob);
             return this;
         }
 
-        public Builder setSparkSqlJob(@Nullable Input<SparkSqlJobArgs> sparkSqlJob) {
+        public Builder sparkSqlJob(@Nullable Input<SparkSqlJobArgs> sparkSqlJob) {
             this.sparkSqlJob = sparkSqlJob;
             return this;
         }
 
-        public Builder setSparkSqlJob(@Nullable SparkSqlJobArgs sparkSqlJob) {
+        public Builder sparkSqlJob(@Nullable SparkSqlJobArgs sparkSqlJob) {
             this.sparkSqlJob = Input.ofNullable(sparkSqlJob);
             return this;
         }
 
-        public Builder setStepId(Input<String> stepId) {
+        public Builder stepId(Input<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }

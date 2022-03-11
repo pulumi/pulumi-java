@@ -29,11 +29,11 @@ public final class IntentFollowUpPromptRejectionStatementMessage {
      */
     private final @Nullable Integer groupNumber;
 
-    @OutputCustomType.Constructor({"content","contentType","groupNumber"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPromptRejectionStatementMessage(
-        String content,
-        String contentType,
-        @Nullable Integer groupNumber) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("groupNumber") @Nullable Integer groupNumber) {
         this.content = content;
         this.contentType = contentType;
         this.groupNumber = groupNumber;
@@ -86,17 +86,17 @@ public final class IntentFollowUpPromptRejectionStatementMessage {
     	      this.groupNumber = defaults.groupNumber;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setGroupNumber(@Nullable Integer groupNumber) {
+        public Builder groupNumber(@Nullable Integer groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }

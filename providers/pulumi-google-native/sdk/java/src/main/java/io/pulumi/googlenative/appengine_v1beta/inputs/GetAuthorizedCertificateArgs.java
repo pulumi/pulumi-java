@@ -74,17 +74,17 @@ public final class GetAuthorizedCertificateArgs extends io.pulumi.resources.Invo
     	      this.view = defaults.view;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAuthorizedCertificateId(String authorizedCertificateId) {
+        public Builder authorizedCertificateId(String authorizedCertificateId) {
             this.authorizedCertificateId = Objects.requireNonNull(authorizedCertificateId);
             return this;
         }
 
-        public Builder setView(@Nullable String view) {
+        public Builder view(@Nullable String view) {
             this.view = view;
             return this;
         }

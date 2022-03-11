@@ -45,14 +45,14 @@ public final class GetNamespaceNetworkRuleSetResult {
      */
     private final @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"defaultAction","id","ipRules","name","type","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private GetNamespaceNetworkRuleSetResult(
-        @Nullable String defaultAction,
-        String id,
-        @Nullable List<NWRuleSetIpRulesResponse> ipRules,
-        String name,
-        String type,
-        @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<NWRuleSetIpRulesResponse> ipRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
         this.defaultAction = defaultAction;
         this.id = id;
         this.ipRules = ipRules;
@@ -134,32 +134,32 @@ public final class GetNamespaceNetworkRuleSetResult {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<NWRuleSetIpRulesResponse> ipRules) {
+        public Builder ipRules(@Nullable List<NWRuleSetIpRulesResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<NWRuleSetVirtualNetworkRulesResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

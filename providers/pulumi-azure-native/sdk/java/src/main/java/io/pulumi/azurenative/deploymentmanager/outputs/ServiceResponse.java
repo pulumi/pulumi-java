@@ -34,12 +34,12 @@ public final class ServiceResponse {
      */
     private final String targetSubscriptionId;
 
-    @OutputCustomType.Constructor({"name","serviceUnits","targetLocation","targetSubscriptionId"})
+    @OutputCustomType.Constructor
     private ServiceResponse(
-        @Nullable String name,
-        @Nullable List<ServiceUnitResponse> serviceUnits,
-        String targetLocation,
-        String targetSubscriptionId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("serviceUnits") @Nullable List<ServiceUnitResponse> serviceUnits,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation,
+        @OutputCustomType.Parameter("targetSubscriptionId") String targetSubscriptionId) {
         this.name = name;
         this.serviceUnits = serviceUnits;
         this.targetLocation = targetLocation;
@@ -101,22 +101,22 @@ public final class ServiceResponse {
     	      this.targetSubscriptionId = defaults.targetSubscriptionId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setServiceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
+        public Builder serviceUnits(@Nullable List<ServiceUnitResponse> serviceUnits) {
             this.serviceUnits = serviceUnits;
             return this;
         }
 
-        public Builder setTargetLocation(String targetLocation) {
+        public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
 
-        public Builder setTargetSubscriptionId(String targetSubscriptionId) {
+        public Builder targetSubscriptionId(String targetSubscriptionId) {
             this.targetSubscriptionId = Objects.requireNonNull(targetSubscriptionId);
             return this;
         }

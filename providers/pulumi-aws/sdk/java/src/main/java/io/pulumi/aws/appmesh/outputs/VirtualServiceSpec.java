@@ -17,8 +17,8 @@ public final class VirtualServiceSpec {
      */
     private final @Nullable VirtualServiceSpecProvider provider;
 
-    @OutputCustomType.Constructor({"provider"})
-    private VirtualServiceSpec(@Nullable VirtualServiceSpecProvider provider) {
+    @OutputCustomType.Constructor
+    private VirtualServiceSpec(@OutputCustomType.Parameter("provider") @Nullable VirtualServiceSpecProvider provider) {
         this.provider = provider;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualServiceSpec {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setProvider(@Nullable VirtualServiceSpecProvider provider) {
+        public Builder provider(@Nullable VirtualServiceSpecProvider provider) {
             this.provider = provider;
             return this;
         }

@@ -71,22 +71,22 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder setClusterSelector(@Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector) {
+        public Builder clusterSelector(@Nullable Input<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector) {
             this.clusterSelector = clusterSelector;
             return this;
         }
 
-        public Builder setClusterSelector(@Nullable WorkflowTemplatePlacementClusterSelectorGetArgs clusterSelector) {
+        public Builder clusterSelector(@Nullable WorkflowTemplatePlacementClusterSelectorGetArgs clusterSelector) {
             this.clusterSelector = Input.ofNullable(clusterSelector);
             return this;
         }
 
-        public Builder setManagedCluster(@Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
+        public Builder managedCluster(@Nullable Input<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
             this.managedCluster = managedCluster;
             return this;
         }
 
-        public Builder setManagedCluster(@Nullable WorkflowTemplatePlacementManagedClusterGetArgs managedCluster) {
+        public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedClusterGetArgs managedCluster) {
             this.managedCluster = Input.ofNullable(managedCluster);
             return this;
         }

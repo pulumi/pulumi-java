@@ -20,10 +20,10 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementGeoMatchStatementForwardedIpConfig(
-        String fallbackBehavior,
-        String headerName) {
+        @OutputCustomType.Parameter("fallbackBehavior") String fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }
@@ -65,12 +65,12 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(String fallbackBehavior) {
+        public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }

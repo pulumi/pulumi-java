@@ -15,10 +15,10 @@ public final class TokenCredentialsPropertiesResponse {
     private final @Nullable List<TokenCertificateResponse> certificates;
     private final @Nullable List<TokenPasswordResponse> passwords;
 
-    @OutputCustomType.Constructor({"certificates","passwords"})
+    @OutputCustomType.Constructor
     private TokenCredentialsPropertiesResponse(
-        @Nullable List<TokenCertificateResponse> certificates,
-        @Nullable List<TokenPasswordResponse> passwords) {
+        @OutputCustomType.Parameter("certificates") @Nullable List<TokenCertificateResponse> certificates,
+        @OutputCustomType.Parameter("passwords") @Nullable List<TokenPasswordResponse> passwords) {
         this.certificates = certificates;
         this.passwords = passwords;
     }
@@ -52,12 +52,12 @@ public final class TokenCredentialsPropertiesResponse {
     	      this.passwords = defaults.passwords;
         }
 
-        public Builder setCertificates(@Nullable List<TokenCertificateResponse> certificates) {
+        public Builder certificates(@Nullable List<TokenCertificateResponse> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<TokenPasswordResponse> passwords) {
+        public Builder passwords(@Nullable List<TokenPasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }

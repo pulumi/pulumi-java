@@ -206,102 +206,102 @@ public final class VpcPeeringConnectionState extends io.pulumi.resources.Resourc
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAcceptStatus(@Nullable Input<String> acceptStatus) {
+        public Builder acceptStatus(@Nullable Input<String> acceptStatus) {
             this.acceptStatus = acceptStatus;
             return this;
         }
 
-        public Builder setAcceptStatus(@Nullable String acceptStatus) {
+        public Builder acceptStatus(@Nullable String acceptStatus) {
             this.acceptStatus = Input.ofNullable(acceptStatus);
             return this;
         }
 
-        public Builder setAccepter(@Nullable Input<VpcPeeringConnectionAccepterGetArgs> accepter) {
+        public Builder accepter(@Nullable Input<VpcPeeringConnectionAccepterGetArgs> accepter) {
             this.accepter = accepter;
             return this;
         }
 
-        public Builder setAccepter(@Nullable VpcPeeringConnectionAccepterGetArgs accepter) {
+        public Builder accepter(@Nullable VpcPeeringConnectionAccepterGetArgs accepter) {
             this.accepter = Input.ofNullable(accepter);
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Input<Boolean> autoAccept) {
+        public Builder autoAccept(@Nullable Input<Boolean> autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Boolean autoAccept) {
+        public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = Input.ofNullable(autoAccept);
             return this;
         }
 
-        public Builder setPeerOwnerId(@Nullable Input<String> peerOwnerId) {
+        public Builder peerOwnerId(@Nullable Input<String> peerOwnerId) {
             this.peerOwnerId = peerOwnerId;
             return this;
         }
 
-        public Builder setPeerOwnerId(@Nullable String peerOwnerId) {
+        public Builder peerOwnerId(@Nullable String peerOwnerId) {
             this.peerOwnerId = Input.ofNullable(peerOwnerId);
             return this;
         }
 
-        public Builder setPeerRegion(@Nullable Input<String> peerRegion) {
+        public Builder peerRegion(@Nullable Input<String> peerRegion) {
             this.peerRegion = peerRegion;
             return this;
         }
 
-        public Builder setPeerRegion(@Nullable String peerRegion) {
+        public Builder peerRegion(@Nullable String peerRegion) {
             this.peerRegion = Input.ofNullable(peerRegion);
             return this;
         }
 
-        public Builder setPeerVpcId(@Nullable Input<String> peerVpcId) {
+        public Builder peerVpcId(@Nullable Input<String> peerVpcId) {
             this.peerVpcId = peerVpcId;
             return this;
         }
 
-        public Builder setPeerVpcId(@Nullable String peerVpcId) {
+        public Builder peerVpcId(@Nullable String peerVpcId) {
             this.peerVpcId = Input.ofNullable(peerVpcId);
             return this;
         }
 
-        public Builder setRequester(@Nullable Input<VpcPeeringConnectionRequesterGetArgs> requester) {
+        public Builder requester(@Nullable Input<VpcPeeringConnectionRequesterGetArgs> requester) {
             this.requester = requester;
             return this;
         }
 
-        public Builder setRequester(@Nullable VpcPeeringConnectionRequesterGetArgs requester) {
+        public Builder requester(@Nullable VpcPeeringConnectionRequesterGetArgs requester) {
             this.requester = Input.ofNullable(requester);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

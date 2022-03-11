@@ -59,12 +59,12 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,ApplicationManagementMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,ApplicationManagementMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,ApplicationManagementMode> mode) {
+        public Builder mode(@Nullable Either<String,ApplicationManagementMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

@@ -22,10 +22,10 @@ public final class PartnerRegionInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor({"location","replicationRole"})
+    @OutputCustomType.Constructor
     private PartnerRegionInfoResponse(
-        @Nullable String location,
-        String replicationRole) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
         this.location = location;
         this.replicationRole = replicationRole;
     }
@@ -67,12 +67,12 @@ public final class PartnerRegionInfoResponse {
     	      this.replicationRole = defaults.replicationRole;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }

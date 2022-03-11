@@ -29,11 +29,11 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
      */
     private final String lambdaArn;
 
-    @OutputCustomType.Constructor({"eventType","includeBody","lambdaArn"})
+    @OutputCustomType.Constructor
     private DistributionOrderedCacheBehaviorLambdaFunctionAssociation(
-        String eventType,
-        @Nullable Boolean includeBody,
-        String lambdaArn) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("includeBody") @Nullable Boolean includeBody,
+        @OutputCustomType.Parameter("lambdaArn") String lambdaArn) {
         this.eventType = eventType;
         this.includeBody = includeBody;
         this.lambdaArn = lambdaArn;
@@ -86,17 +86,17 @@ public final class DistributionOrderedCacheBehaviorLambdaFunctionAssociation {
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setIncludeBody(@Nullable Boolean includeBody) {
+        public Builder includeBody(@Nullable Boolean includeBody) {
             this.includeBody = includeBody;
             return this;
         }
 
-        public Builder setLambdaArn(String lambdaArn) {
+        public Builder lambdaArn(String lambdaArn) {
             this.lambdaArn = Objects.requireNonNull(lambdaArn);
             return this;
         }

@@ -20,10 +20,10 @@ public final class ResourceServerScope {
      */
     private final String scopeName;
 
-    @OutputCustomType.Constructor({"scopeDescription","scopeName"})
+    @OutputCustomType.Constructor
     private ResourceServerScope(
-        String scopeDescription,
-        String scopeName) {
+        @OutputCustomType.Parameter("scopeDescription") String scopeDescription,
+        @OutputCustomType.Parameter("scopeName") String scopeName) {
         this.scopeDescription = scopeDescription;
         this.scopeName = scopeName;
     }
@@ -65,12 +65,12 @@ public final class ResourceServerScope {
     	      this.scopeName = defaults.scopeName;
         }
 
-        public Builder setScopeDescription(String scopeDescription) {
+        public Builder scopeDescription(String scopeDescription) {
             this.scopeDescription = Objects.requireNonNull(scopeDescription);
             return this;
         }
 
-        public Builder setScopeName(String scopeName) {
+        public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }

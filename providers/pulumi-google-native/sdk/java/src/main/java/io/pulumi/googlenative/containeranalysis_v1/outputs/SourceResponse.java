@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final Map<String,String> fileHashes;
 
-    @OutputCustomType.Constructor({"additionalContexts","artifactStorageSourceUri","context","fileHashes"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<SourceContextResponse> additionalContexts,
-        String artifactStorageSourceUri,
-        SourceContextResponse context,
-        Map<String,String> fileHashes) {
+        @OutputCustomType.Parameter("additionalContexts") List<SourceContextResponse> additionalContexts,
+        @OutputCustomType.Parameter("artifactStorageSourceUri") String artifactStorageSourceUri,
+        @OutputCustomType.Parameter("context") SourceContextResponse context,
+        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSourceUri = artifactStorageSourceUri;
         this.context = context;
@@ -100,22 +100,22 @@ public final class SourceResponse {
     	      this.fileHashes = defaults.fileHashes;
         }
 
-        public Builder setAdditionalContexts(List<SourceContextResponse> additionalContexts) {
+        public Builder additionalContexts(List<SourceContextResponse> additionalContexts) {
             this.additionalContexts = Objects.requireNonNull(additionalContexts);
             return this;
         }
 
-        public Builder setArtifactStorageSourceUri(String artifactStorageSourceUri) {
+        public Builder artifactStorageSourceUri(String artifactStorageSourceUri) {
             this.artifactStorageSourceUri = Objects.requireNonNull(artifactStorageSourceUri);
             return this;
         }
 
-        public Builder setContext(SourceContextResponse context) {
+        public Builder context(SourceContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setFileHashes(Map<String,String> fileHashes) {
+        public Builder fileHashes(Map<String,String> fileHashes) {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }

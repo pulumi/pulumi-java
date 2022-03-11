@@ -16,8 +16,8 @@ public final class BillingResponse {
      */
     private final List<BillingDestinationResponse> consumerDestinations;
 
-    @OutputCustomType.Constructor({"consumerDestinations"})
-    private BillingResponse(List<BillingDestinationResponse> consumerDestinations) {
+    @OutputCustomType.Constructor
+    private BillingResponse(@OutputCustomType.Parameter("consumerDestinations") List<BillingDestinationResponse> consumerDestinations) {
         this.consumerDestinations = consumerDestinations;
     }
 
@@ -49,7 +49,7 @@ public final class BillingResponse {
     	      this.consumerDestinations = defaults.consumerDestinations;
         }
 
-        public Builder setConsumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
+        public Builder consumerDestinations(List<BillingDestinationResponse> consumerDestinations) {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }

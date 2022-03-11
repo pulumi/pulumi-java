@@ -14,10 +14,10 @@ public final class CertificateAuthorityAccessMethod {
     private final @Nullable String accessMethodType;
     private final @Nullable String customObjectIdentifier;
 
-    @OutputCustomType.Constructor({"accessMethodType","customObjectIdentifier"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityAccessMethod(
-        @Nullable String accessMethodType,
-        @Nullable String customObjectIdentifier) {
+        @OutputCustomType.Parameter("accessMethodType") @Nullable String accessMethodType,
+        @OutputCustomType.Parameter("customObjectIdentifier") @Nullable String customObjectIdentifier) {
         this.accessMethodType = accessMethodType;
         this.customObjectIdentifier = customObjectIdentifier;
     }
@@ -51,12 +51,12 @@ public final class CertificateAuthorityAccessMethod {
     	      this.customObjectIdentifier = defaults.customObjectIdentifier;
         }
 
-        public Builder setAccessMethodType(@Nullable String accessMethodType) {
+        public Builder accessMethodType(@Nullable String accessMethodType) {
             this.accessMethodType = accessMethodType;
             return this;
         }
 
-        public Builder setCustomObjectIdentifier(@Nullable String customObjectIdentifier) {
+        public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }

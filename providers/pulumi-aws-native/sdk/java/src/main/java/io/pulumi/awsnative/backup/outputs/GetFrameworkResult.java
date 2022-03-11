@@ -59,15 +59,15 @@ public final class GetFrameworkResult {
      */
     private final @Nullable List<FrameworkTag> frameworkTags;
 
-    @OutputCustomType.Constructor({"creationTime","deploymentStatus","frameworkArn","frameworkControls","frameworkDescription","frameworkStatus","frameworkTags"})
+    @OutputCustomType.Constructor
     private GetFrameworkResult(
-        @Nullable Double creationTime,
-        @Nullable String deploymentStatus,
-        @Nullable String frameworkArn,
-        @Nullable List<FrameworkControl> frameworkControls,
-        @Nullable String frameworkDescription,
-        @Nullable String frameworkStatus,
-        @Nullable List<FrameworkTag> frameworkTags) {
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("frameworkArn") @Nullable String frameworkArn,
+        @OutputCustomType.Parameter("frameworkControls") @Nullable List<FrameworkControl> frameworkControls,
+        @OutputCustomType.Parameter("frameworkDescription") @Nullable String frameworkDescription,
+        @OutputCustomType.Parameter("frameworkStatus") @Nullable String frameworkStatus,
+        @OutputCustomType.Parameter("frameworkTags") @Nullable List<FrameworkTag> frameworkTags) {
         this.creationTime = creationTime;
         this.deploymentStatus = deploymentStatus;
         this.frameworkArn = frameworkArn;
@@ -167,37 +167,37 @@ public final class GetFrameworkResult {
     	      this.frameworkTags = defaults.frameworkTags;
         }
 
-        public Builder setCreationTime(@Nullable Double creationTime) {
+        public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDeploymentStatus(@Nullable String deploymentStatus) {
+        public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
 
-        public Builder setFrameworkArn(@Nullable String frameworkArn) {
+        public Builder frameworkArn(@Nullable String frameworkArn) {
             this.frameworkArn = frameworkArn;
             return this;
         }
 
-        public Builder setFrameworkControls(@Nullable List<FrameworkControl> frameworkControls) {
+        public Builder frameworkControls(@Nullable List<FrameworkControl> frameworkControls) {
             this.frameworkControls = frameworkControls;
             return this;
         }
 
-        public Builder setFrameworkDescription(@Nullable String frameworkDescription) {
+        public Builder frameworkDescription(@Nullable String frameworkDescription) {
             this.frameworkDescription = frameworkDescription;
             return this;
         }
 
-        public Builder setFrameworkStatus(@Nullable String frameworkStatus) {
+        public Builder frameworkStatus(@Nullable String frameworkStatus) {
             this.frameworkStatus = frameworkStatus;
             return this;
         }
 
-        public Builder setFrameworkTags(@Nullable List<FrameworkTag> frameworkTags) {
+        public Builder frameworkTags(@Nullable List<FrameworkTag> frameworkTags) {
             this.frameworkTags = frameworkTags;
             return this;
         }

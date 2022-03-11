@@ -45,14 +45,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      */
     private final @Nullable String suffixMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","headerName","invertMatch","prefixMatch","presentMatch","suffixMatch"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch(
-        @Nullable String exactMatch,
-        String headerName,
-        @Nullable Boolean invertMatch,
-        @Nullable String prefixMatch,
-        @Nullable Boolean presentMatch,
-        @Nullable String suffixMatch) {
+        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("invertMatch") @Nullable Boolean invertMatch,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
+        @OutputCustomType.Parameter("suffixMatch") @Nullable String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;
@@ -136,32 +136,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     	      this.suffixMatch = defaults.suffixMatch;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setInvertMatch(@Nullable Boolean invertMatch) {
+        public Builder invertMatch(@Nullable Boolean invertMatch) {
             this.invertMatch = invertMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable String prefixMatch) {
+        public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setSuffixMatch(@Nullable String suffixMatch) {
+        public Builder suffixMatch(@Nullable String suffixMatch) {
             this.suffixMatch = suffixMatch;
             return this;
         }

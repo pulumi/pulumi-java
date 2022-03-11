@@ -35,12 +35,12 @@ public final class GetDatasetResult {
      */
     private final @Nullable DatasetPathOptions pathOptions;
 
-    @OutputCustomType.Constructor({"format","formatOptions","input","pathOptions"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        @Nullable DatasetFormat format,
-        @Nullable DatasetFormatOptions formatOptions,
-        @Nullable DatasetInput input,
-        @Nullable DatasetPathOptions pathOptions) {
+        @OutputCustomType.Parameter("format") @Nullable DatasetFormat format,
+        @OutputCustomType.Parameter("formatOptions") @Nullable DatasetFormatOptions formatOptions,
+        @OutputCustomType.Parameter("input") @Nullable DatasetInput input,
+        @OutputCustomType.Parameter("pathOptions") @Nullable DatasetPathOptions pathOptions) {
         this.format = format;
         this.formatOptions = formatOptions;
         this.input = input;
@@ -102,22 +102,22 @@ public final class GetDatasetResult {
     	      this.pathOptions = defaults.pathOptions;
         }
 
-        public Builder setFormat(@Nullable DatasetFormat format) {
+        public Builder format(@Nullable DatasetFormat format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormatOptions(@Nullable DatasetFormatOptions formatOptions) {
+        public Builder formatOptions(@Nullable DatasetFormatOptions formatOptions) {
             this.formatOptions = formatOptions;
             return this;
         }
 
-        public Builder setInput(@Nullable DatasetInput input) {
+        public Builder input(@Nullable DatasetInput input) {
             this.input = input;
             return this;
         }
 
-        public Builder setPathOptions(@Nullable DatasetPathOptions pathOptions) {
+        public Builder pathOptions(@Nullable DatasetPathOptions pathOptions) {
             this.pathOptions = pathOptions;
             return this;
         }

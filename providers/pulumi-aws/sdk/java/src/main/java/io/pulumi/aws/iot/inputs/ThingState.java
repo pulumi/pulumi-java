@@ -136,62 +136,62 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setDefaultClientId(@Nullable Input<String> defaultClientId) {
+        public Builder defaultClientId(@Nullable Input<String> defaultClientId) {
             this.defaultClientId = defaultClientId;
             return this;
         }
 
-        public Builder setDefaultClientId(@Nullable String defaultClientId) {
+        public Builder defaultClientId(@Nullable String defaultClientId) {
             this.defaultClientId = Input.ofNullable(defaultClientId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setThingTypeName(@Nullable Input<String> thingTypeName) {
+        public Builder thingTypeName(@Nullable Input<String> thingTypeName) {
             this.thingTypeName = thingTypeName;
             return this;
         }
 
-        public Builder setThingTypeName(@Nullable String thingTypeName) {
+        public Builder thingTypeName(@Nullable String thingTypeName) {
             this.thingTypeName = Input.ofNullable(thingTypeName);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

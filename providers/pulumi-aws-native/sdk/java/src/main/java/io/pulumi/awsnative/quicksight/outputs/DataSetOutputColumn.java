@@ -24,11 +24,11 @@ public final class DataSetOutputColumn {
     private final @Nullable String name;
     private final @Nullable DataSetColumnDataType type;
 
-    @OutputCustomType.Constructor({"description","name","type"})
+    @OutputCustomType.Constructor
     private DataSetOutputColumn(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable DataSetColumnDataType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable DataSetColumnDataType type) {
         this.description = description;
         this.name = name;
         this.type = type;
@@ -76,17 +76,17 @@ public final class DataSetOutputColumn {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable DataSetColumnDataType type) {
+        public Builder type(@Nullable DataSetColumnDataType type) {
             this.type = type;
             return this;
         }

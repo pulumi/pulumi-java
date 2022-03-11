@@ -73,12 +73,12 @@ public final class HttpFaultInjectionResponse extends io.pulumi.resources.Invoke
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(HttpFaultAbortResponse abort) {
+        public Builder abort(HttpFaultAbortResponse abort) {
             this.abort = Objects.requireNonNull(abort);
             return this;
         }
 
-        public Builder setDelay(HttpFaultDelayResponse delay) {
+        public Builder delay(HttpFaultDelayResponse delay) {
             this.delay = Objects.requireNonNull(delay);
             return this;
         }

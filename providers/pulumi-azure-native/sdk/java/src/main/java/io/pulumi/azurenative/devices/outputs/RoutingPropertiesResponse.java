@@ -36,12 +36,12 @@ public final class RoutingPropertiesResponse {
      */
     private final @Nullable List<RoutePropertiesResponse> routes;
 
-    @OutputCustomType.Constructor({"endpoints","enrichments","fallbackRoute","routes"})
+    @OutputCustomType.Constructor
     private RoutingPropertiesResponse(
-        @Nullable RoutingEndpointsResponse endpoints,
-        @Nullable List<EnrichmentPropertiesResponse> enrichments,
-        @Nullable FallbackRoutePropertiesResponse fallbackRoute,
-        @Nullable List<RoutePropertiesResponse> routes) {
+        @OutputCustomType.Parameter("endpoints") @Nullable RoutingEndpointsResponse endpoints,
+        @OutputCustomType.Parameter("enrichments") @Nullable List<EnrichmentPropertiesResponse> enrichments,
+        @OutputCustomType.Parameter("fallbackRoute") @Nullable FallbackRoutePropertiesResponse fallbackRoute,
+        @OutputCustomType.Parameter("routes") @Nullable List<RoutePropertiesResponse> routes) {
         this.endpoints = endpoints;
         this.enrichments = enrichments;
         this.fallbackRoute = fallbackRoute;
@@ -103,22 +103,22 @@ public final class RoutingPropertiesResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setEndpoints(@Nullable RoutingEndpointsResponse endpoints) {
+        public Builder endpoints(@Nullable RoutingEndpointsResponse endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEnrichments(@Nullable List<EnrichmentPropertiesResponse> enrichments) {
+        public Builder enrichments(@Nullable List<EnrichmentPropertiesResponse> enrichments) {
             this.enrichments = enrichments;
             return this;
         }
 
-        public Builder setFallbackRoute(@Nullable FallbackRoutePropertiesResponse fallbackRoute) {
+        public Builder fallbackRoute(@Nullable FallbackRoutePropertiesResponse fallbackRoute) {
             this.fallbackRoute = fallbackRoute;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<RoutePropertiesResponse> routes) {
+        public Builder routes(@Nullable List<RoutePropertiesResponse> routes) {
             this.routes = routes;
             return this;
         }

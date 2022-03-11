@@ -41,14 +41,14 @@ public final class HttpRedirectActionResponse {
      */
     private final Boolean stripQuery;
 
-    @OutputCustomType.Constructor({"hostRedirect","httpsRedirect","pathRedirect","prefixRedirect","redirectResponseCode","stripQuery"})
+    @OutputCustomType.Constructor
     private HttpRedirectActionResponse(
-        String hostRedirect,
-        Boolean httpsRedirect,
-        String pathRedirect,
-        String prefixRedirect,
-        String redirectResponseCode,
-        Boolean stripQuery) {
+        @OutputCustomType.Parameter("hostRedirect") String hostRedirect,
+        @OutputCustomType.Parameter("httpsRedirect") Boolean httpsRedirect,
+        @OutputCustomType.Parameter("pathRedirect") String pathRedirect,
+        @OutputCustomType.Parameter("prefixRedirect") String prefixRedirect,
+        @OutputCustomType.Parameter("redirectResponseCode") String redirectResponseCode,
+        @OutputCustomType.Parameter("stripQuery") Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;
@@ -130,32 +130,32 @@ public final class HttpRedirectActionResponse {
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder setHostRedirect(String hostRedirect) {
+        public Builder hostRedirect(String hostRedirect) {
             this.hostRedirect = Objects.requireNonNull(hostRedirect);
             return this;
         }
 
-        public Builder setHttpsRedirect(Boolean httpsRedirect) {
+        public Builder httpsRedirect(Boolean httpsRedirect) {
             this.httpsRedirect = Objects.requireNonNull(httpsRedirect);
             return this;
         }
 
-        public Builder setPathRedirect(String pathRedirect) {
+        public Builder pathRedirect(String pathRedirect) {
             this.pathRedirect = Objects.requireNonNull(pathRedirect);
             return this;
         }
 
-        public Builder setPrefixRedirect(String prefixRedirect) {
+        public Builder prefixRedirect(String prefixRedirect) {
             this.prefixRedirect = Objects.requireNonNull(prefixRedirect);
             return this;
         }
 
-        public Builder setRedirectResponseCode(String redirectResponseCode) {
+        public Builder redirectResponseCode(String redirectResponseCode) {
             this.redirectResponseCode = Objects.requireNonNull(redirectResponseCode);
             return this;
         }
 
-        public Builder setStripQuery(Boolean stripQuery) {
+        public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }

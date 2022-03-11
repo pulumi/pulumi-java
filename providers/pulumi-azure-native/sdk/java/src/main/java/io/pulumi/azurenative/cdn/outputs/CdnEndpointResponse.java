@@ -17,8 +17,8 @@ public final class CdnEndpointResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private CdnEndpointResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private CdnEndpointResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 
@@ -50,7 +50,7 @@ public final class CdnEndpointResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

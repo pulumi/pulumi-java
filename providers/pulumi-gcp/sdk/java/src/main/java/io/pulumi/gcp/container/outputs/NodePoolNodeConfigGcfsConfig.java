@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class NodePoolNodeConfigGcfsConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private NodePoolNodeConfigGcfsConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private NodePoolNodeConfigGcfsConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -40,7 +40,7 @@ public final class NodePoolNodeConfigGcfsConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

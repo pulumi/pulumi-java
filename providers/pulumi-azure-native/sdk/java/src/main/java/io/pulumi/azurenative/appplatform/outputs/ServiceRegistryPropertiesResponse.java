@@ -28,11 +28,11 @@ public final class ServiceRegistryPropertiesResponse {
      */
     private final ServiceRegistryResourceRequestsResponse resourceRequests;
 
-    @OutputCustomType.Constructor({"instances","provisioningState","resourceRequests"})
+    @OutputCustomType.Constructor
     private ServiceRegistryPropertiesResponse(
-        List<ServiceRegistryInstanceResponse> instances,
-        String provisioningState,
-        ServiceRegistryResourceRequestsResponse resourceRequests) {
+        @OutputCustomType.Parameter("instances") List<ServiceRegistryInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceRequests") ServiceRegistryResourceRequestsResponse resourceRequests) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;
@@ -84,17 +84,17 @@ public final class ServiceRegistryPropertiesResponse {
     	      this.resourceRequests = defaults.resourceRequests;
         }
 
-        public Builder setInstances(List<ServiceRegistryInstanceResponse> instances) {
+        public Builder instances(List<ServiceRegistryInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(ServiceRegistryResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }

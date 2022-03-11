@@ -30,11 +30,11 @@ public final class FrameworkControl {
      */
     private final @Nullable FrameworkControlControlScopeProperties controlScope;
 
-    @OutputCustomType.Constructor({"controlInputParameters","controlName","controlScope"})
+    @OutputCustomType.Constructor
     private FrameworkControl(
-        @Nullable List<FrameworkControlInputParameter> controlInputParameters,
-        String controlName,
-        @Nullable FrameworkControlControlScopeProperties controlScope) {
+        @OutputCustomType.Parameter("controlInputParameters") @Nullable List<FrameworkControlInputParameter> controlInputParameters,
+        @OutputCustomType.Parameter("controlName") String controlName,
+        @OutputCustomType.Parameter("controlScope") @Nullable FrameworkControlControlScopeProperties controlScope) {
         this.controlInputParameters = controlInputParameters;
         this.controlName = controlName;
         this.controlScope = controlScope;
@@ -86,17 +86,17 @@ public final class FrameworkControl {
     	      this.controlScope = defaults.controlScope;
         }
 
-        public Builder setControlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
+        public Builder controlInputParameters(@Nullable List<FrameworkControlInputParameter> controlInputParameters) {
             this.controlInputParameters = controlInputParameters;
             return this;
         }
 
-        public Builder setControlName(String controlName) {
+        public Builder controlName(String controlName) {
             this.controlName = Objects.requireNonNull(controlName);
             return this;
         }
 
-        public Builder setControlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
+        public Builder controlScope(@Nullable FrameworkControlControlScopeProperties controlScope) {
             this.controlScope = controlScope;
             return this;
         }

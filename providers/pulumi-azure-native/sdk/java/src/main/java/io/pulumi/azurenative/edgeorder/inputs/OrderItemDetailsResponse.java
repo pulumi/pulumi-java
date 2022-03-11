@@ -306,82 +306,82 @@ public final class OrderItemDetailsResponse extends io.pulumi.resources.InvokeAr
     	      this.reverseShippingDetails = defaults.reverseShippingDetails;
         }
 
-        public Builder setCancellationReason(String cancellationReason) {
+        public Builder cancellationReason(String cancellationReason) {
             this.cancellationReason = Objects.requireNonNull(cancellationReason);
             return this;
         }
 
-        public Builder setCancellationStatus(String cancellationStatus) {
+        public Builder cancellationStatus(String cancellationStatus) {
             this.cancellationStatus = Objects.requireNonNull(cancellationStatus);
             return this;
         }
 
-        public Builder setCurrentStage(StageDetailsResponse currentStage) {
+        public Builder currentStage(StageDetailsResponse currentStage) {
             this.currentStage = Objects.requireNonNull(currentStage);
             return this;
         }
 
-        public Builder setDeletionStatus(String deletionStatus) {
+        public Builder deletionStatus(String deletionStatus) {
             this.deletionStatus = Objects.requireNonNull(deletionStatus);
             return this;
         }
 
-        public Builder setError(ErrorDetailResponse error) {
+        public Builder error(ErrorDetailResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setForwardShippingDetails(ForwardShippingDetailsResponse forwardShippingDetails) {
+        public Builder forwardShippingDetails(ForwardShippingDetailsResponse forwardShippingDetails) {
             this.forwardShippingDetails = Objects.requireNonNull(forwardShippingDetails);
             return this;
         }
 
-        public Builder setManagementRpDetails(ResourceProviderDetailsResponse managementRpDetails) {
+        public Builder managementRpDetails(ResourceProviderDetailsResponse managementRpDetails) {
             this.managementRpDetails = Objects.requireNonNull(managementRpDetails);
             return this;
         }
 
-        public Builder setManagementRpDetailsList(List<ResourceProviderDetailsResponse> managementRpDetailsList) {
+        public Builder managementRpDetailsList(List<ResourceProviderDetailsResponse> managementRpDetailsList) {
             this.managementRpDetailsList = Objects.requireNonNull(managementRpDetailsList);
             return this;
         }
 
-        public Builder setNotificationEmailList(@Nullable List<String> notificationEmailList) {
+        public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
             this.notificationEmailList = notificationEmailList;
             return this;
         }
 
-        public Builder setOrderItemStageHistory(List<StageDetailsResponse> orderItemStageHistory) {
+        public Builder orderItemStageHistory(List<StageDetailsResponse> orderItemStageHistory) {
             this.orderItemStageHistory = Objects.requireNonNull(orderItemStageHistory);
             return this;
         }
 
-        public Builder setOrderItemType(String orderItemType) {
+        public Builder orderItemType(String orderItemType) {
             this.orderItemType = Objects.requireNonNull(orderItemType);
             return this;
         }
 
-        public Builder setPreferences(@Nullable PreferencesResponse preferences) {
+        public Builder preferences(@Nullable PreferencesResponse preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setProductDetails(ProductDetailsResponse productDetails) {
+        public Builder productDetails(ProductDetailsResponse productDetails) {
             this.productDetails = Objects.requireNonNull(productDetails);
             return this;
         }
 
-        public Builder setReturnReason(String returnReason) {
+        public Builder returnReason(String returnReason) {
             this.returnReason = Objects.requireNonNull(returnReason);
             return this;
         }
 
-        public Builder setReturnStatus(String returnStatus) {
+        public Builder returnStatus(String returnStatus) {
             this.returnStatus = Objects.requireNonNull(returnStatus);
             return this;
         }
 
-        public Builder setReverseShippingDetails(ReverseShippingDetailsResponse reverseShippingDetails) {
+        public Builder reverseShippingDetails(ReverseShippingDetailsResponse reverseShippingDetails) {
             this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
             return this;
         }

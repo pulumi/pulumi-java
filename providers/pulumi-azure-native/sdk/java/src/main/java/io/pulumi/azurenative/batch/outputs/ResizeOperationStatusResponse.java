@@ -33,14 +33,14 @@ public final class ResizeOperationStatusResponse {
     private final @Nullable Integer targetDedicatedNodes;
     private final @Nullable Integer targetLowPriorityNodes;
 
-    @OutputCustomType.Constructor({"errors","nodeDeallocationOption","resizeTimeout","startTime","targetDedicatedNodes","targetLowPriorityNodes"})
+    @OutputCustomType.Constructor
     private ResizeOperationStatusResponse(
-        @Nullable List<ResizeErrorResponse> errors,
-        @Nullable String nodeDeallocationOption,
-        @Nullable String resizeTimeout,
-        @Nullable String startTime,
-        @Nullable Integer targetDedicatedNodes,
-        @Nullable Integer targetLowPriorityNodes) {
+        @OutputCustomType.Parameter("errors") @Nullable List<ResizeErrorResponse> errors,
+        @OutputCustomType.Parameter("nodeDeallocationOption") @Nullable String nodeDeallocationOption,
+        @OutputCustomType.Parameter("resizeTimeout") @Nullable String resizeTimeout,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("targetDedicatedNodes") @Nullable Integer targetDedicatedNodes,
+        @OutputCustomType.Parameter("targetLowPriorityNodes") @Nullable Integer targetLowPriorityNodes) {
         this.errors = errors;
         this.nodeDeallocationOption = nodeDeallocationOption;
         this.resizeTimeout = resizeTimeout;
@@ -110,32 +110,32 @@ public final class ResizeOperationStatusResponse {
     	      this.targetLowPriorityNodes = defaults.targetLowPriorityNodes;
         }
 
-        public Builder setErrors(@Nullable List<ResizeErrorResponse> errors) {
+        public Builder errors(@Nullable List<ResizeErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setNodeDeallocationOption(@Nullable String nodeDeallocationOption) {
+        public Builder nodeDeallocationOption(@Nullable String nodeDeallocationOption) {
             this.nodeDeallocationOption = nodeDeallocationOption;
             return this;
         }
 
-        public Builder setResizeTimeout(@Nullable String resizeTimeout) {
+        public Builder resizeTimeout(@Nullable String resizeTimeout) {
             this.resizeTimeout = resizeTimeout;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTargetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
+        public Builder targetDedicatedNodes(@Nullable Integer targetDedicatedNodes) {
             this.targetDedicatedNodes = targetDedicatedNodes;
             return this;
         }
 
-        public Builder setTargetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
+        public Builder targetLowPriorityNodes(@Nullable Integer targetLowPriorityNodes) {
             this.targetLowPriorityNodes = targetLowPriorityNodes;
             return this;
         }

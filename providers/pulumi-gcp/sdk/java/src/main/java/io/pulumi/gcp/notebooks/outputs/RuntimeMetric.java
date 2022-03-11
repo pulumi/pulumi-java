@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuntimeMetric {
     private final @Nullable Map<String,String> systemMetrics;
 
-    @OutputCustomType.Constructor({"systemMetrics"})
-    private RuntimeMetric(@Nullable Map<String,String> systemMetrics) {
+    @OutputCustomType.Constructor
+    private RuntimeMetric(@OutputCustomType.Parameter("systemMetrics") @Nullable Map<String,String> systemMetrics) {
         this.systemMetrics = systemMetrics;
     }
 
@@ -42,7 +42,7 @@ public final class RuntimeMetric {
     	      this.systemMetrics = defaults.systemMetrics;
         }
 
-        public Builder setSystemMetrics(@Nullable Map<String,String> systemMetrics) {
+        public Builder systemMetrics(@Nullable Map<String,String> systemMetrics) {
             this.systemMetrics = systemMetrics;
             return this;
         }

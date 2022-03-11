@@ -64,12 +64,12 @@ public final class EndpointGroupPortOverride extends io.pulumi.resources.InvokeA
     	      this.listenerPort = defaults.listenerPort;
         }
 
-        public Builder setEndpointPort(Integer endpointPort) {
+        public Builder endpointPort(Integer endpointPort) {
             this.endpointPort = Objects.requireNonNull(endpointPort);
             return this;
         }
 
-        public Builder setListenerPort(Integer listenerPort) {
+        public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }

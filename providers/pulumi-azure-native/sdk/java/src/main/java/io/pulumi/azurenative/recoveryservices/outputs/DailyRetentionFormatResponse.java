@@ -17,8 +17,8 @@ public final class DailyRetentionFormatResponse {
      */
     private final @Nullable List<DayResponse> daysOfTheMonth;
 
-    @OutputCustomType.Constructor({"daysOfTheMonth"})
-    private DailyRetentionFormatResponse(@Nullable List<DayResponse> daysOfTheMonth) {
+    @OutputCustomType.Constructor
+    private DailyRetentionFormatResponse(@OutputCustomType.Parameter("daysOfTheMonth") @Nullable List<DayResponse> daysOfTheMonth) {
         this.daysOfTheMonth = daysOfTheMonth;
     }
 
@@ -50,7 +50,7 @@ public final class DailyRetentionFormatResponse {
     	      this.daysOfTheMonth = defaults.daysOfTheMonth;
         }
 
-        public Builder setDaysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
+        public Builder daysOfTheMonth(@Nullable List<DayResponse> daysOfTheMonth) {
             this.daysOfTheMonth = daysOfTheMonth;
             return this;
         }

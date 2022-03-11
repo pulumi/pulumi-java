@@ -21,8 +21,8 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor({"keyIdentifier"})
-    private KeyVaultPropertiesResponse(@Nullable String keyIdentifier) {
+    @OutputCustomType.Constructor
+    private KeyVaultPropertiesResponse(@OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.keyIdentifier = keyIdentifier;
     }
 
@@ -58,7 +58,7 @@ public final class KeyVaultPropertiesResponse {
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }

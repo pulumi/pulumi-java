@@ -46,13 +46,13 @@ public final class AuthorityConfigX509Config {
      */
     private final @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private AuthorityConfigX509Config(
-        @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
-        @Nullable List<String> aiaOcspServers,
-        AuthorityConfigX509ConfigCaOptions caOptions,
-        AuthorityConfigX509ConfigKeyUsage keyUsage,
-        @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") @Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") @Nullable List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") AuthorityConfigX509ConfigCaOptions caOptions,
+        @OutputCustomType.Parameter("keyUsage") AuthorityConfigX509ConfigKeyUsage keyUsage,
+        @OutputCustomType.Parameter("policyIds") @Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
@@ -129,27 +129,27 @@ public final class AuthorityConfigX509Config {
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions) {
+        public Builder additionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtension> additionalExtensions) {
             this.additionalExtensions = additionalExtensions;
             return this;
         }
 
-        public Builder setAiaOcspServers(@Nullable List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
             this.aiaOcspServers = aiaOcspServers;
             return this;
         }
 
-        public Builder setCaOptions(AuthorityConfigX509ConfigCaOptions caOptions) {
+        public Builder caOptions(AuthorityConfigX509ConfigCaOptions caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(AuthorityConfigX509ConfigKeyUsage keyUsage) {
+        public Builder keyUsage(AuthorityConfigX509ConfigKeyUsage keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(@Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
+        public Builder policyIds(@Nullable List<AuthorityConfigX509ConfigPolicyId> policyIds) {
             this.policyIds = policyIds;
             return this;
         }

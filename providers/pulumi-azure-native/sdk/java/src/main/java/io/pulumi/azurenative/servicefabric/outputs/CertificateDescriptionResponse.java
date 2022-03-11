@@ -27,11 +27,11 @@ public final class CertificateDescriptionResponse {
      */
     private final @Nullable String x509StoreName;
 
-    @OutputCustomType.Constructor({"thumbprint","thumbprintSecondary","x509StoreName"})
+    @OutputCustomType.Constructor
     private CertificateDescriptionResponse(
-        String thumbprint,
-        @Nullable String thumbprintSecondary,
-        @Nullable String x509StoreName) {
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("thumbprintSecondary") @Nullable String thumbprintSecondary,
+        @OutputCustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
         this.thumbprint = thumbprint;
         this.thumbprintSecondary = thumbprintSecondary;
         this.x509StoreName = x509StoreName;
@@ -83,17 +83,17 @@ public final class CertificateDescriptionResponse {
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setThumbprintSecondary(@Nullable String thumbprintSecondary) {
+        public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
             this.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable String x509StoreName) {
+        public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }

@@ -61,17 +61,17 @@ public final class GetStorageInsightConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containers","eTag","id","name","status","storageAccount","tables","tags","type"})
+    @OutputCustomType.Constructor
     private GetStorageInsightConfigResult(
-        @Nullable List<String> containers,
-        @Nullable String eTag,
-        String id,
-        String name,
-        StorageInsightStatusResponse status,
-        StorageAccountResponse storageAccount,
-        @Nullable List<String> tables,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("containers") @Nullable List<String> containers,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") StorageInsightStatusResponse status,
+        @OutputCustomType.Parameter("storageAccount") StorageAccountResponse storageAccount,
+        @OutputCustomType.Parameter("tables") @Nullable List<String> tables,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.containers = containers;
         this.eTag = eTag;
         this.id = id;
@@ -183,47 +183,47 @@ public final class GetStorageInsightConfigResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainers(@Nullable List<String> containers) {
+        public Builder containers(@Nullable List<String> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(StorageInsightStatusResponse status) {
+        public Builder status(StorageInsightStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageAccount(StorageAccountResponse storageAccount) {
+        public Builder storageAccount(StorageAccountResponse storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
-        public Builder setTables(@Nullable List<String> tables) {
+        public Builder tables(@Nullable List<String> tables) {
             this.tables = tables;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

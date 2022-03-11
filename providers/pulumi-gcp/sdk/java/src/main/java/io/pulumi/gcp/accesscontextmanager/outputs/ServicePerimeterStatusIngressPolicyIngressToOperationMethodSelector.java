@@ -25,10 +25,10 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperationMethodSe
      */
     private final @Nullable String permission;
 
-    @OutputCustomType.Constructor({"method","permission"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusIngressPolicyIngressToOperationMethodSelector(
-        @Nullable String method,
-        @Nullable String permission) {
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("permission") @Nullable String permission) {
         this.method = method;
         this.permission = permission;
     }
@@ -73,12 +73,12 @@ public final class ServicePerimeterStatusIngressPolicyIngressToOperationMethodSe
     	      this.permission = defaults.permission;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setPermission(@Nullable String permission) {
+        public Builder permission(@Nullable String permission) {
             this.permission = permission;
             return this;
         }

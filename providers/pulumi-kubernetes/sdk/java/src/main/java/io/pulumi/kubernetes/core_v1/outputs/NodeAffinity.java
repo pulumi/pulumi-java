@@ -24,10 +24,10 @@ public final class NodeAffinity {
      */
     private final @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution;
 
-    @OutputCustomType.Constructor({"preferredDuringSchedulingIgnoredDuringExecution","requiredDuringSchedulingIgnoredDuringExecution"})
+    @OutputCustomType.Constructor
     private NodeAffinity(
-        @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
-        @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
+        @OutputCustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution,
+        @OutputCustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }
@@ -69,12 +69,12 @@ public final class NodeAffinity {
     	      this.requiredDuringSchedulingIgnoredDuringExecution = defaults.requiredDuringSchedulingIgnoredDuringExecution;
         }
 
-        public Builder setPreferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<PreferredSchedulingTerm> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
-        public Builder setRequiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable NodeSelector requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }

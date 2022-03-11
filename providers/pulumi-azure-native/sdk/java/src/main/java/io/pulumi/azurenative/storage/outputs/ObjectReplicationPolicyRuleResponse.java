@@ -33,12 +33,12 @@ public final class ObjectReplicationPolicyRuleResponse {
      */
     private final String sourceContainer;
 
-    @OutputCustomType.Constructor({"destinationContainer","filters","ruleId","sourceContainer"})
+    @OutputCustomType.Constructor
     private ObjectReplicationPolicyRuleResponse(
-        String destinationContainer,
-        @Nullable ObjectReplicationPolicyFilterResponse filters,
-        @Nullable String ruleId,
-        String sourceContainer) {
+        @OutputCustomType.Parameter("destinationContainer") String destinationContainer,
+        @OutputCustomType.Parameter("filters") @Nullable ObjectReplicationPolicyFilterResponse filters,
+        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
+        @OutputCustomType.Parameter("sourceContainer") String sourceContainer) {
         this.destinationContainer = destinationContainer;
         this.filters = filters;
         this.ruleId = ruleId;
@@ -100,22 +100,22 @@ public final class ObjectReplicationPolicyRuleResponse {
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setDestinationContainer(String destinationContainer) {
+        public Builder destinationContainer(String destinationContainer) {
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
 
-        public Builder setFilters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
+        public Builder filters(@Nullable ObjectReplicationPolicyFilterResponse filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setSourceContainer(String sourceContainer) {
+        public Builder sourceContainer(String sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }

@@ -15,8 +15,8 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
      */
     private final String certificateArn;
 
-    @OutputCustomType.Constructor({"certificateArn"})
-    private VirtualGatewaySpecListenerTlsCertificateAcm(String certificateArn) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecListenerTlsCertificateAcm(@OutputCustomType.Parameter("certificateArn") String certificateArn) {
         this.certificateArn = certificateArn;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcm {
     	      this.certificateArn = defaults.certificateArn;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }

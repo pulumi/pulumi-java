@@ -55,7 +55,7 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
     	      this.fullResourceName = defaults.fullResourceName;
         }
 
-        public Builder setFullResourceName(String fullResourceName) {
+        public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }

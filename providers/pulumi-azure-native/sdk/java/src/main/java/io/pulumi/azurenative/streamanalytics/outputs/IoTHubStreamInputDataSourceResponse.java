@@ -43,14 +43,14 @@ public final class IoTHubStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consumerGroupName","endpoint","iotHubNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","type"})
+    @OutputCustomType.Constructor
     private IoTHubStreamInputDataSourceResponse(
-        @Nullable String consumerGroupName,
-        @Nullable String endpoint,
-        @Nullable String iotHubNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("consumerGroupName") @Nullable String consumerGroupName,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("iotHubNamespace") @Nullable String iotHubNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.consumerGroupName = consumerGroupName;
         this.endpoint = endpoint;
         this.iotHubNamespace = iotHubNamespace;
@@ -133,32 +133,32 @@ public final class IoTHubStreamInputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setConsumerGroupName(@Nullable String consumerGroupName) {
+        public Builder consumerGroupName(@Nullable String consumerGroupName) {
             this.consumerGroupName = consumerGroupName;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIotHubNamespace(@Nullable String iotHubNamespace) {
+        public Builder iotHubNamespace(@Nullable String iotHubNamespace) {
             this.iotHubNamespace = iotHubNamespace;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

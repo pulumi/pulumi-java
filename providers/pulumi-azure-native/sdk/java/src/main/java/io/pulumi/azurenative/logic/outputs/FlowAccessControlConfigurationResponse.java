@@ -32,12 +32,12 @@ public final class FlowAccessControlConfigurationResponse {
      */
     private final @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement;
 
-    @OutputCustomType.Constructor({"actions","contents","triggers","workflowManagement"})
+    @OutputCustomType.Constructor
     private FlowAccessControlConfigurationResponse(
-        @Nullable FlowAccessControlConfigurationPolicyResponse actions,
-        @Nullable FlowAccessControlConfigurationPolicyResponse contents,
-        @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
-        @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
+        @OutputCustomType.Parameter("actions") @Nullable FlowAccessControlConfigurationPolicyResponse actions,
+        @OutputCustomType.Parameter("contents") @Nullable FlowAccessControlConfigurationPolicyResponse contents,
+        @OutputCustomType.Parameter("triggers") @Nullable FlowAccessControlConfigurationPolicyResponse triggers,
+        @OutputCustomType.Parameter("workflowManagement") @Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
         this.actions = actions;
         this.contents = contents;
         this.triggers = triggers;
@@ -99,22 +99,22 @@ public final class FlowAccessControlConfigurationResponse {
     	      this.workflowManagement = defaults.workflowManagement;
         }
 
-        public Builder setActions(@Nullable FlowAccessControlConfigurationPolicyResponse actions) {
+        public Builder actions(@Nullable FlowAccessControlConfigurationPolicyResponse actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setContents(@Nullable FlowAccessControlConfigurationPolicyResponse contents) {
+        public Builder contents(@Nullable FlowAccessControlConfigurationPolicyResponse contents) {
             this.contents = contents;
             return this;
         }
 
-        public Builder setTriggers(@Nullable FlowAccessControlConfigurationPolicyResponse triggers) {
+        public Builder triggers(@Nullable FlowAccessControlConfigurationPolicyResponse triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setWorkflowManagement(@Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
+        public Builder workflowManagement(@Nullable FlowAccessControlConfigurationPolicyResponse workflowManagement) {
             this.workflowManagement = workflowManagement;
             return this;
         }

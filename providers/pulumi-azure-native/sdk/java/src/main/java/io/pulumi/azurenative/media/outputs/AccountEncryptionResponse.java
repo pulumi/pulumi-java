@@ -23,10 +23,10 @@ public final class AccountEncryptionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"keyVaultProperties","type"})
+    @OutputCustomType.Constructor
     private AccountEncryptionResponse(
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String type) {
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.keyVaultProperties = keyVaultProperties;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class AccountEncryptionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

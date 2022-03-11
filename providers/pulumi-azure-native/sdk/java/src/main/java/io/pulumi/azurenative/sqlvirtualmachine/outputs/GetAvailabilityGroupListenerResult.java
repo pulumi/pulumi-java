@@ -56,16 +56,16 @@ public final class GetAvailabilityGroupListenerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"availabilityGroupName","createDefaultAvailabilityGroupIfNotExist","id","loadBalancerConfigurations","name","port","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetAvailabilityGroupListenerResult(
-        @Nullable String availabilityGroupName,
-        @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
-        String id,
-        @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
-        String name,
-        @Nullable Integer port,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("availabilityGroupName") @Nullable String availabilityGroupName,
+        @OutputCustomType.Parameter("createDefaultAvailabilityGroupIfNotExist") @Nullable Boolean createDefaultAvailabilityGroupIfNotExist,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancerConfigurations") @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.availabilityGroupName = availabilityGroupName;
         this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
         this.id = id;
@@ -167,42 +167,42 @@ public final class GetAvailabilityGroupListenerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAvailabilityGroupName(@Nullable String availabilityGroupName) {
+        public Builder availabilityGroupName(@Nullable String availabilityGroupName) {
             this.availabilityGroupName = availabilityGroupName;
             return this;
         }
 
-        public Builder setCreateDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
+        public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Boolean createDefaultAvailabilityGroupIfNotExist) {
             this.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
+        public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations) {
             this.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

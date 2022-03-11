@@ -46,15 +46,15 @@ public final class RouterBgpPeerBfdResponse {
      */
     private final Integer slowTimerInterval;
 
-    @OutputCustomType.Constructor({"minReceiveInterval","minTransmitInterval","mode","multiplier","packetMode","sessionInitializationMode","slowTimerInterval"})
+    @OutputCustomType.Constructor
     private RouterBgpPeerBfdResponse(
-        Integer minReceiveInterval,
-        Integer minTransmitInterval,
-        String mode,
-        Integer multiplier,
-        String packetMode,
-        String sessionInitializationMode,
-        Integer slowTimerInterval) {
+        @OutputCustomType.Parameter("minReceiveInterval") Integer minReceiveInterval,
+        @OutputCustomType.Parameter("minTransmitInterval") Integer minTransmitInterval,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("multiplier") Integer multiplier,
+        @OutputCustomType.Parameter("packetMode") String packetMode,
+        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode,
+        @OutputCustomType.Parameter("slowTimerInterval") Integer slowTimerInterval) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.mode = mode;
@@ -146,37 +146,37 @@ public final class RouterBgpPeerBfdResponse {
     	      this.slowTimerInterval = defaults.slowTimerInterval;
         }
 
-        public Builder setMinReceiveInterval(Integer minReceiveInterval) {
+        public Builder minReceiveInterval(Integer minReceiveInterval) {
             this.minReceiveInterval = Objects.requireNonNull(minReceiveInterval);
             return this;
         }
 
-        public Builder setMinTransmitInterval(Integer minTransmitInterval) {
+        public Builder minTransmitInterval(Integer minTransmitInterval) {
             this.minTransmitInterval = Objects.requireNonNull(minTransmitInterval);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMultiplier(Integer multiplier) {
+        public Builder multiplier(Integer multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }
 
-        public Builder setPacketMode(String packetMode) {
+        public Builder packetMode(String packetMode) {
             this.packetMode = Objects.requireNonNull(packetMode);
             return this;
         }
 
-        public Builder setSessionInitializationMode(String sessionInitializationMode) {
+        public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }
 
-        public Builder setSlowTimerInterval(Integer slowTimerInterval) {
+        public Builder slowTimerInterval(Integer slowTimerInterval) {
             this.slowTimerInterval = Objects.requireNonNull(slowTimerInterval);
             return this;
         }

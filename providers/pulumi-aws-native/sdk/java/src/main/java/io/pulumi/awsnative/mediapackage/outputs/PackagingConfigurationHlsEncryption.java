@@ -25,11 +25,11 @@ public final class PackagingConfigurationHlsEncryption {
     private final @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod;
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"constantInitializationVector","encryptionMethod","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
-        PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("encryptionMethod") @Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod,
+        @OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.spekeKeyProvider = spekeKeyProvider;
@@ -77,17 +77,17 @@ public final class PackagingConfigurationHlsEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable PackagingConfigurationHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

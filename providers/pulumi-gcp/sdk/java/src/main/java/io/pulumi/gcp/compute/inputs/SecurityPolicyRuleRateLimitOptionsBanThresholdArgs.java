@@ -69,22 +69,22 @@ public final class SecurityPolicyRuleRateLimitOptionsBanThresholdArgs extends io
     	      this.intervalSec = defaults.intervalSec;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }
 
-        public Builder setIntervalSec(Input<Integer> intervalSec) {
+        public Builder intervalSec(Input<Integer> intervalSec) {
             this.intervalSec = Objects.requireNonNull(intervalSec);
             return this;
         }
 
-        public Builder setIntervalSec(Integer intervalSec) {
+        public Builder intervalSec(Integer intervalSec) {
             this.intervalSec = Input.of(Objects.requireNonNull(intervalSec));
             return this;
         }

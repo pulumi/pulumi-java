@@ -229,122 +229,122 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccess(@Nullable Input<List<DatasetAccessItemArgs>> access) {
+        public Builder access(@Nullable Input<List<DatasetAccessItemArgs>> access) {
             this.access = access;
             return this;
         }
 
-        public Builder setAccess(@Nullable List<DatasetAccessItemArgs> access) {
+        public Builder access(@Nullable List<DatasetAccessItemArgs> access) {
             this.access = Input.ofNullable(access);
             return this;
         }
 
-        public Builder setDatasetReference(@Nullable Input<DatasetReferenceArgs> datasetReference) {
+        public Builder datasetReference(@Nullable Input<DatasetReferenceArgs> datasetReference) {
             this.datasetReference = datasetReference;
             return this;
         }
 
-        public Builder setDatasetReference(@Nullable DatasetReferenceArgs datasetReference) {
+        public Builder datasetReference(@Nullable DatasetReferenceArgs datasetReference) {
             this.datasetReference = Input.ofNullable(datasetReference);
             return this;
         }
 
-        public Builder setDefaultEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = defaultEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDefaultEncryptionConfiguration(@Nullable EncryptionConfigurationArgs defaultEncryptionConfiguration) {
+        public Builder defaultEncryptionConfiguration(@Nullable EncryptionConfigurationArgs defaultEncryptionConfiguration) {
             this.defaultEncryptionConfiguration = Input.ofNullable(defaultEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDefaultPartitionExpirationMs(@Nullable Input<String> defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable Input<String> defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = defaultPartitionExpirationMs;
             return this;
         }
 
-        public Builder setDefaultPartitionExpirationMs(@Nullable String defaultPartitionExpirationMs) {
+        public Builder defaultPartitionExpirationMs(@Nullable String defaultPartitionExpirationMs) {
             this.defaultPartitionExpirationMs = Input.ofNullable(defaultPartitionExpirationMs);
             return this;
         }
 
-        public Builder setDefaultTableExpirationMs(@Nullable Input<String> defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable Input<String> defaultTableExpirationMs) {
             this.defaultTableExpirationMs = defaultTableExpirationMs;
             return this;
         }
 
-        public Builder setDefaultTableExpirationMs(@Nullable String defaultTableExpirationMs) {
+        public Builder defaultTableExpirationMs(@Nullable String defaultTableExpirationMs) {
             this.defaultTableExpirationMs = Input.ofNullable(defaultTableExpirationMs);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setIsCaseInsensitive(@Nullable Input<Boolean> isCaseInsensitive) {
+        public Builder isCaseInsensitive(@Nullable Input<Boolean> isCaseInsensitive) {
             this.isCaseInsensitive = isCaseInsensitive;
             return this;
         }
 
-        public Builder setIsCaseInsensitive(@Nullable Boolean isCaseInsensitive) {
+        public Builder isCaseInsensitive(@Nullable Boolean isCaseInsensitive) {
             this.isCaseInsensitive = Input.ofNullable(isCaseInsensitive);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatasetTagsItemArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatasetTagsItemArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetTagsItemArgs> tags) {
+        public Builder tags(@Nullable List<DatasetTagsItemArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

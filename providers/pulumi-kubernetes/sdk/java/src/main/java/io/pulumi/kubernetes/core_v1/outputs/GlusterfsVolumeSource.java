@@ -28,11 +28,11 @@ public final class GlusterfsVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"endpoints","path","readOnly"})
+    @OutputCustomType.Constructor
     private GlusterfsVolumeSource(
-        String endpoints,
-        String path,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("endpoints") String endpoints,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.endpoints = endpoints;
         this.path = path;
         this.readOnly = readOnly;
@@ -84,17 +84,17 @@ public final class GlusterfsVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setEndpoints(String endpoints) {
+        public Builder endpoints(String endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

@@ -103,42 +103,42 @@ public final class RuleScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setComplianceResourceId(@Nullable Input<String> complianceResourceId) {
+        public Builder complianceResourceId(@Nullable Input<String> complianceResourceId) {
             this.complianceResourceId = complianceResourceId;
             return this;
         }
 
-        public Builder setComplianceResourceId(@Nullable String complianceResourceId) {
+        public Builder complianceResourceId(@Nullable String complianceResourceId) {
             this.complianceResourceId = Input.ofNullable(complianceResourceId);
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable Input<List<String>> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable Input<List<String>> complianceResourceTypes) {
             this.complianceResourceTypes = complianceResourceTypes;
             return this;
         }
 
-        public Builder setComplianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
+        public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
             this.complianceResourceTypes = Input.ofNullable(complianceResourceTypes);
             return this;
         }
 
-        public Builder setTagKey(@Nullable Input<String> tagKey) {
+        public Builder tagKey(@Nullable Input<String> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagKey(@Nullable String tagKey) {
+        public Builder tagKey(@Nullable String tagKey) {
             this.tagKey = Input.ofNullable(tagKey);
             return this;
         }
 
-        public Builder setTagValue(@Nullable Input<String> tagValue) {
+        public Builder tagValue(@Nullable Input<String> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
-        public Builder setTagValue(@Nullable String tagValue) {
+        public Builder tagValue(@Nullable String tagValue) {
             this.tagValue = Input.ofNullable(tagValue);
             return this;
         }

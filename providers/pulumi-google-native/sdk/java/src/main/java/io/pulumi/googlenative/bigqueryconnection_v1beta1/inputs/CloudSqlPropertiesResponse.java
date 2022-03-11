@@ -105,22 +105,22 @@ public final class CloudSqlPropertiesResponse extends io.pulumi.resources.Invoke
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(CloudSqlCredentialResponse credential) {
+        public Builder credential(CloudSqlCredentialResponse credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

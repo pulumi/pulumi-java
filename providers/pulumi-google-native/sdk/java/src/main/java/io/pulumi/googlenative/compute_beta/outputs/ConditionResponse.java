@@ -36,13 +36,13 @@ public final class ConditionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"iam","op","svc","sys","values"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        String iam,
-        String op,
-        String svc,
-        String sys,
-        List<String> values) {
+        @OutputCustomType.Parameter("iam") String iam,
+        @OutputCustomType.Parameter("op") String op,
+        @OutputCustomType.Parameter("svc") String svc,
+        @OutputCustomType.Parameter("sys") String sys,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.iam = iam;
         this.op = op;
         this.svc = svc;
@@ -114,27 +114,27 @@ public final class ConditionResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setIam(String iam) {
+        public Builder iam(String iam) {
             this.iam = Objects.requireNonNull(iam);
             return this;
         }
 
-        public Builder setOp(String op) {
+        public Builder op(String op) {
             this.op = Objects.requireNonNull(op);
             return this;
         }
 
-        public Builder setSvc(String svc) {
+        public Builder svc(String svc) {
             this.svc = Objects.requireNonNull(svc);
             return this;
         }
 
-        public Builder setSys(String sys) {
+        public Builder sys(String sys) {
             this.sys = Objects.requireNonNull(sys);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

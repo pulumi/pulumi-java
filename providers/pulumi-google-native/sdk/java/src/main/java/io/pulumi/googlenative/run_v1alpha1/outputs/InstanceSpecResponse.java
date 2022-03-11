@@ -43,14 +43,14 @@ public final class InstanceSpecResponse {
      */
     private final List<VolumeResponse> volumes;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","containers","restartPolicy","serviceAccountName","terminationGracePeriodSeconds","volumes"})
+    @OutputCustomType.Constructor
     private InstanceSpecResponse(
-        String activeDeadlineSeconds,
-        List<ContainerResponse> containers,
-        String restartPolicy,
-        String serviceAccountName,
-        String terminationGracePeriodSeconds,
-        List<VolumeResponse> volumes) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") String activeDeadlineSeconds,
+        @OutputCustomType.Parameter("containers") List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("restartPolicy") String restartPolicy,
+        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @OutputCustomType.Parameter("terminationGracePeriodSeconds") String terminationGracePeriodSeconds,
+        @OutputCustomType.Parameter("volumes") List<VolumeResponse> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.containers = containers;
         this.restartPolicy = restartPolicy;
@@ -132,32 +132,32 @@ public final class InstanceSpecResponse {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setActiveDeadlineSeconds(String activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Objects.requireNonNull(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setContainers(List<ContainerResponse> containers) {
+        public Builder containers(List<ContainerResponse> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setRestartPolicy(String restartPolicy) {
+        public Builder restartPolicy(String restartPolicy) {
             this.restartPolicy = Objects.requireNonNull(restartPolicy);
             return this;
         }
 
-        public Builder setServiceAccountName(String serviceAccountName) {
+        public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(String terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = Objects.requireNonNull(terminationGracePeriodSeconds);
             return this;
         }
 
-        public Builder setVolumes(List<VolumeResponse> volumes) {
+        public Builder volumes(List<VolumeResponse> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }

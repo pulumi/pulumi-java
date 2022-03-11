@@ -34,12 +34,12 @@ public final class GetAddonResult {
      */
     private final @Nullable List<AddonTag> tags;
 
-    @OutputCustomType.Constructor({"addonVersion","arn","serviceAccountRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetAddonResult(
-        @Nullable String addonVersion,
-        @Nullable String arn,
-        @Nullable String serviceAccountRoleArn,
-        @Nullable List<AddonTag> tags) {
+        @OutputCustomType.Parameter("addonVersion") @Nullable String addonVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("serviceAccountRoleArn") @Nullable String serviceAccountRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AddonTag> tags) {
         this.addonVersion = addonVersion;
         this.arn = arn;
         this.serviceAccountRoleArn = serviceAccountRoleArn;
@@ -101,22 +101,22 @@ public final class GetAddonResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddonVersion(@Nullable String addonVersion) {
+        public Builder addonVersion(@Nullable String addonVersion) {
             this.addonVersion = addonVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setServiceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
+        public Builder serviceAccountRoleArn(@Nullable String serviceAccountRoleArn) {
             this.serviceAccountRoleArn = serviceAccountRoleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AddonTag> tags) {
+        public Builder tags(@Nullable List<AddonTag> tags) {
             this.tags = tags;
             return this;
         }

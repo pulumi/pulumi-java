@@ -34,12 +34,12 @@ public final class DatabasesSolutionSummaryResponse {
      */
     private final @Nullable Integer migrationReadyCount;
 
-    @OutputCustomType.Constructor({"databaseInstancesAssessedCount","databasesAssessedCount","instanceType","migrationReadyCount"})
+    @OutputCustomType.Constructor
     private DatabasesSolutionSummaryResponse(
-        @Nullable Integer databaseInstancesAssessedCount,
-        @Nullable Integer databasesAssessedCount,
-        String instanceType,
-        @Nullable Integer migrationReadyCount) {
+        @OutputCustomType.Parameter("databaseInstancesAssessedCount") @Nullable Integer databaseInstancesAssessedCount,
+        @OutputCustomType.Parameter("databasesAssessedCount") @Nullable Integer databasesAssessedCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("migrationReadyCount") @Nullable Integer migrationReadyCount) {
         this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
         this.databasesAssessedCount = databasesAssessedCount;
         this.instanceType = instanceType;
@@ -102,22 +102,22 @@ public final class DatabasesSolutionSummaryResponse {
     	      this.migrationReadyCount = defaults.migrationReadyCount;
         }
 
-        public Builder setDatabaseInstancesAssessedCount(@Nullable Integer databaseInstancesAssessedCount) {
+        public Builder databaseInstancesAssessedCount(@Nullable Integer databaseInstancesAssessedCount) {
             this.databaseInstancesAssessedCount = databaseInstancesAssessedCount;
             return this;
         }
 
-        public Builder setDatabasesAssessedCount(@Nullable Integer databasesAssessedCount) {
+        public Builder databasesAssessedCount(@Nullable Integer databasesAssessedCount) {
             this.databasesAssessedCount = databasesAssessedCount;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMigrationReadyCount(@Nullable Integer migrationReadyCount) {
+        public Builder migrationReadyCount(@Nullable Integer migrationReadyCount) {
             this.migrationReadyCount = migrationReadyCount;
             return this;
         }

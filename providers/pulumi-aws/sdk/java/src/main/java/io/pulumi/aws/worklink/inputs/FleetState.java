@@ -217,112 +217,112 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     	      this.optimizeForEndUserLocation = defaults.optimizeForEndUserLocation;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuditStreamArn(@Nullable Input<String> auditStreamArn) {
+        public Builder auditStreamArn(@Nullable Input<String> auditStreamArn) {
             this.auditStreamArn = auditStreamArn;
             return this;
         }
 
-        public Builder setAuditStreamArn(@Nullable String auditStreamArn) {
+        public Builder auditStreamArn(@Nullable String auditStreamArn) {
             this.auditStreamArn = Input.ofNullable(auditStreamArn);
             return this;
         }
 
-        public Builder setCompanyCode(@Nullable Input<String> companyCode) {
+        public Builder companyCode(@Nullable Input<String> companyCode) {
             this.companyCode = companyCode;
             return this;
         }
 
-        public Builder setCompanyCode(@Nullable String companyCode) {
+        public Builder companyCode(@Nullable String companyCode) {
             this.companyCode = Input.ofNullable(companyCode);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDeviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable Input<String> deviceCaCertificate) {
             this.deviceCaCertificate = deviceCaCertificate;
             return this;
         }
 
-        public Builder setDeviceCaCertificate(@Nullable String deviceCaCertificate) {
+        public Builder deviceCaCertificate(@Nullable String deviceCaCertificate) {
             this.deviceCaCertificate = Input.ofNullable(deviceCaCertificate);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable Input<FleetIdentityProviderGetArgs> identityProvider) {
+        public Builder identityProvider(@Nullable Input<FleetIdentityProviderGetArgs> identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
+        public Builder identityProvider(@Nullable FleetIdentityProviderGetArgs identityProvider) {
             this.identityProvider = Input.ofNullable(identityProvider);
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<FleetNetworkGetArgs> network) {
+        public Builder network(@Nullable Input<FleetNetworkGetArgs> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable FleetNetworkGetArgs network) {
+        public Builder network(@Nullable FleetNetworkGetArgs network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setOptimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Input<Boolean> optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = optimizeForEndUserLocation;
             return this;
         }
 
-        public Builder setOptimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
+        public Builder optimizeForEndUserLocation(@Nullable Boolean optimizeForEndUserLocation) {
             this.optimizeForEndUserLocation = Input.ofNullable(optimizeForEndUserLocation);
             return this;
         }

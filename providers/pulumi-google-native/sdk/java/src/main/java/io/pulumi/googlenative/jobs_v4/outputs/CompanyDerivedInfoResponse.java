@@ -15,8 +15,8 @@ public final class CompanyDerivedInfoResponse {
      */
     private final LocationResponse headquartersLocation;
 
-    @OutputCustomType.Constructor({"headquartersLocation"})
-    private CompanyDerivedInfoResponse(LocationResponse headquartersLocation) {
+    @OutputCustomType.Constructor
+    private CompanyDerivedInfoResponse(@OutputCustomType.Parameter("headquartersLocation") LocationResponse headquartersLocation) {
         this.headquartersLocation = headquartersLocation;
     }
 
@@ -48,7 +48,7 @@ public final class CompanyDerivedInfoResponse {
     	      this.headquartersLocation = defaults.headquartersLocation;
         }
 
-        public Builder setHeadquartersLocation(LocationResponse headquartersLocation) {
+        public Builder headquartersLocation(LocationResponse headquartersLocation) {
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }

@@ -28,11 +28,11 @@ public final class WebhookFilterGroupFilter {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"excludeMatchedPattern","pattern","type"})
+    @OutputCustomType.Constructor
     private WebhookFilterGroupFilter(
-        @Nullable Boolean excludeMatchedPattern,
-        String pattern,
-        String type) {
+        @OutputCustomType.Parameter("excludeMatchedPattern") @Nullable Boolean excludeMatchedPattern,
+        @OutputCustomType.Parameter("pattern") String pattern,
+        @OutputCustomType.Parameter("type") String type) {
         this.excludeMatchedPattern = excludeMatchedPattern;
         this.pattern = pattern;
         this.type = type;
@@ -84,17 +84,17 @@ public final class WebhookFilterGroupFilter {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
+        public Builder excludeMatchedPattern(@Nullable Boolean excludeMatchedPattern) {
             this.excludeMatchedPattern = excludeMatchedPattern;
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

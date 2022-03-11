@@ -73,22 +73,22 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
     	      this.osType = defaults.osType;
         }
 
-        public Builder setMinimumVersion(@Nullable Input<String> minimumVersion) {
+        public Builder minimumVersion(@Nullable Input<String> minimumVersion) {
             this.minimumVersion = minimumVersion;
             return this;
         }
 
-        public Builder setMinimumVersion(@Nullable String minimumVersion) {
+        public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = Input.ofNullable(minimumVersion);
             return this;
         }
 
-        public Builder setOsType(Input<String> osType) {
+        public Builder osType(Input<String> osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }

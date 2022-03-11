@@ -127,52 +127,52 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zip = defaults.zip;
         }
 
-        public Builder setBuild(@Nullable Input<BuildInfoArgs> build) {
+        public Builder build(@Nullable Input<BuildInfoArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable BuildInfoArgs build) {
+        public Builder build(@Nullable BuildInfoArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setCloudBuildOptions(@Nullable Input<CloudBuildOptionsArgs> cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable Input<CloudBuildOptionsArgs> cloudBuildOptions) {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
-        public Builder setCloudBuildOptions(@Nullable CloudBuildOptionsArgs cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable CloudBuildOptionsArgs cloudBuildOptions) {
             this.cloudBuildOptions = Input.ofNullable(cloudBuildOptions);
             return this;
         }
 
-        public Builder setContainer(@Nullable Input<ContainerInfoArgs> container) {
+        public Builder container(@Nullable Input<ContainerInfoArgs> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable ContainerInfoArgs container) {
+        public Builder container(@Nullable ContainerInfoArgs container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setFiles(@Nullable Input<Map<String,String>> files) {
+        public Builder files(@Nullable Input<Map<String,String>> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFiles(@Nullable Map<String,String> files) {
+        public Builder files(@Nullable Map<String,String> files) {
             this.files = Input.ofNullable(files);
             return this;
         }
 
-        public Builder setZip(@Nullable Input<ZipInfoArgs> zip) {
+        public Builder zip(@Nullable Input<ZipInfoArgs> zip) {
             this.zip = zip;
             return this;
         }
 
-        public Builder setZip(@Nullable ZipInfoArgs zip) {
+        public Builder zip(@Nullable ZipInfoArgs zip) {
             this.zip = Input.ofNullable(zip);
             return this;
         }

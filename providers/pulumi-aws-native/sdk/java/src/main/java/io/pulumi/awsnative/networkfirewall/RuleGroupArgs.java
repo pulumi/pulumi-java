@@ -114,62 +114,62 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCapacity(Input<Integer> capacity) {
+        public Builder capacity(Input<Integer> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCapacity(Integer capacity) {
+        public Builder capacity(Integer capacity) {
             this.capacity = Input.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRuleGroup(@Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
+        public Builder ruleGroup(@Nullable Input<io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
 
-        public Builder setRuleGroup(@Nullable io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
+        public Builder ruleGroup(@Nullable io.pulumi.awsnative.networkfirewall.inputs.RuleGroupArgs ruleGroup) {
             this.ruleGroup = Input.ofNullable(ruleGroup);
             return this;
         }
 
-        public Builder setRuleGroupName(@Nullable Input<String> ruleGroupName) {
+        public Builder ruleGroupName(@Nullable Input<String> ruleGroupName) {
             this.ruleGroupName = ruleGroupName;
             return this;
         }
 
-        public Builder setRuleGroupName(@Nullable String ruleGroupName) {
+        public Builder ruleGroupName(@Nullable String ruleGroupName) {
             this.ruleGroupName = Input.ofNullable(ruleGroupName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<RuleGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<RuleGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RuleGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<RuleGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<RuleGroupTypeEnum> type) {
+        public Builder type(Input<RuleGroupTypeEnum> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(RuleGroupTypeEnum type) {
+        public Builder type(RuleGroupTypeEnum type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

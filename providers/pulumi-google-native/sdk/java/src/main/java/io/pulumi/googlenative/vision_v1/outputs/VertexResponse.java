@@ -20,10 +20,10 @@ public final class VertexResponse {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor({"x","y"})
+    @OutputCustomType.Constructor
     private VertexResponse(
-        Integer x,
-        Integer y) {
+        @OutputCustomType.Parameter("x") Integer x,
+        @OutputCustomType.Parameter("y") Integer y) {
         this.x = x;
         this.y = y;
     }
@@ -65,12 +65,12 @@ public final class VertexResponse {
     	      this.y = defaults.y;
         }
 
-        public Builder setX(Integer x) {
+        public Builder x(Integer x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setY(Integer y) {
+        public Builder y(Integer y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }

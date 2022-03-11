@@ -30,11 +30,11 @@ public final class GetContactListResult {
      */
     private final @Nullable List<ContactListTopic> topics;
 
-    @OutputCustomType.Constructor({"description","tags","topics"})
+    @OutputCustomType.Constructor
     private GetContactListResult(
-        @Nullable String description,
-        @Nullable List<ContactListTag> tags,
-        @Nullable List<ContactListTopic> topics) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<ContactListTag> tags,
+        @OutputCustomType.Parameter("topics") @Nullable List<ContactListTopic> topics) {
         this.description = description;
         this.tags = tags;
         this.topics = topics;
@@ -86,17 +86,17 @@ public final class GetContactListResult {
     	      this.topics = defaults.topics;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContactListTag> tags) {
+        public Builder tags(@Nullable List<ContactListTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<ContactListTopic> topics) {
+        public Builder topics(@Nullable List<ContactListTopic> topics) {
             this.topics = topics;
             return this;
         }

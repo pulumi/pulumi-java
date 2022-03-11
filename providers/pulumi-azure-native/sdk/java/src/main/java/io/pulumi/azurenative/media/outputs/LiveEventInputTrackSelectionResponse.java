@@ -27,11 +27,11 @@ public final class LiveEventInputTrackSelectionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"operation","property","value"})
+    @OutputCustomType.Constructor
     private LiveEventInputTrackSelectionResponse(
-        @Nullable String operation,
-        @Nullable String property,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("operation") @Nullable String operation,
+        @OutputCustomType.Parameter("property") @Nullable String property,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;
@@ -83,17 +83,17 @@ public final class LiveEventInputTrackSelectionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setProperty(@Nullable String property) {
+        public Builder property(@Nullable String property) {
             this.property = property;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

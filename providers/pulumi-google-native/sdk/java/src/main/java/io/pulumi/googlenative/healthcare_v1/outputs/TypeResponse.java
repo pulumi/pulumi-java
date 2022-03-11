@@ -27,11 +27,11 @@ public final class TypeResponse {
      */
     private final String primitive;
 
-    @OutputCustomType.Constructor({"fields","name","primitive"})
+    @OutputCustomType.Constructor
     private TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        String primitive) {
+        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primitive") String primitive) {
         this.fields = fields;
         this.name = name;
         this.primitive = primitive;
@@ -83,17 +83,17 @@ public final class TypeResponse {
     	      this.primitive = defaults.primitive;
         }
 
-        public Builder setFields(List<FieldResponse> fields) {
+        public Builder fields(List<FieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimitive(String primitive) {
+        public Builder primitive(String primitive) {
             this.primitive = Objects.requireNonNull(primitive);
             return this;
         }

@@ -14,11 +14,11 @@ public final class RulePredicate {
     private final Boolean negated;
     private final String type;
 
-    @OutputCustomType.Constructor({"dataId","negated","type"})
+    @OutputCustomType.Constructor
     private RulePredicate(
-        String dataId,
-        Boolean negated,
-        String type) {
+        @OutputCustomType.Parameter("dataId") String dataId,
+        @OutputCustomType.Parameter("negated") Boolean negated,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataId = dataId;
         this.negated = negated;
         this.type = type;
@@ -58,17 +58,17 @@ public final class RulePredicate {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataId(String dataId) {
+        public Builder dataId(String dataId) {
             this.dataId = Objects.requireNonNull(dataId);
             return this;
         }
 
-        public Builder setNegated(Boolean negated) {
+        public Builder negated(Boolean negated) {
             this.negated = Objects.requireNonNull(negated);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

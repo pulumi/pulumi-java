@@ -123,52 +123,52 @@ public final class AzureStorageInfoValueArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessKey(@Nullable Input<String> accessKey) {
+        public Builder accessKey(@Nullable Input<String> accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = Input.ofNullable(accessKey);
             return this;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setMountPath(@Nullable Input<String> mountPath) {
+        public Builder mountPath(@Nullable Input<String> mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = Input.ofNullable(mountPath);
             return this;
         }
 
-        public Builder setShareName(@Nullable Input<String> shareName) {
+        public Builder shareName(@Nullable Input<String> shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = Input.ofNullable(shareName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<AzureStorageType> type) {
+        public Builder type(@Nullable Input<AzureStorageType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable AzureStorageType type) {
+        public Builder type(@Nullable AzureStorageType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

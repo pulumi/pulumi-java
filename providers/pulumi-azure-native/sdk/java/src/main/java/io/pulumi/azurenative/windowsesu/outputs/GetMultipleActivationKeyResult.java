@@ -76,21 +76,21 @@ public final class GetMultipleActivationKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agreementNumber","expirationDate","id","installedServerNumber","isEligible","location","multipleActivationKey","name","osType","provisioningState","supportType","tags","type"})
+    @OutputCustomType.Constructor
     private GetMultipleActivationKeyResult(
-        @Nullable String agreementNumber,
-        String expirationDate,
-        String id,
-        @Nullable Integer installedServerNumber,
-        @Nullable Boolean isEligible,
-        String location,
-        String multipleActivationKey,
-        String name,
-        @Nullable String osType,
-        String provisioningState,
-        @Nullable String supportType,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("agreementNumber") @Nullable String agreementNumber,
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("installedServerNumber") @Nullable Integer installedServerNumber,
+        @OutputCustomType.Parameter("isEligible") @Nullable Boolean isEligible,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("multipleActivationKey") String multipleActivationKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("supportType") @Nullable String supportType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.agreementNumber = agreementNumber;
         this.expirationDate = expirationDate;
         this.id = id;
@@ -238,67 +238,67 @@ public final class GetMultipleActivationKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgreementNumber(@Nullable String agreementNumber) {
+        public Builder agreementNumber(@Nullable String agreementNumber) {
             this.agreementNumber = agreementNumber;
             return this;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstalledServerNumber(@Nullable Integer installedServerNumber) {
+        public Builder installedServerNumber(@Nullable Integer installedServerNumber) {
             this.installedServerNumber = installedServerNumber;
             return this;
         }
 
-        public Builder setIsEligible(@Nullable Boolean isEligible) {
+        public Builder isEligible(@Nullable Boolean isEligible) {
             this.isEligible = isEligible;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMultipleActivationKey(String multipleActivationKey) {
+        public Builder multipleActivationKey(String multipleActivationKey) {
             this.multipleActivationKey = Objects.requireNonNull(multipleActivationKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSupportType(@Nullable String supportType) {
+        public Builder supportType(@Nullable String supportType) {
             this.supportType = supportType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

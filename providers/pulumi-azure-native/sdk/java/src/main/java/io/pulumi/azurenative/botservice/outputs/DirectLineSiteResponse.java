@@ -64,18 +64,18 @@ public final class DirectLineSiteResponse {
      */
     private final @Nullable List<String> trustedOrigins;
 
-    @OutputCustomType.Constructor({"isBlockUserUploadEnabled","isEnabled","isSecureSiteEnabled","isV1Enabled","isV3Enabled","key","key2","siteId","siteName","trustedOrigins"})
+    @OutputCustomType.Constructor
     private DirectLineSiteResponse(
-        @Nullable Boolean isBlockUserUploadEnabled,
-        Boolean isEnabled,
-        @Nullable Boolean isSecureSiteEnabled,
-        Boolean isV1Enabled,
-        Boolean isV3Enabled,
-        String key,
-        String key2,
-        String siteId,
-        String siteName,
-        @Nullable List<String> trustedOrigins) {
+        @OutputCustomType.Parameter("isBlockUserUploadEnabled") @Nullable Boolean isBlockUserUploadEnabled,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isSecureSiteEnabled") @Nullable Boolean isSecureSiteEnabled,
+        @OutputCustomType.Parameter("isV1Enabled") Boolean isV1Enabled,
+        @OutputCustomType.Parameter("isV3Enabled") Boolean isV3Enabled,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("key2") String key2,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("siteName") String siteName,
+        @OutputCustomType.Parameter("trustedOrigins") @Nullable List<String> trustedOrigins) {
         this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
         this.isEnabled = isEnabled;
         this.isSecureSiteEnabled = isSecureSiteEnabled;
@@ -197,52 +197,52 @@ public final class DirectLineSiteResponse {
     	      this.trustedOrigins = defaults.trustedOrigins;
         }
 
-        public Builder setIsBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
+        public Builder isBlockUserUploadEnabled(@Nullable Boolean isBlockUserUploadEnabled) {
             this.isBlockUserUploadEnabled = isBlockUserUploadEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
+        public Builder isSecureSiteEnabled(@Nullable Boolean isSecureSiteEnabled) {
             this.isSecureSiteEnabled = isSecureSiteEnabled;
             return this;
         }
 
-        public Builder setIsV1Enabled(Boolean isV1Enabled) {
+        public Builder isV1Enabled(Boolean isV1Enabled) {
             this.isV1Enabled = Objects.requireNonNull(isV1Enabled);
             return this;
         }
 
-        public Builder setIsV3Enabled(Boolean isV3Enabled) {
+        public Builder isV3Enabled(Boolean isV3Enabled) {
             this.isV3Enabled = Objects.requireNonNull(isV3Enabled);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey2(String key2) {
+        public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setSiteName(String siteName) {
+        public Builder siteName(String siteName) {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
 
-        public Builder setTrustedOrigins(@Nullable List<String> trustedOrigins) {
+        public Builder trustedOrigins(@Nullable List<String> trustedOrigins) {
             this.trustedOrigins = trustedOrigins;
             return this;
         }

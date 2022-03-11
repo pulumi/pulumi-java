@@ -86,32 +86,32 @@ public final class PipelineDefinitionPipelineObjectFieldGetArgs extends io.pulum
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(Input<String> key) {
+        public Builder key(Input<String> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
 
-        public Builder setRefValue(@Nullable Input<String> refValue) {
+        public Builder refValue(@Nullable Input<String> refValue) {
             this.refValue = refValue;
             return this;
         }
 
-        public Builder setRefValue(@Nullable String refValue) {
+        public Builder refValue(@Nullable String refValue) {
             this.refValue = Input.ofNullable(refValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }

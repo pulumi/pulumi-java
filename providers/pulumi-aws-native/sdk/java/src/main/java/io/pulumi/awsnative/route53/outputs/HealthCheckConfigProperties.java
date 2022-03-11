@@ -35,25 +35,25 @@ public final class HealthCheckConfigProperties {
     private final @Nullable String searchString;
     private final HealthCheckConfigPropertiesType type;
 
-    @OutputCustomType.Constructor({"alarmIdentifier","childHealthChecks","enableSNI","failureThreshold","fullyQualifiedDomainName","healthThreshold","iPAddress","insufficientDataHealthStatus","inverted","measureLatency","port","regions","requestInterval","resourcePath","routingControlArn","searchString","type"})
+    @OutputCustomType.Constructor
     private HealthCheckConfigProperties(
-        @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
-        @Nullable List<String> childHealthChecks,
-        @Nullable Boolean enableSNI,
-        @Nullable Integer failureThreshold,
-        @Nullable String fullyQualifiedDomainName,
-        @Nullable Integer healthThreshold,
-        @Nullable String iPAddress,
-        @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
-        @Nullable Boolean inverted,
-        @Nullable Boolean measureLatency,
-        @Nullable Integer port,
-        @Nullable List<String> regions,
-        @Nullable Integer requestInterval,
-        @Nullable String resourcePath,
-        @Nullable String routingControlArn,
-        @Nullable String searchString,
-        HealthCheckConfigPropertiesType type) {
+        @OutputCustomType.Parameter("alarmIdentifier") @Nullable HealthCheckAlarmIdentifier alarmIdentifier,
+        @OutputCustomType.Parameter("childHealthChecks") @Nullable List<String> childHealthChecks,
+        @OutputCustomType.Parameter("enableSNI") @Nullable Boolean enableSNI,
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("healthThreshold") @Nullable Integer healthThreshold,
+        @OutputCustomType.Parameter("iPAddress") @Nullable String iPAddress,
+        @OutputCustomType.Parameter("insufficientDataHealthStatus") @Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus,
+        @OutputCustomType.Parameter("inverted") @Nullable Boolean inverted,
+        @OutputCustomType.Parameter("measureLatency") @Nullable Boolean measureLatency,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("requestInterval") @Nullable Integer requestInterval,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("type") HealthCheckConfigPropertiesType type) {
         this.alarmIdentifier = alarmIdentifier;
         this.childHealthChecks = childHealthChecks;
         this.enableSNI = enableSNI;
@@ -177,87 +177,87 @@ public final class HealthCheckConfigProperties {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlarmIdentifier(@Nullable HealthCheckAlarmIdentifier alarmIdentifier) {
+        public Builder alarmIdentifier(@Nullable HealthCheckAlarmIdentifier alarmIdentifier) {
             this.alarmIdentifier = alarmIdentifier;
             return this;
         }
 
-        public Builder setChildHealthChecks(@Nullable List<String> childHealthChecks) {
+        public Builder childHealthChecks(@Nullable List<String> childHealthChecks) {
             this.childHealthChecks = childHealthChecks;
             return this;
         }
 
-        public Builder setEnableSNI(@Nullable Boolean enableSNI) {
+        public Builder enableSNI(@Nullable Boolean enableSNI) {
             this.enableSNI = enableSNI;
             return this;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
 
-        public Builder setHealthThreshold(@Nullable Integer healthThreshold) {
+        public Builder healthThreshold(@Nullable Integer healthThreshold) {
             this.healthThreshold = healthThreshold;
             return this;
         }
 
-        public Builder setIPAddress(@Nullable String iPAddress) {
+        public Builder iPAddress(@Nullable String iPAddress) {
             this.iPAddress = iPAddress;
             return this;
         }
 
-        public Builder setInsufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
+        public Builder insufficientDataHealthStatus(@Nullable HealthCheckConfigPropertiesInsufficientDataHealthStatus insufficientDataHealthStatus) {
             this.insufficientDataHealthStatus = insufficientDataHealthStatus;
             return this;
         }
 
-        public Builder setInverted(@Nullable Boolean inverted) {
+        public Builder inverted(@Nullable Boolean inverted) {
             this.inverted = inverted;
             return this;
         }
 
-        public Builder setMeasureLatency(@Nullable Boolean measureLatency) {
+        public Builder measureLatency(@Nullable Boolean measureLatency) {
             this.measureLatency = measureLatency;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Integer requestInterval) {
+        public Builder requestInterval(@Nullable Integer requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable String routingControlArn) {
+        public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setType(HealthCheckConfigPropertiesType type) {
+        public Builder type(HealthCheckConfigPropertiesType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

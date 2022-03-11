@@ -21,10 +21,10 @@ public final class SecretResponse {
      */
     private final Map<String,String> secretEnv;
 
-    @OutputCustomType.Constructor({"kmsKeyName","secretEnv"})
+    @OutputCustomType.Constructor
     private SecretResponse(
-        String kmsKeyName,
-        Map<String,String> secretEnv) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("secretEnv") Map<String,String> secretEnv) {
         this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }
@@ -66,12 +66,12 @@ public final class SecretResponse {
     	      this.secretEnv = defaults.secretEnv;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setSecretEnv(Map<String,String> secretEnv) {
+        public Builder secretEnv(Map<String,String> secretEnv) {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }

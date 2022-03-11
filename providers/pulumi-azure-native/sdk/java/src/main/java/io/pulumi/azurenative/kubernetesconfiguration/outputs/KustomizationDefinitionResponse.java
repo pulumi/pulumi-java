@@ -56,16 +56,16 @@ public final class KustomizationDefinitionResponse {
      */
     private final @Nullable String validation;
 
-    @OutputCustomType.Constructor({"dependsOn","force","path","prune","retryIntervalInSeconds","syncIntervalInSeconds","timeoutInSeconds","validation"})
+    @OutputCustomType.Constructor
     private KustomizationDefinitionResponse(
-        @Nullable List<DependsOnDefinitionResponse> dependsOn,
-        @Nullable Boolean force,
-        @Nullable String path,
-        @Nullable Boolean prune,
-        @Nullable Double retryIntervalInSeconds,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String validation) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<DependsOnDefinitionResponse> dependsOn,
+        @OutputCustomType.Parameter("force") @Nullable Boolean force,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("prune") @Nullable Boolean prune,
+        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Double retryIntervalInSeconds,
+        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @OutputCustomType.Parameter("validation") @Nullable String validation) {
         this.dependsOn = dependsOn;
         this.force = force;
         this.path = path;
@@ -167,42 +167,42 @@ public final class KustomizationDefinitionResponse {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDependsOn(@Nullable List<DependsOnDefinitionResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<DependsOnDefinitionResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = force;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPrune(@Nullable Boolean prune) {
+        public Builder prune(@Nullable Boolean prune) {
             this.prune = prune;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Double retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setValidation(@Nullable String validation) {
+        public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
         }

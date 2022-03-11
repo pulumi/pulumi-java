@@ -28,11 +28,11 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
      */
     private final @Nullable Integer recoveryPointCount;
 
-    @OutputCustomType.Constructor({"lastRefreshedAt","oldestRecoveryPoint","recoveryPointCount"})
+    @OutputCustomType.Constructor
     private MabFileFolderProtectedItemExtendedInfoResponse(
-        @Nullable String lastRefreshedAt,
-        @Nullable String oldestRecoveryPoint,
-        @Nullable Integer recoveryPointCount) {
+        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount) {
         this.lastRefreshedAt = lastRefreshedAt;
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.recoveryPointCount = recoveryPointCount;
@@ -84,17 +84,17 @@ public final class MabFileFolderProtectedItemExtendedInfoResponse {
     	      this.recoveryPointCount = defaults.recoveryPointCount;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }

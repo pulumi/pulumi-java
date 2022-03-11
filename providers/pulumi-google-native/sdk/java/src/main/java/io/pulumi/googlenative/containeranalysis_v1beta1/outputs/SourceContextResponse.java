@@ -34,12 +34,12 @@ public final class SourceContextResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"cloudRepo","gerrit","git","labels"})
+    @OutputCustomType.Constructor
     private SourceContextResponse(
-        CloudRepoSourceContextResponse cloudRepo,
-        GerritSourceContextResponse gerrit,
-        GitSourceContextResponse git,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("cloudRepo") CloudRepoSourceContextResponse cloudRepo,
+        @OutputCustomType.Parameter("gerrit") GerritSourceContextResponse gerrit,
+        @OutputCustomType.Parameter("git") GitSourceContextResponse git,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;
@@ -101,22 +101,22 @@ public final class SourceContextResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setCloudRepo(CloudRepoSourceContextResponse cloudRepo) {
+        public Builder cloudRepo(CloudRepoSourceContextResponse cloudRepo) {
             this.cloudRepo = Objects.requireNonNull(cloudRepo);
             return this;
         }
 
-        public Builder setGerrit(GerritSourceContextResponse gerrit) {
+        public Builder gerrit(GerritSourceContextResponse gerrit) {
             this.gerrit = Objects.requireNonNull(gerrit);
             return this;
         }
 
-        public Builder setGit(GitSourceContextResponse git) {
+        public Builder git(GitSourceContextResponse git) {
             this.git = Objects.requireNonNull(git);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

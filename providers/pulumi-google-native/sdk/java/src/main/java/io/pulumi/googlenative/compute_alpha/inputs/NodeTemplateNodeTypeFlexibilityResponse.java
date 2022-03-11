@@ -72,17 +72,17 @@ public final class NodeTemplateNodeTypeFlexibilityResponse extends io.pulumi.res
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpus(String cpus) {
+        public Builder cpus(String cpus) {
             this.cpus = Objects.requireNonNull(cpus);
             return this;
         }
 
-        public Builder setLocalSsd(String localSsd) {
+        public Builder localSsd(String localSsd) {
             this.localSsd = Objects.requireNonNull(localSsd);
             return this;
         }
 
-        public Builder setMemory(String memory) {
+        public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }

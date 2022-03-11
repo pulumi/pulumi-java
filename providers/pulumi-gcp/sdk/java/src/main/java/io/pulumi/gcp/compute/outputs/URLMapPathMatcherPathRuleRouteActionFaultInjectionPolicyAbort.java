@@ -23,10 +23,10 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor({"httpStatus","percentage"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort(
-        Integer httpStatus,
-        Double percentage) {
+        @OutputCustomType.Parameter("httpStatus") Integer httpStatus,
+        @OutputCustomType.Parameter("percentage") Double percentage) {
         this.httpStatus = httpStatus;
         this.percentage = percentage;
     }
@@ -70,12 +70,12 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyAbort
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setHttpStatus(Integer httpStatus) {
+        public Builder httpStatus(Integer httpStatus) {
             this.httpStatus = Objects.requireNonNull(httpStatus);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }

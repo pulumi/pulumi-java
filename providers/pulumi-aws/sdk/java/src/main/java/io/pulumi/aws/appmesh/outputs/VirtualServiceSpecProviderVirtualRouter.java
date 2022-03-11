@@ -15,8 +15,8 @@ public final class VirtualServiceSpecProviderVirtualRouter {
      */
     private final String virtualRouterName;
 
-    @OutputCustomType.Constructor({"virtualRouterName"})
-    private VirtualServiceSpecProviderVirtualRouter(String virtualRouterName) {
+    @OutputCustomType.Constructor
+    private VirtualServiceSpecProviderVirtualRouter(@OutputCustomType.Parameter("virtualRouterName") String virtualRouterName) {
         this.virtualRouterName = virtualRouterName;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualServiceSpecProviderVirtualRouter {
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setVirtualRouterName(String virtualRouterName) {
+        public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }

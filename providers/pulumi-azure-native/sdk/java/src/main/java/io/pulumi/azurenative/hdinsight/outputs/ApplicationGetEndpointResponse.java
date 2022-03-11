@@ -33,12 +33,12 @@ public final class ApplicationGetEndpointResponse {
      */
     private final @Nullable Integer publicPort;
 
-    @OutputCustomType.Constructor({"destinationPort","location","privateIPAddress","publicPort"})
+    @OutputCustomType.Constructor
     private ApplicationGetEndpointResponse(
-        @Nullable Integer destinationPort,
-        @Nullable String location,
-        @Nullable String privateIPAddress,
-        @Nullable Integer publicPort) {
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("publicPort") @Nullable Integer publicPort) {
         this.destinationPort = destinationPort;
         this.location = location;
         this.privateIPAddress = privateIPAddress;
@@ -100,22 +100,22 @@ public final class ApplicationGetEndpointResponse {
     	      this.publicPort = defaults.publicPort;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicPort(@Nullable Integer publicPort) {
+        public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = publicPort;
             return this;
         }

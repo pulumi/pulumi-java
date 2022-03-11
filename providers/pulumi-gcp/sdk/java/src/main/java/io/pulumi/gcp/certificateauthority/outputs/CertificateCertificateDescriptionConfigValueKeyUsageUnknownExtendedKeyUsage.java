@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage {
     private final @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds;
 
-    @OutputCustomType.Constructor({"obectIds"})
-    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
+    @OutputCustomType.Constructor
+    private CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsage(@OutputCustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
         this.obectIds = obectIds;
     }
 
@@ -42,7 +42,7 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageUnknownEx
     	      this.obectIds = defaults.obectIds;
         }
 
-        public Builder setObectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
+        public Builder obectIds(@Nullable List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageObectId> obectIds) {
             this.obectIds = obectIds;
             return this;
         }

@@ -57,12 +57,12 @@ public final class EndpointMatcherArgs extends io.pulumi.resources.ResourceArgs 
     	      this.metadataLabelMatcher = defaults.metadataLabelMatcher;
         }
 
-        public Builder setMetadataLabelMatcher(@Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher) {
+        public Builder metadataLabelMatcher(@Nullable Input<MetadataLabelMatcherArgs> metadataLabelMatcher) {
             this.metadataLabelMatcher = metadataLabelMatcher;
             return this;
         }
 
-        public Builder setMetadataLabelMatcher(@Nullable MetadataLabelMatcherArgs metadataLabelMatcher) {
+        public Builder metadataLabelMatcher(@Nullable MetadataLabelMatcherArgs metadataLabelMatcher) {
             this.metadataLabelMatcher = Input.ofNullable(metadataLabelMatcher);
             return this;
         }

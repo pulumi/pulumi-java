@@ -65,18 +65,18 @@ public final class MongoDbV2SourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","batchSize","cursorMethods","disableMetricsCollection","filter","maxConcurrentConnections","queryTimeout","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private MongoDbV2SourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object batchSize,
-        @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object filter,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("batchSize") @Nullable Object batchSize,
+        @OutputCustomType.Parameter("cursorMethods") @Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("filter") @Nullable Object filter,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.batchSize = batchSize;
         this.cursorMethods = cursorMethods;
@@ -199,52 +199,52 @@ public final class MongoDbV2SourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Object batchSize) {
+        public Builder batchSize(@Nullable Object batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setCursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
+        public Builder cursorMethods(@Nullable MongoDbCursorMethodsPropertiesResponse cursorMethods) {
             this.cursorMethods = cursorMethods;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setFilter(@Nullable Object filter) {
+        public Builder filter(@Nullable Object filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

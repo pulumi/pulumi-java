@@ -52,15 +52,15 @@ public final class AKSResponseProperties {
      */
     private final List<SystemServiceResponse> systemServices;
 
-    @OutputCustomType.Constructor({"agentCount","agentVmSize","aksNetworkingConfiguration","clusterFqdn","clusterPurpose","sslConfiguration","systemServices"})
+    @OutputCustomType.Constructor
     private AKSResponseProperties(
-        @Nullable Integer agentCount,
-        @Nullable String agentVmSize,
-        @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
-        @Nullable String clusterFqdn,
-        @Nullable String clusterPurpose,
-        @Nullable SslConfigurationResponse sslConfiguration,
-        List<SystemServiceResponse> systemServices) {
+        @OutputCustomType.Parameter("agentCount") @Nullable Integer agentCount,
+        @OutputCustomType.Parameter("agentVmSize") @Nullable String agentVmSize,
+        @OutputCustomType.Parameter("aksNetworkingConfiguration") @Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration,
+        @OutputCustomType.Parameter("clusterFqdn") @Nullable String clusterFqdn,
+        @OutputCustomType.Parameter("clusterPurpose") @Nullable String clusterPurpose,
+        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @OutputCustomType.Parameter("systemServices") List<SystemServiceResponse> systemServices) {
         this.agentCount = agentCount;
         this.agentVmSize = agentVmSize;
         this.aksNetworkingConfiguration = aksNetworkingConfiguration;
@@ -152,37 +152,37 @@ public final class AKSResponseProperties {
     	      this.systemServices = defaults.systemServices;
         }
 
-        public Builder setAgentCount(@Nullable Integer agentCount) {
+        public Builder agentCount(@Nullable Integer agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentVmSize(@Nullable String agentVmSize) {
+        public Builder agentVmSize(@Nullable String agentVmSize) {
             this.agentVmSize = agentVmSize;
             return this;
         }
 
-        public Builder setAksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
+        public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationResponse aksNetworkingConfiguration) {
             this.aksNetworkingConfiguration = aksNetworkingConfiguration;
             return this;
         }
 
-        public Builder setClusterFqdn(@Nullable String clusterFqdn) {
+        public Builder clusterFqdn(@Nullable String clusterFqdn) {
             this.clusterFqdn = clusterFqdn;
             return this;
         }
 
-        public Builder setClusterPurpose(@Nullable String clusterPurpose) {
+        public Builder clusterPurpose(@Nullable String clusterPurpose) {
             this.clusterPurpose = clusterPurpose;
             return this;
         }
 
-        public Builder setSslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
+        public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
 
-        public Builder setSystemServices(List<SystemServiceResponse> systemServices) {
+        public Builder systemServices(List<SystemServiceResponse> systemServices) {
             this.systemServices = Objects.requireNonNull(systemServices);
             return this;
         }

@@ -16,12 +16,12 @@ public final class ServiceStatusCondition {
     private final @Nullable String status;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"message","reason","status","type"})
+    @OutputCustomType.Constructor
     private ServiceStatusCondition(
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.message = message;
         this.reason = reason;
         this.status = status;
@@ -67,22 +67,22 @@ public final class ServiceStatusCondition {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

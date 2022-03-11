@@ -33,12 +33,12 @@ public final class ResourceRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"apiGroups","resourceNames","resources","verbs"})
+    @OutputCustomType.Constructor
     private ResourceRule(
-        @Nullable List<String> apiGroups,
-        @Nullable List<String> resourceNames,
-        @Nullable List<String> resources,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("apiGroups") @Nullable List<String> apiGroups,
+        @OutputCustomType.Parameter("resourceNames") @Nullable List<String> resourceNames,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.apiGroups = apiGroups;
         this.resourceNames = resourceNames;
         this.resources = resources;
@@ -101,22 +101,22 @@ public final class ResourceRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setApiGroups(@Nullable List<String> apiGroups) {
+        public Builder apiGroups(@Nullable List<String> apiGroups) {
             this.apiGroups = apiGroups;
             return this;
         }
 
-        public Builder setResourceNames(@Nullable List<String> resourceNames) {
+        public Builder resourceNames(@Nullable List<String> resourceNames) {
             this.resourceNames = resourceNames;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

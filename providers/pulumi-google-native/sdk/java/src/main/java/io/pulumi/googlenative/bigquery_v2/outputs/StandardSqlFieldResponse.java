@@ -21,10 +21,10 @@ public final class StandardSqlFieldResponse {
      */
     private final StandardSqlDataTypeResponse type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private StandardSqlFieldResponse(
-        String name,
-        StandardSqlDataTypeResponse type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") StandardSqlDataTypeResponse type) {
         this.name = name;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class StandardSqlFieldResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(StandardSqlDataTypeResponse type) {
+        public Builder type(StandardSqlDataTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

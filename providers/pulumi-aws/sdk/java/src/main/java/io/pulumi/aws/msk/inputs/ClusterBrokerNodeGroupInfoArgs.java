@@ -120,52 +120,52 @@ public final class ClusterBrokerNodeGroupInfoArgs extends io.pulumi.resources.Re
     	      this.securityGroups = defaults.securityGroups;
         }
 
-        public Builder setAzDistribution(@Nullable Input<String> azDistribution) {
+        public Builder azDistribution(@Nullable Input<String> azDistribution) {
             this.azDistribution = azDistribution;
             return this;
         }
 
-        public Builder setAzDistribution(@Nullable String azDistribution) {
+        public Builder azDistribution(@Nullable String azDistribution) {
             this.azDistribution = Input.ofNullable(azDistribution);
             return this;
         }
 
-        public Builder setClientSubnets(Input<List<String>> clientSubnets) {
+        public Builder clientSubnets(Input<List<String>> clientSubnets) {
             this.clientSubnets = Objects.requireNonNull(clientSubnets);
             return this;
         }
 
-        public Builder setClientSubnets(List<String> clientSubnets) {
+        public Builder clientSubnets(List<String> clientSubnets) {
             this.clientSubnets = Input.of(Objects.requireNonNull(clientSubnets));
             return this;
         }
 
-        public Builder setEbsVolumeSize(Input<Integer> ebsVolumeSize) {
+        public Builder ebsVolumeSize(Input<Integer> ebsVolumeSize) {
             this.ebsVolumeSize = Objects.requireNonNull(ebsVolumeSize);
             return this;
         }
 
-        public Builder setEbsVolumeSize(Integer ebsVolumeSize) {
+        public Builder ebsVolumeSize(Integer ebsVolumeSize) {
             this.ebsVolumeSize = Input.of(Objects.requireNonNull(ebsVolumeSize));
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setSecurityGroups(Input<List<String>> securityGroups) {
+        public Builder securityGroups(Input<List<String>> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Input.of(Objects.requireNonNull(securityGroups));
             return this;
         }

@@ -30,12 +30,12 @@ public final class GetTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","tableName","type"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        String id,
-        String name,
-        String tableName,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.tableName = tableName;
@@ -97,22 +97,22 @@ public final class GetTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

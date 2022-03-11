@@ -54,16 +54,16 @@ public final class GetJobResult {
      */
     private final String userEmail;
 
-    @OutputCustomType.Constructor({"configuration","etag","jobReference","kind","selfLink","statistics","status","userEmail"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        JobConfigurationResponse configuration,
-        String etag,
-        JobReferenceResponse jobReference,
-        String kind,
-        String selfLink,
-        JobStatisticsResponse statistics,
-        JobStatusResponse status,
-        String userEmail) {
+        @OutputCustomType.Parameter("configuration") JobConfigurationResponse configuration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("jobReference") JobReferenceResponse jobReference,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("statistics") JobStatisticsResponse statistics,
+        @OutputCustomType.Parameter("status") JobStatusResponse status,
+        @OutputCustomType.Parameter("userEmail") String userEmail) {
         this.configuration = configuration;
         this.etag = etag;
         this.jobReference = jobReference;
@@ -165,42 +165,42 @@ public final class GetJobResult {
     	      this.userEmail = defaults.userEmail;
         }
 
-        public Builder setConfiguration(JobConfigurationResponse configuration) {
+        public Builder configuration(JobConfigurationResponse configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setJobReference(JobReferenceResponse jobReference) {
+        public Builder jobReference(JobReferenceResponse jobReference) {
             this.jobReference = Objects.requireNonNull(jobReference);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatistics(JobStatisticsResponse statistics) {
+        public Builder statistics(JobStatisticsResponse statistics) {
             this.statistics = Objects.requireNonNull(statistics);
             return this;
         }
 
-        public Builder setStatus(JobStatusResponse status) {
+        public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUserEmail(String userEmail) {
+        public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }

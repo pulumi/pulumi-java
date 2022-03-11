@@ -15,8 +15,8 @@ public final class FeatureResourceStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private FeatureResourceStateResponse(String state) {
+    @OutputCustomType.Constructor
+    private FeatureResourceStateResponse(@OutputCustomType.Parameter("state") String state) {
         this.state = state;
     }
 
@@ -48,7 +48,7 @@ public final class FeatureResourceStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -40,17 +40,17 @@ public final class GetPermissionSetResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","createdDate","description","id","instanceArn","name","relayState","sessionDuration","tags"})
+    @OutputCustomType.Constructor
     private GetPermissionSetResult(
-        String arn,
-        String createdDate,
-        String description,
-        String id,
-        String instanceArn,
-        String name,
-        String relayState,
-        String sessionDuration,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceArn") String instanceArn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relayState") String relayState,
+        @OutputCustomType.Parameter("sessionDuration") String sessionDuration,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.createdDate = createdDate;
         this.description = description;
@@ -146,47 +146,47 @@ public final class GetPermissionSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelayState(String relayState) {
+        public Builder relayState(String relayState) {
             this.relayState = Objects.requireNonNull(relayState);
             return this;
         }
 
-        public Builder setSessionDuration(String sessionDuration) {
+        public Builder sessionDuration(String sessionDuration) {
             this.sessionDuration = Objects.requireNonNull(sessionDuration);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

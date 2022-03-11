@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudContactcenterinsightsV1SilenceDataResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SilenceDataResponse() {
     }
 

@@ -53,14 +53,14 @@ public final class JobHttpTarget {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"body","headers","httpMethod","oauthToken","oidcToken","uri"})
+    @OutputCustomType.Constructor
     private JobHttpTarget(
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String httpMethod,
-        @Nullable JobHttpTargetOauthToken oauthToken,
-        @Nullable JobHttpTargetOidcToken oidcToken,
-        String uri) {
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("oauthToken") @Nullable JobHttpTargetOauthToken oauthToken,
+        @OutputCustomType.Parameter("oidcToken") @Nullable JobHttpTargetOidcToken oidcToken,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -150,32 +150,32 @@ public final class JobHttpTarget {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setOauthToken(@Nullable JobHttpTargetOauthToken oauthToken) {
+        public Builder oauthToken(@Nullable JobHttpTargetOauthToken oauthToken) {
             this.oauthToken = oauthToken;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable JobHttpTargetOidcToken oidcToken) {
+        public Builder oidcToken(@Nullable JobHttpTargetOidcToken oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

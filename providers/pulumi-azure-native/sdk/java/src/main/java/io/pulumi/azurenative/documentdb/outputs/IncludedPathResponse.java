@@ -24,10 +24,10 @@ public final class IncludedPathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"indexes","path"})
+    @OutputCustomType.Constructor
     private IncludedPathResponse(
-        @Nullable List<IndexesResponse> indexes,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("indexes") @Nullable List<IndexesResponse> indexes,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.indexes = indexes;
         this.path = path;
     }
@@ -69,12 +69,12 @@ public final class IncludedPathResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setIndexes(@Nullable List<IndexesResponse> indexes) {
+        public Builder indexes(@Nullable List<IndexesResponse> indexes) {
             this.indexes = indexes;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

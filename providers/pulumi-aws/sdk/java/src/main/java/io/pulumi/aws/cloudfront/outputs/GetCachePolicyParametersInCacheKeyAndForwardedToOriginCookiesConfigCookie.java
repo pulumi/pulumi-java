@@ -16,8 +16,8 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookie(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 
@@ -49,7 +49,7 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginCookies
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

@@ -21,10 +21,10 @@ public final class ErrorAdditionalInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"info","type"})
+    @OutputCustomType.Constructor
     private ErrorAdditionalInfoResponse(
-        Object info,
-        String type) {
+        @OutputCustomType.Parameter("info") Object info,
+        @OutputCustomType.Parameter("type") String type) {
         this.info = info;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class ErrorAdditionalInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInfo(Object info) {
+        public Builder info(Object info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

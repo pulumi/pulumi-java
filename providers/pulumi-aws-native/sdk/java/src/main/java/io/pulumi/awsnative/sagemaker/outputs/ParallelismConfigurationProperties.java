@@ -15,8 +15,8 @@ public final class ParallelismConfigurationProperties {
      */
     private final Integer maxParallelExecutionSteps;
 
-    @OutputCustomType.Constructor({"maxParallelExecutionSteps"})
-    private ParallelismConfigurationProperties(Integer maxParallelExecutionSteps) {
+    @OutputCustomType.Constructor
+    private ParallelismConfigurationProperties(@OutputCustomType.Parameter("maxParallelExecutionSteps") Integer maxParallelExecutionSteps) {
         this.maxParallelExecutionSteps = maxParallelExecutionSteps;
     }
 
@@ -48,7 +48,7 @@ public final class ParallelismConfigurationProperties {
     	      this.maxParallelExecutionSteps = defaults.maxParallelExecutionSteps;
         }
 
-        public Builder setMaxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
+        public Builder maxParallelExecutionSteps(Integer maxParallelExecutionSteps) {
             this.maxParallelExecutionSteps = Objects.requireNonNull(maxParallelExecutionSteps);
             return this;
         }

@@ -21,10 +21,10 @@ public final class PreferredSchedulingTerm {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"preference","weight"})
+    @OutputCustomType.Constructor
     private PreferredSchedulingTerm(
-        NodeSelectorTerm preference,
-        Integer weight) {
+        @OutputCustomType.Parameter("preference") NodeSelectorTerm preference,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.preference = preference;
         this.weight = weight;
     }
@@ -66,12 +66,12 @@ public final class PreferredSchedulingTerm {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setPreference(NodeSelectorTerm preference) {
+        public Builder preference(NodeSelectorTerm preference) {
             this.preference = Objects.requireNonNull(preference);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

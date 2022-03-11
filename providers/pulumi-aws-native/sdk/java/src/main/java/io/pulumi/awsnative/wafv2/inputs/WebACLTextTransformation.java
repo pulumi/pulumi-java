@@ -65,12 +65,12 @@ public final class WebACLTextTransformation extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setType(WebACLTextTransformationType type) {
+        public Builder type(WebACLTextTransformationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

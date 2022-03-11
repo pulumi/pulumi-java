@@ -13,10 +13,10 @@ public final class GetClusterAddonsConfigIstioConfig {
     private final String auth;
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"auth","disabled"})
+    @OutputCustomType.Constructor
     private GetClusterAddonsConfigIstioConfig(
-        String auth,
-        Boolean disabled) {
+        @OutputCustomType.Parameter("auth") String auth,
+        @OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.auth = auth;
         this.disabled = disabled;
     }
@@ -50,12 +50,12 @@ public final class GetClusterAddonsConfigIstioConfig {
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setAuth(String auth) {
+        public Builder auth(String auth) {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }

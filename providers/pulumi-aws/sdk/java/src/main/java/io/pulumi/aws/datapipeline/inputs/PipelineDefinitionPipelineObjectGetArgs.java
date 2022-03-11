@@ -88,32 +88,32 @@ public final class PipelineDefinitionPipelineObjectGetArgs extends io.pulumi.res
     	      this.name = defaults.name;
         }
 
-        public Builder setFields(@Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Input<List<PipelineDefinitionPipelineObjectFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<PipelineDefinitionPipelineObjectFieldGetArgs> fields) {
+        public Builder fields(@Nullable List<PipelineDefinitionPipelineObjectFieldGetArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

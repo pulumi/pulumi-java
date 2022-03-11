@@ -37,12 +37,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer minPauseBetweenCheckpoints;
 
-    @OutputCustomType.Constructor({"checkpointInterval","checkpointingEnabled","configurationType","minPauseBetweenCheckpoints"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationCheckpointConfiguration(
-        @Nullable Integer checkpointInterval,
-        @Nullable Boolean checkpointingEnabled,
-        String configurationType,
-        @Nullable Integer minPauseBetweenCheckpoints) {
+        @OutputCustomType.Parameter("checkpointInterval") @Nullable Integer checkpointInterval,
+        @OutputCustomType.Parameter("checkpointingEnabled") @Nullable Boolean checkpointingEnabled,
+        @OutputCustomType.Parameter("configurationType") String configurationType,
+        @OutputCustomType.Parameter("minPauseBetweenCheckpoints") @Nullable Integer minPauseBetweenCheckpoints) {
         this.checkpointInterval = checkpointInterval;
         this.checkpointingEnabled = checkpointingEnabled;
         this.configurationType = configurationType;
@@ -107,22 +107,22 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.minPauseBetweenCheckpoints = defaults.minPauseBetweenCheckpoints;
         }
 
-        public Builder setCheckpointInterval(@Nullable Integer checkpointInterval) {
+        public Builder checkpointInterval(@Nullable Integer checkpointInterval) {
             this.checkpointInterval = checkpointInterval;
             return this;
         }
 
-        public Builder setCheckpointingEnabled(@Nullable Boolean checkpointingEnabled) {
+        public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
             this.checkpointingEnabled = checkpointingEnabled;
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setMinPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
+        public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
             return this;
         }

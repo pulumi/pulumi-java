@@ -126,62 +126,62 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     	      this.typeVersionId = defaults.typeVersionId;
         }
 
-        public Builder setDesiredState(@Nullable Input<String> desiredState) {
+        public Builder desiredState(@Nullable Input<String> desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = Input.ofNullable(desiredState);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<String> properties) {
+        public Builder properties(@Nullable Input<String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable String properties) {
+        public Builder properties(@Nullable String properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
 
-        public Builder setTypeVersionId(@Nullable Input<String> typeVersionId) {
+        public Builder typeVersionId(@Nullable Input<String> typeVersionId) {
             this.typeVersionId = typeVersionId;
             return this;
         }
 
-        public Builder setTypeVersionId(@Nullable String typeVersionId) {
+        public Builder typeVersionId(@Nullable String typeVersionId) {
             this.typeVersionId = Input.ofNullable(typeVersionId);
             return this;
         }

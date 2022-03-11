@@ -31,11 +31,11 @@ public final class StatusCause {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"field","message","reason"})
+    @OutputCustomType.Constructor
     private StatusCause(
-        @Nullable String field,
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.field = field;
         this.message = message;
         this.reason = reason;
@@ -91,17 +91,17 @@ public final class StatusCause {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }

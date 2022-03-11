@@ -20,15 +20,15 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     private final @Nullable List<String> sourcePorts;
     private final @Nullable List<String> sourcePrefixLists;
 
-    @OutputCustomType.Constructor({"destinationAddresses","destinationPorts","destinationPrefixLists","protocols","sourceAddresses","sourcePorts","sourcePrefixLists"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAccessScopePacketHeaderStatementRequest(
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationPorts,
-        @Nullable List<String> destinationPrefixLists,
-        @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourcePorts,
-        @Nullable List<String> sourcePrefixLists) {
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("destinationPrefixLists") @Nullable List<String> destinationPrefixLists,
+        @OutputCustomType.Parameter("protocols") @Nullable List<NetworkInsightsAccessScopeProtocol> protocols,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts,
+        @OutputCustomType.Parameter("sourcePrefixLists") @Nullable List<String> sourcePrefixLists) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPorts = destinationPorts;
         this.destinationPrefixLists = destinationPrefixLists;
@@ -92,37 +92,37 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
     	      this.sourcePrefixLists = defaults.sourcePrefixLists;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDestinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
+        public Builder destinationPrefixLists(@Nullable List<String> destinationPrefixLists) {
             this.destinationPrefixLists = destinationPrefixLists;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
+        public Builder protocols(@Nullable List<NetworkInsightsAccessScopeProtocol> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<String> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }
 
-        public Builder setSourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
+        public Builder sourcePrefixLists(@Nullable List<String> sourcePrefixLists) {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }

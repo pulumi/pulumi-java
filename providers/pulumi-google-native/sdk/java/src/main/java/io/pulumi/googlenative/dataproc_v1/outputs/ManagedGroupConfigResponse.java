@@ -20,10 +20,10 @@ public final class ManagedGroupConfigResponse {
      */
     private final String instanceTemplateName;
 
-    @OutputCustomType.Constructor({"instanceGroupManagerName","instanceTemplateName"})
+    @OutputCustomType.Constructor
     private ManagedGroupConfigResponse(
-        String instanceGroupManagerName,
-        String instanceTemplateName) {
+        @OutputCustomType.Parameter("instanceGroupManagerName") String instanceGroupManagerName,
+        @OutputCustomType.Parameter("instanceTemplateName") String instanceTemplateName) {
         this.instanceGroupManagerName = instanceGroupManagerName;
         this.instanceTemplateName = instanceTemplateName;
     }
@@ -65,12 +65,12 @@ public final class ManagedGroupConfigResponse {
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder setInstanceGroupManagerName(String instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(String instanceGroupManagerName) {
             this.instanceGroupManagerName = Objects.requireNonNull(instanceGroupManagerName);
             return this;
         }
 
-        public Builder setInstanceTemplateName(String instanceTemplateName) {
+        public Builder instanceTemplateName(String instanceTemplateName) {
             this.instanceTemplateName = Objects.requireNonNull(instanceTemplateName);
             return this;
         }

@@ -17,8 +17,8 @@ public final class ApplicationHAClusterPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor({"prometheusPort"})
-    private ApplicationHAClusterPrometheusExporter(@Nullable String prometheusPort) {
+    @OutputCustomType.Constructor
+    private ApplicationHAClusterPrometheusExporter(@OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.prometheusPort = prometheusPort;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationHAClusterPrometheusExporter {
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }

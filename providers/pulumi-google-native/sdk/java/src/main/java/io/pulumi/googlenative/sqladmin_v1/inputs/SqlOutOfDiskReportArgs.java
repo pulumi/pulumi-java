@@ -75,22 +75,22 @@ public final class SqlOutOfDiskReportArgs extends io.pulumi.resources.ResourceAr
     	      this.sqlOutOfDiskState = defaults.sqlOutOfDiskState;
         }
 
-        public Builder setSqlMinRecommendedIncreaseSizeGb(@Nullable Input<Integer> sqlMinRecommendedIncreaseSizeGb) {
+        public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Input<Integer> sqlMinRecommendedIncreaseSizeGb) {
             this.sqlMinRecommendedIncreaseSizeGb = sqlMinRecommendedIncreaseSizeGb;
             return this;
         }
 
-        public Builder setSqlMinRecommendedIncreaseSizeGb(@Nullable Integer sqlMinRecommendedIncreaseSizeGb) {
+        public Builder sqlMinRecommendedIncreaseSizeGb(@Nullable Integer sqlMinRecommendedIncreaseSizeGb) {
             this.sqlMinRecommendedIncreaseSizeGb = Input.ofNullable(sqlMinRecommendedIncreaseSizeGb);
             return this;
         }
 
-        public Builder setSqlOutOfDiskState(@Nullable Input<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
+        public Builder sqlOutOfDiskState(@Nullable Input<SqlOutOfDiskReportSqlOutOfDiskState> sqlOutOfDiskState) {
             this.sqlOutOfDiskState = sqlOutOfDiskState;
             return this;
         }
 
-        public Builder setSqlOutOfDiskState(@Nullable SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
+        public Builder sqlOutOfDiskState(@Nullable SqlOutOfDiskReportSqlOutOfDiskState sqlOutOfDiskState) {
             this.sqlOutOfDiskState = Input.ofNullable(sqlOutOfDiskState);
             return this;
         }

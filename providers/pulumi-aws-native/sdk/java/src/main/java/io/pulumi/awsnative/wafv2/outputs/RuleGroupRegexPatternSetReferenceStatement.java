@@ -16,11 +16,11 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
     private final RuleGroupFieldToMatch fieldToMatch;
     private final List<RuleGroupTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"arn","fieldToMatch","textTransformations"})
+    @OutputCustomType.Constructor
     private RuleGroupRegexPatternSetReferenceStatement(
-        String arn,
-        RuleGroupFieldToMatch fieldToMatch,
-        List<RuleGroupTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fieldToMatch") RuleGroupFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("textTransformations") List<RuleGroupTextTransformation> textTransformations) {
         this.arn = arn;
         this.fieldToMatch = fieldToMatch;
         this.textTransformations = textTransformations;
@@ -60,17 +60,17 @@ public final class RuleGroupRegexPatternSetReferenceStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RuleGroupFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setTextTransformations(List<RuleGroupTextTransformation> textTransformations) {
+        public Builder textTransformations(List<RuleGroupTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

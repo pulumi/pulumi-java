@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFile {
      */
     private final String certificateChain;
 
-    @OutputCustomType.Constructor({"certificateChain"})
-    private VirtualNodeSpecListenerTlsValidationTrustFile(String certificateChain) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationTrustFile(@OutputCustomType.Parameter("certificateChain") String certificateChain) {
         this.certificateChain = certificateChain;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustFile {
     	      this.certificateChain = defaults.certificateChain;
         }
 
-        public Builder setCertificateChain(String certificateChain) {
+        public Builder certificateChain(String certificateChain) {
             this.certificateChain = Objects.requireNonNull(certificateChain);
             return this;
         }

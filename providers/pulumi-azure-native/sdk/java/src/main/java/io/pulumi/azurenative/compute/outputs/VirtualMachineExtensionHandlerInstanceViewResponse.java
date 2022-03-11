@@ -28,11 +28,11 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"status","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineExtensionHandlerInstanceViewResponse(
-        @Nullable InstanceViewStatusResponse status,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("status") @Nullable InstanceViewStatusResponse status,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.status = status;
         this.type = type;
         this.typeHandlerVersion = typeHandlerVersion;
@@ -84,17 +84,17 @@ public final class VirtualMachineExtensionHandlerInstanceViewResponse {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setStatus(@Nullable InstanceViewStatusResponse status) {
+        public Builder status(@Nullable InstanceViewStatusResponse status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

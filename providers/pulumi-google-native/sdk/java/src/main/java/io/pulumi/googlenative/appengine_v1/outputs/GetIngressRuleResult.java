@@ -31,12 +31,12 @@ public final class GetIngressRuleResult {
      */
     private final String sourceRange;
 
-    @OutputCustomType.Constructor({"action","description","priority","sourceRange"})
+    @OutputCustomType.Constructor
     private GetIngressRuleResult(
-        String action,
-        String description,
-        Integer priority,
-        String sourceRange) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("sourceRange") String sourceRange) {
         this.action = action;
         this.description = description;
         this.priority = priority;
@@ -98,22 +98,22 @@ public final class GetIngressRuleResult {
     	      this.sourceRange = defaults.sourceRange;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSourceRange(String sourceRange) {
+        public Builder sourceRange(String sourceRange) {
             this.sourceRange = Objects.requireNonNull(sourceRange);
             return this;
         }

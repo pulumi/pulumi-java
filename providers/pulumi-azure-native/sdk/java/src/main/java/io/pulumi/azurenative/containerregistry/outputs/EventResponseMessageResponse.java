@@ -38,13 +38,13 @@ public final class EventResponseMessageResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"content","headers","reasonPhrase","statusCode","version"})
+    @OutputCustomType.Constructor
     private EventResponseMessageResponse(
-        @Nullable String content,
-        @Nullable Map<String,String> headers,
-        @Nullable String reasonPhrase,
-        @Nullable String statusCode,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("reasonPhrase") @Nullable String reasonPhrase,
+        @OutputCustomType.Parameter("statusCode") @Nullable String statusCode,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.content = content;
         this.headers = headers;
         this.reasonPhrase = reasonPhrase;
@@ -116,27 +116,27 @@ public final class EventResponseMessageResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setReasonPhrase(@Nullable String reasonPhrase) {
+        public Builder reasonPhrase(@Nullable String reasonPhrase) {
             this.reasonPhrase = reasonPhrase;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable String statusCode) {
+        public Builder statusCode(@Nullable String statusCode) {
             this.statusCode = statusCode;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

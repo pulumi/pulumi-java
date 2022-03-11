@@ -23,10 +23,10 @@ public final class MagneticStoreWritePropertiesProperties {
      */
     private final @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation;
 
-    @OutputCustomType.Constructor({"enableMagneticStoreWrites","magneticStoreRejectedDataLocation"})
+    @OutputCustomType.Constructor
     private MagneticStoreWritePropertiesProperties(
-        Boolean enableMagneticStoreWrites,
-        @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
+        @OutputCustomType.Parameter("enableMagneticStoreWrites") Boolean enableMagneticStoreWrites,
+        @OutputCustomType.Parameter("magneticStoreRejectedDataLocation") @Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
         this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }
@@ -68,12 +68,12 @@ public final class MagneticStoreWritePropertiesProperties {
     	      this.magneticStoreRejectedDataLocation = defaults.magneticStoreRejectedDataLocation;
         }
 
-        public Builder setEnableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
+        public Builder enableMagneticStoreWrites(Boolean enableMagneticStoreWrites) {
             this.enableMagneticStoreWrites = Objects.requireNonNull(enableMagneticStoreWrites);
             return this;
         }
 
-        public Builder setMagneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
+        public Builder magneticStoreRejectedDataLocation(@Nullable MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationProperties magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }

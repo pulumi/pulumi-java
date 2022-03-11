@@ -21,10 +21,10 @@ public final class LatencyPercentileResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor({"latencyMicros","percent"})
+    @OutputCustomType.Constructor
     private LatencyPercentileResponse(
-        String latencyMicros,
-        Integer percent) {
+        @OutputCustomType.Parameter("latencyMicros") String latencyMicros,
+        @OutputCustomType.Parameter("percent") Integer percent) {
         this.latencyMicros = latencyMicros;
         this.percent = percent;
     }
@@ -66,12 +66,12 @@ public final class LatencyPercentileResponse {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setLatencyMicros(String latencyMicros) {
+        public Builder latencyMicros(String latencyMicros) {
             this.latencyMicros = Objects.requireNonNull(latencyMicros);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }

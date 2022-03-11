@@ -162,82 +162,82 @@ public final class EntitlementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setAssociationInfo(@Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
+        public Builder associationInfo(@Nullable Input<GoogleCloudChannelV1AssociationInfoArgs> associationInfo) {
             this.associationInfo = associationInfo;
             return this;
         }
 
-        public Builder setAssociationInfo(@Nullable GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
+        public Builder associationInfo(@Nullable GoogleCloudChannelV1AssociationInfoArgs associationInfo) {
             this.associationInfo = Input.ofNullable(associationInfo);
             return this;
         }
 
-        public Builder setCommitmentSettings(@Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
+        public Builder commitmentSettings(@Nullable Input<GoogleCloudChannelV1CommitmentSettingsArgs> commitmentSettings) {
             this.commitmentSettings = commitmentSettings;
             return this;
         }
 
-        public Builder setCommitmentSettings(@Nullable GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
+        public Builder commitmentSettings(@Nullable GoogleCloudChannelV1CommitmentSettingsArgs commitmentSettings) {
             this.commitmentSettings = Input.ofNullable(commitmentSettings);
             return this;
         }
 
-        public Builder setCustomerId(Input<String> customerId) {
+        public Builder customerId(Input<String> customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
 
-        public Builder setCustomerId(String customerId) {
+        public Builder customerId(String customerId) {
             this.customerId = Input.of(Objects.requireNonNull(customerId));
             return this;
         }
 
-        public Builder setOffer(Input<String> offer) {
+        public Builder offer(Input<String> offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
-        public Builder setOffer(String offer) {
+        public Builder offer(String offer) {
             this.offer = Input.of(Objects.requireNonNull(offer));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<GoogleCloudChannelV1ParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<GoogleCloudChannelV1ParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<GoogleCloudChannelV1ParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPurchaseOrderId(@Nullable Input<String> purchaseOrderId) {
+        public Builder purchaseOrderId(@Nullable Input<String> purchaseOrderId) {
             this.purchaseOrderId = purchaseOrderId;
             return this;
         }
 
-        public Builder setPurchaseOrderId(@Nullable String purchaseOrderId) {
+        public Builder purchaseOrderId(@Nullable String purchaseOrderId) {
             this.purchaseOrderId = Input.ofNullable(purchaseOrderId);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

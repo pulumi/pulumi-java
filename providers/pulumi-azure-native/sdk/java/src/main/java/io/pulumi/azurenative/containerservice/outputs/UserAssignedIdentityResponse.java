@@ -27,11 +27,11 @@ public final class UserAssignedIdentityResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"clientId","objectId","resourceId"})
+    @OutputCustomType.Constructor
     private UserAssignedIdentityResponse(
-        @Nullable String clientId,
-        @Nullable String objectId,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.resourceId = resourceId;
@@ -83,17 +83,17 @@ public final class UserAssignedIdentityResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

@@ -29,11 +29,11 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
      */
     private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
-    @OutputCustomType.Constructor({"requestHeaderConfigurations","responseHeaderConfigurations","urlConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleActionSetResponse(
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
-        @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
-        @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
+        @OutputCustomType.Parameter("requestHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations,
+        @OutputCustomType.Parameter("responseHeaderConfigurations") @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations,
+        @OutputCustomType.Parameter("urlConfiguration") @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
         this.requestHeaderConfigurations = requestHeaderConfigurations;
         this.responseHeaderConfigurations = responseHeaderConfigurations;
         this.urlConfiguration = urlConfiguration;
@@ -85,17 +85,17 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse {
     	      this.urlConfiguration = defaults.urlConfiguration;
         }
 
-        public Builder setRequestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations) {
+        public Builder requestHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations) {
             this.requestHeaderConfigurations = requestHeaderConfigurations;
             return this;
         }
 
-        public Builder setResponseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
+        public Builder responseHeaderConfigurations(@Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations) {
             this.responseHeaderConfigurations = responseHeaderConfigurations;
             return this;
         }
 
-        public Builder setUrlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
+        public Builder urlConfiguration(@Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration) {
             this.urlConfiguration = urlConfiguration;
             return this;
         }

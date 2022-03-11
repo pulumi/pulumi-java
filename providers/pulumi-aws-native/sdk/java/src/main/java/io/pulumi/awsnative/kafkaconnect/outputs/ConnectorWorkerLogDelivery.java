@@ -17,11 +17,11 @@ public final class ConnectorWorkerLogDelivery {
     private final @Nullable ConnectorFirehoseLogDelivery firehose;
     private final @Nullable ConnectorS3LogDelivery s3;
 
-    @OutputCustomType.Constructor({"cloudWatchLogs","firehose","s3"})
+    @OutputCustomType.Constructor
     private ConnectorWorkerLogDelivery(
-        @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
-        @Nullable ConnectorFirehoseLogDelivery firehose,
-        @Nullable ConnectorS3LogDelivery s3) {
+        @OutputCustomType.Parameter("cloudWatchLogs") @Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs,
+        @OutputCustomType.Parameter("firehose") @Nullable ConnectorFirehoseLogDelivery firehose,
+        @OutputCustomType.Parameter("s3") @Nullable ConnectorS3LogDelivery s3) {
         this.cloudWatchLogs = cloudWatchLogs;
         this.firehose = firehose;
         this.s3 = s3;
@@ -61,17 +61,17 @@ public final class ConnectorWorkerLogDelivery {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setCloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs) {
+        public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDelivery cloudWatchLogs) {
             this.cloudWatchLogs = cloudWatchLogs;
             return this;
         }
 
-        public Builder setFirehose(@Nullable ConnectorFirehoseLogDelivery firehose) {
+        public Builder firehose(@Nullable ConnectorFirehoseLogDelivery firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setS3(@Nullable ConnectorS3LogDelivery s3) {
+        public Builder s3(@Nullable ConnectorS3LogDelivery s3) {
             this.s3 = s3;
             return this;
         }

@@ -17,8 +17,8 @@ public final class LabPlanNetworkProfileResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"subnetId"})
-    private LabPlanNetworkProfileResponse(@Nullable String subnetId) {
+    @OutputCustomType.Constructor
+    private LabPlanNetworkProfileResponse(@OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.subnetId = subnetId;
     }
 
@@ -50,7 +50,7 @@ public final class LabPlanNetworkProfileResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

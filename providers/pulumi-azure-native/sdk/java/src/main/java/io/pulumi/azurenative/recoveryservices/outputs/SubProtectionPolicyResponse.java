@@ -34,11 +34,11 @@ public final class SubProtectionPolicyResponse {
      */
     private final @Nullable Object schedulePolicy;
 
-    @OutputCustomType.Constructor({"policyType","retentionPolicy","schedulePolicy"})
+    @OutputCustomType.Constructor
     private SubProtectionPolicyResponse(
-        @Nullable String policyType,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy) {
+        @OutputCustomType.Parameter("policyType") @Nullable String policyType,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy) {
         this.policyType = policyType;
         this.retentionPolicy = retentionPolicy;
         this.schedulePolicy = schedulePolicy;
@@ -90,17 +90,17 @@ public final class SubProtectionPolicyResponse {
     	      this.schedulePolicy = defaults.schedulePolicy;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Object schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }

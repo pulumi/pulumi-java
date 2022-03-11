@@ -22,10 +22,10 @@ public final class MlStatisticsResponse {
      */
     private final String maxIterations;
 
-    @OutputCustomType.Constructor({"iterationResults","maxIterations"})
+    @OutputCustomType.Constructor
     private MlStatisticsResponse(
-        List<IterationResultResponse> iterationResults,
-        String maxIterations) {
+        @OutputCustomType.Parameter("iterationResults") List<IterationResultResponse> iterationResults,
+        @OutputCustomType.Parameter("maxIterations") String maxIterations) {
         this.iterationResults = iterationResults;
         this.maxIterations = maxIterations;
     }
@@ -67,12 +67,12 @@ public final class MlStatisticsResponse {
     	      this.maxIterations = defaults.maxIterations;
         }
 
-        public Builder setIterationResults(List<IterationResultResponse> iterationResults) {
+        public Builder iterationResults(List<IterationResultResponse> iterationResults) {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
 
-        public Builder setMaxIterations(String maxIterations) {
+        public Builder maxIterations(String maxIterations) {
             this.maxIterations = Objects.requireNonNull(maxIterations);
             return this;
         }

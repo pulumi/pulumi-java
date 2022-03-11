@@ -38,13 +38,13 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
      */
     private final List<GoogleCloudMlV1__ContainerPortResponse> ports;
 
-    @OutputCustomType.Constructor({"args","command","env","image","ports"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ContainerSpecResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudMlV1__EnvVarResponse> env,
-        String image,
-        List<GoogleCloudMlV1__ContainerPortResponse> ports) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<GoogleCloudMlV1__EnvVarResponse> env,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("ports") List<GoogleCloudMlV1__ContainerPortResponse> ports) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -116,27 +116,27 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnv(List<GoogleCloudMlV1__EnvVarResponse> env) {
+        public Builder env(List<GoogleCloudMlV1__EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setPorts(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
+        public Builder ports(List<GoogleCloudMlV1__ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

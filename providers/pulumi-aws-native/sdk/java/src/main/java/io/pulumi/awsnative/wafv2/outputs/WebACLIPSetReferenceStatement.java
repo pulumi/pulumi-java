@@ -15,10 +15,10 @@ public final class WebACLIPSetReferenceStatement {
     private final String arn;
     private final @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
-    @OutputCustomType.Constructor({"arn","iPSetForwardedIPConfig"})
+    @OutputCustomType.Constructor
     private WebACLIPSetReferenceStatement(
-        String arn,
-        @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("iPSetForwardedIPConfig") @Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
         this.arn = arn;
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
@@ -52,12 +52,12 @@ public final class WebACLIPSetReferenceStatement {
     	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setIPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        public Builder iPSetForwardedIPConfig(@Nullable WebACLIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }

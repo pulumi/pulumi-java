@@ -20,11 +20,11 @@ public final class AutoScaleRunResponse {
      */
     private final @Nullable String results;
 
-    @OutputCustomType.Constructor({"error","evaluationTime","results"})
+    @OutputCustomType.Constructor
     private AutoScaleRunResponse(
-        @Nullable AutoScaleRunErrorResponse error,
-        String evaluationTime,
-        @Nullable String results) {
+        @OutputCustomType.Parameter("error") @Nullable AutoScaleRunErrorResponse error,
+        @OutputCustomType.Parameter("evaluationTime") String evaluationTime,
+        @OutputCustomType.Parameter("results") @Nullable String results) {
         this.error = error;
         this.evaluationTime = evaluationTime;
         this.results = results;
@@ -68,17 +68,17 @@ public final class AutoScaleRunResponse {
     	      this.results = defaults.results;
         }
 
-        public Builder setError(@Nullable AutoScaleRunErrorResponse error) {
+        public Builder error(@Nullable AutoScaleRunErrorResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setEvaluationTime(String evaluationTime) {
+        public Builder evaluationTime(String evaluationTime) {
             this.evaluationTime = Objects.requireNonNull(evaluationTime);
             return this;
         }
 
-        public Builder setResults(@Nullable String results) {
+        public Builder results(@Nullable String results) {
             this.results = results;
             return this;
         }

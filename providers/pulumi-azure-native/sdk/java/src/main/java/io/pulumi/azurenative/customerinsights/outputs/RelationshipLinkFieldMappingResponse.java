@@ -27,11 +27,11 @@ public final class RelationshipLinkFieldMappingResponse {
      */
     private final String relationshipFieldName;
 
-    @OutputCustomType.Constructor({"interactionFieldName","linkType","relationshipFieldName"})
+    @OutputCustomType.Constructor
     private RelationshipLinkFieldMappingResponse(
-        String interactionFieldName,
-        @Nullable String linkType,
-        String relationshipFieldName) {
+        @OutputCustomType.Parameter("interactionFieldName") String interactionFieldName,
+        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
+        @OutputCustomType.Parameter("relationshipFieldName") String relationshipFieldName) {
         this.interactionFieldName = interactionFieldName;
         this.linkType = linkType;
         this.relationshipFieldName = relationshipFieldName;
@@ -83,17 +83,17 @@ public final class RelationshipLinkFieldMappingResponse {
     	      this.relationshipFieldName = defaults.relationshipFieldName;
         }
 
-        public Builder setInteractionFieldName(String interactionFieldName) {
+        public Builder interactionFieldName(String interactionFieldName) {
             this.interactionFieldName = Objects.requireNonNull(interactionFieldName);
             return this;
         }
 
-        public Builder setLinkType(@Nullable String linkType) {
+        public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setRelationshipFieldName(String relationshipFieldName) {
+        public Builder relationshipFieldName(String relationshipFieldName) {
             this.relationshipFieldName = Objects.requireNonNull(relationshipFieldName);
             return this;
         }

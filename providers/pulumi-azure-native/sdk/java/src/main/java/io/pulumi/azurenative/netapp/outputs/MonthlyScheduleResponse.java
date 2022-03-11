@@ -39,13 +39,13 @@ public final class MonthlyScheduleResponse {
      */
     private final @Nullable Double usedBytes;
 
-    @OutputCustomType.Constructor({"daysOfMonth","hour","minute","snapshotsToKeep","usedBytes"})
+    @OutputCustomType.Constructor
     private MonthlyScheduleResponse(
-        @Nullable String daysOfMonth,
-        @Nullable Integer hour,
-        @Nullable Integer minute,
-        @Nullable Integer snapshotsToKeep,
-        @Nullable Double usedBytes) {
+        @OutputCustomType.Parameter("daysOfMonth") @Nullable String daysOfMonth,
+        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
+        @OutputCustomType.Parameter("minute") @Nullable Integer minute,
+        @OutputCustomType.Parameter("snapshotsToKeep") @Nullable Integer snapshotsToKeep,
+        @OutputCustomType.Parameter("usedBytes") @Nullable Double usedBytes) {
         this.daysOfMonth = daysOfMonth;
         this.hour = hour;
         this.minute = minute;
@@ -117,27 +117,27 @@ public final class MonthlyScheduleResponse {
     	      this.usedBytes = defaults.usedBytes;
         }
 
-        public Builder setDaysOfMonth(@Nullable String daysOfMonth) {
+        public Builder daysOfMonth(@Nullable String daysOfMonth) {
             this.daysOfMonth = daysOfMonth;
             return this;
         }
 
-        public Builder setHour(@Nullable Integer hour) {
+        public Builder hour(@Nullable Integer hour) {
             this.hour = hour;
             return this;
         }
 
-        public Builder setMinute(@Nullable Integer minute) {
+        public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }
 
-        public Builder setSnapshotsToKeep(@Nullable Integer snapshotsToKeep) {
+        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
-        public Builder setUsedBytes(@Nullable Double usedBytes) {
+        public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }

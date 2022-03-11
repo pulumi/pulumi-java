@@ -107,42 +107,42 @@ public final class UpgradeDistributionArgs extends io.pulumi.resources.ResourceA
     	      this.severity = defaults.severity;
         }
 
-        public Builder setClassification(@Nullable Input<String> classification) {
+        public Builder classification(@Nullable Input<String> classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = Input.ofNullable(classification);
             return this;
         }
 
-        public Builder setCpeUri(@Nullable Input<String> cpeUri) {
+        public Builder cpeUri(@Nullable Input<String> cpeUri) {
             this.cpeUri = cpeUri;
             return this;
         }
 
-        public Builder setCpeUri(@Nullable String cpeUri) {
+        public Builder cpeUri(@Nullable String cpeUri) {
             this.cpeUri = Input.ofNullable(cpeUri);
             return this;
         }
 
-        public Builder setCve(@Nullable Input<List<String>> cve) {
+        public Builder cve(@Nullable Input<List<String>> cve) {
             this.cve = cve;
             return this;
         }
 
-        public Builder setCve(@Nullable List<String> cve) {
+        public Builder cve(@Nullable List<String> cve) {
             this.cve = Input.ofNullable(cve);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<String> severity) {
+        public Builder severity(@Nullable Input<String> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }

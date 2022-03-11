@@ -52,12 +52,12 @@ public final class RecordingConfigurationDestinationConfigurationArgs extends io
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setS3(Input<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
+        public Builder s3(Input<RecordingConfigurationS3DestinationConfigurationArgs> s3) {
             this.s3 = Objects.requireNonNull(s3);
             return this;
         }
 
-        public Builder setS3(RecordingConfigurationS3DestinationConfigurationArgs s3) {
+        public Builder s3(RecordingConfigurationS3DestinationConfigurationArgs s3) {
             this.s3 = Input.of(Objects.requireNonNull(s3));
             return this;
         }

@@ -34,12 +34,12 @@ public final class RestorePolicyPropertiesResponse {
      */
     private final String minRestoreTime;
 
-    @OutputCustomType.Constructor({"days","enabled","lastEnabledTime","minRestoreTime"})
+    @OutputCustomType.Constructor
     private RestorePolicyPropertiesResponse(
-        @Nullable Integer days,
-        Boolean enabled,
-        String lastEnabledTime,
-        String minRestoreTime) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("lastEnabledTime") String lastEnabledTime,
+        @OutputCustomType.Parameter("minRestoreTime") String minRestoreTime) {
         this.days = days;
         this.enabled = enabled;
         this.lastEnabledTime = lastEnabledTime;
@@ -101,22 +101,22 @@ public final class RestorePolicyPropertiesResponse {
     	      this.minRestoreTime = defaults.minRestoreTime;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLastEnabledTime(String lastEnabledTime) {
+        public Builder lastEnabledTime(String lastEnabledTime) {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }
 
-        public Builder setMinRestoreTime(String minRestoreTime) {
+        public Builder minRestoreTime(String minRestoreTime) {
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
         }

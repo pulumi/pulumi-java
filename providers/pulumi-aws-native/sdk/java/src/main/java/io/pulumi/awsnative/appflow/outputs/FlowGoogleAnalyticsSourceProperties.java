@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowGoogleAnalyticsSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowGoogleAnalyticsSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowGoogleAnalyticsSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 
@@ -40,7 +40,7 @@ public final class FlowGoogleAnalyticsSourceProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

@@ -18,8 +18,8 @@ public final class ManagedIdentitySettingsResponse {
      */
     private final @Nullable String resource;
 
-    @OutputCustomType.Constructor({"resource"})
-    private ManagedIdentitySettingsResponse(@Nullable String resource) {
+    @OutputCustomType.Constructor
+    private ManagedIdentitySettingsResponse(@OutputCustomType.Parameter("resource") @Nullable String resource) {
         this.resource = resource;
     }
 
@@ -52,7 +52,7 @@ public final class ManagedIdentitySettingsResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }

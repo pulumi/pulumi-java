@@ -26,10 +26,10 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"allOf","odataType"})
+    @OutputCustomType.Constructor
     private MetricAlertMultipleResourceMultipleMetricCriteriaResponse(
-        @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
-        String odataType) {
+        @OutputCustomType.Parameter("allOf") @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.allOf = allOf;
         this.odataType = odataType;
     }
@@ -72,12 +72,12 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAllOf(@Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf) {
+        public Builder allOf(@Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf) {
             this.allOf = allOf;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

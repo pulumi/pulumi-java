@@ -31,12 +31,12 @@ public final class DiscoveredResponse {
      */
     private final String cpe;
 
-    @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis","cpe"})
+    @OutputCustomType.Constructor
     private DiscoveredResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe) {
+        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
+        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @OutputCustomType.Parameter("cpe") String cpe) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;
@@ -98,22 +98,22 @@ public final class DiscoveredResponse {
     	      this.cpe = defaults.cpe;
         }
 
-        public Builder setAnalysisStatus(String analysisStatus) {
+        public Builder analysisStatus(String analysisStatus) {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
 
-        public Builder setAnalysisStatusError(StatusResponse analysisStatusError) {
+        public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
 
-        public Builder setContinuousAnalysis(String continuousAnalysis) {
+        public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
 
-        public Builder setCpe(String cpe) {
+        public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }

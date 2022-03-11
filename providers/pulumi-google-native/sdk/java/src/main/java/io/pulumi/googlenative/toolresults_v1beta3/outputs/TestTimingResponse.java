@@ -15,8 +15,8 @@ public final class TestTimingResponse {
      */
     private final DurationResponse testProcessDuration;
 
-    @OutputCustomType.Constructor({"testProcessDuration"})
-    private TestTimingResponse(DurationResponse testProcessDuration) {
+    @OutputCustomType.Constructor
+    private TestTimingResponse(@OutputCustomType.Parameter("testProcessDuration") DurationResponse testProcessDuration) {
         this.testProcessDuration = testProcessDuration;
     }
 
@@ -48,7 +48,7 @@ public final class TestTimingResponse {
     	      this.testProcessDuration = defaults.testProcessDuration;
         }
 
-        public Builder setTestProcessDuration(DurationResponse testProcessDuration) {
+        public Builder testProcessDuration(DurationResponse testProcessDuration) {
             this.testProcessDuration = Objects.requireNonNull(testProcessDuration);
             return this;
         }

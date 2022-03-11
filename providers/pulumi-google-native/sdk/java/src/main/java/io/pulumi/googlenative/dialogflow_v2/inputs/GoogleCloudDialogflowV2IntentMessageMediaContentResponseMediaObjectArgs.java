@@ -123,52 +123,52 @@ public final class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMedia
     	      this.name = defaults.name;
         }
 
-        public Builder setContentUrl(Input<String> contentUrl) {
+        public Builder contentUrl(Input<String> contentUrl) {
             this.contentUrl = Objects.requireNonNull(contentUrl);
             return this;
         }
 
-        public Builder setContentUrl(String contentUrl) {
+        public Builder contentUrl(String contentUrl) {
             this.contentUrl = Input.of(Objects.requireNonNull(contentUrl));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIcon(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> icon) {
+        public Builder icon(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> icon) {
             this.icon = icon;
             return this;
         }
 
-        public Builder setIcon(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs icon) {
+        public Builder icon(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs icon) {
             this.icon = Input.ofNullable(icon);
             return this;
         }
 
-        public Builder setLargeImage(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage) {
+        public Builder largeImage(@Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> largeImage) {
             this.largeImage = largeImage;
             return this;
         }
 
-        public Builder setLargeImage(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs largeImage) {
+        public Builder largeImage(@Nullable GoogleCloudDialogflowV2IntentMessageImageArgs largeImage) {
             this.largeImage = Input.ofNullable(largeImage);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

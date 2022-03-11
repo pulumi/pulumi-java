@@ -46,14 +46,14 @@ public final class DataTransferServiceResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTime","instanceCount","instanceSize","locations","serviceType","status"})
+    @OutputCustomType.Constructor
     private DataTransferServiceResourcePropertiesResponse(
-        String creationTime,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceSize,
-        List<DataTransferRegionalServiceResourceResponse> locations,
-        String serviceType,
-        String status) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceSize") @Nullable String instanceSize,
+        @OutputCustomType.Parameter("locations") List<DataTransferRegionalServiceResourceResponse> locations,
+        @OutputCustomType.Parameter("serviceType") String serviceType,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
@@ -136,32 +136,32 @@ public final class DataTransferServiceResourcePropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceSize(@Nullable String instanceSize) {
+        public Builder instanceSize(@Nullable String instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
 
-        public Builder setLocations(List<DataTransferRegionalServiceResourceResponse> locations) {
+        public Builder locations(List<DataTransferRegionalServiceResourceResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setServiceType(String serviceType) {
+        public Builder serviceType(String serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

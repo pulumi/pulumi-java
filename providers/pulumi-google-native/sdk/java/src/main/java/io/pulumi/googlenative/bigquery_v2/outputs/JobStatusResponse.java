@@ -27,11 +27,11 @@ public final class JobStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"errorResult","errors","state"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        ErrorProtoResponse errorResult,
-        List<ErrorProtoResponse> errors,
-        String state) {
+        @OutputCustomType.Parameter("errorResult") ErrorProtoResponse errorResult,
+        @OutputCustomType.Parameter("errors") List<ErrorProtoResponse> errors,
+        @OutputCustomType.Parameter("state") String state) {
         this.errorResult = errorResult;
         this.errors = errors;
         this.state = state;
@@ -83,17 +83,17 @@ public final class JobStatusResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setErrorResult(ErrorProtoResponse errorResult) {
+        public Builder errorResult(ErrorProtoResponse errorResult) {
             this.errorResult = Objects.requireNonNull(errorResult);
             return this;
         }
 
-        public Builder setErrors(List<ErrorProtoResponse> errors) {
+        public Builder errors(List<ErrorProtoResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

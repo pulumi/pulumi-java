@@ -22,10 +22,10 @@ public final class FileSystemLifecyclePolicy {
      */
     private final @Nullable String transitionToPrimaryStorageClass;
 
-    @OutputCustomType.Constructor({"transitionToIa","transitionToPrimaryStorageClass"})
+    @OutputCustomType.Constructor
     private FileSystemLifecyclePolicy(
-        @Nullable String transitionToIa,
-        @Nullable String transitionToPrimaryStorageClass) {
+        @OutputCustomType.Parameter("transitionToIa") @Nullable String transitionToIa,
+        @OutputCustomType.Parameter("transitionToPrimaryStorageClass") @Nullable String transitionToPrimaryStorageClass) {
         this.transitionToIa = transitionToIa;
         this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
     }
@@ -67,12 +67,12 @@ public final class FileSystemLifecyclePolicy {
     	      this.transitionToPrimaryStorageClass = defaults.transitionToPrimaryStorageClass;
         }
 
-        public Builder setTransitionToIa(@Nullable String transitionToIa) {
+        public Builder transitionToIa(@Nullable String transitionToIa) {
             this.transitionToIa = transitionToIa;
             return this;
         }
 
-        public Builder setTransitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
+        public Builder transitionToPrimaryStorageClass(@Nullable String transitionToPrimaryStorageClass) {
             this.transitionToPrimaryStorageClass = transitionToPrimaryStorageClass;
             return this;
         }

@@ -190,47 +190,47 @@ public final class NetworkMappingPropertiesResponse extends io.pulumi.resources.
     	      this.state = defaults.state;
         }
 
-        public Builder setFabricSpecificSettings(@Nullable Object fabricSpecificSettings) {
+        public Builder fabricSpecificSettings(@Nullable Object fabricSpecificSettings) {
             this.fabricSpecificSettings = fabricSpecificSettings;
             return this;
         }
 
-        public Builder setPrimaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
+        public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             this.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
-        public Builder setPrimaryNetworkFriendlyName(@Nullable String primaryNetworkFriendlyName) {
+        public Builder primaryNetworkFriendlyName(@Nullable String primaryNetworkFriendlyName) {
             this.primaryNetworkFriendlyName = primaryNetworkFriendlyName;
             return this;
         }
 
-        public Builder setPrimaryNetworkId(@Nullable String primaryNetworkId) {
+        public Builder primaryNetworkId(@Nullable String primaryNetworkId) {
             this.primaryNetworkId = primaryNetworkId;
             return this;
         }
 
-        public Builder setRecoveryFabricArmId(@Nullable String recoveryFabricArmId) {
+        public Builder recoveryFabricArmId(@Nullable String recoveryFabricArmId) {
             this.recoveryFabricArmId = recoveryFabricArmId;
             return this;
         }
 
-        public Builder setRecoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
+        public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
-        public Builder setRecoveryNetworkFriendlyName(@Nullable String recoveryNetworkFriendlyName) {
+        public Builder recoveryNetworkFriendlyName(@Nullable String recoveryNetworkFriendlyName) {
             this.recoveryNetworkFriendlyName = recoveryNetworkFriendlyName;
             return this;
         }
 
-        public Builder setRecoveryNetworkId(@Nullable String recoveryNetworkId) {
+        public Builder recoveryNetworkId(@Nullable String recoveryNetworkId) {
             this.recoveryNetworkId = recoveryNetworkId;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

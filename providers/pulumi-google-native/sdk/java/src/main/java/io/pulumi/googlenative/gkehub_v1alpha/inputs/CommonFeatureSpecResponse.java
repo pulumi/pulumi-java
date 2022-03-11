@@ -90,17 +90,17 @@ public final class CommonFeatureSpecResponse extends io.pulumi.resources.InvokeA
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setCloudauditlogging(CloudAuditLoggingFeatureSpecResponse cloudauditlogging) {
+        public Builder cloudauditlogging(CloudAuditLoggingFeatureSpecResponse cloudauditlogging) {
             this.cloudauditlogging = Objects.requireNonNull(cloudauditlogging);
             return this;
         }
 
-        public Builder setMulticlusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }

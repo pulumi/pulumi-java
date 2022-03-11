@@ -17,8 +17,8 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
      */
     private final @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd;
 
-    @OutputCustomType.Constructor({"amountInUsd"})
-    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
+    @OutputCustomType.Constructor
+    private FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice(@OutputCustomType.Parameter("amountInUsd") @Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
         this.amountInUsd = amountInUsd;
     }
 
@@ -50,7 +50,7 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPrice {
     	      this.amountInUsd = defaults.amountInUsd;
         }
 
-        public Builder setAmountInUsd(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
+        public Builder amountInUsd(@Nullable FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountInUsd amountInUsd) {
             this.amountInUsd = amountInUsd;
             return this;
         }

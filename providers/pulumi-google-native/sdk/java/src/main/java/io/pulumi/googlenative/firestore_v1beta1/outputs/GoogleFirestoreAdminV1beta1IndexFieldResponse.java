@@ -20,10 +20,10 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"fieldPath","mode"})
+    @OutputCustomType.Constructor
     private GoogleFirestoreAdminV1beta1IndexFieldResponse(
-        String fieldPath,
-        String mode) {
+        @OutputCustomType.Parameter("fieldPath") String fieldPath,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.fieldPath = fieldPath;
         this.mode = mode;
     }
@@ -65,12 +65,12 @@ public final class GoogleFirestoreAdminV1beta1IndexFieldResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setFieldPath(String fieldPath) {
+        public Builder fieldPath(String fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

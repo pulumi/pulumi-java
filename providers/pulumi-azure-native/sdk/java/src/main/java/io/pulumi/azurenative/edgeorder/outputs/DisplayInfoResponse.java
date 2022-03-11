@@ -20,10 +20,10 @@ public final class DisplayInfoResponse {
      */
     private final String productFamilyDisplayName;
 
-    @OutputCustomType.Constructor({"configurationDisplayName","productFamilyDisplayName"})
+    @OutputCustomType.Constructor
     private DisplayInfoResponse(
-        String configurationDisplayName,
-        String productFamilyDisplayName) {
+        @OutputCustomType.Parameter("configurationDisplayName") String configurationDisplayName,
+        @OutputCustomType.Parameter("productFamilyDisplayName") String productFamilyDisplayName) {
         this.configurationDisplayName = configurationDisplayName;
         this.productFamilyDisplayName = productFamilyDisplayName;
     }
@@ -65,12 +65,12 @@ public final class DisplayInfoResponse {
     	      this.productFamilyDisplayName = defaults.productFamilyDisplayName;
         }
 
-        public Builder setConfigurationDisplayName(String configurationDisplayName) {
+        public Builder configurationDisplayName(String configurationDisplayName) {
             this.configurationDisplayName = Objects.requireNonNull(configurationDisplayName);
             return this;
         }
 
-        public Builder setProductFamilyDisplayName(String productFamilyDisplayName) {
+        public Builder productFamilyDisplayName(String productFamilyDisplayName) {
             this.productFamilyDisplayName = Objects.requireNonNull(productFamilyDisplayName);
             return this;
         }

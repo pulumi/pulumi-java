@@ -20,10 +20,10 @@ public final class UrlRewriteResponse {
      */
     private final String pathPrefixRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite"})
+    @OutputCustomType.Constructor
     private UrlRewriteResponse(
-        String hostRewrite,
-        String pathPrefixRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") String pathPrefixRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
     }
@@ -65,12 +65,12 @@ public final class UrlRewriteResponse {
     	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
         }
 
-        public Builder setHostRewrite(String hostRewrite) {
+        public Builder hostRewrite(String hostRewrite) {
             this.hostRewrite = Objects.requireNonNull(hostRewrite);
             return this;
         }
 
-        public Builder setPathPrefixRewrite(String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(String pathPrefixRewrite) {
             this.pathPrefixRewrite = Objects.requireNonNull(pathPrefixRewrite);
             return this;
         }

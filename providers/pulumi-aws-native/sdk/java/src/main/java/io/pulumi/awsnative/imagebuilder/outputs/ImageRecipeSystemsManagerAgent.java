@@ -17,8 +17,8 @@ public final class ImageRecipeSystemsManagerAgent {
      */
     private final @Nullable Boolean uninstallAfterBuild;
 
-    @OutputCustomType.Constructor({"uninstallAfterBuild"})
-    private ImageRecipeSystemsManagerAgent(@Nullable Boolean uninstallAfterBuild) {
+    @OutputCustomType.Constructor
+    private ImageRecipeSystemsManagerAgent(@OutputCustomType.Parameter("uninstallAfterBuild") @Nullable Boolean uninstallAfterBuild) {
         this.uninstallAfterBuild = uninstallAfterBuild;
     }
 
@@ -50,7 +50,7 @@ public final class ImageRecipeSystemsManagerAgent {
     	      this.uninstallAfterBuild = defaults.uninstallAfterBuild;
         }
 
-        public Builder setUninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
+        public Builder uninstallAfterBuild(@Nullable Boolean uninstallAfterBuild) {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }

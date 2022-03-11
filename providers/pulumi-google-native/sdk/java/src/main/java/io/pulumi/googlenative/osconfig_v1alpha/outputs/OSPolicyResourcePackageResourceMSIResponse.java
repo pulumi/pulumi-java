@@ -22,10 +22,10 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
      */
     private final OSPolicyResourceFileResponse source;
 
-    @OutputCustomType.Constructor({"properties","source"})
+    @OutputCustomType.Constructor
     private OSPolicyResourcePackageResourceMSIResponse(
-        List<String> properties,
-        OSPolicyResourceFileResponse source) {
+        @OutputCustomType.Parameter("properties") List<String> properties,
+        @OutputCustomType.Parameter("source") OSPolicyResourceFileResponse source) {
         this.properties = properties;
         this.source = source;
     }
@@ -67,12 +67,12 @@ public final class OSPolicyResourcePackageResourceMSIResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setProperties(List<String> properties) {
+        public Builder properties(List<String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setSource(OSPolicyResourceFileResponse source) {
+        public Builder source(OSPolicyResourceFileResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

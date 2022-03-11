@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor({"goal","metric"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_StudyConfig_MetricSpecResponse(
-        String goal,
-        String metric) {
+        @OutputCustomType.Parameter("goal") String goal,
+        @OutputCustomType.Parameter("metric") String metric) {
         this.goal = goal;
         this.metric = metric;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecResponse {
     	      this.metric = defaults.metric;
         }
 
-        public Builder setGoal(String goal) {
+        public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }

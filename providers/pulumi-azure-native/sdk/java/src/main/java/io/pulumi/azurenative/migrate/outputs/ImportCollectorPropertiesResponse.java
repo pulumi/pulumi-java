@@ -15,11 +15,11 @@ public final class ImportCollectorPropertiesResponse {
     private final @Nullable String discoverySiteId;
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"createdTimestamp","discoverySiteId","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private ImportCollectorPropertiesResponse(
-        String createdTimestamp,
-        @Nullable String discoverySiteId,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
         this.updatedTimestamp = updatedTimestamp;
@@ -59,17 +59,17 @@ public final class ImportCollectorPropertiesResponse {
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable String discoverySiteId) {
+        public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

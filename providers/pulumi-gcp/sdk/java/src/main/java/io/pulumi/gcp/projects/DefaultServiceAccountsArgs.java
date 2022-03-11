@@ -89,32 +89,32 @@ public final class DefaultServiceAccountsArgs extends io.pulumi.resources.Resour
     	      this.restorePolicy = defaults.restorePolicy;
         }
 
-        public Builder setAction(Input<String> action) {
+        public Builder action(Input<String> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<String> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<String> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable String restorePolicy) {
+        public Builder restorePolicy(@Nullable String restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }

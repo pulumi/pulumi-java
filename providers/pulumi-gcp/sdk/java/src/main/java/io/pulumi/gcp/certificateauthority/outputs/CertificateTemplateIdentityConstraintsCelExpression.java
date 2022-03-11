@@ -32,12 +32,12 @@ public final class CertificateTemplateIdentityConstraintsCelExpression {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","expression","location","title"})
+    @OutputCustomType.Constructor
     private CertificateTemplateIdentityConstraintsCelExpression(
-        @Nullable String description,
-        @Nullable String expression,
-        @Nullable String location,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;
@@ -99,22 +99,22 @@ public final class CertificateTemplateIdentityConstraintsCelExpression {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

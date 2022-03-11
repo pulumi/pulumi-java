@@ -232,122 +232,122 @@ public final class AssessmentMetadataInSubscriptionArgs extends io.pulumi.resour
     	      this.userImpact = defaults.userImpact;
         }
 
-        public Builder setAssessmentMetadataName(@Nullable Input<String> assessmentMetadataName) {
+        public Builder assessmentMetadataName(@Nullable Input<String> assessmentMetadataName) {
             this.assessmentMetadataName = assessmentMetadataName;
             return this;
         }
 
-        public Builder setAssessmentMetadataName(@Nullable String assessmentMetadataName) {
+        public Builder assessmentMetadataName(@Nullable String assessmentMetadataName) {
             this.assessmentMetadataName = Input.ofNullable(assessmentMetadataName);
             return this;
         }
 
-        public Builder setAssessmentType(Input<Either<String,AssessmentType>> assessmentType) {
+        public Builder assessmentType(Input<Either<String,AssessmentType>> assessmentType) {
             this.assessmentType = Objects.requireNonNull(assessmentType);
             return this;
         }
 
-        public Builder setAssessmentType(Either<String,AssessmentType> assessmentType) {
+        public Builder assessmentType(Either<String,AssessmentType> assessmentType) {
             this.assessmentType = Input.of(Objects.requireNonNull(assessmentType));
             return this;
         }
 
-        public Builder setCategories(@Nullable Input<List<Either<String,Categories>>> categories) {
+        public Builder categories(@Nullable Input<List<Either<String,Categories>>> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable List<Either<String,Categories>> categories) {
+        public Builder categories(@Nullable List<Either<String,Categories>> categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setImplementationEffort(@Nullable Input<Either<String,ImplementationEffort>> implementationEffort) {
+        public Builder implementationEffort(@Nullable Input<Either<String,ImplementationEffort>> implementationEffort) {
             this.implementationEffort = implementationEffort;
             return this;
         }
 
-        public Builder setImplementationEffort(@Nullable Either<String,ImplementationEffort> implementationEffort) {
+        public Builder implementationEffort(@Nullable Either<String,ImplementationEffort> implementationEffort) {
             this.implementationEffort = Input.ofNullable(implementationEffort);
             return this;
         }
 
-        public Builder setPartnerData(@Nullable Input<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
+        public Builder partnerData(@Nullable Input<SecurityAssessmentMetadataPartnerDataArgs> partnerData) {
             this.partnerData = partnerData;
             return this;
         }
 
-        public Builder setPartnerData(@Nullable SecurityAssessmentMetadataPartnerDataArgs partnerData) {
+        public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataArgs partnerData) {
             this.partnerData = Input.ofNullable(partnerData);
             return this;
         }
 
-        public Builder setPreview(@Nullable Input<Boolean> preview) {
+        public Builder preview(@Nullable Input<Boolean> preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = Input.ofNullable(preview);
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable Input<String> remediationDescription) {
+        public Builder remediationDescription(@Nullable Input<String> remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable String remediationDescription) {
+        public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = Input.ofNullable(remediationDescription);
             return this;
         }
 
-        public Builder setSeverity(Input<Either<String,Severity>> severity) {
+        public Builder severity(Input<Either<String,Severity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Either<String,Severity> severity) {
+        public Builder severity(Either<String,Severity> severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setThreats(@Nullable Input<List<Either<String,Threats>>> threats) {
+        public Builder threats(@Nullable Input<List<Either<String,Threats>>> threats) {
             this.threats = threats;
             return this;
         }
 
-        public Builder setThreats(@Nullable List<Either<String,Threats>> threats) {
+        public Builder threats(@Nullable List<Either<String,Threats>> threats) {
             this.threats = Input.ofNullable(threats);
             return this;
         }
 
-        public Builder setUserImpact(@Nullable Input<Either<String,UserImpact>> userImpact) {
+        public Builder userImpact(@Nullable Input<Either<String,UserImpact>> userImpact) {
             this.userImpact = userImpact;
             return this;
         }
 
-        public Builder setUserImpact(@Nullable Either<String,UserImpact> userImpact) {
+        public Builder userImpact(@Nullable Either<String,UserImpact> userImpact) {
             this.userImpact = Input.ofNullable(userImpact);
             return this;
         }

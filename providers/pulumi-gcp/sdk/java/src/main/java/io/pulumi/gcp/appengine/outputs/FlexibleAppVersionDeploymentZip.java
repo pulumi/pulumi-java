@@ -23,10 +23,10 @@ public final class FlexibleAppVersionDeploymentZip {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor({"filesCount","sourceUrl"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionDeploymentZip(
-        @Nullable Integer filesCount,
-        String sourceUrl) {
+        @OutputCustomType.Parameter("filesCount") @Nullable Integer filesCount,
+        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }
@@ -68,12 +68,12 @@ public final class FlexibleAppVersionDeploymentZip {
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder setFilesCount(@Nullable Integer filesCount) {
+        public Builder filesCount(@Nullable Integer filesCount) {
             this.filesCount = filesCount;
             return this;
         }
 
-        public Builder setSourceUrl(String sourceUrl) {
+        public Builder sourceUrl(String sourceUrl) {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }

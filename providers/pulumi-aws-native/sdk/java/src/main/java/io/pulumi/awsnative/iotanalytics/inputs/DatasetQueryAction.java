@@ -64,12 +64,12 @@ public final class DatasetQueryAction extends io.pulumi.resources.InvokeArgs {
     	      this.sqlQuery = defaults.sqlQuery;
         }
 
-        public Builder setFilters(@Nullable List<DatasetFilter> filters) {
+        public Builder filters(@Nullable List<DatasetFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setSqlQuery(String sqlQuery) {
+        public Builder sqlQuery(String sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }

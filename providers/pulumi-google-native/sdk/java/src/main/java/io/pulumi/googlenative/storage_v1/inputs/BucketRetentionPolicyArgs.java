@@ -91,32 +91,32 @@ public final class BucketRetentionPolicyArgs extends io.pulumi.resources.Resourc
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setEffectiveTime(@Nullable Input<String> effectiveTime) {
+        public Builder effectiveTime(@Nullable Input<String> effectiveTime) {
             this.effectiveTime = effectiveTime;
             return this;
         }
 
-        public Builder setEffectiveTime(@Nullable String effectiveTime) {
+        public Builder effectiveTime(@Nullable String effectiveTime) {
             this.effectiveTime = Input.ofNullable(effectiveTime);
             return this;
         }
 
-        public Builder setIsLocked(@Nullable Input<Boolean> isLocked) {
+        public Builder isLocked(@Nullable Input<Boolean> isLocked) {
             this.isLocked = isLocked;
             return this;
         }
 
-        public Builder setIsLocked(@Nullable Boolean isLocked) {
+        public Builder isLocked(@Nullable Boolean isLocked) {
             this.isLocked = Input.ofNullable(isLocked);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<String> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<String> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable String retentionPeriod) {
+        public Builder retentionPeriod(@Nullable String retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }

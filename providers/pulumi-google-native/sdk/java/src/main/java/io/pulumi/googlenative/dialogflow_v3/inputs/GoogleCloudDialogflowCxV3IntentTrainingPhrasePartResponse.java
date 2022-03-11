@@ -72,12 +72,12 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse ext
     	      this.text = defaults.text;
         }
 
-        public Builder setParameterId(String parameterId) {
+        public Builder parameterId(String parameterId) {
             this.parameterId = Objects.requireNonNull(parameterId);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

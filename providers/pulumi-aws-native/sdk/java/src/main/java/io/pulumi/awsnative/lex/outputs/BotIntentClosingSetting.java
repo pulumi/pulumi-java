@@ -15,10 +15,10 @@ public final class BotIntentClosingSetting {
     private final BotResponseSpecification closingResponse;
     private final @Nullable Boolean isActive;
 
-    @OutputCustomType.Constructor({"closingResponse","isActive"})
+    @OutputCustomType.Constructor
     private BotIntentClosingSetting(
-        BotResponseSpecification closingResponse,
-        @Nullable Boolean isActive) {
+        @OutputCustomType.Parameter("closingResponse") BotResponseSpecification closingResponse,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive) {
         this.closingResponse = closingResponse;
         this.isActive = isActive;
     }
@@ -52,12 +52,12 @@ public final class BotIntentClosingSetting {
     	      this.isActive = defaults.isActive;
         }
 
-        public Builder setClosingResponse(BotResponseSpecification closingResponse) {
+        public Builder closingResponse(BotResponseSpecification closingResponse) {
             this.closingResponse = Objects.requireNonNull(closingResponse);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }

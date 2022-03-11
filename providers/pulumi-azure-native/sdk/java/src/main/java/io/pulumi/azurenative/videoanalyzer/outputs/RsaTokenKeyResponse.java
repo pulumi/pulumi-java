@@ -36,13 +36,13 @@ public final class RsaTokenKeyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alg","e","kid","n","type"})
+    @OutputCustomType.Constructor
     private RsaTokenKeyResponse(
-        String alg,
-        String e,
-        String kid,
-        String n,
-        String type) {
+        @OutputCustomType.Parameter("alg") String alg,
+        @OutputCustomType.Parameter("e") String e,
+        @OutputCustomType.Parameter("kid") String kid,
+        @OutputCustomType.Parameter("n") String n,
+        @OutputCustomType.Parameter("type") String type) {
         this.alg = alg;
         this.e = e;
         this.kid = kid;
@@ -115,27 +115,27 @@ public final class RsaTokenKeyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlg(String alg) {
+        public Builder alg(String alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
-        public Builder setE(String e) {
+        public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
-        public Builder setKid(String kid) {
+        public Builder kid(String kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
-        public Builder setN(String n) {
+        public Builder n(String n) {
             this.n = Objects.requireNonNull(n);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

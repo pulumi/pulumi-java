@@ -22,10 +22,10 @@ public final class NodePoolManagement {
      */
     private final @Nullable Boolean autoUpgrade;
 
-    @OutputCustomType.Constructor({"autoRepair","autoUpgrade"})
+    @OutputCustomType.Constructor
     private NodePoolManagement(
-        @Nullable Boolean autoRepair,
-        @Nullable Boolean autoUpgrade) {
+        @OutputCustomType.Parameter("autoRepair") @Nullable Boolean autoRepair,
+        @OutputCustomType.Parameter("autoUpgrade") @Nullable Boolean autoUpgrade) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
     }
@@ -67,12 +67,12 @@ public final class NodePoolManagement {
     	      this.autoUpgrade = defaults.autoUpgrade;
         }
 
-        public Builder setAutoRepair(@Nullable Boolean autoRepair) {
+        public Builder autoRepair(@Nullable Boolean autoRepair) {
             this.autoRepair = autoRepair;
             return this;
         }
 
-        public Builder setAutoUpgrade(@Nullable Boolean autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }

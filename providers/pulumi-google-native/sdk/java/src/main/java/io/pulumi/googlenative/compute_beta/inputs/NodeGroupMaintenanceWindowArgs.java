@@ -57,12 +57,12 @@ public final class NodeGroupMaintenanceWindowArgs extends io.pulumi.resources.Re
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

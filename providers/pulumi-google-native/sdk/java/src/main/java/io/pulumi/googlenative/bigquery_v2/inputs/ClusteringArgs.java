@@ -54,12 +54,12 @@ public final class ClusteringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fields = defaults.fields;
         }
 
-        public Builder setFields(@Nullable Input<List<String>> fields) {
+        public Builder fields(@Nullable Input<List<String>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<String> fields) {
+        public Builder fields(@Nullable List<String> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }

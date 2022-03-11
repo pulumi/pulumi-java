@@ -91,32 +91,32 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
     	      this.solutions = defaults.solutions;
         }
 
-        public Builder setCategories(@Nullable Input<List<String>> categories) {
+        public Builder categories(@Nullable Input<List<String>> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(@Nullable Input<List<String>> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
 
-        public Builder setSolutions(@Nullable Input<List<String>> solutions) {
+        public Builder solutions(@Nullable Input<List<String>> solutions) {
             this.solutions = solutions;
             return this;
         }
 
-        public Builder setSolutions(@Nullable List<String> solutions) {
+        public Builder solutions(@Nullable List<String> solutions) {
             this.solutions = Input.ofNullable(solutions);
             return this;
         }

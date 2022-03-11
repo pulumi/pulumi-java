@@ -33,12 +33,12 @@ public final class SnapshotImportClientData {
      */
     private final @Nullable String uploadStart;
 
-    @OutputCustomType.Constructor({"comment","uploadEnd","uploadSize","uploadStart"})
+    @OutputCustomType.Constructor
     private SnapshotImportClientData(
-        @Nullable String comment,
-        @Nullable String uploadEnd,
-        @Nullable Double uploadSize,
-        @Nullable String uploadStart) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("uploadEnd") @Nullable String uploadEnd,
+        @OutputCustomType.Parameter("uploadSize") @Nullable Double uploadSize,
+        @OutputCustomType.Parameter("uploadStart") @Nullable String uploadStart) {
         this.comment = comment;
         this.uploadEnd = uploadEnd;
         this.uploadSize = uploadSize;
@@ -100,22 +100,22 @@ public final class SnapshotImportClientData {
     	      this.uploadStart = defaults.uploadStart;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setUploadEnd(@Nullable String uploadEnd) {
+        public Builder uploadEnd(@Nullable String uploadEnd) {
             this.uploadEnd = uploadEnd;
             return this;
         }
 
-        public Builder setUploadSize(@Nullable Double uploadSize) {
+        public Builder uploadSize(@Nullable Double uploadSize) {
             this.uploadSize = uploadSize;
             return this;
         }
 
-        public Builder setUploadStart(@Nullable String uploadStart) {
+        public Builder uploadStart(@Nullable String uploadStart) {
             this.uploadStart = uploadStart;
             return this;
         }

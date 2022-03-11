@@ -23,11 +23,11 @@ public final class GetFoldersResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor({"folders","id","parentId"})
+    @OutputCustomType.Constructor
     private GetFoldersResult(
-        List<GetFoldersFolder> folders,
-        String id,
-        String parentId) {
+        @OutputCustomType.Parameter("folders") List<GetFoldersFolder> folders,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId) {
         this.folders = folders;
         this.id = id;
         this.parentId = parentId;
@@ -75,17 +75,17 @@ public final class GetFoldersResult {
     	      this.parentId = defaults.parentId;
         }
 
-        public Builder setFolders(List<GetFoldersFolder> folders) {
+        public Builder folders(List<GetFoldersFolder> folders) {
             this.folders = Objects.requireNonNull(folders);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }

@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigArgs extends io.
     	      this.outputPath = defaults.outputPath;
         }
 
-        public Builder setBigQueryField(@Nullable Input<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField) {
+        public Builder bigQueryField(@Nullable Input<GooglePrivacyDlpV2BigQueryFieldArgs> bigQueryField) {
             this.bigQueryField = bigQueryField;
             return this;
         }
 
-        public Builder setBigQueryField(@Nullable GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
+        public Builder bigQueryField(@Nullable GooglePrivacyDlpV2BigQueryFieldArgs bigQueryField) {
             this.bigQueryField = Input.ofNullable(bigQueryField);
             return this;
         }
 
-        public Builder setCloudStorageFileSet(@Nullable Input<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(@Nullable Input<GooglePrivacyDlpV2CloudStorageFileSetArgs> cloudStorageFileSet) {
             this.cloudStorageFileSet = cloudStorageFileSet;
             return this;
         }
 
-        public Builder setCloudStorageFileSet(@Nullable GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(@Nullable GooglePrivacyDlpV2CloudStorageFileSetArgs cloudStorageFileSet) {
             this.cloudStorageFileSet = Input.ofNullable(cloudStorageFileSet);
             return this;
         }
 
-        public Builder setOutputPath(@Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
+        public Builder outputPath(@Nullable Input<GooglePrivacyDlpV2CloudStoragePathArgs> outputPath) {
             this.outputPath = outputPath;
             return this;
         }
 
-        public Builder setOutputPath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
+        public Builder outputPath(@Nullable GooglePrivacyDlpV2CloudStoragePathArgs outputPath) {
             this.outputPath = Input.ofNullable(outputPath);
             return this;
         }

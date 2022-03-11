@@ -36,13 +36,13 @@ public final class GetFavoriteProcessResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actualProcessName","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetFavoriteProcessResult(
-        String actualProcessName,
-        String id,
-        String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("actualProcessName") String actualProcessName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.actualProcessName = actualProcessName;
         this.id = id;
         this.name = name;
@@ -114,27 +114,27 @@ public final class GetFavoriteProcessResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActualProcessName(String actualProcessName) {
+        public Builder actualProcessName(String actualProcessName) {
             this.actualProcessName = Objects.requireNonNull(actualProcessName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

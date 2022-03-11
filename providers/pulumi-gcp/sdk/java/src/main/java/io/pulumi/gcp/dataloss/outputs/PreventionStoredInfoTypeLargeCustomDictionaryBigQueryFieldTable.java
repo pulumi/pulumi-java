@@ -25,11 +25,11 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable(
-        String datasetId,
-        String projectId,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;
@@ -81,17 +81,17 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTab
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

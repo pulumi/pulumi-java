@@ -37,13 +37,13 @@ public final class OSPolicyResourceExecResourceExecResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"args","file","interpreter","outputFilePath","script"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceExecResourceExecResponse(
-        List<String> args,
-        OSPolicyResourceFileResponse file,
-        String interpreter,
-        String outputFilePath,
-        String script) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("outputFilePath") String outputFilePath,
+        @OutputCustomType.Parameter("script") String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;
@@ -115,27 +115,27 @@ public final class OSPolicyResourceExecResourceExecResponse {
     	      this.script = defaults.script;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResponse file) {
+        public Builder file(OSPolicyResourceFileResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setOutputFilePath(String outputFilePath) {
+        public Builder outputFilePath(String outputFilePath) {
             this.outputFilePath = Objects.requireNonNull(outputFilePath);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

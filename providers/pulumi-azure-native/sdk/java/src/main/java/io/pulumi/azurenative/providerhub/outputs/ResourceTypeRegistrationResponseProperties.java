@@ -60,37 +60,37 @@ public final class ResourceTypeRegistrationResponseProperties {
     private final @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
     private final @Nullable List<ThrottlingRuleResponse> throttlingRules;
 
-    @OutputCustomType.Constructor({"allowedUnauthorizedActions","authorizationActionMappings","checkNameAvailabilitySpecifications","defaultApiVersion","disallowedActionVerbs","enableAsyncOperation","enableThirdPartyS2S","endpoints","extendedLocations","extensionOptions","featuresRule","identityManagement","isPureProxy","linkedAccessChecks","loggingRules","marketplaceType","provisioningState","regionality","requestHeaderOptions","requiredFeatures","resourceDeletionPolicy","resourceMovePolicy","routingType","serviceTreeInfos","subscriptionLifecycleNotificationSpecifications","subscriptionStateRules","swaggerSpecifications","templateDeploymentOptions","throttlingRules"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationResponseProperties(
-        @Nullable List<String> allowedUnauthorizedActions,
-        @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings,
-        @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications,
-        @Nullable String defaultApiVersion,
-        @Nullable List<String> disallowedActionVerbs,
-        @Nullable Boolean enableAsyncOperation,
-        @Nullable Boolean enableThirdPartyS2S,
-        @Nullable List<ResourceTypeEndpointResponse> endpoints,
-        @Nullable List<ExtendedLocationOptionsResponse> extendedLocations,
-        @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions,
-        @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule,
-        @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement,
-        @Nullable Boolean isPureProxy,
-        @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks,
-        @Nullable List<LoggingRuleResponse> loggingRules,
-        @Nullable String marketplaceType,
-        @Nullable String provisioningState,
-        @Nullable String regionality,
-        @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions,
-        @Nullable List<String> requiredFeatures,
-        @Nullable String resourceDeletionPolicy,
-        @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy,
-        @Nullable String routingType,
-        @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos,
-        @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
-        @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules,
-        @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications,
-        @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions,
-        @Nullable List<ThrottlingRuleResponse> throttlingRules) {
+        @OutputCustomType.Parameter("allowedUnauthorizedActions") @Nullable List<String> allowedUnauthorizedActions,
+        @OutputCustomType.Parameter("authorizationActionMappings") @Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings,
+        @OutputCustomType.Parameter("checkNameAvailabilitySpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications,
+        @OutputCustomType.Parameter("defaultApiVersion") @Nullable String defaultApiVersion,
+        @OutputCustomType.Parameter("disallowedActionVerbs") @Nullable List<String> disallowedActionVerbs,
+        @OutputCustomType.Parameter("enableAsyncOperation") @Nullable Boolean enableAsyncOperation,
+        @OutputCustomType.Parameter("enableThirdPartyS2S") @Nullable Boolean enableThirdPartyS2S,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<ResourceTypeEndpointResponse> endpoints,
+        @OutputCustomType.Parameter("extendedLocations") @Nullable List<ExtendedLocationOptionsResponse> extendedLocations,
+        @OutputCustomType.Parameter("extensionOptions") @Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions,
+        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule,
+        @OutputCustomType.Parameter("identityManagement") @Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement,
+        @OutputCustomType.Parameter("isPureProxy") @Nullable Boolean isPureProxy,
+        @OutputCustomType.Parameter("linkedAccessChecks") @Nullable List<LinkedAccessCheckResponse> linkedAccessChecks,
+        @OutputCustomType.Parameter("loggingRules") @Nullable List<LoggingRuleResponse> loggingRules,
+        @OutputCustomType.Parameter("marketplaceType") @Nullable String marketplaceType,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("regionality") @Nullable String regionality,
+        @OutputCustomType.Parameter("requestHeaderOptions") @Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("resourceDeletionPolicy") @Nullable String resourceDeletionPolicy,
+        @OutputCustomType.Parameter("resourceMovePolicy") @Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy,
+        @OutputCustomType.Parameter("routingType") @Nullable String routingType,
+        @OutputCustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos,
+        @OutputCustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
+        @OutputCustomType.Parameter("subscriptionStateRules") @Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules,
+        @OutputCustomType.Parameter("swaggerSpecifications") @Nullable List<SwaggerSpecificationResponse> swaggerSpecifications,
+        @OutputCustomType.Parameter("templateDeploymentOptions") @Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions,
+        @OutputCustomType.Parameter("throttlingRules") @Nullable List<ThrottlingRuleResponse> throttlingRules) {
         this.allowedUnauthorizedActions = allowedUnauthorizedActions;
         this.authorizationActionMappings = authorizationActionMappings;
         this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;
@@ -286,147 +286,147 @@ public final class ResourceTypeRegistrationResponseProperties {
     	      this.throttlingRules = defaults.throttlingRules;
         }
 
-        public Builder setAllowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
+        public Builder allowedUnauthorizedActions(@Nullable List<String> allowedUnauthorizedActions) {
             this.allowedUnauthorizedActions = allowedUnauthorizedActions;
             return this;
         }
 
-        public Builder setAuthorizationActionMappings(@Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings) {
+        public Builder authorizationActionMappings(@Nullable List<AuthorizationActionMappingResponse> authorizationActionMappings) {
             this.authorizationActionMappings = authorizationActionMappings;
             return this;
         }
 
-        public Builder setCheckNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications) {
+        public Builder checkNameAvailabilitySpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications checkNameAvailabilitySpecifications) {
             this.checkNameAvailabilitySpecifications = checkNameAvailabilitySpecifications;
             return this;
         }
 
-        public Builder setDefaultApiVersion(@Nullable String defaultApiVersion) {
+        public Builder defaultApiVersion(@Nullable String defaultApiVersion) {
             this.defaultApiVersion = defaultApiVersion;
             return this;
         }
 
-        public Builder setDisallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
+        public Builder disallowedActionVerbs(@Nullable List<String> disallowedActionVerbs) {
             this.disallowedActionVerbs = disallowedActionVerbs;
             return this;
         }
 
-        public Builder setEnableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
+        public Builder enableAsyncOperation(@Nullable Boolean enableAsyncOperation) {
             this.enableAsyncOperation = enableAsyncOperation;
             return this;
         }
 
-        public Builder setEnableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
+        public Builder enableThirdPartyS2S(@Nullable Boolean enableThirdPartyS2S) {
             this.enableThirdPartyS2S = enableThirdPartyS2S;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ResourceTypeEndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<ResourceTypeEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setExtendedLocations(@Nullable List<ExtendedLocationOptionsResponse> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<ExtendedLocationOptionsResponse> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setExtensionOptions(@Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions) {
+        public Builder extensionOptions(@Nullable ResourceTypeRegistrationPropertiesResponseExtensionOptions extensionOptions) {
             this.extensionOptions = extensionOptions;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule) {
+        public Builder featuresRule(@Nullable ResourceTypeRegistrationPropertiesResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setIdentityManagement(@Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement) {
+        public Builder identityManagement(@Nullable ResourceTypeRegistrationPropertiesResponseIdentityManagement identityManagement) {
             this.identityManagement = identityManagement;
             return this;
         }
 
-        public Builder setIsPureProxy(@Nullable Boolean isPureProxy) {
+        public Builder isPureProxy(@Nullable Boolean isPureProxy) {
             this.isPureProxy = isPureProxy;
             return this;
         }
 
-        public Builder setLinkedAccessChecks(@Nullable List<LinkedAccessCheckResponse> linkedAccessChecks) {
+        public Builder linkedAccessChecks(@Nullable List<LinkedAccessCheckResponse> linkedAccessChecks) {
             this.linkedAccessChecks = linkedAccessChecks;
             return this;
         }
 
-        public Builder setLoggingRules(@Nullable List<LoggingRuleResponse> loggingRules) {
+        public Builder loggingRules(@Nullable List<LoggingRuleResponse> loggingRules) {
             this.loggingRules = loggingRules;
             return this;
         }
 
-        public Builder setMarketplaceType(@Nullable String marketplaceType) {
+        public Builder marketplaceType(@Nullable String marketplaceType) {
             this.marketplaceType = marketplaceType;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRegionality(@Nullable String regionality) {
+        public Builder regionality(@Nullable String regionality) {
             this.regionality = regionality;
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setResourceDeletionPolicy(@Nullable String resourceDeletionPolicy) {
+        public Builder resourceDeletionPolicy(@Nullable String resourceDeletionPolicy) {
             this.resourceDeletionPolicy = resourceDeletionPolicy;
             return this;
         }
 
-        public Builder setResourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy) {
+        public Builder resourceMovePolicy(@Nullable ResourceTypeRegistrationPropertiesResponseResourceMovePolicy resourceMovePolicy) {
             this.resourceMovePolicy = resourceMovePolicy;
             return this;
         }
 
-        public Builder setRoutingType(@Nullable String routingType) {
+        public Builder routingType(@Nullable String routingType) {
             this.routingType = routingType;
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
 
-        public Builder setSubscriptionStateRules(@Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules) {
+        public Builder subscriptionStateRules(@Nullable List<SubscriptionStateRuleResponse> subscriptionStateRules) {
             this.subscriptionStateRules = subscriptionStateRules;
             return this;
         }
 
-        public Builder setSwaggerSpecifications(@Nullable List<SwaggerSpecificationResponse> swaggerSpecifications) {
+        public Builder swaggerSpecifications(@Nullable List<SwaggerSpecificationResponse> swaggerSpecifications) {
             this.swaggerSpecifications = swaggerSpecifications;
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }
 
-        public Builder setThrottlingRules(@Nullable List<ThrottlingRuleResponse> throttlingRules) {
+        public Builder throttlingRules(@Nullable List<ThrottlingRuleResponse> throttlingRules) {
             this.throttlingRules = throttlingRules;
             return this;
         }

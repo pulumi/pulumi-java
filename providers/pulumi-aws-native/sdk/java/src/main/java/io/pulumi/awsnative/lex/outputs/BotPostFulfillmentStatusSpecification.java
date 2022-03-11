@@ -15,11 +15,11 @@ public final class BotPostFulfillmentStatusSpecification {
     private final @Nullable BotResponseSpecification successResponse;
     private final @Nullable BotResponseSpecification timeoutResponse;
 
-    @OutputCustomType.Constructor({"failureResponse","successResponse","timeoutResponse"})
+    @OutputCustomType.Constructor
     private BotPostFulfillmentStatusSpecification(
-        @Nullable BotResponseSpecification failureResponse,
-        @Nullable BotResponseSpecification successResponse,
-        @Nullable BotResponseSpecification timeoutResponse) {
+        @OutputCustomType.Parameter("failureResponse") @Nullable BotResponseSpecification failureResponse,
+        @OutputCustomType.Parameter("successResponse") @Nullable BotResponseSpecification successResponse,
+        @OutputCustomType.Parameter("timeoutResponse") @Nullable BotResponseSpecification timeoutResponse) {
         this.failureResponse = failureResponse;
         this.successResponse = successResponse;
         this.timeoutResponse = timeoutResponse;
@@ -59,17 +59,17 @@ public final class BotPostFulfillmentStatusSpecification {
     	      this.timeoutResponse = defaults.timeoutResponse;
         }
 
-        public Builder setFailureResponse(@Nullable BotResponseSpecification failureResponse) {
+        public Builder failureResponse(@Nullable BotResponseSpecification failureResponse) {
             this.failureResponse = failureResponse;
             return this;
         }
 
-        public Builder setSuccessResponse(@Nullable BotResponseSpecification successResponse) {
+        public Builder successResponse(@Nullable BotResponseSpecification successResponse) {
             this.successResponse = successResponse;
             return this;
         }
 
-        public Builder setTimeoutResponse(@Nullable BotResponseSpecification timeoutResponse) {
+        public Builder timeoutResponse(@Nullable BotResponseSpecification timeoutResponse) {
             this.timeoutResponse = timeoutResponse;
             return this;
         }

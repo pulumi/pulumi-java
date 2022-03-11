@@ -173,92 +173,92 @@ public final class PublicDelegatedPrefixArgs extends io.pulumi.resources.Resourc
     	      this.requestId = defaults.requestId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable Input<String> ipCidrRange) {
+        public Builder ipCidrRange(@Nullable Input<String> ipCidrRange) {
             this.ipCidrRange = ipCidrRange;
             return this;
         }
 
-        public Builder setIpCidrRange(@Nullable String ipCidrRange) {
+        public Builder ipCidrRange(@Nullable String ipCidrRange) {
             this.ipCidrRange = Input.ofNullable(ipCidrRange);
             return this;
         }
 
-        public Builder setIsLiveMigration(@Nullable Input<Boolean> isLiveMigration) {
+        public Builder isLiveMigration(@Nullable Input<Boolean> isLiveMigration) {
             this.isLiveMigration = isLiveMigration;
             return this;
         }
 
-        public Builder setIsLiveMigration(@Nullable Boolean isLiveMigration) {
+        public Builder isLiveMigration(@Nullable Boolean isLiveMigration) {
             this.isLiveMigration = Input.ofNullable(isLiveMigration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentPrefix(@Nullable Input<String> parentPrefix) {
+        public Builder parentPrefix(@Nullable Input<String> parentPrefix) {
             this.parentPrefix = parentPrefix;
             return this;
         }
 
-        public Builder setParentPrefix(@Nullable String parentPrefix) {
+        public Builder parentPrefix(@Nullable String parentPrefix) {
             this.parentPrefix = Input.ofNullable(parentPrefix);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPublicDelegatedSubPrefixs(@Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
+        public Builder publicDelegatedSubPrefixs(@Nullable Input<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = publicDelegatedSubPrefixs;
             return this;
         }
 
-        public Builder setPublicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
+        public Builder publicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = Input.ofNullable(publicDelegatedSubPrefixs);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }

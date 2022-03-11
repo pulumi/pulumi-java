@@ -15,8 +15,8 @@ public final class MitigationActionPublishFindingToSnsParams {
      */
     private final String topicArn;
 
-    @OutputCustomType.Constructor({"topicArn"})
-    private MitigationActionPublishFindingToSnsParams(String topicArn) {
+    @OutputCustomType.Constructor
+    private MitigationActionPublishFindingToSnsParams(@OutputCustomType.Parameter("topicArn") String topicArn) {
         this.topicArn = topicArn;
     }
 
@@ -48,7 +48,7 @@ public final class MitigationActionPublishFindingToSnsParams {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }

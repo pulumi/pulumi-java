@@ -21,10 +21,10 @@ public final class BigQueryModelTrainingResponse {
      */
     private final String expectedTotalIterations;
 
-    @OutputCustomType.Constructor({"currentIteration","expectedTotalIterations"})
+    @OutputCustomType.Constructor
     private BigQueryModelTrainingResponse(
-        Integer currentIteration,
-        String expectedTotalIterations) {
+        @OutputCustomType.Parameter("currentIteration") Integer currentIteration,
+        @OutputCustomType.Parameter("expectedTotalIterations") String expectedTotalIterations) {
         this.currentIteration = currentIteration;
         this.expectedTotalIterations = expectedTotalIterations;
     }
@@ -66,12 +66,12 @@ public final class BigQueryModelTrainingResponse {
     	      this.expectedTotalIterations = defaults.expectedTotalIterations;
         }
 
-        public Builder setCurrentIteration(Integer currentIteration) {
+        public Builder currentIteration(Integer currentIteration) {
             this.currentIteration = Objects.requireNonNull(currentIteration);
             return this;
         }
 
-        public Builder setExpectedTotalIterations(String expectedTotalIterations) {
+        public Builder expectedTotalIterations(String expectedTotalIterations) {
             this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
             return this;
         }

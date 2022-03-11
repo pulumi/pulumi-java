@@ -43,14 +43,14 @@ public final class HardwareProfileResponse {
      */
     private final @Nullable Integer numCoresPerSocket;
 
-    @OutputCustomType.Constructor({"cpuHotAddEnabled","cpuHotRemoveEnabled","memoryHotAddEnabled","memorySizeMB","numCPUs","numCoresPerSocket"})
+    @OutputCustomType.Constructor
     private HardwareProfileResponse(
-        Boolean cpuHotAddEnabled,
-        Boolean cpuHotRemoveEnabled,
-        Boolean memoryHotAddEnabled,
-        @Nullable Integer memorySizeMB,
-        @Nullable Integer numCPUs,
-        @Nullable Integer numCoresPerSocket) {
+        @OutputCustomType.Parameter("cpuHotAddEnabled") Boolean cpuHotAddEnabled,
+        @OutputCustomType.Parameter("cpuHotRemoveEnabled") Boolean cpuHotRemoveEnabled,
+        @OutputCustomType.Parameter("memoryHotAddEnabled") Boolean memoryHotAddEnabled,
+        @OutputCustomType.Parameter("memorySizeMB") @Nullable Integer memorySizeMB,
+        @OutputCustomType.Parameter("numCPUs") @Nullable Integer numCPUs,
+        @OutputCustomType.Parameter("numCoresPerSocket") @Nullable Integer numCoresPerSocket) {
         this.cpuHotAddEnabled = cpuHotAddEnabled;
         this.cpuHotRemoveEnabled = cpuHotRemoveEnabled;
         this.memoryHotAddEnabled = memoryHotAddEnabled;
@@ -132,32 +132,32 @@ public final class HardwareProfileResponse {
     	      this.numCoresPerSocket = defaults.numCoresPerSocket;
         }
 
-        public Builder setCpuHotAddEnabled(Boolean cpuHotAddEnabled) {
+        public Builder cpuHotAddEnabled(Boolean cpuHotAddEnabled) {
             this.cpuHotAddEnabled = Objects.requireNonNull(cpuHotAddEnabled);
             return this;
         }
 
-        public Builder setCpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
+        public Builder cpuHotRemoveEnabled(Boolean cpuHotRemoveEnabled) {
             this.cpuHotRemoveEnabled = Objects.requireNonNull(cpuHotRemoveEnabled);
             return this;
         }
 
-        public Builder setMemoryHotAddEnabled(Boolean memoryHotAddEnabled) {
+        public Builder memoryHotAddEnabled(Boolean memoryHotAddEnabled) {
             this.memoryHotAddEnabled = Objects.requireNonNull(memoryHotAddEnabled);
             return this;
         }
 
-        public Builder setMemorySizeMB(@Nullable Integer memorySizeMB) {
+        public Builder memorySizeMB(@Nullable Integer memorySizeMB) {
             this.memorySizeMB = memorySizeMB;
             return this;
         }
 
-        public Builder setNumCPUs(@Nullable Integer numCPUs) {
+        public Builder numCPUs(@Nullable Integer numCPUs) {
             this.numCPUs = numCPUs;
             return this;
         }
 
-        public Builder setNumCoresPerSocket(@Nullable Integer numCoresPerSocket) {
+        public Builder numCoresPerSocket(@Nullable Integer numCoresPerSocket) {
             this.numCoresPerSocket = numCoresPerSocket;
             return this;
         }

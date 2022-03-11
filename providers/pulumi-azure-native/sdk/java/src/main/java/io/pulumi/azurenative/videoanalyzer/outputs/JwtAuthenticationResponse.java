@@ -42,13 +42,13 @@ public final class JwtAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"audiences","claims","issuers","keys","type"})
+    @OutputCustomType.Constructor
     private JwtAuthenticationResponse(
-        @Nullable List<String> audiences,
-        @Nullable List<TokenClaimResponse> claims,
-        @Nullable List<String> issuers,
-        @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
-        String type) {
+        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @OutputCustomType.Parameter("claims") @Nullable List<TokenClaimResponse> claims,
+        @OutputCustomType.Parameter("issuers") @Nullable List<String> issuers,
+        @OutputCustomType.Parameter("keys") @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys,
+        @OutputCustomType.Parameter("type") String type) {
         this.audiences = audiences;
         this.claims = claims;
         this.issuers = issuers;
@@ -121,27 +121,27 @@ public final class JwtAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setClaims(@Nullable List<TokenClaimResponse> claims) {
+        public Builder claims(@Nullable List<TokenClaimResponse> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setIssuers(@Nullable List<String> issuers) {
+        public Builder issuers(@Nullable List<String> issuers) {
             this.issuers = issuers;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
+        public Builder keys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

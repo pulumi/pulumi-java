@@ -75,12 +75,12 @@ public final class EventSourceMappingSourceAccessConfiguration extends io.pulumi
     	      this.uRI = defaults.uRI;
         }
 
-        public Builder setType(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
+        public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setURI(@Nullable String uRI) {
+        public Builder uRI(@Nullable String uRI) {
             this.uRI = uRI;
             return this;
         }

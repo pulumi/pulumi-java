@@ -122,52 +122,52 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArtifactStore(Input<PipelineArtifactStoreArgs> artifactStore) {
+        public Builder artifactStore(Input<PipelineArtifactStoreArgs> artifactStore) {
             this.artifactStore = Objects.requireNonNull(artifactStore);
             return this;
         }
 
-        public Builder setArtifactStore(PipelineArtifactStoreArgs artifactStore) {
+        public Builder artifactStore(PipelineArtifactStoreArgs artifactStore) {
             this.artifactStore = Input.of(Objects.requireNonNull(artifactStore));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStages(Input<List<PipelineStageArgs>> stages) {
+        public Builder stages(Input<List<PipelineStageArgs>> stages) {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
 
-        public Builder setStages(List<PipelineStageArgs> stages) {
+        public Builder stages(List<PipelineStageArgs> stages) {
             this.stages = Input.of(Objects.requireNonNull(stages));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

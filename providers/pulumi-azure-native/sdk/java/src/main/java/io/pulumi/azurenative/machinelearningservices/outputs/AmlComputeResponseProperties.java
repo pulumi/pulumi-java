@@ -101,24 +101,24 @@ public final class AmlComputeResponseProperties {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"allocationState","allocationStateTransitionTime","currentNodeCount","enableNodePublicIp","errors","isolatedNetwork","nodeStateCounts","osType","remoteLoginPortPublicAccess","scaleSettings","subnet","targetNodeCount","userAccountCredentials","virtualMachineImage","vmPriority","vmSize"})
+    @OutputCustomType.Constructor
     private AmlComputeResponseProperties(
-        String allocationState,
-        String allocationStateTransitionTime,
-        Integer currentNodeCount,
-        @Nullable Boolean enableNodePublicIp,
-        List<MachineLearningServiceErrorResponse> errors,
-        @Nullable Boolean isolatedNetwork,
-        NodeStateCountsResponse nodeStateCounts,
-        @Nullable String osType,
-        @Nullable String remoteLoginPortPublicAccess,
-        @Nullable ScaleSettingsResponse scaleSettings,
-        @Nullable ResourceIdResponse subnet,
-        Integer targetNodeCount,
-        @Nullable UserAccountCredentialsResponse userAccountCredentials,
-        @Nullable VirtualMachineImageResponse virtualMachineImage,
-        @Nullable String vmPriority,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("allocationState") String allocationState,
+        @OutputCustomType.Parameter("allocationStateTransitionTime") String allocationStateTransitionTime,
+        @OutputCustomType.Parameter("currentNodeCount") Integer currentNodeCount,
+        @OutputCustomType.Parameter("enableNodePublicIp") @Nullable Boolean enableNodePublicIp,
+        @OutputCustomType.Parameter("errors") List<MachineLearningServiceErrorResponse> errors,
+        @OutputCustomType.Parameter("isolatedNetwork") @Nullable Boolean isolatedNetwork,
+        @OutputCustomType.Parameter("nodeStateCounts") NodeStateCountsResponse nodeStateCounts,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("remoteLoginPortPublicAccess") @Nullable String remoteLoginPortPublicAccess,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable ScaleSettingsResponse scaleSettings,
+        @OutputCustomType.Parameter("subnet") @Nullable ResourceIdResponse subnet,
+        @OutputCustomType.Parameter("targetNodeCount") Integer targetNodeCount,
+        @OutputCustomType.Parameter("userAccountCredentials") @Nullable UserAccountCredentialsResponse userAccountCredentials,
+        @OutputCustomType.Parameter("virtualMachineImage") @Nullable VirtualMachineImageResponse virtualMachineImage,
+        @OutputCustomType.Parameter("vmPriority") @Nullable String vmPriority,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.allocationState = allocationState;
         this.allocationStateTransitionTime = allocationStateTransitionTime;
         this.currentNodeCount = currentNodeCount;
@@ -300,82 +300,82 @@ public final class AmlComputeResponseProperties {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setAllocationState(String allocationState) {
+        public Builder allocationState(String allocationState) {
             this.allocationState = Objects.requireNonNull(allocationState);
             return this;
         }
 
-        public Builder setAllocationStateTransitionTime(String allocationStateTransitionTime) {
+        public Builder allocationStateTransitionTime(String allocationStateTransitionTime) {
             this.allocationStateTransitionTime = Objects.requireNonNull(allocationStateTransitionTime);
             return this;
         }
 
-        public Builder setCurrentNodeCount(Integer currentNodeCount) {
+        public Builder currentNodeCount(Integer currentNodeCount) {
             this.currentNodeCount = Objects.requireNonNull(currentNodeCount);
             return this;
         }
 
-        public Builder setEnableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
+        public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
             this.enableNodePublicIp = enableNodePublicIp;
             return this;
         }
 
-        public Builder setErrors(List<MachineLearningServiceErrorResponse> errors) {
+        public Builder errors(List<MachineLearningServiceErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setIsolatedNetwork(@Nullable Boolean isolatedNetwork) {
+        public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
             this.isolatedNetwork = isolatedNetwork;
             return this;
         }
 
-        public Builder setNodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
+        public Builder nodeStateCounts(NodeStateCountsResponse nodeStateCounts) {
             this.nodeStateCounts = Objects.requireNonNull(nodeStateCounts);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setRemoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
+        public Builder remoteLoginPortPublicAccess(@Nullable String remoteLoginPortPublicAccess) {
             this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
+        public Builder scaleSettings(@Nullable ScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ResourceIdResponse subnet) {
+        public Builder subnet(@Nullable ResourceIdResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setTargetNodeCount(Integer targetNodeCount) {
+        public Builder targetNodeCount(Integer targetNodeCount) {
             this.targetNodeCount = Objects.requireNonNull(targetNodeCount);
             return this;
         }
 
-        public Builder setUserAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
+        public Builder userAccountCredentials(@Nullable UserAccountCredentialsResponse userAccountCredentials) {
             this.userAccountCredentials = userAccountCredentials;
             return this;
         }
 
-        public Builder setVirtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
+        public Builder virtualMachineImage(@Nullable VirtualMachineImageResponse virtualMachineImage) {
             this.virtualMachineImage = virtualMachineImage;
             return this;
         }
 
-        public Builder setVmPriority(@Nullable String vmPriority) {
+        public Builder vmPriority(@Nullable String vmPriority) {
             this.vmPriority = vmPriority;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

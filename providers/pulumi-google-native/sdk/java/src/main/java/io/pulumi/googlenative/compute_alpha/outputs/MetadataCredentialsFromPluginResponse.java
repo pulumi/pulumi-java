@@ -20,10 +20,10 @@ public final class MetadataCredentialsFromPluginResponse {
      */
     private final String structConfig;
 
-    @OutputCustomType.Constructor({"name","structConfig"})
+    @OutputCustomType.Constructor
     private MetadataCredentialsFromPluginResponse(
-        String name,
-        String structConfig) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("structConfig") String structConfig) {
         this.name = name;
         this.structConfig = structConfig;
     }
@@ -65,12 +65,12 @@ public final class MetadataCredentialsFromPluginResponse {
     	      this.structConfig = defaults.structConfig;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStructConfig(String structConfig) {
+        public Builder structConfig(String structConfig) {
             this.structConfig = Objects.requireNonNull(structConfig);
             return this;
         }

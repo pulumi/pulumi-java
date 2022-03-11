@@ -107,22 +107,22 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
     	      this.scope = defaults.scope;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setIssuerUri(@Nullable String issuerUri) {
+        public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }

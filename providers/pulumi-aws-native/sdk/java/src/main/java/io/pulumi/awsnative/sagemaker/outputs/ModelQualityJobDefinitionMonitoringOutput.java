@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelQualityJobDefinitionMonitoringOutput {
     private final ModelQualityJobDefinitionS3Output s3Output;
 
-    @OutputCustomType.Constructor({"s3Output"})
-    private ModelQualityJobDefinitionMonitoringOutput(ModelQualityJobDefinitionS3Output s3Output) {
+    @OutputCustomType.Constructor
+    private ModelQualityJobDefinitionMonitoringOutput(@OutputCustomType.Parameter("s3Output") ModelQualityJobDefinitionS3Output s3Output) {
         this.s3Output = s3Output;
     }
 
@@ -40,7 +40,7 @@ public final class ModelQualityJobDefinitionMonitoringOutput {
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(ModelQualityJobDefinitionS3Output s3Output) {
+        public Builder s3Output(ModelQualityJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }

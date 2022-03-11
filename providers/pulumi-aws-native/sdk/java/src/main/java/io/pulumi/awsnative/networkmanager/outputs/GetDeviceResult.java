@@ -65,18 +65,18 @@ public final class GetDeviceResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"description","deviceArn","deviceId","location","model","serialNumber","siteId","tags","type","vendor"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        @Nullable String description,
-        @Nullable String deviceArn,
-        @Nullable String deviceId,
-        @Nullable DeviceLocation location,
-        @Nullable String model,
-        @Nullable String serialNumber,
-        @Nullable String siteId,
-        @Nullable List<DeviceTag> tags,
-        @Nullable String type,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceArn") @Nullable String deviceArn,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("location") @Nullable DeviceLocation location,
+        @OutputCustomType.Parameter("model") @Nullable String model,
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.description = description;
         this.deviceArn = deviceArn;
         this.deviceId = deviceId;
@@ -198,52 +198,52 @@ public final class GetDeviceResult {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceArn(@Nullable String deviceArn) {
+        public Builder deviceArn(@Nullable String deviceArn) {
             this.deviceArn = deviceArn;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setLocation(@Nullable DeviceLocation location) {
+        public Builder location(@Nullable DeviceLocation location) {
             this.location = location;
             return this;
         }
 
-        public Builder setModel(@Nullable String model) {
+        public Builder model(@Nullable String model) {
             this.model = model;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSiteId(@Nullable String siteId) {
+        public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceTag> tags) {
+        public Builder tags(@Nullable List<DeviceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
         }

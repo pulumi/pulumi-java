@@ -44,11 +44,11 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
      */
     private final InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private InstanceMaintenancePolicyWeeklyMaintenanceWindow(
-        String day,
-        @Nullable String duration,
-        InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("startTime") InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;
@@ -116,17 +116,17 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setStartTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
+        public Builder startTime(InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

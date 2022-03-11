@@ -22,10 +22,10 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable String serviceIpv4Cidr;
 
-    @OutputCustomType.Constructor({"ipFamily","serviceIpv4Cidr"})
+    @OutputCustomType.Constructor
     private ClusterKubernetesNetworkConfig(
-        @Nullable String ipFamily,
-        @Nullable String serviceIpv4Cidr) {
+        @OutputCustomType.Parameter("ipFamily") @Nullable String ipFamily,
+        @OutputCustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
     }
@@ -67,12 +67,12 @@ public final class ClusterKubernetesNetworkConfig {
     	      this.serviceIpv4Cidr = defaults.serviceIpv4Cidr;
         }
 
-        public Builder setIpFamily(@Nullable String ipFamily) {
+        public Builder ipFamily(@Nullable String ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
-        public Builder setServiceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }

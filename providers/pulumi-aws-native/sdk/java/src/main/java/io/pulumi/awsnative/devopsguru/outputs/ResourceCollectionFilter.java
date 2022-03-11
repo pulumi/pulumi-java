@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResourceCollectionFilter {
     private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
 
-    @OutputCustomType.Constructor({"cloudFormation"})
-    private ResourceCollectionFilter(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
+    @OutputCustomType.Constructor
+    private ResourceCollectionFilter(@OutputCustomType.Parameter("cloudFormation") @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
         this.cloudFormation = cloudFormation;
     }
 
@@ -42,7 +42,7 @@ public final class ResourceCollectionFilter {
     	      this.cloudFormation = defaults.cloudFormation;
         }
 
-        public Builder setCloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
+        public Builder cloudFormation(@Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation) {
             this.cloudFormation = cloudFormation;
             return this;
         }

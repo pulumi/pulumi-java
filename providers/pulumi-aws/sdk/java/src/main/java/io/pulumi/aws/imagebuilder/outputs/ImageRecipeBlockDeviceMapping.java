@@ -34,12 +34,12 @@ public final class ImageRecipeBlockDeviceMapping {
      */
     private final @Nullable String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private ImageRecipeBlockDeviceMapping(
-        @Nullable String deviceName,
-        @Nullable ImageRecipeBlockDeviceMappingEbs ebs,
-        @Nullable Boolean noDevice,
-        @Nullable String virtualName) {
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("ebs") @Nullable ImageRecipeBlockDeviceMappingEbs ebs,
+        @OutputCustomType.Parameter("noDevice") @Nullable Boolean noDevice,
+        @OutputCustomType.Parameter("virtualName") @Nullable String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -101,22 +101,22 @@ public final class ImageRecipeBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setEbs(@Nullable ImageRecipeBlockDeviceMappingEbs ebs) {
+        public Builder ebs(@Nullable ImageRecipeBlockDeviceMappingEbs ebs) {
             this.ebs = ebs;
             return this;
         }
 
-        public Builder setNoDevice(@Nullable Boolean noDevice) {
+        public Builder noDevice(@Nullable Boolean noDevice) {
             this.noDevice = noDevice;
             return this;
         }
 
-        public Builder setVirtualName(@Nullable String virtualName) {
+        public Builder virtualName(@Nullable String virtualName) {
             this.virtualName = virtualName;
             return this;
         }

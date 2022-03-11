@@ -27,11 +27,11 @@ public final class MultiStepResponse {
      */
     private final String primaryStepId;
 
-    @OutputCustomType.Constructor({"multistepNumber","primaryStep","primaryStepId"})
+    @OutputCustomType.Constructor
     private MultiStepResponse(
-        Integer multistepNumber,
-        PrimaryStepResponse primaryStep,
-        String primaryStepId) {
+        @OutputCustomType.Parameter("multistepNumber") Integer multistepNumber,
+        @OutputCustomType.Parameter("primaryStep") PrimaryStepResponse primaryStep,
+        @OutputCustomType.Parameter("primaryStepId") String primaryStepId) {
         this.multistepNumber = multistepNumber;
         this.primaryStep = primaryStep;
         this.primaryStepId = primaryStepId;
@@ -83,17 +83,17 @@ public final class MultiStepResponse {
     	      this.primaryStepId = defaults.primaryStepId;
         }
 
-        public Builder setMultistepNumber(Integer multistepNumber) {
+        public Builder multistepNumber(Integer multistepNumber) {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
 
-        public Builder setPrimaryStep(PrimaryStepResponse primaryStep) {
+        public Builder primaryStep(PrimaryStepResponse primaryStep) {
             this.primaryStep = Objects.requireNonNull(primaryStep);
             return this;
         }
 
-        public Builder setPrimaryStepId(String primaryStepId) {
+        public Builder primaryStepId(String primaryStepId) {
             this.primaryStepId = Objects.requireNonNull(primaryStepId);
             return this;
         }

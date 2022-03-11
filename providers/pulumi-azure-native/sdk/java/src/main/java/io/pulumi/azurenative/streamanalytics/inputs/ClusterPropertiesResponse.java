@@ -121,27 +121,27 @@ public final class ClusterPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setCapacityAllocated(Integer capacityAllocated) {
+        public Builder capacityAllocated(Integer capacityAllocated) {
             this.capacityAllocated = Objects.requireNonNull(capacityAllocated);
             return this;
         }
 
-        public Builder setCapacityAssigned(Integer capacityAssigned) {
+        public Builder capacityAssigned(Integer capacityAssigned) {
             this.capacityAssigned = Objects.requireNonNull(capacityAssigned);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

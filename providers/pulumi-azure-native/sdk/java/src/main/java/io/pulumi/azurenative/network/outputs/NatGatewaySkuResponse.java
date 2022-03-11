@@ -17,8 +17,8 @@ public final class NatGatewaySkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private NatGatewaySkuResponse(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private NatGatewaySkuResponse(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 
@@ -50,7 +50,7 @@ public final class NatGatewaySkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

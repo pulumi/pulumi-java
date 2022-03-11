@@ -60,17 +60,17 @@ public final class ContainerStatus {
      */
     private final @Nullable ContainerState state;
 
-    @OutputCustomType.Constructor({"containerID","image","imageID","lastState","name","ready","restartCount","started","state"})
+    @OutputCustomType.Constructor
     private ContainerStatus(
-        @Nullable String containerID,
-        String image,
-        String imageID,
-        @Nullable ContainerState lastState,
-        String name,
-        Boolean ready,
-        Integer restartCount,
-        @Nullable Boolean started,
-        @Nullable ContainerState state) {
+        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageID") String imageID,
+        @OutputCustomType.Parameter("lastState") @Nullable ContainerState lastState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ready") Boolean ready,
+        @OutputCustomType.Parameter("restartCount") Integer restartCount,
+        @OutputCustomType.Parameter("started") @Nullable Boolean started,
+        @OutputCustomType.Parameter("state") @Nullable ContainerState state) {
         this.containerID = containerID;
         this.image = image;
         this.imageID = imageID;
@@ -182,47 +182,47 @@ public final class ContainerStatus {
     	      this.state = defaults.state;
         }
 
-        public Builder setContainerID(@Nullable String containerID) {
+        public Builder containerID(@Nullable String containerID) {
             this.containerID = containerID;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImageID(String imageID) {
+        public Builder imageID(String imageID) {
             this.imageID = Objects.requireNonNull(imageID);
             return this;
         }
 
-        public Builder setLastState(@Nullable ContainerState lastState) {
+        public Builder lastState(@Nullable ContainerState lastState) {
             this.lastState = lastState;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReady(Boolean ready) {
+        public Builder ready(Boolean ready) {
             this.ready = Objects.requireNonNull(ready);
             return this;
         }
 
-        public Builder setRestartCount(Integer restartCount) {
+        public Builder restartCount(Integer restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }
 
-        public Builder setStarted(@Nullable Boolean started) {
+        public Builder started(@Nullable Boolean started) {
             this.started = started;
             return this;
         }
 
-        public Builder setState(@Nullable ContainerState state) {
+        public Builder state(@Nullable ContainerState state) {
             this.state = state;
             return this;
         }

@@ -22,10 +22,10 @@ public final class GatewayResourceRequestsResponse {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpu","memory"})
+    @OutputCustomType.Constructor
     private GatewayResourceRequestsResponse(
-        @Nullable String cpu,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpu") @Nullable String cpu,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }
@@ -67,12 +67,12 @@ public final class GatewayResourceRequestsResponse {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable String cpu) {
+        public Builder cpu(@Nullable String cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
         }

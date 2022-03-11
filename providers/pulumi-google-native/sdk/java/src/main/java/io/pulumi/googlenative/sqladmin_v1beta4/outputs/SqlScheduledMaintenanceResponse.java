@@ -27,12 +27,12 @@ public final class SqlScheduledMaintenanceResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"canDefer","canReschedule","scheduleDeadlineTime","startTime"})
+    @OutputCustomType.Constructor
     private SqlScheduledMaintenanceResponse(
-        Boolean canDefer,
-        Boolean canReschedule,
-        String scheduleDeadlineTime,
-        String startTime) {
+        @OutputCustomType.Parameter("canDefer") Boolean canDefer,
+        @OutputCustomType.Parameter("canReschedule") Boolean canReschedule,
+        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.canDefer = canDefer;
         this.canReschedule = canReschedule;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
@@ -90,22 +90,22 @@ public final class SqlScheduledMaintenanceResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCanDefer(Boolean canDefer) {
+        public Builder canDefer(Boolean canDefer) {
             this.canDefer = Objects.requireNonNull(canDefer);
             return this;
         }
 
-        public Builder setCanReschedule(Boolean canReschedule) {
+        public Builder canReschedule(Boolean canReschedule) {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(String scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

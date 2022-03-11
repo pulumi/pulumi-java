@@ -37,12 +37,12 @@ public final class CertificateConfigX509ConfigCaOptions {
      */
     private final @Nullable Boolean zeroMaxIssuerPathLength;
 
-    @OutputCustomType.Constructor({"isCa","maxIssuerPathLength","nonCa","zeroMaxIssuerPathLength"})
+    @OutputCustomType.Constructor
     private CertificateConfigX509ConfigCaOptions(
-        @Nullable Boolean isCa,
-        @Nullable Integer maxIssuerPathLength,
-        @Nullable Boolean nonCa,
-        @Nullable Boolean zeroMaxIssuerPathLength) {
+        @OutputCustomType.Parameter("isCa") @Nullable Boolean isCa,
+        @OutputCustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength,
+        @OutputCustomType.Parameter("nonCa") @Nullable Boolean nonCa,
+        @OutputCustomType.Parameter("zeroMaxIssuerPathLength") @Nullable Boolean zeroMaxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
         this.nonCa = nonCa;
@@ -108,22 +108,22 @@ public final class CertificateConfigX509ConfigCaOptions {
     	      this.zeroMaxIssuerPathLength = defaults.zeroMaxIssuerPathLength;
         }
 
-        public Builder setIsCa(@Nullable Boolean isCa) {
+        public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = isCa;
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
-        public Builder setNonCa(@Nullable Boolean nonCa) {
+        public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = nonCa;
             return this;
         }
 
-        public Builder setZeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
+        public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }

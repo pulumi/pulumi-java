@@ -28,11 +28,11 @@ public final class PersistentDiskResponse {
      */
     private final Integer usedInGB;
 
-    @OutputCustomType.Constructor({"mountPath","sizeInGB","usedInGB"})
+    @OutputCustomType.Constructor
     private PersistentDiskResponse(
-        @Nullable String mountPath,
-        @Nullable Integer sizeInGB,
-        Integer usedInGB) {
+        @OutputCustomType.Parameter("mountPath") @Nullable String mountPath,
+        @OutputCustomType.Parameter("sizeInGB") @Nullable Integer sizeInGB,
+        @OutputCustomType.Parameter("usedInGB") Integer usedInGB) {
         this.mountPath = mountPath;
         this.sizeInGB = sizeInGB;
         this.usedInGB = usedInGB;
@@ -84,17 +84,17 @@ public final class PersistentDiskResponse {
     	      this.usedInGB = defaults.usedInGB;
         }
 
-        public Builder setMountPath(@Nullable String mountPath) {
+        public Builder mountPath(@Nullable String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
 
-        public Builder setSizeInGB(@Nullable Integer sizeInGB) {
+        public Builder sizeInGB(@Nullable Integer sizeInGB) {
             this.sizeInGB = sizeInGB;
             return this;
         }
 
-        public Builder setUsedInGB(Integer usedInGB) {
+        public Builder usedInGB(Integer usedInGB) {
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
         }

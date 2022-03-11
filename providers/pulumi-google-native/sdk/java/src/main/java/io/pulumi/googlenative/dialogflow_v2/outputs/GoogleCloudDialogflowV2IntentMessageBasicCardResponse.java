@@ -38,13 +38,13 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","formattedText","image","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBasicCardResponse(
-        List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons,
-        String formattedText,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("formattedText") String formattedText,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.formattedText = formattedText;
         this.image = image;
@@ -116,27 +116,27 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setFormattedText(String formattedText) {
+        public Builder formattedText(String formattedText) {
             this.formattedText = Objects.requireNonNull(formattedText);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

@@ -24,13 +24,13 @@ public final class InstanceServerCaCert {
     private final @Nullable String serialNumber;
     private final @Nullable String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"cert","createTime","expireTime","serialNumber","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private InstanceServerCaCert(
-        @Nullable String cert,
-        @Nullable String createTime,
-        @Nullable String expireTime,
-        @Nullable String serialNumber,
-        @Nullable String sha1Fingerprint) {
+        @OutputCustomType.Parameter("cert") @Nullable String cert,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("expireTime") @Nullable String expireTime,
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("sha1Fingerprint") @Nullable String sha1Fingerprint) {
         this.cert = cert;
         this.createTime = createTime;
         this.expireTime = expireTime;
@@ -89,27 +89,27 @@ public final class InstanceServerCaCert {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable String sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }

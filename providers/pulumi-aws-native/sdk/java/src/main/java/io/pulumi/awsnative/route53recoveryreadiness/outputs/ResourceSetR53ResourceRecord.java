@@ -22,10 +22,10 @@ public final class ResourceSetR53ResourceRecord {
      */
     private final @Nullable String recordSetId;
 
-    @OutputCustomType.Constructor({"domainName","recordSetId"})
+    @OutputCustomType.Constructor
     private ResourceSetR53ResourceRecord(
-        @Nullable String domainName,
-        @Nullable String recordSetId) {
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("recordSetId") @Nullable String recordSetId) {
         this.domainName = domainName;
         this.recordSetId = recordSetId;
     }
@@ -67,12 +67,12 @@ public final class ResourceSetR53ResourceRecord {
     	      this.recordSetId = defaults.recordSetId;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setRecordSetId(@Nullable String recordSetId) {
+        public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }

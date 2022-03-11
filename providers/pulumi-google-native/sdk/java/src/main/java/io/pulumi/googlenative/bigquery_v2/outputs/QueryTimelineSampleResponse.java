@@ -35,13 +35,13 @@ public final class QueryTimelineSampleResponse {
      */
     private final String totalSlotMs;
 
-    @OutputCustomType.Constructor({"activeUnits","completedUnits","elapsedMs","pendingUnits","totalSlotMs"})
+    @OutputCustomType.Constructor
     private QueryTimelineSampleResponse(
-        String activeUnits,
-        String completedUnits,
-        String elapsedMs,
-        String pendingUnits,
-        String totalSlotMs) {
+        @OutputCustomType.Parameter("activeUnits") String activeUnits,
+        @OutputCustomType.Parameter("completedUnits") String completedUnits,
+        @OutputCustomType.Parameter("elapsedMs") String elapsedMs,
+        @OutputCustomType.Parameter("pendingUnits") String pendingUnits,
+        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs) {
         this.activeUnits = activeUnits;
         this.completedUnits = completedUnits;
         this.elapsedMs = elapsedMs;
@@ -113,27 +113,27 @@ public final class QueryTimelineSampleResponse {
     	      this.totalSlotMs = defaults.totalSlotMs;
         }
 
-        public Builder setActiveUnits(String activeUnits) {
+        public Builder activeUnits(String activeUnits) {
             this.activeUnits = Objects.requireNonNull(activeUnits);
             return this;
         }
 
-        public Builder setCompletedUnits(String completedUnits) {
+        public Builder completedUnits(String completedUnits) {
             this.completedUnits = Objects.requireNonNull(completedUnits);
             return this;
         }
 
-        public Builder setElapsedMs(String elapsedMs) {
+        public Builder elapsedMs(String elapsedMs) {
             this.elapsedMs = Objects.requireNonNull(elapsedMs);
             return this;
         }
 
-        public Builder setPendingUnits(String pendingUnits) {
+        public Builder pendingUnits(String pendingUnits) {
             this.pendingUnits = Objects.requireNonNull(pendingUnits);
             return this;
         }
 
-        public Builder setTotalSlotMs(String totalSlotMs) {
+        public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }

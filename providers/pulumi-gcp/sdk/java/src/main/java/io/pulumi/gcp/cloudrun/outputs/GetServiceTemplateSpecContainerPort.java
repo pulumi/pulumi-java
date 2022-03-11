@@ -18,11 +18,11 @@ public final class GetServiceTemplateSpecContainerPort {
     private final String name;
     private final String protocol;
 
-    @OutputCustomType.Constructor({"containerPort","name","protocol"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerPort(
-        Integer containerPort,
-        String name,
-        String protocol) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.containerPort = containerPort;
         this.name = name;
         this.protocol = protocol;
@@ -66,17 +66,17 @@ public final class GetServiceTemplateSpecContainerPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

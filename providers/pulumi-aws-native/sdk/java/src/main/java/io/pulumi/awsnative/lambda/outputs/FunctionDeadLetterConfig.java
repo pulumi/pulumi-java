@@ -17,8 +17,8 @@ public final class FunctionDeadLetterConfig {
      */
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor({"targetArn"})
-    private FunctionDeadLetterConfig(@Nullable String targetArn) {
+    @OutputCustomType.Constructor
+    private FunctionDeadLetterConfig(@OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.targetArn = targetArn;
     }
 
@@ -50,7 +50,7 @@ public final class FunctionDeadLetterConfig {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

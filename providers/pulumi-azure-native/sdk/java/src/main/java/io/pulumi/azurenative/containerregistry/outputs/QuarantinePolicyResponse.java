@@ -17,8 +17,8 @@ public final class QuarantinePolicyResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private QuarantinePolicyResponse(@Nullable String status) {
+    @OutputCustomType.Constructor
+    private QuarantinePolicyResponse(@OutputCustomType.Parameter("status") @Nullable String status) {
         this.status = status;
     }
 
@@ -50,7 +50,7 @@ public final class QuarantinePolicyResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

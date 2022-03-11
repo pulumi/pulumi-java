@@ -32,12 +32,12 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
      */
     private final String webTestId;
 
-    @OutputCustomType.Constructor({"componentId","failedLocationCount","odataType","webTestId"})
+    @OutputCustomType.Constructor
     private WebtestLocationAvailabilityCriteriaResponse(
-        String componentId,
-        Double failedLocationCount,
-        String odataType,
-        String webTestId) {
+        @OutputCustomType.Parameter("componentId") String componentId,
+        @OutputCustomType.Parameter("failedLocationCount") Double failedLocationCount,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("webTestId") String webTestId) {
         this.componentId = componentId;
         this.failedLocationCount = failedLocationCount;
         this.odataType = odataType;
@@ -100,22 +100,22 @@ public final class WebtestLocationAvailabilityCriteriaResponse {
     	      this.webTestId = defaults.webTestId;
         }
 
-        public Builder setComponentId(String componentId) {
+        public Builder componentId(String componentId) {
             this.componentId = Objects.requireNonNull(componentId);
             return this;
         }
 
-        public Builder setFailedLocationCount(Double failedLocationCount) {
+        public Builder failedLocationCount(Double failedLocationCount) {
             this.failedLocationCount = Objects.requireNonNull(failedLocationCount);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setWebTestId(String webTestId) {
+        public Builder webTestId(String webTestId) {
             this.webTestId = Objects.requireNonNull(webTestId);
             return this;
         }

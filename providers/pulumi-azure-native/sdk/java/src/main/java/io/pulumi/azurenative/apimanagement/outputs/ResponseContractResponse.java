@@ -36,12 +36,12 @@ public final class ResponseContractResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor({"description","headers","representations","statusCode"})
+    @OutputCustomType.Constructor
     private ResponseContractResponse(
-        @Nullable String description,
-        @Nullable List<ParameterContractResponse> headers,
-        @Nullable List<RepresentationContractResponse> representations,
-        Integer statusCode) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("headers") @Nullable List<ParameterContractResponse> headers,
+        @OutputCustomType.Parameter("representations") @Nullable List<RepresentationContractResponse> representations,
+        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
         this.description = description;
         this.headers = headers;
         this.representations = representations;
@@ -103,22 +103,22 @@ public final class ResponseContractResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<ParameterContractResponse> headers) {
+        public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setRepresentations(@Nullable List<RepresentationContractResponse> representations) {
+        public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             this.representations = representations;
             return this;
         }
 
-        public Builder setStatusCode(Integer statusCode) {
+        public Builder statusCode(Integer statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

@@ -17,8 +17,8 @@ public final class ManagementLockOwnerResponse {
      */
     private final @Nullable String applicationId;
 
-    @OutputCustomType.Constructor({"applicationId"})
-    private ManagementLockOwnerResponse(@Nullable String applicationId) {
+    @OutputCustomType.Constructor
+    private ManagementLockOwnerResponse(@OutputCustomType.Parameter("applicationId") @Nullable String applicationId) {
         this.applicationId = applicationId;
     }
 
@@ -50,7 +50,7 @@ public final class ManagementLockOwnerResponse {
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }

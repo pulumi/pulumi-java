@@ -47,15 +47,15 @@ public final class GetWebAppPublicCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blob","id","kind","name","publicCertificateLocation","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetWebAppPublicCertificateResult(
-        @Nullable String blob,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String publicCertificateLocation,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("blob") @Nullable String blob,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicCertificateLocation") @Nullable String publicCertificateLocation,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.blob = blob;
         this.id = id;
         this.kind = kind;
@@ -147,37 +147,37 @@ public final class GetWebAppPublicCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBlob(@Nullable String blob) {
+        public Builder blob(@Nullable String blob) {
             this.blob = blob;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicCertificateLocation(@Nullable String publicCertificateLocation) {
+        public Builder publicCertificateLocation(@Nullable String publicCertificateLocation) {
             this.publicCertificateLocation = publicCertificateLocation;
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

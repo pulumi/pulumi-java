@@ -22,10 +22,10 @@ public final class MasterProfileResponse {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"subnetId","vmSize"})
+    @OutputCustomType.Constructor
     private MasterProfileResponse(
-        @Nullable String subnetId,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.subnetId = subnetId;
         this.vmSize = vmSize;
     }
@@ -67,12 +67,12 @@ public final class MasterProfileResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetProjectResult {
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private GetProjectResult(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private GetProjectResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -42,7 +42,7 @@ public final class GetProjectResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

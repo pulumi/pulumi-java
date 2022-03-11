@@ -22,10 +22,10 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse {
      */
     private final @Nullable String publicCertData;
 
-    @OutputCustomType.Constructor({"name","publicCertData"})
+    @OutputCustomType.Constructor
     private VpnServerConfigRadiusServerRootCertificateResponse(
-        @Nullable String name,
-        @Nullable String publicCertData) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("publicCertData") @Nullable String publicCertData) {
         this.name = name;
         this.publicCertData = publicCertData;
     }
@@ -67,12 +67,12 @@ public final class VpnServerConfigRadiusServerRootCertificateResponse {
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPublicCertData(@Nullable String publicCertData) {
+        public Builder publicCertData(@Nullable String publicCertData) {
             this.publicCertData = publicCertData;
             return this;
         }

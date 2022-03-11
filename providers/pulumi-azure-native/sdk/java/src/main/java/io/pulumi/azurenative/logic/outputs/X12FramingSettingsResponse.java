@@ -47,15 +47,15 @@ public final class X12FramingSettingsResponse {
      */
     private final String segmentTerminatorSuffix;
 
-    @OutputCustomType.Constructor({"characterSet","componentSeparator","dataElementSeparator","replaceCharacter","replaceSeparatorsInPayload","segmentTerminator","segmentTerminatorSuffix"})
+    @OutputCustomType.Constructor
     private X12FramingSettingsResponse(
-        String characterSet,
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        Integer replaceCharacter,
-        Boolean replaceSeparatorsInPayload,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix) {
+        @OutputCustomType.Parameter("characterSet") String characterSet,
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("replaceCharacter") Integer replaceCharacter,
+        @OutputCustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix) {
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;
@@ -147,37 +147,37 @@ public final class X12FramingSettingsResponse {
     	      this.segmentTerminatorSuffix = defaults.segmentTerminatorSuffix;
         }
 
-        public Builder setCharacterSet(String characterSet) {
+        public Builder characterSet(String characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setReplaceCharacter(Integer replaceCharacter) {
+        public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }

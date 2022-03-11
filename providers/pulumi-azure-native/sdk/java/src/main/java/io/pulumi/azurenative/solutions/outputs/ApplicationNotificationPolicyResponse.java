@@ -16,8 +16,8 @@ public final class ApplicationNotificationPolicyResponse {
      */
     private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
-    @OutputCustomType.Constructor({"notificationEndpoints"})
-    private ApplicationNotificationPolicyResponse(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+    @OutputCustomType.Constructor
+    private ApplicationNotificationPolicyResponse(@OutputCustomType.Parameter("notificationEndpoints") List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
         this.notificationEndpoints = notificationEndpoints;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationNotificationPolicyResponse {
     	      this.notificationEndpoints = defaults.notificationEndpoints;
         }
 
-        public Builder setNotificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
+        public Builder notificationEndpoints(List<ApplicationNotificationEndpointResponse> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }

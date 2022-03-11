@@ -57,7 +57,7 @@ public final class AgentPropertiesResponse extends io.pulumi.resources.InvokeArg
     	      this.cpu = defaults.cpu;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }

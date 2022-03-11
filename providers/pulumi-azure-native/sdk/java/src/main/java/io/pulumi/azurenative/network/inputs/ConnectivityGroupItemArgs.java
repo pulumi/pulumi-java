@@ -106,42 +106,42 @@ public final class ConnectivityGroupItemArgs extends io.pulumi.resources.Resourc
     	      this.useHubGateway = defaults.useHubGateway;
         }
 
-        public Builder setGroupConnectivity(@Nullable Input<Either<String,GroupConnectivity>> groupConnectivity) {
+        public Builder groupConnectivity(@Nullable Input<Either<String,GroupConnectivity>> groupConnectivity) {
             this.groupConnectivity = groupConnectivity;
             return this;
         }
 
-        public Builder setGroupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
+        public Builder groupConnectivity(@Nullable Either<String,GroupConnectivity> groupConnectivity) {
             this.groupConnectivity = Input.ofNullable(groupConnectivity);
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
+        public Builder isGlobal(@Nullable Input<Either<String,IsGlobal>> isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
+        public Builder isGlobal(@Nullable Either<String,IsGlobal> isGlobal) {
             this.isGlobal = Input.ofNullable(isGlobal);
             return this;
         }
 
-        public Builder setNetworkGroupId(@Nullable Input<String> networkGroupId) {
+        public Builder networkGroupId(@Nullable Input<String> networkGroupId) {
             this.networkGroupId = networkGroupId;
             return this;
         }
 
-        public Builder setNetworkGroupId(@Nullable String networkGroupId) {
+        public Builder networkGroupId(@Nullable String networkGroupId) {
             this.networkGroupId = Input.ofNullable(networkGroupId);
             return this;
         }
 
-        public Builder setUseHubGateway(@Nullable Input<Either<String,UseHubGateway>> useHubGateway) {
+        public Builder useHubGateway(@Nullable Input<Either<String,UseHubGateway>> useHubGateway) {
             this.useHubGateway = useHubGateway;
             return this;
         }
 
-        public Builder setUseHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
+        public Builder useHubGateway(@Nullable Either<String,UseHubGateway> useHubGateway) {
             this.useHubGateway = Input.ofNullable(useHubGateway);
             return this;
         }

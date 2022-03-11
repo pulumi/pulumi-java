@@ -50,15 +50,15 @@ public final class JsonInputSchemaMappingResponse {
      */
     private final @Nullable JsonFieldResponse topic;
 
-    @OutputCustomType.Constructor({"dataVersion","eventTime","eventType","id","inputSchemaMappingType","subject","topic"})
+    @OutputCustomType.Constructor
     private JsonInputSchemaMappingResponse(
-        @Nullable JsonFieldWithDefaultResponse dataVersion,
-        @Nullable JsonFieldResponse eventTime,
-        @Nullable JsonFieldWithDefaultResponse eventType,
-        @Nullable JsonFieldResponse id,
-        String inputSchemaMappingType,
-        @Nullable JsonFieldWithDefaultResponse subject,
-        @Nullable JsonFieldResponse topic) {
+        @OutputCustomType.Parameter("dataVersion") @Nullable JsonFieldWithDefaultResponse dataVersion,
+        @OutputCustomType.Parameter("eventTime") @Nullable JsonFieldResponse eventTime,
+        @OutputCustomType.Parameter("eventType") @Nullable JsonFieldWithDefaultResponse eventType,
+        @OutputCustomType.Parameter("id") @Nullable JsonFieldResponse id,
+        @OutputCustomType.Parameter("inputSchemaMappingType") String inputSchemaMappingType,
+        @OutputCustomType.Parameter("subject") @Nullable JsonFieldWithDefaultResponse subject,
+        @OutputCustomType.Parameter("topic") @Nullable JsonFieldResponse topic) {
         this.dataVersion = dataVersion;
         this.eventTime = eventTime;
         this.eventType = eventType;
@@ -151,37 +151,37 @@ public final class JsonInputSchemaMappingResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setDataVersion(@Nullable JsonFieldWithDefaultResponse dataVersion) {
+        public Builder dataVersion(@Nullable JsonFieldWithDefaultResponse dataVersion) {
             this.dataVersion = dataVersion;
             return this;
         }
 
-        public Builder setEventTime(@Nullable JsonFieldResponse eventTime) {
+        public Builder eventTime(@Nullable JsonFieldResponse eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setEventType(@Nullable JsonFieldWithDefaultResponse eventType) {
+        public Builder eventType(@Nullable JsonFieldWithDefaultResponse eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setId(@Nullable JsonFieldResponse id) {
+        public Builder id(@Nullable JsonFieldResponse id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInputSchemaMappingType(String inputSchemaMappingType) {
+        public Builder inputSchemaMappingType(String inputSchemaMappingType) {
             this.inputSchemaMappingType = Objects.requireNonNull(inputSchemaMappingType);
             return this;
         }
 
-        public Builder setSubject(@Nullable JsonFieldWithDefaultResponse subject) {
+        public Builder subject(@Nullable JsonFieldWithDefaultResponse subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setTopic(@Nullable JsonFieldResponse topic) {
+        public Builder topic(@Nullable JsonFieldResponse topic) {
             this.topic = topic;
             return this;
         }

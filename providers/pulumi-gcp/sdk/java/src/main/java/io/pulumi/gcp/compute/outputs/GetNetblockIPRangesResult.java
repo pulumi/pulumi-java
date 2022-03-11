@@ -34,13 +34,13 @@ public final class GetNetblockIPRangesResult {
     private final String id;
     private final @Nullable String rangeType;
 
-    @OutputCustomType.Constructor({"cidrBlocks","cidrBlocksIpv4s","cidrBlocksIpv6s","id","rangeType"})
+    @OutputCustomType.Constructor
     private GetNetblockIPRangesResult(
-        List<String> cidrBlocks,
-        List<String> cidrBlocksIpv4s,
-        List<String> cidrBlocksIpv6s,
-        String id,
-        @Nullable String rangeType) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("cidrBlocksIpv4s") List<String> cidrBlocksIpv4s,
+        @OutputCustomType.Parameter("cidrBlocksIpv6s") List<String> cidrBlocksIpv6s,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rangeType") @Nullable String rangeType) {
         this.cidrBlocks = cidrBlocks;
         this.cidrBlocksIpv4s = cidrBlocksIpv4s;
         this.cidrBlocksIpv6s = cidrBlocksIpv6s;
@@ -108,27 +108,27 @@ public final class GetNetblockIPRangesResult {
     	      this.rangeType = defaults.rangeType;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setCidrBlocksIpv4s(List<String> cidrBlocksIpv4s) {
+        public Builder cidrBlocksIpv4s(List<String> cidrBlocksIpv4s) {
             this.cidrBlocksIpv4s = Objects.requireNonNull(cidrBlocksIpv4s);
             return this;
         }
 
-        public Builder setCidrBlocksIpv6s(List<String> cidrBlocksIpv6s) {
+        public Builder cidrBlocksIpv6s(List<String> cidrBlocksIpv6s) {
             this.cidrBlocksIpv6s = Objects.requireNonNull(cidrBlocksIpv6s);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRangeType(@Nullable String rangeType) {
+        public Builder rangeType(@Nullable String rangeType) {
             this.rangeType = rangeType;
             return this;
         }

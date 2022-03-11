@@ -25,11 +25,11 @@ public final class IpMappingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ipAddress","timeToRetire","type"})
+    @OutputCustomType.Constructor
     private IpMappingResponse(
-        String ipAddress,
-        String timeToRetire,
-        String type) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("timeToRetire") String timeToRetire,
+        @OutputCustomType.Parameter("type") String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;
@@ -81,17 +81,17 @@ public final class IpMappingResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setTimeToRetire(String timeToRetire) {
+        public Builder timeToRetire(String timeToRetire) {
             this.timeToRetire = Objects.requireNonNull(timeToRetire);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

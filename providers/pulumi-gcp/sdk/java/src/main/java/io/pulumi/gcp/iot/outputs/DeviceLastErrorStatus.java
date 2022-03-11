@@ -19,11 +19,11 @@ public final class DeviceLastErrorStatus {
     private final @Nullable String message;
     private final @Nullable Integer number;
 
-    @OutputCustomType.Constructor({"details","message","number"})
+    @OutputCustomType.Constructor
     private DeviceLastErrorStatus(
-        @Nullable List<Map<String,Object>> details,
-        @Nullable String message,
-        @Nullable Integer number) {
+        @OutputCustomType.Parameter("details") @Nullable List<Map<String,Object>> details,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("number") @Nullable Integer number) {
         this.details = details;
         this.message = message;
         this.number = number;
@@ -63,17 +63,17 @@ public final class DeviceLastErrorStatus {
     	      this.number = defaults.number;
         }
 
-        public Builder setDetails(@Nullable List<Map<String,Object>> details) {
+        public Builder details(@Nullable List<Map<String,Object>> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = number;
             return this;
         }

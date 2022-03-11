@@ -303,162 +303,162 @@ public final class AzureSqlSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Input<Object> preCopyScript) {
+        public Builder preCopyScript(@Nullable Input<Object> preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Object preCopyScript) {
+        public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = Input.ofNullable(preCopyScript);
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder setSqlWriterStoredProcedureName(@Nullable Input<Object> sqlWriterStoredProcedureName) {
+        public Builder sqlWriterStoredProcedureName(@Nullable Input<Object> sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
 
-        public Builder setSqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
+        public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = Input.ofNullable(sqlWriterStoredProcedureName);
             return this;
         }
 
-        public Builder setSqlWriterTableType(@Nullable Input<Object> sqlWriterTableType) {
+        public Builder sqlWriterTableType(@Nullable Input<Object> sqlWriterTableType) {
             this.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
 
-        public Builder setSqlWriterTableType(@Nullable Object sqlWriterTableType) {
+        public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
             this.sqlWriterTableType = Input.ofNullable(sqlWriterTableType);
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Input<Object> sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Input<Object> sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = Input.ofNullable(sqlWriterUseTableLock);
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterArgs> storedProcedureParameters) {
             this.storedProcedureParameters = Input.ofNullable(storedProcedureParameters);
             return this;
         }
 
-        public Builder setStoredProcedureTableTypeParameterName(@Nullable Input<Object> storedProcedureTableTypeParameterName) {
+        public Builder storedProcedureTableTypeParameterName(@Nullable Input<Object> storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
 
-        public Builder setStoredProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
+        public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = Input.ofNullable(storedProcedureTableTypeParameterName);
             return this;
         }
 
-        public Builder setTableOption(@Nullable Input<Object> tableOption) {
+        public Builder tableOption(@Nullable Input<Object> tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
-        public Builder setTableOption(@Nullable Object tableOption) {
+        public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = Input.ofNullable(tableOption);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable Input<SqlUpsertSettingsArgs> upsertSettings) {
+        public Builder upsertSettings(@Nullable Input<SqlUpsertSettingsArgs> upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable SqlUpsertSettingsArgs upsertSettings) {
+        public Builder upsertSettings(@Nullable SqlUpsertSettingsArgs upsertSettings) {
             this.upsertSettings = Input.ofNullable(upsertSettings);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Input.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Input<Object> writeBehavior) {
+        public Builder writeBehavior(@Nullable Input<Object> writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = Input.ofNullable(writeBehavior);
             return this;
         }

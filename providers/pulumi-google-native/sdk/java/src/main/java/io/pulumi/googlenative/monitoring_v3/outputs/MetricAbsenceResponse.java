@@ -33,12 +33,12 @@ public final class MetricAbsenceResponse {
      */
     private final TriggerResponse trigger;
 
-    @OutputCustomType.Constructor({"aggregations","duration","filter","trigger"})
+    @OutputCustomType.Constructor
     private MetricAbsenceResponse(
-        List<AggregationResponse> aggregations,
-        String duration,
-        String filter,
-        TriggerResponse trigger) {
+        @OutputCustomType.Parameter("aggregations") List<AggregationResponse> aggregations,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("trigger") TriggerResponse trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;
@@ -100,22 +100,22 @@ public final class MetricAbsenceResponse {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(List<AggregationResponse> aggregations) {
+        public Builder aggregations(List<AggregationResponse> aggregations) {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setTrigger(TriggerResponse trigger) {
+        public Builder trigger(TriggerResponse trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }

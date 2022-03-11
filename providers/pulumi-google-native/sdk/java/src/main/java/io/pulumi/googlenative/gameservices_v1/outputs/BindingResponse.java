@@ -28,12 +28,12 @@ public final class BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"bindingId","condition","members","role"})
+    @OutputCustomType.Constructor
     private BindingResponse(
-        String bindingId,
-        ExprResponse condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("bindingId") String bindingId,
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.bindingId = bindingId;
         this.condition = condition;
         this.members = members;
@@ -91,22 +91,22 @@ public final class BindingResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setBindingId(String bindingId) {
+        public Builder bindingId(String bindingId) {
             this.bindingId = Objects.requireNonNull(bindingId);
             return this;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

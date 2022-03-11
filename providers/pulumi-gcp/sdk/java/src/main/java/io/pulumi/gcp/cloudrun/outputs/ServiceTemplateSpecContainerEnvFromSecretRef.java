@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRef {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReference","optional"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerEnvFromSecretRef(
-        @Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference localObjectReference,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReference") @Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference localObjectReference,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.optional = optional;
     }
@@ -70,12 +70,12 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRef {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference localObjectReference) {
+        public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

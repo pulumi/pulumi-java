@@ -72,12 +72,12 @@ public final class BackendAuthorizationHeaderCredentialsResponse extends io.pulu
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }

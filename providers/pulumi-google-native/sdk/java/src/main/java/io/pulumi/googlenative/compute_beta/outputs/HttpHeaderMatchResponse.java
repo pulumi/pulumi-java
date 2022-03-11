@@ -52,16 +52,16 @@ public final class HttpHeaderMatchResponse {
      */
     private final String suffixMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","headerName","invertMatch","prefixMatch","presentMatch","rangeMatch","regexMatch","suffixMatch"})
+    @OutputCustomType.Constructor
     private HttpHeaderMatchResponse(
-        String exactMatch,
-        String headerName,
-        Boolean invertMatch,
-        String prefixMatch,
-        Boolean presentMatch,
-        Int64RangeMatchResponse rangeMatch,
-        String regexMatch,
-        String suffixMatch) {
+        @OutputCustomType.Parameter("exactMatch") String exactMatch,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("invertMatch") Boolean invertMatch,
+        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
+        @OutputCustomType.Parameter("presentMatch") Boolean presentMatch,
+        @OutputCustomType.Parameter("rangeMatch") Int64RangeMatchResponse rangeMatch,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch,
+        @OutputCustomType.Parameter("suffixMatch") String suffixMatch) {
         this.exactMatch = exactMatch;
         this.headerName = headerName;
         this.invertMatch = invertMatch;
@@ -163,42 +163,42 @@ public final class HttpHeaderMatchResponse {
     	      this.suffixMatch = defaults.suffixMatch;
         }
 
-        public Builder setExactMatch(String exactMatch) {
+        public Builder exactMatch(String exactMatch) {
             this.exactMatch = Objects.requireNonNull(exactMatch);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setInvertMatch(Boolean invertMatch) {
+        public Builder invertMatch(Boolean invertMatch) {
             this.invertMatch = Objects.requireNonNull(invertMatch);
             return this;
         }
 
-        public Builder setPrefixMatch(String prefixMatch) {
+        public Builder prefixMatch(String prefixMatch) {
             this.prefixMatch = Objects.requireNonNull(prefixMatch);
             return this;
         }
 
-        public Builder setPresentMatch(Boolean presentMatch) {
+        public Builder presentMatch(Boolean presentMatch) {
             this.presentMatch = Objects.requireNonNull(presentMatch);
             return this;
         }
 
-        public Builder setRangeMatch(Int64RangeMatchResponse rangeMatch) {
+        public Builder rangeMatch(Int64RangeMatchResponse rangeMatch) {
             this.rangeMatch = Objects.requireNonNull(rangeMatch);
             return this;
         }
 
-        public Builder setRegexMatch(String regexMatch) {
+        public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
 
-        public Builder setSuffixMatch(String suffixMatch) {
+        public Builder suffixMatch(String suffixMatch) {
             this.suffixMatch = Objects.requireNonNull(suffixMatch);
             return this;
         }

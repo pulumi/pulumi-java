@@ -264,55 +264,55 @@ public final class GetWebAppSlotResult {
      */
     private final @Nullable String virtualNetworkSubnetId;
 
-    @OutputCustomType.Constructor({"availabilityState","clientAffinityEnabled","clientCertEnabled","clientCertExclusionPaths","clientCertMode","containerSize","customDomainVerificationId","dailyMemoryTimeQuota","defaultHostName","enabled","enabledHostNames","hostNameSslStates","hostNames","hostNamesDisabled","hostingEnvironmentProfile","httpsOnly","hyperV","id","identity","inProgressOperationId","isDefaultContainer","isXenon","keyVaultReferenceIdentity","kind","lastModifiedTimeUtc","location","maxNumberOfWorkers","name","outboundIpAddresses","possibleOutboundIpAddresses","redundancyMode","repositorySiteName","reserved","resourceGroup","scmSiteAlsoStopped","serverFarmId","siteConfig","slotSwapStatus","state","storageAccountRequired","suspendedTill","tags","targetSwapSlot","trafficManagerHostNames","type","usageState","virtualNetworkSubnetId"})
+    @OutputCustomType.Constructor
     private GetWebAppSlotResult(
-        String availabilityState,
-        @Nullable Boolean clientAffinityEnabled,
-        @Nullable Boolean clientCertEnabled,
-        @Nullable String clientCertExclusionPaths,
-        @Nullable String clientCertMode,
-        @Nullable Integer containerSize,
-        @Nullable String customDomainVerificationId,
-        @Nullable Integer dailyMemoryTimeQuota,
-        String defaultHostName,
-        @Nullable Boolean enabled,
-        List<String> enabledHostNames,
-        @Nullable List<HostNameSslStateResponse> hostNameSslStates,
-        List<String> hostNames,
-        @Nullable Boolean hostNamesDisabled,
-        @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @Nullable Boolean httpsOnly,
-        @Nullable Boolean hyperV,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String inProgressOperationId,
-        Boolean isDefaultContainer,
-        @Nullable Boolean isXenon,
-        @Nullable String keyVaultReferenceIdentity,
-        @Nullable String kind,
-        String lastModifiedTimeUtc,
-        String location,
-        Integer maxNumberOfWorkers,
-        String name,
-        String outboundIpAddresses,
-        String possibleOutboundIpAddresses,
-        @Nullable String redundancyMode,
-        String repositorySiteName,
-        @Nullable Boolean reserved,
-        String resourceGroup,
-        @Nullable Boolean scmSiteAlsoStopped,
-        @Nullable String serverFarmId,
-        @Nullable SiteConfigResponse siteConfig,
-        SlotSwapStatusResponse slotSwapStatus,
-        String state,
-        @Nullable Boolean storageAccountRequired,
-        String suspendedTill,
-        @Nullable Map<String,String> tags,
-        String targetSwapSlot,
-        List<String> trafficManagerHostNames,
-        String type,
-        String usageState,
-        @Nullable String virtualNetworkSubnetId) {
+        @OutputCustomType.Parameter("availabilityState") String availabilityState,
+        @OutputCustomType.Parameter("clientAffinityEnabled") @Nullable Boolean clientAffinityEnabled,
+        @OutputCustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled,
+        @OutputCustomType.Parameter("clientCertExclusionPaths") @Nullable String clientCertExclusionPaths,
+        @OutputCustomType.Parameter("clientCertMode") @Nullable String clientCertMode,
+        @OutputCustomType.Parameter("containerSize") @Nullable Integer containerSize,
+        @OutputCustomType.Parameter("customDomainVerificationId") @Nullable String customDomainVerificationId,
+        @OutputCustomType.Parameter("dailyMemoryTimeQuota") @Nullable Integer dailyMemoryTimeQuota,
+        @OutputCustomType.Parameter("defaultHostName") String defaultHostName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("enabledHostNames") List<String> enabledHostNames,
+        @OutputCustomType.Parameter("hostNameSslStates") @Nullable List<HostNameSslStateResponse> hostNameSslStates,
+        @OutputCustomType.Parameter("hostNames") List<String> hostNames,
+        @OutputCustomType.Parameter("hostNamesDisabled") @Nullable Boolean hostNamesDisabled,
+        @OutputCustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("hyperV") @Nullable Boolean hyperV,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("inProgressOperationId") String inProgressOperationId,
+        @OutputCustomType.Parameter("isDefaultContainer") Boolean isDefaultContainer,
+        @OutputCustomType.Parameter("isXenon") @Nullable Boolean isXenon,
+        @OutputCustomType.Parameter("keyVaultReferenceIdentity") @Nullable String keyVaultReferenceIdentity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastModifiedTimeUtc") String lastModifiedTimeUtc,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxNumberOfWorkers") Integer maxNumberOfWorkers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outboundIpAddresses") String outboundIpAddresses,
+        @OutputCustomType.Parameter("possibleOutboundIpAddresses") String possibleOutboundIpAddresses,
+        @OutputCustomType.Parameter("redundancyMode") @Nullable String redundancyMode,
+        @OutputCustomType.Parameter("repositorySiteName") String repositorySiteName,
+        @OutputCustomType.Parameter("reserved") @Nullable Boolean reserved,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("scmSiteAlsoStopped") @Nullable Boolean scmSiteAlsoStopped,
+        @OutputCustomType.Parameter("serverFarmId") @Nullable String serverFarmId,
+        @OutputCustomType.Parameter("siteConfig") @Nullable SiteConfigResponse siteConfig,
+        @OutputCustomType.Parameter("slotSwapStatus") SlotSwapStatusResponse slotSwapStatus,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountRequired") @Nullable Boolean storageAccountRequired,
+        @OutputCustomType.Parameter("suspendedTill") String suspendedTill,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetSwapSlot") String targetSwapSlot,
+        @OutputCustomType.Parameter("trafficManagerHostNames") List<String> trafficManagerHostNames,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usageState") String usageState,
+        @OutputCustomType.Parameter("virtualNetworkSubnetId") @Nullable String virtualNetworkSubnetId) {
         this.availabilityState = availabilityState;
         this.clientAffinityEnabled = clientAffinityEnabled;
         this.clientCertEnabled = clientCertEnabled;
@@ -812,237 +812,237 @@ public final class GetWebAppSlotResult {
     	      this.virtualNetworkSubnetId = defaults.virtualNetworkSubnetId;
         }
 
-        public Builder setAvailabilityState(String availabilityState) {
+        public Builder availabilityState(String availabilityState) {
             this.availabilityState = Objects.requireNonNull(availabilityState);
             return this;
         }
 
-        public Builder setClientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
+        public Builder clientAffinityEnabled(@Nullable Boolean clientAffinityEnabled) {
             this.clientAffinityEnabled = clientAffinityEnabled;
             return this;
         }
 
-        public Builder setClientCertEnabled(@Nullable Boolean clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
 
-        public Builder setClientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
+        public Builder clientCertExclusionPaths(@Nullable String clientCertExclusionPaths) {
             this.clientCertExclusionPaths = clientCertExclusionPaths;
             return this;
         }
 
-        public Builder setClientCertMode(@Nullable String clientCertMode) {
+        public Builder clientCertMode(@Nullable String clientCertMode) {
             this.clientCertMode = clientCertMode;
             return this;
         }
 
-        public Builder setContainerSize(@Nullable Integer containerSize) {
+        public Builder containerSize(@Nullable Integer containerSize) {
             this.containerSize = containerSize;
             return this;
         }
 
-        public Builder setCustomDomainVerificationId(@Nullable String customDomainVerificationId) {
+        public Builder customDomainVerificationId(@Nullable String customDomainVerificationId) {
             this.customDomainVerificationId = customDomainVerificationId;
             return this;
         }
 
-        public Builder setDailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
+        public Builder dailyMemoryTimeQuota(@Nullable Integer dailyMemoryTimeQuota) {
             this.dailyMemoryTimeQuota = dailyMemoryTimeQuota;
             return this;
         }
 
-        public Builder setDefaultHostName(String defaultHostName) {
+        public Builder defaultHostName(String defaultHostName) {
             this.defaultHostName = Objects.requireNonNull(defaultHostName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabledHostNames(List<String> enabledHostNames) {
+        public Builder enabledHostNames(List<String> enabledHostNames) {
             this.enabledHostNames = Objects.requireNonNull(enabledHostNames);
             return this;
         }
 
-        public Builder setHostNameSslStates(@Nullable List<HostNameSslStateResponse> hostNameSslStates) {
+        public Builder hostNameSslStates(@Nullable List<HostNameSslStateResponse> hostNameSslStates) {
             this.hostNameSslStates = hostNameSslStates;
             return this;
         }
 
-        public Builder setHostNames(List<String> hostNames) {
+        public Builder hostNames(List<String> hostNames) {
             this.hostNames = Objects.requireNonNull(hostNames);
             return this;
         }
 
-        public Builder setHostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
+        public Builder hostNamesDisabled(@Nullable Boolean hostNamesDisabled) {
             this.hostNamesDisabled = hostNamesDisabled;
             return this;
         }
 
-        public Builder setHostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setHyperV(@Nullable Boolean hyperV) {
+        public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInProgressOperationId(String inProgressOperationId) {
+        public Builder inProgressOperationId(String inProgressOperationId) {
             this.inProgressOperationId = Objects.requireNonNull(inProgressOperationId);
             return this;
         }
 
-        public Builder setIsDefaultContainer(Boolean isDefaultContainer) {
+        public Builder isDefaultContainer(Boolean isDefaultContainer) {
             this.isDefaultContainer = Objects.requireNonNull(isDefaultContainer);
             return this;
         }
 
-        public Builder setIsXenon(@Nullable Boolean isXenon) {
+        public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastModifiedTimeUtc(String lastModifiedTimeUtc) {
+        public Builder lastModifiedTimeUtc(String lastModifiedTimeUtc) {
             this.lastModifiedTimeUtc = Objects.requireNonNull(lastModifiedTimeUtc);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxNumberOfWorkers(Integer maxNumberOfWorkers) {
+        public Builder maxNumberOfWorkers(Integer maxNumberOfWorkers) {
             this.maxNumberOfWorkers = Objects.requireNonNull(maxNumberOfWorkers);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutboundIpAddresses(String outboundIpAddresses) {
+        public Builder outboundIpAddresses(String outboundIpAddresses) {
             this.outboundIpAddresses = Objects.requireNonNull(outboundIpAddresses);
             return this;
         }
 
-        public Builder setPossibleOutboundIpAddresses(String possibleOutboundIpAddresses) {
+        public Builder possibleOutboundIpAddresses(String possibleOutboundIpAddresses) {
             this.possibleOutboundIpAddresses = Objects.requireNonNull(possibleOutboundIpAddresses);
             return this;
         }
 
-        public Builder setRedundancyMode(@Nullable String redundancyMode) {
+        public Builder redundancyMode(@Nullable String redundancyMode) {
             this.redundancyMode = redundancyMode;
             return this;
         }
 
-        public Builder setRepositorySiteName(String repositorySiteName) {
+        public Builder repositorySiteName(String repositorySiteName) {
             this.repositorySiteName = Objects.requireNonNull(repositorySiteName);
             return this;
         }
 
-        public Builder setReserved(@Nullable Boolean reserved) {
+        public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = reserved;
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setScmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
+        public Builder scmSiteAlsoStopped(@Nullable Boolean scmSiteAlsoStopped) {
             this.scmSiteAlsoStopped = scmSiteAlsoStopped;
             return this;
         }
 
-        public Builder setServerFarmId(@Nullable String serverFarmId) {
+        public Builder serverFarmId(@Nullable String serverFarmId) {
             this.serverFarmId = serverFarmId;
             return this;
         }
 
-        public Builder setSiteConfig(@Nullable SiteConfigResponse siteConfig) {
+        public Builder siteConfig(@Nullable SiteConfigResponse siteConfig) {
             this.siteConfig = siteConfig;
             return this;
         }
 
-        public Builder setSlotSwapStatus(SlotSwapStatusResponse slotSwapStatus) {
+        public Builder slotSwapStatus(SlotSwapStatusResponse slotSwapStatus) {
             this.slotSwapStatus = Objects.requireNonNull(slotSwapStatus);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageAccountRequired(@Nullable Boolean storageAccountRequired) {
+        public Builder storageAccountRequired(@Nullable Boolean storageAccountRequired) {
             this.storageAccountRequired = storageAccountRequired;
             return this;
         }
 
-        public Builder setSuspendedTill(String suspendedTill) {
+        public Builder suspendedTill(String suspendedTill) {
             this.suspendedTill = Objects.requireNonNull(suspendedTill);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetSwapSlot(String targetSwapSlot) {
+        public Builder targetSwapSlot(String targetSwapSlot) {
             this.targetSwapSlot = Objects.requireNonNull(targetSwapSlot);
             return this;
         }
 
-        public Builder setTrafficManagerHostNames(List<String> trafficManagerHostNames) {
+        public Builder trafficManagerHostNames(List<String> trafficManagerHostNames) {
             this.trafficManagerHostNames = Objects.requireNonNull(trafficManagerHostNames);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsageState(String usageState) {
+        public Builder usageState(String usageState) {
             this.usageState = Objects.requireNonNull(usageState);
             return this;
         }
 
-        public Builder setVirtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
+        public Builder virtualNetworkSubnetId(@Nullable String virtualNetworkSubnetId) {
             this.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }

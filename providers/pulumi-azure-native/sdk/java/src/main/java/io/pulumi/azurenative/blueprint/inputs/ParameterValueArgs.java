@@ -75,22 +75,22 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setReference(@Nullable Input<SecretValueReferenceArgs> reference) {
+        public Builder reference(@Nullable Input<SecretValueReferenceArgs> reference) {
             this.reference = reference;
             return this;
         }
 
-        public Builder setReference(@Nullable SecretValueReferenceArgs reference) {
+        public Builder reference(@Nullable SecretValueReferenceArgs reference) {
             this.reference = Input.ofNullable(reference);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

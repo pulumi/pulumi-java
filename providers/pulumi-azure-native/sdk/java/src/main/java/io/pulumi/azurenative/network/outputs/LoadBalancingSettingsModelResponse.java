@@ -48,15 +48,15 @@ public final class LoadBalancingSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalLatencyMilliseconds","id","name","resourceState","sampleSize","successfulSamplesRequired","type"})
+    @OutputCustomType.Constructor
     private LoadBalancingSettingsModelResponse(
-        @Nullable Integer additionalLatencyMilliseconds,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired,
-        String type) {
+        @OutputCustomType.Parameter("additionalLatencyMilliseconds") @Nullable Integer additionalLatencyMilliseconds,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
         this.id = id;
         this.name = name;
@@ -148,37 +148,37 @@ public final class LoadBalancingSettingsModelResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
+        public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
             this.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

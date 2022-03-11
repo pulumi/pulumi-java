@@ -59,17 +59,17 @@ public final class JobConfigurationExtractResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"compression","destinationFormat","destinationUri","destinationUris","fieldDelimiter","printHeader","sourceModel","sourceTable","useAvroLogicalTypes"})
+    @OutputCustomType.Constructor
     private JobConfigurationExtractResponse(
-        String compression,
-        String destinationFormat,
-        String destinationUri,
-        List<String> destinationUris,
-        String fieldDelimiter,
-        Boolean printHeader,
-        ModelReferenceResponse sourceModel,
-        TableReferenceResponse sourceTable,
-        Boolean useAvroLogicalTypes) {
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("destinationFormat") String destinationFormat,
+        @OutputCustomType.Parameter("destinationUri") String destinationUri,
+        @OutputCustomType.Parameter("destinationUris") List<String> destinationUris,
+        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @OutputCustomType.Parameter("printHeader") Boolean printHeader,
+        @OutputCustomType.Parameter("sourceModel") ModelReferenceResponse sourceModel,
+        @OutputCustomType.Parameter("sourceTable") TableReferenceResponse sourceTable,
+        @OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.compression = compression;
         this.destinationFormat = destinationFormat;
         this.destinationUri = destinationUri;
@@ -181,47 +181,47 @@ public final class JobConfigurationExtractResponse {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setDestinationFormat(String destinationFormat) {
+        public Builder destinationFormat(String destinationFormat) {
             this.destinationFormat = Objects.requireNonNull(destinationFormat);
             return this;
         }
 
-        public Builder setDestinationUri(String destinationUri) {
+        public Builder destinationUri(String destinationUri) {
             this.destinationUri = Objects.requireNonNull(destinationUri);
             return this;
         }
 
-        public Builder setDestinationUris(List<String> destinationUris) {
+        public Builder destinationUris(List<String> destinationUris) {
             this.destinationUris = Objects.requireNonNull(destinationUris);
             return this;
         }
 
-        public Builder setFieldDelimiter(String fieldDelimiter) {
+        public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
 
-        public Builder setPrintHeader(Boolean printHeader) {
+        public Builder printHeader(Boolean printHeader) {
             this.printHeader = Objects.requireNonNull(printHeader);
             return this;
         }
 
-        public Builder setSourceModel(ModelReferenceResponse sourceModel) {
+        public Builder sourceModel(ModelReferenceResponse sourceModel) {
             this.sourceModel = Objects.requireNonNull(sourceModel);
             return this;
         }
 
-        public Builder setSourceTable(TableReferenceResponse sourceTable) {
+        public Builder sourceTable(TableReferenceResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }

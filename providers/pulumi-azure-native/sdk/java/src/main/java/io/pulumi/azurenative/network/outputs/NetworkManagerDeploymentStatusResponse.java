@@ -43,14 +43,14 @@ public final class NetworkManagerDeploymentStatusResponse {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"commitTime","configurationIds","deploymentStatus","deploymentType","errorMessage","region"})
+    @OutputCustomType.Constructor
     private NetworkManagerDeploymentStatusResponse(
-        @Nullable String commitTime,
-        @Nullable List<String> configurationIds,
-        @Nullable String deploymentStatus,
-        @Nullable String deploymentType,
-        @Nullable String errorMessage,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationIds") @Nullable List<String> configurationIds,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.commitTime = commitTime;
         this.configurationIds = configurationIds;
         this.deploymentStatus = deploymentStatus;
@@ -132,32 +132,32 @@ public final class NetworkManagerDeploymentStatusResponse {
     	      this.region = defaults.region;
         }
 
-        public Builder setCommitTime(@Nullable String commitTime) {
+        public Builder commitTime(@Nullable String commitTime) {
             this.commitTime = commitTime;
             return this;
         }
 
-        public Builder setConfigurationIds(@Nullable List<String> configurationIds) {
+        public Builder configurationIds(@Nullable List<String> configurationIds) {
             this.configurationIds = configurationIds;
             return this;
         }
 
-        public Builder setDeploymentStatus(@Nullable String deploymentStatus) {
+        public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

@@ -28,12 +28,12 @@ public final class HeaderActionParametersResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"headerAction","headerName","odataType","value"})
+    @OutputCustomType.Constructor
     private HeaderActionParametersResponse(
-        String headerAction,
-        String headerName,
-        String odataType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("headerAction") String headerAction,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.headerAction = headerAction;
         this.headerName = headerName;
         this.odataType = odataType;
@@ -91,22 +91,22 @@ public final class HeaderActionParametersResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setHeaderAction(String headerAction) {
+        public Builder headerAction(String headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

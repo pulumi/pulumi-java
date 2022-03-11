@@ -15,8 +15,8 @@ public final class BucketVersioningConfiguration {
      */
     private final BucketVersioningConfigurationStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketVersioningConfiguration(BucketVersioningConfigurationStatus status) {
+    @OutputCustomType.Constructor
+    private BucketVersioningConfiguration(@OutputCustomType.Parameter("status") BucketVersioningConfigurationStatus status) {
         this.status = status;
     }
 
@@ -48,7 +48,7 @@ public final class BucketVersioningConfiguration {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketVersioningConfigurationStatus status) {
+        public Builder status(BucketVersioningConfigurationStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

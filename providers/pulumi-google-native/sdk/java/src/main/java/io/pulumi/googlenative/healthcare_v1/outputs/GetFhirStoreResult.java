@@ -66,18 +66,18 @@ public final class GetFhirStoreResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"defaultSearchHandlingStrict","disableReferentialIntegrity","disableResourceVersioning","enableUpdateCreate","labels","name","notificationConfig","streamConfigs","validationConfig","version"})
+    @OutputCustomType.Constructor
     private GetFhirStoreResult(
-        Boolean defaultSearchHandlingStrict,
-        Boolean disableReferentialIntegrity,
-        Boolean disableResourceVersioning,
-        Boolean enableUpdateCreate,
-        Map<String,String> labels,
-        String name,
-        NotificationConfigResponse notificationConfig,
-        List<StreamConfigResponse> streamConfigs,
-        ValidationConfigResponse validationConfig,
-        String version) {
+        @OutputCustomType.Parameter("defaultSearchHandlingStrict") Boolean defaultSearchHandlingStrict,
+        @OutputCustomType.Parameter("disableReferentialIntegrity") Boolean disableReferentialIntegrity,
+        @OutputCustomType.Parameter("disableResourceVersioning") Boolean disableResourceVersioning,
+        @OutputCustomType.Parameter("enableUpdateCreate") Boolean enableUpdateCreate,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationConfig") NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("streamConfigs") List<StreamConfigResponse> streamConfigs,
+        @OutputCustomType.Parameter("validationConfig") ValidationConfigResponse validationConfig,
+        @OutputCustomType.Parameter("version") String version) {
         this.defaultSearchHandlingStrict = defaultSearchHandlingStrict;
         this.disableReferentialIntegrity = disableReferentialIntegrity;
         this.disableResourceVersioning = disableResourceVersioning;
@@ -199,52 +199,52 @@ public final class GetFhirStoreResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDefaultSearchHandlingStrict(Boolean defaultSearchHandlingStrict) {
+        public Builder defaultSearchHandlingStrict(Boolean defaultSearchHandlingStrict) {
             this.defaultSearchHandlingStrict = Objects.requireNonNull(defaultSearchHandlingStrict);
             return this;
         }
 
-        public Builder setDisableReferentialIntegrity(Boolean disableReferentialIntegrity) {
+        public Builder disableReferentialIntegrity(Boolean disableReferentialIntegrity) {
             this.disableReferentialIntegrity = Objects.requireNonNull(disableReferentialIntegrity);
             return this;
         }
 
-        public Builder setDisableResourceVersioning(Boolean disableResourceVersioning) {
+        public Builder disableResourceVersioning(Boolean disableResourceVersioning) {
             this.disableResourceVersioning = Objects.requireNonNull(disableResourceVersioning);
             return this;
         }
 
-        public Builder setEnableUpdateCreate(Boolean enableUpdateCreate) {
+        public Builder enableUpdateCreate(Boolean enableUpdateCreate) {
             this.enableUpdateCreate = Objects.requireNonNull(enableUpdateCreate);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationConfig(NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setStreamConfigs(List<StreamConfigResponse> streamConfigs) {
+        public Builder streamConfigs(List<StreamConfigResponse> streamConfigs) {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }
 
-        public Builder setValidationConfig(ValidationConfigResponse validationConfig) {
+        public Builder validationConfig(ValidationConfigResponse validationConfig) {
             this.validationConfig = Objects.requireNonNull(validationConfig);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

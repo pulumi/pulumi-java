@@ -22,10 +22,10 @@ public final class UserIdentityContractResponse {
      */
     private final @Nullable String provider;
 
-    @OutputCustomType.Constructor({"id","provider"})
+    @OutputCustomType.Constructor
     private UserIdentityContractResponse(
-        @Nullable String id,
-        @Nullable String provider) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("provider") @Nullable String provider) {
         this.id = id;
         this.provider = provider;
     }
@@ -67,12 +67,12 @@ public final class UserIdentityContractResponse {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setProvider(@Nullable String provider) {
+        public Builder provider(@Nullable String provider) {
             this.provider = provider;
             return this;
         }

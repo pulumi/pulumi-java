@@ -26,11 +26,11 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
      */
     private final GoogleCloudRunOpV2EnvVarSourceResponse valueSource;
 
-    @OutputCustomType.Constructor({"name","value","valueSource"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2EnvVarResponse(
-        String name,
-        String value,
-        GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueSource") GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
         this.name = name;
         this.value = value;
         this.valueSource = valueSource;
@@ -82,17 +82,17 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
     	      this.valueSource = defaults.valueSource;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueSource(GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
+        public Builder valueSource(GoogleCloudRunOpV2EnvVarSourceResponse valueSource) {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }

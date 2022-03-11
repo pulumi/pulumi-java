@@ -56,16 +56,16 @@ public final class ListConfigurationStoreKeyValueResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"contentType","eTag","key","label","lastModified","locked","tags","value"})
+    @OutputCustomType.Constructor
     private ListConfigurationStoreKeyValueResult(
-        String contentType,
-        String eTag,
-        String key,
-        String label,
-        String lastModified,
-        Boolean locked,
-        Map<String,String> tags,
-        String value) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("value") String value) {
         this.contentType = contentType;
         this.eTag = eTag;
         this.key = key;
@@ -171,42 +171,42 @@ public final class ListConfigurationStoreKeyValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setETag(String eTag) {
+        public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setLocked(Boolean locked) {
+        public Builder locked(Boolean locked) {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

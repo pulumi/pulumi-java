@@ -25,10 +25,10 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"filePath","sizeBytes"})
+    @OutputCustomType.Constructor
     private EntryGcsFilesetSpecSampleGcsFileSpec(
-        @Nullable String filePath,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.filePath = filePath;
         this.sizeBytes = sizeBytes;
     }
@@ -72,12 +72,12 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpec {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }

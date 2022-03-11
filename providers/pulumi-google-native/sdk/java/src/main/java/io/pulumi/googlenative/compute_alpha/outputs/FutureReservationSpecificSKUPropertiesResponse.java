@@ -21,10 +21,10 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
      */
     private final String totalCount;
 
-    @OutputCustomType.Constructor({"instanceProperties","totalCount"})
+    @OutputCustomType.Constructor
     private FutureReservationSpecificSKUPropertiesResponse(
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
-        String totalCount) {
+        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties,
+        @OutputCustomType.Parameter("totalCount") String totalCount) {
         this.instanceProperties = instanceProperties;
         this.totalCount = totalCount;
     }
@@ -66,12 +66,12 @@ public final class FutureReservationSpecificSKUPropertiesResponse {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setInstanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
 
-        public Builder setTotalCount(String totalCount) {
+        public Builder totalCount(String totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

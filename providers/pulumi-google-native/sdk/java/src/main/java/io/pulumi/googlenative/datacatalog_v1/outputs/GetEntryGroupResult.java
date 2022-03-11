@@ -31,12 +31,12 @@ public final class GetEntryGroupResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dataCatalogTimestamps","description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetEntryGroupResult(
-        GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps,
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("dataCatalogTimestamps") GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.dataCatalogTimestamps = dataCatalogTimestamps;
         this.description = description;
         this.displayName = displayName;
@@ -98,22 +98,22 @@ public final class GetEntryGroupResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataCatalogTimestamps(GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps) {
+        public Builder dataCatalogTimestamps(GoogleCloudDatacatalogV1SystemTimestampsResponse dataCatalogTimestamps) {
             this.dataCatalogTimestamps = Objects.requireNonNull(dataCatalogTimestamps);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

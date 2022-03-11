@@ -21,10 +21,10 @@ public final class PipelineConditionResponse {
      */
     private final TargetsPresentConditionResponse targetsPresentCondition;
 
-    @OutputCustomType.Constructor({"pipelineReadyCondition","targetsPresentCondition"})
+    @OutputCustomType.Constructor
     private PipelineConditionResponse(
-        PipelineReadyConditionResponse pipelineReadyCondition,
-        TargetsPresentConditionResponse targetsPresentCondition) {
+        @OutputCustomType.Parameter("pipelineReadyCondition") PipelineReadyConditionResponse pipelineReadyCondition,
+        @OutputCustomType.Parameter("targetsPresentCondition") TargetsPresentConditionResponse targetsPresentCondition) {
         this.pipelineReadyCondition = pipelineReadyCondition;
         this.targetsPresentCondition = targetsPresentCondition;
     }
@@ -66,12 +66,12 @@ public final class PipelineConditionResponse {
     	      this.targetsPresentCondition = defaults.targetsPresentCondition;
         }
 
-        public Builder setPipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
+        public Builder pipelineReadyCondition(PipelineReadyConditionResponse pipelineReadyCondition) {
             this.pipelineReadyCondition = Objects.requireNonNull(pipelineReadyCondition);
             return this;
         }
 
-        public Builder setTargetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
+        public Builder targetsPresentCondition(TargetsPresentConditionResponse targetsPresentCondition) {
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
         }

@@ -15,10 +15,10 @@ public final class RuleGroupStatelessRulesAndCustomActions {
     private final @Nullable List<RuleGroupCustomAction> customActions;
     private final List<RuleGroupStatelessRule> statelessRules;
 
-    @OutputCustomType.Constructor({"customActions","statelessRules"})
+    @OutputCustomType.Constructor
     private RuleGroupStatelessRulesAndCustomActions(
-        @Nullable List<RuleGroupCustomAction> customActions,
-        List<RuleGroupStatelessRule> statelessRules) {
+        @OutputCustomType.Parameter("customActions") @Nullable List<RuleGroupCustomAction> customActions,
+        @OutputCustomType.Parameter("statelessRules") List<RuleGroupStatelessRule> statelessRules) {
         this.customActions = customActions;
         this.statelessRules = statelessRules;
     }
@@ -52,12 +52,12 @@ public final class RuleGroupStatelessRulesAndCustomActions {
     	      this.statelessRules = defaults.statelessRules;
         }
 
-        public Builder setCustomActions(@Nullable List<RuleGroupCustomAction> customActions) {
+        public Builder customActions(@Nullable List<RuleGroupCustomAction> customActions) {
             this.customActions = customActions;
             return this;
         }
 
-        public Builder setStatelessRules(List<RuleGroupStatelessRule> statelessRules) {
+        public Builder statelessRules(List<RuleGroupStatelessRule> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }

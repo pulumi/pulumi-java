@@ -26,11 +26,11 @@ public final class ApplicationInfoResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor({"emails","instruction","uris"})
+    @OutputCustomType.Constructor
     private ApplicationInfoResponse(
-        List<String> emails,
-        String instruction,
-        List<String> uris) {
+        @OutputCustomType.Parameter("emails") List<String> emails,
+        @OutputCustomType.Parameter("instruction") String instruction,
+        @OutputCustomType.Parameter("uris") List<String> uris) {
         this.emails = emails;
         this.instruction = instruction;
         this.uris = uris;
@@ -82,17 +82,17 @@ public final class ApplicationInfoResponse {
     	      this.uris = defaults.uris;
         }
 
-        public Builder setEmails(List<String> emails) {
+        public Builder emails(List<String> emails) {
             this.emails = Objects.requireNonNull(emails);
             return this;
         }
 
-        public Builder setInstruction(String instruction) {
+        public Builder instruction(String instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
 
-        public Builder setUris(List<String> uris) {
+        public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }

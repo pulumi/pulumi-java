@@ -44,13 +44,13 @@ public final class ScalarFunctionPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"binding","etag","inputs","output","type"})
+    @OutputCustomType.Constructor
     private ScalarFunctionPropertiesResponse(
-        @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
-        String etag,
-        @Nullable List<FunctionInputResponse> inputs,
-        @Nullable FunctionOutputResponse output,
-        String type) {
+        @OutputCustomType.Parameter("binding") @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("inputs") @Nullable List<FunctionInputResponse> inputs,
+        @OutputCustomType.Parameter("output") @Nullable FunctionOutputResponse output,
+        @OutputCustomType.Parameter("type") String type) {
         this.binding = binding;
         this.etag = etag;
         this.inputs = inputs;
@@ -123,27 +123,27 @@ public final class ScalarFunctionPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBinding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding) {
+        public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding) {
             this.binding = binding;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setInputs(@Nullable List<FunctionInputResponse> inputs) {
+        public Builder inputs(@Nullable List<FunctionInputResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setOutput(@Nullable FunctionOutputResponse output) {
+        public Builder output(@Nullable FunctionOutputResponse output) {
             this.output = output;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

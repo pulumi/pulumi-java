@@ -19,12 +19,12 @@ public final class GetProjectResult {
     private final @Nullable String name;
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","defaultJobTimeoutMinutes","name","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String arn,
-        @Nullable Integer defaultJobTimeoutMinutes,
-        @Nullable String name,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultJobTimeoutMinutes") @Nullable Integer defaultJobTimeoutMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
         this.name = name;
@@ -70,22 +70,22 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
+        public Builder defaultJobTimeoutMinutes(@Nullable Integer defaultJobTimeoutMinutes) {
             this.defaultJobTimeoutMinutes = defaultJobTimeoutMinutes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

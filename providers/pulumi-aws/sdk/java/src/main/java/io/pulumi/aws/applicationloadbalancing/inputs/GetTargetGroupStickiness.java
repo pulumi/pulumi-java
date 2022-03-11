@@ -86,22 +86,22 @@ public final class GetTargetGroupStickiness extends io.pulumi.resources.InvokeAr
     	      this.type = defaults.type;
         }
 
-        public Builder setCookieDuration(Integer cookieDuration) {
+        public Builder cookieDuration(Integer cookieDuration) {
             this.cookieDuration = Objects.requireNonNull(cookieDuration);
             return this;
         }
 
-        public Builder setCookieName(String cookieName) {
+        public Builder cookieName(String cookieName) {
             this.cookieName = Objects.requireNonNull(cookieName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

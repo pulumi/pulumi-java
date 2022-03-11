@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TaskSetNetworkConfiguration {
     private final @Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration;
 
-    @OutputCustomType.Constructor({"awsVpcConfiguration"})
-    private TaskSetNetworkConfiguration(@Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
+    @OutputCustomType.Constructor
+    private TaskSetNetworkConfiguration(@OutputCustomType.Parameter("awsVpcConfiguration") @Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
         this.awsVpcConfiguration = awsVpcConfiguration;
     }
 
@@ -42,7 +42,7 @@ public final class TaskSetNetworkConfiguration {
     	      this.awsVpcConfiguration = defaults.awsVpcConfiguration;
         }
 
-        public Builder setAwsVpcConfiguration(@Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
+        public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfiguration awsVpcConfiguration) {
             this.awsVpcConfiguration = awsVpcConfiguration;
             return this;
         }

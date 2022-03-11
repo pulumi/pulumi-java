@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SchemaProperties {
     private final @Nullable List<AttributesItemProperties> attributes;
 
-    @OutputCustomType.Constructor({"attributes"})
-    private SchemaProperties(@Nullable List<AttributesItemProperties> attributes) {
+    @OutputCustomType.Constructor
+    private SchemaProperties(@OutputCustomType.Parameter("attributes") @Nullable List<AttributesItemProperties> attributes) {
         this.attributes = attributes;
     }
 
@@ -42,7 +42,7 @@ public final class SchemaProperties {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable List<AttributesItemProperties> attributes) {
+        public Builder attributes(@Nullable List<AttributesItemProperties> attributes) {
             this.attributes = attributes;
             return this;
         }

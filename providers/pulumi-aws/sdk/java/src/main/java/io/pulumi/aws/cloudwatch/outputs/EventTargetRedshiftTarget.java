@@ -43,14 +43,14 @@ public final class EventTargetRedshiftTarget {
      */
     private final @Nullable Boolean withEvent;
 
-    @OutputCustomType.Constructor({"database","dbUser","secretsManagerArn","sql","statementName","withEvent"})
+    @OutputCustomType.Constructor
     private EventTargetRedshiftTarget(
-        String database,
-        @Nullable String dbUser,
-        @Nullable String secretsManagerArn,
-        @Nullable String sql,
-        @Nullable String statementName,
-        @Nullable Boolean withEvent) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("dbUser") @Nullable String dbUser,
+        @OutputCustomType.Parameter("secretsManagerArn") @Nullable String secretsManagerArn,
+        @OutputCustomType.Parameter("sql") @Nullable String sql,
+        @OutputCustomType.Parameter("statementName") @Nullable String statementName,
+        @OutputCustomType.Parameter("withEvent") @Nullable Boolean withEvent) {
         this.database = database;
         this.dbUser = dbUser;
         this.secretsManagerArn = secretsManagerArn;
@@ -132,32 +132,32 @@ public final class EventTargetRedshiftTarget {
     	      this.withEvent = defaults.withEvent;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDbUser(@Nullable String dbUser) {
+        public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = dbUser;
             return this;
         }
 
-        public Builder setSecretsManagerArn(@Nullable String secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
-        public Builder setSql(@Nullable String sql) {
+        public Builder sql(@Nullable String sql) {
             this.sql = sql;
             return this;
         }
 
-        public Builder setStatementName(@Nullable String statementName) {
+        public Builder statementName(@Nullable String statementName) {
             this.statementName = statementName;
             return this;
         }
 
-        public Builder setWithEvent(@Nullable Boolean withEvent) {
+        public Builder withEvent(@Nullable Boolean withEvent) {
             this.withEvent = withEvent;
             return this;
         }

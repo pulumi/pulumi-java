@@ -30,12 +30,12 @@ public final class VmwareSourceDetailsResponse {
      */
     private final String vcenterIp;
 
-    @OutputCustomType.Constructor({"password","thumbprint","username","vcenterIp"})
+    @OutputCustomType.Constructor
     private VmwareSourceDetailsResponse(
-        String password,
-        String thumbprint,
-        String username,
-        String vcenterIp) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("vcenterIp") String vcenterIp) {
         this.password = password;
         this.thumbprint = thumbprint;
         this.username = username;
@@ -97,22 +97,22 @@ public final class VmwareSourceDetailsResponse {
     	      this.vcenterIp = defaults.vcenterIp;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setVcenterIp(String vcenterIp) {
+        public Builder vcenterIp(String vcenterIp) {
             this.vcenterIp = Objects.requireNonNull(vcenterIp);
             return this;
         }

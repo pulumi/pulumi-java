@@ -56,17 +56,17 @@ public final class CertificateDetailsResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"issuer","notAfter","notBefore","rawData","serialNumber","signatureAlgorithm","subject","thumbprint","version"})
+    @OutputCustomType.Constructor
     private CertificateDetailsResponse(
-        String issuer,
-        String notAfter,
-        String notBefore,
-        String rawData,
-        String serialNumber,
-        String signatureAlgorithm,
-        String subject,
-        String thumbprint,
-        Integer version) {
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("notAfter") String notAfter,
+        @OutputCustomType.Parameter("notBefore") String notBefore,
+        @OutputCustomType.Parameter("rawData") String rawData,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.issuer = issuer;
         this.notAfter = notAfter;
         this.notBefore = notBefore;
@@ -178,47 +178,47 @@ public final class CertificateDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setNotAfter(String notAfter) {
+        public Builder notAfter(String notAfter) {
             this.notAfter = Objects.requireNonNull(notAfter);
             return this;
         }
 
-        public Builder setNotBefore(String notBefore) {
+        public Builder notBefore(String notBefore) {
             this.notBefore = Objects.requireNonNull(notBefore);
             return this;
         }
 
-        public Builder setRawData(String rawData) {
+        public Builder rawData(String rawData) {
             this.rawData = Objects.requireNonNull(rawData);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSignatureAlgorithm(String signatureAlgorithm) {
+        public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

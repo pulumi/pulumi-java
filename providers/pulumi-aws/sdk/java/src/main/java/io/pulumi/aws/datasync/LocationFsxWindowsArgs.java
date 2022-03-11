@@ -152,72 +152,72 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     	      this.user = defaults.user;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setFsxFilesystemArn(Input<String> fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(Input<String> fsxFilesystemArn) {
             this.fsxFilesystemArn = Objects.requireNonNull(fsxFilesystemArn);
             return this;
         }
 
-        public Builder setFsxFilesystemArn(String fsxFilesystemArn) {
+        public Builder fsxFilesystemArn(String fsxFilesystemArn) {
             this.fsxFilesystemArn = Input.of(Objects.requireNonNull(fsxFilesystemArn));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setSecurityGroupArns(Input<List<String>> securityGroupArns) {
+        public Builder securityGroupArns(Input<List<String>> securityGroupArns) {
             this.securityGroupArns = Objects.requireNonNull(securityGroupArns);
             return this;
         }
 
-        public Builder setSecurityGroupArns(List<String> securityGroupArns) {
+        public Builder securityGroupArns(List<String> securityGroupArns) {
             this.securityGroupArns = Input.of(Objects.requireNonNull(securityGroupArns));
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

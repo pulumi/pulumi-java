@@ -47,15 +47,15 @@ public final class MsixPackageApplicationsResponse {
      */
     private final @Nullable String rawPng;
 
-    @OutputCustomType.Constructor({"appId","appUserModelID","description","friendlyName","iconImageName","rawIcon","rawPng"})
+    @OutputCustomType.Constructor
     private MsixPackageApplicationsResponse(
-        @Nullable String appId,
-        @Nullable String appUserModelID,
-        @Nullable String description,
-        @Nullable String friendlyName,
-        @Nullable String iconImageName,
-        @Nullable String rawIcon,
-        @Nullable String rawPng) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appUserModelID") @Nullable String appUserModelID,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("iconImageName") @Nullable String iconImageName,
+        @OutputCustomType.Parameter("rawIcon") @Nullable String rawIcon,
+        @OutputCustomType.Parameter("rawPng") @Nullable String rawPng) {
         this.appId = appId;
         this.appUserModelID = appUserModelID;
         this.description = description;
@@ -147,37 +147,37 @@ public final class MsixPackageApplicationsResponse {
     	      this.rawPng = defaults.rawPng;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppUserModelID(@Nullable String appUserModelID) {
+        public Builder appUserModelID(@Nullable String appUserModelID) {
             this.appUserModelID = appUserModelID;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setIconImageName(@Nullable String iconImageName) {
+        public Builder iconImageName(@Nullable String iconImageName) {
             this.iconImageName = iconImageName;
             return this;
         }
 
-        public Builder setRawIcon(@Nullable String rawIcon) {
+        public Builder rawIcon(@Nullable String rawIcon) {
             this.rawIcon = rawIcon;
             return this;
         }
 
-        public Builder setRawPng(@Nullable String rawPng) {
+        public Builder rawPng(@Nullable String rawPng) {
             this.rawPng = rawPng;
             return this;
         }

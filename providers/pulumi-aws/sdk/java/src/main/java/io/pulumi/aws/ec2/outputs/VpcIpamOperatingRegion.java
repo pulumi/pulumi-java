@@ -15,8 +15,8 @@ public final class VpcIpamOperatingRegion {
      */
     private final String regionName;
 
-    @OutputCustomType.Constructor({"regionName"})
-    private VpcIpamOperatingRegion(String regionName) {
+    @OutputCustomType.Constructor
+    private VpcIpamOperatingRegion(@OutputCustomType.Parameter("regionName") String regionName) {
         this.regionName = regionName;
     }
 
@@ -48,7 +48,7 @@ public final class VpcIpamOperatingRegion {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setRegionName(String regionName) {
+        public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }

@@ -55,12 +55,12 @@ public final class OrganizationSinkBigqueryOptionsArgs extends io.pulumi.resourc
     	      this.usePartitionedTables = defaults.usePartitionedTables;
         }
 
-        public Builder setUsePartitionedTables(Input<Boolean> usePartitionedTables) {
+        public Builder usePartitionedTables(Input<Boolean> usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
 
-        public Builder setUsePartitionedTables(Boolean usePartitionedTables) {
+        public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Input.of(Objects.requireNonNull(usePartitionedTables));
             return this;
         }

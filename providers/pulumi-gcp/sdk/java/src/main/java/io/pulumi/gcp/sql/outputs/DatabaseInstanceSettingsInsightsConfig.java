@@ -33,12 +33,12 @@ public final class DatabaseInstanceSettingsInsightsConfig {
      */
     private final @Nullable Boolean recordClientAddress;
 
-    @OutputCustomType.Constructor({"queryInsightsEnabled","queryStringLength","recordApplicationTags","recordClientAddress"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsInsightsConfig(
-        @Nullable Boolean queryInsightsEnabled,
-        @Nullable Integer queryStringLength,
-        @Nullable Boolean recordApplicationTags,
-        @Nullable Boolean recordClientAddress) {
+        @OutputCustomType.Parameter("queryInsightsEnabled") @Nullable Boolean queryInsightsEnabled,
+        @OutputCustomType.Parameter("queryStringLength") @Nullable Integer queryStringLength,
+        @OutputCustomType.Parameter("recordApplicationTags") @Nullable Boolean recordApplicationTags,
+        @OutputCustomType.Parameter("recordClientAddress") @Nullable Boolean recordClientAddress) {
         this.queryInsightsEnabled = queryInsightsEnabled;
         this.queryStringLength = queryStringLength;
         this.recordApplicationTags = recordApplicationTags;
@@ -100,22 +100,22 @@ public final class DatabaseInstanceSettingsInsightsConfig {
     	      this.recordClientAddress = defaults.recordClientAddress;
         }
 
-        public Builder setQueryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
+        public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
             this.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
 
-        public Builder setQueryStringLength(@Nullable Integer queryStringLength) {
+        public Builder queryStringLength(@Nullable Integer queryStringLength) {
             this.queryStringLength = queryStringLength;
             return this;
         }
 
-        public Builder setRecordApplicationTags(@Nullable Boolean recordApplicationTags) {
+        public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
             this.recordApplicationTags = recordApplicationTags;
             return this;
         }
 
-        public Builder setRecordClientAddress(@Nullable Boolean recordClientAddress) {
+        public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
             this.recordClientAddress = recordClientAddress;
             return this;
         }

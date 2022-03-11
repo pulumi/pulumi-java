@@ -34,12 +34,12 @@ public final class CompatibilityResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"description","isCompatible","issues","message"})
+    @OutputCustomType.Constructor
     private CompatibilityResponse(
-        @Nullable String description,
-        @Nullable Boolean isCompatible,
-        @Nullable List<String> issues,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isCompatible") @Nullable Boolean isCompatible,
+        @OutputCustomType.Parameter("issues") @Nullable List<String> issues,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.description = description;
         this.isCompatible = isCompatible;
         this.issues = issues;
@@ -101,22 +101,22 @@ public final class CompatibilityResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsCompatible(@Nullable Boolean isCompatible) {
+        public Builder isCompatible(@Nullable Boolean isCompatible) {
             this.isCompatible = isCompatible;
             return this;
         }
 
-        public Builder setIssues(@Nullable List<String> issues) {
+        public Builder issues(@Nullable List<String> issues) {
             this.issues = issues;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }

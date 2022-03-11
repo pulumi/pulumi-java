@@ -46,14 +46,14 @@ public final class InitContainerDefinitionResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"command","environmentVariables","image","instanceView","name","volumeMounts"})
+    @OutputCustomType.Constructor
     private InitContainerDefinitionResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @Nullable String image,
-        InitContainerPropertiesDefinitionResponseInstanceView instanceView,
-        String name,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("instanceView") InitContainerPropertiesDefinitionResponseInstanceView instanceView,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;
@@ -135,32 +135,32 @@ public final class InitContainerDefinitionResponse {
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setInstanceView(InitContainerPropertiesDefinitionResponseInstanceView instanceView) {
+        public Builder instanceView(InitContainerPropertiesDefinitionResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }

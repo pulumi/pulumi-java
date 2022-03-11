@@ -27,11 +27,11 @@ public final class ServiceInstanceConfiguration {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpu","instanceRoleArn","memory"})
+    @OutputCustomType.Constructor
     private ServiceInstanceConfiguration(
-        @Nullable String cpu,
-        @Nullable String instanceRoleArn,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpu") @Nullable String cpu,
+        @OutputCustomType.Parameter("instanceRoleArn") @Nullable String instanceRoleArn,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.instanceRoleArn = instanceRoleArn;
         this.memory = memory;
@@ -83,17 +83,17 @@ public final class ServiceInstanceConfiguration {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable String cpu) {
+        public Builder cpu(@Nullable String cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable String instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
         }

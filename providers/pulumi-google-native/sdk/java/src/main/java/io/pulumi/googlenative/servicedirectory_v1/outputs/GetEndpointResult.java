@@ -37,13 +37,13 @@ public final class GetEndpointResult {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"address","annotations","name","network","port"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        String address,
-        Map<String,String> annotations,
-        String name,
-        String network,
-        Integer port) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.address = address;
         this.annotations = annotations;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetEndpointResult {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

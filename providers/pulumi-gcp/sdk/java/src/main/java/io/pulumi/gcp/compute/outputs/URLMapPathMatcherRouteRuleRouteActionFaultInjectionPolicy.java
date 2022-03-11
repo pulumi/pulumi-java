@@ -25,10 +25,10 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy(
-        @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }
@@ -72,12 +72,12 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicy {
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort abort) {
+        public Builder abort(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbort abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setDelay(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay) {
+        public Builder delay(@Nullable URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
         }

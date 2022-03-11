@@ -17,8 +17,8 @@ public final class ChannelHlsIngest {
      */
     private final @Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints;
 
-    @OutputCustomType.Constructor({"ingestEndpoints"})
-    private ChannelHlsIngest(@Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
+    @OutputCustomType.Constructor
+    private ChannelHlsIngest(@OutputCustomType.Parameter("ingestEndpoints") @Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
         this.ingestEndpoints = ingestEndpoints;
     }
 
@@ -50,7 +50,7 @@ public final class ChannelHlsIngest {
     	      this.ingestEndpoints = defaults.ingestEndpoints;
         }
 
-        public Builder setIngestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
+        public Builder ingestEndpoints(@Nullable List<ChannelHlsIngestIngestEndpoint> ingestEndpoints) {
             this.ingestEndpoints = ingestEndpoints;
             return this;
         }

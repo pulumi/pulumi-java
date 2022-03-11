@@ -102,28 +102,28 @@ public final class GetGroupResult {
      */
     private final String vpcZoneIdentifier;
 
-    @OutputCustomType.Constructor({"arn","availabilityZones","defaultCooldown","desiredCapacity","healthCheckGracePeriod","healthCheckType","id","launchConfiguration","launchTemplates","loadBalancers","maxSize","minSize","name","newInstancesProtectedFromScaleIn","placementGroup","serviceLinkedRoleArn","status","targetGroupArns","terminationPolicies","vpcZoneIdentifier"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String arn,
-        List<String> availabilityZones,
-        Integer defaultCooldown,
-        Integer desiredCapacity,
-        Integer healthCheckGracePeriod,
-        String healthCheckType,
-        String id,
-        String launchConfiguration,
-        List<GetGroupLaunchTemplate> launchTemplates,
-        List<String> loadBalancers,
-        Integer maxSize,
-        Integer minSize,
-        String name,
-        Boolean newInstancesProtectedFromScaleIn,
-        String placementGroup,
-        String serviceLinkedRoleArn,
-        String status,
-        List<String> targetGroupArns,
-        List<String> terminationPolicies,
-        String vpcZoneIdentifier) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("defaultCooldown") Integer defaultCooldown,
+        @OutputCustomType.Parameter("desiredCapacity") Integer desiredCapacity,
+        @OutputCustomType.Parameter("healthCheckGracePeriod") Integer healthCheckGracePeriod,
+        @OutputCustomType.Parameter("healthCheckType") String healthCheckType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("launchConfiguration") String launchConfiguration,
+        @OutputCustomType.Parameter("launchTemplates") List<GetGroupLaunchTemplate> launchTemplates,
+        @OutputCustomType.Parameter("loadBalancers") List<String> loadBalancers,
+        @OutputCustomType.Parameter("maxSize") Integer maxSize,
+        @OutputCustomType.Parameter("minSize") Integer minSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newInstancesProtectedFromScaleIn") Boolean newInstancesProtectedFromScaleIn,
+        @OutputCustomType.Parameter("placementGroup") String placementGroup,
+        @OutputCustomType.Parameter("serviceLinkedRoleArn") String serviceLinkedRoleArn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetGroupArns") List<String> targetGroupArns,
+        @OutputCustomType.Parameter("terminationPolicies") List<String> terminationPolicies,
+        @OutputCustomType.Parameter("vpcZoneIdentifier") String vpcZoneIdentifier) {
         this.arn = arn;
         this.availabilityZones = availabilityZones;
         this.defaultCooldown = defaultCooldown;
@@ -333,102 +333,102 @@ public final class GetGroupResult {
     	      this.vpcZoneIdentifier = defaults.vpcZoneIdentifier;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setDefaultCooldown(Integer defaultCooldown) {
+        public Builder defaultCooldown(Integer defaultCooldown) {
             this.defaultCooldown = Objects.requireNonNull(defaultCooldown);
             return this;
         }
 
-        public Builder setDesiredCapacity(Integer desiredCapacity) {
+        public Builder desiredCapacity(Integer desiredCapacity) {
             this.desiredCapacity = Objects.requireNonNull(desiredCapacity);
             return this;
         }
 
-        public Builder setHealthCheckGracePeriod(Integer healthCheckGracePeriod) {
+        public Builder healthCheckGracePeriod(Integer healthCheckGracePeriod) {
             this.healthCheckGracePeriod = Objects.requireNonNull(healthCheckGracePeriod);
             return this;
         }
 
-        public Builder setHealthCheckType(String healthCheckType) {
+        public Builder healthCheckType(String healthCheckType) {
             this.healthCheckType = Objects.requireNonNull(healthCheckType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLaunchConfiguration(String launchConfiguration) {
+        public Builder launchConfiguration(String launchConfiguration) {
             this.launchConfiguration = Objects.requireNonNull(launchConfiguration);
             return this;
         }
 
-        public Builder setLaunchTemplates(List<GetGroupLaunchTemplate> launchTemplates) {
+        public Builder launchTemplates(List<GetGroupLaunchTemplate> launchTemplates) {
             this.launchTemplates = Objects.requireNonNull(launchTemplates);
             return this;
         }
 
-        public Builder setLoadBalancers(List<String> loadBalancers) {
+        public Builder loadBalancers(List<String> loadBalancers) {
             this.loadBalancers = Objects.requireNonNull(loadBalancers);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
+        public Builder newInstancesProtectedFromScaleIn(Boolean newInstancesProtectedFromScaleIn) {
             this.newInstancesProtectedFromScaleIn = Objects.requireNonNull(newInstancesProtectedFromScaleIn);
             return this;
         }
 
-        public Builder setPlacementGroup(String placementGroup) {
+        public Builder placementGroup(String placementGroup) {
             this.placementGroup = Objects.requireNonNull(placementGroup);
             return this;
         }
 
-        public Builder setServiceLinkedRoleArn(String serviceLinkedRoleArn) {
+        public Builder serviceLinkedRoleArn(String serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = Objects.requireNonNull(serviceLinkedRoleArn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetGroupArns(List<String> targetGroupArns) {
+        public Builder targetGroupArns(List<String> targetGroupArns) {
             this.targetGroupArns = Objects.requireNonNull(targetGroupArns);
             return this;
         }
 
-        public Builder setTerminationPolicies(List<String> terminationPolicies) {
+        public Builder terminationPolicies(List<String> terminationPolicies) {
             this.terminationPolicies = Objects.requireNonNull(terminationPolicies);
             return this;
         }
 
-        public Builder setVpcZoneIdentifier(String vpcZoneIdentifier) {
+        public Builder vpcZoneIdentifier(String vpcZoneIdentifier) {
             this.vpcZoneIdentifier = Objects.requireNonNull(vpcZoneIdentifier);
             return this;
         }

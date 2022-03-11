@@ -34,12 +34,12 @@ public final class ClusterResourcePropertiesResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"networkProfile","provisioningState","serviceId","version"})
+    @OutputCustomType.Constructor
     private ClusterResourcePropertiesResponse(
-        @Nullable NetworkProfileResponse networkProfile,
-        String provisioningState,
-        String serviceId,
-        Integer version) {
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceId") String serviceId,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.networkProfile = networkProfile;
         this.provisioningState = provisioningState;
         this.serviceId = serviceId;
@@ -101,22 +101,22 @@ public final class ClusterResourcePropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

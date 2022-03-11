@@ -27,11 +27,11 @@ public final class ModuleResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"args","name","version"})
+    @OutputCustomType.Constructor
     private ModuleResponse(
-        @Nullable String args,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("args") @Nullable String args,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.args = args;
         this.name = name;
         this.version = version;
@@ -83,17 +83,17 @@ public final class ModuleResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setArgs(@Nullable String args) {
+        public Builder args(@Nullable String args) {
             this.args = args;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
      */
     private final String logicalOperator;
 
-    @OutputCustomType.Constructor({"conditions","logicalOperator"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ExpressionsResponse(
-        GooglePrivacyDlpV2ConditionsResponse conditions,
-        String logicalOperator) {
+        @OutputCustomType.Parameter("conditions") GooglePrivacyDlpV2ConditionsResponse conditions,
+        @OutputCustomType.Parameter("logicalOperator") String logicalOperator) {
         this.conditions = conditions;
         this.logicalOperator = logicalOperator;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
     	      this.logicalOperator = defaults.logicalOperator;
         }
 
-        public Builder setConditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
+        public Builder conditions(GooglePrivacyDlpV2ConditionsResponse conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLogicalOperator(String logicalOperator) {
+        public Builder logicalOperator(String logicalOperator) {
             this.logicalOperator = Objects.requireNonNull(logicalOperator);
             return this;
         }

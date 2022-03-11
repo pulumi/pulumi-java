@@ -17,8 +17,8 @@ public final class DataImportDetailsResponse {
      */
     private final Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
-    @OutputCustomType.Constructor({"accountDetails"})
-    private DataImportDetailsResponse(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+    @OutputCustomType.Constructor
+    private DataImportDetailsResponse(@OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
         this.accountDetails = accountDetails;
     }
 
@@ -50,7 +50,7 @@ public final class DataImportDetailsResponse {
     	      this.accountDetails = defaults.accountDetails;
         }
 
-        public Builder setAccountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+        public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }

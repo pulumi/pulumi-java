@@ -86,32 +86,32 @@ public final class FlowDefinitionHumanLoopConfigPublicWorkforceTaskPriceAmountIn
     	      this.tenthFractionsOfACent = defaults.tenthFractionsOfACent;
         }
 
-        public Builder setCents(@Nullable Input<Integer> cents) {
+        public Builder cents(@Nullable Input<Integer> cents) {
             this.cents = cents;
             return this;
         }
 
-        public Builder setCents(@Nullable Integer cents) {
+        public Builder cents(@Nullable Integer cents) {
             this.cents = Input.ofNullable(cents);
             return this;
         }
 
-        public Builder setDollars(@Nullable Input<Integer> dollars) {
+        public Builder dollars(@Nullable Input<Integer> dollars) {
             this.dollars = dollars;
             return this;
         }
 
-        public Builder setDollars(@Nullable Integer dollars) {
+        public Builder dollars(@Nullable Integer dollars) {
             this.dollars = Input.ofNullable(dollars);
             return this;
         }
 
-        public Builder setTenthFractionsOfACent(@Nullable Input<Integer> tenthFractionsOfACent) {
+        public Builder tenthFractionsOfACent(@Nullable Input<Integer> tenthFractionsOfACent) {
             this.tenthFractionsOfACent = tenthFractionsOfACent;
             return this;
         }
 
-        public Builder setTenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
+        public Builder tenthFractionsOfACent(@Nullable Integer tenthFractionsOfACent) {
             this.tenthFractionsOfACent = Input.ofNullable(tenthFractionsOfACent);
             return this;
         }

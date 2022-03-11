@@ -30,11 +30,11 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      */
     private final List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor({"description","name","routeRules"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcher(
-        @Nullable String description,
-        String name,
-        List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routeRules") List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
         this.description = description;
         this.name = name;
         this.routeRules = routeRules;
@@ -87,17 +87,17 @@ public final class EdgeCacheServiceRoutingPathMatcher {
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRouteRules(List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
+        public Builder routeRules(List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }

@@ -72,22 +72,22 @@ public final class DistributionPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.zones = defaults.zones;
         }
 
-        public Builder setTargetShape(@Nullable Input<DistributionPolicyTargetShape> targetShape) {
+        public Builder targetShape(@Nullable Input<DistributionPolicyTargetShape> targetShape) {
             this.targetShape = targetShape;
             return this;
         }
 
-        public Builder setTargetShape(@Nullable DistributionPolicyTargetShape targetShape) {
+        public Builder targetShape(@Nullable DistributionPolicyTargetShape targetShape) {
             this.targetShape = Input.ofNullable(targetShape);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones) {
+        public Builder zones(@Nullable Input<List<DistributionPolicyZoneConfigurationArgs>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<DistributionPolicyZoneConfigurationArgs> zones) {
+        public Builder zones(@Nullable List<DistributionPolicyZoneConfigurationArgs> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

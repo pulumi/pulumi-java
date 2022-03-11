@@ -104,42 +104,42 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     	      this.pathOnDatastore = defaults.pathOnDatastore;
         }
 
-        public Builder setDatastoreId(@Nullable Input<String> datastoreId) {
+        public Builder datastoreId(@Nullable Input<String> datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = Input.ofNullable(datastoreId);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,DataBindingMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,DataBindingMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,DataBindingMode> mode) {
+        public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable Input<String> pathOnCompute) {
+        public Builder pathOnCompute(@Nullable Input<String> pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable String pathOnCompute) {
+        public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = Input.ofNullable(pathOnCompute);
             return this;
         }
 
-        public Builder setPathOnDatastore(@Nullable Input<String> pathOnDatastore) {
+        public Builder pathOnDatastore(@Nullable Input<String> pathOnDatastore) {
             this.pathOnDatastore = pathOnDatastore;
             return this;
         }
 
-        public Builder setPathOnDatastore(@Nullable String pathOnDatastore) {
+        public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
             this.pathOnDatastore = Input.ofNullable(pathOnDatastore);
             return this;
         }

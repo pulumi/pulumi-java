@@ -24,10 +24,10 @@ public final class DirectLineChannelPropertiesResponse {
      */
     private final @Nullable List<DirectLineSiteResponse> sites;
 
-    @OutputCustomType.Constructor({"directLineEmbedCode","sites"})
+    @OutputCustomType.Constructor
     private DirectLineChannelPropertiesResponse(
-        @Nullable String directLineEmbedCode,
-        @Nullable List<DirectLineSiteResponse> sites) {
+        @OutputCustomType.Parameter("directLineEmbedCode") @Nullable String directLineEmbedCode,
+        @OutputCustomType.Parameter("sites") @Nullable List<DirectLineSiteResponse> sites) {
         this.directLineEmbedCode = directLineEmbedCode;
         this.sites = sites;
     }
@@ -69,12 +69,12 @@ public final class DirectLineChannelPropertiesResponse {
     	      this.sites = defaults.sites;
         }
 
-        public Builder setDirectLineEmbedCode(@Nullable String directLineEmbedCode) {
+        public Builder directLineEmbedCode(@Nullable String directLineEmbedCode) {
             this.directLineEmbedCode = directLineEmbedCode;
             return this;
         }
 
-        public Builder setSites(@Nullable List<DirectLineSiteResponse> sites) {
+        public Builder sites(@Nullable List<DirectLineSiteResponse> sites) {
             this.sites = sites;
             return this;
         }

@@ -28,11 +28,11 @@ public final class AttachNewDataDiskOptionsResponse {
      */
     private final @Nullable String diskType;
 
-    @OutputCustomType.Constructor({"diskName","diskSizeGiB","diskType"})
+    @OutputCustomType.Constructor
     private AttachNewDataDiskOptionsResponse(
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGiB,
-        @Nullable String diskType) {
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskSizeGiB") @Nullable Integer diskSizeGiB,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType) {
         this.diskName = diskName;
         this.diskSizeGiB = diskSizeGiB;
         this.diskType = diskType;
@@ -84,17 +84,17 @@ public final class AttachNewDataDiskOptionsResponse {
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskSizeGiB(@Nullable Integer diskSizeGiB) {
+        public Builder diskSizeGiB(@Nullable Integer diskSizeGiB) {
             this.diskSizeGiB = diskSizeGiB;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }

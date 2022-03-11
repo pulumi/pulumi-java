@@ -63,22 +63,22 @@ public final class ServiceModeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.replicated = defaults.replicated;
         }
 
-        public Builder setGlobal(@Nullable Input<Boolean> global) {
+        public Builder global(@Nullable Input<Boolean> global) {
             this.global = global;
             return this;
         }
 
-        public Builder setGlobal(@Nullable Boolean global) {
+        public Builder global(@Nullable Boolean global) {
             this.global = Input.ofNullable(global);
             return this;
         }
 
-        public Builder setReplicated(@Nullable Input<ServiceModeReplicatedArgs> replicated) {
+        public Builder replicated(@Nullable Input<ServiceModeReplicatedArgs> replicated) {
             this.replicated = replicated;
             return this;
         }
 
-        public Builder setReplicated(@Nullable ServiceModeReplicatedArgs replicated) {
+        public Builder replicated(@Nullable ServiceModeReplicatedArgs replicated) {
             this.replicated = Input.ofNullable(replicated);
             return this;
         }

@@ -39,13 +39,13 @@ public final class AndroidTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor({"appApk","appBundle","appPackageId","scenarioLabels","scenarios"})
+    @OutputCustomType.Constructor
     private AndroidTestLoopResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        List<String> scenarioLabels,
-        List<Integer> scenarios) {
+        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @OutputCustomType.Parameter("appPackageId") String appPackageId,
+        @OutputCustomType.Parameter("scenarioLabels") List<String> scenarioLabels,
+        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;
@@ -117,27 +117,27 @@ public final class AndroidTestLoopResponse {
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppApk(FileReferenceResponse appApk) {
+        public Builder appApk(FileReferenceResponse appApk) {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
 
-        public Builder setAppBundle(AppBundleResponse appBundle) {
+        public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(String appPackageId) {
+        public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
 
-        public Builder setScenarioLabels(List<String> scenarioLabels) {
+        public Builder scenarioLabels(List<String> scenarioLabels) {
             this.scenarioLabels = Objects.requireNonNull(scenarioLabels);
             return this;
         }
 
-        public Builder setScenarios(List<Integer> scenarios) {
+        public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }

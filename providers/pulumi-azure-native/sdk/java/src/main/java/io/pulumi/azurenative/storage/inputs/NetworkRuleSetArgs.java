@@ -129,52 +129,52 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable Input<Either<String,Bypass>> bypass) {
+        public Builder bypass(@Nullable Input<Either<String,Bypass>> bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setBypass(@Nullable Either<String,Bypass> bypass) {
+        public Builder bypass(@Nullable Either<String,Bypass> bypass) {
             this.bypass = Input.ofNullable(bypass);
             return this;
         }
 
-        public Builder setDefaultAction(Input<DefaultAction> defaultAction) {
+        public Builder defaultAction(Input<DefaultAction> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setDefaultAction(DefaultAction defaultAction) {
+        public Builder defaultAction(DefaultAction defaultAction) {
             this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder setIpRules(@Nullable Input<List<IPRuleArgs>> ipRules) {
+        public Builder ipRules(@Nullable Input<List<IPRuleArgs>> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IPRuleArgs> ipRules) {
+        public Builder ipRules(@Nullable List<IPRuleArgs> ipRules) {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
 
-        public Builder setResourceAccessRules(@Nullable Input<List<ResourceAccessRuleArgs>> resourceAccessRules) {
+        public Builder resourceAccessRules(@Nullable Input<List<ResourceAccessRuleArgs>> resourceAccessRules) {
             this.resourceAccessRules = resourceAccessRules;
             return this;
         }
 
-        public Builder setResourceAccessRules(@Nullable List<ResourceAccessRuleArgs> resourceAccessRules) {
+        public Builder resourceAccessRules(@Nullable List<ResourceAccessRuleArgs> resourceAccessRules) {
             this.resourceAccessRules = Input.ofNullable(resourceAccessRules);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleArgs> virtualNetworkRules) {
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }

@@ -141,31 +141,31 @@ public final class GetOccurrenceResult {
      */
     private final VulnerabilityDetailsResponse vulnerabilityDetails;
 
-    @OutputCustomType.Constructor({"attestation","buildDetails","compliance","createTime","deployment","derivedImage","discovered","dsseAttestation","envelope","installation","kind","name","noteName","remediation","resource","resourceUrl","sbom","spdxFile","spdxPackage","spdxRelationship","updateTime","upgrade","vulnerabilityDetails"})
+    @OutputCustomType.Constructor
     private GetOccurrenceResult(
-        AttestationResponse attestation,
-        BuildDetailsResponse buildDetails,
-        ComplianceOccurrenceResponse compliance,
-        String createTime,
-        DeploymentResponse deployment,
-        DerivedResponse derivedImage,
-        DiscoveredResponse discovered,
-        DSSEAttestationOccurrenceResponse dsseAttestation,
-        EnvelopeResponse envelope,
-        InstallationResponse installation,
-        String kind,
-        String name,
-        String noteName,
-        String remediation,
-        ResourceResponse resource,
-        String resourceUrl,
-        DocumentOccurrenceResponse sbom,
-        FileOccurrenceResponse spdxFile,
-        PackageInfoOccurrenceResponse spdxPackage,
-        RelationshipOccurrenceResponse spdxRelationship,
-        String updateTime,
-        UpgradeOccurrenceResponse upgrade,
-        VulnerabilityDetailsResponse vulnerabilityDetails) {
+        @OutputCustomType.Parameter("attestation") AttestationResponse attestation,
+        @OutputCustomType.Parameter("buildDetails") BuildDetailsResponse buildDetails,
+        @OutputCustomType.Parameter("compliance") ComplianceOccurrenceResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") DeploymentResponse deployment,
+        @OutputCustomType.Parameter("derivedImage") DerivedResponse derivedImage,
+        @OutputCustomType.Parameter("discovered") DiscoveredResponse discovered,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationOccurrenceResponse dsseAttestation,
+        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @OutputCustomType.Parameter("installation") InstallationResponse installation,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noteName") String noteName,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("resource") ResourceResponse resource,
+        @OutputCustomType.Parameter("resourceUrl") String resourceUrl,
+        @OutputCustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
+        @OutputCustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeOccurrenceResponse upgrade,
+        @OutputCustomType.Parameter("vulnerabilityDetails") VulnerabilityDetailsResponse vulnerabilityDetails) {
         this.attestation = attestation;
         this.buildDetails = buildDetails;
         this.compliance = compliance;
@@ -417,117 +417,117 @@ public final class GetOccurrenceResult {
     	      this.vulnerabilityDetails = defaults.vulnerabilityDetails;
         }
 
-        public Builder setAttestation(AttestationResponse attestation) {
+        public Builder attestation(AttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setBuildDetails(BuildDetailsResponse buildDetails) {
+        public Builder buildDetails(BuildDetailsResponse buildDetails) {
             this.buildDetails = Objects.requireNonNull(buildDetails);
             return this;
         }
 
-        public Builder setCompliance(ComplianceOccurrenceResponse compliance) {
+        public Builder compliance(ComplianceOccurrenceResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployment(DeploymentResponse deployment) {
+        public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder setDerivedImage(DerivedResponse derivedImage) {
+        public Builder derivedImage(DerivedResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
 
-        public Builder setDiscovered(DiscoveredResponse discovered) {
+        public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
 
-        public Builder setDsseAttestation(DSSEAttestationOccurrenceResponse dsseAttestation) {
+        public Builder dsseAttestation(DSSEAttestationOccurrenceResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
 
-        public Builder setEnvelope(EnvelopeResponse envelope) {
+        public Builder envelope(EnvelopeResponse envelope) {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
 
-        public Builder setInstallation(InstallationResponse installation) {
+        public Builder installation(InstallationResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNoteName(String noteName) {
+        public Builder noteName(String noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
-        public Builder setRemediation(String remediation) {
+        public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
 
-        public Builder setResource(ResourceResponse resource) {
+        public Builder resource(ResourceResponse resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setResourceUrl(String resourceUrl) {
+        public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
 
-        public Builder setSbom(DocumentOccurrenceResponse sbom) {
+        public Builder sbom(DocumentOccurrenceResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
 
-        public Builder setSpdxFile(FileOccurrenceResponse spdxFile) {
+        public Builder spdxFile(FileOccurrenceResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
+        public Builder spdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
+        public Builder spdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUpgrade(UpgradeOccurrenceResponse upgrade) {
+        public Builder upgrade(UpgradeOccurrenceResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
 
-        public Builder setVulnerabilityDetails(VulnerabilityDetailsResponse vulnerabilityDetails) {
+        public Builder vulnerabilityDetails(VulnerabilityDetailsResponse vulnerabilityDetails) {
             this.vulnerabilityDetails = Objects.requireNonNull(vulnerabilityDetails);
             return this;
         }

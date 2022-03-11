@@ -72,12 +72,12 @@ public final class UserAccessRightResponse extends io.pulumi.resources.InvokeArg
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

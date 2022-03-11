@@ -24,10 +24,10 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final @Nullable List<String> masks;
 
-    @OutputCustomType.Constructor({"flags","masks"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesTcpFlag(
-        List<String> flags,
-        @Nullable List<String> masks) {
+        @OutputCustomType.Parameter("flags") List<String> flags,
+        @OutputCustomType.Parameter("masks") @Nullable List<String> masks) {
         this.flags = flags;
         this.masks = masks;
     }
@@ -71,12 +71,12 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.masks = defaults.masks;
         }
 
-        public Builder setFlags(List<String> flags) {
+        public Builder flags(List<String> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
 
-        public Builder setMasks(@Nullable List<String> masks) {
+        public Builder masks(@Nullable List<String> masks) {
             this.masks = masks;
             return this;
         }

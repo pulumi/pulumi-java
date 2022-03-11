@@ -43,14 +43,14 @@ public final class EnvironmentFederationParameters {
      */
     private final @Nullable String samlMetadataURL;
 
-    @OutputCustomType.Constructor({"applicationCallBackURL","attributeMap","federationProviderName","federationURN","samlMetadataDocument","samlMetadataURL"})
+    @OutputCustomType.Constructor
     private EnvironmentFederationParameters(
-        @Nullable String applicationCallBackURL,
-        @Nullable Object attributeMap,
-        @Nullable String federationProviderName,
-        @Nullable String federationURN,
-        @Nullable String samlMetadataDocument,
-        @Nullable String samlMetadataURL) {
+        @OutputCustomType.Parameter("applicationCallBackURL") @Nullable String applicationCallBackURL,
+        @OutputCustomType.Parameter("attributeMap") @Nullable Object attributeMap,
+        @OutputCustomType.Parameter("federationProviderName") @Nullable String federationProviderName,
+        @OutputCustomType.Parameter("federationURN") @Nullable String federationURN,
+        @OutputCustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
+        @OutputCustomType.Parameter("samlMetadataURL") @Nullable String samlMetadataURL) {
         this.applicationCallBackURL = applicationCallBackURL;
         this.attributeMap = attributeMap;
         this.federationProviderName = federationProviderName;
@@ -132,32 +132,32 @@ public final class EnvironmentFederationParameters {
     	      this.samlMetadataURL = defaults.samlMetadataURL;
         }
 
-        public Builder setApplicationCallBackURL(@Nullable String applicationCallBackURL) {
+        public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
 
-        public Builder setAttributeMap(@Nullable Object attributeMap) {
+        public Builder attributeMap(@Nullable Object attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
 
-        public Builder setFederationProviderName(@Nullable String federationProviderName) {
+        public Builder federationProviderName(@Nullable String federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
 
-        public Builder setFederationURN(@Nullable String federationURN) {
+        public Builder federationURN(@Nullable String federationURN) {
             this.federationURN = federationURN;
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable String samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
-        public Builder setSamlMetadataURL(@Nullable String samlMetadataURL) {
+        public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }

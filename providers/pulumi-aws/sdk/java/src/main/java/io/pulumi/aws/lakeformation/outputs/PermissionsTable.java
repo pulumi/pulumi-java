@@ -29,12 +29,12 @@ public final class PermissionsTable {
     private final @Nullable String name;
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","name","wildcard"})
+    @OutputCustomType.Constructor
     private PermissionsTable(
-        @Nullable String catalogId,
-        String databaseName,
-        @Nullable String name,
-        @Nullable Boolean wildcard) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;
@@ -92,22 +92,22 @@ public final class PermissionsTable {
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
         }

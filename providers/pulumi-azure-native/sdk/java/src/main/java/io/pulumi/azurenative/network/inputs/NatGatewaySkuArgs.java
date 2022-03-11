@@ -59,12 +59,12 @@ public final class NatGatewaySkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable Input<Either<String,NatGatewaySkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,NatGatewaySkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,NatGatewaySkuName> name) {
+        public Builder name(@Nullable Either<String,NatGatewaySkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }

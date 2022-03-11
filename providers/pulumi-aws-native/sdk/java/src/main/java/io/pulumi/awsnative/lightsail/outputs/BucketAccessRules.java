@@ -23,10 +23,10 @@ public final class BucketAccessRules {
      */
     private final @Nullable String getObject;
 
-    @OutputCustomType.Constructor({"allowPublicOverrides","getObject"})
+    @OutputCustomType.Constructor
     private BucketAccessRules(
-        @Nullable Boolean allowPublicOverrides,
-        @Nullable String getObject) {
+        @OutputCustomType.Parameter("allowPublicOverrides") @Nullable Boolean allowPublicOverrides,
+        @OutputCustomType.Parameter("getObject") @Nullable String getObject) {
         this.allowPublicOverrides = allowPublicOverrides;
         this.getObject = getObject;
     }
@@ -68,12 +68,12 @@ public final class BucketAccessRules {
     	      this.getObject = defaults.getObject;
         }
 
-        public Builder setAllowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
+        public Builder allowPublicOverrides(@Nullable Boolean allowPublicOverrides) {
             this.allowPublicOverrides = allowPublicOverrides;
             return this;
         }
 
-        public Builder setGetObject(@Nullable String getObject) {
+        public Builder getObject(@Nullable String getObject) {
             this.getObject = getObject;
             return this;
         }

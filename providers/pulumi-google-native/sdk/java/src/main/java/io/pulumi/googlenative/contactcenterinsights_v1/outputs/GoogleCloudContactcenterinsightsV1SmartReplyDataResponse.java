@@ -32,12 +32,12 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
      */
     private final String reply;
 
-    @OutputCustomType.Constructor({"confidenceScore","metadata","queryRecord","reply"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SmartReplyDataResponse(
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String reply) {
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("reply") String reply) {
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
         this.queryRecord = queryRecord;
@@ -99,22 +99,22 @@ public final class GoogleCloudContactcenterinsightsV1SmartReplyDataResponse {
     	      this.reply = defaults.reply;
         }
 
-        public Builder setConfidenceScore(Double confidenceScore) {
+        public Builder confidenceScore(Double confidenceScore) {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setQueryRecord(String queryRecord) {
+        public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
 
-        public Builder setReply(String reply) {
+        public Builder reply(String reply) {
             this.reply = Objects.requireNonNull(reply);
             return this;
         }

@@ -13,10 +13,10 @@ public final class FirewallPolicyCustomAction {
     private final FirewallPolicyActionDefinition actionDefinition;
     private final String actionName;
 
-    @OutputCustomType.Constructor({"actionDefinition","actionName"})
+    @OutputCustomType.Constructor
     private FirewallPolicyCustomAction(
-        FirewallPolicyActionDefinition actionDefinition,
-        String actionName) {
+        @OutputCustomType.Parameter("actionDefinition") FirewallPolicyActionDefinition actionDefinition,
+        @OutputCustomType.Parameter("actionName") String actionName) {
         this.actionDefinition = actionDefinition;
         this.actionName = actionName;
     }
@@ -50,12 +50,12 @@ public final class FirewallPolicyCustomAction {
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(FirewallPolicyActionDefinition actionDefinition) {
+        public Builder actionDefinition(FirewallPolicyActionDefinition actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }

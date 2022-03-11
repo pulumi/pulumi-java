@@ -25,10 +25,10 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
      */
     private final @Nullable Integer timeWindowSec;
 
-    @OutputCustomType.Constructor({"maxScaledInReplicas","timeWindowSec"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyScaleInControl(
-        @Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas,
-        @Nullable Integer timeWindowSec) {
+        @OutputCustomType.Parameter("maxScaledInReplicas") @Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas,
+        @OutputCustomType.Parameter("timeWindowSec") @Nullable Integer timeWindowSec) {
         this.maxScaledInReplicas = maxScaledInReplicas;
         this.timeWindowSec = timeWindowSec;
     }
@@ -72,12 +72,12 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControl {
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledInReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas) {
+        public Builder maxScaledInReplicas(@Nullable RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas maxScaledInReplicas) {
             this.maxScaledInReplicas = maxScaledInReplicas;
             return this;
         }
 
-        public Builder setTimeWindowSec(@Nullable Integer timeWindowSec) {
+        public Builder timeWindowSec(@Nullable Integer timeWindowSec) {
             this.timeWindowSec = timeWindowSec;
             return this;
         }

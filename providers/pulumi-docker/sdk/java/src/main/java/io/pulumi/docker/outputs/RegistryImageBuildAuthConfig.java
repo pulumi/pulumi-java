@@ -20,16 +20,16 @@ public final class RegistryImageBuildAuthConfig {
     private final @Nullable String serverAddress;
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"auth","email","hostName","identityToken","password","registryToken","serverAddress","userName"})
+    @OutputCustomType.Constructor
     private RegistryImageBuildAuthConfig(
-        @Nullable String auth,
-        @Nullable String email,
-        String hostName,
-        @Nullable String identityToken,
-        @Nullable String password,
-        @Nullable String registryToken,
-        @Nullable String serverAddress,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("auth") @Nullable String auth,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("identityToken") @Nullable String identityToken,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("registryToken") @Nullable String registryToken,
+        @OutputCustomType.Parameter("serverAddress") @Nullable String serverAddress,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.auth = auth;
         this.email = email;
         this.hostName = hostName;
@@ -99,42 +99,42 @@ public final class RegistryImageBuildAuthConfig {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAuth(@Nullable String auth) {
+        public Builder auth(@Nullable String auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setIdentityToken(@Nullable String identityToken) {
+        public Builder identityToken(@Nullable String identityToken) {
             this.identityToken = identityToken;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setRegistryToken(@Nullable String registryToken) {
+        public Builder registryToken(@Nullable String registryToken) {
             this.registryToken = registryToken;
             return this;
         }
 
-        public Builder setServerAddress(@Nullable String serverAddress) {
+        public Builder serverAddress(@Nullable String serverAddress) {
             this.serverAddress = serverAddress;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

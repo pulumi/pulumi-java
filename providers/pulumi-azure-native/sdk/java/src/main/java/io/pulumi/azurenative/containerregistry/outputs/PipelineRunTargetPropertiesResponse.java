@@ -22,10 +22,10 @@ public final class PipelineRunTargetPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private PipelineRunTargetPropertiesResponse(
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.name = name;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class PipelineRunTargetPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -49,12 +49,12 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(Input<List<String>> source) {
+        public Builder source(Input<List<String>> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(List<String> source) {
+        public Builder source(List<String> source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }

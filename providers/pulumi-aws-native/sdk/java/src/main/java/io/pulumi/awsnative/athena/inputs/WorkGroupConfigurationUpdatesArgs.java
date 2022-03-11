@@ -129,72 +129,72 @@ public final class WorkGroupConfigurationUpdatesArgs extends io.pulumi.resources
     	      this.resultConfigurationUpdates = defaults.resultConfigurationUpdates;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Input<Integer> bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Input<Integer> bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = bytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setBytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
+        public Builder bytesScannedCutoffPerQuery(@Nullable Integer bytesScannedCutoffPerQuery) {
             this.bytesScannedCutoffPerQuery = Input.ofNullable(bytesScannedCutoffPerQuery);
             return this;
         }
 
-        public Builder setEnforceWorkGroupConfiguration(@Nullable Input<Boolean> enforceWorkGroupConfiguration) {
+        public Builder enforceWorkGroupConfiguration(@Nullable Input<Boolean> enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = enforceWorkGroupConfiguration;
             return this;
         }
 
-        public Builder setEnforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
+        public Builder enforceWorkGroupConfiguration(@Nullable Boolean enforceWorkGroupConfiguration) {
             this.enforceWorkGroupConfiguration = Input.ofNullable(enforceWorkGroupConfiguration);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<WorkGroupEngineVersionArgs> engineVersion) {
+        public Builder engineVersion(@Nullable Input<WorkGroupEngineVersionArgs> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable WorkGroupEngineVersionArgs engineVersion) {
+        public Builder engineVersion(@Nullable WorkGroupEngineVersionArgs engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setPublishCloudWatchMetricsEnabled(@Nullable Input<Boolean> publishCloudWatchMetricsEnabled) {
+        public Builder publishCloudWatchMetricsEnabled(@Nullable Input<Boolean> publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = publishCloudWatchMetricsEnabled;
             return this;
         }
 
-        public Builder setPublishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
+        public Builder publishCloudWatchMetricsEnabled(@Nullable Boolean publishCloudWatchMetricsEnabled) {
             this.publishCloudWatchMetricsEnabled = Input.ofNullable(publishCloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder setRemoveBytesScannedCutoffPerQuery(@Nullable Input<Boolean> removeBytesScannedCutoffPerQuery) {
+        public Builder removeBytesScannedCutoffPerQuery(@Nullable Input<Boolean> removeBytesScannedCutoffPerQuery) {
             this.removeBytesScannedCutoffPerQuery = removeBytesScannedCutoffPerQuery;
             return this;
         }
 
-        public Builder setRemoveBytesScannedCutoffPerQuery(@Nullable Boolean removeBytesScannedCutoffPerQuery) {
+        public Builder removeBytesScannedCutoffPerQuery(@Nullable Boolean removeBytesScannedCutoffPerQuery) {
             this.removeBytesScannedCutoffPerQuery = Input.ofNullable(removeBytesScannedCutoffPerQuery);
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Input<Boolean> requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Input<Boolean> requesterPaysEnabled) {
             this.requesterPaysEnabled = requesterPaysEnabled;
             return this;
         }
 
-        public Builder setRequesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
+        public Builder requesterPaysEnabled(@Nullable Boolean requesterPaysEnabled) {
             this.requesterPaysEnabled = Input.ofNullable(requesterPaysEnabled);
             return this;
         }
 
-        public Builder setResultConfigurationUpdates(@Nullable Input<WorkGroupResultConfigurationUpdatesArgs> resultConfigurationUpdates) {
+        public Builder resultConfigurationUpdates(@Nullable Input<WorkGroupResultConfigurationUpdatesArgs> resultConfigurationUpdates) {
             this.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
         }
 
-        public Builder setResultConfigurationUpdates(@Nullable WorkGroupResultConfigurationUpdatesArgs resultConfigurationUpdates) {
+        public Builder resultConfigurationUpdates(@Nullable WorkGroupResultConfigurationUpdatesArgs resultConfigurationUpdates) {
             this.resultConfigurationUpdates = Input.ofNullable(resultConfigurationUpdates);
             return this;
         }

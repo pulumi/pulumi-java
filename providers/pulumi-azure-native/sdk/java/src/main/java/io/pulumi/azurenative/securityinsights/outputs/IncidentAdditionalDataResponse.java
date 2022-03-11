@@ -37,13 +37,13 @@ public final class IncidentAdditionalDataResponse {
      */
     private final List<String> tactics;
 
-    @OutputCustomType.Constructor({"alertProductNames","alertsCount","bookmarksCount","commentsCount","tactics"})
+    @OutputCustomType.Constructor
     private IncidentAdditionalDataResponse(
-        List<String> alertProductNames,
-        Integer alertsCount,
-        Integer bookmarksCount,
-        Integer commentsCount,
-        List<String> tactics) {
+        @OutputCustomType.Parameter("alertProductNames") List<String> alertProductNames,
+        @OutputCustomType.Parameter("alertsCount") Integer alertsCount,
+        @OutputCustomType.Parameter("bookmarksCount") Integer bookmarksCount,
+        @OutputCustomType.Parameter("commentsCount") Integer commentsCount,
+        @OutputCustomType.Parameter("tactics") List<String> tactics) {
         this.alertProductNames = alertProductNames;
         this.alertsCount = alertsCount;
         this.bookmarksCount = bookmarksCount;
@@ -115,27 +115,27 @@ public final class IncidentAdditionalDataResponse {
     	      this.tactics = defaults.tactics;
         }
 
-        public Builder setAlertProductNames(List<String> alertProductNames) {
+        public Builder alertProductNames(List<String> alertProductNames) {
             this.alertProductNames = Objects.requireNonNull(alertProductNames);
             return this;
         }
 
-        public Builder setAlertsCount(Integer alertsCount) {
+        public Builder alertsCount(Integer alertsCount) {
             this.alertsCount = Objects.requireNonNull(alertsCount);
             return this;
         }
 
-        public Builder setBookmarksCount(Integer bookmarksCount) {
+        public Builder bookmarksCount(Integer bookmarksCount) {
             this.bookmarksCount = Objects.requireNonNull(bookmarksCount);
             return this;
         }
 
-        public Builder setCommentsCount(Integer commentsCount) {
+        public Builder commentsCount(Integer commentsCount) {
             this.commentsCount = Objects.requireNonNull(commentsCount);
             return this;
         }
 
-        public Builder setTactics(List<String> tactics) {
+        public Builder tactics(List<String> tactics) {
             this.tactics = Objects.requireNonNull(tactics);
             return this;
         }

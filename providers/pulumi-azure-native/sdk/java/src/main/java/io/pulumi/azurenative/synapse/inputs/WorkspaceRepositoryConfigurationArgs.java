@@ -186,92 +186,92 @@ public final class WorkspaceRepositoryConfigurationArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setCollaborationBranch(@Nullable Input<String> collaborationBranch) {
+        public Builder collaborationBranch(@Nullable Input<String> collaborationBranch) {
             this.collaborationBranch = collaborationBranch;
             return this;
         }
 
-        public Builder setCollaborationBranch(@Nullable String collaborationBranch) {
+        public Builder collaborationBranch(@Nullable String collaborationBranch) {
             this.collaborationBranch = Input.ofNullable(collaborationBranch);
             return this;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable Input<String> lastCommitId) {
+        public Builder lastCommitId(@Nullable Input<String> lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable String lastCommitId) {
+        public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = Input.ofNullable(lastCommitId);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable Input<String> repositoryName) {
+        public Builder repositoryName(@Nullable Input<String> repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = Input.ofNullable(repositoryName);
             return this;
         }
 
-        public Builder setRootFolder(@Nullable Input<String> rootFolder) {
+        public Builder rootFolder(@Nullable Input<String> rootFolder) {
             this.rootFolder = rootFolder;
             return this;
         }
 
-        public Builder setRootFolder(@Nullable String rootFolder) {
+        public Builder rootFolder(@Nullable String rootFolder) {
             this.rootFolder = Input.ofNullable(rootFolder);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

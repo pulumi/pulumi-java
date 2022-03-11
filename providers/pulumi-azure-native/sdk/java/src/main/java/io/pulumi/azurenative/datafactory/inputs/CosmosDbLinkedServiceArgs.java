@@ -326,172 +326,172 @@ public final class CosmosDbLinkedServiceArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountEndpoint(@Nullable Input<Object> accountEndpoint) {
+        public Builder accountEndpoint(@Nullable Input<Object> accountEndpoint) {
             this.accountEndpoint = accountEndpoint;
             return this;
         }
 
-        public Builder setAccountEndpoint(@Nullable Object accountEndpoint) {
+        public Builder accountEndpoint(@Nullable Object accountEndpoint) {
             this.accountEndpoint = Input.ofNullable(accountEndpoint);
             return this;
         }
 
-        public Builder setAccountKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey) {
+        public Builder accountKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accountKey) {
+        public Builder accountKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Input<Object> azureCloudType) {
+        public Builder azureCloudType(@Nullable Input<Object> azureCloudType) {
             this.azureCloudType = azureCloudType;
             return this;
         }
 
-        public Builder setAzureCloudType(@Nullable Object azureCloudType) {
+        public Builder azureCloudType(@Nullable Object azureCloudType) {
             this.azureCloudType = Input.ofNullable(azureCloudType);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setConnectionMode(@Nullable Input<Either<String,CosmosDbConnectionMode>> connectionMode) {
+        public Builder connectionMode(@Nullable Input<Either<String,CosmosDbConnectionMode>> connectionMode) {
             this.connectionMode = connectionMode;
             return this;
         }
 
-        public Builder setConnectionMode(@Nullable Either<String,CosmosDbConnectionMode> connectionMode) {
+        public Builder connectionMode(@Nullable Either<String,CosmosDbConnectionMode> connectionMode) {
             this.connectionMode = Input.ofNullable(connectionMode);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<Object> connectionString) {
+        public Builder connectionString(@Nullable Input<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Object connectionString) {
+        public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setCredential(@Nullable Input<CredentialReferenceArgs> credential) {
+        public Builder credential(@Nullable Input<CredentialReferenceArgs> credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceArgs credential) {
+        public Builder credential(@Nullable CredentialReferenceArgs credential) {
             this.credential = Input.ofNullable(credential);
             return this;
         }
 
-        public Builder setDatabase(@Nullable Input<Object> database) {
+        public Builder database(@Nullable Input<Object> database) {
             this.database = database;
             return this;
         }
 
-        public Builder setDatabase(@Nullable Object database) {
+        public Builder database(@Nullable Object database) {
             this.database = Input.ofNullable(database);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setServicePrincipalCredential(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
+        public Builder servicePrincipalCredential(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
             this.servicePrincipalCredential = servicePrincipalCredential;
             return this;
         }
 
-        public Builder setServicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
+        public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
             this.servicePrincipalCredential = Input.ofNullable(servicePrincipalCredential);
             return this;
         }
 
-        public Builder setServicePrincipalCredentialType(@Nullable Input<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType) {
+        public Builder servicePrincipalCredentialType(@Nullable Input<Either<String,CosmosDbServicePrincipalCredentialType>> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = servicePrincipalCredentialType;
             return this;
         }
 
-        public Builder setServicePrincipalCredentialType(@Nullable Either<String,CosmosDbServicePrincipalCredentialType> servicePrincipalCredentialType) {
+        public Builder servicePrincipalCredentialType(@Nullable Either<String,CosmosDbServicePrincipalCredentialType> servicePrincipalCredentialType) {
             this.servicePrincipalCredentialType = Input.ofNullable(servicePrincipalCredentialType);
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Input<Object> servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = Input.ofNullable(servicePrincipalId);
             return this;
         }
 
-        public Builder setTenant(@Nullable Input<Object> tenant) {
+        public Builder tenant(@Nullable Input<Object> tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setTenant(@Nullable Object tenant) {
+        public Builder tenant(@Nullable Object tenant) {
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

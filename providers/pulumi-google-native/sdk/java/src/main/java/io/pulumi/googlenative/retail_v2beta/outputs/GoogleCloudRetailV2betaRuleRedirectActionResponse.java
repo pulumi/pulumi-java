@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
      */
     private final String redirectUri;
 
-    @OutputCustomType.Constructor({"redirectUri"})
-    private GoogleCloudRetailV2betaRuleRedirectActionResponse(String redirectUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2betaRuleRedirectActionResponse(@OutputCustomType.Parameter("redirectUri") String redirectUri) {
         this.redirectUri = redirectUri;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2betaRuleRedirectActionResponse {
     	      this.redirectUri = defaults.redirectUri;
         }
 
-        public Builder setRedirectUri(String redirectUri) {
+        public Builder redirectUri(String redirectUri) {
             this.redirectUri = Objects.requireNonNull(redirectUri);
             return this;
         }

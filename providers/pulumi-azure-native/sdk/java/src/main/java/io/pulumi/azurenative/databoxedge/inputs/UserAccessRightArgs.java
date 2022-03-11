@@ -75,22 +75,22 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccessType(Input<Either<String,ShareAccessType>> accessType) {
+        public Builder accessType(Input<Either<String,ShareAccessType>> accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setAccessType(Either<String,ShareAccessType> accessType) {
+        public Builder accessType(Either<String,ShareAccessType> accessType) {
             this.accessType = Input.of(Objects.requireNonNull(accessType));
             return this;
         }
 
-        public Builder setUserId(Input<String> userId) {
+        public Builder userId(Input<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }

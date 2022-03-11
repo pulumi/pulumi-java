@@ -42,13 +42,13 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"commandType","errors","input","output","state"})
+    @OutputCustomType.Constructor
     private MigrateSyncCompleteCommandPropertiesResponse(
-        String commandType,
-        List<ODataErrorResponse> errors,
-        @Nullable MigrateSyncCompleteCommandInputResponse input,
-        MigrateSyncCompleteCommandOutputResponse output,
-        String state) {
+        @OutputCustomType.Parameter("commandType") String commandType,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable MigrateSyncCompleteCommandInputResponse input,
+        @OutputCustomType.Parameter("output") MigrateSyncCompleteCommandOutputResponse output,
+        @OutputCustomType.Parameter("state") String state) {
         this.commandType = commandType;
         this.errors = errors;
         this.input = input;
@@ -121,27 +121,27 @@ public final class MigrateSyncCompleteCommandPropertiesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setCommandType(String commandType) {
+        public Builder commandType(String commandType) {
             this.commandType = Objects.requireNonNull(commandType);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable MigrateSyncCompleteCommandInputResponse input) {
+        public Builder input(@Nullable MigrateSyncCompleteCommandInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(MigrateSyncCompleteCommandOutputResponse output) {
+        public Builder output(MigrateSyncCompleteCommandOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

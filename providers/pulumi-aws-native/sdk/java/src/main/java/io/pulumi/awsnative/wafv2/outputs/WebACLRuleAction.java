@@ -19,12 +19,12 @@ public final class WebACLRuleAction {
     private final @Nullable WebACLCaptchaAction captcha;
     private final @Nullable WebACLCountAction count;
 
-    @OutputCustomType.Constructor({"allow","block","captcha","count"})
+    @OutputCustomType.Constructor
     private WebACLRuleAction(
-        @Nullable WebACLAllowAction allow,
-        @Nullable WebACLBlockAction block,
-        @Nullable WebACLCaptchaAction captcha,
-        @Nullable WebACLCountAction count) {
+        @OutputCustomType.Parameter("allow") @Nullable WebACLAllowAction allow,
+        @OutputCustomType.Parameter("block") @Nullable WebACLBlockAction block,
+        @OutputCustomType.Parameter("captcha") @Nullable WebACLCaptchaAction captcha,
+        @OutputCustomType.Parameter("count") @Nullable WebACLCountAction count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;
@@ -70,22 +70,22 @@ public final class WebACLRuleAction {
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable WebACLAllowAction allow) {
+        public Builder allow(@Nullable WebACLAllowAction allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable WebACLBlockAction block) {
+        public Builder block(@Nullable WebACLBlockAction block) {
             this.block = block;
             return this;
         }
 
-        public Builder setCaptcha(@Nullable WebACLCaptchaAction captcha) {
+        public Builder captcha(@Nullable WebACLCaptchaAction captcha) {
             this.captcha = captcha;
             return this;
         }
 
-        public Builder setCount(@Nullable WebACLCountAction count) {
+        public Builder count(@Nullable WebACLCountAction count) {
             this.count = count;
             return this;
         }

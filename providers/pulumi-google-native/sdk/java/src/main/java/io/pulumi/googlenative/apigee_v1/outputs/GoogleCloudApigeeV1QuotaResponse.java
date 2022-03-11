@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1QuotaResponse {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor({"interval","limit","timeUnit"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1QuotaResponse(
-        String interval,
-        String limit,
-        String timeUnit) {
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("limit") String limit,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
         this.interval = interval;
         this.limit = limit;
         this.timeUnit = timeUnit;
@@ -81,17 +81,17 @@ public final class GoogleCloudApigeeV1QuotaResponse {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setLimit(String limit) {
+        public Builder limit(String limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }

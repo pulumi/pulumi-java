@@ -22,10 +22,10 @@ public final class DefaultKeyResponse {
      */
     private final @Nullable String policyName;
 
-    @OutputCustomType.Constructor({"label","policyName"})
+    @OutputCustomType.Constructor
     private DefaultKeyResponse(
-        @Nullable String label,
-        @Nullable String policyName) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName) {
         this.label = label;
         this.policyName = policyName;
     }
@@ -67,12 +67,12 @@ public final class DefaultKeyResponse {
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }

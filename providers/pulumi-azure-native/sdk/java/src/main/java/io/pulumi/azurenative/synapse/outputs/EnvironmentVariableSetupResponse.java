@@ -26,11 +26,11 @@ public final class EnvironmentVariableSetupResponse {
      */
     private final String variableValue;
 
-    @OutputCustomType.Constructor({"type","variableName","variableValue"})
+    @OutputCustomType.Constructor
     private EnvironmentVariableSetupResponse(
-        String type,
-        String variableName,
-        String variableValue) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("variableName") String variableName,
+        @OutputCustomType.Parameter("variableValue") String variableValue) {
         this.type = type;
         this.variableName = variableName;
         this.variableValue = variableValue;
@@ -83,17 +83,17 @@ public final class EnvironmentVariableSetupResponse {
     	      this.variableValue = defaults.variableValue;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
-        public Builder setVariableValue(String variableValue) {
+        public Builder variableValue(String variableValue) {
             this.variableValue = Objects.requireNonNull(variableValue);
             return this;
         }

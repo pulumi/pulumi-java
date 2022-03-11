@@ -30,12 +30,12 @@ public final class JitNetworkAccessRequestResponse {
     private final String startTimeUtc;
     private final List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"justification","requestor","startTimeUtc","virtualMachines"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessRequestResponse(
-        @Nullable String justification,
-        String requestor,
-        String startTimeUtc,
-        List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
+        @OutputCustomType.Parameter("justification") @Nullable String justification,
+        @OutputCustomType.Parameter("requestor") String requestor,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("virtualMachines") List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
         this.justification = justification;
         this.requestor = requestor;
         this.startTimeUtc = startTimeUtc;
@@ -93,22 +93,22 @@ public final class JitNetworkAccessRequestResponse {
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setJustification(@Nullable String justification) {
+        public Builder justification(@Nullable String justification) {
             this.justification = justification;
             return this;
         }
 
-        public Builder setRequestor(String requestor) {
+        public Builder requestor(String requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setVirtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
+        public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }

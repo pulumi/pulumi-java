@@ -92,22 +92,22 @@ public final class GetJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"correlationData","created","description","endTime","id","input","lastModified","name","outputs","priority","startTime","state","systemData","type"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable Map<String,String> correlationData,
-        String created,
-        @Nullable String description,
-        String endTime,
-        String id,
-        Object input,
-        String lastModified,
-        String name,
-        List<JobOutputAssetResponse> outputs,
-        @Nullable String priority,
-        String startTime,
-        String state,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("correlationData") @Nullable Map<String,String> correlationData,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") Object input,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") List<JobOutputAssetResponse> outputs,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.correlationData = correlationData;
         this.created = created;
         this.description = description;
@@ -269,72 +269,72 @@ public final class GetJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCorrelationData(@Nullable Map<String,String> correlationData) {
+        public Builder correlationData(@Nullable Map<String,String> correlationData) {
             this.correlationData = correlationData;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInput(Object input) {
+        public Builder input(Object input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputs(List<JobOutputAssetResponse> outputs) {
+        public Builder outputs(List<JobOutputAssetResponse> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

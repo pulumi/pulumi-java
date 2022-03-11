@@ -74,22 +74,22 @@ public final class PackageStoreArgs extends io.pulumi.resources.ResourceArgs {
     	      this.packageStoreLinkedService = defaults.packageStoreLinkedService;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPackageStoreLinkedService(Input<EntityReferenceArgs> packageStoreLinkedService) {
+        public Builder packageStoreLinkedService(Input<EntityReferenceArgs> packageStoreLinkedService) {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
         }
 
-        public Builder setPackageStoreLinkedService(EntityReferenceArgs packageStoreLinkedService) {
+        public Builder packageStoreLinkedService(EntityReferenceArgs packageStoreLinkedService) {
             this.packageStoreLinkedService = Input.of(Objects.requireNonNull(packageStoreLinkedService));
             return this;
         }

@@ -22,10 +22,10 @@ public final class DashboardSourceTemplate {
      */
     private final List<DashboardDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor({"arn","dataSetReferences"})
+    @OutputCustomType.Constructor
     private DashboardSourceTemplate(
-        String arn,
-        List<DashboardDataSetReference> dataSetReferences) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataSetReferences") List<DashboardDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }
@@ -67,12 +67,12 @@ public final class DashboardSourceTemplate {
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDataSetReferences(List<DashboardDataSetReference> dataSetReferences) {
+        public Builder dataSetReferences(List<DashboardDataSetReference> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }

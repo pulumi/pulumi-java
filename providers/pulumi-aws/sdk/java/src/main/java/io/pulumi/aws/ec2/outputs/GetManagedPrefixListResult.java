@@ -58,18 +58,18 @@ public final class GetManagedPrefixListResult {
     private final Map<String,String> tags;
     private final Integer version;
 
-    @OutputCustomType.Constructor({"addressFamily","arn","entries","filters","id","maxEntries","name","ownerId","tags","version"})
+    @OutputCustomType.Constructor
     private GetManagedPrefixListResult(
-        String addressFamily,
-        String arn,
-        List<GetManagedPrefixListEntry> entries,
-        @Nullable List<GetManagedPrefixListFilter> filters,
-        String id,
-        Integer maxEntries,
-        String name,
-        String ownerId,
-        Map<String,String> tags,
-        Integer version) {
+        @OutputCustomType.Parameter("addressFamily") String addressFamily,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("entries") List<GetManagedPrefixListEntry> entries,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetManagedPrefixListFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maxEntries") Integer maxEntries,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.addressFamily = addressFamily;
         this.arn = arn;
         this.entries = entries;
@@ -183,52 +183,52 @@ public final class GetManagedPrefixListResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAddressFamily(String addressFamily) {
+        public Builder addressFamily(String addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setEntries(List<GetManagedPrefixListEntry> entries) {
+        public Builder entries(List<GetManagedPrefixListEntry> entries) {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetManagedPrefixListFilter> filters) {
+        public Builder filters(@Nullable List<GetManagedPrefixListFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaxEntries(Integer maxEntries) {
+        public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

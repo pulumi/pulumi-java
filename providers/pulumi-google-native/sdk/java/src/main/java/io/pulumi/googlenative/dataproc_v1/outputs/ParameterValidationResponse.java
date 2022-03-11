@@ -21,10 +21,10 @@ public final class ParameterValidationResponse {
      */
     private final ValueValidationResponse values;
 
-    @OutputCustomType.Constructor({"regex","values"})
+    @OutputCustomType.Constructor
     private ParameterValidationResponse(
-        RegexValidationResponse regex,
-        ValueValidationResponse values) {
+        @OutputCustomType.Parameter("regex") RegexValidationResponse regex,
+        @OutputCustomType.Parameter("values") ValueValidationResponse values) {
         this.regex = regex;
         this.values = values;
     }
@@ -66,12 +66,12 @@ public final class ParameterValidationResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setRegex(RegexValidationResponse regex) {
+        public Builder regex(RegexValidationResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
 
-        public Builder setValues(ValueValidationResponse values) {
+        public Builder values(ValueValidationResponse values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

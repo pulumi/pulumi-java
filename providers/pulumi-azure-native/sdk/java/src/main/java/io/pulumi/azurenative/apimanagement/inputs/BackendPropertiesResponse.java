@@ -57,7 +57,7 @@ public final class BackendPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.serviceFabricCluster = defaults.serviceFabricCluster;
         }
 
-        public Builder setServiceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
+        public Builder serviceFabricCluster(@Nullable BackendServiceFabricClusterPropertiesResponse serviceFabricCluster) {
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }

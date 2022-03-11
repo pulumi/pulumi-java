@@ -160,72 +160,72 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
+        public Builder headerAction(@Nullable Input<HttpHeaderActionArgs> headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable HttpHeaderActionArgs headerAction) {
+        public Builder headerAction(@Nullable HttpHeaderActionArgs headerAction) {
             this.headerAction = Input.ofNullable(headerAction);
             return this;
         }
 
-        public Builder setMatchRules(@Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules) {
+        public Builder matchRules(@Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
-        public Builder setMatchRules(@Nullable List<HttpRouteRuleMatchArgs> matchRules) {
+        public Builder matchRules(@Nullable List<HttpRouteRuleMatchArgs> matchRules) {
             this.matchRules = Input.ofNullable(matchRules);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setRouteAction(@Nullable HttpRouteActionArgs routeAction) {
+        public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
             this.routeAction = Input.ofNullable(routeAction);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
+        public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }

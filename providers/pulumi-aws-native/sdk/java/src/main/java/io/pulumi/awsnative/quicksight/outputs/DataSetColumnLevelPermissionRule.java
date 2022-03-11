@@ -14,10 +14,10 @@ public final class DataSetColumnLevelPermissionRule {
     private final @Nullable List<String> columnNames;
     private final @Nullable List<String> principals;
 
-    @OutputCustomType.Constructor({"columnNames","principals"})
+    @OutputCustomType.Constructor
     private DataSetColumnLevelPermissionRule(
-        @Nullable List<String> columnNames,
-        @Nullable List<String> principals) {
+        @OutputCustomType.Parameter("columnNames") @Nullable List<String> columnNames,
+        @OutputCustomType.Parameter("principals") @Nullable List<String> principals) {
         this.columnNames = columnNames;
         this.principals = principals;
     }
@@ -51,12 +51,12 @@ public final class DataSetColumnLevelPermissionRule {
     	      this.principals = defaults.principals;
         }
 
-        public Builder setColumnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable List<String> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setPrincipals(@Nullable List<String> principals) {
+        public Builder principals(@Nullable List<String> principals) {
             this.principals = principals;
             return this;
         }

@@ -28,13 +28,13 @@ public final class GetVpnAttachmentResult {
     private final @Nullable String transitGatewayId;
     private final @Nullable String vpnConnectionId;
 
-    @OutputCustomType.Constructor({"filters","id","tags","transitGatewayId","vpnConnectionId"})
+    @OutputCustomType.Constructor
     private GetVpnAttachmentResult(
-        @Nullable List<GetVpnAttachmentFilter> filters,
-        String id,
-        Map<String,String> tags,
-        @Nullable String transitGatewayId,
-        @Nullable String vpnConnectionId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpnAttachmentFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId,
+        @OutputCustomType.Parameter("vpnConnectionId") @Nullable String vpnConnectionId) {
         this.filters = filters;
         this.id = id;
         this.tags = tags;
@@ -94,27 +94,27 @@ public final class GetVpnAttachmentResult {
     	      this.vpnConnectionId = defaults.vpnConnectionId;
         }
 
-        public Builder setFilters(@Nullable List<GetVpnAttachmentFilter> filters) {
+        public Builder filters(@Nullable List<GetVpnAttachmentFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setVpnConnectionId(@Nullable String vpnConnectionId) {
+        public Builder vpnConnectionId(@Nullable String vpnConnectionId) {
             this.vpnConnectionId = vpnConnectionId;
             return this;
         }

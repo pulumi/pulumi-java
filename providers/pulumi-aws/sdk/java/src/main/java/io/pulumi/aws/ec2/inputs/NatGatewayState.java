@@ -167,82 +167,82 @@ public final class NatGatewayState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAllocationId(@Nullable Input<String> allocationId) {
+        public Builder allocationId(@Nullable Input<String> allocationId) {
             this.allocationId = allocationId;
             return this;
         }
 
-        public Builder setAllocationId(@Nullable String allocationId) {
+        public Builder allocationId(@Nullable String allocationId) {
             this.allocationId = Input.ofNullable(allocationId);
             return this;
         }
 
-        public Builder setConnectivityType(@Nullable Input<String> connectivityType) {
+        public Builder connectivityType(@Nullable Input<String> connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
 
-        public Builder setConnectivityType(@Nullable String connectivityType) {
+        public Builder connectivityType(@Nullable String connectivityType) {
             this.connectivityType = Input.ofNullable(connectivityType);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setPrivateIp(@Nullable Input<String> privateIp) {
+        public Builder privateIp(@Nullable Input<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
 
-        public Builder setPrivateIp(@Nullable String privateIp) {
+        public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Input.ofNullable(privateIp);
             return this;
         }
 
-        public Builder setPublicIp(@Nullable Input<String> publicIp) {
+        public Builder publicIp(@Nullable Input<String> publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
-        public Builder setPublicIp(@Nullable String publicIp) {
+        public Builder publicIp(@Nullable String publicIp) {
             this.publicIp = Input.ofNullable(publicIp);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

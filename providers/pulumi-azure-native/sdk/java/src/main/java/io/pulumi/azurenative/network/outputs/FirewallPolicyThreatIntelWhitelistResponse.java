@@ -22,10 +22,10 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
      */
     private final @Nullable List<String> ipAddresses;
 
-    @OutputCustomType.Constructor({"fqdns","ipAddresses"})
+    @OutputCustomType.Constructor
     private FirewallPolicyThreatIntelWhitelistResponse(
-        @Nullable List<String> fqdns,
-        @Nullable List<String> ipAddresses) {
+        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses) {
         this.fqdns = fqdns;
         this.ipAddresses = ipAddresses;
     }
@@ -67,12 +67,12 @@ public final class FirewallPolicyThreatIntelWhitelistResponse {
     	      this.ipAddresses = defaults.ipAddresses;
         }
 
-        public Builder setFqdns(@Nullable List<String> fqdns) {
+        public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }

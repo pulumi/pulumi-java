@@ -28,11 +28,11 @@ public final class AutomationRuleRunPlaybookActionResponse {
      */
     private final Integer order;
 
-    @OutputCustomType.Constructor({"actionConfiguration","actionType","order"})
+    @OutputCustomType.Constructor
     private AutomationRuleRunPlaybookActionResponse(
-        AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration,
-        String actionType,
-        Integer order) {
+        @OutputCustomType.Parameter("actionConfiguration") AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration,
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("order") Integer order) {
         this.actionConfiguration = actionConfiguration;
         this.actionType = actionType;
         this.order = order;
@@ -85,17 +85,17 @@ public final class AutomationRuleRunPlaybookActionResponse {
     	      this.order = defaults.order;
         }
 
-        public Builder setActionConfiguration(AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration) {
+        public Builder actionConfiguration(AutomationRuleRunPlaybookActionResponseActionConfiguration actionConfiguration) {
             this.actionConfiguration = Objects.requireNonNull(actionConfiguration);
             return this;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }

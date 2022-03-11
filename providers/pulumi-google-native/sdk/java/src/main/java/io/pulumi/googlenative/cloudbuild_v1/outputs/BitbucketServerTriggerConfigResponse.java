@@ -43,14 +43,14 @@ public final class BitbucketServerTriggerConfigResponse {
      */
     private final String repoSlug;
 
-    @OutputCustomType.Constructor({"bitbucketServerConfig","bitbucketServerConfigResource","projectKey","pullRequest","push","repoSlug"})
+    @OutputCustomType.Constructor
     private BitbucketServerTriggerConfigResponse(
-        BitbucketServerConfigResponse bitbucketServerConfig,
-        String bitbucketServerConfigResource,
-        String projectKey,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push,
-        String repoSlug) {
+        @OutputCustomType.Parameter("bitbucketServerConfig") BitbucketServerConfigResponse bitbucketServerConfig,
+        @OutputCustomType.Parameter("bitbucketServerConfigResource") String bitbucketServerConfigResource,
+        @OutputCustomType.Parameter("projectKey") String projectKey,
+        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @OutputCustomType.Parameter("push") PushFilterResponse push,
+        @OutputCustomType.Parameter("repoSlug") String repoSlug) {
         this.bitbucketServerConfig = bitbucketServerConfig;
         this.bitbucketServerConfigResource = bitbucketServerConfigResource;
         this.projectKey = projectKey;
@@ -132,32 +132,32 @@ public final class BitbucketServerTriggerConfigResponse {
     	      this.repoSlug = defaults.repoSlug;
         }
 
-        public Builder setBitbucketServerConfig(BitbucketServerConfigResponse bitbucketServerConfig) {
+        public Builder bitbucketServerConfig(BitbucketServerConfigResponse bitbucketServerConfig) {
             this.bitbucketServerConfig = Objects.requireNonNull(bitbucketServerConfig);
             return this;
         }
 
-        public Builder setBitbucketServerConfigResource(String bitbucketServerConfigResource) {
+        public Builder bitbucketServerConfigResource(String bitbucketServerConfigResource) {
             this.bitbucketServerConfigResource = Objects.requireNonNull(bitbucketServerConfigResource);
             return this;
         }
 
-        public Builder setProjectKey(String projectKey) {
+        public Builder projectKey(String projectKey) {
             this.projectKey = Objects.requireNonNull(projectKey);
             return this;
         }
 
-        public Builder setPullRequest(PullRequestFilterResponse pullRequest) {
+        public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             this.pullRequest = Objects.requireNonNull(pullRequest);
             return this;
         }
 
-        public Builder setPush(PushFilterResponse push) {
+        public Builder push(PushFilterResponse push) {
             this.push = Objects.requireNonNull(push);
             return this;
         }
 
-        public Builder setRepoSlug(String repoSlug) {
+        public Builder repoSlug(String repoSlug) {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }

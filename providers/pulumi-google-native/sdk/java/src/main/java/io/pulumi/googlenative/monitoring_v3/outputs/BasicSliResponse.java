@@ -38,13 +38,13 @@ public final class BasicSliResponse {
      */
     private final List<String> version;
 
-    @OutputCustomType.Constructor({"availability","latency","location","method","version"})
+    @OutputCustomType.Constructor
     private BasicSliResponse(
-        AvailabilityCriteriaResponse availability,
-        LatencyCriteriaResponse latency,
-        List<String> location,
-        List<String> method,
-        List<String> version) {
+        @OutputCustomType.Parameter("availability") AvailabilityCriteriaResponse availability,
+        @OutputCustomType.Parameter("latency") LatencyCriteriaResponse latency,
+        @OutputCustomType.Parameter("location") List<String> location,
+        @OutputCustomType.Parameter("method") List<String> method,
+        @OutputCustomType.Parameter("version") List<String> version) {
         this.availability = availability;
         this.latency = latency;
         this.location = location;
@@ -116,27 +116,27 @@ public final class BasicSliResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAvailability(AvailabilityCriteriaResponse availability) {
+        public Builder availability(AvailabilityCriteriaResponse availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setLatency(LatencyCriteriaResponse latency) {
+        public Builder latency(LatencyCriteriaResponse latency) {
             this.latency = Objects.requireNonNull(latency);
             return this;
         }
 
-        public Builder setLocation(List<String> location) {
+        public Builder location(List<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMethod(List<String> method) {
+        public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setVersion(List<String> version) {
+        public Builder version(List<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

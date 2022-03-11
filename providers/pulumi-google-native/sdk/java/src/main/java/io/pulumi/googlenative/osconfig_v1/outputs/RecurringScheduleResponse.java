@@ -59,17 +59,17 @@ public final class RecurringScheduleResponse {
      */
     private final WeeklyScheduleResponse weekly;
 
-    @OutputCustomType.Constructor({"endTime","frequency","lastExecuteTime","monthly","nextExecuteTime","startTime","timeOfDay","timeZone","weekly"})
+    @OutputCustomType.Constructor
     private RecurringScheduleResponse(
-        String endTime,
-        String frequency,
-        String lastExecuteTime,
-        MonthlyScheduleResponse monthly,
-        String nextExecuteTime,
-        String startTime,
-        TimeOfDayResponse timeOfDay,
-        TimeZoneResponse timeZone,
-        WeeklyScheduleResponse weekly) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("lastExecuteTime") String lastExecuteTime,
+        @OutputCustomType.Parameter("monthly") MonthlyScheduleResponse monthly,
+        @OutputCustomType.Parameter("nextExecuteTime") String nextExecuteTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeOfDay") TimeOfDayResponse timeOfDay,
+        @OutputCustomType.Parameter("timeZone") TimeZoneResponse timeZone,
+        @OutputCustomType.Parameter("weekly") WeeklyScheduleResponse weekly) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.lastExecuteTime = lastExecuteTime;
@@ -181,47 +181,47 @@ public final class RecurringScheduleResponse {
     	      this.weekly = defaults.weekly;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setLastExecuteTime(String lastExecuteTime) {
+        public Builder lastExecuteTime(String lastExecuteTime) {
             this.lastExecuteTime = Objects.requireNonNull(lastExecuteTime);
             return this;
         }
 
-        public Builder setMonthly(MonthlyScheduleResponse monthly) {
+        public Builder monthly(MonthlyScheduleResponse monthly) {
             this.monthly = Objects.requireNonNull(monthly);
             return this;
         }
 
-        public Builder setNextExecuteTime(String nextExecuteTime) {
+        public Builder nextExecuteTime(String nextExecuteTime) {
             this.nextExecuteTime = Objects.requireNonNull(nextExecuteTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimeOfDay(TimeOfDayResponse timeOfDay) {
+        public Builder timeOfDay(TimeOfDayResponse timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
-        public Builder setTimeZone(TimeZoneResponse timeZone) {
+        public Builder timeZone(TimeZoneResponse timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setWeekly(WeeklyScheduleResponse weekly) {
+        public Builder weekly(WeeklyScheduleResponse weekly) {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
         }

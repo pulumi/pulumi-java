@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
      */
     private final String dialogflowConversation;
 
-    @OutputCustomType.Constructor({"audioUri","dialogflowConversation"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1DialogflowSourceResponse(
-        String audioUri,
-        String dialogflowConversation) {
+        @OutputCustomType.Parameter("audioUri") String audioUri,
+        @OutputCustomType.Parameter("dialogflowConversation") String dialogflowConversation) {
         this.audioUri = audioUri;
         this.dialogflowConversation = dialogflowConversation;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceResponse {
     	      this.dialogflowConversation = defaults.dialogflowConversation;
         }
 
-        public Builder setAudioUri(String audioUri) {
+        public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
 
-        public Builder setDialogflowConversation(String dialogflowConversation) {
+        public Builder dialogflowConversation(String dialogflowConversation) {
             this.dialogflowConversation = Objects.requireNonNull(dialogflowConversation);
             return this;
         }

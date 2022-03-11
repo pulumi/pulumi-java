@@ -48,15 +48,15 @@ public final class GetApplicationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowUpdates","defaultVersion","displayName","etag","id","name","type"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable Boolean allowUpdates,
-        @Nullable String defaultVersion,
-        @Nullable String displayName,
-        String etag,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("allowUpdates") @Nullable Boolean allowUpdates,
+        @OutputCustomType.Parameter("defaultVersion") @Nullable String defaultVersion,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowUpdates = allowUpdates;
         this.defaultVersion = defaultVersion;
         this.displayName = displayName;
@@ -148,37 +148,37 @@ public final class GetApplicationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowUpdates(@Nullable Boolean allowUpdates) {
+        public Builder allowUpdates(@Nullable Boolean allowUpdates) {
             this.allowUpdates = allowUpdates;
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable String defaultVersion) {
+        public Builder defaultVersion(@Nullable String defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

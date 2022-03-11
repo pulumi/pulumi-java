@@ -38,13 +38,13 @@ public final class GuestOSCustomizationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"dnsServers","hostName","password","policyId","username"})
+    @OutputCustomType.Constructor
     private GuestOSCustomizationResponse(
-        @Nullable List<String> dnsServers,
-        @Nullable String hostName,
-        @Nullable String password,
-        @Nullable String policyId,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.dnsServers = dnsServers;
         this.hostName = hostName;
         this.password = password;
@@ -116,27 +116,27 @@ public final class GuestOSCustomizationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

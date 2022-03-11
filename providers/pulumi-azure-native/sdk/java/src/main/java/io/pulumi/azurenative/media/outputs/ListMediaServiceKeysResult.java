@@ -37,13 +37,13 @@ public final class ListMediaServiceKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryAuthEndpoint","primaryKey","scope","secondaryAuthEndpoint","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListMediaServiceKeysResult(
-        @Nullable String primaryAuthEndpoint,
-        @Nullable String primaryKey,
-        @Nullable String scope,
-        @Nullable String secondaryAuthEndpoint,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryAuthEndpoint") @Nullable String primaryAuthEndpoint,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("secondaryAuthEndpoint") @Nullable String secondaryAuthEndpoint,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryAuthEndpoint = primaryAuthEndpoint;
         this.primaryKey = primaryKey;
         this.scope = scope;
@@ -115,27 +115,27 @@ public final class ListMediaServiceKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryAuthEndpoint(@Nullable String primaryAuthEndpoint) {
+        public Builder primaryAuthEndpoint(@Nullable String primaryAuthEndpoint) {
             this.primaryAuthEndpoint = primaryAuthEndpoint;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setSecondaryAuthEndpoint(@Nullable String secondaryAuthEndpoint) {
+        public Builder secondaryAuthEndpoint(@Nullable String secondaryAuthEndpoint) {
             this.secondaryAuthEndpoint = secondaryAuthEndpoint;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

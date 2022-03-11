@@ -32,12 +32,12 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String userIdentity;
 
-    @OutputCustomType.Constructor({"keyName","keyVaultUri","keyVersion","userIdentity"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String keyName,
-        String keyVaultUri,
-        @Nullable String keyVersion,
-        @Nullable String userIdentity) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("userIdentity") @Nullable String userIdentity) {
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
         this.keyVersion = keyVersion;
@@ -99,22 +99,22 @@ public final class KeyVaultPropertiesResponse {
     	      this.userIdentity = defaults.userIdentity;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setUserIdentity(@Nullable String userIdentity) {
+        public Builder userIdentity(@Nullable String userIdentity) {
             this.userIdentity = userIdentity;
             return this;
         }

@@ -90,32 +90,32 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.inputTrack = defaults.inputTrack;
         }
 
-        public Builder setAtomKey(Input<String> atomKey) {
+        public Builder atomKey(Input<String> atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
-        public Builder setAtomKey(String atomKey) {
+        public Builder atomKey(String atomKey) {
             this.atomKey = Input.of(Objects.requireNonNull(atomKey));
             return this;
         }
 
-        public Builder setInputKey(Input<String> inputKey) {
+        public Builder inputKey(Input<String> inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
-        public Builder setInputKey(String inputKey) {
+        public Builder inputKey(String inputKey) {
             this.inputKey = Input.of(Objects.requireNonNull(inputKey));
             return this;
         }
 
-        public Builder setInputTrack(Input<Integer> inputTrack) {
+        public Builder inputTrack(Input<Integer> inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }
 
-        public Builder setInputTrack(Integer inputTrack) {
+        public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Input.of(Objects.requireNonNull(inputTrack));
             return this;
         }

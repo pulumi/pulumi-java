@@ -34,12 +34,12 @@ public final class OptionsResponse {
      */
     private final ValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"asyncOptions","inputMappings","nameProperty","validationOptions"})
+    @OutputCustomType.Constructor
     private OptionsResponse(
-        List<AsyncOptionsResponse> asyncOptions,
-        List<InputMappingResponse> inputMappings,
-        String nameProperty,
-        ValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("asyncOptions") List<AsyncOptionsResponse> asyncOptions,
+        @OutputCustomType.Parameter("inputMappings") List<InputMappingResponse> inputMappings,
+        @OutputCustomType.Parameter("nameProperty") String nameProperty,
+        @OutputCustomType.Parameter("validationOptions") ValidationOptionsResponse validationOptions) {
         this.asyncOptions = asyncOptions;
         this.inputMappings = inputMappings;
         this.nameProperty = nameProperty;
@@ -101,22 +101,22 @@ public final class OptionsResponse {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setAsyncOptions(List<AsyncOptionsResponse> asyncOptions) {
+        public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
             this.asyncOptions = Objects.requireNonNull(asyncOptions);
             return this;
         }
 
-        public Builder setInputMappings(List<InputMappingResponse> inputMappings) {
+        public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             this.inputMappings = Objects.requireNonNull(inputMappings);
             return this;
         }
 
-        public Builder setNameProperty(String nameProperty) {
+        public Builder nameProperty(String nameProperty) {
             this.nameProperty = Objects.requireNonNull(nameProperty);
             return this;
         }
 
-        public Builder setValidationOptions(ValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }

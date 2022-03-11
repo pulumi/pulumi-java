@@ -18,12 +18,12 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
     private final @Nullable Integer scaleOutCooldown;
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"disableScaleIn","scaleInCooldown","scaleOutCooldown","targetValue"})
+    @OutputCustomType.Constructor
     private GlobalTableTargetTrackingScalingPolicyConfiguration(
-        @Nullable Boolean disableScaleIn,
-        @Nullable Integer scaleInCooldown,
-        @Nullable Integer scaleOutCooldown,
-        Double targetValue) {
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.disableScaleIn = disableScaleIn;
         this.scaleInCooldown = scaleInCooldown;
         this.scaleOutCooldown = scaleOutCooldown;
@@ -69,22 +69,22 @@ public final class GlobalTableTargetTrackingScalingPolicyConfiguration {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setDisableScaleIn(@Nullable Boolean disableScaleIn) {
+        public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
 
-        public Builder setScaleInCooldown(@Nullable Integer scaleInCooldown) {
+        public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
 
-        public Builder setScaleOutCooldown(@Nullable Integer scaleOutCooldown) {
+        public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

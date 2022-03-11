@@ -104,42 +104,42 @@ public final class ClusterStepHadoopJarStepGetArgs extends io.pulumi.resources.R
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setJar(Input<String> jar) {
+        public Builder jar(Input<String> jar) {
             this.jar = Objects.requireNonNull(jar);
             return this;
         }
 
-        public Builder setJar(String jar) {
+        public Builder jar(String jar) {
             this.jar = Input.of(Objects.requireNonNull(jar));
             return this;
         }
 
-        public Builder setMainClass(@Nullable Input<String> mainClass) {
+        public Builder mainClass(@Nullable Input<String> mainClass) {
             this.mainClass = mainClass;
             return this;
         }
 
-        public Builder setMainClass(@Nullable String mainClass) {
+        public Builder mainClass(@Nullable String mainClass) {
             this.mainClass = Input.ofNullable(mainClass);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

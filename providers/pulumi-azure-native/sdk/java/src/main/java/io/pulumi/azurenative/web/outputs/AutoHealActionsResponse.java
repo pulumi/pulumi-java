@@ -29,11 +29,11 @@ public final class AutoHealActionsResponse {
      */
     private final @Nullable String minProcessExecutionTime;
 
-    @OutputCustomType.Constructor({"actionType","customAction","minProcessExecutionTime"})
+    @OutputCustomType.Constructor
     private AutoHealActionsResponse(
-        @Nullable String actionType,
-        @Nullable AutoHealCustomActionResponse customAction,
-        @Nullable String minProcessExecutionTime) {
+        @OutputCustomType.Parameter("actionType") @Nullable String actionType,
+        @OutputCustomType.Parameter("customAction") @Nullable AutoHealCustomActionResponse customAction,
+        @OutputCustomType.Parameter("minProcessExecutionTime") @Nullable String minProcessExecutionTime) {
         this.actionType = actionType;
         this.customAction = customAction;
         this.minProcessExecutionTime = minProcessExecutionTime;
@@ -86,17 +86,17 @@ public final class AutoHealActionsResponse {
     	      this.minProcessExecutionTime = defaults.minProcessExecutionTime;
         }
 
-        public Builder setActionType(@Nullable String actionType) {
+        public Builder actionType(@Nullable String actionType) {
             this.actionType = actionType;
             return this;
         }
 
-        public Builder setCustomAction(@Nullable AutoHealCustomActionResponse customAction) {
+        public Builder customAction(@Nullable AutoHealCustomActionResponse customAction) {
             this.customAction = customAction;
             return this;
         }
 
-        public Builder setMinProcessExecutionTime(@Nullable String minProcessExecutionTime) {
+        public Builder minProcessExecutionTime(@Nullable String minProcessExecutionTime) {
             this.minProcessExecutionTime = minProcessExecutionTime;
             return this;
         }

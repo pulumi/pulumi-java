@@ -33,12 +33,12 @@ public final class PSCredentialExecutionParameterResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"name","password","type","username"})
+    @OutputCustomType.Constructor
     private PSCredentialExecutionParameterResponse(
-        String name,
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.name = name;
         this.password = password;
         this.type = type;
@@ -101,22 +101,22 @@ public final class PSCredentialExecutionParameterResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

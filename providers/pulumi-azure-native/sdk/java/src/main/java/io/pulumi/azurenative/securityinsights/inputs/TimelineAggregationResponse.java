@@ -73,12 +73,12 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
     	      this.kind = defaults.kind;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

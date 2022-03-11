@@ -43,14 +43,14 @@ public final class DataSourcePrecedenceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"dataSourceReferenceId","dataSourceType","id","name","precedence","status"})
+    @OutputCustomType.Constructor
     private DataSourcePrecedenceResponse(
-        String dataSourceReferenceId,
-        String dataSourceType,
-        Integer id,
-        String name,
-        @Nullable Integer precedence,
-        String status) {
+        @OutputCustomType.Parameter("dataSourceReferenceId") String dataSourceReferenceId,
+        @OutputCustomType.Parameter("dataSourceType") String dataSourceType,
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("precedence") @Nullable Integer precedence,
+        @OutputCustomType.Parameter("status") String status) {
         this.dataSourceReferenceId = dataSourceReferenceId;
         this.dataSourceType = dataSourceType;
         this.id = id;
@@ -132,32 +132,32 @@ public final class DataSourcePrecedenceResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDataSourceReferenceId(String dataSourceReferenceId) {
+        public Builder dataSourceReferenceId(String dataSourceReferenceId) {
             this.dataSourceReferenceId = Objects.requireNonNull(dataSourceReferenceId);
             return this;
         }
 
-        public Builder setDataSourceType(String dataSourceType) {
+        public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = Objects.requireNonNull(dataSourceType);
             return this;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrecedence(@Nullable Integer precedence) {
+        public Builder precedence(@Nullable Integer precedence) {
             this.precedence = precedence;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

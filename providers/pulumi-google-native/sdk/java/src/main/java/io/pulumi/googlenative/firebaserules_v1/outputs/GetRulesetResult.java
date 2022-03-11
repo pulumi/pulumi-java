@@ -32,12 +32,12 @@ public final class GetRulesetResult {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor({"createTime","metadata","name","source"})
+    @OutputCustomType.Constructor
     private GetRulesetResult(
-        String createTime,
-        MetadataResponse metadata,
-        String name,
-        SourceResponse source) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") SourceResponse source) {
         this.createTime = createTime;
         this.metadata = metadata;
         this.name = name;
@@ -99,22 +99,22 @@ public final class GetRulesetResult {
     	      this.source = defaults.source;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSource(SourceResponse source) {
+        public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

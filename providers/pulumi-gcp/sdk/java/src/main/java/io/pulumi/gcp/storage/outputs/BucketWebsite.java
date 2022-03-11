@@ -24,10 +24,10 @@ public final class BucketWebsite {
      */
     private final @Nullable String notFoundPage;
 
-    @OutputCustomType.Constructor({"mainPageSuffix","notFoundPage"})
+    @OutputCustomType.Constructor
     private BucketWebsite(
-        @Nullable String mainPageSuffix,
-        @Nullable String notFoundPage) {
+        @OutputCustomType.Parameter("mainPageSuffix") @Nullable String mainPageSuffix,
+        @OutputCustomType.Parameter("notFoundPage") @Nullable String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }
@@ -71,12 +71,12 @@ public final class BucketWebsite {
     	      this.notFoundPage = defaults.notFoundPage;
         }
 
-        public Builder setMainPageSuffix(@Nullable String mainPageSuffix) {
+        public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
             this.mainPageSuffix = mainPageSuffix;
             return this;
         }
 
-        public Builder setNotFoundPage(@Nullable String notFoundPage) {
+        public Builder notFoundPage(@Nullable String notFoundPage) {
             this.notFoundPage = notFoundPage;
             return this;
         }

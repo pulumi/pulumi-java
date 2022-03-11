@@ -91,17 +91,17 @@ public final class GooglePrivacyDlpV2AuxiliaryTableResponse extends io.pulumi.re
     	      this.table = defaults.table;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdFieldResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setRelativeFrequency(GooglePrivacyDlpV2FieldIdResponse relativeFrequency) {
+        public Builder relativeFrequency(GooglePrivacyDlpV2FieldIdResponse relativeFrequency) {
             this.relativeFrequency = Objects.requireNonNull(relativeFrequency);
             return this;
         }
 
-        public Builder setTable(GooglePrivacyDlpV2BigQueryTableResponse table) {
+        public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

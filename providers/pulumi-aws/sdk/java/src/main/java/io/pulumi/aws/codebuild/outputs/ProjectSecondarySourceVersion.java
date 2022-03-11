@@ -20,10 +20,10 @@ public final class ProjectSecondarySourceVersion {
      */
     private final String sourceVersion;
 
-    @OutputCustomType.Constructor({"sourceIdentifier","sourceVersion"})
+    @OutputCustomType.Constructor
     private ProjectSecondarySourceVersion(
-        String sourceIdentifier,
-        String sourceVersion) {
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @OutputCustomType.Parameter("sourceVersion") String sourceVersion) {
         this.sourceIdentifier = sourceIdentifier;
         this.sourceVersion = sourceVersion;
     }
@@ -65,12 +65,12 @@ public final class ProjectSecondarySourceVersion {
     	      this.sourceVersion = defaults.sourceVersion;
         }
 
-        public Builder setSourceIdentifier(String sourceIdentifier) {
+        public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
-        public Builder setSourceVersion(String sourceVersion) {
+        public Builder sourceVersion(String sourceVersion) {
             this.sourceVersion = Objects.requireNonNull(sourceVersion);
             return this;
         }

@@ -91,32 +91,32 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
     	      this.groupIds = defaults.groupIds;
         }
 
-        public Builder setCustomEmailSubject(@Nullable Input<String> customEmailSubject) {
+        public Builder customEmailSubject(@Nullable Input<String> customEmailSubject) {
             this.customEmailSubject = customEmailSubject;
             return this;
         }
 
-        public Builder setCustomEmailSubject(@Nullable String customEmailSubject) {
+        public Builder customEmailSubject(@Nullable String customEmailSubject) {
             this.customEmailSubject = Input.ofNullable(customEmailSubject);
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable Input<String> customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable Input<String> customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable String customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = Input.ofNullable(customWebhookPayload);
             return this;
         }
 
-        public Builder setGroupIds(Input<List<String>> groupIds) {
+        public Builder groupIds(Input<List<String>> groupIds) {
             this.groupIds = Objects.requireNonNull(groupIds);
             return this;
         }
 
-        public Builder setGroupIds(List<String> groupIds) {
+        public Builder groupIds(List<String> groupIds) {
             this.groupIds = Input.of(Objects.requireNonNull(groupIds));
             return this;
         }

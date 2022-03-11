@@ -25,19 +25,19 @@ public final class GetTransitGatewayResult {
     private final @Nullable List<String> transitGatewayCidrBlocks;
     private final @Nullable String vpnEcmpSupport;
 
-    @OutputCustomType.Constructor({"associationDefaultRouteTableId","autoAcceptSharedAttachments","defaultRouteTableAssociation","defaultRouteTablePropagation","description","dnsSupport","id","propagationDefaultRouteTableId","tags","transitGatewayCidrBlocks","vpnEcmpSupport"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayResult(
-        @Nullable String associationDefaultRouteTableId,
-        @Nullable String autoAcceptSharedAttachments,
-        @Nullable String defaultRouteTableAssociation,
-        @Nullable String defaultRouteTablePropagation,
-        @Nullable String description,
-        @Nullable String dnsSupport,
-        @Nullable String id,
-        @Nullable String propagationDefaultRouteTableId,
-        @Nullable List<TransitGatewayTag> tags,
-        @Nullable List<String> transitGatewayCidrBlocks,
-        @Nullable String vpnEcmpSupport) {
+        @OutputCustomType.Parameter("associationDefaultRouteTableId") @Nullable String associationDefaultRouteTableId,
+        @OutputCustomType.Parameter("autoAcceptSharedAttachments") @Nullable String autoAcceptSharedAttachments,
+        @OutputCustomType.Parameter("defaultRouteTableAssociation") @Nullable String defaultRouteTableAssociation,
+        @OutputCustomType.Parameter("defaultRouteTablePropagation") @Nullable String defaultRouteTablePropagation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("dnsSupport") @Nullable String dnsSupport,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("propagationDefaultRouteTableId") @Nullable String propagationDefaultRouteTableId,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayTag> tags,
+        @OutputCustomType.Parameter("transitGatewayCidrBlocks") @Nullable List<String> transitGatewayCidrBlocks,
+        @OutputCustomType.Parameter("vpnEcmpSupport") @Nullable String vpnEcmpSupport) {
         this.associationDefaultRouteTableId = associationDefaultRouteTableId;
         this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
         this.defaultRouteTableAssociation = defaultRouteTableAssociation;
@@ -125,57 +125,57 @@ public final class GetTransitGatewayResult {
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
+        public Builder transitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable String vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }

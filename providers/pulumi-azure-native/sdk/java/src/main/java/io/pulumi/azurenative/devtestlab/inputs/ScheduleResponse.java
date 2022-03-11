@@ -303,82 +303,82 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
     	      this.weeklyRecurrence = defaults.weeklyRecurrence;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
+        public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
-        public Builder setHourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
+        public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
+        public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setTaskType(@Nullable String taskType) {
+        public Builder taskType(@Nullable String taskType) {
             this.taskType = taskType;
             return this;
         }
 
-        public Builder setTimeZoneId(@Nullable String timeZoneId) {
+        public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setWeeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
+        public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }

@@ -123,28 +123,28 @@ public final class GetFirewallPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"basePolicy","childPolicies","dnsSettings","etag","firewalls","id","identity","insights","intrusionDetection","location","name","provisioningState","ruleCollectionGroups","sku","snat","tags","threatIntelMode","threatIntelWhitelist","transportSecurity","type"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyResult(
-        @Nullable SubResourceResponse basePolicy,
-        List<SubResourceResponse> childPolicies,
-        @Nullable DnsSettingsResponse dnsSettings,
-        String etag,
-        List<SubResourceResponse> firewalls,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable FirewallPolicyInsightsResponse insights,
-        @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        List<SubResourceResponse> ruleCollectionGroups,
-        @Nullable FirewallPolicySkuResponse sku,
-        @Nullable FirewallPolicySNATResponse snat,
-        @Nullable Map<String,String> tags,
-        @Nullable String threatIntelMode,
-        @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
-        @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
-        String type) {
+        @OutputCustomType.Parameter("basePolicy") @Nullable SubResourceResponse basePolicy,
+        @OutputCustomType.Parameter("childPolicies") List<SubResourceResponse> childPolicies,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable DnsSettingsResponse dnsSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewalls") List<SubResourceResponse> firewalls,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("insights") @Nullable FirewallPolicyInsightsResponse insights,
+        @OutputCustomType.Parameter("intrusionDetection") @Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ruleCollectionGroups") List<SubResourceResponse> ruleCollectionGroups,
+        @OutputCustomType.Parameter("sku") @Nullable FirewallPolicySkuResponse sku,
+        @OutputCustomType.Parameter("snat") @Nullable FirewallPolicySNATResponse snat,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threatIntelMode") @Nullable String threatIntelMode,
+        @OutputCustomType.Parameter("threatIntelWhitelist") @Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist,
+        @OutputCustomType.Parameter("transportSecurity") @Nullable FirewallPolicyTransportSecurityResponse transportSecurity,
+        @OutputCustomType.Parameter("type") String type) {
         this.basePolicy = basePolicy;
         this.childPolicies = childPolicies;
         this.dnsSettings = dnsSettings;
@@ -366,102 +366,102 @@ public final class GetFirewallPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBasePolicy(@Nullable SubResourceResponse basePolicy) {
+        public Builder basePolicy(@Nullable SubResourceResponse basePolicy) {
             this.basePolicy = basePolicy;
             return this;
         }
 
-        public Builder setChildPolicies(List<SubResourceResponse> childPolicies) {
+        public Builder childPolicies(List<SubResourceResponse> childPolicies) {
             this.childPolicies = Objects.requireNonNull(childPolicies);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable DnsSettingsResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable DnsSettingsResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewalls(List<SubResourceResponse> firewalls) {
+        public Builder firewalls(List<SubResourceResponse> firewalls) {
             this.firewalls = Objects.requireNonNull(firewalls);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInsights(@Nullable FirewallPolicyInsightsResponse insights) {
+        public Builder insights(@Nullable FirewallPolicyInsightsResponse insights) {
             this.insights = insights;
             return this;
         }
 
-        public Builder setIntrusionDetection(@Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection) {
+        public Builder intrusionDetection(@Nullable FirewallPolicyIntrusionDetectionResponse intrusionDetection) {
             this.intrusionDetection = intrusionDetection;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRuleCollectionGroups(List<SubResourceResponse> ruleCollectionGroups) {
+        public Builder ruleCollectionGroups(List<SubResourceResponse> ruleCollectionGroups) {
             this.ruleCollectionGroups = Objects.requireNonNull(ruleCollectionGroups);
             return this;
         }
 
-        public Builder setSku(@Nullable FirewallPolicySkuResponse sku) {
+        public Builder sku(@Nullable FirewallPolicySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSnat(@Nullable FirewallPolicySNATResponse snat) {
+        public Builder snat(@Nullable FirewallPolicySNATResponse snat) {
             this.snat = snat;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThreatIntelMode(@Nullable String threatIntelMode) {
+        public Builder threatIntelMode(@Nullable String threatIntelMode) {
             this.threatIntelMode = threatIntelMode;
             return this;
         }
 
-        public Builder setThreatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist) {
+        public Builder threatIntelWhitelist(@Nullable FirewallPolicyThreatIntelWhitelistResponse threatIntelWhitelist) {
             this.threatIntelWhitelist = threatIntelWhitelist;
             return this;
         }
 
-        public Builder setTransportSecurity(@Nullable FirewallPolicyTransportSecurityResponse transportSecurity) {
+        public Builder transportSecurity(@Nullable FirewallPolicyTransportSecurityResponse transportSecurity) {
             this.transportSecurity = transportSecurity;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

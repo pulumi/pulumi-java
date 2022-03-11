@@ -33,12 +33,12 @@ public final class MulticastGroupLoRaWAN {
      */
     private final String rfRegion;
 
-    @OutputCustomType.Constructor({"dlClass","numberOfDevicesInGroup","numberOfDevicesRequested","rfRegion"})
+    @OutputCustomType.Constructor
     private MulticastGroupLoRaWAN(
-        String dlClass,
-        @Nullable Integer numberOfDevicesInGroup,
-        @Nullable Integer numberOfDevicesRequested,
-        String rfRegion) {
+        @OutputCustomType.Parameter("dlClass") String dlClass,
+        @OutputCustomType.Parameter("numberOfDevicesInGroup") @Nullable Integer numberOfDevicesInGroup,
+        @OutputCustomType.Parameter("numberOfDevicesRequested") @Nullable Integer numberOfDevicesRequested,
+        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
         this.dlClass = dlClass;
         this.numberOfDevicesInGroup = numberOfDevicesInGroup;
         this.numberOfDevicesRequested = numberOfDevicesRequested;
@@ -100,22 +100,22 @@ public final class MulticastGroupLoRaWAN {
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder setDlClass(String dlClass) {
+        public Builder dlClass(String dlClass) {
             this.dlClass = Objects.requireNonNull(dlClass);
             return this;
         }
 
-        public Builder setNumberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
+        public Builder numberOfDevicesInGroup(@Nullable Integer numberOfDevicesInGroup) {
             this.numberOfDevicesInGroup = numberOfDevicesInGroup;
             return this;
         }
 
-        public Builder setNumberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
+        public Builder numberOfDevicesRequested(@Nullable Integer numberOfDevicesRequested) {
             this.numberOfDevicesRequested = numberOfDevicesRequested;
             return this;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }

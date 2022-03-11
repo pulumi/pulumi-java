@@ -29,11 +29,11 @@ public final class ParquetFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deserializer","serializer","type"})
+    @OutputCustomType.Constructor
     private ParquetFormatResponse(
-        @Nullable Object deserializer,
-        @Nullable Object serializer,
-        String type) {
+        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
+        @OutputCustomType.Parameter("type") String type) {
         this.deserializer = deserializer;
         this.serializer = serializer;
         this.type = type;
@@ -86,17 +86,17 @@ public final class ParquetFormatResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

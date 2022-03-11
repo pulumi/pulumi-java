@@ -160,72 +160,72 @@ public final class StandardAppVersionHandlerArgs extends io.pulumi.resources.Res
     	      this.urlRegex = defaults.urlRegex;
         }
 
-        public Builder setAuthFailAction(@Nullable Input<String> authFailAction) {
+        public Builder authFailAction(@Nullable Input<String> authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setAuthFailAction(@Nullable String authFailAction) {
+        public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = Input.ofNullable(authFailAction);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<String> login) {
+        public Builder login(@Nullable Input<String> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(@Nullable Input<String> redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(@Nullable Input<String> redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Input.ofNullable(redirectHttpResponseCode);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<StandardAppVersionHandlerScriptArgs> script) {
+        public Builder script(@Nullable Input<StandardAppVersionHandlerScriptArgs> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable StandardAppVersionHandlerScriptArgs script) {
+        public Builder script(@Nullable StandardAppVersionHandlerScriptArgs script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable Input<String> securityLevel) {
+        public Builder securityLevel(@Nullable Input<String> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable String securityLevel) {
+        public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }
 
-        public Builder setStaticFiles(@Nullable Input<StandardAppVersionHandlerStaticFilesArgs> staticFiles) {
+        public Builder staticFiles(@Nullable Input<StandardAppVersionHandlerStaticFilesArgs> staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
 
-        public Builder setStaticFiles(@Nullable StandardAppVersionHandlerStaticFilesArgs staticFiles) {
+        public Builder staticFiles(@Nullable StandardAppVersionHandlerStaticFilesArgs staticFiles) {
             this.staticFiles = Input.ofNullable(staticFiles);
             return this;
         }
 
-        public Builder setUrlRegex(@Nullable Input<String> urlRegex) {
+        public Builder urlRegex(@Nullable Input<String> urlRegex) {
             this.urlRegex = urlRegex;
             return this;
         }
 
-        public Builder setUrlRegex(@Nullable String urlRegex) {
+        public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = Input.ofNullable(urlRegex);
             return this;
         }

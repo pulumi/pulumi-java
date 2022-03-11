@@ -75,20 +75,20 @@ public final class GetFusionAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertRuleTemplateName","description","displayName","enabled","etag","id","kind","lastModifiedUtc","name","severity","tactics","type"})
+    @OutputCustomType.Constructor
     private GetFusionAlertRuleResult(
-        String alertRuleTemplateName,
-        String description,
-        String displayName,
-        Boolean enabled,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastModifiedUtc,
-        String name,
-        String severity,
-        List<String> tactics,
-        String type) {
+        @OutputCustomType.Parameter("alertRuleTemplateName") String alertRuleTemplateName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("tactics") List<String> tactics,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;
@@ -231,62 +231,62 @@ public final class GetFusionAlertRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlertRuleTemplateName(String alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(String alertRuleTemplateName) {
             this.alertRuleTemplateName = Objects.requireNonNull(alertRuleTemplateName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastModifiedUtc(String lastModifiedUtc) {
+        public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setTactics(List<String> tactics) {
+        public Builder tactics(List<String> tactics) {
             this.tactics = Objects.requireNonNull(tactics);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

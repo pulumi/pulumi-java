@@ -21,10 +21,10 @@ public final class DataStoreIndexProperty {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"direction","name"})
+    @OutputCustomType.Constructor
     private DataStoreIndexProperty(
-        String direction,
-        String name) {
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class DataStoreIndexProperty {
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

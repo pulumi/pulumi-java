@@ -20,10 +20,10 @@ public final class PrivateEndpointResponse {
      */
     private final String subnetArmId;
 
-    @OutputCustomType.Constructor({"id","subnetArmId"})
+    @OutputCustomType.Constructor
     private PrivateEndpointResponse(
-        String id,
-        String subnetArmId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("subnetArmId") String subnetArmId) {
         this.id = id;
         this.subnetArmId = subnetArmId;
     }
@@ -65,12 +65,12 @@ public final class PrivateEndpointResponse {
     	      this.subnetArmId = defaults.subnetArmId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSubnetArmId(String subnetArmId) {
+        public Builder subnetArmId(String subnetArmId) {
             this.subnetArmId = Objects.requireNonNull(subnetArmId);
             return this;
         }

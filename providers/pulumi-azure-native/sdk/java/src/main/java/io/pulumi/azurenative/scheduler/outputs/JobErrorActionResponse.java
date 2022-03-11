@@ -47,14 +47,14 @@ public final class JobErrorActionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"queueMessage","request","retryPolicy","serviceBusQueueMessage","serviceBusTopicMessage","type"})
+    @OutputCustomType.Constructor
     private JobErrorActionResponse(
-        @Nullable StorageQueueMessageResponse queueMessage,
-        @Nullable HttpRequestResponse request,
-        @Nullable RetryPolicyResponse retryPolicy,
-        @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
-        @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("queueMessage") @Nullable StorageQueueMessageResponse queueMessage,
+        @OutputCustomType.Parameter("request") @Nullable HttpRequestResponse request,
+        @OutputCustomType.Parameter("retryPolicy") @Nullable RetryPolicyResponse retryPolicy,
+        @OutputCustomType.Parameter("serviceBusQueueMessage") @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage,
+        @OutputCustomType.Parameter("serviceBusTopicMessage") @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.queueMessage = queueMessage;
         this.request = request;
         this.retryPolicy = retryPolicy;
@@ -136,32 +136,32 @@ public final class JobErrorActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setQueueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
+        public Builder queueMessage(@Nullable StorageQueueMessageResponse queueMessage) {
             this.queueMessage = queueMessage;
             return this;
         }
 
-        public Builder setRequest(@Nullable HttpRequestResponse request) {
+        public Builder request(@Nullable HttpRequestResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setRetryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
+        public Builder retryPolicy(@Nullable RetryPolicyResponse retryPolicy) {
             this.retryPolicy = retryPolicy;
             return this;
         }
 
-        public Builder setServiceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
+        public Builder serviceBusQueueMessage(@Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage) {
             this.serviceBusQueueMessage = serviceBusQueueMessage;
             return this;
         }
 
-        public Builder setServiceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
+        public Builder serviceBusTopicMessage(@Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage) {
             this.serviceBusTopicMessage = serviceBusTopicMessage;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

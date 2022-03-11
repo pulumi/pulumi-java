@@ -37,13 +37,13 @@ public final class GetTableResult {
      */
     private final @Nullable List<TableTag> tags;
 
-    @OutputCustomType.Constructor({"arn","magneticStoreWriteProperties","name","retentionProperties","tags"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        @Nullable String arn,
-        @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
-        @Nullable String name,
-        @Nullable RetentionPropertiesProperties retentionProperties,
-        @Nullable List<TableTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("magneticStoreWriteProperties") @Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("retentionProperties") @Nullable RetentionPropertiesProperties retentionProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<TableTag> tags) {
         this.arn = arn;
         this.magneticStoreWriteProperties = magneticStoreWriteProperties;
         this.name = name;
@@ -111,27 +111,27 @@ public final class GetTableResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setMagneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties) {
+        public Builder magneticStoreWriteProperties(@Nullable MagneticStoreWritePropertiesProperties magneticStoreWriteProperties) {
             this.magneticStoreWriteProperties = magneticStoreWriteProperties;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRetentionProperties(@Nullable RetentionPropertiesProperties retentionProperties) {
+        public Builder retentionProperties(@Nullable RetentionPropertiesProperties retentionProperties) {
             this.retentionProperties = retentionProperties;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TableTag> tags) {
+        public Builder tags(@Nullable List<TableTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -25,11 +25,11 @@ public final class GooglePrivacyDlpV2BucketResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse replacementValue;
 
-    @OutputCustomType.Constructor({"max","min","replacementValue"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2BucketResponse(
-        GooglePrivacyDlpV2ValueResponse max,
-        GooglePrivacyDlpV2ValueResponse min,
-        GooglePrivacyDlpV2ValueResponse replacementValue) {
+        @OutputCustomType.Parameter("max") GooglePrivacyDlpV2ValueResponse max,
+        @OutputCustomType.Parameter("min") GooglePrivacyDlpV2ValueResponse min,
+        @OutputCustomType.Parameter("replacementValue") GooglePrivacyDlpV2ValueResponse replacementValue) {
         this.max = max;
         this.min = min;
         this.replacementValue = replacementValue;
@@ -81,17 +81,17 @@ public final class GooglePrivacyDlpV2BucketResponse {
     	      this.replacementValue = defaults.replacementValue;
         }
 
-        public Builder setMax(GooglePrivacyDlpV2ValueResponse max) {
+        public Builder max(GooglePrivacyDlpV2ValueResponse max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMin(GooglePrivacyDlpV2ValueResponse min) {
+        public Builder min(GooglePrivacyDlpV2ValueResponse min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }
 
-        public Builder setReplacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
+        public Builder replacementValue(GooglePrivacyDlpV2ValueResponse replacementValue) {
             this.replacementValue = Objects.requireNonNull(replacementValue);
             return this;
         }

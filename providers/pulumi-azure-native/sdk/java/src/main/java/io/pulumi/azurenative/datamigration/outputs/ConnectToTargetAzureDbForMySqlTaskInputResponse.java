@@ -20,10 +20,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ConnectToTargetAzureDbForMySqlTaskInputResponse(
-        MySqlConnectionInfoResponse sourceConnectionInfo,
-        MySqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("sourceConnectionInfo") MySqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") MySqlConnectionInfoResponse targetConnectionInfo) {
         this.sourceConnectionInfo = sourceConnectionInfo;
         this.targetConnectionInfo = targetConnectionInfo;
     }
@@ -65,12 +65,12 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

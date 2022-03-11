@@ -1137,337 +1137,337 @@ public final class SiteConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.xManagedServiceIdentityId = defaults.xManagedServiceIdentityId;
         }
 
-        public Builder setAcrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
+        public Builder acrUseManagedIdentityCreds(@Nullable Boolean acrUseManagedIdentityCreds) {
             this.acrUseManagedIdentityCreds = acrUseManagedIdentityCreds;
             return this;
         }
 
-        public Builder setAcrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
+        public Builder acrUserManagedIdentityID(@Nullable String acrUserManagedIdentityID) {
             this.acrUserManagedIdentityID = acrUserManagedIdentityID;
             return this;
         }
 
-        public Builder setAlwaysOn(@Nullable Boolean alwaysOn) {
+        public Builder alwaysOn(@Nullable Boolean alwaysOn) {
             this.alwaysOn = alwaysOn;
             return this;
         }
 
-        public Builder setApiDefinition(@Nullable ApiDefinitionInfoResponse apiDefinition) {
+        public Builder apiDefinition(@Nullable ApiDefinitionInfoResponse apiDefinition) {
             this.apiDefinition = apiDefinition;
             return this;
         }
 
-        public Builder setApiManagementConfig(@Nullable ApiManagementConfigResponse apiManagementConfig) {
+        public Builder apiManagementConfig(@Nullable ApiManagementConfigResponse apiManagementConfig) {
             this.apiManagementConfig = apiManagementConfig;
             return this;
         }
 
-        public Builder setAppCommandLine(@Nullable String appCommandLine) {
+        public Builder appCommandLine(@Nullable String appCommandLine) {
             this.appCommandLine = appCommandLine;
             return this;
         }
 
-        public Builder setAppSettings(@Nullable List<NameValuePairResponse> appSettings) {
+        public Builder appSettings(@Nullable List<NameValuePairResponse> appSettings) {
             this.appSettings = appSettings;
             return this;
         }
 
-        public Builder setAutoHealEnabled(@Nullable Boolean autoHealEnabled) {
+        public Builder autoHealEnabled(@Nullable Boolean autoHealEnabled) {
             this.autoHealEnabled = autoHealEnabled;
             return this;
         }
 
-        public Builder setAutoHealRules(@Nullable AutoHealRulesResponse autoHealRules) {
+        public Builder autoHealRules(@Nullable AutoHealRulesResponse autoHealRules) {
             this.autoHealRules = autoHealRules;
             return this;
         }
 
-        public Builder setAutoSwapSlotName(@Nullable String autoSwapSlotName) {
+        public Builder autoSwapSlotName(@Nullable String autoSwapSlotName) {
             this.autoSwapSlotName = autoSwapSlotName;
             return this;
         }
 
-        public Builder setAzureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueResponse> azureStorageAccounts) {
+        public Builder azureStorageAccounts(@Nullable Map<String,AzureStorageInfoValueResponse> azureStorageAccounts) {
             this.azureStorageAccounts = azureStorageAccounts;
             return this;
         }
 
-        public Builder setConnectionStrings(@Nullable List<ConnStringInfoResponse> connectionStrings) {
+        public Builder connectionStrings(@Nullable List<ConnStringInfoResponse> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsSettingsResponse cors) {
+        public Builder cors(@Nullable CorsSettingsResponse cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setDefaultDocuments(@Nullable List<String> defaultDocuments) {
+        public Builder defaultDocuments(@Nullable List<String> defaultDocuments) {
             this.defaultDocuments = defaultDocuments;
             return this;
         }
 
-        public Builder setDetailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
+        public Builder detailedErrorLoggingEnabled(@Nullable Boolean detailedErrorLoggingEnabled) {
             this.detailedErrorLoggingEnabled = detailedErrorLoggingEnabled;
             return this;
         }
 
-        public Builder setDocumentRoot(@Nullable String documentRoot) {
+        public Builder documentRoot(@Nullable String documentRoot) {
             this.documentRoot = documentRoot;
             return this;
         }
 
-        public Builder setExperiments(@Nullable ExperimentsResponse experiments) {
+        public Builder experiments(@Nullable ExperimentsResponse experiments) {
             this.experiments = experiments;
             return this;
         }
 
-        public Builder setFtpsState(@Nullable String ftpsState) {
+        public Builder ftpsState(@Nullable String ftpsState) {
             this.ftpsState = ftpsState;
             return this;
         }
 
-        public Builder setFunctionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
+        public Builder functionAppScaleLimit(@Nullable Integer functionAppScaleLimit) {
             this.functionAppScaleLimit = functionAppScaleLimit;
             return this;
         }
 
-        public Builder setFunctionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
+        public Builder functionsRuntimeScaleMonitoringEnabled(@Nullable Boolean functionsRuntimeScaleMonitoringEnabled) {
             this.functionsRuntimeScaleMonitoringEnabled = functionsRuntimeScaleMonitoringEnabled;
             return this;
         }
 
-        public Builder setHandlerMappings(@Nullable List<HandlerMappingResponse> handlerMappings) {
+        public Builder handlerMappings(@Nullable List<HandlerMappingResponse> handlerMappings) {
             this.handlerMappings = handlerMappings;
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable String healthCheckPath) {
+        public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
-        public Builder setHttp20Enabled(@Nullable Boolean http20Enabled) {
+        public Builder http20Enabled(@Nullable Boolean http20Enabled) {
             this.http20Enabled = http20Enabled;
             return this;
         }
 
-        public Builder setHttpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
+        public Builder httpLoggingEnabled(@Nullable Boolean httpLoggingEnabled) {
             this.httpLoggingEnabled = httpLoggingEnabled;
             return this;
         }
 
-        public Builder setIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> ipSecurityRestrictions) {
+        public Builder ipSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> ipSecurityRestrictions) {
             this.ipSecurityRestrictions = ipSecurityRestrictions;
             return this;
         }
 
-        public Builder setJavaContainer(@Nullable String javaContainer) {
+        public Builder javaContainer(@Nullable String javaContainer) {
             this.javaContainer = javaContainer;
             return this;
         }
 
-        public Builder setJavaContainerVersion(@Nullable String javaContainerVersion) {
+        public Builder javaContainerVersion(@Nullable String javaContainerVersion) {
             this.javaContainerVersion = javaContainerVersion;
             return this;
         }
 
-        public Builder setJavaVersion(@Nullable String javaVersion) {
+        public Builder javaVersion(@Nullable String javaVersion) {
             this.javaVersion = javaVersion;
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(@Nullable String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = keyVaultReferenceIdentity;
             return this;
         }
 
-        public Builder setLimits(@Nullable SiteLimitsResponse limits) {
+        public Builder limits(@Nullable SiteLimitsResponse limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLinuxFxVersion(@Nullable String linuxFxVersion) {
+        public Builder linuxFxVersion(@Nullable String linuxFxVersion) {
             this.linuxFxVersion = linuxFxVersion;
             return this;
         }
 
-        public Builder setLoadBalancing(@Nullable String loadBalancing) {
+        public Builder loadBalancing(@Nullable String loadBalancing) {
             this.loadBalancing = loadBalancing;
             return this;
         }
 
-        public Builder setLocalMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
+        public Builder localMySqlEnabled(@Nullable Boolean localMySqlEnabled) {
             this.localMySqlEnabled = localMySqlEnabled;
             return this;
         }
 
-        public Builder setLogsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
+        public Builder logsDirectorySizeLimit(@Nullable Integer logsDirectorySizeLimit) {
             this.logsDirectorySizeLimit = logsDirectorySizeLimit;
             return this;
         }
 
-        public Builder setMachineKey(SiteMachineKeyResponse machineKey) {
+        public Builder machineKey(SiteMachineKeyResponse machineKey) {
             this.machineKey = Objects.requireNonNull(machineKey);
             return this;
         }
 
-        public Builder setManagedPipelineMode(@Nullable String managedPipelineMode) {
+        public Builder managedPipelineMode(@Nullable String managedPipelineMode) {
             this.managedPipelineMode = managedPipelineMode;
             return this;
         }
 
-        public Builder setManagedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
+        public Builder managedServiceIdentityId(@Nullable Integer managedServiceIdentityId) {
             this.managedServiceIdentityId = managedServiceIdentityId;
             return this;
         }
 
-        public Builder setMinTlsVersion(@Nullable String minTlsVersion) {
+        public Builder minTlsVersion(@Nullable String minTlsVersion) {
             this.minTlsVersion = minTlsVersion;
             return this;
         }
 
-        public Builder setMinimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
+        public Builder minimumElasticInstanceCount(@Nullable Integer minimumElasticInstanceCount) {
             this.minimumElasticInstanceCount = minimumElasticInstanceCount;
             return this;
         }
 
-        public Builder setNetFrameworkVersion(@Nullable String netFrameworkVersion) {
+        public Builder netFrameworkVersion(@Nullable String netFrameworkVersion) {
             this.netFrameworkVersion = netFrameworkVersion;
             return this;
         }
 
-        public Builder setNodeVersion(@Nullable String nodeVersion) {
+        public Builder nodeVersion(@Nullable String nodeVersion) {
             this.nodeVersion = nodeVersion;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setPhpVersion(@Nullable String phpVersion) {
+        public Builder phpVersion(@Nullable String phpVersion) {
             this.phpVersion = phpVersion;
             return this;
         }
 
-        public Builder setPowerShellVersion(@Nullable String powerShellVersion) {
+        public Builder powerShellVersion(@Nullable String powerShellVersion) {
             this.powerShellVersion = powerShellVersion;
             return this;
         }
 
-        public Builder setPreWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
+        public Builder preWarmedInstanceCount(@Nullable Integer preWarmedInstanceCount) {
             this.preWarmedInstanceCount = preWarmedInstanceCount;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublishingUsername(@Nullable String publishingUsername) {
+        public Builder publishingUsername(@Nullable String publishingUsername) {
             this.publishingUsername = publishingUsername;
             return this;
         }
 
-        public Builder setPush(@Nullable PushSettingsResponse push) {
+        public Builder push(@Nullable PushSettingsResponse push) {
             this.push = push;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setRemoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
+        public Builder remoteDebuggingEnabled(@Nullable Boolean remoteDebuggingEnabled) {
             this.remoteDebuggingEnabled = remoteDebuggingEnabled;
             return this;
         }
 
-        public Builder setRemoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
+        public Builder remoteDebuggingVersion(@Nullable String remoteDebuggingVersion) {
             this.remoteDebuggingVersion = remoteDebuggingVersion;
             return this;
         }
 
-        public Builder setRequestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
+        public Builder requestTracingEnabled(@Nullable Boolean requestTracingEnabled) {
             this.requestTracingEnabled = requestTracingEnabled;
             return this;
         }
 
-        public Builder setRequestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
+        public Builder requestTracingExpirationTime(@Nullable String requestTracingExpirationTime) {
             this.requestTracingExpirationTime = requestTracingExpirationTime;
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> scmIpSecurityRestrictions) {
+        public Builder scmIpSecurityRestrictions(@Nullable List<IpSecurityRestrictionResponse> scmIpSecurityRestrictions) {
             this.scmIpSecurityRestrictions = scmIpSecurityRestrictions;
             return this;
         }
 
-        public Builder setScmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
+        public Builder scmIpSecurityRestrictionsUseMain(@Nullable Boolean scmIpSecurityRestrictionsUseMain) {
             this.scmIpSecurityRestrictionsUseMain = scmIpSecurityRestrictionsUseMain;
             return this;
         }
 
-        public Builder setScmMinTlsVersion(@Nullable String scmMinTlsVersion) {
+        public Builder scmMinTlsVersion(@Nullable String scmMinTlsVersion) {
             this.scmMinTlsVersion = scmMinTlsVersion;
             return this;
         }
 
-        public Builder setScmType(@Nullable String scmType) {
+        public Builder scmType(@Nullable String scmType) {
             this.scmType = scmType;
             return this;
         }
 
-        public Builder setTracingOptions(@Nullable String tracingOptions) {
+        public Builder tracingOptions(@Nullable String tracingOptions) {
             this.tracingOptions = tracingOptions;
             return this;
         }
 
-        public Builder setUse32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
+        public Builder use32BitWorkerProcess(@Nullable Boolean use32BitWorkerProcess) {
             this.use32BitWorkerProcess = use32BitWorkerProcess;
             return this;
         }
 
-        public Builder setVirtualApplications(@Nullable List<VirtualApplicationResponse> virtualApplications) {
+        public Builder virtualApplications(@Nullable List<VirtualApplicationResponse> virtualApplications) {
             this.virtualApplications = virtualApplications;
             return this;
         }
 
-        public Builder setVnetName(@Nullable String vnetName) {
+        public Builder vnetName(@Nullable String vnetName) {
             this.vnetName = vnetName;
             return this;
         }
 
-        public Builder setVnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
+        public Builder vnetPrivatePortsCount(@Nullable Integer vnetPrivatePortsCount) {
             this.vnetPrivatePortsCount = vnetPrivatePortsCount;
             return this;
         }
 
-        public Builder setVnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
+        public Builder vnetRouteAllEnabled(@Nullable Boolean vnetRouteAllEnabled) {
             this.vnetRouteAllEnabled = vnetRouteAllEnabled;
             return this;
         }
 
-        public Builder setWebSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
+        public Builder webSocketsEnabled(@Nullable Boolean webSocketsEnabled) {
             this.webSocketsEnabled = webSocketsEnabled;
             return this;
         }
 
-        public Builder setWebsiteTimeZone(@Nullable String websiteTimeZone) {
+        public Builder websiteTimeZone(@Nullable String websiteTimeZone) {
             this.websiteTimeZone = websiteTimeZone;
             return this;
         }
 
-        public Builder setWindowsFxVersion(@Nullable String windowsFxVersion) {
+        public Builder windowsFxVersion(@Nullable String windowsFxVersion) {
             this.windowsFxVersion = windowsFxVersion;
             return this;
         }
 
-        public Builder setXManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
+        public Builder xManagedServiceIdentityId(@Nullable Integer xManagedServiceIdentityId) {
             this.xManagedServiceIdentityId = xManagedServiceIdentityId;
             return this;
         }

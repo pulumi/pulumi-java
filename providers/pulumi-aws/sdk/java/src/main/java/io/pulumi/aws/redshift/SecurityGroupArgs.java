@@ -88,32 +88,32 @@ public final class SecurityGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIngress(Input<List<SecurityGroupIngressArgs>> ingress) {
+        public Builder ingress(Input<List<SecurityGroupIngressArgs>> ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
 
-        public Builder setIngress(List<SecurityGroupIngressArgs> ingress) {
+        public Builder ingress(List<SecurityGroupIngressArgs> ingress) {
             this.ingress = Input.of(Objects.requireNonNull(ingress));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -25,11 +25,11 @@ public final class KeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"keyName","permissions","value"})
+    @OutputCustomType.Constructor
     private KeyResponse(
-        String keyName,
-        String permissions,
-        String value) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("value") String value) {
         this.keyName = keyName;
         this.permissions = permissions;
         this.value = value;
@@ -81,17 +81,17 @@ public final class KeyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

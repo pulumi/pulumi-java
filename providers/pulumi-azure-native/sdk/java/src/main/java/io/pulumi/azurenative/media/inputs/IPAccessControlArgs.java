@@ -58,12 +58,12 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
     	      this.allow = defaults.allow;
         }
 
-        public Builder setAllow(@Nullable Input<List<IPRangeArgs>> allow) {
+        public Builder allow(@Nullable Input<List<IPRangeArgs>> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable List<IPRangeArgs> allow) {
+        public Builder allow(@Nullable List<IPRangeArgs> allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }

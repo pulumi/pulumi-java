@@ -75,12 +75,12 @@ public final class ConnectionMonitorEndpointScopeResponse extends io.pulumi.reso
     	      this.include = defaults.include;
         }
 
-        public Builder setExclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
+        public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
             this.exclude = exclude;
             return this;
         }
 
-        public Builder setInclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
+        public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
             this.include = include;
             return this;
         }

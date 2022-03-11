@@ -91,32 +91,32 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns) {
+        public Builder recordColumns(Input<List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs>> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordColumns(List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs> recordColumns) {
+        public Builder recordColumns(List<AnalyticsApplicationInputsSchemaRecordColumnGetArgs> recordColumns) {
             this.recordColumns = Input.of(Objects.requireNonNull(recordColumns));
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable Input<String> recordEncoding) {
+        public Builder recordEncoding(@Nullable Input<String> recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = Input.ofNullable(recordEncoding);
             return this;
         }
 
-        public Builder setRecordFormat(Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
+        public Builder recordFormat(Input<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }
 
-        public Builder setRecordFormat(AnalyticsApplicationInputsSchemaRecordFormatGetArgs recordFormat) {
+        public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormatGetArgs recordFormat) {
             this.recordFormat = Input.of(Objects.requireNonNull(recordFormat));
             return this;
         }

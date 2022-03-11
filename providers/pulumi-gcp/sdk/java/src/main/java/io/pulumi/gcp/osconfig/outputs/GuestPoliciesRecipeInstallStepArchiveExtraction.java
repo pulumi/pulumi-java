@@ -28,11 +28,11 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactId","destination","type"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStepArchiveExtraction(
-        String artifactId,
-        @Nullable String destination,
-        String type) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.type = type;
@@ -85,17 +85,17 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtraction {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

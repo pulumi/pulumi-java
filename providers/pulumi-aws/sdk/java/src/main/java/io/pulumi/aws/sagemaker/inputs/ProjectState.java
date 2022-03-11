@@ -152,72 +152,72 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable Input<String> projectDescription) {
+        public Builder projectDescription(@Nullable Input<String> projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable String projectDescription) {
+        public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = Input.ofNullable(projectDescription);
             return this;
         }
 
-        public Builder setProjectId(@Nullable Input<String> projectId) {
+        public Builder projectId(@Nullable Input<String> projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
 
-        public Builder setProjectName(@Nullable Input<String> projectName) {
+        public Builder projectName(@Nullable Input<String> projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = Input.ofNullable(projectName);
             return this;
         }
 
-        public Builder setServiceCatalogProvisioningDetails(@Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(@Nullable Input<ProjectServiceCatalogProvisioningDetailsGetArgs> serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = serviceCatalogProvisioningDetails;
             return this;
         }
 
-        public Builder setServiceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
+        public Builder serviceCatalogProvisioningDetails(@Nullable ProjectServiceCatalogProvisioningDetailsGetArgs serviceCatalogProvisioningDetails) {
             this.serviceCatalogProvisioningDetails = Input.ofNullable(serviceCatalogProvisioningDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

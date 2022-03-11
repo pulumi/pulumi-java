@@ -57,12 +57,12 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder setAnalysisKind(@Nullable Input<DiscoveryAnalysisKind> analysisKind) {
+        public Builder analysisKind(@Nullable Input<DiscoveryAnalysisKind> analysisKind) {
             this.analysisKind = analysisKind;
             return this;
         }
 
-        public Builder setAnalysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
+        public Builder analysisKind(@Nullable DiscoveryAnalysisKind analysisKind) {
             this.analysisKind = Input.ofNullable(analysisKind);
             return this;
         }

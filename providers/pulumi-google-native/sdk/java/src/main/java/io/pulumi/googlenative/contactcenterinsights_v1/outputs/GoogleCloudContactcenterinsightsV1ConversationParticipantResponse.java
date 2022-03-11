@@ -30,12 +30,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"dialogflowParticipantName","obfuscatedExternalUserId","role","userId"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationParticipantResponse(
-        String dialogflowParticipantName,
-        String obfuscatedExternalUserId,
-        String role,
-        String userId) {
+        @OutputCustomType.Parameter("dialogflowParticipantName") String dialogflowParticipantName,
+        @OutputCustomType.Parameter("obfuscatedExternalUserId") String obfuscatedExternalUserId,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.dialogflowParticipantName = dialogflowParticipantName;
         this.obfuscatedExternalUserId = obfuscatedExternalUserId;
         this.role = role;
@@ -97,22 +97,22 @@ public final class GoogleCloudContactcenterinsightsV1ConversationParticipantResp
     	      this.userId = defaults.userId;
         }
 
-        public Builder setDialogflowParticipantName(String dialogflowParticipantName) {
+        public Builder dialogflowParticipantName(String dialogflowParticipantName) {
             this.dialogflowParticipantName = Objects.requireNonNull(dialogflowParticipantName);
             return this;
         }
 
-        public Builder setObfuscatedExternalUserId(String obfuscatedExternalUserId) {
+        public Builder obfuscatedExternalUserId(String obfuscatedExternalUserId) {
             this.obfuscatedExternalUserId = Objects.requireNonNull(obfuscatedExternalUserId);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

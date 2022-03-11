@@ -15,10 +15,10 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfig {
     private final @Nullable String baseliningJobName;
     private final @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource;
 
-    @OutputCustomType.Constructor({"baseliningJobName","constraintsResource"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionModelBiasBaselineConfig(
-        @Nullable String baseliningJobName,
-        @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
+        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @OutputCustomType.Parameter("constraintsResource") @Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
     }
@@ -52,12 +52,12 @@ public final class ModelBiasJobDefinitionModelBiasBaselineConfig {
     	      this.constraintsResource = defaults.constraintsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable ModelBiasJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }

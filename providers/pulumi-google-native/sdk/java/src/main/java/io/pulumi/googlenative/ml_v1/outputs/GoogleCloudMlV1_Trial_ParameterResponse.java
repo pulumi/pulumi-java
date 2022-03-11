@@ -31,12 +31,12 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"floatValue","intValue","parameter","stringValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_Trial_ParameterResponse(
-        Double floatValue,
-        String intValue,
-        String parameter,
-        String stringValue) {
+        @OutputCustomType.Parameter("floatValue") Double floatValue,
+        @OutputCustomType.Parameter("intValue") String intValue,
+        @OutputCustomType.Parameter("parameter") String parameter,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.floatValue = floatValue;
         this.intValue = intValue;
         this.parameter = parameter;
@@ -98,22 +98,22 @@ public final class GoogleCloudMlV1_Trial_ParameterResponse {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setFloatValue(Double floatValue) {
+        public Builder floatValue(Double floatValue) {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
 
-        public Builder setIntValue(String intValue) {
+        public Builder intValue(String intValue) {
             this.intValue = Objects.requireNonNull(intValue);
             return this;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

@@ -32,12 +32,12 @@ public final class SoftwareRecipeStepExecFileResponse {
      */
     private final String localPath;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","args","artifactId","localPath"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepExecFileResponse(
-        List<Integer> allowedExitCodes,
-        List<String> args,
-        String artifactId,
-        String localPath) {
+        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("localPath") String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;
@@ -99,22 +99,22 @@ public final class SoftwareRecipeStepExecFileResponse {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedExitCodes(List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }

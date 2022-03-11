@@ -23,10 +23,10 @@ public final class TokenReviewSpec {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"audiences","token"})
+    @OutputCustomType.Constructor
     private TokenReviewSpec(
-        @Nullable List<String> audiences,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("audiences") @Nullable List<String> audiences,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.audiences = audiences;
         this.token = token;
     }
@@ -68,12 +68,12 @@ public final class TokenReviewSpec {
     	      this.token = defaults.token;
         }
 
-        public Builder setAudiences(@Nullable List<String> audiences) {
+        public Builder audiences(@Nullable List<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

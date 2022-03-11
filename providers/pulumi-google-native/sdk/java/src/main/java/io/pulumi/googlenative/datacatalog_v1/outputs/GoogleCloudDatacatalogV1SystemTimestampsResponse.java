@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","updateTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1SystemTimestampsResponse(
-        String createTime,
-        String expireTime,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.updateTime = updateTime;
@@ -81,17 +81,17 @@ public final class GoogleCloudDatacatalogV1SystemTimestampsResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

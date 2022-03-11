@@ -25,11 +25,11 @@ public final class OwaspCrsExclusionEntryResponse {
      */
     private final String selectorMatchOperator;
 
-    @OutputCustomType.Constructor({"matchVariable","selector","selectorMatchOperator"})
+    @OutputCustomType.Constructor
     private OwaspCrsExclusionEntryResponse(
-        String matchVariable,
-        String selector,
-        String selectorMatchOperator) {
+        @OutputCustomType.Parameter("matchVariable") String matchVariable,
+        @OutputCustomType.Parameter("selector") String selector,
+        @OutputCustomType.Parameter("selectorMatchOperator") String selectorMatchOperator) {
         this.matchVariable = matchVariable;
         this.selector = selector;
         this.selectorMatchOperator = selectorMatchOperator;
@@ -81,17 +81,17 @@ public final class OwaspCrsExclusionEntryResponse {
     	      this.selectorMatchOperator = defaults.selectorMatchOperator;
         }
 
-        public Builder setMatchVariable(String matchVariable) {
+        public Builder matchVariable(String matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSelectorMatchOperator(String selectorMatchOperator) {
+        public Builder selectorMatchOperator(String selectorMatchOperator) {
             this.selectorMatchOperator = Objects.requireNonNull(selectorMatchOperator);
             return this;
         }

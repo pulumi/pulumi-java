@@ -49,12 +49,12 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequestArg
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder setResourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
+        public Builder resourceStatement(@Nullable Input<NetworkInsightsAccessScopeResourceStatementRequestArgs> resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }
 
-        public Builder setResourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
+        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequestArgs resourceStatement) {
             this.resourceStatement = Input.ofNullable(resourceStatement);
             return this;
         }

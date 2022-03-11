@@ -190,42 +190,42 @@ public final class GetInstanceResult {
      */
     private final VmImageResponse vmImage;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","bootDiskSizeGb","bootDiskType","containerImage","createTime","customGpuDriverPath","dataDiskSizeGb","dataDiskType","diskEncryption","disks","installGpuDriver","instanceOwners","kmsKey","labels","machineType","metadata","name","network","nicType","noProxyAccess","noPublicIp","noRemoveDataDisk","postStartupScript","proxyUri","reservationAffinity","serviceAccount","serviceAccountScopes","shieldedInstanceConfig","state","subnet","tags","updateTime","upgradeHistory","vmImage"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        AcceleratorConfigResponse acceleratorConfig,
-        String bootDiskSizeGb,
-        String bootDiskType,
-        ContainerImageResponse containerImage,
-        String createTime,
-        String customGpuDriverPath,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        String diskEncryption,
-        List<DiskResponse> disks,
-        Boolean installGpuDriver,
-        List<String> instanceOwners,
-        String kmsKey,
-        Map<String,String> labels,
-        String machineType,
-        Map<String,String> metadata,
-        String name,
-        String network,
-        String nicType,
-        Boolean noProxyAccess,
-        Boolean noPublicIp,
-        Boolean noRemoveDataDisk,
-        String postStartupScript,
-        String proxyUri,
-        ReservationAffinityResponse reservationAffinity,
-        String serviceAccount,
-        List<String> serviceAccountScopes,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String state,
-        String subnet,
-        List<String> tags,
-        String updateTime,
-        List<UpgradeHistoryEntryResponse> upgradeHistory,
-        VmImageResponse vmImage) {
+        @OutputCustomType.Parameter("acceleratorConfig") AcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("bootDiskSizeGb") String bootDiskSizeGb,
+        @OutputCustomType.Parameter("bootDiskType") String bootDiskType,
+        @OutputCustomType.Parameter("containerImage") ContainerImageResponse containerImage,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
+        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
+        @OutputCustomType.Parameter("diskEncryption") String diskEncryption,
+        @OutputCustomType.Parameter("disks") List<DiskResponse> disks,
+        @OutputCustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
+        @OutputCustomType.Parameter("instanceOwners") List<String> instanceOwners,
+        @OutputCustomType.Parameter("kmsKey") String kmsKey,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("noProxyAccess") Boolean noProxyAccess,
+        @OutputCustomType.Parameter("noPublicIp") Boolean noPublicIp,
+        @OutputCustomType.Parameter("noRemoveDataDisk") Boolean noRemoveDataDisk,
+        @OutputCustomType.Parameter("postStartupScript") String postStartupScript,
+        @OutputCustomType.Parameter("proxyUri") String proxyUri,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountScopes") List<String> serviceAccountScopes,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnet") String subnet,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgradeHistory") List<UpgradeHistoryEntryResponse> upgradeHistory,
+        @OutputCustomType.Parameter("vmImage") VmImageResponse vmImage) {
         this.acceleratorConfig = acceleratorConfig;
         this.bootDiskSizeGb = bootDiskSizeGb;
         this.bootDiskType = bootDiskType;
@@ -587,172 +587,172 @@ public final class GetInstanceResult {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAcceleratorConfig(AcceleratorConfigResponse acceleratorConfig) {
+        public Builder acceleratorConfig(AcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
 
-        public Builder setBootDiskSizeGb(String bootDiskSizeGb) {
+        public Builder bootDiskSizeGb(String bootDiskSizeGb) {
             this.bootDiskSizeGb = Objects.requireNonNull(bootDiskSizeGb);
             return this;
         }
 
-        public Builder setBootDiskType(String bootDiskType) {
+        public Builder bootDiskType(String bootDiskType) {
             this.bootDiskType = Objects.requireNonNull(bootDiskType);
             return this;
         }
 
-        public Builder setContainerImage(ContainerImageResponse containerImage) {
+        public Builder containerImage(ContainerImageResponse containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCustomGpuDriverPath(String customGpuDriverPath) {
+        public Builder customGpuDriverPath(String customGpuDriverPath) {
             this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(String dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(String dataDiskType) {
+        public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
 
-        public Builder setDiskEncryption(String diskEncryption) {
+        public Builder diskEncryption(String diskEncryption) {
             this.diskEncryption = Objects.requireNonNull(diskEncryption);
             return this;
         }
 
-        public Builder setDisks(List<DiskResponse> disks) {
+        public Builder disks(List<DiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setInstallGpuDriver(Boolean installGpuDriver) {
+        public Builder installGpuDriver(Boolean installGpuDriver) {
             this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
             return this;
         }
 
-        public Builder setInstanceOwners(List<String> instanceOwners) {
+        public Builder instanceOwners(List<String> instanceOwners) {
             this.instanceOwners = Objects.requireNonNull(instanceOwners);
             return this;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNicType(String nicType) {
+        public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
-        public Builder setNoProxyAccess(Boolean noProxyAccess) {
+        public Builder noProxyAccess(Boolean noProxyAccess) {
             this.noProxyAccess = Objects.requireNonNull(noProxyAccess);
             return this;
         }
 
-        public Builder setNoPublicIp(Boolean noPublicIp) {
+        public Builder noPublicIp(Boolean noPublicIp) {
             this.noPublicIp = Objects.requireNonNull(noPublicIp);
             return this;
         }
 
-        public Builder setNoRemoveDataDisk(Boolean noRemoveDataDisk) {
+        public Builder noRemoveDataDisk(Boolean noRemoveDataDisk) {
             this.noRemoveDataDisk = Objects.requireNonNull(noRemoveDataDisk);
             return this;
         }
 
-        public Builder setPostStartupScript(String postStartupScript) {
+        public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
 
-        public Builder setProxyUri(String proxyUri) {
+        public Builder proxyUri(String proxyUri) {
             this.proxyUri = Objects.requireNonNull(proxyUri);
             return this;
         }
 
-        public Builder setReservationAffinity(ReservationAffinityResponse reservationAffinity) {
+        public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServiceAccountScopes(List<String> serviceAccountScopes) {
+        public Builder serviceAccountScopes(List<String> serviceAccountScopes) {
             this.serviceAccountScopes = Objects.requireNonNull(serviceAccountScopes);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubnet(String subnet) {
+        public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUpgradeHistory(List<UpgradeHistoryEntryResponse> upgradeHistory) {
+        public Builder upgradeHistory(List<UpgradeHistoryEntryResponse> upgradeHistory) {
             this.upgradeHistory = Objects.requireNonNull(upgradeHistory);
             return this;
         }
 
-        public Builder setVmImage(VmImageResponse vmImage) {
+        public Builder vmImage(VmImageResponse vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }

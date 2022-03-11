@@ -27,11 +27,11 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String vnetId;
 
-    @OutputCustomType.Constructor({"peerVnetId","vnetCidr","vnetId"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String peerVnetId,
-        @Nullable String vnetCidr,
-        @Nullable String vnetId) {
+        @OutputCustomType.Parameter("peerVnetId") @Nullable String peerVnetId,
+        @OutputCustomType.Parameter("vnetCidr") @Nullable String vnetCidr,
+        @OutputCustomType.Parameter("vnetId") @Nullable String vnetId) {
         this.peerVnetId = peerVnetId;
         this.vnetCidr = vnetCidr;
         this.vnetId = vnetId;
@@ -83,17 +83,17 @@ public final class NetworkProfileResponse {
     	      this.vnetId = defaults.vnetId;
         }
 
-        public Builder setPeerVnetId(@Nullable String peerVnetId) {
+        public Builder peerVnetId(@Nullable String peerVnetId) {
             this.peerVnetId = peerVnetId;
             return this;
         }
 
-        public Builder setVnetCidr(@Nullable String vnetCidr) {
+        public Builder vnetCidr(@Nullable String vnetCidr) {
             this.vnetCidr = vnetCidr;
             return this;
         }
 
-        public Builder setVnetId(@Nullable String vnetId) {
+        public Builder vnetId(@Nullable String vnetId) {
             this.vnetId = vnetId;
             return this;
         }

@@ -27,10 +27,10 @@ public final class DeploymentTarget {
      */
     private final @Nullable List<DeploymentTargetImport> imports;
 
-    @OutputCustomType.Constructor({"config","imports"})
+    @OutputCustomType.Constructor
     private DeploymentTarget(
-        DeploymentTargetConfig config,
-        @Nullable List<DeploymentTargetImport> imports) {
+        @OutputCustomType.Parameter("config") DeploymentTargetConfig config,
+        @OutputCustomType.Parameter("imports") @Nullable List<DeploymentTargetImport> imports) {
         this.config = config;
         this.imports = imports;
     }
@@ -76,12 +76,12 @@ public final class DeploymentTarget {
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(DeploymentTargetConfig config) {
+        public Builder config(DeploymentTargetConfig config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setImports(@Nullable List<DeploymentTargetImport> imports) {
+        public Builder imports(@Nullable List<DeploymentTargetImport> imports) {
             this.imports = imports;
             return this;
         }

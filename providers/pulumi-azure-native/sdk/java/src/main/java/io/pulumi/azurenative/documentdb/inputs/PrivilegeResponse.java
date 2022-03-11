@@ -76,12 +76,12 @@ public final class PrivilegeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setResource(@Nullable PrivilegeResponseResource resource) {
+        public Builder resource(@Nullable PrivilegeResponseResource resource) {
             this.resource = resource;
             return this;
         }

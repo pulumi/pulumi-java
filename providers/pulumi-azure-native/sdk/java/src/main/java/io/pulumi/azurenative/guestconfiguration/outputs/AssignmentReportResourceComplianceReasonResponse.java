@@ -20,10 +20,10 @@ public final class AssignmentReportResourceComplianceReasonResponse {
      */
     private final String phrase;
 
-    @OutputCustomType.Constructor({"code","phrase"})
+    @OutputCustomType.Constructor
     private AssignmentReportResourceComplianceReasonResponse(
-        String code,
-        String phrase) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("phrase") String phrase) {
         this.code = code;
         this.phrase = phrase;
     }
@@ -65,12 +65,12 @@ public final class AssignmentReportResourceComplianceReasonResponse {
     	      this.phrase = defaults.phrase;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setPhrase(String phrase) {
+        public Builder phrase(String phrase) {
             this.phrase = Objects.requireNonNull(phrase);
             return this;
         }

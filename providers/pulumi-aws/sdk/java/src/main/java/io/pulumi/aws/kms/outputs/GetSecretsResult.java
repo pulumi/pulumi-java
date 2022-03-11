@@ -24,11 +24,11 @@ public final class GetSecretsResult {
     private final Map<String,String> plaintext;
     private final List<GetSecretsSecret> secrets;
 
-    @OutputCustomType.Constructor({"id","plaintext","secrets"})
+    @OutputCustomType.Constructor
     private GetSecretsResult(
-        String id,
-        Map<String,String> plaintext,
-        List<GetSecretsSecret> secrets) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") Map<String,String> plaintext,
+        @OutputCustomType.Parameter("secrets") List<GetSecretsSecret> secrets) {
         this.id = id;
         this.plaintext = plaintext;
         this.secrets = secrets;
@@ -76,17 +76,17 @@ public final class GetSecretsResult {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPlaintext(Map<String,String> plaintext) {
+        public Builder plaintext(Map<String,String> plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
 
-        public Builder setSecrets(List<GetSecretsSecret> secrets) {
+        public Builder secrets(List<GetSecretsSecret> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }

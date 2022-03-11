@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    @OutputCustomType.Constructor({"hotwordRule"})
-    private GooglePrivacyDlpV2DetectionRuleResponse(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2DetectionRuleResponse(@OutputCustomType.Parameter("hotwordRule") GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
         this.hotwordRule = hotwordRule;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2DetectionRuleResponse {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setHotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }

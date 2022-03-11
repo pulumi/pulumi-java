@@ -21,11 +21,11 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"deactivateTime","kind","networkUrl"})
+    @OutputCustomType.Constructor
     private ManagedZonePeeringConfigTargetNetworkResponse(
-        String deactivateTime,
-        String kind,
-        String networkUrl) {
+        @OutputCustomType.Parameter("deactivateTime") String deactivateTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.deactivateTime = deactivateTime;
         this.kind = kind;
         this.networkUrl = networkUrl;
@@ -73,17 +73,17 @@ public final class ManagedZonePeeringConfigTargetNetworkResponse {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setDeactivateTime(String deactivateTime) {
+        public Builder deactivateTime(String deactivateTime) {
             this.deactivateTime = Objects.requireNonNull(deactivateTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworkUrl(String networkUrl) {
+        public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }

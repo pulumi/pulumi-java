@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetEnvironmentConfigEncryptionConfig {
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private GetEnvironmentConfigEncryptionConfig(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private GetEnvironmentConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
@@ -40,7 +40,7 @@ public final class GetEnvironmentConfigEncryptionConfig {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

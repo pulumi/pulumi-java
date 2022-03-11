@@ -25,10 +25,10 @@ public final class ManagedZoneForwardingConfigTargetNameServer {
      */
     private final String ipv4Address;
 
-    @OutputCustomType.Constructor({"forwardingPath","ipv4Address"})
+    @OutputCustomType.Constructor
     private ManagedZoneForwardingConfigTargetNameServer(
-        @Nullable String forwardingPath,
-        String ipv4Address) {
+        @OutputCustomType.Parameter("forwardingPath") @Nullable String forwardingPath,
+        @OutputCustomType.Parameter("ipv4Address") String ipv4Address) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
     }
@@ -73,12 +73,12 @@ public final class ManagedZoneForwardingConfigTargetNameServer {
     	      this.ipv4Address = defaults.ipv4Address;
         }
 
-        public Builder setForwardingPath(@Nullable String forwardingPath) {
+        public Builder forwardingPath(@Nullable String forwardingPath) {
             this.forwardingPath = forwardingPath;
             return this;
         }
 
-        public Builder setIpv4Address(String ipv4Address) {
+        public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }

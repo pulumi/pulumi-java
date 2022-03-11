@@ -16,8 +16,8 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
      */
     private final List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups;
 
-    @OutputCustomType.Constructor({"propertyGroups"})
-    private ApplicationApplicationConfigurationEnvironmentProperties(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationEnvironmentProperties(@OutputCustomType.Parameter("propertyGroups") List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
         this.propertyGroups = propertyGroups;
     }
 
@@ -49,7 +49,7 @@ public final class ApplicationApplicationConfigurationEnvironmentProperties {
     	      this.propertyGroups = defaults.propertyGroups;
         }
 
-        public Builder setPropertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
+        public Builder propertyGroups(List<ApplicationApplicationConfigurationEnvironmentPropertiesPropertyGroup> propertyGroups) {
             this.propertyGroups = Objects.requireNonNull(propertyGroups);
             return this;
         }

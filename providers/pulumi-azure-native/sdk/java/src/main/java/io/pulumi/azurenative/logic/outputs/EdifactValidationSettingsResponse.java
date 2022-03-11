@@ -62,18 +62,18 @@ public final class EdifactValidationSettingsResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","checkDuplicateGroupControlNumber","checkDuplicateInterchangeControlNumber","checkDuplicateTransactionSetControlNumber","interchangeControlNumberValidityDays","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateCharacterSet","validateEDITypes","validateXSDTypes"})
+    @OutputCustomType.Constructor
     private EdifactValidationSettingsResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        Boolean checkDuplicateGroupControlNumber,
-        Boolean checkDuplicateInterchangeControlNumber,
-        Boolean checkDuplicateTransactionSetControlNumber,
-        Integer interchangeControlNumberValidityDays,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateCharacterSet,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
+        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("checkDuplicateGroupControlNumber") Boolean checkDuplicateGroupControlNumber,
+        @OutputCustomType.Parameter("checkDuplicateInterchangeControlNumber") Boolean checkDuplicateInterchangeControlNumber,
+        @OutputCustomType.Parameter("checkDuplicateTransactionSetControlNumber") Boolean checkDuplicateTransactionSetControlNumber,
+        @OutputCustomType.Parameter("interchangeControlNumberValidityDays") Integer interchangeControlNumberValidityDays,
+        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.checkDuplicateGroupControlNumber = checkDuplicateGroupControlNumber;
         this.checkDuplicateInterchangeControlNumber = checkDuplicateInterchangeControlNumber;
@@ -195,52 +195,52 @@ public final class EdifactValidationSettingsResponse {
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setCheckDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
+        public Builder checkDuplicateGroupControlNumber(Boolean checkDuplicateGroupControlNumber) {
             this.checkDuplicateGroupControlNumber = Objects.requireNonNull(checkDuplicateGroupControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
+        public Builder checkDuplicateInterchangeControlNumber(Boolean checkDuplicateInterchangeControlNumber) {
             this.checkDuplicateInterchangeControlNumber = Objects.requireNonNull(checkDuplicateInterchangeControlNumber);
             return this;
         }
 
-        public Builder setCheckDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
+        public Builder checkDuplicateTransactionSetControlNumber(Boolean checkDuplicateTransactionSetControlNumber) {
             this.checkDuplicateTransactionSetControlNumber = Objects.requireNonNull(checkDuplicateTransactionSetControlNumber);
             return this;
         }
 
-        public Builder setInterchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
+        public Builder interchangeControlNumberValidityDays(Integer interchangeControlNumberValidityDays) {
             this.interchangeControlNumberValidityDays = Objects.requireNonNull(interchangeControlNumberValidityDays);
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(String trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setValidateCharacterSet(Boolean validateCharacterSet) {
+        public Builder validateCharacterSet(Boolean validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
 
-        public Builder setValidateEDITypes(Boolean validateEDITypes) {
+        public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
-        public Builder setValidateXSDTypes(Boolean validateXSDTypes) {
+        public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }

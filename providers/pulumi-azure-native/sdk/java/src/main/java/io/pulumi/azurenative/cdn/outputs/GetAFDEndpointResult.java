@@ -66,19 +66,19 @@ public final class GetAFDEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","enabledState","hostName","id","location","name","originResponseTimeoutSeconds","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAFDEndpointResult(
-        String deploymentStatus,
-        @Nullable String enabledState,
-        String hostName,
-        String id,
-        String location,
-        String name,
-        @Nullable Integer originResponseTimeoutSeconds,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originResponseTimeoutSeconds") @Nullable Integer originResponseTimeoutSeconds,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
         this.hostName = hostName;
@@ -206,57 +206,57 @@ public final class GetAFDEndpointResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
+        public Builder originResponseTimeoutSeconds(@Nullable Integer originResponseTimeoutSeconds) {
             this.originResponseTimeoutSeconds = originResponseTimeoutSeconds;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

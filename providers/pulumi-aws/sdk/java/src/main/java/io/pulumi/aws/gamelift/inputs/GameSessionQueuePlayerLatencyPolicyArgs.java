@@ -70,22 +70,22 @@ public final class GameSessionQueuePlayerLatencyPolicyArgs extends io.pulumi.res
     	      this.policyDurationSeconds = defaults.policyDurationSeconds;
         }
 
-        public Builder setMaximumIndividualPlayerLatencyMilliseconds(Input<Integer> maximumIndividualPlayerLatencyMilliseconds) {
+        public Builder maximumIndividualPlayerLatencyMilliseconds(Input<Integer> maximumIndividualPlayerLatencyMilliseconds) {
             this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
             return this;
         }
 
-        public Builder setMaximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
+        public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
             this.maximumIndividualPlayerLatencyMilliseconds = Input.of(Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds));
             return this;
         }
 
-        public Builder setPolicyDurationSeconds(@Nullable Input<Integer> policyDurationSeconds) {
+        public Builder policyDurationSeconds(@Nullable Input<Integer> policyDurationSeconds) {
             this.policyDurationSeconds = policyDurationSeconds;
             return this;
         }
 
-        public Builder setPolicyDurationSeconds(@Nullable Integer policyDurationSeconds) {
+        public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
             this.policyDurationSeconds = Input.ofNullable(policyDurationSeconds);
             return this;
         }

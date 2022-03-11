@@ -76,19 +76,19 @@ public final class GetPipelineTopologyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","kind","name","parameters","processors","sinks","sku","sources","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPipelineTopologyResult(
-        @Nullable String description,
-        String id,
-        String kind,
-        String name,
-        @Nullable List<ParameterDeclarationResponse> parameters,
-        @Nullable List<EncoderProcessorResponse> processors,
-        List<VideoSinkResponse> sinks,
-        SkuResponse sku,
-        List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDeclarationResponse> parameters,
+        @OutputCustomType.Parameter("processors") @Nullable List<EncoderProcessorResponse> processors,
+        @OutputCustomType.Parameter("sinks") List<VideoSinkResponse> sinks,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("sources") List<Either<RtspSourceResponse,VideoSourceResponse>> sources,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.kind = kind;
@@ -220,57 +220,57 @@ public final class GetPipelineTopologyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ParameterDeclarationResponse> parameters) {
+        public Builder parameters(@Nullable List<ParameterDeclarationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProcessors(@Nullable List<EncoderProcessorResponse> processors) {
+        public Builder processors(@Nullable List<EncoderProcessorResponse> processors) {
             this.processors = processors;
             return this;
         }
 
-        public Builder setSinks(List<VideoSinkResponse> sinks) {
+        public Builder sinks(List<VideoSinkResponse> sinks) {
             this.sinks = Objects.requireNonNull(sinks);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSources(List<Either<RtspSourceResponse,VideoSourceResponse>> sources) {
+        public Builder sources(List<Either<RtspSourceResponse,VideoSourceResponse>> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -36,17 +36,17 @@ public final class GetAvailabilityZonesResult {
      */
     private final List<String> zoneIds;
 
-    @OutputCustomType.Constructor({"allAvailabilityZones","excludeNames","excludeZoneIds","filters","groupNames","id","names","state","zoneIds"})
+    @OutputCustomType.Constructor
     private GetAvailabilityZonesResult(
-        @Nullable Boolean allAvailabilityZones,
-        @Nullable List<String> excludeNames,
-        @Nullable List<String> excludeZoneIds,
-        @Nullable List<GetAvailabilityZonesFilter> filters,
-        List<String> groupNames,
-        String id,
-        List<String> names,
-        @Nullable String state,
-        List<String> zoneIds) {
+        @OutputCustomType.Parameter("allAvailabilityZones") @Nullable Boolean allAvailabilityZones,
+        @OutputCustomType.Parameter("excludeNames") @Nullable List<String> excludeNames,
+        @OutputCustomType.Parameter("excludeZoneIds") @Nullable List<String> excludeZoneIds,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAvailabilityZonesFilter> filters,
+        @OutputCustomType.Parameter("groupNames") List<String> groupNames,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("zoneIds") List<String> zoneIds) {
         this.allAvailabilityZones = allAvailabilityZones;
         this.excludeNames = excludeNames;
         this.excludeZoneIds = excludeZoneIds;
@@ -134,47 +134,47 @@ public final class GetAvailabilityZonesResult {
     	      this.zoneIds = defaults.zoneIds;
         }
 
-        public Builder setAllAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
+        public Builder allAvailabilityZones(@Nullable Boolean allAvailabilityZones) {
             this.allAvailabilityZones = allAvailabilityZones;
             return this;
         }
 
-        public Builder setExcludeNames(@Nullable List<String> excludeNames) {
+        public Builder excludeNames(@Nullable List<String> excludeNames) {
             this.excludeNames = excludeNames;
             return this;
         }
 
-        public Builder setExcludeZoneIds(@Nullable List<String> excludeZoneIds) {
+        public Builder excludeZoneIds(@Nullable List<String> excludeZoneIds) {
             this.excludeZoneIds = excludeZoneIds;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAvailabilityZonesFilter> filters) {
+        public Builder filters(@Nullable List<GetAvailabilityZonesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGroupNames(List<String> groupNames) {
+        public Builder groupNames(List<String> groupNames) {
             this.groupNames = Objects.requireNonNull(groupNames);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setZoneIds(List<String> zoneIds) {
+        public Builder zoneIds(List<String> zoneIds) {
             this.zoneIds = Objects.requireNonNull(zoneIds);
             return this;
         }

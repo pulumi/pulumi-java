@@ -41,14 +41,14 @@ public final class GetPerfSampleSeriesResult {
      */
     private final String stepId;
 
-    @OutputCustomType.Constructor({"basicPerfSampleSeries","executionId","historyId","project","sampleSeriesId","stepId"})
+    @OutputCustomType.Constructor
     private GetPerfSampleSeriesResult(
-        BasicPerfSampleSeriesResponse basicPerfSampleSeries,
-        String executionId,
-        String historyId,
-        String project,
-        String sampleSeriesId,
-        String stepId) {
+        @OutputCustomType.Parameter("basicPerfSampleSeries") BasicPerfSampleSeriesResponse basicPerfSampleSeries,
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("sampleSeriesId") String sampleSeriesId,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.basicPerfSampleSeries = basicPerfSampleSeries;
         this.executionId = executionId;
         this.historyId = historyId;
@@ -130,32 +130,32 @@ public final class GetPerfSampleSeriesResult {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setBasicPerfSampleSeries(BasicPerfSampleSeriesResponse basicPerfSampleSeries) {
+        public Builder basicPerfSampleSeries(BasicPerfSampleSeriesResponse basicPerfSampleSeries) {
             this.basicPerfSampleSeries = Objects.requireNonNull(basicPerfSampleSeries);
             return this;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSampleSeriesId(String sampleSeriesId) {
+        public Builder sampleSeriesId(String sampleSeriesId) {
             this.sampleSeriesId = Objects.requireNonNull(sampleSeriesId);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }

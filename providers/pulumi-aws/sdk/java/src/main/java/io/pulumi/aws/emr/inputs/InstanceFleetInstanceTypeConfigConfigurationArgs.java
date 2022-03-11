@@ -72,22 +72,22 @@ public final class InstanceFleetInstanceTypeConfigConfigurationArgs extends io.p
     	      this.properties = defaults.properties;
         }
 
-        public Builder setClassification(@Nullable Input<String> classification) {
+        public Builder classification(@Nullable Input<String> classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = Input.ofNullable(classification);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,Object>> properties) {
+        public Builder properties(@Nullable Input<Map<String,Object>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,Object> properties) {
+        public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

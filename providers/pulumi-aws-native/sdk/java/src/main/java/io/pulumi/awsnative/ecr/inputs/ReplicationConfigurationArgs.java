@@ -57,12 +57,12 @@ public final class ReplicationConfigurationArgs extends io.pulumi.resources.Reso
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(Input<List<ReplicationConfigurationReplicationRuleArgs>> rules) {
+        public Builder rules(Input<List<ReplicationConfigurationReplicationRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<ReplicationConfigurationReplicationRuleArgs> rules) {
+        public Builder rules(List<ReplicationConfigurationReplicationRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

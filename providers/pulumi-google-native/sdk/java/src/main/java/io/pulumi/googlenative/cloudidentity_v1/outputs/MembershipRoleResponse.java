@@ -27,11 +27,11 @@ public final class MembershipRoleResponse {
      */
     private final RestrictionEvaluationsResponse restrictionEvaluations;
 
-    @OutputCustomType.Constructor({"expiryDetail","name","restrictionEvaluations"})
+    @OutputCustomType.Constructor
     private MembershipRoleResponse(
-        ExpiryDetailResponse expiryDetail,
-        String name,
-        RestrictionEvaluationsResponse restrictionEvaluations) {
+        @OutputCustomType.Parameter("expiryDetail") ExpiryDetailResponse expiryDetail,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restrictionEvaluations") RestrictionEvaluationsResponse restrictionEvaluations) {
         this.expiryDetail = expiryDetail;
         this.name = name;
         this.restrictionEvaluations = restrictionEvaluations;
@@ -83,17 +83,17 @@ public final class MembershipRoleResponse {
     	      this.restrictionEvaluations = defaults.restrictionEvaluations;
         }
 
-        public Builder setExpiryDetail(ExpiryDetailResponse expiryDetail) {
+        public Builder expiryDetail(ExpiryDetailResponse expiryDetail) {
             this.expiryDetail = Objects.requireNonNull(expiryDetail);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestrictionEvaluations(RestrictionEvaluationsResponse restrictionEvaluations) {
+        public Builder restrictionEvaluations(RestrictionEvaluationsResponse restrictionEvaluations) {
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
         }

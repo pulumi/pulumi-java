@@ -20,10 +20,10 @@ public final class AppliedLicenseResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"osLicense","type"})
+    @OutputCustomType.Constructor
     private AppliedLicenseResponse(
-        String osLicense,
-        String type) {
+        @OutputCustomType.Parameter("osLicense") String osLicense,
+        @OutputCustomType.Parameter("type") String type) {
         this.osLicense = osLicense;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class AppliedLicenseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setOsLicense(String osLicense) {
+        public Builder osLicense(String osLicense) {
             this.osLicense = Objects.requireNonNull(osLicense);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

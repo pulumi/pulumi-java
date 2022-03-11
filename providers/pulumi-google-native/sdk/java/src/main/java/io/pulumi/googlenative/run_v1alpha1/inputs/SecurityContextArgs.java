@@ -57,12 +57,12 @@ public final class SecurityContextArgs extends io.pulumi.resources.ResourceArgs 
     	      this.runAsUser = defaults.runAsUser;
         }
 
-        public Builder setRunAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }

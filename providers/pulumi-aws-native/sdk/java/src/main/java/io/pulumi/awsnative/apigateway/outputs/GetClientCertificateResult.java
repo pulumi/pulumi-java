@@ -29,11 +29,11 @@ public final class GetClientCertificateResult {
      */
     private final @Nullable List<ClientCertificateTag> tags;
 
-    @OutputCustomType.Constructor({"clientCertificateId","description","tags"})
+    @OutputCustomType.Constructor
     private GetClientCertificateResult(
-        @Nullable String clientCertificateId,
-        @Nullable String description,
-        @Nullable List<ClientCertificateTag> tags) {
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<ClientCertificateTag> tags) {
         this.clientCertificateId = clientCertificateId;
         this.description = description;
         this.tags = tags;
@@ -85,17 +85,17 @@ public final class GetClientCertificateResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ClientCertificateTag> tags) {
+        public Builder tags(@Nullable List<ClientCertificateTag> tags) {
             this.tags = tags;
             return this;
         }

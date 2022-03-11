@@ -63,22 +63,22 @@ public final class GlobalTableTimeToLiveSpecificationArgs extends io.pulumi.reso
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAttributeName(@Nullable Input<String> attributeName) {
+        public Builder attributeName(@Nullable Input<String> attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
-        public Builder setAttributeName(@Nullable String attributeName) {
+        public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = Input.ofNullable(attributeName);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }

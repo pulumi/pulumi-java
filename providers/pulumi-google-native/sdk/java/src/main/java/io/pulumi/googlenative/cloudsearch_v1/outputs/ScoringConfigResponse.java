@@ -20,10 +20,10 @@ public final class ScoringConfigResponse {
      */
     private final Boolean disablePersonalization;
 
-    @OutputCustomType.Constructor({"disableFreshness","disablePersonalization"})
+    @OutputCustomType.Constructor
     private ScoringConfigResponse(
-        Boolean disableFreshness,
-        Boolean disablePersonalization) {
+        @OutputCustomType.Parameter("disableFreshness") Boolean disableFreshness,
+        @OutputCustomType.Parameter("disablePersonalization") Boolean disablePersonalization) {
         this.disableFreshness = disableFreshness;
         this.disablePersonalization = disablePersonalization;
     }
@@ -65,12 +65,12 @@ public final class ScoringConfigResponse {
     	      this.disablePersonalization = defaults.disablePersonalization;
         }
 
-        public Builder setDisableFreshness(Boolean disableFreshness) {
+        public Builder disableFreshness(Boolean disableFreshness) {
             this.disableFreshness = Objects.requireNonNull(disableFreshness);
             return this;
         }
 
-        public Builder setDisablePersonalization(Boolean disablePersonalization) {
+        public Builder disablePersonalization(Boolean disablePersonalization) {
             this.disablePersonalization = Objects.requireNonNull(disablePersonalization);
             return this;
         }

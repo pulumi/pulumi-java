@@ -47,15 +47,15 @@ public final class GetConnectionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"cloudSql","creationTime","description","friendlyName","hasCredential","lastModifiedTime","name"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        CloudSqlPropertiesResponse cloudSql,
-        String creationTime,
-        String description,
-        String friendlyName,
-        Boolean hasCredential,
-        String lastModifiedTime,
-        String name) {
+        @OutputCustomType.Parameter("cloudSql") CloudSqlPropertiesResponse cloudSql,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name) {
         this.cloudSql = cloudSql;
         this.creationTime = creationTime;
         this.description = description;
@@ -147,37 +147,37 @@ public final class GetConnectionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCloudSql(CloudSqlPropertiesResponse cloudSql) {
+        public Builder cloudSql(CloudSqlPropertiesResponse cloudSql) {
             this.cloudSql = Objects.requireNonNull(cloudSql);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setHasCredential(Boolean hasCredential) {
+        public Builder hasCredential(Boolean hasCredential) {
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -50,15 +50,15 @@ public final class ConnectionGatewayDefinitionResponseProperties {
      */
     private final @Nullable Object status;
 
-    @OutputCustomType.Constructor({"backendUri","connectionGatewayInstallation","contactInformation","description","displayName","machineName","status"})
+    @OutputCustomType.Constructor
     private ConnectionGatewayDefinitionResponseProperties(
-        @Nullable String backendUri,
-        @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
-        @Nullable List<String> contactInformation,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String machineName,
-        @Nullable Object status) {
+        @OutputCustomType.Parameter("backendUri") @Nullable String backendUri,
+        @OutputCustomType.Parameter("connectionGatewayInstallation") @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation,
+        @OutputCustomType.Parameter("contactInformation") @Nullable List<String> contactInformation,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("machineName") @Nullable String machineName,
+        @OutputCustomType.Parameter("status") @Nullable Object status) {
         this.backendUri = backendUri;
         this.connectionGatewayInstallation = connectionGatewayInstallation;
         this.contactInformation = contactInformation;
@@ -150,37 +150,37 @@ public final class ConnectionGatewayDefinitionResponseProperties {
     	      this.status = defaults.status;
         }
 
-        public Builder setBackendUri(@Nullable String backendUri) {
+        public Builder backendUri(@Nullable String backendUri) {
             this.backendUri = backendUri;
             return this;
         }
 
-        public Builder setConnectionGatewayInstallation(@Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation) {
+        public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation) {
             this.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
 
-        public Builder setContactInformation(@Nullable List<String> contactInformation) {
+        public Builder contactInformation(@Nullable List<String> contactInformation) {
             this.contactInformation = contactInformation;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setMachineName(@Nullable String machineName) {
+        public Builder machineName(@Nullable String machineName) {
             this.machineName = machineName;
             return this;
         }
 
-        public Builder setStatus(@Nullable Object status) {
+        public Builder status(@Nullable Object status) {
             this.status = status;
             return this;
         }

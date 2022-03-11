@@ -33,12 +33,12 @@ public final class ContainerPropertiesResponseInstanceView {
      */
     private final Integer restartCount;
 
-    @OutputCustomType.Constructor({"currentState","events","previousState","restartCount"})
+    @OutputCustomType.Constructor
     private ContainerPropertiesResponseInstanceView(
-        ContainerStateResponse currentState,
-        List<EventResponse> events,
-        ContainerStateResponse previousState,
-        Integer restartCount) {
+        @OutputCustomType.Parameter("currentState") ContainerStateResponse currentState,
+        @OutputCustomType.Parameter("events") List<EventResponse> events,
+        @OutputCustomType.Parameter("previousState") ContainerStateResponse previousState,
+        @OutputCustomType.Parameter("restartCount") Integer restartCount) {
         this.currentState = currentState;
         this.events = events;
         this.previousState = previousState;
@@ -100,22 +100,22 @@ public final class ContainerPropertiesResponseInstanceView {
     	      this.restartCount = defaults.restartCount;
         }
 
-        public Builder setCurrentState(ContainerStateResponse currentState) {
+        public Builder currentState(ContainerStateResponse currentState) {
             this.currentState = Objects.requireNonNull(currentState);
             return this;
         }
 
-        public Builder setEvents(List<EventResponse> events) {
+        public Builder events(List<EventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setPreviousState(ContainerStateResponse previousState) {
+        public Builder previousState(ContainerStateResponse previousState) {
             this.previousState = Objects.requireNonNull(previousState);
             return this;
         }
 
-        public Builder setRestartCount(Integer restartCount) {
+        public Builder restartCount(Integer restartCount) {
             this.restartCount = Objects.requireNonNull(restartCount);
             return this;
         }

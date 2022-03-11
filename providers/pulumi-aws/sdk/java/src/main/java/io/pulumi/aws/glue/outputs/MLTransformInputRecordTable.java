@@ -32,12 +32,12 @@ public final class MLTransformInputRecordTable {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"catalogId","connectionName","databaseName","tableName"})
+    @OutputCustomType.Constructor
     private MLTransformInputRecordTable(
-        @Nullable String catalogId,
-        @Nullable String connectionName,
-        String databaseName,
-        String tableName) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.catalogId = catalogId;
         this.connectionName = connectionName;
         this.databaseName = databaseName;
@@ -99,22 +99,22 @@ public final class MLTransformInputRecordTable {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

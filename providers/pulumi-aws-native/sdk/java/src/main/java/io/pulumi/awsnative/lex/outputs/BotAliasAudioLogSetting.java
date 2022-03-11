@@ -13,10 +13,10 @@ public final class BotAliasAudioLogSetting {
     private final BotAliasAudioLogDestination destination;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"destination","enabled"})
+    @OutputCustomType.Constructor
     private BotAliasAudioLogSetting(
-        BotAliasAudioLogDestination destination,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("destination") BotAliasAudioLogDestination destination,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.destination = destination;
         this.enabled = enabled;
     }
@@ -50,12 +50,12 @@ public final class BotAliasAudioLogSetting {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDestination(BotAliasAudioLogDestination destination) {
+        public Builder destination(BotAliasAudioLogDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

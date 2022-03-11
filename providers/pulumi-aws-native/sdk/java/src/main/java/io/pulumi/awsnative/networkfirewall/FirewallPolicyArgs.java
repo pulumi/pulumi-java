@@ -88,42 +88,42 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFirewallPolicy(Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy) {
+        public Builder firewallPolicy(Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
 
-        public Builder setFirewallPolicy(io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs firewallPolicy) {
+        public Builder firewallPolicy(io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs firewallPolicy) {
             this.firewallPolicy = Input.of(Objects.requireNonNull(firewallPolicy));
             return this;
         }
 
-        public Builder setFirewallPolicyName(@Nullable Input<String> firewallPolicyName) {
+        public Builder firewallPolicyName(@Nullable Input<String> firewallPolicyName) {
             this.firewallPolicyName = firewallPolicyName;
             return this;
         }
 
-        public Builder setFirewallPolicyName(@Nullable String firewallPolicyName) {
+        public Builder firewallPolicyName(@Nullable String firewallPolicyName) {
             this.firewallPolicyName = Input.ofNullable(firewallPolicyName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FirewallPolicyTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FirewallPolicyTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallPolicyTagArgs> tags) {
+        public Builder tags(@Nullable List<FirewallPolicyTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

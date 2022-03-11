@@ -22,8 +22,8 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor({"cluster"})
-    private GameServerClusterConnectionInfoGkeClusterReference(String cluster) {
+    @OutputCustomType.Constructor
+    private GameServerClusterConnectionInfoGkeClusterReference(@OutputCustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 
@@ -62,7 +62,7 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }

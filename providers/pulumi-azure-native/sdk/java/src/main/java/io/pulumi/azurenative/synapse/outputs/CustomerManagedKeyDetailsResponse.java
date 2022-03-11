@@ -23,10 +23,10 @@ public final class CustomerManagedKeyDetailsResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"key","status"})
+    @OutputCustomType.Constructor
     private CustomerManagedKeyDetailsResponse(
-        @Nullable WorkspaceKeyDetailsResponse key,
-        String status) {
+        @OutputCustomType.Parameter("key") @Nullable WorkspaceKeyDetailsResponse key,
+        @OutputCustomType.Parameter("status") String status) {
         this.key = key;
         this.status = status;
     }
@@ -68,12 +68,12 @@ public final class CustomerManagedKeyDetailsResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setKey(@Nullable WorkspaceKeyDetailsResponse key) {
+        public Builder key(@Nullable WorkspaceKeyDetailsResponse key) {
             this.key = key;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

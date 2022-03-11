@@ -25,11 +25,11 @@ public final class BrokerMaintenanceWindowStartTime {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"dayOfWeek","timeOfDay","timeZone"})
+    @OutputCustomType.Constructor
     private BrokerMaintenanceWindowStartTime(
-        String dayOfWeek,
-        String timeOfDay,
-        String timeZone) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("timeOfDay") String timeOfDay,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.dayOfWeek = dayOfWeek;
         this.timeOfDay = timeOfDay;
         this.timeZone = timeZone;
@@ -81,17 +81,17 @@ public final class BrokerMaintenanceWindowStartTime {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setTimeOfDay(String timeOfDay) {
+        public Builder timeOfDay(String timeOfDay) {
             this.timeOfDay = Objects.requireNonNull(timeOfDay);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

@@ -124,27 +124,27 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setRetry(@Nullable Object retry) {
+        public Builder retry(@Nullable Object retry) {
             this.retry = retry;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setSecureInput(@Nullable Boolean secureInput) {
+        public Builder secureInput(@Nullable Boolean secureInput) {
             this.secureInput = secureInput;
             return this;
         }
 
-        public Builder setSecureOutput(@Nullable Boolean secureOutput) {
+        public Builder secureOutput(@Nullable Boolean secureOutput) {
             this.secureOutput = secureOutput;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }

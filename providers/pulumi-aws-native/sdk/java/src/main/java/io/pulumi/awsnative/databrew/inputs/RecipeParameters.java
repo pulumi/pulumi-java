@@ -1259,507 +1259,507 @@ public final class RecipeParameters extends io.pulumi.resources.InvokeArgs {
     	      this.viewFrame = defaults.viewFrame;
         }
 
-        public Builder setAggregateFunction(@Nullable String aggregateFunction) {
+        public Builder aggregateFunction(@Nullable String aggregateFunction) {
             this.aggregateFunction = aggregateFunction;
             return this;
         }
 
-        public Builder setBase(@Nullable String base) {
+        public Builder base(@Nullable String base) {
             this.base = base;
             return this;
         }
 
-        public Builder setCaseStatement(@Nullable String caseStatement) {
+        public Builder caseStatement(@Nullable String caseStatement) {
             this.caseStatement = caseStatement;
             return this;
         }
 
-        public Builder setCategoryMap(@Nullable String categoryMap) {
+        public Builder categoryMap(@Nullable String categoryMap) {
             this.categoryMap = categoryMap;
             return this;
         }
 
-        public Builder setCharsToRemove(@Nullable String charsToRemove) {
+        public Builder charsToRemove(@Nullable String charsToRemove) {
             this.charsToRemove = charsToRemove;
             return this;
         }
 
-        public Builder setCollapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
+        public Builder collapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
             this.collapseConsecutiveWhitespace = collapseConsecutiveWhitespace;
             return this;
         }
 
-        public Builder setColumnDataType(@Nullable String columnDataType) {
+        public Builder columnDataType(@Nullable String columnDataType) {
             this.columnDataType = columnDataType;
             return this;
         }
 
-        public Builder setColumnRange(@Nullable String columnRange) {
+        public Builder columnRange(@Nullable String columnRange) {
             this.columnRange = columnRange;
             return this;
         }
 
-        public Builder setCount(@Nullable String count) {
+        public Builder count(@Nullable String count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCustomCharacters(@Nullable String customCharacters) {
+        public Builder customCharacters(@Nullable String customCharacters) {
             this.customCharacters = customCharacters;
             return this;
         }
 
-        public Builder setCustomStopWords(@Nullable String customStopWords) {
+        public Builder customStopWords(@Nullable String customStopWords) {
             this.customStopWords = customStopWords;
             return this;
         }
 
-        public Builder setCustomValue(@Nullable String customValue) {
+        public Builder customValue(@Nullable String customValue) {
             this.customValue = customValue;
             return this;
         }
 
-        public Builder setDatasetsColumns(@Nullable String datasetsColumns) {
+        public Builder datasetsColumns(@Nullable String datasetsColumns) {
             this.datasetsColumns = datasetsColumns;
             return this;
         }
 
-        public Builder setDateAddValue(@Nullable String dateAddValue) {
+        public Builder dateAddValue(@Nullable String dateAddValue) {
             this.dateAddValue = dateAddValue;
             return this;
         }
 
-        public Builder setDateTimeFormat(@Nullable String dateTimeFormat) {
+        public Builder dateTimeFormat(@Nullable String dateTimeFormat) {
             this.dateTimeFormat = dateTimeFormat;
             return this;
         }
 
-        public Builder setDateTimeParameters(@Nullable String dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable String dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDeleteOtherRows(@Nullable String deleteOtherRows) {
+        public Builder deleteOtherRows(@Nullable String deleteOtherRows) {
             this.deleteOtherRows = deleteOtherRows;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setEndPattern(@Nullable String endPattern) {
+        public Builder endPattern(@Nullable String endPattern) {
             this.endPattern = endPattern;
             return this;
         }
 
-        public Builder setEndPosition(@Nullable String endPosition) {
+        public Builder endPosition(@Nullable String endPosition) {
             this.endPosition = endPosition;
             return this;
         }
 
-        public Builder setEndValue(@Nullable String endValue) {
+        public Builder endValue(@Nullable String endValue) {
             this.endValue = endValue;
             return this;
         }
 
-        public Builder setExpandContractions(@Nullable String expandContractions) {
+        public Builder expandContractions(@Nullable String expandContractions) {
             this.expandContractions = expandContractions;
             return this;
         }
 
-        public Builder setExponent(@Nullable String exponent) {
+        public Builder exponent(@Nullable String exponent) {
             this.exponent = exponent;
             return this;
         }
 
-        public Builder setFalseString(@Nullable String falseString) {
+        public Builder falseString(@Nullable String falseString) {
             this.falseString = falseString;
             return this;
         }
 
-        public Builder setGroupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
+        public Builder groupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
             this.groupByAggFunctionOptions = groupByAggFunctionOptions;
             return this;
         }
 
-        public Builder setGroupByColumns(@Nullable String groupByColumns) {
+        public Builder groupByColumns(@Nullable String groupByColumns) {
             this.groupByColumns = groupByColumns;
             return this;
         }
 
-        public Builder setHiddenColumns(@Nullable String hiddenColumns) {
+        public Builder hiddenColumns(@Nullable String hiddenColumns) {
             this.hiddenColumns = hiddenColumns;
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable String ignoreCase) {
+        public Builder ignoreCase(@Nullable String ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setIncludeInSplit(@Nullable String includeInSplit) {
+        public Builder includeInSplit(@Nullable String includeInSplit) {
             this.includeInSplit = includeInSplit;
             return this;
         }
 
-        public Builder setInput(@Nullable RecipeParametersInputProperties input) {
+        public Builder input(@Nullable RecipeParametersInputProperties input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setIsText(@Nullable String isText) {
+        public Builder isText(@Nullable String isText) {
             this.isText = isText;
             return this;
         }
 
-        public Builder setJoinKeys(@Nullable String joinKeys) {
+        public Builder joinKeys(@Nullable String joinKeys) {
             this.joinKeys = joinKeys;
             return this;
         }
 
-        public Builder setJoinType(@Nullable String joinType) {
+        public Builder joinType(@Nullable String joinType) {
             this.joinType = joinType;
             return this;
         }
 
-        public Builder setLeftColumns(@Nullable String leftColumns) {
+        public Builder leftColumns(@Nullable String leftColumns) {
             this.leftColumns = leftColumns;
             return this;
         }
 
-        public Builder setLimit(@Nullable String limit) {
+        public Builder limit(@Nullable String limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLowerBound(@Nullable String lowerBound) {
+        public Builder lowerBound(@Nullable String lowerBound) {
             this.lowerBound = lowerBound;
             return this;
         }
 
-        public Builder setMapType(@Nullable String mapType) {
+        public Builder mapType(@Nullable String mapType) {
             this.mapType = mapType;
             return this;
         }
 
-        public Builder setModeType(@Nullable String modeType) {
+        public Builder modeType(@Nullable String modeType) {
             this.modeType = modeType;
             return this;
         }
 
-        public Builder setMultiLine(@Nullable Boolean multiLine) {
+        public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = multiLine;
             return this;
         }
 
-        public Builder setNumRows(@Nullable String numRows) {
+        public Builder numRows(@Nullable String numRows) {
             this.numRows = numRows;
             return this;
         }
 
-        public Builder setNumRowsAfter(@Nullable String numRowsAfter) {
+        public Builder numRowsAfter(@Nullable String numRowsAfter) {
             this.numRowsAfter = numRowsAfter;
             return this;
         }
 
-        public Builder setNumRowsBefore(@Nullable String numRowsBefore) {
+        public Builder numRowsBefore(@Nullable String numRowsBefore) {
             this.numRowsBefore = numRowsBefore;
             return this;
         }
 
-        public Builder setOrderByColumn(@Nullable String orderByColumn) {
+        public Builder orderByColumn(@Nullable String orderByColumn) {
             this.orderByColumn = orderByColumn;
             return this;
         }
 
-        public Builder setOrderByColumns(@Nullable String orderByColumns) {
+        public Builder orderByColumns(@Nullable String orderByColumns) {
             this.orderByColumns = orderByColumns;
             return this;
         }
 
-        public Builder setOther(@Nullable String other) {
+        public Builder other(@Nullable String other) {
             this.other = other;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPatternOption1(@Nullable String patternOption1) {
+        public Builder patternOption1(@Nullable String patternOption1) {
             this.patternOption1 = patternOption1;
             return this;
         }
 
-        public Builder setPatternOption2(@Nullable String patternOption2) {
+        public Builder patternOption2(@Nullable String patternOption2) {
             this.patternOption2 = patternOption2;
             return this;
         }
 
-        public Builder setPatternOptions(@Nullable String patternOptions) {
+        public Builder patternOptions(@Nullable String patternOptions) {
             this.patternOptions = patternOptions;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPosition(@Nullable String position) {
+        public Builder position(@Nullable String position) {
             this.position = position;
             return this;
         }
 
-        public Builder setRemoveAllPunctuation(@Nullable String removeAllPunctuation) {
+        public Builder removeAllPunctuation(@Nullable String removeAllPunctuation) {
             this.removeAllPunctuation = removeAllPunctuation;
             return this;
         }
 
-        public Builder setRemoveAllQuotes(@Nullable String removeAllQuotes) {
+        public Builder removeAllQuotes(@Nullable String removeAllQuotes) {
             this.removeAllQuotes = removeAllQuotes;
             return this;
         }
 
-        public Builder setRemoveAllWhitespace(@Nullable String removeAllWhitespace) {
+        public Builder removeAllWhitespace(@Nullable String removeAllWhitespace) {
             this.removeAllWhitespace = removeAllWhitespace;
             return this;
         }
 
-        public Builder setRemoveCustomCharacters(@Nullable String removeCustomCharacters) {
+        public Builder removeCustomCharacters(@Nullable String removeCustomCharacters) {
             this.removeCustomCharacters = removeCustomCharacters;
             return this;
         }
 
-        public Builder setRemoveCustomValue(@Nullable String removeCustomValue) {
+        public Builder removeCustomValue(@Nullable String removeCustomValue) {
             this.removeCustomValue = removeCustomValue;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
+        public Builder removeLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
             this.removeLeadingAndTrailingPunctuation = removeLeadingAndTrailingPunctuation;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
+        public Builder removeLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
             this.removeLeadingAndTrailingQuotes = removeLeadingAndTrailingQuotes;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
+        public Builder removeLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
             this.removeLeadingAndTrailingWhitespace = removeLeadingAndTrailingWhitespace;
             return this;
         }
 
-        public Builder setRemoveLetters(@Nullable String removeLetters) {
+        public Builder removeLetters(@Nullable String removeLetters) {
             this.removeLetters = removeLetters;
             return this;
         }
 
-        public Builder setRemoveNumbers(@Nullable String removeNumbers) {
+        public Builder removeNumbers(@Nullable String removeNumbers) {
             this.removeNumbers = removeNumbers;
             return this;
         }
 
-        public Builder setRemoveSourceColumn(@Nullable String removeSourceColumn) {
+        public Builder removeSourceColumn(@Nullable String removeSourceColumn) {
             this.removeSourceColumn = removeSourceColumn;
             return this;
         }
 
-        public Builder setRemoveSpecialCharacters(@Nullable String removeSpecialCharacters) {
+        public Builder removeSpecialCharacters(@Nullable String removeSpecialCharacters) {
             this.removeSpecialCharacters = removeSpecialCharacters;
             return this;
         }
 
-        public Builder setRightColumns(@Nullable String rightColumns) {
+        public Builder rightColumns(@Nullable String rightColumns) {
             this.rightColumns = rightColumns;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable String sampleSize) {
+        public Builder sampleSize(@Nullable String sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSampleType(@Nullable String sampleType) {
+        public Builder sampleType(@Nullable String sampleType) {
             this.sampleType = sampleType;
             return this;
         }
 
-        public Builder setSecondInput(@Nullable String secondInput) {
+        public Builder secondInput(@Nullable String secondInput) {
             this.secondInput = secondInput;
             return this;
         }
 
-        public Builder setSecondaryInputs(@Nullable List<RecipeSecondaryInput> secondaryInputs) {
+        public Builder secondaryInputs(@Nullable List<RecipeSecondaryInput> secondaryInputs) {
             this.secondaryInputs = secondaryInputs;
             return this;
         }
 
-        public Builder setSheetIndexes(@Nullable List<Integer> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
 
-        public Builder setSheetNames(@Nullable List<String> sheetNames) {
+        public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }
 
-        public Builder setSourceColumn(@Nullable String sourceColumn) {
+        public Builder sourceColumn(@Nullable String sourceColumn) {
             this.sourceColumn = sourceColumn;
             return this;
         }
 
-        public Builder setSourceColumn1(@Nullable String sourceColumn1) {
+        public Builder sourceColumn1(@Nullable String sourceColumn1) {
             this.sourceColumn1 = sourceColumn1;
             return this;
         }
 
-        public Builder setSourceColumn2(@Nullable String sourceColumn2) {
+        public Builder sourceColumn2(@Nullable String sourceColumn2) {
             this.sourceColumn2 = sourceColumn2;
             return this;
         }
 
-        public Builder setSourceColumns(@Nullable String sourceColumns) {
+        public Builder sourceColumns(@Nullable String sourceColumns) {
             this.sourceColumns = sourceColumns;
             return this;
         }
 
-        public Builder setStartColumnIndex(@Nullable String startColumnIndex) {
+        public Builder startColumnIndex(@Nullable String startColumnIndex) {
             this.startColumnIndex = startColumnIndex;
             return this;
         }
 
-        public Builder setStartPattern(@Nullable String startPattern) {
+        public Builder startPattern(@Nullable String startPattern) {
             this.startPattern = startPattern;
             return this;
         }
 
-        public Builder setStartPosition(@Nullable String startPosition) {
+        public Builder startPosition(@Nullable String startPosition) {
             this.startPosition = startPosition;
             return this;
         }
 
-        public Builder setStartValue(@Nullable String startValue) {
+        public Builder startValue(@Nullable String startValue) {
             this.startValue = startValue;
             return this;
         }
 
-        public Builder setStemmingMode(@Nullable String stemmingMode) {
+        public Builder stemmingMode(@Nullable String stemmingMode) {
             this.stemmingMode = stemmingMode;
             return this;
         }
 
-        public Builder setStepCount(@Nullable String stepCount) {
+        public Builder stepCount(@Nullable String stepCount) {
             this.stepCount = stepCount;
             return this;
         }
 
-        public Builder setStepIndex(@Nullable String stepIndex) {
+        public Builder stepIndex(@Nullable String stepIndex) {
             this.stepIndex = stepIndex;
             return this;
         }
 
-        public Builder setStopWordsMode(@Nullable String stopWordsMode) {
+        public Builder stopWordsMode(@Nullable String stopWordsMode) {
             this.stopWordsMode = stopWordsMode;
             return this;
         }
 
-        public Builder setStrategy(@Nullable String strategy) {
+        public Builder strategy(@Nullable String strategy) {
             this.strategy = strategy;
             return this;
         }
 
-        public Builder setTargetColumn(@Nullable String targetColumn) {
+        public Builder targetColumn(@Nullable String targetColumn) {
             this.targetColumn = targetColumn;
             return this;
         }
 
-        public Builder setTargetColumnNames(@Nullable String targetColumnNames) {
+        public Builder targetColumnNames(@Nullable String targetColumnNames) {
             this.targetColumnNames = targetColumnNames;
             return this;
         }
 
-        public Builder setTargetDateFormat(@Nullable String targetDateFormat) {
+        public Builder targetDateFormat(@Nullable String targetDateFormat) {
             this.targetDateFormat = targetDateFormat;
             return this;
         }
 
-        public Builder setTargetIndex(@Nullable String targetIndex) {
+        public Builder targetIndex(@Nullable String targetIndex) {
             this.targetIndex = targetIndex;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTokenizerPattern(@Nullable String tokenizerPattern) {
+        public Builder tokenizerPattern(@Nullable String tokenizerPattern) {
             this.tokenizerPattern = tokenizerPattern;
             return this;
         }
 
-        public Builder setTrueString(@Nullable String trueString) {
+        public Builder trueString(@Nullable String trueString) {
             this.trueString = trueString;
             return this;
         }
 
-        public Builder setUdfLang(@Nullable String udfLang) {
+        public Builder udfLang(@Nullable String udfLang) {
             this.udfLang = udfLang;
             return this;
         }
 
-        public Builder setUnits(@Nullable String units) {
+        public Builder units(@Nullable String units) {
             this.units = units;
             return this;
         }
 
-        public Builder setUnpivotColumn(@Nullable String unpivotColumn) {
+        public Builder unpivotColumn(@Nullable String unpivotColumn) {
             this.unpivotColumn = unpivotColumn;
             return this;
         }
 
-        public Builder setUpperBound(@Nullable String upperBound) {
+        public Builder upperBound(@Nullable String upperBound) {
             this.upperBound = upperBound;
             return this;
         }
 
-        public Builder setUseNewDataFrame(@Nullable String useNewDataFrame) {
+        public Builder useNewDataFrame(@Nullable String useNewDataFrame) {
             this.useNewDataFrame = useNewDataFrame;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue1(@Nullable String value1) {
+        public Builder value1(@Nullable String value1) {
             this.value1 = value1;
             return this;
         }
 
-        public Builder setValue2(@Nullable String value2) {
+        public Builder value2(@Nullable String value2) {
             this.value2 = value2;
             return this;
         }
 
-        public Builder setValueColumn(@Nullable String valueColumn) {
+        public Builder valueColumn(@Nullable String valueColumn) {
             this.valueColumn = valueColumn;
             return this;
         }
 
-        public Builder setViewFrame(@Nullable String viewFrame) {
+        public Builder viewFrame(@Nullable String viewFrame) {
             this.viewFrame = viewFrame;
             return this;
         }

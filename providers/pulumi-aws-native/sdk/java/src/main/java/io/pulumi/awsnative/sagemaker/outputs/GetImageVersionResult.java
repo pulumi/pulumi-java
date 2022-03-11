@@ -17,12 +17,12 @@ public final class GetImageVersionResult {
     private final @Nullable String imageVersionArn;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"containerImage","imageArn","imageVersionArn","version"})
+    @OutputCustomType.Constructor
     private GetImageVersionResult(
-        @Nullable String containerImage,
-        @Nullable String imageArn,
-        @Nullable String imageVersionArn,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("containerImage") @Nullable String containerImage,
+        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
+        @OutputCustomType.Parameter("imageVersionArn") @Nullable String imageVersionArn,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.containerImage = containerImage;
         this.imageArn = imageArn;
         this.imageVersionArn = imageVersionArn;
@@ -68,22 +68,22 @@ public final class GetImageVersionResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setContainerImage(@Nullable String containerImage) {
+        public Builder containerImage(@Nullable String containerImage) {
             this.containerImage = containerImage;
             return this;
         }
 
-        public Builder setImageArn(@Nullable String imageArn) {
+        public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
-        public Builder setImageVersionArn(@Nullable String imageVersionArn) {
+        public Builder imageVersionArn(@Nullable String imageVersionArn) {
             this.imageVersionArn = imageVersionArn;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

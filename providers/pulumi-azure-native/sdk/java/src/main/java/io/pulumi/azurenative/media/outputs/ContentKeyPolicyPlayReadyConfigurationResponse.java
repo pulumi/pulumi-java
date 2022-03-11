@@ -30,11 +30,11 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
      */
     private final @Nullable String responseCustomData;
 
-    @OutputCustomType.Constructor({"licenses","odataType","responseCustomData"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyConfigurationResponse(
-        List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
-        String odataType,
-        @Nullable String responseCustomData) {
+        @OutputCustomType.Parameter("licenses") List<ContentKeyPolicyPlayReadyLicenseResponse> licenses,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("responseCustomData") @Nullable String responseCustomData) {
         this.licenses = licenses;
         this.odataType = odataType;
         this.responseCustomData = responseCustomData;
@@ -87,17 +87,17 @@ public final class ContentKeyPolicyPlayReadyConfigurationResponse {
     	      this.responseCustomData = defaults.responseCustomData;
         }
 
-        public Builder setLicenses(List<ContentKeyPolicyPlayReadyLicenseResponse> licenses) {
+        public Builder licenses(List<ContentKeyPolicyPlayReadyLicenseResponse> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResponseCustomData(@Nullable String responseCustomData) {
+        public Builder responseCustomData(@Nullable String responseCustomData) {
             this.responseCustomData = responseCustomData;
             return this;
         }

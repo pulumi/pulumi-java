@@ -84,17 +84,17 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
     	      this.webhookName = defaults.webhookName;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWebhookName(String webhookName) {
+        public Builder webhookName(String webhookName) {
             this.webhookName = Objects.requireNonNull(webhookName);
             return this;
         }

@@ -25,11 +25,11 @@ public final class SslSettingsResponse {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor({"certificateId","pendingManagedCertificateId","sslManagementType"})
+    @OutputCustomType.Constructor
     private SslSettingsResponse(
-        String certificateId,
-        String pendingManagedCertificateId,
-        String sslManagementType) {
+        @OutputCustomType.Parameter("certificateId") String certificateId,
+        @OutputCustomType.Parameter("pendingManagedCertificateId") String pendingManagedCertificateId,
+        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;
@@ -81,17 +81,17 @@ public final class SslSettingsResponse {
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder setCertificateId(String certificateId) {
+        public Builder certificateId(String certificateId) {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
 
-        public Builder setPendingManagedCertificateId(String pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = Objects.requireNonNull(pendingManagedCertificateId);
             return this;
         }
 
-        public Builder setSslManagementType(String sslManagementType) {
+        public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }

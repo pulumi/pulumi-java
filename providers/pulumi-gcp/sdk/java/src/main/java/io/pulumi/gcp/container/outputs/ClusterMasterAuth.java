@@ -21,12 +21,12 @@ public final class ClusterMasterAuth {
     private final @Nullable String clientKey;
     private final @Nullable String clusterCaCertificate;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfig","clientKey","clusterCaCertificate"})
+    @OutputCustomType.Constructor
     private ClusterMasterAuth(
-        @Nullable String clientCertificate,
-        ClusterMasterAuthClientCertificateConfig clientCertificateConfig,
-        @Nullable String clientKey,
-        @Nullable String clusterCaCertificate) {
+        @OutputCustomType.Parameter("clientCertificate") @Nullable String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfig") ClusterMasterAuthClientCertificateConfig clientCertificateConfig,
+        @OutputCustomType.Parameter("clientKey") @Nullable String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") @Nullable String clusterCaCertificate) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;
@@ -76,22 +76,22 @@ public final class ClusterMasterAuth {
     	      this.clusterCaCertificate = defaults.clusterCaCertificate;
         }
 
-        public Builder setClientCertificate(@Nullable String clientCertificate) {
+        public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientCertificateConfig(ClusterMasterAuthClientCertificateConfig clientCertificateConfig) {
+        public Builder clientCertificateConfig(ClusterMasterAuthClientCertificateConfig clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
 
-        public Builder setClientKey(@Nullable String clientKey) {
+        public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setClusterCaCertificate(@Nullable String clusterCaCertificate) {
+        public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
             this.clusterCaCertificate = clusterCaCertificate;
             return this;
         }

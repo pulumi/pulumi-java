@@ -75,22 +75,22 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder setCustomAccount(@Nullable Input<CustomAccountArgs> customAccount) {
+        public Builder customAccount(@Nullable Input<CustomAccountArgs> customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
-        public Builder setCustomAccount(@Nullable CustomAccountArgs customAccount) {
+        public Builder customAccount(@Nullable CustomAccountArgs customAccount) {
             this.customAccount = Input.ofNullable(customAccount);
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
+        public Builder googleAccount(@Nullable Input<GoogleAccountArgs> googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable GoogleAccountArgs googleAccount) {
+        public Builder googleAccount(@Nullable GoogleAccountArgs googleAccount) {
             this.googleAccount = Input.ofNullable(googleAccount);
             return this;
         }

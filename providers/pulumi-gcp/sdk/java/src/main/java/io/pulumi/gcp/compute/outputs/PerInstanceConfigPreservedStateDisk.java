@@ -41,12 +41,12 @@ public final class PerInstanceConfigPreservedStateDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"deleteRule","deviceName","mode","source"})
+    @OutputCustomType.Constructor
     private PerInstanceConfigPreservedStateDisk(
-        @Nullable String deleteRule,
-        String deviceName,
-        @Nullable String mode,
-        String source) {
+        @OutputCustomType.Parameter("deleteRule") @Nullable String deleteRule,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") String source) {
         this.deleteRule = deleteRule;
         this.deviceName = deviceName;
         this.mode = mode;
@@ -117,22 +117,22 @@ public final class PerInstanceConfigPreservedStateDisk {
     	      this.source = defaults.source;
         }
 
-        public Builder setDeleteRule(@Nullable String deleteRule) {
+        public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

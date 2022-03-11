@@ -13,10 +13,10 @@ public final class IntegrationTaskPropertiesMap {
     private final IntegrationOperatorPropertiesKeys operatorPropertyKey;
     private final String property;
 
-    @OutputCustomType.Constructor({"operatorPropertyKey","property"})
+    @OutputCustomType.Constructor
     private IntegrationTaskPropertiesMap(
-        IntegrationOperatorPropertiesKeys operatorPropertyKey,
-        String property) {
+        @OutputCustomType.Parameter("operatorPropertyKey") IntegrationOperatorPropertiesKeys operatorPropertyKey,
+        @OutputCustomType.Parameter("property") String property) {
         this.operatorPropertyKey = operatorPropertyKey;
         this.property = property;
     }
@@ -50,12 +50,12 @@ public final class IntegrationTaskPropertiesMap {
     	      this.property = defaults.property;
         }
 
-        public Builder setOperatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
+        public Builder operatorPropertyKey(IntegrationOperatorPropertiesKeys operatorPropertyKey) {
             this.operatorPropertyKey = Objects.requireNonNull(operatorPropertyKey);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }

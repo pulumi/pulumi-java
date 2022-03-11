@@ -25,13 +25,13 @@ public final class GetGroupResult {
     private final String id;
     private final String identityStoreId;
 
-    @OutputCustomType.Constructor({"displayName","filters","groupId","id","identityStoreId"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String displayName,
-        List<GetGroupFilter> filters,
-        String groupId,
-        String id,
-        String identityStoreId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filters") List<GetGroupFilter> filters,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identityStoreId") String identityStoreId) {
         this.displayName = displayName;
         this.filters = filters;
         this.groupId = groupId;
@@ -91,27 +91,27 @@ public final class GetGroupResult {
     	      this.identityStoreId = defaults.identityStoreId;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFilters(List<GetGroupFilter> filters) {
+        public Builder filters(List<GetGroupFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentityStoreId(String identityStoreId) {
+        public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
         }

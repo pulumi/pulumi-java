@@ -22,10 +22,10 @@ public final class ResourceAccessRuleResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"resourceId","tenantId"})
+    @OutputCustomType.Constructor
     private ResourceAccessRuleResponse(
-        @Nullable String resourceId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.resourceId = resourceId;
         this.tenantId = tenantId;
     }
@@ -67,12 +67,12 @@ public final class ResourceAccessRuleResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

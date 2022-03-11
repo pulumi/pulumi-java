@@ -67,12 +67,12 @@ public final class PackagingConfigurationMssManifest extends io.pulumi.resources
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

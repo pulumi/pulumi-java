@@ -23,10 +23,10 @@ public final class MetricAlertActionResponse {
      */
     private final @Nullable Map<String,String> webHookProperties;
 
-    @OutputCustomType.Constructor({"actionGroupId","webHookProperties"})
+    @OutputCustomType.Constructor
     private MetricAlertActionResponse(
-        @Nullable String actionGroupId,
-        @Nullable Map<String,String> webHookProperties) {
+        @OutputCustomType.Parameter("actionGroupId") @Nullable String actionGroupId,
+        @OutputCustomType.Parameter("webHookProperties") @Nullable Map<String,String> webHookProperties) {
         this.actionGroupId = actionGroupId;
         this.webHookProperties = webHookProperties;
     }
@@ -68,12 +68,12 @@ public final class MetricAlertActionResponse {
     	      this.webHookProperties = defaults.webHookProperties;
         }
 
-        public Builder setActionGroupId(@Nullable String actionGroupId) {
+        public Builder actionGroupId(@Nullable String actionGroupId) {
             this.actionGroupId = actionGroupId;
             return this;
         }
 
-        public Builder setWebHookProperties(@Nullable Map<String,String> webHookProperties) {
+        public Builder webHookProperties(@Nullable Map<String,String> webHookProperties) {
             this.webHookProperties = webHookProperties;
             return this;
         }

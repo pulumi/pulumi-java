@@ -33,12 +33,12 @@ public final class FulfillmentGenericWebService {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","requestHeaders","uri","username"})
+    @OutputCustomType.Constructor
     private FulfillmentGenericWebService(
-        @Nullable String password,
-        @Nullable Map<String,String> requestHeaders,
-        String uri,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("requestHeaders") @Nullable Map<String,String> requestHeaders,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.requestHeaders = requestHeaders;
         this.uri = uri;
@@ -100,22 +100,22 @@ public final class FulfillmentGenericWebService {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setRequestHeaders(@Nullable Map<String,String> requestHeaders) {
+        public Builder requestHeaders(@Nullable Map<String,String> requestHeaders) {
             this.requestHeaders = requestHeaders;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

@@ -51,16 +51,16 @@ public final class GetguestDiagnosticsSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSources","id","location","name","osType","proxySetting","tags","type"})
+    @OutputCustomType.Constructor
     private GetguestDiagnosticsSettingResult(
-        @Nullable List<DataSourceResponse> dataSources,
-        String id,
-        String location,
-        String name,
-        @Nullable String osType,
-        @Nullable String proxySetting,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dataSources") @Nullable List<DataSourceResponse> dataSources,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("proxySetting") @Nullable String proxySetting,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSources = dataSources;
         this.id = id;
         this.location = location;
@@ -158,42 +158,42 @@ public final class GetguestDiagnosticsSettingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataSources(@Nullable List<DataSourceResponse> dataSources) {
+        public Builder dataSources(@Nullable List<DataSourceResponse> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setProxySetting(@Nullable String proxySetting) {
+        public Builder proxySetting(@Nullable String proxySetting) {
             this.proxySetting = proxySetting;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

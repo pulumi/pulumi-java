@@ -29,25 +29,25 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
     private final @Nullable String skipNodesWithLocalStorage;
     private final @Nullable String skipNodesWithSystemPods;
 
-    @OutputCustomType.Constructor({"balanceSimilarNodeGroups","expander","maxEmptyBulkDelete","maxGracefulTerminationSec","maxNodeProvisionTime","maxTotalUnreadyPercentage","newPodScaleUpDelay","okTotalUnreadyCount","scaleDownDelayAfterAdd","scaleDownDelayAfterDelete","scaleDownDelayAfterFailure","scaleDownUnneededTime","scaleDownUnreadyTime","scaleDownUtilizationThreshold","scanInterval","skipNodesWithLocalStorage","skipNodesWithSystemPods"})
+    @OutputCustomType.Constructor
     private ManagedClusterPropertiesResponseAutoScalerProfile(
-        @Nullable String balanceSimilarNodeGroups,
-        @Nullable String expander,
-        @Nullable String maxEmptyBulkDelete,
-        @Nullable String maxGracefulTerminationSec,
-        @Nullable String maxNodeProvisionTime,
-        @Nullable String maxTotalUnreadyPercentage,
-        @Nullable String newPodScaleUpDelay,
-        @Nullable String okTotalUnreadyCount,
-        @Nullable String scaleDownDelayAfterAdd,
-        @Nullable String scaleDownDelayAfterDelete,
-        @Nullable String scaleDownDelayAfterFailure,
-        @Nullable String scaleDownUnneededTime,
-        @Nullable String scaleDownUnreadyTime,
-        @Nullable String scaleDownUtilizationThreshold,
-        @Nullable String scanInterval,
-        @Nullable String skipNodesWithLocalStorage,
-        @Nullable String skipNodesWithSystemPods) {
+        @OutputCustomType.Parameter("balanceSimilarNodeGroups") @Nullable String balanceSimilarNodeGroups,
+        @OutputCustomType.Parameter("expander") @Nullable String expander,
+        @OutputCustomType.Parameter("maxEmptyBulkDelete") @Nullable String maxEmptyBulkDelete,
+        @OutputCustomType.Parameter("maxGracefulTerminationSec") @Nullable String maxGracefulTerminationSec,
+        @OutputCustomType.Parameter("maxNodeProvisionTime") @Nullable String maxNodeProvisionTime,
+        @OutputCustomType.Parameter("maxTotalUnreadyPercentage") @Nullable String maxTotalUnreadyPercentage,
+        @OutputCustomType.Parameter("newPodScaleUpDelay") @Nullable String newPodScaleUpDelay,
+        @OutputCustomType.Parameter("okTotalUnreadyCount") @Nullable String okTotalUnreadyCount,
+        @OutputCustomType.Parameter("scaleDownDelayAfterAdd") @Nullable String scaleDownDelayAfterAdd,
+        @OutputCustomType.Parameter("scaleDownDelayAfterDelete") @Nullable String scaleDownDelayAfterDelete,
+        @OutputCustomType.Parameter("scaleDownDelayAfterFailure") @Nullable String scaleDownDelayAfterFailure,
+        @OutputCustomType.Parameter("scaleDownUnneededTime") @Nullable String scaleDownUnneededTime,
+        @OutputCustomType.Parameter("scaleDownUnreadyTime") @Nullable String scaleDownUnreadyTime,
+        @OutputCustomType.Parameter("scaleDownUtilizationThreshold") @Nullable String scaleDownUtilizationThreshold,
+        @OutputCustomType.Parameter("scanInterval") @Nullable String scanInterval,
+        @OutputCustomType.Parameter("skipNodesWithLocalStorage") @Nullable String skipNodesWithLocalStorage,
+        @OutputCustomType.Parameter("skipNodesWithSystemPods") @Nullable String skipNodesWithSystemPods) {
         this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
         this.expander = expander;
         this.maxEmptyBulkDelete = maxEmptyBulkDelete;
@@ -171,87 +171,87 @@ public final class ManagedClusterPropertiesResponseAutoScalerProfile {
     	      this.skipNodesWithSystemPods = defaults.skipNodesWithSystemPods;
         }
 
-        public Builder setBalanceSimilarNodeGroups(@Nullable String balanceSimilarNodeGroups) {
+        public Builder balanceSimilarNodeGroups(@Nullable String balanceSimilarNodeGroups) {
             this.balanceSimilarNodeGroups = balanceSimilarNodeGroups;
             return this;
         }
 
-        public Builder setExpander(@Nullable String expander) {
+        public Builder expander(@Nullable String expander) {
             this.expander = expander;
             return this;
         }
 
-        public Builder setMaxEmptyBulkDelete(@Nullable String maxEmptyBulkDelete) {
+        public Builder maxEmptyBulkDelete(@Nullable String maxEmptyBulkDelete) {
             this.maxEmptyBulkDelete = maxEmptyBulkDelete;
             return this;
         }
 
-        public Builder setMaxGracefulTerminationSec(@Nullable String maxGracefulTerminationSec) {
+        public Builder maxGracefulTerminationSec(@Nullable String maxGracefulTerminationSec) {
             this.maxGracefulTerminationSec = maxGracefulTerminationSec;
             return this;
         }
 
-        public Builder setMaxNodeProvisionTime(@Nullable String maxNodeProvisionTime) {
+        public Builder maxNodeProvisionTime(@Nullable String maxNodeProvisionTime) {
             this.maxNodeProvisionTime = maxNodeProvisionTime;
             return this;
         }
 
-        public Builder setMaxTotalUnreadyPercentage(@Nullable String maxTotalUnreadyPercentage) {
+        public Builder maxTotalUnreadyPercentage(@Nullable String maxTotalUnreadyPercentage) {
             this.maxTotalUnreadyPercentage = maxTotalUnreadyPercentage;
             return this;
         }
 
-        public Builder setNewPodScaleUpDelay(@Nullable String newPodScaleUpDelay) {
+        public Builder newPodScaleUpDelay(@Nullable String newPodScaleUpDelay) {
             this.newPodScaleUpDelay = newPodScaleUpDelay;
             return this;
         }
 
-        public Builder setOkTotalUnreadyCount(@Nullable String okTotalUnreadyCount) {
+        public Builder okTotalUnreadyCount(@Nullable String okTotalUnreadyCount) {
             this.okTotalUnreadyCount = okTotalUnreadyCount;
             return this;
         }
 
-        public Builder setScaleDownDelayAfterAdd(@Nullable String scaleDownDelayAfterAdd) {
+        public Builder scaleDownDelayAfterAdd(@Nullable String scaleDownDelayAfterAdd) {
             this.scaleDownDelayAfterAdd = scaleDownDelayAfterAdd;
             return this;
         }
 
-        public Builder setScaleDownDelayAfterDelete(@Nullable String scaleDownDelayAfterDelete) {
+        public Builder scaleDownDelayAfterDelete(@Nullable String scaleDownDelayAfterDelete) {
             this.scaleDownDelayAfterDelete = scaleDownDelayAfterDelete;
             return this;
         }
 
-        public Builder setScaleDownDelayAfterFailure(@Nullable String scaleDownDelayAfterFailure) {
+        public Builder scaleDownDelayAfterFailure(@Nullable String scaleDownDelayAfterFailure) {
             this.scaleDownDelayAfterFailure = scaleDownDelayAfterFailure;
             return this;
         }
 
-        public Builder setScaleDownUnneededTime(@Nullable String scaleDownUnneededTime) {
+        public Builder scaleDownUnneededTime(@Nullable String scaleDownUnneededTime) {
             this.scaleDownUnneededTime = scaleDownUnneededTime;
             return this;
         }
 
-        public Builder setScaleDownUnreadyTime(@Nullable String scaleDownUnreadyTime) {
+        public Builder scaleDownUnreadyTime(@Nullable String scaleDownUnreadyTime) {
             this.scaleDownUnreadyTime = scaleDownUnreadyTime;
             return this;
         }
 
-        public Builder setScaleDownUtilizationThreshold(@Nullable String scaleDownUtilizationThreshold) {
+        public Builder scaleDownUtilizationThreshold(@Nullable String scaleDownUtilizationThreshold) {
             this.scaleDownUtilizationThreshold = scaleDownUtilizationThreshold;
             return this;
         }
 
-        public Builder setScanInterval(@Nullable String scanInterval) {
+        public Builder scanInterval(@Nullable String scanInterval) {
             this.scanInterval = scanInterval;
             return this;
         }
 
-        public Builder setSkipNodesWithLocalStorage(@Nullable String skipNodesWithLocalStorage) {
+        public Builder skipNodesWithLocalStorage(@Nullable String skipNodesWithLocalStorage) {
             this.skipNodesWithLocalStorage = skipNodesWithLocalStorage;
             return this;
         }
 
-        public Builder setSkipNodesWithSystemPods(@Nullable String skipNodesWithSystemPods) {
+        public Builder skipNodesWithSystemPods(@Nullable String skipNodesWithSystemPods) {
             this.skipNodesWithSystemPods = skipNodesWithSystemPods;
             return this;
         }

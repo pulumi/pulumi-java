@@ -22,10 +22,10 @@ public final class ProductLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"displayName","uri"})
+    @OutputCustomType.Constructor
     private ProductLinkResponse(
-        @Nullable String displayName,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.displayName = displayName;
         this.uri = uri;
     }
@@ -67,12 +67,12 @@ public final class ProductLinkResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

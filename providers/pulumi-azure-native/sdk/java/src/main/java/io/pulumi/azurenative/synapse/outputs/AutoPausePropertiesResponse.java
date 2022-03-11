@@ -23,10 +23,10 @@ public final class AutoPausePropertiesResponse {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"delayInMinutes","enabled"})
+    @OutputCustomType.Constructor
     private AutoPausePropertiesResponse(
-        @Nullable Integer delayInMinutes,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("delayInMinutes") @Nullable Integer delayInMinutes,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.delayInMinutes = delayInMinutes;
         this.enabled = enabled;
     }
@@ -68,12 +68,12 @@ public final class AutoPausePropertiesResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDelayInMinutes(@Nullable Integer delayInMinutes) {
+        public Builder delayInMinutes(@Nullable Integer delayInMinutes) {
             this.delayInMinutes = delayInMinutes;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

@@ -87,32 +87,32 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(Input<String> day) {
+        public Builder day(Input<String> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Input.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder setEndTime(Input<HoursOfOperationConfigEndTimeArgs> endTime) {
+        public Builder endTime(Input<HoursOfOperationConfigEndTimeArgs> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEndTime(HoursOfOperationConfigEndTimeArgs endTime) {
+        public Builder endTime(HoursOfOperationConfigEndTimeArgs endTime) {
             this.endTime = Input.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder setStartTime(Input<HoursOfOperationConfigStartTimeArgs> startTime) {
+        public Builder startTime(Input<HoursOfOperationConfigStartTimeArgs> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(HoursOfOperationConfigStartTimeArgs startTime) {
+        public Builder startTime(HoursOfOperationConfigStartTimeArgs startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

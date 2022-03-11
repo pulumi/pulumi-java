@@ -52,16 +52,16 @@ public final class ApnsCredentialResponse {
      */
     private final @Nullable String token;
 
-    @OutputCustomType.Constructor({"apnsCertificate","appId","appName","certificateKey","endpoint","keyId","thumbprint","token"})
+    @OutputCustomType.Constructor
     private ApnsCredentialResponse(
-        @Nullable String apnsCertificate,
-        @Nullable String appId,
-        @Nullable String appName,
-        @Nullable String certificateKey,
-        @Nullable String endpoint,
-        @Nullable String keyId,
-        @Nullable String thumbprint,
-        @Nullable String token) {
+        @OutputCustomType.Parameter("apnsCertificate") @Nullable String apnsCertificate,
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appName") @Nullable String appName,
+        @OutputCustomType.Parameter("certificateKey") @Nullable String certificateKey,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("token") @Nullable String token) {
         this.apnsCertificate = apnsCertificate;
         this.appId = appId;
         this.appName = appName;
@@ -163,42 +163,42 @@ public final class ApnsCredentialResponse {
     	      this.token = defaults.token;
         }
 
-        public Builder setApnsCertificate(@Nullable String apnsCertificate) {
+        public Builder apnsCertificate(@Nullable String apnsCertificate) {
             this.apnsCertificate = apnsCertificate;
             return this;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setCertificateKey(@Nullable String certificateKey) {
+        public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setToken(@Nullable String token) {
+        public Builder token(@Nullable String token) {
             this.token = token;
             return this;
         }

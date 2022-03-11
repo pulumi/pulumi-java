@@ -24,10 +24,10 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"inputEndpoints","tags"})
+    @OutputCustomType.Constructor
     private AzureToAzureVmSyncedConfigDetailsResponse(
-        @Nullable List<InputEndpointResponse> inputEndpoints,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("inputEndpoints") @Nullable List<InputEndpointResponse> inputEndpoints,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.inputEndpoints = inputEndpoints;
         this.tags = tags;
     }
@@ -69,12 +69,12 @@ public final class AzureToAzureVmSyncedConfigDetailsResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
+        public Builder inputEndpoints(@Nullable List<InputEndpointResponse> inputEndpoints) {
             this.inputEndpoints = inputEndpoints;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

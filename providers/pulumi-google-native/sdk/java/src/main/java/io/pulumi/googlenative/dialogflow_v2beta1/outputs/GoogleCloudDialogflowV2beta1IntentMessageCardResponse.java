@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","imageUri","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons,
-        String imageUri,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUri = imageUri;
         this.subtitle = subtitle;
@@ -99,22 +99,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

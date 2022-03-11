@@ -16,8 +16,8 @@ public final class DatabaseEncryptionConfig {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private DatabaseEncryptionConfig(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private DatabaseEncryptionConfig(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
@@ -50,7 +50,7 @@ public final class DatabaseEncryptionConfig {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

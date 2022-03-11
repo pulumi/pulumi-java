@@ -45,15 +45,15 @@ public final class JitNetworkAccessRequestPortResponse {
      */
     private final String statusReason;
 
-    @OutputCustomType.Constructor({"allowedSourceAddressPrefix","allowedSourceAddressPrefixes","endTimeUtc","mappedPort","number","status","statusReason"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessRequestPortResponse(
-        @Nullable String allowedSourceAddressPrefix,
-        @Nullable List<String> allowedSourceAddressPrefixes,
-        String endTimeUtc,
-        @Nullable Integer mappedPort,
-        Integer number,
-        String status,
-        String statusReason) {
+        @OutputCustomType.Parameter("allowedSourceAddressPrefix") @Nullable String allowedSourceAddressPrefix,
+        @OutputCustomType.Parameter("allowedSourceAddressPrefixes") @Nullable List<String> allowedSourceAddressPrefixes,
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("mappedPort") @Nullable Integer mappedPort,
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason) {
         this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
         this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
         this.endTimeUtc = endTimeUtc;
@@ -141,37 +141,37 @@ public final class JitNetworkAccessRequestPortResponse {
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder setAllowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
+        public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
             this.allowedSourceAddressPrefix = allowedSourceAddressPrefix;
             return this;
         }
 
-        public Builder setAllowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
+        public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
             this.allowedSourceAddressPrefixes = allowedSourceAddressPrefixes;
             return this;
         }
 
-        public Builder setEndTimeUtc(String endTimeUtc) {
+        public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
-        public Builder setMappedPort(@Nullable Integer mappedPort) {
+        public Builder mappedPort(@Nullable Integer mappedPort) {
             this.mappedPort = mappedPort;
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusReason(String statusReason) {
+        public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }

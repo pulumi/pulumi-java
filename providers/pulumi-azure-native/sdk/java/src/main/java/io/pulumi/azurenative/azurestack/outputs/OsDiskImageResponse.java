@@ -20,10 +20,10 @@ public final class OsDiskImageResponse {
      */
     private final String sourceBlobSasUri;
 
-    @OutputCustomType.Constructor({"operatingSystem","sourceBlobSasUri"})
+    @OutputCustomType.Constructor
     private OsDiskImageResponse(
-        String operatingSystem,
-        String sourceBlobSasUri) {
+        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
+        @OutputCustomType.Parameter("sourceBlobSasUri") String sourceBlobSasUri) {
         this.operatingSystem = operatingSystem;
         this.sourceBlobSasUri = sourceBlobSasUri;
     }
@@ -65,12 +65,12 @@ public final class OsDiskImageResponse {
     	      this.sourceBlobSasUri = defaults.sourceBlobSasUri;
         }
 
-        public Builder setOperatingSystem(String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setSourceBlobSasUri(String sourceBlobSasUri) {
+        public Builder sourceBlobSasUri(String sourceBlobSasUri) {
             this.sourceBlobSasUri = Objects.requireNonNull(sourceBlobSasUri);
             return this;
         }

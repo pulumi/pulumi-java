@@ -25,11 +25,11 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor({"dataset","shardCount","tablePrefix"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse(
-        String dataset,
-        String shardCount,
-        String tablePrefix) {
+        @OutputCustomType.Parameter("dataset") String dataset,
+        @OutputCustomType.Parameter("shardCount") String shardCount,
+        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
         this.dataset = dataset;
         this.shardCount = shardCount;
         this.tablePrefix = tablePrefix;
@@ -81,17 +81,17 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryDateShardedSpecResponse 
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setShardCount(String shardCount) {
+        public Builder shardCount(String shardCount) {
             this.shardCount = Objects.requireNonNull(shardCount);
             return this;
         }
 
-        public Builder setTablePrefix(String tablePrefix) {
+        public Builder tablePrefix(String tablePrefix) {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }

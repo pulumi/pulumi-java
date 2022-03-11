@@ -20,10 +20,10 @@ public final class ReportConfigAggregationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"function","name"})
+    @OutputCustomType.Constructor
     private ReportConfigAggregationResponse(
-        String function,
-        String name) {
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("name") String name) {
         this.function = function;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class ReportConfigAggregationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

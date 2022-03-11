@@ -32,12 +32,12 @@ public final class AccountCredentialDetailsResponse {
      */
     private final List<ShareCredentialDetailsResponse> shareCredentialDetails;
 
-    @OutputCustomType.Constructor({"accountConnectionString","accountName","dataAccountType","shareCredentialDetails"})
+    @OutputCustomType.Constructor
     private AccountCredentialDetailsResponse(
-        String accountConnectionString,
-        String accountName,
-        String dataAccountType,
-        List<ShareCredentialDetailsResponse> shareCredentialDetails) {
+        @OutputCustomType.Parameter("accountConnectionString") String accountConnectionString,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("shareCredentialDetails") List<ShareCredentialDetailsResponse> shareCredentialDetails) {
         this.accountConnectionString = accountConnectionString;
         this.accountName = accountName;
         this.dataAccountType = dataAccountType;
@@ -99,22 +99,22 @@ public final class AccountCredentialDetailsResponse {
     	      this.shareCredentialDetails = defaults.shareCredentialDetails;
         }
 
-        public Builder setAccountConnectionString(String accountConnectionString) {
+        public Builder accountConnectionString(String accountConnectionString) {
             this.accountConnectionString = Objects.requireNonNull(accountConnectionString);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setShareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
+        public Builder shareCredentialDetails(List<ShareCredentialDetailsResponse> shareCredentialDetails) {
             this.shareCredentialDetails = Objects.requireNonNull(shareCredentialDetails);
             return this;
         }

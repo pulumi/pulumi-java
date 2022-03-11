@@ -55,17 +55,17 @@ public final class UpgradeDetailsResponse {
      */
     private final String upgradedResourceId;
 
-    @OutputCustomType.Constructor({"endTimeUtc","lastUpdatedTimeUtc","message","operationId","previousResourceId","startTimeUtc","status","triggerType","upgradedResourceId"})
+    @OutputCustomType.Constructor
     private UpgradeDetailsResponse(
-        String endTimeUtc,
-        String lastUpdatedTimeUtc,
-        String message,
-        String operationId,
-        String previousResourceId,
-        String startTimeUtc,
-        String status,
-        String triggerType,
-        String upgradedResourceId) {
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("lastUpdatedTimeUtc") String lastUpdatedTimeUtc,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("operationId") String operationId,
+        @OutputCustomType.Parameter("previousResourceId") String previousResourceId,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("triggerType") String triggerType,
+        @OutputCustomType.Parameter("upgradedResourceId") String upgradedResourceId) {
         this.endTimeUtc = endTimeUtc;
         this.lastUpdatedTimeUtc = lastUpdatedTimeUtc;
         this.message = message;
@@ -177,47 +177,47 @@ public final class UpgradeDetailsResponse {
     	      this.upgradedResourceId = defaults.upgradedResourceId;
         }
 
-        public Builder setEndTimeUtc(String endTimeUtc) {
+        public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
-        public Builder setLastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
+        public Builder lastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setOperationId(String operationId) {
+        public Builder operationId(String operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
 
-        public Builder setPreviousResourceId(String previousResourceId) {
+        public Builder previousResourceId(String previousResourceId) {
             this.previousResourceId = Objects.requireNonNull(previousResourceId);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTriggerType(String triggerType) {
+        public Builder triggerType(String triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
 
-        public Builder setUpgradedResourceId(String upgradedResourceId) {
+        public Builder upgradedResourceId(String upgradedResourceId) {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }

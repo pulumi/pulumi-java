@@ -22,10 +22,10 @@ public final class InterconnectMacsecResponse {
      */
     private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
-    @OutputCustomType.Constructor({"failOpen","preSharedKeys"})
+    @OutputCustomType.Constructor
     private InterconnectMacsecResponse(
-        Boolean failOpen,
-        List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
+        @OutputCustomType.Parameter("failOpen") Boolean failOpen,
+        @OutputCustomType.Parameter("preSharedKeys") List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
         this.failOpen = failOpen;
         this.preSharedKeys = preSharedKeys;
     }
@@ -67,12 +67,12 @@ public final class InterconnectMacsecResponse {
     	      this.preSharedKeys = defaults.preSharedKeys;
         }
 
-        public Builder setFailOpen(Boolean failOpen) {
+        public Builder failOpen(Boolean failOpen) {
             this.failOpen = Objects.requireNonNull(failOpen);
             return this;
         }
 
-        public Builder setPreSharedKeys(List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
+        public Builder preSharedKeys(List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys) {
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }

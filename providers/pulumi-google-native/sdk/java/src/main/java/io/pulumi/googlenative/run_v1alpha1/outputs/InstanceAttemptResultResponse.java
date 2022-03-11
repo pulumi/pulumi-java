@@ -21,10 +21,10 @@ public final class InstanceAttemptResultResponse {
      */
     private final GoogleRpcStatusResponse status;
 
-    @OutputCustomType.Constructor({"exitCode","status"})
+    @OutputCustomType.Constructor
     private InstanceAttemptResultResponse(
-        Integer exitCode,
-        GoogleRpcStatusResponse status) {
+        @OutputCustomType.Parameter("exitCode") Integer exitCode,
+        @OutputCustomType.Parameter("status") GoogleRpcStatusResponse status) {
         this.exitCode = exitCode;
         this.status = status;
     }
@@ -66,12 +66,12 @@ public final class InstanceAttemptResultResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setExitCode(Integer exitCode) {
+        public Builder exitCode(Integer exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setStatus(GoogleRpcStatusResponse status) {
+        public Builder status(GoogleRpcStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

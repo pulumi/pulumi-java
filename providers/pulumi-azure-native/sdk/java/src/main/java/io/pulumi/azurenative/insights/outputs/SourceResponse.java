@@ -33,12 +33,12 @@ public final class SourceResponse {
      */
     private final @Nullable String queryType;
 
-    @OutputCustomType.Constructor({"authorizedResources","dataSourceId","query","queryType"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        @Nullable List<String> authorizedResources,
-        String dataSourceId,
-        @Nullable String query,
-        @Nullable String queryType) {
+        @OutputCustomType.Parameter("authorizedResources") @Nullable List<String> authorizedResources,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("queryType") @Nullable String queryType) {
         this.authorizedResources = authorizedResources;
         this.dataSourceId = dataSourceId;
         this.query = query;
@@ -100,22 +100,22 @@ public final class SourceResponse {
     	      this.queryType = defaults.queryType;
         }
 
-        public Builder setAuthorizedResources(@Nullable List<String> authorizedResources) {
+        public Builder authorizedResources(@Nullable List<String> authorizedResources) {
             this.authorizedResources = authorizedResources;
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQueryType(@Nullable String queryType) {
+        public Builder queryType(@Nullable String queryType) {
             this.queryType = queryType;
             return this;
         }

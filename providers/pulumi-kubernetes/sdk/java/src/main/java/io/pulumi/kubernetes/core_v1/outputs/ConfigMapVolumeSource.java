@@ -36,12 +36,12 @@ public final class ConfigMapVolumeSource {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"defaultMode","items","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapVolumeSource(
-        @Nullable Integer defaultMode,
-        @Nullable List<KeyToPath> items,
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.name = name;
@@ -103,22 +103,22 @@ public final class ConfigMapVolumeSource {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPath> items) {
+        public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

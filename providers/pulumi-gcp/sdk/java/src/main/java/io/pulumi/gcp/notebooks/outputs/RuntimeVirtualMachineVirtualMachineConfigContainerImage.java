@@ -23,10 +23,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"repository","tag"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigContainerImage(
-        String repository,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("repository") String repository,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.repository = repository;
         this.tag = tag;
     }
@@ -69,12 +69,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigContainerImage {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

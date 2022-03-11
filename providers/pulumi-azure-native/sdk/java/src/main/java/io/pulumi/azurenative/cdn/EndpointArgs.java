@@ -387,212 +387,212 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setContentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
-        public Builder setContentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
             this.contentTypesToCompress = Input.ofNullable(contentTypesToCompress);
             return this;
         }
 
-        public Builder setDefaultOriginGroup(@Nullable Input<ResourceReferenceArgs> defaultOriginGroup) {
+        public Builder defaultOriginGroup(@Nullable Input<ResourceReferenceArgs> defaultOriginGroup) {
             this.defaultOriginGroup = defaultOriginGroup;
             return this;
         }
 
-        public Builder setDefaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
+        public Builder defaultOriginGroup(@Nullable ResourceReferenceArgs defaultOriginGroup) {
             this.defaultOriginGroup = Input.ofNullable(defaultOriginGroup);
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Input<EndpointPropertiesUpdateParametersDeliveryPolicyArgs> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable EndpointPropertiesUpdateParametersDeliveryPolicyArgs deliveryPolicy) {
             this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder setEndpointName(@Nullable Input<String> endpointName) {
+        public Builder endpointName(@Nullable Input<String> endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = Input.ofNullable(endpointName);
             return this;
         }
 
-        public Builder setGeoFilters(@Nullable Input<List<GeoFilterArgs>> geoFilters) {
+        public Builder geoFilters(@Nullable Input<List<GeoFilterArgs>> geoFilters) {
             this.geoFilters = geoFilters;
             return this;
         }
 
-        public Builder setGeoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
+        public Builder geoFilters(@Nullable List<GeoFilterArgs> geoFilters) {
             this.geoFilters = Input.ofNullable(geoFilters);
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = Input.ofNullable(isCompressionEnabled);
             return this;
         }
 
-        public Builder setIsHttpAllowed(@Nullable Input<Boolean> isHttpAllowed) {
+        public Builder isHttpAllowed(@Nullable Input<Boolean> isHttpAllowed) {
             this.isHttpAllowed = isHttpAllowed;
             return this;
         }
 
-        public Builder setIsHttpAllowed(@Nullable Boolean isHttpAllowed) {
+        public Builder isHttpAllowed(@Nullable Boolean isHttpAllowed) {
             this.isHttpAllowed = Input.ofNullable(isHttpAllowed);
             return this;
         }
 
-        public Builder setIsHttpsAllowed(@Nullable Input<Boolean> isHttpsAllowed) {
+        public Builder isHttpsAllowed(@Nullable Input<Boolean> isHttpsAllowed) {
             this.isHttpsAllowed = isHttpsAllowed;
             return this;
         }
 
-        public Builder setIsHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
+        public Builder isHttpsAllowed(@Nullable Boolean isHttpsAllowed) {
             this.isHttpsAllowed = Input.ofNullable(isHttpsAllowed);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOptimizationType(@Nullable Input<Either<String,OptimizationType>> optimizationType) {
+        public Builder optimizationType(@Nullable Input<Either<String,OptimizationType>> optimizationType) {
             this.optimizationType = optimizationType;
             return this;
         }
 
-        public Builder setOptimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
+        public Builder optimizationType(@Nullable Either<String,OptimizationType> optimizationType) {
             this.optimizationType = Input.ofNullable(optimizationType);
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups) {
+        public Builder originGroups(@Nullable Input<List<DeepCreatedOriginGroupArgs>> originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
+        public Builder originGroups(@Nullable List<DeepCreatedOriginGroupArgs> originGroups) {
             this.originGroups = Input.ofNullable(originGroups);
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable Input<String> originHostHeader) {
+        public Builder originHostHeader(@Nullable Input<String> originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = Input.ofNullable(originHostHeader);
             return this;
         }
 
-        public Builder setOriginPath(@Nullable Input<String> originPath) {
+        public Builder originPath(@Nullable Input<String> originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = Input.ofNullable(originPath);
             return this;
         }
 
-        public Builder setOrigins(Input<List<DeepCreatedOriginArgs>> origins) {
+        public Builder origins(Input<List<DeepCreatedOriginArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
-        public Builder setOrigins(List<DeepCreatedOriginArgs> origins) {
+        public Builder origins(List<DeepCreatedOriginArgs> origins) {
             this.origins = Input.of(Objects.requireNonNull(origins));
             return this;
         }
 
-        public Builder setProbePath(@Nullable Input<String> probePath) {
+        public Builder probePath(@Nullable Input<String> probePath) {
             this.probePath = probePath;
             return this;
         }
 
-        public Builder setProbePath(@Nullable String probePath) {
+        public Builder probePath(@Nullable String probePath) {
             this.probePath = Input.ofNullable(probePath);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable Input<QueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable QueryStringCachingBehavior queryStringCachingBehavior) {
             this.queryStringCachingBehavior = Input.ofNullable(queryStringCachingBehavior);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUrlSigningKeys(@Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys) {
+        public Builder urlSigningKeys(@Nullable Input<List<UrlSigningKeyArgs>> urlSigningKeys) {
             this.urlSigningKeys = urlSigningKeys;
             return this;
         }
 
-        public Builder setUrlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
+        public Builder urlSigningKeys(@Nullable List<UrlSigningKeyArgs> urlSigningKeys) {
             this.urlSigningKeys = Input.ofNullable(urlSigningKeys);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable Input<EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable EndpointPropertiesUpdateParametersWebApplicationFirewallPolicyLinkArgs webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }

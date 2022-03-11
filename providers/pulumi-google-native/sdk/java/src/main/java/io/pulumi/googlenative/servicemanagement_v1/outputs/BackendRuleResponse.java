@@ -48,16 +48,16 @@ public final class BackendRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"address","deadline","disableAuth","jwtAudience","operationDeadline","pathTranslation","protocol","selector"})
+    @OutputCustomType.Constructor
     private BackendRuleResponse(
-        String address,
-        Double deadline,
-        Boolean disableAuth,
-        String jwtAudience,
-        Double operationDeadline,
-        String pathTranslation,
-        String protocol,
-        String selector) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("deadline") Double deadline,
+        @OutputCustomType.Parameter("disableAuth") Boolean disableAuth,
+        @OutputCustomType.Parameter("jwtAudience") String jwtAudience,
+        @OutputCustomType.Parameter("operationDeadline") Double operationDeadline,
+        @OutputCustomType.Parameter("pathTranslation") String pathTranslation,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.address = address;
         this.deadline = deadline;
         this.disableAuth = disableAuth;
@@ -155,42 +155,42 @@ public final class BackendRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setDeadline(Double deadline) {
+        public Builder deadline(Double deadline) {
             this.deadline = Objects.requireNonNull(deadline);
             return this;
         }
 
-        public Builder setDisableAuth(Boolean disableAuth) {
+        public Builder disableAuth(Boolean disableAuth) {
             this.disableAuth = Objects.requireNonNull(disableAuth);
             return this;
         }
 
-        public Builder setJwtAudience(String jwtAudience) {
+        public Builder jwtAudience(String jwtAudience) {
             this.jwtAudience = Objects.requireNonNull(jwtAudience);
             return this;
         }
 
-        public Builder setOperationDeadline(Double operationDeadline) {
+        public Builder operationDeadline(Double operationDeadline) {
             this.operationDeadline = Objects.requireNonNull(operationDeadline);
             return this;
         }
 
-        public Builder setPathTranslation(String pathTranslation) {
+        public Builder pathTranslation(String pathTranslation) {
             this.pathTranslation = Objects.requireNonNull(pathTranslation);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

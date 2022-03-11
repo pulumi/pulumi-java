@@ -44,14 +44,14 @@ public final class KeyAttributesResponse {
      */
     private final Double updated;
 
-    @OutputCustomType.Constructor({"created","enabled","expires","notBefore","recoveryLevel","updated"})
+    @OutputCustomType.Constructor
     private KeyAttributesResponse(
-        Double created,
-        @Nullable Boolean enabled,
-        @Nullable Double expires,
-        @Nullable Double notBefore,
-        String recoveryLevel,
-        Double updated) {
+        @OutputCustomType.Parameter("created") Double created,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("expires") @Nullable Double expires,
+        @OutputCustomType.Parameter("notBefore") @Nullable Double notBefore,
+        @OutputCustomType.Parameter("recoveryLevel") String recoveryLevel,
+        @OutputCustomType.Parameter("updated") Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.expires = expires;
@@ -133,32 +133,32 @@ public final class KeyAttributesResponse {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(Double created) {
+        public Builder created(Double created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExpires(@Nullable Double expires) {
+        public Builder expires(@Nullable Double expires) {
             this.expires = expires;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Double notBefore) {
+        public Builder notBefore(@Nullable Double notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setRecoveryLevel(String recoveryLevel) {
+        public Builder recoveryLevel(String recoveryLevel) {
             this.recoveryLevel = Objects.requireNonNull(recoveryLevel);
             return this;
         }
 
-        public Builder setUpdated(Double updated) {
+        public Builder updated(Double updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

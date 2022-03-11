@@ -43,14 +43,14 @@ public final class DiskEncryptionPropertiesResponse {
      */
     private final @Nullable String vaultUri;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionAtHost","keyName","keyVersion","msiResourceId","vaultUri"})
+    @OutputCustomType.Constructor
     private DiskEncryptionPropertiesResponse(
-        @Nullable String encryptionAlgorithm,
-        @Nullable Boolean encryptionAtHost,
-        @Nullable String keyName,
-        @Nullable String keyVersion,
-        @Nullable String msiResourceId,
-        @Nullable String vaultUri) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") @Nullable String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("vaultUri") @Nullable String vaultUri) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionAtHost = encryptionAtHost;
         this.keyName = keyName;
@@ -132,32 +132,32 @@ public final class DiskEncryptionPropertiesResponse {
     	      this.vaultUri = defaults.vaultUri;
         }
 
-        public Builder setEncryptionAlgorithm(@Nullable String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(@Nullable String encryptionAlgorithm) {
             this.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Boolean encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setVaultUri(@Nullable String vaultUri) {
+        public Builder vaultUri(@Nullable String vaultUri) {
             this.vaultUri = vaultUri;
             return this;
         }

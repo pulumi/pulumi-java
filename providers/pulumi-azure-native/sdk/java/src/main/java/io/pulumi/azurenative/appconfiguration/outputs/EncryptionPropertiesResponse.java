@@ -17,8 +17,8 @@ public final class EncryptionPropertiesResponse {
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor({"keyVaultProperties"})
-    private EncryptionPropertiesResponse(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+    @OutputCustomType.Constructor
+    private EncryptionPropertiesResponse(@OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties) {
         this.keyVaultProperties = keyVaultProperties;
     }
 
@@ -50,7 +50,7 @@ public final class EncryptionPropertiesResponse {
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }

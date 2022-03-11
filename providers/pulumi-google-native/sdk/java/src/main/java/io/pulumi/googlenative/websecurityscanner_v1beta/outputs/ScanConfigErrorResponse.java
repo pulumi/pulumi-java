@@ -20,10 +20,10 @@ public final class ScanConfigErrorResponse {
      */
     private final String fieldName;
 
-    @OutputCustomType.Constructor({"code","fieldName"})
+    @OutputCustomType.Constructor
     private ScanConfigErrorResponse(
-        String code,
-        String fieldName) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("fieldName") String fieldName) {
         this.code = code;
         this.fieldName = fieldName;
     }
@@ -65,12 +65,12 @@ public final class ScanConfigErrorResponse {
     	      this.fieldName = defaults.fieldName;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }

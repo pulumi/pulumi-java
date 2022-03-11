@@ -36,14 +36,14 @@ public final class GetInstanceTypeOfferingsResult {
      */
     private final List<String> locations;
 
-    @OutputCustomType.Constructor({"filters","id","instanceTypes","locationType","locationTypes","locations"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeOfferingsResult(
-        @Nullable List<GetInstanceTypeOfferingsFilter> filters,
-        String id,
-        List<String> instanceTypes,
-        @Nullable String locationType,
-        List<String> locationTypes,
-        List<String> locations) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @OutputCustomType.Parameter("locationType") @Nullable String locationType,
+        @OutputCustomType.Parameter("locationTypes") List<String> locationTypes,
+        @OutputCustomType.Parameter("locations") List<String> locations) {
         this.filters = filters;
         this.id = id;
         this.instanceTypes = instanceTypes;
@@ -117,32 +117,32 @@ public final class GetInstanceTypeOfferingsResult {
     	      this.locations = defaults.locations;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceTypeOfferingsFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceTypeOfferingsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceTypes(List<String> instanceTypes) {
+        public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
 
-        public Builder setLocationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }
 
-        public Builder setLocationTypes(List<String> locationTypes) {
+        public Builder locationTypes(List<String> locationTypes) {
             this.locationTypes = Objects.requireNonNull(locationTypes);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }

@@ -86,22 +86,22 @@ public final class GetConversationProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"automatedAgentConfig","createTime","displayName","humanAgentAssistantConfig","humanAgentHandoffConfig","languageCode","loggingConfig","name","newMessageEventNotificationConfig","notificationConfig","securitySettings","sttConfig","timeZone","updateTime"})
+    @OutputCustomType.Constructor
     private GetConversationProfileResult(
-        GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig,
-        String createTime,
-        String displayName,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
-        GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
-        String languageCode,
-        GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig,
-        String name,
-        GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig,
-        GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig,
-        String securitySettings,
-        GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig,
-        String timeZone,
-        String updateTime) {
+        @OutputCustomType.Parameter("automatedAgentConfig") GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("humanAgentAssistantConfig") GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig,
+        @OutputCustomType.Parameter("humanAgentHandoffConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("loggingConfig") GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newMessageEventNotificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig,
+        @OutputCustomType.Parameter("notificationConfig") GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig,
+        @OutputCustomType.Parameter("securitySettings") String securitySettings,
+        @OutputCustomType.Parameter("sttConfig") GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.automatedAgentConfig = automatedAgentConfig;
         this.createTime = createTime;
         this.displayName = displayName;
@@ -263,72 +263,72 @@ public final class GetConversationProfileResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAutomatedAgentConfig(GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig) {
+        public Builder automatedAgentConfig(GoogleCloudDialogflowV2AutomatedAgentConfigResponse automatedAgentConfig) {
             this.automatedAgentConfig = Objects.requireNonNull(automatedAgentConfig);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHumanAgentAssistantConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig) {
+        public Builder humanAgentAssistantConfig(GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse humanAgentAssistantConfig) {
             this.humanAgentAssistantConfig = Objects.requireNonNull(humanAgentAssistantConfig);
             return this;
         }
 
-        public Builder setHumanAgentHandoffConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig) {
+        public Builder humanAgentHandoffConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse humanAgentHandoffConfig) {
             this.humanAgentHandoffConfig = Objects.requireNonNull(humanAgentHandoffConfig);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setLoggingConfig(GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(GoogleCloudDialogflowV2LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewMessageEventNotificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig) {
+        public Builder newMessageEventNotificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse newMessageEventNotificationConfig) {
             this.newMessageEventNotificationConfig = Objects.requireNonNull(newMessageEventNotificationConfig);
             return this;
         }
 
-        public Builder setNotificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
+        public Builder notificationConfig(GoogleCloudDialogflowV2NotificationConfigResponse notificationConfig) {
             this.notificationConfig = Objects.requireNonNull(notificationConfig);
             return this;
         }
 
-        public Builder setSecuritySettings(String securitySettings) {
+        public Builder securitySettings(String securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSttConfig(GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig) {
+        public Builder sttConfig(GoogleCloudDialogflowV2SpeechToTextConfigResponse sttConfig) {
             this.sttConfig = Objects.requireNonNull(sttConfig);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

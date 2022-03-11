@@ -21,10 +21,10 @@ public final class ClusterConfigurationInfo {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"arn","revision"})
+    @OutputCustomType.Constructor
     private ClusterConfigurationInfo(
-        String arn,
-        Integer revision) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.arn = arn;
         this.revision = revision;
     }
@@ -66,12 +66,12 @@ public final class ClusterConfigurationInfo {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

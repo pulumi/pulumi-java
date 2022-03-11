@@ -14,10 +14,10 @@ public final class AssetModelVariableValue {
     private final @Nullable String hierarchyLogicalId;
     private final String propertyLogicalId;
 
-    @OutputCustomType.Constructor({"hierarchyLogicalId","propertyLogicalId"})
+    @OutputCustomType.Constructor
     private AssetModelVariableValue(
-        @Nullable String hierarchyLogicalId,
-        String propertyLogicalId) {
+        @OutputCustomType.Parameter("hierarchyLogicalId") @Nullable String hierarchyLogicalId,
+        @OutputCustomType.Parameter("propertyLogicalId") String propertyLogicalId) {
         this.hierarchyLogicalId = hierarchyLogicalId;
         this.propertyLogicalId = propertyLogicalId;
     }
@@ -51,12 +51,12 @@ public final class AssetModelVariableValue {
     	      this.propertyLogicalId = defaults.propertyLogicalId;
         }
 
-        public Builder setHierarchyLogicalId(@Nullable String hierarchyLogicalId) {
+        public Builder hierarchyLogicalId(@Nullable String hierarchyLogicalId) {
             this.hierarchyLogicalId = hierarchyLogicalId;
             return this;
         }
 
-        public Builder setPropertyLogicalId(String propertyLogicalId) {
+        public Builder propertyLogicalId(String propertyLogicalId) {
             this.propertyLogicalId = Objects.requireNonNull(propertyLogicalId);
             return this;
         }

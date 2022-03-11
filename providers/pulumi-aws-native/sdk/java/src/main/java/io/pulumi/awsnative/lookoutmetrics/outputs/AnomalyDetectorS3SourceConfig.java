@@ -17,12 +17,12 @@ public final class AnomalyDetectorS3SourceConfig {
     private final String roleArn;
     private final @Nullable List<String> templatedPathList;
 
-    @OutputCustomType.Constructor({"fileFormatDescriptor","historicalDataPathList","roleArn","templatedPathList"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorS3SourceConfig(
-        AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
-        @Nullable List<String> historicalDataPathList,
-        String roleArn,
-        @Nullable List<String> templatedPathList) {
+        @OutputCustomType.Parameter("fileFormatDescriptor") AnomalyDetectorFileFormatDescriptor fileFormatDescriptor,
+        @OutputCustomType.Parameter("historicalDataPathList") @Nullable List<String> historicalDataPathList,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("templatedPathList") @Nullable List<String> templatedPathList) {
         this.fileFormatDescriptor = fileFormatDescriptor;
         this.historicalDataPathList = historicalDataPathList;
         this.roleArn = roleArn;
@@ -68,22 +68,22 @@ public final class AnomalyDetectorS3SourceConfig {
     	      this.templatedPathList = defaults.templatedPathList;
         }
 
-        public Builder setFileFormatDescriptor(AnomalyDetectorFileFormatDescriptor fileFormatDescriptor) {
+        public Builder fileFormatDescriptor(AnomalyDetectorFileFormatDescriptor fileFormatDescriptor) {
             this.fileFormatDescriptor = Objects.requireNonNull(fileFormatDescriptor);
             return this;
         }
 
-        public Builder setHistoricalDataPathList(@Nullable List<String> historicalDataPathList) {
+        public Builder historicalDataPathList(@Nullable List<String> historicalDataPathList) {
             this.historicalDataPathList = historicalDataPathList;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTemplatedPathList(@Nullable List<String> templatedPathList) {
+        public Builder templatedPathList(@Nullable List<String> templatedPathList) {
             this.templatedPathList = templatedPathList;
             return this;
         }

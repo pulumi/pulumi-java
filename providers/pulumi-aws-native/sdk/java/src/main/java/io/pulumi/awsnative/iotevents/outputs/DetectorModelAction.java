@@ -37,21 +37,21 @@ public final class DetectorModelAction {
     private final @Nullable DetectorModelSns sns;
     private final @Nullable DetectorModelSqs sqs;
 
-    @OutputCustomType.Constructor({"clearTimer","dynamoDB","dynamoDBv2","firehose","iotEvents","iotSiteWise","iotTopicPublish","lambda","resetTimer","setTimer","setVariable","sns","sqs"})
+    @OutputCustomType.Constructor
     private DetectorModelAction(
-        @Nullable DetectorModelClearTimer clearTimer,
-        @Nullable DetectorModelDynamoDB dynamoDB,
-        @Nullable DetectorModelDynamoDBv2 dynamoDBv2,
-        @Nullable DetectorModelFirehose firehose,
-        @Nullable DetectorModelIotEvents iotEvents,
-        @Nullable DetectorModelIotSiteWise iotSiteWise,
-        @Nullable DetectorModelIotTopicPublish iotTopicPublish,
-        @Nullable DetectorModelLambda lambda,
-        @Nullable DetectorModelResetTimer resetTimer,
-        @Nullable DetectorModelSetTimer setTimer,
-        @Nullable DetectorModelSetVariable setVariable,
-        @Nullable DetectorModelSns sns,
-        @Nullable DetectorModelSqs sqs) {
+        @OutputCustomType.Parameter("clearTimer") @Nullable DetectorModelClearTimer clearTimer,
+        @OutputCustomType.Parameter("dynamoDB") @Nullable DetectorModelDynamoDB dynamoDB,
+        @OutputCustomType.Parameter("dynamoDBv2") @Nullable DetectorModelDynamoDBv2 dynamoDBv2,
+        @OutputCustomType.Parameter("firehose") @Nullable DetectorModelFirehose firehose,
+        @OutputCustomType.Parameter("iotEvents") @Nullable DetectorModelIotEvents iotEvents,
+        @OutputCustomType.Parameter("iotSiteWise") @Nullable DetectorModelIotSiteWise iotSiteWise,
+        @OutputCustomType.Parameter("iotTopicPublish") @Nullable DetectorModelIotTopicPublish iotTopicPublish,
+        @OutputCustomType.Parameter("lambda") @Nullable DetectorModelLambda lambda,
+        @OutputCustomType.Parameter("resetTimer") @Nullable DetectorModelResetTimer resetTimer,
+        @OutputCustomType.Parameter("setTimer") @Nullable DetectorModelSetTimer setTimer,
+        @OutputCustomType.Parameter("setVariable") @Nullable DetectorModelSetVariable setVariable,
+        @OutputCustomType.Parameter("sns") @Nullable DetectorModelSns sns,
+        @OutputCustomType.Parameter("sqs") @Nullable DetectorModelSqs sqs) {
         this.clearTimer = clearTimer;
         this.dynamoDB = dynamoDB;
         this.dynamoDBv2 = dynamoDBv2;
@@ -151,67 +151,67 @@ public final class DetectorModelAction {
     	      this.sqs = defaults.sqs;
         }
 
-        public Builder setClearTimer(@Nullable DetectorModelClearTimer clearTimer) {
+        public Builder clearTimer(@Nullable DetectorModelClearTimer clearTimer) {
             this.clearTimer = clearTimer;
             return this;
         }
 
-        public Builder setDynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
+        public Builder dynamoDB(@Nullable DetectorModelDynamoDB dynamoDB) {
             this.dynamoDB = dynamoDB;
             return this;
         }
 
-        public Builder setDynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
+        public Builder dynamoDBv2(@Nullable DetectorModelDynamoDBv2 dynamoDBv2) {
             this.dynamoDBv2 = dynamoDBv2;
             return this;
         }
 
-        public Builder setFirehose(@Nullable DetectorModelFirehose firehose) {
+        public Builder firehose(@Nullable DetectorModelFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setIotEvents(@Nullable DetectorModelIotEvents iotEvents) {
+        public Builder iotEvents(@Nullable DetectorModelIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder setIotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
+        public Builder iotSiteWise(@Nullable DetectorModelIotSiteWise iotSiteWise) {
             this.iotSiteWise = iotSiteWise;
             return this;
         }
 
-        public Builder setIotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
+        public Builder iotTopicPublish(@Nullable DetectorModelIotTopicPublish iotTopicPublish) {
             this.iotTopicPublish = iotTopicPublish;
             return this;
         }
 
-        public Builder setLambda(@Nullable DetectorModelLambda lambda) {
+        public Builder lambda(@Nullable DetectorModelLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setResetTimer(@Nullable DetectorModelResetTimer resetTimer) {
+        public Builder resetTimer(@Nullable DetectorModelResetTimer resetTimer) {
             this.resetTimer = resetTimer;
             return this;
         }
 
-        public Builder setSetTimer(@Nullable DetectorModelSetTimer setTimer) {
+        public Builder setTimer(@Nullable DetectorModelSetTimer setTimer) {
             this.setTimer = setTimer;
             return this;
         }
 
-        public Builder setSetVariable(@Nullable DetectorModelSetVariable setVariable) {
+        public Builder setVariable(@Nullable DetectorModelSetVariable setVariable) {
             this.setVariable = setVariable;
             return this;
         }
 
-        public Builder setSns(@Nullable DetectorModelSns sns) {
+        public Builder sns(@Nullable DetectorModelSns sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable DetectorModelSqs sqs) {
+        public Builder sqs(@Nullable DetectorModelSqs sqs) {
             this.sqs = sqs;
             return this;
         }

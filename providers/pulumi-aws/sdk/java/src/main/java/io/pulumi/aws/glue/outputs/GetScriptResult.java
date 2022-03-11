@@ -33,14 +33,14 @@ public final class GetScriptResult {
      */
     private final String scalaCode;
 
-    @OutputCustomType.Constructor({"dagEdges","dagNodes","id","language","pythonScript","scalaCode"})
+    @OutputCustomType.Constructor
     private GetScriptResult(
-        List<GetScriptDagEdge> dagEdges,
-        List<GetScriptDagNode> dagNodes,
-        String id,
-        @Nullable String language,
-        String pythonScript,
-        String scalaCode) {
+        @OutputCustomType.Parameter("dagEdges") List<GetScriptDagEdge> dagEdges,
+        @OutputCustomType.Parameter("dagNodes") List<GetScriptDagNode> dagNodes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("language") @Nullable String language,
+        @OutputCustomType.Parameter("pythonScript") String pythonScript,
+        @OutputCustomType.Parameter("scalaCode") String scalaCode) {
         this.dagEdges = dagEdges;
         this.dagNodes = dagNodes;
         this.id = id;
@@ -110,32 +110,32 @@ public final class GetScriptResult {
     	      this.scalaCode = defaults.scalaCode;
         }
 
-        public Builder setDagEdges(List<GetScriptDagEdge> dagEdges) {
+        public Builder dagEdges(List<GetScriptDagEdge> dagEdges) {
             this.dagEdges = Objects.requireNonNull(dagEdges);
             return this;
         }
 
-        public Builder setDagNodes(List<GetScriptDagNode> dagNodes) {
+        public Builder dagNodes(List<GetScriptDagNode> dagNodes) {
             this.dagNodes = Objects.requireNonNull(dagNodes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
 
-        public Builder setPythonScript(String pythonScript) {
+        public Builder pythonScript(String pythonScript) {
             this.pythonScript = Objects.requireNonNull(pythonScript);
             return this;
         }
 
-        public Builder setScalaCode(String scalaCode) {
+        public Builder scalaCode(String scalaCode) {
             this.scalaCode = Objects.requireNonNull(scalaCode);
             return this;
         }

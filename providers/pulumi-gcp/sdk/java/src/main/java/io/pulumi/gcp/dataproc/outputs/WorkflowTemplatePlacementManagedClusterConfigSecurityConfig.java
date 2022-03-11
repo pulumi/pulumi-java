@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
      */
     private final @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
-    @OutputCustomType.Constructor({"kerberosConfig"})
-    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigSecurityConfig(@OutputCustomType.Parameter("kerberosConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 
@@ -50,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfig {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+        public Builder kerberosConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }

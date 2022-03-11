@@ -32,12 +32,12 @@ public final class StorageQueueMessageResponse {
      */
     private final @Nullable String storageAccount;
 
-    @OutputCustomType.Constructor({"message","queueName","sasToken","storageAccount"})
+    @OutputCustomType.Constructor
     private StorageQueueMessageResponse(
-        @Nullable String message,
-        @Nullable String queueName,
-        @Nullable String sasToken,
-        @Nullable String storageAccount) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
+        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
+        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount) {
         this.message = message;
         this.queueName = queueName;
         this.sasToken = sasToken;
@@ -99,22 +99,22 @@ public final class StorageQueueMessageResponse {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setSasToken(@Nullable String sasToken) {
+        public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }

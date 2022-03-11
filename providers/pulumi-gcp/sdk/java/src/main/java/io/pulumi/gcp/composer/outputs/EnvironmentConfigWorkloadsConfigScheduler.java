@@ -17,12 +17,12 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
     private final @Nullable Double memoryGb;
     private final @Nullable Double storageGb;
 
-    @OutputCustomType.Constructor({"count","cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWorkloadsConfigScheduler(
-        @Nullable Integer count,
-        @Nullable Double cpu,
-        @Nullable Double memoryGb,
-        @Nullable Double storageGb) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") @Nullable Double storageGb) {
         this.count = count;
         this.cpu = cpu;
         this.memoryGb = memoryGb;
@@ -68,22 +68,22 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setStorageGb(@Nullable Double storageGb) {
+        public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
         }

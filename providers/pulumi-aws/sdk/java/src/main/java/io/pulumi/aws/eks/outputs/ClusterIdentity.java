@@ -17,8 +17,8 @@ public final class ClusterIdentity {
      */
     private final @Nullable List<ClusterIdentityOidc> oidcs;
 
-    @OutputCustomType.Constructor({"oidcs"})
-    private ClusterIdentity(@Nullable List<ClusterIdentityOidc> oidcs) {
+    @OutputCustomType.Constructor
+    private ClusterIdentity(@OutputCustomType.Parameter("oidcs") @Nullable List<ClusterIdentityOidc> oidcs) {
         this.oidcs = oidcs;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterIdentity {
     	      this.oidcs = defaults.oidcs;
         }
 
-        public Builder setOidcs(@Nullable List<ClusterIdentityOidc> oidcs) {
+        public Builder oidcs(@Nullable List<ClusterIdentityOidc> oidcs) {
             this.oidcs = oidcs;
             return this;
         }

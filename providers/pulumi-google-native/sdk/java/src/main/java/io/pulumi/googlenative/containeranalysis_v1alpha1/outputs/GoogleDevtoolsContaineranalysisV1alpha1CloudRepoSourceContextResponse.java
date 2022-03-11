@@ -27,11 +27,11 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","repoId","revisionId"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("repoId") GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;
@@ -83,17 +83,17 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
+        public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
 
-        public Builder setRepoId(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId) {
+        public Builder repoId(GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }

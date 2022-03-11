@@ -47,7 +47,7 @@ public final class NetworkInterfaceInstanceIpv6Address extends io.pulumi.resourc
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }

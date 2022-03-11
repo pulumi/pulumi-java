@@ -50,15 +50,15 @@ public final class PrestoJobResponse {
      */
     private final QueryListResponse queryList;
 
-    @OutputCustomType.Constructor({"clientTags","continueOnFailure","loggingConfig","outputFormat","properties","queryFileUri","queryList"})
+    @OutputCustomType.Constructor
     private PrestoJobResponse(
-        List<String> clientTags,
-        Boolean continueOnFailure,
-        LoggingConfigResponse loggingConfig,
-        String outputFormat,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList) {
+        @OutputCustomType.Parameter("clientTags") List<String> clientTags,
+        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("outputFormat") String outputFormat,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;
@@ -150,37 +150,37 @@ public final class PrestoJobResponse {
     	      this.queryList = defaults.queryList;
         }
 
-        public Builder setClientTags(List<String> clientTags) {
+        public Builder clientTags(List<String> clientTags) {
             this.clientTags = Objects.requireNonNull(clientTags);
             return this;
         }
 
-        public Builder setContinueOnFailure(Boolean continueOnFailure) {
+        public Builder continueOnFailure(Boolean continueOnFailure) {
             this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setOutputFormat(String outputFormat) {
+        public Builder outputFormat(String outputFormat) {
             this.outputFormat = Objects.requireNonNull(outputFormat);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(String queryFileUri) {
+        public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
 
-        public Builder setQueryList(QueryListResponse queryList) {
+        public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }

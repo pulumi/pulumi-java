@@ -65,18 +65,18 @@ public final class GetRoleAssignmentArtifactResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dependsOn","description","displayName","id","kind","name","principalIds","resourceGroup","roleDefinitionId","type"})
+    @OutputCustomType.Constructor
     private GetRoleAssignmentArtifactResult(
-        @Nullable List<String> dependsOn,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        String kind,
-        String name,
-        Object principalIds,
-        @Nullable String resourceGroup,
-        String roleDefinitionId,
-        String type) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<String> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalIds") Object principalIds,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.displayName = displayName;
@@ -199,52 +199,52 @@ public final class GetRoleAssignmentArtifactResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDependsOn(@Nullable List<String> dependsOn) {
+        public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalIds(Object principalIds) {
+        public Builder principalIds(Object principalIds) {
             this.principalIds = Objects.requireNonNull(principalIds);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

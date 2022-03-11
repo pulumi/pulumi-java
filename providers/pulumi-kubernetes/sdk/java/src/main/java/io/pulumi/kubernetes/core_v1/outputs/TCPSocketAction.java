@@ -24,10 +24,10 @@ public final class TCPSocketAction {
      */
     private final Either<Integer,String> port;
 
-    @OutputCustomType.Constructor({"host","port"})
+    @OutputCustomType.Constructor
     private TCPSocketAction(
-        @Nullable String host,
-        Either<Integer,String> port) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") Either<Integer,String> port) {
         this.host = host;
         this.port = port;
     }
@@ -69,12 +69,12 @@ public final class TCPSocketAction {
     	      this.port = defaults.port;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPort(Either<Integer,String> port) {
+        public Builder port(Either<Integer,String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

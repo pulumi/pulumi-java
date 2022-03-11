@@ -21,15 +21,15 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
     private final @Nullable Integer portNumber;
     private final @Nullable String privateLinkServiceName;
 
-    @OutputCustomType.Constructor({"applicationHostUrl","applicationServicePath","clientNumber","logonLanguage","oAuthProperties","portNumber","privateLinkServiceName"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSAPODataConnectorProfileProperties(
-        @Nullable String applicationHostUrl,
-        @Nullable String applicationServicePath,
-        @Nullable String clientNumber,
-        @Nullable String logonLanguage,
-        @Nullable ConnectorProfileOAuthProperties oAuthProperties,
-        @Nullable Integer portNumber,
-        @Nullable String privateLinkServiceName) {
+        @OutputCustomType.Parameter("applicationHostUrl") @Nullable String applicationHostUrl,
+        @OutputCustomType.Parameter("applicationServicePath") @Nullable String applicationServicePath,
+        @OutputCustomType.Parameter("clientNumber") @Nullable String clientNumber,
+        @OutputCustomType.Parameter("logonLanguage") @Nullable String logonLanguage,
+        @OutputCustomType.Parameter("oAuthProperties") @Nullable ConnectorProfileOAuthProperties oAuthProperties,
+        @OutputCustomType.Parameter("portNumber") @Nullable Integer portNumber,
+        @OutputCustomType.Parameter("privateLinkServiceName") @Nullable String privateLinkServiceName) {
         this.applicationHostUrl = applicationHostUrl;
         this.applicationServicePath = applicationServicePath;
         this.clientNumber = clientNumber;
@@ -93,37 +93,37 @@ public final class ConnectorProfileSAPODataConnectorProfileProperties {
     	      this.privateLinkServiceName = defaults.privateLinkServiceName;
         }
 
-        public Builder setApplicationHostUrl(@Nullable String applicationHostUrl) {
+        public Builder applicationHostUrl(@Nullable String applicationHostUrl) {
             this.applicationHostUrl = applicationHostUrl;
             return this;
         }
 
-        public Builder setApplicationServicePath(@Nullable String applicationServicePath) {
+        public Builder applicationServicePath(@Nullable String applicationServicePath) {
             this.applicationServicePath = applicationServicePath;
             return this;
         }
 
-        public Builder setClientNumber(@Nullable String clientNumber) {
+        public Builder clientNumber(@Nullable String clientNumber) {
             this.clientNumber = clientNumber;
             return this;
         }
 
-        public Builder setLogonLanguage(@Nullable String logonLanguage) {
+        public Builder logonLanguage(@Nullable String logonLanguage) {
             this.logonLanguage = logonLanguage;
             return this;
         }
 
-        public Builder setOAuthProperties(@Nullable ConnectorProfileOAuthProperties oAuthProperties) {
+        public Builder oAuthProperties(@Nullable ConnectorProfileOAuthProperties oAuthProperties) {
             this.oAuthProperties = oAuthProperties;
             return this;
         }
 
-        public Builder setPortNumber(@Nullable Integer portNumber) {
+        public Builder portNumber(@Nullable Integer portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
-        public Builder setPrivateLinkServiceName(@Nullable String privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }

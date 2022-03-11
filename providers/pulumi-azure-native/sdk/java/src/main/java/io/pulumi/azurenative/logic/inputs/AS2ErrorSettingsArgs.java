@@ -73,22 +73,22 @@ public final class AS2ErrorSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.suspendDuplicateMessage = defaults.suspendDuplicateMessage;
         }
 
-        public Builder setResendIfMDNNotReceived(Input<Boolean> resendIfMDNNotReceived) {
+        public Builder resendIfMDNNotReceived(Input<Boolean> resendIfMDNNotReceived) {
             this.resendIfMDNNotReceived = Objects.requireNonNull(resendIfMDNNotReceived);
             return this;
         }
 
-        public Builder setResendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
+        public Builder resendIfMDNNotReceived(Boolean resendIfMDNNotReceived) {
             this.resendIfMDNNotReceived = Input.of(Objects.requireNonNull(resendIfMDNNotReceived));
             return this;
         }
 
-        public Builder setSuspendDuplicateMessage(Input<Boolean> suspendDuplicateMessage) {
+        public Builder suspendDuplicateMessage(Input<Boolean> suspendDuplicateMessage) {
             this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
             return this;
         }
 
-        public Builder setSuspendDuplicateMessage(Boolean suspendDuplicateMessage) {
+        public Builder suspendDuplicateMessage(Boolean suspendDuplicateMessage) {
             this.suspendDuplicateMessage = Input.of(Objects.requireNonNull(suspendDuplicateMessage));
             return this;
         }

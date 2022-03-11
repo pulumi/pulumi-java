@@ -28,11 +28,11 @@ public final class GetScriptDagNodeArg {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","param","value"})
+    @OutputCustomType.Constructor
     private GetScriptDagNodeArg(
-        String name,
-        @Nullable Boolean param,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("param") @Nullable Boolean param,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.param = param;
         this.value = value;
@@ -84,17 +84,17 @@ public final class GetScriptDagNodeArg {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParam(@Nullable Boolean param) {
+        public Builder param(@Nullable Boolean param) {
             this.param = param;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

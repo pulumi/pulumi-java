@@ -63,22 +63,22 @@ public final class InstanceFromMachineImageReservationAffinityGetArgs extends io
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs specificReservation) {
+        public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservationGetArgs specificReservation) {
             this.specificReservation = Input.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -118,52 +118,52 @@ public final class RoutingControlState extends io.pulumi.resources.ResourceArgs 
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setClusterArn(@Nullable Input<String> clusterArn) {
+        public Builder clusterArn(@Nullable Input<String> clusterArn) {
             this.clusterArn = clusterArn;
             return this;
         }
 
-        public Builder setClusterArn(@Nullable String clusterArn) {
+        public Builder clusterArn(@Nullable String clusterArn) {
             this.clusterArn = Input.ofNullable(clusterArn);
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable Input<String> controlPanelArn) {
+        public Builder controlPanelArn(@Nullable Input<String> controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
-        public Builder setControlPanelArn(@Nullable String controlPanelArn) {
+        public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = Input.ofNullable(controlPanelArn);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

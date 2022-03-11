@@ -54,12 +54,12 @@ public final class InternetGatewayArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable Input<List<InternetGatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<InternetGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InternetGatewayTagArgs> tags) {
+        public Builder tags(@Nullable List<InternetGatewayTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

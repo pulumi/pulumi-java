@@ -34,13 +34,13 @@ public final class DetectorModelIotSiteWise {
     private final @Nullable String propertyId;
     private final DetectorModelAssetPropertyValue propertyValue;
 
-    @OutputCustomType.Constructor({"assetId","entryId","propertyAlias","propertyId","propertyValue"})
+    @OutputCustomType.Constructor
     private DetectorModelIotSiteWise(
-        @Nullable String assetId,
-        @Nullable String entryId,
-        @Nullable String propertyAlias,
-        @Nullable String propertyId,
-        DetectorModelAssetPropertyValue propertyValue) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("entryId") @Nullable String entryId,
+        @OutputCustomType.Parameter("propertyAlias") @Nullable String propertyAlias,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("propertyValue") DetectorModelAssetPropertyValue propertyValue) {
         this.assetId = assetId;
         this.entryId = entryId;
         this.propertyAlias = propertyAlias;
@@ -108,27 +108,27 @@ public final class DetectorModelIotSiteWise {
     	      this.propertyValue = defaults.propertyValue;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable String propertyAlias) {
+        public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyValue(DetectorModelAssetPropertyValue propertyValue) {
+        public Builder propertyValue(DetectorModelAssetPropertyValue propertyValue) {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }

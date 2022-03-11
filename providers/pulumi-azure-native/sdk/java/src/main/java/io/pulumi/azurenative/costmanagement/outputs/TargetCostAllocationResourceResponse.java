@@ -32,12 +32,12 @@ public final class TargetCostAllocationResourceResponse {
      */
     private final List<CostAllocationProportionResponse> values;
 
-    @OutputCustomType.Constructor({"name","policyType","resourceType","values"})
+    @OutputCustomType.Constructor
     private TargetCostAllocationResourceResponse(
-        String name,
-        String policyType,
-        String resourceType,
-        List<CostAllocationProportionResponse> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyType") String policyType,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("values") List<CostAllocationProportionResponse> values) {
         this.name = name;
         this.policyType = policyType;
         this.resourceType = resourceType;
@@ -99,22 +99,22 @@ public final class TargetCostAllocationResourceResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setValues(List<CostAllocationProportionResponse> values) {
+        public Builder values(List<CostAllocationProportionResponse> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

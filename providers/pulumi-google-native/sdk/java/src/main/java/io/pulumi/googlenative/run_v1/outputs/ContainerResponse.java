@@ -99,25 +99,25 @@ public final class ContainerResponse {
      */
     private final String workingDir;
 
-    @OutputCustomType.Constructor({"args","command","env","envFrom","image","imagePullPolicy","livenessProbe","name","ports","readinessProbe","resources","securityContext","startupProbe","terminationMessagePath","terminationMessagePolicy","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<EnvVarResponse> env,
-        List<EnvFromSourceResponse> envFrom,
-        String image,
-        String imagePullPolicy,
-        ProbeResponse livenessProbe,
-        String name,
-        List<ContainerPortResponse> ports,
-        ProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        SecurityContextResponse securityContext,
-        ProbeResponse startupProbe,
-        String terminationMessagePath,
-        String terminationMessagePolicy,
-        List<VolumeMountResponse> volumeMounts,
-        String workingDir) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<EnvVarResponse> env,
+        @OutputCustomType.Parameter("envFrom") List<EnvFromSourceResponse> envFrom,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imagePullPolicy") String imagePullPolicy,
+        @OutputCustomType.Parameter("livenessProbe") ProbeResponse livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") List<ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("readinessProbe") ProbeResponse readinessProbe,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("securityContext") SecurityContextResponse securityContext,
+        @OutputCustomType.Parameter("startupProbe") ProbeResponse startupProbe,
+        @OutputCustomType.Parameter("terminationMessagePath") String terminationMessagePath,
+        @OutputCustomType.Parameter("terminationMessagePolicy") String terminationMessagePolicy,
+        @OutputCustomType.Parameter("volumeMounts") List<VolumeMountResponse> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -305,87 +305,87 @@ public final class ContainerResponse {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnv(List<EnvVarResponse> env) {
+        public Builder env(List<EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setEnvFrom(List<EnvFromSourceResponse> envFrom) {
+        public Builder envFrom(List<EnvFromSourceResponse> envFrom) {
             this.envFrom = Objects.requireNonNull(envFrom);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImagePullPolicy(String imagePullPolicy) {
+        public Builder imagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = Objects.requireNonNull(imagePullPolicy);
             return this;
         }
 
-        public Builder setLivenessProbe(ProbeResponse livenessProbe) {
+        public Builder livenessProbe(ProbeResponse livenessProbe) {
             this.livenessProbe = Objects.requireNonNull(livenessProbe);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPorts(List<ContainerPortResponse> ports) {
+        public Builder ports(List<ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setReadinessProbe(ProbeResponse readinessProbe) {
+        public Builder readinessProbe(ProbeResponse readinessProbe) {
             this.readinessProbe = Objects.requireNonNull(readinessProbe);
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsResponse resources) {
+        public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setSecurityContext(SecurityContextResponse securityContext) {
+        public Builder securityContext(SecurityContextResponse securityContext) {
             this.securityContext = Objects.requireNonNull(securityContext);
             return this;
         }
 
-        public Builder setStartupProbe(ProbeResponse startupProbe) {
+        public Builder startupProbe(ProbeResponse startupProbe) {
             this.startupProbe = Objects.requireNonNull(startupProbe);
             return this;
         }
 
-        public Builder setTerminationMessagePath(String terminationMessagePath) {
+        public Builder terminationMessagePath(String terminationMessagePath) {
             this.terminationMessagePath = Objects.requireNonNull(terminationMessagePath);
             return this;
         }
 
-        public Builder setTerminationMessagePolicy(String terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(String terminationMessagePolicy) {
             this.terminationMessagePolicy = Objects.requireNonNull(terminationMessagePolicy);
             return this;
         }
 
-        public Builder setVolumeMounts(List<VolumeMountResponse> volumeMounts) {
+        public Builder volumeMounts(List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
 
-        public Builder setWorkingDir(String workingDir) {
+        public Builder workingDir(String workingDir) {
             this.workingDir = Objects.requireNonNull(workingDir);
             return this;
         }

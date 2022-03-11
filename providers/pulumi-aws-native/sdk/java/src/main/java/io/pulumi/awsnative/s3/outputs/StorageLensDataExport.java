@@ -15,10 +15,10 @@ public final class StorageLensDataExport {
     private final @Nullable StorageLensCloudWatchMetrics cloudWatchMetrics;
     private final @Nullable StorageLensS3BucketDestination s3BucketDestination;
 
-    @OutputCustomType.Constructor({"cloudWatchMetrics","s3BucketDestination"})
+    @OutputCustomType.Constructor
     private StorageLensDataExport(
-        @Nullable StorageLensCloudWatchMetrics cloudWatchMetrics,
-        @Nullable StorageLensS3BucketDestination s3BucketDestination) {
+        @OutputCustomType.Parameter("cloudWatchMetrics") @Nullable StorageLensCloudWatchMetrics cloudWatchMetrics,
+        @OutputCustomType.Parameter("s3BucketDestination") @Nullable StorageLensS3BucketDestination s3BucketDestination) {
         this.cloudWatchMetrics = cloudWatchMetrics;
         this.s3BucketDestination = s3BucketDestination;
     }
@@ -52,12 +52,12 @@ public final class StorageLensDataExport {
     	      this.s3BucketDestination = defaults.s3BucketDestination;
         }
 
-        public Builder setCloudWatchMetrics(@Nullable StorageLensCloudWatchMetrics cloudWatchMetrics) {
+        public Builder cloudWatchMetrics(@Nullable StorageLensCloudWatchMetrics cloudWatchMetrics) {
             this.cloudWatchMetrics = cloudWatchMetrics;
             return this;
         }
 
-        public Builder setS3BucketDestination(@Nullable StorageLensS3BucketDestination s3BucketDestination) {
+        public Builder s3BucketDestination(@Nullable StorageLensS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = s3BucketDestination;
             return this;
         }

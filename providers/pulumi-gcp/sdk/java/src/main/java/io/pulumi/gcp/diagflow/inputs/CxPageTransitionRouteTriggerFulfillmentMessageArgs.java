@@ -53,12 +53,12 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageArgs extends io
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable Input<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
+        public Builder text(@Nullable Input<CxPageTransitionRouteTriggerFulfillmentMessageTextArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageTextArgs text) {
+        public Builder text(@Nullable CxPageTransitionRouteTriggerFulfillmentMessageTextArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

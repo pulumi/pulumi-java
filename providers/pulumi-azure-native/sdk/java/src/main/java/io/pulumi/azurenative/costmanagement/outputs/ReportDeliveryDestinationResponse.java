@@ -27,11 +27,11 @@ public final class ReportDeliveryDestinationResponse {
      */
     private final @Nullable String rootFolderPath;
 
-    @OutputCustomType.Constructor({"container","resourceId","rootFolderPath"})
+    @OutputCustomType.Constructor
     private ReportDeliveryDestinationResponse(
-        String container,
-        String resourceId,
-        @Nullable String rootFolderPath) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("rootFolderPath") @Nullable String rootFolderPath) {
         this.container = container;
         this.resourceId = resourceId;
         this.rootFolderPath = rootFolderPath;
@@ -83,17 +83,17 @@ public final class ReportDeliveryDestinationResponse {
     	      this.rootFolderPath = defaults.rootFolderPath;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setRootFolderPath(@Nullable String rootFolderPath) {
+        public Builder rootFolderPath(@Nullable String rootFolderPath) {
             this.rootFolderPath = rootFolderPath;
             return this;
         }

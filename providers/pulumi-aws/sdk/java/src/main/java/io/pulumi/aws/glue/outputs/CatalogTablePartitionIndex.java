@@ -24,11 +24,11 @@ public final class CatalogTablePartitionIndex {
      */
     private final List<String> keys;
 
-    @OutputCustomType.Constructor({"indexName","indexStatus","keys"})
+    @OutputCustomType.Constructor
     private CatalogTablePartitionIndex(
-        String indexName,
-        @Nullable String indexStatus,
-        List<String> keys) {
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("indexStatus") @Nullable String indexStatus,
+        @OutputCustomType.Parameter("keys") List<String> keys) {
         this.indexName = indexName;
         this.indexStatus = indexStatus;
         this.keys = keys;
@@ -76,17 +76,17 @@ public final class CatalogTablePartitionIndex {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable String indexStatus) {
+        public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
-        public Builder setKeys(List<String> keys) {
+        public Builder keys(List<String> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }

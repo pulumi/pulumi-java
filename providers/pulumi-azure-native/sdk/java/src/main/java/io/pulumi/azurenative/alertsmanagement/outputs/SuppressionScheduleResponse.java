@@ -39,13 +39,13 @@ public final class SuppressionScheduleResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endDate","endTime","recurrenceValues","startDate","startTime"})
+    @OutputCustomType.Constructor
     private SuppressionScheduleResponse(
-        @Nullable String endDate,
-        @Nullable String endTime,
-        @Nullable List<Integer> recurrenceValues,
-        @Nullable String startDate,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("recurrenceValues") @Nullable List<Integer> recurrenceValues,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endDate = endDate;
         this.endTime = endTime;
         this.recurrenceValues = recurrenceValues;
@@ -117,27 +117,27 @@ public final class SuppressionScheduleResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setRecurrenceValues(@Nullable List<Integer> recurrenceValues) {
+        public Builder recurrenceValues(@Nullable List<Integer> recurrenceValues) {
             this.recurrenceValues = recurrenceValues;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

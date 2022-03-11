@@ -51,13 +51,13 @@ public final class InstanceFileSharesNfsExportOption {
      */
     private final @Nullable String squashMode;
 
-    @OutputCustomType.Constructor({"accessMode","anonGid","anonUid","ipRanges","squashMode"})
+    @OutputCustomType.Constructor
     private InstanceFileSharesNfsExportOption(
-        @Nullable String accessMode,
-        @Nullable Integer anonGid,
-        @Nullable Integer anonUid,
-        @Nullable List<String> ipRanges,
-        @Nullable String squashMode) {
+        @OutputCustomType.Parameter("accessMode") @Nullable String accessMode,
+        @OutputCustomType.Parameter("anonGid") @Nullable Integer anonGid,
+        @OutputCustomType.Parameter("anonUid") @Nullable Integer anonUid,
+        @OutputCustomType.Parameter("ipRanges") @Nullable List<String> ipRanges,
+        @OutputCustomType.Parameter("squashMode") @Nullable String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;
@@ -141,27 +141,27 @@ public final class InstanceFileSharesNfsExportOption {
     	      this.squashMode = defaults.squashMode;
         }
 
-        public Builder setAccessMode(@Nullable String accessMode) {
+        public Builder accessMode(@Nullable String accessMode) {
             this.accessMode = accessMode;
             return this;
         }
 
-        public Builder setAnonGid(@Nullable Integer anonGid) {
+        public Builder anonGid(@Nullable Integer anonGid) {
             this.anonGid = anonGid;
             return this;
         }
 
-        public Builder setAnonUid(@Nullable Integer anonUid) {
+        public Builder anonUid(@Nullable Integer anonUid) {
             this.anonUid = anonUid;
             return this;
         }
 
-        public Builder setIpRanges(@Nullable List<String> ipRanges) {
+        public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
 
-        public Builder setSquashMode(@Nullable String squashMode) {
+        public Builder squashMode(@Nullable String squashMode) {
             this.squashMode = squashMode;
             return this;
         }

@@ -23,10 +23,10 @@ public final class OpenIdConnectLoginResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"nameClaimType","scopes"})
+    @OutputCustomType.Constructor
     private OpenIdConnectLoginResponse(
-        @Nullable String nameClaimType,
-        @Nullable List<String> scopes) {
+        @OutputCustomType.Parameter("nameClaimType") @Nullable String nameClaimType,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.nameClaimType = nameClaimType;
         this.scopes = scopes;
     }
@@ -68,12 +68,12 @@ public final class OpenIdConnectLoginResponse {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setNameClaimType(@Nullable String nameClaimType) {
+        public Builder nameClaimType(@Nullable String nameClaimType) {
             this.nameClaimType = nameClaimType;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }

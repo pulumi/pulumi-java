@@ -20,13 +20,13 @@ public final class OriginRequestPolicyConfig {
     private final String name;
     private final OriginRequestPolicyQueryStringsConfig queryStringsConfig;
 
-    @OutputCustomType.Constructor({"comment","cookiesConfig","headersConfig","name","queryStringsConfig"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyConfig(
-        @Nullable String comment,
-        OriginRequestPolicyCookiesConfig cookiesConfig,
-        OriginRequestPolicyHeadersConfig headersConfig,
-        String name,
-        OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("cookiesConfig") OriginRequestPolicyCookiesConfig cookiesConfig,
+        @OutputCustomType.Parameter("headersConfig") OriginRequestPolicyHeadersConfig headersConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryStringsConfig") OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
         this.comment = comment;
         this.cookiesConfig = cookiesConfig;
         this.headersConfig = headersConfig;
@@ -78,27 +78,27 @@ public final class OriginRequestPolicyConfig {
     	      this.queryStringsConfig = defaults.queryStringsConfig;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setCookiesConfig(OriginRequestPolicyCookiesConfig cookiesConfig) {
+        public Builder cookiesConfig(OriginRequestPolicyCookiesConfig cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
 
-        public Builder setHeadersConfig(OriginRequestPolicyHeadersConfig headersConfig) {
+        public Builder headersConfig(OriginRequestPolicyHeadersConfig headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueryStringsConfig(OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
+        public Builder queryStringsConfig(OriginRequestPolicyQueryStringsConfig queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }

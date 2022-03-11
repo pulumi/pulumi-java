@@ -23,10 +23,10 @@ public final class CommitmentQuotaResponse {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"quantity","unit"})
+    @OutputCustomType.Constructor
     private CommitmentQuotaResponse(
-        @Nullable Double quantity,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.quantity = quantity;
         this.unit = unit;
     }
@@ -68,12 +68,12 @@ public final class CommitmentQuotaResponse {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

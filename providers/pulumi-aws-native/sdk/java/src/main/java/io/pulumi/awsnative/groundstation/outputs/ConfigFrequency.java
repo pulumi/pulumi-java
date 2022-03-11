@@ -15,10 +15,10 @@ public final class ConfigFrequency {
     private final @Nullable ConfigFrequencyUnits units;
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"units","value"})
+    @OutputCustomType.Constructor
     private ConfigFrequency(
-        @Nullable ConfigFrequencyUnits units,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("units") @Nullable ConfigFrequencyUnits units,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.units = units;
         this.value = value;
     }
@@ -52,12 +52,12 @@ public final class ConfigFrequency {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnits(@Nullable ConfigFrequencyUnits units) {
+        public Builder units(@Nullable ConfigFrequencyUnits units) {
             this.units = units;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

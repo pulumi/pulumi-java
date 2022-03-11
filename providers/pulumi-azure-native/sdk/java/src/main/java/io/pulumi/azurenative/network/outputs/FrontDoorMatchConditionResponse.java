@@ -44,14 +44,14 @@ public final class FrontDoorMatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"matchValue","matchVariable","negateCondition","operator","selector","transforms"})
+    @OutputCustomType.Constructor
     private FrontDoorMatchConditionResponse(
-        List<String> matchValue,
-        String matchVariable,
-        @Nullable Boolean negateCondition,
-        String operator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("matchValue") List<String> matchValue,
+        @OutputCustomType.Parameter("matchVariable") String matchVariable,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.matchValue = matchValue;
         this.matchVariable = matchVariable;
         this.negateCondition = negateCondition;
@@ -133,32 +133,32 @@ public final class FrontDoorMatchConditionResponse {
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setMatchValue(List<String> matchValue) {
+        public Builder matchValue(List<String> matchValue) {
             this.matchValue = Objects.requireNonNull(matchValue);
             return this;
         }
 
-        public Builder setMatchVariable(String matchVariable) {
+        public Builder matchVariable(String matchVariable) {
             this.matchVariable = Objects.requireNonNull(matchVariable);
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<String> transforms) {
+        public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }

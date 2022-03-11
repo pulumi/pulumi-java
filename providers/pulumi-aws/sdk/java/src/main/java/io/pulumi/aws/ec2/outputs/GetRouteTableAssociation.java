@@ -36,13 +36,13 @@ public final class GetRouteTableAssociation {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"gatewayId","main","routeTableAssociationId","routeTableId","subnetId"})
+    @OutputCustomType.Constructor
     private GetRouteTableAssociation(
-        String gatewayId,
-        Boolean main,
-        String routeTableAssociationId,
-        String routeTableId,
-        String subnetId) {
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("main") Boolean main,
+        @OutputCustomType.Parameter("routeTableAssociationId") String routeTableAssociationId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.gatewayId = gatewayId;
         this.main = main;
         this.routeTableAssociationId = routeTableAssociationId;
@@ -114,27 +114,27 @@ public final class GetRouteTableAssociation {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setMain(Boolean main) {
+        public Builder main(Boolean main) {
             this.main = Objects.requireNonNull(main);
             return this;
         }
 
-        public Builder setRouteTableAssociationId(String routeTableAssociationId) {
+        public Builder routeTableAssociationId(String routeTableAssociationId) {
             this.routeTableAssociationId = Objects.requireNonNull(routeTableAssociationId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

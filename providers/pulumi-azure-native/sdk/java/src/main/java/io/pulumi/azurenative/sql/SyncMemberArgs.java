@@ -250,132 +250,132 @@ public final class SyncMemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable Input<Either<String,SyncMemberDbType>> databaseType) {
+        public Builder databaseType(@Nullable Input<Either<String,SyncMemberDbType>> databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable Either<String,SyncMemberDbType> databaseType) {
+        public Builder databaseType(@Nullable Either<String,SyncMemberDbType> databaseType) {
             this.databaseType = Input.ofNullable(databaseType);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSqlServerDatabaseId(@Nullable Input<String> sqlServerDatabaseId) {
+        public Builder sqlServerDatabaseId(@Nullable Input<String> sqlServerDatabaseId) {
             this.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
 
-        public Builder setSqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
+        public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
             this.sqlServerDatabaseId = Input.ofNullable(sqlServerDatabaseId);
             return this;
         }
 
-        public Builder setSyncAgentId(@Nullable Input<String> syncAgentId) {
+        public Builder syncAgentId(@Nullable Input<String> syncAgentId) {
             this.syncAgentId = syncAgentId;
             return this;
         }
 
-        public Builder setSyncAgentId(@Nullable String syncAgentId) {
+        public Builder syncAgentId(@Nullable String syncAgentId) {
             this.syncAgentId = Input.ofNullable(syncAgentId);
             return this;
         }
 
-        public Builder setSyncDirection(@Nullable Input<Either<String,SyncDirection>> syncDirection) {
+        public Builder syncDirection(@Nullable Input<Either<String,SyncDirection>> syncDirection) {
             this.syncDirection = syncDirection;
             return this;
         }
 
-        public Builder setSyncDirection(@Nullable Either<String,SyncDirection> syncDirection) {
+        public Builder syncDirection(@Nullable Either<String,SyncDirection> syncDirection) {
             this.syncDirection = Input.ofNullable(syncDirection);
             return this;
         }
 
-        public Builder setSyncGroupName(Input<String> syncGroupName) {
+        public Builder syncGroupName(Input<String> syncGroupName) {
             this.syncGroupName = Objects.requireNonNull(syncGroupName);
             return this;
         }
 
-        public Builder setSyncGroupName(String syncGroupName) {
+        public Builder syncGroupName(String syncGroupName) {
             this.syncGroupName = Input.of(Objects.requireNonNull(syncGroupName));
             return this;
         }
 
-        public Builder setSyncMemberAzureDatabaseResourceId(@Nullable Input<String> syncMemberAzureDatabaseResourceId) {
+        public Builder syncMemberAzureDatabaseResourceId(@Nullable Input<String> syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
 
-        public Builder setSyncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
+        public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = Input.ofNullable(syncMemberAzureDatabaseResourceId);
             return this;
         }
 
-        public Builder setSyncMemberName(@Nullable Input<String> syncMemberName) {
+        public Builder syncMemberName(@Nullable Input<String> syncMemberName) {
             this.syncMemberName = syncMemberName;
             return this;
         }
 
-        public Builder setSyncMemberName(@Nullable String syncMemberName) {
+        public Builder syncMemberName(@Nullable String syncMemberName) {
             this.syncMemberName = Input.ofNullable(syncMemberName);
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Input<Boolean> usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Input<Boolean> usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = Input.ofNullable(usePrivateLinkConnection);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

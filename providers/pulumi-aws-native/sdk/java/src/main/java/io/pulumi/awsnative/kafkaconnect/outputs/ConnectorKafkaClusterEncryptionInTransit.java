@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorKafkaClusterEncryptionInTransit {
     private final ConnectorKafkaClusterEncryptionInTransitType encryptionType;
 
-    @OutputCustomType.Constructor({"encryptionType"})
-    private ConnectorKafkaClusterEncryptionInTransit(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
+    @OutputCustomType.Constructor
+    private ConnectorKafkaClusterEncryptionInTransit(@OutputCustomType.Parameter("encryptionType") ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
         this.encryptionType = encryptionType;
     }
 
@@ -40,7 +40,7 @@ public final class ConnectorKafkaClusterEncryptionInTransit {
     	      this.encryptionType = defaults.encryptionType;
         }
 
-        public Builder setEncryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
+        public Builder encryptionType(ConnectorKafkaClusterEncryptionInTransitType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }

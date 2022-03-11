@@ -41,14 +41,14 @@ public final class GetInspectTemplateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","inspectConfig","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetInspectTemplateResult(
-        String createTime,
-        String description,
-        String displayName,
-        GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("inspectConfig") GooglePrivacyDlpV2InspectConfigResponse inspectConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;
@@ -130,32 +130,32 @@ public final class GetInspectTemplateResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
+        public Builder inspectConfig(GooglePrivacyDlpV2InspectConfigResponse inspectConfig) {
             this.inspectConfig = Objects.requireNonNull(inspectConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

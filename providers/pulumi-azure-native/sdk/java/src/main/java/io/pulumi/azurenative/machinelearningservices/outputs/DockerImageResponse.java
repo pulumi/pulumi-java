@@ -30,11 +30,11 @@ public final class DockerImageResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor({"dockerImageUri","dockerSpecificationType","platform"})
+    @OutputCustomType.Constructor
     private DockerImageResponse(
-        String dockerImageUri,
-        String dockerSpecificationType,
-        @Nullable DockerImagePlatformResponse platform) {
+        @OutputCustomType.Parameter("dockerImageUri") String dockerImageUri,
+        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.dockerImageUri = dockerImageUri;
         this.dockerSpecificationType = dockerSpecificationType;
         this.platform = platform;
@@ -88,17 +88,17 @@ public final class DockerImageResponse {
     	      this.platform = defaults.platform;
         }
 
-        public Builder setDockerImageUri(String dockerImageUri) {
+        public Builder dockerImageUri(String dockerImageUri) {
             this.dockerImageUri = Objects.requireNonNull(dockerImageUri);
             return this;
         }
 
-        public Builder setDockerSpecificationType(String dockerSpecificationType) {
+        public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
 
-        public Builder setPlatform(@Nullable DockerImagePlatformResponse platform) {
+        public Builder platform(@Nullable DockerImagePlatformResponse platform) {
             this.platform = platform;
             return this;
         }

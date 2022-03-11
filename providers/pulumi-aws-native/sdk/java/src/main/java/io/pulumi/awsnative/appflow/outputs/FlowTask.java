@@ -41,13 +41,13 @@ public final class FlowTask {
      */
     private final FlowTaskType taskType;
 
-    @OutputCustomType.Constructor({"connectorOperator","destinationField","sourceFields","taskProperties","taskType"})
+    @OutputCustomType.Constructor
     private FlowTask(
-        @Nullable FlowConnectorOperator connectorOperator,
-        @Nullable String destinationField,
-        List<String> sourceFields,
-        @Nullable List<FlowTaskPropertiesObject> taskProperties,
-        FlowTaskType taskType) {
+        @OutputCustomType.Parameter("connectorOperator") @Nullable FlowConnectorOperator connectorOperator,
+        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
+        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
+        @OutputCustomType.Parameter("taskProperties") @Nullable List<FlowTaskPropertiesObject> taskProperties,
+        @OutputCustomType.Parameter("taskType") FlowTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;
@@ -119,27 +119,27 @@ public final class FlowTask {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setConnectorOperator(@Nullable FlowConnectorOperator connectorOperator) {
+        public Builder connectorOperator(@Nullable FlowConnectorOperator connectorOperator) {
             this.connectorOperator = connectorOperator;
             return this;
         }
 
-        public Builder setDestinationField(@Nullable String destinationField) {
+        public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = destinationField;
             return this;
         }
 
-        public Builder setSourceFields(List<String> sourceFields) {
+        public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
 
-        public Builder setTaskProperties(@Nullable List<FlowTaskPropertiesObject> taskProperties) {
+        public Builder taskProperties(@Nullable List<FlowTaskPropertiesObject> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
 
-        public Builder setTaskType(FlowTaskType taskType) {
+        public Builder taskType(FlowTaskType taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

@@ -44,14 +44,14 @@ public final class TypeResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor({"fields","name","oneofs","options","sourceContext","syntax"})
+    @OutputCustomType.Constructor
     private TypeResponse(
-        List<FieldResponse> fields,
-        String name,
-        List<String> oneofs,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax) {
+        @OutputCustomType.Parameter("fields") List<FieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oneofs") List<String> oneofs,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @OutputCustomType.Parameter("syntax") String syntax) {
         this.fields = fields;
         this.name = name;
         this.oneofs = oneofs;
@@ -133,32 +133,32 @@ public final class TypeResponse {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setFields(List<FieldResponse> fields) {
+        public Builder fields(List<FieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOneofs(List<String> oneofs) {
+        public Builder oneofs(List<String> oneofs) {
             this.oneofs = Objects.requireNonNull(oneofs);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setSourceContext(SourceContextResponse sourceContext) {
+        public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }

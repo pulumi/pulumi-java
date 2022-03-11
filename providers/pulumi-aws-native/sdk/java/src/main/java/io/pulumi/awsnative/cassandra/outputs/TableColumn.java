@@ -12,10 +12,10 @@ public final class TableColumn {
     private final String columnName;
     private final String columnType;
 
-    @OutputCustomType.Constructor({"columnName","columnType"})
+    @OutputCustomType.Constructor
     private TableColumn(
-        String columnName,
-        String columnType) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("columnType") String columnType) {
         this.columnName = columnName;
         this.columnType = columnType;
     }
@@ -49,12 +49,12 @@ public final class TableColumn {
     	      this.columnType = defaults.columnType;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setColumnType(String columnType) {
+        public Builder columnType(String columnType) {
             this.columnType = Objects.requireNonNull(columnType);
             return this;
         }

@@ -68,22 +68,22 @@ public final class ReplicationSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDeletionProtected(@Nullable Input<Boolean> deletionProtected) {
+        public Builder deletionProtected(@Nullable Input<Boolean> deletionProtected) {
             this.deletionProtected = deletionProtected;
             return this;
         }
 
-        public Builder setDeletionProtected(@Nullable Boolean deletionProtected) {
+        public Builder deletionProtected(@Nullable Boolean deletionProtected) {
             this.deletionProtected = Input.ofNullable(deletionProtected);
             return this;
         }
 
-        public Builder setRegions(Input<List<ReplicationSetReplicationRegionArgs>> regions) {
+        public Builder regions(Input<List<ReplicationSetReplicationRegionArgs>> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
-        public Builder setRegions(List<ReplicationSetReplicationRegionArgs> regions) {
+        public Builder regions(List<ReplicationSetReplicationRegionArgs> regions) {
             this.regions = Input.of(Objects.requireNonNull(regions));
             return this;
         }

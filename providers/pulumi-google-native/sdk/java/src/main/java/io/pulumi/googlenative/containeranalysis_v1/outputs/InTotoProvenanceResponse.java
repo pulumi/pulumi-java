@@ -30,12 +30,12 @@ public final class InTotoProvenanceResponse {
      */
     private final RecipeResponse recipe;
 
-    @OutputCustomType.Constructor({"builderConfig","materials","metadata","recipe"})
+    @OutputCustomType.Constructor
     private InTotoProvenanceResponse(
-        BuilderConfigResponse builderConfig,
-        List<String> materials,
-        MetadataResponse metadata,
-        RecipeResponse recipe) {
+        @OutputCustomType.Parameter("builderConfig") BuilderConfigResponse builderConfig,
+        @OutputCustomType.Parameter("materials") List<String> materials,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("recipe") RecipeResponse recipe) {
         this.builderConfig = builderConfig;
         this.materials = materials;
         this.metadata = metadata;
@@ -93,22 +93,22 @@ public final class InTotoProvenanceResponse {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder setBuilderConfig(BuilderConfigResponse builderConfig) {
+        public Builder builderConfig(BuilderConfigResponse builderConfig) {
             this.builderConfig = Objects.requireNonNull(builderConfig);
             return this;
         }
 
-        public Builder setMaterials(List<String> materials) {
+        public Builder materials(List<String> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setRecipe(RecipeResponse recipe) {
+        public Builder recipe(RecipeResponse recipe) {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }

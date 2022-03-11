@@ -32,12 +32,12 @@ public final class TimeSeriesFilterRatioResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor({"denominator","numerator","pickTimeSeriesFilter","secondaryAggregation"})
+    @OutputCustomType.Constructor
     private TimeSeriesFilterRatioResponse(
-        RatioPartResponse denominator,
-        RatioPartResponse numerator,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
+        @OutputCustomType.Parameter("denominator") RatioPartResponse denominator,
+        @OutputCustomType.Parameter("numerator") RatioPartResponse numerator,
+        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.denominator = denominator;
         this.numerator = numerator;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;
@@ -99,22 +99,22 @@ public final class TimeSeriesFilterRatioResponse {
     	      this.secondaryAggregation = defaults.secondaryAggregation;
         }
 
-        public Builder setDenominator(RatioPartResponse denominator) {
+        public Builder denominator(RatioPartResponse denominator) {
             this.denominator = Objects.requireNonNull(denominator);
             return this;
         }
 
-        public Builder setNumerator(RatioPartResponse numerator) {
+        public Builder numerator(RatioPartResponse numerator) {
             this.numerator = Objects.requireNonNull(numerator);
             return this;
         }
 
-        public Builder setPickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
             return this;
         }
 
-        public Builder setSecondaryAggregation(AggregationResponse secondaryAggregation) {
+        public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
         }

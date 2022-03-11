@@ -14,10 +14,10 @@ public final class EnvironmentLastUpdatedError {
     private final @Nullable String errorCode;
     private final @Nullable String errorMessage;
 
-    @OutputCustomType.Constructor({"errorCode","errorMessage"})
+    @OutputCustomType.Constructor
     private EnvironmentLastUpdatedError(
-        @Nullable String errorCode,
-        @Nullable String errorMessage) {
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
     }
@@ -51,12 +51,12 @@ public final class EnvironmentLastUpdatedError {
     	      this.errorMessage = defaults.errorMessage;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }

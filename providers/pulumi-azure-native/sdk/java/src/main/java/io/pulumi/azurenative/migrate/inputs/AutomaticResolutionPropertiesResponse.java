@@ -58,7 +58,7 @@ public final class AutomaticResolutionPropertiesResponse extends io.pulumi.resou
     	      this.moveResourceId = defaults.moveResourceId;
         }
 
-        public Builder setMoveResourceId(@Nullable String moveResourceId) {
+        public Builder moveResourceId(@Nullable String moveResourceId) {
             this.moveResourceId = moveResourceId;
             return this;
         }

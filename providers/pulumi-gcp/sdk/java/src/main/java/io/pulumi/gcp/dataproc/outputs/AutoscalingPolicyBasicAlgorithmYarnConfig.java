@@ -59,13 +59,13 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final @Nullable Double scaleUpMinWorkerFraction;
 
-    @OutputCustomType.Constructor({"gracefulDecommissionTimeout","scaleDownFactor","scaleDownMinWorkerFraction","scaleUpFactor","scaleUpMinWorkerFraction"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyBasicAlgorithmYarnConfig(
-        String gracefulDecommissionTimeout,
-        Double scaleDownFactor,
-        @Nullable Double scaleDownMinWorkerFraction,
-        Double scaleUpFactor,
-        @Nullable Double scaleUpMinWorkerFraction) {
+        @OutputCustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
+        @OutputCustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
+        @OutputCustomType.Parameter("scaleDownMinWorkerFraction") @Nullable Double scaleDownMinWorkerFraction,
+        @OutputCustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
+        @OutputCustomType.Parameter("scaleUpMinWorkerFraction") @Nullable Double scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
@@ -158,27 +158,27 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
     	      this.scaleUpMinWorkerFraction = defaults.scaleUpMinWorkerFraction;
         }
 
-        public Builder setGracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
+        public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             this.gracefulDecommissionTimeout = Objects.requireNonNull(gracefulDecommissionTimeout);
             return this;
         }
 
-        public Builder setScaleDownFactor(Double scaleDownFactor) {
+        public Builder scaleDownFactor(Double scaleDownFactor) {
             this.scaleDownFactor = Objects.requireNonNull(scaleDownFactor);
             return this;
         }
 
-        public Builder setScaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
+        public Builder scaleDownMinWorkerFraction(@Nullable Double scaleDownMinWorkerFraction) {
             this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;
             return this;
         }
 
-        public Builder setScaleUpFactor(Double scaleUpFactor) {
+        public Builder scaleUpFactor(Double scaleUpFactor) {
             this.scaleUpFactor = Objects.requireNonNull(scaleUpFactor);
             return this;
         }
 
-        public Builder setScaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
+        public Builder scaleUpMinWorkerFraction(@Nullable Double scaleUpMinWorkerFraction) {
             this.scaleUpMinWorkerFraction = scaleUpMinWorkerFraction;
             return this;
         }

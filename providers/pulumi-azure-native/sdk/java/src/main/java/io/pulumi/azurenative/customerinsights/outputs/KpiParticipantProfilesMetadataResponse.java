@@ -15,8 +15,8 @@ public final class KpiParticipantProfilesMetadataResponse {
      */
     private final String typeName;
 
-    @OutputCustomType.Constructor({"typeName"})
-    private KpiParticipantProfilesMetadataResponse(String typeName) {
+    @OutputCustomType.Constructor
+    private KpiParticipantProfilesMetadataResponse(@OutputCustomType.Parameter("typeName") String typeName) {
         this.typeName = typeName;
     }
 
@@ -48,7 +48,7 @@ public final class KpiParticipantProfilesMetadataResponse {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setTypeName(String typeName) {
+        public Builder typeName(String typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }

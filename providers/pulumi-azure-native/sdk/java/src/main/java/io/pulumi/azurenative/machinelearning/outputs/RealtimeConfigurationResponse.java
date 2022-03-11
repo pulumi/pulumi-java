@@ -17,8 +17,8 @@ public final class RealtimeConfigurationResponse {
      */
     private final @Nullable Integer maxConcurrentCalls;
 
-    @OutputCustomType.Constructor({"maxConcurrentCalls"})
-    private RealtimeConfigurationResponse(@Nullable Integer maxConcurrentCalls) {
+    @OutputCustomType.Constructor
+    private RealtimeConfigurationResponse(@OutputCustomType.Parameter("maxConcurrentCalls") @Nullable Integer maxConcurrentCalls) {
         this.maxConcurrentCalls = maxConcurrentCalls;
     }
 
@@ -50,7 +50,7 @@ public final class RealtimeConfigurationResponse {
     	      this.maxConcurrentCalls = defaults.maxConcurrentCalls;
         }
 
-        public Builder setMaxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
+        public Builder maxConcurrentCalls(@Nullable Integer maxConcurrentCalls) {
             this.maxConcurrentCalls = maxConcurrentCalls;
             return this;
         }

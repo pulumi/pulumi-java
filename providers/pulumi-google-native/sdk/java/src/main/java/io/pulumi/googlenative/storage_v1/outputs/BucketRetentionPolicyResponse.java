@@ -26,11 +26,11 @@ public final class BucketRetentionPolicyResponse {
      */
     private final String retentionPeriod;
 
-    @OutputCustomType.Constructor({"effectiveTime","isLocked","retentionPeriod"})
+    @OutputCustomType.Constructor
     private BucketRetentionPolicyResponse(
-        String effectiveTime,
-        Boolean isLocked,
-        String retentionPeriod) {
+        @OutputCustomType.Parameter("effectiveTime") String effectiveTime,
+        @OutputCustomType.Parameter("isLocked") Boolean isLocked,
+        @OutputCustomType.Parameter("retentionPeriod") String retentionPeriod) {
         this.effectiveTime = effectiveTime;
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;
@@ -82,17 +82,17 @@ public final class BucketRetentionPolicyResponse {
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setEffectiveTime(String effectiveTime) {
+        public Builder effectiveTime(String effectiveTime) {
             this.effectiveTime = Objects.requireNonNull(effectiveTime);
             return this;
         }
 
-        public Builder setIsLocked(Boolean isLocked) {
+        public Builder isLocked(Boolean isLocked) {
             this.isLocked = Objects.requireNonNull(isLocked);
             return this;
         }
 
-        public Builder setRetentionPeriod(String retentionPeriod) {
+        public Builder retentionPeriod(String retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }

@@ -20,10 +20,10 @@ public final class AnalyticsApplicationInputsKinesisFirehose {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"resourceArn","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsKinesisFirehose(
-        String resourceArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.resourceArn = resourceArn;
         this.roleArn = roleArn;
     }
@@ -65,12 +65,12 @@ public final class AnalyticsApplicationInputsKinesisFirehose {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

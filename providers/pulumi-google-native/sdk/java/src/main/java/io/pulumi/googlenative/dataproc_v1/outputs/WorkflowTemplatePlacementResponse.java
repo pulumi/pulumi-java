@@ -21,10 +21,10 @@ public final class WorkflowTemplatePlacementResponse {
      */
     private final ManagedClusterResponse managedCluster;
 
-    @OutputCustomType.Constructor({"clusterSelector","managedCluster"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementResponse(
-        ClusterSelectorResponse clusterSelector,
-        ManagedClusterResponse managedCluster) {
+        @OutputCustomType.Parameter("clusterSelector") ClusterSelectorResponse clusterSelector,
+        @OutputCustomType.Parameter("managedCluster") ManagedClusterResponse managedCluster) {
         this.clusterSelector = clusterSelector;
         this.managedCluster = managedCluster;
     }
@@ -66,12 +66,12 @@ public final class WorkflowTemplatePlacementResponse {
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder setClusterSelector(ClusterSelectorResponse clusterSelector) {
+        public Builder clusterSelector(ClusterSelectorResponse clusterSelector) {
             this.clusterSelector = Objects.requireNonNull(clusterSelector);
             return this;
         }
 
-        public Builder setManagedCluster(ManagedClusterResponse managedCluster) {
+        public Builder managedCluster(ManagedClusterResponse managedCluster) {
             this.managedCluster = Objects.requireNonNull(managedCluster);
             return this;
         }

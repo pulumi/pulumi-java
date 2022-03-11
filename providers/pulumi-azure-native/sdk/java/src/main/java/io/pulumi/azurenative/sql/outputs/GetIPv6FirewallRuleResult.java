@@ -37,13 +37,13 @@ public final class GetIPv6FirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endIPv6Address","id","name","startIPv6Address","type"})
+    @OutputCustomType.Constructor
     private GetIPv6FirewallRuleResult(
-        @Nullable String endIPv6Address,
-        String id,
-        @Nullable String name,
-        @Nullable String startIPv6Address,
-        String type) {
+        @OutputCustomType.Parameter("endIPv6Address") @Nullable String endIPv6Address,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("startIPv6Address") @Nullable String startIPv6Address,
+        @OutputCustomType.Parameter("type") String type) {
         this.endIPv6Address = endIPv6Address;
         this.id = id;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetIPv6FirewallRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndIPv6Address(@Nullable String endIPv6Address) {
+        public Builder endIPv6Address(@Nullable String endIPv6Address) {
             this.endIPv6Address = endIPv6Address;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStartIPv6Address(@Nullable String startIPv6Address) {
+        public Builder startIPv6Address(@Nullable String startIPv6Address) {
             this.startIPv6Address = startIPv6Address;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

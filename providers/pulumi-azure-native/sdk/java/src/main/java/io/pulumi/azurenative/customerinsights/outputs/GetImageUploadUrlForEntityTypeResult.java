@@ -28,11 +28,11 @@ public final class GetImageUploadUrlForEntityTypeResult {
      */
     private final @Nullable String relativePath;
 
-    @OutputCustomType.Constructor({"contentUrl","imageExists","relativePath"})
+    @OutputCustomType.Constructor
     private GetImageUploadUrlForEntityTypeResult(
-        @Nullable String contentUrl,
-        @Nullable Boolean imageExists,
-        @Nullable String relativePath) {
+        @OutputCustomType.Parameter("contentUrl") @Nullable String contentUrl,
+        @OutputCustomType.Parameter("imageExists") @Nullable Boolean imageExists,
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath) {
         this.contentUrl = contentUrl;
         this.imageExists = imageExists;
         this.relativePath = relativePath;
@@ -84,17 +84,17 @@ public final class GetImageUploadUrlForEntityTypeResult {
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder setContentUrl(@Nullable String contentUrl) {
+        public Builder contentUrl(@Nullable String contentUrl) {
             this.contentUrl = contentUrl;
             return this;
         }
 
-        public Builder setImageExists(@Nullable Boolean imageExists) {
+        public Builder imageExists(@Nullable Boolean imageExists) {
             this.imageExists = imageExists;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }

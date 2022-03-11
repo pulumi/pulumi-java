@@ -38,13 +38,13 @@ public final class SmbSettingResponse {
      */
     private final @Nullable String versions;
 
-    @OutputCustomType.Constructor({"authenticationMethods","channelEncryption","kerberosTicketEncryption","multichannel","versions"})
+    @OutputCustomType.Constructor
     private SmbSettingResponse(
-        @Nullable String authenticationMethods,
-        @Nullable String channelEncryption,
-        @Nullable String kerberosTicketEncryption,
-        @Nullable MultichannelResponse multichannel,
-        @Nullable String versions) {
+        @OutputCustomType.Parameter("authenticationMethods") @Nullable String authenticationMethods,
+        @OutputCustomType.Parameter("channelEncryption") @Nullable String channelEncryption,
+        @OutputCustomType.Parameter("kerberosTicketEncryption") @Nullable String kerberosTicketEncryption,
+        @OutputCustomType.Parameter("multichannel") @Nullable MultichannelResponse multichannel,
+        @OutputCustomType.Parameter("versions") @Nullable String versions) {
         this.authenticationMethods = authenticationMethods;
         this.channelEncryption = channelEncryption;
         this.kerberosTicketEncryption = kerberosTicketEncryption;
@@ -116,27 +116,27 @@ public final class SmbSettingResponse {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAuthenticationMethods(@Nullable String authenticationMethods) {
+        public Builder authenticationMethods(@Nullable String authenticationMethods) {
             this.authenticationMethods = authenticationMethods;
             return this;
         }
 
-        public Builder setChannelEncryption(@Nullable String channelEncryption) {
+        public Builder channelEncryption(@Nullable String channelEncryption) {
             this.channelEncryption = channelEncryption;
             return this;
         }
 
-        public Builder setKerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
+        public Builder kerberosTicketEncryption(@Nullable String kerberosTicketEncryption) {
             this.kerberosTicketEncryption = kerberosTicketEncryption;
             return this;
         }
 
-        public Builder setMultichannel(@Nullable MultichannelResponse multichannel) {
+        public Builder multichannel(@Nullable MultichannelResponse multichannel) {
             this.multichannel = multichannel;
             return this;
         }
 
-        public Builder setVersions(@Nullable String versions) {
+        public Builder versions(@Nullable String versions) {
             this.versions = versions;
             return this;
         }

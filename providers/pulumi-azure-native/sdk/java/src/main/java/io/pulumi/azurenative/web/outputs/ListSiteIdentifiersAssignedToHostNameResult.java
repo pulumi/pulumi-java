@@ -22,10 +22,10 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
      */
     private final List<IdentifierResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSiteIdentifiersAssignedToHostNameResult(
-        String nextLink,
-        List<IdentifierResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<IdentifierResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListSiteIdentifiersAssignedToHostNameResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<IdentifierResponse> value) {
+        public Builder value(List<IdentifierResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

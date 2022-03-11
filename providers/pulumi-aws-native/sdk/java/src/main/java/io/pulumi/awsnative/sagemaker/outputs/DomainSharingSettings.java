@@ -28,11 +28,11 @@ public final class DomainSharingSettings {
      */
     private final @Nullable String s3OutputPath;
 
-    @OutputCustomType.Constructor({"notebookOutputOption","s3KmsKeyId","s3OutputPath"})
+    @OutputCustomType.Constructor
     private DomainSharingSettings(
-        @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption,
-        @Nullable String s3KmsKeyId,
-        @Nullable String s3OutputPath) {
+        @OutputCustomType.Parameter("notebookOutputOption") @Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption,
+        @OutputCustomType.Parameter("s3KmsKeyId") @Nullable String s3KmsKeyId,
+        @OutputCustomType.Parameter("s3OutputPath") @Nullable String s3OutputPath) {
         this.notebookOutputOption = notebookOutputOption;
         this.s3KmsKeyId = s3KmsKeyId;
         this.s3OutputPath = s3OutputPath;
@@ -84,17 +84,17 @@ public final class DomainSharingSettings {
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setNotebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
+        public Builder notebookOutputOption(@Nullable DomainSharingSettingsNotebookOutputOption notebookOutputOption) {
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
 
-        public Builder setS3KmsKeyId(@Nullable String s3KmsKeyId) {
+        public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
 
-        public Builder setS3OutputPath(@Nullable String s3OutputPath) {
+        public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }

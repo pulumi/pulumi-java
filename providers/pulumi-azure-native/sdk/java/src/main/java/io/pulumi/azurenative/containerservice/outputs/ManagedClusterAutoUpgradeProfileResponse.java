@@ -17,8 +17,8 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
      */
     private final @Nullable String upgradeChannel;
 
-    @OutputCustomType.Constructor({"upgradeChannel"})
-    private ManagedClusterAutoUpgradeProfileResponse(@Nullable String upgradeChannel) {
+    @OutputCustomType.Constructor
+    private ManagedClusterAutoUpgradeProfileResponse(@OutputCustomType.Parameter("upgradeChannel") @Nullable String upgradeChannel) {
         this.upgradeChannel = upgradeChannel;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterAutoUpgradeProfileResponse {
     	      this.upgradeChannel = defaults.upgradeChannel;
         }
 
-        public Builder setUpgradeChannel(@Nullable String upgradeChannel) {
+        public Builder upgradeChannel(@Nullable String upgradeChannel) {
             this.upgradeChannel = upgradeChannel;
             return this;
         }

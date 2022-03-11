@@ -21,10 +21,10 @@ public final class AlertStrategyResponse {
      */
     private final NotificationRateLimitResponse notificationRateLimit;
 
-    @OutputCustomType.Constructor({"autoClose","notificationRateLimit"})
+    @OutputCustomType.Constructor
     private AlertStrategyResponse(
-        String autoClose,
-        NotificationRateLimitResponse notificationRateLimit) {
+        @OutputCustomType.Parameter("autoClose") String autoClose,
+        @OutputCustomType.Parameter("notificationRateLimit") NotificationRateLimitResponse notificationRateLimit) {
         this.autoClose = autoClose;
         this.notificationRateLimit = notificationRateLimit;
     }
@@ -66,12 +66,12 @@ public final class AlertStrategyResponse {
     	      this.notificationRateLimit = defaults.notificationRateLimit;
         }
 
-        public Builder setAutoClose(String autoClose) {
+        public Builder autoClose(String autoClose) {
             this.autoClose = Objects.requireNonNull(autoClose);
             return this;
         }
 
-        public Builder setNotificationRateLimit(NotificationRateLimitResponse notificationRateLimit) {
+        public Builder notificationRateLimit(NotificationRateLimitResponse notificationRateLimit) {
             this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
             return this;
         }

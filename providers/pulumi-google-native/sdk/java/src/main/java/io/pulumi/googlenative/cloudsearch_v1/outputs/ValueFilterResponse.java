@@ -21,10 +21,10 @@ public final class ValueFilterResponse {
      */
     private final ValueResponse value;
 
-    @OutputCustomType.Constructor({"operatorName","value"})
+    @OutputCustomType.Constructor
     private ValueFilterResponse(
-        String operatorName,
-        ValueResponse value) {
+        @OutputCustomType.Parameter("operatorName") String operatorName,
+        @OutputCustomType.Parameter("value") ValueResponse value) {
         this.operatorName = operatorName;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class ValueFilterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperatorName(String operatorName) {
+        public Builder operatorName(String operatorName) {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
 
-        public Builder setValue(ValueResponse value) {
+        public Builder value(ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -141,62 +141,62 @@ public final class CxPageTransitionRouteGetArgs extends io.pulumi.resources.Reso
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setCondition(@Nullable Input<String> condition) {
+        public Builder condition(@Nullable Input<String> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setIntent(@Nullable Input<String> intent) {
+        public Builder intent(@Nullable Input<String> intent) {
             this.intent = intent;
             return this;
         }
 
-        public Builder setIntent(@Nullable String intent) {
+        public Builder intent(@Nullable String intent) {
             this.intent = Input.ofNullable(intent);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable Input<String> targetFlow) {
+        public Builder targetFlow(@Nullable Input<String> targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable String targetFlow) {
+        public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = Input.ofNullable(targetFlow);
             return this;
         }
 
-        public Builder setTargetPage(@Nullable Input<String> targetPage) {
+        public Builder targetPage(@Nullable Input<String> targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
-        public Builder setTargetPage(@Nullable String targetPage) {
+        public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = Input.ofNullable(targetPage);
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable Input<CxPageTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable Input<CxPageTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable CxPageTransitionRouteTriggerFulfillmentGetArgs triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable CxPageTransitionRouteTriggerFulfillmentGetArgs triggerFulfillment) {
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }

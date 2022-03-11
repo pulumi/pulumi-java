@@ -22,10 +22,10 @@ public final class AppleRegistrationResponse {
      */
     private final @Nullable String clientSecretSettingName;
 
-    @OutputCustomType.Constructor({"clientId","clientSecretSettingName"})
+    @OutputCustomType.Constructor
     private AppleRegistrationResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecretSettingName) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName) {
         this.clientId = clientId;
         this.clientSecretSettingName = clientSecretSettingName;
     }
@@ -67,12 +67,12 @@ public final class AppleRegistrationResponse {
     	      this.clientSecretSettingName = defaults.clientSecretSettingName;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }

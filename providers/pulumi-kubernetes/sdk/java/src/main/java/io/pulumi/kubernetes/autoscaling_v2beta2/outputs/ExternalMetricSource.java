@@ -21,10 +21,10 @@ public final class ExternalMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"metric","target"})
+    @OutputCustomType.Constructor
     private ExternalMetricSource(
-        MetricIdentifier metric,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.metric = metric;
         this.target = target;
     }
@@ -66,12 +66,12 @@ public final class ExternalMetricSource {
     	      this.target = defaults.target;
         }
 
-        public Builder setMetric(MetricIdentifier metric) {
+        public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setTarget(MetricTarget target) {
+        public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

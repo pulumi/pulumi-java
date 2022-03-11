@@ -15,8 +15,8 @@ public final class AnthosClusterResponse {
      */
     private final String membership;
 
-    @OutputCustomType.Constructor({"membership"})
-    private AnthosClusterResponse(String membership) {
+    @OutputCustomType.Constructor
+    private AnthosClusterResponse(@OutputCustomType.Parameter("membership") String membership) {
         this.membership = membership;
     }
 
@@ -48,7 +48,7 @@ public final class AnthosClusterResponse {
     	      this.membership = defaults.membership;
         }
 
-        public Builder setMembership(String membership) {
+        public Builder membership(String membership) {
             this.membership = Objects.requireNonNull(membership);
             return this;
         }

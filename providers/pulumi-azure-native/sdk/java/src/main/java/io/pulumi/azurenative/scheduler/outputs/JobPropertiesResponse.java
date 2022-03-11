@@ -40,13 +40,13 @@ public final class JobPropertiesResponse {
      */
     private final JobStatusResponse status;
 
-    @OutputCustomType.Constructor({"action","recurrence","startTime","state","status"})
+    @OutputCustomType.Constructor
     private JobPropertiesResponse(
-        @Nullable JobActionResponse action,
-        @Nullable JobRecurrenceResponse recurrence,
-        @Nullable String startTime,
-        @Nullable String state,
-        JobStatusResponse status) {
+        @OutputCustomType.Parameter("action") @Nullable JobActionResponse action,
+        @OutputCustomType.Parameter("recurrence") @Nullable JobRecurrenceResponse recurrence,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("status") JobStatusResponse status) {
         this.action = action;
         this.recurrence = recurrence;
         this.startTime = startTime;
@@ -118,27 +118,27 @@ public final class JobPropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setAction(@Nullable JobActionResponse action) {
+        public Builder action(@Nullable JobActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable JobRecurrenceResponse recurrence) {
+        public Builder recurrence(@Nullable JobRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStatus(JobStatusResponse status) {
+        public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetOrganizationPolicyRestorePolicy {
     private final Boolean $default;
 
-    @OutputCustomType.Constructor({"$default"})
-    private GetOrganizationPolicyRestorePolicy(Boolean $default) {
+    @OutputCustomType.Constructor
+    private GetOrganizationPolicyRestorePolicy(@OutputCustomType.Parameter("default") Boolean $default) {
         this.$default = $default;
     }
 
@@ -40,7 +40,7 @@ public final class GetOrganizationPolicyRestorePolicy {
     	      this.$default = defaults.$default;
         }
 
-        public Builder set$default(Boolean $default) {
+        public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }

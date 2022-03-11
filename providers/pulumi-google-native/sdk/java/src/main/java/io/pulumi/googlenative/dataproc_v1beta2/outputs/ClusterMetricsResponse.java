@@ -21,10 +21,10 @@ public final class ClusterMetricsResponse {
      */
     private final Map<String,String> yarnMetrics;
 
-    @OutputCustomType.Constructor({"hdfsMetrics","yarnMetrics"})
+    @OutputCustomType.Constructor
     private ClusterMetricsResponse(
-        Map<String,String> hdfsMetrics,
-        Map<String,String> yarnMetrics) {
+        @OutputCustomType.Parameter("hdfsMetrics") Map<String,String> hdfsMetrics,
+        @OutputCustomType.Parameter("yarnMetrics") Map<String,String> yarnMetrics) {
         this.hdfsMetrics = hdfsMetrics;
         this.yarnMetrics = yarnMetrics;
     }
@@ -66,12 +66,12 @@ public final class ClusterMetricsResponse {
     	      this.yarnMetrics = defaults.yarnMetrics;
         }
 
-        public Builder setHdfsMetrics(Map<String,String> hdfsMetrics) {
+        public Builder hdfsMetrics(Map<String,String> hdfsMetrics) {
             this.hdfsMetrics = Objects.requireNonNull(hdfsMetrics);
             return this;
         }
 
-        public Builder setYarnMetrics(Map<String,String> yarnMetrics) {
+        public Builder yarnMetrics(Map<String,String> yarnMetrics) {
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
         }

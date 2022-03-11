@@ -24,10 +24,10 @@ public final class JobHttpTargetOauthToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"scope","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private JobHttpTargetOauthToken(
-        @Nullable String scope,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.scope = scope;
         this.serviceAccountEmail = serviceAccountEmail;
     }
@@ -71,12 +71,12 @@ public final class JobHttpTargetOauthToken {
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }

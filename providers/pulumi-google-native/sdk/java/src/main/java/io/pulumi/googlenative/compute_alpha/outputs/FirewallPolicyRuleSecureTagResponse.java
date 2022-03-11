@@ -20,10 +20,10 @@ public final class FirewallPolicyRuleSecureTagResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"name","state"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleSecureTagResponse(
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.name = name;
         this.state = state;
     }
@@ -65,12 +65,12 @@ public final class FirewallPolicyRuleSecureTagResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

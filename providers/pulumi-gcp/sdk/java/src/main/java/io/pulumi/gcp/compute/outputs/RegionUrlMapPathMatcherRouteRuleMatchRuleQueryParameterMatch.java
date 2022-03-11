@@ -41,12 +41,12 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      */
     private final @Nullable String regexMatch;
 
-    @OutputCustomType.Constructor({"exactMatch","name","presentMatch","regexMatch"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch(
-        @Nullable String exactMatch,
-        String name,
-        @Nullable Boolean presentMatch,
-        @Nullable String regexMatch) {
+        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
+        @OutputCustomType.Parameter("regexMatch") @Nullable String regexMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;
@@ -116,22 +116,22 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable String regexMatch) {
+        public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }

@@ -34,13 +34,13 @@ public final class OriginEndpointCmafPackage {
     private final @Nullable String segmentPrefix;
     private final @Nullable OriginEndpointStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"encryption","hlsManifests","segmentDurationSeconds","segmentPrefix","streamSelection"})
+    @OutputCustomType.Constructor
     private OriginEndpointCmafPackage(
-        @Nullable OriginEndpointCmafEncryption encryption,
-        @Nullable List<OriginEndpointHlsManifest> hlsManifests,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable String segmentPrefix,
-        @Nullable OriginEndpointStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointCmafEncryption encryption,
+        @OutputCustomType.Parameter("hlsManifests") @Nullable List<OriginEndpointHlsManifest> hlsManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("segmentPrefix") @Nullable String segmentPrefix,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;
@@ -104,27 +104,27 @@ public final class OriginEndpointCmafPackage {
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointCmafEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointCmafEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setHlsManifests(@Nullable List<OriginEndpointHlsManifest> hlsManifests) {
+        public Builder hlsManifests(@Nullable List<OriginEndpointHlsManifest> hlsManifests) {
             this.hlsManifests = hlsManifests;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentPrefix(@Nullable String segmentPrefix) {
+        public Builder segmentPrefix(@Nullable String segmentPrefix) {
             this.segmentPrefix = segmentPrefix;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

@@ -107,42 +107,42 @@ public final class CertificateConfigX509ConfigCaOptionsGetArgs extends io.pulumi
     	      this.zeroMaxIssuerPathLength = defaults.zeroMaxIssuerPathLength;
         }
 
-        public Builder setIsCa(@Nullable Input<Boolean> isCa) {
+        public Builder isCa(@Nullable Input<Boolean> isCa) {
             this.isCa = isCa;
             return this;
         }
 
-        public Builder setIsCa(@Nullable Boolean isCa) {
+        public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = Input.ofNullable(isCa);
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Input<Integer> maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Input<Integer> maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Input.ofNullable(maxIssuerPathLength);
             return this;
         }
 
-        public Builder setNonCa(@Nullable Input<Boolean> nonCa) {
+        public Builder nonCa(@Nullable Input<Boolean> nonCa) {
             this.nonCa = nonCa;
             return this;
         }
 
-        public Builder setNonCa(@Nullable Boolean nonCa) {
+        public Builder nonCa(@Nullable Boolean nonCa) {
             this.nonCa = Input.ofNullable(nonCa);
             return this;
         }
 
-        public Builder setZeroMaxIssuerPathLength(@Nullable Input<Boolean> zeroMaxIssuerPathLength) {
+        public Builder zeroMaxIssuerPathLength(@Nullable Input<Boolean> zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = zeroMaxIssuerPathLength;
             return this;
         }
 
-        public Builder setZeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
+        public Builder zeroMaxIssuerPathLength(@Nullable Boolean zeroMaxIssuerPathLength) {
             this.zeroMaxIssuerPathLength = Input.ofNullable(zeroMaxIssuerPathLength);
             return this;
         }

@@ -24,10 +24,10 @@ public final class ListLabVhdsResult {
      */
     private final @Nullable List<LabVhdResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListLabVhdsResult(
-        @Nullable String nextLink,
-        @Nullable List<LabVhdResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<LabVhdResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListLabVhdsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<LabVhdResponse> value) {
+        public Builder value(@Nullable List<LabVhdResponse> value) {
             this.value = value;
             return this;
         }

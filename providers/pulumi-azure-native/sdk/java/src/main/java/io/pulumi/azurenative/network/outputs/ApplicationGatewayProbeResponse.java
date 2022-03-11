@@ -90,23 +90,23 @@ public final class ApplicationGatewayProbeResponse {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"etag","host","id","interval","match","minServers","name","path","pickHostNameFromBackendHttpSettings","port","protocol","provisioningState","timeout","type","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayProbeResponse(
-        String etag,
-        @Nullable String host,
-        @Nullable String id,
-        @Nullable Integer interval,
-        @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
-        @Nullable Integer minServers,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendHttpSettings,
-        @Nullable Integer port,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("match") @Nullable ApplicationGatewayProbeHealthResponseMatchResponse match,
+        @OutputCustomType.Parameter("minServers") @Nullable Integer minServers,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pickHostNameFromBackendHttpSettings") @Nullable Boolean pickHostNameFromBackendHttpSettings,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.etag = etag;
         this.host = host;
         this.id = id;
@@ -278,77 +278,77 @@ public final class ApplicationGatewayProbeResponse {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setMatch(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
+        public Builder match(@Nullable ApplicationGatewayProbeHealthResponseMatchResponse match) {
             this.match = match;
             return this;
         }
 
-        public Builder setMinServers(@Nullable Integer minServers) {
+        public Builder minServers(@Nullable Integer minServers) {
             this.minServers = minServers;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
+        public Builder pickHostNameFromBackendHttpSettings(@Nullable Boolean pickHostNameFromBackendHttpSettings) {
             this.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }

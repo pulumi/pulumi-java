@@ -33,12 +33,12 @@ public final class SqlIpConfigResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor({"authorizedNetworks","enableIpv4","privateNetwork","requireSsl"})
+    @OutputCustomType.Constructor
     private SqlIpConfigResponse(
-        List<SqlAclEntryResponse> authorizedNetworks,
-        Boolean enableIpv4,
-        String privateNetwork,
-        Boolean requireSsl) {
+        @OutputCustomType.Parameter("authorizedNetworks") List<SqlAclEntryResponse> authorizedNetworks,
+        @OutputCustomType.Parameter("enableIpv4") Boolean enableIpv4,
+        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
+        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.authorizedNetworks = authorizedNetworks;
         this.enableIpv4 = enableIpv4;
         this.privateNetwork = privateNetwork;
@@ -100,22 +100,22 @@ public final class SqlIpConfigResponse {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAuthorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
+        public Builder authorizedNetworks(List<SqlAclEntryResponse> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
 
-        public Builder setEnableIpv4(Boolean enableIpv4) {
+        public Builder enableIpv4(Boolean enableIpv4) {
             this.enableIpv4 = Objects.requireNonNull(enableIpv4);
             return this;
         }
 
-        public Builder setPrivateNetwork(String privateNetwork) {
+        public Builder privateNetwork(String privateNetwork) {
             this.privateNetwork = Objects.requireNonNull(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(Boolean requireSsl) {
+        public Builder requireSsl(Boolean requireSsl) {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }

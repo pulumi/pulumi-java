@@ -63,12 +63,12 @@ public final class ListenerTargetGroupStickinessConfig extends io.pulumi.resourc
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

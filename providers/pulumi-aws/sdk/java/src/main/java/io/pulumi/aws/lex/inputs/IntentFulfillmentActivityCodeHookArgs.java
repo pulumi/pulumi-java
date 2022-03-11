@@ -71,22 +71,22 @@ public final class IntentFulfillmentActivityCodeHookArgs extends io.pulumi.resou
     	      this.uri = defaults.uri;
         }
 
-        public Builder setMessageVersion(Input<String> messageVersion) {
+        public Builder messageVersion(Input<String> messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
-        public Builder setMessageVersion(String messageVersion) {
+        public Builder messageVersion(String messageVersion) {
             this.messageVersion = Input.of(Objects.requireNonNull(messageVersion));
             return this;
         }
 
-        public Builder setUri(Input<String> uri) {
+        public Builder uri(Input<String> uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }

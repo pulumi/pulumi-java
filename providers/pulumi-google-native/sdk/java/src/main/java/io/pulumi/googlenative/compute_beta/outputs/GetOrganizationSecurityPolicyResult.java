@@ -96,26 +96,26 @@ public final class GetOrganizationSecurityPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adaptiveProtectionConfig","advancedOptionsConfig","associations","creationTimestamp","description","displayName","fingerprint","kind","labelFingerprint","labels","name","parent","recaptchaOptionsConfig","ruleTupleCount","rules","selfLink","selfLinkWithId","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationSecurityPolicyResult(
-        SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
-        SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
-        List<SecurityPolicyAssociationResponse> associations,
-        String creationTimestamp,
-        String description,
-        String displayName,
-        String fingerprint,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
-        Integer ruleTupleCount,
-        List<SecurityPolicyRuleResponse> rules,
-        String selfLink,
-        String selfLinkWithId,
-        String type) {
+        @OutputCustomType.Parameter("adaptiveProtectionConfig") SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig,
+        @OutputCustomType.Parameter("advancedOptionsConfig") SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig,
+        @OutputCustomType.Parameter("associations") List<SecurityPolicyAssociationResponse> associations,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("recaptchaOptionsConfig") SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("rules") List<SecurityPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("type") String type) {
         this.adaptiveProtectionConfig = adaptiveProtectionConfig;
         this.advancedOptionsConfig = advancedOptionsConfig;
         this.associations = associations;
@@ -305,92 +305,92 @@ public final class GetOrganizationSecurityPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig) {
+        public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigResponse adaptiveProtectionConfig) {
             this.adaptiveProtectionConfig = Objects.requireNonNull(adaptiveProtectionConfig);
             return this;
         }
 
-        public Builder setAdvancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
+        public Builder advancedOptionsConfig(SecurityPolicyAdvancedOptionsConfigResponse advancedOptionsConfig) {
             this.advancedOptionsConfig = Objects.requireNonNull(advancedOptionsConfig);
             return this;
         }
 
-        public Builder setAssociations(List<SecurityPolicyAssociationResponse> associations) {
+        public Builder associations(List<SecurityPolicyAssociationResponse> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setRecaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
+        public Builder recaptchaOptionsConfig(SecurityPolicyRecaptchaOptionsConfigResponse recaptchaOptionsConfig) {
             this.recaptchaOptionsConfig = Objects.requireNonNull(recaptchaOptionsConfig);
             return this;
         }
 
-        public Builder setRuleTupleCount(Integer ruleTupleCount) {
+        public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
 
-        public Builder setRules(List<SecurityPolicyRuleResponse> rules) {
+        public Builder rules(List<SecurityPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

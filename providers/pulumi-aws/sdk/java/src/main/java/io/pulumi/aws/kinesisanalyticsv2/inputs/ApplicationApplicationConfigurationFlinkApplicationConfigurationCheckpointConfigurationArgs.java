@@ -107,42 +107,42 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.minPauseBetweenCheckpoints = defaults.minPauseBetweenCheckpoints;
         }
 
-        public Builder setCheckpointInterval(@Nullable Input<Integer> checkpointInterval) {
+        public Builder checkpointInterval(@Nullable Input<Integer> checkpointInterval) {
             this.checkpointInterval = checkpointInterval;
             return this;
         }
 
-        public Builder setCheckpointInterval(@Nullable Integer checkpointInterval) {
+        public Builder checkpointInterval(@Nullable Integer checkpointInterval) {
             this.checkpointInterval = Input.ofNullable(checkpointInterval);
             return this;
         }
 
-        public Builder setCheckpointingEnabled(@Nullable Input<Boolean> checkpointingEnabled) {
+        public Builder checkpointingEnabled(@Nullable Input<Boolean> checkpointingEnabled) {
             this.checkpointingEnabled = checkpointingEnabled;
             return this;
         }
 
-        public Builder setCheckpointingEnabled(@Nullable Boolean checkpointingEnabled) {
+        public Builder checkpointingEnabled(@Nullable Boolean checkpointingEnabled) {
             this.checkpointingEnabled = Input.ofNullable(checkpointingEnabled);
             return this;
         }
 
-        public Builder setConfigurationType(Input<String> configurationType) {
+        public Builder configurationType(Input<String> configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Input.of(Objects.requireNonNull(configurationType));
             return this;
         }
 
-        public Builder setMinPauseBetweenCheckpoints(@Nullable Input<Integer> minPauseBetweenCheckpoints) {
+        public Builder minPauseBetweenCheckpoints(@Nullable Input<Integer> minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = minPauseBetweenCheckpoints;
             return this;
         }
 
-        public Builder setMinPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
+        public Builder minPauseBetweenCheckpoints(@Nullable Integer minPauseBetweenCheckpoints) {
             this.minPauseBetweenCheckpoints = Input.ofNullable(minPauseBetweenCheckpoints);
             return this;
         }

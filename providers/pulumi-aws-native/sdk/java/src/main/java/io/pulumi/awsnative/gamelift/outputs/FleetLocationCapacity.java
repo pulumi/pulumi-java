@@ -25,11 +25,11 @@ public final class FleetLocationCapacity {
      */
     private final Integer minSize;
 
-    @OutputCustomType.Constructor({"desiredEC2Instances","maxSize","minSize"})
+    @OutputCustomType.Constructor
     private FleetLocationCapacity(
-        Integer desiredEC2Instances,
-        Integer maxSize,
-        Integer minSize) {
+        @OutputCustomType.Parameter("desiredEC2Instances") Integer desiredEC2Instances,
+        @OutputCustomType.Parameter("maxSize") Integer maxSize,
+        @OutputCustomType.Parameter("minSize") Integer minSize) {
         this.desiredEC2Instances = desiredEC2Instances;
         this.maxSize = maxSize;
         this.minSize = minSize;
@@ -81,17 +81,17 @@ public final class FleetLocationCapacity {
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setDesiredEC2Instances(Integer desiredEC2Instances) {
+        public Builder desiredEC2Instances(Integer desiredEC2Instances) {
             this.desiredEC2Instances = Objects.requireNonNull(desiredEC2Instances);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }

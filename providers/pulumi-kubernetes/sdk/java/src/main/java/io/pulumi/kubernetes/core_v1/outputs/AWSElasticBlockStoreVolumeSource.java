@@ -34,12 +34,12 @@ public final class AWSElasticBlockStoreVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","partition","readOnly","volumeID"})
+    @OutputCustomType.Constructor
     private AWSElasticBlockStoreVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer partition,
-        @Nullable Boolean readOnly,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("partition") @Nullable Integer partition,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.partition = partition;
         this.readOnly = readOnly;
@@ -101,22 +101,22 @@ public final class AWSElasticBlockStoreVolumeSource {
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeID(String volumeID) {
+        public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }

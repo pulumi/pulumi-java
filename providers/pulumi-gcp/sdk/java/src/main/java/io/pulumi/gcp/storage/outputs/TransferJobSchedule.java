@@ -29,11 +29,11 @@ public final class TransferJobSchedule {
      */
     private final @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay;
 
-    @OutputCustomType.Constructor({"scheduleEndDate","scheduleStartDate","startTimeOfDay"})
+    @OutputCustomType.Constructor
     private TransferJobSchedule(
-        @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
-        TransferJobScheduleScheduleStartDate scheduleStartDate,
-        @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        @OutputCustomType.Parameter("scheduleEndDate") @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
+        @OutputCustomType.Parameter("scheduleStartDate") TransferJobScheduleScheduleStartDate scheduleStartDate,
+        @OutputCustomType.Parameter("startTimeOfDay") @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
         this.scheduleEndDate = scheduleEndDate;
         this.scheduleStartDate = scheduleStartDate;
         this.startTimeOfDay = startTimeOfDay;
@@ -85,17 +85,17 @@ public final class TransferJobSchedule {
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder setScheduleEndDate(@Nullable TransferJobScheduleScheduleEndDate scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable TransferJobScheduleScheduleEndDate scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
-        public Builder setScheduleStartDate(TransferJobScheduleScheduleStartDate scheduleStartDate) {
+        public Builder scheduleStartDate(TransferJobScheduleScheduleStartDate scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }

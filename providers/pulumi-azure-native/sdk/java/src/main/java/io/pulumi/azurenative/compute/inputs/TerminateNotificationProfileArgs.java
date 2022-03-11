@@ -71,22 +71,22 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
     	      this.notBeforeTimeout = defaults.notBeforeTimeout;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setNotBeforeTimeout(@Nullable Input<String> notBeforeTimeout) {
+        public Builder notBeforeTimeout(@Nullable Input<String> notBeforeTimeout) {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }
 
-        public Builder setNotBeforeTimeout(@Nullable String notBeforeTimeout) {
+        public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
             this.notBeforeTimeout = Input.ofNullable(notBeforeTimeout);
             return this;
         }

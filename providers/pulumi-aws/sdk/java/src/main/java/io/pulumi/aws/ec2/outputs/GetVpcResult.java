@@ -73,24 +73,24 @@ public final class GetVpcResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","cidrBlock","cidrBlockAssociations","$default","dhcpOptionsId","enableDnsHostnames","enableDnsSupport","filters","id","instanceTenancy","ipv6AssociationId","ipv6CidrBlock","mainRouteTableId","ownerId","state","tags"})
+    @OutputCustomType.Constructor
     private GetVpcResult(
-        String arn,
-        String cidrBlock,
-        List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
-        Boolean $default,
-        String dhcpOptionsId,
-        Boolean enableDnsHostnames,
-        Boolean enableDnsSupport,
-        @Nullable List<GetVpcFilter> filters,
-        String id,
-        String instanceTenancy,
-        String ipv6AssociationId,
-        String ipv6CidrBlock,
-        String mainRouteTableId,
-        String ownerId,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("cidrBlockAssociations") List<GetVpcCidrBlockAssociation> cidrBlockAssociations,
+        @OutputCustomType.Parameter("default") Boolean $default,
+        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @OutputCustomType.Parameter("enableDnsHostnames") Boolean enableDnsHostnames,
+        @OutputCustomType.Parameter("enableDnsSupport") Boolean enableDnsSupport,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTenancy") String instanceTenancy,
+        @OutputCustomType.Parameter("ipv6AssociationId") String ipv6AssociationId,
+        @OutputCustomType.Parameter("ipv6CidrBlock") String ipv6CidrBlock,
+        @OutputCustomType.Parameter("mainRouteTableId") String mainRouteTableId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.cidrBlock = cidrBlock;
         this.cidrBlockAssociations = cidrBlockAssociations;
@@ -249,82 +249,82 @@ public final class GetVpcResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setCidrBlockAssociations(List<GetVpcCidrBlockAssociation> cidrBlockAssociations) {
+        public Builder cidrBlockAssociations(List<GetVpcCidrBlockAssociation> cidrBlockAssociations) {
             this.cidrBlockAssociations = Objects.requireNonNull(cidrBlockAssociations);
             return this;
         }
 
-        public Builder set$default(Boolean $default) {
+        public Builder $default(Boolean $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder setDhcpOptionsId(String dhcpOptionsId) {
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
 
-        public Builder setEnableDnsHostnames(Boolean enableDnsHostnames) {
+        public Builder enableDnsHostnames(Boolean enableDnsHostnames) {
             this.enableDnsHostnames = Objects.requireNonNull(enableDnsHostnames);
             return this;
         }
 
-        public Builder setEnableDnsSupport(Boolean enableDnsSupport) {
+        public Builder enableDnsSupport(Boolean enableDnsSupport) {
             this.enableDnsSupport = Objects.requireNonNull(enableDnsSupport);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceTenancy(String instanceTenancy) {
+        public Builder instanceTenancy(String instanceTenancy) {
             this.instanceTenancy = Objects.requireNonNull(instanceTenancy);
             return this;
         }
 
-        public Builder setIpv6AssociationId(String ipv6AssociationId) {
+        public Builder ipv6AssociationId(String ipv6AssociationId) {
             this.ipv6AssociationId = Objects.requireNonNull(ipv6AssociationId);
             return this;
         }
 
-        public Builder setIpv6CidrBlock(String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
             this.ipv6CidrBlock = Objects.requireNonNull(ipv6CidrBlock);
             return this;
         }
 
-        public Builder setMainRouteTableId(String mainRouteTableId) {
+        public Builder mainRouteTableId(String mainRouteTableId) {
             this.mainRouteTableId = Objects.requireNonNull(mainRouteTableId);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

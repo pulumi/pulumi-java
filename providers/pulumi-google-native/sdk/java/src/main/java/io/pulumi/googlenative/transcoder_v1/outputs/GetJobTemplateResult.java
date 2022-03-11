@@ -21,10 +21,10 @@ public final class GetJobTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"config","name"})
+    @OutputCustomType.Constructor
     private GetJobTemplateResult(
-        JobConfigResponse config,
-        String name) {
+        @OutputCustomType.Parameter("config") JobConfigResponse config,
+        @OutputCustomType.Parameter("name") String name) {
         this.config = config;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class GetJobTemplateResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setConfig(JobConfigResponse config) {
+        public Builder config(JobConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

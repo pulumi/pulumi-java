@@ -22,11 +22,11 @@ public final class PackagingConfigurationMssPackage {
     private final List<PackagingConfigurationMssManifest> mssManifests;
     private final @Nullable Integer segmentDurationSeconds;
 
-    @OutputCustomType.Constructor({"encryption","mssManifests","segmentDurationSeconds"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationMssPackage(
-        @Nullable PackagingConfigurationMssEncryption encryption,
-        List<PackagingConfigurationMssManifest> mssManifests,
-        @Nullable Integer segmentDurationSeconds) {
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationMssEncryption encryption,
+        @OutputCustomType.Parameter("mssManifests") List<PackagingConfigurationMssManifest> mssManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds) {
         this.encryption = encryption;
         this.mssManifests = mssManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;
@@ -70,17 +70,17 @@ public final class PackagingConfigurationMssPackage {
     	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationMssEncryption encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationMssEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setMssManifests(List<PackagingConfigurationMssManifest> mssManifests) {
+        public Builder mssManifests(List<PackagingConfigurationMssManifest> mssManifests) {
             this.mssManifests = Objects.requireNonNull(mssManifests);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }

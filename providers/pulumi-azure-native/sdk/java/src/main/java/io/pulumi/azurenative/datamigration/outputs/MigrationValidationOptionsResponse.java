@@ -27,11 +27,11 @@ public final class MigrationValidationOptionsResponse {
      */
     private final @Nullable Boolean enableSchemaValidation;
 
-    @OutputCustomType.Constructor({"enableDataIntegrityValidation","enableQueryAnalysisValidation","enableSchemaValidation"})
+    @OutputCustomType.Constructor
     private MigrationValidationOptionsResponse(
-        @Nullable Boolean enableDataIntegrityValidation,
-        @Nullable Boolean enableQueryAnalysisValidation,
-        @Nullable Boolean enableSchemaValidation) {
+        @OutputCustomType.Parameter("enableDataIntegrityValidation") @Nullable Boolean enableDataIntegrityValidation,
+        @OutputCustomType.Parameter("enableQueryAnalysisValidation") @Nullable Boolean enableQueryAnalysisValidation,
+        @OutputCustomType.Parameter("enableSchemaValidation") @Nullable Boolean enableSchemaValidation) {
         this.enableDataIntegrityValidation = enableDataIntegrityValidation;
         this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
         this.enableSchemaValidation = enableSchemaValidation;
@@ -83,17 +83,17 @@ public final class MigrationValidationOptionsResponse {
     	      this.enableSchemaValidation = defaults.enableSchemaValidation;
         }
 
-        public Builder setEnableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
+        public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
-        public Builder setEnableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
+        public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
-        public Builder setEnableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
+        public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }

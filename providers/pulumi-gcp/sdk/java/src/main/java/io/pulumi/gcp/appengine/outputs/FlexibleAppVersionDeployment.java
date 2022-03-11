@@ -41,12 +41,12 @@ public final class FlexibleAppVersionDeployment {
      */
     private final @Nullable FlexibleAppVersionDeploymentZip zip;
 
-    @OutputCustomType.Constructor({"cloudBuildOptions","container","files","zip"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionDeployment(
-        @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
-        @Nullable FlexibleAppVersionDeploymentContainer container,
-        @Nullable List<FlexibleAppVersionDeploymentFile> files,
-        @Nullable FlexibleAppVersionDeploymentZip zip) {
+        @OutputCustomType.Parameter("cloudBuildOptions") @Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions,
+        @OutputCustomType.Parameter("container") @Nullable FlexibleAppVersionDeploymentContainer container,
+        @OutputCustomType.Parameter("files") @Nullable List<FlexibleAppVersionDeploymentFile> files,
+        @OutputCustomType.Parameter("zip") @Nullable FlexibleAppVersionDeploymentZip zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;
@@ -113,22 +113,22 @@ public final class FlexibleAppVersionDeployment {
     	      this.zip = defaults.zip;
         }
 
-        public Builder setCloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptions cloudBuildOptions) {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
-        public Builder setContainer(@Nullable FlexibleAppVersionDeploymentContainer container) {
+        public Builder container(@Nullable FlexibleAppVersionDeploymentContainer container) {
             this.container = container;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<FlexibleAppVersionDeploymentFile> files) {
+        public Builder files(@Nullable List<FlexibleAppVersionDeploymentFile> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setZip(@Nullable FlexibleAppVersionDeploymentZip zip) {
+        public Builder zip(@Nullable FlexibleAppVersionDeploymentZip zip) {
             this.zip = zip;
             return this;
         }

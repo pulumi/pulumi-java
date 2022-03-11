@@ -17,8 +17,8 @@ public final class ListKustoPoolLanguageExtensionsResult {
      */
     private final @Nullable List<LanguageExtensionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListKustoPoolLanguageExtensionsResult(@Nullable List<LanguageExtensionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListKustoPoolLanguageExtensionsResult(@OutputCustomType.Parameter("value") @Nullable List<LanguageExtensionResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListKustoPoolLanguageExtensionsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<LanguageExtensionResponse> value) {
+        public Builder value(@Nullable List<LanguageExtensionResponse> value) {
             this.value = value;
             return this;
         }

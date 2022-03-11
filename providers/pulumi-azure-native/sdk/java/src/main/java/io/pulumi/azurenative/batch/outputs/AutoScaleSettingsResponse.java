@@ -18,10 +18,10 @@ public final class AutoScaleSettingsResponse {
     private final @Nullable String evaluationInterval;
     private final String formula;
 
-    @OutputCustomType.Constructor({"evaluationInterval","formula"})
+    @OutputCustomType.Constructor
     private AutoScaleSettingsResponse(
-        @Nullable String evaluationInterval,
-        String formula) {
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable String evaluationInterval,
+        @OutputCustomType.Parameter("formula") String formula) {
         this.evaluationInterval = evaluationInterval;
         this.formula = formula;
     }
@@ -59,12 +59,12 @@ public final class AutoScaleSettingsResponse {
     	      this.formula = defaults.formula;
         }
 
-        public Builder setEvaluationInterval(@Nullable String evaluationInterval) {
+        public Builder evaluationInterval(@Nullable String evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setFormula(String formula) {
+        public Builder formula(String formula) {
             this.formula = Objects.requireNonNull(formula);
             return this;
         }

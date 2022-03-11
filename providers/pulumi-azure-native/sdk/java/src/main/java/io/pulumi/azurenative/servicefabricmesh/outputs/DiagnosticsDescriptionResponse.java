@@ -30,11 +30,11 @@ public final class DiagnosticsDescriptionResponse {
      */
     private final @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks;
 
-    @OutputCustomType.Constructor({"defaultSinkRefs","enabled","sinks"})
+    @OutputCustomType.Constructor
     private DiagnosticsDescriptionResponse(
-        @Nullable List<String> defaultSinkRefs,
-        @Nullable Boolean enabled,
-        @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
+        @OutputCustomType.Parameter("defaultSinkRefs") @Nullable List<String> defaultSinkRefs,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("sinks") @Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
         this.defaultSinkRefs = defaultSinkRefs;
         this.enabled = enabled;
         this.sinks = sinks;
@@ -86,17 +86,17 @@ public final class DiagnosticsDescriptionResponse {
     	      this.sinks = defaults.sinks;
         }
 
-        public Builder setDefaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
+        public Builder defaultSinkRefs(@Nullable List<String> defaultSinkRefs) {
             this.defaultSinkRefs = defaultSinkRefs;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setSinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
+        public Builder sinks(@Nullable List<AzureInternalMonitoringPipelineSinkDescriptionResponse> sinks) {
             this.sinks = sinks;
             return this;
         }

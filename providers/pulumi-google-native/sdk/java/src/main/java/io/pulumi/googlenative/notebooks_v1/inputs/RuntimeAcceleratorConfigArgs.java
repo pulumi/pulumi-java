@@ -75,22 +75,22 @@ public final class RuntimeAcceleratorConfigArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(@Nullable Input<String> coreCount) {
+        public Builder coreCount(@Nullable Input<String> coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setCoreCount(@Nullable String coreCount) {
+        public Builder coreCount(@Nullable String coreCount) {
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
 
-        public Builder setType(@Nullable Input<RuntimeAcceleratorConfigType> type) {
+        public Builder type(@Nullable Input<RuntimeAcceleratorConfigType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RuntimeAcceleratorConfigType type) {
+        public Builder type(@Nullable RuntimeAcceleratorConfigType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

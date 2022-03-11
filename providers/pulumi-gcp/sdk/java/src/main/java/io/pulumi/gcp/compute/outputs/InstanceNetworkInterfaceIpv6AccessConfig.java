@@ -26,12 +26,12 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
      */
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"externalIpv6","externalIpv6PrefixLength","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private InstanceNetworkInterfaceIpv6AccessConfig(
-        @Nullable String externalIpv6,
-        @Nullable String externalIpv6PrefixLength,
-        String networkTier,
-        @Nullable String publicPtrDomainName) {
+        @OutputCustomType.Parameter("externalIpv6") @Nullable String externalIpv6,
+        @OutputCustomType.Parameter("externalIpv6PrefixLength") @Nullable String externalIpv6PrefixLength,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.networkTier = networkTier;
@@ -87,22 +87,22 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setExternalIpv6(@Nullable String externalIpv6) {
+        public Builder externalIpv6(@Nullable String externalIpv6) {
             this.externalIpv6 = externalIpv6;
             return this;
         }
 
-        public Builder setExternalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
+        public Builder externalIpv6PrefixLength(@Nullable String externalIpv6PrefixLength) {
             this.externalIpv6PrefixLength = externalIpv6PrefixLength;
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setPublicPtrDomainName(@Nullable String publicPtrDomainName) {
+        public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
             this.publicPtrDomainName = publicPtrDomainName;
             return this;
         }

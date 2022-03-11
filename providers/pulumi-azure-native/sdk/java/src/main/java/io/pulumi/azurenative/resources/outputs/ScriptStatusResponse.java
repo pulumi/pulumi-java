@@ -43,14 +43,14 @@ public final class ScriptStatusResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"containerInstanceId","endTime","error","expirationTime","startTime","storageAccountId"})
+    @OutputCustomType.Constructor
     private ScriptStatusResponse(
-        String containerInstanceId,
-        String endTime,
-        @Nullable ErrorResponseResponse error,
-        String expirationTime,
-        String startTime,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("containerInstanceId") String containerInstanceId,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.containerInstanceId = containerInstanceId;
         this.endTime = endTime;
         this.error = error;
@@ -132,32 +132,32 @@ public final class ScriptStatusResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setContainerInstanceId(String containerInstanceId) {
+        public Builder containerInstanceId(String containerInstanceId) {
             this.containerInstanceId = Objects.requireNonNull(containerInstanceId);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(@Nullable ErrorResponseResponse error) {
+        public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

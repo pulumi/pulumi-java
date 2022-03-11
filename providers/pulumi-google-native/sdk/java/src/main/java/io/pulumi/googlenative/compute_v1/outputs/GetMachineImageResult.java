@@ -97,24 +97,24 @@ public final class GetMachineImageResult {
      */
     private final String totalStorageBytes;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","guestFlush","instanceProperties","kind","machineImageEncryptionKey","name","satisfiesPzs","savedDisks","selfLink","sourceDiskEncryptionKeys","sourceInstance","sourceInstanceProperties","status","storageLocations","totalStorageBytes"})
+    @OutputCustomType.Constructor
     private GetMachineImageResult(
-        String creationTimestamp,
-        String description,
-        Boolean guestFlush,
-        InstancePropertiesResponse instanceProperties,
-        String kind,
-        CustomerEncryptionKeyResponse machineImageEncryptionKey,
-        String name,
-        Boolean satisfiesPzs,
-        List<SavedDiskResponse> savedDisks,
-        String selfLink,
-        List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
-        String sourceInstance,
-        SourceInstancePropertiesResponse sourceInstanceProperties,
-        String status,
-        List<String> storageLocations,
-        String totalStorageBytes) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("guestFlush") Boolean guestFlush,
+        @OutputCustomType.Parameter("instanceProperties") InstancePropertiesResponse instanceProperties,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("machineImageEncryptionKey") CustomerEncryptionKeyResponse machineImageEncryptionKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("savedDisks") List<SavedDiskResponse> savedDisks,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKeys") List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys,
+        @OutputCustomType.Parameter("sourceInstance") String sourceInstance,
+        @OutputCustomType.Parameter("sourceInstanceProperties") SourceInstancePropertiesResponse sourceInstanceProperties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
+        @OutputCustomType.Parameter("totalStorageBytes") String totalStorageBytes) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.guestFlush = guestFlush;
@@ -296,82 +296,82 @@ public final class GetMachineImageResult {
     	      this.totalStorageBytes = defaults.totalStorageBytes;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGuestFlush(Boolean guestFlush) {
+        public Builder guestFlush(Boolean guestFlush) {
             this.guestFlush = Objects.requireNonNull(guestFlush);
             return this;
         }
 
-        public Builder setInstanceProperties(InstancePropertiesResponse instanceProperties) {
+        public Builder instanceProperties(InstancePropertiesResponse instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMachineImageEncryptionKey(CustomerEncryptionKeyResponse machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(CustomerEncryptionKeyResponse machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Objects.requireNonNull(machineImageEncryptionKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSavedDisks(List<SavedDiskResponse> savedDisks) {
+        public Builder savedDisks(List<SavedDiskResponse> savedDisks) {
             this.savedDisks = Objects.requireNonNull(savedDisks);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKeys(List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys) {
+        public Builder sourceDiskEncryptionKeys(List<SourceDiskEncryptionKeyResponse> sourceDiskEncryptionKeys) {
             this.sourceDiskEncryptionKeys = Objects.requireNonNull(sourceDiskEncryptionKeys);
             return this;
         }
 
-        public Builder setSourceInstance(String sourceInstance) {
+        public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setSourceInstanceProperties(SourceInstancePropertiesResponse sourceInstanceProperties) {
+        public Builder sourceInstanceProperties(SourceInstancePropertiesResponse sourceInstanceProperties) {
             this.sourceInstanceProperties = Objects.requireNonNull(sourceInstanceProperties);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageLocations(List<String> storageLocations) {
+        public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
 
-        public Builder setTotalStorageBytes(String totalStorageBytes) {
+        public Builder totalStorageBytes(String totalStorageBytes) {
             this.totalStorageBytes = Objects.requireNonNull(totalStorageBytes);
             return this;
         }

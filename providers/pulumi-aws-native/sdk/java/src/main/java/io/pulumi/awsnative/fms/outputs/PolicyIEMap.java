@@ -14,10 +14,10 @@ public final class PolicyIEMap {
     private final @Nullable List<String> aCCOUNT;
     private final @Nullable List<String> oRGUNIT;
 
-    @OutputCustomType.Constructor({"aCCOUNT","oRGUNIT"})
+    @OutputCustomType.Constructor
     private PolicyIEMap(
-        @Nullable List<String> aCCOUNT,
-        @Nullable List<String> oRGUNIT) {
+        @OutputCustomType.Parameter("aCCOUNT") @Nullable List<String> aCCOUNT,
+        @OutputCustomType.Parameter("oRGUNIT") @Nullable List<String> oRGUNIT) {
         this.aCCOUNT = aCCOUNT;
         this.oRGUNIT = oRGUNIT;
     }
@@ -51,12 +51,12 @@ public final class PolicyIEMap {
     	      this.oRGUNIT = defaults.oRGUNIT;
         }
 
-        public Builder setACCOUNT(@Nullable List<String> aCCOUNT) {
+        public Builder aCCOUNT(@Nullable List<String> aCCOUNT) {
             this.aCCOUNT = aCCOUNT;
             return this;
         }
 
-        public Builder setORGUNIT(@Nullable List<String> oRGUNIT) {
+        public Builder oRGUNIT(@Nullable List<String> oRGUNIT) {
             this.oRGUNIT = oRGUNIT;
             return this;
         }

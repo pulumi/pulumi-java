@@ -14,10 +14,10 @@ public final class DistributionGeoRestriction {
     private final @Nullable List<String> locations;
     private final String restrictionType;
 
-    @OutputCustomType.Constructor({"locations","restrictionType"})
+    @OutputCustomType.Constructor
     private DistributionGeoRestriction(
-        @Nullable List<String> locations,
-        String restrictionType) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("restrictionType") String restrictionType) {
         this.locations = locations;
         this.restrictionType = restrictionType;
     }
@@ -51,12 +51,12 @@ public final class DistributionGeoRestriction {
     	      this.restrictionType = defaults.restrictionType;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setRestrictionType(String restrictionType) {
+        public Builder restrictionType(String restrictionType) {
             this.restrictionType = Objects.requireNonNull(restrictionType);
             return this;
         }

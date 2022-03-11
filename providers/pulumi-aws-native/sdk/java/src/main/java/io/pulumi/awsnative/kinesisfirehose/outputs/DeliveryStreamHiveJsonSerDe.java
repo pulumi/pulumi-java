@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DeliveryStreamHiveJsonSerDe {
     private final @Nullable List<String> timestampFormats;
 
-    @OutputCustomType.Constructor({"timestampFormats"})
-    private DeliveryStreamHiveJsonSerDe(@Nullable List<String> timestampFormats) {
+    @OutputCustomType.Constructor
+    private DeliveryStreamHiveJsonSerDe(@OutputCustomType.Parameter("timestampFormats") @Nullable List<String> timestampFormats) {
         this.timestampFormats = timestampFormats;
     }
 
@@ -42,7 +42,7 @@ public final class DeliveryStreamHiveJsonSerDe {
     	      this.timestampFormats = defaults.timestampFormats;
         }
 
-        public Builder setTimestampFormats(@Nullable List<String> timestampFormats) {
+        public Builder timestampFormats(@Nullable List<String> timestampFormats) {
             this.timestampFormats = timestampFormats;
             return this;
         }

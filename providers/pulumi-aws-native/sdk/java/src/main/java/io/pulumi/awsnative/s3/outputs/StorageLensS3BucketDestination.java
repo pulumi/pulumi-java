@@ -41,14 +41,14 @@ public final class StorageLensS3BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"accountId","arn","encryption","format","outputSchemaVersion","prefix"})
+    @OutputCustomType.Constructor
     private StorageLensS3BucketDestination(
-        String accountId,
-        String arn,
-        @Nullable StorageLensEncryption encryption,
-        StorageLensS3BucketDestinationFormat format,
-        StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("encryption") @Nullable StorageLensEncryption encryption,
+        @OutputCustomType.Parameter("format") StorageLensS3BucketDestinationFormat format,
+        @OutputCustomType.Parameter("outputSchemaVersion") StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.arn = arn;
         this.encryption = encryption;
@@ -126,32 +126,32 @@ public final class StorageLensS3BucketDestination {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setEncryption(@Nullable StorageLensEncryption encryption) {
+        public Builder encryption(@Nullable StorageLensEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setFormat(StorageLensS3BucketDestinationFormat format) {
+        public Builder format(StorageLensS3BucketDestinationFormat format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setOutputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
+        public Builder outputSchemaVersion(StorageLensS3BucketDestinationOutputSchemaVersion outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

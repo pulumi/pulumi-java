@@ -15,10 +15,10 @@ public final class GlobalTableSSESpecification {
     private final Boolean sSEEnabled;
     private final @Nullable String sSEType;
 
-    @OutputCustomType.Constructor({"sSEEnabled","sSEType"})
+    @OutputCustomType.Constructor
     private GlobalTableSSESpecification(
-        Boolean sSEEnabled,
-        @Nullable String sSEType) {
+        @OutputCustomType.Parameter("sSEEnabled") Boolean sSEEnabled,
+        @OutputCustomType.Parameter("sSEType") @Nullable String sSEType) {
         this.sSEEnabled = sSEEnabled;
         this.sSEType = sSEType;
     }
@@ -52,12 +52,12 @@ public final class GlobalTableSSESpecification {
     	      this.sSEType = defaults.sSEType;
         }
 
-        public Builder setSSEEnabled(Boolean sSEEnabled) {
+        public Builder sSEEnabled(Boolean sSEEnabled) {
             this.sSEEnabled = Objects.requireNonNull(sSEEnabled);
             return this;
         }
 
-        public Builder setSSEType(@Nullable String sSEType) {
+        public Builder sSEType(@Nullable String sSEType) {
             this.sSEType = sSEType;
             return this;
         }

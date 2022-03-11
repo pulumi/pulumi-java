@@ -47,16 +47,16 @@ public final class GetDatabaseResult {
     private final String selfLink;
     private final SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails;
 
-    @OutputCustomType.Constructor({"charset","collation","instance","kind","name","project","selfLink","sqlserverDatabaseDetails"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        String charset,
-        String collation,
-        String instance,
-        String kind,
-        String name,
-        String project,
-        String selfLink,
-        SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
+        @OutputCustomType.Parameter("charset") String charset,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sqlserverDatabaseDetails") SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
         this.charset = charset;
         this.collation = collation;
         this.instance = instance;
@@ -154,42 +154,42 @@ public final class GetDatabaseResult {
     	      this.sqlserverDatabaseDetails = defaults.sqlserverDatabaseDetails;
         }
 
-        public Builder setCharset(String charset) {
+        public Builder charset(String charset) {
             this.charset = Objects.requireNonNull(charset);
             return this;
         }
 
-        public Builder setCollation(String collation) {
+        public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSqlserverDatabaseDetails(SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
+        public Builder sqlserverDatabaseDetails(SqlServerDatabaseDetailsResponse sqlserverDatabaseDetails) {
             this.sqlserverDatabaseDetails = Objects.requireNonNull(sqlserverDatabaseDetails);
             return this;
         }

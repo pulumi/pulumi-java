@@ -34,12 +34,12 @@ public final class ImageOccurrenceResponse {
      */
     private final List<LayerResponse> layerInfo;
 
-    @OutputCustomType.Constructor({"baseResourceUrl","distance","fingerprint","layerInfo"})
+    @OutputCustomType.Constructor
     private ImageOccurrenceResponse(
-        String baseResourceUrl,
-        Integer distance,
-        FingerprintResponse fingerprint,
-        List<LayerResponse> layerInfo) {
+        @OutputCustomType.Parameter("baseResourceUrl") String baseResourceUrl,
+        @OutputCustomType.Parameter("distance") Integer distance,
+        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @OutputCustomType.Parameter("layerInfo") List<LayerResponse> layerInfo) {
         this.baseResourceUrl = baseResourceUrl;
         this.distance = distance;
         this.fingerprint = fingerprint;
@@ -101,22 +101,22 @@ public final class ImageOccurrenceResponse {
     	      this.layerInfo = defaults.layerInfo;
         }
 
-        public Builder setBaseResourceUrl(String baseResourceUrl) {
+        public Builder baseResourceUrl(String baseResourceUrl) {
             this.baseResourceUrl = Objects.requireNonNull(baseResourceUrl);
             return this;
         }
 
-        public Builder setDistance(Integer distance) {
+        public Builder distance(Integer distance) {
             this.distance = Objects.requireNonNull(distance);
             return this;
         }
 
-        public Builder setFingerprint(FingerprintResponse fingerprint) {
+        public Builder fingerprint(FingerprintResponse fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setLayerInfo(List<LayerResponse> layerInfo) {
+        public Builder layerInfo(List<LayerResponse> layerInfo) {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }

@@ -45,14 +45,14 @@ public final class GetResolverRuleResult {
      */
     private final @Nullable List<ResolverRuleTargetAddress> targetIps;
 
-    @OutputCustomType.Constructor({"arn","name","resolverEndpointId","resolverRuleId","tags","targetIps"})
+    @OutputCustomType.Constructor
     private GetResolverRuleResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable String resolverEndpointId,
-        @Nullable String resolverRuleId,
-        @Nullable List<ResolverRuleTag> tags,
-        @Nullable List<ResolverRuleTargetAddress> targetIps) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @OutputCustomType.Parameter("resolverRuleId") @Nullable String resolverRuleId,
+        @OutputCustomType.Parameter("tags") @Nullable List<ResolverRuleTag> tags,
+        @OutputCustomType.Parameter("targetIps") @Nullable List<ResolverRuleTargetAddress> targetIps) {
         this.arn = arn;
         this.name = name;
         this.resolverEndpointId = resolverEndpointId;
@@ -134,32 +134,32 @@ public final class GetResolverRuleResult {
     	      this.targetIps = defaults.targetIps;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverRuleId(@Nullable String resolverRuleId) {
+        public Builder resolverRuleId(@Nullable String resolverRuleId) {
             this.resolverRuleId = resolverRuleId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResolverRuleTag> tags) {
+        public Builder tags(@Nullable List<ResolverRuleTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetIps(@Nullable List<ResolverRuleTargetAddress> targetIps) {
+        public Builder targetIps(@Nullable List<ResolverRuleTargetAddress> targetIps) {
             this.targetIps = targetIps;
             return this;
         }

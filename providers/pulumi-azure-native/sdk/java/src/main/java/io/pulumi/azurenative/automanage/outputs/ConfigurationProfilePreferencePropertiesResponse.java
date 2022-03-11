@@ -23,10 +23,10 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
      */
     private final @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup;
 
-    @OutputCustomType.Constructor({"antiMalware","vmBackup"})
+    @OutputCustomType.Constructor
     private ConfigurationProfilePreferencePropertiesResponse(
-        @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware,
-        @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
+        @OutputCustomType.Parameter("antiMalware") @Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware,
+        @OutputCustomType.Parameter("vmBackup") @Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
         this.antiMalware = antiMalware;
         this.vmBackup = vmBackup;
     }
@@ -68,12 +68,12 @@ public final class ConfigurationProfilePreferencePropertiesResponse {
     	      this.vmBackup = defaults.vmBackup;
         }
 
-        public Builder setAntiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
+        public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareResponse antiMalware) {
             this.antiMalware = antiMalware;
             return this;
         }
 
-        public Builder setVmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
+        public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupResponse vmBackup) {
             this.vmBackup = vmBackup;
             return this;
         }

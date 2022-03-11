@@ -20,10 +20,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
      */
     private final String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse(
-        String nextRotationTime,
-        String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse {
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder setNextRotationTime(String nextRotationTime) {
+        public Builder nextRotationTime(String nextRotationTime) {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
 
-        public Builder setRotationPeriod(String rotationPeriod) {
+        public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }

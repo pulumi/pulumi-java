@@ -31,12 +31,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","gerritProject","hostUri","revisionId"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
-        String gerritProject,
-        String hostUri,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("gerritProject") String gerritProject,
+        @OutputCustomType.Parameter("hostUri") String hostUri,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.gerritProject = gerritProject;
         this.hostUri = hostUri;
@@ -98,22 +98,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextRes
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
+        public Builder aliasContext(GoogleDevtoolsContaineranalysisV1alpha1AliasContextResponse aliasContext) {
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
 
-        public Builder setGerritProject(String gerritProject) {
+        public Builder gerritProject(String gerritProject) {
             this.gerritProject = Objects.requireNonNull(gerritProject);
             return this;
         }
 
-        public Builder setHostUri(String hostUri) {
+        public Builder hostUri(String hostUri) {
             this.hostUri = Objects.requireNonNull(hostUri);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }

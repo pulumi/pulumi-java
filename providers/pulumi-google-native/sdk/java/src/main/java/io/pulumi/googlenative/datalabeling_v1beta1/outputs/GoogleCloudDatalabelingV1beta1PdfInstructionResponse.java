@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
      */
     private final String gcsFileUri;
 
-    @OutputCustomType.Constructor({"gcsFileUri"})
-    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse(String gcsFileUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1PdfInstructionResponse(@OutputCustomType.Parameter("gcsFileUri") String gcsFileUri) {
         this.gcsFileUri = gcsFileUri;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionResponse {
     	      this.gcsFileUri = defaults.gcsFileUri;
         }
 
-        public Builder setGcsFileUri(String gcsFileUri) {
+        public Builder gcsFileUri(String gcsFileUri) {
             this.gcsFileUri = Objects.requireNonNull(gcsFileUri);
             return this;
         }

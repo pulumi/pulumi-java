@@ -116,27 +116,27 @@ public final class GetLiveEventResult {
      */
     private final @Nullable Boolean useStaticHostname;
 
-    @OutputCustomType.Constructor({"created","crossSiteAccessPolicies","description","encoding","hostnamePrefix","id","input","lastModified","location","name","preview","provisioningState","resourceState","streamOptions","systemData","tags","transcriptions","type","useStaticHostname"})
+    @OutputCustomType.Constructor
     private GetLiveEventResult(
-        String created,
-        @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
-        @Nullable String description,
-        @Nullable LiveEventEncodingResponse encoding,
-        @Nullable String hostnamePrefix,
-        String id,
-        LiveEventInputResponse input,
-        String lastModified,
-        String location,
-        String name,
-        @Nullable LiveEventPreviewResponse preview,
-        String provisioningState,
-        String resourceState,
-        @Nullable List<String> streamOptions,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable List<LiveEventTranscriptionResponse> transcriptions,
-        String type,
-        @Nullable Boolean useStaticHostname) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encoding") @Nullable LiveEventEncodingResponse encoding,
+        @OutputCustomType.Parameter("hostnamePrefix") @Nullable String hostnamePrefix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") LiveEventInputResponse input,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preview") @Nullable LiveEventPreviewResponse preview,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("streamOptions") @Nullable List<String> streamOptions,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transcriptions") @Nullable List<LiveEventTranscriptionResponse> transcriptions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useStaticHostname") @Nullable Boolean useStaticHostname) {
         this.created = created;
         this.crossSiteAccessPolicies = crossSiteAccessPolicies;
         this.description = description;
@@ -348,97 +348,97 @@ public final class GetLiveEventResult {
     	      this.useStaticHostname = defaults.useStaticHostname;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncoding(@Nullable LiveEventEncodingResponse encoding) {
+        public Builder encoding(@Nullable LiveEventEncodingResponse encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setHostnamePrefix(@Nullable String hostnamePrefix) {
+        public Builder hostnamePrefix(@Nullable String hostnamePrefix) {
             this.hostnamePrefix = hostnamePrefix;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInput(LiveEventInputResponse input) {
+        public Builder input(LiveEventInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreview(@Nullable LiveEventPreviewResponse preview) {
+        public Builder preview(@Nullable LiveEventPreviewResponse preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setStreamOptions(@Nullable List<String> streamOptions) {
+        public Builder streamOptions(@Nullable List<String> streamOptions) {
             this.streamOptions = streamOptions;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTranscriptions(@Nullable List<LiveEventTranscriptionResponse> transcriptions) {
+        public Builder transcriptions(@Nullable List<LiveEventTranscriptionResponse> transcriptions) {
             this.transcriptions = transcriptions;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseStaticHostname(@Nullable Boolean useStaticHostname) {
+        public Builder useStaticHostname(@Nullable Boolean useStaticHostname) {
             this.useStaticHostname = useStaticHostname;
             return this;
         }

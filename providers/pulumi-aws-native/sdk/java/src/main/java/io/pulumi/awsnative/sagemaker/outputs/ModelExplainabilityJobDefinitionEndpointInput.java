@@ -45,15 +45,15 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
      */
     private final @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor({"endpointName","featuresAttribute","inferenceAttribute","localPath","probabilityAttribute","s3DataDistributionType","s3InputMode"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionEndpointInput(
-        String endpointName,
-        @Nullable String featuresAttribute,
-        @Nullable String inferenceAttribute,
-        String localPath,
-        @Nullable String probabilityAttribute,
-        @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("featuresAttribute") @Nullable String featuresAttribute,
+        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.featuresAttribute = featuresAttribute;
         this.inferenceAttribute = inferenceAttribute;
@@ -141,37 +141,37 @@ public final class ModelExplainabilityJobDefinitionEndpointInput {
     	      this.s3InputMode = defaults.s3InputMode;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setFeaturesAttribute(@Nullable String featuresAttribute) {
+        public Builder featuresAttribute(@Nullable String featuresAttribute) {
             this.featuresAttribute = featuresAttribute;
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable String inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable String probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable ModelExplainabilityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }

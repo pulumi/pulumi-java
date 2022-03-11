@@ -21,10 +21,10 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
      */
     private final Boolean effective;
 
-    @OutputCustomType.Constructor({"currentRevision","effective"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatusAllInstancesConfigResponse(
-        String currentRevision,
-        Boolean effective) {
+        @OutputCustomType.Parameter("currentRevision") String currentRevision,
+        @OutputCustomType.Parameter("effective") Boolean effective) {
         this.currentRevision = currentRevision;
         this.effective = effective;
     }
@@ -66,12 +66,12 @@ public final class InstanceGroupManagerStatusAllInstancesConfigResponse {
     	      this.effective = defaults.effective;
         }
 
-        public Builder setCurrentRevision(String currentRevision) {
+        public Builder currentRevision(String currentRevision) {
             this.currentRevision = Objects.requireNonNull(currentRevision);
             return this;
         }
 
-        public Builder setEffective(Boolean effective) {
+        public Builder effective(Boolean effective) {
             this.effective = Objects.requireNonNull(effective);
             return this;
         }

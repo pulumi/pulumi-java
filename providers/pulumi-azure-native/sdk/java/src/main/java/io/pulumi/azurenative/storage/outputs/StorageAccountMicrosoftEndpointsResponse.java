@@ -40,14 +40,14 @@ public final class StorageAccountMicrosoftEndpointsResponse {
      */
     private final String web;
 
-    @OutputCustomType.Constructor({"blob","dfs","file","queue","table","web"})
+    @OutputCustomType.Constructor
     private StorageAccountMicrosoftEndpointsResponse(
-        String blob,
-        String dfs,
-        String file,
-        String queue,
-        String table,
-        String web) {
+        @OutputCustomType.Parameter("blob") String blob,
+        @OutputCustomType.Parameter("dfs") String dfs,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("queue") String queue,
+        @OutputCustomType.Parameter("table") String table,
+        @OutputCustomType.Parameter("web") String web) {
         this.blob = blob;
         this.dfs = dfs;
         this.file = file;
@@ -129,32 +129,32 @@ public final class StorageAccountMicrosoftEndpointsResponse {
     	      this.web = defaults.web;
         }
 
-        public Builder setBlob(String blob) {
+        public Builder blob(String blob) {
             this.blob = Objects.requireNonNull(blob);
             return this;
         }
 
-        public Builder setDfs(String dfs) {
+        public Builder dfs(String dfs) {
             this.dfs = Objects.requireNonNull(dfs);
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setQueue(String queue) {
+        public Builder queue(String queue) {
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setWeb(String web) {
+        public Builder web(String web) {
             this.web = Objects.requireNonNull(web);
             return this;
         }

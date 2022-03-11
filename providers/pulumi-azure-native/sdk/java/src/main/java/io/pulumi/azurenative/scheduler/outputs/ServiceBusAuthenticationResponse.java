@@ -27,11 +27,11 @@ public final class ServiceBusAuthenticationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"sasKey","sasKeyName","type"})
+    @OutputCustomType.Constructor
     private ServiceBusAuthenticationResponse(
-        @Nullable String sasKey,
-        @Nullable String sasKeyName,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("sasKey") @Nullable String sasKey,
+        @OutputCustomType.Parameter("sasKeyName") @Nullable String sasKeyName,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.sasKey = sasKey;
         this.sasKeyName = sasKeyName;
         this.type = type;
@@ -83,17 +83,17 @@ public final class ServiceBusAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSasKey(@Nullable String sasKey) {
+        public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = sasKey;
             return this;
         }
 
-        public Builder setSasKeyName(@Nullable String sasKeyName) {
+        public Builder sasKeyName(@Nullable String sasKeyName) {
             this.sasKeyName = sasKeyName;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

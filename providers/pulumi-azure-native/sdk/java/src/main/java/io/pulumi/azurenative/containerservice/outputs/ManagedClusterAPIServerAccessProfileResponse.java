@@ -29,11 +29,11 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
      */
     private final @Nullable String privateDNSZone;
 
-    @OutputCustomType.Constructor({"authorizedIPRanges","enablePrivateCluster","privateDNSZone"})
+    @OutputCustomType.Constructor
     private ManagedClusterAPIServerAccessProfileResponse(
-        @Nullable List<String> authorizedIPRanges,
-        @Nullable Boolean enablePrivateCluster,
-        @Nullable String privateDNSZone) {
+        @OutputCustomType.Parameter("authorizedIPRanges") @Nullable List<String> authorizedIPRanges,
+        @OutputCustomType.Parameter("enablePrivateCluster") @Nullable Boolean enablePrivateCluster,
+        @OutputCustomType.Parameter("privateDNSZone") @Nullable String privateDNSZone) {
         this.authorizedIPRanges = authorizedIPRanges;
         this.enablePrivateCluster = enablePrivateCluster;
         this.privateDNSZone = privateDNSZone;
@@ -85,17 +85,17 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
     	      this.privateDNSZone = defaults.privateDNSZone;
         }
 
-        public Builder setAuthorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
+        public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
             this.authorizedIPRanges = authorizedIPRanges;
             return this;
         }
 
-        public Builder setEnablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
+        public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
             this.enablePrivateCluster = enablePrivateCluster;
             return this;
         }
 
-        public Builder setPrivateDNSZone(@Nullable String privateDNSZone) {
+        public Builder privateDNSZone(@Nullable String privateDNSZone) {
             this.privateDNSZone = privateDNSZone;
             return this;
         }

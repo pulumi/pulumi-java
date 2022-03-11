@@ -21,10 +21,10 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"containerPort","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ContainerPortResponse(
-        Integer containerPort,
-        String name) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("name") String name) {
         this.containerPort = containerPort;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudRunOpV2ContainerPortResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

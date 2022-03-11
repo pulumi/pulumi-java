@@ -106,42 +106,42 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable Input<Integer> throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Input<Integer> throughputCapacity) {
             this.throughputCapacity = throughputCapacity;
             return this;
         }
 
-        public Builder setThroughputCapacity(@Nullable Integer throughputCapacity) {
+        public Builder throughputCapacity(@Nullable Integer throughputCapacity) {
             this.throughputCapacity = Input.ofNullable(throughputCapacity);
             return this;
         }

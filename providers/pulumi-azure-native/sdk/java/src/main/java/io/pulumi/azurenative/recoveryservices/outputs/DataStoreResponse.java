@@ -37,13 +37,13 @@ public final class DataStoreResponse {
      */
     private final @Nullable String uuid;
 
-    @OutputCustomType.Constructor({"capacity","freeSpace","symbolicName","type","uuid"})
+    @OutputCustomType.Constructor
     private DataStoreResponse(
-        @Nullable String capacity,
-        @Nullable String freeSpace,
-        @Nullable String symbolicName,
-        @Nullable String type,
-        @Nullable String uuid) {
+        @OutputCustomType.Parameter("capacity") @Nullable String capacity,
+        @OutputCustomType.Parameter("freeSpace") @Nullable String freeSpace,
+        @OutputCustomType.Parameter("symbolicName") @Nullable String symbolicName,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uuid") @Nullable String uuid) {
         this.capacity = capacity;
         this.freeSpace = freeSpace;
         this.symbolicName = symbolicName;
@@ -115,27 +115,27 @@ public final class DataStoreResponse {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setCapacity(@Nullable String capacity) {
+        public Builder capacity(@Nullable String capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setFreeSpace(@Nullable String freeSpace) {
+        public Builder freeSpace(@Nullable String freeSpace) {
             this.freeSpace = freeSpace;
             return this;
         }
 
-        public Builder setSymbolicName(@Nullable String symbolicName) {
+        public Builder symbolicName(@Nullable String symbolicName) {
             this.symbolicName = symbolicName;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUuid(@Nullable String uuid) {
+        public Builder uuid(@Nullable String uuid) {
             this.uuid = uuid;
             return this;
         }

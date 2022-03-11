@@ -17,13 +17,13 @@ public final class ListWorkspaceKeysResult {
     private final String userStorageKey;
     private final String userStorageResourceId;
 
-    @OutputCustomType.Constructor({"appInsightsInstrumentationKey","containerRegistryCredentials","notebookAccessKeys","userStorageKey","userStorageResourceId"})
+    @OutputCustomType.Constructor
     private ListWorkspaceKeysResult(
-        String appInsightsInstrumentationKey,
-        RegistryListCredentialsResultResponse containerRegistryCredentials,
-        ListNotebookKeysResultResponse notebookAccessKeys,
-        String userStorageKey,
-        String userStorageResourceId) {
+        @OutputCustomType.Parameter("appInsightsInstrumentationKey") String appInsightsInstrumentationKey,
+        @OutputCustomType.Parameter("containerRegistryCredentials") RegistryListCredentialsResultResponse containerRegistryCredentials,
+        @OutputCustomType.Parameter("notebookAccessKeys") ListNotebookKeysResultResponse notebookAccessKeys,
+        @OutputCustomType.Parameter("userStorageKey") String userStorageKey,
+        @OutputCustomType.Parameter("userStorageResourceId") String userStorageResourceId) {
         this.appInsightsInstrumentationKey = appInsightsInstrumentationKey;
         this.containerRegistryCredentials = containerRegistryCredentials;
         this.notebookAccessKeys = notebookAccessKeys;
@@ -75,27 +75,27 @@ public final class ListWorkspaceKeysResult {
     	      this.userStorageResourceId = defaults.userStorageResourceId;
         }
 
-        public Builder setAppInsightsInstrumentationKey(String appInsightsInstrumentationKey) {
+        public Builder appInsightsInstrumentationKey(String appInsightsInstrumentationKey) {
             this.appInsightsInstrumentationKey = Objects.requireNonNull(appInsightsInstrumentationKey);
             return this;
         }
 
-        public Builder setContainerRegistryCredentials(RegistryListCredentialsResultResponse containerRegistryCredentials) {
+        public Builder containerRegistryCredentials(RegistryListCredentialsResultResponse containerRegistryCredentials) {
             this.containerRegistryCredentials = Objects.requireNonNull(containerRegistryCredentials);
             return this;
         }
 
-        public Builder setNotebookAccessKeys(ListNotebookKeysResultResponse notebookAccessKeys) {
+        public Builder notebookAccessKeys(ListNotebookKeysResultResponse notebookAccessKeys) {
             this.notebookAccessKeys = Objects.requireNonNull(notebookAccessKeys);
             return this;
         }
 
-        public Builder setUserStorageKey(String userStorageKey) {
+        public Builder userStorageKey(String userStorageKey) {
             this.userStorageKey = Objects.requireNonNull(userStorageKey);
             return this;
         }
 
-        public Builder setUserStorageResourceId(String userStorageResourceId) {
+        public Builder userStorageResourceId(String userStorageResourceId) {
             this.userStorageResourceId = Objects.requireNonNull(userStorageResourceId);
             return this;
         }

@@ -25,11 +25,11 @@ public final class TestCaseReferenceResponse {
      */
     private final String testSuiteName;
 
-    @OutputCustomType.Constructor({"className","name","testSuiteName"})
+    @OutputCustomType.Constructor
     private TestCaseReferenceResponse(
-        String className,
-        String name,
-        String testSuiteName) {
+        @OutputCustomType.Parameter("className") String className,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testSuiteName") String testSuiteName) {
         this.className = className;
         this.name = name;
         this.testSuiteName = testSuiteName;
@@ -81,17 +81,17 @@ public final class TestCaseReferenceResponse {
     	      this.testSuiteName = defaults.testSuiteName;
         }
 
-        public Builder setClassName(String className) {
+        public Builder className(String className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestSuiteName(String testSuiteName) {
+        public Builder testSuiteName(String testSuiteName) {
             this.testSuiteName = Objects.requireNonNull(testSuiteName);
             return this;
         }

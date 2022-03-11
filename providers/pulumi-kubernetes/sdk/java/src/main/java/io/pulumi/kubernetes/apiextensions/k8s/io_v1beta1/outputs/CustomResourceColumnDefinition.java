@@ -43,14 +43,14 @@ public final class CustomResourceColumnDefinition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"JSONPath","description","format","name","priority","type"})
+    @OutputCustomType.Constructor
     private CustomResourceColumnDefinition(
-        String JSONPath,
-        @Nullable String description,
-        @Nullable String format,
-        String name,
-        @Nullable Integer priority,
-        String type) {
+        @OutputCustomType.Parameter("JSONPath") String JSONPath,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("type") String type) {
         this.JSONPath = JSONPath;
         this.description = description;
         this.format = format;
@@ -132,32 +132,32 @@ public final class CustomResourceColumnDefinition {
     	      this.type = defaults.type;
         }
 
-        public Builder setJSONPath(String JSONPath) {
+        public Builder jSONPath(String JSONPath) {
             this.JSONPath = Objects.requireNonNull(JSONPath);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

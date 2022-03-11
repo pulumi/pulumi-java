@@ -35,12 +35,12 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final CrossVersionObjectReference scaleTargetRef;
 
-    @OutputCustomType.Constructor({"maxReplicas","metrics","minReplicas","scaleTargetRef"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        Integer maxReplicas,
-        @Nullable List<MetricSpec> metrics,
-        @Nullable Integer minReplicas,
-        CrossVersionObjectReference scaleTargetRef) {
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSpec> metrics,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef) {
         this.maxReplicas = maxReplicas;
         this.metrics = metrics;
         this.minReplicas = minReplicas;
@@ -102,22 +102,22 @@ public final class HorizontalPodAutoscalerSpec {
     	      this.scaleTargetRef = defaults.scaleTargetRef;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<MetricSpec> metrics) {
+        public Builder metrics(@Nullable List<MetricSpec> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setScaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
+        public Builder scaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }

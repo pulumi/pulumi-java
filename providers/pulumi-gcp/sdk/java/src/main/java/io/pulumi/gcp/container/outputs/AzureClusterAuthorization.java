@@ -16,8 +16,8 @@ public final class AzureClusterAuthorization {
      */
     private final List<AzureClusterAuthorizationAdminUser> adminUsers;
 
-    @OutputCustomType.Constructor({"adminUsers"})
-    private AzureClusterAuthorization(List<AzureClusterAuthorizationAdminUser> adminUsers) {
+    @OutputCustomType.Constructor
+    private AzureClusterAuthorization(@OutputCustomType.Parameter("adminUsers") List<AzureClusterAuthorizationAdminUser> adminUsers) {
         this.adminUsers = adminUsers;
     }
 
@@ -49,7 +49,7 @@ public final class AzureClusterAuthorization {
     	      this.adminUsers = defaults.adminUsers;
         }
 
-        public Builder setAdminUsers(List<AzureClusterAuthorizationAdminUser> adminUsers) {
+        public Builder adminUsers(List<AzureClusterAuthorizationAdminUser> adminUsers) {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }

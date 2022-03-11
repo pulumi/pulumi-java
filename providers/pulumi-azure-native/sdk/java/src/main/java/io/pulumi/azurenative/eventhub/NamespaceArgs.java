@@ -170,82 +170,82 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setIsAutoInflateEnabled(@Nullable Input<Boolean> isAutoInflateEnabled) {
+        public Builder isAutoInflateEnabled(@Nullable Input<Boolean> isAutoInflateEnabled) {
             this.isAutoInflateEnabled = isAutoInflateEnabled;
             return this;
         }
 
-        public Builder setIsAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
+        public Builder isAutoInflateEnabled(@Nullable Boolean isAutoInflateEnabled) {
             this.isAutoInflateEnabled = Input.ofNullable(isAutoInflateEnabled);
             return this;
         }
 
-        public Builder setKafkaEnabled(@Nullable Input<Boolean> kafkaEnabled) {
+        public Builder kafkaEnabled(@Nullable Input<Boolean> kafkaEnabled) {
             this.kafkaEnabled = kafkaEnabled;
             return this;
         }
 
-        public Builder setKafkaEnabled(@Nullable Boolean kafkaEnabled) {
+        public Builder kafkaEnabled(@Nullable Boolean kafkaEnabled) {
             this.kafkaEnabled = Input.ofNullable(kafkaEnabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaximumThroughputUnits(@Nullable Input<Integer> maximumThroughputUnits) {
+        public Builder maximumThroughputUnits(@Nullable Input<Integer> maximumThroughputUnits) {
             this.maximumThroughputUnits = maximumThroughputUnits;
             return this;
         }
 
-        public Builder setMaximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
+        public Builder maximumThroughputUnits(@Nullable Integer maximumThroughputUnits) {
             this.maximumThroughputUnits = Input.ofNullable(maximumThroughputUnits);
             return this;
         }
 
-        public Builder setNamespaceName(@Nullable Input<String> namespaceName) {
+        public Builder namespaceName(@Nullable Input<String> namespaceName) {
             this.namespaceName = namespaceName;
             return this;
         }
 
-        public Builder setNamespaceName(@Nullable String namespaceName) {
+        public Builder namespaceName(@Nullable String namespaceName) {
             this.namespaceName = Input.ofNullable(namespaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

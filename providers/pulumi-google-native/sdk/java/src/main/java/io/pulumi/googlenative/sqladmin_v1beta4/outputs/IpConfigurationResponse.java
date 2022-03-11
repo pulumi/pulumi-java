@@ -38,13 +38,13 @@ public final class IpConfigurationResponse {
      */
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor({"allocatedIpRange","authorizedNetworks","ipv4Enabled","privateNetwork","requireSsl"})
+    @OutputCustomType.Constructor
     private IpConfigurationResponse(
-        String allocatedIpRange,
-        List<AclEntryResponse> authorizedNetworks,
-        Boolean ipv4Enabled,
-        String privateNetwork,
-        Boolean requireSsl) {
+        @OutputCustomType.Parameter("allocatedIpRange") String allocatedIpRange,
+        @OutputCustomType.Parameter("authorizedNetworks") List<AclEntryResponse> authorizedNetworks,
+        @OutputCustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
+        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
+        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;
@@ -116,27 +116,27 @@ public final class IpConfigurationResponse {
     	      this.requireSsl = defaults.requireSsl;
         }
 
-        public Builder setAllocatedIpRange(String allocatedIpRange) {
+        public Builder allocatedIpRange(String allocatedIpRange) {
             this.allocatedIpRange = Objects.requireNonNull(allocatedIpRange);
             return this;
         }
 
-        public Builder setAuthorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
+        public Builder authorizedNetworks(List<AclEntryResponse> authorizedNetworks) {
             this.authorizedNetworks = Objects.requireNonNull(authorizedNetworks);
             return this;
         }
 
-        public Builder setIpv4Enabled(Boolean ipv4Enabled) {
+        public Builder ipv4Enabled(Boolean ipv4Enabled) {
             this.ipv4Enabled = Objects.requireNonNull(ipv4Enabled);
             return this;
         }
 
-        public Builder setPrivateNetwork(String privateNetwork) {
+        public Builder privateNetwork(String privateNetwork) {
             this.privateNetwork = Objects.requireNonNull(privateNetwork);
             return this;
         }
 
-        public Builder setRequireSsl(Boolean requireSsl) {
+        public Builder requireSsl(Boolean requireSsl) {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }

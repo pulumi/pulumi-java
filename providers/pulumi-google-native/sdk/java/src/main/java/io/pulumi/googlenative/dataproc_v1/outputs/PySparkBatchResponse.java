@@ -41,14 +41,14 @@ public final class PySparkBatchResponse {
      */
     private final List<String> pythonFileUris;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","mainPythonFileUri","pythonFileUris"})
+    @OutputCustomType.Constructor
     private PySparkBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        String mainPythonFileUri,
-        List<String> pythonFileUris) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("mainPythonFileUri") String mainPythonFileUri,
+        @OutputCustomType.Parameter("pythonFileUris") List<String> pythonFileUris) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -130,32 +130,32 @@ public final class PySparkBatchResponse {
     	      this.pythonFileUris = defaults.pythonFileUris;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setMainPythonFileUri(String mainPythonFileUri) {
+        public Builder mainPythonFileUri(String mainPythonFileUri) {
             this.mainPythonFileUri = Objects.requireNonNull(mainPythonFileUri);
             return this;
         }
 
-        public Builder setPythonFileUris(List<String> pythonFileUris) {
+        public Builder pythonFileUris(List<String> pythonFileUris) {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }

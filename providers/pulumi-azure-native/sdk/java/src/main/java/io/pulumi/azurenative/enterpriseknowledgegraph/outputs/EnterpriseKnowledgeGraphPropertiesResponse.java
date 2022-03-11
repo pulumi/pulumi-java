@@ -28,11 +28,11 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"description","metadata","provisioningState"})
+    @OutputCustomType.Constructor
     private EnterpriseKnowledgeGraphPropertiesResponse(
-        @Nullable String description,
-        @Nullable Object metadata,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.description = description;
         this.metadata = metadata;
         this.provisioningState = provisioningState;
@@ -84,17 +84,17 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

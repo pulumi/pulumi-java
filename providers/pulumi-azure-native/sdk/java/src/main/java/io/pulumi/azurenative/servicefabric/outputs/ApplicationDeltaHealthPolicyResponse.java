@@ -24,10 +24,10 @@ public final class ApplicationDeltaHealthPolicyResponse {
      */
     private final @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
-    @OutputCustomType.Constructor({"defaultServiceTypeDeltaHealthPolicy","serviceTypeDeltaHealthPolicies"})
+    @OutputCustomType.Constructor
     private ApplicationDeltaHealthPolicyResponse(
-        @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy,
-        @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
+        @OutputCustomType.Parameter("defaultServiceTypeDeltaHealthPolicy") @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy,
+        @OutputCustomType.Parameter("serviceTypeDeltaHealthPolicies") @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
         this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
         this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
     }
@@ -69,12 +69,12 @@ public final class ApplicationDeltaHealthPolicyResponse {
     	      this.serviceTypeDeltaHealthPolicies = defaults.serviceTypeDeltaHealthPolicies;
         }
 
-        public Builder setDefaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy) {
+        public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy) {
             this.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
 
-        public Builder setServiceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
+        public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
             this.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;
         }

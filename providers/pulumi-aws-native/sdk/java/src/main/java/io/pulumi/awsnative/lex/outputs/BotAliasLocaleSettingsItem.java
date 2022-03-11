@@ -17,10 +17,10 @@ public final class BotAliasLocaleSettingsItem {
      */
     private final String localeId;
 
-    @OutputCustomType.Constructor({"botAliasLocaleSetting","localeId"})
+    @OutputCustomType.Constructor
     private BotAliasLocaleSettingsItem(
-        BotAliasLocaleSettings botAliasLocaleSetting,
-        String localeId) {
+        @OutputCustomType.Parameter("botAliasLocaleSetting") BotAliasLocaleSettings botAliasLocaleSetting,
+        @OutputCustomType.Parameter("localeId") String localeId) {
         this.botAliasLocaleSetting = botAliasLocaleSetting;
         this.localeId = localeId;
     }
@@ -58,12 +58,12 @@ public final class BotAliasLocaleSettingsItem {
     	      this.localeId = defaults.localeId;
         }
 
-        public Builder setBotAliasLocaleSetting(BotAliasLocaleSettings botAliasLocaleSetting) {
+        public Builder botAliasLocaleSetting(BotAliasLocaleSettings botAliasLocaleSetting) {
             this.botAliasLocaleSetting = Objects.requireNonNull(botAliasLocaleSetting);
             return this;
         }
 
-        public Builder setLocaleId(String localeId) {
+        public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }

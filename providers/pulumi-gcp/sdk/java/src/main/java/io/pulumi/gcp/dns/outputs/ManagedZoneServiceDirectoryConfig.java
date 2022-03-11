@@ -16,8 +16,8 @@ public final class ManagedZoneServiceDirectoryConfig {
      */
     private final ManagedZoneServiceDirectoryConfigNamespace namespace;
 
-    @OutputCustomType.Constructor({"namespace"})
-    private ManagedZoneServiceDirectoryConfig(ManagedZoneServiceDirectoryConfigNamespace namespace) {
+    @OutputCustomType.Constructor
+    private ManagedZoneServiceDirectoryConfig(@OutputCustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespace namespace) {
         this.namespace = namespace;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedZoneServiceDirectoryConfig {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setNamespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespace namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

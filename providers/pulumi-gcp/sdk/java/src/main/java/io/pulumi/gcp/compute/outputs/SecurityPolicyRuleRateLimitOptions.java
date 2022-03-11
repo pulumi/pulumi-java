@@ -57,16 +57,16 @@ public final class SecurityPolicyRuleRateLimitOptions {
      */
     private final SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold;
 
-    @OutputCustomType.Constructor({"banDurationSec","banThreshold","conformAction","enforceOnKey","enforceOnKeyName","exceedAction","exceedRedirectOptions","rateLimitThreshold"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptions(
-        @Nullable Integer banDurationSec,
-        @Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold,
-        String conformAction,
-        @Nullable String enforceOnKey,
-        @Nullable String enforceOnKeyName,
-        String exceedAction,
-        @Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions,
-        SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
+        @OutputCustomType.Parameter("banDurationSec") @Nullable Integer banDurationSec,
+        @OutputCustomType.Parameter("banThreshold") @Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold,
+        @OutputCustomType.Parameter("conformAction") String conformAction,
+        @OutputCustomType.Parameter("enforceOnKey") @Nullable String enforceOnKey,
+        @OutputCustomType.Parameter("enforceOnKeyName") @Nullable String enforceOnKeyName,
+        @OutputCustomType.Parameter("exceedAction") String exceedAction,
+        @OutputCustomType.Parameter("exceedRedirectOptions") @Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions,
+        @OutputCustomType.Parameter("rateLimitThreshold") SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
         this.banDurationSec = banDurationSec;
         this.banThreshold = banThreshold;
         this.conformAction = conformAction;
@@ -169,42 +169,42 @@ public final class SecurityPolicyRuleRateLimitOptions {
     	      this.rateLimitThreshold = defaults.rateLimitThreshold;
         }
 
-        public Builder setBanDurationSec(@Nullable Integer banDurationSec) {
+        public Builder banDurationSec(@Nullable Integer banDurationSec) {
             this.banDurationSec = banDurationSec;
             return this;
         }
 
-        public Builder setBanThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold) {
+        public Builder banThreshold(@Nullable SecurityPolicyRuleRateLimitOptionsBanThreshold banThreshold) {
             this.banThreshold = banThreshold;
             return this;
         }
 
-        public Builder setConformAction(String conformAction) {
+        public Builder conformAction(String conformAction) {
             this.conformAction = Objects.requireNonNull(conformAction);
             return this;
         }
 
-        public Builder setEnforceOnKey(@Nullable String enforceOnKey) {
+        public Builder enforceOnKey(@Nullable String enforceOnKey) {
             this.enforceOnKey = enforceOnKey;
             return this;
         }
 
-        public Builder setEnforceOnKeyName(@Nullable String enforceOnKeyName) {
+        public Builder enforceOnKeyName(@Nullable String enforceOnKeyName) {
             this.enforceOnKeyName = enforceOnKeyName;
             return this;
         }
 
-        public Builder setExceedAction(String exceedAction) {
+        public Builder exceedAction(String exceedAction) {
             this.exceedAction = Objects.requireNonNull(exceedAction);
             return this;
         }
 
-        public Builder setExceedRedirectOptions(@Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions) {
+        public Builder exceedRedirectOptions(@Nullable SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions exceedRedirectOptions) {
             this.exceedRedirectOptions = exceedRedirectOptions;
             return this;
         }
 
-        public Builder setRateLimitThreshold(SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
+        public Builder rateLimitThreshold(SecurityPolicyRuleRateLimitOptionsRateLimitThreshold rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }

@@ -18,10 +18,10 @@ public final class FunctionSourceRepository {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"deployedUrl","url"})
+    @OutputCustomType.Constructor
     private FunctionSourceRepository(
-        @Nullable String deployedUrl,
-        String url) {
+        @OutputCustomType.Parameter("deployedUrl") @Nullable String deployedUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.deployedUrl = deployedUrl;
         this.url = url;
     }
@@ -59,12 +59,12 @@ public final class FunctionSourceRepository {
     	      this.url = defaults.url;
         }
 
-        public Builder setDeployedUrl(@Nullable String deployedUrl) {
+        public Builder deployedUrl(@Nullable String deployedUrl) {
             this.deployedUrl = deployedUrl;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

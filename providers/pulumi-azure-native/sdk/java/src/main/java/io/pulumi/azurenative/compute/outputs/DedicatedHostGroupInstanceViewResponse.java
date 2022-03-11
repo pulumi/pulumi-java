@@ -17,8 +17,8 @@ public final class DedicatedHostGroupInstanceViewResponse {
      */
     private final @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts;
 
-    @OutputCustomType.Constructor({"hosts"})
-    private DedicatedHostGroupInstanceViewResponse(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+    @OutputCustomType.Constructor
+    private DedicatedHostGroupInstanceViewResponse(@OutputCustomType.Parameter("hosts") @Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
         this.hosts = hosts;
     }
 
@@ -50,7 +50,7 @@ public final class DedicatedHostGroupInstanceViewResponse {
     	      this.hosts = defaults.hosts;
         }
 
-        public Builder setHosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+        public Builder hosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
             this.hosts = hosts;
             return this;
         }

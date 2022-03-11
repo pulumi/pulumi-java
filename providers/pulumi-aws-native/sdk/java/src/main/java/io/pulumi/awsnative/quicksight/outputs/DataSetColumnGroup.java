@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSetColumnGroup {
     private final @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup;
 
-    @OutputCustomType.Constructor({"geoSpatialColumnGroup"})
-    private DataSetColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
+    @OutputCustomType.Constructor
+    private DataSetColumnGroup(@OutputCustomType.Parameter("geoSpatialColumnGroup") @Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
         this.geoSpatialColumnGroup = geoSpatialColumnGroup;
     }
 
@@ -42,7 +42,7 @@ public final class DataSetColumnGroup {
     	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
         }
 
-        public Builder setGeoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
+        public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }

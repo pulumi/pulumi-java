@@ -25,11 +25,11 @@ public final class UrlSigningActionParametersResponse {
      */
     private final @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride;
 
-    @OutputCustomType.Constructor({"algorithm","odataType","parameterNameOverride"})
+    @OutputCustomType.Constructor
     private UrlSigningActionParametersResponse(
-        @Nullable String algorithm,
-        String odataType,
-        @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("parameterNameOverride") @Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
         this.algorithm = algorithm;
         this.odataType = odataType;
         this.parameterNameOverride = parameterNameOverride;
@@ -77,17 +77,17 @@ public final class UrlSigningActionParametersResponse {
     	      this.parameterNameOverride = defaults.parameterNameOverride;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setParameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
+        public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }

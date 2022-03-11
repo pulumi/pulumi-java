@@ -78,21 +78,21 @@ public final class GetObjectAnchorsAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountDomain","accountId","id","identity","kind","location","name","plan","sku","storageAccountName","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetObjectAnchorsAccountResult(
-        String accountDomain,
-        String accountId,
-        String id,
-        @Nullable ObjectAnchorsAccountResponseIdentity identity,
-        @Nullable SkuResponse kind,
-        String location,
-        String name,
-        @Nullable IdentityResponse plan,
-        @Nullable SkuResponse sku,
-        @Nullable String storageAccountName,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accountDomain") String accountDomain,
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ObjectAnchorsAccountResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable SkuResponse kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable IdentityResponse plan,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountDomain = accountDomain;
         this.accountId = accountId;
         this.id = id;
@@ -240,67 +240,67 @@ public final class GetObjectAnchorsAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountDomain(String accountDomain) {
+        public Builder accountDomain(String accountDomain) {
             this.accountDomain = Objects.requireNonNull(accountDomain);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ObjectAnchorsAccountResponseIdentity identity) {
+        public Builder identity(@Nullable ObjectAnchorsAccountResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable SkuResponse kind) {
+        public Builder kind(@Nullable SkuResponse kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable IdentityResponse plan) {
+        public Builder plan(@Nullable IdentityResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -296,63 +296,63 @@ public final class InMageAzureV2ReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor({"agentExpiryDate","agentVersion","azureVMDiskDetails","compressedDataRateInMB","datastores","discoveryType","diskResized","enableRdpOnTargetOption","infrastructureVmId","instanceType","ipAddress","isAgentUpdateRequired","isRebootAfterUpdateRequired","lastHeartbeat","lastRpoCalculatedTime","lastUpdateReceivedTime","licenseType","masterTargetId","multiVmGroupId","multiVmGroupName","multiVmSyncStatus","osDiskId","osType","osVersion","processServerId","processServerName","protectedDisks","protectedManagedDisks","protectionStage","recoveryAvailabilitySetId","recoveryAzureLogStorageAccountId","recoveryAzureResourceGroupId","recoveryAzureStorageAccount","recoveryAzureVMName","recoveryAzureVMSize","replicaId","resyncProgressPercentage","rpoInSeconds","selectedRecoveryAzureNetworkId","selectedSourceNicId","selectedTfoAzureNetworkId","sourceVmCpuCount","sourceVmRamSizeInMB","targetAvailabilityZone","targetProximityPlacementGroupId","targetVmId","uncompressedDataRateInMB","useManagedDisks","vCenterInfrastructureId","validationErrors","vhdName","vmId","vmNics","vmProtectionState","vmProtectionStateDescription"})
+    @OutputCustomType.Constructor
     private InMageAzureV2ReplicationDetailsResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails,
-        @Nullable Double compressedDataRateInMB,
-        @Nullable List<String> datastores,
-        @Nullable String discoveryType,
-        @Nullable String diskResized,
-        @Nullable String enableRdpOnTargetOption,
-        @Nullable String infrastructureVmId,
-        String instanceType,
-        @Nullable String ipAddress,
-        @Nullable String isAgentUpdateRequired,
-        @Nullable String isRebootAfterUpdateRequired,
-        @Nullable String lastHeartbeat,
-        @Nullable String lastRpoCalculatedTime,
-        @Nullable String lastUpdateReceivedTime,
-        @Nullable String licenseType,
-        @Nullable String masterTargetId,
-        @Nullable String multiVmGroupId,
-        @Nullable String multiVmGroupName,
-        @Nullable String multiVmSyncStatus,
-        @Nullable String osDiskId,
-        @Nullable String osType,
-        @Nullable String osVersion,
-        @Nullable String processServerId,
-        String processServerName,
-        @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks,
-        @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks,
-        @Nullable String protectionStage,
-        @Nullable String recoveryAvailabilitySetId,
-        @Nullable String recoveryAzureLogStorageAccountId,
-        @Nullable String recoveryAzureResourceGroupId,
-        @Nullable String recoveryAzureStorageAccount,
-        @Nullable String recoveryAzureVMName,
-        @Nullable String recoveryAzureVMSize,
-        @Nullable String replicaId,
-        @Nullable Integer resyncProgressPercentage,
-        @Nullable Double rpoInSeconds,
-        @Nullable String selectedRecoveryAzureNetworkId,
-        @Nullable String selectedSourceNicId,
-        @Nullable String selectedTfoAzureNetworkId,
-        @Nullable Integer sourceVmCpuCount,
-        @Nullable Integer sourceVmRamSizeInMB,
-        @Nullable String targetAvailabilityZone,
-        @Nullable String targetProximityPlacementGroupId,
-        @Nullable String targetVmId,
-        @Nullable Double uncompressedDataRateInMB,
-        @Nullable String useManagedDisks,
-        @Nullable String vCenterInfrastructureId,
-        @Nullable List<HealthErrorResponse> validationErrors,
-        @Nullable String vhdName,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("azureVMDiskDetails") @Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails,
+        @OutputCustomType.Parameter("compressedDataRateInMB") @Nullable Double compressedDataRateInMB,
+        @OutputCustomType.Parameter("datastores") @Nullable List<String> datastores,
+        @OutputCustomType.Parameter("discoveryType") @Nullable String discoveryType,
+        @OutputCustomType.Parameter("diskResized") @Nullable String diskResized,
+        @OutputCustomType.Parameter("enableRdpOnTargetOption") @Nullable String enableRdpOnTargetOption,
+        @OutputCustomType.Parameter("infrastructureVmId") @Nullable String infrastructureVmId,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("isAgentUpdateRequired") @Nullable String isAgentUpdateRequired,
+        @OutputCustomType.Parameter("isRebootAfterUpdateRequired") @Nullable String isRebootAfterUpdateRequired,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("lastRpoCalculatedTime") @Nullable String lastRpoCalculatedTime,
+        @OutputCustomType.Parameter("lastUpdateReceivedTime") @Nullable String lastUpdateReceivedTime,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("masterTargetId") @Nullable String masterTargetId,
+        @OutputCustomType.Parameter("multiVmGroupId") @Nullable String multiVmGroupId,
+        @OutputCustomType.Parameter("multiVmGroupName") @Nullable String multiVmGroupName,
+        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @OutputCustomType.Parameter("osDiskId") @Nullable String osDiskId,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
+        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
+        @OutputCustomType.Parameter("processServerName") String processServerName,
+        @OutputCustomType.Parameter("protectedDisks") @Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks,
+        @OutputCustomType.Parameter("protectedManagedDisks") @Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks,
+        @OutputCustomType.Parameter("protectionStage") @Nullable String protectionStage,
+        @OutputCustomType.Parameter("recoveryAvailabilitySetId") @Nullable String recoveryAvailabilitySetId,
+        @OutputCustomType.Parameter("recoveryAzureLogStorageAccountId") @Nullable String recoveryAzureLogStorageAccountId,
+        @OutputCustomType.Parameter("recoveryAzureResourceGroupId") @Nullable String recoveryAzureResourceGroupId,
+        @OutputCustomType.Parameter("recoveryAzureStorageAccount") @Nullable String recoveryAzureStorageAccount,
+        @OutputCustomType.Parameter("recoveryAzureVMName") @Nullable String recoveryAzureVMName,
+        @OutputCustomType.Parameter("recoveryAzureVMSize") @Nullable String recoveryAzureVMSize,
+        @OutputCustomType.Parameter("replicaId") @Nullable String replicaId,
+        @OutputCustomType.Parameter("resyncProgressPercentage") @Nullable Integer resyncProgressPercentage,
+        @OutputCustomType.Parameter("rpoInSeconds") @Nullable Double rpoInSeconds,
+        @OutputCustomType.Parameter("selectedRecoveryAzureNetworkId") @Nullable String selectedRecoveryAzureNetworkId,
+        @OutputCustomType.Parameter("selectedSourceNicId") @Nullable String selectedSourceNicId,
+        @OutputCustomType.Parameter("selectedTfoAzureNetworkId") @Nullable String selectedTfoAzureNetworkId,
+        @OutputCustomType.Parameter("sourceVmCpuCount") @Nullable Integer sourceVmCpuCount,
+        @OutputCustomType.Parameter("sourceVmRamSizeInMB") @Nullable Integer sourceVmRamSizeInMB,
+        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @OutputCustomType.Parameter("targetProximityPlacementGroupId") @Nullable String targetProximityPlacementGroupId,
+        @OutputCustomType.Parameter("targetVmId") @Nullable String targetVmId,
+        @OutputCustomType.Parameter("uncompressedDataRateInMB") @Nullable Double uncompressedDataRateInMB,
+        @OutputCustomType.Parameter("useManagedDisks") @Nullable String useManagedDisks,
+        @OutputCustomType.Parameter("vCenterInfrastructureId") @Nullable String vCenterInfrastructureId,
+        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
+        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.azureVMDiskDetails = azureVMDiskDetails;
@@ -925,277 +925,277 @@ public final class InMageAzureV2ReplicationDetailsResponse {
     	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAzureVMDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails) {
+        public Builder azureVMDiskDetails(@Nullable List<AzureVmDiskDetailsResponse> azureVMDiskDetails) {
             this.azureVMDiskDetails = azureVMDiskDetails;
             return this;
         }
 
-        public Builder setCompressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
+        public Builder compressedDataRateInMB(@Nullable Double compressedDataRateInMB) {
             this.compressedDataRateInMB = compressedDataRateInMB;
             return this;
         }
 
-        public Builder setDatastores(@Nullable List<String> datastores) {
+        public Builder datastores(@Nullable List<String> datastores) {
             this.datastores = datastores;
             return this;
         }
 
-        public Builder setDiscoveryType(@Nullable String discoveryType) {
+        public Builder discoveryType(@Nullable String discoveryType) {
             this.discoveryType = discoveryType;
             return this;
         }
 
-        public Builder setDiskResized(@Nullable String diskResized) {
+        public Builder diskResized(@Nullable String diskResized) {
             this.diskResized = diskResized;
             return this;
         }
 
-        public Builder setEnableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
+        public Builder enableRdpOnTargetOption(@Nullable String enableRdpOnTargetOption) {
             this.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
-        public Builder setInfrastructureVmId(@Nullable String infrastructureVmId) {
+        public Builder infrastructureVmId(@Nullable String infrastructureVmId) {
             this.infrastructureVmId = infrastructureVmId;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIsAgentUpdateRequired(@Nullable String isAgentUpdateRequired) {
+        public Builder isAgentUpdateRequired(@Nullable String isAgentUpdateRequired) {
             this.isAgentUpdateRequired = isAgentUpdateRequired;
             return this;
         }
 
-        public Builder setIsRebootAfterUpdateRequired(@Nullable String isRebootAfterUpdateRequired) {
+        public Builder isRebootAfterUpdateRequired(@Nullable String isRebootAfterUpdateRequired) {
             this.isRebootAfterUpdateRequired = isRebootAfterUpdateRequired;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setLastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
+        public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             this.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
-        public Builder setLastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
+        public Builder lastUpdateReceivedTime(@Nullable String lastUpdateReceivedTime) {
             this.lastUpdateReceivedTime = lastUpdateReceivedTime;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setMasterTargetId(@Nullable String masterTargetId) {
+        public Builder masterTargetId(@Nullable String masterTargetId) {
             this.masterTargetId = masterTargetId;
             return this;
         }
 
-        public Builder setMultiVmGroupId(@Nullable String multiVmGroupId) {
+        public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             this.multiVmGroupId = multiVmGroupId;
             return this;
         }
 
-        public Builder setMultiVmGroupName(@Nullable String multiVmGroupName) {
+        public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             this.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
-        public Builder setMultiVmSyncStatus(@Nullable String multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
-        public Builder setOsDiskId(@Nullable String osDiskId) {
+        public Builder osDiskId(@Nullable String osDiskId) {
             this.osDiskId = osDiskId;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable String processServerId) {
+        public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
-        public Builder setProcessServerName(String processServerName) {
+        public Builder processServerName(String processServerName) {
             this.processServerName = Objects.requireNonNull(processServerName);
             return this;
         }
 
-        public Builder setProtectedDisks(@Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks) {
+        public Builder protectedDisks(@Nullable List<InMageAzureV2ProtectedDiskDetailsResponse> protectedDisks) {
             this.protectedDisks = protectedDisks;
             return this;
         }
 
-        public Builder setProtectedManagedDisks(@Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks) {
+        public Builder protectedManagedDisks(@Nullable List<InMageAzureV2ManagedDiskDetailsResponse> protectedManagedDisks) {
             this.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
 
-        public Builder setProtectionStage(@Nullable String protectionStage) {
+        public Builder protectionStage(@Nullable String protectionStage) {
             this.protectionStage = protectionStage;
             return this;
         }
 
-        public Builder setRecoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
+        public Builder recoveryAvailabilitySetId(@Nullable String recoveryAvailabilitySetId) {
             this.recoveryAvailabilitySetId = recoveryAvailabilitySetId;
             return this;
         }
 
-        public Builder setRecoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
+        public Builder recoveryAzureLogStorageAccountId(@Nullable String recoveryAzureLogStorageAccountId) {
             this.recoveryAzureLogStorageAccountId = recoveryAzureLogStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
+        public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             this.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
+        public Builder recoveryAzureStorageAccount(@Nullable String recoveryAzureStorageAccount) {
             this.recoveryAzureStorageAccount = recoveryAzureStorageAccount;
             return this;
         }
 
-        public Builder setRecoveryAzureVMName(@Nullable String recoveryAzureVMName) {
+        public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
             this.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
 
-        public Builder setRecoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
+        public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             this.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
 
-        public Builder setReplicaId(@Nullable String replicaId) {
+        public Builder replicaId(@Nullable String replicaId) {
             this.replicaId = replicaId;
             return this;
         }
 
-        public Builder setResyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
+        public Builder resyncProgressPercentage(@Nullable Integer resyncProgressPercentage) {
             this.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
 
-        public Builder setRpoInSeconds(@Nullable Double rpoInSeconds) {
+        public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             this.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
-        public Builder setSelectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
+        public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             this.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
 
-        public Builder setSelectedSourceNicId(@Nullable String selectedSourceNicId) {
+        public Builder selectedSourceNicId(@Nullable String selectedSourceNicId) {
             this.selectedSourceNicId = selectedSourceNicId;
             return this;
         }
 
-        public Builder setSelectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
+        public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
             this.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
 
-        public Builder setSourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
+        public Builder sourceVmCpuCount(@Nullable Integer sourceVmCpuCount) {
             this.sourceVmCpuCount = sourceVmCpuCount;
             return this;
         }
 
-        public Builder setSourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
+        public Builder sourceVmRamSizeInMB(@Nullable Integer sourceVmRamSizeInMB) {
             this.sourceVmRamSizeInMB = sourceVmRamSizeInMB;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
+        public Builder targetProximityPlacementGroupId(@Nullable String targetProximityPlacementGroupId) {
             this.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
-        public Builder setTargetVmId(@Nullable String targetVmId) {
+        public Builder targetVmId(@Nullable String targetVmId) {
             this.targetVmId = targetVmId;
             return this;
         }
 
-        public Builder setUncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
+        public Builder uncompressedDataRateInMB(@Nullable Double uncompressedDataRateInMB) {
             this.uncompressedDataRateInMB = uncompressedDataRateInMB;
             return this;
         }
 
-        public Builder setUseManagedDisks(@Nullable String useManagedDisks) {
+        public Builder useManagedDisks(@Nullable String useManagedDisks) {
             this.useManagedDisks = useManagedDisks;
             return this;
         }
 
-        public Builder setVCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
+        public Builder vCenterInfrastructureId(@Nullable String vCenterInfrastructureId) {
             this.vCenterInfrastructureId = vCenterInfrastructureId;
             return this;
         }
 
-        public Builder setValidationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
+        public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             this.validationErrors = validationErrors;
             return this;
         }
 
-        public Builder setVhdName(@Nullable String vhdName) {
+        public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
+        public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
 
-        public Builder setVmProtectionState(@Nullable String vmProtectionState) {
+        public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
 
-        public Builder setVmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
+        public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }

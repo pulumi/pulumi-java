@@ -20,10 +20,10 @@ public final class BigQueryOptionsResponse {
      */
     private final Boolean usesTimestampColumnPartitioning;
 
-    @OutputCustomType.Constructor({"usePartitionedTables","usesTimestampColumnPartitioning"})
+    @OutputCustomType.Constructor
     private BigQueryOptionsResponse(
-        Boolean usePartitionedTables,
-        Boolean usesTimestampColumnPartitioning) {
+        @OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables,
+        @OutputCustomType.Parameter("usesTimestampColumnPartitioning") Boolean usesTimestampColumnPartitioning) {
         this.usePartitionedTables = usePartitionedTables;
         this.usesTimestampColumnPartitioning = usesTimestampColumnPartitioning;
     }
@@ -65,12 +65,12 @@ public final class BigQueryOptionsResponse {
     	      this.usesTimestampColumnPartitioning = defaults.usesTimestampColumnPartitioning;
         }
 
-        public Builder setUsePartitionedTables(Boolean usePartitionedTables) {
+        public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
 
-        public Builder setUsesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
+        public Builder usesTimestampColumnPartitioning(Boolean usesTimestampColumnPartitioning) {
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
         }

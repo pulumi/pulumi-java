@@ -15,10 +15,10 @@ public final class StreamKinesisConfiguration {
     private final @Nullable Boolean aggregationEnabled;
     private final @Nullable String streamArn;
 
-    @OutputCustomType.Constructor({"aggregationEnabled","streamArn"})
+    @OutputCustomType.Constructor
     private StreamKinesisConfiguration(
-        @Nullable Boolean aggregationEnabled,
-        @Nullable String streamArn) {
+        @OutputCustomType.Parameter("aggregationEnabled") @Nullable Boolean aggregationEnabled,
+        @OutputCustomType.Parameter("streamArn") @Nullable String streamArn) {
         this.aggregationEnabled = aggregationEnabled;
         this.streamArn = streamArn;
     }
@@ -52,12 +52,12 @@ public final class StreamKinesisConfiguration {
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setAggregationEnabled(@Nullable Boolean aggregationEnabled) {
+        public Builder aggregationEnabled(@Nullable Boolean aggregationEnabled) {
             this.aggregationEnabled = aggregationEnabled;
             return this;
         }
 
-        public Builder setStreamArn(@Nullable String streamArn) {
+        public Builder streamArn(@Nullable String streamArn) {
             this.streamArn = streamArn;
             return this;
         }

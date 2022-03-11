@@ -25,10 +25,10 @@ public final class TriggerPipelineReferenceResponse {
      */
     private final @Nullable PipelineReferenceResponse pipelineReference;
 
-    @OutputCustomType.Constructor({"parameters","pipelineReference"})
+    @OutputCustomType.Constructor
     private TriggerPipelineReferenceResponse(
-        @Nullable Map<String,Object> parameters,
-        @Nullable PipelineReferenceResponse pipelineReference) {
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("pipelineReference") @Nullable PipelineReferenceResponse pipelineReference) {
         this.parameters = parameters;
         this.pipelineReference = pipelineReference;
     }
@@ -70,12 +70,12 @@ public final class TriggerPipelineReferenceResponse {
     	      this.pipelineReference = defaults.pipelineReference;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPipelineReference(@Nullable PipelineReferenceResponse pipelineReference) {
+        public Builder pipelineReference(@Nullable PipelineReferenceResponse pipelineReference) {
             this.pipelineReference = pipelineReference;
             return this;
         }

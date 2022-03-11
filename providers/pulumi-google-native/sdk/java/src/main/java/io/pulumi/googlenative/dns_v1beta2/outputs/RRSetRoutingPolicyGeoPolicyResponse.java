@@ -18,10 +18,10 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
     private final List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items;
     private final String kind;
 
-    @OutputCustomType.Constructor({"items","kind"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyGeoPolicyResponse(
-        List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
-        String kind) {
+        @OutputCustomType.Parameter("items") List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.items = items;
         this.kind = kind;
     }
@@ -59,12 +59,12 @@ public final class RRSetRoutingPolicyGeoPolicyResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setItems(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
+        public Builder items(List<RRSetRoutingPolicyGeoPolicyGeoPolicyItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

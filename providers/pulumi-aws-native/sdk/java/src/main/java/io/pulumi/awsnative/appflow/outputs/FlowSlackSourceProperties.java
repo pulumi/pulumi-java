@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowSlackSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowSlackSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowSlackSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 
@@ -40,7 +40,7 @@ public final class FlowSlackSourceProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

@@ -21,10 +21,10 @@ public final class PackageStoreResponse {
      */
     private final EntityReferenceResponse packageStoreLinkedService;
 
-    @OutputCustomType.Constructor({"name","packageStoreLinkedService"})
+    @OutputCustomType.Constructor
     private PackageStoreResponse(
-        String name,
-        EntityReferenceResponse packageStoreLinkedService) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageStoreLinkedService") EntityReferenceResponse packageStoreLinkedService) {
         this.name = name;
         this.packageStoreLinkedService = packageStoreLinkedService;
     }
@@ -66,12 +66,12 @@ public final class PackageStoreResponse {
     	      this.packageStoreLinkedService = defaults.packageStoreLinkedService;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
+        public Builder packageStoreLinkedService(EntityReferenceResponse packageStoreLinkedService) {
             this.packageStoreLinkedService = Objects.requireNonNull(packageStoreLinkedService);
             return this;
         }

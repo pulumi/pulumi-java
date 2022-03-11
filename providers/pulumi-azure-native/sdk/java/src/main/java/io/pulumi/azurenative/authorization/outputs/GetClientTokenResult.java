@@ -15,8 +15,8 @@ public final class GetClientTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"token"})
-    private GetClientTokenResult(String token) {
+    @OutputCustomType.Constructor
+    private GetClientTokenResult(@OutputCustomType.Parameter("token") String token) {
         this.token = token;
     }
 
@@ -48,7 +48,7 @@ public final class GetClientTokenResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

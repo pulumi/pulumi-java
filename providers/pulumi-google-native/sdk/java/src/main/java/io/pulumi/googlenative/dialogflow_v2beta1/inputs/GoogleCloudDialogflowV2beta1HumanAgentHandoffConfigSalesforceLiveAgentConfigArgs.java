@@ -105,42 +105,42 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setButtonId(Input<String> buttonId) {
+        public Builder buttonId(Input<String> buttonId) {
             this.buttonId = Objects.requireNonNull(buttonId);
             return this;
         }
 
-        public Builder setButtonId(String buttonId) {
+        public Builder buttonId(String buttonId) {
             this.buttonId = Input.of(Objects.requireNonNull(buttonId));
             return this;
         }
 
-        public Builder setDeploymentId(Input<String> deploymentId) {
+        public Builder deploymentId(Input<String> deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Input.of(Objects.requireNonNull(deploymentId));
             return this;
         }
 
-        public Builder setEndpointDomain(Input<String> endpointDomain) {
+        public Builder endpointDomain(Input<String> endpointDomain) {
             this.endpointDomain = Objects.requireNonNull(endpointDomain);
             return this;
         }
 
-        public Builder setEndpointDomain(String endpointDomain) {
+        public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = Input.of(Objects.requireNonNull(endpointDomain));
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }

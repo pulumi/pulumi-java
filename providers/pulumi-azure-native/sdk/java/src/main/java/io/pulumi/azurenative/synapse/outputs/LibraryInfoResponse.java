@@ -47,15 +47,15 @@ public final class LibraryInfoResponse {
      */
     private final String uploadedTimestamp;
 
-    @OutputCustomType.Constructor({"containerName","creatorId","name","path","provisioningStatus","type","uploadedTimestamp"})
+    @OutputCustomType.Constructor
     private LibraryInfoResponse(
-        @Nullable String containerName,
-        String creatorId,
-        @Nullable String name,
-        @Nullable String path,
-        String provisioningStatus,
-        @Nullable String type,
-        String uploadedTimestamp) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("creatorId") String creatorId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("provisioningStatus") String provisioningStatus,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uploadedTimestamp") String uploadedTimestamp) {
         this.containerName = containerName;
         this.creatorId = creatorId;
         this.name = name;
@@ -147,37 +147,37 @@ public final class LibraryInfoResponse {
     	      this.uploadedTimestamp = defaults.uploadedTimestamp;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setCreatorId(String creatorId) {
+        public Builder creatorId(String creatorId) {
             this.creatorId = Objects.requireNonNull(creatorId);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setProvisioningStatus(String provisioningStatus) {
+        public Builder provisioningStatus(String provisioningStatus) {
             this.provisioningStatus = Objects.requireNonNull(provisioningStatus);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUploadedTimestamp(String uploadedTimestamp) {
+        public Builder uploadedTimestamp(String uploadedTimestamp) {
             this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
             return this;
         }

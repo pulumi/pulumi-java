@@ -43,14 +43,14 @@ public final class AccessReviewScopeResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"assignmentState","expandNestedMemberships","inactiveDuration","principalType","resourceId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private AccessReviewScopeResponse(
-        String assignmentState,
-        @Nullable Boolean expandNestedMemberships,
-        @Nullable String inactiveDuration,
-        String principalType,
-        String resourceId,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("assignmentState") String assignmentState,
+        @OutputCustomType.Parameter("expandNestedMemberships") @Nullable Boolean expandNestedMemberships,
+        @OutputCustomType.Parameter("inactiveDuration") @Nullable String inactiveDuration,
+        @OutputCustomType.Parameter("principalType") String principalType,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.assignmentState = assignmentState;
         this.expandNestedMemberships = expandNestedMemberships;
         this.inactiveDuration = inactiveDuration;
@@ -132,32 +132,32 @@ public final class AccessReviewScopeResponse {
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setAssignmentState(String assignmentState) {
+        public Builder assignmentState(String assignmentState) {
             this.assignmentState = Objects.requireNonNull(assignmentState);
             return this;
         }
 
-        public Builder setExpandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
+        public Builder expandNestedMemberships(@Nullable Boolean expandNestedMemberships) {
             this.expandNestedMemberships = expandNestedMemberships;
             return this;
         }
 
-        public Builder setInactiveDuration(@Nullable String inactiveDuration) {
+        public Builder inactiveDuration(@Nullable String inactiveDuration) {
             this.inactiveDuration = inactiveDuration;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }

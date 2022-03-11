@@ -22,10 +22,10 @@ public final class VmUptimeResponse {
      */
     private final @Nullable Double hoursPerDay;
 
-    @OutputCustomType.Constructor({"daysPerMonth","hoursPerDay"})
+    @OutputCustomType.Constructor
     private VmUptimeResponse(
-        @Nullable Double daysPerMonth,
-        @Nullable Double hoursPerDay) {
+        @OutputCustomType.Parameter("daysPerMonth") @Nullable Double daysPerMonth,
+        @OutputCustomType.Parameter("hoursPerDay") @Nullable Double hoursPerDay) {
         this.daysPerMonth = daysPerMonth;
         this.hoursPerDay = hoursPerDay;
     }
@@ -67,12 +67,12 @@ public final class VmUptimeResponse {
     	      this.hoursPerDay = defaults.hoursPerDay;
         }
 
-        public Builder setDaysPerMonth(@Nullable Double daysPerMonth) {
+        public Builder daysPerMonth(@Nullable Double daysPerMonth) {
             this.daysPerMonth = daysPerMonth;
             return this;
         }
 
-        public Builder setHoursPerDay(@Nullable Double hoursPerDay) {
+        public Builder hoursPerDay(@Nullable Double hoursPerDay) {
             this.hoursPerDay = hoursPerDay;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterPrivateClusterConfigMasterGlobalAccessConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterPrivateClusterConfigMasterGlobalAccessConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterPrivateClusterConfigMasterGlobalAccessConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

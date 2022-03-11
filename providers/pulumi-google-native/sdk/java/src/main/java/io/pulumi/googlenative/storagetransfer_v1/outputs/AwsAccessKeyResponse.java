@@ -20,10 +20,10 @@ public final class AwsAccessKeyResponse {
      */
     private final String secretAccessKey;
 
-    @OutputCustomType.Constructor({"accessKeyId","secretAccessKey"})
+    @OutputCustomType.Constructor
     private AwsAccessKeyResponse(
-        String accessKeyId,
-        String secretAccessKey) {
+        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
+        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey) {
         this.accessKeyId = accessKeyId;
         this.secretAccessKey = secretAccessKey;
     }
@@ -65,12 +65,12 @@ public final class AwsAccessKeyResponse {
     	      this.secretAccessKey = defaults.secretAccessKey;
         }
 
-        public Builder setAccessKeyId(String accessKeyId) {
+        public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
-        public Builder setSecretAccessKey(String secretAccessKey) {
+        public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }

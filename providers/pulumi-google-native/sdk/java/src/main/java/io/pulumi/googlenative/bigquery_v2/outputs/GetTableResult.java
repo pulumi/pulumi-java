@@ -169,37 +169,37 @@ public final class GetTableResult {
      */
     private final ViewDefinitionResponse view;
 
-    @OutputCustomType.Constructor({"clustering","creationTime","defaultCollation","description","encryptionConfiguration","etag","expirationTime","externalDataConfiguration","friendlyName","kind","labels","lastModifiedTime","location","materializedView","model","numBytes","numLongTermBytes","numPhysicalBytes","numRows","rangePartitioning","requirePartitionFilter","schema","selfLink","snapshotDefinition","streamingBuffer","tableReference","timePartitioning","type","view"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        ClusteringResponse clustering,
-        String creationTime,
-        String defaultCollation,
-        String description,
-        EncryptionConfigurationResponse encryptionConfiguration,
-        String etag,
-        String expirationTime,
-        ExternalDataConfigurationResponse externalDataConfiguration,
-        String friendlyName,
-        String kind,
-        Map<String,String> labels,
-        String lastModifiedTime,
-        String location,
-        MaterializedViewDefinitionResponse materializedView,
-        ModelDefinitionResponse model,
-        String numBytes,
-        String numLongTermBytes,
-        String numPhysicalBytes,
-        String numRows,
-        RangePartitioningResponse rangePartitioning,
-        Boolean requirePartitionFilter,
-        TableSchemaResponse schema,
-        String selfLink,
-        SnapshotDefinitionResponse snapshotDefinition,
-        StreamingbufferResponse streamingBuffer,
-        TableReferenceResponse tableReference,
-        TimePartitioningResponse timePartitioning,
-        String type,
-        ViewDefinitionResponse view) {
+        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("defaultCollation") String defaultCollation,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encryptionConfiguration") EncryptionConfigurationResponse encryptionConfiguration,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("externalDataConfiguration") ExternalDataConfigurationResponse externalDataConfiguration,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("materializedView") MaterializedViewDefinitionResponse materializedView,
+        @OutputCustomType.Parameter("model") ModelDefinitionResponse model,
+        @OutputCustomType.Parameter("numBytes") String numBytes,
+        @OutputCustomType.Parameter("numLongTermBytes") String numLongTermBytes,
+        @OutputCustomType.Parameter("numPhysicalBytes") String numPhysicalBytes,
+        @OutputCustomType.Parameter("numRows") String numRows,
+        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("snapshotDefinition") SnapshotDefinitionResponse snapshotDefinition,
+        @OutputCustomType.Parameter("streamingBuffer") StreamingbufferResponse streamingBuffer,
+        @OutputCustomType.Parameter("tableReference") TableReferenceResponse tableReference,
+        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("view") ViewDefinitionResponse view) {
         this.clustering = clustering;
         this.creationTime = creationTime;
         this.defaultCollation = defaultCollation;
@@ -511,147 +511,147 @@ public final class GetTableResult {
     	      this.view = defaults.view;
         }
 
-        public Builder setClustering(ClusteringResponse clustering) {
+        public Builder clustering(ClusteringResponse clustering) {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDefaultCollation(String defaultCollation) {
+        public Builder defaultCollation(String defaultCollation) {
             this.defaultCollation = Objects.requireNonNull(defaultCollation);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(EncryptionConfigurationResponse encryptionConfiguration) {
+        public Builder encryptionConfiguration(EncryptionConfigurationResponse encryptionConfiguration) {
             this.encryptionConfiguration = Objects.requireNonNull(encryptionConfiguration);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setExternalDataConfiguration(ExternalDataConfigurationResponse externalDataConfiguration) {
+        public Builder externalDataConfiguration(ExternalDataConfigurationResponse externalDataConfiguration) {
             this.externalDataConfiguration = Objects.requireNonNull(externalDataConfiguration);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaterializedView(MaterializedViewDefinitionResponse materializedView) {
+        public Builder materializedView(MaterializedViewDefinitionResponse materializedView) {
             this.materializedView = Objects.requireNonNull(materializedView);
             return this;
         }
 
-        public Builder setModel(ModelDefinitionResponse model) {
+        public Builder model(ModelDefinitionResponse model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setNumBytes(String numBytes) {
+        public Builder numBytes(String numBytes) {
             this.numBytes = Objects.requireNonNull(numBytes);
             return this;
         }
 
-        public Builder setNumLongTermBytes(String numLongTermBytes) {
+        public Builder numLongTermBytes(String numLongTermBytes) {
             this.numLongTermBytes = Objects.requireNonNull(numLongTermBytes);
             return this;
         }
 
-        public Builder setNumPhysicalBytes(String numPhysicalBytes) {
+        public Builder numPhysicalBytes(String numPhysicalBytes) {
             this.numPhysicalBytes = Objects.requireNonNull(numPhysicalBytes);
             return this;
         }
 
-        public Builder setNumRows(String numRows) {
+        public Builder numRows(String numRows) {
             this.numRows = Objects.requireNonNull(numRows);
             return this;
         }
 
-        public Builder setRangePartitioning(RangePartitioningResponse rangePartitioning) {
+        public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
             this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
 
-        public Builder setSchema(TableSchemaResponse schema) {
+        public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSnapshotDefinition(SnapshotDefinitionResponse snapshotDefinition) {
+        public Builder snapshotDefinition(SnapshotDefinitionResponse snapshotDefinition) {
             this.snapshotDefinition = Objects.requireNonNull(snapshotDefinition);
             return this;
         }
 
-        public Builder setStreamingBuffer(StreamingbufferResponse streamingBuffer) {
+        public Builder streamingBuffer(StreamingbufferResponse streamingBuffer) {
             this.streamingBuffer = Objects.requireNonNull(streamingBuffer);
             return this;
         }
 
-        public Builder setTableReference(TableReferenceResponse tableReference) {
+        public Builder tableReference(TableReferenceResponse tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }
 
-        public Builder setTimePartitioning(TimePartitioningResponse timePartitioning) {
+        public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
             this.timePartitioning = Objects.requireNonNull(timePartitioning);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setView(ViewDefinitionResponse view) {
+        public Builder view(ViewDefinitionResponse view) {
             this.view = Objects.requireNonNull(view);
             return this;
         }

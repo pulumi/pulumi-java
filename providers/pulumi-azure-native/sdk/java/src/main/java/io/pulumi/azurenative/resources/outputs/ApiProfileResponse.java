@@ -20,10 +20,10 @@ public final class ApiProfileResponse {
      */
     private final String profileVersion;
 
-    @OutputCustomType.Constructor({"apiVersion","profileVersion"})
+    @OutputCustomType.Constructor
     private ApiProfileResponse(
-        String apiVersion,
-        String profileVersion) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("profileVersion") String profileVersion) {
         this.apiVersion = apiVersion;
         this.profileVersion = profileVersion;
     }
@@ -65,12 +65,12 @@ public final class ApiProfileResponse {
     	      this.profileVersion = defaults.profileVersion;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setProfileVersion(String profileVersion) {
+        public Builder profileVersion(String profileVersion) {
             this.profileVersion = Objects.requireNonNull(profileVersion);
             return this;
         }

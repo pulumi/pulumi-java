@@ -17,12 +17,12 @@ public final class ConnectionAliasAssociation {
     private final @Nullable String connectionIdentifier;
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"associatedAccountId","associationStatus","connectionIdentifier","resourceId"})
+    @OutputCustomType.Constructor
     private ConnectionAliasAssociation(
-        @Nullable String associatedAccountId,
-        @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
-        @Nullable String connectionIdentifier,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("associatedAccountId") @Nullable String associatedAccountId,
+        @OutputCustomType.Parameter("associationStatus") @Nullable ConnectionAliasAssociationAssociationStatus associationStatus,
+        @OutputCustomType.Parameter("connectionIdentifier") @Nullable String connectionIdentifier,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.associatedAccountId = associatedAccountId;
         this.associationStatus = associationStatus;
         this.connectionIdentifier = connectionIdentifier;
@@ -68,22 +68,22 @@ public final class ConnectionAliasAssociation {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAssociatedAccountId(@Nullable String associatedAccountId) {
+        public Builder associatedAccountId(@Nullable String associatedAccountId) {
             this.associatedAccountId = associatedAccountId;
             return this;
         }
 
-        public Builder setAssociationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
+        public Builder associationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
             this.associationStatus = associationStatus;
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable String connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

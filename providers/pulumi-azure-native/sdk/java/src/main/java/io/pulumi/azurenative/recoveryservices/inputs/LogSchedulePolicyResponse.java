@@ -76,12 +76,12 @@ public final class LogSchedulePolicyResponse extends io.pulumi.resources.InvokeA
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder setScheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
+        public Builder scheduleFrequencyInMins(@Nullable Integer scheduleFrequencyInMins) {
             this.scheduleFrequencyInMins = scheduleFrequencyInMins;
             return this;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }

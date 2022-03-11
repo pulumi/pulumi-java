@@ -26,11 +26,11 @@ public final class PrivateClusterConfigResponse {
      */
     private final String masterIpv4ReservedRange;
 
-    @OutputCustomType.Constructor({"enablePrivateEndpoint","masterIpv4CidrBlock","masterIpv4ReservedRange"})
+    @OutputCustomType.Constructor
     private PrivateClusterConfigResponse(
-        Boolean enablePrivateEndpoint,
-        String masterIpv4CidrBlock,
-        String masterIpv4ReservedRange) {
+        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("masterIpv4ReservedRange") String masterIpv4ReservedRange) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.masterIpv4CidrBlock = masterIpv4CidrBlock;
         this.masterIpv4ReservedRange = masterIpv4ReservedRange;
@@ -82,17 +82,17 @@ public final class PrivateClusterConfigResponse {
     	      this.masterIpv4ReservedRange = defaults.masterIpv4ReservedRange;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Objects.requireNonNull(masterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setMasterIpv4ReservedRange(String masterIpv4ReservedRange) {
+        public Builder masterIpv4ReservedRange(String masterIpv4ReservedRange) {
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
         }

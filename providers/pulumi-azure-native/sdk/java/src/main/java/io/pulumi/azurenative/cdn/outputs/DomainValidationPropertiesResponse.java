@@ -20,10 +20,10 @@ public final class DomainValidationPropertiesResponse {
      */
     private final String validationToken;
 
-    @OutputCustomType.Constructor({"expirationDate","validationToken"})
+    @OutputCustomType.Constructor
     private DomainValidationPropertiesResponse(
-        String expirationDate,
-        String validationToken) {
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("validationToken") String validationToken) {
         this.expirationDate = expirationDate;
         this.validationToken = validationToken;
     }
@@ -65,12 +65,12 @@ public final class DomainValidationPropertiesResponse {
     	      this.validationToken = defaults.validationToken;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setValidationToken(String validationToken) {
+        public Builder validationToken(String validationToken) {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }

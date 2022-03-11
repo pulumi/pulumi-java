@@ -47,14 +47,14 @@ public final class ServiceAccount {
      */
     private final @Nullable List<ObjectReference> secrets;
 
-    @OutputCustomType.Constructor({"apiVersion","automountServiceAccountToken","imagePullSecrets","kind","metadata","secrets"})
+    @OutputCustomType.Constructor
     private ServiceAccount(
-        @Nullable String apiVersion,
-        @Nullable Boolean automountServiceAccountToken,
-        @Nullable List<LocalObjectReference> imagePullSecrets,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<ObjectReference> secrets) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
+        @OutputCustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("secrets") @Nullable List<ObjectReference> secrets) {
         this.apiVersion = apiVersion;
         this.automountServiceAccountToken = automountServiceAccountToken;
         this.imagePullSecrets = imagePullSecrets;
@@ -136,32 +136,32 @@ public final class ServiceAccount {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<ObjectReference> secrets) {
+        public Builder secrets(@Nullable List<ObjectReference> secrets) {
             this.secrets = secrets;
             return this;
         }

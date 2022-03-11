@@ -33,12 +33,12 @@ public final class DetectorModelTransitionEvent {
      */
     private final String nextState;
 
-    @OutputCustomType.Constructor({"actions","condition","eventName","nextState"})
+    @OutputCustomType.Constructor
     private DetectorModelTransitionEvent(
-        @Nullable List<DetectorModelAction> actions,
-        String condition,
-        String eventName,
-        String nextState) {
+        @OutputCustomType.Parameter("actions") @Nullable List<DetectorModelAction> actions,
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("nextState") String nextState) {
         this.actions = actions;
         this.condition = condition;
         this.eventName = eventName;
@@ -100,22 +100,22 @@ public final class DetectorModelTransitionEvent {
     	      this.nextState = defaults.nextState;
         }
 
-        public Builder setActions(@Nullable List<DetectorModelAction> actions) {
+        public Builder actions(@Nullable List<DetectorModelAction> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setNextState(String nextState) {
+        public Builder nextState(String nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }

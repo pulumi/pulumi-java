@@ -15,11 +15,11 @@ public final class SparkMavenPackageResponse {
     private final @Nullable String group;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"artifact","group","version"})
+    @OutputCustomType.Constructor
     private SparkMavenPackageResponse(
-        @Nullable String artifact,
-        @Nullable String group,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("artifact") @Nullable String artifact,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.artifact = artifact;
         this.group = group;
         this.version = version;
@@ -59,17 +59,17 @@ public final class SparkMavenPackageResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifact(@Nullable String artifact) {
+        public Builder artifact(@Nullable String artifact) {
             this.artifact = artifact;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

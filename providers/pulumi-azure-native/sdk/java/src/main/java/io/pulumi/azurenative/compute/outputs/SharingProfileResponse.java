@@ -24,10 +24,10 @@ public final class SharingProfileResponse {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor({"groups","permissions"})
+    @OutputCustomType.Constructor
     private SharingProfileResponse(
-        List<SharingProfileGroupResponse> groups,
-        @Nullable String permissions) {
+        @OutputCustomType.Parameter("groups") List<SharingProfileGroupResponse> groups,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
         this.groups = groups;
         this.permissions = permissions;
     }
@@ -69,12 +69,12 @@ public final class SharingProfileResponse {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setGroups(List<SharingProfileGroupResponse> groups) {
+        public Builder groups(List<SharingProfileGroupResponse> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }

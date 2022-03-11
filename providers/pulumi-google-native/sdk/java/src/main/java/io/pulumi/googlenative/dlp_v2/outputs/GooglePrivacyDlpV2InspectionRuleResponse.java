@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
      */
     private final GooglePrivacyDlpV2HotwordRuleResponse hotwordRule;
 
-    @OutputCustomType.Constructor({"exclusionRule","hotwordRule"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleResponse(
-        GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
-        GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        @OutputCustomType.Parameter("exclusionRule") GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule,
+        @OutputCustomType.Parameter("hotwordRule") GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InspectionRuleResponse {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
+        public Builder exclusionRule(GooglePrivacyDlpV2ExclusionRuleResponse exclusionRule) {
             this.exclusionRule = Objects.requireNonNull(exclusionRule);
             return this;
         }
 
-        public Builder setHotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
+        public Builder hotwordRule(GooglePrivacyDlpV2HotwordRuleResponse hotwordRule) {
             this.hotwordRule = Objects.requireNonNull(hotwordRule);
             return this;
         }

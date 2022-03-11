@@ -32,12 +32,12 @@ public final class OrganizationPolicyListPolicy {
      */
     private final @Nullable String suggestedValue;
 
-    @OutputCustomType.Constructor({"allow","deny","inheritFromParent","suggestedValue"})
+    @OutputCustomType.Constructor
     private OrganizationPolicyListPolicy(
-        @Nullable OrganizationPolicyListPolicyAllow allow,
-        @Nullable OrganizationPolicyListPolicyDeny deny,
-        @Nullable Boolean inheritFromParent,
-        @Nullable String suggestedValue) {
+        @OutputCustomType.Parameter("allow") @Nullable OrganizationPolicyListPolicyAllow allow,
+        @OutputCustomType.Parameter("deny") @Nullable OrganizationPolicyListPolicyDeny deny,
+        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @OutputCustomType.Parameter("suggestedValue") @Nullable String suggestedValue) {
         this.allow = allow;
         this.deny = deny;
         this.inheritFromParent = inheritFromParent;
@@ -96,22 +96,22 @@ public final class OrganizationPolicyListPolicy {
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder setAllow(@Nullable OrganizationPolicyListPolicyAllow allow) {
+        public Builder allow(@Nullable OrganizationPolicyListPolicyAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setDeny(@Nullable OrganizationPolicyListPolicyDeny deny) {
+        public Builder deny(@Nullable OrganizationPolicyListPolicyDeny deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setSuggestedValue(@Nullable String suggestedValue) {
+        public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }

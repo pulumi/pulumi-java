@@ -27,11 +27,11 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
      */
     private final @Nullable String timeStampUtc;
 
-    @OutputCustomType.Constructor({"code","message","timeStampUtc"})
+    @OutputCustomType.Constructor
     private KeyVaultLastAccessStatusContractPropertiesResponse(
-        @Nullable String code,
-        @Nullable String message,
-        @Nullable String timeStampUtc) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("timeStampUtc") @Nullable String timeStampUtc) {
         this.code = code;
         this.message = message;
         this.timeStampUtc = timeStampUtc;
@@ -83,17 +83,17 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
     	      this.timeStampUtc = defaults.timeStampUtc;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTimeStampUtc(@Nullable String timeStampUtc) {
+        public Builder timeStampUtc(@Nullable String timeStampUtc) {
             this.timeStampUtc = timeStampUtc;
             return this;
         }

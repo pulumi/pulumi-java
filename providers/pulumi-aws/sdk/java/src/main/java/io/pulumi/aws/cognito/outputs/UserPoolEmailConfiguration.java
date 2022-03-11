@@ -37,13 +37,13 @@ public final class UserPoolEmailConfiguration {
      */
     private final @Nullable String sourceArn;
 
-    @OutputCustomType.Constructor({"configurationSet","emailSendingAccount","fromEmailAddress","replyToEmailAddress","sourceArn"})
+    @OutputCustomType.Constructor
     private UserPoolEmailConfiguration(
-        @Nullable String configurationSet,
-        @Nullable String emailSendingAccount,
-        @Nullable String fromEmailAddress,
-        @Nullable String replyToEmailAddress,
-        @Nullable String sourceArn) {
+        @OutputCustomType.Parameter("configurationSet") @Nullable String configurationSet,
+        @OutputCustomType.Parameter("emailSendingAccount") @Nullable String emailSendingAccount,
+        @OutputCustomType.Parameter("fromEmailAddress") @Nullable String fromEmailAddress,
+        @OutputCustomType.Parameter("replyToEmailAddress") @Nullable String replyToEmailAddress,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn) {
         this.configurationSet = configurationSet;
         this.emailSendingAccount = emailSendingAccount;
         this.fromEmailAddress = fromEmailAddress;
@@ -115,27 +115,27 @@ public final class UserPoolEmailConfiguration {
     	      this.sourceArn = defaults.sourceArn;
         }
 
-        public Builder setConfigurationSet(@Nullable String configurationSet) {
+        public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
-        public Builder setEmailSendingAccount(@Nullable String emailSendingAccount) {
+        public Builder emailSendingAccount(@Nullable String emailSendingAccount) {
             this.emailSendingAccount = emailSendingAccount;
             return this;
         }
 
-        public Builder setFromEmailAddress(@Nullable String fromEmailAddress) {
+        public Builder fromEmailAddress(@Nullable String fromEmailAddress) {
             this.fromEmailAddress = fromEmailAddress;
             return this;
         }
 
-        public Builder setReplyToEmailAddress(@Nullable String replyToEmailAddress) {
+        public Builder replyToEmailAddress(@Nullable String replyToEmailAddress) {
             this.replyToEmailAddress = replyToEmailAddress;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }

@@ -120,52 +120,52 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder setAddonName(@Nullable Input<String> addonName) {
+        public Builder addonName(@Nullable Input<String> addonName) {
             this.addonName = addonName;
             return this;
         }
 
-        public Builder setAddonName(@Nullable String addonName) {
+        public Builder addonName(@Nullable String addonName) {
             this.addonName = Input.ofNullable(addonName);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setKind(Input<Either<String,AddonType>> kind) {
+        public Builder kind(Input<Either<String,AddonType>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,AddonType> kind) {
+        public Builder kind(Either<String,AddonType> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleName(Input<String> roleName) {
+        public Builder roleName(Input<String> roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }
 
-        public Builder setRoleName(String roleName) {
+        public Builder roleName(String roleName) {
             this.roleName = Input.of(Objects.requireNonNull(roleName));
             return this;
         }

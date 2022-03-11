@@ -23,16 +23,16 @@ public final class GetPackageVersionResult {
     private final @Nullable String statusDescription;
     private final @Nullable String updatedLatestPatchVersion;
 
-    @OutputCustomType.Constructor({"isLatestPatch","markLatest","packageArn","packageName","registeredTime","status","statusDescription","updatedLatestPatchVersion"})
+    @OutputCustomType.Constructor
     private GetPackageVersionResult(
-        @Nullable Boolean isLatestPatch,
-        @Nullable Boolean markLatest,
-        @Nullable String packageArn,
-        @Nullable String packageName,
-        @Nullable Integer registeredTime,
-        @Nullable PackageVersionStatus status,
-        @Nullable String statusDescription,
-        @Nullable String updatedLatestPatchVersion) {
+        @OutputCustomType.Parameter("isLatestPatch") @Nullable Boolean isLatestPatch,
+        @OutputCustomType.Parameter("markLatest") @Nullable Boolean markLatest,
+        @OutputCustomType.Parameter("packageArn") @Nullable String packageArn,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("registeredTime") @Nullable Integer registeredTime,
+        @OutputCustomType.Parameter("status") @Nullable PackageVersionStatus status,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @OutputCustomType.Parameter("updatedLatestPatchVersion") @Nullable String updatedLatestPatchVersion) {
         this.isLatestPatch = isLatestPatch;
         this.markLatest = markLatest;
         this.packageArn = packageArn;
@@ -102,42 +102,42 @@ public final class GetPackageVersionResult {
     	      this.updatedLatestPatchVersion = defaults.updatedLatestPatchVersion;
         }
 
-        public Builder setIsLatestPatch(@Nullable Boolean isLatestPatch) {
+        public Builder isLatestPatch(@Nullable Boolean isLatestPatch) {
             this.isLatestPatch = isLatestPatch;
             return this;
         }
 
-        public Builder setMarkLatest(@Nullable Boolean markLatest) {
+        public Builder markLatest(@Nullable Boolean markLatest) {
             this.markLatest = markLatest;
             return this;
         }
 
-        public Builder setPackageArn(@Nullable String packageArn) {
+        public Builder packageArn(@Nullable String packageArn) {
             this.packageArn = packageArn;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setRegisteredTime(@Nullable Integer registeredTime) {
+        public Builder registeredTime(@Nullable Integer registeredTime) {
             this.registeredTime = registeredTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable PackageVersionStatus status) {
+        public Builder status(@Nullable PackageVersionStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusDescription(@Nullable String statusDescription) {
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
 
-        public Builder setUpdatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
+        public Builder updatedLatestPatchVersion(@Nullable String updatedLatestPatchVersion) {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }

@@ -15,11 +15,11 @@ public final class GetBrokerUser {
     private final List<String> groups;
     private final String username;
 
-    @OutputCustomType.Constructor({"consoleAccess","groups","username"})
+    @OutputCustomType.Constructor
     private GetBrokerUser(
-        Boolean consoleAccess,
-        List<String> groups,
-        String username) {
+        @OutputCustomType.Parameter("consoleAccess") Boolean consoleAccess,
+        @OutputCustomType.Parameter("groups") List<String> groups,
+        @OutputCustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.username = username;
@@ -59,17 +59,17 @@ public final class GetBrokerUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setConsoleAccess(Boolean consoleAccess) {
+        public Builder consoleAccess(Boolean consoleAccess) {
             this.consoleAccess = Objects.requireNonNull(consoleAccess);
             return this;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

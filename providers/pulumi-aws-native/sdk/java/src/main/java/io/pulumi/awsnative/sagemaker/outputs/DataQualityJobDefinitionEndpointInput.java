@@ -30,12 +30,12 @@ public final class DataQualityJobDefinitionEndpointInput {
      */
     private final @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode;
 
-    @OutputCustomType.Constructor({"endpointName","localPath","s3DataDistributionType","s3InputMode"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionEndpointInput(
-        String endpointName,
-        String localPath,
-        @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
         this.endpointName = endpointName;
         this.localPath = localPath;
         this.s3DataDistributionType = s3DataDistributionType;
@@ -93,22 +93,22 @@ public final class DataQualityJobDefinitionEndpointInput {
     	      this.s3InputMode = defaults.s3InputMode;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable DataQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable DataQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }

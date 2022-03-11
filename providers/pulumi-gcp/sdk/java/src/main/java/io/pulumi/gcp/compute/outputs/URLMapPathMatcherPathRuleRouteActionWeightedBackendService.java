@@ -38,11 +38,11 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendService {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"backendService","headerAction","weight"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionWeightedBackendService(
-        String backendService,
-        @Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
-        Integer weight) {
+        @OutputCustomType.Parameter("backendService") String backendService,
+        @OutputCustomType.Parameter("headerAction") @Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;
@@ -103,17 +103,17 @@ public final class URLMapPathMatcherPathRuleRouteActionWeightedBackendService {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setHeaderAction(@Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction) {
+        public Builder headerAction(@Nullable URLMapPathMatcherPathRuleRouteActionWeightedBackendServiceHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

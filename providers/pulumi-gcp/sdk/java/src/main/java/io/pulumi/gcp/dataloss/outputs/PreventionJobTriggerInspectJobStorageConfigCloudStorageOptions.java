@@ -54,14 +54,14 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable String sampleMethod;
 
-    @OutputCustomType.Constructor({"bytesLimitPerFile","bytesLimitPerFilePercent","fileSet","fileTypes","filesLimitPercent","sampleMethod"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions(
-        @Nullable Integer bytesLimitPerFile,
-        @Nullable Integer bytesLimitPerFilePercent,
-        PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet,
-        @Nullable List<String> fileTypes,
-        @Nullable Integer filesLimitPercent,
-        @Nullable String sampleMethod) {
+        @OutputCustomType.Parameter("bytesLimitPerFile") @Nullable Integer bytesLimitPerFile,
+        @OutputCustomType.Parameter("bytesLimitPerFilePercent") @Nullable Integer bytesLimitPerFilePercent,
+        @OutputCustomType.Parameter("fileSet") PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet,
+        @OutputCustomType.Parameter("fileTypes") @Nullable List<String> fileTypes,
+        @OutputCustomType.Parameter("filesLimitPercent") @Nullable Integer filesLimitPercent,
+        @OutputCustomType.Parameter("sampleMethod") @Nullable String sampleMethod) {
         this.bytesLimitPerFile = bytesLimitPerFile;
         this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
         this.fileSet = fileSet;
@@ -152,32 +152,32 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
     	      this.sampleMethod = defaults.sampleMethod;
         }
 
-        public Builder setBytesLimitPerFile(@Nullable Integer bytesLimitPerFile) {
+        public Builder bytesLimitPerFile(@Nullable Integer bytesLimitPerFile) {
             this.bytesLimitPerFile = bytesLimitPerFile;
             return this;
         }
 
-        public Builder setBytesLimitPerFilePercent(@Nullable Integer bytesLimitPerFilePercent) {
+        public Builder bytesLimitPerFilePercent(@Nullable Integer bytesLimitPerFilePercent) {
             this.bytesLimitPerFilePercent = bytesLimitPerFilePercent;
             return this;
         }
 
-        public Builder setFileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet) {
+        public Builder fileSet(PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet fileSet) {
             this.fileSet = Objects.requireNonNull(fileSet);
             return this;
         }
 
-        public Builder setFileTypes(@Nullable List<String> fileTypes) {
+        public Builder fileTypes(@Nullable List<String> fileTypes) {
             this.fileTypes = fileTypes;
             return this;
         }
 
-        public Builder setFilesLimitPercent(@Nullable Integer filesLimitPercent) {
+        public Builder filesLimitPercent(@Nullable Integer filesLimitPercent) {
             this.filesLimitPercent = filesLimitPercent;
             return this;
         }
 
-        public Builder setSampleMethod(@Nullable String sampleMethod) {
+        public Builder sampleMethod(@Nullable String sampleMethod) {
             this.sampleMethod = sampleMethod;
             return this;
         }

@@ -75,22 +75,22 @@ public final class ZipInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceUrl = defaults.sourceUrl;
         }
 
-        public Builder setFilesCount(@Nullable Input<Integer> filesCount) {
+        public Builder filesCount(@Nullable Input<Integer> filesCount) {
             this.filesCount = filesCount;
             return this;
         }
 
-        public Builder setFilesCount(@Nullable Integer filesCount) {
+        public Builder filesCount(@Nullable Integer filesCount) {
             this.filesCount = Input.ofNullable(filesCount);
             return this;
         }
 
-        public Builder setSourceUrl(@Nullable Input<String> sourceUrl) {
+        public Builder sourceUrl(@Nullable Input<String> sourceUrl) {
             this.sourceUrl = sourceUrl;
             return this;
         }
 
-        public Builder setSourceUrl(@Nullable String sourceUrl) {
+        public Builder sourceUrl(@Nullable String sourceUrl) {
             this.sourceUrl = Input.ofNullable(sourceUrl);
             return this;
         }

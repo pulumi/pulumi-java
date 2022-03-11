@@ -43,14 +43,14 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor({"amiTags","description","kmsKeyId","launchPermissions","name","targetAccountIds"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfiguration(
-        Map<String,String> amiTags,
-        String description,
-        String kmsKeyId,
-        List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
-        String name,
-        List<String> targetAccountIds) {
+        @OutputCustomType.Parameter("amiTags") Map<String,String> amiTags,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("launchPermissions") List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetAccountIds") List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;
@@ -132,32 +132,32 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     	      this.targetAccountIds = defaults.targetAccountIds;
         }
 
-        public Builder setAmiTags(Map<String,String> amiTags) {
+        public Builder amiTags(Map<String,String> amiTags) {
             this.amiTags = Objects.requireNonNull(amiTags);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setLaunchPermissions(List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions) {
+        public Builder launchPermissions(List<GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission> launchPermissions) {
             this.launchPermissions = Objects.requireNonNull(launchPermissions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTargetAccountIds(List<String> targetAccountIds) {
+        public Builder targetAccountIds(List<String> targetAccountIds) {
             this.targetAccountIds = Objects.requireNonNull(targetAccountIds);
             return this;
         }

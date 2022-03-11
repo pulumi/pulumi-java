@@ -23,11 +23,11 @@ public final class DirectoryVpcSettings {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private DirectoryVpcSettings(
-        @Nullable List<String> availabilityZones,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.subnetIds = subnetIds;
         this.vpcId = vpcId;
@@ -75,17 +75,17 @@ public final class DirectoryVpcSettings {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

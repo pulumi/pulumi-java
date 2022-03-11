@@ -16,11 +16,11 @@ public final class TopicRuleIotAnalyticsAction {
     private final String channelName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"batchMode","channelName","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotAnalyticsAction(
-        @Nullable Boolean batchMode,
-        String channelName,
-        String roleArn) {
+        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.batchMode = batchMode;
         this.channelName = channelName;
         this.roleArn = roleArn;
@@ -60,17 +60,17 @@ public final class TopicRuleIotAnalyticsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

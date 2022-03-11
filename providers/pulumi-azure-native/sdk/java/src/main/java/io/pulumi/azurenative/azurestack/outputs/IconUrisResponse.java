@@ -37,13 +37,13 @@ public final class IconUrisResponse {
      */
     private final @Nullable String wide;
 
-    @OutputCustomType.Constructor({"hero","large","medium","small","wide"})
+    @OutputCustomType.Constructor
     private IconUrisResponse(
-        @Nullable String hero,
-        @Nullable String large,
-        @Nullable String medium,
-        @Nullable String small,
-        @Nullable String wide) {
+        @OutputCustomType.Parameter("hero") @Nullable String hero,
+        @OutputCustomType.Parameter("large") @Nullable String large,
+        @OutputCustomType.Parameter("medium") @Nullable String medium,
+        @OutputCustomType.Parameter("small") @Nullable String small,
+        @OutputCustomType.Parameter("wide") @Nullable String wide) {
         this.hero = hero;
         this.large = large;
         this.medium = medium;
@@ -115,27 +115,27 @@ public final class IconUrisResponse {
     	      this.wide = defaults.wide;
         }
 
-        public Builder setHero(@Nullable String hero) {
+        public Builder hero(@Nullable String hero) {
             this.hero = hero;
             return this;
         }
 
-        public Builder setLarge(@Nullable String large) {
+        public Builder large(@Nullable String large) {
             this.large = large;
             return this;
         }
 
-        public Builder setMedium(@Nullable String medium) {
+        public Builder medium(@Nullable String medium) {
             this.medium = medium;
             return this;
         }
 
-        public Builder setSmall(@Nullable String small) {
+        public Builder small(@Nullable String small) {
             this.small = small;
             return this;
         }
 
-        public Builder setWide(@Nullable String wide) {
+        public Builder wide(@Nullable String wide) {
             this.wide = wide;
             return this;
         }

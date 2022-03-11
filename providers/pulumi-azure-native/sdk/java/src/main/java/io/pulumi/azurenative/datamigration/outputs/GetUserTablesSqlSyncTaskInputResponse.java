@@ -32,12 +32,12 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"selectedSourceDatabases","selectedTargetDatabases","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlSyncTaskInputResponse(
-        List<String> selectedSourceDatabases,
-        List<String> selectedTargetDatabases,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("selectedSourceDatabases") List<String> selectedSourceDatabases,
+        @OutputCustomType.Parameter("selectedTargetDatabases") List<String> selectedTargetDatabases,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.selectedSourceDatabases = selectedSourceDatabases;
         this.selectedTargetDatabases = selectedTargetDatabases;
         this.sourceConnectionInfo = sourceConnectionInfo;
@@ -99,22 +99,22 @@ public final class GetUserTablesSqlSyncTaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSelectedSourceDatabases(List<String> selectedSourceDatabases) {
+        public Builder selectedSourceDatabases(List<String> selectedSourceDatabases) {
             this.selectedSourceDatabases = Objects.requireNonNull(selectedSourceDatabases);
             return this;
         }
 
-        public Builder setSelectedTargetDatabases(List<String> selectedTargetDatabases) {
+        public Builder selectedTargetDatabases(List<String> selectedTargetDatabases) {
             this.selectedTargetDatabases = Objects.requireNonNull(selectedTargetDatabases);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

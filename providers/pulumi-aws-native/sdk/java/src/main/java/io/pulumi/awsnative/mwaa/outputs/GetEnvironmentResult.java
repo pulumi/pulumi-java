@@ -53,28 +53,28 @@ public final class GetEnvironmentResult {
     private final @Nullable String webserverUrl;
     private final @Nullable String weeklyMaintenanceWindowStart;
 
-    @OutputCustomType.Constructor({"airflowConfigurationOptions","airflowVersion","arn","dagS3Path","environmentClass","executionRoleArn","loggingConfiguration","maxWorkers","minWorkers","networkConfiguration","pluginsS3ObjectVersion","pluginsS3Path","requirementsS3ObjectVersion","requirementsS3Path","schedulers","sourceBucketArn","tags","webserverAccessMode","webserverUrl","weeklyMaintenanceWindowStart"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable Object airflowConfigurationOptions,
-        @Nullable String airflowVersion,
-        @Nullable String arn,
-        @Nullable String dagS3Path,
-        @Nullable String environmentClass,
-        @Nullable String executionRoleArn,
-        @Nullable EnvironmentLoggingConfiguration loggingConfiguration,
-        @Nullable Integer maxWorkers,
-        @Nullable Integer minWorkers,
-        @Nullable EnvironmentNetworkConfiguration networkConfiguration,
-        @Nullable String pluginsS3ObjectVersion,
-        @Nullable String pluginsS3Path,
-        @Nullable String requirementsS3ObjectVersion,
-        @Nullable String requirementsS3Path,
-        @Nullable Integer schedulers,
-        @Nullable String sourceBucketArn,
-        @Nullable Object tags,
-        @Nullable EnvironmentWebserverAccessMode webserverAccessMode,
-        @Nullable String webserverUrl,
-        @Nullable String weeklyMaintenanceWindowStart) {
+        @OutputCustomType.Parameter("airflowConfigurationOptions") @Nullable Object airflowConfigurationOptions,
+        @OutputCustomType.Parameter("airflowVersion") @Nullable String airflowVersion,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dagS3Path") @Nullable String dagS3Path,
+        @OutputCustomType.Parameter("environmentClass") @Nullable String environmentClass,
+        @OutputCustomType.Parameter("executionRoleArn") @Nullable String executionRoleArn,
+        @OutputCustomType.Parameter("loggingConfiguration") @Nullable EnvironmentLoggingConfiguration loggingConfiguration,
+        @OutputCustomType.Parameter("maxWorkers") @Nullable Integer maxWorkers,
+        @OutputCustomType.Parameter("minWorkers") @Nullable Integer minWorkers,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable EnvironmentNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("pluginsS3ObjectVersion") @Nullable String pluginsS3ObjectVersion,
+        @OutputCustomType.Parameter("pluginsS3Path") @Nullable String pluginsS3Path,
+        @OutputCustomType.Parameter("requirementsS3ObjectVersion") @Nullable String requirementsS3ObjectVersion,
+        @OutputCustomType.Parameter("requirementsS3Path") @Nullable String requirementsS3Path,
+        @OutputCustomType.Parameter("schedulers") @Nullable Integer schedulers,
+        @OutputCustomType.Parameter("sourceBucketArn") @Nullable String sourceBucketArn,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags,
+        @OutputCustomType.Parameter("webserverAccessMode") @Nullable EnvironmentWebserverAccessMode webserverAccessMode,
+        @OutputCustomType.Parameter("webserverUrl") @Nullable String webserverUrl,
+        @OutputCustomType.Parameter("weeklyMaintenanceWindowStart") @Nullable String weeklyMaintenanceWindowStart) {
         this.airflowConfigurationOptions = airflowConfigurationOptions;
         this.airflowVersion = airflowVersion;
         this.arn = arn;
@@ -232,102 +232,102 @@ public final class GetEnvironmentResult {
     	      this.weeklyMaintenanceWindowStart = defaults.weeklyMaintenanceWindowStart;
         }
 
-        public Builder setAirflowConfigurationOptions(@Nullable Object airflowConfigurationOptions) {
+        public Builder airflowConfigurationOptions(@Nullable Object airflowConfigurationOptions) {
             this.airflowConfigurationOptions = airflowConfigurationOptions;
             return this;
         }
 
-        public Builder setAirflowVersion(@Nullable String airflowVersion) {
+        public Builder airflowVersion(@Nullable String airflowVersion) {
             this.airflowVersion = airflowVersion;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDagS3Path(@Nullable String dagS3Path) {
+        public Builder dagS3Path(@Nullable String dagS3Path) {
             this.dagS3Path = dagS3Path;
             return this;
         }
 
-        public Builder setEnvironmentClass(@Nullable String environmentClass) {
+        public Builder environmentClass(@Nullable String environmentClass) {
             this.environmentClass = environmentClass;
             return this;
         }
 
-        public Builder setExecutionRoleArn(@Nullable String executionRoleArn) {
+        public Builder executionRoleArn(@Nullable String executionRoleArn) {
             this.executionRoleArn = executionRoleArn;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable EnvironmentLoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable EnvironmentLoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setMaxWorkers(@Nullable Integer maxWorkers) {
+        public Builder maxWorkers(@Nullable Integer maxWorkers) {
             this.maxWorkers = maxWorkers;
             return this;
         }
 
-        public Builder setMinWorkers(@Nullable Integer minWorkers) {
+        public Builder minWorkers(@Nullable Integer minWorkers) {
             this.minWorkers = minWorkers;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable EnvironmentNetworkConfiguration networkConfiguration) {
+        public Builder networkConfiguration(@Nullable EnvironmentNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setPluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
+        public Builder pluginsS3ObjectVersion(@Nullable String pluginsS3ObjectVersion) {
             this.pluginsS3ObjectVersion = pluginsS3ObjectVersion;
             return this;
         }
 
-        public Builder setPluginsS3Path(@Nullable String pluginsS3Path) {
+        public Builder pluginsS3Path(@Nullable String pluginsS3Path) {
             this.pluginsS3Path = pluginsS3Path;
             return this;
         }
 
-        public Builder setRequirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
+        public Builder requirementsS3ObjectVersion(@Nullable String requirementsS3ObjectVersion) {
             this.requirementsS3ObjectVersion = requirementsS3ObjectVersion;
             return this;
         }
 
-        public Builder setRequirementsS3Path(@Nullable String requirementsS3Path) {
+        public Builder requirementsS3Path(@Nullable String requirementsS3Path) {
             this.requirementsS3Path = requirementsS3Path;
             return this;
         }
 
-        public Builder setSchedulers(@Nullable Integer schedulers) {
+        public Builder schedulers(@Nullable Integer schedulers) {
             this.schedulers = schedulers;
             return this;
         }
 
-        public Builder setSourceBucketArn(@Nullable String sourceBucketArn) {
+        public Builder sourceBucketArn(@Nullable String sourceBucketArn) {
             this.sourceBucketArn = sourceBucketArn;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWebserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
+        public Builder webserverAccessMode(@Nullable EnvironmentWebserverAccessMode webserverAccessMode) {
             this.webserverAccessMode = webserverAccessMode;
             return this;
         }
 
-        public Builder setWebserverUrl(@Nullable String webserverUrl) {
+        public Builder webserverUrl(@Nullable String webserverUrl) {
             this.webserverUrl = webserverUrl;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
+        public Builder weeklyMaintenanceWindowStart(@Nullable String weeklyMaintenanceWindowStart) {
             this.weeklyMaintenanceWindowStart = weeklyMaintenanceWindowStart;
             return this;
         }

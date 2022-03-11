@@ -27,10 +27,10 @@ public final class TopicSchemaSettings {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor({"encoding","schema"})
+    @OutputCustomType.Constructor
     private TopicSchemaSettings(
-        @Nullable String encoding,
-        String schema) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }
@@ -77,12 +77,12 @@ public final class TopicSchemaSettings {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }

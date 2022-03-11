@@ -141,32 +141,32 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
     	      this.onPremCluster = defaults.onPremCluster;
         }
 
-        public Builder setEdgeCluster(EdgeClusterResponse edgeCluster) {
+        public Builder edgeCluster(EdgeClusterResponse edgeCluster) {
             this.edgeCluster = Objects.requireNonNull(edgeCluster);
             return this;
         }
 
-        public Builder setGkeCluster(GkeClusterResponse gkeCluster) {
+        public Builder gkeCluster(GkeClusterResponse gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
 
-        public Builder setKubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
+        public Builder kubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
             this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata);
             return this;
         }
 
-        public Builder setKubernetesResource(KubernetesResourceResponse kubernetesResource) {
+        public Builder kubernetesResource(KubernetesResourceResponse kubernetesResource) {
             this.kubernetesResource = Objects.requireNonNull(kubernetesResource);
             return this;
         }
 
-        public Builder setMultiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
+        public Builder multiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
             this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster);
             return this;
         }
 
-        public Builder setOnPremCluster(OnPremClusterResponse onPremCluster) {
+        public Builder onPremCluster(OnPremClusterResponse onPremCluster) {
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
         }

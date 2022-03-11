@@ -203,102 +203,102 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
     	      this.targetResourceUri = defaults.targetResourceUri;
         }
 
-        public Builder setAutoscaleSettingName(@Nullable Input<String> autoscaleSettingName) {
+        public Builder autoscaleSettingName(@Nullable Input<String> autoscaleSettingName) {
             this.autoscaleSettingName = autoscaleSettingName;
             return this;
         }
 
-        public Builder setAutoscaleSettingName(@Nullable String autoscaleSettingName) {
+        public Builder autoscaleSettingName(@Nullable String autoscaleSettingName) {
             this.autoscaleSettingName = Input.ofNullable(autoscaleSettingName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Input<List<AutoscaleNotificationArgs>> notifications) {
+        public Builder notifications(@Nullable Input<List<AutoscaleNotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setNotifications(@Nullable List<AutoscaleNotificationArgs> notifications) {
+        public Builder notifications(@Nullable List<AutoscaleNotificationArgs> notifications) {
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
 
-        public Builder setProfiles(Input<List<AutoscaleProfileArgs>> profiles) {
+        public Builder profiles(Input<List<AutoscaleProfileArgs>> profiles) {
             this.profiles = Objects.requireNonNull(profiles);
             return this;
         }
 
-        public Builder setProfiles(List<AutoscaleProfileArgs> profiles) {
+        public Builder profiles(List<AutoscaleProfileArgs> profiles) {
             this.profiles = Input.of(Objects.requireNonNull(profiles));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetResourceLocation(@Nullable Input<String> targetResourceLocation) {
+        public Builder targetResourceLocation(@Nullable Input<String> targetResourceLocation) {
             this.targetResourceLocation = targetResourceLocation;
             return this;
         }
 
-        public Builder setTargetResourceLocation(@Nullable String targetResourceLocation) {
+        public Builder targetResourceLocation(@Nullable String targetResourceLocation) {
             this.targetResourceLocation = Input.ofNullable(targetResourceLocation);
             return this;
         }
 
-        public Builder setTargetResourceUri(@Nullable Input<String> targetResourceUri) {
+        public Builder targetResourceUri(@Nullable Input<String> targetResourceUri) {
             this.targetResourceUri = targetResourceUri;
             return this;
         }
 
-        public Builder setTargetResourceUri(@Nullable String targetResourceUri) {
+        public Builder targetResourceUri(@Nullable String targetResourceUri) {
             this.targetResourceUri = Input.ofNullable(targetResourceUri);
             return this;
         }

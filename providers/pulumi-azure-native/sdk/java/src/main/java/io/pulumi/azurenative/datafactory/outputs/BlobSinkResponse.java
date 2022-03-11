@@ -76,20 +76,20 @@ public final class BlobSinkResponse {
      */
     private final @Nullable Object writeBatchTimeout;
 
-    @OutputCustomType.Constructor({"blobWriterAddHeader","blobWriterDateTimeFormat","blobWriterOverwriteFiles","copyBehavior","disableMetricsCollection","maxConcurrentConnections","metadata","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout"})
+    @OutputCustomType.Constructor
     private BlobSinkResponse(
-        @Nullable Object blobWriterAddHeader,
-        @Nullable Object blobWriterDateTimeFormat,
-        @Nullable Object blobWriterOverwriteFiles,
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable List<MetadataItemResponse> metadata,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout) {
+        @OutputCustomType.Parameter("blobWriterAddHeader") @Nullable Object blobWriterAddHeader,
+        @OutputCustomType.Parameter("blobWriterDateTimeFormat") @Nullable Object blobWriterDateTimeFormat,
+        @OutputCustomType.Parameter("blobWriterOverwriteFiles") @Nullable Object blobWriterOverwriteFiles,
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("metadata") @Nullable List<MetadataItemResponse> metadata,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout) {
         this.blobWriterAddHeader = blobWriterAddHeader;
         this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
         this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;
@@ -232,62 +232,62 @@ public final class BlobSinkResponse {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setBlobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
+        public Builder blobWriterAddHeader(@Nullable Object blobWriterAddHeader) {
             this.blobWriterAddHeader = blobWriterAddHeader;
             return this;
         }
 
-        public Builder setBlobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
+        public Builder blobWriterDateTimeFormat(@Nullable Object blobWriterDateTimeFormat) {
             this.blobWriterDateTimeFormat = blobWriterDateTimeFormat;
             return this;
         }
 
-        public Builder setBlobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
+        public Builder blobWriterOverwriteFiles(@Nullable Object blobWriterOverwriteFiles) {
             this.blobWriterOverwriteFiles = blobWriterOverwriteFiles;
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMetadata(@Nullable List<MetadataItemResponse> metadata) {
+        public Builder metadata(@Nullable List<MetadataItemResponse> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }

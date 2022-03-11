@@ -21,10 +21,10 @@ public final class LinkedTemplateArtifactResponse {
      */
     private final Object template;
 
-    @OutputCustomType.Constructor({"path","template"})
+    @OutputCustomType.Constructor
     private LinkedTemplateArtifactResponse(
-        String path,
-        Object template) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("template") Object template) {
         this.path = path;
         this.template = template;
     }
@@ -66,12 +66,12 @@ public final class LinkedTemplateArtifactResponse {
     	      this.template = defaults.template;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTemplate(Object template) {
+        public Builder template(Object template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }

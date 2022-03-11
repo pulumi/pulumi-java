@@ -16,8 +16,8 @@ public final class OrganizationFeedFeedOutputConfig {
      */
     private final OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination;
 
-    @OutputCustomType.Constructor({"pubsubDestination"})
-    private OrganizationFeedFeedOutputConfig(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+    @OutputCustomType.Constructor
+    private OrganizationFeedFeedOutputConfig(@OutputCustomType.Parameter("pubsubDestination") OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 
@@ -50,7 +50,7 @@ public final class OrganizationFeedFeedOutputConfig {
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+        public Builder pubsubDestination(OrganizationFeedFeedOutputConfigPubsubDestination pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }

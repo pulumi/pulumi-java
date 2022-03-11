@@ -75,22 +75,22 @@ public final class AxisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<AxisScale> scale) {
+        public Builder scale(@Nullable Input<AxisScale> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable AxisScale scale) {
+        public Builder scale(@Nullable AxisScale scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }

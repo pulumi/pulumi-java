@@ -33,12 +33,12 @@ public final class AccessPolicyEntryResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"applicationId","objectId","permissions","tenantId"})
+    @OutputCustomType.Constructor
     private AccessPolicyEntryResponse(
-        @Nullable String applicationId,
-        String objectId,
-        PermissionsResponse permissions,
-        String tenantId) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("permissions") PermissionsResponse permissions,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.applicationId = applicationId;
         this.objectId = objectId;
         this.permissions = permissions;
@@ -100,22 +100,22 @@ public final class AccessPolicyEntryResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setPermissions(PermissionsResponse permissions) {
+        public Builder permissions(PermissionsResponse permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

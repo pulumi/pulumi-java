@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"jobBookmarksEncryptionMode","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption(
-        @Nullable String jobBookmarksEncryptionMode,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("jobBookmarksEncryptionMode") @Nullable String jobBookmarksEncryptionMode,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }
@@ -67,12 +67,12 @@ public final class SecurityConfigurationEncryptionConfigurationJobBookmarksEncry
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setJobBookmarksEncryptionMode(@Nullable String jobBookmarksEncryptionMode) {
+        public Builder jobBookmarksEncryptionMode(@Nullable String jobBookmarksEncryptionMode) {
             this.jobBookmarksEncryptionMode = jobBookmarksEncryptionMode;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

@@ -17,8 +17,8 @@ public final class VirtualNodeSpecLogging {
      */
     private final @Nullable VirtualNodeSpecLoggingAccessLog accessLog;
 
-    @OutputCustomType.Constructor({"accessLog"})
-    private VirtualNodeSpecLogging(@Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecLogging(@OutputCustomType.Parameter("accessLog") @Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
         this.accessLog = accessLog;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualNodeSpecLogging {
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
+        public Builder accessLog(@Nullable VirtualNodeSpecLoggingAccessLog accessLog) {
             this.accessLog = accessLog;
             return this;
         }

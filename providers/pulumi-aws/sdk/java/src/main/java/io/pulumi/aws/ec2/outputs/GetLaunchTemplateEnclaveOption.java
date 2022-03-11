@@ -15,8 +15,8 @@ public final class GetLaunchTemplateEnclaveOption {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetLaunchTemplateEnclaveOption(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetLaunchTemplateEnclaveOption(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -48,7 +48,7 @@ public final class GetLaunchTemplateEnclaveOption {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

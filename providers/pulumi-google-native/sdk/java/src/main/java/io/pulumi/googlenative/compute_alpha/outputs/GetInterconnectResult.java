@@ -152,35 +152,35 @@ public final class GetInterconnectResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"adminEnabled","circuitInfos","creationTimestamp","customerName","description","expectedOutages","googleIpAddress","googleReferenceId","interconnectAttachments","interconnectType","kind","labelFingerprint","labels","linkType","location","macsec","macsecEnabled","name","nocContactEmail","operationalStatus","peerIpAddress","provisionedLinkCount","requestedLinkCount","satisfiesPzs","selfLink","selfLinkWithId","state"})
+    @OutputCustomType.Constructor
     private GetInterconnectResult(
-        Boolean adminEnabled,
-        List<InterconnectCircuitInfoResponse> circuitInfos,
-        String creationTimestamp,
-        String customerName,
-        String description,
-        List<InterconnectOutageNotificationResponse> expectedOutages,
-        String googleIpAddress,
-        String googleReferenceId,
-        List<String> interconnectAttachments,
-        String interconnectType,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String linkType,
-        String location,
-        InterconnectMacsecResponse macsec,
-        Boolean macsecEnabled,
-        String name,
-        String nocContactEmail,
-        String operationalStatus,
-        String peerIpAddress,
-        Integer provisionedLinkCount,
-        Integer requestedLinkCount,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String selfLinkWithId,
-        String state) {
+        @OutputCustomType.Parameter("adminEnabled") Boolean adminEnabled,
+        @OutputCustomType.Parameter("circuitInfos") List<InterconnectCircuitInfoResponse> circuitInfos,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customerName") String customerName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expectedOutages") List<InterconnectOutageNotificationResponse> expectedOutages,
+        @OutputCustomType.Parameter("googleIpAddress") String googleIpAddress,
+        @OutputCustomType.Parameter("googleReferenceId") String googleReferenceId,
+        @OutputCustomType.Parameter("interconnectAttachments") List<String> interconnectAttachments,
+        @OutputCustomType.Parameter("interconnectType") String interconnectType,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linkType") String linkType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("macsec") InterconnectMacsecResponse macsec,
+        @OutputCustomType.Parameter("macsecEnabled") Boolean macsecEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nocContactEmail") String nocContactEmail,
+        @OutputCustomType.Parameter("operationalStatus") String operationalStatus,
+        @OutputCustomType.Parameter("peerIpAddress") String peerIpAddress,
+        @OutputCustomType.Parameter("provisionedLinkCount") Integer provisionedLinkCount,
+        @OutputCustomType.Parameter("requestedLinkCount") Integer requestedLinkCount,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("state") String state) {
         this.adminEnabled = adminEnabled;
         this.circuitInfos = circuitInfos;
         this.creationTimestamp = creationTimestamp;
@@ -472,137 +472,137 @@ public final class GetInterconnectResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAdminEnabled(Boolean adminEnabled) {
+        public Builder adminEnabled(Boolean adminEnabled) {
             this.adminEnabled = Objects.requireNonNull(adminEnabled);
             return this;
         }
 
-        public Builder setCircuitInfos(List<InterconnectCircuitInfoResponse> circuitInfos) {
+        public Builder circuitInfos(List<InterconnectCircuitInfoResponse> circuitInfos) {
             this.circuitInfos = Objects.requireNonNull(circuitInfos);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomerName(String customerName) {
+        public Builder customerName(String customerName) {
             this.customerName = Objects.requireNonNull(customerName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpectedOutages(List<InterconnectOutageNotificationResponse> expectedOutages) {
+        public Builder expectedOutages(List<InterconnectOutageNotificationResponse> expectedOutages) {
             this.expectedOutages = Objects.requireNonNull(expectedOutages);
             return this;
         }
 
-        public Builder setGoogleIpAddress(String googleIpAddress) {
+        public Builder googleIpAddress(String googleIpAddress) {
             this.googleIpAddress = Objects.requireNonNull(googleIpAddress);
             return this;
         }
 
-        public Builder setGoogleReferenceId(String googleReferenceId) {
+        public Builder googleReferenceId(String googleReferenceId) {
             this.googleReferenceId = Objects.requireNonNull(googleReferenceId);
             return this;
         }
 
-        public Builder setInterconnectAttachments(List<String> interconnectAttachments) {
+        public Builder interconnectAttachments(List<String> interconnectAttachments) {
             this.interconnectAttachments = Objects.requireNonNull(interconnectAttachments);
             return this;
         }
 
-        public Builder setInterconnectType(String interconnectType) {
+        public Builder interconnectType(String interconnectType) {
             this.interconnectType = Objects.requireNonNull(interconnectType);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLinkType(String linkType) {
+        public Builder linkType(String linkType) {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMacsec(InterconnectMacsecResponse macsec) {
+        public Builder macsec(InterconnectMacsecResponse macsec) {
             this.macsec = Objects.requireNonNull(macsec);
             return this;
         }
 
-        public Builder setMacsecEnabled(Boolean macsecEnabled) {
+        public Builder macsecEnabled(Boolean macsecEnabled) {
             this.macsecEnabled = Objects.requireNonNull(macsecEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNocContactEmail(String nocContactEmail) {
+        public Builder nocContactEmail(String nocContactEmail) {
             this.nocContactEmail = Objects.requireNonNull(nocContactEmail);
             return this;
         }
 
-        public Builder setOperationalStatus(String operationalStatus) {
+        public Builder operationalStatus(String operationalStatus) {
             this.operationalStatus = Objects.requireNonNull(operationalStatus);
             return this;
         }
 
-        public Builder setPeerIpAddress(String peerIpAddress) {
+        public Builder peerIpAddress(String peerIpAddress) {
             this.peerIpAddress = Objects.requireNonNull(peerIpAddress);
             return this;
         }
 
-        public Builder setProvisionedLinkCount(Integer provisionedLinkCount) {
+        public Builder provisionedLinkCount(Integer provisionedLinkCount) {
             this.provisionedLinkCount = Objects.requireNonNull(provisionedLinkCount);
             return this;
         }
 
-        public Builder setRequestedLinkCount(Integer requestedLinkCount) {
+        public Builder requestedLinkCount(Integer requestedLinkCount) {
             this.requestedLinkCount = Objects.requireNonNull(requestedLinkCount);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

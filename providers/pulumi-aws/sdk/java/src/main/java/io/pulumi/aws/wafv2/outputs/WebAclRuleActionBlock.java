@@ -17,8 +17,8 @@ public final class WebAclRuleActionBlock {
      */
     private final @Nullable WebAclRuleActionBlockCustomResponse customResponse;
 
-    @OutputCustomType.Constructor({"customResponse"})
-    private WebAclRuleActionBlock(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
+    @OutputCustomType.Constructor
+    private WebAclRuleActionBlock(@OutputCustomType.Parameter("customResponse") @Nullable WebAclRuleActionBlockCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleActionBlock {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
+        public Builder customResponse(@Nullable WebAclRuleActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

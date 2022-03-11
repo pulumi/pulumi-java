@@ -136,62 +136,62 @@ public final class RoutingIntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoutingIntentName(@Nullable Input<String> routingIntentName) {
+        public Builder routingIntentName(@Nullable Input<String> routingIntentName) {
             this.routingIntentName = routingIntentName;
             return this;
         }
 
-        public Builder setRoutingIntentName(@Nullable String routingIntentName) {
+        public Builder routingIntentName(@Nullable String routingIntentName) {
             this.routingIntentName = Input.ofNullable(routingIntentName);
             return this;
         }
 
-        public Builder setRoutingPolicies(@Nullable Input<List<RoutingPolicyArgs>> routingPolicies) {
+        public Builder routingPolicies(@Nullable Input<List<RoutingPolicyArgs>> routingPolicies) {
             this.routingPolicies = routingPolicies;
             return this;
         }
 
-        public Builder setRoutingPolicies(@Nullable List<RoutingPolicyArgs> routingPolicies) {
+        public Builder routingPolicies(@Nullable List<RoutingPolicyArgs> routingPolicies) {
             this.routingPolicies = Input.ofNullable(routingPolicies);
             return this;
         }
 
-        public Builder setVirtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Input<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
-        public Builder setVirtualHubName(String virtualHubName) {
+        public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }

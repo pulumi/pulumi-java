@@ -22,10 +22,10 @@ public final class ListWebAppFunctionSecretsSlotResult {
      */
     private final @Nullable String triggerUrl;
 
-    @OutputCustomType.Constructor({"key","triggerUrl"})
+    @OutputCustomType.Constructor
     private ListWebAppFunctionSecretsSlotResult(
-        @Nullable String key,
-        @Nullable String triggerUrl) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("triggerUrl") @Nullable String triggerUrl) {
         this.key = key;
         this.triggerUrl = triggerUrl;
     }
@@ -67,12 +67,12 @@ public final class ListWebAppFunctionSecretsSlotResult {
     	      this.triggerUrl = defaults.triggerUrl;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setTriggerUrl(@Nullable String triggerUrl) {
+        public Builder triggerUrl(@Nullable String triggerUrl) {
             this.triggerUrl = triggerUrl;
             return this;
         }

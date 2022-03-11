@@ -22,10 +22,10 @@ public final class FuotaTaskLoRaWAN {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"rfRegion","startTime"})
+    @OutputCustomType.Constructor
     private FuotaTaskLoRaWAN(
-        String rfRegion,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("rfRegion") String rfRegion,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.rfRegion = rfRegion;
         this.startTime = startTime;
     }
@@ -67,12 +67,12 @@ public final class FuotaTaskLoRaWAN {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

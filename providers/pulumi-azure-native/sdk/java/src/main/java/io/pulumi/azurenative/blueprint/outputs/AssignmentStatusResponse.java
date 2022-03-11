@@ -26,11 +26,11 @@ public final class AssignmentStatusResponse {
      */
     private final String timeCreated;
 
-    @OutputCustomType.Constructor({"lastModified","managedResources","timeCreated"})
+    @OutputCustomType.Constructor
     private AssignmentStatusResponse(
-        String lastModified,
-        List<String> managedResources,
-        String timeCreated) {
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("managedResources") List<String> managedResources,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated) {
         this.lastModified = lastModified;
         this.managedResources = managedResources;
         this.timeCreated = timeCreated;
@@ -82,17 +82,17 @@ public final class AssignmentStatusResponse {
     	      this.timeCreated = defaults.timeCreated;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setManagedResources(List<String> managedResources) {
+        public Builder managedResources(List<String> managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }

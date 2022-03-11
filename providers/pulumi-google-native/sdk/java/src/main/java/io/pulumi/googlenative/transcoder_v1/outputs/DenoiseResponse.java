@@ -21,10 +21,10 @@ public final class DenoiseResponse {
      */
     private final String tune;
 
-    @OutputCustomType.Constructor({"strength","tune"})
+    @OutputCustomType.Constructor
     private DenoiseResponse(
-        Double strength,
-        String tune) {
+        @OutputCustomType.Parameter("strength") Double strength,
+        @OutputCustomType.Parameter("tune") String tune) {
         this.strength = strength;
         this.tune = tune;
     }
@@ -66,12 +66,12 @@ public final class DenoiseResponse {
     	      this.tune = defaults.tune;
         }
 
-        public Builder setStrength(Double strength) {
+        public Builder strength(Double strength) {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }
 
-        public Builder setTune(String tune) {
+        public Builder tune(String tune) {
             this.tune = Objects.requireNonNull(tune);
             return this;
         }

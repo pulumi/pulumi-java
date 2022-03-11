@@ -50,15 +50,15 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"classification","classificationComment","classificationReason","labels","owner","severity","status"})
+    @OutputCustomType.Constructor
     private AutomationRuleModifyPropertiesActionResponseActionConfiguration(
-        @Nullable String classification,
-        @Nullable String classificationComment,
-        @Nullable String classificationReason,
-        @Nullable List<IncidentLabelResponse> labels,
-        @Nullable IncidentOwnerInfoResponse owner,
-        @Nullable String severity,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("classification") @Nullable String classification,
+        @OutputCustomType.Parameter("classificationComment") @Nullable String classificationComment,
+        @OutputCustomType.Parameter("classificationReason") @Nullable String classificationReason,
+        @OutputCustomType.Parameter("labels") @Nullable List<IncidentLabelResponse> labels,
+        @OutputCustomType.Parameter("owner") @Nullable IncidentOwnerInfoResponse owner,
+        @OutputCustomType.Parameter("severity") @Nullable String severity,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.classification = classification;
         this.classificationComment = classificationComment;
         this.classificationReason = classificationReason;
@@ -150,37 +150,37 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     	      this.status = defaults.status;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable String classificationComment) {
+        public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable String classificationReason) {
+        public Builder classificationReason(@Nullable String classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<IncidentLabelResponse> labels) {
+        public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setOwner(@Nullable IncidentOwnerInfoResponse owner) {
+        public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

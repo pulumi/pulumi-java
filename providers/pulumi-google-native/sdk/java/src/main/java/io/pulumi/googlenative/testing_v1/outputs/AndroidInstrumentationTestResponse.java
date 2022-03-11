@@ -59,17 +59,17 @@ public final class AndroidInstrumentationTestResponse {
      */
     private final List<String> testTargets;
 
-    @OutputCustomType.Constructor({"appApk","appBundle","appPackageId","orchestratorOption","shardingOption","testApk","testPackageId","testRunnerClass","testTargets"})
+    @OutputCustomType.Constructor
     private AndroidInstrumentationTestResponse(
-        FileReferenceResponse appApk,
-        AppBundleResponse appBundle,
-        String appPackageId,
-        String orchestratorOption,
-        ShardingOptionResponse shardingOption,
-        FileReferenceResponse testApk,
-        String testPackageId,
-        String testRunnerClass,
-        List<String> testTargets) {
+        @OutputCustomType.Parameter("appApk") FileReferenceResponse appApk,
+        @OutputCustomType.Parameter("appBundle") AppBundleResponse appBundle,
+        @OutputCustomType.Parameter("appPackageId") String appPackageId,
+        @OutputCustomType.Parameter("orchestratorOption") String orchestratorOption,
+        @OutputCustomType.Parameter("shardingOption") ShardingOptionResponse shardingOption,
+        @OutputCustomType.Parameter("testApk") FileReferenceResponse testApk,
+        @OutputCustomType.Parameter("testPackageId") String testPackageId,
+        @OutputCustomType.Parameter("testRunnerClass") String testRunnerClass,
+        @OutputCustomType.Parameter("testTargets") List<String> testTargets) {
         this.appApk = appApk;
         this.appBundle = appBundle;
         this.appPackageId = appPackageId;
@@ -181,47 +181,47 @@ public final class AndroidInstrumentationTestResponse {
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setAppApk(FileReferenceResponse appApk) {
+        public Builder appApk(FileReferenceResponse appApk) {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
 
-        public Builder setAppBundle(AppBundleResponse appBundle) {
+        public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(String appPackageId) {
+        public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
 
-        public Builder setOrchestratorOption(String orchestratorOption) {
+        public Builder orchestratorOption(String orchestratorOption) {
             this.orchestratorOption = Objects.requireNonNull(orchestratorOption);
             return this;
         }
 
-        public Builder setShardingOption(ShardingOptionResponse shardingOption) {
+        public Builder shardingOption(ShardingOptionResponse shardingOption) {
             this.shardingOption = Objects.requireNonNull(shardingOption);
             return this;
         }
 
-        public Builder setTestApk(FileReferenceResponse testApk) {
+        public Builder testApk(FileReferenceResponse testApk) {
             this.testApk = Objects.requireNonNull(testApk);
             return this;
         }
 
-        public Builder setTestPackageId(String testPackageId) {
+        public Builder testPackageId(String testPackageId) {
             this.testPackageId = Objects.requireNonNull(testPackageId);
             return this;
         }
 
-        public Builder setTestRunnerClass(String testRunnerClass) {
+        public Builder testRunnerClass(String testRunnerClass) {
             this.testRunnerClass = Objects.requireNonNull(testRunnerClass);
             return this;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }

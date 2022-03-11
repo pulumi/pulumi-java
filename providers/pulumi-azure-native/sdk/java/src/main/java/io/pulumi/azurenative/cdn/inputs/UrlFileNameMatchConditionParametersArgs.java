@@ -123,52 +123,52 @@ public final class UrlFileNameMatchConditionParametersArgs extends io.pulumi.res
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setMatchValues(@Nullable Input<List<String>> matchValues) {
+        public Builder matchValues(@Nullable Input<List<String>> matchValues) {
             this.matchValues = matchValues;
             return this;
         }
 
-        public Builder setMatchValues(@Nullable List<String> matchValues) {
+        public Builder matchValues(@Nullable List<String> matchValues) {
             this.matchValues = Input.ofNullable(matchValues);
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Input<Boolean> negateCondition) {
+        public Builder negateCondition(@Nullable Input<Boolean> negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = Input.ofNullable(negateCondition);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setOperator(Input<Either<String,UrlFileNameOperator>> operator) {
+        public Builder operator(Input<Either<String,UrlFileNameOperator>> operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setOperator(Either<String,UrlFileNameOperator> operator) {
+        public Builder operator(Either<String,UrlFileNameOperator> operator) {
             this.operator = Input.of(Objects.requireNonNull(operator));
             return this;
         }
 
-        public Builder setTransforms(@Nullable Input<List<Either<String,Transform>>> transforms) {
+        public Builder transforms(@Nullable Input<List<Either<String,Transform>>> transforms) {
             this.transforms = transforms;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<Either<String,Transform>> transforms) {
+        public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
             this.transforms = Input.ofNullable(transforms);
             return this;
         }

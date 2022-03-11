@@ -28,11 +28,11 @@ public final class MedianStoppingPolicyResponse {
      */
     private final String policyType;
 
-    @OutputCustomType.Constructor({"delayEvaluation","evaluationInterval","policyType"})
+    @OutputCustomType.Constructor
     private MedianStoppingPolicyResponse(
-        @Nullable Integer delayEvaluation,
-        @Nullable Integer evaluationInterval,
-        String policyType) {
+        @OutputCustomType.Parameter("delayEvaluation") @Nullable Integer delayEvaluation,
+        @OutputCustomType.Parameter("evaluationInterval") @Nullable Integer evaluationInterval,
+        @OutputCustomType.Parameter("policyType") String policyType) {
         this.delayEvaluation = delayEvaluation;
         this.evaluationInterval = evaluationInterval;
         this.policyType = policyType;
@@ -84,17 +84,17 @@ public final class MedianStoppingPolicyResponse {
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder setDelayEvaluation(@Nullable Integer delayEvaluation) {
+        public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
             this.delayEvaluation = delayEvaluation;
             return this;
         }
 
-        public Builder setEvaluationInterval(@Nullable Integer evaluationInterval) {
+        public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
             this.evaluationInterval = evaluationInterval;
             return this;
         }
 
-        public Builder setPolicyType(String policyType) {
+        public Builder policyType(String policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }

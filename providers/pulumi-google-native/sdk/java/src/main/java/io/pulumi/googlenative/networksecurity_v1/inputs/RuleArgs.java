@@ -76,22 +76,22 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setDestinations(@Nullable Input<List<DestinationArgs>> destinations) {
+        public Builder destinations(@Nullable Input<List<DestinationArgs>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<DestinationArgs> destinations) {
+        public Builder destinations(@Nullable List<DestinationArgs> destinations) {
             this.destinations = Input.ofNullable(destinations);
             return this;
         }
 
-        public Builder setSources(@Nullable Input<List<SourceArgs>> sources) {
+        public Builder sources(@Nullable Input<List<SourceArgs>> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setSources(@Nullable List<SourceArgs> sources) {
+        public Builder sources(@Nullable List<SourceArgs> sources) {
             this.sources = Input.ofNullable(sources);
             return this;
         }

@@ -86,23 +86,23 @@ public final class OriginEndpointDashPackage {
      */
     private final @Nullable String utcTimingUri;
 
-    @OutputCustomType.Constructor({"adTriggers","adsOnDeliveryRestrictions","encryption","manifestLayout","manifestWindowSeconds","minBufferTimeSeconds","minUpdatePeriodSeconds","periodTriggers","profile","segmentDurationSeconds","segmentTemplateFormat","streamSelection","suggestedPresentationDelaySeconds","utcTiming","utcTimingUri"})
+    @OutputCustomType.Constructor
     private OriginEndpointDashPackage(
-        @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        @Nullable OriginEndpointDashEncryption encryption,
-        @Nullable OriginEndpointDashPackageManifestLayout manifestLayout,
-        @Nullable Integer manifestWindowSeconds,
-        @Nullable Integer minBufferTimeSeconds,
-        @Nullable Integer minUpdatePeriodSeconds,
-        @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers,
-        @Nullable OriginEndpointDashPackageProfile profile,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat,
-        @Nullable OriginEndpointStreamSelection streamSelection,
-        @Nullable Integer suggestedPresentationDelaySeconds,
-        @Nullable OriginEndpointDashPackageUtcTiming utcTiming,
-        @Nullable String utcTimingUri) {
+        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers,
+        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @OutputCustomType.Parameter("encryption") @Nullable OriginEndpointDashEncryption encryption,
+        @OutputCustomType.Parameter("manifestLayout") @Nullable OriginEndpointDashPackageManifestLayout manifestLayout,
+        @OutputCustomType.Parameter("manifestWindowSeconds") @Nullable Integer manifestWindowSeconds,
+        @OutputCustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
+        @OutputCustomType.Parameter("minUpdatePeriodSeconds") @Nullable Integer minUpdatePeriodSeconds,
+        @OutputCustomType.Parameter("periodTriggers") @Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers,
+        @OutputCustomType.Parameter("profile") @Nullable OriginEndpointDashPackageProfile profile,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("segmentTemplateFormat") @Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat,
+        @OutputCustomType.Parameter("streamSelection") @Nullable OriginEndpointStreamSelection streamSelection,
+        @OutputCustomType.Parameter("suggestedPresentationDelaySeconds") @Nullable Integer suggestedPresentationDelaySeconds,
+        @OutputCustomType.Parameter("utcTiming") @Nullable OriginEndpointDashPackageUtcTiming utcTiming,
+        @OutputCustomType.Parameter("utcTimingUri") @Nullable String utcTimingUri) {
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
         this.encryption = encryption;
@@ -262,77 +262,77 @@ public final class OriginEndpointDashPackage {
     	      this.utcTimingUri = defaults.utcTimingUri;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointDashPackageAdTriggersItem> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setEncryption(@Nullable OriginEndpointDashEncryption encryption) {
+        public Builder encryption(@Nullable OriginEndpointDashEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setManifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
+        public Builder manifestLayout(@Nullable OriginEndpointDashPackageManifestLayout manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
 
-        public Builder setManifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
+        public Builder manifestWindowSeconds(@Nullable Integer manifestWindowSeconds) {
             this.manifestWindowSeconds = manifestWindowSeconds;
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
-        public Builder setMinUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
+        public Builder minUpdatePeriodSeconds(@Nullable Integer minUpdatePeriodSeconds) {
             this.minUpdatePeriodSeconds = minUpdatePeriodSeconds;
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
+        public Builder periodTriggers(@Nullable List<OriginEndpointDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
 
-        public Builder setProfile(@Nullable OriginEndpointDashPackageProfile profile) {
+        public Builder profile(@Nullable OriginEndpointDashPackageProfile profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable OriginEndpointDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable OriginEndpointStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }
 
-        public Builder setSuggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
+        public Builder suggestedPresentationDelaySeconds(@Nullable Integer suggestedPresentationDelaySeconds) {
             this.suggestedPresentationDelaySeconds = suggestedPresentationDelaySeconds;
             return this;
         }
 
-        public Builder setUtcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
+        public Builder utcTiming(@Nullable OriginEndpointDashPackageUtcTiming utcTiming) {
             this.utcTiming = utcTiming;
             return this;
         }
 
-        public Builder setUtcTimingUri(@Nullable String utcTimingUri) {
+        public Builder utcTimingUri(@Nullable String utcTimingUri) {
             this.utcTimingUri = utcTimingUri;
             return this;
         }

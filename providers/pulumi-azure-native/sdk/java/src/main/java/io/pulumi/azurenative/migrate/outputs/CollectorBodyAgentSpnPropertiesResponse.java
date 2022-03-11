@@ -37,13 +37,13 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"applicationId","audience","authority","objectId","tenantId"})
+    @OutputCustomType.Constructor
     private CollectorBodyAgentSpnPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String authority,
-        @Nullable String objectId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.applicationId = applicationId;
         this.audience = audience;
         this.authority = authority;
@@ -115,27 +115,27 @@ public final class CollectorBodyAgentSpnPropertiesResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

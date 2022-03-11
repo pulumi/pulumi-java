@@ -39,13 +39,13 @@ public final class StorageOSPersistentVolumeSource {
      */
     private final @Nullable String volumeNamespace;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","secretRef","volumeName","volumeNamespace"})
+    @OutputCustomType.Constructor
     private StorageOSPersistentVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        @Nullable ObjectReference secretRef,
-        @Nullable String volumeName,
-        @Nullable String volumeNamespace) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable ObjectReference secretRef,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName,
+        @OutputCustomType.Parameter("volumeNamespace") @Nullable String volumeNamespace) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;
@@ -117,27 +117,27 @@ public final class StorageOSPersistentVolumeSource {
     	      this.volumeNamespace = defaults.volumeNamespace;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable ObjectReference secretRef) {
+        public Builder secretRef(@Nullable ObjectReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeNamespace(@Nullable String volumeNamespace) {
+        public Builder volumeNamespace(@Nullable String volumeNamespace) {
             this.volumeNamespace = volumeNamespace;
             return this;
         }

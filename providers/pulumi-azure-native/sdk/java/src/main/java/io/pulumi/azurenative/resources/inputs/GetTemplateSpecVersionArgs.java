@@ -84,17 +84,17 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
     	      this.templateSpecVersion = defaults.templateSpecVersion;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTemplateSpecName(String templateSpecName) {
+        public Builder templateSpecName(String templateSpecName) {
             this.templateSpecName = Objects.requireNonNull(templateSpecName);
             return this;
         }
 
-        public Builder setTemplateSpecVersion(String templateSpecVersion) {
+        public Builder templateSpecVersion(String templateSpecVersion) {
             this.templateSpecVersion = Objects.requireNonNull(templateSpecVersion);
             return this;
         }

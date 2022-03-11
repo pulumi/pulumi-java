@@ -35,12 +35,12 @@ public final class DashboardParameters {
      */
     private final @Nullable List<DashboardStringParameter> stringParameters;
 
-    @OutputCustomType.Constructor({"dateTimeParameters","decimalParameters","integerParameters","stringParameters"})
+    @OutputCustomType.Constructor
     private DashboardParameters(
-        @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
-        @Nullable List<DashboardDecimalParameter> decimalParameters,
-        @Nullable List<DashboardIntegerParameter> integerParameters,
-        @Nullable List<DashboardStringParameter> stringParameters) {
+        @OutputCustomType.Parameter("dateTimeParameters") @Nullable List<DashboardDateTimeParameter> dateTimeParameters,
+        @OutputCustomType.Parameter("decimalParameters") @Nullable List<DashboardDecimalParameter> decimalParameters,
+        @OutputCustomType.Parameter("integerParameters") @Nullable List<DashboardIntegerParameter> integerParameters,
+        @OutputCustomType.Parameter("stringParameters") @Nullable List<DashboardStringParameter> stringParameters) {
         this.dateTimeParameters = dateTimeParameters;
         this.decimalParameters = decimalParameters;
         this.integerParameters = integerParameters;
@@ -102,22 +102,22 @@ public final class DashboardParameters {
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder setDateTimeParameters(@Nullable List<DashboardDateTimeParameter> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameter> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable List<DashboardDecimalParameter> decimalParameters) {
+        public Builder decimalParameters(@Nullable List<DashboardDecimalParameter> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable List<DashboardIntegerParameter> integerParameters) {
+        public Builder integerParameters(@Nullable List<DashboardIntegerParameter> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
-        public Builder setStringParameters(@Nullable List<DashboardStringParameter> stringParameters) {
+        public Builder stringParameters(@Nullable List<DashboardStringParameter> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }

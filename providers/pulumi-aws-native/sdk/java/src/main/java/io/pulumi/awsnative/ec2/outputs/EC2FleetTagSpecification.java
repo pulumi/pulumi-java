@@ -16,10 +16,10 @@ public final class EC2FleetTagSpecification {
     private final @Nullable EC2FleetTagSpecificationResourceType resourceType;
     private final @Nullable List<EC2FleetTag> tags;
 
-    @OutputCustomType.Constructor({"resourceType","tags"})
+    @OutputCustomType.Constructor
     private EC2FleetTagSpecification(
-        @Nullable EC2FleetTagSpecificationResourceType resourceType,
-        @Nullable List<EC2FleetTag> tags) {
+        @OutputCustomType.Parameter("resourceType") @Nullable EC2FleetTagSpecificationResourceType resourceType,
+        @OutputCustomType.Parameter("tags") @Nullable List<EC2FleetTag> tags) {
         this.resourceType = resourceType;
         this.tags = tags;
     }
@@ -53,12 +53,12 @@ public final class EC2FleetTagSpecification {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
+        public Builder resourceType(@Nullable EC2FleetTagSpecificationResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EC2FleetTag> tags) {
+        public Builder tags(@Nullable List<EC2FleetTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -18,10 +18,10 @@ public final class GetServiceTemplateSpecVolume {
     private final String name;
     private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
-    @OutputCustomType.Constructor({"name","secrets"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecVolume(
-        String name,
-        List<GetServiceTemplateSpecVolumeSecret> secrets) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secrets") List<GetServiceTemplateSpecVolumeSecret> secrets) {
         this.name = name;
         this.secrets = secrets;
     }
@@ -59,12 +59,12 @@ public final class GetServiceTemplateSpecVolume {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecrets(List<GetServiceTemplateSpecVolumeSecret> secrets) {
+        public Builder secrets(List<GetServiceTemplateSpecVolumeSecret> secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }

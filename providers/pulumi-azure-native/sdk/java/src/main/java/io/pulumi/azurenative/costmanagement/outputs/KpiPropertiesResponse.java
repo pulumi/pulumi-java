@@ -28,11 +28,11 @@ public final class KpiPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"enabled","id","type"})
+    @OutputCustomType.Constructor
     private KpiPropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable String id,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.enabled = enabled;
         this.id = id;
         this.type = type;
@@ -84,17 +84,17 @@ public final class KpiPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

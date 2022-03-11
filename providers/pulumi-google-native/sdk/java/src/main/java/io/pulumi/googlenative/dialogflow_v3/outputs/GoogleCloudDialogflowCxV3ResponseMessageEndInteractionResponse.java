@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ResponseMessageEndInteractionResponse() {
     }
 

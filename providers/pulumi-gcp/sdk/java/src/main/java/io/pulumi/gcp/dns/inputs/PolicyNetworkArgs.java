@@ -54,12 +54,12 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setNetworkUrl(Input<String> networkUrl) {
+        public Builder networkUrl(Input<String> networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }
 
-        public Builder setNetworkUrl(String networkUrl) {
+        public Builder networkUrl(String networkUrl) {
             this.networkUrl = Input.of(Objects.requireNonNull(networkUrl));
             return this;
         }

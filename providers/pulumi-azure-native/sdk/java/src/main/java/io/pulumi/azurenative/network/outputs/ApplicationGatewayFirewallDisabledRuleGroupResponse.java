@@ -23,10 +23,10 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
      */
     private final @Nullable List<Integer> rules;
 
-    @OutputCustomType.Constructor({"ruleGroupName","rules"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayFirewallDisabledRuleGroupResponse(
-        String ruleGroupName,
-        @Nullable List<Integer> rules) {
+        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @OutputCustomType.Parameter("rules") @Nullable List<Integer> rules) {
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;
     }
@@ -68,12 +68,12 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRules(@Nullable List<Integer> rules) {
+        public Builder rules(@Nullable List<Integer> rules) {
             this.rules = rules;
             return this;
         }

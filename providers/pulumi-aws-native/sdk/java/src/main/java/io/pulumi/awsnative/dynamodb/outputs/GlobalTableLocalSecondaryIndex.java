@@ -16,11 +16,11 @@ public final class GlobalTableLocalSecondaryIndex {
     private final List<GlobalTableKeySchema> keySchema;
     private final GlobalTableProjection projection;
 
-    @OutputCustomType.Constructor({"indexName","keySchema","projection"})
+    @OutputCustomType.Constructor
     private GlobalTableLocalSecondaryIndex(
-        String indexName,
-        List<GlobalTableKeySchema> keySchema,
-        GlobalTableProjection projection) {
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("keySchema") List<GlobalTableKeySchema> keySchema,
+        @OutputCustomType.Parameter("projection") GlobalTableProjection projection) {
         this.indexName = indexName;
         this.keySchema = keySchema;
         this.projection = projection;
@@ -60,17 +60,17 @@ public final class GlobalTableLocalSecondaryIndex {
     	      this.projection = defaults.projection;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setKeySchema(List<GlobalTableKeySchema> keySchema) {
+        public Builder keySchema(List<GlobalTableKeySchema> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
-        public Builder setProjection(GlobalTableProjection projection) {
+        public Builder projection(GlobalTableProjection projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }

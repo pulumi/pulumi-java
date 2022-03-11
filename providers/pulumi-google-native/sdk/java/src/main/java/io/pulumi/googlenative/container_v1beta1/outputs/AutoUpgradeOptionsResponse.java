@@ -20,10 +20,10 @@ public final class AutoUpgradeOptionsResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"autoUpgradeStartTime","description"})
+    @OutputCustomType.Constructor
     private AutoUpgradeOptionsResponse(
-        String autoUpgradeStartTime,
-        String description) {
+        @OutputCustomType.Parameter("autoUpgradeStartTime") String autoUpgradeStartTime,
+        @OutputCustomType.Parameter("description") String description) {
         this.autoUpgradeStartTime = autoUpgradeStartTime;
         this.description = description;
     }
@@ -65,12 +65,12 @@ public final class AutoUpgradeOptionsResponse {
     	      this.description = defaults.description;
         }
 
-        public Builder setAutoUpgradeStartTime(String autoUpgradeStartTime) {
+        public Builder autoUpgradeStartTime(String autoUpgradeStartTime) {
             this.autoUpgradeStartTime = Objects.requireNonNull(autoUpgradeStartTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

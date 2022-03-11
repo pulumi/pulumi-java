@@ -160,72 +160,72 @@ public final class GooglePrivacyDlpV2InspectConfigArgs extends io.pulumi.resourc
     	      this.ruleSet = defaults.ruleSet;
         }
 
-        public Builder setCustomInfoTypes(@Nullable Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable Input<List<GooglePrivacyDlpV2CustomInfoTypeArgs>> customInfoTypes) {
             this.customInfoTypes = customInfoTypes;
             return this;
         }
 
-        public Builder setCustomInfoTypes(@Nullable List<GooglePrivacyDlpV2CustomInfoTypeArgs> customInfoTypes) {
+        public Builder customInfoTypes(@Nullable List<GooglePrivacyDlpV2CustomInfoTypeArgs> customInfoTypes) {
             this.customInfoTypes = Input.ofNullable(customInfoTypes);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Input<Boolean> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Input<Boolean> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder setIncludeQuote(@Nullable Input<Boolean> includeQuote) {
+        public Builder includeQuote(@Nullable Input<Boolean> includeQuote) {
             this.includeQuote = includeQuote;
             return this;
         }
 
-        public Builder setIncludeQuote(@Nullable Boolean includeQuote) {
+        public Builder includeQuote(@Nullable Boolean includeQuote) {
             this.includeQuote = Input.ofNullable(includeQuote);
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
+        public Builder infoTypes(@Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes) {
             this.infoTypes = infoTypes;
             return this;
         }
 
-        public Builder setInfoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
+        public Builder infoTypes(@Nullable List<GooglePrivacyDlpV2InfoTypeArgs> infoTypes) {
             this.infoTypes = Input.ofNullable(infoTypes);
             return this;
         }
 
-        public Builder setLimits(@Nullable Input<GooglePrivacyDlpV2FindingLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<GooglePrivacyDlpV2FindingLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable GooglePrivacyDlpV2FindingLimitsArgs limits) {
+        public Builder limits(@Nullable GooglePrivacyDlpV2FindingLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setMinLikelihood(@Nullable Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood) {
+        public Builder minLikelihood(@Nullable Input<GooglePrivacyDlpV2InspectConfigMinLikelihood> minLikelihood) {
             this.minLikelihood = minLikelihood;
             return this;
         }
 
-        public Builder setMinLikelihood(@Nullable GooglePrivacyDlpV2InspectConfigMinLikelihood minLikelihood) {
+        public Builder minLikelihood(@Nullable GooglePrivacyDlpV2InspectConfigMinLikelihood minLikelihood) {
             this.minLikelihood = Input.ofNullable(minLikelihood);
             return this;
         }
 
-        public Builder setRuleSet(@Nullable Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet) {
+        public Builder ruleSet(@Nullable Input<List<GooglePrivacyDlpV2InspectionRuleSetArgs>> ruleSet) {
             this.ruleSet = ruleSet;
             return this;
         }
 
-        public Builder setRuleSet(@Nullable List<GooglePrivacyDlpV2InspectionRuleSetArgs> ruleSet) {
+        public Builder ruleSet(@Nullable List<GooglePrivacyDlpV2InspectionRuleSetArgs> ruleSet) {
             this.ruleSet = Input.ofNullable(ruleSet);
             return this;
         }

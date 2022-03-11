@@ -37,13 +37,13 @@ public final class GetServerTrustGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"groupMembers","id","name","trustScopes","type"})
+    @OutputCustomType.Constructor
     private GetServerTrustGroupResult(
-        List<ServerInfoResponse> groupMembers,
-        String id,
-        String name,
-        List<String> trustScopes,
-        String type) {
+        @OutputCustomType.Parameter("groupMembers") List<ServerInfoResponse> groupMembers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("trustScopes") List<String> trustScopes,
+        @OutputCustomType.Parameter("type") String type) {
         this.groupMembers = groupMembers;
         this.id = id;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetServerTrustGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setGroupMembers(List<ServerInfoResponse> groupMembers) {
+        public Builder groupMembers(List<ServerInfoResponse> groupMembers) {
             this.groupMembers = Objects.requireNonNull(groupMembers);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTrustScopes(List<String> trustScopes) {
+        public Builder trustScopes(List<String> trustScopes) {
             this.trustScopes = Objects.requireNonNull(trustScopes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

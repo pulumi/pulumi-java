@@ -30,19 +30,19 @@ public final class GetNetworkInsightsAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAnalysisTag> tags;
 
-    @OutputCustomType.Constructor({"alternatePathHints","explanations","forwardPathComponents","networkInsightsAnalysisArn","networkInsightsAnalysisId","networkPathFound","returnPathComponents","startDate","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAnalysisResult(
-        @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
-        @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
-        @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
-        @Nullable String networkInsightsAnalysisArn,
-        @Nullable String networkInsightsAnalysisId,
-        @Nullable Boolean networkPathFound,
-        @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
-        @Nullable String startDate,
-        @Nullable NetworkInsightsAnalysisStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<NetworkInsightsAnalysisTag> tags) {
+        @OutputCustomType.Parameter("alternatePathHints") @Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints,
+        @OutputCustomType.Parameter("explanations") @Nullable List<NetworkInsightsAnalysisExplanation> explanations,
+        @OutputCustomType.Parameter("forwardPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents,
+        @OutputCustomType.Parameter("networkInsightsAnalysisArn") @Nullable String networkInsightsAnalysisArn,
+        @OutputCustomType.Parameter("networkInsightsAnalysisId") @Nullable String networkInsightsAnalysisId,
+        @OutputCustomType.Parameter("networkPathFound") @Nullable Boolean networkPathFound,
+        @OutputCustomType.Parameter("returnPathComponents") @Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAnalysisStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAnalysisTag> tags) {
         this.alternatePathHints = alternatePathHints;
         this.explanations = explanations;
         this.forwardPathComponents = forwardPathComponents;
@@ -130,57 +130,57 @@ public final class GetNetworkInsightsAnalysisResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAlternatePathHints(@Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints) {
+        public Builder alternatePathHints(@Nullable List<NetworkInsightsAnalysisAlternatePathHint> alternatePathHints) {
             this.alternatePathHints = alternatePathHints;
             return this;
         }
 
-        public Builder setExplanations(@Nullable List<NetworkInsightsAnalysisExplanation> explanations) {
+        public Builder explanations(@Nullable List<NetworkInsightsAnalysisExplanation> explanations) {
             this.explanations = explanations;
             return this;
         }
 
-        public Builder setForwardPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents) {
+        public Builder forwardPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> forwardPathComponents) {
             this.forwardPathComponents = forwardPathComponents;
             return this;
         }
 
-        public Builder setNetworkInsightsAnalysisArn(@Nullable String networkInsightsAnalysisArn) {
+        public Builder networkInsightsAnalysisArn(@Nullable String networkInsightsAnalysisArn) {
             this.networkInsightsAnalysisArn = networkInsightsAnalysisArn;
             return this;
         }
 
-        public Builder setNetworkInsightsAnalysisId(@Nullable String networkInsightsAnalysisId) {
+        public Builder networkInsightsAnalysisId(@Nullable String networkInsightsAnalysisId) {
             this.networkInsightsAnalysisId = networkInsightsAnalysisId;
             return this;
         }
 
-        public Builder setNetworkPathFound(@Nullable Boolean networkPathFound) {
+        public Builder networkPathFound(@Nullable Boolean networkPathFound) {
             this.networkPathFound = networkPathFound;
             return this;
         }
 
-        public Builder setReturnPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents) {
+        public Builder returnPathComponents(@Nullable List<NetworkInsightsAnalysisPathComponent> returnPathComponents) {
             this.returnPathComponents = returnPathComponents;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStatus(@Nullable NetworkInsightsAnalysisStatus status) {
+        public Builder status(@Nullable NetworkInsightsAnalysisStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAnalysisTag> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAnalysisTag> tags) {
             this.tags = tags;
             return this;
         }

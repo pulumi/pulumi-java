@@ -42,14 +42,14 @@ public final class ResourceFileResponse {
      */
     private final @Nullable String storageContainerUrl;
 
-    @OutputCustomType.Constructor({"autoStorageContainerName","blobPrefix","fileMode","filePath","httpUrl","storageContainerUrl"})
+    @OutputCustomType.Constructor
     private ResourceFileResponse(
-        @Nullable String autoStorageContainerName,
-        @Nullable String blobPrefix,
-        @Nullable String fileMode,
-        @Nullable String filePath,
-        @Nullable String httpUrl,
-        @Nullable String storageContainerUrl) {
+        @OutputCustomType.Parameter("autoStorageContainerName") @Nullable String autoStorageContainerName,
+        @OutputCustomType.Parameter("blobPrefix") @Nullable String blobPrefix,
+        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("httpUrl") @Nullable String httpUrl,
+        @OutputCustomType.Parameter("storageContainerUrl") @Nullable String storageContainerUrl) {
         this.autoStorageContainerName = autoStorageContainerName;
         this.blobPrefix = blobPrefix;
         this.fileMode = fileMode;
@@ -131,32 +131,32 @@ public final class ResourceFileResponse {
     	      this.storageContainerUrl = defaults.storageContainerUrl;
         }
 
-        public Builder setAutoStorageContainerName(@Nullable String autoStorageContainerName) {
+        public Builder autoStorageContainerName(@Nullable String autoStorageContainerName) {
             this.autoStorageContainerName = autoStorageContainerName;
             return this;
         }
 
-        public Builder setBlobPrefix(@Nullable String blobPrefix) {
+        public Builder blobPrefix(@Nullable String blobPrefix) {
             this.blobPrefix = blobPrefix;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setHttpUrl(@Nullable String httpUrl) {
+        public Builder httpUrl(@Nullable String httpUrl) {
             this.httpUrl = httpUrl;
             return this;
         }
 
-        public Builder setStorageContainerUrl(@Nullable String storageContainerUrl) {
+        public Builder storageContainerUrl(@Nullable String storageContainerUrl) {
             this.storageContainerUrl = storageContainerUrl;
             return this;
         }

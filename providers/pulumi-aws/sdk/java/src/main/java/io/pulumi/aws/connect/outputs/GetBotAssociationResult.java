@@ -18,11 +18,11 @@ public final class GetBotAssociationResult {
     private final String instanceId;
     private final GetBotAssociationLexBot lexBot;
 
-    @OutputCustomType.Constructor({"id","instanceId","lexBot"})
+    @OutputCustomType.Constructor
     private GetBotAssociationResult(
-        String id,
-        String instanceId,
-        GetBotAssociationLexBot lexBot) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("lexBot") GetBotAssociationLexBot lexBot) {
         this.id = id;
         this.instanceId = instanceId;
         this.lexBot = lexBot;
@@ -66,17 +66,17 @@ public final class GetBotAssociationResult {
     	      this.lexBot = defaults.lexBot;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLexBot(GetBotAssociationLexBot lexBot) {
+        public Builder lexBot(GetBotAssociationLexBot lexBot) {
             this.lexBot = Objects.requireNonNull(lexBot);
             return this;
         }

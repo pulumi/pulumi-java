@@ -27,11 +27,11 @@ public final class TimeWindowResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"end","start","timeZone"})
+    @OutputCustomType.Constructor
     private TimeWindowResponse(
-        String end,
-        String start,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.end = end;
         this.start = start;
         this.timeZone = timeZone;
@@ -83,17 +83,17 @@ public final class TimeWindowResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

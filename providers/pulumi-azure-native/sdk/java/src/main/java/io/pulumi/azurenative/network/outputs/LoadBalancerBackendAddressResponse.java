@@ -43,14 +43,14 @@ public final class LoadBalancerBackendAddressResponse {
      */
     private final @Nullable SubResourceResponse virtualNetwork;
 
-    @OutputCustomType.Constructor({"ipAddress","loadBalancerFrontendIPConfiguration","name","networkInterfaceIPConfiguration","subnet","virtualNetwork"})
+    @OutputCustomType.Constructor
     private LoadBalancerBackendAddressResponse(
-        @Nullable String ipAddress,
-        @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
-        @Nullable String name,
-        SubResourceResponse networkInterfaceIPConfiguration,
-        @Nullable SubResourceResponse subnet,
-        @Nullable SubResourceResponse virtualNetwork) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("loadBalancerFrontendIPConfiguration") @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkInterfaceIPConfiguration") SubResourceResponse networkInterfaceIPConfiguration,
+        @OutputCustomType.Parameter("subnet") @Nullable SubResourceResponse subnet,
+        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork) {
         this.ipAddress = ipAddress;
         this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
         this.name = name;
@@ -132,32 +132,32 @@ public final class LoadBalancerBackendAddressResponse {
     	      this.virtualNetwork = defaults.virtualNetwork;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIPConfiguration(@Nullable SubResourceResponse loadBalancerFrontendIPConfiguration) {
+        public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceResponse loadBalancerFrontendIPConfiguration) {
             this.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkInterfaceIPConfiguration(SubResourceResponse networkInterfaceIPConfiguration) {
+        public Builder networkInterfaceIPConfiguration(SubResourceResponse networkInterfaceIPConfiguration) {
             this.networkInterfaceIPConfiguration = Objects.requireNonNull(networkInterfaceIPConfiguration);
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubResourceResponse subnet) {
+        public Builder subnet(@Nullable SubResourceResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setVirtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
+        public Builder virtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
         }

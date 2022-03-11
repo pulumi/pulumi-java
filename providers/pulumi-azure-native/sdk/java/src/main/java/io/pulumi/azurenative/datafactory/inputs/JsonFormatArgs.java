@@ -172,82 +172,82 @@ public final class JsonFormatArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Input<Object> deserializer) {
+        public Builder deserializer(@Nullable Input<Object> deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = Input.ofNullable(deserializer);
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Input<Object> encodingName) {
+        public Builder encodingName(@Nullable Input<Object> encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = Input.ofNullable(encodingName);
             return this;
         }
 
-        public Builder setFilePattern(@Nullable Input<Object> filePattern) {
+        public Builder filePattern(@Nullable Input<Object> filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = Input.ofNullable(filePattern);
             return this;
         }
 
-        public Builder setJsonNodeReference(@Nullable Input<Object> jsonNodeReference) {
+        public Builder jsonNodeReference(@Nullable Input<Object> jsonNodeReference) {
             this.jsonNodeReference = jsonNodeReference;
             return this;
         }
 
-        public Builder setJsonNodeReference(@Nullable Object jsonNodeReference) {
+        public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             this.jsonNodeReference = Input.ofNullable(jsonNodeReference);
             return this;
         }
 
-        public Builder setJsonPathDefinition(@Nullable Input<Object> jsonPathDefinition) {
+        public Builder jsonPathDefinition(@Nullable Input<Object> jsonPathDefinition) {
             this.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
 
-        public Builder setJsonPathDefinition(@Nullable Object jsonPathDefinition) {
+        public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             this.jsonPathDefinition = Input.ofNullable(jsonPathDefinition);
             return this;
         }
 
-        public Builder setNestingSeparator(@Nullable Input<Object> nestingSeparator) {
+        public Builder nestingSeparator(@Nullable Input<Object> nestingSeparator) {
             this.nestingSeparator = nestingSeparator;
             return this;
         }
 
-        public Builder setNestingSeparator(@Nullable Object nestingSeparator) {
+        public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             this.nestingSeparator = Input.ofNullable(nestingSeparator);
             return this;
         }
 
-        public Builder setSerializer(@Nullable Input<Object> serializer) {
+        public Builder serializer(@Nullable Input<Object> serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = Input.ofNullable(serializer);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

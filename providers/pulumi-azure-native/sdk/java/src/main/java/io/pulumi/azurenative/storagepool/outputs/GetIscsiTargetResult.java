@@ -47,15 +47,15 @@ public final class GetIscsiTargetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","status","targetIqn","tpgs","type"})
+    @OutputCustomType.Constructor
     private GetIscsiTargetResult(
-        String id,
-        String name,
-        String provisioningState,
-        String status,
-        String targetIqn,
-        List<TargetPortalGroupResponse> tpgs,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetIqn") String targetIqn,
+        @OutputCustomType.Parameter("tpgs") List<TargetPortalGroupResponse> tpgs,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;
@@ -147,37 +147,37 @@ public final class GetIscsiTargetResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetIqn(String targetIqn) {
+        public Builder targetIqn(String targetIqn) {
             this.targetIqn = Objects.requireNonNull(targetIqn);
             return this;
         }
 
-        public Builder setTpgs(List<TargetPortalGroupResponse> tpgs) {
+        public Builder tpgs(List<TargetPortalGroupResponse> tpgs) {
             this.tpgs = Objects.requireNonNull(tpgs);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

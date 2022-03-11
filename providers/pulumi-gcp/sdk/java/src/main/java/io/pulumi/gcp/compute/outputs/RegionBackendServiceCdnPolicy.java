@@ -76,17 +76,17 @@ public final class RegionBackendServiceCdnPolicy {
      */
     private final @Nullable Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor({"cacheKeyPolicy","cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicies","serveWhileStale","signedUrlCacheMaxAgeSec"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceCdnPolicy(
-        @Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
-        @Nullable String cacheMode,
-        @Nullable Integer clientTtl,
-        @Nullable Integer defaultTtl,
-        @Nullable Integer maxTtl,
-        @Nullable Boolean negativeCaching,
-        @Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        @Nullable Integer serveWhileStale,
-        @Nullable Integer signedUrlCacheMaxAgeSec) {
+        @OutputCustomType.Parameter("cacheKeyPolicy") @Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy,
+        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicies") @Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @OutputCustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;
@@ -212,47 +212,47 @@ public final class RegionBackendServiceCdnPolicy {
     	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
         }
 
-        public Builder setCacheKeyPolicy(@Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(@Nullable RegionBackendServiceCdnPolicyCacheKeyPolicy cacheKeyPolicy) {
             this.cacheKeyPolicy = cacheKeyPolicy;
             return this;
         }
 
-        public Builder setCacheMode(@Nullable String cacheMode) {
+        public Builder cacheMode(@Nullable String cacheMode) {
             this.cacheMode = cacheMode;
             return this;
         }
 
-        public Builder setClientTtl(@Nullable Integer clientTtl) {
+        public Builder clientTtl(@Nullable Integer clientTtl) {
             this.clientTtl = clientTtl;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Integer maxTtl) {
+        public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setNegativeCaching(@Nullable Boolean negativeCaching) {
+        public Builder negativeCaching(@Nullable Boolean negativeCaching) {
             this.negativeCaching = negativeCaching;
             return this;
         }
 
-        public Builder setNegativeCachingPolicies(@Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
+        public Builder negativeCachingPolicies(@Nullable List<RegionBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = negativeCachingPolicies;
             return this;
         }
 
-        public Builder setServeWhileStale(@Nullable Integer serveWhileStale) {
+        public Builder serveWhileStale(@Nullable Integer serveWhileStale) {
             this.serveWhileStale = serveWhileStale;
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(@Nullable Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }

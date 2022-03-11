@@ -26,11 +26,11 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
      */
     private final String lastChangeDate;
 
-    @OutputCustomType.Constructor({"countOfDowngrades","countOfUpgradesAfterDowngrades","lastChangeDate"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountSkuChangeInfoResponse(
-        Double countOfDowngrades,
-        Double countOfUpgradesAfterDowngrades,
-        String lastChangeDate) {
+        @OutputCustomType.Parameter("countOfDowngrades") Double countOfDowngrades,
+        @OutputCustomType.Parameter("countOfUpgradesAfterDowngrades") Double countOfUpgradesAfterDowngrades,
+        @OutputCustomType.Parameter("lastChangeDate") String lastChangeDate) {
         this.countOfDowngrades = countOfDowngrades;
         this.countOfUpgradesAfterDowngrades = countOfUpgradesAfterDowngrades;
         this.lastChangeDate = lastChangeDate;
@@ -82,17 +82,17 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
     	      this.lastChangeDate = defaults.lastChangeDate;
         }
 
-        public Builder setCountOfDowngrades(Double countOfDowngrades) {
+        public Builder countOfDowngrades(Double countOfDowngrades) {
             this.countOfDowngrades = Objects.requireNonNull(countOfDowngrades);
             return this;
         }
 
-        public Builder setCountOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
+        public Builder countOfUpgradesAfterDowngrades(Double countOfUpgradesAfterDowngrades) {
             this.countOfUpgradesAfterDowngrades = Objects.requireNonNull(countOfUpgradesAfterDowngrades);
             return this;
         }
 
-        public Builder setLastChangeDate(String lastChangeDate) {
+        public Builder lastChangeDate(String lastChangeDate) {
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
         }

@@ -31,12 +31,12 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databases","id","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private ConnectToTargetSqlDbTaskOutputResponse(
-        Map<String,String> databases,
-        String id,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databases = databases;
         this.id = id;
         this.targetServerBrandVersion = targetServerBrandVersion;
@@ -98,22 +98,22 @@ public final class ConnectToTargetSqlDbTaskOutputResponse {
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setDatabases(Map<String,String> databases) {
+        public Builder databases(Map<String,String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

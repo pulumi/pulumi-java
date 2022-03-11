@@ -90,24 +90,24 @@ public final class GetApiProductResult {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"apiResources","approvalType","attributes","createdAt","description","displayName","environments","graphqlOperationGroup","lastModifiedAt","name","operationGroup","proxies","quota","quotaInterval","quotaTimeUnit","scopes"})
+    @OutputCustomType.Constructor
     private GetApiProductResult(
-        List<String> apiResources,
-        String approvalType,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String createdAt,
-        String description,
-        String displayName,
-        List<String> environments,
-        GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
-        String lastModifiedAt,
-        String name,
-        GoogleCloudApigeeV1OperationGroupResponse operationGroup,
-        List<String> proxies,
-        String quota,
-        String quotaInterval,
-        String quotaTimeUnit,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("apiResources") List<String> apiResources,
+        @OutputCustomType.Parameter("approvalType") String approvalType,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("environments") List<String> environments,
+        @OutputCustomType.Parameter("graphqlOperationGroup") GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationGroup") GoogleCloudApigeeV1OperationGroupResponse operationGroup,
+        @OutputCustomType.Parameter("proxies") List<String> proxies,
+        @OutputCustomType.Parameter("quota") String quota,
+        @OutputCustomType.Parameter("quotaInterval") String quotaInterval,
+        @OutputCustomType.Parameter("quotaTimeUnit") String quotaTimeUnit,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.apiResources = apiResources;
         this.approvalType = approvalType;
         this.attributes = attributes;
@@ -285,82 +285,82 @@ public final class GetApiProductResult {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setApiResources(List<String> apiResources) {
+        public Builder apiResources(List<String> apiResources) {
             this.apiResources = Objects.requireNonNull(apiResources);
             return this;
         }
 
-        public Builder setApprovalType(String approvalType) {
+        public Builder approvalType(String approvalType) {
             this.approvalType = Objects.requireNonNull(approvalType);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnvironments(List<String> environments) {
+        public Builder environments(List<String> environments) {
             this.environments = Objects.requireNonNull(environments);
             return this;
         }
 
-        public Builder setGraphqlOperationGroup(GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup) {
+        public Builder graphqlOperationGroup(GoogleCloudApigeeV1GraphQLOperationGroupResponse graphqlOperationGroup) {
             this.graphqlOperationGroup = Objects.requireNonNull(graphqlOperationGroup);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationGroup(GoogleCloudApigeeV1OperationGroupResponse operationGroup) {
+        public Builder operationGroup(GoogleCloudApigeeV1OperationGroupResponse operationGroup) {
             this.operationGroup = Objects.requireNonNull(operationGroup);
             return this;
         }
 
-        public Builder setProxies(List<String> proxies) {
+        public Builder proxies(List<String> proxies) {
             this.proxies = Objects.requireNonNull(proxies);
             return this;
         }
 
-        public Builder setQuota(String quota) {
+        public Builder quota(String quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
 
-        public Builder setQuotaInterval(String quotaInterval) {
+        public Builder quotaInterval(String quotaInterval) {
             this.quotaInterval = Objects.requireNonNull(quotaInterval);
             return this;
         }
 
-        public Builder setQuotaTimeUnit(String quotaTimeUnit) {
+        public Builder quotaTimeUnit(String quotaTimeUnit) {
             this.quotaTimeUnit = Objects.requireNonNull(quotaTimeUnit);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }

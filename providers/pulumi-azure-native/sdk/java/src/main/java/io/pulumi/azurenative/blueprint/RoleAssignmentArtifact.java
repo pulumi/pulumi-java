@@ -209,7 +209,7 @@ public class RoleAssignmentArtifact extends io.pulumi.resources.CustomResource {
     private static RoleAssignmentArtifactArgs makeArgs(RoleAssignmentArtifactArgs args) {
         var builder = args == null ? RoleAssignmentArtifactArgs.builder() : RoleAssignmentArtifactArgs.builder(args);
         return builder
-            .setKind("roleAssignment")
+            .kind("roleAssignment")
             .build();
     }
 

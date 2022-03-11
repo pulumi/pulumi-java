@@ -21,13 +21,13 @@ public final class IntegrationTask {
     private final @Nullable List<IntegrationTaskPropertiesMap> taskProperties;
     private final IntegrationTaskType taskType;
 
-    @OutputCustomType.Constructor({"connectorOperator","destinationField","sourceFields","taskProperties","taskType"})
+    @OutputCustomType.Constructor
     private IntegrationTask(
-        @Nullable IntegrationConnectorOperator connectorOperator,
-        @Nullable String destinationField,
-        List<String> sourceFields,
-        @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
-        IntegrationTaskType taskType) {
+        @OutputCustomType.Parameter("connectorOperator") @Nullable IntegrationConnectorOperator connectorOperator,
+        @OutputCustomType.Parameter("destinationField") @Nullable String destinationField,
+        @OutputCustomType.Parameter("sourceFields") List<String> sourceFields,
+        @OutputCustomType.Parameter("taskProperties") @Nullable List<IntegrationTaskPropertiesMap> taskProperties,
+        @OutputCustomType.Parameter("taskType") IntegrationTaskType taskType) {
         this.connectorOperator = connectorOperator;
         this.destinationField = destinationField;
         this.sourceFields = sourceFields;
@@ -79,27 +79,27 @@ public final class IntegrationTask {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setConnectorOperator(@Nullable IntegrationConnectorOperator connectorOperator) {
+        public Builder connectorOperator(@Nullable IntegrationConnectorOperator connectorOperator) {
             this.connectorOperator = connectorOperator;
             return this;
         }
 
-        public Builder setDestinationField(@Nullable String destinationField) {
+        public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = destinationField;
             return this;
         }
 
-        public Builder setSourceFields(List<String> sourceFields) {
+        public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
 
-        public Builder setTaskProperties(@Nullable List<IntegrationTaskPropertiesMap> taskProperties) {
+        public Builder taskProperties(@Nullable List<IntegrationTaskPropertiesMap> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
 
-        public Builder setTaskType(IntegrationTaskType taskType) {
+        public Builder taskType(IntegrationTaskType taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

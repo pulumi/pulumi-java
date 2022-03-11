@@ -39,13 +39,13 @@ public final class IpAddressResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dnsNameLabel","fqdn","ip","ports","type"})
+    @OutputCustomType.Constructor
     private IpAddressResponse(
-        @Nullable String dnsNameLabel,
-        String fqdn,
-        @Nullable String ip,
-        List<PortResponse> ports,
-        String type) {
+        @OutputCustomType.Parameter("dnsNameLabel") @Nullable String dnsNameLabel,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("ports") List<PortResponse> ports,
+        @OutputCustomType.Parameter("type") String type) {
         this.dnsNameLabel = dnsNameLabel;
         this.fqdn = fqdn;
         this.ip = ip;
@@ -117,27 +117,27 @@ public final class IpAddressResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDnsNameLabel(@Nullable String dnsNameLabel) {
+        public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
             this.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPorts(List<PortResponse> ports) {
+        public Builder ports(List<PortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

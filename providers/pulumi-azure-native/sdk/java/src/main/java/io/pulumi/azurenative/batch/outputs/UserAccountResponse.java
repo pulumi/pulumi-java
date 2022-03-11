@@ -31,13 +31,13 @@ public final class UserAccountResponse {
      */
     private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
-    @OutputCustomType.Constructor({"elevationLevel","linuxUserConfiguration","name","password","windowsUserConfiguration"})
+    @OutputCustomType.Constructor
     private UserAccountResponse(
-        @Nullable String elevationLevel,
-        @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
-        String name,
-        String password,
-        @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
+        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @OutputCustomType.Parameter("linuxUserConfiguration") @Nullable LinuxUserConfigurationResponse linuxUserConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("windowsUserConfiguration") @Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
         this.elevationLevel = elevationLevel;
         this.linuxUserConfiguration = linuxUserConfiguration;
         this.name = name;
@@ -101,27 +101,27 @@ public final class UserAccountResponse {
     	      this.windowsUserConfiguration = defaults.windowsUserConfiguration;
         }
 
-        public Builder setElevationLevel(@Nullable String elevationLevel) {
+        public Builder elevationLevel(@Nullable String elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
-        public Builder setLinuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
+        public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationResponse linuxUserConfiguration) {
             this.linuxUserConfiguration = linuxUserConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setWindowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
+        public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationResponse windowsUserConfiguration) {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }

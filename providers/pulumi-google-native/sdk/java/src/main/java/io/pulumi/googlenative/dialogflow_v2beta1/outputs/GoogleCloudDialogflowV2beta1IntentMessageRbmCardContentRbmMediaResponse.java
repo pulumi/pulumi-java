@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
      */
     private final String thumbnailUri;
 
-    @OutputCustomType.Constructor({"fileUri","height","thumbnailUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse(
-        String fileUri,
-        String height,
-        String thumbnailUri) {
+        @OutputCustomType.Parameter("fileUri") String fileUri,
+        @OutputCustomType.Parameter("height") String height,
+        @OutputCustomType.Parameter("thumbnailUri") String thumbnailUri) {
         this.fileUri = fileUri;
         this.height = height;
         this.thumbnailUri = thumbnailUri;
@@ -81,17 +81,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMed
     	      this.thumbnailUri = defaults.thumbnailUri;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
 
-        public Builder setHeight(String height) {
+        public Builder height(String height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setThumbnailUri(String thumbnailUri) {
+        public Builder thumbnailUri(String thumbnailUri) {
             this.thumbnailUri = Objects.requireNonNull(thumbnailUri);
             return this;
         }

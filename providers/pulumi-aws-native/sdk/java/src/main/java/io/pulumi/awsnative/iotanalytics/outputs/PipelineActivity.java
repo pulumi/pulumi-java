@@ -31,18 +31,18 @@ public final class PipelineActivity {
     private final @Nullable PipelineRemoveAttributes removeAttributes;
     private final @Nullable PipelineSelectAttributes selectAttributes;
 
-    @OutputCustomType.Constructor({"addAttributes","channel","datastore","deviceRegistryEnrich","deviceShadowEnrich","filter","lambda","math","removeAttributes","selectAttributes"})
+    @OutputCustomType.Constructor
     private PipelineActivity(
-        @Nullable PipelineAddAttributes addAttributes,
-        @Nullable PipelineChannel channel,
-        @Nullable PipelineDatastore datastore,
-        @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
-        @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
-        @Nullable PipelineFilter filter,
-        @Nullable PipelineLambda lambda,
-        @Nullable PipelineMath math,
-        @Nullable PipelineRemoveAttributes removeAttributes,
-        @Nullable PipelineSelectAttributes selectAttributes) {
+        @OutputCustomType.Parameter("addAttributes") @Nullable PipelineAddAttributes addAttributes,
+        @OutputCustomType.Parameter("channel") @Nullable PipelineChannel channel,
+        @OutputCustomType.Parameter("datastore") @Nullable PipelineDatastore datastore,
+        @OutputCustomType.Parameter("deviceRegistryEnrich") @Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich,
+        @OutputCustomType.Parameter("deviceShadowEnrich") @Nullable PipelineDeviceShadowEnrich deviceShadowEnrich,
+        @OutputCustomType.Parameter("filter") @Nullable PipelineFilter filter,
+        @OutputCustomType.Parameter("lambda") @Nullable PipelineLambda lambda,
+        @OutputCustomType.Parameter("math") @Nullable PipelineMath math,
+        @OutputCustomType.Parameter("removeAttributes") @Nullable PipelineRemoveAttributes removeAttributes,
+        @OutputCustomType.Parameter("selectAttributes") @Nullable PipelineSelectAttributes selectAttributes) {
         this.addAttributes = addAttributes;
         this.channel = channel;
         this.datastore = datastore;
@@ -124,52 +124,52 @@ public final class PipelineActivity {
     	      this.selectAttributes = defaults.selectAttributes;
         }
 
-        public Builder setAddAttributes(@Nullable PipelineAddAttributes addAttributes) {
+        public Builder addAttributes(@Nullable PipelineAddAttributes addAttributes) {
             this.addAttributes = addAttributes;
             return this;
         }
 
-        public Builder setChannel(@Nullable PipelineChannel channel) {
+        public Builder channel(@Nullable PipelineChannel channel) {
             this.channel = channel;
             return this;
         }
 
-        public Builder setDatastore(@Nullable PipelineDatastore datastore) {
+        public Builder datastore(@Nullable PipelineDatastore datastore) {
             this.datastore = datastore;
             return this;
         }
 
-        public Builder setDeviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich) {
+        public Builder deviceRegistryEnrich(@Nullable PipelineDeviceRegistryEnrich deviceRegistryEnrich) {
             this.deviceRegistryEnrich = deviceRegistryEnrich;
             return this;
         }
 
-        public Builder setDeviceShadowEnrich(@Nullable PipelineDeviceShadowEnrich deviceShadowEnrich) {
+        public Builder deviceShadowEnrich(@Nullable PipelineDeviceShadowEnrich deviceShadowEnrich) {
             this.deviceShadowEnrich = deviceShadowEnrich;
             return this;
         }
 
-        public Builder setFilter(@Nullable PipelineFilter filter) {
+        public Builder filter(@Nullable PipelineFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setLambda(@Nullable PipelineLambda lambda) {
+        public Builder lambda(@Nullable PipelineLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setMath(@Nullable PipelineMath math) {
+        public Builder math(@Nullable PipelineMath math) {
             this.math = math;
             return this;
         }
 
-        public Builder setRemoveAttributes(@Nullable PipelineRemoveAttributes removeAttributes) {
+        public Builder removeAttributes(@Nullable PipelineRemoveAttributes removeAttributes) {
             this.removeAttributes = removeAttributes;
             return this;
         }
 
-        public Builder setSelectAttributes(@Nullable PipelineSelectAttributes selectAttributes) {
+        public Builder selectAttributes(@Nullable PipelineSelectAttributes selectAttributes) {
             this.selectAttributes = selectAttributes;
             return this;
         }

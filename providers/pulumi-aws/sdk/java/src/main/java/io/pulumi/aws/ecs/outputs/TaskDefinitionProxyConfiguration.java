@@ -28,11 +28,11 @@ public final class TaskDefinitionProxyConfiguration {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"containerName","properties","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        String containerName,
-        @Nullable Map<String,String> properties,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.properties = properties;
         this.type = type;
@@ -84,17 +84,17 @@ public final class TaskDefinitionProxyConfiguration {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

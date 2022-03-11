@@ -23,10 +23,10 @@ public final class ContactStage {
      */
     private final @Nullable List<ContactTargets> targets;
 
-    @OutputCustomType.Constructor({"durationInMinutes","targets"})
+    @OutputCustomType.Constructor
     private ContactStage(
-        Integer durationInMinutes,
-        @Nullable List<ContactTargets> targets) {
+        @OutputCustomType.Parameter("durationInMinutes") Integer durationInMinutes,
+        @OutputCustomType.Parameter("targets") @Nullable List<ContactTargets> targets) {
         this.durationInMinutes = durationInMinutes;
         this.targets = targets;
     }
@@ -68,12 +68,12 @@ public final class ContactStage {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setDurationInMinutes(Integer durationInMinutes) {
+        public Builder durationInMinutes(Integer durationInMinutes) {
             this.durationInMinutes = Objects.requireNonNull(durationInMinutes);
             return this;
         }
 
-        public Builder setTargets(@Nullable List<ContactTargets> targets) {
+        public Builder targets(@Nullable List<ContactTargets> targets) {
             this.targets = targets;
             return this;
         }

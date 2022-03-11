@@ -15,11 +15,11 @@ public final class WebACLIPSetForwardedIPConfiguration {
     private final String headerName;
     private final WebACLIPSetForwardedIPConfigurationPosition position;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName","position"})
+    @OutputCustomType.Constructor
     private WebACLIPSetForwardedIPConfiguration(
-        WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName,
-        WebACLIPSetForwardedIPConfigurationPosition position) {
+        @OutputCustomType.Parameter("fallbackBehavior") WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("position") WebACLIPSetForwardedIPConfigurationPosition position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;
@@ -59,17 +59,17 @@ public final class WebACLIPSetForwardedIPConfiguration {
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(WebACLIPSetForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setPosition(WebACLIPSetForwardedIPConfigurationPosition position) {
+        public Builder position(WebACLIPSetForwardedIPConfigurationPosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

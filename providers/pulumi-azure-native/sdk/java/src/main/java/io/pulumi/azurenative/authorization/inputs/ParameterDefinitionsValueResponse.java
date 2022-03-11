@@ -109,22 +109,22 @@ public final class ParameterDefinitionsValueResponse extends io.pulumi.resources
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedValues(@Nullable List<Object> allowedValues) {
+        public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
+        public Builder metadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

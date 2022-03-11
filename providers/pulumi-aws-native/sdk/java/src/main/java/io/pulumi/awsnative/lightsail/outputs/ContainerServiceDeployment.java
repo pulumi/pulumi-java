@@ -24,10 +24,10 @@ public final class ContainerServiceDeployment {
      */
     private final @Nullable ContainerPublicEndpoint publicEndpoint;
 
-    @OutputCustomType.Constructor({"containers","publicEndpoint"})
+    @OutputCustomType.Constructor
     private ContainerServiceDeployment(
-        @Nullable List<Container> containers,
-        @Nullable ContainerPublicEndpoint publicEndpoint) {
+        @OutputCustomType.Parameter("containers") @Nullable List<Container> containers,
+        @OutputCustomType.Parameter("publicEndpoint") @Nullable ContainerPublicEndpoint publicEndpoint) {
         this.containers = containers;
         this.publicEndpoint = publicEndpoint;
     }
@@ -69,12 +69,12 @@ public final class ContainerServiceDeployment {
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setContainers(@Nullable List<Container> containers) {
+        public Builder containers(@Nullable List<Container> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
+        public Builder publicEndpoint(@Nullable ContainerPublicEndpoint publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }

@@ -25,17 +25,17 @@ public final class GetNotificationRuleResult {
     private final @Nullable String targetAddress;
     private final @Nullable List<NotificationRuleTarget> targets;
 
-    @OutputCustomType.Constructor({"arn","createdBy","detailType","eventTypeId","eventTypeIds","name","status","targetAddress","targets"})
+    @OutputCustomType.Constructor
     private GetNotificationRuleResult(
-        @Nullable String arn,
-        @Nullable String createdBy,
-        @Nullable NotificationRuleDetailType detailType,
-        @Nullable String eventTypeId,
-        @Nullable List<String> eventTypeIds,
-        @Nullable String name,
-        @Nullable NotificationRuleStatus status,
-        @Nullable String targetAddress,
-        @Nullable List<NotificationRuleTarget> targets) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("detailType") @Nullable NotificationRuleDetailType detailType,
+        @OutputCustomType.Parameter("eventTypeId") @Nullable String eventTypeId,
+        @OutputCustomType.Parameter("eventTypeIds") @Nullable List<String> eventTypeIds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable NotificationRuleStatus status,
+        @OutputCustomType.Parameter("targetAddress") @Nullable String targetAddress,
+        @OutputCustomType.Parameter("targets") @Nullable List<NotificationRuleTarget> targets) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.detailType = detailType;
@@ -111,47 +111,47 @@ public final class GetNotificationRuleResult {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDetailType(@Nullable NotificationRuleDetailType detailType) {
+        public Builder detailType(@Nullable NotificationRuleDetailType detailType) {
             this.detailType = detailType;
             return this;
         }
 
-        public Builder setEventTypeId(@Nullable String eventTypeId) {
+        public Builder eventTypeId(@Nullable String eventTypeId) {
             this.eventTypeId = eventTypeId;
             return this;
         }
 
-        public Builder setEventTypeIds(@Nullable List<String> eventTypeIds) {
+        public Builder eventTypeIds(@Nullable List<String> eventTypeIds) {
             this.eventTypeIds = eventTypeIds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatus(@Nullable NotificationRuleStatus status) {
+        public Builder status(@Nullable NotificationRuleStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetAddress(@Nullable String targetAddress) {
+        public Builder targetAddress(@Nullable String targetAddress) {
             this.targetAddress = targetAddress;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<NotificationRuleTarget> targets) {
+        public Builder targets(@Nullable List<NotificationRuleTarget> targets) {
             this.targets = targets;
             return this;
         }

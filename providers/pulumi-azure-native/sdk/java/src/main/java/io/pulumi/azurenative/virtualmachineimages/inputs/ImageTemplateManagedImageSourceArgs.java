@@ -74,22 +74,22 @@ public final class ImageTemplateManagedImageSourceArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setImageId(Input<String> imageId) {
+        public Builder imageId(Input<String> imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Input.of(Objects.requireNonNull(imageId));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

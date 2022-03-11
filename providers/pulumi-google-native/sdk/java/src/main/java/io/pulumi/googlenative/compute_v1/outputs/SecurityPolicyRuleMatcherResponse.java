@@ -27,11 +27,11 @@ public final class SecurityPolicyRuleMatcherResponse {
      */
     private final String versionedExpr;
 
-    @OutputCustomType.Constructor({"config","expr","versionedExpr"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleMatcherResponse(
-        SecurityPolicyRuleMatcherConfigResponse config,
-        ExprResponse expr,
-        String versionedExpr) {
+        @OutputCustomType.Parameter("config") SecurityPolicyRuleMatcherConfigResponse config,
+        @OutputCustomType.Parameter("expr") ExprResponse expr,
+        @OutputCustomType.Parameter("versionedExpr") String versionedExpr) {
         this.config = config;
         this.expr = expr;
         this.versionedExpr = versionedExpr;
@@ -83,17 +83,17 @@ public final class SecurityPolicyRuleMatcherResponse {
     	      this.versionedExpr = defaults.versionedExpr;
         }
 
-        public Builder setConfig(SecurityPolicyRuleMatcherConfigResponse config) {
+        public Builder config(SecurityPolicyRuleMatcherConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setExpr(ExprResponse expr) {
+        public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
 
-        public Builder setVersionedExpr(String versionedExpr) {
+        public Builder versionedExpr(String versionedExpr) {
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
         }

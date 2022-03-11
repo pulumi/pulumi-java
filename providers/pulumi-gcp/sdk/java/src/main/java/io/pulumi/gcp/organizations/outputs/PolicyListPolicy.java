@@ -32,12 +32,12 @@ public final class PolicyListPolicy {
      */
     private final @Nullable String suggestedValue;
 
-    @OutputCustomType.Constructor({"allow","deny","inheritFromParent","suggestedValue"})
+    @OutputCustomType.Constructor
     private PolicyListPolicy(
-        @Nullable PolicyListPolicyAllow allow,
-        @Nullable PolicyListPolicyDeny deny,
-        @Nullable Boolean inheritFromParent,
-        @Nullable String suggestedValue) {
+        @OutputCustomType.Parameter("allow") @Nullable PolicyListPolicyAllow allow,
+        @OutputCustomType.Parameter("deny") @Nullable PolicyListPolicyDeny deny,
+        @OutputCustomType.Parameter("inheritFromParent") @Nullable Boolean inheritFromParent,
+        @OutputCustomType.Parameter("suggestedValue") @Nullable String suggestedValue) {
         this.allow = allow;
         this.deny = deny;
         this.inheritFromParent = inheritFromParent;
@@ -96,22 +96,22 @@ public final class PolicyListPolicy {
     	      this.suggestedValue = defaults.suggestedValue;
         }
 
-        public Builder setAllow(@Nullable PolicyListPolicyAllow allow) {
+        public Builder allow(@Nullable PolicyListPolicyAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setDeny(@Nullable PolicyListPolicyDeny deny) {
+        public Builder deny(@Nullable PolicyListPolicyDeny deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setInheritFromParent(@Nullable Boolean inheritFromParent) {
+        public Builder inheritFromParent(@Nullable Boolean inheritFromParent) {
             this.inheritFromParent = inheritFromParent;
             return this;
         }
 
-        public Builder setSuggestedValue(@Nullable String suggestedValue) {
+        public Builder suggestedValue(@Nullable String suggestedValue) {
             this.suggestedValue = suggestedValue;
             return this;
         }

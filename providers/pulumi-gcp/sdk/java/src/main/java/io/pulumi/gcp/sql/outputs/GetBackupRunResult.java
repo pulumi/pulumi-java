@@ -38,15 +38,15 @@ public final class GetBackupRunResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"backupId","id","instance","location","mostRecent","startTime","status"})
+    @OutputCustomType.Constructor
     private GetBackupRunResult(
-        Integer backupId,
-        String id,
-        String instance,
-        String location,
-        @Nullable Boolean mostRecent,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("backupId") Integer backupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.backupId = backupId;
         this.id = id;
         this.instance = instance;
@@ -127,37 +127,37 @@ public final class GetBackupRunResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setBackupId(Integer backupId) {
+        public Builder backupId(Integer backupId) {
             this.backupId = Objects.requireNonNull(backupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

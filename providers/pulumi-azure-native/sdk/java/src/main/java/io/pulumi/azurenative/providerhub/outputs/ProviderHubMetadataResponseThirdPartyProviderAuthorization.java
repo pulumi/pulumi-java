@@ -16,10 +16,10 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
     private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
     private final @Nullable String managedByTenantId;
 
-    @OutputCustomType.Constructor({"authorizations","managedByTenantId"})
+    @OutputCustomType.Constructor
     private ProviderHubMetadataResponseThirdPartyProviderAuthorization(
-        @Nullable List<LightHouseAuthorizationResponse> authorizations,
-        @Nullable String managedByTenantId) {
+        @OutputCustomType.Parameter("authorizations") @Nullable List<LightHouseAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("managedByTenantId") @Nullable String managedByTenantId) {
         this.authorizations = authorizations;
         this.managedByTenantId = managedByTenantId;
     }
@@ -53,12 +53,12 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization {
     	      this.managedByTenantId = defaults.managedByTenantId;
         }
 
-        public Builder setAuthorizations(@Nullable List<LightHouseAuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<LightHouseAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setManagedByTenantId(@Nullable String managedByTenantId) {
+        public Builder managedByTenantId(@Nullable String managedByTenantId) {
             this.managedByTenantId = managedByTenantId;
             return this;
         }

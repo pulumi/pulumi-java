@@ -72,18 +72,18 @@ public final class GetBucketAccessControlResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bucket","domain","email","entity","entityId","etag","kind","projectTeam","role","selfLink"})
+    @OutputCustomType.Constructor
     private GetBucketAccessControlResult(
-        String bucket,
-        String domain,
-        String email,
-        String entity,
-        String entityId,
-        String etag,
-        String kind,
-        BucketAccessControlProjectTeamResponse projectTeam,
-        String role,
-        String selfLink) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("entity") String entity,
+        @OutputCustomType.Parameter("entityId") String entityId,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("projectTeam") BucketAccessControlProjectTeamResponse projectTeam,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bucket = bucket;
         this.domain = domain;
         this.email = email;
@@ -216,52 +216,52 @@ public final class GetBucketAccessControlResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEntity(String entity) {
+        public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProjectTeam(BucketAccessControlProjectTeamResponse projectTeam) {
+        public Builder projectTeam(BucketAccessControlProjectTeamResponse projectTeam) {
             this.projectTeam = Objects.requireNonNull(projectTeam);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

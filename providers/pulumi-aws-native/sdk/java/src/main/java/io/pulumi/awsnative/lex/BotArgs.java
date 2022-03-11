@@ -189,102 +189,102 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testBotAliasTags = defaults.testBotAliasTags;
         }
 
-        public Builder setAutoBuildBotLocales(@Nullable Input<Boolean> autoBuildBotLocales) {
+        public Builder autoBuildBotLocales(@Nullable Input<Boolean> autoBuildBotLocales) {
             this.autoBuildBotLocales = autoBuildBotLocales;
             return this;
         }
 
-        public Builder setAutoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
+        public Builder autoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
             this.autoBuildBotLocales = Input.ofNullable(autoBuildBotLocales);
             return this;
         }
 
-        public Builder setBotFileS3Location(@Nullable Input<BotS3LocationArgs> botFileS3Location) {
+        public Builder botFileS3Location(@Nullable Input<BotS3LocationArgs> botFileS3Location) {
             this.botFileS3Location = botFileS3Location;
             return this;
         }
 
-        public Builder setBotFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
+        public Builder botFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
             this.botFileS3Location = Input.ofNullable(botFileS3Location);
             return this;
         }
 
-        public Builder setBotLocales(@Nullable Input<List<BotLocaleArgs>> botLocales) {
+        public Builder botLocales(@Nullable Input<List<BotLocaleArgs>> botLocales) {
             this.botLocales = botLocales;
             return this;
         }
 
-        public Builder setBotLocales(@Nullable List<BotLocaleArgs> botLocales) {
+        public Builder botLocales(@Nullable List<BotLocaleArgs> botLocales) {
             this.botLocales = Input.ofNullable(botLocales);
             return this;
         }
 
-        public Builder setBotTags(@Nullable Input<List<BotTagArgs>> botTags) {
+        public Builder botTags(@Nullable Input<List<BotTagArgs>> botTags) {
             this.botTags = botTags;
             return this;
         }
 
-        public Builder setBotTags(@Nullable List<BotTagArgs> botTags) {
+        public Builder botTags(@Nullable List<BotTagArgs> botTags) {
             this.botTags = Input.ofNullable(botTags);
             return this;
         }
 
-        public Builder setDataPrivacy(Input<DataPrivacyPropertiesArgs> dataPrivacy) {
+        public Builder dataPrivacy(Input<DataPrivacyPropertiesArgs> dataPrivacy) {
             this.dataPrivacy = Objects.requireNonNull(dataPrivacy);
             return this;
         }
 
-        public Builder setDataPrivacy(DataPrivacyPropertiesArgs dataPrivacy) {
+        public Builder dataPrivacy(DataPrivacyPropertiesArgs dataPrivacy) {
             this.dataPrivacy = Input.of(Objects.requireNonNull(dataPrivacy));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIdleSessionTTLInSeconds(Input<Integer> idleSessionTTLInSeconds) {
+        public Builder idleSessionTTLInSeconds(Input<Integer> idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = Objects.requireNonNull(idleSessionTTLInSeconds);
             return this;
         }
 
-        public Builder setIdleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
+        public Builder idleSessionTTLInSeconds(Integer idleSessionTTLInSeconds) {
             this.idleSessionTTLInSeconds = Input.of(Objects.requireNonNull(idleSessionTTLInSeconds));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTestBotAliasTags(@Nullable Input<List<BotTagArgs>> testBotAliasTags) {
+        public Builder testBotAliasTags(@Nullable Input<List<BotTagArgs>> testBotAliasTags) {
             this.testBotAliasTags = testBotAliasTags;
             return this;
         }
 
-        public Builder setTestBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
+        public Builder testBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
             this.testBotAliasTags = Input.ofNullable(testBotAliasTags);
             return this;
         }

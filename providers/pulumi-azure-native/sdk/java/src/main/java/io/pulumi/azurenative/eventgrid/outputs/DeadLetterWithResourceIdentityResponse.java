@@ -24,10 +24,10 @@ public final class DeadLetterWithResourceIdentityResponse {
      */
     private final @Nullable EventSubscriptionIdentityResponse identity;
 
-    @OutputCustomType.Constructor({"deadLetterDestination","identity"})
+    @OutputCustomType.Constructor
     private DeadLetterWithResourceIdentityResponse(
-        @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
-        @Nullable EventSubscriptionIdentityResponse identity) {
+        @OutputCustomType.Parameter("deadLetterDestination") @Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination,
+        @OutputCustomType.Parameter("identity") @Nullable EventSubscriptionIdentityResponse identity) {
         this.deadLetterDestination = deadLetterDestination;
         this.identity = identity;
     }
@@ -70,12 +70,12 @@ public final class DeadLetterWithResourceIdentityResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setDeadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
+        public Builder deadLetterDestination(@Nullable StorageBlobDeadLetterDestinationResponse deadLetterDestination) {
             this.deadLetterDestination = deadLetterDestination;
             return this;
         }
 
-        public Builder setIdentity(@Nullable EventSubscriptionIdentityResponse identity) {
+        public Builder identity(@Nullable EventSubscriptionIdentityResponse identity) {
             this.identity = identity;
             return this;
         }

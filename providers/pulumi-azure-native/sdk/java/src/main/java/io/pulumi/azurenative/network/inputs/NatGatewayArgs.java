@@ -175,82 +175,82 @@ public final class NatGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPublicIpAddresses(@Nullable Input<List<SubResourceArgs>> publicIpAddresses) {
+        public Builder publicIpAddresses(@Nullable Input<List<SubResourceArgs>> publicIpAddresses) {
             this.publicIpAddresses = publicIpAddresses;
             return this;
         }
 
-        public Builder setPublicIpAddresses(@Nullable List<SubResourceArgs> publicIpAddresses) {
+        public Builder publicIpAddresses(@Nullable List<SubResourceArgs> publicIpAddresses) {
             this.publicIpAddresses = Input.ofNullable(publicIpAddresses);
             return this;
         }
 
-        public Builder setPublicIpPrefixes(@Nullable Input<List<SubResourceArgs>> publicIpPrefixes) {
+        public Builder publicIpPrefixes(@Nullable Input<List<SubResourceArgs>> publicIpPrefixes) {
             this.publicIpPrefixes = publicIpPrefixes;
             return this;
         }
 
-        public Builder setPublicIpPrefixes(@Nullable List<SubResourceArgs> publicIpPrefixes) {
+        public Builder publicIpPrefixes(@Nullable List<SubResourceArgs> publicIpPrefixes) {
             this.publicIpPrefixes = Input.ofNullable(publicIpPrefixes);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<NatGatewaySkuArgs> sku) {
+        public Builder sku(@Nullable Input<NatGatewaySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable NatGatewaySkuArgs sku) {
+        public Builder sku(@Nullable NatGatewaySkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

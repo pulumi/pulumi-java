@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigConversa
     	      this.recentSentencesCount = defaults.recentSentencesCount;
         }
 
-        public Builder setRecentSentencesCount(@Nullable Input<Integer> recentSentencesCount) {
+        public Builder recentSentencesCount(@Nullable Input<Integer> recentSentencesCount) {
             this.recentSentencesCount = recentSentencesCount;
             return this;
         }
 
-        public Builder setRecentSentencesCount(@Nullable Integer recentSentencesCount) {
+        public Builder recentSentencesCount(@Nullable Integer recentSentencesCount) {
             this.recentSentencesCount = Input.ofNullable(recentSentencesCount);
             return this;
         }

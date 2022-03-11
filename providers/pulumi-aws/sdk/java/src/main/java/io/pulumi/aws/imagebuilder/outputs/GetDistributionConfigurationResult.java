@@ -49,16 +49,16 @@ public final class GetDistributionConfigurationResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","dateCreated","dateUpdated","description","distributions","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationResult(
-        String arn,
-        String dateCreated,
-        String dateUpdated,
-        String description,
-        List<GetDistributionConfigurationDistribution> distributions,
-        String id,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributions") List<GetDistributionConfigurationDistribution> distributions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;
@@ -156,42 +156,42 @@ public final class GetDistributionConfigurationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDateCreated(String dateCreated) {
+        public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
 
-        public Builder setDateUpdated(String dateUpdated) {
+        public Builder dateUpdated(String dateUpdated) {
             this.dateUpdated = Objects.requireNonNull(dateUpdated);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDistributions(List<GetDistributionConfigurationDistribution> distributions) {
+        public Builder distributions(List<GetDistributionConfigurationDistribution> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

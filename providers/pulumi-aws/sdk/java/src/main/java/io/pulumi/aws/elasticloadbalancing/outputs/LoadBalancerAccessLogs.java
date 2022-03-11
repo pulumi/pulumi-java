@@ -34,12 +34,12 @@ public final class LoadBalancerAccessLogs {
      */
     private final @Nullable Integer interval;
 
-    @OutputCustomType.Constructor({"bucket","bucketPrefix","enabled","interval"})
+    @OutputCustomType.Constructor
     private LoadBalancerAccessLogs(
-        String bucket,
-        @Nullable String bucketPrefix,
-        @Nullable Boolean enabled,
-        @Nullable Integer interval) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval) {
         this.bucket = bucket;
         this.bucketPrefix = bucketPrefix;
         this.enabled = enabled;
@@ -101,22 +101,22 @@ public final class LoadBalancerAccessLogs {
     	      this.interval = defaults.interval;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }

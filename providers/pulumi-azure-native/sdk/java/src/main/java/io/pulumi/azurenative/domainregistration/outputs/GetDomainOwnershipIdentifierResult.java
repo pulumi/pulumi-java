@@ -43,14 +43,14 @@ public final class GetDomainOwnershipIdentifierResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","ownershipId","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDomainOwnershipIdentifierResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String ownershipId,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ownershipId") @Nullable String ownershipId,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;
@@ -132,32 +132,32 @@ public final class GetDomainOwnershipIdentifierResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwnershipId(@Nullable String ownershipId) {
+        public Builder ownershipId(@Nullable String ownershipId) {
             this.ownershipId = ownershipId;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

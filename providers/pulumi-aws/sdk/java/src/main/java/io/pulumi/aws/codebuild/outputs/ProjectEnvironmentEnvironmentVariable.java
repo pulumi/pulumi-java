@@ -27,11 +27,11 @@ public final class ProjectEnvironmentEnvironmentVariable {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","type","value"})
+    @OutputCustomType.Constructor
     private ProjectEnvironmentEnvironmentVariable(
-        String name,
-        @Nullable String type,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.type = type;
         this.value = value;
@@ -83,17 +83,17 @@ public final class ProjectEnvironmentEnvironmentVariable {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

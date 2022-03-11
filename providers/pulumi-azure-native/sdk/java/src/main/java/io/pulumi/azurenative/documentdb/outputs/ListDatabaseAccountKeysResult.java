@@ -30,12 +30,12 @@ public final class ListDatabaseAccountKeysResult {
      */
     private final String secondaryReadonlyMasterKey;
 
-    @OutputCustomType.Constructor({"primaryMasterKey","primaryReadonlyMasterKey","secondaryMasterKey","secondaryReadonlyMasterKey"})
+    @OutputCustomType.Constructor
     private ListDatabaseAccountKeysResult(
-        String primaryMasterKey,
-        String primaryReadonlyMasterKey,
-        String secondaryMasterKey,
-        String secondaryReadonlyMasterKey) {
+        @OutputCustomType.Parameter("primaryMasterKey") String primaryMasterKey,
+        @OutputCustomType.Parameter("primaryReadonlyMasterKey") String primaryReadonlyMasterKey,
+        @OutputCustomType.Parameter("secondaryMasterKey") String secondaryMasterKey,
+        @OutputCustomType.Parameter("secondaryReadonlyMasterKey") String secondaryReadonlyMasterKey) {
         this.primaryMasterKey = primaryMasterKey;
         this.primaryReadonlyMasterKey = primaryReadonlyMasterKey;
         this.secondaryMasterKey = secondaryMasterKey;
@@ -97,22 +97,22 @@ public final class ListDatabaseAccountKeysResult {
     	      this.secondaryReadonlyMasterKey = defaults.secondaryReadonlyMasterKey;
         }
 
-        public Builder setPrimaryMasterKey(String primaryMasterKey) {
+        public Builder primaryMasterKey(String primaryMasterKey) {
             this.primaryMasterKey = Objects.requireNonNull(primaryMasterKey);
             return this;
         }
 
-        public Builder setPrimaryReadonlyMasterKey(String primaryReadonlyMasterKey) {
+        public Builder primaryReadonlyMasterKey(String primaryReadonlyMasterKey) {
             this.primaryReadonlyMasterKey = Objects.requireNonNull(primaryReadonlyMasterKey);
             return this;
         }
 
-        public Builder setSecondaryMasterKey(String secondaryMasterKey) {
+        public Builder secondaryMasterKey(String secondaryMasterKey) {
             this.secondaryMasterKey = Objects.requireNonNull(secondaryMasterKey);
             return this;
         }
 
-        public Builder setSecondaryReadonlyMasterKey(String secondaryReadonlyMasterKey) {
+        public Builder secondaryReadonlyMasterKey(String secondaryReadonlyMasterKey) {
             this.secondaryReadonlyMasterKey = Objects.requireNonNull(secondaryReadonlyMasterKey);
             return this;
         }

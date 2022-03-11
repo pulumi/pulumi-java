@@ -140,32 +140,32 @@ public final class HybridComputeSettingsPropertiesResponse extends io.pulumi.res
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setAutoProvision(String autoProvision) {
+        public Builder autoProvision(String autoProvision) {
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
 
-        public Builder setHybridComputeProvisioningState(String hybridComputeProvisioningState) {
+        public Builder hybridComputeProvisioningState(String hybridComputeProvisioningState) {
             this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState);
             return this;
         }
 
-        public Builder setProxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
+        public Builder proxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

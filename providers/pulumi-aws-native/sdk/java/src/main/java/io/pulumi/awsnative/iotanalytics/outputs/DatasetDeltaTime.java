@@ -13,10 +13,10 @@ public final class DatasetDeltaTime {
     private final Integer offsetSeconds;
     private final String timeExpression;
 
-    @OutputCustomType.Constructor({"offsetSeconds","timeExpression"})
+    @OutputCustomType.Constructor
     private DatasetDeltaTime(
-        Integer offsetSeconds,
-        String timeExpression) {
+        @OutputCustomType.Parameter("offsetSeconds") Integer offsetSeconds,
+        @OutputCustomType.Parameter("timeExpression") String timeExpression) {
         this.offsetSeconds = offsetSeconds;
         this.timeExpression = timeExpression;
     }
@@ -50,12 +50,12 @@ public final class DatasetDeltaTime {
     	      this.timeExpression = defaults.timeExpression;
         }
 
-        public Builder setOffsetSeconds(Integer offsetSeconds) {
+        public Builder offsetSeconds(Integer offsetSeconds) {
             this.offsetSeconds = Objects.requireNonNull(offsetSeconds);
             return this;
         }
 
-        public Builder setTimeExpression(String timeExpression) {
+        public Builder timeExpression(String timeExpression) {
             this.timeExpression = Objects.requireNonNull(timeExpression);
             return this;
         }

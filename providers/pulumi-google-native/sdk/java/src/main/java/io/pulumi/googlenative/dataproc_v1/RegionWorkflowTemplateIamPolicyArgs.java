@@ -125,62 +125,62 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
     	      this.workflowTemplateId = defaults.workflowTemplateId;
         }
 
-        public Builder setBindings(@Nullable Input<List<BindingArgs>> bindings) {
+        public Builder bindings(@Nullable Input<List<BindingArgs>> bindings) {
             this.bindings = bindings;
             return this;
         }
 
-        public Builder setBindings(@Nullable List<BindingArgs> bindings) {
+        public Builder bindings(@Nullable List<BindingArgs> bindings) {
             this.bindings = Input.ofNullable(bindings);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegionId(Input<String> regionId) {
+        public Builder regionId(Input<String> regionId) {
             this.regionId = Objects.requireNonNull(regionId);
             return this;
         }
 
-        public Builder setRegionId(String regionId) {
+        public Builder regionId(String regionId) {
             this.regionId = Input.of(Objects.requireNonNull(regionId));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWorkflowTemplateId(Input<String> workflowTemplateId) {
+        public Builder workflowTemplateId(Input<String> workflowTemplateId) {
             this.workflowTemplateId = Objects.requireNonNull(workflowTemplateId);
             return this;
         }
 
-        public Builder setWorkflowTemplateId(String workflowTemplateId) {
+        public Builder workflowTemplateId(String workflowTemplateId) {
             this.workflowTemplateId = Input.of(Objects.requireNonNull(workflowTemplateId));
             return this;
         }

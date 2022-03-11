@@ -20,10 +20,10 @@ public final class SelectedCertificateInputResponse {
      */
     private final String password;
 
-    @OutputCustomType.Constructor({"certificateName","password"})
+    @OutputCustomType.Constructor
     private SelectedCertificateInputResponse(
-        String certificateName,
-        String password) {
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("password") String password) {
         this.certificateName = certificateName;
         this.password = password;
     }
@@ -65,12 +65,12 @@ public final class SelectedCertificateInputResponse {
     	      this.password = defaults.password;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }

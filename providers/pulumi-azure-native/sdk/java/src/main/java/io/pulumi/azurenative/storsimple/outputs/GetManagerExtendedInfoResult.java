@@ -67,19 +67,19 @@ public final class GetManagerExtendedInfoResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"algorithm","encryptionKey","encryptionKeyThumbprint","etag","id","integrityKey","kind","name","portalCertificateThumbprint","type","version"})
+    @OutputCustomType.Constructor
     private GetManagerExtendedInfoResult(
-        String algorithm,
-        @Nullable String encryptionKey,
-        @Nullable String encryptionKeyThumbprint,
-        @Nullable String etag,
-        String id,
-        String integrityKey,
-        @Nullable String kind,
-        String name,
-        @Nullable String portalCertificateThumbprint,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("encryptionKey") @Nullable String encryptionKey,
+        @OutputCustomType.Parameter("encryptionKeyThumbprint") @Nullable String encryptionKeyThumbprint,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrityKey") String integrityKey,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("portalCertificateThumbprint") @Nullable String portalCertificateThumbprint,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.algorithm = algorithm;
         this.encryptionKey = encryptionKey;
         this.encryptionKeyThumbprint = encryptionKeyThumbprint;
@@ -211,57 +211,57 @@ public final class GetManagerExtendedInfoResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable String encryptionKey) {
+        public Builder encryptionKey(@Nullable String encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
+        public Builder encryptionKeyThumbprint(@Nullable String encryptionKeyThumbprint) {
             this.encryptionKeyThumbprint = encryptionKeyThumbprint;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIntegrityKey(String integrityKey) {
+        public Builder integrityKey(String integrityKey) {
             this.integrityKey = Objects.requireNonNull(integrityKey);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPortalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
+        public Builder portalCertificateThumbprint(@Nullable String portalCertificateThumbprint) {
             this.portalCertificateThumbprint = portalCertificateThumbprint;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

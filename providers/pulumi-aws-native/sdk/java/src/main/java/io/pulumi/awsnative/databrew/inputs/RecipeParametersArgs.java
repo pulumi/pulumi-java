@@ -1259,1012 +1259,1012 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
     	      this.viewFrame = defaults.viewFrame;
         }
 
-        public Builder setAggregateFunction(@Nullable Input<String> aggregateFunction) {
+        public Builder aggregateFunction(@Nullable Input<String> aggregateFunction) {
             this.aggregateFunction = aggregateFunction;
             return this;
         }
 
-        public Builder setAggregateFunction(@Nullable String aggregateFunction) {
+        public Builder aggregateFunction(@Nullable String aggregateFunction) {
             this.aggregateFunction = Input.ofNullable(aggregateFunction);
             return this;
         }
 
-        public Builder setBase(@Nullable Input<String> base) {
+        public Builder base(@Nullable Input<String> base) {
             this.base = base;
             return this;
         }
 
-        public Builder setBase(@Nullable String base) {
+        public Builder base(@Nullable String base) {
             this.base = Input.ofNullable(base);
             return this;
         }
 
-        public Builder setCaseStatement(@Nullable Input<String> caseStatement) {
+        public Builder caseStatement(@Nullable Input<String> caseStatement) {
             this.caseStatement = caseStatement;
             return this;
         }
 
-        public Builder setCaseStatement(@Nullable String caseStatement) {
+        public Builder caseStatement(@Nullable String caseStatement) {
             this.caseStatement = Input.ofNullable(caseStatement);
             return this;
         }
 
-        public Builder setCategoryMap(@Nullable Input<String> categoryMap) {
+        public Builder categoryMap(@Nullable Input<String> categoryMap) {
             this.categoryMap = categoryMap;
             return this;
         }
 
-        public Builder setCategoryMap(@Nullable String categoryMap) {
+        public Builder categoryMap(@Nullable String categoryMap) {
             this.categoryMap = Input.ofNullable(categoryMap);
             return this;
         }
 
-        public Builder setCharsToRemove(@Nullable Input<String> charsToRemove) {
+        public Builder charsToRemove(@Nullable Input<String> charsToRemove) {
             this.charsToRemove = charsToRemove;
             return this;
         }
 
-        public Builder setCharsToRemove(@Nullable String charsToRemove) {
+        public Builder charsToRemove(@Nullable String charsToRemove) {
             this.charsToRemove = Input.ofNullable(charsToRemove);
             return this;
         }
 
-        public Builder setCollapseConsecutiveWhitespace(@Nullable Input<String> collapseConsecutiveWhitespace) {
+        public Builder collapseConsecutiveWhitespace(@Nullable Input<String> collapseConsecutiveWhitespace) {
             this.collapseConsecutiveWhitespace = collapseConsecutiveWhitespace;
             return this;
         }
 
-        public Builder setCollapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
+        public Builder collapseConsecutiveWhitespace(@Nullable String collapseConsecutiveWhitespace) {
             this.collapseConsecutiveWhitespace = Input.ofNullable(collapseConsecutiveWhitespace);
             return this;
         }
 
-        public Builder setColumnDataType(@Nullable Input<String> columnDataType) {
+        public Builder columnDataType(@Nullable Input<String> columnDataType) {
             this.columnDataType = columnDataType;
             return this;
         }
 
-        public Builder setColumnDataType(@Nullable String columnDataType) {
+        public Builder columnDataType(@Nullable String columnDataType) {
             this.columnDataType = Input.ofNullable(columnDataType);
             return this;
         }
 
-        public Builder setColumnRange(@Nullable Input<String> columnRange) {
+        public Builder columnRange(@Nullable Input<String> columnRange) {
             this.columnRange = columnRange;
             return this;
         }
 
-        public Builder setColumnRange(@Nullable String columnRange) {
+        public Builder columnRange(@Nullable String columnRange) {
             this.columnRange = Input.ofNullable(columnRange);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<String> count) {
+        public Builder count(@Nullable Input<String> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable String count) {
+        public Builder count(@Nullable String count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setCustomCharacters(@Nullable Input<String> customCharacters) {
+        public Builder customCharacters(@Nullable Input<String> customCharacters) {
             this.customCharacters = customCharacters;
             return this;
         }
 
-        public Builder setCustomCharacters(@Nullable String customCharacters) {
+        public Builder customCharacters(@Nullable String customCharacters) {
             this.customCharacters = Input.ofNullable(customCharacters);
             return this;
         }
 
-        public Builder setCustomStopWords(@Nullable Input<String> customStopWords) {
+        public Builder customStopWords(@Nullable Input<String> customStopWords) {
             this.customStopWords = customStopWords;
             return this;
         }
 
-        public Builder setCustomStopWords(@Nullable String customStopWords) {
+        public Builder customStopWords(@Nullable String customStopWords) {
             this.customStopWords = Input.ofNullable(customStopWords);
             return this;
         }
 
-        public Builder setCustomValue(@Nullable Input<String> customValue) {
+        public Builder customValue(@Nullable Input<String> customValue) {
             this.customValue = customValue;
             return this;
         }
 
-        public Builder setCustomValue(@Nullable String customValue) {
+        public Builder customValue(@Nullable String customValue) {
             this.customValue = Input.ofNullable(customValue);
             return this;
         }
 
-        public Builder setDatasetsColumns(@Nullable Input<String> datasetsColumns) {
+        public Builder datasetsColumns(@Nullable Input<String> datasetsColumns) {
             this.datasetsColumns = datasetsColumns;
             return this;
         }
 
-        public Builder setDatasetsColumns(@Nullable String datasetsColumns) {
+        public Builder datasetsColumns(@Nullable String datasetsColumns) {
             this.datasetsColumns = Input.ofNullable(datasetsColumns);
             return this;
         }
 
-        public Builder setDateAddValue(@Nullable Input<String> dateAddValue) {
+        public Builder dateAddValue(@Nullable Input<String> dateAddValue) {
             this.dateAddValue = dateAddValue;
             return this;
         }
 
-        public Builder setDateAddValue(@Nullable String dateAddValue) {
+        public Builder dateAddValue(@Nullable String dateAddValue) {
             this.dateAddValue = Input.ofNullable(dateAddValue);
             return this;
         }
 
-        public Builder setDateTimeFormat(@Nullable Input<String> dateTimeFormat) {
+        public Builder dateTimeFormat(@Nullable Input<String> dateTimeFormat) {
             this.dateTimeFormat = dateTimeFormat;
             return this;
         }
 
-        public Builder setDateTimeFormat(@Nullable String dateTimeFormat) {
+        public Builder dateTimeFormat(@Nullable String dateTimeFormat) {
             this.dateTimeFormat = Input.ofNullable(dateTimeFormat);
             return this;
         }
 
-        public Builder setDateTimeParameters(@Nullable Input<String> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable Input<String> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDateTimeParameters(@Nullable String dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable String dateTimeParameters) {
             this.dateTimeParameters = Input.ofNullable(dateTimeParameters);
             return this;
         }
 
-        public Builder setDeleteOtherRows(@Nullable Input<String> deleteOtherRows) {
+        public Builder deleteOtherRows(@Nullable Input<String> deleteOtherRows) {
             this.deleteOtherRows = deleteOtherRows;
             return this;
         }
 
-        public Builder setDeleteOtherRows(@Nullable String deleteOtherRows) {
+        public Builder deleteOtherRows(@Nullable String deleteOtherRows) {
             this.deleteOtherRows = Input.ofNullable(deleteOtherRows);
             return this;
         }
 
-        public Builder setDelimiter(@Nullable Input<String> delimiter) {
+        public Builder delimiter(@Nullable Input<String> delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = Input.ofNullable(delimiter);
             return this;
         }
 
-        public Builder setEndPattern(@Nullable Input<String> endPattern) {
+        public Builder endPattern(@Nullable Input<String> endPattern) {
             this.endPattern = endPattern;
             return this;
         }
 
-        public Builder setEndPattern(@Nullable String endPattern) {
+        public Builder endPattern(@Nullable String endPattern) {
             this.endPattern = Input.ofNullable(endPattern);
             return this;
         }
 
-        public Builder setEndPosition(@Nullable Input<String> endPosition) {
+        public Builder endPosition(@Nullable Input<String> endPosition) {
             this.endPosition = endPosition;
             return this;
         }
 
-        public Builder setEndPosition(@Nullable String endPosition) {
+        public Builder endPosition(@Nullable String endPosition) {
             this.endPosition = Input.ofNullable(endPosition);
             return this;
         }
 
-        public Builder setEndValue(@Nullable Input<String> endValue) {
+        public Builder endValue(@Nullable Input<String> endValue) {
             this.endValue = endValue;
             return this;
         }
 
-        public Builder setEndValue(@Nullable String endValue) {
+        public Builder endValue(@Nullable String endValue) {
             this.endValue = Input.ofNullable(endValue);
             return this;
         }
 
-        public Builder setExpandContractions(@Nullable Input<String> expandContractions) {
+        public Builder expandContractions(@Nullable Input<String> expandContractions) {
             this.expandContractions = expandContractions;
             return this;
         }
 
-        public Builder setExpandContractions(@Nullable String expandContractions) {
+        public Builder expandContractions(@Nullable String expandContractions) {
             this.expandContractions = Input.ofNullable(expandContractions);
             return this;
         }
 
-        public Builder setExponent(@Nullable Input<String> exponent) {
+        public Builder exponent(@Nullable Input<String> exponent) {
             this.exponent = exponent;
             return this;
         }
 
-        public Builder setExponent(@Nullable String exponent) {
+        public Builder exponent(@Nullable String exponent) {
             this.exponent = Input.ofNullable(exponent);
             return this;
         }
 
-        public Builder setFalseString(@Nullable Input<String> falseString) {
+        public Builder falseString(@Nullable Input<String> falseString) {
             this.falseString = falseString;
             return this;
         }
 
-        public Builder setFalseString(@Nullable String falseString) {
+        public Builder falseString(@Nullable String falseString) {
             this.falseString = Input.ofNullable(falseString);
             return this;
         }
 
-        public Builder setGroupByAggFunctionOptions(@Nullable Input<String> groupByAggFunctionOptions) {
+        public Builder groupByAggFunctionOptions(@Nullable Input<String> groupByAggFunctionOptions) {
             this.groupByAggFunctionOptions = groupByAggFunctionOptions;
             return this;
         }
 
-        public Builder setGroupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
+        public Builder groupByAggFunctionOptions(@Nullable String groupByAggFunctionOptions) {
             this.groupByAggFunctionOptions = Input.ofNullable(groupByAggFunctionOptions);
             return this;
         }
 
-        public Builder setGroupByColumns(@Nullable Input<String> groupByColumns) {
+        public Builder groupByColumns(@Nullable Input<String> groupByColumns) {
             this.groupByColumns = groupByColumns;
             return this;
         }
 
-        public Builder setGroupByColumns(@Nullable String groupByColumns) {
+        public Builder groupByColumns(@Nullable String groupByColumns) {
             this.groupByColumns = Input.ofNullable(groupByColumns);
             return this;
         }
 
-        public Builder setHiddenColumns(@Nullable Input<String> hiddenColumns) {
+        public Builder hiddenColumns(@Nullable Input<String> hiddenColumns) {
             this.hiddenColumns = hiddenColumns;
             return this;
         }
 
-        public Builder setHiddenColumns(@Nullable String hiddenColumns) {
+        public Builder hiddenColumns(@Nullable String hiddenColumns) {
             this.hiddenColumns = Input.ofNullable(hiddenColumns);
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable Input<String> ignoreCase) {
+        public Builder ignoreCase(@Nullable Input<String> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable String ignoreCase) {
+        public Builder ignoreCase(@Nullable String ignoreCase) {
             this.ignoreCase = Input.ofNullable(ignoreCase);
             return this;
         }
 
-        public Builder setIncludeInSplit(@Nullable Input<String> includeInSplit) {
+        public Builder includeInSplit(@Nullable Input<String> includeInSplit) {
             this.includeInSplit = includeInSplit;
             return this;
         }
 
-        public Builder setIncludeInSplit(@Nullable String includeInSplit) {
+        public Builder includeInSplit(@Nullable String includeInSplit) {
             this.includeInSplit = Input.ofNullable(includeInSplit);
             return this;
         }
 
-        public Builder setInput(@Nullable Input<RecipeParametersInputPropertiesArgs> input) {
+        public Builder input(@Nullable Input<RecipeParametersInputPropertiesArgs> input) {
             this.input = input;
             return this;
         }
 
-        public Builder setInput(@Nullable RecipeParametersInputPropertiesArgs input) {
+        public Builder input(@Nullable RecipeParametersInputPropertiesArgs input) {
             this.input = Input.ofNullable(input);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Input<String> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setIsText(@Nullable Input<String> isText) {
+        public Builder isText(@Nullable Input<String> isText) {
             this.isText = isText;
             return this;
         }
 
-        public Builder setIsText(@Nullable String isText) {
+        public Builder isText(@Nullable String isText) {
             this.isText = Input.ofNullable(isText);
             return this;
         }
 
-        public Builder setJoinKeys(@Nullable Input<String> joinKeys) {
+        public Builder joinKeys(@Nullable Input<String> joinKeys) {
             this.joinKeys = joinKeys;
             return this;
         }
 
-        public Builder setJoinKeys(@Nullable String joinKeys) {
+        public Builder joinKeys(@Nullable String joinKeys) {
             this.joinKeys = Input.ofNullable(joinKeys);
             return this;
         }
 
-        public Builder setJoinType(@Nullable Input<String> joinType) {
+        public Builder joinType(@Nullable Input<String> joinType) {
             this.joinType = joinType;
             return this;
         }
 
-        public Builder setJoinType(@Nullable String joinType) {
+        public Builder joinType(@Nullable String joinType) {
             this.joinType = Input.ofNullable(joinType);
             return this;
         }
 
-        public Builder setLeftColumns(@Nullable Input<String> leftColumns) {
+        public Builder leftColumns(@Nullable Input<String> leftColumns) {
             this.leftColumns = leftColumns;
             return this;
         }
 
-        public Builder setLeftColumns(@Nullable String leftColumns) {
+        public Builder leftColumns(@Nullable String leftColumns) {
             this.leftColumns = Input.ofNullable(leftColumns);
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<String> limit) {
+        public Builder limit(@Nullable Input<String> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable String limit) {
+        public Builder limit(@Nullable String limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setLowerBound(@Nullable Input<String> lowerBound) {
+        public Builder lowerBound(@Nullable Input<String> lowerBound) {
             this.lowerBound = lowerBound;
             return this;
         }
 
-        public Builder setLowerBound(@Nullable String lowerBound) {
+        public Builder lowerBound(@Nullable String lowerBound) {
             this.lowerBound = Input.ofNullable(lowerBound);
             return this;
         }
 
-        public Builder setMapType(@Nullable Input<String> mapType) {
+        public Builder mapType(@Nullable Input<String> mapType) {
             this.mapType = mapType;
             return this;
         }
 
-        public Builder setMapType(@Nullable String mapType) {
+        public Builder mapType(@Nullable String mapType) {
             this.mapType = Input.ofNullable(mapType);
             return this;
         }
 
-        public Builder setModeType(@Nullable Input<String> modeType) {
+        public Builder modeType(@Nullable Input<String> modeType) {
             this.modeType = modeType;
             return this;
         }
 
-        public Builder setModeType(@Nullable String modeType) {
+        public Builder modeType(@Nullable String modeType) {
             this.modeType = Input.ofNullable(modeType);
             return this;
         }
 
-        public Builder setMultiLine(@Nullable Input<Boolean> multiLine) {
+        public Builder multiLine(@Nullable Input<Boolean> multiLine) {
             this.multiLine = multiLine;
             return this;
         }
 
-        public Builder setMultiLine(@Nullable Boolean multiLine) {
+        public Builder multiLine(@Nullable Boolean multiLine) {
             this.multiLine = Input.ofNullable(multiLine);
             return this;
         }
 
-        public Builder setNumRows(@Nullable Input<String> numRows) {
+        public Builder numRows(@Nullable Input<String> numRows) {
             this.numRows = numRows;
             return this;
         }
 
-        public Builder setNumRows(@Nullable String numRows) {
+        public Builder numRows(@Nullable String numRows) {
             this.numRows = Input.ofNullable(numRows);
             return this;
         }
 
-        public Builder setNumRowsAfter(@Nullable Input<String> numRowsAfter) {
+        public Builder numRowsAfter(@Nullable Input<String> numRowsAfter) {
             this.numRowsAfter = numRowsAfter;
             return this;
         }
 
-        public Builder setNumRowsAfter(@Nullable String numRowsAfter) {
+        public Builder numRowsAfter(@Nullable String numRowsAfter) {
             this.numRowsAfter = Input.ofNullable(numRowsAfter);
             return this;
         }
 
-        public Builder setNumRowsBefore(@Nullable Input<String> numRowsBefore) {
+        public Builder numRowsBefore(@Nullable Input<String> numRowsBefore) {
             this.numRowsBefore = numRowsBefore;
             return this;
         }
 
-        public Builder setNumRowsBefore(@Nullable String numRowsBefore) {
+        public Builder numRowsBefore(@Nullable String numRowsBefore) {
             this.numRowsBefore = Input.ofNullable(numRowsBefore);
             return this;
         }
 
-        public Builder setOrderByColumn(@Nullable Input<String> orderByColumn) {
+        public Builder orderByColumn(@Nullable Input<String> orderByColumn) {
             this.orderByColumn = orderByColumn;
             return this;
         }
 
-        public Builder setOrderByColumn(@Nullable String orderByColumn) {
+        public Builder orderByColumn(@Nullable String orderByColumn) {
             this.orderByColumn = Input.ofNullable(orderByColumn);
             return this;
         }
 
-        public Builder setOrderByColumns(@Nullable Input<String> orderByColumns) {
+        public Builder orderByColumns(@Nullable Input<String> orderByColumns) {
             this.orderByColumns = orderByColumns;
             return this;
         }
 
-        public Builder setOrderByColumns(@Nullable String orderByColumns) {
+        public Builder orderByColumns(@Nullable String orderByColumns) {
             this.orderByColumns = Input.ofNullable(orderByColumns);
             return this;
         }
 
-        public Builder setOther(@Nullable Input<String> other) {
+        public Builder other(@Nullable Input<String> other) {
             this.other = other;
             return this;
         }
 
-        public Builder setOther(@Nullable String other) {
+        public Builder other(@Nullable String other) {
             this.other = Input.ofNullable(other);
             return this;
         }
 
-        public Builder setPattern(@Nullable Input<String> pattern) {
+        public Builder pattern(@Nullable Input<String> pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = Input.ofNullable(pattern);
             return this;
         }
 
-        public Builder setPatternOption1(@Nullable Input<String> patternOption1) {
+        public Builder patternOption1(@Nullable Input<String> patternOption1) {
             this.patternOption1 = patternOption1;
             return this;
         }
 
-        public Builder setPatternOption1(@Nullable String patternOption1) {
+        public Builder patternOption1(@Nullable String patternOption1) {
             this.patternOption1 = Input.ofNullable(patternOption1);
             return this;
         }
 
-        public Builder setPatternOption2(@Nullable Input<String> patternOption2) {
+        public Builder patternOption2(@Nullable Input<String> patternOption2) {
             this.patternOption2 = patternOption2;
             return this;
         }
 
-        public Builder setPatternOption2(@Nullable String patternOption2) {
+        public Builder patternOption2(@Nullable String patternOption2) {
             this.patternOption2 = Input.ofNullable(patternOption2);
             return this;
         }
 
-        public Builder setPatternOptions(@Nullable Input<String> patternOptions) {
+        public Builder patternOptions(@Nullable Input<String> patternOptions) {
             this.patternOptions = patternOptions;
             return this;
         }
 
-        public Builder setPatternOptions(@Nullable String patternOptions) {
+        public Builder patternOptions(@Nullable String patternOptions) {
             this.patternOptions = Input.ofNullable(patternOptions);
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }
 
-        public Builder setPosition(@Nullable Input<String> position) {
+        public Builder position(@Nullable Input<String> position) {
             this.position = position;
             return this;
         }
 
-        public Builder setPosition(@Nullable String position) {
+        public Builder position(@Nullable String position) {
             this.position = Input.ofNullable(position);
             return this;
         }
 
-        public Builder setRemoveAllPunctuation(@Nullable Input<String> removeAllPunctuation) {
+        public Builder removeAllPunctuation(@Nullable Input<String> removeAllPunctuation) {
             this.removeAllPunctuation = removeAllPunctuation;
             return this;
         }
 
-        public Builder setRemoveAllPunctuation(@Nullable String removeAllPunctuation) {
+        public Builder removeAllPunctuation(@Nullable String removeAllPunctuation) {
             this.removeAllPunctuation = Input.ofNullable(removeAllPunctuation);
             return this;
         }
 
-        public Builder setRemoveAllQuotes(@Nullable Input<String> removeAllQuotes) {
+        public Builder removeAllQuotes(@Nullable Input<String> removeAllQuotes) {
             this.removeAllQuotes = removeAllQuotes;
             return this;
         }
 
-        public Builder setRemoveAllQuotes(@Nullable String removeAllQuotes) {
+        public Builder removeAllQuotes(@Nullable String removeAllQuotes) {
             this.removeAllQuotes = Input.ofNullable(removeAllQuotes);
             return this;
         }
 
-        public Builder setRemoveAllWhitespace(@Nullable Input<String> removeAllWhitespace) {
+        public Builder removeAllWhitespace(@Nullable Input<String> removeAllWhitespace) {
             this.removeAllWhitespace = removeAllWhitespace;
             return this;
         }
 
-        public Builder setRemoveAllWhitespace(@Nullable String removeAllWhitespace) {
+        public Builder removeAllWhitespace(@Nullable String removeAllWhitespace) {
             this.removeAllWhitespace = Input.ofNullable(removeAllWhitespace);
             return this;
         }
 
-        public Builder setRemoveCustomCharacters(@Nullable Input<String> removeCustomCharacters) {
+        public Builder removeCustomCharacters(@Nullable Input<String> removeCustomCharacters) {
             this.removeCustomCharacters = removeCustomCharacters;
             return this;
         }
 
-        public Builder setRemoveCustomCharacters(@Nullable String removeCustomCharacters) {
+        public Builder removeCustomCharacters(@Nullable String removeCustomCharacters) {
             this.removeCustomCharacters = Input.ofNullable(removeCustomCharacters);
             return this;
         }
 
-        public Builder setRemoveCustomValue(@Nullable Input<String> removeCustomValue) {
+        public Builder removeCustomValue(@Nullable Input<String> removeCustomValue) {
             this.removeCustomValue = removeCustomValue;
             return this;
         }
 
-        public Builder setRemoveCustomValue(@Nullable String removeCustomValue) {
+        public Builder removeCustomValue(@Nullable String removeCustomValue) {
             this.removeCustomValue = Input.ofNullable(removeCustomValue);
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingPunctuation(@Nullable Input<String> removeLeadingAndTrailingPunctuation) {
+        public Builder removeLeadingAndTrailingPunctuation(@Nullable Input<String> removeLeadingAndTrailingPunctuation) {
             this.removeLeadingAndTrailingPunctuation = removeLeadingAndTrailingPunctuation;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
+        public Builder removeLeadingAndTrailingPunctuation(@Nullable String removeLeadingAndTrailingPunctuation) {
             this.removeLeadingAndTrailingPunctuation = Input.ofNullable(removeLeadingAndTrailingPunctuation);
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingQuotes(@Nullable Input<String> removeLeadingAndTrailingQuotes) {
+        public Builder removeLeadingAndTrailingQuotes(@Nullable Input<String> removeLeadingAndTrailingQuotes) {
             this.removeLeadingAndTrailingQuotes = removeLeadingAndTrailingQuotes;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
+        public Builder removeLeadingAndTrailingQuotes(@Nullable String removeLeadingAndTrailingQuotes) {
             this.removeLeadingAndTrailingQuotes = Input.ofNullable(removeLeadingAndTrailingQuotes);
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingWhitespace(@Nullable Input<String> removeLeadingAndTrailingWhitespace) {
+        public Builder removeLeadingAndTrailingWhitespace(@Nullable Input<String> removeLeadingAndTrailingWhitespace) {
             this.removeLeadingAndTrailingWhitespace = removeLeadingAndTrailingWhitespace;
             return this;
         }
 
-        public Builder setRemoveLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
+        public Builder removeLeadingAndTrailingWhitespace(@Nullable String removeLeadingAndTrailingWhitespace) {
             this.removeLeadingAndTrailingWhitespace = Input.ofNullable(removeLeadingAndTrailingWhitespace);
             return this;
         }
 
-        public Builder setRemoveLetters(@Nullable Input<String> removeLetters) {
+        public Builder removeLetters(@Nullable Input<String> removeLetters) {
             this.removeLetters = removeLetters;
             return this;
         }
 
-        public Builder setRemoveLetters(@Nullable String removeLetters) {
+        public Builder removeLetters(@Nullable String removeLetters) {
             this.removeLetters = Input.ofNullable(removeLetters);
             return this;
         }
 
-        public Builder setRemoveNumbers(@Nullable Input<String> removeNumbers) {
+        public Builder removeNumbers(@Nullable Input<String> removeNumbers) {
             this.removeNumbers = removeNumbers;
             return this;
         }
 
-        public Builder setRemoveNumbers(@Nullable String removeNumbers) {
+        public Builder removeNumbers(@Nullable String removeNumbers) {
             this.removeNumbers = Input.ofNullable(removeNumbers);
             return this;
         }
 
-        public Builder setRemoveSourceColumn(@Nullable Input<String> removeSourceColumn) {
+        public Builder removeSourceColumn(@Nullable Input<String> removeSourceColumn) {
             this.removeSourceColumn = removeSourceColumn;
             return this;
         }
 
-        public Builder setRemoveSourceColumn(@Nullable String removeSourceColumn) {
+        public Builder removeSourceColumn(@Nullable String removeSourceColumn) {
             this.removeSourceColumn = Input.ofNullable(removeSourceColumn);
             return this;
         }
 
-        public Builder setRemoveSpecialCharacters(@Nullable Input<String> removeSpecialCharacters) {
+        public Builder removeSpecialCharacters(@Nullable Input<String> removeSpecialCharacters) {
             this.removeSpecialCharacters = removeSpecialCharacters;
             return this;
         }
 
-        public Builder setRemoveSpecialCharacters(@Nullable String removeSpecialCharacters) {
+        public Builder removeSpecialCharacters(@Nullable String removeSpecialCharacters) {
             this.removeSpecialCharacters = Input.ofNullable(removeSpecialCharacters);
             return this;
         }
 
-        public Builder setRightColumns(@Nullable Input<String> rightColumns) {
+        public Builder rightColumns(@Nullable Input<String> rightColumns) {
             this.rightColumns = rightColumns;
             return this;
         }
 
-        public Builder setRightColumns(@Nullable String rightColumns) {
+        public Builder rightColumns(@Nullable String rightColumns) {
             this.rightColumns = Input.ofNullable(rightColumns);
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Input<String> sampleSize) {
+        public Builder sampleSize(@Nullable Input<String> sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable String sampleSize) {
+        public Builder sampleSize(@Nullable String sampleSize) {
             this.sampleSize = Input.ofNullable(sampleSize);
             return this;
         }
 
-        public Builder setSampleType(@Nullable Input<String> sampleType) {
+        public Builder sampleType(@Nullable Input<String> sampleType) {
             this.sampleType = sampleType;
             return this;
         }
 
-        public Builder setSampleType(@Nullable String sampleType) {
+        public Builder sampleType(@Nullable String sampleType) {
             this.sampleType = Input.ofNullable(sampleType);
             return this;
         }
 
-        public Builder setSecondInput(@Nullable Input<String> secondInput) {
+        public Builder secondInput(@Nullable Input<String> secondInput) {
             this.secondInput = secondInput;
             return this;
         }
 
-        public Builder setSecondInput(@Nullable String secondInput) {
+        public Builder secondInput(@Nullable String secondInput) {
             this.secondInput = Input.ofNullable(secondInput);
             return this;
         }
 
-        public Builder setSecondaryInputs(@Nullable Input<List<RecipeSecondaryInputArgs>> secondaryInputs) {
+        public Builder secondaryInputs(@Nullable Input<List<RecipeSecondaryInputArgs>> secondaryInputs) {
             this.secondaryInputs = secondaryInputs;
             return this;
         }
 
-        public Builder setSecondaryInputs(@Nullable List<RecipeSecondaryInputArgs> secondaryInputs) {
+        public Builder secondaryInputs(@Nullable List<RecipeSecondaryInputArgs> secondaryInputs) {
             this.secondaryInputs = Input.ofNullable(secondaryInputs);
             return this;
         }
 
-        public Builder setSheetIndexes(@Nullable Input<List<Integer>> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable Input<List<Integer>> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
 
-        public Builder setSheetIndexes(@Nullable List<Integer> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = Input.ofNullable(sheetIndexes);
             return this;
         }
 
-        public Builder setSheetNames(@Nullable Input<List<String>> sheetNames) {
+        public Builder sheetNames(@Nullable Input<List<String>> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }
 
-        public Builder setSheetNames(@Nullable List<String> sheetNames) {
+        public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = Input.ofNullable(sheetNames);
             return this;
         }
 
-        public Builder setSourceColumn(@Nullable Input<String> sourceColumn) {
+        public Builder sourceColumn(@Nullable Input<String> sourceColumn) {
             this.sourceColumn = sourceColumn;
             return this;
         }
 
-        public Builder setSourceColumn(@Nullable String sourceColumn) {
+        public Builder sourceColumn(@Nullable String sourceColumn) {
             this.sourceColumn = Input.ofNullable(sourceColumn);
             return this;
         }
 
-        public Builder setSourceColumn1(@Nullable Input<String> sourceColumn1) {
+        public Builder sourceColumn1(@Nullable Input<String> sourceColumn1) {
             this.sourceColumn1 = sourceColumn1;
             return this;
         }
 
-        public Builder setSourceColumn1(@Nullable String sourceColumn1) {
+        public Builder sourceColumn1(@Nullable String sourceColumn1) {
             this.sourceColumn1 = Input.ofNullable(sourceColumn1);
             return this;
         }
 
-        public Builder setSourceColumn2(@Nullable Input<String> sourceColumn2) {
+        public Builder sourceColumn2(@Nullable Input<String> sourceColumn2) {
             this.sourceColumn2 = sourceColumn2;
             return this;
         }
 
-        public Builder setSourceColumn2(@Nullable String sourceColumn2) {
+        public Builder sourceColumn2(@Nullable String sourceColumn2) {
             this.sourceColumn2 = Input.ofNullable(sourceColumn2);
             return this;
         }
 
-        public Builder setSourceColumns(@Nullable Input<String> sourceColumns) {
+        public Builder sourceColumns(@Nullable Input<String> sourceColumns) {
             this.sourceColumns = sourceColumns;
             return this;
         }
 
-        public Builder setSourceColumns(@Nullable String sourceColumns) {
+        public Builder sourceColumns(@Nullable String sourceColumns) {
             this.sourceColumns = Input.ofNullable(sourceColumns);
             return this;
         }
 
-        public Builder setStartColumnIndex(@Nullable Input<String> startColumnIndex) {
+        public Builder startColumnIndex(@Nullable Input<String> startColumnIndex) {
             this.startColumnIndex = startColumnIndex;
             return this;
         }
 
-        public Builder setStartColumnIndex(@Nullable String startColumnIndex) {
+        public Builder startColumnIndex(@Nullable String startColumnIndex) {
             this.startColumnIndex = Input.ofNullable(startColumnIndex);
             return this;
         }
 
-        public Builder setStartPattern(@Nullable Input<String> startPattern) {
+        public Builder startPattern(@Nullable Input<String> startPattern) {
             this.startPattern = startPattern;
             return this;
         }
 
-        public Builder setStartPattern(@Nullable String startPattern) {
+        public Builder startPattern(@Nullable String startPattern) {
             this.startPattern = Input.ofNullable(startPattern);
             return this;
         }
 
-        public Builder setStartPosition(@Nullable Input<String> startPosition) {
+        public Builder startPosition(@Nullable Input<String> startPosition) {
             this.startPosition = startPosition;
             return this;
         }
 
-        public Builder setStartPosition(@Nullable String startPosition) {
+        public Builder startPosition(@Nullable String startPosition) {
             this.startPosition = Input.ofNullable(startPosition);
             return this;
         }
 
-        public Builder setStartValue(@Nullable Input<String> startValue) {
+        public Builder startValue(@Nullable Input<String> startValue) {
             this.startValue = startValue;
             return this;
         }
 
-        public Builder setStartValue(@Nullable String startValue) {
+        public Builder startValue(@Nullable String startValue) {
             this.startValue = Input.ofNullable(startValue);
             return this;
         }
 
-        public Builder setStemmingMode(@Nullable Input<String> stemmingMode) {
+        public Builder stemmingMode(@Nullable Input<String> stemmingMode) {
             this.stemmingMode = stemmingMode;
             return this;
         }
 
-        public Builder setStemmingMode(@Nullable String stemmingMode) {
+        public Builder stemmingMode(@Nullable String stemmingMode) {
             this.stemmingMode = Input.ofNullable(stemmingMode);
             return this;
         }
 
-        public Builder setStepCount(@Nullable Input<String> stepCount) {
+        public Builder stepCount(@Nullable Input<String> stepCount) {
             this.stepCount = stepCount;
             return this;
         }
 
-        public Builder setStepCount(@Nullable String stepCount) {
+        public Builder stepCount(@Nullable String stepCount) {
             this.stepCount = Input.ofNullable(stepCount);
             return this;
         }
 
-        public Builder setStepIndex(@Nullable Input<String> stepIndex) {
+        public Builder stepIndex(@Nullable Input<String> stepIndex) {
             this.stepIndex = stepIndex;
             return this;
         }
 
-        public Builder setStepIndex(@Nullable String stepIndex) {
+        public Builder stepIndex(@Nullable String stepIndex) {
             this.stepIndex = Input.ofNullable(stepIndex);
             return this;
         }
 
-        public Builder setStopWordsMode(@Nullable Input<String> stopWordsMode) {
+        public Builder stopWordsMode(@Nullable Input<String> stopWordsMode) {
             this.stopWordsMode = stopWordsMode;
             return this;
         }
 
-        public Builder setStopWordsMode(@Nullable String stopWordsMode) {
+        public Builder stopWordsMode(@Nullable String stopWordsMode) {
             this.stopWordsMode = Input.ofNullable(stopWordsMode);
             return this;
         }
 
-        public Builder setStrategy(@Nullable Input<String> strategy) {
+        public Builder strategy(@Nullable Input<String> strategy) {
             this.strategy = strategy;
             return this;
         }
 
-        public Builder setStrategy(@Nullable String strategy) {
+        public Builder strategy(@Nullable String strategy) {
             this.strategy = Input.ofNullable(strategy);
             return this;
         }
 
-        public Builder setTargetColumn(@Nullable Input<String> targetColumn) {
+        public Builder targetColumn(@Nullable Input<String> targetColumn) {
             this.targetColumn = targetColumn;
             return this;
         }
 
-        public Builder setTargetColumn(@Nullable String targetColumn) {
+        public Builder targetColumn(@Nullable String targetColumn) {
             this.targetColumn = Input.ofNullable(targetColumn);
             return this;
         }
 
-        public Builder setTargetColumnNames(@Nullable Input<String> targetColumnNames) {
+        public Builder targetColumnNames(@Nullable Input<String> targetColumnNames) {
             this.targetColumnNames = targetColumnNames;
             return this;
         }
 
-        public Builder setTargetColumnNames(@Nullable String targetColumnNames) {
+        public Builder targetColumnNames(@Nullable String targetColumnNames) {
             this.targetColumnNames = Input.ofNullable(targetColumnNames);
             return this;
         }
 
-        public Builder setTargetDateFormat(@Nullable Input<String> targetDateFormat) {
+        public Builder targetDateFormat(@Nullable Input<String> targetDateFormat) {
             this.targetDateFormat = targetDateFormat;
             return this;
         }
 
-        public Builder setTargetDateFormat(@Nullable String targetDateFormat) {
+        public Builder targetDateFormat(@Nullable String targetDateFormat) {
             this.targetDateFormat = Input.ofNullable(targetDateFormat);
             return this;
         }
 
-        public Builder setTargetIndex(@Nullable Input<String> targetIndex) {
+        public Builder targetIndex(@Nullable Input<String> targetIndex) {
             this.targetIndex = targetIndex;
             return this;
         }
 
-        public Builder setTargetIndex(@Nullable String targetIndex) {
+        public Builder targetIndex(@Nullable String targetIndex) {
             this.targetIndex = Input.ofNullable(targetIndex);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
 
-        public Builder setTokenizerPattern(@Nullable Input<String> tokenizerPattern) {
+        public Builder tokenizerPattern(@Nullable Input<String> tokenizerPattern) {
             this.tokenizerPattern = tokenizerPattern;
             return this;
         }
 
-        public Builder setTokenizerPattern(@Nullable String tokenizerPattern) {
+        public Builder tokenizerPattern(@Nullable String tokenizerPattern) {
             this.tokenizerPattern = Input.ofNullable(tokenizerPattern);
             return this;
         }
 
-        public Builder setTrueString(@Nullable Input<String> trueString) {
+        public Builder trueString(@Nullable Input<String> trueString) {
             this.trueString = trueString;
             return this;
         }
 
-        public Builder setTrueString(@Nullable String trueString) {
+        public Builder trueString(@Nullable String trueString) {
             this.trueString = Input.ofNullable(trueString);
             return this;
         }
 
-        public Builder setUdfLang(@Nullable Input<String> udfLang) {
+        public Builder udfLang(@Nullable Input<String> udfLang) {
             this.udfLang = udfLang;
             return this;
         }
 
-        public Builder setUdfLang(@Nullable String udfLang) {
+        public Builder udfLang(@Nullable String udfLang) {
             this.udfLang = Input.ofNullable(udfLang);
             return this;
         }
 
-        public Builder setUnits(@Nullable Input<String> units) {
+        public Builder units(@Nullable Input<String> units) {
             this.units = units;
             return this;
         }
 
-        public Builder setUnits(@Nullable String units) {
+        public Builder units(@Nullable String units) {
             this.units = Input.ofNullable(units);
             return this;
         }
 
-        public Builder setUnpivotColumn(@Nullable Input<String> unpivotColumn) {
+        public Builder unpivotColumn(@Nullable Input<String> unpivotColumn) {
             this.unpivotColumn = unpivotColumn;
             return this;
         }
 
-        public Builder setUnpivotColumn(@Nullable String unpivotColumn) {
+        public Builder unpivotColumn(@Nullable String unpivotColumn) {
             this.unpivotColumn = Input.ofNullable(unpivotColumn);
             return this;
         }
 
-        public Builder setUpperBound(@Nullable Input<String> upperBound) {
+        public Builder upperBound(@Nullable Input<String> upperBound) {
             this.upperBound = upperBound;
             return this;
         }
 
-        public Builder setUpperBound(@Nullable String upperBound) {
+        public Builder upperBound(@Nullable String upperBound) {
             this.upperBound = Input.ofNullable(upperBound);
             return this;
         }
 
-        public Builder setUseNewDataFrame(@Nullable Input<String> useNewDataFrame) {
+        public Builder useNewDataFrame(@Nullable Input<String> useNewDataFrame) {
             this.useNewDataFrame = useNewDataFrame;
             return this;
         }
 
-        public Builder setUseNewDataFrame(@Nullable String useNewDataFrame) {
+        public Builder useNewDataFrame(@Nullable String useNewDataFrame) {
             this.useNewDataFrame = Input.ofNullable(useNewDataFrame);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }
 
-        public Builder setValue1(@Nullable Input<String> value1) {
+        public Builder value1(@Nullable Input<String> value1) {
             this.value1 = value1;
             return this;
         }
 
-        public Builder setValue1(@Nullable String value1) {
+        public Builder value1(@Nullable String value1) {
             this.value1 = Input.ofNullable(value1);
             return this;
         }
 
-        public Builder setValue2(@Nullable Input<String> value2) {
+        public Builder value2(@Nullable Input<String> value2) {
             this.value2 = value2;
             return this;
         }
 
-        public Builder setValue2(@Nullable String value2) {
+        public Builder value2(@Nullable String value2) {
             this.value2 = Input.ofNullable(value2);
             return this;
         }
 
-        public Builder setValueColumn(@Nullable Input<String> valueColumn) {
+        public Builder valueColumn(@Nullable Input<String> valueColumn) {
             this.valueColumn = valueColumn;
             return this;
         }
 
-        public Builder setValueColumn(@Nullable String valueColumn) {
+        public Builder valueColumn(@Nullable String valueColumn) {
             this.valueColumn = Input.ofNullable(valueColumn);
             return this;
         }
 
-        public Builder setViewFrame(@Nullable Input<String> viewFrame) {
+        public Builder viewFrame(@Nullable Input<String> viewFrame) {
             this.viewFrame = viewFrame;
             return this;
         }
 
-        public Builder setViewFrame(@Nullable String viewFrame) {
+        public Builder viewFrame(@Nullable String viewFrame) {
             this.viewFrame = Input.ofNullable(viewFrame);
             return this;
         }

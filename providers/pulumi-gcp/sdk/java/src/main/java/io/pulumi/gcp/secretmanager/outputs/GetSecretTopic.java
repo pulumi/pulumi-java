@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetSecretTopic {
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GetSecretTopic(String name) {
+    @OutputCustomType.Constructor
+    private GetSecretTopic(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -40,7 +40,7 @@ public final class GetSecretTopic {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

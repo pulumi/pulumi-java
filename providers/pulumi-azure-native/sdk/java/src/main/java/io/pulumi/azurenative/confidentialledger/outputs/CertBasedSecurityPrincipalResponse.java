@@ -22,10 +22,10 @@ public final class CertBasedSecurityPrincipalResponse {
      */
     private final @Nullable String ledgerRoleName;
 
-    @OutputCustomType.Constructor({"cert","ledgerRoleName"})
+    @OutputCustomType.Constructor
     private CertBasedSecurityPrincipalResponse(
-        @Nullable String cert,
-        @Nullable String ledgerRoleName) {
+        @OutputCustomType.Parameter("cert") @Nullable String cert,
+        @OutputCustomType.Parameter("ledgerRoleName") @Nullable String ledgerRoleName) {
         this.cert = cert;
         this.ledgerRoleName = ledgerRoleName;
     }
@@ -67,12 +67,12 @@ public final class CertBasedSecurityPrincipalResponse {
     	      this.ledgerRoleName = defaults.ledgerRoleName;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setLedgerRoleName(@Nullable String ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable String ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }

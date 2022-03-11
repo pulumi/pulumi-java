@@ -42,14 +42,14 @@ public final class ResourceOperationResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"operationId","provisioningState","resourceName","resourceType","statusCode","statusMessage"})
+    @OutputCustomType.Constructor
     private ResourceOperationResponse(
-        String operationId,
-        String provisioningState,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        String statusCode,
-        String statusMessage) {
+        @OutputCustomType.Parameter("operationId") String operationId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("statusCode") String statusCode,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.operationId = operationId;
         this.provisioningState = provisioningState;
         this.resourceName = resourceName;
@@ -131,32 +131,32 @@ public final class ResourceOperationResponse {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setOperationId(String operationId) {
+        public Builder operationId(String operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }

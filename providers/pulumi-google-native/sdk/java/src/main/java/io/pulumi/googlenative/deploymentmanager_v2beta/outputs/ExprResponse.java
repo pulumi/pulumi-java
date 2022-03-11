@@ -30,12 +30,12 @@ public final class ExprResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","expression","location","title"})
+    @OutputCustomType.Constructor
     private ExprResponse(
-        String description,
-        String expression,
-        String location,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.expression = expression;
         this.location = location;
@@ -97,22 +97,22 @@ public final class ExprResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

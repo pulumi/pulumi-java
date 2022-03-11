@@ -22,10 +22,10 @@ public final class SlotTypeEnumerationValue {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"synonyms","value"})
+    @OutputCustomType.Constructor
     private SlotTypeEnumerationValue(
-        @Nullable List<String> synonyms,
-        String value) {
+        @OutputCustomType.Parameter("synonyms") @Nullable List<String> synonyms,
+        @OutputCustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class SlotTypeEnumerationValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(@Nullable List<String> synonyms) {
+        public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

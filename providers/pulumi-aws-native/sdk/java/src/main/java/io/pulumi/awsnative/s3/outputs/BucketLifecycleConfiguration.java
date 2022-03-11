@@ -16,8 +16,8 @@ public final class BucketLifecycleConfiguration {
      */
     private final List<BucketRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BucketLifecycleConfiguration(List<BucketRule> rules) {
+    @OutputCustomType.Constructor
+    private BucketLifecycleConfiguration(@OutputCustomType.Parameter("rules") List<BucketRule> rules) {
         this.rules = rules;
     }
 
@@ -49,7 +49,7 @@ public final class BucketLifecycleConfiguration {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BucketRule> rules) {
+        public Builder rules(List<BucketRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

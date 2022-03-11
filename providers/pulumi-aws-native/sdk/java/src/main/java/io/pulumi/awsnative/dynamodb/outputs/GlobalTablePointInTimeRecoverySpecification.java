@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GlobalTablePointInTimeRecoverySpecification {
     private final @Nullable Boolean pointInTimeRecoveryEnabled;
 
-    @OutputCustomType.Constructor({"pointInTimeRecoveryEnabled"})
-    private GlobalTablePointInTimeRecoverySpecification(@Nullable Boolean pointInTimeRecoveryEnabled) {
+    @OutputCustomType.Constructor
+    private GlobalTablePointInTimeRecoverySpecification(@OutputCustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled) {
         this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
     }
 
@@ -42,7 +42,7 @@ public final class GlobalTablePointInTimeRecoverySpecification {
     	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }

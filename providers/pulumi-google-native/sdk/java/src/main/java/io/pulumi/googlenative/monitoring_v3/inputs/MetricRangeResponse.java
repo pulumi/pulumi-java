@@ -73,12 +73,12 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(GoogleMonitoringV3RangeResponse range) {
+        public Builder range(GoogleMonitoringV3RangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setTimeSeries(String timeSeries) {
+        public Builder timeSeries(String timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }

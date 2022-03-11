@@ -27,11 +27,11 @@ public final class SecretEnvSourceResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReference","name","optional"})
+    @OutputCustomType.Constructor
     private SecretEnvSourceResponse(
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.name = name;
         this.optional = optional;
@@ -83,17 +83,17 @@ public final class SecretEnvSourceResponse {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(LocalObjectReferenceResponse localObjectReference) {
+        public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

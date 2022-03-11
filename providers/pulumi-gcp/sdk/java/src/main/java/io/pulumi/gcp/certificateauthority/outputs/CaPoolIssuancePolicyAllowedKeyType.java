@@ -25,10 +25,10 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
      */
     private final @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa;
 
-    @OutputCustomType.Constructor({"ellipticCurve","rsa"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyAllowedKeyType(
-        @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
-        @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
+        @OutputCustomType.Parameter("ellipticCurve") @Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve,
+        @OutputCustomType.Parameter("rsa") @Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }
@@ -72,12 +72,12 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder setEllipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve) {
+        public Builder ellipticCurve(@Nullable CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve ellipticCurve) {
             this.ellipticCurve = ellipticCurve;
             return this;
         }
 
-        public Builder setRsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
+        public Builder rsa(@Nullable CaPoolIssuancePolicyAllowedKeyTypeRsa rsa) {
             this.rsa = rsa;
             return this;
         }

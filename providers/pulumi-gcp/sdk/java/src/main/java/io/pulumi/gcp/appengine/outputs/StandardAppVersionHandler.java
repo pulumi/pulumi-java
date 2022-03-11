@@ -57,15 +57,15 @@ public final class StandardAppVersionHandler {
      */
     private final @Nullable String urlRegex;
 
-    @OutputCustomType.Constructor({"authFailAction","login","redirectHttpResponseCode","script","securityLevel","staticFiles","urlRegex"})
+    @OutputCustomType.Constructor
     private StandardAppVersionHandler(
-        @Nullable String authFailAction,
-        @Nullable String login,
-        @Nullable String redirectHttpResponseCode,
-        @Nullable StandardAppVersionHandlerScript script,
-        @Nullable String securityLevel,
-        @Nullable StandardAppVersionHandlerStaticFiles staticFiles,
-        @Nullable String urlRegex) {
+        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("redirectHttpResponseCode") @Nullable String redirectHttpResponseCode,
+        @OutputCustomType.Parameter("script") @Nullable StandardAppVersionHandlerScript script,
+        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @OutputCustomType.Parameter("staticFiles") @Nullable StandardAppVersionHandlerStaticFiles staticFiles,
+        @OutputCustomType.Parameter("urlRegex") @Nullable String urlRegex) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.redirectHttpResponseCode = redirectHttpResponseCode;
@@ -165,37 +165,37 @@ public final class StandardAppVersionHandler {
     	      this.urlRegex = defaults.urlRegex;
         }
 
-        public Builder setAuthFailAction(@Nullable String authFailAction) {
+        public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(@Nullable String redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
 
-        public Builder setScript(@Nullable StandardAppVersionHandlerScript script) {
+        public Builder script(@Nullable StandardAppVersionHandlerScript script) {
             this.script = script;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable String securityLevel) {
+        public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setStaticFiles(@Nullable StandardAppVersionHandlerStaticFiles staticFiles) {
+        public Builder staticFiles(@Nullable StandardAppVersionHandlerStaticFiles staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
 
-        public Builder setUrlRegex(@Nullable String urlRegex) {
+        public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = urlRegex;
             return this;
         }

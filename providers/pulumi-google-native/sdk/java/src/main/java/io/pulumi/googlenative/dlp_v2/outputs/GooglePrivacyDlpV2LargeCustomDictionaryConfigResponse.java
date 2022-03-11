@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
      */
     private final GooglePrivacyDlpV2CloudStoragePathResponse outputPath;
 
-    @OutputCustomType.Constructor({"bigQueryField","cloudStorageFileSet","outputPath"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(
-        GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
-        GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
-        GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
+        @OutputCustomType.Parameter("bigQueryField") GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField,
+        @OutputCustomType.Parameter("cloudStorageFileSet") GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet,
+        @OutputCustomType.Parameter("outputPath") GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
         this.bigQueryField = bigQueryField;
         this.cloudStorageFileSet = cloudStorageFileSet;
         this.outputPath = outputPath;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
     	      this.outputPath = defaults.outputPath;
         }
 
-        public Builder setBigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
+        public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
             this.bigQueryField = Objects.requireNonNull(bigQueryField);
             return this;
         }
 
-        public Builder setCloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
             this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet);
             return this;
         }
 
-        public Builder setOutputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
+        public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }

@@ -37,13 +37,13 @@ public final class StudioComponentSharedFileSystemConfiguration {
      */
     private final @Nullable String windowsMountDrive;
 
-    @OutputCustomType.Constructor({"endpoint","fileSystemId","linuxMountPoint","shareName","windowsMountDrive"})
+    @OutputCustomType.Constructor
     private StudioComponentSharedFileSystemConfiguration(
-        @Nullable String endpoint,
-        @Nullable String fileSystemId,
-        @Nullable String linuxMountPoint,
-        @Nullable String shareName,
-        @Nullable String windowsMountDrive) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("fileSystemId") @Nullable String fileSystemId,
+        @OutputCustomType.Parameter("linuxMountPoint") @Nullable String linuxMountPoint,
+        @OutputCustomType.Parameter("shareName") @Nullable String shareName,
+        @OutputCustomType.Parameter("windowsMountDrive") @Nullable String windowsMountDrive) {
         this.endpoint = endpoint;
         this.fileSystemId = fileSystemId;
         this.linuxMountPoint = linuxMountPoint;
@@ -115,27 +115,27 @@ public final class StudioComponentSharedFileSystemConfiguration {
     	      this.windowsMountDrive = defaults.windowsMountDrive;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setLinuxMountPoint(@Nullable String linuxMountPoint) {
+        public Builder linuxMountPoint(@Nullable String linuxMountPoint) {
             this.linuxMountPoint = linuxMountPoint;
             return this;
         }
 
-        public Builder setShareName(@Nullable String shareName) {
+        public Builder shareName(@Nullable String shareName) {
             this.shareName = shareName;
             return this;
         }
 
-        public Builder setWindowsMountDrive(@Nullable String windowsMountDrive) {
+        public Builder windowsMountDrive(@Nullable String windowsMountDrive) {
             this.windowsMountDrive = windowsMountDrive;
             return this;
         }

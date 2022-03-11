@@ -27,11 +27,11 @@ public final class CrossVersionObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","name"})
+    @OutputCustomType.Constructor
     private CrossVersionObjectReference(
-        @Nullable String apiVersion,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.name = name;
@@ -83,17 +83,17 @@ public final class CrossVersionObjectReference {
     	      this.name = defaults.name;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

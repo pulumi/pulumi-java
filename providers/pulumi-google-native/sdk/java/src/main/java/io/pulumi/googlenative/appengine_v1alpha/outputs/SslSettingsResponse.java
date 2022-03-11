@@ -21,10 +21,10 @@ public final class SslSettingsResponse {
      */
     private final Boolean isManagedCertificate;
 
-    @OutputCustomType.Constructor({"certificateId","isManagedCertificate"})
+    @OutputCustomType.Constructor
     private SslSettingsResponse(
-        String certificateId,
-        Boolean isManagedCertificate) {
+        @OutputCustomType.Parameter("certificateId") String certificateId,
+        @OutputCustomType.Parameter("isManagedCertificate") Boolean isManagedCertificate) {
         this.certificateId = certificateId;
         this.isManagedCertificate = isManagedCertificate;
     }
@@ -66,12 +66,12 @@ public final class SslSettingsResponse {
     	      this.isManagedCertificate = defaults.isManagedCertificate;
         }
 
-        public Builder setCertificateId(String certificateId) {
+        public Builder certificateId(String certificateId) {
             this.certificateId = Objects.requireNonNull(certificateId);
             return this;
         }
 
-        public Builder setIsManagedCertificate(Boolean isManagedCertificate) {
+        public Builder isManagedCertificate(Boolean isManagedCertificate) {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
         }

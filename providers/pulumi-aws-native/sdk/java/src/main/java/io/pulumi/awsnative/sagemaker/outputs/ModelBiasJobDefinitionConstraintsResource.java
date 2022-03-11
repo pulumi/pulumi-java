@@ -17,8 +17,8 @@ public final class ModelBiasJobDefinitionConstraintsResource {
      */
     private final @Nullable String s3Uri;
 
-    @OutputCustomType.Constructor({"s3Uri"})
-    private ModelBiasJobDefinitionConstraintsResource(@Nullable String s3Uri) {
+    @OutputCustomType.Constructor
+    private ModelBiasJobDefinitionConstraintsResource(@OutputCustomType.Parameter("s3Uri") @Nullable String s3Uri) {
         this.s3Uri = s3Uri;
     }
 
@@ -50,7 +50,7 @@ public final class ModelBiasJobDefinitionConstraintsResource {
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setS3Uri(@Nullable String s3Uri) {
+        public Builder s3Uri(@Nullable String s3Uri) {
             this.s3Uri = s3Uri;
             return this;
         }

@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
      */
     private final List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"parameters"})
-    private GoogleCloudDialogflowCxV3beta1FormResponse(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1FormResponse(@OutputCustomType.Parameter("parameters") List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
         this.parameters = parameters;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setParameters(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudDialogflowCxV3beta1FormParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

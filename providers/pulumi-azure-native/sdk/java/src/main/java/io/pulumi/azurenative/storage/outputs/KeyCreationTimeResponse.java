@@ -14,10 +14,10 @@ public final class KeyCreationTimeResponse {
     private final @Nullable String key1;
     private final @Nullable String key2;
 
-    @OutputCustomType.Constructor({"key1","key2"})
+    @OutputCustomType.Constructor
     private KeyCreationTimeResponse(
-        @Nullable String key1,
-        @Nullable String key2) {
+        @OutputCustomType.Parameter("key1") @Nullable String key1,
+        @OutputCustomType.Parameter("key2") @Nullable String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }
@@ -51,12 +51,12 @@ public final class KeyCreationTimeResponse {
     	      this.key2 = defaults.key2;
         }
 
-        public Builder setKey1(@Nullable String key1) {
+        public Builder key1(@Nullable String key1) {
             this.key1 = key1;
             return this;
         }
 
-        public Builder setKey2(@Nullable String key2) {
+        public Builder key2(@Nullable String key2) {
             this.key2 = key2;
             return this;
         }

@@ -52,16 +52,16 @@ public final class GetWorkerPoolResult {
      */
     private final WorkerConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","name","networkConfig","region","state","updateTime","workerConfig"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        String createTime,
-        String deleteTime,
-        String name,
-        NetworkConfigResponse networkConfig,
-        String region,
-        String state,
-        String updateTime,
-        WorkerConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("workerConfig") WorkerConfigResponse workerConfig) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.name = name;
@@ -163,42 +163,42 @@ public final class GetWorkerPoolResult {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkConfig(NetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setWorkerConfig(WorkerConfigResponse workerConfig) {
+        public Builder workerConfig(WorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }

@@ -19,14 +19,14 @@ public final class ServiceRollbackConfig {
     private final @Nullable String order;
     private final @Nullable Integer parallelism;
 
-    @OutputCustomType.Constructor({"delay","failureAction","maxFailureRatio","monitor","order","parallelism"})
+    @OutputCustomType.Constructor
     private ServiceRollbackConfig(
-        @Nullable String delay,
-        @Nullable String failureAction,
-        @Nullable String maxFailureRatio,
-        @Nullable String monitor,
-        @Nullable String order,
-        @Nullable Integer parallelism) {
+        @OutputCustomType.Parameter("delay") @Nullable String delay,
+        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
+        @OutputCustomType.Parameter("maxFailureRatio") @Nullable String maxFailureRatio,
+        @OutputCustomType.Parameter("monitor") @Nullable String monitor,
+        @OutputCustomType.Parameter("order") @Nullable String order,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism) {
         this.delay = delay;
         this.failureAction = failureAction;
         this.maxFailureRatio = maxFailureRatio;
@@ -84,32 +84,32 @@ public final class ServiceRollbackConfig {
     	      this.parallelism = defaults.parallelism;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setFailureAction(@Nullable String failureAction) {
+        public Builder failureAction(@Nullable String failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
-        public Builder setMaxFailureRatio(@Nullable String maxFailureRatio) {
+        public Builder maxFailureRatio(@Nullable String maxFailureRatio) {
             this.maxFailureRatio = maxFailureRatio;
             return this;
         }
 
-        public Builder setMonitor(@Nullable String monitor) {
+        public Builder monitor(@Nullable String monitor) {
             this.monitor = monitor;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = order;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }

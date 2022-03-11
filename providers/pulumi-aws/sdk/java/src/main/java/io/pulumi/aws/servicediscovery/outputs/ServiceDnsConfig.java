@@ -29,11 +29,11 @@ public final class ServiceDnsConfig {
      */
     private final @Nullable String routingPolicy;
 
-    @OutputCustomType.Constructor({"dnsRecords","namespaceId","routingPolicy"})
+    @OutputCustomType.Constructor
     private ServiceDnsConfig(
-        List<ServiceDnsConfigDnsRecord> dnsRecords,
-        String namespaceId,
-        @Nullable String routingPolicy) {
+        @OutputCustomType.Parameter("dnsRecords") List<ServiceDnsConfigDnsRecord> dnsRecords,
+        @OutputCustomType.Parameter("namespaceId") String namespaceId,
+        @OutputCustomType.Parameter("routingPolicy") @Nullable String routingPolicy) {
         this.dnsRecords = dnsRecords;
         this.namespaceId = namespaceId;
         this.routingPolicy = routingPolicy;
@@ -85,17 +85,17 @@ public final class ServiceDnsConfig {
     	      this.routingPolicy = defaults.routingPolicy;
         }
 
-        public Builder setDnsRecords(List<ServiceDnsConfigDnsRecord> dnsRecords) {
+        public Builder dnsRecords(List<ServiceDnsConfigDnsRecord> dnsRecords) {
             this.dnsRecords = Objects.requireNonNull(dnsRecords);
             return this;
         }
 
-        public Builder setNamespaceId(String namespaceId) {
+        public Builder namespaceId(String namespaceId) {
             this.namespaceId = Objects.requireNonNull(namespaceId);
             return this;
         }
 
-        public Builder setRoutingPolicy(@Nullable String routingPolicy) {
+        public Builder routingPolicy(@Nullable String routingPolicy) {
             this.routingPolicy = routingPolicy;
             return this;
         }

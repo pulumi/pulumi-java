@@ -35,12 +35,12 @@ public final class ManagedClusterPodIdentityProfileResponse {
      */
     private final @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions;
 
-    @OutputCustomType.Constructor({"allowNetworkPluginKubenet","enabled","userAssignedIdentities","userAssignedIdentityExceptions"})
+    @OutputCustomType.Constructor
     private ManagedClusterPodIdentityProfileResponse(
-        @Nullable Boolean allowNetworkPluginKubenet,
-        @Nullable Boolean enabled,
-        @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
-        @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
+        @OutputCustomType.Parameter("allowNetworkPluginKubenet") @Nullable Boolean allowNetworkPluginKubenet,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities,
+        @OutputCustomType.Parameter("userAssignedIdentityExceptions") @Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
         this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
         this.enabled = enabled;
         this.userAssignedIdentities = userAssignedIdentities;
@@ -102,22 +102,22 @@ public final class ManagedClusterPodIdentityProfileResponse {
     	      this.userAssignedIdentityExceptions = defaults.userAssignedIdentityExceptions;
         }
 
-        public Builder setAllowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
+        public Builder allowNetworkPluginKubenet(@Nullable Boolean allowNetworkPluginKubenet) {
             this.allowNetworkPluginKubenet = allowNetworkPluginKubenet;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable List<ManagedClusterPodIdentityResponse> userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
-        public Builder setUserAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
+        public Builder userAssignedIdentityExceptions(@Nullable List<ManagedClusterPodIdentityExceptionResponse> userAssignedIdentityExceptions) {
             this.userAssignedIdentityExceptions = userAssignedIdentityExceptions;
             return this;
         }

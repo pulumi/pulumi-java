@@ -104,42 +104,42 @@ public final class DefaultVpcDhcpOptionsArgs extends io.pulumi.resources.Resourc
     	      this.tags = defaults.tags;
         }
 
-        public Builder setNetbiosNameServers(@Nullable Input<List<String>> netbiosNameServers) {
+        public Builder netbiosNameServers(@Nullable Input<List<String>> netbiosNameServers) {
             this.netbiosNameServers = netbiosNameServers;
             return this;
         }
 
-        public Builder setNetbiosNameServers(@Nullable List<String> netbiosNameServers) {
+        public Builder netbiosNameServers(@Nullable List<String> netbiosNameServers) {
             this.netbiosNameServers = Input.ofNullable(netbiosNameServers);
             return this;
         }
 
-        public Builder setNetbiosNodeType(@Nullable Input<String> netbiosNodeType) {
+        public Builder netbiosNodeType(@Nullable Input<String> netbiosNodeType) {
             this.netbiosNodeType = netbiosNodeType;
             return this;
         }
 
-        public Builder setNetbiosNodeType(@Nullable String netbiosNodeType) {
+        public Builder netbiosNodeType(@Nullable String netbiosNodeType) {
             this.netbiosNodeType = Input.ofNullable(netbiosNodeType);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -64,22 +64,22 @@ public final class PersonArgs extends io.pulumi.resources.ResourceArgs {
     	      this.pets = defaults.pets;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPets(@Nullable Input<List<PetArgs>> pets) {
+        public Builder pets(@Nullable Input<List<PetArgs>> pets) {
             this.pets = pets;
             return this;
         }
 
-        public Builder setPets(@Nullable List<PetArgs> pets) {
+        public Builder pets(@Nullable List<PetArgs> pets) {
             this.pets = Input.ofNullable(pets);
             return this;
         }

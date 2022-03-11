@@ -44,14 +44,14 @@ public final class RcmAzureMigrationPolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointThresholdInMinutes;
 
-    @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","instanceType","multiVmSyncStatus","recoveryPointHistory","recoveryPointThresholdInMinutes"})
+    @OutputCustomType.Constructor
     private RcmAzureMigrationPolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable String multiVmSyncStatus,
-        @Nullable Integer recoveryPointHistory,
-        @Nullable Integer recoveryPointThresholdInMinutes) {
+        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("multiVmSyncStatus") @Nullable String multiVmSyncStatus,
+        @OutputCustomType.Parameter("recoveryPointHistory") @Nullable Integer recoveryPointHistory,
+        @OutputCustomType.Parameter("recoveryPointThresholdInMinutes") @Nullable Integer recoveryPointThresholdInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;
@@ -134,32 +134,32 @@ public final class RcmAzureMigrationPolicyDetailsResponse {
     	      this.recoveryPointThresholdInMinutes = defaults.recoveryPointThresholdInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMultiVmSyncStatus(@Nullable String multiVmSyncStatus) {
+        public Builder multiVmSyncStatus(@Nullable String multiVmSyncStatus) {
             this.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
-        public Builder setRecoveryPointHistory(@Nullable Integer recoveryPointHistory) {
+        public Builder recoveryPointHistory(@Nullable Integer recoveryPointHistory) {
             this.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
-        public Builder setRecoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
+        public Builder recoveryPointThresholdInMinutes(@Nullable Integer recoveryPointThresholdInMinutes) {
             this.recoveryPointThresholdInMinutes = recoveryPointThresholdInMinutes;
             return this;
         }

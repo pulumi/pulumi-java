@@ -45,14 +45,14 @@ public final class FacebookChannelPropertiesResponse {
      */
     private final String verifyToken;
 
-    @OutputCustomType.Constructor({"appId","appSecret","callbackUrl","isEnabled","pages","verifyToken"})
+    @OutputCustomType.Constructor
     private FacebookChannelPropertiesResponse(
-        String appId,
-        @Nullable String appSecret,
-        String callbackUrl,
-        Boolean isEnabled,
-        @Nullable List<FacebookPageResponse> pages,
-        String verifyToken) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appSecret") @Nullable String appSecret,
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("pages") @Nullable List<FacebookPageResponse> pages,
+        @OutputCustomType.Parameter("verifyToken") String verifyToken) {
         this.appId = appId;
         this.appSecret = appSecret;
         this.callbackUrl = callbackUrl;
@@ -134,32 +134,32 @@ public final class FacebookChannelPropertiesResponse {
     	      this.verifyToken = defaults.verifyToken;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppSecret(@Nullable String appSecret) {
+        public Builder appSecret(@Nullable String appSecret) {
             this.appSecret = appSecret;
             return this;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setPages(@Nullable List<FacebookPageResponse> pages) {
+        public Builder pages(@Nullable List<FacebookPageResponse> pages) {
             this.pages = pages;
             return this;
         }
 
-        public Builder setVerifyToken(String verifyToken) {
+        public Builder verifyToken(String verifyToken) {
             this.verifyToken = Objects.requireNonNull(verifyToken);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
      */
     private final List<String> userIds;
 
-    @OutputCustomType.Constructor({"userGroups","userIds"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermission(
-        List<String> userGroups,
-        List<String> userIds) {
+        @OutputCustomType.Parameter("userGroups") List<String> userGroups,
+        @OutputCustomType.Parameter("userIds") List<String> userIds) {
         this.userGroups = userGroups;
         this.userIds = userIds;
     }
@@ -66,12 +66,12 @@ public final class GetDistributionConfigurationDistributionAmiDistributionConfig
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setUserGroups(List<String> userGroups) {
+        public Builder userGroups(List<String> userGroups) {
             this.userGroups = Objects.requireNonNull(userGroups);
             return this;
         }
 
-        public Builder setUserIds(List<String> userIds) {
+        public Builder userIds(List<String> userIds) {
             this.userIds = Objects.requireNonNull(userIds);
             return this;
         }

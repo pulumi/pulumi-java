@@ -21,10 +21,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
      */
     private final String setupStatus;
 
-    @OutputCustomType.Constructor({"setupErrors","setupStatus"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseResponse(
-        List<String> setupErrors,
-        String setupStatus) {
+        @OutputCustomType.Parameter("setupErrors") List<String> setupErrors,
+        @OutputCustomType.Parameter("setupStatus") String setupStatus) {
         this.setupErrors = setupErrors;
         this.setupStatus = setupStatus;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponseRes
     	      this.setupStatus = defaults.setupStatus;
         }
 
-        public Builder setSetupErrors(List<String> setupErrors) {
+        public Builder setupErrors(List<String> setupErrors) {
             this.setupErrors = Objects.requireNonNull(setupErrors);
             return this;
         }
 
-        public Builder setSetupStatus(String setupStatus) {
+        public Builder setupStatus(String setupStatus) {
             this.setupStatus = Objects.requireNonNull(setupStatus);
             return this;
         }

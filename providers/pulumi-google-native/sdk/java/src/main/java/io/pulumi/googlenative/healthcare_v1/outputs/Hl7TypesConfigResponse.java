@@ -22,10 +22,10 @@ public final class Hl7TypesConfigResponse {
      */
     private final List<VersionSourceResponse> version;
 
-    @OutputCustomType.Constructor({"type","version"})
+    @OutputCustomType.Constructor
     private Hl7TypesConfigResponse(
-        List<TypeResponse> type,
-        List<VersionSourceResponse> version) {
+        @OutputCustomType.Parameter("type") List<TypeResponse> type,
+        @OutputCustomType.Parameter("version") List<VersionSourceResponse> version) {
         this.type = type;
         this.version = version;
     }
@@ -67,12 +67,12 @@ public final class Hl7TypesConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setType(List<TypeResponse> type) {
+        public Builder type(List<TypeResponse> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(List<VersionSourceResponse> version) {
+        public Builder version(List<VersionSourceResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

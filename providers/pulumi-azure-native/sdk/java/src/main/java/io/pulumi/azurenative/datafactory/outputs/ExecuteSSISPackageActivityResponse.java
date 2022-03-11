@@ -121,27 +121,27 @@ public final class ExecuteSSISPackageActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"connectVia","dependsOn","description","environmentPath","executionCredential","linkedServiceName","logLocation","loggingLevel","name","packageConnectionManagers","packageLocation","packageParameters","policy","projectConnectionManagers","projectParameters","propertyOverrides","runtime","type","userProperties"})
+    @OutputCustomType.Constructor
     private ExecuteSSISPackageActivityResponse(
-        IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object environmentPath,
-        @Nullable SSISExecutionCredentialResponse executionCredential,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable SSISLogLocationResponse logLocation,
-        @Nullable Object loggingLevel,
-        String name,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers,
-        SSISPackageLocationResponse packageLocation,
-        @Nullable Map<String,SSISExecutionParameterResponse> packageParameters,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers,
-        @Nullable Map<String,SSISExecutionParameterResponse> projectParameters,
-        @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides,
-        @Nullable Object runtime,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("connectVia") IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentPath") @Nullable Object environmentPath,
+        @OutputCustomType.Parameter("executionCredential") @Nullable SSISExecutionCredentialResponse executionCredential,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logLocation") @Nullable SSISLogLocationResponse logLocation,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable Object loggingLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageConnectionManagers") @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers,
+        @OutputCustomType.Parameter("packageLocation") SSISPackageLocationResponse packageLocation,
+        @OutputCustomType.Parameter("packageParameters") @Nullable Map<String,SSISExecutionParameterResponse> packageParameters,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("projectConnectionManagers") @Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers,
+        @OutputCustomType.Parameter("projectParameters") @Nullable Map<String,SSISExecutionParameterResponse> projectParameters,
+        @OutputCustomType.Parameter("propertyOverrides") @Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides,
+        @OutputCustomType.Parameter("runtime") @Nullable Object runtime,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.connectVia = connectVia;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -354,97 +354,97 @@ public final class ExecuteSSISPackageActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setConnectVia(IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = Objects.requireNonNull(connectVia);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironmentPath(@Nullable Object environmentPath) {
+        public Builder environmentPath(@Nullable Object environmentPath) {
             this.environmentPath = environmentPath;
             return this;
         }
 
-        public Builder setExecutionCredential(@Nullable SSISExecutionCredentialResponse executionCredential) {
+        public Builder executionCredential(@Nullable SSISExecutionCredentialResponse executionCredential) {
             this.executionCredential = executionCredential;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLogLocation(@Nullable SSISLogLocationResponse logLocation) {
+        public Builder logLocation(@Nullable SSISLogLocationResponse logLocation) {
             this.logLocation = logLocation;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable Object loggingLevel) {
+        public Builder loggingLevel(@Nullable Object loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers) {
+        public Builder packageConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> packageConnectionManagers) {
             this.packageConnectionManagers = packageConnectionManagers;
             return this;
         }
 
-        public Builder setPackageLocation(SSISPackageLocationResponse packageLocation) {
+        public Builder packageLocation(SSISPackageLocationResponse packageLocation) {
             this.packageLocation = Objects.requireNonNull(packageLocation);
             return this;
         }
 
-        public Builder setPackageParameters(@Nullable Map<String,SSISExecutionParameterResponse> packageParameters) {
+        public Builder packageParameters(@Nullable Map<String,SSISExecutionParameterResponse> packageParameters) {
             this.packageParameters = packageParameters;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setProjectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers) {
+        public Builder projectConnectionManagers(@Nullable Map<String,Map<String,SSISExecutionParameterResponse>> projectConnectionManagers) {
             this.projectConnectionManagers = projectConnectionManagers;
             return this;
         }
 
-        public Builder setProjectParameters(@Nullable Map<String,SSISExecutionParameterResponse> projectParameters) {
+        public Builder projectParameters(@Nullable Map<String,SSISExecutionParameterResponse> projectParameters) {
             this.projectParameters = projectParameters;
             return this;
         }
 
-        public Builder setPropertyOverrides(@Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides) {
+        public Builder propertyOverrides(@Nullable Map<String,SSISPropertyOverrideResponse> propertyOverrides) {
             this.propertyOverrides = propertyOverrides;
             return this;
         }
 
-        public Builder setRuntime(@Nullable Object runtime) {
+        public Builder runtime(@Nullable Object runtime) {
             this.runtime = runtime;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

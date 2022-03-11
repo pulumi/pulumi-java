@@ -189,42 +189,42 @@ public final class GetDatabaseResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor({"autoPauseDelay","catalogCollation","collation","creationDate","currentBackupStorageRedundancy","currentServiceObjectiveName","currentSku","databaseId","defaultSecondaryLocation","earliestRestoreDate","elasticPoolId","failoverGroupId","highAvailabilityReplicaCount","id","kind","licenseType","location","maintenanceConfigurationId","managedBy","maxLogSizeBytes","maxSizeBytes","minCapacity","name","pausedDate","readScale","requestedBackupStorageRedundancy","requestedServiceObjectiveName","resumedDate","secondaryType","sku","status","tags","type","zoneRedundant"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable Integer autoPauseDelay,
-        @Nullable String catalogCollation,
-        @Nullable String collation,
-        String creationDate,
-        String currentBackupStorageRedundancy,
-        String currentServiceObjectiveName,
-        SkuResponse currentSku,
-        String databaseId,
-        String defaultSecondaryLocation,
-        String earliestRestoreDate,
-        @Nullable String elasticPoolId,
-        String failoverGroupId,
-        @Nullable Integer highAvailabilityReplicaCount,
-        String id,
-        String kind,
-        @Nullable String licenseType,
-        String location,
-        @Nullable String maintenanceConfigurationId,
-        String managedBy,
-        Double maxLogSizeBytes,
-        @Nullable Double maxSizeBytes,
-        @Nullable Double minCapacity,
-        String name,
-        String pausedDate,
-        @Nullable String readScale,
-        @Nullable String requestedBackupStorageRedundancy,
-        String requestedServiceObjectiveName,
-        String resumedDate,
-        @Nullable String secondaryType,
-        @Nullable SkuResponse sku,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Boolean zoneRedundant) {
+        @OutputCustomType.Parameter("autoPauseDelay") @Nullable Integer autoPauseDelay,
+        @OutputCustomType.Parameter("catalogCollation") @Nullable String catalogCollation,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("currentBackupStorageRedundancy") String currentBackupStorageRedundancy,
+        @OutputCustomType.Parameter("currentServiceObjectiveName") String currentServiceObjectiveName,
+        @OutputCustomType.Parameter("currentSku") SkuResponse currentSku,
+        @OutputCustomType.Parameter("databaseId") String databaseId,
+        @OutputCustomType.Parameter("defaultSecondaryLocation") String defaultSecondaryLocation,
+        @OutputCustomType.Parameter("earliestRestoreDate") String earliestRestoreDate,
+        @OutputCustomType.Parameter("elasticPoolId") @Nullable String elasticPoolId,
+        @OutputCustomType.Parameter("failoverGroupId") String failoverGroupId,
+        @OutputCustomType.Parameter("highAvailabilityReplicaCount") @Nullable Integer highAvailabilityReplicaCount,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @OutputCustomType.Parameter("managedBy") String managedBy,
+        @OutputCustomType.Parameter("maxLogSizeBytes") Double maxLogSizeBytes,
+        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @OutputCustomType.Parameter("minCapacity") @Nullable Double minCapacity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pausedDate") String pausedDate,
+        @OutputCustomType.Parameter("readScale") @Nullable String readScale,
+        @OutputCustomType.Parameter("requestedBackupStorageRedundancy") @Nullable String requestedBackupStorageRedundancy,
+        @OutputCustomType.Parameter("requestedServiceObjectiveName") String requestedServiceObjectiveName,
+        @OutputCustomType.Parameter("resumedDate") String resumedDate,
+        @OutputCustomType.Parameter("secondaryType") @Nullable String secondaryType,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.autoPauseDelay = autoPauseDelay;
         this.catalogCollation = catalogCollation;
         this.collation = collation;
@@ -588,172 +588,172 @@ public final class GetDatabaseResult {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setAutoPauseDelay(@Nullable Integer autoPauseDelay) {
+        public Builder autoPauseDelay(@Nullable Integer autoPauseDelay) {
             this.autoPauseDelay = autoPauseDelay;
             return this;
         }
 
-        public Builder setCatalogCollation(@Nullable String catalogCollation) {
+        public Builder catalogCollation(@Nullable String catalogCollation) {
             this.catalogCollation = catalogCollation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setCurrentBackupStorageRedundancy(String currentBackupStorageRedundancy) {
+        public Builder currentBackupStorageRedundancy(String currentBackupStorageRedundancy) {
             this.currentBackupStorageRedundancy = Objects.requireNonNull(currentBackupStorageRedundancy);
             return this;
         }
 
-        public Builder setCurrentServiceObjectiveName(String currentServiceObjectiveName) {
+        public Builder currentServiceObjectiveName(String currentServiceObjectiveName) {
             this.currentServiceObjectiveName = Objects.requireNonNull(currentServiceObjectiveName);
             return this;
         }
 
-        public Builder setCurrentSku(SkuResponse currentSku) {
+        public Builder currentSku(SkuResponse currentSku) {
             this.currentSku = Objects.requireNonNull(currentSku);
             return this;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setDefaultSecondaryLocation(String defaultSecondaryLocation) {
+        public Builder defaultSecondaryLocation(String defaultSecondaryLocation) {
             this.defaultSecondaryLocation = Objects.requireNonNull(defaultSecondaryLocation);
             return this;
         }
 
-        public Builder setEarliestRestoreDate(String earliestRestoreDate) {
+        public Builder earliestRestoreDate(String earliestRestoreDate) {
             this.earliestRestoreDate = Objects.requireNonNull(earliestRestoreDate);
             return this;
         }
 
-        public Builder setElasticPoolId(@Nullable String elasticPoolId) {
+        public Builder elasticPoolId(@Nullable String elasticPoolId) {
             this.elasticPoolId = elasticPoolId;
             return this;
         }
 
-        public Builder setFailoverGroupId(String failoverGroupId) {
+        public Builder failoverGroupId(String failoverGroupId) {
             this.failoverGroupId = Objects.requireNonNull(failoverGroupId);
             return this;
         }
 
-        public Builder setHighAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
+        public Builder highAvailabilityReplicaCount(@Nullable Integer highAvailabilityReplicaCount) {
             this.highAvailabilityReplicaCount = highAvailabilityReplicaCount;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setManagedBy(String managedBy) {
+        public Builder managedBy(String managedBy) {
             this.managedBy = Objects.requireNonNull(managedBy);
             return this;
         }
 
-        public Builder setMaxLogSizeBytes(Double maxLogSizeBytes) {
+        public Builder maxLogSizeBytes(Double maxLogSizeBytes) {
             this.maxLogSizeBytes = Objects.requireNonNull(maxLogSizeBytes);
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Double maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Double minCapacity) {
+        public Builder minCapacity(@Nullable Double minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPausedDate(String pausedDate) {
+        public Builder pausedDate(String pausedDate) {
             this.pausedDate = Objects.requireNonNull(pausedDate);
             return this;
         }
 
-        public Builder setReadScale(@Nullable String readScale) {
+        public Builder readScale(@Nullable String readScale) {
             this.readScale = readScale;
             return this;
         }
 
-        public Builder setRequestedBackupStorageRedundancy(@Nullable String requestedBackupStorageRedundancy) {
+        public Builder requestedBackupStorageRedundancy(@Nullable String requestedBackupStorageRedundancy) {
             this.requestedBackupStorageRedundancy = requestedBackupStorageRedundancy;
             return this;
         }
 
-        public Builder setRequestedServiceObjectiveName(String requestedServiceObjectiveName) {
+        public Builder requestedServiceObjectiveName(String requestedServiceObjectiveName) {
             this.requestedServiceObjectiveName = Objects.requireNonNull(requestedServiceObjectiveName);
             return this;
         }
 
-        public Builder setResumedDate(String resumedDate) {
+        public Builder resumedDate(String resumedDate) {
             this.resumedDate = Objects.requireNonNull(resumedDate);
             return this;
         }
 
-        public Builder setSecondaryType(@Nullable String secondaryType) {
+        public Builder secondaryType(@Nullable String secondaryType) {
             this.secondaryType = secondaryType;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }

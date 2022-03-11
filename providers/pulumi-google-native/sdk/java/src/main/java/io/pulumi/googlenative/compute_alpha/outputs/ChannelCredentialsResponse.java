@@ -21,10 +21,10 @@ public final class ChannelCredentialsResponse {
      */
     private final String channelCredentialType;
 
-    @OutputCustomType.Constructor({"certificates","channelCredentialType"})
+    @OutputCustomType.Constructor
     private ChannelCredentialsResponse(
-        TlsCertificatePathsResponse certificates,
-        String channelCredentialType) {
+        @OutputCustomType.Parameter("certificates") TlsCertificatePathsResponse certificates,
+        @OutputCustomType.Parameter("channelCredentialType") String channelCredentialType) {
         this.certificates = certificates;
         this.channelCredentialType = channelCredentialType;
     }
@@ -66,12 +66,12 @@ public final class ChannelCredentialsResponse {
     	      this.channelCredentialType = defaults.channelCredentialType;
         }
 
-        public Builder setCertificates(TlsCertificatePathsResponse certificates) {
+        public Builder certificates(TlsCertificatePathsResponse certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setChannelCredentialType(String channelCredentialType) {
+        public Builder channelCredentialType(String channelCredentialType) {
             this.channelCredentialType = Objects.requireNonNull(channelCredentialType);
             return this;
         }

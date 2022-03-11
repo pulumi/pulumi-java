@@ -49,17 +49,17 @@ public final class GetPublicKeyResult {
      */
     private final List<String> signingAlgorithms;
 
-    @OutputCustomType.Constructor({"arn","customerMasterKeySpec","encryptionAlgorithms","grantTokens","id","keyId","keyUsage","publicKey","signingAlgorithms"})
+    @OutputCustomType.Constructor
     private GetPublicKeyResult(
-        String arn,
-        String customerMasterKeySpec,
-        List<String> encryptionAlgorithms,
-        @Nullable List<String> grantTokens,
-        String id,
-        String keyId,
-        String keyUsage,
-        String publicKey,
-        List<String> signingAlgorithms) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @OutputCustomType.Parameter("encryptionAlgorithms") List<String> encryptionAlgorithms,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyUsage") String keyUsage,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("signingAlgorithms") List<String> signingAlgorithms) {
         this.arn = arn;
         this.customerMasterKeySpec = customerMasterKeySpec;
         this.encryptionAlgorithms = encryptionAlgorithms;
@@ -163,47 +163,47 @@ public final class GetPublicKeyResult {
     	      this.signingAlgorithms = defaults.signingAlgorithms;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCustomerMasterKeySpec(String customerMasterKeySpec) {
+        public Builder customerMasterKeySpec(String customerMasterKeySpec) {
             this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
             return this;
         }
 
-        public Builder setEncryptionAlgorithms(List<String> encryptionAlgorithms) {
+        public Builder encryptionAlgorithms(List<String> encryptionAlgorithms) {
             this.encryptionAlgorithms = Objects.requireNonNull(encryptionAlgorithms);
             return this;
         }
 
-        public Builder setGrantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyUsage(String keyUsage) {
+        public Builder keyUsage(String keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSigningAlgorithms(List<String> signingAlgorithms) {
+        public Builder signingAlgorithms(List<String> signingAlgorithms) {
             this.signingAlgorithms = Objects.requireNonNull(signingAlgorithms);
             return this;
         }

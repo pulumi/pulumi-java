@@ -84,21 +84,21 @@ public final class GetEventSubscriptionResult {
      */
     private final @Nullable List<EventSubscriptionTag> tags;
 
-    @OutputCustomType.Constructor({"custSubscriptionId","customerAwsId","enabled","eventCategories","eventCategoriesList","severity","snsTopicArn","sourceIds","sourceIdsList","sourceType","status","subscriptionCreationTime","tags"})
+    @OutputCustomType.Constructor
     private GetEventSubscriptionResult(
-        @Nullable String custSubscriptionId,
-        @Nullable String customerAwsId,
-        @Nullable Boolean enabled,
-        @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
-        @Nullable List<String> eventCategoriesList,
-        @Nullable EventSubscriptionSeverity severity,
-        @Nullable String snsTopicArn,
-        @Nullable List<String> sourceIds,
-        @Nullable List<String> sourceIdsList,
-        @Nullable EventSubscriptionSourceType sourceType,
-        @Nullable EventSubscriptionStatus status,
-        @Nullable String subscriptionCreationTime,
-        @Nullable List<EventSubscriptionTag> tags) {
+        @OutputCustomType.Parameter("custSubscriptionId") @Nullable String custSubscriptionId,
+        @OutputCustomType.Parameter("customerAwsId") @Nullable String customerAwsId,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("eventCategories") @Nullable List<EventSubscriptionEventCategoriesItem> eventCategories,
+        @OutputCustomType.Parameter("eventCategoriesList") @Nullable List<String> eventCategoriesList,
+        @OutputCustomType.Parameter("severity") @Nullable EventSubscriptionSeverity severity,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn,
+        @OutputCustomType.Parameter("sourceIds") @Nullable List<String> sourceIds,
+        @OutputCustomType.Parameter("sourceIdsList") @Nullable List<String> sourceIdsList,
+        @OutputCustomType.Parameter("sourceType") @Nullable EventSubscriptionSourceType sourceType,
+        @OutputCustomType.Parameter("status") @Nullable EventSubscriptionStatus status,
+        @OutputCustomType.Parameter("subscriptionCreationTime") @Nullable String subscriptionCreationTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventSubscriptionTag> tags) {
         this.custSubscriptionId = custSubscriptionId;
         this.customerAwsId = customerAwsId;
         this.enabled = enabled;
@@ -250,67 +250,67 @@ public final class GetEventSubscriptionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCustSubscriptionId(@Nullable String custSubscriptionId) {
+        public Builder custSubscriptionId(@Nullable String custSubscriptionId) {
             this.custSubscriptionId = custSubscriptionId;
             return this;
         }
 
-        public Builder setCustomerAwsId(@Nullable String customerAwsId) {
+        public Builder customerAwsId(@Nullable String customerAwsId) {
             this.customerAwsId = customerAwsId;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
+        public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
-        public Builder setEventCategoriesList(@Nullable List<String> eventCategoriesList) {
+        public Builder eventCategoriesList(@Nullable List<String> eventCategoriesList) {
             this.eventCategoriesList = eventCategoriesList;
             return this;
         }
 
-        public Builder setSeverity(@Nullable EventSubscriptionSeverity severity) {
+        public Builder severity(@Nullable EventSubscriptionSeverity severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSourceIds(@Nullable List<String> sourceIds) {
+        public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
-        public Builder setSourceIdsList(@Nullable List<String> sourceIdsList) {
+        public Builder sourceIdsList(@Nullable List<String> sourceIdsList) {
             this.sourceIdsList = sourceIdsList;
             return this;
         }
 
-        public Builder setSourceType(@Nullable EventSubscriptionSourceType sourceType) {
+        public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setStatus(@Nullable EventSubscriptionStatus status) {
+        public Builder status(@Nullable EventSubscriptionStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubscriptionCreationTime(@Nullable String subscriptionCreationTime) {
+        public Builder subscriptionCreationTime(@Nullable String subscriptionCreationTime) {
             this.subscriptionCreationTime = subscriptionCreationTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventSubscriptionTag> tags) {
+        public Builder tags(@Nullable List<EventSubscriptionTag> tags) {
             this.tags = tags;
             return this;
         }

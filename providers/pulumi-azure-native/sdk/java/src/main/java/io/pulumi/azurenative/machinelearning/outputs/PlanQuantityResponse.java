@@ -31,12 +31,12 @@ public final class PlanQuantityResponse {
      */
     private final String overageMeter;
 
-    @OutputCustomType.Constructor({"allowance","amount","includedQuantityMeter","overageMeter"})
+    @OutputCustomType.Constructor
     private PlanQuantityResponse(
-        Double allowance,
-        Double amount,
-        String includedQuantityMeter,
-        String overageMeter) {
+        @OutputCustomType.Parameter("allowance") Double allowance,
+        @OutputCustomType.Parameter("amount") Double amount,
+        @OutputCustomType.Parameter("includedQuantityMeter") String includedQuantityMeter,
+        @OutputCustomType.Parameter("overageMeter") String overageMeter) {
         this.allowance = allowance;
         this.amount = amount;
         this.includedQuantityMeter = includedQuantityMeter;
@@ -98,22 +98,22 @@ public final class PlanQuantityResponse {
     	      this.overageMeter = defaults.overageMeter;
         }
 
-        public Builder setAllowance(Double allowance) {
+        public Builder allowance(Double allowance) {
             this.allowance = Objects.requireNonNull(allowance);
             return this;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setIncludedQuantityMeter(String includedQuantityMeter) {
+        public Builder includedQuantityMeter(String includedQuantityMeter) {
             this.includedQuantityMeter = Objects.requireNonNull(includedQuantityMeter);
             return this;
         }
 
-        public Builder setOverageMeter(String overageMeter) {
+        public Builder overageMeter(String overageMeter) {
             this.overageMeter = Objects.requireNonNull(overageMeter);
             return this;
         }

@@ -26,10 +26,10 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
      */
     private final String subnetworkRangeName;
 
-    @OutputCustomType.Constructor({"ipCidrRange","subnetworkRangeName"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateNetworkInterfaceAliasIpRange(
-        String ipCidrRange,
-        String subnetworkRangeName) {
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("subnetworkRangeName") String subnetworkRangeName) {
         this.ipCidrRange = ipCidrRange;
         this.subnetworkRangeName = subnetworkRangeName;
     }
@@ -77,12 +77,12 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange {
     	      this.subnetworkRangeName = defaults.subnetworkRangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setSubnetworkRangeName(String subnetworkRangeName) {
+        public Builder subnetworkRangeName(String subnetworkRangeName) {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }

@@ -143,62 +143,62 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
     	      this.versions = defaults.versions;
         }
 
-        public Builder setConversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
+        public Builder conversion(@Nullable Input<CustomResourceConversionArgs> conversion) {
             this.conversion = conversion;
             return this;
         }
 
-        public Builder setConversion(@Nullable CustomResourceConversionArgs conversion) {
+        public Builder conversion(@Nullable CustomResourceConversionArgs conversion) {
             this.conversion = Input.ofNullable(conversion);
             return this;
         }
 
-        public Builder setGroup(Input<String> group) {
+        public Builder group(Input<String> group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Input.of(Objects.requireNonNull(group));
             return this;
         }
 
-        public Builder setNames(Input<CustomResourceDefinitionNamesArgs> names) {
+        public Builder names(Input<CustomResourceDefinitionNamesArgs> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setNames(CustomResourceDefinitionNamesArgs names) {
+        public Builder names(CustomResourceDefinitionNamesArgs names) {
             this.names = Input.of(Objects.requireNonNull(names));
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Input<Boolean> preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = Input.ofNullable(preserveUnknownFields);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setVersions(Input<List<CustomResourceDefinitionVersionArgs>> versions) {
+        public Builder versions(Input<List<CustomResourceDefinitionVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setVersions(List<CustomResourceDefinitionVersionArgs> versions) {
+        public Builder versions(List<CustomResourceDefinitionVersionArgs> versions) {
             this.versions = Input.of(Objects.requireNonNull(versions));
             return this;
         }

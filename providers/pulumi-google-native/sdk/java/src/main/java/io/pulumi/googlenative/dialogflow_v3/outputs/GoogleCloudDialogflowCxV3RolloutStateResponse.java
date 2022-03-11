@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
      */
     private final Integer stepIndex;
 
-    @OutputCustomType.Constructor({"startTime","step","stepIndex"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutStateResponse(
-        String startTime,
-        String step,
-        Integer stepIndex) {
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("step") String step,
+        @OutputCustomType.Parameter("stepIndex") Integer stepIndex) {
         this.startTime = startTime;
         this.step = step;
         this.stepIndex = stepIndex;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3RolloutStateResponse {
     	      this.stepIndex = defaults.stepIndex;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStep(String step) {
+        public Builder step(String step) {
             this.step = Objects.requireNonNull(step);
             return this;
         }
 
-        public Builder setStepIndex(Integer stepIndex) {
+        public Builder stepIndex(Integer stepIndex) {
             this.stepIndex = Objects.requireNonNull(stepIndex);
             return this;
         }

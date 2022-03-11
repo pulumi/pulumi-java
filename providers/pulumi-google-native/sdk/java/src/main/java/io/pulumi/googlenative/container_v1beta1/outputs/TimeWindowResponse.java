@@ -26,11 +26,11 @@ public final class TimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","maintenanceExclusionOptions","startTime"})
+    @OutputCustomType.Constructor
     private TimeWindowResponse(
-        String endTime,
-        MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("maintenanceExclusionOptions") MaintenanceExclusionOptionsResponse maintenanceExclusionOptions,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.maintenanceExclusionOptions = maintenanceExclusionOptions;
         this.startTime = startTime;
@@ -82,17 +82,17 @@ public final class TimeWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setMaintenanceExclusionOptions(MaintenanceExclusionOptionsResponse maintenanceExclusionOptions) {
+        public Builder maintenanceExclusionOptions(MaintenanceExclusionOptionsResponse maintenanceExclusionOptions) {
             this.maintenanceExclusionOptions = Objects.requireNonNull(maintenanceExclusionOptions);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

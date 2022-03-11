@@ -14,12 +14,12 @@ public final class GetProxyAuth {
     private final String iamAuth;
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"authScheme","description","iamAuth","secretArn"})
+    @OutputCustomType.Constructor
     private GetProxyAuth(
-        String authScheme,
-        String description,
-        String iamAuth,
-        String secretArn) {
+        @OutputCustomType.Parameter("authScheme") String authScheme,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("iamAuth") String iamAuth,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.authScheme = authScheme;
         this.description = description;
         this.iamAuth = iamAuth;
@@ -65,22 +65,22 @@ public final class GetProxyAuth {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setAuthScheme(String authScheme) {
+        public Builder authScheme(String authScheme) {
             this.authScheme = Objects.requireNonNull(authScheme);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIamAuth(String iamAuth) {
+        public Builder iamAuth(String iamAuth) {
             this.iamAuth = Objects.requireNonNull(iamAuth);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }

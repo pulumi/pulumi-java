@@ -142,30 +142,30 @@ public final class Container {
      */
     private final @Nullable String workingDir;
 
-    @OutputCustomType.Constructor({"args","command","env","envFrom","image","imagePullPolicy","lifecycle","livenessProbe","name","ports","readinessProbe","resources","securityContext","startupProbe","stdin","stdinOnce","terminationMessagePath","terminationMessagePolicy","tty","volumeDevices","volumeMounts","workingDir"})
+    @OutputCustomType.Constructor
     private Container(
-        @Nullable List<String> args,
-        @Nullable List<String> command,
-        @Nullable List<EnvVar> env,
-        @Nullable List<EnvFromSource> envFrom,
-        @Nullable String image,
-        @Nullable String imagePullPolicy,
-        @Nullable Lifecycle lifecycle,
-        @Nullable Probe livenessProbe,
-        String name,
-        @Nullable List<ContainerPort> ports,
-        @Nullable Probe readinessProbe,
-        @Nullable ResourceRequirements resources,
-        @Nullable SecurityContext securityContext,
-        @Nullable Probe startupProbe,
-        @Nullable Boolean stdin,
-        @Nullable Boolean stdinOnce,
-        @Nullable String terminationMessagePath,
-        @Nullable String terminationMessagePolicy,
-        @Nullable Boolean tty,
-        @Nullable List<VolumeDevice> volumeDevices,
-        @Nullable List<VolumeMount> volumeMounts,
-        @Nullable String workingDir) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("imagePullPolicy") @Nullable String imagePullPolicy,
+        @OutputCustomType.Parameter("lifecycle") @Nullable Lifecycle lifecycle,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable Probe livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPort> ports,
+        @OutputCustomType.Parameter("readinessProbe") @Nullable Probe readinessProbe,
+        @OutputCustomType.Parameter("resources") @Nullable ResourceRequirements resources,
+        @OutputCustomType.Parameter("securityContext") @Nullable SecurityContext securityContext,
+        @OutputCustomType.Parameter("startupProbe") @Nullable Probe startupProbe,
+        @OutputCustomType.Parameter("stdin") @Nullable Boolean stdin,
+        @OutputCustomType.Parameter("stdinOnce") @Nullable Boolean stdinOnce,
+        @OutputCustomType.Parameter("terminationMessagePath") @Nullable String terminationMessagePath,
+        @OutputCustomType.Parameter("terminationMessagePolicy") @Nullable String terminationMessagePolicy,
+        @OutputCustomType.Parameter("tty") @Nullable Boolean tty,
+        @OutputCustomType.Parameter("volumeDevices") @Nullable List<VolumeDevice> volumeDevices,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("workingDir") @Nullable String workingDir) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -416,112 +416,112 @@ public final class Container {
     	      this.workingDir = defaults.workingDir;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setEnv(@Nullable List<EnvVar> env) {
+        public Builder env(@Nullable List<EnvVar> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable List<EnvFromSource> envFrom) {
+        public Builder envFrom(@Nullable List<EnvFromSource> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImagePullPolicy(@Nullable String imagePullPolicy) {
+        public Builder imagePullPolicy(@Nullable String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable Lifecycle lifecycle) {
+        public Builder lifecycle(@Nullable Lifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable Probe livenessProbe) {
+        public Builder livenessProbe(@Nullable Probe livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPort> ports) {
+        public Builder ports(@Nullable List<ContainerPort> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable Probe readinessProbe) {
+        public Builder readinessProbe(@Nullable Probe readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
-        public Builder setResources(@Nullable ResourceRequirements resources) {
+        public Builder resources(@Nullable ResourceRequirements resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable SecurityContext securityContext) {
+        public Builder securityContext(@Nullable SecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
-        public Builder setStartupProbe(@Nullable Probe startupProbe) {
+        public Builder startupProbe(@Nullable Probe startupProbe) {
             this.startupProbe = startupProbe;
             return this;
         }
 
-        public Builder setStdin(@Nullable Boolean stdin) {
+        public Builder stdin(@Nullable Boolean stdin) {
             this.stdin = stdin;
             return this;
         }
 
-        public Builder setStdinOnce(@Nullable Boolean stdinOnce) {
+        public Builder stdinOnce(@Nullable Boolean stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
 
-        public Builder setTerminationMessagePath(@Nullable String terminationMessagePath) {
+        public Builder terminationMessagePath(@Nullable String terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
 
-        public Builder setTerminationMessagePolicy(@Nullable String terminationMessagePolicy) {
+        public Builder terminationMessagePolicy(@Nullable String terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
 
-        public Builder setTty(@Nullable Boolean tty) {
+        public Builder tty(@Nullable Boolean tty) {
             this.tty = tty;
             return this;
         }
 
-        public Builder setVolumeDevices(@Nullable List<VolumeDevice> volumeDevices) {
+        public Builder volumeDevices(@Nullable List<VolumeDevice> volumeDevices) {
             this.volumeDevices = volumeDevices;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMount> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setWorkingDir(@Nullable String workingDir) {
+        public Builder workingDir(@Nullable String workingDir) {
             this.workingDir = workingDir;
             return this;
         }

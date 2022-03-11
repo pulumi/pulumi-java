@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetLoggingConfigurationResult {
     private final @Nullable LoggingConfiguration loggingConfiguration;
 
-    @OutputCustomType.Constructor({"loggingConfiguration"})
-    private GetLoggingConfigurationResult(@Nullable LoggingConfiguration loggingConfiguration) {
+    @OutputCustomType.Constructor
+    private GetLoggingConfigurationResult(@OutputCustomType.Parameter("loggingConfiguration") @Nullable LoggingConfiguration loggingConfiguration) {
         this.loggingConfiguration = loggingConfiguration;
     }
 
@@ -42,7 +42,7 @@ public final class GetLoggingConfigurationResult {
     	      this.loggingConfiguration = defaults.loggingConfiguration;
         }
 
-        public Builder setLoggingConfiguration(@Nullable LoggingConfiguration loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable LoggingConfiguration loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }

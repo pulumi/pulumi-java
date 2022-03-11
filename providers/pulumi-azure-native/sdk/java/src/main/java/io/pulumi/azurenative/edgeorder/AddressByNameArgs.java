@@ -137,62 +137,62 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddressName(@Nullable Input<String> addressName) {
+        public Builder addressName(@Nullable Input<String> addressName) {
             this.addressName = addressName;
             return this;
         }
 
-        public Builder setAddressName(@Nullable String addressName) {
+        public Builder addressName(@Nullable String addressName) {
             this.addressName = Input.ofNullable(addressName);
             return this;
         }
 
-        public Builder setContactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
-        public Builder setContactDetails(ContactDetailsArgs contactDetails) {
+        public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
+        public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Input.ofNullable(shippingAddress);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

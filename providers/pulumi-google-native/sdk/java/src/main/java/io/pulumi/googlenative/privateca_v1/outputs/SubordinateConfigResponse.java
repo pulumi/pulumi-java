@@ -21,10 +21,10 @@ public final class SubordinateConfigResponse {
      */
     private final SubordinateConfigChainResponse pemIssuerChain;
 
-    @OutputCustomType.Constructor({"certificateAuthority","pemIssuerChain"})
+    @OutputCustomType.Constructor
     private SubordinateConfigResponse(
-        String certificateAuthority,
-        SubordinateConfigChainResponse pemIssuerChain) {
+        @OutputCustomType.Parameter("certificateAuthority") String certificateAuthority,
+        @OutputCustomType.Parameter("pemIssuerChain") SubordinateConfigChainResponse pemIssuerChain) {
         this.certificateAuthority = certificateAuthority;
         this.pemIssuerChain = pemIssuerChain;
     }
@@ -66,12 +66,12 @@ public final class SubordinateConfigResponse {
     	      this.pemIssuerChain = defaults.pemIssuerChain;
         }
 
-        public Builder setCertificateAuthority(String certificateAuthority) {
+        public Builder certificateAuthority(String certificateAuthority) {
             this.certificateAuthority = Objects.requireNonNull(certificateAuthority);
             return this;
         }
 
-        public Builder setPemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
+        public Builder pemIssuerChain(SubordinateConfigChainResponse pemIssuerChain) {
             this.pemIssuerChain = Objects.requireNonNull(pemIssuerChain);
             return this;
         }

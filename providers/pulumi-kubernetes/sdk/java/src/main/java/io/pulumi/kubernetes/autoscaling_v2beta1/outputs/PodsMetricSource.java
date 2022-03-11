@@ -28,11 +28,11 @@ public final class PodsMetricSource {
      */
     private final String targetAverageValue;
 
-    @OutputCustomType.Constructor({"metricName","selector","targetAverageValue"})
+    @OutputCustomType.Constructor
     private PodsMetricSource(
-        String metricName,
-        @Nullable LabelSelector selector,
-        String targetAverageValue) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("targetAverageValue") String targetAverageValue) {
         this.metricName = metricName;
         this.selector = selector;
         this.targetAverageValue = targetAverageValue;
@@ -84,17 +84,17 @@ public final class PodsMetricSource {
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTargetAverageValue(String targetAverageValue) {
+        public Builder targetAverageValue(String targetAverageValue) {
             this.targetAverageValue = Objects.requireNonNull(targetAverageValue);
             return this;
         }

@@ -23,11 +23,11 @@ public final class GetProjectResult {
      */
     private final List<GetProjectProject> projects;
 
-    @OutputCustomType.Constructor({"filter","id","projects"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String filter,
-        String id,
-        List<GetProjectProject> projects) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("projects") List<GetProjectProject> projects) {
         this.filter = filter;
         this.id = id;
         this.projects = projects;
@@ -75,17 +75,17 @@ public final class GetProjectResult {
     	      this.projects = defaults.projects;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProjects(List<GetProjectProject> projects) {
+        public Builder projects(List<GetProjectProject> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }

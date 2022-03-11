@@ -20,10 +20,10 @@ public final class AssignedUserResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"objectId","tenantId"})
+    @OutputCustomType.Constructor
     private AssignedUserResponse(
-        String objectId,
-        String tenantId) {
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.objectId = objectId;
         this.tenantId = tenantId;
     }
@@ -65,12 +65,12 @@ public final class AssignedUserResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

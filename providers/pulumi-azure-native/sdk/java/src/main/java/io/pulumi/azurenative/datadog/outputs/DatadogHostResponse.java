@@ -30,12 +30,12 @@ public final class DatadogHostResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"aliases","apps","meta","name"})
+    @OutputCustomType.Constructor
     private DatadogHostResponse(
-        @Nullable List<String> aliases,
-        @Nullable List<String> apps,
-        @Nullable DatadogHostMetadataResponse meta,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @OutputCustomType.Parameter("apps") @Nullable List<String> apps,
+        @OutputCustomType.Parameter("meta") @Nullable DatadogHostMetadataResponse meta,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.aliases = aliases;
         this.apps = apps;
         this.meta = meta;
@@ -93,22 +93,22 @@ public final class DatadogHostResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAliases(@Nullable List<String> aliases) {
+        public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setApps(@Nullable List<String> apps) {
+        public Builder apps(@Nullable List<String> apps) {
             this.apps = apps;
             return this;
         }
 
-        public Builder setMeta(@Nullable DatadogHostMetadataResponse meta) {
+        public Builder meta(@Nullable DatadogHostMetadataResponse meta) {
             this.meta = meta;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

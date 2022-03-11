@@ -13,10 +13,10 @@ public final class GetJobQueueComputeEnvironmentOrder {
     private final String computeEnvironment;
     private final Integer order;
 
-    @OutputCustomType.Constructor({"computeEnvironment","order"})
+    @OutputCustomType.Constructor
     private GetJobQueueComputeEnvironmentOrder(
-        String computeEnvironment,
-        Integer order) {
+        @OutputCustomType.Parameter("computeEnvironment") String computeEnvironment,
+        @OutputCustomType.Parameter("order") Integer order) {
         this.computeEnvironment = computeEnvironment;
         this.order = order;
     }
@@ -50,12 +50,12 @@ public final class GetJobQueueComputeEnvironmentOrder {
     	      this.order = defaults.order;
         }
 
-        public Builder setComputeEnvironment(String computeEnvironment) {
+        public Builder computeEnvironment(String computeEnvironment) {
             this.computeEnvironment = Objects.requireNonNull(computeEnvironment);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }

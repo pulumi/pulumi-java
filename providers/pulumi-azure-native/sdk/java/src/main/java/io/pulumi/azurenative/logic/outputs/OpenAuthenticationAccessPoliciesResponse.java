@@ -18,8 +18,8 @@ public final class OpenAuthenticationAccessPoliciesResponse {
      */
     private final @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies;
 
-    @OutputCustomType.Constructor({"policies"})
-    private OpenAuthenticationAccessPoliciesResponse(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
+    @OutputCustomType.Constructor
+    private OpenAuthenticationAccessPoliciesResponse(@OutputCustomType.Parameter("policies") @Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
         this.policies = policies;
     }
 
@@ -51,7 +51,7 @@ public final class OpenAuthenticationAccessPoliciesResponse {
     	      this.policies = defaults.policies;
         }
 
-        public Builder setPolicies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
+        public Builder policies(@Nullable Map<String,OpenAuthenticationAccessPolicyResponse> policies) {
             this.policies = policies;
             return this;
         }

@@ -15,8 +15,8 @@ public final class GalleryIdentifierResponse {
      */
     private final String uniqueName;
 
-    @OutputCustomType.Constructor({"uniqueName"})
-    private GalleryIdentifierResponse(String uniqueName) {
+    @OutputCustomType.Constructor
+    private GalleryIdentifierResponse(@OutputCustomType.Parameter("uniqueName") String uniqueName) {
         this.uniqueName = uniqueName;
     }
 
@@ -48,7 +48,7 @@ public final class GalleryIdentifierResponse {
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder setUniqueName(String uniqueName) {
+        public Builder uniqueName(String uniqueName) {
             this.uniqueName = Objects.requireNonNull(uniqueName);
             return this;
         }

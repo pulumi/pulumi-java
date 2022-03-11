@@ -24,10 +24,10 @@ public final class GetRouteTableResult {
      */
     private final @Nullable List<RouteTableTag> tags;
 
-    @OutputCustomType.Constructor({"routeTableId","tags"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        @Nullable String routeTableId,
-        @Nullable List<RouteTableTag> tags) {
+        @OutputCustomType.Parameter("routeTableId") @Nullable String routeTableId,
+        @OutputCustomType.Parameter("tags") @Nullable List<RouteTableTag> tags) {
         this.routeTableId = routeTableId;
         this.tags = tags;
     }
@@ -69,12 +69,12 @@ public final class GetRouteTableResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setRouteTableId(@Nullable String routeTableId) {
+        public Builder routeTableId(@Nullable String routeTableId) {
             this.routeTableId = routeTableId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RouteTableTag> tags) {
+        public Builder tags(@Nullable List<RouteTableTag> tags) {
             this.tags = tags;
             return this;
         }

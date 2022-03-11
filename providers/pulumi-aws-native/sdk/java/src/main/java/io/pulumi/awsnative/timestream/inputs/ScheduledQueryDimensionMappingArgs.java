@@ -66,22 +66,22 @@ public final class ScheduledQueryDimensionMappingArgs extends io.pulumi.resource
     	      this.name = defaults.name;
         }
 
-        public Builder setDimensionValueType(Input<ScheduledQueryDimensionValueType> dimensionValueType) {
+        public Builder dimensionValueType(Input<ScheduledQueryDimensionValueType> dimensionValueType) {
             this.dimensionValueType = Objects.requireNonNull(dimensionValueType);
             return this;
         }
 
-        public Builder setDimensionValueType(ScheduledQueryDimensionValueType dimensionValueType) {
+        public Builder dimensionValueType(ScheduledQueryDimensionValueType dimensionValueType) {
             this.dimensionValueType = Input.of(Objects.requireNonNull(dimensionValueType));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

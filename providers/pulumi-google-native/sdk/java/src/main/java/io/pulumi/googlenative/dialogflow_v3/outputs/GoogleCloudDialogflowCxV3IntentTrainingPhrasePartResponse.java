@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"parameterId","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse(
-        String parameterId,
-        String text) {
+        @OutputCustomType.Parameter("parameterId") String parameterId,
+        @OutputCustomType.Parameter("text") String text) {
         this.parameterId = parameterId;
         this.text = text;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowCxV3IntentTrainingPhrasePartResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setParameterId(String parameterId) {
+        public Builder parameterId(String parameterId) {
             this.parameterId = Objects.requireNonNull(parameterId);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

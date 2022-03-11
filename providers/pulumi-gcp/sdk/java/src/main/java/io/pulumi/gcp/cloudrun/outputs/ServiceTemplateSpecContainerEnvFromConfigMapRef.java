@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReference","optional"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecContainerEnvFromConfigMapRef(
-        @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReference") @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.optional = optional;
     }
@@ -70,12 +70,12 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference) {
+        public Builder localObjectReference(@Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference) {
             this.localObjectReference = localObjectReference;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

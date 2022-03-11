@@ -15,8 +15,8 @@ public final class BotSSMLMessage {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotSSMLMessage(String value) {
+    @OutputCustomType.Constructor
+    private BotSSMLMessage(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -48,7 +48,7 @@ public final class BotSSMLMessage {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

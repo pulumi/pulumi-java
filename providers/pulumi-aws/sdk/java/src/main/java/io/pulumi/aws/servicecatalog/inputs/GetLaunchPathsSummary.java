@@ -103,22 +103,22 @@ public final class GetLaunchPathsSummary extends io.pulumi.resources.InvokeArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConstraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
+        public Builder constraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
             this.constraintSummaries = Objects.requireNonNull(constraintSummaries);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathId(String pathId) {
+        public Builder pathId(String pathId) {
             this.pathId = Objects.requireNonNull(pathId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

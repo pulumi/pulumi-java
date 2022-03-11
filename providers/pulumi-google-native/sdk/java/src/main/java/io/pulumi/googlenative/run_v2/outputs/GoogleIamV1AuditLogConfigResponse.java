@@ -21,10 +21,10 @@ public final class GoogleIamV1AuditLogConfigResponse {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"exemptedMembers","logType"})
+    @OutputCustomType.Constructor
     private GoogleIamV1AuditLogConfigResponse(
-        List<String> exemptedMembers,
-        String logType) {
+        @OutputCustomType.Parameter("exemptedMembers") List<String> exemptedMembers,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }
@@ -66,12 +66,12 @@ public final class GoogleIamV1AuditLogConfigResponse {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(List<String> exemptedMembers) {
+        public Builder exemptedMembers(List<String> exemptedMembers) {
             this.exemptedMembers = Objects.requireNonNull(exemptedMembers);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

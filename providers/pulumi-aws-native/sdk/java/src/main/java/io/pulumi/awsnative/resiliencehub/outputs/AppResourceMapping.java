@@ -17,12 +17,12 @@ public final class AppResourceMapping {
     private final AppPhysicalResourceId physicalResourceId;
     private final @Nullable String resourceName;
 
-    @OutputCustomType.Constructor({"logicalStackName","mappingType","physicalResourceId","resourceName"})
+    @OutputCustomType.Constructor
     private AppResourceMapping(
-        @Nullable String logicalStackName,
-        String mappingType,
-        AppPhysicalResourceId physicalResourceId,
-        @Nullable String resourceName) {
+        @OutputCustomType.Parameter("logicalStackName") @Nullable String logicalStackName,
+        @OutputCustomType.Parameter("mappingType") String mappingType,
+        @OutputCustomType.Parameter("physicalResourceId") AppPhysicalResourceId physicalResourceId,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName) {
         this.logicalStackName = logicalStackName;
         this.mappingType = mappingType;
         this.physicalResourceId = physicalResourceId;
@@ -68,22 +68,22 @@ public final class AppResourceMapping {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setLogicalStackName(@Nullable String logicalStackName) {
+        public Builder logicalStackName(@Nullable String logicalStackName) {
             this.logicalStackName = logicalStackName;
             return this;
         }
 
-        public Builder setMappingType(String mappingType) {
+        public Builder mappingType(String mappingType) {
             this.mappingType = Objects.requireNonNull(mappingType);
             return this;
         }
 
-        public Builder setPhysicalResourceId(AppPhysicalResourceId physicalResourceId) {
+        public Builder physicalResourceId(AppPhysicalResourceId physicalResourceId) {
             this.physicalResourceId = Objects.requireNonNull(physicalResourceId);
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }

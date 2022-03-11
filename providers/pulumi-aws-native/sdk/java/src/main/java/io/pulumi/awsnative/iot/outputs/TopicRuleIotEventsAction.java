@@ -17,12 +17,12 @@ public final class TopicRuleIotEventsAction {
     private final @Nullable String messageId;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"batchMode","inputName","messageId","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotEventsAction(
-        @Nullable Boolean batchMode,
-        String inputName,
-        @Nullable String messageId,
-        String roleArn) {
+        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.batchMode = batchMode;
         this.inputName = inputName;
         this.messageId = messageId;
@@ -68,22 +68,22 @@ public final class TopicRuleIotEventsAction {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FeatureGroupOnlineStoreSecurityConfig {
     private final @Nullable String kmsKeyId;
 
-    @OutputCustomType.Constructor({"kmsKeyId"})
-    private FeatureGroupOnlineStoreSecurityConfig(@Nullable String kmsKeyId) {
+    @OutputCustomType.Constructor
+    private FeatureGroupOnlineStoreSecurityConfig(@OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId) {
         this.kmsKeyId = kmsKeyId;
     }
 
@@ -42,7 +42,7 @@ public final class FeatureGroupOnlineStoreSecurityConfig {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }

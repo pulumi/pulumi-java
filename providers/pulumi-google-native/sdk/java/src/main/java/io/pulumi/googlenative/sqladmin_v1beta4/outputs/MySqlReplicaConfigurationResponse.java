@@ -67,19 +67,19 @@ public final class MySqlReplicaConfigurationResponse {
      */
     private final Boolean verifyServerCertificate;
 
-    @OutputCustomType.Constructor({"caCertificate","clientCertificate","clientKey","connectRetryInterval","dumpFilePath","kind","masterHeartbeatPeriod","password","sslCipher","username","verifyServerCertificate"})
+    @OutputCustomType.Constructor
     private MySqlReplicaConfigurationResponse(
-        String caCertificate,
-        String clientCertificate,
-        String clientKey,
-        Integer connectRetryInterval,
-        String dumpFilePath,
-        String kind,
-        String masterHeartbeatPeriod,
-        String password,
-        String sslCipher,
-        String username,
-        Boolean verifyServerCertificate) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("connectRetryInterval") Integer connectRetryInterval,
+        @OutputCustomType.Parameter("dumpFilePath") String dumpFilePath,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("masterHeartbeatPeriod") String masterHeartbeatPeriod,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("sslCipher") String sslCipher,
+        @OutputCustomType.Parameter("username") String username,
+        @OutputCustomType.Parameter("verifyServerCertificate") Boolean verifyServerCertificate) {
         this.caCertificate = caCertificate;
         this.clientCertificate = clientCertificate;
         this.clientKey = clientKey;
@@ -211,57 +211,57 @@ public final class MySqlReplicaConfigurationResponse {
     	      this.verifyServerCertificate = defaults.verifyServerCertificate;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setConnectRetryInterval(Integer connectRetryInterval) {
+        public Builder connectRetryInterval(Integer connectRetryInterval) {
             this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval);
             return this;
         }
 
-        public Builder setDumpFilePath(String dumpFilePath) {
+        public Builder dumpFilePath(String dumpFilePath) {
             this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMasterHeartbeatPeriod(String masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(String masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setSslCipher(String sslCipher) {
+        public Builder sslCipher(String sslCipher) {
             this.sslCipher = Objects.requireNonNull(sslCipher);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setVerifyServerCertificate(Boolean verifyServerCertificate) {
+        public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }

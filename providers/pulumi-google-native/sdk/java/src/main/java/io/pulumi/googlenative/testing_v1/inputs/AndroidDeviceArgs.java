@@ -105,42 +105,42 @@ public final class AndroidDeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder setAndroidModelId(Input<String> androidModelId) {
+        public Builder androidModelId(Input<String> androidModelId) {
             this.androidModelId = Objects.requireNonNull(androidModelId);
             return this;
         }
 
-        public Builder setAndroidModelId(String androidModelId) {
+        public Builder androidModelId(String androidModelId) {
             this.androidModelId = Input.of(Objects.requireNonNull(androidModelId));
             return this;
         }
 
-        public Builder setAndroidVersionId(Input<String> androidVersionId) {
+        public Builder androidVersionId(Input<String> androidVersionId) {
             this.androidVersionId = Objects.requireNonNull(androidVersionId);
             return this;
         }
 
-        public Builder setAndroidVersionId(String androidVersionId) {
+        public Builder androidVersionId(String androidVersionId) {
             this.androidVersionId = Input.of(Objects.requireNonNull(androidVersionId));
             return this;
         }
 
-        public Builder setLocale(Input<String> locale) {
+        public Builder locale(Input<String> locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Input.of(Objects.requireNonNull(locale));
             return this;
         }
 
-        public Builder setOrientation(Input<String> orientation) {
+        public Builder orientation(Input<String> orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }
 
-        public Builder setOrientation(String orientation) {
+        public Builder orientation(String orientation) {
             this.orientation = Input.of(Objects.requireNonNull(orientation));
             return this;
         }

@@ -199,102 +199,102 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactIdentifier(@Nullable Input<String> artifactIdentifier) {
+        public Builder artifactIdentifier(@Nullable Input<String> artifactIdentifier) {
             this.artifactIdentifier = artifactIdentifier;
             return this;
         }
 
-        public Builder setArtifactIdentifier(@Nullable String artifactIdentifier) {
+        public Builder artifactIdentifier(@Nullable String artifactIdentifier) {
             this.artifactIdentifier = Input.ofNullable(artifactIdentifier);
             return this;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable Input<String> bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = Input.ofNullable(bucketOwnerAccess);
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Input<Boolean> encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = Input.ofNullable(encryptionDisabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable Input<String> namespaceType) {
+        public Builder namespaceType(@Nullable Input<String> namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable String namespaceType) {
+        public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = Input.ofNullable(namespaceType);
             return this;
         }
 
-        public Builder setOverrideArtifactName(@Nullable Input<Boolean> overrideArtifactName) {
+        public Builder overrideArtifactName(@Nullable Input<Boolean> overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
 
-        public Builder setOverrideArtifactName(@Nullable Boolean overrideArtifactName) {
+        public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
             this.overrideArtifactName = Input.ofNullable(overrideArtifactName);
             return this;
         }
 
-        public Builder setPackaging(@Nullable Input<String> packaging) {
+        public Builder packaging(@Nullable Input<String> packaging) {
             this.packaging = packaging;
             return this;
         }
 
-        public Builder setPackaging(@Nullable String packaging) {
+        public Builder packaging(@Nullable String packaging) {
             this.packaging = Input.ofNullable(packaging);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

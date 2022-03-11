@@ -42,30 +42,30 @@ public final class GetLoadBalancerResult {
     private final String vpcId;
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"accessLogs","arn","arnSuffix","customerOwnedIpv4Pool","desyncMitigationMode","dnsName","dropInvalidHeaderFields","enableDeletionProtection","enableHttp2","enableWafFailOpen","id","idleTimeout","internal","ipAddressType","loadBalancerType","name","securityGroups","subnetMappings","subnets","tags","vpcId","zoneId"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerResult(
-        GetLoadBalancerAccessLogs accessLogs,
-        String arn,
-        String arnSuffix,
-        String customerOwnedIpv4Pool,
-        String desyncMitigationMode,
-        String dnsName,
-        Boolean dropInvalidHeaderFields,
-        Boolean enableDeletionProtection,
-        Boolean enableHttp2,
-        Boolean enableWafFailOpen,
-        String id,
-        Integer idleTimeout,
-        Boolean internal,
-        String ipAddressType,
-        String loadBalancerType,
-        String name,
-        List<String> securityGroups,
-        List<GetLoadBalancerSubnetMapping> subnetMappings,
-        List<String> subnets,
-        Map<String,String> tags,
-        String vpcId,
-        String zoneId) {
+        @OutputCustomType.Parameter("accessLogs") GetLoadBalancerAccessLogs accessLogs,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("arnSuffix") String arnSuffix,
+        @OutputCustomType.Parameter("customerOwnedIpv4Pool") String customerOwnedIpv4Pool,
+        @OutputCustomType.Parameter("desyncMitigationMode") String desyncMitigationMode,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("dropInvalidHeaderFields") Boolean dropInvalidHeaderFields,
+        @OutputCustomType.Parameter("enableDeletionProtection") Boolean enableDeletionProtection,
+        @OutputCustomType.Parameter("enableHttp2") Boolean enableHttp2,
+        @OutputCustomType.Parameter("enableWafFailOpen") Boolean enableWafFailOpen,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idleTimeout") Integer idleTimeout,
+        @OutputCustomType.Parameter("internal") Boolean internal,
+        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
+        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetMappings") List<GetLoadBalancerSubnetMapping> subnetMappings,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.accessLogs = accessLogs;
         this.arn = arn;
         this.arnSuffix = arnSuffix;
@@ -223,112 +223,112 @@ public final class GetLoadBalancerResult {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setAccessLogs(GetLoadBalancerAccessLogs accessLogs) {
+        public Builder accessLogs(GetLoadBalancerAccessLogs accessLogs) {
             this.accessLogs = Objects.requireNonNull(accessLogs);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArnSuffix(String arnSuffix) {
+        public Builder arnSuffix(String arnSuffix) {
             this.arnSuffix = Objects.requireNonNull(arnSuffix);
             return this;
         }
 
-        public Builder setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        public Builder customerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
             this.customerOwnedIpv4Pool = Objects.requireNonNull(customerOwnedIpv4Pool);
             return this;
         }
 
-        public Builder setDesyncMitigationMode(String desyncMitigationMode) {
+        public Builder desyncMitigationMode(String desyncMitigationMode) {
             this.desyncMitigationMode = Objects.requireNonNull(desyncMitigationMode);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setDropInvalidHeaderFields(Boolean dropInvalidHeaderFields) {
+        public Builder dropInvalidHeaderFields(Boolean dropInvalidHeaderFields) {
             this.dropInvalidHeaderFields = Objects.requireNonNull(dropInvalidHeaderFields);
             return this;
         }
 
-        public Builder setEnableDeletionProtection(Boolean enableDeletionProtection) {
+        public Builder enableDeletionProtection(Boolean enableDeletionProtection) {
             this.enableDeletionProtection = Objects.requireNonNull(enableDeletionProtection);
             return this;
         }
 
-        public Builder setEnableHttp2(Boolean enableHttp2) {
+        public Builder enableHttp2(Boolean enableHttp2) {
             this.enableHttp2 = Objects.requireNonNull(enableHttp2);
             return this;
         }
 
-        public Builder setEnableWafFailOpen(Boolean enableWafFailOpen) {
+        public Builder enableWafFailOpen(Boolean enableWafFailOpen) {
             this.enableWafFailOpen = Objects.requireNonNull(enableWafFailOpen);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdleTimeout(Integer idleTimeout) {
+        public Builder idleTimeout(Integer idleTimeout) {
             this.idleTimeout = Objects.requireNonNull(idleTimeout);
             return this;
         }
 
-        public Builder setInternal(Boolean internal) {
+        public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
 
-        public Builder setIpAddressType(String ipAddressType) {
+        public Builder ipAddressType(String ipAddressType) {
             this.ipAddressType = Objects.requireNonNull(ipAddressType);
             return this;
         }
 
-        public Builder setLoadBalancerType(String loadBalancerType) {
+        public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSubnetMappings(List<GetLoadBalancerSubnetMapping> subnetMappings) {
+        public Builder subnetMappings(List<GetLoadBalancerSubnetMapping> subnetMappings) {
             this.subnetMappings = Objects.requireNonNull(subnetMappings);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

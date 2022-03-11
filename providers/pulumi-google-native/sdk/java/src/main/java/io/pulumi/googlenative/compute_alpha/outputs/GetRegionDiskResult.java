@@ -230,51 +230,51 @@ public final class GetRegionDiskResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"architecture","creationTimestamp","description","diskEncryptionKey","eraseWindowsVssSignature","guestOsFeatures","kind","labelFingerprint","labels","lastAttachTimestamp","lastDetachTimestamp","licenseCodes","licenses","locationHint","locked","multiWriter","name","options","physicalBlockSizeBytes","provisionedIops","region","replicaZones","resourcePolicies","satisfiesPzs","selfLink","selfLinkWithId","sizeGb","sourceDisk","sourceDiskId","sourceImage","sourceImageEncryptionKey","sourceImageId","sourceInstantSnapshot","sourceInstantSnapshotId","sourceSnapshot","sourceSnapshotEncryptionKey","sourceSnapshotId","sourceStorageObject","status","type","userLicenses","users","zone"})
+    @OutputCustomType.Constructor
     private GetRegionDiskResult(
-        String architecture,
-        String creationTimestamp,
-        String description,
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        Boolean eraseWindowsVssSignature,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String lastAttachTimestamp,
-        String lastDetachTimestamp,
-        List<String> licenseCodes,
-        List<String> licenses,
-        String locationHint,
-        Boolean locked,
-        Boolean multiWriter,
-        String name,
-        String options,
-        String physicalBlockSizeBytes,
-        String provisionedIops,
-        String region,
-        List<String> replicaZones,
-        List<String> resourcePolicies,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String selfLinkWithId,
-        String sizeGb,
-        String sourceDisk,
-        String sourceDiskId,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceImageId,
-        String sourceInstantSnapshot,
-        String sourceInstantSnapshotId,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
-        String sourceSnapshotId,
-        String sourceStorageObject,
-        String status,
-        String type,
-        List<String> userLicenses,
-        List<String> users,
-        String zone) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("eraseWindowsVssSignature") Boolean eraseWindowsVssSignature,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastAttachTimestamp") String lastAttachTimestamp,
+        @OutputCustomType.Parameter("lastDetachTimestamp") String lastDetachTimestamp,
+        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") String options,
+        @OutputCustomType.Parameter("physicalBlockSizeBytes") String physicalBlockSizeBytes,
+        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("replicaZones") List<String> replicaZones,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sizeGb") String sizeGb,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
+        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @OutputCustomType.Parameter("sourceInstantSnapshotId") String sourceInstantSnapshotId,
+        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
+        @OutputCustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
+        @OutputCustomType.Parameter("sourceStorageObject") String sourceStorageObject,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses,
+        @OutputCustomType.Parameter("users") List<String> users,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.architecture = architecture;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -726,217 +726,217 @@ public final class GetRegionDiskResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
+        public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
 
-        public Builder setEraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
+        public Builder eraseWindowsVssSignature(Boolean eraseWindowsVssSignature) {
             this.eraseWindowsVssSignature = Objects.requireNonNull(eraseWindowsVssSignature);
             return this;
         }
 
-        public Builder setGuestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
+        public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastAttachTimestamp(String lastAttachTimestamp) {
+        public Builder lastAttachTimestamp(String lastAttachTimestamp) {
             this.lastAttachTimestamp = Objects.requireNonNull(lastAttachTimestamp);
             return this;
         }
 
-        public Builder setLastDetachTimestamp(String lastDetachTimestamp) {
+        public Builder lastDetachTimestamp(String lastDetachTimestamp) {
             this.lastDetachTimestamp = Objects.requireNonNull(lastDetachTimestamp);
             return this;
         }
 
-        public Builder setLicenseCodes(List<String> licenseCodes) {
+        public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setLocked(Boolean locked) {
+        public Builder locked(Boolean locked) {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
 
-        public Builder setMultiWriter(Boolean multiWriter) {
+        public Builder multiWriter(Boolean multiWriter) {
             this.multiWriter = Objects.requireNonNull(multiWriter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(String options) {
+        public Builder options(String options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setPhysicalBlockSizeBytes(String physicalBlockSizeBytes) {
+        public Builder physicalBlockSizeBytes(String physicalBlockSizeBytes) {
             this.physicalBlockSizeBytes = Objects.requireNonNull(physicalBlockSizeBytes);
             return this;
         }
 
-        public Builder setProvisionedIops(String provisionedIops) {
+        public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReplicaZones(List<String> replicaZones) {
+        public Builder replicaZones(List<String> replicaZones) {
             this.replicaZones = Objects.requireNonNull(replicaZones);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSizeGb(String sizeGb) {
+        public Builder sizeGb(String sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskId(String sourceDiskId) {
+        public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
 
-        public Builder setSourceImage(String sourceImage) {
+        public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceImageId(String sourceImageId) {
+        public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(String sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
             return this;
         }
 
-        public Builder setSourceInstantSnapshotId(String sourceInstantSnapshotId) {
+        public Builder sourceInstantSnapshotId(String sourceInstantSnapshotId) {
             this.sourceInstantSnapshotId = Objects.requireNonNull(sourceInstantSnapshotId);
             return this;
         }
 
-        public Builder setSourceSnapshot(String sourceSnapshot) {
+        public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSourceSnapshotId(String sourceSnapshotId) {
+        public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
 
-        public Builder setSourceStorageObject(String sourceStorageObject) {
+        public Builder sourceStorageObject(String sourceStorageObject) {
             this.sourceStorageObject = Objects.requireNonNull(sourceStorageObject);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserLicenses(List<String> userLicenses) {
+        public Builder userLicenses(List<String> userLicenses) {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
 
-        public Builder setUsers(List<String> users) {
+        public Builder users(List<String> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

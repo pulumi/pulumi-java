@@ -30,12 +30,12 @@ public final class ExternalRefResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"category","comment","locator","type"})
+    @OutputCustomType.Constructor
     private ExternalRefResponse(
-        String category,
-        String comment,
-        String locator,
-        String type) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("locator") String locator,
+        @OutputCustomType.Parameter("type") String type) {
         this.category = category;
         this.comment = comment;
         this.locator = locator;
@@ -97,22 +97,22 @@ public final class ExternalRefResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setLocator(String locator) {
+        public Builder locator(String locator) {
             this.locator = Objects.requireNonNull(locator);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

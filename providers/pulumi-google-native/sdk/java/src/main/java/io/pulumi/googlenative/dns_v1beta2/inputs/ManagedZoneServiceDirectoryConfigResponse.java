@@ -69,12 +69,12 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNamespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

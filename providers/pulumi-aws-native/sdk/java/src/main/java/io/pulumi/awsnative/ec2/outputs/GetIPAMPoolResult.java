@@ -95,24 +95,24 @@ public final class GetIPAMPoolResult {
      */
     private final @Nullable List<IPAMPoolTag> tags;
 
-    @OutputCustomType.Constructor({"allocationDefaultNetmaskLength","allocationMaxNetmaskLength","allocationMinNetmaskLength","allocationResourceTags","arn","autoImport","description","ipamArn","ipamPoolId","ipamScopeArn","ipamScopeType","poolDepth","provisionedCidrs","state","stateMessage","tags"})
+    @OutputCustomType.Constructor
     private GetIPAMPoolResult(
-        @Nullable Integer allocationDefaultNetmaskLength,
-        @Nullable Integer allocationMaxNetmaskLength,
-        @Nullable Integer allocationMinNetmaskLength,
-        @Nullable List<IPAMPoolTag> allocationResourceTags,
-        @Nullable String arn,
-        @Nullable Boolean autoImport,
-        @Nullable String description,
-        @Nullable String ipamArn,
-        @Nullable String ipamPoolId,
-        @Nullable String ipamScopeArn,
-        @Nullable IPAMPoolIpamScopeType ipamScopeType,
-        @Nullable Integer poolDepth,
-        @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs,
-        @Nullable IPAMPoolState state,
-        @Nullable String stateMessage,
-        @Nullable List<IPAMPoolTag> tags) {
+        @OutputCustomType.Parameter("allocationDefaultNetmaskLength") @Nullable Integer allocationDefaultNetmaskLength,
+        @OutputCustomType.Parameter("allocationMaxNetmaskLength") @Nullable Integer allocationMaxNetmaskLength,
+        @OutputCustomType.Parameter("allocationMinNetmaskLength") @Nullable Integer allocationMinNetmaskLength,
+        @OutputCustomType.Parameter("allocationResourceTags") @Nullable List<IPAMPoolTag> allocationResourceTags,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoImport") @Nullable Boolean autoImport,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ipamArn") @Nullable String ipamArn,
+        @OutputCustomType.Parameter("ipamPoolId") @Nullable String ipamPoolId,
+        @OutputCustomType.Parameter("ipamScopeArn") @Nullable String ipamScopeArn,
+        @OutputCustomType.Parameter("ipamScopeType") @Nullable IPAMPoolIpamScopeType ipamScopeType,
+        @OutputCustomType.Parameter("poolDepth") @Nullable Integer poolDepth,
+        @OutputCustomType.Parameter("provisionedCidrs") @Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs,
+        @OutputCustomType.Parameter("state") @Nullable IPAMPoolState state,
+        @OutputCustomType.Parameter("stateMessage") @Nullable String stateMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPAMPoolTag> tags) {
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
         this.allocationMinNetmaskLength = allocationMinNetmaskLength;
@@ -290,82 +290,82 @@ public final class GetIPAMPoolResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
+        public Builder allocationDefaultNetmaskLength(@Nullable Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
+        public Builder allocationMaxNetmaskLength(@Nullable Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
+        public Builder allocationMinNetmaskLength(@Nullable Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = allocationMinNetmaskLength;
             return this;
         }
 
-        public Builder setAllocationResourceTags(@Nullable List<IPAMPoolTag> allocationResourceTags) {
+        public Builder allocationResourceTags(@Nullable List<IPAMPoolTag> allocationResourceTags) {
             this.allocationResourceTags = allocationResourceTags;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAutoImport(@Nullable Boolean autoImport) {
+        public Builder autoImport(@Nullable Boolean autoImport) {
             this.autoImport = autoImport;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIpamArn(@Nullable String ipamArn) {
+        public Builder ipamArn(@Nullable String ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
 
-        public Builder setIpamPoolId(@Nullable String ipamPoolId) {
+        public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
 
-        public Builder setIpamScopeArn(@Nullable String ipamScopeArn) {
+        public Builder ipamScopeArn(@Nullable String ipamScopeArn) {
             this.ipamScopeArn = ipamScopeArn;
             return this;
         }
 
-        public Builder setIpamScopeType(@Nullable IPAMPoolIpamScopeType ipamScopeType) {
+        public Builder ipamScopeType(@Nullable IPAMPoolIpamScopeType ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
 
-        public Builder setPoolDepth(@Nullable Integer poolDepth) {
+        public Builder poolDepth(@Nullable Integer poolDepth) {
             this.poolDepth = poolDepth;
             return this;
         }
 
-        public Builder setProvisionedCidrs(@Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs) {
+        public Builder provisionedCidrs(@Nullable List<IPAMPoolProvisionedCidr> provisionedCidrs) {
             this.provisionedCidrs = provisionedCidrs;
             return this;
         }
 
-        public Builder setState(@Nullable IPAMPoolState state) {
+        public Builder state(@Nullable IPAMPoolState state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStateMessage(@Nullable String stateMessage) {
+        public Builder stateMessage(@Nullable String stateMessage) {
             this.stateMessage = stateMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPAMPoolTag> tags) {
+        public Builder tags(@Nullable List<IPAMPoolTag> tags) {
             this.tags = tags;
             return this;
         }

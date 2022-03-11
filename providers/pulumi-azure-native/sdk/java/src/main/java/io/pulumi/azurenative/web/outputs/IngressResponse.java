@@ -42,14 +42,14 @@ public final class IngressResponse {
      */
     private final @Nullable String transport;
 
-    @OutputCustomType.Constructor({"allowInsecure","external","fqdn","targetPort","traffic","transport"})
+    @OutputCustomType.Constructor
     private IngressResponse(
-        @Nullable Boolean allowInsecure,
-        @Nullable Boolean external,
-        String fqdn,
-        @Nullable Integer targetPort,
-        @Nullable List<TrafficWeightResponse> traffic,
-        @Nullable String transport) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("external") @Nullable Boolean external,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("targetPort") @Nullable Integer targetPort,
+        @OutputCustomType.Parameter("traffic") @Nullable List<TrafficWeightResponse> traffic,
+        @OutputCustomType.Parameter("transport") @Nullable String transport) {
         this.allowInsecure = allowInsecure;
         this.external = external;
         this.fqdn = fqdn;
@@ -127,32 +127,32 @@ public final class IngressResponse {
     	      this.transport = defaults.transport;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setExternal(@Nullable Boolean external) {
+        public Builder external(@Nullable Boolean external) {
             this.external = external;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Integer targetPort) {
+        public Builder targetPort(@Nullable Integer targetPort) {
             this.targetPort = targetPort;
             return this;
         }
 
-        public Builder setTraffic(@Nullable List<TrafficWeightResponse> traffic) {
+        public Builder traffic(@Nullable List<TrafficWeightResponse> traffic) {
             this.traffic = traffic;
             return this;
         }
 
-        public Builder setTransport(@Nullable String transport) {
+        public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
         }

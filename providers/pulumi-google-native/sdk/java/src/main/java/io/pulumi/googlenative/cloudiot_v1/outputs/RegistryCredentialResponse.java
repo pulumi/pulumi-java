@@ -15,8 +15,8 @@ public final class RegistryCredentialResponse {
      */
     private final PublicKeyCertificateResponse publicKeyCertificate;
 
-    @OutputCustomType.Constructor({"publicKeyCertificate"})
-    private RegistryCredentialResponse(PublicKeyCertificateResponse publicKeyCertificate) {
+    @OutputCustomType.Constructor
+    private RegistryCredentialResponse(@OutputCustomType.Parameter("publicKeyCertificate") PublicKeyCertificateResponse publicKeyCertificate) {
         this.publicKeyCertificate = publicKeyCertificate;
     }
 
@@ -48,7 +48,7 @@ public final class RegistryCredentialResponse {
     	      this.publicKeyCertificate = defaults.publicKeyCertificate;
         }
 
-        public Builder setPublicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
+        public Builder publicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }

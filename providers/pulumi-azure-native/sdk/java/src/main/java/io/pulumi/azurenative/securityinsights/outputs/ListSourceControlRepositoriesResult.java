@@ -22,10 +22,10 @@ public final class ListSourceControlRepositoriesResult {
      */
     private final List<RepoResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSourceControlRepositoriesResult(
-        String nextLink,
-        List<RepoResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<RepoResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListSourceControlRepositoriesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<RepoResponse> value) {
+        public Builder value(List<RepoResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

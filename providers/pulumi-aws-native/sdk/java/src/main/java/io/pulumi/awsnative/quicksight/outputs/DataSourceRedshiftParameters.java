@@ -34,12 +34,12 @@ public final class DataSourceRedshiftParameters {
      */
     private final @Nullable Double port;
 
-    @OutputCustomType.Constructor({"clusterId","database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceRedshiftParameters(
-        @Nullable String clusterId,
-        String database,
-        @Nullable String host,
-        @Nullable Double port) {
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") @Nullable Double port) {
         this.clusterId = clusterId;
         this.database = database;
         this.host = host;
@@ -102,22 +102,22 @@ public final class DataSourceRedshiftParameters {
     	      this.port = defaults.port;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPort(@Nullable Double port) {
+        public Builder port(@Nullable Double port) {
             this.port = port;
             return this;
         }

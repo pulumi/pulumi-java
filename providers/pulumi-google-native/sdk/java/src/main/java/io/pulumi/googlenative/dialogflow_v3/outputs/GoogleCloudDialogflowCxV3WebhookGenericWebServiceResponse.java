@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"allowedCaCerts","password","requestHeaders","uri","username"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse(
-        List<String> allowedCaCerts,
-        String password,
-        Map<String,String> requestHeaders,
-        String uri,
-        String username) {
+        @OutputCustomType.Parameter("allowedCaCerts") List<String> allowedCaCerts,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("requestHeaders") Map<String,String> requestHeaders,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") String username) {
         this.allowedCaCerts = allowedCaCerts;
         this.password = password;
         this.requestHeaders = requestHeaders;
@@ -115,27 +115,27 @@ public final class GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAllowedCaCerts(List<String> allowedCaCerts) {
+        public Builder allowedCaCerts(List<String> allowedCaCerts) {
             this.allowedCaCerts = Objects.requireNonNull(allowedCaCerts);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRequestHeaders(Map<String,String> requestHeaders) {
+        public Builder requestHeaders(Map<String,String> requestHeaders) {
             this.requestHeaders = Objects.requireNonNull(requestHeaders);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

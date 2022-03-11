@@ -31,12 +31,12 @@ public final class MaterializedViewDefinitionResponse {
      */
     private final String refreshIntervalMs;
 
-    @OutputCustomType.Constructor({"enableRefresh","lastRefreshTime","query","refreshIntervalMs"})
+    @OutputCustomType.Constructor
     private MaterializedViewDefinitionResponse(
-        Boolean enableRefresh,
-        String lastRefreshTime,
-        String query,
-        String refreshIntervalMs) {
+        @OutputCustomType.Parameter("enableRefresh") Boolean enableRefresh,
+        @OutputCustomType.Parameter("lastRefreshTime") String lastRefreshTime,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("refreshIntervalMs") String refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.lastRefreshTime = lastRefreshTime;
         this.query = query;
@@ -98,22 +98,22 @@ public final class MaterializedViewDefinitionResponse {
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
 
-        public Builder setEnableRefresh(Boolean enableRefresh) {
+        public Builder enableRefresh(Boolean enableRefresh) {
             this.enableRefresh = Objects.requireNonNull(enableRefresh);
             return this;
         }
 
-        public Builder setLastRefreshTime(String lastRefreshTime) {
+        public Builder lastRefreshTime(String lastRefreshTime) {
             this.lastRefreshTime = Objects.requireNonNull(lastRefreshTime);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setRefreshIntervalMs(String refreshIntervalMs) {
+        public Builder refreshIntervalMs(String refreshIntervalMs) {
             this.refreshIntervalMs = Objects.requireNonNull(refreshIntervalMs);
             return this;
         }

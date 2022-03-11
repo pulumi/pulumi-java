@@ -101,25 +101,25 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"agentJobs","databases","endedOn","exceptionsAndWarnings","id","logins","message","orphanedUsersInfo","resultType","serverRoleResults","sourceServerBrandVersion","sourceServerVersion","startedOn","state","status","targetServerBrandVersion","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(
-        Map<String,String> agentJobs,
-        Map<String,String> databases,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        Map<String,String> logins,
-        String message,
-        List<OrphanedUserInfoResponse> orphanedUsersInfo,
-        String resultType,
-        Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        String startedOn,
-        String state,
-        String status,
-        String targetServerBrandVersion,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("agentJobs") Map<String,String> agentJobs,
+        @OutputCustomType.Parameter("databases") Map<String,String> databases,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logins") Map<String,String> logins,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("orphanedUsersInfo") List<OrphanedUserInfoResponse> orphanedUsersInfo,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("serverRoleResults") Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetServerBrandVersion") String targetServerBrandVersion,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.agentJobs = agentJobs;
         this.databases = databases;
         this.endedOn = endedOn;
@@ -312,87 +312,87 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setAgentJobs(Map<String,String> agentJobs) {
+        public Builder agentJobs(Map<String,String> agentJobs) {
             this.agentJobs = Objects.requireNonNull(agentJobs);
             return this;
         }
 
-        public Builder setDatabases(Map<String,String> databases) {
+        public Builder databases(Map<String,String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogins(Map<String,String> logins) {
+        public Builder logins(Map<String,String> logins) {
             this.logins = Objects.requireNonNull(logins);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setOrphanedUsersInfo(List<OrphanedUserInfoResponse> orphanedUsersInfo) {
+        public Builder orphanedUsersInfo(List<OrphanedUserInfoResponse> orphanedUsersInfo) {
             this.orphanedUsersInfo = Objects.requireNonNull(orphanedUsersInfo);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setServerRoleResults(Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults) {
+        public Builder serverRoleResults(Map<String,StartMigrationScenarioServerRoleResultResponse> serverRoleResults) {
             this.serverRoleResults = Objects.requireNonNull(serverRoleResults);
             return this;
         }
 
-        public Builder setSourceServerBrandVersion(String sourceServerBrandVersion) {
+        public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetServerBrandVersion(String targetServerBrandVersion) {
+        public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             this.targetServerBrandVersion = Objects.requireNonNull(targetServerBrandVersion);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

@@ -45,13 +45,13 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
      */
     private final @Nullable List<Object> rules;
 
-    @OutputCustomType.Constructor({"action","name","priority","ruleCollectionType","rules"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFilterRuleCollectionResponse(
-        @Nullable FirewallPolicyFilterRuleCollectionActionResponse action,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String ruleCollectionType,
-        @Nullable List<Object> rules) {
+        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyFilterRuleCollectionActionResponse action,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("ruleCollectionType") String ruleCollectionType,
+        @OutputCustomType.Parameter("rules") @Nullable List<Object> rules) {
         this.action = action;
         this.name = name;
         this.priority = priority;
@@ -124,27 +124,27 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleCollectionType(String ruleCollectionType) {
+        public Builder ruleCollectionType(String ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
 
-        public Builder setRules(@Nullable List<Object> rules) {
+        public Builder rules(@Nullable List<Object> rules) {
             this.rules = rules;
             return this;
         }

@@ -23,10 +23,10 @@ public final class ImageImageTestsConfiguration {
      */
     private final @Nullable Integer timeoutMinutes;
 
-    @OutputCustomType.Constructor({"imageTestsEnabled","timeoutMinutes"})
+    @OutputCustomType.Constructor
     private ImageImageTestsConfiguration(
-        @Nullable Boolean imageTestsEnabled,
-        @Nullable Integer timeoutMinutes) {
+        @OutputCustomType.Parameter("imageTestsEnabled") @Nullable Boolean imageTestsEnabled,
+        @OutputCustomType.Parameter("timeoutMinutes") @Nullable Integer timeoutMinutes) {
         this.imageTestsEnabled = imageTestsEnabled;
         this.timeoutMinutes = timeoutMinutes;
     }
@@ -68,12 +68,12 @@ public final class ImageImageTestsConfiguration {
     	      this.timeoutMinutes = defaults.timeoutMinutes;
         }
 
-        public Builder setImageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
+        public Builder imageTestsEnabled(@Nullable Boolean imageTestsEnabled) {
             this.imageTestsEnabled = imageTestsEnabled;
             return this;
         }
 
-        public Builder setTimeoutMinutes(@Nullable Integer timeoutMinutes) {
+        public Builder timeoutMinutes(@Nullable Integer timeoutMinutes) {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }

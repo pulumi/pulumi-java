@@ -15,8 +15,8 @@ public final class StreamingConfigResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private StreamingConfigResponse(String filter) {
+    @OutputCustomType.Constructor
+    private StreamingConfigResponse(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 
@@ -48,7 +48,7 @@ public final class StreamingConfigResponse {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

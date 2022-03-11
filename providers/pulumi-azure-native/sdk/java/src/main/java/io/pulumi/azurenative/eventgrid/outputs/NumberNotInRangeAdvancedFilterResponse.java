@@ -30,11 +30,11 @@ public final class NumberNotInRangeAdvancedFilterResponse {
      */
     private final @Nullable List<List<Double>> values;
 
-    @OutputCustomType.Constructor({"key","operatorType","values"})
+    @OutputCustomType.Constructor
     private NumberNotInRangeAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable List<List<Double>> values) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("values") @Nullable List<List<Double>> values) {
         this.key = key;
         this.operatorType = operatorType;
         this.values = values;
@@ -87,17 +87,17 @@ public final class NumberNotInRangeAdvancedFilterResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setValues(@Nullable List<List<Double>> values) {
+        public Builder values(@Nullable List<List<Double>> values) {
             this.values = values;
             return this;
         }

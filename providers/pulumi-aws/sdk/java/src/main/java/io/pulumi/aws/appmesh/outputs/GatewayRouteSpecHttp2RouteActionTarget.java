@@ -15,8 +15,8 @@ public final class GatewayRouteSpecHttp2RouteActionTarget {
      */
     private final GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService;
 
-    @OutputCustomType.Constructor({"virtualService"})
-    private GatewayRouteSpecHttp2RouteActionTarget(GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
+    @OutputCustomType.Constructor
+    private GatewayRouteSpecHttp2RouteActionTarget(@OutputCustomType.Parameter("virtualService") GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 
@@ -48,7 +48,7 @@ public final class GatewayRouteSpecHttp2RouteActionTarget {
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
+        public Builder virtualService(GatewayRouteSpecHttp2RouteActionTargetVirtualService virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }

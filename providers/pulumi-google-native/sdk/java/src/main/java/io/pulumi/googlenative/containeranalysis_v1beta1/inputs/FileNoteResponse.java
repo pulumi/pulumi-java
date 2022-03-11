@@ -89,17 +89,17 @@ public final class FileNoteResponse extends io.pulumi.resources.InvokeArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setChecksum(List<String> checksum) {
+        public Builder checksum(List<String> checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

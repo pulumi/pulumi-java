@@ -238,132 +238,132 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
     	      this.targetService = defaults.targetService;
         }
 
-        public Builder setConnectionPreference(@Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference) {
+        public Builder connectionPreference(@Nullable Input<ServiceAttachmentConnectionPreference> connectionPreference) {
             this.connectionPreference = connectionPreference;
             return this;
         }
 
-        public Builder setConnectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
+        public Builder connectionPreference(@Nullable ServiceAttachmentConnectionPreference connectionPreference) {
             this.connectionPreference = Input.ofNullable(connectionPreference);
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable Input<List<ServiceAttachmentConsumerProjectLimitArgs>> consumerAcceptLists) {
             this.consumerAcceptLists = consumerAcceptLists;
             return this;
         }
 
-        public Builder setConsumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
+        public Builder consumerAcceptLists(@Nullable List<ServiceAttachmentConsumerProjectLimitArgs> consumerAcceptLists) {
             this.consumerAcceptLists = Input.ofNullable(consumerAcceptLists);
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable Input<List<String>> consumerRejectLists) {
             this.consumerRejectLists = consumerRejectLists;
             return this;
         }
 
-        public Builder setConsumerRejectLists(@Nullable List<String> consumerRejectLists) {
+        public Builder consumerRejectLists(@Nullable List<String> consumerRejectLists) {
             this.consumerRejectLists = Input.ofNullable(consumerRejectLists);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDomainNames(@Nullable Input<List<String>> domainNames) {
+        public Builder domainNames(@Nullable Input<List<String>> domainNames) {
             this.domainNames = domainNames;
             return this;
         }
 
-        public Builder setDomainNames(@Nullable List<String> domainNames) {
+        public Builder domainNames(@Nullable List<String> domainNames) {
             this.domainNames = Input.ofNullable(domainNames);
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Input<Boolean> enableProxyProtocol) {
             this.enableProxyProtocol = enableProxyProtocol;
             return this;
         }
 
-        public Builder setEnableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
+        public Builder enableProxyProtocol(@Nullable Boolean enableProxyProtocol) {
             this.enableProxyProtocol = Input.ofNullable(enableProxyProtocol);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNatSubnets(@Nullable Input<List<String>> natSubnets) {
+        public Builder natSubnets(@Nullable Input<List<String>> natSubnets) {
             this.natSubnets = natSubnets;
             return this;
         }
 
-        public Builder setNatSubnets(@Nullable List<String> natSubnets) {
+        public Builder natSubnets(@Nullable List<String> natSubnets) {
             this.natSubnets = Input.ofNullable(natSubnets);
             return this;
         }
 
-        public Builder setProducerForwardingRule(@Nullable Input<String> producerForwardingRule) {
+        public Builder producerForwardingRule(@Nullable Input<String> producerForwardingRule) {
             this.producerForwardingRule = producerForwardingRule;
             return this;
         }
 
-        public Builder setProducerForwardingRule(@Nullable String producerForwardingRule) {
+        public Builder producerForwardingRule(@Nullable String producerForwardingRule) {
             this.producerForwardingRule = Input.ofNullable(producerForwardingRule);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setTargetService(@Nullable Input<String> targetService) {
+        public Builder targetService(@Nullable Input<String> targetService) {
             this.targetService = targetService;
             return this;
         }
 
-        public Builder setTargetService(@Nullable String targetService) {
+        public Builder targetService(@Nullable String targetService) {
             this.targetService = Input.ofNullable(targetService);
             return this;
         }

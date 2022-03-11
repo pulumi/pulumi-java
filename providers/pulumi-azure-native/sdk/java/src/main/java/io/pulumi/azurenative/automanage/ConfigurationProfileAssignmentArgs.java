@@ -103,42 +103,42 @@ public final class ConfigurationProfileAssignmentArgs extends io.pulumi.resource
     	      this.vmName = defaults.vmName;
         }
 
-        public Builder setConfigurationProfileAssignmentName(@Nullable Input<String> configurationProfileAssignmentName) {
+        public Builder configurationProfileAssignmentName(@Nullable Input<String> configurationProfileAssignmentName) {
             this.configurationProfileAssignmentName = configurationProfileAssignmentName;
             return this;
         }
 
-        public Builder setConfigurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
+        public Builder configurationProfileAssignmentName(@Nullable String configurationProfileAssignmentName) {
             this.configurationProfileAssignmentName = Input.ofNullable(configurationProfileAssignmentName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ConfigurationProfileAssignmentPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
+        public Builder properties(@Nullable ConfigurationProfileAssignmentPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVmName(Input<String> vmName) {
+        public Builder vmName(Input<String> vmName) {
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
 
-        public Builder setVmName(String vmName) {
+        public Builder vmName(String vmName) {
             this.vmName = Input.of(Objects.requireNonNull(vmName));
             return this;
         }

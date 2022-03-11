@@ -17,11 +17,11 @@ public final class TaskDefinitionTmpfs {
     private final @Nullable List<String> mountOptions;
     private final Integer size;
 
-    @OutputCustomType.Constructor({"containerPath","mountOptions","size"})
+    @OutputCustomType.Constructor
     private TaskDefinitionTmpfs(
-        @Nullable String containerPath,
-        @Nullable List<String> mountOptions,
-        Integer size) {
+        @OutputCustomType.Parameter("containerPath") @Nullable String containerPath,
+        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @OutputCustomType.Parameter("size") Integer size) {
         this.containerPath = containerPath;
         this.mountOptions = mountOptions;
         this.size = size;
@@ -61,17 +61,17 @@ public final class TaskDefinitionTmpfs {
     	      this.size = defaults.size;
         }
 
-        public Builder setContainerPath(@Nullable String containerPath) {
+        public Builder containerPath(@Nullable String containerPath) {
             this.containerPath = containerPath;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable List<String> mountOptions) {
+        public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

@@ -136,29 +136,29 @@ public final class GetWebPubSubResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"eventHandler","externalIP","features","hostName","id","identity","location","name","networkACLs","privateEndpointConnections","provisioningState","publicNetworkAccess","publicPort","serverPort","sharedPrivateLinkResources","sku","systemData","tags","tls","type","version"})
+    @OutputCustomType.Constructor
     private GetWebPubSubResult(
-        @Nullable EventHandlerSettingsResponse eventHandler,
-        String externalIP,
-        @Nullable List<WebPubSubFeatureResponse> features,
-        String hostName,
-        String id,
-        @Nullable ManagedIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        @Nullable WebPubSubNetworkACLsResponse networkACLs,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        Integer publicPort,
-        Integer serverPort,
-        List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @Nullable ResourceSkuResponse sku,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable WebPubSubTlsSettingsResponse tls,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("eventHandler") @Nullable EventHandlerSettingsResponse eventHandler,
+        @OutputCustomType.Parameter("externalIP") String externalIP,
+        @OutputCustomType.Parameter("features") @Nullable List<WebPubSubFeatureResponse> features,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkACLs") @Nullable WebPubSubNetworkACLsResponse networkACLs,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("publicPort") Integer publicPort,
+        @OutputCustomType.Parameter("serverPort") Integer serverPort,
+        @OutputCustomType.Parameter("sharedPrivateLinkResources") List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tls") @Nullable WebPubSubTlsSettingsResponse tls,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.eventHandler = eventHandler;
         this.externalIP = externalIP;
         this.features = features;
@@ -397,107 +397,107 @@ public final class GetWebPubSubResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setEventHandler(@Nullable EventHandlerSettingsResponse eventHandler) {
+        public Builder eventHandler(@Nullable EventHandlerSettingsResponse eventHandler) {
             this.eventHandler = eventHandler;
             return this;
         }
 
-        public Builder setExternalIP(String externalIP) {
+        public Builder externalIP(String externalIP) {
             this.externalIP = Objects.requireNonNull(externalIP);
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<WebPubSubFeatureResponse> features) {
+        public Builder features(@Nullable List<WebPubSubFeatureResponse> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable WebPubSubNetworkACLsResponse networkACLs) {
+        public Builder networkACLs(@Nullable WebPubSubNetworkACLsResponse networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicPort(Integer publicPort) {
+        public Builder publicPort(Integer publicPort) {
             this.publicPort = Objects.requireNonNull(publicPort);
             return this;
         }
 
-        public Builder setServerPort(Integer serverPort) {
+        public Builder serverPort(Integer serverPort) {
             this.serverPort = Objects.requireNonNull(serverPort);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = Objects.requireNonNull(sharedPrivateLinkResources);
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceSkuResponse sku) {
+        public Builder sku(@Nullable ResourceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTls(@Nullable WebPubSubTlsSettingsResponse tls) {
+        public Builder tls(@Nullable WebPubSubTlsSettingsResponse tls) {
             this.tls = tls;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

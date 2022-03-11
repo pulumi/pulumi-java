@@ -73,19 +73,19 @@ public final class GetNetworkInterfaceResult {
      */
     private final @Nullable List<NetworkInterfaceTag> tags;
 
-    @OutputCustomType.Constructor({"description","groupSet","id","ipv6AddressCount","ipv6Addresses","primaryPrivateIpAddress","privateIpAddresses","secondaryPrivateIpAddressCount","secondaryPrivateIpAddresses","sourceDestCheck","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceResult(
-        @Nullable String description,
-        @Nullable List<String> groupSet,
-        @Nullable String id,
-        @Nullable Integer ipv6AddressCount,
-        @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
-        @Nullable String primaryPrivateIpAddress,
-        @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
-        @Nullable Integer secondaryPrivateIpAddressCount,
-        @Nullable List<String> secondaryPrivateIpAddresses,
-        @Nullable Boolean sourceDestCheck,
-        @Nullable List<NetworkInterfaceTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("groupSet") @Nullable List<String> groupSet,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses,
+        @OutputCustomType.Parameter("primaryPrivateIpAddress") @Nullable String primaryPrivateIpAddress,
+        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddresses") @Nullable List<String> secondaryPrivateIpAddresses,
+        @OutputCustomType.Parameter("sourceDestCheck") @Nullable Boolean sourceDestCheck,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInterfaceTag> tags) {
         this.description = description;
         this.groupSet = groupSet;
         this.id = id;
@@ -217,57 +217,57 @@ public final class GetNetworkInterfaceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGroupSet(@Nullable List<String> groupSet) {
+        public Builder groupSet(@Nullable List<String> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6Address> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setPrimaryPrivateIpAddress(@Nullable String primaryPrivateIpAddress) {
+        public Builder primaryPrivateIpAddress(@Nullable String primaryPrivateIpAddress) {
             this.primaryPrivateIpAddress = primaryPrivateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecification> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddresses(@Nullable List<String> secondaryPrivateIpAddresses) {
+        public Builder secondaryPrivateIpAddresses(@Nullable List<String> secondaryPrivateIpAddresses) {
             this.secondaryPrivateIpAddresses = secondaryPrivateIpAddresses;
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Boolean sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInterfaceTag> tags) {
+        public Builder tags(@Nullable List<NetworkInterfaceTag> tags) {
             this.tags = tags;
             return this;
         }

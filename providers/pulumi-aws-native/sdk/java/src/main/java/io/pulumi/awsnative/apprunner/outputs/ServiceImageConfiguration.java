@@ -25,11 +25,11 @@ public final class ServiceImageConfiguration {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"port","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceImageConfiguration(
-        @Nullable String port,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;
@@ -77,17 +77,17 @@ public final class ServiceImageConfiguration {
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
         }

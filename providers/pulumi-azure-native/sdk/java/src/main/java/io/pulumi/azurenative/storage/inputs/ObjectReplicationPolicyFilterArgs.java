@@ -75,22 +75,22 @@ public final class ObjectReplicationPolicyFilterArgs extends io.pulumi.resources
     	      this.prefixMatch = defaults.prefixMatch;
         }
 
-        public Builder setMinCreationTime(@Nullable Input<String> minCreationTime) {
+        public Builder minCreationTime(@Nullable Input<String> minCreationTime) {
             this.minCreationTime = minCreationTime;
             return this;
         }
 
-        public Builder setMinCreationTime(@Nullable String minCreationTime) {
+        public Builder minCreationTime(@Nullable String minCreationTime) {
             this.minCreationTime = Input.ofNullable(minCreationTime);
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable Input<List<String>> prefixMatch) {
+        public Builder prefixMatch(@Nullable Input<List<String>> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable List<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable List<String> prefixMatch) {
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }

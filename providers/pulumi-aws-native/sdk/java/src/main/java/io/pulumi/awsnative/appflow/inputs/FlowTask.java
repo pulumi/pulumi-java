@@ -122,27 +122,27 @@ public final class FlowTask extends io.pulumi.resources.InvokeArgs {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setConnectorOperator(@Nullable FlowConnectorOperator connectorOperator) {
+        public Builder connectorOperator(@Nullable FlowConnectorOperator connectorOperator) {
             this.connectorOperator = connectorOperator;
             return this;
         }
 
-        public Builder setDestinationField(@Nullable String destinationField) {
+        public Builder destinationField(@Nullable String destinationField) {
             this.destinationField = destinationField;
             return this;
         }
 
-        public Builder setSourceFields(List<String> sourceFields) {
+        public Builder sourceFields(List<String> sourceFields) {
             this.sourceFields = Objects.requireNonNull(sourceFields);
             return this;
         }
 
-        public Builder setTaskProperties(@Nullable List<FlowTaskPropertiesObject> taskProperties) {
+        public Builder taskProperties(@Nullable List<FlowTaskPropertiesObject> taskProperties) {
             this.taskProperties = taskProperties;
             return this;
         }
 
-        public Builder setTaskType(FlowTaskType taskType) {
+        public Builder taskType(FlowTaskType taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

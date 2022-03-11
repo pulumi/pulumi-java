@@ -20,10 +20,10 @@ public final class NormalizedCoordinateResponse {
      */
     private final Double y;
 
-    @OutputCustomType.Constructor({"x","y"})
+    @OutputCustomType.Constructor
     private NormalizedCoordinateResponse(
-        Double x,
-        Double y) {
+        @OutputCustomType.Parameter("x") Double x,
+        @OutputCustomType.Parameter("y") Double y) {
         this.x = x;
         this.y = y;
     }
@@ -65,12 +65,12 @@ public final class NormalizedCoordinateResponse {
     	      this.y = defaults.y;
         }
 
-        public Builder setX(Double x) {
+        public Builder x(Double x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setY(Double y) {
+        public Builder y(Double y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }

@@ -50,7 +50,7 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
     	      this.blogFieldMappings = defaults.blogFieldMappings;
         }
 
-        public Builder setBlogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
+        public Builder blogFieldMappings(@Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings) {
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }

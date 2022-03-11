@@ -84,17 +84,17 @@ public final class GetRegisteredPrefixArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setRegisteredPrefixName(String registeredPrefixName) {
+        public Builder registeredPrefixName(String registeredPrefixName) {
             this.registeredPrefixName = Objects.requireNonNull(registeredPrefixName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

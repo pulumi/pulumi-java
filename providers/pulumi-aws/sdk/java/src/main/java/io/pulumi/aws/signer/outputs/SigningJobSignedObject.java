@@ -17,8 +17,8 @@ public final class SigningJobSignedObject {
      */
     private final @Nullable List<SigningJobSignedObjectS3> s3s;
 
-    @OutputCustomType.Constructor({"s3s"})
-    private SigningJobSignedObject(@Nullable List<SigningJobSignedObjectS3> s3s) {
+    @OutputCustomType.Constructor
+    private SigningJobSignedObject(@OutputCustomType.Parameter("s3s") @Nullable List<SigningJobSignedObjectS3> s3s) {
         this.s3s = s3s;
     }
 
@@ -50,7 +50,7 @@ public final class SigningJobSignedObject {
     	      this.s3s = defaults.s3s;
         }
 
-        public Builder setS3s(@Nullable List<SigningJobSignedObjectS3> s3s) {
+        public Builder s3s(@Nullable List<SigningJobSignedObjectS3> s3s) {
             this.s3s = s3s;
             return this;
         }

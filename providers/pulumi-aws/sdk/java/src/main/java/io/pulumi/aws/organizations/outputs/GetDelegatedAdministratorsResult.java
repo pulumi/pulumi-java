@@ -25,11 +25,11 @@ public final class GetDelegatedAdministratorsResult {
     private final String id;
     private final @Nullable String servicePrincipal;
 
-    @OutputCustomType.Constructor({"delegatedAdministrators","id","servicePrincipal"})
+    @OutputCustomType.Constructor
     private GetDelegatedAdministratorsResult(
-        List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
-        String id,
-        @Nullable String servicePrincipal) {
+        @OutputCustomType.Parameter("delegatedAdministrators") List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("servicePrincipal") @Nullable String servicePrincipal) {
         this.delegatedAdministrators = delegatedAdministrators;
         this.id = id;
         this.servicePrincipal = servicePrincipal;
@@ -77,17 +77,17 @@ public final class GetDelegatedAdministratorsResult {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setDelegatedAdministrators(List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators) {
+        public Builder delegatedAdministrators(List<GetDelegatedAdministratorsDelegatedAdministrator> delegatedAdministrators) {
             this.delegatedAdministrators = Objects.requireNonNull(delegatedAdministrators);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable String servicePrincipal) {
+        public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

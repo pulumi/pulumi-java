@@ -17,8 +17,8 @@ public final class GetEventSubscriptionFullUrlResult {
      */
     private final @Nullable String endpointUrl;
 
-    @OutputCustomType.Constructor({"endpointUrl"})
-    private GetEventSubscriptionFullUrlResult(@Nullable String endpointUrl) {
+    @OutputCustomType.Constructor
+    private GetEventSubscriptionFullUrlResult(@OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl) {
         this.endpointUrl = endpointUrl;
     }
 
@@ -50,7 +50,7 @@ public final class GetEventSubscriptionFullUrlResult {
     	      this.endpointUrl = defaults.endpointUrl;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }

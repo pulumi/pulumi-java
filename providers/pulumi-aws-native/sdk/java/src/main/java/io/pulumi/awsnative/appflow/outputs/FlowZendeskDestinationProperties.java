@@ -23,12 +23,12 @@ public final class FlowZendeskDestinationProperties {
     private final String object;
     private final @Nullable FlowWriteOperationType writeOperationType;
 
-    @OutputCustomType.Constructor({"errorHandlingConfig","idFieldNames","object","writeOperationType"})
+    @OutputCustomType.Constructor
     private FlowZendeskDestinationProperties(
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        @Nullable List<String> idFieldNames,
-        String object,
-        @Nullable FlowWriteOperationType writeOperationType) {
+        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @OutputCustomType.Parameter("idFieldNames") @Nullable List<String> idFieldNames,
+        @OutputCustomType.Parameter("object") String object,
+        @OutputCustomType.Parameter("writeOperationType") @Nullable FlowWriteOperationType writeOperationType) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.idFieldNames = idFieldNames;
         this.object = object;
@@ -78,22 +78,22 @@ public final class FlowZendeskDestinationProperties {
     	      this.writeOperationType = defaults.writeOperationType;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setIdFieldNames(@Nullable List<String> idFieldNames) {
+        public Builder idFieldNames(@Nullable List<String> idFieldNames) {
             this.idFieldNames = idFieldNames;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setWriteOperationType(@Nullable FlowWriteOperationType writeOperationType) {
+        public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
             this.writeOperationType = writeOperationType;
             return this;
         }

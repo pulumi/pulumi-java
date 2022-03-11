@@ -33,12 +33,12 @@ public final class PipelineArtifactStore {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryptionKey","location","region","type"})
+    @OutputCustomType.Constructor
     private PipelineArtifactStore(
-        @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
-        String location,
-        @Nullable String region,
-        String type) {
+        @OutputCustomType.Parameter("encryptionKey") @Nullable PipelineArtifactStoreEncryptionKey encryptionKey,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryptionKey = encryptionKey;
         this.location = location;
         this.region = region;
@@ -100,22 +100,22 @@ public final class PipelineArtifactStore {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncryptionKey(@Nullable PipelineArtifactStoreEncryptionKey encryptionKey) {
+        public Builder encryptionKey(@Nullable PipelineArtifactStoreEncryptionKey encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

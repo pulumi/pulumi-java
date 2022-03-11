@@ -47,15 +47,15 @@ public final class GetRouteResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","destinationAddress","destinationPort","displayName","labels","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        String createTime,
-        String destinationAddress,
-        Integer destinationPort,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destinationAddress") String destinationAddress,
+        @OutputCustomType.Parameter("destinationPort") Integer destinationPort,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destinationAddress = destinationAddress;
         this.destinationPort = destinationPort;
@@ -147,37 +147,37 @@ public final class GetRouteResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDestinationAddress(String destinationAddress) {
+        public Builder destinationAddress(String destinationAddress) {
             this.destinationAddress = Objects.requireNonNull(destinationAddress);
             return this;
         }
 
-        public Builder setDestinationPort(Integer destinationPort) {
+        public Builder destinationPort(Integer destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -27,19 +27,19 @@ public final class GetBackendServiceBackend {
     private final Double maxRatePerInstance;
     private final Double maxUtilization;
 
-    @OutputCustomType.Constructor({"balancingMode","capacityScaler","description","group","maxConnections","maxConnectionsPerEndpoint","maxConnectionsPerInstance","maxRate","maxRatePerEndpoint","maxRatePerInstance","maxUtilization"})
+    @OutputCustomType.Constructor
     private GetBackendServiceBackend(
-        String balancingMode,
-        Double capacityScaler,
-        String description,
-        String group,
-        Integer maxConnections,
-        Integer maxConnectionsPerEndpoint,
-        Integer maxConnectionsPerInstance,
-        Integer maxRate,
-        Double maxRatePerEndpoint,
-        Double maxRatePerInstance,
-        Double maxUtilization) {
+        @OutputCustomType.Parameter("balancingMode") String balancingMode,
+        @OutputCustomType.Parameter("capacityScaler") Double capacityScaler,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxConnectionsPerEndpoint") Integer maxConnectionsPerEndpoint,
+        @OutputCustomType.Parameter("maxConnectionsPerInstance") Integer maxConnectionsPerInstance,
+        @OutputCustomType.Parameter("maxRate") Integer maxRate,
+        @OutputCustomType.Parameter("maxRatePerEndpoint") Double maxRatePerEndpoint,
+        @OutputCustomType.Parameter("maxRatePerInstance") Double maxRatePerInstance,
+        @OutputCustomType.Parameter("maxUtilization") Double maxUtilization) {
         this.balancingMode = balancingMode;
         this.capacityScaler = capacityScaler;
         this.description = description;
@@ -131,57 +131,57 @@ public final class GetBackendServiceBackend {
     	      this.maxUtilization = defaults.maxUtilization;
         }
 
-        public Builder setBalancingMode(String balancingMode) {
+        public Builder balancingMode(String balancingMode) {
             this.balancingMode = Objects.requireNonNull(balancingMode);
             return this;
         }
 
-        public Builder setCapacityScaler(Double capacityScaler) {
+        public Builder capacityScaler(Double capacityScaler) {
             this.capacityScaler = Objects.requireNonNull(capacityScaler);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = Objects.requireNonNull(maxConnectionsPerEndpoint);
             return this;
         }
 
-        public Builder setMaxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = Objects.requireNonNull(maxConnectionsPerInstance);
             return this;
         }
 
-        public Builder setMaxRate(Integer maxRate) {
+        public Builder maxRate(Integer maxRate) {
             this.maxRate = Objects.requireNonNull(maxRate);
             return this;
         }
 
-        public Builder setMaxRatePerEndpoint(Double maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = Objects.requireNonNull(maxRatePerEndpoint);
             return this;
         }
 
-        public Builder setMaxRatePerInstance(Double maxRatePerInstance) {
+        public Builder maxRatePerInstance(Double maxRatePerInstance) {
             this.maxRatePerInstance = Objects.requireNonNull(maxRatePerInstance);
             return this;
         }
 
-        public Builder setMaxUtilization(Double maxUtilization) {
+        public Builder maxUtilization(Double maxUtilization) {
             this.maxUtilization = Objects.requireNonNull(maxUtilization);
             return this;
         }

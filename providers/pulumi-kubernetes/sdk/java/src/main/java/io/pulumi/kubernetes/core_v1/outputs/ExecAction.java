@@ -17,8 +17,8 @@ public final class ExecAction {
      */
     private final @Nullable List<String> command;
 
-    @OutputCustomType.Constructor({"command"})
-    private ExecAction(@Nullable List<String> command) {
+    @OutputCustomType.Constructor
+    private ExecAction(@OutputCustomType.Parameter("command") @Nullable List<String> command) {
         this.command = command;
     }
 
@@ -50,7 +50,7 @@ public final class ExecAction {
     	      this.command = defaults.command;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }

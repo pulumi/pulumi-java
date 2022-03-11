@@ -19,13 +19,13 @@ public final class GetNetworkInsightsAccessScopeResult {
     private final @Nullable List<NetworkInsightsAccessScopeTag> tags;
     private final @Nullable String updatedDate;
 
-    @OutputCustomType.Constructor({"createdDate","networkInsightsAccessScopeArn","networkInsightsAccessScopeId","tags","updatedDate"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAccessScopeResult(
-        @Nullable String createdDate,
-        @Nullable String networkInsightsAccessScopeArn,
-        @Nullable String networkInsightsAccessScopeId,
-        @Nullable List<NetworkInsightsAccessScopeTag> tags,
-        @Nullable String updatedDate) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeArn") @Nullable String networkInsightsAccessScopeArn,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeId") @Nullable String networkInsightsAccessScopeId,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeTag> tags,
+        @OutputCustomType.Parameter("updatedDate") @Nullable String updatedDate) {
         this.createdDate = createdDate;
         this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
         this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
@@ -77,27 +77,27 @@ public final class GetNetworkInsightsAccessScopeResult {
     	      this.updatedDate = defaults.updatedDate;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeArn(@Nullable String networkInsightsAccessScopeArn) {
+        public Builder networkInsightsAccessScopeArn(@Nullable String networkInsightsAccessScopeArn) {
             this.networkInsightsAccessScopeArn = networkInsightsAccessScopeArn;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeId(@Nullable String networkInsightsAccessScopeId) {
+        public Builder networkInsightsAccessScopeId(@Nullable String networkInsightsAccessScopeId) {
             this.networkInsightsAccessScopeId = networkInsightsAccessScopeId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAccessScopeTag> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAccessScopeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUpdatedDate(@Nullable String updatedDate) {
+        public Builder updatedDate(@Nullable String updatedDate) {
             this.updatedDate = updatedDate;
             return this;
         }

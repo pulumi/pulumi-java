@@ -30,13 +30,13 @@ public final class Object {
      */
     private final @Nullable Map<String,List<SomeOtherObject>> stillOthers;
 
-    @OutputCustomType.Constructor({"bar","configs","foo","others","stillOthers"})
+    @OutputCustomType.Constructor
     private Object(
-        @Nullable String bar,
-        @Nullable List<ConfigMap> configs,
-        @Nullable Resource foo,
-        @Nullable List<List<SomeOtherObject>> others,
-        @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
+        @OutputCustomType.Parameter("bar") @Nullable String bar,
+        @OutputCustomType.Parameter("configs") @Nullable List<ConfigMap> configs,
+        @OutputCustomType.Parameter("foo") @Nullable Resource foo,
+        @OutputCustomType.Parameter("others") @Nullable List<List<SomeOtherObject>> others,
+        @OutputCustomType.Parameter("stillOthers") @Nullable Map<String,List<SomeOtherObject>> stillOthers) {
         this.bar = bar;
         this.configs = configs;
         this.foo = foo;
@@ -96,27 +96,27 @@ public final class Object {
     	      this.stillOthers = defaults.stillOthers;
         }
 
-        public Builder setBar(@Nullable String bar) {
+        public Builder bar(@Nullable String bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setConfigs(@Nullable List<ConfigMap> configs) {
+        public Builder configs(@Nullable List<ConfigMap> configs) {
             this.configs = configs;
             return this;
         }
 
-        public Builder setFoo(@Nullable Resource foo) {
+        public Builder foo(@Nullable Resource foo) {
             this.foo = foo;
             return this;
         }
 
-        public Builder setOthers(@Nullable List<List<SomeOtherObject>> others) {
+        public Builder others(@Nullable List<List<SomeOtherObject>> others) {
             this.others = others;
             return this;
         }
 
-        public Builder setStillOthers(@Nullable Map<String,List<SomeOtherObject>> stillOthers) {
+        public Builder stillOthers(@Nullable Map<String,List<SomeOtherObject>> stillOthers) {
             this.stillOthers = stillOthers;
             return this;
         }

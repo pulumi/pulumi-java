@@ -16,8 +16,8 @@ public final class LoggingConfigurationLoggingConfiguration {
      */
     private final List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
-    @OutputCustomType.Constructor({"logDestinationConfigs"})
-    private LoggingConfigurationLoggingConfiguration(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+    @OutputCustomType.Constructor
+    private LoggingConfigurationLoggingConfiguration(@OutputCustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 
@@ -49,7 +49,7 @@ public final class LoggingConfigurationLoggingConfiguration {
     	      this.logDestinationConfigs = defaults.logDestinationConfigs;
         }
 
-        public Builder setLogDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+        public Builder logDestinationConfigs(List<LoggingConfigurationLoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }

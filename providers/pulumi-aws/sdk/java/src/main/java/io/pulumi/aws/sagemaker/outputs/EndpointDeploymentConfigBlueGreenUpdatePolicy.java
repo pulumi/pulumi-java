@@ -28,11 +28,11 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
      */
     private final EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration;
 
-    @OutputCustomType.Constructor({"maximumExecutionTimeoutInSeconds","terminationWaitInSeconds","trafficRoutingConfiguration"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicy(
-        @Nullable Integer maximumExecutionTimeoutInSeconds,
-        @Nullable Integer terminationWaitInSeconds,
-        EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
+        @OutputCustomType.Parameter("maximumExecutionTimeoutInSeconds") @Nullable Integer maximumExecutionTimeoutInSeconds,
+        @OutputCustomType.Parameter("terminationWaitInSeconds") @Nullable Integer terminationWaitInSeconds,
+        @OutputCustomType.Parameter("trafficRoutingConfiguration") EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
         this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
         this.terminationWaitInSeconds = terminationWaitInSeconds;
         this.trafficRoutingConfiguration = trafficRoutingConfiguration;
@@ -84,17 +84,17 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicy {
     	      this.trafficRoutingConfiguration = defaults.trafficRoutingConfiguration;
         }
 
-        public Builder setMaximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
+        public Builder maximumExecutionTimeoutInSeconds(@Nullable Integer maximumExecutionTimeoutInSeconds) {
             this.maximumExecutionTimeoutInSeconds = maximumExecutionTimeoutInSeconds;
             return this;
         }
 
-        public Builder setTerminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
+        public Builder terminationWaitInSeconds(@Nullable Integer terminationWaitInSeconds) {
             this.terminationWaitInSeconds = terminationWaitInSeconds;
             return this;
         }
 
-        public Builder setTrafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
+        public Builder trafficRoutingConfiguration(EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration trafficRoutingConfiguration) {
             this.trafficRoutingConfiguration = Objects.requireNonNull(trafficRoutingConfiguration);
             return this;
         }

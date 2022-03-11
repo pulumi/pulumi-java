@@ -75,12 +75,12 @@ public final class WeekDetailsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.weekdays = defaults.weekdays;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }
 
-        public Builder setWeekdays(@Nullable List<String> weekdays) {
+        public Builder weekdays(@Nullable List<String> weekdays) {
             this.weekdays = weekdays;
             return this;
         }

@@ -75,22 +75,22 @@ public final class MongoIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.options = defaults.options;
         }
 
-        public Builder setKey(@Nullable Input<MongoIndexKeysArgs> key) {
+        public Builder key(@Nullable Input<MongoIndexKeysArgs> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable MongoIndexKeysArgs key) {
+        public Builder key(@Nullable MongoIndexKeysArgs key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<MongoIndexOptionsArgs> options) {
+        public Builder options(@Nullable Input<MongoIndexOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable MongoIndexOptionsArgs options) {
+        public Builder options(@Nullable MongoIndexOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }

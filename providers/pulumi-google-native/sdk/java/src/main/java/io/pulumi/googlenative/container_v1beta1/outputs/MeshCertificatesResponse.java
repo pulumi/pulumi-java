@@ -15,8 +15,8 @@ public final class MeshCertificatesResponse {
      */
     private final Boolean enableCertificates;
 
-    @OutputCustomType.Constructor({"enableCertificates"})
-    private MeshCertificatesResponse(Boolean enableCertificates) {
+    @OutputCustomType.Constructor
+    private MeshCertificatesResponse(@OutputCustomType.Parameter("enableCertificates") Boolean enableCertificates) {
         this.enableCertificates = enableCertificates;
     }
 
@@ -48,7 +48,7 @@ public final class MeshCertificatesResponse {
     	      this.enableCertificates = defaults.enableCertificates;
         }
 
-        public Builder setEnableCertificates(Boolean enableCertificates) {
+        public Builder enableCertificates(Boolean enableCertificates) {
             this.enableCertificates = Objects.requireNonNull(enableCertificates);
             return this;
         }

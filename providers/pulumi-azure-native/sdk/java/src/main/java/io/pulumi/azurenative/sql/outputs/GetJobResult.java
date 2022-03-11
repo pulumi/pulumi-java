@@ -44,14 +44,14 @@ public final class GetJobResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"description","id","name","schedule","type","version"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable JobScheduleResponse schedule,
-        String type,
-        Integer version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") @Nullable JobScheduleResponse schedule,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -133,32 +133,32 @@ public final class GetJobResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(@Nullable JobScheduleResponse schedule) {
+        public Builder schedule(@Nullable JobScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

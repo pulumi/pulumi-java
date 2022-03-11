@@ -98,52 +98,52 @@ public final class ProviderRegistryAuthArgs extends io.pulumi.resources.Resource
     	      this.username = defaults.username;
         }
 
-        public Builder setAddress(Input<String> address) {
+        public Builder address(Input<String> address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Input.of(Objects.requireNonNull(address));
             return this;
         }
 
-        public Builder setConfigFile(@Nullable Input<String> configFile) {
+        public Builder configFile(@Nullable Input<String> configFile) {
             this.configFile = configFile;
             return this;
         }
 
-        public Builder setConfigFile(@Nullable String configFile) {
+        public Builder configFile(@Nullable String configFile) {
             this.configFile = Input.ofNullable(configFile);
             return this;
         }
 
-        public Builder setConfigFileContent(@Nullable Input<String> configFileContent) {
+        public Builder configFileContent(@Nullable Input<String> configFileContent) {
             this.configFileContent = configFileContent;
             return this;
         }
 
-        public Builder setConfigFileContent(@Nullable String configFileContent) {
+        public Builder configFileContent(@Nullable String configFileContent) {
             this.configFileContent = Input.ofNullable(configFileContent);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

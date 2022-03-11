@@ -22,10 +22,10 @@ public final class ListTopLevelDomainAgreementsResult {
      */
     private final List<TldLegalAgreementResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListTopLevelDomainAgreementsResult(
-        String nextLink,
-        List<TldLegalAgreementResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<TldLegalAgreementResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListTopLevelDomainAgreementsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<TldLegalAgreementResponse> value) {
+        public Builder value(List<TldLegalAgreementResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

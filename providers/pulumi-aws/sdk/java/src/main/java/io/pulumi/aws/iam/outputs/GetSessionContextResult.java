@@ -36,14 +36,14 @@ public final class GetSessionContextResult {
      */
     private final String sessionName;
 
-    @OutputCustomType.Constructor({"arn","id","issuerArn","issuerId","issuerName","sessionName"})
+    @OutputCustomType.Constructor
     private GetSessionContextResult(
-        String arn,
-        String id,
-        String issuerArn,
-        String issuerId,
-        String issuerName,
-        String sessionName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issuerArn") String issuerArn,
+        @OutputCustomType.Parameter("issuerId") String issuerId,
+        @OutputCustomType.Parameter("issuerName") String issuerName,
+        @OutputCustomType.Parameter("sessionName") String sessionName) {
         this.arn = arn;
         this.id = id;
         this.issuerArn = issuerArn;
@@ -121,32 +121,32 @@ public final class GetSessionContextResult {
     	      this.sessionName = defaults.sessionName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIssuerArn(String issuerArn) {
+        public Builder issuerArn(String issuerArn) {
             this.issuerArn = Objects.requireNonNull(issuerArn);
             return this;
         }
 
-        public Builder setIssuerId(String issuerId) {
+        public Builder issuerId(String issuerId) {
             this.issuerId = Objects.requireNonNull(issuerId);
             return this;
         }
 
-        public Builder setIssuerName(String issuerName) {
+        public Builder issuerName(String issuerName) {
             this.issuerName = Objects.requireNonNull(issuerName);
             return this;
         }
 
-        public Builder setSessionName(String sessionName) {
+        public Builder sessionName(String sessionName) {
             this.sessionName = Objects.requireNonNull(sessionName);
             return this;
         }

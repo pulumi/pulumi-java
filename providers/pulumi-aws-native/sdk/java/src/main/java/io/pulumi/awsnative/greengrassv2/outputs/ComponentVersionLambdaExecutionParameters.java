@@ -30,19 +30,19 @@ public final class ComponentVersionLambdaExecutionParameters {
     private final @Nullable Integer statusTimeoutInSeconds;
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"environmentVariables","eventSources","execArgs","inputPayloadEncodingType","linuxProcessParams","maxIdleTimeInSeconds","maxInstancesCount","maxQueueSize","pinned","statusTimeoutInSeconds","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaExecutionParameters(
-        @Nullable Object environmentVariables,
-        @Nullable List<ComponentVersionLambdaEventSource> eventSources,
-        @Nullable List<String> execArgs,
-        @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
-        @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
-        @Nullable Integer maxIdleTimeInSeconds,
-        @Nullable Integer maxInstancesCount,
-        @Nullable Integer maxQueueSize,
-        @Nullable Boolean pinned,
-        @Nullable Integer statusTimeoutInSeconds,
-        @Nullable Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
+        @OutputCustomType.Parameter("eventSources") @Nullable List<ComponentVersionLambdaEventSource> eventSources,
+        @OutputCustomType.Parameter("execArgs") @Nullable List<String> execArgs,
+        @OutputCustomType.Parameter("inputPayloadEncodingType") @Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType,
+        @OutputCustomType.Parameter("linuxProcessParams") @Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams,
+        @OutputCustomType.Parameter("maxIdleTimeInSeconds") @Nullable Integer maxIdleTimeInSeconds,
+        @OutputCustomType.Parameter("maxInstancesCount") @Nullable Integer maxInstancesCount,
+        @OutputCustomType.Parameter("maxQueueSize") @Nullable Integer maxQueueSize,
+        @OutputCustomType.Parameter("pinned") @Nullable Boolean pinned,
+        @OutputCustomType.Parameter("statusTimeoutInSeconds") @Nullable Integer statusTimeoutInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.environmentVariables = environmentVariables;
         this.eventSources = eventSources;
         this.execArgs = execArgs;
@@ -130,57 +130,57 @@ public final class ComponentVersionLambdaExecutionParameters {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Object environmentVariables) {
+        public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEventSources(@Nullable List<ComponentVersionLambdaEventSource> eventSources) {
+        public Builder eventSources(@Nullable List<ComponentVersionLambdaEventSource> eventSources) {
             this.eventSources = eventSources;
             return this;
         }
 
-        public Builder setExecArgs(@Nullable List<String> execArgs) {
+        public Builder execArgs(@Nullable List<String> execArgs) {
             this.execArgs = execArgs;
             return this;
         }
 
-        public Builder setInputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
+        public Builder inputPayloadEncodingType(@Nullable ComponentVersionLambdaExecutionParametersInputPayloadEncodingType inputPayloadEncodingType) {
             this.inputPayloadEncodingType = inputPayloadEncodingType;
             return this;
         }
 
-        public Builder setLinuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams) {
+        public Builder linuxProcessParams(@Nullable ComponentVersionLambdaLinuxProcessParams linuxProcessParams) {
             this.linuxProcessParams = linuxProcessParams;
             return this;
         }
 
-        public Builder setMaxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
+        public Builder maxIdleTimeInSeconds(@Nullable Integer maxIdleTimeInSeconds) {
             this.maxIdleTimeInSeconds = maxIdleTimeInSeconds;
             return this;
         }
 
-        public Builder setMaxInstancesCount(@Nullable Integer maxInstancesCount) {
+        public Builder maxInstancesCount(@Nullable Integer maxInstancesCount) {
             this.maxInstancesCount = maxInstancesCount;
             return this;
         }
 
-        public Builder setMaxQueueSize(@Nullable Integer maxQueueSize) {
+        public Builder maxQueueSize(@Nullable Integer maxQueueSize) {
             this.maxQueueSize = maxQueueSize;
             return this;
         }
 
-        public Builder setPinned(@Nullable Boolean pinned) {
+        public Builder pinned(@Nullable Boolean pinned) {
             this.pinned = pinned;
             return this;
         }
 
-        public Builder setStatusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
+        public Builder statusTimeoutInSeconds(@Nullable Integer statusTimeoutInSeconds) {
             this.statusTimeoutInSeconds = statusTimeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }

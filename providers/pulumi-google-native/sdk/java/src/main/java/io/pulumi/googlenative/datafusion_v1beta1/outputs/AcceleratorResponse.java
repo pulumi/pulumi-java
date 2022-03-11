@@ -15,8 +15,8 @@ public final class AcceleratorResponse {
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorType"})
-    private AcceleratorResponse(String acceleratorType) {
+    @OutputCustomType.Constructor
+    private AcceleratorResponse(@OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorType = acceleratorType;
     }
 
@@ -48,7 +48,7 @@ public final class AcceleratorResponse {
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }

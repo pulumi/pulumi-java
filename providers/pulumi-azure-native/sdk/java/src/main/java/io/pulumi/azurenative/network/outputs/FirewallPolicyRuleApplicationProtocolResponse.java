@@ -23,10 +23,10 @@ public final class FirewallPolicyRuleApplicationProtocolResponse {
      */
     private final @Nullable String protocolType;
 
-    @OutputCustomType.Constructor({"port","protocolType"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleApplicationProtocolResponse(
-        @Nullable Integer port,
-        @Nullable String protocolType) {
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocolType") @Nullable String protocolType) {
         this.port = port;
         this.protocolType = protocolType;
     }
@@ -68,12 +68,12 @@ public final class FirewallPolicyRuleApplicationProtocolResponse {
     	      this.protocolType = defaults.protocolType;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocolType(@Nullable String protocolType) {
+        public Builder protocolType(@Nullable String protocolType) {
             this.protocolType = protocolType;
             return this;
         }

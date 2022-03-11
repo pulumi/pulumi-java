@@ -33,12 +33,12 @@ public final class SpotInstanceRequestMetadataOptions {
      */
     private final @Nullable String instanceMetadataTags;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpPutResponseHopLimit","httpTokens","instanceMetadataTags"})
+    @OutputCustomType.Constructor
     private SpotInstanceRequestMetadataOptions(
-        @Nullable String httpEndpoint,
-        @Nullable Integer httpPutResponseHopLimit,
-        @Nullable String httpTokens,
-        @Nullable String instanceMetadataTags) {
+        @OutputCustomType.Parameter("httpEndpoint") @Nullable String httpEndpoint,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") @Nullable Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") @Nullable String httpTokens,
+        @OutputCustomType.Parameter("instanceMetadataTags") @Nullable String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;
@@ -100,22 +100,22 @@ public final class SpotInstanceRequestMetadataOptions {
     	      this.instanceMetadataTags = defaults.instanceMetadataTags;
         }
 
-        public Builder setHttpEndpoint(@Nullable String httpEndpoint) {
+        public Builder httpEndpoint(@Nullable String httpEndpoint) {
             this.httpEndpoint = httpEndpoint;
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(@Nullable Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = httpPutResponseHopLimit;
             return this;
         }
 
-        public Builder setHttpTokens(@Nullable String httpTokens) {
+        public Builder httpTokens(@Nullable String httpTokens) {
             this.httpTokens = httpTokens;
             return this;
         }
 
-        public Builder setInstanceMetadataTags(@Nullable String instanceMetadataTags) {
+        public Builder instanceMetadataTags(@Nullable String instanceMetadataTags) {
             this.instanceMetadataTags = instanceMetadataTags;
             return this;
         }

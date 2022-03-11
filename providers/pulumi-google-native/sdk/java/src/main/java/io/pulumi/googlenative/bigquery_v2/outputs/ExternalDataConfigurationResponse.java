@@ -95,23 +95,23 @@ public final class ExternalDataConfigurationResponse {
      */
     private final List<String> sourceUris;
 
-    @OutputCustomType.Constructor({"autodetect","avroOptions","bigtableOptions","compression","connectionId","csvOptions","decimalTargetTypes","googleSheetsOptions","hivePartitioningOptions","ignoreUnknownValues","maxBadRecords","parquetOptions","schema","sourceFormat","sourceUris"})
+    @OutputCustomType.Constructor
     private ExternalDataConfigurationResponse(
-        Boolean autodetect,
-        AvroOptionsResponse avroOptions,
-        BigtableOptionsResponse bigtableOptions,
-        String compression,
-        String connectionId,
-        CsvOptionsResponse csvOptions,
-        List<String> decimalTargetTypes,
-        GoogleSheetsOptionsResponse googleSheetsOptions,
-        HivePartitioningOptionsResponse hivePartitioningOptions,
-        Boolean ignoreUnknownValues,
-        Integer maxBadRecords,
-        ParquetOptionsResponse parquetOptions,
-        TableSchemaResponse schema,
-        String sourceFormat,
-        List<String> sourceUris) {
+        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
+        @OutputCustomType.Parameter("avroOptions") AvroOptionsResponse avroOptions,
+        @OutputCustomType.Parameter("bigtableOptions") BigtableOptionsResponse bigtableOptions,
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("connectionId") String connectionId,
+        @OutputCustomType.Parameter("csvOptions") CsvOptionsResponse csvOptions,
+        @OutputCustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
+        @OutputCustomType.Parameter("googleSheetsOptions") GoogleSheetsOptionsResponse googleSheetsOptions,
+        @OutputCustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
+        @OutputCustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
+        @OutputCustomType.Parameter("maxBadRecords") Integer maxBadRecords,
+        @OutputCustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
+        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
+        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris) {
         this.autodetect = autodetect;
         this.avroOptions = avroOptions;
         this.bigtableOptions = bigtableOptions;
@@ -283,77 +283,77 @@ public final class ExternalDataConfigurationResponse {
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder setAutodetect(Boolean autodetect) {
+        public Builder autodetect(Boolean autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
 
-        public Builder setAvroOptions(AvroOptionsResponse avroOptions) {
+        public Builder avroOptions(AvroOptionsResponse avroOptions) {
             this.avroOptions = Objects.requireNonNull(avroOptions);
             return this;
         }
 
-        public Builder setBigtableOptions(BigtableOptionsResponse bigtableOptions) {
+        public Builder bigtableOptions(BigtableOptionsResponse bigtableOptions) {
             this.bigtableOptions = Objects.requireNonNull(bigtableOptions);
             return this;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setCsvOptions(CsvOptionsResponse csvOptions) {
+        public Builder csvOptions(CsvOptionsResponse csvOptions) {
             this.csvOptions = Objects.requireNonNull(csvOptions);
             return this;
         }
 
-        public Builder setDecimalTargetTypes(List<String> decimalTargetTypes) {
+        public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(GoogleSheetsOptionsResponse googleSheetsOptions) {
+        public Builder googleSheetsOptions(GoogleSheetsOptionsResponse googleSheetsOptions) {
             this.googleSheetsOptions = Objects.requireNonNull(googleSheetsOptions);
             return this;
         }
 
-        public Builder setHivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
             this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
             return this;
         }
 
-        public Builder setMaxBadRecords(Integer maxBadRecords) {
+        public Builder maxBadRecords(Integer maxBadRecords) {
             this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
             return this;
         }
 
-        public Builder setParquetOptions(ParquetOptionsResponse parquetOptions) {
+        public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
             this.parquetOptions = Objects.requireNonNull(parquetOptions);
             return this;
         }
 
-        public Builder setSchema(TableSchemaResponse schema) {
+        public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSourceFormat(String sourceFormat) {
+        public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
 
-        public Builder setSourceUris(List<String> sourceUris) {
+        public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }

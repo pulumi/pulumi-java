@@ -14,10 +14,10 @@ public final class DatastoreCustomerManagedS3Storage {
     private final String bucket;
     private final @Nullable String keyPrefix;
 
-    @OutputCustomType.Constructor({"bucket","keyPrefix"})
+    @OutputCustomType.Constructor
     private DatastoreCustomerManagedS3Storage(
-        String bucket,
-        @Nullable String keyPrefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("keyPrefix") @Nullable String keyPrefix) {
         this.bucket = bucket;
         this.keyPrefix = keyPrefix;
     }
@@ -51,12 +51,12 @@ public final class DatastoreCustomerManagedS3Storage {
     	      this.keyPrefix = defaults.keyPrefix;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable String keyPrefix) {
+        public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }

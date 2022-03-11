@@ -34,12 +34,12 @@ public final class StaticDeliveryAttributeMappingResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"isSecret","name","type","value"})
+    @OutputCustomType.Constructor
     private StaticDeliveryAttributeMappingResponse(
-        @Nullable Boolean isSecret,
-        @Nullable String name,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.type = type;
@@ -102,22 +102,22 @@ public final class StaticDeliveryAttributeMappingResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setIsSecret(@Nullable Boolean isSecret) {
+        public Builder isSecret(@Nullable Boolean isSecret) {
             this.isSecret = isSecret;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

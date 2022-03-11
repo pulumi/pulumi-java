@@ -29,11 +29,11 @@ public final class BucketRuleFilterProperties {
      */
     private final @Nullable BucketFilterTag tag;
 
-    @OutputCustomType.Constructor({"andOperator","prefix","tag"})
+    @OutputCustomType.Constructor
     private BucketRuleFilterProperties(
-        @Nullable BucketFilterAndOperator andOperator,
-        @Nullable String prefix,
-        @Nullable BucketFilterTag tag) {
+        @OutputCustomType.Parameter("andOperator") @Nullable BucketFilterAndOperator andOperator,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tag") @Nullable BucketFilterTag tag) {
         this.andOperator = andOperator;
         this.prefix = prefix;
         this.tag = tag;
@@ -85,17 +85,17 @@ public final class BucketRuleFilterProperties {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setAndOperator(@Nullable BucketFilterAndOperator andOperator) {
+        public Builder andOperator(@Nullable BucketFilterAndOperator andOperator) {
             this.andOperator = andOperator;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTag(@Nullable BucketFilterTag tag) {
+        public Builder tag(@Nullable BucketFilterTag tag) {
             this.tag = tag;
             return this;
         }

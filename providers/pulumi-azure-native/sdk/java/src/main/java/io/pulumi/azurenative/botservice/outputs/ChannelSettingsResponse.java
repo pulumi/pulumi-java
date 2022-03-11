@@ -60,17 +60,17 @@ public final class ChannelSettingsResponse {
      */
     private final @Nullable List<SiteResponse> sites;
 
-    @OutputCustomType.Constructor({"botIconUrl","botId","channelDisplayName","channelId","disableLocalAuth","extensionKey1","extensionKey2","isEnabled","sites"})
+    @OutputCustomType.Constructor
     private ChannelSettingsResponse(
-        @Nullable String botIconUrl,
-        @Nullable String botId,
-        @Nullable String channelDisplayName,
-        @Nullable String channelId,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable String extensionKey1,
-        @Nullable String extensionKey2,
-        @Nullable Boolean isEnabled,
-        @Nullable List<SiteResponse> sites) {
+        @OutputCustomType.Parameter("botIconUrl") @Nullable String botIconUrl,
+        @OutputCustomType.Parameter("botId") @Nullable String botId,
+        @OutputCustomType.Parameter("channelDisplayName") @Nullable String channelDisplayName,
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("extensionKey1") @Nullable String extensionKey1,
+        @OutputCustomType.Parameter("extensionKey2") @Nullable String extensionKey2,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("sites") @Nullable List<SiteResponse> sites) {
         this.botIconUrl = botIconUrl;
         this.botId = botId;
         this.channelDisplayName = channelDisplayName;
@@ -182,47 +182,47 @@ public final class ChannelSettingsResponse {
     	      this.sites = defaults.sites;
         }
 
-        public Builder setBotIconUrl(@Nullable String botIconUrl) {
+        public Builder botIconUrl(@Nullable String botIconUrl) {
             this.botIconUrl = botIconUrl;
             return this;
         }
 
-        public Builder setBotId(@Nullable String botId) {
+        public Builder botId(@Nullable String botId) {
             this.botId = botId;
             return this;
         }
 
-        public Builder setChannelDisplayName(@Nullable String channelDisplayName) {
+        public Builder channelDisplayName(@Nullable String channelDisplayName) {
             this.channelDisplayName = channelDisplayName;
             return this;
         }
 
-        public Builder setChannelId(@Nullable String channelId) {
+        public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setExtensionKey1(@Nullable String extensionKey1) {
+        public Builder extensionKey1(@Nullable String extensionKey1) {
             this.extensionKey1 = extensionKey1;
             return this;
         }
 
-        public Builder setExtensionKey2(@Nullable String extensionKey2) {
+        public Builder extensionKey2(@Nullable String extensionKey2) {
             this.extensionKey2 = extensionKey2;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setSites(@Nullable List<SiteResponse> sites) {
+        public Builder sites(@Nullable List<SiteResponse> sites) {
             this.sites = sites;
             return this;
         }

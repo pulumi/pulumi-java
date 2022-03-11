@@ -104,42 +104,42 @@ public final class WindowsDetailArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setCpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Input<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFixingKbs(Input<List<KnowledgeBaseArgs>> fixingKbs) {
+        public Builder fixingKbs(Input<List<KnowledgeBaseArgs>> fixingKbs) {
             this.fixingKbs = Objects.requireNonNull(fixingKbs);
             return this;
         }
 
-        public Builder setFixingKbs(List<KnowledgeBaseArgs> fixingKbs) {
+        public Builder fixingKbs(List<KnowledgeBaseArgs> fixingKbs) {
             this.fixingKbs = Input.of(Objects.requireNonNull(fixingKbs));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

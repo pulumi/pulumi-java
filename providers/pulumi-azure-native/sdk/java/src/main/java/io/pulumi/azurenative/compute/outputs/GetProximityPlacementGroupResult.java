@@ -66,18 +66,18 @@ public final class GetProximityPlacementGroupResult {
      */
     private final List<SubResourceWithColocationStatusResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"availabilitySets","colocationStatus","id","location","name","proximityPlacementGroupType","tags","type","virtualMachineScaleSets","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetProximityPlacementGroupResult(
-        List<SubResourceWithColocationStatusResponse> availabilitySets,
-        @Nullable InstanceViewStatusResponse colocationStatus,
-        String id,
-        String location,
-        String name,
-        @Nullable String proximityPlacementGroupType,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
-        List<SubResourceWithColocationStatusResponse> virtualMachines) {
+        @OutputCustomType.Parameter("availabilitySets") List<SubResourceWithColocationStatusResponse> availabilitySets,
+        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proximityPlacementGroupType") @Nullable String proximityPlacementGroupType,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachineScaleSets") List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets,
+        @OutputCustomType.Parameter("virtualMachines") List<SubResourceWithColocationStatusResponse> virtualMachines) {
         this.availabilitySets = availabilitySets;
         this.colocationStatus = colocationStatus;
         this.id = id;
@@ -199,52 +199,52 @@ public final class GetProximityPlacementGroupResult {
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setAvailabilitySets(List<SubResourceWithColocationStatusResponse> availabilitySets) {
+        public Builder availabilitySets(List<SubResourceWithColocationStatusResponse> availabilitySets) {
             this.availabilitySets = Objects.requireNonNull(availabilitySets);
             return this;
         }
 
-        public Builder setColocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
+        public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProximityPlacementGroupType(@Nullable String proximityPlacementGroupType) {
+        public Builder proximityPlacementGroupType(@Nullable String proximityPlacementGroupType) {
             this.proximityPlacementGroupType = proximityPlacementGroupType;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachineScaleSets(List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets) {
+        public Builder virtualMachineScaleSets(List<SubResourceWithColocationStatusResponse> virtualMachineScaleSets) {
             this.virtualMachineScaleSets = Objects.requireNonNull(virtualMachineScaleSets);
             return this;
         }
 
-        public Builder setVirtualMachines(List<SubResourceWithColocationStatusResponse> virtualMachines) {
+        public Builder virtualMachines(List<SubResourceWithColocationStatusResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }

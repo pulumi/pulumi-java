@@ -30,12 +30,12 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"location","name","sqlDedicatedGatewayEndpoint","status"})
+    @OutputCustomType.Constructor
     private SqlDedicatedGatewayRegionalServiceResourceResponse(
-        String location,
-        String name,
-        String sqlDedicatedGatewayEndpoint,
-        String status) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") String sqlDedicatedGatewayEndpoint,
+        @OutputCustomType.Parameter("status") String status) {
         this.location = location;
         this.name = name;
         this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
@@ -97,22 +97,22 @@ public final class SqlDedicatedGatewayRegionalServiceResourceResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSqlDedicatedGatewayEndpoint(String sqlDedicatedGatewayEndpoint) {
+        public Builder sqlDedicatedGatewayEndpoint(String sqlDedicatedGatewayEndpoint) {
             this.sqlDedicatedGatewayEndpoint = Objects.requireNonNull(sqlDedicatedGatewayEndpoint);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

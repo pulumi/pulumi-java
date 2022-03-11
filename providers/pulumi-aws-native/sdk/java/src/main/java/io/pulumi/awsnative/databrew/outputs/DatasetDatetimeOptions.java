@@ -27,11 +27,11 @@ public final class DatasetDatetimeOptions {
      */
     private final @Nullable String timezoneOffset;
 
-    @OutputCustomType.Constructor({"format","localeCode","timezoneOffset"})
+    @OutputCustomType.Constructor
     private DatasetDatetimeOptions(
-        String format,
-        @Nullable String localeCode,
-        @Nullable String timezoneOffset) {
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("localeCode") @Nullable String localeCode,
+        @OutputCustomType.Parameter("timezoneOffset") @Nullable String timezoneOffset) {
         this.format = format;
         this.localeCode = localeCode;
         this.timezoneOffset = timezoneOffset;
@@ -83,17 +83,17 @@ public final class DatasetDatetimeOptions {
     	      this.timezoneOffset = defaults.timezoneOffset;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setLocaleCode(@Nullable String localeCode) {
+        public Builder localeCode(@Nullable String localeCode) {
             this.localeCode = localeCode;
             return this;
         }
 
-        public Builder setTimezoneOffset(@Nullable String timezoneOffset) {
+        public Builder timezoneOffset(@Nullable String timezoneOffset) {
             this.timezoneOffset = timezoneOffset;
             return this;
         }

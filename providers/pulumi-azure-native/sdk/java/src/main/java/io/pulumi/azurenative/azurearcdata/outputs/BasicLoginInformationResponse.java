@@ -17,8 +17,8 @@ public final class BasicLoginInformationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private BasicLoginInformationResponse(@Nullable String username) {
+    @OutputCustomType.Constructor
+    private BasicLoginInformationResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 
@@ -50,7 +50,7 @@ public final class BasicLoginInformationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

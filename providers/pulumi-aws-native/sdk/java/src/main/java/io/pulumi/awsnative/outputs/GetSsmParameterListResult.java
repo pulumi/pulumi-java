@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetSsmParameterListResult {
     private final List<String> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetSsmParameterListResult(List<String> value) {
+    @OutputCustomType.Constructor
+    private GetSsmParameterListResult(@OutputCustomType.Parameter("value") List<String> value) {
         this.value = value;
     }
 
@@ -41,7 +41,7 @@ public final class GetSsmParameterListResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

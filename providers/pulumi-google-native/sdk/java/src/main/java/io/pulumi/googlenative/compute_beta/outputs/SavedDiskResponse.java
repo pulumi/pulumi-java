@@ -30,12 +30,12 @@ public final class SavedDiskResponse {
      */
     private final String storageBytesStatus;
 
-    @OutputCustomType.Constructor({"kind","sourceDisk","storageBytes","storageBytesStatus"})
+    @OutputCustomType.Constructor
     private SavedDiskResponse(
-        String kind,
-        String sourceDisk,
-        String storageBytes,
-        String storageBytesStatus) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("storageBytes") String storageBytes,
+        @OutputCustomType.Parameter("storageBytesStatus") String storageBytesStatus) {
         this.kind = kind;
         this.sourceDisk = sourceDisk;
         this.storageBytes = storageBytes;
@@ -97,22 +97,22 @@ public final class SavedDiskResponse {
     	      this.storageBytesStatus = defaults.storageBytesStatus;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setStorageBytes(String storageBytes) {
+        public Builder storageBytes(String storageBytes) {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
 
-        public Builder setStorageBytesStatus(String storageBytesStatus) {
+        public Builder storageBytesStatus(String storageBytesStatus) {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }

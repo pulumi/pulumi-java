@@ -33,12 +33,12 @@ public final class ExternalMetricStatus {
      */
     private final @Nullable LabelSelector metricSelector;
 
-    @OutputCustomType.Constructor({"currentAverageValue","currentValue","metricName","metricSelector"})
+    @OutputCustomType.Constructor
     private ExternalMetricStatus(
-        @Nullable String currentAverageValue,
-        String currentValue,
-        String metricName,
-        @Nullable LabelSelector metricSelector) {
+        @OutputCustomType.Parameter("currentAverageValue") @Nullable String currentAverageValue,
+        @OutputCustomType.Parameter("currentValue") String currentValue,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricSelector") @Nullable LabelSelector metricSelector) {
         this.currentAverageValue = currentAverageValue;
         this.currentValue = currentValue;
         this.metricName = metricName;
@@ -100,22 +100,22 @@ public final class ExternalMetricStatus {
     	      this.metricSelector = defaults.metricSelector;
         }
 
-        public Builder setCurrentAverageValue(@Nullable String currentAverageValue) {
+        public Builder currentAverageValue(@Nullable String currentAverageValue) {
             this.currentAverageValue = currentAverageValue;
             return this;
         }
 
-        public Builder setCurrentValue(String currentValue) {
+        public Builder currentValue(String currentValue) {
             this.currentValue = Objects.requireNonNull(currentValue);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricSelector(@Nullable LabelSelector metricSelector) {
+        public Builder metricSelector(@Nullable LabelSelector metricSelector) {
             this.metricSelector = metricSelector;
             return this;
         }

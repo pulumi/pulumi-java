@@ -103,25 +103,25 @@ public final class GetIotSecuritySolutionResult {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor({"additionalWorkspaces","autoDiscoveredResources","disabledDataSources","displayName","export","id","iotHubs","location","name","recommendationsConfiguration","status","systemData","tags","type","unmaskedIpLoggingStatus","userDefinedResources","workspace"})
+    @OutputCustomType.Constructor
     private GetIotSecuritySolutionResult(
-        @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
-        List<String> autoDiscoveredResources,
-        @Nullable List<String> disabledDataSources,
-        String displayName,
-        @Nullable List<String> export,
-        String id,
-        List<String> iotHubs,
-        @Nullable String location,
-        String name,
-        @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String unmaskedIpLoggingStatus,
-        @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
-        @Nullable String workspace) {
+        @OutputCustomType.Parameter("additionalWorkspaces") @Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces,
+        @OutputCustomType.Parameter("autoDiscoveredResources") List<String> autoDiscoveredResources,
+        @OutputCustomType.Parameter("disabledDataSources") @Nullable List<String> disabledDataSources,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("export") @Nullable List<String> export,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iotHubs") List<String> iotHubs,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendationsConfiguration") @Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unmaskedIpLoggingStatus") @Nullable String unmaskedIpLoggingStatus,
+        @OutputCustomType.Parameter("userDefinedResources") @Nullable UserDefinedResourcesPropertiesResponse userDefinedResources,
+        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
         this.additionalWorkspaces = additionalWorkspaces;
         this.autoDiscoveredResources = autoDiscoveredResources;
         this.disabledDataSources = disabledDataSources;
@@ -313,87 +313,87 @@ public final class GetIotSecuritySolutionResult {
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setAdditionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces) {
+        public Builder additionalWorkspaces(@Nullable List<AdditionalWorkspacesPropertiesResponse> additionalWorkspaces) {
             this.additionalWorkspaces = additionalWorkspaces;
             return this;
         }
 
-        public Builder setAutoDiscoveredResources(List<String> autoDiscoveredResources) {
+        public Builder autoDiscoveredResources(List<String> autoDiscoveredResources) {
             this.autoDiscoveredResources = Objects.requireNonNull(autoDiscoveredResources);
             return this;
         }
 
-        public Builder setDisabledDataSources(@Nullable List<String> disabledDataSources) {
+        public Builder disabledDataSources(@Nullable List<String> disabledDataSources) {
             this.disabledDataSources = disabledDataSources;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExport(@Nullable List<String> export) {
+        public Builder export(@Nullable List<String> export) {
             this.export = export;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIotHubs(List<String> iotHubs) {
+        public Builder iotHubs(List<String> iotHubs) {
             this.iotHubs = Objects.requireNonNull(iotHubs);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration) {
+        public Builder recommendationsConfiguration(@Nullable List<RecommendationConfigurationPropertiesResponse> recommendationsConfiguration) {
             this.recommendationsConfiguration = recommendationsConfiguration;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnmaskedIpLoggingStatus(@Nullable String unmaskedIpLoggingStatus) {
+        public Builder unmaskedIpLoggingStatus(@Nullable String unmaskedIpLoggingStatus) {
             this.unmaskedIpLoggingStatus = unmaskedIpLoggingStatus;
             return this;
         }
 
-        public Builder setUserDefinedResources(@Nullable UserDefinedResourcesPropertiesResponse userDefinedResources) {
+        public Builder userDefinedResources(@Nullable UserDefinedResourcesPropertiesResponse userDefinedResources) {
             this.userDefinedResources = userDefinedResources;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
         }

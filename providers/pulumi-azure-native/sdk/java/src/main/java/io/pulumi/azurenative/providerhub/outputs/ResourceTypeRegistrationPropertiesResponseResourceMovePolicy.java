@@ -15,11 +15,11 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     private final @Nullable Boolean crossSubscriptionMoveEnabled;
     private final @Nullable Boolean validationRequired;
 
-    @OutputCustomType.Constructor({"crossResourceGroupMoveEnabled","crossSubscriptionMoveEnabled","validationRequired"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseResourceMovePolicy(
-        @Nullable Boolean crossResourceGroupMoveEnabled,
-        @Nullable Boolean crossSubscriptionMoveEnabled,
-        @Nullable Boolean validationRequired) {
+        @OutputCustomType.Parameter("crossResourceGroupMoveEnabled") @Nullable Boolean crossResourceGroupMoveEnabled,
+        @OutputCustomType.Parameter("crossSubscriptionMoveEnabled") @Nullable Boolean crossSubscriptionMoveEnabled,
+        @OutputCustomType.Parameter("validationRequired") @Nullable Boolean validationRequired) {
         this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
         this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
         this.validationRequired = validationRequired;
@@ -59,17 +59,17 @@ public final class ResourceTypeRegistrationPropertiesResponseResourceMovePolicy 
     	      this.validationRequired = defaults.validationRequired;
         }
 
-        public Builder setCrossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
+        public Builder crossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
             this.crossResourceGroupMoveEnabled = crossResourceGroupMoveEnabled;
             return this;
         }
 
-        public Builder setCrossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
+        public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
             this.crossSubscriptionMoveEnabled = crossSubscriptionMoveEnabled;
             return this;
         }
 
-        public Builder setValidationRequired(@Nullable Boolean validationRequired) {
+        public Builder validationRequired(@Nullable Boolean validationRequired) {
             this.validationRequired = validationRequired;
             return this;
         }

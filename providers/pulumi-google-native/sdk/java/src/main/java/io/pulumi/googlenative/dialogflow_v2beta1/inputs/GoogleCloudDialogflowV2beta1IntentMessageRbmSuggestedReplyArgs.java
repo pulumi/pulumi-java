@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReplyArg
     	      this.text = defaults.text;
         }
 
-        public Builder setPostbackData(@Nullable Input<String> postbackData) {
+        public Builder postbackData(@Nullable Input<String> postbackData) {
             this.postbackData = postbackData;
             return this;
         }
 
-        public Builder setPostbackData(@Nullable String postbackData) {
+        public Builder postbackData(@Nullable String postbackData) {
             this.postbackData = Input.ofNullable(postbackData);
             return this;
         }
 
-        public Builder setText(@Nullable Input<String> text) {
+        public Builder text(@Nullable Input<String> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = Input.ofNullable(text);
             return this;
         }

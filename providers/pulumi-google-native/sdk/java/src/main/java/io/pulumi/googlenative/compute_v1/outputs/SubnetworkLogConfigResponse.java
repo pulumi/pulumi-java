@@ -43,14 +43,14 @@ public final class SubnetworkLogConfigResponse {
      */
     private final List<String> metadataFields;
 
-    @OutputCustomType.Constructor({"aggregationInterval","enable","filterExpr","flowSampling","metadata","metadataFields"})
+    @OutputCustomType.Constructor
     private SubnetworkLogConfigResponse(
-        String aggregationInterval,
-        Boolean enable,
-        String filterExpr,
-        Double flowSampling,
-        String metadata,
-        List<String> metadataFields) {
+        @OutputCustomType.Parameter("aggregationInterval") String aggregationInterval,
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("filterExpr") String filterExpr,
+        @OutputCustomType.Parameter("flowSampling") Double flowSampling,
+        @OutputCustomType.Parameter("metadata") String metadata,
+        @OutputCustomType.Parameter("metadataFields") List<String> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.enable = enable;
         this.filterExpr = filterExpr;
@@ -132,32 +132,32 @@ public final class SubnetworkLogConfigResponse {
     	      this.metadataFields = defaults.metadataFields;
         }
 
-        public Builder setAggregationInterval(String aggregationInterval) {
+        public Builder aggregationInterval(String aggregationInterval) {
             this.aggregationInterval = Objects.requireNonNull(aggregationInterval);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilterExpr(String filterExpr) {
+        public Builder filterExpr(String filterExpr) {
             this.filterExpr = Objects.requireNonNull(filterExpr);
             return this;
         }
 
-        public Builder setFlowSampling(Double flowSampling) {
+        public Builder flowSampling(Double flowSampling) {
             this.flowSampling = Objects.requireNonNull(flowSampling);
             return this;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadataFields(List<String> metadataFields) {
+        public Builder metadataFields(List<String> metadataFields) {
             this.metadataFields = Objects.requireNonNull(metadataFields);
             return this;
         }

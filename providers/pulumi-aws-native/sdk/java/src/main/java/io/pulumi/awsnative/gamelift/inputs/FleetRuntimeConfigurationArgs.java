@@ -96,32 +96,32 @@ public final class FleetRuntimeConfigurationArgs extends io.pulumi.resources.Res
     	      this.serverProcesses = defaults.serverProcesses;
         }
 
-        public Builder setGameSessionActivationTimeoutSeconds(@Nullable Input<Integer> gameSessionActivationTimeoutSeconds) {
+        public Builder gameSessionActivationTimeoutSeconds(@Nullable Input<Integer> gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = gameSessionActivationTimeoutSeconds;
             return this;
         }
 
-        public Builder setGameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
+        public Builder gameSessionActivationTimeoutSeconds(@Nullable Integer gameSessionActivationTimeoutSeconds) {
             this.gameSessionActivationTimeoutSeconds = Input.ofNullable(gameSessionActivationTimeoutSeconds);
             return this;
         }
 
-        public Builder setMaxConcurrentGameSessionActivations(@Nullable Input<Integer> maxConcurrentGameSessionActivations) {
+        public Builder maxConcurrentGameSessionActivations(@Nullable Input<Integer> maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = maxConcurrentGameSessionActivations;
             return this;
         }
 
-        public Builder setMaxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
+        public Builder maxConcurrentGameSessionActivations(@Nullable Integer maxConcurrentGameSessionActivations) {
             this.maxConcurrentGameSessionActivations = Input.ofNullable(maxConcurrentGameSessionActivations);
             return this;
         }
 
-        public Builder setServerProcesses(@Nullable Input<List<FleetServerProcessArgs>> serverProcesses) {
+        public Builder serverProcesses(@Nullable Input<List<FleetServerProcessArgs>> serverProcesses) {
             this.serverProcesses = serverProcesses;
             return this;
         }
 
-        public Builder setServerProcesses(@Nullable List<FleetServerProcessArgs> serverProcesses) {
+        public Builder serverProcesses(@Nullable List<FleetServerProcessArgs> serverProcesses) {
             this.serverProcesses = Input.ofNullable(serverProcesses);
             return this;
         }

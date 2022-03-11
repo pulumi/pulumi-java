@@ -21,10 +21,10 @@ public final class SnapshotDefinitionResponse {
      */
     private final String snapshotTime;
 
-    @OutputCustomType.Constructor({"baseTableReference","snapshotTime"})
+    @OutputCustomType.Constructor
     private SnapshotDefinitionResponse(
-        TableReferenceResponse baseTableReference,
-        String snapshotTime) {
+        @OutputCustomType.Parameter("baseTableReference") TableReferenceResponse baseTableReference,
+        @OutputCustomType.Parameter("snapshotTime") String snapshotTime) {
         this.baseTableReference = baseTableReference;
         this.snapshotTime = snapshotTime;
     }
@@ -66,12 +66,12 @@ public final class SnapshotDefinitionResponse {
     	      this.snapshotTime = defaults.snapshotTime;
         }
 
-        public Builder setBaseTableReference(TableReferenceResponse baseTableReference) {
+        public Builder baseTableReference(TableReferenceResponse baseTableReference) {
             this.baseTableReference = Objects.requireNonNull(baseTableReference);
             return this;
         }
 
-        public Builder setSnapshotTime(String snapshotTime) {
+        public Builder snapshotTime(String snapshotTime) {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }

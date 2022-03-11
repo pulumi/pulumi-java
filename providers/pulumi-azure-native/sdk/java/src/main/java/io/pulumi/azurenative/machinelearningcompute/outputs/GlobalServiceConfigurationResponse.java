@@ -35,12 +35,12 @@ public final class GlobalServiceConfigurationResponse {
      */
     private final @Nullable SslConfigurationResponse ssl;
 
-    @OutputCustomType.Constructor({"autoScale","etag","serviceAuth","ssl"})
+    @OutputCustomType.Constructor
     private GlobalServiceConfigurationResponse(
-        @Nullable AutoScaleConfigurationResponse autoScale,
-        @Nullable String etag,
-        @Nullable ServiceAuthConfigurationResponse serviceAuth,
-        @Nullable SslConfigurationResponse ssl) {
+        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleConfigurationResponse autoScale,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("serviceAuth") @Nullable ServiceAuthConfigurationResponse serviceAuth,
+        @OutputCustomType.Parameter("ssl") @Nullable SslConfigurationResponse ssl) {
         this.autoScale = autoScale;
         this.etag = etag;
         this.serviceAuth = serviceAuth;
@@ -102,22 +102,22 @@ public final class GlobalServiceConfigurationResponse {
     	      this.ssl = defaults.ssl;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
+        public Builder autoScale(@Nullable AutoScaleConfigurationResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setServiceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
+        public Builder serviceAuth(@Nullable ServiceAuthConfigurationResponse serviceAuth) {
             this.serviceAuth = serviceAuth;
             return this;
         }
 
-        public Builder setSsl(@Nullable SslConfigurationResponse ssl) {
+        public Builder ssl(@Nullable SslConfigurationResponse ssl) {
             this.ssl = ssl;
             return this;
         }

@@ -20,10 +20,10 @@ public final class AccessUrlsResponse {
      */
     private final String crlAccessUrl;
 
-    @OutputCustomType.Constructor({"caCertificateAccessUrl","crlAccessUrl"})
+    @OutputCustomType.Constructor
     private AccessUrlsResponse(
-        String caCertificateAccessUrl,
-        String crlAccessUrl) {
+        @OutputCustomType.Parameter("caCertificateAccessUrl") String caCertificateAccessUrl,
+        @OutputCustomType.Parameter("crlAccessUrl") String crlAccessUrl) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrl = crlAccessUrl;
     }
@@ -65,12 +65,12 @@ public final class AccessUrlsResponse {
     	      this.crlAccessUrl = defaults.crlAccessUrl;
         }
 
-        public Builder setCaCertificateAccessUrl(String caCertificateAccessUrl) {
+        public Builder caCertificateAccessUrl(String caCertificateAccessUrl) {
             this.caCertificateAccessUrl = Objects.requireNonNull(caCertificateAccessUrl);
             return this;
         }
 
-        public Builder setCrlAccessUrl(String crlAccessUrl) {
+        public Builder crlAccessUrl(String crlAccessUrl) {
             this.crlAccessUrl = Objects.requireNonNull(crlAccessUrl);
             return this;
         }

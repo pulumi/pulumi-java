@@ -27,11 +27,11 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"keytab","krb5ConfigGcsUri","principal"})
+    @OutputCustomType.Constructor
     private MetastoreServiceHiveMetastoreConfigKerberosConfig(
-        MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab keytab,
-        String krb5ConfigGcsUri,
-        String principal) {
+        @OutputCustomType.Parameter("keytab") MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab keytab,
+        @OutputCustomType.Parameter("krb5ConfigGcsUri") String krb5ConfigGcsUri,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.keytab = keytab;
         this.krb5ConfigGcsUri = krb5ConfigGcsUri;
         this.principal = principal;
@@ -84,17 +84,17 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setKeytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab keytab) {
+        public Builder keytab(MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab keytab) {
             this.keytab = Objects.requireNonNull(keytab);
             return this;
         }
 
-        public Builder setKrb5ConfigGcsUri(String krb5ConfigGcsUri) {
+        public Builder krb5ConfigGcsUri(String krb5ConfigGcsUri) {
             this.krb5ConfigGcsUri = Objects.requireNonNull(krb5ConfigGcsUri);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

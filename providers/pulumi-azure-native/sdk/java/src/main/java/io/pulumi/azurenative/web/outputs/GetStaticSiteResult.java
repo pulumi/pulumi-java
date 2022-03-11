@@ -131,30 +131,30 @@ public final class GetStaticSiteResult {
      */
     private final List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps;
 
-    @OutputCustomType.Constructor({"allowConfigFileUpdates","branch","buildProperties","contentDistributionEndpoint","customDomains","defaultHostname","id","identity","keyVaultReferenceIdentity","kind","location","name","privateEndpointConnections","provider","repositoryToken","repositoryUrl","sku","stagingEnvironmentPolicy","tags","templateProperties","type","userProvidedFunctionApps"})
+    @OutputCustomType.Constructor
     private GetStaticSiteResult(
-        @Nullable Boolean allowConfigFileUpdates,
-        @Nullable String branch,
-        @Nullable StaticSiteBuildPropertiesResponse buildProperties,
-        String contentDistributionEndpoint,
-        List<String> customDomains,
-        String defaultHostname,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String keyVaultReferenceIdentity,
-        @Nullable String kind,
-        String location,
-        String name,
-        List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provider,
-        @Nullable String repositoryToken,
-        @Nullable String repositoryUrl,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String stagingEnvironmentPolicy,
-        @Nullable Map<String,String> tags,
-        @Nullable StaticSiteTemplateOptionsResponse templateProperties,
-        String type,
-        List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
+        @OutputCustomType.Parameter("allowConfigFileUpdates") @Nullable Boolean allowConfigFileUpdates,
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("buildProperties") @Nullable StaticSiteBuildPropertiesResponse buildProperties,
+        @OutputCustomType.Parameter("contentDistributionEndpoint") String contentDistributionEndpoint,
+        @OutputCustomType.Parameter("customDomains") List<String> customDomains,
+        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyVaultReferenceIdentity") String keyVaultReferenceIdentity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("repositoryToken") @Nullable String repositoryToken,
+        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("stagingEnvironmentPolicy") @Nullable String stagingEnvironmentPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("templateProperties") @Nullable StaticSiteTemplateOptionsResponse templateProperties,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProvidedFunctionApps") List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
         this.allowConfigFileUpdates = allowConfigFileUpdates;
         this.branch = branch;
         this.buildProperties = buildProperties;
@@ -396,112 +396,112 @@ public final class GetStaticSiteResult {
     	      this.userProvidedFunctionApps = defaults.userProvidedFunctionApps;
         }
 
-        public Builder setAllowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
+        public Builder allowConfigFileUpdates(@Nullable Boolean allowConfigFileUpdates) {
             this.allowConfigFileUpdates = allowConfigFileUpdates;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBuildProperties(@Nullable StaticSiteBuildPropertiesResponse buildProperties) {
+        public Builder buildProperties(@Nullable StaticSiteBuildPropertiesResponse buildProperties) {
             this.buildProperties = buildProperties;
             return this;
         }
 
-        public Builder setContentDistributionEndpoint(String contentDistributionEndpoint) {
+        public Builder contentDistributionEndpoint(String contentDistributionEndpoint) {
             this.contentDistributionEndpoint = Objects.requireNonNull(contentDistributionEndpoint);
             return this;
         }
 
-        public Builder setCustomDomains(List<String> customDomains) {
+        public Builder customDomains(List<String> customDomains) {
             this.customDomains = Objects.requireNonNull(customDomains);
             return this;
         }
 
-        public Builder setDefaultHostname(String defaultHostname) {
+        public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyVaultReferenceIdentity(String keyVaultReferenceIdentity) {
+        public Builder keyVaultReferenceIdentity(String keyVaultReferenceIdentity) {
             this.keyVaultReferenceIdentity = Objects.requireNonNull(keyVaultReferenceIdentity);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setRepositoryToken(@Nullable String repositoryToken) {
+        public Builder repositoryToken(@Nullable String repositoryToken) {
             this.repositoryToken = repositoryToken;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionResponse sku) {
+        public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStagingEnvironmentPolicy(@Nullable String stagingEnvironmentPolicy) {
+        public Builder stagingEnvironmentPolicy(@Nullable String stagingEnvironmentPolicy) {
             this.stagingEnvironmentPolicy = stagingEnvironmentPolicy;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplateProperties(@Nullable StaticSiteTemplateOptionsResponse templateProperties) {
+        public Builder templateProperties(@Nullable StaticSiteTemplateOptionsResponse templateProperties) {
             this.templateProperties = templateProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProvidedFunctionApps(List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
+        public Builder userProvidedFunctionApps(List<StaticSiteUserProvidedFunctionAppResponse> userProvidedFunctionApps) {
             this.userProvidedFunctionApps = Objects.requireNonNull(userProvidedFunctionApps);
             return this;
         }

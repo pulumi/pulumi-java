@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ServiceNetworkConfiguration {
     private final @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration;
 
-    @OutputCustomType.Constructor({"awsvpcConfiguration"})
-    private ServiceNetworkConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
+    @OutputCustomType.Constructor
+    private ServiceNetworkConfiguration(@OutputCustomType.Parameter("awsvpcConfiguration") @Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
         this.awsvpcConfiguration = awsvpcConfiguration;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceNetworkConfiguration {
     	      this.awsvpcConfiguration = defaults.awsvpcConfiguration;
         }
 
-        public Builder setAwsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
+        public Builder awsvpcConfiguration(@Nullable ServiceAwsVpcConfiguration awsvpcConfiguration) {
             this.awsvpcConfiguration = awsvpcConfiguration;
             return this;
         }

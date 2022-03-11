@@ -55,16 +55,16 @@ public final class GetExecutionResult {
      */
     private final String testExecutionMatrixId;
 
-    @OutputCustomType.Constructor({"completionTime","creationTime","dimensionDefinitions","executionId","outcome","specification","state","testExecutionMatrixId"})
+    @OutputCustomType.Constructor
     private GetExecutionResult(
-        TimestampResponse completionTime,
-        TimestampResponse creationTime,
-        List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
-        String executionId,
-        OutcomeResponse outcome,
-        SpecificationResponse specification,
-        String state,
-        String testExecutionMatrixId) {
+        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("dimensionDefinitions") List<MatrixDimensionDefinitionResponse> dimensionDefinitions,
+        @OutputCustomType.Parameter("executionId") String executionId,
+        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
+        @OutputCustomType.Parameter("specification") SpecificationResponse specification,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testExecutionMatrixId") String testExecutionMatrixId) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.dimensionDefinitions = dimensionDefinitions;
@@ -166,42 +166,42 @@ public final class GetExecutionResult {
     	      this.testExecutionMatrixId = defaults.testExecutionMatrixId;
         }
 
-        public Builder setCompletionTime(TimestampResponse completionTime) {
+        public Builder completionTime(TimestampResponse completionTime) {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
 
-        public Builder setCreationTime(TimestampResponse creationTime) {
+        public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDimensionDefinitions(List<MatrixDimensionDefinitionResponse> dimensionDefinitions) {
+        public Builder dimensionDefinitions(List<MatrixDimensionDefinitionResponse> dimensionDefinitions) {
             this.dimensionDefinitions = Objects.requireNonNull(dimensionDefinitions);
             return this;
         }
 
-        public Builder setExecutionId(String executionId) {
+        public Builder executionId(String executionId) {
             this.executionId = Objects.requireNonNull(executionId);
             return this;
         }
 
-        public Builder setOutcome(OutcomeResponse outcome) {
+        public Builder outcome(OutcomeResponse outcome) {
             this.outcome = Objects.requireNonNull(outcome);
             return this;
         }
 
-        public Builder setSpecification(SpecificationResponse specification) {
+        public Builder specification(SpecificationResponse specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTestExecutionMatrixId(String testExecutionMatrixId) {
+        public Builder testExecutionMatrixId(String testExecutionMatrixId) {
             this.testExecutionMatrixId = Objects.requireNonNull(testExecutionMatrixId);
             return this;
         }

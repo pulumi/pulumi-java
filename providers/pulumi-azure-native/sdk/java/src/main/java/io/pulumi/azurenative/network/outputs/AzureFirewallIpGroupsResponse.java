@@ -20,10 +20,10 @@ public final class AzureFirewallIpGroupsResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"changeNumber","id"})
+    @OutputCustomType.Constructor
     private AzureFirewallIpGroupsResponse(
-        String changeNumber,
-        String id) {
+        @OutputCustomType.Parameter("changeNumber") String changeNumber,
+        @OutputCustomType.Parameter("id") String id) {
         this.changeNumber = changeNumber;
         this.id = id;
     }
@@ -65,12 +65,12 @@ public final class AzureFirewallIpGroupsResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setChangeNumber(String changeNumber) {
+        public Builder changeNumber(String changeNumber) {
             this.changeNumber = Objects.requireNonNull(changeNumber);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

@@ -31,12 +31,12 @@ public final class SparkRBatchResponse {
      */
     private final String mainRFileUri;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","mainRFileUri"})
+    @OutputCustomType.Constructor
     private SparkRBatchResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        String mainRFileUri) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -98,22 +98,22 @@ public final class SparkRBatchResponse {
     	      this.mainRFileUri = defaults.mainRFileUri;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setMainRFileUri(String mainRFileUri) {
+        public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }

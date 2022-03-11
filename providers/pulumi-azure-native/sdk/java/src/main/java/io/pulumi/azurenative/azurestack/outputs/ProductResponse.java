@@ -128,30 +128,30 @@ public final class ProductResponse {
      */
     private final @Nullable String vmExtensionType;
 
-    @OutputCustomType.Constructor({"billingPartNumber","compatibility","description","displayName","etag","galleryItemIdentity","iconUris","id","legalTerms","links","name","offer","offerVersion","payloadLength","privacyPolicy","productKind","productProperties","publisherDisplayName","publisherIdentifier","sku","type","vmExtensionType"})
+    @OutputCustomType.Constructor
     private ProductResponse(
-        @Nullable String billingPartNumber,
-        @Nullable CompatibilityResponse compatibility,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String etag,
-        @Nullable String galleryItemIdentity,
-        @Nullable IconUrisResponse iconUris,
-        String id,
-        @Nullable String legalTerms,
-        @Nullable List<ProductLinkResponse> links,
-        String name,
-        @Nullable String offer,
-        @Nullable String offerVersion,
-        @Nullable Double payloadLength,
-        @Nullable String privacyPolicy,
-        @Nullable String productKind,
-        @Nullable ProductPropertiesResponse productProperties,
-        @Nullable String publisherDisplayName,
-        @Nullable String publisherIdentifier,
-        @Nullable String sku,
-        String type,
-        @Nullable String vmExtensionType) {
+        @OutputCustomType.Parameter("billingPartNumber") @Nullable String billingPartNumber,
+        @OutputCustomType.Parameter("compatibility") @Nullable CompatibilityResponse compatibility,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("galleryItemIdentity") @Nullable String galleryItemIdentity,
+        @OutputCustomType.Parameter("iconUris") @Nullable IconUrisResponse iconUris,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("legalTerms") @Nullable String legalTerms,
+        @OutputCustomType.Parameter("links") @Nullable List<ProductLinkResponse> links,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("offerVersion") @Nullable String offerVersion,
+        @OutputCustomType.Parameter("payloadLength") @Nullable Double payloadLength,
+        @OutputCustomType.Parameter("privacyPolicy") @Nullable String privacyPolicy,
+        @OutputCustomType.Parameter("productKind") @Nullable String productKind,
+        @OutputCustomType.Parameter("productProperties") @Nullable ProductPropertiesResponse productProperties,
+        @OutputCustomType.Parameter("publisherDisplayName") @Nullable String publisherDisplayName,
+        @OutputCustomType.Parameter("publisherIdentifier") @Nullable String publisherIdentifier,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmExtensionType") @Nullable String vmExtensionType) {
         this.billingPartNumber = billingPartNumber;
         this.compatibility = compatibility;
         this.description = description;
@@ -393,112 +393,112 @@ public final class ProductResponse {
     	      this.vmExtensionType = defaults.vmExtensionType;
         }
 
-        public Builder setBillingPartNumber(@Nullable String billingPartNumber) {
+        public Builder billingPartNumber(@Nullable String billingPartNumber) {
             this.billingPartNumber = billingPartNumber;
             return this;
         }
 
-        public Builder setCompatibility(@Nullable CompatibilityResponse compatibility) {
+        public Builder compatibility(@Nullable CompatibilityResponse compatibility) {
             this.compatibility = compatibility;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setGalleryItemIdentity(@Nullable String galleryItemIdentity) {
+        public Builder galleryItemIdentity(@Nullable String galleryItemIdentity) {
             this.galleryItemIdentity = galleryItemIdentity;
             return this;
         }
 
-        public Builder setIconUris(@Nullable IconUrisResponse iconUris) {
+        public Builder iconUris(@Nullable IconUrisResponse iconUris) {
             this.iconUris = iconUris;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLegalTerms(@Nullable String legalTerms) {
+        public Builder legalTerms(@Nullable String legalTerms) {
             this.legalTerms = legalTerms;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<ProductLinkResponse> links) {
+        public Builder links(@Nullable List<ProductLinkResponse> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setOfferVersion(@Nullable String offerVersion) {
+        public Builder offerVersion(@Nullable String offerVersion) {
             this.offerVersion = offerVersion;
             return this;
         }
 
-        public Builder setPayloadLength(@Nullable Double payloadLength) {
+        public Builder payloadLength(@Nullable Double payloadLength) {
             this.payloadLength = payloadLength;
             return this;
         }
 
-        public Builder setPrivacyPolicy(@Nullable String privacyPolicy) {
+        public Builder privacyPolicy(@Nullable String privacyPolicy) {
             this.privacyPolicy = privacyPolicy;
             return this;
         }
 
-        public Builder setProductKind(@Nullable String productKind) {
+        public Builder productKind(@Nullable String productKind) {
             this.productKind = productKind;
             return this;
         }
 
-        public Builder setProductProperties(@Nullable ProductPropertiesResponse productProperties) {
+        public Builder productProperties(@Nullable ProductPropertiesResponse productProperties) {
             this.productProperties = productProperties;
             return this;
         }
 
-        public Builder setPublisherDisplayName(@Nullable String publisherDisplayName) {
+        public Builder publisherDisplayName(@Nullable String publisherDisplayName) {
             this.publisherDisplayName = publisherDisplayName;
             return this;
         }
 
-        public Builder setPublisherIdentifier(@Nullable String publisherIdentifier) {
+        public Builder publisherIdentifier(@Nullable String publisherIdentifier) {
             this.publisherIdentifier = publisherIdentifier;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmExtensionType(@Nullable String vmExtensionType) {
+        public Builder vmExtensionType(@Nullable String vmExtensionType) {
             this.vmExtensionType = vmExtensionType;
             return this;
         }

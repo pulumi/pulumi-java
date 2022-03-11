@@ -25,11 +25,11 @@ public final class ServiceAttachmentConnectedEndpointResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"endpoint","pscConnectionId","status"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConnectedEndpointResponse(
-        String endpoint,
-        String pscConnectionId,
-        String status) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("pscConnectionId") String pscConnectionId,
+        @OutputCustomType.Parameter("status") String status) {
         this.endpoint = endpoint;
         this.pscConnectionId = pscConnectionId;
         this.status = status;
@@ -81,17 +81,17 @@ public final class ServiceAttachmentConnectedEndpointResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setPscConnectionId(String pscConnectionId) {
+        public Builder pscConnectionId(String pscConnectionId) {
             this.pscConnectionId = Objects.requireNonNull(pscConnectionId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

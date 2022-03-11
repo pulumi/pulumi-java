@@ -23,10 +23,10 @@ public final class ComputeIsolationPropertiesResponse {
      */
     private final @Nullable String hostSku;
 
-    @OutputCustomType.Constructor({"enableComputeIsolation","hostSku"})
+    @OutputCustomType.Constructor
     private ComputeIsolationPropertiesResponse(
-        @Nullable Boolean enableComputeIsolation,
-        @Nullable String hostSku) {
+        @OutputCustomType.Parameter("enableComputeIsolation") @Nullable Boolean enableComputeIsolation,
+        @OutputCustomType.Parameter("hostSku") @Nullable String hostSku) {
         this.enableComputeIsolation = enableComputeIsolation;
         this.hostSku = hostSku;
     }
@@ -68,12 +68,12 @@ public final class ComputeIsolationPropertiesResponse {
     	      this.hostSku = defaults.hostSku;
         }
 
-        public Builder setEnableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
+        public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
             this.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
-        public Builder setHostSku(@Nullable String hostSku) {
+        public Builder hostSku(@Nullable String hostSku) {
             this.hostSku = hostSku;
             return this;
         }

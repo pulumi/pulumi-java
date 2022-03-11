@@ -17,8 +17,8 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
      */
     private final @Nullable Boolean isRServicesEnabled;
 
-    @OutputCustomType.Constructor({"isRServicesEnabled"})
-    private AdditionalFeaturesServerConfigurationsResponse(@Nullable Boolean isRServicesEnabled) {
+    @OutputCustomType.Constructor
+    private AdditionalFeaturesServerConfigurationsResponse(@OutputCustomType.Parameter("isRServicesEnabled") @Nullable Boolean isRServicesEnabled) {
         this.isRServicesEnabled = isRServicesEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class AdditionalFeaturesServerConfigurationsResponse {
     	      this.isRServicesEnabled = defaults.isRServicesEnabled;
         }
 
-        public Builder setIsRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
+        public Builder isRServicesEnabled(@Nullable Boolean isRServicesEnabled) {
             this.isRServicesEnabled = isRServicesEnabled;
             return this;
         }

@@ -33,12 +33,12 @@ public final class BlobInventoryPolicySchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","enabled","rules","type"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicySchemaResponse(
-        String destination,
-        Boolean enabled,
-        List<BlobInventoryPolicyRuleResponse> rules,
-        String type) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("rules") List<BlobInventoryPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.enabled = enabled;
         this.rules = rules;
@@ -100,22 +100,22 @@ public final class BlobInventoryPolicySchemaResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setRules(List<BlobInventoryPolicyRuleResponse> rules) {
+        public Builder rules(List<BlobInventoryPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

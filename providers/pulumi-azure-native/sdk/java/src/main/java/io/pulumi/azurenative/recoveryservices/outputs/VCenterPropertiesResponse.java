@@ -69,19 +69,19 @@ public final class VCenterPropertiesResponse {
      */
     private final @Nullable String runAsAccountId;
 
-    @OutputCustomType.Constructor({"discoveryStatus","fabricArmResourceName","friendlyName","healthErrors","infrastructureId","internalId","ipAddress","lastHeartbeat","port","processServerId","runAsAccountId"})
+    @OutputCustomType.Constructor
     private VCenterPropertiesResponse(
-        @Nullable String discoveryStatus,
-        @Nullable String fabricArmResourceName,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String infrastructureId,
-        @Nullable String internalId,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String port,
-        @Nullable String processServerId,
-        @Nullable String runAsAccountId) {
+        @OutputCustomType.Parameter("discoveryStatus") @Nullable String discoveryStatus,
+        @OutputCustomType.Parameter("fabricArmResourceName") @Nullable String fabricArmResourceName,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("infrastructureId") @Nullable String infrastructureId,
+        @OutputCustomType.Parameter("internalId") @Nullable String internalId,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("processServerId") @Nullable String processServerId,
+        @OutputCustomType.Parameter("runAsAccountId") @Nullable String runAsAccountId) {
         this.discoveryStatus = discoveryStatus;
         this.fabricArmResourceName = fabricArmResourceName;
         this.friendlyName = friendlyName;
@@ -213,57 +213,57 @@ public final class VCenterPropertiesResponse {
     	      this.runAsAccountId = defaults.runAsAccountId;
         }
 
-        public Builder setDiscoveryStatus(@Nullable String discoveryStatus) {
+        public Builder discoveryStatus(@Nullable String discoveryStatus) {
             this.discoveryStatus = discoveryStatus;
             return this;
         }
 
-        public Builder setFabricArmResourceName(@Nullable String fabricArmResourceName) {
+        public Builder fabricArmResourceName(@Nullable String fabricArmResourceName) {
             this.fabricArmResourceName = fabricArmResourceName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
 
-        public Builder setInfrastructureId(@Nullable String infrastructureId) {
+        public Builder infrastructureId(@Nullable String infrastructureId) {
             this.infrastructureId = infrastructureId;
             return this;
         }
 
-        public Builder setInternalId(@Nullable String internalId) {
+        public Builder internalId(@Nullable String internalId) {
             this.internalId = internalId;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProcessServerId(@Nullable String processServerId) {
+        public Builder processServerId(@Nullable String processServerId) {
             this.processServerId = processServerId;
             return this;
         }
 
-        public Builder setRunAsAccountId(@Nullable String runAsAccountId) {
+        public Builder runAsAccountId(@Nullable String runAsAccountId) {
             this.runAsAccountId = runAsAccountId;
             return this;
         }

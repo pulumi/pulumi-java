@@ -15,8 +15,8 @@ public final class DSSEAttestationNoteResponse {
      */
     private final DSSEHintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private DSSEAttestationNoteResponse(DSSEHintResponse hint) {
+    @OutputCustomType.Constructor
+    private DSSEAttestationNoteResponse(@OutputCustomType.Parameter("hint") DSSEHintResponse hint) {
         this.hint = hint;
     }
 
@@ -48,7 +48,7 @@ public final class DSSEAttestationNoteResponse {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(DSSEHintResponse hint) {
+        public Builder hint(DSSEHintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

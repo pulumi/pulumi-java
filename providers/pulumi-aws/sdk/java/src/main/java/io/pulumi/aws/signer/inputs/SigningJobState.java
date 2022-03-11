@@ -332,182 +332,182 @@ public final class SigningJobState extends io.pulumi.resources.ResourceArgs {
     	      this.statusReason = defaults.statusReason;
         }
 
-        public Builder setCompletedAt(@Nullable Input<String> completedAt) {
+        public Builder completedAt(@Nullable Input<String> completedAt) {
             this.completedAt = completedAt;
             return this;
         }
 
-        public Builder setCompletedAt(@Nullable String completedAt) {
+        public Builder completedAt(@Nullable String completedAt) {
             this.completedAt = Input.ofNullable(completedAt);
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable Input<String> createdAt) {
+        public Builder createdAt(@Nullable Input<String> createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = Input.ofNullable(createdAt);
             return this;
         }
 
-        public Builder setDestination(@Nullable Input<SigningJobDestinationGetArgs> destination) {
+        public Builder destination(@Nullable Input<SigningJobDestinationGetArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable SigningJobDestinationGetArgs destination) {
+        public Builder destination(@Nullable SigningJobDestinationGetArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setIgnoreSigningJobFailure(@Nullable Input<Boolean> ignoreSigningJobFailure) {
+        public Builder ignoreSigningJobFailure(@Nullable Input<Boolean> ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = ignoreSigningJobFailure;
             return this;
         }
 
-        public Builder setIgnoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
+        public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
             this.ignoreSigningJobFailure = Input.ofNullable(ignoreSigningJobFailure);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setJobInvoker(@Nullable Input<String> jobInvoker) {
+        public Builder jobInvoker(@Nullable Input<String> jobInvoker) {
             this.jobInvoker = jobInvoker;
             return this;
         }
 
-        public Builder setJobInvoker(@Nullable String jobInvoker) {
+        public Builder jobInvoker(@Nullable String jobInvoker) {
             this.jobInvoker = Input.ofNullable(jobInvoker);
             return this;
         }
 
-        public Builder setJobOwner(@Nullable Input<String> jobOwner) {
+        public Builder jobOwner(@Nullable Input<String> jobOwner) {
             this.jobOwner = jobOwner;
             return this;
         }
 
-        public Builder setJobOwner(@Nullable String jobOwner) {
+        public Builder jobOwner(@Nullable String jobOwner) {
             this.jobOwner = Input.ofNullable(jobOwner);
             return this;
         }
 
-        public Builder setPlatformDisplayName(@Nullable Input<String> platformDisplayName) {
+        public Builder platformDisplayName(@Nullable Input<String> platformDisplayName) {
             this.platformDisplayName = platformDisplayName;
             return this;
         }
 
-        public Builder setPlatformDisplayName(@Nullable String platformDisplayName) {
+        public Builder platformDisplayName(@Nullable String platformDisplayName) {
             this.platformDisplayName = Input.ofNullable(platformDisplayName);
             return this;
         }
 
-        public Builder setPlatformId(@Nullable Input<String> platformId) {
+        public Builder platformId(@Nullable Input<String> platformId) {
             this.platformId = platformId;
             return this;
         }
 
-        public Builder setPlatformId(@Nullable String platformId) {
+        public Builder platformId(@Nullable String platformId) {
             this.platformId = Input.ofNullable(platformId);
             return this;
         }
 
-        public Builder setProfileName(@Nullable Input<String> profileName) {
+        public Builder profileName(@Nullable Input<String> profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = Input.ofNullable(profileName);
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable Input<String> profileVersion) {
+        public Builder profileVersion(@Nullable Input<String> profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable String profileVersion) {
+        public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = Input.ofNullable(profileVersion);
             return this;
         }
 
-        public Builder setRequestedBy(@Nullable Input<String> requestedBy) {
+        public Builder requestedBy(@Nullable Input<String> requestedBy) {
             this.requestedBy = requestedBy;
             return this;
         }
 
-        public Builder setRequestedBy(@Nullable String requestedBy) {
+        public Builder requestedBy(@Nullable String requestedBy) {
             this.requestedBy = Input.ofNullable(requestedBy);
             return this;
         }
 
-        public Builder setRevocationRecords(@Nullable Input<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
+        public Builder revocationRecords(@Nullable Input<List<SigningJobRevocationRecordGetArgs>> revocationRecords) {
             this.revocationRecords = revocationRecords;
             return this;
         }
 
-        public Builder setRevocationRecords(@Nullable List<SigningJobRevocationRecordGetArgs> revocationRecords) {
+        public Builder revocationRecords(@Nullable List<SigningJobRevocationRecordGetArgs> revocationRecords) {
             this.revocationRecords = Input.ofNullable(revocationRecords);
             return this;
         }
 
-        public Builder setSignatureExpiresAt(@Nullable Input<String> signatureExpiresAt) {
+        public Builder signatureExpiresAt(@Nullable Input<String> signatureExpiresAt) {
             this.signatureExpiresAt = signatureExpiresAt;
             return this;
         }
 
-        public Builder setSignatureExpiresAt(@Nullable String signatureExpiresAt) {
+        public Builder signatureExpiresAt(@Nullable String signatureExpiresAt) {
             this.signatureExpiresAt = Input.ofNullable(signatureExpiresAt);
             return this;
         }
 
-        public Builder setSignedObjects(@Nullable Input<List<SigningJobSignedObjectGetArgs>> signedObjects) {
+        public Builder signedObjects(@Nullable Input<List<SigningJobSignedObjectGetArgs>> signedObjects) {
             this.signedObjects = signedObjects;
             return this;
         }
 
-        public Builder setSignedObjects(@Nullable List<SigningJobSignedObjectGetArgs> signedObjects) {
+        public Builder signedObjects(@Nullable List<SigningJobSignedObjectGetArgs> signedObjects) {
             this.signedObjects = Input.ofNullable(signedObjects);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<SigningJobSourceGetArgs> source) {
+        public Builder source(@Nullable Input<SigningJobSourceGetArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable SigningJobSourceGetArgs source) {
+        public Builder source(@Nullable SigningJobSourceGetArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setStatusReason(@Nullable Input<String> statusReason) {
+        public Builder statusReason(@Nullable Input<String> statusReason) {
             this.statusReason = statusReason;
             return this;
         }
 
-        public Builder setStatusReason(@Nullable String statusReason) {
+        public Builder statusReason(@Nullable String statusReason) {
             this.statusReason = Input.ofNullable(statusReason);
             return this;
         }

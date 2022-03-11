@@ -14,10 +14,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
     private final @Nullable String instanceGroupManagerName;
     private final @Nullable String instanceTemplateName;
 
-    @OutputCustomType.Constructor({"instanceGroupManagerName","instanceTemplateName"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig(
-        @Nullable String instanceGroupManagerName,
-        @Nullable String instanceTemplateName) {
+        @OutputCustomType.Parameter("instanceGroupManagerName") @Nullable String instanceGroupManagerName,
+        @OutputCustomType.Parameter("instanceTemplateName") @Nullable String instanceTemplateName) {
         this.instanceGroupManagerName = instanceGroupManagerName;
         this.instanceTemplateName = instanceTemplateName;
     }
@@ -51,12 +51,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfigMana
     	      this.instanceTemplateName = defaults.instanceTemplateName;
         }
 
-        public Builder setInstanceGroupManagerName(@Nullable String instanceGroupManagerName) {
+        public Builder instanceGroupManagerName(@Nullable String instanceGroupManagerName) {
             this.instanceGroupManagerName = instanceGroupManagerName;
             return this;
         }
 
-        public Builder setInstanceTemplateName(@Nullable String instanceTemplateName) {
+        public Builder instanceTemplateName(@Nullable String instanceTemplateName) {
             this.instanceTemplateName = instanceTemplateName;
             return this;
         }

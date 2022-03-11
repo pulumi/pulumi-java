@@ -33,12 +33,12 @@ public final class ComputeInstanceSshSettingsResponse {
      */
     private final @Nullable String sshPublicAccess;
 
-    @OutputCustomType.Constructor({"adminPublicKey","adminUserName","sshPort","sshPublicAccess"})
+    @OutputCustomType.Constructor
     private ComputeInstanceSshSettingsResponse(
-        @Nullable String adminPublicKey,
-        String adminUserName,
-        Integer sshPort,
-        @Nullable String sshPublicAccess) {
+        @OutputCustomType.Parameter("adminPublicKey") @Nullable String adminPublicKey,
+        @OutputCustomType.Parameter("adminUserName") String adminUserName,
+        @OutputCustomType.Parameter("sshPort") Integer sshPort,
+        @OutputCustomType.Parameter("sshPublicAccess") @Nullable String sshPublicAccess) {
         this.adminPublicKey = adminPublicKey;
         this.adminUserName = adminUserName;
         this.sshPort = sshPort;
@@ -100,22 +100,22 @@ public final class ComputeInstanceSshSettingsResponse {
     	      this.sshPublicAccess = defaults.sshPublicAccess;
         }
 
-        public Builder setAdminPublicKey(@Nullable String adminPublicKey) {
+        public Builder adminPublicKey(@Nullable String adminPublicKey) {
             this.adminPublicKey = adminPublicKey;
             return this;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setSshPort(Integer sshPort) {
+        public Builder sshPort(Integer sshPort) {
             this.sshPort = Objects.requireNonNull(sshPort);
             return this;
         }
 
-        public Builder setSshPublicAccess(@Nullable String sshPublicAccess) {
+        public Builder sshPublicAccess(@Nullable String sshPublicAccess) {
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class EntryBigqueryTableSpecTableSpec {
     private final @Nullable String groupedEntry;
 
-    @OutputCustomType.Constructor({"groupedEntry"})
-    private EntryBigqueryTableSpecTableSpec(@Nullable String groupedEntry) {
+    @OutputCustomType.Constructor
+    private EntryBigqueryTableSpecTableSpec(@OutputCustomType.Parameter("groupedEntry") @Nullable String groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 
@@ -42,7 +42,7 @@ public final class EntryBigqueryTableSpecTableSpec {
     	      this.groupedEntry = defaults.groupedEntry;
         }
 
-        public Builder setGroupedEntry(@Nullable String groupedEntry) {
+        public Builder groupedEntry(@Nullable String groupedEntry) {
             this.groupedEntry = groupedEntry;
             return this;
         }

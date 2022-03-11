@@ -17,8 +17,8 @@ public final class DependsOnDefinitionResponse {
      */
     private final @Nullable String kustomizationName;
 
-    @OutputCustomType.Constructor({"kustomizationName"})
-    private DependsOnDefinitionResponse(@Nullable String kustomizationName) {
+    @OutputCustomType.Constructor
+    private DependsOnDefinitionResponse(@OutputCustomType.Parameter("kustomizationName") @Nullable String kustomizationName) {
         this.kustomizationName = kustomizationName;
     }
 
@@ -50,7 +50,7 @@ public final class DependsOnDefinitionResponse {
     	      this.kustomizationName = defaults.kustomizationName;
         }
 
-        public Builder setKustomizationName(@Nullable String kustomizationName) {
+        public Builder kustomizationName(@Nullable String kustomizationName) {
             this.kustomizationName = kustomizationName;
             return this;
         }

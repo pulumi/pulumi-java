@@ -44,14 +44,14 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String routingRegistryName;
 
-    @OutputCustomType.Constructor({"advertisedCommunities","advertisedPublicPrefixes","advertisedPublicPrefixesState","customerASN","legacyMode","routingRegistryName"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitPeeringConfigResponse(
-        @Nullable List<String> advertisedCommunities,
-        @Nullable List<String> advertisedPublicPrefixes,
-        String advertisedPublicPrefixesState,
-        @Nullable Integer customerASN,
-        @Nullable Integer legacyMode,
-        @Nullable String routingRegistryName) {
+        @OutputCustomType.Parameter("advertisedCommunities") @Nullable List<String> advertisedCommunities,
+        @OutputCustomType.Parameter("advertisedPublicPrefixes") @Nullable List<String> advertisedPublicPrefixes,
+        @OutputCustomType.Parameter("advertisedPublicPrefixesState") String advertisedPublicPrefixesState,
+        @OutputCustomType.Parameter("customerASN") @Nullable Integer customerASN,
+        @OutputCustomType.Parameter("legacyMode") @Nullable Integer legacyMode,
+        @OutputCustomType.Parameter("routingRegistryName") @Nullable String routingRegistryName) {
         this.advertisedCommunities = advertisedCommunities;
         this.advertisedPublicPrefixes = advertisedPublicPrefixes;
         this.advertisedPublicPrefixesState = advertisedPublicPrefixesState;
@@ -133,32 +133,32 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
     	      this.routingRegistryName = defaults.routingRegistryName;
         }
 
-        public Builder setAdvertisedCommunities(@Nullable List<String> advertisedCommunities) {
+        public Builder advertisedCommunities(@Nullable List<String> advertisedCommunities) {
             this.advertisedCommunities = advertisedCommunities;
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
+        public Builder advertisedPublicPrefixes(@Nullable List<String> advertisedPublicPrefixes) {
             this.advertisedPublicPrefixes = advertisedPublicPrefixes;
             return this;
         }
 
-        public Builder setAdvertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
+        public Builder advertisedPublicPrefixesState(String advertisedPublicPrefixesState) {
             this.advertisedPublicPrefixesState = Objects.requireNonNull(advertisedPublicPrefixesState);
             return this;
         }
 
-        public Builder setCustomerASN(@Nullable Integer customerASN) {
+        public Builder customerASN(@Nullable Integer customerASN) {
             this.customerASN = customerASN;
             return this;
         }
 
-        public Builder setLegacyMode(@Nullable Integer legacyMode) {
+        public Builder legacyMode(@Nullable Integer legacyMode) {
             this.legacyMode = legacyMode;
             return this;
         }
 
-        public Builder setRoutingRegistryName(@Nullable String routingRegistryName) {
+        public Builder routingRegistryName(@Nullable String routingRegistryName) {
             this.routingRegistryName = routingRegistryName;
             return this;
         }

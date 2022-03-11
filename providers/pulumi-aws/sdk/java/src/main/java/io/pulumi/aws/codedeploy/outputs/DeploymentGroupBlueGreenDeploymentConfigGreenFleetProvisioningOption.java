@@ -19,8 +19,8 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
      */
     private final @Nullable String action;
 
-    @OutputCustomType.Constructor({"action"})
-    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption(@Nullable String action) {
+    @OutputCustomType.Constructor
+    private DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisioningOption(@OutputCustomType.Parameter("action") @Nullable String action) {
         this.action = action;
     }
 
@@ -54,7 +54,7 @@ public final class DeploymentGroupBlueGreenDeploymentConfigGreenFleetProvisionin
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }

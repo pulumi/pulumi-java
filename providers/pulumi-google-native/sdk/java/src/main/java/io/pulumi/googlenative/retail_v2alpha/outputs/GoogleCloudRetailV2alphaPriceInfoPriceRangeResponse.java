@@ -20,10 +20,10 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse {
      */
     private final GoogleCloudRetailV2alphaIntervalResponse price;
 
-    @OutputCustomType.Constructor({"originalPrice","price"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse(
-        GoogleCloudRetailV2alphaIntervalResponse originalPrice,
-        GoogleCloudRetailV2alphaIntervalResponse price) {
+        @OutputCustomType.Parameter("originalPrice") GoogleCloudRetailV2alphaIntervalResponse originalPrice,
+        @OutputCustomType.Parameter("price") GoogleCloudRetailV2alphaIntervalResponse price) {
         this.originalPrice = originalPrice;
         this.price = price;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudRetailV2alphaPriceInfoPriceRangeResponse {
     	      this.price = defaults.price;
         }
 
-        public Builder setOriginalPrice(GoogleCloudRetailV2alphaIntervalResponse originalPrice) {
+        public Builder originalPrice(GoogleCloudRetailV2alphaIntervalResponse originalPrice) {
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
 
-        public Builder setPrice(GoogleCloudRetailV2alphaIntervalResponse price) {
+        public Builder price(GoogleCloudRetailV2alphaIntervalResponse price) {
             this.price = Objects.requireNonNull(price);
             return this;
         }

@@ -12,10 +12,10 @@ public final class DomainSubDomainSetting {
     private final String branchName;
     private final String prefix;
 
-    @OutputCustomType.Constructor({"branchName","prefix"})
+    @OutputCustomType.Constructor
     private DomainSubDomainSetting(
-        String branchName,
-        String prefix) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("prefix") String prefix) {
         this.branchName = branchName;
         this.prefix = prefix;
     }
@@ -49,12 +49,12 @@ public final class DomainSubDomainSetting {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }

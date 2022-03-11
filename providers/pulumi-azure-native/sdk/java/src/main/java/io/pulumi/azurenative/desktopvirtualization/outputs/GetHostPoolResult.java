@@ -169,40 +169,40 @@ public final class GetHostPoolResult {
      */
     private final @Nullable String vmTemplate;
 
-    @OutputCustomType.Constructor({"applicationGroupReferences","cloudPcResource","customRdpProperty","description","etag","friendlyName","hostPoolType","id","identity","kind","loadBalancerType","location","managedBy","maxSessionLimit","migrationRequest","name","objectId","personalDesktopAssignmentType","plan","preferredAppGroupType","registrationInfo","ring","sku","ssoClientId","ssoClientSecretKeyVaultPath","ssoSecretType","ssoadfsAuthority","startVMOnConnect","tags","type","validationEnvironment","vmTemplate"})
+    @OutputCustomType.Constructor
     private GetHostPoolResult(
-        List<String> applicationGroupReferences,
-        Boolean cloudPcResource,
-        @Nullable String customRdpProperty,
-        @Nullable String description,
-        String etag,
-        @Nullable String friendlyName,
-        String hostPoolType,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        String loadBalancerType,
-        @Nullable String location,
-        @Nullable String managedBy,
-        @Nullable Integer maxSessionLimit,
-        @Nullable MigrationRequestPropertiesResponse migrationRequest,
-        String name,
-        String objectId,
-        @Nullable String personalDesktopAssignmentType,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        String preferredAppGroupType,
-        @Nullable RegistrationInfoResponse registrationInfo,
-        @Nullable Integer ring,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable String ssoClientId,
-        @Nullable String ssoClientSecretKeyVaultPath,
-        @Nullable String ssoSecretType,
-        @Nullable String ssoadfsAuthority,
-        @Nullable Boolean startVMOnConnect,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Boolean validationEnvironment,
-        @Nullable String vmTemplate) {
+        @OutputCustomType.Parameter("applicationGroupReferences") List<String> applicationGroupReferences,
+        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @OutputCustomType.Parameter("customRdpProperty") @Nullable String customRdpProperty,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("hostPoolType") String hostPoolType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("loadBalancerType") String loadBalancerType,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("maxSessionLimit") @Nullable Integer maxSessionLimit,
+        @OutputCustomType.Parameter("migrationRequest") @Nullable MigrationRequestPropertiesResponse migrationRequest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("personalDesktopAssignmentType") @Nullable String personalDesktopAssignmentType,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("preferredAppGroupType") String preferredAppGroupType,
+        @OutputCustomType.Parameter("registrationInfo") @Nullable RegistrationInfoResponse registrationInfo,
+        @OutputCustomType.Parameter("ring") @Nullable Integer ring,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @OutputCustomType.Parameter("ssoClientSecretKeyVaultPath") @Nullable String ssoClientSecretKeyVaultPath,
+        @OutputCustomType.Parameter("ssoSecretType") @Nullable String ssoSecretType,
+        @OutputCustomType.Parameter("ssoadfsAuthority") @Nullable String ssoadfsAuthority,
+        @OutputCustomType.Parameter("startVMOnConnect") @Nullable Boolean startVMOnConnect,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationEnvironment") @Nullable Boolean validationEnvironment,
+        @OutputCustomType.Parameter("vmTemplate") @Nullable String vmTemplate) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.cloudPcResource = cloudPcResource;
         this.customRdpProperty = customRdpProperty;
@@ -532,162 +532,162 @@ public final class GetHostPoolResult {
     	      this.vmTemplate = defaults.vmTemplate;
         }
 
-        public Builder setApplicationGroupReferences(List<String> applicationGroupReferences) {
+        public Builder applicationGroupReferences(List<String> applicationGroupReferences) {
             this.applicationGroupReferences = Objects.requireNonNull(applicationGroupReferences);
             return this;
         }
 
-        public Builder setCloudPcResource(Boolean cloudPcResource) {
+        public Builder cloudPcResource(Boolean cloudPcResource) {
             this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
             return this;
         }
 
-        public Builder setCustomRdpProperty(@Nullable String customRdpProperty) {
+        public Builder customRdpProperty(@Nullable String customRdpProperty) {
             this.customRdpProperty = customRdpProperty;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHostPoolType(String hostPoolType) {
+        public Builder hostPoolType(String hostPoolType) {
             this.hostPoolType = Objects.requireNonNull(hostPoolType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
+        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLoadBalancerType(String loadBalancerType) {
+        public Builder loadBalancerType(String loadBalancerType) {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setMaxSessionLimit(@Nullable Integer maxSessionLimit) {
+        public Builder maxSessionLimit(@Nullable Integer maxSessionLimit) {
             this.maxSessionLimit = maxSessionLimit;
             return this;
         }
 
-        public Builder setMigrationRequest(@Nullable MigrationRequestPropertiesResponse migrationRequest) {
+        public Builder migrationRequest(@Nullable MigrationRequestPropertiesResponse migrationRequest) {
             this.migrationRequest = migrationRequest;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setPersonalDesktopAssignmentType(@Nullable String personalDesktopAssignmentType) {
+        public Builder personalDesktopAssignmentType(@Nullable String personalDesktopAssignmentType) {
             this.personalDesktopAssignmentType = personalDesktopAssignmentType;
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
+        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPreferredAppGroupType(String preferredAppGroupType) {
+        public Builder preferredAppGroupType(String preferredAppGroupType) {
             this.preferredAppGroupType = Objects.requireNonNull(preferredAppGroupType);
             return this;
         }
 
-        public Builder setRegistrationInfo(@Nullable RegistrationInfoResponse registrationInfo) {
+        public Builder registrationInfo(@Nullable RegistrationInfoResponse registrationInfo) {
             this.registrationInfo = registrationInfo;
             return this;
         }
 
-        public Builder setRing(@Nullable Integer ring) {
+        public Builder ring(@Nullable Integer ring) {
             this.ring = ring;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
+        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSsoClientId(@Nullable String ssoClientId) {
+        public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
 
-        public Builder setSsoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
+        public Builder ssoClientSecretKeyVaultPath(@Nullable String ssoClientSecretKeyVaultPath) {
             this.ssoClientSecretKeyVaultPath = ssoClientSecretKeyVaultPath;
             return this;
         }
 
-        public Builder setSsoSecretType(@Nullable String ssoSecretType) {
+        public Builder ssoSecretType(@Nullable String ssoSecretType) {
             this.ssoSecretType = ssoSecretType;
             return this;
         }
 
-        public Builder setSsoadfsAuthority(@Nullable String ssoadfsAuthority) {
+        public Builder ssoadfsAuthority(@Nullable String ssoadfsAuthority) {
             this.ssoadfsAuthority = ssoadfsAuthority;
             return this;
         }
 
-        public Builder setStartVMOnConnect(@Nullable Boolean startVMOnConnect) {
+        public Builder startVMOnConnect(@Nullable Boolean startVMOnConnect) {
             this.startVMOnConnect = startVMOnConnect;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationEnvironment(@Nullable Boolean validationEnvironment) {
+        public Builder validationEnvironment(@Nullable Boolean validationEnvironment) {
             this.validationEnvironment = validationEnvironment;
             return this;
         }
 
-        public Builder setVmTemplate(@Nullable String vmTemplate) {
+        public Builder vmTemplate(@Nullable String vmTemplate) {
             this.vmTemplate = vmTemplate;
             return this;
         }

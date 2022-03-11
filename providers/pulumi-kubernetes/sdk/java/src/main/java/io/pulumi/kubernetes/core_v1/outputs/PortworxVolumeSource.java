@@ -28,11 +28,11 @@ public final class PortworxVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","volumeID"})
+    @OutputCustomType.Constructor
     private PortworxVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.volumeID = volumeID;
@@ -84,17 +84,17 @@ public final class PortworxVolumeSource {
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeID(String volumeID) {
+        public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }

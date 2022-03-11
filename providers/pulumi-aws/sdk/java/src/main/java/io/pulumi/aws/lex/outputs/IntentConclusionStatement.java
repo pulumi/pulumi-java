@@ -28,10 +28,10 @@ public final class IntentConclusionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentConclusionStatement(
-        List<IntentConclusionStatementMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("messages") List<IntentConclusionStatementMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }
@@ -77,12 +77,12 @@ public final class IntentConclusionStatement {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(List<IntentConclusionStatementMessage> messages) {
+        public Builder messages(List<IntentConclusionStatementMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

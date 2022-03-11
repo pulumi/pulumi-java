@@ -30,12 +30,12 @@ public final class ClusterStatusResponse {
      */
     private final String substate;
 
-    @OutputCustomType.Constructor({"detail","state","stateStartTime","substate"})
+    @OutputCustomType.Constructor
     private ClusterStatusResponse(
-        String detail,
-        String state,
-        String stateStartTime,
-        String substate) {
+        @OutputCustomType.Parameter("detail") String detail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateStartTime") String stateStartTime,
+        @OutputCustomType.Parameter("substate") String substate) {
         this.detail = detail;
         this.state = state;
         this.stateStartTime = stateStartTime;
@@ -97,22 +97,22 @@ public final class ClusterStatusResponse {
     	      this.substate = defaults.substate;
         }
 
-        public Builder setDetail(String detail) {
+        public Builder detail(String detail) {
             this.detail = Objects.requireNonNull(detail);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateStartTime(String stateStartTime) {
+        public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }
 
-        public Builder setSubstate(String substate) {
+        public Builder substate(String substate) {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }

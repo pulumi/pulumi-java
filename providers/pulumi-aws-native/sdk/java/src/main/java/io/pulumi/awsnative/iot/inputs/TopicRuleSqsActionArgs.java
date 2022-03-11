@@ -75,32 +75,32 @@ public final class TopicRuleSqsActionArgs extends io.pulumi.resources.ResourceAr
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder setQueueUrl(Input<String> queueUrl) {
+        public Builder queueUrl(Input<String> queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Input.of(Objects.requireNonNull(queueUrl));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setUseBase64(@Nullable Input<Boolean> useBase64) {
+        public Builder useBase64(@Nullable Input<Boolean> useBase64) {
             this.useBase64 = useBase64;
             return this;
         }
 
-        public Builder setUseBase64(@Nullable Boolean useBase64) {
+        public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = Input.ofNullable(useBase64);
             return this;
         }

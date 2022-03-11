@@ -120,52 +120,52 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tpgs = defaults.tpgs;
         }
 
-        public Builder setDiskPoolName(Input<String> diskPoolName) {
+        public Builder diskPoolName(Input<String> diskPoolName) {
             this.diskPoolName = Objects.requireNonNull(diskPoolName);
             return this;
         }
 
-        public Builder setDiskPoolName(String diskPoolName) {
+        public Builder diskPoolName(String diskPoolName) {
             this.diskPoolName = Input.of(Objects.requireNonNull(diskPoolName));
             return this;
         }
 
-        public Builder setIscsiTargetName(@Nullable Input<String> iscsiTargetName) {
+        public Builder iscsiTargetName(@Nullable Input<String> iscsiTargetName) {
             this.iscsiTargetName = iscsiTargetName;
             return this;
         }
 
-        public Builder setIscsiTargetName(@Nullable String iscsiTargetName) {
+        public Builder iscsiTargetName(@Nullable String iscsiTargetName) {
             this.iscsiTargetName = Input.ofNullable(iscsiTargetName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTargetIqn(@Nullable Input<String> targetIqn) {
+        public Builder targetIqn(@Nullable Input<String> targetIqn) {
             this.targetIqn = targetIqn;
             return this;
         }
 
-        public Builder setTargetIqn(@Nullable String targetIqn) {
+        public Builder targetIqn(@Nullable String targetIqn) {
             this.targetIqn = Input.ofNullable(targetIqn);
             return this;
         }
 
-        public Builder setTpgs(Input<List<TargetPortalGroupCreateArgs>> tpgs) {
+        public Builder tpgs(Input<List<TargetPortalGroupCreateArgs>> tpgs) {
             this.tpgs = Objects.requireNonNull(tpgs);
             return this;
         }
 
-        public Builder setTpgs(List<TargetPortalGroupCreateArgs> tpgs) {
+        public Builder tpgs(List<TargetPortalGroupCreateArgs> tpgs) {
             this.tpgs = Input.of(Objects.requireNonNull(tpgs));
             return this;
         }

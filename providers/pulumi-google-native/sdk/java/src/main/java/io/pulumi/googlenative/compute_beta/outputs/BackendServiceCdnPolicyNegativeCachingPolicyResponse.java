@@ -20,10 +20,10 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyResponse {
      */
     private final Integer ttl;
 
-    @OutputCustomType.Constructor({"code","ttl"})
+    @OutputCustomType.Constructor
     private BackendServiceCdnPolicyNegativeCachingPolicyResponse(
-        Integer code,
-        Integer ttl) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("ttl") Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }
@@ -65,12 +65,12 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicyResponse {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCode(Integer code) {
+        public Builder code(Integer code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setTtl(Integer ttl) {
+        public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

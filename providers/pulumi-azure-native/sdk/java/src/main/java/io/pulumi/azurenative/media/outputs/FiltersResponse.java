@@ -38,12 +38,12 @@ public final class FiltersResponse {
      */
     private final @Nullable String rotation;
 
-    @OutputCustomType.Constructor({"crop","deinterlace","overlays","rotation"})
+    @OutputCustomType.Constructor
     private FiltersResponse(
-        @Nullable RectangleResponse crop,
-        @Nullable DeinterlaceResponse deinterlace,
-        @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
-        @Nullable String rotation) {
+        @OutputCustomType.Parameter("crop") @Nullable RectangleResponse crop,
+        @OutputCustomType.Parameter("deinterlace") @Nullable DeinterlaceResponse deinterlace,
+        @OutputCustomType.Parameter("overlays") @Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays,
+        @OutputCustomType.Parameter("rotation") @Nullable String rotation) {
         this.crop = crop;
         this.deinterlace = deinterlace;
         this.overlays = overlays;
@@ -105,22 +105,22 @@ public final class FiltersResponse {
     	      this.rotation = defaults.rotation;
         }
 
-        public Builder setCrop(@Nullable RectangleResponse crop) {
+        public Builder crop(@Nullable RectangleResponse crop) {
             this.crop = crop;
             return this;
         }
 
-        public Builder setDeinterlace(@Nullable DeinterlaceResponse deinterlace) {
+        public Builder deinterlace(@Nullable DeinterlaceResponse deinterlace) {
             this.deinterlace = deinterlace;
             return this;
         }
 
-        public Builder setOverlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
+        public Builder overlays(@Nullable List<Either<AudioOverlayResponse,VideoOverlayResponse>> overlays) {
             this.overlays = overlays;
             return this;
         }
 
-        public Builder setRotation(@Nullable String rotation) {
+        public Builder rotation(@Nullable String rotation) {
             this.rotation = rotation;
             return this;
         }

@@ -233,122 +233,122 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.whitelistCidr = defaults.whitelistCidr;
         }
 
-        public Builder setDecryption(@Nullable Input<FlowSourceEncryptionArgs> decryption) {
+        public Builder decryption(@Nullable Input<FlowSourceEncryptionArgs> decryption) {
             this.decryption = decryption;
             return this;
         }
 
-        public Builder setDecryption(@Nullable FlowSourceEncryptionArgs decryption) {
+        public Builder decryption(@Nullable FlowSourceEncryptionArgs decryption) {
             this.decryption = Input.ofNullable(decryption);
             return this;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setEntitlementArn(@Nullable Input<String> entitlementArn) {
+        public Builder entitlementArn(@Nullable Input<String> entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
 
-        public Builder setEntitlementArn(@Nullable String entitlementArn) {
+        public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = Input.ofNullable(entitlementArn);
             return this;
         }
 
-        public Builder setFlowArn(@Nullable Input<String> flowArn) {
+        public Builder flowArn(@Nullable Input<String> flowArn) {
             this.flowArn = flowArn;
             return this;
         }
 
-        public Builder setFlowArn(@Nullable String flowArn) {
+        public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = Input.ofNullable(flowArn);
             return this;
         }
 
-        public Builder setIngestPort(@Nullable Input<Integer> ingestPort) {
+        public Builder ingestPort(@Nullable Input<Integer> ingestPort) {
             this.ingestPort = ingestPort;
             return this;
         }
 
-        public Builder setIngestPort(@Nullable Integer ingestPort) {
+        public Builder ingestPort(@Nullable Integer ingestPort) {
             this.ingestPort = Input.ofNullable(ingestPort);
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Input<Integer> maxBitrate) {
+        public Builder maxBitrate(@Nullable Input<Integer> maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Integer maxBitrate) {
+        public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = Input.ofNullable(maxBitrate);
             return this;
         }
 
-        public Builder setMaxLatency(@Nullable Input<Integer> maxLatency) {
+        public Builder maxLatency(@Nullable Input<Integer> maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
 
-        public Builder setMaxLatency(@Nullable Integer maxLatency) {
+        public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = Input.ofNullable(maxLatency);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<FlowSourceProtocol> protocol) {
+        public Builder protocol(@Nullable Input<FlowSourceProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable FlowSourceProtocol protocol) {
+        public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setStreamId(@Nullable Input<String> streamId) {
+        public Builder streamId(@Nullable Input<String> streamId) {
             this.streamId = streamId;
             return this;
         }
 
-        public Builder setStreamId(@Nullable String streamId) {
+        public Builder streamId(@Nullable String streamId) {
             this.streamId = Input.ofNullable(streamId);
             return this;
         }
 
-        public Builder setVpcInterfaceName(@Nullable Input<String> vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable Input<String> vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
-        public Builder setVpcInterfaceName(@Nullable String vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = Input.ofNullable(vpcInterfaceName);
             return this;
         }
 
-        public Builder setWhitelistCidr(@Nullable Input<String> whitelistCidr) {
+        public Builder whitelistCidr(@Nullable Input<String> whitelistCidr) {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
 
-        public Builder setWhitelistCidr(@Nullable String whitelistCidr) {
+        public Builder whitelistCidr(@Nullable String whitelistCidr) {
             this.whitelistCidr = Input.ofNullable(whitelistCidr);
             return this;
         }

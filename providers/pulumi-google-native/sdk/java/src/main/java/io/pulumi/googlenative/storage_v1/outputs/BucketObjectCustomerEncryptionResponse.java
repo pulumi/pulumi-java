@@ -20,10 +20,10 @@ public final class BucketObjectCustomerEncryptionResponse {
      */
     private final String keySha256;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","keySha256"})
+    @OutputCustomType.Constructor
     private BucketObjectCustomerEncryptionResponse(
-        String encryptionAlgorithm,
-        String keySha256) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("keySha256") String keySha256) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.keySha256 = keySha256;
     }
@@ -65,12 +65,12 @@ public final class BucketObjectCustomerEncryptionResponse {
     	      this.keySha256 = defaults.keySha256;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setKeySha256(String keySha256) {
+        public Builder keySha256(String keySha256) {
             this.keySha256 = Objects.requireNonNull(keySha256);
             return this;
         }

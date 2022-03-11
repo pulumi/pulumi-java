@@ -14,10 +14,10 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
     private final List<GrafeasV1beta1IntotoSignatureResponse> signatures;
     private final LinkResponse signed;
 
-    @OutputCustomType.Constructor({"signatures","signed"})
+    @OutputCustomType.Constructor
     private GrafeasV1beta1IntotoDetailsResponse(
-        List<GrafeasV1beta1IntotoSignatureResponse> signatures,
-        LinkResponse signed) {
+        @OutputCustomType.Parameter("signatures") List<GrafeasV1beta1IntotoSignatureResponse> signatures,
+        @OutputCustomType.Parameter("signed") LinkResponse signed) {
         this.signatures = signatures;
         this.signed = signed;
     }
@@ -51,12 +51,12 @@ public final class GrafeasV1beta1IntotoDetailsResponse {
     	      this.signed = defaults.signed;
         }
 
-        public Builder setSignatures(List<GrafeasV1beta1IntotoSignatureResponse> signatures) {
+        public Builder signatures(List<GrafeasV1beta1IntotoSignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
 
-        public Builder setSigned(LinkResponse signed) {
+        public Builder signed(LinkResponse signed) {
             this.signed = Objects.requireNonNull(signed);
             return this;
         }

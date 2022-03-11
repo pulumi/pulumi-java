@@ -45,14 +45,14 @@ public final class WorkflowTemplateJobSparkRJob {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","loggingConfig","mainRFileUri","properties"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobSparkRJob(
-        @Nullable List<String> archiveUris,
-        @Nullable List<String> args,
-        @Nullable List<String> fileUris,
-        @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
-        String mainRFileUri,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("mainRFileUri") String mainRFileUri,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -134,32 +134,32 @@ public final class WorkflowTemplateJobSparkRJob {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArchiveUris(@Nullable List<String> archiveUris) {
+        public Builder archiveUris(@Nullable List<String> archiveUris) {
             this.archiveUris = archiveUris;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setFileUris(@Nullable List<String> fileUris) {
+        public Builder fileUris(@Nullable List<String> fileUris) {
             this.fileUris = fileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkRJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setMainRFileUri(String mainRFileUri) {
+        public Builder mainRFileUri(String mainRFileUri) {
             this.mainRFileUri = Objects.requireNonNull(mainRFileUri);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }

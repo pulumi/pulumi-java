@@ -68,12 +68,12 @@ public final class GetPreparedStatementArgs extends io.pulumi.resources.InvokeAr
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setStatementName(String statementName) {
+        public Builder statementName(String statementName) {
             this.statementName = Objects.requireNonNull(statementName);
             return this;
         }
 
-        public Builder setWorkGroup(String workGroup) {
+        public Builder workGroup(String workGroup) {
             this.workGroup = Objects.requireNonNull(workGroup);
             return this;
         }

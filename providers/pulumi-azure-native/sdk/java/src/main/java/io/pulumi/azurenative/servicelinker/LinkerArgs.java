@@ -126,52 +126,52 @@ public final class LinkerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setAuthInfo(@Nullable Input<Object> authInfo) {
+        public Builder authInfo(@Nullable Input<Object> authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
-        public Builder setAuthInfo(@Nullable Object authInfo) {
+        public Builder authInfo(@Nullable Object authInfo) {
             this.authInfo = Input.ofNullable(authInfo);
             return this;
         }
 
-        public Builder setClientType(@Nullable Input<Either<String,ClientType>> clientType) {
+        public Builder clientType(@Nullable Input<Either<String,ClientType>> clientType) {
             this.clientType = clientType;
             return this;
         }
 
-        public Builder setClientType(@Nullable Either<String,ClientType> clientType) {
+        public Builder clientType(@Nullable Either<String,ClientType> clientType) {
             this.clientType = Input.ofNullable(clientType);
             return this;
         }
 
-        public Builder setLinkerName(@Nullable Input<String> linkerName) {
+        public Builder linkerName(@Nullable Input<String> linkerName) {
             this.linkerName = linkerName;
             return this;
         }
 
-        public Builder setLinkerName(@Nullable String linkerName) {
+        public Builder linkerName(@Nullable String linkerName) {
             this.linkerName = Input.ofNullable(linkerName);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder setTargetId(@Nullable Input<String> targetId) {
+        public Builder targetId(@Nullable Input<String> targetId) {
             this.targetId = targetId;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = Input.ofNullable(targetId);
             return this;
         }

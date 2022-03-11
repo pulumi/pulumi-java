@@ -90,32 +90,32 @@ public final class SiteLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.longitude = defaults.longitude;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setLatitude(@Nullable Input<String> latitude) {
+        public Builder latitude(@Nullable Input<String> latitude) {
             this.latitude = latitude;
             return this;
         }
 
-        public Builder setLatitude(@Nullable String latitude) {
+        public Builder latitude(@Nullable String latitude) {
             this.latitude = Input.ofNullable(latitude);
             return this;
         }
 
-        public Builder setLongitude(@Nullable Input<String> longitude) {
+        public Builder longitude(@Nullable Input<String> longitude) {
             this.longitude = longitude;
             return this;
         }
 
-        public Builder setLongitude(@Nullable String longitude) {
+        public Builder longitude(@Nullable String longitude) {
             this.longitude = Input.ofNullable(longitude);
             return this;
         }

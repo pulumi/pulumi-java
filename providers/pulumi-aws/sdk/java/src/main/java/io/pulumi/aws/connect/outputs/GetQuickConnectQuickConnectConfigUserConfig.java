@@ -20,10 +20,10 @@ public final class GetQuickConnectQuickConnectConfigUserConfig {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"contactFlowId","userId"})
+    @OutputCustomType.Constructor
     private GetQuickConnectQuickConnectConfigUserConfig(
-        String contactFlowId,
-        String userId) {
+        @OutputCustomType.Parameter("contactFlowId") String contactFlowId,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.contactFlowId = contactFlowId;
         this.userId = userId;
     }
@@ -65,12 +65,12 @@ public final class GetQuickConnectQuickConnectConfigUserConfig {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setContactFlowId(String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

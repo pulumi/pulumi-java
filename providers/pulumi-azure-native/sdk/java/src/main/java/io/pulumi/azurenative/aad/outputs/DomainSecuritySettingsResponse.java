@@ -47,15 +47,15 @@ public final class DomainSecuritySettingsResponse {
      */
     private final @Nullable String tlsV1;
 
-    @OutputCustomType.Constructor({"kerberosArmoring","kerberosRc4Encryption","ntlmV1","syncKerberosPasswords","syncNtlmPasswords","syncOnPremPasswords","tlsV1"})
+    @OutputCustomType.Constructor
     private DomainSecuritySettingsResponse(
-        @Nullable String kerberosArmoring,
-        @Nullable String kerberosRc4Encryption,
-        @Nullable String ntlmV1,
-        @Nullable String syncKerberosPasswords,
-        @Nullable String syncNtlmPasswords,
-        @Nullable String syncOnPremPasswords,
-        @Nullable String tlsV1) {
+        @OutputCustomType.Parameter("kerberosArmoring") @Nullable String kerberosArmoring,
+        @OutputCustomType.Parameter("kerberosRc4Encryption") @Nullable String kerberosRc4Encryption,
+        @OutputCustomType.Parameter("ntlmV1") @Nullable String ntlmV1,
+        @OutputCustomType.Parameter("syncKerberosPasswords") @Nullable String syncKerberosPasswords,
+        @OutputCustomType.Parameter("syncNtlmPasswords") @Nullable String syncNtlmPasswords,
+        @OutputCustomType.Parameter("syncOnPremPasswords") @Nullable String syncOnPremPasswords,
+        @OutputCustomType.Parameter("tlsV1") @Nullable String tlsV1) {
         this.kerberosArmoring = kerberosArmoring;
         this.kerberosRc4Encryption = kerberosRc4Encryption;
         this.ntlmV1 = ntlmV1;
@@ -147,37 +147,37 @@ public final class DomainSecuritySettingsResponse {
     	      this.tlsV1 = defaults.tlsV1;
         }
 
-        public Builder setKerberosArmoring(@Nullable String kerberosArmoring) {
+        public Builder kerberosArmoring(@Nullable String kerberosArmoring) {
             this.kerberosArmoring = kerberosArmoring;
             return this;
         }
 
-        public Builder setKerberosRc4Encryption(@Nullable String kerberosRc4Encryption) {
+        public Builder kerberosRc4Encryption(@Nullable String kerberosRc4Encryption) {
             this.kerberosRc4Encryption = kerberosRc4Encryption;
             return this;
         }
 
-        public Builder setNtlmV1(@Nullable String ntlmV1) {
+        public Builder ntlmV1(@Nullable String ntlmV1) {
             this.ntlmV1 = ntlmV1;
             return this;
         }
 
-        public Builder setSyncKerberosPasswords(@Nullable String syncKerberosPasswords) {
+        public Builder syncKerberosPasswords(@Nullable String syncKerberosPasswords) {
             this.syncKerberosPasswords = syncKerberosPasswords;
             return this;
         }
 
-        public Builder setSyncNtlmPasswords(@Nullable String syncNtlmPasswords) {
+        public Builder syncNtlmPasswords(@Nullable String syncNtlmPasswords) {
             this.syncNtlmPasswords = syncNtlmPasswords;
             return this;
         }
 
-        public Builder setSyncOnPremPasswords(@Nullable String syncOnPremPasswords) {
+        public Builder syncOnPremPasswords(@Nullable String syncOnPremPasswords) {
             this.syncOnPremPasswords = syncOnPremPasswords;
             return this;
         }
 
-        public Builder setTlsV1(@Nullable String tlsV1) {
+        public Builder tlsV1(@Nullable String tlsV1) {
             this.tlsV1 = tlsV1;
             return this;
         }

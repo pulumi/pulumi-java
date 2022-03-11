@@ -27,11 +27,11 @@ public final class PrivateEndpointACLResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allow","deny","name"})
+    @OutputCustomType.Constructor
     private PrivateEndpointACLResponse(
-        @Nullable List<String> allow,
-        @Nullable List<String> deny,
-        String name) {
+        @OutputCustomType.Parameter("allow") @Nullable List<String> allow,
+        @OutputCustomType.Parameter("deny") @Nullable List<String> deny,
+        @OutputCustomType.Parameter("name") String name) {
         this.allow = allow;
         this.deny = deny;
         this.name = name;
@@ -83,17 +83,17 @@ public final class PrivateEndpointACLResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAllow(@Nullable List<String> allow) {
+        public Builder allow(@Nullable List<String> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setDeny(@Nullable List<String> deny) {
+        public Builder deny(@Nullable List<String> deny) {
             this.deny = deny;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -17,8 +17,8 @@ public final class JobNotificationProperty {
      */
     private final @Nullable Integer notifyDelayAfter;
 
-    @OutputCustomType.Constructor({"notifyDelayAfter"})
-    private JobNotificationProperty(@Nullable Integer notifyDelayAfter) {
+    @OutputCustomType.Constructor
+    private JobNotificationProperty(@OutputCustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 
@@ -50,7 +50,7 @@ public final class JobNotificationProperty {
     	      this.notifyDelayAfter = defaults.notifyDelayAfter;
         }
 
-        public Builder setNotifyDelayAfter(@Nullable Integer notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }

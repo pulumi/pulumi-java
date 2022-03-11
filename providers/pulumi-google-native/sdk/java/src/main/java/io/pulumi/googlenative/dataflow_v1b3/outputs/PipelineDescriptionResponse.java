@@ -28,11 +28,11 @@ public final class PipelineDescriptionResponse {
      */
     private final List<TransformSummaryResponse> originalPipelineTransform;
 
-    @OutputCustomType.Constructor({"displayData","executionPipelineStage","originalPipelineTransform"})
+    @OutputCustomType.Constructor
     private PipelineDescriptionResponse(
-        List<DisplayDataResponse> displayData,
-        List<ExecutionStageSummaryResponse> executionPipelineStage,
-        List<TransformSummaryResponse> originalPipelineTransform) {
+        @OutputCustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
+        @OutputCustomType.Parameter("executionPipelineStage") List<ExecutionStageSummaryResponse> executionPipelineStage,
+        @OutputCustomType.Parameter("originalPipelineTransform") List<TransformSummaryResponse> originalPipelineTransform) {
         this.displayData = displayData;
         this.executionPipelineStage = executionPipelineStage;
         this.originalPipelineTransform = originalPipelineTransform;
@@ -84,17 +84,17 @@ public final class PipelineDescriptionResponse {
     	      this.originalPipelineTransform = defaults.originalPipelineTransform;
         }
 
-        public Builder setDisplayData(List<DisplayDataResponse> displayData) {
+        public Builder displayData(List<DisplayDataResponse> displayData) {
             this.displayData = Objects.requireNonNull(displayData);
             return this;
         }
 
-        public Builder setExecutionPipelineStage(List<ExecutionStageSummaryResponse> executionPipelineStage) {
+        public Builder executionPipelineStage(List<ExecutionStageSummaryResponse> executionPipelineStage) {
             this.executionPipelineStage = Objects.requireNonNull(executionPipelineStage);
             return this;
         }
 
-        public Builder setOriginalPipelineTransform(List<TransformSummaryResponse> originalPipelineTransform) {
+        public Builder originalPipelineTransform(List<TransformSummaryResponse> originalPipelineTransform) {
             this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
             return this;
         }

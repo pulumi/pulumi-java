@@ -174,82 +174,82 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
     	      this.validExitCodes = defaults.validExitCodes;
         }
 
-        public Builder setInline(@Nullable Input<List<String>> inline) {
+        public Builder inline(@Nullable Input<List<String>> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setInline(@Nullable List<String> inline) {
+        public Builder inline(@Nullable List<String> inline) {
             this.inline = Input.ofNullable(inline);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRunAsSystem(@Nullable Input<Boolean> runAsSystem) {
+        public Builder runAsSystem(@Nullable Input<Boolean> runAsSystem) {
             this.runAsSystem = runAsSystem;
             return this;
         }
 
-        public Builder setRunAsSystem(@Nullable Boolean runAsSystem) {
+        public Builder runAsSystem(@Nullable Boolean runAsSystem) {
             this.runAsSystem = Input.ofNullable(runAsSystem);
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Input<Boolean> runElevated) {
+        public Builder runElevated(@Nullable Input<Boolean> runElevated) {
             this.runElevated = runElevated;
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Boolean runElevated) {
+        public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = Input.ofNullable(runElevated);
             return this;
         }
 
-        public Builder setScriptUri(@Nullable Input<String> scriptUri) {
+        public Builder scriptUri(@Nullable Input<String> scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = Input.ofNullable(scriptUri);
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable Input<String> sha256Checksum) {
+        public Builder sha256Checksum(@Nullable Input<String> sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = Input.ofNullable(sha256Checksum);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValidExitCodes(@Nullable Input<List<Integer>> validExitCodes) {
+        public Builder validExitCodes(@Nullable Input<List<Integer>> validExitCodes) {
             this.validExitCodes = validExitCodes;
             return this;
         }
 
-        public Builder setValidExitCodes(@Nullable List<Integer> validExitCodes) {
+        public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
             this.validExitCodes = Input.ofNullable(validExitCodes);
             return this;
         }

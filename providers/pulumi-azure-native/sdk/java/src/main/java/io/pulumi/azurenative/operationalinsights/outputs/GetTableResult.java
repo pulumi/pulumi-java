@@ -88,22 +88,22 @@ public final class GetTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"archiveRetentionInDays","id","lastPlanModifiedDate","name","plan","provisioningState","restoredLogs","resultStatistics","retentionInDays","schema","searchResults","systemData","totalRetentionInDays","type"})
+    @OutputCustomType.Constructor
     private GetTableResult(
-        Integer archiveRetentionInDays,
-        String id,
-        String lastPlanModifiedDate,
-        String name,
-        @Nullable String plan,
-        String provisioningState,
-        @Nullable RestoredLogsResponse restoredLogs,
-        @Nullable ResultStatisticsResponse resultStatistics,
-        @Nullable Integer retentionInDays,
-        @Nullable SchemaResponse schema,
-        @Nullable SearchResultsResponse searchResults,
-        SystemDataResponse systemData,
-        @Nullable Integer totalRetentionInDays,
-        String type) {
+        @OutputCustomType.Parameter("archiveRetentionInDays") Integer archiveRetentionInDays,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastPlanModifiedDate") String lastPlanModifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable String plan,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("restoredLogs") @Nullable RestoredLogsResponse restoredLogs,
+        @OutputCustomType.Parameter("resultStatistics") @Nullable ResultStatisticsResponse resultStatistics,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("schema") @Nullable SchemaResponse schema,
+        @OutputCustomType.Parameter("searchResults") @Nullable SearchResultsResponse searchResults,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("totalRetentionInDays") @Nullable Integer totalRetentionInDays,
+        @OutputCustomType.Parameter("type") String type) {
         this.archiveRetentionInDays = archiveRetentionInDays;
         this.id = id;
         this.lastPlanModifiedDate = lastPlanModifiedDate;
@@ -265,72 +265,72 @@ public final class GetTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArchiveRetentionInDays(Integer archiveRetentionInDays) {
+        public Builder archiveRetentionInDays(Integer archiveRetentionInDays) {
             this.archiveRetentionInDays = Objects.requireNonNull(archiveRetentionInDays);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastPlanModifiedDate(String lastPlanModifiedDate) {
+        public Builder lastPlanModifiedDate(String lastPlanModifiedDate) {
             this.lastPlanModifiedDate = Objects.requireNonNull(lastPlanModifiedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable String plan) {
+        public Builder plan(@Nullable String plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRestoredLogs(@Nullable RestoredLogsResponse restoredLogs) {
+        public Builder restoredLogs(@Nullable RestoredLogsResponse restoredLogs) {
             this.restoredLogs = restoredLogs;
             return this;
         }
 
-        public Builder setResultStatistics(@Nullable ResultStatisticsResponse resultStatistics) {
+        public Builder resultStatistics(@Nullable ResultStatisticsResponse resultStatistics) {
             this.resultStatistics = resultStatistics;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSchema(@Nullable SchemaResponse schema) {
+        public Builder schema(@Nullable SchemaResponse schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSearchResults(@Nullable SearchResultsResponse searchResults) {
+        public Builder searchResults(@Nullable SearchResultsResponse searchResults) {
             this.searchResults = searchResults;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTotalRetentionInDays(@Nullable Integer totalRetentionInDays) {
+        public Builder totalRetentionInDays(@Nullable Integer totalRetentionInDays) {
             this.totalRetentionInDays = totalRetentionInDays;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

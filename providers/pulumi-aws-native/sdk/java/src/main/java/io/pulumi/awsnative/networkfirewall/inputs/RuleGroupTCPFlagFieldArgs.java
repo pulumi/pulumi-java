@@ -63,22 +63,22 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     	      this.masks = defaults.masks;
         }
 
-        public Builder setFlags(Input<List<RuleGroupTCPFlag>> flags) {
+        public Builder flags(Input<List<RuleGroupTCPFlag>> flags) {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
 
-        public Builder setFlags(List<RuleGroupTCPFlag> flags) {
+        public Builder flags(List<RuleGroupTCPFlag> flags) {
             this.flags = Input.of(Objects.requireNonNull(flags));
             return this;
         }
 
-        public Builder setMasks(@Nullable Input<List<RuleGroupTCPFlag>> masks) {
+        public Builder masks(@Nullable Input<List<RuleGroupTCPFlag>> masks) {
             this.masks = masks;
             return this;
         }
 
-        public Builder setMasks(@Nullable List<RuleGroupTCPFlag> masks) {
+        public Builder masks(@Nullable List<RuleGroupTCPFlag> masks) {
             this.masks = Input.ofNullable(masks);
             return this;
         }

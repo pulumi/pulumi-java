@@ -17,8 +17,8 @@ public final class FileSystemTokenStoreResponse {
      */
     private final @Nullable String directory;
 
-    @OutputCustomType.Constructor({"directory"})
-    private FileSystemTokenStoreResponse(@Nullable String directory) {
+    @OutputCustomType.Constructor
+    private FileSystemTokenStoreResponse(@OutputCustomType.Parameter("directory") @Nullable String directory) {
         this.directory = directory;
     }
 
@@ -50,7 +50,7 @@ public final class FileSystemTokenStoreResponse {
     	      this.directory = defaults.directory;
         }
 
-        public Builder setDirectory(@Nullable String directory) {
+        public Builder directory(@Nullable String directory) {
             this.directory = directory;
             return this;
         }

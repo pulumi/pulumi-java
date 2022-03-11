@@ -29,11 +29,11 @@ public final class CrawlerDynamodbTarget {
      */
     private final @Nullable Double scanRate;
 
-    @OutputCustomType.Constructor({"path","scanAll","scanRate"})
+    @OutputCustomType.Constructor
     private CrawlerDynamodbTarget(
-        String path,
-        @Nullable Boolean scanAll,
-        @Nullable Double scanRate) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll,
+        @OutputCustomType.Parameter("scanRate") @Nullable Double scanRate) {
         this.path = path;
         this.scanAll = scanAll;
         this.scanRate = scanRate;
@@ -85,17 +85,17 @@ public final class CrawlerDynamodbTarget {
     	      this.scanRate = defaults.scanRate;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setScanAll(@Nullable Boolean scanAll) {
+        public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = scanAll;
             return this;
         }
 
-        public Builder setScanRate(@Nullable Double scanRate) {
+        public Builder scanRate(@Nullable Double scanRate) {
             this.scanRate = scanRate;
             return this;
         }

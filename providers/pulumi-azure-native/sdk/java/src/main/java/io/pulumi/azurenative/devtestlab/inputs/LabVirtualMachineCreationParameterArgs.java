@@ -483,272 +483,272 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAllowClaim(@Nullable Input<Boolean> allowClaim) {
+        public Builder allowClaim(@Nullable Input<Boolean> allowClaim) {
             this.allowClaim = allowClaim;
             return this;
         }
 
-        public Builder setAllowClaim(@Nullable Boolean allowClaim) {
+        public Builder allowClaim(@Nullable Boolean allowClaim) {
             this.allowClaim = Input.ofNullable(allowClaim);
             return this;
         }
 
-        public Builder setArtifacts(@Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts) {
+        public Builder artifacts(@Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setArtifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
+        public Builder artifacts(@Nullable List<ArtifactInstallPropertiesArgs> artifacts) {
             this.artifacts = Input.ofNullable(artifacts);
             return this;
         }
 
-        public Builder setBulkCreationParameters(@Nullable Input<BulkCreationParametersArgs> bulkCreationParameters) {
+        public Builder bulkCreationParameters(@Nullable Input<BulkCreationParametersArgs> bulkCreationParameters) {
             this.bulkCreationParameters = bulkCreationParameters;
             return this;
         }
 
-        public Builder setBulkCreationParameters(@Nullable BulkCreationParametersArgs bulkCreationParameters) {
+        public Builder bulkCreationParameters(@Nullable BulkCreationParametersArgs bulkCreationParameters) {
             this.bulkCreationParameters = Input.ofNullable(bulkCreationParameters);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setCustomImageId(@Nullable Input<String> customImageId) {
+        public Builder customImageId(@Nullable Input<String> customImageId) {
             this.customImageId = customImageId;
             return this;
         }
 
-        public Builder setCustomImageId(@Nullable String customImageId) {
+        public Builder customImageId(@Nullable String customImageId) {
             this.customImageId = Input.ofNullable(customImageId);
             return this;
         }
 
-        public Builder setDataDiskParameters(@Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters) {
+        public Builder dataDiskParameters(@Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters) {
             this.dataDiskParameters = dataDiskParameters;
             return this;
         }
 
-        public Builder setDataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
+        public Builder dataDiskParameters(@Nullable List<DataDiskPropertiesArgs> dataDiskParameters) {
             this.dataDiskParameters = Input.ofNullable(dataDiskParameters);
             return this;
         }
 
-        public Builder setDisallowPublicIpAddress(@Nullable Input<Boolean> disallowPublicIpAddress) {
+        public Builder disallowPublicIpAddress(@Nullable Input<Boolean> disallowPublicIpAddress) {
             this.disallowPublicIpAddress = disallowPublicIpAddress;
             return this;
         }
 
-        public Builder setDisallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
+        public Builder disallowPublicIpAddress(@Nullable Boolean disallowPublicIpAddress) {
             this.disallowPublicIpAddress = Input.ofNullable(disallowPublicIpAddress);
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable Input<GalleryImageReferenceArgs> galleryImageReference) {
+        public Builder galleryImageReference(@Nullable Input<GalleryImageReferenceArgs> galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
+        public Builder galleryImageReference(@Nullable GalleryImageReferenceArgs galleryImageReference) {
             this.galleryImageReference = Input.ofNullable(galleryImageReference);
             return this;
         }
 
-        public Builder setIsAuthenticationWithSshKey(@Nullable Input<Boolean> isAuthenticationWithSshKey) {
+        public Builder isAuthenticationWithSshKey(@Nullable Input<Boolean> isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = isAuthenticationWithSshKey;
             return this;
         }
 
-        public Builder setIsAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
+        public Builder isAuthenticationWithSshKey(@Nullable Boolean isAuthenticationWithSshKey) {
             this.isAuthenticationWithSshKey = Input.ofNullable(isAuthenticationWithSshKey);
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable Input<String> labSubnetName) {
+        public Builder labSubnetName(@Nullable Input<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = Input.ofNullable(labSubnetName);
             return this;
         }
 
-        public Builder setLabVirtualNetworkId(@Nullable Input<String> labVirtualNetworkId) {
+        public Builder labVirtualNetworkId(@Nullable Input<String> labVirtualNetworkId) {
             this.labVirtualNetworkId = labVirtualNetworkId;
             return this;
         }
 
-        public Builder setLabVirtualNetworkId(@Nullable String labVirtualNetworkId) {
+        public Builder labVirtualNetworkId(@Nullable String labVirtualNetworkId) {
             this.labVirtualNetworkId = Input.ofNullable(labVirtualNetworkId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkInterface(@Nullable Input<NetworkInterfacePropertiesArgs> networkInterface) {
+        public Builder networkInterface(@Nullable Input<NetworkInterfacePropertiesArgs> networkInterface) {
             this.networkInterface = networkInterface;
             return this;
         }
 
-        public Builder setNetworkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
+        public Builder networkInterface(@Nullable NetworkInterfacePropertiesArgs networkInterface) {
             this.networkInterface = Input.ofNullable(networkInterface);
             return this;
         }
 
-        public Builder setNotes(@Nullable Input<String> notes) {
+        public Builder notes(@Nullable Input<String> notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = Input.ofNullable(notes);
             return this;
         }
 
-        public Builder setOwnerObjectId(@Nullable Input<String> ownerObjectId) {
+        public Builder ownerObjectId(@Nullable Input<String> ownerObjectId) {
             this.ownerObjectId = ownerObjectId;
             return this;
         }
 
-        public Builder setOwnerObjectId(@Nullable String ownerObjectId) {
+        public Builder ownerObjectId(@Nullable String ownerObjectId) {
             this.ownerObjectId = Input.ofNullable(ownerObjectId);
             return this;
         }
 
-        public Builder setOwnerUserPrincipalName(@Nullable Input<String> ownerUserPrincipalName) {
+        public Builder ownerUserPrincipalName(@Nullable Input<String> ownerUserPrincipalName) {
             this.ownerUserPrincipalName = ownerUserPrincipalName;
             return this;
         }
 
-        public Builder setOwnerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
+        public Builder ownerUserPrincipalName(@Nullable String ownerUserPrincipalName) {
             this.ownerUserPrincipalName = Input.ofNullable(ownerUserPrincipalName);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPlanId(@Nullable Input<String> planId) {
+        public Builder planId(@Nullable Input<String> planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = Input.ofNullable(planId);
             return this;
         }
 
-        public Builder setScheduleParameters(@Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters) {
+        public Builder scheduleParameters(@Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters) {
             this.scheduleParameters = scheduleParameters;
             return this;
         }
 
-        public Builder setScheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
+        public Builder scheduleParameters(@Nullable List<ScheduleCreationParameterArgs> scheduleParameters) {
             this.scheduleParameters = Input.ofNullable(scheduleParameters);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setSshKey(@Nullable Input<String> sshKey) {
+        public Builder sshKey(@Nullable Input<String> sshKey) {
             this.sshKey = sshKey;
             return this;
         }
 
-        public Builder setSshKey(@Nullable String sshKey) {
+        public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = Input.ofNullable(sshKey);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

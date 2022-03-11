@@ -47,14 +47,14 @@ public final class ManagedClusterLoadBalancerProfileResponse {
      */
     private final @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs;
 
-    @OutputCustomType.Constructor({"allocatedOutboundPorts","effectiveOutboundIPs","idleTimeoutInMinutes","managedOutboundIPs","outboundIPPrefixes","outboundIPs"})
+    @OutputCustomType.Constructor
     private ManagedClusterLoadBalancerProfileResponse(
-        @Nullable Integer allocatedOutboundPorts,
-        @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
-        @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
-        @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
+        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @OutputCustomType.Parameter("effectiveOutboundIPs") @Nullable List<ResourceReferenceResponse> effectiveOutboundIPs,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("managedOutboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs,
+        @OutputCustomType.Parameter("outboundIPPrefixes") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes,
+        @OutputCustomType.Parameter("outboundIPs") @Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.effectiveOutboundIPs = effectiveOutboundIPs;
         this.idleTimeoutInMinutes = idleTimeoutInMinutes;
@@ -136,32 +136,32 @@ public final class ManagedClusterLoadBalancerProfileResponse {
     	      this.outboundIPs = defaults.outboundIPs;
         }
 
-        public Builder setAllocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
+        public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
-        public Builder setEffectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
+        public Builder effectiveOutboundIPs(@Nullable List<ResourceReferenceResponse> effectiveOutboundIPs) {
             this.effectiveOutboundIPs = effectiveOutboundIPs;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setManagedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
+        public Builder managedOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseManagedOutboundIPs managedOutboundIPs) {
             this.managedOutboundIPs = managedOutboundIPs;
             return this;
         }
 
-        public Builder setOutboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
+        public Builder outboundIPPrefixes(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPPrefixes outboundIPPrefixes) {
             this.outboundIPPrefixes = outboundIPPrefixes;
             return this;
         }
 
-        public Builder setOutboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
+        public Builder outboundIPs(@Nullable ManagedClusterLoadBalancerProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = outboundIPs;
             return this;
         }

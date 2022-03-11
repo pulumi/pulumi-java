@@ -64,18 +64,18 @@ public final class HttpCheckResponse {
      */
     private final Boolean validateSsl;
 
-    @OutputCustomType.Constructor({"authInfo","body","contentType","headers","maskHeaders","path","port","requestMethod","useSsl","validateSsl"})
+    @OutputCustomType.Constructor
     private HttpCheckResponse(
-        BasicAuthenticationResponse authInfo,
-        String body,
-        String contentType,
-        Map<String,String> headers,
-        Boolean maskHeaders,
-        String path,
-        Integer port,
-        String requestMethod,
-        Boolean useSsl,
-        Boolean validateSsl) {
+        @OutputCustomType.Parameter("authInfo") BasicAuthenticationResponse authInfo,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("maskHeaders") Boolean maskHeaders,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("requestMethod") String requestMethod,
+        @OutputCustomType.Parameter("useSsl") Boolean useSsl,
+        @OutputCustomType.Parameter("validateSsl") Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;
@@ -197,52 +197,52 @@ public final class HttpCheckResponse {
     	      this.validateSsl = defaults.validateSsl;
         }
 
-        public Builder setAuthInfo(BasicAuthenticationResponse authInfo) {
+        public Builder authInfo(BasicAuthenticationResponse authInfo) {
             this.authInfo = Objects.requireNonNull(authInfo);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setMaskHeaders(Boolean maskHeaders) {
+        public Builder maskHeaders(Boolean maskHeaders) {
             this.maskHeaders = Objects.requireNonNull(maskHeaders);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setRequestMethod(String requestMethod) {
+        public Builder requestMethod(String requestMethod) {
             this.requestMethod = Objects.requireNonNull(requestMethod);
             return this;
         }
 
-        public Builder setUseSsl(Boolean useSsl) {
+        public Builder useSsl(Boolean useSsl) {
             this.useSsl = Objects.requireNonNull(useSsl);
             return this;
         }
 
-        public Builder setValidateSsl(Boolean validateSsl) {
+        public Builder validateSsl(Boolean validateSsl) {
             this.validateSsl = Objects.requireNonNull(validateSsl);
             return this;
         }

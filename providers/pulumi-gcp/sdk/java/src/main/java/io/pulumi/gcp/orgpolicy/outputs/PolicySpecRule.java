@@ -39,13 +39,13 @@ public final class PolicySpecRule {
      */
     private final @Nullable PolicySpecRuleValues values;
 
-    @OutputCustomType.Constructor({"allowAll","condition","denyAll","enforce","values"})
+    @OutputCustomType.Constructor
     private PolicySpecRule(
-        @Nullable String allowAll,
-        @Nullable PolicySpecRuleCondition condition,
-        @Nullable String denyAll,
-        @Nullable String enforce,
-        @Nullable PolicySpecRuleValues values) {
+        @OutputCustomType.Parameter("allowAll") @Nullable String allowAll,
+        @OutputCustomType.Parameter("condition") @Nullable PolicySpecRuleCondition condition,
+        @OutputCustomType.Parameter("denyAll") @Nullable String denyAll,
+        @OutputCustomType.Parameter("enforce") @Nullable String enforce,
+        @OutputCustomType.Parameter("values") @Nullable PolicySpecRuleValues values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;
@@ -117,27 +117,27 @@ public final class PolicySpecRule {
     	      this.values = defaults.values;
         }
 
-        public Builder setAllowAll(@Nullable String allowAll) {
+        public Builder allowAll(@Nullable String allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
-        public Builder setCondition(@Nullable PolicySpecRuleCondition condition) {
+        public Builder condition(@Nullable PolicySpecRuleCondition condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setDenyAll(@Nullable String denyAll) {
+        public Builder denyAll(@Nullable String denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
-        public Builder setEnforce(@Nullable String enforce) {
+        public Builder enforce(@Nullable String enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setValues(@Nullable PolicySpecRuleValues values) {
+        public Builder values(@Nullable PolicySpecRuleValues values) {
             this.values = values;
             return this;
         }

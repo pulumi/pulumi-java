@@ -22,10 +22,10 @@ public final class UserPoolSchemaNumberAttributeConstraints {
      */
     private final @Nullable String minValue;
 
-    @OutputCustomType.Constructor({"maxValue","minValue"})
+    @OutputCustomType.Constructor
     private UserPoolSchemaNumberAttributeConstraints(
-        @Nullable String maxValue,
-        @Nullable String minValue) {
+        @OutputCustomType.Parameter("maxValue") @Nullable String maxValue,
+        @OutputCustomType.Parameter("minValue") @Nullable String minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }
@@ -67,12 +67,12 @@ public final class UserPoolSchemaNumberAttributeConstraints {
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder setMaxValue(@Nullable String maxValue) {
+        public Builder maxValue(@Nullable String maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
-        public Builder setMinValue(@Nullable String minValue) {
+        public Builder minValue(@Nullable String minValue) {
             this.minValue = minValue;
             return this;
         }

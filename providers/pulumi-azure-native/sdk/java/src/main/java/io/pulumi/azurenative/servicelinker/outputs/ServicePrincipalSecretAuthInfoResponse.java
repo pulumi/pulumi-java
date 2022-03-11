@@ -31,12 +31,12 @@ public final class ServicePrincipalSecretAuthInfoResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"authType","clientId","principalId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalSecretAuthInfoResponse(
-        String authType,
-        String clientId,
-        String principalId,
-        String secret) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.authType = authType;
         this.clientId = clientId;
         this.principalId = principalId;
@@ -99,22 +99,22 @@ public final class ServicePrincipalSecretAuthInfoResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

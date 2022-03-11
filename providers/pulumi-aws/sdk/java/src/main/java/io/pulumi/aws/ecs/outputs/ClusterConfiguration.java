@@ -17,8 +17,8 @@ public final class ClusterConfiguration {
      */
     private final @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration;
 
-    @OutputCustomType.Constructor({"executeCommandConfiguration"})
-    private ClusterConfiguration(@Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
+    @OutputCustomType.Constructor
+    private ClusterConfiguration(@OutputCustomType.Parameter("executeCommandConfiguration") @Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
         this.executeCommandConfiguration = executeCommandConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterConfiguration {
     	      this.executeCommandConfiguration = defaults.executeCommandConfiguration;
         }
 
-        public Builder setExecuteCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
+        public Builder executeCommandConfiguration(@Nullable ClusterConfigurationExecuteCommandConfiguration executeCommandConfiguration) {
             this.executeCommandConfiguration = executeCommandConfiguration;
             return this;
         }

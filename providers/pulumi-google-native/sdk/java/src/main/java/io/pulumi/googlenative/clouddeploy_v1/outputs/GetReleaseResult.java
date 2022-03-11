@@ -105,26 +105,26 @@ public final class GetReleaseResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","buildArtifacts","createTime","deliveryPipelineSnapshot","description","etag","labels","name","renderEndTime","renderStartTime","renderState","skaffoldConfigPath","skaffoldConfigUri","skaffoldVersion","targetArtifacts","targetRenders","targetSnapshots","uid"})
+    @OutputCustomType.Constructor
     private GetReleaseResult(
-        Map<String,String> annotations,
-        List<BuildArtifactResponse> buildArtifacts,
-        String createTime,
-        DeliveryPipelineResponse deliveryPipelineSnapshot,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        String renderEndTime,
-        String renderStartTime,
-        String renderState,
-        String skaffoldConfigPath,
-        String skaffoldConfigUri,
-        String skaffoldVersion,
-        Map<String,String> targetArtifacts,
-        Map<String,String> targetRenders,
-        List<TargetResponse> targetSnapshots,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("buildArtifacts") List<BuildArtifactResponse> buildArtifacts,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deliveryPipelineSnapshot") DeliveryPipelineResponse deliveryPipelineSnapshot,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("renderEndTime") String renderEndTime,
+        @OutputCustomType.Parameter("renderStartTime") String renderStartTime,
+        @OutputCustomType.Parameter("renderState") String renderState,
+        @OutputCustomType.Parameter("skaffoldConfigPath") String skaffoldConfigPath,
+        @OutputCustomType.Parameter("skaffoldConfigUri") String skaffoldConfigUri,
+        @OutputCustomType.Parameter("skaffoldVersion") String skaffoldVersion,
+        @OutputCustomType.Parameter("targetArtifacts") Map<String,String> targetArtifacts,
+        @OutputCustomType.Parameter("targetRenders") Map<String,String> targetRenders,
+        @OutputCustomType.Parameter("targetSnapshots") List<TargetResponse> targetSnapshots,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.buildArtifacts = buildArtifacts;
         this.createTime = createTime;
@@ -326,92 +326,92 @@ public final class GetReleaseResult {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setBuildArtifacts(List<BuildArtifactResponse> buildArtifacts) {
+        public Builder buildArtifacts(List<BuildArtifactResponse> buildArtifacts) {
             this.buildArtifacts = Objects.requireNonNull(buildArtifacts);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeliveryPipelineSnapshot(DeliveryPipelineResponse deliveryPipelineSnapshot) {
+        public Builder deliveryPipelineSnapshot(DeliveryPipelineResponse deliveryPipelineSnapshot) {
             this.deliveryPipelineSnapshot = Objects.requireNonNull(deliveryPipelineSnapshot);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRenderEndTime(String renderEndTime) {
+        public Builder renderEndTime(String renderEndTime) {
             this.renderEndTime = Objects.requireNonNull(renderEndTime);
             return this;
         }
 
-        public Builder setRenderStartTime(String renderStartTime) {
+        public Builder renderStartTime(String renderStartTime) {
             this.renderStartTime = Objects.requireNonNull(renderStartTime);
             return this;
         }
 
-        public Builder setRenderState(String renderState) {
+        public Builder renderState(String renderState) {
             this.renderState = Objects.requireNonNull(renderState);
             return this;
         }
 
-        public Builder setSkaffoldConfigPath(String skaffoldConfigPath) {
+        public Builder skaffoldConfigPath(String skaffoldConfigPath) {
             this.skaffoldConfigPath = Objects.requireNonNull(skaffoldConfigPath);
             return this;
         }
 
-        public Builder setSkaffoldConfigUri(String skaffoldConfigUri) {
+        public Builder skaffoldConfigUri(String skaffoldConfigUri) {
             this.skaffoldConfigUri = Objects.requireNonNull(skaffoldConfigUri);
             return this;
         }
 
-        public Builder setSkaffoldVersion(String skaffoldVersion) {
+        public Builder skaffoldVersion(String skaffoldVersion) {
             this.skaffoldVersion = Objects.requireNonNull(skaffoldVersion);
             return this;
         }
 
-        public Builder setTargetArtifacts(Map<String,String> targetArtifacts) {
+        public Builder targetArtifacts(Map<String,String> targetArtifacts) {
             this.targetArtifacts = Objects.requireNonNull(targetArtifacts);
             return this;
         }
 
-        public Builder setTargetRenders(Map<String,String> targetRenders) {
+        public Builder targetRenders(Map<String,String> targetRenders) {
             this.targetRenders = Objects.requireNonNull(targetRenders);
             return this;
         }
 
-        public Builder setTargetSnapshots(List<TargetResponse> targetSnapshots) {
+        public Builder targetSnapshots(List<TargetResponse> targetSnapshots) {
             this.targetSnapshots = Objects.requireNonNull(targetSnapshots);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

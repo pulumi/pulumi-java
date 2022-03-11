@@ -116,27 +116,27 @@ public final class GetBackupScheduleArgs extends io.pulumi.resources.InvokeArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setBackupPolicyName(String backupPolicyName) {
+        public Builder backupPolicyName(String backupPolicyName) {
             this.backupPolicyName = Objects.requireNonNull(backupPolicyName);
             return this;
         }
 
-        public Builder setBackupScheduleName(String backupScheduleName) {
+        public Builder backupScheduleName(String backupScheduleName) {
             this.backupScheduleName = Objects.requireNonNull(backupScheduleName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

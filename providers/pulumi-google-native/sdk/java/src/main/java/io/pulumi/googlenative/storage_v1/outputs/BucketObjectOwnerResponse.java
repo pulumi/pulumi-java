@@ -20,10 +20,10 @@ public final class BucketObjectOwnerResponse {
      */
     private final String entityId;
 
-    @OutputCustomType.Constructor({"entity","entityId"})
+    @OutputCustomType.Constructor
     private BucketObjectOwnerResponse(
-        String entity,
-        String entityId) {
+        @OutputCustomType.Parameter("entity") String entity,
+        @OutputCustomType.Parameter("entityId") String entityId) {
         this.entity = entity;
         this.entityId = entityId;
     }
@@ -65,12 +65,12 @@ public final class BucketObjectOwnerResponse {
     	      this.entityId = defaults.entityId;
         }
 
-        public Builder setEntity(String entity) {
+        public Builder entity(String entity) {
             this.entity = Objects.requireNonNull(entity);
             return this;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }

@@ -116,27 +116,27 @@ public final class GetApiIssueCommentArgs extends io.pulumi.resources.InvokeArgs
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setCommentId(String commentId) {
+        public Builder commentId(String commentId) {
             this.commentId = Objects.requireNonNull(commentId);
             return this;
         }
 
-        public Builder setIssueId(String issueId) {
+        public Builder issueId(String issueId) {
             this.issueId = Objects.requireNonNull(issueId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

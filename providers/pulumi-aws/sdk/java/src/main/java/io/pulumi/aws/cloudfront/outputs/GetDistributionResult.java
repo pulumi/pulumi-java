@@ -69,19 +69,19 @@ public final class GetDistributionResult {
     private final String status;
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"aliases","arn","domainName","enabled","etag","hostedZoneId","id","inProgressValidationBatches","lastModifiedTime","status","tags"})
+    @OutputCustomType.Constructor
     private GetDistributionResult(
-        List<String> aliases,
-        String arn,
-        String domainName,
-        Boolean enabled,
-        String etag,
-        String hostedZoneId,
-        String id,
-        Integer inProgressValidationBatches,
-        String lastModifiedTime,
-        String status,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("aliases") List<String> aliases,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inProgressValidationBatches") Integer inProgressValidationBatches,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.aliases = aliases;
         this.arn = arn;
         this.domainName = domainName;
@@ -212,57 +212,57 @@ public final class GetDistributionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAliases(List<String> aliases) {
+        public Builder aliases(List<String> aliases) {
             this.aliases = Objects.requireNonNull(aliases);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInProgressValidationBatches(Integer inProgressValidationBatches) {
+        public Builder inProgressValidationBatches(Integer inProgressValidationBatches) {
             this.inProgressValidationBatches = Objects.requireNonNull(inProgressValidationBatches);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

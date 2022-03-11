@@ -45,15 +45,15 @@ public final class HealthAlertResponse {
      */
     private final String severity;
 
-    @OutputCustomType.Constructor({"id","issue","lastDetected","name","raised","resolutionUri","severity"})
+    @OutputCustomType.Constructor
     private HealthAlertResponse(
-        String id,
-        String issue,
-        String lastDetected,
-        String name,
-        String raised,
-        String resolutionUri,
-        String severity) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issue") String issue,
+        @OutputCustomType.Parameter("lastDetected") String lastDetected,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("raised") String raised,
+        @OutputCustomType.Parameter("resolutionUri") String resolutionUri,
+        @OutputCustomType.Parameter("severity") String severity) {
         this.id = id;
         this.issue = issue;
         this.lastDetected = lastDetected;
@@ -145,37 +145,37 @@ public final class HealthAlertResponse {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIssue(String issue) {
+        public Builder issue(String issue) {
             this.issue = Objects.requireNonNull(issue);
             return this;
         }
 
-        public Builder setLastDetected(String lastDetected) {
+        public Builder lastDetected(String lastDetected) {
             this.lastDetected = Objects.requireNonNull(lastDetected);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRaised(String raised) {
+        public Builder raised(String raised) {
             this.raised = Objects.requireNonNull(raised);
             return this;
         }
 
-        public Builder setResolutionUri(String resolutionUri) {
+        public Builder resolutionUri(String resolutionUri) {
             this.resolutionUri = Objects.requireNonNull(resolutionUri);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }

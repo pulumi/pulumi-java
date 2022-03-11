@@ -32,13 +32,13 @@ public final class GetRuleResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"id","includedPermissions","name","stage","title"})
+    @OutputCustomType.Constructor
     private GetRuleResult(
-        String id,
-        List<String> includedPermissions,
-        String name,
-        String stage,
-        String title) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includedPermissions") List<String> includedPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("title") String title) {
         this.id = id;
         this.includedPermissions = includedPermissions;
         this.name = name;
@@ -106,27 +106,27 @@ public final class GetRuleResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncludedPermissions(List<String> includedPermissions) {
+        public Builder includedPermissions(List<String> includedPermissions) {
             this.includedPermissions = Objects.requireNonNull(includedPermissions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

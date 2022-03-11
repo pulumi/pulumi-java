@@ -155,72 +155,72 @@ public final class DatabaseInstanceSettingsBackupConfigurationGetArgs extends io
     	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
         }
 
-        public Builder setBackupRetentionSettings(@Nullable Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings) {
+        public Builder backupRetentionSettings(@Nullable Input<DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs> backupRetentionSettings) {
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
-        public Builder setBackupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs backupRetentionSettings) {
+        public Builder backupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsGetArgs backupRetentionSettings) {
             this.backupRetentionSettings = Input.ofNullable(backupRetentionSettings);
             return this;
         }
 
-        public Builder setBinaryLogEnabled(@Nullable Input<Boolean> binaryLogEnabled) {
+        public Builder binaryLogEnabled(@Nullable Input<Boolean> binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
-        public Builder setBinaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
+        public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = Input.ofNullable(binaryLogEnabled);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTransactionLogRetentionDays(@Nullable Input<Integer> transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(@Nullable Input<Integer> transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }
 
-        public Builder setTransactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = Input.ofNullable(transactionLogRetentionDays);
             return this;
         }

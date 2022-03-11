@@ -23,10 +23,10 @@ public final class GuestPoliciesPackageRepositoryGoo {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"name","url"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepositoryGoo(
-        String name,
-        String url) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }
@@ -71,12 +71,12 @@ public final class GuestPoliciesPackageRepositoryGoo {
     	      this.url = defaults.url;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

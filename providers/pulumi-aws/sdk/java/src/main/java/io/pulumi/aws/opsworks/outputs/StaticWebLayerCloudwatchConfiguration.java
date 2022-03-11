@@ -16,10 +16,10 @@ public final class StaticWebLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private StaticWebLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }
@@ -53,12 +53,12 @@ public final class StaticWebLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<StaticWebLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

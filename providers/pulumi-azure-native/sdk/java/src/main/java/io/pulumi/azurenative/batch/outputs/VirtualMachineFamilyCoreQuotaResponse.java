@@ -21,10 +21,10 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"coreQuota","name"})
+    @OutputCustomType.Constructor
     private VirtualMachineFamilyCoreQuotaResponse(
-        Integer coreQuota,
-        String name) {
+        @OutputCustomType.Parameter("coreQuota") Integer coreQuota,
+        @OutputCustomType.Parameter("name") String name) {
         this.coreQuota = coreQuota;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class VirtualMachineFamilyCoreQuotaResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCoreQuota(Integer coreQuota) {
+        public Builder coreQuota(Integer coreQuota) {
             this.coreQuota = Objects.requireNonNull(coreQuota);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

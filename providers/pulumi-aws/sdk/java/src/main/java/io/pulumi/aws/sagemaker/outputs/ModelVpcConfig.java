@@ -13,10 +13,10 @@ public final class ModelVpcConfig {
     private final List<String> securityGroupIds;
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnets"})
+    @OutputCustomType.Constructor
     private ModelVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
     }
@@ -50,12 +50,12 @@ public final class ModelVpcConfig {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

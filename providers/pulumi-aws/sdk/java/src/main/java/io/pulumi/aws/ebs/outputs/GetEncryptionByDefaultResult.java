@@ -21,10 +21,10 @@ public final class GetEncryptionByDefaultResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"enabled","id"})
+    @OutputCustomType.Constructor
     private GetEncryptionByDefaultResult(
-        Boolean enabled,
-        String id) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id) {
         this.enabled = enabled;
         this.id = id;
     }
@@ -66,12 +66,12 @@ public final class GetEncryptionByDefaultResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

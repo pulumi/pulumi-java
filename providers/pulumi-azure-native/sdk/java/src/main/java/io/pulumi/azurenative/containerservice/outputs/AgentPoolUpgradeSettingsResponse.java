@@ -17,8 +17,8 @@ public final class AgentPoolUpgradeSettingsResponse {
      */
     private final @Nullable String maxSurge;
 
-    @OutputCustomType.Constructor({"maxSurge"})
-    private AgentPoolUpgradeSettingsResponse(@Nullable String maxSurge) {
+    @OutputCustomType.Constructor
+    private AgentPoolUpgradeSettingsResponse(@OutputCustomType.Parameter("maxSurge") @Nullable String maxSurge) {
         this.maxSurge = maxSurge;
     }
 
@@ -50,7 +50,7 @@ public final class AgentPoolUpgradeSettingsResponse {
     	      this.maxSurge = defaults.maxSurge;
         }
 
-        public Builder setMaxSurge(@Nullable String maxSurge) {
+        public Builder maxSurge(@Nullable String maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }

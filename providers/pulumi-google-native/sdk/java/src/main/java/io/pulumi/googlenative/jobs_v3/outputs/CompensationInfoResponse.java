@@ -27,11 +27,11 @@ public final class CompensationInfoResponse {
      */
     private final List<CompensationEntryResponse> entries;
 
-    @OutputCustomType.Constructor({"annualizedBaseCompensationRange","annualizedTotalCompensationRange","entries"})
+    @OutputCustomType.Constructor
     private CompensationInfoResponse(
-        CompensationRangeResponse annualizedBaseCompensationRange,
-        CompensationRangeResponse annualizedTotalCompensationRange,
-        List<CompensationEntryResponse> entries) {
+        @OutputCustomType.Parameter("annualizedBaseCompensationRange") CompensationRangeResponse annualizedBaseCompensationRange,
+        @OutputCustomType.Parameter("annualizedTotalCompensationRange") CompensationRangeResponse annualizedTotalCompensationRange,
+        @OutputCustomType.Parameter("entries") List<CompensationEntryResponse> entries) {
         this.annualizedBaseCompensationRange = annualizedBaseCompensationRange;
         this.annualizedTotalCompensationRange = annualizedTotalCompensationRange;
         this.entries = entries;
@@ -83,17 +83,17 @@ public final class CompensationInfoResponse {
     	      this.entries = defaults.entries;
         }
 
-        public Builder setAnnualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
+        public Builder annualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
             this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange);
             return this;
         }
 
-        public Builder setAnnualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
+        public Builder annualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
             this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange);
             return this;
         }
 
-        public Builder setEntries(List<CompensationEntryResponse> entries) {
+        public Builder entries(List<CompensationEntryResponse> entries) {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }

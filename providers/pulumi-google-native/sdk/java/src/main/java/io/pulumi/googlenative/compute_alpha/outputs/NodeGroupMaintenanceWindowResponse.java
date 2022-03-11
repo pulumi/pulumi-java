@@ -26,11 +26,11 @@ public final class NodeGroupMaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","maintenanceDuration","startTime"})
+    @OutputCustomType.Constructor
     private NodeGroupMaintenanceWindowResponse(
-        String duration,
-        DurationResponse maintenanceDuration,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("maintenanceDuration") DurationResponse maintenanceDuration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.maintenanceDuration = maintenanceDuration;
         this.startTime = startTime;
@@ -82,17 +82,17 @@ public final class NodeGroupMaintenanceWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setMaintenanceDuration(DurationResponse maintenanceDuration) {
+        public Builder maintenanceDuration(DurationResponse maintenanceDuration) {
             this.maintenanceDuration = Objects.requireNonNull(maintenanceDuration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

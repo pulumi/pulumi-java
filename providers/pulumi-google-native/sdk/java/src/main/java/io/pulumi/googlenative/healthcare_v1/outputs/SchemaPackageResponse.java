@@ -39,13 +39,13 @@ public final class SchemaPackageResponse {
      */
     private final String unexpectedSegmentHandling;
 
-    @OutputCustomType.Constructor({"ignoreMinOccurs","schemas","schematizedParsingType","types","unexpectedSegmentHandling"})
+    @OutputCustomType.Constructor
     private SchemaPackageResponse(
-        Boolean ignoreMinOccurs,
-        List<Hl7SchemaConfigResponse> schemas,
-        String schematizedParsingType,
-        List<Hl7TypesConfigResponse> types,
-        String unexpectedSegmentHandling) {
+        @OutputCustomType.Parameter("ignoreMinOccurs") Boolean ignoreMinOccurs,
+        @OutputCustomType.Parameter("schemas") List<Hl7SchemaConfigResponse> schemas,
+        @OutputCustomType.Parameter("schematizedParsingType") String schematizedParsingType,
+        @OutputCustomType.Parameter("types") List<Hl7TypesConfigResponse> types,
+        @OutputCustomType.Parameter("unexpectedSegmentHandling") String unexpectedSegmentHandling) {
         this.ignoreMinOccurs = ignoreMinOccurs;
         this.schemas = schemas;
         this.schematizedParsingType = schematizedParsingType;
@@ -117,27 +117,27 @@ public final class SchemaPackageResponse {
     	      this.unexpectedSegmentHandling = defaults.unexpectedSegmentHandling;
         }
 
-        public Builder setIgnoreMinOccurs(Boolean ignoreMinOccurs) {
+        public Builder ignoreMinOccurs(Boolean ignoreMinOccurs) {
             this.ignoreMinOccurs = Objects.requireNonNull(ignoreMinOccurs);
             return this;
         }
 
-        public Builder setSchemas(List<Hl7SchemaConfigResponse> schemas) {
+        public Builder schemas(List<Hl7SchemaConfigResponse> schemas) {
             this.schemas = Objects.requireNonNull(schemas);
             return this;
         }
 
-        public Builder setSchematizedParsingType(String schematizedParsingType) {
+        public Builder schematizedParsingType(String schematizedParsingType) {
             this.schematizedParsingType = Objects.requireNonNull(schematizedParsingType);
             return this;
         }
 
-        public Builder setTypes(List<Hl7TypesConfigResponse> types) {
+        public Builder types(List<Hl7TypesConfigResponse> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setUnexpectedSegmentHandling(String unexpectedSegmentHandling) {
+        public Builder unexpectedSegmentHandling(String unexpectedSegmentHandling) {
             this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
             return this;
         }

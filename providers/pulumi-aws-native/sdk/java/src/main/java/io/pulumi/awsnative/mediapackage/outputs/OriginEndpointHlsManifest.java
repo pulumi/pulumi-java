@@ -65,18 +65,18 @@ public final class OriginEndpointHlsManifest {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"adMarkers","adTriggers","adsOnDeliveryRestrictions","id","includeIframeOnlyStream","manifestName","playlistType","playlistWindowSeconds","programDateTimeIntervalSeconds","url"})
+    @OutputCustomType.Constructor
     private OriginEndpointHlsManifest(
-        @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
-        @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
-        @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
-        String id,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
-        @Nullable Integer playlistWindowSeconds,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("adMarkers") @Nullable OriginEndpointHlsManifestAdMarkers adMarkers,
+        @OutputCustomType.Parameter("adTriggers") @Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers,
+        @OutputCustomType.Parameter("adsOnDeliveryRestrictions") @Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("playlistType") @Nullable OriginEndpointHlsManifestPlaylistType playlistType,
+        @OutputCustomType.Parameter("playlistWindowSeconds") @Nullable Integer playlistWindowSeconds,
+        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.adMarkers = adMarkers;
         this.adTriggers = adTriggers;
         this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
@@ -194,52 +194,52 @@ public final class OriginEndpointHlsManifest {
     	      this.url = defaults.url;
         }
 
-        public Builder setAdMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable OriginEndpointHlsManifestAdMarkers adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setAdTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
+        public Builder adTriggers(@Nullable List<OriginEndpointHlsManifestAdTriggersItem> adTriggers) {
             this.adTriggers = adTriggers;
             return this;
         }
 
-        public Builder setAdsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
+        public Builder adsOnDeliveryRestrictions(@Nullable OriginEndpointAdsOnDeliveryRestrictions adsOnDeliveryRestrictions) {
             this.adsOnDeliveryRestrictions = adsOnDeliveryRestrictions;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setPlaylistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
+        public Builder playlistType(@Nullable OriginEndpointHlsManifestPlaylistType playlistType) {
             this.playlistType = playlistType;
             return this;
         }
 
-        public Builder setPlaylistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
+        public Builder playlistWindowSeconds(@Nullable Integer playlistWindowSeconds) {
             this.playlistWindowSeconds = playlistWindowSeconds;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

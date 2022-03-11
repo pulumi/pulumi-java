@@ -33,12 +33,12 @@ public final class WindowsPropertiesResponse {
      */
     private final @Nullable String rebootSetting;
 
-    @OutputCustomType.Constructor({"excludedKbNumbers","includedKbNumbers","includedUpdateClassifications","rebootSetting"})
+    @OutputCustomType.Constructor
     private WindowsPropertiesResponse(
-        @Nullable List<String> excludedKbNumbers,
-        @Nullable List<String> includedKbNumbers,
-        @Nullable String includedUpdateClassifications,
-        @Nullable String rebootSetting) {
+        @OutputCustomType.Parameter("excludedKbNumbers") @Nullable List<String> excludedKbNumbers,
+        @OutputCustomType.Parameter("includedKbNumbers") @Nullable List<String> includedKbNumbers,
+        @OutputCustomType.Parameter("includedUpdateClassifications") @Nullable String includedUpdateClassifications,
+        @OutputCustomType.Parameter("rebootSetting") @Nullable String rebootSetting) {
         this.excludedKbNumbers = excludedKbNumbers;
         this.includedKbNumbers = includedKbNumbers;
         this.includedUpdateClassifications = includedUpdateClassifications;
@@ -100,22 +100,22 @@ public final class WindowsPropertiesResponse {
     	      this.rebootSetting = defaults.rebootSetting;
         }
 
-        public Builder setExcludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
+        public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
             this.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
 
-        public Builder setIncludedKbNumbers(@Nullable List<String> includedKbNumbers) {
+        public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
             this.includedKbNumbers = includedKbNumbers;
             return this;
         }
 
-        public Builder setIncludedUpdateClassifications(@Nullable String includedUpdateClassifications) {
+        public Builder includedUpdateClassifications(@Nullable String includedUpdateClassifications) {
             this.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
 
-        public Builder setRebootSetting(@Nullable String rebootSetting) {
+        public Builder rebootSetting(@Nullable String rebootSetting) {
             this.rebootSetting = rebootSetting;
             return this;
         }

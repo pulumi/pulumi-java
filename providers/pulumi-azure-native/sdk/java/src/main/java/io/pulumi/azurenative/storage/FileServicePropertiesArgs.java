@@ -137,62 +137,62 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     	      this.shareDeleteRetentionPolicy = defaults.shareDeleteRetentionPolicy;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setCors(@Nullable Input<CorsRulesArgs> cors) {
+        public Builder cors(@Nullable Input<CorsRulesArgs> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable CorsRulesArgs cors) {
+        public Builder cors(@Nullable CorsRulesArgs cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setFileServicesName(@Nullable Input<String> fileServicesName) {
+        public Builder fileServicesName(@Nullable Input<String> fileServicesName) {
             this.fileServicesName = fileServicesName;
             return this;
         }
 
-        public Builder setFileServicesName(@Nullable String fileServicesName) {
+        public Builder fileServicesName(@Nullable String fileServicesName) {
             this.fileServicesName = Input.ofNullable(fileServicesName);
             return this;
         }
 
-        public Builder setProtocolSettings(@Nullable Input<ProtocolSettingsArgs> protocolSettings) {
+        public Builder protocolSettings(@Nullable Input<ProtocolSettingsArgs> protocolSettings) {
             this.protocolSettings = protocolSettings;
             return this;
         }
 
-        public Builder setProtocolSettings(@Nullable ProtocolSettingsArgs protocolSettings) {
+        public Builder protocolSettings(@Nullable ProtocolSettingsArgs protocolSettings) {
             this.protocolSettings = Input.ofNullable(protocolSettings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShareDeleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy) {
+        public Builder shareDeleteRetentionPolicy(@Nullable Input<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy) {
             this.shareDeleteRetentionPolicy = shareDeleteRetentionPolicy;
             return this;
         }
 
-        public Builder setShareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
+        public Builder shareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
             this.shareDeleteRetentionPolicy = Input.ofNullable(shareDeleteRetentionPolicy);
             return this;
         }

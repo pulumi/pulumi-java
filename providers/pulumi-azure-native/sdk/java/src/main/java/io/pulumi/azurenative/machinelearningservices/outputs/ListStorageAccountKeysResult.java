@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ListStorageAccountKeysResult {
     private final String userStorageKey;
 
-    @OutputCustomType.Constructor({"userStorageKey"})
-    private ListStorageAccountKeysResult(String userStorageKey) {
+    @OutputCustomType.Constructor
+    private ListStorageAccountKeysResult(@OutputCustomType.Parameter("userStorageKey") String userStorageKey) {
         this.userStorageKey = userStorageKey;
     }
 
@@ -40,7 +40,7 @@ public final class ListStorageAccountKeysResult {
     	      this.userStorageKey = defaults.userStorageKey;
         }
 
-        public Builder setUserStorageKey(String userStorageKey) {
+        public Builder userStorageKey(String userStorageKey) {
             this.userStorageKey = Objects.requireNonNull(userStorageKey);
             return this;
         }

@@ -28,11 +28,11 @@ public final class DnsConfigurationResponse {
      */
     private final @Nullable String searchDomains;
 
-    @OutputCustomType.Constructor({"nameServers","options","searchDomains"})
+    @OutputCustomType.Constructor
     private DnsConfigurationResponse(
-        List<String> nameServers,
-        @Nullable String options,
-        @Nullable String searchDomains) {
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("options") @Nullable String options,
+        @OutputCustomType.Parameter("searchDomains") @Nullable String searchDomains) {
         this.nameServers = nameServers;
         this.options = options;
         this.searchDomains = searchDomains;
@@ -84,17 +84,17 @@ public final class DnsConfigurationResponse {
     	      this.searchDomains = defaults.searchDomains;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setOptions(@Nullable String options) {
+        public Builder options(@Nullable String options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSearchDomains(@Nullable String searchDomains) {
+        public Builder searchDomains(@Nullable String searchDomains) {
             this.searchDomains = searchDomains;
             return this;
         }

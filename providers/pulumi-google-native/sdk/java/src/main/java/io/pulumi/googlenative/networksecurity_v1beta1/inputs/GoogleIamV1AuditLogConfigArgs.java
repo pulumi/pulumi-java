@@ -76,22 +76,22 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
     	      this.logType = defaults.logType;
         }
 
-        public Builder setExemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable Input<List<String>> exemptedMembers) {
             this.exemptedMembers = exemptedMembers;
             return this;
         }
 
-        public Builder setExemptedMembers(@Nullable List<String> exemptedMembers) {
+        public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
             this.exemptedMembers = Input.ofNullable(exemptedMembers);
             return this;
         }
 
-        public Builder setLogType(@Nullable Input<GoogleIamV1AuditLogConfigLogType> logType) {
+        public Builder logType(@Nullable Input<GoogleIamV1AuditLogConfigLogType> logType) {
             this.logType = logType;
             return this;
         }
 
-        public Builder setLogType(@Nullable GoogleIamV1AuditLogConfigLogType logType) {
+        public Builder logType(@Nullable GoogleIamV1AuditLogConfigLogType logType) {
             this.logType = Input.ofNullable(logType);
             return this;
         }

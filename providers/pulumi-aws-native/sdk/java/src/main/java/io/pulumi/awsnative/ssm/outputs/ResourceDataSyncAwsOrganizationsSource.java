@@ -14,10 +14,10 @@ public final class ResourceDataSyncAwsOrganizationsSource {
     private final String organizationSourceType;
     private final @Nullable List<String> organizationalUnits;
 
-    @OutputCustomType.Constructor({"organizationSourceType","organizationalUnits"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncAwsOrganizationsSource(
-        String organizationSourceType,
-        @Nullable List<String> organizationalUnits) {
+        @OutputCustomType.Parameter("organizationSourceType") String organizationSourceType,
+        @OutputCustomType.Parameter("organizationalUnits") @Nullable List<String> organizationalUnits) {
         this.organizationSourceType = organizationSourceType;
         this.organizationalUnits = organizationalUnits;
     }
@@ -51,12 +51,12 @@ public final class ResourceDataSyncAwsOrganizationsSource {
     	      this.organizationalUnits = defaults.organizationalUnits;
         }
 
-        public Builder setOrganizationSourceType(String organizationSourceType) {
+        public Builder organizationSourceType(String organizationSourceType) {
             this.organizationSourceType = Objects.requireNonNull(organizationSourceType);
             return this;
         }
 
-        public Builder setOrganizationalUnits(@Nullable List<String> organizationalUnits) {
+        public Builder organizationalUnits(@Nullable List<String> organizationalUnits) {
             this.organizationalUnits = organizationalUnits;
             return this;
         }

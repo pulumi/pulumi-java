@@ -23,10 +23,10 @@ public final class WebChatChannelPropertiesResponse {
      */
     private final String webChatEmbedCode;
 
-    @OutputCustomType.Constructor({"sites","webChatEmbedCode"})
+    @OutputCustomType.Constructor
     private WebChatChannelPropertiesResponse(
-        @Nullable List<WebChatSiteResponse> sites,
-        String webChatEmbedCode) {
+        @OutputCustomType.Parameter("sites") @Nullable List<WebChatSiteResponse> sites,
+        @OutputCustomType.Parameter("webChatEmbedCode") String webChatEmbedCode) {
         this.sites = sites;
         this.webChatEmbedCode = webChatEmbedCode;
     }
@@ -68,12 +68,12 @@ public final class WebChatChannelPropertiesResponse {
     	      this.webChatEmbedCode = defaults.webChatEmbedCode;
         }
 
-        public Builder setSites(@Nullable List<WebChatSiteResponse> sites) {
+        public Builder sites(@Nullable List<WebChatSiteResponse> sites) {
             this.sites = sites;
             return this;
         }
 
-        public Builder setWebChatEmbedCode(String webChatEmbedCode) {
+        public Builder webChatEmbedCode(String webChatEmbedCode) {
             this.webChatEmbedCode = Objects.requireNonNull(webChatEmbedCode);
             return this;
         }

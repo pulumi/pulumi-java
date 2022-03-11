@@ -27,11 +27,11 @@ public final class InferenceContainerPropertiesResponse {
      */
     private final @Nullable RouteResponse scoringRoute;
 
-    @OutputCustomType.Constructor({"livenessRoute","readinessRoute","scoringRoute"})
+    @OutputCustomType.Constructor
     private InferenceContainerPropertiesResponse(
-        @Nullable RouteResponse livenessRoute,
-        @Nullable RouteResponse readinessRoute,
-        @Nullable RouteResponse scoringRoute) {
+        @OutputCustomType.Parameter("livenessRoute") @Nullable RouteResponse livenessRoute,
+        @OutputCustomType.Parameter("readinessRoute") @Nullable RouteResponse readinessRoute,
+        @OutputCustomType.Parameter("scoringRoute") @Nullable RouteResponse scoringRoute) {
         this.livenessRoute = livenessRoute;
         this.readinessRoute = readinessRoute;
         this.scoringRoute = scoringRoute;
@@ -83,17 +83,17 @@ public final class InferenceContainerPropertiesResponse {
     	      this.scoringRoute = defaults.scoringRoute;
         }
 
-        public Builder setLivenessRoute(@Nullable RouteResponse livenessRoute) {
+        public Builder livenessRoute(@Nullable RouteResponse livenessRoute) {
             this.livenessRoute = livenessRoute;
             return this;
         }
 
-        public Builder setReadinessRoute(@Nullable RouteResponse readinessRoute) {
+        public Builder readinessRoute(@Nullable RouteResponse readinessRoute) {
             this.readinessRoute = readinessRoute;
             return this;
         }
 
-        public Builder setScoringRoute(@Nullable RouteResponse scoringRoute) {
+        public Builder scoringRoute(@Nullable RouteResponse scoringRoute) {
             this.scoringRoute = scoringRoute;
             return this;
         }

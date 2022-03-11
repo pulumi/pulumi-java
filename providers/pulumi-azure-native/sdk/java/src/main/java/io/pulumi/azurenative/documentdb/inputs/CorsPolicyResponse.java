@@ -123,27 +123,27 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
         }
 
-        public Builder setAllowedHeaders(@Nullable String allowedHeaders) {
+        public Builder allowedHeaders(@Nullable String allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedMethods(@Nullable String allowedMethods) {
+        public Builder allowedMethods(@Nullable String allowedMethods) {
             this.allowedMethods = allowedMethods;
             return this;
         }
 
-        public Builder setAllowedOrigins(String allowedOrigins) {
+        public Builder allowedOrigins(String allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setExposedHeaders(@Nullable String exposedHeaders) {
+        public Builder exposedHeaders(@Nullable String exposedHeaders) {
             this.exposedHeaders = exposedHeaders;
             return this;
         }
 
-        public Builder setMaxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
+        public Builder maxAgeInSeconds(@Nullable Double maxAgeInSeconds) {
             this.maxAgeInSeconds = maxAgeInSeconds;
             return this;
         }

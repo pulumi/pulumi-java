@@ -40,13 +40,13 @@ public final class FrontDoorManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"exclusions","ruleGroupOverrides","ruleSetAction","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleSetResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        @Nullable String ruleSetAction,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @OutputCustomType.Parameter("ruleSetAction") @Nullable String ruleSetAction,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.exclusions = exclusions;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetAction = ruleSetAction;
@@ -118,27 +118,27 @@ public final class FrontDoorManagedRuleSetResponse {
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setExclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
+        public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable List<FrontDoorManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
-        public Builder setRuleSetAction(@Nullable String ruleSetAction) {
+        public Builder ruleSetAction(@Nullable String ruleSetAction) {
             this.ruleSetAction = ruleSetAction;
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }

@@ -15,8 +15,8 @@ public final class RuleGroupActivatedRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private RuleGroupActivatedRuleAction(String type) {
+    @OutputCustomType.Constructor
+    private RuleGroupActivatedRuleAction(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupActivatedRuleAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

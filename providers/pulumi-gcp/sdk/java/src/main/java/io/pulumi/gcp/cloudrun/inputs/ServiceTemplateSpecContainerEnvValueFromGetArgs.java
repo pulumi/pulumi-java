@@ -53,12 +53,12 @@ public final class ServiceTemplateSpecContainerEnvValueFromGetArgs extends io.pu
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setSecretKeyRef(Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> secretKeyRef) {
+        public Builder secretKeyRef(Input<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs> secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
 
-        public Builder setSecretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs secretKeyRef) {
+        public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRefGetArgs secretKeyRef) {
             this.secretKeyRef = Input.of(Objects.requireNonNull(secretKeyRef));
             return this;
         }

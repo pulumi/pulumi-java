@@ -31,12 +31,12 @@ public final class ManagedIntegrationRuntimeErrorResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"code","message","parameters","time"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeErrorResponse(
-        String code,
-        String message,
-        List<String> parameters,
-        String time) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("parameters") List<String> parameters,
+        @OutputCustomType.Parameter("time") String time) {
         this.code = code;
         this.message = message;
         this.parameters = parameters;
@@ -98,22 +98,22 @@ public final class ManagedIntegrationRuntimeErrorResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setParameters(List<String> parameters) {
+        public Builder parameters(List<String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

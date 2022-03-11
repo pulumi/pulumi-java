@@ -92,32 +92,32 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
     	      this.timings = defaults.timings;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPaths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Input<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = Input.ofNullable(paths);
             return this;
         }
 
-        public Builder setTimings(@Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
+        public Builder timings(@Nullable Input<List<TriggerBuildArtifactsObjectsTimingArgs>> timings) {
             this.timings = timings;
             return this;
         }
 
-        public Builder setTimings(@Nullable List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
+        public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
             this.timings = Input.ofNullable(timings);
             return this;
         }

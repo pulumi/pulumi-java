@@ -21,10 +21,10 @@ public final class VoiceConnectorGroupConnector {
      */
     private final String voiceConnectorId;
 
-    @OutputCustomType.Constructor({"priority","voiceConnectorId"})
+    @OutputCustomType.Constructor
     private VoiceConnectorGroupConnector(
-        Integer priority,
-        String voiceConnectorId) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("voiceConnectorId") String voiceConnectorId) {
         this.priority = priority;
         this.voiceConnectorId = voiceConnectorId;
     }
@@ -66,12 +66,12 @@ public final class VoiceConnectorGroupConnector {
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setVoiceConnectorId(String voiceConnectorId) {
+        public Builder voiceConnectorId(String voiceConnectorId) {
             this.voiceConnectorId = Objects.requireNonNull(voiceConnectorId);
             return this;
         }

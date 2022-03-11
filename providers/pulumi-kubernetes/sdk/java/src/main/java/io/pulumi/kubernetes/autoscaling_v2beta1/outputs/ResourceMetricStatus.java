@@ -28,11 +28,11 @@ public final class ResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"currentAverageUtilization","currentAverageValue","name"})
+    @OutputCustomType.Constructor
     private ResourceMetricStatus(
-        @Nullable Integer currentAverageUtilization,
-        String currentAverageValue,
-        String name) {
+        @OutputCustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
+        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @OutputCustomType.Parameter("name") String name) {
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = currentAverageValue;
         this.name = name;
@@ -84,17 +84,17 @@ public final class ResourceMetricStatus {
     	      this.name = defaults.name;
         }
 
-        public Builder setCurrentAverageUtilization(@Nullable Integer currentAverageUtilization) {
+        public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
 
-        public Builder setCurrentAverageValue(String currentAverageValue) {
+        public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -104,25 +104,25 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceUrl;
 
-    @OutputCustomType.Constructor({"authorizations","createdBy","createdDateTime","id","location","managedResourceGroupId","name","parameters","provisioningState","sku","storageAccountIdentity","tags","type","uiDefinitionUri","updatedBy","workspaceId","workspaceUrl"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
-        @Nullable CreatedByResponse createdBy,
-        String createdDateTime,
-        String id,
-        String location,
-        String managedResourceGroupId,
-        String name,
-        @Nullable WorkspaceCustomParametersResponse parameters,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String uiDefinitionUri,
-        @Nullable CreatedByResponse updatedBy,
-        String workspaceId,
-        String workspaceUrl) {
+        @OutputCustomType.Parameter("authorizations") @Nullable List<WorkspaceProviderAuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("createdBy") @Nullable CreatedByResponse createdBy,
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedResourceGroupId") String managedResourceGroupId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable WorkspaceCustomParametersResponse parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("storageAccountIdentity") @Nullable ManagedIdentityConfigurationResponse storageAccountIdentity,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uiDefinitionUri") @Nullable String uiDefinitionUri,
+        @OutputCustomType.Parameter("updatedBy") @Nullable CreatedByResponse updatedBy,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceUrl") String workspaceUrl) {
         this.authorizations = authorizations;
         this.createdBy = createdBy;
         this.createdDateTime = createdDateTime;
@@ -314,87 +314,87 @@ public final class GetWorkspaceResult {
     	      this.workspaceUrl = defaults.workspaceUrl;
         }
 
-        public Builder setAuthorizations(@Nullable List<WorkspaceProviderAuthorizationResponse> authorizations) {
+        public Builder authorizations(@Nullable List<WorkspaceProviderAuthorizationResponse> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable CreatedByResponse createdBy) {
+        public Builder createdBy(@Nullable CreatedByResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedDateTime(String createdDateTime) {
+        public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagedResourceGroupId(String managedResourceGroupId) {
+        public Builder managedResourceGroupId(String managedResourceGroupId) {
             this.managedResourceGroupId = Objects.requireNonNull(managedResourceGroupId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable WorkspaceCustomParametersResponse parameters) {
+        public Builder parameters(@Nullable WorkspaceCustomParametersResponse parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStorageAccountIdentity(@Nullable ManagedIdentityConfigurationResponse storageAccountIdentity) {
+        public Builder storageAccountIdentity(@Nullable ManagedIdentityConfigurationResponse storageAccountIdentity) {
             this.storageAccountIdentity = storageAccountIdentity;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUiDefinitionUri(@Nullable String uiDefinitionUri) {
+        public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
             this.uiDefinitionUri = uiDefinitionUri;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable CreatedByResponse updatedBy) {
+        public Builder updatedBy(@Nullable CreatedByResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceUrl(String workspaceUrl) {
+        public Builder workspaceUrl(String workspaceUrl) {
             this.workspaceUrl = Objects.requireNonNull(workspaceUrl);
             return this;
         }

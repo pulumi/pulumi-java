@@ -15,8 +15,8 @@ public final class PacketMirroringCollectorIlb {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private PacketMirroringCollectorIlb(String url) {
+    @OutputCustomType.Constructor
+    private PacketMirroringCollectorIlb(@OutputCustomType.Parameter("url") String url) {
         this.url = url;
     }
 
@@ -48,7 +48,7 @@ public final class PacketMirroringCollectorIlb {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

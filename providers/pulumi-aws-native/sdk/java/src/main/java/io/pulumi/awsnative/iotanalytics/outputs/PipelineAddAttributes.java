@@ -16,11 +16,11 @@ public final class PipelineAddAttributes {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"attributes","name","next"})
+    @OutputCustomType.Constructor
     private PipelineAddAttributes(
-        Object attributes,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("attributes") Object attributes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.attributes = attributes;
         this.name = name;
         this.next = next;
@@ -60,17 +60,17 @@ public final class PipelineAddAttributes {
     	      this.next = defaults.next;
         }
 
-        public Builder setAttributes(Object attributes) {
+        public Builder attributes(Object attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

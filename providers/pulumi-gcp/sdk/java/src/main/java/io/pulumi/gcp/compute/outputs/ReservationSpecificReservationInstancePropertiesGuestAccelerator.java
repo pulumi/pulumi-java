@@ -25,10 +25,10 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      */
     private final String acceleratorType;
 
-    @OutputCustomType.Constructor({"acceleratorCount","acceleratorType"})
+    @OutputCustomType.Constructor
     private ReservationSpecificReservationInstancePropertiesGuestAccelerator(
-        Integer acceleratorCount,
-        String acceleratorType) {
+        @OutputCustomType.Parameter("acceleratorCount") Integer acceleratorCount,
+        @OutputCustomType.Parameter("acceleratorType") String acceleratorType) {
         this.acceleratorCount = acceleratorCount;
         this.acceleratorType = acceleratorType;
     }
@@ -74,12 +74,12 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder setAcceleratorCount(Integer acceleratorCount) {
+        public Builder acceleratorCount(Integer acceleratorCount) {
             this.acceleratorCount = Objects.requireNonNull(acceleratorCount);
             return this;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }

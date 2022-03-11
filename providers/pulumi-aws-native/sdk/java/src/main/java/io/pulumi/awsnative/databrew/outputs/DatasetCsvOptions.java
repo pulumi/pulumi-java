@@ -15,10 +15,10 @@ public final class DatasetCsvOptions {
     private final @Nullable String delimiter;
     private final @Nullable Boolean headerRow;
 
-    @OutputCustomType.Constructor({"delimiter","headerRow"})
+    @OutputCustomType.Constructor
     private DatasetCsvOptions(
-        @Nullable String delimiter,
-        @Nullable Boolean headerRow) {
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("headerRow") @Nullable Boolean headerRow) {
         this.delimiter = delimiter;
         this.headerRow = headerRow;
     }
@@ -52,12 +52,12 @@ public final class DatasetCsvOptions {
     	      this.headerRow = defaults.headerRow;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setHeaderRow(@Nullable Boolean headerRow) {
+        public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = headerRow;
             return this;
         }

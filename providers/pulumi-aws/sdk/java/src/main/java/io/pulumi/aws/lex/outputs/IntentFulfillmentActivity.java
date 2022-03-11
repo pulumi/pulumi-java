@@ -25,10 +25,10 @@ public final class IntentFulfillmentActivity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"codeHook","type"})
+    @OutputCustomType.Constructor
     private IntentFulfillmentActivity(
-        @Nullable IntentFulfillmentActivityCodeHook codeHook,
-        String type) {
+        @OutputCustomType.Parameter("codeHook") @Nullable IntentFulfillmentActivityCodeHook codeHook,
+        @OutputCustomType.Parameter("type") String type) {
         this.codeHook = codeHook;
         this.type = type;
     }
@@ -72,12 +72,12 @@ public final class IntentFulfillmentActivity {
     	      this.type = defaults.type;
         }
 
-        public Builder setCodeHook(@Nullable IntentFulfillmentActivityCodeHook codeHook) {
+        public Builder codeHook(@Nullable IntentFulfillmentActivityCodeHook codeHook) {
             this.codeHook = codeHook;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

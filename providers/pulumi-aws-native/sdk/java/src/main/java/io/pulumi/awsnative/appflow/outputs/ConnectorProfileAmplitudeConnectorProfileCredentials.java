@@ -16,10 +16,10 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
     private final String apiKey;
     private final String secretKey;
 
-    @OutputCustomType.Constructor({"apiKey","secretKey"})
+    @OutputCustomType.Constructor
     private ConnectorProfileAmplitudeConnectorProfileCredentials(
-        String apiKey,
-        String secretKey) {
+        @OutputCustomType.Parameter("apiKey") String apiKey,
+        @OutputCustomType.Parameter("secretKey") String secretKey) {
         this.apiKey = apiKey;
         this.secretKey = secretKey;
     }
@@ -57,12 +57,12 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentials {
     	      this.secretKey = defaults.secretKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setSecretKey(String secretKey) {
+        public Builder secretKey(String secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }

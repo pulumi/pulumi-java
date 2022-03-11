@@ -23,10 +23,10 @@ public final class ScopeResponse {
      */
     private final @Nullable ScopeNamespaceResponse namespace;
 
-    @OutputCustomType.Constructor({"cluster","namespace"})
+    @OutputCustomType.Constructor
     private ScopeResponse(
-        @Nullable ScopeClusterResponse cluster,
-        @Nullable ScopeNamespaceResponse namespace) {
+        @OutputCustomType.Parameter("cluster") @Nullable ScopeClusterResponse cluster,
+        @OutputCustomType.Parameter("namespace") @Nullable ScopeNamespaceResponse namespace) {
         this.cluster = cluster;
         this.namespace = namespace;
     }
@@ -68,12 +68,12 @@ public final class ScopeResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setCluster(@Nullable ScopeClusterResponse cluster) {
+        public Builder cluster(@Nullable ScopeClusterResponse cluster) {
             this.cluster = cluster;
             return this;
         }
 
-        public Builder setNamespace(@Nullable ScopeNamespaceResponse namespace) {
+        public Builder namespace(@Nullable ScopeNamespaceResponse namespace) {
             this.namespace = namespace;
             return this;
         }

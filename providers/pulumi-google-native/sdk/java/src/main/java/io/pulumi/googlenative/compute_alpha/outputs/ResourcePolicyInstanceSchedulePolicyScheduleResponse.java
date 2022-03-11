@@ -15,8 +15,8 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
      */
     private final String schedule;
 
-    @OutputCustomType.Constructor({"schedule"})
-    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(String schedule) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyInstanceSchedulePolicyScheduleResponse(@OutputCustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 
@@ -48,7 +48,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

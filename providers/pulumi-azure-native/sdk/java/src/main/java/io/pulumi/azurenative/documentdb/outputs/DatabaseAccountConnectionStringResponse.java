@@ -20,10 +20,10 @@ public final class DatabaseAccountConnectionStringResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"connectionString","description"})
+    @OutputCustomType.Constructor
     private DatabaseAccountConnectionStringResponse(
-        String connectionString,
-        String description) {
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("description") String description) {
         this.connectionString = connectionString;
         this.description = description;
     }
@@ -65,12 +65,12 @@ public final class DatabaseAccountConnectionStringResponse {
     	      this.description = defaults.description;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

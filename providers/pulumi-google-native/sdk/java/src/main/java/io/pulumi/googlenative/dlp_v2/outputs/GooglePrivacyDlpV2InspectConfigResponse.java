@@ -51,15 +51,15 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
      */
     private final List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet;
 
-    @OutputCustomType.Constructor({"customInfoTypes","excludeInfoTypes","includeQuote","infoTypes","limits","minLikelihood","ruleSet"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectConfigResponse(
-        List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
-        Boolean excludeInfoTypes,
-        Boolean includeQuote,
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        GooglePrivacyDlpV2FindingLimitsResponse limits,
-        String minLikelihood,
-        List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
+        @OutputCustomType.Parameter("customInfoTypes") List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes,
+        @OutputCustomType.Parameter("excludeInfoTypes") Boolean excludeInfoTypes,
+        @OutputCustomType.Parameter("includeQuote") Boolean includeQuote,
+        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @OutputCustomType.Parameter("limits") GooglePrivacyDlpV2FindingLimitsResponse limits,
+        @OutputCustomType.Parameter("minLikelihood") String minLikelihood,
+        @OutputCustomType.Parameter("ruleSet") List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
         this.customInfoTypes = customInfoTypes;
         this.excludeInfoTypes = excludeInfoTypes;
         this.includeQuote = includeQuote;
@@ -151,37 +151,37 @@ public final class GooglePrivacyDlpV2InspectConfigResponse {
     	      this.ruleSet = defaults.ruleSet;
         }
 
-        public Builder setCustomInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes) {
+        public Builder customInfoTypes(List<GooglePrivacyDlpV2CustomInfoTypeResponse> customInfoTypes) {
             this.customInfoTypes = Objects.requireNonNull(customInfoTypes);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(Boolean excludeInfoTypes) {
+        public Builder excludeInfoTypes(Boolean excludeInfoTypes) {
             this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
             return this;
         }
 
-        public Builder setIncludeQuote(Boolean includeQuote) {
+        public Builder includeQuote(Boolean includeQuote) {
             this.includeQuote = Objects.requireNonNull(includeQuote);
             return this;
         }
 
-        public Builder setInfoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
-        public Builder setLimits(GooglePrivacyDlpV2FindingLimitsResponse limits) {
+        public Builder limits(GooglePrivacyDlpV2FindingLimitsResponse limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
-        public Builder setMinLikelihood(String minLikelihood) {
+        public Builder minLikelihood(String minLikelihood) {
             this.minLikelihood = Objects.requireNonNull(minLikelihood);
             return this;
         }
 
-        public Builder setRuleSet(List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
+        public Builder ruleSet(List<GooglePrivacyDlpV2InspectionRuleSetResponse> ruleSet) {
             this.ruleSet = Objects.requireNonNull(ruleSet);
             return this;
         }

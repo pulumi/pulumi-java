@@ -40,13 +40,13 @@ public final class AutomationRuleTriggeringLogicResponse {
      */
     private final String triggersWhen;
 
-    @OutputCustomType.Constructor({"conditions","expirationTimeUtc","isEnabled","triggersOn","triggersWhen"})
+    @OutputCustomType.Constructor
     private AutomationRuleTriggeringLogicResponse(
-        @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
-        @Nullable String expirationTimeUtc,
-        Boolean isEnabled,
-        String triggersOn,
-        String triggersWhen) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<AutomationRulePropertyValuesConditionResponse> conditions,
+        @OutputCustomType.Parameter("expirationTimeUtc") @Nullable String expirationTimeUtc,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("triggersOn") String triggersOn,
+        @OutputCustomType.Parameter("triggersWhen") String triggersWhen) {
         this.conditions = conditions;
         this.expirationTimeUtc = expirationTimeUtc;
         this.isEnabled = isEnabled;
@@ -118,27 +118,27 @@ public final class AutomationRuleTriggeringLogicResponse {
     	      this.triggersWhen = defaults.triggersWhen;
         }
 
-        public Builder setConditions(@Nullable List<AutomationRulePropertyValuesConditionResponse> conditions) {
+        public Builder conditions(@Nullable List<AutomationRulePropertyValuesConditionResponse> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setExpirationTimeUtc(@Nullable String expirationTimeUtc) {
+        public Builder expirationTimeUtc(@Nullable String expirationTimeUtc) {
             this.expirationTimeUtc = expirationTimeUtc;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setTriggersOn(String triggersOn) {
+        public Builder triggersOn(String triggersOn) {
             this.triggersOn = Objects.requireNonNull(triggersOn);
             return this;
         }
 
-        public Builder setTriggersWhen(String triggersWhen) {
+        public Builder triggersWhen(String triggersWhen) {
             this.triggersWhen = Objects.requireNonNull(triggersWhen);
             return this;
         }

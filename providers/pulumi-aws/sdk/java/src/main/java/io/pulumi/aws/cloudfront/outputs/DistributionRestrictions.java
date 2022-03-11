@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DistributionRestrictions {
     private final DistributionRestrictionsGeoRestriction geoRestriction;
 
-    @OutputCustomType.Constructor({"geoRestriction"})
-    private DistributionRestrictions(DistributionRestrictionsGeoRestriction geoRestriction) {
+    @OutputCustomType.Constructor
+    private DistributionRestrictions(@OutputCustomType.Parameter("geoRestriction") DistributionRestrictionsGeoRestriction geoRestriction) {
         this.geoRestriction = geoRestriction;
     }
 
@@ -40,7 +40,7 @@ public final class DistributionRestrictions {
     	      this.geoRestriction = defaults.geoRestriction;
         }
 
-        public Builder setGeoRestriction(DistributionRestrictionsGeoRestriction geoRestriction) {
+        public Builder geoRestriction(DistributionRestrictionsGeoRestriction geoRestriction) {
             this.geoRestriction = Objects.requireNonNull(geoRestriction);
             return this;
         }

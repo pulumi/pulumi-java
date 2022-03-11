@@ -92,32 +92,32 @@ public final class SolutionDetailsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.groupCount = defaults.groupCount;
         }
 
-        public Builder setAssessmentCount(@Nullable Input<Integer> assessmentCount) {
+        public Builder assessmentCount(@Nullable Input<Integer> assessmentCount) {
             this.assessmentCount = assessmentCount;
             return this;
         }
 
-        public Builder setAssessmentCount(@Nullable Integer assessmentCount) {
+        public Builder assessmentCount(@Nullable Integer assessmentCount) {
             this.assessmentCount = Input.ofNullable(assessmentCount);
             return this;
         }
 
-        public Builder setExtendedDetails(@Nullable Input<Map<String,String>> extendedDetails) {
+        public Builder extendedDetails(@Nullable Input<Map<String,String>> extendedDetails) {
             this.extendedDetails = extendedDetails;
             return this;
         }
 
-        public Builder setExtendedDetails(@Nullable Map<String,String> extendedDetails) {
+        public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             this.extendedDetails = Input.ofNullable(extendedDetails);
             return this;
         }
 
-        public Builder setGroupCount(@Nullable Input<Integer> groupCount) {
+        public Builder groupCount(@Nullable Input<Integer> groupCount) {
             this.groupCount = groupCount;
             return this;
         }
 
-        public Builder setGroupCount(@Nullable Integer groupCount) {
+        public Builder groupCount(@Nullable Integer groupCount) {
             this.groupCount = Input.ofNullable(groupCount);
             return this;
         }

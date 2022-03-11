@@ -21,10 +21,10 @@ public final class CommonFeatureSpecResponse {
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
-    @OutputCustomType.Constructor({"appdevexperience","multiclusteringress"})
+    @OutputCustomType.Constructor
     private CommonFeatureSpecResponse(
-        AppDevExperienceFeatureSpecResponse appdevexperience,
-        MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
+        @OutputCustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
         this.appdevexperience = appdevexperience;
         this.multiclusteringress = multiclusteringress;
     }
@@ -66,12 +66,12 @@ public final class CommonFeatureSpecResponse {
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setMulticlusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }

@@ -77,22 +77,22 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setDestinations(@Nullable Input<List<String>> destinations) {
+        public Builder destinations(@Nullable Input<List<String>> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = Input.ofNullable(destinations);
             return this;
         }
 
-        public Builder setStreams(@Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams) {
+        public Builder streams(@Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams) {
             this.streams = streams;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<Either<String,KnownDataFlowStreams>> streams) {
+        public Builder streams(@Nullable List<Either<String,KnownDataFlowStreams>> streams) {
             this.streams = Input.ofNullable(streams);
             return this;
         }

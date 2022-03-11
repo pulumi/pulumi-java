@@ -75,22 +75,22 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
     	      this.table = defaults.table;
         }
 
-        public Builder setOutputSchema(@Nullable Input<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema) {
+        public Builder outputSchema(@Nullable Input<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema) {
             this.outputSchema = outputSchema;
             return this;
         }
 
-        public Builder setOutputSchema(@Nullable GooglePrivacyDlpV2OutputStorageConfigOutputSchema outputSchema) {
+        public Builder outputSchema(@Nullable GooglePrivacyDlpV2OutputStorageConfigOutputSchema outputSchema) {
             this.outputSchema = Input.ofNullable(outputSchema);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
+        public Builder table(@Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
+        public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
             this.table = Input.ofNullable(table);
             return this;
         }

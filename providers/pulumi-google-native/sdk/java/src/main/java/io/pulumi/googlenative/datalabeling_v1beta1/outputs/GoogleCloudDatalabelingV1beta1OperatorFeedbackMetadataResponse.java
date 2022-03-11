@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse() {
     }
 

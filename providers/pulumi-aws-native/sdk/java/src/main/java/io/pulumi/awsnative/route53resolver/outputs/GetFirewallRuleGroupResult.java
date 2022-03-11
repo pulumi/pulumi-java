@@ -78,20 +78,20 @@ public final class GetFirewallRuleGroupResult {
      */
     private final @Nullable List<FirewallRuleGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","firewallRules","id","modificationTime","ownerId","ruleCount","shareStatus","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleGroupResult(
-        @Nullable String arn,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable List<FirewallRuleGroupFirewallRule> firewallRules,
-        @Nullable String id,
-        @Nullable String modificationTime,
-        @Nullable String ownerId,
-        @Nullable Integer ruleCount,
-        @Nullable FirewallRuleGroupShareStatus shareStatus,
-        @Nullable FirewallRuleGroupStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<FirewallRuleGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleGroupFirewallRule> firewallRules,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("ruleCount") @Nullable Integer ruleCount,
+        @OutputCustomType.Parameter("shareStatus") @Nullable FirewallRuleGroupShareStatus shareStatus,
+        @OutputCustomType.Parameter("status") @Nullable FirewallRuleGroupStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallRuleGroupTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;
@@ -233,62 +233,62 @@ public final class GetFirewallRuleGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreatorRequestId(@Nullable String creatorRequestId) {
+        public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleGroupFirewallRule> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleGroupFirewallRule> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setModificationTime(@Nullable String modificationTime) {
+        public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setRuleCount(@Nullable Integer ruleCount) {
+        public Builder ruleCount(@Nullable Integer ruleCount) {
             this.ruleCount = ruleCount;
             return this;
         }
 
-        public Builder setShareStatus(@Nullable FirewallRuleGroupShareStatus shareStatus) {
+        public Builder shareStatus(@Nullable FirewallRuleGroupShareStatus shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
 
-        public Builder setStatus(@Nullable FirewallRuleGroupStatus status) {
+        public Builder status(@Nullable FirewallRuleGroupStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallRuleGroupTag> tags) {
+        public Builder tags(@Nullable List<FirewallRuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }

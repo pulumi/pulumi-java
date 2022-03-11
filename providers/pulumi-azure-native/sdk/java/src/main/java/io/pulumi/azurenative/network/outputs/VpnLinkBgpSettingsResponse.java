@@ -23,10 +23,10 @@ public final class VpnLinkBgpSettingsResponse {
      */
     private final @Nullable String bgpPeeringAddress;
 
-    @OutputCustomType.Constructor({"asn","bgpPeeringAddress"})
+    @OutputCustomType.Constructor
     private VpnLinkBgpSettingsResponse(
-        @Nullable Double asn,
-        @Nullable String bgpPeeringAddress) {
+        @OutputCustomType.Parameter("asn") @Nullable Double asn,
+        @OutputCustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
     }
@@ -68,12 +68,12 @@ public final class VpnLinkBgpSettingsResponse {
     	      this.bgpPeeringAddress = defaults.bgpPeeringAddress;
         }
 
-        public Builder setAsn(@Nullable Double asn) {
+        public Builder asn(@Nullable Double asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setBgpPeeringAddress(@Nullable String bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }

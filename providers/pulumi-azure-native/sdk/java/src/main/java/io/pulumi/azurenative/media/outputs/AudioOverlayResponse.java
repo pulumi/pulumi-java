@@ -49,15 +49,15 @@ public final class AudioOverlayResponse {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"audioGainLevel","end","fadeInDuration","fadeOutDuration","inputLabel","odataType","start"})
+    @OutputCustomType.Constructor
     private AudioOverlayResponse(
-        @Nullable Double audioGainLevel,
-        @Nullable String end,
-        @Nullable String fadeInDuration,
-        @Nullable String fadeOutDuration,
-        String inputLabel,
-        String odataType,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("audioGainLevel") @Nullable Double audioGainLevel,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("fadeInDuration") @Nullable String fadeInDuration,
+        @OutputCustomType.Parameter("fadeOutDuration") @Nullable String fadeOutDuration,
+        @OutputCustomType.Parameter("inputLabel") String inputLabel,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.audioGainLevel = audioGainLevel;
         this.end = end;
         this.fadeInDuration = fadeInDuration;
@@ -150,37 +150,37 @@ public final class AudioOverlayResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setAudioGainLevel(@Nullable Double audioGainLevel) {
+        public Builder audioGainLevel(@Nullable Double audioGainLevel) {
             this.audioGainLevel = audioGainLevel;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
 
-        public Builder setFadeInDuration(@Nullable String fadeInDuration) {
+        public Builder fadeInDuration(@Nullable String fadeInDuration) {
             this.fadeInDuration = fadeInDuration;
             return this;
         }
 
-        public Builder setFadeOutDuration(@Nullable String fadeOutDuration) {
+        public Builder fadeOutDuration(@Nullable String fadeOutDuration) {
             this.fadeOutDuration = fadeOutDuration;
             return this;
         }
 
-        public Builder setInputLabel(String inputLabel) {
+        public Builder inputLabel(String inputLabel) {
             this.inputLabel = Objects.requireNonNull(inputLabel);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = start;
             return this;
         }

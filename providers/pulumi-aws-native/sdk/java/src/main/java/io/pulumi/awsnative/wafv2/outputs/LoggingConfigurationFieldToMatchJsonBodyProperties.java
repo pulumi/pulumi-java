@@ -29,11 +29,11 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
      */
     private final LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope;
 
-    @OutputCustomType.Constructor({"invalidFallbackBehavior","matchPattern","matchScope"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationFieldToMatchJsonBodyProperties(
-        @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
-        LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
-        LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
+        @OutputCustomType.Parameter("invalidFallbackBehavior") @Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior,
+        @OutputCustomType.Parameter("matchPattern") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern,
+        @OutputCustomType.Parameter("matchScope") LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
         this.invalidFallbackBehavior = invalidFallbackBehavior;
         this.matchPattern = matchPattern;
         this.matchScope = matchScope;
@@ -85,17 +85,17 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
     	      this.matchScope = defaults.matchScope;
         }
 
-        public Builder setInvalidFallbackBehavior(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior) {
+        public Builder invalidFallbackBehavior(@Nullable LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior invalidFallbackBehavior) {
             this.invalidFallbackBehavior = invalidFallbackBehavior;
             return this;
         }
 
-        public Builder setMatchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern) {
+        public Builder matchPattern(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties matchPattern) {
             this.matchPattern = Objects.requireNonNull(matchPattern);
             return this;
         }
 
-        public Builder setMatchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
+        public Builder matchScope(LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope matchScope) {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }

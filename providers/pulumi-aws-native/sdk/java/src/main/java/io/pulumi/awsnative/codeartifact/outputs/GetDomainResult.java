@@ -40,13 +40,13 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor({"arn","name","owner","permissionsPolicyDocument","tags"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable String owner,
-        @Nullable Object permissionsPolicyDocument,
-        @Nullable List<DomainTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("permissionsPolicyDocument") @Nullable Object permissionsPolicyDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.arn = arn;
         this.name = name;
         this.owner = owner;
@@ -118,27 +118,27 @@ public final class GetDomainResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setPermissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
+        public Builder permissionsPolicyDocument(@Nullable Object permissionsPolicyDocument) {
             this.permissionsPolicyDocument = permissionsPolicyDocument;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTag> tags) {
+        public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }

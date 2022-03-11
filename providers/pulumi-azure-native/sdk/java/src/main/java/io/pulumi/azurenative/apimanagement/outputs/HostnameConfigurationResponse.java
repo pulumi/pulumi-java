@@ -59,17 +59,17 @@ public final class HostnameConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","certificatePassword","defaultSslBinding","encodedCertificate","hostName","identityClientId","keyVaultId","negotiateClientCertificate","type"})
+    @OutputCustomType.Constructor
     private HostnameConfigurationResponse(
-        @Nullable CertificateInformationResponse certificate,
-        @Nullable String certificatePassword,
-        @Nullable Boolean defaultSslBinding,
-        @Nullable String encodedCertificate,
-        String hostName,
-        @Nullable String identityClientId,
-        @Nullable String keyVaultId,
-        @Nullable Boolean negotiateClientCertificate,
-        String type) {
+        @OutputCustomType.Parameter("certificate") @Nullable CertificateInformationResponse certificate,
+        @OutputCustomType.Parameter("certificatePassword") @Nullable String certificatePassword,
+        @OutputCustomType.Parameter("defaultSslBinding") @Nullable Boolean defaultSslBinding,
+        @OutputCustomType.Parameter("encodedCertificate") @Nullable String encodedCertificate,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.certificatePassword = certificatePassword;
         this.defaultSslBinding = defaultSslBinding;
@@ -181,47 +181,47 @@ public final class HostnameConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(@Nullable CertificateInformationResponse certificate) {
+        public Builder certificate(@Nullable CertificateInformationResponse certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificatePassword(@Nullable String certificatePassword) {
+        public Builder certificatePassword(@Nullable String certificatePassword) {
             this.certificatePassword = certificatePassword;
             return this;
         }
 
-        public Builder setDefaultSslBinding(@Nullable Boolean defaultSslBinding) {
+        public Builder defaultSslBinding(@Nullable Boolean defaultSslBinding) {
             this.defaultSslBinding = defaultSslBinding;
             return this;
         }
 
-        public Builder setEncodedCertificate(@Nullable String encodedCertificate) {
+        public Builder encodedCertificate(@Nullable String encodedCertificate) {
             this.encodedCertificate = encodedCertificate;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

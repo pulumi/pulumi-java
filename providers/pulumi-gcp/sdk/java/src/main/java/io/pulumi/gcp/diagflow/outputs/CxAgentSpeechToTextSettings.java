@@ -17,8 +17,8 @@ public final class CxAgentSpeechToTextSettings {
      */
     private final @Nullable Boolean enableSpeechAdaptation;
 
-    @OutputCustomType.Constructor({"enableSpeechAdaptation"})
-    private CxAgentSpeechToTextSettings(@Nullable Boolean enableSpeechAdaptation) {
+    @OutputCustomType.Constructor
+    private CxAgentSpeechToTextSettings(@OutputCustomType.Parameter("enableSpeechAdaptation") @Nullable Boolean enableSpeechAdaptation) {
         this.enableSpeechAdaptation = enableSpeechAdaptation;
     }
 
@@ -50,7 +50,7 @@ public final class CxAgentSpeechToTextSettings {
     	      this.enableSpeechAdaptation = defaults.enableSpeechAdaptation;
         }
 
-        public Builder setEnableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
+        public Builder enableSpeechAdaptation(@Nullable Boolean enableSpeechAdaptation) {
             this.enableSpeechAdaptation = enableSpeechAdaptation;
             return this;
         }

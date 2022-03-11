@@ -17,8 +17,8 @@ public final class AssignmentPropertiesResponseAdditionalData {
      */
     private final @Nullable String exemptionCategory;
 
-    @OutputCustomType.Constructor({"exemptionCategory"})
-    private AssignmentPropertiesResponseAdditionalData(@Nullable String exemptionCategory) {
+    @OutputCustomType.Constructor
+    private AssignmentPropertiesResponseAdditionalData(@OutputCustomType.Parameter("exemptionCategory") @Nullable String exemptionCategory) {
         this.exemptionCategory = exemptionCategory;
     }
 
@@ -50,7 +50,7 @@ public final class AssignmentPropertiesResponseAdditionalData {
     	      this.exemptionCategory = defaults.exemptionCategory;
         }
 
-        public Builder setExemptionCategory(@Nullable String exemptionCategory) {
+        public Builder exemptionCategory(@Nullable String exemptionCategory) {
             this.exemptionCategory = exemptionCategory;
             return this;
         }

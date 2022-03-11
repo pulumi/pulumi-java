@@ -59,12 +59,12 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
     	      this.doubleEncryption = defaults.doubleEncryption;
         }
 
-        public Builder setDoubleEncryption(@Nullable Input<Either<String,DoubleEncryption>> doubleEncryption) {
+        public Builder doubleEncryption(@Nullable Input<Either<String,DoubleEncryption>> doubleEncryption) {
             this.doubleEncryption = doubleEncryption;
             return this;
         }
 
-        public Builder setDoubleEncryption(@Nullable Either<String,DoubleEncryption> doubleEncryption) {
+        public Builder doubleEncryption(@Nullable Either<String,DoubleEncryption> doubleEncryption) {
             this.doubleEncryption = Input.ofNullable(doubleEncryption);
             return this;
         }

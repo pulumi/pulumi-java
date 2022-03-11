@@ -115,27 +115,27 @@ public final class HDInsightStreamingActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","combiner","commandEnvironment","defines","dependsOn","description","fileLinkedService","filePaths","getDebugInfo","input","linkedServiceName","mapper","name","output","policy","reducer","storageLinkedServices","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightStreamingActivityResponse(
-        @Nullable List<Object> arguments,
-        @Nullable Object combiner,
-        @Nullable List<Object> commandEnvironment,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse fileLinkedService,
-        List<Object> filePaths,
-        @Nullable String getDebugInfo,
-        Object input,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        Object mapper,
-        String name,
-        Object output,
-        @Nullable ActivityPolicyResponse policy,
-        Object reducer,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("combiner") @Nullable Object combiner,
+        @OutputCustomType.Parameter("commandEnvironment") @Nullable List<Object> commandEnvironment,
+        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fileLinkedService") @Nullable LinkedServiceReferenceResponse fileLinkedService,
+        @OutputCustomType.Parameter("filePaths") List<Object> filePaths,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("input") Object input,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("mapper") Object mapper,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("output") Object output,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("reducer") Object reducer,
+        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.combiner = combiner;
         this.commandEnvironment = commandEnvironment;
@@ -348,97 +348,97 @@ public final class HDInsightStreamingActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setArguments(@Nullable List<Object> arguments) {
+        public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setCombiner(@Nullable Object combiner) {
+        public Builder combiner(@Nullable Object combiner) {
             this.combiner = combiner;
             return this;
         }
 
-        public Builder setCommandEnvironment(@Nullable List<Object> commandEnvironment) {
+        public Builder commandEnvironment(@Nullable List<Object> commandEnvironment) {
             this.commandEnvironment = commandEnvironment;
             return this;
         }
 
-        public Builder setDefines(@Nullable Map<String,Object> defines) {
+        public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = defines;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFileLinkedService(@Nullable LinkedServiceReferenceResponse fileLinkedService) {
+        public Builder fileLinkedService(@Nullable LinkedServiceReferenceResponse fileLinkedService) {
             this.fileLinkedService = fileLinkedService;
             return this;
         }
 
-        public Builder setFilePaths(List<Object> filePaths) {
+        public Builder filePaths(List<Object> filePaths) {
             this.filePaths = Objects.requireNonNull(filePaths);
             return this;
         }
 
-        public Builder setGetDebugInfo(@Nullable String getDebugInfo) {
+        public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
-        public Builder setInput(Object input) {
+        public Builder input(Object input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setMapper(Object mapper) {
+        public Builder mapper(Object mapper) {
             this.mapper = Objects.requireNonNull(mapper);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutput(Object output) {
+        public Builder output(Object output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setReducer(Object reducer) {
+        public Builder reducer(Object reducer) {
             this.reducer = Objects.requireNonNull(reducer);
             return this;
         }
 
-        public Builder setStorageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
+        public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

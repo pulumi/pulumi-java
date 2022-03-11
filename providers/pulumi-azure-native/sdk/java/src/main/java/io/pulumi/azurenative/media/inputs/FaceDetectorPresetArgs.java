@@ -128,52 +128,52 @@ public final class FaceDetectorPresetArgs extends io.pulumi.resources.ResourceAr
     	      this.resolution = defaults.resolution;
         }
 
-        public Builder setBlurType(@Nullable Input<Either<String,BlurType>> blurType) {
+        public Builder blurType(@Nullable Input<Either<String,BlurType>> blurType) {
             this.blurType = blurType;
             return this;
         }
 
-        public Builder setBlurType(@Nullable Either<String,BlurType> blurType) {
+        public Builder blurType(@Nullable Either<String,BlurType> blurType) {
             this.blurType = Input.ofNullable(blurType);
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Input<Map<String,String>> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Input<Map<String,String>> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Map<String,String> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = Input.ofNullable(experimentalOptions);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,FaceRedactorMode>> mode) {
+        public Builder mode(@Nullable Input<Either<String,FaceRedactorMode>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,FaceRedactorMode> mode) {
+        public Builder mode(@Nullable Either<String,FaceRedactorMode> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setResolution(@Nullable Input<Either<String,AnalysisResolution>> resolution) {
+        public Builder resolution(@Nullable Input<Either<String,AnalysisResolution>> resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setResolution(@Nullable Either<String,AnalysisResolution> resolution) {
+        public Builder resolution(@Nullable Either<String,AnalysisResolution> resolution) {
             this.resolution = Input.ofNullable(resolution);
             return this;
         }

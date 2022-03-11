@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TopicRuleDestinationHttpUrlDestinationSummary {
     private final @Nullable String confirmationUrl;
 
-    @OutputCustomType.Constructor({"confirmationUrl"})
-    private TopicRuleDestinationHttpUrlDestinationSummary(@Nullable String confirmationUrl) {
+    @OutputCustomType.Constructor
+    private TopicRuleDestinationHttpUrlDestinationSummary(@OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl) {
         this.confirmationUrl = confirmationUrl;
     }
 
@@ -42,7 +42,7 @@ public final class TopicRuleDestinationHttpUrlDestinationSummary {
     	      this.confirmationUrl = defaults.confirmationUrl;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }

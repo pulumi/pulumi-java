@@ -25,11 +25,11 @@ public final class FilterTrackPropertyConditionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"operation","property","value"})
+    @OutputCustomType.Constructor
     private FilterTrackPropertyConditionResponse(
-        String operation,
-        String property,
-        String value) {
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("property") String property,
+        @OutputCustomType.Parameter("value") String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;
@@ -81,17 +81,17 @@ public final class FilterTrackPropertyConditionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

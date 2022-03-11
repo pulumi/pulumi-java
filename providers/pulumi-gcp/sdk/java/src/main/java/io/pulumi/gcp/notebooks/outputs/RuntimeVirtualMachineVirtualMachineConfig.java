@@ -136,23 +136,23 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImages","dataDisk","encryptionConfig","guestAttributes","internalIpOnly","labels","machineType","metadata","network","nicType","shieldedInstanceConfig","subnet","tags","zone"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfig(
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
-        @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
-        RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
-        @Nullable Map<String,String> guestAttributes,
-        @Nullable Boolean internalIpOnly,
-        @Nullable Map<String,String> labels,
-        String machineType,
-        @Nullable Map<String,String> metadata,
-        @Nullable String network,
-        @Nullable String nicType,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @Nullable String subnet,
-        @Nullable List<String> tags,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("acceleratorConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig,
+        @OutputCustomType.Parameter("containerImages") @Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages,
+        @OutputCustomType.Parameter("dataDisk") RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("guestAttributes") @Nullable Map<String,String> guestAttributes,
+        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;
@@ -365,77 +365,77 @@ public final class RuntimeVirtualMachineVirtualMachineConfig {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAcceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setContainerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages) {
+        public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImage> containerImages) {
             this.containerImages = containerImages;
             return this;
         }
 
-        public Builder setDataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk) {
+        public Builder dataDisk(RuntimeVirtualMachineVirtualMachineConfigDataDisk dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig) {
+        public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setGuestAttributes(@Nullable Map<String,String> guestAttributes) {
+        public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
             this.guestAttributes = guestAttributes;
             return this;
         }
 
-        public Builder setInternalIpOnly(@Nullable Boolean internalIpOnly) {
+        public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
             this.internalIpOnly = internalIpOnly;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

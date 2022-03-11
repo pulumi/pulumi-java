@@ -15,8 +15,8 @@ public final class AzureClusterAuthorizationAdminUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private AzureClusterAuthorizationAdminUser(String username) {
+    @OutputCustomType.Constructor
+    private AzureClusterAuthorizationAdminUser(@OutputCustomType.Parameter("username") String username) {
         this.username = username;
     }
 
@@ -48,7 +48,7 @@ public final class AzureClusterAuthorizationAdminUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

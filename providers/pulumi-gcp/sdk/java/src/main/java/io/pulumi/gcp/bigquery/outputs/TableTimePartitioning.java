@@ -39,12 +39,12 @@ public final class TableTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationMs","field","requirePartitionFilter","type"})
+    @OutputCustomType.Constructor
     private TableTimePartitioning(
-        @Nullable Integer expirationMs,
-        @Nullable String field,
-        @Nullable Boolean requirePartitionFilter,
-        String type) {
+        @OutputCustomType.Parameter("expirationMs") @Nullable Integer expirationMs,
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;
@@ -111,22 +111,22 @@ public final class TableTimePartitioning {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(@Nullable Integer expirationMs) {
+        public Builder expirationMs(@Nullable Integer expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -36,13 +36,13 @@ public final class GetDirectoryWorkspaceCreationProperty {
      */
     private final Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor({"customSecurityGroupId","defaultOu","enableInternetAccess","enableMaintenanceMode","userEnabledAsLocalAdministrator"})
+    @OutputCustomType.Constructor
     private GetDirectoryWorkspaceCreationProperty(
-        String customSecurityGroupId,
-        String defaultOu,
-        Boolean enableInternetAccess,
-        Boolean enableMaintenanceMode,
-        Boolean userEnabledAsLocalAdministrator) {
+        @OutputCustomType.Parameter("customSecurityGroupId") String customSecurityGroupId,
+        @OutputCustomType.Parameter("defaultOu") String defaultOu,
+        @OutputCustomType.Parameter("enableInternetAccess") Boolean enableInternetAccess,
+        @OutputCustomType.Parameter("enableMaintenanceMode") Boolean enableMaintenanceMode,
+        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;
@@ -114,27 +114,27 @@ public final class GetDirectoryWorkspaceCreationProperty {
     	      this.userEnabledAsLocalAdministrator = defaults.userEnabledAsLocalAdministrator;
         }
 
-        public Builder setCustomSecurityGroupId(String customSecurityGroupId) {
+        public Builder customSecurityGroupId(String customSecurityGroupId) {
             this.customSecurityGroupId = Objects.requireNonNull(customSecurityGroupId);
             return this;
         }
 
-        public Builder setDefaultOu(String defaultOu) {
+        public Builder defaultOu(String defaultOu) {
             this.defaultOu = Objects.requireNonNull(defaultOu);
             return this;
         }
 
-        public Builder setEnableInternetAccess(Boolean enableInternetAccess) {
+        public Builder enableInternetAccess(Boolean enableInternetAccess) {
             this.enableInternetAccess = Objects.requireNonNull(enableInternetAccess);
             return this;
         }
 
-        public Builder setEnableMaintenanceMode(Boolean enableMaintenanceMode) {
+        public Builder enableMaintenanceMode(Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = Objects.requireNonNull(enableMaintenanceMode);
             return this;
         }
 
-        public Builder setUserEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
+        public Builder userEnabledAsLocalAdministrator(Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = Objects.requireNonNull(userEnabledAsLocalAdministrator);
             return this;
         }

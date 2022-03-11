@@ -16,8 +16,8 @@ public final class RowLayoutResponse {
      */
     private final List<RowResponse> rows;
 
-    @OutputCustomType.Constructor({"rows"})
-    private RowLayoutResponse(List<RowResponse> rows) {
+    @OutputCustomType.Constructor
+    private RowLayoutResponse(@OutputCustomType.Parameter("rows") List<RowResponse> rows) {
         this.rows = rows;
     }
 
@@ -49,7 +49,7 @@ public final class RowLayoutResponse {
     	      this.rows = defaults.rows;
         }
 
-        public Builder setRows(List<RowResponse> rows) {
+        public Builder rows(List<RowResponse> rows) {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }

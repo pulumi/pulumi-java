@@ -54,12 +54,12 @@ public final class QueueStackdriverLoggingConfigArgs extends io.pulumi.resources
     	      this.samplingRatio = defaults.samplingRatio;
         }
 
-        public Builder setSamplingRatio(Input<Double> samplingRatio) {
+        public Builder samplingRatio(Input<Double> samplingRatio) {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
 
-        public Builder setSamplingRatio(Double samplingRatio) {
+        public Builder samplingRatio(Double samplingRatio) {
             this.samplingRatio = Input.of(Objects.requireNonNull(samplingRatio));
             return this;
         }

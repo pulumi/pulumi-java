@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
      */
     private final GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec;
 
-    @OutputCustomType.Constructor({"tableSourceType","tableSpec","viewSpec"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse(
-        String tableSourceType,
-        GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
-        GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
+        @OutputCustomType.Parameter("tableSourceType") String tableSourceType,
+        @OutputCustomType.Parameter("tableSpec") GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec,
+        @OutputCustomType.Parameter("viewSpec") GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
         this.tableSourceType = tableSourceType;
         this.tableSpec = tableSpec;
         this.viewSpec = viewSpec;
@@ -83,17 +83,17 @@ public final class GoogleCloudDatacatalogV1beta1BigQueryTableSpecResponse {
     	      this.viewSpec = defaults.viewSpec;
         }
 
-        public Builder setTableSourceType(String tableSourceType) {
+        public Builder tableSourceType(String tableSourceType) {
             this.tableSourceType = Objects.requireNonNull(tableSourceType);
             return this;
         }
 
-        public Builder setTableSpec(GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec) {
+        public Builder tableSpec(GoogleCloudDatacatalogV1beta1TableSpecResponse tableSpec) {
             this.tableSpec = Objects.requireNonNull(tableSpec);
             return this;
         }
 
-        public Builder setViewSpec(GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
+        public Builder viewSpec(GoogleCloudDatacatalogV1beta1ViewSpecResponse viewSpec) {
             this.viewSpec = Objects.requireNonNull(viewSpec);
             return this;
         }

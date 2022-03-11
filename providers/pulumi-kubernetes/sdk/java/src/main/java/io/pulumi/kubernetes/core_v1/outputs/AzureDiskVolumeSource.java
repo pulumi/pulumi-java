@@ -43,14 +43,14 @@ public final class AzureDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"cachingMode","diskName","diskURI","fsType","kind","readOnly"})
+    @OutputCustomType.Constructor
     private AzureDiskVolumeSource(
-        @Nullable String cachingMode,
-        String diskName,
-        String diskURI,
-        @Nullable String fsType,
-        @Nullable String kind,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("cachingMode") @Nullable String cachingMode,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskURI") String diskURI,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.cachingMode = cachingMode;
         this.diskName = diskName;
         this.diskURI = diskURI;
@@ -132,32 +132,32 @@ public final class AzureDiskVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setCachingMode(@Nullable String cachingMode) {
+        public Builder cachingMode(@Nullable String cachingMode) {
             this.cachingMode = cachingMode;
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskURI(String diskURI) {
+        public Builder diskURI(String diskURI) {
             this.diskURI = Objects.requireNonNull(diskURI);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

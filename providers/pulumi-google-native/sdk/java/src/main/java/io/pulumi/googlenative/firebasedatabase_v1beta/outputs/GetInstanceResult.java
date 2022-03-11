@@ -35,13 +35,13 @@ public final class GetInstanceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseUrl","name","project","state","type"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String databaseUrl,
-        String name,
-        String project,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseUrl = databaseUrl;
         this.name = name;
         this.project = project;
@@ -113,27 +113,27 @@ public final class GetInstanceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseUrl(String databaseUrl) {
+        public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

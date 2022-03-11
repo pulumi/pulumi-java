@@ -16,11 +16,11 @@ public final class GetCachePolicyResult {
     private final @Nullable String id;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor({"cachePolicyConfig","id","lastModifiedTime"})
+    @OutputCustomType.Constructor
     private GetCachePolicyResult(
-        @Nullable CachePolicyConfig cachePolicyConfig,
-        @Nullable String id,
-        @Nullable String lastModifiedTime) {
+        @OutputCustomType.Parameter("cachePolicyConfig") @Nullable CachePolicyConfig cachePolicyConfig,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.cachePolicyConfig = cachePolicyConfig;
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
@@ -60,17 +60,17 @@ public final class GetCachePolicyResult {
     	      this.lastModifiedTime = defaults.lastModifiedTime;
         }
 
-        public Builder setCachePolicyConfig(@Nullable CachePolicyConfig cachePolicyConfig) {
+        public Builder cachePolicyConfig(@Nullable CachePolicyConfig cachePolicyConfig) {
             this.cachePolicyConfig = cachePolicyConfig;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }

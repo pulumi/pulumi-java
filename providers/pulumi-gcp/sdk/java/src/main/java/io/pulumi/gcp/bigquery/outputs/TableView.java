@@ -24,10 +24,10 @@ public final class TableView {
      */
     private final @Nullable Boolean useLegacySql;
 
-    @OutputCustomType.Constructor({"query","useLegacySql"})
+    @OutputCustomType.Constructor
     private TableView(
-        String query,
-        @Nullable Boolean useLegacySql) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql) {
         this.query = query;
         this.useLegacySql = useLegacySql;
     }
@@ -70,12 +70,12 @@ public final class TableView {
     	      this.useLegacySql = defaults.useLegacySql;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }

@@ -72,12 +72,12 @@ public final class NetworkConfigResponse extends io.pulumi.resources.InvokeArgs 
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder setEgressOption(String egressOption) {
+        public Builder egressOption(String egressOption) {
             this.egressOption = Objects.requireNonNull(egressOption);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }

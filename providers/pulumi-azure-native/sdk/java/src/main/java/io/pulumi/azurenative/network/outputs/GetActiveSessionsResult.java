@@ -24,10 +24,10 @@ public final class GetActiveSessionsResult {
      */
     private final @Nullable List<BastionActiveSessionResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private GetActiveSessionsResult(
-        @Nullable String nextLink,
-        @Nullable List<BastionActiveSessionResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<BastionActiveSessionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class GetActiveSessionsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<BastionActiveSessionResponse> value) {
+        public Builder value(@Nullable List<BastionActiveSessionResponse> value) {
             this.value = value;
             return this;
         }

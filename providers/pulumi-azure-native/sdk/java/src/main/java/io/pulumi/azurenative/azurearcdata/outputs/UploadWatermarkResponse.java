@@ -27,11 +27,11 @@ public final class UploadWatermarkResponse {
      */
     private final @Nullable String usages;
 
-    @OutputCustomType.Constructor({"logs","metrics","usages"})
+    @OutputCustomType.Constructor
     private UploadWatermarkResponse(
-        @Nullable String logs,
-        @Nullable String metrics,
-        @Nullable String usages) {
+        @OutputCustomType.Parameter("logs") @Nullable String logs,
+        @OutputCustomType.Parameter("metrics") @Nullable String metrics,
+        @OutputCustomType.Parameter("usages") @Nullable String usages) {
         this.logs = logs;
         this.metrics = metrics;
         this.usages = usages;
@@ -83,17 +83,17 @@ public final class UploadWatermarkResponse {
     	      this.usages = defaults.usages;
         }
 
-        public Builder setLogs(@Nullable String logs) {
+        public Builder logs(@Nullable String logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setMetrics(@Nullable String metrics) {
+        public Builder metrics(@Nullable String metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setUsages(@Nullable String usages) {
+        public Builder usages(@Nullable String usages) {
             this.usages = usages;
             return this;
         }

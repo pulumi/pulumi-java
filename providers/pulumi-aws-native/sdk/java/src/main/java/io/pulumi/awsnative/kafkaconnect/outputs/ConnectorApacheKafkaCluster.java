@@ -17,10 +17,10 @@ public final class ConnectorApacheKafkaCluster {
     private final String bootstrapServers;
     private final ConnectorVpc vpc;
 
-    @OutputCustomType.Constructor({"bootstrapServers","vpc"})
+    @OutputCustomType.Constructor
     private ConnectorApacheKafkaCluster(
-        String bootstrapServers,
-        ConnectorVpc vpc) {
+        @OutputCustomType.Parameter("bootstrapServers") String bootstrapServers,
+        @OutputCustomType.Parameter("vpc") ConnectorVpc vpc) {
         this.bootstrapServers = bootstrapServers;
         this.vpc = vpc;
     }
@@ -58,12 +58,12 @@ public final class ConnectorApacheKafkaCluster {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setBootstrapServers(String bootstrapServers) {
+        public Builder bootstrapServers(String bootstrapServers) {
             this.bootstrapServers = Objects.requireNonNull(bootstrapServers);
             return this;
         }
 
-        public Builder setVpc(ConnectorVpc vpc) {
+        public Builder vpc(ConnectorVpc vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

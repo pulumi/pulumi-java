@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ScheduledQueryScheduleConfiguration {
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"scheduleExpression"})
-    private ScheduledQueryScheduleConfiguration(String scheduleExpression) {
+    @OutputCustomType.Constructor
+    private ScheduledQueryScheduleConfiguration(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 
@@ -40,7 +40,7 @@ public final class ScheduledQueryScheduleConfiguration {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

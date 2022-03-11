@@ -100,24 +100,24 @@ public final class GetNodePoolResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"autoscaling","conditions","config","initialNodeCount","instanceGroupUrls","locations","management","maxPodsConstraint","name","networkConfig","placementPolicy","podIpv4CidrSize","selfLink","status","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private GetNodePoolResult(
-        NodePoolAutoscalingResponse autoscaling,
-        List<StatusConditionResponse> conditions,
-        NodeConfigResponse config,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> locations,
-        NodeManagementResponse management,
-        MaxPodsConstraintResponse maxPodsConstraint,
-        String name,
-        NodeNetworkConfigResponse networkConfig,
-        PlacementPolicyResponse placementPolicy,
-        Integer podIpv4CidrSize,
-        String selfLink,
-        String status,
-        UpgradeSettingsResponse upgradeSettings,
-        String version) {
+        @OutputCustomType.Parameter("autoscaling") NodePoolAutoscalingResponse autoscaling,
+        @OutputCustomType.Parameter("conditions") List<StatusConditionResponse> conditions,
+        @OutputCustomType.Parameter("config") NodeConfigResponse config,
+        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("management") NodeManagementResponse management,
+        @OutputCustomType.Parameter("maxPodsConstraint") MaxPodsConstraintResponse maxPodsConstraint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkConfig") NodeNetworkConfigResponse networkConfig,
+        @OutputCustomType.Parameter("placementPolicy") PlacementPolicyResponse placementPolicy,
+        @OutputCustomType.Parameter("podIpv4CidrSize") Integer podIpv4CidrSize,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("upgradeSettings") UpgradeSettingsResponse upgradeSettings,
+        @OutputCustomType.Parameter("version") String version) {
         this.autoscaling = autoscaling;
         this.conditions = conditions;
         this.config = config;
@@ -299,82 +299,82 @@ public final class GetNodePoolResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscaling(NodePoolAutoscalingResponse autoscaling) {
+        public Builder autoscaling(NodePoolAutoscalingResponse autoscaling) {
             this.autoscaling = Objects.requireNonNull(autoscaling);
             return this;
         }
 
-        public Builder setConditions(List<StatusConditionResponse> conditions) {
+        public Builder conditions(List<StatusConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConfig(NodeConfigResponse config) {
+        public Builder config(NodeConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setInitialNodeCount(Integer initialNodeCount) {
+        public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
 
-        public Builder setInstanceGroupUrls(List<String> instanceGroupUrls) {
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setManagement(NodeManagementResponse management) {
+        public Builder management(NodeManagementResponse management) {
             this.management = Objects.requireNonNull(management);
             return this;
         }
 
-        public Builder setMaxPodsConstraint(MaxPodsConstraintResponse maxPodsConstraint) {
+        public Builder maxPodsConstraint(MaxPodsConstraintResponse maxPodsConstraint) {
             this.maxPodsConstraint = Objects.requireNonNull(maxPodsConstraint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkConfig(NodeNetworkConfigResponse networkConfig) {
+        public Builder networkConfig(NodeNetworkConfigResponse networkConfig) {
             this.networkConfig = Objects.requireNonNull(networkConfig);
             return this;
         }
 
-        public Builder setPlacementPolicy(PlacementPolicyResponse placementPolicy) {
+        public Builder placementPolicy(PlacementPolicyResponse placementPolicy) {
             this.placementPolicy = Objects.requireNonNull(placementPolicy);
             return this;
         }
 
-        public Builder setPodIpv4CidrSize(Integer podIpv4CidrSize) {
+        public Builder podIpv4CidrSize(Integer podIpv4CidrSize) {
             this.podIpv4CidrSize = Objects.requireNonNull(podIpv4CidrSize);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpgradeSettings(UpgradeSettingsResponse upgradeSettings) {
+        public Builder upgradeSettings(UpgradeSettingsResponse upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

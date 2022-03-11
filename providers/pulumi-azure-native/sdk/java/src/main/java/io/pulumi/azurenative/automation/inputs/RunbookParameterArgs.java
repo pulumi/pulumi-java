@@ -108,42 +108,42 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setIsMandatory(@Nullable Input<Boolean> isMandatory) {
+        public Builder isMandatory(@Nullable Input<Boolean> isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
 
-        public Builder setIsMandatory(@Nullable Boolean isMandatory) {
+        public Builder isMandatory(@Nullable Boolean isMandatory) {
             this.isMandatory = Input.ofNullable(isMandatory);
             return this;
         }
 
-        public Builder setPosition(@Nullable Input<Integer> position) {
+        public Builder position(@Nullable Input<Integer> position) {
             this.position = position;
             return this;
         }
 
-        public Builder setPosition(@Nullable Integer position) {
+        public Builder position(@Nullable Integer position) {
             this.position = Input.ofNullable(position);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

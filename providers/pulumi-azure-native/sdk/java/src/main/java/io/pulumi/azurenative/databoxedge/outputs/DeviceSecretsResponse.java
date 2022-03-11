@@ -52,16 +52,16 @@ public final class DeviceSecretsResponse {
      */
     private final @Nullable SecretResponse systemVolumeBitLockerRecoveryKey;
 
-    @OutputCustomType.Constructor({"bmcDefaultUserPassword","hcsDataVolumeBitLockerExternalKey","hcsInternalVolumeBitLockerExternalKey","rotateKeyForDataVolumeBitlocker","rotateKeysForSedDrivesSerialized","sedEncryptionExternalKey","sedEncryptionExternalKeyId","systemVolumeBitLockerRecoveryKey"})
+    @OutputCustomType.Constructor
     private DeviceSecretsResponse(
-        @Nullable SecretResponse bmcDefaultUserPassword,
-        @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
-        @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
-        @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
-        @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
-        @Nullable SecretResponse sedEncryptionExternalKey,
-        @Nullable SecretResponse sedEncryptionExternalKeyId,
-        @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
+        @OutputCustomType.Parameter("bmcDefaultUserPassword") @Nullable SecretResponse bmcDefaultUserPassword,
+        @OutputCustomType.Parameter("hcsDataVolumeBitLockerExternalKey") @Nullable SecretResponse hcsDataVolumeBitLockerExternalKey,
+        @OutputCustomType.Parameter("hcsInternalVolumeBitLockerExternalKey") @Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey,
+        @OutputCustomType.Parameter("rotateKeyForDataVolumeBitlocker") @Nullable SecretResponse rotateKeyForDataVolumeBitlocker,
+        @OutputCustomType.Parameter("rotateKeysForSedDrivesSerialized") @Nullable SecretResponse rotateKeysForSedDrivesSerialized,
+        @OutputCustomType.Parameter("sedEncryptionExternalKey") @Nullable SecretResponse sedEncryptionExternalKey,
+        @OutputCustomType.Parameter("sedEncryptionExternalKeyId") @Nullable SecretResponse sedEncryptionExternalKeyId,
+        @OutputCustomType.Parameter("systemVolumeBitLockerRecoveryKey") @Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
         this.bmcDefaultUserPassword = bmcDefaultUserPassword;
         this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
         this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
@@ -163,42 +163,42 @@ public final class DeviceSecretsResponse {
     	      this.systemVolumeBitLockerRecoveryKey = defaults.systemVolumeBitLockerRecoveryKey;
         }
 
-        public Builder setBmcDefaultUserPassword(@Nullable SecretResponse bmcDefaultUserPassword) {
+        public Builder bmcDefaultUserPassword(@Nullable SecretResponse bmcDefaultUserPassword) {
             this.bmcDefaultUserPassword = bmcDefaultUserPassword;
             return this;
         }
 
-        public Builder setHcsDataVolumeBitLockerExternalKey(@Nullable SecretResponse hcsDataVolumeBitLockerExternalKey) {
+        public Builder hcsDataVolumeBitLockerExternalKey(@Nullable SecretResponse hcsDataVolumeBitLockerExternalKey) {
             this.hcsDataVolumeBitLockerExternalKey = hcsDataVolumeBitLockerExternalKey;
             return this;
         }
 
-        public Builder setHcsInternalVolumeBitLockerExternalKey(@Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey) {
+        public Builder hcsInternalVolumeBitLockerExternalKey(@Nullable SecretResponse hcsInternalVolumeBitLockerExternalKey) {
             this.hcsInternalVolumeBitLockerExternalKey = hcsInternalVolumeBitLockerExternalKey;
             return this;
         }
 
-        public Builder setRotateKeyForDataVolumeBitlocker(@Nullable SecretResponse rotateKeyForDataVolumeBitlocker) {
+        public Builder rotateKeyForDataVolumeBitlocker(@Nullable SecretResponse rotateKeyForDataVolumeBitlocker) {
             this.rotateKeyForDataVolumeBitlocker = rotateKeyForDataVolumeBitlocker;
             return this;
         }
 
-        public Builder setRotateKeysForSedDrivesSerialized(@Nullable SecretResponse rotateKeysForSedDrivesSerialized) {
+        public Builder rotateKeysForSedDrivesSerialized(@Nullable SecretResponse rotateKeysForSedDrivesSerialized) {
             this.rotateKeysForSedDrivesSerialized = rotateKeysForSedDrivesSerialized;
             return this;
         }
 
-        public Builder setSedEncryptionExternalKey(@Nullable SecretResponse sedEncryptionExternalKey) {
+        public Builder sedEncryptionExternalKey(@Nullable SecretResponse sedEncryptionExternalKey) {
             this.sedEncryptionExternalKey = sedEncryptionExternalKey;
             return this;
         }
 
-        public Builder setSedEncryptionExternalKeyId(@Nullable SecretResponse sedEncryptionExternalKeyId) {
+        public Builder sedEncryptionExternalKeyId(@Nullable SecretResponse sedEncryptionExternalKeyId) {
             this.sedEncryptionExternalKeyId = sedEncryptionExternalKeyId;
             return this;
         }
 
-        public Builder setSystemVolumeBitLockerRecoveryKey(@Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
+        public Builder systemVolumeBitLockerRecoveryKey(@Nullable SecretResponse systemVolumeBitLockerRecoveryKey) {
             this.systemVolumeBitLockerRecoveryKey = systemVolumeBitLockerRecoveryKey;
             return this;
         }

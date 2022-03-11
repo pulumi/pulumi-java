@@ -105,26 +105,26 @@ public final class GetRatePlanResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"apiproduct","billingPeriod","consumptionPricingRates","consumptionPricingType","createdAt","currencyCode","description","displayName","endTime","fixedFeeFrequency","fixedRecurringFee","lastModifiedAt","name","revenueShareRates","revenueShareType","setupFee","startTime","state"})
+    @OutputCustomType.Constructor
     private GetRatePlanResult(
-        String apiproduct,
-        String billingPeriod,
-        List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
-        String consumptionPricingType,
-        String createdAt,
-        String currencyCode,
-        String description,
-        String displayName,
-        String endTime,
-        Integer fixedFeeFrequency,
-        GoogleTypeMoneyResponse fixedRecurringFee,
-        String lastModifiedAt,
-        String name,
-        List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
-        String revenueShareType,
-        GoogleTypeMoneyResponse setupFee,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("apiproduct") String apiproduct,
+        @OutputCustomType.Parameter("billingPeriod") String billingPeriod,
+        @OutputCustomType.Parameter("consumptionPricingRates") List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates,
+        @OutputCustomType.Parameter("consumptionPricingType") String consumptionPricingType,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("fixedFeeFrequency") Integer fixedFeeFrequency,
+        @OutputCustomType.Parameter("fixedRecurringFee") GoogleTypeMoneyResponse fixedRecurringFee,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("revenueShareRates") List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates,
+        @OutputCustomType.Parameter("revenueShareType") String revenueShareType,
+        @OutputCustomType.Parameter("setupFee") GoogleTypeMoneyResponse setupFee,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.apiproduct = apiproduct;
         this.billingPeriod = billingPeriod;
         this.consumptionPricingRates = consumptionPricingRates;
@@ -326,92 +326,92 @@ public final class GetRatePlanResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setApiproduct(String apiproduct) {
+        public Builder apiproduct(String apiproduct) {
             this.apiproduct = Objects.requireNonNull(apiproduct);
             return this;
         }
 
-        public Builder setBillingPeriod(String billingPeriod) {
+        public Builder billingPeriod(String billingPeriod) {
             this.billingPeriod = Objects.requireNonNull(billingPeriod);
             return this;
         }
 
-        public Builder setConsumptionPricingRates(List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates) {
+        public Builder consumptionPricingRates(List<GoogleCloudApigeeV1RateRangeResponse> consumptionPricingRates) {
             this.consumptionPricingRates = Objects.requireNonNull(consumptionPricingRates);
             return this;
         }
 
-        public Builder setConsumptionPricingType(String consumptionPricingType) {
+        public Builder consumptionPricingType(String consumptionPricingType) {
             this.consumptionPricingType = Objects.requireNonNull(consumptionPricingType);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCurrencyCode(String currencyCode) {
+        public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setFixedFeeFrequency(Integer fixedFeeFrequency) {
+        public Builder fixedFeeFrequency(Integer fixedFeeFrequency) {
             this.fixedFeeFrequency = Objects.requireNonNull(fixedFeeFrequency);
             return this;
         }
 
-        public Builder setFixedRecurringFee(GoogleTypeMoneyResponse fixedRecurringFee) {
+        public Builder fixedRecurringFee(GoogleTypeMoneyResponse fixedRecurringFee) {
             this.fixedRecurringFee = Objects.requireNonNull(fixedRecurringFee);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRevenueShareRates(List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates) {
+        public Builder revenueShareRates(List<GoogleCloudApigeeV1RevenueShareRangeResponse> revenueShareRates) {
             this.revenueShareRates = Objects.requireNonNull(revenueShareRates);
             return this;
         }
 
-        public Builder setRevenueShareType(String revenueShareType) {
+        public Builder revenueShareType(String revenueShareType) {
             this.revenueShareType = Objects.requireNonNull(revenueShareType);
             return this;
         }
 
-        public Builder setSetupFee(GoogleTypeMoneyResponse setupFee) {
+        public Builder setupFee(GoogleTypeMoneyResponse setupFee) {
             this.setupFee = Objects.requireNonNull(setupFee);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

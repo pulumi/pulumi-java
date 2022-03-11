@@ -57,12 +57,12 @@ public final class Office365PolicyPropertiesArgs extends io.pulumi.resources.Res
     	      this.breakOutCategories = defaults.breakOutCategories;
         }
 
-        public Builder setBreakOutCategories(@Nullable Input<BreakOutCategoryPoliciesArgs> breakOutCategories) {
+        public Builder breakOutCategories(@Nullable Input<BreakOutCategoryPoliciesArgs> breakOutCategories) {
             this.breakOutCategories = breakOutCategories;
             return this;
         }
 
-        public Builder setBreakOutCategories(@Nullable BreakOutCategoryPoliciesArgs breakOutCategories) {
+        public Builder breakOutCategories(@Nullable BreakOutCategoryPoliciesArgs breakOutCategories) {
             this.breakOutCategories = Input.ofNullable(breakOutCategories);
             return this;
         }

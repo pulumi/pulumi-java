@@ -49,12 +49,12 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thing = defaults.thing;
         }
 
-        public Builder setThing(@Nullable Input<TopLevelArgs> thing) {
+        public Builder thing(@Nullable Input<TopLevelArgs> thing) {
             this.thing = thing;
             return this;
         }
 
-        public Builder setThing(@Nullable TopLevelArgs thing) {
+        public Builder thing(@Nullable TopLevelArgs thing) {
             this.thing = Input.ofNullable(thing);
             return this;
         }

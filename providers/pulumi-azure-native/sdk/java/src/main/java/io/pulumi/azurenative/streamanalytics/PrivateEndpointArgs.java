@@ -103,42 +103,42 @@ public final class PrivateEndpointArgs extends io.pulumi.resources.ResourceArgs 
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable Input<String> privateEndpointName) {
+        public Builder privateEndpointName(@Nullable Input<String> privateEndpointName) {
             this.privateEndpointName = privateEndpointName;
             return this;
         }
 
-        public Builder setPrivateEndpointName(@Nullable String privateEndpointName) {
+        public Builder privateEndpointName(@Nullable String privateEndpointName) {
             this.privateEndpointName = Input.ofNullable(privateEndpointName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<PrivateEndpointPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<PrivateEndpointPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable PrivateEndpointPropertiesArgs properties) {
+        public Builder properties(@Nullable PrivateEndpointPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

@@ -61,17 +61,17 @@ public final class AssignmentReportResponse {
      */
     private final @Nullable VMInfoResponse vm;
 
-    @OutputCustomType.Constructor({"assignment","complianceStatus","endTime","id","operationType","reportId","resources","startTime","vm"})
+    @OutputCustomType.Constructor
     private AssignmentReportResponse(
-        @Nullable AssignmentInfoResponse assignment,
-        String complianceStatus,
-        String endTime,
-        String id,
-        String operationType,
-        String reportId,
-        @Nullable List<AssignmentReportResourceResponse> resources,
-        String startTime,
-        @Nullable VMInfoResponse vm) {
+        @OutputCustomType.Parameter("assignment") @Nullable AssignmentInfoResponse assignment,
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("operationType") String operationType,
+        @OutputCustomType.Parameter("reportId") String reportId,
+        @OutputCustomType.Parameter("resources") @Nullable List<AssignmentReportResourceResponse> resources,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("vm") @Nullable VMInfoResponse vm) {
         this.assignment = assignment;
         this.complianceStatus = complianceStatus;
         this.endTime = endTime;
@@ -183,47 +183,47 @@ public final class AssignmentReportResponse {
     	      this.vm = defaults.vm;
         }
 
-        public Builder setAssignment(@Nullable AssignmentInfoResponse assignment) {
+        public Builder assignment(@Nullable AssignmentInfoResponse assignment) {
             this.assignment = assignment;
             return this;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOperationType(String operationType) {
+        public Builder operationType(String operationType) {
             this.operationType = Objects.requireNonNull(operationType);
             return this;
         }
 
-        public Builder setReportId(String reportId) {
+        public Builder reportId(String reportId) {
             this.reportId = Objects.requireNonNull(reportId);
             return this;
         }
 
-        public Builder setResources(@Nullable List<AssignmentReportResourceResponse> resources) {
+        public Builder resources(@Nullable List<AssignmentReportResourceResponse> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setVm(@Nullable VMInfoResponse vm) {
+        public Builder vm(@Nullable VMInfoResponse vm) {
             this.vm = vm;
             return this;
         }

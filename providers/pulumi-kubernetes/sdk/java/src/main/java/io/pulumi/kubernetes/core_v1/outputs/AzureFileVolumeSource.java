@@ -28,11 +28,11 @@ public final class AzureFileVolumeSource {
      */
     private final String shareName;
 
-    @OutputCustomType.Constructor({"readOnly","secretName","shareName"})
+    @OutputCustomType.Constructor
     private AzureFileVolumeSource(
-        @Nullable Boolean readOnly,
-        String secretName,
-        String shareName) {
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("shareName") String shareName) {
         this.readOnly = readOnly;
         this.secretName = secretName;
         this.shareName = shareName;
@@ -84,17 +84,17 @@ public final class AzureFileVolumeSource {
     	      this.shareName = defaults.shareName;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }

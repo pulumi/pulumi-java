@@ -27,10 +27,10 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
      */
     private final @Nullable String signatureAlgorithm;
 
-    @OutputCustomType.Constructor({"publicKeyPem","signatureAlgorithm"})
+    @OutputCustomType.Constructor
     private AttestorAttestationAuthorityNotePublicKeyPkixPublicKey(
-        @Nullable String publicKeyPem,
-        @Nullable String signatureAlgorithm) {
+        @OutputCustomType.Parameter("publicKeyPem") @Nullable String publicKeyPem,
+        @OutputCustomType.Parameter("signatureAlgorithm") @Nullable String signatureAlgorithm) {
         this.publicKeyPem = publicKeyPem;
         this.signatureAlgorithm = signatureAlgorithm;
     }
@@ -77,12 +77,12 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKey {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder setPublicKeyPem(@Nullable String publicKeyPem) {
+        public Builder publicKeyPem(@Nullable String publicKeyPem) {
             this.publicKeyPem = publicKeyPem;
             return this;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable String signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }

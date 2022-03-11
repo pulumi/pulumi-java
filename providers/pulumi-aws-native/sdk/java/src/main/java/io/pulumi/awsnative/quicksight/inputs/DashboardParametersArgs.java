@@ -110,42 +110,42 @@ public final class DashboardParametersArgs extends io.pulumi.resources.ResourceA
     	      this.stringParameters = defaults.stringParameters;
         }
 
-        public Builder setDateTimeParameters(@Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable Input<List<DashboardDateTimeParameterArgs>> dateTimeParameters) {
             this.dateTimeParameters = dateTimeParameters;
             return this;
         }
 
-        public Builder setDateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
+        public Builder dateTimeParameters(@Nullable List<DashboardDateTimeParameterArgs> dateTimeParameters) {
             this.dateTimeParameters = Input.ofNullable(dateTimeParameters);
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters) {
+        public Builder decimalParameters(@Nullable Input<List<DashboardDecimalParameterArgs>> decimalParameters) {
             this.decimalParameters = decimalParameters;
             return this;
         }
 
-        public Builder setDecimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
+        public Builder decimalParameters(@Nullable List<DashboardDecimalParameterArgs> decimalParameters) {
             this.decimalParameters = Input.ofNullable(decimalParameters);
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters) {
+        public Builder integerParameters(@Nullable Input<List<DashboardIntegerParameterArgs>> integerParameters) {
             this.integerParameters = integerParameters;
             return this;
         }
 
-        public Builder setIntegerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
+        public Builder integerParameters(@Nullable List<DashboardIntegerParameterArgs> integerParameters) {
             this.integerParameters = Input.ofNullable(integerParameters);
             return this;
         }
 
-        public Builder setStringParameters(@Nullable Input<List<DashboardStringParameterArgs>> stringParameters) {
+        public Builder stringParameters(@Nullable Input<List<DashboardStringParameterArgs>> stringParameters) {
             this.stringParameters = stringParameters;
             return this;
         }
 
-        public Builder setStringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
+        public Builder stringParameters(@Nullable List<DashboardStringParameterArgs> stringParameters) {
             this.stringParameters = Input.ofNullable(stringParameters);
             return this;
         }

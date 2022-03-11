@@ -63,12 +63,12 @@ public final class Batching extends io.pulumi.resources.InvokeArgs {
     	      this.sendAfter = defaults.sendAfter;
         }
 
-        public Builder setEnableBatching(@Nullable Boolean enableBatching) {
+        public Builder enableBatching(@Nullable Boolean enableBatching) {
             this.enableBatching = enableBatching;
             return this;
         }
 
-        public Builder setSendAfter(@Nullable String sendAfter) {
+        public Builder sendAfter(@Nullable String sendAfter) {
             this.sendAfter = sendAfter;
             return this;
         }

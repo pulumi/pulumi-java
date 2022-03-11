@@ -36,13 +36,13 @@ public final class ForwardSshTunnelConnectivityResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"hostname","password","port","privateKey","username"})
+    @OutputCustomType.Constructor
     private ForwardSshTunnelConnectivityResponse(
-        String hostname,
-        String password,
-        Integer port,
-        String privateKey,
-        String username) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("username") String username) {
         this.hostname = hostname;
         this.password = password;
         this.port = port;
@@ -114,27 +114,27 @@ public final class ForwardSshTunnelConnectivityResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

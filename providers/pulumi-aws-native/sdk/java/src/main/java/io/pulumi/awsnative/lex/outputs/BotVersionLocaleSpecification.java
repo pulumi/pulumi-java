@@ -13,10 +13,10 @@ public final class BotVersionLocaleSpecification {
     private final BotVersionLocaleDetails botVersionLocaleDetails;
     private final String localeId;
 
-    @OutputCustomType.Constructor({"botVersionLocaleDetails","localeId"})
+    @OutputCustomType.Constructor
     private BotVersionLocaleSpecification(
-        BotVersionLocaleDetails botVersionLocaleDetails,
-        String localeId) {
+        @OutputCustomType.Parameter("botVersionLocaleDetails") BotVersionLocaleDetails botVersionLocaleDetails,
+        @OutputCustomType.Parameter("localeId") String localeId) {
         this.botVersionLocaleDetails = botVersionLocaleDetails;
         this.localeId = localeId;
     }
@@ -50,12 +50,12 @@ public final class BotVersionLocaleSpecification {
     	      this.localeId = defaults.localeId;
         }
 
-        public Builder setBotVersionLocaleDetails(BotVersionLocaleDetails botVersionLocaleDetails) {
+        public Builder botVersionLocaleDetails(BotVersionLocaleDetails botVersionLocaleDetails) {
             this.botVersionLocaleDetails = Objects.requireNonNull(botVersionLocaleDetails);
             return this;
         }
 
-        public Builder setLocaleId(String localeId) {
+        public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }

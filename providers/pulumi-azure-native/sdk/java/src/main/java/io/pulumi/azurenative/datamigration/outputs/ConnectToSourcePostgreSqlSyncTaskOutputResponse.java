@@ -37,13 +37,13 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"databases","id","sourceServerBrandVersion","sourceServerVersion","validationErrors"})
+    @OutputCustomType.Constructor
     private ConnectToSourcePostgreSqlSyncTaskOutputResponse(
-        List<String> databases,
-        String id,
-        String sourceServerBrandVersion,
-        String sourceServerVersion,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("databases") List<String> databases,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("sourceServerBrandVersion") String sourceServerBrandVersion,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.databases = databases;
         this.id = id;
         this.sourceServerBrandVersion = sourceServerBrandVersion;
@@ -115,27 +115,27 @@ public final class ConnectToSourcePostgreSqlSyncTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setDatabases(List<String> databases) {
+        public Builder databases(List<String> databases) {
             this.databases = Objects.requireNonNull(databases);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSourceServerBrandVersion(String sourceServerBrandVersion) {
+        public Builder sourceServerBrandVersion(String sourceServerBrandVersion) {
             this.sourceServerBrandVersion = Objects.requireNonNull(sourceServerBrandVersion);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

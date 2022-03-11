@@ -14,10 +14,10 @@ public final class ContainerEnvironmentVariable {
     private final @Nullable String value;
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor({"value","variable"})
+    @OutputCustomType.Constructor
     private ContainerEnvironmentVariable(
-        @Nullable String value,
-        @Nullable String variable) {
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("variable") @Nullable String variable) {
         this.value = value;
         this.variable = variable;
     }
@@ -51,12 +51,12 @@ public final class ContainerEnvironmentVariable {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
         }

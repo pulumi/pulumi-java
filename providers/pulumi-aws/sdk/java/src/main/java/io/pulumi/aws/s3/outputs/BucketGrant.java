@@ -33,12 +33,12 @@ public final class BucketGrant {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"id","permissions","type","uri"})
+    @OutputCustomType.Constructor
     private BucketGrant(
-        @Nullable String id,
-        List<String> permissions,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.id = id;
         this.permissions = permissions;
         this.type = type;
@@ -100,22 +100,22 @@ public final class BucketGrant {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

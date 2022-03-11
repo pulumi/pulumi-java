@@ -21,10 +21,10 @@ public final class NotificationConfigResponse {
      */
     private final Boolean sendForBulkImport;
 
-    @OutputCustomType.Constructor({"pubsubTopic","sendForBulkImport"})
+    @OutputCustomType.Constructor
     private NotificationConfigResponse(
-        String pubsubTopic,
-        Boolean sendForBulkImport) {
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic,
+        @OutputCustomType.Parameter("sendForBulkImport") Boolean sendForBulkImport) {
         this.pubsubTopic = pubsubTopic;
         this.sendForBulkImport = sendForBulkImport;
     }
@@ -66,12 +66,12 @@ public final class NotificationConfigResponse {
     	      this.sendForBulkImport = defaults.sendForBulkImport;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
 
-        public Builder setSendForBulkImport(Boolean sendForBulkImport) {
+        public Builder sendForBulkImport(Boolean sendForBulkImport) {
             this.sendForBulkImport = Objects.requireNonNull(sendForBulkImport);
             return this;
         }

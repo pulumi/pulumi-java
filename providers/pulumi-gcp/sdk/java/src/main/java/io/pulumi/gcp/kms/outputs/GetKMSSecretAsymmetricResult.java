@@ -29,13 +29,13 @@ public final class GetKMSSecretAsymmetricResult {
      */
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"ciphertext","crc32","cryptoKeyVersion","id","plaintext"})
+    @OutputCustomType.Constructor
     private GetKMSSecretAsymmetricResult(
-        String ciphertext,
-        @Nullable String crc32,
-        String cryptoKeyVersion,
-        String id,
-        String plaintext) {
+        @OutputCustomType.Parameter("ciphertext") String ciphertext,
+        @OutputCustomType.Parameter("crc32") @Nullable String crc32,
+        @OutputCustomType.Parameter("cryptoKeyVersion") String cryptoKeyVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.ciphertext = ciphertext;
         this.crc32 = crc32;
         this.cryptoKeyVersion = cryptoKeyVersion;
@@ -99,27 +99,27 @@ public final class GetKMSSecretAsymmetricResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setCiphertext(String ciphertext) {
+        public Builder ciphertext(String ciphertext) {
             this.ciphertext = Objects.requireNonNull(ciphertext);
             return this;
         }
 
-        public Builder setCrc32(@Nullable String crc32) {
+        public Builder crc32(@Nullable String crc32) {
             this.crc32 = crc32;
             return this;
         }
 
-        public Builder setCryptoKeyVersion(String cryptoKeyVersion) {
+        public Builder cryptoKeyVersion(String cryptoKeyVersion) {
             this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

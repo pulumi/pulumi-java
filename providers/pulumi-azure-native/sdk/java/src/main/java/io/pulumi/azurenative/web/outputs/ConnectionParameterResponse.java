@@ -23,10 +23,10 @@ public final class ConnectionParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"oAuthSettings","type"})
+    @OutputCustomType.Constructor
     private ConnectionParameterResponse(
-        @Nullable ApiOAuthSettingsResponse oAuthSettings,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("oAuthSettings") @Nullable ApiOAuthSettingsResponse oAuthSettings,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.oAuthSettings = oAuthSettings;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class ConnectionParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setOAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
+        public Builder oAuthSettings(@Nullable ApiOAuthSettingsResponse oAuthSettings) {
             this.oAuthSettings = oAuthSettings;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -16,8 +16,8 @@ public final class MonitoringComponentConfigResponse {
      */
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor({"enableComponents"})
-    private MonitoringComponentConfigResponse(List<String> enableComponents) {
+    @OutputCustomType.Constructor
+    private MonitoringComponentConfigResponse(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 
@@ -49,7 +49,7 @@ public final class MonitoringComponentConfigResponse {
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder setEnableComponents(List<String> enableComponents) {
+        public Builder enableComponents(List<String> enableComponents) {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }

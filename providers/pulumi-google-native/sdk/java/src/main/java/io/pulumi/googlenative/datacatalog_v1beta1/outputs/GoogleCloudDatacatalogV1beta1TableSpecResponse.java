@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse {
      */
     private final String groupedEntry;
 
-    @OutputCustomType.Constructor({"groupedEntry"})
-    private GoogleCloudDatacatalogV1beta1TableSpecResponse(String groupedEntry) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1beta1TableSpecResponse(@OutputCustomType.Parameter("groupedEntry") String groupedEntry) {
         this.groupedEntry = groupedEntry;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatacatalogV1beta1TableSpecResponse {
     	      this.groupedEntry = defaults.groupedEntry;
         }
 
-        public Builder setGroupedEntry(String groupedEntry) {
+        public Builder groupedEntry(String groupedEntry) {
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
         }

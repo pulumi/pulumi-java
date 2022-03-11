@@ -20,10 +20,10 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
      */
     private final String logPrefix;
 
-    @OutputCustomType.Constructor({"cloudWatchLogGroupArn","logPrefix"})
+    @OutputCustomType.Constructor
     private BotAliasCloudWatchLogGroupLogDestination(
-        String cloudWatchLogGroupArn,
-        String logPrefix) {
+        @OutputCustomType.Parameter("cloudWatchLogGroupArn") String cloudWatchLogGroupArn,
+        @OutputCustomType.Parameter("logPrefix") String logPrefix) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.logPrefix = logPrefix;
     }
@@ -65,12 +65,12 @@ public final class BotAliasCloudWatchLogGroupLogDestination {
     	      this.logPrefix = defaults.logPrefix;
         }
 
-        public Builder setCloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Objects.requireNonNull(cloudWatchLogGroupArn);
             return this;
         }
 
-        public Builder setLogPrefix(String logPrefix) {
+        public Builder logPrefix(String logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }

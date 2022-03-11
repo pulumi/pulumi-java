@@ -119,52 +119,52 @@ public final class ResourceSetDNSTargetResourceArgs extends io.pulumi.resources.
     	      this.targetResource = defaults.targetResource;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setHostedZoneArn(@Nullable Input<String> hostedZoneArn) {
+        public Builder hostedZoneArn(@Nullable Input<String> hostedZoneArn) {
             this.hostedZoneArn = hostedZoneArn;
             return this;
         }
 
-        public Builder setHostedZoneArn(@Nullable String hostedZoneArn) {
+        public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
             this.hostedZoneArn = Input.ofNullable(hostedZoneArn);
             return this;
         }
 
-        public Builder setRecordSetId(@Nullable Input<String> recordSetId) {
+        public Builder recordSetId(@Nullable Input<String> recordSetId) {
             this.recordSetId = recordSetId;
             return this;
         }
 
-        public Builder setRecordSetId(@Nullable String recordSetId) {
+        public Builder recordSetId(@Nullable String recordSetId) {
             this.recordSetId = Input.ofNullable(recordSetId);
             return this;
         }
 
-        public Builder setRecordType(@Nullable Input<String> recordType) {
+        public Builder recordType(@Nullable Input<String> recordType) {
             this.recordType = recordType;
             return this;
         }
 
-        public Builder setRecordType(@Nullable String recordType) {
+        public Builder recordType(@Nullable String recordType) {
             this.recordType = Input.ofNullable(recordType);
             return this;
         }
 
-        public Builder setTargetResource(@Nullable Input<ResourceSetTargetResourceArgs> targetResource) {
+        public Builder targetResource(@Nullable Input<ResourceSetTargetResourceArgs> targetResource) {
             this.targetResource = targetResource;
             return this;
         }
 
-        public Builder setTargetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
+        public Builder targetResource(@Nullable ResourceSetTargetResourceArgs targetResource) {
             this.targetResource = Input.ofNullable(targetResource);
             return this;
         }

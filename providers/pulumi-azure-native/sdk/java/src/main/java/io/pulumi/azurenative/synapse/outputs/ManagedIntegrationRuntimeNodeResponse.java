@@ -28,11 +28,11 @@ public final class ManagedIntegrationRuntimeNodeResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"errors","nodeId","status"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeNodeResponse(
-        @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
-        String nodeId,
-        String status) {
+        @OutputCustomType.Parameter("errors") @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors,
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("status") String status) {
         this.errors = errors;
         this.nodeId = nodeId;
         this.status = status;
@@ -84,17 +84,17 @@ public final class ManagedIntegrationRuntimeNodeResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
+        public Builder errors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

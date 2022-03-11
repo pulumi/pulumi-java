@@ -68,17 +68,17 @@ public final class JobStatus {
      */
     private final @Nullable UncountedTerminatedPods uncountedTerminatedPods;
 
-    @OutputCustomType.Constructor({"active","completedIndexes","completionTime","conditions","failed","ready","startTime","succeeded","uncountedTerminatedPods"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable Integer active,
-        @Nullable String completedIndexes,
-        @Nullable String completionTime,
-        @Nullable List<JobCondition> conditions,
-        @Nullable Integer failed,
-        @Nullable Integer ready,
-        @Nullable String startTime,
-        @Nullable Integer succeeded,
-        @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
+        @OutputCustomType.Parameter("active") @Nullable Integer active,
+        @OutputCustomType.Parameter("completedIndexes") @Nullable String completedIndexes,
+        @OutputCustomType.Parameter("completionTime") @Nullable String completionTime,
+        @OutputCustomType.Parameter("conditions") @Nullable List<JobCondition> conditions,
+        @OutputCustomType.Parameter("failed") @Nullable Integer failed,
+        @OutputCustomType.Parameter("ready") @Nullable Integer ready,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("succeeded") @Nullable Integer succeeded,
+        @OutputCustomType.Parameter("uncountedTerminatedPods") @Nullable UncountedTerminatedPods uncountedTerminatedPods) {
         this.active = active;
         this.completedIndexes = completedIndexes;
         this.completionTime = completionTime;
@@ -197,47 +197,47 @@ public final class JobStatus {
     	      this.uncountedTerminatedPods = defaults.uncountedTerminatedPods;
         }
 
-        public Builder setActive(@Nullable Integer active) {
+        public Builder active(@Nullable Integer active) {
             this.active = active;
             return this;
         }
 
-        public Builder setCompletedIndexes(@Nullable String completedIndexes) {
+        public Builder completedIndexes(@Nullable String completedIndexes) {
             this.completedIndexes = completedIndexes;
             return this;
         }
 
-        public Builder setCompletionTime(@Nullable String completionTime) {
+        public Builder completionTime(@Nullable String completionTime) {
             this.completionTime = completionTime;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<JobCondition> conditions) {
+        public Builder conditions(@Nullable List<JobCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setFailed(@Nullable Integer failed) {
+        public Builder failed(@Nullable Integer failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setReady(@Nullable Integer ready) {
+        public Builder ready(@Nullable Integer ready) {
             this.ready = ready;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable Integer succeeded) {
+        public Builder succeeded(@Nullable Integer succeeded) {
             this.succeeded = succeeded;
             return this;
         }
 
-        public Builder setUncountedTerminatedPods(@Nullable UncountedTerminatedPods uncountedTerminatedPods) {
+        public Builder uncountedTerminatedPods(@Nullable UncountedTerminatedPods uncountedTerminatedPods) {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }

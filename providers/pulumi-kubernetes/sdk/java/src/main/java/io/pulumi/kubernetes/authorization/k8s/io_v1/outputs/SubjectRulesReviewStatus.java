@@ -36,12 +36,12 @@ public final class SubjectRulesReviewStatus {
      */
     private final List<ResourceRule> resourceRules;
 
-    @OutputCustomType.Constructor({"evaluationError","incomplete","nonResourceRules","resourceRules"})
+    @OutputCustomType.Constructor
     private SubjectRulesReviewStatus(
-        @Nullable String evaluationError,
-        Boolean incomplete,
-        List<NonResourceRule> nonResourceRules,
-        List<ResourceRule> resourceRules) {
+        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @OutputCustomType.Parameter("incomplete") Boolean incomplete,
+        @OutputCustomType.Parameter("nonResourceRules") List<NonResourceRule> nonResourceRules,
+        @OutputCustomType.Parameter("resourceRules") List<ResourceRule> resourceRules) {
         this.evaluationError = evaluationError;
         this.incomplete = incomplete;
         this.nonResourceRules = nonResourceRules;
@@ -103,22 +103,22 @@ public final class SubjectRulesReviewStatus {
     	      this.resourceRules = defaults.resourceRules;
         }
 
-        public Builder setEvaluationError(@Nullable String evaluationError) {
+        public Builder evaluationError(@Nullable String evaluationError) {
             this.evaluationError = evaluationError;
             return this;
         }
 
-        public Builder setIncomplete(Boolean incomplete) {
+        public Builder incomplete(Boolean incomplete) {
             this.incomplete = Objects.requireNonNull(incomplete);
             return this;
         }
 
-        public Builder setNonResourceRules(List<NonResourceRule> nonResourceRules) {
+        public Builder nonResourceRules(List<NonResourceRule> nonResourceRules) {
             this.nonResourceRules = Objects.requireNonNull(nonResourceRules);
             return this;
         }
 
-        public Builder setResourceRules(List<ResourceRule> resourceRules) {
+        public Builder resourceRules(List<ResourceRule> resourceRules) {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }

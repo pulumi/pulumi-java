@@ -20,10 +20,10 @@ public final class LoadBalancerConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"type","version"})
+    @OutputCustomType.Constructor
     private LoadBalancerConfigResponse(
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.type = type;
         this.version = version;
     }
@@ -65,12 +65,12 @@ public final class LoadBalancerConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

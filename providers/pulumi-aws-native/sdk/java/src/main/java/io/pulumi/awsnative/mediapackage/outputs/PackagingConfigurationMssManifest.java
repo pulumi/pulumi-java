@@ -15,10 +15,10 @@ public final class PackagingConfigurationMssManifest {
     private final @Nullable String manifestName;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"manifestName","streamSelection"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationMssManifest(
-        @Nullable String manifestName,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestName = manifestName;
         this.streamSelection = streamSelection;
     }
@@ -52,12 +52,12 @@ public final class PackagingConfigurationMssManifest {
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

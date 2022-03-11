@@ -33,12 +33,12 @@ public final class ConnectorMappingStructureResponse {
      */
     private final String propertyName;
 
-    @OutputCustomType.Constructor({"columnName","customFormatSpecifier","isEncrypted","propertyName"})
+    @OutputCustomType.Constructor
     private ConnectorMappingStructureResponse(
-        String columnName,
-        @Nullable String customFormatSpecifier,
-        @Nullable Boolean isEncrypted,
-        String propertyName) {
+        @OutputCustomType.Parameter("columnName") String columnName,
+        @OutputCustomType.Parameter("customFormatSpecifier") @Nullable String customFormatSpecifier,
+        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @OutputCustomType.Parameter("propertyName") String propertyName) {
         this.columnName = columnName;
         this.customFormatSpecifier = customFormatSpecifier;
         this.isEncrypted = isEncrypted;
@@ -100,22 +100,22 @@ public final class ConnectorMappingStructureResponse {
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setCustomFormatSpecifier(@Nullable String customFormatSpecifier) {
+        public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
             this.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
 
-        public Builder setIsEncrypted(@Nullable Boolean isEncrypted) {
+        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
-        public Builder setPropertyName(String propertyName) {
+        public Builder propertyName(String propertyName) {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }

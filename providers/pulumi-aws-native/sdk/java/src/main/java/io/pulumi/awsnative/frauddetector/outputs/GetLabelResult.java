@@ -39,13 +39,13 @@ public final class GetLabelResult {
      */
     private final @Nullable List<LabelTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","lastUpdatedTime","tags"})
+    @OutputCustomType.Constructor
     private GetLabelResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<LabelTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<LabelTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -117,27 +117,27 @@ public final class GetLabelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LabelTag> tags) {
+        public Builder tags(@Nullable List<LabelTag> tags) {
             this.tags = tags;
             return this;
         }

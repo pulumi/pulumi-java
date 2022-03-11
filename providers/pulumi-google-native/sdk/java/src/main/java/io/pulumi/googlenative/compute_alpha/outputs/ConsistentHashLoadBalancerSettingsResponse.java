@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
      */
     private final String minimumRingSize;
 
-    @OutputCustomType.Constructor({"httpCookie","httpHeaderName","minimumRingSize"})
+    @OutputCustomType.Constructor
     private ConsistentHashLoadBalancerSettingsResponse(
-        ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
-        String httpHeaderName,
-        String minimumRingSize) {
+        @OutputCustomType.Parameter("httpCookie") ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie,
+        @OutputCustomType.Parameter("httpHeaderName") String httpHeaderName,
+        @OutputCustomType.Parameter("minimumRingSize") String minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;
@@ -82,17 +82,17 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookie(ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie) {
+        public Builder httpCookie(ConsistentHashLoadBalancerSettingsHttpCookieResponse httpCookie) {
             this.httpCookie = Objects.requireNonNull(httpCookie);
             return this;
         }
 
-        public Builder setHttpHeaderName(String httpHeaderName) {
+        public Builder httpHeaderName(String httpHeaderName) {
             this.httpHeaderName = Objects.requireNonNull(httpHeaderName);
             return this;
         }
 
-        public Builder setMinimumRingSize(String minimumRingSize) {
+        public Builder minimumRingSize(String minimumRingSize) {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }

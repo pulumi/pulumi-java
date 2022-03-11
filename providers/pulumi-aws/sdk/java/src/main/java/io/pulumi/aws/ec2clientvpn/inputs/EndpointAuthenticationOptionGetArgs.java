@@ -118,52 +118,52 @@ public final class EndpointAuthenticationOptionGetArgs extends io.pulumi.resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setActiveDirectoryId(@Nullable Input<String> activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable Input<String> activeDirectoryId) {
             this.activeDirectoryId = activeDirectoryId;
             return this;
         }
 
-        public Builder setActiveDirectoryId(@Nullable String activeDirectoryId) {
+        public Builder activeDirectoryId(@Nullable String activeDirectoryId) {
             this.activeDirectoryId = Input.ofNullable(activeDirectoryId);
             return this;
         }
 
-        public Builder setRootCertificateChainArn(@Nullable Input<String> rootCertificateChainArn) {
+        public Builder rootCertificateChainArn(@Nullable Input<String> rootCertificateChainArn) {
             this.rootCertificateChainArn = rootCertificateChainArn;
             return this;
         }
 
-        public Builder setRootCertificateChainArn(@Nullable String rootCertificateChainArn) {
+        public Builder rootCertificateChainArn(@Nullable String rootCertificateChainArn) {
             this.rootCertificateChainArn = Input.ofNullable(rootCertificateChainArn);
             return this;
         }
 
-        public Builder setSamlProviderArn(@Nullable Input<String> samlProviderArn) {
+        public Builder samlProviderArn(@Nullable Input<String> samlProviderArn) {
             this.samlProviderArn = samlProviderArn;
             return this;
         }
 
-        public Builder setSamlProviderArn(@Nullable String samlProviderArn) {
+        public Builder samlProviderArn(@Nullable String samlProviderArn) {
             this.samlProviderArn = Input.ofNullable(samlProviderArn);
             return this;
         }
 
-        public Builder setSelfServiceSamlProviderArn(@Nullable Input<String> selfServiceSamlProviderArn) {
+        public Builder selfServiceSamlProviderArn(@Nullable Input<String> selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = selfServiceSamlProviderArn;
             return this;
         }
 
-        public Builder setSelfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
+        public Builder selfServiceSamlProviderArn(@Nullable String selfServiceSamlProviderArn) {
             this.selfServiceSamlProviderArn = Input.ofNullable(selfServiceSamlProviderArn);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

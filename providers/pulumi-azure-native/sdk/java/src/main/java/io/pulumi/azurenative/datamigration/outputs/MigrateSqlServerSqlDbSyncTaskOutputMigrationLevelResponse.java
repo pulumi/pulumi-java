@@ -57,17 +57,17 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
      */
     private final String targetServerVersion;
 
-    @OutputCustomType.Constructor({"databaseCount","endedOn","id","resultType","sourceServer","sourceServerVersion","startedOn","targetServer","targetServerVersion"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse(
-        Integer databaseCount,
-        String endedOn,
-        String id,
-        String resultType,
-        String sourceServer,
-        String sourceServerVersion,
-        String startedOn,
-        String targetServer,
-        String targetServerVersion) {
+        @OutputCustomType.Parameter("databaseCount") Integer databaseCount,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sourceServer") String sourceServer,
+        @OutputCustomType.Parameter("sourceServerVersion") String sourceServerVersion,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("targetServer") String targetServer,
+        @OutputCustomType.Parameter("targetServerVersion") String targetServerVersion) {
         this.databaseCount = databaseCount;
         this.endedOn = endedOn;
         this.id = id;
@@ -180,47 +180,47 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse {
     	      this.targetServerVersion = defaults.targetServerVersion;
         }
 
-        public Builder setDatabaseCount(Integer databaseCount) {
+        public Builder databaseCount(Integer databaseCount) {
             this.databaseCount = Objects.requireNonNull(databaseCount);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSourceServer(String sourceServer) {
+        public Builder sourceServer(String sourceServer) {
             this.sourceServer = Objects.requireNonNull(sourceServer);
             return this;
         }
 
-        public Builder setSourceServerVersion(String sourceServerVersion) {
+        public Builder sourceServerVersion(String sourceServerVersion) {
             this.sourceServerVersion = Objects.requireNonNull(sourceServerVersion);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setTargetServer(String targetServer) {
+        public Builder targetServer(String targetServer) {
             this.targetServer = Objects.requireNonNull(targetServer);
             return this;
         }
 
-        public Builder setTargetServerVersion(String targetServerVersion) {
+        public Builder targetServerVersion(String targetServerVersion) {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }

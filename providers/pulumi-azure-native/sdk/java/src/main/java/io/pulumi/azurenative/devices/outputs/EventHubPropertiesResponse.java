@@ -40,13 +40,13 @@ public final class EventHubPropertiesResponse {
      */
     private final @Nullable Double retentionTimeInDays;
 
-    @OutputCustomType.Constructor({"endpoint","partitionCount","partitionIds","path","retentionTimeInDays"})
+    @OutputCustomType.Constructor
     private EventHubPropertiesResponse(
-        String endpoint,
-        @Nullable Integer partitionCount,
-        List<String> partitionIds,
-        String path,
-        @Nullable Double retentionTimeInDays) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("partitionCount") @Nullable Integer partitionCount,
+        @OutputCustomType.Parameter("partitionIds") List<String> partitionIds,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("retentionTimeInDays") @Nullable Double retentionTimeInDays) {
         this.endpoint = endpoint;
         this.partitionCount = partitionCount;
         this.partitionIds = partitionIds;
@@ -118,27 +118,27 @@ public final class EventHubPropertiesResponse {
     	      this.retentionTimeInDays = defaults.retentionTimeInDays;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setPartitionCount(@Nullable Integer partitionCount) {
+        public Builder partitionCount(@Nullable Integer partitionCount) {
             this.partitionCount = partitionCount;
             return this;
         }
 
-        public Builder setPartitionIds(List<String> partitionIds) {
+        public Builder partitionIds(List<String> partitionIds) {
             this.partitionIds = Objects.requireNonNull(partitionIds);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRetentionTimeInDays(@Nullable Double retentionTimeInDays) {
+        public Builder retentionTimeInDays(@Nullable Double retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }

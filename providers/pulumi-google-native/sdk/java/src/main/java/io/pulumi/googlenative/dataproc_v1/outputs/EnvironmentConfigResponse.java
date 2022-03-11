@@ -21,10 +21,10 @@ public final class EnvironmentConfigResponse {
      */
     private final PeripheralsConfigResponse peripheralsConfig;
 
-    @OutputCustomType.Constructor({"executionConfig","peripheralsConfig"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigResponse(
-        ExecutionConfigResponse executionConfig,
-        PeripheralsConfigResponse peripheralsConfig) {
+        @OutputCustomType.Parameter("executionConfig") ExecutionConfigResponse executionConfig,
+        @OutputCustomType.Parameter("peripheralsConfig") PeripheralsConfigResponse peripheralsConfig) {
         this.executionConfig = executionConfig;
         this.peripheralsConfig = peripheralsConfig;
     }
@@ -66,12 +66,12 @@ public final class EnvironmentConfigResponse {
     	      this.peripheralsConfig = defaults.peripheralsConfig;
         }
 
-        public Builder setExecutionConfig(ExecutionConfigResponse executionConfig) {
+        public Builder executionConfig(ExecutionConfigResponse executionConfig) {
             this.executionConfig = Objects.requireNonNull(executionConfig);
             return this;
         }
 
-        public Builder setPeripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
+        public Builder peripheralsConfig(PeripheralsConfigResponse peripheralsConfig) {
             this.peripheralsConfig = Objects.requireNonNull(peripheralsConfig);
             return this;
         }

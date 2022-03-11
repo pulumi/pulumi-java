@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BucketAccessControlTranslation {
     private final String owner;
 
-    @OutputCustomType.Constructor({"owner"})
-    private BucketAccessControlTranslation(String owner) {
+    @OutputCustomType.Constructor
+    private BucketAccessControlTranslation(@OutputCustomType.Parameter("owner") String owner) {
         this.owner = owner;
     }
 
@@ -40,7 +40,7 @@ public final class BucketAccessControlTranslation {
     	      this.owner = defaults.owner;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }

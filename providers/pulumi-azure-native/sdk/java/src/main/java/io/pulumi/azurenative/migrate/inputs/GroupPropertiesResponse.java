@@ -157,37 +157,37 @@ public final class GroupPropertiesResponse extends io.pulumi.resources.InvokeArg
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setAreAssessmentsRunning(Boolean areAssessmentsRunning) {
+        public Builder areAssessmentsRunning(Boolean areAssessmentsRunning) {
             this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning);
             return this;
         }
 
-        public Builder setAssessments(List<String> assessments) {
+        public Builder assessments(List<String> assessments) {
             this.assessments = Objects.requireNonNull(assessments);
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setGroupStatus(String groupStatus) {
+        public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
 
-        public Builder setGroupType(@Nullable String groupType) {
+        public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
 
-        public Builder setMachineCount(Integer machineCount) {
+        public Builder machineCount(Integer machineCount) {
             this.machineCount = Objects.requireNonNull(machineCount);
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

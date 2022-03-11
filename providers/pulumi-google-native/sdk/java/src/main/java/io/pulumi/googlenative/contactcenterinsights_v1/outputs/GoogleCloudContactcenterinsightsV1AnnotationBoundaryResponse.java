@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
      */
     private final Integer wordIndex;
 
-    @OutputCustomType.Constructor({"transcriptIndex","wordIndex"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(
-        Integer transcriptIndex,
-        Integer wordIndex) {
+        @OutputCustomType.Parameter("transcriptIndex") Integer transcriptIndex,
+        @OutputCustomType.Parameter("wordIndex") Integer wordIndex) {
         this.transcriptIndex = transcriptIndex;
         this.wordIndex = wordIndex;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
     	      this.wordIndex = defaults.wordIndex;
         }
 
-        public Builder setTranscriptIndex(Integer transcriptIndex) {
+        public Builder transcriptIndex(Integer transcriptIndex) {
             this.transcriptIndex = Objects.requireNonNull(transcriptIndex);
             return this;
         }
 
-        public Builder setWordIndex(Integer wordIndex) {
+        public Builder wordIndex(Integer wordIndex) {
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
         }

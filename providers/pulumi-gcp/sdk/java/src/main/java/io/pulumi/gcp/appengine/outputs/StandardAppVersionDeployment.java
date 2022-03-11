@@ -27,10 +27,10 @@ public final class StandardAppVersionDeployment {
      */
     private final @Nullable StandardAppVersionDeploymentZip zip;
 
-    @OutputCustomType.Constructor({"files","zip"})
+    @OutputCustomType.Constructor
     private StandardAppVersionDeployment(
-        @Nullable List<StandardAppVersionDeploymentFile> files,
-        @Nullable StandardAppVersionDeploymentZip zip) {
+        @OutputCustomType.Parameter("files") @Nullable List<StandardAppVersionDeploymentFile> files,
+        @OutputCustomType.Parameter("zip") @Nullable StandardAppVersionDeploymentZip zip) {
         this.files = files;
         this.zip = zip;
     }
@@ -75,12 +75,12 @@ public final class StandardAppVersionDeployment {
     	      this.zip = defaults.zip;
         }
 
-        public Builder setFiles(@Nullable List<StandardAppVersionDeploymentFile> files) {
+        public Builder files(@Nullable List<StandardAppVersionDeploymentFile> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setZip(@Nullable StandardAppVersionDeploymentZip zip) {
+        public Builder zip(@Nullable StandardAppVersionDeploymentZip zip) {
             this.zip = zip;
             return this;
         }

@@ -105,25 +105,25 @@ public final class GetBatchResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"createTime","creator","environmentConfig","labels","name","operation","pysparkBatch","runtimeConfig","runtimeInfo","sparkBatch","sparkRBatch","sparkSqlBatch","state","stateHistory","stateMessage","stateTime","uuid"})
+    @OutputCustomType.Constructor
     private GetBatchResult(
-        String createTime,
-        String creator,
-        EnvironmentConfigResponse environmentConfig,
-        Map<String,String> labels,
-        String name,
-        String operation,
-        PySparkBatchResponse pysparkBatch,
-        RuntimeConfigResponse runtimeConfig,
-        RuntimeInfoResponse runtimeInfo,
-        SparkBatchResponse sparkBatch,
-        SparkRBatchResponse sparkRBatch,
-        SparkSqlBatchResponse sparkSqlBatch,
-        String state,
-        List<StateHistoryResponse> stateHistory,
-        String stateMessage,
-        String stateTime,
-        String uuid) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("environmentConfig") EnvironmentConfigResponse environmentConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("pysparkBatch") PySparkBatchResponse pysparkBatch,
+        @OutputCustomType.Parameter("runtimeConfig") RuntimeConfigResponse runtimeConfig,
+        @OutputCustomType.Parameter("runtimeInfo") RuntimeInfoResponse runtimeInfo,
+        @OutputCustomType.Parameter("sparkBatch") SparkBatchResponse sparkBatch,
+        @OutputCustomType.Parameter("sparkRBatch") SparkRBatchResponse sparkRBatch,
+        @OutputCustomType.Parameter("sparkSqlBatch") SparkSqlBatchResponse sparkSqlBatch,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateHistory") List<StateHistoryResponse> stateHistory,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateTime") String stateTime,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.createTime = createTime;
         this.creator = creator;
         this.environmentConfig = environmentConfig;
@@ -315,87 +315,87 @@ public final class GetBatchResult {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreator(String creator) {
+        public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
 
-        public Builder setEnvironmentConfig(EnvironmentConfigResponse environmentConfig) {
+        public Builder environmentConfig(EnvironmentConfigResponse environmentConfig) {
             this.environmentConfig = Objects.requireNonNull(environmentConfig);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setPysparkBatch(PySparkBatchResponse pysparkBatch) {
+        public Builder pysparkBatch(PySparkBatchResponse pysparkBatch) {
             this.pysparkBatch = Objects.requireNonNull(pysparkBatch);
             return this;
         }
 
-        public Builder setRuntimeConfig(RuntimeConfigResponse runtimeConfig) {
+        public Builder runtimeConfig(RuntimeConfigResponse runtimeConfig) {
             this.runtimeConfig = Objects.requireNonNull(runtimeConfig);
             return this;
         }
 
-        public Builder setRuntimeInfo(RuntimeInfoResponse runtimeInfo) {
+        public Builder runtimeInfo(RuntimeInfoResponse runtimeInfo) {
             this.runtimeInfo = Objects.requireNonNull(runtimeInfo);
             return this;
         }
 
-        public Builder setSparkBatch(SparkBatchResponse sparkBatch) {
+        public Builder sparkBatch(SparkBatchResponse sparkBatch) {
             this.sparkBatch = Objects.requireNonNull(sparkBatch);
             return this;
         }
 
-        public Builder setSparkRBatch(SparkRBatchResponse sparkRBatch) {
+        public Builder sparkRBatch(SparkRBatchResponse sparkRBatch) {
             this.sparkRBatch = Objects.requireNonNull(sparkRBatch);
             return this;
         }
 
-        public Builder setSparkSqlBatch(SparkSqlBatchResponse sparkSqlBatch) {
+        public Builder sparkSqlBatch(SparkSqlBatchResponse sparkSqlBatch) {
             this.sparkSqlBatch = Objects.requireNonNull(sparkSqlBatch);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateHistory(List<StateHistoryResponse> stateHistory) {
+        public Builder stateHistory(List<StateHistoryResponse> stateHistory) {
             this.stateHistory = Objects.requireNonNull(stateHistory);
             return this;
         }
 
-        public Builder setStateMessage(String stateMessage) {
+        public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
 
-        public Builder setStateTime(String stateTime) {
+        public Builder stateTime(String stateTime) {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }

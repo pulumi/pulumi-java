@@ -74,18 +74,18 @@ public final class JobSpec {
      */
     private final @Nullable Integer ttlSecondsAfterFinished;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","backoffLimit","completionMode","completions","manualSelector","parallelism","selector","suspend","template","ttlSecondsAfterFinished"})
+    @OutputCustomType.Constructor
     private JobSpec(
-        @Nullable Integer activeDeadlineSeconds,
-        @Nullable Integer backoffLimit,
-        @Nullable String completionMode,
-        @Nullable Integer completions,
-        @Nullable Boolean manualSelector,
-        @Nullable Integer parallelism,
-        @Nullable LabelSelector selector,
-        @Nullable Boolean suspend,
-        PodTemplateSpec template,
-        @Nullable Integer ttlSecondsAfterFinished) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
+        @OutputCustomType.Parameter("backoffLimit") @Nullable Integer backoffLimit,
+        @OutputCustomType.Parameter("completionMode") @Nullable String completionMode,
+        @OutputCustomType.Parameter("completions") @Nullable Integer completions,
+        @OutputCustomType.Parameter("manualSelector") @Nullable Boolean manualSelector,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template,
+        @OutputCustomType.Parameter("ttlSecondsAfterFinished") @Nullable Integer ttlSecondsAfterFinished) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.backoffLimit = backoffLimit;
         this.completionMode = completionMode;
@@ -215,52 +215,52 @@ public final class JobSpec {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Integer backoffLimit) {
+        public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
 
-        public Builder setCompletionMode(@Nullable String completionMode) {
+        public Builder completionMode(@Nullable String completionMode) {
             this.completionMode = completionMode;
             return this;
         }
 
-        public Builder setCompletions(@Nullable Integer completions) {
+        public Builder completions(@Nullable Integer completions) {
             this.completions = completions;
             return this;
         }
 
-        public Builder setManualSelector(@Nullable Boolean manualSelector) {
+        public Builder manualSelector(@Nullable Boolean manualSelector) {
             this.manualSelector = manualSelector;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }

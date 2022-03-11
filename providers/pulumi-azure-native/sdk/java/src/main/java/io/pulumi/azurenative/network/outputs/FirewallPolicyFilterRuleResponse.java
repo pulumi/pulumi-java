@@ -45,13 +45,13 @@ public final class FirewallPolicyFilterRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"action","name","priority","ruleConditions","ruleType"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFilterRuleResponse(
-        @Nullable FirewallPolicyFilterRuleActionResponse action,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable List<Object> ruleConditions,
-        String ruleType) {
+        @OutputCustomType.Parameter("action") @Nullable FirewallPolicyFilterRuleActionResponse action,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("ruleConditions") @Nullable List<Object> ruleConditions,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.name = name;
         this.priority = priority;
@@ -124,27 +124,27 @@ public final class FirewallPolicyFilterRuleResponse {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleActionResponse action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleConditions(@Nullable List<Object> ruleConditions) {
+        public Builder ruleConditions(@Nullable List<Object> ruleConditions) {
             this.ruleConditions = ruleConditions;
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }

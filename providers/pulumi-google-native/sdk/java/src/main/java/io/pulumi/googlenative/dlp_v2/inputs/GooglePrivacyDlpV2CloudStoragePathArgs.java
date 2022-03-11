@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2CloudStoragePathArgs extends io.pulumi.reso
     	      this.path = defaults.path;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

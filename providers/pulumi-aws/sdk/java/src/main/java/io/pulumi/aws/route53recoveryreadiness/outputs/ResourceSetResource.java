@@ -30,12 +30,12 @@ public final class ResourceSetResource {
      */
     private final @Nullable String resourceArn;
 
-    @OutputCustomType.Constructor({"componentId","dnsTargetResource","readinessScopes","resourceArn"})
+    @OutputCustomType.Constructor
     private ResourceSetResource(
-        @Nullable String componentId,
-        @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
-        @Nullable List<String> readinessScopes,
-        @Nullable String resourceArn) {
+        @OutputCustomType.Parameter("componentId") @Nullable String componentId,
+        @OutputCustomType.Parameter("dnsTargetResource") @Nullable ResourceSetResourceDnsTargetResource dnsTargetResource,
+        @OutputCustomType.Parameter("readinessScopes") @Nullable List<String> readinessScopes,
+        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn) {
         this.componentId = componentId;
         this.dnsTargetResource = dnsTargetResource;
         this.readinessScopes = readinessScopes;
@@ -93,22 +93,22 @@ public final class ResourceSetResource {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setDnsTargetResource(@Nullable ResourceSetResourceDnsTargetResource dnsTargetResource) {
+        public Builder dnsTargetResource(@Nullable ResourceSetResourceDnsTargetResource dnsTargetResource) {
             this.dnsTargetResource = dnsTargetResource;
             return this;
         }
 
-        public Builder setReadinessScopes(@Nullable List<String> readinessScopes) {
+        public Builder readinessScopes(@Nullable List<String> readinessScopes) {
             this.readinessScopes = readinessScopes;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }

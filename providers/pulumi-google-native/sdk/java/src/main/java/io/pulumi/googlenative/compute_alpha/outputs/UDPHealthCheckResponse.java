@@ -31,12 +31,12 @@ public final class UDPHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor({"port","portName","request","response"})
+    @OutputCustomType.Constructor
     private UDPHealthCheckResponse(
-        Integer port,
-        String portName,
-        String request,
-        String response) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.request = request;
@@ -98,22 +98,22 @@ public final class UDPHealthCheckResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setResponse(String response) {
+        public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }

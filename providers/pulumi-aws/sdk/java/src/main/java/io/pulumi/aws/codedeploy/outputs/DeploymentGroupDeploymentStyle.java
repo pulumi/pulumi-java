@@ -22,10 +22,10 @@ public final class DeploymentGroupDeploymentStyle {
      */
     private final @Nullable String deploymentType;
 
-    @OutputCustomType.Constructor({"deploymentOption","deploymentType"})
+    @OutputCustomType.Constructor
     private DeploymentGroupDeploymentStyle(
-        @Nullable String deploymentOption,
-        @Nullable String deploymentType) {
+        @OutputCustomType.Parameter("deploymentOption") @Nullable String deploymentOption,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType) {
         this.deploymentOption = deploymentOption;
         this.deploymentType = deploymentType;
     }
@@ -67,12 +67,12 @@ public final class DeploymentGroupDeploymentStyle {
     	      this.deploymentType = defaults.deploymentType;
         }
 
-        public Builder setDeploymentOption(@Nullable String deploymentOption) {
+        public Builder deploymentOption(@Nullable String deploymentOption) {
             this.deploymentOption = deploymentOption;
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }

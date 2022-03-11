@@ -20,10 +20,10 @@ public final class GetRecipeResult {
     private final @Nullable String description;
     private final @Nullable List<RecipeStep> steps;
 
-    @OutputCustomType.Constructor({"description","steps"})
+    @OutputCustomType.Constructor
     private GetRecipeResult(
-        @Nullable String description,
-        @Nullable List<RecipeStep> steps) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("steps") @Nullable List<RecipeStep> steps) {
         this.description = description;
         this.steps = steps;
     }
@@ -61,12 +61,12 @@ public final class GetRecipeResult {
     	      this.steps = defaults.steps;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSteps(@Nullable List<RecipeStep> steps) {
+        public Builder steps(@Nullable List<RecipeStep> steps) {
             this.steps = steps;
             return this;
         }

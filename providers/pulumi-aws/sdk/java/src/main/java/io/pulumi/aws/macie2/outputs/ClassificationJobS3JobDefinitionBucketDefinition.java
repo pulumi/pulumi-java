@@ -21,10 +21,10 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
      */
     private final List<String> buckets;
 
-    @OutputCustomType.Constructor({"accountId","buckets"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionBucketDefinition(
-        String accountId,
-        List<String> buckets) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("buckets") List<String> buckets) {
         this.accountId = accountId;
         this.buckets = buckets;
     }
@@ -66,12 +66,12 @@ public final class ClassificationJobS3JobDefinitionBucketDefinition {
     	      this.buckets = defaults.buckets;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setBuckets(List<String> buckets) {
+        public Builder buckets(List<String> buckets) {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }

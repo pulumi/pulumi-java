@@ -20,10 +20,10 @@ public final class ImageResponse {
      */
     private final String rawBytes;
 
-    @OutputCustomType.Constructor({"gcsUri","rawBytes"})
+    @OutputCustomType.Constructor
     private ImageResponse(
-        String gcsUri,
-        String rawBytes) {
+        @OutputCustomType.Parameter("gcsUri") String gcsUri,
+        @OutputCustomType.Parameter("rawBytes") String rawBytes) {
         this.gcsUri = gcsUri;
         this.rawBytes = rawBytes;
     }
@@ -65,12 +65,12 @@ public final class ImageResponse {
     	      this.rawBytes = defaults.rawBytes;
         }
 
-        public Builder setGcsUri(String gcsUri) {
+        public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
 
-        public Builder setRawBytes(String rawBytes) {
+        public Builder rawBytes(String rawBytes) {
             this.rawBytes = Objects.requireNonNull(rawBytes);
             return this;
         }

@@ -12,10 +12,10 @@ public final class DatasetGlueConfiguration {
     private final String databaseName;
     private final String tableName;
 
-    @OutputCustomType.Constructor({"databaseName","tableName"})
+    @OutputCustomType.Constructor
     private DatasetGlueConfiguration(
-        String databaseName,
-        String tableName) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.databaseName = databaseName;
         this.tableName = tableName;
     }
@@ -49,12 +49,12 @@ public final class DatasetGlueConfiguration {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

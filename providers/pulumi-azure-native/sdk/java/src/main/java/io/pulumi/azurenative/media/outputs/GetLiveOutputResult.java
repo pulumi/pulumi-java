@@ -79,21 +79,21 @@ public final class GetLiveOutputResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"archiveWindowLength","assetName","created","description","hls","id","lastModified","manifestName","name","outputSnapTime","provisioningState","resourceState","type"})
+    @OutputCustomType.Constructor
     private GetLiveOutputResult(
-        String archiveWindowLength,
-        String assetName,
-        String created,
-        @Nullable String description,
-        @Nullable HlsResponse hls,
-        String id,
-        String lastModified,
-        @Nullable String manifestName,
-        String name,
-        @Nullable Double outputSnapTime,
-        String provisioningState,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("archiveWindowLength") String archiveWindowLength,
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hls") @Nullable HlsResponse hls,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputSnapTime") @Nullable Double outputSnapTime,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.archiveWindowLength = archiveWindowLength;
         this.assetName = assetName;
         this.created = created;
@@ -245,67 +245,67 @@ public final class GetLiveOutputResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArchiveWindowLength(String archiveWindowLength) {
+        public Builder archiveWindowLength(String archiveWindowLength) {
             this.archiveWindowLength = Objects.requireNonNull(archiveWindowLength);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHls(@Nullable HlsResponse hls) {
+        public Builder hls(@Nullable HlsResponse hls) {
             this.hls = hls;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputSnapTime(@Nullable Double outputSnapTime) {
+        public Builder outputSnapTime(@Nullable Double outputSnapTime) {
             this.outputSnapTime = outputSnapTime;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

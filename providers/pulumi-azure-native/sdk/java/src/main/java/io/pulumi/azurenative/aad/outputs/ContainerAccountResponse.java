@@ -27,11 +27,11 @@ public final class ContainerAccountResponse {
      */
     private final @Nullable String spn;
 
-    @OutputCustomType.Constructor({"accountName","password","spn"})
+    @OutputCustomType.Constructor
     private ContainerAccountResponse(
-        @Nullable String accountName,
-        @Nullable String password,
-        @Nullable String spn) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("spn") @Nullable String spn) {
         this.accountName = accountName;
         this.password = password;
         this.spn = spn;
@@ -83,17 +83,17 @@ public final class ContainerAccountResponse {
     	      this.spn = defaults.spn;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSpn(@Nullable String spn) {
+        public Builder spn(@Nullable String spn) {
             this.spn = spn;
             return this;
         }

@@ -22,10 +22,10 @@ public final class ApiResourceDefinitionsResponse {
      */
     private final @Nullable String originalSwaggerUrl;
 
-    @OutputCustomType.Constructor({"modifiedSwaggerUrl","originalSwaggerUrl"})
+    @OutputCustomType.Constructor
     private ApiResourceDefinitionsResponse(
-        @Nullable String modifiedSwaggerUrl,
-        @Nullable String originalSwaggerUrl) {
+        @OutputCustomType.Parameter("modifiedSwaggerUrl") @Nullable String modifiedSwaggerUrl,
+        @OutputCustomType.Parameter("originalSwaggerUrl") @Nullable String originalSwaggerUrl) {
         this.modifiedSwaggerUrl = modifiedSwaggerUrl;
         this.originalSwaggerUrl = originalSwaggerUrl;
     }
@@ -67,12 +67,12 @@ public final class ApiResourceDefinitionsResponse {
     	      this.originalSwaggerUrl = defaults.originalSwaggerUrl;
         }
 
-        public Builder setModifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
+        public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
             this.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
 
-        public Builder setOriginalSwaggerUrl(@Nullable String originalSwaggerUrl) {
+        public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }

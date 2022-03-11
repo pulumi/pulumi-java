@@ -16,8 +16,8 @@ public final class DiagnosticsResponse {
      */
     private final List<DiagnosticConditionResponse> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private DiagnosticsResponse(List<DiagnosticConditionResponse> conditions) {
+    @OutputCustomType.Constructor
+    private DiagnosticsResponse(@OutputCustomType.Parameter("conditions") List<DiagnosticConditionResponse> conditions) {
         this.conditions = conditions;
     }
 
@@ -49,7 +49,7 @@ public final class DiagnosticsResponse {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(List<DiagnosticConditionResponse> conditions) {
+        public Builder conditions(List<DiagnosticConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

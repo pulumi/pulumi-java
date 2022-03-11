@@ -37,13 +37,13 @@ public final class UserAccessPolicyResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"accessResourcePath","expireTime","permissions","profileName","startTime"})
+    @OutputCustomType.Constructor
     private UserAccessPolicyResponse(
-        @Nullable String accessResourcePath,
-        @Nullable String expireTime,
-        @Nullable String permissions,
-        @Nullable String profileName,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("accessResourcePath") @Nullable String accessResourcePath,
+        @OutputCustomType.Parameter("expireTime") @Nullable String expireTime,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
+        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.accessResourcePath = accessResourcePath;
         this.expireTime = expireTime;
         this.permissions = permissions;
@@ -115,27 +115,27 @@ public final class UserAccessPolicyResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setAccessResourcePath(@Nullable String accessResourcePath) {
+        public Builder accessResourcePath(@Nullable String accessResourcePath) {
             this.accessResourcePath = accessResourcePath;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

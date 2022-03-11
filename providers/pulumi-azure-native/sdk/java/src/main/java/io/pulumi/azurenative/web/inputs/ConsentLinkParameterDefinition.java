@@ -106,22 +106,22 @@ public final class ConsentLinkParameterDefinition extends io.pulumi.resources.In
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setParameterName(@Nullable String parameterName) {
+        public Builder parameterName(@Nullable String parameterName) {
             this.parameterName = parameterName;
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable String redirectUrl) {
+        public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

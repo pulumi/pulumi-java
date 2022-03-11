@@ -37,13 +37,13 @@ public final class ExtensionStatusResponse {
      */
     private final @Nullable String time;
 
-    @OutputCustomType.Constructor({"code","displayStatus","level","message","time"})
+    @OutputCustomType.Constructor
     private ExtensionStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String level,
-        @Nullable String message,
-        @Nullable String time) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("time") @Nullable String time) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.level = level;
@@ -115,27 +115,27 @@ public final class ExtensionStatusResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDisplayStatus(@Nullable String displayStatus) {
+        public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTime(@Nullable String time) {
+        public Builder time(@Nullable String time) {
             this.time = time;
             return this;
         }

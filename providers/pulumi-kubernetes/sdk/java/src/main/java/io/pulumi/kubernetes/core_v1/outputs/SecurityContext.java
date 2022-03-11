@@ -73,19 +73,19 @@ public final class SecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor({"allowPrivilegeEscalation","capabilities","privileged","procMount","readOnlyRootFilesystem","runAsGroup","runAsNonRoot","runAsUser","seLinuxOptions","seccompProfile","windowsOptions"})
+    @OutputCustomType.Constructor
     private SecurityContext(
-        @Nullable Boolean allowPrivilegeEscalation,
-        @Nullable Capabilities capabilities,
-        @Nullable Boolean privileged,
-        @Nullable String procMount,
-        @Nullable Boolean readOnlyRootFilesystem,
-        @Nullable Integer runAsGroup,
-        @Nullable Boolean runAsNonRoot,
-        @Nullable Integer runAsUser,
-        @Nullable SELinuxOptions seLinuxOptions,
-        @Nullable SeccompProfile seccompProfile,
-        @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @OutputCustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
+        @OutputCustomType.Parameter("capabilities") @Nullable Capabilities capabilities,
+        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @OutputCustomType.Parameter("procMount") @Nullable String procMount,
+        @OutputCustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.capabilities = capabilities;
         this.privileged = privileged;
@@ -217,57 +217,57 @@ public final class SecurityContext {
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable Capabilities capabilities) {
+        public Builder capabilities(@Nullable Capabilities capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setProcMount(@Nullable String procMount) {
+        public Builder procMount(@Nullable String procMount) {
             this.procMount = procMount;
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfile seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }

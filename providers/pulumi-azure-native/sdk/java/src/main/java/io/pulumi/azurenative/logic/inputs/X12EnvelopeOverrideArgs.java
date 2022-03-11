@@ -205,102 +205,102 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
     	      this.timeFormat = defaults.timeFormat;
         }
 
-        public Builder setDateFormat(Input<Either<String,X12DateFormat>> dateFormat) {
+        public Builder dateFormat(Input<Either<String,X12DateFormat>> dateFormat) {
             this.dateFormat = Objects.requireNonNull(dateFormat);
             return this;
         }
 
-        public Builder setDateFormat(Either<String,X12DateFormat> dateFormat) {
+        public Builder dateFormat(Either<String,X12DateFormat> dateFormat) {
             this.dateFormat = Input.of(Objects.requireNonNull(dateFormat));
             return this;
         }
 
-        public Builder setFunctionalIdentifierCode(@Nullable Input<String> functionalIdentifierCode) {
+        public Builder functionalIdentifierCode(@Nullable Input<String> functionalIdentifierCode) {
             this.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
 
-        public Builder setFunctionalIdentifierCode(@Nullable String functionalIdentifierCode) {
+        public Builder functionalIdentifierCode(@Nullable String functionalIdentifierCode) {
             this.functionalIdentifierCode = Input.ofNullable(functionalIdentifierCode);
             return this;
         }
 
-        public Builder setHeaderVersion(Input<String> headerVersion) {
+        public Builder headerVersion(Input<String> headerVersion) {
             this.headerVersion = Objects.requireNonNull(headerVersion);
             return this;
         }
 
-        public Builder setHeaderVersion(String headerVersion) {
+        public Builder headerVersion(String headerVersion) {
             this.headerVersion = Input.of(Objects.requireNonNull(headerVersion));
             return this;
         }
 
-        public Builder setMessageId(Input<String> messageId) {
+        public Builder messageId(Input<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder setProtocolVersion(Input<String> protocolVersion) {
+        public Builder protocolVersion(Input<String> protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
-        public Builder setProtocolVersion(String protocolVersion) {
+        public Builder protocolVersion(String protocolVersion) {
             this.protocolVersion = Input.of(Objects.requireNonNull(protocolVersion));
             return this;
         }
 
-        public Builder setReceiverApplicationId(Input<String> receiverApplicationId) {
+        public Builder receiverApplicationId(Input<String> receiverApplicationId) {
             this.receiverApplicationId = Objects.requireNonNull(receiverApplicationId);
             return this;
         }
 
-        public Builder setReceiverApplicationId(String receiverApplicationId) {
+        public Builder receiverApplicationId(String receiverApplicationId) {
             this.receiverApplicationId = Input.of(Objects.requireNonNull(receiverApplicationId));
             return this;
         }
 
-        public Builder setResponsibleAgencyCode(Input<String> responsibleAgencyCode) {
+        public Builder responsibleAgencyCode(Input<String> responsibleAgencyCode) {
             this.responsibleAgencyCode = Objects.requireNonNull(responsibleAgencyCode);
             return this;
         }
 
-        public Builder setResponsibleAgencyCode(String responsibleAgencyCode) {
+        public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             this.responsibleAgencyCode = Input.of(Objects.requireNonNull(responsibleAgencyCode));
             return this;
         }
 
-        public Builder setSenderApplicationId(Input<String> senderApplicationId) {
+        public Builder senderApplicationId(Input<String> senderApplicationId) {
             this.senderApplicationId = Objects.requireNonNull(senderApplicationId);
             return this;
         }
 
-        public Builder setSenderApplicationId(String senderApplicationId) {
+        public Builder senderApplicationId(String senderApplicationId) {
             this.senderApplicationId = Input.of(Objects.requireNonNull(senderApplicationId));
             return this;
         }
 
-        public Builder setTargetNamespace(Input<String> targetNamespace) {
+        public Builder targetNamespace(Input<String> targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
 
-        public Builder setTargetNamespace(String targetNamespace) {
+        public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Input.of(Objects.requireNonNull(targetNamespace));
             return this;
         }
 
-        public Builder setTimeFormat(Input<Either<String,X12TimeFormat>> timeFormat) {
+        public Builder timeFormat(Input<Either<String,X12TimeFormat>> timeFormat) {
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
         }
 
-        public Builder setTimeFormat(Either<String,X12TimeFormat> timeFormat) {
+        public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
             this.timeFormat = Input.of(Objects.requireNonNull(timeFormat));
             return this;
         }

@@ -119,52 +119,52 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     	      this.memberStatus = defaults.memberStatus;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setInvite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Input<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
-        public Builder setInvite(@Nullable Boolean invite) {
+        public Builder invite(@Nullable Boolean invite) {
             this.invite = Input.ofNullable(invite);
             return this;
         }
 
-        public Builder setMasterId(@Nullable Input<String> masterId) {
+        public Builder masterId(@Nullable Input<String> masterId) {
             this.masterId = masterId;
             return this;
         }
 
-        public Builder setMasterId(@Nullable String masterId) {
+        public Builder masterId(@Nullable String masterId) {
             this.masterId = Input.ofNullable(masterId);
             return this;
         }
 
-        public Builder setMemberStatus(@Nullable Input<String> memberStatus) {
+        public Builder memberStatus(@Nullable Input<String> memberStatus) {
             this.memberStatus = memberStatus;
             return this;
         }
 
-        public Builder setMemberStatus(@Nullable String memberStatus) {
+        public Builder memberStatus(@Nullable String memberStatus) {
             this.memberStatus = Input.ofNullable(memberStatus);
             return this;
         }

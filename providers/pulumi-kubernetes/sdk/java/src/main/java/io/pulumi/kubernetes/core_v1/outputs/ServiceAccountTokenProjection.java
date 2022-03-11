@@ -28,11 +28,11 @@ public final class ServiceAccountTokenProjection {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"audience","expirationSeconds","path"})
+    @OutputCustomType.Constructor
     private ServiceAccountTokenProjection(
-        @Nullable String audience,
-        @Nullable Integer expirationSeconds,
-        String path) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds,
+        @OutputCustomType.Parameter("path") String path) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
         this.path = path;
@@ -84,17 +84,17 @@ public final class ServiceAccountTokenProjection {
     	      this.path = defaults.path;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

@@ -52,12 +52,12 @@ public final class FlexibleAppVersionHandlerScriptGetArgs extends io.pulumi.reso
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder setScriptPath(Input<String> scriptPath) {
+        public Builder scriptPath(Input<String> scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }
 
-        public Builder setScriptPath(String scriptPath) {
+        public Builder scriptPath(String scriptPath) {
             this.scriptPath = Input.of(Objects.requireNonNull(scriptPath));
             return this;
         }

@@ -82,22 +82,22 @@ public final class GetDeveloperResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"accessType","appFamily","apps","attributes","companies","createdAt","developerId","email","firstName","lastModifiedAt","lastName","organizationName","status","userName"})
+    @OutputCustomType.Constructor
     private GetDeveloperResult(
-        String accessType,
-        String appFamily,
-        List<String> apps,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        List<String> companies,
-        String createdAt,
-        String developerId,
-        String email,
-        String firstName,
-        String lastModifiedAt,
-        String lastName,
-        String organizationName,
-        String status,
-        String userName) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("appFamily") String appFamily,
+        @OutputCustomType.Parameter("apps") List<String> apps,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("companies") List<String> companies,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("developerId") String developerId,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("firstName") String firstName,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastName") String lastName,
+        @OutputCustomType.Parameter("organizationName") String organizationName,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.accessType = accessType;
         this.appFamily = appFamily;
         this.apps = apps;
@@ -259,72 +259,72 @@ public final class GetDeveloperResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setAppFamily(String appFamily) {
+        public Builder appFamily(String appFamily) {
             this.appFamily = Objects.requireNonNull(appFamily);
             return this;
         }
 
-        public Builder setApps(List<String> apps) {
+        public Builder apps(List<String> apps) {
             this.apps = Objects.requireNonNull(apps);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setCompanies(List<String> companies) {
+        public Builder companies(List<String> companies) {
             this.companies = Objects.requireNonNull(companies);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDeveloperId(String developerId) {
+        public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
 
-        public Builder setOrganizationName(String organizationName) {
+        public Builder organizationName(String organizationName) {
             this.organizationName = Objects.requireNonNull(organizationName);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

@@ -100,21 +100,21 @@ public final class DeleteActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dataset","dependsOn","description","enableLogging","linkedServiceName","logStorageSettings","maxConcurrentConnections","name","policy","recursive","storeSettings","type","userProperties"})
+    @OutputCustomType.Constructor
     private DeleteActivityResponse(
-        DatasetReferenceResponse dataset,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object enableLogging,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable LogStorageSettingsResponse logStorageSettings,
-        @Nullable Integer maxConcurrentConnections,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object recursive,
-        @Nullable Object storeSettings,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableLogging") @Nullable Object enableLogging,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Integer maxConcurrentConnections,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("storeSettings") @Nullable Object storeSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dataset = dataset;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -267,67 +267,67 @@ public final class DeleteActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDataset(DatasetReferenceResponse dataset) {
+        public Builder dataset(DatasetReferenceResponse dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableLogging(@Nullable Object enableLogging) {
+        public Builder enableLogging(@Nullable Object enableLogging) {
             this.enableLogging = enableLogging;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
+        public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Integer maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setRecursive(@Nullable Object recursive) {
+        public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
 
-        public Builder setStoreSettings(@Nullable Object storeSettings) {
+        public Builder storeSettings(@Nullable Object storeSettings) {
             this.storeSettings = storeSettings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

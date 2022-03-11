@@ -20,10 +20,10 @@ public final class GetImagePipelineSchedule {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"pipelineExecutionStartCondition","scheduleExpression"})
+    @OutputCustomType.Constructor
     private GetImagePipelineSchedule(
-        String pipelineExecutionStartCondition,
-        String scheduleExpression) {
+        @OutputCustomType.Parameter("pipelineExecutionStartCondition") String pipelineExecutionStartCondition,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.pipelineExecutionStartCondition = pipelineExecutionStartCondition;
         this.scheduleExpression = scheduleExpression;
     }
@@ -65,12 +65,12 @@ public final class GetImagePipelineSchedule {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setPipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
+        public Builder pipelineExecutionStartCondition(String pipelineExecutionStartCondition) {
             this.pipelineExecutionStartCondition = Objects.requireNonNull(pipelineExecutionStartCondition);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

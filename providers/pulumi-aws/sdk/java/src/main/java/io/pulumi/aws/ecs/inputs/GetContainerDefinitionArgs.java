@@ -68,12 +68,12 @@ public final class GetContainerDefinitionArgs extends io.pulumi.resources.Invoke
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setTaskDefinition(String taskDefinition) {
+        public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }

@@ -60,17 +60,17 @@ public final class GetInstancePoolResult {
      */
     private final Integer vCores;
 
-    @OutputCustomType.Constructor({"id","licenseType","location","name","sku","subnetId","tags","type","vCores"})
+    @OutputCustomType.Constructor
     private GetInstancePoolResult(
-        String id,
-        String licenseType,
-        String location,
-        String name,
-        @Nullable SkuResponse sku,
-        String subnetId,
-        @Nullable Map<String,String> tags,
-        String type,
-        Integer vCores) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("licenseType") String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vCores") Integer vCores) {
         this.id = id;
         this.licenseType = licenseType;
         this.location = location;
@@ -182,47 +182,47 @@ public final class GetInstancePoolResult {
     	      this.vCores = defaults.vCores;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLicenseType(String licenseType) {
+        public Builder licenseType(String licenseType) {
             this.licenseType = Objects.requireNonNull(licenseType);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVCores(Integer vCores) {
+        public Builder vCores(Integer vCores) {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }

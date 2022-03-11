@@ -61,17 +61,17 @@ public final class GetLivePipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","description","id","name","parameters","state","systemData","topologyName","type"})
+    @OutputCustomType.Constructor
     private GetLivePipelineResult(
-        Integer bitrateKbps,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable List<ParameterDefinitionResponse> parameters,
-        String state,
-        SystemDataResponse systemData,
-        String topologyName,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") Integer bitrateKbps,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("topologyName") String topologyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.description = description;
         this.id = id;
@@ -183,47 +183,47 @@ public final class GetLivePipelineResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBitrateKbps(Integer bitrateKbps) {
+        public Builder bitrateKbps(Integer bitrateKbps) {
             this.bitrateKbps = Objects.requireNonNull(bitrateKbps);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ParameterDefinitionResponse> parameters) {
+        public Builder parameters(@Nullable List<ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTopologyName(String topologyName) {
+        public Builder topologyName(String topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

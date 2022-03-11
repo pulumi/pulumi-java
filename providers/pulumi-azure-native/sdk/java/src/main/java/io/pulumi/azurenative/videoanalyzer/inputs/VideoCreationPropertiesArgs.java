@@ -106,42 +106,42 @@ public final class VideoCreationPropertiesArgs extends io.pulumi.resources.Resou
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable Input<String> retentionPeriod) {
+        public Builder retentionPeriod(@Nullable Input<String> retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable String retentionPeriod) {
+        public Builder retentionPeriod(@Nullable String retentionPeriod) {
             this.retentionPeriod = Input.ofNullable(retentionPeriod);
             return this;
         }
 
-        public Builder setSegmentLength(@Nullable Input<String> segmentLength) {
+        public Builder segmentLength(@Nullable Input<String> segmentLength) {
             this.segmentLength = segmentLength;
             return this;
         }
 
-        public Builder setSegmentLength(@Nullable String segmentLength) {
+        public Builder segmentLength(@Nullable String segmentLength) {
             this.segmentLength = Input.ofNullable(segmentLength);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

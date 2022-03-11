@@ -20,10 +20,10 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"resourceId","resourceType"})
+    @OutputCustomType.Constructor
     private GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse(
-        String resourceId,
-        String resourceType) {
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

@@ -102,22 +102,22 @@ public final class GetImageArgs extends io.pulumi.resources.InvokeArgs {
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setImageDigest(@Nullable String imageDigest) {
+        public Builder imageDigest(@Nullable String imageDigest) {
             this.imageDigest = imageDigest;
             return this;
         }
 
-        public Builder setImageTag(@Nullable String imageTag) {
+        public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }

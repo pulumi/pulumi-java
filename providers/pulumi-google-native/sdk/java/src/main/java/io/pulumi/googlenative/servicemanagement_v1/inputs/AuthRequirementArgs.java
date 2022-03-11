@@ -74,22 +74,22 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     	      this.providerId = defaults.providerId;
         }
 
-        public Builder setAudiences(@Nullable Input<String> audiences) {
+        public Builder audiences(@Nullable Input<String> audiences) {
             this.audiences = audiences;
             return this;
         }
 
-        public Builder setAudiences(@Nullable String audiences) {
+        public Builder audiences(@Nullable String audiences) {
             this.audiences = Input.ofNullable(audiences);
             return this;
         }
 
-        public Builder setProviderId(@Nullable Input<String> providerId) {
+        public Builder providerId(@Nullable Input<String> providerId) {
             this.providerId = providerId;
             return this;
         }
 
-        public Builder setProviderId(@Nullable String providerId) {
+        public Builder providerId(@Nullable String providerId) {
             this.providerId = Input.ofNullable(providerId);
             return this;
         }

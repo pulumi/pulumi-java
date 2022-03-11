@@ -135,29 +135,29 @@ public final class CommandJobResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"codeId","command","compute","description","distribution","environmentId","environmentVariables","experimentName","identity","inputDataBindings","interactionEndpoints","jobType","output","outputDataBindings","parameters","priority","properties","provisioningState","status","tags","timeout"})
+    @OutputCustomType.Constructor
     private CommandJobResponse(
-        @Nullable String codeId,
-        String command,
-        ComputeConfigurationResponse compute,
-        @Nullable String description,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String experimentName,
-        @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        Map<String,JobEndpointResponse> interactionEndpoints,
-        String jobType,
-        JobOutputResponse output,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        Object parameters,
-        @Nullable Integer priority,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("command") String command,
+        @OutputCustomType.Parameter("compute") ComputeConfigurationResponse compute,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("distribution") @Nullable Object distribution,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("experimentName") @Nullable String experimentName,
+        @OutputCustomType.Parameter("identity") @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity,
+        @OutputCustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
+        @OutputCustomType.Parameter("interactionEndpoints") Map<String,JobEndpointResponse> interactionEndpoints,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("output") JobOutputResponse output,
+        @OutputCustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
+        @OutputCustomType.Parameter("parameters") Object parameters,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.codeId = codeId;
         this.command = command;
         this.compute = compute;
@@ -393,107 +393,107 @@ public final class CommandJobResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setCommand(String command) {
+        public Builder command(String command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setCompute(ComputeConfigurationResponse compute) {
+        public Builder compute(ComputeConfigurationResponse compute) {
             this.compute = Objects.requireNonNull(compute);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDistribution(@Nullable Object distribution) {
+        public Builder distribution(@Nullable Object distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setExperimentName(@Nullable String experimentName) {
+        public Builder experimentName(@Nullable String experimentName) {
             this.experimentName = experimentName;
             return this;
         }
 
-        public Builder setIdentity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
+        public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
 
-        public Builder setInteractionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
+        public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
             this.interactionEndpoints = Objects.requireNonNull(interactionEndpoints);
             return this;
         }
 
-        public Builder setJobType(String jobType) {
+        public Builder jobType(String jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
 
-        public Builder setOutput(JobOutputResponse output) {
+        public Builder output(JobOutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setOutputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
 
-        public Builder setParameters(Object parameters) {
+        public Builder parameters(Object parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

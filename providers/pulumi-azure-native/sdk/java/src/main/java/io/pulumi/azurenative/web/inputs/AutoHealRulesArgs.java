@@ -75,22 +75,22 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setActions(@Nullable Input<AutoHealActionsArgs> actions) {
+        public Builder actions(@Nullable Input<AutoHealActionsArgs> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setActions(@Nullable AutoHealActionsArgs actions) {
+        public Builder actions(@Nullable AutoHealActionsArgs actions) {
             this.actions = Input.ofNullable(actions);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<AutoHealTriggersArgs> triggers) {
+        public Builder triggers(@Nullable Input<AutoHealTriggersArgs> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable AutoHealTriggersArgs triggers) {
+        public Builder triggers(@Nullable AutoHealTriggersArgs triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }

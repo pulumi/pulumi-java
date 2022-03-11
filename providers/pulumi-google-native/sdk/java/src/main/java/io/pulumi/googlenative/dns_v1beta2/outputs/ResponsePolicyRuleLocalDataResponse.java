@@ -16,8 +16,8 @@ public final class ResponsePolicyRuleLocalDataResponse {
      */
     private final List<ResourceRecordSetResponse> localDatas;
 
-    @OutputCustomType.Constructor({"localDatas"})
-    private ResponsePolicyRuleLocalDataResponse(List<ResourceRecordSetResponse> localDatas) {
+    @OutputCustomType.Constructor
+    private ResponsePolicyRuleLocalDataResponse(@OutputCustomType.Parameter("localDatas") List<ResourceRecordSetResponse> localDatas) {
         this.localDatas = localDatas;
     }
 
@@ -49,7 +49,7 @@ public final class ResponsePolicyRuleLocalDataResponse {
     	      this.localDatas = defaults.localDatas;
         }
 
-        public Builder setLocalDatas(List<ResourceRecordSetResponse> localDatas) {
+        public Builder localDatas(List<ResourceRecordSetResponse> localDatas) {
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }

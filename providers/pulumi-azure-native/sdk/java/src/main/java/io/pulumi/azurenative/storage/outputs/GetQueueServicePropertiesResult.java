@@ -33,12 +33,12 @@ public final class GetQueueServicePropertiesResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cors","id","name","type"})
+    @OutputCustomType.Constructor
     private GetQueueServicePropertiesResult(
-        @Nullable CorsRulesResponse cors,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("cors") @Nullable CorsRulesResponse cors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.cors = cors;
         this.id = id;
         this.name = name;
@@ -100,22 +100,22 @@ public final class GetQueueServicePropertiesResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCors(@Nullable CorsRulesResponse cors) {
+        public Builder cors(@Nullable CorsRulesResponse cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

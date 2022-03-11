@@ -17,8 +17,8 @@ public final class HttpProxyConfigurationResponse {
      */
     private final @Nullable String httpsProxy;
 
-    @OutputCustomType.Constructor({"httpsProxy"})
-    private HttpProxyConfigurationResponse(@Nullable String httpsProxy) {
+    @OutputCustomType.Constructor
+    private HttpProxyConfigurationResponse(@OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy) {
         this.httpsProxy = httpsProxy;
     }
 
@@ -50,7 +50,7 @@ public final class HttpProxyConfigurationResponse {
     	      this.httpsProxy = defaults.httpsProxy;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }

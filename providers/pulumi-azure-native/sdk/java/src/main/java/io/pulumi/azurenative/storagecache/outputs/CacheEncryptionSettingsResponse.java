@@ -17,8 +17,8 @@ public final class CacheEncryptionSettingsResponse {
      */
     private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
-    @OutputCustomType.Constructor({"keyEncryptionKey"})
-    private CacheEncryptionSettingsResponse(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
+    @OutputCustomType.Constructor
+    private CacheEncryptionSettingsResponse(@OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
         this.keyEncryptionKey = keyEncryptionKey;
     }
 
@@ -50,7 +50,7 @@ public final class CacheEncryptionSettingsResponse {
     	      this.keyEncryptionKey = defaults.keyEncryptionKey;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }

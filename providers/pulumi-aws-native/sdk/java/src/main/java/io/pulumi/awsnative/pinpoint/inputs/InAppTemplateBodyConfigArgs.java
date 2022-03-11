@@ -75,32 +75,32 @@ public final class InAppTemplateBodyConfigArgs extends io.pulumi.resources.Resou
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable Input<InAppTemplateAlignment> alignment) {
+        public Builder alignment(@Nullable Input<InAppTemplateAlignment> alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = Input.ofNullable(alignment);
             return this;
         }
 
-        public Builder setBody(@Nullable Input<String> body) {
+        public Builder body(@Nullable Input<String> body) {
             this.body = body;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = Input.ofNullable(body);
             return this;
         }
 
-        public Builder setTextColor(@Nullable Input<String> textColor) {
+        public Builder textColor(@Nullable Input<String> textColor) {
             this.textColor = textColor;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = Input.ofNullable(textColor);
             return this;
         }

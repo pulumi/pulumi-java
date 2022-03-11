@@ -17,8 +17,8 @@ public final class ListGlobalUserLabsResult {
      */
     private final @Nullable List<LabDetailsResponse> labs;
 
-    @OutputCustomType.Constructor({"labs"})
-    private ListGlobalUserLabsResult(@Nullable List<LabDetailsResponse> labs) {
+    @OutputCustomType.Constructor
+    private ListGlobalUserLabsResult(@OutputCustomType.Parameter("labs") @Nullable List<LabDetailsResponse> labs) {
         this.labs = labs;
     }
 
@@ -50,7 +50,7 @@ public final class ListGlobalUserLabsResult {
     	      this.labs = defaults.labs;
         }
 
-        public Builder setLabs(@Nullable List<LabDetailsResponse> labs) {
+        public Builder labs(@Nullable List<LabDetailsResponse> labs) {
             this.labs = labs;
             return this;
         }

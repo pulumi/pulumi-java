@@ -28,11 +28,11 @@ public final class RecoveryPlanA2ADetailsResponse {
      */
     private final @Nullable String recoveryZone;
 
-    @OutputCustomType.Constructor({"instanceType","primaryZone","recoveryZone"})
+    @OutputCustomType.Constructor
     private RecoveryPlanA2ADetailsResponse(
-        String instanceType,
-        @Nullable String primaryZone,
-        @Nullable String recoveryZone) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("primaryZone") @Nullable String primaryZone,
+        @OutputCustomType.Parameter("recoveryZone") @Nullable String recoveryZone) {
         this.instanceType = instanceType;
         this.primaryZone = primaryZone;
         this.recoveryZone = recoveryZone;
@@ -85,17 +85,17 @@ public final class RecoveryPlanA2ADetailsResponse {
     	      this.recoveryZone = defaults.recoveryZone;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPrimaryZone(@Nullable String primaryZone) {
+        public Builder primaryZone(@Nullable String primaryZone) {
             this.primaryZone = primaryZone;
             return this;
         }
 
-        public Builder setRecoveryZone(@Nullable String recoveryZone) {
+        public Builder recoveryZone(@Nullable String recoveryZone) {
             this.recoveryZone = recoveryZone;
             return this;
         }

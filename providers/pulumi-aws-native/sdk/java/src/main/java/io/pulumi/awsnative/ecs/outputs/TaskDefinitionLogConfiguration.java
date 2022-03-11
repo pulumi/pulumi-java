@@ -18,11 +18,11 @@ public final class TaskDefinitionLogConfiguration {
     private final @Nullable Object options;
     private final @Nullable List<TaskDefinitionSecret> secretOptions;
 
-    @OutputCustomType.Constructor({"logDriver","options","secretOptions"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLogConfiguration(
-        String logDriver,
-        @Nullable Object options,
-        @Nullable List<TaskDefinitionSecret> secretOptions) {
+        @OutputCustomType.Parameter("logDriver") String logDriver,
+        @OutputCustomType.Parameter("options") @Nullable Object options,
+        @OutputCustomType.Parameter("secretOptions") @Nullable List<TaskDefinitionSecret> secretOptions) {
         this.logDriver = logDriver;
         this.options = options;
         this.secretOptions = secretOptions;
@@ -62,17 +62,17 @@ public final class TaskDefinitionLogConfiguration {
     	      this.secretOptions = defaults.secretOptions;
         }
 
-        public Builder setLogDriver(String logDriver) {
+        public Builder logDriver(String logDriver) {
             this.logDriver = Objects.requireNonNull(logDriver);
             return this;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSecretOptions(@Nullable List<TaskDefinitionSecret> secretOptions) {
+        public Builder secretOptions(@Nullable List<TaskDefinitionSecret> secretOptions) {
             this.secretOptions = secretOptions;
             return this;
         }

@@ -19,13 +19,13 @@ public final class TaskDefinitionDockerVolumeConfiguration {
     private final @Nullable Object labels;
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"autoprovision","driver","driverOpts","labels","scope"})
+    @OutputCustomType.Constructor
     private TaskDefinitionDockerVolumeConfiguration(
-        @Nullable Boolean autoprovision,
-        @Nullable String driver,
-        @Nullable Object driverOpts,
-        @Nullable Object labels,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("autoprovision") @Nullable Boolean autoprovision,
+        @OutputCustomType.Parameter("driver") @Nullable String driver,
+        @OutputCustomType.Parameter("driverOpts") @Nullable Object driverOpts,
+        @OutputCustomType.Parameter("labels") @Nullable Object labels,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.autoprovision = autoprovision;
         this.driver = driver;
         this.driverOpts = driverOpts;
@@ -77,27 +77,27 @@ public final class TaskDefinitionDockerVolumeConfiguration {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAutoprovision(@Nullable Boolean autoprovision) {
+        public Builder autoprovision(@Nullable Boolean autoprovision) {
             this.autoprovision = autoprovision;
             return this;
         }
 
-        public Builder setDriver(@Nullable String driver) {
+        public Builder driver(@Nullable String driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setDriverOpts(@Nullable Object driverOpts) {
+        public Builder driverOpts(@Nullable Object driverOpts) {
             this.driverOpts = driverOpts;
             return this;
         }
 
-        public Builder setLabels(@Nullable Object labels) {
+        public Builder labels(@Nullable Object labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

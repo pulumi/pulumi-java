@@ -23,10 +23,10 @@ public final class CassandraViewGetPropertiesResponseOptions {
      */
     private final @Nullable Integer throughput;
 
-    @OutputCustomType.Constructor({"autoscaleSettings","throughput"})
+    @OutputCustomType.Constructor
     private CassandraViewGetPropertiesResponseOptions(
-        @Nullable AutoscaleSettingsResponse autoscaleSettings,
-        @Nullable Integer throughput) {
+        @OutputCustomType.Parameter("autoscaleSettings") @Nullable AutoscaleSettingsResponse autoscaleSettings,
+        @OutputCustomType.Parameter("throughput") @Nullable Integer throughput) {
         this.autoscaleSettings = autoscaleSettings;
         this.throughput = throughput;
     }
@@ -68,12 +68,12 @@ public final class CassandraViewGetPropertiesResponseOptions {
     	      this.throughput = defaults.throughput;
         }
 
-        public Builder setAutoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
+        public Builder autoscaleSettings(@Nullable AutoscaleSettingsResponse autoscaleSettings) {
             this.autoscaleSettings = autoscaleSettings;
             return this;
         }
 
-        public Builder setThroughput(@Nullable Integer throughput) {
+        public Builder throughput(@Nullable Integer throughput) {
             this.throughput = throughput;
             return this;
         }

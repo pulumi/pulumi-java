@@ -29,11 +29,11 @@ public final class StudioComponentActiveDirectoryConfiguration {
      */
     private final @Nullable String organizationalUnitDistinguishedName;
 
-    @OutputCustomType.Constructor({"computerAttributes","directoryId","organizationalUnitDistinguishedName"})
+    @OutputCustomType.Constructor
     private StudioComponentActiveDirectoryConfiguration(
-        @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes,
-        @Nullable String directoryId,
-        @Nullable String organizationalUnitDistinguishedName) {
+        @OutputCustomType.Parameter("computerAttributes") @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes,
+        @OutputCustomType.Parameter("directoryId") @Nullable String directoryId,
+        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
         this.computerAttributes = computerAttributes;
         this.directoryId = directoryId;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
@@ -85,17 +85,17 @@ public final class StudioComponentActiveDirectoryConfiguration {
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder setComputerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
+        public Builder computerAttributes(@Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes) {
             this.computerAttributes = computerAttributes;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }

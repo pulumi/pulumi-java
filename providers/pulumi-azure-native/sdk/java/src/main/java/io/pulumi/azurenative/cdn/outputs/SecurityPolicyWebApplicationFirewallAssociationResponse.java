@@ -23,10 +23,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
      */
     private final @Nullable List<String> patternsToMatch;
 
-    @OutputCustomType.Constructor({"domains","patternsToMatch"})
+    @OutputCustomType.Constructor
     private SecurityPolicyWebApplicationFirewallAssociationResponse(
-        @Nullable List<ResourceReferenceResponse> domains,
-        @Nullable List<String> patternsToMatch) {
+        @OutputCustomType.Parameter("domains") @Nullable List<ResourceReferenceResponse> domains,
+        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch) {
         this.domains = domains;
         this.patternsToMatch = patternsToMatch;
     }
@@ -68,12 +68,12 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
     	      this.patternsToMatch = defaults.patternsToMatch;
         }
 
-        public Builder setDomains(@Nullable List<ResourceReferenceResponse> domains) {
+        public Builder domains(@Nullable List<ResourceReferenceResponse> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }

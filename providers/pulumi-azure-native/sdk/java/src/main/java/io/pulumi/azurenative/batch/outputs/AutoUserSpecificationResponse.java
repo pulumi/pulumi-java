@@ -22,10 +22,10 @@ public final class AutoUserSpecificationResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"elevationLevel","scope"})
+    @OutputCustomType.Constructor
     private AutoUserSpecificationResponse(
-        @Nullable String elevationLevel,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("elevationLevel") @Nullable String elevationLevel,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.elevationLevel = elevationLevel;
         this.scope = scope;
     }
@@ -67,12 +67,12 @@ public final class AutoUserSpecificationResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setElevationLevel(@Nullable String elevationLevel) {
+        public Builder elevationLevel(@Nullable String elevationLevel) {
             this.elevationLevel = elevationLevel;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

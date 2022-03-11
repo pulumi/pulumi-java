@@ -17,8 +17,8 @@ public final class WebAclDefaultActionBlock {
      */
     private final @Nullable WebAclDefaultActionBlockCustomResponse customResponse;
 
-    @OutputCustomType.Constructor({"customResponse"})
-    private WebAclDefaultActionBlock(@Nullable WebAclDefaultActionBlockCustomResponse customResponse) {
+    @OutputCustomType.Constructor
+    private WebAclDefaultActionBlock(@OutputCustomType.Parameter("customResponse") @Nullable WebAclDefaultActionBlockCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclDefaultActionBlock {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable WebAclDefaultActionBlockCustomResponse customResponse) {
+        public Builder customResponse(@Nullable WebAclDefaultActionBlockCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

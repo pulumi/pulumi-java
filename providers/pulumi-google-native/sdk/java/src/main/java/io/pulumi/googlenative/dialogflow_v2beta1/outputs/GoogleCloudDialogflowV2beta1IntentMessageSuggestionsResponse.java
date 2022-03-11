@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions;
 
-    @OutputCustomType.Constructor({"suggestions"})
-    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse(@OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
         this.suggestions = suggestions;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse 
     	      this.suggestions = defaults.suggestions;
         }
 
-        public Builder setSuggestions(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
+        public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }

@@ -29,16 +29,16 @@ public final class GetExportResult {
     private final String specification;
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor({"apiId","body","exportVersion","id","includeExtensions","outputType","specification","stageName"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        String apiId,
-        String body,
-        @Nullable String exportVersion,
-        String id,
-        @Nullable Boolean includeExtensions,
-        String outputType,
-        String specification,
-        @Nullable String stageName) {
+        @OutputCustomType.Parameter("apiId") String apiId,
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("exportVersion") @Nullable String exportVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeExtensions") @Nullable Boolean includeExtensions,
+        @OutputCustomType.Parameter("outputType") String outputType,
+        @OutputCustomType.Parameter("specification") String specification,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
         this.apiId = apiId;
         this.body = body;
         this.exportVersion = exportVersion;
@@ -116,42 +116,42 @@ public final class GetExportResult {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setExportVersion(@Nullable String exportVersion) {
+        public Builder exportVersion(@Nullable String exportVersion) {
             this.exportVersion = exportVersion;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncludeExtensions(@Nullable Boolean includeExtensions) {
+        public Builder includeExtensions(@Nullable Boolean includeExtensions) {
             this.includeExtensions = includeExtensions;
             return this;
         }
 
-        public Builder setOutputType(String outputType) {
+        public Builder outputType(String outputType) {
             this.outputType = Objects.requireNonNull(outputType);
             return this;
         }
 
-        public Builder setSpecification(String specification) {
+        public Builder specification(String specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }

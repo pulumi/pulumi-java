@@ -22,15 +22,15 @@ public final class GetInstanceProfileResult {
     private final @Nullable Boolean rebootAfterUse;
     private final @Nullable List<InstanceProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","excludeAppPackagesFromCleanup","name","packageCleanup","rebootAfterUse","tags"})
+    @OutputCustomType.Constructor
     private GetInstanceProfileResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<String> excludeAppPackagesFromCleanup,
-        @Nullable String name,
-        @Nullable Boolean packageCleanup,
-        @Nullable Boolean rebootAfterUse,
-        @Nullable List<InstanceProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("excludeAppPackagesFromCleanup") @Nullable List<String> excludeAppPackagesFromCleanup,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("packageCleanup") @Nullable Boolean packageCleanup,
+        @OutputCustomType.Parameter("rebootAfterUse") @Nullable Boolean rebootAfterUse,
+        @OutputCustomType.Parameter("tags") @Nullable List<InstanceProfileTag> tags) {
         this.arn = arn;
         this.description = description;
         this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
@@ -94,37 +94,37 @@ public final class GetInstanceProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExcludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
+        public Builder excludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
             this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPackageCleanup(@Nullable Boolean packageCleanup) {
+        public Builder packageCleanup(@Nullable Boolean packageCleanup) {
             this.packageCleanup = packageCleanup;
             return this;
         }
 
-        public Builder setRebootAfterUse(@Nullable Boolean rebootAfterUse) {
+        public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
             this.rebootAfterUse = rebootAfterUse;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InstanceProfileTag> tags) {
+        public Builder tags(@Nullable List<InstanceProfileTag> tags) {
             this.tags = tags;
             return this;
         }

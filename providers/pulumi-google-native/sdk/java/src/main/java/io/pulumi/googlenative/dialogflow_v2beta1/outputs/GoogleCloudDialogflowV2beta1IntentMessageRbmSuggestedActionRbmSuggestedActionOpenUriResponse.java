@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"uri"})
-    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse(String uri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse(@OutputCustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRb
     	      this.uri = defaults.uri;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

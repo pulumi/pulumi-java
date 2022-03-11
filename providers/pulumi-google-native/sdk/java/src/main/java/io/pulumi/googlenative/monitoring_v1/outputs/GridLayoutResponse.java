@@ -22,10 +22,10 @@ public final class GridLayoutResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor({"columns","widgets"})
+    @OutputCustomType.Constructor
     private GridLayoutResponse(
-        String columns,
-        List<WidgetResponse> widgets) {
+        @OutputCustomType.Parameter("columns") String columns,
+        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.columns = columns;
         this.widgets = widgets;
     }
@@ -67,12 +67,12 @@ public final class GridLayoutResponse {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder setColumns(String columns) {
+        public Builder columns(String columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
-        public Builder setWidgets(List<WidgetResponse> widgets) {
+        public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }

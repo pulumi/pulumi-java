@@ -20,10 +20,10 @@ public final class EventDestinationKinesisDestination {
      */
     private final String streamArn;
 
-    @OutputCustomType.Constructor({"roleArn","streamArn"})
+    @OutputCustomType.Constructor
     private EventDestinationKinesisDestination(
-        String roleArn,
-        String streamArn) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("streamArn") String streamArn) {
         this.roleArn = roleArn;
         this.streamArn = streamArn;
     }
@@ -65,12 +65,12 @@ public final class EventDestinationKinesisDestination {
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStreamArn(String streamArn) {
+        public Builder streamArn(String streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }

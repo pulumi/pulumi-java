@@ -104,42 +104,42 @@ public final class DeploymentConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.trafficRoutingConfig = defaults.trafficRoutingConfig;
         }
 
-        public Builder setComputePlatform(@Nullable Input<String> computePlatform) {
+        public Builder computePlatform(@Nullable Input<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable String computePlatform) {
+        public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Input.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder setDeploymentConfigName(Input<String> deploymentConfigName) {
+        public Builder deploymentConfigName(Input<String> deploymentConfigName) {
             this.deploymentConfigName = Objects.requireNonNull(deploymentConfigName);
             return this;
         }
 
-        public Builder setDeploymentConfigName(String deploymentConfigName) {
+        public Builder deploymentConfigName(String deploymentConfigName) {
             this.deploymentConfigName = Input.of(Objects.requireNonNull(deploymentConfigName));
             return this;
         }
 
-        public Builder setMinimumHealthyHosts(@Nullable Input<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable Input<DeploymentConfigMinimumHealthyHostsArgs> minimumHealthyHosts) {
             this.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
 
-        public Builder setMinimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsArgs minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsArgs minimumHealthyHosts) {
             this.minimumHealthyHosts = Input.ofNullable(minimumHealthyHosts);
             return this;
         }
 
-        public Builder setTrafficRoutingConfig(@Nullable Input<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable Input<DeploymentConfigTrafficRoutingConfigArgs> trafficRoutingConfig) {
             this.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
 
-        public Builder setTrafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigArgs trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigArgs trafficRoutingConfig) {
             this.trafficRoutingConfig = Input.ofNullable(trafficRoutingConfig);
             return this;
         }

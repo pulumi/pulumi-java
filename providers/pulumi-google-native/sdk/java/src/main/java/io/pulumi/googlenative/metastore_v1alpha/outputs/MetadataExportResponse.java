@@ -35,13 +35,13 @@ public final class MetadataExportResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"databaseDumpType","destinationGcsUri","endTime","startTime","state"})
+    @OutputCustomType.Constructor
     private MetadataExportResponse(
-        String databaseDumpType,
-        String destinationGcsUri,
-        String endTime,
-        String startTime,
-        String state) {
+        @OutputCustomType.Parameter("databaseDumpType") String databaseDumpType,
+        @OutputCustomType.Parameter("destinationGcsUri") String destinationGcsUri,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state) {
         this.databaseDumpType = databaseDumpType;
         this.destinationGcsUri = destinationGcsUri;
         this.endTime = endTime;
@@ -113,27 +113,27 @@ public final class MetadataExportResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDatabaseDumpType(String databaseDumpType) {
+        public Builder databaseDumpType(String databaseDumpType) {
             this.databaseDumpType = Objects.requireNonNull(databaseDumpType);
             return this;
         }
 
-        public Builder setDestinationGcsUri(String destinationGcsUri) {
+        public Builder destinationGcsUri(String destinationGcsUri) {
             this.destinationGcsUri = Objects.requireNonNull(destinationGcsUri);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

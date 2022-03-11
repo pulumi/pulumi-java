@@ -28,11 +28,11 @@ public final class ModelBiasJobDefinitionS3Output {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor({"localPath","s3UploadMode","s3Uri"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionS3Output(
-        String localPath,
-        @Nullable ModelBiasJobDefinitionS3OutputS3UploadMode s3UploadMode,
-        String s3Uri) {
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("s3UploadMode") @Nullable ModelBiasJobDefinitionS3OutputS3UploadMode s3UploadMode,
+        @OutputCustomType.Parameter("s3Uri") String s3Uri) {
         this.localPath = localPath;
         this.s3UploadMode = s3UploadMode;
         this.s3Uri = s3Uri;
@@ -84,17 +84,17 @@ public final class ModelBiasJobDefinitionS3Output {
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setS3UploadMode(@Nullable ModelBiasJobDefinitionS3OutputS3UploadMode s3UploadMode) {
+        public Builder s3UploadMode(@Nullable ModelBiasJobDefinitionS3OutputS3UploadMode s3UploadMode) {
             this.s3UploadMode = s3UploadMode;
             return this;
         }
 
-        public Builder setS3Uri(String s3Uri) {
+        public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }

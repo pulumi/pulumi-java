@@ -41,13 +41,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository;
 
-    @OutputCustomType.Constructor({"exec","file","id","pkg","repository"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResource(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
-        String id,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
+        @OutputCustomType.Parameter("exec") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec,
+        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("pkg") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg,
+        @OutputCustomType.Parameter("repository") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
         this.exec = exec;
         this.file = file;
         this.id = id;
@@ -119,27 +119,27 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setExec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec) {
+        public Builder exec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec) {
             this.exec = exec;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg) {
+        public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg) {
             this.pkg = pkg;
             return this;
         }
 
-        public Builder setRepository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
+        public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository) {
             this.repository = repository;
             return this;
         }

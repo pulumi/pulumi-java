@@ -37,13 +37,13 @@ public final class ContainerStateResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"detailStatus","exitCode","finishTime","startTime","state"})
+    @OutputCustomType.Constructor
     private ContainerStateResponse(
-        @Nullable String detailStatus,
-        @Nullable String exitCode,
-        @Nullable String finishTime,
-        @Nullable String startTime,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("detailStatus") @Nullable String detailStatus,
+        @OutputCustomType.Parameter("exitCode") @Nullable String exitCode,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.detailStatus = detailStatus;
         this.exitCode = exitCode;
         this.finishTime = finishTime;
@@ -115,27 +115,27 @@ public final class ContainerStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDetailStatus(@Nullable String detailStatus) {
+        public Builder detailStatus(@Nullable String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
 
-        public Builder setExitCode(@Nullable String exitCode) {
+        public Builder exitCode(@Nullable String exitCode) {
             this.exitCode = exitCode;
             return this;
         }
 
-        public Builder setFinishTime(@Nullable String finishTime) {
+        public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

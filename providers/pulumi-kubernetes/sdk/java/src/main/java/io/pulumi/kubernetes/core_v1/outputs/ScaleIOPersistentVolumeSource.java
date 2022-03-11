@@ -64,18 +64,18 @@ public final class ScaleIOPersistentVolumeSource {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"fsType","gateway","protectionDomain","readOnly","secretRef","sslEnabled","storageMode","storagePool","system","volumeName"})
+    @OutputCustomType.Constructor
     private ScaleIOPersistentVolumeSource(
-        @Nullable String fsType,
-        String gateway,
-        @Nullable String protectionDomain,
-        @Nullable Boolean readOnly,
-        SecretReference secretRef,
-        @Nullable Boolean sslEnabled,
-        @Nullable String storageMode,
-        @Nullable String storagePool,
-        String system,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("gateway") String gateway,
+        @OutputCustomType.Parameter("protectionDomain") @Nullable String protectionDomain,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") SecretReference secretRef,
+        @OutputCustomType.Parameter("sslEnabled") @Nullable Boolean sslEnabled,
+        @OutputCustomType.Parameter("storageMode") @Nullable String storageMode,
+        @OutputCustomType.Parameter("storagePool") @Nullable String storagePool,
+        @OutputCustomType.Parameter("system") String system,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.fsType = fsType;
         this.gateway = gateway;
         this.protectionDomain = protectionDomain;
@@ -197,52 +197,52 @@ public final class ScaleIOPersistentVolumeSource {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setGateway(String gateway) {
+        public Builder gateway(String gateway) {
             this.gateway = Objects.requireNonNull(gateway);
             return this;
         }
 
-        public Builder setProtectionDomain(@Nullable String protectionDomain) {
+        public Builder protectionDomain(@Nullable String protectionDomain) {
             this.protectionDomain = protectionDomain;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(SecretReference secretRef) {
+        public Builder secretRef(SecretReference secretRef) {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
 
-        public Builder setSslEnabled(@Nullable Boolean sslEnabled) {
+        public Builder sslEnabled(@Nullable Boolean sslEnabled) {
             this.sslEnabled = sslEnabled;
             return this;
         }
 
-        public Builder setStorageMode(@Nullable String storageMode) {
+        public Builder storageMode(@Nullable String storageMode) {
             this.storageMode = storageMode;
             return this;
         }
 
-        public Builder setStoragePool(@Nullable String storagePool) {
+        public Builder storagePool(@Nullable String storagePool) {
             this.storagePool = storagePool;
             return this;
         }
 
-        public Builder setSystem(String system) {
+        public Builder system(String system) {
             this.system = Objects.requireNonNull(system);
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }

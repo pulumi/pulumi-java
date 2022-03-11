@@ -15,8 +15,8 @@ public final class BucketSseKmsEncryptedObjects {
      */
     private final BucketSseKmsEncryptedObjectsStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketSseKmsEncryptedObjects(BucketSseKmsEncryptedObjectsStatus status) {
+    @OutputCustomType.Constructor
+    private BucketSseKmsEncryptedObjects(@OutputCustomType.Parameter("status") BucketSseKmsEncryptedObjectsStatus status) {
         this.status = status;
     }
 
@@ -48,7 +48,7 @@ public final class BucketSseKmsEncryptedObjects {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketSseKmsEncryptedObjectsStatus status) {
+        public Builder status(BucketSseKmsEncryptedObjectsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

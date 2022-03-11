@@ -22,10 +22,10 @@ public final class GroupResourceQuery {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"query","type"})
+    @OutputCustomType.Constructor
     private GroupResourceQuery(
-        String query,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.query = query;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class GroupResourceQuery {
     	      this.type = defaults.type;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

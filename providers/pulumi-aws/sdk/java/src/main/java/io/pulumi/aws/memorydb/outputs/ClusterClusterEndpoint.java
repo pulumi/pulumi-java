@@ -23,10 +23,10 @@ public final class ClusterClusterEndpoint {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"address","port"})
+    @OutputCustomType.Constructor
     private ClusterClusterEndpoint(
-        @Nullable String address,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.address = address;
         this.port = port;
     }
@@ -68,12 +68,12 @@ public final class ClusterClusterEndpoint {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

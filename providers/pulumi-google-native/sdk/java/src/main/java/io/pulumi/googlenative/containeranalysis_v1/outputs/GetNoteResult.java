@@ -117,27 +117,27 @@ public final class GetNoteResult {
      */
     private final VulnerabilityNoteResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestation","build","compliance","createTime","deployment","discovery","dsseAttestation","expirationTime","image","kind","longDescription","name","$package","relatedNoteNames","relatedUrl","shortDescription","updateTime","upgrade","vulnerability"})
+    @OutputCustomType.Constructor
     private GetNoteResult(
-        AttestationNoteResponse attestation,
-        BuildNoteResponse build,
-        ComplianceNoteResponse compliance,
-        String createTime,
-        DeploymentNoteResponse deployment,
-        DiscoveryNoteResponse discovery,
-        DSSEAttestationNoteResponse dsseAttestation,
-        String expirationTime,
-        ImageNoteResponse image,
-        String kind,
-        String longDescription,
-        String name,
-        PackageNoteResponse $package,
-        List<String> relatedNoteNames,
-        List<RelatedUrlResponse> relatedUrl,
-        String shortDescription,
-        String updateTime,
-        UpgradeNoteResponse upgrade,
-        VulnerabilityNoteResponse vulnerability) {
+        @OutputCustomType.Parameter("attestation") AttestationNoteResponse attestation,
+        @OutputCustomType.Parameter("build") BuildNoteResponse build,
+        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") DeploymentNoteResponse deployment,
+        @OutputCustomType.Parameter("discovery") DiscoveryNoteResponse discovery,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("image") ImageNoteResponse image,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("package") PackageNoteResponse $package,
+        @OutputCustomType.Parameter("relatedNoteNames") List<String> relatedNoteNames,
+        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @OutputCustomType.Parameter("vulnerability") VulnerabilityNoteResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.compliance = compliance;
@@ -349,97 +349,97 @@ public final class GetNoteResult {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestation(AttestationNoteResponse attestation) {
+        public Builder attestation(AttestationNoteResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setBuild(BuildNoteResponse build) {
+        public Builder build(BuildNoteResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
 
-        public Builder setCompliance(ComplianceNoteResponse compliance) {
+        public Builder compliance(ComplianceNoteResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployment(DeploymentNoteResponse deployment) {
+        public Builder deployment(DeploymentNoteResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder setDiscovery(DiscoveryNoteResponse discovery) {
+        public Builder discovery(DiscoveryNoteResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
 
-        public Builder setDsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
+        public Builder dsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setImage(ImageNoteResponse image) {
+        public Builder image(ImageNoteResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLongDescription(String longDescription) {
+        public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder set$package(PackageNoteResponse $package) {
+        public Builder $package(PackageNoteResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setRelatedNoteNames(List<String> relatedNoteNames) {
+        public Builder relatedNoteNames(List<String> relatedNoteNames) {
             this.relatedNoteNames = Objects.requireNonNull(relatedNoteNames);
             return this;
         }
 
-        public Builder setRelatedUrl(List<RelatedUrlResponse> relatedUrl) {
+        public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
 
-        public Builder setShortDescription(String shortDescription) {
+        public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUpgrade(UpgradeNoteResponse upgrade) {
+        public Builder upgrade(UpgradeNoteResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
 
-        public Builder setVulnerability(VulnerabilityNoteResponse vulnerability) {
+        public Builder vulnerability(VulnerabilityNoteResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }

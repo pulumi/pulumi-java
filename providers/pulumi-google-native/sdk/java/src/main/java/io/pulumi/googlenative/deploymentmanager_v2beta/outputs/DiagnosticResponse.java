@@ -20,10 +20,10 @@ public final class DiagnosticResponse {
      */
     private final String level;
 
-    @OutputCustomType.Constructor({"field","level"})
+    @OutputCustomType.Constructor
     private DiagnosticResponse(
-        String field,
-        String level) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("level") String level) {
         this.field = field;
         this.level = level;
     }
@@ -65,12 +65,12 @@ public final class DiagnosticResponse {
     	      this.level = defaults.level;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }

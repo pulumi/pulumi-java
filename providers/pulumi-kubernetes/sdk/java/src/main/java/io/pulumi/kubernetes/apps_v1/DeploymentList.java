@@ -126,8 +126,8 @@ public class DeploymentList extends io.pulumi.resources.CustomResource {
     private static DeploymentListArgs makeArgs(DeploymentListArgs args) {
         var builder = args == null ? DeploymentListArgs.builder() : DeploymentListArgs.builder(args);
         return builder
-            .setApiVersion("apps/v1")
-            .setKind("DeploymentList")
+            .apiVersion("apps/v1")
+            .kind("DeploymentList")
             .build();
     }
 

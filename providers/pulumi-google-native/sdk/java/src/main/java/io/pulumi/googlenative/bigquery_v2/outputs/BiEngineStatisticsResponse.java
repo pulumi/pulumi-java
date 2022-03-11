@@ -22,10 +22,10 @@ public final class BiEngineStatisticsResponse {
      */
     private final List<BiEngineReasonResponse> biEngineReasons;
 
-    @OutputCustomType.Constructor({"biEngineMode","biEngineReasons"})
+    @OutputCustomType.Constructor
     private BiEngineStatisticsResponse(
-        String biEngineMode,
-        List<BiEngineReasonResponse> biEngineReasons) {
+        @OutputCustomType.Parameter("biEngineMode") String biEngineMode,
+        @OutputCustomType.Parameter("biEngineReasons") List<BiEngineReasonResponse> biEngineReasons) {
         this.biEngineMode = biEngineMode;
         this.biEngineReasons = biEngineReasons;
     }
@@ -67,12 +67,12 @@ public final class BiEngineStatisticsResponse {
     	      this.biEngineReasons = defaults.biEngineReasons;
         }
 
-        public Builder setBiEngineMode(String biEngineMode) {
+        public Builder biEngineMode(String biEngineMode) {
             this.biEngineMode = Objects.requireNonNull(biEngineMode);
             return this;
         }
 
-        public Builder setBiEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
+        public Builder biEngineReasons(List<BiEngineReasonResponse> biEngineReasons) {
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }

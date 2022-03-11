@@ -55,16 +55,16 @@ public final class GetSnapshotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationData","id","location","name","snapshotType","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        @Nullable CreationDataResponse creationData,
-        String id,
-        String location,
-        String name,
-        @Nullable String snapshotType,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationData") @Nullable CreationDataResponse creationData,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("snapshotType") @Nullable String snapshotType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationData = creationData;
         this.id = id;
         this.location = location;
@@ -166,42 +166,42 @@ public final class GetSnapshotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationData(@Nullable CreationDataResponse creationData) {
+        public Builder creationData(@Nullable CreationDataResponse creationData) {
             this.creationData = creationData;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSnapshotType(@Nullable String snapshotType) {
+        public Builder snapshotType(@Nullable String snapshotType) {
             this.snapshotType = snapshotType;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

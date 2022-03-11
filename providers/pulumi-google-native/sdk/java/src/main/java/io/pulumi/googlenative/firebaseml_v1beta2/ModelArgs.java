@@ -133,62 +133,62 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tfliteModel = defaults.tfliteModel;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<ModelStateArgs> state) {
+        public Builder state(@Nullable Input<ModelStateArgs> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ModelStateArgs state) {
+        public Builder state(@Nullable ModelStateArgs state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTfliteModel(@Nullable Input<TfLiteModelArgs> tfliteModel) {
+        public Builder tfliteModel(@Nullable Input<TfLiteModelArgs> tfliteModel) {
             this.tfliteModel = tfliteModel;
             return this;
         }
 
-        public Builder setTfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
+        public Builder tfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
             this.tfliteModel = Input.ofNullable(tfliteModel);
             return this;
         }

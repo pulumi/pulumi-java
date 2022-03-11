@@ -70,22 +70,22 @@ public final class VpcEndpointServiceAllowedPrincipleState extends io.pulumi.res
     	      this.vpcEndpointServiceId = defaults.vpcEndpointServiceId;
         }
 
-        public Builder setPrincipalArn(@Nullable Input<String> principalArn) {
+        public Builder principalArn(@Nullable Input<String> principalArn) {
             this.principalArn = principalArn;
             return this;
         }
 
-        public Builder setPrincipalArn(@Nullable String principalArn) {
+        public Builder principalArn(@Nullable String principalArn) {
             this.principalArn = Input.ofNullable(principalArn);
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable Input<String> vpcEndpointServiceId) {
             this.vpcEndpointServiceId = vpcEndpointServiceId;
             return this;
         }
 
-        public Builder setVpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
+        public Builder vpcEndpointServiceId(@Nullable String vpcEndpointServiceId) {
             this.vpcEndpointServiceId = Input.ofNullable(vpcEndpointServiceId);
             return this;
         }

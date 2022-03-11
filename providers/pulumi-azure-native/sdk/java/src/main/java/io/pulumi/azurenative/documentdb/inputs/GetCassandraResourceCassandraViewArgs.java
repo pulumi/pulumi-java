@@ -100,22 +100,22 @@ public final class GetCassandraResourceCassandraViewArgs extends io.pulumi.resou
     	      this.viewName = defaults.viewName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setKeyspaceName(String keyspaceName) {
+        public Builder keyspaceName(String keyspaceName) {
             this.keyspaceName = Objects.requireNonNull(keyspaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setViewName(String viewName) {
+        public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }

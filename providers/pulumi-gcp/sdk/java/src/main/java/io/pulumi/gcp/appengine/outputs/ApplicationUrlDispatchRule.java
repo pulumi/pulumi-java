@@ -15,11 +15,11 @@ public final class ApplicationUrlDispatchRule {
     private final @Nullable String path;
     private final @Nullable String service;
 
-    @OutputCustomType.Constructor({"domain","path","service"})
+    @OutputCustomType.Constructor
     private ApplicationUrlDispatchRule(
-        @Nullable String domain,
-        @Nullable String path,
-        @Nullable String service) {
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("service") @Nullable String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;
@@ -59,17 +59,17 @@ public final class ApplicationUrlDispatchRule {
     	      this.service = defaults.service;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }

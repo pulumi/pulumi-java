@@ -26,11 +26,11 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
      */
     private final String term;
 
-    @OutputCustomType.Constructor({"queryTerms","replacementTerm","term"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaRuleReplacementActionResponse(
-        List<String> queryTerms,
-        String replacementTerm,
-        String term) {
+        @OutputCustomType.Parameter("queryTerms") List<String> queryTerms,
+        @OutputCustomType.Parameter("replacementTerm") String replacementTerm,
+        @OutputCustomType.Parameter("term") String term) {
         this.queryTerms = queryTerms;
         this.replacementTerm = replacementTerm;
         this.term = term;
@@ -82,17 +82,17 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse {
     	      this.term = defaults.term;
         }
 
-        public Builder setQueryTerms(List<String> queryTerms) {
+        public Builder queryTerms(List<String> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
 
-        public Builder setReplacementTerm(String replacementTerm) {
+        public Builder replacementTerm(String replacementTerm) {
             this.replacementTerm = Objects.requireNonNull(replacementTerm);
             return this;
         }
 
-        public Builder setTerm(String term) {
+        public Builder term(String term) {
             this.term = Objects.requireNonNull(term);
             return this;
         }

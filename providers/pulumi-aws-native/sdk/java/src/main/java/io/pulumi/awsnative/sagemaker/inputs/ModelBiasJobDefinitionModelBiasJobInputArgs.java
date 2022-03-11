@@ -66,22 +66,22 @@ public final class ModelBiasJobDefinitionModelBiasJobInputArgs extends io.pulumi
     	      this.groundTruthS3Input = defaults.groundTruthS3Input;
         }
 
-        public Builder setEndpointInput(Input<ModelBiasJobDefinitionEndpointInputArgs> endpointInput) {
+        public Builder endpointInput(Input<ModelBiasJobDefinitionEndpointInputArgs> endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
-        public Builder setEndpointInput(ModelBiasJobDefinitionEndpointInputArgs endpointInput) {
+        public Builder endpointInput(ModelBiasJobDefinitionEndpointInputArgs endpointInput) {
             this.endpointInput = Input.of(Objects.requireNonNull(endpointInput));
             return this;
         }
 
-        public Builder setGroundTruthS3Input(Input<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
+        public Builder groundTruthS3Input(Input<ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs> groundTruthS3Input) {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
         }
 
-        public Builder setGroundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
+        public Builder groundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3InputArgs groundTruthS3Input) {
             this.groundTruthS3Input = Input.of(Objects.requireNonNull(groundTruthS3Input));
             return this;
         }

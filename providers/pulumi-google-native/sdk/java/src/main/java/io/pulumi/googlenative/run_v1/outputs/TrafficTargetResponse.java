@@ -42,14 +42,14 @@ public final class TrafficTargetResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"configurationName","latestRevision","percent","revisionName","tag","url"})
+    @OutputCustomType.Constructor
     private TrafficTargetResponse(
-        String configurationName,
-        Boolean latestRevision,
-        Integer percent,
-        String revisionName,
-        String tag,
-        String url) {
+        @OutputCustomType.Parameter("configurationName") String configurationName,
+        @OutputCustomType.Parameter("latestRevision") Boolean latestRevision,
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revisionName") String revisionName,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("url") String url) {
         this.configurationName = configurationName;
         this.latestRevision = latestRevision;
         this.percent = percent;
@@ -131,32 +131,32 @@ public final class TrafficTargetResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setConfigurationName(String configurationName) {
+        public Builder configurationName(String configurationName) {
             this.configurationName = Objects.requireNonNull(configurationName);
             return this;
         }
 
-        public Builder setLatestRevision(Boolean latestRevision) {
+        public Builder latestRevision(Boolean latestRevision) {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevisionName(String revisionName) {
+        public Builder revisionName(String revisionName) {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

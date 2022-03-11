@@ -103,26 +103,26 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
      */
     private final String versionStatus;
 
-    @OutputCustomType.Constructor({"capabilities","concurrentJobsLimit","expiryTime","hostServiceUri","isActiveDispatcher","lastConnectTime","lastEndUpdateTime","lastStartTime","lastStartUpdateTime","lastStopTime","lastUpdateResult","machineName","maxConcurrentJobs","nodeName","registerTime","status","version","versionStatus"})
+    @OutputCustomType.Constructor
     private SelfHostedIntegrationRuntimeNodeResponse(
-        Map<String,String> capabilities,
-        Integer concurrentJobsLimit,
-        String expiryTime,
-        String hostServiceUri,
-        Boolean isActiveDispatcher,
-        String lastConnectTime,
-        String lastEndUpdateTime,
-        String lastStartTime,
-        String lastStartUpdateTime,
-        String lastStopTime,
-        String lastUpdateResult,
-        String machineName,
-        Integer maxConcurrentJobs,
-        String nodeName,
-        String registerTime,
-        String status,
-        String version,
-        String versionStatus) {
+        @OutputCustomType.Parameter("capabilities") Map<String,String> capabilities,
+        @OutputCustomType.Parameter("concurrentJobsLimit") Integer concurrentJobsLimit,
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @OutputCustomType.Parameter("isActiveDispatcher") Boolean isActiveDispatcher,
+        @OutputCustomType.Parameter("lastConnectTime") String lastConnectTime,
+        @OutputCustomType.Parameter("lastEndUpdateTime") String lastEndUpdateTime,
+        @OutputCustomType.Parameter("lastStartTime") String lastStartTime,
+        @OutputCustomType.Parameter("lastStartUpdateTime") String lastStartUpdateTime,
+        @OutputCustomType.Parameter("lastStopTime") String lastStopTime,
+        @OutputCustomType.Parameter("lastUpdateResult") String lastUpdateResult,
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("maxConcurrentJobs") Integer maxConcurrentJobs,
+        @OutputCustomType.Parameter("nodeName") String nodeName,
+        @OutputCustomType.Parameter("registerTime") String registerTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionStatus") String versionStatus) {
         this.capabilities = capabilities;
         this.concurrentJobsLimit = concurrentJobsLimit;
         this.expiryTime = expiryTime;
@@ -324,92 +324,92 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
     	      this.versionStatus = defaults.versionStatus;
         }
 
-        public Builder setCapabilities(Map<String,String> capabilities) {
+        public Builder capabilities(Map<String,String> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setConcurrentJobsLimit(Integer concurrentJobsLimit) {
+        public Builder concurrentJobsLimit(Integer concurrentJobsLimit) {
             this.concurrentJobsLimit = Objects.requireNonNull(concurrentJobsLimit);
             return this;
         }
 
-        public Builder setExpiryTime(String expiryTime) {
+        public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
 
-        public Builder setHostServiceUri(String hostServiceUri) {
+        public Builder hostServiceUri(String hostServiceUri) {
             this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
             return this;
         }
 
-        public Builder setIsActiveDispatcher(Boolean isActiveDispatcher) {
+        public Builder isActiveDispatcher(Boolean isActiveDispatcher) {
             this.isActiveDispatcher = Objects.requireNonNull(isActiveDispatcher);
             return this;
         }
 
-        public Builder setLastConnectTime(String lastConnectTime) {
+        public Builder lastConnectTime(String lastConnectTime) {
             this.lastConnectTime = Objects.requireNonNull(lastConnectTime);
             return this;
         }
 
-        public Builder setLastEndUpdateTime(String lastEndUpdateTime) {
+        public Builder lastEndUpdateTime(String lastEndUpdateTime) {
             this.lastEndUpdateTime = Objects.requireNonNull(lastEndUpdateTime);
             return this;
         }
 
-        public Builder setLastStartTime(String lastStartTime) {
+        public Builder lastStartTime(String lastStartTime) {
             this.lastStartTime = Objects.requireNonNull(lastStartTime);
             return this;
         }
 
-        public Builder setLastStartUpdateTime(String lastStartUpdateTime) {
+        public Builder lastStartUpdateTime(String lastStartUpdateTime) {
             this.lastStartUpdateTime = Objects.requireNonNull(lastStartUpdateTime);
             return this;
         }
 
-        public Builder setLastStopTime(String lastStopTime) {
+        public Builder lastStopTime(String lastStopTime) {
             this.lastStopTime = Objects.requireNonNull(lastStopTime);
             return this;
         }
 
-        public Builder setLastUpdateResult(String lastUpdateResult) {
+        public Builder lastUpdateResult(String lastUpdateResult) {
             this.lastUpdateResult = Objects.requireNonNull(lastUpdateResult);
             return this;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setMaxConcurrentJobs(Integer maxConcurrentJobs) {
+        public Builder maxConcurrentJobs(Integer maxConcurrentJobs) {
             this.maxConcurrentJobs = Objects.requireNonNull(maxConcurrentJobs);
             return this;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }
 
-        public Builder setRegisterTime(String registerTime) {
+        public Builder registerTime(String registerTime) {
             this.registerTime = Objects.requireNonNull(registerTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionStatus(String versionStatus) {
+        public Builder versionStatus(String versionStatus) {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }

@@ -63,18 +63,18 @@ public final class SecurityAlertTimelineItemResponse {
      */
     private final String timeGenerated;
 
-    @OutputCustomType.Constructor({"alertType","azureResourceId","description","displayName","endTimeUtc","kind","productName","severity","startTimeUtc","timeGenerated"})
+    @OutputCustomType.Constructor
     private SecurityAlertTimelineItemResponse(
-        String alertType,
-        String azureResourceId,
-        @Nullable String description,
-        String displayName,
-        String endTimeUtc,
-        String kind,
-        @Nullable String productName,
-        String severity,
-        String startTimeUtc,
-        String timeGenerated) {
+        @OutputCustomType.Parameter("alertType") String alertType,
+        @OutputCustomType.Parameter("azureResourceId") String azureResourceId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("endTimeUtc") String endTimeUtc,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("startTimeUtc") String startTimeUtc,
+        @OutputCustomType.Parameter("timeGenerated") String timeGenerated) {
         this.alertType = alertType;
         this.azureResourceId = azureResourceId;
         this.description = description;
@@ -197,52 +197,52 @@ public final class SecurityAlertTimelineItemResponse {
     	      this.timeGenerated = defaults.timeGenerated;
         }
 
-        public Builder setAlertType(String alertType) {
+        public Builder alertType(String alertType) {
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
 
-        public Builder setAzureResourceId(String azureResourceId) {
+        public Builder azureResourceId(String azureResourceId) {
             this.azureResourceId = Objects.requireNonNull(azureResourceId);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEndTimeUtc(String endTimeUtc) {
+        public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setTimeGenerated(String timeGenerated) {
+        public Builder timeGenerated(String timeGenerated) {
             this.timeGenerated = Objects.requireNonNull(timeGenerated);
             return this;
         }

@@ -13,10 +13,10 @@ public final class FlowTaskPropertiesObject {
     private final FlowOperatorPropertiesKeys key;
     private final String value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private FlowTaskPropertiesObject(
-        FlowOperatorPropertiesKeys key,
-        String value) {
+        @OutputCustomType.Parameter("key") FlowOperatorPropertiesKeys key,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class FlowTaskPropertiesObject {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(FlowOperatorPropertiesKeys key) {
+        public Builder key(FlowOperatorPropertiesKeys key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

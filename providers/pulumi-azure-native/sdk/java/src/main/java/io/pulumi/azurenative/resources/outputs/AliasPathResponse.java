@@ -35,12 +35,12 @@ public final class AliasPathResponse {
      */
     private final @Nullable AliasPatternResponse pattern;
 
-    @OutputCustomType.Constructor({"apiVersions","metadata","path","pattern"})
+    @OutputCustomType.Constructor
     private AliasPathResponse(
-        @Nullable List<String> apiVersions,
-        AliasPathMetadataResponse metadata,
-        @Nullable String path,
-        @Nullable AliasPatternResponse pattern) {
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("metadata") AliasPathMetadataResponse metadata,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pattern") @Nullable AliasPatternResponse pattern) {
         this.apiVersions = apiVersions;
         this.metadata = metadata;
         this.path = path;
@@ -102,22 +102,22 @@ public final class AliasPathResponse {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setMetadata(AliasPathMetadataResponse metadata) {
+        public Builder metadata(AliasPathMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPattern(@Nullable AliasPatternResponse pattern) {
+        public Builder pattern(@Nullable AliasPatternResponse pattern) {
             this.pattern = pattern;
             return this;
         }

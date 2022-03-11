@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetFunctionDeadLetterConfig {
     private final String targetArn;
 
-    @OutputCustomType.Constructor({"targetArn"})
-    private GetFunctionDeadLetterConfig(String targetArn) {
+    @OutputCustomType.Constructor
+    private GetFunctionDeadLetterConfig(@OutputCustomType.Parameter("targetArn") String targetArn) {
         this.targetArn = targetArn;
     }
 
@@ -40,7 +40,7 @@ public final class GetFunctionDeadLetterConfig {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setTargetArn(String targetArn) {
+        public Builder targetArn(String targetArn) {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }

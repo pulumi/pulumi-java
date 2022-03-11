@@ -111,42 +111,42 @@ public final class GameServerConfigScalingConfigArgs extends io.pulumi.resources
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder setFleetAutoscalerSpec(Input<String> fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(Input<String> fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
-        public Builder setFleetAutoscalerSpec(String fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Input.of(Objects.requireNonNull(fleetAutoscalerSpec));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSchedules(@Nullable Input<List<GameServerConfigScalingConfigScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Input<List<GameServerConfigScalingConfigScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<GameServerConfigScalingConfigScheduleArgs> schedules) {
+        public Builder schedules(@Nullable List<GameServerConfigScalingConfigScheduleArgs> schedules) {
             this.schedules = Input.ofNullable(schedules);
             return this;
         }
 
-        public Builder setSelectors(@Nullable Input<List<GameServerConfigScalingConfigSelectorArgs>> selectors) {
+        public Builder selectors(@Nullable Input<List<GameServerConfigScalingConfigSelectorArgs>> selectors) {
             this.selectors = selectors;
             return this;
         }
 
-        public Builder setSelectors(@Nullable List<GameServerConfigScalingConfigSelectorArgs> selectors) {
+        public Builder selectors(@Nullable List<GameServerConfigScalingConfigSelectorArgs> selectors) {
             this.selectors = Input.ofNullable(selectors);
             return this;
         }

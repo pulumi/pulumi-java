@@ -29,12 +29,12 @@ public final class DatasetDatabaseInputDefinition {
     private final @Nullable String queryString;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"databaseTableName","glueConnectionName","queryString","tempDirectory"})
+    @OutputCustomType.Constructor
     private DatasetDatabaseInputDefinition(
-        @Nullable String databaseTableName,
-        String glueConnectionName,
-        @Nullable String queryString,
-        @Nullable DatasetS3Location tempDirectory) {
+        @OutputCustomType.Parameter("databaseTableName") @Nullable String databaseTableName,
+        @OutputCustomType.Parameter("glueConnectionName") String glueConnectionName,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.databaseTableName = databaseTableName;
         this.glueConnectionName = glueConnectionName;
         this.queryString = queryString;
@@ -92,22 +92,22 @@ public final class DatasetDatabaseInputDefinition {
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setDatabaseTableName(@Nullable String databaseTableName) {
+        public Builder databaseTableName(@Nullable String databaseTableName) {
             this.databaseTableName = databaseTableName;
             return this;
         }
 
-        public Builder setGlueConnectionName(String glueConnectionName) {
+        public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable DatasetS3Location tempDirectory) {
+        public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }

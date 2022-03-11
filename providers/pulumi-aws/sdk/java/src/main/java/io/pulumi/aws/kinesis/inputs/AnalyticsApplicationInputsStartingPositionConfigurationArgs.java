@@ -53,12 +53,12 @@ public final class AnalyticsApplicationInputsStartingPositionConfigurationArgs e
     	      this.startingPosition = defaults.startingPosition;
         }
 
-        public Builder setStartingPosition(@Nullable Input<String> startingPosition) {
+        public Builder startingPosition(@Nullable Input<String> startingPosition) {
             this.startingPosition = startingPosition;
             return this;
         }
 
-        public Builder setStartingPosition(@Nullable String startingPosition) {
+        public Builder startingPosition(@Nullable String startingPosition) {
             this.startingPosition = Input.ofNullable(startingPosition);
             return this;
         }

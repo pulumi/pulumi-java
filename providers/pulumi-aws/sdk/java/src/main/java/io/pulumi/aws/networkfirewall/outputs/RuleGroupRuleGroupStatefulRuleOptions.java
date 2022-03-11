@@ -15,8 +15,8 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
      */
     private final String ruleOrder;
 
-    @OutputCustomType.Constructor({"ruleOrder"})
-    private RuleGroupRuleGroupStatefulRuleOptions(String ruleOrder) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleGroupStatefulRuleOptions(@OutputCustomType.Parameter("ruleOrder") String ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupRuleGroupStatefulRuleOptions {
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder setRuleOrder(String ruleOrder) {
+        public Builder ruleOrder(String ruleOrder) {
             this.ruleOrder = Objects.requireNonNull(ruleOrder);
             return this;
         }

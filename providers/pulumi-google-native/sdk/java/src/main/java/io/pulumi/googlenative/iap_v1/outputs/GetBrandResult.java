@@ -31,12 +31,12 @@ public final class GetBrandResult {
      */
     private final String supportEmail;
 
-    @OutputCustomType.Constructor({"applicationTitle","name","orgInternalOnly","supportEmail"})
+    @OutputCustomType.Constructor
     private GetBrandResult(
-        String applicationTitle,
-        String name,
-        Boolean orgInternalOnly,
-        String supportEmail) {
+        @OutputCustomType.Parameter("applicationTitle") String applicationTitle,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orgInternalOnly") Boolean orgInternalOnly,
+        @OutputCustomType.Parameter("supportEmail") String supportEmail) {
         this.applicationTitle = applicationTitle;
         this.name = name;
         this.orgInternalOnly = orgInternalOnly;
@@ -98,22 +98,22 @@ public final class GetBrandResult {
     	      this.supportEmail = defaults.supportEmail;
         }
 
-        public Builder setApplicationTitle(String applicationTitle) {
+        public Builder applicationTitle(String applicationTitle) {
             this.applicationTitle = Objects.requireNonNull(applicationTitle);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrgInternalOnly(Boolean orgInternalOnly) {
+        public Builder orgInternalOnly(Boolean orgInternalOnly) {
             this.orgInternalOnly = Objects.requireNonNull(orgInternalOnly);
             return this;
         }
 
-        public Builder setSupportEmail(String supportEmail) {
+        public Builder supportEmail(String supportEmail) {
             this.supportEmail = Objects.requireNonNull(supportEmail);
             return this;
         }

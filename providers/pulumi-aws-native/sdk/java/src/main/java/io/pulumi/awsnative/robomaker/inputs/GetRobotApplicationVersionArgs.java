@@ -47,7 +47,7 @@ public final class GetRobotApplicationVersionArgs extends io.pulumi.resources.In
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }

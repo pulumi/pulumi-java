@@ -28,11 +28,11 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable String notifyGlobalAdmins;
 
-    @OutputCustomType.Constructor({"additionalRecipients","notifyDcAdmins","notifyGlobalAdmins"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable List<String> additionalRecipients,
-        @Nullable String notifyDcAdmins,
-        @Nullable String notifyGlobalAdmins) {
+        @OutputCustomType.Parameter("additionalRecipients") @Nullable List<String> additionalRecipients,
+        @OutputCustomType.Parameter("notifyDcAdmins") @Nullable String notifyDcAdmins,
+        @OutputCustomType.Parameter("notifyGlobalAdmins") @Nullable String notifyGlobalAdmins) {
         this.additionalRecipients = additionalRecipients;
         this.notifyDcAdmins = notifyDcAdmins;
         this.notifyGlobalAdmins = notifyGlobalAdmins;
@@ -84,17 +84,17 @@ public final class NotificationSettingsResponse {
     	      this.notifyGlobalAdmins = defaults.notifyGlobalAdmins;
         }
 
-        public Builder setAdditionalRecipients(@Nullable List<String> additionalRecipients) {
+        public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
             this.additionalRecipients = additionalRecipients;
             return this;
         }
 
-        public Builder setNotifyDcAdmins(@Nullable String notifyDcAdmins) {
+        public Builder notifyDcAdmins(@Nullable String notifyDcAdmins) {
             this.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
-        public Builder setNotifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
+        public Builder notifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }

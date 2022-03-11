@@ -36,13 +36,13 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"contentUrl","description","icon","largeImage","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse(
-        String contentUrl,
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage,
-        String name) {
+        @OutputCustomType.Parameter("contentUrl") String contentUrl,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("icon") GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon,
+        @OutputCustomType.Parameter("largeImage") GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage,
+        @OutputCustomType.Parameter("name") String name) {
         this.contentUrl = contentUrl;
         this.description = description;
         this.icon = icon;
@@ -114,27 +114,27 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     	      this.name = defaults.name;
         }
 
-        public Builder setContentUrl(String contentUrl) {
+        public Builder contentUrl(String contentUrl) {
             this.contentUrl = Objects.requireNonNull(contentUrl);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIcon(GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon) {
+        public Builder icon(GoogleCloudDialogflowV2beta1IntentMessageImageResponse icon) {
             this.icon = Objects.requireNonNull(icon);
             return this;
         }
 
-        public Builder setLargeImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage) {
+        public Builder largeImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse largeImage) {
             this.largeImage = Objects.requireNonNull(largeImage);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

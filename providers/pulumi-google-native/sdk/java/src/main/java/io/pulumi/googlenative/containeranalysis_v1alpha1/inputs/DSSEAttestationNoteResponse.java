@@ -55,7 +55,7 @@ public final class DSSEAttestationNoteResponse extends io.pulumi.resources.Invok
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(DSSEHintResponse hint) {
+        public Builder hint(DSSEHintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

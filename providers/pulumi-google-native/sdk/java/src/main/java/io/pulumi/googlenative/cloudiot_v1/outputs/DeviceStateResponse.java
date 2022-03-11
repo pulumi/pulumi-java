@@ -20,10 +20,10 @@ public final class DeviceStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"binaryData","updateTime"})
+    @OutputCustomType.Constructor
     private DeviceStateResponse(
-        String binaryData,
-        String updateTime) {
+        @OutputCustomType.Parameter("binaryData") String binaryData,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }
@@ -65,12 +65,12 @@ public final class DeviceStateResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setBinaryData(String binaryData) {
+        public Builder binaryData(String binaryData) {
             this.binaryData = Objects.requireNonNull(binaryData);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

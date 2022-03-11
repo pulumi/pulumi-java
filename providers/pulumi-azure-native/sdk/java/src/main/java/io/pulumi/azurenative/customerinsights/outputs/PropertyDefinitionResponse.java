@@ -97,24 +97,24 @@ public final class PropertyDefinitionResponse {
      */
     private final @Nullable String schemaItemPropLink;
 
-    @OutputCustomType.Constructor({"arrayValueSeparator","dataSourcePrecedenceRules","enumValidValues","fieldName","fieldType","isArray","isAvailableInGraph","isEnum","isFlagEnum","isImage","isLocalizedString","isName","isRequired","maxLength","propertyId","schemaItemPropLink"})
+    @OutputCustomType.Constructor
     private PropertyDefinitionResponse(
-        @Nullable String arrayValueSeparator,
-        List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
-        @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
-        String fieldName,
-        String fieldType,
-        @Nullable Boolean isArray,
-        @Nullable Boolean isAvailableInGraph,
-        @Nullable Boolean isEnum,
-        @Nullable Boolean isFlagEnum,
-        @Nullable Boolean isImage,
-        @Nullable Boolean isLocalizedString,
-        @Nullable Boolean isName,
-        @Nullable Boolean isRequired,
-        @Nullable Integer maxLength,
-        @Nullable String propertyId,
-        @Nullable String schemaItemPropLink) {
+        @OutputCustomType.Parameter("arrayValueSeparator") @Nullable String arrayValueSeparator,
+        @OutputCustomType.Parameter("dataSourcePrecedenceRules") List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules,
+        @OutputCustomType.Parameter("enumValidValues") @Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("fieldType") String fieldType,
+        @OutputCustomType.Parameter("isArray") @Nullable Boolean isArray,
+        @OutputCustomType.Parameter("isAvailableInGraph") @Nullable Boolean isAvailableInGraph,
+        @OutputCustomType.Parameter("isEnum") @Nullable Boolean isEnum,
+        @OutputCustomType.Parameter("isFlagEnum") @Nullable Boolean isFlagEnum,
+        @OutputCustomType.Parameter("isImage") @Nullable Boolean isImage,
+        @OutputCustomType.Parameter("isLocalizedString") @Nullable Boolean isLocalizedString,
+        @OutputCustomType.Parameter("isName") @Nullable Boolean isName,
+        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @OutputCustomType.Parameter("maxLength") @Nullable Integer maxLength,
+        @OutputCustomType.Parameter("propertyId") @Nullable String propertyId,
+        @OutputCustomType.Parameter("schemaItemPropLink") @Nullable String schemaItemPropLink) {
         this.arrayValueSeparator = arrayValueSeparator;
         this.dataSourcePrecedenceRules = dataSourcePrecedenceRules;
         this.enumValidValues = enumValidValues;
@@ -296,82 +296,82 @@ public final class PropertyDefinitionResponse {
     	      this.schemaItemPropLink = defaults.schemaItemPropLink;
         }
 
-        public Builder setArrayValueSeparator(@Nullable String arrayValueSeparator) {
+        public Builder arrayValueSeparator(@Nullable String arrayValueSeparator) {
             this.arrayValueSeparator = arrayValueSeparator;
             return this;
         }
 
-        public Builder setDataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
+        public Builder dataSourcePrecedenceRules(List<DataSourcePrecedenceResponse> dataSourcePrecedenceRules) {
             this.dataSourcePrecedenceRules = Objects.requireNonNull(dataSourcePrecedenceRules);
             return this;
         }
 
-        public Builder setEnumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
+        public Builder enumValidValues(@Nullable List<ProfileEnumValidValuesFormatResponse> enumValidValues) {
             this.enumValidValues = enumValidValues;
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setFieldType(String fieldType) {
+        public Builder fieldType(String fieldType) {
             this.fieldType = Objects.requireNonNull(fieldType);
             return this;
         }
 
-        public Builder setIsArray(@Nullable Boolean isArray) {
+        public Builder isArray(@Nullable Boolean isArray) {
             this.isArray = isArray;
             return this;
         }
 
-        public Builder setIsAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
+        public Builder isAvailableInGraph(@Nullable Boolean isAvailableInGraph) {
             this.isAvailableInGraph = isAvailableInGraph;
             return this;
         }
 
-        public Builder setIsEnum(@Nullable Boolean isEnum) {
+        public Builder isEnum(@Nullable Boolean isEnum) {
             this.isEnum = isEnum;
             return this;
         }
 
-        public Builder setIsFlagEnum(@Nullable Boolean isFlagEnum) {
+        public Builder isFlagEnum(@Nullable Boolean isFlagEnum) {
             this.isFlagEnum = isFlagEnum;
             return this;
         }
 
-        public Builder setIsImage(@Nullable Boolean isImage) {
+        public Builder isImage(@Nullable Boolean isImage) {
             this.isImage = isImage;
             return this;
         }
 
-        public Builder setIsLocalizedString(@Nullable Boolean isLocalizedString) {
+        public Builder isLocalizedString(@Nullable Boolean isLocalizedString) {
             this.isLocalizedString = isLocalizedString;
             return this;
         }
 
-        public Builder setIsName(@Nullable Boolean isName) {
+        public Builder isName(@Nullable Boolean isName) {
             this.isName = isName;
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setMaxLength(@Nullable Integer maxLength) {
+        public Builder maxLength(@Nullable Integer maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setSchemaItemPropLink(@Nullable String schemaItemPropLink) {
+        public Builder schemaItemPropLink(@Nullable String schemaItemPropLink) {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }

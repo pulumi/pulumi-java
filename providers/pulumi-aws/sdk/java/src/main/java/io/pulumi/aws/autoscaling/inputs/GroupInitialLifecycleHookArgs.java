@@ -127,72 +127,72 @@ public final class GroupInitialLifecycleHookArgs extends io.pulumi.resources.Res
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDefaultResult(@Nullable Input<String> defaultResult) {
+        public Builder defaultResult(@Nullable Input<String> defaultResult) {
             this.defaultResult = defaultResult;
             return this;
         }
 
-        public Builder setDefaultResult(@Nullable String defaultResult) {
+        public Builder defaultResult(@Nullable String defaultResult) {
             this.defaultResult = Input.ofNullable(defaultResult);
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Input<Integer> heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Input<Integer> heartbeatTimeout) {
             this.heartbeatTimeout = heartbeatTimeout;
             return this;
         }
 
-        public Builder setHeartbeatTimeout(@Nullable Integer heartbeatTimeout) {
+        public Builder heartbeatTimeout(@Nullable Integer heartbeatTimeout) {
             this.heartbeatTimeout = Input.ofNullable(heartbeatTimeout);
             return this;
         }
 
-        public Builder setLifecycleTransition(Input<String> lifecycleTransition) {
+        public Builder lifecycleTransition(Input<String> lifecycleTransition) {
             this.lifecycleTransition = Objects.requireNonNull(lifecycleTransition);
             return this;
         }
 
-        public Builder setLifecycleTransition(String lifecycleTransition) {
+        public Builder lifecycleTransition(String lifecycleTransition) {
             this.lifecycleTransition = Input.of(Objects.requireNonNull(lifecycleTransition));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable Input<String> notificationMetadata) {
+        public Builder notificationMetadata(@Nullable Input<String> notificationMetadata) {
             this.notificationMetadata = notificationMetadata;
             return this;
         }
 
-        public Builder setNotificationMetadata(@Nullable String notificationMetadata) {
+        public Builder notificationMetadata(@Nullable String notificationMetadata) {
             this.notificationMetadata = Input.ofNullable(notificationMetadata);
             return this;
         }
 
-        public Builder setNotificationTargetArn(@Nullable Input<String> notificationTargetArn) {
+        public Builder notificationTargetArn(@Nullable Input<String> notificationTargetArn) {
             this.notificationTargetArn = notificationTargetArn;
             return this;
         }
 
-        public Builder setNotificationTargetArn(@Nullable String notificationTargetArn) {
+        public Builder notificationTargetArn(@Nullable String notificationTargetArn) {
             this.notificationTargetArn = Input.ofNullable(notificationTargetArn);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

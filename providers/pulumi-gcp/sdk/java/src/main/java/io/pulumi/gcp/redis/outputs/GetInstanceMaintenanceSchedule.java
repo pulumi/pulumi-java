@@ -13,11 +13,11 @@ public final class GetInstanceMaintenanceSchedule {
     private final String scheduleDeadlineTime;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","scheduleDeadlineTime","startTime"})
+    @OutputCustomType.Constructor
     private GetInstanceMaintenanceSchedule(
-        String endTime,
-        String scheduleDeadlineTime,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         this.startTime = startTime;
@@ -57,17 +57,17 @@ public final class GetInstanceMaintenanceSchedule {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setScheduleDeadlineTime(String scheduleDeadlineTime) {
+        public Builder scheduleDeadlineTime(String scheduleDeadlineTime) {
             this.scheduleDeadlineTime = Objects.requireNonNull(scheduleDeadlineTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

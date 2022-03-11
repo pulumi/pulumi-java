@@ -22,10 +22,10 @@ public final class MediaServicesForPutRequestResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"resourceId","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private MediaServicesForPutRequestResponse(
-        @Nullable String resourceId,
-        @Nullable String userAssignedIdentity) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.resourceId = resourceId;
         this.userAssignedIdentity = userAssignedIdentity;
     }
@@ -67,12 +67,12 @@ public final class MediaServicesForPutRequestResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

@@ -190,112 +190,112 @@ public final class DetectorRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDetectorId(@Nullable Input<String> detectorId) {
+        public Builder detectorId(@Nullable Input<String> detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = Input.ofNullable(detectorId);
             return this;
         }
 
-        public Builder setExpression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Input<String> expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = Input.ofNullable(expression);
             return this;
         }
 
-        public Builder setLanguage(@Nullable Input<DetectorRuleLanguage> language) {
+        public Builder language(@Nullable Input<DetectorRuleLanguage> language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLanguage(@Nullable DetectorRuleLanguage language) {
+        public Builder language(@Nullable DetectorRuleLanguage language) {
             this.language = Input.ofNullable(language);
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder setOutcomes(@Nullable Input<List<DetectorOutcomeArgs>> outcomes) {
+        public Builder outcomes(@Nullable Input<List<DetectorOutcomeArgs>> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
 
-        public Builder setOutcomes(@Nullable List<DetectorOutcomeArgs> outcomes) {
+        public Builder outcomes(@Nullable List<DetectorOutcomeArgs> outcomes) {
             this.outcomes = Input.ofNullable(outcomes);
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable Input<String> ruleVersion) {
+        public Builder ruleVersion(@Nullable Input<String> ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable String ruleVersion) {
+        public Builder ruleVersion(@Nullable String ruleVersion) {
             this.ruleVersion = Input.ofNullable(ruleVersion);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTagArgs> tags) {
+        public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

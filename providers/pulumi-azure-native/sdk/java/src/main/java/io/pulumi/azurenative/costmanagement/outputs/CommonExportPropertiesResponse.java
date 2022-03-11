@@ -40,13 +40,13 @@ public final class CommonExportPropertiesResponse {
      */
     private final @Nullable ExportExecutionListResultResponse runHistory;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","format","nextRunTimeEstimate","runHistory"})
+    @OutputCustomType.Constructor
     private CommonExportPropertiesResponse(
-        ExportDefinitionResponse definition,
-        ExportDeliveryInfoResponse deliveryInfo,
-        @Nullable String format,
-        String nextRunTimeEstimate,
-        @Nullable ExportExecutionListResultResponse runHistory) {
+        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;
@@ -118,27 +118,27 @@ public final class CommonExportPropertiesResponse {
     	      this.runHistory = defaults.runHistory;
         }
 
-        public Builder setDefinition(ExportDefinitionResponse definition) {
+        public Builder definition(ExportDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDeliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
+        public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setNextRunTimeEstimate(String nextRunTimeEstimate) {
+        public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
             return this;
         }
 
-        public Builder setRunHistory(@Nullable ExportExecutionListResultResponse runHistory) {
+        public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             this.runHistory = runHistory;
             return this;
         }

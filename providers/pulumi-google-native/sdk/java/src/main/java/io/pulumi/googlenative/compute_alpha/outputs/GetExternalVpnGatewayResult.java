@@ -58,17 +58,17 @@ public final class GetExternalVpnGatewayResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","interfaces","kind","labelFingerprint","labels","name","redundancyType","selfLink"})
+    @OutputCustomType.Constructor
     private GetExternalVpnGatewayResult(
-        String creationTimestamp,
-        String description,
-        List<ExternalVpnGatewayInterfaceResponse> interfaces,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String name,
-        String redundancyType,
-        String selfLink) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("interfaces") List<ExternalVpnGatewayInterfaceResponse> interfaces,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("redundancyType") String redundancyType,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.interfaces = interfaces;
@@ -180,47 +180,47 @@ public final class GetExternalVpnGatewayResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setInterfaces(List<ExternalVpnGatewayInterfaceResponse> interfaces) {
+        public Builder interfaces(List<ExternalVpnGatewayInterfaceResponse> interfaces) {
             this.interfaces = Objects.requireNonNull(interfaces);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRedundancyType(String redundancyType) {
+        public Builder redundancyType(String redundancyType) {
             this.redundancyType = Objects.requireNonNull(redundancyType);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

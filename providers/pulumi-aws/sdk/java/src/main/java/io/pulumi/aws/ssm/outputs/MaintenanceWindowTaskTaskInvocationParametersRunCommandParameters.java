@@ -72,19 +72,19 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"cloudwatchConfig","comment","documentHash","documentHashType","documentVersion","notificationConfig","outputS3Bucket","outputS3KeyPrefix","parameters","serviceRoleArn","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParameters(
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig,
-        @Nullable String comment,
-        @Nullable String documentHash,
-        @Nullable String documentHashType,
-        @Nullable String documentVersion,
-        @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig,
-        @Nullable String outputS3Bucket,
-        @Nullable String outputS3KeyPrefix,
-        @Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters,
-        @Nullable String serviceRoleArn,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("cloudwatchConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("documentHash") @Nullable String documentHash,
+        @OutputCustomType.Parameter("documentHashType") @Nullable String documentHashType,
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("notificationConfig") @Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig,
+        @OutputCustomType.Parameter("outputS3Bucket") @Nullable String outputS3Bucket,
+        @OutputCustomType.Parameter("outputS3KeyPrefix") @Nullable String outputS3KeyPrefix,
+        @OutputCustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters,
+        @OutputCustomType.Parameter("serviceRoleArn") @Nullable String serviceRoleArn,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.cloudwatchConfig = cloudwatchConfig;
         this.comment = comment;
         this.documentHash = documentHash;
@@ -216,57 +216,57 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setCloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setDocumentHash(@Nullable String documentHash) {
+        public Builder documentHash(@Nullable String documentHash) {
             this.documentHash = documentHash;
             return this;
         }
 
-        public Builder setDocumentHashType(@Nullable String documentHashType) {
+        public Builder documentHashType(@Nullable String documentHashType) {
             this.documentHashType = documentHashType;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig) {
+        public Builder notificationConfig(@Nullable MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setOutputS3Bucket(@Nullable String outputS3Bucket) {
+        public Builder outputS3Bucket(@Nullable String outputS3Bucket) {
             this.outputS3Bucket = outputS3Bucket;
             return this;
         }
 
-        public Builder setOutputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
+        public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters) {
+        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setServiceRoleArn(@Nullable String serviceRoleArn) {
+        public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
             this.serviceRoleArn = serviceRoleArn;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

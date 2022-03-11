@@ -75,12 +75,12 @@ public final class ElasticPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.elasticCloudUser = defaults.elasticCloudUser;
         }
 
-        public Builder setElasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
+        public Builder elasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
             this.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
 
-        public Builder setElasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
+        public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
             this.elasticCloudUser = elasticCloudUser;
             return this;
         }

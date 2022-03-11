@@ -22,10 +22,10 @@ public final class LinkedVpnTunnelsResponse {
      */
     private final List<String> uris;
 
-    @OutputCustomType.Constructor({"siteToSiteDataTransfer","uris"})
+    @OutputCustomType.Constructor
     private LinkedVpnTunnelsResponse(
-        Boolean siteToSiteDataTransfer,
-        List<String> uris) {
+        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer,
+        @OutputCustomType.Parameter("uris") List<String> uris) {
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
         this.uris = uris;
     }
@@ -67,12 +67,12 @@ public final class LinkedVpnTunnelsResponse {
     	      this.uris = defaults.uris;
         }
 
-        public Builder setSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
 
-        public Builder setUris(List<String> uris) {
+        public Builder uris(List<String> uris) {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }

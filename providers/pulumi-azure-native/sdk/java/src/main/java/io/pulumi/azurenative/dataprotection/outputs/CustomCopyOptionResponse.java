@@ -23,10 +23,10 @@ public final class CustomCopyOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"duration","objectType"})
+    @OutputCustomType.Constructor
     private CustomCopyOptionResponse(
-        @Nullable String duration,
-        String objectType) {
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.duration = duration;
         this.objectType = objectType;
     }
@@ -69,12 +69,12 @@ public final class CustomCopyOptionResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

@@ -85,17 +85,17 @@ public final class GetStudioSessionMappingArgs extends io.pulumi.resources.Invok
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setIdentityName(String identityName) {
+        public Builder identityName(String identityName) {
             this.identityName = Objects.requireNonNull(identityName);
             return this;
         }
 
-        public Builder setIdentityType(StudioSessionMappingIdentityType identityType) {
+        public Builder identityType(StudioSessionMappingIdentityType identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }

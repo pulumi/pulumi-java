@@ -41,13 +41,13 @@ public final class ClusterRole {
      */
     private final @Nullable List<PolicyRule> rules;
 
-    @OutputCustomType.Constructor({"aggregationRule","apiVersion","kind","metadata","rules"})
+    @OutputCustomType.Constructor
     private ClusterRole(
-        @Nullable AggregationRule aggregationRule,
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<PolicyRule> rules) {
+        @OutputCustomType.Parameter("aggregationRule") @Nullable AggregationRule aggregationRule,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("rules") @Nullable List<PolicyRule> rules) {
         this.aggregationRule = aggregationRule;
         this.apiVersion = apiVersion;
         this.kind = kind;
@@ -119,27 +119,27 @@ public final class ClusterRole {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAggregationRule(@Nullable AggregationRule aggregationRule) {
+        public Builder aggregationRule(@Nullable AggregationRule aggregationRule) {
             this.aggregationRule = aggregationRule;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setRules(@Nullable List<PolicyRule> rules) {
+        public Builder rules(@Nullable List<PolicyRule> rules) {
             this.rules = rules;
             return this;
         }

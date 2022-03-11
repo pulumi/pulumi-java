@@ -103,25 +103,25 @@ public final class GetPython2PackageResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"activityCount","contentLink","creationTime","description","error","etag","id","isComposite","isGlobal","lastModifiedTime","location","name","provisioningState","sizeInBytes","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetPython2PackageResult(
-        @Nullable Integer activityCount,
-        @Nullable ContentLinkResponse contentLink,
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable ModuleErrorInfoResponse error,
-        @Nullable String etag,
-        String id,
-        @Nullable Boolean isComposite,
-        @Nullable Boolean isGlobal,
-        @Nullable String lastModifiedTime,
-        @Nullable String location,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable Double sizeInBytes,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("activityCount") @Nullable Integer activityCount,
+        @OutputCustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("error") @Nullable ModuleErrorInfoResponse error,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isComposite") @Nullable Boolean isComposite,
+        @OutputCustomType.Parameter("isGlobal") @Nullable Boolean isGlobal,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("sizeInBytes") @Nullable Double sizeInBytes,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.activityCount = activityCount;
         this.contentLink = contentLink;
         this.creationTime = creationTime;
@@ -313,87 +313,87 @@ public final class GetPython2PackageResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setActivityCount(@Nullable Integer activityCount) {
+        public Builder activityCount(@Nullable Integer activityCount) {
             this.activityCount = activityCount;
             return this;
         }
 
-        public Builder setContentLink(@Nullable ContentLinkResponse contentLink) {
+        public Builder contentLink(@Nullable ContentLinkResponse contentLink) {
             this.contentLink = contentLink;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setError(@Nullable ModuleErrorInfoResponse error) {
+        public Builder error(@Nullable ModuleErrorInfoResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsComposite(@Nullable Boolean isComposite) {
+        public Builder isComposite(@Nullable Boolean isComposite) {
             this.isComposite = isComposite;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable Boolean isGlobal) {
+        public Builder isGlobal(@Nullable Boolean isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSizeInBytes(@Nullable Double sizeInBytes) {
+        public Builder sizeInBytes(@Nullable Double sizeInBytes) {
             this.sizeInBytes = sizeInBytes;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

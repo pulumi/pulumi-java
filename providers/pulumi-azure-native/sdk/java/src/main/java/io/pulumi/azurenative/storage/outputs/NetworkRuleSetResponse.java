@@ -41,13 +41,13 @@ public final class NetworkRuleSetResponse {
      */
     private final @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"bypass","defaultAction","ipRules","resourceAccessRules","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetResponse(
-        @Nullable String bypass,
-        String defaultAction,
-        @Nullable List<IPRuleResponse> ipRules,
-        @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
-        @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("bypass") @Nullable String bypass,
+        @OutputCustomType.Parameter("defaultAction") String defaultAction,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<IPRuleResponse> ipRules,
+        @OutputCustomType.Parameter("resourceAccessRules") @Nullable List<ResourceAccessRuleResponse> resourceAccessRules,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
@@ -119,27 +119,27 @@ public final class NetworkRuleSetResponse {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable String bypass) {
+        public Builder bypass(@Nullable String bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setDefaultAction(String defaultAction) {
+        public Builder defaultAction(String defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IPRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setResourceAccessRules(@Nullable List<ResourceAccessRuleResponse> resourceAccessRules) {
+        public Builder resourceAccessRules(@Nullable List<ResourceAccessRuleResponse> resourceAccessRules) {
             this.resourceAccessRules = resourceAccessRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

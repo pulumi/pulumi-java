@@ -22,10 +22,10 @@ public final class DeliveryRuleRequestUriConditionResponse {
      */
     private final RequestUriMatchConditionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleRequestUriConditionResponse(
-        String name,
-        RequestUriMatchConditionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") RequestUriMatchConditionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class DeliveryRuleRequestUriConditionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(RequestUriMatchConditionParametersResponse parameters) {
+        public Builder parameters(RequestUriMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

@@ -15,8 +15,8 @@ public final class ChartOptionsResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private ChartOptionsResponse(String mode) {
+    @OutputCustomType.Constructor
+    private ChartOptionsResponse(@OutputCustomType.Parameter("mode") String mode) {
         this.mode = mode;
     }
 
@@ -48,7 +48,7 @@ public final class ChartOptionsResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

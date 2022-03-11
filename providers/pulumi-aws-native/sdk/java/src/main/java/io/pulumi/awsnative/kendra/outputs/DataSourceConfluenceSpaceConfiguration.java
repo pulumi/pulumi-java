@@ -20,13 +20,13 @@ public final class DataSourceConfluenceSpaceConfiguration {
     private final @Nullable List<String> includeSpaces;
     private final @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings;
 
-    @OutputCustomType.Constructor({"crawlArchivedSpaces","crawlPersonalSpaces","excludeSpaces","includeSpaces","spaceFieldMappings"})
+    @OutputCustomType.Constructor
     private DataSourceConfluenceSpaceConfiguration(
-        @Nullable Boolean crawlArchivedSpaces,
-        @Nullable Boolean crawlPersonalSpaces,
-        @Nullable List<String> excludeSpaces,
-        @Nullable List<String> includeSpaces,
-        @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
+        @OutputCustomType.Parameter("crawlArchivedSpaces") @Nullable Boolean crawlArchivedSpaces,
+        @OutputCustomType.Parameter("crawlPersonalSpaces") @Nullable Boolean crawlPersonalSpaces,
+        @OutputCustomType.Parameter("excludeSpaces") @Nullable List<String> excludeSpaces,
+        @OutputCustomType.Parameter("includeSpaces") @Nullable List<String> includeSpaces,
+        @OutputCustomType.Parameter("spaceFieldMappings") @Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
         this.crawlArchivedSpaces = crawlArchivedSpaces;
         this.crawlPersonalSpaces = crawlPersonalSpaces;
         this.excludeSpaces = excludeSpaces;
@@ -78,27 +78,27 @@ public final class DataSourceConfluenceSpaceConfiguration {
     	      this.spaceFieldMappings = defaults.spaceFieldMappings;
         }
 
-        public Builder setCrawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
+        public Builder crawlArchivedSpaces(@Nullable Boolean crawlArchivedSpaces) {
             this.crawlArchivedSpaces = crawlArchivedSpaces;
             return this;
         }
 
-        public Builder setCrawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
+        public Builder crawlPersonalSpaces(@Nullable Boolean crawlPersonalSpaces) {
             this.crawlPersonalSpaces = crawlPersonalSpaces;
             return this;
         }
 
-        public Builder setExcludeSpaces(@Nullable List<String> excludeSpaces) {
+        public Builder excludeSpaces(@Nullable List<String> excludeSpaces) {
             this.excludeSpaces = excludeSpaces;
             return this;
         }
 
-        public Builder setIncludeSpaces(@Nullable List<String> includeSpaces) {
+        public Builder includeSpaces(@Nullable List<String> includeSpaces) {
             this.includeSpaces = includeSpaces;
             return this;
         }
 
-        public Builder setSpaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
+        public Builder spaceFieldMappings(@Nullable List<DataSourceConfluenceSpaceToIndexFieldMapping> spaceFieldMappings) {
             this.spaceFieldMappings = spaceFieldMappings;
             return this;
         }

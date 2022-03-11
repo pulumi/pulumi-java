@@ -207,102 +207,102 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Input<Integer> backendPort) {
+        public Builder backendPort(Input<Integer> backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Input.of(Objects.requireNonNull(backendPort));
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Boolean enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = Input.ofNullable(enableFloatingIP);
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Boolean enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Input.ofNullable(enableTcpReset);
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder setFrontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Input<Integer> frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
 
-        public Builder setFrontendPortRangeEnd(Integer frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Input.of(Objects.requireNonNull(frontendPortRangeEnd));
             return this;
         }
 
-        public Builder setFrontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Input<Integer> frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
 
-        public Builder setFrontendPortRangeStart(Integer frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Input.of(Objects.requireNonNull(frontendPortRangeStart));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,TransportProtocol>> protocol) {
+        public Builder protocol(Input<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,TransportProtocol> protocol) {
+        public Builder protocol(Either<String,TransportProtocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

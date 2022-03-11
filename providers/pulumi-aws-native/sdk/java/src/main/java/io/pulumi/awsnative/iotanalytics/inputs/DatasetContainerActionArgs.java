@@ -89,42 +89,42 @@ public final class DatasetContainerActionArgs extends io.pulumi.resources.Resour
     	      this.variables = defaults.variables;
         }
 
-        public Builder setExecutionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Input<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder setImage(Input<String> image) {
+        public Builder image(Input<String> image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Input.of(Objects.requireNonNull(image));
             return this;
         }
 
-        public Builder setResourceConfiguration(Input<DatasetResourceConfigurationArgs> resourceConfiguration) {
+        public Builder resourceConfiguration(Input<DatasetResourceConfigurationArgs> resourceConfiguration) {
             this.resourceConfiguration = Objects.requireNonNull(resourceConfiguration);
             return this;
         }
 
-        public Builder setResourceConfiguration(DatasetResourceConfigurationArgs resourceConfiguration) {
+        public Builder resourceConfiguration(DatasetResourceConfigurationArgs resourceConfiguration) {
             this.resourceConfiguration = Input.of(Objects.requireNonNull(resourceConfiguration));
             return this;
         }
 
-        public Builder setVariables(@Nullable Input<List<DatasetVariableArgs>> variables) {
+        public Builder variables(@Nullable Input<List<DatasetVariableArgs>> variables) {
             this.variables = variables;
             return this;
         }
 
-        public Builder setVariables(@Nullable List<DatasetVariableArgs> variables) {
+        public Builder variables(@Nullable List<DatasetVariableArgs> variables) {
             this.variables = Input.ofNullable(variables);
             return this;
         }

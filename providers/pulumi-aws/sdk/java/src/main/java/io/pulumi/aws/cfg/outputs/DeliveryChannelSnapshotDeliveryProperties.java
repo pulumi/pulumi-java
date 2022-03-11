@@ -17,8 +17,8 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
      */
     private final @Nullable String deliveryFrequency;
 
-    @OutputCustomType.Constructor({"deliveryFrequency"})
-    private DeliveryChannelSnapshotDeliveryProperties(@Nullable String deliveryFrequency) {
+    @OutputCustomType.Constructor
+    private DeliveryChannelSnapshotDeliveryProperties(@OutputCustomType.Parameter("deliveryFrequency") @Nullable String deliveryFrequency) {
         this.deliveryFrequency = deliveryFrequency;
     }
 
@@ -50,7 +50,7 @@ public final class DeliveryChannelSnapshotDeliveryProperties {
     	      this.deliveryFrequency = defaults.deliveryFrequency;
         }
 
-        public Builder setDeliveryFrequency(@Nullable String deliveryFrequency) {
+        public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
             this.deliveryFrequency = deliveryFrequency;
             return this;
         }

@@ -56,16 +56,16 @@ public final class DeploymentSpec {
      */
     private final PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","paused","progressDeadlineSeconds","replicas","revisionHistoryLimit","selector","strategy","template"})
+    @OutputCustomType.Constructor
     private DeploymentSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Boolean paused,
-        @Nullable Integer progressDeadlineSeconds,
-        @Nullable Integer replicas,
-        @Nullable Integer revisionHistoryLimit,
-        LabelSelector selector,
-        @Nullable DeploymentStrategy strategy,
-        PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("paused") @Nullable Boolean paused,
+        @OutputCustomType.Parameter("progressDeadlineSeconds") @Nullable Integer progressDeadlineSeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("strategy") @Nullable DeploymentStrategy strategy,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.paused = paused;
         this.progressDeadlineSeconds = progressDeadlineSeconds;
@@ -167,42 +167,42 @@ public final class DeploymentSpec {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setPaused(@Nullable Boolean paused) {
+        public Builder paused(@Nullable Boolean paused) {
             this.paused = paused;
             return this;
         }
 
-        public Builder setProgressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
+        public Builder progressDeadlineSeconds(@Nullable Integer progressDeadlineSeconds) {
             this.progressDeadlineSeconds = progressDeadlineSeconds;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setSelector(LabelSelector selector) {
+        public Builder selector(LabelSelector selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setStrategy(@Nullable DeploymentStrategy strategy) {
+        public Builder strategy(@Nullable DeploymentStrategy strategy) {
             this.strategy = strategy;
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }

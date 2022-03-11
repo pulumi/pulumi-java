@@ -16,11 +16,11 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
     private final @Nullable String updateDataRole;
     private final @Nullable String updateDataSource;
 
-    @OutputCustomType.Constructor({"loRaWAN","updateDataRole","updateDataSource"})
+    @OutputCustomType.Constructor
     private TaskDefinitionUpdateWirelessGatewayTaskCreate(
-        @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
-        @Nullable String updateDataRole,
-        @Nullable String updateDataSource) {
+        @OutputCustomType.Parameter("loRaWAN") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN,
+        @OutputCustomType.Parameter("updateDataRole") @Nullable String updateDataRole,
+        @OutputCustomType.Parameter("updateDataSource") @Nullable String updateDataSource) {
         this.loRaWAN = loRaWAN;
         this.updateDataRole = updateDataRole;
         this.updateDataSource = updateDataSource;
@@ -60,17 +60,17 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate {
     	      this.updateDataSource = defaults.updateDataSource;
         }
 
-        public Builder setLoRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN) {
+        public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setUpdateDataRole(@Nullable String updateDataRole) {
+        public Builder updateDataRole(@Nullable String updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
 
-        public Builder setUpdateDataSource(@Nullable String updateDataSource) {
+        public Builder updateDataSource(@Nullable String updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
         }

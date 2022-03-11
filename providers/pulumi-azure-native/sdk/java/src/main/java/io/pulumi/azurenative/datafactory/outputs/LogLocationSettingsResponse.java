@@ -23,10 +23,10 @@ public final class LogLocationSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"linkedServiceName","path"})
+    @OutputCustomType.Constructor
     private LogLocationSettingsResponse(
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.linkedServiceName = linkedServiceName;
         this.path = path;
     }
@@ -68,12 +68,12 @@ public final class LogLocationSettingsResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }

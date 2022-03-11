@@ -39,13 +39,13 @@ public final class AverageLoadScalingTriggerResponse {
      */
     private final Double upperLoadThreshold;
 
-    @OutputCustomType.Constructor({"kind","lowerLoadThreshold","metric","scaleIntervalInSeconds","upperLoadThreshold"})
+    @OutputCustomType.Constructor
     private AverageLoadScalingTriggerResponse(
-        String kind,
-        Double lowerLoadThreshold,
-        AutoScalingResourceMetricResponse metric,
-        Integer scaleIntervalInSeconds,
-        Double upperLoadThreshold) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lowerLoadThreshold") Double lowerLoadThreshold,
+        @OutputCustomType.Parameter("metric") AutoScalingResourceMetricResponse metric,
+        @OutputCustomType.Parameter("scaleIntervalInSeconds") Integer scaleIntervalInSeconds,
+        @OutputCustomType.Parameter("upperLoadThreshold") Double upperLoadThreshold) {
         this.kind = kind;
         this.lowerLoadThreshold = lowerLoadThreshold;
         this.metric = metric;
@@ -118,27 +118,27 @@ public final class AverageLoadScalingTriggerResponse {
     	      this.upperLoadThreshold = defaults.upperLoadThreshold;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLowerLoadThreshold(Double lowerLoadThreshold) {
+        public Builder lowerLoadThreshold(Double lowerLoadThreshold) {
             this.lowerLoadThreshold = Objects.requireNonNull(lowerLoadThreshold);
             return this;
         }
 
-        public Builder setMetric(AutoScalingResourceMetricResponse metric) {
+        public Builder metric(AutoScalingResourceMetricResponse metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setScaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
+        public Builder scaleIntervalInSeconds(Integer scaleIntervalInSeconds) {
             this.scaleIntervalInSeconds = Objects.requireNonNull(scaleIntervalInSeconds);
             return this;
         }
 
-        public Builder setUpperLoadThreshold(Double upperLoadThreshold) {
+        public Builder upperLoadThreshold(Double upperLoadThreshold) {
             this.upperLoadThreshold = Objects.requireNonNull(upperLoadThreshold);
             return this;
         }

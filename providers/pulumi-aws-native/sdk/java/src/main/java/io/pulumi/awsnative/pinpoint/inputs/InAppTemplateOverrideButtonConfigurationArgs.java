@@ -63,22 +63,22 @@ public final class InAppTemplateOverrideButtonConfigurationArgs extends io.pulum
     	      this.link = defaults.link;
         }
 
-        public Builder setButtonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
+        public Builder buttonAction(@Nullable Input<InAppTemplateButtonAction> buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
-        public Builder setButtonAction(@Nullable InAppTemplateButtonAction buttonAction) {
+        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = Input.ofNullable(buttonAction);
             return this;
         }
 
-        public Builder setLink(@Nullable Input<String> link) {
+        public Builder link(@Nullable Input<String> link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = Input.ofNullable(link);
             return this;
         }

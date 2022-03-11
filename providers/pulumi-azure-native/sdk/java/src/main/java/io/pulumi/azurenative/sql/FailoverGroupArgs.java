@@ -171,82 +171,82 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatabases(@Nullable Input<List<String>> databases) {
+        public Builder databases(@Nullable Input<List<String>> databases) {
             this.databases = databases;
             return this;
         }
 
-        public Builder setDatabases(@Nullable List<String> databases) {
+        public Builder databases(@Nullable List<String> databases) {
             this.databases = Input.ofNullable(databases);
             return this;
         }
 
-        public Builder setFailoverGroupName(@Nullable Input<String> failoverGroupName) {
+        public Builder failoverGroupName(@Nullable Input<String> failoverGroupName) {
             this.failoverGroupName = failoverGroupName;
             return this;
         }
 
-        public Builder setFailoverGroupName(@Nullable String failoverGroupName) {
+        public Builder failoverGroupName(@Nullable String failoverGroupName) {
             this.failoverGroupName = Input.ofNullable(failoverGroupName);
             return this;
         }
 
-        public Builder setPartnerServers(Input<List<PartnerInfoArgs>> partnerServers) {
+        public Builder partnerServers(Input<List<PartnerInfoArgs>> partnerServers) {
             this.partnerServers = Objects.requireNonNull(partnerServers);
             return this;
         }
 
-        public Builder setPartnerServers(List<PartnerInfoArgs> partnerServers) {
+        public Builder partnerServers(List<PartnerInfoArgs> partnerServers) {
             this.partnerServers = Input.of(Objects.requireNonNull(partnerServers));
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable FailoverGroupReadOnlyEndpointArgs readOnlyEndpoint) {
             this.readOnlyEndpoint = Input.ofNullable(readOnlyEndpoint);
             return this;
         }
 
-        public Builder setReadWriteEndpoint(Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
+        public Builder readWriteEndpoint(Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
-        public Builder setReadWriteEndpoint(FailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
+        public Builder readWriteEndpoint(FailoverGroupReadWriteEndpointArgs readWriteEndpoint) {
             this.readWriteEndpoint = Input.of(Objects.requireNonNull(readWriteEndpoint));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

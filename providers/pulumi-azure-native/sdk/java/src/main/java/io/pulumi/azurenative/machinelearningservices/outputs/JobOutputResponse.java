@@ -20,10 +20,10 @@ public final class JobOutputResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"datastoreId","path"})
+    @OutputCustomType.Constructor
     private JobOutputResponse(
-        String datastoreId,
-        String path) {
+        @OutputCustomType.Parameter("datastoreId") String datastoreId,
+        @OutputCustomType.Parameter("path") String path) {
         this.datastoreId = datastoreId;
         this.path = path;
     }
@@ -65,12 +65,12 @@ public final class JobOutputResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setDatastoreId(String datastoreId) {
+        public Builder datastoreId(String datastoreId) {
             this.datastoreId = Objects.requireNonNull(datastoreId);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

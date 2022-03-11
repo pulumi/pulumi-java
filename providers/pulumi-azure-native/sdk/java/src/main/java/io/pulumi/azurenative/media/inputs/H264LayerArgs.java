@@ -288,152 +288,152 @@ public final class H264LayerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.width = defaults.width;
         }
 
-        public Builder setAdaptiveBFrame(@Nullable Input<Boolean> adaptiveBFrame) {
+        public Builder adaptiveBFrame(@Nullable Input<Boolean> adaptiveBFrame) {
             this.adaptiveBFrame = adaptiveBFrame;
             return this;
         }
 
-        public Builder setAdaptiveBFrame(@Nullable Boolean adaptiveBFrame) {
+        public Builder adaptiveBFrame(@Nullable Boolean adaptiveBFrame) {
             this.adaptiveBFrame = Input.ofNullable(adaptiveBFrame);
             return this;
         }
 
-        public Builder setBFrames(@Nullable Input<Integer> bFrames) {
+        public Builder bFrames(@Nullable Input<Integer> bFrames) {
             this.bFrames = bFrames;
             return this;
         }
 
-        public Builder setBFrames(@Nullable Integer bFrames) {
+        public Builder bFrames(@Nullable Integer bFrames) {
             this.bFrames = Input.ofNullable(bFrames);
             return this;
         }
 
-        public Builder setBitrate(Input<Integer> bitrate) {
+        public Builder bitrate(Input<Integer> bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }
 
-        public Builder setBitrate(Integer bitrate) {
+        public Builder bitrate(Integer bitrate) {
             this.bitrate = Input.of(Objects.requireNonNull(bitrate));
             return this;
         }
 
-        public Builder setBufferWindow(@Nullable Input<String> bufferWindow) {
+        public Builder bufferWindow(@Nullable Input<String> bufferWindow) {
             this.bufferWindow = bufferWindow;
             return this;
         }
 
-        public Builder setBufferWindow(@Nullable String bufferWindow) {
+        public Builder bufferWindow(@Nullable String bufferWindow) {
             this.bufferWindow = Input.ofNullable(bufferWindow);
             return this;
         }
 
-        public Builder setEntropyMode(@Nullable Input<Either<String,EntropyMode>> entropyMode) {
+        public Builder entropyMode(@Nullable Input<Either<String,EntropyMode>> entropyMode) {
             this.entropyMode = entropyMode;
             return this;
         }
 
-        public Builder setEntropyMode(@Nullable Either<String,EntropyMode> entropyMode) {
+        public Builder entropyMode(@Nullable Either<String,EntropyMode> entropyMode) {
             this.entropyMode = Input.ofNullable(entropyMode);
             return this;
         }
 
-        public Builder setFrameRate(@Nullable Input<String> frameRate) {
+        public Builder frameRate(@Nullable Input<String> frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
-        public Builder setFrameRate(@Nullable String frameRate) {
+        public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = Input.ofNullable(frameRate);
             return this;
         }
 
-        public Builder setHeight(@Nullable Input<String> height) {
+        public Builder height(@Nullable Input<String> height) {
             this.height = height;
             return this;
         }
 
-        public Builder setHeight(@Nullable String height) {
+        public Builder height(@Nullable String height) {
             this.height = Input.ofNullable(height);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setLevel(@Nullable Input<String> level) {
+        public Builder level(@Nullable Input<String> level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = Input.ofNullable(level);
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Input<Integer> maxBitrate) {
+        public Builder maxBitrate(@Nullable Input<Integer> maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Integer maxBitrate) {
+        public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = Input.ofNullable(maxBitrate);
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
 
-        public Builder setProfile(@Nullable Input<Either<String,H264VideoProfile>> profile) {
+        public Builder profile(@Nullable Input<Either<String,H264VideoProfile>> profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setProfile(@Nullable Either<String,H264VideoProfile> profile) {
+        public Builder profile(@Nullable Either<String,H264VideoProfile> profile) {
             this.profile = Input.ofNullable(profile);
             return this;
         }
 
-        public Builder setReferenceFrames(@Nullable Input<Integer> referenceFrames) {
+        public Builder referenceFrames(@Nullable Input<Integer> referenceFrames) {
             this.referenceFrames = referenceFrames;
             return this;
         }
 
-        public Builder setReferenceFrames(@Nullable Integer referenceFrames) {
+        public Builder referenceFrames(@Nullable Integer referenceFrames) {
             this.referenceFrames = Input.ofNullable(referenceFrames);
             return this;
         }
 
-        public Builder setSlices(@Nullable Input<Integer> slices) {
+        public Builder slices(@Nullable Input<Integer> slices) {
             this.slices = slices;
             return this;
         }
 
-        public Builder setSlices(@Nullable Integer slices) {
+        public Builder slices(@Nullable Integer slices) {
             this.slices = Input.ofNullable(slices);
             return this;
         }
 
-        public Builder setWidth(@Nullable Input<String> width) {
+        public Builder width(@Nullable Input<String> width) {
             this.width = width;
             return this;
         }
 
-        public Builder setWidth(@Nullable String width) {
+        public Builder width(@Nullable String width) {
             this.width = Input.ofNullable(width);
             return this;
         }

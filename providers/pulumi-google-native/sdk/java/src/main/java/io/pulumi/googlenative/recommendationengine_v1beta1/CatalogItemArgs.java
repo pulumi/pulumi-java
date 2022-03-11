@@ -206,112 +206,112 @@ public final class CatalogItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setCatalogId(Input<String> catalogId) {
+        public Builder catalogId(Input<String> catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Input.of(Objects.requireNonNull(catalogId));
             return this;
         }
 
-        public Builder setCategoryHierarchies(Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
+        public Builder categoryHierarchies(Input<List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs>> categoryHierarchies) {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
 
-        public Builder setCategoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
+        public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyArgs> categoryHierarchies) {
             this.categoryHierarchies = Input.of(Objects.requireNonNull(categoryHierarchies));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setItemAttributes(@Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
+        public Builder itemAttributes(@Nullable Input<GoogleCloudRecommendationengineV1beta1FeatureMapArgs> itemAttributes) {
             this.itemAttributes = itemAttributes;
             return this;
         }
 
-        public Builder setItemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
+        public Builder itemAttributes(@Nullable GoogleCloudRecommendationengineV1beta1FeatureMapArgs itemAttributes) {
             this.itemAttributes = Input.ofNullable(itemAttributes);
             return this;
         }
 
-        public Builder setItemGroupId(@Nullable Input<String> itemGroupId) {
+        public Builder itemGroupId(@Nullable Input<String> itemGroupId) {
             this.itemGroupId = itemGroupId;
             return this;
         }
 
-        public Builder setItemGroupId(@Nullable String itemGroupId) {
+        public Builder itemGroupId(@Nullable String itemGroupId) {
             this.itemGroupId = Input.ofNullable(itemGroupId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProductMetadata(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
+        public Builder productMetadata(@Nullable Input<GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs> productMetadata) {
             this.productMetadata = productMetadata;
             return this;
         }
 
-        public Builder setProductMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
+        public Builder productMetadata(@Nullable GoogleCloudRecommendationengineV1beta1ProductCatalogItemArgs productMetadata) {
             this.productMetadata = Input.ofNullable(productMetadata);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

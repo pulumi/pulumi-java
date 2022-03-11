@@ -17,13 +17,13 @@ public final class PackageStorageLocation {
     private final @Nullable String manifestPrefixLocation;
     private final @Nullable String repoPrefixLocation;
 
-    @OutputCustomType.Constructor({"binaryPrefixLocation","bucket","generatedPrefixLocation","manifestPrefixLocation","repoPrefixLocation"})
+    @OutputCustomType.Constructor
     private PackageStorageLocation(
-        @Nullable String binaryPrefixLocation,
-        @Nullable String bucket,
-        @Nullable String generatedPrefixLocation,
-        @Nullable String manifestPrefixLocation,
-        @Nullable String repoPrefixLocation) {
+        @OutputCustomType.Parameter("binaryPrefixLocation") @Nullable String binaryPrefixLocation,
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("generatedPrefixLocation") @Nullable String generatedPrefixLocation,
+        @OutputCustomType.Parameter("manifestPrefixLocation") @Nullable String manifestPrefixLocation,
+        @OutputCustomType.Parameter("repoPrefixLocation") @Nullable String repoPrefixLocation) {
         this.binaryPrefixLocation = binaryPrefixLocation;
         this.bucket = bucket;
         this.generatedPrefixLocation = generatedPrefixLocation;
@@ -75,27 +75,27 @@ public final class PackageStorageLocation {
     	      this.repoPrefixLocation = defaults.repoPrefixLocation;
         }
 
-        public Builder setBinaryPrefixLocation(@Nullable String binaryPrefixLocation) {
+        public Builder binaryPrefixLocation(@Nullable String binaryPrefixLocation) {
             this.binaryPrefixLocation = binaryPrefixLocation;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setGeneratedPrefixLocation(@Nullable String generatedPrefixLocation) {
+        public Builder generatedPrefixLocation(@Nullable String generatedPrefixLocation) {
             this.generatedPrefixLocation = generatedPrefixLocation;
             return this;
         }
 
-        public Builder setManifestPrefixLocation(@Nullable String manifestPrefixLocation) {
+        public Builder manifestPrefixLocation(@Nullable String manifestPrefixLocation) {
             this.manifestPrefixLocation = manifestPrefixLocation;
             return this;
         }
 
-        public Builder setRepoPrefixLocation(@Nullable String repoPrefixLocation) {
+        public Builder repoPrefixLocation(@Nullable String repoPrefixLocation) {
             this.repoPrefixLocation = repoPrefixLocation;
             return this;
         }

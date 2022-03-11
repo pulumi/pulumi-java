@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionFirehose {
      */
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor({"deliveryStreamName","roleArn","separator"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionFirehose(
-        String deliveryStreamName,
-        String roleArn,
-        @Nullable String separator) {
+        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("separator") @Nullable String separator) {
         this.deliveryStreamName = deliveryStreamName;
         this.roleArn = roleArn;
         this.separator = separator;
@@ -83,17 +83,17 @@ public final class TopicRuleErrorActionFirehose {
     	      this.separator = defaults.separator;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
         }

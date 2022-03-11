@@ -74,22 +74,22 @@ public final class RetentionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.period = defaults.period;
         }
 
-        public Builder setPerPartitionBytes(@Nullable Input<String> perPartitionBytes) {
+        public Builder perPartitionBytes(@Nullable Input<String> perPartitionBytes) {
             this.perPartitionBytes = perPartitionBytes;
             return this;
         }
 
-        public Builder setPerPartitionBytes(@Nullable String perPartitionBytes) {
+        public Builder perPartitionBytes(@Nullable String perPartitionBytes) {
             this.perPartitionBytes = Input.ofNullable(perPartitionBytes);
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<String> period) {
+        public Builder period(@Nullable Input<String> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = Input.ofNullable(period);
             return this;
         }

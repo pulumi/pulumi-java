@@ -108,42 +108,42 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
     	      this.waitingResponse = defaults.waitingResponse;
         }
 
-        public Builder setContinueResponse(Input<BotResponseSpecificationArgs> continueResponse) {
+        public Builder continueResponse(Input<BotResponseSpecificationArgs> continueResponse) {
             this.continueResponse = Objects.requireNonNull(continueResponse);
             return this;
         }
 
-        public Builder setContinueResponse(BotResponseSpecificationArgs continueResponse) {
+        public Builder continueResponse(BotResponseSpecificationArgs continueResponse) {
             this.continueResponse = Input.of(Objects.requireNonNull(continueResponse));
             return this;
         }
 
-        public Builder setIsActive(@Nullable Input<Boolean> isActive) {
+        public Builder isActive(@Nullable Input<Boolean> isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = Input.ofNullable(isActive);
             return this;
         }
 
-        public Builder setStillWaitingResponse(@Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
+        public Builder stillWaitingResponse(@Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse) {
             this.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
 
-        public Builder setStillWaitingResponse(@Nullable BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
+        public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecificationArgs stillWaitingResponse) {
             this.stillWaitingResponse = Input.ofNullable(stillWaitingResponse);
             return this;
         }
 
-        public Builder setWaitingResponse(Input<BotResponseSpecificationArgs> waitingResponse) {
+        public Builder waitingResponse(Input<BotResponseSpecificationArgs> waitingResponse) {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
 
-        public Builder setWaitingResponse(BotResponseSpecificationArgs waitingResponse) {
+        public Builder waitingResponse(BotResponseSpecificationArgs waitingResponse) {
             this.waitingResponse = Input.of(Objects.requireNonNull(waitingResponse));
             return this;
         }

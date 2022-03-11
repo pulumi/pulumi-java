@@ -20,10 +20,10 @@ public final class IscsiLunResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"managedDiskAzureResourceId","name"})
+    @OutputCustomType.Constructor
     private IscsiLunResponse(
-        String managedDiskAzureResourceId,
-        String name) {
+        @OutputCustomType.Parameter("managedDiskAzureResourceId") String managedDiskAzureResourceId,
+        @OutputCustomType.Parameter("name") String name) {
         this.managedDiskAzureResourceId = managedDiskAzureResourceId;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class IscsiLunResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setManagedDiskAzureResourceId(String managedDiskAzureResourceId) {
+        public Builder managedDiskAzureResourceId(String managedDiskAzureResourceId) {
             this.managedDiskAzureResourceId = Objects.requireNonNull(managedDiskAzureResourceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

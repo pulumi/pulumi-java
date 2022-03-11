@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ServiceModeReplicated {
     private final @Nullable Integer replicas;
 
-    @OutputCustomType.Constructor({"replicas"})
-    private ServiceModeReplicated(@Nullable Integer replicas) {
+    @OutputCustomType.Constructor
+    private ServiceModeReplicated(@OutputCustomType.Parameter("replicas") @Nullable Integer replicas) {
         this.replicas = replicas;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceModeReplicated {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }

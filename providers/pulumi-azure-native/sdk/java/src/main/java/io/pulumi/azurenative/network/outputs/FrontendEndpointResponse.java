@@ -70,19 +70,19 @@ public final class FrontendEndpointResponse {
      */
     private final @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
-    @OutputCustomType.Constructor({"customHttpsConfiguration","customHttpsProvisioningState","customHttpsProvisioningSubstate","hostName","id","name","resourceState","sessionAffinityEnabledState","sessionAffinityTtlSeconds","type","webApplicationFirewallPolicyLink"})
+    @OutputCustomType.Constructor
     private FrontendEndpointResponse(
-        CustomHttpsConfigurationResponse customHttpsConfiguration,
-        String customHttpsProvisioningState,
-        String customHttpsProvisioningSubstate,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        String resourceState,
-        @Nullable String sessionAffinityEnabledState,
-        @Nullable Integer sessionAffinityTtlSeconds,
-        String type,
-        @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        @OutputCustomType.Parameter("customHttpsConfiguration") CustomHttpsConfigurationResponse customHttpsConfiguration,
+        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("sessionAffinityEnabledState") @Nullable String sessionAffinityEnabledState,
+        @OutputCustomType.Parameter("sessionAffinityTtlSeconds") @Nullable Integer sessionAffinityTtlSeconds,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("webApplicationFirewallPolicyLink") @Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
         this.customHttpsConfiguration = customHttpsConfiguration;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;
@@ -214,57 +214,57 @@ public final class FrontendEndpointResponse {
     	      this.webApplicationFirewallPolicyLink = defaults.webApplicationFirewallPolicyLink;
         }
 
-        public Builder setCustomHttpsConfiguration(CustomHttpsConfigurationResponse customHttpsConfiguration) {
+        public Builder customHttpsConfiguration(CustomHttpsConfigurationResponse customHttpsConfiguration) {
             this.customHttpsConfiguration = Objects.requireNonNull(customHttpsConfiguration);
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningState(String customHttpsProvisioningState) {
+        public Builder customHttpsProvisioningState(String customHttpsProvisioningState) {
             this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
+        public Builder customHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
             this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
+        public Builder sessionAffinityEnabledState(@Nullable String sessionAffinityEnabledState) {
             this.sessionAffinityEnabledState = sessionAffinityEnabledState;
             return this;
         }
 
-        public Builder setSessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
+        public Builder sessionAffinityTtlSeconds(@Nullable Integer sessionAffinityTtlSeconds) {
             this.sessionAffinityTtlSeconds = sessionAffinityTtlSeconds;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWebApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
+        public Builder webApplicationFirewallPolicyLink(@Nullable FrontendEndpointUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink) {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }

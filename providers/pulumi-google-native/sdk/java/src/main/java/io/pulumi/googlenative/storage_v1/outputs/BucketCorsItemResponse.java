@@ -32,12 +32,12 @@ public final class BucketCorsItemResponse {
      */
     private final List<String> responseHeader;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","method","origin","responseHeader"})
+    @OutputCustomType.Constructor
     private BucketCorsItemResponse(
-        Integer maxAgeSeconds,
-        List<String> method,
-        List<String> origin,
-        List<String> responseHeader) {
+        @OutputCustomType.Parameter("maxAgeSeconds") Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("method") List<String> method,
+        @OutputCustomType.Parameter("origin") List<String> origin,
+        @OutputCustomType.Parameter("responseHeader") List<String> responseHeader) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.method = method;
         this.origin = origin;
@@ -99,22 +99,22 @@ public final class BucketCorsItemResponse {
     	      this.responseHeader = defaults.responseHeader;
         }
 
-        public Builder setMaxAgeSeconds(Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(Integer maxAgeSeconds) {
             this.maxAgeSeconds = Objects.requireNonNull(maxAgeSeconds);
             return this;
         }
 
-        public Builder setMethod(List<String> method) {
+        public Builder method(List<String> method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setOrigin(List<String> origin) {
+        public Builder origin(List<String> origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setResponseHeader(List<String> responseHeader) {
+        public Builder responseHeader(List<String> responseHeader) {
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }

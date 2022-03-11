@@ -21,10 +21,10 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"eventType","functionArn"})
+    @OutputCustomType.Constructor
     private DistributionOrderedCacheBehaviorFunctionAssociation(
-        String eventType,
-        String functionArn) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("functionArn") String functionArn) {
         this.eventType = eventType;
         this.functionArn = functionArn;
     }
@@ -67,12 +67,12 @@ public final class DistributionOrderedCacheBehaviorFunctionAssociation {
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }

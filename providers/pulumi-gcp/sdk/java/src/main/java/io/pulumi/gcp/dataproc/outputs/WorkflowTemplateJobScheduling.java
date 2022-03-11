@@ -22,10 +22,10 @@ public final class WorkflowTemplateJobScheduling {
      */
     private final @Nullable Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor({"maxFailuresPerHour","maxFailuresTotal"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobScheduling(
-        @Nullable Integer maxFailuresPerHour,
-        @Nullable Integer maxFailuresTotal) {
+        @OutputCustomType.Parameter("maxFailuresPerHour") @Nullable Integer maxFailuresPerHour,
+        @OutputCustomType.Parameter("maxFailuresTotal") @Nullable Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }
@@ -67,12 +67,12 @@ public final class WorkflowTemplateJobScheduling {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder setMaxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(@Nullable Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = maxFailuresPerHour;
             return this;
         }
 
-        public Builder setMaxFailuresTotal(@Nullable Integer maxFailuresTotal) {
+        public Builder maxFailuresTotal(@Nullable Integer maxFailuresTotal) {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }

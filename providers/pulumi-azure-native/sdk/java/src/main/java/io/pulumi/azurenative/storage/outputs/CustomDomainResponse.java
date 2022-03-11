@@ -23,10 +23,10 @@ public final class CustomDomainResponse {
      */
     private final @Nullable Boolean useSubDomainName;
 
-    @OutputCustomType.Constructor({"name","useSubDomainName"})
+    @OutputCustomType.Constructor
     private CustomDomainResponse(
-        String name,
-        @Nullable Boolean useSubDomainName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("useSubDomainName") @Nullable Boolean useSubDomainName) {
         this.name = name;
         this.useSubDomainName = useSubDomainName;
     }
@@ -68,12 +68,12 @@ public final class CustomDomainResponse {
     	      this.useSubDomainName = defaults.useSubDomainName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUseSubDomainName(@Nullable Boolean useSubDomainName) {
+        public Builder useSubDomainName(@Nullable Boolean useSubDomainName) {
             this.useSubDomainName = useSubDomainName;
             return this;
         }

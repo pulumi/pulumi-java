@@ -68,12 +68,12 @@ public final class GetZoneArgs extends io.pulumi.resources.InvokeArgs {
     	      this.zoneName = defaults.zoneName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setZoneName(String zoneName) {
+        public Builder zoneName(String zoneName) {
             this.zoneName = Objects.requireNonNull(zoneName);
             return this;
         }

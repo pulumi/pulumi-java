@@ -21,10 +21,10 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"keyId","odataType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse(
-        String keyId,
-        String odataType) {
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.keyId = keyId;
         this.odataType = odataType;
     }
@@ -67,12 +67,12 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifie
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

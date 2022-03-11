@@ -88,32 +88,32 @@ public final class ServiceImageConfigurationArgs extends io.pulumi.resources.Res
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder setStartCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Input<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Input.ofNullable(startCommand);
             return this;
         }

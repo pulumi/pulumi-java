@@ -15,10 +15,10 @@ public final class JobSample {
     private final @Nullable JobSampleMode mode;
     private final @Nullable Integer size;
 
-    @OutputCustomType.Constructor({"mode","size"})
+    @OutputCustomType.Constructor
     private JobSample(
-        @Nullable JobSampleMode mode,
-        @Nullable Integer size) {
+        @OutputCustomType.Parameter("mode") @Nullable JobSampleMode mode,
+        @OutputCustomType.Parameter("size") @Nullable Integer size) {
         this.mode = mode;
         this.size = size;
     }
@@ -52,12 +52,12 @@ public final class JobSample {
     	      this.size = defaults.size;
         }
 
-        public Builder setMode(@Nullable JobSampleMode mode) {
+        public Builder mode(@Nullable JobSampleMode mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSize(@Nullable Integer size) {
+        public Builder size(@Nullable Integer size) {
             this.size = size;
             return this;
         }

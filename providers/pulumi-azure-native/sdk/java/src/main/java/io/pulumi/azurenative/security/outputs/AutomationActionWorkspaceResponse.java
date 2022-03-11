@@ -23,10 +23,10 @@ public final class AutomationActionWorkspaceResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"actionType","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private AutomationActionWorkspaceResponse(
-        String actionType,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.actionType = actionType;
         this.workspaceResourceId = workspaceResourceId;
     }
@@ -69,12 +69,12 @@ public final class AutomationActionWorkspaceResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

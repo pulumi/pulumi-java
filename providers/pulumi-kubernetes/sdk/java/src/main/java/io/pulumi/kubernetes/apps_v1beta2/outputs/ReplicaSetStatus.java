@@ -44,14 +44,14 @@ public final class ReplicaSetStatus {
      */
     private final Integer replicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","conditions","fullyLabeledReplicas","observedGeneration","readyReplicas","replicas"})
+    @OutputCustomType.Constructor
     private ReplicaSetStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable List<ReplicaSetCondition> conditions,
-        @Nullable Integer fullyLabeledReplicas,
-        @Nullable Integer observedGeneration,
-        @Nullable Integer readyReplicas,
-        Integer replicas) {
+        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @OutputCustomType.Parameter("conditions") @Nullable List<ReplicaSetCondition> conditions,
+        @OutputCustomType.Parameter("fullyLabeledReplicas") @Nullable Integer fullyLabeledReplicas,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("readyReplicas") @Nullable Integer readyReplicas,
+        @OutputCustomType.Parameter("replicas") Integer replicas) {
         this.availableReplicas = availableReplicas;
         this.conditions = conditions;
         this.fullyLabeledReplicas = fullyLabeledReplicas;
@@ -133,32 +133,32 @@ public final class ReplicaSetStatus {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setAvailableReplicas(@Nullable Integer availableReplicas) {
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ReplicaSetCondition> conditions) {
+        public Builder conditions(@Nullable List<ReplicaSetCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setFullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
+        public Builder fullyLabeledReplicas(@Nullable Integer fullyLabeledReplicas) {
             this.fullyLabeledReplicas = fullyLabeledReplicas;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setReadyReplicas(@Nullable Integer readyReplicas) {
+        public Builder readyReplicas(@Nullable Integer readyReplicas) {
             this.readyReplicas = readyReplicas;
             return this;
         }
 
-        public Builder setReplicas(Integer replicas) {
+        public Builder replicas(Integer replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }

@@ -72,12 +72,12 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
     	      this.rangeName = defaults.rangeName;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setRangeName(String rangeName) {
+        public Builder rangeName(String rangeName) {
             this.rangeName = Objects.requireNonNull(rangeName);
             return this;
         }

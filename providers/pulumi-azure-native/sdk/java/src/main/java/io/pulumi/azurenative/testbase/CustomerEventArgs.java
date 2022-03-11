@@ -120,52 +120,52 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.testBaseAccountName = defaults.testBaseAccountName;
         }
 
-        public Builder setCustomerEventName(@Nullable Input<String> customerEventName) {
+        public Builder customerEventName(@Nullable Input<String> customerEventName) {
             this.customerEventName = customerEventName;
             return this;
         }
 
-        public Builder setCustomerEventName(@Nullable String customerEventName) {
+        public Builder customerEventName(@Nullable String customerEventName) {
             this.customerEventName = Input.ofNullable(customerEventName);
             return this;
         }
 
-        public Builder setEventName(Input<String> eventName) {
+        public Builder eventName(Input<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Input.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder setReceivers(Input<List<NotificationEventReceiverArgs>> receivers) {
+        public Builder receivers(Input<List<NotificationEventReceiverArgs>> receivers) {
             this.receivers = Objects.requireNonNull(receivers);
             return this;
         }
 
-        public Builder setReceivers(List<NotificationEventReceiverArgs> receivers) {
+        public Builder receivers(List<NotificationEventReceiverArgs> receivers) {
             this.receivers = Input.of(Objects.requireNonNull(receivers));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTestBaseAccountName(Input<String> testBaseAccountName) {
+        public Builder testBaseAccountName(Input<String> testBaseAccountName) {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
 
-        public Builder setTestBaseAccountName(String testBaseAccountName) {
+        public Builder testBaseAccountName(String testBaseAccountName) {
             this.testBaseAccountName = Input.of(Objects.requireNonNull(testBaseAccountName));
             return this;
         }

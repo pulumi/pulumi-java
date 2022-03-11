@@ -26,11 +26,11 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"odataType","password","username"})
+    @OutputCustomType.Constructor
     private MediaGraphUsernamePasswordCredentialsResponse(
-        String odataType,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.odataType = odataType;
         this.password = password;
         this.username = username;
@@ -83,17 +83,17 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

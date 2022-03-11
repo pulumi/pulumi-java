@@ -17,12 +17,12 @@ public final class InAppTemplateButtonConfig {
     private final @Nullable InAppTemplateOverrideButtonConfiguration iOS;
     private final @Nullable InAppTemplateOverrideButtonConfiguration web;
 
-    @OutputCustomType.Constructor({"android","defaultConfig","iOS","web"})
+    @OutputCustomType.Constructor
     private InAppTemplateButtonConfig(
-        @Nullable InAppTemplateOverrideButtonConfiguration android,
-        @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
-        @Nullable InAppTemplateOverrideButtonConfiguration iOS,
-        @Nullable InAppTemplateOverrideButtonConfiguration web) {
+        @OutputCustomType.Parameter("android") @Nullable InAppTemplateOverrideButtonConfiguration android,
+        @OutputCustomType.Parameter("defaultConfig") @Nullable InAppTemplateDefaultButtonConfiguration defaultConfig,
+        @OutputCustomType.Parameter("iOS") @Nullable InAppTemplateOverrideButtonConfiguration iOS,
+        @OutputCustomType.Parameter("web") @Nullable InAppTemplateOverrideButtonConfiguration web) {
         this.android = android;
         this.defaultConfig = defaultConfig;
         this.iOS = iOS;
@@ -68,22 +68,22 @@ public final class InAppTemplateButtonConfig {
     	      this.web = defaults.web;
         }
 
-        public Builder setAndroid(@Nullable InAppTemplateOverrideButtonConfiguration android) {
+        public Builder android(@Nullable InAppTemplateOverrideButtonConfiguration android) {
             this.android = android;
             return this;
         }
 
-        public Builder setDefaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
+        public Builder defaultConfig(@Nullable InAppTemplateDefaultButtonConfiguration defaultConfig) {
             this.defaultConfig = defaultConfig;
             return this;
         }
 
-        public Builder setIOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
+        public Builder iOS(@Nullable InAppTemplateOverrideButtonConfiguration iOS) {
             this.iOS = iOS;
             return this;
         }
 
-        public Builder setWeb(@Nullable InAppTemplateOverrideButtonConfiguration web) {
+        public Builder web(@Nullable InAppTemplateOverrideButtonConfiguration web) {
             this.web = web;
             return this;
         }

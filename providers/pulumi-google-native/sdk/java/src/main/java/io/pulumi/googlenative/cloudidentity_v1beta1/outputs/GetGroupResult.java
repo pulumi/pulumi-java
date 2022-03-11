@@ -70,19 +70,19 @@ public final class GetGroupResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"additionalGroupKeys","createTime","description","displayName","dynamicGroupMetadata","groupKey","labels","name","parent","posixGroups","updateTime"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        List<EntityKeyResponse> additionalGroupKeys,
-        String createTime,
-        String description,
-        String displayName,
-        DynamicGroupMetadataResponse dynamicGroupMetadata,
-        EntityKeyResponse groupKey,
-        Map<String,String> labels,
-        String name,
-        String parent,
-        List<PosixGroupResponse> posixGroups,
-        String updateTime) {
+        @OutputCustomType.Parameter("additionalGroupKeys") List<EntityKeyResponse> additionalGroupKeys,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("dynamicGroupMetadata") DynamicGroupMetadataResponse dynamicGroupMetadata,
+        @OutputCustomType.Parameter("groupKey") EntityKeyResponse groupKey,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("posixGroups") List<PosixGroupResponse> posixGroups,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.additionalGroupKeys = additionalGroupKeys;
         this.createTime = createTime;
         this.description = description;
@@ -214,57 +214,57 @@ public final class GetGroupResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAdditionalGroupKeys(List<EntityKeyResponse> additionalGroupKeys) {
+        public Builder additionalGroupKeys(List<EntityKeyResponse> additionalGroupKeys) {
             this.additionalGroupKeys = Objects.requireNonNull(additionalGroupKeys);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDynamicGroupMetadata(DynamicGroupMetadataResponse dynamicGroupMetadata) {
+        public Builder dynamicGroupMetadata(DynamicGroupMetadataResponse dynamicGroupMetadata) {
             this.dynamicGroupMetadata = Objects.requireNonNull(dynamicGroupMetadata);
             return this;
         }
 
-        public Builder setGroupKey(EntityKeyResponse groupKey) {
+        public Builder groupKey(EntityKeyResponse groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setPosixGroups(List<PosixGroupResponse> posixGroups) {
+        public Builder posixGroups(List<PosixGroupResponse> posixGroups) {
             this.posixGroups = Objects.requireNonNull(posixGroups);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

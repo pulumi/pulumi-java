@@ -17,8 +17,8 @@ public final class OfficeDataConnectorDataTypesResponseExchange {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private OfficeDataConnectorDataTypesResponseExchange(@Nullable String state) {
+    @OutputCustomType.Constructor
+    private OfficeDataConnectorDataTypesResponseExchange(@OutputCustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 
@@ -50,7 +50,7 @@ public final class OfficeDataConnectorDataTypesResponseExchange {
     	      this.state = defaults.state;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

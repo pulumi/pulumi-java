@@ -55,15 +55,15 @@ public final class RuntimeSoftwareConfig {
      */
     private final @Nullable String postStartupScript;
 
-    @OutputCustomType.Constructor({"customGpuDriverPath","enableHealthMonitoring","idleShutdown","idleShutdownTimeout","installGpuDriver","notebookUpgradeSchedule","postStartupScript"})
+    @OutputCustomType.Constructor
     private RuntimeSoftwareConfig(
-        @Nullable String customGpuDriverPath,
-        @Nullable Boolean enableHealthMonitoring,
-        @Nullable Boolean idleShutdown,
-        @Nullable Integer idleShutdownTimeout,
-        @Nullable Boolean installGpuDriver,
-        @Nullable String notebookUpgradeSchedule,
-        @Nullable String postStartupScript) {
+        @OutputCustomType.Parameter("customGpuDriverPath") @Nullable String customGpuDriverPath,
+        @OutputCustomType.Parameter("enableHealthMonitoring") @Nullable Boolean enableHealthMonitoring,
+        @OutputCustomType.Parameter("idleShutdown") @Nullable Boolean idleShutdown,
+        @OutputCustomType.Parameter("idleShutdownTimeout") @Nullable Integer idleShutdownTimeout,
+        @OutputCustomType.Parameter("installGpuDriver") @Nullable Boolean installGpuDriver,
+        @OutputCustomType.Parameter("notebookUpgradeSchedule") @Nullable String notebookUpgradeSchedule,
+        @OutputCustomType.Parameter("postStartupScript") @Nullable String postStartupScript) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;
@@ -161,37 +161,37 @@ public final class RuntimeSoftwareConfig {
     	      this.postStartupScript = defaults.postStartupScript;
         }
 
-        public Builder setCustomGpuDriverPath(@Nullable String customGpuDriverPath) {
+        public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
             this.customGpuDriverPath = customGpuDriverPath;
             return this;
         }
 
-        public Builder setEnableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
+        public Builder enableHealthMonitoring(@Nullable Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = enableHealthMonitoring;
             return this;
         }
 
-        public Builder setIdleShutdown(@Nullable Boolean idleShutdown) {
+        public Builder idleShutdown(@Nullable Boolean idleShutdown) {
             this.idleShutdown = idleShutdown;
             return this;
         }
 
-        public Builder setIdleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
+        public Builder idleShutdownTimeout(@Nullable Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = idleShutdownTimeout;
             return this;
         }
 
-        public Builder setInstallGpuDriver(@Nullable Boolean installGpuDriver) {
+        public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
             this.installGpuDriver = installGpuDriver;
             return this;
         }
 
-        public Builder setNotebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
+        public Builder notebookUpgradeSchedule(@Nullable String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = notebookUpgradeSchedule;
             return this;
         }
 
-        public Builder setPostStartupScript(@Nullable String postStartupScript) {
+        public Builder postStartupScript(@Nullable String postStartupScript) {
             this.postStartupScript = postStartupScript;
             return this;
         }

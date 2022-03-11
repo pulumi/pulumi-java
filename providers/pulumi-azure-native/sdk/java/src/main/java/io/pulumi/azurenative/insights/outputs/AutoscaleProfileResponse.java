@@ -42,13 +42,13 @@ public final class AutoscaleProfileResponse {
      */
     private final List<ScaleRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"capacity","fixedDate","name","recurrence","rules"})
+    @OutputCustomType.Constructor
     private AutoscaleProfileResponse(
-        ScaleCapacityResponse capacity,
-        @Nullable TimeWindowResponse fixedDate,
-        String name,
-        @Nullable RecurrenceResponse recurrence,
-        List<ScaleRuleResponse> rules) {
+        @OutputCustomType.Parameter("capacity") ScaleCapacityResponse capacity,
+        @OutputCustomType.Parameter("fixedDate") @Nullable TimeWindowResponse fixedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recurrence") @Nullable RecurrenceResponse recurrence,
+        @OutputCustomType.Parameter("rules") List<ScaleRuleResponse> rules) {
         this.capacity = capacity;
         this.fixedDate = fixedDate;
         this.name = name;
@@ -120,27 +120,27 @@ public final class AutoscaleProfileResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setCapacity(ScaleCapacityResponse capacity) {
+        public Builder capacity(ScaleCapacityResponse capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setFixedDate(@Nullable TimeWindowResponse fixedDate) {
+        public Builder fixedDate(@Nullable TimeWindowResponse fixedDate) {
             this.fixedDate = fixedDate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable RecurrenceResponse recurrence) {
+        public Builder recurrence(@Nullable RecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRules(List<ScaleRuleResponse> rules) {
+        public Builder rules(List<ScaleRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

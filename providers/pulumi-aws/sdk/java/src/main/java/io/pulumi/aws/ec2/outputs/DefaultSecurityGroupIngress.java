@@ -60,17 +60,17 @@ public final class DefaultSecurityGroupIngress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"cidrBlocks","description","fromPort","ipv6CidrBlocks","prefixListIds","protocol","securityGroups","self","toPort"})
+    @OutputCustomType.Constructor
     private DefaultSecurityGroupIngress(
-        @Nullable List<String> cidrBlocks,
-        @Nullable String description,
-        Integer fromPort,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable List<String> prefixListIds,
-        String protocol,
-        @Nullable List<String> securityGroups,
-        @Nullable Boolean self,
-        Integer toPort) {
+        @OutputCustomType.Parameter("cidrBlocks") @Nullable List<String> cidrBlocks,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("prefixListIds") @Nullable List<String> prefixListIds,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("self") @Nullable Boolean self,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.cidrBlocks = cidrBlocks;
         this.description = description;
         this.fromPort = fromPort;
@@ -182,47 +182,47 @@ public final class DefaultSecurityGroupIngress {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setCidrBlocks(@Nullable List<String> cidrBlocks) {
+        public Builder cidrBlocks(@Nullable List<String> cidrBlocks) {
             this.cidrBlocks = cidrBlocks;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setPrefixListIds(@Nullable List<String> prefixListIds) {
+        public Builder prefixListIds(@Nullable List<String> prefixListIds) {
             this.prefixListIds = prefixListIds;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSelf(@Nullable Boolean self) {
+        public Builder self(@Nullable Boolean self) {
             this.self = self;
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

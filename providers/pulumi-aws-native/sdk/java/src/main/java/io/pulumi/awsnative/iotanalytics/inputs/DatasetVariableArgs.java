@@ -101,52 +101,52 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setDatasetContentVersionValue(@Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue) {
+        public Builder datasetContentVersionValue(@Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue) {
             this.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
 
-        public Builder setDatasetContentVersionValue(@Nullable DatasetContentVersionValueArgs datasetContentVersionValue) {
+        public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValueArgs datasetContentVersionValue) {
             this.datasetContentVersionValue = Input.ofNullable(datasetContentVersionValue);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setOutputFileUriValue(@Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue) {
+        public Builder outputFileUriValue(@Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue) {
             this.outputFileUriValue = outputFileUriValue;
             return this;
         }
 
-        public Builder setOutputFileUriValue(@Nullable DatasetOutputFileUriValueArgs outputFileUriValue) {
+        public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValueArgs outputFileUriValue) {
             this.outputFileUriValue = Input.ofNullable(outputFileUriValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
 
-        public Builder setVariableName(Input<String> variableName) {
+        public Builder variableName(Input<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Input.of(Objects.requireNonNull(variableName));
             return this;
         }

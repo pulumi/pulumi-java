@@ -28,11 +28,11 @@ public final class ClusterCapacityProvidersDefaultCapacityProviderStrategy {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private ClusterCapacityProvidersDefaultCapacityProviderStrategy(
-        @Nullable Integer base,
-        String capacityProvider,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") String capacityProvider,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;
@@ -84,17 +84,17 @@ public final class ClusterCapacityProvidersDefaultCapacityProviderStrategy {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = base;
             return this;
         }
 
-        public Builder setCapacityProvider(String capacityProvider) {
+        public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

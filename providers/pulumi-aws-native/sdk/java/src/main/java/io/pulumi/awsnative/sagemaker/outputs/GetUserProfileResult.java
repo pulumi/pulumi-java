@@ -23,10 +23,10 @@ public final class GetUserProfileResult {
      */
     private final @Nullable UserProfileUserSettings userSettings;
 
-    @OutputCustomType.Constructor({"userProfileArn","userSettings"})
+    @OutputCustomType.Constructor
     private GetUserProfileResult(
-        @Nullable String userProfileArn,
-        @Nullable UserProfileUserSettings userSettings) {
+        @OutputCustomType.Parameter("userProfileArn") @Nullable String userProfileArn,
+        @OutputCustomType.Parameter("userSettings") @Nullable UserProfileUserSettings userSettings) {
         this.userProfileArn = userProfileArn;
         this.userSettings = userSettings;
     }
@@ -68,12 +68,12 @@ public final class GetUserProfileResult {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder setUserProfileArn(@Nullable String userProfileArn) {
+        public Builder userProfileArn(@Nullable String userProfileArn) {
             this.userProfileArn = userProfileArn;
             return this;
         }
 
-        public Builder setUserSettings(@Nullable UserProfileUserSettings userSettings) {
+        public Builder userSettings(@Nullable UserProfileUserSettings userSettings) {
             this.userSettings = userSettings;
             return this;
         }

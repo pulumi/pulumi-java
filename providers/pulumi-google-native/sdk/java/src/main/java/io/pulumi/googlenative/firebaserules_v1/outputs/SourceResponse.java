@@ -16,8 +16,8 @@ public final class SourceResponse {
      */
     private final List<FileResponse> files;
 
-    @OutputCustomType.Constructor({"files"})
-    private SourceResponse(List<FileResponse> files) {
+    @OutputCustomType.Constructor
+    private SourceResponse(@OutputCustomType.Parameter("files") List<FileResponse> files) {
         this.files = files;
     }
 
@@ -49,7 +49,7 @@ public final class SourceResponse {
     	      this.files = defaults.files;
         }
 
-        public Builder setFiles(List<FileResponse> files) {
+        public Builder files(List<FileResponse> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }

@@ -164,92 +164,92 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.routeId = defaults.routeId;
         }
 
-        public Builder setDestinationAddress(Input<String> destinationAddress) {
+        public Builder destinationAddress(Input<String> destinationAddress) {
             this.destinationAddress = Objects.requireNonNull(destinationAddress);
             return this;
         }
 
-        public Builder setDestinationAddress(String destinationAddress) {
+        public Builder destinationAddress(String destinationAddress) {
             this.destinationAddress = Input.of(Objects.requireNonNull(destinationAddress));
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Input<Integer> destinationPort) {
+        public Builder destinationPort(@Nullable Input<Integer> destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = Input.ofNullable(destinationPort);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrivateConnectionId(Input<String> privateConnectionId) {
+        public Builder privateConnectionId(Input<String> privateConnectionId) {
             this.privateConnectionId = Objects.requireNonNull(privateConnectionId);
             return this;
         }
 
-        public Builder setPrivateConnectionId(String privateConnectionId) {
+        public Builder privateConnectionId(String privateConnectionId) {
             this.privateConnectionId = Input.of(Objects.requireNonNull(privateConnectionId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRouteId(Input<String> routeId) {
+        public Builder routeId(Input<String> routeId) {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
 
-        public Builder setRouteId(String routeId) {
+        public Builder routeId(String routeId) {
             this.routeId = Input.of(Objects.requireNonNull(routeId));
             return this;
         }

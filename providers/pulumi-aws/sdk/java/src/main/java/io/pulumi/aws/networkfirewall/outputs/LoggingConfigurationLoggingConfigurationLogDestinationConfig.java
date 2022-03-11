@@ -29,11 +29,11 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
      */
     private final String logType;
 
-    @OutputCustomType.Constructor({"logDestination","logDestinationType","logType"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationLoggingConfigurationLogDestinationConfig(
-        Map<String,String> logDestination,
-        String logDestinationType,
-        String logType) {
+        @OutputCustomType.Parameter("logDestination") Map<String,String> logDestination,
+        @OutputCustomType.Parameter("logDestinationType") String logDestinationType,
+        @OutputCustomType.Parameter("logType") String logType) {
         this.logDestination = logDestination;
         this.logDestinationType = logDestinationType;
         this.logType = logType;
@@ -88,17 +88,17 @@ public final class LoggingConfigurationLoggingConfigurationLogDestinationConfig 
     	      this.logType = defaults.logType;
         }
 
-        public Builder setLogDestination(Map<String,String> logDestination) {
+        public Builder logDestination(Map<String,String> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestinationType(String logDestinationType) {
+        public Builder logDestinationType(String logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

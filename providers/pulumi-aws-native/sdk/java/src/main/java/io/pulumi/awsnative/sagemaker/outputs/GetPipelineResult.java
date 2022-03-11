@@ -34,14 +34,14 @@ public final class GetPipelineResult {
     private final @Nullable String roleArn;
     private final @Nullable List<PipelineTag> tags;
 
-    @OutputCustomType.Constructor({"parallelismConfiguration","pipelineDefinition","pipelineDescription","pipelineDisplayName","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        @Nullable ParallelismConfigurationProperties parallelismConfiguration,
-        @Nullable Object pipelineDefinition,
-        @Nullable String pipelineDescription,
-        @Nullable String pipelineDisplayName,
-        @Nullable String roleArn,
-        @Nullable List<PipelineTag> tags) {
+        @OutputCustomType.Parameter("parallelismConfiguration") @Nullable ParallelismConfigurationProperties parallelismConfiguration,
+        @OutputCustomType.Parameter("pipelineDefinition") @Nullable Object pipelineDefinition,
+        @OutputCustomType.Parameter("pipelineDescription") @Nullable String pipelineDescription,
+        @OutputCustomType.Parameter("pipelineDisplayName") @Nullable String pipelineDisplayName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
         this.parallelismConfiguration = parallelismConfiguration;
         this.pipelineDefinition = pipelineDefinition;
         this.pipelineDescription = pipelineDescription;
@@ -111,32 +111,32 @@ public final class GetPipelineResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setParallelismConfiguration(@Nullable ParallelismConfigurationProperties parallelismConfiguration) {
+        public Builder parallelismConfiguration(@Nullable ParallelismConfigurationProperties parallelismConfiguration) {
             this.parallelismConfiguration = parallelismConfiguration;
             return this;
         }
 
-        public Builder setPipelineDefinition(@Nullable Object pipelineDefinition) {
+        public Builder pipelineDefinition(@Nullable Object pipelineDefinition) {
             this.pipelineDefinition = pipelineDefinition;
             return this;
         }
 
-        public Builder setPipelineDescription(@Nullable String pipelineDescription) {
+        public Builder pipelineDescription(@Nullable String pipelineDescription) {
             this.pipelineDescription = pipelineDescription;
             return this;
         }
 
-        public Builder setPipelineDisplayName(@Nullable String pipelineDisplayName) {
+        public Builder pipelineDisplayName(@Nullable String pipelineDisplayName) {
             this.pipelineDisplayName = pipelineDisplayName;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PipelineTag> tags) {
+        public Builder tags(@Nullable List<PipelineTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -15,8 +15,8 @@ public final class ConnectToTargetSqlMITaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"targetConnectionInfo"})
-    private ConnectToTargetSqlMITaskInputResponse(SqlConnectionInfoResponse targetConnectionInfo) {
+    @OutputCustomType.Constructor
+    private ConnectToTargetSqlMITaskInputResponse(@OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.targetConnectionInfo = targetConnectionInfo;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectToTargetSqlMITaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

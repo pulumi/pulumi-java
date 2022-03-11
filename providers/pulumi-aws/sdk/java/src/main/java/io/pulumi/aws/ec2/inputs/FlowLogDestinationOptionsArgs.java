@@ -87,32 +87,32 @@ public final class FlowLogDestinationOptionsArgs extends io.pulumi.resources.Res
     	      this.perHourPartition = defaults.perHourPartition;
         }
 
-        public Builder setFileFormat(@Nullable Input<String> fileFormat) {
+        public Builder fileFormat(@Nullable Input<String> fileFormat) {
             this.fileFormat = fileFormat;
             return this;
         }
 
-        public Builder setFileFormat(@Nullable String fileFormat) {
+        public Builder fileFormat(@Nullable String fileFormat) {
             this.fileFormat = Input.ofNullable(fileFormat);
             return this;
         }
 
-        public Builder setHiveCompatiblePartitions(@Nullable Input<Boolean> hiveCompatiblePartitions) {
+        public Builder hiveCompatiblePartitions(@Nullable Input<Boolean> hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = hiveCompatiblePartitions;
             return this;
         }
 
-        public Builder setHiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
+        public Builder hiveCompatiblePartitions(@Nullable Boolean hiveCompatiblePartitions) {
             this.hiveCompatiblePartitions = Input.ofNullable(hiveCompatiblePartitions);
             return this;
         }
 
-        public Builder setPerHourPartition(@Nullable Input<Boolean> perHourPartition) {
+        public Builder perHourPartition(@Nullable Input<Boolean> perHourPartition) {
             this.perHourPartition = perHourPartition;
             return this;
         }
 
-        public Builder setPerHourPartition(@Nullable Boolean perHourPartition) {
+        public Builder perHourPartition(@Nullable Boolean perHourPartition) {
             this.perHourPartition = Input.ofNullable(perHourPartition);
             return this;
         }

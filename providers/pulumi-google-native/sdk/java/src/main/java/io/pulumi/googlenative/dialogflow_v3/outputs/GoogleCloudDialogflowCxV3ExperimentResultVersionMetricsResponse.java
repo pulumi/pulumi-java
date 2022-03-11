@@ -28,11 +28,11 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"metrics","sessionCount","version"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(
-        List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
-        Integer sessionCount,
-        String version) {
+        @OutputCustomType.Parameter("metrics") List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics,
+        @OutputCustomType.Parameter("sessionCount") Integer sessionCount,
+        @OutputCustomType.Parameter("version") String version) {
         this.metrics = metrics;
         this.sessionCount = sessionCount;
         this.version = version;
@@ -84,17 +84,17 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
     	      this.version = defaults.version;
         }
 
-        public Builder setMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics) {
+        public Builder metrics(List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setSessionCount(Integer sessionCount) {
+        public Builder sessionCount(Integer sessionCount) {
             this.sessionCount = Objects.requireNonNull(sessionCount);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

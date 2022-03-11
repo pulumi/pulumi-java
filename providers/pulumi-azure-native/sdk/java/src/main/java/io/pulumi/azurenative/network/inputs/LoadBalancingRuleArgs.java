@@ -256,132 +256,132 @@ public final class LoadBalancingRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendAddressPool(@Nullable Input<SubResourceArgs> backendAddressPool) {
+        public Builder backendAddressPool(@Nullable Input<SubResourceArgs> backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
+        public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
             this.backendAddressPool = Input.ofNullable(backendAddressPool);
             return this;
         }
 
-        public Builder setBackendPort(@Nullable Input<Integer> backendPort) {
+        public Builder backendPort(@Nullable Input<Integer> backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = Input.ofNullable(backendPort);
             return this;
         }
 
-        public Builder setDisableOutboundSnat(@Nullable Input<Boolean> disableOutboundSnat) {
+        public Builder disableOutboundSnat(@Nullable Input<Boolean> disableOutboundSnat) {
             this.disableOutboundSnat = disableOutboundSnat;
             return this;
         }
 
-        public Builder setDisableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
+        public Builder disableOutboundSnat(@Nullable Boolean disableOutboundSnat) {
             this.disableOutboundSnat = Input.ofNullable(disableOutboundSnat);
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Input<Boolean> enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Boolean enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = Input.ofNullable(enableFloatingIP);
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Input<Boolean> enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Boolean enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = Input.ofNullable(enableTcpReset);
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable Input<SubResourceArgs> frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
             this.frontendIPConfiguration = Input.ofNullable(frontendIPConfiguration);
             return this;
         }
 
-        public Builder setFrontendPort(Input<Integer> frontendPort) {
+        public Builder frontendPort(Input<Integer> frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
-        public Builder setFrontendPort(Integer frontendPort) {
+        public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Input.of(Objects.requireNonNull(frontendPort));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder setLoadDistribution(@Nullable Input<Either<String,LoadDistribution>> loadDistribution) {
+        public Builder loadDistribution(@Nullable Input<Either<String,LoadDistribution>> loadDistribution) {
             this.loadDistribution = loadDistribution;
             return this;
         }
 
-        public Builder setLoadDistribution(@Nullable Either<String,LoadDistribution> loadDistribution) {
+        public Builder loadDistribution(@Nullable Either<String,LoadDistribution> loadDistribution) {
             this.loadDistribution = Input.ofNullable(loadDistribution);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProbe(@Nullable Input<SubResourceArgs> probe) {
+        public Builder probe(@Nullable Input<SubResourceArgs> probe) {
             this.probe = probe;
             return this;
         }
 
-        public Builder setProbe(@Nullable SubResourceArgs probe) {
+        public Builder probe(@Nullable SubResourceArgs probe) {
             this.probe = Input.ofNullable(probe);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,TransportProtocol>> protocol) {
+        public Builder protocol(Input<Either<String,TransportProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,TransportProtocol> protocol) {
+        public Builder protocol(Either<String,TransportProtocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }

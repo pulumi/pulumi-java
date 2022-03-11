@@ -25,11 +25,11 @@ public final class PartnerInfoResponse {
      */
     private final String replicationRole;
 
-    @OutputCustomType.Constructor({"id","location","replicationRole"})
+    @OutputCustomType.Constructor
     private PartnerInfoResponse(
-        String id,
-        String location,
-        String replicationRole) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole) {
         this.id = id;
         this.location = location;
         this.replicationRole = replicationRole;
@@ -81,17 +81,17 @@ public final class PartnerInfoResponse {
     	      this.replicationRole = defaults.replicationRole;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }

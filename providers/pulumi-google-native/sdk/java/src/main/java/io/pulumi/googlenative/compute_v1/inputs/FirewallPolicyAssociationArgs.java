@@ -70,22 +70,22 @@ public final class FirewallPolicyAssociationArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder setAttachmentTarget(@Nullable Input<String> attachmentTarget) {
+        public Builder attachmentTarget(@Nullable Input<String> attachmentTarget) {
             this.attachmentTarget = attachmentTarget;
             return this;
         }
 
-        public Builder setAttachmentTarget(@Nullable String attachmentTarget) {
+        public Builder attachmentTarget(@Nullable String attachmentTarget) {
             this.attachmentTarget = Input.ofNullable(attachmentTarget);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

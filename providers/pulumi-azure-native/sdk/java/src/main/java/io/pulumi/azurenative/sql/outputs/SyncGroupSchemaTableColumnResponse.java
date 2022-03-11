@@ -27,11 +27,11 @@ public final class SyncGroupSchemaTableColumnResponse {
      */
     private final @Nullable String quotedName;
 
-    @OutputCustomType.Constructor({"dataSize","dataType","quotedName"})
+    @OutputCustomType.Constructor
     private SyncGroupSchemaTableColumnResponse(
-        @Nullable String dataSize,
-        @Nullable String dataType,
-        @Nullable String quotedName) {
+        @OutputCustomType.Parameter("dataSize") @Nullable String dataSize,
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("quotedName") @Nullable String quotedName) {
         this.dataSize = dataSize;
         this.dataType = dataType;
         this.quotedName = quotedName;
@@ -83,17 +83,17 @@ public final class SyncGroupSchemaTableColumnResponse {
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder setDataSize(@Nullable String dataSize) {
+        public Builder dataSize(@Nullable String dataSize) {
             this.dataSize = dataSize;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setQuotedName(@Nullable String quotedName) {
+        public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
         }

@@ -41,13 +41,13 @@ public final class RulesEngineRuleResponse {
      */
     private final Integer priority;
 
-    @OutputCustomType.Constructor({"action","matchConditions","matchProcessingBehavior","name","priority"})
+    @OutputCustomType.Constructor
     private RulesEngineRuleResponse(
-        RulesEngineActionResponse action,
-        @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
-        @Nullable String matchProcessingBehavior,
-        String name,
-        Integer priority) {
+        @OutputCustomType.Parameter("action") RulesEngineActionResponse action,
+        @OutputCustomType.Parameter("matchConditions") @Nullable List<RulesEngineMatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority) {
         this.action = action;
         this.matchConditions = matchConditions;
         this.matchProcessingBehavior = matchProcessingBehavior;
@@ -119,27 +119,27 @@ public final class RulesEngineRuleResponse {
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(RulesEngineActionResponse action) {
+        public Builder action(RulesEngineActionResponse action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMatchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
+        public Builder matchConditions(@Nullable List<RulesEngineMatchConditionResponse> matchConditions) {
             this.matchConditions = matchConditions;
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable String matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }

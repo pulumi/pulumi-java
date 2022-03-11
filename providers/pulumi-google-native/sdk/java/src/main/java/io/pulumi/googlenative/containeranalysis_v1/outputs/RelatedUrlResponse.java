@@ -20,10 +20,10 @@ public final class RelatedUrlResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"label","url"})
+    @OutputCustomType.Constructor
     private RelatedUrlResponse(
-        String label,
-        String url) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }
@@ -65,12 +65,12 @@ public final class RelatedUrlResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

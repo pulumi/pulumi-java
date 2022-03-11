@@ -60,17 +60,17 @@ public final class GetGalleryResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","identifier","location","name","provisioningState","sharingProfile","tags","type"})
+    @OutputCustomType.Constructor
     private GetGalleryResult(
-        @Nullable String description,
-        String id,
-        @Nullable GalleryIdentifierResponse identifier,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable SharingProfileResponse sharingProfile,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identifier") @Nullable GalleryIdentifierResponse identifier,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharingProfile") @Nullable SharingProfileResponse sharingProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.identifier = identifier;
@@ -182,47 +182,47 @@ public final class GetGalleryResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentifier(@Nullable GalleryIdentifierResponse identifier) {
+        public Builder identifier(@Nullable GalleryIdentifierResponse identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSharingProfile(@Nullable SharingProfileResponse sharingProfile) {
+        public Builder sharingProfile(@Nullable SharingProfileResponse sharingProfile) {
             this.sharingProfile = sharingProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

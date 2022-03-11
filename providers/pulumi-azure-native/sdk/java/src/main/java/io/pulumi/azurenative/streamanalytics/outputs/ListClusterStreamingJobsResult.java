@@ -22,10 +22,10 @@ public final class ListClusterStreamingJobsResult {
      */
     private final List<ClusterJobResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListClusterStreamingJobsResult(
-        String nextLink,
-        List<ClusterJobResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<ClusterJobResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListClusterStreamingJobsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<ClusterJobResponse> value) {
+        public Builder value(List<ClusterJobResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

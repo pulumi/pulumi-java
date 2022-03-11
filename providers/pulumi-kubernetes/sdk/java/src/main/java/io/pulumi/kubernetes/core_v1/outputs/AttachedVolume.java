@@ -20,10 +20,10 @@ public final class AttachedVolume {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"devicePath","name"})
+    @OutputCustomType.Constructor
     private AttachedVolume(
-        String devicePath,
-        String name) {
+        @OutputCustomType.Parameter("devicePath") String devicePath,
+        @OutputCustomType.Parameter("name") String name) {
         this.devicePath = devicePath;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class AttachedVolume {
     	      this.name = defaults.name;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

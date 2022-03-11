@@ -54,16 +54,16 @@ public final class GetStorageAccountCredentialResult {
      */
     private final Integer volumesCount;
 
-    @OutputCustomType.Constructor({"accessKey","endPoint","id","kind","name","sslStatus","type","volumesCount"})
+    @OutputCustomType.Constructor
     private GetStorageAccountCredentialResult(
-        @Nullable AsymmetricEncryptedSecretResponse accessKey,
-        String endPoint,
-        String id,
-        @Nullable String kind,
-        String name,
-        String sslStatus,
-        String type,
-        Integer volumesCount) {
+        @OutputCustomType.Parameter("accessKey") @Nullable AsymmetricEncryptedSecretResponse accessKey,
+        @OutputCustomType.Parameter("endPoint") String endPoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sslStatus") String sslStatus,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumesCount") Integer volumesCount) {
         this.accessKey = accessKey;
         this.endPoint = endPoint;
         this.id = id;
@@ -165,42 +165,42 @@ public final class GetStorageAccountCredentialResult {
     	      this.volumesCount = defaults.volumesCount;
         }
 
-        public Builder setAccessKey(@Nullable AsymmetricEncryptedSecretResponse accessKey) {
+        public Builder accessKey(@Nullable AsymmetricEncryptedSecretResponse accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setEndPoint(String endPoint) {
+        public Builder endPoint(String endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSslStatus(String sslStatus) {
+        public Builder sslStatus(String sslStatus) {
             this.sslStatus = Objects.requireNonNull(sslStatus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumesCount(Integer volumesCount) {
+        public Builder volumesCount(Integer volumesCount) {
             this.volumesCount = Objects.requireNonNull(volumesCount);
             return this;
         }

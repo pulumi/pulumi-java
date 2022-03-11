@@ -104,12 +104,12 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
      */
     private final @Nullable String perSeriesAligner;
 
-    @OutputCustomType.Constructor({"alignmentPeriod","crossSeriesReducer","groupByFields","perSeriesAligner"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionThresholdAggregation(
-        @Nullable String alignmentPeriod,
-        @Nullable String crossSeriesReducer,
-        @Nullable List<String> groupByFields,
-        @Nullable String perSeriesAligner) {
+        @OutputCustomType.Parameter("alignmentPeriod") @Nullable String alignmentPeriod,
+        @OutputCustomType.Parameter("crossSeriesReducer") @Nullable String crossSeriesReducer,
+        @OutputCustomType.Parameter("groupByFields") @Nullable List<String> groupByFields,
+        @OutputCustomType.Parameter("perSeriesAligner") @Nullable String perSeriesAligner) {
         this.alignmentPeriod = alignmentPeriod;
         this.crossSeriesReducer = crossSeriesReducer;
         this.groupByFields = groupByFields;
@@ -242,22 +242,22 @@ public final class AlertPolicyConditionConditionThresholdAggregation {
     	      this.perSeriesAligner = defaults.perSeriesAligner;
         }
 
-        public Builder setAlignmentPeriod(@Nullable String alignmentPeriod) {
+        public Builder alignmentPeriod(@Nullable String alignmentPeriod) {
             this.alignmentPeriod = alignmentPeriod;
             return this;
         }
 
-        public Builder setCrossSeriesReducer(@Nullable String crossSeriesReducer) {
+        public Builder crossSeriesReducer(@Nullable String crossSeriesReducer) {
             this.crossSeriesReducer = crossSeriesReducer;
             return this;
         }
 
-        public Builder setGroupByFields(@Nullable List<String> groupByFields) {
+        public Builder groupByFields(@Nullable List<String> groupByFields) {
             this.groupByFields = groupByFields;
             return this;
         }
 
-        public Builder setPerSeriesAligner(@Nullable String perSeriesAligner) {
+        public Builder perSeriesAligner(@Nullable String perSeriesAligner) {
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }

@@ -36,13 +36,13 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"column","description","mode","subcolumns","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1ColumnSchemaResponse(
-        String column,
-        String description,
-        String mode,
-        List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns,
-        String type) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("subcolumns") List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns,
+        @OutputCustomType.Parameter("type") String type) {
         this.column = column;
         this.description = description;
         this.mode = mode;
@@ -114,27 +114,27 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSubcolumns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns) {
+        public Builder subcolumns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns) {
             this.subcolumns = Objects.requireNonNull(subcolumns);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -126,52 +126,52 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setColor(@Nullable Input<ThresholdColor> color) {
+        public Builder color(@Nullable Input<ThresholdColor> color) {
             this.color = color;
             return this;
         }
 
-        public Builder setColor(@Nullable ThresholdColor color) {
+        public Builder color(@Nullable ThresholdColor color) {
             this.color = Input.ofNullable(color);
             return this;
         }
 
-        public Builder setDirection(@Nullable Input<ThresholdDirection> direction) {
+        public Builder direction(@Nullable Input<ThresholdDirection> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable ThresholdDirection direction) {
+        public Builder direction(@Nullable ThresholdDirection direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setTargetAxis(@Nullable Input<ThresholdTargetAxis> targetAxis) {
+        public Builder targetAxis(@Nullable Input<ThresholdTargetAxis> targetAxis) {
             this.targetAxis = targetAxis;
             return this;
         }
 
-        public Builder setTargetAxis(@Nullable ThresholdTargetAxis targetAxis) {
+        public Builder targetAxis(@Nullable ThresholdTargetAxis targetAxis) {
             this.targetAxis = Input.ofNullable(targetAxis);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Double> value) {
+        public Builder value(@Nullable Input<Double> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = Input.ofNullable(value);
             return this;
         }

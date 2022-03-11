@@ -92,42 +92,42 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     	      this.removeOutputLocation = defaults.removeOutputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable Input<String> outputLocation) {
+        public Builder outputLocation(@Nullable Input<String> outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = Input.ofNullable(outputLocation);
             return this;
         }
 
-        public Builder setRemoveEncryptionConfiguration(@Nullable Input<Boolean> removeEncryptionConfiguration) {
+        public Builder removeEncryptionConfiguration(@Nullable Input<Boolean> removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
 
-        public Builder setRemoveEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
+        public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = Input.ofNullable(removeEncryptionConfiguration);
             return this;
         }
 
-        public Builder setRemoveOutputLocation(@Nullable Input<Boolean> removeOutputLocation) {
+        public Builder removeOutputLocation(@Nullable Input<Boolean> removeOutputLocation) {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }
 
-        public Builder setRemoveOutputLocation(@Nullable Boolean removeOutputLocation) {
+        public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
             this.removeOutputLocation = Input.ofNullable(removeOutputLocation);
             return this;
         }

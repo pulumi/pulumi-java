@@ -31,10 +31,10 @@ public final class AccessLevelsAccessLevelBasic {
      */
     private final List<AccessLevelsAccessLevelBasicCondition> conditions;
 
-    @OutputCustomType.Constructor({"combiningFunction","conditions"})
+    @OutputCustomType.Constructor
     private AccessLevelsAccessLevelBasic(
-        @Nullable String combiningFunction,
-        List<AccessLevelsAccessLevelBasicCondition> conditions) {
+        @OutputCustomType.Parameter("combiningFunction") @Nullable String combiningFunction,
+        @OutputCustomType.Parameter("conditions") List<AccessLevelsAccessLevelBasicCondition> conditions) {
         this.combiningFunction = combiningFunction;
         this.conditions = conditions;
     }
@@ -83,12 +83,12 @@ public final class AccessLevelsAccessLevelBasic {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setCombiningFunction(@Nullable String combiningFunction) {
+        public Builder combiningFunction(@Nullable String combiningFunction) {
             this.combiningFunction = combiningFunction;
             return this;
         }
 
-        public Builder setConditions(List<AccessLevelsAccessLevelBasicCondition> conditions) {
+        public Builder conditions(List<AccessLevelsAccessLevelBasicCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

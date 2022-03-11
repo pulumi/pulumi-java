@@ -16,8 +16,8 @@ public final class AllowedConfigListResponse {
      */
     private final List<ReusableConfigWrapperResponse> allowedConfigValues;
 
-    @OutputCustomType.Constructor({"allowedConfigValues"})
-    private AllowedConfigListResponse(List<ReusableConfigWrapperResponse> allowedConfigValues) {
+    @OutputCustomType.Constructor
+    private AllowedConfigListResponse(@OutputCustomType.Parameter("allowedConfigValues") List<ReusableConfigWrapperResponse> allowedConfigValues) {
         this.allowedConfigValues = allowedConfigValues;
     }
 
@@ -49,7 +49,7 @@ public final class AllowedConfigListResponse {
     	      this.allowedConfigValues = defaults.allowedConfigValues;
         }
 
-        public Builder setAllowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
+        public Builder allowedConfigValues(List<ReusableConfigWrapperResponse> allowedConfigValues) {
             this.allowedConfigValues = Objects.requireNonNull(allowedConfigValues);
             return this;
         }

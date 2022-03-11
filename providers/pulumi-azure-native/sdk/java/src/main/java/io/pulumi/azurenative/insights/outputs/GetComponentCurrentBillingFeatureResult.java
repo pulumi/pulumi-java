@@ -24,10 +24,10 @@ public final class GetComponentCurrentBillingFeatureResult {
      */
     private final @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap;
 
-    @OutputCustomType.Constructor({"currentBillingFeatures","dataVolumeCap"})
+    @OutputCustomType.Constructor
     private GetComponentCurrentBillingFeatureResult(
-        @Nullable List<String> currentBillingFeatures,
-        @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
+        @OutputCustomType.Parameter("currentBillingFeatures") @Nullable List<String> currentBillingFeatures,
+        @OutputCustomType.Parameter("dataVolumeCap") @Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
         this.currentBillingFeatures = currentBillingFeatures;
         this.dataVolumeCap = dataVolumeCap;
     }
@@ -69,12 +69,12 @@ public final class GetComponentCurrentBillingFeatureResult {
     	      this.dataVolumeCap = defaults.dataVolumeCap;
         }
 
-        public Builder setCurrentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
+        public Builder currentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
             this.currentBillingFeatures = currentBillingFeatures;
             return this;
         }
 
-        public Builder setDataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
+        public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapResponse dataVolumeCap) {
             this.dataVolumeCap = dataVolumeCap;
             return this;
         }

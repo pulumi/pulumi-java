@@ -23,10 +23,10 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate {
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate(
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file,
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
         this.file = file;
         this.sds = sds;
     }
@@ -68,12 +68,12 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificate {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

@@ -20,10 +20,10 @@ public final class SoftwareRecipeArtifactRemoteResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"checksum","uri"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeArtifactRemoteResponse(
-        String checksum,
-        String uri) {
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.checksum = checksum;
         this.uri = uri;
     }
@@ -65,12 +65,12 @@ public final class SoftwareRecipeArtifactRemoteResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

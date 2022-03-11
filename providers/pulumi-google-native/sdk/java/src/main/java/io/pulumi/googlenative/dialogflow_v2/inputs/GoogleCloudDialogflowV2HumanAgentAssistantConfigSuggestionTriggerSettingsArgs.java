@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     	      this.onlyEndUser = defaults.onlyEndUser;
         }
 
-        public Builder setNoSmalltalk(@Nullable Input<Boolean> noSmalltalk) {
+        public Builder noSmalltalk(@Nullable Input<Boolean> noSmalltalk) {
             this.noSmalltalk = noSmalltalk;
             return this;
         }
 
-        public Builder setNoSmalltalk(@Nullable Boolean noSmalltalk) {
+        public Builder noSmalltalk(@Nullable Boolean noSmalltalk) {
             this.noSmalltalk = Input.ofNullable(noSmalltalk);
             return this;
         }
 
-        public Builder setOnlyEndUser(@Nullable Input<Boolean> onlyEndUser) {
+        public Builder onlyEndUser(@Nullable Input<Boolean> onlyEndUser) {
             this.onlyEndUser = onlyEndUser;
             return this;
         }
 
-        public Builder setOnlyEndUser(@Nullable Boolean onlyEndUser) {
+        public Builder onlyEndUser(@Nullable Boolean onlyEndUser) {
             this.onlyEndUser = Input.ofNullable(onlyEndUser);
             return this;
         }

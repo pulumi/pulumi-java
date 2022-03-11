@@ -15,10 +15,10 @@ public final class ServiceTaskSpecResources {
     private final @Nullable ServiceTaskSpecResourcesLimits limits;
     private final @Nullable ServiceTaskSpecResourcesReservation reservation;
 
-    @OutputCustomType.Constructor({"limits","reservation"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecResources(
-        @Nullable ServiceTaskSpecResourcesLimits limits,
-        @Nullable ServiceTaskSpecResourcesReservation reservation) {
+        @OutputCustomType.Parameter("limits") @Nullable ServiceTaskSpecResourcesLimits limits,
+        @OutputCustomType.Parameter("reservation") @Nullable ServiceTaskSpecResourcesReservation reservation) {
         this.limits = limits;
         this.reservation = reservation;
     }
@@ -52,12 +52,12 @@ public final class ServiceTaskSpecResources {
     	      this.reservation = defaults.reservation;
         }
 
-        public Builder setLimits(@Nullable ServiceTaskSpecResourcesLimits limits) {
+        public Builder limits(@Nullable ServiceTaskSpecResourcesLimits limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setReservation(@Nullable ServiceTaskSpecResourcesReservation reservation) {
+        public Builder reservation(@Nullable ServiceTaskSpecResourcesReservation reservation) {
             this.reservation = reservation;
             return this;
         }

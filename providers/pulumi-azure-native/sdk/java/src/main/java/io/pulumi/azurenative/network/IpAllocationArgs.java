@@ -219,112 +219,112 @@ public final class IpAllocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocationTags(@Nullable Input<Map<String,String>> allocationTags) {
+        public Builder allocationTags(@Nullable Input<Map<String,String>> allocationTags) {
             this.allocationTags = allocationTags;
             return this;
         }
 
-        public Builder setAllocationTags(@Nullable Map<String,String> allocationTags) {
+        public Builder allocationTags(@Nullable Map<String,String> allocationTags) {
             this.allocationTags = Input.ofNullable(allocationTags);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAllocationName(@Nullable Input<String> ipAllocationName) {
+        public Builder ipAllocationName(@Nullable Input<String> ipAllocationName) {
             this.ipAllocationName = ipAllocationName;
             return this;
         }
 
-        public Builder setIpAllocationName(@Nullable String ipAllocationName) {
+        public Builder ipAllocationName(@Nullable String ipAllocationName) {
             this.ipAllocationName = Input.ofNullable(ipAllocationName);
             return this;
         }
 
-        public Builder setIpamAllocationId(@Nullable Input<String> ipamAllocationId) {
+        public Builder ipamAllocationId(@Nullable Input<String> ipamAllocationId) {
             this.ipamAllocationId = ipamAllocationId;
             return this;
         }
 
-        public Builder setIpamAllocationId(@Nullable String ipamAllocationId) {
+        public Builder ipamAllocationId(@Nullable String ipamAllocationId) {
             this.ipamAllocationId = Input.ofNullable(ipamAllocationId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Input.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder setPrefixType(@Nullable Input<Either<String,IPVersion>> prefixType) {
+        public Builder prefixType(@Nullable Input<Either<String,IPVersion>> prefixType) {
             this.prefixType = prefixType;
             return this;
         }
 
-        public Builder setPrefixType(@Nullable Either<String,IPVersion> prefixType) {
+        public Builder prefixType(@Nullable Either<String,IPVersion> prefixType) {
             this.prefixType = Input.ofNullable(prefixType);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,IpAllocationType>> type) {
+        public Builder type(@Nullable Input<Either<String,IpAllocationType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,IpAllocationType> type) {
+        public Builder type(@Nullable Either<String,IpAllocationType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

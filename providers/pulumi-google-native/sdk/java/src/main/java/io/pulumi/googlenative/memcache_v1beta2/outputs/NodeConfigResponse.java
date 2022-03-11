@@ -20,10 +20,10 @@ public final class NodeConfigResponse {
      */
     private final Integer memorySizeMb;
 
-    @OutputCustomType.Constructor({"cpuCount","memorySizeMb"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        Integer cpuCount,
-        Integer memorySizeMb) {
+        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
+        @OutputCustomType.Parameter("memorySizeMb") Integer memorySizeMb) {
         this.cpuCount = cpuCount;
         this.memorySizeMb = memorySizeMb;
     }
@@ -65,12 +65,12 @@ public final class NodeConfigResponse {
     	      this.memorySizeMb = defaults.memorySizeMb;
         }
 
-        public Builder setCpuCount(Integer cpuCount) {
+        public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
 
-        public Builder setMemorySizeMb(Integer memorySizeMb) {
+        public Builder memorySizeMb(Integer memorySizeMb) {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }

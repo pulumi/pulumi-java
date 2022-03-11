@@ -14,10 +14,10 @@ public final class TaskDefinitionEnvironmentFile {
     private final @Nullable String type;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private TaskDefinitionEnvironmentFile(
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.type = type;
         this.value = value;
     }
@@ -51,12 +51,12 @@ public final class TaskDefinitionEnvironmentFile {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

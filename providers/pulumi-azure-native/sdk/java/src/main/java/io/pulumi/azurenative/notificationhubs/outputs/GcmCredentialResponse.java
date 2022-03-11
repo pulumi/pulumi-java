@@ -22,10 +22,10 @@ public final class GcmCredentialResponse {
      */
     private final @Nullable String googleApiKey;
 
-    @OutputCustomType.Constructor({"gcmEndpoint","googleApiKey"})
+    @OutputCustomType.Constructor
     private GcmCredentialResponse(
-        @Nullable String gcmEndpoint,
-        @Nullable String googleApiKey) {
+        @OutputCustomType.Parameter("gcmEndpoint") @Nullable String gcmEndpoint,
+        @OutputCustomType.Parameter("googleApiKey") @Nullable String googleApiKey) {
         this.gcmEndpoint = gcmEndpoint;
         this.googleApiKey = googleApiKey;
     }
@@ -67,12 +67,12 @@ public final class GcmCredentialResponse {
     	      this.googleApiKey = defaults.googleApiKey;
         }
 
-        public Builder setGcmEndpoint(@Nullable String gcmEndpoint) {
+        public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
             this.gcmEndpoint = gcmEndpoint;
             return this;
         }
 
-        public Builder setGoogleApiKey(@Nullable String googleApiKey) {
+        public Builder googleApiKey(@Nullable String googleApiKey) {
             this.googleApiKey = googleApiKey;
             return this;
         }

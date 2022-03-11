@@ -17,11 +17,11 @@ public final class ConfigAntennaUplinkConfig {
     private final @Nullable ConfigEirp targetEirp;
     private final @Nullable Boolean transmitDisabled;
 
-    @OutputCustomType.Constructor({"spectrumConfig","targetEirp","transmitDisabled"})
+    @OutputCustomType.Constructor
     private ConfigAntennaUplinkConfig(
-        @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
-        @Nullable ConfigEirp targetEirp,
-        @Nullable Boolean transmitDisabled) {
+        @OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigUplinkSpectrumConfig spectrumConfig,
+        @OutputCustomType.Parameter("targetEirp") @Nullable ConfigEirp targetEirp,
+        @OutputCustomType.Parameter("transmitDisabled") @Nullable Boolean transmitDisabled) {
         this.spectrumConfig = spectrumConfig;
         this.targetEirp = targetEirp;
         this.transmitDisabled = transmitDisabled;
@@ -61,17 +61,17 @@ public final class ConfigAntennaUplinkConfig {
     	      this.transmitDisabled = defaults.transmitDisabled;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigUplinkSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigUplinkSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }
 
-        public Builder setTargetEirp(@Nullable ConfigEirp targetEirp) {
+        public Builder targetEirp(@Nullable ConfigEirp targetEirp) {
             this.targetEirp = targetEirp;
             return this;
         }
 
-        public Builder setTransmitDisabled(@Nullable Boolean transmitDisabled) {
+        public Builder transmitDisabled(@Nullable Boolean transmitDisabled) {
             this.transmitDisabled = transmitDisabled;
             return this;
         }

@@ -30,12 +30,12 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
      */
     private final @Nullable Boolean userManagedDependencies;
 
-    @OutputCustomType.Constructor({"baseCondaEnvironment","condaDependencies","interpreterPath","userManagedDependencies"})
+    @OutputCustomType.Constructor
     private ModelEnvironmentDefinitionResponseResponsePython(
-        @Nullable String baseCondaEnvironment,
-        @Nullable Object condaDependencies,
-        @Nullable String interpreterPath,
-        @Nullable Boolean userManagedDependencies) {
+        @OutputCustomType.Parameter("baseCondaEnvironment") @Nullable String baseCondaEnvironment,
+        @OutputCustomType.Parameter("condaDependencies") @Nullable Object condaDependencies,
+        @OutputCustomType.Parameter("interpreterPath") @Nullable String interpreterPath,
+        @OutputCustomType.Parameter("userManagedDependencies") @Nullable Boolean userManagedDependencies) {
         this.baseCondaEnvironment = baseCondaEnvironment;
         this.condaDependencies = condaDependencies;
         this.interpreterPath = interpreterPath;
@@ -93,22 +93,22 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
     	      this.userManagedDependencies = defaults.userManagedDependencies;
         }
 
-        public Builder setBaseCondaEnvironment(@Nullable String baseCondaEnvironment) {
+        public Builder baseCondaEnvironment(@Nullable String baseCondaEnvironment) {
             this.baseCondaEnvironment = baseCondaEnvironment;
             return this;
         }
 
-        public Builder setCondaDependencies(@Nullable Object condaDependencies) {
+        public Builder condaDependencies(@Nullable Object condaDependencies) {
             this.condaDependencies = condaDependencies;
             return this;
         }
 
-        public Builder setInterpreterPath(@Nullable String interpreterPath) {
+        public Builder interpreterPath(@Nullable String interpreterPath) {
             this.interpreterPath = interpreterPath;
             return this;
         }
 
-        public Builder setUserManagedDependencies(@Nullable Boolean userManagedDependencies) {
+        public Builder userManagedDependencies(@Nullable Boolean userManagedDependencies) {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }

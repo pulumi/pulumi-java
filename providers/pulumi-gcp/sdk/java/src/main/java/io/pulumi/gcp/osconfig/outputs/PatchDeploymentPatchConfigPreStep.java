@@ -25,10 +25,10 @@ public final class PatchDeploymentPatchConfigPreStep {
      */
     private final @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig;
 
-    @OutputCustomType.Constructor({"linuxExecStepConfig","windowsExecStepConfig"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigPreStep(
-        @Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig,
-        @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
+        @OutputCustomType.Parameter("linuxExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig,
+        @OutputCustomType.Parameter("windowsExecStepConfig") @Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }
@@ -72,12 +72,12 @@ public final class PatchDeploymentPatchConfigPreStep {
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder setLinuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepLinuxExecStepConfig linuxExecStepConfig) {
             this.linuxExecStepConfig = linuxExecStepConfig;
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(@Nullable PatchDeploymentPatchConfigPreStepWindowsExecStepConfig windowsExecStepConfig) {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }

@@ -35,13 +35,13 @@ public final class VirtualNetworkRuleResponse {
      */
     private final String virtualNetworkRuleState;
 
-    @OutputCustomType.Constructor({"id","name","subnetId","type","virtualNetworkRuleState"})
+    @OutputCustomType.Constructor
     private VirtualNetworkRuleResponse(
-        String id,
-        String name,
-        String subnetId,
-        String type,
-        String virtualNetworkRuleState) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRuleState") String virtualNetworkRuleState) {
         this.id = id;
         this.name = name;
         this.subnetId = subnetId;
@@ -113,27 +113,27 @@ public final class VirtualNetworkRuleResponse {
     	      this.virtualNetworkRuleState = defaults.virtualNetworkRuleState;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRuleState(String virtualNetworkRuleState) {
+        public Builder virtualNetworkRuleState(String virtualNetworkRuleState) {
             this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
             return this;
         }

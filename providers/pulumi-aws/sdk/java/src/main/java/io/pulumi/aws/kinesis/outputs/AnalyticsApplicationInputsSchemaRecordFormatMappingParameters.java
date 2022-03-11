@@ -25,10 +25,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
      */
     private final @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json;
 
-    @OutputCustomType.Constructor({"csv","json"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordFormatMappingParameters(
-        @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv,
-        @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
+        @OutputCustomType.Parameter("csv") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv,
+        @OutputCustomType.Parameter("json") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
         this.csv = csv;
         this.json = json;
     }
@@ -72,12 +72,12 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatMappingParameters
     	      this.json = defaults.json;
         }
 
-        public Builder setCsv(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv) {
+        public Builder csv(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv csv) {
             this.csv = csv;
             return this;
         }
 
-        public Builder setJson(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
+        public Builder json(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson json) {
             this.json = json;
             return this;
         }

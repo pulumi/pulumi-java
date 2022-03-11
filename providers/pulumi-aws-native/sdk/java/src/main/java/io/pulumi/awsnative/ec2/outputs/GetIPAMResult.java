@@ -52,16 +52,16 @@ public final class GetIPAMResult {
      */
     private final @Nullable List<IPAMTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","ipamId","operatingRegions","privateDefaultScopeId","publicDefaultScopeId","scopeCount","tags"})
+    @OutputCustomType.Constructor
     private GetIPAMResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String ipamId,
-        @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
-        @Nullable String privateDefaultScopeId,
-        @Nullable String publicDefaultScopeId,
-        @Nullable Integer scopeCount,
-        @Nullable List<IPAMTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ipamId") @Nullable String ipamId,
+        @OutputCustomType.Parameter("operatingRegions") @Nullable List<IPAMIpamOperatingRegion> operatingRegions,
+        @OutputCustomType.Parameter("privateDefaultScopeId") @Nullable String privateDefaultScopeId,
+        @OutputCustomType.Parameter("publicDefaultScopeId") @Nullable String publicDefaultScopeId,
+        @OutputCustomType.Parameter("scopeCount") @Nullable Integer scopeCount,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPAMTag> tags) {
         this.arn = arn;
         this.description = description;
         this.ipamId = ipamId;
@@ -159,42 +159,42 @@ public final class GetIPAMResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIpamId(@Nullable String ipamId) {
+        public Builder ipamId(@Nullable String ipamId) {
             this.ipamId = ipamId;
             return this;
         }
 
-        public Builder setOperatingRegions(@Nullable List<IPAMIpamOperatingRegion> operatingRegions) {
+        public Builder operatingRegions(@Nullable List<IPAMIpamOperatingRegion> operatingRegions) {
             this.operatingRegions = operatingRegions;
             return this;
         }
 
-        public Builder setPrivateDefaultScopeId(@Nullable String privateDefaultScopeId) {
+        public Builder privateDefaultScopeId(@Nullable String privateDefaultScopeId) {
             this.privateDefaultScopeId = privateDefaultScopeId;
             return this;
         }
 
-        public Builder setPublicDefaultScopeId(@Nullable String publicDefaultScopeId) {
+        public Builder publicDefaultScopeId(@Nullable String publicDefaultScopeId) {
             this.publicDefaultScopeId = publicDefaultScopeId;
             return this;
         }
 
-        public Builder setScopeCount(@Nullable Integer scopeCount) {
+        public Builder scopeCount(@Nullable Integer scopeCount) {
             this.scopeCount = scopeCount;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPAMTag> tags) {
+        public Builder tags(@Nullable List<IPAMTag> tags) {
             this.tags = tags;
             return this;
         }

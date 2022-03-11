@@ -38,11 +38,11 @@ public final class GetIAMPolicyBinding {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"condition","members","role"})
+    @OutputCustomType.Constructor
     private GetIAMPolicyBinding(
-        @Nullable GetIAMPolicyBindingCondition condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("condition") @Nullable GetIAMPolicyBindingCondition condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;
@@ -103,17 +103,17 @@ public final class GetIAMPolicyBinding {
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable GetIAMPolicyBindingCondition condition) {
+        public Builder condition(@Nullable GetIAMPolicyBindingCondition condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

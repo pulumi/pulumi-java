@@ -32,12 +32,12 @@ public final class OutputDataBindingResponse {
      */
     private final @Nullable String pathOnDatastore;
 
-    @OutputCustomType.Constructor({"datastoreId","mode","pathOnCompute","pathOnDatastore"})
+    @OutputCustomType.Constructor
     private OutputDataBindingResponse(
-        @Nullable String datastoreId,
-        @Nullable String mode,
-        @Nullable String pathOnCompute,
-        @Nullable String pathOnDatastore) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("pathOnCompute") @Nullable String pathOnCompute,
+        @OutputCustomType.Parameter("pathOnDatastore") @Nullable String pathOnDatastore) {
         this.datastoreId = datastoreId;
         this.mode = mode;
         this.pathOnCompute = pathOnCompute;
@@ -99,22 +99,22 @@ public final class OutputDataBindingResponse {
     	      this.pathOnDatastore = defaults.pathOnDatastore;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPathOnCompute(@Nullable String pathOnCompute) {
+        public Builder pathOnCompute(@Nullable String pathOnCompute) {
             this.pathOnCompute = pathOnCompute;
             return this;
         }
 
-        public Builder setPathOnDatastore(@Nullable String pathOnDatastore) {
+        public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
             this.pathOnDatastore = pathOnDatastore;
             return this;
         }

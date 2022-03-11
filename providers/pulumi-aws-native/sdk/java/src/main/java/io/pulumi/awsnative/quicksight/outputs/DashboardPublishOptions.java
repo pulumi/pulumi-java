@@ -17,11 +17,11 @@ public final class DashboardPublishOptions {
     private final @Nullable DashboardExportToCSVOption exportToCSVOption;
     private final @Nullable DashboardSheetControlsOption sheetControlsOption;
 
-    @OutputCustomType.Constructor({"adHocFilteringOption","exportToCSVOption","sheetControlsOption"})
+    @OutputCustomType.Constructor
     private DashboardPublishOptions(
-        @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
-        @Nullable DashboardExportToCSVOption exportToCSVOption,
-        @Nullable DashboardSheetControlsOption sheetControlsOption) {
+        @OutputCustomType.Parameter("adHocFilteringOption") @Nullable DashboardAdHocFilteringOption adHocFilteringOption,
+        @OutputCustomType.Parameter("exportToCSVOption") @Nullable DashboardExportToCSVOption exportToCSVOption,
+        @OutputCustomType.Parameter("sheetControlsOption") @Nullable DashboardSheetControlsOption sheetControlsOption) {
         this.adHocFilteringOption = adHocFilteringOption;
         this.exportToCSVOption = exportToCSVOption;
         this.sheetControlsOption = sheetControlsOption;
@@ -61,17 +61,17 @@ public final class DashboardPublishOptions {
     	      this.sheetControlsOption = defaults.sheetControlsOption;
         }
 
-        public Builder setAdHocFilteringOption(@Nullable DashboardAdHocFilteringOption adHocFilteringOption) {
+        public Builder adHocFilteringOption(@Nullable DashboardAdHocFilteringOption adHocFilteringOption) {
             this.adHocFilteringOption = adHocFilteringOption;
             return this;
         }
 
-        public Builder setExportToCSVOption(@Nullable DashboardExportToCSVOption exportToCSVOption) {
+        public Builder exportToCSVOption(@Nullable DashboardExportToCSVOption exportToCSVOption) {
             this.exportToCSVOption = exportToCSVOption;
             return this;
         }
 
-        public Builder setSheetControlsOption(@Nullable DashboardSheetControlsOption sheetControlsOption) {
+        public Builder sheetControlsOption(@Nullable DashboardSheetControlsOption sheetControlsOption) {
             this.sheetControlsOption = sheetControlsOption;
             return this;
         }

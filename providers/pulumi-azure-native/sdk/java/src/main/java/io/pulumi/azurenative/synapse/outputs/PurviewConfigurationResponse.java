@@ -17,8 +17,8 @@ public final class PurviewConfigurationResponse {
      */
     private final @Nullable String purviewResourceId;
 
-    @OutputCustomType.Constructor({"purviewResourceId"})
-    private PurviewConfigurationResponse(@Nullable String purviewResourceId) {
+    @OutputCustomType.Constructor
+    private PurviewConfigurationResponse(@OutputCustomType.Parameter("purviewResourceId") @Nullable String purviewResourceId) {
         this.purviewResourceId = purviewResourceId;
     }
 
@@ -50,7 +50,7 @@ public final class PurviewConfigurationResponse {
     	      this.purviewResourceId = defaults.purviewResourceId;
         }
 
-        public Builder setPurviewResourceId(@Nullable String purviewResourceId) {
+        public Builder purviewResourceId(@Nullable String purviewResourceId) {
             this.purviewResourceId = purviewResourceId;
             return this;
         }

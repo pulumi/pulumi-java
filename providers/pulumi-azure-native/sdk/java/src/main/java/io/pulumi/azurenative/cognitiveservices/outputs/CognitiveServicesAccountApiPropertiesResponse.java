@@ -63,18 +63,18 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
      */
     private final @Nullable String websiteName;
 
-    @OutputCustomType.Constructor({"aadClientId","aadTenantId","eventHubConnectionString","qnaAzureSearchEndpointId","qnaAzureSearchEndpointKey","qnaRuntimeEndpoint","statisticsEnabled","storageAccountConnectionString","superUser","websiteName"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountApiPropertiesResponse(
-        @Nullable String aadClientId,
-        @Nullable String aadTenantId,
-        @Nullable String eventHubConnectionString,
-        @Nullable String qnaAzureSearchEndpointId,
-        @Nullable String qnaAzureSearchEndpointKey,
-        @Nullable String qnaRuntimeEndpoint,
-        @Nullable Boolean statisticsEnabled,
-        @Nullable String storageAccountConnectionString,
-        @Nullable String superUser,
-        @Nullable String websiteName) {
+        @OutputCustomType.Parameter("aadClientId") @Nullable String aadClientId,
+        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @OutputCustomType.Parameter("qnaAzureSearchEndpointId") @Nullable String qnaAzureSearchEndpointId,
+        @OutputCustomType.Parameter("qnaAzureSearchEndpointKey") @Nullable String qnaAzureSearchEndpointKey,
+        @OutputCustomType.Parameter("qnaRuntimeEndpoint") @Nullable String qnaRuntimeEndpoint,
+        @OutputCustomType.Parameter("statisticsEnabled") @Nullable Boolean statisticsEnabled,
+        @OutputCustomType.Parameter("storageAccountConnectionString") @Nullable String storageAccountConnectionString,
+        @OutputCustomType.Parameter("superUser") @Nullable String superUser,
+        @OutputCustomType.Parameter("websiteName") @Nullable String websiteName) {
         this.aadClientId = aadClientId;
         this.aadTenantId = aadTenantId;
         this.eventHubConnectionString = eventHubConnectionString;
@@ -196,52 +196,52 @@ public final class CognitiveServicesAccountApiPropertiesResponse {
     	      this.websiteName = defaults.websiteName;
         }
 
-        public Builder setAadClientId(@Nullable String aadClientId) {
+        public Builder aadClientId(@Nullable String aadClientId) {
             this.aadClientId = aadClientId;
             return this;
         }
 
-        public Builder setAadTenantId(@Nullable String aadTenantId) {
+        public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
-        public Builder setEventHubConnectionString(@Nullable String eventHubConnectionString) {
+        public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
+        public Builder qnaAzureSearchEndpointId(@Nullable String qnaAzureSearchEndpointId) {
             this.qnaAzureSearchEndpointId = qnaAzureSearchEndpointId;
             return this;
         }
 
-        public Builder setQnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
+        public Builder qnaAzureSearchEndpointKey(@Nullable String qnaAzureSearchEndpointKey) {
             this.qnaAzureSearchEndpointKey = qnaAzureSearchEndpointKey;
             return this;
         }
 
-        public Builder setQnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
+        public Builder qnaRuntimeEndpoint(@Nullable String qnaRuntimeEndpoint) {
             this.qnaRuntimeEndpoint = qnaRuntimeEndpoint;
             return this;
         }
 
-        public Builder setStatisticsEnabled(@Nullable Boolean statisticsEnabled) {
+        public Builder statisticsEnabled(@Nullable Boolean statisticsEnabled) {
             this.statisticsEnabled = statisticsEnabled;
             return this;
         }
 
-        public Builder setStorageAccountConnectionString(@Nullable String storageAccountConnectionString) {
+        public Builder storageAccountConnectionString(@Nullable String storageAccountConnectionString) {
             this.storageAccountConnectionString = storageAccountConnectionString;
             return this;
         }
 
-        public Builder setSuperUser(@Nullable String superUser) {
+        public Builder superUser(@Nullable String superUser) {
             this.superUser = superUser;
             return this;
         }
 
-        public Builder setWebsiteName(@Nullable String websiteName) {
+        public Builder websiteName(@Nullable String websiteName) {
             this.websiteName = websiteName;
             return this;
         }

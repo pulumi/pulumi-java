@@ -15,8 +15,8 @@ public final class ResourceIdResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ResourceIdResponse(String type) {
+    @OutputCustomType.Constructor
+    private ResourceIdResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceIdResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -21,10 +21,10 @@ public final class RouteResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"path","port"})
+    @OutputCustomType.Constructor
     private RouteResponse(
-        String path,
-        Integer port) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.path = path;
         this.port = port;
     }
@@ -66,12 +66,12 @@ public final class RouteResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

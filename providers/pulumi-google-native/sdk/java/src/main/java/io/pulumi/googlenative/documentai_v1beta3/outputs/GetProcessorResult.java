@@ -50,16 +50,16 @@ public final class GetProcessorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","defaultProcessorVersion","displayName","kmsKeyName","name","processEndpoint","state","type"})
+    @OutputCustomType.Constructor
     private GetProcessorResult(
-        String createTime,
-        String defaultProcessorVersion,
-        String displayName,
-        String kmsKeyName,
-        String name,
-        String processEndpoint,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("defaultProcessorVersion") String defaultProcessorVersion,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("processEndpoint") String processEndpoint,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.defaultProcessorVersion = defaultProcessorVersion;
         this.displayName = displayName;
@@ -161,42 +161,42 @@ public final class GetProcessorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDefaultProcessorVersion(String defaultProcessorVersion) {
+        public Builder defaultProcessorVersion(String defaultProcessorVersion) {
             this.defaultProcessorVersion = Objects.requireNonNull(defaultProcessorVersion);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProcessEndpoint(String processEndpoint) {
+        public Builder processEndpoint(String processEndpoint) {
             this.processEndpoint = Objects.requireNonNull(processEndpoint);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

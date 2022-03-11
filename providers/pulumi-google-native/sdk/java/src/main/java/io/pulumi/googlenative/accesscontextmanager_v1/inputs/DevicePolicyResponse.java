@@ -139,32 +139,32 @@ public final class DevicePolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.requireScreenlock = defaults.requireScreenlock;
         }
 
-        public Builder setAllowedDeviceManagementLevels(List<String> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(List<String> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = Objects.requireNonNull(allowedDeviceManagementLevels);
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = Objects.requireNonNull(allowedEncryptionStatuses);
             return this;
         }
 
-        public Builder setOsConstraints(List<OsConstraintResponse> osConstraints) {
+        public Builder osConstraints(List<OsConstraintResponse> osConstraints) {
             this.osConstraints = Objects.requireNonNull(osConstraints);
             return this;
         }
 
-        public Builder setRequireAdminApproval(Boolean requireAdminApproval) {
+        public Builder requireAdminApproval(Boolean requireAdminApproval) {
             this.requireAdminApproval = Objects.requireNonNull(requireAdminApproval);
             return this;
         }
 
-        public Builder setRequireCorpOwned(Boolean requireCorpOwned) {
+        public Builder requireCorpOwned(Boolean requireCorpOwned) {
             this.requireCorpOwned = Objects.requireNonNull(requireCorpOwned);
             return this;
         }
 
-        public Builder setRequireScreenlock(Boolean requireScreenlock) {
+        public Builder requireScreenlock(Boolean requireScreenlock) {
             this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
             return this;
         }

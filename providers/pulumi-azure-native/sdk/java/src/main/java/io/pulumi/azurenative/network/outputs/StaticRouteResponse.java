@@ -28,11 +28,11 @@ public final class StaticRouteResponse {
      */
     private final @Nullable String nextHopIpAddress;
 
-    @OutputCustomType.Constructor({"addressPrefixes","name","nextHopIpAddress"})
+    @OutputCustomType.Constructor
     private StaticRouteResponse(
-        @Nullable List<String> addressPrefixes,
-        @Nullable String name,
-        @Nullable String nextHopIpAddress) {
+        @OutputCustomType.Parameter("addressPrefixes") @Nullable List<String> addressPrefixes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress) {
         this.addressPrefixes = addressPrefixes;
         this.name = name;
         this.nextHopIpAddress = nextHopIpAddress;
@@ -84,17 +84,17 @@ public final class StaticRouteResponse {
     	      this.nextHopIpAddress = defaults.nextHopIpAddress;
         }
 
-        public Builder setAddressPrefixes(@Nullable List<String> addressPrefixes) {
+        public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }

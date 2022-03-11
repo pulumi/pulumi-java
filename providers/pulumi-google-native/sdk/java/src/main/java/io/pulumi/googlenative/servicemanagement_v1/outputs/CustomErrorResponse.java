@@ -22,10 +22,10 @@ public final class CustomErrorResponse {
      */
     private final List<String> types;
 
-    @OutputCustomType.Constructor({"rules","types"})
+    @OutputCustomType.Constructor
     private CustomErrorResponse(
-        List<CustomErrorRuleResponse> rules,
-        List<String> types) {
+        @OutputCustomType.Parameter("rules") List<CustomErrorRuleResponse> rules,
+        @OutputCustomType.Parameter("types") List<String> types) {
         this.rules = rules;
         this.types = types;
     }
@@ -67,12 +67,12 @@ public final class CustomErrorResponse {
     	      this.types = defaults.types;
         }
 
-        public Builder setRules(List<CustomErrorRuleResponse> rules) {
+        public Builder rules(List<CustomErrorRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }

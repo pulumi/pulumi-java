@@ -38,13 +38,13 @@ public final class ServiceLoadMetricDescriptionResponse {
      */
     private final @Nullable String weight;
 
-    @OutputCustomType.Constructor({"defaultLoad","name","primaryDefaultLoad","secondaryDefaultLoad","weight"})
+    @OutputCustomType.Constructor
     private ServiceLoadMetricDescriptionResponse(
-        @Nullable Integer defaultLoad,
-        String name,
-        @Nullable Integer primaryDefaultLoad,
-        @Nullable Integer secondaryDefaultLoad,
-        @Nullable String weight) {
+        @OutputCustomType.Parameter("defaultLoad") @Nullable Integer defaultLoad,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryDefaultLoad") @Nullable Integer primaryDefaultLoad,
+        @OutputCustomType.Parameter("secondaryDefaultLoad") @Nullable Integer secondaryDefaultLoad,
+        @OutputCustomType.Parameter("weight") @Nullable String weight) {
         this.defaultLoad = defaultLoad;
         this.name = name;
         this.primaryDefaultLoad = primaryDefaultLoad;
@@ -116,27 +116,27 @@ public final class ServiceLoadMetricDescriptionResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setDefaultLoad(@Nullable Integer defaultLoad) {
+        public Builder defaultLoad(@Nullable Integer defaultLoad) {
             this.defaultLoad = defaultLoad;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
+        public Builder primaryDefaultLoad(@Nullable Integer primaryDefaultLoad) {
             this.primaryDefaultLoad = primaryDefaultLoad;
             return this;
         }
 
-        public Builder setSecondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
+        public Builder secondaryDefaultLoad(@Nullable Integer secondaryDefaultLoad) {
             this.secondaryDefaultLoad = secondaryDefaultLoad;
             return this;
         }
 
-        public Builder setWeight(@Nullable String weight) {
+        public Builder weight(@Nullable String weight) {
             this.weight = weight;
             return this;
         }

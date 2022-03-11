@@ -186,82 +186,82 @@ public final class CxFlowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers) {
+        public Builder eventHandlers(@Nullable Input<List<CxFlowEventHandlerArgs>> eventHandlers) {
             this.eventHandlers = eventHandlers;
             return this;
         }
 
-        public Builder setEventHandlers(@Nullable List<CxFlowEventHandlerArgs> eventHandlers) {
+        public Builder eventHandlers(@Nullable List<CxFlowEventHandlerArgs> eventHandlers) {
             this.eventHandlers = Input.ofNullable(eventHandlers);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setNluSettings(@Nullable Input<CxFlowNluSettingsArgs> nluSettings) {
+        public Builder nluSettings(@Nullable Input<CxFlowNluSettingsArgs> nluSettings) {
             this.nluSettings = nluSettings;
             return this;
         }
 
-        public Builder setNluSettings(@Nullable CxFlowNluSettingsArgs nluSettings) {
+        public Builder nluSettings(@Nullable CxFlowNluSettingsArgs nluSettings) {
             this.nluSettings = Input.ofNullable(nluSettings);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable Input<List<String>> transitionRouteGroups) {
             this.transitionRouteGroups = transitionRouteGroups;
             return this;
         }
 
-        public Builder setTransitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
+        public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Input.ofNullable(transitionRouteGroups);
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable Input<List<CxFlowTransitionRouteArgs>> transitionRoutes) {
             this.transitionRoutes = transitionRoutes;
             return this;
         }
 
-        public Builder setTransitionRoutes(@Nullable List<CxFlowTransitionRouteArgs> transitionRoutes) {
+        public Builder transitionRoutes(@Nullable List<CxFlowTransitionRouteArgs> transitionRoutes) {
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }

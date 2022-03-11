@@ -21,10 +21,10 @@ public final class LoggingDestinationResponse {
      */
     private final String monitoredResource;
 
-    @OutputCustomType.Constructor({"logs","monitoredResource"})
+    @OutputCustomType.Constructor
     private LoggingDestinationResponse(
-        List<String> logs,
-        String monitoredResource) {
+        @OutputCustomType.Parameter("logs") List<String> logs,
+        @OutputCustomType.Parameter("monitoredResource") String monitoredResource) {
         this.logs = logs;
         this.monitoredResource = monitoredResource;
     }
@@ -66,12 +66,12 @@ public final class LoggingDestinationResponse {
     	      this.monitoredResource = defaults.monitoredResource;
         }
 
-        public Builder setLogs(List<String> logs) {
+        public Builder logs(List<String> logs) {
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
 
-        public Builder setMonitoredResource(String monitoredResource) {
+        public Builder monitoredResource(String monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }

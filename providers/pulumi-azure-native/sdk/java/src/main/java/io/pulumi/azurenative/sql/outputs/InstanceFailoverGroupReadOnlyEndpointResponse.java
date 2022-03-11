@@ -17,8 +17,8 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse {
      */
     private final @Nullable String failoverPolicy;
 
-    @OutputCustomType.Constructor({"failoverPolicy"})
-    private InstanceFailoverGroupReadOnlyEndpointResponse(@Nullable String failoverPolicy) {
+    @OutputCustomType.Constructor
+    private InstanceFailoverGroupReadOnlyEndpointResponse(@OutputCustomType.Parameter("failoverPolicy") @Nullable String failoverPolicy) {
         this.failoverPolicy = failoverPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse {
     	      this.failoverPolicy = defaults.failoverPolicy;
         }
 
-        public Builder setFailoverPolicy(@Nullable String failoverPolicy) {
+        public Builder failoverPolicy(@Nullable String failoverPolicy) {
             this.failoverPolicy = failoverPolicy;
             return this;
         }

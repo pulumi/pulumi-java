@@ -119,52 +119,52 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssociationName(@Nullable Input<String> associationName) {
+        public Builder associationName(@Nullable Input<String> associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = Input.ofNullable(associationName);
             return this;
         }
 
-        public Builder setGuestDiagnosticSettingsName(Input<String> guestDiagnosticSettingsName) {
+        public Builder guestDiagnosticSettingsName(Input<String> guestDiagnosticSettingsName) {
             this.guestDiagnosticSettingsName = Objects.requireNonNull(guestDiagnosticSettingsName);
             return this;
         }
 
-        public Builder setGuestDiagnosticSettingsName(String guestDiagnosticSettingsName) {
+        public Builder guestDiagnosticSettingsName(String guestDiagnosticSettingsName) {
             this.guestDiagnosticSettingsName = Input.of(Objects.requireNonNull(guestDiagnosticSettingsName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

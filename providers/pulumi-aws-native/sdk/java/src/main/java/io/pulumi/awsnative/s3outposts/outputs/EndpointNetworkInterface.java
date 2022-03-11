@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class EndpointNetworkInterface {
     private final String networkInterfaceId;
 
-    @OutputCustomType.Constructor({"networkInterfaceId"})
-    private EndpointNetworkInterface(String networkInterfaceId) {
+    @OutputCustomType.Constructor
+    private EndpointNetworkInterface(@OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.networkInterfaceId = networkInterfaceId;
     }
 
@@ -40,7 +40,7 @@ public final class EndpointNetworkInterface {
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }

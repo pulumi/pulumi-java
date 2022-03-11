@@ -32,12 +32,12 @@ public final class GitHubActionContainerConfigurationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"imageName","password","serverUrl","username"})
+    @OutputCustomType.Constructor
     private GitHubActionContainerConfigurationResponse(
-        @Nullable String imageName,
-        @Nullable String password,
-        @Nullable String serverUrl,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("imageName") @Nullable String imageName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("serverUrl") @Nullable String serverUrl,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.imageName = imageName;
         this.password = password;
         this.serverUrl = serverUrl;
@@ -99,22 +99,22 @@ public final class GitHubActionContainerConfigurationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServerUrl(@Nullable String serverUrl) {
+        public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

@@ -33,12 +33,12 @@ public final class VirtualHubRouteV2Response {
      */
     private final @Nullable List<String> nextHops;
 
-    @OutputCustomType.Constructor({"destinationType","destinations","nextHopType","nextHops"})
+    @OutputCustomType.Constructor
     private VirtualHubRouteV2Response(
-        @Nullable String destinationType,
-        @Nullable List<String> destinations,
-        @Nullable String nextHopType,
-        @Nullable List<String> nextHops) {
+        @OutputCustomType.Parameter("destinationType") @Nullable String destinationType,
+        @OutputCustomType.Parameter("destinations") @Nullable List<String> destinations,
+        @OutputCustomType.Parameter("nextHopType") @Nullable String nextHopType,
+        @OutputCustomType.Parameter("nextHops") @Nullable List<String> nextHops) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.nextHopType = nextHopType;
@@ -100,22 +100,22 @@ public final class VirtualHubRouteV2Response {
     	      this.nextHops = defaults.nextHops;
         }
 
-        public Builder setDestinationType(@Nullable String destinationType) {
+        public Builder destinationType(@Nullable String destinationType) {
             this.destinationType = destinationType;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setNextHopType(@Nullable String nextHopType) {
+        public Builder nextHopType(@Nullable String nextHopType) {
             this.nextHopType = nextHopType;
             return this;
         }
 
-        public Builder setNextHops(@Nullable List<String> nextHops) {
+        public Builder nextHops(@Nullable List<String> nextHops) {
             this.nextHops = nextHops;
             return this;
         }

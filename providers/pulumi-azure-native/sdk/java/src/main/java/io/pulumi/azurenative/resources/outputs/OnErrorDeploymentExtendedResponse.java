@@ -27,11 +27,11 @@ public final class OnErrorDeploymentExtendedResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"deploymentName","provisioningState","type"})
+    @OutputCustomType.Constructor
     private OnErrorDeploymentExtendedResponse(
-        @Nullable String deploymentName,
-        String provisioningState,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("deploymentName") @Nullable String deploymentName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.deploymentName = deploymentName;
         this.provisioningState = provisioningState;
         this.type = type;
@@ -83,17 +83,17 @@ public final class OnErrorDeploymentExtendedResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeploymentName(@Nullable String deploymentName) {
+        public Builder deploymentName(@Nullable String deploymentName) {
             this.deploymentName = deploymentName;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

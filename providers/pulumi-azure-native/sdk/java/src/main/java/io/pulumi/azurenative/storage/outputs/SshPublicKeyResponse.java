@@ -22,10 +22,10 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"description","key"})
+    @OutputCustomType.Constructor
     private SshPublicKeyResponse(
-        @Nullable String description,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.description = description;
         this.key = key;
     }
@@ -67,12 +67,12 @@ public final class SshPublicKeyResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

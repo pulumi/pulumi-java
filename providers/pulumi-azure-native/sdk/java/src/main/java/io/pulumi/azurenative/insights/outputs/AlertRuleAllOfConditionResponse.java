@@ -16,8 +16,8 @@ public final class AlertRuleAllOfConditionResponse {
      */
     private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
-    @OutputCustomType.Constructor({"allOf"})
-    private AlertRuleAllOfConditionResponse(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
+    @OutputCustomType.Constructor
+    private AlertRuleAllOfConditionResponse(@OutputCustomType.Parameter("allOf") List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
         this.allOf = allOf;
     }
 
@@ -49,7 +49,7 @@ public final class AlertRuleAllOfConditionResponse {
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
+        public Builder allOf(List<AlertRuleAnyOfOrLeafConditionResponse> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }

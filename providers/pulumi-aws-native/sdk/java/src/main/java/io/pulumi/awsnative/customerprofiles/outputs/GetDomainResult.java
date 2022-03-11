@@ -45,14 +45,14 @@ public final class GetDomainResult {
      */
     private final @Nullable List<DomainTag> tags;
 
-    @OutputCustomType.Constructor({"createdAt","deadLetterQueueUrl","defaultEncryptionKey","defaultExpirationDays","lastUpdatedAt","tags"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        @Nullable String createdAt,
-        @Nullable String deadLetterQueueUrl,
-        @Nullable String defaultEncryptionKey,
-        @Nullable Integer defaultExpirationDays,
-        @Nullable String lastUpdatedAt,
-        @Nullable List<DomainTag> tags) {
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("deadLetterQueueUrl") @Nullable String deadLetterQueueUrl,
+        @OutputCustomType.Parameter("defaultEncryptionKey") @Nullable String defaultEncryptionKey,
+        @OutputCustomType.Parameter("defaultExpirationDays") @Nullable Integer defaultExpirationDays,
+        @OutputCustomType.Parameter("lastUpdatedAt") @Nullable String lastUpdatedAt,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainTag> tags) {
         this.createdAt = createdAt;
         this.deadLetterQueueUrl = deadLetterQueueUrl;
         this.defaultEncryptionKey = defaultEncryptionKey;
@@ -134,32 +134,32 @@ public final class GetDomainResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setDeadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
+        public Builder deadLetterQueueUrl(@Nullable String deadLetterQueueUrl) {
             this.deadLetterQueueUrl = deadLetterQueueUrl;
             return this;
         }
 
-        public Builder setDefaultEncryptionKey(@Nullable String defaultEncryptionKey) {
+        public Builder defaultEncryptionKey(@Nullable String defaultEncryptionKey) {
             this.defaultEncryptionKey = defaultEncryptionKey;
             return this;
         }
 
-        public Builder setDefaultExpirationDays(@Nullable Integer defaultExpirationDays) {
+        public Builder defaultExpirationDays(@Nullable Integer defaultExpirationDays) {
             this.defaultExpirationDays = defaultExpirationDays;
             return this;
         }
 
-        public Builder setLastUpdatedAt(@Nullable String lastUpdatedAt) {
+        public Builder lastUpdatedAt(@Nullable String lastUpdatedAt) {
             this.lastUpdatedAt = lastUpdatedAt;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainTag> tags) {
+        public Builder tags(@Nullable List<DomainTag> tags) {
             this.tags = tags;
             return this;
         }

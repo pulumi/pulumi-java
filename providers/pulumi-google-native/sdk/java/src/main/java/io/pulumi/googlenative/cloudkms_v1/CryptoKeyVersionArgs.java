@@ -120,62 +120,62 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
     	      this.state = defaults.state;
         }
 
-        public Builder setCryptoKeyId(Input<String> cryptoKeyId) {
+        public Builder cryptoKeyId(Input<String> cryptoKeyId) {
             this.cryptoKeyId = Objects.requireNonNull(cryptoKeyId);
             return this;
         }
 
-        public Builder setCryptoKeyId(String cryptoKeyId) {
+        public Builder cryptoKeyId(String cryptoKeyId) {
             this.cryptoKeyId = Input.of(Objects.requireNonNull(cryptoKeyId));
             return this;
         }
 
-        public Builder setExternalProtectionLevelOptions(@Nullable Input<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions) {
+        public Builder externalProtectionLevelOptions(@Nullable Input<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = externalProtectionLevelOptions;
             return this;
         }
 
-        public Builder setExternalProtectionLevelOptions(@Nullable ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
+        public Builder externalProtectionLevelOptions(@Nullable ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = Input.ofNullable(externalProtectionLevelOptions);
             return this;
         }
 
-        public Builder setKeyRingId(Input<String> keyRingId) {
+        public Builder keyRingId(Input<String> keyRingId) {
             this.keyRingId = Objects.requireNonNull(keyRingId);
             return this;
         }
 
-        public Builder setKeyRingId(String keyRingId) {
+        public Builder keyRingId(String keyRingId) {
             this.keyRingId = Input.of(Objects.requireNonNull(keyRingId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<CryptoKeyVersionState> state) {
+        public Builder state(@Nullable Input<CryptoKeyVersionState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable CryptoKeyVersionState state) {
+        public Builder state(@Nullable CryptoKeyVersionState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

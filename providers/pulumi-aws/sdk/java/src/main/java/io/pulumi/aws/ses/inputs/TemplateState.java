@@ -118,52 +118,52 @@ public final class TemplateState extends io.pulumi.resources.ResourceArgs {
     	      this.text = defaults.text;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setHtml(@Nullable Input<String> html) {
+        public Builder html(@Nullable Input<String> html) {
             this.html = html;
             return this;
         }
 
-        public Builder setHtml(@Nullable String html) {
+        public Builder html(@Nullable String html) {
             this.html = Input.ofNullable(html);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSubject(@Nullable Input<String> subject) {
+        public Builder subject(@Nullable Input<String> subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setSubject(@Nullable String subject) {
+        public Builder subject(@Nullable String subject) {
             this.subject = Input.ofNullable(subject);
             return this;
         }
 
-        public Builder setText(@Nullable Input<String> text) {
+        public Builder text(@Nullable Input<String> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = Input.ofNullable(text);
             return this;
         }

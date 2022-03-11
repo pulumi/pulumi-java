@@ -32,12 +32,12 @@ public final class TemplateParameterResponse {
      */
     private final ParameterValidationResponse validation;
 
-    @OutputCustomType.Constructor({"description","fields","name","validation"})
+    @OutputCustomType.Constructor
     private TemplateParameterResponse(
-        String description,
-        List<String> fields,
-        String name,
-        ParameterValidationResponse validation) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fields") List<String> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("validation") ParameterValidationResponse validation) {
         this.description = description;
         this.fields = fields;
         this.name = name;
@@ -99,22 +99,22 @@ public final class TemplateParameterResponse {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFields(List<String> fields) {
+        public Builder fields(List<String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValidation(ParameterValidationResponse validation) {
+        public Builder validation(ParameterValidationResponse validation) {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }

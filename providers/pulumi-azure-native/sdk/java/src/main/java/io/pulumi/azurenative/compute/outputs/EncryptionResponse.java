@@ -22,10 +22,10 @@ public final class EncryptionResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId","type"})
+    @OutputCustomType.Constructor
     private EncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class EncryptionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

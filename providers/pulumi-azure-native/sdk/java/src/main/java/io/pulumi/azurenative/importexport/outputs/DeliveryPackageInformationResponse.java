@@ -33,12 +33,12 @@ public final class DeliveryPackageInformationResponse {
      */
     private final String trackingNumber;
 
-    @OutputCustomType.Constructor({"carrierName","driveCount","shipDate","trackingNumber"})
+    @OutputCustomType.Constructor
     private DeliveryPackageInformationResponse(
-        String carrierName,
-        @Nullable Double driveCount,
-        @Nullable String shipDate,
-        String trackingNumber) {
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("driveCount") @Nullable Double driveCount,
+        @OutputCustomType.Parameter("shipDate") @Nullable String shipDate,
+        @OutputCustomType.Parameter("trackingNumber") String trackingNumber) {
         this.carrierName = carrierName;
         this.driveCount = driveCount;
         this.shipDate = shipDate;
@@ -100,22 +100,22 @@ public final class DeliveryPackageInformationResponse {
     	      this.trackingNumber = defaults.trackingNumber;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setDriveCount(@Nullable Double driveCount) {
+        public Builder driveCount(@Nullable Double driveCount) {
             this.driveCount = driveCount;
             return this;
         }
 
-        public Builder setShipDate(@Nullable String shipDate) {
+        public Builder shipDate(@Nullable String shipDate) {
             this.shipDate = shipDate;
             return this;
         }
 
-        public Builder setTrackingNumber(String trackingNumber) {
+        public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }

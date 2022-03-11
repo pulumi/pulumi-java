@@ -75,12 +75,12 @@ public final class ResourceSetDescriptionResponse extends io.pulumi.resources.In
     	      this.exceptions = defaults.exceptions;
         }
 
-        public Builder setElements(@Nullable List<String> elements) {
+        public Builder elements(@Nullable List<String> elements) {
             this.elements = elements;
             return this;
         }
 
-        public Builder setExceptions(@Nullable List<String> exceptions) {
+        public Builder exceptions(@Nullable List<String> exceptions) {
             this.exceptions = exceptions;
             return this;
         }

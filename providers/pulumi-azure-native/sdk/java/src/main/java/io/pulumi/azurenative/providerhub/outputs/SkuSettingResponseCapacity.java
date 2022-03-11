@@ -17,12 +17,12 @@ public final class SkuSettingResponseCapacity {
     private final Integer minimum;
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor({"$default","maximum","minimum","scaleType"})
+    @OutputCustomType.Constructor
     private SkuSettingResponseCapacity(
-        @Nullable Integer $default,
-        @Nullable Integer maximum,
-        Integer minimum,
-        @Nullable String scaleType) {
+        @OutputCustomType.Parameter("default") @Nullable Integer $default,
+        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
+        @OutputCustomType.Parameter("minimum") Integer minimum,
+        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.$default = $default;
         this.maximum = maximum;
         this.minimum = minimum;
@@ -68,22 +68,22 @@ public final class SkuSettingResponseCapacity {
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder set$default(@Nullable Integer $default) {
+        public Builder $default(@Nullable Integer $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMinimum(Integer minimum) {
+        public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setScaleType(@Nullable String scaleType) {
+        public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
         }

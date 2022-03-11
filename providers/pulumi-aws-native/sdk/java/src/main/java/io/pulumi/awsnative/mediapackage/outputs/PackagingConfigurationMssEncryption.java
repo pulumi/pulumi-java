@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class PackagingConfigurationMssEncryption {
     private final PackagingConfigurationSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private PackagingConfigurationMssEncryption(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private PackagingConfigurationMssEncryption(@OutputCustomType.Parameter("spekeKeyProvider") PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 
@@ -40,7 +40,7 @@ public final class PackagingConfigurationMssEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(PackagingConfigurationSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

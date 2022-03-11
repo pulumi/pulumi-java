@@ -179,92 +179,92 @@ public final class PhraseMatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionTag = defaults.versionTag;
         }
 
-        public Builder setActive(@Nullable Input<Boolean> active) {
+        public Builder active(@Nullable Input<Boolean> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = Input.ofNullable(active);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPhraseMatchRuleGroups(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
+        public Builder phraseMatchRuleGroups(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs>> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = phraseMatchRuleGroups;
             return this;
         }
 
-        public Builder setPhraseMatchRuleGroups(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
+        public Builder phraseMatchRuleGroups(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = Input.ofNullable(phraseMatchRuleGroups);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRoleMatch(@Nullable Input<PhraseMatcherRoleMatch> roleMatch) {
+        public Builder roleMatch(@Nullable Input<PhraseMatcherRoleMatch> roleMatch) {
             this.roleMatch = roleMatch;
             return this;
         }
 
-        public Builder setRoleMatch(@Nullable PhraseMatcherRoleMatch roleMatch) {
+        public Builder roleMatch(@Nullable PhraseMatcherRoleMatch roleMatch) {
             this.roleMatch = Input.ofNullable(roleMatch);
             return this;
         }
 
-        public Builder setType(Input<PhraseMatcherType> type) {
+        public Builder type(Input<PhraseMatcherType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(PhraseMatcherType type) {
+        public Builder type(PhraseMatcherType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVersionTag(@Nullable Input<String> versionTag) {
+        public Builder versionTag(@Nullable Input<String> versionTag) {
             this.versionTag = versionTag;
             return this;
         }
 
-        public Builder setVersionTag(@Nullable String versionTag) {
+        public Builder versionTag(@Nullable String versionTag) {
             this.versionTag = Input.ofNullable(versionTag);
             return this;
         }

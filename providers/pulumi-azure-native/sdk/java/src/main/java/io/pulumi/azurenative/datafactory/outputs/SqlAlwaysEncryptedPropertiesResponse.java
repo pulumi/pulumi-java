@@ -37,12 +37,12 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
-    @OutputCustomType.Constructor({"alwaysEncryptedAkvAuthType","credential","servicePrincipalId","servicePrincipalKey"})
+    @OutputCustomType.Constructor
     private SqlAlwaysEncryptedPropertiesResponse(
-        String alwaysEncryptedAkvAuthType,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        @OutputCustomType.Parameter("alwaysEncryptedAkvAuthType") String alwaysEncryptedAkvAuthType,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
         this.alwaysEncryptedAkvAuthType = alwaysEncryptedAkvAuthType;
         this.credential = credential;
         this.servicePrincipalId = servicePrincipalId;
@@ -104,22 +104,22 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
     	      this.servicePrincipalKey = defaults.servicePrincipalKey;
         }
 
-        public Builder setAlwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
+        public Builder alwaysEncryptedAkvAuthType(String alwaysEncryptedAkvAuthType) {
             this.alwaysEncryptedAkvAuthType = Objects.requireNonNull(alwaysEncryptedAkvAuthType);
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }

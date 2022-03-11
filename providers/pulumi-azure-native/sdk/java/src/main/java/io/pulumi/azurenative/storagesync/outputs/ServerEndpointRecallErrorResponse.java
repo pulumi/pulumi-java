@@ -21,10 +21,10 @@ public final class ServerEndpointRecallErrorResponse {
      */
     private final Integer errorCode;
 
-    @OutputCustomType.Constructor({"count","errorCode"})
+    @OutputCustomType.Constructor
     private ServerEndpointRecallErrorResponse(
-        Double count,
-        Integer errorCode) {
+        @OutputCustomType.Parameter("count") Double count,
+        @OutputCustomType.Parameter("errorCode") Integer errorCode) {
         this.count = count;
         this.errorCode = errorCode;
     }
@@ -66,12 +66,12 @@ public final class ServerEndpointRecallErrorResponse {
     	      this.errorCode = defaults.errorCode;
         }
 
-        public Builder setCount(Double count) {
+        public Builder count(Double count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setErrorCode(Integer errorCode) {
+        public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }

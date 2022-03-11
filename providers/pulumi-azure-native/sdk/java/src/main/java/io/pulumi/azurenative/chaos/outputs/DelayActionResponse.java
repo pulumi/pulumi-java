@@ -26,11 +26,11 @@ public final class DelayActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"duration","name","type"})
+    @OutputCustomType.Constructor
     private DelayActionResponse(
-        String duration,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.duration = duration;
         this.name = name;
         this.type = type;
@@ -83,17 +83,17 @@ public final class DelayActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

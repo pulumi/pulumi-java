@@ -41,14 +41,14 @@ public final class GetDebugSessionResult {
      */
     private final Integer validity;
 
-    @OutputCustomType.Constructor({"count","filter","name","timeout","tracesize","validity"})
+    @OutputCustomType.Constructor
     private GetDebugSessionResult(
-        Integer count,
-        String filter,
-        String name,
-        String timeout,
-        Integer tracesize,
-        Integer validity) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeout") String timeout,
+        @OutputCustomType.Parameter("tracesize") Integer tracesize,
+        @OutputCustomType.Parameter("validity") Integer validity) {
         this.count = count;
         this.filter = filter;
         this.name = name;
@@ -130,32 +130,32 @@ public final class GetDebugSessionResult {
     	      this.validity = defaults.validity;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
 
-        public Builder setTracesize(Integer tracesize) {
+        public Builder tracesize(Integer tracesize) {
             this.tracesize = Objects.requireNonNull(tracesize);
             return this;
         }
 
-        public Builder setValidity(Integer validity) {
+        public Builder validity(Integer validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }

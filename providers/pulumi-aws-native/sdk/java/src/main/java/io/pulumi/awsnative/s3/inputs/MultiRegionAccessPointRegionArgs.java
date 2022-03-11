@@ -48,12 +48,12 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }

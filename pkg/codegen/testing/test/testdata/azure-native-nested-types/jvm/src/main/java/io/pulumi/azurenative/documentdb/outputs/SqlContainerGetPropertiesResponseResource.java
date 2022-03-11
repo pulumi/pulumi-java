@@ -17,8 +17,8 @@ public final class SqlContainerGetPropertiesResponseResource {
      */
     private final @Nullable IndexingPolicyResponse indexingPolicy;
 
-    @OutputCustomType.Constructor({"indexingPolicy"})
-    private SqlContainerGetPropertiesResponseResource(@Nullable IndexingPolicyResponse indexingPolicy) {
+    @OutputCustomType.Constructor
+    private SqlContainerGetPropertiesResponseResource(@OutputCustomType.Parameter("indexingPolicy") @Nullable IndexingPolicyResponse indexingPolicy) {
         this.indexingPolicy = indexingPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class SqlContainerGetPropertiesResponseResource {
     	      this.indexingPolicy = defaults.indexingPolicy;
         }
 
-        public Builder setIndexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
+        public Builder indexingPolicy(@Nullable IndexingPolicyResponse indexingPolicy) {
             this.indexingPolicy = indexingPolicy;
             return this;
         }

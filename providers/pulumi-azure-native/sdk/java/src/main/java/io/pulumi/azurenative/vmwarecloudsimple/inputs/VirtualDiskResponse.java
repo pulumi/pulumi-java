@@ -123,27 +123,27 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
     	      this.virtualDiskName = defaults.virtualDiskName;
         }
 
-        public Builder setControllerId(String controllerId) {
+        public Builder controllerId(String controllerId) {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
 
-        public Builder setIndependenceMode(String independenceMode) {
+        public Builder independenceMode(String independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
 
-        public Builder setTotalSize(Integer totalSize) {
+        public Builder totalSize(Integer totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
 
-        public Builder setVirtualDiskId(@Nullable String virtualDiskId) {
+        public Builder virtualDiskId(@Nullable String virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
 
-        public Builder setVirtualDiskName(String virtualDiskName) {
+        public Builder virtualDiskName(String virtualDiskName) {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }

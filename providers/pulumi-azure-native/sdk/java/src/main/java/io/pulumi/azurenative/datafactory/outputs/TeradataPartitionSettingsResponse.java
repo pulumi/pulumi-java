@@ -27,11 +27,11 @@ public final class TeradataPartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"partitionColumnName","partitionLowerBound","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private TeradataPartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionUpperBound = partitionUpperBound;
@@ -83,17 +83,17 @@ public final class TeradataPartitionSettingsResponse {
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }

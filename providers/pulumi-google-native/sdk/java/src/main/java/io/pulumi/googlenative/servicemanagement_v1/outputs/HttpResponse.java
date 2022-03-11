@@ -22,10 +22,10 @@ public final class HttpResponse {
      */
     private final List<HttpRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"fullyDecodeReservedExpansion","rules"})
+    @OutputCustomType.Constructor
     private HttpResponse(
-        Boolean fullyDecodeReservedExpansion,
-        List<HttpRuleResponse> rules) {
+        @OutputCustomType.Parameter("fullyDecodeReservedExpansion") Boolean fullyDecodeReservedExpansion,
+        @OutputCustomType.Parameter("rules") List<HttpRuleResponse> rules) {
         this.fullyDecodeReservedExpansion = fullyDecodeReservedExpansion;
         this.rules = rules;
     }
@@ -67,12 +67,12 @@ public final class HttpResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setFullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
+        public Builder fullyDecodeReservedExpansion(Boolean fullyDecodeReservedExpansion) {
             this.fullyDecodeReservedExpansion = Objects.requireNonNull(fullyDecodeReservedExpansion);
             return this;
         }
 
-        public Builder setRules(List<HttpRuleResponse> rules) {
+        public Builder rules(List<HttpRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

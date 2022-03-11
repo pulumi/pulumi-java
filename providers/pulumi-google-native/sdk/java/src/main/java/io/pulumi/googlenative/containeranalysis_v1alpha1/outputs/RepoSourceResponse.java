@@ -35,13 +35,13 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","project","repoName","tagName"})
+    @OutputCustomType.Constructor
     private RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String project,
-        String repoName,
-        String tagName) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("commitSha") String commitSha,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.project = project;
@@ -113,27 +113,27 @@ public final class RepoSourceResponse {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setCommitSha(String commitSha) {
+        public Builder commitSha(String commitSha) {
             this.commitSha = Objects.requireNonNull(commitSha);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRepoName(String repoName) {
+        public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
 
-        public Builder setTagName(String tagName) {
+        public Builder tagName(String tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }

@@ -33,12 +33,12 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","args","artifactId","localPath"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStepFileExec(
-        @Nullable String allowedExitCodes,
-        @Nullable List<String> args,
-        @Nullable String artifactId,
-        @Nullable String localPath) {
+        @OutputCustomType.Parameter("allowedExitCodes") @Nullable String allowedExitCodes,
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedExitCodes = allowedExitCodes;
         this.args = args;
         this.artifactId = artifactId;
@@ -100,22 +100,22 @@ public final class GuestPoliciesRecipeInstallStepFileExec {
     	      this.localPath = defaults.localPath;
         }
 
-        public Builder setAllowedExitCodes(@Nullable String allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable String allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }

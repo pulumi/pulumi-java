@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
      */
     private final String audioUri;
 
-    @OutputCustomType.Constructor({"audioUri"})
-    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(String audioUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse(@OutputCustomType.Parameter("audioUri") String audioUri) {
         this.audioUri = audioUri;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioRe
     	      this.audioUri = defaults.audioUri;
         }
 
-        public Builder setAudioUri(String audioUri) {
+        public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }

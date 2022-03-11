@@ -25,18 +25,18 @@ public final class DomainClusterConfig {
     private final @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig;
     private final @Nullable Boolean zoneAwarenessEnabled;
 
-    @OutputCustomType.Constructor({"dedicatedMasterCount","dedicatedMasterEnabled","dedicatedMasterType","instanceCount","instanceType","warmCount","warmEnabled","warmType","zoneAwarenessConfig","zoneAwarenessEnabled"})
+    @OutputCustomType.Constructor
     private DomainClusterConfig(
-        @Nullable Integer dedicatedMasterCount,
-        @Nullable Boolean dedicatedMasterEnabled,
-        @Nullable String dedicatedMasterType,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceType,
-        @Nullable Integer warmCount,
-        @Nullable Boolean warmEnabled,
-        @Nullable String warmType,
-        @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig,
-        @Nullable Boolean zoneAwarenessEnabled) {
+        @OutputCustomType.Parameter("dedicatedMasterCount") @Nullable Integer dedicatedMasterCount,
+        @OutputCustomType.Parameter("dedicatedMasterEnabled") @Nullable Boolean dedicatedMasterEnabled,
+        @OutputCustomType.Parameter("dedicatedMasterType") @Nullable String dedicatedMasterType,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("warmCount") @Nullable Integer warmCount,
+        @OutputCustomType.Parameter("warmEnabled") @Nullable Boolean warmEnabled,
+        @OutputCustomType.Parameter("warmType") @Nullable String warmType,
+        @OutputCustomType.Parameter("zoneAwarenessConfig") @Nullable DomainZoneAwarenessConfig zoneAwarenessConfig,
+        @OutputCustomType.Parameter("zoneAwarenessEnabled") @Nullable Boolean zoneAwarenessEnabled) {
         this.dedicatedMasterCount = dedicatedMasterCount;
         this.dedicatedMasterEnabled = dedicatedMasterEnabled;
         this.dedicatedMasterType = dedicatedMasterType;
@@ -118,52 +118,52 @@ public final class DomainClusterConfig {
     	      this.zoneAwarenessEnabled = defaults.zoneAwarenessEnabled;
         }
 
-        public Builder setDedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
+        public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
             this.dedicatedMasterCount = dedicatedMasterCount;
             return this;
         }
 
-        public Builder setDedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
+        public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
             this.dedicatedMasterEnabled = dedicatedMasterEnabled;
             return this;
         }
 
-        public Builder setDedicatedMasterType(@Nullable String dedicatedMasterType) {
+        public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
             this.dedicatedMasterType = dedicatedMasterType;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setWarmCount(@Nullable Integer warmCount) {
+        public Builder warmCount(@Nullable Integer warmCount) {
             this.warmCount = warmCount;
             return this;
         }
 
-        public Builder setWarmEnabled(@Nullable Boolean warmEnabled) {
+        public Builder warmEnabled(@Nullable Boolean warmEnabled) {
             this.warmEnabled = warmEnabled;
             return this;
         }
 
-        public Builder setWarmType(@Nullable String warmType) {
+        public Builder warmType(@Nullable String warmType) {
             this.warmType = warmType;
             return this;
         }
 
-        public Builder setZoneAwarenessConfig(@Nullable DomainZoneAwarenessConfig zoneAwarenessConfig) {
+        public Builder zoneAwarenessConfig(@Nullable DomainZoneAwarenessConfig zoneAwarenessConfig) {
             this.zoneAwarenessConfig = zoneAwarenessConfig;
             return this;
         }
 
-        public Builder setZoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
+        public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }

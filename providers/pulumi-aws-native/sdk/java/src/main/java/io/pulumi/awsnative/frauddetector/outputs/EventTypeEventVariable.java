@@ -45,19 +45,19 @@ public final class EventTypeEventVariable {
     private final @Nullable List<EventTypeTag> tags;
     private final @Nullable EventTypeEventVariableVariableType variableType;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","inline","lastUpdatedTime","name","tags","variableType"})
+    @OutputCustomType.Constructor
     private EventTypeEventVariable(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable EventTypeEventVariableDataSource dataSource,
-        @Nullable EventTypeEventVariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable Boolean inline,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<EventTypeTag> tags,
-        @Nullable EventTypeEventVariableVariableType variableType) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable EventTypeEventVariableDataSource dataSource,
+        @OutputCustomType.Parameter("dataType") @Nullable EventTypeEventVariableDataType dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<EventTypeTag> tags,
+        @OutputCustomType.Parameter("variableType") @Nullable EventTypeEventVariableVariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;
@@ -161,57 +161,57 @@ public final class EventTypeEventVariable {
     	      this.variableType = defaults.variableType;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSource(@Nullable EventTypeEventVariableDataSource dataSource) {
+        public Builder dataSource(@Nullable EventTypeEventVariableDataSource dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataType(@Nullable EventTypeEventVariableDataType dataType) {
+        public Builder dataType(@Nullable EventTypeEventVariableDataType dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInline(@Nullable Boolean inline) {
+        public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventTypeTag> tags) {
+        public Builder tags(@Nullable List<EventTypeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVariableType(@Nullable EventTypeEventVariableVariableType variableType) {
+        public Builder variableType(@Nullable EventTypeEventVariableVariableType variableType) {
             this.variableType = variableType;
             return this;
         }

@@ -106,42 +106,42 @@ public final class GitHubActionContainerConfigurationArgs extends io.pulumi.reso
     	      this.username = defaults.username;
         }
 
-        public Builder setImageName(@Nullable Input<String> imageName) {
+        public Builder imageName(@Nullable Input<String> imageName) {
             this.imageName = imageName;
             return this;
         }
 
-        public Builder setImageName(@Nullable String imageName) {
+        public Builder imageName(@Nullable String imageName) {
             this.imageName = Input.ofNullable(imageName);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setServerUrl(@Nullable Input<String> serverUrl) {
+        public Builder serverUrl(@Nullable Input<String> serverUrl) {
             this.serverUrl = serverUrl;
             return this;
         }
 
-        public Builder setServerUrl(@Nullable String serverUrl) {
+        public Builder serverUrl(@Nullable String serverUrl) {
             this.serverUrl = Input.ofNullable(serverUrl);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

@@ -93,24 +93,24 @@ public final class GetArtifactSourceResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"armTemplateFolderPath","branchRef","createdDate","displayName","folderPath","id","location","name","provisioningState","securityToken","sourceType","status","tags","type","uniqueIdentifier","uri"})
+    @OutputCustomType.Constructor
     private GetArtifactSourceResult(
-        @Nullable String armTemplateFolderPath,
-        @Nullable String branchRef,
-        String createdDate,
-        @Nullable String displayName,
-        @Nullable String folderPath,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String securityToken,
-        @Nullable String sourceType,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("armTemplateFolderPath") @Nullable String armTemplateFolderPath,
+        @OutputCustomType.Parameter("branchRef") @Nullable String branchRef,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("securityToken") @Nullable String securityToken,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.armTemplateFolderPath = armTemplateFolderPath;
         this.branchRef = branchRef;
         this.createdDate = createdDate;
@@ -292,82 +292,82 @@ public final class GetArtifactSourceResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArmTemplateFolderPath(@Nullable String armTemplateFolderPath) {
+        public Builder armTemplateFolderPath(@Nullable String armTemplateFolderPath) {
             this.armTemplateFolderPath = armTemplateFolderPath;
             return this;
         }
 
-        public Builder setBranchRef(@Nullable String branchRef) {
+        public Builder branchRef(@Nullable String branchRef) {
             this.branchRef = branchRef;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable String securityToken) {
+        public Builder securityToken(@Nullable String securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

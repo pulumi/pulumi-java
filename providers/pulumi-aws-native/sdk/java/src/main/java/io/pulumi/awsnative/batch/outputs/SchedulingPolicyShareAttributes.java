@@ -15,10 +15,10 @@ public final class SchedulingPolicyShareAttributes {
     private final @Nullable String shareIdentifier;
     private final @Nullable Double weightFactor;
 
-    @OutputCustomType.Constructor({"shareIdentifier","weightFactor"})
+    @OutputCustomType.Constructor
     private SchedulingPolicyShareAttributes(
-        @Nullable String shareIdentifier,
-        @Nullable Double weightFactor) {
+        @OutputCustomType.Parameter("shareIdentifier") @Nullable String shareIdentifier,
+        @OutputCustomType.Parameter("weightFactor") @Nullable Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }
@@ -52,12 +52,12 @@ public final class SchedulingPolicyShareAttributes {
     	      this.weightFactor = defaults.weightFactor;
         }
 
-        public Builder setShareIdentifier(@Nullable String shareIdentifier) {
+        public Builder shareIdentifier(@Nullable String shareIdentifier) {
             this.shareIdentifier = shareIdentifier;
             return this;
         }
 
-        public Builder setWeightFactor(@Nullable Double weightFactor) {
+        public Builder weightFactor(@Nullable Double weightFactor) {
             this.weightFactor = weightFactor;
             return this;
         }

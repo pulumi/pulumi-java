@@ -27,11 +27,11 @@ public final class VpnGatewayIpConfigurationResponse {
      */
     private final @Nullable String publicIpAddress;
 
-    @OutputCustomType.Constructor({"id","privateIpAddress","publicIpAddress"})
+    @OutputCustomType.Constructor
     private VpnGatewayIpConfigurationResponse(
-        @Nullable String id,
-        @Nullable String privateIpAddress,
-        @Nullable String publicIpAddress) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") @Nullable String publicIpAddress) {
         this.id = id;
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;
@@ -83,17 +83,17 @@ public final class VpnGatewayIpConfigurationResponse {
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }

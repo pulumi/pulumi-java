@@ -57,16 +57,16 @@ public final class DeploymentResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"active","appName","createdTime","deploymentSettings","instances","provisioningState","source","status"})
+    @OutputCustomType.Constructor
     private DeploymentResourcePropertiesResponse(
-        Boolean active,
-        String appName,
-        String createdTime,
-        @Nullable DeploymentSettingsResponse deploymentSettings,
-        List<DeploymentInstanceResponse> instances,
-        String provisioningState,
-        @Nullable UserSourceInfoResponse source,
-        String status) {
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("appName") String appName,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deploymentSettings") @Nullable DeploymentSettingsResponse deploymentSettings,
+        @OutputCustomType.Parameter("instances") List<DeploymentInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable UserSourceInfoResponse source,
+        @OutputCustomType.Parameter("status") String status) {
         this.active = active;
         this.appName = appName;
         this.createdTime = createdTime;
@@ -168,42 +168,42 @@ public final class DeploymentResourcePropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDeploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
+        public Builder deploymentSettings(@Nullable DeploymentSettingsResponse deploymentSettings) {
             this.deploymentSettings = deploymentSettings;
             return this;
         }
 
-        public Builder setInstances(List<DeploymentInstanceResponse> instances) {
+        public Builder instances(List<DeploymentInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSource(@Nullable UserSourceInfoResponse source) {
+        public Builder source(@Nullable UserSourceInfoResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

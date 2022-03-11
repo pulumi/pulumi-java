@@ -22,10 +22,10 @@ public final class WebhookAuthenticationConfiguration {
      */
     private final @Nullable String secretToken;
 
-    @OutputCustomType.Constructor({"allowedIpRange","secretToken"})
+    @OutputCustomType.Constructor
     private WebhookAuthenticationConfiguration(
-        @Nullable String allowedIpRange,
-        @Nullable String secretToken) {
+        @OutputCustomType.Parameter("allowedIpRange") @Nullable String allowedIpRange,
+        @OutputCustomType.Parameter("secretToken") @Nullable String secretToken) {
         this.allowedIpRange = allowedIpRange;
         this.secretToken = secretToken;
     }
@@ -67,12 +67,12 @@ public final class WebhookAuthenticationConfiguration {
     	      this.secretToken = defaults.secretToken;
         }
 
-        public Builder setAllowedIpRange(@Nullable String allowedIpRange) {
+        public Builder allowedIpRange(@Nullable String allowedIpRange) {
             this.allowedIpRange = allowedIpRange;
             return this;
         }
 
-        public Builder setSecretToken(@Nullable String secretToken) {
+        public Builder secretToken(@Nullable String secretToken) {
             this.secretToken = secretToken;
             return this;
         }

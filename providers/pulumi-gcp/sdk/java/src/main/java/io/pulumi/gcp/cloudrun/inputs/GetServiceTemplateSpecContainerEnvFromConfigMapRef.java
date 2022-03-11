@@ -62,12 +62,12 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef extends io
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReferences(List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences) {
+        public Builder localObjectReferences(List<GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference> localObjectReferences) {
             this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

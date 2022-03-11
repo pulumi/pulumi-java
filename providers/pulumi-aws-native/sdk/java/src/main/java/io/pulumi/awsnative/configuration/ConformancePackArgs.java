@@ -136,62 +136,62 @@ public final class ConformancePackArgs extends io.pulumi.resources.ResourceArgs 
     	      this.templateS3Uri = defaults.templateS3Uri;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable Input<List<ConformancePackInputParameterArgs>> conformancePackInputParameters) {
             this.conformancePackInputParameters = conformancePackInputParameters;
             return this;
         }
 
-        public Builder setConformancePackInputParameters(@Nullable List<ConformancePackInputParameterArgs> conformancePackInputParameters) {
+        public Builder conformancePackInputParameters(@Nullable List<ConformancePackInputParameterArgs> conformancePackInputParameters) {
             this.conformancePackInputParameters = Input.ofNullable(conformancePackInputParameters);
             return this;
         }
 
-        public Builder setConformancePackName(@Nullable Input<String> conformancePackName) {
+        public Builder conformancePackName(@Nullable Input<String> conformancePackName) {
             this.conformancePackName = conformancePackName;
             return this;
         }
 
-        public Builder setConformancePackName(@Nullable String conformancePackName) {
+        public Builder conformancePackName(@Nullable String conformancePackName) {
             this.conformancePackName = Input.ofNullable(conformancePackName);
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable Input<String> deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable Input<String> deliveryS3Bucket) {
             this.deliveryS3Bucket = deliveryS3Bucket;
             return this;
         }
 
-        public Builder setDeliveryS3Bucket(@Nullable String deliveryS3Bucket) {
+        public Builder deliveryS3Bucket(@Nullable String deliveryS3Bucket) {
             this.deliveryS3Bucket = Input.ofNullable(deliveryS3Bucket);
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable Input<String> deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable Input<String> deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
 
-        public Builder setDeliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
+        public Builder deliveryS3KeyPrefix(@Nullable String deliveryS3KeyPrefix) {
             this.deliveryS3KeyPrefix = Input.ofNullable(deliveryS3KeyPrefix);
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable Input<String> templateBody) {
+        public Builder templateBody(@Nullable Input<String> templateBody) {
             this.templateBody = templateBody;
             return this;
         }
 
-        public Builder setTemplateBody(@Nullable String templateBody) {
+        public Builder templateBody(@Nullable String templateBody) {
             this.templateBody = Input.ofNullable(templateBody);
             return this;
         }
 
-        public Builder setTemplateS3Uri(@Nullable Input<String> templateS3Uri) {
+        public Builder templateS3Uri(@Nullable Input<String> templateS3Uri) {
             this.templateS3Uri = templateS3Uri;
             return this;
         }
 
-        public Builder setTemplateS3Uri(@Nullable String templateS3Uri) {
+        public Builder templateS3Uri(@Nullable String templateS3Uri) {
             this.templateS3Uri = Input.ofNullable(templateS3Uri);
             return this;
         }

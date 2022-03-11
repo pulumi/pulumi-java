@@ -40,13 +40,13 @@ public final class ResponsePlanIncidentTemplate {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"dedupeString","impact","notificationTargets","summary","title"})
+    @OutputCustomType.Constructor
     private ResponsePlanIncidentTemplate(
-        @Nullable String dedupeString,
-        Integer impact,
-        @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
-        @Nullable String summary,
-        String title) {
+        @OutputCustomType.Parameter("dedupeString") @Nullable String dedupeString,
+        @OutputCustomType.Parameter("impact") Integer impact,
+        @OutputCustomType.Parameter("notificationTargets") @Nullable List<ResponsePlanNotificationTargetItem> notificationTargets,
+        @OutputCustomType.Parameter("summary") @Nullable String summary,
+        @OutputCustomType.Parameter("title") String title) {
         this.dedupeString = dedupeString;
         this.impact = impact;
         this.notificationTargets = notificationTargets;
@@ -118,27 +118,27 @@ public final class ResponsePlanIncidentTemplate {
     	      this.title = defaults.title;
         }
 
-        public Builder setDedupeString(@Nullable String dedupeString) {
+        public Builder dedupeString(@Nullable String dedupeString) {
             this.dedupeString = dedupeString;
             return this;
         }
 
-        public Builder setImpact(Integer impact) {
+        public Builder impact(Integer impact) {
             this.impact = Objects.requireNonNull(impact);
             return this;
         }
 
-        public Builder setNotificationTargets(@Nullable List<ResponsePlanNotificationTargetItem> notificationTargets) {
+        public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItem> notificationTargets) {
             this.notificationTargets = notificationTargets;
             return this;
         }
 
-        public Builder setSummary(@Nullable String summary) {
+        public Builder summary(@Nullable String summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

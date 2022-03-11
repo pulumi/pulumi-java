@@ -205,52 +205,52 @@ public final class GuestConfigurationNavigationResponse extends io.pulumi.resour
     	      this.version = defaults.version;
         }
 
-        public Builder setAssignmentType(@Nullable String assignmentType) {
+        public Builder assignmentType(@Nullable String assignmentType) {
             this.assignmentType = assignmentType;
             return this;
         }
 
-        public Builder setConfigurationParameter(@Nullable List<ConfigurationParameterResponse> configurationParameter) {
+        public Builder configurationParameter(@Nullable List<ConfigurationParameterResponse> configurationParameter) {
             this.configurationParameter = configurationParameter;
             return this;
         }
 
-        public Builder setConfigurationProtectedParameter(@Nullable List<ConfigurationParameterResponse> configurationProtectedParameter) {
+        public Builder configurationProtectedParameter(@Nullable List<ConfigurationParameterResponse> configurationProtectedParameter) {
             this.configurationProtectedParameter = configurationProtectedParameter;
             return this;
         }
 
-        public Builder setConfigurationSetting(@Nullable ConfigurationSettingResponse configurationSetting) {
+        public Builder configurationSetting(@Nullable ConfigurationSettingResponse configurationSetting) {
             this.configurationSetting = configurationSetting;
             return this;
         }
 
-        public Builder setContentHash(@Nullable String contentHash) {
+        public Builder contentHash(@Nullable String contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setContentUri(@Nullable String contentUri) {
+        public Builder contentUri(@Nullable String contentUri) {
             this.contentUri = contentUri;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

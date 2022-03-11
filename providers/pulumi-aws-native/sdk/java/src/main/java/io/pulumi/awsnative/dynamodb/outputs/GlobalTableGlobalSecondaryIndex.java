@@ -20,12 +20,12 @@ public final class GlobalTableGlobalSecondaryIndex {
     private final GlobalTableProjection projection;
     private final @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor({"indexName","keySchema","projection","writeProvisionedThroughputSettings"})
+    @OutputCustomType.Constructor
     private GlobalTableGlobalSecondaryIndex(
-        String indexName,
-        List<GlobalTableKeySchema> keySchema,
-        GlobalTableProjection projection,
-        @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("keySchema") List<GlobalTableKeySchema> keySchema,
+        @OutputCustomType.Parameter("projection") GlobalTableProjection projection,
+        @OutputCustomType.Parameter("writeProvisionedThroughputSettings") @Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
         this.indexName = indexName;
         this.keySchema = keySchema;
         this.projection = projection;
@@ -71,22 +71,22 @@ public final class GlobalTableGlobalSecondaryIndex {
     	      this.writeProvisionedThroughputSettings = defaults.writeProvisionedThroughputSettings;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setKeySchema(List<GlobalTableKeySchema> keySchema) {
+        public Builder keySchema(List<GlobalTableKeySchema> keySchema) {
             this.keySchema = Objects.requireNonNull(keySchema);
             return this;
         }
 
-        public Builder setProjection(GlobalTableProjection projection) {
+        public Builder projection(GlobalTableProjection projection) {
             this.projection = Objects.requireNonNull(projection);
             return this;
         }
 
-        public Builder setWriteProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
+        public Builder writeProvisionedThroughputSettings(@Nullable GlobalTableWriteProvisionedThroughputSettings writeProvisionedThroughputSettings) {
             this.writeProvisionedThroughputSettings = writeProvisionedThroughputSettings;
             return this;
         }

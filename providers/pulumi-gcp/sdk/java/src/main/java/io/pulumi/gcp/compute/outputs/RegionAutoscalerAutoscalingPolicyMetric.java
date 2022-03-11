@@ -81,13 +81,13 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"filter","name","singleInstanceAssignment","target","type"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyMetric(
-        @Nullable String filter,
-        String name,
-        @Nullable Double singleInstanceAssignment,
-        @Nullable Double target,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("singleInstanceAssignment") @Nullable Double singleInstanceAssignment,
+        @OutputCustomType.Parameter("target") @Nullable Double target,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.filter = filter;
         this.name = name;
         this.singleInstanceAssignment = singleInstanceAssignment;
@@ -202,27 +202,27 @@ public final class RegionAutoscalerAutoscalingPolicyMetric {
     	      this.type = defaults.type;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
-        public Builder setTarget(@Nullable Double target) {
+        public Builder target(@Nullable Double target) {
             this.target = target;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

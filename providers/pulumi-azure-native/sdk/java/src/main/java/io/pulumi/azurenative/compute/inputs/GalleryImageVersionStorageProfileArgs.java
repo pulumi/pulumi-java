@@ -93,32 +93,32 @@ public final class GalleryImageVersionStorageProfileArgs extends io.pulumi.resou
     	      this.source = defaults.source;
         }
 
-        public Builder setDataDiskImages(@Nullable Input<List<GalleryDataDiskImageArgs>> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable Input<List<GalleryDataDiskImageArgs>> dataDiskImages) {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
 
-        public Builder setDataDiskImages(@Nullable List<GalleryDataDiskImageArgs> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageArgs> dataDiskImages) {
             this.dataDiskImages = Input.ofNullable(dataDiskImages);
             return this;
         }
 
-        public Builder setOsDiskImage(@Nullable Input<GalleryOSDiskImageArgs> osDiskImage) {
+        public Builder osDiskImage(@Nullable Input<GalleryOSDiskImageArgs> osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
 
-        public Builder setOsDiskImage(@Nullable GalleryOSDiskImageArgs osDiskImage) {
+        public Builder osDiskImage(@Nullable GalleryOSDiskImageArgs osDiskImage) {
             this.osDiskImage = Input.ofNullable(osDiskImage);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<GalleryArtifactVersionSourceArgs> source) {
+        public Builder source(@Nullable Input<GalleryArtifactVersionSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable GalleryArtifactVersionSourceArgs source) {
+        public Builder source(@Nullable GalleryArtifactVersionSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }

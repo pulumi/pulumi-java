@@ -34,21 +34,21 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
     private final @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration;
     private final @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode;
 
-    @OutputCustomType.Constructor({"bucketARN","bufferingHints","cloudWatchLoggingOptions","compressionFormat","dataFormatConversionConfiguration","dynamicPartitioningConfiguration","encryptionConfiguration","errorOutputPrefix","prefix","processingConfiguration","roleARN","s3BackupConfiguration","s3BackupMode"})
+    @OutputCustomType.Constructor
     private DeliveryStreamExtendedS3DestinationConfiguration(
-        String bucketARN,
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat,
-        @Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration,
-        @Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
-        @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
-        @Nullable String errorOutputPrefix,
-        @Nullable String prefix,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        String roleARN,
-        @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
-        @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
+        @OutputCustomType.Parameter("bucketARN") String bucketARN,
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat,
+        @OutputCustomType.Parameter("dataFormatConversionConfiguration") @Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration,
+        @OutputCustomType.Parameter("dynamicPartitioningConfiguration") @Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
         this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
@@ -148,67 +148,67 @@ public final class DeliveryStreamExtendedS3DestinationConfiguration {
     	      this.s3BackupMode = defaults.s3BackupMode;
         }
 
-        public Builder setBucketARN(String bucketARN) {
+        public Builder bucketARN(String bucketARN) {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setDataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration) {
+        public Builder dataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfiguration dataFormatConversionConfiguration) {
             this.dataFormatConversionConfiguration = dataFormatConversionConfiguration;
             return this;
         }
 
-        public Builder setDynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
+        public Builder dynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
             this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }

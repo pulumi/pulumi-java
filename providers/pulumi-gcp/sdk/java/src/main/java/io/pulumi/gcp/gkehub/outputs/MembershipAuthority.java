@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MembershipAuthority {
     private final String issuer;
 
-    @OutputCustomType.Constructor({"issuer"})
-    private MembershipAuthority(String issuer) {
+    @OutputCustomType.Constructor
+    private MembershipAuthority(@OutputCustomType.Parameter("issuer") String issuer) {
         this.issuer = issuer;
     }
 
@@ -40,7 +40,7 @@ public final class MembershipAuthority {
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }

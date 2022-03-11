@@ -90,32 +90,32 @@ public final class BotAliasS3BucketLogDestinationArgs extends io.pulumi.resource
     	      this.s3BucketArn = defaults.s3BucketArn;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setLogPrefix(Input<String> logPrefix) {
+        public Builder logPrefix(Input<String> logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
 
-        public Builder setLogPrefix(String logPrefix) {
+        public Builder logPrefix(String logPrefix) {
             this.logPrefix = Input.of(Objects.requireNonNull(logPrefix));
             return this;
         }
 
-        public Builder setS3BucketArn(Input<String> s3BucketArn) {
+        public Builder s3BucketArn(Input<String> s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }
 
-        public Builder setS3BucketArn(String s3BucketArn) {
+        public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Input.of(Objects.requireNonNull(s3BucketArn));
             return this;
         }

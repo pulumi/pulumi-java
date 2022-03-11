@@ -38,13 +38,13 @@ public final class ObjectCopyGrant {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"email","id","permissions","type","uri"})
+    @OutputCustomType.Constructor
     private ObjectCopyGrant(
-        @Nullable String email,
-        @Nullable String id,
-        List<String> permissions,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.email = email;
         this.id = id;
         this.permissions = permissions;
@@ -116,27 +116,27 @@ public final class ObjectCopyGrant {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

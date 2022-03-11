@@ -110,42 +110,42 @@ public final class ConnectToSourceSqlServerTaskInputArgs extends io.pulumi.resou
     	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
         }
 
-        public Builder setCheckPermissionsGroup(@Nullable Input<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup) {
+        public Builder checkPermissionsGroup(@Nullable Input<Either<String,ServerLevelPermissionsGroup>> checkPermissionsGroup) {
             this.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
 
-        public Builder setCheckPermissionsGroup(@Nullable Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
+        public Builder checkPermissionsGroup(@Nullable Either<String,ServerLevelPermissionsGroup> checkPermissionsGroup) {
             this.checkPermissionsGroup = Input.ofNullable(checkPermissionsGroup);
             return this;
         }
 
-        public Builder setCollectAgentJobs(@Nullable Input<Boolean> collectAgentJobs) {
+        public Builder collectAgentJobs(@Nullable Input<Boolean> collectAgentJobs) {
             this.collectAgentJobs = collectAgentJobs;
             return this;
         }
 
-        public Builder setCollectAgentJobs(@Nullable Boolean collectAgentJobs) {
+        public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
             this.collectAgentJobs = Input.ofNullable(collectAgentJobs);
             return this;
         }
 
-        public Builder setCollectLogins(@Nullable Input<Boolean> collectLogins) {
+        public Builder collectLogins(@Nullable Input<Boolean> collectLogins) {
             this.collectLogins = collectLogins;
             return this;
         }
 
-        public Builder setCollectLogins(@Nullable Boolean collectLogins) {
+        public Builder collectLogins(@Nullable Boolean collectLogins) {
             this.collectLogins = Input.ofNullable(collectLogins);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<SqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }

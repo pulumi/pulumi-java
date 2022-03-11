@@ -33,12 +33,12 @@ public final class VirtualNodeSpecListenerOutlierDetection {
      */
     private final Integer maxServerErrors;
 
-    @OutputCustomType.Constructor({"baseEjectionDuration","interval","maxEjectionPercent","maxServerErrors"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerOutlierDetection(
-        VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
-        VirtualNodeSpecListenerOutlierDetectionInterval interval,
-        Integer maxEjectionPercent,
-        Integer maxServerErrors) {
+        @OutputCustomType.Parameter("baseEjectionDuration") VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration,
+        @OutputCustomType.Parameter("interval") VirtualNodeSpecListenerOutlierDetectionInterval interval,
+        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("maxServerErrors") Integer maxServerErrors) {
         this.baseEjectionDuration = baseEjectionDuration;
         this.interval = interval;
         this.maxEjectionPercent = maxEjectionPercent;
@@ -101,22 +101,22 @@ public final class VirtualNodeSpecListenerOutlierDetection {
     	      this.maxServerErrors = defaults.maxServerErrors;
         }
 
-        public Builder setBaseEjectionDuration(VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration) {
+        public Builder baseEjectionDuration(VirtualNodeSpecListenerOutlierDetectionBaseEjectionDuration baseEjectionDuration) {
             this.baseEjectionDuration = Objects.requireNonNull(baseEjectionDuration);
             return this;
         }
 
-        public Builder setInterval(VirtualNodeSpecListenerOutlierDetectionInterval interval) {
+        public Builder interval(VirtualNodeSpecListenerOutlierDetectionInterval interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setMaxEjectionPercent(Integer maxEjectionPercent) {
+        public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
 
-        public Builder setMaxServerErrors(Integer maxServerErrors) {
+        public Builder maxServerErrors(Integer maxServerErrors) {
             this.maxServerErrors = Objects.requireNonNull(maxServerErrors);
             return this;
         }

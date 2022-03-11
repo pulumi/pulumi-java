@@ -72,20 +72,20 @@ public final class GetKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attributes","curveName","id","keyOps","keySize","keyUri","keyUriWithVersion","kty","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        @Nullable KeyAttributesResponse attributes,
-        @Nullable String curveName,
-        String id,
-        @Nullable List<String> keyOps,
-        @Nullable Integer keySize,
-        String keyUri,
-        String keyUriWithVersion,
-        @Nullable String kty,
-        String location,
-        String name,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("attributes") @Nullable KeyAttributesResponse attributes,
+        @OutputCustomType.Parameter("curveName") @Nullable String curveName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyOps") @Nullable List<String> keyOps,
+        @OutputCustomType.Parameter("keySize") @Nullable Integer keySize,
+        @OutputCustomType.Parameter("keyUri") String keyUri,
+        @OutputCustomType.Parameter("keyUriWithVersion") String keyUriWithVersion,
+        @OutputCustomType.Parameter("kty") @Nullable String kty,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.curveName = curveName;
         this.id = id;
@@ -223,62 +223,62 @@ public final class GetKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAttributes(@Nullable KeyAttributesResponse attributes) {
+        public Builder attributes(@Nullable KeyAttributesResponse attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setCurveName(@Nullable String curveName) {
+        public Builder curveName(@Nullable String curveName) {
             this.curveName = curveName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyOps(@Nullable List<String> keyOps) {
+        public Builder keyOps(@Nullable List<String> keyOps) {
             this.keyOps = keyOps;
             return this;
         }
 
-        public Builder setKeySize(@Nullable Integer keySize) {
+        public Builder keySize(@Nullable Integer keySize) {
             this.keySize = keySize;
             return this;
         }
 
-        public Builder setKeyUri(String keyUri) {
+        public Builder keyUri(String keyUri) {
             this.keyUri = Objects.requireNonNull(keyUri);
             return this;
         }
 
-        public Builder setKeyUriWithVersion(String keyUriWithVersion) {
+        public Builder keyUriWithVersion(String keyUriWithVersion) {
             this.keyUriWithVersion = Objects.requireNonNull(keyUriWithVersion);
             return this;
         }
 
-        public Builder setKty(@Nullable String kty) {
+        public Builder kty(@Nullable String kty) {
             this.kty = kty;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

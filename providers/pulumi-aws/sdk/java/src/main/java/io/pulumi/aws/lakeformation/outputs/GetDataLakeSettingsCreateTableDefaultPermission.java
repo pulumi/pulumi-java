@@ -21,10 +21,10 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"permissions","principal"})
+    @OutputCustomType.Constructor
     private GetDataLakeSettingsCreateTableDefaultPermission(
-        List<String> permissions,
-        String principal) {
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.permissions = permissions;
         this.principal = principal;
     }
@@ -66,12 +66,12 @@ public final class GetDataLakeSettingsCreateTableDefaultPermission {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

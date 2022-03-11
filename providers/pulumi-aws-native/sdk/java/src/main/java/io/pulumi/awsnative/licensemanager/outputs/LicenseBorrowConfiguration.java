@@ -13,10 +13,10 @@ public final class LicenseBorrowConfiguration {
     private final Boolean allowEarlyCheckIn;
     private final Integer maxTimeToLiveInMinutes;
 
-    @OutputCustomType.Constructor({"allowEarlyCheckIn","maxTimeToLiveInMinutes"})
+    @OutputCustomType.Constructor
     private LicenseBorrowConfiguration(
-        Boolean allowEarlyCheckIn,
-        Integer maxTimeToLiveInMinutes) {
+        @OutputCustomType.Parameter("allowEarlyCheckIn") Boolean allowEarlyCheckIn,
+        @OutputCustomType.Parameter("maxTimeToLiveInMinutes") Integer maxTimeToLiveInMinutes) {
         this.allowEarlyCheckIn = allowEarlyCheckIn;
         this.maxTimeToLiveInMinutes = maxTimeToLiveInMinutes;
     }
@@ -50,12 +50,12 @@ public final class LicenseBorrowConfiguration {
     	      this.maxTimeToLiveInMinutes = defaults.maxTimeToLiveInMinutes;
         }
 
-        public Builder setAllowEarlyCheckIn(Boolean allowEarlyCheckIn) {
+        public Builder allowEarlyCheckIn(Boolean allowEarlyCheckIn) {
             this.allowEarlyCheckIn = Objects.requireNonNull(allowEarlyCheckIn);
             return this;
         }
 
-        public Builder setMaxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
+        public Builder maxTimeToLiveInMinutes(Integer maxTimeToLiveInMinutes) {
             this.maxTimeToLiveInMinutes = Objects.requireNonNull(maxTimeToLiveInMinutes);
             return this;
         }

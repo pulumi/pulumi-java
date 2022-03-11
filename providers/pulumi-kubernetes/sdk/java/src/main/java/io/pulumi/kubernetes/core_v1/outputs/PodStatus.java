@@ -97,21 +97,21 @@ public final class PodStatus {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"conditions","containerStatuses","ephemeralContainerStatuses","hostIP","initContainerStatuses","message","nominatedNodeName","phase","podIP","podIPs","qosClass","reason","startTime"})
+    @OutputCustomType.Constructor
     private PodStatus(
-        @Nullable List<PodCondition> conditions,
-        @Nullable List<ContainerStatus> containerStatuses,
-        @Nullable List<ContainerStatus> ephemeralContainerStatuses,
-        @Nullable String hostIP,
-        @Nullable List<ContainerStatus> initContainerStatuses,
-        @Nullable String message,
-        @Nullable String nominatedNodeName,
-        @Nullable String phase,
-        @Nullable String podIP,
-        @Nullable List<PodIP> podIPs,
-        @Nullable String qosClass,
-        @Nullable String reason,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<PodCondition> conditions,
+        @OutputCustomType.Parameter("containerStatuses") @Nullable List<ContainerStatus> containerStatuses,
+        @OutputCustomType.Parameter("ephemeralContainerStatuses") @Nullable List<ContainerStatus> ephemeralContainerStatuses,
+        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
+        @OutputCustomType.Parameter("initContainerStatuses") @Nullable List<ContainerStatus> initContainerStatuses,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("nominatedNodeName") @Nullable String nominatedNodeName,
+        @OutputCustomType.Parameter("phase") @Nullable String phase,
+        @OutputCustomType.Parameter("podIP") @Nullable String podIP,
+        @OutputCustomType.Parameter("podIPs") @Nullable List<PodIP> podIPs,
+        @OutputCustomType.Parameter("qosClass") @Nullable String qosClass,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.conditions = conditions;
         this.containerStatuses = containerStatuses;
         this.ephemeralContainerStatuses = ephemeralContainerStatuses;
@@ -279,67 +279,67 @@ public final class PodStatus {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setConditions(@Nullable List<PodCondition> conditions) {
+        public Builder conditions(@Nullable List<PodCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setContainerStatuses(@Nullable List<ContainerStatus> containerStatuses) {
+        public Builder containerStatuses(@Nullable List<ContainerStatus> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
 
-        public Builder setEphemeralContainerStatuses(@Nullable List<ContainerStatus> ephemeralContainerStatuses) {
+        public Builder ephemeralContainerStatuses(@Nullable List<ContainerStatus> ephemeralContainerStatuses) {
             this.ephemeralContainerStatuses = ephemeralContainerStatuses;
             return this;
         }
 
-        public Builder setHostIP(@Nullable String hostIP) {
+        public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = hostIP;
             return this;
         }
 
-        public Builder setInitContainerStatuses(@Nullable List<ContainerStatus> initContainerStatuses) {
+        public Builder initContainerStatuses(@Nullable List<ContainerStatus> initContainerStatuses) {
             this.initContainerStatuses = initContainerStatuses;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setNominatedNodeName(@Nullable String nominatedNodeName) {
+        public Builder nominatedNodeName(@Nullable String nominatedNodeName) {
             this.nominatedNodeName = nominatedNodeName;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setPodIP(@Nullable String podIP) {
+        public Builder podIP(@Nullable String podIP) {
             this.podIP = podIP;
             return this;
         }
 
-        public Builder setPodIPs(@Nullable List<PodIP> podIPs) {
+        public Builder podIPs(@Nullable List<PodIP> podIPs) {
             this.podIPs = podIPs;
             return this;
         }
 
-        public Builder setQosClass(@Nullable String qosClass) {
+        public Builder qosClass(@Nullable String qosClass) {
             this.qosClass = qosClass;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

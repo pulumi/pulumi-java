@@ -21,10 +21,10 @@ public final class FirewallAllowedItemResponse {
      */
     private final List<String> ports;
 
-    @OutputCustomType.Constructor({"ipProtocol","ports"})
+    @OutputCustomType.Constructor
     private FirewallAllowedItemResponse(
-        String ipProtocol,
-        List<String> ports) {
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("ports") List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }
@@ -66,12 +66,12 @@ public final class FirewallAllowedItemResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setIpProtocol(String ipProtocol) {
+        public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
-        public Builder setPorts(List<String> ports) {
+        public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

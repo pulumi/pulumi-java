@@ -25,11 +25,11 @@ public final class AssetModelHierarchy {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"childAssetModelId","logicalId","name"})
+    @OutputCustomType.Constructor
     private AssetModelHierarchy(
-        String childAssetModelId,
-        String logicalId,
-        String name) {
+        @OutputCustomType.Parameter("childAssetModelId") String childAssetModelId,
+        @OutputCustomType.Parameter("logicalId") String logicalId,
+        @OutputCustomType.Parameter("name") String name) {
         this.childAssetModelId = childAssetModelId;
         this.logicalId = logicalId;
         this.name = name;
@@ -81,17 +81,17 @@ public final class AssetModelHierarchy {
     	      this.name = defaults.name;
         }
 
-        public Builder setChildAssetModelId(String childAssetModelId) {
+        public Builder childAssetModelId(String childAssetModelId) {
             this.childAssetModelId = Objects.requireNonNull(childAssetModelId);
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -23,10 +23,10 @@ public final class BucketServerSideEncryptionConfigurationRule {
      */
     private final @Nullable Boolean bucketKeyEnabled;
 
-    @OutputCustomType.Constructor({"applyServerSideEncryptionByDefault","bucketKeyEnabled"})
+    @OutputCustomType.Constructor
     private BucketServerSideEncryptionConfigurationRule(
-        BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault,
-        @Nullable Boolean bucketKeyEnabled) {
+        @OutputCustomType.Parameter("applyServerSideEncryptionByDefault") BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault,
+        @OutputCustomType.Parameter("bucketKeyEnabled") @Nullable Boolean bucketKeyEnabled) {
         this.applyServerSideEncryptionByDefault = applyServerSideEncryptionByDefault;
         this.bucketKeyEnabled = bucketKeyEnabled;
     }
@@ -68,12 +68,12 @@ public final class BucketServerSideEncryptionConfigurationRule {
     	      this.bucketKeyEnabled = defaults.bucketKeyEnabled;
         }
 
-        public Builder setApplyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault) {
+        public Builder applyServerSideEncryptionByDefault(BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefault applyServerSideEncryptionByDefault) {
             this.applyServerSideEncryptionByDefault = Objects.requireNonNull(applyServerSideEncryptionByDefault);
             return this;
         }
 
-        public Builder setBucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
+        public Builder bucketKeyEnabled(@Nullable Boolean bucketKeyEnabled) {
             this.bucketKeyEnabled = bucketKeyEnabled;
             return this;
         }

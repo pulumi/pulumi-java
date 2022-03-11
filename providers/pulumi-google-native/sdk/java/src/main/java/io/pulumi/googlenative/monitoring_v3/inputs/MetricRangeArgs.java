@@ -75,22 +75,22 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(@Nullable Input<GoogleMonitoringV3RangeArgs> range) {
+        public Builder range(@Nullable Input<GoogleMonitoringV3RangeArgs> range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRange(@Nullable GoogleMonitoringV3RangeArgs range) {
+        public Builder range(@Nullable GoogleMonitoringV3RangeArgs range) {
             this.range = Input.ofNullable(range);
             return this;
         }
 
-        public Builder setTimeSeries(@Nullable Input<String> timeSeries) {
+        public Builder timeSeries(@Nullable Input<String> timeSeries) {
             this.timeSeries = timeSeries;
             return this;
         }
 
-        public Builder setTimeSeries(@Nullable String timeSeries) {
+        public Builder timeSeries(@Nullable String timeSeries) {
             this.timeSeries = Input.ofNullable(timeSeries);
             return this;
         }

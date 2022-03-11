@@ -55,16 +55,16 @@ public final class GetNamedValueResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"displayName","id","keyVault","name","secret","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetNamedValueResult(
-        String displayName,
-        String id,
-        @Nullable KeyVaultContractPropertiesResponse keyVault,
-        String name,
-        @Nullable Boolean secret,
-        @Nullable List<String> tags,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVault") @Nullable KeyVaultContractPropertiesResponse keyVault,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Boolean secret,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.displayName = displayName;
         this.id = id;
         this.keyVault = keyVault;
@@ -166,42 +166,42 @@ public final class GetNamedValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVault(@Nullable KeyVaultContractPropertiesResponse keyVault) {
+        public Builder keyVault(@Nullable KeyVaultContractPropertiesResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(@Nullable Boolean secret) {
+        public Builder secret(@Nullable Boolean secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

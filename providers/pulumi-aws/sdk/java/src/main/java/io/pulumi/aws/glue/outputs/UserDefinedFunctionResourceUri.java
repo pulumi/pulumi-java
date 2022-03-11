@@ -20,10 +20,10 @@ public final class UserDefinedFunctionResourceUri {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"resourceType","uri"})
+    @OutputCustomType.Constructor
     private UserDefinedFunctionResourceUri(
-        String resourceType,
-        String uri) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.resourceType = resourceType;
         this.uri = uri;
     }
@@ -65,12 +65,12 @@ public final class UserDefinedFunctionResourceUri {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

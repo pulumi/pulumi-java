@@ -27,11 +27,11 @@ public final class BackendProxyContractResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","url","username"})
+    @OutputCustomType.Constructor
     private BackendProxyContractResponse(
-        @Nullable String password,
-        String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;
@@ -83,17 +83,17 @@ public final class BackendProxyContractResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

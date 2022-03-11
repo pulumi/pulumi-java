@@ -16,12 +16,12 @@ public final class JobStatus {
     private final @Nullable String stateStartTime;
     private final @Nullable String substate;
 
-    @OutputCustomType.Constructor({"details","state","stateStartTime","substate"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable String details,
-        @Nullable String state,
-        @Nullable String stateStartTime,
-        @Nullable String substate) {
+        @OutputCustomType.Parameter("details") @Nullable String details,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stateStartTime") @Nullable String stateStartTime,
+        @OutputCustomType.Parameter("substate") @Nullable String substate) {
         this.details = details;
         this.state = state;
         this.stateStartTime = stateStartTime;
@@ -67,22 +67,22 @@ public final class JobStatus {
     	      this.substate = defaults.substate;
         }
 
-        public Builder setDetails(@Nullable String details) {
+        public Builder details(@Nullable String details) {
             this.details = details;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStateStartTime(@Nullable String stateStartTime) {
+        public Builder stateStartTime(@Nullable String stateStartTime) {
             this.stateStartTime = stateStartTime;
             return this;
         }
 
-        public Builder setSubstate(@Nullable String substate) {
+        public Builder substate(@Nullable String substate) {
             this.substate = substate;
             return this;
         }

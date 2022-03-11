@@ -25,11 +25,11 @@ public final class CustomAccountResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"loginUrl","password","username"})
+    @OutputCustomType.Constructor
     private CustomAccountResponse(
-        String loginUrl,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("loginUrl") String loginUrl,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.loginUrl = loginUrl;
         this.password = password;
         this.username = username;
@@ -81,17 +81,17 @@ public final class CustomAccountResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setLoginUrl(String loginUrl) {
+        public Builder loginUrl(String loginUrl) {
             this.loginUrl = Objects.requireNonNull(loginUrl);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

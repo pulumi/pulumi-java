@@ -32,12 +32,12 @@ public final class ConsentLinkDefinitionResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"displayName","firstPartyLoginUri","link","status"})
+    @OutputCustomType.Constructor
     private ConsentLinkDefinitionResponse(
-        @Nullable String displayName,
-        @Nullable String firstPartyLoginUri,
-        @Nullable String link,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("firstPartyLoginUri") @Nullable String firstPartyLoginUri,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.displayName = displayName;
         this.firstPartyLoginUri = firstPartyLoginUri;
         this.link = link;
@@ -99,22 +99,22 @@ public final class ConsentLinkDefinitionResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setFirstPartyLoginUri(@Nullable String firstPartyLoginUri) {
+        public Builder firstPartyLoginUri(@Nullable String firstPartyLoginUri) {
             this.firstPartyLoginUri = firstPartyLoginUri;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

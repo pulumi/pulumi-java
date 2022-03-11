@@ -51,7 +51,7 @@ public final class GetNamedQueryArgs extends io.pulumi.resources.InvokeArgs {
     	      this.namedQueryId = defaults.namedQueryId;
         }
 
-        public Builder setNamedQueryId(String namedQueryId) {
+        public Builder namedQueryId(String namedQueryId) {
             this.namedQueryId = Objects.requireNonNull(namedQueryId);
             return this;
         }

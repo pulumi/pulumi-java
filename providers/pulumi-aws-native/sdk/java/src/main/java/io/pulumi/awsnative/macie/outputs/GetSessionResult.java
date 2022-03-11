@@ -34,12 +34,12 @@ public final class GetSessionResult {
      */
     private final @Nullable SessionStatus status;
 
-    @OutputCustomType.Constructor({"awsAccountId","findingPublishingFrequency","serviceRole","status"})
+    @OutputCustomType.Constructor
     private GetSessionResult(
-        @Nullable String awsAccountId,
-        @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
-        @Nullable String serviceRole,
-        @Nullable SessionStatus status) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("findingPublishingFrequency") @Nullable SessionFindingPublishingFrequency findingPublishingFrequency,
+        @OutputCustomType.Parameter("serviceRole") @Nullable String serviceRole,
+        @OutputCustomType.Parameter("status") @Nullable SessionStatus status) {
         this.awsAccountId = awsAccountId;
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.serviceRole = serviceRole;
@@ -101,22 +101,22 @@ public final class GetSessionResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setFindingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(@Nullable SessionFindingPublishingFrequency findingPublishingFrequency) {
             this.findingPublishingFrequency = findingPublishingFrequency;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setStatus(@Nullable SessionStatus status) {
+        public Builder status(@Nullable SessionStatus status) {
             this.status = status;
             return this;
         }

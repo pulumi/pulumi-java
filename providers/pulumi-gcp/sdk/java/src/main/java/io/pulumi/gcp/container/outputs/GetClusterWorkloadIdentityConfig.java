@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterWorkloadIdentityConfig {
     private final String workloadPool;
 
-    @OutputCustomType.Constructor({"workloadPool"})
-    private GetClusterWorkloadIdentityConfig(String workloadPool) {
+    @OutputCustomType.Constructor
+    private GetClusterWorkloadIdentityConfig(@OutputCustomType.Parameter("workloadPool") String workloadPool) {
         this.workloadPool = workloadPool;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterWorkloadIdentityConfig {
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setWorkloadPool(String workloadPool) {
+        public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }

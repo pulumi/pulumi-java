@@ -14,10 +14,10 @@ public final class CertificateRevocationDetail {
     private final @Nullable String revocationState;
     private final @Nullable String revocationTime;
 
-    @OutputCustomType.Constructor({"revocationState","revocationTime"})
+    @OutputCustomType.Constructor
     private CertificateRevocationDetail(
-        @Nullable String revocationState,
-        @Nullable String revocationTime) {
+        @OutputCustomType.Parameter("revocationState") @Nullable String revocationState,
+        @OutputCustomType.Parameter("revocationTime") @Nullable String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }
@@ -51,12 +51,12 @@ public final class CertificateRevocationDetail {
     	      this.revocationTime = defaults.revocationTime;
         }
 
-        public Builder setRevocationState(@Nullable String revocationState) {
+        public Builder revocationState(@Nullable String revocationState) {
             this.revocationState = revocationState;
             return this;
         }
 
-        public Builder setRevocationTime(@Nullable String revocationTime) {
+        public Builder revocationTime(@Nullable String revocationTime) {
             this.revocationTime = revocationTime;
             return this;
         }

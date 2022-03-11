@@ -24,10 +24,10 @@ public final class KPIResourceHealthDetailsResponse {
      */
     private final @Nullable String resourceHealthStatus;
 
-    @OutputCustomType.Constructor({"resourceHealthDetails","resourceHealthStatus"})
+    @OutputCustomType.Constructor
     private KPIResourceHealthDetailsResponse(
-        @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails,
-        @Nullable String resourceHealthStatus) {
+        @OutputCustomType.Parameter("resourceHealthDetails") @Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails,
+        @OutputCustomType.Parameter("resourceHealthStatus") @Nullable String resourceHealthStatus) {
         this.resourceHealthDetails = resourceHealthDetails;
         this.resourceHealthStatus = resourceHealthStatus;
     }
@@ -69,12 +69,12 @@ public final class KPIResourceHealthDetailsResponse {
     	      this.resourceHealthStatus = defaults.resourceHealthStatus;
         }
 
-        public Builder setResourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
+        public Builder resourceHealthDetails(@Nullable List<ResourceHealthDetailsResponse> resourceHealthDetails) {
             this.resourceHealthDetails = resourceHealthDetails;
             return this;
         }
 
-        public Builder setResourceHealthStatus(@Nullable String resourceHealthStatus) {
+        public Builder resourceHealthStatus(@Nullable String resourceHealthStatus) {
             this.resourceHealthStatus = resourceHealthStatus;
             return this;
         }

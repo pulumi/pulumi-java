@@ -30,11 +30,11 @@ public final class WindowsEventLogDataSourceResponse {
      */
     private final @Nullable List<String> xPathQueries;
 
-    @OutputCustomType.Constructor({"name","streams","xPathQueries"})
+    @OutputCustomType.Constructor
     private WindowsEventLogDataSourceResponse(
-        @Nullable String name,
-        @Nullable List<String> streams,
-        @Nullable List<String> xPathQueries) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams,
+        @OutputCustomType.Parameter("xPathQueries") @Nullable List<String> xPathQueries) {
         this.name = name;
         this.streams = streams;
         this.xPathQueries = xPathQueries;
@@ -88,17 +88,17 @@ public final class WindowsEventLogDataSourceResponse {
     	      this.xPathQueries = defaults.xPathQueries;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }
 
-        public Builder setXPathQueries(@Nullable List<String> xPathQueries) {
+        public Builder xPathQueries(@Nullable List<String> xPathQueries) {
             this.xPathQueries = xPathQueries;
             return this;
         }

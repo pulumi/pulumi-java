@@ -18,12 +18,12 @@ public final class EnergyServicePropertiesResponse {
     private final String dnsName;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"authAppId","dataPartitionNames","dnsName","provisioningState"})
+    @OutputCustomType.Constructor
     private EnergyServicePropertiesResponse(
-        @Nullable String authAppId,
-        @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
-        String dnsName,
-        String provisioningState) {
+        @OutputCustomType.Parameter("authAppId") @Nullable String authAppId,
+        @OutputCustomType.Parameter("dataPartitionNames") @Nullable List<DataPartitionNamesResponse> dataPartitionNames,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.authAppId = authAppId;
         this.dataPartitionNames = dataPartitionNames;
         this.dnsName = dnsName;
@@ -69,22 +69,22 @@ public final class EnergyServicePropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setAuthAppId(@Nullable String authAppId) {
+        public Builder authAppId(@Nullable String authAppId) {
             this.authAppId = authAppId;
             return this;
         }
 
-        public Builder setDataPartitionNames(@Nullable List<DataPartitionNamesResponse> dataPartitionNames) {
+        public Builder dataPartitionNames(@Nullable List<DataPartitionNamesResponse> dataPartitionNames) {
             this.dataPartitionNames = dataPartitionNames;
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

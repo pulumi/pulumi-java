@@ -84,17 +84,17 @@ public final class GetApplicationTypeArgs extends io.pulumi.resources.InvokeArgs
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setApplicationTypeName(String applicationTypeName) {
+        public Builder applicationTypeName(String applicationTypeName) {
             this.applicationTypeName = Objects.requireNonNull(applicationTypeName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -27,11 +27,11 @@ public final class EnvironmentMatrixResponse {
      */
     private final IosDeviceListResponse iosDeviceList;
 
-    @OutputCustomType.Constructor({"androidDeviceList","androidMatrix","iosDeviceList"})
+    @OutputCustomType.Constructor
     private EnvironmentMatrixResponse(
-        AndroidDeviceListResponse androidDeviceList,
-        AndroidMatrixResponse androidMatrix,
-        IosDeviceListResponse iosDeviceList) {
+        @OutputCustomType.Parameter("androidDeviceList") AndroidDeviceListResponse androidDeviceList,
+        @OutputCustomType.Parameter("androidMatrix") AndroidMatrixResponse androidMatrix,
+        @OutputCustomType.Parameter("iosDeviceList") IosDeviceListResponse iosDeviceList) {
         this.androidDeviceList = androidDeviceList;
         this.androidMatrix = androidMatrix;
         this.iosDeviceList = iosDeviceList;
@@ -83,17 +83,17 @@ public final class EnvironmentMatrixResponse {
     	      this.iosDeviceList = defaults.iosDeviceList;
         }
 
-        public Builder setAndroidDeviceList(AndroidDeviceListResponse androidDeviceList) {
+        public Builder androidDeviceList(AndroidDeviceListResponse androidDeviceList) {
             this.androidDeviceList = Objects.requireNonNull(androidDeviceList);
             return this;
         }
 
-        public Builder setAndroidMatrix(AndroidMatrixResponse androidMatrix) {
+        public Builder androidMatrix(AndroidMatrixResponse androidMatrix) {
             this.androidMatrix = Objects.requireNonNull(androidMatrix);
             return this;
         }
 
-        public Builder setIosDeviceList(IosDeviceListResponse iosDeviceList) {
+        public Builder iosDeviceList(IosDeviceListResponse iosDeviceList) {
             this.iosDeviceList = Objects.requireNonNull(iosDeviceList);
             return this;
         }

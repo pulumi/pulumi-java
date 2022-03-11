@@ -155,72 +155,72 @@ public final class NotificationConfigState extends io.pulumi.resources.ResourceA
     	      this.streamingConfig = defaults.streamingConfig;
         }
 
-        public Builder setConfigId(@Nullable Input<String> configId) {
+        public Builder configId(@Nullable Input<String> configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = Input.ofNullable(configId);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable Input<String> pubsubTopic) {
+        public Builder pubsubTopic(@Nullable Input<String> pubsubTopic) {
             this.pubsubTopic = pubsubTopic;
             return this;
         }
 
-        public Builder setPubsubTopic(@Nullable String pubsubTopic) {
+        public Builder pubsubTopic(@Nullable String pubsubTopic) {
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setStreamingConfig(@Nullable Input<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
+        public Builder streamingConfig(@Nullable Input<NotificationConfigStreamingConfigGetArgs> streamingConfig) {
             this.streamingConfig = streamingConfig;
             return this;
         }
 
-        public Builder setStreamingConfig(@Nullable NotificationConfigStreamingConfigGetArgs streamingConfig) {
+        public Builder streamingConfig(@Nullable NotificationConfigStreamingConfigGetArgs streamingConfig) {
             this.streamingConfig = Input.ofNullable(streamingConfig);
             return this;
         }

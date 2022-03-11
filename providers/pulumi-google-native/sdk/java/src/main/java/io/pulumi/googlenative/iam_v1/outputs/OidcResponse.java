@@ -21,10 +21,10 @@ public final class OidcResponse {
      */
     private final String issuerUri;
 
-    @OutputCustomType.Constructor({"allowedAudiences","issuerUri"})
+    @OutputCustomType.Constructor
     private OidcResponse(
-        List<String> allowedAudiences,
-        String issuerUri) {
+        @OutputCustomType.Parameter("allowedAudiences") List<String> allowedAudiences,
+        @OutputCustomType.Parameter("issuerUri") String issuerUri) {
         this.allowedAudiences = allowedAudiences;
         this.issuerUri = issuerUri;
     }
@@ -66,12 +66,12 @@ public final class OidcResponse {
     	      this.issuerUri = defaults.issuerUri;
         }
 
-        public Builder setAllowedAudiences(List<String> allowedAudiences) {
+        public Builder allowedAudiences(List<String> allowedAudiences) {
             this.allowedAudiences = Objects.requireNonNull(allowedAudiences);
             return this;
         }
 
-        public Builder setIssuerUri(String issuerUri) {
+        public Builder issuerUri(String issuerUri) {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }

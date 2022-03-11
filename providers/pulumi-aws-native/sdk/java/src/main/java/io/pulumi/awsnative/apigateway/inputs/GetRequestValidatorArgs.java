@@ -68,12 +68,12 @@ public final class GetRequestValidatorArgs extends io.pulumi.resources.InvokeArg
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setRequestValidatorId(String requestValidatorId) {
+        public Builder requestValidatorId(String requestValidatorId) {
             this.requestValidatorId = Objects.requireNonNull(requestValidatorId);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

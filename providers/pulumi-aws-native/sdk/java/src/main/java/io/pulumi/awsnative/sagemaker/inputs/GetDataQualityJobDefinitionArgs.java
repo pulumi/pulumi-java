@@ -51,7 +51,7 @@ public final class GetDataQualityJobDefinitionArgs extends io.pulumi.resources.I
     	      this.jobDefinitionArn = defaults.jobDefinitionArn;
         }
 
-        public Builder setJobDefinitionArn(String jobDefinitionArn) {
+        public Builder jobDefinitionArn(String jobDefinitionArn) {
             this.jobDefinitionArn = Objects.requireNonNull(jobDefinitionArn);
             return this;
         }

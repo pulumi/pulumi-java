@@ -119,29 +119,29 @@ public final class GetOrganizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addonsConfig","analyticsRegion","attributes","authorizedNetwork","billingType","caCertificate","createdAt","customerName","description","displayName","environments","expiresAt","lastModifiedAt","name","portalDisabled","project","properties","runtimeDatabaseEncryptionKeyName","runtimeType","state","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
-        String analyticsRegion,
-        List<String> attributes,
-        String authorizedNetwork,
-        String billingType,
-        String caCertificate,
-        String createdAt,
-        String customerName,
-        String description,
-        String displayName,
-        List<String> environments,
-        String expiresAt,
-        String lastModifiedAt,
-        String name,
-        Boolean portalDisabled,
-        String project,
-        GoogleCloudApigeeV1PropertiesResponse properties,
-        String runtimeDatabaseEncryptionKeyName,
-        String runtimeType,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("addonsConfig") GoogleCloudApigeeV1AddonsConfigResponse addonsConfig,
+        @OutputCustomType.Parameter("analyticsRegion") String analyticsRegion,
+        @OutputCustomType.Parameter("attributes") List<String> attributes,
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("billingType") String billingType,
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("customerName") String customerName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("environments") List<String> environments,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("portalDisabled") Boolean portalDisabled,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("properties") GoogleCloudApigeeV1PropertiesResponse properties,
+        @OutputCustomType.Parameter("runtimeDatabaseEncryptionKeyName") String runtimeDatabaseEncryptionKeyName,
+        @OutputCustomType.Parameter("runtimeType") String runtimeType,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.addonsConfig = addonsConfig;
         this.analyticsRegion = analyticsRegion;
         this.attributes = attributes;
@@ -373,107 +373,107 @@ public final class GetOrganizationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddonsConfig(GoogleCloudApigeeV1AddonsConfigResponse addonsConfig) {
+        public Builder addonsConfig(GoogleCloudApigeeV1AddonsConfigResponse addonsConfig) {
             this.addonsConfig = Objects.requireNonNull(addonsConfig);
             return this;
         }
 
-        public Builder setAnalyticsRegion(String analyticsRegion) {
+        public Builder analyticsRegion(String analyticsRegion) {
             this.analyticsRegion = Objects.requireNonNull(analyticsRegion);
             return this;
         }
 
-        public Builder setAttributes(List<String> attributes) {
+        public Builder attributes(List<String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(String authorizedNetwork) {
+        public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
-        public Builder setBillingType(String billingType) {
+        public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCustomerName(String customerName) {
+        public Builder customerName(String customerName) {
             this.customerName = Objects.requireNonNull(customerName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnvironments(List<String> environments) {
+        public Builder environments(List<String> environments) {
             this.environments = Objects.requireNonNull(environments);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPortalDisabled(Boolean portalDisabled) {
+        public Builder portalDisabled(Boolean portalDisabled) {
             this.portalDisabled = Objects.requireNonNull(portalDisabled);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProperties(GoogleCloudApigeeV1PropertiesResponse properties) {
+        public Builder properties(GoogleCloudApigeeV1PropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setRuntimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
+        public Builder runtimeDatabaseEncryptionKeyName(String runtimeDatabaseEncryptionKeyName) {
             this.runtimeDatabaseEncryptionKeyName = Objects.requireNonNull(runtimeDatabaseEncryptionKeyName);
             return this;
         }
 
-        public Builder setRuntimeType(String runtimeType) {
+        public Builder runtimeType(String runtimeType) {
             this.runtimeType = Objects.requireNonNull(runtimeType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

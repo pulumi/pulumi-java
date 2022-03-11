@@ -15,10 +15,10 @@ public final class TableClusteringKeyColumn {
     private final TableColumn column;
     private final @Nullable TableClusteringKeyColumnOrderBy orderBy;
 
-    @OutputCustomType.Constructor({"column","orderBy"})
+    @OutputCustomType.Constructor
     private TableClusteringKeyColumn(
-        TableColumn column,
-        @Nullable TableClusteringKeyColumnOrderBy orderBy) {
+        @OutputCustomType.Parameter("column") TableColumn column,
+        @OutputCustomType.Parameter("orderBy") @Nullable TableClusteringKeyColumnOrderBy orderBy) {
         this.column = column;
         this.orderBy = orderBy;
     }
@@ -52,12 +52,12 @@ public final class TableClusteringKeyColumn {
     	      this.orderBy = defaults.orderBy;
         }
 
-        public Builder setColumn(TableColumn column) {
+        public Builder column(TableColumn column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setOrderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
+        public Builder orderBy(@Nullable TableClusteringKeyColumnOrderBy orderBy) {
             this.orderBy = orderBy;
             return this;
         }

@@ -60,14 +60,14 @@ public final class GuestPoliciesRecipe {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"artifacts","desiredState","installSteps","name","updateSteps","version"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipe(
-        @Nullable List<GuestPoliciesRecipeArtifact> artifacts,
-        @Nullable String desiredState,
-        @Nullable List<GuestPoliciesRecipeInstallStep> installSteps,
-        String name,
-        @Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("artifacts") @Nullable List<GuestPoliciesRecipeArtifact> artifacts,
+        @OutputCustomType.Parameter("desiredState") @Nullable String desiredState,
+        @OutputCustomType.Parameter("installSteps") @Nullable List<GuestPoliciesRecipeInstallStep> installSteps,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateSteps") @Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;
@@ -163,32 +163,32 @@ public final class GuestPoliciesRecipe {
     	      this.version = defaults.version;
         }
 
-        public Builder setArtifacts(@Nullable List<GuestPoliciesRecipeArtifact> artifacts) {
+        public Builder artifacts(@Nullable List<GuestPoliciesRecipeArtifact> artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setInstallSteps(@Nullable List<GuestPoliciesRecipeInstallStep> installSteps) {
+        public Builder installSteps(@Nullable List<GuestPoliciesRecipeInstallStep> installSteps) {
             this.installSteps = installSteps;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateSteps(@Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps) {
+        public Builder updateSteps(@Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps) {
             this.updateSteps = updateSteps;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

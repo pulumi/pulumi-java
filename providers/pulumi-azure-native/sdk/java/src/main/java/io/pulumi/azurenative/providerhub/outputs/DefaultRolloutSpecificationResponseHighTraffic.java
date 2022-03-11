@@ -15,10 +15,10 @@ public final class DefaultRolloutSpecificationResponseHighTraffic {
     private final @Nullable List<String> regions;
     private final @Nullable String waitDuration;
 
-    @OutputCustomType.Constructor({"regions","waitDuration"})
+    @OutputCustomType.Constructor
     private DefaultRolloutSpecificationResponseHighTraffic(
-        @Nullable List<String> regions,
-        @Nullable String waitDuration) {
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("waitDuration") @Nullable String waitDuration) {
         this.regions = regions;
         this.waitDuration = waitDuration;
     }
@@ -52,12 +52,12 @@ public final class DefaultRolloutSpecificationResponseHighTraffic {
     	      this.waitDuration = defaults.waitDuration;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setWaitDuration(@Nullable String waitDuration) {
+        public Builder waitDuration(@Nullable String waitDuration) {
             this.waitDuration = waitDuration;
             return this;
         }

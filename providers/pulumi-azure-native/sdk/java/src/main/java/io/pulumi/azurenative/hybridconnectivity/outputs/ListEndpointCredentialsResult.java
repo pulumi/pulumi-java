@@ -38,13 +38,13 @@ public final class ListEndpointCredentialsResult {
      */
     private final String namespaceNameSuffix;
 
-    @OutputCustomType.Constructor({"accessKey","expiresOn","hybridConnectionName","namespaceName","namespaceNameSuffix"})
+    @OutputCustomType.Constructor
     private ListEndpointCredentialsResult(
-        String accessKey,
-        @Nullable Double expiresOn,
-        String hybridConnectionName,
-        String namespaceName,
-        String namespaceNameSuffix) {
+        @OutputCustomType.Parameter("accessKey") String accessKey,
+        @OutputCustomType.Parameter("expiresOn") @Nullable Double expiresOn,
+        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @OutputCustomType.Parameter("namespaceName") String namespaceName,
+        @OutputCustomType.Parameter("namespaceNameSuffix") String namespaceNameSuffix) {
         this.accessKey = accessKey;
         this.expiresOn = expiresOn;
         this.hybridConnectionName = hybridConnectionName;
@@ -116,27 +116,27 @@ public final class ListEndpointCredentialsResult {
     	      this.namespaceNameSuffix = defaults.namespaceNameSuffix;
         }
 
-        public Builder setAccessKey(String accessKey) {
+        public Builder accessKey(String accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
-        public Builder setExpiresOn(@Nullable Double expiresOn) {
+        public Builder expiresOn(@Nullable Double expiresOn) {
             this.expiresOn = expiresOn;
             return this;
         }
 
-        public Builder setHybridConnectionName(String hybridConnectionName) {
+        public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceNameSuffix(String namespaceNameSuffix) {
+        public Builder namespaceNameSuffix(String namespaceNameSuffix) {
             this.namespaceNameSuffix = Objects.requireNonNull(namespaceNameSuffix);
             return this;
         }

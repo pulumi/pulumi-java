@@ -36,13 +36,13 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"etag","name","parent","scopes","title"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        String etag,
-        String name,
-        String parent,
-        List<String> scopes,
-        String title) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("title") String title) {
         this.etag = etag;
         this.name = name;
         this.parent = parent;
@@ -114,27 +114,27 @@ public final class GetAccessPolicyResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

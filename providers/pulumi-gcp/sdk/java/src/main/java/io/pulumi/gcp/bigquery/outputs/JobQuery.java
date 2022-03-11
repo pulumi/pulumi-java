@@ -138,25 +138,25 @@ public final class JobQuery {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor({"allowLargeResults","createDisposition","defaultDataset","destinationEncryptionConfiguration","destinationTable","flattenResults","maximumBillingTier","maximumBytesBilled","parameterMode","priority","query","schemaUpdateOptions","scriptOptions","useLegacySql","useQueryCache","userDefinedFunctionResources","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobQuery(
-        @Nullable Boolean allowLargeResults,
-        @Nullable String createDisposition,
-        @Nullable JobQueryDefaultDataset defaultDataset,
-        @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @Nullable JobQueryDestinationTable destinationTable,
-        @Nullable Boolean flattenResults,
-        @Nullable Integer maximumBillingTier,
-        @Nullable String maximumBytesBilled,
-        @Nullable String parameterMode,
-        @Nullable String priority,
-        String query,
-        @Nullable List<String> schemaUpdateOptions,
-        @Nullable JobQueryScriptOptions scriptOptions,
-        @Nullable Boolean useLegacySql,
-        @Nullable Boolean useQueryCache,
-        @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
-        @Nullable String writeDisposition) {
+        @OutputCustomType.Parameter("allowLargeResults") @Nullable Boolean allowLargeResults,
+        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @OutputCustomType.Parameter("defaultDataset") @Nullable JobQueryDefaultDataset defaultDataset,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") @Nullable JobQueryDestinationTable destinationTable,
+        @OutputCustomType.Parameter("flattenResults") @Nullable Boolean flattenResults,
+        @OutputCustomType.Parameter("maximumBillingTier") @Nullable Integer maximumBillingTier,
+        @OutputCustomType.Parameter("maximumBytesBilled") @Nullable String maximumBytesBilled,
+        @OutputCustomType.Parameter("parameterMode") @Nullable String parameterMode,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
+        @OutputCustomType.Parameter("scriptOptions") @Nullable JobQueryScriptOptions scriptOptions,
+        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql,
+        @OutputCustomType.Parameter("useQueryCache") @Nullable Boolean useQueryCache,
+        @OutputCustomType.Parameter("userDefinedFunctionResources") @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
+        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.createDisposition = createDisposition;
         this.defaultDataset = defaultDataset;
@@ -381,87 +381,87 @@ public final class JobQuery {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowLargeResults(@Nullable Boolean allowLargeResults) {
+        public Builder allowLargeResults(@Nullable Boolean allowLargeResults) {
             this.allowLargeResults = allowLargeResults;
             return this;
         }
 
-        public Builder setCreateDisposition(@Nullable String createDisposition) {
+        public Builder createDisposition(@Nullable String createDisposition) {
             this.createDisposition = createDisposition;
             return this;
         }
 
-        public Builder setDefaultDataset(@Nullable JobQueryDefaultDataset defaultDataset) {
+        public Builder defaultDataset(@Nullable JobQueryDefaultDataset defaultDataset) {
             this.defaultDataset = defaultDataset;
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(@Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = destinationEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDestinationTable(@Nullable JobQueryDestinationTable destinationTable) {
+        public Builder destinationTable(@Nullable JobQueryDestinationTable destinationTable) {
             this.destinationTable = destinationTable;
             return this;
         }
 
-        public Builder setFlattenResults(@Nullable Boolean flattenResults) {
+        public Builder flattenResults(@Nullable Boolean flattenResults) {
             this.flattenResults = flattenResults;
             return this;
         }
 
-        public Builder setMaximumBillingTier(@Nullable Integer maximumBillingTier) {
+        public Builder maximumBillingTier(@Nullable Integer maximumBillingTier) {
             this.maximumBillingTier = maximumBillingTier;
             return this;
         }
 
-        public Builder setMaximumBytesBilled(@Nullable String maximumBytesBilled) {
+        public Builder maximumBytesBilled(@Nullable String maximumBytesBilled) {
             this.maximumBytesBilled = maximumBytesBilled;
             return this;
         }
 
-        public Builder setParameterMode(@Nullable String parameterMode) {
+        public Builder parameterMode(@Nullable String parameterMode) {
             this.parameterMode = parameterMode;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(@Nullable List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = schemaUpdateOptions;
             return this;
         }
 
-        public Builder setScriptOptions(@Nullable JobQueryScriptOptions scriptOptions) {
+        public Builder scriptOptions(@Nullable JobQueryScriptOptions scriptOptions) {
             this.scriptOptions = scriptOptions;
             return this;
         }
 
-        public Builder setUseLegacySql(@Nullable Boolean useLegacySql) {
+        public Builder useLegacySql(@Nullable Boolean useLegacySql) {
             this.useLegacySql = useLegacySql;
             return this;
         }
 
-        public Builder setUseQueryCache(@Nullable Boolean useQueryCache) {
+        public Builder useQueryCache(@Nullable Boolean useQueryCache) {
             this.useQueryCache = useQueryCache;
             return this;
         }
 
-        public Builder setUserDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources) {
+        public Builder userDefinedFunctionResources(@Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources) {
             this.userDefinedFunctionResources = userDefinedFunctionResources;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable String writeDisposition) {
+        public Builder writeDisposition(@Nullable String writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }

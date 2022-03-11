@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
      */
     private final Boolean enableSentimentAnalysis;
 
-    @OutputCustomType.Constructor({"enableEntityExtraction","enableSentimentAnalysis"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageAnalysisConfigResponse(
-        Boolean enableEntityExtraction,
-        Boolean enableSentimentAnalysis) {
+        @OutputCustomType.Parameter("enableEntityExtraction") Boolean enableEntityExtraction,
+        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis) {
         this.enableEntityExtraction = enableEntityExtraction;
         this.enableSentimentAnalysis = enableSentimentAnalysis;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigMessageA
     	      this.enableSentimentAnalysis = defaults.enableSentimentAnalysis;
         }
 
-        public Builder setEnableEntityExtraction(Boolean enableEntityExtraction) {
+        public Builder enableEntityExtraction(Boolean enableEntityExtraction) {
             this.enableEntityExtraction = Objects.requireNonNull(enableEntityExtraction);
             return this;
         }
 
-        public Builder setEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }

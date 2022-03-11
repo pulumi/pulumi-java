@@ -70,22 +70,22 @@ public final class DatasetCreateRequestTimeSeriesArgs extends io.pulumi.resource
     	      this.fineGrainTimestamp = defaults.fineGrainTimestamp;
         }
 
-        public Builder setCoarseGrainTimestamp(@Nullable Input<String> coarseGrainTimestamp) {
+        public Builder coarseGrainTimestamp(@Nullable Input<String> coarseGrainTimestamp) {
             this.coarseGrainTimestamp = coarseGrainTimestamp;
             return this;
         }
 
-        public Builder setCoarseGrainTimestamp(@Nullable String coarseGrainTimestamp) {
+        public Builder coarseGrainTimestamp(@Nullable String coarseGrainTimestamp) {
             this.coarseGrainTimestamp = Input.ofNullable(coarseGrainTimestamp);
             return this;
         }
 
-        public Builder setFineGrainTimestamp(@Nullable Input<String> fineGrainTimestamp) {
+        public Builder fineGrainTimestamp(@Nullable Input<String> fineGrainTimestamp) {
             this.fineGrainTimestamp = fineGrainTimestamp;
             return this;
         }
 
-        public Builder setFineGrainTimestamp(@Nullable String fineGrainTimestamp) {
+        public Builder fineGrainTimestamp(@Nullable String fineGrainTimestamp) {
             this.fineGrainTimestamp = Input.ofNullable(fineGrainTimestamp);
             return this;
         }

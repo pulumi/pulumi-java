@@ -17,8 +17,8 @@ public final class UniqueKeyPolicyResponse {
      */
     private final @Nullable List<UniqueKeyResponse> uniqueKeys;
 
-    @OutputCustomType.Constructor({"uniqueKeys"})
-    private UniqueKeyPolicyResponse(@Nullable List<UniqueKeyResponse> uniqueKeys) {
+    @OutputCustomType.Constructor
+    private UniqueKeyPolicyResponse(@OutputCustomType.Parameter("uniqueKeys") @Nullable List<UniqueKeyResponse> uniqueKeys) {
         this.uniqueKeys = uniqueKeys;
     }
 
@@ -50,7 +50,7 @@ public final class UniqueKeyPolicyResponse {
     	      this.uniqueKeys = defaults.uniqueKeys;
         }
 
-        public Builder setUniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
             this.uniqueKeys = uniqueKeys;
             return this;
         }

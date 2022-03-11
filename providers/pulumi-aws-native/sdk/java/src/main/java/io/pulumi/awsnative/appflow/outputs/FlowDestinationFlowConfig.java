@@ -29,11 +29,11 @@ public final class FlowDestinationFlowConfig {
      */
     private final FlowDestinationConnectorProperties destinationConnectorProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileName","connectorType","destinationConnectorProperties"})
+    @OutputCustomType.Constructor
     private FlowDestinationFlowConfig(
-        @Nullable String connectorProfileName,
-        FlowConnectorType connectorType,
-        FlowDestinationConnectorProperties destinationConnectorProperties) {
+        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @OutputCustomType.Parameter("destinationConnectorProperties") FlowDestinationConnectorProperties destinationConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.destinationConnectorProperties = destinationConnectorProperties;
@@ -85,17 +85,17 @@ public final class FlowDestinationFlowConfig {
     	      this.destinationConnectorProperties = defaults.destinationConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorType(FlowConnectorType connectorType) {
+        public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setDestinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
+        public Builder destinationConnectorProperties(FlowDestinationConnectorProperties destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }

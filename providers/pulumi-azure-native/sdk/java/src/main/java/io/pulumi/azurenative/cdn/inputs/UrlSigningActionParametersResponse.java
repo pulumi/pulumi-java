@@ -88,17 +88,17 @@ public final class UrlSigningActionParametersResponse extends io.pulumi.resource
     	      this.parameterNameOverride = defaults.parameterNameOverride;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setParameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
+        public Builder parameterNameOverride(@Nullable List<UrlSigningParamIdentifierResponse> parameterNameOverride) {
             this.parameterNameOverride = parameterNameOverride;
             return this;
         }

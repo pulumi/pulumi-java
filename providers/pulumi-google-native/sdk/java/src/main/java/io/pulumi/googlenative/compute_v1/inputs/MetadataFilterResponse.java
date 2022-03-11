@@ -74,12 +74,12 @@ public final class MetadataFilterResponse extends io.pulumi.resources.InvokeArgs
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(List<MetadataFilterLabelMatchResponse> filterLabels) {
+        public Builder filterLabels(List<MetadataFilterLabelMatchResponse> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(String filterMatchCriteria) {
+        public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }

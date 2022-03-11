@@ -213,102 +213,102 @@ public final class PodSecurityContextArgs extends io.pulumi.resources.ResourceAr
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setFsGroup(@Nullable Input<Integer> fsGroup) {
+        public Builder fsGroup(@Nullable Input<Integer> fsGroup) {
             this.fsGroup = fsGroup;
             return this;
         }
 
-        public Builder setFsGroup(@Nullable Integer fsGroup) {
+        public Builder fsGroup(@Nullable Integer fsGroup) {
             this.fsGroup = Input.ofNullable(fsGroup);
             return this;
         }
 
-        public Builder setFsGroupChangePolicy(@Nullable Input<String> fsGroupChangePolicy) {
+        public Builder fsGroupChangePolicy(@Nullable Input<String> fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
 
-        public Builder setFsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
+        public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
             this.fsGroupChangePolicy = Input.ofNullable(fsGroupChangePolicy);
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Input<Integer> runAsGroup) {
+        public Builder runAsGroup(@Nullable Input<Integer> runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = Input.ofNullable(runAsGroup);
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Input<Boolean> runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = Input.ofNullable(runAsNonRoot);
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Input<Integer> runAsUser) {
+        public Builder runAsUser(@Nullable Input<Integer> runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = Input.ofNullable(runAsUser);
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable Input<SELinuxOptionsArgs> seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
             this.seLinuxOptions = Input.ofNullable(seLinuxOptions);
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
+        public Builder seccompProfile(@Nullable Input<SeccompProfileArgs> seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfileArgs seccompProfile) {
             this.seccompProfile = Input.ofNullable(seccompProfile);
             return this;
         }
 
-        public Builder setSupplementalGroups(@Nullable Input<List<Integer>> supplementalGroups) {
+        public Builder supplementalGroups(@Nullable Input<List<Integer>> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
 
-        public Builder setSupplementalGroups(@Nullable List<Integer> supplementalGroups) {
+        public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
             this.supplementalGroups = Input.ofNullable(supplementalGroups);
             return this;
         }
 
-        public Builder setSysctls(@Nullable Input<List<SysctlArgs>> sysctls) {
+        public Builder sysctls(@Nullable Input<List<SysctlArgs>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
-        public Builder setSysctls(@Nullable List<SysctlArgs> sysctls) {
+        public Builder sysctls(@Nullable List<SysctlArgs> sysctls) {
             this.sysctls = Input.ofNullable(sysctls);
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
+        public Builder windowsOptions(@Nullable Input<WindowsSecurityContextOptionsArgs> windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptionsArgs windowsOptions) {
             this.windowsOptions = Input.ofNullable(windowsOptions);
             return this;
         }

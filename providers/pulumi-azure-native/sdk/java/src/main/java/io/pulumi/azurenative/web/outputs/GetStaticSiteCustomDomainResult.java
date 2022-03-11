@@ -53,17 +53,17 @@ public final class GetStaticSiteCustomDomainResult {
      */
     private final String validationToken;
 
-    @OutputCustomType.Constructor({"createdOn","domainName","errorMessage","id","kind","name","status","type","validationToken"})
+    @OutputCustomType.Constructor
     private GetStaticSiteCustomDomainResult(
-        String createdOn,
-        String domainName,
-        String errorMessage,
-        String id,
-        @Nullable String kind,
-        String name,
-        String status,
-        String type,
-        String validationToken) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationToken") String validationToken) {
         this.createdOn = createdOn;
         this.domainName = domainName;
         this.errorMessage = errorMessage;
@@ -171,47 +171,47 @@ public final class GetStaticSiteCustomDomainResult {
     	      this.validationToken = defaults.validationToken;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationToken(String validationToken) {
+        public Builder validationToken(String validationToken) {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }

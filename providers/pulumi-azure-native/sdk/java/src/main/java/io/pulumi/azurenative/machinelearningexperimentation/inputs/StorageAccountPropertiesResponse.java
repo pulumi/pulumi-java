@@ -72,12 +72,12 @@ public final class StorageAccountPropertiesResponse extends io.pulumi.resources.
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setAccessKey(String accessKey) {
+        public Builder accessKey(String accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

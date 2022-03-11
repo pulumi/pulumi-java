@@ -30,10 +30,10 @@ public final class SubscriptionPushConfigOidcToken {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"audience","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private SubscriptionPushConfigOidcToken(
-        @Nullable String audience,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }
@@ -83,12 +83,12 @@ public final class SubscriptionPushConfigOidcToken {
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }

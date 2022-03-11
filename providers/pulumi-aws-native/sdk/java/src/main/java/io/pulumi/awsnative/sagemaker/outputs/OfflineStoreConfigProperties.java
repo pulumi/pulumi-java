@@ -17,11 +17,11 @@ public final class OfflineStoreConfigProperties {
     private final @Nullable Boolean disableGlueTableCreation;
     private final FeatureGroupS3StorageConfig s3StorageConfig;
 
-    @OutputCustomType.Constructor({"dataCatalogConfig","disableGlueTableCreation","s3StorageConfig"})
+    @OutputCustomType.Constructor
     private OfflineStoreConfigProperties(
-        @Nullable FeatureGroupDataCatalogConfig dataCatalogConfig,
-        @Nullable Boolean disableGlueTableCreation,
-        FeatureGroupS3StorageConfig s3StorageConfig) {
+        @OutputCustomType.Parameter("dataCatalogConfig") @Nullable FeatureGroupDataCatalogConfig dataCatalogConfig,
+        @OutputCustomType.Parameter("disableGlueTableCreation") @Nullable Boolean disableGlueTableCreation,
+        @OutputCustomType.Parameter("s3StorageConfig") FeatureGroupS3StorageConfig s3StorageConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.disableGlueTableCreation = disableGlueTableCreation;
         this.s3StorageConfig = s3StorageConfig;
@@ -61,17 +61,17 @@ public final class OfflineStoreConfigProperties {
     	      this.s3StorageConfig = defaults.s3StorageConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable FeatureGroupDataCatalogConfig dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable FeatureGroupDataCatalogConfig dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
 
-        public Builder setS3StorageConfig(FeatureGroupS3StorageConfig s3StorageConfig) {
+        public Builder s3StorageConfig(FeatureGroupS3StorageConfig s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }

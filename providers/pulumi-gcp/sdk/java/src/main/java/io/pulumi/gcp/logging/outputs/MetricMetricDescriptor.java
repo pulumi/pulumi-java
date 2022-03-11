@@ -52,13 +52,13 @@ public final class MetricMetricDescriptor {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"displayName","labels","metricKind","unit","valueType"})
+    @OutputCustomType.Constructor
     private MetricMetricDescriptor(
-        @Nullable String displayName,
-        @Nullable List<MetricMetricDescriptorLabel> labels,
-        String metricKind,
-        @Nullable String unit,
-        String valueType) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("labels") @Nullable List<MetricMetricDescriptorLabel> labels,
+        @OutputCustomType.Parameter("metricKind") String metricKind,
+        @OutputCustomType.Parameter("unit") @Nullable String unit,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.displayName = displayName;
         this.labels = labels;
         this.metricKind = metricKind;
@@ -143,27 +143,27 @@ public final class MetricMetricDescriptor {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<MetricMetricDescriptorLabel> labels) {
+        public Builder labels(@Nullable List<MetricMetricDescriptorLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setMetricKind(String metricKind) {
+        public Builder metricKind(String metricKind) {
             this.metricKind = Objects.requireNonNull(metricKind);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

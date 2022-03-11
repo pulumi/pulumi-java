@@ -18,11 +18,11 @@ public final class JobStatus {
     private final @Nullable List<JobStatusError> errors;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"errorResults","errors","state"})
+    @OutputCustomType.Constructor
     private JobStatus(
-        @Nullable List<JobStatusErrorResult> errorResults,
-        @Nullable List<JobStatusError> errors,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("errorResults") @Nullable List<JobStatusErrorResult> errorResults,
+        @OutputCustomType.Parameter("errors") @Nullable List<JobStatusError> errors,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.errorResults = errorResults;
         this.errors = errors;
         this.state = state;
@@ -62,17 +62,17 @@ public final class JobStatus {
     	      this.state = defaults.state;
         }
 
-        public Builder setErrorResults(@Nullable List<JobStatusErrorResult> errorResults) {
+        public Builder errorResults(@Nullable List<JobStatusErrorResult> errorResults) {
             this.errorResults = errorResults;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<JobStatusError> errors) {
+        public Builder errors(@Nullable List<JobStatusError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

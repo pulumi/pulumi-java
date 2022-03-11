@@ -27,11 +27,11 @@ public final class CommonFeatureStateResponse {
      */
     private final FeatureStateResponse state;
 
-    @OutputCustomType.Constructor({"appdevexperience","servicemesh","state"})
+    @OutputCustomType.Constructor
     private CommonFeatureStateResponse(
-        AppDevExperienceFeatureStateResponse appdevexperience,
-        ServiceMeshFeatureStateResponse servicemesh,
-        FeatureStateResponse state) {
+        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureStateResponse appdevexperience,
+        @OutputCustomType.Parameter("servicemesh") ServiceMeshFeatureStateResponse servicemesh,
+        @OutputCustomType.Parameter("state") FeatureStateResponse state) {
         this.appdevexperience = appdevexperience;
         this.servicemesh = servicemesh;
         this.state = state;
@@ -83,17 +83,17 @@ public final class CommonFeatureStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureStateResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setServicemesh(ServiceMeshFeatureStateResponse servicemesh) {
+        public Builder servicemesh(ServiceMeshFeatureStateResponse servicemesh) {
             this.servicemesh = Objects.requireNonNull(servicemesh);
             return this;
         }
 
-        public Builder setState(FeatureStateResponse state) {
+        public Builder state(FeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -34,14 +34,14 @@ public final class GetRobotApplicationResult {
     private final @Nullable List<RobotApplicationSourceConfig> sources;
     private final @Nullable RobotApplicationTags tags;
 
-    @OutputCustomType.Constructor({"arn","currentRevisionId","environment","robotSoftwareSuite","sources","tags"})
+    @OutputCustomType.Constructor
     private GetRobotApplicationResult(
-        @Nullable String arn,
-        @Nullable String currentRevisionId,
-        @Nullable String environment,
-        @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite,
-        @Nullable List<RobotApplicationSourceConfig> sources,
-        @Nullable RobotApplicationTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
+        @OutputCustomType.Parameter("environment") @Nullable String environment,
+        @OutputCustomType.Parameter("robotSoftwareSuite") @Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite,
+        @OutputCustomType.Parameter("sources") @Nullable List<RobotApplicationSourceConfig> sources,
+        @OutputCustomType.Parameter("tags") @Nullable RobotApplicationTags tags) {
         this.arn = arn;
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;
@@ -111,32 +111,32 @@ public final class GetRobotApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCurrentRevisionId(@Nullable String currentRevisionId) {
+        public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(@Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(@Nullable RobotApplicationRobotSoftwareSuite robotSoftwareSuite) {
             this.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
 
-        public Builder setSources(@Nullable List<RobotApplicationSourceConfig> sources) {
+        public Builder sources(@Nullable List<RobotApplicationSourceConfig> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTags(@Nullable RobotApplicationTags tags) {
+        public Builder tags(@Nullable RobotApplicationTags tags) {
             this.tags = tags;
             return this;
         }

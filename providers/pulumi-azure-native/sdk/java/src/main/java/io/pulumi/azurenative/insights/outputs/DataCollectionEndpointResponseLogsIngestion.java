@@ -15,8 +15,8 @@ public final class DataCollectionEndpointResponseLogsIngestion {
      */
     private final String endpoint;
 
-    @OutputCustomType.Constructor({"endpoint"})
-    private DataCollectionEndpointResponseLogsIngestion(String endpoint) {
+    @OutputCustomType.Constructor
+    private DataCollectionEndpointResponseLogsIngestion(@OutputCustomType.Parameter("endpoint") String endpoint) {
         this.endpoint = endpoint;
     }
 
@@ -48,7 +48,7 @@ public final class DataCollectionEndpointResponseLogsIngestion {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }

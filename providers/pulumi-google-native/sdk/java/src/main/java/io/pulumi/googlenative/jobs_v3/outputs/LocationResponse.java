@@ -33,12 +33,12 @@ public final class LocationResponse {
      */
     private final Double radiusInMiles;
 
-    @OutputCustomType.Constructor({"latLng","locationType","postalAddress","radiusInMiles"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        LatLngResponse latLng,
-        String locationType,
-        PostalAddressResponse postalAddress,
-        Double radiusInMiles) {
+        @OutputCustomType.Parameter("latLng") LatLngResponse latLng,
+        @OutputCustomType.Parameter("locationType") String locationType,
+        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress,
+        @OutputCustomType.Parameter("radiusInMiles") Double radiusInMiles) {
         this.latLng = latLng;
         this.locationType = locationType;
         this.postalAddress = postalAddress;
@@ -100,22 +100,22 @@ public final class LocationResponse {
     	      this.radiusInMiles = defaults.radiusInMiles;
         }
 
-        public Builder setLatLng(LatLngResponse latLng) {
+        public Builder latLng(LatLngResponse latLng) {
             this.latLng = Objects.requireNonNull(latLng);
             return this;
         }
 
-        public Builder setLocationType(String locationType) {
+        public Builder locationType(String locationType) {
             this.locationType = Objects.requireNonNull(locationType);
             return this;
         }
 
-        public Builder setPostalAddress(PostalAddressResponse postalAddress) {
+        public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
 
-        public Builder setRadiusInMiles(Double radiusInMiles) {
+        public Builder radiusInMiles(Double radiusInMiles) {
             this.radiusInMiles = Objects.requireNonNull(radiusInMiles);
             return this;
         }

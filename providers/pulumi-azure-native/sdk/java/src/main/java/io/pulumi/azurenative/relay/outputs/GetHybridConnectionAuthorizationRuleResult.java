@@ -31,12 +31,12 @@ public final class GetHybridConnectionAuthorizationRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","rights","type"})
+    @OutputCustomType.Constructor
     private GetHybridConnectionAuthorizationRuleResult(
-        String id,
-        String name,
-        List<String> rights,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rights") List<String> rights,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.rights = rights;
@@ -98,22 +98,22 @@ public final class GetHybridConnectionAuthorizationRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRights(List<String> rights) {
+        public Builder rights(List<String> rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TopicRuleHttpAuthorization {
     private final @Nullable TopicRuleSigV4Authorization sigv4;
 
-    @OutputCustomType.Constructor({"sigv4"})
-    private TopicRuleHttpAuthorization(@Nullable TopicRuleSigV4Authorization sigv4) {
+    @OutputCustomType.Constructor
+    private TopicRuleHttpAuthorization(@OutputCustomType.Parameter("sigv4") @Nullable TopicRuleSigV4Authorization sigv4) {
         this.sigv4 = sigv4;
     }
 
@@ -42,7 +42,7 @@ public final class TopicRuleHttpAuthorization {
     	      this.sigv4 = defaults.sigv4;
         }
 
-        public Builder setSigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
+        public Builder sigv4(@Nullable TopicRuleSigV4Authorization sigv4) {
             this.sigv4 = sigv4;
             return this;
         }

@@ -180,72 +180,72 @@ public final class URLMapPathMatcherRouteRuleMatchRuleArgs extends io.pulumi.res
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setFullPathMatch(@Nullable Input<String> fullPathMatch) {
+        public Builder fullPathMatch(@Nullable Input<String> fullPathMatch) {
             this.fullPathMatch = fullPathMatch;
             return this;
         }
 
-        public Builder setFullPathMatch(@Nullable String fullPathMatch) {
+        public Builder fullPathMatch(@Nullable String fullPathMatch) {
             this.fullPathMatch = Input.ofNullable(fullPathMatch);
             return this;
         }
 
-        public Builder setHeaderMatches(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches) {
+        public Builder headerMatches(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs>> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
 
-        public Builder setHeaderMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs> headerMatches) {
+        public Builder headerMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs> headerMatches) {
             this.headerMatches = Input.ofNullable(headerMatches);
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable Input<Boolean> ignoreCase) {
+        public Builder ignoreCase(@Nullable Input<Boolean> ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable Boolean ignoreCase) {
+        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = Input.ofNullable(ignoreCase);
             return this;
         }
 
-        public Builder setMetadataFilters(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters) {
+        public Builder metadataFilters(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs>> metadataFilters) {
             this.metadataFilters = metadataFilters;
             return this;
         }
 
-        public Builder setMetadataFilters(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs> metadataFilters) {
+        public Builder metadataFilters(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleMetadataFilterArgs> metadataFilters) {
             this.metadataFilters = Input.ofNullable(metadataFilters);
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable Input<String> prefixMatch) {
+        public Builder prefixMatch(@Nullable Input<String> prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable String prefixMatch) {
+        public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }
 
-        public Builder setQueryParameterMatches(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches) {
+        public Builder queryParameterMatches(@Nullable Input<List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs>> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
 
-        public Builder setQueryParameterMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs> queryParameterMatches) {
+        public Builder queryParameterMatches(@Nullable List<URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs> queryParameterMatches) {
             this.queryParameterMatches = Input.ofNullable(queryParameterMatches);
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable Input<String> regexMatch) {
+        public Builder regexMatch(@Nullable Input<String> regexMatch) {
             this.regexMatch = regexMatch;
             return this;
         }
 
-        public Builder setRegexMatch(@Nullable String regexMatch) {
+        public Builder regexMatch(@Nullable String regexMatch) {
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }

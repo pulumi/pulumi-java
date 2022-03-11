@@ -17,13 +17,13 @@ public final class GetMapResult {
     private final @Nullable String mapArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","createTime","dataSource","mapArn","updateTime"})
+    @OutputCustomType.Constructor
     private GetMapResult(
-        @Nullable String arn,
-        @Nullable String createTime,
-        @Nullable String dataSource,
-        @Nullable String mapArn,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable String dataSource,
+        @OutputCustomType.Parameter("mapArn") @Nullable String mapArn,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.dataSource = dataSource;
@@ -75,27 +75,27 @@ public final class GetMapResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setDataSource(@Nullable String dataSource) {
+        public Builder dataSource(@Nullable String dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setMapArn(@Nullable String mapArn) {
+        public Builder mapArn(@Nullable String mapArn) {
             this.mapArn = mapArn;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

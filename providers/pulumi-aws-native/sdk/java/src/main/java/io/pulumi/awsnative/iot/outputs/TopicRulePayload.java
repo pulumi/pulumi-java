@@ -21,14 +21,14 @@ public final class TopicRulePayload {
     private final @Nullable Boolean ruleDisabled;
     private final String sql;
 
-    @OutputCustomType.Constructor({"actions","awsIotSqlVersion","description","errorAction","ruleDisabled","sql"})
+    @OutputCustomType.Constructor
     private TopicRulePayload(
-        List<TopicRuleAction> actions,
-        @Nullable String awsIotSqlVersion,
-        @Nullable String description,
-        @Nullable TopicRuleAction errorAction,
-        @Nullable Boolean ruleDisabled,
-        String sql) {
+        @OutputCustomType.Parameter("actions") List<TopicRuleAction> actions,
+        @OutputCustomType.Parameter("awsIotSqlVersion") @Nullable String awsIotSqlVersion,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errorAction") @Nullable TopicRuleAction errorAction,
+        @OutputCustomType.Parameter("ruleDisabled") @Nullable Boolean ruleDisabled,
+        @OutputCustomType.Parameter("sql") String sql) {
         this.actions = actions;
         this.awsIotSqlVersion = awsIotSqlVersion;
         this.description = description;
@@ -86,32 +86,32 @@ public final class TopicRulePayload {
     	      this.sql = defaults.sql;
         }
 
-        public Builder setActions(List<TopicRuleAction> actions) {
+        public Builder actions(List<TopicRuleAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setAwsIotSqlVersion(@Nullable String awsIotSqlVersion) {
+        public Builder awsIotSqlVersion(@Nullable String awsIotSqlVersion) {
             this.awsIotSqlVersion = awsIotSqlVersion;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrorAction(@Nullable TopicRuleAction errorAction) {
+        public Builder errorAction(@Nullable TopicRuleAction errorAction) {
             this.errorAction = errorAction;
             return this;
         }
 
-        public Builder setRuleDisabled(@Nullable Boolean ruleDisabled) {
+        public Builder ruleDisabled(@Nullable Boolean ruleDisabled) {
             this.ruleDisabled = ruleDisabled;
             return this;
         }
 
-        public Builder setSql(String sql) {
+        public Builder sql(String sql) {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }

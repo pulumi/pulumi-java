@@ -84,17 +84,17 @@ public final class GetStaticSiteUserProvidedFunctionAppForStaticSiteArgs extends
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setFunctionAppName(String functionAppName) {
+        public Builder functionAppName(String functionAppName) {
             this.functionAppName = Objects.requireNonNull(functionAppName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -18,8 +18,8 @@ public final class FeatureSpec {
      */
     private final @Nullable FeatureSpecMulticlusteringress multiclusteringress;
 
-    @OutputCustomType.Constructor({"multiclusteringress"})
-    private FeatureSpec(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
+    @OutputCustomType.Constructor
+    private FeatureSpec(@OutputCustomType.Parameter("multiclusteringress") @Nullable FeatureSpecMulticlusteringress multiclusteringress) {
         this.multiclusteringress = multiclusteringress;
     }
 
@@ -52,7 +52,7 @@ public final class FeatureSpec {
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setMulticlusteringress(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
+        public Builder multiclusteringress(@Nullable FeatureSpecMulticlusteringress multiclusteringress) {
             this.multiclusteringress = multiclusteringress;
             return this;
         }

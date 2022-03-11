@@ -26,16 +26,16 @@ public final class ListenerRuleAction {
     private final @Nullable String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognitoConfig","authenticateOidcConfig","fixedResponseConfig","forwardConfig","order","redirectConfig","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private ListenerRuleAction(
-        @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig,
-        @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig,
-        @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig,
-        @Nullable ListenerRuleForwardConfig forwardConfig,
-        @Nullable Integer order,
-        @Nullable ListenerRuleRedirectConfig redirectConfig,
-        @Nullable String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognitoConfig") @Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig,
+        @OutputCustomType.Parameter("authenticateOidcConfig") @Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig,
+        @OutputCustomType.Parameter("fixedResponseConfig") @Nullable ListenerRuleFixedResponseConfig fixedResponseConfig,
+        @OutputCustomType.Parameter("forwardConfig") @Nullable ListenerRuleForwardConfig forwardConfig,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("redirectConfig") @Nullable ListenerRuleRedirectConfig redirectConfig,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognitoConfig = authenticateCognitoConfig;
         this.authenticateOidcConfig = authenticateOidcConfig;
         this.fixedResponseConfig = fixedResponseConfig;
@@ -105,42 +105,42 @@ public final class ListenerRuleAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig) {
+        public Builder authenticateCognitoConfig(@Nullable ListenerRuleAuthenticateCognitoConfig authenticateCognitoConfig) {
             this.authenticateCognitoConfig = authenticateCognitoConfig;
             return this;
         }
 
-        public Builder setAuthenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
+        public Builder authenticateOidcConfig(@Nullable ListenerRuleAuthenticateOidcConfig authenticateOidcConfig) {
             this.authenticateOidcConfig = authenticateOidcConfig;
             return this;
         }
 
-        public Builder setFixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
+        public Builder fixedResponseConfig(@Nullable ListenerRuleFixedResponseConfig fixedResponseConfig) {
             this.fixedResponseConfig = fixedResponseConfig;
             return this;
         }
 
-        public Builder setForwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
+        public Builder forwardConfig(@Nullable ListenerRuleForwardConfig forwardConfig) {
             this.forwardConfig = forwardConfig;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setRedirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
+        public Builder redirectConfig(@Nullable ListenerRuleRedirectConfig redirectConfig) {
             this.redirectConfig = redirectConfig;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -90,17 +90,17 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
     	      this.entries = defaults.entries;
         }
 
-        public Builder setAnnualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
+        public Builder annualizedBaseCompensationRange(CompensationRangeResponse annualizedBaseCompensationRange) {
             this.annualizedBaseCompensationRange = Objects.requireNonNull(annualizedBaseCompensationRange);
             return this;
         }
 
-        public Builder setAnnualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
+        public Builder annualizedTotalCompensationRange(CompensationRangeResponse annualizedTotalCompensationRange) {
             this.annualizedTotalCompensationRange = Objects.requireNonNull(annualizedTotalCompensationRange);
             return this;
         }
 
-        public Builder setEntries(List<CompensationEntryResponse> entries) {
+        public Builder entries(List<CompensationEntryResponse> entries) {
             this.entries = Objects.requireNonNull(entries);
             return this;
         }

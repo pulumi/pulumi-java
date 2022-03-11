@@ -19,10 +19,10 @@ public final class RecipeStep {
      */
     private final @Nullable List<RecipeConditionExpression> conditionExpressions;
 
-    @OutputCustomType.Constructor({"action","conditionExpressions"})
+    @OutputCustomType.Constructor
     private RecipeStep(
-        RecipeAction action,
-        @Nullable List<RecipeConditionExpression> conditionExpressions) {
+        @OutputCustomType.Parameter("action") RecipeAction action,
+        @OutputCustomType.Parameter("conditionExpressions") @Nullable List<RecipeConditionExpression> conditionExpressions) {
         this.action = action;
         this.conditionExpressions = conditionExpressions;
     }
@@ -60,12 +60,12 @@ public final class RecipeStep {
     	      this.conditionExpressions = defaults.conditionExpressions;
         }
 
-        public Builder setAction(RecipeAction action) {
+        public Builder action(RecipeAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setConditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
+        public Builder conditionExpressions(@Nullable List<RecipeConditionExpression> conditionExpressions) {
             this.conditionExpressions = conditionExpressions;
             return this;
         }

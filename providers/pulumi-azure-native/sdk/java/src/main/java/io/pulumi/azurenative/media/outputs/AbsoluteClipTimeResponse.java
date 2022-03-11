@@ -21,10 +21,10 @@ public final class AbsoluteClipTimeResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"odataType","time"})
+    @OutputCustomType.Constructor
     private AbsoluteClipTimeResponse(
-        String odataType,
-        String time) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("time") String time) {
         this.odataType = odataType;
         this.time = time;
     }
@@ -67,12 +67,12 @@ public final class AbsoluteClipTimeResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

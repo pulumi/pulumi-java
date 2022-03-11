@@ -22,10 +22,10 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
      */
     private final List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs;
 
-    @OutputCustomType.Constructor({"operationConfigType","operationConfigs"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1OperationGroupResponse(
-        String operationConfigType,
-        List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
+        @OutputCustomType.Parameter("operationConfigType") String operationConfigType,
+        @OutputCustomType.Parameter("operationConfigs") List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
         this.operationConfigType = operationConfigType;
         this.operationConfigs = operationConfigs;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudApigeeV1OperationGroupResponse {
     	      this.operationConfigs = defaults.operationConfigs;
         }
 
-        public Builder setOperationConfigType(String operationConfigType) {
+        public Builder operationConfigType(String operationConfigType) {
             this.operationConfigType = Objects.requireNonNull(operationConfigType);
             return this;
         }
 
-        public Builder setOperationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
+        public Builder operationConfigs(List<GoogleCloudApigeeV1OperationConfigResponse> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }

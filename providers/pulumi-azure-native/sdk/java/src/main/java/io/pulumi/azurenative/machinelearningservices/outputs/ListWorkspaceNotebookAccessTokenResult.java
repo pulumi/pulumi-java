@@ -19,16 +19,16 @@ public final class ListWorkspaceNotebookAccessTokenResult {
     private final String scope;
     private final String tokenType;
 
-    @OutputCustomType.Constructor({"accessToken","expiresIn","hostName","notebookResourceId","publicDns","refreshToken","scope","tokenType"})
+    @OutputCustomType.Constructor
     private ListWorkspaceNotebookAccessTokenResult(
-        String accessToken,
-        Integer expiresIn,
-        String hostName,
-        String notebookResourceId,
-        String publicDns,
-        String refreshToken,
-        String scope,
-        String tokenType) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("expiresIn") Integer expiresIn,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("notebookResourceId") String notebookResourceId,
+        @OutputCustomType.Parameter("publicDns") String publicDns,
+        @OutputCustomType.Parameter("refreshToken") String refreshToken,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("tokenType") String tokenType) {
         this.accessToken = accessToken;
         this.expiresIn = expiresIn;
         this.hostName = hostName;
@@ -98,42 +98,42 @@ public final class ListWorkspaceNotebookAccessTokenResult {
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setExpiresIn(Integer expiresIn) {
+        public Builder expiresIn(Integer expiresIn) {
             this.expiresIn = Objects.requireNonNull(expiresIn);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setNotebookResourceId(String notebookResourceId) {
+        public Builder notebookResourceId(String notebookResourceId) {
             this.notebookResourceId = Objects.requireNonNull(notebookResourceId);
             return this;
         }
 
-        public Builder setPublicDns(String publicDns) {
+        public Builder publicDns(String publicDns) {
             this.publicDns = Objects.requireNonNull(publicDns);
             return this;
         }
 
-        public Builder setRefreshToken(String refreshToken) {
+        public Builder refreshToken(String refreshToken) {
             this.refreshToken = Objects.requireNonNull(refreshToken);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setTokenType(String tokenType) {
+        public Builder tokenType(String tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }

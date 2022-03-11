@@ -28,11 +28,11 @@ public final class WorkflowTemplatePlacementManagedCluster {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"clusterName","config","labels"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedCluster(
-        String clusterName,
-        WorkflowTemplatePlacementManagedClusterConfig config,
-        @Nullable Map<String,String> labels) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("config") WorkflowTemplatePlacementManagedClusterConfig config,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.clusterName = clusterName;
         this.config = config;
         this.labels = labels;
@@ -84,17 +84,17 @@ public final class WorkflowTemplatePlacementManagedCluster {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setConfig(WorkflowTemplatePlacementManagedClusterConfig config) {
+        public Builder config(WorkflowTemplatePlacementManagedClusterConfig config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }

@@ -19,11 +19,11 @@ public final class VolumeResponse {
     private final String name;
     private final SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor({"configMap","name","secret"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        ConfigMapVolumeSourceResponse configMap,
-        String name,
-        SecretVolumeSourceResponse secret) {
+        @OutputCustomType.Parameter("configMap") ConfigMapVolumeSourceResponse configMap,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") SecretVolumeSourceResponse secret) {
         this.configMap = configMap;
         this.name = name;
         this.secret = secret;
@@ -67,17 +67,17 @@ public final class VolumeResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setConfigMap(ConfigMapVolumeSourceResponse configMap) {
+        public Builder configMap(ConfigMapVolumeSourceResponse configMap) {
             this.configMap = Objects.requireNonNull(configMap);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(SecretVolumeSourceResponse secret) {
+        public Builder secret(SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

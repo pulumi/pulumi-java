@@ -21,14 +21,14 @@ public final class SpotFleetEbsBlockDevice {
     private final @Nullable Integer volumeSize;
     private final @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","encrypted","iops","snapshotId","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private SpotFleetEbsBlockDevice(
-        @Nullable Boolean deleteOnTermination,
-        @Nullable Boolean encrypted,
-        @Nullable Integer iops,
-        @Nullable String snapshotId,
-        @Nullable Integer volumeSize,
-        @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("encrypted") @Nullable Boolean encrypted,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("snapshotId") @Nullable String snapshotId,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
         this.deleteOnTermination = deleteOnTermination;
         this.encrypted = encrypted;
         this.iops = iops;
@@ -86,32 +86,32 @@ public final class SpotFleetEbsBlockDevice {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setEncrypted(@Nullable Boolean encrypted) {
+        public Builder encrypted(@Nullable Boolean encrypted) {
             this.encrypted = encrypted;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
+        public Builder volumeType(@Nullable SpotFleetEbsBlockDeviceVolumeType volumeType) {
             this.volumeType = volumeType;
             return this;
         }

@@ -22,10 +22,10 @@ public final class StorageAccountResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","type"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String id,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class StorageAccountResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

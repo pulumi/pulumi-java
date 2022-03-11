@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelBiasJobDefinitionMonitoringResources {
     private final ModelBiasJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private ModelBiasJobDefinitionMonitoringResources(ModelBiasJobDefinitionClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private ModelBiasJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") ModelBiasJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 
@@ -40,7 +40,7 @@ public final class ModelBiasJobDefinitionMonitoringResources {
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(ModelBiasJobDefinitionClusterConfig clusterConfig) {
+        public Builder clusterConfig(ModelBiasJobDefinitionClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }

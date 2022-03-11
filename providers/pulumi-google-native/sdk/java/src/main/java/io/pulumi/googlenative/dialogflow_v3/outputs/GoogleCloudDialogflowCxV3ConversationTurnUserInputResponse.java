@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
      */
     private final Boolean isWebhookEnabled;
 
-    @OutputCustomType.Constructor({"enableSentimentAnalysis","injectedParameters","input","isWebhookEnabled"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse(
-        Boolean enableSentimentAnalysis,
-        Map<String,String> injectedParameters,
-        GoogleCloudDialogflowCxV3QueryInputResponse input,
-        Boolean isWebhookEnabled) {
+        @OutputCustomType.Parameter("enableSentimentAnalysis") Boolean enableSentimentAnalysis,
+        @OutputCustomType.Parameter("injectedParameters") Map<String,String> injectedParameters,
+        @OutputCustomType.Parameter("input") GoogleCloudDialogflowCxV3QueryInputResponse input,
+        @OutputCustomType.Parameter("isWebhookEnabled") Boolean isWebhookEnabled) {
         this.enableSentimentAnalysis = enableSentimentAnalysis;
         this.injectedParameters = injectedParameters;
         this.input = input;
@@ -100,22 +100,22 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse {
     	      this.isWebhookEnabled = defaults.isWebhookEnabled;
         }
 
-        public Builder setEnableSentimentAnalysis(Boolean enableSentimentAnalysis) {
+        public Builder enableSentimentAnalysis(Boolean enableSentimentAnalysis) {
             this.enableSentimentAnalysis = Objects.requireNonNull(enableSentimentAnalysis);
             return this;
         }
 
-        public Builder setInjectedParameters(Map<String,String> injectedParameters) {
+        public Builder injectedParameters(Map<String,String> injectedParameters) {
             this.injectedParameters = Objects.requireNonNull(injectedParameters);
             return this;
         }
 
-        public Builder setInput(GoogleCloudDialogflowCxV3QueryInputResponse input) {
+        public Builder input(GoogleCloudDialogflowCxV3QueryInputResponse input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setIsWebhookEnabled(Boolean isWebhookEnabled) {
+        public Builder isWebhookEnabled(Boolean isWebhookEnabled) {
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
         }

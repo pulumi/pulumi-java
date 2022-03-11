@@ -32,12 +32,12 @@ public final class Subject {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name","namespace"})
+    @OutputCustomType.Constructor
     private Subject(
-        @Nullable String apiGroup,
-        String kind,
-        String name,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;
@@ -99,22 +99,22 @@ public final class Subject {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setApiGroup(@Nullable String apiGroup) {
+        public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

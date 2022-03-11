@@ -17,13 +17,13 @@ public final class RRSetRoutingPolicyResponse {
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
     private final RRSetRoutingPolicyWrrPolicyResponse wrrPolicy;
 
-    @OutputCustomType.Constructor({"geo","geoPolicy","kind","wrr","wrrPolicy"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyResponse(
-        RRSetRoutingPolicyGeoPolicyResponse geo,
-        RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
-        String kind,
-        RRSetRoutingPolicyWrrPolicyResponse wrr,
-        RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
+        @OutputCustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
+        @OutputCustomType.Parameter("geoPolicy") RRSetRoutingPolicyGeoPolicyResponse geoPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr,
+        @OutputCustomType.Parameter("wrrPolicy") RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
         this.geo = geo;
         this.geoPolicy = geoPolicy;
         this.kind = kind;
@@ -75,27 +75,27 @@ public final class RRSetRoutingPolicyResponse {
     	      this.wrrPolicy = defaults.wrrPolicy;
         }
 
-        public Builder setGeo(RRSetRoutingPolicyGeoPolicyResponse geo) {
+        public Builder geo(RRSetRoutingPolicyGeoPolicyResponse geo) {
             this.geo = Objects.requireNonNull(geo);
             return this;
         }
 
-        public Builder setGeoPolicy(RRSetRoutingPolicyGeoPolicyResponse geoPolicy) {
+        public Builder geoPolicy(RRSetRoutingPolicyGeoPolicyResponse geoPolicy) {
             this.geoPolicy = Objects.requireNonNull(geoPolicy);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setWrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
+        public Builder wrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
             this.wrr = Objects.requireNonNull(wrr);
             return this;
         }
 
-        public Builder setWrrPolicy(RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
+        public Builder wrrPolicy(RRSetRoutingPolicyWrrPolicyResponse wrrPolicy) {
             this.wrrPolicy = Objects.requireNonNull(wrrPolicy);
             return this;
         }

@@ -17,8 +17,8 @@ public final class NoEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"enabledProtocols"})
-    private NoEncryptionResponse(@Nullable EnabledProtocolsResponse enabledProtocols) {
+    @OutputCustomType.Constructor
+    private NoEncryptionResponse(@OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.enabledProtocols = enabledProtocols;
     }
 
@@ -50,7 +50,7 @@ public final class NoEncryptionResponse {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

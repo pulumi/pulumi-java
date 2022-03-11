@@ -16,11 +16,11 @@ public final class BrokerInstance {
     private final @Nullable List<String> endpoints;
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"consoleUrl","endpoints","ipAddress"})
+    @OutputCustomType.Constructor
     private BrokerInstance(
-        @Nullable String consoleUrl,
-        @Nullable List<String> endpoints,
-        @Nullable String ipAddress) {
+        @OutputCustomType.Parameter("consoleUrl") @Nullable String consoleUrl,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<String> endpoints,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.consoleUrl = consoleUrl;
         this.endpoints = endpoints;
         this.ipAddress = ipAddress;
@@ -60,17 +60,17 @@ public final class BrokerInstance {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setConsoleUrl(@Nullable String consoleUrl) {
+        public Builder consoleUrl(@Nullable String consoleUrl) {
             this.consoleUrl = consoleUrl;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<String> endpoints) {
+        public Builder endpoints(@Nullable List<String> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

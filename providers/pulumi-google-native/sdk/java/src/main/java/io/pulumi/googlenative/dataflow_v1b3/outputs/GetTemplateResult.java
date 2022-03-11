@@ -33,12 +33,12 @@ public final class GetTemplateResult {
      */
     private final String templateType;
 
-    @OutputCustomType.Constructor({"metadata","runtimeMetadata","status","templateType"})
+    @OutputCustomType.Constructor
     private GetTemplateResult(
-        TemplateMetadataResponse metadata,
-        RuntimeMetadataResponse runtimeMetadata,
-        StatusResponse status,
-        String templateType) {
+        @OutputCustomType.Parameter("metadata") TemplateMetadataResponse metadata,
+        @OutputCustomType.Parameter("runtimeMetadata") RuntimeMetadataResponse runtimeMetadata,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("templateType") String templateType) {
         this.metadata = metadata;
         this.runtimeMetadata = runtimeMetadata;
         this.status = status;
@@ -100,22 +100,22 @@ public final class GetTemplateResult {
     	      this.templateType = defaults.templateType;
         }
 
-        public Builder setMetadata(TemplateMetadataResponse metadata) {
+        public Builder metadata(TemplateMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setRuntimeMetadata(RuntimeMetadataResponse runtimeMetadata) {
+        public Builder runtimeMetadata(RuntimeMetadataResponse runtimeMetadata) {
             this.runtimeMetadata = Objects.requireNonNull(runtimeMetadata);
             return this;
         }
 
-        public Builder setStatus(StatusResponse status) {
+        public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTemplateType(String templateType) {
+        public Builder templateType(String templateType) {
             this.templateType = Objects.requireNonNull(templateType);
             return this;
         }

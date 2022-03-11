@@ -36,13 +36,13 @@ public final class GetEnvgroupResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createdAt","hostnames","lastModifiedAt","name","state"})
+    @OutputCustomType.Constructor
     private GetEnvgroupResult(
-        String createdAt,
-        List<String> hostnames,
-        String lastModifiedAt,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("hostnames") List<String> hostnames,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.hostnames = hostnames;
         this.lastModifiedAt = lastModifiedAt;
@@ -114,27 +114,27 @@ public final class GetEnvgroupResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setHostnames(List<String> hostnames) {
+        public Builder hostnames(List<String> hostnames) {
             this.hostnames = Objects.requireNonNull(hostnames);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -89,32 +89,32 @@ public final class VpcPeeringConnectionAccepterRequesterArgs extends io.pulumi.r
     	      this.allowVpcToRemoteClassicLink = defaults.allowVpcToRemoteClassicLink;
         }
 
-        public Builder setAllowClassicLinkToRemoteVpc(@Nullable Input<Boolean> allowClassicLinkToRemoteVpc) {
+        public Builder allowClassicLinkToRemoteVpc(@Nullable Input<Boolean> allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
 
-        public Builder setAllowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
+        public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = Input.ofNullable(allowClassicLinkToRemoteVpc);
             return this;
         }
 
-        public Builder setAllowRemoteVpcDnsResolution(@Nullable Input<Boolean> allowRemoteVpcDnsResolution) {
+        public Builder allowRemoteVpcDnsResolution(@Nullable Input<Boolean> allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
 
-        public Builder setAllowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
+        public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = Input.ofNullable(allowRemoteVpcDnsResolution);
             return this;
         }
 
-        public Builder setAllowVpcToRemoteClassicLink(@Nullable Input<Boolean> allowVpcToRemoteClassicLink) {
+        public Builder allowVpcToRemoteClassicLink(@Nullable Input<Boolean> allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }
 
-        public Builder setAllowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
+        public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = Input.ofNullable(allowVpcToRemoteClassicLink);
             return this;
         }

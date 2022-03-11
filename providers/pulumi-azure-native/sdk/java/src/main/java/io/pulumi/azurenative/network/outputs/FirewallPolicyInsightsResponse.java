@@ -29,11 +29,11 @@ public final class FirewallPolicyInsightsResponse {
      */
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor({"isEnabled","logAnalyticsResources","retentionDays"})
+    @OutputCustomType.Constructor
     private FirewallPolicyInsightsResponse(
-        @Nullable Boolean isEnabled,
-        @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
-        @Nullable Integer retentionDays) {
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("logAnalyticsResources") @Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.isEnabled = isEnabled;
         this.logAnalyticsResources = logAnalyticsResources;
         this.retentionDays = retentionDays;
@@ -85,17 +85,17 @@ public final class FirewallPolicyInsightsResponse {
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setLogAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources) {
+        public Builder logAnalyticsResources(@Nullable FirewallPolicyLogAnalyticsResourcesResponse logAnalyticsResources) {
             this.logAnalyticsResources = logAnalyticsResources;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }

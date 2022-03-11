@@ -75,22 +75,22 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkerConfigArgs workerConfig) {
+        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }

@@ -36,12 +36,12 @@ public final class GetDataCatalogResult {
      */
     private final @Nullable DataCatalogType type;
 
-    @OutputCustomType.Constructor({"description","parameters","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCatalogResult(
-        @Nullable String description,
-        @Nullable Object parameters,
-        @Nullable List<DataCatalogTag> tags,
-        @Nullable DataCatalogType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataCatalogTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable DataCatalogType type) {
         this.description = description;
         this.parameters = parameters;
         this.tags = tags;
@@ -103,22 +103,22 @@ public final class GetDataCatalogResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataCatalogTag> tags) {
+        public Builder tags(@Nullable List<DataCatalogTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable DataCatalogType type) {
+        public Builder type(@Nullable DataCatalogType type) {
             this.type = type;
             return this;
         }

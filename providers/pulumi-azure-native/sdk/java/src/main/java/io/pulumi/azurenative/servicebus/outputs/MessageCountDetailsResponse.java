@@ -35,13 +35,13 @@ public final class MessageCountDetailsResponse {
      */
     private final Double transferMessageCount;
 
-    @OutputCustomType.Constructor({"activeMessageCount","deadLetterMessageCount","scheduledMessageCount","transferDeadLetterMessageCount","transferMessageCount"})
+    @OutputCustomType.Constructor
     private MessageCountDetailsResponse(
-        Double activeMessageCount,
-        Double deadLetterMessageCount,
-        Double scheduledMessageCount,
-        Double transferDeadLetterMessageCount,
-        Double transferMessageCount) {
+        @OutputCustomType.Parameter("activeMessageCount") Double activeMessageCount,
+        @OutputCustomType.Parameter("deadLetterMessageCount") Double deadLetterMessageCount,
+        @OutputCustomType.Parameter("scheduledMessageCount") Double scheduledMessageCount,
+        @OutputCustomType.Parameter("transferDeadLetterMessageCount") Double transferDeadLetterMessageCount,
+        @OutputCustomType.Parameter("transferMessageCount") Double transferMessageCount) {
         this.activeMessageCount = activeMessageCount;
         this.deadLetterMessageCount = deadLetterMessageCount;
         this.scheduledMessageCount = scheduledMessageCount;
@@ -113,27 +113,27 @@ public final class MessageCountDetailsResponse {
     	      this.transferMessageCount = defaults.transferMessageCount;
         }
 
-        public Builder setActiveMessageCount(Double activeMessageCount) {
+        public Builder activeMessageCount(Double activeMessageCount) {
             this.activeMessageCount = Objects.requireNonNull(activeMessageCount);
             return this;
         }
 
-        public Builder setDeadLetterMessageCount(Double deadLetterMessageCount) {
+        public Builder deadLetterMessageCount(Double deadLetterMessageCount) {
             this.deadLetterMessageCount = Objects.requireNonNull(deadLetterMessageCount);
             return this;
         }
 
-        public Builder setScheduledMessageCount(Double scheduledMessageCount) {
+        public Builder scheduledMessageCount(Double scheduledMessageCount) {
             this.scheduledMessageCount = Objects.requireNonNull(scheduledMessageCount);
             return this;
         }
 
-        public Builder setTransferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
+        public Builder transferDeadLetterMessageCount(Double transferDeadLetterMessageCount) {
             this.transferDeadLetterMessageCount = Objects.requireNonNull(transferDeadLetterMessageCount);
             return this;
         }
 
-        public Builder setTransferMessageCount(Double transferMessageCount) {
+        public Builder transferMessageCount(Double transferMessageCount) {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
         }

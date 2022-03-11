@@ -163,34 +163,34 @@ public final class GetConfigResult {
      */
     private final UsageResponse usage;
 
-    @OutputCustomType.Constructor({"apis","authentication","backend","billing","configVersion","context","control","customError","documentation","endpoints","enums","http","logging","logs","metrics","monitoredResources","monitoring","name","producerProjectId","quota","sourceInfo","systemParameters","systemTypes","title","types","usage"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        List<ApiResponse> apis,
-        AuthenticationResponse authentication,
-        BackendResponse backend,
-        BillingResponse billing,
-        Integer configVersion,
-        ContextResponse context,
-        ControlResponse control,
-        CustomErrorResponse customError,
-        DocumentationResponse documentation,
-        List<EndpointResponse> endpoints,
-        List<EnumResponse> enums,
-        HttpResponse http,
-        LoggingResponse logging,
-        List<LogDescriptorResponse> logs,
-        List<MetricDescriptorResponse> metrics,
-        List<MonitoredResourceDescriptorResponse> monitoredResources,
-        MonitoringResponse monitoring,
-        String name,
-        String producerProjectId,
-        QuotaResponse quota,
-        SourceInfoResponse sourceInfo,
-        SystemParametersResponse systemParameters,
-        List<TypeResponse> systemTypes,
-        String title,
-        List<TypeResponse> types,
-        UsageResponse usage) {
+        @OutputCustomType.Parameter("apis") List<ApiResponse> apis,
+        @OutputCustomType.Parameter("authentication") AuthenticationResponse authentication,
+        @OutputCustomType.Parameter("backend") BackendResponse backend,
+        @OutputCustomType.Parameter("billing") BillingResponse billing,
+        @OutputCustomType.Parameter("configVersion") Integer configVersion,
+        @OutputCustomType.Parameter("context") ContextResponse context,
+        @OutputCustomType.Parameter("control") ControlResponse control,
+        @OutputCustomType.Parameter("customError") CustomErrorResponse customError,
+        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("enums") List<EnumResponse> enums,
+        @OutputCustomType.Parameter("http") HttpResponse http,
+        @OutputCustomType.Parameter("logging") LoggingResponse logging,
+        @OutputCustomType.Parameter("logs") List<LogDescriptorResponse> logs,
+        @OutputCustomType.Parameter("metrics") List<MetricDescriptorResponse> metrics,
+        @OutputCustomType.Parameter("monitoredResources") List<MonitoredResourceDescriptorResponse> monitoredResources,
+        @OutputCustomType.Parameter("monitoring") MonitoringResponse monitoring,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("producerProjectId") String producerProjectId,
+        @OutputCustomType.Parameter("quota") QuotaResponse quota,
+        @OutputCustomType.Parameter("sourceInfo") SourceInfoResponse sourceInfo,
+        @OutputCustomType.Parameter("systemParameters") SystemParametersResponse systemParameters,
+        @OutputCustomType.Parameter("systemTypes") List<TypeResponse> systemTypes,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("types") List<TypeResponse> types,
+        @OutputCustomType.Parameter("usage") UsageResponse usage) {
         this.apis = apis;
         this.authentication = authentication;
         this.backend = backend;
@@ -472,132 +472,132 @@ public final class GetConfigResult {
     	      this.usage = defaults.usage;
         }
 
-        public Builder setApis(List<ApiResponse> apis) {
+        public Builder apis(List<ApiResponse> apis) {
             this.apis = Objects.requireNonNull(apis);
             return this;
         }
 
-        public Builder setAuthentication(AuthenticationResponse authentication) {
+        public Builder authentication(AuthenticationResponse authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setBackend(BackendResponse backend) {
+        public Builder backend(BackendResponse backend) {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
 
-        public Builder setBilling(BillingResponse billing) {
+        public Builder billing(BillingResponse billing) {
             this.billing = Objects.requireNonNull(billing);
             return this;
         }
 
-        public Builder setConfigVersion(Integer configVersion) {
+        public Builder configVersion(Integer configVersion) {
             this.configVersion = Objects.requireNonNull(configVersion);
             return this;
         }
 
-        public Builder setContext(ContextResponse context) {
+        public Builder context(ContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setControl(ControlResponse control) {
+        public Builder control(ControlResponse control) {
             this.control = Objects.requireNonNull(control);
             return this;
         }
 
-        public Builder setCustomError(CustomErrorResponse customError) {
+        public Builder customError(CustomErrorResponse customError) {
             this.customError = Objects.requireNonNull(customError);
             return this;
         }
 
-        public Builder setDocumentation(DocumentationResponse documentation) {
+        public Builder documentation(DocumentationResponse documentation) {
             this.documentation = Objects.requireNonNull(documentation);
             return this;
         }
 
-        public Builder setEndpoints(List<EndpointResponse> endpoints) {
+        public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setEnums(List<EnumResponse> enums) {
+        public Builder enums(List<EnumResponse> enums) {
             this.enums = Objects.requireNonNull(enums);
             return this;
         }
 
-        public Builder setHttp(HttpResponse http) {
+        public Builder http(HttpResponse http) {
             this.http = Objects.requireNonNull(http);
             return this;
         }
 
-        public Builder setLogging(LoggingResponse logging) {
+        public Builder logging(LoggingResponse logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
 
-        public Builder setLogs(List<LogDescriptorResponse> logs) {
+        public Builder logs(List<LogDescriptorResponse> logs) {
             this.logs = Objects.requireNonNull(logs);
             return this;
         }
 
-        public Builder setMetrics(List<MetricDescriptorResponse> metrics) {
+        public Builder metrics(List<MetricDescriptorResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setMonitoredResources(List<MonitoredResourceDescriptorResponse> monitoredResources) {
+        public Builder monitoredResources(List<MonitoredResourceDescriptorResponse> monitoredResources) {
             this.monitoredResources = Objects.requireNonNull(monitoredResources);
             return this;
         }
 
-        public Builder setMonitoring(MonitoringResponse monitoring) {
+        public Builder monitoring(MonitoringResponse monitoring) {
             this.monitoring = Objects.requireNonNull(monitoring);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProducerProjectId(String producerProjectId) {
+        public Builder producerProjectId(String producerProjectId) {
             this.producerProjectId = Objects.requireNonNull(producerProjectId);
             return this;
         }
 
-        public Builder setQuota(QuotaResponse quota) {
+        public Builder quota(QuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
 
-        public Builder setSourceInfo(SourceInfoResponse sourceInfo) {
+        public Builder sourceInfo(SourceInfoResponse sourceInfo) {
             this.sourceInfo = Objects.requireNonNull(sourceInfo);
             return this;
         }
 
-        public Builder setSystemParameters(SystemParametersResponse systemParameters) {
+        public Builder systemParameters(SystemParametersResponse systemParameters) {
             this.systemParameters = Objects.requireNonNull(systemParameters);
             return this;
         }
 
-        public Builder setSystemTypes(List<TypeResponse> systemTypes) {
+        public Builder systemTypes(List<TypeResponse> systemTypes) {
             this.systemTypes = Objects.requireNonNull(systemTypes);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTypes(List<TypeResponse> types) {
+        public Builder types(List<TypeResponse> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setUsage(UsageResponse usage) {
+        public Builder usage(UsageResponse usage) {
             this.usage = Objects.requireNonNull(usage);
             return this;
         }

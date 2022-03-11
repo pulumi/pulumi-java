@@ -33,12 +33,12 @@ public final class ManagementPolicyBaseBlobResponse {
      */
     private final @Nullable DateAfterModificationResponse tierToCool;
 
-    @OutputCustomType.Constructor({"delete","enableAutoTierToHotFromCool","tierToArchive","tierToCool"})
+    @OutputCustomType.Constructor
     private ManagementPolicyBaseBlobResponse(
-        @Nullable DateAfterModificationResponse delete,
-        @Nullable Boolean enableAutoTierToHotFromCool,
-        @Nullable DateAfterModificationResponse tierToArchive,
-        @Nullable DateAfterModificationResponse tierToCool) {
+        @OutputCustomType.Parameter("delete") @Nullable DateAfterModificationResponse delete,
+        @OutputCustomType.Parameter("enableAutoTierToHotFromCool") @Nullable Boolean enableAutoTierToHotFromCool,
+        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterModificationResponse tierToArchive,
+        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterModificationResponse tierToCool) {
         this.delete = delete;
         this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
         this.tierToArchive = tierToArchive;
@@ -100,22 +100,22 @@ public final class ManagementPolicyBaseBlobResponse {
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable DateAfterModificationResponse delete) {
+        public Builder delete(@Nullable DateAfterModificationResponse delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setEnableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
+        public Builder enableAutoTierToHotFromCool(@Nullable Boolean enableAutoTierToHotFromCool) {
             this.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterModificationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterModificationResponse tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterModificationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }

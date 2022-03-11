@@ -32,12 +32,12 @@ public final class CanaryTimeline {
      */
     private final @Nullable String lastStopped;
 
-    @OutputCustomType.Constructor({"created","lastModified","lastStarted","lastStopped"})
+    @OutputCustomType.Constructor
     private CanaryTimeline(
-        @Nullable String created,
-        @Nullable String lastModified,
-        @Nullable String lastStarted,
-        @Nullable String lastStopped) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
+        @OutputCustomType.Parameter("lastStarted") @Nullable String lastStarted,
+        @OutputCustomType.Parameter("lastStopped") @Nullable String lastStopped) {
         this.created = created;
         this.lastModified = lastModified;
         this.lastStarted = lastStarted;
@@ -99,22 +99,22 @@ public final class CanaryTimeline {
     	      this.lastStopped = defaults.lastStopped;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setLastStarted(@Nullable String lastStarted) {
+        public Builder lastStarted(@Nullable String lastStarted) {
             this.lastStarted = lastStarted;
             return this;
         }
 
-        public Builder setLastStopped(@Nullable String lastStopped) {
+        public Builder lastStopped(@Nullable String lastStopped) {
             this.lastStopped = lastStopped;
             return this;
         }

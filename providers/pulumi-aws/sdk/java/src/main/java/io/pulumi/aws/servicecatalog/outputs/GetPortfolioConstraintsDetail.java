@@ -36,14 +36,14 @@ public final class GetPortfolioConstraintsDetail {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"constraintId","description","owner","portfolioId","productId","type"})
+    @OutputCustomType.Constructor
     private GetPortfolioConstraintsDetail(
-        String constraintId,
-        String description,
-        String owner,
-        String portfolioId,
-        String productId,
-        String type) {
+        @OutputCustomType.Parameter("constraintId") String constraintId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("portfolioId") String portfolioId,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("type") String type) {
         this.constraintId = constraintId;
         this.description = description;
         this.owner = owner;
@@ -121,32 +121,32 @@ public final class GetPortfolioConstraintsDetail {
     	      this.type = defaults.type;
         }
 
-        public Builder setConstraintId(String constraintId) {
+        public Builder constraintId(String constraintId) {
             this.constraintId = Objects.requireNonNull(constraintId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

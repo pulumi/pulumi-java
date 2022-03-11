@@ -118,20 +118,20 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","guestOsFeatures","index","initializeParams","$interface","kind","licenses","mode","source","type"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigDataDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable Boolean boot,
-        @Nullable String deviceName,
-        @Nullable List<String> guestOsFeatures,
-        @Nullable Integer index,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
-        @Nullable String $interface,
-        @Nullable String kind,
-        @Nullable List<String> licenses,
-        @Nullable String mode,
-        @Nullable String source,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("guestOsFeatures") @Nullable List<String> guestOsFeatures,
+        @OutputCustomType.Parameter("index") @Nullable Integer index,
+        @OutputCustomType.Parameter("initializeParams") @Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams,
+        @OutputCustomType.Parameter("interface") @Nullable String $interface,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("licenses") @Nullable List<String> licenses,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -315,62 +315,62 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setBoot(@Nullable Boolean boot) {
+        public Builder boot(@Nullable Boolean boot) {
             this.boot = boot;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setGuestOsFeatures(@Nullable List<String> guestOsFeatures) {
+        public Builder guestOsFeatures(@Nullable List<String> guestOsFeatures) {
             this.guestOsFeatures = guestOsFeatures;
             return this;
         }
 
-        public Builder setIndex(@Nullable Integer index) {
+        public Builder index(@Nullable Integer index) {
             this.index = index;
             return this;
         }
 
-        public Builder setInitializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams) {
+        public Builder initializeParams(@Nullable RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams initializeParams) {
             this.initializeParams = initializeParams;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLicenses(@Nullable List<String> licenses) {
+        public Builder licenses(@Nullable List<String> licenses) {
             this.licenses = licenses;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

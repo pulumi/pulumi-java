@@ -109,32 +109,32 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setAttributes(@Nullable Input<Map<String,String>> attributes) {
+        public Builder attributes(@Nullable Input<Map<String,String>> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
 
-        public Builder setOidcToken(@Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
+        public Builder oidcToken(@Nullable Input<SubscriptionPushConfigOidcTokenArgs> oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable SubscriptionPushConfigOidcTokenArgs oidcToken) {
+        public Builder oidcToken(@Nullable SubscriptionPushConfigOidcTokenArgs oidcToken) {
             this.oidcToken = Input.ofNullable(oidcToken);
             return this;
         }
 
-        public Builder setPushEndpoint(Input<String> pushEndpoint) {
+        public Builder pushEndpoint(Input<String> pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Input.of(Objects.requireNonNull(pushEndpoint));
             return this;
         }

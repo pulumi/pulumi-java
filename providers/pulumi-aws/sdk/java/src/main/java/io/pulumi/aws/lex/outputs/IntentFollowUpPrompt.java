@@ -23,10 +23,10 @@ public final class IntentFollowUpPrompt {
      */
     private final IntentFollowUpPromptRejectionStatement rejectionStatement;
 
-    @OutputCustomType.Constructor({"prompt","rejectionStatement"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPrompt(
-        IntentFollowUpPromptPrompt prompt,
-        IntentFollowUpPromptRejectionStatement rejectionStatement) {
+        @OutputCustomType.Parameter("prompt") IntentFollowUpPromptPrompt prompt,
+        @OutputCustomType.Parameter("rejectionStatement") IntentFollowUpPromptRejectionStatement rejectionStatement) {
         this.prompt = prompt;
         this.rejectionStatement = rejectionStatement;
     }
@@ -70,12 +70,12 @@ public final class IntentFollowUpPrompt {
     	      this.rejectionStatement = defaults.rejectionStatement;
         }
 
-        public Builder setPrompt(IntentFollowUpPromptPrompt prompt) {
+        public Builder prompt(IntentFollowUpPromptPrompt prompt) {
             this.prompt = Objects.requireNonNull(prompt);
             return this;
         }
 
-        public Builder setRejectionStatement(IntentFollowUpPromptRejectionStatement rejectionStatement) {
+        public Builder rejectionStatement(IntentFollowUpPromptRejectionStatement rejectionStatement) {
             this.rejectionStatement = Objects.requireNonNull(rejectionStatement);
             return this;
         }

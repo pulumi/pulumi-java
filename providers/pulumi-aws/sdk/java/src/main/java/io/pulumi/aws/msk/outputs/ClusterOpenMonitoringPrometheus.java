@@ -23,10 +23,10 @@ public final class ClusterOpenMonitoringPrometheus {
      */
     private final @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter;
 
-    @OutputCustomType.Constructor({"jmxExporter","nodeExporter"})
+    @OutputCustomType.Constructor
     private ClusterOpenMonitoringPrometheus(
-        @Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter,
-        @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
+        @OutputCustomType.Parameter("jmxExporter") @Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter,
+        @OutputCustomType.Parameter("nodeExporter") @Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
         this.jmxExporter = jmxExporter;
         this.nodeExporter = nodeExporter;
     }
@@ -68,12 +68,12 @@ public final class ClusterOpenMonitoringPrometheus {
     	      this.nodeExporter = defaults.nodeExporter;
         }
 
-        public Builder setJmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter) {
+        public Builder jmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporter jmxExporter) {
             this.jmxExporter = jmxExporter;
             return this;
         }
 
-        public Builder setNodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
+        public Builder nodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporter nodeExporter) {
             this.nodeExporter = nodeExporter;
             return this;
         }

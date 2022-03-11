@@ -26,11 +26,11 @@ public final class ClientCertificateCommonNameResponse {
      */
     private final Boolean isAdmin;
 
-    @OutputCustomType.Constructor({"certificateCommonName","certificateIssuerThumbprint","isAdmin"})
+    @OutputCustomType.Constructor
     private ClientCertificateCommonNameResponse(
-        String certificateCommonName,
-        String certificateIssuerThumbprint,
-        Boolean isAdmin) {
+        @OutputCustomType.Parameter("certificateCommonName") String certificateCommonName,
+        @OutputCustomType.Parameter("certificateIssuerThumbprint") String certificateIssuerThumbprint,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin) {
         this.certificateCommonName = certificateCommonName;
         this.certificateIssuerThumbprint = certificateIssuerThumbprint;
         this.isAdmin = isAdmin;
@@ -82,17 +82,17 @@ public final class ClientCertificateCommonNameResponse {
     	      this.isAdmin = defaults.isAdmin;
         }
 
-        public Builder setCertificateCommonName(String certificateCommonName) {
+        public Builder certificateCommonName(String certificateCommonName) {
             this.certificateCommonName = Objects.requireNonNull(certificateCommonName);
             return this;
         }
 
-        public Builder setCertificateIssuerThumbprint(String certificateIssuerThumbprint) {
+        public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             this.certificateIssuerThumbprint = Objects.requireNonNull(certificateIssuerThumbprint);
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }

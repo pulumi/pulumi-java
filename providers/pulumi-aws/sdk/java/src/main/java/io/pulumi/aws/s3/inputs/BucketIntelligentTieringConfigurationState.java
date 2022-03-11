@@ -121,52 +121,52 @@ public final class BucketIntelligentTieringConfigurationState extends io.pulumi.
     	      this.tierings = defaults.tierings;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
+        public Builder filter(@Nullable Input<BucketIntelligentTieringConfigurationFilterGetArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketIntelligentTieringConfigurationFilterGetArgs filter) {
+        public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterGetArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTierings(@Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
+        public Builder tierings(@Nullable Input<List<BucketIntelligentTieringConfigurationTieringGetArgs>> tierings) {
             this.tierings = tierings;
             return this;
         }
 
-        public Builder setTierings(@Nullable List<BucketIntelligentTieringConfigurationTieringGetArgs> tierings) {
+        public Builder tierings(@Nullable List<BucketIntelligentTieringConfigurationTieringGetArgs> tierings) {
             this.tierings = Input.ofNullable(tierings);
             return this;
         }

@@ -25,11 +25,11 @@ public final class OperationErrorResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","kind","message"})
+    @OutputCustomType.Constructor
     private OperationErrorResponse(
-        String code,
-        String kind,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.kind = kind;
         this.message = message;
@@ -81,17 +81,17 @@ public final class OperationErrorResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

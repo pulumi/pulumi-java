@@ -15,8 +15,8 @@ public final class InstanceTemplateSpecResponse {
      */
     private final InstanceSpecResponse spec;
 
-    @OutputCustomType.Constructor({"spec"})
-    private InstanceTemplateSpecResponse(InstanceSpecResponse spec) {
+    @OutputCustomType.Constructor
+    private InstanceTemplateSpecResponse(@OutputCustomType.Parameter("spec") InstanceSpecResponse spec) {
         this.spec = spec;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceTemplateSpecResponse {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setSpec(InstanceSpecResponse spec) {
+        public Builder spec(InstanceSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

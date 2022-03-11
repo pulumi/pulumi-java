@@ -52,12 +52,12 @@ public final class DomainSnapshotOptionsGetArgs extends io.pulumi.resources.Reso
     	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
         }
 
-        public Builder setAutomatedSnapshotStartHour(Input<Integer> automatedSnapshotStartHour) {
+        public Builder automatedSnapshotStartHour(Input<Integer> automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Objects.requireNonNull(automatedSnapshotStartHour);
             return this;
         }
 
-        public Builder setAutomatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
+        public Builder automatedSnapshotStartHour(Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = Input.of(Objects.requireNonNull(automatedSnapshotStartHour));
             return this;
         }

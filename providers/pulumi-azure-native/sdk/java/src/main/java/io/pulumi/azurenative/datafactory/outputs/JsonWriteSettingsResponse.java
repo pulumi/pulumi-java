@@ -24,10 +24,10 @@ public final class JsonWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"filePattern","type"})
+    @OutputCustomType.Constructor
     private JsonWriteSettingsResponse(
-        @Nullable Object filePattern,
-        String type) {
+        @OutputCustomType.Parameter("filePattern") @Nullable Object filePattern,
+        @OutputCustomType.Parameter("type") String type) {
         this.filePattern = filePattern;
         this.type = type;
     }
@@ -70,12 +70,12 @@ public final class JsonWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

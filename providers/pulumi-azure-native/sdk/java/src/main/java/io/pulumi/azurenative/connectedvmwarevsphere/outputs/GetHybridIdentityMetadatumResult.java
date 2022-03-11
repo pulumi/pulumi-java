@@ -54,16 +54,16 @@ public final class GetHybridIdentityMetadatumResult {
      */
     private final @Nullable String vmId;
 
-    @OutputCustomType.Constructor({"id","identity","name","provisioningState","publicKey","systemData","type","vmId"})
+    @OutputCustomType.Constructor
     private GetHybridIdentityMetadatumResult(
-        String id,
-        IdentityResponse identity,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String vmId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") IdentityResponse identity,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId) {
         this.id = id;
         this.identity = identity;
         this.name = name;
@@ -165,42 +165,42 @@ public final class GetHybridIdentityMetadatumResult {
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(IdentityResponse identity) {
+        public Builder identity(IdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }

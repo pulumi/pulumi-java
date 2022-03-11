@@ -39,11 +39,11 @@ public final class DataTransferConfigScheduleOptions {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"disableAutoScheduling","endTime","startTime"})
+    @OutputCustomType.Constructor
     private DataTransferConfigScheduleOptions(
-        @Nullable Boolean disableAutoScheduling,
-        @Nullable String endTime,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("disableAutoScheduling") @Nullable Boolean disableAutoScheduling,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.disableAutoScheduling = disableAutoScheduling;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -106,17 +106,17 @@ public final class DataTransferConfigScheduleOptions {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDisableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
+        public Builder disableAutoScheduling(@Nullable Boolean disableAutoScheduling) {
             this.disableAutoScheduling = disableAutoScheduling;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

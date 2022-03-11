@@ -35,22 +35,22 @@ public final class GetClusterNodePool {
     private final List<GetClusterNodePoolUpgradeSetting> upgradeSettings;
     private final String version;
 
-    @OutputCustomType.Constructor({"autoscalings","initialNodeCount","instanceGroupUrls","managedInstanceGroupUrls","managements","maxPodsPerNode","name","namePrefix","networkConfigs","nodeConfigs","nodeCount","nodeLocations","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private GetClusterNodePool(
-        List<GetClusterNodePoolAutoscaling> autoscalings,
-        Integer initialNodeCount,
-        List<String> instanceGroupUrls,
-        List<String> managedInstanceGroupUrls,
-        List<GetClusterNodePoolManagement> managements,
-        Integer maxPodsPerNode,
-        String name,
-        String namePrefix,
-        List<GetClusterNodePoolNetworkConfig> networkConfigs,
-        List<GetClusterNodePoolNodeConfig> nodeConfigs,
-        Integer nodeCount,
-        List<String> nodeLocations,
-        List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
-        String version) {
+        @OutputCustomType.Parameter("autoscalings") List<GetClusterNodePoolAutoscaling> autoscalings,
+        @OutputCustomType.Parameter("initialNodeCount") Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("managedInstanceGroupUrls") List<String> managedInstanceGroupUrls,
+        @OutputCustomType.Parameter("managements") List<GetClusterNodePoolManagement> managements,
+        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("networkConfigs") List<GetClusterNodePoolNetworkConfig> networkConfigs,
+        @OutputCustomType.Parameter("nodeConfigs") List<GetClusterNodePoolNodeConfig> nodeConfigs,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("nodeLocations") List<String> nodeLocations,
+        @OutputCustomType.Parameter("upgradeSettings") List<GetClusterNodePoolUpgradeSetting> upgradeSettings,
+        @OutputCustomType.Parameter("version") String version) {
         this.autoscalings = autoscalings;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;
@@ -160,72 +160,72 @@ public final class GetClusterNodePool {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscalings(List<GetClusterNodePoolAutoscaling> autoscalings) {
+        public Builder autoscalings(List<GetClusterNodePoolAutoscaling> autoscalings) {
             this.autoscalings = Objects.requireNonNull(autoscalings);
             return this;
         }
 
-        public Builder setInitialNodeCount(Integer initialNodeCount) {
+        public Builder initialNodeCount(Integer initialNodeCount) {
             this.initialNodeCount = Objects.requireNonNull(initialNodeCount);
             return this;
         }
 
-        public Builder setInstanceGroupUrls(List<String> instanceGroupUrls) {
+        public Builder instanceGroupUrls(List<String> instanceGroupUrls) {
             this.instanceGroupUrls = Objects.requireNonNull(instanceGroupUrls);
             return this;
         }
 
-        public Builder setManagedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = Objects.requireNonNull(managedInstanceGroupUrls);
             return this;
         }
 
-        public Builder setManagements(List<GetClusterNodePoolManagement> managements) {
+        public Builder managements(List<GetClusterNodePoolManagement> managements) {
             this.managements = Objects.requireNonNull(managements);
             return this;
         }
 
-        public Builder setMaxPodsPerNode(Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(Integer maxPodsPerNode) {
             this.maxPodsPerNode = Objects.requireNonNull(maxPodsPerNode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setNetworkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
+        public Builder networkConfigs(List<GetClusterNodePoolNetworkConfig> networkConfigs) {
             this.networkConfigs = Objects.requireNonNull(networkConfigs);
             return this;
         }
 
-        public Builder setNodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
+        public Builder nodeConfigs(List<GetClusterNodePoolNodeConfig> nodeConfigs) {
             this.nodeConfigs = Objects.requireNonNull(nodeConfigs);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setNodeLocations(List<String> nodeLocations) {
+        public Builder nodeLocations(List<String> nodeLocations) {
             this.nodeLocations = Objects.requireNonNull(nodeLocations);
             return this;
         }
 
-        public Builder setUpgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
+        public Builder upgradeSettings(List<GetClusterNodePoolUpgradeSetting> upgradeSettings) {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

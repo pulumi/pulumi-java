@@ -120,27 +120,27 @@ public final class DeploymentInstanceResponse extends io.pulumi.resources.Invoke
     	      this.status = defaults.status;
         }
 
-        public Builder setDiscoveryStatus(String discoveryStatus) {
+        public Builder discoveryStatus(String discoveryStatus) {
             this.discoveryStatus = Objects.requireNonNull(discoveryStatus);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

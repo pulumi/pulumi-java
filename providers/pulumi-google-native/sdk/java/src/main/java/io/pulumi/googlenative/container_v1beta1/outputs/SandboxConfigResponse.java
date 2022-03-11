@@ -20,10 +20,10 @@ public final class SandboxConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"sandboxType","type"})
+    @OutputCustomType.Constructor
     private SandboxConfigResponse(
-        String sandboxType,
-        String type) {
+        @OutputCustomType.Parameter("sandboxType") String sandboxType,
+        @OutputCustomType.Parameter("type") String type) {
         this.sandboxType = sandboxType;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class SandboxConfigResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSandboxType(String sandboxType) {
+        public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

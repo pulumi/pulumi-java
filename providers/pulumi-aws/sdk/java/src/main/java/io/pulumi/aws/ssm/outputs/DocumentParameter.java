@@ -24,12 +24,12 @@ public final class DocumentParameter {
     private final @Nullable String name;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultValue","description","name","type"})
+    @OutputCustomType.Constructor
     private DocumentParameter(
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.name = name;
@@ -83,22 +83,22 @@ public final class DocumentParameter {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

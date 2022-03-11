@@ -12,10 +12,10 @@ public final class QuickConnectUserQuickConnectConfig {
     private final String contactFlowArn;
     private final String userArn;
 
-    @OutputCustomType.Constructor({"contactFlowArn","userArn"})
+    @OutputCustomType.Constructor
     private QuickConnectUserQuickConnectConfig(
-        String contactFlowArn,
-        String userArn) {
+        @OutputCustomType.Parameter("contactFlowArn") String contactFlowArn,
+        @OutputCustomType.Parameter("userArn") String userArn) {
         this.contactFlowArn = contactFlowArn;
         this.userArn = userArn;
     }
@@ -49,12 +49,12 @@ public final class QuickConnectUserQuickConnectConfig {
     	      this.userArn = defaults.userArn;
         }
 
-        public Builder setContactFlowArn(String contactFlowArn) {
+        public Builder contactFlowArn(String contactFlowArn) {
             this.contactFlowArn = Objects.requireNonNull(contactFlowArn);
             return this;
         }
 
-        public Builder setUserArn(String userArn) {
+        public Builder userArn(String userArn) {
             this.userArn = Objects.requireNonNull(userArn);
             return this;
         }

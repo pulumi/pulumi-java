@@ -21,13 +21,13 @@ public final class WebACLByteMatchStatement {
     private final @Nullable String searchStringBase64;
     private final List<WebACLTextTransformation> textTransformations;
 
-    @OutputCustomType.Constructor({"fieldToMatch","positionalConstraint","searchString","searchStringBase64","textTransformations"})
+    @OutputCustomType.Constructor
     private WebACLByteMatchStatement(
-        WebACLFieldToMatch fieldToMatch,
-        WebACLPositionalConstraint positionalConstraint,
-        @Nullable String searchString,
-        @Nullable String searchStringBase64,
-        List<WebACLTextTransformation> textTransformations) {
+        @OutputCustomType.Parameter("fieldToMatch") WebACLFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("positionalConstraint") WebACLPositionalConstraint positionalConstraint,
+        @OutputCustomType.Parameter("searchString") @Nullable String searchString,
+        @OutputCustomType.Parameter("searchStringBase64") @Nullable String searchStringBase64,
+        @OutputCustomType.Parameter("textTransformations") List<WebACLTextTransformation> textTransformations) {
         this.fieldToMatch = fieldToMatch;
         this.positionalConstraint = positionalConstraint;
         this.searchString = searchString;
@@ -79,27 +79,27 @@ public final class WebACLByteMatchStatement {
     	      this.textTransformations = defaults.textTransformations;
         }
 
-        public Builder setFieldToMatch(WebACLFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(WebACLFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setPositionalConstraint(WebACLPositionalConstraint positionalConstraint) {
+        public Builder positionalConstraint(WebACLPositionalConstraint positionalConstraint) {
             this.positionalConstraint = Objects.requireNonNull(positionalConstraint);
             return this;
         }
 
-        public Builder setSearchString(@Nullable String searchString) {
+        public Builder searchString(@Nullable String searchString) {
             this.searchString = searchString;
             return this;
         }
 
-        public Builder setSearchStringBase64(@Nullable String searchStringBase64) {
+        public Builder searchStringBase64(@Nullable String searchStringBase64) {
             this.searchStringBase64 = searchStringBase64;
             return this;
         }
 
-        public Builder setTextTransformations(List<WebACLTextTransformation> textTransformations) {
+        public Builder textTransformations(List<WebACLTextTransformation> textTransformations) {
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }

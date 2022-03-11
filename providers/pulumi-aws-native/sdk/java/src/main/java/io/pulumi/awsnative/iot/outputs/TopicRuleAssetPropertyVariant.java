@@ -16,12 +16,12 @@ public final class TopicRuleAssetPropertyVariant {
     private final @Nullable String integerValue;
     private final @Nullable String stringValue;
 
-    @OutputCustomType.Constructor({"booleanValue","doubleValue","integerValue","stringValue"})
+    @OutputCustomType.Constructor
     private TopicRuleAssetPropertyVariant(
-        @Nullable String booleanValue,
-        @Nullable String doubleValue,
-        @Nullable String integerValue,
-        @Nullable String stringValue) {
+        @OutputCustomType.Parameter("booleanValue") @Nullable String booleanValue,
+        @OutputCustomType.Parameter("doubleValue") @Nullable String doubleValue,
+        @OutputCustomType.Parameter("integerValue") @Nullable String integerValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.integerValue = integerValue;
@@ -67,22 +67,22 @@ public final class TopicRuleAssetPropertyVariant {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBooleanValue(@Nullable String booleanValue) {
+        public Builder booleanValue(@Nullable String booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable String doubleValue) {
+        public Builder doubleValue(@Nullable String doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setIntegerValue(@Nullable String integerValue) {
+        public Builder integerValue(@Nullable String integerValue) {
             this.integerValue = integerValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }

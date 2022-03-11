@@ -275,152 +275,152 @@ public final class NodePoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscaling(@Nullable Input<NodePoolAutoscalingArgs> autoscaling) {
+        public Builder autoscaling(@Nullable Input<NodePoolAutoscalingArgs> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
+        public Builder autoscaling(@Nullable NodePoolAutoscalingArgs autoscaling) {
             this.autoscaling = Input.ofNullable(autoscaling);
             return this;
         }
 
-        public Builder setClusterId(Input<String> clusterId) {
+        public Builder clusterId(Input<String> clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<StatusConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<StatusConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<StatusConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<StatusConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<NodeConfigArgs> config) {
+        public Builder config(@Nullable Input<NodeConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable NodeConfigArgs config) {
+        public Builder config(@Nullable NodeConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setInitialNodeCount(@Nullable Input<Integer> initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Input<Integer> initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
-        public Builder setInitialNodeCount(@Nullable Integer initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = Input.ofNullable(initialNodeCount);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setManagement(@Nullable Input<NodeManagementArgs> management) {
+        public Builder management(@Nullable Input<NodeManagementArgs> management) {
             this.management = management;
             return this;
         }
 
-        public Builder setManagement(@Nullable NodeManagementArgs management) {
+        public Builder management(@Nullable NodeManagementArgs management) {
             this.management = Input.ofNullable(management);
             return this;
         }
 
-        public Builder setMaxPodsConstraint(@Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable Input<MaxPodsConstraintArgs> maxPodsConstraint) {
             this.maxPodsConstraint = maxPodsConstraint;
             return this;
         }
 
-        public Builder setMaxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
+        public Builder maxPodsConstraint(@Nullable MaxPodsConstraintArgs maxPodsConstraint) {
             this.maxPodsConstraint = Input.ofNullable(maxPodsConstraint);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable Input<NodeNetworkConfigArgs> networkConfig) {
+        public Builder networkConfig(@Nullable Input<NodeNetworkConfigArgs> networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
+        public Builder networkConfig(@Nullable NodeNetworkConfigArgs networkConfig) {
             this.networkConfig = Input.ofNullable(networkConfig);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
+        public Builder upgradeSettings(@Nullable Input<UpgradeSettingsArgs> upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
+        public Builder upgradeSettings(@Nullable UpgradeSettingsArgs upgradeSettings) {
             this.upgradeSettings = Input.ofNullable(upgradeSettings);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

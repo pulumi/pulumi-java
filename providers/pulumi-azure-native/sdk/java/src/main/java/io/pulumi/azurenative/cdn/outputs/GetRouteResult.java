@@ -102,26 +102,26 @@ public final class GetRouteResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compressionSettings","customDomains","deploymentStatus","enabledState","forwardingProtocol","httpsRedirect","id","linkToDefaultDomain","name","originGroup","originPath","patternsToMatch","provisioningState","queryStringCachingBehavior","ruleSets","supportedProtocols","systemData","type"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        @Nullable CompressionSettingsResponse compressionSettings,
-        @Nullable List<ResourceReferenceResponse> customDomains,
-        String deploymentStatus,
-        @Nullable String enabledState,
-        @Nullable String forwardingProtocol,
-        @Nullable String httpsRedirect,
-        String id,
-        @Nullable String linkToDefaultDomain,
-        String name,
-        ResourceReferenceResponse originGroup,
-        @Nullable String originPath,
-        @Nullable List<String> patternsToMatch,
-        String provisioningState,
-        @Nullable String queryStringCachingBehavior,
-        @Nullable List<ResourceReferenceResponse> ruleSets,
-        @Nullable List<String> supportedProtocols,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("compressionSettings") @Nullable CompressionSettingsResponse compressionSettings,
+        @OutputCustomType.Parameter("customDomains") @Nullable List<ResourceReferenceResponse> customDomains,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("forwardingProtocol") @Nullable String forwardingProtocol,
+        @OutputCustomType.Parameter("httpsRedirect") @Nullable String httpsRedirect,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkToDefaultDomain") @Nullable String linkToDefaultDomain,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originGroup") ResourceReferenceResponse originGroup,
+        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
+        @OutputCustomType.Parameter("patternsToMatch") @Nullable List<String> patternsToMatch,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("queryStringCachingBehavior") @Nullable String queryStringCachingBehavior,
+        @OutputCustomType.Parameter("ruleSets") @Nullable List<ResourceReferenceResponse> ruleSets,
+        @OutputCustomType.Parameter("supportedProtocols") @Nullable List<String> supportedProtocols,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.compressionSettings = compressionSettings;
         this.customDomains = customDomains;
         this.deploymentStatus = deploymentStatus;
@@ -319,92 +319,92 @@ public final class GetRouteResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCompressionSettings(@Nullable CompressionSettingsResponse compressionSettings) {
+        public Builder compressionSettings(@Nullable CompressionSettingsResponse compressionSettings) {
             this.compressionSettings = compressionSettings;
             return this;
         }
 
-        public Builder setCustomDomains(@Nullable List<ResourceReferenceResponse> customDomains) {
+        public Builder customDomains(@Nullable List<ResourceReferenceResponse> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable String forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable String forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable String httpsRedirect) {
+        public Builder httpsRedirect(@Nullable String httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkToDefaultDomain(@Nullable String linkToDefaultDomain) {
+        public Builder linkToDefaultDomain(@Nullable String linkToDefaultDomain) {
             this.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginGroup(ResourceReferenceResponse originGroup) {
+        public Builder originGroup(ResourceReferenceResponse originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable String queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
-        public Builder setRuleSets(@Nullable List<ResourceReferenceResponse> ruleSets) {
+        public Builder ruleSets(@Nullable List<ResourceReferenceResponse> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
-        public Builder setSupportedProtocols(@Nullable List<String> supportedProtocols) {
+        public Builder supportedProtocols(@Nullable List<String> supportedProtocols) {
             this.supportedProtocols = supportedProtocols;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

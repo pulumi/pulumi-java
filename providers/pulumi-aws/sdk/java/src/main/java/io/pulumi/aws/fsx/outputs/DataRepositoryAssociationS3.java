@@ -23,10 +23,10 @@ public final class DataRepositoryAssociationS3 {
      */
     private final @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy;
 
-    @OutputCustomType.Constructor({"autoExportPolicy","autoImportPolicy"})
+    @OutputCustomType.Constructor
     private DataRepositoryAssociationS3(
-        @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
-        @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
+        @OutputCustomType.Parameter("autoExportPolicy") @Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy,
+        @OutputCustomType.Parameter("autoImportPolicy") @Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
         this.autoExportPolicy = autoExportPolicy;
         this.autoImportPolicy = autoImportPolicy;
     }
@@ -68,12 +68,12 @@ public final class DataRepositoryAssociationS3 {
     	      this.autoImportPolicy = defaults.autoImportPolicy;
         }
 
-        public Builder setAutoExportPolicy(@Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy) {
+        public Builder autoExportPolicy(@Nullable DataRepositoryAssociationS3AutoExportPolicy autoExportPolicy) {
             this.autoExportPolicy = autoExportPolicy;
             return this;
         }
 
-        public Builder setAutoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
+        public Builder autoImportPolicy(@Nullable DataRepositoryAssociationS3AutoImportPolicy autoImportPolicy) {
             this.autoImportPolicy = autoImportPolicy;
             return this;
         }

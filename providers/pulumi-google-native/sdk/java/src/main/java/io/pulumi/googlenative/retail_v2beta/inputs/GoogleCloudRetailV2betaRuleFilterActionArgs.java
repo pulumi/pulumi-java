@@ -57,12 +57,12 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }

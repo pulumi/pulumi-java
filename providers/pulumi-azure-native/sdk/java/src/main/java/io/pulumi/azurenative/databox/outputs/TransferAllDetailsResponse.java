@@ -28,11 +28,11 @@ public final class TransferAllDetailsResponse {
      */
     private final @Nullable Boolean transferAllFiles;
 
-    @OutputCustomType.Constructor({"dataAccountType","transferAllBlobs","transferAllFiles"})
+    @OutputCustomType.Constructor
     private TransferAllDetailsResponse(
-        String dataAccountType,
-        @Nullable Boolean transferAllBlobs,
-        @Nullable Boolean transferAllFiles) {
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("transferAllBlobs") @Nullable Boolean transferAllBlobs,
+        @OutputCustomType.Parameter("transferAllFiles") @Nullable Boolean transferAllFiles) {
         this.dataAccountType = dataAccountType;
         this.transferAllBlobs = transferAllBlobs;
         this.transferAllFiles = transferAllFiles;
@@ -84,17 +84,17 @@ public final class TransferAllDetailsResponse {
     	      this.transferAllFiles = defaults.transferAllFiles;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setTransferAllBlobs(@Nullable Boolean transferAllBlobs) {
+        public Builder transferAllBlobs(@Nullable Boolean transferAllBlobs) {
             this.transferAllBlobs = transferAllBlobs;
             return this;
         }
 
-        public Builder setTransferAllFiles(@Nullable Boolean transferAllFiles) {
+        public Builder transferAllFiles(@Nullable Boolean transferAllFiles) {
             this.transferAllFiles = transferAllFiles;
             return this;
         }

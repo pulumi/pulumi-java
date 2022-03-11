@@ -304,162 +304,162 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.supportedProtocols = defaults.supportedProtocols;
         }
 
-        public Builder setCompressionSettings(@Nullable Input<CompressionSettingsArgs> compressionSettings) {
+        public Builder compressionSettings(@Nullable Input<CompressionSettingsArgs> compressionSettings) {
             this.compressionSettings = compressionSettings;
             return this;
         }
 
-        public Builder setCompressionSettings(@Nullable CompressionSettingsArgs compressionSettings) {
+        public Builder compressionSettings(@Nullable CompressionSettingsArgs compressionSettings) {
             this.compressionSettings = Input.ofNullable(compressionSettings);
             return this;
         }
 
-        public Builder setCustomDomains(@Nullable Input<List<ResourceReferenceArgs>> customDomains) {
+        public Builder customDomains(@Nullable Input<List<ResourceReferenceArgs>> customDomains) {
             this.customDomains = customDomains;
             return this;
         }
 
-        public Builder setCustomDomains(@Nullable List<ResourceReferenceArgs> customDomains) {
+        public Builder customDomains(@Nullable List<ResourceReferenceArgs> customDomains) {
             this.customDomains = Input.ofNullable(customDomains);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,EnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,EnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,EnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setEndpointName(Input<String> endpointName) {
+        public Builder endpointName(Input<String> endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Input.of(Objects.requireNonNull(endpointName));
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Input<Either<String,ForwardingProtocol>> forwardingProtocol) {
             this.forwardingProtocol = forwardingProtocol;
             return this;
         }
 
-        public Builder setForwardingProtocol(@Nullable Either<String,ForwardingProtocol> forwardingProtocol) {
+        public Builder forwardingProtocol(@Nullable Either<String,ForwardingProtocol> forwardingProtocol) {
             this.forwardingProtocol = Input.ofNullable(forwardingProtocol);
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Input<Either<String,HttpsRedirect>> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Input<Either<String,HttpsRedirect>> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Either<String,HttpsRedirect> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Either<String,HttpsRedirect> httpsRedirect) {
             this.httpsRedirect = Input.ofNullable(httpsRedirect);
             return this;
         }
 
-        public Builder setLinkToDefaultDomain(@Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
+        public Builder linkToDefaultDomain(@Nullable Input<Either<String,LinkToDefaultDomain>> linkToDefaultDomain) {
             this.linkToDefaultDomain = linkToDefaultDomain;
             return this;
         }
 
-        public Builder setLinkToDefaultDomain(@Nullable Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
+        public Builder linkToDefaultDomain(@Nullable Either<String,LinkToDefaultDomain> linkToDefaultDomain) {
             this.linkToDefaultDomain = Input.ofNullable(linkToDefaultDomain);
             return this;
         }
 
-        public Builder setOriginGroup(Input<ResourceReferenceArgs> originGroup) {
+        public Builder originGroup(Input<ResourceReferenceArgs> originGroup) {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
 
-        public Builder setOriginGroup(ResourceReferenceArgs originGroup) {
+        public Builder originGroup(ResourceReferenceArgs originGroup) {
             this.originGroup = Input.of(Objects.requireNonNull(originGroup));
             return this;
         }
 
-        public Builder setOriginPath(@Nullable Input<String> originPath) {
+        public Builder originPath(@Nullable Input<String> originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = Input.ofNullable(originPath);
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable Input<List<String>> patternsToMatch) {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
 
-        public Builder setPatternsToMatch(@Nullable List<String> patternsToMatch) {
+        public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             this.patternsToMatch = Input.ofNullable(patternsToMatch);
             return this;
         }
 
-        public Builder setProfileName(Input<String> profileName) {
+        public Builder profileName(Input<String> profileName) {
             this.profileName = Objects.requireNonNull(profileName);
             return this;
         }
 
-        public Builder setProfileName(String profileName) {
+        public Builder profileName(String profileName) {
             this.profileName = Input.of(Objects.requireNonNull(profileName));
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable Input<AfdQueryStringCachingBehavior> queryStringCachingBehavior) {
             this.queryStringCachingBehavior = queryStringCachingBehavior;
             return this;
         }
 
-        public Builder setQueryStringCachingBehavior(@Nullable AfdQueryStringCachingBehavior queryStringCachingBehavior) {
+        public Builder queryStringCachingBehavior(@Nullable AfdQueryStringCachingBehavior queryStringCachingBehavior) {
             this.queryStringCachingBehavior = Input.ofNullable(queryStringCachingBehavior);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRouteName(@Nullable Input<String> routeName) {
+        public Builder routeName(@Nullable Input<String> routeName) {
             this.routeName = routeName;
             return this;
         }
 
-        public Builder setRouteName(@Nullable String routeName) {
+        public Builder routeName(@Nullable String routeName) {
             this.routeName = Input.ofNullable(routeName);
             return this;
         }
 
-        public Builder setRuleSets(@Nullable Input<List<ResourceReferenceArgs>> ruleSets) {
+        public Builder ruleSets(@Nullable Input<List<ResourceReferenceArgs>> ruleSets) {
             this.ruleSets = ruleSets;
             return this;
         }
 
-        public Builder setRuleSets(@Nullable List<ResourceReferenceArgs> ruleSets) {
+        public Builder ruleSets(@Nullable List<ResourceReferenceArgs> ruleSets) {
             this.ruleSets = Input.ofNullable(ruleSets);
             return this;
         }
 
-        public Builder setSupportedProtocols(@Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
+        public Builder supportedProtocols(@Nullable Input<List<Either<String,AFDEndpointProtocols>>> supportedProtocols) {
             this.supportedProtocols = supportedProtocols;
             return this;
         }
 
-        public Builder setSupportedProtocols(@Nullable List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
+        public Builder supportedProtocols(@Nullable List<Either<String,AFDEndpointProtocols>> supportedProtocols) {
             this.supportedProtocols = Input.ofNullable(supportedProtocols);
             return this;
         }

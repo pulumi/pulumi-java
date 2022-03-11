@@ -29,11 +29,11 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"allRegions","regions","roleArn"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorOrganizationAggregationSource(
-        @Nullable Boolean allRegions,
-        @Nullable List<String> regions,
-        String roleArn) {
+        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.allRegions = allRegions;
         this.regions = regions;
         this.roleArn = roleArn;
@@ -85,17 +85,17 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

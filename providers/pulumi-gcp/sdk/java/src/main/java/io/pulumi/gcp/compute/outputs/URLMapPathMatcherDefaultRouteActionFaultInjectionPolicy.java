@@ -25,10 +25,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy(
-        @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }
@@ -72,12 +72,12 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort) {
+        public Builder abort(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setDelay(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        public Builder delay(@Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
         }

@@ -22,10 +22,10 @@ public final class ApiKeyResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"keyName","value"})
+    @OutputCustomType.Constructor
     private ApiKeyResponse(
-        @Nullable String keyName,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.keyName = keyName;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ApiKeyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

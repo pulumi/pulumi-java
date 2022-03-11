@@ -162,52 +162,52 @@ public final class AutoscalarAutoscalingPolicyMetricGetArgs extends io.pulumi.re
     	      this.type = defaults.type;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<Double> target) {
+        public Builder target(@Nullable Input<Double> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable Double target) {
+        public Builder target(@Nullable Double target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"env","instanceId","location"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse(
-        String env,
-        String instanceId,
-        String location) {
+        @OutputCustomType.Parameter("env") String env,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("location") String location) {
         this.env = env;
         this.instanceId = instanceId;
         this.location = location;
@@ -81,17 +81,17 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

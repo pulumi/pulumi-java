@@ -16,8 +16,8 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
      */
     private final List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions;
 
-    @OutputCustomType.Constructor({"dimensions"})
-    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
         this.dimensions = dimensions;
     }
 
@@ -49,7 +49,7 @@ public final class FirewallPolicyFirewallPolicyStatelessCustomActionActionDefini
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
+        public Builder dimensions(List<FirewallPolicyFirewallPolicyStatelessCustomActionActionDefinitionPublishMetricActionDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

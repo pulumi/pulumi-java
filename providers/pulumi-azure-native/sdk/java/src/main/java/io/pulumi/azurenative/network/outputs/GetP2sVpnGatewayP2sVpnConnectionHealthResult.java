@@ -89,22 +89,22 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthResult {
      */
     private final @Nullable SubResourceResponse vpnServerConfiguration;
 
-    @OutputCustomType.Constructor({"customDnsServers","etag","id","isRoutingPreferenceInternet","location","name","p2SConnectionConfigurations","provisioningState","tags","type","virtualHub","vpnClientConnectionHealth","vpnGatewayScaleUnit","vpnServerConfiguration"})
+    @OutputCustomType.Constructor
     private GetP2sVpnGatewayP2sVpnConnectionHealthResult(
-        @Nullable List<String> customDnsServers,
-        String etag,
-        @Nullable String id,
-        @Nullable Boolean isRoutingPreferenceInternet,
-        String location,
-        String name,
-        @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualHub,
-        VpnClientConnectionHealthResponse vpnClientConnectionHealth,
-        @Nullable Integer vpnGatewayScaleUnit,
-        @Nullable SubResourceResponse vpnServerConfiguration) {
+        @OutputCustomType.Parameter("customDnsServers") @Nullable List<String> customDnsServers,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isRoutingPreferenceInternet") @Nullable Boolean isRoutingPreferenceInternet,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("p2SConnectionConfigurations") @Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub,
+        @OutputCustomType.Parameter("vpnClientConnectionHealth") VpnClientConnectionHealthResponse vpnClientConnectionHealth,
+        @OutputCustomType.Parameter("vpnGatewayScaleUnit") @Nullable Integer vpnGatewayScaleUnit,
+        @OutputCustomType.Parameter("vpnServerConfiguration") @Nullable SubResourceResponse vpnServerConfiguration) {
         this.customDnsServers = customDnsServers;
         this.etag = etag;
         this.id = id;
@@ -266,72 +266,72 @@ public final class GetP2sVpnGatewayP2sVpnConnectionHealthResult {
     	      this.vpnServerConfiguration = defaults.vpnServerConfiguration;
         }
 
-        public Builder setCustomDnsServers(@Nullable List<String> customDnsServers) {
+        public Builder customDnsServers(@Nullable List<String> customDnsServers) {
             this.customDnsServers = customDnsServers;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIsRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
+        public Builder isRoutingPreferenceInternet(@Nullable Boolean isRoutingPreferenceInternet) {
             this.isRoutingPreferenceInternet = isRoutingPreferenceInternet;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setP2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations) {
+        public Builder p2SConnectionConfigurations(@Nullable List<P2SConnectionConfigurationResponse> p2SConnectionConfigurations) {
             this.p2SConnectionConfigurations = p2SConnectionConfigurations;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceResponse virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }
 
-        public Builder setVpnClientConnectionHealth(VpnClientConnectionHealthResponse vpnClientConnectionHealth) {
+        public Builder vpnClientConnectionHealth(VpnClientConnectionHealthResponse vpnClientConnectionHealth) {
             this.vpnClientConnectionHealth = Objects.requireNonNull(vpnClientConnectionHealth);
             return this;
         }
 
-        public Builder setVpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
+        public Builder vpnGatewayScaleUnit(@Nullable Integer vpnGatewayScaleUnit) {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
 
-        public Builder setVpnServerConfiguration(@Nullable SubResourceResponse vpnServerConfiguration) {
+        public Builder vpnServerConfiguration(@Nullable SubResourceResponse vpnServerConfiguration) {
             this.vpnServerConfiguration = vpnServerConfiguration;
             return this;
         }

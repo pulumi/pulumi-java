@@ -128,62 +128,62 @@ public final class PermissionsTableWithColumnsArgs extends io.pulumi.resources.R
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setColumnNames(@Nullable Input<List<String>> columnNames) {
+        public Builder columnNames(@Nullable Input<List<String>> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setColumnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable List<String> columnNames) {
             this.columnNames = Input.ofNullable(columnNames);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setExcludedColumnNames(@Nullable Input<List<String>> excludedColumnNames) {
+        public Builder excludedColumnNames(@Nullable Input<List<String>> excludedColumnNames) {
             this.excludedColumnNames = excludedColumnNames;
             return this;
         }
 
-        public Builder setExcludedColumnNames(@Nullable List<String> excludedColumnNames) {
+        public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
             this.excludedColumnNames = Input.ofNullable(excludedColumnNames);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setWildcard(@Nullable Input<Boolean> wildcard) {
+        public Builder wildcard(@Nullable Input<Boolean> wildcard) {
             this.wildcard = wildcard;
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = Input.ofNullable(wildcard);
             return this;
         }

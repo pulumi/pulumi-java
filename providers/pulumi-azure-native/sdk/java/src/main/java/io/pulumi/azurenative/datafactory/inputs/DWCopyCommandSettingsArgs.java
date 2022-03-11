@@ -77,22 +77,22 @@ public final class DWCopyCommandSettingsArgs extends io.pulumi.resources.Resourc
     	      this.defaultValues = defaults.defaultValues;
         }
 
-        public Builder setAdditionalOptions(@Nullable Input<Map<String,String>> additionalOptions) {
+        public Builder additionalOptions(@Nullable Input<Map<String,String>> additionalOptions) {
             this.additionalOptions = additionalOptions;
             return this;
         }
 
-        public Builder setAdditionalOptions(@Nullable Map<String,String> additionalOptions) {
+        public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
             this.additionalOptions = Input.ofNullable(additionalOptions);
             return this;
         }
 
-        public Builder setDefaultValues(@Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
+        public Builder defaultValues(@Nullable Input<List<DWCopyCommandDefaultValueArgs>> defaultValues) {
             this.defaultValues = defaultValues;
             return this;
         }
 
-        public Builder setDefaultValues(@Nullable List<DWCopyCommandDefaultValueArgs> defaultValues) {
+        public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueArgs> defaultValues) {
             this.defaultValues = Input.ofNullable(defaultValues);
             return this;
         }

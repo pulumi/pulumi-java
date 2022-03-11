@@ -77,19 +77,19 @@ public final class AzureFunctionLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","authentication","connectVia","credential","description","encryptedCredential","functionAppUrl","functionKey","parameters","resourceId","type"})
+    @OutputCustomType.Constructor
     private AzureFunctionLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object authentication,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        Object functionAppUrl,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceId,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("functionAppUrl") Object functionAppUrl,
+        @OutputCustomType.Parameter("functionKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("resourceId") @Nullable Object resourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.authentication = authentication;
         this.connectVia = connectVia;
@@ -222,57 +222,57 @@ public final class AzureFunctionLinkedServiceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setFunctionAppUrl(Object functionAppUrl) {
+        public Builder functionAppUrl(Object functionAppUrl) {
             this.functionAppUrl = Objects.requireNonNull(functionAppUrl);
             return this;
         }
 
-        public Builder setFunctionKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey) {
+        public Builder functionKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> functionKey) {
             this.functionKey = functionKey;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setResourceId(@Nullable Object resourceId) {
+        public Builder resourceId(@Nullable Object resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

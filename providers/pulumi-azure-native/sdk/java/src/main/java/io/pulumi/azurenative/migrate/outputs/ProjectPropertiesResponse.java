@@ -90,23 +90,23 @@ public final class ProjectPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"assessmentSolutionId","createdTimestamp","customerStorageAccountArmId","customerWorkspaceId","customerWorkspaceLocation","lastAssessmentTimestamp","numberOfAssessments","numberOfGroups","numberOfMachines","privateEndpointConnections","projectStatus","provisioningState","publicNetworkAccess","serviceEndpoint","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private ProjectPropertiesResponse(
-        @Nullable String assessmentSolutionId,
-        String createdTimestamp,
-        @Nullable String customerStorageAccountArmId,
-        @Nullable String customerWorkspaceId,
-        @Nullable String customerWorkspaceLocation,
-        String lastAssessmentTimestamp,
-        Integer numberOfAssessments,
-        Integer numberOfGroups,
-        Integer numberOfMachines,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String projectStatus,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceEndpoint,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("assessmentSolutionId") @Nullable String assessmentSolutionId,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("customerStorageAccountArmId") @Nullable String customerStorageAccountArmId,
+        @OutputCustomType.Parameter("customerWorkspaceId") @Nullable String customerWorkspaceId,
+        @OutputCustomType.Parameter("customerWorkspaceLocation") @Nullable String customerWorkspaceLocation,
+        @OutputCustomType.Parameter("lastAssessmentTimestamp") String lastAssessmentTimestamp,
+        @OutputCustomType.Parameter("numberOfAssessments") Integer numberOfAssessments,
+        @OutputCustomType.Parameter("numberOfGroups") Integer numberOfGroups,
+        @OutputCustomType.Parameter("numberOfMachines") Integer numberOfMachines,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("projectStatus") @Nullable String projectStatus,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.assessmentSolutionId = assessmentSolutionId;
         this.createdTimestamp = createdTimestamp;
         this.customerStorageAccountArmId = customerStorageAccountArmId;
@@ -278,77 +278,77 @@ public final class ProjectPropertiesResponse {
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setAssessmentSolutionId(@Nullable String assessmentSolutionId) {
+        public Builder assessmentSolutionId(@Nullable String assessmentSolutionId) {
             this.assessmentSolutionId = assessmentSolutionId;
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setCustomerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
+        public Builder customerStorageAccountArmId(@Nullable String customerStorageAccountArmId) {
             this.customerStorageAccountArmId = customerStorageAccountArmId;
             return this;
         }
 
-        public Builder setCustomerWorkspaceId(@Nullable String customerWorkspaceId) {
+        public Builder customerWorkspaceId(@Nullable String customerWorkspaceId) {
             this.customerWorkspaceId = customerWorkspaceId;
             return this;
         }
 
-        public Builder setCustomerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
+        public Builder customerWorkspaceLocation(@Nullable String customerWorkspaceLocation) {
             this.customerWorkspaceLocation = customerWorkspaceLocation;
             return this;
         }
 
-        public Builder setLastAssessmentTimestamp(String lastAssessmentTimestamp) {
+        public Builder lastAssessmentTimestamp(String lastAssessmentTimestamp) {
             this.lastAssessmentTimestamp = Objects.requireNonNull(lastAssessmentTimestamp);
             return this;
         }
 
-        public Builder setNumberOfAssessments(Integer numberOfAssessments) {
+        public Builder numberOfAssessments(Integer numberOfAssessments) {
             this.numberOfAssessments = Objects.requireNonNull(numberOfAssessments);
             return this;
         }
 
-        public Builder setNumberOfGroups(Integer numberOfGroups) {
+        public Builder numberOfGroups(Integer numberOfGroups) {
             this.numberOfGroups = Objects.requireNonNull(numberOfGroups);
             return this;
         }
 
-        public Builder setNumberOfMachines(Integer numberOfMachines) {
+        public Builder numberOfMachines(Integer numberOfMachines) {
             this.numberOfMachines = Objects.requireNonNull(numberOfMachines);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProjectStatus(@Nullable String projectStatus) {
+        public Builder projectStatus(@Nullable String projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

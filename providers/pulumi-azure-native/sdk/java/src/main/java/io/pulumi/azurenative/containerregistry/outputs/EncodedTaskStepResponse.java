@@ -51,15 +51,15 @@ public final class EncodedTaskStepResponse {
      */
     private final @Nullable List<SetValueResponse> values;
 
-    @OutputCustomType.Constructor({"baseImageDependencies","contextAccessToken","contextPath","encodedTaskContent","encodedValuesContent","type","values"})
+    @OutputCustomType.Constructor
     private EncodedTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String encodedTaskContent,
-        @Nullable String encodedValuesContent,
-        String type,
-        @Nullable List<SetValueResponse> values) {
+        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("encodedTaskContent") String encodedTaskContent,
+        @OutputCustomType.Parameter("encodedValuesContent") @Nullable String encodedValuesContent,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values) {
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
@@ -152,37 +152,37 @@ public final class EncodedTaskStepResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setBaseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
+        public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setEncodedTaskContent(String encodedTaskContent) {
+        public Builder encodedTaskContent(String encodedTaskContent) {
             this.encodedTaskContent = Objects.requireNonNull(encodedTaskContent);
             return this;
         }
 
-        public Builder setEncodedValuesContent(@Nullable String encodedValuesContent) {
+        public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             this.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }

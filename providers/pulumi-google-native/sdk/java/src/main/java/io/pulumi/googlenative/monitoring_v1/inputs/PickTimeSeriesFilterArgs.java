@@ -92,32 +92,32 @@ public final class PickTimeSeriesFilterArgs extends io.pulumi.resources.Resource
     	      this.rankingMethod = defaults.rankingMethod;
         }
 
-        public Builder setDirection(@Nullable Input<PickTimeSeriesFilterDirection> direction) {
+        public Builder direction(@Nullable Input<PickTimeSeriesFilterDirection> direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setDirection(@Nullable PickTimeSeriesFilterDirection direction) {
+        public Builder direction(@Nullable PickTimeSeriesFilterDirection direction) {
             this.direction = Input.ofNullable(direction);
             return this;
         }
 
-        public Builder setNumTimeSeries(@Nullable Input<Integer> numTimeSeries) {
+        public Builder numTimeSeries(@Nullable Input<Integer> numTimeSeries) {
             this.numTimeSeries = numTimeSeries;
             return this;
         }
 
-        public Builder setNumTimeSeries(@Nullable Integer numTimeSeries) {
+        public Builder numTimeSeries(@Nullable Integer numTimeSeries) {
             this.numTimeSeries = Input.ofNullable(numTimeSeries);
             return this;
         }
 
-        public Builder setRankingMethod(@Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod) {
+        public Builder rankingMethod(@Nullable Input<PickTimeSeriesFilterRankingMethod> rankingMethod) {
             this.rankingMethod = rankingMethod;
             return this;
         }
 
-        public Builder setRankingMethod(@Nullable PickTimeSeriesFilterRankingMethod rankingMethod) {
+        public Builder rankingMethod(@Nullable PickTimeSeriesFilterRankingMethod rankingMethod) {
             this.rankingMethod = Input.ofNullable(rankingMethod);
             return this;
         }

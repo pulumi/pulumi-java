@@ -36,12 +36,12 @@ public final class EnvelopeEncryptionResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"clearTracks","contentKeys","customKeyAcquisitionUrlTemplate","enabledProtocols"})
+    @OutputCustomType.Constructor
     private EnvelopeEncryptionResponse(
-        @Nullable List<TrackSelectionResponse> clearTracks,
-        @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @Nullable String customKeyAcquisitionUrlTemplate,
-        @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @OutputCustomType.Parameter("customKeyAcquisitionUrlTemplate") @Nullable String customKeyAcquisitionUrlTemplate,
+        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
@@ -103,22 +103,22 @@ public final class EnvelopeEncryptionResponse {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setClearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
+        public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
+        public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setCustomKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
+        public Builder customKeyAcquisitionUrlTemplate(@Nullable String customKeyAcquisitionUrlTemplate) {
             this.customKeyAcquisitionUrlTemplate = customKeyAcquisitionUrlTemplate;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

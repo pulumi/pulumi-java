@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile(
-        @Nullable Boolean allowInsecure,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs gcs,
-        @Nullable String localPath,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs gcs,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;
@@ -102,22 +102,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setGcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs gcs) {
+        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcs gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setRemote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemote remote) {
+        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemote remote) {
             this.remote = remote;
             return this;
         }

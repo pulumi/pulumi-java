@@ -31,20 +31,20 @@ public final class CVSSResponse {
     private final String scope;
     private final String userInteraction;
 
-    @OutputCustomType.Constructor({"attackComplexity","attackVector","authentication","availabilityImpact","baseScore","confidentialityImpact","exploitabilityScore","impactScore","integrityImpact","privilegesRequired","scope","userInteraction"})
+    @OutputCustomType.Constructor
     private CVSSResponse(
-        String attackComplexity,
-        String attackVector,
-        String authentication,
-        String availabilityImpact,
-        Double baseScore,
-        String confidentialityImpact,
-        Double exploitabilityScore,
-        Double impactScore,
-        String integrityImpact,
-        String privilegesRequired,
-        String scope,
-        String userInteraction) {
+        @OutputCustomType.Parameter("attackComplexity") String attackComplexity,
+        @OutputCustomType.Parameter("attackVector") String attackVector,
+        @OutputCustomType.Parameter("authentication") String authentication,
+        @OutputCustomType.Parameter("availabilityImpact") String availabilityImpact,
+        @OutputCustomType.Parameter("baseScore") Double baseScore,
+        @OutputCustomType.Parameter("confidentialityImpact") String confidentialityImpact,
+        @OutputCustomType.Parameter("exploitabilityScore") Double exploitabilityScore,
+        @OutputCustomType.Parameter("impactScore") Double impactScore,
+        @OutputCustomType.Parameter("integrityImpact") String integrityImpact,
+        @OutputCustomType.Parameter("privilegesRequired") String privilegesRequired,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("userInteraction") String userInteraction) {
         this.attackComplexity = attackComplexity;
         this.attackVector = attackVector;
         this.authentication = authentication;
@@ -146,62 +146,62 @@ public final class CVSSResponse {
     	      this.userInteraction = defaults.userInteraction;
         }
 
-        public Builder setAttackComplexity(String attackComplexity) {
+        public Builder attackComplexity(String attackComplexity) {
             this.attackComplexity = Objects.requireNonNull(attackComplexity);
             return this;
         }
 
-        public Builder setAttackVector(String attackVector) {
+        public Builder attackVector(String attackVector) {
             this.attackVector = Objects.requireNonNull(attackVector);
             return this;
         }
 
-        public Builder setAuthentication(String authentication) {
+        public Builder authentication(String authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setAvailabilityImpact(String availabilityImpact) {
+        public Builder availabilityImpact(String availabilityImpact) {
             this.availabilityImpact = Objects.requireNonNull(availabilityImpact);
             return this;
         }
 
-        public Builder setBaseScore(Double baseScore) {
+        public Builder baseScore(Double baseScore) {
             this.baseScore = Objects.requireNonNull(baseScore);
             return this;
         }
 
-        public Builder setConfidentialityImpact(String confidentialityImpact) {
+        public Builder confidentialityImpact(String confidentialityImpact) {
             this.confidentialityImpact = Objects.requireNonNull(confidentialityImpact);
             return this;
         }
 
-        public Builder setExploitabilityScore(Double exploitabilityScore) {
+        public Builder exploitabilityScore(Double exploitabilityScore) {
             this.exploitabilityScore = Objects.requireNonNull(exploitabilityScore);
             return this;
         }
 
-        public Builder setImpactScore(Double impactScore) {
+        public Builder impactScore(Double impactScore) {
             this.impactScore = Objects.requireNonNull(impactScore);
             return this;
         }
 
-        public Builder setIntegrityImpact(String integrityImpact) {
+        public Builder integrityImpact(String integrityImpact) {
             this.integrityImpact = Objects.requireNonNull(integrityImpact);
             return this;
         }
 
-        public Builder setPrivilegesRequired(String privilegesRequired) {
+        public Builder privilegesRequired(String privilegesRequired) {
             this.privilegesRequired = Objects.requireNonNull(privilegesRequired);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setUserInteraction(String userInteraction) {
+        public Builder userInteraction(String userInteraction) {
             this.userInteraction = Objects.requireNonNull(userInteraction);
             return this;
         }

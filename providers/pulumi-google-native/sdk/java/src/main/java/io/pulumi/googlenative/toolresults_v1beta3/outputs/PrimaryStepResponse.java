@@ -22,10 +22,10 @@ public final class PrimaryStepResponse {
      */
     private final String rollUp;
 
-    @OutputCustomType.Constructor({"individualOutcome","rollUp"})
+    @OutputCustomType.Constructor
     private PrimaryStepResponse(
-        List<IndividualOutcomeResponse> individualOutcome,
-        String rollUp) {
+        @OutputCustomType.Parameter("individualOutcome") List<IndividualOutcomeResponse> individualOutcome,
+        @OutputCustomType.Parameter("rollUp") String rollUp) {
         this.individualOutcome = individualOutcome;
         this.rollUp = rollUp;
     }
@@ -67,12 +67,12 @@ public final class PrimaryStepResponse {
     	      this.rollUp = defaults.rollUp;
         }
 
-        public Builder setIndividualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
+        public Builder individualOutcome(List<IndividualOutcomeResponse> individualOutcome) {
             this.individualOutcome = Objects.requireNonNull(individualOutcome);
             return this;
         }
 
-        public Builder setRollUp(String rollUp) {
+        public Builder rollUp(String rollUp) {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
         }

@@ -20,10 +20,10 @@ public final class GetGroupFilter {
      */
     private final String attributeValue;
 
-    @OutputCustomType.Constructor({"attributePath","attributeValue"})
+    @OutputCustomType.Constructor
     private GetGroupFilter(
-        String attributePath,
-        String attributeValue) {
+        @OutputCustomType.Parameter("attributePath") String attributePath,
+        @OutputCustomType.Parameter("attributeValue") String attributeValue) {
         this.attributePath = attributePath;
         this.attributeValue = attributeValue;
     }
@@ -65,12 +65,12 @@ public final class GetGroupFilter {
     	      this.attributeValue = defaults.attributeValue;
         }
 
-        public Builder setAttributePath(String attributePath) {
+        public Builder attributePath(String attributePath) {
             this.attributePath = Objects.requireNonNull(attributePath);
             return this;
         }
 
-        public Builder setAttributeValue(String attributeValue) {
+        public Builder attributeValue(String attributeValue) {
             this.attributeValue = Objects.requireNonNull(attributeValue);
             return this;
         }

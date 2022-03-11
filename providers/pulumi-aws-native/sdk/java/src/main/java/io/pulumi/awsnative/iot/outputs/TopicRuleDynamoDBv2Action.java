@@ -15,10 +15,10 @@ public final class TopicRuleDynamoDBv2Action {
     private final @Nullable TopicRulePutItemInput putItem;
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"putItem","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleDynamoDBv2Action(
-        @Nullable TopicRulePutItemInput putItem,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("putItem") @Nullable TopicRulePutItemInput putItem,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }
@@ -52,12 +52,12 @@ public final class TopicRuleDynamoDBv2Action {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutItem(@Nullable TopicRulePutItemInput putItem) {
+        public Builder putItem(@Nullable TopicRulePutItemInput putItem) {
             this.putItem = putItem;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

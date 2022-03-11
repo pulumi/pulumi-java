@@ -33,11 +33,11 @@ public final class ClusterResourceUsageExportConfig {
      */
     private final @Nullable Boolean enableResourceConsumptionMetering;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","enableNetworkEgressMetering","enableResourceConsumptionMetering"})
+    @OutputCustomType.Constructor
     private ClusterResourceUsageExportConfig(
-        ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination,
-        @Nullable Boolean enableNetworkEgressMetering,
-        @Nullable Boolean enableResourceConsumptionMetering) {
+        @OutputCustomType.Parameter("bigqueryDestination") ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination,
+        @OutputCustomType.Parameter("enableNetworkEgressMetering") @Nullable Boolean enableNetworkEgressMetering,
+        @OutputCustomType.Parameter("enableResourceConsumptionMetering") @Nullable Boolean enableResourceConsumptionMetering) {
         this.bigqueryDestination = bigqueryDestination;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
@@ -94,17 +94,17 @@ public final class ClusterResourceUsageExportConfig {
     	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
         }
 
-        public Builder setBigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination) {
+        public Builder bigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestination bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(@Nullable Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
 
-        public Builder setEnableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
+        public Builder enableResourceConsumptionMetering(@Nullable Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }

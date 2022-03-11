@@ -32,12 +32,12 @@ public final class HierarchyInformationResponse {
      */
     private final @Nullable String productName;
 
-    @OutputCustomType.Constructor({"configurationName","productFamilyName","productLineName","productName"})
+    @OutputCustomType.Constructor
     private HierarchyInformationResponse(
-        @Nullable String configurationName,
-        @Nullable String productFamilyName,
-        @Nullable String productLineName,
-        @Nullable String productName) {
+        @OutputCustomType.Parameter("configurationName") @Nullable String configurationName,
+        @OutputCustomType.Parameter("productFamilyName") @Nullable String productFamilyName,
+        @OutputCustomType.Parameter("productLineName") @Nullable String productLineName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName) {
         this.configurationName = configurationName;
         this.productFamilyName = productFamilyName;
         this.productLineName = productLineName;
@@ -99,22 +99,22 @@ public final class HierarchyInformationResponse {
     	      this.productName = defaults.productName;
         }
 
-        public Builder setConfigurationName(@Nullable String configurationName) {
+        public Builder configurationName(@Nullable String configurationName) {
             this.configurationName = configurationName;
             return this;
         }
 
-        public Builder setProductFamilyName(@Nullable String productFamilyName) {
+        public Builder productFamilyName(@Nullable String productFamilyName) {
             this.productFamilyName = productFamilyName;
             return this;
         }
 
-        public Builder setProductLineName(@Nullable String productLineName) {
+        public Builder productLineName(@Nullable String productLineName) {
             this.productLineName = productLineName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }

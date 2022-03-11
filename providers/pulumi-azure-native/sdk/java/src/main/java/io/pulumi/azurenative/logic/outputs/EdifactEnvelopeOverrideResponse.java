@@ -87,23 +87,23 @@ public final class EdifactEnvelopeOverrideResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"applicationPassword","associationAssignedCode","controllingAgencyCode","functionalGroupId","groupHeaderMessageRelease","groupHeaderMessageVersion","messageAssociationAssignedCode","messageId","messageRelease","messageVersion","receiverApplicationId","receiverApplicationQualifier","senderApplicationId","senderApplicationQualifier","targetNamespace"})
+    @OutputCustomType.Constructor
     private EdifactEnvelopeOverrideResponse(
-        @Nullable String applicationPassword,
-        @Nullable String associationAssignedCode,
-        @Nullable String controllingAgencyCode,
-        @Nullable String functionalGroupId,
-        @Nullable String groupHeaderMessageRelease,
-        @Nullable String groupHeaderMessageVersion,
-        @Nullable String messageAssociationAssignedCode,
-        @Nullable String messageId,
-        @Nullable String messageRelease,
-        @Nullable String messageVersion,
-        @Nullable String receiverApplicationId,
-        @Nullable String receiverApplicationQualifier,
-        @Nullable String senderApplicationId,
-        @Nullable String senderApplicationQualifier,
-        @Nullable String targetNamespace) {
+        @OutputCustomType.Parameter("applicationPassword") @Nullable String applicationPassword,
+        @OutputCustomType.Parameter("associationAssignedCode") @Nullable String associationAssignedCode,
+        @OutputCustomType.Parameter("controllingAgencyCode") @Nullable String controllingAgencyCode,
+        @OutputCustomType.Parameter("functionalGroupId") @Nullable String functionalGroupId,
+        @OutputCustomType.Parameter("groupHeaderMessageRelease") @Nullable String groupHeaderMessageRelease,
+        @OutputCustomType.Parameter("groupHeaderMessageVersion") @Nullable String groupHeaderMessageVersion,
+        @OutputCustomType.Parameter("messageAssociationAssignedCode") @Nullable String messageAssociationAssignedCode,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("messageRelease") @Nullable String messageRelease,
+        @OutputCustomType.Parameter("messageVersion") @Nullable String messageVersion,
+        @OutputCustomType.Parameter("receiverApplicationId") @Nullable String receiverApplicationId,
+        @OutputCustomType.Parameter("receiverApplicationQualifier") @Nullable String receiverApplicationQualifier,
+        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId,
+        @OutputCustomType.Parameter("senderApplicationQualifier") @Nullable String senderApplicationQualifier,
+        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.applicationPassword = applicationPassword;
         this.associationAssignedCode = associationAssignedCode;
         this.controllingAgencyCode = controllingAgencyCode;
@@ -275,77 +275,77 @@ public final class EdifactEnvelopeOverrideResponse {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setApplicationPassword(@Nullable String applicationPassword) {
+        public Builder applicationPassword(@Nullable String applicationPassword) {
             this.applicationPassword = applicationPassword;
             return this;
         }
 
-        public Builder setAssociationAssignedCode(@Nullable String associationAssignedCode) {
+        public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             this.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
-        public Builder setControllingAgencyCode(@Nullable String controllingAgencyCode) {
+        public Builder controllingAgencyCode(@Nullable String controllingAgencyCode) {
             this.controllingAgencyCode = controllingAgencyCode;
             return this;
         }
 
-        public Builder setFunctionalGroupId(@Nullable String functionalGroupId) {
+        public Builder functionalGroupId(@Nullable String functionalGroupId) {
             this.functionalGroupId = functionalGroupId;
             return this;
         }
 
-        public Builder setGroupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
+        public Builder groupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
             this.groupHeaderMessageRelease = groupHeaderMessageRelease;
             return this;
         }
 
-        public Builder setGroupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
+        public Builder groupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
             this.groupHeaderMessageVersion = groupHeaderMessageVersion;
             return this;
         }
 
-        public Builder setMessageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
+        public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             this.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageRelease(@Nullable String messageRelease) {
+        public Builder messageRelease(@Nullable String messageRelease) {
             this.messageRelease = messageRelease;
             return this;
         }
 
-        public Builder setMessageVersion(@Nullable String messageVersion) {
+        public Builder messageVersion(@Nullable String messageVersion) {
             this.messageVersion = messageVersion;
             return this;
         }
 
-        public Builder setReceiverApplicationId(@Nullable String receiverApplicationId) {
+        public Builder receiverApplicationId(@Nullable String receiverApplicationId) {
             this.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
-        public Builder setReceiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
+        public Builder receiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
             this.receiverApplicationQualifier = receiverApplicationQualifier;
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }
 
-        public Builder setSenderApplicationQualifier(@Nullable String senderApplicationQualifier) {
+        public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             this.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

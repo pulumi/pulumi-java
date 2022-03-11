@@ -32,12 +32,12 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
      */
     private final Boolean resizeUnitCount;
 
-    @OutputCustomType.Constructor({"enableRenewal","paymentCycle","paymentPlan","resizeUnitCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1RenewalSettingsResponse(
-        Boolean enableRenewal,
-        GoogleCloudChannelV1PeriodResponse paymentCycle,
-        String paymentPlan,
-        Boolean resizeUnitCount) {
+        @OutputCustomType.Parameter("enableRenewal") Boolean enableRenewal,
+        @OutputCustomType.Parameter("paymentCycle") GoogleCloudChannelV1PeriodResponse paymentCycle,
+        @OutputCustomType.Parameter("paymentPlan") String paymentPlan,
+        @OutputCustomType.Parameter("resizeUnitCount") Boolean resizeUnitCount) {
         this.enableRenewal = enableRenewal;
         this.paymentCycle = paymentCycle;
         this.paymentPlan = paymentPlan;
@@ -99,22 +99,22 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
     	      this.resizeUnitCount = defaults.resizeUnitCount;
         }
 
-        public Builder setEnableRenewal(Boolean enableRenewal) {
+        public Builder enableRenewal(Boolean enableRenewal) {
             this.enableRenewal = Objects.requireNonNull(enableRenewal);
             return this;
         }
 
-        public Builder setPaymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
+        public Builder paymentCycle(GoogleCloudChannelV1PeriodResponse paymentCycle) {
             this.paymentCycle = Objects.requireNonNull(paymentCycle);
             return this;
         }
 
-        public Builder setPaymentPlan(String paymentPlan) {
+        public Builder paymentPlan(String paymentPlan) {
             this.paymentPlan = Objects.requireNonNull(paymentPlan);
             return this;
         }
 
-        public Builder setResizeUnitCount(Boolean resizeUnitCount) {
+        public Builder resizeUnitCount(Boolean resizeUnitCount) {
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
         }

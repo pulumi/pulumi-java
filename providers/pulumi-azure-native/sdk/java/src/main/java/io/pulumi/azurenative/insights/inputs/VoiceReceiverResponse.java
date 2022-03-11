@@ -88,17 +88,17 @@ public final class VoiceReceiverResponse extends io.pulumi.resources.InvokeArgs 
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setCountryCode(String countryCode) {
+        public Builder countryCode(String countryCode) {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }

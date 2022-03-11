@@ -16,8 +16,8 @@ public final class CSINodeSpec {
      */
     private final List<CSINodeDriver> drivers;
 
-    @OutputCustomType.Constructor({"drivers"})
-    private CSINodeSpec(List<CSINodeDriver> drivers) {
+    @OutputCustomType.Constructor
+    private CSINodeSpec(@OutputCustomType.Parameter("drivers") List<CSINodeDriver> drivers) {
         this.drivers = drivers;
     }
 
@@ -49,7 +49,7 @@ public final class CSINodeSpec {
     	      this.drivers = defaults.drivers;
         }
 
-        public Builder setDrivers(List<CSINodeDriver> drivers) {
+        public Builder drivers(List<CSINodeDriver> drivers) {
             this.drivers = Objects.requireNonNull(drivers);
             return this;
         }

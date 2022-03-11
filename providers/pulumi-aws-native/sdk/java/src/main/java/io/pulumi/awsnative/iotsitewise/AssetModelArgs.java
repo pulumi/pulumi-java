@@ -139,62 +139,62 @@ public final class AssetModelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetModelCompositeModels(@Nullable Input<List<AssetModelCompositeModelArgs>> assetModelCompositeModels) {
+        public Builder assetModelCompositeModels(@Nullable Input<List<AssetModelCompositeModelArgs>> assetModelCompositeModels) {
             this.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
 
-        public Builder setAssetModelCompositeModels(@Nullable List<AssetModelCompositeModelArgs> assetModelCompositeModels) {
+        public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModelArgs> assetModelCompositeModels) {
             this.assetModelCompositeModels = Input.ofNullable(assetModelCompositeModels);
             return this;
         }
 
-        public Builder setAssetModelDescription(@Nullable Input<String> assetModelDescription) {
+        public Builder assetModelDescription(@Nullable Input<String> assetModelDescription) {
             this.assetModelDescription = assetModelDescription;
             return this;
         }
 
-        public Builder setAssetModelDescription(@Nullable String assetModelDescription) {
+        public Builder assetModelDescription(@Nullable String assetModelDescription) {
             this.assetModelDescription = Input.ofNullable(assetModelDescription);
             return this;
         }
 
-        public Builder setAssetModelHierarchies(@Nullable Input<List<AssetModelHierarchyArgs>> assetModelHierarchies) {
+        public Builder assetModelHierarchies(@Nullable Input<List<AssetModelHierarchyArgs>> assetModelHierarchies) {
             this.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
 
-        public Builder setAssetModelHierarchies(@Nullable List<AssetModelHierarchyArgs> assetModelHierarchies) {
+        public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchyArgs> assetModelHierarchies) {
             this.assetModelHierarchies = Input.ofNullable(assetModelHierarchies);
             return this;
         }
 
-        public Builder setAssetModelName(@Nullable Input<String> assetModelName) {
+        public Builder assetModelName(@Nullable Input<String> assetModelName) {
             this.assetModelName = assetModelName;
             return this;
         }
 
-        public Builder setAssetModelName(@Nullable String assetModelName) {
+        public Builder assetModelName(@Nullable String assetModelName) {
             this.assetModelName = Input.ofNullable(assetModelName);
             return this;
         }
 
-        public Builder setAssetModelProperties(@Nullable Input<List<AssetModelPropertyArgs>> assetModelProperties) {
+        public Builder assetModelProperties(@Nullable Input<List<AssetModelPropertyArgs>> assetModelProperties) {
             this.assetModelProperties = assetModelProperties;
             return this;
         }
 
-        public Builder setAssetModelProperties(@Nullable List<AssetModelPropertyArgs> assetModelProperties) {
+        public Builder assetModelProperties(@Nullable List<AssetModelPropertyArgs> assetModelProperties) {
             this.assetModelProperties = Input.ofNullable(assetModelProperties);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AssetModelTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AssetModelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetModelTagArgs> tags) {
+        public Builder tags(@Nullable List<AssetModelTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

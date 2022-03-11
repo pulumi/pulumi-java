@@ -40,13 +40,13 @@ public final class PolicyStepScalingPolicyConfiguration {
      */
     private final @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments;
 
-    @OutputCustomType.Constructor({"adjustmentType","cooldown","metricAggregationType","minAdjustmentMagnitude","stepAdjustments"})
+    @OutputCustomType.Constructor
     private PolicyStepScalingPolicyConfiguration(
-        @Nullable String adjustmentType,
-        @Nullable Integer cooldown,
-        @Nullable String metricAggregationType,
-        @Nullable Integer minAdjustmentMagnitude,
-        @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
+        @OutputCustomType.Parameter("adjustmentType") @Nullable String adjustmentType,
+        @OutputCustomType.Parameter("cooldown") @Nullable Integer cooldown,
+        @OutputCustomType.Parameter("metricAggregationType") @Nullable String metricAggregationType,
+        @OutputCustomType.Parameter("minAdjustmentMagnitude") @Nullable Integer minAdjustmentMagnitude,
+        @OutputCustomType.Parameter("stepAdjustments") @Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
         this.adjustmentType = adjustmentType;
         this.cooldown = cooldown;
         this.metricAggregationType = metricAggregationType;
@@ -118,27 +118,27 @@ public final class PolicyStepScalingPolicyConfiguration {
     	      this.stepAdjustments = defaults.stepAdjustments;
         }
 
-        public Builder setAdjustmentType(@Nullable String adjustmentType) {
+        public Builder adjustmentType(@Nullable String adjustmentType) {
             this.adjustmentType = adjustmentType;
             return this;
         }
 
-        public Builder setCooldown(@Nullable Integer cooldown) {
+        public Builder cooldown(@Nullable Integer cooldown) {
             this.cooldown = cooldown;
             return this;
         }
 
-        public Builder setMetricAggregationType(@Nullable String metricAggregationType) {
+        public Builder metricAggregationType(@Nullable String metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
 
-        public Builder setMinAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
+        public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
 
-        public Builder setStepAdjustments(@Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
+        public Builder stepAdjustments(@Nullable List<PolicyStepScalingPolicyConfigurationStepAdjustment> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }

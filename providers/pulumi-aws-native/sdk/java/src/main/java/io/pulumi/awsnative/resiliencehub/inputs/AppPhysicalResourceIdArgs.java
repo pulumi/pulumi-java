@@ -86,42 +86,42 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setAwsAccountId(@Nullable Input<String> awsAccountId) {
+        public Builder awsAccountId(@Nullable Input<String> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = Input.ofNullable(awsAccountId);
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable Input<String> awsRegion) {
+        public Builder awsRegion(@Nullable Input<String> awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = Input.ofNullable(awsRegion);
             return this;
         }
 
-        public Builder setIdentifier(Input<String> identifier) {
+        public Builder identifier(Input<String> identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Input.of(Objects.requireNonNull(identifier));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -17,8 +17,8 @@ public final class ThingGroupPropertiesAttributePayload {
      */
     private final @Nullable Map<String,String> attributes;
 
-    @OutputCustomType.Constructor({"attributes"})
-    private ThingGroupPropertiesAttributePayload(@Nullable Map<String,String> attributes) {
+    @OutputCustomType.Constructor
+    private ThingGroupPropertiesAttributePayload(@OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes) {
         this.attributes = attributes;
     }
 
@@ -50,7 +50,7 @@ public final class ThingGroupPropertiesAttributePayload {
     	      this.attributes = defaults.attributes;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }

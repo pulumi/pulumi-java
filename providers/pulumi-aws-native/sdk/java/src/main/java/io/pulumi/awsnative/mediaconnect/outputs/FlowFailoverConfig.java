@@ -19,10 +19,10 @@ public final class FlowFailoverConfig {
     private final @Nullable Integer recoveryWindow;
     private final @Nullable FlowFailoverConfigState state;
 
-    @OutputCustomType.Constructor({"recoveryWindow","state"})
+    @OutputCustomType.Constructor
     private FlowFailoverConfig(
-        @Nullable Integer recoveryWindow,
-        @Nullable FlowFailoverConfigState state) {
+        @OutputCustomType.Parameter("recoveryWindow") @Nullable Integer recoveryWindow,
+        @OutputCustomType.Parameter("state") @Nullable FlowFailoverConfigState state) {
         this.recoveryWindow = recoveryWindow;
         this.state = state;
     }
@@ -60,12 +60,12 @@ public final class FlowFailoverConfig {
     	      this.state = defaults.state;
         }
 
-        public Builder setRecoveryWindow(@Nullable Integer recoveryWindow) {
+        public Builder recoveryWindow(@Nullable Integer recoveryWindow) {
             this.recoveryWindow = recoveryWindow;
             return this;
         }
 
-        public Builder setState(@Nullable FlowFailoverConfigState state) {
+        public Builder state(@Nullable FlowFailoverConfigState state) {
             this.state = state;
             return this;
         }

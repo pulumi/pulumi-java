@@ -77,20 +77,20 @@ public final class GetStreamResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"backfillAll","backfillNone","createTime","customerManagedEncryptionKey","destinationConfig","displayName","errors","labels","name","sourceConfig","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetStreamResult(
-        BackfillAllStrategyResponse backfillAll,
-        BackfillNoneStrategyResponse backfillNone,
-        String createTime,
-        String customerManagedEncryptionKey,
-        DestinationConfigResponse destinationConfig,
-        String displayName,
-        List<ErrorResponse> errors,
-        Map<String,String> labels,
-        String name,
-        SourceConfigResponse sourceConfig,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("backfillAll") BackfillAllStrategyResponse backfillAll,
+        @OutputCustomType.Parameter("backfillNone") BackfillNoneStrategyResponse backfillNone,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("customerManagedEncryptionKey") String customerManagedEncryptionKey,
+        @OutputCustomType.Parameter("destinationConfig") DestinationConfigResponse destinationConfig,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("errors") List<ErrorResponse> errors,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sourceConfig") SourceConfigResponse sourceConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.backfillAll = backfillAll;
         this.backfillNone = backfillNone;
         this.createTime = createTime;
@@ -232,62 +232,62 @@ public final class GetStreamResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setBackfillAll(BackfillAllStrategyResponse backfillAll) {
+        public Builder backfillAll(BackfillAllStrategyResponse backfillAll) {
             this.backfillAll = Objects.requireNonNull(backfillAll);
             return this;
         }
 
-        public Builder setBackfillNone(BackfillNoneStrategyResponse backfillNone) {
+        public Builder backfillNone(BackfillNoneStrategyResponse backfillNone) {
             this.backfillNone = Objects.requireNonNull(backfillNone);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCustomerManagedEncryptionKey(String customerManagedEncryptionKey) {
+        public Builder customerManagedEncryptionKey(String customerManagedEncryptionKey) {
             this.customerManagedEncryptionKey = Objects.requireNonNull(customerManagedEncryptionKey);
             return this;
         }
 
-        public Builder setDestinationConfig(DestinationConfigResponse destinationConfig) {
+        public Builder destinationConfig(DestinationConfigResponse destinationConfig) {
             this.destinationConfig = Objects.requireNonNull(destinationConfig);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setErrors(List<ErrorResponse> errors) {
+        public Builder errors(List<ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSourceConfig(SourceConfigResponse sourceConfig) {
+        public Builder sourceConfig(SourceConfigResponse sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

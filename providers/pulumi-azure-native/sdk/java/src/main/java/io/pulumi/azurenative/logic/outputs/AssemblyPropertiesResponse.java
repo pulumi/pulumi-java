@@ -56,18 +56,18 @@ public final class AssemblyPropertiesResponse {
     private final @Nullable String createdTime;
     private final @Nullable Object metadata;
 
-    @OutputCustomType.Constructor({"assemblyCulture","assemblyName","assemblyPublicKeyToken","assemblyVersion","changedTime","content","contentLink","contentType","createdTime","metadata"})
+    @OutputCustomType.Constructor
     private AssemblyPropertiesResponse(
-        @Nullable String assemblyCulture,
-        String assemblyName,
-        @Nullable String assemblyPublicKeyToken,
-        @Nullable String assemblyVersion,
-        @Nullable String changedTime,
-        @Nullable Object content,
-        @Nullable ContentLinkResponse contentLink,
-        @Nullable String contentType,
-        @Nullable String createdTime,
-        @Nullable Object metadata) {
+        @OutputCustomType.Parameter("assemblyCulture") @Nullable String assemblyCulture,
+        @OutputCustomType.Parameter("assemblyName") String assemblyName,
+        @OutputCustomType.Parameter("assemblyPublicKeyToken") @Nullable String assemblyPublicKeyToken,
+        @OutputCustomType.Parameter("assemblyVersion") @Nullable String assemblyVersion,
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("content") @Nullable Object content,
+        @OutputCustomType.Parameter("contentLink") @Nullable ContentLinkResponse contentLink,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata) {
         this.assemblyCulture = assemblyCulture;
         this.assemblyName = assemblyName;
         this.assemblyPublicKeyToken = assemblyPublicKeyToken;
@@ -181,52 +181,52 @@ public final class AssemblyPropertiesResponse {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setAssemblyCulture(@Nullable String assemblyCulture) {
+        public Builder assemblyCulture(@Nullable String assemblyCulture) {
             this.assemblyCulture = assemblyCulture;
             return this;
         }
 
-        public Builder setAssemblyName(String assemblyName) {
+        public Builder assemblyName(String assemblyName) {
             this.assemblyName = Objects.requireNonNull(assemblyName);
             return this;
         }
 
-        public Builder setAssemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
+        public Builder assemblyPublicKeyToken(@Nullable String assemblyPublicKeyToken) {
             this.assemblyPublicKeyToken = assemblyPublicKeyToken;
             return this;
         }
 
-        public Builder setAssemblyVersion(@Nullable String assemblyVersion) {
+        public Builder assemblyVersion(@Nullable String assemblyVersion) {
             this.assemblyVersion = assemblyVersion;
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setContent(@Nullable Object content) {
+        public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentLink(@Nullable ContentLinkResponse contentLink) {
+        public Builder contentLink(@Nullable ContentLinkResponse contentLink) {
             this.contentLink = contentLink;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }

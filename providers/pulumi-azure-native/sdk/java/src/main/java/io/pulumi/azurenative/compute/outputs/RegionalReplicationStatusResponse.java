@@ -31,12 +31,12 @@ public final class RegionalReplicationStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"details","progress","region","state"})
+    @OutputCustomType.Constructor
     private RegionalReplicationStatusResponse(
-        String details,
-        Integer progress,
-        String region,
-        String state) {
+        @OutputCustomType.Parameter("details") String details,
+        @OutputCustomType.Parameter("progress") Integer progress,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("state") String state) {
         this.details = details;
         this.progress = progress;
         this.region = region;
@@ -98,22 +98,22 @@ public final class RegionalReplicationStatusResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setProgress(Integer progress) {
+        public Builder progress(Integer progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

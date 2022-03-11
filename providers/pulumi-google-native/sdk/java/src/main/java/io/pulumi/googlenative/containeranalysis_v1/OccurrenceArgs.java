@@ -285,152 +285,152 @@ public final class OccurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestation(@Nullable Input<AttestationOccurrenceArgs> attestation) {
+        public Builder attestation(@Nullable Input<AttestationOccurrenceArgs> attestation) {
             this.attestation = attestation;
             return this;
         }
 
-        public Builder setAttestation(@Nullable AttestationOccurrenceArgs attestation) {
+        public Builder attestation(@Nullable AttestationOccurrenceArgs attestation) {
             this.attestation = Input.ofNullable(attestation);
             return this;
         }
 
-        public Builder setBuild(@Nullable Input<BuildOccurrenceArgs> build) {
+        public Builder build(@Nullable Input<BuildOccurrenceArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable BuildOccurrenceArgs build) {
+        public Builder build(@Nullable BuildOccurrenceArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setCompliance(@Nullable Input<ComplianceOccurrenceArgs> compliance) {
+        public Builder compliance(@Nullable Input<ComplianceOccurrenceArgs> compliance) {
             this.compliance = compliance;
             return this;
         }
 
-        public Builder setCompliance(@Nullable ComplianceOccurrenceArgs compliance) {
+        public Builder compliance(@Nullable ComplianceOccurrenceArgs compliance) {
             this.compliance = Input.ofNullable(compliance);
             return this;
         }
 
-        public Builder setDeployment(@Nullable Input<DeploymentOccurrenceArgs> deployment) {
+        public Builder deployment(@Nullable Input<DeploymentOccurrenceArgs> deployment) {
             this.deployment = deployment;
             return this;
         }
 
-        public Builder setDeployment(@Nullable DeploymentOccurrenceArgs deployment) {
+        public Builder deployment(@Nullable DeploymentOccurrenceArgs deployment) {
             this.deployment = Input.ofNullable(deployment);
             return this;
         }
 
-        public Builder setDiscovery(@Nullable Input<DiscoveryOccurrenceArgs> discovery) {
+        public Builder discovery(@Nullable Input<DiscoveryOccurrenceArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
 
-        public Builder setDiscovery(@Nullable DiscoveryOccurrenceArgs discovery) {
+        public Builder discovery(@Nullable DiscoveryOccurrenceArgs discovery) {
             this.discovery = Input.ofNullable(discovery);
             return this;
         }
 
-        public Builder setDsseAttestation(@Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation) {
+        public Builder dsseAttestation(@Nullable Input<DSSEAttestationOccurrenceArgs> dsseAttestation) {
             this.dsseAttestation = dsseAttestation;
             return this;
         }
 
-        public Builder setDsseAttestation(@Nullable DSSEAttestationOccurrenceArgs dsseAttestation) {
+        public Builder dsseAttestation(@Nullable DSSEAttestationOccurrenceArgs dsseAttestation) {
             this.dsseAttestation = Input.ofNullable(dsseAttestation);
             return this;
         }
 
-        public Builder setEnvelope(@Nullable Input<EnvelopeArgs> envelope) {
+        public Builder envelope(@Nullable Input<EnvelopeArgs> envelope) {
             this.envelope = envelope;
             return this;
         }
 
-        public Builder setEnvelope(@Nullable EnvelopeArgs envelope) {
+        public Builder envelope(@Nullable EnvelopeArgs envelope) {
             this.envelope = Input.ofNullable(envelope);
             return this;
         }
 
-        public Builder setImage(@Nullable Input<ImageOccurrenceArgs> image) {
+        public Builder image(@Nullable Input<ImageOccurrenceArgs> image) {
             this.image = image;
             return this;
         }
 
-        public Builder setImage(@Nullable ImageOccurrenceArgs image) {
+        public Builder image(@Nullable ImageOccurrenceArgs image) {
             this.image = Input.ofNullable(image);
             return this;
         }
 
-        public Builder setNoteName(Input<String> noteName) {
+        public Builder noteName(Input<String> noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
-        public Builder setNoteName(String noteName) {
+        public Builder noteName(String noteName) {
             this.noteName = Input.of(Objects.requireNonNull(noteName));
             return this;
         }
 
-        public Builder set$package(@Nullable Input<PackageOccurrenceArgs> $package) {
+        public Builder $package(@Nullable Input<PackageOccurrenceArgs> $package) {
             this.$package = $package;
             return this;
         }
 
-        public Builder set$package(@Nullable PackageOccurrenceArgs $package) {
+        public Builder $package(@Nullable PackageOccurrenceArgs $package) {
             this.$package = Input.ofNullable($package);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRemediation(@Nullable Input<String> remediation) {
+        public Builder remediation(@Nullable Input<String> remediation) {
             this.remediation = remediation;
             return this;
         }
 
-        public Builder setRemediation(@Nullable String remediation) {
+        public Builder remediation(@Nullable String remediation) {
             this.remediation = Input.ofNullable(remediation);
             return this;
         }
 
-        public Builder setResourceUri(Input<String> resourceUri) {
+        public Builder resourceUri(Input<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Input.of(Objects.requireNonNull(resourceUri));
             return this;
         }
 
-        public Builder setUpgrade(@Nullable Input<UpgradeOccurrenceArgs> upgrade) {
+        public Builder upgrade(@Nullable Input<UpgradeOccurrenceArgs> upgrade) {
             this.upgrade = upgrade;
             return this;
         }
 
-        public Builder setUpgrade(@Nullable UpgradeOccurrenceArgs upgrade) {
+        public Builder upgrade(@Nullable UpgradeOccurrenceArgs upgrade) {
             this.upgrade = Input.ofNullable(upgrade);
             return this;
         }
 
-        public Builder setVulnerability(@Nullable Input<VulnerabilityOccurrenceArgs> vulnerability) {
+        public Builder vulnerability(@Nullable Input<VulnerabilityOccurrenceArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
 
-        public Builder setVulnerability(@Nullable VulnerabilityOccurrenceArgs vulnerability) {
+        public Builder vulnerability(@Nullable VulnerabilityOccurrenceArgs vulnerability) {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }

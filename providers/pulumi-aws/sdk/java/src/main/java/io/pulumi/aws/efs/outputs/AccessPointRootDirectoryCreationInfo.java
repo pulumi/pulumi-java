@@ -26,11 +26,11 @@ public final class AccessPointRootDirectoryCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"ownerGid","ownerUid","permissions"})
+    @OutputCustomType.Constructor
     private AccessPointRootDirectoryCreationInfo(
-        Integer ownerGid,
-        Integer ownerUid,
-        String permissions) {
+        @OutputCustomType.Parameter("ownerGid") Integer ownerGid,
+        @OutputCustomType.Parameter("ownerUid") Integer ownerUid,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;
@@ -82,17 +82,17 @@ public final class AccessPointRootDirectoryCreationInfo {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setOwnerGid(Integer ownerGid) {
+        public Builder ownerGid(Integer ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
-        public Builder setOwnerUid(Integer ownerUid) {
+        public Builder ownerUid(Integer ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

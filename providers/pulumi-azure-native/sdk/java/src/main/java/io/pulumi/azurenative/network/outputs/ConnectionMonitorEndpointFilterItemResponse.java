@@ -22,10 +22,10 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointFilterItemResponse(
-        @Nullable String address,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class ConnectionMonitorEndpointFilterItemResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

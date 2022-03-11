@@ -43,14 +43,14 @@ public final class ClientCertAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateExpirationDate","certificateSubjectName","certificateThumbprint","password","pfx","type"})
+    @OutputCustomType.Constructor
     private ClientCertAuthenticationResponse(
-        @Nullable String certificateExpirationDate,
-        @Nullable String certificateSubjectName,
-        @Nullable String certificateThumbprint,
-        @Nullable String password,
-        @Nullable String pfx,
-        String type) {
+        @OutputCustomType.Parameter("certificateExpirationDate") @Nullable String certificateExpirationDate,
+        @OutputCustomType.Parameter("certificateSubjectName") @Nullable String certificateSubjectName,
+        @OutputCustomType.Parameter("certificateThumbprint") @Nullable String certificateThumbprint,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("pfx") @Nullable String pfx,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateExpirationDate = certificateExpirationDate;
         this.certificateSubjectName = certificateSubjectName;
         this.certificateThumbprint = certificateThumbprint;
@@ -133,32 +133,32 @@ public final class ClientCertAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateExpirationDate(@Nullable String certificateExpirationDate) {
+        public Builder certificateExpirationDate(@Nullable String certificateExpirationDate) {
             this.certificateExpirationDate = certificateExpirationDate;
             return this;
         }
 
-        public Builder setCertificateSubjectName(@Nullable String certificateSubjectName) {
+        public Builder certificateSubjectName(@Nullable String certificateSubjectName) {
             this.certificateSubjectName = certificateSubjectName;
             return this;
         }
 
-        public Builder setCertificateThumbprint(@Nullable String certificateThumbprint) {
+        public Builder certificateThumbprint(@Nullable String certificateThumbprint) {
             this.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPfx(@Nullable String pfx) {
+        public Builder pfx(@Nullable String pfx) {
             this.pfx = pfx;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

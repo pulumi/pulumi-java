@@ -17,11 +17,11 @@ public final class BackupPlanResourceType {
     private final String backupPlanName;
     private final List<BackupPlanBackupRuleResourceType> backupPlanRule;
 
-    @OutputCustomType.Constructor({"advancedBackupSettings","backupPlanName","backupPlanRule"})
+    @OutputCustomType.Constructor
     private BackupPlanResourceType(
-        @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
-        String backupPlanName,
-        List<BackupPlanBackupRuleResourceType> backupPlanRule) {
+        @OutputCustomType.Parameter("advancedBackupSettings") @Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings,
+        @OutputCustomType.Parameter("backupPlanName") String backupPlanName,
+        @OutputCustomType.Parameter("backupPlanRule") List<BackupPlanBackupRuleResourceType> backupPlanRule) {
         this.advancedBackupSettings = advancedBackupSettings;
         this.backupPlanName = backupPlanName;
         this.backupPlanRule = backupPlanRule;
@@ -61,17 +61,17 @@ public final class BackupPlanResourceType {
     	      this.backupPlanRule = defaults.backupPlanRule;
         }
 
-        public Builder setAdvancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings) {
+        public Builder advancedBackupSettings(@Nullable List<BackupPlanAdvancedBackupSettingResourceType> advancedBackupSettings) {
             this.advancedBackupSettings = advancedBackupSettings;
             return this;
         }
 
-        public Builder setBackupPlanName(String backupPlanName) {
+        public Builder backupPlanName(String backupPlanName) {
             this.backupPlanName = Objects.requireNonNull(backupPlanName);
             return this;
         }
 
-        public Builder setBackupPlanRule(List<BackupPlanBackupRuleResourceType> backupPlanRule) {
+        public Builder backupPlanRule(List<BackupPlanBackupRuleResourceType> backupPlanRule) {
             this.backupPlanRule = Objects.requireNonNull(backupPlanRule);
             return this;
         }

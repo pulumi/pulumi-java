@@ -47,15 +47,15 @@ public final class SourceTriggerDescriptorResponse {
      */
     private final @Nullable String repositoryUrl;
 
-    @OutputCustomType.Constructor({"branchName","commitId","eventType","id","providerType","pullRequestId","repositoryUrl"})
+    @OutputCustomType.Constructor
     private SourceTriggerDescriptorResponse(
-        @Nullable String branchName,
-        @Nullable String commitId,
-        @Nullable String eventType,
-        @Nullable String id,
-        @Nullable String providerType,
-        @Nullable String pullRequestId,
-        @Nullable String repositoryUrl) {
+        @OutputCustomType.Parameter("branchName") @Nullable String branchName,
+        @OutputCustomType.Parameter("commitId") @Nullable String commitId,
+        @OutputCustomType.Parameter("eventType") @Nullable String eventType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
+        @OutputCustomType.Parameter("pullRequestId") @Nullable String pullRequestId,
+        @OutputCustomType.Parameter("repositoryUrl") @Nullable String repositoryUrl) {
         this.branchName = branchName;
         this.commitId = commitId;
         this.eventType = eventType;
@@ -147,37 +147,37 @@ public final class SourceTriggerDescriptorResponse {
     	      this.repositoryUrl = defaults.repositoryUrl;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setCommitId(@Nullable String commitId) {
+        public Builder commitId(@Nullable String commitId) {
             this.commitId = commitId;
             return this;
         }
 
-        public Builder setEventType(@Nullable String eventType) {
+        public Builder eventType(@Nullable String eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setPullRequestId(@Nullable String pullRequestId) {
+        public Builder pullRequestId(@Nullable String pullRequestId) {
             this.pullRequestId = pullRequestId;
             return this;
         }
 
-        public Builder setRepositoryUrl(@Nullable String repositoryUrl) {
+        public Builder repositoryUrl(@Nullable String repositoryUrl) {
             this.repositoryUrl = repositoryUrl;
             return this;
         }

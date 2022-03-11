@@ -21,17 +21,17 @@ public final class GetBucketLifecycleRuleCondition {
     private final Integer numNewerVersions;
     private final String withState;
 
-    @OutputCustomType.Constructor({"age","createdBefore","customTimeBefore","daysSinceCustomTime","daysSinceNoncurrentTime","matchesStorageClasses","noncurrentTimeBefore","numNewerVersions","withState"})
+    @OutputCustomType.Constructor
     private GetBucketLifecycleRuleCondition(
-        Integer age,
-        String createdBefore,
-        String customTimeBefore,
-        Integer daysSinceCustomTime,
-        Integer daysSinceNoncurrentTime,
-        List<String> matchesStorageClasses,
-        String noncurrentTimeBefore,
-        Integer numNewerVersions,
-        String withState) {
+        @OutputCustomType.Parameter("age") Integer age,
+        @OutputCustomType.Parameter("createdBefore") String createdBefore,
+        @OutputCustomType.Parameter("customTimeBefore") String customTimeBefore,
+        @OutputCustomType.Parameter("daysSinceCustomTime") Integer daysSinceCustomTime,
+        @OutputCustomType.Parameter("daysSinceNoncurrentTime") Integer daysSinceNoncurrentTime,
+        @OutputCustomType.Parameter("matchesStorageClasses") List<String> matchesStorageClasses,
+        @OutputCustomType.Parameter("noncurrentTimeBefore") String noncurrentTimeBefore,
+        @OutputCustomType.Parameter("numNewerVersions") Integer numNewerVersions,
+        @OutputCustomType.Parameter("withState") String withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;
@@ -107,47 +107,47 @@ public final class GetBucketLifecycleRuleCondition {
     	      this.withState = defaults.withState;
         }
 
-        public Builder setAge(Integer age) {
+        public Builder age(Integer age) {
             this.age = Objects.requireNonNull(age);
             return this;
         }
 
-        public Builder setCreatedBefore(String createdBefore) {
+        public Builder createdBefore(String createdBefore) {
             this.createdBefore = Objects.requireNonNull(createdBefore);
             return this;
         }
 
-        public Builder setCustomTimeBefore(String customTimeBefore) {
+        public Builder customTimeBefore(String customTimeBefore) {
             this.customTimeBefore = Objects.requireNonNull(customTimeBefore);
             return this;
         }
 
-        public Builder setDaysSinceCustomTime(Integer daysSinceCustomTime) {
+        public Builder daysSinceCustomTime(Integer daysSinceCustomTime) {
             this.daysSinceCustomTime = Objects.requireNonNull(daysSinceCustomTime);
             return this;
         }
 
-        public Builder setDaysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
+        public Builder daysSinceNoncurrentTime(Integer daysSinceNoncurrentTime) {
             this.daysSinceNoncurrentTime = Objects.requireNonNull(daysSinceNoncurrentTime);
             return this;
         }
 
-        public Builder setMatchesStorageClasses(List<String> matchesStorageClasses) {
+        public Builder matchesStorageClasses(List<String> matchesStorageClasses) {
             this.matchesStorageClasses = Objects.requireNonNull(matchesStorageClasses);
             return this;
         }
 
-        public Builder setNoncurrentTimeBefore(String noncurrentTimeBefore) {
+        public Builder noncurrentTimeBefore(String noncurrentTimeBefore) {
             this.noncurrentTimeBefore = Objects.requireNonNull(noncurrentTimeBefore);
             return this;
         }
 
-        public Builder setNumNewerVersions(Integer numNewerVersions) {
+        public Builder numNewerVersions(Integer numNewerVersions) {
             this.numNewerVersions = Objects.requireNonNull(numNewerVersions);
             return this;
         }
 
-        public Builder setWithState(String withState) {
+        public Builder withState(String withState) {
             this.withState = Objects.requireNonNull(withState);
             return this;
         }

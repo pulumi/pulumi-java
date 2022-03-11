@@ -26,11 +26,11 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
      */
     private final CertificateAuthorityCertificateAuthorityConfigurationSubject subject;
 
-    @OutputCustomType.Constructor({"keyAlgorithm","signingAlgorithm","subject"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityCertificateAuthorityConfiguration(
-        String keyAlgorithm,
-        String signingAlgorithm,
-        CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
+        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @OutputCustomType.Parameter("signingAlgorithm") String signingAlgorithm,
+        @OutputCustomType.Parameter("subject") CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
         this.keyAlgorithm = keyAlgorithm;
         this.signingAlgorithm = signingAlgorithm;
         this.subject = subject;
@@ -82,17 +82,17 @@ public final class CertificateAuthorityCertificateAuthorityConfiguration {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setKeyAlgorithm(String keyAlgorithm) {
+        public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
-        public Builder setSigningAlgorithm(String signingAlgorithm) {
+        public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
-        public Builder setSubject(CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
+        public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubject subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }

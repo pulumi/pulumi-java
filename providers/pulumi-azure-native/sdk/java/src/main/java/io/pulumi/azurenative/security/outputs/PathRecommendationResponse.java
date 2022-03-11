@@ -53,17 +53,17 @@ public final class PathRecommendationResponse {
     private final @Nullable List<String> userSids;
     private final @Nullable List<UserRecommendationResponse> usernames;
 
-    @OutputCustomType.Constructor({"action","common","configurationStatus","fileType","path","publisherInfo","type","userSids","usernames"})
+    @OutputCustomType.Constructor
     private PathRecommendationResponse(
-        @Nullable String action,
-        @Nullable Boolean common,
-        @Nullable String configurationStatus,
-        @Nullable String fileType,
-        @Nullable String path,
-        @Nullable PublisherInfoResponse publisherInfo,
-        @Nullable String type,
-        @Nullable List<String> userSids,
-        @Nullable List<UserRecommendationResponse> usernames) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("common") @Nullable Boolean common,
+        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("publisherInfo") @Nullable PublisherInfoResponse publisherInfo,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userSids") @Nullable List<String> userSids,
+        @OutputCustomType.Parameter("usernames") @Nullable List<UserRecommendationResponse> usernames) {
         this.action = action;
         this.common = common;
         this.configurationStatus = configurationStatus;
@@ -167,47 +167,47 @@ public final class PathRecommendationResponse {
     	      this.usernames = defaults.usernames;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setCommon(@Nullable Boolean common) {
+        public Builder common(@Nullable Boolean common) {
             this.common = common;
             return this;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setFileType(@Nullable String fileType) {
+        public Builder fileType(@Nullable String fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPublisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
+        public Builder publisherInfo(@Nullable PublisherInfoResponse publisherInfo) {
             this.publisherInfo = publisherInfo;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserSids(@Nullable List<String> userSids) {
+        public Builder userSids(@Nullable List<String> userSids) {
             this.userSids = userSids;
             return this;
         }
 
-        public Builder setUsernames(@Nullable List<UserRecommendationResponse> usernames) {
+        public Builder usernames(@Nullable List<UserRecommendationResponse> usernames) {
             this.usernames = usernames;
             return this;
         }

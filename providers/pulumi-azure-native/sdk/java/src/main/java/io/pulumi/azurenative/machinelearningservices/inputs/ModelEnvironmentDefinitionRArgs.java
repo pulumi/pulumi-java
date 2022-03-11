@@ -175,82 +175,82 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setBioConductorPackages(@Nullable Input<List<String>> bioConductorPackages) {
+        public Builder bioConductorPackages(@Nullable Input<List<String>> bioConductorPackages) {
             this.bioConductorPackages = bioConductorPackages;
             return this;
         }
 
-        public Builder setBioConductorPackages(@Nullable List<String> bioConductorPackages) {
+        public Builder bioConductorPackages(@Nullable List<String> bioConductorPackages) {
             this.bioConductorPackages = Input.ofNullable(bioConductorPackages);
             return this;
         }
 
-        public Builder setCranPackages(@Nullable Input<List<RCranPackageArgs>> cranPackages) {
+        public Builder cranPackages(@Nullable Input<List<RCranPackageArgs>> cranPackages) {
             this.cranPackages = cranPackages;
             return this;
         }
 
-        public Builder setCranPackages(@Nullable List<RCranPackageArgs> cranPackages) {
+        public Builder cranPackages(@Nullable List<RCranPackageArgs> cranPackages) {
             this.cranPackages = Input.ofNullable(cranPackages);
             return this;
         }
 
-        public Builder setCustomUrlPackages(@Nullable Input<List<String>> customUrlPackages) {
+        public Builder customUrlPackages(@Nullable Input<List<String>> customUrlPackages) {
             this.customUrlPackages = customUrlPackages;
             return this;
         }
 
-        public Builder setCustomUrlPackages(@Nullable List<String> customUrlPackages) {
+        public Builder customUrlPackages(@Nullable List<String> customUrlPackages) {
             this.customUrlPackages = Input.ofNullable(customUrlPackages);
             return this;
         }
 
-        public Builder setGitHubPackages(@Nullable Input<List<RGitHubPackageArgs>> gitHubPackages) {
+        public Builder gitHubPackages(@Nullable Input<List<RGitHubPackageArgs>> gitHubPackages) {
             this.gitHubPackages = gitHubPackages;
             return this;
         }
 
-        public Builder setGitHubPackages(@Nullable List<RGitHubPackageArgs> gitHubPackages) {
+        public Builder gitHubPackages(@Nullable List<RGitHubPackageArgs> gitHubPackages) {
             this.gitHubPackages = Input.ofNullable(gitHubPackages);
             return this;
         }
 
-        public Builder setRVersion(@Nullable Input<String> rVersion) {
+        public Builder rVersion(@Nullable Input<String> rVersion) {
             this.rVersion = rVersion;
             return this;
         }
 
-        public Builder setRVersion(@Nullable String rVersion) {
+        public Builder rVersion(@Nullable String rVersion) {
             this.rVersion = Input.ofNullable(rVersion);
             return this;
         }
 
-        public Builder setRscriptPath(@Nullable Input<String> rscriptPath) {
+        public Builder rscriptPath(@Nullable Input<String> rscriptPath) {
             this.rscriptPath = rscriptPath;
             return this;
         }
 
-        public Builder setRscriptPath(@Nullable String rscriptPath) {
+        public Builder rscriptPath(@Nullable String rscriptPath) {
             this.rscriptPath = Input.ofNullable(rscriptPath);
             return this;
         }
 
-        public Builder setSnapshotDate(@Nullable Input<String> snapshotDate) {
+        public Builder snapshotDate(@Nullable Input<String> snapshotDate) {
             this.snapshotDate = snapshotDate;
             return this;
         }
 
-        public Builder setSnapshotDate(@Nullable String snapshotDate) {
+        public Builder snapshotDate(@Nullable String snapshotDate) {
             this.snapshotDate = Input.ofNullable(snapshotDate);
             return this;
         }
 
-        public Builder setUserManaged(@Nullable Input<Boolean> userManaged) {
+        public Builder userManaged(@Nullable Input<Boolean> userManaged) {
             this.userManaged = userManaged;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable Boolean userManaged) {
+        public Builder userManaged(@Nullable Boolean userManaged) {
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }

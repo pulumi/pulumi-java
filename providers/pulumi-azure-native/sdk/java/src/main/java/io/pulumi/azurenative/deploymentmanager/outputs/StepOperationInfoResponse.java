@@ -43,14 +43,14 @@ public final class StepOperationInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"correlationId","deploymentName","endTime","error","lastUpdatedTime","startTime"})
+    @OutputCustomType.Constructor
     private StepOperationInfoResponse(
-        String correlationId,
-        String deploymentName,
-        String endTime,
-        @Nullable CloudErrorBodyResponse error,
-        String lastUpdatedTime,
-        String startTime) {
+        @OutputCustomType.Parameter("correlationId") String correlationId,
+        @OutputCustomType.Parameter("deploymentName") String deploymentName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") @Nullable CloudErrorBodyResponse error,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.correlationId = correlationId;
         this.deploymentName = deploymentName;
         this.endTime = endTime;
@@ -132,32 +132,32 @@ public final class StepOperationInfoResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCorrelationId(String correlationId) {
+        public Builder correlationId(String correlationId) {
             this.correlationId = Objects.requireNonNull(correlationId);
             return this;
         }
 
-        public Builder setDeploymentName(String deploymentName) {
+        public Builder deploymentName(String deploymentName) {
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(@Nullable CloudErrorBodyResponse error) {
+        public Builder error(@Nullable CloudErrorBodyResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

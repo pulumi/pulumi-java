@@ -55,16 +55,16 @@ public final class OnlineEndpointResponse {
      */
     private final @Nullable Map<String,Integer> traffic;
 
-    @OutputCustomType.Constructor({"authMode","description","properties","provisioningState","scoringUri","swaggerUri","target","traffic"})
+    @OutputCustomType.Constructor
     private OnlineEndpointResponse(
-        String authMode,
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        String provisioningState,
-        String scoringUri,
-        String swaggerUri,
-        @Nullable String target,
-        @Nullable Map<String,Integer> traffic) {
+        @OutputCustomType.Parameter("authMode") String authMode,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scoringUri") String scoringUri,
+        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("traffic") @Nullable Map<String,Integer> traffic) {
         this.authMode = authMode;
         this.description = description;
         this.properties = properties;
@@ -167,42 +167,42 @@ public final class OnlineEndpointResponse {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder setAuthMode(String authMode) {
+        public Builder authMode(String authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScoringUri(String scoringUri) {
+        public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
 
-        public Builder setSwaggerUri(String swaggerUri) {
+        public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTraffic(@Nullable Map<String,Integer> traffic) {
+        public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = traffic;
             return this;
         }

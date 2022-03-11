@@ -103,42 +103,42 @@ public final class VaultLockConfigurationArgs extends io.pulumi.resources.Resour
     	      this.minRetentionDays = defaults.minRetentionDays;
         }
 
-        public Builder setBackupVaultName(Input<String> backupVaultName) {
+        public Builder backupVaultName(Input<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
 
-        public Builder setBackupVaultName(String backupVaultName) {
+        public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Input.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
 
-        public Builder setChangeableForDays(@Nullable Input<Integer> changeableForDays) {
+        public Builder changeableForDays(@Nullable Input<Integer> changeableForDays) {
             this.changeableForDays = changeableForDays;
             return this;
         }
 
-        public Builder setChangeableForDays(@Nullable Integer changeableForDays) {
+        public Builder changeableForDays(@Nullable Integer changeableForDays) {
             this.changeableForDays = Input.ofNullable(changeableForDays);
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Input<Integer> maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Input<Integer> maxRetentionDays) {
             this.maxRetentionDays = maxRetentionDays;
             return this;
         }
 
-        public Builder setMaxRetentionDays(@Nullable Integer maxRetentionDays) {
+        public Builder maxRetentionDays(@Nullable Integer maxRetentionDays) {
             this.maxRetentionDays = Input.ofNullable(maxRetentionDays);
             return this;
         }
 
-        public Builder setMinRetentionDays(@Nullable Input<Integer> minRetentionDays) {
+        public Builder minRetentionDays(@Nullable Input<Integer> minRetentionDays) {
             this.minRetentionDays = minRetentionDays;
             return this;
         }
 
-        public Builder setMinRetentionDays(@Nullable Integer minRetentionDays) {
+        public Builder minRetentionDays(@Nullable Integer minRetentionDays) {
             this.minRetentionDays = Input.ofNullable(minRetentionDays);
             return this;
         }

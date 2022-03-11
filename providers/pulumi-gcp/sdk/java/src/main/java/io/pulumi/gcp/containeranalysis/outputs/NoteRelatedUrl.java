@@ -22,10 +22,10 @@ public final class NoteRelatedUrl {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"label","url"})
+    @OutputCustomType.Constructor
     private NoteRelatedUrl(
-        @Nullable String label,
-        String url) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("url") String url) {
         this.label = label;
         this.url = url;
     }
@@ -67,12 +67,12 @@ public final class NoteRelatedUrl {
     	      this.url = defaults.url;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

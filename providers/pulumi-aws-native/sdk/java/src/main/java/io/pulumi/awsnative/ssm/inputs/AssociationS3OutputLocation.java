@@ -74,17 +74,17 @@ public final class AssociationS3OutputLocation extends io.pulumi.resources.Invok
     	      this.outputS3Region = defaults.outputS3Region;
         }
 
-        public Builder setOutputS3BucketName(@Nullable String outputS3BucketName) {
+        public Builder outputS3BucketName(@Nullable String outputS3BucketName) {
             this.outputS3BucketName = outputS3BucketName;
             return this;
         }
 
-        public Builder setOutputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
+        public Builder outputS3KeyPrefix(@Nullable String outputS3KeyPrefix) {
             this.outputS3KeyPrefix = outputS3KeyPrefix;
             return this;
         }
 
-        public Builder setOutputS3Region(@Nullable String outputS3Region) {
+        public Builder outputS3Region(@Nullable String outputS3Region) {
             this.outputS3Region = outputS3Region;
             return this;
         }

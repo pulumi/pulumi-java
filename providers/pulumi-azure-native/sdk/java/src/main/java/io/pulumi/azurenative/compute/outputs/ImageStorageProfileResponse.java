@@ -30,11 +30,11 @@ public final class ImageStorageProfileResponse {
      */
     private final @Nullable Boolean zoneResilient;
 
-    @OutputCustomType.Constructor({"dataDisks","osDisk","zoneResilient"})
+    @OutputCustomType.Constructor
     private ImageStorageProfileResponse(
-        @Nullable List<ImageDataDiskResponse> dataDisks,
-        @Nullable ImageOSDiskResponse osDisk,
-        @Nullable Boolean zoneResilient) {
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<ImageDataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("osDisk") @Nullable ImageOSDiskResponse osDisk,
+        @OutputCustomType.Parameter("zoneResilient") @Nullable Boolean zoneResilient) {
         this.dataDisks = dataDisks;
         this.osDisk = osDisk;
         this.zoneResilient = zoneResilient;
@@ -86,17 +86,17 @@ public final class ImageStorageProfileResponse {
     	      this.zoneResilient = defaults.zoneResilient;
         }
 
-        public Builder setDataDisks(@Nullable List<ImageDataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<ImageDataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setOsDisk(@Nullable ImageOSDiskResponse osDisk) {
+        public Builder osDisk(@Nullable ImageOSDiskResponse osDisk) {
             this.osDisk = osDisk;
             return this;
         }
 
-        public Builder setZoneResilient(@Nullable Boolean zoneResilient) {
+        public Builder zoneResilient(@Nullable Boolean zoneResilient) {
             this.zoneResilient = zoneResilient;
             return this;
         }

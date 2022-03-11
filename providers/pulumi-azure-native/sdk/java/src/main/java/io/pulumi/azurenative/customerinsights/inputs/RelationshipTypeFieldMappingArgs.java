@@ -73,22 +73,22 @@ public final class RelationshipTypeFieldMappingArgs extends io.pulumi.resources.
     	      this.relatedProfileKeyProperty = defaults.relatedProfileKeyProperty;
         }
 
-        public Builder setProfileFieldName(Input<String> profileFieldName) {
+        public Builder profileFieldName(Input<String> profileFieldName) {
             this.profileFieldName = Objects.requireNonNull(profileFieldName);
             return this;
         }
 
-        public Builder setProfileFieldName(String profileFieldName) {
+        public Builder profileFieldName(String profileFieldName) {
             this.profileFieldName = Input.of(Objects.requireNonNull(profileFieldName));
             return this;
         }
 
-        public Builder setRelatedProfileKeyProperty(Input<String> relatedProfileKeyProperty) {
+        public Builder relatedProfileKeyProperty(Input<String> relatedProfileKeyProperty) {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }
 
-        public Builder setRelatedProfileKeyProperty(String relatedProfileKeyProperty) {
+        public Builder relatedProfileKeyProperty(String relatedProfileKeyProperty) {
             this.relatedProfileKeyProperty = Input.of(Objects.requireNonNull(relatedProfileKeyProperty));
             return this;
         }

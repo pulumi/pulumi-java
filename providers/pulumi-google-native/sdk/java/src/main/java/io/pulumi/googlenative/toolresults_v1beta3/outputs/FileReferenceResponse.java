@@ -15,8 +15,8 @@ public final class FileReferenceResponse {
      */
     private final String fileUri;
 
-    @OutputCustomType.Constructor({"fileUri"})
-    private FileReferenceResponse(String fileUri) {
+    @OutputCustomType.Constructor
+    private FileReferenceResponse(@OutputCustomType.Parameter("fileUri") String fileUri) {
         this.fileUri = fileUri;
     }
 
@@ -48,7 +48,7 @@ public final class FileReferenceResponse {
     	      this.fileUri = defaults.fileUri;
         }
 
-        public Builder setFileUri(String fileUri) {
+        public Builder fileUri(String fileUri) {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }

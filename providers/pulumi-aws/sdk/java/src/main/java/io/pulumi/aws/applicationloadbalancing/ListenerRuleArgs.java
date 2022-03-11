@@ -123,52 +123,52 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActions(Input<List<ListenerRuleActionArgs>> actions) {
+        public Builder actions(Input<List<ListenerRuleActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<ListenerRuleActionArgs> actions) {
+        public Builder actions(List<ListenerRuleActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setConditions(Input<List<ListenerRuleConditionArgs>> conditions) {
+        public Builder conditions(Input<List<ListenerRuleConditionArgs>> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setConditions(List<ListenerRuleConditionArgs> conditions) {
+        public Builder conditions(List<ListenerRuleConditionArgs> conditions) {
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
 
-        public Builder setListenerArn(Input<String> listenerArn) {
+        public Builder listenerArn(Input<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
 
-        public Builder setListenerArn(String listenerArn) {
+        public Builder listenerArn(String listenerArn) {
             this.listenerArn = Input.of(Objects.requireNonNull(listenerArn));
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -86,32 +86,32 @@ public final class AnalyticsApplicationCloudwatchLoggingOptionsArgs extends io.p
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLogStreamArn(Input<String> logStreamArn) {
+        public Builder logStreamArn(Input<String> logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
 
-        public Builder setLogStreamArn(String logStreamArn) {
+        public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Input.of(Objects.requireNonNull(logStreamArn));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

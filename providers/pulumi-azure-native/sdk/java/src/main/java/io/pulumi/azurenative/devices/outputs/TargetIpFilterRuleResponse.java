@@ -32,12 +32,12 @@ public final class TargetIpFilterRuleResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"action","filterName","ipMask","target"})
+    @OutputCustomType.Constructor
     private TargetIpFilterRuleResponse(
-        String action,
-        String filterName,
-        String ipMask,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("filterName") String filterName,
+        @OutputCustomType.Parameter("ipMask") String ipMask,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.action = action;
         this.filterName = filterName;
         this.ipMask = ipMask;
@@ -99,22 +99,22 @@ public final class TargetIpFilterRuleResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setFilterName(String filterName) {
+        public Builder filterName(String filterName) {
             this.filterName = Objects.requireNonNull(filterName);
             return this;
         }
 
-        public Builder setIpMask(String ipMask) {
+        public Builder ipMask(String ipMask) {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

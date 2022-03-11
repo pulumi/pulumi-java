@@ -32,11 +32,11 @@ public final class ServiceTraffic {
      */
     private final @Nullable String revisionName;
 
-    @OutputCustomType.Constructor({"latestRevision","percent","revisionName"})
+    @OutputCustomType.Constructor
     private ServiceTraffic(
-        @Nullable Boolean latestRevision,
-        Integer percent,
-        @Nullable String revisionName) {
+        @OutputCustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revisionName") @Nullable String revisionName) {
         this.latestRevision = latestRevision;
         this.percent = percent;
         this.revisionName = revisionName;
@@ -91,17 +91,17 @@ public final class ServiceTraffic {
     	      this.revisionName = defaults.revisionName;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
         }

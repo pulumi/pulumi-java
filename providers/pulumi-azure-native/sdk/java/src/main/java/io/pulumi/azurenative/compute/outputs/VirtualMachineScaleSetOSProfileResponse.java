@@ -51,15 +51,15 @@ public final class VirtualMachineScaleSetOSProfileResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor({"adminPassword","adminUsername","computerNamePrefix","customData","linuxConfiguration","secrets","windowsConfiguration"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetOSProfileResponse(
-        @Nullable String adminPassword,
-        @Nullable String adminUsername,
-        @Nullable String computerNamePrefix,
-        @Nullable String customData,
-        @Nullable LinuxConfigurationResponse linuxConfiguration,
-        @Nullable List<VaultSecretGroupResponse> secrets,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("computerNamePrefix") @Nullable String computerNamePrefix,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("linuxConfiguration") @Nullable LinuxConfigurationResponse linuxConfiguration,
+        @OutputCustomType.Parameter("secrets") @Nullable List<VaultSecretGroupResponse> secrets,
+        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.computerNamePrefix = computerNamePrefix;
@@ -151,37 +151,37 @@ public final class VirtualMachineScaleSetOSProfileResponse {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setComputerNamePrefix(@Nullable String computerNamePrefix) {
+        public Builder computerNamePrefix(@Nullable String computerNamePrefix) {
             this.computerNamePrefix = computerNamePrefix;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<VaultSecretGroupResponse> secrets) {
+        public Builder secrets(@Nullable List<VaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }

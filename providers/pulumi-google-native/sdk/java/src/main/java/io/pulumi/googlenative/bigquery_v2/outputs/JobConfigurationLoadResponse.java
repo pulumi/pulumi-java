@@ -162,36 +162,36 @@ public final class JobConfigurationLoadResponse {
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"allowJaggedRows","allowQuotedNewlines","autodetect","clustering","createDisposition","decimalTargetTypes","destinationEncryptionConfiguration","destinationTable","destinationTableProperties","encoding","fieldDelimiter","hivePartitioningOptions","ignoreUnknownValues","jsonExtension","maxBadRecords","nullMarker","parquetOptions","projectionFields","quote","rangePartitioning","schema","schemaUpdateOptions","skipLeadingRows","sourceFormat","sourceUris","timePartitioning","useAvroLogicalTypes","writeDisposition"})
+    @OutputCustomType.Constructor
     private JobConfigurationLoadResponse(
-        Boolean allowJaggedRows,
-        Boolean allowQuotedNewlines,
-        Boolean autodetect,
-        ClusteringResponse clustering,
-        String createDisposition,
-        List<String> decimalTargetTypes,
-        EncryptionConfigurationResponse destinationEncryptionConfiguration,
-        TableReferenceResponse destinationTable,
-        DestinationTablePropertiesResponse destinationTableProperties,
-        String encoding,
-        String fieldDelimiter,
-        HivePartitioningOptionsResponse hivePartitioningOptions,
-        Boolean ignoreUnknownValues,
-        String jsonExtension,
-        Integer maxBadRecords,
-        String nullMarker,
-        ParquetOptionsResponse parquetOptions,
-        List<String> projectionFields,
-        String quote,
-        RangePartitioningResponse rangePartitioning,
-        TableSchemaResponse schema,
-        List<String> schemaUpdateOptions,
-        Integer skipLeadingRows,
-        String sourceFormat,
-        List<String> sourceUris,
-        TimePartitioningResponse timePartitioning,
-        Boolean useAvroLogicalTypes,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
+        @OutputCustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
+        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
+        @OutputCustomType.Parameter("clustering") ClusteringResponse clustering,
+        @OutputCustomType.Parameter("createDisposition") String createDisposition,
+        @OutputCustomType.Parameter("decimalTargetTypes") List<String> decimalTargetTypes,
+        @OutputCustomType.Parameter("destinationEncryptionConfiguration") EncryptionConfigurationResponse destinationEncryptionConfiguration,
+        @OutputCustomType.Parameter("destinationTable") TableReferenceResponse destinationTable,
+        @OutputCustomType.Parameter("destinationTableProperties") DestinationTablePropertiesResponse destinationTableProperties,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @OutputCustomType.Parameter("hivePartitioningOptions") HivePartitioningOptionsResponse hivePartitioningOptions,
+        @OutputCustomType.Parameter("ignoreUnknownValues") Boolean ignoreUnknownValues,
+        @OutputCustomType.Parameter("jsonExtension") String jsonExtension,
+        @OutputCustomType.Parameter("maxBadRecords") Integer maxBadRecords,
+        @OutputCustomType.Parameter("nullMarker") String nullMarker,
+        @OutputCustomType.Parameter("parquetOptions") ParquetOptionsResponse parquetOptions,
+        @OutputCustomType.Parameter("projectionFields") List<String> projectionFields,
+        @OutputCustomType.Parameter("quote") String quote,
+        @OutputCustomType.Parameter("rangePartitioning") RangePartitioningResponse rangePartitioning,
+        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
+        @OutputCustomType.Parameter("schemaUpdateOptions") List<String> schemaUpdateOptions,
+        @OutputCustomType.Parameter("skipLeadingRows") Integer skipLeadingRows,
+        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
+        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris,
+        @OutputCustomType.Parameter("timePartitioning") TimePartitioningResponse timePartitioning,
+        @OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.autodetect = autodetect;
@@ -493,142 +493,142 @@ public final class JobConfigurationLoadResponse {
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setAllowJaggedRows(Boolean allowJaggedRows) {
+        public Builder allowJaggedRows(Boolean allowJaggedRows) {
             this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(Boolean allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
             return this;
         }
 
-        public Builder setAutodetect(Boolean autodetect) {
+        public Builder autodetect(Boolean autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
 
-        public Builder setClustering(ClusteringResponse clustering) {
+        public Builder clustering(ClusteringResponse clustering) {
             this.clustering = Objects.requireNonNull(clustering);
             return this;
         }
 
-        public Builder setCreateDisposition(String createDisposition) {
+        public Builder createDisposition(String createDisposition) {
             this.createDisposition = Objects.requireNonNull(createDisposition);
             return this;
         }
 
-        public Builder setDecimalTargetTypes(List<String> decimalTargetTypes) {
+        public Builder decimalTargetTypes(List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Objects.requireNonNull(decimalTargetTypes);
             return this;
         }
 
-        public Builder setDestinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
+        public Builder destinationEncryptionConfiguration(EncryptionConfigurationResponse destinationEncryptionConfiguration) {
             this.destinationEncryptionConfiguration = Objects.requireNonNull(destinationEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDestinationTable(TableReferenceResponse destinationTable) {
+        public Builder destinationTable(TableReferenceResponse destinationTable) {
             this.destinationTable = Objects.requireNonNull(destinationTable);
             return this;
         }
 
-        public Builder setDestinationTableProperties(DestinationTablePropertiesResponse destinationTableProperties) {
+        public Builder destinationTableProperties(DestinationTablePropertiesResponse destinationTableProperties) {
             this.destinationTableProperties = Objects.requireNonNull(destinationTableProperties);
             return this;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(String fieldDelimiter) {
+        public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
 
-        public Builder setHivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(HivePartitioningOptionsResponse hivePartitioningOptions) {
             this.hivePartitioningOptions = Objects.requireNonNull(hivePartitioningOptions);
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Objects.requireNonNull(ignoreUnknownValues);
             return this;
         }
 
-        public Builder setJsonExtension(String jsonExtension) {
+        public Builder jsonExtension(String jsonExtension) {
             this.jsonExtension = Objects.requireNonNull(jsonExtension);
             return this;
         }
 
-        public Builder setMaxBadRecords(Integer maxBadRecords) {
+        public Builder maxBadRecords(Integer maxBadRecords) {
             this.maxBadRecords = Objects.requireNonNull(maxBadRecords);
             return this;
         }
 
-        public Builder setNullMarker(String nullMarker) {
+        public Builder nullMarker(String nullMarker) {
             this.nullMarker = Objects.requireNonNull(nullMarker);
             return this;
         }
 
-        public Builder setParquetOptions(ParquetOptionsResponse parquetOptions) {
+        public Builder parquetOptions(ParquetOptionsResponse parquetOptions) {
             this.parquetOptions = Objects.requireNonNull(parquetOptions);
             return this;
         }
 
-        public Builder setProjectionFields(List<String> projectionFields) {
+        public Builder projectionFields(List<String> projectionFields) {
             this.projectionFields = Objects.requireNonNull(projectionFields);
             return this;
         }
 
-        public Builder setQuote(String quote) {
+        public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
 
-        public Builder setRangePartitioning(RangePartitioningResponse rangePartitioning) {
+        public Builder rangePartitioning(RangePartitioningResponse rangePartitioning) {
             this.rangePartitioning = Objects.requireNonNull(rangePartitioning);
             return this;
         }
 
-        public Builder setSchema(TableSchemaResponse schema) {
+        public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setSchemaUpdateOptions(List<String> schemaUpdateOptions) {
+        public Builder schemaUpdateOptions(List<String> schemaUpdateOptions) {
             this.schemaUpdateOptions = Objects.requireNonNull(schemaUpdateOptions);
             return this;
         }
 
-        public Builder setSkipLeadingRows(Integer skipLeadingRows) {
+        public Builder skipLeadingRows(Integer skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }
 
-        public Builder setSourceFormat(String sourceFormat) {
+        public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
 
-        public Builder setSourceUris(List<String> sourceUris) {
+        public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
 
-        public Builder setTimePartitioning(TimePartitioningResponse timePartitioning) {
+        public Builder timePartitioning(TimePartitioningResponse timePartitioning) {
             this.timePartitioning = Objects.requireNonNull(timePartitioning);
             return this;
         }
 
-        public Builder setUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }
 
-        public Builder setWriteDisposition(String writeDisposition) {
+        public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }

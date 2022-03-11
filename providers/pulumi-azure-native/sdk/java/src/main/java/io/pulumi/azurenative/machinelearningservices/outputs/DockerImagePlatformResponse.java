@@ -17,8 +17,8 @@ public final class DockerImagePlatformResponse {
      */
     private final @Nullable String operatingSystemType;
 
-    @OutputCustomType.Constructor({"operatingSystemType"})
-    private DockerImagePlatformResponse(@Nullable String operatingSystemType) {
+    @OutputCustomType.Constructor
+    private DockerImagePlatformResponse(@OutputCustomType.Parameter("operatingSystemType") @Nullable String operatingSystemType) {
         this.operatingSystemType = operatingSystemType;
     }
 
@@ -50,7 +50,7 @@ public final class DockerImagePlatformResponse {
     	      this.operatingSystemType = defaults.operatingSystemType;
         }
 
-        public Builder setOperatingSystemType(@Nullable String operatingSystemType) {
+        public Builder operatingSystemType(@Nullable String operatingSystemType) {
             this.operatingSystemType = operatingSystemType;
             return this;
         }

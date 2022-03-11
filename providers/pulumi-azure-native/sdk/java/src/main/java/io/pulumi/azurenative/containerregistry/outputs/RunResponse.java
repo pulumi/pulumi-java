@@ -151,34 +151,34 @@ public final class RunResponse {
      */
     private final @Nullable String updateTriggerToken;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","createTime","customRegistries","finishTime","id","imageUpdateTrigger","isArchiveEnabled","lastUpdatedTime","logArtifact","name","outputImages","platform","provisioningState","runErrorMessage","runId","runType","sourceRegistryAuth","sourceTrigger","startTime","status","systemData","task","timerTrigger","type","updateTriggerToken"})
+    @OutputCustomType.Constructor
     private RunResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable String createTime,
-        @Nullable List<String> customRegistries,
-        @Nullable String finishTime,
-        String id,
-        @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String lastUpdatedTime,
-        ImageDescriptorResponse logArtifact,
-        String name,
-        @Nullable List<ImageDescriptorResponse> outputImages,
-        @Nullable PlatformPropertiesResponse platform,
-        @Nullable String provisioningState,
-        String runErrorMessage,
-        @Nullable String runId,
-        @Nullable String runType,
-        @Nullable String sourceRegistryAuth,
-        @Nullable SourceTriggerDescriptorResponse sourceTrigger,
-        @Nullable String startTime,
-        @Nullable String status,
-        SystemDataResponse systemData,
-        @Nullable String task,
-        @Nullable TimerTriggerDescriptorResponse timerTrigger,
-        String type,
-        @Nullable String updateTriggerToken) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("customRegistries") @Nullable List<String> customRegistries,
+        @OutputCustomType.Parameter("finishTime") @Nullable String finishTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageUpdateTrigger") @Nullable ImageUpdateTriggerResponse imageUpdateTrigger,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("logArtifact") ImageDescriptorResponse logArtifact,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputImages") @Nullable List<ImageDescriptorResponse> outputImages,
+        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("runErrorMessage") String runErrorMessage,
+        @OutputCustomType.Parameter("runId") @Nullable String runId,
+        @OutputCustomType.Parameter("runType") @Nullable String runType,
+        @OutputCustomType.Parameter("sourceRegistryAuth") @Nullable String sourceRegistryAuth,
+        @OutputCustomType.Parameter("sourceTrigger") @Nullable SourceTriggerDescriptorResponse sourceTrigger,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("task") @Nullable String task,
+        @OutputCustomType.Parameter("timerTrigger") @Nullable TimerTriggerDescriptorResponse timerTrigger,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTriggerToken") @Nullable String updateTriggerToken) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.createTime = createTime;
@@ -460,132 +460,132 @@ public final class RunResponse {
     	      this.updateTriggerToken = defaults.updateTriggerToken;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCustomRegistries(@Nullable List<String> customRegistries) {
+        public Builder customRegistries(@Nullable List<String> customRegistries) {
             this.customRegistries = customRegistries;
             return this;
         }
 
-        public Builder setFinishTime(@Nullable String finishTime) {
+        public Builder finishTime(@Nullable String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageUpdateTrigger(@Nullable ImageUpdateTriggerResponse imageUpdateTrigger) {
+        public Builder imageUpdateTrigger(@Nullable ImageUpdateTriggerResponse imageUpdateTrigger) {
             this.imageUpdateTrigger = imageUpdateTrigger;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLogArtifact(ImageDescriptorResponse logArtifact) {
+        public Builder logArtifact(ImageDescriptorResponse logArtifact) {
             this.logArtifact = Objects.requireNonNull(logArtifact);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputImages(@Nullable List<ImageDescriptorResponse> outputImages) {
+        public Builder outputImages(@Nullable List<ImageDescriptorResponse> outputImages) {
             this.outputImages = outputImages;
             return this;
         }
 
-        public Builder setPlatform(@Nullable PlatformPropertiesResponse platform) {
+        public Builder platform(@Nullable PlatformPropertiesResponse platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRunErrorMessage(String runErrorMessage) {
+        public Builder runErrorMessage(String runErrorMessage) {
             this.runErrorMessage = Objects.requireNonNull(runErrorMessage);
             return this;
         }
 
-        public Builder setRunId(@Nullable String runId) {
+        public Builder runId(@Nullable String runId) {
             this.runId = runId;
             return this;
         }
 
-        public Builder setRunType(@Nullable String runType) {
+        public Builder runType(@Nullable String runType) {
             this.runType = runType;
             return this;
         }
 
-        public Builder setSourceRegistryAuth(@Nullable String sourceRegistryAuth) {
+        public Builder sourceRegistryAuth(@Nullable String sourceRegistryAuth) {
             this.sourceRegistryAuth = sourceRegistryAuth;
             return this;
         }
 
-        public Builder setSourceTrigger(@Nullable SourceTriggerDescriptorResponse sourceTrigger) {
+        public Builder sourceTrigger(@Nullable SourceTriggerDescriptorResponse sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTask(@Nullable String task) {
+        public Builder task(@Nullable String task) {
             this.task = task;
             return this;
         }
 
-        public Builder setTimerTrigger(@Nullable TimerTriggerDescriptorResponse timerTrigger) {
+        public Builder timerTrigger(@Nullable TimerTriggerDescriptorResponse timerTrigger) {
             this.timerTrigger = timerTrigger;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTriggerToken(@Nullable String updateTriggerToken) {
+        public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             this.updateTriggerToken = updateTriggerToken;
             return this;
         }

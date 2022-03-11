@@ -16,8 +16,8 @@ public final class SuppressionAlertsScopeResponse {
      */
     private final List<ScopeElementResponse> allOf;
 
-    @OutputCustomType.Constructor({"allOf"})
-    private SuppressionAlertsScopeResponse(List<ScopeElementResponse> allOf) {
+    @OutputCustomType.Constructor
+    private SuppressionAlertsScopeResponse(@OutputCustomType.Parameter("allOf") List<ScopeElementResponse> allOf) {
         this.allOf = allOf;
     }
 
@@ -49,7 +49,7 @@ public final class SuppressionAlertsScopeResponse {
     	      this.allOf = defaults.allOf;
         }
 
-        public Builder setAllOf(List<ScopeElementResponse> allOf) {
+        public Builder allOf(List<ScopeElementResponse> allOf) {
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }

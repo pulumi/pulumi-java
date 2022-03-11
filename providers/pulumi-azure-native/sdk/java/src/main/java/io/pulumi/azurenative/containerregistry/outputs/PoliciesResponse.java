@@ -29,11 +29,11 @@ public final class PoliciesResponse {
      */
     private final @Nullable TrustPolicyResponse trustPolicy;
 
-    @OutputCustomType.Constructor({"quarantinePolicy","retentionPolicy","trustPolicy"})
+    @OutputCustomType.Constructor
     private PoliciesResponse(
-        @Nullable QuarantinePolicyResponse quarantinePolicy,
-        @Nullable RetentionPolicyResponse retentionPolicy,
-        @Nullable TrustPolicyResponse trustPolicy) {
+        @OutputCustomType.Parameter("quarantinePolicy") @Nullable QuarantinePolicyResponse quarantinePolicy,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("trustPolicy") @Nullable TrustPolicyResponse trustPolicy) {
         this.quarantinePolicy = quarantinePolicy;
         this.retentionPolicy = retentionPolicy;
         this.trustPolicy = trustPolicy;
@@ -85,17 +85,17 @@ public final class PoliciesResponse {
     	      this.trustPolicy = defaults.trustPolicy;
         }
 
-        public Builder setQuarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
+        public Builder quarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
             this.quarantinePolicy = quarantinePolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setTrustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
+        public Builder trustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
             this.trustPolicy = trustPolicy;
             return this;
         }

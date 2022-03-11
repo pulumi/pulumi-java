@@ -25,11 +25,11 @@ public final class DiskAddOn {
      */
     private final @Nullable DiskAddOnStatus status;
 
-    @OutputCustomType.Constructor({"addOnType","autoSnapshotAddOnRequest","status"})
+    @OutputCustomType.Constructor
     private DiskAddOn(
-        String addOnType,
-        @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @Nullable DiskAddOnStatus status) {
+        @OutputCustomType.Parameter("addOnType") String addOnType,
+        @OutputCustomType.Parameter("autoSnapshotAddOnRequest") @Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest,
+        @OutputCustomType.Parameter("status") @Nullable DiskAddOnStatus status) {
         this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;
@@ -77,17 +77,17 @@ public final class DiskAddOn {
     	      this.status = defaults.status;
         }
 
-        public Builder setAddOnType(String addOnType) {
+        public Builder addOnType(String addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable DiskAutoSnapshotAddOn autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
-        public Builder setStatus(@Nullable DiskAddOnStatus status) {
+        public Builder status(@Nullable DiskAddOnStatus status) {
             this.status = status;
             return this;
         }

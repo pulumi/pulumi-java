@@ -22,10 +22,10 @@ public final class NWRuleSetIpRulesResponse {
      */
     private final @Nullable String ipMask;
 
-    @OutputCustomType.Constructor({"action","ipMask"})
+    @OutputCustomType.Constructor
     private NWRuleSetIpRulesResponse(
-        @Nullable String action,
-        @Nullable String ipMask) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("ipMask") @Nullable String ipMask) {
         this.action = action;
         this.ipMask = ipMask;
     }
@@ -67,12 +67,12 @@ public final class NWRuleSetIpRulesResponse {
     	      this.ipMask = defaults.ipMask;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setIpMask(@Nullable String ipMask) {
+        public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = ipMask;
             return this;
         }

@@ -28,11 +28,11 @@ public final class GetRoutingControlResult {
      */
     private final @Nullable RoutingControlStatus status;
 
-    @OutputCustomType.Constructor({"name","routingControlArn","status"})
+    @OutputCustomType.Constructor
     private GetRoutingControlResult(
-        @Nullable String name,
-        @Nullable String routingControlArn,
-        @Nullable RoutingControlStatus status) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("routingControlArn") @Nullable String routingControlArn,
+        @OutputCustomType.Parameter("status") @Nullable RoutingControlStatus status) {
         this.name = name;
         this.routingControlArn = routingControlArn;
         this.status = status;
@@ -84,17 +84,17 @@ public final class GetRoutingControlResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoutingControlArn(@Nullable String routingControlArn) {
+        public Builder routingControlArn(@Nullable String routingControlArn) {
             this.routingControlArn = routingControlArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable RoutingControlStatus status) {
+        public Builder status(@Nullable RoutingControlStatus status) {
             this.status = status;
             return this;
         }

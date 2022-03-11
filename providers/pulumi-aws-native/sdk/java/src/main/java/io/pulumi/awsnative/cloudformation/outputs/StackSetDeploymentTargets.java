@@ -22,10 +22,10 @@ public final class StackSetDeploymentTargets {
      */
     private final @Nullable List<String> organizationalUnitIds;
 
-    @OutputCustomType.Constructor({"accounts","organizationalUnitIds"})
+    @OutputCustomType.Constructor
     private StackSetDeploymentTargets(
-        @Nullable List<String> accounts,
-        @Nullable List<String> organizationalUnitIds) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("organizationalUnitIds") @Nullable List<String> organizationalUnitIds) {
         this.accounts = accounts;
         this.organizationalUnitIds = organizationalUnitIds;
     }
@@ -67,12 +67,12 @@ public final class StackSetDeploymentTargets {
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }

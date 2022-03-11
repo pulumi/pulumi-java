@@ -19,10 +19,10 @@ public final class IntentFollowupIntentInfo {
      */
     private final @Nullable String parentFollowupIntentName;
 
-    @OutputCustomType.Constructor({"followupIntentName","parentFollowupIntentName"})
+    @OutputCustomType.Constructor
     private IntentFollowupIntentInfo(
-        @Nullable String followupIntentName,
-        @Nullable String parentFollowupIntentName) {
+        @OutputCustomType.Parameter("followupIntentName") @Nullable String followupIntentName,
+        @OutputCustomType.Parameter("parentFollowupIntentName") @Nullable String parentFollowupIntentName) {
         this.followupIntentName = followupIntentName;
         this.parentFollowupIntentName = parentFollowupIntentName;
     }
@@ -61,12 +61,12 @@ public final class IntentFollowupIntentInfo {
     	      this.parentFollowupIntentName = defaults.parentFollowupIntentName;
         }
 
-        public Builder setFollowupIntentName(@Nullable String followupIntentName) {
+        public Builder followupIntentName(@Nullable String followupIntentName) {
             this.followupIntentName = followupIntentName;
             return this;
         }
 
-        public Builder setParentFollowupIntentName(@Nullable String parentFollowupIntentName) {
+        public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
             this.parentFollowupIntentName = parentFollowupIntentName;
             return this;
         }

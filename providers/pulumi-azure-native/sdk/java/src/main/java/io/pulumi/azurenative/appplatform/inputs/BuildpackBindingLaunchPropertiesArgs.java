@@ -75,22 +75,22 @@ public final class BuildpackBindingLaunchPropertiesArgs extends io.pulumi.resour
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setSecrets(@Nullable Input<Map<String,String>> secrets) {
+        public Builder secrets(@Nullable Input<Map<String,String>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable Map<String,String> secrets) {
+        public Builder secrets(@Nullable Map<String,String> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }

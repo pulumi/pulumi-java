@@ -87,23 +87,23 @@ public final class SynchronizationDetailsResponse {
      */
     private final Double vCore;
 
-    @OutputCustomType.Constructor({"dataSetId","dataSetType","durationMs","endTime","filesRead","filesWritten","message","name","rowsCopied","rowsRead","sizeRead","sizeWritten","startTime","status","vCore"})
+    @OutputCustomType.Constructor
     private SynchronizationDetailsResponse(
-        String dataSetId,
-        String dataSetType,
-        Integer durationMs,
-        String endTime,
-        Double filesRead,
-        Double filesWritten,
-        String message,
-        String name,
-        Double rowsCopied,
-        Double rowsRead,
-        Double sizeRead,
-        Double sizeWritten,
-        String startTime,
-        String status,
-        Double vCore) {
+        @OutputCustomType.Parameter("dataSetId") String dataSetId,
+        @OutputCustomType.Parameter("dataSetType") String dataSetType,
+        @OutputCustomType.Parameter("durationMs") Integer durationMs,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("filesRead") Double filesRead,
+        @OutputCustomType.Parameter("filesWritten") Double filesWritten,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rowsCopied") Double rowsCopied,
+        @OutputCustomType.Parameter("rowsRead") Double rowsRead,
+        @OutputCustomType.Parameter("sizeRead") Double sizeRead,
+        @OutputCustomType.Parameter("sizeWritten") Double sizeWritten,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("vCore") Double vCore) {
         this.dataSetId = dataSetId;
         this.dataSetType = dataSetType;
         this.durationMs = durationMs;
@@ -275,77 +275,77 @@ public final class SynchronizationDetailsResponse {
     	      this.vCore = defaults.vCore;
         }
 
-        public Builder setDataSetId(String dataSetId) {
+        public Builder dataSetId(String dataSetId) {
             this.dataSetId = Objects.requireNonNull(dataSetId);
             return this;
         }
 
-        public Builder setDataSetType(String dataSetType) {
+        public Builder dataSetType(String dataSetType) {
             this.dataSetType = Objects.requireNonNull(dataSetType);
             return this;
         }
 
-        public Builder setDurationMs(Integer durationMs) {
+        public Builder durationMs(Integer durationMs) {
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setFilesRead(Double filesRead) {
+        public Builder filesRead(Double filesRead) {
             this.filesRead = Objects.requireNonNull(filesRead);
             return this;
         }
 
-        public Builder setFilesWritten(Double filesWritten) {
+        public Builder filesWritten(Double filesWritten) {
             this.filesWritten = Objects.requireNonNull(filesWritten);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRowsCopied(Double rowsCopied) {
+        public Builder rowsCopied(Double rowsCopied) {
             this.rowsCopied = Objects.requireNonNull(rowsCopied);
             return this;
         }
 
-        public Builder setRowsRead(Double rowsRead) {
+        public Builder rowsRead(Double rowsRead) {
             this.rowsRead = Objects.requireNonNull(rowsRead);
             return this;
         }
 
-        public Builder setSizeRead(Double sizeRead) {
+        public Builder sizeRead(Double sizeRead) {
             this.sizeRead = Objects.requireNonNull(sizeRead);
             return this;
         }
 
-        public Builder setSizeWritten(Double sizeWritten) {
+        public Builder sizeWritten(Double sizeWritten) {
             this.sizeWritten = Objects.requireNonNull(sizeWritten);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVCore(Double vCore) {
+        public Builder vCore(Double vCore) {
             this.vCore = Objects.requireNonNull(vCore);
             return this;
         }

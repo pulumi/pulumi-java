@@ -26,11 +26,11 @@ public final class GetLaunchConfigurationMetadataOption {
      */
     private final String httpTokens;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpPutResponseHopLimit","httpTokens"})
+    @OutputCustomType.Constructor
     private GetLaunchConfigurationMetadataOption(
-        String httpEndpoint,
-        Integer httpPutResponseHopLimit,
-        String httpTokens) {
+        @OutputCustomType.Parameter("httpEndpoint") String httpEndpoint,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") String httpTokens) {
         this.httpEndpoint = httpEndpoint;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
         this.httpTokens = httpTokens;
@@ -82,17 +82,17 @@ public final class GetLaunchConfigurationMetadataOption {
     	      this.httpTokens = defaults.httpTokens;
         }
 
-        public Builder setHttpEndpoint(String httpEndpoint) {
+        public Builder httpEndpoint(String httpEndpoint) {
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder setHttpTokens(String httpTokens) {
+        public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
         }

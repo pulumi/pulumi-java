@@ -55,16 +55,16 @@ public final class RestorePointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"consistencyMode","excludeDisks","id","name","provisioningState","sourceMetadata","timeCreated","type"})
+    @OutputCustomType.Constructor
     private RestorePointResponse(
-        String consistencyMode,
-        @Nullable List<ApiEntityReferenceResponse> excludeDisks,
-        String id,
-        String name,
-        String provisioningState,
-        RestorePointSourceMetadataResponse sourceMetadata,
-        @Nullable String timeCreated,
-        String type) {
+        @OutputCustomType.Parameter("consistencyMode") String consistencyMode,
+        @OutputCustomType.Parameter("excludeDisks") @Nullable List<ApiEntityReferenceResponse> excludeDisks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceMetadata") RestorePointSourceMetadataResponse sourceMetadata,
+        @OutputCustomType.Parameter("timeCreated") @Nullable String timeCreated,
+        @OutputCustomType.Parameter("type") String type) {
         this.consistencyMode = consistencyMode;
         this.excludeDisks = excludeDisks;
         this.id = id;
@@ -166,42 +166,42 @@ public final class RestorePointResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setConsistencyMode(String consistencyMode) {
+        public Builder consistencyMode(String consistencyMode) {
             this.consistencyMode = Objects.requireNonNull(consistencyMode);
             return this;
         }
 
-        public Builder setExcludeDisks(@Nullable List<ApiEntityReferenceResponse> excludeDisks) {
+        public Builder excludeDisks(@Nullable List<ApiEntityReferenceResponse> excludeDisks) {
             this.excludeDisks = excludeDisks;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceMetadata(RestorePointSourceMetadataResponse sourceMetadata) {
+        public Builder sourceMetadata(RestorePointSourceMetadataResponse sourceMetadata) {
             this.sourceMetadata = Objects.requireNonNull(sourceMetadata);
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

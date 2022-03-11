@@ -25,11 +25,11 @@ public final class PerNodeExtensionStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"extension","name","state"})
+    @OutputCustomType.Constructor
     private PerNodeExtensionStateResponse(
-        String extension,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("extension") String extension,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.extension = extension;
         this.name = name;
         this.state = state;
@@ -81,17 +81,17 @@ public final class PerNodeExtensionStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setExtension(String extension) {
+        public Builder extension(String extension) {
             this.extension = Objects.requireNonNull(extension);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

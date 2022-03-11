@@ -47,13 +47,13 @@ public final class JobRetryConfig {
      */
     private final @Nullable Integer retryCount;
 
-    @OutputCustomType.Constructor({"maxBackoffDuration","maxDoublings","maxRetryDuration","minBackoffDuration","retryCount"})
+    @OutputCustomType.Constructor
     private JobRetryConfig(
-        @Nullable String maxBackoffDuration,
-        @Nullable Integer maxDoublings,
-        @Nullable String maxRetryDuration,
-        @Nullable String minBackoffDuration,
-        @Nullable Integer retryCount) {
+        @OutputCustomType.Parameter("maxBackoffDuration") @Nullable String maxBackoffDuration,
+        @OutputCustomType.Parameter("maxDoublings") @Nullable Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") @Nullable String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoffDuration") @Nullable String minBackoffDuration,
+        @OutputCustomType.Parameter("retryCount") @Nullable Integer retryCount) {
         this.maxBackoffDuration = maxBackoffDuration;
         this.maxDoublings = maxDoublings;
         this.maxRetryDuration = maxRetryDuration;
@@ -134,27 +134,27 @@ public final class JobRetryConfig {
     	      this.retryCount = defaults.retryCount;
         }
 
-        public Builder setMaxBackoffDuration(@Nullable String maxBackoffDuration) {
+        public Builder maxBackoffDuration(@Nullable String maxBackoffDuration) {
             this.maxBackoffDuration = maxBackoffDuration;
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Integer maxDoublings) {
+        public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable String maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
 
-        public Builder setMinBackoffDuration(@Nullable String minBackoffDuration) {
+        public Builder minBackoffDuration(@Nullable String minBackoffDuration) {
             this.minBackoffDuration = minBackoffDuration;
             return this;
         }
 
-        public Builder setRetryCount(@Nullable Integer retryCount) {
+        public Builder retryCount(@Nullable Integer retryCount) {
             this.retryCount = retryCount;
             return this;
         }

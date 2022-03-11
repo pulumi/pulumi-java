@@ -27,11 +27,11 @@ public final class ImageResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"alpha","resolution","uri"})
+    @OutputCustomType.Constructor
     private ImageResponse(
-        Double alpha,
-        NormalizedCoordinateResponse resolution,
-        String uri) {
+        @OutputCustomType.Parameter("alpha") Double alpha,
+        @OutputCustomType.Parameter("resolution") NormalizedCoordinateResponse resolution,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.alpha = alpha;
         this.resolution = resolution;
         this.uri = uri;
@@ -83,17 +83,17 @@ public final class ImageResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAlpha(Double alpha) {
+        public Builder alpha(Double alpha) {
             this.alpha = Objects.requireNonNull(alpha);
             return this;
         }
 
-        public Builder setResolution(NormalizedCoordinateResponse resolution) {
+        public Builder resolution(NormalizedCoordinateResponse resolution) {
             this.resolution = Objects.requireNonNull(resolution);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

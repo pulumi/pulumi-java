@@ -105,24 +105,24 @@ public final class AmazonS3DatasetResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor({"annotations","bucketName","compression","description","folder","format","key","linkedServiceName","modifiedDatetimeEnd","modifiedDatetimeStart","parameters","prefix","schema","structure","type","version"})
+    @OutputCustomType.Constructor
     private AmazonS3DatasetResponse(
-        @Nullable List<Object> annotations,
-        Object bucketName,
-        @Nullable DatasetCompressionResponse compression,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        @Nullable Object format,
-        @Nullable Object key,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object prefix,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type,
-        @Nullable Object version) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("bucketName") Object bucketName,
+        @OutputCustomType.Parameter("compression") @Nullable DatasetCompressionResponse compression,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("format") @Nullable Object format,
+        @OutputCustomType.Parameter("key") @Nullable Object key,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("prefix") @Nullable Object prefix,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Object version) {
         this.annotations = annotations;
         this.bucketName = bucketName;
         this.compression = compression;
@@ -305,82 +305,82 @@ public final class AmazonS3DatasetResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setBucketName(Object bucketName) {
+        public Builder bucketName(Object bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setCompression(@Nullable DatasetCompressionResponse compression) {
+        public Builder compression(@Nullable DatasetCompressionResponse compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetResponseFolder folder) {
+        public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setFormat(@Nullable Object format) {
+        public Builder format(@Nullable Object format) {
             this.format = format;
             return this;
         }
 
-        public Builder setKey(@Nullable Object key) {
+        public Builder key(@Nullable Object key) {
             this.key = key;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setModifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
-        public Builder setModifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPrefix(@Nullable Object prefix) {
+        public Builder prefix(@Nullable Object prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
         }

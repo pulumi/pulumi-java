@@ -33,12 +33,12 @@ public final class ScalingConfigResponse {
      */
     private final List<LabelSelectorResponse> selectors;
 
-    @OutputCustomType.Constructor({"fleetAutoscalerSpec","name","schedules","selectors"})
+    @OutputCustomType.Constructor
     private ScalingConfigResponse(
-        String fleetAutoscalerSpec,
-        String name,
-        List<ScheduleResponse> schedules,
-        List<LabelSelectorResponse> selectors) {
+        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") List<ScheduleResponse> schedules,
+        @OutputCustomType.Parameter("selectors") List<LabelSelectorResponse> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;
@@ -100,22 +100,22 @@ public final class ScalingConfigResponse {
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder setFleetAutoscalerSpec(String fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedules(List<ScheduleResponse> schedules) {
+        public Builder schedules(List<ScheduleResponse> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setSelectors(List<LabelSelectorResponse> selectors) {
+        public Builder selectors(List<LabelSelectorResponse> selectors) {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }

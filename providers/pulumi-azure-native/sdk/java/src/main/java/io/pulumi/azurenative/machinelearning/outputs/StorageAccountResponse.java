@@ -22,10 +22,10 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"key","name"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String key,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.key = key;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class StorageAccountResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

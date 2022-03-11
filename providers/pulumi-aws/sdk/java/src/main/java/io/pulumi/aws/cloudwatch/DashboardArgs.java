@@ -69,22 +69,22 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     	      this.dashboardName = defaults.dashboardName;
         }
 
-        public Builder setDashboardBody(Input<String> dashboardBody) {
+        public Builder dashboardBody(Input<String> dashboardBody) {
             this.dashboardBody = Objects.requireNonNull(dashboardBody);
             return this;
         }
 
-        public Builder setDashboardBody(String dashboardBody) {
+        public Builder dashboardBody(String dashboardBody) {
             this.dashboardBody = Input.of(Objects.requireNonNull(dashboardBody));
             return this;
         }
 
-        public Builder setDashboardName(Input<String> dashboardName) {
+        public Builder dashboardName(Input<String> dashboardName) {
             this.dashboardName = Objects.requireNonNull(dashboardName);
             return this;
         }
 
-        public Builder setDashboardName(String dashboardName) {
+        public Builder dashboardName(String dashboardName) {
             this.dashboardName = Input.of(Objects.requireNonNull(dashboardName));
             return this;
         }

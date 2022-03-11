@@ -35,12 +35,12 @@ public final class DownwardAPIVolumeFile {
      */
     private final @Nullable ResourceFieldSelector resourceFieldRef;
 
-    @OutputCustomType.Constructor({"fieldRef","mode","path","resourceFieldRef"})
+    @OutputCustomType.Constructor
     private DownwardAPIVolumeFile(
-        @Nullable ObjectFieldSelector fieldRef,
-        @Nullable Integer mode,
-        String path,
-        @Nullable ResourceFieldSelector resourceFieldRef) {
+        @OutputCustomType.Parameter("fieldRef") @Nullable ObjectFieldSelector fieldRef,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("resourceFieldRef") @Nullable ResourceFieldSelector resourceFieldRef) {
         this.fieldRef = fieldRef;
         this.mode = mode;
         this.path = path;
@@ -102,22 +102,22 @@ public final class DownwardAPIVolumeFile {
     	      this.resourceFieldRef = defaults.resourceFieldRef;
         }
 
-        public Builder setFieldRef(@Nullable ObjectFieldSelector fieldRef) {
+        public Builder fieldRef(@Nullable ObjectFieldSelector fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setResourceFieldRef(@Nullable ResourceFieldSelector resourceFieldRef) {
+        public Builder resourceFieldRef(@Nullable ResourceFieldSelector resourceFieldRef) {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }

@@ -37,13 +37,13 @@ public final class AgentDetailsResponse {
      */
     private final String machineId;
 
-    @OutputCustomType.Constructor({"agentId","biosId","disks","fqdn","machineId"})
+    @OutputCustomType.Constructor
     private AgentDetailsResponse(
-        String agentId,
-        String biosId,
-        List<AgentDiskDetailsResponse> disks,
-        String fqdn,
-        String machineId) {
+        @OutputCustomType.Parameter("agentId") String agentId,
+        @OutputCustomType.Parameter("biosId") String biosId,
+        @OutputCustomType.Parameter("disks") List<AgentDiskDetailsResponse> disks,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("machineId") String machineId) {
         this.agentId = agentId;
         this.biosId = biosId;
         this.disks = disks;
@@ -115,27 +115,27 @@ public final class AgentDetailsResponse {
     	      this.machineId = defaults.machineId;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setBiosId(String biosId) {
+        public Builder biosId(String biosId) {
             this.biosId = Objects.requireNonNull(biosId);
             return this;
         }
 
-        public Builder setDisks(List<AgentDiskDetailsResponse> disks) {
+        public Builder disks(List<AgentDiskDetailsResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setMachineId(String machineId) {
+        public Builder machineId(String machineId) {
             this.machineId = Objects.requireNonNull(machineId);
             return this;
         }

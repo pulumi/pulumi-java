@@ -23,11 +23,11 @@ public final class GetBasePathMappingResult {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"id","restApiId","stage"})
+    @OutputCustomType.Constructor
     private GetBasePathMappingResult(
-        @Nullable String id,
-        @Nullable String restApiId,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("restApiId") @Nullable String restApiId,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.id = id;
         this.restApiId = restApiId;
         this.stage = stage;
@@ -75,17 +75,17 @@ public final class GetBasePathMappingResult {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRestApiId(@Nullable String restApiId) {
+        public Builder restApiId(@Nullable String restApiId) {
             this.restApiId = restApiId;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }

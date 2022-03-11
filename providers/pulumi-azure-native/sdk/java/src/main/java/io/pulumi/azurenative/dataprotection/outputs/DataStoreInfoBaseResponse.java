@@ -20,10 +20,10 @@ public final class DataStoreInfoBaseResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"dataStoreType","objectType"})
+    @OutputCustomType.Constructor
     private DataStoreInfoBaseResponse(
-        String dataStoreType,
-        String objectType) {
+        @OutputCustomType.Parameter("dataStoreType") String dataStoreType,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.dataStoreType = dataStoreType;
         this.objectType = objectType;
     }
@@ -65,12 +65,12 @@ public final class DataStoreInfoBaseResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setDataStoreType(String dataStoreType) {
+        public Builder dataStoreType(String dataStoreType) {
             this.dataStoreType = Objects.requireNonNull(dataStoreType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

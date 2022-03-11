@@ -35,13 +35,13 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"ipRange","name","project","region","status"})
+    @OutputCustomType.Constructor
     private PublicAdvertisedPrefixPublicDelegatedPrefixResponse(
-        String ipRange,
-        String name,
-        String project,
-        String region,
-        String status) {
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("status") String status) {
         this.ipRange = ipRange;
         this.name = name;
         this.project = project;
@@ -113,27 +113,27 @@ public final class PublicAdvertisedPrefixPublicDelegatedPrefixResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

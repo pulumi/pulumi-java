@@ -28,11 +28,11 @@ public final class RegionInstanceGroupManagerVersion {
      */
     private final @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize;
 
-    @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerVersion(
-        String instanceTemplate,
-        @Nullable String name,
-        @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetSize") @Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;
@@ -84,17 +84,17 @@ public final class RegionInstanceGroupManagerVersion {
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
+        public Builder targetSize(@Nullable RegionInstanceGroupManagerVersionTargetSize targetSize) {
             this.targetSize = targetSize;
             return this;
         }

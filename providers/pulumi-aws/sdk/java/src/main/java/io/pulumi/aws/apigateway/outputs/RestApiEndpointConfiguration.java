@@ -22,10 +22,10 @@ public final class RestApiEndpointConfiguration {
      */
     private final @Nullable List<String> vpcEndpointIds;
 
-    @OutputCustomType.Constructor({"types","vpcEndpointIds"})
+    @OutputCustomType.Constructor
     private RestApiEndpointConfiguration(
-        String types,
-        @Nullable List<String> vpcEndpointIds) {
+        @OutputCustomType.Parameter("types") String types,
+        @OutputCustomType.Parameter("vpcEndpointIds") @Nullable List<String> vpcEndpointIds) {
         this.types = types;
         this.vpcEndpointIds = vpcEndpointIds;
     }
@@ -67,12 +67,12 @@ public final class RestApiEndpointConfiguration {
     	      this.vpcEndpointIds = defaults.vpcEndpointIds;
         }
 
-        public Builder setTypes(String types) {
+        public Builder types(String types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }
 
-        public Builder setVpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
+        public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
             this.vpcEndpointIds = vpcEndpointIds;
             return this;
         }

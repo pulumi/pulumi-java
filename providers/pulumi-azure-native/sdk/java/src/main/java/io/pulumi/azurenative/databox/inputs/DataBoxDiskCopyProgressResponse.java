@@ -106,22 +106,22 @@ public final class DataBoxDiskCopyProgressResponse extends io.pulumi.resources.I
     	      this.status = defaults.status;
         }
 
-        public Builder setBytesCopied(Double bytesCopied) {
+        public Builder bytesCopied(Double bytesCopied) {
             this.bytesCopied = Objects.requireNonNull(bytesCopied);
             return this;
         }
 
-        public Builder setPercentComplete(Integer percentComplete) {
+        public Builder percentComplete(Integer percentComplete) {
             this.percentComplete = Objects.requireNonNull(percentComplete);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

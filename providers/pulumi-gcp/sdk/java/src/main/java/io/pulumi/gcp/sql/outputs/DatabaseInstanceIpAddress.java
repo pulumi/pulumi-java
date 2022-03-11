@@ -15,11 +15,11 @@ public final class DatabaseInstanceIpAddress {
     private final @Nullable String timeToRetire;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"ipAddress","timeToRetire","type"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceIpAddress(
-        @Nullable String ipAddress,
-        @Nullable String timeToRetire,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("timeToRetire") @Nullable String timeToRetire,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;
@@ -59,17 +59,17 @@ public final class DatabaseInstanceIpAddress {
     	      this.type = defaults.type;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setTimeToRetire(@Nullable String timeToRetire) {
+        public Builder timeToRetire(@Nullable String timeToRetire) {
             this.timeToRetire = timeToRetire;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

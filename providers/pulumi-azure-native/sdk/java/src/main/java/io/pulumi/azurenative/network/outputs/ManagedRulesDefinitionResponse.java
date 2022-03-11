@@ -23,10 +23,10 @@ public final class ManagedRulesDefinitionResponse {
      */
     private final List<ManagedRuleSetResponse> managedRuleSets;
 
-    @OutputCustomType.Constructor({"exclusions","managedRuleSets"})
+    @OutputCustomType.Constructor
     private ManagedRulesDefinitionResponse(
-        @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
-        List<ManagedRuleSetResponse> managedRuleSets) {
+        @OutputCustomType.Parameter("exclusions") @Nullable List<OwaspCrsExclusionEntryResponse> exclusions,
+        @OutputCustomType.Parameter("managedRuleSets") List<ManagedRuleSetResponse> managedRuleSets) {
         this.exclusions = exclusions;
         this.managedRuleSets = managedRuleSets;
     }
@@ -68,12 +68,12 @@ public final class ManagedRulesDefinitionResponse {
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setExclusions(@Nullable List<OwaspCrsExclusionEntryResponse> exclusions) {
+        public Builder exclusions(@Nullable List<OwaspCrsExclusionEntryResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setManagedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
+        public Builder managedRuleSets(List<ManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }

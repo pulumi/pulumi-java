@@ -24,10 +24,10 @@ public final class InstanceFleetInstanceTypeConfigConfiguration {
      */
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor({"classification","properties"})
+    @OutputCustomType.Constructor
     private InstanceFleetInstanceTypeConfigConfiguration(
-        @Nullable String classification,
-        @Nullable Map<String,Object> properties) {
+        @OutputCustomType.Parameter("classification") @Nullable String classification,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.classification = classification;
         this.properties = properties;
     }
@@ -69,12 +69,12 @@ public final class InstanceFleetInstanceTypeConfigConfiguration {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,Object> properties) {
+        public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
         }

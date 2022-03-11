@@ -57,16 +57,16 @@ public final class CustomResourceDefinitionVersion {
      */
     private final @Nullable CustomResourceSubresources subresources;
 
-    @OutputCustomType.Constructor({"additionalPrinterColumns","deprecated","deprecationWarning","name","schema","served","storage","subresources"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionVersion(
-        @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @Nullable Boolean deprecated,
-        @Nullable String deprecationWarning,
-        String name,
-        @Nullable CustomResourceValidation schema,
-        Boolean served,
-        Boolean storage,
-        @Nullable CustomResourceSubresources subresources) {
+        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @OutputCustomType.Parameter("deprecated") @Nullable Boolean deprecated,
+        @OutputCustomType.Parameter("deprecationWarning") @Nullable String deprecationWarning,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schema") @Nullable CustomResourceValidation schema,
+        @OutputCustomType.Parameter("served") Boolean served,
+        @OutputCustomType.Parameter("storage") Boolean storage,
+        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.deprecated = deprecated;
         this.deprecationWarning = deprecationWarning;
@@ -168,42 +168,42 @@ public final class CustomResourceDefinitionVersion {
     	      this.subresources = defaults.subresources;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
-        public Builder setDeprecated(@Nullable Boolean deprecated) {
+        public Builder deprecated(@Nullable Boolean deprecated) {
             this.deprecated = deprecated;
             return this;
         }
 
-        public Builder setDeprecationWarning(@Nullable String deprecationWarning) {
+        public Builder deprecationWarning(@Nullable String deprecationWarning) {
             this.deprecationWarning = deprecationWarning;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchema(@Nullable CustomResourceValidation schema) {
+        public Builder schema(@Nullable CustomResourceValidation schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setServed(Boolean served) {
+        public Builder served(Boolean served) {
             this.served = Objects.requireNonNull(served);
             return this;
         }
 
-        public Builder setStorage(Boolean storage) {
+        public Builder storage(Boolean storage) {
             this.storage = Objects.requireNonNull(storage);
             return this;
         }
 
-        public Builder setSubresources(@Nullable CustomResourceSubresources subresources) {
+        public Builder subresources(@Nullable CustomResourceSubresources subresources) {
             this.subresources = subresources;
             return this;
         }

@@ -151,72 +151,72 @@ public final class VirtualHubBgpConnectionArgs extends io.pulumi.resources.Resou
     	      this.virtualHubName = defaults.virtualHubName;
         }
 
-        public Builder setConnectionName(@Nullable Input<String> connectionName) {
+        public Builder connectionName(@Nullable Input<String> connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = Input.ofNullable(connectionName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Input<Double> peerAsn) {
+        public Builder peerAsn(@Nullable Input<Double> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Double peerAsn) {
+        public Builder peerAsn(@Nullable Double peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder setPeerIp(@Nullable Input<String> peerIp) {
+        public Builder peerIp(@Nullable Input<String> peerIp) {
             this.peerIp = peerIp;
             return this;
         }
 
-        public Builder setPeerIp(@Nullable String peerIp) {
+        public Builder peerIp(@Nullable String peerIp) {
             this.peerIp = Input.ofNullable(peerIp);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setVirtualHubName(Input<String> virtualHubName) {
+        public Builder virtualHubName(Input<String> virtualHubName) {
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
 
-        public Builder setVirtualHubName(String virtualHubName) {
+        public Builder virtualHubName(String virtualHubName) {
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }

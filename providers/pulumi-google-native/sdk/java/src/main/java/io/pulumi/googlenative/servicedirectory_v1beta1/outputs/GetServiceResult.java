@@ -38,13 +38,13 @@ public final class GetServiceResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","endpoints","metadata","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        String createTime,
-        List<EndpointResponse> endpoints,
-        Map<String,String> metadata,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.endpoints = endpoints;
         this.metadata = metadata;
@@ -116,27 +116,27 @@ public final class GetServiceResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEndpoints(List<EndpointResponse> endpoints) {
+        public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

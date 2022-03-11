@@ -30,12 +30,12 @@ public final class SqlAclEntryResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"expireTime","label","ttl","value"})
+    @OutputCustomType.Constructor
     private SqlAclEntryResponse(
-        String expireTime,
-        String label,
-        String ttl,
-        String value) {
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("ttl") String ttl,
+        @OutputCustomType.Parameter("value") String value) {
         this.expireTime = expireTime;
         this.label = label;
         this.ttl = ttl;
@@ -97,22 +97,22 @@ public final class SqlAclEntryResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

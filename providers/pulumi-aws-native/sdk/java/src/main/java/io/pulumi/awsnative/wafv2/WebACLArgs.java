@@ -158,92 +158,92 @@ public final class WebACLArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setCaptchaConfig(@Nullable Input<WebACLCaptchaConfigArgs> captchaConfig) {
+        public Builder captchaConfig(@Nullable Input<WebACLCaptchaConfigArgs> captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
+        public Builder captchaConfig(@Nullable WebACLCaptchaConfigArgs captchaConfig) {
             this.captchaConfig = Input.ofNullable(captchaConfig);
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable Input<WebACLCustomResponseBodiesArgs> customResponseBodies) {
+        public Builder customResponseBodies(@Nullable Input<WebACLCustomResponseBodiesArgs> customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable WebACLCustomResponseBodiesArgs customResponseBodies) {
+        public Builder customResponseBodies(@Nullable WebACLCustomResponseBodiesArgs customResponseBodies) {
             this.customResponseBodies = Input.ofNullable(customResponseBodies);
             return this;
         }
 
-        public Builder setDefaultAction(Input<WebACLDefaultActionArgs> defaultAction) {
+        public Builder defaultAction(Input<WebACLDefaultActionArgs> defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setDefaultAction(WebACLDefaultActionArgs defaultAction) {
+        public Builder defaultAction(WebACLDefaultActionArgs defaultAction) {
             this.defaultAction = Input.of(Objects.requireNonNull(defaultAction));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<WebACLRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<WebACLRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<WebACLRuleArgs> rules) {
+        public Builder rules(@Nullable List<WebACLRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setScope(Input<WebACLScope> scope) {
+        public Builder scope(Input<WebACLScope> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(WebACLScope scope) {
+        public Builder scope(WebACLScope scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<WebACLTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<WebACLTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WebACLTagArgs> tags) {
+        public Builder tags(@Nullable List<WebACLTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVisibilityConfig(Input<WebACLVisibilityConfigArgs> visibilityConfig) {
+        public Builder visibilityConfig(Input<WebACLVisibilityConfigArgs> visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
 
-        public Builder setVisibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
+        public Builder visibilityConfig(WebACLVisibilityConfigArgs visibilityConfig) {
             this.visibilityConfig = Input.of(Objects.requireNonNull(visibilityConfig));
             return this;
         }

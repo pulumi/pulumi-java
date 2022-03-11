@@ -47,7 +47,7 @@ public final class GetRouteCalculatorArgs extends io.pulumi.resources.InvokeArgs
     	      this.calculatorName = defaults.calculatorName;
         }
 
-        public Builder setCalculatorName(String calculatorName) {
+        public Builder calculatorName(String calculatorName) {
             this.calculatorName = Objects.requireNonNull(calculatorName);
             return this;
         }

@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"phraseMatchRules","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse(
-        List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
-        String type) {
+        @OutputCustomType.Parameter("phraseMatchRules") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules,
+        @OutputCustomType.Parameter("type") String type) {
         this.phraseMatchRules = phraseMatchRules;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupRespons
     	      this.type = defaults.type;
         }
 
-        public Builder setPhraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
+        public Builder phraseMatchRules(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse> phraseMatchRules) {
             this.phraseMatchRules = Objects.requireNonNull(phraseMatchRules);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

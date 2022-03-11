@@ -22,10 +22,10 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
      */
     private final @Nullable Boolean protectFromScaleSetActions;
 
-    @OutputCustomType.Constructor({"protectFromScaleIn","protectFromScaleSetActions"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetVMProtectionPolicyResponse(
-        @Nullable Boolean protectFromScaleIn,
-        @Nullable Boolean protectFromScaleSetActions) {
+        @OutputCustomType.Parameter("protectFromScaleIn") @Nullable Boolean protectFromScaleIn,
+        @OutputCustomType.Parameter("protectFromScaleSetActions") @Nullable Boolean protectFromScaleSetActions) {
         this.protectFromScaleIn = protectFromScaleIn;
         this.protectFromScaleSetActions = protectFromScaleSetActions;
     }
@@ -67,12 +67,12 @@ public final class VirtualMachineScaleSetVMProtectionPolicyResponse {
     	      this.protectFromScaleSetActions = defaults.protectFromScaleSetActions;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
-        public Builder setProtectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
+        public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }

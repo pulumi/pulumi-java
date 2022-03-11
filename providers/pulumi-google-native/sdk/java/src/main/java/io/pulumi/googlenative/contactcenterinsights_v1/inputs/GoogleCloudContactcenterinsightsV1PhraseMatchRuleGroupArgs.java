@@ -76,22 +76,22 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupArgs ex
     	      this.type = defaults.type;
         }
 
-        public Builder setPhraseMatchRules(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules) {
+        public Builder phraseMatchRules(@Nullable Input<List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs>> phraseMatchRules) {
             this.phraseMatchRules = phraseMatchRules;
             return this;
         }
 
-        public Builder setPhraseMatchRules(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
+        public Builder phraseMatchRules(@Nullable List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs> phraseMatchRules) {
             this.phraseMatchRules = Input.ofNullable(phraseMatchRules);
             return this;
         }
 
-        public Builder setType(Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
+        public Builder type(Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType type) {
+        public Builder type(GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

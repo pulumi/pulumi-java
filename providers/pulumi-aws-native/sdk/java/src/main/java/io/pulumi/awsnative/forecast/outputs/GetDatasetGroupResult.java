@@ -35,12 +35,12 @@ public final class GetDatasetGroupResult {
      */
     private final @Nullable List<DatasetGroupTag> tags;
 
-    @OutputCustomType.Constructor({"datasetArns","datasetGroupArn","domain","tags"})
+    @OutputCustomType.Constructor
     private GetDatasetGroupResult(
-        @Nullable List<String> datasetArns,
-        @Nullable String datasetGroupArn,
-        @Nullable DatasetGroupDomain domain,
-        @Nullable List<DatasetGroupTag> tags) {
+        @OutputCustomType.Parameter("datasetArns") @Nullable List<String> datasetArns,
+        @OutputCustomType.Parameter("datasetGroupArn") @Nullable String datasetGroupArn,
+        @OutputCustomType.Parameter("domain") @Nullable DatasetGroupDomain domain,
+        @OutputCustomType.Parameter("tags") @Nullable List<DatasetGroupTag> tags) {
         this.datasetArns = datasetArns;
         this.datasetGroupArn = datasetGroupArn;
         this.domain = domain;
@@ -102,22 +102,22 @@ public final class GetDatasetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetArns(@Nullable List<String> datasetArns) {
+        public Builder datasetArns(@Nullable List<String> datasetArns) {
             this.datasetArns = datasetArns;
             return this;
         }
 
-        public Builder setDatasetGroupArn(@Nullable String datasetGroupArn) {
+        public Builder datasetGroupArn(@Nullable String datasetGroupArn) {
             this.datasetGroupArn = datasetGroupArn;
             return this;
         }
 
-        public Builder setDomain(@Nullable DatasetGroupDomain domain) {
+        public Builder domain(@Nullable DatasetGroupDomain domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetGroupTag> tags) {
+        public Builder tags(@Nullable List<DatasetGroupTag> tags) {
             this.tags = tags;
             return this;
         }

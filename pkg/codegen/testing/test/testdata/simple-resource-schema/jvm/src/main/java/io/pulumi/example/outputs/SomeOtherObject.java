@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class SomeOtherObject {
     private final @Nullable String baz;
 
-    @OutputCustomType.Constructor({"baz"})
-    private SomeOtherObject(@Nullable String baz) {
+    @OutputCustomType.Constructor
+    private SomeOtherObject(@OutputCustomType.Parameter("baz") @Nullable String baz) {
         this.baz = baz;
     }
 
@@ -42,7 +42,7 @@ public final class SomeOtherObject {
     	      this.baz = defaults.baz;
         }
 
-        public Builder setBaz(@Nullable String baz) {
+        public Builder baz(@Nullable String baz) {
             this.baz = baz;
             return this;
         }

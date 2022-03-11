@@ -30,11 +30,11 @@ public final class NetworkRuleSetPropertiesResponse {
      */
     private final List<NetworkRuleSetIpRuleResponse> ipRules;
 
-    @OutputCustomType.Constructor({"applyToBuiltInEventHubEndpoint","defaultAction","ipRules"})
+    @OutputCustomType.Constructor
     private NetworkRuleSetPropertiesResponse(
-        Boolean applyToBuiltInEventHubEndpoint,
-        @Nullable String defaultAction,
-        List<NetworkRuleSetIpRuleResponse> ipRules) {
+        @OutputCustomType.Parameter("applyToBuiltInEventHubEndpoint") Boolean applyToBuiltInEventHubEndpoint,
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("ipRules") List<NetworkRuleSetIpRuleResponse> ipRules) {
         this.applyToBuiltInEventHubEndpoint = applyToBuiltInEventHubEndpoint;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
@@ -86,17 +86,17 @@ public final class NetworkRuleSetPropertiesResponse {
     	      this.ipRules = defaults.ipRules;
         }
 
-        public Builder setApplyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
+        public Builder applyToBuiltInEventHubEndpoint(Boolean applyToBuiltInEventHubEndpoint) {
             this.applyToBuiltInEventHubEndpoint = Objects.requireNonNull(applyToBuiltInEventHubEndpoint);
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
+        public Builder ipRules(List<NetworkRuleSetIpRuleResponse> ipRules) {
             this.ipRules = Objects.requireNonNull(ipRules);
             return this;
         }

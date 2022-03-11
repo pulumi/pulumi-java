@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class GetSubnetRouteTableAssociationResult {
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private GetSubnetRouteTableAssociationResult(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private GetSubnetRouteTableAssociationResult(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 
@@ -42,7 +42,7 @@ public final class GetSubnetRouteTableAssociationResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

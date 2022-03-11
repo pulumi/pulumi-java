@@ -27,11 +27,11 @@ public final class LogConfigCounterOptionsResponse {
      */
     private final String metric;
 
-    @OutputCustomType.Constructor({"customFields","field","metric"})
+    @OutputCustomType.Constructor
     private LogConfigCounterOptionsResponse(
-        List<LogConfigCounterOptionsCustomFieldResponse> customFields,
-        String field,
-        String metric) {
+        @OutputCustomType.Parameter("customFields") List<LogConfigCounterOptionsCustomFieldResponse> customFields,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("metric") String metric) {
         this.customFields = customFields;
         this.field = field;
         this.metric = metric;
@@ -83,17 +83,17 @@ public final class LogConfigCounterOptionsResponse {
     	      this.metric = defaults.metric;
         }
 
-        public Builder setCustomFields(List<LogConfigCounterOptionsCustomFieldResponse> customFields) {
+        public Builder customFields(List<LogConfigCounterOptionsCustomFieldResponse> customFields) {
             this.customFields = Objects.requireNonNull(customFields);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }

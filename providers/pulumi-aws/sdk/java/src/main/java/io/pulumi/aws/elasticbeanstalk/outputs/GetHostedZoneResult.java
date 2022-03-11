@@ -22,10 +22,10 @@ public final class GetHostedZoneResult {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"id","region"})
+    @OutputCustomType.Constructor
     private GetHostedZoneResult(
-        String id,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.id = id;
         this.region = region;
     }
@@ -67,12 +67,12 @@ public final class GetHostedZoneResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

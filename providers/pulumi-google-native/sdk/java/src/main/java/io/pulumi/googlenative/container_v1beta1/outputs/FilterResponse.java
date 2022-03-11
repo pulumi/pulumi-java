@@ -16,8 +16,8 @@ public final class FilterResponse {
      */
     private final List<String> eventType;
 
-    @OutputCustomType.Constructor({"eventType"})
-    private FilterResponse(List<String> eventType) {
+    @OutputCustomType.Constructor
+    private FilterResponse(@OutputCustomType.Parameter("eventType") List<String> eventType) {
         this.eventType = eventType;
     }
 
@@ -49,7 +49,7 @@ public final class FilterResponse {
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder setEventType(List<String> eventType) {
+        public Builder eventType(List<String> eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }

@@ -59,16 +59,16 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper;
 
-    @OutputCustomType.Constructor({"apt","deb","desiredState","googet","msi","rpm","yum","zypper"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkg(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb,
-        String desiredState,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
+        @OutputCustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt,
+        @OutputCustomType.Parameter("deb") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb,
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("googet") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet,
+        @OutputCustomType.Parameter("msi") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi,
+        @OutputCustomType.Parameter("rpm") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm,
+        @OutputCustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum,
+        @OutputCustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
         this.apt = apt;
         this.deb = deb;
         this.desiredState = desiredState;
@@ -170,42 +170,42 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt) {
+        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setDeb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb) {
+        public Builder deb(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb) {
             this.deb = deb;
             return this;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setGooget(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet) {
+        public Builder googet(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet) {
             this.googet = googet;
             return this;
         }
 
-        public Builder setMsi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi) {
+        public Builder msi(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi) {
             this.msi = msi;
             return this;
         }
 
-        public Builder setRpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm) {
+        public Builder rpm(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm) {
             this.rpm = rpm;
             return this;
         }
 
-        public Builder setYum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum) {
+        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setZypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
+        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper) {
             this.zypper = zypper;
             return this;
         }

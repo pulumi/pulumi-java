@@ -26,10 +26,10 @@ public final class PatchDeploymentRecurringScheduleMonthly {
      */
     private final @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth;
 
-    @OutputCustomType.Constructor({"monthDay","weekDayOfMonth"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringScheduleMonthly(
-        @Nullable Integer monthDay,
-        @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
+        @OutputCustomType.Parameter("monthDay") @Nullable Integer monthDay,
+        @OutputCustomType.Parameter("weekDayOfMonth") @Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
         this.monthDay = monthDay;
         this.weekDayOfMonth = weekDayOfMonth;
     }
@@ -74,12 +74,12 @@ public final class PatchDeploymentRecurringScheduleMonthly {
     	      this.weekDayOfMonth = defaults.weekDayOfMonth;
         }
 
-        public Builder setMonthDay(@Nullable Integer monthDay) {
+        public Builder monthDay(@Nullable Integer monthDay) {
             this.monthDay = monthDay;
             return this;
         }
 
-        public Builder setWeekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
+        public Builder weekDayOfMonth(@Nullable PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth weekDayOfMonth) {
             this.weekDayOfMonth = weekDayOfMonth;
             return this;
         }

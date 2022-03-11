@@ -22,10 +22,10 @@ public final class FirewallPolicyRuleMatchLayer4Config {
      */
     private final @Nullable List<String> ports;
 
-    @OutputCustomType.Constructor({"ipProtocol","ports"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatchLayer4Config(
-        String ipProtocol,
-        @Nullable List<String> ports) {
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("ports") @Nullable List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }
@@ -67,12 +67,12 @@ public final class FirewallPolicyRuleMatchLayer4Config {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setIpProtocol(String ipProtocol) {
+        public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = ports;
             return this;
         }

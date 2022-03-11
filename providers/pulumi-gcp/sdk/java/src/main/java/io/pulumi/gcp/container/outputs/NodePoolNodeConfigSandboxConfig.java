@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class NodePoolNodeConfigSandboxConfig {
     private final String sandboxType;
 
-    @OutputCustomType.Constructor({"sandboxType"})
-    private NodePoolNodeConfigSandboxConfig(String sandboxType) {
+    @OutputCustomType.Constructor
+    private NodePoolNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 
@@ -40,7 +40,7 @@ public final class NodePoolNodeConfigSandboxConfig {
     	      this.sandboxType = defaults.sandboxType;
         }
 
-        public Builder setSandboxType(String sandboxType) {
+        public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }

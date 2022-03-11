@@ -38,14 +38,14 @@ public final class GetEventSourceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arn","createdBy","id","name","namePrefix","state"})
+    @OutputCustomType.Constructor
     private GetEventSourceResult(
-        String arn,
-        String createdBy,
-        String id,
-        String name,
-        @Nullable String namePrefix,
-        String state) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("state") String state) {
         this.arn = arn;
         this.createdBy = createdBy;
         this.id = id;
@@ -123,32 +123,32 @@ public final class GetEventSourceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

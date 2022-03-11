@@ -25,11 +25,11 @@ public final class WorkloadIdentityConfigResponse {
      */
     private final String workloadPool;
 
-    @OutputCustomType.Constructor({"identityNamespace","identityProvider","workloadPool"})
+    @OutputCustomType.Constructor
     private WorkloadIdentityConfigResponse(
-        String identityNamespace,
-        String identityProvider,
-        String workloadPool) {
+        @OutputCustomType.Parameter("identityNamespace") String identityNamespace,
+        @OutputCustomType.Parameter("identityProvider") String identityProvider,
+        @OutputCustomType.Parameter("workloadPool") String workloadPool) {
         this.identityNamespace = identityNamespace;
         this.identityProvider = identityProvider;
         this.workloadPool = workloadPool;
@@ -81,17 +81,17 @@ public final class WorkloadIdentityConfigResponse {
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setIdentityNamespace(String identityNamespace) {
+        public Builder identityNamespace(String identityNamespace) {
             this.identityNamespace = Objects.requireNonNull(identityNamespace);
             return this;
         }
 
-        public Builder setIdentityProvider(String identityProvider) {
+        public Builder identityProvider(String identityProvider) {
             this.identityProvider = Objects.requireNonNull(identityProvider);
             return this;
         }
 
-        public Builder setWorkloadPool(String workloadPool) {
+        public Builder workloadPool(String workloadPool) {
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }

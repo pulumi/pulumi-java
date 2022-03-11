@@ -71,22 +71,22 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     	      this.truststoreVersion = defaults.truststoreVersion;
         }
 
-        public Builder setTruststoreUri(Input<String> truststoreUri) {
+        public Builder truststoreUri(Input<String> truststoreUri) {
             this.truststoreUri = Objects.requireNonNull(truststoreUri);
             return this;
         }
 
-        public Builder setTruststoreUri(String truststoreUri) {
+        public Builder truststoreUri(String truststoreUri) {
             this.truststoreUri = Input.of(Objects.requireNonNull(truststoreUri));
             return this;
         }
 
-        public Builder setTruststoreVersion(@Nullable Input<String> truststoreVersion) {
+        public Builder truststoreVersion(@Nullable Input<String> truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }
 
-        public Builder setTruststoreVersion(@Nullable String truststoreVersion) {
+        public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = Input.ofNullable(truststoreVersion);
             return this;
         }

@@ -41,14 +41,14 @@ public final class SSLHealthCheckResponse {
      */
     private final String response;
 
-    @OutputCustomType.Constructor({"port","portName","portSpecification","proxyHeader","request","response"})
+    @OutputCustomType.Constructor
     private SSLHealthCheckResponse(
-        Integer port,
-        String portName,
-        String portSpecification,
-        String proxyHeader,
-        String request,
-        String response) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("portSpecification") String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("request") String request,
+        @OutputCustomType.Parameter("response") String response) {
         this.port = port;
         this.portName = portName;
         this.portSpecification = portSpecification;
@@ -130,32 +130,32 @@ public final class SSLHealthCheckResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setPortSpecification(String portSpecification) {
+        public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
 
-        public Builder setProxyHeader(String proxyHeader) {
+        public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
 
-        public Builder setRequest(String request) {
+        public Builder request(String request) {
             this.request = Objects.requireNonNull(request);
             return this;
         }
 
-        public Builder setResponse(String response) {
+        public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }

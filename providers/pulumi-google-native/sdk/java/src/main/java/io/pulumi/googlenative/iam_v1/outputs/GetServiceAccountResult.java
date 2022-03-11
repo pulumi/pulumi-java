@@ -51,16 +51,16 @@ public final class GetServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"description","disabled","displayName","email","name","oauth2ClientId","project","uniqueId"})
+    @OutputCustomType.Constructor
     private GetServiceAccountResult(
-        String description,
-        Boolean disabled,
-        String displayName,
-        String email,
-        String name,
-        String oauth2ClientId,
-        String project,
-        String uniqueId) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oauth2ClientId") String oauth2ClientId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;
@@ -162,42 +162,42 @@ public final class GetServiceAccountResult {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOauth2ClientId(String oauth2ClientId) {
+        public Builder oauth2ClientId(String oauth2ClientId) {
             this.oauth2ClientId = Objects.requireNonNull(oauth2ClientId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }

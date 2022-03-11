@@ -65,19 +65,19 @@ public final class GetSigningProfileResult {
      */
     private final String versionArn;
 
-    @OutputCustomType.Constructor({"arn","id","name","platformDisplayName","platformId","revocationRecords","signatureValidityPeriods","status","tags","version","versionArn"})
+    @OutputCustomType.Constructor
     private GetSigningProfileResult(
-        String arn,
-        String id,
-        String name,
-        String platformDisplayName,
-        String platformId,
-        List<GetSigningProfileRevocationRecord> revocationRecords,
-        List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
-        String status,
-        Map<String,String> tags,
-        String version,
-        String versionArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformDisplayName") String platformDisplayName,
+        @OutputCustomType.Parameter("platformId") String platformId,
+        @OutputCustomType.Parameter("revocationRecords") List<GetSigningProfileRevocationRecord> revocationRecords,
+        @OutputCustomType.Parameter("signatureValidityPeriods") List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionArn") String versionArn) {
         this.arn = arn;
         this.id = id;
         this.name = name;
@@ -205,57 +205,57 @@ public final class GetSigningProfileResult {
     	      this.versionArn = defaults.versionArn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlatformDisplayName(String platformDisplayName) {
+        public Builder platformDisplayName(String platformDisplayName) {
             this.platformDisplayName = Objects.requireNonNull(platformDisplayName);
             return this;
         }
 
-        public Builder setPlatformId(String platformId) {
+        public Builder platformId(String platformId) {
             this.platformId = Objects.requireNonNull(platformId);
             return this;
         }
 
-        public Builder setRevocationRecords(List<GetSigningProfileRevocationRecord> revocationRecords) {
+        public Builder revocationRecords(List<GetSigningProfileRevocationRecord> revocationRecords) {
             this.revocationRecords = Objects.requireNonNull(revocationRecords);
             return this;
         }
 
-        public Builder setSignatureValidityPeriods(List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods) {
+        public Builder signatureValidityPeriods(List<GetSigningProfileSignatureValidityPeriod> signatureValidityPeriods) {
             this.signatureValidityPeriods = Objects.requireNonNull(signatureValidityPeriods);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionArn(String versionArn) {
+        public Builder versionArn(String versionArn) {
             this.versionArn = Objects.requireNonNull(versionArn);
             return this;
         }

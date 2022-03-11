@@ -135,72 +135,72 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setDeliveryConfig(@Nullable Input<DeliveryConfigArgs> deliveryConfig) {
+        public Builder deliveryConfig(@Nullable Input<DeliveryConfigArgs> deliveryConfig) {
             this.deliveryConfig = deliveryConfig;
             return this;
         }
 
-        public Builder setDeliveryConfig(@Nullable DeliveryConfigArgs deliveryConfig) {
+        public Builder deliveryConfig(@Nullable DeliveryConfigArgs deliveryConfig) {
             this.deliveryConfig = Input.ofNullable(deliveryConfig);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSkipBacklog(@Nullable Input<String> skipBacklog) {
+        public Builder skipBacklog(@Nullable Input<String> skipBacklog) {
             this.skipBacklog = skipBacklog;
             return this;
         }
 
-        public Builder setSkipBacklog(@Nullable String skipBacklog) {
+        public Builder skipBacklog(@Nullable String skipBacklog) {
             this.skipBacklog = Input.ofNullable(skipBacklog);
             return this;
         }
 
-        public Builder setSubscriptionId(Input<String> subscriptionId) {
+        public Builder subscriptionId(Input<String> subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
 
-        public Builder setTopic(@Nullable Input<String> topic) {
+        public Builder topic(@Nullable Input<String> topic) {
             this.topic = topic;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = Input.ofNullable(topic);
             return this;
         }

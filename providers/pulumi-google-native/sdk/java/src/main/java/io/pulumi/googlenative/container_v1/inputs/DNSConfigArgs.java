@@ -92,32 +92,32 @@ public final class DNSConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder setClusterDns(@Nullable Input<DNSConfigClusterDns> clusterDns) {
+        public Builder clusterDns(@Nullable Input<DNSConfigClusterDns> clusterDns) {
             this.clusterDns = clusterDns;
             return this;
         }
 
-        public Builder setClusterDns(@Nullable DNSConfigClusterDns clusterDns) {
+        public Builder clusterDns(@Nullable DNSConfigClusterDns clusterDns) {
             this.clusterDns = Input.ofNullable(clusterDns);
             return this;
         }
 
-        public Builder setClusterDnsDomain(@Nullable Input<String> clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable Input<String> clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
-        public Builder setClusterDnsDomain(@Nullable String clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
             this.clusterDnsDomain = Input.ofNullable(clusterDnsDomain);
             return this;
         }
 
-        public Builder setClusterDnsScope(@Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable Input<DNSConfigClusterDnsScope> clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }
 
-        public Builder setClusterDnsScope(@Nullable DNSConfigClusterDnsScope clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable DNSConfigClusterDnsScope clusterDnsScope) {
             this.clusterDnsScope = Input.ofNullable(clusterDnsScope);
             return this;
         }

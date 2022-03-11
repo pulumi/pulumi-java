@@ -60,12 +60,12 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
     	      this.dashboardId = defaults.dashboardId;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setDashboardId(String dashboardId) {
+        public Builder dashboardId(String dashboardId) {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }

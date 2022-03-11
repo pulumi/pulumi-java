@@ -50,7 +50,7 @@ public final class DomainNameEndpointConfiguration extends io.pulumi.resources.I
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(@Nullable List<String> types) {
+        public Builder types(@Nullable List<String> types) {
             this.types = types;
             return this;
         }

@@ -52,12 +52,12 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     	      this.snapshotsEnabled = defaults.snapshotsEnabled;
         }
 
-        public Builder setSnapshotsEnabled(Input<Boolean> snapshotsEnabled) {
+        public Builder snapshotsEnabled(Input<Boolean> snapshotsEnabled) {
             this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
             return this;
         }
 
-        public Builder setSnapshotsEnabled(Boolean snapshotsEnabled) {
+        public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
             this.snapshotsEnabled = Input.of(Objects.requireNonNull(snapshotsEnabled));
             return this;
         }

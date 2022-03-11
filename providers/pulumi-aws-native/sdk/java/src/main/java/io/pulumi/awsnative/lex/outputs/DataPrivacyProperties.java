@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataPrivacyProperties {
     private final Boolean childDirected;
 
-    @OutputCustomType.Constructor({"childDirected"})
-    private DataPrivacyProperties(Boolean childDirected) {
+    @OutputCustomType.Constructor
+    private DataPrivacyProperties(@OutputCustomType.Parameter("childDirected") Boolean childDirected) {
         this.childDirected = childDirected;
     }
 
@@ -40,7 +40,7 @@ public final class DataPrivacyProperties {
     	      this.childDirected = defaults.childDirected;
         }
 
-        public Builder setChildDirected(Boolean childDirected) {
+        public Builder childDirected(Boolean childDirected) {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }

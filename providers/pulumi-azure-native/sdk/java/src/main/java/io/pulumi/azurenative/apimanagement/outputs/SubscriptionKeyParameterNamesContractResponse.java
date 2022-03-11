@@ -22,10 +22,10 @@ public final class SubscriptionKeyParameterNamesContractResponse {
      */
     private final @Nullable String query;
 
-    @OutputCustomType.Constructor({"header","query"})
+    @OutputCustomType.Constructor
     private SubscriptionKeyParameterNamesContractResponse(
-        @Nullable String header,
-        @Nullable String query) {
+        @OutputCustomType.Parameter("header") @Nullable String header,
+        @OutputCustomType.Parameter("query") @Nullable String query) {
         this.header = header;
         this.query = query;
     }
@@ -67,12 +67,12 @@ public final class SubscriptionKeyParameterNamesContractResponse {
     	      this.query = defaults.query;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = header;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }

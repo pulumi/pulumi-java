@@ -75,22 +75,22 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.csr = defaults.csr;
         }
 
-        public Builder setActive(Input<Boolean> active) {
+        public Builder active(Input<Boolean> active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Input.of(Objects.requireNonNull(active));
             return this;
         }
 
-        public Builder setCsr(@Nullable Input<String> csr) {
+        public Builder csr(@Nullable Input<String> csr) {
             this.csr = csr;
             return this;
         }
 
-        public Builder setCsr(@Nullable String csr) {
+        public Builder csr(@Nullable String csr) {
             this.csr = Input.ofNullable(csr);
             return this;
         }

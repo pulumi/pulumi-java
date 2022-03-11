@@ -91,32 +91,32 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSizeGb(@Nullable Input<Double> sizeGb) {
+        public Builder sizeGb(@Nullable Input<Double> sizeGb) {
             this.sizeGb = sizeGb;
             return this;
         }
 
-        public Builder setSizeGb(@Nullable Double sizeGb) {
+        public Builder sizeGb(@Nullable Double sizeGb) {
             this.sizeGb = Input.ofNullable(sizeGb);
             return this;
         }
 
-        public Builder setVolumeType(@Nullable Input<String> volumeType) {
+        public Builder volumeType(@Nullable Input<String> volumeType) {
             this.volumeType = volumeType;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }

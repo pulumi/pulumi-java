@@ -20,12 +20,12 @@ public final class ContainerMountVolumeOptions {
     private final @Nullable List<ContainerMountVolumeOptionsLabel> labels;
     private final @Nullable Boolean noCopy;
 
-    @OutputCustomType.Constructor({"driverName","driverOptions","labels","noCopy"})
+    @OutputCustomType.Constructor
     private ContainerMountVolumeOptions(
-        @Nullable String driverName,
-        @Nullable Map<String,String> driverOptions,
-        @Nullable List<ContainerMountVolumeOptionsLabel> labels,
-        @Nullable Boolean noCopy) {
+        @OutputCustomType.Parameter("driverName") @Nullable String driverName,
+        @OutputCustomType.Parameter("driverOptions") @Nullable Map<String,String> driverOptions,
+        @OutputCustomType.Parameter("labels") @Nullable List<ContainerMountVolumeOptionsLabel> labels,
+        @OutputCustomType.Parameter("noCopy") @Nullable Boolean noCopy) {
         this.driverName = driverName;
         this.driverOptions = driverOptions;
         this.labels = labels;
@@ -71,22 +71,22 @@ public final class ContainerMountVolumeOptions {
     	      this.noCopy = defaults.noCopy;
         }
 
-        public Builder setDriverName(@Nullable String driverName) {
+        public Builder driverName(@Nullable String driverName) {
             this.driverName = driverName;
             return this;
         }
 
-        public Builder setDriverOptions(@Nullable Map<String,String> driverOptions) {
+        public Builder driverOptions(@Nullable Map<String,String> driverOptions) {
             this.driverOptions = driverOptions;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<ContainerMountVolumeOptionsLabel> labels) {
+        public Builder labels(@Nullable List<ContainerMountVolumeOptionsLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNoCopy(@Nullable Boolean noCopy) {
+        public Builder noCopy(@Nullable Boolean noCopy) {
             this.noCopy = noCopy;
             return this;
         }

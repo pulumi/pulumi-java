@@ -24,18 +24,18 @@ public final class GetApplicationResult {
     private final @Nullable String launchPath;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor({"appBlockArn","arn","attributesToDelete","createdTime","description","displayName","iconS3Location","launchParameters","launchPath","workingDirectory"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String appBlockArn,
-        @Nullable String arn,
-        @Nullable List<String> attributesToDelete,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable ApplicationS3Location iconS3Location,
-        @Nullable String launchParameters,
-        @Nullable String launchPath,
-        @Nullable String workingDirectory) {
+        @OutputCustomType.Parameter("appBlockArn") @Nullable String appBlockArn,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("attributesToDelete") @Nullable List<String> attributesToDelete,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconS3Location") @Nullable ApplicationS3Location iconS3Location,
+        @OutputCustomType.Parameter("launchParameters") @Nullable String launchParameters,
+        @OutputCustomType.Parameter("launchPath") @Nullable String launchPath,
+        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.appBlockArn = appBlockArn;
         this.arn = arn;
         this.attributesToDelete = attributesToDelete;
@@ -117,52 +117,52 @@ public final class GetApplicationResult {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setAppBlockArn(@Nullable String appBlockArn) {
+        public Builder appBlockArn(@Nullable String appBlockArn) {
             this.appBlockArn = appBlockArn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAttributesToDelete(@Nullable List<String> attributesToDelete) {
+        public Builder attributesToDelete(@Nullable List<String> attributesToDelete) {
             this.attributesToDelete = attributesToDelete;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIconS3Location(@Nullable ApplicationS3Location iconS3Location) {
+        public Builder iconS3Location(@Nullable ApplicationS3Location iconS3Location) {
             this.iconS3Location = iconS3Location;
             return this;
         }
 
-        public Builder setLaunchParameters(@Nullable String launchParameters) {
+        public Builder launchParameters(@Nullable String launchParameters) {
             this.launchParameters = launchParameters;
             return this;
         }
 
-        public Builder setLaunchPath(@Nullable String launchPath) {
+        public Builder launchPath(@Nullable String launchPath) {
             this.launchPath = launchPath;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }

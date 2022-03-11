@@ -15,10 +15,10 @@ public final class DeliveryStreamEncryptionConfiguration {
     private final @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig;
     private final @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig;
 
-    @OutputCustomType.Constructor({"kMSEncryptionConfig","noEncryptionConfig"})
+    @OutputCustomType.Constructor
     private DeliveryStreamEncryptionConfiguration(
-        @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
-        @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
+        @OutputCustomType.Parameter("kMSEncryptionConfig") @Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig,
+        @OutputCustomType.Parameter("noEncryptionConfig") @Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
         this.kMSEncryptionConfig = kMSEncryptionConfig;
         this.noEncryptionConfig = noEncryptionConfig;
     }
@@ -52,12 +52,12 @@ public final class DeliveryStreamEncryptionConfiguration {
     	      this.noEncryptionConfig = defaults.noEncryptionConfig;
         }
 
-        public Builder setKMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig) {
+        public Builder kMSEncryptionConfig(@Nullable DeliveryStreamKMSEncryptionConfig kMSEncryptionConfig) {
             this.kMSEncryptionConfig = kMSEncryptionConfig;
             return this;
         }
 
-        public Builder setNoEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
+        public Builder noEncryptionConfig(@Nullable DeliveryStreamEncryptionConfigurationNoEncryptionConfig noEncryptionConfig) {
             this.noEncryptionConfig = noEncryptionConfig;
             return this;
         }

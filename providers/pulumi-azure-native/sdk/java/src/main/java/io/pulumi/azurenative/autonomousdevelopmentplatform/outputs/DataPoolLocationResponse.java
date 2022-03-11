@@ -23,10 +23,10 @@ public final class DataPoolLocationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"encryption","name"})
+    @OutputCustomType.Constructor
     private DataPoolLocationResponse(
-        @Nullable DataPoolEncryptionResponse encryption,
-        String name) {
+        @OutputCustomType.Parameter("encryption") @Nullable DataPoolEncryptionResponse encryption,
+        @OutputCustomType.Parameter("name") String name) {
         this.encryption = encryption;
         this.name = name;
     }
@@ -68,12 +68,12 @@ public final class DataPoolLocationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEncryption(@Nullable DataPoolEncryptionResponse encryption) {
+        public Builder encryption(@Nullable DataPoolEncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

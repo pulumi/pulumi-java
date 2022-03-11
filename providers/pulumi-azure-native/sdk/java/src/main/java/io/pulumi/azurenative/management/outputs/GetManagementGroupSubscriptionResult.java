@@ -48,15 +48,15 @@ public final class GetManagementGroupSubscriptionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","name","parent","state","tenant","type"})
+    @OutputCustomType.Constructor
     private GetManagementGroupSubscriptionResult(
-        @Nullable String displayName,
-        String id,
-        String name,
-        @Nullable DescendantParentGroupInfoResponse parent,
-        @Nullable String state,
-        @Nullable String tenant,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") @Nullable DescendantParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;
@@ -148,37 +148,37 @@ public final class GetManagementGroupSubscriptionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(@Nullable DescendantParentGroupInfoResponse parent) {
+        public Builder parent(@Nullable DescendantParentGroupInfoResponse parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

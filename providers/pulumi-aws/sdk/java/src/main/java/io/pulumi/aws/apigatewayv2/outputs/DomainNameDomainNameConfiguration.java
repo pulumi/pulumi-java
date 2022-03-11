@@ -38,13 +38,13 @@ public final class DomainNameDomainNameConfiguration {
      */
     private final @Nullable String targetDomainName;
 
-    @OutputCustomType.Constructor({"certificateArn","endpointType","hostedZoneId","securityPolicy","targetDomainName"})
+    @OutputCustomType.Constructor
     private DomainNameDomainNameConfiguration(
-        String certificateArn,
-        String endpointType,
-        @Nullable String hostedZoneId,
-        String securityPolicy,
-        @Nullable String targetDomainName) {
+        @OutputCustomType.Parameter("certificateArn") String certificateArn,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("targetDomainName") @Nullable String targetDomainName) {
         this.certificateArn = certificateArn;
         this.endpointType = endpointType;
         this.hostedZoneId = hostedZoneId;
@@ -117,27 +117,27 @@ public final class DomainNameDomainNameConfiguration {
     	      this.targetDomainName = defaults.targetDomainName;
         }
 
-        public Builder setCertificateArn(String certificateArn) {
+        public Builder certificateArn(String certificateArn) {
             this.certificateArn = Objects.requireNonNull(certificateArn);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setTargetDomainName(@Nullable String targetDomainName) {
+        public Builder targetDomainName(@Nullable String targetDomainName) {
             this.targetDomainName = targetDomainName;
             return this;
         }

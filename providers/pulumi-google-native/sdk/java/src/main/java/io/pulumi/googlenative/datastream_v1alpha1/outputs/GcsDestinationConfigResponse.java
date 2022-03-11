@@ -38,13 +38,13 @@ public final class GcsDestinationConfigResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"avroFileFormat","fileRotationInterval","fileRotationMb","jsonFileFormat","path"})
+    @OutputCustomType.Constructor
     private GcsDestinationConfigResponse(
-        AvroFileFormatResponse avroFileFormat,
-        String fileRotationInterval,
-        Integer fileRotationMb,
-        JsonFileFormatResponse jsonFileFormat,
-        String path) {
+        @OutputCustomType.Parameter("avroFileFormat") AvroFileFormatResponse avroFileFormat,
+        @OutputCustomType.Parameter("fileRotationInterval") String fileRotationInterval,
+        @OutputCustomType.Parameter("fileRotationMb") Integer fileRotationMb,
+        @OutputCustomType.Parameter("jsonFileFormat") JsonFileFormatResponse jsonFileFormat,
+        @OutputCustomType.Parameter("path") String path) {
         this.avroFileFormat = avroFileFormat;
         this.fileRotationInterval = fileRotationInterval;
         this.fileRotationMb = fileRotationMb;
@@ -116,27 +116,27 @@ public final class GcsDestinationConfigResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setAvroFileFormat(AvroFileFormatResponse avroFileFormat) {
+        public Builder avroFileFormat(AvroFileFormatResponse avroFileFormat) {
             this.avroFileFormat = Objects.requireNonNull(avroFileFormat);
             return this;
         }
 
-        public Builder setFileRotationInterval(String fileRotationInterval) {
+        public Builder fileRotationInterval(String fileRotationInterval) {
             this.fileRotationInterval = Objects.requireNonNull(fileRotationInterval);
             return this;
         }
 
-        public Builder setFileRotationMb(Integer fileRotationMb) {
+        public Builder fileRotationMb(Integer fileRotationMb) {
             this.fileRotationMb = Objects.requireNonNull(fileRotationMb);
             return this;
         }
 
-        public Builder setJsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
+        public Builder jsonFileFormat(JsonFileFormatResponse jsonFileFormat) {
             this.jsonFileFormat = Objects.requireNonNull(jsonFileFormat);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

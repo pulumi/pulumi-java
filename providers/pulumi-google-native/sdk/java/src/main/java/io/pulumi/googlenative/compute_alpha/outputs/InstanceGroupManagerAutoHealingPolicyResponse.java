@@ -34,13 +34,13 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
     private final FixedOrPercentResponse maxUnavailable;
     private final String updateInstances;
 
-    @OutputCustomType.Constructor({"autoHealingTriggers","healthCheck","initialDelaySec","maxUnavailable","updateInstances"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerAutoHealingPolicyResponse(
-        InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
-        String healthCheck,
-        Integer initialDelaySec,
-        FixedOrPercentResponse maxUnavailable,
-        String updateInstances) {
+        @OutputCustomType.Parameter("autoHealingTriggers") InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers,
+        @OutputCustomType.Parameter("healthCheck") String healthCheck,
+        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec,
+        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @OutputCustomType.Parameter("updateInstances") String updateInstances) {
         this.autoHealingTriggers = autoHealingTriggers;
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
@@ -108,27 +108,27 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
     	      this.updateInstances = defaults.updateInstances;
         }
 
-        public Builder setAutoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers) {
+        public Builder autoHealingTriggers(InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers) {
             this.autoHealingTriggers = Objects.requireNonNull(autoHealingTriggers);
             return this;
         }
 
-        public Builder setHealthCheck(String healthCheck) {
+        public Builder healthCheck(String healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }
 
-        public Builder setMaxUnavailable(FixedOrPercentResponse maxUnavailable) {
+        public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
 
-        public Builder setUpdateInstances(String updateInstances) {
+        public Builder updateInstances(String updateInstances) {
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
         }

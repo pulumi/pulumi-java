@@ -24,10 +24,10 @@ public final class BucketReplicationConfigurationRuleFilter {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"prefix","tags"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRuleFilter(
-        @Nullable String prefix,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.prefix = prefix;
         this.tags = tags;
     }
@@ -70,12 +70,12 @@ public final class BucketReplicationConfigurationRuleFilter {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

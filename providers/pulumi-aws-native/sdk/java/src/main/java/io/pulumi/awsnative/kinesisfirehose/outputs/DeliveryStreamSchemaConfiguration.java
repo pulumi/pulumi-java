@@ -18,14 +18,14 @@ public final class DeliveryStreamSchemaConfiguration {
     private final @Nullable String tableName;
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","region","roleARN","tableName","versionId"})
+    @OutputCustomType.Constructor
     private DeliveryStreamSchemaConfiguration(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String region,
-        @Nullable String roleARN,
-        @Nullable String tableName,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.region = region;
@@ -83,32 +83,32 @@ public final class DeliveryStreamSchemaConfiguration {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRoleARN(@Nullable String roleARN) {
+        public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }

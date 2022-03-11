@@ -32,11 +32,11 @@ public final class ManagementEventRuleConditionResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"aggregation","dataSource","odataType"})
+    @OutputCustomType.Constructor
     private ManagementEventRuleConditionResponse(
-        @Nullable ManagementEventAggregationConditionResponse aggregation,
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        String odataType) {
+        @OutputCustomType.Parameter("aggregation") @Nullable ManagementEventAggregationConditionResponse aggregation,
+        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.aggregation = aggregation;
         this.dataSource = dataSource;
         this.odataType = odataType;
@@ -89,17 +89,17 @@ public final class ManagementEventRuleConditionResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
+        public Builder aggregation(@Nullable ManagementEventAggregationConditionResponse aggregation) {
             this.aggregation = aggregation;
             return this;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

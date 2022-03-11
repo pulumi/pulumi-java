@@ -17,8 +17,8 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
      */
     private final @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor({"text"})
-    private CxFlowEventHandlerTriggerFulfillmentMessage(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
+    @OutputCustomType.Constructor
+    private CxFlowEventHandlerTriggerFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
         this.text = text;
     }
 
@@ -50,7 +50,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
+        public Builder text(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

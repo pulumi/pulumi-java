@@ -20,10 +20,10 @@ public final class FileContentBufferResponse {
      */
     private final String fileType;
 
-    @OutputCustomType.Constructor({"content","fileType"})
+    @OutputCustomType.Constructor
     private FileContentBufferResponse(
-        String content,
-        String fileType) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("fileType") String fileType) {
         this.content = content;
         this.fileType = fileType;
     }
@@ -65,12 +65,12 @@ public final class FileContentBufferResponse {
     	      this.fileType = defaults.fileType;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }

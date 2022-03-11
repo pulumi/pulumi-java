@@ -58,18 +58,18 @@ public final class GetClusterResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"arn","certificateAuthorityData","clusterSecurityGroupId","encryptionConfigKeyArn","endpoint","logging","openIdConnectIssuerUrl","resourcesVpcConfig","tags","version"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable String arn,
-        @Nullable String certificateAuthorityData,
-        @Nullable String clusterSecurityGroupId,
-        @Nullable String encryptionConfigKeyArn,
-        @Nullable String endpoint,
-        @Nullable ClusterLogging logging,
-        @Nullable String openIdConnectIssuerUrl,
-        @Nullable ClusterResourcesVpcConfig resourcesVpcConfig,
-        @Nullable List<ClusterTag> tags,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("certificateAuthorityData") @Nullable String certificateAuthorityData,
+        @OutputCustomType.Parameter("clusterSecurityGroupId") @Nullable String clusterSecurityGroupId,
+        @OutputCustomType.Parameter("encryptionConfigKeyArn") @Nullable String encryptionConfigKeyArn,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("logging") @Nullable ClusterLogging logging,
+        @OutputCustomType.Parameter("openIdConnectIssuerUrl") @Nullable String openIdConnectIssuerUrl,
+        @OutputCustomType.Parameter("resourcesVpcConfig") @Nullable ClusterResourcesVpcConfig resourcesVpcConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<ClusterTag> tags,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.arn = arn;
         this.certificateAuthorityData = certificateAuthorityData;
         this.clusterSecurityGroupId = clusterSecurityGroupId;
@@ -183,52 +183,52 @@ public final class GetClusterResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCertificateAuthorityData(@Nullable String certificateAuthorityData) {
+        public Builder certificateAuthorityData(@Nullable String certificateAuthorityData) {
             this.certificateAuthorityData = certificateAuthorityData;
             return this;
         }
 
-        public Builder setClusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
+        public Builder clusterSecurityGroupId(@Nullable String clusterSecurityGroupId) {
             this.clusterSecurityGroupId = clusterSecurityGroupId;
             return this;
         }
 
-        public Builder setEncryptionConfigKeyArn(@Nullable String encryptionConfigKeyArn) {
+        public Builder encryptionConfigKeyArn(@Nullable String encryptionConfigKeyArn) {
             this.encryptionConfigKeyArn = encryptionConfigKeyArn;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setLogging(@Nullable ClusterLogging logging) {
+        public Builder logging(@Nullable ClusterLogging logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setOpenIdConnectIssuerUrl(@Nullable String openIdConnectIssuerUrl) {
+        public Builder openIdConnectIssuerUrl(@Nullable String openIdConnectIssuerUrl) {
             this.openIdConnectIssuerUrl = openIdConnectIssuerUrl;
             return this;
         }
 
-        public Builder setResourcesVpcConfig(@Nullable ClusterResourcesVpcConfig resourcesVpcConfig) {
+        public Builder resourcesVpcConfig(@Nullable ClusterResourcesVpcConfig resourcesVpcConfig) {
             this.resourcesVpcConfig = resourcesVpcConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ClusterTag> tags) {
+        public Builder tags(@Nullable List<ClusterTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

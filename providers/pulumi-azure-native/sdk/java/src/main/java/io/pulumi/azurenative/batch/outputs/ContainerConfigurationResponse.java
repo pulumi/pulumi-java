@@ -24,11 +24,11 @@ public final class ContainerConfigurationResponse {
     private final @Nullable List<ContainerRegistryResponse> containerRegistries;
     private final String type;
 
-    @OutputCustomType.Constructor({"containerImageNames","containerRegistries","type"})
+    @OutputCustomType.Constructor
     private ContainerConfigurationResponse(
-        @Nullable List<String> containerImageNames,
-        @Nullable List<ContainerRegistryResponse> containerRegistries,
-        String type) {
+        @OutputCustomType.Parameter("containerImageNames") @Nullable List<String> containerImageNames,
+        @OutputCustomType.Parameter("containerRegistries") @Nullable List<ContainerRegistryResponse> containerRegistries,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerImageNames = containerImageNames;
         this.containerRegistries = containerRegistries;
         this.type = type;
@@ -76,17 +76,17 @@ public final class ContainerConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerImageNames(@Nullable List<String> containerImageNames) {
+        public Builder containerImageNames(@Nullable List<String> containerImageNames) {
             this.containerImageNames = containerImageNames;
             return this;
         }
 
-        public Builder setContainerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
+        public Builder containerRegistries(@Nullable List<ContainerRegistryResponse> containerRegistries) {
             this.containerRegistries = containerRegistries;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

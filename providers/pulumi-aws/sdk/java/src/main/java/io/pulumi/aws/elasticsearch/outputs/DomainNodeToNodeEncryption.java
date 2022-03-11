@@ -15,8 +15,8 @@ public final class DomainNodeToNodeEncryption {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private DomainNodeToNodeEncryption(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private DomainNodeToNodeEncryption(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -48,7 +48,7 @@ public final class DomainNodeToNodeEncryption {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -37,13 +37,13 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"featurePolicy","location","loggingEnabled","name","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
-        String location,
-        Boolean loggingEnabled,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("featurePolicy") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("loggingEnabled") Boolean loggingEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.featurePolicy = featurePolicy;
         this.location = location;
         this.loggingEnabled = loggingEnabled;
@@ -115,27 +115,27 @@ public final class GetInstanceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setFeaturePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy) {
+        public Builder featurePolicy(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse featurePolicy) {
             this.featurePolicy = Objects.requireNonNull(featurePolicy);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLoggingEnabled(Boolean loggingEnabled) {
+        public Builder loggingEnabled(Boolean loggingEnabled) {
             this.loggingEnabled = Objects.requireNonNull(loggingEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

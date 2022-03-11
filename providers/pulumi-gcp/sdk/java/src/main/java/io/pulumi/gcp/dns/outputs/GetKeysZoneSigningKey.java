@@ -59,17 +59,17 @@ public final class GetKeysZoneSigningKey {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor({"algorithm","creationTime","description","digests","id","isActive","keyLength","keyTag","publicKey"})
+    @OutputCustomType.Constructor
     private GetKeysZoneSigningKey(
-        String algorithm,
-        String creationTime,
-        String description,
-        List<GetKeysZoneSigningKeyDigest> digests,
-        String id,
-        Boolean isActive,
-        Integer keyLength,
-        Integer keyTag,
-        String publicKey) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("digests") List<GetKeysZoneSigningKeyDigest> digests,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isActive") Boolean isActive,
+        @OutputCustomType.Parameter("keyLength") Integer keyLength,
+        @OutputCustomType.Parameter("keyTag") Integer keyTag,
+        @OutputCustomType.Parameter("publicKey") String publicKey) {
         this.algorithm = algorithm;
         this.creationTime = creationTime;
         this.description = description;
@@ -181,47 +181,47 @@ public final class GetKeysZoneSigningKey {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDigests(List<GetKeysZoneSigningKeyDigest> digests) {
+        public Builder digests(List<GetKeysZoneSigningKeyDigest> digests) {
             this.digests = Objects.requireNonNull(digests);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsActive(Boolean isActive) {
+        public Builder isActive(Boolean isActive) {
             this.isActive = Objects.requireNonNull(isActive);
             return this;
         }
 
-        public Builder setKeyLength(Integer keyLength) {
+        public Builder keyLength(Integer keyLength) {
             this.keyLength = Objects.requireNonNull(keyLength);
             return this;
         }
 
-        public Builder setKeyTag(Integer keyTag) {
+        public Builder keyTag(Integer keyTag) {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

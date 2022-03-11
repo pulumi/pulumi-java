@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"count","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__AcceleratorConfigResponse(
-        String count,
-        String type) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1__AcceleratorConfigResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

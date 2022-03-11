@@ -39,13 +39,13 @@ public final class AzureBlobFSWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blockSizeInMB","copyBehavior","disableMetricsCollection","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private AzureBlobFSWriteSettingsResponse(
-        @Nullable Object blockSizeInMB,
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("blockSizeInMB") @Nullable Object blockSizeInMB,
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.blockSizeInMB = blockSizeInMB;
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
@@ -118,27 +118,27 @@ public final class AzureBlobFSWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBlockSizeInMB(@Nullable Object blockSizeInMB) {
+        public Builder blockSizeInMB(@Nullable Object blockSizeInMB) {
             this.blockSizeInMB = blockSizeInMB;
             return this;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

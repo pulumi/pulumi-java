@@ -95,23 +95,23 @@ public final class HDInsightSparkActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","className","dependsOn","description","entryFilePath","getDebugInfo","linkedServiceName","name","policy","proxyUser","rootPath","sparkConfig","sparkJobLinkedService","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightSparkActivityResponse(
-        @Nullable List<Object> arguments,
-        @Nullable String className,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        Object entryFilePath,
-        @Nullable String getDebugInfo,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object proxyUser,
-        Object rootPath,
-        @Nullable Map<String,Object> sparkConfig,
-        @Nullable LinkedServiceReferenceResponse sparkJobLinkedService,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("className") @Nullable String className,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entryFilePath") Object entryFilePath,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("proxyUser") @Nullable Object proxyUser,
+        @OutputCustomType.Parameter("rootPath") Object rootPath,
+        @OutputCustomType.Parameter("sparkConfig") @Nullable Map<String,Object> sparkConfig,
+        @OutputCustomType.Parameter("sparkJobLinkedService") @Nullable LinkedServiceReferenceResponse sparkJobLinkedService,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.className = className;
         this.dependsOn = dependsOn;
@@ -284,77 +284,77 @@ public final class HDInsightSparkActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setArguments(@Nullable List<Object> arguments) {
+        public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setClassName(@Nullable String className) {
+        public Builder className(@Nullable String className) {
             this.className = className;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntryFilePath(Object entryFilePath) {
+        public Builder entryFilePath(Object entryFilePath) {
             this.entryFilePath = Objects.requireNonNull(entryFilePath);
             return this;
         }
 
-        public Builder setGetDebugInfo(@Nullable String getDebugInfo) {
+        public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setProxyUser(@Nullable Object proxyUser) {
+        public Builder proxyUser(@Nullable Object proxyUser) {
             this.proxyUser = proxyUser;
             return this;
         }
 
-        public Builder setRootPath(Object rootPath) {
+        public Builder rootPath(Object rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable Map<String,Object> sparkConfig) {
+        public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
 
-        public Builder setSparkJobLinkedService(@Nullable LinkedServiceReferenceResponse sparkJobLinkedService) {
+        public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceResponse sparkJobLinkedService) {
             this.sparkJobLinkedService = sparkJobLinkedService;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

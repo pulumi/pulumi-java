@@ -17,8 +17,8 @@ public final class GetDocumentResult {
      */
     private final @Nullable List<DocumentTag> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private GetDocumentResult(@Nullable List<DocumentTag> tags) {
+    @OutputCustomType.Constructor
+    private GetDocumentResult(@OutputCustomType.Parameter("tags") @Nullable List<DocumentTag> tags) {
         this.tags = tags;
     }
 
@@ -50,7 +50,7 @@ public final class GetDocumentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable List<DocumentTag> tags) {
+        public Builder tags(@Nullable List<DocumentTag> tags) {
             this.tags = tags;
             return this;
         }

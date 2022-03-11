@@ -28,11 +28,11 @@ public final class TelegramChannelPropertiesResponse {
      */
     private final @Nullable Boolean isValidated;
 
-    @OutputCustomType.Constructor({"accessToken","isEnabled","isValidated"})
+    @OutputCustomType.Constructor
     private TelegramChannelPropertiesResponse(
-        @Nullable String accessToken,
-        Boolean isEnabled,
-        @Nullable Boolean isValidated) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") @Nullable Boolean isValidated) {
         this.accessToken = accessToken;
         this.isEnabled = isEnabled;
         this.isValidated = isValidated;
@@ -84,17 +84,17 @@ public final class TelegramChannelPropertiesResponse {
     	      this.isValidated = defaults.isValidated;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsValidated(@Nullable Boolean isValidated) {
+        public Builder isValidated(@Nullable Boolean isValidated) {
             this.isValidated = isValidated;
             return this;
         }

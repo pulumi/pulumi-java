@@ -16,11 +16,11 @@ public final class ScheduledQueryS3Configuration {
     private final @Nullable ScheduledQueryEncryptionOption encryptionOption;
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","encryptionOption","objectKeyPrefix"})
+    @OutputCustomType.Constructor
     private ScheduledQueryS3Configuration(
-        String bucketName,
-        @Nullable ScheduledQueryEncryptionOption encryptionOption,
-        @Nullable String objectKeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("encryptionOption") @Nullable ScheduledQueryEncryptionOption encryptionOption,
+        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.objectKeyPrefix = objectKeyPrefix;
@@ -60,17 +60,17 @@ public final class ScheduledQueryS3Configuration {
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setEncryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
+        public Builder encryptionOption(@Nullable ScheduledQueryEncryptionOption encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }

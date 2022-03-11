@@ -36,12 +36,12 @@ public final class RouteSpecHttp2RouteRetryPolicy {
      */
     private final @Nullable List<String> tcpRetryEvents;
 
-    @OutputCustomType.Constructor({"httpRetryEvents","maxRetries","perRetryTimeout","tcpRetryEvents"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteRetryPolicy(
-        @Nullable List<String> httpRetryEvents,
-        Integer maxRetries,
-        RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
-        @Nullable List<String> tcpRetryEvents) {
+        @OutputCustomType.Parameter("httpRetryEvents") @Nullable List<String> httpRetryEvents,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries,
+        @OutputCustomType.Parameter("perRetryTimeout") RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout,
+        @OutputCustomType.Parameter("tcpRetryEvents") @Nullable List<String> tcpRetryEvents) {
         this.httpRetryEvents = httpRetryEvents;
         this.maxRetries = maxRetries;
         this.perRetryTimeout = perRetryTimeout;
@@ -105,22 +105,22 @@ public final class RouteSpecHttp2RouteRetryPolicy {
     	      this.tcpRetryEvents = defaults.tcpRetryEvents;
         }
 
-        public Builder setHttpRetryEvents(@Nullable List<String> httpRetryEvents) {
+        public Builder httpRetryEvents(@Nullable List<String> httpRetryEvents) {
             this.httpRetryEvents = httpRetryEvents;
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
-        public Builder setPerRetryTimeout(RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout) {
+        public Builder perRetryTimeout(RouteSpecHttp2RouteRetryPolicyPerRetryTimeout perRetryTimeout) {
             this.perRetryTimeout = Objects.requireNonNull(perRetryTimeout);
             return this;
         }
 
-        public Builder setTcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
+        public Builder tcpRetryEvents(@Nullable List<String> tcpRetryEvents) {
             this.tcpRetryEvents = tcpRetryEvents;
             return this;
         }

@@ -27,11 +27,11 @@ public final class ManagedClusterResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"clusterName","config","labels"})
+    @OutputCustomType.Constructor
     private ManagedClusterResponse(
-        String clusterName,
-        ClusterConfigResponse config,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("config") ClusterConfigResponse config,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.clusterName = clusterName;
         this.config = config;
         this.labels = labels;
@@ -83,17 +83,17 @@ public final class ManagedClusterResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setConfig(ClusterConfigResponse config) {
+        public Builder config(ClusterConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

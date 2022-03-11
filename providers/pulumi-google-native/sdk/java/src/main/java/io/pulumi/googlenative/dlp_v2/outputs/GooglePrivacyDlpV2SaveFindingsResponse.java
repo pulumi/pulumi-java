@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
      */
     private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
-    @OutputCustomType.Constructor({"outputConfig"})
-    private GooglePrivacyDlpV2SaveFindingsResponse(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2SaveFindingsResponse(@OutputCustomType.Parameter("outputConfig") GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
         this.outputConfig = outputConfig;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse {
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setOutputConfig(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
+        public Builder outputConfig(GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }

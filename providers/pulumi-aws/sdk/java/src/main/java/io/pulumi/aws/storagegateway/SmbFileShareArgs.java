@@ -442,252 +442,252 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcEndpointDnsName = defaults.vpcEndpointDnsName;
         }
 
-        public Builder setAccessBasedEnumeration(@Nullable Input<Boolean> accessBasedEnumeration) {
+        public Builder accessBasedEnumeration(@Nullable Input<Boolean> accessBasedEnumeration) {
             this.accessBasedEnumeration = accessBasedEnumeration;
             return this;
         }
 
-        public Builder setAccessBasedEnumeration(@Nullable Boolean accessBasedEnumeration) {
+        public Builder accessBasedEnumeration(@Nullable Boolean accessBasedEnumeration) {
             this.accessBasedEnumeration = Input.ofNullable(accessBasedEnumeration);
             return this;
         }
 
-        public Builder setAdminUserLists(@Nullable Input<List<String>> adminUserLists) {
+        public Builder adminUserLists(@Nullable Input<List<String>> adminUserLists) {
             this.adminUserLists = adminUserLists;
             return this;
         }
 
-        public Builder setAdminUserLists(@Nullable List<String> adminUserLists) {
+        public Builder adminUserLists(@Nullable List<String> adminUserLists) {
             this.adminUserLists = Input.ofNullable(adminUserLists);
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable Input<String> auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable Input<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable String auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Input.ofNullable(auditDestinationArn);
             return this;
         }
 
-        public Builder setAuthentication(@Nullable Input<String> authentication) {
+        public Builder authentication(@Nullable Input<String> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setBucketRegion(@Nullable Input<String> bucketRegion) {
+        public Builder bucketRegion(@Nullable Input<String> bucketRegion) {
             this.bucketRegion = bucketRegion;
             return this;
         }
 
-        public Builder setBucketRegion(@Nullable String bucketRegion) {
+        public Builder bucketRegion(@Nullable String bucketRegion) {
             this.bucketRegion = Input.ofNullable(bucketRegion);
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable Input<SmbFileShareCacheAttributesArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Input<SmbFileShareCacheAttributesArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable SmbFileShareCacheAttributesArgs cacheAttributes) {
+        public Builder cacheAttributes(@Nullable SmbFileShareCacheAttributesArgs cacheAttributes) {
             this.cacheAttributes = Input.ofNullable(cacheAttributes);
             return this;
         }
 
-        public Builder setCaseSensitivity(@Nullable Input<String> caseSensitivity) {
+        public Builder caseSensitivity(@Nullable Input<String> caseSensitivity) {
             this.caseSensitivity = caseSensitivity;
             return this;
         }
 
-        public Builder setCaseSensitivity(@Nullable String caseSensitivity) {
+        public Builder caseSensitivity(@Nullable String caseSensitivity) {
             this.caseSensitivity = Input.ofNullable(caseSensitivity);
             return this;
         }
 
-        public Builder setDefaultStorageClass(@Nullable Input<String> defaultStorageClass) {
+        public Builder defaultStorageClass(@Nullable Input<String> defaultStorageClass) {
             this.defaultStorageClass = defaultStorageClass;
             return this;
         }
 
-        public Builder setDefaultStorageClass(@Nullable String defaultStorageClass) {
+        public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
             this.defaultStorageClass = Input.ofNullable(defaultStorageClass);
             return this;
         }
 
-        public Builder setFileShareName(@Nullable Input<String> fileShareName) {
+        public Builder fileShareName(@Nullable Input<String> fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
 
-        public Builder setFileShareName(@Nullable String fileShareName) {
+        public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = Input.ofNullable(fileShareName);
             return this;
         }
 
-        public Builder setGatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Input<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
 
-        public Builder setGuessMimeTypeEnabled(@Nullable Input<Boolean> guessMimeTypeEnabled) {
+        public Builder guessMimeTypeEnabled(@Nullable Input<Boolean> guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = guessMimeTypeEnabled;
             return this;
         }
 
-        public Builder setGuessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
+        public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
             this.guessMimeTypeEnabled = Input.ofNullable(guessMimeTypeEnabled);
             return this;
         }
 
-        public Builder setInvalidUserLists(@Nullable Input<List<String>> invalidUserLists) {
+        public Builder invalidUserLists(@Nullable Input<List<String>> invalidUserLists) {
             this.invalidUserLists = invalidUserLists;
             return this;
         }
 
-        public Builder setInvalidUserLists(@Nullable List<String> invalidUserLists) {
+        public Builder invalidUserLists(@Nullable List<String> invalidUserLists) {
             this.invalidUserLists = Input.ofNullable(invalidUserLists);
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Boolean kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable Input<String> kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable Input<String> kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
 
-        public Builder setLocationArn(Input<String> locationArn) {
+        public Builder locationArn(Input<String> locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
 
-        public Builder setLocationArn(String locationArn) {
+        public Builder locationArn(String locationArn) {
             this.locationArn = Input.of(Objects.requireNonNull(locationArn));
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable Input<String> notificationPolicy) {
+        public Builder notificationPolicy(@Nullable Input<String> notificationPolicy) {
             this.notificationPolicy = notificationPolicy;
             return this;
         }
 
-        public Builder setNotificationPolicy(@Nullable String notificationPolicy) {
+        public Builder notificationPolicy(@Nullable String notificationPolicy) {
             this.notificationPolicy = Input.ofNullable(notificationPolicy);
             return this;
         }
 
-        public Builder setObjectAcl(@Nullable Input<String> objectAcl) {
+        public Builder objectAcl(@Nullable Input<String> objectAcl) {
             this.objectAcl = objectAcl;
             return this;
         }
 
-        public Builder setObjectAcl(@Nullable String objectAcl) {
+        public Builder objectAcl(@Nullable String objectAcl) {
             this.objectAcl = Input.ofNullable(objectAcl);
             return this;
         }
 
-        public Builder setOplocksEnabled(@Nullable Input<Boolean> oplocksEnabled) {
+        public Builder oplocksEnabled(@Nullable Input<Boolean> oplocksEnabled) {
             this.oplocksEnabled = oplocksEnabled;
             return this;
         }
 
-        public Builder setOplocksEnabled(@Nullable Boolean oplocksEnabled) {
+        public Builder oplocksEnabled(@Nullable Boolean oplocksEnabled) {
             this.oplocksEnabled = Input.ofNullable(oplocksEnabled);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Input<Boolean> requesterPays) {
+        public Builder requesterPays(@Nullable Input<Boolean> requesterPays) {
             this.requesterPays = requesterPays;
             return this;
         }
 
-        public Builder setRequesterPays(@Nullable Boolean requesterPays) {
+        public Builder requesterPays(@Nullable Boolean requesterPays) {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setSmbAclEnabled(@Nullable Input<Boolean> smbAclEnabled) {
+        public Builder smbAclEnabled(@Nullable Input<Boolean> smbAclEnabled) {
             this.smbAclEnabled = smbAclEnabled;
             return this;
         }
 
-        public Builder setSmbAclEnabled(@Nullable Boolean smbAclEnabled) {
+        public Builder smbAclEnabled(@Nullable Boolean smbAclEnabled) {
             this.smbAclEnabled = Input.ofNullable(smbAclEnabled);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidUserLists(@Nullable Input<List<String>> validUserLists) {
+        public Builder validUserLists(@Nullable Input<List<String>> validUserLists) {
             this.validUserLists = validUserLists;
             return this;
         }
 
-        public Builder setValidUserLists(@Nullable List<String> validUserLists) {
+        public Builder validUserLists(@Nullable List<String> validUserLists) {
             this.validUserLists = Input.ofNullable(validUserLists);
             return this;
         }
 
-        public Builder setVpcEndpointDnsName(@Nullable Input<String> vpcEndpointDnsName) {
+        public Builder vpcEndpointDnsName(@Nullable Input<String> vpcEndpointDnsName) {
             this.vpcEndpointDnsName = vpcEndpointDnsName;
             return this;
         }
 
-        public Builder setVpcEndpointDnsName(@Nullable String vpcEndpointDnsName) {
+        public Builder vpcEndpointDnsName(@Nullable String vpcEndpointDnsName) {
             this.vpcEndpointDnsName = Input.ofNullable(vpcEndpointDnsName);
             return this;
         }

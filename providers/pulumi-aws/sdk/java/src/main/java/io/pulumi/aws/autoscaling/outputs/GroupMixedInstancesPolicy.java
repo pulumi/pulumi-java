@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicy {
      */
     private final GroupMixedInstancesPolicyLaunchTemplate launchTemplate;
 
-    @OutputCustomType.Constructor({"instancesDistribution","launchTemplate"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicy(
-        @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
-        GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
+        @OutputCustomType.Parameter("instancesDistribution") @Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution,
+        @OutputCustomType.Parameter("launchTemplate") GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
         this.instancesDistribution = instancesDistribution;
         this.launchTemplate = launchTemplate;
     }
@@ -68,12 +68,12 @@ public final class GroupMixedInstancesPolicy {
     	      this.launchTemplate = defaults.launchTemplate;
         }
 
-        public Builder setInstancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution) {
+        public Builder instancesDistribution(@Nullable GroupMixedInstancesPolicyInstancesDistribution instancesDistribution) {
             this.instancesDistribution = instancesDistribution;
             return this;
         }
 
-        public Builder setLaunchTemplate(GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
+        public Builder launchTemplate(GroupMixedInstancesPolicyLaunchTemplate launchTemplate) {
             this.launchTemplate = Objects.requireNonNull(launchTemplate);
             return this;
         }

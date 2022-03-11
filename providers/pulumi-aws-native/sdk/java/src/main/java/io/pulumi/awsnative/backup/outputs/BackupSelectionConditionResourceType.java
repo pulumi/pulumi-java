@@ -13,11 +13,11 @@ public final class BackupSelectionConditionResourceType {
     private final String conditionType;
     private final String conditionValue;
 
-    @OutputCustomType.Constructor({"conditionKey","conditionType","conditionValue"})
+    @OutputCustomType.Constructor
     private BackupSelectionConditionResourceType(
-        String conditionKey,
-        String conditionType,
-        String conditionValue) {
+        @OutputCustomType.Parameter("conditionKey") String conditionKey,
+        @OutputCustomType.Parameter("conditionType") String conditionType,
+        @OutputCustomType.Parameter("conditionValue") String conditionValue) {
         this.conditionKey = conditionKey;
         this.conditionType = conditionType;
         this.conditionValue = conditionValue;
@@ -57,17 +57,17 @@ public final class BackupSelectionConditionResourceType {
     	      this.conditionValue = defaults.conditionValue;
         }
 
-        public Builder setConditionKey(String conditionKey) {
+        public Builder conditionKey(String conditionKey) {
             this.conditionKey = Objects.requireNonNull(conditionKey);
             return this;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
 
-        public Builder setConditionValue(String conditionValue) {
+        public Builder conditionValue(String conditionValue) {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }

@@ -17,8 +17,8 @@ public final class ScopeElementResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor({"field"})
-    private ScopeElementResponse(@Nullable String field) {
+    @OutputCustomType.Constructor
+    private ScopeElementResponse(@OutputCustomType.Parameter("field") @Nullable String field) {
         this.field = field;
     }
 
@@ -50,7 +50,7 @@ public final class ScopeElementResponse {
     	      this.field = defaults.field;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }

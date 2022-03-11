@@ -22,10 +22,10 @@ public final class RegistryScanningConfigurationRule {
      */
     private final String scanFrequency;
 
-    @OutputCustomType.Constructor({"repositoryFilters","scanFrequency"})
+    @OutputCustomType.Constructor
     private RegistryScanningConfigurationRule(
-        List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
-        String scanFrequency) {
+        @OutputCustomType.Parameter("repositoryFilters") List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters,
+        @OutputCustomType.Parameter("scanFrequency") String scanFrequency) {
         this.repositoryFilters = repositoryFilters;
         this.scanFrequency = scanFrequency;
     }
@@ -67,12 +67,12 @@ public final class RegistryScanningConfigurationRule {
     	      this.scanFrequency = defaults.scanFrequency;
         }
 
-        public Builder setRepositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters) {
+        public Builder repositoryFilters(List<RegistryScanningConfigurationRuleRepositoryFilter> repositoryFilters) {
             this.repositoryFilters = Objects.requireNonNull(repositoryFilters);
             return this;
         }
 
-        public Builder setScanFrequency(String scanFrequency) {
+        public Builder scanFrequency(String scanFrequency) {
             this.scanFrequency = Objects.requireNonNull(scanFrequency);
             return this;
         }

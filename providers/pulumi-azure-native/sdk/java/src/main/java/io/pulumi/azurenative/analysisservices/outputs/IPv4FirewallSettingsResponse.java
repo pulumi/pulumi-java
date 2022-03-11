@@ -24,10 +24,10 @@ public final class IPv4FirewallSettingsResponse {
      */
     private final @Nullable List<IPv4FirewallRuleResponse> firewallRules;
 
-    @OutputCustomType.Constructor({"enablePowerBIService","firewallRules"})
+    @OutputCustomType.Constructor
     private IPv4FirewallSettingsResponse(
-        @Nullable Boolean enablePowerBIService,
-        @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
+        @OutputCustomType.Parameter("enablePowerBIService") @Nullable Boolean enablePowerBIService,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<IPv4FirewallRuleResponse> firewallRules) {
         this.enablePowerBIService = enablePowerBIService;
         this.firewallRules = firewallRules;
     }
@@ -69,12 +69,12 @@ public final class IPv4FirewallSettingsResponse {
     	      this.firewallRules = defaults.firewallRules;
         }
 
-        public Builder setEnablePowerBIService(@Nullable Boolean enablePowerBIService) {
+        public Builder enablePowerBIService(@Nullable Boolean enablePowerBIService) {
             this.enablePowerBIService = enablePowerBIService;
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(@Nullable List<IPv4FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }

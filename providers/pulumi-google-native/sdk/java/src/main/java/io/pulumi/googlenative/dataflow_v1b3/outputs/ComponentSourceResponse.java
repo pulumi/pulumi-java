@@ -25,11 +25,11 @@ public final class ComponentSourceResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"name","originalTransformOrCollection","userName"})
+    @OutputCustomType.Constructor
     private ComponentSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String userName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originalTransformOrCollection") String originalTransformOrCollection,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransformOrCollection = originalTransformOrCollection;
         this.userName = userName;
@@ -81,17 +81,17 @@ public final class ComponentSourceResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginalTransformOrCollection(String originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

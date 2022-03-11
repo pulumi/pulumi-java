@@ -29,11 +29,11 @@ public final class AzureQueryPropertiesResponse {
      */
     private final @Nullable TagSettingsPropertiesResponse tagSettings;
 
-    @OutputCustomType.Constructor({"locations","scope","tagSettings"})
+    @OutputCustomType.Constructor
     private AzureQueryPropertiesResponse(
-        @Nullable List<String> locations,
-        @Nullable List<String> scope,
-        @Nullable TagSettingsPropertiesResponse tagSettings) {
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("scope") @Nullable List<String> scope,
+        @OutputCustomType.Parameter("tagSettings") @Nullable TagSettingsPropertiesResponse tagSettings) {
         this.locations = locations;
         this.scope = scope;
         this.tagSettings = tagSettings;
@@ -85,17 +85,17 @@ public final class AzureQueryPropertiesResponse {
     	      this.tagSettings = defaults.tagSettings;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setTagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
+        public Builder tagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
             this.tagSettings = tagSettings;
             return this;
         }

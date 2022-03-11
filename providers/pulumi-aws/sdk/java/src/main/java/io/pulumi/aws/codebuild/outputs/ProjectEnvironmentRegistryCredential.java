@@ -20,10 +20,10 @@ public final class ProjectEnvironmentRegistryCredential {
      */
     private final String credentialProvider;
 
-    @OutputCustomType.Constructor({"credential","credentialProvider"})
+    @OutputCustomType.Constructor
     private ProjectEnvironmentRegistryCredential(
-        String credential,
-        String credentialProvider) {
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("credentialProvider") String credentialProvider) {
         this.credential = credential;
         this.credentialProvider = credentialProvider;
     }
@@ -65,12 +65,12 @@ public final class ProjectEnvironmentRegistryCredential {
     	      this.credentialProvider = defaults.credentialProvider;
         }
 
-        public Builder setCredential(String credential) {
+        public Builder credential(String credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setCredentialProvider(String credentialProvider) {
+        public Builder credentialProvider(String credentialProvider) {
             this.credentialProvider = Objects.requireNonNull(credentialProvider);
             return this;
         }

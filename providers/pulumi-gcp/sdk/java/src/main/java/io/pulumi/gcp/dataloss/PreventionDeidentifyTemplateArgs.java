@@ -108,42 +108,42 @@ public final class PreventionDeidentifyTemplateArgs extends io.pulumi.resources.
     	      this.parent = defaults.parent;
         }
 
-        public Builder setDeidentifyConfig(Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
+        public Builder deidentifyConfig(Input<PreventionDeidentifyTemplateDeidentifyConfigArgs> deidentifyConfig) {
             this.deidentifyConfig = Objects.requireNonNull(deidentifyConfig);
             return this;
         }
 
-        public Builder setDeidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
+        public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigArgs deidentifyConfig) {
             this.deidentifyConfig = Input.of(Objects.requireNonNull(deidentifyConfig));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }

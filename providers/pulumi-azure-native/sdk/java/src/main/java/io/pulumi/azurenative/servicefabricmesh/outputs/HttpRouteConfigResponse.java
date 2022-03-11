@@ -27,11 +27,11 @@ public final class HttpRouteConfigResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"destination","match","name"})
+    @OutputCustomType.Constructor
     private HttpRouteConfigResponse(
-        GatewayDestinationResponse destination,
-        HttpRouteMatchRuleResponse match,
-        String name) {
+        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @OutputCustomType.Parameter("match") HttpRouteMatchRuleResponse match,
+        @OutputCustomType.Parameter("name") String name) {
         this.destination = destination;
         this.match = match;
         this.name = name;
@@ -83,17 +83,17 @@ public final class HttpRouteConfigResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDestination(GatewayDestinationResponse destination) {
+        public Builder destination(GatewayDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setMatch(HttpRouteMatchRuleResponse match) {
+        public Builder match(HttpRouteMatchRuleResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

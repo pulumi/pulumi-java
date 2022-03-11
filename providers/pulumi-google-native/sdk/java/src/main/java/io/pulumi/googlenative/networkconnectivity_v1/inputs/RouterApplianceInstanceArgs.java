@@ -74,22 +74,22 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable Input<String> virtualMachine) {
+        public Builder virtualMachine(@Nullable Input<String> virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable String virtualMachine) {
+        public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }

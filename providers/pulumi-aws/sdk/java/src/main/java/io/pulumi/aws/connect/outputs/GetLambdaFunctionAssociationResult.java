@@ -17,11 +17,11 @@ public final class GetLambdaFunctionAssociationResult {
     private final String id;
     private final String instanceId;
 
-    @OutputCustomType.Constructor({"functionArn","id","instanceId"})
+    @OutputCustomType.Constructor
     private GetLambdaFunctionAssociationResult(
-        String functionArn,
-        String id,
-        String instanceId) {
+        @OutputCustomType.Parameter("functionArn") String functionArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId) {
         this.functionArn = functionArn;
         this.id = id;
         this.instanceId = instanceId;
@@ -65,17 +65,17 @@ public final class GetLambdaFunctionAssociationResult {
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }

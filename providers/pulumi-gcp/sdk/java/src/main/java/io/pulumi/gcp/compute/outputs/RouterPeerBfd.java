@@ -48,12 +48,12 @@ public final class RouterPeerBfd {
      */
     private final String sessionInitializationMode;
 
-    @OutputCustomType.Constructor({"minReceiveInterval","minTransmitInterval","multiplier","sessionInitializationMode"})
+    @OutputCustomType.Constructor
     private RouterPeerBfd(
-        @Nullable Integer minReceiveInterval,
-        @Nullable Integer minTransmitInterval,
-        @Nullable Integer multiplier,
-        String sessionInitializationMode) {
+        @OutputCustomType.Parameter("minReceiveInterval") @Nullable Integer minReceiveInterval,
+        @OutputCustomType.Parameter("minTransmitInterval") @Nullable Integer minTransmitInterval,
+        @OutputCustomType.Parameter("multiplier") @Nullable Integer multiplier,
+        @OutputCustomType.Parameter("sessionInitializationMode") String sessionInitializationMode) {
         this.minReceiveInterval = minReceiveInterval;
         this.minTransmitInterval = minTransmitInterval;
         this.multiplier = multiplier;
@@ -130,22 +130,22 @@ public final class RouterPeerBfd {
     	      this.sessionInitializationMode = defaults.sessionInitializationMode;
         }
 
-        public Builder setMinReceiveInterval(@Nullable Integer minReceiveInterval) {
+        public Builder minReceiveInterval(@Nullable Integer minReceiveInterval) {
             this.minReceiveInterval = minReceiveInterval;
             return this;
         }
 
-        public Builder setMinTransmitInterval(@Nullable Integer minTransmitInterval) {
+        public Builder minTransmitInterval(@Nullable Integer minTransmitInterval) {
             this.minTransmitInterval = minTransmitInterval;
             return this;
         }
 
-        public Builder setMultiplier(@Nullable Integer multiplier) {
+        public Builder multiplier(@Nullable Integer multiplier) {
             this.multiplier = multiplier;
             return this;
         }
 
-        public Builder setSessionInitializationMode(String sessionInitializationMode) {
+        public Builder sessionInitializationMode(String sessionInitializationMode) {
             this.sessionInitializationMode = Objects.requireNonNull(sessionInitializationMode);
             return this;
         }

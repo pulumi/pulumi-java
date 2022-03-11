@@ -15,8 +15,8 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
      */
     private final String overview;
 
-    @OutputCustomType.Constructor({"overview"})
-    private GoogleCloudDatacatalogV1EntryOverviewResponse(String overview) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1EntryOverviewResponse(@OutputCustomType.Parameter("overview") String overview) {
         this.overview = overview;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
     	      this.overview = defaults.overview;
         }
 
-        public Builder setOverview(String overview) {
+        public Builder overview(String overview) {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }

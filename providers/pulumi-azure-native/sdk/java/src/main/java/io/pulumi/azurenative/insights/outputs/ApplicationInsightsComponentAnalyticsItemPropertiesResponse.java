@@ -17,8 +17,8 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
      */
     private final @Nullable String functionAlias;
 
-    @OutputCustomType.Constructor({"functionAlias"})
-    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse(@Nullable String functionAlias) {
+    @OutputCustomType.Constructor
+    private ApplicationInsightsComponentAnalyticsItemPropertiesResponse(@OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias) {
         this.functionAlias = functionAlias;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesResponse {
     	      this.functionAlias = defaults.functionAlias;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }

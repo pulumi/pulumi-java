@@ -29,11 +29,11 @@ public final class DnsSettingsResponse {
      */
     private final @Nullable List<String> servers;
 
-    @OutputCustomType.Constructor({"enableProxy","requireProxyForNetworkRules","servers"})
+    @OutputCustomType.Constructor
     private DnsSettingsResponse(
-        @Nullable Boolean enableProxy,
-        @Nullable Boolean requireProxyForNetworkRules,
-        @Nullable List<String> servers) {
+        @OutputCustomType.Parameter("enableProxy") @Nullable Boolean enableProxy,
+        @OutputCustomType.Parameter("requireProxyForNetworkRules") @Nullable Boolean requireProxyForNetworkRules,
+        @OutputCustomType.Parameter("servers") @Nullable List<String> servers) {
         this.enableProxy = enableProxy;
         this.requireProxyForNetworkRules = requireProxyForNetworkRules;
         this.servers = servers;
@@ -85,17 +85,17 @@ public final class DnsSettingsResponse {
     	      this.servers = defaults.servers;
         }
 
-        public Builder setEnableProxy(@Nullable Boolean enableProxy) {
+        public Builder enableProxy(@Nullable Boolean enableProxy) {
             this.enableProxy = enableProxy;
             return this;
         }
 
-        public Builder setRequireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
+        public Builder requireProxyForNetworkRules(@Nullable Boolean requireProxyForNetworkRules) {
             this.requireProxyForNetworkRules = requireProxyForNetworkRules;
             return this;
         }
 
-        public Builder setServers(@Nullable List<String> servers) {
+        public Builder servers(@Nullable List<String> servers) {
             this.servers = servers;
             return this;
         }

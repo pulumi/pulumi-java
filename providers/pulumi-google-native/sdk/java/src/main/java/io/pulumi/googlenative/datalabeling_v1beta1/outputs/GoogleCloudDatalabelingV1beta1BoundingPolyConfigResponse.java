@@ -20,10 +20,10 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
      */
     private final String instructionMessage;
 
-    @OutputCustomType.Constructor({"annotationSpecSet","instructionMessage"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse(
-        String annotationSpecSet,
-        String instructionMessage) {
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("instructionMessage") String instructionMessage) {
         this.annotationSpecSet = annotationSpecSet;
         this.instructionMessage = instructionMessage;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse {
     	      this.instructionMessage = defaults.instructionMessage;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setInstructionMessage(String instructionMessage) {
+        public Builder instructionMessage(String instructionMessage) {
             this.instructionMessage = Objects.requireNonNull(instructionMessage);
             return this;
         }

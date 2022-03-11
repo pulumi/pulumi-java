@@ -59,16 +59,16 @@ public final class ServicesPropertiesResponse {
      */
     private final @Nullable String publicNetworkAccess;
 
-    @OutputCustomType.Constructor({"accessPolicies","authenticationConfiguration","corsConfiguration","cosmosDbConfiguration","exportConfiguration","privateEndpointConnections","provisioningState","publicNetworkAccess"})
+    @OutputCustomType.Constructor
     private ServicesPropertiesResponse(
-        @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
-        @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
-        @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
-        @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable ServiceCorsConfigurationInfoResponse corsConfiguration,
+        @OutputCustomType.Parameter("cosmosDbConfiguration") @Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration,
+        @OutputCustomType.Parameter("exportConfiguration") @Nullable ServiceExportConfigurationInfoResponse exportConfiguration,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess) {
         this.accessPolicies = accessPolicies;
         this.authenticationConfiguration = authenticationConfiguration;
         this.corsConfiguration = corsConfiguration;
@@ -170,42 +170,42 @@ public final class ServicesPropertiesResponse {
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder setAccessPolicies(@Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryResponse> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoResponse authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable ServiceCorsConfigurationInfoResponse corsConfiguration) {
+        public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoResponse corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setCosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration) {
+        public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoResponse cosmosDbConfiguration) {
             this.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable ServiceExportConfigurationInfoResponse exportConfiguration) {
+        public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoResponse exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }

@@ -40,18 +40,18 @@ public final class GetPermissionsResult {
     private final GetPermissionsTable table;
     private final GetPermissionsTableWithColumns tableWithColumns;
 
-    @OutputCustomType.Constructor({"catalogId","catalogResource","dataLocation","database","id","permissions","permissionsWithGrantOptions","principal","table","tableWithColumns"})
+    @OutputCustomType.Constructor
     private GetPermissionsResult(
-        @Nullable String catalogId,
-        @Nullable Boolean catalogResource,
-        GetPermissionsDataLocation dataLocation,
-        GetPermissionsDatabase database,
-        String id,
-        List<String> permissions,
-        List<String> permissionsWithGrantOptions,
-        String principal,
-        GetPermissionsTable table,
-        GetPermissionsTableWithColumns tableWithColumns) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("catalogResource") @Nullable Boolean catalogResource,
+        @OutputCustomType.Parameter("dataLocation") GetPermissionsDataLocation dataLocation,
+        @OutputCustomType.Parameter("database") GetPermissionsDatabase database,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("permissions") List<String> permissions,
+        @OutputCustomType.Parameter("permissionsWithGrantOptions") List<String> permissionsWithGrantOptions,
+        @OutputCustomType.Parameter("principal") String principal,
+        @OutputCustomType.Parameter("table") GetPermissionsTable table,
+        @OutputCustomType.Parameter("tableWithColumns") GetPermissionsTableWithColumns tableWithColumns) {
         this.catalogId = catalogId;
         this.catalogResource = catalogResource;
         this.dataLocation = dataLocation;
@@ -145,52 +145,52 @@ public final class GetPermissionsResult {
     	      this.tableWithColumns = defaults.tableWithColumns;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogResource(@Nullable Boolean catalogResource) {
+        public Builder catalogResource(@Nullable Boolean catalogResource) {
             this.catalogResource = catalogResource;
             return this;
         }
 
-        public Builder setDataLocation(GetPermissionsDataLocation dataLocation) {
+        public Builder dataLocation(GetPermissionsDataLocation dataLocation) {
             this.dataLocation = Objects.requireNonNull(dataLocation);
             return this;
         }
 
-        public Builder setDatabase(GetPermissionsDatabase database) {
+        public Builder database(GetPermissionsDatabase database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
+        public Builder permissionsWithGrantOptions(List<String> permissionsWithGrantOptions) {
             this.permissionsWithGrantOptions = Objects.requireNonNull(permissionsWithGrantOptions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
 
-        public Builder setTable(GetPermissionsTable table) {
+        public Builder table(GetPermissionsTable table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setTableWithColumns(GetPermissionsTableWithColumns tableWithColumns) {
+        public Builder tableWithColumns(GetPermissionsTableWithColumns tableWithColumns) {
             this.tableWithColumns = Objects.requireNonNull(tableWithColumns);
             return this;
         }

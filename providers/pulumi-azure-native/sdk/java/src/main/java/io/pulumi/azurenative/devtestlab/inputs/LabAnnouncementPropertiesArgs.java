@@ -125,52 +125,52 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
     	      this.title = defaults.title;
         }
 
-        public Builder setEnabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
+        public Builder enabled(@Nullable Input<Either<String,EnableStatus>> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Either<String,EnableStatus> enabled) {
+        public Builder enabled(@Nullable Either<String,EnableStatus> enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable Input<String> expirationDate) {
+        public Builder expirationDate(@Nullable Input<String> expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = Input.ofNullable(expirationDate);
             return this;
         }
 
-        public Builder setExpired(@Nullable Input<Boolean> expired) {
+        public Builder expired(@Nullable Input<Boolean> expired) {
             this.expired = expired;
             return this;
         }
 
-        public Builder setExpired(@Nullable Boolean expired) {
+        public Builder expired(@Nullable Boolean expired) {
             this.expired = Input.ofNullable(expired);
             return this;
         }
 
-        public Builder setMarkdown(@Nullable Input<String> markdown) {
+        public Builder markdown(@Nullable Input<String> markdown) {
             this.markdown = markdown;
             return this;
         }
 
-        public Builder setMarkdown(@Nullable String markdown) {
+        public Builder markdown(@Nullable String markdown) {
             this.markdown = Input.ofNullable(markdown);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

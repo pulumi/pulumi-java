@@ -37,12 +37,12 @@ public final class ConfigurationResponse {
      */
     private final @Nullable List<SecretResponse> secrets;
 
-    @OutputCustomType.Constructor({"activeRevisionsMode","ingress","registries","secrets"})
+    @OutputCustomType.Constructor
     private ConfigurationResponse(
-        @Nullable String activeRevisionsMode,
-        @Nullable IngressResponse ingress,
-        @Nullable List<RegistryCredentialsResponse> registries,
-        @Nullable List<SecretResponse> secrets) {
+        @OutputCustomType.Parameter("activeRevisionsMode") @Nullable String activeRevisionsMode,
+        @OutputCustomType.Parameter("ingress") @Nullable IngressResponse ingress,
+        @OutputCustomType.Parameter("registries") @Nullable List<RegistryCredentialsResponse> registries,
+        @OutputCustomType.Parameter("secrets") @Nullable List<SecretResponse> secrets) {
         this.activeRevisionsMode = activeRevisionsMode;
         this.ingress = ingress;
         this.registries = registries;
@@ -105,22 +105,22 @@ public final class ConfigurationResponse {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setActiveRevisionsMode(@Nullable String activeRevisionsMode) {
+        public Builder activeRevisionsMode(@Nullable String activeRevisionsMode) {
             this.activeRevisionsMode = activeRevisionsMode;
             return this;
         }
 
-        public Builder setIngress(@Nullable IngressResponse ingress) {
+        public Builder ingress(@Nullable IngressResponse ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setRegistries(@Nullable List<RegistryCredentialsResponse> registries) {
+        public Builder registries(@Nullable List<RegistryCredentialsResponse> registries) {
             this.registries = registries;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<SecretResponse> secrets) {
+        public Builder secrets(@Nullable List<SecretResponse> secrets) {
             this.secrets = secrets;
             return this;
         }

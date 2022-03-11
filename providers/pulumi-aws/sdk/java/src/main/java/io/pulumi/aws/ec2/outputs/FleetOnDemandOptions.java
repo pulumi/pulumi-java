@@ -17,8 +17,8 @@ public final class FleetOnDemandOptions {
      */
     private final @Nullable String allocationStrategy;
 
-    @OutputCustomType.Constructor({"allocationStrategy"})
-    private FleetOnDemandOptions(@Nullable String allocationStrategy) {
+    @OutputCustomType.Constructor
+    private FleetOnDemandOptions(@OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 
@@ -50,7 +50,7 @@ public final class FleetOnDemandOptions {
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }

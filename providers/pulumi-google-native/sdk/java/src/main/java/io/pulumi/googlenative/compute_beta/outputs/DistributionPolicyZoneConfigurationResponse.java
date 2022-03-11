@@ -15,8 +15,8 @@ public final class DistributionPolicyZoneConfigurationResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"zone"})
-    private DistributionPolicyZoneConfigurationResponse(String zone) {
+    @OutputCustomType.Constructor
+    private DistributionPolicyZoneConfigurationResponse(@OutputCustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 
@@ -48,7 +48,7 @@ public final class DistributionPolicyZoneConfigurationResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

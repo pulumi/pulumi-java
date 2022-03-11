@@ -30,12 +30,12 @@ public final class GetHistoryResult {
      */
     private final String testPlatform;
 
-    @OutputCustomType.Constructor({"displayName","historyId","name","testPlatform"})
+    @OutputCustomType.Constructor
     private GetHistoryResult(
-        String displayName,
-        String historyId,
-        String name,
-        String testPlatform) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("historyId") String historyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testPlatform") String testPlatform) {
         this.displayName = displayName;
         this.historyId = historyId;
         this.name = name;
@@ -97,22 +97,22 @@ public final class GetHistoryResult {
     	      this.testPlatform = defaults.testPlatform;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHistoryId(String historyId) {
+        public Builder historyId(String historyId) {
             this.historyId = Objects.requireNonNull(historyId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestPlatform(String testPlatform) {
+        public Builder testPlatform(String testPlatform) {
             this.testPlatform = Objects.requireNonNull(testPlatform);
             return this;
         }

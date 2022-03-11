@@ -36,13 +36,13 @@ public final class ServiceCodeConfigurationValues {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"buildCommand","port","runtime","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceCodeConfigurationValues(
-        @Nullable String buildCommand,
-        @Nullable String port,
-        ServiceCodeConfigurationValuesRuntime runtime,
-        @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtime") ServiceCodeConfigurationValuesRuntime runtime,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;
@@ -110,27 +110,27 @@ public final class ServiceCodeConfigurationValues {
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setBuildCommand(@Nullable String buildCommand) {
+        public Builder buildCommand(@Nullable String buildCommand) {
             this.buildCommand = buildCommand;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRuntime(ServiceCodeConfigurationValuesRuntime runtime) {
+        public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePair> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
         }

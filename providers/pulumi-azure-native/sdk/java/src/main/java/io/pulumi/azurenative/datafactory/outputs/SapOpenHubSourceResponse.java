@@ -69,19 +69,19 @@ public final class SapOpenHubSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","baseRequestId","customRfcReadTableFunctionModule","disableMetricsCollection","excludeLastRequest","maxConcurrentConnections","queryTimeout","sapDataColumnDelimiter","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private SapOpenHubSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object baseRequestId,
-        @Nullable Object customRfcReadTableFunctionModule,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object excludeLastRequest,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object queryTimeout,
-        @Nullable Object sapDataColumnDelimiter,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("baseRequestId") @Nullable Object baseRequestId,
+        @OutputCustomType.Parameter("customRfcReadTableFunctionModule") @Nullable Object customRfcReadTableFunctionModule,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("excludeLastRequest") @Nullable Object excludeLastRequest,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("queryTimeout") @Nullable Object queryTimeout,
+        @OutputCustomType.Parameter("sapDataColumnDelimiter") @Nullable Object sapDataColumnDelimiter,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.baseRequestId = baseRequestId;
         this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
@@ -214,57 +214,57 @@ public final class SapOpenHubSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setBaseRequestId(@Nullable Object baseRequestId) {
+        public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
 
-        public Builder setCustomRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
+        public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setExcludeLastRequest(@Nullable Object excludeLastRequest) {
+        public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setSapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
+        public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

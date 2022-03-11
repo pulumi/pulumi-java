@@ -16,11 +16,11 @@ public final class ThrottlingRuleResponse {
     private final List<ThrottlingMetricResponse> metrics;
     private final @Nullable List<String> requiredFeatures;
 
-    @OutputCustomType.Constructor({"action","metrics","requiredFeatures"})
+    @OutputCustomType.Constructor
     private ThrottlingRuleResponse(
-        String action,
-        List<ThrottlingMetricResponse> metrics,
-        @Nullable List<String> requiredFeatures) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("metrics") List<ThrottlingMetricResponse> metrics,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
         this.action = action;
         this.metrics = metrics;
         this.requiredFeatures = requiredFeatures;
@@ -60,17 +60,17 @@ public final class ThrottlingRuleResponse {
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMetrics(List<ThrottlingMetricResponse> metrics) {
+        public Builder metrics(List<ThrottlingMetricResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }

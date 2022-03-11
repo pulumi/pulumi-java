@@ -23,10 +23,10 @@ public final class PodAntiAffinity {
      */
     private final @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution;
 
-    @OutputCustomType.Constructor({"preferredDuringSchedulingIgnoredDuringExecution","requiredDuringSchedulingIgnoredDuringExecution"})
+    @OutputCustomType.Constructor
     private PodAntiAffinity(
-        @Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution,
-        @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
+        @OutputCustomType.Parameter("preferredDuringSchedulingIgnoredDuringExecution") @Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution,
+        @OutputCustomType.Parameter("requiredDuringSchedulingIgnoredDuringExecution") @Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
         this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
         this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
     }
@@ -68,12 +68,12 @@ public final class PodAntiAffinity {
     	      this.requiredDuringSchedulingIgnoredDuringExecution = defaults.requiredDuringSchedulingIgnoredDuringExecution;
         }
 
-        public Builder setPreferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution) {
+        public Builder preferredDuringSchedulingIgnoredDuringExecution(@Nullable List<WeightedPodAffinityTerm> preferredDuringSchedulingIgnoredDuringExecution) {
             this.preferredDuringSchedulingIgnoredDuringExecution = preferredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
 
-        public Builder setRequiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
+        public Builder requiredDuringSchedulingIgnoredDuringExecution(@Nullable List<PodAffinityTerm> requiredDuringSchedulingIgnoredDuringExecution) {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }

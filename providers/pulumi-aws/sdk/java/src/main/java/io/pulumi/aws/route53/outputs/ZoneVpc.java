@@ -22,10 +22,10 @@ public final class ZoneVpc {
      */
     private final @Nullable String vpcRegion;
 
-    @OutputCustomType.Constructor({"vpcId","vpcRegion"})
+    @OutputCustomType.Constructor
     private ZoneVpc(
-        String vpcId,
-        @Nullable String vpcRegion) {
+        @OutputCustomType.Parameter("vpcId") String vpcId,
+        @OutputCustomType.Parameter("vpcRegion") @Nullable String vpcRegion) {
         this.vpcId = vpcId;
         this.vpcRegion = vpcRegion;
     }
@@ -67,12 +67,12 @@ public final class ZoneVpc {
     	      this.vpcRegion = defaults.vpcRegion;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcRegion(@Nullable String vpcRegion) {
+        public Builder vpcRegion(@Nullable String vpcRegion) {
             this.vpcRegion = vpcRegion;
             return this;
         }

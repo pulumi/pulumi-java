@@ -75,22 +75,22 @@ public final class CloudAuditOptionsArgs extends io.pulumi.resources.ResourceArg
     	      this.logName = defaults.logName;
         }
 
-        public Builder setAuthorizationLoggingOptions(@Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions) {
+        public Builder authorizationLoggingOptions(@Nullable Input<AuthorizationLoggingOptionsArgs> authorizationLoggingOptions) {
             this.authorizationLoggingOptions = authorizationLoggingOptions;
             return this;
         }
 
-        public Builder setAuthorizationLoggingOptions(@Nullable AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
+        public Builder authorizationLoggingOptions(@Nullable AuthorizationLoggingOptionsArgs authorizationLoggingOptions) {
             this.authorizationLoggingOptions = Input.ofNullable(authorizationLoggingOptions);
             return this;
         }
 
-        public Builder setLogName(@Nullable Input<CloudAuditOptionsLogName> logName) {
+        public Builder logName(@Nullable Input<CloudAuditOptionsLogName> logName) {
             this.logName = logName;
             return this;
         }
 
-        public Builder setLogName(@Nullable CloudAuditOptionsLogName logName) {
+        public Builder logName(@Nullable CloudAuditOptionsLogName logName) {
             this.logName = Input.ofNullable(logName);
             return this;
         }

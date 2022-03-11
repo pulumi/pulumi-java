@@ -24,10 +24,10 @@ public final class ApplicationHealthPolicyResponse {
      */
     private final @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies;
 
-    @OutputCustomType.Constructor({"defaultServiceTypeHealthPolicy","serviceTypeHealthPolicies"})
+    @OutputCustomType.Constructor
     private ApplicationHealthPolicyResponse(
-        @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
+        @OutputCustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
+        @OutputCustomType.Parameter("serviceTypeHealthPolicies") @Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
     }
@@ -69,12 +69,12 @@ public final class ApplicationHealthPolicyResponse {
     	      this.serviceTypeHealthPolicies = defaults.serviceTypeHealthPolicies;
         }
 
-        public Builder setDefaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable ServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
-        public Builder setServiceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
+        public Builder serviceTypeHealthPolicies(@Nullable Map<String,ServiceTypeHealthPolicyResponse> serviceTypeHealthPolicies) {
             this.serviceTypeHealthPolicies = serviceTypeHealthPolicies;
             return this;
         }

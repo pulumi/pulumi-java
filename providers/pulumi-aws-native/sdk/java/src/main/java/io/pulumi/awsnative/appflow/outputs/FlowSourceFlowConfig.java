@@ -35,12 +35,12 @@ public final class FlowSourceFlowConfig {
      */
     private final FlowSourceConnectorProperties sourceConnectorProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileName","connectorType","incrementalPullConfig","sourceConnectorProperties"})
+    @OutputCustomType.Constructor
     private FlowSourceFlowConfig(
-        @Nullable String connectorProfileName,
-        FlowConnectorType connectorType,
-        @Nullable FlowIncrementalPullConfig incrementalPullConfig,
-        FlowSourceConnectorProperties sourceConnectorProperties) {
+        @OutputCustomType.Parameter("connectorProfileName") @Nullable String connectorProfileName,
+        @OutputCustomType.Parameter("connectorType") FlowConnectorType connectorType,
+        @OutputCustomType.Parameter("incrementalPullConfig") @Nullable FlowIncrementalPullConfig incrementalPullConfig,
+        @OutputCustomType.Parameter("sourceConnectorProperties") FlowSourceConnectorProperties sourceConnectorProperties) {
         this.connectorProfileName = connectorProfileName;
         this.connectorType = connectorType;
         this.incrementalPullConfig = incrementalPullConfig;
@@ -102,22 +102,22 @@ public final class FlowSourceFlowConfig {
     	      this.sourceConnectorProperties = defaults.sourceConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorType(FlowConnectorType connectorType) {
+        public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setIncrementalPullConfig(@Nullable FlowIncrementalPullConfig incrementalPullConfig) {
+        public Builder incrementalPullConfig(@Nullable FlowIncrementalPullConfig incrementalPullConfig) {
             this.incrementalPullConfig = incrementalPullConfig;
             return this;
         }
 
-        public Builder setSourceConnectorProperties(FlowSourceConnectorProperties sourceConnectorProperties) {
+        public Builder sourceConnectorProperties(FlowSourceConnectorProperties sourceConnectorProperties) {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }

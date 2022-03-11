@@ -17,8 +17,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
      */
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStringsConfigQueryStrings(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 
@@ -50,7 +50,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginQueryStrin
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<String> items) {
+        public Builder items(@Nullable List<String> items) {
             this.items = items;
             return this;
         }

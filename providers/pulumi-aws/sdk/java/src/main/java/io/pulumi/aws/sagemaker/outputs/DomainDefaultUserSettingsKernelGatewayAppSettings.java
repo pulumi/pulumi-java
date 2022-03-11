@@ -30,11 +30,11 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
      */
     private final @Nullable List<String> lifecycleConfigArns;
 
-    @OutputCustomType.Constructor({"customImages","defaultResourceSpec","lifecycleConfigArns"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettingsKernelGatewayAppSettings(
-        @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
-        @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
-        @Nullable List<String> lifecycleConfigArns) {
+        @OutputCustomType.Parameter("customImages") @Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages,
+        @OutputCustomType.Parameter("defaultResourceSpec") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec,
+        @OutputCustomType.Parameter("lifecycleConfigArns") @Nullable List<String> lifecycleConfigArns) {
         this.customImages = customImages;
         this.defaultResourceSpec = defaultResourceSpec;
         this.lifecycleConfigArns = lifecycleConfigArns;
@@ -86,17 +86,17 @@ public final class DomainDefaultUserSettingsKernelGatewayAppSettings {
     	      this.lifecycleConfigArns = defaults.lifecycleConfigArns;
         }
 
-        public Builder setCustomImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages) {
+        public Builder customImages(@Nullable List<DomainDefaultUserSettingsKernelGatewayAppSettingsCustomImage> customImages) {
             this.customImages = customImages;
             return this;
         }
 
-        public Builder setDefaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec) {
+        public Builder defaultResourceSpec(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettingsDefaultResourceSpec defaultResourceSpec) {
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
 
-        public Builder setLifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
+        public Builder lifecycleConfigArns(@Nullable List<String> lifecycleConfigArns) {
             this.lifecycleConfigArns = lifecycleConfigArns;
             return this;
         }

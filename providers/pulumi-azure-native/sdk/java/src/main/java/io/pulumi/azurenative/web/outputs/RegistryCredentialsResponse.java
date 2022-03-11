@@ -27,11 +27,11 @@ public final class RegistryCredentialsResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"passwordSecretRef","server","username"})
+    @OutputCustomType.Constructor
     private RegistryCredentialsResponse(
-        @Nullable String passwordSecretRef,
-        @Nullable String server,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("passwordSecretRef") @Nullable String passwordSecretRef,
+        @OutputCustomType.Parameter("server") @Nullable String server,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.passwordSecretRef = passwordSecretRef;
         this.server = server;
         this.username = username;
@@ -83,17 +83,17 @@ public final class RegistryCredentialsResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPasswordSecretRef(@Nullable String passwordSecretRef) {
+        public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
             this.passwordSecretRef = passwordSecretRef;
             return this;
         }
 
-        public Builder setServer(@Nullable String server) {
+        public Builder server(@Nullable String server) {
             this.server = server;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

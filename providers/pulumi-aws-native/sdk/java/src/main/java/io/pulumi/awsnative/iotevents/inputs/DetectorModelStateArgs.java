@@ -97,42 +97,42 @@ public final class DetectorModelStateArgs extends io.pulumi.resources.ResourceAr
     	      this.stateName = defaults.stateName;
         }
 
-        public Builder setOnEnter(@Nullable Input<DetectorModelOnEnterArgs> onEnter) {
+        public Builder onEnter(@Nullable Input<DetectorModelOnEnterArgs> onEnter) {
             this.onEnter = onEnter;
             return this;
         }
 
-        public Builder setOnEnter(@Nullable DetectorModelOnEnterArgs onEnter) {
+        public Builder onEnter(@Nullable DetectorModelOnEnterArgs onEnter) {
             this.onEnter = Input.ofNullable(onEnter);
             return this;
         }
 
-        public Builder setOnExit(@Nullable Input<DetectorModelOnExitArgs> onExit) {
+        public Builder onExit(@Nullable Input<DetectorModelOnExitArgs> onExit) {
             this.onExit = onExit;
             return this;
         }
 
-        public Builder setOnExit(@Nullable DetectorModelOnExitArgs onExit) {
+        public Builder onExit(@Nullable DetectorModelOnExitArgs onExit) {
             this.onExit = Input.ofNullable(onExit);
             return this;
         }
 
-        public Builder setOnInput(@Nullable Input<DetectorModelOnInputArgs> onInput) {
+        public Builder onInput(@Nullable Input<DetectorModelOnInputArgs> onInput) {
             this.onInput = onInput;
             return this;
         }
 
-        public Builder setOnInput(@Nullable DetectorModelOnInputArgs onInput) {
+        public Builder onInput(@Nullable DetectorModelOnInputArgs onInput) {
             this.onInput = Input.ofNullable(onInput);
             return this;
         }
 
-        public Builder setStateName(Input<String> stateName) {
+        public Builder stateName(Input<String> stateName) {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }
 
-        public Builder setStateName(String stateName) {
+        public Builder stateName(String stateName) {
             this.stateName = Input.of(Objects.requireNonNull(stateName));
             return this;
         }

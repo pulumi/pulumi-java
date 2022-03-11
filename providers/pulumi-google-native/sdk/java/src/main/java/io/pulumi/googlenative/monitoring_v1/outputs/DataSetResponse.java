@@ -36,13 +36,13 @@ public final class DataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"legendTemplate","minAlignmentPeriod","plotType","targetAxis","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private DataSetResponse(
-        String legendTemplate,
-        String minAlignmentPeriod,
-        String plotType,
-        String targetAxis,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("legendTemplate") String legendTemplate,
+        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @OutputCustomType.Parameter("plotType") String plotType,
+        @OutputCustomType.Parameter("targetAxis") String targetAxis,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.legendTemplate = legendTemplate;
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.plotType = plotType;
@@ -114,27 +114,27 @@ public final class DataSetResponse {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setLegendTemplate(String legendTemplate) {
+        public Builder legendTemplate(String legendTemplate) {
             this.legendTemplate = Objects.requireNonNull(legendTemplate);
             return this;
         }
 
-        public Builder setMinAlignmentPeriod(String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setPlotType(String plotType) {
+        public Builder plotType(String plotType) {
             this.plotType = Objects.requireNonNull(plotType);
             return this;
         }
 
-        public Builder setTargetAxis(String targetAxis) {
+        public Builder targetAxis(String targetAxis) {
             this.targetAxis = Objects.requireNonNull(targetAxis);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }

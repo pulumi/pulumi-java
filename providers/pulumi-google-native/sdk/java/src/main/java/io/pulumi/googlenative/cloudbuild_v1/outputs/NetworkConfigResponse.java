@@ -20,10 +20,10 @@ public final class NetworkConfigResponse {
      */
     private final String peeredNetwork;
 
-    @OutputCustomType.Constructor({"egressOption","peeredNetwork"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String egressOption,
-        String peeredNetwork) {
+        @OutputCustomType.Parameter("egressOption") String egressOption,
+        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork) {
         this.egressOption = egressOption;
         this.peeredNetwork = peeredNetwork;
     }
@@ -65,12 +65,12 @@ public final class NetworkConfigResponse {
     	      this.peeredNetwork = defaults.peeredNetwork;
         }
 
-        public Builder setEgressOption(String egressOption) {
+        public Builder egressOption(String egressOption) {
             this.egressOption = Objects.requireNonNull(egressOption);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }

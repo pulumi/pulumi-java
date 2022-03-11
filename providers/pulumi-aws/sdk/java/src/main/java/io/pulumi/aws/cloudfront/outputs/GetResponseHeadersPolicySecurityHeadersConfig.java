@@ -46,14 +46,14 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig {
      */
     private final List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicies","contentTypeOptions","frameOptions","referrerPolicies","strictTransportSecurities","xssProtections"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfig(
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions,
-        List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
-        List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
-        List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
+        @OutputCustomType.Parameter("contentSecurityPolicies") List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies,
+        @OutputCustomType.Parameter("contentTypeOptions") List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions,
+        @OutputCustomType.Parameter("frameOptions") List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions,
+        @OutputCustomType.Parameter("referrerPolicies") List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies,
+        @OutputCustomType.Parameter("strictTransportSecurities") List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities,
+        @OutputCustomType.Parameter("xssProtections") List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
         this.contentSecurityPolicies = contentSecurityPolicies;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;
@@ -135,32 +135,32 @@ public final class GetResponseHeadersPolicySecurityHeadersConfig {
     	      this.xssProtections = defaults.xssProtections;
         }
 
-        public Builder setContentSecurityPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies) {
+        public Builder contentSecurityPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigContentSecurityPolicy> contentSecurityPolicies) {
             this.contentSecurityPolicies = Objects.requireNonNull(contentSecurityPolicies);
             return this;
         }
 
-        public Builder setContentTypeOptions(List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions) {
+        public Builder contentTypeOptions(List<GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption> contentTypeOptions) {
             this.contentTypeOptions = Objects.requireNonNull(contentTypeOptions);
             return this;
         }
 
-        public Builder setFrameOptions(List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions) {
+        public Builder frameOptions(List<GetResponseHeadersPolicySecurityHeadersConfigFrameOption> frameOptions) {
             this.frameOptions = Objects.requireNonNull(frameOptions);
             return this;
         }
 
-        public Builder setReferrerPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies) {
+        public Builder referrerPolicies(List<GetResponseHeadersPolicySecurityHeadersConfigReferrerPolicy> referrerPolicies) {
             this.referrerPolicies = Objects.requireNonNull(referrerPolicies);
             return this;
         }
 
-        public Builder setStrictTransportSecurities(List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities) {
+        public Builder strictTransportSecurities(List<GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity> strictTransportSecurities) {
             this.strictTransportSecurities = Objects.requireNonNull(strictTransportSecurities);
             return this;
         }
 
-        public Builder setXssProtections(List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
+        public Builder xssProtections(List<GetResponseHeadersPolicySecurityHeadersConfigXssProtection> xssProtections) {
             this.xssProtections = Objects.requireNonNull(xssProtections);
             return this;
         }

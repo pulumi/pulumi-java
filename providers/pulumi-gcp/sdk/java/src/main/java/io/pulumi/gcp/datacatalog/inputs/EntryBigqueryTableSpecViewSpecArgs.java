@@ -49,12 +49,12 @@ public final class EntryBigqueryTableSpecViewSpecArgs extends io.pulumi.resource
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder setViewQuery(@Nullable Input<String> viewQuery) {
+        public Builder viewQuery(@Nullable Input<String> viewQuery) {
             this.viewQuery = viewQuery;
             return this;
         }
 
-        public Builder setViewQuery(@Nullable String viewQuery) {
+        public Builder viewQuery(@Nullable String viewQuery) {
             this.viewQuery = Input.ofNullable(viewQuery);
             return this;
         }

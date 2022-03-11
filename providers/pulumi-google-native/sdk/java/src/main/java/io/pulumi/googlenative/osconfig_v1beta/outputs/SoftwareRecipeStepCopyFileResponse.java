@@ -31,12 +31,12 @@ public final class SoftwareRecipeStepCopyFileResponse {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"artifactId","destination","overwrite","permissions"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepCopyFileResponse(
-        String artifactId,
-        String destination,
-        Boolean overwrite,
-        String permissions) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("overwrite") Boolean overwrite,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;
@@ -98,22 +98,22 @@ public final class SoftwareRecipeStepCopyFileResponse {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOverwrite(Boolean overwrite) {
+        public Builder overwrite(Boolean overwrite) {
             this.overwrite = Objects.requireNonNull(overwrite);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

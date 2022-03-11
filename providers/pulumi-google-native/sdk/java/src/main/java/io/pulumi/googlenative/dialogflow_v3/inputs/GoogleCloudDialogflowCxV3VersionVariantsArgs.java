@@ -58,12 +58,12 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
     	      this.variants = defaults.variants;
         }
 
-        public Builder setVariants(@Nullable Input<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants) {
+        public Builder variants(@Nullable Input<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants) {
             this.variants = variants;
             return this;
         }
 
-        public Builder setVariants(@Nullable List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs> variants) {
+        public Builder variants(@Nullable List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs> variants) {
             this.variants = Input.ofNullable(variants);
             return this;
         }

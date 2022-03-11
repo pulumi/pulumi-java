@@ -14,10 +14,10 @@ public final class GetDomainNameApiAssociationResult {
     private final @Nullable String apiAssociationIdentifier;
     private final @Nullable String apiId;
 
-    @OutputCustomType.Constructor({"apiAssociationIdentifier","apiId"})
+    @OutputCustomType.Constructor
     private GetDomainNameApiAssociationResult(
-        @Nullable String apiAssociationIdentifier,
-        @Nullable String apiId) {
+        @OutputCustomType.Parameter("apiAssociationIdentifier") @Nullable String apiAssociationIdentifier,
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId) {
         this.apiAssociationIdentifier = apiAssociationIdentifier;
         this.apiId = apiId;
     }
@@ -51,12 +51,12 @@ public final class GetDomainNameApiAssociationResult {
     	      this.apiId = defaults.apiId;
         }
 
-        public Builder setApiAssociationIdentifier(@Nullable String apiAssociationIdentifier) {
+        public Builder apiAssociationIdentifier(@Nullable String apiAssociationIdentifier) {
             this.apiAssociationIdentifier = apiAssociationIdentifier;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }

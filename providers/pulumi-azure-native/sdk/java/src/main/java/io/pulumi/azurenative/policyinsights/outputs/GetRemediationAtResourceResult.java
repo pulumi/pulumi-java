@@ -69,19 +69,19 @@ public final class GetRemediationAtResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdOn","deploymentStatus","filters","id","lastUpdatedOn","name","policyAssignmentId","policyDefinitionReferenceId","provisioningState","resourceDiscoveryMode","type"})
+    @OutputCustomType.Constructor
     private GetRemediationAtResourceResult(
-        String createdOn,
-        RemediationDeploymentSummaryResponse deploymentStatus,
-        @Nullable RemediationFiltersResponse filters,
-        String id,
-        String lastUpdatedOn,
-        String name,
-        @Nullable String policyAssignmentId,
-        @Nullable String policyDefinitionReferenceId,
-        String provisioningState,
-        @Nullable String resourceDiscoveryMode,
-        String type) {
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("deploymentStatus") RemediationDeploymentSummaryResponse deploymentStatus,
+        @OutputCustomType.Parameter("filters") @Nullable RemediationFiltersResponse filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedOn") String lastUpdatedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyAssignmentId") @Nullable String policyAssignmentId,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceDiscoveryMode") @Nullable String resourceDiscoveryMode,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdOn = createdOn;
         this.deploymentStatus = deploymentStatus;
         this.filters = filters;
@@ -213,57 +213,57 @@ public final class GetRemediationAtResourceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDeploymentStatus(RemediationDeploymentSummaryResponse deploymentStatus) {
+        public Builder deploymentStatus(RemediationDeploymentSummaryResponse deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setFilters(@Nullable RemediationFiltersResponse filters) {
+        public Builder filters(@Nullable RemediationFiltersResponse filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedOn(String lastUpdatedOn) {
+        public Builder lastUpdatedOn(String lastUpdatedOn) {
             this.lastUpdatedOn = Objects.requireNonNull(lastUpdatedOn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyAssignmentId(@Nullable String policyAssignmentId) {
+        public Builder policyAssignmentId(@Nullable String policyAssignmentId) {
             this.policyAssignmentId = policyAssignmentId;
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceDiscoveryMode(@Nullable String resourceDiscoveryMode) {
+        public Builder resourceDiscoveryMode(@Nullable String resourceDiscoveryMode) {
             this.resourceDiscoveryMode = resourceDiscoveryMode;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

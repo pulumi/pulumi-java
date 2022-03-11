@@ -24,10 +24,10 @@ public final class ConnectionMonitorEndpointFilterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"items","type"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointFilterResponse(
-        @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("items") @Nullable List<ConnectionMonitorEndpointFilterItemResponse> items,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.items = items;
         this.type = type;
     }
@@ -69,12 +69,12 @@ public final class ConnectionMonitorEndpointFilterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setItems(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
+        public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemResponse> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

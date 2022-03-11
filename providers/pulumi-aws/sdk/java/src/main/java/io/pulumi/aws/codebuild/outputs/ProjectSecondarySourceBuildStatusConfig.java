@@ -22,10 +22,10 @@ public final class ProjectSecondarySourceBuildStatusConfig {
      */
     private final @Nullable String targetUrl;
 
-    @OutputCustomType.Constructor({"context","targetUrl"})
+    @OutputCustomType.Constructor
     private ProjectSecondarySourceBuildStatusConfig(
-        @Nullable String context,
-        @Nullable String targetUrl) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("targetUrl") @Nullable String targetUrl) {
         this.context = context;
         this.targetUrl = targetUrl;
     }
@@ -67,12 +67,12 @@ public final class ProjectSecondarySourceBuildStatusConfig {
     	      this.targetUrl = defaults.targetUrl;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
 
-        public Builder setTargetUrl(@Nullable String targetUrl) {
+        public Builder targetUrl(@Nullable String targetUrl) {
             this.targetUrl = targetUrl;
             return this;
         }

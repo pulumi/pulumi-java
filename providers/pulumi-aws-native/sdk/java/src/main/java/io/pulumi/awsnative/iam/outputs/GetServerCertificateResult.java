@@ -21,11 +21,11 @@ public final class GetServerCertificateResult {
     private final @Nullable String path;
     private final @Nullable List<ServerCertificateTag> tags;
 
-    @OutputCustomType.Constructor({"arn","path","tags"})
+    @OutputCustomType.Constructor
     private GetServerCertificateResult(
-        @Nullable String arn,
-        @Nullable String path,
-        @Nullable List<ServerCertificateTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServerCertificateTag> tags) {
         this.arn = arn;
         this.path = path;
         this.tags = tags;
@@ -69,17 +69,17 @@ public final class GetServerCertificateResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServerCertificateTag> tags) {
+        public Builder tags(@Nullable List<ServerCertificateTag> tags) {
             this.tags = tags;
             return this;
         }

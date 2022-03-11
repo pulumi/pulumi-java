@@ -55,7 +55,7 @@ public final class PrivateConnectivityResponse extends io.pulumi.resources.Invok
     	      this.privateConnection = defaults.privateConnection;
         }
 
-        public Builder setPrivateConnection(String privateConnection) {
+        public Builder privateConnection(String privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }

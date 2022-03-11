@@ -26,11 +26,11 @@ public final class KeyOperationAttestationResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"certChains","content","format"})
+    @OutputCustomType.Constructor
     private KeyOperationAttestationResponse(
-        CertificateChainsResponse certChains,
-        String content,
-        String format) {
+        @OutputCustomType.Parameter("certChains") CertificateChainsResponse certChains,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("format") String format) {
         this.certChains = certChains;
         this.content = content;
         this.format = format;
@@ -82,17 +82,17 @@ public final class KeyOperationAttestationResponse {
     	      this.format = defaults.format;
         }
 
-        public Builder setCertChains(CertificateChainsResponse certChains) {
+        public Builder certChains(CertificateChainsResponse certChains) {
             this.certChains = Objects.requireNonNull(certChains);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }

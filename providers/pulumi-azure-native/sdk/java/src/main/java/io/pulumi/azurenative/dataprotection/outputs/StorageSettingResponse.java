@@ -22,10 +22,10 @@ public final class StorageSettingResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"datastoreType","type"})
+    @OutputCustomType.Constructor
     private StorageSettingResponse(
-        @Nullable String datastoreType,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("datastoreType") @Nullable String datastoreType,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.datastoreType = datastoreType;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class StorageSettingResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatastoreType(@Nullable String datastoreType) {
+        public Builder datastoreType(@Nullable String datastoreType) {
             this.datastoreType = datastoreType;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -19,13 +19,13 @@ public final class DistributionLegacyCustomOrigin {
     private final String originProtocolPolicy;
     private final List<String> originSSLProtocols;
 
-    @OutputCustomType.Constructor({"dNSName","hTTPPort","hTTPSPort","originProtocolPolicy","originSSLProtocols"})
+    @OutputCustomType.Constructor
     private DistributionLegacyCustomOrigin(
-        String dNSName,
-        @Nullable Integer hTTPPort,
-        @Nullable Integer hTTPSPort,
-        String originProtocolPolicy,
-        List<String> originSSLProtocols) {
+        @OutputCustomType.Parameter("dNSName") String dNSName,
+        @OutputCustomType.Parameter("hTTPPort") @Nullable Integer hTTPPort,
+        @OutputCustomType.Parameter("hTTPSPort") @Nullable Integer hTTPSPort,
+        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @OutputCustomType.Parameter("originSSLProtocols") List<String> originSSLProtocols) {
         this.dNSName = dNSName;
         this.hTTPPort = hTTPPort;
         this.hTTPSPort = hTTPSPort;
@@ -77,27 +77,27 @@ public final class DistributionLegacyCustomOrigin {
     	      this.originSSLProtocols = defaults.originSSLProtocols;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setHTTPPort(@Nullable Integer hTTPPort) {
+        public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = hTTPPort;
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Integer hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(String originProtocolPolicy) {
+        public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
-        public Builder setOriginSSLProtocols(List<String> originSSLProtocols) {
+        public Builder originSSLProtocols(List<String> originSSLProtocols) {
             this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
             return this;
         }

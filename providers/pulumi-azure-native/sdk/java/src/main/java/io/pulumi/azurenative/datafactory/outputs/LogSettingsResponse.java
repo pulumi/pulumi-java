@@ -29,11 +29,11 @@ public final class LogSettingsResponse {
      */
     private final LogLocationSettingsResponse logLocationSettings;
 
-    @OutputCustomType.Constructor({"copyActivityLogSettings","enableCopyActivityLog","logLocationSettings"})
+    @OutputCustomType.Constructor
     private LogSettingsResponse(
-        @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings,
-        @Nullable Object enableCopyActivityLog,
-        LogLocationSettingsResponse logLocationSettings) {
+        @OutputCustomType.Parameter("copyActivityLogSettings") @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings,
+        @OutputCustomType.Parameter("enableCopyActivityLog") @Nullable Object enableCopyActivityLog,
+        @OutputCustomType.Parameter("logLocationSettings") LogLocationSettingsResponse logLocationSettings) {
         this.copyActivityLogSettings = copyActivityLogSettings;
         this.enableCopyActivityLog = enableCopyActivityLog;
         this.logLocationSettings = logLocationSettings;
@@ -85,17 +85,17 @@ public final class LogSettingsResponse {
     	      this.logLocationSettings = defaults.logLocationSettings;
         }
 
-        public Builder setCopyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
+        public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsResponse copyActivityLogSettings) {
             this.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
 
-        public Builder setEnableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
+        public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             this.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
 
-        public Builder setLogLocationSettings(LogLocationSettingsResponse logLocationSettings) {
+        public Builder logLocationSettings(LogLocationSettingsResponse logLocationSettings) {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }

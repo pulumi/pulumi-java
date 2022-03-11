@@ -69,19 +69,19 @@ public final class GetServiceResult {
      */
     private final String virtualSubnetId;
 
-    @OutputCustomType.Constructor({"etag","id","kind","location","name","provisioningState","publicKey","sku","tags","type","virtualSubnetId"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        @Nullable ServiceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String virtualSubnetId) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("sku") @Nullable ServiceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualSubnetId") String virtualSubnetId) {
         this.etag = etag;
         this.id = id;
         this.kind = kind;
@@ -213,57 +213,57 @@ public final class GetServiceResult {
     	      this.virtualSubnetId = defaults.virtualSubnetId;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setSku(@Nullable ServiceSkuResponse sku) {
+        public Builder sku(@Nullable ServiceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualSubnetId(String virtualSubnetId) {
+        public Builder virtualSubnetId(String virtualSubnetId) {
             this.virtualSubnetId = Objects.requireNonNull(virtualSubnetId);
             return this;
         }

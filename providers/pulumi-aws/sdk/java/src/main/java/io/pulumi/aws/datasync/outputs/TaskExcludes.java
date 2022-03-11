@@ -22,10 +22,10 @@ public final class TaskExcludes {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"filterType","value"})
+    @OutputCustomType.Constructor
     private TaskExcludes(
-        @Nullable String filterType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("filterType") @Nullable String filterType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class TaskExcludes {
     	      this.value = defaults.value;
         }
 
-        public Builder setFilterType(@Nullable String filterType) {
+        public Builder filterType(@Nullable String filterType) {
             this.filterType = filterType;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

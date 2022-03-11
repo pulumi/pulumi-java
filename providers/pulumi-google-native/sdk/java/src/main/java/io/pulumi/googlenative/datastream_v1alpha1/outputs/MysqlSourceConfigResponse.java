@@ -20,10 +20,10 @@ public final class MysqlSourceConfigResponse {
      */
     private final MysqlRdbmsResponse rejectlist;
 
-    @OutputCustomType.Constructor({"allowlist","rejectlist"})
+    @OutputCustomType.Constructor
     private MysqlSourceConfigResponse(
-        MysqlRdbmsResponse allowlist,
-        MysqlRdbmsResponse rejectlist) {
+        @OutputCustomType.Parameter("allowlist") MysqlRdbmsResponse allowlist,
+        @OutputCustomType.Parameter("rejectlist") MysqlRdbmsResponse rejectlist) {
         this.allowlist = allowlist;
         this.rejectlist = rejectlist;
     }
@@ -65,12 +65,12 @@ public final class MysqlSourceConfigResponse {
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder setAllowlist(MysqlRdbmsResponse allowlist) {
+        public Builder allowlist(MysqlRdbmsResponse allowlist) {
             this.allowlist = Objects.requireNonNull(allowlist);
             return this;
         }
 
-        public Builder setRejectlist(MysqlRdbmsResponse rejectlist) {
+        public Builder rejectlist(MysqlRdbmsResponse rejectlist) {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }

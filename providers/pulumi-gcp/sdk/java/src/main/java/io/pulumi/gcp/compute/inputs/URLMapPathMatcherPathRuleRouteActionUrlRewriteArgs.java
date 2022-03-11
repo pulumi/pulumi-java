@@ -74,22 +74,22 @@ public final class URLMapPathMatcherPathRuleRouteActionUrlRewriteArgs extends io
     	      this.pathPrefixRewrite = defaults.pathPrefixRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable Input<String> hostRewrite) {
+        public Builder hostRewrite(@Nullable Input<String> hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = Input.ofNullable(hostRewrite);
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable Input<String> pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable Input<String> pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = Input.ofNullable(pathPrefixRewrite);
             return this;
         }

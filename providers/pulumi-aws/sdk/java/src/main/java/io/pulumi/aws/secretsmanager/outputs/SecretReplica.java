@@ -37,13 +37,13 @@ public final class SecretReplica {
      */
     private final @Nullable String statusMessage;
 
-    @OutputCustomType.Constructor({"kmsKeyId","lastAccessedDate","region","status","statusMessage"})
+    @OutputCustomType.Constructor
     private SecretReplica(
-        @Nullable String kmsKeyId,
-        @Nullable String lastAccessedDate,
-        String region,
-        @Nullable String status,
-        @Nullable String statusMessage) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("lastAccessedDate") @Nullable String lastAccessedDate,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage) {
         this.kmsKeyId = kmsKeyId;
         this.lastAccessedDate = lastAccessedDate;
         this.region = region;
@@ -115,27 +115,27 @@ public final class SecretReplica {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setLastAccessedDate(@Nullable String lastAccessedDate) {
+        public Builder lastAccessedDate(@Nullable String lastAccessedDate) {
             this.lastAccessedDate = lastAccessedDate;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }

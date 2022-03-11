@@ -40,14 +40,14 @@ public final class SystemDataResponse {
      */
     private final String lastModifiedByType;
 
-    @OutputCustomType.Constructor({"createdAt","createdBy","createdByType","lastModifiedAt","lastModifiedBy","lastModifiedByType"})
+    @OutputCustomType.Constructor
     private SystemDataResponse(
-        String createdAt,
-        String createdBy,
-        String createdByType,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        String lastModifiedByType) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("createdByType") String createdByType,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedByType") String lastModifiedByType) {
         this.createdAt = createdAt;
         this.createdBy = createdBy;
         this.createdByType = createdByType;
@@ -129,32 +129,32 @@ public final class SystemDataResponse {
     	      this.lastModifiedByType = defaults.lastModifiedByType;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedByType(String createdByType) {
+        public Builder createdByType(String createdByType) {
             this.createdByType = Objects.requireNonNull(createdByType);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(String lastModifiedBy) {
+        public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedByType(String lastModifiedByType) {
+        public Builder lastModifiedByType(String lastModifiedByType) {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
         }

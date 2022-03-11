@@ -41,13 +41,13 @@ public final class ManagementGroupDetailsResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"parent","path","updatedBy","updatedTime","version"})
+    @OutputCustomType.Constructor
     private ManagementGroupDetailsResponse(
-        @Nullable ParentGroupInfoResponse parent,
-        @Nullable List<ManagementGroupPathElementResponse> path,
-        @Nullable String updatedBy,
-        @Nullable String updatedTime,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("parent") @Nullable ParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("path") @Nullable List<ManagementGroupPathElementResponse> path,
+        @OutputCustomType.Parameter("updatedBy") @Nullable String updatedBy,
+        @OutputCustomType.Parameter("updatedTime") @Nullable String updatedTime,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.parent = parent;
         this.path = path;
         this.updatedBy = updatedBy;
@@ -119,27 +119,27 @@ public final class ManagementGroupDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setParent(@Nullable ParentGroupInfoResponse parent) {
+        public Builder parent(@Nullable ParentGroupInfoResponse parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setPath(@Nullable List<ManagementGroupPathElementResponse> path) {
+        public Builder path(@Nullable List<ManagementGroupPathElementResponse> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable String updatedBy) {
+        public Builder updatedBy(@Nullable String updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setUpdatedTime(@Nullable String updatedTime) {
+        public Builder updatedTime(@Nullable String updatedTime) {
             this.updatedTime = updatedTime;
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
         }

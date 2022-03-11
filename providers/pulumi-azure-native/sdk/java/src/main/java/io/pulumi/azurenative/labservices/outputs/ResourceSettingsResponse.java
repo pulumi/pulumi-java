@@ -44,14 +44,14 @@ public final class ResourceSettingsResponse {
      */
     private final @Nullable String size;
 
-    @OutputCustomType.Constructor({"cores","galleryImageResourceId","id","imageName","referenceVm","size"})
+    @OutputCustomType.Constructor
     private ResourceSettingsResponse(
-        Integer cores,
-        @Nullable String galleryImageResourceId,
-        String id,
-        String imageName,
-        ReferenceVmResponse referenceVm,
-        @Nullable String size) {
+        @OutputCustomType.Parameter("cores") Integer cores,
+        @OutputCustomType.Parameter("galleryImageResourceId") @Nullable String galleryImageResourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("referenceVm") ReferenceVmResponse referenceVm,
+        @OutputCustomType.Parameter("size") @Nullable String size) {
         this.cores = cores;
         this.galleryImageResourceId = galleryImageResourceId;
         this.id = id;
@@ -133,32 +133,32 @@ public final class ResourceSettingsResponse {
     	      this.size = defaults.size;
         }
 
-        public Builder setCores(Integer cores) {
+        public Builder cores(Integer cores) {
             this.cores = Objects.requireNonNull(cores);
             return this;
         }
 
-        public Builder setGalleryImageResourceId(@Nullable String galleryImageResourceId) {
+        public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
             this.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setReferenceVm(ReferenceVmResponse referenceVm) {
+        public Builder referenceVm(ReferenceVmResponse referenceVm) {
             this.referenceVm = Objects.requireNonNull(referenceVm);
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }

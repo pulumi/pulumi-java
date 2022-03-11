@@ -15,8 +15,8 @@ public final class ConnectorProfileSingularConnectorProfileCredentials {
      */
     private final String apiKey;
 
-    @OutputCustomType.Constructor({"apiKey"})
-    private ConnectorProfileSingularConnectorProfileCredentials(String apiKey) {
+    @OutputCustomType.Constructor
+    private ConnectorProfileSingularConnectorProfileCredentials(@OutputCustomType.Parameter("apiKey") String apiKey) {
         this.apiKey = apiKey;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorProfileSingularConnectorProfileCredentials {
     	      this.apiKey = defaults.apiKey;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }

@@ -153,36 +153,36 @@ public final class GetDeviceResult {
      */
     private final List<String> wifiMacAddresses;
 
-    @OutputCustomType.Constructor({"androidSpecificAttributes","assetTag","basebandVersion","bootloaderVersion","brand","buildNumber","compromisedState","createTime","deviceType","enabledDeveloperOptions","enabledUsbDebugging","encryptionState","imei","kernelVersion","lastSyncTime","managementState","manufacturer","meid","model","name","networkOperator","osVersion","otherAccounts","ownerType","releaseVersion","securityPatchTime","serialNumber","wifiMacAddresses"})
+    @OutputCustomType.Constructor
     private GetDeviceResult(
-        GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes,
-        String assetTag,
-        String basebandVersion,
-        String bootloaderVersion,
-        String brand,
-        String buildNumber,
-        String compromisedState,
-        String createTime,
-        String deviceType,
-        Boolean enabledDeveloperOptions,
-        Boolean enabledUsbDebugging,
-        String encryptionState,
-        String imei,
-        String kernelVersion,
-        String lastSyncTime,
-        String managementState,
-        String manufacturer,
-        String meid,
-        String model,
-        String name,
-        String networkOperator,
-        String osVersion,
-        List<String> otherAccounts,
-        String ownerType,
-        String releaseVersion,
-        String securityPatchTime,
-        String serialNumber,
-        List<String> wifiMacAddresses) {
+        @OutputCustomType.Parameter("androidSpecificAttributes") GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes,
+        @OutputCustomType.Parameter("assetTag") String assetTag,
+        @OutputCustomType.Parameter("basebandVersion") String basebandVersion,
+        @OutputCustomType.Parameter("bootloaderVersion") String bootloaderVersion,
+        @OutputCustomType.Parameter("brand") String brand,
+        @OutputCustomType.Parameter("buildNumber") String buildNumber,
+        @OutputCustomType.Parameter("compromisedState") String compromisedState,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deviceType") String deviceType,
+        @OutputCustomType.Parameter("enabledDeveloperOptions") Boolean enabledDeveloperOptions,
+        @OutputCustomType.Parameter("enabledUsbDebugging") Boolean enabledUsbDebugging,
+        @OutputCustomType.Parameter("encryptionState") String encryptionState,
+        @OutputCustomType.Parameter("imei") String imei,
+        @OutputCustomType.Parameter("kernelVersion") String kernelVersion,
+        @OutputCustomType.Parameter("lastSyncTime") String lastSyncTime,
+        @OutputCustomType.Parameter("managementState") String managementState,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("meid") String meid,
+        @OutputCustomType.Parameter("model") String model,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkOperator") String networkOperator,
+        @OutputCustomType.Parameter("osVersion") String osVersion,
+        @OutputCustomType.Parameter("otherAccounts") List<String> otherAccounts,
+        @OutputCustomType.Parameter("ownerType") String ownerType,
+        @OutputCustomType.Parameter("releaseVersion") String releaseVersion,
+        @OutputCustomType.Parameter("securityPatchTime") String securityPatchTime,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("wifiMacAddresses") List<String> wifiMacAddresses) {
         this.androidSpecificAttributes = androidSpecificAttributes;
         this.assetTag = assetTag;
         this.basebandVersion = basebandVersion;
@@ -484,142 +484,142 @@ public final class GetDeviceResult {
     	      this.wifiMacAddresses = defaults.wifiMacAddresses;
         }
 
-        public Builder setAndroidSpecificAttributes(GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes) {
+        public Builder androidSpecificAttributes(GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse androidSpecificAttributes) {
             this.androidSpecificAttributes = Objects.requireNonNull(androidSpecificAttributes);
             return this;
         }
 
-        public Builder setAssetTag(String assetTag) {
+        public Builder assetTag(String assetTag) {
             this.assetTag = Objects.requireNonNull(assetTag);
             return this;
         }
 
-        public Builder setBasebandVersion(String basebandVersion) {
+        public Builder basebandVersion(String basebandVersion) {
             this.basebandVersion = Objects.requireNonNull(basebandVersion);
             return this;
         }
 
-        public Builder setBootloaderVersion(String bootloaderVersion) {
+        public Builder bootloaderVersion(String bootloaderVersion) {
             this.bootloaderVersion = Objects.requireNonNull(bootloaderVersion);
             return this;
         }
 
-        public Builder setBrand(String brand) {
+        public Builder brand(String brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
 
-        public Builder setBuildNumber(String buildNumber) {
+        public Builder buildNumber(String buildNumber) {
             this.buildNumber = Objects.requireNonNull(buildNumber);
             return this;
         }
 
-        public Builder setCompromisedState(String compromisedState) {
+        public Builder compromisedState(String compromisedState) {
             this.compromisedState = Objects.requireNonNull(compromisedState);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeviceType(String deviceType) {
+        public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
 
-        public Builder setEnabledDeveloperOptions(Boolean enabledDeveloperOptions) {
+        public Builder enabledDeveloperOptions(Boolean enabledDeveloperOptions) {
             this.enabledDeveloperOptions = Objects.requireNonNull(enabledDeveloperOptions);
             return this;
         }
 
-        public Builder setEnabledUsbDebugging(Boolean enabledUsbDebugging) {
+        public Builder enabledUsbDebugging(Boolean enabledUsbDebugging) {
             this.enabledUsbDebugging = Objects.requireNonNull(enabledUsbDebugging);
             return this;
         }
 
-        public Builder setEncryptionState(String encryptionState) {
+        public Builder encryptionState(String encryptionState) {
             this.encryptionState = Objects.requireNonNull(encryptionState);
             return this;
         }
 
-        public Builder setImei(String imei) {
+        public Builder imei(String imei) {
             this.imei = Objects.requireNonNull(imei);
             return this;
         }
 
-        public Builder setKernelVersion(String kernelVersion) {
+        public Builder kernelVersion(String kernelVersion) {
             this.kernelVersion = Objects.requireNonNull(kernelVersion);
             return this;
         }
 
-        public Builder setLastSyncTime(String lastSyncTime) {
+        public Builder lastSyncTime(String lastSyncTime) {
             this.lastSyncTime = Objects.requireNonNull(lastSyncTime);
             return this;
         }
 
-        public Builder setManagementState(String managementState) {
+        public Builder managementState(String managementState) {
             this.managementState = Objects.requireNonNull(managementState);
             return this;
         }
 
-        public Builder setManufacturer(String manufacturer) {
+        public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
 
-        public Builder setMeid(String meid) {
+        public Builder meid(String meid) {
             this.meid = Objects.requireNonNull(meid);
             return this;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkOperator(String networkOperator) {
+        public Builder networkOperator(String networkOperator) {
             this.networkOperator = Objects.requireNonNull(networkOperator);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
 
-        public Builder setOtherAccounts(List<String> otherAccounts) {
+        public Builder otherAccounts(List<String> otherAccounts) {
             this.otherAccounts = Objects.requireNonNull(otherAccounts);
             return this;
         }
 
-        public Builder setOwnerType(String ownerType) {
+        public Builder ownerType(String ownerType) {
             this.ownerType = Objects.requireNonNull(ownerType);
             return this;
         }
 
-        public Builder setReleaseVersion(String releaseVersion) {
+        public Builder releaseVersion(String releaseVersion) {
             this.releaseVersion = Objects.requireNonNull(releaseVersion);
             return this;
         }
 
-        public Builder setSecurityPatchTime(String securityPatchTime) {
+        public Builder securityPatchTime(String securityPatchTime) {
             this.securityPatchTime = Objects.requireNonNull(securityPatchTime);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setWifiMacAddresses(List<String> wifiMacAddresses) {
+        public Builder wifiMacAddresses(List<String> wifiMacAddresses) {
             this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
             return this;
         }

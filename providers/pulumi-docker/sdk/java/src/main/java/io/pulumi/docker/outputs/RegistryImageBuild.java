@@ -50,40 +50,40 @@ public final class RegistryImageBuild {
     private final @Nullable List<RegistryImageBuildUlimit> ulimits;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"authConfigs","buildArgs","buildId","cacheFroms","cgroupParent","context","cpuPeriod","cpuQuota","cpuSetCpus","cpuSetMems","cpuShares","dockerfile","extraHosts","forceRemove","isolation","labels","memory","memorySwap","networkMode","noCache","platform","pullParent","remoteContext","remove","securityOpts","sessionId","shmSize","squash","suppressOutput","target","ulimits","version"})
+    @OutputCustomType.Constructor
     private RegistryImageBuild(
-        @Nullable List<RegistryImageBuildAuthConfig> authConfigs,
-        @Nullable Map<String,String> buildArgs,
-        @Nullable String buildId,
-        @Nullable List<String> cacheFroms,
-        @Nullable String cgroupParent,
-        String context,
-        @Nullable Integer cpuPeriod,
-        @Nullable Integer cpuQuota,
-        @Nullable String cpuSetCpus,
-        @Nullable String cpuSetMems,
-        @Nullable Integer cpuShares,
-        @Nullable String dockerfile,
-        @Nullable List<String> extraHosts,
-        @Nullable Boolean forceRemove,
-        @Nullable String isolation,
-        @Nullable Map<String,String> labels,
-        @Nullable Integer memory,
-        @Nullable Integer memorySwap,
-        @Nullable String networkMode,
-        @Nullable Boolean noCache,
-        @Nullable String platform,
-        @Nullable Boolean pullParent,
-        @Nullable String remoteContext,
-        @Nullable Boolean remove,
-        @Nullable List<String> securityOpts,
-        @Nullable String sessionId,
-        @Nullable Integer shmSize,
-        @Nullable Boolean squash,
-        @Nullable Boolean suppressOutput,
-        @Nullable String target,
-        @Nullable List<RegistryImageBuildUlimit> ulimits,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("authConfigs") @Nullable List<RegistryImageBuildAuthConfig> authConfigs,
+        @OutputCustomType.Parameter("buildArgs") @Nullable Map<String,String> buildArgs,
+        @OutputCustomType.Parameter("buildId") @Nullable String buildId,
+        @OutputCustomType.Parameter("cacheFroms") @Nullable List<String> cacheFroms,
+        @OutputCustomType.Parameter("cgroupParent") @Nullable String cgroupParent,
+        @OutputCustomType.Parameter("context") String context,
+        @OutputCustomType.Parameter("cpuPeriod") @Nullable Integer cpuPeriod,
+        @OutputCustomType.Parameter("cpuQuota") @Nullable Integer cpuQuota,
+        @OutputCustomType.Parameter("cpuSetCpus") @Nullable String cpuSetCpus,
+        @OutputCustomType.Parameter("cpuSetMems") @Nullable String cpuSetMems,
+        @OutputCustomType.Parameter("cpuShares") @Nullable Integer cpuShares,
+        @OutputCustomType.Parameter("dockerfile") @Nullable String dockerfile,
+        @OutputCustomType.Parameter("extraHosts") @Nullable List<String> extraHosts,
+        @OutputCustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
+        @OutputCustomType.Parameter("isolation") @Nullable String isolation,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("memory") @Nullable Integer memory,
+        @OutputCustomType.Parameter("memorySwap") @Nullable Integer memorySwap,
+        @OutputCustomType.Parameter("networkMode") @Nullable String networkMode,
+        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @OutputCustomType.Parameter("platform") @Nullable String platform,
+        @OutputCustomType.Parameter("pullParent") @Nullable Boolean pullParent,
+        @OutputCustomType.Parameter("remoteContext") @Nullable String remoteContext,
+        @OutputCustomType.Parameter("remove") @Nullable Boolean remove,
+        @OutputCustomType.Parameter("securityOpts") @Nullable List<String> securityOpts,
+        @OutputCustomType.Parameter("sessionId") @Nullable String sessionId,
+        @OutputCustomType.Parameter("shmSize") @Nullable Integer shmSize,
+        @OutputCustomType.Parameter("squash") @Nullable Boolean squash,
+        @OutputCustomType.Parameter("suppressOutput") @Nullable Boolean suppressOutput,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("ulimits") @Nullable List<RegistryImageBuildUlimit> ulimits,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.authConfigs = authConfigs;
         this.buildArgs = buildArgs;
         this.buildId = buildId;
@@ -297,162 +297,162 @@ public final class RegistryImageBuild {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuthConfigs(@Nullable List<RegistryImageBuildAuthConfig> authConfigs) {
+        public Builder authConfigs(@Nullable List<RegistryImageBuildAuthConfig> authConfigs) {
             this.authConfigs = authConfigs;
             return this;
         }
 
-        public Builder setBuildArgs(@Nullable Map<String,String> buildArgs) {
+        public Builder buildArgs(@Nullable Map<String,String> buildArgs) {
             this.buildArgs = buildArgs;
             return this;
         }
 
-        public Builder setBuildId(@Nullable String buildId) {
+        public Builder buildId(@Nullable String buildId) {
             this.buildId = buildId;
             return this;
         }
 
-        public Builder setCacheFroms(@Nullable List<String> cacheFroms) {
+        public Builder cacheFroms(@Nullable List<String> cacheFroms) {
             this.cacheFroms = cacheFroms;
             return this;
         }
 
-        public Builder setCgroupParent(@Nullable String cgroupParent) {
+        public Builder cgroupParent(@Nullable String cgroupParent) {
             this.cgroupParent = cgroupParent;
             return this;
         }
 
-        public Builder setContext(String context) {
+        public Builder context(String context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCpuPeriod(@Nullable Integer cpuPeriod) {
+        public Builder cpuPeriod(@Nullable Integer cpuPeriod) {
             this.cpuPeriod = cpuPeriod;
             return this;
         }
 
-        public Builder setCpuQuota(@Nullable Integer cpuQuota) {
+        public Builder cpuQuota(@Nullable Integer cpuQuota) {
             this.cpuQuota = cpuQuota;
             return this;
         }
 
-        public Builder setCpuSetCpus(@Nullable String cpuSetCpus) {
+        public Builder cpuSetCpus(@Nullable String cpuSetCpus) {
             this.cpuSetCpus = cpuSetCpus;
             return this;
         }
 
-        public Builder setCpuSetMems(@Nullable String cpuSetMems) {
+        public Builder cpuSetMems(@Nullable String cpuSetMems) {
             this.cpuSetMems = cpuSetMems;
             return this;
         }
 
-        public Builder setCpuShares(@Nullable Integer cpuShares) {
+        public Builder cpuShares(@Nullable Integer cpuShares) {
             this.cpuShares = cpuShares;
             return this;
         }
 
-        public Builder setDockerfile(@Nullable String dockerfile) {
+        public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
 
-        public Builder setExtraHosts(@Nullable List<String> extraHosts) {
+        public Builder extraHosts(@Nullable List<String> extraHosts) {
             this.extraHosts = extraHosts;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setIsolation(@Nullable String isolation) {
+        public Builder isolation(@Nullable String isolation) {
             this.isolation = isolation;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setMemory(@Nullable Integer memory) {
+        public Builder memory(@Nullable Integer memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemorySwap(@Nullable Integer memorySwap) {
+        public Builder memorySwap(@Nullable Integer memorySwap) {
             this.memorySwap = memorySwap;
             return this;
         }
 
-        public Builder setNetworkMode(@Nullable String networkMode) {
+        public Builder networkMode(@Nullable String networkMode) {
             this.networkMode = networkMode;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setPullParent(@Nullable Boolean pullParent) {
+        public Builder pullParent(@Nullable Boolean pullParent) {
             this.pullParent = pullParent;
             return this;
         }
 
-        public Builder setRemoteContext(@Nullable String remoteContext) {
+        public Builder remoteContext(@Nullable String remoteContext) {
             this.remoteContext = remoteContext;
             return this;
         }
 
-        public Builder setRemove(@Nullable Boolean remove) {
+        public Builder remove(@Nullable Boolean remove) {
             this.remove = remove;
             return this;
         }
 
-        public Builder setSecurityOpts(@Nullable List<String> securityOpts) {
+        public Builder securityOpts(@Nullable List<String> securityOpts) {
             this.securityOpts = securityOpts;
             return this;
         }
 
-        public Builder setSessionId(@Nullable String sessionId) {
+        public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
-        public Builder setShmSize(@Nullable Integer shmSize) {
+        public Builder shmSize(@Nullable Integer shmSize) {
             this.shmSize = shmSize;
             return this;
         }
 
-        public Builder setSquash(@Nullable Boolean squash) {
+        public Builder squash(@Nullable Boolean squash) {
             this.squash = squash;
             return this;
         }
 
-        public Builder setSuppressOutput(@Nullable Boolean suppressOutput) {
+        public Builder suppressOutput(@Nullable Boolean suppressOutput) {
             this.suppressOutput = suppressOutput;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setUlimits(@Nullable List<RegistryImageBuildUlimit> ulimits) {
+        public Builder ulimits(@Nullable List<RegistryImageBuildUlimit> ulimits) {
             this.ulimits = ulimits;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

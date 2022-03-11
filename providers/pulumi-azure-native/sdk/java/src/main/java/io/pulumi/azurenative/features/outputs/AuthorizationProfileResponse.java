@@ -35,13 +35,13 @@ public final class AuthorizationProfileResponse {
      */
     private final String requesterObjectId;
 
-    @OutputCustomType.Constructor({"approvedTime","approver","requestedTime","requester","requesterObjectId"})
+    @OutputCustomType.Constructor
     private AuthorizationProfileResponse(
-        String approvedTime,
-        String approver,
-        String requestedTime,
-        String requester,
-        String requesterObjectId) {
+        @OutputCustomType.Parameter("approvedTime") String approvedTime,
+        @OutputCustomType.Parameter("approver") String approver,
+        @OutputCustomType.Parameter("requestedTime") String requestedTime,
+        @OutputCustomType.Parameter("requester") String requester,
+        @OutputCustomType.Parameter("requesterObjectId") String requesterObjectId) {
         this.approvedTime = approvedTime;
         this.approver = approver;
         this.requestedTime = requestedTime;
@@ -113,27 +113,27 @@ public final class AuthorizationProfileResponse {
     	      this.requesterObjectId = defaults.requesterObjectId;
         }
 
-        public Builder setApprovedTime(String approvedTime) {
+        public Builder approvedTime(String approvedTime) {
             this.approvedTime = Objects.requireNonNull(approvedTime);
             return this;
         }
 
-        public Builder setApprover(String approver) {
+        public Builder approver(String approver) {
             this.approver = Objects.requireNonNull(approver);
             return this;
         }
 
-        public Builder setRequestedTime(String requestedTime) {
+        public Builder requestedTime(String requestedTime) {
             this.requestedTime = Objects.requireNonNull(requestedTime);
             return this;
         }
 
-        public Builder setRequester(String requester) {
+        public Builder requester(String requester) {
             this.requester = Objects.requireNonNull(requester);
             return this;
         }
 
-        public Builder setRequesterObjectId(String requesterObjectId) {
+        public Builder requesterObjectId(String requesterObjectId) {
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
         }

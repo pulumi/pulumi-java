@@ -89,42 +89,42 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType) {
+        public Builder aggregateKeyType(Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setAggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Input.of(Objects.requireNonNull(aggregateKeyType));
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfigurationArgs forwardedIPConfig) {
             this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
             return this;
         }
 
-        public Builder setLimit(Input<Integer> limit) {
+        public Builder limit(Input<Integer> limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Input.of(Objects.requireNonNull(limit));
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable Input<RuleGroupStatementArgs> scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable Input<RuleGroupStatementArgs> scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable RuleGroupStatementArgs scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable RuleGroupStatementArgs scopeDownStatement) {
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }

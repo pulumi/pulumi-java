@@ -35,12 +35,12 @@ public final class RouteSpecHttp2RouteMatch {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"headers","method","prefix","scheme"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatch(
-        @Nullable List<RouteSpecHttp2RouteMatchHeader> headers,
-        @Nullable String method,
-        String prefix,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("headers") @Nullable List<RouteSpecHttp2RouteMatchHeader> headers,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.headers = headers;
         this.method = method;
         this.prefix = prefix;
@@ -103,22 +103,22 @@ public final class RouteSpecHttp2RouteMatch {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHeaders(@Nullable List<RouteSpecHttp2RouteMatchHeader> headers) {
+        public Builder headers(@Nullable List<RouteSpecHttp2RouteMatchHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
         }

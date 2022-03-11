@@ -24,12 +24,12 @@ public final class GetClusterCacheNode {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"address","availabilityZone","id","port"})
+    @OutputCustomType.Constructor
     private GetClusterCacheNode(
-        String address,
-        String availabilityZone,
-        String id,
-        Integer port) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.address = address;
         this.availabilityZone = availabilityZone;
         this.id = id;
@@ -84,22 +84,22 @@ public final class GetClusterCacheNode {
     	      this.port = defaults.port;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

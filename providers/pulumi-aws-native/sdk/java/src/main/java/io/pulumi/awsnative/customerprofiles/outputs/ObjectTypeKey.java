@@ -23,10 +23,10 @@ public final class ObjectTypeKey {
      */
     private final @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers;
 
-    @OutputCustomType.Constructor({"fieldNames","standardIdentifiers"})
+    @OutputCustomType.Constructor
     private ObjectTypeKey(
-        @Nullable List<String> fieldNames,
-        @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+        @OutputCustomType.Parameter("fieldNames") @Nullable List<String> fieldNames,
+        @OutputCustomType.Parameter("standardIdentifiers") @Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
         this.fieldNames = fieldNames;
         this.standardIdentifiers = standardIdentifiers;
     }
@@ -68,12 +68,12 @@ public final class ObjectTypeKey {
     	      this.standardIdentifiers = defaults.standardIdentifiers;
         }
 
-        public Builder setFieldNames(@Nullable List<String> fieldNames) {
+        public Builder fieldNames(@Nullable List<String> fieldNames) {
             this.fieldNames = fieldNames;
             return this;
         }
 
-        public Builder setStandardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
+        public Builder standardIdentifiers(@Nullable List<ObjectTypeKeyStandardIdentifiersItem> standardIdentifiers) {
             this.standardIdentifiers = standardIdentifiers;
             return this;
         }

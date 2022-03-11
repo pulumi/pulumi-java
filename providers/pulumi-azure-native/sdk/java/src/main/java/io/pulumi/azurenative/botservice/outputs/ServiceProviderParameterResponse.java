@@ -46,15 +46,15 @@ public final class ServiceProviderParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","description","displayName","helpUrl","metadata","name","type"})
+    @OutputCustomType.Constructor
     private ServiceProviderParameterResponse(
-        String $default,
-        String description,
-        String displayName,
-        String helpUrl,
-        ServiceProviderParameterResponseMetadata metadata,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("default") String $default,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("helpUrl") String helpUrl,
+        @OutputCustomType.Parameter("metadata") ServiceProviderParameterResponseMetadata metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.displayName = displayName;
@@ -146,37 +146,37 @@ public final class ServiceProviderParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder set$default(String $default) {
+        public Builder $default(String $default) {
             this.$default = Objects.requireNonNull($default);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHelpUrl(String helpUrl) {
+        public Builder helpUrl(String helpUrl) {
             this.helpUrl = Objects.requireNonNull(helpUrl);
             return this;
         }
 
-        public Builder setMetadata(ServiceProviderParameterResponseMetadata metadata) {
+        public Builder metadata(ServiceProviderParameterResponseMetadata metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

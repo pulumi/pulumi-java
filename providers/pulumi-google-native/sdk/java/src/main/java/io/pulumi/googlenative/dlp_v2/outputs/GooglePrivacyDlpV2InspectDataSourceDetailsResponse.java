@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
      */
     private final GooglePrivacyDlpV2ResultResponse result;
 
-    @OutputCustomType.Constructor({"requestedOptions","result"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectDataSourceDetailsResponse(
-        GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
-        GooglePrivacyDlpV2ResultResponse result) {
+        @OutputCustomType.Parameter("requestedOptions") GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions,
+        @OutputCustomType.Parameter("result") GooglePrivacyDlpV2ResultResponse result) {
         this.requestedOptions = requestedOptions;
         this.result = result;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InspectDataSourceDetailsResponse {
     	      this.result = defaults.result;
         }
 
-        public Builder setRequestedOptions(GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions) {
+        public Builder requestedOptions(GooglePrivacyDlpV2RequestedOptionsResponse requestedOptions) {
             this.requestedOptions = Objects.requireNonNull(requestedOptions);
             return this;
         }
 
-        public Builder setResult(GooglePrivacyDlpV2ResultResponse result) {
+        public Builder result(GooglePrivacyDlpV2ResultResponse result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }

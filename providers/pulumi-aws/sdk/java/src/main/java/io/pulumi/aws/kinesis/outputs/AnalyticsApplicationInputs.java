@@ -65,17 +65,17 @@ public final class AnalyticsApplicationInputs {
     private final @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations;
     private final @Nullable List<String> streamNames;
 
-    @OutputCustomType.Constructor({"id","kinesisFirehose","kinesisStream","namePrefix","parallelism","processingConfiguration","schema","startingPositionConfigurations","streamNames"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputs(
-        @Nullable String id,
-        @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
-        @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
-        String namePrefix,
-        @Nullable AnalyticsApplicationInputsParallelism parallelism,
-        @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
-        AnalyticsApplicationInputsSchema schema,
-        @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
-        @Nullable List<String> streamNames) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kinesisFirehose") @Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose,
+        @OutputCustomType.Parameter("kinesisStream") @Nullable AnalyticsApplicationInputsKinesisStream kinesisStream,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("parallelism") @Nullable AnalyticsApplicationInputsParallelism parallelism,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("schema") AnalyticsApplicationInputsSchema schema,
+        @OutputCustomType.Parameter("startingPositionConfigurations") @Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations,
+        @OutputCustomType.Parameter("streamNames") @Nullable List<String> streamNames) {
         this.id = id;
         this.kinesisFirehose = kinesisFirehose;
         this.kinesisStream = kinesisStream;
@@ -188,47 +188,47 @@ public final class AnalyticsApplicationInputs {
     	      this.streamNames = defaults.streamNames;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose) {
+        public Builder kinesisFirehose(@Nullable AnalyticsApplicationInputsKinesisFirehose kinesisFirehose) {
             this.kinesisFirehose = kinesisFirehose;
             return this;
         }
 
-        public Builder setKinesisStream(@Nullable AnalyticsApplicationInputsKinesisStream kinesisStream) {
+        public Builder kinesisStream(@Nullable AnalyticsApplicationInputsKinesisStream kinesisStream) {
             this.kinesisStream = kinesisStream;
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setParallelism(@Nullable AnalyticsApplicationInputsParallelism parallelism) {
+        public Builder parallelism(@Nullable AnalyticsApplicationInputsParallelism parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable AnalyticsApplicationInputsProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setSchema(AnalyticsApplicationInputsSchema schema) {
+        public Builder schema(AnalyticsApplicationInputsSchema schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setStartingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations) {
+        public Builder startingPositionConfigurations(@Nullable List<AnalyticsApplicationInputsStartingPositionConfiguration> startingPositionConfigurations) {
             this.startingPositionConfigurations = startingPositionConfigurations;
             return this;
         }
 
-        public Builder setStreamNames(@Nullable List<String> streamNames) {
+        public Builder streamNames(@Nullable List<String> streamNames) {
             this.streamNames = streamNames;
             return this;
         }

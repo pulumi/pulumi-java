@@ -22,10 +22,10 @@ public final class AppInsightsCredentialsResponse {
      */
     private final @Nullable String instrumentationKey;
 
-    @OutputCustomType.Constructor({"appId","instrumentationKey"})
+    @OutputCustomType.Constructor
     private AppInsightsCredentialsResponse(
-        @Nullable String appId,
-        @Nullable String instrumentationKey) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("instrumentationKey") @Nullable String instrumentationKey) {
         this.appId = appId;
         this.instrumentationKey = instrumentationKey;
     }
@@ -67,12 +67,12 @@ public final class AppInsightsCredentialsResponse {
     	      this.instrumentationKey = defaults.instrumentationKey;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setInstrumentationKey(@Nullable String instrumentationKey) {
+        public Builder instrumentationKey(@Nullable String instrumentationKey) {
             this.instrumentationKey = instrumentationKey;
             return this;
         }

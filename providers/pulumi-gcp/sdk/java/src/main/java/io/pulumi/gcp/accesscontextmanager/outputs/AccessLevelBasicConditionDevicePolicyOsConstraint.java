@@ -31,11 +31,11 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
      */
     private final @Nullable Boolean requireVerifiedChromeOs;
 
-    @OutputCustomType.Constructor({"minimumVersion","osType","requireVerifiedChromeOs"})
+    @OutputCustomType.Constructor
     private AccessLevelBasicConditionDevicePolicyOsConstraint(
-        @Nullable String minimumVersion,
-        String osType,
-        @Nullable Boolean requireVerifiedChromeOs) {
+        @OutputCustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("requireVerifiedChromeOs") @Nullable Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
@@ -90,17 +90,17 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
     	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
         }
 
-        public Builder setMinimumVersion(@Nullable String minimumVersion) {
+        public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = minimumVersion;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setRequireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
+        public Builder requireVerifiedChromeOs(@Nullable Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = requireVerifiedChromeOs;
             return this;
         }

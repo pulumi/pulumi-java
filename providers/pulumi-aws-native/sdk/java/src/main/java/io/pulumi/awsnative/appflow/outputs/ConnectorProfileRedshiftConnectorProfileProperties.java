@@ -32,12 +32,12 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketName","bucketPrefix","databaseUrl","roleArn"})
+    @OutputCustomType.Constructor
     private ConnectorProfileRedshiftConnectorProfileProperties(
-        String bucketName,
-        @Nullable String bucketPrefix,
-        String databaseUrl,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.bucketPrefix = bucketPrefix;
         this.databaseUrl = databaseUrl;
@@ -99,22 +99,22 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setDatabaseUrl(String databaseUrl) {
+        public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

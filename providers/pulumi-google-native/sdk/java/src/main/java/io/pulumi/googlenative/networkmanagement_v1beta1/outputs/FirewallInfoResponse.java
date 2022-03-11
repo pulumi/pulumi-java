@@ -62,18 +62,18 @@ public final class FirewallInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"action","direction","displayName","firewallRuleType","networkUri","policy","priority","targetServiceAccounts","targetTags","uri"})
+    @OutputCustomType.Constructor
     private FirewallInfoResponse(
-        String action,
-        String direction,
-        String displayName,
-        String firewallRuleType,
-        String networkUri,
-        String policy,
-        Integer priority,
-        List<String> targetServiceAccounts,
-        List<String> targetTags,
-        String uri) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("firewallRuleType") String firewallRuleType,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @OutputCustomType.Parameter("targetTags") List<String> targetTags,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.action = action;
         this.direction = direction;
         this.displayName = displayName;
@@ -195,52 +195,52 @@ public final class FirewallInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFirewallRuleType(String firewallRuleType) {
+        public Builder firewallRuleType(String firewallRuleType) {
             this.firewallRuleType = Objects.requireNonNull(firewallRuleType);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
 
-        public Builder setTargetTags(List<String> targetTags) {
+        public Builder targetTags(List<String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

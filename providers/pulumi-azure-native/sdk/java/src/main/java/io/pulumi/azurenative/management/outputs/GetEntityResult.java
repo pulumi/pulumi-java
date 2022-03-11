@@ -29,11 +29,11 @@ public final class GetEntityResult {
      */
     private final @Nullable List<EntityInfoResponse> value;
 
-    @OutputCustomType.Constructor({"count","nextLink","value"})
+    @OutputCustomType.Constructor
     private GetEntityResult(
-        Integer count,
-        String nextLink,
-        @Nullable List<EntityInfoResponse> value) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<EntityInfoResponse> value) {
         this.count = count;
         this.nextLink = nextLink;
         this.value = value;
@@ -85,17 +85,17 @@ public final class GetEntityResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<EntityInfoResponse> value) {
+        public Builder value(@Nullable List<EntityInfoResponse> value) {
             this.value = value;
             return this;
         }

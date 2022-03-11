@@ -24,13 +24,13 @@ public final class GetMitigationActionResult {
      */
     private final @Nullable List<MitigationActionTag> tags;
 
-    @OutputCustomType.Constructor({"actionParams","mitigationActionArn","mitigationActionId","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetMitigationActionResult(
-        @Nullable MitigationActionActionParams actionParams,
-        @Nullable String mitigationActionArn,
-        @Nullable String mitigationActionId,
-        @Nullable String roleArn,
-        @Nullable List<MitigationActionTag> tags) {
+        @OutputCustomType.Parameter("actionParams") @Nullable MitigationActionActionParams actionParams,
+        @OutputCustomType.Parameter("mitigationActionArn") @Nullable String mitigationActionArn,
+        @OutputCustomType.Parameter("mitigationActionId") @Nullable String mitigationActionId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<MitigationActionTag> tags) {
         this.actionParams = actionParams;
         this.mitigationActionArn = mitigationActionArn;
         this.mitigationActionId = mitigationActionId;
@@ -86,27 +86,27 @@ public final class GetMitigationActionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setActionParams(@Nullable MitigationActionActionParams actionParams) {
+        public Builder actionParams(@Nullable MitigationActionActionParams actionParams) {
             this.actionParams = actionParams;
             return this;
         }
 
-        public Builder setMitigationActionArn(@Nullable String mitigationActionArn) {
+        public Builder mitigationActionArn(@Nullable String mitigationActionArn) {
             this.mitigationActionArn = mitigationActionArn;
             return this;
         }
 
-        public Builder setMitigationActionId(@Nullable String mitigationActionId) {
+        public Builder mitigationActionId(@Nullable String mitigationActionId) {
             this.mitigationActionId = mitigationActionId;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MitigationActionTag> tags) {
+        public Builder tags(@Nullable List<MitigationActionTag> tags) {
             this.tags = tags;
             return this;
         }

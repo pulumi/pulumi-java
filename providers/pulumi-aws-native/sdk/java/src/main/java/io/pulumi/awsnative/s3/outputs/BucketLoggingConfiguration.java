@@ -18,10 +18,10 @@ public final class BucketLoggingConfiguration {
     private final @Nullable String destinationBucketName;
     private final @Nullable String logFilePrefix;
 
-    @OutputCustomType.Constructor({"destinationBucketName","logFilePrefix"})
+    @OutputCustomType.Constructor
     private BucketLoggingConfiguration(
-        @Nullable String destinationBucketName,
-        @Nullable String logFilePrefix) {
+        @OutputCustomType.Parameter("destinationBucketName") @Nullable String destinationBucketName,
+        @OutputCustomType.Parameter("logFilePrefix") @Nullable String logFilePrefix) {
         this.destinationBucketName = destinationBucketName;
         this.logFilePrefix = logFilePrefix;
     }
@@ -59,12 +59,12 @@ public final class BucketLoggingConfiguration {
     	      this.logFilePrefix = defaults.logFilePrefix;
         }
 
-        public Builder setDestinationBucketName(@Nullable String destinationBucketName) {
+        public Builder destinationBucketName(@Nullable String destinationBucketName) {
             this.destinationBucketName = destinationBucketName;
             return this;
         }
 
-        public Builder setLogFilePrefix(@Nullable String logFilePrefix) {
+        public Builder logFilePrefix(@Nullable String logFilePrefix) {
             this.logFilePrefix = logFilePrefix;
             return this;
         }

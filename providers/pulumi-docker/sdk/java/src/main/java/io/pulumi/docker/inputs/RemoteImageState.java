@@ -201,92 +201,92 @@ public final class RemoteImageState extends io.pulumi.resources.ResourceArgs {
     	      this.repoDigest = defaults.repoDigest;
         }
 
-        public Builder setBuild(@Nullable Input<RemoteImageBuildGetArgs> build) {
+        public Builder build(@Nullable Input<RemoteImageBuildGetArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable RemoteImageBuildGetArgs build) {
+        public Builder build(@Nullable RemoteImageBuildGetArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Input<Boolean> forceRemove) {
+        public Builder forceRemove(@Nullable Input<Boolean> forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = Input.ofNullable(forceRemove);
             return this;
         }
 
-        public Builder setKeepLocally(@Nullable Input<Boolean> keepLocally) {
+        public Builder keepLocally(@Nullable Input<Boolean> keepLocally) {
             this.keepLocally = keepLocally;
             return this;
         }
 
-        public Builder setKeepLocally(@Nullable Boolean keepLocally) {
+        public Builder keepLocally(@Nullable Boolean keepLocally) {
             this.keepLocally = Input.ofNullable(keepLocally);
             return this;
         }
 
-        public Builder setLatest(@Nullable Input<String> latest) {
+        public Builder latest(@Nullable Input<String> latest) {
             this.latest = latest;
             return this;
         }
 
-        public Builder setLatest(@Nullable String latest) {
+        public Builder latest(@Nullable String latest) {
             this.latest = Input.ofNullable(latest);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<String> output) {
+        public Builder output(@Nullable Input<String> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable String output) {
+        public Builder output(@Nullable String output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setPullTrigger(@Nullable Input<String> pullTrigger) {
+        public Builder pullTrigger(@Nullable Input<String> pullTrigger) {
             this.pullTrigger = pullTrigger;
             return this;
         }
 
-        public Builder setPullTrigger(@Nullable String pullTrigger) {
+        public Builder pullTrigger(@Nullable String pullTrigger) {
             this.pullTrigger = Input.ofNullable(pullTrigger);
             return this;
         }
 
-        public Builder setPullTriggers(@Nullable Input<List<String>> pullTriggers) {
+        public Builder pullTriggers(@Nullable Input<List<String>> pullTriggers) {
             this.pullTriggers = pullTriggers;
             return this;
         }
 
-        public Builder setPullTriggers(@Nullable List<String> pullTriggers) {
+        public Builder pullTriggers(@Nullable List<String> pullTriggers) {
             this.pullTriggers = Input.ofNullable(pullTriggers);
             return this;
         }
 
-        public Builder setRepoDigest(@Nullable Input<String> repoDigest) {
+        public Builder repoDigest(@Nullable Input<String> repoDigest) {
             this.repoDigest = repoDigest;
             return this;
         }
 
-        public Builder setRepoDigest(@Nullable String repoDigest) {
+        public Builder repoDigest(@Nullable String repoDigest) {
             this.repoDigest = Input.ofNullable(repoDigest);
             return this;
         }

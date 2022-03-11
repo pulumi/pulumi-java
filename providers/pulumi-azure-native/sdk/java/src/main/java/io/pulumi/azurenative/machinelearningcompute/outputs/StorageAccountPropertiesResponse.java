@@ -17,8 +17,8 @@ public final class StorageAccountPropertiesResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"resourceId"})
-    private StorageAccountPropertiesResponse(@Nullable String resourceId) {
+    @OutputCustomType.Constructor
+    private StorageAccountPropertiesResponse(@OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.resourceId = resourceId;
     }
 
@@ -50,7 +50,7 @@ public final class StorageAccountPropertiesResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

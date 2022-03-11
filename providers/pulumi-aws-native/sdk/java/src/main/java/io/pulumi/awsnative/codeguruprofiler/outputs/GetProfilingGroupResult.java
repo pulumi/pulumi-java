@@ -36,12 +36,12 @@ public final class GetProfilingGroupResult {
      */
     private final @Nullable List<ProfilingGroupTag> tags;
 
-    @OutputCustomType.Constructor({"agentPermissions","anomalyDetectionNotificationConfiguration","arn","tags"})
+    @OutputCustomType.Constructor
     private GetProfilingGroupResult(
-        @Nullable AgentPermissionsProperties agentPermissions,
-        @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
-        @Nullable String arn,
-        @Nullable List<ProfilingGroupTag> tags) {
+        @OutputCustomType.Parameter("agentPermissions") @Nullable AgentPermissionsProperties agentPermissions,
+        @OutputCustomType.Parameter("anomalyDetectionNotificationConfiguration") @Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProfilingGroupTag> tags) {
         this.agentPermissions = agentPermissions;
         this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
         this.arn = arn;
@@ -103,22 +103,22 @@ public final class GetProfilingGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgentPermissions(@Nullable AgentPermissionsProperties agentPermissions) {
+        public Builder agentPermissions(@Nullable AgentPermissionsProperties agentPermissions) {
             this.agentPermissions = agentPermissions;
             return this;
         }
 
-        public Builder setAnomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration) {
+        public Builder anomalyDetectionNotificationConfiguration(@Nullable List<ProfilingGroupChannel> anomalyDetectionNotificationConfiguration) {
             this.anomalyDetectionNotificationConfiguration = anomalyDetectionNotificationConfiguration;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProfilingGroupTag> tags) {
+        public Builder tags(@Nullable List<ProfilingGroupTag> tags) {
             this.tags = tags;
             return this;
         }

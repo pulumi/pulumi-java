@@ -55,17 +55,17 @@ public final class HiveMetastoreResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"databaseName","id","name","nestedResourceProvisioningState","password","runtimeVersion","serverUri","type","userName"})
+    @OutputCustomType.Constructor
     private HiveMetastoreResponse(
-        String databaseName,
-        String id,
-        String name,
-        String nestedResourceProvisioningState,
-        String password,
-        String runtimeVersion,
-        String serverUri,
-        String type,
-        String userName) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nestedResourceProvisioningState") String nestedResourceProvisioningState,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("serverUri") String serverUri,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;
@@ -177,47 +177,47 @@ public final class HiveMetastoreResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNestedResourceProvisioningState(String nestedResourceProvisioningState) {
+        public Builder nestedResourceProvisioningState(String nestedResourceProvisioningState) {
             this.nestedResourceProvisioningState = Objects.requireNonNull(nestedResourceProvisioningState);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setServerUri(String serverUri) {
+        public Builder serverUri(String serverUri) {
             this.serverUri = Objects.requireNonNull(serverUri);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

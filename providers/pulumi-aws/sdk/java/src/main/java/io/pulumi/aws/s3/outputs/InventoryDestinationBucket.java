@@ -38,13 +38,13 @@ public final class InventoryDestinationBucket {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"accountId","bucketArn","encryption","format","prefix"})
+    @OutputCustomType.Constructor
     private InventoryDestinationBucket(
-        @Nullable String accountId,
-        String bucketArn,
-        @Nullable InventoryDestinationBucketEncryption encryption,
-        String format,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("encryption") @Nullable InventoryDestinationBucketEncryption encryption,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.accountId = accountId;
         this.bucketArn = bucketArn;
         this.encryption = encryption;
@@ -116,27 +116,27 @@ public final class InventoryDestinationBucket {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setEncryption(@Nullable InventoryDestinationBucketEncryption encryption) {
+        public Builder encryption(@Nullable InventoryDestinationBucketEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

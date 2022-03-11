@@ -235,122 +235,122 @@ public final class AccessPointState extends io.pulumi.resources.ResourceArgs {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Input<Map<String,String>> endpoints) {
+        public Builder endpoints(@Nullable Input<Map<String,String>> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable Map<String,String> endpoints) {
+        public Builder endpoints(@Nullable Map<String,String> endpoints) {
             this.endpoints = Input.ofNullable(endpoints);
             return this;
         }
 
-        public Builder setHasPublicAccessPolicy(@Nullable Input<Boolean> hasPublicAccessPolicy) {
+        public Builder hasPublicAccessPolicy(@Nullable Input<Boolean> hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = hasPublicAccessPolicy;
             return this;
         }
 
-        public Builder setHasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
+        public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
             this.hasPublicAccessPolicy = Input.ofNullable(hasPublicAccessPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkOrigin(@Nullable Input<String> networkOrigin) {
+        public Builder networkOrigin(@Nullable Input<String> networkOrigin) {
             this.networkOrigin = networkOrigin;
             return this;
         }
 
-        public Builder setNetworkOrigin(@Nullable String networkOrigin) {
+        public Builder networkOrigin(@Nullable String networkOrigin) {
             this.networkOrigin = Input.ofNullable(networkOrigin);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable Input<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Input<AccessPointPublicAccessBlockConfigurationGetArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable AccessPointPublicAccessBlockConfigurationGetArgs publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable Input<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable Input<AccessPointVpcConfigurationGetArgs> vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable AccessPointVpcConfigurationGetArgs vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable AccessPointVpcConfigurationGetArgs vpcConfiguration) {
             this.vpcConfiguration = Input.ofNullable(vpcConfiguration);
             return this;
         }

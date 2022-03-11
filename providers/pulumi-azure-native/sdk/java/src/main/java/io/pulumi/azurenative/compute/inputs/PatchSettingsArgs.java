@@ -94,32 +94,32 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.patchMode = defaults.patchMode;
         }
 
-        public Builder setAssessmentMode(@Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
+        public Builder assessmentMode(@Nullable Input<Either<String,WindowsPatchAssessmentMode>> assessmentMode) {
             this.assessmentMode = assessmentMode;
             return this;
         }
 
-        public Builder setAssessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
+        public Builder assessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
             this.assessmentMode = Input.ofNullable(assessmentMode);
             return this;
         }
 
-        public Builder setEnableHotpatching(@Nullable Input<Boolean> enableHotpatching) {
+        public Builder enableHotpatching(@Nullable Input<Boolean> enableHotpatching) {
             this.enableHotpatching = enableHotpatching;
             return this;
         }
 
-        public Builder setEnableHotpatching(@Nullable Boolean enableHotpatching) {
+        public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
             this.enableHotpatching = Input.ofNullable(enableHotpatching);
             return this;
         }
 
-        public Builder setPatchMode(@Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode) {
+        public Builder patchMode(@Nullable Input<Either<String,WindowsVMGuestPatchMode>> patchMode) {
             this.patchMode = patchMode;
             return this;
         }
 
-        public Builder setPatchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
+        public Builder patchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
             this.patchMode = Input.ofNullable(patchMode);
             return this;
         }

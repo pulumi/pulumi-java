@@ -21,10 +21,10 @@ public final class TestDetailsResponse {
      */
     private final List<String> progressMessages;
 
-    @OutputCustomType.Constructor({"errorMessage","progressMessages"})
+    @OutputCustomType.Constructor
     private TestDetailsResponse(
-        String errorMessage,
-        List<String> progressMessages) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("progressMessages") List<String> progressMessages) {
         this.errorMessage = errorMessage;
         this.progressMessages = progressMessages;
     }
@@ -66,12 +66,12 @@ public final class TestDetailsResponse {
     	      this.progressMessages = defaults.progressMessages;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setProgressMessages(List<String> progressMessages) {
+        public Builder progressMessages(List<String> progressMessages) {
             this.progressMessages = Objects.requireNonNull(progressMessages);
             return this;
         }

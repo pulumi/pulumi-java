@@ -22,10 +22,10 @@ public final class EndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpointUrl","type"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        @Nullable String endpointUrl,
-        String type) {
+        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpointUrl = endpointUrl;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class EndpointResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

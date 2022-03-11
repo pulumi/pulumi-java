@@ -50,15 +50,15 @@ public final class GroupPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"areAssessmentsRunning","assessments","createdTimestamp","groupStatus","groupType","machineCount","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private GroupPropertiesResponse(
-        Boolean areAssessmentsRunning,
-        List<String> assessments,
-        String createdTimestamp,
-        String groupStatus,
-        @Nullable String groupType,
-        Integer machineCount,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("areAssessmentsRunning") Boolean areAssessmentsRunning,
+        @OutputCustomType.Parameter("assessments") List<String> assessments,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("groupStatus") String groupStatus,
+        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
+        @OutputCustomType.Parameter("machineCount") Integer machineCount,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.areAssessmentsRunning = areAssessmentsRunning;
         this.assessments = assessments;
         this.createdTimestamp = createdTimestamp;
@@ -150,37 +150,37 @@ public final class GroupPropertiesResponse {
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setAreAssessmentsRunning(Boolean areAssessmentsRunning) {
+        public Builder areAssessmentsRunning(Boolean areAssessmentsRunning) {
             this.areAssessmentsRunning = Objects.requireNonNull(areAssessmentsRunning);
             return this;
         }
 
-        public Builder setAssessments(List<String> assessments) {
+        public Builder assessments(List<String> assessments) {
             this.assessments = Objects.requireNonNull(assessments);
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setGroupStatus(String groupStatus) {
+        public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
 
-        public Builder setGroupType(@Nullable String groupType) {
+        public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
 
-        public Builder setMachineCount(Integer machineCount) {
+        public Builder machineCount(Integer machineCount) {
             this.machineCount = Objects.requireNonNull(machineCount);
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

@@ -28,16 +28,16 @@ public final class DefaultRolloutPropertiesResponseSpecification {
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne;
     private final @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo;
 
-    @OutputCustomType.Constructor({"canary","highTraffic","lowTraffic","mediumTraffic","providerRegistration","resourceTypeRegistrations","restOfTheWorldGroupOne","restOfTheWorldGroupTwo"})
+    @OutputCustomType.Constructor
     private DefaultRolloutPropertiesResponseSpecification(
-        @Nullable DefaultRolloutSpecificationResponseCanary canary,
-        @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
-        @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
-        @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
-        @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
-        @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
-        @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
+        @OutputCustomType.Parameter("canary") @Nullable DefaultRolloutSpecificationResponseCanary canary,
+        @OutputCustomType.Parameter("highTraffic") @Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic,
+        @OutputCustomType.Parameter("lowTraffic") @Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic,
+        @OutputCustomType.Parameter("mediumTraffic") @Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic,
+        @OutputCustomType.Parameter("providerRegistration") @Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration,
+        @OutputCustomType.Parameter("resourceTypeRegistrations") @Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations,
+        @OutputCustomType.Parameter("restOfTheWorldGroupOne") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne,
+        @OutputCustomType.Parameter("restOfTheWorldGroupTwo") @Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
         this.canary = canary;
         this.highTraffic = highTraffic;
         this.lowTraffic = lowTraffic;
@@ -107,42 +107,42 @@ public final class DefaultRolloutPropertiesResponseSpecification {
     	      this.restOfTheWorldGroupTwo = defaults.restOfTheWorldGroupTwo;
         }
 
-        public Builder setCanary(@Nullable DefaultRolloutSpecificationResponseCanary canary) {
+        public Builder canary(@Nullable DefaultRolloutSpecificationResponseCanary canary) {
             this.canary = canary;
             return this;
         }
 
-        public Builder setHighTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
+        public Builder highTraffic(@Nullable DefaultRolloutSpecificationResponseHighTraffic highTraffic) {
             this.highTraffic = highTraffic;
             return this;
         }
 
-        public Builder setLowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
+        public Builder lowTraffic(@Nullable DefaultRolloutSpecificationResponseLowTraffic lowTraffic) {
             this.lowTraffic = lowTraffic;
             return this;
         }
 
-        public Builder setMediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
+        public Builder mediumTraffic(@Nullable DefaultRolloutSpecificationResponseMediumTraffic mediumTraffic) {
             this.mediumTraffic = mediumTraffic;
             return this;
         }
 
-        public Builder setProviderRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
+        public Builder providerRegistration(@Nullable DefaultRolloutSpecificationResponseProviderRegistration providerRegistration) {
             this.providerRegistration = providerRegistration;
             return this;
         }
 
-        public Builder setResourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
+        public Builder resourceTypeRegistrations(@Nullable List<ResourceTypeRegistrationResponse> resourceTypeRegistrations) {
             this.resourceTypeRegistrations = resourceTypeRegistrations;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
+        public Builder restOfTheWorldGroupOne(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupOne restOfTheWorldGroupOne) {
             this.restOfTheWorldGroupOne = restOfTheWorldGroupOne;
             return this;
         }
 
-        public Builder setRestOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
+        public Builder restOfTheWorldGroupTwo(@Nullable DefaultRolloutSpecificationResponseRestOfTheWorldGroupTwo restOfTheWorldGroupTwo) {
             this.restOfTheWorldGroupTwo = restOfTheWorldGroupTwo;
             return this;
         }

@@ -17,8 +17,8 @@ public final class IpAddressResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"ipAddress"})
-    private IpAddressResponse(@Nullable String ipAddress) {
+    @OutputCustomType.Constructor
+    private IpAddressResponse(@OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.ipAddress = ipAddress;
     }
 
@@ -50,7 +50,7 @@ public final class IpAddressResponse {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

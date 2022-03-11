@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiproduct","status"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ApiProductRefResponse(
-        String apiproduct,
-        String status) {
+        @OutputCustomType.Parameter("apiproduct") String apiproduct,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiproduct = apiproduct;
         this.status = status;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudApigeeV1ApiProductRefResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiproduct(String apiproduct) {
+        public Builder apiproduct(String apiproduct) {
             this.apiproduct = Objects.requireNonNull(apiproduct);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

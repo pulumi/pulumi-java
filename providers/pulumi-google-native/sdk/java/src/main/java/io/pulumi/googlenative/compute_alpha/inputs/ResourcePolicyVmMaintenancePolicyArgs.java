@@ -67,22 +67,22 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     	      this.maintenanceWindow = defaults.maintenanceWindow;
         }
 
-        public Builder setConcurrencyControlGroup(@Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup) {
+        public Builder concurrencyControlGroup(@Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup) {
             this.concurrencyControlGroup = concurrencyControlGroup;
             return this;
         }
 
-        public Builder setConcurrencyControlGroup(@Nullable ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs concurrencyControlGroup) {
+        public Builder concurrencyControlGroup(@Nullable ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs concurrencyControlGroup) {
             this.concurrencyControlGroup = Input.ofNullable(concurrencyControlGroup);
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs maintenanceWindow) {
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }

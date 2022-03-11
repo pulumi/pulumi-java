@@ -39,13 +39,13 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","plan","properties","type"})
+    @OutputCustomType.Constructor
     private RegistrationAssignmentPropertiesResponseRegistrationDefinition(
-        String id,
-        String name,
-        @Nullable PlanResponse plan,
-        @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("properties") @Nullable RegistrationAssignmentPropertiesResponseProperties properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.plan = plan;
@@ -117,27 +117,27 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProperties(@Nullable RegistrationAssignmentPropertiesResponseProperties properties) {
+        public Builder properties(@Nullable RegistrationAssignmentPropertiesResponseProperties properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

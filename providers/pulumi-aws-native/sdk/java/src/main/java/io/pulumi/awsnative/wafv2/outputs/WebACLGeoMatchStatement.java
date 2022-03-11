@@ -16,10 +16,10 @@ public final class WebACLGeoMatchStatement {
     private final @Nullable List<String> countryCodes;
     private final @Nullable WebACLForwardedIPConfiguration forwardedIPConfig;
 
-    @OutputCustomType.Constructor({"countryCodes","forwardedIPConfig"})
+    @OutputCustomType.Constructor
     private WebACLGeoMatchStatement(
-        @Nullable List<String> countryCodes,
-        @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        @OutputCustomType.Parameter("countryCodes") @Nullable List<String> countryCodes,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
         this.countryCodes = countryCodes;
         this.forwardedIPConfig = forwardedIPConfig;
     }
@@ -53,12 +53,12 @@ public final class WebACLGeoMatchStatement {
     	      this.forwardedIPConfig = defaults.forwardedIPConfig;
         }
 
-        public Builder setCountryCodes(@Nullable List<String> countryCodes) {
+        public Builder countryCodes(@Nullable List<String> countryCodes) {
             this.countryCodes = countryCodes;
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }

@@ -73,18 +73,18 @@ public final class StatefulSetSpec {
      */
     private final @Nullable List<PersistentVolumeClaim> volumeClaimTemplates;
 
-    @OutputCustomType.Constructor({"minReadySeconds","persistentVolumeClaimRetentionPolicy","podManagementPolicy","replicas","revisionHistoryLimit","selector","serviceName","template","updateStrategy","volumeClaimTemplates"})
+    @OutputCustomType.Constructor
     private StatefulSetSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy,
-        @Nullable String podManagementPolicy,
-        @Nullable Integer replicas,
-        @Nullable Integer revisionHistoryLimit,
-        LabelSelector selector,
-        String serviceName,
-        PodTemplateSpec template,
-        @Nullable StatefulSetUpdateStrategy updateStrategy,
-        @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("persistentVolumeClaimRetentionPolicy") @Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy,
+        @OutputCustomType.Parameter("podManagementPolicy") @Nullable String podManagementPolicy,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("revisionHistoryLimit") @Nullable Integer revisionHistoryLimit,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("template") PodTemplateSpec template,
+        @OutputCustomType.Parameter("updateStrategy") @Nullable StatefulSetUpdateStrategy updateStrategy,
+        @OutputCustomType.Parameter("volumeClaimTemplates") @Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
         this.minReadySeconds = minReadySeconds;
         this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
         this.podManagementPolicy = podManagementPolicy;
@@ -210,52 +210,52 @@ public final class StatefulSetSpec {
     	      this.volumeClaimTemplates = defaults.volumeClaimTemplates;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setPersistentVolumeClaimRetentionPolicy(@Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
+        public Builder persistentVolumeClaimRetentionPolicy(@Nullable StatefulSetPersistentVolumeClaimRetentionPolicy persistentVolumeClaimRetentionPolicy) {
             this.persistentVolumeClaimRetentionPolicy = persistentVolumeClaimRetentionPolicy;
             return this;
         }
 
-        public Builder setPodManagementPolicy(@Nullable String podManagementPolicy) {
+        public Builder podManagementPolicy(@Nullable String podManagementPolicy) {
             this.podManagementPolicy = podManagementPolicy;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setRevisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
+        public Builder revisionHistoryLimit(@Nullable Integer revisionHistoryLimit) {
             this.revisionHistoryLimit = revisionHistoryLimit;
             return this;
         }
 
-        public Builder setSelector(LabelSelector selector) {
+        public Builder selector(LabelSelector selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setTemplate(PodTemplateSpec template) {
+        public Builder template(PodTemplateSpec template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setUpdateStrategy(@Nullable StatefulSetUpdateStrategy updateStrategy) {
+        public Builder updateStrategy(@Nullable StatefulSetUpdateStrategy updateStrategy) {
             this.updateStrategy = updateStrategy;
             return this;
         }
 
-        public Builder setVolumeClaimTemplates(@Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
+        public Builder volumeClaimTemplates(@Nullable List<PersistentVolumeClaim> volumeClaimTemplates) {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }

@@ -43,14 +43,14 @@ public final class ContainerEventResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"count","firstTimestamp","lastTimestamp","message","name","type"})
+    @OutputCustomType.Constructor
     private ContainerEventResponse(
-        @Nullable Integer count,
-        @Nullable String firstTimestamp,
-        @Nullable String lastTimestamp,
-        @Nullable String message,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
+        @OutputCustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.count = count;
         this.firstTimestamp = firstTimestamp;
         this.lastTimestamp = lastTimestamp;
@@ -132,32 +132,32 @@ public final class ContainerEventResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setFirstTimestamp(@Nullable String firstTimestamp) {
+        public Builder firstTimestamp(@Nullable String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
 
-        public Builder setLastTimestamp(@Nullable String lastTimestamp) {
+        public Builder lastTimestamp(@Nullable String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

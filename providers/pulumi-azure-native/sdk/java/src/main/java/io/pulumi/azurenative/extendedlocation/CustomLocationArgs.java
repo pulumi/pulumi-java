@@ -219,112 +219,112 @@ public final class CustomLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAuthentication(@Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication) {
+        public Builder authentication(@Nullable Input<CustomLocationPropertiesAuthenticationArgs> authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
+        public Builder authentication(@Nullable CustomLocationPropertiesAuthenticationArgs authentication) {
             this.authentication = Input.ofNullable(authentication);
             return this;
         }
 
-        public Builder setClusterExtensionIds(@Nullable Input<List<String>> clusterExtensionIds) {
+        public Builder clusterExtensionIds(@Nullable Input<List<String>> clusterExtensionIds) {
             this.clusterExtensionIds = clusterExtensionIds;
             return this;
         }
 
-        public Builder setClusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
+        public Builder clusterExtensionIds(@Nullable List<String> clusterExtensionIds) {
             this.clusterExtensionIds = Input.ofNullable(clusterExtensionIds);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHostResourceId(@Nullable Input<String> hostResourceId) {
+        public Builder hostResourceId(@Nullable Input<String> hostResourceId) {
             this.hostResourceId = hostResourceId;
             return this;
         }
 
-        public Builder setHostResourceId(@Nullable String hostResourceId) {
+        public Builder hostResourceId(@Nullable String hostResourceId) {
             this.hostResourceId = Input.ofNullable(hostResourceId);
             return this;
         }
 
-        public Builder setHostType(@Nullable Input<Either<String,HostType>> hostType) {
+        public Builder hostType(@Nullable Input<Either<String,HostType>> hostType) {
             this.hostType = hostType;
             return this;
         }
 
-        public Builder setHostType(@Nullable Either<String,HostType> hostType) {
+        public Builder hostType(@Nullable Either<String,HostType> hostType) {
             this.hostType = Input.ofNullable(hostType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

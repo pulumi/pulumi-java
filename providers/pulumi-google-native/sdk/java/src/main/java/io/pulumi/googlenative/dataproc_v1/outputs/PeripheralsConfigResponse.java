@@ -21,10 +21,10 @@ public final class PeripheralsConfigResponse {
      */
     private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
-    @OutputCustomType.Constructor({"metastoreService","sparkHistoryServerConfig"})
+    @OutputCustomType.Constructor
     private PeripheralsConfigResponse(
-        String metastoreService,
-        SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
+        @OutputCustomType.Parameter("metastoreService") String metastoreService,
+        @OutputCustomType.Parameter("sparkHistoryServerConfig") SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
         this.metastoreService = metastoreService;
         this.sparkHistoryServerConfig = sparkHistoryServerConfig;
     }
@@ -66,12 +66,12 @@ public final class PeripheralsConfigResponse {
     	      this.sparkHistoryServerConfig = defaults.sparkHistoryServerConfig;
         }
 
-        public Builder setMetastoreService(String metastoreService) {
+        public Builder metastoreService(String metastoreService) {
             this.metastoreService = Objects.requireNonNull(metastoreService);
             return this;
         }
 
-        public Builder setSparkHistoryServerConfig(SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
+        public Builder sparkHistoryServerConfig(SparkHistoryServerConfigResponse sparkHistoryServerConfig) {
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
         }

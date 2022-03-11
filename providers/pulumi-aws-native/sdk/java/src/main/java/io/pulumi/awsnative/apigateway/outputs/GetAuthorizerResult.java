@@ -60,18 +60,18 @@ public final class GetAuthorizerResult {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"authType","authorizerCredentials","authorizerId","authorizerResultTtlInSeconds","authorizerUri","identitySource","identityValidationExpression","name","providerARNs","type"})
+    @OutputCustomType.Constructor
     private GetAuthorizerResult(
-        @Nullable String authType,
-        @Nullable String authorizerCredentials,
-        @Nullable String authorizerId,
-        @Nullable Integer authorizerResultTtlInSeconds,
-        @Nullable String authorizerUri,
-        @Nullable String identitySource,
-        @Nullable String identityValidationExpression,
-        @Nullable String name,
-        @Nullable List<String> providerARNs,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("authorizerCredentials") @Nullable String authorizerCredentials,
+        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @OutputCustomType.Parameter("authorizerUri") @Nullable String authorizerUri,
+        @OutputCustomType.Parameter("identitySource") @Nullable String identitySource,
+        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("providerARNs") @Nullable List<String> providerARNs,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.authType = authType;
         this.authorizerCredentials = authorizerCredentials;
         this.authorizerId = authorizerId;
@@ -189,52 +189,52 @@ public final class GetAuthorizerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setAuthorizerCredentials(@Nullable String authorizerCredentials) {
+        public Builder authorizerCredentials(@Nullable String authorizerCredentials) {
             this.authorizerCredentials = authorizerCredentials;
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable String authorizerId) {
+        public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
-        public Builder setAuthorizerUri(@Nullable String authorizerUri) {
+        public Builder authorizerUri(@Nullable String authorizerUri) {
             this.authorizerUri = authorizerUri;
             return this;
         }
 
-        public Builder setIdentitySource(@Nullable String identitySource) {
+        public Builder identitySource(@Nullable String identitySource) {
             this.identitySource = identitySource;
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable String identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProviderARNs(@Nullable List<String> providerARNs) {
+        public Builder providerARNs(@Nullable List<String> providerARNs) {
             this.providerARNs = providerARNs;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

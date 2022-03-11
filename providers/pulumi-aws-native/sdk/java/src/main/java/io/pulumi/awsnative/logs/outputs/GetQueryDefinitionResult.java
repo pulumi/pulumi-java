@@ -33,12 +33,12 @@ public final class GetQueryDefinitionResult {
      */
     private final @Nullable String queryString;
 
-    @OutputCustomType.Constructor({"logGroupNames","name","queryDefinitionId","queryString"})
+    @OutputCustomType.Constructor
     private GetQueryDefinitionResult(
-        @Nullable List<String> logGroupNames,
-        @Nullable String name,
-        @Nullable String queryDefinitionId,
-        @Nullable String queryString) {
+        @OutputCustomType.Parameter("logGroupNames") @Nullable List<String> logGroupNames,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("queryDefinitionId") @Nullable String queryDefinitionId,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString) {
         this.logGroupNames = logGroupNames;
         this.name = name;
         this.queryDefinitionId = queryDefinitionId;
@@ -100,22 +100,22 @@ public final class GetQueryDefinitionResult {
     	      this.queryString = defaults.queryString;
         }
 
-        public Builder setLogGroupNames(@Nullable List<String> logGroupNames) {
+        public Builder logGroupNames(@Nullable List<String> logGroupNames) {
             this.logGroupNames = logGroupNames;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setQueryDefinitionId(@Nullable String queryDefinitionId) {
+        public Builder queryDefinitionId(@Nullable String queryDefinitionId) {
             this.queryDefinitionId = queryDefinitionId;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }

@@ -17,8 +17,8 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
      */
     private final @Nullable String capacityReservationId;
 
-    @OutputCustomType.Constructor({"capacityReservationId"})
-    private SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget(@Nullable String capacityReservationId) {
+    @OutputCustomType.Constructor
+    private SpotInstanceRequestCapacityReservationSpecificationCapacityReservationTarget(@OutputCustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
     }
 
@@ -50,7 +50,7 @@ public final class SpotInstanceRequestCapacityReservationSpecificationCapacityRe
     	      this.capacityReservationId = defaults.capacityReservationId;
         }
 
-        public Builder setCapacityReservationId(@Nullable String capacityReservationId) {
+        public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
         }

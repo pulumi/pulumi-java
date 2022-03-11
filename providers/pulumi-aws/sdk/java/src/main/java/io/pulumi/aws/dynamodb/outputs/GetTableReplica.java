@@ -12,10 +12,10 @@ public final class GetTableReplica {
     private final String kmsKeyArn;
     private final String regionName;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","regionName"})
+    @OutputCustomType.Constructor
     private GetTableReplica(
-        String kmsKeyArn,
-        String regionName) {
+        @OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn,
+        @OutputCustomType.Parameter("regionName") String regionName) {
         this.kmsKeyArn = kmsKeyArn;
         this.regionName = regionName;
     }
@@ -49,12 +49,12 @@ public final class GetTableReplica {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
 
-        public Builder setRegionName(String regionName) {
+        public Builder regionName(String regionName) {
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }

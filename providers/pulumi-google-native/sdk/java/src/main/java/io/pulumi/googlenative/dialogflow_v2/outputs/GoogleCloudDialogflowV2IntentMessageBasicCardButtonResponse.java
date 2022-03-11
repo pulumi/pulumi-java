@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"openUriAction","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse(
-        GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
-        String title) {
+        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction,
+        @OutputCustomType.Parameter("title") String title) {
         this.openUriAction = openUriAction;
         this.title = title;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setOpenUriAction(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction) {
+        public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriActionResponse openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

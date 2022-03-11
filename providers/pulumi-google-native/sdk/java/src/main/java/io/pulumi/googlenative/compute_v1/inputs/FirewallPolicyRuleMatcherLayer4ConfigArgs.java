@@ -71,22 +71,22 @@ public final class FirewallPolicyRuleMatcherLayer4ConfigArgs extends io.pulumi.r
     	      this.ports = defaults.ports;
         }
 
-        public Builder setIpProtocol(@Nullable Input<String> ipProtocol) {
+        public Builder ipProtocol(@Nullable Input<String> ipProtocol) {
             this.ipProtocol = ipProtocol;
             return this;
         }
 
-        public Builder setIpProtocol(@Nullable String ipProtocol) {
+        public Builder ipProtocol(@Nullable String ipProtocol) {
             this.ipProtocol = Input.ofNullable(ipProtocol);
             return this;
         }
 
-        public Builder setPorts(@Nullable Input<List<String>> ports) {
+        public Builder ports(@Nullable Input<List<String>> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = Input.ofNullable(ports);
             return this;
         }

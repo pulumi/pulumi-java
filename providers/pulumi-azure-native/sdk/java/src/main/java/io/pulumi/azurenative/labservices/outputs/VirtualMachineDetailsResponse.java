@@ -40,14 +40,14 @@ public final class VirtualMachineDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"lastKnownPowerState","privateIpAddress","provisioningState","rdpAuthority","sshAuthority","userName"})
+    @OutputCustomType.Constructor
     private VirtualMachineDetailsResponse(
-        String lastKnownPowerState,
-        String privateIpAddress,
-        String provisioningState,
-        String rdpAuthority,
-        String sshAuthority,
-        String userName) {
+        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.lastKnownPowerState = lastKnownPowerState;
         this.privateIpAddress = privateIpAddress;
         this.provisioningState = provisioningState;
@@ -129,32 +129,32 @@ public final class VirtualMachineDetailsResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setLastKnownPowerState(String lastKnownPowerState) {
+        public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRdpAuthority(String rdpAuthority) {
+        public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
 
-        public Builder setSshAuthority(String sshAuthority) {
+        public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

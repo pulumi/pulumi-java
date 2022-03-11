@@ -26,10 +26,10 @@ public final class ServicePerimeterStatusVpcAccessibleServices {
      */
     private final @Nullable Boolean enableRestriction;
 
-    @OutputCustomType.Constructor({"allowedServices","enableRestriction"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusVpcAccessibleServices(
-        @Nullable List<String> allowedServices,
-        @Nullable Boolean enableRestriction) {
+        @OutputCustomType.Parameter("allowedServices") @Nullable List<String> allowedServices,
+        @OutputCustomType.Parameter("enableRestriction") @Nullable Boolean enableRestriction) {
         this.allowedServices = allowedServices;
         this.enableRestriction = enableRestriction;
     }
@@ -73,12 +73,12 @@ public final class ServicePerimeterStatusVpcAccessibleServices {
     	      this.enableRestriction = defaults.enableRestriction;
         }
 
-        public Builder setAllowedServices(@Nullable List<String> allowedServices) {
+        public Builder allowedServices(@Nullable List<String> allowedServices) {
             this.allowedServices = allowedServices;
             return this;
         }
 
-        public Builder setEnableRestriction(@Nullable Boolean enableRestriction) {
+        public Builder enableRestriction(@Nullable Boolean enableRestriction) {
             this.enableRestriction = enableRestriction;
             return this;
         }

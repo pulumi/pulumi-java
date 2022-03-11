@@ -26,11 +26,11 @@ public final class RecordAlias {
      */
     private final String zoneId;
 
-    @OutputCustomType.Constructor({"evaluateTargetHealth","name","zoneId"})
+    @OutputCustomType.Constructor
     private RecordAlias(
-        Boolean evaluateTargetHealth,
-        String name,
-        String zoneId) {
+        @OutputCustomType.Parameter("evaluateTargetHealth") Boolean evaluateTargetHealth,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("zoneId") String zoneId) {
         this.evaluateTargetHealth = evaluateTargetHealth;
         this.name = name;
         this.zoneId = zoneId;
@@ -82,17 +82,17 @@ public final class RecordAlias {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setEvaluateTargetHealth(Boolean evaluateTargetHealth) {
+        public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }

@@ -38,13 +38,13 @@ public final class VirtualDiskResponse {
      */
     private final String virtualDiskName;
 
-    @OutputCustomType.Constructor({"controllerId","independenceMode","totalSize","virtualDiskId","virtualDiskName"})
+    @OutputCustomType.Constructor
     private VirtualDiskResponse(
-        String controllerId,
-        String independenceMode,
-        Integer totalSize,
-        @Nullable String virtualDiskId,
-        String virtualDiskName) {
+        @OutputCustomType.Parameter("controllerId") String controllerId,
+        @OutputCustomType.Parameter("independenceMode") String independenceMode,
+        @OutputCustomType.Parameter("totalSize") Integer totalSize,
+        @OutputCustomType.Parameter("virtualDiskId") @Nullable String virtualDiskId,
+        @OutputCustomType.Parameter("virtualDiskName") String virtualDiskName) {
         this.controllerId = controllerId;
         this.independenceMode = independenceMode;
         this.totalSize = totalSize;
@@ -116,27 +116,27 @@ public final class VirtualDiskResponse {
     	      this.virtualDiskName = defaults.virtualDiskName;
         }
 
-        public Builder setControllerId(String controllerId) {
+        public Builder controllerId(String controllerId) {
             this.controllerId = Objects.requireNonNull(controllerId);
             return this;
         }
 
-        public Builder setIndependenceMode(String independenceMode) {
+        public Builder independenceMode(String independenceMode) {
             this.independenceMode = Objects.requireNonNull(independenceMode);
             return this;
         }
 
-        public Builder setTotalSize(Integer totalSize) {
+        public Builder totalSize(Integer totalSize) {
             this.totalSize = Objects.requireNonNull(totalSize);
             return this;
         }
 
-        public Builder setVirtualDiskId(@Nullable String virtualDiskId) {
+        public Builder virtualDiskId(@Nullable String virtualDiskId) {
             this.virtualDiskId = virtualDiskId;
             return this;
         }
 
-        public Builder setVirtualDiskName(String virtualDiskName) {
+        public Builder virtualDiskName(String virtualDiskName) {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }

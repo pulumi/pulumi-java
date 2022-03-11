@@ -26,10 +26,10 @@ public final class ClusterClusterConfigInitializationAction {
      */
     private final @Nullable Integer timeoutSec;
 
-    @OutputCustomType.Constructor({"script","timeoutSec"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigInitializationAction(
-        String script,
-        @Nullable Integer timeoutSec) {
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("timeoutSec") @Nullable Integer timeoutSec) {
         this.script = script;
         this.timeoutSec = timeoutSec;
     }
@@ -74,12 +74,12 @@ public final class ClusterClusterConfigInitializationAction {
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setTimeoutSec(@Nullable Integer timeoutSec) {
+        public Builder timeoutSec(@Nullable Integer timeoutSec) {
             this.timeoutSec = timeoutSec;
             return this;
         }

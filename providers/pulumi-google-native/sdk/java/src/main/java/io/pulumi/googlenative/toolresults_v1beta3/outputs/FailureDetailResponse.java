@@ -45,15 +45,15 @@ public final class FailureDetailResponse {
      */
     private final Boolean unableToCrawl;
 
-    @OutputCustomType.Constructor({"crashed","deviceOutOfMemory","failedRoboscript","notInstalled","otherNativeCrash","timedOut","unableToCrawl"})
+    @OutputCustomType.Constructor
     private FailureDetailResponse(
-        Boolean crashed,
-        Boolean deviceOutOfMemory,
-        Boolean failedRoboscript,
-        Boolean notInstalled,
-        Boolean otherNativeCrash,
-        Boolean timedOut,
-        Boolean unableToCrawl) {
+        @OutputCustomType.Parameter("crashed") Boolean crashed,
+        @OutputCustomType.Parameter("deviceOutOfMemory") Boolean deviceOutOfMemory,
+        @OutputCustomType.Parameter("failedRoboscript") Boolean failedRoboscript,
+        @OutputCustomType.Parameter("notInstalled") Boolean notInstalled,
+        @OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash,
+        @OutputCustomType.Parameter("timedOut") Boolean timedOut,
+        @OutputCustomType.Parameter("unableToCrawl") Boolean unableToCrawl) {
         this.crashed = crashed;
         this.deviceOutOfMemory = deviceOutOfMemory;
         this.failedRoboscript = failedRoboscript;
@@ -145,37 +145,37 @@ public final class FailureDetailResponse {
     	      this.unableToCrawl = defaults.unableToCrawl;
         }
 
-        public Builder setCrashed(Boolean crashed) {
+        public Builder crashed(Boolean crashed) {
             this.crashed = Objects.requireNonNull(crashed);
             return this;
         }
 
-        public Builder setDeviceOutOfMemory(Boolean deviceOutOfMemory) {
+        public Builder deviceOutOfMemory(Boolean deviceOutOfMemory) {
             this.deviceOutOfMemory = Objects.requireNonNull(deviceOutOfMemory);
             return this;
         }
 
-        public Builder setFailedRoboscript(Boolean failedRoboscript) {
+        public Builder failedRoboscript(Boolean failedRoboscript) {
             this.failedRoboscript = Objects.requireNonNull(failedRoboscript);
             return this;
         }
 
-        public Builder setNotInstalled(Boolean notInstalled) {
+        public Builder notInstalled(Boolean notInstalled) {
             this.notInstalled = Objects.requireNonNull(notInstalled);
             return this;
         }
 
-        public Builder setOtherNativeCrash(Boolean otherNativeCrash) {
+        public Builder otherNativeCrash(Boolean otherNativeCrash) {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
 
-        public Builder setTimedOut(Boolean timedOut) {
+        public Builder timedOut(Boolean timedOut) {
             this.timedOut = Objects.requireNonNull(timedOut);
             return this;
         }
 
-        public Builder setUnableToCrawl(Boolean unableToCrawl) {
+        public Builder unableToCrawl(Boolean unableToCrawl) {
             this.unableToCrawl = Objects.requireNonNull(unableToCrawl);
             return this;
         }

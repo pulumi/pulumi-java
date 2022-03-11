@@ -56,16 +56,16 @@ public final class GetReportByBillingAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","format","id","name","schedule","tags","type"})
+    @OutputCustomType.Constructor
     private GetReportByBillingAccountResult(
-        ReportDefinitionResponse definition,
-        ReportDeliveryInfoResponse deliveryInfo,
-        @Nullable String format,
-        String id,
-        String name,
-        @Nullable ReportScheduleResponse schedule,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("definition") ReportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ReportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") @Nullable ReportScheduleResponse schedule,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.format = format;
@@ -167,42 +167,42 @@ public final class GetReportByBillingAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(ReportDefinitionResponse definition) {
+        public Builder definition(ReportDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDeliveryInfo(ReportDeliveryInfoResponse deliveryInfo) {
+        public Builder deliveryInfo(ReportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(@Nullable ReportScheduleResponse schedule) {
+        public Builder schedule(@Nullable ReportScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

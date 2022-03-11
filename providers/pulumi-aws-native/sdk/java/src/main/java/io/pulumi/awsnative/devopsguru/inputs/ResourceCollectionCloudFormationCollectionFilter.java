@@ -58,7 +58,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
     	      this.stackNames = defaults.stackNames;
         }
 
-        public Builder setStackNames(@Nullable List<String> stackNames) {
+        public Builder stackNames(@Nullable List<String> stackNames) {
             this.stackNames = stackNames;
             return this;
         }

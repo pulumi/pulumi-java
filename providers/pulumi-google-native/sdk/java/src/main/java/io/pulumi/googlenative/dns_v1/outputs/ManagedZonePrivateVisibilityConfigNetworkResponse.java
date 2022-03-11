@@ -16,10 +16,10 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor({"kind","networkUrl"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigNetworkResponse(
-        String kind,
-        String networkUrl) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networkUrl") String networkUrl) {
         this.kind = kind;
         this.networkUrl = networkUrl;
     }
@@ -57,12 +57,12 @@ public final class ManagedZonePrivateVisibilityConfigNetworkResponse {
     	      this.networkUrl = defaults.networkUrl;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworkUrl(String networkUrl) {
+        public Builder networkUrl(String networkUrl) {
             this.networkUrl = Objects.requireNonNull(networkUrl);
             return this;
         }

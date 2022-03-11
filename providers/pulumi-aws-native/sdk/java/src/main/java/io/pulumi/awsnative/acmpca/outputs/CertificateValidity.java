@@ -13,10 +13,10 @@ public final class CertificateValidity {
     private final String type;
     private final Double value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private CertificateValidity(
-        String type,
-        Double value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class CertificateValidity {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

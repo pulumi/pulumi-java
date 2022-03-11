@@ -238,122 +238,122 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxUtilization = defaults.maxUtilization;
         }
 
-        public Builder setBalancingMode(@Nullable Input<BackendBalancingMode> balancingMode) {
+        public Builder balancingMode(@Nullable Input<BackendBalancingMode> balancingMode) {
             this.balancingMode = balancingMode;
             return this;
         }
 
-        public Builder setBalancingMode(@Nullable BackendBalancingMode balancingMode) {
+        public Builder balancingMode(@Nullable BackendBalancingMode balancingMode) {
             this.balancingMode = Input.ofNullable(balancingMode);
             return this;
         }
 
-        public Builder setCapacityScaler(@Nullable Input<Double> capacityScaler) {
+        public Builder capacityScaler(@Nullable Input<Double> capacityScaler) {
             this.capacityScaler = capacityScaler;
             return this;
         }
 
-        public Builder setCapacityScaler(@Nullable Double capacityScaler) {
+        public Builder capacityScaler(@Nullable Double capacityScaler) {
             this.capacityScaler = Input.ofNullable(capacityScaler);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFailover(@Nullable Input<Boolean> failover) {
+        public Builder failover(@Nullable Input<Boolean> failover) {
             this.failover = failover;
             return this;
         }
 
-        public Builder setFailover(@Nullable Boolean failover) {
+        public Builder failover(@Nullable Boolean failover) {
             this.failover = Input.ofNullable(failover);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Input<Integer> maxConnections) {
+        public Builder maxConnections(@Nullable Input<Integer> maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Integer maxConnections) {
+        public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = Input.ofNullable(maxConnections);
             return this;
         }
 
-        public Builder setMaxConnectionsPerEndpoint(@Nullable Input<Integer> maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(@Nullable Input<Integer> maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = maxConnectionsPerEndpoint;
             return this;
         }
 
-        public Builder setMaxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
+        public Builder maxConnectionsPerEndpoint(@Nullable Integer maxConnectionsPerEndpoint) {
             this.maxConnectionsPerEndpoint = Input.ofNullable(maxConnectionsPerEndpoint);
             return this;
         }
 
-        public Builder setMaxConnectionsPerInstance(@Nullable Input<Integer> maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(@Nullable Input<Integer> maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = maxConnectionsPerInstance;
             return this;
         }
 
-        public Builder setMaxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
+        public Builder maxConnectionsPerInstance(@Nullable Integer maxConnectionsPerInstance) {
             this.maxConnectionsPerInstance = Input.ofNullable(maxConnectionsPerInstance);
             return this;
         }
 
-        public Builder setMaxRate(@Nullable Input<Integer> maxRate) {
+        public Builder maxRate(@Nullable Input<Integer> maxRate) {
             this.maxRate = maxRate;
             return this;
         }
 
-        public Builder setMaxRate(@Nullable Integer maxRate) {
+        public Builder maxRate(@Nullable Integer maxRate) {
             this.maxRate = Input.ofNullable(maxRate);
             return this;
         }
 
-        public Builder setMaxRatePerEndpoint(@Nullable Input<Double> maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(@Nullable Input<Double> maxRatePerEndpoint) {
             this.maxRatePerEndpoint = maxRatePerEndpoint;
             return this;
         }
 
-        public Builder setMaxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
+        public Builder maxRatePerEndpoint(@Nullable Double maxRatePerEndpoint) {
             this.maxRatePerEndpoint = Input.ofNullable(maxRatePerEndpoint);
             return this;
         }
 
-        public Builder setMaxRatePerInstance(@Nullable Input<Double> maxRatePerInstance) {
+        public Builder maxRatePerInstance(@Nullable Input<Double> maxRatePerInstance) {
             this.maxRatePerInstance = maxRatePerInstance;
             return this;
         }
 
-        public Builder setMaxRatePerInstance(@Nullable Double maxRatePerInstance) {
+        public Builder maxRatePerInstance(@Nullable Double maxRatePerInstance) {
             this.maxRatePerInstance = Input.ofNullable(maxRatePerInstance);
             return this;
         }
 
-        public Builder setMaxUtilization(@Nullable Input<Double> maxUtilization) {
+        public Builder maxUtilization(@Nullable Input<Double> maxUtilization) {
             this.maxUtilization = maxUtilization;
             return this;
         }
 
-        public Builder setMaxUtilization(@Nullable Double maxUtilization) {
+        public Builder maxUtilization(@Nullable Double maxUtilization) {
             this.maxUtilization = Input.ofNullable(maxUtilization);
             return this;
         }

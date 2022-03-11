@@ -307,162 +307,162 @@ public final class ActionGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookReceivers = defaults.webhookReceivers;
         }
 
-        public Builder setActionGroupName(@Nullable Input<String> actionGroupName) {
+        public Builder actionGroupName(@Nullable Input<String> actionGroupName) {
             this.actionGroupName = actionGroupName;
             return this;
         }
 
-        public Builder setActionGroupName(@Nullable String actionGroupName) {
+        public Builder actionGroupName(@Nullable String actionGroupName) {
             this.actionGroupName = Input.ofNullable(actionGroupName);
             return this;
         }
 
-        public Builder setArmRoleReceivers(@Nullable Input<List<ArmRoleReceiverArgs>> armRoleReceivers) {
+        public Builder armRoleReceivers(@Nullable Input<List<ArmRoleReceiverArgs>> armRoleReceivers) {
             this.armRoleReceivers = armRoleReceivers;
             return this;
         }
 
-        public Builder setArmRoleReceivers(@Nullable List<ArmRoleReceiverArgs> armRoleReceivers) {
+        public Builder armRoleReceivers(@Nullable List<ArmRoleReceiverArgs> armRoleReceivers) {
             this.armRoleReceivers = Input.ofNullable(armRoleReceivers);
             return this;
         }
 
-        public Builder setAutomationRunbookReceivers(@Nullable Input<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers) {
+        public Builder automationRunbookReceivers(@Nullable Input<List<AutomationRunbookReceiverArgs>> automationRunbookReceivers) {
             this.automationRunbookReceivers = automationRunbookReceivers;
             return this;
         }
 
-        public Builder setAutomationRunbookReceivers(@Nullable List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
+        public Builder automationRunbookReceivers(@Nullable List<AutomationRunbookReceiverArgs> automationRunbookReceivers) {
             this.automationRunbookReceivers = Input.ofNullable(automationRunbookReceivers);
             return this;
         }
 
-        public Builder setAzureAppPushReceivers(@Nullable Input<List<AzureAppPushReceiverArgs>> azureAppPushReceivers) {
+        public Builder azureAppPushReceivers(@Nullable Input<List<AzureAppPushReceiverArgs>> azureAppPushReceivers) {
             this.azureAppPushReceivers = azureAppPushReceivers;
             return this;
         }
 
-        public Builder setAzureAppPushReceivers(@Nullable List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
+        public Builder azureAppPushReceivers(@Nullable List<AzureAppPushReceiverArgs> azureAppPushReceivers) {
             this.azureAppPushReceivers = Input.ofNullable(azureAppPushReceivers);
             return this;
         }
 
-        public Builder setAzureFunctionReceivers(@Nullable Input<List<AzureFunctionReceiverArgs>> azureFunctionReceivers) {
+        public Builder azureFunctionReceivers(@Nullable Input<List<AzureFunctionReceiverArgs>> azureFunctionReceivers) {
             this.azureFunctionReceivers = azureFunctionReceivers;
             return this;
         }
 
-        public Builder setAzureFunctionReceivers(@Nullable List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
+        public Builder azureFunctionReceivers(@Nullable List<AzureFunctionReceiverArgs> azureFunctionReceivers) {
             this.azureFunctionReceivers = Input.ofNullable(azureFunctionReceivers);
             return this;
         }
 
-        public Builder setEmailReceivers(@Nullable Input<List<EmailReceiverArgs>> emailReceivers) {
+        public Builder emailReceivers(@Nullable Input<List<EmailReceiverArgs>> emailReceivers) {
             this.emailReceivers = emailReceivers;
             return this;
         }
 
-        public Builder setEmailReceivers(@Nullable List<EmailReceiverArgs> emailReceivers) {
+        public Builder emailReceivers(@Nullable List<EmailReceiverArgs> emailReceivers) {
             this.emailReceivers = Input.ofNullable(emailReceivers);
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setGroupShortName(Input<String> groupShortName) {
+        public Builder groupShortName(Input<String> groupShortName) {
             this.groupShortName = Objects.requireNonNull(groupShortName);
             return this;
         }
 
-        public Builder setGroupShortName(String groupShortName) {
+        public Builder groupShortName(String groupShortName) {
             this.groupShortName = Input.of(Objects.requireNonNull(groupShortName));
             return this;
         }
 
-        public Builder setItsmReceivers(@Nullable Input<List<ItsmReceiverArgs>> itsmReceivers) {
+        public Builder itsmReceivers(@Nullable Input<List<ItsmReceiverArgs>> itsmReceivers) {
             this.itsmReceivers = itsmReceivers;
             return this;
         }
 
-        public Builder setItsmReceivers(@Nullable List<ItsmReceiverArgs> itsmReceivers) {
+        public Builder itsmReceivers(@Nullable List<ItsmReceiverArgs> itsmReceivers) {
             this.itsmReceivers = Input.ofNullable(itsmReceivers);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogicAppReceivers(@Nullable Input<List<LogicAppReceiverArgs>> logicAppReceivers) {
+        public Builder logicAppReceivers(@Nullable Input<List<LogicAppReceiverArgs>> logicAppReceivers) {
             this.logicAppReceivers = logicAppReceivers;
             return this;
         }
 
-        public Builder setLogicAppReceivers(@Nullable List<LogicAppReceiverArgs> logicAppReceivers) {
+        public Builder logicAppReceivers(@Nullable List<LogicAppReceiverArgs> logicAppReceivers) {
             this.logicAppReceivers = Input.ofNullable(logicAppReceivers);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSmsReceivers(@Nullable Input<List<SmsReceiverArgs>> smsReceivers) {
+        public Builder smsReceivers(@Nullable Input<List<SmsReceiverArgs>> smsReceivers) {
             this.smsReceivers = smsReceivers;
             return this;
         }
 
-        public Builder setSmsReceivers(@Nullable List<SmsReceiverArgs> smsReceivers) {
+        public Builder smsReceivers(@Nullable List<SmsReceiverArgs> smsReceivers) {
             this.smsReceivers = Input.ofNullable(smsReceivers);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVoiceReceivers(@Nullable Input<List<VoiceReceiverArgs>> voiceReceivers) {
+        public Builder voiceReceivers(@Nullable Input<List<VoiceReceiverArgs>> voiceReceivers) {
             this.voiceReceivers = voiceReceivers;
             return this;
         }
 
-        public Builder setVoiceReceivers(@Nullable List<VoiceReceiverArgs> voiceReceivers) {
+        public Builder voiceReceivers(@Nullable List<VoiceReceiverArgs> voiceReceivers) {
             this.voiceReceivers = Input.ofNullable(voiceReceivers);
             return this;
         }
 
-        public Builder setWebhookReceivers(@Nullable Input<List<WebhookReceiverArgs>> webhookReceivers) {
+        public Builder webhookReceivers(@Nullable Input<List<WebhookReceiverArgs>> webhookReceivers) {
             this.webhookReceivers = webhookReceivers;
             return this;
         }
 
-        public Builder setWebhookReceivers(@Nullable List<WebhookReceiverArgs> webhookReceivers) {
+        public Builder webhookReceivers(@Nullable List<WebhookReceiverArgs> webhookReceivers) {
             this.webhookReceivers = Input.ofNullable(webhookReceivers);
             return this;
         }

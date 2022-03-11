@@ -52,12 +52,12 @@ public final class OriginEndpointMssEncryptionArgs extends io.pulumi.resources.R
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
+        public Builder spekeKeyProvider(Input<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProviderArgs spekeKeyProvider) {
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }

@@ -30,11 +30,11 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
      */
     private final @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations;
 
-    @OutputCustomType.Constructor({"healthProbe","networkApiVersion","networkInterfaceConfigurations"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetNetworkProfileResponse(
-        @Nullable ApiEntityReferenceResponse healthProbe,
-        @Nullable String networkApiVersion,
-        @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        @OutputCustomType.Parameter("healthProbe") @Nullable ApiEntityReferenceResponse healthProbe,
+        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
         this.healthProbe = healthProbe;
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
@@ -86,17 +86,17 @@ public final class VirtualMachineScaleSetNetworkProfileResponse {
     	      this.networkInterfaceConfigurations = defaults.networkInterfaceConfigurations;
         }
 
-        public Builder setHealthProbe(@Nullable ApiEntityReferenceResponse healthProbe) {
+        public Builder healthProbe(@Nullable ApiEntityReferenceResponse healthProbe) {
             this.healthProbe = healthProbe;
             return this;
         }
 
-        public Builder setNetworkApiVersion(@Nullable String networkApiVersion) {
+        public Builder networkApiVersion(@Nullable String networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineScaleSetNetworkConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }

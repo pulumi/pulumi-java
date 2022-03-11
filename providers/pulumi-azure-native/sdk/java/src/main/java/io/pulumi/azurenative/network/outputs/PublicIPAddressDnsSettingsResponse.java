@@ -27,11 +27,11 @@ public final class PublicIPAddressDnsSettingsResponse {
      */
     private final @Nullable String reverseFqdn;
 
-    @OutputCustomType.Constructor({"domainNameLabel","fqdn","reverseFqdn"})
+    @OutputCustomType.Constructor
     private PublicIPAddressDnsSettingsResponse(
-        @Nullable String domainNameLabel,
-        @Nullable String fqdn,
-        @Nullable String reverseFqdn) {
+        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("reverseFqdn") @Nullable String reverseFqdn) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.reverseFqdn = reverseFqdn;
@@ -83,17 +83,17 @@ public final class PublicIPAddressDnsSettingsResponse {
     	      this.reverseFqdn = defaults.reverseFqdn;
         }
 
-        public Builder setDomainNameLabel(@Nullable String domainNameLabel) {
+        public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setReverseFqdn(@Nullable String reverseFqdn) {
+        public Builder reverseFqdn(@Nullable String reverseFqdn) {
             this.reverseFqdn = reverseFqdn;
             return this;
         }

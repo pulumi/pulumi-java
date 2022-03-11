@@ -22,10 +22,10 @@ public final class CookieExpirationResponse {
      */
     private final @Nullable String timeToExpiration;
 
-    @OutputCustomType.Constructor({"convention","timeToExpiration"})
+    @OutputCustomType.Constructor
     private CookieExpirationResponse(
-        @Nullable String convention,
-        @Nullable String timeToExpiration) {
+        @OutputCustomType.Parameter("convention") @Nullable String convention,
+        @OutputCustomType.Parameter("timeToExpiration") @Nullable String timeToExpiration) {
         this.convention = convention;
         this.timeToExpiration = timeToExpiration;
     }
@@ -67,12 +67,12 @@ public final class CookieExpirationResponse {
     	      this.timeToExpiration = defaults.timeToExpiration;
         }
 
-        public Builder setConvention(@Nullable String convention) {
+        public Builder convention(@Nullable String convention) {
             this.convention = convention;
             return this;
         }
 
-        public Builder setTimeToExpiration(@Nullable String timeToExpiration) {
+        public Builder timeToExpiration(@Nullable String timeToExpiration) {
             this.timeToExpiration = timeToExpiration;
             return this;
         }

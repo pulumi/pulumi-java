@@ -312,172 +312,172 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
     	      this.windowStartTime = defaults.windowStartTime;
         }
 
-        public Builder setBackupKind(@Nullable Input<BackupRunBackupKind> backupKind) {
+        public Builder backupKind(@Nullable Input<BackupRunBackupKind> backupKind) {
             this.backupKind = backupKind;
             return this;
         }
 
-        public Builder setBackupKind(@Nullable BackupRunBackupKind backupKind) {
+        public Builder backupKind(@Nullable BackupRunBackupKind backupKind) {
             this.backupKind = Input.ofNullable(backupKind);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationArgs diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Input.ofNullable(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus) {
             this.diskEncryptionStatus = diskEncryptionStatus;
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(@Nullable DiskEncryptionStatusArgs diskEncryptionStatus) {
             this.diskEncryptionStatus = Input.ofNullable(diskEncryptionStatus);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setEnqueuedTime(@Nullable Input<String> enqueuedTime) {
+        public Builder enqueuedTime(@Nullable Input<String> enqueuedTime) {
             this.enqueuedTime = enqueuedTime;
             return this;
         }
 
-        public Builder setEnqueuedTime(@Nullable String enqueuedTime) {
+        public Builder enqueuedTime(@Nullable String enqueuedTime) {
             this.enqueuedTime = Input.ofNullable(enqueuedTime);
             return this;
         }
 
-        public Builder setError(@Nullable Input<OperationErrorArgs> error) {
+        public Builder error(@Nullable Input<OperationErrorArgs> error) {
             this.error = error;
             return this;
         }
 
-        public Builder setError(@Nullable OperationErrorArgs error) {
+        public Builder error(@Nullable OperationErrorArgs error) {
             this.error = Input.ofNullable(error);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setInstance(Input<String> instance) {
+        public Builder instance(Input<String> instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Input.of(Objects.requireNonNull(instance));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<BackupRunStatus> status) {
+        public Builder status(@Nullable Input<BackupRunStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable BackupRunStatus status) {
+        public Builder status(@Nullable BackupRunStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setType(@Nullable Input<BackupRunType> type) {
+        public Builder type(@Nullable Input<BackupRunType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable BackupRunType type) {
+        public Builder type(@Nullable BackupRunType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWindowStartTime(@Nullable Input<String> windowStartTime) {
+        public Builder windowStartTime(@Nullable Input<String> windowStartTime) {
             this.windowStartTime = windowStartTime;
             return this;
         }
 
-        public Builder setWindowStartTime(@Nullable String windowStartTime) {
+        public Builder windowStartTime(@Nullable String windowStartTime) {
             this.windowStartTime = Input.ofNullable(windowStartTime);
             return this;
         }

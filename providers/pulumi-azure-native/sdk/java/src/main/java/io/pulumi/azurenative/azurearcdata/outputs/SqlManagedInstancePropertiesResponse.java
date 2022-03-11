@@ -50,16 +50,16 @@ public final class SqlManagedInstancePropertiesResponse {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"admin","basicLoginInformation","dataControllerId","endTime","k8sRaw","lastUploadedDate","provisioningState","startTime"})
+    @OutputCustomType.Constructor
     private SqlManagedInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable String endTime,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("admin") @Nullable String admin,
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;
@@ -157,42 +157,42 @@ public final class SqlManagedInstancePropertiesResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setAdmin(@Nullable String admin) {
+        public Builder admin(@Nullable String admin) {
             this.admin = admin;
             return this;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setDataControllerId(@Nullable String dataControllerId) {
+        public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

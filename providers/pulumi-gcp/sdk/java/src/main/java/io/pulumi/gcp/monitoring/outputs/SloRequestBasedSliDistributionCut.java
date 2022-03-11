@@ -30,10 +30,10 @@ public final class SloRequestBasedSliDistributionCut {
      */
     private final SloRequestBasedSliDistributionCutRange range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private SloRequestBasedSliDistributionCut(
-        String distributionFilter,
-        SloRequestBasedSliDistributionCutRange range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") SloRequestBasedSliDistributionCutRange range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }
@@ -84,12 +84,12 @@ public final class SloRequestBasedSliDistributionCut {
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setRange(SloRequestBasedSliDistributionCutRange range) {
+        public Builder range(SloRequestBasedSliDistributionCutRange range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

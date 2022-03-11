@@ -20,10 +20,10 @@ public final class GetDHCPOptionsResult {
      */
     private final @Nullable List<DHCPOptionsTag> tags;
 
-    @OutputCustomType.Constructor({"dhcpOptionsId","tags"})
+    @OutputCustomType.Constructor
     private GetDHCPOptionsResult(
-        @Nullable String dhcpOptionsId,
-        @Nullable List<DHCPOptionsTag> tags) {
+        @OutputCustomType.Parameter("dhcpOptionsId") @Nullable String dhcpOptionsId,
+        @OutputCustomType.Parameter("tags") @Nullable List<DHCPOptionsTag> tags) {
         this.dhcpOptionsId = dhcpOptionsId;
         this.tags = tags;
     }
@@ -61,12 +61,12 @@ public final class GetDHCPOptionsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDhcpOptionsId(@Nullable String dhcpOptionsId) {
+        public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
             this.dhcpOptionsId = dhcpOptionsId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DHCPOptionsTag> tags) {
+        public Builder tags(@Nullable List<DHCPOptionsTag> tags) {
             this.tags = tags;
             return this;
         }

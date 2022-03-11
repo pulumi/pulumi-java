@@ -31,12 +31,12 @@ public final class ReverseSshConnectivityResponse {
      */
     private final String vpc;
 
-    @OutputCustomType.Constructor({"vm","vmIp","vmPort","vpc"})
+    @OutputCustomType.Constructor
     private ReverseSshConnectivityResponse(
-        String vm,
-        String vmIp,
-        Integer vmPort,
-        String vpc) {
+        @OutputCustomType.Parameter("vm") String vm,
+        @OutputCustomType.Parameter("vmIp") String vmIp,
+        @OutputCustomType.Parameter("vmPort") Integer vmPort,
+        @OutputCustomType.Parameter("vpc") String vpc) {
         this.vm = vm;
         this.vmIp = vmIp;
         this.vmPort = vmPort;
@@ -98,22 +98,22 @@ public final class ReverseSshConnectivityResponse {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setVm(String vm) {
+        public Builder vm(String vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
 
-        public Builder setVmIp(String vmIp) {
+        public Builder vmIp(String vmIp) {
             this.vmIp = Objects.requireNonNull(vmIp);
             return this;
         }
 
-        public Builder setVmPort(Integer vmPort) {
+        public Builder vmPort(Integer vmPort) {
             this.vmPort = Objects.requireNonNull(vmPort);
             return this;
         }
 
-        public Builder setVpc(String vpc) {
+        public Builder vpc(String vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

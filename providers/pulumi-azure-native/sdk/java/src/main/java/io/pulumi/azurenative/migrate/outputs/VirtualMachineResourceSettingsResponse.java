@@ -38,13 +38,13 @@ public final class VirtualMachineResourceSettingsResponse {
      */
     private final @Nullable String targetVmSize;
 
-    @OutputCustomType.Constructor({"resourceType","targetAvailabilitySetId","targetAvailabilityZone","targetResourceName","targetVmSize"})
+    @OutputCustomType.Constructor
     private VirtualMachineResourceSettingsResponse(
-        String resourceType,
-        @Nullable String targetAvailabilitySetId,
-        @Nullable String targetAvailabilityZone,
-        String targetResourceName,
-        @Nullable String targetVmSize) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetAvailabilitySetId") @Nullable String targetAvailabilitySetId,
+        @OutputCustomType.Parameter("targetAvailabilityZone") @Nullable String targetAvailabilityZone,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("targetVmSize") @Nullable String targetVmSize) {
         this.resourceType = resourceType;
         this.targetAvailabilitySetId = targetAvailabilitySetId;
         this.targetAvailabilityZone = targetAvailabilityZone;
@@ -117,27 +117,27 @@ public final class VirtualMachineResourceSettingsResponse {
     	      this.targetVmSize = defaults.targetVmSize;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
+        public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             this.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
-        public Builder setTargetAvailabilityZone(@Nullable String targetAvailabilityZone) {
+        public Builder targetAvailabilityZone(@Nullable String targetAvailabilityZone) {
             this.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setTargetVmSize(@Nullable String targetVmSize) {
+        public Builder targetVmSize(@Nullable String targetVmSize) {
             this.targetVmSize = targetVmSize;
             return this;
         }

@@ -17,8 +17,8 @@ public final class ExtendedPropertiesResponse {
      */
     private final @Nullable DiskExclusionPropertiesResponse diskExclusionProperties;
 
-    @OutputCustomType.Constructor({"diskExclusionProperties"})
-    private ExtendedPropertiesResponse(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
+    @OutputCustomType.Constructor
+    private ExtendedPropertiesResponse(@OutputCustomType.Parameter("diskExclusionProperties") @Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
         this.diskExclusionProperties = diskExclusionProperties;
     }
 
@@ -50,7 +50,7 @@ public final class ExtendedPropertiesResponse {
     	      this.diskExclusionProperties = defaults.diskExclusionProperties;
         }
 
-        public Builder setDiskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
+        public Builder diskExclusionProperties(@Nullable DiskExclusionPropertiesResponse diskExclusionProperties) {
             this.diskExclusionProperties = diskExclusionProperties;
             return this;
         }

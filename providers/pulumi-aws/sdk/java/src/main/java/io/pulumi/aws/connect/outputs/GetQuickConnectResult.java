@@ -45,16 +45,16 @@ public final class GetQuickConnectResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","instanceId","name","quickConnectConfigs","quickConnectId","tags"})
+    @OutputCustomType.Constructor
     private GetQuickConnectResult(
-        String arn,
-        String description,
-        String id,
-        String instanceId,
-        String name,
-        List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
-        String quickConnectId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("quickConnectConfigs") List<GetQuickConnectQuickConnectConfig> quickConnectConfigs,
+        @OutputCustomType.Parameter("quickConnectId") String quickConnectId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -148,42 +148,42 @@ public final class GetQuickConnectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQuickConnectConfigs(List<GetQuickConnectQuickConnectConfig> quickConnectConfigs) {
+        public Builder quickConnectConfigs(List<GetQuickConnectQuickConnectConfig> quickConnectConfigs) {
             this.quickConnectConfigs = Objects.requireNonNull(quickConnectConfigs);
             return this;
         }
 
-        public Builder setQuickConnectId(String quickConnectId) {
+        public Builder quickConnectId(String quickConnectId) {
             this.quickConnectId = Objects.requireNonNull(quickConnectId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

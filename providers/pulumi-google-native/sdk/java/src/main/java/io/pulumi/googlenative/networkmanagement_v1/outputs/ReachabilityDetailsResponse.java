@@ -33,12 +33,12 @@ public final class ReachabilityDetailsResponse {
      */
     private final String verifyTime;
 
-    @OutputCustomType.Constructor({"error","result","traces","verifyTime"})
+    @OutputCustomType.Constructor
     private ReachabilityDetailsResponse(
-        StatusResponse error,
-        String result,
-        List<TraceResponse> traces,
-        String verifyTime) {
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("traces") List<TraceResponse> traces,
+        @OutputCustomType.Parameter("verifyTime") String verifyTime) {
         this.error = error;
         this.result = result;
         this.traces = traces;
@@ -100,22 +100,22 @@ public final class ReachabilityDetailsResponse {
     	      this.verifyTime = defaults.verifyTime;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setTraces(List<TraceResponse> traces) {
+        public Builder traces(List<TraceResponse> traces) {
             this.traces = Objects.requireNonNull(traces);
             return this;
         }
 
-        public Builder setVerifyTime(String verifyTime) {
+        public Builder verifyTime(String verifyTime) {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }

@@ -70,22 +70,22 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     	      this.imageId = defaults.imageId;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setImageId(@Nullable Input<String> imageId) {
+        public Builder imageId(@Nullable Input<String> imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = Input.ofNullable(imageId);
             return this;
         }

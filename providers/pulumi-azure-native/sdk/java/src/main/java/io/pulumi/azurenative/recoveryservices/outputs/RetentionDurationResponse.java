@@ -24,10 +24,10 @@ public final class RetentionDurationResponse {
      */
     private final @Nullable String durationType;
 
-    @OutputCustomType.Constructor({"count","durationType"})
+    @OutputCustomType.Constructor
     private RetentionDurationResponse(
-        @Nullable Integer count,
-        @Nullable String durationType) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("durationType") @Nullable String durationType) {
         this.count = count;
         this.durationType = durationType;
     }
@@ -70,12 +70,12 @@ public final class RetentionDurationResponse {
     	      this.durationType = defaults.durationType;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setDurationType(@Nullable String durationType) {
+        public Builder durationType(@Nullable String durationType) {
             this.durationType = durationType;
             return this;
         }

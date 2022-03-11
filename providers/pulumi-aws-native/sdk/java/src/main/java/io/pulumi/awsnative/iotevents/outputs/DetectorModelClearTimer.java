@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DetectorModelClearTimer {
     private final String timerName;
 
-    @OutputCustomType.Constructor({"timerName"})
-    private DetectorModelClearTimer(String timerName) {
+    @OutputCustomType.Constructor
+    private DetectorModelClearTimer(@OutputCustomType.Parameter("timerName") String timerName) {
         this.timerName = timerName;
     }
 
@@ -40,7 +40,7 @@ public final class DetectorModelClearTimer {
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder setTimerName(String timerName) {
+        public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }

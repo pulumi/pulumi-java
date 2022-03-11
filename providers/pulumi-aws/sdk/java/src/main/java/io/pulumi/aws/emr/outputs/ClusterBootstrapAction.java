@@ -27,11 +27,11 @@ public final class ClusterBootstrapAction {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"args","name","path"})
+    @OutputCustomType.Constructor
     private ClusterBootstrapAction(
-        @Nullable List<String> args,
-        String name,
-        String path) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path) {
         this.args = args;
         this.name = name;
         this.path = path;
@@ -83,17 +83,17 @@ public final class ClusterBootstrapAction {
     	      this.path = defaults.path;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

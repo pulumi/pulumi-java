@@ -32,13 +32,13 @@ public final class PackageIssueResponse {
     private final String packageType;
     private final String severityName;
 
-    @OutputCustomType.Constructor({"affectedLocation","effectiveSeverity","fixedLocation","packageType","severityName"})
+    @OutputCustomType.Constructor
     private PackageIssueResponse(
-        VulnerabilityLocationResponse affectedLocation,
-        String effectiveSeverity,
-        VulnerabilityLocationResponse fixedLocation,
-        String packageType,
-        String severityName) {
+        @OutputCustomType.Parameter("affectedLocation") VulnerabilityLocationResponse affectedLocation,
+        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName) {
         this.affectedLocation = affectedLocation;
         this.effectiveSeverity = effectiveSeverity;
         this.fixedLocation = fixedLocation;
@@ -106,27 +106,27 @@ public final class PackageIssueResponse {
     	      this.severityName = defaults.severityName;
         }
 
-        public Builder setAffectedLocation(VulnerabilityLocationResponse affectedLocation) {
+        public Builder affectedLocation(VulnerabilityLocationResponse affectedLocation) {
             this.affectedLocation = Objects.requireNonNull(affectedLocation);
             return this;
         }
 
-        public Builder setEffectiveSeverity(String effectiveSeverity) {
+        public Builder effectiveSeverity(String effectiveSeverity) {
             this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
             return this;
         }
 
-        public Builder setFixedLocation(VulnerabilityLocationResponse fixedLocation) {
+        public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
             this.fixedLocation = Objects.requireNonNull(fixedLocation);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSeverityName(String severityName) {
+        public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }

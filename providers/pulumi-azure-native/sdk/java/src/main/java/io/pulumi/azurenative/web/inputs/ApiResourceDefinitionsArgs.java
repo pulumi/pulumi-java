@@ -74,22 +74,22 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
     	      this.originalSwaggerUrl = defaults.originalSwaggerUrl;
         }
 
-        public Builder setModifiedSwaggerUrl(@Nullable Input<String> modifiedSwaggerUrl) {
+        public Builder modifiedSwaggerUrl(@Nullable Input<String> modifiedSwaggerUrl) {
             this.modifiedSwaggerUrl = modifiedSwaggerUrl;
             return this;
         }
 
-        public Builder setModifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
+        public Builder modifiedSwaggerUrl(@Nullable String modifiedSwaggerUrl) {
             this.modifiedSwaggerUrl = Input.ofNullable(modifiedSwaggerUrl);
             return this;
         }
 
-        public Builder setOriginalSwaggerUrl(@Nullable Input<String> originalSwaggerUrl) {
+        public Builder originalSwaggerUrl(@Nullable Input<String> originalSwaggerUrl) {
             this.originalSwaggerUrl = originalSwaggerUrl;
             return this;
         }
 
-        public Builder setOriginalSwaggerUrl(@Nullable String originalSwaggerUrl) {
+        public Builder originalSwaggerUrl(@Nullable String originalSwaggerUrl) {
             this.originalSwaggerUrl = Input.ofNullable(originalSwaggerUrl);
             return this;
         }

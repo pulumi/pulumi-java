@@ -81,25 +81,25 @@ public final class DatabaseInstanceSettings {
     private final @Nullable Map<String,String> userLabels;
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"activationPolicy","availabilityType","backupConfiguration","collation","databaseFlags","diskAutoresize","diskAutoresizeLimit","diskSize","diskType","insightsConfig","ipConfiguration","locationPreference","maintenanceWindow","pricingPlan","tier","userLabels","version"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettings(
-        @Nullable String activationPolicy,
-        @Nullable String availabilityType,
-        @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
-        @Nullable String collation,
-        @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
-        @Nullable Boolean diskAutoresize,
-        @Nullable Integer diskAutoresizeLimit,
-        @Nullable Integer diskSize,
-        @Nullable String diskType,
-        @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
-        @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
-        @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
-        @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
-        @Nullable String pricingPlan,
-        String tier,
-        @Nullable Map<String,String> userLabels,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("activationPolicy") @Nullable String activationPolicy,
+        @OutputCustomType.Parameter("availabilityType") @Nullable String availabilityType,
+        @OutputCustomType.Parameter("backupConfiguration") @Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("databaseFlags") @Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags,
+        @OutputCustomType.Parameter("diskAutoresize") @Nullable Boolean diskAutoresize,
+        @OutputCustomType.Parameter("diskAutoresizeLimit") @Nullable Integer diskAutoresizeLimit,
+        @OutputCustomType.Parameter("diskSize") @Nullable Integer diskSize,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("insightsConfig") @Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig,
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration,
+        @OutputCustomType.Parameter("locationPreference") @Nullable DatabaseInstanceSettingsLocationPreference locationPreference,
+        @OutputCustomType.Parameter("maintenanceWindow") @Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow,
+        @OutputCustomType.Parameter("pricingPlan") @Nullable String pricingPlan,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") @Nullable Map<String,String> userLabels,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.activationPolicy = activationPolicy;
         this.availabilityType = availabilityType;
         this.backupConfiguration = backupConfiguration;
@@ -265,87 +265,87 @@ public final class DatabaseInstanceSettings {
     	      this.version = defaults.version;
         }
 
-        public Builder setActivationPolicy(@Nullable String activationPolicy) {
+        public Builder activationPolicy(@Nullable String activationPolicy) {
             this.activationPolicy = activationPolicy;
             return this;
         }
 
-        public Builder setAvailabilityType(@Nullable String availabilityType) {
+        public Builder availabilityType(@Nullable String availabilityType) {
             this.availabilityType = availabilityType;
             return this;
         }
 
-        public Builder setBackupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration) {
+        public Builder backupConfiguration(@Nullable DatabaseInstanceSettingsBackupConfiguration backupConfiguration) {
             this.backupConfiguration = backupConfiguration;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setDatabaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags) {
+        public Builder databaseFlags(@Nullable List<DatabaseInstanceSettingsDatabaseFlag> databaseFlags) {
             this.databaseFlags = databaseFlags;
             return this;
         }
 
-        public Builder setDiskAutoresize(@Nullable Boolean diskAutoresize) {
+        public Builder diskAutoresize(@Nullable Boolean diskAutoresize) {
             this.diskAutoresize = diskAutoresize;
             return this;
         }
 
-        public Builder setDiskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
+        public Builder diskAutoresizeLimit(@Nullable Integer diskAutoresizeLimit) {
             this.diskAutoresizeLimit = diskAutoresizeLimit;
             return this;
         }
 
-        public Builder setDiskSize(@Nullable Integer diskSize) {
+        public Builder diskSize(@Nullable Integer diskSize) {
             this.diskSize = diskSize;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setInsightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig) {
+        public Builder insightsConfig(@Nullable DatabaseInstanceSettingsInsightsConfig insightsConfig) {
             this.insightsConfig = insightsConfig;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration) {
+        public Builder ipConfiguration(@Nullable DatabaseInstanceSettingsIpConfiguration ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setLocationPreference(@Nullable DatabaseInstanceSettingsLocationPreference locationPreference) {
+        public Builder locationPreference(@Nullable DatabaseInstanceSettingsLocationPreference locationPreference) {
             this.locationPreference = locationPreference;
             return this;
         }
 
-        public Builder setMaintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow) {
+        public Builder maintenanceWindow(@Nullable DatabaseInstanceSettingsMaintenanceWindow maintenanceWindow) {
             this.maintenanceWindow = maintenanceWindow;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable String pricingPlan) {
+        public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUserLabels(@Nullable Map<String,String> userLabels) {
+        public Builder userLabels(@Nullable Map<String,String> userLabels) {
             this.userLabels = userLabels;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

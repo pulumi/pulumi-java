@@ -58,12 +58,12 @@ public final class VolumePropertiesExportPolicyArgs extends io.pulumi.resources.
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable Input<List<ExportPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<ExportPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<ExportPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<ExportPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

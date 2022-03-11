@@ -77,22 +77,22 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable Input<Either<String,SkuName>> name) {
+        public Builder name(@Nullable Input<Either<String,SkuName>> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable Either<String,SkuName> name) {
+        public Builder name(@Nullable Either<String,SkuName> name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Either<String,SkuTier>> tier) {
+        public Builder tier(@Nullable Input<Either<String,SkuTier>> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Either<String,SkuTier> tier) {
+        public Builder tier(@Nullable Either<String,SkuTier> tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

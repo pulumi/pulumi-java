@@ -185,122 +185,122 @@ public final class TransitGatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnEcmpSupport = defaults.vpnEcmpSupport;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Input<Integer> amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Input<Integer> amazonSideAsn) {
             this.amazonSideAsn = amazonSideAsn;
             return this;
         }
 
-        public Builder setAmazonSideAsn(@Nullable Integer amazonSideAsn) {
+        public Builder amazonSideAsn(@Nullable Integer amazonSideAsn) {
             this.amazonSideAsn = Input.ofNullable(amazonSideAsn);
             return this;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable Input<String> associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable Input<String> associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = associationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setAssociationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
+        public Builder associationDefaultRouteTableId(@Nullable String associationDefaultRouteTableId) {
             this.associationDefaultRouteTableId = Input.ofNullable(associationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable Input<String> autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable Input<String> autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = autoAcceptSharedAttachments;
             return this;
         }
 
-        public Builder setAutoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
+        public Builder autoAcceptSharedAttachments(@Nullable String autoAcceptSharedAttachments) {
             this.autoAcceptSharedAttachments = Input.ofNullable(autoAcceptSharedAttachments);
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable Input<String> defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable Input<String> defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = defaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setDefaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
+        public Builder defaultRouteTableAssociation(@Nullable String defaultRouteTableAssociation) {
             this.defaultRouteTableAssociation = Input.ofNullable(defaultRouteTableAssociation);
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable Input<String> defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable Input<String> defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = defaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setDefaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
+        public Builder defaultRouteTablePropagation(@Nullable String defaultRouteTablePropagation) {
             this.defaultRouteTablePropagation = Input.ofNullable(defaultRouteTablePropagation);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Input.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder setMulticastSupport(@Nullable Input<String> multicastSupport) {
+        public Builder multicastSupport(@Nullable Input<String> multicastSupport) {
             this.multicastSupport = multicastSupport;
             return this;
         }
 
-        public Builder setMulticastSupport(@Nullable String multicastSupport) {
+        public Builder multicastSupport(@Nullable String multicastSupport) {
             this.multicastSupport = Input.ofNullable(multicastSupport);
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable Input<String> propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable Input<String> propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = propagationDefaultRouteTableId;
             return this;
         }
 
-        public Builder setPropagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
+        public Builder propagationDefaultRouteTableId(@Nullable String propagationDefaultRouteTableId) {
             this.propagationDefaultRouteTableId = Input.ofNullable(propagationDefaultRouteTableId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TransitGatewayTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TransitGatewayTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayTagArgs> tags) {
+        public Builder tags(@Nullable List<TransitGatewayTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayCidrBlocks(@Nullable Input<List<String>> transitGatewayCidrBlocks) {
+        public Builder transitGatewayCidrBlocks(@Nullable Input<List<String>> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = transitGatewayCidrBlocks;
             return this;
         }
 
-        public Builder setTransitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
+        public Builder transitGatewayCidrBlocks(@Nullable List<String> transitGatewayCidrBlocks) {
             this.transitGatewayCidrBlocks = Input.ofNullable(transitGatewayCidrBlocks);
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable Input<String> vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable Input<String> vpnEcmpSupport) {
             this.vpnEcmpSupport = vpnEcmpSupport;
             return this;
         }
 
-        public Builder setVpnEcmpSupport(@Nullable String vpnEcmpSupport) {
+        public Builder vpnEcmpSupport(@Nullable String vpnEcmpSupport) {
             this.vpnEcmpSupport = Input.ofNullable(vpnEcmpSupport);
             return this;
         }

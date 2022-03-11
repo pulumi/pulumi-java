@@ -33,13 +33,13 @@ public final class GetLocationNFSResult {
      */
     private final @Nullable List<LocationNFSTag> tags;
 
-    @OutputCustomType.Constructor({"locationArn","locationUri","mountOptions","onPremConfig","tags"})
+    @OutputCustomType.Constructor
     private GetLocationNFSResult(
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable LocationNFSMountOptions mountOptions,
-        @Nullable LocationNFSOnPremConfig onPremConfig,
-        @Nullable List<LocationNFSTag> tags) {
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("mountOptions") @Nullable LocationNFSMountOptions mountOptions,
+        @OutputCustomType.Parameter("onPremConfig") @Nullable LocationNFSOnPremConfig onPremConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationNFSTag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.mountOptions = mountOptions;
@@ -103,27 +103,27 @@ public final class GetLocationNFSResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable LocationNFSMountOptions mountOptions) {
+        public Builder mountOptions(@Nullable LocationNFSMountOptions mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setOnPremConfig(@Nullable LocationNFSOnPremConfig onPremConfig) {
+        public Builder onPremConfig(@Nullable LocationNFSOnPremConfig onPremConfig) {
             this.onPremConfig = onPremConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationNFSTag> tags) {
+        public Builder tags(@Nullable List<LocationNFSTag> tags) {
             this.tags = tags;
             return this;
         }

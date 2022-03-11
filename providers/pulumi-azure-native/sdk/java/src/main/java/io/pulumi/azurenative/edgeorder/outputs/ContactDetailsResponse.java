@@ -38,13 +38,13 @@ public final class ContactDetailsResponse {
      */
     private final @Nullable String phoneExtension;
 
-    @OutputCustomType.Constructor({"contactName","emailList","mobile","phone","phoneExtension"})
+    @OutputCustomType.Constructor
     private ContactDetailsResponse(
-        String contactName,
-        List<String> emailList,
-        @Nullable String mobile,
-        String phone,
-        @Nullable String phoneExtension) {
+        @OutputCustomType.Parameter("contactName") String contactName,
+        @OutputCustomType.Parameter("emailList") List<String> emailList,
+        @OutputCustomType.Parameter("mobile") @Nullable String mobile,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("phoneExtension") @Nullable String phoneExtension) {
         this.contactName = contactName;
         this.emailList = emailList;
         this.mobile = mobile;
@@ -116,27 +116,27 @@ public final class ContactDetailsResponse {
     	      this.phoneExtension = defaults.phoneExtension;
         }
 
-        public Builder setContactName(String contactName) {
+        public Builder contactName(String contactName) {
             this.contactName = Objects.requireNonNull(contactName);
             return this;
         }
 
-        public Builder setEmailList(List<String> emailList) {
+        public Builder emailList(List<String> emailList) {
             this.emailList = Objects.requireNonNull(emailList);
             return this;
         }
 
-        public Builder setMobile(@Nullable String mobile) {
+        public Builder mobile(@Nullable String mobile) {
             this.mobile = mobile;
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhoneExtension(@Nullable String phoneExtension) {
+        public Builder phoneExtension(@Nullable String phoneExtension) {
             this.phoneExtension = phoneExtension;
             return this;
         }

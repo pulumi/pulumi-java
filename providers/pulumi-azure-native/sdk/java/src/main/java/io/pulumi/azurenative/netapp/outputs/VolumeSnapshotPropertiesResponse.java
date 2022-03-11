@@ -17,8 +17,8 @@ public final class VolumeSnapshotPropertiesResponse {
      */
     private final @Nullable String snapshotPolicyId;
 
-    @OutputCustomType.Constructor({"snapshotPolicyId"})
-    private VolumeSnapshotPropertiesResponse(@Nullable String snapshotPolicyId) {
+    @OutputCustomType.Constructor
+    private VolumeSnapshotPropertiesResponse(@OutputCustomType.Parameter("snapshotPolicyId") @Nullable String snapshotPolicyId) {
         this.snapshotPolicyId = snapshotPolicyId;
     }
 
@@ -50,7 +50,7 @@ public final class VolumeSnapshotPropertiesResponse {
     	      this.snapshotPolicyId = defaults.snapshotPolicyId;
         }
 
-        public Builder setSnapshotPolicyId(@Nullable String snapshotPolicyId) {
+        public Builder snapshotPolicyId(@Nullable String snapshotPolicyId) {
             this.snapshotPolicyId = snapshotPolicyId;
             return this;
         }

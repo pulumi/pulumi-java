@@ -59,17 +59,17 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"customData","databaseName","id","mechanisms","name","password","roles","type","userName"})
+    @OutputCustomType.Constructor
     private GetMongoDBResourceMongoUserDefinitionResult(
-        @Nullable String customData,
-        @Nullable String databaseName,
-        String id,
-        @Nullable String mechanisms,
-        String name,
-        @Nullable String password,
-        @Nullable List<RoleResponse> roles,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("mechanisms") @Nullable String mechanisms,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.customData = customData;
         this.databaseName = databaseName;
         this.id = id;
@@ -181,47 +181,47 @@ public final class GetMongoDBResourceMongoUserDefinitionResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMechanisms(@Nullable String mechanisms) {
+        public Builder mechanisms(@Nullable String mechanisms) {
             this.mechanisms = mechanisms;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

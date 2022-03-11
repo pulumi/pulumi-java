@@ -58,12 +58,12 @@ public final class ScopeSelectorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matchExpressions = defaults.matchExpressions;
         }
 
-        public Builder setMatchExpressions(@Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
+        public Builder matchExpressions(@Nullable Input<List<ScopedResourceSelectorRequirementArgs>> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchExpressions(@Nullable List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<ScopedResourceSelectorRequirementArgs> matchExpressions) {
             this.matchExpressions = Input.ofNullable(matchExpressions);
             return this;
         }

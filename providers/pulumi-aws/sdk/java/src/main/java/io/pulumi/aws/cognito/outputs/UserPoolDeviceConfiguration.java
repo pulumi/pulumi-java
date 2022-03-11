@@ -22,10 +22,10 @@ public final class UserPoolDeviceConfiguration {
      */
     private final @Nullable Boolean deviceOnlyRememberedOnUserPrompt;
 
-    @OutputCustomType.Constructor({"challengeRequiredOnNewDevice","deviceOnlyRememberedOnUserPrompt"})
+    @OutputCustomType.Constructor
     private UserPoolDeviceConfiguration(
-        @Nullable Boolean challengeRequiredOnNewDevice,
-        @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
+        @OutputCustomType.Parameter("challengeRequiredOnNewDevice") @Nullable Boolean challengeRequiredOnNewDevice,
+        @OutputCustomType.Parameter("deviceOnlyRememberedOnUserPrompt") @Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
         this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
         this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
     }
@@ -67,12 +67,12 @@ public final class UserPoolDeviceConfiguration {
     	      this.deviceOnlyRememberedOnUserPrompt = defaults.deviceOnlyRememberedOnUserPrompt;
         }
 
-        public Builder setChallengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
+        public Builder challengeRequiredOnNewDevice(@Nullable Boolean challengeRequiredOnNewDevice) {
             this.challengeRequiredOnNewDevice = challengeRequiredOnNewDevice;
             return this;
         }
 
-        public Builder setDeviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
+        public Builder deviceOnlyRememberedOnUserPrompt(@Nullable Boolean deviceOnlyRememberedOnUserPrompt) {
             this.deviceOnlyRememberedOnUserPrompt = deviceOnlyRememberedOnUserPrompt;
             return this;
         }

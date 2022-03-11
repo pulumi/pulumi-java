@@ -45,14 +45,14 @@ public final class StatusDetails {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"causes","group","kind","name","retryAfterSeconds","uid"})
+    @OutputCustomType.Constructor
     private StatusDetails(
-        @Nullable List<StatusCause> causes,
-        @Nullable String group,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable Integer retryAfterSeconds,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("causes") @Nullable List<StatusCause> causes,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("retryAfterSeconds") @Nullable Integer retryAfterSeconds,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.causes = causes;
         this.group = group;
         this.kind = kind;
@@ -134,32 +134,32 @@ public final class StatusDetails {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setCauses(@Nullable List<StatusCause> causes) {
+        public Builder causes(@Nullable List<StatusCause> causes) {
             this.causes = causes;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRetryAfterSeconds(@Nullable Integer retryAfterSeconds) {
+        public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
             this.retryAfterSeconds = retryAfterSeconds;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }

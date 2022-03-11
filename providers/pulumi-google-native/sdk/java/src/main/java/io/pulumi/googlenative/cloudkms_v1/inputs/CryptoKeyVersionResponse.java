@@ -267,72 +267,72 @@ public final class CryptoKeyVersionResponse extends io.pulumi.resources.InvokeAr
     	      this.state = defaults.state;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setAttestation(KeyOperationAttestationResponse attestation) {
+        public Builder attestation(KeyOperationAttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDestroyEventTime(String destroyEventTime) {
+        public Builder destroyEventTime(String destroyEventTime) {
             this.destroyEventTime = Objects.requireNonNull(destroyEventTime);
             return this;
         }
 
-        public Builder setDestroyTime(String destroyTime) {
+        public Builder destroyTime(String destroyTime) {
             this.destroyTime = Objects.requireNonNull(destroyTime);
             return this;
         }
 
-        public Builder setExternalProtectionLevelOptions(ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions) {
+        public Builder externalProtectionLevelOptions(ExternalProtectionLevelOptionsResponse externalProtectionLevelOptions) {
             this.externalProtectionLevelOptions = Objects.requireNonNull(externalProtectionLevelOptions);
             return this;
         }
 
-        public Builder setGenerateTime(String generateTime) {
+        public Builder generateTime(String generateTime) {
             this.generateTime = Objects.requireNonNull(generateTime);
             return this;
         }
 
-        public Builder setImportFailureReason(String importFailureReason) {
+        public Builder importFailureReason(String importFailureReason) {
             this.importFailureReason = Objects.requireNonNull(importFailureReason);
             return this;
         }
 
-        public Builder setImportJob(String importJob) {
+        public Builder importJob(String importJob) {
             this.importJob = Objects.requireNonNull(importJob);
             return this;
         }
 
-        public Builder setImportTime(String importTime) {
+        public Builder importTime(String importTime) {
             this.importTime = Objects.requireNonNull(importTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtectionLevel(String protectionLevel) {
+        public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
 
-        public Builder setReimportEligible(Boolean reimportEligible) {
+        public Builder reimportEligible(Boolean reimportEligible) {
             this.reimportEligible = Objects.requireNonNull(reimportEligible);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

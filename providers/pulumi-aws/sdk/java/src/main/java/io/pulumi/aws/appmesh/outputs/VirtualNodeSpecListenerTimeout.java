@@ -35,12 +35,12 @@ public final class VirtualNodeSpecListenerTimeout {
      */
     private final @Nullable VirtualNodeSpecListenerTimeoutTcp tcp;
 
-    @OutputCustomType.Constructor({"grpc","http","http2","tcp"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTimeout(
-        @Nullable VirtualNodeSpecListenerTimeoutGrpc grpc,
-        @Nullable VirtualNodeSpecListenerTimeoutHttp http,
-        @Nullable VirtualNodeSpecListenerTimeoutHttp2 http2,
-        @Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
+        @OutputCustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerTimeoutGrpc grpc,
+        @OutputCustomType.Parameter("http") @Nullable VirtualNodeSpecListenerTimeoutHttp http,
+        @OutputCustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerTimeoutHttp2 http2,
+        @OutputCustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;
@@ -102,22 +102,22 @@ public final class VirtualNodeSpecListenerTimeout {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerTimeoutGrpc grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerTimeoutGrpc grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerTimeoutHttp http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerTimeoutHttp http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerTimeoutHttp2 http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerTimeoutHttp2 http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerTimeoutTcp tcp) {
             this.tcp = tcp;
             return this;
         }

@@ -20,10 +20,10 @@ public final class GetReservationResult {
      */
     private final String throughputCapacity;
 
-    @OutputCustomType.Constructor({"name","throughputCapacity"})
+    @OutputCustomType.Constructor
     private GetReservationResult(
-        String name,
-        String throughputCapacity) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("throughputCapacity") String throughputCapacity) {
         this.name = name;
         this.throughputCapacity = throughputCapacity;
     }
@@ -65,12 +65,12 @@ public final class GetReservationResult {
     	      this.throughputCapacity = defaults.throughputCapacity;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setThroughputCapacity(String throughputCapacity) {
+        public Builder throughputCapacity(String throughputCapacity) {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }

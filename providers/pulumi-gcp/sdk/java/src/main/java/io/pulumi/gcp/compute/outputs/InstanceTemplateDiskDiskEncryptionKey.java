@@ -15,8 +15,8 @@ public final class InstanceTemplateDiskDiskEncryptionKey {
      */
     private final String kmsKeySelfLink;
 
-    @OutputCustomType.Constructor({"kmsKeySelfLink"})
-    private InstanceTemplateDiskDiskEncryptionKey(String kmsKeySelfLink) {
+    @OutputCustomType.Constructor
+    private InstanceTemplateDiskDiskEncryptionKey(@OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink) {
         this.kmsKeySelfLink = kmsKeySelfLink;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceTemplateDiskDiskEncryptionKey {
     	      this.kmsKeySelfLink = defaults.kmsKeySelfLink;
         }
 
-        public Builder setKmsKeySelfLink(String kmsKeySelfLink) {
+        public Builder kmsKeySelfLink(String kmsKeySelfLink) {
             this.kmsKeySelfLink = Objects.requireNonNull(kmsKeySelfLink);
             return this;
         }

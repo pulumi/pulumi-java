@@ -28,11 +28,11 @@ public final class StatusResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","details","message"})
+    @OutputCustomType.Constructor
     private StatusResponse(
-        Integer code,
-        List<Map<String,String>> details,
-        String message) {
+        @OutputCustomType.Parameter("code") Integer code,
+        @OutputCustomType.Parameter("details") List<Map<String,String>> details,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.details = details;
         this.message = message;
@@ -84,17 +84,17 @@ public final class StatusResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(Integer code) {
+        public Builder code(Integer code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDetails(List<Map<String,String>> details) {
+        public Builder details(List<Map<String,String>> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

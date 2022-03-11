@@ -68,20 +68,20 @@ public final class GetReportDefinitionResult {
      */
     private final String timeUnit;
 
-    @OutputCustomType.Constructor({"additionalArtifacts","additionalSchemaElements","compression","format","id","refreshClosedReports","reportName","reportVersioning","s3Bucket","s3Prefix","s3Region","timeUnit"})
+    @OutputCustomType.Constructor
     private GetReportDefinitionResult(
-        List<String> additionalArtifacts,
-        List<String> additionalSchemaElements,
-        String compression,
-        String format,
-        String id,
-        Boolean refreshClosedReports,
-        String reportName,
-        String reportVersioning,
-        String s3Bucket,
-        String s3Prefix,
-        String s3Region,
-        String timeUnit) {
+        @OutputCustomType.Parameter("additionalArtifacts") List<String> additionalArtifacts,
+        @OutputCustomType.Parameter("additionalSchemaElements") List<String> additionalSchemaElements,
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("refreshClosedReports") Boolean refreshClosedReports,
+        @OutputCustomType.Parameter("reportName") String reportName,
+        @OutputCustomType.Parameter("reportVersioning") String reportVersioning,
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3Prefix") String s3Prefix,
+        @OutputCustomType.Parameter("s3Region") String s3Region,
+        @OutputCustomType.Parameter("timeUnit") String timeUnit) {
         this.additionalArtifacts = additionalArtifacts;
         this.additionalSchemaElements = additionalSchemaElements;
         this.compression = compression;
@@ -219,62 +219,62 @@ public final class GetReportDefinitionResult {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setAdditionalArtifacts(List<String> additionalArtifacts) {
+        public Builder additionalArtifacts(List<String> additionalArtifacts) {
             this.additionalArtifacts = Objects.requireNonNull(additionalArtifacts);
             return this;
         }
 
-        public Builder setAdditionalSchemaElements(List<String> additionalSchemaElements) {
+        public Builder additionalSchemaElements(List<String> additionalSchemaElements) {
             this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements);
             return this;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRefreshClosedReports(Boolean refreshClosedReports) {
+        public Builder refreshClosedReports(Boolean refreshClosedReports) {
             this.refreshClosedReports = Objects.requireNonNull(refreshClosedReports);
             return this;
         }
 
-        public Builder setReportName(String reportName) {
+        public Builder reportName(String reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }
 
-        public Builder setReportVersioning(String reportVersioning) {
+        public Builder reportVersioning(String reportVersioning) {
             this.reportVersioning = Objects.requireNonNull(reportVersioning);
             return this;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3Prefix(String s3Prefix) {
+        public Builder s3Prefix(String s3Prefix) {
             this.s3Prefix = Objects.requireNonNull(s3Prefix);
             return this;
         }
 
-        public Builder setS3Region(String s3Region) {
+        public Builder s3Region(String s3Region) {
             this.s3Region = Objects.requireNonNull(s3Region);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }

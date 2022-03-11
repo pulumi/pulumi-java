@@ -52,12 +52,12 @@ public final class ConnectorProfileDynatraceConnectorProfilePropertiesArgs exten
     	      this.instanceUrl = defaults.instanceUrl;
         }
 
-        public Builder setInstanceUrl(Input<String> instanceUrl) {
+        public Builder instanceUrl(Input<String> instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }
 
-        public Builder setInstanceUrl(String instanceUrl) {
+        public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Input.of(Objects.requireNonNull(instanceUrl));
             return this;
         }

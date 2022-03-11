@@ -17,12 +17,12 @@ public final class DomainCognitoOptions {
     private final @Nullable String roleArn;
     private final @Nullable String userPoolId;
 
-    @OutputCustomType.Constructor({"enabled","identityPoolId","roleArn","userPoolId"})
+    @OutputCustomType.Constructor
     private DomainCognitoOptions(
-        @Nullable Boolean enabled,
-        @Nullable String identityPoolId,
-        @Nullable String roleArn,
-        @Nullable String userPoolId) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("userPoolId") @Nullable String userPoolId) {
         this.enabled = enabled;
         this.identityPoolId = identityPoolId;
         this.roleArn = roleArn;
@@ -68,22 +68,22 @@ public final class DomainCognitoOptions {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }

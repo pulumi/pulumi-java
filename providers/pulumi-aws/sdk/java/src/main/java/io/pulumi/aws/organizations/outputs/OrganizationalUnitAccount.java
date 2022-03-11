@@ -32,12 +32,12 @@ public final class OrganizationalUnitAccount {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","email","id","name"})
+    @OutputCustomType.Constructor
     private OrganizationalUnitAccount(
-        @Nullable String arn,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.email = email;
         this.id = id;
@@ -99,22 +99,22 @@ public final class OrganizationalUnitAccount {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

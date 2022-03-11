@@ -17,8 +17,8 @@ public final class GetIPAMAllocationResult {
      */
     private final @Nullable String ipamPoolAllocationId;
 
-    @OutputCustomType.Constructor({"ipamPoolAllocationId"})
-    private GetIPAMAllocationResult(@Nullable String ipamPoolAllocationId) {
+    @OutputCustomType.Constructor
+    private GetIPAMAllocationResult(@OutputCustomType.Parameter("ipamPoolAllocationId") @Nullable String ipamPoolAllocationId) {
         this.ipamPoolAllocationId = ipamPoolAllocationId;
     }
 
@@ -50,7 +50,7 @@ public final class GetIPAMAllocationResult {
     	      this.ipamPoolAllocationId = defaults.ipamPoolAllocationId;
         }
 
-        public Builder setIpamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
+        public Builder ipamPoolAllocationId(@Nullable String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
             return this;
         }

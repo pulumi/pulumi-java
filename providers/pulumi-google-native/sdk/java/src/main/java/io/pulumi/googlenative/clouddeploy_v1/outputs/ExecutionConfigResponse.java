@@ -43,14 +43,14 @@ public final class ExecutionConfigResponse {
      */
     private final String workerPool;
 
-    @OutputCustomType.Constructor({"artifactStorage","defaultPool","privatePool","serviceAccount","usages","workerPool"})
+    @OutputCustomType.Constructor
     private ExecutionConfigResponse(
-        String artifactStorage,
-        DefaultPoolResponse defaultPool,
-        PrivatePoolResponse privatePool,
-        String serviceAccount,
-        List<String> usages,
-        String workerPool) {
+        @OutputCustomType.Parameter("artifactStorage") String artifactStorage,
+        @OutputCustomType.Parameter("defaultPool") DefaultPoolResponse defaultPool,
+        @OutputCustomType.Parameter("privatePool") PrivatePoolResponse privatePool,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("usages") List<String> usages,
+        @OutputCustomType.Parameter("workerPool") String workerPool) {
         this.artifactStorage = artifactStorage;
         this.defaultPool = defaultPool;
         this.privatePool = privatePool;
@@ -132,32 +132,32 @@ public final class ExecutionConfigResponse {
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setArtifactStorage(String artifactStorage) {
+        public Builder artifactStorage(String artifactStorage) {
             this.artifactStorage = Objects.requireNonNull(artifactStorage);
             return this;
         }
 
-        public Builder setDefaultPool(DefaultPoolResponse defaultPool) {
+        public Builder defaultPool(DefaultPoolResponse defaultPool) {
             this.defaultPool = Objects.requireNonNull(defaultPool);
             return this;
         }
 
-        public Builder setPrivatePool(PrivatePoolResponse privatePool) {
+        public Builder privatePool(PrivatePoolResponse privatePool) {
             this.privatePool = Objects.requireNonNull(privatePool);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setUsages(List<String> usages) {
+        public Builder usages(List<String> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
 
-        public Builder setWorkerPool(String workerPool) {
+        public Builder workerPool(String workerPool) {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }

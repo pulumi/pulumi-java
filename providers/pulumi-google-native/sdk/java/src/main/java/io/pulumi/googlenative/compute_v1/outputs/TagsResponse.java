@@ -21,10 +21,10 @@ public final class TagsResponse {
      */
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"fingerprint","items"})
+    @OutputCustomType.Constructor
     private TagsResponse(
-        String fingerprint,
-        List<String> items) {
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("items") List<String> items) {
         this.fingerprint = fingerprint;
         this.items = items;
     }
@@ -66,12 +66,12 @@ public final class TagsResponse {
     	      this.items = defaults.items;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

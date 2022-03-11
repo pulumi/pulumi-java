@@ -21,11 +21,11 @@ public final class DatadogHostMetadataResponse {
     private final @Nullable DatadogInstallMethodResponse installMethod;
     private final @Nullable DatadogLogsAgentResponse logsAgent;
 
-    @OutputCustomType.Constructor({"agentVersion","installMethod","logsAgent"})
+    @OutputCustomType.Constructor
     private DatadogHostMetadataResponse(
-        @Nullable String agentVersion,
-        @Nullable DatadogInstallMethodResponse installMethod,
-        @Nullable DatadogLogsAgentResponse logsAgent) {
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("installMethod") @Nullable DatadogInstallMethodResponse installMethod,
+        @OutputCustomType.Parameter("logsAgent") @Nullable DatadogLogsAgentResponse logsAgent) {
         this.agentVersion = agentVersion;
         this.installMethod = installMethod;
         this.logsAgent = logsAgent;
@@ -69,17 +69,17 @@ public final class DatadogHostMetadataResponse {
     	      this.logsAgent = defaults.logsAgent;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setInstallMethod(@Nullable DatadogInstallMethodResponse installMethod) {
+        public Builder installMethod(@Nullable DatadogInstallMethodResponse installMethod) {
             this.installMethod = installMethod;
             return this;
         }
 
-        public Builder setLogsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
+        public Builder logsAgent(@Nullable DatadogLogsAgentResponse logsAgent) {
             this.logsAgent = logsAgent;
             return this;
         }

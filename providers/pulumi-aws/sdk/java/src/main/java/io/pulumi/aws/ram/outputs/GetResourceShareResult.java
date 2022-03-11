@@ -42,16 +42,16 @@ public final class GetResourceShareResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","filters","id","name","owningAccountId","resourceOwner","status","tags"})
+    @OutputCustomType.Constructor
     private GetResourceShareResult(
-        String arn,
-        @Nullable List<GetResourceShareFilter> filters,
-        String id,
-        String name,
-        String owningAccountId,
-        String resourceOwner,
-        String status,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetResourceShareFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owningAccountId") String owningAccountId,
+        @OutputCustomType.Parameter("resourceOwner") String resourceOwner,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.filters = filters;
         this.id = id;
@@ -141,42 +141,42 @@ public final class GetResourceShareResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetResourceShareFilter> filters) {
+        public Builder filters(@Nullable List<GetResourceShareFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwningAccountId(String owningAccountId) {
+        public Builder owningAccountId(String owningAccountId) {
             this.owningAccountId = Objects.requireNonNull(owningAccountId);
             return this;
         }
 
-        public Builder setResourceOwner(String resourceOwner) {
+        public Builder resourceOwner(String resourceOwner) {
             this.resourceOwner = Objects.requireNonNull(resourceOwner);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

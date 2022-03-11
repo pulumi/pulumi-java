@@ -17,8 +17,8 @@ public final class EndpointHints {
      */
     private final @Nullable List<ForZone> forZones;
 
-    @OutputCustomType.Constructor({"forZones"})
-    private EndpointHints(@Nullable List<ForZone> forZones) {
+    @OutputCustomType.Constructor
+    private EndpointHints(@OutputCustomType.Parameter("forZones") @Nullable List<ForZone> forZones) {
         this.forZones = forZones;
     }
 
@@ -50,7 +50,7 @@ public final class EndpointHints {
     	      this.forZones = defaults.forZones;
         }
 
-        public Builder setForZones(@Nullable List<ForZone> forZones) {
+        public Builder forZones(@Nullable List<ForZone> forZones) {
             this.forZones = forZones;
             return this;
         }

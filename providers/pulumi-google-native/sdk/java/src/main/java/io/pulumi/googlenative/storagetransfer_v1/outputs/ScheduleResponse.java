@@ -37,13 +37,13 @@ public final class ScheduleResponse {
      */
     private final TimeOfDayResponse startTimeOfDay;
 
-    @OutputCustomType.Constructor({"endTimeOfDay","repeatInterval","scheduleEndDate","scheduleStartDate","startTimeOfDay"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        TimeOfDayResponse endTimeOfDay,
-        String repeatInterval,
-        DateResponse scheduleEndDate,
-        DateResponse scheduleStartDate,
-        TimeOfDayResponse startTimeOfDay) {
+        @OutputCustomType.Parameter("endTimeOfDay") TimeOfDayResponse endTimeOfDay,
+        @OutputCustomType.Parameter("repeatInterval") String repeatInterval,
+        @OutputCustomType.Parameter("scheduleEndDate") DateResponse scheduleEndDate,
+        @OutputCustomType.Parameter("scheduleStartDate") DateResponse scheduleStartDate,
+        @OutputCustomType.Parameter("startTimeOfDay") TimeOfDayResponse startTimeOfDay) {
         this.endTimeOfDay = endTimeOfDay;
         this.repeatInterval = repeatInterval;
         this.scheduleEndDate = scheduleEndDate;
@@ -115,27 +115,27 @@ public final class ScheduleResponse {
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder setEndTimeOfDay(TimeOfDayResponse endTimeOfDay) {
+        public Builder endTimeOfDay(TimeOfDayResponse endTimeOfDay) {
             this.endTimeOfDay = Objects.requireNonNull(endTimeOfDay);
             return this;
         }
 
-        public Builder setRepeatInterval(String repeatInterval) {
+        public Builder repeatInterval(String repeatInterval) {
             this.repeatInterval = Objects.requireNonNull(repeatInterval);
             return this;
         }
 
-        public Builder setScheduleEndDate(DateResponse scheduleEndDate) {
+        public Builder scheduleEndDate(DateResponse scheduleEndDate) {
             this.scheduleEndDate = Objects.requireNonNull(scheduleEndDate);
             return this;
         }
 
-        public Builder setScheduleStartDate(DateResponse scheduleStartDate) {
+        public Builder scheduleStartDate(DateResponse scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
-        public Builder setStartTimeOfDay(TimeOfDayResponse startTimeOfDay) {
+        public Builder startTimeOfDay(TimeOfDayResponse startTimeOfDay) {
             this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
             return this;
         }

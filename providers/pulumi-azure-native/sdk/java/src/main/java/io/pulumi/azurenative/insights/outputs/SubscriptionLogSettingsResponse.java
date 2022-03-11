@@ -23,10 +23,10 @@ public final class SubscriptionLogSettingsResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"category","enabled"})
+    @OutputCustomType.Constructor
     private SubscriptionLogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.category = category;
         this.enabled = enabled;
     }
@@ -68,12 +68,12 @@ public final class SubscriptionLogSettingsResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

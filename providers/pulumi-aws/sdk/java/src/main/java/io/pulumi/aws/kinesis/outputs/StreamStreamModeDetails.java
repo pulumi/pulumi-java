@@ -15,8 +15,8 @@ public final class StreamStreamModeDetails {
      */
     private final String streamMode;
 
-    @OutputCustomType.Constructor({"streamMode"})
-    private StreamStreamModeDetails(String streamMode) {
+    @OutputCustomType.Constructor
+    private StreamStreamModeDetails(@OutputCustomType.Parameter("streamMode") String streamMode) {
         this.streamMode = streamMode;
     }
 
@@ -48,7 +48,7 @@ public final class StreamStreamModeDetails {
     	      this.streamMode = defaults.streamMode;
         }
 
-        public Builder setStreamMode(String streamMode) {
+        public Builder streamMode(String streamMode) {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }

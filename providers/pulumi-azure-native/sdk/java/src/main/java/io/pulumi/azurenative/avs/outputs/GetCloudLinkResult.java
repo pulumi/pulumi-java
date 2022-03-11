@@ -37,13 +37,13 @@ public final class GetCloudLinkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedCloud","name","status","type"})
+    @OutputCustomType.Constructor
     private GetCloudLinkResult(
-        String id,
-        @Nullable String linkedCloud,
-        String name,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedCloud") @Nullable String linkedCloud,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedCloud = linkedCloud;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetCloudLinkResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedCloud(@Nullable String linkedCloud) {
+        public Builder linkedCloud(@Nullable String linkedCloud) {
             this.linkedCloud = linkedCloud;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

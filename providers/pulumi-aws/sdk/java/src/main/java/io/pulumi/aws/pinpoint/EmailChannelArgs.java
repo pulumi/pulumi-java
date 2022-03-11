@@ -135,62 +135,62 @@ public final class EmailChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setConfigurationSet(@Nullable Input<String> configurationSet) {
+        public Builder configurationSet(@Nullable Input<String> configurationSet) {
             this.configurationSet = configurationSet;
             return this;
         }
 
-        public Builder setConfigurationSet(@Nullable String configurationSet) {
+        public Builder configurationSet(@Nullable String configurationSet) {
             this.configurationSet = Input.ofNullable(configurationSet);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFromAddress(Input<String> fromAddress) {
+        public Builder fromAddress(Input<String> fromAddress) {
             this.fromAddress = Objects.requireNonNull(fromAddress);
             return this;
         }
 
-        public Builder setFromAddress(String fromAddress) {
+        public Builder fromAddress(String fromAddress) {
             this.fromAddress = Input.of(Objects.requireNonNull(fromAddress));
             return this;
         }
 
-        public Builder setIdentity(Input<String> identity) {
+        public Builder identity(Input<String> identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setIdentity(String identity) {
+        public Builder identity(String identity) {
             this.identity = Input.of(Objects.requireNonNull(identity));
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

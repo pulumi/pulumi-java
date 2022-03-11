@@ -12,10 +12,10 @@ public final class IndexCapacityUnitsConfiguration {
     private final Integer queryCapacityUnits;
     private final Integer storageCapacityUnits;
 
-    @OutputCustomType.Constructor({"queryCapacityUnits","storageCapacityUnits"})
+    @OutputCustomType.Constructor
     private IndexCapacityUnitsConfiguration(
-        Integer queryCapacityUnits,
-        Integer storageCapacityUnits) {
+        @OutputCustomType.Parameter("queryCapacityUnits") Integer queryCapacityUnits,
+        @OutputCustomType.Parameter("storageCapacityUnits") Integer storageCapacityUnits) {
         this.queryCapacityUnits = queryCapacityUnits;
         this.storageCapacityUnits = storageCapacityUnits;
     }
@@ -49,12 +49,12 @@ public final class IndexCapacityUnitsConfiguration {
     	      this.storageCapacityUnits = defaults.storageCapacityUnits;
         }
 
-        public Builder setQueryCapacityUnits(Integer queryCapacityUnits) {
+        public Builder queryCapacityUnits(Integer queryCapacityUnits) {
             this.queryCapacityUnits = Objects.requireNonNull(queryCapacityUnits);
             return this;
         }
 
-        public Builder setStorageCapacityUnits(Integer storageCapacityUnits) {
+        public Builder storageCapacityUnits(Integer storageCapacityUnits) {
             this.storageCapacityUnits = Objects.requireNonNull(storageCapacityUnits);
             return this;
         }

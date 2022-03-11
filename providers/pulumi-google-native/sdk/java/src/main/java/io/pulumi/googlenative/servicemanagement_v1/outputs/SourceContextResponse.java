@@ -15,8 +15,8 @@ public final class SourceContextResponse {
      */
     private final String fileName;
 
-    @OutputCustomType.Constructor({"fileName"})
-    private SourceContextResponse(String fileName) {
+    @OutputCustomType.Constructor
+    private SourceContextResponse(@OutputCustomType.Parameter("fileName") String fileName) {
         this.fileName = fileName;
     }
 
@@ -48,7 +48,7 @@ public final class SourceContextResponse {
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }

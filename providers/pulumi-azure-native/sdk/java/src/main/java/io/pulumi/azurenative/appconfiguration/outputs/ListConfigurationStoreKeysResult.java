@@ -24,10 +24,10 @@ public final class ListConfigurationStoreKeysResult {
      */
     private final @Nullable List<ApiKeyResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListConfigurationStoreKeysResult(
-        @Nullable String nextLink,
-        @Nullable List<ApiKeyResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ApiKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListConfigurationStoreKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<ApiKeyResponse> value) {
+        public Builder value(@Nullable List<ApiKeyResponse> value) {
             this.value = value;
             return this;
         }

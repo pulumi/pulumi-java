@@ -22,10 +22,10 @@ public final class RouterNatLogConfig {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"enable","filter"})
+    @OutputCustomType.Constructor
     private RouterNatLogConfig(
-        Boolean enable,
-        String filter) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("filter") String filter) {
         this.enable = enable;
         this.filter = filter;
     }
@@ -68,12 +68,12 @@ public final class RouterNatLogConfig {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

@@ -18,13 +18,13 @@ public final class ServiceEndpointSpecPort {
     private final @Nullable Integer publishedPort;
     private final Integer targetPort;
 
-    @OutputCustomType.Constructor({"name","protocol","publishMode","publishedPort","targetPort"})
+    @OutputCustomType.Constructor
     private ServiceEndpointSpecPort(
-        @Nullable String name,
-        @Nullable String protocol,
-        @Nullable String publishMode,
-        @Nullable Integer publishedPort,
-        Integer targetPort) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("publishMode") @Nullable String publishMode,
+        @OutputCustomType.Parameter("publishedPort") @Nullable Integer publishedPort,
+        @OutputCustomType.Parameter("targetPort") Integer targetPort) {
         this.name = name;
         this.protocol = protocol;
         this.publishMode = publishMode;
@@ -76,27 +76,27 @@ public final class ServiceEndpointSpecPort {
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setPublishMode(@Nullable String publishMode) {
+        public Builder publishMode(@Nullable String publishMode) {
             this.publishMode = publishMode;
             return this;
         }
 
-        public Builder setPublishedPort(@Nullable Integer publishedPort) {
+        public Builder publishedPort(@Nullable Integer publishedPort) {
             this.publishedPort = publishedPort;
             return this;
         }
 
-        public Builder setTargetPort(Integer targetPort) {
+        public Builder targetPort(Integer targetPort) {
             this.targetPort = Objects.requireNonNull(targetPort);
             return this;
         }

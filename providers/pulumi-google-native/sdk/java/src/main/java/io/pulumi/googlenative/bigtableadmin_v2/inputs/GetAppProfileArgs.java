@@ -74,17 +74,17 @@ public final class GetAppProfileArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAppProfileId(String appProfileId) {
+        public Builder appProfileId(String appProfileId) {
             this.appProfileId = Objects.requireNonNull(appProfileId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

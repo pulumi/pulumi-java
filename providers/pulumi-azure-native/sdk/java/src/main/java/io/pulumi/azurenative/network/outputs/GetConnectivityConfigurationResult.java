@@ -81,21 +81,21 @@ public final class GetConnectivityConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appliesToGroups","connectivityTopology","deleteExistingPeering","description","displayName","etag","hubs","id","isGlobal","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetConnectivityConfigurationResult(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        @Nullable List<HubResponse> hubs,
-        String id,
-        @Nullable String isGlobal,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.appliesToGroups = appliesToGroups;
         this.connectivityTopology = connectivityTopology;
         this.deleteExistingPeering = deleteExistingPeering;
@@ -247,67 +247,67 @@ public final class GetConnectivityConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
 
-        public Builder setConnectivityTopology(String connectivityTopology) {
+        public Builder connectivityTopology(String connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
 
-        public Builder setDeleteExistingPeering(@Nullable String deleteExistingPeering) {
+        public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHubs(@Nullable List<HubResponse> hubs) {
+        public Builder hubs(@Nullable List<HubResponse> hubs) {
             this.hubs = hubs;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable String isGlobal) {
+        public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

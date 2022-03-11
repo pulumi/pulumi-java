@@ -27,11 +27,11 @@ public final class TrackPropertyConditionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"operation","property","value"})
+    @OutputCustomType.Constructor
     private TrackPropertyConditionResponse(
-        String operation,
-        String property,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("property") String property,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.operation = operation;
         this.property = property;
         this.value = value;
@@ -83,17 +83,17 @@ public final class TrackPropertyConditionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -57,12 +57,12 @@ public final class ContentKeyPolicyClearKeyConfigurationArgs extends io.pulumi.r
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

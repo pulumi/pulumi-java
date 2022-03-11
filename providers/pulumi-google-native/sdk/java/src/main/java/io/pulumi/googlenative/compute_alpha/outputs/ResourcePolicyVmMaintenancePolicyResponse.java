@@ -17,10 +17,10 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
      */
     private final ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow;
 
-    @OutputCustomType.Constructor({"concurrencyControlGroup","maintenanceWindow"})
+    @OutputCustomType.Constructor
     private ResourcePolicyVmMaintenancePolicyResponse(
-        ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
-        ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
+        @OutputCustomType.Parameter("concurrencyControlGroup") ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup,
+        @OutputCustomType.Parameter("maintenanceWindow") ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
         this.concurrencyControlGroup = concurrencyControlGroup;
         this.maintenanceWindow = maintenanceWindow;
     }
@@ -58,12 +58,12 @@ public final class ResourcePolicyVmMaintenancePolicyResponse {
     	      this.maintenanceWindow = defaults.maintenanceWindow;
         }
 
-        public Builder setConcurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup) {
+        public Builder concurrencyControlGroup(ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse concurrencyControlGroup) {
             this.concurrencyControlGroup = Objects.requireNonNull(concurrencyControlGroup);
             return this;
         }
 
-        public Builder setMaintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }

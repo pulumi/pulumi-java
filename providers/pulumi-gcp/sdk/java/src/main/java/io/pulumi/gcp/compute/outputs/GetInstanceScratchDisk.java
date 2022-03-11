@@ -15,8 +15,8 @@ public final class GetInstanceScratchDisk {
      */
     private final String $interface;
 
-    @OutputCustomType.Constructor({"$interface"})
-    private GetInstanceScratchDisk(String $interface) {
+    @OutputCustomType.Constructor
+    private GetInstanceScratchDisk(@OutputCustomType.Parameter("interface") String $interface) {
         this.$interface = $interface;
     }
 
@@ -48,7 +48,7 @@ public final class GetInstanceScratchDisk {
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }

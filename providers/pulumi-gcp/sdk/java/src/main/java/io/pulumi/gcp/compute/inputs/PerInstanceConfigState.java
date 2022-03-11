@@ -182,82 +182,82 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInstanceGroupManager(@Nullable Input<String> instanceGroupManager) {
+        public Builder instanceGroupManager(@Nullable Input<String> instanceGroupManager) {
             this.instanceGroupManager = instanceGroupManager;
             return this;
         }
 
-        public Builder setInstanceGroupManager(@Nullable String instanceGroupManager) {
+        public Builder instanceGroupManager(@Nullable String instanceGroupManager) {
             this.instanceGroupManager = Input.ofNullable(instanceGroupManager);
             return this;
         }
 
-        public Builder setMinimalAction(@Nullable Input<String> minimalAction) {
+        public Builder minimalAction(@Nullable Input<String> minimalAction) {
             this.minimalAction = minimalAction;
             return this;
         }
 
-        public Builder setMinimalAction(@Nullable String minimalAction) {
+        public Builder minimalAction(@Nullable String minimalAction) {
             this.minimalAction = Input.ofNullable(minimalAction);
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable Input<String> mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable Input<String> mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = mostDisruptiveAllowedAction;
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Input.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPreservedState(@Nullable Input<PerInstanceConfigPreservedStateGetArgs> preservedState) {
+        public Builder preservedState(@Nullable Input<PerInstanceConfigPreservedStateGetArgs> preservedState) {
             this.preservedState = preservedState;
             return this;
         }
 
-        public Builder setPreservedState(@Nullable PerInstanceConfigPreservedStateGetArgs preservedState) {
+        public Builder preservedState(@Nullable PerInstanceConfigPreservedStateGetArgs preservedState) {
             this.preservedState = Input.ofNullable(preservedState);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRemoveInstanceStateOnDestroy(@Nullable Input<Boolean> removeInstanceStateOnDestroy) {
+        public Builder removeInstanceStateOnDestroy(@Nullable Input<Boolean> removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = removeInstanceStateOnDestroy;
             return this;
         }
 
-        public Builder setRemoveInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
+        public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
             this.removeInstanceStateOnDestroy = Input.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

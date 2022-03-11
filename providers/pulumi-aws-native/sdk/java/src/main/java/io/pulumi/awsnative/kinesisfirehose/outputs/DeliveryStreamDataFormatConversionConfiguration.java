@@ -19,12 +19,12 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
     private final @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration;
     private final @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration;
 
-    @OutputCustomType.Constructor({"enabled","inputFormatConfiguration","outputFormatConfiguration","schemaConfiguration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamDataFormatConversionConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
-        @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
-        @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("inputFormatConfiguration") @Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration,
+        @OutputCustomType.Parameter("outputFormatConfiguration") @Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration,
+        @OutputCustomType.Parameter("schemaConfiguration") @Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
         this.enabled = enabled;
         this.inputFormatConfiguration = inputFormatConfiguration;
         this.outputFormatConfiguration = outputFormatConfiguration;
@@ -70,22 +70,22 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
     	      this.schemaConfiguration = defaults.schemaConfiguration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setInputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
+        public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfiguration inputFormatConfiguration) {
             this.inputFormatConfiguration = inputFormatConfiguration;
             return this;
         }
 
-        public Builder setOutputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
+        public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfiguration outputFormatConfiguration) {
             this.outputFormatConfiguration = outputFormatConfiguration;
             return this;
         }
 
-        public Builder setSchemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
+        public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfiguration schemaConfiguration) {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }

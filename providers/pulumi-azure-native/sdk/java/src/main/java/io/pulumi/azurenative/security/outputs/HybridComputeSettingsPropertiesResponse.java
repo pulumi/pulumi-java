@@ -44,14 +44,14 @@ public final class HybridComputeSettingsPropertiesResponse {
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    @OutputCustomType.Constructor({"autoProvision","hybridComputeProvisioningState","proxyServer","region","resourceGroupName","servicePrincipal"})
+    @OutputCustomType.Constructor
     private HybridComputeSettingsPropertiesResponse(
-        String autoProvision,
-        String hybridComputeProvisioningState,
-        @Nullable ProxyServerPropertiesResponse proxyServer,
-        @Nullable String region,
-        @Nullable String resourceGroupName,
-        @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        @OutputCustomType.Parameter("autoProvision") String autoProvision,
+        @OutputCustomType.Parameter("hybridComputeProvisioningState") String hybridComputeProvisioningState,
+        @OutputCustomType.Parameter("proxyServer") @Nullable ProxyServerPropertiesResponse proxyServer,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
         this.autoProvision = autoProvision;
         this.hybridComputeProvisioningState = hybridComputeProvisioningState;
         this.proxyServer = proxyServer;
@@ -133,32 +133,32 @@ public final class HybridComputeSettingsPropertiesResponse {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setAutoProvision(String autoProvision) {
+        public Builder autoProvision(String autoProvision) {
             this.autoProvision = Objects.requireNonNull(autoProvision);
             return this;
         }
 
-        public Builder setHybridComputeProvisioningState(String hybridComputeProvisioningState) {
+        public Builder hybridComputeProvisioningState(String hybridComputeProvisioningState) {
             this.hybridComputeProvisioningState = Objects.requireNonNull(hybridComputeProvisioningState);
             return this;
         }
 
-        public Builder setProxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
+        public Builder proxyServer(@Nullable ProxyServerPropertiesResponse proxyServer) {
             this.proxyServer = proxyServer;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

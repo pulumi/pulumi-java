@@ -43,14 +43,14 @@ public final class GetCustomerEventResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"eventName","id","name","receivers","systemData","type"})
+    @OutputCustomType.Constructor
     private GetCustomerEventResult(
-        String eventName,
-        String id,
-        String name,
-        List<NotificationEventReceiverResponse> receivers,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("receivers") List<NotificationEventReceiverResponse> receivers,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.eventName = eventName;
         this.id = id;
         this.name = name;
@@ -132,32 +132,32 @@ public final class GetCustomerEventResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReceivers(List<NotificationEventReceiverResponse> receivers) {
+        public Builder receivers(List<NotificationEventReceiverResponse> receivers) {
             this.receivers = Objects.requireNonNull(receivers);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

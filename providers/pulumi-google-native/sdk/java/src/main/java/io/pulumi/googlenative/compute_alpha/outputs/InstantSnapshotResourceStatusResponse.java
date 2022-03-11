@@ -15,8 +15,8 @@ public final class InstantSnapshotResourceStatusResponse {
      */
     private final String storageSizeBytes;
 
-    @OutputCustomType.Constructor({"storageSizeBytes"})
-    private InstantSnapshotResourceStatusResponse(String storageSizeBytes) {
+    @OutputCustomType.Constructor
+    private InstantSnapshotResourceStatusResponse(@OutputCustomType.Parameter("storageSizeBytes") String storageSizeBytes) {
         this.storageSizeBytes = storageSizeBytes;
     }
 
@@ -48,7 +48,7 @@ public final class InstantSnapshotResourceStatusResponse {
     	      this.storageSizeBytes = defaults.storageSizeBytes;
         }
 
-        public Builder setStorageSizeBytes(String storageSizeBytes) {
+        public Builder storageSizeBytes(String storageSizeBytes) {
             this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes);
             return this;
         }

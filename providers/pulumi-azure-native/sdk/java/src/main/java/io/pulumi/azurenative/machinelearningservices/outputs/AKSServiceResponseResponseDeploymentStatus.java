@@ -33,12 +33,12 @@ public final class AKSServiceResponseResponseDeploymentStatus {
      */
     private final @Nullable Integer updatedReplicas;
 
-    @OutputCustomType.Constructor({"availableReplicas","desiredReplicas","error","updatedReplicas"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseDeploymentStatus(
-        @Nullable Integer availableReplicas,
-        @Nullable Integer desiredReplicas,
-        @Nullable AKSReplicaStatusResponseError error,
-        @Nullable Integer updatedReplicas) {
+        @OutputCustomType.Parameter("availableReplicas") @Nullable Integer availableReplicas,
+        @OutputCustomType.Parameter("desiredReplicas") @Nullable Integer desiredReplicas,
+        @OutputCustomType.Parameter("error") @Nullable AKSReplicaStatusResponseError error,
+        @OutputCustomType.Parameter("updatedReplicas") @Nullable Integer updatedReplicas) {
         this.availableReplicas = availableReplicas;
         this.desiredReplicas = desiredReplicas;
         this.error = error;
@@ -100,22 +100,22 @@ public final class AKSServiceResponseResponseDeploymentStatus {
     	      this.updatedReplicas = defaults.updatedReplicas;
         }
 
-        public Builder setAvailableReplicas(@Nullable Integer availableReplicas) {
+        public Builder availableReplicas(@Nullable Integer availableReplicas) {
             this.availableReplicas = availableReplicas;
             return this;
         }
 
-        public Builder setDesiredReplicas(@Nullable Integer desiredReplicas) {
+        public Builder desiredReplicas(@Nullable Integer desiredReplicas) {
             this.desiredReplicas = desiredReplicas;
             return this;
         }
 
-        public Builder setError(@Nullable AKSReplicaStatusResponseError error) {
+        public Builder error(@Nullable AKSReplicaStatusResponseError error) {
             this.error = error;
             return this;
         }
 
-        public Builder setUpdatedReplicas(@Nullable Integer updatedReplicas) {
+        public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
             this.updatedReplicas = updatedReplicas;
             return this;
         }

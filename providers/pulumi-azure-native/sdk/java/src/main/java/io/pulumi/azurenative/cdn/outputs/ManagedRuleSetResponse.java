@@ -35,12 +35,12 @@ public final class ManagedRuleSetResponse {
      */
     private final String ruleSetVersion;
 
-    @OutputCustomType.Constructor({"anomalyScore","ruleGroupOverrides","ruleSetType","ruleSetVersion"})
+    @OutputCustomType.Constructor
     private ManagedRuleSetResponse(
-        @Nullable Integer anomalyScore,
-        @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
-        String ruleSetType,
-        String ruleSetVersion) {
+        @OutputCustomType.Parameter("anomalyScore") @Nullable Integer anomalyScore,
+        @OutputCustomType.Parameter("ruleGroupOverrides") @Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides,
+        @OutputCustomType.Parameter("ruleSetType") String ruleSetType,
+        @OutputCustomType.Parameter("ruleSetVersion") String ruleSetVersion) {
         this.anomalyScore = anomalyScore;
         this.ruleGroupOverrides = ruleGroupOverrides;
         this.ruleSetType = ruleSetType;
@@ -102,22 +102,22 @@ public final class ManagedRuleSetResponse {
     	      this.ruleSetVersion = defaults.ruleSetVersion;
         }
 
-        public Builder setAnomalyScore(@Nullable Integer anomalyScore) {
+        public Builder anomalyScore(@Nullable Integer anomalyScore) {
             this.anomalyScore = anomalyScore;
             return this;
         }
 
-        public Builder setRuleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
+        public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideResponse> ruleGroupOverrides) {
             this.ruleGroupOverrides = ruleGroupOverrides;
             return this;
         }
 
-        public Builder setRuleSetType(String ruleSetType) {
+        public Builder ruleSetType(String ruleSetType) {
             this.ruleSetType = Objects.requireNonNull(ruleSetType);
             return this;
         }
 
-        public Builder setRuleSetVersion(String ruleSetVersion) {
+        public Builder ruleSetVersion(String ruleSetVersion) {
             this.ruleSetVersion = Objects.requireNonNull(ruleSetVersion);
             return this;
         }

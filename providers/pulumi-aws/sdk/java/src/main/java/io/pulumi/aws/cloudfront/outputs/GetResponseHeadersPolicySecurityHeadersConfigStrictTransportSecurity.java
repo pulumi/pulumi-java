@@ -31,12 +31,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
      */
     private final Boolean preload;
 
-    @OutputCustomType.Constructor({"accessControlMaxAgeSec","includeSubdomains","override","preload"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfigStrictTransportSecurity(
-        Integer accessControlMaxAgeSec,
-        Boolean includeSubdomains,
-        Boolean override,
-        Boolean preload) {
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("includeSubdomains") Boolean includeSubdomains,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("preload") Boolean preload) {
         this.accessControlMaxAgeSec = accessControlMaxAgeSec;
         this.includeSubdomains = includeSubdomains;
         this.override = override;
@@ -98,22 +98,22 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigStrictTransportS
     	      this.preload = defaults.preload;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setIncludeSubdomains(Boolean includeSubdomains) {
+        public Builder includeSubdomains(Boolean includeSubdomains) {
             this.includeSubdomains = Objects.requireNonNull(includeSubdomains);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setPreload(Boolean preload) {
+        public Builder preload(Boolean preload) {
             this.preload = Objects.requireNonNull(preload);
             return this;
         }

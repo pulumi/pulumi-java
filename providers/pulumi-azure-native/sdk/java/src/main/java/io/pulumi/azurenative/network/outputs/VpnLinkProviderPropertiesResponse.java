@@ -23,10 +23,10 @@ public final class VpnLinkProviderPropertiesResponse {
      */
     private final @Nullable Integer linkSpeedInMbps;
 
-    @OutputCustomType.Constructor({"linkProviderName","linkSpeedInMbps"})
+    @OutputCustomType.Constructor
     private VpnLinkProviderPropertiesResponse(
-        @Nullable String linkProviderName,
-        @Nullable Integer linkSpeedInMbps) {
+        @OutputCustomType.Parameter("linkProviderName") @Nullable String linkProviderName,
+        @OutputCustomType.Parameter("linkSpeedInMbps") @Nullable Integer linkSpeedInMbps) {
         this.linkProviderName = linkProviderName;
         this.linkSpeedInMbps = linkSpeedInMbps;
     }
@@ -68,12 +68,12 @@ public final class VpnLinkProviderPropertiesResponse {
     	      this.linkSpeedInMbps = defaults.linkSpeedInMbps;
         }
 
-        public Builder setLinkProviderName(@Nullable String linkProviderName) {
+        public Builder linkProviderName(@Nullable String linkProviderName) {
             this.linkProviderName = linkProviderName;
             return this;
         }
 
-        public Builder setLinkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
+        public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
             this.linkSpeedInMbps = linkSpeedInMbps;
             return this;
         }

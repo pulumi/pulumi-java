@@ -175,57 +175,57 @@ public final class NetworkInsightsAnalysisPathComponent extends io.pulumi.resour
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setAclRule(@Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule) {
+        public Builder aclRule(@Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule) {
             this.aclRule = aclRule;
             return this;
         }
 
-        public Builder setComponent(@Nullable NetworkInsightsAnalysisAnalysisComponent component) {
+        public Builder component(@Nullable NetworkInsightsAnalysisAnalysisComponent component) {
             this.component = component;
             return this;
         }
 
-        public Builder setDestinationVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc) {
+        public Builder destinationVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc) {
             this.destinationVpc = destinationVpc;
             return this;
         }
 
-        public Builder setInboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader) {
+        public Builder inboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader inboundHeader) {
             this.inboundHeader = inboundHeader;
             return this;
         }
 
-        public Builder setOutboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader) {
+        public Builder outboundHeader(@Nullable NetworkInsightsAnalysisAnalysisPacketHeader outboundHeader) {
             this.outboundHeader = outboundHeader;
             return this;
         }
 
-        public Builder setRouteTableRoute(@Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute) {
+        public Builder routeTableRoute(@Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute) {
             this.routeTableRoute = routeTableRoute;
             return this;
         }
 
-        public Builder setSecurityGroupRule(@Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule) {
+        public Builder securityGroupRule(@Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule) {
             this.securityGroupRule = securityGroupRule;
             return this;
         }
 
-        public Builder setSequenceNumber(@Nullable Integer sequenceNumber) {
+        public Builder sequenceNumber(@Nullable Integer sequenceNumber) {
             this.sequenceNumber = sequenceNumber;
             return this;
         }
 
-        public Builder setSourceVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc) {
+        public Builder sourceVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc) {
             this.sourceVpc = sourceVpc;
             return this;
         }
 
-        public Builder setSubnet(@Nullable NetworkInsightsAnalysisAnalysisComponent subnet) {
+        public Builder subnet(@Nullable NetworkInsightsAnalysisAnalysisComponent subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setVpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
+        public Builder vpc(@Nullable NetworkInsightsAnalysisAnalysisComponent vpc) {
             this.vpc = vpc;
             return this;
         }

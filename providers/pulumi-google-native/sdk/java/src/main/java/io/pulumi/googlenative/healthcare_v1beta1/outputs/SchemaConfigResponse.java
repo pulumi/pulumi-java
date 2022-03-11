@@ -20,10 +20,10 @@ public final class SchemaConfigResponse {
      */
     private final String schemaType;
 
-    @OutputCustomType.Constructor({"recursiveStructureDepth","schemaType"})
+    @OutputCustomType.Constructor
     private SchemaConfigResponse(
-        String recursiveStructureDepth,
-        String schemaType) {
+        @OutputCustomType.Parameter("recursiveStructureDepth") String recursiveStructureDepth,
+        @OutputCustomType.Parameter("schemaType") String schemaType) {
         this.recursiveStructureDepth = recursiveStructureDepth;
         this.schemaType = schemaType;
     }
@@ -65,12 +65,12 @@ public final class SchemaConfigResponse {
     	      this.schemaType = defaults.schemaType;
         }
 
-        public Builder setRecursiveStructureDepth(String recursiveStructureDepth) {
+        public Builder recursiveStructureDepth(String recursiveStructureDepth) {
             this.recursiveStructureDepth = Objects.requireNonNull(recursiveStructureDepth);
             return this;
         }
 
-        public Builder setSchemaType(String schemaType) {
+        public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }

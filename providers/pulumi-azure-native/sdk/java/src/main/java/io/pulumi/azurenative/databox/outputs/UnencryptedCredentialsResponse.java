@@ -24,10 +24,10 @@ public final class UnencryptedCredentialsResponse {
      */
     private final Object jobSecrets;
 
-    @OutputCustomType.Constructor({"jobName","jobSecrets"})
+    @OutputCustomType.Constructor
     private UnencryptedCredentialsResponse(
-        String jobName,
-        Object jobSecrets) {
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("jobSecrets") Object jobSecrets) {
         this.jobName = jobName;
         this.jobSecrets = jobSecrets;
     }
@@ -69,12 +69,12 @@ public final class UnencryptedCredentialsResponse {
     	      this.jobSecrets = defaults.jobSecrets;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobSecrets(Object jobSecrets) {
+        public Builder jobSecrets(Object jobSecrets) {
             this.jobSecrets = Objects.requireNonNull(jobSecrets);
             return this;
         }

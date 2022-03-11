@@ -20,10 +20,10 @@ public final class VersionSourceResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"mshField","value"})
+    @OutputCustomType.Constructor
     private VersionSourceResponse(
-        String mshField,
-        String value) {
+        @OutputCustomType.Parameter("mshField") String mshField,
+        @OutputCustomType.Parameter("value") String value) {
         this.mshField = mshField;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class VersionSourceResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setMshField(String mshField) {
+        public Builder mshField(String mshField) {
             this.mshField = Objects.requireNonNull(mshField);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

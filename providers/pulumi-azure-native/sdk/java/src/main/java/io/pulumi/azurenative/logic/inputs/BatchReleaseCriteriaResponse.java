@@ -91,17 +91,17 @@ public final class BatchReleaseCriteriaResponse extends io.pulumi.resources.Invo
     	      this.recurrence = defaults.recurrence;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setMessageCount(@Nullable Integer messageCount) {
+        public Builder messageCount(@Nullable Integer messageCount) {
             this.messageCount = messageCount;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable WorkflowTriggerRecurrenceResponse recurrence) {
+        public Builder recurrence(@Nullable WorkflowTriggerRecurrenceResponse recurrence) {
             this.recurrence = recurrence;
             return this;
         }

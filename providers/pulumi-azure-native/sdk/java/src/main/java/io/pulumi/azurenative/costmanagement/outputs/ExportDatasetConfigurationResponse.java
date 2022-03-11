@@ -17,8 +17,8 @@ public final class ExportDatasetConfigurationResponse {
      */
     private final @Nullable List<String> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private ExportDatasetConfigurationResponse(@Nullable List<String> columns) {
+    @OutputCustomType.Constructor
+    private ExportDatasetConfigurationResponse(@OutputCustomType.Parameter("columns") @Nullable List<String> columns) {
         this.columns = columns;
     }
 
@@ -50,7 +50,7 @@ public final class ExportDatasetConfigurationResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(@Nullable List<String> columns) {
+        public Builder columns(@Nullable List<String> columns) {
             this.columns = columns;
             return this;
         }

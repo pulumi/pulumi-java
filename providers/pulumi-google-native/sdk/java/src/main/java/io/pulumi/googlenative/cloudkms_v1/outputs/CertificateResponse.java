@@ -57,17 +57,17 @@ public final class CertificateResponse {
      */
     private final List<String> subjectAlternativeDnsNames;
 
-    @OutputCustomType.Constructor({"issuer","notAfterTime","notBeforeTime","parsed","rawDer","serialNumber","sha256Fingerprint","subject","subjectAlternativeDnsNames"})
+    @OutputCustomType.Constructor
     private CertificateResponse(
-        String issuer,
-        String notAfterTime,
-        String notBeforeTime,
-        Boolean parsed,
-        String rawDer,
-        String serialNumber,
-        String sha256Fingerprint,
-        String subject,
-        List<String> subjectAlternativeDnsNames) {
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @OutputCustomType.Parameter("parsed") Boolean parsed,
+        @OutputCustomType.Parameter("rawDer") String rawDer,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("sha256Fingerprint") String sha256Fingerprint,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("subjectAlternativeDnsNames") List<String> subjectAlternativeDnsNames) {
         this.issuer = issuer;
         this.notAfterTime = notAfterTime;
         this.notBeforeTime = notBeforeTime;
@@ -179,47 +179,47 @@ public final class CertificateResponse {
     	      this.subjectAlternativeDnsNames = defaults.subjectAlternativeDnsNames;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setNotAfterTime(String notAfterTime) {
+        public Builder notAfterTime(String notAfterTime) {
             this.notAfterTime = Objects.requireNonNull(notAfterTime);
             return this;
         }
 
-        public Builder setNotBeforeTime(String notBeforeTime) {
+        public Builder notBeforeTime(String notBeforeTime) {
             this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
             return this;
         }
 
-        public Builder setParsed(Boolean parsed) {
+        public Builder parsed(Boolean parsed) {
             this.parsed = Objects.requireNonNull(parsed);
             return this;
         }
 
-        public Builder setRawDer(String rawDer) {
+        public Builder rawDer(String rawDer) {
             this.rawDer = Objects.requireNonNull(rawDer);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSha256Fingerprint(String sha256Fingerprint) {
+        public Builder sha256Fingerprint(String sha256Fingerprint) {
             this.sha256Fingerprint = Objects.requireNonNull(sha256Fingerprint);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAlternativeDnsNames(List<String> subjectAlternativeDnsNames) {
+        public Builder subjectAlternativeDnsNames(List<String> subjectAlternativeDnsNames) {
             this.subjectAlternativeDnsNames = Objects.requireNonNull(subjectAlternativeDnsNames);
             return this;
         }

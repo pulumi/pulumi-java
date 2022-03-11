@@ -23,10 +23,10 @@ public final class DaemonSetUpdateStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"rollingUpdate","type"})
+    @OutputCustomType.Constructor
     private DaemonSetUpdateStrategy(
-        @Nullable RollingUpdateDaemonSet rollingUpdate,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDaemonSet rollingUpdate,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class DaemonSetUpdateStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateDaemonSet rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateDaemonSet rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

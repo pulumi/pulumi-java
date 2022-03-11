@@ -53,12 +53,12 @@ public final class WorkteamMemberDefinitionOidcMemberDefinitionArgs extends io.p
     	      this.groups = defaults.groups;
         }
 
-        public Builder setGroups(Input<List<String>> groups) {
+        public Builder groups(Input<List<String>> groups) {
             this.groups = Objects.requireNonNull(groups);
             return this;
         }
 
-        public Builder setGroups(List<String> groups) {
+        public Builder groups(List<String> groups) {
             this.groups = Input.of(Objects.requireNonNull(groups));
             return this;
         }

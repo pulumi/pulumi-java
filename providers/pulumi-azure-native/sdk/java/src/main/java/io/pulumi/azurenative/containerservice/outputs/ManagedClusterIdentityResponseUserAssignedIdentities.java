@@ -20,10 +20,10 @@ public final class ManagedClusterIdentityResponseUserAssignedIdentities {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"clientId","principalId"})
+    @OutputCustomType.Constructor
     private ManagedClusterIdentityResponseUserAssignedIdentities(
-        String clientId,
-        String principalId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }
@@ -65,12 +65,12 @@ public final class ManagedClusterIdentityResponseUserAssignedIdentities {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }

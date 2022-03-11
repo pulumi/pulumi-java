@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetEnvironmentConfigWebServerNetworkAccessControl {
     private final List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges;
 
-    @OutputCustomType.Constructor({"allowedIpRanges"})
-    private GetEnvironmentConfigWebServerNetworkAccessControl(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+    @OutputCustomType.Constructor
+    private GetEnvironmentConfigWebServerNetworkAccessControl(@OutputCustomType.Parameter("allowedIpRanges") List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 
@@ -41,7 +41,7 @@ public final class GetEnvironmentConfigWebServerNetworkAccessControl {
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
+        public Builder allowedIpRanges(List<GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange> allowedIpRanges) {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }

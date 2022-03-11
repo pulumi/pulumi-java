@@ -100,52 +100,52 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.poolState = defaults.poolState;
         }
 
-        public Builder setAutoScalingGroupName(Input<String> autoScalingGroupName) {
+        public Builder autoScalingGroupName(Input<String> autoScalingGroupName) {
             this.autoScalingGroupName = Objects.requireNonNull(autoScalingGroupName);
             return this;
         }
 
-        public Builder setAutoScalingGroupName(String autoScalingGroupName) {
+        public Builder autoScalingGroupName(String autoScalingGroupName) {
             this.autoScalingGroupName = Input.of(Objects.requireNonNull(autoScalingGroupName));
             return this;
         }
 
-        public Builder setInstanceReusePolicy(@Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
+        public Builder instanceReusePolicy(@Nullable Input<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy) {
             this.instanceReusePolicy = instanceReusePolicy;
             return this;
         }
 
-        public Builder setInstanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
+        public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
             this.instanceReusePolicy = Input.ofNullable(instanceReusePolicy);
             return this;
         }
 
-        public Builder setMaxGroupPreparedCapacity(@Nullable Input<Integer> maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Input<Integer> maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
 
-        public Builder setMaxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = Input.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Input<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }
 
-        public Builder setPoolState(@Nullable Input<String> poolState) {
+        public Builder poolState(@Nullable Input<String> poolState) {
             this.poolState = poolState;
             return this;
         }
 
-        public Builder setPoolState(@Nullable String poolState) {
+        public Builder poolState(@Nullable String poolState) {
             this.poolState = Input.ofNullable(poolState);
             return this;
         }

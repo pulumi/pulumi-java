@@ -136,62 +136,62 @@ public final class BudgetNotificationGetArgs extends io.pulumi.resources.Resourc
     	      this.thresholdType = defaults.thresholdType;
         }
 
-        public Builder setComparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Input<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setComparisonOperator(String comparisonOperator) {
+        public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder setNotificationType(Input<String> notificationType) {
+        public Builder notificationType(Input<String> notificationType) {
             this.notificationType = Objects.requireNonNull(notificationType);
             return this;
         }
 
-        public Builder setNotificationType(String notificationType) {
+        public Builder notificationType(String notificationType) {
             this.notificationType = Input.of(Objects.requireNonNull(notificationType));
             return this;
         }
 
-        public Builder setSubscriberEmailAddresses(@Nullable Input<List<String>> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(@Nullable Input<List<String>> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = subscriberEmailAddresses;
             return this;
         }
 
-        public Builder setSubscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
+        public Builder subscriberEmailAddresses(@Nullable List<String> subscriberEmailAddresses) {
             this.subscriberEmailAddresses = Input.ofNullable(subscriberEmailAddresses);
             return this;
         }
 
-        public Builder setSubscriberSnsTopicArns(@Nullable Input<List<String>> subscriberSnsTopicArns) {
+        public Builder subscriberSnsTopicArns(@Nullable Input<List<String>> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = subscriberSnsTopicArns;
             return this;
         }
 
-        public Builder setSubscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
+        public Builder subscriberSnsTopicArns(@Nullable List<String> subscriberSnsTopicArns) {
             this.subscriberSnsTopicArns = Input.ofNullable(subscriberSnsTopicArns);
             return this;
         }
 
-        public Builder setThreshold(Input<Double> threshold) {
+        public Builder threshold(Input<Double> threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Input.of(Objects.requireNonNull(threshold));
             return this;
         }
 
-        public Builder setThresholdType(Input<String> thresholdType) {
+        public Builder thresholdType(Input<String> thresholdType) {
             this.thresholdType = Objects.requireNonNull(thresholdType);
             return this;
         }
 
-        public Builder setThresholdType(String thresholdType) {
+        public Builder thresholdType(String thresholdType) {
             this.thresholdType = Input.of(Objects.requireNonNull(thresholdType));
             return this;
         }

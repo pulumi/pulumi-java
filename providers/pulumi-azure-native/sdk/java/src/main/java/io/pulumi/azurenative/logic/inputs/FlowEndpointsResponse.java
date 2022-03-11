@@ -75,12 +75,12 @@ public final class FlowEndpointsResponse extends io.pulumi.resources.InvokeArgs 
     	      this.outgoingIpAddresses = defaults.outgoingIpAddresses;
         }
 
-        public Builder setAccessEndpointIpAddresses(@Nullable List<IpAddressResponse> accessEndpointIpAddresses) {
+        public Builder accessEndpointIpAddresses(@Nullable List<IpAddressResponse> accessEndpointIpAddresses) {
             this.accessEndpointIpAddresses = accessEndpointIpAddresses;
             return this;
         }
 
-        public Builder setOutgoingIpAddresses(@Nullable List<IpAddressResponse> outgoingIpAddresses) {
+        public Builder outgoingIpAddresses(@Nullable List<IpAddressResponse> outgoingIpAddresses) {
             this.outgoingIpAddresses = outgoingIpAddresses;
             return this;
         }

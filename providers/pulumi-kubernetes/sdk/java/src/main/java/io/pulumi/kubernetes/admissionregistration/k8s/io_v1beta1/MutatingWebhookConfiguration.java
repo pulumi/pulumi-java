@@ -127,8 +127,8 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
     private static MutatingWebhookConfigurationArgs makeArgs(@Nullable MutatingWebhookConfigurationArgs args) {
         var builder = args == null ? MutatingWebhookConfigurationArgs.builder() : MutatingWebhookConfigurationArgs.builder(args);
         return builder
-            .setApiVersion("admissionregistration.k8s.io/v1beta1")
-            .setKind("MutatingWebhookConfiguration")
+            .apiVersion("admissionregistration.k8s.io/v1beta1")
+            .kind("MutatingWebhookConfiguration")
             .build();
     }
 

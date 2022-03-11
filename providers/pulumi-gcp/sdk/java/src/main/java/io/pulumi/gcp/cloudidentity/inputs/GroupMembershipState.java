@@ -175,82 +175,82 @@ public final class GroupMembershipState extends io.pulumi.resources.ResourceArgs
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setMemberKey(@Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey) {
+        public Builder memberKey(@Nullable Input<GroupMembershipMemberKeyGetArgs> memberKey) {
             this.memberKey = memberKey;
             return this;
         }
 
-        public Builder setMemberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
+        public Builder memberKey(@Nullable GroupMembershipMemberKeyGetArgs memberKey) {
             this.memberKey = Input.ofNullable(memberKey);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPreferredMemberKey(@Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable Input<GroupMembershipPreferredMemberKeyGetArgs> preferredMemberKey) {
             this.preferredMemberKey = preferredMemberKey;
             return this;
         }
 
-        public Builder setPreferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
+        public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyGetArgs preferredMemberKey) {
             this.preferredMemberKey = Input.ofNullable(preferredMemberKey);
             return this;
         }
 
-        public Builder setRoles(@Nullable Input<List<GroupMembershipRoleGetArgs>> roles) {
+        public Builder roles(@Nullable Input<List<GroupMembershipRoleGetArgs>> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
+        public Builder roles(@Nullable List<GroupMembershipRoleGetArgs> roles) {
             this.roles = Input.ofNullable(roles);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable Input<String> updateTime) {
+        public Builder updateTime(@Nullable Input<String> updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }

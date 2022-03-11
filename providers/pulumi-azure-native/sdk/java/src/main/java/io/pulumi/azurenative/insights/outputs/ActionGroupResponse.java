@@ -22,10 +22,10 @@ public final class ActionGroupResponse {
      */
     private final @Nullable Map<String,String> webhookProperties;
 
-    @OutputCustomType.Constructor({"actionGroupId","webhookProperties"})
+    @OutputCustomType.Constructor
     private ActionGroupResponse(
-        String actionGroupId,
-        @Nullable Map<String,String> webhookProperties) {
+        @OutputCustomType.Parameter("actionGroupId") String actionGroupId,
+        @OutputCustomType.Parameter("webhookProperties") @Nullable Map<String,String> webhookProperties) {
         this.actionGroupId = actionGroupId;
         this.webhookProperties = webhookProperties;
     }
@@ -67,12 +67,12 @@ public final class ActionGroupResponse {
     	      this.webhookProperties = defaults.webhookProperties;
         }
 
-        public Builder setActionGroupId(String actionGroupId) {
+        public Builder actionGroupId(String actionGroupId) {
             this.actionGroupId = Objects.requireNonNull(actionGroupId);
             return this;
         }
 
-        public Builder setWebhookProperties(@Nullable Map<String,String> webhookProperties) {
+        public Builder webhookProperties(@Nullable Map<String,String> webhookProperties) {
             this.webhookProperties = webhookProperties;
             return this;
         }

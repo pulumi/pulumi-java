@@ -100,22 +100,22 @@ public final class StudioComponentInitializationScript extends io.pulumi.resourc
     	      this.script = defaults.script;
         }
 
-        public Builder setLaunchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
+        public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
             this.launchProfileProtocolVersion = launchProfileProtocolVersion;
             return this;
         }
 
-        public Builder setPlatform(@Nullable StudioComponentLaunchProfilePlatform platform) {
+        public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setRunContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
+        public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
             this.runContext = runContext;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

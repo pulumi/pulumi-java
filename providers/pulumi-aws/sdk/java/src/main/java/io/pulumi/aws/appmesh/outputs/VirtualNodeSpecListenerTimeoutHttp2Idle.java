@@ -21,10 +21,10 @@ public final class VirtualNodeSpecListenerTimeoutHttp2Idle {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTimeoutHttp2Idle(
-        String unit,
-        Integer value) {
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.unit = unit;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class VirtualNodeSpecListenerTimeoutHttp2Idle {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

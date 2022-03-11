@@ -306,162 +306,162 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     	      this.visibilityState = defaults.visibilityState;
         }
 
-        public Builder setAuthorizedAzureSubscriptionIds(@Nullable Input<List<String>> authorizedAzureSubscriptionIds) {
+        public Builder authorizedAzureSubscriptionIds(@Nullable Input<List<String>> authorizedAzureSubscriptionIds) {
             this.authorizedAzureSubscriptionIds = authorizedAzureSubscriptionIds;
             return this;
         }
 
-        public Builder setAuthorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
+        public Builder authorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
             this.authorizedAzureSubscriptionIds = Input.ofNullable(authorizedAzureSubscriptionIds);
             return this;
         }
 
-        public Builder setCustomerServiceUri(@Nullable Input<String> customerServiceUri) {
+        public Builder customerServiceUri(@Nullable Input<String> customerServiceUri) {
             this.customerServiceUri = customerServiceUri;
             return this;
         }
 
-        public Builder setCustomerServiceUri(@Nullable String customerServiceUri) {
+        public Builder customerServiceUri(@Nullable String customerServiceUri) {
             this.customerServiceUri = Input.ofNullable(customerServiceUri);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLogoUri(@Nullable Input<String> logoUri) {
+        public Builder logoUri(@Nullable Input<String> logoUri) {
             this.logoUri = logoUri;
             return this;
         }
 
-        public Builder setLogoUri(@Nullable String logoUri) {
+        public Builder logoUri(@Nullable String logoUri) {
             this.logoUri = Input.ofNullable(logoUri);
             return this;
         }
 
-        public Builder setLongDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Input<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
-        public Builder setLongDescription(@Nullable String longDescription) {
+        public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Input.ofNullable(longDescription);
             return this;
         }
 
-        public Builder setPartnerCustomerServiceExtension(@Nullable Input<String> partnerCustomerServiceExtension) {
+        public Builder partnerCustomerServiceExtension(@Nullable Input<String> partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = partnerCustomerServiceExtension;
             return this;
         }
 
-        public Builder setPartnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
+        public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
             this.partnerCustomerServiceExtension = Input.ofNullable(partnerCustomerServiceExtension);
             return this;
         }
 
-        public Builder setPartnerCustomerServiceNumber(@Nullable Input<String> partnerCustomerServiceNumber) {
+        public Builder partnerCustomerServiceNumber(@Nullable Input<String> partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = partnerCustomerServiceNumber;
             return this;
         }
 
-        public Builder setPartnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
+        public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
             this.partnerCustomerServiceNumber = Input.ofNullable(partnerCustomerServiceNumber);
             return this;
         }
 
-        public Builder setPartnerName(@Nullable Input<String> partnerName) {
+        public Builder partnerName(@Nullable Input<String> partnerName) {
             this.partnerName = partnerName;
             return this;
         }
 
-        public Builder setPartnerName(@Nullable String partnerName) {
+        public Builder partnerName(@Nullable String partnerName) {
             this.partnerName = Input.ofNullable(partnerName);
             return this;
         }
 
-        public Builder setPartnerRegistrationName(@Nullable Input<String> partnerRegistrationName) {
+        public Builder partnerRegistrationName(@Nullable Input<String> partnerRegistrationName) {
             this.partnerRegistrationName = partnerRegistrationName;
             return this;
         }
 
-        public Builder setPartnerRegistrationName(@Nullable String partnerRegistrationName) {
+        public Builder partnerRegistrationName(@Nullable String partnerRegistrationName) {
             this.partnerRegistrationName = Input.ofNullable(partnerRegistrationName);
             return this;
         }
 
-        public Builder setPartnerResourceTypeDescription(@Nullable Input<String> partnerResourceTypeDescription) {
+        public Builder partnerResourceTypeDescription(@Nullable Input<String> partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = partnerResourceTypeDescription;
             return this;
         }
 
-        public Builder setPartnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
+        public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
             this.partnerResourceTypeDescription = Input.ofNullable(partnerResourceTypeDescription);
             return this;
         }
 
-        public Builder setPartnerResourceTypeDisplayName(@Nullable Input<String> partnerResourceTypeDisplayName) {
+        public Builder partnerResourceTypeDisplayName(@Nullable Input<String> partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = partnerResourceTypeDisplayName;
             return this;
         }
 
-        public Builder setPartnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
+        public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
             this.partnerResourceTypeDisplayName = Input.ofNullable(partnerResourceTypeDisplayName);
             return this;
         }
 
-        public Builder setPartnerResourceTypeName(@Nullable Input<String> partnerResourceTypeName) {
+        public Builder partnerResourceTypeName(@Nullable Input<String> partnerResourceTypeName) {
             this.partnerResourceTypeName = partnerResourceTypeName;
             return this;
         }
 
-        public Builder setPartnerResourceTypeName(@Nullable String partnerResourceTypeName) {
+        public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
             this.partnerResourceTypeName = Input.ofNullable(partnerResourceTypeName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSetupUri(@Nullable Input<String> setupUri) {
+        public Builder setupUri(@Nullable Input<String> setupUri) {
             this.setupUri = setupUri;
             return this;
         }
 
-        public Builder setSetupUri(@Nullable String setupUri) {
+        public Builder setupUri(@Nullable String setupUri) {
             this.setupUri = Input.ofNullable(setupUri);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVisibilityState(@Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
+        public Builder visibilityState(@Nullable Input<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }
 
-        public Builder setVisibilityState(@Nullable Either<String,PartnerRegistrationVisibilityState> visibilityState) {
+        public Builder visibilityState(@Nullable Either<String,PartnerRegistrationVisibilityState> visibilityState) {
             this.visibilityState = Input.ofNullable(visibilityState);
             return this;
         }

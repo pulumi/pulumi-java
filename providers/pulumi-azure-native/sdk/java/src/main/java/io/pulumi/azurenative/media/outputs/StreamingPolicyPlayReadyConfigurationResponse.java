@@ -22,10 +22,10 @@ public final class StreamingPolicyPlayReadyConfigurationResponse {
      */
     private final @Nullable String playReadyCustomAttributes;
 
-    @OutputCustomType.Constructor({"customLicenseAcquisitionUrlTemplate","playReadyCustomAttributes"})
+    @OutputCustomType.Constructor
     private StreamingPolicyPlayReadyConfigurationResponse(
-        @Nullable String customLicenseAcquisitionUrlTemplate,
-        @Nullable String playReadyCustomAttributes) {
+        @OutputCustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate,
+        @OutputCustomType.Parameter("playReadyCustomAttributes") @Nullable String playReadyCustomAttributes) {
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
         this.playReadyCustomAttributes = playReadyCustomAttributes;
     }
@@ -67,12 +67,12 @@ public final class StreamingPolicyPlayReadyConfigurationResponse {
     	      this.playReadyCustomAttributes = defaults.playReadyCustomAttributes;
         }
 
-        public Builder setCustomLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
 
-        public Builder setPlayReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
+        public Builder playReadyCustomAttributes(@Nullable String playReadyCustomAttributes) {
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }

@@ -36,13 +36,13 @@ public final class ThresholdResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"color","direction","label","targetAxis","value"})
+    @OutputCustomType.Constructor
     private ThresholdResponse(
-        String color,
-        String direction,
-        String label,
-        String targetAxis,
-        Double value) {
+        @OutputCustomType.Parameter("color") String color,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("targetAxis") String targetAxis,
+        @OutputCustomType.Parameter("value") Double value) {
         this.color = color;
         this.direction = direction;
         this.label = label;
@@ -114,27 +114,27 @@ public final class ThresholdResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setColor(String color) {
+        public Builder color(String color) {
             this.color = Objects.requireNonNull(color);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setTargetAxis(String targetAxis) {
+        public Builder targetAxis(String targetAxis) {
             this.targetAxis = Objects.requireNonNull(targetAxis);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

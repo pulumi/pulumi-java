@@ -75,22 +75,22 @@ public final class StandardSqlFieldArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<StandardSqlDataTypeArgs> type) {
+        public Builder type(@Nullable Input<StandardSqlDataTypeArgs> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable StandardSqlDataTypeArgs type) {
+        public Builder type(@Nullable StandardSqlDataTypeArgs type) {
             this.type = Input.ofNullable(type);
             return this;
         }

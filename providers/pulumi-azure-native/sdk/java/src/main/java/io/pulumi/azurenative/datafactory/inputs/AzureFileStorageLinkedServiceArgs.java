@@ -291,152 +291,152 @@ public final class AzureFileStorageLinkedServiceArgs extends io.pulumi.resources
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccountKey(@Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey) {
+        public Builder accountKey(@Nullable Input<AzureKeyVaultSecretReferenceArgs> accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountKey(@Nullable AzureKeyVaultSecretReferenceArgs accountKey) {
+        public Builder accountKey(@Nullable AzureKeyVaultSecretReferenceArgs accountKey) {
             this.accountKey = Input.ofNullable(accountKey);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Input<Object> connectionString) {
+        public Builder connectionString(@Nullable Input<Object> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable Object connectionString) {
+        public Builder connectionString(@Nullable Object connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setFileShare(@Nullable Input<Object> fileShare) {
+        public Builder fileShare(@Nullable Input<Object> fileShare) {
             this.fileShare = fileShare;
             return this;
         }
 
-        public Builder setFileShare(@Nullable Object fileShare) {
+        public Builder fileShare(@Nullable Object fileShare) {
             this.fileShare = Input.ofNullable(fileShare);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<Object> host) {
+        public Builder host(@Nullable Input<Object> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable Object host) {
+        public Builder host(@Nullable Object host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
+        public Builder password(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSasToken(@Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken) {
+        public Builder sasToken(@Nullable Input<AzureKeyVaultSecretReferenceArgs> sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setSasToken(@Nullable AzureKeyVaultSecretReferenceArgs sasToken) {
+        public Builder sasToken(@Nullable AzureKeyVaultSecretReferenceArgs sasToken) {
             this.sasToken = Input.ofNullable(sasToken);
             return this;
         }
 
-        public Builder setSasUri(@Nullable Input<Object> sasUri) {
+        public Builder sasUri(@Nullable Input<Object> sasUri) {
             this.sasUri = sasUri;
             return this;
         }
 
-        public Builder setSasUri(@Nullable Object sasUri) {
+        public Builder sasUri(@Nullable Object sasUri) {
             this.sasUri = Input.ofNullable(sasUri);
             return this;
         }
 
-        public Builder setSnapshot(@Nullable Input<Object> snapshot) {
+        public Builder snapshot(@Nullable Input<Object> snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable Object snapshot) {
+        public Builder snapshot(@Nullable Object snapshot) {
             this.snapshot = Input.ofNullable(snapshot);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserId(@Nullable Input<Object> userId) {
+        public Builder userId(@Nullable Input<Object> userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserId(@Nullable Object userId) {
+        public Builder userId(@Nullable Object userId) {
             this.userId = Input.ofNullable(userId);
             return this;
         }

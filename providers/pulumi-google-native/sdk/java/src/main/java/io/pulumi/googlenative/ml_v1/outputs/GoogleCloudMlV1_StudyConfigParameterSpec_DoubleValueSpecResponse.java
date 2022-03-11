@@ -20,10 +20,10 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
      */
     private final Double minValue;
 
-    @OutputCustomType.Constructor({"maxValue","minValue"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse(
-        Double maxValue,
-        Double minValue) {
+        @OutputCustomType.Parameter("maxValue") Double maxValue,
+        @OutputCustomType.Parameter("minValue") Double minValue) {
         this.maxValue = maxValue;
         this.minValue = minValue;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecRespo
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder setMaxValue(Double maxValue) {
+        public Builder maxValue(Double maxValue) {
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
 
-        public Builder setMinValue(Double minValue) {
+        public Builder minValue(Double minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }

@@ -74,22 +74,22 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setTypeUrl(@Nullable Input<String> typeUrl) {
+        public Builder typeUrl(@Nullable Input<String> typeUrl) {
             this.typeUrl = typeUrl;
             return this;
         }
 
-        public Builder setTypeUrl(@Nullable String typeUrl) {
+        public Builder typeUrl(@Nullable String typeUrl) {
             this.typeUrl = Input.ofNullable(typeUrl);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

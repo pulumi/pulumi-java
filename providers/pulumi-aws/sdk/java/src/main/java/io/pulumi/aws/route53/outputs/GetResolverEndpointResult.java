@@ -27,17 +27,17 @@ public final class GetResolverEndpointResult {
     private final String status;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","direction","filters","id","ipAddresses","name","resolverEndpointId","status","vpcId"})
+    @OutputCustomType.Constructor
     private GetResolverEndpointResult(
-        String arn,
-        String direction,
-        @Nullable List<GetResolverEndpointFilter> filters,
-        String id,
-        List<String> ipAddresses,
-        String name,
-        @Nullable String resolverEndpointId,
-        String status,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetResolverEndpointFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.direction = direction;
         this.filters = filters;
@@ -117,47 +117,47 @@ public final class GetResolverEndpointResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetResolverEndpointFilter> filters) {
+        public Builder filters(@Nullable List<GetResolverEndpointFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

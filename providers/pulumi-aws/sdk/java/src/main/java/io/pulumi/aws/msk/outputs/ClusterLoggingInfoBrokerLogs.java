@@ -17,11 +17,11 @@ public final class ClusterLoggingInfoBrokerLogs {
     private final @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose;
     private final @Nullable ClusterLoggingInfoBrokerLogsS3 s3;
 
-    @OutputCustomType.Constructor({"cloudwatchLogs","firehose","s3"})
+    @OutputCustomType.Constructor
     private ClusterLoggingInfoBrokerLogs(
-        @Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs,
-        @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose,
-        @Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
+        @OutputCustomType.Parameter("cloudwatchLogs") @Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs,
+        @OutputCustomType.Parameter("firehose") @Nullable ClusterLoggingInfoBrokerLogsFirehose firehose,
+        @OutputCustomType.Parameter("s3") @Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
         this.cloudwatchLogs = cloudwatchLogs;
         this.firehose = firehose;
         this.s3 = s3;
@@ -61,17 +61,17 @@ public final class ClusterLoggingInfoBrokerLogs {
     	      this.s3 = defaults.s3;
         }
 
-        public Builder setCloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs) {
+        public Builder cloudwatchLogs(@Nullable ClusterLoggingInfoBrokerLogsCloudwatchLogs cloudwatchLogs) {
             this.cloudwatchLogs = cloudwatchLogs;
             return this;
         }
 
-        public Builder setFirehose(@Nullable ClusterLoggingInfoBrokerLogsFirehose firehose) {
+        public Builder firehose(@Nullable ClusterLoggingInfoBrokerLogsFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setS3(@Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
+        public Builder s3(@Nullable ClusterLoggingInfoBrokerLogsS3 s3) {
             this.s3 = s3;
             return this;
         }

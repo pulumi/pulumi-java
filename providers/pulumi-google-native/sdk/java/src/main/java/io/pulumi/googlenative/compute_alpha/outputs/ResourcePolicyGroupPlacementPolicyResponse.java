@@ -41,14 +41,14 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
      */
     private final Integer vmCount;
 
-    @OutputCustomType.Constructor({"availabilityDomainCount","collocation","locality","scope","style","vmCount"})
+    @OutputCustomType.Constructor
     private ResourcePolicyGroupPlacementPolicyResponse(
-        Integer availabilityDomainCount,
-        String collocation,
-        String locality,
-        String scope,
-        String style,
-        Integer vmCount) {
+        @OutputCustomType.Parameter("availabilityDomainCount") Integer availabilityDomainCount,
+        @OutputCustomType.Parameter("collocation") String collocation,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("style") String style,
+        @OutputCustomType.Parameter("vmCount") Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.locality = locality;
@@ -130,32 +130,32 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
     	      this.vmCount = defaults.vmCount;
         }
 
-        public Builder setAvailabilityDomainCount(Integer availabilityDomainCount) {
+        public Builder availabilityDomainCount(Integer availabilityDomainCount) {
             this.availabilityDomainCount = Objects.requireNonNull(availabilityDomainCount);
             return this;
         }
 
-        public Builder setCollocation(String collocation) {
+        public Builder collocation(String collocation) {
             this.collocation = Objects.requireNonNull(collocation);
             return this;
         }
 
-        public Builder setLocality(String locality) {
+        public Builder locality(String locality) {
             this.locality = Objects.requireNonNull(locality);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setStyle(String style) {
+        public Builder style(String style) {
             this.style = Objects.requireNonNull(style);
             return this;
         }
 
-        public Builder setVmCount(Integer vmCount) {
+        public Builder vmCount(Integer vmCount) {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }

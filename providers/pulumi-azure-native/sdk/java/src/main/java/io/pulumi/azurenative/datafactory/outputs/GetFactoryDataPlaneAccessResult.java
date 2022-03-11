@@ -28,11 +28,11 @@ public final class GetFactoryDataPlaneAccessResult {
      */
     private final @Nullable UserAccessPolicyResponse policy;
 
-    @OutputCustomType.Constructor({"accessToken","dataPlaneUrl","policy"})
+    @OutputCustomType.Constructor
     private GetFactoryDataPlaneAccessResult(
-        @Nullable String accessToken,
-        @Nullable String dataPlaneUrl,
-        @Nullable UserAccessPolicyResponse policy) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("dataPlaneUrl") @Nullable String dataPlaneUrl,
+        @OutputCustomType.Parameter("policy") @Nullable UserAccessPolicyResponse policy) {
         this.accessToken = accessToken;
         this.dataPlaneUrl = dataPlaneUrl;
         this.policy = policy;
@@ -84,17 +84,17 @@ public final class GetFactoryDataPlaneAccessResult {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setDataPlaneUrl(@Nullable String dataPlaneUrl) {
+        public Builder dataPlaneUrl(@Nullable String dataPlaneUrl) {
             this.dataPlaneUrl = dataPlaneUrl;
             return this;
         }
 
-        public Builder setPolicy(@Nullable UserAccessPolicyResponse policy) {
+        public Builder policy(@Nullable UserAccessPolicyResponse policy) {
             this.policy = policy;
             return this;
         }

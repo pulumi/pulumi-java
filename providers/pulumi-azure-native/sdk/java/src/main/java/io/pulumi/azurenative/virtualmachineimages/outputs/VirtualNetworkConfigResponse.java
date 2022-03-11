@@ -17,8 +17,8 @@ public final class VirtualNetworkConfigResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"subnetId"})
-    private VirtualNetworkConfigResponse(@Nullable String subnetId) {
+    @OutputCustomType.Constructor
+    private VirtualNetworkConfigResponse(@OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.subnetId = subnetId;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualNetworkConfigResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

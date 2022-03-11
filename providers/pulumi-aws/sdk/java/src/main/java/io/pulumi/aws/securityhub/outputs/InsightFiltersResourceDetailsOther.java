@@ -25,11 +25,11 @@ public final class InsightFiltersResourceDetailsOther {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"comparison","key","value"})
+    @OutputCustomType.Constructor
     private InsightFiltersResourceDetailsOther(
-        String comparison,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.comparison = comparison;
         this.key = key;
         this.value = value;
@@ -81,17 +81,17 @@ public final class InsightFiltersResourceDetailsOther {
     	      this.value = defaults.value;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

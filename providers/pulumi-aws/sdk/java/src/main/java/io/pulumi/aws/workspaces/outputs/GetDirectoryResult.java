@@ -92,24 +92,24 @@ public final class GetDirectoryResult {
      */
     private final String workspaceSecurityGroupId;
 
-    @OutputCustomType.Constructor({"alias","customerUserName","directoryId","directoryName","directoryType","dnsIpAddresses","iamRoleId","id","ipGroupIds","registrationCode","selfServicePermissions","subnetIds","tags","workspaceAccessProperties","workspaceCreationProperties","workspaceSecurityGroupId"})
+    @OutputCustomType.Constructor
     private GetDirectoryResult(
-        String alias,
-        String customerUserName,
-        String directoryId,
-        String directoryName,
-        String directoryType,
-        List<String> dnsIpAddresses,
-        String iamRoleId,
-        String id,
-        List<String> ipGroupIds,
-        String registrationCode,
-        List<GetDirectorySelfServicePermission> selfServicePermissions,
-        List<String> subnetIds,
-        @Nullable Map<String,String> tags,
-        List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties,
-        List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties,
-        String workspaceSecurityGroupId) {
+        @OutputCustomType.Parameter("alias") String alias,
+        @OutputCustomType.Parameter("customerUserName") String customerUserName,
+        @OutputCustomType.Parameter("directoryId") String directoryId,
+        @OutputCustomType.Parameter("directoryName") String directoryName,
+        @OutputCustomType.Parameter("directoryType") String directoryType,
+        @OutputCustomType.Parameter("dnsIpAddresses") List<String> dnsIpAddresses,
+        @OutputCustomType.Parameter("iamRoleId") String iamRoleId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipGroupIds") List<String> ipGroupIds,
+        @OutputCustomType.Parameter("registrationCode") String registrationCode,
+        @OutputCustomType.Parameter("selfServicePermissions") List<GetDirectorySelfServicePermission> selfServicePermissions,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("workspaceAccessProperties") List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties,
+        @OutputCustomType.Parameter("workspaceCreationProperties") List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties,
+        @OutputCustomType.Parameter("workspaceSecurityGroupId") String workspaceSecurityGroupId) {
         this.alias = alias;
         this.customerUserName = customerUserName;
         this.directoryId = directoryId;
@@ -287,82 +287,82 @@ public final class GetDirectoryResult {
     	      this.workspaceSecurityGroupId = defaults.workspaceSecurityGroupId;
         }
 
-        public Builder setAlias(String alias) {
+        public Builder alias(String alias) {
             this.alias = Objects.requireNonNull(alias);
             return this;
         }
 
-        public Builder setCustomerUserName(String customerUserName) {
+        public Builder customerUserName(String customerUserName) {
             this.customerUserName = Objects.requireNonNull(customerUserName);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setDirectoryName(String directoryName) {
+        public Builder directoryName(String directoryName) {
             this.directoryName = Objects.requireNonNull(directoryName);
             return this;
         }
 
-        public Builder setDirectoryType(String directoryType) {
+        public Builder directoryType(String directoryType) {
             this.directoryType = Objects.requireNonNull(directoryType);
             return this;
         }
 
-        public Builder setDnsIpAddresses(List<String> dnsIpAddresses) {
+        public Builder dnsIpAddresses(List<String> dnsIpAddresses) {
             this.dnsIpAddresses = Objects.requireNonNull(dnsIpAddresses);
             return this;
         }
 
-        public Builder setIamRoleId(String iamRoleId) {
+        public Builder iamRoleId(String iamRoleId) {
             this.iamRoleId = Objects.requireNonNull(iamRoleId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpGroupIds(List<String> ipGroupIds) {
+        public Builder ipGroupIds(List<String> ipGroupIds) {
             this.ipGroupIds = Objects.requireNonNull(ipGroupIds);
             return this;
         }
 
-        public Builder setRegistrationCode(String registrationCode) {
+        public Builder registrationCode(String registrationCode) {
             this.registrationCode = Objects.requireNonNull(registrationCode);
             return this;
         }
 
-        public Builder setSelfServicePermissions(List<GetDirectorySelfServicePermission> selfServicePermissions) {
+        public Builder selfServicePermissions(List<GetDirectorySelfServicePermission> selfServicePermissions) {
             this.selfServicePermissions = Objects.requireNonNull(selfServicePermissions);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWorkspaceAccessProperties(List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties) {
+        public Builder workspaceAccessProperties(List<GetDirectoryWorkspaceAccessProperty> workspaceAccessProperties) {
             this.workspaceAccessProperties = Objects.requireNonNull(workspaceAccessProperties);
             return this;
         }
 
-        public Builder setWorkspaceCreationProperties(List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties) {
+        public Builder workspaceCreationProperties(List<GetDirectoryWorkspaceCreationProperty> workspaceCreationProperties) {
             this.workspaceCreationProperties = Objects.requireNonNull(workspaceCreationProperties);
             return this;
         }
 
-        public Builder setWorkspaceSecurityGroupId(String workspaceSecurityGroupId) {
+        public Builder workspaceSecurityGroupId(String workspaceSecurityGroupId) {
             this.workspaceSecurityGroupId = Objects.requireNonNull(workspaceSecurityGroupId);
             return this;
         }

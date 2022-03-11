@@ -71,18 +71,18 @@ public final class GetAssessmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalData","displayName","id","links","metadata","name","partnersData","resourceDetails","status","type"})
+    @OutputCustomType.Constructor
     private GetAssessmentResult(
-        @Nullable Map<String,String> additionalData,
-        String displayName,
-        String id,
-        AssessmentLinksResponse links,
-        @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
-        String name,
-        @Nullable SecurityAssessmentPartnerDataResponse partnersData,
-        Object resourceDetails,
-        AssessmentStatusResponse status,
-        String type) {
+        @OutputCustomType.Parameter("additionalData") @Nullable Map<String,String> additionalData,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("links") AssessmentLinksResponse links,
+        @OutputCustomType.Parameter("metadata") @Nullable SecurityAssessmentMetadataPropertiesResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnersData") @Nullable SecurityAssessmentPartnerDataResponse partnersData,
+        @OutputCustomType.Parameter("resourceDetails") Object resourceDetails,
+        @OutputCustomType.Parameter("status") AssessmentStatusResponse status,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalData = additionalData;
         this.displayName = displayName;
         this.id = id;
@@ -204,52 +204,52 @@ public final class GetAssessmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalData(@Nullable Map<String,String> additionalData) {
+        public Builder additionalData(@Nullable Map<String,String> additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinks(AssessmentLinksResponse links) {
+        public Builder links(AssessmentLinksResponse links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setMetadata(@Nullable SecurityAssessmentMetadataPropertiesResponse metadata) {
+        public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesResponse metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnersData(@Nullable SecurityAssessmentPartnerDataResponse partnersData) {
+        public Builder partnersData(@Nullable SecurityAssessmentPartnerDataResponse partnersData) {
             this.partnersData = partnersData;
             return this;
         }
 
-        public Builder setResourceDetails(Object resourceDetails) {
+        public Builder resourceDetails(Object resourceDetails) {
             this.resourceDetails = Objects.requireNonNull(resourceDetails);
             return this;
         }
 
-        public Builder setStatus(AssessmentStatusResponse status) {
+        public Builder status(AssessmentStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

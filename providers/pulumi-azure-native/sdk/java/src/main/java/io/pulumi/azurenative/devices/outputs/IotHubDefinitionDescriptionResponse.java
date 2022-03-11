@@ -39,13 +39,13 @@ public final class IotHubDefinitionDescriptionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allocationWeight","applyAllocationPolicy","connectionString","location","name"})
+    @OutputCustomType.Constructor
     private IotHubDefinitionDescriptionResponse(
-        @Nullable Integer allocationWeight,
-        @Nullable Boolean applyAllocationPolicy,
-        String connectionString,
-        String location,
-        String name) {
+        @OutputCustomType.Parameter("allocationWeight") @Nullable Integer allocationWeight,
+        @OutputCustomType.Parameter("applyAllocationPolicy") @Nullable Boolean applyAllocationPolicy,
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name) {
         this.allocationWeight = allocationWeight;
         this.applyAllocationPolicy = applyAllocationPolicy;
         this.connectionString = connectionString;
@@ -117,27 +117,27 @@ public final class IotHubDefinitionDescriptionResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAllocationWeight(@Nullable Integer allocationWeight) {
+        public Builder allocationWeight(@Nullable Integer allocationWeight) {
             this.allocationWeight = allocationWeight;
             return this;
         }
 
-        public Builder setApplyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
+        public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
             this.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

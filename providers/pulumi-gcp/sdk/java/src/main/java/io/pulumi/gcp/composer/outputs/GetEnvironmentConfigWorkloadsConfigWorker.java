@@ -16,13 +16,13 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker {
     private final Integer minCount;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor({"cpu","maxCount","memoryGb","minCount","storageGb"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigWorker(
-        Double cpu,
-        Integer maxCount,
-        Double memoryGb,
-        Integer minCount,
-        Double storageGb) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("maxCount") Integer maxCount,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("minCount") Integer minCount,
+        @OutputCustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;
@@ -74,27 +74,27 @@ public final class GetEnvironmentConfigWorkloadsConfigWorker {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setMaxCount(Integer maxCount) {
+        public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
-        public Builder setMemoryGb(Double memoryGb) {
+        public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
 
-        public Builder setMinCount(Integer minCount) {
+        public Builder minCount(Integer minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
 
-        public Builder setStorageGb(Double storageGb) {
+        public Builder storageGb(Double storageGb) {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }

@@ -24,16 +24,16 @@ public final class GetServerResult {
     private final @Nullable String preferredMaintenanceWindow;
     private final @Nullable List<ServerTag> tags;
 
-    @OutputCustomType.Constructor({"arn","backupRetentionCount","disableAutomatedBackup","endpoint","id","preferredBackupWindow","preferredMaintenanceWindow","tags"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String arn,
-        @Nullable Integer backupRetentionCount,
-        @Nullable Boolean disableAutomatedBackup,
-        @Nullable String endpoint,
-        @Nullable String id,
-        @Nullable String preferredBackupWindow,
-        @Nullable String preferredMaintenanceWindow,
-        @Nullable List<ServerTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("backupRetentionCount") @Nullable Integer backupRetentionCount,
+        @OutputCustomType.Parameter("disableAutomatedBackup") @Nullable Boolean disableAutomatedBackup,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("preferredBackupWindow") @Nullable String preferredBackupWindow,
+        @OutputCustomType.Parameter("preferredMaintenanceWindow") @Nullable String preferredMaintenanceWindow,
+        @OutputCustomType.Parameter("tags") @Nullable List<ServerTag> tags) {
         this.arn = arn;
         this.backupRetentionCount = backupRetentionCount;
         this.disableAutomatedBackup = disableAutomatedBackup;
@@ -103,42 +103,42 @@ public final class GetServerResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBackupRetentionCount(@Nullable Integer backupRetentionCount) {
+        public Builder backupRetentionCount(@Nullable Integer backupRetentionCount) {
             this.backupRetentionCount = backupRetentionCount;
             return this;
         }
 
-        public Builder setDisableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
+        public Builder disableAutomatedBackup(@Nullable Boolean disableAutomatedBackup) {
             this.disableAutomatedBackup = disableAutomatedBackup;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPreferredBackupWindow(@Nullable String preferredBackupWindow) {
+        public Builder preferredBackupWindow(@Nullable String preferredBackupWindow) {
             this.preferredBackupWindow = preferredBackupWindow;
             return this;
         }
 
-        public Builder setPreferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
+        public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
             this.preferredMaintenanceWindow = preferredMaintenanceWindow;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ServerTag> tags) {
+        public Builder tags(@Nullable List<ServerTag> tags) {
             this.tags = tags;
             return this;
         }

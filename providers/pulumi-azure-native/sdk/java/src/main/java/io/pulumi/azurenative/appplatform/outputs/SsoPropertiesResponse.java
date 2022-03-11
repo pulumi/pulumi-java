@@ -33,12 +33,12 @@ public final class SsoPropertiesResponse {
      */
     private final @Nullable List<String> scope;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","issuerUri","scope"})
+    @OutputCustomType.Constructor
     private SsoPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String issuerUri,
-        @Nullable List<String> scope) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("issuerUri") @Nullable String issuerUri,
+        @OutputCustomType.Parameter("scope") @Nullable List<String> scope) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.issuerUri = issuerUri;
@@ -100,22 +100,22 @@ public final class SsoPropertiesResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setIssuerUri(@Nullable String issuerUri) {
+        public Builder issuerUri(@Nullable String issuerUri) {
             this.issuerUri = issuerUri;
             return this;
         }
 
-        public Builder setScope(@Nullable List<String> scope) {
+        public Builder scope(@Nullable List<String> scope) {
             this.scope = scope;
             return this;
         }

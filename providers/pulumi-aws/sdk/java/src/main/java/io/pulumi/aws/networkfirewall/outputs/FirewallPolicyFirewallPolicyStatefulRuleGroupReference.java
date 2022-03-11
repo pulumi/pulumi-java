@@ -23,10 +23,10 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReference {
      */
     private final String resourceArn;
 
-    @OutputCustomType.Constructor({"priority","resourceArn"})
+    @OutputCustomType.Constructor
     private FirewallPolicyFirewallPolicyStatefulRuleGroupReference(
-        @Nullable Integer priority,
-        String resourceArn) {
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }
@@ -68,12 +68,12 @@ public final class FirewallPolicyFirewallPolicyStatefulRuleGroupReference {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }

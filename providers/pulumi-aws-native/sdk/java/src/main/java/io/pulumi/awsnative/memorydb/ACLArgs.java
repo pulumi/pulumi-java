@@ -88,32 +88,32 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userNames = defaults.userNames;
         }
 
-        public Builder setACLName(@Nullable Input<String> aCLName) {
+        public Builder aCLName(@Nullable Input<String> aCLName) {
             this.aCLName = aCLName;
             return this;
         }
 
-        public Builder setACLName(@Nullable String aCLName) {
+        public Builder aCLName(@Nullable String aCLName) {
             this.aCLName = Input.ofNullable(aCLName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ACLTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ACLTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ACLTagArgs> tags) {
+        public Builder tags(@Nullable List<ACLTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserNames(@Nullable Input<List<String>> userNames) {
+        public Builder userNames(@Nullable Input<List<String>> userNames) {
             this.userNames = userNames;
             return this;
         }
 
-        public Builder setUserNames(@Nullable List<String> userNames) {
+        public Builder userNames(@Nullable List<String> userNames) {
             this.userNames = Input.ofNullable(userNames);
             return this;
         }

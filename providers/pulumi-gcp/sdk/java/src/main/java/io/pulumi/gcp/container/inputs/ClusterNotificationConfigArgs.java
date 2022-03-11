@@ -52,12 +52,12 @@ public final class ClusterNotificationConfigArgs extends io.pulumi.resources.Res
     	      this.pubsub = defaults.pubsub;
         }
 
-        public Builder setPubsub(Input<ClusterNotificationConfigPubsubArgs> pubsub) {
+        public Builder pubsub(Input<ClusterNotificationConfigPubsubArgs> pubsub) {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
 
-        public Builder setPubsub(ClusterNotificationConfigPubsubArgs pubsub) {
+        public Builder pubsub(ClusterNotificationConfigPubsubArgs pubsub) {
             this.pubsub = Input.of(Objects.requireNonNull(pubsub));
             return this;
         }

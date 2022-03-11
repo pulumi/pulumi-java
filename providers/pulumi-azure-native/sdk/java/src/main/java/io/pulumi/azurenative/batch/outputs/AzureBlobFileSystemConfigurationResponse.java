@@ -34,14 +34,14 @@ public final class AzureBlobFileSystemConfigurationResponse {
      */
     private final @Nullable String sasKey;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","blobfuseOptions","containerName","relativeMountPath","sasKey"})
+    @OutputCustomType.Constructor
     private AzureBlobFileSystemConfigurationResponse(
-        @Nullable String accountKey,
-        String accountName,
-        @Nullable String blobfuseOptions,
-        String containerName,
-        String relativeMountPath,
-        @Nullable String sasKey) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("blobfuseOptions") @Nullable String blobfuseOptions,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @OutputCustomType.Parameter("sasKey") @Nullable String sasKey) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.blobfuseOptions = blobfuseOptions;
@@ -115,32 +115,32 @@ public final class AzureBlobFileSystemConfigurationResponse {
     	      this.sasKey = defaults.sasKey;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setBlobfuseOptions(@Nullable String blobfuseOptions) {
+        public Builder blobfuseOptions(@Nullable String blobfuseOptions) {
             this.blobfuseOptions = blobfuseOptions;
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
 
-        public Builder setSasKey(@Nullable String sasKey) {
+        public Builder sasKey(@Nullable String sasKey) {
             this.sasKey = sasKey;
             return this;
         }

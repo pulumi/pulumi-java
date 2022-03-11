@@ -86,32 +86,32 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syncGroupName = defaults.syncGroupName;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageSyncServiceName(Input<String> storageSyncServiceName) {
+        public Builder storageSyncServiceName(Input<String> storageSyncServiceName) {
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
 
-        public Builder setStorageSyncServiceName(String storageSyncServiceName) {
+        public Builder storageSyncServiceName(String storageSyncServiceName) {
             this.storageSyncServiceName = Input.of(Objects.requireNonNull(storageSyncServiceName));
             return this;
         }
 
-        public Builder setSyncGroupName(@Nullable Input<String> syncGroupName) {
+        public Builder syncGroupName(@Nullable Input<String> syncGroupName) {
             this.syncGroupName = syncGroupName;
             return this;
         }
 
-        public Builder setSyncGroupName(@Nullable String syncGroupName) {
+        public Builder syncGroupName(@Nullable String syncGroupName) {
             this.syncGroupName = Input.ofNullable(syncGroupName);
             return this;
         }

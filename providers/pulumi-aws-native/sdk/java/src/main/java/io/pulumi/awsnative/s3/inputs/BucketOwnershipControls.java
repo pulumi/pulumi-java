@@ -48,7 +48,7 @@ public final class BucketOwnershipControls extends io.pulumi.resources.InvokeArg
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BucketOwnershipControlsRule> rules) {
+        public Builder rules(List<BucketOwnershipControlsRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

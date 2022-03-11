@@ -59,17 +59,17 @@ public final class GetRuntimeResult {
      */
     private final VirtualMachineResponse virtualMachine;
 
-    @OutputCustomType.Constructor({"accessConfig","createTime","healthState","metrics","name","softwareConfig","state","updateTime","virtualMachine"})
+    @OutputCustomType.Constructor
     private GetRuntimeResult(
-        RuntimeAccessConfigResponse accessConfig,
-        String createTime,
-        String healthState,
-        RuntimeMetricsResponse metrics,
-        String name,
-        RuntimeSoftwareConfigResponse softwareConfig,
-        String state,
-        String updateTime,
-        VirtualMachineResponse virtualMachine) {
+        @OutputCustomType.Parameter("accessConfig") RuntimeAccessConfigResponse accessConfig,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("healthState") String healthState,
+        @OutputCustomType.Parameter("metrics") RuntimeMetricsResponse metrics,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("softwareConfig") RuntimeSoftwareConfigResponse softwareConfig,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("virtualMachine") VirtualMachineResponse virtualMachine) {
         this.accessConfig = accessConfig;
         this.createTime = createTime;
         this.healthState = healthState;
@@ -181,47 +181,47 @@ public final class GetRuntimeResult {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setAccessConfig(RuntimeAccessConfigResponse accessConfig) {
+        public Builder accessConfig(RuntimeAccessConfigResponse accessConfig) {
             this.accessConfig = Objects.requireNonNull(accessConfig);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setHealthState(String healthState) {
+        public Builder healthState(String healthState) {
             this.healthState = Objects.requireNonNull(healthState);
             return this;
         }
 
-        public Builder setMetrics(RuntimeMetricsResponse metrics) {
+        public Builder metrics(RuntimeMetricsResponse metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSoftwareConfig(RuntimeSoftwareConfigResponse softwareConfig) {
+        public Builder softwareConfig(RuntimeSoftwareConfigResponse softwareConfig) {
             this.softwareConfig = Objects.requireNonNull(softwareConfig);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVirtualMachine(VirtualMachineResponse virtualMachine) {
+        public Builder virtualMachine(VirtualMachineResponse virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }

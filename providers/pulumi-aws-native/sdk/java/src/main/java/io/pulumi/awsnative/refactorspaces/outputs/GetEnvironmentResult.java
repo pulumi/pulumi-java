@@ -22,12 +22,12 @@ public final class GetEnvironmentResult {
     private final @Nullable List<EnvironmentTag> tags;
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor({"arn","environmentIdentifier","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String arn,
-        @Nullable String environmentIdentifier,
-        @Nullable List<EnvironmentTag> tags,
-        @Nullable String transitGatewayId) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("environmentIdentifier") @Nullable String environmentIdentifier,
+        @OutputCustomType.Parameter("tags") @Nullable List<EnvironmentTag> tags,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.arn = arn;
         this.environmentIdentifier = environmentIdentifier;
         this.tags = tags;
@@ -77,22 +77,22 @@ public final class GetEnvironmentResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEnvironmentIdentifier(@Nullable String environmentIdentifier) {
+        public Builder environmentIdentifier(@Nullable String environmentIdentifier) {
             this.environmentIdentifier = environmentIdentifier;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EnvironmentTag> tags) {
+        public Builder tags(@Nullable List<EnvironmentTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }

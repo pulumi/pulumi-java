@@ -22,10 +22,10 @@ public final class SnapshotSkuResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private SnapshotSkuResponse(
-        @Nullable String name,
-        String tier) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.name = name;
         this.tier = tier;
     }
@@ -67,12 +67,12 @@ public final class SnapshotSkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

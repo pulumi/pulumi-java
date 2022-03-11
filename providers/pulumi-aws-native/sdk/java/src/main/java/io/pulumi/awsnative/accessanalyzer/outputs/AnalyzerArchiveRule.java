@@ -18,10 +18,10 @@ public final class AnalyzerArchiveRule {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor({"filter","ruleName"})
+    @OutputCustomType.Constructor
     private AnalyzerArchiveRule(
-        List<AnalyzerFilter> filter,
-        String ruleName) {
+        @OutputCustomType.Parameter("filter") List<AnalyzerFilter> filter,
+        @OutputCustomType.Parameter("ruleName") String ruleName) {
         this.filter = filter;
         this.ruleName = ruleName;
     }
@@ -59,12 +59,12 @@ public final class AnalyzerArchiveRule {
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setFilter(List<AnalyzerFilter> filter) {
+        public Builder filter(List<AnalyzerFilter> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }

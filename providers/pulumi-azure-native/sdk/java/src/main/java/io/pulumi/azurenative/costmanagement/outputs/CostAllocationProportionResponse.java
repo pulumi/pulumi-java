@@ -21,10 +21,10 @@ public final class CostAllocationProportionResponse {
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor({"name","percentage"})
+    @OutputCustomType.Constructor
     private CostAllocationProportionResponse(
-        String name,
-        Double percentage) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("percentage") Double percentage) {
         this.name = name;
         this.percentage = percentage;
     }
@@ -66,12 +66,12 @@ public final class CostAllocationProportionResponse {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }

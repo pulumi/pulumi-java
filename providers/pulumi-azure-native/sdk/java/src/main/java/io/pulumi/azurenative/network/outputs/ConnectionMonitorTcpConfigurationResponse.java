@@ -29,11 +29,11 @@ public final class ConnectionMonitorTcpConfigurationResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"destinationPortBehavior","disableTraceRoute","port"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorTcpConfigurationResponse(
-        @Nullable String destinationPortBehavior,
-        @Nullable Boolean disableTraceRoute,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("destinationPortBehavior") @Nullable String destinationPortBehavior,
+        @OutputCustomType.Parameter("disableTraceRoute") @Nullable Boolean disableTraceRoute,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.destinationPortBehavior = destinationPortBehavior;
         this.disableTraceRoute = disableTraceRoute;
         this.port = port;
@@ -85,17 +85,17 @@ public final class ConnectionMonitorTcpConfigurationResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setDestinationPortBehavior(@Nullable String destinationPortBehavior) {
+        public Builder destinationPortBehavior(@Nullable String destinationPortBehavior) {
             this.destinationPortBehavior = destinationPortBehavior;
             return this;
         }
 
-        public Builder setDisableTraceRoute(@Nullable Boolean disableTraceRoute) {
+        public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

@@ -124,29 +124,29 @@ public final class GetAppServiceEnvironmentResult {
      */
     private final VirtualNetworkProfileResponse virtualNetwork;
 
-    @OutputCustomType.Constructor({"clusterSettings","dedicatedHostCount","dnsSuffix","frontEndScaleFactor","hasLinuxWorkers","id","internalLoadBalancingMode","ipsslAddressCount","kind","location","maximumNumberOfMachines","multiRoleCount","multiSize","name","provisioningState","status","suspended","tags","type","userWhitelistedIpRanges","virtualNetwork"})
+    @OutputCustomType.Constructor
     private GetAppServiceEnvironmentResult(
-        @Nullable List<NameValuePairResponse> clusterSettings,
-        Integer dedicatedHostCount,
-        @Nullable String dnsSuffix,
-        @Nullable Integer frontEndScaleFactor,
-        Boolean hasLinuxWorkers,
-        String id,
-        @Nullable String internalLoadBalancingMode,
-        @Nullable Integer ipsslAddressCount,
-        @Nullable String kind,
-        String location,
-        Integer maximumNumberOfMachines,
-        Integer multiRoleCount,
-        @Nullable String multiSize,
-        String name,
-        String provisioningState,
-        String status,
-        Boolean suspended,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> userWhitelistedIpRanges,
-        VirtualNetworkProfileResponse virtualNetwork) {
+        @OutputCustomType.Parameter("clusterSettings") @Nullable List<NameValuePairResponse> clusterSettings,
+        @OutputCustomType.Parameter("dedicatedHostCount") Integer dedicatedHostCount,
+        @OutputCustomType.Parameter("dnsSuffix") @Nullable String dnsSuffix,
+        @OutputCustomType.Parameter("frontEndScaleFactor") @Nullable Integer frontEndScaleFactor,
+        @OutputCustomType.Parameter("hasLinuxWorkers") Boolean hasLinuxWorkers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internalLoadBalancingMode") @Nullable String internalLoadBalancingMode,
+        @OutputCustomType.Parameter("ipsslAddressCount") @Nullable Integer ipsslAddressCount,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maximumNumberOfMachines") Integer maximumNumberOfMachines,
+        @OutputCustomType.Parameter("multiRoleCount") Integer multiRoleCount,
+        @OutputCustomType.Parameter("multiSize") @Nullable String multiSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userWhitelistedIpRanges") @Nullable List<String> userWhitelistedIpRanges,
+        @OutputCustomType.Parameter("virtualNetwork") VirtualNetworkProfileResponse virtualNetwork) {
         this.clusterSettings = clusterSettings;
         this.dedicatedHostCount = dedicatedHostCount;
         this.dnsSuffix = dnsSuffix;
@@ -379,107 +379,107 @@ public final class GetAppServiceEnvironmentResult {
     	      this.virtualNetwork = defaults.virtualNetwork;
         }
 
-        public Builder setClusterSettings(@Nullable List<NameValuePairResponse> clusterSettings) {
+        public Builder clusterSettings(@Nullable List<NameValuePairResponse> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
 
-        public Builder setDedicatedHostCount(Integer dedicatedHostCount) {
+        public Builder dedicatedHostCount(Integer dedicatedHostCount) {
             this.dedicatedHostCount = Objects.requireNonNull(dedicatedHostCount);
             return this;
         }
 
-        public Builder setDnsSuffix(@Nullable String dnsSuffix) {
+        public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
 
-        public Builder setFrontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
+        public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
             this.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
 
-        public Builder setHasLinuxWorkers(Boolean hasLinuxWorkers) {
+        public Builder hasLinuxWorkers(Boolean hasLinuxWorkers) {
             this.hasLinuxWorkers = Objects.requireNonNull(hasLinuxWorkers);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInternalLoadBalancingMode(@Nullable String internalLoadBalancingMode) {
+        public Builder internalLoadBalancingMode(@Nullable String internalLoadBalancingMode) {
             this.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
 
-        public Builder setIpsslAddressCount(@Nullable Integer ipsslAddressCount) {
+        public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
             this.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaximumNumberOfMachines(Integer maximumNumberOfMachines) {
+        public Builder maximumNumberOfMachines(Integer maximumNumberOfMachines) {
             this.maximumNumberOfMachines = Objects.requireNonNull(maximumNumberOfMachines);
             return this;
         }
 
-        public Builder setMultiRoleCount(Integer multiRoleCount) {
+        public Builder multiRoleCount(Integer multiRoleCount) {
             this.multiRoleCount = Objects.requireNonNull(multiRoleCount);
             return this;
         }
 
-        public Builder setMultiSize(@Nullable String multiSize) {
+        public Builder multiSize(@Nullable String multiSize) {
             this.multiSize = multiSize;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSuspended(Boolean suspended) {
+        public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
+        public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
 
-        public Builder setVirtualNetwork(VirtualNetworkProfileResponse virtualNetwork) {
+        public Builder virtualNetwork(VirtualNetworkProfileResponse virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }

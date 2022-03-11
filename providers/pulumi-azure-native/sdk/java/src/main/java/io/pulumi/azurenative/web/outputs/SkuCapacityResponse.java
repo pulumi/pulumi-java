@@ -38,13 +38,13 @@ public final class SkuCapacityResponse {
      */
     private final @Nullable String scaleType;
 
-    @OutputCustomType.Constructor({"$default","elasticMaximum","maximum","minimum","scaleType"})
+    @OutputCustomType.Constructor
     private SkuCapacityResponse(
-        @Nullable Integer $default,
-        @Nullable Integer elasticMaximum,
-        @Nullable Integer maximum,
-        @Nullable Integer minimum,
-        @Nullable String scaleType) {
+        @OutputCustomType.Parameter("default") @Nullable Integer $default,
+        @OutputCustomType.Parameter("elasticMaximum") @Nullable Integer elasticMaximum,
+        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
+        @OutputCustomType.Parameter("minimum") @Nullable Integer minimum,
+        @OutputCustomType.Parameter("scaleType") @Nullable String scaleType) {
         this.$default = $default;
         this.elasticMaximum = elasticMaximum;
         this.maximum = maximum;
@@ -116,27 +116,27 @@ public final class SkuCapacityResponse {
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder set$default(@Nullable Integer $default) {
+        public Builder $default(@Nullable Integer $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setElasticMaximum(@Nullable Integer elasticMaximum) {
+        public Builder elasticMaximum(@Nullable Integer elasticMaximum) {
             this.elasticMaximum = elasticMaximum;
             return this;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Integer minimum) {
+        public Builder minimum(@Nullable Integer minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setScaleType(@Nullable String scaleType) {
+        public Builder scaleType(@Nullable String scaleType) {
             this.scaleType = scaleType;
             return this;
         }

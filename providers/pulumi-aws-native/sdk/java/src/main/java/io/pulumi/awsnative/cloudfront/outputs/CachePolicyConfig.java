@@ -20,14 +20,14 @@ public final class CachePolicyConfig {
     private final String name;
     private final CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin;
 
-    @OutputCustomType.Constructor({"comment","defaultTTL","maxTTL","minTTL","name","parametersInCacheKeyAndForwardedToOrigin"})
+    @OutputCustomType.Constructor
     private CachePolicyConfig(
-        @Nullable String comment,
-        Double defaultTTL,
-        Double maxTTL,
-        Double minTTL,
-        String name,
-        CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("defaultTTL") Double defaultTTL,
+        @OutputCustomType.Parameter("maxTTL") Double maxTTL,
+        @OutputCustomType.Parameter("minTTL") Double minTTL,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parametersInCacheKeyAndForwardedToOrigin") CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
         this.comment = comment;
         this.defaultTTL = defaultTTL;
         this.maxTTL = maxTTL;
@@ -85,32 +85,32 @@ public final class CachePolicyConfig {
     	      this.parametersInCacheKeyAndForwardedToOrigin = defaults.parametersInCacheKeyAndForwardedToOrigin;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setDefaultTTL(Double defaultTTL) {
+        public Builder defaultTTL(Double defaultTTL) {
             this.defaultTTL = Objects.requireNonNull(defaultTTL);
             return this;
         }
 
-        public Builder setMaxTTL(Double maxTTL) {
+        public Builder maxTTL(Double maxTTL) {
             this.maxTTL = Objects.requireNonNull(maxTTL);
             return this;
         }
 
-        public Builder setMinTTL(Double minTTL) {
+        public Builder minTTL(Double minTTL) {
             this.minTTL = Objects.requireNonNull(minTTL);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
+        public Builder parametersInCacheKeyAndForwardedToOrigin(CachePolicyParametersInCacheKeyAndForwardedToOrigin parametersInCacheKeyAndForwardedToOrigin) {
             this.parametersInCacheKeyAndForwardedToOrigin = Objects.requireNonNull(parametersInCacheKeyAndForwardedToOrigin);
             return this;
         }

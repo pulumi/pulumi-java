@@ -47,7 +47,7 @@ public final class DataSourceAclConfiguration extends io.pulumi.resources.Invoke
     	      this.allowedGroupsColumnName = defaults.allowedGroupsColumnName;
         }
 
-        public Builder setAllowedGroupsColumnName(String allowedGroupsColumnName) {
+        public Builder allowedGroupsColumnName(String allowedGroupsColumnName) {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }

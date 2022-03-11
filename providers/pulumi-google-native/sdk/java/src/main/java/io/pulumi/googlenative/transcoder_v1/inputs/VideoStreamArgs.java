@@ -92,32 +92,32 @@ public final class VideoStreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vp9 = defaults.vp9;
         }
 
-        public Builder setH264(@Nullable Input<H264CodecSettingsArgs> h264) {
+        public Builder h264(@Nullable Input<H264CodecSettingsArgs> h264) {
             this.h264 = h264;
             return this;
         }
 
-        public Builder setH264(@Nullable H264CodecSettingsArgs h264) {
+        public Builder h264(@Nullable H264CodecSettingsArgs h264) {
             this.h264 = Input.ofNullable(h264);
             return this;
         }
 
-        public Builder setH265(@Nullable Input<H265CodecSettingsArgs> h265) {
+        public Builder h265(@Nullable Input<H265CodecSettingsArgs> h265) {
             this.h265 = h265;
             return this;
         }
 
-        public Builder setH265(@Nullable H265CodecSettingsArgs h265) {
+        public Builder h265(@Nullable H265CodecSettingsArgs h265) {
             this.h265 = Input.ofNullable(h265);
             return this;
         }
 
-        public Builder setVp9(@Nullable Input<Vp9CodecSettingsArgs> vp9) {
+        public Builder vp9(@Nullable Input<Vp9CodecSettingsArgs> vp9) {
             this.vp9 = vp9;
             return this;
         }
 
-        public Builder setVp9(@Nullable Vp9CodecSettingsArgs vp9) {
+        public Builder vp9(@Nullable Vp9CodecSettingsArgs vp9) {
             this.vp9 = Input.ofNullable(vp9);
             return this;
         }

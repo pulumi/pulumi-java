@@ -27,11 +27,11 @@ public final class TemplateMetadataResponse {
      */
     private final List<ParameterMetadataResponse> parameters;
 
-    @OutputCustomType.Constructor({"description","name","parameters"})
+    @OutputCustomType.Constructor
     private TemplateMetadataResponse(
-        String description,
-        String name,
-        List<ParameterMetadataResponse> parameters) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<ParameterMetadataResponse> parameters) {
         this.description = description;
         this.name = name;
         this.parameters = parameters;
@@ -83,17 +83,17 @@ public final class TemplateMetadataResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<ParameterMetadataResponse> parameters) {
+        public Builder parameters(List<ParameterMetadataResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

@@ -105,42 +105,42 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder setImportJobId(Input<String> importJobId) {
+        public Builder importJobId(Input<String> importJobId) {
             this.importJobId = Objects.requireNonNull(importJobId);
             return this;
         }
 
-        public Builder setImportJobId(String importJobId) {
+        public Builder importJobId(String importJobId) {
             this.importJobId = Input.of(Objects.requireNonNull(importJobId));
             return this;
         }
 
-        public Builder setImportMethod(Input<String> importMethod) {
+        public Builder importMethod(Input<String> importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
 
-        public Builder setImportMethod(String importMethod) {
+        public Builder importMethod(String importMethod) {
             this.importMethod = Input.of(Objects.requireNonNull(importMethod));
             return this;
         }
 
-        public Builder setKeyRing(Input<String> keyRing) {
+        public Builder keyRing(Input<String> keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
 
-        public Builder setKeyRing(String keyRing) {
+        public Builder keyRing(String keyRing) {
             this.keyRing = Input.of(Objects.requireNonNull(keyRing));
             return this;
         }
 
-        public Builder setProtectionLevel(Input<String> protectionLevel) {
+        public Builder protectionLevel(Input<String> protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
 
-        public Builder setProtectionLevel(String protectionLevel) {
+        public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Input.of(Objects.requireNonNull(protectionLevel));
             return this;
         }

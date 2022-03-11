@@ -57,17 +57,17 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
      */
     private final String userEmailAddress;
 
-    @OutputCustomType.Constructor({"annotatedDatasetDescription","annotatedDatasetDisplayName","contributorEmails","instruction","labelGroup","languageCode","questionDuration","replicaCount","userEmailAddress"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(
-        String annotatedDatasetDescription,
-        String annotatedDatasetDisplayName,
-        List<String> contributorEmails,
-        String instruction,
-        String labelGroup,
-        String languageCode,
-        String questionDuration,
-        Integer replicaCount,
-        String userEmailAddress) {
+        @OutputCustomType.Parameter("annotatedDatasetDescription") String annotatedDatasetDescription,
+        @OutputCustomType.Parameter("annotatedDatasetDisplayName") String annotatedDatasetDisplayName,
+        @OutputCustomType.Parameter("contributorEmails") List<String> contributorEmails,
+        @OutputCustomType.Parameter("instruction") String instruction,
+        @OutputCustomType.Parameter("labelGroup") String labelGroup,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("questionDuration") String questionDuration,
+        @OutputCustomType.Parameter("replicaCount") Integer replicaCount,
+        @OutputCustomType.Parameter("userEmailAddress") String userEmailAddress) {
         this.annotatedDatasetDescription = annotatedDatasetDescription;
         this.annotatedDatasetDisplayName = annotatedDatasetDisplayName;
         this.contributorEmails = contributorEmails;
@@ -179,47 +179,47 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
     	      this.userEmailAddress = defaults.userEmailAddress;
         }
 
-        public Builder setAnnotatedDatasetDescription(String annotatedDatasetDescription) {
+        public Builder annotatedDatasetDescription(String annotatedDatasetDescription) {
             this.annotatedDatasetDescription = Objects.requireNonNull(annotatedDatasetDescription);
             return this;
         }
 
-        public Builder setAnnotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
+        public Builder annotatedDatasetDisplayName(String annotatedDatasetDisplayName) {
             this.annotatedDatasetDisplayName = Objects.requireNonNull(annotatedDatasetDisplayName);
             return this;
         }
 
-        public Builder setContributorEmails(List<String> contributorEmails) {
+        public Builder contributorEmails(List<String> contributorEmails) {
             this.contributorEmails = Objects.requireNonNull(contributorEmails);
             return this;
         }
 
-        public Builder setInstruction(String instruction) {
+        public Builder instruction(String instruction) {
             this.instruction = Objects.requireNonNull(instruction);
             return this;
         }
 
-        public Builder setLabelGroup(String labelGroup) {
+        public Builder labelGroup(String labelGroup) {
             this.labelGroup = Objects.requireNonNull(labelGroup);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setQuestionDuration(String questionDuration) {
+        public Builder questionDuration(String questionDuration) {
             this.questionDuration = Objects.requireNonNull(questionDuration);
             return this;
         }
 
-        public Builder setReplicaCount(Integer replicaCount) {
+        public Builder replicaCount(Integer replicaCount) {
             this.replicaCount = Objects.requireNonNull(replicaCount);
             return this;
         }
 
-        public Builder setUserEmailAddress(String userEmailAddress) {
+        public Builder userEmailAddress(String userEmailAddress) {
             this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
             return this;
         }

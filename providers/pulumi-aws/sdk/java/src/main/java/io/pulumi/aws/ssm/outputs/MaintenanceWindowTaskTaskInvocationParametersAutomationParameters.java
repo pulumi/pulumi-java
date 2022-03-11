@@ -24,10 +24,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
      */
     private final @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters;
 
-    @OutputCustomType.Constructor({"documentVersion","parameters"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersAutomationParameters(
-        @Nullable String documentVersion,
-        @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("parameters") @Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
         this.documentVersion = documentVersion;
         this.parameters = parameters;
     }
@@ -69,12 +69,12 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
+        public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameter> parameters) {
             this.parameters = parameters;
             return this;
         }

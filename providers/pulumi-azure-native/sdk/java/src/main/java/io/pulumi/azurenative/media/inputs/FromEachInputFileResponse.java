@@ -83,12 +83,12 @@ public final class FromEachInputFileResponse extends io.pulumi.resources.InvokeA
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setIncludedTracks(@Nullable List<Object> includedTracks) {
+        public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

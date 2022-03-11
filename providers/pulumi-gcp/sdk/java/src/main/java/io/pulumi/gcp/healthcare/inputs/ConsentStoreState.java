@@ -130,52 +130,52 @@ public final class ConsentStoreState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setDefaultConsentTtl(@Nullable Input<String> defaultConsentTtl) {
+        public Builder defaultConsentTtl(@Nullable Input<String> defaultConsentTtl) {
             this.defaultConsentTtl = defaultConsentTtl;
             return this;
         }
 
-        public Builder setDefaultConsentTtl(@Nullable String defaultConsentTtl) {
+        public Builder defaultConsentTtl(@Nullable String defaultConsentTtl) {
             this.defaultConsentTtl = Input.ofNullable(defaultConsentTtl);
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(@Nullable Input<Boolean> enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(@Nullable Input<Boolean> enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(@Nullable Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Input.ofNullable(enableConsentCreateOnUpdate);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

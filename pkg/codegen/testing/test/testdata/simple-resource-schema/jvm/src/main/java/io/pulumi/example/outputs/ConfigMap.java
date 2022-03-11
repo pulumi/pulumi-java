@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ConfigMap {
     private final @Nullable String config;
 
-    @OutputCustomType.Constructor({"config"})
-    private ConfigMap(@Nullable String config) {
+    @OutputCustomType.Constructor
+    private ConfigMap(@OutputCustomType.Parameter("config") @Nullable String config) {
         this.config = config;
     }
 
@@ -42,7 +42,7 @@ public final class ConfigMap {
     	      this.config = defaults.config;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = config;
             return this;
         }

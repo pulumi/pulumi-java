@@ -195,41 +195,41 @@ public final class GetVirtualMachineResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"additionalCapabilities","availabilitySet","billingProfile","diagnosticsProfile","evictionPolicy","extendedLocation","extensionsTimeBudget","hardwareProfile","host","hostGroup","id","identity","instanceView","licenseType","location","name","networkProfile","osProfile","plan","platformFaultDomain","priority","provisioningState","proximityPlacementGroup","resources","scheduledEventsProfile","securityProfile","storageProfile","tags","type","userData","virtualMachineScaleSet","vmId","zones"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineResult(
-        @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
-        @Nullable SubResourceResponse availabilitySet,
-        @Nullable BillingProfileResponse billingProfile,
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable String evictionPolicy,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String extensionsTimeBudget,
-        @Nullable HardwareProfileResponse hardwareProfile,
-        @Nullable SubResourceResponse host,
-        @Nullable SubResourceResponse hostGroup,
-        String id,
-        @Nullable VirtualMachineIdentityResponse identity,
-        VirtualMachineInstanceViewResponse instanceView,
-        @Nullable String licenseType,
-        String location,
-        String name,
-        @Nullable NetworkProfileResponse networkProfile,
-        @Nullable OSProfileResponse osProfile,
-        @Nullable PlanResponse plan,
-        @Nullable Integer platformFaultDomain,
-        @Nullable String priority,
-        String provisioningState,
-        @Nullable SubResourceResponse proximityPlacementGroup,
-        List<VirtualMachineExtensionResponse> resources,
-        @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String userData,
-        @Nullable SubResourceResponse virtualMachineScaleSet,
-        String vmId,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("additionalCapabilities") @Nullable AdditionalCapabilitiesResponse additionalCapabilities,
+        @OutputCustomType.Parameter("availabilitySet") @Nullable SubResourceResponse availabilitySet,
+        @OutputCustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
+        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("extensionsTimeBudget") @Nullable String extensionsTimeBudget,
+        @OutputCustomType.Parameter("hardwareProfile") @Nullable HardwareProfileResponse hardwareProfile,
+        @OutputCustomType.Parameter("host") @Nullable SubResourceResponse host,
+        @OutputCustomType.Parameter("hostGroup") @Nullable SubResourceResponse hostGroup,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable VirtualMachineIdentityResponse identity,
+        @OutputCustomType.Parameter("instanceView") VirtualMachineInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable NetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osProfile") @Nullable OSProfileResponse osProfile,
+        @OutputCustomType.Parameter("plan") @Nullable PlanResponse plan,
+        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @OutputCustomType.Parameter("resources") List<VirtualMachineExtensionResponse> resources,
+        @OutputCustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userData") @Nullable String userData,
+        @OutputCustomType.Parameter("virtualMachineScaleSet") @Nullable SubResourceResponse virtualMachineScaleSet,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilitySet = availabilitySet;
         this.billingProfile = billingProfile;
@@ -581,167 +581,167 @@ public final class GetVirtualMachineResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable AdditionalCapabilitiesResponse additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAvailabilitySet(@Nullable SubResourceResponse availabilitySet) {
+        public Builder availabilitySet(@Nullable SubResourceResponse availabilitySet) {
             this.availabilitySet = availabilitySet;
             return this;
         }
 
-        public Builder setBillingProfile(@Nullable BillingProfileResponse billingProfile) {
+        public Builder billingProfile(@Nullable BillingProfileResponse billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable String evictionPolicy) {
+        public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtensionsTimeBudget(@Nullable String extensionsTimeBudget) {
+        public Builder extensionsTimeBudget(@Nullable String extensionsTimeBudget) {
             this.extensionsTimeBudget = extensionsTimeBudget;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHost(@Nullable SubResourceResponse host) {
+        public Builder host(@Nullable SubResourceResponse host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHostGroup(@Nullable SubResourceResponse hostGroup) {
+        public Builder hostGroup(@Nullable SubResourceResponse hostGroup) {
             this.hostGroup = hostGroup;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable VirtualMachineIdentityResponse identity) {
+        public Builder identity(@Nullable VirtualMachineIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInstanceView(VirtualMachineInstanceViewResponse instanceView) {
+        public Builder instanceView(VirtualMachineInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPlan(@Nullable PlanResponse plan) {
+        public Builder plan(@Nullable PlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Integer platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setResources(List<VirtualMachineExtensionResponse> resources) {
+        public Builder resources(List<VirtualMachineExtensionResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileResponse securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }
 
-        public Builder setVirtualMachineScaleSet(@Nullable SubResourceResponse virtualMachineScaleSet) {
+        public Builder virtualMachineScaleSet(@Nullable SubResourceResponse virtualMachineScaleSet) {
             this.virtualMachineScaleSet = virtualMachineScaleSet;
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -20,10 +20,10 @@ public final class VolumeResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"name","path"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        String name,
-        String path) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path) {
         this.name = name;
         this.path = path;
     }
@@ -65,12 +65,12 @@ public final class VolumeResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

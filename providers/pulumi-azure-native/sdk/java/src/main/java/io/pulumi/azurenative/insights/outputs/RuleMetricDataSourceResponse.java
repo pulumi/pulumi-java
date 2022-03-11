@@ -43,14 +43,14 @@ public final class RuleMetricDataSourceResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor({"legacyResourceId","metricName","metricNamespace","odataType","resourceLocation","resourceUri"})
+    @OutputCustomType.Constructor
     private RuleMetricDataSourceResponse(
-        @Nullable String legacyResourceId,
-        @Nullable String metricName,
-        @Nullable String metricNamespace,
-        String odataType,
-        @Nullable String resourceLocation,
-        @Nullable String resourceUri) {
+        @OutputCustomType.Parameter("legacyResourceId") @Nullable String legacyResourceId,
+        @OutputCustomType.Parameter("metricName") @Nullable String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.legacyResourceId = legacyResourceId;
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
@@ -133,32 +133,32 @@ public final class RuleMetricDataSourceResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setLegacyResourceId(@Nullable String legacyResourceId) {
+        public Builder legacyResourceId(@Nullable String legacyResourceId) {
             this.legacyResourceId = legacyResourceId;
             return this;
         }
 
-        public Builder setMetricName(@Nullable String metricName) {
+        public Builder metricName(@Nullable String metricName) {
             this.metricName = metricName;
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }

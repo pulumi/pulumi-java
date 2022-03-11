@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupRuleActionCaptchaProperties {
     private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private RuleGroupRuleActionCaptchaProperties(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionCaptchaProperties(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionCaptchaProperties {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

@@ -57,12 +57,12 @@ public final class KubernetesClusterPropertiesArgs extends io.pulumi.resources.R
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setServicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
             this.servicePrincipal = Input.ofNullable(servicePrincipal);
             return this;
         }

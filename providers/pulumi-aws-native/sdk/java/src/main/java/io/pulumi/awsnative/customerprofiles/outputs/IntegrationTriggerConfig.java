@@ -15,10 +15,10 @@ public final class IntegrationTriggerConfig {
     private final @Nullable IntegrationTriggerProperties triggerProperties;
     private final IntegrationTriggerType triggerType;
 
-    @OutputCustomType.Constructor({"triggerProperties","triggerType"})
+    @OutputCustomType.Constructor
     private IntegrationTriggerConfig(
-        @Nullable IntegrationTriggerProperties triggerProperties,
-        IntegrationTriggerType triggerType) {
+        @OutputCustomType.Parameter("triggerProperties") @Nullable IntegrationTriggerProperties triggerProperties,
+        @OutputCustomType.Parameter("triggerType") IntegrationTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = triggerType;
     }
@@ -52,12 +52,12 @@ public final class IntegrationTriggerConfig {
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setTriggerProperties(@Nullable IntegrationTriggerProperties triggerProperties) {
+        public Builder triggerProperties(@Nullable IntegrationTriggerProperties triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
-        public Builder setTriggerType(IntegrationTriggerType triggerType) {
+        public Builder triggerType(IntegrationTriggerType triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }

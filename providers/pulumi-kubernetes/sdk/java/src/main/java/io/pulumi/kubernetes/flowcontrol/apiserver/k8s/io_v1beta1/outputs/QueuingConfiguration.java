@@ -27,11 +27,11 @@ public final class QueuingConfiguration {
      */
     private final @Nullable Integer queues;
 
-    @OutputCustomType.Constructor({"handSize","queueLengthLimit","queues"})
+    @OutputCustomType.Constructor
     private QueuingConfiguration(
-        @Nullable Integer handSize,
-        @Nullable Integer queueLengthLimit,
-        @Nullable Integer queues) {
+        @OutputCustomType.Parameter("handSize") @Nullable Integer handSize,
+        @OutputCustomType.Parameter("queueLengthLimit") @Nullable Integer queueLengthLimit,
+        @OutputCustomType.Parameter("queues") @Nullable Integer queues) {
         this.handSize = handSize;
         this.queueLengthLimit = queueLengthLimit;
         this.queues = queues;
@@ -83,17 +83,17 @@ public final class QueuingConfiguration {
     	      this.queues = defaults.queues;
         }
 
-        public Builder setHandSize(@Nullable Integer handSize) {
+        public Builder handSize(@Nullable Integer handSize) {
             this.handSize = handSize;
             return this;
         }
 
-        public Builder setQueueLengthLimit(@Nullable Integer queueLengthLimit) {
+        public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
             this.queueLengthLimit = queueLengthLimit;
             return this;
         }
 
-        public Builder setQueues(@Nullable Integer queues) {
+        public Builder queues(@Nullable Integer queues) {
             this.queues = queues;
             return this;
         }

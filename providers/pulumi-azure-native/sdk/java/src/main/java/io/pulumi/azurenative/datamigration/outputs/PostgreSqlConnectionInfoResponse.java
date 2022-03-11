@@ -44,14 +44,14 @@ public final class PostgreSqlConnectionInfoResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"databaseName","password","port","serverName","type","userName"})
+    @OutputCustomType.Constructor
     private PostgreSqlConnectionInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String password,
-        Integer port,
-        String serverName,
-        String type,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.databaseName = databaseName;
         this.password = password;
         this.port = port;
@@ -134,32 +134,32 @@ public final class PostgreSqlConnectionInfoResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

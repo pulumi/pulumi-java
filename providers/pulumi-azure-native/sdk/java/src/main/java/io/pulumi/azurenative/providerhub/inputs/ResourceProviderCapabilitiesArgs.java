@@ -77,32 +77,32 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder setEffect(Input<Either<String,ResourceProviderCapabilitiesEffect>> effect) {
+        public Builder effect(Input<Either<String,ResourceProviderCapabilitiesEffect>> effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setEffect(Either<String,ResourceProviderCapabilitiesEffect> effect) {
+        public Builder effect(Either<String,ResourceProviderCapabilitiesEffect> effect) {
             this.effect = Input.of(Objects.requireNonNull(effect));
             return this;
         }
 
-        public Builder setQuotaId(Input<String> quotaId) {
+        public Builder quotaId(Input<String> quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
 
-        public Builder setQuotaId(String quotaId) {
+        public Builder quotaId(String quotaId) {
             this.quotaId = Input.of(Objects.requireNonNull(quotaId));
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable Input<List<String>> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = Input.ofNullable(requiredFeatures);
             return this;
         }

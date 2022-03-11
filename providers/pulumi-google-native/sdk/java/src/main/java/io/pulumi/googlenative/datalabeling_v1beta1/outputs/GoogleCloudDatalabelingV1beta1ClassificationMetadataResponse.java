@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
      */
     private final Boolean isMultiLabel;
 
-    @OutputCustomType.Constructor({"isMultiLabel"})
-    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(Boolean isMultiLabel) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse(@OutputCustomType.Parameter("isMultiLabel") Boolean isMultiLabel) {
         this.isMultiLabel = isMultiLabel;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse 
     	      this.isMultiLabel = defaults.isMultiLabel;
         }
 
-        public Builder setIsMultiLabel(Boolean isMultiLabel) {
+        public Builder isMultiLabel(Boolean isMultiLabel) {
             this.isMultiLabel = Objects.requireNonNull(isMultiLabel);
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetVersionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }

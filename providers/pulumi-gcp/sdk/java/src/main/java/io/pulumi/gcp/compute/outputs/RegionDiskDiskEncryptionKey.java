@@ -30,11 +30,11 @@ public final class RegionDiskDiskEncryptionKey {
      */
     private final @Nullable String sha256;
 
-    @OutputCustomType.Constructor({"kmsKeyName","rawKey","sha256"})
+    @OutputCustomType.Constructor
     private RegionDiskDiskEncryptionKey(
-        @Nullable String kmsKeyName,
-        @Nullable String rawKey,
-        @Nullable String sha256) {
+        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey,
+        @OutputCustomType.Parameter("sha256") @Nullable String sha256) {
         this.kmsKeyName = kmsKeyName;
         this.rawKey = rawKey;
         this.sha256 = sha256;
@@ -89,17 +89,17 @@ public final class RegionDiskDiskEncryptionKey {
     	      this.sha256 = defaults.sha256;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setSha256(@Nullable String sha256) {
+        public Builder sha256(@Nullable String sha256) {
             this.sha256 = sha256;
             return this;
         }

@@ -26,11 +26,11 @@ public final class BackendServiceFailoverPolicyResponse {
      */
     private final Double failoverRatio;
 
-    @OutputCustomType.Constructor({"disableConnectionDrainOnFailover","dropTrafficIfUnhealthy","failoverRatio"})
+    @OutputCustomType.Constructor
     private BackendServiceFailoverPolicyResponse(
-        Boolean disableConnectionDrainOnFailover,
-        Boolean dropTrafficIfUnhealthy,
-        Double failoverRatio) {
+        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") Boolean disableConnectionDrainOnFailover,
+        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") Boolean dropTrafficIfUnhealthy,
+        @OutputCustomType.Parameter("failoverRatio") Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;
@@ -82,17 +82,17 @@ public final class BackendServiceFailoverPolicyResponse {
     	      this.failoverRatio = defaults.failoverRatio;
         }
 
-        public Builder setDisableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
+        public Builder disableConnectionDrainOnFailover(Boolean disableConnectionDrainOnFailover) {
             this.disableConnectionDrainOnFailover = Objects.requireNonNull(disableConnectionDrainOnFailover);
             return this;
         }
 
-        public Builder setDropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
+        public Builder dropTrafficIfUnhealthy(Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = Objects.requireNonNull(dropTrafficIfUnhealthy);
             return this;
         }
 
-        public Builder setFailoverRatio(Double failoverRatio) {
+        public Builder failoverRatio(Double failoverRatio) {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }

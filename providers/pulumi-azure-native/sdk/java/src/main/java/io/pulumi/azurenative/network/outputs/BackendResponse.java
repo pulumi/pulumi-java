@@ -73,20 +73,20 @@ public final class BackendResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"address","backendHostHeader","enabledState","httpPort","httpsPort","priority","privateEndpointStatus","privateLinkAlias","privateLinkApprovalMessage","privateLinkLocation","privateLinkResourceId","weight"})
+    @OutputCustomType.Constructor
     private BackendResponse(
-        @Nullable String address,
-        @Nullable String backendHostHeader,
-        @Nullable String enabledState,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        @Nullable Integer priority,
-        String privateEndpointStatus,
-        @Nullable String privateLinkAlias,
-        @Nullable String privateLinkApprovalMessage,
-        @Nullable String privateLinkLocation,
-        @Nullable String privateLinkResourceId,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("backendHostHeader") @Nullable String backendHostHeader,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("privateEndpointStatus") String privateEndpointStatus,
+        @OutputCustomType.Parameter("privateLinkAlias") @Nullable String privateLinkAlias,
+        @OutputCustomType.Parameter("privateLinkApprovalMessage") @Nullable String privateLinkApprovalMessage,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.address = address;
         this.backendHostHeader = backendHostHeader;
         this.enabledState = enabledState;
@@ -228,62 +228,62 @@ public final class BackendResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setBackendHostHeader(@Nullable String backendHostHeader) {
+        public Builder backendHostHeader(@Nullable String backendHostHeader) {
             this.backendHostHeader = backendHostHeader;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPrivateEndpointStatus(String privateEndpointStatus) {
+        public Builder privateEndpointStatus(String privateEndpointStatus) {
             this.privateEndpointStatus = Objects.requireNonNull(privateEndpointStatus);
             return this;
         }
 
-        public Builder setPrivateLinkAlias(@Nullable String privateLinkAlias) {
+        public Builder privateLinkAlias(@Nullable String privateLinkAlias) {
             this.privateLinkAlias = privateLinkAlias;
             return this;
         }
 
-        public Builder setPrivateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
+        public Builder privateLinkApprovalMessage(@Nullable String privateLinkApprovalMessage) {
             this.privateLinkApprovalMessage = privateLinkApprovalMessage;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

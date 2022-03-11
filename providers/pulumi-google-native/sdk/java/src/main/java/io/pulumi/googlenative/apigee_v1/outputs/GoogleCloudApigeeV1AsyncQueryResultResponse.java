@@ -20,10 +20,10 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
      */
     private final String self;
 
-    @OutputCustomType.Constructor({"expires","self"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1AsyncQueryResultResponse(
-        String expires,
-        String self) {
+        @OutputCustomType.Parameter("expires") String expires,
+        @OutputCustomType.Parameter("self") String self) {
         this.expires = expires;
         this.self = self;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudApigeeV1AsyncQueryResultResponse {
     	      this.self = defaults.self;
         }
 
-        public Builder setExpires(String expires) {
+        public Builder expires(String expires) {
             this.expires = Objects.requireNonNull(expires);
             return this;
         }
 
-        public Builder setSelf(String self) {
+        public Builder self(String self) {
             this.self = Objects.requireNonNull(self);
             return this;
         }

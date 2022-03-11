@@ -37,13 +37,13 @@ public final class GetProductPolicyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"format","id","name","type","value"})
+    @OutputCustomType.Constructor
     private GetProductPolicyResult(
-        @Nullable String format,
-        String id,
-        String name,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.format = format;
         this.id = id;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetProductPolicyResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

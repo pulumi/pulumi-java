@@ -22,10 +22,10 @@ public final class ApplicationPackageSupportUrlsResponse {
      */
     private final @Nullable String publicAzure;
 
-    @OutputCustomType.Constructor({"governmentCloud","publicAzure"})
+    @OutputCustomType.Constructor
     private ApplicationPackageSupportUrlsResponse(
-        @Nullable String governmentCloud,
-        @Nullable String publicAzure) {
+        @OutputCustomType.Parameter("governmentCloud") @Nullable String governmentCloud,
+        @OutputCustomType.Parameter("publicAzure") @Nullable String publicAzure) {
         this.governmentCloud = governmentCloud;
         this.publicAzure = publicAzure;
     }
@@ -67,12 +67,12 @@ public final class ApplicationPackageSupportUrlsResponse {
     	      this.publicAzure = defaults.publicAzure;
         }
 
-        public Builder setGovernmentCloud(@Nullable String governmentCloud) {
+        public Builder governmentCloud(@Nullable String governmentCloud) {
             this.governmentCloud = governmentCloud;
             return this;
         }
 
-        public Builder setPublicAzure(@Nullable String publicAzure) {
+        public Builder publicAzure(@Nullable String publicAzure) {
             this.publicAzure = publicAzure;
             return this;
         }

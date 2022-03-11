@@ -185,82 +185,82 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     	      this.skipDelete = defaults.skipDelete;
         }
 
-        public Builder setAutoCreateNetwork(@Nullable Input<Boolean> autoCreateNetwork) {
+        public Builder autoCreateNetwork(@Nullable Input<Boolean> autoCreateNetwork) {
             this.autoCreateNetwork = autoCreateNetwork;
             return this;
         }
 
-        public Builder setAutoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
+        public Builder autoCreateNetwork(@Nullable Boolean autoCreateNetwork) {
             this.autoCreateNetwork = Input.ofNullable(autoCreateNetwork);
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable Input<String> billingAccount) {
+        public Builder billingAccount(@Nullable Input<String> billingAccount) {
             this.billingAccount = billingAccount;
             return this;
         }
 
-        public Builder setBillingAccount(@Nullable String billingAccount) {
+        public Builder billingAccount(@Nullable String billingAccount) {
             this.billingAccount = Input.ofNullable(billingAccount);
             return this;
         }
 
-        public Builder setFolderId(@Nullable Input<String> folderId) {
+        public Builder folderId(@Nullable Input<String> folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setFolderId(@Nullable String folderId) {
+        public Builder folderId(@Nullable String folderId) {
             this.folderId = Input.ofNullable(folderId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setSkipDelete(@Nullable Input<Boolean> skipDelete) {
+        public Builder skipDelete(@Nullable Input<Boolean> skipDelete) {
             this.skipDelete = skipDelete;
             return this;
         }
 
-        public Builder setSkipDelete(@Nullable Boolean skipDelete) {
+        public Builder skipDelete(@Nullable Boolean skipDelete) {
             this.skipDelete = Input.ofNullable(skipDelete);
             return this;
         }

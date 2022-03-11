@@ -14,10 +14,10 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
     private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"cidrBlocks","enabled"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigMasterAuthorizedNetworksConfig(
-        List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("cidrBlocks") List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.cidrBlocks = cidrBlocks;
         this.enabled = enabled;
     }
@@ -51,12 +51,12 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCidrBlocks(List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
+        public Builder cidrBlocks(List<GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

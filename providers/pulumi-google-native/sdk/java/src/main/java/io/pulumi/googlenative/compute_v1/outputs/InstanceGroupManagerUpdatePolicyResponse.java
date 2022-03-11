@@ -46,15 +46,15 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"instanceRedistributionType","maxSurge","maxUnavailable","minimalAction","mostDisruptiveAllowedAction","replacementMethod","type"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerUpdatePolicyResponse(
-        String instanceRedistributionType,
-        FixedOrPercentResponse maxSurge,
-        FixedOrPercentResponse maxUnavailable,
-        String minimalAction,
-        String mostDisruptiveAllowedAction,
-        String replacementMethod,
-        String type) {
+        @OutputCustomType.Parameter("instanceRedistributionType") String instanceRedistributionType,
+        @OutputCustomType.Parameter("maxSurge") FixedOrPercentResponse maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") FixedOrPercentResponse maxUnavailable,
+        @OutputCustomType.Parameter("minimalAction") String minimalAction,
+        @OutputCustomType.Parameter("mostDisruptiveAllowedAction") String mostDisruptiveAllowedAction,
+        @OutputCustomType.Parameter("replacementMethod") String replacementMethod,
+        @OutputCustomType.Parameter("type") String type) {
         this.instanceRedistributionType = instanceRedistributionType;
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
@@ -146,37 +146,37 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInstanceRedistributionType(String instanceRedistributionType) {
+        public Builder instanceRedistributionType(String instanceRedistributionType) {
             this.instanceRedistributionType = Objects.requireNonNull(instanceRedistributionType);
             return this;
         }
 
-        public Builder setMaxSurge(FixedOrPercentResponse maxSurge) {
+        public Builder maxSurge(FixedOrPercentResponse maxSurge) {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
 
-        public Builder setMaxUnavailable(FixedOrPercentResponse maxUnavailable) {
+        public Builder maxUnavailable(FixedOrPercentResponse maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
 
-        public Builder setMinimalAction(String minimalAction) {
+        public Builder minimalAction(String minimalAction) {
             this.minimalAction = Objects.requireNonNull(minimalAction);
             return this;
         }
 
-        public Builder setMostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
+        public Builder mostDisruptiveAllowedAction(String mostDisruptiveAllowedAction) {
             this.mostDisruptiveAllowedAction = Objects.requireNonNull(mostDisruptiveAllowedAction);
             return this;
         }
 
-        public Builder setReplacementMethod(String replacementMethod) {
+        public Builder replacementMethod(String replacementMethod) {
             this.replacementMethod = Objects.requireNonNull(replacementMethod);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

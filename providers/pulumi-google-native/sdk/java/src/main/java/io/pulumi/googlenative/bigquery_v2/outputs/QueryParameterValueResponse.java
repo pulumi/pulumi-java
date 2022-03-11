@@ -27,11 +27,11 @@ public final class QueryParameterValueResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"arrayValues","structValues","value"})
+    @OutputCustomType.Constructor
     private QueryParameterValueResponse(
-        List<QueryParameterValueResponse> arrayValues,
-        Map<String,String> structValues,
-        String value) {
+        @OutputCustomType.Parameter("arrayValues") List<QueryParameterValueResponse> arrayValues,
+        @OutputCustomType.Parameter("structValues") Map<String,String> structValues,
+        @OutputCustomType.Parameter("value") String value) {
         this.arrayValues = arrayValues;
         this.structValues = structValues;
         this.value = value;
@@ -83,17 +83,17 @@ public final class QueryParameterValueResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setArrayValues(List<QueryParameterValueResponse> arrayValues) {
+        public Builder arrayValues(List<QueryParameterValueResponse> arrayValues) {
             this.arrayValues = Objects.requireNonNull(arrayValues);
             return this;
         }
 
-        public Builder setStructValues(Map<String,String> structValues) {
+        public Builder structValues(Map<String,String> structValues) {
             this.structValues = Objects.requireNonNull(structValues);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

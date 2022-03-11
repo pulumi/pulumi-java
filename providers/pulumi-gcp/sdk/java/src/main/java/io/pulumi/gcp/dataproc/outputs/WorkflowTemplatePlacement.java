@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacement {
      */
     private final @Nullable WorkflowTemplatePlacementManagedCluster managedCluster;
 
-    @OutputCustomType.Constructor({"clusterSelector","managedCluster"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacement(
-        @Nullable WorkflowTemplatePlacementClusterSelector clusterSelector,
-        @Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
+        @OutputCustomType.Parameter("clusterSelector") @Nullable WorkflowTemplatePlacementClusterSelector clusterSelector,
+        @OutputCustomType.Parameter("managedCluster") @Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
         this.clusterSelector = clusterSelector;
         this.managedCluster = managedCluster;
     }
@@ -68,12 +68,12 @@ public final class WorkflowTemplatePlacement {
     	      this.managedCluster = defaults.managedCluster;
         }
 
-        public Builder setClusterSelector(@Nullable WorkflowTemplatePlacementClusterSelector clusterSelector) {
+        public Builder clusterSelector(@Nullable WorkflowTemplatePlacementClusterSelector clusterSelector) {
             this.clusterSelector = clusterSelector;
             return this;
         }
 
-        public Builder setManagedCluster(@Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
+        public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedCluster managedCluster) {
             this.managedCluster = managedCluster;
             return this;
         }

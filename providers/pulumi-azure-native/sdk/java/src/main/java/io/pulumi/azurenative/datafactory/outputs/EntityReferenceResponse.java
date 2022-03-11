@@ -22,10 +22,10 @@ public final class EntityReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"referenceName","type"})
+    @OutputCustomType.Constructor
     private EntityReferenceResponse(
-        @Nullable String referenceName,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("referenceName") @Nullable String referenceName,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.referenceName = referenceName;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class EntityReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

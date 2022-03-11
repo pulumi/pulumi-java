@@ -24,12 +24,12 @@ public final class GetProductResult {
     private final String result;
     private final String serviceCode;
 
-    @OutputCustomType.Constructor({"filters","id","result","serviceCode"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        List<GetProductFilter> filters,
-        String id,
-        String result,
-        String serviceCode) {
+        @OutputCustomType.Parameter("filters") List<GetProductFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("serviceCode") String serviceCode) {
         this.filters = filters;
         this.id = id;
         this.result = result;
@@ -83,22 +83,22 @@ public final class GetProductResult {
     	      this.serviceCode = defaults.serviceCode;
         }
 
-        public Builder setFilters(List<GetProductFilter> filters) {
+        public Builder filters(List<GetProductFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }

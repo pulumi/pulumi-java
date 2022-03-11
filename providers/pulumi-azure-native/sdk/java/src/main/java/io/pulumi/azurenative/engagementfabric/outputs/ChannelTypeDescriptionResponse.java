@@ -28,11 +28,11 @@ public final class ChannelTypeDescriptionResponse {
      */
     private final @Nullable String channelType;
 
-    @OutputCustomType.Constructor({"channelDescription","channelFunctions","channelType"})
+    @OutputCustomType.Constructor
     private ChannelTypeDescriptionResponse(
-        @Nullable String channelDescription,
-        @Nullable List<String> channelFunctions,
-        @Nullable String channelType) {
+        @OutputCustomType.Parameter("channelDescription") @Nullable String channelDescription,
+        @OutputCustomType.Parameter("channelFunctions") @Nullable List<String> channelFunctions,
+        @OutputCustomType.Parameter("channelType") @Nullable String channelType) {
         this.channelDescription = channelDescription;
         this.channelFunctions = channelFunctions;
         this.channelType = channelType;
@@ -84,17 +84,17 @@ public final class ChannelTypeDescriptionResponse {
     	      this.channelType = defaults.channelType;
         }
 
-        public Builder setChannelDescription(@Nullable String channelDescription) {
+        public Builder channelDescription(@Nullable String channelDescription) {
             this.channelDescription = channelDescription;
             return this;
         }
 
-        public Builder setChannelFunctions(@Nullable List<String> channelFunctions) {
+        public Builder channelFunctions(@Nullable List<String> channelFunctions) {
             this.channelFunctions = channelFunctions;
             return this;
         }
 
-        public Builder setChannelType(@Nullable String channelType) {
+        public Builder channelType(@Nullable String channelType) {
             this.channelType = channelType;
             return this;
         }

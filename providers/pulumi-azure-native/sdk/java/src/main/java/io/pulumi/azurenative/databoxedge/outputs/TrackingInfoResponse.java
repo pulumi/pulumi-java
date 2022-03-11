@@ -32,12 +32,12 @@ public final class TrackingInfoResponse {
      */
     private final @Nullable String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierName","serialNumber","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private TrackingInfoResponse(
-        @Nullable String carrierName,
-        @Nullable String serialNumber,
-        @Nullable String trackingId,
-        @Nullable String trackingUrl) {
+        @OutputCustomType.Parameter("carrierName") @Nullable String carrierName,
+        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @OutputCustomType.Parameter("trackingId") @Nullable String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") @Nullable String trackingUrl) {
         this.carrierName = carrierName;
         this.serialNumber = serialNumber;
         this.trackingId = trackingId;
@@ -99,22 +99,22 @@ public final class TrackingInfoResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierName(@Nullable String carrierName) {
+        public Builder carrierName(@Nullable String carrierName) {
             this.carrierName = carrierName;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setTrackingId(@Nullable String trackingId) {
+        public Builder trackingId(@Nullable String trackingId) {
             this.trackingId = trackingId;
             return this;
         }
 
-        public Builder setTrackingUrl(@Nullable String trackingUrl) {
+        public Builder trackingUrl(@Nullable String trackingUrl) {
             this.trackingUrl = trackingUrl;
             return this;
         }

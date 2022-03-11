@@ -41,14 +41,14 @@ public final class GetVersionResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createTime","description","displayName","name","nluSettings","state"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        String createTime,
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
-        String state) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
+        @OutputCustomType.Parameter("state") String state) {
         this.createTime = createTime;
         this.description = description;
         this.displayName = displayName;
@@ -130,32 +130,32 @@ public final class GetVersionResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNluSettings(GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings) {
+        public Builder nluSettings(GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings) {
             this.nluSettings = Objects.requireNonNull(nluSettings);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

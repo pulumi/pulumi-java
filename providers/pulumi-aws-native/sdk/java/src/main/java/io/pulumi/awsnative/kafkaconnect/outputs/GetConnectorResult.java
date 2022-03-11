@@ -19,10 +19,10 @@ public final class GetConnectorResult {
      */
     private final @Nullable String connectorArn;
 
-    @OutputCustomType.Constructor({"capacity","connectorArn"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        @Nullable ConnectorCapacity capacity,
-        @Nullable String connectorArn) {
+        @OutputCustomType.Parameter("capacity") @Nullable ConnectorCapacity capacity,
+        @OutputCustomType.Parameter("connectorArn") @Nullable String connectorArn) {
         this.capacity = capacity;
         this.connectorArn = connectorArn;
     }
@@ -60,12 +60,12 @@ public final class GetConnectorResult {
     	      this.connectorArn = defaults.connectorArn;
         }
 
-        public Builder setCapacity(@Nullable ConnectorCapacity capacity) {
+        public Builder capacity(@Nullable ConnectorCapacity capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setConnectorArn(@Nullable String connectorArn) {
+        public Builder connectorArn(@Nullable String connectorArn) {
             this.connectorArn = connectorArn;
             return this;
         }

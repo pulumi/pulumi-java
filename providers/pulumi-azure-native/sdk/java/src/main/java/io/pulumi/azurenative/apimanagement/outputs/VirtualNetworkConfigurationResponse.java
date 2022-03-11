@@ -27,11 +27,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String vnetid;
 
-    @OutputCustomType.Constructor({"subnetResourceId","subnetname","vnetid"})
+    @OutputCustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        @Nullable String subnetResourceId,
-        String subnetname,
-        String vnetid) {
+        @OutputCustomType.Parameter("subnetResourceId") @Nullable String subnetResourceId,
+        @OutputCustomType.Parameter("subnetname") String subnetname,
+        @OutputCustomType.Parameter("vnetid") String vnetid) {
         this.subnetResourceId = subnetResourceId;
         this.subnetname = subnetname;
         this.vnetid = vnetid;
@@ -83,17 +83,17 @@ public final class VirtualNetworkConfigurationResponse {
     	      this.vnetid = defaults.vnetid;
         }
 
-        public Builder setSubnetResourceId(@Nullable String subnetResourceId) {
+        public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }
 
-        public Builder setSubnetname(String subnetname) {
+        public Builder subnetname(String subnetname) {
             this.subnetname = Objects.requireNonNull(subnetname);
             return this;
         }
 
-        public Builder setVnetid(String vnetid) {
+        public Builder vnetid(String vnetid) {
             this.vnetid = Objects.requireNonNull(vnetid);
             return this;
         }

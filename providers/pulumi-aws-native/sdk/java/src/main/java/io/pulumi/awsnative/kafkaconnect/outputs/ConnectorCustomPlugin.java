@@ -21,10 +21,10 @@ public final class ConnectorCustomPlugin {
      */
     private final Integer revision;
 
-    @OutputCustomType.Constructor({"customPluginArn","revision"})
+    @OutputCustomType.Constructor
     private ConnectorCustomPlugin(
-        String customPluginArn,
-        Integer revision) {
+        @OutputCustomType.Parameter("customPluginArn") String customPluginArn,
+        @OutputCustomType.Parameter("revision") Integer revision) {
         this.customPluginArn = customPluginArn;
         this.revision = revision;
     }
@@ -66,12 +66,12 @@ public final class ConnectorCustomPlugin {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setCustomPluginArn(String customPluginArn) {
+        public Builder customPluginArn(String customPluginArn) {
             this.customPluginArn = Objects.requireNonNull(customPluginArn);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }

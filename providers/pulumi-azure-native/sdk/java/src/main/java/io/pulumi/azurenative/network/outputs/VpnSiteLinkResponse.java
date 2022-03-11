@@ -59,17 +59,17 @@ public final class VpnSiteLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bgpProperties","etag","fqdn","id","ipAddress","linkProperties","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private VpnSiteLinkResponse(
-        @Nullable VpnLinkBgpSettingsResponse bgpProperties,
-        String etag,
-        @Nullable String fqdn,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable VpnLinkProviderPropertiesResponse linkProperties,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("bgpProperties") @Nullable VpnLinkBgpSettingsResponse bgpProperties,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("linkProperties") @Nullable VpnLinkProviderPropertiesResponse linkProperties,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.bgpProperties = bgpProperties;
         this.etag = etag;
         this.fqdn = fqdn;
@@ -181,47 +181,47 @@ public final class VpnSiteLinkResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBgpProperties(@Nullable VpnLinkBgpSettingsResponse bgpProperties) {
+        public Builder bgpProperties(@Nullable VpnLinkBgpSettingsResponse bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLinkProperties(@Nullable VpnLinkProviderPropertiesResponse linkProperties) {
+        public Builder linkProperties(@Nullable VpnLinkProviderPropertiesResponse linkProperties) {
             this.linkProperties = linkProperties;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -15,10 +15,10 @@ public final class FlowPrefixConfig {
     private final @Nullable FlowPrefixFormat prefixFormat;
     private final @Nullable FlowPrefixType prefixType;
 
-    @OutputCustomType.Constructor({"prefixFormat","prefixType"})
+    @OutputCustomType.Constructor
     private FlowPrefixConfig(
-        @Nullable FlowPrefixFormat prefixFormat,
-        @Nullable FlowPrefixType prefixType) {
+        @OutputCustomType.Parameter("prefixFormat") @Nullable FlowPrefixFormat prefixFormat,
+        @OutputCustomType.Parameter("prefixType") @Nullable FlowPrefixType prefixType) {
         this.prefixFormat = prefixFormat;
         this.prefixType = prefixType;
     }
@@ -52,12 +52,12 @@ public final class FlowPrefixConfig {
     	      this.prefixType = defaults.prefixType;
         }
 
-        public Builder setPrefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
+        public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
             this.prefixFormat = prefixFormat;
             return this;
         }
 
-        public Builder setPrefixType(@Nullable FlowPrefixType prefixType) {
+        public Builder prefixType(@Nullable FlowPrefixType prefixType) {
             this.prefixType = prefixType;
             return this;
         }

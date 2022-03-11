@@ -23,10 +23,10 @@ public final class NetworkPolicyIngressRule {
      */
     private final @Nullable List<NetworkPolicyPort> ports;
 
-    @OutputCustomType.Constructor({"from","ports"})
+    @OutputCustomType.Constructor
     private NetworkPolicyIngressRule(
-        @Nullable List<NetworkPolicyPeer> from,
-        @Nullable List<NetworkPolicyPort> ports) {
+        @OutputCustomType.Parameter("from") @Nullable List<NetworkPolicyPeer> from,
+        @OutputCustomType.Parameter("ports") @Nullable List<NetworkPolicyPort> ports) {
         this.from = from;
         this.ports = ports;
     }
@@ -68,12 +68,12 @@ public final class NetworkPolicyIngressRule {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setFrom(@Nullable List<NetworkPolicyPeer> from) {
+        public Builder from(@Nullable List<NetworkPolicyPeer> from) {
             this.from = from;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<NetworkPolicyPort> ports) {
+        public Builder ports(@Nullable List<NetworkPolicyPort> ports) {
             this.ports = ports;
             return this;
         }

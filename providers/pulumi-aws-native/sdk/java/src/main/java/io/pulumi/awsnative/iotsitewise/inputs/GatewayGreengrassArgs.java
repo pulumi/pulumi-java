@@ -56,12 +56,12 @@ public final class GatewayGreengrassArgs extends io.pulumi.resources.ResourceArg
     	      this.groupArn = defaults.groupArn;
         }
 
-        public Builder setGroupArn(Input<String> groupArn) {
+        public Builder groupArn(Input<String> groupArn) {
             this.groupArn = Objects.requireNonNull(groupArn);
             return this;
         }
 
-        public Builder setGroupArn(String groupArn) {
+        public Builder groupArn(String groupArn) {
             this.groupArn = Input.of(Objects.requireNonNull(groupArn));
             return this;
         }

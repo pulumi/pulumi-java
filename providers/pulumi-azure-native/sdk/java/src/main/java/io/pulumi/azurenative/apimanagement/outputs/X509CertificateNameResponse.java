@@ -22,10 +22,10 @@ public final class X509CertificateNameResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"issuerCertificateThumbprint","name"})
+    @OutputCustomType.Constructor
     private X509CertificateNameResponse(
-        @Nullable String issuerCertificateThumbprint,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("issuerCertificateThumbprint") @Nullable String issuerCertificateThumbprint,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.issuerCertificateThumbprint = issuerCertificateThumbprint;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class X509CertificateNameResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setIssuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
+        public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
             this.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

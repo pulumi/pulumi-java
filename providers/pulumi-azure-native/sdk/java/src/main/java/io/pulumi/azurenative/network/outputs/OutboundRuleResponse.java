@@ -71,19 +71,19 @@ public final class OutboundRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocatedOutboundPorts","backendAddressPool","enableTcpReset","etag","frontendIPConfigurations","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private OutboundRuleResponse(
-        @Nullable Integer allocatedOutboundPorts,
-        SubResourceResponse backendAddressPool,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        List<SubResourceResponse> frontendIPConfigurations,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("allocatedOutboundPorts") @Nullable Integer allocatedOutboundPorts,
+        @OutputCustomType.Parameter("backendAddressPool") SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfigurations") List<SubResourceResponse> frontendIPConfigurations,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocatedOutboundPorts = allocatedOutboundPorts;
         this.backendAddressPool = backendAddressPool;
         this.enableTcpReset = enableTcpReset;
@@ -215,57 +215,57 @@ public final class OutboundRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
+        public Builder allocatedOutboundPorts(@Nullable Integer allocatedOutboundPorts) {
             this.allocatedOutboundPorts = allocatedOutboundPorts;
             return this;
         }
 
-        public Builder setBackendAddressPool(SubResourceResponse backendAddressPool) {
+        public Builder backendAddressPool(SubResourceResponse backendAddressPool) {
             this.backendAddressPool = Objects.requireNonNull(backendAddressPool);
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Boolean enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(List<SubResourceResponse> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(List<SubResourceResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

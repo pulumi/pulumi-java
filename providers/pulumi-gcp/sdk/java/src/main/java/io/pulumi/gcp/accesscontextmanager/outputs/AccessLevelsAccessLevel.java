@@ -44,13 +44,13 @@ public final class AccessLevelsAccessLevel {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"basic","custom","description","name","title"})
+    @OutputCustomType.Constructor
     private AccessLevelsAccessLevel(
-        @Nullable AccessLevelsAccessLevelBasic basic,
-        @Nullable AccessLevelsAccessLevelCustom custom,
-        @Nullable String description,
-        String name,
-        String title) {
+        @OutputCustomType.Parameter("basic") @Nullable AccessLevelsAccessLevelBasic basic,
+        @OutputCustomType.Parameter("custom") @Nullable AccessLevelsAccessLevelCustom custom,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("title") String title) {
         this.basic = basic;
         this.custom = custom;
         this.description = description;
@@ -127,27 +127,27 @@ public final class AccessLevelsAccessLevel {
     	      this.title = defaults.title;
         }
 
-        public Builder setBasic(@Nullable AccessLevelsAccessLevelBasic basic) {
+        public Builder basic(@Nullable AccessLevelsAccessLevelBasic basic) {
             this.basic = basic;
             return this;
         }
 
-        public Builder setCustom(@Nullable AccessLevelsAccessLevelCustom custom) {
+        public Builder custom(@Nullable AccessLevelsAccessLevelCustom custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

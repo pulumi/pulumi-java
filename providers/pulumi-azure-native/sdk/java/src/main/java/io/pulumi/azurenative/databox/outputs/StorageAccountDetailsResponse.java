@@ -21,10 +21,10 @@ public final class StorageAccountDetailsResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"dataAccountType","storageAccountId"})
+    @OutputCustomType.Constructor
     private StorageAccountDetailsResponse(
-        String dataAccountType,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.dataAccountType = dataAccountType;
         this.storageAccountId = storageAccountId;
     }
@@ -67,12 +67,12 @@ public final class StorageAccountDetailsResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

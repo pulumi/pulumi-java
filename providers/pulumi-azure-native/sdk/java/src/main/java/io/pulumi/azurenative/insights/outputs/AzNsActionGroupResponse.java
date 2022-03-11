@@ -28,11 +28,11 @@ public final class AzNsActionGroupResponse {
      */
     private final @Nullable String emailSubject;
 
-    @OutputCustomType.Constructor({"actionGroup","customWebhookPayload","emailSubject"})
+    @OutputCustomType.Constructor
     private AzNsActionGroupResponse(
-        @Nullable List<String> actionGroup,
-        @Nullable String customWebhookPayload,
-        @Nullable String emailSubject) {
+        @OutputCustomType.Parameter("actionGroup") @Nullable List<String> actionGroup,
+        @OutputCustomType.Parameter("customWebhookPayload") @Nullable String customWebhookPayload,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject) {
         this.actionGroup = actionGroup;
         this.customWebhookPayload = customWebhookPayload;
         this.emailSubject = emailSubject;
@@ -84,17 +84,17 @@ public final class AzNsActionGroupResponse {
     	      this.emailSubject = defaults.emailSubject;
         }
 
-        public Builder setActionGroup(@Nullable List<String> actionGroup) {
+        public Builder actionGroup(@Nullable List<String> actionGroup) {
             this.actionGroup = actionGroup;
             return this;
         }
 
-        public Builder setCustomWebhookPayload(@Nullable String customWebhookPayload) {
+        public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             this.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }

@@ -33,12 +33,12 @@ public final class OSPolicyResourceRepositoryResourceResponse {
      */
     private final OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceRepositoryResourceResponse(
-        OSPolicyResourceRepositoryResourceAptRepositoryResponse apt,
-        OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
-        OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
-        OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
+        @OutputCustomType.Parameter("apt") OSPolicyResourceRepositoryResourceAptRepositoryResponse apt,
+        @OutputCustomType.Parameter("goo") OSPolicyResourceRepositoryResourceGooRepositoryResponse goo,
+        @OutputCustomType.Parameter("yum") OSPolicyResourceRepositoryResourceYumRepositoryResponse yum,
+        @OutputCustomType.Parameter("zypper") OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -100,22 +100,22 @@ public final class OSPolicyResourceRepositoryResourceResponse {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(OSPolicyResourceRepositoryResourceAptRepositoryResponse apt) {
+        public Builder apt(OSPolicyResourceRepositoryResourceAptRepositoryResponse apt) {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
 
-        public Builder setGoo(OSPolicyResourceRepositoryResourceGooRepositoryResponse goo) {
+        public Builder goo(OSPolicyResourceRepositoryResourceGooRepositoryResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
 
-        public Builder setYum(OSPolicyResourceRepositoryResourceYumRepositoryResponse yum) {
+        public Builder yum(OSPolicyResourceRepositoryResourceYumRepositoryResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
 
-        public Builder setZypper(OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
+        public Builder zypper(OSPolicyResourceRepositoryResourceZypperRepositoryResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }

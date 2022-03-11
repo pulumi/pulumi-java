@@ -33,12 +33,12 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
      */
     private final List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","destPorts","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleMatcherConfigResponse(
-        List<String> destIpRanges,
-        List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
-        List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
-        List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("destPorts") List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts,
+        @OutputCustomType.Parameter("layer4Configs") List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.destPorts = destPorts;
         this.layer4Configs = layer4Configs;
@@ -100,22 +100,22 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(List<String> destIpRanges) {
+        public Builder destIpRanges(List<String> destIpRanges) {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
 
-        public Builder setDestPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
+        public Builder destPorts(List<SecurityPolicyRuleMatcherConfigDestinationPortResponse> destPorts) {
             this.destPorts = Objects.requireNonNull(destPorts);
             return this;
         }
 
-        public Builder setLayer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
+        public Builder layer4Configs(List<SecurityPolicyRuleMatcherConfigLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }

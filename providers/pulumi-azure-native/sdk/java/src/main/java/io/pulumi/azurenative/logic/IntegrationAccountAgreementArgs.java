@@ -235,122 +235,122 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAgreementName(@Nullable Input<String> agreementName) {
+        public Builder agreementName(@Nullable Input<String> agreementName) {
             this.agreementName = agreementName;
             return this;
         }
 
-        public Builder setAgreementName(@Nullable String agreementName) {
+        public Builder agreementName(@Nullable String agreementName) {
             this.agreementName = Input.ofNullable(agreementName);
             return this;
         }
 
-        public Builder setAgreementType(Input<AgreementType> agreementType) {
+        public Builder agreementType(Input<AgreementType> agreementType) {
             this.agreementType = Objects.requireNonNull(agreementType);
             return this;
         }
 
-        public Builder setAgreementType(AgreementType agreementType) {
+        public Builder agreementType(AgreementType agreementType) {
             this.agreementType = Input.of(Objects.requireNonNull(agreementType));
             return this;
         }
 
-        public Builder setContent(Input<AgreementContentArgs> content) {
+        public Builder content(Input<AgreementContentArgs> content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContent(AgreementContentArgs content) {
+        public Builder content(AgreementContentArgs content) {
             this.content = Input.of(Objects.requireNonNull(content));
             return this;
         }
 
-        public Builder setGuestIdentity(Input<BusinessIdentityArgs> guestIdentity) {
+        public Builder guestIdentity(Input<BusinessIdentityArgs> guestIdentity) {
             this.guestIdentity = Objects.requireNonNull(guestIdentity);
             return this;
         }
 
-        public Builder setGuestIdentity(BusinessIdentityArgs guestIdentity) {
+        public Builder guestIdentity(BusinessIdentityArgs guestIdentity) {
             this.guestIdentity = Input.of(Objects.requireNonNull(guestIdentity));
             return this;
         }
 
-        public Builder setGuestPartner(Input<String> guestPartner) {
+        public Builder guestPartner(Input<String> guestPartner) {
             this.guestPartner = Objects.requireNonNull(guestPartner);
             return this;
         }
 
-        public Builder setGuestPartner(String guestPartner) {
+        public Builder guestPartner(String guestPartner) {
             this.guestPartner = Input.of(Objects.requireNonNull(guestPartner));
             return this;
         }
 
-        public Builder setHostIdentity(Input<BusinessIdentityArgs> hostIdentity) {
+        public Builder hostIdentity(Input<BusinessIdentityArgs> hostIdentity) {
             this.hostIdentity = Objects.requireNonNull(hostIdentity);
             return this;
         }
 
-        public Builder setHostIdentity(BusinessIdentityArgs hostIdentity) {
+        public Builder hostIdentity(BusinessIdentityArgs hostIdentity) {
             this.hostIdentity = Input.of(Objects.requireNonNull(hostIdentity));
             return this;
         }
 
-        public Builder setHostPartner(Input<String> hostPartner) {
+        public Builder hostPartner(Input<String> hostPartner) {
             this.hostPartner = Objects.requireNonNull(hostPartner);
             return this;
         }
 
-        public Builder setHostPartner(String hostPartner) {
+        public Builder hostPartner(String hostPartner) {
             this.hostPartner = Input.of(Objects.requireNonNull(hostPartner));
             return this;
         }
 
-        public Builder setIntegrationAccountName(Input<String> integrationAccountName) {
+        public Builder integrationAccountName(Input<String> integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Input.of(Objects.requireNonNull(integrationAccountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Object> metadata) {
+        public Builder metadata(@Nullable Input<Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

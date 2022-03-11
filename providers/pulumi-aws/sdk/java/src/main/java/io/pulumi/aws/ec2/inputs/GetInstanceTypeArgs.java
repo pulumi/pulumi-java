@@ -247,62 +247,62 @@ public final class GetInstanceTypeArgs extends io.pulumi.resources.InvokeArgs {
     	      this.totalInstanceStorage = defaults.totalInstanceStorage;
         }
 
-        public Builder setDefaultCores(@Nullable Integer defaultCores) {
+        public Builder defaultCores(@Nullable Integer defaultCores) {
             this.defaultCores = defaultCores;
             return this;
         }
 
-        public Builder setDefaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
+        public Builder defaultThreadsPerCore(@Nullable Integer defaultThreadsPerCore) {
             this.defaultThreadsPerCore = defaultThreadsPerCore;
             return this;
         }
 
-        public Builder setFpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
+        public Builder fpgas(@Nullable List<GetInstanceTypeFpga> fpgas) {
             this.fpgas = fpgas;
             return this;
         }
 
-        public Builder setGpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
+        public Builder gpuses(@Nullable List<GetInstanceTypeGpus> gpuses) {
             this.gpuses = gpuses;
             return this;
         }
 
-        public Builder setHypervisor(@Nullable String hypervisor) {
+        public Builder hypervisor(@Nullable String hypervisor) {
             this.hypervisor = hypervisor;
             return this;
         }
 
-        public Builder setInferenceAccelerators(@Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
+        public Builder inferenceAccelerators(@Nullable List<GetInstanceTypeInferenceAccelerator> inferenceAccelerators) {
             this.inferenceAccelerators = inferenceAccelerators;
             return this;
         }
 
-        public Builder setInstanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
+        public Builder instanceDisks(@Nullable List<GetInstanceTypeInstanceDisk> instanceDisks) {
             this.instanceDisks = instanceDisks;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMaximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
+        public Builder maximumIpv6AddressesPerInterface(@Nullable Integer maximumIpv6AddressesPerInterface) {
             this.maximumIpv6AddressesPerInterface = maximumIpv6AddressesPerInterface;
             return this;
         }
 
-        public Builder setTotalFpgaMemory(@Nullable Integer totalFpgaMemory) {
+        public Builder totalFpgaMemory(@Nullable Integer totalFpgaMemory) {
             this.totalFpgaMemory = totalFpgaMemory;
             return this;
         }
 
-        public Builder setTotalGpuMemory(@Nullable Integer totalGpuMemory) {
+        public Builder totalGpuMemory(@Nullable Integer totalGpuMemory) {
             this.totalGpuMemory = totalGpuMemory;
             return this;
         }
 
-        public Builder setTotalInstanceStorage(@Nullable Integer totalInstanceStorage) {
+        public Builder totalInstanceStorage(@Nullable Integer totalInstanceStorage) {
             this.totalInstanceStorage = totalInstanceStorage;
             return this;
         }

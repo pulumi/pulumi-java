@@ -60,17 +60,17 @@ public final class GetManagedNetworkResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectivity","etag","id","location","name","provisioningState","scope","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagedNetworkResult(
-        ConnectivityCollectionResponse connectivity,
-        String etag,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ScopeResponse scope,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("connectivity") ConnectivityCollectionResponse connectivity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectivity = connectivity;
         this.etag = etag;
         this.id = id;
@@ -182,47 +182,47 @@ public final class GetManagedNetworkResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConnectivity(ConnectivityCollectionResponse connectivity) {
+        public Builder connectivity(ConnectivityCollectionResponse connectivity) {
             this.connectivity = Objects.requireNonNull(connectivity);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScope(@Nullable ScopeResponse scope) {
+        public Builder scope(@Nullable ScopeResponse scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

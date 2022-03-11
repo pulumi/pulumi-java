@@ -46,14 +46,14 @@ public final class ExecutionStatisticsResponse {
      */
     private final @Nullable Map<String,WaitStatisticsResponse> waitStats;
 
-    @OutputCustomType.Constructor({"cpuTimeMs","elapsedTimeMs","executionCount","hasErrors","sqlErrors","waitStats"})
+    @OutputCustomType.Constructor
     private ExecutionStatisticsResponse(
-        Double cpuTimeMs,
-        Double elapsedTimeMs,
-        Double executionCount,
-        Boolean hasErrors,
-        List<String> sqlErrors,
-        @Nullable Map<String,WaitStatisticsResponse> waitStats) {
+        @OutputCustomType.Parameter("cpuTimeMs") Double cpuTimeMs,
+        @OutputCustomType.Parameter("elapsedTimeMs") Double elapsedTimeMs,
+        @OutputCustomType.Parameter("executionCount") Double executionCount,
+        @OutputCustomType.Parameter("hasErrors") Boolean hasErrors,
+        @OutputCustomType.Parameter("sqlErrors") List<String> sqlErrors,
+        @OutputCustomType.Parameter("waitStats") @Nullable Map<String,WaitStatisticsResponse> waitStats) {
         this.cpuTimeMs = cpuTimeMs;
         this.elapsedTimeMs = elapsedTimeMs;
         this.executionCount = executionCount;
@@ -135,32 +135,32 @@ public final class ExecutionStatisticsResponse {
     	      this.waitStats = defaults.waitStats;
         }
 
-        public Builder setCpuTimeMs(Double cpuTimeMs) {
+        public Builder cpuTimeMs(Double cpuTimeMs) {
             this.cpuTimeMs = Objects.requireNonNull(cpuTimeMs);
             return this;
         }
 
-        public Builder setElapsedTimeMs(Double elapsedTimeMs) {
+        public Builder elapsedTimeMs(Double elapsedTimeMs) {
             this.elapsedTimeMs = Objects.requireNonNull(elapsedTimeMs);
             return this;
         }
 
-        public Builder setExecutionCount(Double executionCount) {
+        public Builder executionCount(Double executionCount) {
             this.executionCount = Objects.requireNonNull(executionCount);
             return this;
         }
 
-        public Builder setHasErrors(Boolean hasErrors) {
+        public Builder hasErrors(Boolean hasErrors) {
             this.hasErrors = Objects.requireNonNull(hasErrors);
             return this;
         }
 
-        public Builder setSqlErrors(List<String> sqlErrors) {
+        public Builder sqlErrors(List<String> sqlErrors) {
             this.sqlErrors = Objects.requireNonNull(sqlErrors);
             return this;
         }
 
-        public Builder setWaitStats(@Nullable Map<String,WaitStatisticsResponse> waitStats) {
+        public Builder waitStats(@Nullable Map<String,WaitStatisticsResponse> waitStats) {
             this.waitStats = waitStats;
             return this;
         }

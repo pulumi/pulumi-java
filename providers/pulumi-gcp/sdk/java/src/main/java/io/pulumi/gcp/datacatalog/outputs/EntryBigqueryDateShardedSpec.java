@@ -16,11 +16,11 @@ public final class EntryBigqueryDateShardedSpec {
     private final @Nullable Integer shardCount;
     private final @Nullable String tablePrefix;
 
-    @OutputCustomType.Constructor({"dataset","shardCount","tablePrefix"})
+    @OutputCustomType.Constructor
     private EntryBigqueryDateShardedSpec(
-        @Nullable String dataset,
-        @Nullable Integer shardCount,
-        @Nullable String tablePrefix) {
+        @OutputCustomType.Parameter("dataset") @Nullable String dataset,
+        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @OutputCustomType.Parameter("tablePrefix") @Nullable String tablePrefix) {
         this.dataset = dataset;
         this.shardCount = shardCount;
         this.tablePrefix = tablePrefix;
@@ -60,17 +60,17 @@ public final class EntryBigqueryDateShardedSpec {
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setTablePrefix(@Nullable String tablePrefix) {
+        public Builder tablePrefix(@Nullable String tablePrefix) {
             this.tablePrefix = tablePrefix;
             return this;
         }

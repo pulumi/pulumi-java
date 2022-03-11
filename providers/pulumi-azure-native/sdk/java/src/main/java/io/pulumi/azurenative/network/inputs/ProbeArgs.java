@@ -157,72 +157,72 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.requestPath = defaults.requestPath;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumberOfProbes(@Nullable Input<Integer> numberOfProbes) {
+        public Builder numberOfProbes(@Nullable Input<Integer> numberOfProbes) {
             this.numberOfProbes = numberOfProbes;
             return this;
         }
 
-        public Builder setNumberOfProbes(@Nullable Integer numberOfProbes) {
+        public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
             this.numberOfProbes = Input.ofNullable(numberOfProbes);
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,ProbeProtocol>> protocol) {
+        public Builder protocol(Input<Either<String,ProbeProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,ProbeProtocol> protocol) {
+        public Builder protocol(Either<String,ProbeProtocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setRequestPath(@Nullable Input<String> requestPath) {
+        public Builder requestPath(@Nullable Input<String> requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
-        public Builder setRequestPath(@Nullable String requestPath) {
+        public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = Input.ofNullable(requestPath);
             return this;
         }

@@ -17,8 +17,8 @@ public final class IngressStatus {
      */
     private final @Nullable LoadBalancerStatus loadBalancer;
 
-    @OutputCustomType.Constructor({"loadBalancer"})
-    private IngressStatus(@Nullable LoadBalancerStatus loadBalancer) {
+    @OutputCustomType.Constructor
+    private IngressStatus(@OutputCustomType.Parameter("loadBalancer") @Nullable LoadBalancerStatus loadBalancer) {
         this.loadBalancer = loadBalancer;
     }
 
@@ -50,7 +50,7 @@ public final class IngressStatus {
     	      this.loadBalancer = defaults.loadBalancer;
         }
 
-        public Builder setLoadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
+        public Builder loadBalancer(@Nullable LoadBalancerStatus loadBalancer) {
             this.loadBalancer = loadBalancer;
             return this;
         }

@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"mountPath","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2VolumeMountResponse(
-        String mountPath,
-        String name) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("name") String name) {
         this.mountPath = mountPath;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudRunOpV2VolumeMountResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -29,11 +29,11 @@ public final class ManagementPolicyActionResponse {
      */
     private final @Nullable ManagementPolicyVersionResponse version;
 
-    @OutputCustomType.Constructor({"baseBlob","snapshot","version"})
+    @OutputCustomType.Constructor
     private ManagementPolicyActionResponse(
-        @Nullable ManagementPolicyBaseBlobResponse baseBlob,
-        @Nullable ManagementPolicySnapShotResponse snapshot,
-        @Nullable ManagementPolicyVersionResponse version) {
+        @OutputCustomType.Parameter("baseBlob") @Nullable ManagementPolicyBaseBlobResponse baseBlob,
+        @OutputCustomType.Parameter("snapshot") @Nullable ManagementPolicySnapShotResponse snapshot,
+        @OutputCustomType.Parameter("version") @Nullable ManagementPolicyVersionResponse version) {
         this.baseBlob = baseBlob;
         this.snapshot = snapshot;
         this.version = version;
@@ -85,17 +85,17 @@ public final class ManagementPolicyActionResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setBaseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
+        public Builder baseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
             this.baseBlob = baseBlob;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
+        public Builder snapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setVersion(@Nullable ManagementPolicyVersionResponse version) {
+        public Builder version(@Nullable ManagementPolicyVersionResponse version) {
             this.version = version;
             return this;
         }

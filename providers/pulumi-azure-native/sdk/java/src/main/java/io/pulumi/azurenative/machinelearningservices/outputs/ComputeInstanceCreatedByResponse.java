@@ -25,11 +25,11 @@ public final class ComputeInstanceCreatedByResponse {
      */
     private final String userOrgId;
 
-    @OutputCustomType.Constructor({"userId","userName","userOrgId"})
+    @OutputCustomType.Constructor
     private ComputeInstanceCreatedByResponse(
-        String userId,
-        String userName,
-        String userOrgId) {
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("userOrgId") String userOrgId) {
         this.userId = userId;
         this.userName = userName;
         this.userOrgId = userOrgId;
@@ -81,17 +81,17 @@ public final class ComputeInstanceCreatedByResponse {
     	      this.userOrgId = defaults.userOrgId;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserOrgId(String userOrgId) {
+        public Builder userOrgId(String userOrgId) {
             this.userOrgId = Objects.requireNonNull(userOrgId);
             return this;
         }

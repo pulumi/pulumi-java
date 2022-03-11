@@ -141,82 +141,82 @@ public final class ListenerRuleRuleConditionArgs extends io.pulumi.resources.Res
     	      this.values = defaults.values;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }
 
-        public Builder setHostHeaderConfig(@Nullable Input<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig) {
+        public Builder hostHeaderConfig(@Nullable Input<ListenerRuleHostHeaderConfigArgs> hostHeaderConfig) {
             this.hostHeaderConfig = hostHeaderConfig;
             return this;
         }
 
-        public Builder setHostHeaderConfig(@Nullable ListenerRuleHostHeaderConfigArgs hostHeaderConfig) {
+        public Builder hostHeaderConfig(@Nullable ListenerRuleHostHeaderConfigArgs hostHeaderConfig) {
             this.hostHeaderConfig = Input.ofNullable(hostHeaderConfig);
             return this;
         }
 
-        public Builder setHttpHeaderConfig(@Nullable Input<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig) {
+        public Builder httpHeaderConfig(@Nullable Input<ListenerRuleHttpHeaderConfigArgs> httpHeaderConfig) {
             this.httpHeaderConfig = httpHeaderConfig;
             return this;
         }
 
-        public Builder setHttpHeaderConfig(@Nullable ListenerRuleHttpHeaderConfigArgs httpHeaderConfig) {
+        public Builder httpHeaderConfig(@Nullable ListenerRuleHttpHeaderConfigArgs httpHeaderConfig) {
             this.httpHeaderConfig = Input.ofNullable(httpHeaderConfig);
             return this;
         }
 
-        public Builder setHttpRequestMethodConfig(@Nullable Input<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig) {
+        public Builder httpRequestMethodConfig(@Nullable Input<ListenerRuleHttpRequestMethodConfigArgs> httpRequestMethodConfig) {
             this.httpRequestMethodConfig = httpRequestMethodConfig;
             return this;
         }
 
-        public Builder setHttpRequestMethodConfig(@Nullable ListenerRuleHttpRequestMethodConfigArgs httpRequestMethodConfig) {
+        public Builder httpRequestMethodConfig(@Nullable ListenerRuleHttpRequestMethodConfigArgs httpRequestMethodConfig) {
             this.httpRequestMethodConfig = Input.ofNullable(httpRequestMethodConfig);
             return this;
         }
 
-        public Builder setPathPatternConfig(@Nullable Input<ListenerRulePathPatternConfigArgs> pathPatternConfig) {
+        public Builder pathPatternConfig(@Nullable Input<ListenerRulePathPatternConfigArgs> pathPatternConfig) {
             this.pathPatternConfig = pathPatternConfig;
             return this;
         }
 
-        public Builder setPathPatternConfig(@Nullable ListenerRulePathPatternConfigArgs pathPatternConfig) {
+        public Builder pathPatternConfig(@Nullable ListenerRulePathPatternConfigArgs pathPatternConfig) {
             this.pathPatternConfig = Input.ofNullable(pathPatternConfig);
             return this;
         }
 
-        public Builder setQueryStringConfig(@Nullable Input<ListenerRuleQueryStringConfigArgs> queryStringConfig) {
+        public Builder queryStringConfig(@Nullable Input<ListenerRuleQueryStringConfigArgs> queryStringConfig) {
             this.queryStringConfig = queryStringConfig;
             return this;
         }
 
-        public Builder setQueryStringConfig(@Nullable ListenerRuleQueryStringConfigArgs queryStringConfig) {
+        public Builder queryStringConfig(@Nullable ListenerRuleQueryStringConfigArgs queryStringConfig) {
             this.queryStringConfig = Input.ofNullable(queryStringConfig);
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable Input<ListenerRuleSourceIpConfigArgs> sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable Input<ListenerRuleSourceIpConfigArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable ListenerRuleSourceIpConfigArgs sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable ListenerRuleSourceIpConfigArgs sourceIpConfig) {
             this.sourceIpConfig = Input.ofNullable(sourceIpConfig);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

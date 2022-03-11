@@ -28,11 +28,11 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
      */
     private final @Nullable EntityReferenceResponse stagingLinkedService;
 
-    @OutputCustomType.Constructor({"connectVia","path","stagingLinkedService"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeDataProxyPropertiesResponse(
-        @Nullable EntityReferenceResponse connectVia,
-        @Nullable String path,
-        @Nullable EntityReferenceResponse stagingLinkedService) {
+        @OutputCustomType.Parameter("connectVia") @Nullable EntityReferenceResponse connectVia,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("stagingLinkedService") @Nullable EntityReferenceResponse stagingLinkedService) {
         this.connectVia = connectVia;
         this.path = path;
         this.stagingLinkedService = stagingLinkedService;
@@ -84,17 +84,17 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse {
     	      this.stagingLinkedService = defaults.stagingLinkedService;
         }
 
-        public Builder setConnectVia(@Nullable EntityReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable EntityReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setStagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
+        public Builder stagingLinkedService(@Nullable EntityReferenceResponse stagingLinkedService) {
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }

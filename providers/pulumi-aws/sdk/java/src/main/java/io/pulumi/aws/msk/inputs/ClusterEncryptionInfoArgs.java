@@ -71,22 +71,22 @@ public final class ClusterEncryptionInfoArgs extends io.pulumi.resources.Resourc
     	      this.encryptionInTransit = defaults.encryptionInTransit;
         }
 
-        public Builder setEncryptionAtRestKmsKeyArn(@Nullable Input<String> encryptionAtRestKmsKeyArn) {
+        public Builder encryptionAtRestKmsKeyArn(@Nullable Input<String> encryptionAtRestKmsKeyArn) {
             this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
             return this;
         }
 
-        public Builder setEncryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
+        public Builder encryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
             this.encryptionAtRestKmsKeyArn = Input.ofNullable(encryptionAtRestKmsKeyArn);
             return this;
         }
 
-        public Builder setEncryptionInTransit(@Nullable Input<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit) {
+        public Builder encryptionInTransit(@Nullable Input<ClusterEncryptionInfoEncryptionInTransitArgs> encryptionInTransit) {
             this.encryptionInTransit = encryptionInTransit;
             return this;
         }
 
-        public Builder setEncryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransitArgs encryptionInTransit) {
+        public Builder encryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransitArgs encryptionInTransit) {
             this.encryptionInTransit = Input.ofNullable(encryptionInTransit);
             return this;
         }

@@ -45,14 +45,14 @@ public final class GetDestinationResult {
      */
     private final @Nullable List<DestinationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","expression","expressionType","roleArn","tags"})
+    @OutputCustomType.Constructor
     private GetDestinationResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String expression,
-        @Nullable DestinationExpressionType expressionType,
-        @Nullable String roleArn,
-        @Nullable List<DestinationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("expressionType") @Nullable DestinationExpressionType expressionType,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<DestinationTag> tags) {
         this.arn = arn;
         this.description = description;
         this.expression = expression;
@@ -134,32 +134,32 @@ public final class GetDestinationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpressionType(@Nullable DestinationExpressionType expressionType) {
+        public Builder expressionType(@Nullable DestinationExpressionType expressionType) {
             this.expressionType = expressionType;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DestinationTag> tags) {
+        public Builder tags(@Nullable List<DestinationTag> tags) {
             this.tags = tags;
             return this;
         }

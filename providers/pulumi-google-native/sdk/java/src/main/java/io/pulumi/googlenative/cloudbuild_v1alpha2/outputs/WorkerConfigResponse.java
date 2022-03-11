@@ -20,10 +20,10 @@ public final class WorkerConfigResponse {
      */
     private final String machineType;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
     }
@@ -65,12 +65,12 @@ public final class WorkerConfigResponse {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

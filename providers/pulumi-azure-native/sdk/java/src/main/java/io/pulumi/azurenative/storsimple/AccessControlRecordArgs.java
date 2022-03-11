@@ -119,52 +119,52 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccessControlRecordName(@Nullable Input<String> accessControlRecordName) {
+        public Builder accessControlRecordName(@Nullable Input<String> accessControlRecordName) {
             this.accessControlRecordName = accessControlRecordName;
             return this;
         }
 
-        public Builder setAccessControlRecordName(@Nullable String accessControlRecordName) {
+        public Builder accessControlRecordName(@Nullable String accessControlRecordName) {
             this.accessControlRecordName = Input.ofNullable(accessControlRecordName);
             return this;
         }
 
-        public Builder setInitiatorName(Input<String> initiatorName) {
+        public Builder initiatorName(Input<String> initiatorName) {
             this.initiatorName = Objects.requireNonNull(initiatorName);
             return this;
         }
 
-        public Builder setInitiatorName(String initiatorName) {
+        public Builder initiatorName(String initiatorName) {
             this.initiatorName = Input.of(Objects.requireNonNull(initiatorName));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<Kind> kind) {
+        public Builder kind(@Nullable Input<Kind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable Kind kind) {
+        public Builder kind(@Nullable Kind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagerName(Input<String> managerName) {
+        public Builder managerName(Input<String> managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Input.of(Objects.requireNonNull(managerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

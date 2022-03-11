@@ -17,8 +17,8 @@ public final class IotMappingPropertiesResponse {
      */
     private final @Nullable Object content;
 
-    @OutputCustomType.Constructor({"content"})
-    private IotMappingPropertiesResponse(@Nullable Object content) {
+    @OutputCustomType.Constructor
+    private IotMappingPropertiesResponse(@OutputCustomType.Parameter("content") @Nullable Object content) {
         this.content = content;
     }
 
@@ -50,7 +50,7 @@ public final class IotMappingPropertiesResponse {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(@Nullable Object content) {
+        public Builder content(@Nullable Object content) {
             this.content = content;
             return this;
         }

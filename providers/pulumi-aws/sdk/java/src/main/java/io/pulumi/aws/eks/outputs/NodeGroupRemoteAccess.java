@@ -23,10 +23,10 @@ public final class NodeGroupRemoteAccess {
      */
     private final @Nullable List<String> sourceSecurityGroupIds;
 
-    @OutputCustomType.Constructor({"ec2SshKey","sourceSecurityGroupIds"})
+    @OutputCustomType.Constructor
     private NodeGroupRemoteAccess(
-        @Nullable String ec2SshKey,
-        @Nullable List<String> sourceSecurityGroupIds) {
+        @OutputCustomType.Parameter("ec2SshKey") @Nullable String ec2SshKey,
+        @OutputCustomType.Parameter("sourceSecurityGroupIds") @Nullable List<String> sourceSecurityGroupIds) {
         this.ec2SshKey = ec2SshKey;
         this.sourceSecurityGroupIds = sourceSecurityGroupIds;
     }
@@ -68,12 +68,12 @@ public final class NodeGroupRemoteAccess {
     	      this.sourceSecurityGroupIds = defaults.sourceSecurityGroupIds;
         }
 
-        public Builder setEc2SshKey(@Nullable String ec2SshKey) {
+        public Builder ec2SshKey(@Nullable String ec2SshKey) {
             this.ec2SshKey = ec2SshKey;
             return this;
         }
 
-        public Builder setSourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
+        public Builder sourceSecurityGroupIds(@Nullable List<String> sourceSecurityGroupIds) {
             this.sourceSecurityGroupIds = sourceSecurityGroupIds;
             return this;
         }

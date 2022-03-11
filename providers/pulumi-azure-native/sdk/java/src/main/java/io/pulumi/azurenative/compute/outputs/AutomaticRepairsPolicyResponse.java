@@ -23,10 +23,10 @@ public final class AutomaticRepairsPolicyResponse {
      */
     private final @Nullable String gracePeriod;
 
-    @OutputCustomType.Constructor({"enabled","gracePeriod"})
+    @OutputCustomType.Constructor
     private AutomaticRepairsPolicyResponse(
-        @Nullable Boolean enabled,
-        @Nullable String gracePeriod) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("gracePeriod") @Nullable String gracePeriod) {
         this.enabled = enabled;
         this.gracePeriod = gracePeriod;
     }
@@ -68,12 +68,12 @@ public final class AutomaticRepairsPolicyResponse {
     	      this.gracePeriod = defaults.gracePeriod;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setGracePeriod(@Nullable String gracePeriod) {
+        public Builder gracePeriod(@Nullable String gracePeriod) {
             this.gracePeriod = gracePeriod;
             return this;
         }

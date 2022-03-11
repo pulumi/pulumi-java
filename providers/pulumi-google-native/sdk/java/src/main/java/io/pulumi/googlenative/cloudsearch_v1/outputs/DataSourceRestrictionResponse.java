@@ -22,10 +22,10 @@ public final class DataSourceRestrictionResponse {
      */
     private final SourceResponse source;
 
-    @OutputCustomType.Constructor({"filterOptions","source"})
+    @OutputCustomType.Constructor
     private DataSourceRestrictionResponse(
-        List<FilterOptionsResponse> filterOptions,
-        SourceResponse source) {
+        @OutputCustomType.Parameter("filterOptions") List<FilterOptionsResponse> filterOptions,
+        @OutputCustomType.Parameter("source") SourceResponse source) {
         this.filterOptions = filterOptions;
         this.source = source;
     }
@@ -67,12 +67,12 @@ public final class DataSourceRestrictionResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setFilterOptions(List<FilterOptionsResponse> filterOptions) {
+        public Builder filterOptions(List<FilterOptionsResponse> filterOptions) {
             this.filterOptions = Objects.requireNonNull(filterOptions);
             return this;
         }
 
-        public Builder setSource(SourceResponse source) {
+        public Builder source(SourceResponse source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

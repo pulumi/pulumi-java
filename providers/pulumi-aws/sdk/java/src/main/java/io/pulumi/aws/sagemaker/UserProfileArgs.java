@@ -136,62 +136,62 @@ public final class UserProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userSettings = defaults.userSettings;
         }
 
-        public Builder setDomainId(Input<String> domainId) {
+        public Builder domainId(Input<String> domainId) {
             this.domainId = Objects.requireNonNull(domainId);
             return this;
         }
 
-        public Builder setDomainId(String domainId) {
+        public Builder domainId(String domainId) {
             this.domainId = Input.of(Objects.requireNonNull(domainId));
             return this;
         }
 
-        public Builder setSingleSignOnUserIdentifier(@Nullable Input<String> singleSignOnUserIdentifier) {
+        public Builder singleSignOnUserIdentifier(@Nullable Input<String> singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = singleSignOnUserIdentifier;
             return this;
         }
 
-        public Builder setSingleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
+        public Builder singleSignOnUserIdentifier(@Nullable String singleSignOnUserIdentifier) {
             this.singleSignOnUserIdentifier = Input.ofNullable(singleSignOnUserIdentifier);
             return this;
         }
 
-        public Builder setSingleSignOnUserValue(@Nullable Input<String> singleSignOnUserValue) {
+        public Builder singleSignOnUserValue(@Nullable Input<String> singleSignOnUserValue) {
             this.singleSignOnUserValue = singleSignOnUserValue;
             return this;
         }
 
-        public Builder setSingleSignOnUserValue(@Nullable String singleSignOnUserValue) {
+        public Builder singleSignOnUserValue(@Nullable String singleSignOnUserValue) {
             this.singleSignOnUserValue = Input.ofNullable(singleSignOnUserValue);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserProfileName(Input<String> userProfileName) {
+        public Builder userProfileName(Input<String> userProfileName) {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
 
-        public Builder setUserProfileName(String userProfileName) {
+        public Builder userProfileName(String userProfileName) {
             this.userProfileName = Input.of(Objects.requireNonNull(userProfileName));
             return this;
         }
 
-        public Builder setUserSettings(@Nullable Input<UserProfileUserSettingsArgs> userSettings) {
+        public Builder userSettings(@Nullable Input<UserProfileUserSettingsArgs> userSettings) {
             this.userSettings = userSettings;
             return this;
         }
 
-        public Builder setUserSettings(@Nullable UserProfileUserSettingsArgs userSettings) {
+        public Builder userSettings(@Nullable UserProfileUserSettingsArgs userSettings) {
             this.userSettings = Input.ofNullable(userSettings);
             return this;
         }

@@ -20,12 +20,12 @@ public final class CertificateExtensions {
     private final @Nullable CertificateKeyUsage keyUsage;
     private final @Nullable List<CertificateGeneralName> subjectAlternativeNames;
 
-    @OutputCustomType.Constructor({"certificatePolicies","extendedKeyUsage","keyUsage","subjectAlternativeNames"})
+    @OutputCustomType.Constructor
     private CertificateExtensions(
-        @Nullable List<CertificatePolicyInformation> certificatePolicies,
-        @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
-        @Nullable CertificateKeyUsage keyUsage,
-        @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
+        @OutputCustomType.Parameter("certificatePolicies") @Nullable List<CertificatePolicyInformation> certificatePolicies,
+        @OutputCustomType.Parameter("extendedKeyUsage") @Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage,
+        @OutputCustomType.Parameter("keyUsage") @Nullable CertificateKeyUsage keyUsage,
+        @OutputCustomType.Parameter("subjectAlternativeNames") @Nullable List<CertificateGeneralName> subjectAlternativeNames) {
         this.certificatePolicies = certificatePolicies;
         this.extendedKeyUsage = extendedKeyUsage;
         this.keyUsage = keyUsage;
@@ -71,22 +71,22 @@ public final class CertificateExtensions {
     	      this.subjectAlternativeNames = defaults.subjectAlternativeNames;
         }
 
-        public Builder setCertificatePolicies(@Nullable List<CertificatePolicyInformation> certificatePolicies) {
+        public Builder certificatePolicies(@Nullable List<CertificatePolicyInformation> certificatePolicies) {
             this.certificatePolicies = certificatePolicies;
             return this;
         }
 
-        public Builder setExtendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
+        public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsage> extendedKeyUsage) {
             this.extendedKeyUsage = extendedKeyUsage;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable CertificateKeyUsage keyUsage) {
+        public Builder keyUsage(@Nullable CertificateKeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(@Nullable List<CertificateGeneralName> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralName> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }

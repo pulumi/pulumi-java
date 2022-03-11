@@ -52,12 +52,12 @@ public final class BucketObjectLockConfigurationRuleArgs extends io.pulumi.resou
     	      this.defaultRetention = defaults.defaultRetention;
         }
 
-        public Builder setDefaultRetention(Input<BucketObjectLockConfigurationRuleDefaultRetentionArgs> defaultRetention) {
+        public Builder defaultRetention(Input<BucketObjectLockConfigurationRuleDefaultRetentionArgs> defaultRetention) {
             this.defaultRetention = Objects.requireNonNull(defaultRetention);
             return this;
         }
 
-        public Builder setDefaultRetention(BucketObjectLockConfigurationRuleDefaultRetentionArgs defaultRetention) {
+        public Builder defaultRetention(BucketObjectLockConfigurationRuleDefaultRetentionArgs defaultRetention) {
             this.defaultRetention = Input.of(Objects.requireNonNull(defaultRetention));
             return this;
         }

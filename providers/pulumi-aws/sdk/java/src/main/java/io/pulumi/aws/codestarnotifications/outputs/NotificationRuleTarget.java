@@ -27,11 +27,11 @@ public final class NotificationRuleTarget {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"address","status","type"})
+    @OutputCustomType.Constructor
     private NotificationRuleTarget(
-        String address,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.address = address;
         this.status = status;
         this.type = type;
@@ -83,17 +83,17 @@ public final class NotificationRuleTarget {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

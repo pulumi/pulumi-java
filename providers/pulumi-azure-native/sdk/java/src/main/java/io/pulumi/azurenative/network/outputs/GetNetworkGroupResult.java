@@ -70,19 +70,19 @@ public final class GetNetworkGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"conditionalMembership","description","displayName","etag","groupMembers","id","memberType","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetNetworkGroupResult(
-        @Nullable String conditionalMembership,
-        @Nullable String description,
-        @Nullable String displayName,
-        String etag,
-        @Nullable List<GroupMembersItemResponse> groupMembers,
-        String id,
-        @Nullable String memberType,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;
@@ -214,57 +214,57 @@ public final class GetNetworkGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConditionalMembership(@Nullable String conditionalMembership) {
+        public Builder conditionalMembership(@Nullable String conditionalMembership) {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setGroupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
+        public Builder groupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMemberType(@Nullable String memberType) {
+        public Builder memberType(@Nullable String memberType) {
             this.memberType = memberType;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -61,17 +61,17 @@ public final class ExpressRouteConnectionResponse {
      */
     private final @Nullable Integer routingWeight;
 
-    @OutputCustomType.Constructor({"authorizationKey","enableInternetSecurity","expressRouteCircuitPeering","expressRouteGatewayBypass","id","name","provisioningState","routingConfiguration","routingWeight"})
+    @OutputCustomType.Constructor
     private ExpressRouteConnectionResponse(
-        @Nullable String authorizationKey,
-        @Nullable Boolean enableInternetSecurity,
-        ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
-        @Nullable Boolean expressRouteGatewayBypass,
-        @Nullable String id,
-        String name,
-        String provisioningState,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable Integer routingWeight) {
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("expressRouteCircuitPeering") ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering,
+        @OutputCustomType.Parameter("expressRouteGatewayBypass") @Nullable Boolean expressRouteGatewayBypass,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight) {
         this.authorizationKey = authorizationKey;
         this.enableInternetSecurity = enableInternetSecurity;
         this.expressRouteCircuitPeering = expressRouteCircuitPeering;
@@ -183,47 +183,47 @@ public final class ExpressRouteConnectionResponse {
     	      this.routingWeight = defaults.routingWeight;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setExpressRouteCircuitPeering(ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering) {
+        public Builder expressRouteCircuitPeering(ExpressRouteCircuitPeeringIdResponse expressRouteCircuitPeering) {
             this.expressRouteCircuitPeering = Objects.requireNonNull(expressRouteCircuitPeering);
             return this;
         }
 
-        public Builder setExpressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
+        public Builder expressRouteGatewayBypass(@Nullable Boolean expressRouteGatewayBypass) {
             this.expressRouteGatewayBypass = expressRouteGatewayBypass;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }

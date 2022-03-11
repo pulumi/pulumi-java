@@ -25,11 +25,11 @@ public final class FixedOrPercentResponse {
      */
     private final Integer percent;
 
-    @OutputCustomType.Constructor({"calculated","fixed","percent"})
+    @OutputCustomType.Constructor
     private FixedOrPercentResponse(
-        Integer calculated,
-        Integer fixed,
-        Integer percent) {
+        @OutputCustomType.Parameter("calculated") Integer calculated,
+        @OutputCustomType.Parameter("fixed") Integer fixed,
+        @OutputCustomType.Parameter("percent") Integer percent) {
         this.calculated = calculated;
         this.fixed = fixed;
         this.percent = percent;
@@ -81,17 +81,17 @@ public final class FixedOrPercentResponse {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCalculated(Integer calculated) {
+        public Builder calculated(Integer calculated) {
             this.calculated = Objects.requireNonNull(calculated);
             return this;
         }
 
-        public Builder setFixed(Integer fixed) {
+        public Builder fixed(Integer fixed) {
             this.fixed = Objects.requireNonNull(fixed);
             return this;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }

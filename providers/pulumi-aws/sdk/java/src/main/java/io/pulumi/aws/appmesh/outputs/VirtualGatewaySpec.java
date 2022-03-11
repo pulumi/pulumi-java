@@ -29,11 +29,11 @@ public final class VirtualGatewaySpec {
      */
     private final @Nullable VirtualGatewaySpecLogging logging;
 
-    @OutputCustomType.Constructor({"backendDefaults","listener","logging"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpec(
-        @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
-        VirtualGatewaySpecListener listener,
-        @Nullable VirtualGatewaySpecLogging logging) {
+        @OutputCustomType.Parameter("backendDefaults") @Nullable VirtualGatewaySpecBackendDefaults backendDefaults,
+        @OutputCustomType.Parameter("listener") VirtualGatewaySpecListener listener,
+        @OutputCustomType.Parameter("logging") @Nullable VirtualGatewaySpecLogging logging) {
         this.backendDefaults = backendDefaults;
         this.listener = listener;
         this.logging = logging;
@@ -85,17 +85,17 @@ public final class VirtualGatewaySpec {
     	      this.logging = defaults.logging;
         }
 
-        public Builder setBackendDefaults(@Nullable VirtualGatewaySpecBackendDefaults backendDefaults) {
+        public Builder backendDefaults(@Nullable VirtualGatewaySpecBackendDefaults backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
-        public Builder setListener(VirtualGatewaySpecListener listener) {
+        public Builder listener(VirtualGatewaySpecListener listener) {
             this.listener = Objects.requireNonNull(listener);
             return this;
         }
 
-        public Builder setLogging(@Nullable VirtualGatewaySpecLogging logging) {
+        public Builder logging(@Nullable VirtualGatewaySpecLogging logging) {
             this.logging = logging;
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class EntryBigqueryTableSpecViewSpec {
     private final @Nullable String viewQuery;
 
-    @OutputCustomType.Constructor({"viewQuery"})
-    private EntryBigqueryTableSpecViewSpec(@Nullable String viewQuery) {
+    @OutputCustomType.Constructor
+    private EntryBigqueryTableSpecViewSpec(@OutputCustomType.Parameter("viewQuery") @Nullable String viewQuery) {
         this.viewQuery = viewQuery;
     }
 
@@ -42,7 +42,7 @@ public final class EntryBigqueryTableSpecViewSpec {
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder setViewQuery(@Nullable String viewQuery) {
+        public Builder viewQuery(@Nullable String viewQuery) {
             this.viewQuery = viewQuery;
             return this;
         }

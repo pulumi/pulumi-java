@@ -31,12 +31,12 @@ public final class TaskStatusResponse {
      */
     private final AttemptStatusResponse lastAttemptStatus;
 
-    @OutputCustomType.Constructor({"attemptDispatchCount","attemptResponseCount","firstAttemptStatus","lastAttemptStatus"})
+    @OutputCustomType.Constructor
     private TaskStatusResponse(
-        Integer attemptDispatchCount,
-        Integer attemptResponseCount,
-        AttemptStatusResponse firstAttemptStatus,
-        AttemptStatusResponse lastAttemptStatus) {
+        @OutputCustomType.Parameter("attemptDispatchCount") Integer attemptDispatchCount,
+        @OutputCustomType.Parameter("attemptResponseCount") Integer attemptResponseCount,
+        @OutputCustomType.Parameter("firstAttemptStatus") AttemptStatusResponse firstAttemptStatus,
+        @OutputCustomType.Parameter("lastAttemptStatus") AttemptStatusResponse lastAttemptStatus) {
         this.attemptDispatchCount = attemptDispatchCount;
         this.attemptResponseCount = attemptResponseCount;
         this.firstAttemptStatus = firstAttemptStatus;
@@ -98,22 +98,22 @@ public final class TaskStatusResponse {
     	      this.lastAttemptStatus = defaults.lastAttemptStatus;
         }
 
-        public Builder setAttemptDispatchCount(Integer attemptDispatchCount) {
+        public Builder attemptDispatchCount(Integer attemptDispatchCount) {
             this.attemptDispatchCount = Objects.requireNonNull(attemptDispatchCount);
             return this;
         }
 
-        public Builder setAttemptResponseCount(Integer attemptResponseCount) {
+        public Builder attemptResponseCount(Integer attemptResponseCount) {
             this.attemptResponseCount = Objects.requireNonNull(attemptResponseCount);
             return this;
         }
 
-        public Builder setFirstAttemptStatus(AttemptStatusResponse firstAttemptStatus) {
+        public Builder firstAttemptStatus(AttemptStatusResponse firstAttemptStatus) {
             this.firstAttemptStatus = Objects.requireNonNull(firstAttemptStatus);
             return this;
         }
 
-        public Builder setLastAttemptStatus(AttemptStatusResponse lastAttemptStatus) {
+        public Builder lastAttemptStatus(AttemptStatusResponse lastAttemptStatus) {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
         }

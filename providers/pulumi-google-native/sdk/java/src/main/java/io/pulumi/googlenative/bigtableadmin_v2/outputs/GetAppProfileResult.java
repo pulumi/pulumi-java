@@ -37,13 +37,13 @@ public final class GetAppProfileResult {
      */
     private final SingleClusterRoutingResponse singleClusterRouting;
 
-    @OutputCustomType.Constructor({"description","etag","multiClusterRoutingUseAny","name","singleClusterRouting"})
+    @OutputCustomType.Constructor
     private GetAppProfileResult(
-        String description,
-        String etag,
-        MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
-        String name,
-        SingleClusterRoutingResponse singleClusterRouting) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("multiClusterRoutingUseAny") MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("singleClusterRouting") SingleClusterRoutingResponse singleClusterRouting) {
         this.description = description;
         this.etag = etag;
         this.multiClusterRoutingUseAny = multiClusterRoutingUseAny;
@@ -115,27 +115,27 @@ public final class GetAppProfileResult {
     	      this.singleClusterRouting = defaults.singleClusterRouting;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setMultiClusterRoutingUseAny(MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny) {
+        public Builder multiClusterRoutingUseAny(MultiClusterRoutingUseAnyResponse multiClusterRoutingUseAny) {
             this.multiClusterRoutingUseAny = Objects.requireNonNull(multiClusterRoutingUseAny);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSingleClusterRouting(SingleClusterRoutingResponse singleClusterRouting) {
+        public Builder singleClusterRouting(SingleClusterRoutingResponse singleClusterRouting) {
             this.singleClusterRouting = Objects.requireNonNull(singleClusterRouting);
             return this;
         }

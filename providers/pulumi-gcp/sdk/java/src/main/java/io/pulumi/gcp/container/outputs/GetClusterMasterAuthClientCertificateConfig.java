@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterMasterAuthClientCertificateConfig {
     private final Boolean issueClientCertificate;
 
-    @OutputCustomType.Constructor({"issueClientCertificate"})
-    private GetClusterMasterAuthClientCertificateConfig(Boolean issueClientCertificate) {
+    @OutputCustomType.Constructor
+    private GetClusterMasterAuthClientCertificateConfig(@OutputCustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterMasterAuthClientCertificateConfig {
     	      this.issueClientCertificate = defaults.issueClientCertificate;
         }
 
-        public Builder setIssueClientCertificate(Boolean issueClientCertificate) {
+        public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }

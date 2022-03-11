@@ -15,8 +15,8 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
      */
     private final Boolean updateAutoLearnPolicy;
 
-    @OutputCustomType.Constructor({"updateAutoLearnPolicy"})
-    private ShieldedInstanceIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
+    @OutputCustomType.Constructor
+    private ShieldedInstanceIntegrityPolicyResponse(@OutputCustomType.Parameter("updateAutoLearnPolicy") Boolean updateAutoLearnPolicy) {
         this.updateAutoLearnPolicy = updateAutoLearnPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class ShieldedInstanceIntegrityPolicyResponse {
     	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
         }
 
-        public Builder setUpdateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
+        public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }

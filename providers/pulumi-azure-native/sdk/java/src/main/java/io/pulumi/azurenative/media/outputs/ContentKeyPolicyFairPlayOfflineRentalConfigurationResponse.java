@@ -20,10 +20,10 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
      */
     private final Double storageDurationSeconds;
 
-    @OutputCustomType.Constructor({"playbackDurationSeconds","storageDurationSeconds"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse(
-        Double playbackDurationSeconds,
-        Double storageDurationSeconds) {
+        @OutputCustomType.Parameter("playbackDurationSeconds") Double playbackDurationSeconds,
+        @OutputCustomType.Parameter("storageDurationSeconds") Double storageDurationSeconds) {
         this.playbackDurationSeconds = playbackDurationSeconds;
         this.storageDurationSeconds = storageDurationSeconds;
     }
@@ -65,12 +65,12 @@ public final class ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse {
     	      this.storageDurationSeconds = defaults.storageDurationSeconds;
         }
 
-        public Builder setPlaybackDurationSeconds(Double playbackDurationSeconds) {
+        public Builder playbackDurationSeconds(Double playbackDurationSeconds) {
             this.playbackDurationSeconds = Objects.requireNonNull(playbackDurationSeconds);
             return this;
         }
 
-        public Builder setStorageDurationSeconds(Double storageDurationSeconds) {
+        public Builder storageDurationSeconds(Double storageDurationSeconds) {
             this.storageDurationSeconds = Objects.requireNonNull(storageDurationSeconds);
             return this;
         }

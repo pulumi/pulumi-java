@@ -107,42 +107,42 @@ public final class DeliveryPackageInformationArgs extends io.pulumi.resources.Re
     	      this.trackingNumber = defaults.trackingNumber;
         }
 
-        public Builder setCarrierName(Input<String> carrierName) {
+        public Builder carrierName(Input<String> carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Input.of(Objects.requireNonNull(carrierName));
             return this;
         }
 
-        public Builder setDriveCount(@Nullable Input<Double> driveCount) {
+        public Builder driveCount(@Nullable Input<Double> driveCount) {
             this.driveCount = driveCount;
             return this;
         }
 
-        public Builder setDriveCount(@Nullable Double driveCount) {
+        public Builder driveCount(@Nullable Double driveCount) {
             this.driveCount = Input.ofNullable(driveCount);
             return this;
         }
 
-        public Builder setShipDate(@Nullable Input<String> shipDate) {
+        public Builder shipDate(@Nullable Input<String> shipDate) {
             this.shipDate = shipDate;
             return this;
         }
 
-        public Builder setShipDate(@Nullable String shipDate) {
+        public Builder shipDate(@Nullable String shipDate) {
             this.shipDate = Input.ofNullable(shipDate);
             return this;
         }
 
-        public Builder setTrackingNumber(Input<String> trackingNumber) {
+        public Builder trackingNumber(Input<String> trackingNumber) {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
 
-        public Builder setTrackingNumber(String trackingNumber) {
+        public Builder trackingNumber(String trackingNumber) {
             this.trackingNumber = Input.of(Objects.requireNonNull(trackingNumber));
             return this;
         }

@@ -21,10 +21,10 @@ public final class CloudAuditOptionsResponse {
      */
     private final String logName;
 
-    @OutputCustomType.Constructor({"authorizationLoggingOptions","logName"})
+    @OutputCustomType.Constructor
     private CloudAuditOptionsResponse(
-        AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
-        String logName) {
+        @OutputCustomType.Parameter("authorizationLoggingOptions") AuthorizationLoggingOptionsResponse authorizationLoggingOptions,
+        @OutputCustomType.Parameter("logName") String logName) {
         this.authorizationLoggingOptions = authorizationLoggingOptions;
         this.logName = logName;
     }
@@ -66,12 +66,12 @@ public final class CloudAuditOptionsResponse {
     	      this.logName = defaults.logName;
         }
 
-        public Builder setAuthorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
+        public Builder authorizationLoggingOptions(AuthorizationLoggingOptionsResponse authorizationLoggingOptions) {
             this.authorizationLoggingOptions = Objects.requireNonNull(authorizationLoggingOptions);
             return this;
         }
 
-        public Builder setLogName(String logName) {
+        public Builder logName(String logName) {
             this.logName = Objects.requireNonNull(logName);
             return this;
         }

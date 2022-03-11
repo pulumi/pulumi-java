@@ -75,22 +75,22 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable Input<Double> cpu) {
+        public Builder cpu(@Nullable Input<Double> cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = Input.ofNullable(cpu);
             return this;
         }
 
-        public Builder setMemory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Input<String> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }

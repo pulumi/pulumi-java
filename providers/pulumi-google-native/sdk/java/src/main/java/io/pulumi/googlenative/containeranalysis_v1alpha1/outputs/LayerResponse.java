@@ -20,10 +20,10 @@ public final class LayerResponse {
      */
     private final String directive;
 
-    @OutputCustomType.Constructor({"arguments","directive"})
+    @OutputCustomType.Constructor
     private LayerResponse(
-        String arguments,
-        String directive) {
+        @OutputCustomType.Parameter("arguments") String arguments,
+        @OutputCustomType.Parameter("directive") String directive) {
         this.arguments = arguments;
         this.directive = directive;
     }
@@ -65,12 +65,12 @@ public final class LayerResponse {
     	      this.directive = defaults.directive;
         }
 
-        public Builder setArguments(String arguments) {
+        public Builder arguments(String arguments) {
             this.arguments = Objects.requireNonNull(arguments);
             return this;
         }
 
-        public Builder setDirective(String directive) {
+        public Builder directive(String directive) {
             this.directive = Objects.requireNonNull(directive);
             return this;
         }

@@ -60,19 +60,19 @@ public final class GetContainerDefinitionResult {
     private final Integer memoryReservation;
     private final String taskDefinition;
 
-    @OutputCustomType.Constructor({"containerName","cpu","disableNetworking","dockerLabels","environment","id","image","imageDigest","memory","memoryReservation","taskDefinition"})
+    @OutputCustomType.Constructor
     private GetContainerDefinitionResult(
-        String containerName,
-        Integer cpu,
-        Boolean disableNetworking,
-        Map<String,String> dockerLabels,
-        Map<String,String> environment,
-        String id,
-        String image,
-        String imageDigest,
-        Integer memory,
-        Integer memoryReservation,
-        String taskDefinition) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("cpu") Integer cpu,
+        @OutputCustomType.Parameter("disableNetworking") Boolean disableNetworking,
+        @OutputCustomType.Parameter("dockerLabels") Map<String,String> dockerLabels,
+        @OutputCustomType.Parameter("environment") Map<String,String> environment,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageDigest") String imageDigest,
+        @OutputCustomType.Parameter("memory") Integer memory,
+        @OutputCustomType.Parameter("memoryReservation") Integer memoryReservation,
+        @OutputCustomType.Parameter("taskDefinition") String taskDefinition) {
         this.containerName = containerName;
         this.cpu = cpu;
         this.disableNetworking = disableNetworking;
@@ -196,57 +196,57 @@ public final class GetContainerDefinitionResult {
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setCpu(Integer cpu) {
+        public Builder cpu(Integer cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setDisableNetworking(Boolean disableNetworking) {
+        public Builder disableNetworking(Boolean disableNetworking) {
             this.disableNetworking = Objects.requireNonNull(disableNetworking);
             return this;
         }
 
-        public Builder setDockerLabels(Map<String,String> dockerLabels) {
+        public Builder dockerLabels(Map<String,String> dockerLabels) {
             this.dockerLabels = Objects.requireNonNull(dockerLabels);
             return this;
         }
 
-        public Builder setEnvironment(Map<String,String> environment) {
+        public Builder environment(Map<String,String> environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImageDigest(String imageDigest) {
+        public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
 
-        public Builder setMemory(Integer memory) {
+        public Builder memory(Integer memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }
 
-        public Builder setMemoryReservation(Integer memoryReservation) {
+        public Builder memoryReservation(Integer memoryReservation) {
             this.memoryReservation = Objects.requireNonNull(memoryReservation);
             return this;
         }
 
-        public Builder setTaskDefinition(String taskDefinition) {
+        public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }

@@ -25,10 +25,10 @@ public final class URLMapDefaultRouteActionRetryPolicyPerTryTimeout {
      */
     private final @Nullable String seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionRetryPolicyPerTryTimeout(
-        @Nullable Integer nanos,
-        @Nullable String seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") @Nullable String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }
@@ -72,12 +72,12 @@ public final class URLMapDefaultRouteActionRetryPolicyPerTryTimeout {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(@Nullable String seconds) {
+        public Builder seconds(@Nullable String seconds) {
             this.seconds = seconds;
             return this;
         }

@@ -289,152 +289,152 @@ public final class RecordState extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setAliases(@Nullable Input<List<RecordAliasGetArgs>> aliases) {
+        public Builder aliases(@Nullable Input<List<RecordAliasGetArgs>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setAliases(@Nullable List<RecordAliasGetArgs> aliases) {
+        public Builder aliases(@Nullable List<RecordAliasGetArgs> aliases) {
             this.aliases = Input.ofNullable(aliases);
             return this;
         }
 
-        public Builder setAllowOverwrite(@Nullable Input<Boolean> allowOverwrite) {
+        public Builder allowOverwrite(@Nullable Input<Boolean> allowOverwrite) {
             this.allowOverwrite = allowOverwrite;
             return this;
         }
 
-        public Builder setAllowOverwrite(@Nullable Boolean allowOverwrite) {
+        public Builder allowOverwrite(@Nullable Boolean allowOverwrite) {
             this.allowOverwrite = Input.ofNullable(allowOverwrite);
             return this;
         }
 
-        public Builder setFailoverRoutingPolicies(@Nullable Input<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies) {
+        public Builder failoverRoutingPolicies(@Nullable Input<List<RecordFailoverRoutingPolicyGetArgs>> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = failoverRoutingPolicies;
             return this;
         }
 
-        public Builder setFailoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
+        public Builder failoverRoutingPolicies(@Nullable List<RecordFailoverRoutingPolicyGetArgs> failoverRoutingPolicies) {
             this.failoverRoutingPolicies = Input.ofNullable(failoverRoutingPolicies);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setGeolocationRoutingPolicies(@Nullable Input<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies) {
+        public Builder geolocationRoutingPolicies(@Nullable Input<List<RecordGeolocationRoutingPolicyGetArgs>> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = geolocationRoutingPolicies;
             return this;
         }
 
-        public Builder setGeolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
+        public Builder geolocationRoutingPolicies(@Nullable List<RecordGeolocationRoutingPolicyGetArgs> geolocationRoutingPolicies) {
             this.geolocationRoutingPolicies = Input.ofNullable(geolocationRoutingPolicies);
             return this;
         }
 
-        public Builder setHealthCheckId(@Nullable Input<String> healthCheckId) {
+        public Builder healthCheckId(@Nullable Input<String> healthCheckId) {
             this.healthCheckId = healthCheckId;
             return this;
         }
 
-        public Builder setHealthCheckId(@Nullable String healthCheckId) {
+        public Builder healthCheckId(@Nullable String healthCheckId) {
             this.healthCheckId = Input.ofNullable(healthCheckId);
             return this;
         }
 
-        public Builder setLatencyRoutingPolicies(@Nullable Input<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies) {
+        public Builder latencyRoutingPolicies(@Nullable Input<List<RecordLatencyRoutingPolicyGetArgs>> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = latencyRoutingPolicies;
             return this;
         }
 
-        public Builder setLatencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
+        public Builder latencyRoutingPolicies(@Nullable List<RecordLatencyRoutingPolicyGetArgs> latencyRoutingPolicies) {
             this.latencyRoutingPolicies = Input.ofNullable(latencyRoutingPolicies);
             return this;
         }
 
-        public Builder setMultivalueAnswerRoutingPolicy(@Nullable Input<Boolean> multivalueAnswerRoutingPolicy) {
+        public Builder multivalueAnswerRoutingPolicy(@Nullable Input<Boolean> multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = multivalueAnswerRoutingPolicy;
             return this;
         }
 
-        public Builder setMultivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
+        public Builder multivalueAnswerRoutingPolicy(@Nullable Boolean multivalueAnswerRoutingPolicy) {
             this.multivalueAnswerRoutingPolicy = Input.ofNullable(multivalueAnswerRoutingPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecords(@Nullable Input<List<String>> records) {
+        public Builder records(@Nullable Input<List<String>> records) {
             this.records = records;
             return this;
         }
 
-        public Builder setRecords(@Nullable List<String> records) {
+        public Builder records(@Nullable List<String> records) {
             this.records = Input.ofNullable(records);
             return this;
         }
 
-        public Builder setSetIdentifier(@Nullable Input<String> setIdentifier) {
+        public Builder setIdentifier(@Nullable Input<String> setIdentifier) {
             this.setIdentifier = setIdentifier;
             return this;
         }
 
-        public Builder setSetIdentifier(@Nullable String setIdentifier) {
+        public Builder setIdentifier(@Nullable String setIdentifier) {
             this.setIdentifier = Input.ofNullable(setIdentifier);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Input<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,RecordType>> type) {
+        public Builder type(@Nullable Input<Either<String,RecordType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,RecordType> type) {
+        public Builder type(@Nullable Either<String,RecordType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWeightedRoutingPolicies(@Nullable Input<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies) {
+        public Builder weightedRoutingPolicies(@Nullable Input<List<RecordWeightedRoutingPolicyGetArgs>> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = weightedRoutingPolicies;
             return this;
         }
 
-        public Builder setWeightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
+        public Builder weightedRoutingPolicies(@Nullable List<RecordWeightedRoutingPolicyGetArgs> weightedRoutingPolicies) {
             this.weightedRoutingPolicies = Input.ofNullable(weightedRoutingPolicies);
             return this;
         }
 
-        public Builder setZoneId(@Nullable Input<String> zoneId) {
+        public Builder zoneId(@Nullable Input<String> zoneId) {
             this.zoneId = zoneId;
             return this;
         }
 
-        public Builder setZoneId(@Nullable String zoneId) {
+        public Builder zoneId(@Nullable String zoneId) {
             this.zoneId = Input.ofNullable(zoneId);
             return this;
         }

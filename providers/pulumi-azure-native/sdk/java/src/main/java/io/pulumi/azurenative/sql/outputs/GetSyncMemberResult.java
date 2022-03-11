@@ -83,22 +83,22 @@ public final class GetSyncMemberResult {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"databaseName","databaseType","id","name","privateEndpointName","serverName","sqlServerDatabaseId","syncAgentId","syncDirection","syncMemberAzureDatabaseResourceId","syncState","type","usePrivateLinkConnection","userName"})
+    @OutputCustomType.Constructor
     private GetSyncMemberResult(
-        @Nullable String databaseName,
-        @Nullable String databaseType,
-        String id,
-        String name,
-        String privateEndpointName,
-        @Nullable String serverName,
-        @Nullable String sqlServerDatabaseId,
-        @Nullable String syncAgentId,
-        @Nullable String syncDirection,
-        @Nullable String syncMemberAzureDatabaseResourceId,
-        String syncState,
-        String type,
-        @Nullable Boolean usePrivateLinkConnection,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("databaseType") @Nullable String databaseType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointName") String privateEndpointName,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("sqlServerDatabaseId") @Nullable String sqlServerDatabaseId,
+        @OutputCustomType.Parameter("syncAgentId") @Nullable String syncAgentId,
+        @OutputCustomType.Parameter("syncDirection") @Nullable String syncDirection,
+        @OutputCustomType.Parameter("syncMemberAzureDatabaseResourceId") @Nullable String syncMemberAzureDatabaseResourceId,
+        @OutputCustomType.Parameter("syncState") String syncState,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("usePrivateLinkConnection") @Nullable Boolean usePrivateLinkConnection,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.databaseName = databaseName;
         this.databaseType = databaseType;
         this.id = id;
@@ -260,72 +260,72 @@ public final class GetSyncMemberResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseType(@Nullable String databaseType) {
+        public Builder databaseType(@Nullable String databaseType) {
             this.databaseType = databaseType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointName(String privateEndpointName) {
+        public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setSqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
+        public Builder sqlServerDatabaseId(@Nullable String sqlServerDatabaseId) {
             this.sqlServerDatabaseId = sqlServerDatabaseId;
             return this;
         }
 
-        public Builder setSyncAgentId(@Nullable String syncAgentId) {
+        public Builder syncAgentId(@Nullable String syncAgentId) {
             this.syncAgentId = syncAgentId;
             return this;
         }
 
-        public Builder setSyncDirection(@Nullable String syncDirection) {
+        public Builder syncDirection(@Nullable String syncDirection) {
             this.syncDirection = syncDirection;
             return this;
         }
 
-        public Builder setSyncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
+        public Builder syncMemberAzureDatabaseResourceId(@Nullable String syncMemberAzureDatabaseResourceId) {
             this.syncMemberAzureDatabaseResourceId = syncMemberAzureDatabaseResourceId;
             return this;
         }
 
-        public Builder setSyncState(String syncState) {
+        public Builder syncState(String syncState) {
             this.syncState = Objects.requireNonNull(syncState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

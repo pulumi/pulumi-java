@@ -140,62 +140,62 @@ public final class VpnSiteLinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setBgpProperties(@Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties) {
+        public Builder bgpProperties(@Nullable Input<VpnLinkBgpSettingsArgs> bgpProperties) {
             this.bgpProperties = bgpProperties;
             return this;
         }
 
-        public Builder setBgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
+        public Builder bgpProperties(@Nullable VpnLinkBgpSettingsArgs bgpProperties) {
             this.bgpProperties = Input.ofNullable(bgpProperties);
             return this;
         }
 
-        public Builder setFqdn(@Nullable Input<String> fqdn) {
+        public Builder fqdn(@Nullable Input<String> fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = Input.ofNullable(fqdn);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setLinkProperties(@Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties) {
+        public Builder linkProperties(@Nullable Input<VpnLinkProviderPropertiesArgs> linkProperties) {
             this.linkProperties = linkProperties;
             return this;
         }
 
-        public Builder setLinkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
+        public Builder linkProperties(@Nullable VpnLinkProviderPropertiesArgs linkProperties) {
             this.linkProperties = Input.ofNullable(linkProperties);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -20,14 +20,14 @@ public final class Foo {
     private final String e;
     private final @Nullable String f;
 
-    @OutputCustomType.Constructor({"a","b","c","d","e","f"})
+    @OutputCustomType.Constructor
     private Foo(
-        Boolean a,
-        @Nullable Boolean b,
-        Integer c,
-        @Nullable Integer d,
-        String e,
-        @Nullable String f) {
+        @OutputCustomType.Parameter("a") Boolean a,
+        @OutputCustomType.Parameter("b") @Nullable Boolean b,
+        @OutputCustomType.Parameter("c") Integer c,
+        @OutputCustomType.Parameter("d") @Nullable Integer d,
+        @OutputCustomType.Parameter("e") String e,
+        @OutputCustomType.Parameter("f") @Nullable String f) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -85,32 +85,32 @@ public final class Foo {
     	      this.f = defaults.f;
         }
 
-        public Builder setA(Boolean a) {
+        public Builder a(Boolean a) {
             this.a = Objects.requireNonNull(a);
             return this;
         }
 
-        public Builder setB(@Nullable Boolean b) {
+        public Builder b(@Nullable Boolean b) {
             this.b = b;
             return this;
         }
 
-        public Builder setC(Integer c) {
+        public Builder c(Integer c) {
             this.c = Objects.requireNonNull(c);
             return this;
         }
 
-        public Builder setD(@Nullable Integer d) {
+        public Builder d(@Nullable Integer d) {
             this.d = d;
             return this;
         }
 
-        public Builder setE(String e) {
+        public Builder e(String e) {
             this.e = Objects.requireNonNull(e);
             return this;
         }
 
-        public Builder setF(@Nullable String f) {
+        public Builder f(@Nullable String f) {
             this.f = f;
             return this;
         }

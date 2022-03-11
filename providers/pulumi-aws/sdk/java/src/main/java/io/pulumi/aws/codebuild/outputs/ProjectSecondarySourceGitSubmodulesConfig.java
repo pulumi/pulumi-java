@@ -15,8 +15,8 @@ public final class ProjectSecondarySourceGitSubmodulesConfig {
      */
     private final Boolean fetchSubmodules;
 
-    @OutputCustomType.Constructor({"fetchSubmodules"})
-    private ProjectSecondarySourceGitSubmodulesConfig(Boolean fetchSubmodules) {
+    @OutputCustomType.Constructor
+    private ProjectSecondarySourceGitSubmodulesConfig(@OutputCustomType.Parameter("fetchSubmodules") Boolean fetchSubmodules) {
         this.fetchSubmodules = fetchSubmodules;
     }
 
@@ -48,7 +48,7 @@ public final class ProjectSecondarySourceGitSubmodulesConfig {
     	      this.fetchSubmodules = defaults.fetchSubmodules;
         }
 
-        public Builder setFetchSubmodules(Boolean fetchSubmodules) {
+        public Builder fetchSubmodules(Boolean fetchSubmodules) {
             this.fetchSubmodules = Objects.requireNonNull(fetchSubmodules);
             return this;
         }

@@ -151,72 +151,72 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.spacecraftName = defaults.spacecraftName;
         }
 
-        public Builder setContactName(@Nullable Input<String> contactName) {
+        public Builder contactName(@Nullable Input<String> contactName) {
             this.contactName = contactName;
             return this;
         }
 
-        public Builder setContactName(@Nullable String contactName) {
+        public Builder contactName(@Nullable String contactName) {
             this.contactName = Input.ofNullable(contactName);
             return this;
         }
 
-        public Builder setContactProfile(Input<ResourceReferenceArgs> contactProfile) {
+        public Builder contactProfile(Input<ResourceReferenceArgs> contactProfile) {
             this.contactProfile = Objects.requireNonNull(contactProfile);
             return this;
         }
 
-        public Builder setContactProfile(ResourceReferenceArgs contactProfile) {
+        public Builder contactProfile(ResourceReferenceArgs contactProfile) {
             this.contactProfile = Input.of(Objects.requireNonNull(contactProfile));
             return this;
         }
 
-        public Builder setGroundStationName(Input<String> groundStationName) {
+        public Builder groundStationName(Input<String> groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
 
-        public Builder setGroundStationName(String groundStationName) {
+        public Builder groundStationName(String groundStationName) {
             this.groundStationName = Input.of(Objects.requireNonNull(groundStationName));
             return this;
         }
 
-        public Builder setReservationEndTime(Input<String> reservationEndTime) {
+        public Builder reservationEndTime(Input<String> reservationEndTime) {
             this.reservationEndTime = Objects.requireNonNull(reservationEndTime);
             return this;
         }
 
-        public Builder setReservationEndTime(String reservationEndTime) {
+        public Builder reservationEndTime(String reservationEndTime) {
             this.reservationEndTime = Input.of(Objects.requireNonNull(reservationEndTime));
             return this;
         }
 
-        public Builder setReservationStartTime(Input<String> reservationStartTime) {
+        public Builder reservationStartTime(Input<String> reservationStartTime) {
             this.reservationStartTime = Objects.requireNonNull(reservationStartTime);
             return this;
         }
 
-        public Builder setReservationStartTime(String reservationStartTime) {
+        public Builder reservationStartTime(String reservationStartTime) {
             this.reservationStartTime = Input.of(Objects.requireNonNull(reservationStartTime));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSpacecraftName(Input<String> spacecraftName) {
+        public Builder spacecraftName(Input<String> spacecraftName) {
             this.spacecraftName = Objects.requireNonNull(spacecraftName);
             return this;
         }
 
-        public Builder setSpacecraftName(String spacecraftName) {
+        public Builder spacecraftName(String spacecraftName) {
             this.spacecraftName = Input.of(Objects.requireNonNull(spacecraftName));
             return this;
         }

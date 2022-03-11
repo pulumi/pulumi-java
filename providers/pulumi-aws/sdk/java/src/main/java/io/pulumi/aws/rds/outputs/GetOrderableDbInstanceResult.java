@@ -92,37 +92,37 @@ public final class GetOrderableDbInstanceResult {
     private final Boolean supportsStorageEncryption;
     private final Boolean vpc;
 
-    @OutputCustomType.Constructor({"availabilityZoneGroup","availabilityZones","engine","engineVersion","id","instanceClass","licenseModel","maxIopsPerDbInstance","maxIopsPerGib","maxStorageSize","minIopsPerDbInstance","minIopsPerGib","minStorageSize","multiAzCapable","outpostCapable","preferredEngineVersions","preferredInstanceClasses","readReplicaCapable","storageType","supportedEngineModes","supportsEnhancedMonitoring","supportsGlobalDatabases","supportsIamDatabaseAuthentication","supportsIops","supportsKerberosAuthentication","supportsPerformanceInsights","supportsStorageAutoscaling","supportsStorageEncryption","vpc"})
+    @OutputCustomType.Constructor
     private GetOrderableDbInstanceResult(
-        String availabilityZoneGroup,
-        List<String> availabilityZones,
-        String engine,
-        String engineVersion,
-        String id,
-        String instanceClass,
-        String licenseModel,
-        Integer maxIopsPerDbInstance,
-        Double maxIopsPerGib,
-        Integer maxStorageSize,
-        Integer minIopsPerDbInstance,
-        Double minIopsPerGib,
-        Integer minStorageSize,
-        Boolean multiAzCapable,
-        Boolean outpostCapable,
-        @Nullable List<String> preferredEngineVersions,
-        @Nullable List<String> preferredInstanceClasses,
-        Boolean readReplicaCapable,
-        String storageType,
-        List<String> supportedEngineModes,
-        Boolean supportsEnhancedMonitoring,
-        Boolean supportsGlobalDatabases,
-        Boolean supportsIamDatabaseAuthentication,
-        Boolean supportsIops,
-        Boolean supportsKerberosAuthentication,
-        Boolean supportsPerformanceInsights,
-        Boolean supportsStorageAutoscaling,
-        Boolean supportsStorageEncryption,
-        Boolean vpc) {
+        @OutputCustomType.Parameter("availabilityZoneGroup") String availabilityZoneGroup,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceClass") String instanceClass,
+        @OutputCustomType.Parameter("licenseModel") String licenseModel,
+        @OutputCustomType.Parameter("maxIopsPerDbInstance") Integer maxIopsPerDbInstance,
+        @OutputCustomType.Parameter("maxIopsPerGib") Double maxIopsPerGib,
+        @OutputCustomType.Parameter("maxStorageSize") Integer maxStorageSize,
+        @OutputCustomType.Parameter("minIopsPerDbInstance") Integer minIopsPerDbInstance,
+        @OutputCustomType.Parameter("minIopsPerGib") Double minIopsPerGib,
+        @OutputCustomType.Parameter("minStorageSize") Integer minStorageSize,
+        @OutputCustomType.Parameter("multiAzCapable") Boolean multiAzCapable,
+        @OutputCustomType.Parameter("outpostCapable") Boolean outpostCapable,
+        @OutputCustomType.Parameter("preferredEngineVersions") @Nullable List<String> preferredEngineVersions,
+        @OutputCustomType.Parameter("preferredInstanceClasses") @Nullable List<String> preferredInstanceClasses,
+        @OutputCustomType.Parameter("readReplicaCapable") Boolean readReplicaCapable,
+        @OutputCustomType.Parameter("storageType") String storageType,
+        @OutputCustomType.Parameter("supportedEngineModes") List<String> supportedEngineModes,
+        @OutputCustomType.Parameter("supportsEnhancedMonitoring") Boolean supportsEnhancedMonitoring,
+        @OutputCustomType.Parameter("supportsGlobalDatabases") Boolean supportsGlobalDatabases,
+        @OutputCustomType.Parameter("supportsIamDatabaseAuthentication") Boolean supportsIamDatabaseAuthentication,
+        @OutputCustomType.Parameter("supportsIops") Boolean supportsIops,
+        @OutputCustomType.Parameter("supportsKerberosAuthentication") Boolean supportsKerberosAuthentication,
+        @OutputCustomType.Parameter("supportsPerformanceInsights") Boolean supportsPerformanceInsights,
+        @OutputCustomType.Parameter("supportsStorageAutoscaling") Boolean supportsStorageAutoscaling,
+        @OutputCustomType.Parameter("supportsStorageEncryption") Boolean supportsStorageEncryption,
+        @OutputCustomType.Parameter("vpc") Boolean vpc) {
         this.availabilityZoneGroup = availabilityZoneGroup;
         this.availabilityZones = availabilityZones;
         this.engine = engine;
@@ -366,147 +366,147 @@ public final class GetOrderableDbInstanceResult {
     	      this.vpc = defaults.vpc;
         }
 
-        public Builder setAvailabilityZoneGroup(String availabilityZoneGroup) {
+        public Builder availabilityZoneGroup(String availabilityZoneGroup) {
             this.availabilityZoneGroup = Objects.requireNonNull(availabilityZoneGroup);
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceClass(String instanceClass) {
+        public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
 
-        public Builder setLicenseModel(String licenseModel) {
+        public Builder licenseModel(String licenseModel) {
             this.licenseModel = Objects.requireNonNull(licenseModel);
             return this;
         }
 
-        public Builder setMaxIopsPerDbInstance(Integer maxIopsPerDbInstance) {
+        public Builder maxIopsPerDbInstance(Integer maxIopsPerDbInstance) {
             this.maxIopsPerDbInstance = Objects.requireNonNull(maxIopsPerDbInstance);
             return this;
         }
 
-        public Builder setMaxIopsPerGib(Double maxIopsPerGib) {
+        public Builder maxIopsPerGib(Double maxIopsPerGib) {
             this.maxIopsPerGib = Objects.requireNonNull(maxIopsPerGib);
             return this;
         }
 
-        public Builder setMaxStorageSize(Integer maxStorageSize) {
+        public Builder maxStorageSize(Integer maxStorageSize) {
             this.maxStorageSize = Objects.requireNonNull(maxStorageSize);
             return this;
         }
 
-        public Builder setMinIopsPerDbInstance(Integer minIopsPerDbInstance) {
+        public Builder minIopsPerDbInstance(Integer minIopsPerDbInstance) {
             this.minIopsPerDbInstance = Objects.requireNonNull(minIopsPerDbInstance);
             return this;
         }
 
-        public Builder setMinIopsPerGib(Double minIopsPerGib) {
+        public Builder minIopsPerGib(Double minIopsPerGib) {
             this.minIopsPerGib = Objects.requireNonNull(minIopsPerGib);
             return this;
         }
 
-        public Builder setMinStorageSize(Integer minStorageSize) {
+        public Builder minStorageSize(Integer minStorageSize) {
             this.minStorageSize = Objects.requireNonNull(minStorageSize);
             return this;
         }
 
-        public Builder setMultiAzCapable(Boolean multiAzCapable) {
+        public Builder multiAzCapable(Boolean multiAzCapable) {
             this.multiAzCapable = Objects.requireNonNull(multiAzCapable);
             return this;
         }
 
-        public Builder setOutpostCapable(Boolean outpostCapable) {
+        public Builder outpostCapable(Boolean outpostCapable) {
             this.outpostCapable = Objects.requireNonNull(outpostCapable);
             return this;
         }
 
-        public Builder setPreferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
+        public Builder preferredEngineVersions(@Nullable List<String> preferredEngineVersions) {
             this.preferredEngineVersions = preferredEngineVersions;
             return this;
         }
 
-        public Builder setPreferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
+        public Builder preferredInstanceClasses(@Nullable List<String> preferredInstanceClasses) {
             this.preferredInstanceClasses = preferredInstanceClasses;
             return this;
         }
 
-        public Builder setReadReplicaCapable(Boolean readReplicaCapable) {
+        public Builder readReplicaCapable(Boolean readReplicaCapable) {
             this.readReplicaCapable = Objects.requireNonNull(readReplicaCapable);
             return this;
         }
 
-        public Builder setStorageType(String storageType) {
+        public Builder storageType(String storageType) {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
 
-        public Builder setSupportedEngineModes(List<String> supportedEngineModes) {
+        public Builder supportedEngineModes(List<String> supportedEngineModes) {
             this.supportedEngineModes = Objects.requireNonNull(supportedEngineModes);
             return this;
         }
 
-        public Builder setSupportsEnhancedMonitoring(Boolean supportsEnhancedMonitoring) {
+        public Builder supportsEnhancedMonitoring(Boolean supportsEnhancedMonitoring) {
             this.supportsEnhancedMonitoring = Objects.requireNonNull(supportsEnhancedMonitoring);
             return this;
         }
 
-        public Builder setSupportsGlobalDatabases(Boolean supportsGlobalDatabases) {
+        public Builder supportsGlobalDatabases(Boolean supportsGlobalDatabases) {
             this.supportsGlobalDatabases = Objects.requireNonNull(supportsGlobalDatabases);
             return this;
         }
 
-        public Builder setSupportsIamDatabaseAuthentication(Boolean supportsIamDatabaseAuthentication) {
+        public Builder supportsIamDatabaseAuthentication(Boolean supportsIamDatabaseAuthentication) {
             this.supportsIamDatabaseAuthentication = Objects.requireNonNull(supportsIamDatabaseAuthentication);
             return this;
         }
 
-        public Builder setSupportsIops(Boolean supportsIops) {
+        public Builder supportsIops(Boolean supportsIops) {
             this.supportsIops = Objects.requireNonNull(supportsIops);
             return this;
         }
 
-        public Builder setSupportsKerberosAuthentication(Boolean supportsKerberosAuthentication) {
+        public Builder supportsKerberosAuthentication(Boolean supportsKerberosAuthentication) {
             this.supportsKerberosAuthentication = Objects.requireNonNull(supportsKerberosAuthentication);
             return this;
         }
 
-        public Builder setSupportsPerformanceInsights(Boolean supportsPerformanceInsights) {
+        public Builder supportsPerformanceInsights(Boolean supportsPerformanceInsights) {
             this.supportsPerformanceInsights = Objects.requireNonNull(supportsPerformanceInsights);
             return this;
         }
 
-        public Builder setSupportsStorageAutoscaling(Boolean supportsStorageAutoscaling) {
+        public Builder supportsStorageAutoscaling(Boolean supportsStorageAutoscaling) {
             this.supportsStorageAutoscaling = Objects.requireNonNull(supportsStorageAutoscaling);
             return this;
         }
 
-        public Builder setSupportsStorageEncryption(Boolean supportsStorageEncryption) {
+        public Builder supportsStorageEncryption(Boolean supportsStorageEncryption) {
             this.supportsStorageEncryption = Objects.requireNonNull(supportsStorageEncryption);
             return this;
         }
 
-        public Builder setVpc(Boolean vpc) {
+        public Builder vpc(Boolean vpc) {
             this.vpc = Objects.requireNonNull(vpc);
             return this;
         }

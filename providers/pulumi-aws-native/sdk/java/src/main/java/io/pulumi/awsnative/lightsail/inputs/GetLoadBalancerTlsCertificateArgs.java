@@ -68,12 +68,12 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
     	      this.loadBalancerName = defaults.loadBalancerName;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setLoadBalancerName(String loadBalancerName) {
+        public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }

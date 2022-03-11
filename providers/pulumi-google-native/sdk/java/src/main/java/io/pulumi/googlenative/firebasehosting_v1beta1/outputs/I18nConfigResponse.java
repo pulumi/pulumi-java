@@ -15,8 +15,8 @@ public final class I18nConfigResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor({"root"})
-    private I18nConfigResponse(String root) {
+    @OutputCustomType.Constructor
+    private I18nConfigResponse(@OutputCustomType.Parameter("root") String root) {
         this.root = root;
     }
 
@@ -48,7 +48,7 @@ public final class I18nConfigResponse {
     	      this.root = defaults.root;
         }
 
-        public Builder setRoot(String root) {
+        public Builder root(String root) {
             this.root = Objects.requireNonNull(root);
             return this;
         }

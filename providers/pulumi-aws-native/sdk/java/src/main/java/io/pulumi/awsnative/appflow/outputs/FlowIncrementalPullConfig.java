@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FlowIncrementalPullConfig {
     private final @Nullable String datetimeTypeFieldName;
 
-    @OutputCustomType.Constructor({"datetimeTypeFieldName"})
-    private FlowIncrementalPullConfig(@Nullable String datetimeTypeFieldName) {
+    @OutputCustomType.Constructor
+    private FlowIncrementalPullConfig(@OutputCustomType.Parameter("datetimeTypeFieldName") @Nullable String datetimeTypeFieldName) {
         this.datetimeTypeFieldName = datetimeTypeFieldName;
     }
 
@@ -42,7 +42,7 @@ public final class FlowIncrementalPullConfig {
     	      this.datetimeTypeFieldName = defaults.datetimeTypeFieldName;
         }
 
-        public Builder setDatetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
+        public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
             this.datetimeTypeFieldName = datetimeTypeFieldName;
             return this;
         }

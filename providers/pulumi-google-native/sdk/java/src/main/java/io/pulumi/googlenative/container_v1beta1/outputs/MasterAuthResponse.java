@@ -37,14 +37,14 @@ public final class MasterAuthResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"clientCertificate","clientCertificateConfig","clientKey","clusterCaCertificate","password","username"})
+    @OutputCustomType.Constructor
     private MasterAuthResponse(
-        String clientCertificate,
-        ClientCertificateConfigResponse clientCertificateConfig,
-        String clientKey,
-        String clusterCaCertificate,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateConfig") ClientCertificateConfigResponse clientCertificateConfig,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clusterCaCertificate") String clusterCaCertificate,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.clientCertificate = clientCertificate;
         this.clientCertificateConfig = clientCertificateConfig;
         this.clientKey = clientKey;
@@ -122,32 +122,32 @@ public final class MasterAuthResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientCertificateConfig(ClientCertificateConfigResponse clientCertificateConfig) {
+        public Builder clientCertificateConfig(ClientCertificateConfigResponse clientCertificateConfig) {
             this.clientCertificateConfig = Objects.requireNonNull(clientCertificateConfig);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setClusterCaCertificate(String clusterCaCertificate) {
+        public Builder clusterCaCertificate(String clusterCaCertificate) {
             this.clusterCaCertificate = Objects.requireNonNull(clusterCaCertificate);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

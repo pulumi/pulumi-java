@@ -51,15 +51,15 @@ public final class RestorePointSourceVMOSDiskResponse {
      */
     private final @Nullable String osType;
 
-    @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","encryptionSettings","managedDisk","name","osType"})
+    @OutputCustomType.Constructor
     private RestorePointSourceVMOSDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable DiskEncryptionSettingsResponse encryptionSettings,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable String osType) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("encryptionSettings") @Nullable DiskEncryptionSettingsResponse encryptionSettings,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType) {
         this.caching = caching;
         this.diskRestorePoint = diskRestorePoint;
         this.diskSizeGB = diskSizeGB;
@@ -151,37 +151,37 @@ public final class RestorePointSourceVMOSDiskResponse {
     	      this.osType = defaults.osType;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
+        public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             this.diskRestorePoint = diskRestorePoint;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
+        public Builder encryptionSettings(@Nullable DiskEncryptionSettingsResponse encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }

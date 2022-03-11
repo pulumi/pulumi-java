@@ -26,15 +26,15 @@ public final class GlobalTableReplicaSpecification {
     private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
     private final @Nullable List<GlobalTableTag> tags;
 
-    @OutputCustomType.Constructor({"contributorInsightsSpecification","globalSecondaryIndexes","pointInTimeRecoverySpecification","readProvisionedThroughputSettings","region","sSESpecification","tags"})
+    @OutputCustomType.Constructor
     private GlobalTableReplicaSpecification(
-        @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
-        @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
-        @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
-        String region,
-        @Nullable GlobalTableReplicaSSESpecification sSESpecification,
-        @Nullable List<GlobalTableTag> tags) {
+        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @OutputCustomType.Parameter("globalSecondaryIndexes") @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes,
+        @OutputCustomType.Parameter("pointInTimeRecoverySpecification") @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification,
+        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("sSESpecification") @Nullable GlobalTableReplicaSSESpecification sSESpecification,
+        @OutputCustomType.Parameter("tags") @Nullable List<GlobalTableTag> tags) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.globalSecondaryIndexes = globalSecondaryIndexes;
         this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
@@ -98,37 +98,37 @@ public final class GlobalTableReplicaSpecification {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
 
-        public Builder setGlobalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
+        public Builder globalSecondaryIndexes(@Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes) {
             this.globalSecondaryIndexes = globalSecondaryIndexes;
             return this;
         }
 
-        public Builder setPointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
+        public Builder pointInTimeRecoverySpecification(@Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification) {
             this.pointInTimeRecoverySpecification = pointInTimeRecoverySpecification;
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
+        public Builder sSESpecification(@Nullable GlobalTableReplicaSSESpecification sSESpecification) {
             this.sSESpecification = sSESpecification;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GlobalTableTag> tags) {
+        public Builder tags(@Nullable List<GlobalTableTag> tags) {
             this.tags = tags;
             return this;
         }

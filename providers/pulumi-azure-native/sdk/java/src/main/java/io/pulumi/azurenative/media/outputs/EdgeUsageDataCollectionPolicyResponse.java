@@ -33,12 +33,12 @@ public final class EdgeUsageDataCollectionPolicyResponse {
      */
     private final @Nullable String maxAllowedUnreportedUsageDuration;
 
-    @OutputCustomType.Constructor({"dataCollectionFrequency","dataReportingFrequency","eventHubDetails","maxAllowedUnreportedUsageDuration"})
+    @OutputCustomType.Constructor
     private EdgeUsageDataCollectionPolicyResponse(
-        @Nullable String dataCollectionFrequency,
-        @Nullable String dataReportingFrequency,
-        @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
-        @Nullable String maxAllowedUnreportedUsageDuration) {
+        @OutputCustomType.Parameter("dataCollectionFrequency") @Nullable String dataCollectionFrequency,
+        @OutputCustomType.Parameter("dataReportingFrequency") @Nullable String dataReportingFrequency,
+        @OutputCustomType.Parameter("eventHubDetails") @Nullable EdgeUsageDataEventHubResponse eventHubDetails,
+        @OutputCustomType.Parameter("maxAllowedUnreportedUsageDuration") @Nullable String maxAllowedUnreportedUsageDuration) {
         this.dataCollectionFrequency = dataCollectionFrequency;
         this.dataReportingFrequency = dataReportingFrequency;
         this.eventHubDetails = eventHubDetails;
@@ -100,22 +100,22 @@ public final class EdgeUsageDataCollectionPolicyResponse {
     	      this.maxAllowedUnreportedUsageDuration = defaults.maxAllowedUnreportedUsageDuration;
         }
 
-        public Builder setDataCollectionFrequency(@Nullable String dataCollectionFrequency) {
+        public Builder dataCollectionFrequency(@Nullable String dataCollectionFrequency) {
             this.dataCollectionFrequency = dataCollectionFrequency;
             return this;
         }
 
-        public Builder setDataReportingFrequency(@Nullable String dataReportingFrequency) {
+        public Builder dataReportingFrequency(@Nullable String dataReportingFrequency) {
             this.dataReportingFrequency = dataReportingFrequency;
             return this;
         }
 
-        public Builder setEventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
+        public Builder eventHubDetails(@Nullable EdgeUsageDataEventHubResponse eventHubDetails) {
             this.eventHubDetails = eventHubDetails;
             return this;
         }
 
-        public Builder setMaxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
+        public Builder maxAllowedUnreportedUsageDuration(@Nullable String maxAllowedUnreportedUsageDuration) {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
         }

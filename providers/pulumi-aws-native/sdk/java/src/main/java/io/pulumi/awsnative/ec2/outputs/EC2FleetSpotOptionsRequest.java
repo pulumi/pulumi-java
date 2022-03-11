@@ -25,16 +25,16 @@ public final class EC2FleetSpotOptionsRequest {
     private final @Nullable Boolean singleAvailabilityZone;
     private final @Nullable Boolean singleInstanceType;
 
-    @OutputCustomType.Constructor({"allocationStrategy","instanceInterruptionBehavior","instancePoolsToUseCount","maintenanceStrategies","maxTotalPrice","minTargetCapacity","singleAvailabilityZone","singleInstanceType"})
+    @OutputCustomType.Constructor
     private EC2FleetSpotOptionsRequest(
-        @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
-        @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
-        @Nullable Integer instancePoolsToUseCount,
-        @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
-        @Nullable String maxTotalPrice,
-        @Nullable Integer minTargetCapacity,
-        @Nullable Boolean singleAvailabilityZone,
-        @Nullable Boolean singleInstanceType) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("instancePoolsToUseCount") @Nullable Integer instancePoolsToUseCount,
+        @OutputCustomType.Parameter("maintenanceStrategies") @Nullable EC2FleetMaintenanceStrategies maintenanceStrategies,
+        @OutputCustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
+        @OutputCustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
+        @OutputCustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
+        @OutputCustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.instancePoolsToUseCount = instancePoolsToUseCount;
@@ -104,42 +104,42 @@ public final class EC2FleetSpotOptionsRequest {
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder setAllocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
+        public Builder allocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setInstancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
+        public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
             this.instancePoolsToUseCount = instancePoolsToUseCount;
             return this;
         }
 
-        public Builder setMaintenanceStrategies(@Nullable EC2FleetMaintenanceStrategies maintenanceStrategies) {
+        public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategies maintenanceStrategies) {
             this.maintenanceStrategies = maintenanceStrategies;
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable String maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Integer minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Boolean singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }

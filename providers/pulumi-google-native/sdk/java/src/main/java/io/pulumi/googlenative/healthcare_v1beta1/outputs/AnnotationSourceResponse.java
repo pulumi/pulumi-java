@@ -15,8 +15,8 @@ public final class AnnotationSourceResponse {
      */
     private final CloudHealthcareSourceResponse cloudHealthcareSource;
 
-    @OutputCustomType.Constructor({"cloudHealthcareSource"})
-    private AnnotationSourceResponse(CloudHealthcareSourceResponse cloudHealthcareSource) {
+    @OutputCustomType.Constructor
+    private AnnotationSourceResponse(@OutputCustomType.Parameter("cloudHealthcareSource") CloudHealthcareSourceResponse cloudHealthcareSource) {
         this.cloudHealthcareSource = cloudHealthcareSource;
     }
 
@@ -48,7 +48,7 @@ public final class AnnotationSourceResponse {
     	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
         }
 
-        public Builder setCloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
+        public Builder cloudHealthcareSource(CloudHealthcareSourceResponse cloudHealthcareSource) {
             this.cloudHealthcareSource = Objects.requireNonNull(cloudHealthcareSource);
             return this;
         }

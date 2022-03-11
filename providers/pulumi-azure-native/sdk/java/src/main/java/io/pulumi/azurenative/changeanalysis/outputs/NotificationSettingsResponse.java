@@ -23,10 +23,10 @@ public final class NotificationSettingsResponse {
      */
     private final @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties;
 
-    @OutputCustomType.Constructor({"activationState","azureMonitorWorkspaceProperties"})
+    @OutputCustomType.Constructor
     private NotificationSettingsResponse(
-        @Nullable String activationState,
-        @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
+        @OutputCustomType.Parameter("activationState") @Nullable String activationState,
+        @OutputCustomType.Parameter("azureMonitorWorkspaceProperties") @Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
         this.activationState = activationState;
         this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
     }
@@ -68,12 +68,12 @@ public final class NotificationSettingsResponse {
     	      this.azureMonitorWorkspaceProperties = defaults.azureMonitorWorkspaceProperties;
         }
 
-        public Builder setActivationState(@Nullable String activationState) {
+        public Builder activationState(@Nullable String activationState) {
             this.activationState = activationState;
             return this;
         }
 
-        public Builder setAzureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
+        public Builder azureMonitorWorkspaceProperties(@Nullable AzureMonitorWorkspacePropertiesResponse azureMonitorWorkspaceProperties) {
             this.azureMonitorWorkspaceProperties = azureMonitorWorkspaceProperties;
             return this;
         }

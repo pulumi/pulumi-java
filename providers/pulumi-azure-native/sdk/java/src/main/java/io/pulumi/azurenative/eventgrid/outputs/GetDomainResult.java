@@ -89,22 +89,22 @@ public final class GetDomainResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","id","inboundIpRules","inputSchema","inputSchemaMapping","location","metricResourceId","name","privateEndpointConnections","provisioningState","publicNetworkAccess","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        String endpoint,
-        String id,
-        @Nullable List<InboundIpRuleResponse> inboundIpRules,
-        @Nullable String inputSchema,
-        @Nullable JsonInputSchemaMappingResponse inputSchemaMapping,
-        String location,
-        String metricResourceId,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inboundIpRules") @Nullable List<InboundIpRuleResponse> inboundIpRules,
+        @OutputCustomType.Parameter("inputSchema") @Nullable String inputSchema,
+        @OutputCustomType.Parameter("inputSchemaMapping") @Nullable JsonInputSchemaMappingResponse inputSchemaMapping,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metricResourceId") String metricResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.id = id;
         this.inboundIpRules = inboundIpRules;
@@ -267,72 +267,72 @@ public final class GetDomainResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInboundIpRules(@Nullable List<InboundIpRuleResponse> inboundIpRules) {
+        public Builder inboundIpRules(@Nullable List<InboundIpRuleResponse> inboundIpRules) {
             this.inboundIpRules = inboundIpRules;
             return this;
         }
 
-        public Builder setInputSchema(@Nullable String inputSchema) {
+        public Builder inputSchema(@Nullable String inputSchema) {
             this.inputSchema = inputSchema;
             return this;
         }
 
-        public Builder setInputSchemaMapping(@Nullable JsonInputSchemaMappingResponse inputSchemaMapping) {
+        public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingResponse inputSchemaMapping) {
             this.inputSchemaMapping = inputSchemaMapping;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMetricResourceId(String metricResourceId) {
+        public Builder metricResourceId(String metricResourceId) {
             this.metricResourceId = Objects.requireNonNull(metricResourceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

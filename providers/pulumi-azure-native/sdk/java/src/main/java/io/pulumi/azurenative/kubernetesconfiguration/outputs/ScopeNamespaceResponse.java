@@ -17,8 +17,8 @@ public final class ScopeNamespaceResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"targetNamespace"})
-    private ScopeNamespaceResponse(@Nullable String targetNamespace) {
+    @OutputCustomType.Constructor
+    private ScopeNamespaceResponse(@OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.targetNamespace = targetNamespace;
     }
 
@@ -50,7 +50,7 @@ public final class ScopeNamespaceResponse {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

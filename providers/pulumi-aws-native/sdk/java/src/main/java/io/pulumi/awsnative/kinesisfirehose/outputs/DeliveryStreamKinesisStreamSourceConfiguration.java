@@ -12,10 +12,10 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
     private final String kinesisStreamARN;
     private final String roleARN;
 
-    @OutputCustomType.Constructor({"kinesisStreamARN","roleARN"})
+    @OutputCustomType.Constructor
     private DeliveryStreamKinesisStreamSourceConfiguration(
-        String kinesisStreamARN,
-        String roleARN) {
+        @OutputCustomType.Parameter("kinesisStreamARN") String kinesisStreamARN,
+        @OutputCustomType.Parameter("roleARN") String roleARN) {
         this.kinesisStreamARN = kinesisStreamARN;
         this.roleARN = roleARN;
     }
@@ -49,12 +49,12 @@ public final class DeliveryStreamKinesisStreamSourceConfiguration {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setKinesisStreamARN(String kinesisStreamARN) {
+        public Builder kinesisStreamARN(String kinesisStreamARN) {
             this.kinesisStreamARN = Objects.requireNonNull(kinesisStreamARN);
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }

@@ -111,42 +111,42 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
     	      this.zip = defaults.zip;
         }
 
-        public Builder setCloudBuildOptions(@Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions) {
             this.cloudBuildOptions = cloudBuildOptions;
             return this;
         }
 
-        public Builder setCloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
+        public Builder cloudBuildOptions(@Nullable FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs cloudBuildOptions) {
             this.cloudBuildOptions = Input.ofNullable(cloudBuildOptions);
             return this;
         }
 
-        public Builder setContainer(@Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container) {
+        public Builder container(@Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable FlexibleAppVersionDeploymentContainerGetArgs container) {
+        public Builder container(@Nullable FlexibleAppVersionDeploymentContainerGetArgs container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setFiles(@Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
+        public Builder files(@Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<FlexibleAppVersionDeploymentFileGetArgs> files) {
+        public Builder files(@Nullable List<FlexibleAppVersionDeploymentFileGetArgs> files) {
             this.files = Input.ofNullable(files);
             return this;
         }
 
-        public Builder setZip(@Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip) {
+        public Builder zip(@Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip) {
             this.zip = zip;
             return this;
         }
 
-        public Builder setZip(@Nullable FlexibleAppVersionDeploymentZipGetArgs zip) {
+        public Builder zip(@Nullable FlexibleAppVersionDeploymentZipGetArgs zip) {
             this.zip = Input.ofNullable(zip);
             return this;
         }

@@ -59,15 +59,15 @@ public final class PodDisruptionBudgetStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor({"conditions","currentHealthy","desiredHealthy","disruptedPods","disruptionsAllowed","expectedPods","observedGeneration"})
+    @OutputCustomType.Constructor
     private PodDisruptionBudgetStatus(
-        @Nullable List<Condition> conditions,
-        Integer currentHealthy,
-        Integer desiredHealthy,
-        @Nullable Map<String,String> disruptedPods,
-        Integer disruptionsAllowed,
-        Integer expectedPods,
-        @Nullable Integer observedGeneration) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<Condition> conditions,
+        @OutputCustomType.Parameter("currentHealthy") Integer currentHealthy,
+        @OutputCustomType.Parameter("desiredHealthy") Integer desiredHealthy,
+        @OutputCustomType.Parameter("disruptedPods") @Nullable Map<String,String> disruptedPods,
+        @OutputCustomType.Parameter("disruptionsAllowed") Integer disruptionsAllowed,
+        @OutputCustomType.Parameter("expectedPods") Integer expectedPods,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentHealthy = currentHealthy;
         this.desiredHealthy = desiredHealthy;
@@ -167,37 +167,37 @@ public final class PodDisruptionBudgetStatus {
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder setConditions(@Nullable List<Condition> conditions) {
+        public Builder conditions(@Nullable List<Condition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCurrentHealthy(Integer currentHealthy) {
+        public Builder currentHealthy(Integer currentHealthy) {
             this.currentHealthy = Objects.requireNonNull(currentHealthy);
             return this;
         }
 
-        public Builder setDesiredHealthy(Integer desiredHealthy) {
+        public Builder desiredHealthy(Integer desiredHealthy) {
             this.desiredHealthy = Objects.requireNonNull(desiredHealthy);
             return this;
         }
 
-        public Builder setDisruptedPods(@Nullable Map<String,String> disruptedPods) {
+        public Builder disruptedPods(@Nullable Map<String,String> disruptedPods) {
             this.disruptedPods = disruptedPods;
             return this;
         }
 
-        public Builder setDisruptionsAllowed(Integer disruptionsAllowed) {
+        public Builder disruptionsAllowed(Integer disruptionsAllowed) {
             this.disruptionsAllowed = Objects.requireNonNull(disruptionsAllowed);
             return this;
         }
 
-        public Builder setExpectedPods(Integer expectedPods) {
+        public Builder expectedPods(Integer expectedPods) {
             this.expectedPods = Objects.requireNonNull(expectedPods);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }

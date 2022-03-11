@@ -18,12 +18,12 @@ public final class GetArchiveResult {
     private final @Nullable Object eventPattern;
     private final @Nullable Integer retentionDays;
 
-    @OutputCustomType.Constructor({"arn","description","eventPattern","retentionDays"})
+    @OutputCustomType.Constructor
     private GetArchiveResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Object eventPattern,
-        @Nullable Integer retentionDays) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("eventPattern") @Nullable Object eventPattern,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays) {
         this.arn = arn;
         this.description = description;
         this.eventPattern = eventPattern;
@@ -69,22 +69,22 @@ public final class GetArchiveResult {
     	      this.retentionDays = defaults.retentionDays;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEventPattern(@Nullable Object eventPattern) {
+        public Builder eventPattern(@Nullable Object eventPattern) {
             this.eventPattern = eventPattern;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }

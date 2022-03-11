@@ -67,18 +67,18 @@ public final class GetPacketCaptureResult {
      */
     private final @Nullable Double totalBytesPerSession;
 
-    @OutputCustomType.Constructor({"bytesToCapturePerPacket","etag","filters","id","name","provisioningState","storageLocation","target","timeLimitInSeconds","totalBytesPerSession"})
+    @OutputCustomType.Constructor
     private GetPacketCaptureResult(
-        @Nullable Double bytesToCapturePerPacket,
-        String etag,
-        @Nullable List<PacketCaptureFilterResponse> filters,
-        String id,
-        String name,
-        String provisioningState,
-        PacketCaptureStorageLocationResponse storageLocation,
-        String target,
-        @Nullable Integer timeLimitInSeconds,
-        @Nullable Double totalBytesPerSession) {
+        @OutputCustomType.Parameter("bytesToCapturePerPacket") @Nullable Double bytesToCapturePerPacket,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("filters") @Nullable List<PacketCaptureFilterResponse> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("storageLocation") PacketCaptureStorageLocationResponse storageLocation,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("timeLimitInSeconds") @Nullable Integer timeLimitInSeconds,
+        @OutputCustomType.Parameter("totalBytesPerSession") @Nullable Double totalBytesPerSession) {
         this.bytesToCapturePerPacket = bytesToCapturePerPacket;
         this.etag = etag;
         this.filters = filters;
@@ -200,52 +200,52 @@ public final class GetPacketCaptureResult {
     	      this.totalBytesPerSession = defaults.totalBytesPerSession;
         }
 
-        public Builder setBytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
+        public Builder bytesToCapturePerPacket(@Nullable Double bytesToCapturePerPacket) {
             this.bytesToCapturePerPacket = bytesToCapturePerPacket;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<PacketCaptureFilterResponse> filters) {
+        public Builder filters(@Nullable List<PacketCaptureFilterResponse> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStorageLocation(PacketCaptureStorageLocationResponse storageLocation) {
+        public Builder storageLocation(PacketCaptureStorageLocationResponse storageLocation) {
             this.storageLocation = Objects.requireNonNull(storageLocation);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTimeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
+        public Builder timeLimitInSeconds(@Nullable Integer timeLimitInSeconds) {
             this.timeLimitInSeconds = timeLimitInSeconds;
             return this;
         }
 
-        public Builder setTotalBytesPerSession(@Nullable Double totalBytesPerSession) {
+        public Builder totalBytesPerSession(@Nullable Double totalBytesPerSession) {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
         }

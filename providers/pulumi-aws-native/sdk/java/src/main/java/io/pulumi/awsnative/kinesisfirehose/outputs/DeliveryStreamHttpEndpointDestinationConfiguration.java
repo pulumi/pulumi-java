@@ -28,17 +28,17 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
     private final @Nullable String s3BackupMode;
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
 
-    @OutputCustomType.Constructor({"bufferingHints","cloudWatchLoggingOptions","endpointConfiguration","processingConfiguration","requestConfiguration","retryOptions","roleARN","s3BackupMode","s3Configuration"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointDestinationConfiguration(
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
-        @Nullable DeliveryStreamRetryOptions retryOptions,
-        @Nullable String roleARN,
-        @Nullable String s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("endpointConfiguration") DeliveryStreamHttpEndpointConfiguration endpointConfiguration,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("requestConfiguration") @Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") @Nullable String roleARN,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable String s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration) {
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.endpointConfiguration = endpointConfiguration;
@@ -114,47 +114,47 @@ public final class DeliveryStreamHttpEndpointDestinationConfiguration {
     	      this.s3Configuration = defaults.s3Configuration;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setEndpointConfiguration(DeliveryStreamHttpEndpointConfiguration endpointConfiguration) {
+        public Builder endpointConfiguration(DeliveryStreamHttpEndpointConfiguration endpointConfiguration) {
             this.endpointConfiguration = Objects.requireNonNull(endpointConfiguration);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRequestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration) {
+        public Builder requestConfiguration(@Nullable DeliveryStreamHttpEndpointRequestConfiguration requestConfiguration) {
             this.requestConfiguration = requestConfiguration;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRoleARN(@Nullable String roleARN) {
+        public Builder roleARN(@Nullable String roleARN) {
             this.roleARN = roleARN;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable String s3BackupMode) {
+        public Builder s3BackupMode(@Nullable String s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }

@@ -28,11 +28,11 @@ public final class ModelContainerResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"description","properties","tags"})
+    @OutputCustomType.Constructor
     private ModelContainerResponse(
-        @Nullable String description,
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.description = description;
         this.properties = properties;
         this.tags = tags;
@@ -84,17 +84,17 @@ public final class ModelContainerResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

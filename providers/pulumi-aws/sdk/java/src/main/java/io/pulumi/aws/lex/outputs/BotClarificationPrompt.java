@@ -34,11 +34,11 @@ public final class BotClarificationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private BotClarificationPrompt(
-        Integer maxAttempts,
-        List<BotClarificationPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<BotClarificationPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;
@@ -94,17 +94,17 @@ public final class BotClarificationPrompt {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMaxAttempts(Integer maxAttempts) {
+        public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
-        public Builder setMessages(List<BotClarificationPromptMessage> messages) {
+        public Builder messages(List<BotClarificationPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

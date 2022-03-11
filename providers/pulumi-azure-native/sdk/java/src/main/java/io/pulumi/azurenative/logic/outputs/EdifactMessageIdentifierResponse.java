@@ -15,8 +15,8 @@ public final class EdifactMessageIdentifierResponse {
      */
     private final String messageId;
 
-    @OutputCustomType.Constructor({"messageId"})
-    private EdifactMessageIdentifierResponse(String messageId) {
+    @OutputCustomType.Constructor
+    private EdifactMessageIdentifierResponse(@OutputCustomType.Parameter("messageId") String messageId) {
         this.messageId = messageId;
     }
 
@@ -48,7 +48,7 @@ public final class EdifactMessageIdentifierResponse {
     	      this.messageId = defaults.messageId;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }

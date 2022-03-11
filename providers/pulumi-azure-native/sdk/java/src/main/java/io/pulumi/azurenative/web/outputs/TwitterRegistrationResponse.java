@@ -25,10 +25,10 @@ public final class TwitterRegistrationResponse {
      */
     private final @Nullable String consumerSecretSettingName;
 
-    @OutputCustomType.Constructor({"consumerKey","consumerSecretSettingName"})
+    @OutputCustomType.Constructor
     private TwitterRegistrationResponse(
-        @Nullable String consumerKey,
-        @Nullable String consumerSecretSettingName) {
+        @OutputCustomType.Parameter("consumerKey") @Nullable String consumerKey,
+        @OutputCustomType.Parameter("consumerSecretSettingName") @Nullable String consumerSecretSettingName) {
         this.consumerKey = consumerKey;
         this.consumerSecretSettingName = consumerSecretSettingName;
     }
@@ -73,12 +73,12 @@ public final class TwitterRegistrationResponse {
     	      this.consumerSecretSettingName = defaults.consumerSecretSettingName;
         }
 
-        public Builder setConsumerKey(@Nullable String consumerKey) {
+        public Builder consumerKey(@Nullable String consumerKey) {
             this.consumerKey = consumerKey;
             return this;
         }
 
-        public Builder setConsumerSecretSettingName(@Nullable String consumerSecretSettingName) {
+        public Builder consumerSecretSettingName(@Nullable String consumerSecretSettingName) {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }

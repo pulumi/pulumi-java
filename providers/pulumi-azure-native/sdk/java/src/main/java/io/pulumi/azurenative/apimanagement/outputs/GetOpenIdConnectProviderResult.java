@@ -52,16 +52,16 @@ public final class GetOpenIdConnectProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","description","displayName","id","metadataEndpoint","name","type"})
+    @OutputCustomType.Constructor
     private GetOpenIdConnectProviderResult(
-        String clientId,
-        @Nullable String clientSecret,
-        @Nullable String description,
-        String displayName,
-        String id,
-        String metadataEndpoint,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadataEndpoint") String metadataEndpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.description = description;
@@ -163,42 +163,42 @@ public final class GetOpenIdConnectProviderResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMetadataEndpoint(String metadataEndpoint) {
+        public Builder metadataEndpoint(String metadataEndpoint) {
             this.metadataEndpoint = Objects.requireNonNull(metadataEndpoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

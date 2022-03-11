@@ -21,10 +21,10 @@ public final class ApplicationGatewayConnectionDrainingResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"drainTimeoutInSec","enabled"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayConnectionDrainingResponse(
-        Integer drainTimeoutInSec,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("drainTimeoutInSec") Integer drainTimeoutInSec,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.drainTimeoutInSec = drainTimeoutInSec;
         this.enabled = enabled;
     }
@@ -66,12 +66,12 @@ public final class ApplicationGatewayConnectionDrainingResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDrainTimeoutInSec(Integer drainTimeoutInSec) {
+        public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
             this.drainTimeoutInSec = Objects.requireNonNull(drainTimeoutInSec);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -15,8 +15,8 @@ public final class FirstQualityResponse {
      */
     private final Integer bitrate;
 
-    @OutputCustomType.Constructor({"bitrate"})
-    private FirstQualityResponse(Integer bitrate) {
+    @OutputCustomType.Constructor
+    private FirstQualityResponse(@OutputCustomType.Parameter("bitrate") Integer bitrate) {
         this.bitrate = bitrate;
     }
 
@@ -48,7 +48,7 @@ public final class FirstQualityResponse {
     	      this.bitrate = defaults.bitrate;
         }
 
-        public Builder setBitrate(Integer bitrate) {
+        public Builder bitrate(Integer bitrate) {
             this.bitrate = Objects.requireNonNull(bitrate);
             return this;
         }

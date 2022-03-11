@@ -29,11 +29,11 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable UefiSettingsResponse uefiSettings;
 
-    @OutputCustomType.Constructor({"encryptionAtHost","securityType","uefiSettings"})
+    @OutputCustomType.Constructor
     private SecurityProfileResponse(
-        @Nullable Boolean encryptionAtHost,
-        @Nullable String securityType,
-        @Nullable UefiSettingsResponse uefiSettings) {
+        @OutputCustomType.Parameter("encryptionAtHost") @Nullable Boolean encryptionAtHost,
+        @OutputCustomType.Parameter("securityType") @Nullable String securityType,
+        @OutputCustomType.Parameter("uefiSettings") @Nullable UefiSettingsResponse uefiSettings) {
         this.encryptionAtHost = encryptionAtHost;
         this.securityType = securityType;
         this.uefiSettings = uefiSettings;
@@ -85,17 +85,17 @@ public final class SecurityProfileResponse {
     	      this.uefiSettings = defaults.uefiSettings;
         }
 
-        public Builder setEncryptionAtHost(@Nullable Boolean encryptionAtHost) {
+        public Builder encryptionAtHost(@Nullable Boolean encryptionAtHost) {
             this.encryptionAtHost = encryptionAtHost;
             return this;
         }
 
-        public Builder setSecurityType(@Nullable String securityType) {
+        public Builder securityType(@Nullable String securityType) {
             this.securityType = securityType;
             return this;
         }
 
-        public Builder setUefiSettings(@Nullable UefiSettingsResponse uefiSettings) {
+        public Builder uefiSettings(@Nullable UefiSettingsResponse uefiSettings) {
             this.uefiSettings = uefiSettings;
             return this;
         }

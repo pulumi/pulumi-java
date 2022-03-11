@@ -15,8 +15,8 @@ public final class SdsConfigResponse {
      */
     private final GrpcServiceConfigResponse grpcServiceConfig;
 
-    @OutputCustomType.Constructor({"grpcServiceConfig"})
-    private SdsConfigResponse(GrpcServiceConfigResponse grpcServiceConfig) {
+    @OutputCustomType.Constructor
+    private SdsConfigResponse(@OutputCustomType.Parameter("grpcServiceConfig") GrpcServiceConfigResponse grpcServiceConfig) {
         this.grpcServiceConfig = grpcServiceConfig;
     }
 
@@ -48,7 +48,7 @@ public final class SdsConfigResponse {
     	      this.grpcServiceConfig = defaults.grpcServiceConfig;
         }
 
-        public Builder setGrpcServiceConfig(GrpcServiceConfigResponse grpcServiceConfig) {
+        public Builder grpcServiceConfig(GrpcServiceConfigResponse grpcServiceConfig) {
             this.grpcServiceConfig = Objects.requireNonNull(grpcServiceConfig);
             return this;
         }

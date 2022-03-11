@@ -15,8 +15,8 @@ public final class MonitoringConfigResponse {
      */
     private final MonitoringComponentConfigResponse componentConfig;
 
-    @OutputCustomType.Constructor({"componentConfig"})
-    private MonitoringConfigResponse(MonitoringComponentConfigResponse componentConfig) {
+    @OutputCustomType.Constructor
+    private MonitoringConfigResponse(@OutputCustomType.Parameter("componentConfig") MonitoringComponentConfigResponse componentConfig) {
         this.componentConfig = componentConfig;
     }
 
@@ -48,7 +48,7 @@ public final class MonitoringConfigResponse {
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder setComponentConfig(MonitoringComponentConfigResponse componentConfig) {
+        public Builder componentConfig(MonitoringComponentConfigResponse componentConfig) {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }

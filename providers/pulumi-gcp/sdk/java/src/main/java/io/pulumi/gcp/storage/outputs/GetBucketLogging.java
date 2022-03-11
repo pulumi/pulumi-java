@@ -12,10 +12,10 @@ public final class GetBucketLogging {
     private final String logBucket;
     private final String logObjectPrefix;
 
-    @OutputCustomType.Constructor({"logBucket","logObjectPrefix"})
+    @OutputCustomType.Constructor
     private GetBucketLogging(
-        String logBucket,
-        String logObjectPrefix) {
+        @OutputCustomType.Parameter("logBucket") String logBucket,
+        @OutputCustomType.Parameter("logObjectPrefix") String logObjectPrefix) {
         this.logBucket = logBucket;
         this.logObjectPrefix = logObjectPrefix;
     }
@@ -49,12 +49,12 @@ public final class GetBucketLogging {
     	      this.logObjectPrefix = defaults.logObjectPrefix;
         }
 
-        public Builder setLogBucket(String logBucket) {
+        public Builder logBucket(String logBucket) {
             this.logBucket = Objects.requireNonNull(logBucket);
             return this;
         }
 
-        public Builder setLogObjectPrefix(String logObjectPrefix) {
+        public Builder logObjectPrefix(String logObjectPrefix) {
             this.logObjectPrefix = Objects.requireNonNull(logObjectPrefix);
             return this;
         }

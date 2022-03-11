@@ -107,26 +107,26 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"affinityCookieName","authenticationCertificates","connectionDraining","cookieBasedAffinity","etag","hostName","id","name","path","pickHostNameFromBackendAddress","port","probe","probeEnabled","protocol","provisioningState","requestTimeout","trustedRootCertificates","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendHttpSettingsResponse(
-        @Nullable String affinityCookieName,
-        @Nullable List<SubResourceResponse> authenticationCertificates,
-        @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
-        @Nullable String cookieBasedAffinity,
-        String etag,
-        @Nullable String hostName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable Boolean pickHostNameFromBackendAddress,
-        @Nullable Integer port,
-        @Nullable SubResourceResponse probe,
-        @Nullable Boolean probeEnabled,
-        @Nullable String protocol,
-        String provisioningState,
-        @Nullable Integer requestTimeout,
-        @Nullable List<SubResourceResponse> trustedRootCertificates,
-        String type) {
+        @OutputCustomType.Parameter("affinityCookieName") @Nullable String affinityCookieName,
+        @OutputCustomType.Parameter("authenticationCertificates") @Nullable List<SubResourceResponse> authenticationCertificates,
+        @OutputCustomType.Parameter("connectionDraining") @Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining,
+        @OutputCustomType.Parameter("cookieBasedAffinity") @Nullable String cookieBasedAffinity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pickHostNameFromBackendAddress") @Nullable Boolean pickHostNameFromBackendAddress,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("probe") @Nullable SubResourceResponse probe,
+        @OutputCustomType.Parameter("probeEnabled") @Nullable Boolean probeEnabled,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestTimeout") @Nullable Integer requestTimeout,
+        @OutputCustomType.Parameter("trustedRootCertificates") @Nullable List<SubResourceResponse> trustedRootCertificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.affinityCookieName = affinityCookieName;
         this.authenticationCertificates = authenticationCertificates;
         this.connectionDraining = connectionDraining;
@@ -328,92 +328,92 @@ public final class ApplicationGatewayBackendHttpSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAffinityCookieName(@Nullable String affinityCookieName) {
+        public Builder affinityCookieName(@Nullable String affinityCookieName) {
             this.affinityCookieName = affinityCookieName;
             return this;
         }
 
-        public Builder setAuthenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
+        public Builder authenticationCertificates(@Nullable List<SubResourceResponse> authenticationCertificates) {
             this.authenticationCertificates = authenticationCertificates;
             return this;
         }
 
-        public Builder setConnectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
+        public Builder connectionDraining(@Nullable ApplicationGatewayConnectionDrainingResponse connectionDraining) {
             this.connectionDraining = connectionDraining;
             return this;
         }
 
-        public Builder setCookieBasedAffinity(@Nullable String cookieBasedAffinity) {
+        public Builder cookieBasedAffinity(@Nullable String cookieBasedAffinity) {
             this.cookieBasedAffinity = cookieBasedAffinity;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
+        public Builder pickHostNameFromBackendAddress(@Nullable Boolean pickHostNameFromBackendAddress) {
             this.pickHostNameFromBackendAddress = pickHostNameFromBackendAddress;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProbe(@Nullable SubResourceResponse probe) {
+        public Builder probe(@Nullable SubResourceResponse probe) {
             this.probe = probe;
             return this;
         }
 
-        public Builder setProbeEnabled(@Nullable Boolean probeEnabled) {
+        public Builder probeEnabled(@Nullable Boolean probeEnabled) {
             this.probeEnabled = probeEnabled;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestTimeout(@Nullable Integer requestTimeout) {
+        public Builder requestTimeout(@Nullable Integer requestTimeout) {
             this.requestTimeout = requestTimeout;
             return this;
         }
 
-        public Builder setTrustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
+        public Builder trustedRootCertificates(@Nullable List<SubResourceResponse> trustedRootCertificates) {
             this.trustedRootCertificates = trustedRootCertificates;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

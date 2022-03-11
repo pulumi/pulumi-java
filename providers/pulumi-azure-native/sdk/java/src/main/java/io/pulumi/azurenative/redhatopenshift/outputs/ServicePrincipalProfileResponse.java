@@ -22,10 +22,10 @@ public final class ServicePrincipalProfileResponse {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalProfileResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }
@@ -67,12 +67,12 @@ public final class ServicePrincipalProfileResponse {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }

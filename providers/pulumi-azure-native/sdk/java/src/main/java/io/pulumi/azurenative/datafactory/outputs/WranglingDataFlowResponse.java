@@ -52,15 +52,15 @@ public final class WranglingDataFlowResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","documentLocale","folder","script","sources","type"})
+    @OutputCustomType.Constructor
     private WranglingDataFlowResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable String documentLocale,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<PowerQuerySourceResponse> sources,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentLocale") @Nullable String documentLocale,
+        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("sources") @Nullable List<PowerQuerySourceResponse> sources,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.documentLocale = documentLocale;
@@ -153,37 +153,37 @@ public final class WranglingDataFlowResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentLocale(@Nullable String documentLocale) {
+        public Builder documentLocale(@Nullable String documentLocale) {
             this.documentLocale = documentLocale;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowResponseFolder folder) {
+        public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setSources(@Nullable List<PowerQuerySourceResponse> sources) {
+        public Builder sources(@Nullable List<PowerQuerySourceResponse> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

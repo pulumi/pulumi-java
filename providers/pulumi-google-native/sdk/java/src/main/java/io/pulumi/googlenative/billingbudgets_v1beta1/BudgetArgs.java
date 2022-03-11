@@ -151,72 +151,72 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thresholdRules = defaults.thresholdRules;
         }
 
-        public Builder setAllUpdatesRule(@Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable Input<GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs> allUpdatesRule) {
             this.allUpdatesRule = allUpdatesRule;
             return this;
         }
 
-        public Builder setAllUpdatesRule(@Nullable GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
+        public Builder allUpdatesRule(@Nullable GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs allUpdatesRule) {
             this.allUpdatesRule = Input.ofNullable(allUpdatesRule);
             return this;
         }
 
-        public Builder setAmount(Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
+        public Builder amount(Input<GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setAmount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
+        public Builder amount(GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs amount) {
             this.amount = Input.of(Objects.requireNonNull(amount));
             return this;
         }
 
-        public Builder setBillingAccountId(Input<String> billingAccountId) {
+        public Builder billingAccountId(Input<String> billingAccountId) {
             this.billingAccountId = Objects.requireNonNull(billingAccountId);
             return this;
         }
 
-        public Builder setBillingAccountId(String billingAccountId) {
+        public Builder billingAccountId(String billingAccountId) {
             this.billingAccountId = Input.of(Objects.requireNonNull(billingAccountId));
             return this;
         }
 
-        public Builder setBudgetFilter(@Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
+        public Builder budgetFilter(@Nullable Input<GoogleCloudBillingBudgetsV1beta1FilterArgs> budgetFilter) {
             this.budgetFilter = budgetFilter;
             return this;
         }
 
-        public Builder setBudgetFilter(@Nullable GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
+        public Builder budgetFilter(@Nullable GoogleCloudBillingBudgetsV1beta1FilterArgs budgetFilter) {
             this.budgetFilter = Input.ofNullable(budgetFilter);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
+        public Builder thresholdRules(@Nullable Input<List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs>> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
+        public Builder thresholdRules(@Nullable List<GoogleCloudBillingBudgetsV1beta1ThresholdRuleArgs> thresholdRules) {
             this.thresholdRules = Input.ofNullable(thresholdRules);
             return this;
         }

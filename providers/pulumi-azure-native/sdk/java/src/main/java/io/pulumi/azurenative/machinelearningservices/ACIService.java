@@ -200,7 +200,7 @@ public class ACIService extends io.pulumi.resources.CustomResource {
     private static ACIServiceArgs makeArgs(ACIServiceArgs args) {
         var builder = args == null ? ACIServiceArgs.builder() : ACIServiceArgs.builder(args);
         return builder
-            .setComputeType("ACI")
+            .computeType("ACI")
             .build();
     }
 

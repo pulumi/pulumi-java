@@ -22,10 +22,10 @@ public final class NfsAccessPolicyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"accessRules","name"})
+    @OutputCustomType.Constructor
     private NfsAccessPolicyResponse(
-        List<NfsAccessRuleResponse> accessRules,
-        String name) {
+        @OutputCustomType.Parameter("accessRules") List<NfsAccessRuleResponse> accessRules,
+        @OutputCustomType.Parameter("name") String name) {
         this.accessRules = accessRules;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class NfsAccessPolicyResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAccessRules(List<NfsAccessRuleResponse> accessRules) {
+        public Builder accessRules(List<NfsAccessRuleResponse> accessRules) {
             this.accessRules = Objects.requireNonNull(accessRules);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

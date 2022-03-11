@@ -109,42 +109,42 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setDatasetUri(@Nullable Input<String> datasetUri) {
+        public Builder datasetUri(@Nullable Input<String> datasetUri) {
             this.datasetUri = datasetUri;
             return this;
         }
 
-        public Builder setDatasetUri(@Nullable String datasetUri) {
+        public Builder datasetUri(@Nullable String datasetUri) {
             this.datasetUri = Input.ofNullable(datasetUri);
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setSchemaConfig(@Nullable Input<SchemaConfigArgs> schemaConfig) {
+        public Builder schemaConfig(@Nullable Input<SchemaConfigArgs> schemaConfig) {
             this.schemaConfig = schemaConfig;
             return this;
         }
 
-        public Builder setSchemaConfig(@Nullable SchemaConfigArgs schemaConfig) {
+        public Builder schemaConfig(@Nullable SchemaConfigArgs schemaConfig) {
             this.schemaConfig = Input.ofNullable(schemaConfig);
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable Input<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
+        public Builder writeDisposition(@Nullable Input<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition) {
             this.writeDisposition = writeDisposition;
             return this;
         }
 
-        public Builder setWriteDisposition(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
+        public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition writeDisposition) {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }

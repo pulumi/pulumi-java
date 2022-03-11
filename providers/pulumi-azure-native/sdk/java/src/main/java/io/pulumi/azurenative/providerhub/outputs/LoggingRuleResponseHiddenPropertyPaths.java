@@ -14,10 +14,10 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
     private final @Nullable List<String> hiddenPathsOnRequest;
     private final @Nullable List<String> hiddenPathsOnResponse;
 
-    @OutputCustomType.Constructor({"hiddenPathsOnRequest","hiddenPathsOnResponse"})
+    @OutputCustomType.Constructor
     private LoggingRuleResponseHiddenPropertyPaths(
-        @Nullable List<String> hiddenPathsOnRequest,
-        @Nullable List<String> hiddenPathsOnResponse) {
+        @OutputCustomType.Parameter("hiddenPathsOnRequest") @Nullable List<String> hiddenPathsOnRequest,
+        @OutputCustomType.Parameter("hiddenPathsOnResponse") @Nullable List<String> hiddenPathsOnResponse) {
         this.hiddenPathsOnRequest = hiddenPathsOnRequest;
         this.hiddenPathsOnResponse = hiddenPathsOnResponse;
     }
@@ -51,12 +51,12 @@ public final class LoggingRuleResponseHiddenPropertyPaths {
     	      this.hiddenPathsOnResponse = defaults.hiddenPathsOnResponse;
         }
 
-        public Builder setHiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
+        public Builder hiddenPathsOnRequest(@Nullable List<String> hiddenPathsOnRequest) {
             this.hiddenPathsOnRequest = hiddenPathsOnRequest;
             return this;
         }
 
-        public Builder setHiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
+        public Builder hiddenPathsOnResponse(@Nullable List<String> hiddenPathsOnResponse) {
             this.hiddenPathsOnResponse = hiddenPathsOnResponse;
             return this;
         }

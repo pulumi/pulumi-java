@@ -47,15 +47,15 @@ public final class GetApiReleaseResult {
      */
     private final String updatedDateTime;
 
-    @OutputCustomType.Constructor({"apiId","createdDateTime","id","name","notes","type","updatedDateTime"})
+    @OutputCustomType.Constructor
     private GetApiReleaseResult(
-        @Nullable String apiId,
-        String createdDateTime,
-        String id,
-        String name,
-        @Nullable String notes,
-        String type,
-        String updatedDateTime) {
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
+        @OutputCustomType.Parameter("createdDateTime") String createdDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedDateTime") String updatedDateTime) {
         this.apiId = apiId;
         this.createdDateTime = createdDateTime;
         this.id = id;
@@ -147,37 +147,37 @@ public final class GetApiReleaseResult {
     	      this.updatedDateTime = defaults.updatedDateTime;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setCreatedDateTime(String createdDateTime) {
+        public Builder createdDateTime(String createdDateTime) {
             this.createdDateTime = Objects.requireNonNull(createdDateTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedDateTime(String updatedDateTime) {
+        public Builder updatedDateTime(String updatedDateTime) {
             this.updatedDateTime = Objects.requireNonNull(updatedDateTime);
             return this;
         }

@@ -71,22 +71,22 @@ public final class LoggingConfigurationConditionArgs extends io.pulumi.resources
     	      this.labelNameCondition = defaults.labelNameCondition;
         }
 
-        public Builder setActionCondition(@Nullable Input<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition) {
+        public Builder actionCondition(@Nullable Input<LoggingConfigurationConditionActionConditionPropertiesArgs> actionCondition) {
             this.actionCondition = actionCondition;
             return this;
         }
 
-        public Builder setActionCondition(@Nullable LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
+        public Builder actionCondition(@Nullable LoggingConfigurationConditionActionConditionPropertiesArgs actionCondition) {
             this.actionCondition = Input.ofNullable(actionCondition);
             return this;
         }
 
-        public Builder setLabelNameCondition(@Nullable Input<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
+        public Builder labelNameCondition(@Nullable Input<LoggingConfigurationConditionLabelNameConditionPropertiesArgs> labelNameCondition) {
             this.labelNameCondition = labelNameCondition;
             return this;
         }
 
-        public Builder setLabelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
+        public Builder labelNameCondition(@Nullable LoggingConfigurationConditionLabelNameConditionPropertiesArgs labelNameCondition) {
             this.labelNameCondition = Input.ofNullable(labelNameCondition);
             return this;
         }

@@ -76,20 +76,20 @@ public final class GetEntitlementResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"associationInfo","commitmentSettings","createTime","name","offer","parameters","provisionedService","provisioningState","purchaseOrderId","suspensionReasons","trialSettings","updateTime"})
+    @OutputCustomType.Constructor
     private GetEntitlementResult(
-        GoogleCloudChannelV1AssociationInfoResponse associationInfo,
-        GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
-        String createTime,
-        String name,
-        String offer,
-        List<GoogleCloudChannelV1ParameterResponse> parameters,
-        GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
-        String provisioningState,
-        String purchaseOrderId,
-        List<String> suspensionReasons,
-        GoogleCloudChannelV1TrialSettingsResponse trialSettings,
-        String updateTime) {
+        @OutputCustomType.Parameter("associationInfo") GoogleCloudChannelV1AssociationInfoResponse associationInfo,
+        @OutputCustomType.Parameter("commitmentSettings") GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offer") String offer,
+        @OutputCustomType.Parameter("parameters") List<GoogleCloudChannelV1ParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisionedService") GoogleCloudChannelV1ProvisionedServiceResponse provisionedService,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchaseOrderId") String purchaseOrderId,
+        @OutputCustomType.Parameter("suspensionReasons") List<String> suspensionReasons,
+        @OutputCustomType.Parameter("trialSettings") GoogleCloudChannelV1TrialSettingsResponse trialSettings,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.associationInfo = associationInfo;
         this.commitmentSettings = commitmentSettings;
         this.createTime = createTime;
@@ -231,62 +231,62 @@ public final class GetEntitlementResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAssociationInfo(GoogleCloudChannelV1AssociationInfoResponse associationInfo) {
+        public Builder associationInfo(GoogleCloudChannelV1AssociationInfoResponse associationInfo) {
             this.associationInfo = Objects.requireNonNull(associationInfo);
             return this;
         }
 
-        public Builder setCommitmentSettings(GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings) {
+        public Builder commitmentSettings(GoogleCloudChannelV1CommitmentSettingsResponse commitmentSettings) {
             this.commitmentSettings = Objects.requireNonNull(commitmentSettings);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOffer(String offer) {
+        public Builder offer(String offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
-        public Builder setParameters(List<GoogleCloudChannelV1ParameterResponse> parameters) {
+        public Builder parameters(List<GoogleCloudChannelV1ParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setProvisionedService(GoogleCloudChannelV1ProvisionedServiceResponse provisionedService) {
+        public Builder provisionedService(GoogleCloudChannelV1ProvisionedServiceResponse provisionedService) {
             this.provisionedService = Objects.requireNonNull(provisionedService);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPurchaseOrderId(String purchaseOrderId) {
+        public Builder purchaseOrderId(String purchaseOrderId) {
             this.purchaseOrderId = Objects.requireNonNull(purchaseOrderId);
             return this;
         }
 
-        public Builder setSuspensionReasons(List<String> suspensionReasons) {
+        public Builder suspensionReasons(List<String> suspensionReasons) {
             this.suspensionReasons = Objects.requireNonNull(suspensionReasons);
             return this;
         }
 
-        public Builder setTrialSettings(GoogleCloudChannelV1TrialSettingsResponse trialSettings) {
+        public Builder trialSettings(GoogleCloudChannelV1TrialSettingsResponse trialSettings) {
             this.trialSettings = Objects.requireNonNull(trialSettings);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

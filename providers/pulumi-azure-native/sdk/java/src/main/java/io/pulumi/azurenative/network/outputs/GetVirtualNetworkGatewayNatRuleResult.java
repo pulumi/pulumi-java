@@ -59,17 +59,17 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","externalMappings","id","internalMappings","ipConfigurationId","mode","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkGatewayNatRuleResult(
-        String etag,
-        @Nullable List<VpnNatRuleMappingResponse> externalMappings,
-        @Nullable String id,
-        @Nullable List<VpnNatRuleMappingResponse> internalMappings,
-        @Nullable String ipConfigurationId,
-        @Nullable String mode,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("externalMappings") @Nullable List<VpnNatRuleMappingResponse> externalMappings,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("internalMappings") @Nullable List<VpnNatRuleMappingResponse> internalMappings,
+        @OutputCustomType.Parameter("ipConfigurationId") @Nullable String ipConfigurationId,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.externalMappings = externalMappings;
         this.id = id;
@@ -181,47 +181,47 @@ public final class GetVirtualNetworkGatewayNatRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExternalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
+        public Builder externalMappings(@Nullable List<VpnNatRuleMappingResponse> externalMappings) {
             this.externalMappings = externalMappings;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInternalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
+        public Builder internalMappings(@Nullable List<VpnNatRuleMappingResponse> internalMappings) {
             this.internalMappings = internalMappings;
             return this;
         }
 
-        public Builder setIpConfigurationId(@Nullable String ipConfigurationId) {
+        public Builder ipConfigurationId(@Nullable String ipConfigurationId) {
             this.ipConfigurationId = ipConfigurationId;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

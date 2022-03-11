@@ -151,72 +151,72 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setKeyVaultIdentifierId(@Nullable Input<String> keyVaultIdentifierId) {
+        public Builder keyVaultIdentifierId(@Nullable Input<String> keyVaultIdentifierId) {
             this.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
 
-        public Builder setKeyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
+        public Builder keyVaultIdentifierId(@Nullable String keyVaultIdentifierId) {
             this.keyVaultIdentifierId = Input.ofNullable(keyVaultIdentifierId);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOwnerEmail(Input<String> ownerEmail) {
+        public Builder ownerEmail(Input<String> ownerEmail) {
             this.ownerEmail = Objects.requireNonNull(ownerEmail);
             return this;
         }
 
-        public Builder setOwnerEmail(String ownerEmail) {
+        public Builder ownerEmail(String ownerEmail) {
             this.ownerEmail = Input.of(Objects.requireNonNull(ownerEmail));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserStorageAccountId(Input<String> userStorageAccountId) {
+        public Builder userStorageAccountId(Input<String> userStorageAccountId) {
             this.userStorageAccountId = Objects.requireNonNull(userStorageAccountId);
             return this;
         }
 
-        public Builder setUserStorageAccountId(String userStorageAccountId) {
+        public Builder userStorageAccountId(String userStorageAccountId) {
             this.userStorageAccountId = Input.of(Objects.requireNonNull(userStorageAccountId));
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable Input<String> workspaceName) {
+        public Builder workspaceName(@Nullable Input<String> workspaceName) {
             this.workspaceName = workspaceName;
             return this;
         }
 
-        public Builder setWorkspaceName(@Nullable String workspaceName) {
+        public Builder workspaceName(@Nullable String workspaceName) {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }

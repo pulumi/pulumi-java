@@ -20,10 +20,10 @@ public final class DashboardDataSetReference {
      */
     private final String dataSetPlaceholder;
 
-    @OutputCustomType.Constructor({"dataSetArn","dataSetPlaceholder"})
+    @OutputCustomType.Constructor
     private DashboardDataSetReference(
-        String dataSetArn,
-        String dataSetPlaceholder) {
+        @OutputCustomType.Parameter("dataSetArn") String dataSetArn,
+        @OutputCustomType.Parameter("dataSetPlaceholder") String dataSetPlaceholder) {
         this.dataSetArn = dataSetArn;
         this.dataSetPlaceholder = dataSetPlaceholder;
     }
@@ -65,12 +65,12 @@ public final class DashboardDataSetReference {
     	      this.dataSetPlaceholder = defaults.dataSetPlaceholder;
         }
 
-        public Builder setDataSetArn(String dataSetArn) {
+        public Builder dataSetArn(String dataSetArn) {
             this.dataSetArn = Objects.requireNonNull(dataSetArn);
             return this;
         }
 
-        public Builder setDataSetPlaceholder(String dataSetPlaceholder) {
+        public Builder dataSetPlaceholder(String dataSetPlaceholder) {
             this.dataSetPlaceholder = Objects.requireNonNull(dataSetPlaceholder);
             return this;
         }

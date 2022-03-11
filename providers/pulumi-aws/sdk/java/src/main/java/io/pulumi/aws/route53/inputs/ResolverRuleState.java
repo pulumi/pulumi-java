@@ -204,102 +204,102 @@ public final class ResolverRuleState extends io.pulumi.resources.ResourceArgs {
     	      this.targetIps = defaults.targetIps;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable Input<String> resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable Input<String> resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = Input.ofNullable(resolverEndpointId);
             return this;
         }
 
-        public Builder setRuleType(@Nullable Input<String> ruleType) {
+        public Builder ruleType(@Nullable Input<String> ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
-        public Builder setRuleType(@Nullable String ruleType) {
+        public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = Input.ofNullable(ruleType);
             return this;
         }
 
-        public Builder setShareStatus(@Nullable Input<String> shareStatus) {
+        public Builder shareStatus(@Nullable Input<String> shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
 
-        public Builder setShareStatus(@Nullable String shareStatus) {
+        public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = Input.ofNullable(shareStatus);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTargetIps(@Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps) {
+        public Builder targetIps(@Nullable Input<List<ResolverRuleTargetIpGetArgs>> targetIps) {
             this.targetIps = targetIps;
             return this;
         }
 
-        public Builder setTargetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
+        public Builder targetIps(@Nullable List<ResolverRuleTargetIpGetArgs> targetIps) {
             this.targetIps = Input.ofNullable(targetIps);
             return this;
         }

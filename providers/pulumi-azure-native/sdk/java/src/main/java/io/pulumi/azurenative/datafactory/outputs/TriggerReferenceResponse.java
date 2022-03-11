@@ -20,10 +20,10 @@ public final class TriggerReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"referenceName","type"})
+    @OutputCustomType.Constructor
     private TriggerReferenceResponse(
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.referenceName = referenceName;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class TriggerReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceName(String referenceName) {
+        public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

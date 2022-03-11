@@ -15,8 +15,8 @@ public final class ClassItemResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ClassItemResponse(String value) {
+    @OutputCustomType.Constructor
+    private ClassItemResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -48,7 +48,7 @@ public final class ClassItemResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

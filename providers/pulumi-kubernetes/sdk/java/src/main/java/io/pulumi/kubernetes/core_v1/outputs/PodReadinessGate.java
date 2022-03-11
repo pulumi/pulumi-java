@@ -21,8 +21,8 @@ public final class PodReadinessGate {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor({"conditionType"})
-    private PodReadinessGate(String conditionType) {
+    @OutputCustomType.Constructor
+    private PodReadinessGate(@OutputCustomType.Parameter("conditionType") String conditionType) {
         this.conditionType = conditionType;
     }
 
@@ -60,7 +60,7 @@ public final class PodReadinessGate {
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }

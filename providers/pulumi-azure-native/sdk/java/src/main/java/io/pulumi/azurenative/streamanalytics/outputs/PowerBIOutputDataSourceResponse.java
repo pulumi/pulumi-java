@@ -53,16 +53,16 @@ public final class PowerBIOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataset","groupId","groupName","refreshToken","table","tokenUserDisplayName","tokenUserPrincipalName","type"})
+    @OutputCustomType.Constructor
     private PowerBIOutputDataSourceResponse(
-        @Nullable String dataset,
-        @Nullable String groupId,
-        @Nullable String groupName,
-        @Nullable String refreshToken,
-        @Nullable String table,
-        @Nullable String tokenUserDisplayName,
-        @Nullable String tokenUserPrincipalName,
-        String type) {
+        @OutputCustomType.Parameter("dataset") @Nullable String dataset,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataset = dataset;
         this.groupId = groupId;
         this.groupName = groupName;
@@ -165,42 +165,42 @@ public final class PowerBIOutputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTokenUserDisplayName(@Nullable String tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
-        public Builder setTokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

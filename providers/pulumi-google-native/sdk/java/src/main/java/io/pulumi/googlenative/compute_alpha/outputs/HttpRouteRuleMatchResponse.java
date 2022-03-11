@@ -50,15 +50,15 @@ public final class HttpRouteRuleMatchResponse {
      */
     private final String regexMatch;
 
-    @OutputCustomType.Constructor({"fullPathMatch","headerMatches","ignoreCase","metadataFilters","prefixMatch","queryParameterMatches","regexMatch"})
+    @OutputCustomType.Constructor
     private HttpRouteRuleMatchResponse(
-        String fullPathMatch,
-        List<HttpHeaderMatchResponse> headerMatches,
-        Boolean ignoreCase,
-        List<MetadataFilterResponse> metadataFilters,
-        String prefixMatch,
-        List<HttpQueryParameterMatchResponse> queryParameterMatches,
-        String regexMatch) {
+        @OutputCustomType.Parameter("fullPathMatch") String fullPathMatch,
+        @OutputCustomType.Parameter("headerMatches") List<HttpHeaderMatchResponse> headerMatches,
+        @OutputCustomType.Parameter("ignoreCase") Boolean ignoreCase,
+        @OutputCustomType.Parameter("metadataFilters") List<MetadataFilterResponse> metadataFilters,
+        @OutputCustomType.Parameter("prefixMatch") String prefixMatch,
+        @OutputCustomType.Parameter("queryParameterMatches") List<HttpQueryParameterMatchResponse> queryParameterMatches,
+        @OutputCustomType.Parameter("regexMatch") String regexMatch) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;
@@ -150,37 +150,37 @@ public final class HttpRouteRuleMatchResponse {
     	      this.regexMatch = defaults.regexMatch;
         }
 
-        public Builder setFullPathMatch(String fullPathMatch) {
+        public Builder fullPathMatch(String fullPathMatch) {
             this.fullPathMatch = Objects.requireNonNull(fullPathMatch);
             return this;
         }
 
-        public Builder setHeaderMatches(List<HttpHeaderMatchResponse> headerMatches) {
+        public Builder headerMatches(List<HttpHeaderMatchResponse> headerMatches) {
             this.headerMatches = Objects.requireNonNull(headerMatches);
             return this;
         }
 
-        public Builder setIgnoreCase(Boolean ignoreCase) {
+        public Builder ignoreCase(Boolean ignoreCase) {
             this.ignoreCase = Objects.requireNonNull(ignoreCase);
             return this;
         }
 
-        public Builder setMetadataFilters(List<MetadataFilterResponse> metadataFilters) {
+        public Builder metadataFilters(List<MetadataFilterResponse> metadataFilters) {
             this.metadataFilters = Objects.requireNonNull(metadataFilters);
             return this;
         }
 
-        public Builder setPrefixMatch(String prefixMatch) {
+        public Builder prefixMatch(String prefixMatch) {
             this.prefixMatch = Objects.requireNonNull(prefixMatch);
             return this;
         }
 
-        public Builder setQueryParameterMatches(List<HttpQueryParameterMatchResponse> queryParameterMatches) {
+        public Builder queryParameterMatches(List<HttpQueryParameterMatchResponse> queryParameterMatches) {
             this.queryParameterMatches = Objects.requireNonNull(queryParameterMatches);
             return this;
         }
 
-        public Builder setRegexMatch(String regexMatch) {
+        public Builder regexMatch(String regexMatch) {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }

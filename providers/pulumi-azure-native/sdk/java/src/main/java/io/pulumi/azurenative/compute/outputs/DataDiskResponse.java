@@ -87,22 +87,22 @@ public final class DataDiskResponse {
      */
     private final @Nullable Boolean writeAcceleratorEnabled;
 
-    @OutputCustomType.Constructor({"caching","createOption","deleteOption","detachOption","diskIOPSReadWrite","diskMBpsReadWrite","diskSizeGB","image","lun","managedDisk","name","toBeDetached","vhd","writeAcceleratorEnabled"})
+    @OutputCustomType.Constructor
     private DataDiskResponse(
-        @Nullable String caching,
-        String createOption,
-        @Nullable String deleteOption,
-        @Nullable String detachOption,
-        Double diskIOPSReadWrite,
-        Double diskMBpsReadWrite,
-        @Nullable Integer diskSizeGB,
-        @Nullable VirtualHardDiskResponse image,
-        Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name,
-        @Nullable Boolean toBeDetached,
-        @Nullable VirtualHardDiskResponse vhd,
-        @Nullable Boolean writeAcceleratorEnabled) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("detachOption") @Nullable String detachOption,
+        @OutputCustomType.Parameter("diskIOPSReadWrite") Double diskIOPSReadWrite,
+        @OutputCustomType.Parameter("diskMBpsReadWrite") Double diskMBpsReadWrite,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("image") @Nullable VirtualHardDiskResponse image,
+        @OutputCustomType.Parameter("lun") Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("toBeDetached") @Nullable Boolean toBeDetached,
+        @OutputCustomType.Parameter("vhd") @Nullable VirtualHardDiskResponse vhd,
+        @OutputCustomType.Parameter("writeAcceleratorEnabled") @Nullable Boolean writeAcceleratorEnabled) {
         this.caching = caching;
         this.createOption = createOption;
         this.deleteOption = deleteOption;
@@ -264,72 +264,72 @@ public final class DataDiskResponse {
     	      this.writeAcceleratorEnabled = defaults.writeAcceleratorEnabled;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable String deleteOption) {
+        public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDetachOption(@Nullable String detachOption) {
+        public Builder detachOption(@Nullable String detachOption) {
             this.detachOption = detachOption;
             return this;
         }
 
-        public Builder setDiskIOPSReadWrite(Double diskIOPSReadWrite) {
+        public Builder diskIOPSReadWrite(Double diskIOPSReadWrite) {
             this.diskIOPSReadWrite = Objects.requireNonNull(diskIOPSReadWrite);
             return this;
         }
 
-        public Builder setDiskMBpsReadWrite(Double diskMBpsReadWrite) {
+        public Builder diskMBpsReadWrite(Double diskMBpsReadWrite) {
             this.diskMBpsReadWrite = Objects.requireNonNull(diskMBpsReadWrite);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setImage(@Nullable VirtualHardDiskResponse image) {
+        public Builder image(@Nullable VirtualHardDiskResponse image) {
             this.image = image;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setToBeDetached(@Nullable Boolean toBeDetached) {
+        public Builder toBeDetached(@Nullable Boolean toBeDetached) {
             this.toBeDetached = toBeDetached;
             return this;
         }
 
-        public Builder setVhd(@Nullable VirtualHardDiskResponse vhd) {
+        public Builder vhd(@Nullable VirtualHardDiskResponse vhd) {
             this.vhd = vhd;
             return this;
         }
 
-        public Builder setWriteAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
+        public Builder writeAcceleratorEnabled(@Nullable Boolean writeAcceleratorEnabled) {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }

@@ -17,8 +17,8 @@ public final class ListClusterLanguageExtensionsResult {
      */
     private final @Nullable List<LanguageExtensionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListClusterLanguageExtensionsResult(@Nullable List<LanguageExtensionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListClusterLanguageExtensionsResult(@OutputCustomType.Parameter("value") @Nullable List<LanguageExtensionResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListClusterLanguageExtensionsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<LanguageExtensionResponse> value) {
+        public Builder value(@Nullable List<LanguageExtensionResponse> value) {
             this.value = value;
             return this;
         }

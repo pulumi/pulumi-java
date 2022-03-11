@@ -51,7 +51,7 @@ public final class MitigationActionUpdateDeviceCertificateParams extends io.pulu
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(MitigationActionUpdateDeviceCertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateDeviceCertificateParamsAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

@@ -89,32 +89,32 @@ public final class BitbucketServerSecretsArgs extends io.pulumi.resources.Resour
     	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
         }
 
-        public Builder setAdminAccessTokenVersionName(Input<String> adminAccessTokenVersionName) {
+        public Builder adminAccessTokenVersionName(Input<String> adminAccessTokenVersionName) {
             this.adminAccessTokenVersionName = Objects.requireNonNull(adminAccessTokenVersionName);
             return this;
         }
 
-        public Builder setAdminAccessTokenVersionName(String adminAccessTokenVersionName) {
+        public Builder adminAccessTokenVersionName(String adminAccessTokenVersionName) {
             this.adminAccessTokenVersionName = Input.of(Objects.requireNonNull(adminAccessTokenVersionName));
             return this;
         }
 
-        public Builder setReadAccessTokenVersionName(Input<String> readAccessTokenVersionName) {
+        public Builder readAccessTokenVersionName(Input<String> readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Objects.requireNonNull(readAccessTokenVersionName);
             return this;
         }
 
-        public Builder setReadAccessTokenVersionName(String readAccessTokenVersionName) {
+        public Builder readAccessTokenVersionName(String readAccessTokenVersionName) {
             this.readAccessTokenVersionName = Input.of(Objects.requireNonNull(readAccessTokenVersionName));
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(Input<String> webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(Input<String> webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(String webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Input.of(Objects.requireNonNull(webhookSecretVersionName));
             return this;
         }

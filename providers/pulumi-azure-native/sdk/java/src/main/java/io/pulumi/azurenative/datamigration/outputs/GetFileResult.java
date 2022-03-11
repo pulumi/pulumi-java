@@ -38,13 +38,13 @@ public final class GetFileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","properties","type"})
+    @OutputCustomType.Constructor
     private GetFileResult(
-        @Nullable String etag,
-        String id,
-        String name,
-        ProjectFilePropertiesResponse properties,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") ProjectFilePropertiesResponse properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -116,27 +116,27 @@ public final class GetFileResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(ProjectFilePropertiesResponse properties) {
+        public Builder properties(ProjectFilePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

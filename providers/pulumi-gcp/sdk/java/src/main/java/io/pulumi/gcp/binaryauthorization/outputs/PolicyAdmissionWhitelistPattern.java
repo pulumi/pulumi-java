@@ -18,8 +18,8 @@ public final class PolicyAdmissionWhitelistPattern {
      */
     private final String namePattern;
 
-    @OutputCustomType.Constructor({"namePattern"})
-    private PolicyAdmissionWhitelistPattern(String namePattern) {
+    @OutputCustomType.Constructor
+    private PolicyAdmissionWhitelistPattern(@OutputCustomType.Parameter("namePattern") String namePattern) {
         this.namePattern = namePattern;
     }
 
@@ -54,7 +54,7 @@ public final class PolicyAdmissionWhitelistPattern {
     	      this.namePattern = defaults.namePattern;
         }
 
-        public Builder setNamePattern(String namePattern) {
+        public Builder namePattern(String namePattern) {
             this.namePattern = Objects.requireNonNull(namePattern);
             return this;
         }

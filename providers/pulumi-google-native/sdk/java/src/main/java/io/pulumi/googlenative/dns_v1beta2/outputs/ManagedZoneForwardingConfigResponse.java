@@ -18,10 +18,10 @@ public final class ManagedZoneForwardingConfigResponse {
      */
     private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
-    @OutputCustomType.Constructor({"kind","targetNameServers"})
+    @OutputCustomType.Constructor
     private ManagedZoneForwardingConfigResponse(
-        String kind,
-        List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("targetNameServers") List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }
@@ -59,12 +59,12 @@ public final class ManagedZoneForwardingConfigResponse {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setTargetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
+        public Builder targetNameServers(List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

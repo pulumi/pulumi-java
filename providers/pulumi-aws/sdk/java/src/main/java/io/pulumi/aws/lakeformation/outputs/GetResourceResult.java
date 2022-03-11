@@ -26,12 +26,12 @@ public final class GetResourceResult {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"arn","id","lastModified","roleArn"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String arn,
-        String id,
-        String lastModified,
-        String roleArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.arn = arn;
         this.id = id;
         this.lastModified = lastModified;
@@ -89,22 +89,22 @@ public final class GetResourceResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

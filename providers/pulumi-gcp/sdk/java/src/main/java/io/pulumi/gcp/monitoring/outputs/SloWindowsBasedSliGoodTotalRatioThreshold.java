@@ -33,11 +33,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      */
     private final @Nullable Double threshold;
 
-    @OutputCustomType.Constructor({"basicSliPerformance","performance","threshold"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThreshold(
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
-        @Nullable Double threshold) {
+        @OutputCustomType.Parameter("basicSliPerformance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
+        @OutputCustomType.Parameter("performance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;
@@ -93,17 +93,17 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance) {
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
-        public Builder setPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance) {
+        public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance) {
             this.performance = performance;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }

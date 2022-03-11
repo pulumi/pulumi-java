@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ByProductsResponse {
     private final Map<String,String> customValues;
 
-    @OutputCustomType.Constructor({"customValues"})
-    private ByProductsResponse(Map<String,String> customValues) {
+    @OutputCustomType.Constructor
+    private ByProductsResponse(@OutputCustomType.Parameter("customValues") Map<String,String> customValues) {
         this.customValues = customValues;
     }
 
@@ -41,7 +41,7 @@ public final class ByProductsResponse {
     	      this.customValues = defaults.customValues;
         }
 
-        public Builder setCustomValues(Map<String,String> customValues) {
+        public Builder customValues(Map<String,String> customValues) {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }

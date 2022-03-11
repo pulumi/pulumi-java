@@ -23,10 +23,10 @@ public final class GetAppResult {
      */
     private final @Nullable AppResourceSpec resourceSpec;
 
-    @OutputCustomType.Constructor({"appArn","resourceSpec"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        @Nullable String appArn,
-        @Nullable AppResourceSpec resourceSpec) {
+        @OutputCustomType.Parameter("appArn") @Nullable String appArn,
+        @OutputCustomType.Parameter("resourceSpec") @Nullable AppResourceSpec resourceSpec) {
         this.appArn = appArn;
         this.resourceSpec = resourceSpec;
     }
@@ -68,12 +68,12 @@ public final class GetAppResult {
     	      this.resourceSpec = defaults.resourceSpec;
         }
 
-        public Builder setAppArn(@Nullable String appArn) {
+        public Builder appArn(@Nullable String appArn) {
             this.appArn = appArn;
             return this;
         }
 
-        public Builder setResourceSpec(@Nullable AppResourceSpec resourceSpec) {
+        public Builder resourceSpec(@Nullable AppResourceSpec resourceSpec) {
             this.resourceSpec = resourceSpec;
             return this;
         }

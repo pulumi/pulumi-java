@@ -45,14 +45,14 @@ public final class RestorePointSourceVMDataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"caching","diskRestorePoint","diskSizeGB","lun","managedDisk","name"})
+    @OutputCustomType.Constructor
     private RestorePointSourceVMDataDiskResponse(
-        @Nullable String caching,
-        @Nullable ApiEntityReferenceResponse diskRestorePoint,
-        @Nullable Integer diskSizeGB,
-        @Nullable Integer lun,
-        @Nullable ManagedDiskParametersResponse managedDisk,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskRestorePoint") @Nullable ApiEntityReferenceResponse diskRestorePoint,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
+        @OutputCustomType.Parameter("managedDisk") @Nullable ManagedDiskParametersResponse managedDisk,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.caching = caching;
         this.diskRestorePoint = diskRestorePoint;
         this.diskSizeGB = diskSizeGB;
@@ -134,32 +134,32 @@ public final class RestorePointSourceVMDataDiskResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
+        public Builder diskRestorePoint(@Nullable ApiEntityReferenceResponse diskRestorePoint) {
             this.diskRestorePoint = diskRestorePoint;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setLun(@Nullable Integer lun) {
+        public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
+        public Builder managedDisk(@Nullable ManagedDiskParametersResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

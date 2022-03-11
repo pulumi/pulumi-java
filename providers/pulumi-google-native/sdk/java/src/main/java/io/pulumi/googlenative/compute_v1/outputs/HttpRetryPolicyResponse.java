@@ -28,11 +28,11 @@ public final class HttpRetryPolicyResponse {
      */
     private final List<String> retryConditions;
 
-    @OutputCustomType.Constructor({"numRetries","perTryTimeout","retryConditions"})
+    @OutputCustomType.Constructor
     private HttpRetryPolicyResponse(
-        Integer numRetries,
-        DurationResponse perTryTimeout,
-        List<String> retryConditions) {
+        @OutputCustomType.Parameter("numRetries") Integer numRetries,
+        @OutputCustomType.Parameter("perTryTimeout") DurationResponse perTryTimeout,
+        @OutputCustomType.Parameter("retryConditions") List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;
@@ -84,17 +84,17 @@ public final class HttpRetryPolicyResponse {
     	      this.retryConditions = defaults.retryConditions;
         }
 
-        public Builder setNumRetries(Integer numRetries) {
+        public Builder numRetries(Integer numRetries) {
             this.numRetries = Objects.requireNonNull(numRetries);
             return this;
         }
 
-        public Builder setPerTryTimeout(DurationResponse perTryTimeout) {
+        public Builder perTryTimeout(DurationResponse perTryTimeout) {
             this.perTryTimeout = Objects.requireNonNull(perTryTimeout);
             return this;
         }
 
-        public Builder setRetryConditions(List<String> retryConditions) {
+        public Builder retryConditions(List<String> retryConditions) {
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }

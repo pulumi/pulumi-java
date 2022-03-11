@@ -86,22 +86,22 @@ public final class GetAnalysisArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAnalysisId(String analysisId) {
+        public Builder analysisId(String analysisId) {
             this.analysisId = Objects.requireNonNull(analysisId);
             return this;
         }
 
-        public Builder setConversationId(String conversationId) {
+        public Builder conversationId(String conversationId) {
             this.conversationId = Objects.requireNonNull(conversationId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

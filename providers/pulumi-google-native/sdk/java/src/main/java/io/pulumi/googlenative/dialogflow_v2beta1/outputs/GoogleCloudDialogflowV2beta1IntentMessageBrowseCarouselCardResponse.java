@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
-    @OutputCustomType.Constructor({"imageDisplayOptions","items"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse(
-        String imageDisplayOptions,
-        List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
+        @OutputCustomType.Parameter("imageDisplayOptions") String imageDisplayOptions,
+        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
         this.imageDisplayOptions = imageDisplayOptions;
         this.items = items;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardRe
     	      this.items = defaults.items;
         }
 
-        public Builder setImageDisplayOptions(String imageDisplayOptions) {
+        public Builder imageDisplayOptions(String imageDisplayOptions) {
             this.imageDisplayOptions = Objects.requireNonNull(imageDisplayOptions);
             return this;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

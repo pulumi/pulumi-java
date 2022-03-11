@@ -39,13 +39,13 @@ public final class ConnectionMonitorTestGroupResponse {
      */
     private final List<String> testConfigurations;
 
-    @OutputCustomType.Constructor({"destinations","disable","name","sources","testConfigurations"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorTestGroupResponse(
-        List<String> destinations,
-        @Nullable Boolean disable,
-        String name,
-        List<String> sources,
-        List<String> testConfigurations) {
+        @OutputCustomType.Parameter("destinations") List<String> destinations,
+        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sources") List<String> sources,
+        @OutputCustomType.Parameter("testConfigurations") List<String> testConfigurations) {
         this.destinations = destinations;
         this.disable = disable;
         this.name = name;
@@ -117,27 +117,27 @@ public final class ConnectionMonitorTestGroupResponse {
     	      this.testConfigurations = defaults.testConfigurations;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDisable(@Nullable Boolean disable) {
+        public Builder disable(@Nullable Boolean disable) {
             this.disable = disable;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSources(List<String> sources) {
+        public Builder sources(List<String> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setTestConfigurations(List<String> testConfigurations) {
+        public Builder testConfigurations(List<String> testConfigurations) {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }

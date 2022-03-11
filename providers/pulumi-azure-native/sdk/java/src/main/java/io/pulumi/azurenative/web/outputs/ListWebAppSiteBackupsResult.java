@@ -22,10 +22,10 @@ public final class ListWebAppSiteBackupsResult {
      */
     private final List<BackupItemResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListWebAppSiteBackupsResult(
-        String nextLink,
-        List<BackupItemResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<BackupItemResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListWebAppSiteBackupsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<BackupItemResponse> value) {
+        public Builder value(List<BackupItemResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

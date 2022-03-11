@@ -26,11 +26,11 @@ public final class AudioResponse {
      */
     private final Double lufs;
 
-    @OutputCustomType.Constructor({"highBoost","lowBoost","lufs"})
+    @OutputCustomType.Constructor
     private AudioResponse(
-        Boolean highBoost,
-        Boolean lowBoost,
-        Double lufs) {
+        @OutputCustomType.Parameter("highBoost") Boolean highBoost,
+        @OutputCustomType.Parameter("lowBoost") Boolean lowBoost,
+        @OutputCustomType.Parameter("lufs") Double lufs) {
         this.highBoost = highBoost;
         this.lowBoost = lowBoost;
         this.lufs = lufs;
@@ -82,17 +82,17 @@ public final class AudioResponse {
     	      this.lufs = defaults.lufs;
         }
 
-        public Builder setHighBoost(Boolean highBoost) {
+        public Builder highBoost(Boolean highBoost) {
             this.highBoost = Objects.requireNonNull(highBoost);
             return this;
         }
 
-        public Builder setLowBoost(Boolean lowBoost) {
+        public Builder lowBoost(Boolean lowBoost) {
             this.lowBoost = Objects.requireNonNull(lowBoost);
             return this;
         }
 
-        public Builder setLufs(Double lufs) {
+        public Builder lufs(Double lufs) {
             this.lufs = Objects.requireNonNull(lufs);
             return this;
         }

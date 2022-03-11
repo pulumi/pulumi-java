@@ -25,11 +25,11 @@ public final class StreamingbufferResponse {
      */
     private final String oldestEntryTime;
 
-    @OutputCustomType.Constructor({"estimatedBytes","estimatedRows","oldestEntryTime"})
+    @OutputCustomType.Constructor
     private StreamingbufferResponse(
-        String estimatedBytes,
-        String estimatedRows,
-        String oldestEntryTime) {
+        @OutputCustomType.Parameter("estimatedBytes") String estimatedBytes,
+        @OutputCustomType.Parameter("estimatedRows") String estimatedRows,
+        @OutputCustomType.Parameter("oldestEntryTime") String oldestEntryTime) {
         this.estimatedBytes = estimatedBytes;
         this.estimatedRows = estimatedRows;
         this.oldestEntryTime = oldestEntryTime;
@@ -81,17 +81,17 @@ public final class StreamingbufferResponse {
     	      this.oldestEntryTime = defaults.oldestEntryTime;
         }
 
-        public Builder setEstimatedBytes(String estimatedBytes) {
+        public Builder estimatedBytes(String estimatedBytes) {
             this.estimatedBytes = Objects.requireNonNull(estimatedBytes);
             return this;
         }
 
-        public Builder setEstimatedRows(String estimatedRows) {
+        public Builder estimatedRows(String estimatedRows) {
             this.estimatedRows = Objects.requireNonNull(estimatedRows);
             return this;
         }
 
-        public Builder setOldestEntryTime(String oldestEntryTime) {
+        public Builder oldestEntryTime(String oldestEntryTime) {
             this.oldestEntryTime = Objects.requireNonNull(oldestEntryTime);
             return this;
         }

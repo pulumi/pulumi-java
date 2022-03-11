@@ -42,14 +42,14 @@ public final class UserPoolVerificationMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor({"defaultEmailOption","emailMessage","emailMessageByLink","emailSubject","emailSubjectByLink","smsMessage"})
+    @OutputCustomType.Constructor
     private UserPoolVerificationMessageTemplate(
-        @Nullable String defaultEmailOption,
-        @Nullable String emailMessage,
-        @Nullable String emailMessageByLink,
-        @Nullable String emailSubject,
-        @Nullable String emailSubjectByLink,
-        @Nullable String smsMessage) {
+        @OutputCustomType.Parameter("defaultEmailOption") @Nullable String defaultEmailOption,
+        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @OutputCustomType.Parameter("emailMessageByLink") @Nullable String emailMessageByLink,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @OutputCustomType.Parameter("emailSubjectByLink") @Nullable String emailSubjectByLink,
+        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.defaultEmailOption = defaultEmailOption;
         this.emailMessage = emailMessage;
         this.emailMessageByLink = emailMessageByLink;
@@ -131,32 +131,32 @@ public final class UserPoolVerificationMessageTemplate {
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder setDefaultEmailOption(@Nullable String defaultEmailOption) {
+        public Builder defaultEmailOption(@Nullable String defaultEmailOption) {
             this.defaultEmailOption = defaultEmailOption;
             return this;
         }
 
-        public Builder setEmailMessage(@Nullable String emailMessage) {
+        public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
-        public Builder setEmailMessageByLink(@Nullable String emailMessageByLink) {
+        public Builder emailMessageByLink(@Nullable String emailMessageByLink) {
             this.emailMessageByLink = emailMessageByLink;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
-        public Builder setEmailSubjectByLink(@Nullable String emailSubjectByLink) {
+        public Builder emailSubjectByLink(@Nullable String emailSubjectByLink) {
             this.emailSubjectByLink = emailSubjectByLink;
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable String smsMessage) {
+        public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }

@@ -15,12 +15,12 @@ public final class GetHealthCheckGrpcHealthCheck {
     private final String portName;
     private final String portSpecification;
 
-    @OutputCustomType.Constructor({"grpcServiceName","port","portName","portSpecification"})
+    @OutputCustomType.Constructor
     private GetHealthCheckGrpcHealthCheck(
-        String grpcServiceName,
-        Integer port,
-        String portName,
-        String portSpecification) {
+        @OutputCustomType.Parameter("grpcServiceName") String grpcServiceName,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("portSpecification") String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;
@@ -66,22 +66,22 @@ public final class GetHealthCheckGrpcHealthCheck {
     	      this.portSpecification = defaults.portSpecification;
         }
 
-        public Builder setGrpcServiceName(String grpcServiceName) {
+        public Builder grpcServiceName(String grpcServiceName) {
             this.grpcServiceName = Objects.requireNonNull(grpcServiceName);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setPortSpecification(String portSpecification) {
+        public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }

@@ -24,10 +24,10 @@ public final class MitigationActionAddThingsToThingGroupParams {
      */
     private final List<String> thingGroupNames;
 
-    @OutputCustomType.Constructor({"overrideDynamicGroups","thingGroupNames"})
+    @OutputCustomType.Constructor
     private MitigationActionAddThingsToThingGroupParams(
-        @Nullable Boolean overrideDynamicGroups,
-        List<String> thingGroupNames) {
+        @OutputCustomType.Parameter("overrideDynamicGroups") @Nullable Boolean overrideDynamicGroups,
+        @OutputCustomType.Parameter("thingGroupNames") List<String> thingGroupNames) {
         this.overrideDynamicGroups = overrideDynamicGroups;
         this.thingGroupNames = thingGroupNames;
     }
@@ -69,12 +69,12 @@ public final class MitigationActionAddThingsToThingGroupParams {
     	      this.thingGroupNames = defaults.thingGroupNames;
         }
 
-        public Builder setOverrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
+        public Builder overrideDynamicGroups(@Nullable Boolean overrideDynamicGroups) {
             this.overrideDynamicGroups = overrideDynamicGroups;
             return this;
         }
 
-        public Builder setThingGroupNames(List<String> thingGroupNames) {
+        public Builder thingGroupNames(List<String> thingGroupNames) {
             this.thingGroupNames = Objects.requireNonNull(thingGroupNames);
             return this;
         }

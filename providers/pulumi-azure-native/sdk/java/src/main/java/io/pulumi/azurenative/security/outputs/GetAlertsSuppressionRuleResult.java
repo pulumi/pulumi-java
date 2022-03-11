@@ -63,18 +63,18 @@ public final class GetAlertsSuppressionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertType","comment","expirationDateUtc","id","lastModifiedUtc","name","reason","state","suppressionAlertsScope","type"})
+    @OutputCustomType.Constructor
     private GetAlertsSuppressionRuleResult(
-        String alertType,
-        @Nullable String comment,
-        @Nullable String expirationDateUtc,
-        String id,
-        String lastModifiedUtc,
-        String name,
-        String reason,
-        String state,
-        @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
-        String type) {
+        @OutputCustomType.Parameter("alertType") String alertType,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("expirationDateUtc") @Nullable String expirationDateUtc,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("suppressionAlertsScope") @Nullable SuppressionAlertsScopeResponse suppressionAlertsScope,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertType = alertType;
         this.comment = comment;
         this.expirationDateUtc = expirationDateUtc;
@@ -196,52 +196,52 @@ public final class GetAlertsSuppressionRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlertType(String alertType) {
+        public Builder alertType(String alertType) {
             this.alertType = Objects.requireNonNull(alertType);
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setExpirationDateUtc(@Nullable String expirationDateUtc) {
+        public Builder expirationDateUtc(@Nullable String expirationDateUtc) {
             this.expirationDateUtc = expirationDateUtc;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedUtc(String lastModifiedUtc) {
+        public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSuppressionAlertsScope(@Nullable SuppressionAlertsScopeResponse suppressionAlertsScope) {
+        public Builder suppressionAlertsScope(@Nullable SuppressionAlertsScopeResponse suppressionAlertsScope) {
             this.suppressionAlertsScope = suppressionAlertsScope;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

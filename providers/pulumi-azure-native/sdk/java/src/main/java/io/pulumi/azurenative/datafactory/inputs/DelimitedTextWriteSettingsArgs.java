@@ -124,52 +124,52 @@ public final class DelimitedTextWriteSettingsArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setFileExtension(Input<Object> fileExtension) {
+        public Builder fileExtension(Input<Object> fileExtension) {
             this.fileExtension = Objects.requireNonNull(fileExtension);
             return this;
         }
 
-        public Builder setFileExtension(Object fileExtension) {
+        public Builder fileExtension(Object fileExtension) {
             this.fileExtension = Input.of(Objects.requireNonNull(fileExtension));
             return this;
         }
 
-        public Builder setFileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Input<Object> fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
-        public Builder setFileNamePrefix(@Nullable Object fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = Input.ofNullable(fileNamePrefix);
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Input<Object> maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Object maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = Input.ofNullable(maxRowsPerFile);
             return this;
         }
 
-        public Builder setQuoteAllText(@Nullable Input<Object> quoteAllText) {
+        public Builder quoteAllText(@Nullable Input<Object> quoteAllText) {
             this.quoteAllText = quoteAllText;
             return this;
         }
 
-        public Builder setQuoteAllText(@Nullable Object quoteAllText) {
+        public Builder quoteAllText(@Nullable Object quoteAllText) {
             this.quoteAllText = Input.ofNullable(quoteAllText);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

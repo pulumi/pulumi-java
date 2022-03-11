@@ -109,42 +109,42 @@ public final class ArgumentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArgumentKind(@Nullable Input<ArgumentArgumentKind> argumentKind) {
+        public Builder argumentKind(@Nullable Input<ArgumentArgumentKind> argumentKind) {
             this.argumentKind = argumentKind;
             return this;
         }
 
-        public Builder setArgumentKind(@Nullable ArgumentArgumentKind argumentKind) {
+        public Builder argumentKind(@Nullable ArgumentArgumentKind argumentKind) {
             this.argumentKind = Input.ofNullable(argumentKind);
             return this;
         }
 
-        public Builder setDataType(@Nullable Input<StandardSqlDataTypeArgs> dataType) {
+        public Builder dataType(@Nullable Input<StandardSqlDataTypeArgs> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable StandardSqlDataTypeArgs dataType) {
+        public Builder dataType(@Nullable StandardSqlDataTypeArgs dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<ArgumentMode> mode) {
+        public Builder mode(@Nullable Input<ArgumentMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable ArgumentMode mode) {
+        public Builder mode(@Nullable ArgumentMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

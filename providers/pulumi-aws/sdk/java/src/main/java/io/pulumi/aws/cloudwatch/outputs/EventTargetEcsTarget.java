@@ -73,19 +73,19 @@ public final class EventTargetEcsTarget {
      */
     private final String taskDefinitionArn;
 
-    @OutputCustomType.Constructor({"enableEcsManagedTags","enableExecuteCommand","group","launchType","networkConfiguration","placementConstraints","platformVersion","propagateTags","tags","taskCount","taskDefinitionArn"})
+    @OutputCustomType.Constructor
     private EventTargetEcsTarget(
-        @Nullable Boolean enableEcsManagedTags,
-        @Nullable Boolean enableExecuteCommand,
-        @Nullable String group,
-        @Nullable String launchType,
-        @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
-        @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
-        @Nullable String platformVersion,
-        @Nullable String propagateTags,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer taskCount,
-        String taskDefinitionArn) {
+        @OutputCustomType.Parameter("enableEcsManagedTags") @Nullable Boolean enableEcsManagedTags,
+        @OutputCustomType.Parameter("enableExecuteCommand") @Nullable Boolean enableExecuteCommand,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("launchType") @Nullable String launchType,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration,
+        @OutputCustomType.Parameter("placementConstraints") @Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints,
+        @OutputCustomType.Parameter("platformVersion") @Nullable String platformVersion,
+        @OutputCustomType.Parameter("propagateTags") @Nullable String propagateTags,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("taskCount") @Nullable Integer taskCount,
+        @OutputCustomType.Parameter("taskDefinitionArn") String taskDefinitionArn) {
         this.enableEcsManagedTags = enableEcsManagedTags;
         this.enableExecuteCommand = enableExecuteCommand;
         this.group = group;
@@ -217,57 +217,57 @@ public final class EventTargetEcsTarget {
     	      this.taskDefinitionArn = defaults.taskDefinitionArn;
         }
 
-        public Builder setEnableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
+        public Builder enableEcsManagedTags(@Nullable Boolean enableEcsManagedTags) {
             this.enableEcsManagedTags = enableEcsManagedTags;
             return this;
         }
 
-        public Builder setEnableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
+        public Builder enableExecuteCommand(@Nullable Boolean enableExecuteCommand) {
             this.enableExecuteCommand = enableExecuteCommand;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setLaunchType(@Nullable String launchType) {
+        public Builder launchType(@Nullable String launchType) {
             this.launchType = launchType;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration) {
+        public Builder networkConfiguration(@Nullable EventTargetEcsTargetNetworkConfiguration networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints) {
+        public Builder placementConstraints(@Nullable List<EventTargetEcsTargetPlacementConstraint> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPropagateTags(@Nullable String propagateTags) {
+        public Builder propagateTags(@Nullable String propagateTags) {
             this.propagateTags = propagateTags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskCount(@Nullable Integer taskCount) {
+        public Builder taskCount(@Nullable Integer taskCount) {
             this.taskCount = taskCount;
             return this;
         }
 
-        public Builder setTaskDefinitionArn(String taskDefinitionArn) {
+        public Builder taskDefinitionArn(String taskDefinitionArn) {
             this.taskDefinitionArn = Objects.requireNonNull(taskDefinitionArn);
             return this;
         }

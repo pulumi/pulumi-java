@@ -25,10 +25,10 @@ public final class ServiceOrderedPlacementStrategy {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"field","type"})
+    @OutputCustomType.Constructor
     private ServiceOrderedPlacementStrategy(
-        @Nullable String field,
-        String type) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") String type) {
         this.field = field;
         this.type = type;
     }
@@ -73,12 +73,12 @@ public final class ServiceOrderedPlacementStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

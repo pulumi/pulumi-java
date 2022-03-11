@@ -15,8 +15,8 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
      */
     private final String replicaKmsKeyId;
 
-    @OutputCustomType.Constructor({"replicaKmsKeyId"})
-    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(String replicaKmsKeyId) {
+    @OutputCustomType.Constructor
+    private BucketReplicationConfigRuleDestinationEncryptionConfiguration(@OutputCustomType.Parameter("replicaKmsKeyId") String replicaKmsKeyId) {
         this.replicaKmsKeyId = replicaKmsKeyId;
     }
 
@@ -48,7 +48,7 @@ public final class BucketReplicationConfigRuleDestinationEncryptionConfiguration
     	      this.replicaKmsKeyId = defaults.replicaKmsKeyId;
         }
 
-        public Builder setReplicaKmsKeyId(String replicaKmsKeyId) {
+        public Builder replicaKmsKeyId(String replicaKmsKeyId) {
             this.replicaKmsKeyId = Objects.requireNonNull(replicaKmsKeyId);
             return this;
         }

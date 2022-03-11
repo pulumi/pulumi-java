@@ -161,35 +161,35 @@ public final class NodeConfigResponse {
      */
     private final WorkloadMetadataConfigResponse workloadMetadataConfig;
 
-    @OutputCustomType.Constructor({"accelerators","advancedMachineFeatures","bootDiskKmsKey","diskSizeGb","diskType","ephemeralStorageConfig","gcfsConfig","gvnic","imageType","kubeletConfig","labels","linuxNodeConfig","localSsdCount","machineType","metadata","minCpuPlatform","nodeGroup","oauthScopes","preemptible","reservationAffinity","sandboxConfig","serviceAccount","shieldedInstanceConfig","spot","tags","taints","workloadMetadataConfig"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        List<AcceleratorConfigResponse> accelerators,
-        AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        String bootDiskKmsKey,
-        Integer diskSizeGb,
-        String diskType,
-        EphemeralStorageConfigResponse ephemeralStorageConfig,
-        GcfsConfigResponse gcfsConfig,
-        VirtualNICResponse gvnic,
-        String imageType,
-        NodeKubeletConfigResponse kubeletConfig,
-        Map<String,String> labels,
-        LinuxNodeConfigResponse linuxNodeConfig,
-        Integer localSsdCount,
-        String machineType,
-        Map<String,String> metadata,
-        String minCpuPlatform,
-        String nodeGroup,
-        List<String> oauthScopes,
-        Boolean preemptible,
-        ReservationAffinityResponse reservationAffinity,
-        SandboxConfigResponse sandboxConfig,
-        String serviceAccount,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        Boolean spot,
-        List<String> tags,
-        List<NodeTaintResponse> taints,
-        WorkloadMetadataConfigResponse workloadMetadataConfig) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @OutputCustomType.Parameter("bootDiskKmsKey") String bootDiskKmsKey,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("ephemeralStorageConfig") EphemeralStorageConfigResponse ephemeralStorageConfig,
+        @OutputCustomType.Parameter("gcfsConfig") GcfsConfigResponse gcfsConfig,
+        @OutputCustomType.Parameter("gvnic") VirtualNICResponse gvnic,
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("kubeletConfig") NodeKubeletConfigResponse kubeletConfig,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("linuxNodeConfig") LinuxNodeConfigResponse linuxNodeConfig,
+        @OutputCustomType.Parameter("localSsdCount") Integer localSsdCount,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("nodeGroup") String nodeGroup,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("sandboxConfig") SandboxConfigResponse sandboxConfig,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("spot") Boolean spot,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("taints") List<NodeTaintResponse> taints,
+        @OutputCustomType.Parameter("workloadMetadataConfig") WorkloadMetadataConfigResponse workloadMetadataConfig) {
         this.accelerators = accelerators;
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.bootDiskKmsKey = bootDiskKmsKey;
@@ -481,137 +481,137 @@ public final class NodeConfigResponse {
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
         }
 
-        public Builder setAccelerators(List<AcceleratorConfigResponse> accelerators) {
+        public Builder accelerators(List<AcceleratorConfigResponse> accelerators) {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
 
-        public Builder setAdvancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setBootDiskKmsKey(String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(String bootDiskKmsKey) {
             this.bootDiskKmsKey = Objects.requireNonNull(bootDiskKmsKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setEphemeralStorageConfig(EphemeralStorageConfigResponse ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(EphemeralStorageConfigResponse ephemeralStorageConfig) {
             this.ephemeralStorageConfig = Objects.requireNonNull(ephemeralStorageConfig);
             return this;
         }
 
-        public Builder setGcfsConfig(GcfsConfigResponse gcfsConfig) {
+        public Builder gcfsConfig(GcfsConfigResponse gcfsConfig) {
             this.gcfsConfig = Objects.requireNonNull(gcfsConfig);
             return this;
         }
 
-        public Builder setGvnic(VirtualNICResponse gvnic) {
+        public Builder gvnic(VirtualNICResponse gvnic) {
             this.gvnic = Objects.requireNonNull(gvnic);
             return this;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setKubeletConfig(NodeKubeletConfigResponse kubeletConfig) {
+        public Builder kubeletConfig(NodeKubeletConfigResponse kubeletConfig) {
             this.kubeletConfig = Objects.requireNonNull(kubeletConfig);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLinuxNodeConfig(LinuxNodeConfigResponse linuxNodeConfig) {
+        public Builder linuxNodeConfig(LinuxNodeConfigResponse linuxNodeConfig) {
             this.linuxNodeConfig = Objects.requireNonNull(linuxNodeConfig);
             return this;
         }
 
-        public Builder setLocalSsdCount(Integer localSsdCount) {
+        public Builder localSsdCount(Integer localSsdCount) {
             this.localSsdCount = Objects.requireNonNull(localSsdCount);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNodeGroup(String nodeGroup) {
+        public Builder nodeGroup(String nodeGroup) {
             this.nodeGroup = Objects.requireNonNull(nodeGroup);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setReservationAffinity(ReservationAffinityResponse reservationAffinity) {
+        public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
 
-        public Builder setSandboxConfig(SandboxConfigResponse sandboxConfig) {
+        public Builder sandboxConfig(SandboxConfigResponse sandboxConfig) {
             this.sandboxConfig = Objects.requireNonNull(sandboxConfig);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSpot(Boolean spot) {
+        public Builder spot(Boolean spot) {
             this.spot = Objects.requireNonNull(spot);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTaints(List<NodeTaintResponse> taints) {
+        public Builder taints(List<NodeTaintResponse> taints) {
             this.taints = Objects.requireNonNull(taints);
             return this;
         }
 
-        public Builder setWorkloadMetadataConfig(WorkloadMetadataConfigResponse workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(WorkloadMetadataConfigResponse workloadMetadataConfig) {
             this.workloadMetadataConfig = Objects.requireNonNull(workloadMetadataConfig);
             return this;
         }

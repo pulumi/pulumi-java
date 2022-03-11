@@ -56,7 +56,7 @@ public final class GoogleCloudDatacatalogV1SchemaResponse extends io.pulumi.reso
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns) {
+        public Builder columns(List<GoogleCloudDatacatalogV1ColumnSchemaResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

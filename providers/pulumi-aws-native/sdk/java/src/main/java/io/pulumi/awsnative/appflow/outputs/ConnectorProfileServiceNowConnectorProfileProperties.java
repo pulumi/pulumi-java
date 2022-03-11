@@ -15,8 +15,8 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor({"instanceUrl"})
-    private ConnectorProfileServiceNowConnectorProfileProperties(String instanceUrl) {
+    @OutputCustomType.Constructor
+    private ConnectorProfileServiceNowConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorProfileServiceNowConnectorProfileProperties {
     	      this.instanceUrl = defaults.instanceUrl;
         }
 
-        public Builder setInstanceUrl(String instanceUrl) {
+        public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }

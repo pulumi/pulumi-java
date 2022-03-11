@@ -145,62 +145,62 @@ public final class ServicePortArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetPort = defaults.targetPort;
         }
 
-        public Builder setAppProtocol(@Nullable Input<String> appProtocol) {
+        public Builder appProtocol(@Nullable Input<String> appProtocol) {
             this.appProtocol = appProtocol;
             return this;
         }
 
-        public Builder setAppProtocol(@Nullable String appProtocol) {
+        public Builder appProtocol(@Nullable String appProtocol) {
             this.appProtocol = Input.ofNullable(appProtocol);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNodePort(@Nullable Input<Integer> nodePort) {
+        public Builder nodePort(@Nullable Input<Integer> nodePort) {
             this.nodePort = nodePort;
             return this;
         }
 
-        public Builder setNodePort(@Nullable Integer nodePort) {
+        public Builder nodePort(@Nullable Integer nodePort) {
             this.nodePort = Input.ofNullable(nodePort);
             return this;
         }
 
-        public Builder setPort(Input<Integer> port) {
+        public Builder port(Input<Integer> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<String> protocol) {
+        public Builder protocol(@Nullable Input<String> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Input<Either<Integer,String>> targetPort) {
+        public Builder targetPort(@Nullable Input<Either<Integer,String>> targetPort) {
             this.targetPort = targetPort;
             return this;
         }
 
-        public Builder setTargetPort(@Nullable Either<Integer,String> targetPort) {
+        public Builder targetPort(@Nullable Either<Integer,String> targetPort) {
             this.targetPort = Input.ofNullable(targetPort);
             return this;
         }

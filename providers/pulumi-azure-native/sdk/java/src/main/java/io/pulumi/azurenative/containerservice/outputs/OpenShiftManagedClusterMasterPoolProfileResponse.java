@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
      */
     private final String vmSize;
 
-    @OutputCustomType.Constructor({"count","name","osType","subnetCidr","vmSize"})
+    @OutputCustomType.Constructor
     private OpenShiftManagedClusterMasterPoolProfileResponse(
-        Integer count,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String subnetCidr,
-        String vmSize) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("subnetCidr") @Nullable String subnetCidr,
+        @OutputCustomType.Parameter("vmSize") String vmSize) {
         this.count = count;
         this.name = name;
         this.osType = osType;
@@ -116,27 +116,27 @@ public final class OpenShiftManagedClusterMasterPoolProfileResponse {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setSubnetCidr(@Nullable String subnetCidr) {
+        public Builder subnetCidr(@Nullable String subnetCidr) {
             this.subnetCidr = subnetCidr;
             return this;
         }
 
-        public Builder setVmSize(String vmSize) {
+        public Builder vmSize(String vmSize) {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }

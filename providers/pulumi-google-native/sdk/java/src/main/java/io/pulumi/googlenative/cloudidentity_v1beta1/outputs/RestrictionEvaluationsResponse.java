@@ -15,8 +15,8 @@ public final class RestrictionEvaluationsResponse {
      */
     private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
-    @OutputCustomType.Constructor({"memberRestrictionEvaluation"})
-    private RestrictionEvaluationsResponse(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+    @OutputCustomType.Constructor
+    private RestrictionEvaluationsResponse(@OutputCustomType.Parameter("memberRestrictionEvaluation") MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
         this.memberRestrictionEvaluation = memberRestrictionEvaluation;
     }
 
@@ -48,7 +48,7 @@ public final class RestrictionEvaluationsResponse {
     	      this.memberRestrictionEvaluation = defaults.memberRestrictionEvaluation;
         }
 
-        public Builder setMemberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
+        public Builder memberRestrictionEvaluation(MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation) {
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }

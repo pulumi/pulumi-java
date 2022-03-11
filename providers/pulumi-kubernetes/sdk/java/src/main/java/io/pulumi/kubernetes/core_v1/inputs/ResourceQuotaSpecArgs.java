@@ -93,32 +93,32 @@ public final class ResourceQuotaSpecArgs extends io.pulumi.resources.ResourceArg
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setHard(@Nullable Input<Map<String,String>> hard) {
+        public Builder hard(@Nullable Input<Map<String,String>> hard) {
             this.hard = hard;
             return this;
         }
 
-        public Builder setHard(@Nullable Map<String,String> hard) {
+        public Builder hard(@Nullable Map<String,String> hard) {
             this.hard = Input.ofNullable(hard);
             return this;
         }
 
-        public Builder setScopeSelector(@Nullable Input<ScopeSelectorArgs> scopeSelector) {
+        public Builder scopeSelector(@Nullable Input<ScopeSelectorArgs> scopeSelector) {
             this.scopeSelector = scopeSelector;
             return this;
         }
 
-        public Builder setScopeSelector(@Nullable ScopeSelectorArgs scopeSelector) {
+        public Builder scopeSelector(@Nullable ScopeSelectorArgs scopeSelector) {
             this.scopeSelector = Input.ofNullable(scopeSelector);
             return this;
         }
 
-        public Builder setScopes(@Nullable Input<List<String>> scopes) {
+        public Builder scopes(@Nullable Input<List<String>> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = Input.ofNullable(scopes);
             return this;
         }

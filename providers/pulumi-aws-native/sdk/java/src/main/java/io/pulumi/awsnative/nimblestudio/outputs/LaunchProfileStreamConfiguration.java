@@ -53,14 +53,14 @@ public final class LaunchProfileStreamConfiguration {
      */
     private final List<String> streamingImageIds;
 
-    @OutputCustomType.Constructor({"clipboardMode","ec2InstanceTypes","maxSessionLengthInMinutes","maxStoppedSessionLengthInMinutes","sessionStorage","streamingImageIds"})
+    @OutputCustomType.Constructor
     private LaunchProfileStreamConfiguration(
-        LaunchProfileStreamingClipboardMode clipboardMode,
-        List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
-        @Nullable Double maxSessionLengthInMinutes,
-        @Nullable Double maxStoppedSessionLengthInMinutes,
-        @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
-        List<String> streamingImageIds) {
+        @OutputCustomType.Parameter("clipboardMode") LaunchProfileStreamingClipboardMode clipboardMode,
+        @OutputCustomType.Parameter("ec2InstanceTypes") List<LaunchProfileStreamingInstanceType> ec2InstanceTypes,
+        @OutputCustomType.Parameter("maxSessionLengthInMinutes") @Nullable Double maxSessionLengthInMinutes,
+        @OutputCustomType.Parameter("maxStoppedSessionLengthInMinutes") @Nullable Double maxStoppedSessionLengthInMinutes,
+        @OutputCustomType.Parameter("sessionStorage") @Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage,
+        @OutputCustomType.Parameter("streamingImageIds") List<String> streamingImageIds) {
         this.clipboardMode = clipboardMode;
         this.ec2InstanceTypes = ec2InstanceTypes;
         this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
@@ -148,32 +148,32 @@ public final class LaunchProfileStreamConfiguration {
     	      this.streamingImageIds = defaults.streamingImageIds;
         }
 
-        public Builder setClipboardMode(LaunchProfileStreamingClipboardMode clipboardMode) {
+        public Builder clipboardMode(LaunchProfileStreamingClipboardMode clipboardMode) {
             this.clipboardMode = Objects.requireNonNull(clipboardMode);
             return this;
         }
 
-        public Builder setEc2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
+        public Builder ec2InstanceTypes(List<LaunchProfileStreamingInstanceType> ec2InstanceTypes) {
             this.ec2InstanceTypes = Objects.requireNonNull(ec2InstanceTypes);
             return this;
         }
 
-        public Builder setMaxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
+        public Builder maxSessionLengthInMinutes(@Nullable Double maxSessionLengthInMinutes) {
             this.maxSessionLengthInMinutes = maxSessionLengthInMinutes;
             return this;
         }
 
-        public Builder setMaxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
+        public Builder maxStoppedSessionLengthInMinutes(@Nullable Double maxStoppedSessionLengthInMinutes) {
             this.maxStoppedSessionLengthInMinutes = maxStoppedSessionLengthInMinutes;
             return this;
         }
 
-        public Builder setSessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage) {
+        public Builder sessionStorage(@Nullable LaunchProfileStreamConfigurationSessionStorage sessionStorage) {
             this.sessionStorage = sessionStorage;
             return this;
         }
 
-        public Builder setStreamingImageIds(List<String> streamingImageIds) {
+        public Builder streamingImageIds(List<String> streamingImageIds) {
             this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
             return this;
         }

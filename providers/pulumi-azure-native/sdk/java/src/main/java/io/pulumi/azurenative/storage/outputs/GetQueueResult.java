@@ -38,13 +38,13 @@ public final class GetQueueResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"approximateMessageCount","id","metadata","name","type"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        Integer approximateMessageCount,
-        String id,
-        @Nullable Map<String,String> metadata,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("approximateMessageCount") Integer approximateMessageCount,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.approximateMessageCount = approximateMessageCount;
         this.id = id;
         this.metadata = metadata;
@@ -116,27 +116,27 @@ public final class GetQueueResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApproximateMessageCount(Integer approximateMessageCount) {
+        public Builder approximateMessageCount(Integer approximateMessageCount) {
             this.approximateMessageCount = Objects.requireNonNull(approximateMessageCount);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

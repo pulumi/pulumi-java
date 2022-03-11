@@ -57,17 +57,17 @@ public final class ApplicationGatewaySslCertificateResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","etag","id","keyVaultSecretId","name","password","provisioningState","publicCertData","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslCertificateResponse(
-        @Nullable String data,
-        String etag,
-        @Nullable String id,
-        @Nullable String keyVaultSecretId,
-        @Nullable String name,
-        @Nullable String password,
-        String provisioningState,
-        String publicCertData,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicCertData") String publicCertData,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.etag = etag;
         this.id = id;
@@ -179,47 +179,47 @@ public final class ApplicationGatewaySslCertificateResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKeyVaultSecretId(@Nullable String keyVaultSecretId) {
+        public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicCertData(String publicCertData) {
+        public Builder publicCertData(String publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

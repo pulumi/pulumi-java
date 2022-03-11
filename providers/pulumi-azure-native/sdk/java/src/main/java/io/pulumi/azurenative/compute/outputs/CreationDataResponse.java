@@ -60,17 +60,17 @@ public final class CreationDataResponse {
      */
     private final @Nullable Double uploadSizeBytes;
 
-    @OutputCustomType.Constructor({"createOption","galleryImageReference","imageReference","logicalSectorSize","sourceResourceId","sourceUniqueId","sourceUri","storageAccountId","uploadSizeBytes"})
+    @OutputCustomType.Constructor
     private CreationDataResponse(
-        String createOption,
-        @Nullable ImageDiskReferenceResponse galleryImageReference,
-        @Nullable ImageDiskReferenceResponse imageReference,
-        @Nullable Integer logicalSectorSize,
-        @Nullable String sourceResourceId,
-        String sourceUniqueId,
-        @Nullable String sourceUri,
-        @Nullable String storageAccountId,
-        @Nullable Double uploadSizeBytes) {
+        @OutputCustomType.Parameter("createOption") String createOption,
+        @OutputCustomType.Parameter("galleryImageReference") @Nullable ImageDiskReferenceResponse galleryImageReference,
+        @OutputCustomType.Parameter("imageReference") @Nullable ImageDiskReferenceResponse imageReference,
+        @OutputCustomType.Parameter("logicalSectorSize") @Nullable Integer logicalSectorSize,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("sourceUniqueId") String sourceUniqueId,
+        @OutputCustomType.Parameter("sourceUri") @Nullable String sourceUri,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("uploadSizeBytes") @Nullable Double uploadSizeBytes) {
         this.createOption = createOption;
         this.galleryImageReference = galleryImageReference;
         this.imageReference = imageReference;
@@ -182,47 +182,47 @@ public final class CreationDataResponse {
     	      this.uploadSizeBytes = defaults.uploadSizeBytes;
         }
 
-        public Builder setCreateOption(String createOption) {
+        public Builder createOption(String createOption) {
             this.createOption = Objects.requireNonNull(createOption);
             return this;
         }
 
-        public Builder setGalleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
+        public Builder galleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
             this.galleryImageReference = galleryImageReference;
             return this;
         }
 
-        public Builder setImageReference(@Nullable ImageDiskReferenceResponse imageReference) {
+        public Builder imageReference(@Nullable ImageDiskReferenceResponse imageReference) {
             this.imageReference = imageReference;
             return this;
         }
 
-        public Builder setLogicalSectorSize(@Nullable Integer logicalSectorSize) {
+        public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             this.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setSourceUniqueId(String sourceUniqueId) {
+        public Builder sourceUniqueId(String sourceUniqueId) {
             this.sourceUniqueId = Objects.requireNonNull(sourceUniqueId);
             return this;
         }
 
-        public Builder setSourceUri(@Nullable String sourceUri) {
+        public Builder sourceUri(@Nullable String sourceUri) {
             this.sourceUri = sourceUri;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setUploadSizeBytes(@Nullable Double uploadSizeBytes) {
+        public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }

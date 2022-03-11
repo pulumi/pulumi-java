@@ -53,16 +53,16 @@ public final class CorsPolicyResponse {
      */
     private final Integer maxAge;
 
-    @OutputCustomType.Constructor({"allowCredentials","allowHeaders","allowMethods","allowOriginRegexes","allowOrigins","disabled","exposeHeaders","maxAge"})
+    @OutputCustomType.Constructor
     private CorsPolicyResponse(
-        Boolean allowCredentials,
-        List<String> allowHeaders,
-        List<String> allowMethods,
-        List<String> allowOriginRegexes,
-        List<String> allowOrigins,
-        Boolean disabled,
-        List<String> exposeHeaders,
-        Integer maxAge) {
+        @OutputCustomType.Parameter("allowCredentials") Boolean allowCredentials,
+        @OutputCustomType.Parameter("allowHeaders") List<String> allowHeaders,
+        @OutputCustomType.Parameter("allowMethods") List<String> allowMethods,
+        @OutputCustomType.Parameter("allowOriginRegexes") List<String> allowOriginRegexes,
+        @OutputCustomType.Parameter("allowOrigins") List<String> allowOrigins,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("exposeHeaders") List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAge") Integer maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;
@@ -164,42 +164,42 @@ public final class CorsPolicyResponse {
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowCredentials(Boolean allowCredentials) {
+        public Builder allowCredentials(Boolean allowCredentials) {
             this.allowCredentials = Objects.requireNonNull(allowCredentials);
             return this;
         }
 
-        public Builder setAllowHeaders(List<String> allowHeaders) {
+        public Builder allowHeaders(List<String> allowHeaders) {
             this.allowHeaders = Objects.requireNonNull(allowHeaders);
             return this;
         }
 
-        public Builder setAllowMethods(List<String> allowMethods) {
+        public Builder allowMethods(List<String> allowMethods) {
             this.allowMethods = Objects.requireNonNull(allowMethods);
             return this;
         }
 
-        public Builder setAllowOriginRegexes(List<String> allowOriginRegexes) {
+        public Builder allowOriginRegexes(List<String> allowOriginRegexes) {
             this.allowOriginRegexes = Objects.requireNonNull(allowOriginRegexes);
             return this;
         }
 
-        public Builder setAllowOrigins(List<String> allowOrigins) {
+        public Builder allowOrigins(List<String> allowOrigins) {
             this.allowOrigins = Objects.requireNonNull(allowOrigins);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setExposeHeaders(List<String> exposeHeaders) {
+        public Builder exposeHeaders(List<String> exposeHeaders) {
             this.exposeHeaders = Objects.requireNonNull(exposeHeaders);
             return this;
         }
 
-        public Builder setMaxAge(Integer maxAge) {
+        public Builder maxAge(Integer maxAge) {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }

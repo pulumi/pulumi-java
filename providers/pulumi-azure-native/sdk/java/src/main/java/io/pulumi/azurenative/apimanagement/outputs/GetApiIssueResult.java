@@ -57,17 +57,17 @@ public final class GetApiIssueResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"apiId","createdDate","description","id","name","state","title","type","userId"})
+    @OutputCustomType.Constructor
     private GetApiIssueResult(
-        @Nullable String apiId,
-        @Nullable String createdDate,
-        String description,
-        String id,
-        String name,
-        @Nullable String state,
-        String title,
-        String type,
-        String userId) {
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.apiId = apiId;
         this.createdDate = createdDate;
         this.description = description;
@@ -179,47 +179,47 @@ public final class GetApiIssueResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

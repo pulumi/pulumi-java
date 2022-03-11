@@ -134,62 +134,62 @@ public final class EndpointMongodbSettingsGetArgs extends io.pulumi.resources.Re
     	      this.nestingLevel = defaults.nestingLevel;
         }
 
-        public Builder setAuthMechanism(@Nullable Input<String> authMechanism) {
+        public Builder authMechanism(@Nullable Input<String> authMechanism) {
             this.authMechanism = authMechanism;
             return this;
         }
 
-        public Builder setAuthMechanism(@Nullable String authMechanism) {
+        public Builder authMechanism(@Nullable String authMechanism) {
             this.authMechanism = Input.ofNullable(authMechanism);
             return this;
         }
 
-        public Builder setAuthSource(@Nullable Input<String> authSource) {
+        public Builder authSource(@Nullable Input<String> authSource) {
             this.authSource = authSource;
             return this;
         }
 
-        public Builder setAuthSource(@Nullable String authSource) {
+        public Builder authSource(@Nullable String authSource) {
             this.authSource = Input.ofNullable(authSource);
             return this;
         }
 
-        public Builder setAuthType(@Nullable Input<String> authType) {
+        public Builder authType(@Nullable Input<String> authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = Input.ofNullable(authType);
             return this;
         }
 
-        public Builder setDocsToInvestigate(@Nullable Input<String> docsToInvestigate) {
+        public Builder docsToInvestigate(@Nullable Input<String> docsToInvestigate) {
             this.docsToInvestigate = docsToInvestigate;
             return this;
         }
 
-        public Builder setDocsToInvestigate(@Nullable String docsToInvestigate) {
+        public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
             this.docsToInvestigate = Input.ofNullable(docsToInvestigate);
             return this;
         }
 
-        public Builder setExtractDocId(@Nullable Input<String> extractDocId) {
+        public Builder extractDocId(@Nullable Input<String> extractDocId) {
             this.extractDocId = extractDocId;
             return this;
         }
 
-        public Builder setExtractDocId(@Nullable String extractDocId) {
+        public Builder extractDocId(@Nullable String extractDocId) {
             this.extractDocId = Input.ofNullable(extractDocId);
             return this;
         }
 
-        public Builder setNestingLevel(@Nullable Input<String> nestingLevel) {
+        public Builder nestingLevel(@Nullable Input<String> nestingLevel) {
             this.nestingLevel = nestingLevel;
             return this;
         }
 
-        public Builder setNestingLevel(@Nullable String nestingLevel) {
+        public Builder nestingLevel(@Nullable String nestingLevel) {
             this.nestingLevel = Input.ofNullable(nestingLevel);
             return this;
         }

@@ -15,8 +15,8 @@ public final class LiveEventOutputTranscriptionTrackResponse {
      */
     private final String trackName;
 
-    @OutputCustomType.Constructor({"trackName"})
-    private LiveEventOutputTranscriptionTrackResponse(String trackName) {
+    @OutputCustomType.Constructor
+    private LiveEventOutputTranscriptionTrackResponse(@OutputCustomType.Parameter("trackName") String trackName) {
         this.trackName = trackName;
     }
 
@@ -48,7 +48,7 @@ public final class LiveEventOutputTranscriptionTrackResponse {
     	      this.trackName = defaults.trackName;
         }
 
-        public Builder setTrackName(String trackName) {
+        public Builder trackName(String trackName) {
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }

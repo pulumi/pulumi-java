@@ -20,10 +20,10 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
      */
     private final String publicIpAddress;
 
-    @OutputCustomType.Constructor({"privateIpAddress","publicIpAddress"})
+    @OutputCustomType.Constructor
     private ComputeInstanceConnectivityEndpointsResponse(
-        String privateIpAddress,
-        String publicIpAddress) {
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress) {
         this.privateIpAddress = privateIpAddress;
         this.publicIpAddress = publicIpAddress;
     }
@@ -65,12 +65,12 @@ public final class ComputeInstanceConnectivityEndpointsResponse {
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }

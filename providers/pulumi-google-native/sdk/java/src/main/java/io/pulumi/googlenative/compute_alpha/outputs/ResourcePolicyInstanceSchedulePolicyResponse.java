@@ -36,13 +36,13 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
      */
     private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 
-    @OutputCustomType.Constructor({"expirationTime","startTime","timeZone","vmStartSchedule","vmStopSchedule"})
+    @OutputCustomType.Constructor
     private ResourcePolicyInstanceSchedulePolicyResponse(
-        String expirationTime,
-        String startTime,
-        String timeZone,
-        ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule,
-        ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("vmStartSchedule") ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule,
+        @OutputCustomType.Parameter("vmStopSchedule") ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
         this.timeZone = timeZone;
@@ -114,27 +114,27 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
     	      this.vmStopSchedule = defaults.vmStopSchedule;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setVmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
+        public Builder vmStartSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule) {
             this.vmStartSchedule = Objects.requireNonNull(vmStartSchedule);
             return this;
         }
 
-        public Builder setVmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
+        public Builder vmStopSchedule(ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule) {
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
         }

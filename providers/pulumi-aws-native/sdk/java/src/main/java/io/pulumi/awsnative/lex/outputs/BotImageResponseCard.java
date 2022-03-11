@@ -34,12 +34,12 @@ public final class BotImageResponseCard {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","imageUrl","subtitle","title"})
+    @OutputCustomType.Constructor
     private BotImageResponseCard(
-        @Nullable List<BotButton> buttons,
-        @Nullable String imageUrl,
-        @Nullable String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") @Nullable List<BotButton> buttons,
+        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @OutputCustomType.Parameter("subtitle") @Nullable String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.imageUrl = imageUrl;
         this.subtitle = subtitle;
@@ -101,22 +101,22 @@ public final class BotImageResponseCard {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(@Nullable List<BotButton> buttons) {
+        public Builder buttons(@Nullable List<BotButton> buttons) {
             this.buttons = buttons;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

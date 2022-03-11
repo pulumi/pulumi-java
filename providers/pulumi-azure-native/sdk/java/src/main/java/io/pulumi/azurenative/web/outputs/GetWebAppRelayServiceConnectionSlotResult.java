@@ -40,19 +40,19 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"biztalkUri","entityConnectionString","entityName","hostname","id","kind","name","port","resourceConnectionString","resourceType","type"})
+    @OutputCustomType.Constructor
     private GetWebAppRelayServiceConnectionSlotResult(
-        @Nullable String biztalkUri,
-        @Nullable String entityConnectionString,
-        @Nullable String entityName,
-        @Nullable String hostname,
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable Integer port,
-        @Nullable String resourceConnectionString,
-        @Nullable String resourceType,
-        String type) {
+        @OutputCustomType.Parameter("biztalkUri") @Nullable String biztalkUri,
+        @OutputCustomType.Parameter("entityConnectionString") @Nullable String entityConnectionString,
+        @OutputCustomType.Parameter("entityName") @Nullable String entityName,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("resourceConnectionString") @Nullable String resourceConnectionString,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("type") String type) {
         this.biztalkUri = biztalkUri;
         this.entityConnectionString = entityConnectionString;
         this.entityName = entityName;
@@ -156,57 +156,57 @@ public final class GetWebAppRelayServiceConnectionSlotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBiztalkUri(@Nullable String biztalkUri) {
+        public Builder biztalkUri(@Nullable String biztalkUri) {
             this.biztalkUri = biztalkUri;
             return this;
         }
 
-        public Builder setEntityConnectionString(@Nullable String entityConnectionString) {
+        public Builder entityConnectionString(@Nullable String entityConnectionString) {
             this.entityConnectionString = entityConnectionString;
             return this;
         }
 
-        public Builder setEntityName(@Nullable String entityName) {
+        public Builder entityName(@Nullable String entityName) {
             this.entityName = entityName;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setResourceConnectionString(@Nullable String resourceConnectionString) {
+        public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
             this.resourceConnectionString = resourceConnectionString;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

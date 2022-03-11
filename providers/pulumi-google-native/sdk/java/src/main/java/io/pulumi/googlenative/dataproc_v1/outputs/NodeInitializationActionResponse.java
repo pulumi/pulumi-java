@@ -20,10 +20,10 @@ public final class NodeInitializationActionResponse {
      */
     private final String executionTimeout;
 
-    @OutputCustomType.Constructor({"executableFile","executionTimeout"})
+    @OutputCustomType.Constructor
     private NodeInitializationActionResponse(
-        String executableFile,
-        String executionTimeout) {
+        @OutputCustomType.Parameter("executableFile") String executableFile,
+        @OutputCustomType.Parameter("executionTimeout") String executionTimeout) {
         this.executableFile = executableFile;
         this.executionTimeout = executionTimeout;
     }
@@ -65,12 +65,12 @@ public final class NodeInitializationActionResponse {
     	      this.executionTimeout = defaults.executionTimeout;
         }
 
-        public Builder setExecutableFile(String executableFile) {
+        public Builder executableFile(String executableFile) {
             this.executableFile = Objects.requireNonNull(executableFile);
             return this;
         }
 
-        public Builder setExecutionTimeout(String executionTimeout) {
+        public Builder executionTimeout(String executionTimeout) {
             this.executionTimeout = Objects.requireNonNull(executionTimeout);
             return this;
         }

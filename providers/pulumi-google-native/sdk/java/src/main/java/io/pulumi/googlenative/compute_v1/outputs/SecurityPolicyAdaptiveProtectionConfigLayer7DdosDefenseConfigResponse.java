@@ -21,10 +21,10 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      */
     private final String ruleVisibility;
 
-    @OutputCustomType.Constructor({"enable","ruleVisibility"})
+    @OutputCustomType.Constructor
     private SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse(
-        Boolean enable,
-        String ruleVisibility) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("ruleVisibility") String ruleVisibility) {
         this.enable = enable;
         this.ruleVisibility = ruleVisibility;
     }
@@ -66,12 +66,12 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
     	      this.ruleVisibility = defaults.ruleVisibility;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setRuleVisibility(String ruleVisibility) {
+        public Builder ruleVisibility(String ruleVisibility) {
             this.ruleVisibility = Objects.requireNonNull(ruleVisibility);
             return this;
         }

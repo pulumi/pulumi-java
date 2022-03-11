@@ -70,18 +70,18 @@ public final class DatabricksNotebookActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"baseParameters","dependsOn","description","libraries","linkedServiceName","name","notebookPath","policy","type","userProperties"})
+    @OutputCustomType.Constructor
     private DatabricksNotebookActivityResponse(
-        @Nullable Map<String,Object> baseParameters,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable List<Map<String,Object>> libraries,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        Object notebookPath,
-        @Nullable ActivityPolicyResponse policy,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("baseParameters") @Nullable Map<String,Object> baseParameters,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("libraries") @Nullable List<Map<String,Object>> libraries,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notebookPath") Object notebookPath,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.baseParameters = baseParameters;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -204,52 +204,52 @@ public final class DatabricksNotebookActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setBaseParameters(@Nullable Map<String,Object> baseParameters) {
+        public Builder baseParameters(@Nullable Map<String,Object> baseParameters) {
             this.baseParameters = baseParameters;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLibraries(@Nullable List<Map<String,Object>> libraries) {
+        public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
             this.libraries = libraries;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotebookPath(Object notebookPath) {
+        public Builder notebookPath(Object notebookPath) {
             this.notebookPath = Objects.requireNonNull(notebookPath);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

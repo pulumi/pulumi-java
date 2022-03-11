@@ -23,10 +23,10 @@ public final class FlowTriggerConfig {
      */
     private final FlowTriggerType triggerType;
 
-    @OutputCustomType.Constructor({"triggerProperties","triggerType"})
+    @OutputCustomType.Constructor
     private FlowTriggerConfig(
-        @Nullable FlowScheduledTriggerProperties triggerProperties,
-        FlowTriggerType triggerType) {
+        @OutputCustomType.Parameter("triggerProperties") @Nullable FlowScheduledTriggerProperties triggerProperties,
+        @OutputCustomType.Parameter("triggerType") FlowTriggerType triggerType) {
         this.triggerProperties = triggerProperties;
         this.triggerType = triggerType;
     }
@@ -68,12 +68,12 @@ public final class FlowTriggerConfig {
     	      this.triggerType = defaults.triggerType;
         }
 
-        public Builder setTriggerProperties(@Nullable FlowScheduledTriggerProperties triggerProperties) {
+        public Builder triggerProperties(@Nullable FlowScheduledTriggerProperties triggerProperties) {
             this.triggerProperties = triggerProperties;
             return this;
         }
 
-        public Builder setTriggerType(FlowTriggerType triggerType) {
+        public Builder triggerType(FlowTriggerType triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }

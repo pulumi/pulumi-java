@@ -32,12 +32,12 @@ public final class MetadataSupportResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"email","link","name","tier"})
+    @OutputCustomType.Constructor
     private MetadataSupportResponse(
-        @Nullable String email,
-        @Nullable String link,
-        @Nullable String name,
-        String tier) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.email = email;
         this.link = link;
         this.name = name;
@@ -99,22 +99,22 @@ public final class MetadataSupportResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

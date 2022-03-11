@@ -51,15 +51,15 @@ public final class AS2ProtocolSettingsResponse {
      */
     private final AS2ValidationSettingsResponse validationSettings;
 
-    @OutputCustomType.Constructor({"acknowledgementConnectionSettings","envelopeSettings","errorSettings","mdnSettings","messageConnectionSettings","securitySettings","validationSettings"})
+    @OutputCustomType.Constructor
     private AS2ProtocolSettingsResponse(
-        AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
-        AS2EnvelopeSettingsResponse envelopeSettings,
-        AS2ErrorSettingsResponse errorSettings,
-        AS2MdnSettingsResponse mdnSettings,
-        AS2MessageConnectionSettingsResponse messageConnectionSettings,
-        AS2SecuritySettingsResponse securitySettings,
-        AS2ValidationSettingsResponse validationSettings) {
+        @OutputCustomType.Parameter("acknowledgementConnectionSettings") AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings,
+        @OutputCustomType.Parameter("envelopeSettings") AS2EnvelopeSettingsResponse envelopeSettings,
+        @OutputCustomType.Parameter("errorSettings") AS2ErrorSettingsResponse errorSettings,
+        @OutputCustomType.Parameter("mdnSettings") AS2MdnSettingsResponse mdnSettings,
+        @OutputCustomType.Parameter("messageConnectionSettings") AS2MessageConnectionSettingsResponse messageConnectionSettings,
+        @OutputCustomType.Parameter("securitySettings") AS2SecuritySettingsResponse securitySettings,
+        @OutputCustomType.Parameter("validationSettings") AS2ValidationSettingsResponse validationSettings) {
         this.acknowledgementConnectionSettings = acknowledgementConnectionSettings;
         this.envelopeSettings = envelopeSettings;
         this.errorSettings = errorSettings;
@@ -151,37 +151,37 @@ public final class AS2ProtocolSettingsResponse {
     	      this.validationSettings = defaults.validationSettings;
         }
 
-        public Builder setAcknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings) {
+        public Builder acknowledgementConnectionSettings(AS2AcknowledgementConnectionSettingsResponse acknowledgementConnectionSettings) {
             this.acknowledgementConnectionSettings = Objects.requireNonNull(acknowledgementConnectionSettings);
             return this;
         }
 
-        public Builder setEnvelopeSettings(AS2EnvelopeSettingsResponse envelopeSettings) {
+        public Builder envelopeSettings(AS2EnvelopeSettingsResponse envelopeSettings) {
             this.envelopeSettings = Objects.requireNonNull(envelopeSettings);
             return this;
         }
 
-        public Builder setErrorSettings(AS2ErrorSettingsResponse errorSettings) {
+        public Builder errorSettings(AS2ErrorSettingsResponse errorSettings) {
             this.errorSettings = Objects.requireNonNull(errorSettings);
             return this;
         }
 
-        public Builder setMdnSettings(AS2MdnSettingsResponse mdnSettings) {
+        public Builder mdnSettings(AS2MdnSettingsResponse mdnSettings) {
             this.mdnSettings = Objects.requireNonNull(mdnSettings);
             return this;
         }
 
-        public Builder setMessageConnectionSettings(AS2MessageConnectionSettingsResponse messageConnectionSettings) {
+        public Builder messageConnectionSettings(AS2MessageConnectionSettingsResponse messageConnectionSettings) {
             this.messageConnectionSettings = Objects.requireNonNull(messageConnectionSettings);
             return this;
         }
 
-        public Builder setSecuritySettings(AS2SecuritySettingsResponse securitySettings) {
+        public Builder securitySettings(AS2SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setValidationSettings(AS2ValidationSettingsResponse validationSettings) {
+        public Builder validationSettings(AS2ValidationSettingsResponse validationSettings) {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }

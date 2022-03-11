@@ -52,16 +52,16 @@ public final class GetWorkspaceConnectionResult {
      */
     private final @Nullable String valueFormat;
 
-    @OutputCustomType.Constructor({"authType","category","id","name","target","type","value","valueFormat"})
+    @OutputCustomType.Constructor
     private GetWorkspaceConnectionResult(
-        @Nullable String authType,
-        @Nullable String category,
-        String id,
-        String name,
-        @Nullable String target,
-        String type,
-        @Nullable String value,
-        @Nullable String valueFormat) {
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("valueFormat") @Nullable String valueFormat) {
         this.authType = authType;
         this.category = category;
         this.id = id;
@@ -163,42 +163,42 @@ public final class GetWorkspaceConnectionResult {
     	      this.valueFormat = defaults.valueFormat;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValueFormat(@Nullable String valueFormat) {
+        public Builder valueFormat(@Nullable String valueFormat) {
             this.valueFormat = valueFormat;
             return this;
         }

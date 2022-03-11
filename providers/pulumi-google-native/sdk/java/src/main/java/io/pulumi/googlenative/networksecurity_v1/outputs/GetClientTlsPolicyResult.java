@@ -54,16 +54,16 @@ public final class GetClientTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"clientCertificate","createTime","description","labels","name","serverValidationCa","sni","updateTime"})
+    @OutputCustomType.Constructor
     private GetClientTlsPolicyResult(
-        GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate,
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        List<ValidationCAResponse> serverValidationCa,
-        String sni,
-        String updateTime) {
+        @OutputCustomType.Parameter("clientCertificate") GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverValidationCa") List<ValidationCAResponse> serverValidationCa,
+        @OutputCustomType.Parameter("sni") String sni,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.clientCertificate = clientCertificate;
         this.createTime = createTime;
         this.description = description;
@@ -165,42 +165,42 @@ public final class GetClientTlsPolicyResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setClientCertificate(GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate) {
+        public Builder clientCertificate(GoogleCloudNetworksecurityV1CertificateProviderResponse clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServerValidationCa(List<ValidationCAResponse> serverValidationCa) {
+        public Builder serverValidationCa(List<ValidationCAResponse> serverValidationCa) {
             this.serverValidationCa = Objects.requireNonNull(serverValidationCa);
             return this;
         }
 
-        public Builder setSni(String sni) {
+        public Builder sni(String sni) {
             this.sni = Objects.requireNonNull(sni);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

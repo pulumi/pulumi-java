@@ -23,10 +23,10 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable UserAssignedPropertiesResponse userAssigned;
 
-    @OutputCustomType.Constructor({"type","userAssigned"})
+    @OutputCustomType.Constructor
     private IdentityPropertiesResponse(
-        @Nullable String type,
-        @Nullable UserAssignedPropertiesResponse userAssigned) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssigned") @Nullable UserAssignedPropertiesResponse userAssigned) {
         this.type = type;
         this.userAssigned = userAssigned;
     }
@@ -68,12 +68,12 @@ public final class IdentityPropertiesResponse {
     	      this.userAssigned = defaults.userAssigned;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
+        public Builder userAssigned(@Nullable UserAssignedPropertiesResponse userAssigned) {
             this.userAssigned = userAssigned;
             return this;
         }

@@ -135,62 +135,62 @@ public final class IntegrationResponseState extends io.pulumi.resources.Resource
     	      this.templateSelectionExpression = defaults.templateSelectionExpression;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable String contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
             this.contentHandlingStrategy = Input.ofNullable(contentHandlingStrategy);
             return this;
         }
 
-        public Builder setIntegrationId(@Nullable Input<String> integrationId) {
+        public Builder integrationId(@Nullable Input<String> integrationId) {
             this.integrationId = integrationId;
             return this;
         }
 
-        public Builder setIntegrationId(@Nullable String integrationId) {
+        public Builder integrationId(@Nullable String integrationId) {
             this.integrationId = Input.ofNullable(integrationId);
             return this;
         }
 
-        public Builder setIntegrationResponseKey(@Nullable Input<String> integrationResponseKey) {
+        public Builder integrationResponseKey(@Nullable Input<String> integrationResponseKey) {
             this.integrationResponseKey = integrationResponseKey;
             return this;
         }
 
-        public Builder setIntegrationResponseKey(@Nullable String integrationResponseKey) {
+        public Builder integrationResponseKey(@Nullable String integrationResponseKey) {
             this.integrationResponseKey = Input.ofNullable(integrationResponseKey);
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
+        public Builder responseTemplates(@Nullable Input<Map<String,String>> responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Map<String,String> responseTemplates) {
+        public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
             this.responseTemplates = Input.ofNullable(responseTemplates);
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable String templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
             this.templateSelectionExpression = Input.ofNullable(templateSelectionExpression);
             return this;
         }

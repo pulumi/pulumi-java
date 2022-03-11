@@ -26,11 +26,11 @@ public final class GetGcpUserAccessBindingResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"accessLevels","groupKey","name"})
+    @OutputCustomType.Constructor
     private GetGcpUserAccessBindingResult(
-        List<String> accessLevels,
-        String groupKey,
-        String name) {
+        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
+        @OutputCustomType.Parameter("groupKey") String groupKey,
+        @OutputCustomType.Parameter("name") String name) {
         this.accessLevels = accessLevels;
         this.groupKey = groupKey;
         this.name = name;
@@ -82,17 +82,17 @@ public final class GetGcpUserAccessBindingResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAccessLevels(List<String> accessLevels) {
+        public Builder accessLevels(List<String> accessLevels) {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
 
-        public Builder setGroupKey(String groupKey) {
+        public Builder groupKey(String groupKey) {
             this.groupKey = Objects.requireNonNull(groupKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

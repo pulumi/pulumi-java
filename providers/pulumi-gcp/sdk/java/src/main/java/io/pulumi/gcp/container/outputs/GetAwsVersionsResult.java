@@ -30,13 +30,13 @@ public final class GetAwsVersionsResult {
      */
     private final List<String> validVersions;
 
-    @OutputCustomType.Constructor({"id","location","project","supportedRegions","validVersions"})
+    @OutputCustomType.Constructor
     private GetAwsVersionsResult(
-        String id,
-        @Nullable String location,
-        @Nullable String project,
-        List<String> supportedRegions,
-        List<String> validVersions) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("supportedRegions") List<String> supportedRegions,
+        @OutputCustomType.Parameter("validVersions") List<String> validVersions) {
         this.id = id;
         this.location = location;
         this.project = project;
@@ -100,27 +100,27 @@ public final class GetAwsVersionsResult {
     	      this.validVersions = defaults.validVersions;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSupportedRegions(List<String> supportedRegions) {
+        public Builder supportedRegions(List<String> supportedRegions) {
             this.supportedRegions = Objects.requireNonNull(supportedRegions);
             return this;
         }
 
-        public Builder setValidVersions(List<String> validVersions) {
+        public Builder validVersions(List<String> validVersions) {
             this.validVersions = Objects.requireNonNull(validVersions);
             return this;
         }

@@ -108,26 +108,26 @@ public final class MasterTargetServerResponse {
      */
     private final @Nullable String versionStatus;
 
-    @OutputCustomType.Constructor({"agentExpiryDate","agentVersion","agentVersionDetails","dataStores","diskCount","healthErrors","id","ipAddress","lastHeartbeat","marsAgentExpiryDate","marsAgentVersion","marsAgentVersionDetails","name","osType","osVersion","retentionVolumes","validationErrors","versionStatus"})
+    @OutputCustomType.Constructor
     private MasterTargetServerResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable VersionDetailsResponse agentVersionDetails,
-        @Nullable List<DataStoreResponse> dataStores,
-        @Nullable Integer diskCount,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String id,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable String marsAgentExpiryDate,
-        @Nullable String marsAgentVersion,
-        @Nullable VersionDetailsResponse marsAgentVersionDetails,
-        @Nullable String name,
-        @Nullable String osType,
-        @Nullable String osVersion,
-        @Nullable List<RetentionVolumeResponse> retentionVolumes,
-        @Nullable List<HealthErrorResponse> validationErrors,
-        @Nullable String versionStatus) {
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @OutputCustomType.Parameter("dataStores") @Nullable List<DataStoreResponse> dataStores,
+        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("marsAgentExpiryDate") @Nullable String marsAgentExpiryDate,
+        @OutputCustomType.Parameter("marsAgentVersion") @Nullable String marsAgentVersion,
+        @OutputCustomType.Parameter("marsAgentVersionDetails") @Nullable VersionDetailsResponse marsAgentVersionDetails,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion,
+        @OutputCustomType.Parameter("retentionVolumes") @Nullable List<RetentionVolumeResponse> retentionVolumes,
+        @OutputCustomType.Parameter("validationErrors") @Nullable List<HealthErrorResponse> validationErrors,
+        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
         this.agentVersionDetails = agentVersionDetails;
@@ -329,92 +329,92 @@ public final class MasterTargetServerResponse {
     	      this.versionStatus = defaults.versionStatus;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
+        public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
-        public Builder setDataStores(@Nullable List<DataStoreResponse> dataStores) {
+        public Builder dataStores(@Nullable List<DataStoreResponse> dataStores) {
             this.dataStores = dataStores;
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Integer diskCount) {
+        public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
-        public Builder setHealthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setMarsAgentExpiryDate(@Nullable String marsAgentExpiryDate) {
+        public Builder marsAgentExpiryDate(@Nullable String marsAgentExpiryDate) {
             this.marsAgentExpiryDate = marsAgentExpiryDate;
             return this;
         }
 
-        public Builder setMarsAgentVersion(@Nullable String marsAgentVersion) {
+        public Builder marsAgentVersion(@Nullable String marsAgentVersion) {
             this.marsAgentVersion = marsAgentVersion;
             return this;
         }
 
-        public Builder setMarsAgentVersionDetails(@Nullable VersionDetailsResponse marsAgentVersionDetails) {
+        public Builder marsAgentVersionDetails(@Nullable VersionDetailsResponse marsAgentVersionDetails) {
             this.marsAgentVersionDetails = marsAgentVersionDetails;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsVersion(@Nullable String osVersion) {
+        public Builder osVersion(@Nullable String osVersion) {
             this.osVersion = osVersion;
             return this;
         }
 
-        public Builder setRetentionVolumes(@Nullable List<RetentionVolumeResponse> retentionVolumes) {
+        public Builder retentionVolumes(@Nullable List<RetentionVolumeResponse> retentionVolumes) {
             this.retentionVolumes = retentionVolumes;
             return this;
         }
 
-        public Builder setValidationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
+        public Builder validationErrors(@Nullable List<HealthErrorResponse> validationErrors) {
             this.validationErrors = validationErrors;
             return this;
         }
 
-        public Builder setVersionStatus(@Nullable String versionStatus) {
+        public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }

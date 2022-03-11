@@ -15,8 +15,8 @@ public final class PatchDeploymentPatchConfigGoo {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private PatchDeploymentPatchConfigGoo(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private PatchDeploymentPatchConfigGoo(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -48,7 +48,7 @@ public final class PatchDeploymentPatchConfigGoo {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

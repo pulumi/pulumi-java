@@ -39,13 +39,13 @@ public final class GetAccessPolicyResult {
      */
     private final @Nullable AccessPolicyResource accessPolicyResource;
 
-    @OutputCustomType.Constructor({"accessPolicyArn","accessPolicyId","accessPolicyIdentity","accessPolicyPermission","accessPolicyResource"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        @Nullable String accessPolicyArn,
-        @Nullable String accessPolicyId,
-        @Nullable AccessPolicyIdentity accessPolicyIdentity,
-        @Nullable String accessPolicyPermission,
-        @Nullable AccessPolicyResource accessPolicyResource) {
+        @OutputCustomType.Parameter("accessPolicyArn") @Nullable String accessPolicyArn,
+        @OutputCustomType.Parameter("accessPolicyId") @Nullable String accessPolicyId,
+        @OutputCustomType.Parameter("accessPolicyIdentity") @Nullable AccessPolicyIdentity accessPolicyIdentity,
+        @OutputCustomType.Parameter("accessPolicyPermission") @Nullable String accessPolicyPermission,
+        @OutputCustomType.Parameter("accessPolicyResource") @Nullable AccessPolicyResource accessPolicyResource) {
         this.accessPolicyArn = accessPolicyArn;
         this.accessPolicyId = accessPolicyId;
         this.accessPolicyIdentity = accessPolicyIdentity;
@@ -117,27 +117,27 @@ public final class GetAccessPolicyResult {
     	      this.accessPolicyResource = defaults.accessPolicyResource;
         }
 
-        public Builder setAccessPolicyArn(@Nullable String accessPolicyArn) {
+        public Builder accessPolicyArn(@Nullable String accessPolicyArn) {
             this.accessPolicyArn = accessPolicyArn;
             return this;
         }
 
-        public Builder setAccessPolicyId(@Nullable String accessPolicyId) {
+        public Builder accessPolicyId(@Nullable String accessPolicyId) {
             this.accessPolicyId = accessPolicyId;
             return this;
         }
 
-        public Builder setAccessPolicyIdentity(@Nullable AccessPolicyIdentity accessPolicyIdentity) {
+        public Builder accessPolicyIdentity(@Nullable AccessPolicyIdentity accessPolicyIdentity) {
             this.accessPolicyIdentity = accessPolicyIdentity;
             return this;
         }
 
-        public Builder setAccessPolicyPermission(@Nullable String accessPolicyPermission) {
+        public Builder accessPolicyPermission(@Nullable String accessPolicyPermission) {
             this.accessPolicyPermission = accessPolicyPermission;
             return this;
         }
 
-        public Builder setAccessPolicyResource(@Nullable AccessPolicyResource accessPolicyResource) {
+        public Builder accessPolicyResource(@Nullable AccessPolicyResource accessPolicyResource) {
             this.accessPolicyResource = accessPolicyResource;
             return this;
         }

@@ -24,10 +24,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor({"groupIndexes","pattern"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex(
-        @Nullable List<Integer> groupIndexes,
-        String pattern) {
+        @OutputCustomType.Parameter("groupIndexes") @Nullable List<Integer> groupIndexes,
+        @OutputCustomType.Parameter("pattern") String pattern) {
         this.groupIndexes = groupIndexes;
         this.pattern = pattern;
     }
@@ -70,12 +70,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleH
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setGroupIndexes(@Nullable List<Integer> groupIndexes) {
+        public Builder groupIndexes(@Nullable List<Integer> groupIndexes) {
             this.groupIndexes = groupIndexes;
             return this;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }

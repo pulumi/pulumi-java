@@ -27,11 +27,11 @@ public final class LoggingConfigResponse {
      */
     private final List<String> logActions;
 
-    @OutputCustomType.Constructor({"enableOnpremGcsTransferLogs","logActionStates","logActions"})
+    @OutputCustomType.Constructor
     private LoggingConfigResponse(
-        Boolean enableOnpremGcsTransferLogs,
-        List<String> logActionStates,
-        List<String> logActions) {
+        @OutputCustomType.Parameter("enableOnpremGcsTransferLogs") Boolean enableOnpremGcsTransferLogs,
+        @OutputCustomType.Parameter("logActionStates") List<String> logActionStates,
+        @OutputCustomType.Parameter("logActions") List<String> logActions) {
         this.enableOnpremGcsTransferLogs = enableOnpremGcsTransferLogs;
         this.logActionStates = logActionStates;
         this.logActions = logActions;
@@ -83,17 +83,17 @@ public final class LoggingConfigResponse {
     	      this.logActions = defaults.logActions;
         }
 
-        public Builder setEnableOnpremGcsTransferLogs(Boolean enableOnpremGcsTransferLogs) {
+        public Builder enableOnpremGcsTransferLogs(Boolean enableOnpremGcsTransferLogs) {
             this.enableOnpremGcsTransferLogs = Objects.requireNonNull(enableOnpremGcsTransferLogs);
             return this;
         }
 
-        public Builder setLogActionStates(List<String> logActionStates) {
+        public Builder logActionStates(List<String> logActionStates) {
             this.logActionStates = Objects.requireNonNull(logActionStates);
             return this;
         }
 
-        public Builder setLogActions(List<String> logActions) {
+        public Builder logActions(List<String> logActions) {
             this.logActions = Objects.requireNonNull(logActions);
             return this;
         }

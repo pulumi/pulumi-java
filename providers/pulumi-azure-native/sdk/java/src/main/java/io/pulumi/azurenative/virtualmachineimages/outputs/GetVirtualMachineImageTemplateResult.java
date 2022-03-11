@@ -101,22 +101,22 @@ public final class GetVirtualMachineImageTemplateResult {
      */
     private final @Nullable ImageTemplateVmProfileResponse vmProfile;
 
-    @OutputCustomType.Constructor({"buildTimeoutInMinutes","customize","distribute","id","identity","lastRunStatus","location","name","provisioningError","provisioningState","source","tags","type","vmProfile"})
+    @OutputCustomType.Constructor
     private GetVirtualMachineImageTemplateResult(
-        @Nullable Integer buildTimeoutInMinutes,
-        @Nullable List<Object> customize,
-        List<Object> distribute,
-        String id,
-        ImageTemplateIdentityResponse identity,
-        ImageTemplateLastRunStatusResponse lastRunStatus,
-        String location,
-        String name,
-        ProvisioningErrorResponse provisioningError,
-        String provisioningState,
-        Object source,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable ImageTemplateVmProfileResponse vmProfile) {
+        @OutputCustomType.Parameter("buildTimeoutInMinutes") @Nullable Integer buildTimeoutInMinutes,
+        @OutputCustomType.Parameter("customize") @Nullable List<Object> customize,
+        @OutputCustomType.Parameter("distribute") List<Object> distribute,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ImageTemplateIdentityResponse identity,
+        @OutputCustomType.Parameter("lastRunStatus") ImageTemplateLastRunStatusResponse lastRunStatus,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningError") ProvisioningErrorResponse provisioningError,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("source") Object source,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmProfile") @Nullable ImageTemplateVmProfileResponse vmProfile) {
         this.buildTimeoutInMinutes = buildTimeoutInMinutes;
         this.customize = customize;
         this.distribute = distribute;
@@ -278,72 +278,72 @@ public final class GetVirtualMachineImageTemplateResult {
     	      this.vmProfile = defaults.vmProfile;
         }
 
-        public Builder setBuildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
+        public Builder buildTimeoutInMinutes(@Nullable Integer buildTimeoutInMinutes) {
             this.buildTimeoutInMinutes = buildTimeoutInMinutes;
             return this;
         }
 
-        public Builder setCustomize(@Nullable List<Object> customize) {
+        public Builder customize(@Nullable List<Object> customize) {
             this.customize = customize;
             return this;
         }
 
-        public Builder setDistribute(List<Object> distribute) {
+        public Builder distribute(List<Object> distribute) {
             this.distribute = Objects.requireNonNull(distribute);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(ImageTemplateIdentityResponse identity) {
+        public Builder identity(ImageTemplateIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setLastRunStatus(ImageTemplateLastRunStatusResponse lastRunStatus) {
+        public Builder lastRunStatus(ImageTemplateLastRunStatusResponse lastRunStatus) {
             this.lastRunStatus = Objects.requireNonNull(lastRunStatus);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningError(ProvisioningErrorResponse provisioningError) {
+        public Builder provisioningError(ProvisioningErrorResponse provisioningError) {
             this.provisioningError = Objects.requireNonNull(provisioningError);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSource(Object source) {
+        public Builder source(Object source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmProfile(@Nullable ImageTemplateVmProfileResponse vmProfile) {
+        public Builder vmProfile(@Nullable ImageTemplateVmProfileResponse vmProfile) {
             this.vmProfile = vmProfile;
             return this;
         }

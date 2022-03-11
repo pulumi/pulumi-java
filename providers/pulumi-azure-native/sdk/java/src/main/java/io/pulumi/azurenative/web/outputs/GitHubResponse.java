@@ -29,11 +29,11 @@ public final class GitHubResponse {
      */
     private final @Nullable ClientRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","login","registration"})
+    @OutputCustomType.Constructor
     private GitHubResponse(
-        @Nullable Boolean enabled,
-        @Nullable LoginScopesResponse login,
-        @Nullable ClientRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("login") @Nullable LoginScopesResponse login,
+        @OutputCustomType.Parameter("registration") @Nullable ClientRegistrationResponse registration) {
         this.enabled = enabled;
         this.login = login;
         this.registration = registration;
@@ -85,17 +85,17 @@ public final class GitHubResponse {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogin(@Nullable LoginScopesResponse login) {
+        public Builder login(@Nullable LoginScopesResponse login) {
             this.login = login;
             return this;
         }
 
-        public Builder setRegistration(@Nullable ClientRegistrationResponse registration) {
+        public Builder registration(@Nullable ClientRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }

@@ -122,52 +122,52 @@ public final class DefaultNetworkAclArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDefaultNetworkAclId(Input<String> defaultNetworkAclId) {
+        public Builder defaultNetworkAclId(Input<String> defaultNetworkAclId) {
             this.defaultNetworkAclId = Objects.requireNonNull(defaultNetworkAclId);
             return this;
         }
 
-        public Builder setDefaultNetworkAclId(String defaultNetworkAclId) {
+        public Builder defaultNetworkAclId(String defaultNetworkAclId) {
             this.defaultNetworkAclId = Input.of(Objects.requireNonNull(defaultNetworkAclId));
             return this;
         }
 
-        public Builder setEgress(@Nullable Input<List<DefaultNetworkAclEgressArgs>> egress) {
+        public Builder egress(@Nullable Input<List<DefaultNetworkAclEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<DefaultNetworkAclEgressArgs> egress) {
+        public Builder egress(@Nullable List<DefaultNetworkAclEgressArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<DefaultNetworkAclIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<DefaultNetworkAclIngressArgs> ingress) {
+        public Builder ingress(@Nullable List<DefaultNetworkAclIngressArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

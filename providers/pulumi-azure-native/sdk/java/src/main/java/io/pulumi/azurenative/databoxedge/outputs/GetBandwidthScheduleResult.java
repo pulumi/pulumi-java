@@ -53,16 +53,16 @@ public final class GetBandwidthScheduleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"days","id","name","rateInMbps","start","stop","systemData","type"})
+    @OutputCustomType.Constructor
     private GetBandwidthScheduleResult(
-        List<String> days,
-        String id,
-        String name,
-        Integer rateInMbps,
-        String start,
-        String stop,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("stop") String stop,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.days = days;
         this.id = id;
         this.name = name;
@@ -164,42 +164,42 @@ public final class GetBandwidthScheduleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDays(List<String> days) {
+        public Builder days(List<String> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRateInMbps(Integer rateInMbps) {
+        public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStop(String stop) {
+        public Builder stop(String stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

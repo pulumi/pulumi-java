@@ -25,11 +25,11 @@ public final class DataSourceParametersSnowflake {
      */
     private final String warehouse;
 
-    @OutputCustomType.Constructor({"database","host","warehouse"})
+    @OutputCustomType.Constructor
     private DataSourceParametersSnowflake(
-        String database,
-        String host,
-        String warehouse) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("warehouse") String warehouse) {
         this.database = database;
         this.host = host;
         this.warehouse = warehouse;
@@ -81,17 +81,17 @@ public final class DataSourceParametersSnowflake {
     	      this.warehouse = defaults.warehouse;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setWarehouse(String warehouse) {
+        public Builder warehouse(String warehouse) {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }

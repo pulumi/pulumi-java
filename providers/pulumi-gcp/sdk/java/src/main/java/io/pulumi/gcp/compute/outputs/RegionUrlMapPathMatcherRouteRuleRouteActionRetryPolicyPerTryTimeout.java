@@ -26,10 +26,10 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
      */
     private final String seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout(
-        @Nullable Integer nanos,
-        String seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") String seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }
@@ -74,12 +74,12 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryT
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(String seconds) {
+        public Builder seconds(String seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

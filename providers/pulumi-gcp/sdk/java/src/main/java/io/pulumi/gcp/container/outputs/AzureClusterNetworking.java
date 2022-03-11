@@ -26,11 +26,11 @@ public final class AzureClusterNetworking {
      */
     private final String virtualNetworkId;
 
-    @OutputCustomType.Constructor({"podAddressCidrBlocks","serviceAddressCidrBlocks","virtualNetworkId"})
+    @OutputCustomType.Constructor
     private AzureClusterNetworking(
-        List<String> podAddressCidrBlocks,
-        List<String> serviceAddressCidrBlocks,
-        String virtualNetworkId) {
+        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @OutputCustomType.Parameter("virtualNetworkId") String virtualNetworkId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.virtualNetworkId = virtualNetworkId;
@@ -82,17 +82,17 @@ public final class AzureClusterNetworking {
     	      this.virtualNetworkId = defaults.virtualNetworkId;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setVirtualNetworkId(String virtualNetworkId) {
+        public Builder virtualNetworkId(String virtualNetworkId) {
             this.virtualNetworkId = Objects.requireNonNull(virtualNetworkId);
             return this;
         }

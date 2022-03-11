@@ -69,18 +69,18 @@ public final class AzureMLUpdateResourceActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"dependsOn","description","linkedServiceName","name","policy","trainedModelFilePath","trainedModelLinkedServiceName","trainedModelName","type","userProperties"})
+    @OutputCustomType.Constructor
     private AzureMLUpdateResourceActivityResponse(
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        Object trainedModelFilePath,
-        LinkedServiceReferenceResponse trainedModelLinkedServiceName,
-        Object trainedModelName,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("trainedModelFilePath") Object trainedModelFilePath,
+        @OutputCustomType.Parameter("trainedModelLinkedServiceName") LinkedServiceReferenceResponse trainedModelLinkedServiceName,
+        @OutputCustomType.Parameter("trainedModelName") Object trainedModelName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.dependsOn = dependsOn;
         this.description = description;
         this.linkedServiceName = linkedServiceName;
@@ -203,52 +203,52 @@ public final class AzureMLUpdateResourceActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setTrainedModelFilePath(Object trainedModelFilePath) {
+        public Builder trainedModelFilePath(Object trainedModelFilePath) {
             this.trainedModelFilePath = Objects.requireNonNull(trainedModelFilePath);
             return this;
         }
 
-        public Builder setTrainedModelLinkedServiceName(LinkedServiceReferenceResponse trainedModelLinkedServiceName) {
+        public Builder trainedModelLinkedServiceName(LinkedServiceReferenceResponse trainedModelLinkedServiceName) {
             this.trainedModelLinkedServiceName = Objects.requireNonNull(trainedModelLinkedServiceName);
             return this;
         }
 
-        public Builder setTrainedModelName(Object trainedModelName) {
+        public Builder trainedModelName(Object trainedModelName) {
             this.trainedModelName = Objects.requireNonNull(trainedModelName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

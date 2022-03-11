@@ -66,12 +66,12 @@ public final class AssetModelTumblingWindow extends io.pulumi.resources.InvokeAr
     	      this.offset = defaults.offset;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setOffset(@Nullable String offset) {
+        public Builder offset(@Nullable String offset) {
             this.offset = offset;
             return this;
         }

@@ -15,10 +15,10 @@ public final class DatastoreFileFormatConfiguration {
     private final @Nullable DatastoreJsonConfiguration jsonConfiguration;
     private final @Nullable DatastoreParquetConfiguration parquetConfiguration;
 
-    @OutputCustomType.Constructor({"jsonConfiguration","parquetConfiguration"})
+    @OutputCustomType.Constructor
     private DatastoreFileFormatConfiguration(
-        @Nullable DatastoreJsonConfiguration jsonConfiguration,
-        @Nullable DatastoreParquetConfiguration parquetConfiguration) {
+        @OutputCustomType.Parameter("jsonConfiguration") @Nullable DatastoreJsonConfiguration jsonConfiguration,
+        @OutputCustomType.Parameter("parquetConfiguration") @Nullable DatastoreParquetConfiguration parquetConfiguration) {
         this.jsonConfiguration = jsonConfiguration;
         this.parquetConfiguration = parquetConfiguration;
     }
@@ -52,12 +52,12 @@ public final class DatastoreFileFormatConfiguration {
     	      this.parquetConfiguration = defaults.parquetConfiguration;
         }
 
-        public Builder setJsonConfiguration(@Nullable DatastoreJsonConfiguration jsonConfiguration) {
+        public Builder jsonConfiguration(@Nullable DatastoreJsonConfiguration jsonConfiguration) {
             this.jsonConfiguration = jsonConfiguration;
             return this;
         }
 
-        public Builder setParquetConfiguration(@Nullable DatastoreParquetConfiguration parquetConfiguration) {
+        public Builder parquetConfiguration(@Nullable DatastoreParquetConfiguration parquetConfiguration) {
             this.parquetConfiguration = parquetConfiguration;
             return this;
         }

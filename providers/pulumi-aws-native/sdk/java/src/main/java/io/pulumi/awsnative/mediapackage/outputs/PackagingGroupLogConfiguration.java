@@ -17,8 +17,8 @@ public final class PackagingGroupLogConfiguration {
      */
     private final @Nullable String logGroupName;
 
-    @OutputCustomType.Constructor({"logGroupName"})
-    private PackagingGroupLogConfiguration(@Nullable String logGroupName) {
+    @OutputCustomType.Constructor
+    private PackagingGroupLogConfiguration(@OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName) {
         this.logGroupName = logGroupName;
     }
 
@@ -50,7 +50,7 @@ public final class PackagingGroupLogConfiguration {
     	      this.logGroupName = defaults.logGroupName;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }

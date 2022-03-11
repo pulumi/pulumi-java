@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
      */
     private final String sensitiveValueFrequencyUpperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","sensitiveValueFrequencyLowerBound","sensitiveValueFrequencyUpperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LDiversityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
-        String sensitiveValueFrequencyLowerBound,
-        String sensitiveValueFrequencyUpperBound) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues,
+        @OutputCustomType.Parameter("sensitiveValueFrequencyLowerBound") String sensitiveValueFrequencyLowerBound,
+        @OutputCustomType.Parameter("sensitiveValueFrequencyUpperBound") String sensitiveValueFrequencyUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;
@@ -115,27 +115,27 @@ public final class GooglePrivacyDlpV2LDiversityHistogramBucketResponse {
     	      this.sensitiveValueFrequencyUpperBound = defaults.sensitiveValueFrequencyUpperBound;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2LDiversityEquivalenceClassResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setSensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
+        public Builder sensitiveValueFrequencyLowerBound(String sensitiveValueFrequencyLowerBound) {
             this.sensitiveValueFrequencyLowerBound = Objects.requireNonNull(sensitiveValueFrequencyLowerBound);
             return this;
         }
 
-        public Builder setSensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
+        public Builder sensitiveValueFrequencyUpperBound(String sensitiveValueFrequencyUpperBound) {
             this.sensitiveValueFrequencyUpperBound = Objects.requireNonNull(sensitiveValueFrequencyUpperBound);
             return this;
         }

@@ -70,18 +70,18 @@ public final class AzureClusterControlPlane {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"databaseEncryption","mainVolume","proxyConfig","replicaPlacements","rootVolume","sshConfig","subnetId","tags","version","vmSize"})
+    @OutputCustomType.Constructor
     private AzureClusterControlPlane(
-        @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
-        @Nullable AzureClusterControlPlaneMainVolume mainVolume,
-        @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
-        @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
-        @Nullable AzureClusterControlPlaneRootVolume rootVolume,
-        AzureClusterControlPlaneSshConfig sshConfig,
-        String subnetId,
-        @Nullable Map<String,String> tags,
-        String version,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("databaseEncryption") @Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @OutputCustomType.Parameter("mainVolume") @Nullable AzureClusterControlPlaneMainVolume mainVolume,
+        @OutputCustomType.Parameter("proxyConfig") @Nullable AzureClusterControlPlaneProxyConfig proxyConfig,
+        @OutputCustomType.Parameter("replicaPlacements") @Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements,
+        @OutputCustomType.Parameter("rootVolume") @Nullable AzureClusterControlPlaneRootVolume rootVolume,
+        @OutputCustomType.Parameter("sshConfig") AzureClusterControlPlaneSshConfig sshConfig,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.databaseEncryption = databaseEncryption;
         this.mainVolume = mainVolume;
         this.proxyConfig = proxyConfig;
@@ -203,52 +203,52 @@ public final class AzureClusterControlPlane {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setDatabaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption) {
+        public Builder databaseEncryption(@Nullable AzureClusterControlPlaneDatabaseEncryption databaseEncryption) {
             this.databaseEncryption = databaseEncryption;
             return this;
         }
 
-        public Builder setMainVolume(@Nullable AzureClusterControlPlaneMainVolume mainVolume) {
+        public Builder mainVolume(@Nullable AzureClusterControlPlaneMainVolume mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
 
-        public Builder setProxyConfig(@Nullable AzureClusterControlPlaneProxyConfig proxyConfig) {
+        public Builder proxyConfig(@Nullable AzureClusterControlPlaneProxyConfig proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
 
-        public Builder setReplicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements) {
+        public Builder replicaPlacements(@Nullable List<AzureClusterControlPlaneReplicaPlacement> replicaPlacements) {
             this.replicaPlacements = replicaPlacements;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AzureClusterControlPlaneRootVolume rootVolume) {
+        public Builder rootVolume(@Nullable AzureClusterControlPlaneRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setSshConfig(AzureClusterControlPlaneSshConfig sshConfig) {
+        public Builder sshConfig(AzureClusterControlPlaneSshConfig sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

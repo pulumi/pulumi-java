@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
      */
     private final String organizationId;
 
-    @OutputCustomType.Constructor({"buttonId","deploymentId","endpointDomain","organizationId"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse(
-        String buttonId,
-        String deploymentId,
-        String endpointDomain,
-        String organizationId) {
+        @OutputCustomType.Parameter("buttonId") String buttonId,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("endpointDomain") String endpointDomain,
+        @OutputCustomType.Parameter("organizationId") String organizationId) {
         this.buttonId = buttonId;
         this.deploymentId = deploymentId;
         this.endpointDomain = endpointDomain;
@@ -97,22 +97,22 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforce
     	      this.organizationId = defaults.organizationId;
         }
 
-        public Builder setButtonId(String buttonId) {
+        public Builder buttonId(String buttonId) {
             this.buttonId = Objects.requireNonNull(buttonId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setEndpointDomain(String endpointDomain) {
+        public Builder endpointDomain(String endpointDomain) {
             this.endpointDomain = Objects.requireNonNull(endpointDomain);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetSecretReplicationUserManaged {
     private final List<GetSecretReplicationUserManagedReplica> replicas;
 
-    @OutputCustomType.Constructor({"replicas"})
-    private GetSecretReplicationUserManaged(List<GetSecretReplicationUserManagedReplica> replicas) {
+    @OutputCustomType.Constructor
+    private GetSecretReplicationUserManaged(@OutputCustomType.Parameter("replicas") List<GetSecretReplicationUserManagedReplica> replicas) {
         this.replicas = replicas;
     }
 
@@ -41,7 +41,7 @@ public final class GetSecretReplicationUserManaged {
     	      this.replicas = defaults.replicas;
         }
 
-        public Builder setReplicas(List<GetSecretReplicationUserManagedReplica> replicas) {
+        public Builder replicas(List<GetSecretReplicationUserManagedReplica> replicas) {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }

@@ -37,13 +37,13 @@ public final class TransformSummaryResponse {
      */
     private final List<String> outputCollectionName;
 
-    @OutputCustomType.Constructor({"displayData","inputCollectionName","kind","name","outputCollectionName"})
+    @OutputCustomType.Constructor
     private TransformSummaryResponse(
-        List<DisplayDataResponse> displayData,
-        List<String> inputCollectionName,
-        String kind,
-        String name,
-        List<String> outputCollectionName) {
+        @OutputCustomType.Parameter("displayData") List<DisplayDataResponse> displayData,
+        @OutputCustomType.Parameter("inputCollectionName") List<String> inputCollectionName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputCollectionName") List<String> outputCollectionName) {
         this.displayData = displayData;
         this.inputCollectionName = inputCollectionName;
         this.kind = kind;
@@ -115,27 +115,27 @@ public final class TransformSummaryResponse {
     	      this.outputCollectionName = defaults.outputCollectionName;
         }
 
-        public Builder setDisplayData(List<DisplayDataResponse> displayData) {
+        public Builder displayData(List<DisplayDataResponse> displayData) {
             this.displayData = Objects.requireNonNull(displayData);
             return this;
         }
 
-        public Builder setInputCollectionName(List<String> inputCollectionName) {
+        public Builder inputCollectionName(List<String> inputCollectionName) {
             this.inputCollectionName = Objects.requireNonNull(inputCollectionName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputCollectionName(List<String> outputCollectionName) {
+        public Builder outputCollectionName(List<String> outputCollectionName) {
             this.outputCollectionName = Objects.requireNonNull(outputCollectionName);
             return this;
         }

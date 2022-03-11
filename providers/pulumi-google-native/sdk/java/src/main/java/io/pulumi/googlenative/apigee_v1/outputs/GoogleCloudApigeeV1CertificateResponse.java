@@ -16,8 +16,8 @@ public final class GoogleCloudApigeeV1CertificateResponse {
      */
     private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
-    @OutputCustomType.Constructor({"certInfo"})
-    private GoogleCloudApigeeV1CertificateResponse(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
+    @OutputCustomType.Constructor
+    private GoogleCloudApigeeV1CertificateResponse(@OutputCustomType.Parameter("certInfo") List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
         this.certInfo = certInfo;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1CertificateResponse {
     	      this.certInfo = defaults.certInfo;
         }
 
-        public Builder setCertInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
+        public Builder certInfo(List<GoogleCloudApigeeV1CertInfoResponse> certInfo) {
             this.certInfo = Objects.requireNonNull(certInfo);
             return this;
         }

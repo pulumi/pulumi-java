@@ -20,8 +20,8 @@ public final class FhirStoreNotificationConfig {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"pubsubTopic"})
-    private FhirStoreNotificationConfig(String pubsubTopic) {
+    @OutputCustomType.Constructor
+    private FhirStoreNotificationConfig(@OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.pubsubTopic = pubsubTopic;
     }
 
@@ -58,7 +58,7 @@ public final class FhirStoreNotificationConfig {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

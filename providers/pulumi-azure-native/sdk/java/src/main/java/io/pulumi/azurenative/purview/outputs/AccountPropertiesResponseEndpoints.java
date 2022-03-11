@@ -25,11 +25,11 @@ public final class AccountPropertiesResponseEndpoints {
      */
     private final String scan;
 
-    @OutputCustomType.Constructor({"catalog","guardian","scan"})
+    @OutputCustomType.Constructor
     private AccountPropertiesResponseEndpoints(
-        String catalog,
-        String guardian,
-        String scan) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("guardian") String guardian,
+        @OutputCustomType.Parameter("scan") String scan) {
         this.catalog = catalog;
         this.guardian = guardian;
         this.scan = scan;
@@ -81,17 +81,17 @@ public final class AccountPropertiesResponseEndpoints {
     	      this.scan = defaults.scan;
         }
 
-        public Builder setCatalog(String catalog) {
+        public Builder catalog(String catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setGuardian(String guardian) {
+        public Builder guardian(String guardian) {
             this.guardian = Objects.requireNonNull(guardian);
             return this;
         }
 
-        public Builder setScan(String scan) {
+        public Builder scan(String scan) {
             this.scan = Objects.requireNonNull(scan);
             return this;
         }

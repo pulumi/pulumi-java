@@ -21,10 +21,10 @@ public final class MavenRepositoryConfigResponse {
      */
     private final String versionPolicy;
 
-    @OutputCustomType.Constructor({"allowSnapshotOverwrites","versionPolicy"})
+    @OutputCustomType.Constructor
     private MavenRepositoryConfigResponse(
-        Boolean allowSnapshotOverwrites,
-        String versionPolicy) {
+        @OutputCustomType.Parameter("allowSnapshotOverwrites") Boolean allowSnapshotOverwrites,
+        @OutputCustomType.Parameter("versionPolicy") String versionPolicy) {
         this.allowSnapshotOverwrites = allowSnapshotOverwrites;
         this.versionPolicy = versionPolicy;
     }
@@ -66,12 +66,12 @@ public final class MavenRepositoryConfigResponse {
     	      this.versionPolicy = defaults.versionPolicy;
         }
 
-        public Builder setAllowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
+        public Builder allowSnapshotOverwrites(Boolean allowSnapshotOverwrites) {
             this.allowSnapshotOverwrites = Objects.requireNonNull(allowSnapshotOverwrites);
             return this;
         }
 
-        public Builder setVersionPolicy(String versionPolicy) {
+        public Builder versionPolicy(String versionPolicy) {
             this.versionPolicy = Objects.requireNonNull(versionPolicy);
             return this;
         }

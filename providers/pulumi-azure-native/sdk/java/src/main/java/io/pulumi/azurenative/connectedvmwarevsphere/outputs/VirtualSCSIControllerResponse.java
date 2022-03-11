@@ -38,13 +38,13 @@ public final class VirtualSCSIControllerResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"busNumber","controllerKey","scsiCtlrUnitNumber","sharing","type"})
+    @OutputCustomType.Constructor
     private VirtualSCSIControllerResponse(
-        @Nullable Integer busNumber,
-        @Nullable Integer controllerKey,
-        @Nullable Integer scsiCtlrUnitNumber,
-        @Nullable String sharing,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("busNumber") @Nullable Integer busNumber,
+        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @OutputCustomType.Parameter("scsiCtlrUnitNumber") @Nullable Integer scsiCtlrUnitNumber,
+        @OutputCustomType.Parameter("sharing") @Nullable String sharing,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.busNumber = busNumber;
         this.controllerKey = controllerKey;
         this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
@@ -116,27 +116,27 @@ public final class VirtualSCSIControllerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBusNumber(@Nullable Integer busNumber) {
+        public Builder busNumber(@Nullable Integer busNumber) {
             this.busNumber = busNumber;
             return this;
         }
 
-        public Builder setControllerKey(@Nullable Integer controllerKey) {
+        public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = controllerKey;
             return this;
         }
 
-        public Builder setScsiCtlrUnitNumber(@Nullable Integer scsiCtlrUnitNumber) {
+        public Builder scsiCtlrUnitNumber(@Nullable Integer scsiCtlrUnitNumber) {
             this.scsiCtlrUnitNumber = scsiCtlrUnitNumber;
             return this;
         }
 
-        public Builder setSharing(@Nullable String sharing) {
+        public Builder sharing(@Nullable String sharing) {
             this.sharing = sharing;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

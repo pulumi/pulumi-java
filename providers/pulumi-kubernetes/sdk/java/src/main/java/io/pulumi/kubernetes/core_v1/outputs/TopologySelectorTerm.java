@@ -17,8 +17,8 @@ public final class TopologySelectorTerm {
      */
     private final @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions;
 
-    @OutputCustomType.Constructor({"matchLabelExpressions"})
-    private TopologySelectorTerm(@Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
+    @OutputCustomType.Constructor
+    private TopologySelectorTerm(@OutputCustomType.Parameter("matchLabelExpressions") @Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
         this.matchLabelExpressions = matchLabelExpressions;
     }
 
@@ -50,7 +50,7 @@ public final class TopologySelectorTerm {
     	      this.matchLabelExpressions = defaults.matchLabelExpressions;
         }
 
-        public Builder setMatchLabelExpressions(@Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
+        public Builder matchLabelExpressions(@Nullable List<TopologySelectorLabelRequirement> matchLabelExpressions) {
             this.matchLabelExpressions = matchLabelExpressions;
             return this;
         }

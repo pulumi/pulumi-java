@@ -75,22 +75,22 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesArgs ex
     	      this.deniedValues = defaults.deniedValues;
         }
 
-        public Builder setAllowedValues(@Nullable Input<List<String>> allowedValues) {
+        public Builder allowedValues(@Nullable Input<List<String>> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setAllowedValues(@Nullable List<String> allowedValues) {
+        public Builder allowedValues(@Nullable List<String> allowedValues) {
             this.allowedValues = Input.ofNullable(allowedValues);
             return this;
         }
 
-        public Builder setDeniedValues(@Nullable Input<List<String>> deniedValues) {
+        public Builder deniedValues(@Nullable Input<List<String>> deniedValues) {
             this.deniedValues = deniedValues;
             return this;
         }
 
-        public Builder setDeniedValues(@Nullable List<String> deniedValues) {
+        public Builder deniedValues(@Nullable List<String> deniedValues) {
             this.deniedValues = Input.ofNullable(deniedValues);
             return this;
         }

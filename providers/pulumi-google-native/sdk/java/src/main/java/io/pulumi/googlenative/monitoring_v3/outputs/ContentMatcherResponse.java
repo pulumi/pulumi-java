@@ -20,10 +20,10 @@ public final class ContentMatcherResponse {
      */
     private final String matcher;
 
-    @OutputCustomType.Constructor({"content","matcher"})
+    @OutputCustomType.Constructor
     private ContentMatcherResponse(
-        String content,
-        String matcher) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("matcher") String matcher) {
         this.content = content;
         this.matcher = matcher;
     }
@@ -65,12 +65,12 @@ public final class ContentMatcherResponse {
     	      this.matcher = defaults.matcher;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setMatcher(String matcher) {
+        public Builder matcher(String matcher) {
             this.matcher = Objects.requireNonNull(matcher);
             return this;
         }

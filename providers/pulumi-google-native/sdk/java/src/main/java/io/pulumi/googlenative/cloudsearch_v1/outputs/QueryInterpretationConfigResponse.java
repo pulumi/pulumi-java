@@ -20,10 +20,10 @@ public final class QueryInterpretationConfigResponse {
      */
     private final Boolean forceVerbatimMode;
 
-    @OutputCustomType.Constructor({"forceDisableSupplementalResults","forceVerbatimMode"})
+    @OutputCustomType.Constructor
     private QueryInterpretationConfigResponse(
-        Boolean forceDisableSupplementalResults,
-        Boolean forceVerbatimMode) {
+        @OutputCustomType.Parameter("forceDisableSupplementalResults") Boolean forceDisableSupplementalResults,
+        @OutputCustomType.Parameter("forceVerbatimMode") Boolean forceVerbatimMode) {
         this.forceDisableSupplementalResults = forceDisableSupplementalResults;
         this.forceVerbatimMode = forceVerbatimMode;
     }
@@ -65,12 +65,12 @@ public final class QueryInterpretationConfigResponse {
     	      this.forceVerbatimMode = defaults.forceVerbatimMode;
         }
 
-        public Builder setForceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
+        public Builder forceDisableSupplementalResults(Boolean forceDisableSupplementalResults) {
             this.forceDisableSupplementalResults = Objects.requireNonNull(forceDisableSupplementalResults);
             return this;
         }
 
-        public Builder setForceVerbatimMode(Boolean forceVerbatimMode) {
+        public Builder forceVerbatimMode(Boolean forceVerbatimMode) {
             this.forceVerbatimMode = Objects.requireNonNull(forceVerbatimMode);
             return this;
         }

@@ -16,8 +16,8 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
      */
     private final List<String> exacts;
 
-    @OutputCustomType.Constructor({"exacts"})
-    private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch(List<String> exacts) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecListenerTlsValidationSubjectAlternativeNamesMatch(@OutputCustomType.Parameter("exacts") List<String> exacts) {
         this.exacts = exacts;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualGatewaySpecListenerTlsValidationSubjectAlternativeName
     	      this.exacts = defaults.exacts;
         }
 
-        public Builder setExacts(List<String> exacts) {
+        public Builder exacts(List<String> exacts) {
             this.exacts = Objects.requireNonNull(exacts);
             return this;
         }

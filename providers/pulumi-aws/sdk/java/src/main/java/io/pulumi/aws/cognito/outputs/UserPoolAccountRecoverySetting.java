@@ -16,8 +16,8 @@ public final class UserPoolAccountRecoverySetting {
      */
     private final List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms;
 
-    @OutputCustomType.Constructor({"recoveryMechanisms"})
-    private UserPoolAccountRecoverySetting(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
+    @OutputCustomType.Constructor
+    private UserPoolAccountRecoverySetting(@OutputCustomType.Parameter("recoveryMechanisms") List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
         this.recoveryMechanisms = recoveryMechanisms;
     }
 
@@ -49,7 +49,7 @@ public final class UserPoolAccountRecoverySetting {
     	      this.recoveryMechanisms = defaults.recoveryMechanisms;
         }
 
-        public Builder setRecoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
+        public Builder recoveryMechanisms(List<UserPoolAccountRecoverySettingRecoveryMechanism> recoveryMechanisms) {
             this.recoveryMechanisms = Objects.requireNonNull(recoveryMechanisms);
             return this;
         }

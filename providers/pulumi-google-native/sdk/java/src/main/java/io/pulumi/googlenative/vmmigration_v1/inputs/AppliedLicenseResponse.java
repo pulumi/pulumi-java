@@ -72,12 +72,12 @@ public final class AppliedLicenseResponse extends io.pulumi.resources.InvokeArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setOsLicense(String osLicense) {
+        public Builder osLicense(String osLicense) {
             this.osLicense = Objects.requireNonNull(osLicense);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

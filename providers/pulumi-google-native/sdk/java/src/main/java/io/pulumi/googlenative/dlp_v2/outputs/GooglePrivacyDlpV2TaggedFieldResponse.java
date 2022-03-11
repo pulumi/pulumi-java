@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor({"customTag","field","inferred","infoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TaggedFieldResponse(
-        String customTag,
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GoogleProtobufEmptyResponse inferred,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @OutputCustomType.Parameter("customTag") String customTag,
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("inferred") GoogleProtobufEmptyResponse inferred,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.customTag = customTag;
         this.field = field;
         this.inferred = inferred;
@@ -100,22 +100,22 @@ public final class GooglePrivacyDlpV2TaggedFieldResponse {
     	      this.infoType = defaults.infoType;
         }
 
-        public Builder setCustomTag(String customTag) {
+        public Builder customTag(String customTag) {
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setInferred(GoogleProtobufEmptyResponse inferred) {
+        public Builder inferred(GoogleProtobufEmptyResponse inferred) {
             this.inferred = Objects.requireNonNull(inferred);
             return this;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }

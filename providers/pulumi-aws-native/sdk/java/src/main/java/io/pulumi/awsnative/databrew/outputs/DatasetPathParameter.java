@@ -13,10 +13,10 @@ public final class DatasetPathParameter {
     private final DatasetParameter datasetParameter;
     private final String pathParameterName;
 
-    @OutputCustomType.Constructor({"datasetParameter","pathParameterName"})
+    @OutputCustomType.Constructor
     private DatasetPathParameter(
-        DatasetParameter datasetParameter,
-        String pathParameterName) {
+        @OutputCustomType.Parameter("datasetParameter") DatasetParameter datasetParameter,
+        @OutputCustomType.Parameter("pathParameterName") String pathParameterName) {
         this.datasetParameter = datasetParameter;
         this.pathParameterName = pathParameterName;
     }
@@ -50,12 +50,12 @@ public final class DatasetPathParameter {
     	      this.pathParameterName = defaults.pathParameterName;
         }
 
-        public Builder setDatasetParameter(DatasetParameter datasetParameter) {
+        public Builder datasetParameter(DatasetParameter datasetParameter) {
             this.datasetParameter = Objects.requireNonNull(datasetParameter);
             return this;
         }
 
-        public Builder setPathParameterName(String pathParameterName) {
+        public Builder pathParameterName(String pathParameterName) {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
         }

@@ -203,43 +203,43 @@ public final class GetDatabaseAccountResult {
      */
     private final List<LocationResponse> writeLocations;
 
-    @OutputCustomType.Constructor({"apiProperties","backupPolicy","capabilities","connectorOffer","consistencyPolicy","cors","databaseAccountOfferType","defaultIdentity","disableKeyBasedMetadataWriteAccess","documentEndpoint","enableAnalyticalStorage","enableAutomaticFailover","enableCassandraConnector","enableFreeTier","enableMultipleWriteLocations","failoverPolicies","id","identity","ipRules","isVirtualNetworkFilterEnabled","keyVaultKeyUri","kind","location","locations","name","networkAclBypass","networkAclBypassResourceIds","privateEndpointConnections","provisioningState","publicNetworkAccess","readLocations","tags","type","virtualNetworkRules","writeLocations"})
+    @OutputCustomType.Constructor
     private GetDatabaseAccountResult(
-        @Nullable ApiPropertiesResponse apiProperties,
-        @Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy,
-        @Nullable List<CapabilityResponse> capabilities,
-        @Nullable String connectorOffer,
-        @Nullable ConsistencyPolicyResponse consistencyPolicy,
-        @Nullable List<CorsPolicyResponse> cors,
-        String databaseAccountOfferType,
-        @Nullable String defaultIdentity,
-        @Nullable Boolean disableKeyBasedMetadataWriteAccess,
-        String documentEndpoint,
-        @Nullable Boolean enableAnalyticalStorage,
-        @Nullable Boolean enableAutomaticFailover,
-        @Nullable Boolean enableCassandraConnector,
-        @Nullable Boolean enableFreeTier,
-        @Nullable Boolean enableMultipleWriteLocations,
-        List<FailoverPolicyResponse> failoverPolicies,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable List<IpAddressOrRangeResponse> ipRules,
-        @Nullable Boolean isVirtualNetworkFilterEnabled,
-        @Nullable String keyVaultKeyUri,
-        @Nullable String kind,
-        @Nullable String location,
-        List<LocationResponse> locations,
-        String name,
-        @Nullable String networkAclBypass,
-        @Nullable List<String> networkAclBypassResourceIds,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        List<LocationResponse> readLocations,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules,
-        List<LocationResponse> writeLocations) {
+        @OutputCustomType.Parameter("apiProperties") @Nullable ApiPropertiesResponse apiProperties,
+        @OutputCustomType.Parameter("backupPolicy") @Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy,
+        @OutputCustomType.Parameter("capabilities") @Nullable List<CapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("connectorOffer") @Nullable String connectorOffer,
+        @OutputCustomType.Parameter("consistencyPolicy") @Nullable ConsistencyPolicyResponse consistencyPolicy,
+        @OutputCustomType.Parameter("cors") @Nullable List<CorsPolicyResponse> cors,
+        @OutputCustomType.Parameter("databaseAccountOfferType") String databaseAccountOfferType,
+        @OutputCustomType.Parameter("defaultIdentity") @Nullable String defaultIdentity,
+        @OutputCustomType.Parameter("disableKeyBasedMetadataWriteAccess") @Nullable Boolean disableKeyBasedMetadataWriteAccess,
+        @OutputCustomType.Parameter("documentEndpoint") String documentEndpoint,
+        @OutputCustomType.Parameter("enableAnalyticalStorage") @Nullable Boolean enableAnalyticalStorage,
+        @OutputCustomType.Parameter("enableAutomaticFailover") @Nullable Boolean enableAutomaticFailover,
+        @OutputCustomType.Parameter("enableCassandraConnector") @Nullable Boolean enableCassandraConnector,
+        @OutputCustomType.Parameter("enableFreeTier") @Nullable Boolean enableFreeTier,
+        @OutputCustomType.Parameter("enableMultipleWriteLocations") @Nullable Boolean enableMultipleWriteLocations,
+        @OutputCustomType.Parameter("failoverPolicies") List<FailoverPolicyResponse> failoverPolicies,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<IpAddressOrRangeResponse> ipRules,
+        @OutputCustomType.Parameter("isVirtualNetworkFilterEnabled") @Nullable Boolean isVirtualNetworkFilterEnabled,
+        @OutputCustomType.Parameter("keyVaultKeyUri") @Nullable String keyVaultKeyUri,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("locations") List<LocationResponse> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkAclBypass") @Nullable String networkAclBypass,
+        @OutputCustomType.Parameter("networkAclBypassResourceIds") @Nullable List<String> networkAclBypassResourceIds,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("readLocations") List<LocationResponse> readLocations,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules,
+        @OutputCustomType.Parameter("writeLocations") List<LocationResponse> writeLocations) {
         this.apiProperties = apiProperties;
         this.backupPolicy = backupPolicy;
         this.capabilities = capabilities;
@@ -611,177 +611,177 @@ public final class GetDatabaseAccountResult {
     	      this.writeLocations = defaults.writeLocations;
         }
 
-        public Builder setApiProperties(@Nullable ApiPropertiesResponse apiProperties) {
+        public Builder apiProperties(@Nullable ApiPropertiesResponse apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy) {
+        public Builder backupPolicy(@Nullable Either<ContinuousModeBackupPolicyResponse,PeriodicModeBackupPolicyResponse> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable List<CapabilityResponse> capabilities) {
+        public Builder capabilities(@Nullable List<CapabilityResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setConnectorOffer(@Nullable String connectorOffer) {
+        public Builder connectorOffer(@Nullable String connectorOffer) {
             this.connectorOffer = connectorOffer;
             return this;
         }
 
-        public Builder setConsistencyPolicy(@Nullable ConsistencyPolicyResponse consistencyPolicy) {
+        public Builder consistencyPolicy(@Nullable ConsistencyPolicyResponse consistencyPolicy) {
             this.consistencyPolicy = consistencyPolicy;
             return this;
         }
 
-        public Builder setCors(@Nullable List<CorsPolicyResponse> cors) {
+        public Builder cors(@Nullable List<CorsPolicyResponse> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setDatabaseAccountOfferType(String databaseAccountOfferType) {
+        public Builder databaseAccountOfferType(String databaseAccountOfferType) {
             this.databaseAccountOfferType = Objects.requireNonNull(databaseAccountOfferType);
             return this;
         }
 
-        public Builder setDefaultIdentity(@Nullable String defaultIdentity) {
+        public Builder defaultIdentity(@Nullable String defaultIdentity) {
             this.defaultIdentity = defaultIdentity;
             return this;
         }
 
-        public Builder setDisableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
+        public Builder disableKeyBasedMetadataWriteAccess(@Nullable Boolean disableKeyBasedMetadataWriteAccess) {
             this.disableKeyBasedMetadataWriteAccess = disableKeyBasedMetadataWriteAccess;
             return this;
         }
 
-        public Builder setDocumentEndpoint(String documentEndpoint) {
+        public Builder documentEndpoint(String documentEndpoint) {
             this.documentEndpoint = Objects.requireNonNull(documentEndpoint);
             return this;
         }
 
-        public Builder setEnableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
+        public Builder enableAnalyticalStorage(@Nullable Boolean enableAnalyticalStorage) {
             this.enableAnalyticalStorage = enableAnalyticalStorage;
             return this;
         }
 
-        public Builder setEnableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
+        public Builder enableAutomaticFailover(@Nullable Boolean enableAutomaticFailover) {
             this.enableAutomaticFailover = enableAutomaticFailover;
             return this;
         }
 
-        public Builder setEnableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
+        public Builder enableCassandraConnector(@Nullable Boolean enableCassandraConnector) {
             this.enableCassandraConnector = enableCassandraConnector;
             return this;
         }
 
-        public Builder setEnableFreeTier(@Nullable Boolean enableFreeTier) {
+        public Builder enableFreeTier(@Nullable Boolean enableFreeTier) {
             this.enableFreeTier = enableFreeTier;
             return this;
         }
 
-        public Builder setEnableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
+        public Builder enableMultipleWriteLocations(@Nullable Boolean enableMultipleWriteLocations) {
             this.enableMultipleWriteLocations = enableMultipleWriteLocations;
             return this;
         }
 
-        public Builder setFailoverPolicies(List<FailoverPolicyResponse> failoverPolicies) {
+        public Builder failoverPolicies(List<FailoverPolicyResponse> failoverPolicies) {
             this.failoverPolicies = Objects.requireNonNull(failoverPolicies);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<IpAddressOrRangeResponse> ipRules) {
+        public Builder ipRules(@Nullable List<IpAddressOrRangeResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setIsVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
+        public Builder isVirtualNetworkFilterEnabled(@Nullable Boolean isVirtualNetworkFilterEnabled) {
             this.isVirtualNetworkFilterEnabled = isVirtualNetworkFilterEnabled;
             return this;
         }
 
-        public Builder setKeyVaultKeyUri(@Nullable String keyVaultKeyUri) {
+        public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
             this.keyVaultKeyUri = keyVaultKeyUri;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocations(List<LocationResponse> locations) {
+        public Builder locations(List<LocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkAclBypass(@Nullable String networkAclBypass) {
+        public Builder networkAclBypass(@Nullable String networkAclBypass) {
             this.networkAclBypass = networkAclBypass;
             return this;
         }
 
-        public Builder setNetworkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
+        public Builder networkAclBypassResourceIds(@Nullable List<String> networkAclBypassResourceIds) {
             this.networkAclBypassResourceIds = networkAclBypassResourceIds;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setReadLocations(List<LocationResponse> readLocations) {
+        public Builder readLocations(List<LocationResponse> readLocations) {
             this.readLocations = Objects.requireNonNull(readLocations);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
-        public Builder setWriteLocations(List<LocationResponse> writeLocations) {
+        public Builder writeLocations(List<LocationResponse> writeLocations) {
             this.writeLocations = Objects.requireNonNull(writeLocations);
             return this;
         }

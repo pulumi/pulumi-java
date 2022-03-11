@@ -150,34 +150,34 @@ public final class AzureIaaSVMProtectedItemResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","backupSetName","containerName","createMode","deferredDeleteTimeInUTC","deferredDeleteTimeRemaining","extendedInfo","extendedProperties","friendlyName","healthDetails","healthStatus","isDeferredDeleteScheduleUpcoming","isRehydrate","isScheduledForDeferredDelete","kpisHealths","lastBackupStatus","lastBackupTime","lastRecoveryPoint","policyId","protectedItemDataId","protectedItemType","protectionState","protectionStatus","sourceResourceId","virtualMachineId","workloadType"})
+    @OutputCustomType.Constructor
     private AzureIaaSVMProtectedItemResponse(
-        @Nullable String backupManagementType,
-        @Nullable String backupSetName,
-        @Nullable String containerName,
-        @Nullable String createMode,
-        @Nullable String deferredDeleteTimeInUTC,
-        @Nullable String deferredDeleteTimeRemaining,
-        @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo,
-        @Nullable ExtendedPropertiesResponse extendedProperties,
-        @Nullable String friendlyName,
-        @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails,
-        @Nullable String healthStatus,
-        @Nullable Boolean isDeferredDeleteScheduleUpcoming,
-        @Nullable Boolean isRehydrate,
-        @Nullable Boolean isScheduledForDeferredDelete,
-        @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastBackupTime,
-        @Nullable String lastRecoveryPoint,
-        @Nullable String policyId,
-        @Nullable String protectedItemDataId,
-        String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStatus,
-        @Nullable String sourceResourceId,
-        @Nullable String virtualMachineId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("backupSetName") @Nullable String backupSetName,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("deferredDeleteTimeInUTC") @Nullable String deferredDeleteTimeInUTC,
+        @OutputCustomType.Parameter("deferredDeleteTimeRemaining") @Nullable String deferredDeleteTimeRemaining,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable ExtendedPropertiesResponse extendedProperties,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthDetails") @Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("isDeferredDeleteScheduleUpcoming") @Nullable Boolean isDeferredDeleteScheduleUpcoming,
+        @OutputCustomType.Parameter("isRehydrate") @Nullable Boolean isRehydrate,
+        @OutputCustomType.Parameter("isScheduledForDeferredDelete") @Nullable Boolean isScheduledForDeferredDelete,
+        @OutputCustomType.Parameter("kpisHealths") @Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastBackupTime") @Nullable String lastBackupTime,
+        @OutputCustomType.Parameter("lastRecoveryPoint") @Nullable String lastRecoveryPoint,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectedItemDataId") @Nullable String protectedItemDataId,
+        @OutputCustomType.Parameter("protectedItemType") String protectedItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("virtualMachineId") @Nullable String virtualMachineId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.backupSetName = backupSetName;
         this.containerName = containerName;
@@ -460,132 +460,132 @@ public final class AzureIaaSVMProtectedItemResponse {
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setBackupSetName(@Nullable String backupSetName) {
+        public Builder backupSetName(@Nullable String backupSetName) {
             this.backupSetName = backupSetName;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setCreateMode(@Nullable String createMode) {
+        public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
+        public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
             this.deferredDeleteTimeInUTC = deferredDeleteTimeInUTC;
             return this;
         }
 
-        public Builder setDeferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
+        public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
             this.deferredDeleteTimeRemaining = deferredDeleteTimeRemaining;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable AzureIaaSVMProtectedItemExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable ExtendedPropertiesResponse extendedProperties) {
+        public Builder extendedProperties(@Nullable ExtendedPropertiesResponse extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthDetails(@Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails) {
+        public Builder healthDetails(@Nullable List<AzureIaaSVMHealthDetailsResponse> healthDetails) {
             this.healthDetails = healthDetails;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setIsDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
+        public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
             this.isDeferredDeleteScheduleUpcoming = isDeferredDeleteScheduleUpcoming;
             return this;
         }
 
-        public Builder setIsRehydrate(@Nullable Boolean isRehydrate) {
+        public Builder isRehydrate(@Nullable Boolean isRehydrate) {
             this.isRehydrate = isRehydrate;
             return this;
         }
 
-        public Builder setIsScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
+        public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
             this.isScheduledForDeferredDelete = isScheduledForDeferredDelete;
             return this;
         }
 
-        public Builder setKpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
+        public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsResponse> kpisHealths) {
             this.kpisHealths = kpisHealths;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastBackupTime(@Nullable String lastBackupTime) {
+        public Builder lastBackupTime(@Nullable String lastBackupTime) {
             this.lastBackupTime = lastBackupTime;
             return this;
         }
 
-        public Builder setLastRecoveryPoint(@Nullable String lastRecoveryPoint) {
+        public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
             this.lastRecoveryPoint = lastRecoveryPoint;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectedItemDataId(@Nullable String protectedItemDataId) {
+        public Builder protectedItemDataId(@Nullable String protectedItemDataId) {
             this.protectedItemDataId = protectedItemDataId;
             return this;
         }
 
-        public Builder setProtectedItemType(String protectedItemType) {
+        public Builder protectedItemType(String protectedItemType) {
             this.protectedItemType = Objects.requireNonNull(protectedItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionStatus(@Nullable String protectionStatus) {
+        public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setVirtualMachineId(@Nullable String virtualMachineId) {
+        public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable String workloadType) {
+        public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
         }

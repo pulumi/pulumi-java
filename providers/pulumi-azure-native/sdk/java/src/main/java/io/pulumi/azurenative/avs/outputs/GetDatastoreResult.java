@@ -44,14 +44,14 @@ public final class GetDatastoreResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"diskPoolVolume","id","name","netAppVolume","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetDatastoreResult(
-        @Nullable DiskPoolVolumeResponse diskPoolVolume,
-        String id,
-        String name,
-        @Nullable NetAppVolumeResponse netAppVolume,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("diskPoolVolume") @Nullable DiskPoolVolumeResponse diskPoolVolume,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("netAppVolume") @Nullable NetAppVolumeResponse netAppVolume,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.diskPoolVolume = diskPoolVolume;
         this.id = id;
         this.name = name;
@@ -133,32 +133,32 @@ public final class GetDatastoreResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDiskPoolVolume(@Nullable DiskPoolVolumeResponse diskPoolVolume) {
+        public Builder diskPoolVolume(@Nullable DiskPoolVolumeResponse diskPoolVolume) {
             this.diskPoolVolume = diskPoolVolume;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetAppVolume(@Nullable NetAppVolumeResponse netAppVolume) {
+        public Builder netAppVolume(@Nullable NetAppVolumeResponse netAppVolume) {
             this.netAppVolume = netAppVolume;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -28,11 +28,11 @@ public final class KeyVaultKeyResponseAttributes {
      */
     private final @Nullable Double updated;
 
-    @OutputCustomType.Constructor({"created","enabled","updated"})
+    @OutputCustomType.Constructor
     private KeyVaultKeyResponseAttributes(
-        @Nullable Double created,
-        @Nullable Boolean enabled,
-        @Nullable Double updated) {
+        @OutputCustomType.Parameter("created") @Nullable Double created,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("updated") @Nullable Double updated) {
         this.created = created;
         this.enabled = enabled;
         this.updated = updated;
@@ -84,17 +84,17 @@ public final class KeyVaultKeyResponseAttributes {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setCreated(@Nullable Double created) {
+        public Builder created(@Nullable Double created) {
             this.created = created;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setUpdated(@Nullable Double updated) {
+        public Builder updated(@Nullable Double updated) {
             this.updated = updated;
             return this;
         }

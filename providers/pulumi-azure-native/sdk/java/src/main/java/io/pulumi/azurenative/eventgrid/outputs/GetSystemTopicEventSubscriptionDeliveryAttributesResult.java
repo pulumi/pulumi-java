@@ -19,8 +19,8 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
      */
     private final @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetSystemTopicEventSubscriptionDeliveryAttributesResult(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
+    @OutputCustomType.Constructor
+    private GetSystemTopicEventSubscriptionDeliveryAttributesResult(@OutputCustomType.Parameter("value") @Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
         this.value = value;
     }
 
@@ -52,7 +52,7 @@ public final class GetSystemTopicEventSubscriptionDeliveryAttributesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
+        public Builder value(@Nullable List<Either<DynamicDeliveryAttributeMappingResponse,StaticDeliveryAttributeMappingResponse>> value) {
             this.value = value;
             return this;
         }

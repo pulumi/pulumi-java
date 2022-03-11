@@ -27,11 +27,11 @@ public final class CatalogTablePartitionKey {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"comment","name","type"})
+    @OutputCustomType.Constructor
     private CatalogTablePartitionKey(
-        @Nullable String comment,
-        String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.comment = comment;
         this.name = name;
         this.type = type;
@@ -83,17 +83,17 @@ public final class CatalogTablePartitionKey {
     	      this.type = defaults.type;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

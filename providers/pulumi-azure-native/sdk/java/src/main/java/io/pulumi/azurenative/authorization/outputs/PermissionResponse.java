@@ -32,12 +32,12 @@ public final class PermissionResponse {
      */
     private final @Nullable List<String> notDataActions;
 
-    @OutputCustomType.Constructor({"actions","dataActions","notActions","notDataActions"})
+    @OutputCustomType.Constructor
     private PermissionResponse(
-        @Nullable List<String> actions,
-        @Nullable List<String> dataActions,
-        @Nullable List<String> notActions,
-        @Nullable List<String> notDataActions) {
+        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
+        @OutputCustomType.Parameter("dataActions") @Nullable List<String> dataActions,
+        @OutputCustomType.Parameter("notActions") @Nullable List<String> notActions,
+        @OutputCustomType.Parameter("notDataActions") @Nullable List<String> notDataActions) {
         this.actions = actions;
         this.dataActions = dataActions;
         this.notActions = notActions;
@@ -99,22 +99,22 @@ public final class PermissionResponse {
     	      this.notDataActions = defaults.notDataActions;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setDataActions(@Nullable List<String> dataActions) {
+        public Builder dataActions(@Nullable List<String> dataActions) {
             this.dataActions = dataActions;
             return this;
         }
 
-        public Builder setNotActions(@Nullable List<String> notActions) {
+        public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = notActions;
             return this;
         }
 
-        public Builder setNotDataActions(@Nullable List<String> notDataActions) {
+        public Builder notDataActions(@Nullable List<String> notDataActions) {
             this.notDataActions = notDataActions;
             return this;
         }

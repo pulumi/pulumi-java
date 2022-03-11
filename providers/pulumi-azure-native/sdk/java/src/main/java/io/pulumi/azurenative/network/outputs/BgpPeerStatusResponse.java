@@ -51,16 +51,16 @@ public final class BgpPeerStatusResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"asn","connectedDuration","localAddress","messagesReceived","messagesSent","neighbor","routesReceived","state"})
+    @OutputCustomType.Constructor
     private BgpPeerStatusResponse(
-        Double asn,
-        String connectedDuration,
-        String localAddress,
-        Double messagesReceived,
-        Double messagesSent,
-        String neighbor,
-        Double routesReceived,
-        String state) {
+        @OutputCustomType.Parameter("asn") Double asn,
+        @OutputCustomType.Parameter("connectedDuration") String connectedDuration,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("messagesReceived") Double messagesReceived,
+        @OutputCustomType.Parameter("messagesSent") Double messagesSent,
+        @OutputCustomType.Parameter("neighbor") String neighbor,
+        @OutputCustomType.Parameter("routesReceived") Double routesReceived,
+        @OutputCustomType.Parameter("state") String state) {
         this.asn = asn;
         this.connectedDuration = connectedDuration;
         this.localAddress = localAddress;
@@ -162,42 +162,42 @@ public final class BgpPeerStatusResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAsn(Double asn) {
+        public Builder asn(Double asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }
 
-        public Builder setConnectedDuration(String connectedDuration) {
+        public Builder connectedDuration(String connectedDuration) {
             this.connectedDuration = Objects.requireNonNull(connectedDuration);
             return this;
         }
 
-        public Builder setLocalAddress(String localAddress) {
+        public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
 
-        public Builder setMessagesReceived(Double messagesReceived) {
+        public Builder messagesReceived(Double messagesReceived) {
             this.messagesReceived = Objects.requireNonNull(messagesReceived);
             return this;
         }
 
-        public Builder setMessagesSent(Double messagesSent) {
+        public Builder messagesSent(Double messagesSent) {
             this.messagesSent = Objects.requireNonNull(messagesSent);
             return this;
         }
 
-        public Builder setNeighbor(String neighbor) {
+        public Builder neighbor(String neighbor) {
             this.neighbor = Objects.requireNonNull(neighbor);
             return this;
         }
 
-        public Builder setRoutesReceived(Double routesReceived) {
+        public Builder routesReceived(Double routesReceived) {
             this.routesReceived = Objects.requireNonNull(routesReceived);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -72,19 +72,19 @@ public final class GetRouteTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"disableBgpRoutePropagation","etag","id","location","name","provisioningState","resourceGuid","routes","subnets","tags","type"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        @Nullable Boolean disableBgpRoutePropagation,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<RouteResponse> routes,
-        List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("disableBgpRoutePropagation") @Nullable Boolean disableBgpRoutePropagation,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("routes") @Nullable List<RouteResponse> routes,
+        @OutputCustomType.Parameter("subnets") List<SubnetResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.disableBgpRoutePropagation = disableBgpRoutePropagation;
         this.etag = etag;
         this.id = id;
@@ -216,57 +216,57 @@ public final class GetRouteTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
+        public Builder disableBgpRoutePropagation(@Nullable Boolean disableBgpRoutePropagation) {
             this.disableBgpRoutePropagation = disableBgpRoutePropagation;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<RouteResponse> routes) {
+        public Builder routes(@Nullable List<RouteResponse> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setSubnets(List<SubnetResponse> subnets) {
+        public Builder subnets(List<SubnetResponse> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

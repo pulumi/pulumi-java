@@ -12,10 +12,10 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
     private final String cidrBlock;
     private final String displayName;
 
-    @OutputCustomType.Constructor({"cidrBlock","displayName"})
+    @OutputCustomType.Constructor
     private GetClusterMasterAuthorizedNetworksConfigCidrBlock(
-        String cidrBlock,
-        String displayName) {
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("displayName") String displayName) {
         this.cidrBlock = cidrBlock;
         this.displayName = displayName;
     }
@@ -49,12 +49,12 @@ public final class GetClusterMasterAuthorizedNetworksConfigCidrBlock {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }

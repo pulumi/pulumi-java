@@ -64,12 +64,12 @@ public final class RuleGroupStatelessRulesAndCustomActions extends io.pulumi.res
     	      this.statelessRules = defaults.statelessRules;
         }
 
-        public Builder setCustomActions(@Nullable List<RuleGroupCustomAction> customActions) {
+        public Builder customActions(@Nullable List<RuleGroupCustomAction> customActions) {
             this.customActions = customActions;
             return this;
         }
 
-        public Builder setStatelessRules(List<RuleGroupStatelessRule> statelessRules) {
+        public Builder statelessRules(List<RuleGroupStatelessRule> statelessRules) {
             this.statelessRules = Objects.requireNonNull(statelessRules);
             return this;
         }

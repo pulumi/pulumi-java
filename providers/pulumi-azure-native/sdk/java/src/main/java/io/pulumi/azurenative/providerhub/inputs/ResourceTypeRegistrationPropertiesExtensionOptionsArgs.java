@@ -49,12 +49,12 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     	      this.resourceCreationBegin = defaults.resourceCreationBegin;
         }
 
-        public Builder setResourceCreationBegin(@Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
+        public Builder resourceCreationBegin(@Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin) {
             this.resourceCreationBegin = resourceCreationBegin;
             return this;
         }
 
-        public Builder setResourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
+        public Builder resourceCreationBegin(@Nullable ResourceTypeExtensionOptionsResourceCreationBeginArgs resourceCreationBegin) {
             this.resourceCreationBegin = Input.ofNullable(resourceCreationBegin);
             return this;
         }

@@ -25,11 +25,11 @@ public final class UrlDispatchRuleResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"domain","path","service"})
+    @OutputCustomType.Constructor
     private UrlDispatchRuleResponse(
-        String domain,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.domain = domain;
         this.path = path;
         this.service = service;
@@ -81,17 +81,17 @@ public final class UrlDispatchRuleResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

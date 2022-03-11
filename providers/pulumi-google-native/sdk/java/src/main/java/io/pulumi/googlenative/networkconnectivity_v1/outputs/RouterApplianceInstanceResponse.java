@@ -20,10 +20,10 @@ public final class RouterApplianceInstanceResponse {
      */
     private final String virtualMachine;
 
-    @OutputCustomType.Constructor({"ipAddress","virtualMachine"})
+    @OutputCustomType.Constructor
     private RouterApplianceInstanceResponse(
-        String ipAddress,
-        String virtualMachine) {
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("virtualMachine") String virtualMachine) {
         this.ipAddress = ipAddress;
         this.virtualMachine = virtualMachine;
     }
@@ -65,12 +65,12 @@ public final class RouterApplianceInstanceResponse {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setVirtualMachine(String virtualMachine) {
+        public Builder virtualMachine(String virtualMachine) {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }

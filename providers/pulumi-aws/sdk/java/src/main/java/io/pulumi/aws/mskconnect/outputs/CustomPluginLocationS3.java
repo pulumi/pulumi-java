@@ -27,11 +27,11 @@ public final class CustomPluginLocationS3 {
      */
     private final @Nullable String objectVersion;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey","objectVersion"})
+    @OutputCustomType.Constructor
     private CustomPluginLocationS3(
-        String bucketArn,
-        String fileKey,
-        @Nullable String objectVersion) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey,
+        @OutputCustomType.Parameter("objectVersion") @Nullable String objectVersion) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.objectVersion = objectVersion;
@@ -83,17 +83,17 @@ public final class CustomPluginLocationS3 {
     	      this.objectVersion = defaults.objectVersion;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFileKey(String fileKey) {
+        public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
-        public Builder setObjectVersion(@Nullable String objectVersion) {
+        public Builder objectVersion(@Nullable String objectVersion) {
             this.objectVersion = objectVersion;
             return this;
         }

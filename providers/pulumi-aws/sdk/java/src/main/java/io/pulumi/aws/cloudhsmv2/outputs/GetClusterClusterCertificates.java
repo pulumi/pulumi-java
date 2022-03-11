@@ -15,13 +15,13 @@ public final class GetClusterClusterCertificates {
     private final String hsmCertificate;
     private final String manufacturerHardwareCertificate;
 
-    @OutputCustomType.Constructor({"awsHardwareCertificate","clusterCertificate","clusterCsr","hsmCertificate","manufacturerHardwareCertificate"})
+    @OutputCustomType.Constructor
     private GetClusterClusterCertificates(
-        String awsHardwareCertificate,
-        String clusterCertificate,
-        String clusterCsr,
-        String hsmCertificate,
-        String manufacturerHardwareCertificate) {
+        @OutputCustomType.Parameter("awsHardwareCertificate") String awsHardwareCertificate,
+        @OutputCustomType.Parameter("clusterCertificate") String clusterCertificate,
+        @OutputCustomType.Parameter("clusterCsr") String clusterCsr,
+        @OutputCustomType.Parameter("hsmCertificate") String hsmCertificate,
+        @OutputCustomType.Parameter("manufacturerHardwareCertificate") String manufacturerHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         this.clusterCertificate = clusterCertificate;
         this.clusterCsr = clusterCsr;
@@ -73,27 +73,27 @@ public final class GetClusterClusterCertificates {
     	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
         }
 
-        public Builder setAwsHardwareCertificate(String awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(String awsHardwareCertificate) {
             this.awsHardwareCertificate = Objects.requireNonNull(awsHardwareCertificate);
             return this;
         }
 
-        public Builder setClusterCertificate(String clusterCertificate) {
+        public Builder clusterCertificate(String clusterCertificate) {
             this.clusterCertificate = Objects.requireNonNull(clusterCertificate);
             return this;
         }
 
-        public Builder setClusterCsr(String clusterCsr) {
+        public Builder clusterCsr(String clusterCsr) {
             this.clusterCsr = Objects.requireNonNull(clusterCsr);
             return this;
         }
 
-        public Builder setHsmCertificate(String hsmCertificate) {
+        public Builder hsmCertificate(String hsmCertificate) {
             this.hsmCertificate = Objects.requireNonNull(hsmCertificate);
             return this;
         }
 
-        public Builder setManufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = Objects.requireNonNull(manufacturerHardwareCertificate);
             return this;
         }

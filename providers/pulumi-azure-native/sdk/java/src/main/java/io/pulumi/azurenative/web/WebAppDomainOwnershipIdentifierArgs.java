@@ -118,52 +118,52 @@ public final class WebAppDomainOwnershipIdentifierArgs extends io.pulumi.resourc
     	      this.value = defaults.value;
         }
 
-        public Builder setDomainOwnershipIdentifierName(@Nullable Input<String> domainOwnershipIdentifierName) {
+        public Builder domainOwnershipIdentifierName(@Nullable Input<String> domainOwnershipIdentifierName) {
             this.domainOwnershipIdentifierName = domainOwnershipIdentifierName;
             return this;
         }
 
-        public Builder setDomainOwnershipIdentifierName(@Nullable String domainOwnershipIdentifierName) {
+        public Builder domainOwnershipIdentifierName(@Nullable String domainOwnershipIdentifierName) {
             this.domainOwnershipIdentifierName = Input.ofNullable(domainOwnershipIdentifierName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

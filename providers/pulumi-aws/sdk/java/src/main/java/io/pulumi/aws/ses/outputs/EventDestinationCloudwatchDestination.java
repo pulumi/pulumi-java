@@ -25,11 +25,11 @@ public final class EventDestinationCloudwatchDestination {
      */
     private final String valueSource;
 
-    @OutputCustomType.Constructor({"defaultValue","dimensionName","valueSource"})
+    @OutputCustomType.Constructor
     private EventDestinationCloudwatchDestination(
-        String defaultValue,
-        String dimensionName,
-        String valueSource) {
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("dimensionName") String dimensionName,
+        @OutputCustomType.Parameter("valueSource") String valueSource) {
         this.defaultValue = defaultValue;
         this.dimensionName = dimensionName;
         this.valueSource = valueSource;
@@ -81,17 +81,17 @@ public final class EventDestinationCloudwatchDestination {
     	      this.valueSource = defaults.valueSource;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setValueSource(String valueSource) {
+        public Builder valueSource(String valueSource) {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }

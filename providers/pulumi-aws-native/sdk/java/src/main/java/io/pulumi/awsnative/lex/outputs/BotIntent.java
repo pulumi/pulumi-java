@@ -40,21 +40,21 @@ public final class BotIntent {
      */
     private final @Nullable List<BotSlot> slots;
 
-    @OutputCustomType.Constructor({"description","dialogCodeHook","fulfillmentCodeHook","inputContexts","intentClosingSetting","intentConfirmationSetting","kendraConfiguration","name","outputContexts","parentIntentSignature","sampleUtterances","slotPriorities","slots"})
+    @OutputCustomType.Constructor
     private BotIntent(
-        @Nullable String description,
-        @Nullable BotDialogCodeHookSetting dialogCodeHook,
-        @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
-        @Nullable List<BotInputContext> inputContexts,
-        @Nullable BotIntentClosingSetting intentClosingSetting,
-        @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
-        @Nullable BotKendraConfiguration kendraConfiguration,
-        String name,
-        @Nullable List<BotOutputContext> outputContexts,
-        @Nullable String parentIntentSignature,
-        @Nullable List<BotSampleUtterance> sampleUtterances,
-        @Nullable List<BotSlotPriority> slotPriorities,
-        @Nullable List<BotSlot> slots) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("dialogCodeHook") @Nullable BotDialogCodeHookSetting dialogCodeHook,
+        @OutputCustomType.Parameter("fulfillmentCodeHook") @Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook,
+        @OutputCustomType.Parameter("inputContexts") @Nullable List<BotInputContext> inputContexts,
+        @OutputCustomType.Parameter("intentClosingSetting") @Nullable BotIntentClosingSetting intentClosingSetting,
+        @OutputCustomType.Parameter("intentConfirmationSetting") @Nullable BotIntentConfirmationSetting intentConfirmationSetting,
+        @OutputCustomType.Parameter("kendraConfiguration") @Nullable BotKendraConfiguration kendraConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputContexts") @Nullable List<BotOutputContext> outputContexts,
+        @OutputCustomType.Parameter("parentIntentSignature") @Nullable String parentIntentSignature,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @OutputCustomType.Parameter("slotPriorities") @Nullable List<BotSlotPriority> slotPriorities,
+        @OutputCustomType.Parameter("slots") @Nullable List<BotSlot> slots) {
         this.description = description;
         this.dialogCodeHook = dialogCodeHook;
         this.fulfillmentCodeHook = fulfillmentCodeHook;
@@ -158,67 +158,67 @@ public final class BotIntent {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable BotDialogCodeHookSetting dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable BotDialogCodeHookSetting dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
-        public Builder setFulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook) {
+        public Builder fulfillmentCodeHook(@Nullable BotFulfillmentCodeHookSetting fulfillmentCodeHook) {
             this.fulfillmentCodeHook = fulfillmentCodeHook;
             return this;
         }
 
-        public Builder setInputContexts(@Nullable List<BotInputContext> inputContexts) {
+        public Builder inputContexts(@Nullable List<BotInputContext> inputContexts) {
             this.inputContexts = inputContexts;
             return this;
         }
 
-        public Builder setIntentClosingSetting(@Nullable BotIntentClosingSetting intentClosingSetting) {
+        public Builder intentClosingSetting(@Nullable BotIntentClosingSetting intentClosingSetting) {
             this.intentClosingSetting = intentClosingSetting;
             return this;
         }
 
-        public Builder setIntentConfirmationSetting(@Nullable BotIntentConfirmationSetting intentConfirmationSetting) {
+        public Builder intentConfirmationSetting(@Nullable BotIntentConfirmationSetting intentConfirmationSetting) {
             this.intentConfirmationSetting = intentConfirmationSetting;
             return this;
         }
 
-        public Builder setKendraConfiguration(@Nullable BotKendraConfiguration kendraConfiguration) {
+        public Builder kendraConfiguration(@Nullable BotKendraConfiguration kendraConfiguration) {
             this.kendraConfiguration = kendraConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputContexts(@Nullable List<BotOutputContext> outputContexts) {
+        public Builder outputContexts(@Nullable List<BotOutputContext> outputContexts) {
             this.outputContexts = outputContexts;
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable String parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSlotPriorities(@Nullable List<BotSlotPriority> slotPriorities) {
+        public Builder slotPriorities(@Nullable List<BotSlotPriority> slotPriorities) {
             this.slotPriorities = slotPriorities;
             return this;
         }
 
-        public Builder setSlots(@Nullable List<BotSlot> slots) {
+        public Builder slots(@Nullable List<BotSlot> slots) {
             this.slots = slots;
             return this;
         }

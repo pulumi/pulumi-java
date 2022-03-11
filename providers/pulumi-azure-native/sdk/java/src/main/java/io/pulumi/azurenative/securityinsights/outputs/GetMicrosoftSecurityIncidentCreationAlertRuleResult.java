@@ -85,22 +85,22 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alertRuleTemplateName","description","displayName","displayNamesExcludeFilter","displayNamesFilter","enabled","etag","id","kind","lastModifiedUtc","name","productFilter","severitiesFilter","type"})
+    @OutputCustomType.Constructor
     private GetMicrosoftSecurityIncidentCreationAlertRuleResult(
-        @Nullable String alertRuleTemplateName,
-        @Nullable String description,
-        String displayName,
-        @Nullable List<String> displayNamesExcludeFilter,
-        @Nullable List<String> displayNamesFilter,
-        Boolean enabled,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String lastModifiedUtc,
-        String name,
-        String productFilter,
-        @Nullable List<String> severitiesFilter,
-        String type) {
+        @OutputCustomType.Parameter("alertRuleTemplateName") @Nullable String alertRuleTemplateName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("displayNamesExcludeFilter") @Nullable List<String> displayNamesExcludeFilter,
+        @OutputCustomType.Parameter("displayNamesFilter") @Nullable List<String> displayNamesFilter,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("lastModifiedUtc") String lastModifiedUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("productFilter") String productFilter,
+        @OutputCustomType.Parameter("severitiesFilter") @Nullable List<String> severitiesFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.alertRuleTemplateName = alertRuleTemplateName;
         this.description = description;
         this.displayName = displayName;
@@ -263,72 +263,72 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlertRuleTemplateName(@Nullable String alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
+        public Builder displayNamesExcludeFilter(@Nullable List<String> displayNamesExcludeFilter) {
             this.displayNamesExcludeFilter = displayNamesExcludeFilter;
             return this;
         }
 
-        public Builder setDisplayNamesFilter(@Nullable List<String> displayNamesFilter) {
+        public Builder displayNamesFilter(@Nullable List<String> displayNamesFilter) {
             this.displayNamesFilter = displayNamesFilter;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLastModifiedUtc(String lastModifiedUtc) {
+        public Builder lastModifiedUtc(String lastModifiedUtc) {
             this.lastModifiedUtc = Objects.requireNonNull(lastModifiedUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProductFilter(String productFilter) {
+        public Builder productFilter(String productFilter) {
             this.productFilter = Objects.requireNonNull(productFilter);
             return this;
         }
 
-        public Builder setSeveritiesFilter(@Nullable List<String> severitiesFilter) {
+        public Builder severitiesFilter(@Nullable List<String> severitiesFilter) {
             this.severitiesFilter = severitiesFilter;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

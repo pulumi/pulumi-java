@@ -33,12 +33,12 @@ public final class ParameterDefinitionsValueResponseMetadata {
      */
     private final @Nullable String strongType;
 
-    @OutputCustomType.Constructor({"assignPermissions","description","displayName","strongType"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionsValueResponseMetadata(
-        @Nullable Boolean assignPermissions,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String strongType) {
+        @OutputCustomType.Parameter("assignPermissions") @Nullable Boolean assignPermissions,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("strongType") @Nullable String strongType) {
         this.assignPermissions = assignPermissions;
         this.description = description;
         this.displayName = displayName;
@@ -100,22 +100,22 @@ public final class ParameterDefinitionsValueResponseMetadata {
     	      this.strongType = defaults.strongType;
         }
 
-        public Builder setAssignPermissions(@Nullable Boolean assignPermissions) {
+        public Builder assignPermissions(@Nullable Boolean assignPermissions) {
             this.assignPermissions = assignPermissions;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setStrongType(@Nullable String strongType) {
+        public Builder strongType(@Nullable String strongType) {
             this.strongType = strongType;
             return this;
         }

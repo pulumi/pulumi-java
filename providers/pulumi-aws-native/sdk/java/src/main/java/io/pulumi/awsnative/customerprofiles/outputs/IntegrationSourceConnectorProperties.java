@@ -21,13 +21,13 @@ public final class IntegrationSourceConnectorProperties {
     private final @Nullable IntegrationServiceNowSourceProperties serviceNow;
     private final @Nullable IntegrationZendeskSourceProperties zendesk;
 
-    @OutputCustomType.Constructor({"marketo","s3","salesforce","serviceNow","zendesk"})
+    @OutputCustomType.Constructor
     private IntegrationSourceConnectorProperties(
-        @Nullable IntegrationMarketoSourceProperties marketo,
-        @Nullable IntegrationS3SourceProperties s3,
-        @Nullable IntegrationSalesforceSourceProperties salesforce,
-        @Nullable IntegrationServiceNowSourceProperties serviceNow,
-        @Nullable IntegrationZendeskSourceProperties zendesk) {
+        @OutputCustomType.Parameter("marketo") @Nullable IntegrationMarketoSourceProperties marketo,
+        @OutputCustomType.Parameter("s3") @Nullable IntegrationS3SourceProperties s3,
+        @OutputCustomType.Parameter("salesforce") @Nullable IntegrationSalesforceSourceProperties salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable IntegrationServiceNowSourceProperties serviceNow,
+        @OutputCustomType.Parameter("zendesk") @Nullable IntegrationZendeskSourceProperties zendesk) {
         this.marketo = marketo;
         this.s3 = s3;
         this.salesforce = salesforce;
@@ -79,27 +79,27 @@ public final class IntegrationSourceConnectorProperties {
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setMarketo(@Nullable IntegrationMarketoSourceProperties marketo) {
+        public Builder marketo(@Nullable IntegrationMarketoSourceProperties marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setS3(@Nullable IntegrationS3SourceProperties s3) {
+        public Builder s3(@Nullable IntegrationS3SourceProperties s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable IntegrationSalesforceSourceProperties salesforce) {
+        public Builder salesforce(@Nullable IntegrationSalesforceSourceProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable IntegrationServiceNowSourceProperties serviceNow) {
+        public Builder serviceNow(@Nullable IntegrationServiceNowSourceProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setZendesk(@Nullable IntegrationZendeskSourceProperties zendesk) {
+        public Builder zendesk(@Nullable IntegrationZendeskSourceProperties zendesk) {
             this.zendesk = zendesk;
             return this;
         }

@@ -16,8 +16,8 @@ public final class BucketLifecycleResponse {
      */
     private final List<BucketLifecycleRuleItemResponse> rule;
 
-    @OutputCustomType.Constructor({"rule"})
-    private BucketLifecycleResponse(List<BucketLifecycleRuleItemResponse> rule) {
+    @OutputCustomType.Constructor
+    private BucketLifecycleResponse(@OutputCustomType.Parameter("rule") List<BucketLifecycleRuleItemResponse> rule) {
         this.rule = rule;
     }
 
@@ -49,7 +49,7 @@ public final class BucketLifecycleResponse {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(List<BucketLifecycleRuleItemResponse> rule) {
+        public Builder rule(List<BucketLifecycleRuleItemResponse> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

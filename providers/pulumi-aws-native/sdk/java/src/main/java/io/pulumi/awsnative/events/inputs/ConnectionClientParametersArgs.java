@@ -61,22 +61,22 @@ public final class ConnectionClientParametersArgs extends io.pulumi.resources.Re
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientID(Input<String> clientID) {
+        public Builder clientID(Input<String> clientID) {
             this.clientID = Objects.requireNonNull(clientID);
             return this;
         }
 
-        public Builder setClientID(String clientID) {
+        public Builder clientID(String clientID) {
             this.clientID = Input.of(Objects.requireNonNull(clientID));
             return this;
         }
 
-        public Builder setClientSecret(Input<String> clientSecret) {
+        public Builder clientSecret(Input<String> clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Input.of(Objects.requireNonNull(clientSecret));
             return this;
         }

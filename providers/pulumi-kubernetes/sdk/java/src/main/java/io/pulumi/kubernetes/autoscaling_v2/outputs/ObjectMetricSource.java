@@ -27,11 +27,11 @@ public final class ObjectMetricSource {
      */
     private final MetricTarget target;
 
-    @OutputCustomType.Constructor({"describedObject","metric","target"})
+    @OutputCustomType.Constructor
     private ObjectMetricSource(
-        CrossVersionObjectReference describedObject,
-        MetricIdentifier metric,
-        MetricTarget target) {
+        @OutputCustomType.Parameter("describedObject") CrossVersionObjectReference describedObject,
+        @OutputCustomType.Parameter("metric") MetricIdentifier metric,
+        @OutputCustomType.Parameter("target") MetricTarget target) {
         this.describedObject = describedObject;
         this.metric = metric;
         this.target = target;
@@ -83,17 +83,17 @@ public final class ObjectMetricSource {
     	      this.target = defaults.target;
         }
 
-        public Builder setDescribedObject(CrossVersionObjectReference describedObject) {
+        public Builder describedObject(CrossVersionObjectReference describedObject) {
             this.describedObject = Objects.requireNonNull(describedObject);
             return this;
         }
 
-        public Builder setMetric(MetricIdentifier metric) {
+        public Builder metric(MetricIdentifier metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setTarget(MetricTarget target) {
+        public Builder target(MetricTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

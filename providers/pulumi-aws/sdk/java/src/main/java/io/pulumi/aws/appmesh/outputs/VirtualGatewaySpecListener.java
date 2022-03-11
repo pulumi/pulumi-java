@@ -35,12 +35,12 @@ public final class VirtualGatewaySpecListener {
      */
     private final @Nullable VirtualGatewaySpecListenerTls tls;
 
-    @OutputCustomType.Constructor({"connectionPool","healthCheck","portMapping","tls"})
+    @OutputCustomType.Constructor
     private VirtualGatewaySpecListener(
-        @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
-        @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
-        VirtualGatewaySpecListenerPortMapping portMapping,
-        @Nullable VirtualGatewaySpecListenerTls tls) {
+        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualGatewaySpecListenerConnectionPool connectionPool,
+        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualGatewaySpecListenerHealthCheck healthCheck,
+        @OutputCustomType.Parameter("portMapping") VirtualGatewaySpecListenerPortMapping portMapping,
+        @OutputCustomType.Parameter("tls") @Nullable VirtualGatewaySpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.portMapping = portMapping;
@@ -102,22 +102,22 @@ public final class VirtualGatewaySpecListener {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setConnectionPool(@Nullable VirtualGatewaySpecListenerConnectionPool connectionPool) {
+        public Builder connectionPool(@Nullable VirtualGatewaySpecListenerConnectionPool connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable VirtualGatewaySpecListenerHealthCheck healthCheck) {
+        public Builder healthCheck(@Nullable VirtualGatewaySpecListenerHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setPortMapping(VirtualGatewaySpecListenerPortMapping portMapping) {
+        public Builder portMapping(VirtualGatewaySpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualGatewaySpecListenerTls tls) {
+        public Builder tls(@Nullable VirtualGatewaySpecListenerTls tls) {
             this.tls = tls;
             return this;
         }

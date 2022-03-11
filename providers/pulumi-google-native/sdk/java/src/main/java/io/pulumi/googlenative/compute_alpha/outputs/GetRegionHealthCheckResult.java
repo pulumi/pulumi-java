@@ -91,28 +91,28 @@ public final class GetRegionHealthCheckResult {
      */
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"checkIntervalSec","creationTimestamp","description","grpcHealthCheck","healthyThreshold","http2HealthCheck","httpHealthCheck","httpsHealthCheck","kind","logConfig","name","region","selfLink","selfLinkWithId","sslHealthCheck","tcpHealthCheck","timeoutSec","type","udpHealthCheck","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private GetRegionHealthCheckResult(
-        Integer checkIntervalSec,
-        String creationTimestamp,
-        String description,
-        GRPCHealthCheckResponse grpcHealthCheck,
-        Integer healthyThreshold,
-        HTTP2HealthCheckResponse http2HealthCheck,
-        HTTPHealthCheckResponse httpHealthCheck,
-        HTTPSHealthCheckResponse httpsHealthCheck,
-        String kind,
-        HealthCheckLogConfigResponse logConfig,
-        String name,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        SSLHealthCheckResponse sslHealthCheck,
-        TCPHealthCheckResponse tcpHealthCheck,
-        Integer timeoutSec,
-        String type,
-        UDPHealthCheckResponse udpHealthCheck,
-        Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("grpcHealthCheck") GRPCHealthCheckResponse grpcHealthCheck,
+        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @OutputCustomType.Parameter("http2HealthCheck") HTTP2HealthCheckResponse http2HealthCheck,
+        @OutputCustomType.Parameter("httpHealthCheck") HTTPHealthCheckResponse httpHealthCheck,
+        @OutputCustomType.Parameter("httpsHealthCheck") HTTPSHealthCheckResponse httpsHealthCheck,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("logConfig") HealthCheckLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("sslHealthCheck") SSLHealthCheckResponse sslHealthCheck,
+        @OutputCustomType.Parameter("tcpHealthCheck") TCPHealthCheckResponse tcpHealthCheck,
+        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("udpHealthCheck") UDPHealthCheckResponse udpHealthCheck,
+        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -306,102 +306,102 @@ public final class GetRegionHealthCheckResult {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setCheckIntervalSec(Integer checkIntervalSec) {
+        public Builder checkIntervalSec(Integer checkIntervalSec) {
             this.checkIntervalSec = Objects.requireNonNull(checkIntervalSec);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGrpcHealthCheck(GRPCHealthCheckResponse grpcHealthCheck) {
+        public Builder grpcHealthCheck(GRPCHealthCheckResponse grpcHealthCheck) {
             this.grpcHealthCheck = Objects.requireNonNull(grpcHealthCheck);
             return this;
         }
 
-        public Builder setHealthyThreshold(Integer healthyThreshold) {
+        public Builder healthyThreshold(Integer healthyThreshold) {
             this.healthyThreshold = Objects.requireNonNull(healthyThreshold);
             return this;
         }
 
-        public Builder setHttp2HealthCheck(HTTP2HealthCheckResponse http2HealthCheck) {
+        public Builder http2HealthCheck(HTTP2HealthCheckResponse http2HealthCheck) {
             this.http2HealthCheck = Objects.requireNonNull(http2HealthCheck);
             return this;
         }
 
-        public Builder setHttpHealthCheck(HTTPHealthCheckResponse httpHealthCheck) {
+        public Builder httpHealthCheck(HTTPHealthCheckResponse httpHealthCheck) {
             this.httpHealthCheck = Objects.requireNonNull(httpHealthCheck);
             return this;
         }
 
-        public Builder setHttpsHealthCheck(HTTPSHealthCheckResponse httpsHealthCheck) {
+        public Builder httpsHealthCheck(HTTPSHealthCheckResponse httpsHealthCheck) {
             this.httpsHealthCheck = Objects.requireNonNull(httpsHealthCheck);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLogConfig(HealthCheckLogConfigResponse logConfig) {
+        public Builder logConfig(HealthCheckLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSslHealthCheck(SSLHealthCheckResponse sslHealthCheck) {
+        public Builder sslHealthCheck(SSLHealthCheckResponse sslHealthCheck) {
             this.sslHealthCheck = Objects.requireNonNull(sslHealthCheck);
             return this;
         }
 
-        public Builder setTcpHealthCheck(TCPHealthCheckResponse tcpHealthCheck) {
+        public Builder tcpHealthCheck(TCPHealthCheckResponse tcpHealthCheck) {
             this.tcpHealthCheck = Objects.requireNonNull(tcpHealthCheck);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUdpHealthCheck(UDPHealthCheckResponse udpHealthCheck) {
+        public Builder udpHealthCheck(UDPHealthCheckResponse udpHealthCheck) {
             this.udpHealthCheck = Objects.requireNonNull(udpHealthCheck);
             return this;
         }
 
-        public Builder setUnhealthyThreshold(Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }

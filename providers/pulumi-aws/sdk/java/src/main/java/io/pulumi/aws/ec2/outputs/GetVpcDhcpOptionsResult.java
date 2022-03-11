@@ -65,19 +65,19 @@ public final class GetVpcDhcpOptionsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","dhcpOptionsId","domainName","domainNameServers","filters","id","netbiosNameServers","netbiosNodeType","ntpServers","ownerId","tags"})
+    @OutputCustomType.Constructor
     private GetVpcDhcpOptionsResult(
-        String arn,
-        String dhcpOptionsId,
-        String domainName,
-        List<String> domainNameServers,
-        @Nullable List<GetVpcDhcpOptionsFilter> filters,
-        String id,
-        List<String> netbiosNameServers,
-        String netbiosNodeType,
-        List<String> ntpServers,
-        String ownerId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dhcpOptionsId") String dhcpOptionsId,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainNameServers") List<String> domainNameServers,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcDhcpOptionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("netbiosNameServers") List<String> netbiosNameServers,
+        @OutputCustomType.Parameter("netbiosNodeType") String netbiosNodeType,
+        @OutputCustomType.Parameter("ntpServers") List<String> ntpServers,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.dhcpOptionsId = dhcpOptionsId;
         this.domainName = domainName;
@@ -205,57 +205,57 @@ public final class GetVpcDhcpOptionsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDhcpOptionsId(String dhcpOptionsId) {
+        public Builder dhcpOptionsId(String dhcpOptionsId) {
             this.dhcpOptionsId = Objects.requireNonNull(dhcpOptionsId);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainNameServers(List<String> domainNameServers) {
+        public Builder domainNameServers(List<String> domainNameServers) {
             this.domainNameServers = Objects.requireNonNull(domainNameServers);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcDhcpOptionsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetbiosNameServers(List<String> netbiosNameServers) {
+        public Builder netbiosNameServers(List<String> netbiosNameServers) {
             this.netbiosNameServers = Objects.requireNonNull(netbiosNameServers);
             return this;
         }
 
-        public Builder setNetbiosNodeType(String netbiosNodeType) {
+        public Builder netbiosNodeType(String netbiosNodeType) {
             this.netbiosNodeType = Objects.requireNonNull(netbiosNodeType);
             return this;
         }
 
-        public Builder setNtpServers(List<String> ntpServers) {
+        public Builder ntpServers(List<String> ntpServers) {
             this.ntpServers = Objects.requireNonNull(ntpServers);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

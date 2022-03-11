@@ -22,10 +22,10 @@ public final class ImageAnnotationResponse {
      */
     private final Integer frameIndex;
 
-    @OutputCustomType.Constructor({"boundingPolys","frameIndex"})
+    @OutputCustomType.Constructor
     private ImageAnnotationResponse(
-        List<BoundingPolyResponse> boundingPolys,
-        Integer frameIndex) {
+        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @OutputCustomType.Parameter("frameIndex") Integer frameIndex) {
         this.boundingPolys = boundingPolys;
         this.frameIndex = frameIndex;
     }
@@ -67,12 +67,12 @@ public final class ImageAnnotationResponse {
     	      this.frameIndex = defaults.frameIndex;
         }
 
-        public Builder setBoundingPolys(List<BoundingPolyResponse> boundingPolys) {
+        public Builder boundingPolys(List<BoundingPolyResponse> boundingPolys) {
             this.boundingPolys = Objects.requireNonNull(boundingPolys);
             return this;
         }
 
-        public Builder setFrameIndex(Integer frameIndex) {
+        public Builder frameIndex(Integer frameIndex) {
             this.frameIndex = Objects.requireNonNull(frameIndex);
             return this;
         }

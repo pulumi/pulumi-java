@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor({"phoneNumber"})
-    private GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse(String phoneNumber) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCallResponse(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }

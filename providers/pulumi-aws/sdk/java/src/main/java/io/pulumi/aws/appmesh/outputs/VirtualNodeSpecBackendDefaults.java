@@ -17,8 +17,8 @@ public final class VirtualNodeSpecBackendDefaults {
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy;
 
-    @OutputCustomType.Constructor({"clientPolicy"})
-    private VirtualNodeSpecBackendDefaults(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaults(@OutputCustomType.Parameter("clientPolicy") @Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualNodeSpecBackendDefaults {
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualNodeSpecBackendDefaultsClientPolicy clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }

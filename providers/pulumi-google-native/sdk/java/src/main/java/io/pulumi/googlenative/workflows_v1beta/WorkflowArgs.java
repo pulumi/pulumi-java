@@ -155,82 +155,82 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workflowId = defaults.workflowId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSourceContents(@Nullable Input<String> sourceContents) {
+        public Builder sourceContents(@Nullable Input<String> sourceContents) {
             this.sourceContents = sourceContents;
             return this;
         }
 
-        public Builder setSourceContents(@Nullable String sourceContents) {
+        public Builder sourceContents(@Nullable String sourceContents) {
             this.sourceContents = Input.ofNullable(sourceContents);
             return this;
         }
 
-        public Builder setWorkflowId(Input<String> workflowId) {
+        public Builder workflowId(Input<String> workflowId) {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
 
-        public Builder setWorkflowId(String workflowId) {
+        public Builder workflowId(String workflowId) {
             this.workflowId = Input.of(Objects.requireNonNull(workflowId));
             return this;
         }

@@ -60,18 +60,18 @@ public final class UpgradeHistoryEntryResponse {
      */
     private final String vmImage;
 
-    @OutputCustomType.Constructor({"action","containerImage","createTime","framework","snapshot","state","targetImage","targetVersion","version","vmImage"})
+    @OutputCustomType.Constructor
     private UpgradeHistoryEntryResponse(
-        String action,
-        String containerImage,
-        String createTime,
-        String framework,
-        String snapshot,
-        String state,
-        String targetImage,
-        String targetVersion,
-        String version,
-        String vmImage) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("snapshot") String snapshot,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("targetImage") String targetImage,
+        @OutputCustomType.Parameter("targetVersion") String targetVersion,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmImage") String vmImage) {
         this.action = action;
         this.containerImage = containerImage;
         this.createTime = createTime;
@@ -193,52 +193,52 @@ public final class UpgradeHistoryEntryResponse {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setContainerImage(String containerImage) {
+        public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setFramework(String framework) {
+        public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
 
-        public Builder setSnapshot(String snapshot) {
+        public Builder snapshot(String snapshot) {
             this.snapshot = Objects.requireNonNull(snapshot);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTargetImage(String targetImage) {
+        public Builder targetImage(String targetImage) {
             this.targetImage = Objects.requireNonNull(targetImage);
             return this;
         }
 
-        public Builder setTargetVersion(String targetVersion) {
+        public Builder targetVersion(String targetVersion) {
             this.targetVersion = Objects.requireNonNull(targetVersion);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVmImage(String vmImage) {
+        public Builder vmImage(String vmImage) {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }

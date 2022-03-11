@@ -17,11 +17,11 @@ public final class AccessPolicyIdentity {
     private final @Nullable AccessPolicyIamUser iamUser;
     private final @Nullable AccessPolicyUser user;
 
-    @OutputCustomType.Constructor({"iamRole","iamUser","user"})
+    @OutputCustomType.Constructor
     private AccessPolicyIdentity(
-        @Nullable AccessPolicyIamRole iamRole,
-        @Nullable AccessPolicyIamUser iamUser,
-        @Nullable AccessPolicyUser user) {
+        @OutputCustomType.Parameter("iamRole") @Nullable AccessPolicyIamRole iamRole,
+        @OutputCustomType.Parameter("iamUser") @Nullable AccessPolicyIamUser iamUser,
+        @OutputCustomType.Parameter("user") @Nullable AccessPolicyUser user) {
         this.iamRole = iamRole;
         this.iamUser = iamUser;
         this.user = user;
@@ -61,17 +61,17 @@ public final class AccessPolicyIdentity {
     	      this.user = defaults.user;
         }
 
-        public Builder setIamRole(@Nullable AccessPolicyIamRole iamRole) {
+        public Builder iamRole(@Nullable AccessPolicyIamRole iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setIamUser(@Nullable AccessPolicyIamUser iamUser) {
+        public Builder iamUser(@Nullable AccessPolicyIamUser iamUser) {
             this.iamUser = iamUser;
             return this;
         }
 
-        public Builder setUser(@Nullable AccessPolicyUser user) {
+        public Builder user(@Nullable AccessPolicyUser user) {
             this.user = user;
             return this;
         }

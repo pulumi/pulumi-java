@@ -153,72 +153,72 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExtensionProperties(@Nullable Input<Map<String,String>> extensionProperties) {
+        public Builder extensionProperties(@Nullable Input<Map<String,String>> extensionProperties) {
             this.extensionProperties = extensionProperties;
             return this;
         }
 
-        public Builder setExtensionProperties(@Nullable Map<String,String> extensionProperties) {
+        public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
             this.extensionProperties = Input.ofNullable(extensionProperties);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceScope(@Nullable Input<Either<String,MaintenanceScope>> maintenanceScope) {
+        public Builder maintenanceScope(@Nullable Input<Either<String,MaintenanceScope>> maintenanceScope) {
             this.maintenanceScope = maintenanceScope;
             return this;
         }
 
-        public Builder setMaintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
+        public Builder maintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
             this.maintenanceScope = Input.ofNullable(maintenanceScope);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

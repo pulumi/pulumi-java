@@ -19,10 +19,10 @@ public final class GetScheduleResult {
     private final @Nullable String cronExpression;
     private final @Nullable List<String> jobNames;
 
-    @OutputCustomType.Constructor({"cronExpression","jobNames"})
+    @OutputCustomType.Constructor
     private GetScheduleResult(
-        @Nullable String cronExpression,
-        @Nullable List<String> jobNames) {
+        @OutputCustomType.Parameter("cronExpression") @Nullable String cronExpression,
+        @OutputCustomType.Parameter("jobNames") @Nullable List<String> jobNames) {
         this.cronExpression = cronExpression;
         this.jobNames = jobNames;
     }
@@ -60,12 +60,12 @@ public final class GetScheduleResult {
     	      this.jobNames = defaults.jobNames;
         }
 
-        public Builder setCronExpression(@Nullable String cronExpression) {
+        public Builder cronExpression(@Nullable String cronExpression) {
             this.cronExpression = cronExpression;
             return this;
         }
 
-        public Builder setJobNames(@Nullable List<String> jobNames) {
+        public Builder jobNames(@Nullable List<String> jobNames) {
             this.jobNames = jobNames;
             return this;
         }

@@ -16,10 +16,10 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
     private final @Nullable String softDeleteTTL;
     private final @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions;
 
-    @OutputCustomType.Constructor({"softDeleteTTL","subscriptionStateOverrideActions"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications(
-        @Nullable String softDeleteTTL,
-        @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
+        @OutputCustomType.Parameter("softDeleteTTL") @Nullable String softDeleteTTL,
+        @OutputCustomType.Parameter("subscriptionStateOverrideActions") @Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
         this.softDeleteTTL = softDeleteTTL;
         this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
     }
@@ -53,12 +53,12 @@ public final class ResourceTypeRegistrationPropertiesResponseSubscriptionLifecyc
     	      this.subscriptionStateOverrideActions = defaults.subscriptionStateOverrideActions;
         }
 
-        public Builder setSoftDeleteTTL(@Nullable String softDeleteTTL) {
+        public Builder softDeleteTTL(@Nullable String softDeleteTTL) {
             this.softDeleteTTL = softDeleteTTL;
             return this;
         }
 
-        public Builder setSubscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
+        public Builder subscriptionStateOverrideActions(@Nullable List<SubscriptionStateOverrideActionResponse> subscriptionStateOverrideActions) {
             this.subscriptionStateOverrideActions = subscriptionStateOverrideActions;
             return this;
         }

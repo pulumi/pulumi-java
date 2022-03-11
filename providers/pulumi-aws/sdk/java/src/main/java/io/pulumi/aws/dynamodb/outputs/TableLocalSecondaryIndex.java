@@ -38,12 +38,12 @@ public final class TableLocalSecondaryIndex {
      */
     private final String rangeKey;
 
-    @OutputCustomType.Constructor({"name","nonKeyAttributes","projectionType","rangeKey"})
+    @OutputCustomType.Constructor
     private TableLocalSecondaryIndex(
-        String name,
-        @Nullable List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") @Nullable List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey) {
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
         this.projectionType = projectionType;
@@ -111,22 +111,22 @@ public final class TableLocalSecondaryIndex {
     	      this.rangeKey = defaults.rangeKey;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
             this.nonKeyAttributes = nonKeyAttributes;
             return this;
         }
 
-        public Builder setProjectionType(String projectionType) {
+        public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }

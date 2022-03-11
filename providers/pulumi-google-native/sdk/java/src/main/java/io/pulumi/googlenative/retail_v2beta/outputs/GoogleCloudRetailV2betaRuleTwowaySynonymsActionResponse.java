@@ -16,8 +16,8 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor({"synonyms"})
-    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(List<String> synonyms) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse(@OutputCustomType.Parameter("synonyms") List<String> synonyms) {
         this.synonyms = synonyms;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2betaRuleTwowaySynonymsActionResponse {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }

@@ -56,12 +56,12 @@ public final class GrafeasV1beta1DiscoveryDetailsArgs extends io.pulumi.resource
     	      this.discovered = defaults.discovered;
         }
 
-        public Builder setDiscovered(Input<DiscoveredArgs> discovered) {
+        public Builder discovered(Input<DiscoveredArgs> discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
 
-        public Builder setDiscovered(DiscoveredArgs discovered) {
+        public Builder discovered(DiscoveredArgs discovered) {
             this.discovered = Input.of(Objects.requireNonNull(discovered));
             return this;
         }

@@ -91,32 +91,32 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputArgs extends io.pulum
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setSelectedDatabases(Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases) {
+        public Builder selectedDatabases(Input<List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs>> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputArgs> selectedDatabases) {
             this.selectedDatabases = Input.of(Objects.requireNonNull(selectedDatabases));
             return this;
         }
 
-        public Builder setSourceConnectionInfo(Input<MySqlConnectionInfoArgs> sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(Input<MySqlConnectionInfoArgs> sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(MySqlConnectionInfoArgs sourceConnectionInfo) {
             this.sourceConnectionInfo = Input.of(Objects.requireNonNull(sourceConnectionInfo));
             return this;
         }
 
-        public Builder setTargetConnectionInfo(Input<MySqlConnectionInfoArgs> targetConnectionInfo) {
+        public Builder targetConnectionInfo(Input<MySqlConnectionInfoArgs> targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
+        public Builder targetConnectionInfo(MySqlConnectionInfoArgs targetConnectionInfo) {
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }

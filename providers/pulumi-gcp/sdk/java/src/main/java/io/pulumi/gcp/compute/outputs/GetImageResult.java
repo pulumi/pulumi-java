@@ -111,28 +111,28 @@ public final class GetImageResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"archiveSizeBytes","creationTimestamp","description","diskSizeGb","family","filter","id","imageEncryptionKeySha256","imageId","labelFingerprint","labels","licenses","name","project","selfLink","sourceDisk","sourceDiskEncryptionKeySha256","sourceDiskId","sourceImageId","status"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        Integer archiveSizeBytes,
-        String creationTimestamp,
-        String description,
-        Integer diskSizeGb,
-        String family,
-        @Nullable String filter,
-        String id,
-        String imageEncryptionKeySha256,
-        String imageId,
-        String labelFingerprint,
-        Map<String,String> labels,
-        List<String> licenses,
-        String name,
-        String project,
-        String selfLink,
-        String sourceDisk,
-        String sourceDiskEncryptionKeySha256,
-        String sourceDiskId,
-        String sourceImageId,
-        String status) {
+        @OutputCustomType.Parameter("archiveSizeBytes") Integer archiveSizeBytes,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageEncryptionKeySha256") String imageEncryptionKeySha256,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKeySha256") String sourceDiskEncryptionKeySha256,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
+        @OutputCustomType.Parameter("status") String status) {
         this.archiveSizeBytes = archiveSizeBytes;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -350,102 +350,102 @@ public final class GetImageResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArchiveSizeBytes(Integer archiveSizeBytes) {
+        public Builder archiveSizeBytes(Integer archiveSizeBytes) {
             this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageEncryptionKeySha256(String imageEncryptionKeySha256) {
+        public Builder imageEncryptionKeySha256(String imageEncryptionKeySha256) {
             this.imageEncryptionKeySha256 = Objects.requireNonNull(imageEncryptionKeySha256);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKeySha256(String sourceDiskEncryptionKeySha256) {
+        public Builder sourceDiskEncryptionKeySha256(String sourceDiskEncryptionKeySha256) {
             this.sourceDiskEncryptionKeySha256 = Objects.requireNonNull(sourceDiskEncryptionKeySha256);
             return this;
         }
 
-        public Builder setSourceDiskId(String sourceDiskId) {
+        public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
 
-        public Builder setSourceImageId(String sourceImageId) {
+        public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

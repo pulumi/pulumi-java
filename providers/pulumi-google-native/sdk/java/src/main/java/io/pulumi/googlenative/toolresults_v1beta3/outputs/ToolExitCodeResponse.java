@@ -15,8 +15,8 @@ public final class ToolExitCodeResponse {
      */
     private final Integer number;
 
-    @OutputCustomType.Constructor({"number"})
-    private ToolExitCodeResponse(Integer number) {
+    @OutputCustomType.Constructor
+    private ToolExitCodeResponse(@OutputCustomType.Parameter("number") Integer number) {
         this.number = number;
     }
 
@@ -48,7 +48,7 @@ public final class ToolExitCodeResponse {
     	      this.number = defaults.number;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }

@@ -279,32 +279,32 @@ public final class CopyActivityResponse {
      */
     private final @Nullable Object validateDataConsistency;
 
-    @OutputCustomType.Constructor({"dataIntegrationUnits","dependsOn","description","enableSkipIncompatibleRow","enableStaging","inputs","linkedServiceName","logSettings","logStorageSettings","name","outputs","parallelCopies","policy","preserve","preserveRules","redirectIncompatibleRowSettings","sink","skipErrorFile","source","stagingSettings","translator","type","userProperties","validateDataConsistency"})
+    @OutputCustomType.Constructor
     private CopyActivityResponse(
-        @Nullable Object dataIntegrationUnits,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Object enableSkipIncompatibleRow,
-        @Nullable Object enableStaging,
-        @Nullable List<DatasetReferenceResponse> inputs,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable LogSettingsResponse logSettings,
-        @Nullable LogStorageSettingsResponse logStorageSettings,
-        String name,
-        @Nullable List<DatasetReferenceResponse> outputs,
-        @Nullable Object parallelCopies,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<Object> preserve,
-        @Nullable List<Object> preserveRules,
-        @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
-        Object sink,
-        @Nullable SkipErrorFileResponse skipErrorFile,
-        Object source,
-        @Nullable StagingSettingsResponse stagingSettings,
-        @Nullable Object translator,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties,
-        @Nullable Object validateDataConsistency) {
+        @OutputCustomType.Parameter("dataIntegrationUnits") @Nullable Object dataIntegrationUnits,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSkipIncompatibleRow") @Nullable Object enableSkipIncompatibleRow,
+        @OutputCustomType.Parameter("enableStaging") @Nullable Object enableStaging,
+        @OutputCustomType.Parameter("inputs") @Nullable List<DatasetReferenceResponse> inputs,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("logSettings") @Nullable LogSettingsResponse logSettings,
+        @OutputCustomType.Parameter("logStorageSettings") @Nullable LogStorageSettingsResponse logStorageSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") @Nullable List<DatasetReferenceResponse> outputs,
+        @OutputCustomType.Parameter("parallelCopies") @Nullable Object parallelCopies,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("preserve") @Nullable List<Object> preserve,
+        @OutputCustomType.Parameter("preserveRules") @Nullable List<Object> preserveRules,
+        @OutputCustomType.Parameter("redirectIncompatibleRowSettings") @Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings,
+        @OutputCustomType.Parameter("sink") Object sink,
+        @OutputCustomType.Parameter("skipErrorFile") @Nullable SkipErrorFileResponse skipErrorFile,
+        @OutputCustomType.Parameter("source") Object source,
+        @OutputCustomType.Parameter("stagingSettings") @Nullable StagingSettingsResponse stagingSettings,
+        @OutputCustomType.Parameter("translator") @Nullable Object translator,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties,
+        @OutputCustomType.Parameter("validateDataConsistency") @Nullable Object validateDataConsistency) {
         this.dataIntegrationUnits = dataIntegrationUnits;
         this.dependsOn = dependsOn;
         this.description = description;
@@ -567,122 +567,122 @@ public final class CopyActivityResponse {
     	      this.validateDataConsistency = defaults.validateDataConsistency;
         }
 
-        public Builder setDataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
+        public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
             this.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
+        public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
 
-        public Builder setEnableStaging(@Nullable Object enableStaging) {
+        public Builder enableStaging(@Nullable Object enableStaging) {
             this.enableStaging = enableStaging;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<DatasetReferenceResponse> inputs) {
+        public Builder inputs(@Nullable List<DatasetReferenceResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLogSettings(@Nullable LogSettingsResponse logSettings) {
+        public Builder logSettings(@Nullable LogSettingsResponse logSettings) {
             this.logSettings = logSettings;
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
+        public Builder logStorageSettings(@Nullable LogStorageSettingsResponse logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<DatasetReferenceResponse> outputs) {
+        public Builder outputs(@Nullable List<DatasetReferenceResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setParallelCopies(@Nullable Object parallelCopies) {
+        public Builder parallelCopies(@Nullable Object parallelCopies) {
             this.parallelCopies = parallelCopies;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPreserve(@Nullable List<Object> preserve) {
+        public Builder preserve(@Nullable List<Object> preserve) {
             this.preserve = preserve;
             return this;
         }
 
-        public Builder setPreserveRules(@Nullable List<Object> preserveRules) {
+        public Builder preserveRules(@Nullable List<Object> preserveRules) {
             this.preserveRules = preserveRules;
             return this;
         }
 
-        public Builder setRedirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings) {
+        public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsResponse redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
 
-        public Builder setSink(Object sink) {
+        public Builder sink(Object sink) {
             this.sink = Objects.requireNonNull(sink);
             return this;
         }
 
-        public Builder setSkipErrorFile(@Nullable SkipErrorFileResponse skipErrorFile) {
+        public Builder skipErrorFile(@Nullable SkipErrorFileResponse skipErrorFile) {
             this.skipErrorFile = skipErrorFile;
             return this;
         }
 
-        public Builder setSource(Object source) {
+        public Builder source(Object source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setStagingSettings(@Nullable StagingSettingsResponse stagingSettings) {
+        public Builder stagingSettings(@Nullable StagingSettingsResponse stagingSettings) {
             this.stagingSettings = stagingSettings;
             return this;
         }
 
-        public Builder setTranslator(@Nullable Object translator) {
+        public Builder translator(@Nullable Object translator) {
             this.translator = translator;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setValidateDataConsistency(@Nullable Object validateDataConsistency) {
+        public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }

@@ -55,7 +55,7 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
     	      this.publicKeyCertificate = defaults.publicKeyCertificate;
         }
 
-        public Builder setPublicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
+        public Builder publicKeyCertificate(PublicKeyCertificateResponse publicKeyCertificate) {
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }

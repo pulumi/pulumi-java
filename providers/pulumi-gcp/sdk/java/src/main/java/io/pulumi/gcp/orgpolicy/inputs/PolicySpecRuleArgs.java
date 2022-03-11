@@ -120,52 +120,52 @@ public final class PolicySpecRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setAllowAll(@Nullable Input<String> allowAll) {
+        public Builder allowAll(@Nullable Input<String> allowAll) {
             this.allowAll = allowAll;
             return this;
         }
 
-        public Builder setAllowAll(@Nullable String allowAll) {
+        public Builder allowAll(@Nullable String allowAll) {
             this.allowAll = Input.ofNullable(allowAll);
             return this;
         }
 
-        public Builder setCondition(@Nullable Input<PolicySpecRuleConditionArgs> condition) {
+        public Builder condition(@Nullable Input<PolicySpecRuleConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable PolicySpecRuleConditionArgs condition) {
+        public Builder condition(@Nullable PolicySpecRuleConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setDenyAll(@Nullable Input<String> denyAll) {
+        public Builder denyAll(@Nullable Input<String> denyAll) {
             this.denyAll = denyAll;
             return this;
         }
 
-        public Builder setDenyAll(@Nullable String denyAll) {
+        public Builder denyAll(@Nullable String denyAll) {
             this.denyAll = Input.ofNullable(denyAll);
             return this;
         }
 
-        public Builder setEnforce(@Nullable Input<String> enforce) {
+        public Builder enforce(@Nullable Input<String> enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setEnforce(@Nullable String enforce) {
+        public Builder enforce(@Nullable String enforce) {
             this.enforce = Input.ofNullable(enforce);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<PolicySpecRuleValuesArgs> values) {
+        public Builder values(@Nullable Input<PolicySpecRuleValuesArgs> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable PolicySpecRuleValuesArgs values) {
+        public Builder values(@Nullable PolicySpecRuleValuesArgs values) {
             this.values = Input.ofNullable(values);
             return this;
         }

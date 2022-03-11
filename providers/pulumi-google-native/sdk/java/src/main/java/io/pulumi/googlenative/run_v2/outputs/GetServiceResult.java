@@ -158,36 +158,36 @@ public final class GetServiceResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"annotations","binaryAuthorization","client","clientVersion","conditions","createTime","creator","deleteTime","description","etag","expireTime","generation","ingress","labels","lastModifier","latestCreatedRevision","latestReadyRevision","launchStage","name","observedGeneration","reconciling","template","terminalCondition","traffic","trafficStatuses","uid","updateTime","uri"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        Map<String,String> annotations,
-        GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization,
-        String client,
-        String clientVersion,
-        List<GoogleCloudRunOpV2ConditionResponse> conditions,
-        String createTime,
-        String creator,
-        String deleteTime,
-        String description,
-        String etag,
-        String expireTime,
-        String generation,
-        String ingress,
-        Map<String,String> labels,
-        String lastModifier,
-        String latestCreatedRevision,
-        String latestReadyRevision,
-        String launchStage,
-        String name,
-        String observedGeneration,
-        Boolean reconciling,
-        GoogleCloudRunOpV2RevisionTemplateResponse template,
-        GoogleCloudRunOpV2ConditionResponse terminalCondition,
-        List<GoogleCloudRunOpV2TrafficTargetResponse> traffic,
-        List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses,
-        String uid,
-        String updateTime,
-        String uri) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("binaryAuthorization") GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization,
+        @OutputCustomType.Parameter("client") String client,
+        @OutputCustomType.Parameter("clientVersion") String clientVersion,
+        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunOpV2ConditionResponse> conditions,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("generation") String generation,
+        @OutputCustomType.Parameter("ingress") String ingress,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastModifier") String lastModifier,
+        @OutputCustomType.Parameter("latestCreatedRevision") String latestCreatedRevision,
+        @OutputCustomType.Parameter("latestReadyRevision") String latestReadyRevision,
+        @OutputCustomType.Parameter("launchStage") String launchStage,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("observedGeneration") String observedGeneration,
+        @OutputCustomType.Parameter("reconciling") Boolean reconciling,
+        @OutputCustomType.Parameter("template") GoogleCloudRunOpV2RevisionTemplateResponse template,
+        @OutputCustomType.Parameter("terminalCondition") GoogleCloudRunOpV2ConditionResponse terminalCondition,
+        @OutputCustomType.Parameter("traffic") List<GoogleCloudRunOpV2TrafficTargetResponse> traffic,
+        @OutputCustomType.Parameter("trafficStatuses") List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.annotations = annotations;
         this.binaryAuthorization = binaryAuthorization;
         this.client = client;
@@ -489,142 +489,142 @@ public final class GetServiceResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setBinaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization) {
+        public Builder binaryAuthorization(GoogleCloudRunOpV2BinaryAuthorizationResponse binaryAuthorization) {
             this.binaryAuthorization = Objects.requireNonNull(binaryAuthorization);
             return this;
         }
 
-        public Builder setClient(String client) {
+        public Builder client(String client) {
             this.client = Objects.requireNonNull(client);
             return this;
         }
 
-        public Builder setClientVersion(String clientVersion) {
+        public Builder clientVersion(String clientVersion) {
             this.clientVersion = Objects.requireNonNull(clientVersion);
             return this;
         }
 
-        public Builder setConditions(List<GoogleCloudRunOpV2ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunOpV2ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreator(String creator) {
+        public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setGeneration(String generation) {
+        public Builder generation(String generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
 
-        public Builder setIngress(String ingress) {
+        public Builder ingress(String ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastModifier(String lastModifier) {
+        public Builder lastModifier(String lastModifier) {
             this.lastModifier = Objects.requireNonNull(lastModifier);
             return this;
         }
 
-        public Builder setLatestCreatedRevision(String latestCreatedRevision) {
+        public Builder latestCreatedRevision(String latestCreatedRevision) {
             this.latestCreatedRevision = Objects.requireNonNull(latestCreatedRevision);
             return this;
         }
 
-        public Builder setLatestReadyRevision(String latestReadyRevision) {
+        public Builder latestReadyRevision(String latestReadyRevision) {
             this.latestReadyRevision = Objects.requireNonNull(latestReadyRevision);
             return this;
         }
 
-        public Builder setLaunchStage(String launchStage) {
+        public Builder launchStage(String launchStage) {
             this.launchStage = Objects.requireNonNull(launchStage);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObservedGeneration(String observedGeneration) {
+        public Builder observedGeneration(String observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setReconciling(Boolean reconciling) {
+        public Builder reconciling(Boolean reconciling) {
             this.reconciling = Objects.requireNonNull(reconciling);
             return this;
         }
 
-        public Builder setTemplate(GoogleCloudRunOpV2RevisionTemplateResponse template) {
+        public Builder template(GoogleCloudRunOpV2RevisionTemplateResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTerminalCondition(GoogleCloudRunOpV2ConditionResponse terminalCondition) {
+        public Builder terminalCondition(GoogleCloudRunOpV2ConditionResponse terminalCondition) {
             this.terminalCondition = Objects.requireNonNull(terminalCondition);
             return this;
         }
 
-        public Builder setTraffic(List<GoogleCloudRunOpV2TrafficTargetResponse> traffic) {
+        public Builder traffic(List<GoogleCloudRunOpV2TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
 
-        public Builder setTrafficStatuses(List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses) {
+        public Builder trafficStatuses(List<GoogleCloudRunOpV2TrafficTargetStatusResponse> trafficStatuses) {
             this.trafficStatuses = Objects.requireNonNull(trafficStatuses);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

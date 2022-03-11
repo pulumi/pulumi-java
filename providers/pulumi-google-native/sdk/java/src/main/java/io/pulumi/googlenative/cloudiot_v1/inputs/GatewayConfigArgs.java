@@ -75,22 +75,22 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayType = defaults.gatewayType;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable Input<GatewayConfigGatewayAuthMethod> gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
             this.gatewayAuthMethod = Input.ofNullable(gatewayAuthMethod);
             return this;
         }
 
-        public Builder setGatewayType(@Nullable Input<GatewayConfigGatewayType> gatewayType) {
+        public Builder gatewayType(@Nullable Input<GatewayConfigGatewayType> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable GatewayConfigGatewayType gatewayType) {
+        public Builder gatewayType(@Nullable GatewayConfigGatewayType gatewayType) {
             this.gatewayType = Input.ofNullable(gatewayType);
             return this;
         }

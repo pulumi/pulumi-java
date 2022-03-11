@@ -41,13 +41,13 @@ public final class ExtensionDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"extensionName","extensionSettings","inputDataSources","name","streams"})
+    @OutputCustomType.Constructor
     private ExtensionDataSourceResponse(
-        String extensionName,
-        @Nullable Object extensionSettings,
-        @Nullable List<String> inputDataSources,
-        @Nullable String name,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("extensionName") String extensionName,
+        @OutputCustomType.Parameter("extensionSettings") @Nullable Object extensionSettings,
+        @OutputCustomType.Parameter("inputDataSources") @Nullable List<String> inputDataSources,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.extensionName = extensionName;
         this.extensionSettings = extensionSettings;
         this.inputDataSources = inputDataSources;
@@ -121,27 +121,27 @@ public final class ExtensionDataSourceResponse {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setExtensionName(String extensionName) {
+        public Builder extensionName(String extensionName) {
             this.extensionName = Objects.requireNonNull(extensionName);
             return this;
         }
 
-        public Builder setExtensionSettings(@Nullable Object extensionSettings) {
+        public Builder extensionSettings(@Nullable Object extensionSettings) {
             this.extensionSettings = extensionSettings;
             return this;
         }
 
-        public Builder setInputDataSources(@Nullable List<String> inputDataSources) {
+        public Builder inputDataSources(@Nullable List<String> inputDataSources) {
             this.inputDataSources = inputDataSources;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }

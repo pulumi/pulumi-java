@@ -16,12 +16,12 @@ public final class GetPlaceIndexResult {
     private final @Nullable String indexArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","createTime","indexArn","updateTime"})
+    @OutputCustomType.Constructor
     private GetPlaceIndexResult(
-        @Nullable String arn,
-        @Nullable String createTime,
-        @Nullable String indexArn,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("indexArn") @Nullable String indexArn,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.indexArn = indexArn;
@@ -67,22 +67,22 @@ public final class GetPlaceIndexResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setIndexArn(@Nullable String indexArn) {
+        public Builder indexArn(@Nullable String indexArn) {
             this.indexArn = indexArn;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

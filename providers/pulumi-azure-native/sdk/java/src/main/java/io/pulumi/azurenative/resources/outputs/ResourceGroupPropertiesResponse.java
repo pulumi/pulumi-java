@@ -15,8 +15,8 @@ public final class ResourceGroupPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private ResourceGroupPropertiesResponse(String provisioningState) {
+    @OutputCustomType.Constructor
+    private ResourceGroupPropertiesResponse(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceGroupPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

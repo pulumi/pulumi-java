@@ -45,13 +45,13 @@ public final class HTTPGetAction {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"host","httpHeaders","path","port","scheme"})
+    @OutputCustomType.Constructor
     private HTTPGetAction(
-        @Nullable String host,
-        @Nullable List<HTTPHeader> httpHeaders,
-        @Nullable String path,
-        Either<Integer,String> port,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("httpHeaders") @Nullable List<HTTPHeader> httpHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") Either<Integer,String> port,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;
@@ -127,27 +127,27 @@ public final class HTTPGetAction {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable List<HTTPHeader> httpHeaders) {
+        public Builder httpHeaders(@Nullable List<HTTPHeader> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(Either<Integer,String> port) {
+        public Builder port(Either<Integer,String> port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
         }

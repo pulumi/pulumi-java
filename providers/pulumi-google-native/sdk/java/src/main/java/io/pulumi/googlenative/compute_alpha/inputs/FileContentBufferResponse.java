@@ -68,12 +68,12 @@ public final class FileContentBufferResponse extends io.pulumi.resources.InvokeA
     	      this.fileType = defaults.fileType;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }

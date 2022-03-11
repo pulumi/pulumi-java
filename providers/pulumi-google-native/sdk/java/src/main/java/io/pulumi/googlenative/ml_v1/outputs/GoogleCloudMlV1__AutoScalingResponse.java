@@ -27,11 +27,11 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
      */
     private final Integer minNodes;
 
-    @OutputCustomType.Constructor({"maxNodes","metrics","minNodes"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__AutoScalingResponse(
-        Integer maxNodes,
-        List<GoogleCloudMlV1__MetricSpecResponse> metrics,
-        Integer minNodes) {
+        @OutputCustomType.Parameter("maxNodes") Integer maxNodes,
+        @OutputCustomType.Parameter("metrics") List<GoogleCloudMlV1__MetricSpecResponse> metrics,
+        @OutputCustomType.Parameter("minNodes") Integer minNodes) {
         this.maxNodes = maxNodes;
         this.metrics = metrics;
         this.minNodes = minNodes;
@@ -83,17 +83,17 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
     	      this.minNodes = defaults.minNodes;
         }
 
-        public Builder setMaxNodes(Integer maxNodes) {
+        public Builder maxNodes(Integer maxNodes) {
             this.maxNodes = Objects.requireNonNull(maxNodes);
             return this;
         }
 
-        public Builder setMetrics(List<GoogleCloudMlV1__MetricSpecResponse> metrics) {
+        public Builder metrics(List<GoogleCloudMlV1__MetricSpecResponse> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setMinNodes(Integer minNodes) {
+        public Builder minNodes(Integer minNodes) {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }

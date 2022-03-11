@@ -14,11 +14,11 @@ public final class DataSourceWebCrawlerBasicAuthentication {
     private final String host;
     private final Integer port;
 
-    @OutputCustomType.Constructor({"credentials","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerBasicAuthentication(
-        String credentials,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("credentials") String credentials,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.credentials = credentials;
         this.host = host;
         this.port = port;
@@ -58,17 +58,17 @@ public final class DataSourceWebCrawlerBasicAuthentication {
     	      this.port = defaults.port;
         }
 
-        public Builder setCredentials(String credentials) {
+        public Builder credentials(String credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

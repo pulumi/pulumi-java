@@ -22,10 +22,10 @@ public final class ManagedInstancePairInfoResponse {
      */
     private final @Nullable String primaryManagedInstanceId;
 
-    @OutputCustomType.Constructor({"partnerManagedInstanceId","primaryManagedInstanceId"})
+    @OutputCustomType.Constructor
     private ManagedInstancePairInfoResponse(
-        @Nullable String partnerManagedInstanceId,
-        @Nullable String primaryManagedInstanceId) {
+        @OutputCustomType.Parameter("partnerManagedInstanceId") @Nullable String partnerManagedInstanceId,
+        @OutputCustomType.Parameter("primaryManagedInstanceId") @Nullable String primaryManagedInstanceId) {
         this.partnerManagedInstanceId = partnerManagedInstanceId;
         this.primaryManagedInstanceId = primaryManagedInstanceId;
     }
@@ -67,12 +67,12 @@ public final class ManagedInstancePairInfoResponse {
     	      this.primaryManagedInstanceId = defaults.primaryManagedInstanceId;
         }
 
-        public Builder setPartnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
+        public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
             this.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
 
-        public Builder setPrimaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
+        public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
             this.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;
         }

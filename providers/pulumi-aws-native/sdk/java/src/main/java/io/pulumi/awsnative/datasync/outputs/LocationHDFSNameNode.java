@@ -21,10 +21,10 @@ public final class LocationHDFSNameNode {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"hostname","port"})
+    @OutputCustomType.Constructor
     private LocationHDFSNameNode(
-        String hostname,
-        Integer port) {
+        @OutputCustomType.Parameter("hostname") String hostname,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.hostname = hostname;
         this.port = port;
     }
@@ -66,12 +66,12 @@ public final class LocationHDFSNameNode {
     	      this.port = defaults.port;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

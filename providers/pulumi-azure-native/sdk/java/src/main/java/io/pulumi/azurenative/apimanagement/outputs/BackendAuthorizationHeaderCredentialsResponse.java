@@ -20,10 +20,10 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
      */
     private final String scheme;
 
-    @OutputCustomType.Constructor({"parameter","scheme"})
+    @OutputCustomType.Constructor
     private BackendAuthorizationHeaderCredentialsResponse(
-        String parameter,
-        String scheme) {
+        @OutputCustomType.Parameter("parameter") String parameter,
+        @OutputCustomType.Parameter("scheme") String scheme) {
         this.parameter = parameter;
         this.scheme = scheme;
     }
@@ -65,12 +65,12 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setParameter(String parameter) {
+        public Builder parameter(String parameter) {
             this.parameter = Objects.requireNonNull(parameter);
             return this;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }

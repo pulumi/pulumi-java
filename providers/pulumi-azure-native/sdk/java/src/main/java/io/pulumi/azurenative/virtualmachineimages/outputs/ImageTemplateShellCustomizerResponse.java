@@ -39,13 +39,13 @@ public final class ImageTemplateShellCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inline","name","scriptUri","sha256Checksum","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateShellCustomizerResponse(
-        @Nullable List<String> inline,
-        @Nullable String name,
-        @Nullable String scriptUri,
-        @Nullable String sha256Checksum,
-        String type) {
+        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("type") String type) {
         this.inline = inline;
         this.name = name;
         this.scriptUri = scriptUri;
@@ -118,27 +118,27 @@ public final class ImageTemplateShellCustomizerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInline(@Nullable List<String> inline) {
+        public Builder inline(@Nullable List<String> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

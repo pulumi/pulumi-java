@@ -20,10 +20,10 @@ public final class GetKMSCryptoKeyVersionPublicKey {
      */
     private final String pem;
 
-    @OutputCustomType.Constructor({"algorithm","pem"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyVersionPublicKey(
-        String algorithm,
-        String pem) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("pem") String pem) {
         this.algorithm = algorithm;
         this.pem = pem;
     }
@@ -65,12 +65,12 @@ public final class GetKMSCryptoKeyVersionPublicKey {
     	      this.pem = defaults.pem;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setPem(String pem) {
+        public Builder pem(String pem) {
             this.pem = Objects.requireNonNull(pem);
             return this;
         }

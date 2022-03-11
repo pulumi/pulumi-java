@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
      */
     private final VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match;
 
-    @OutputCustomType.Constructor({"match"})
-    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames(@OutputCustomType.Parameter("match") VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
         this.match = match;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsValidationSubjectAlternativeNames {
     	      this.match = defaults.match;
         }
 
-        public Builder setMatch(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
+        public Builder match(VirtualNodeSpecListenerTlsValidationSubjectAlternativeNamesMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

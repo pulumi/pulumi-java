@@ -40,14 +40,14 @@ public final class PackagingConfigurationDashPackage {
      */
     private final @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat;
 
-    @OutputCustomType.Constructor({"dashManifests","encryption","includeEncoderConfigurationInSegments","periodTriggers","segmentDurationSeconds","segmentTemplateFormat"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationDashPackage(
-        List<PackagingConfigurationDashManifest> dashManifests,
-        @Nullable PackagingConfigurationDashEncryption encryption,
-        @Nullable Boolean includeEncoderConfigurationInSegments,
-        @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        @OutputCustomType.Parameter("dashManifests") List<PackagingConfigurationDashManifest> dashManifests,
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationDashEncryption encryption,
+        @OutputCustomType.Parameter("includeEncoderConfigurationInSegments") @Nullable Boolean includeEncoderConfigurationInSegments,
+        @OutputCustomType.Parameter("periodTriggers") @Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("segmentTemplateFormat") @Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
         this.dashManifests = dashManifests;
         this.encryption = encryption;
         this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
@@ -121,32 +121,32 @@ public final class PackagingConfigurationDashPackage {
     	      this.segmentTemplateFormat = defaults.segmentTemplateFormat;
         }
 
-        public Builder setDashManifests(List<PackagingConfigurationDashManifest> dashManifests) {
+        public Builder dashManifests(List<PackagingConfigurationDashManifest> dashManifests) {
             this.dashManifests = Objects.requireNonNull(dashManifests);
             return this;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationDashEncryption encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationDashEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setIncludeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
+        public Builder includeEncoderConfigurationInSegments(@Nullable Boolean includeEncoderConfigurationInSegments) {
             this.includeEncoderConfigurationInSegments = includeEncoderConfigurationInSegments;
             return this;
         }
 
-        public Builder setPeriodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
+        public Builder periodTriggers(@Nullable List<PackagingConfigurationDashPackagePeriodTriggersItem> periodTriggers) {
             this.periodTriggers = periodTriggers;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
+        public Builder segmentTemplateFormat(@Nullable PackagingConfigurationDashPackageSegmentTemplateFormat segmentTemplateFormat) {
             this.segmentTemplateFormat = segmentTemplateFormat;
             return this;
         }

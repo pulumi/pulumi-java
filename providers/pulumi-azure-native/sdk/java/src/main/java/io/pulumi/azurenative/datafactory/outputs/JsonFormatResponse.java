@@ -54,16 +54,16 @@ public final class JsonFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deserializer","encodingName","filePattern","jsonNodeReference","jsonPathDefinition","nestingSeparator","serializer","type"})
+    @OutputCustomType.Constructor
     private JsonFormatResponse(
-        @Nullable Object deserializer,
-        @Nullable Object encodingName,
-        @Nullable Object filePattern,
-        @Nullable Object jsonNodeReference,
-        @Nullable Object jsonPathDefinition,
-        @Nullable Object nestingSeparator,
-        @Nullable Object serializer,
-        String type) {
+        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("filePattern") @Nullable Object filePattern,
+        @OutputCustomType.Parameter("jsonNodeReference") @Nullable Object jsonNodeReference,
+        @OutputCustomType.Parameter("jsonPathDefinition") @Nullable Object jsonPathDefinition,
+        @OutputCustomType.Parameter("nestingSeparator") @Nullable Object nestingSeparator,
+        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
+        @OutputCustomType.Parameter("type") String type) {
         this.deserializer = deserializer;
         this.encodingName = encodingName;
         this.filePattern = filePattern;
@@ -166,42 +166,42 @@ public final class JsonFormatResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setFilePattern(@Nullable Object filePattern) {
+        public Builder filePattern(@Nullable Object filePattern) {
             this.filePattern = filePattern;
             return this;
         }
 
-        public Builder setJsonNodeReference(@Nullable Object jsonNodeReference) {
+        public Builder jsonNodeReference(@Nullable Object jsonNodeReference) {
             this.jsonNodeReference = jsonNodeReference;
             return this;
         }
 
-        public Builder setJsonPathDefinition(@Nullable Object jsonPathDefinition) {
+        public Builder jsonPathDefinition(@Nullable Object jsonPathDefinition) {
             this.jsonPathDefinition = jsonPathDefinition;
             return this;
         }
 
-        public Builder setNestingSeparator(@Nullable Object nestingSeparator) {
+        public Builder nestingSeparator(@Nullable Object nestingSeparator) {
             this.nestingSeparator = nestingSeparator;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -26,11 +26,11 @@ public final class TpuConfigResponse {
      */
     private final Boolean useServiceNetworking;
 
-    @OutputCustomType.Constructor({"enabled","ipv4CidrBlock","useServiceNetworking"})
+    @OutputCustomType.Constructor
     private TpuConfigResponse(
-        Boolean enabled,
-        String ipv4CidrBlock,
-        Boolean useServiceNetworking) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("ipv4CidrBlock") String ipv4CidrBlock,
+        @OutputCustomType.Parameter("useServiceNetworking") Boolean useServiceNetworking) {
         this.enabled = enabled;
         this.ipv4CidrBlock = ipv4CidrBlock;
         this.useServiceNetworking = useServiceNetworking;
@@ -82,17 +82,17 @@ public final class TpuConfigResponse {
     	      this.useServiceNetworking = defaults.useServiceNetworking;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setIpv4CidrBlock(String ipv4CidrBlock) {
+        public Builder ipv4CidrBlock(String ipv4CidrBlock) {
             this.ipv4CidrBlock = Objects.requireNonNull(ipv4CidrBlock);
             return this;
         }
 
-        public Builder setUseServiceNetworking(Boolean useServiceNetworking) {
+        public Builder useServiceNetworking(Boolean useServiceNetworking) {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class NotificationChannelConfig {
     private final @Nullable NotificationChannelSnsChannelConfig sns;
 
-    @OutputCustomType.Constructor({"sns"})
-    private NotificationChannelConfig(@Nullable NotificationChannelSnsChannelConfig sns) {
+    @OutputCustomType.Constructor
+    private NotificationChannelConfig(@OutputCustomType.Parameter("sns") @Nullable NotificationChannelSnsChannelConfig sns) {
         this.sns = sns;
     }
 
@@ -42,7 +42,7 @@ public final class NotificationChannelConfig {
     	      this.sns = defaults.sns;
         }
 
-        public Builder setSns(@Nullable NotificationChannelSnsChannelConfig sns) {
+        public Builder sns(@Nullable NotificationChannelSnsChannelConfig sns) {
             this.sns = sns;
             return this;
         }

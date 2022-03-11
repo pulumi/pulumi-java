@@ -62,18 +62,18 @@ public final class TopicRuleErrorActionDynamodb {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"hashKeyField","hashKeyType","hashKeyValue","operation","payloadField","rangeKeyField","rangeKeyType","rangeKeyValue","roleArn","tableName"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionDynamodb(
-        String hashKeyField,
-        @Nullable String hashKeyType,
-        String hashKeyValue,
-        @Nullable String operation,
-        @Nullable String payloadField,
-        @Nullable String rangeKeyField,
-        @Nullable String rangeKeyType,
-        @Nullable String rangeKeyValue,
-        String roleArn,
-        String tableName) {
+        @OutputCustomType.Parameter("hashKeyField") String hashKeyField,
+        @OutputCustomType.Parameter("hashKeyType") @Nullable String hashKeyType,
+        @OutputCustomType.Parameter("hashKeyValue") String hashKeyValue,
+        @OutputCustomType.Parameter("operation") @Nullable String operation,
+        @OutputCustomType.Parameter("payloadField") @Nullable String payloadField,
+        @OutputCustomType.Parameter("rangeKeyField") @Nullable String rangeKeyField,
+        @OutputCustomType.Parameter("rangeKeyType") @Nullable String rangeKeyType,
+        @OutputCustomType.Parameter("rangeKeyValue") @Nullable String rangeKeyValue,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.hashKeyField = hashKeyField;
         this.hashKeyType = hashKeyType;
         this.hashKeyValue = hashKeyValue;
@@ -195,52 +195,52 @@ public final class TopicRuleErrorActionDynamodb {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setHashKeyField(String hashKeyField) {
+        public Builder hashKeyField(String hashKeyField) {
             this.hashKeyField = Objects.requireNonNull(hashKeyField);
             return this;
         }
 
-        public Builder setHashKeyType(@Nullable String hashKeyType) {
+        public Builder hashKeyType(@Nullable String hashKeyType) {
             this.hashKeyType = hashKeyType;
             return this;
         }
 
-        public Builder setHashKeyValue(String hashKeyValue) {
+        public Builder hashKeyValue(String hashKeyValue) {
             this.hashKeyValue = Objects.requireNonNull(hashKeyValue);
             return this;
         }
 
-        public Builder setOperation(@Nullable String operation) {
+        public Builder operation(@Nullable String operation) {
             this.operation = operation;
             return this;
         }
 
-        public Builder setPayloadField(@Nullable String payloadField) {
+        public Builder payloadField(@Nullable String payloadField) {
             this.payloadField = payloadField;
             return this;
         }
 
-        public Builder setRangeKeyField(@Nullable String rangeKeyField) {
+        public Builder rangeKeyField(@Nullable String rangeKeyField) {
             this.rangeKeyField = rangeKeyField;
             return this;
         }
 
-        public Builder setRangeKeyType(@Nullable String rangeKeyType) {
+        public Builder rangeKeyType(@Nullable String rangeKeyType) {
             this.rangeKeyType = rangeKeyType;
             return this;
         }
 
-        public Builder setRangeKeyValue(@Nullable String rangeKeyValue) {
+        public Builder rangeKeyValue(@Nullable String rangeKeyValue) {
             this.rangeKeyValue = rangeKeyValue;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

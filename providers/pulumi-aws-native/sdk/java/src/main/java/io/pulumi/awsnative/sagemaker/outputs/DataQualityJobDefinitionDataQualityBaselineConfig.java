@@ -17,11 +17,11 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
     private final @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource;
     private final @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource;
 
-    @OutputCustomType.Constructor({"baseliningJobName","constraintsResource","statisticsResource"})
+    @OutputCustomType.Constructor
     private DataQualityJobDefinitionDataQualityBaselineConfig(
-        @Nullable String baseliningJobName,
-        @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
-        @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
+        @OutputCustomType.Parameter("baseliningJobName") @Nullable String baseliningJobName,
+        @OutputCustomType.Parameter("constraintsResource") @Nullable DataQualityJobDefinitionConstraintsResource constraintsResource,
+        @OutputCustomType.Parameter("statisticsResource") @Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
         this.baseliningJobName = baseliningJobName;
         this.constraintsResource = constraintsResource;
         this.statisticsResource = statisticsResource;
@@ -61,17 +61,17 @@ public final class DataQualityJobDefinitionDataQualityBaselineConfig {
     	      this.statisticsResource = defaults.statisticsResource;
         }
 
-        public Builder setBaseliningJobName(@Nullable String baseliningJobName) {
+        public Builder baseliningJobName(@Nullable String baseliningJobName) {
             this.baseliningJobName = baseliningJobName;
             return this;
         }
 
-        public Builder setConstraintsResource(@Nullable DataQualityJobDefinitionConstraintsResource constraintsResource) {
+        public Builder constraintsResource(@Nullable DataQualityJobDefinitionConstraintsResource constraintsResource) {
             this.constraintsResource = constraintsResource;
             return this;
         }
 
-        public Builder setStatisticsResource(@Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
+        public Builder statisticsResource(@Nullable DataQualityJobDefinitionStatisticsResource statisticsResource) {
             this.statisticsResource = statisticsResource;
             return this;
         }

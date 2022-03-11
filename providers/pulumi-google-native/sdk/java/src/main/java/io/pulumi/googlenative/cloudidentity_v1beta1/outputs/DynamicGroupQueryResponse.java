@@ -16,10 +16,10 @@ public final class DynamicGroupQueryResponse {
     private final String query;
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"query","resourceType"})
+    @OutputCustomType.Constructor
     private DynamicGroupQueryResponse(
-        String query,
-        String resourceType) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.query = query;
         this.resourceType = resourceType;
     }
@@ -57,12 +57,12 @@ public final class DynamicGroupQueryResponse {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

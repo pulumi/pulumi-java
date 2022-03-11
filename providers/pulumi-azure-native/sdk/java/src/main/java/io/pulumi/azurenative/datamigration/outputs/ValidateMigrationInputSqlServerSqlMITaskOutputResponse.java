@@ -55,16 +55,16 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
-    @OutputCustomType.Constructor({"backupFolderErrors","backupShareCredentialsErrors","backupStorageAccountErrors","databaseBackupInfo","existingBackupErrors","id","name","restoreDatabaseNameErrors"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskOutputResponse(
-        List<ReportableExceptionResponse> backupFolderErrors,
-        List<ReportableExceptionResponse> backupShareCredentialsErrors,
-        List<ReportableExceptionResponse> backupStorageAccountErrors,
-        @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
-        List<ReportableExceptionResponse> existingBackupErrors,
-        String id,
-        String name,
-        List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
+        @OutputCustomType.Parameter("backupFolderErrors") List<ReportableExceptionResponse> backupFolderErrors,
+        @OutputCustomType.Parameter("backupShareCredentialsErrors") List<ReportableExceptionResponse> backupShareCredentialsErrors,
+        @OutputCustomType.Parameter("backupStorageAccountErrors") List<ReportableExceptionResponse> backupStorageAccountErrors,
+        @OutputCustomType.Parameter("databaseBackupInfo") @Nullable DatabaseBackupInfoResponse databaseBackupInfo,
+        @OutputCustomType.Parameter("existingBackupErrors") List<ReportableExceptionResponse> existingBackupErrors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("restoreDatabaseNameErrors") List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
         this.backupFolderErrors = backupFolderErrors;
         this.backupShareCredentialsErrors = backupShareCredentialsErrors;
         this.backupStorageAccountErrors = backupStorageAccountErrors;
@@ -166,42 +166,42 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse {
     	      this.restoreDatabaseNameErrors = defaults.restoreDatabaseNameErrors;
         }
 
-        public Builder setBackupFolderErrors(List<ReportableExceptionResponse> backupFolderErrors) {
+        public Builder backupFolderErrors(List<ReportableExceptionResponse> backupFolderErrors) {
             this.backupFolderErrors = Objects.requireNonNull(backupFolderErrors);
             return this;
         }
 
-        public Builder setBackupShareCredentialsErrors(List<ReportableExceptionResponse> backupShareCredentialsErrors) {
+        public Builder backupShareCredentialsErrors(List<ReportableExceptionResponse> backupShareCredentialsErrors) {
             this.backupShareCredentialsErrors = Objects.requireNonNull(backupShareCredentialsErrors);
             return this;
         }
 
-        public Builder setBackupStorageAccountErrors(List<ReportableExceptionResponse> backupStorageAccountErrors) {
+        public Builder backupStorageAccountErrors(List<ReportableExceptionResponse> backupStorageAccountErrors) {
             this.backupStorageAccountErrors = Objects.requireNonNull(backupStorageAccountErrors);
             return this;
         }
 
-        public Builder setDatabaseBackupInfo(@Nullable DatabaseBackupInfoResponse databaseBackupInfo) {
+        public Builder databaseBackupInfo(@Nullable DatabaseBackupInfoResponse databaseBackupInfo) {
             this.databaseBackupInfo = databaseBackupInfo;
             return this;
         }
 
-        public Builder setExistingBackupErrors(List<ReportableExceptionResponse> existingBackupErrors) {
+        public Builder existingBackupErrors(List<ReportableExceptionResponse> existingBackupErrors) {
             this.existingBackupErrors = Objects.requireNonNull(existingBackupErrors);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRestoreDatabaseNameErrors(List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
+        public Builder restoreDatabaseNameErrors(List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
             this.restoreDatabaseNameErrors = Objects.requireNonNull(restoreDatabaseNameErrors);
             return this;
         }

@@ -63,22 +63,22 @@ public final class InstanceFromTemplateAdvancedMachineFeaturesGetArgs extends io
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setEnableNestedVirtualization(@Nullable Input<Boolean> enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(@Nullable Input<Boolean> enableNestedVirtualization) {
             this.enableNestedVirtualization = enableNestedVirtualization;
             return this;
         }
 
-        public Builder setEnableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(@Nullable Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Input.ofNullable(enableNestedVirtualization);
             return this;
         }
 
-        public Builder setThreadsPerCore(@Nullable Input<Integer> threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Input<Integer> threadsPerCore) {
             this.threadsPerCore = threadsPerCore;
             return this;
         }
 
-        public Builder setThreadsPerCore(@Nullable Integer threadsPerCore) {
+        public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }

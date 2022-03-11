@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
      */
     private final GooglePrivacyDlpV2PartitionIdResponse partitionId;
 
-    @OutputCustomType.Constructor({"kind","partitionId"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DatastoreOptionsResponse(
-        GooglePrivacyDlpV2KindExpressionResponse kind,
-        GooglePrivacyDlpV2PartitionIdResponse partitionId) {
+        @OutputCustomType.Parameter("kind") GooglePrivacyDlpV2KindExpressionResponse kind,
+        @OutputCustomType.Parameter("partitionId") GooglePrivacyDlpV2PartitionIdResponse partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2DatastoreOptionsResponse {
     	      this.partitionId = defaults.partitionId;
         }
 
-        public Builder setKind(GooglePrivacyDlpV2KindExpressionResponse kind) {
+        public Builder kind(GooglePrivacyDlpV2KindExpressionResponse kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPartitionId(GooglePrivacyDlpV2PartitionIdResponse partitionId) {
+        public Builder partitionId(GooglePrivacyDlpV2PartitionIdResponse partitionId) {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }

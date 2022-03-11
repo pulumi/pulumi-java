@@ -55,16 +55,16 @@ public final class RBDPersistentVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"fsType","image","keyring","monitors","pool","readOnly","secretRef","user"})
+    @OutputCustomType.Constructor
     private RBDPersistentVolumeSource(
-        @Nullable String fsType,
-        String image,
-        @Nullable String keyring,
-        List<String> monitors,
-        @Nullable String pool,
-        @Nullable Boolean readOnly,
-        @Nullable SecretReference secretRef,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("keyring") @Nullable String keyring,
+        @OutputCustomType.Parameter("monitors") List<String> monitors,
+        @OutputCustomType.Parameter("pool") @Nullable String pool,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.fsType = fsType;
         this.image = image;
         this.keyring = keyring;
@@ -166,42 +166,42 @@ public final class RBDPersistentVolumeSource {
     	      this.user = defaults.user;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setKeyring(@Nullable String keyring) {
+        public Builder keyring(@Nullable String keyring) {
             this.keyring = keyring;
             return this;
         }
 
-        public Builder setMonitors(List<String> monitors) {
+        public Builder monitors(List<String> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
 
-        public Builder setPool(@Nullable String pool) {
+        public Builder pool(@Nullable String pool) {
             this.pool = pool;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretReference secretRef) {
+        public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

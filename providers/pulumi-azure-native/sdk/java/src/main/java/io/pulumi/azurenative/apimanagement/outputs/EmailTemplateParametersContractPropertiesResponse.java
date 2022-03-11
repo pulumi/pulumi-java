@@ -27,11 +27,11 @@ public final class EmailTemplateParametersContractPropertiesResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","name","title"})
+    @OutputCustomType.Constructor
     private EmailTemplateParametersContractPropertiesResponse(
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.name = name;
         this.title = title;
@@ -83,17 +83,17 @@ public final class EmailTemplateParametersContractPropertiesResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

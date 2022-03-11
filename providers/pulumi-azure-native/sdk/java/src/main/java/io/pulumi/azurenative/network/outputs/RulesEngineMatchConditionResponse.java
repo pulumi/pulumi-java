@@ -44,14 +44,14 @@ public final class RulesEngineMatchConditionResponse {
      */
     private final @Nullable List<String> transforms;
 
-    @OutputCustomType.Constructor({"negateCondition","rulesEngineMatchValue","rulesEngineMatchVariable","rulesEngineOperator","selector","transforms"})
+    @OutputCustomType.Constructor
     private RulesEngineMatchConditionResponse(
-        @Nullable Boolean negateCondition,
-        List<String> rulesEngineMatchValue,
-        String rulesEngineMatchVariable,
-        String rulesEngineOperator,
-        @Nullable String selector,
-        @Nullable List<String> transforms) {
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("rulesEngineMatchValue") List<String> rulesEngineMatchValue,
+        @OutputCustomType.Parameter("rulesEngineMatchVariable") String rulesEngineMatchVariable,
+        @OutputCustomType.Parameter("rulesEngineOperator") String rulesEngineOperator,
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("transforms") @Nullable List<String> transforms) {
         this.negateCondition = negateCondition;
         this.rulesEngineMatchValue = rulesEngineMatchValue;
         this.rulesEngineMatchVariable = rulesEngineMatchVariable;
@@ -133,32 +133,32 @@ public final class RulesEngineMatchConditionResponse {
     	      this.transforms = defaults.transforms;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setRulesEngineMatchValue(List<String> rulesEngineMatchValue) {
+        public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
             this.rulesEngineMatchValue = Objects.requireNonNull(rulesEngineMatchValue);
             return this;
         }
 
-        public Builder setRulesEngineMatchVariable(String rulesEngineMatchVariable) {
+        public Builder rulesEngineMatchVariable(String rulesEngineMatchVariable) {
             this.rulesEngineMatchVariable = Objects.requireNonNull(rulesEngineMatchVariable);
             return this;
         }
 
-        public Builder setRulesEngineOperator(String rulesEngineOperator) {
+        public Builder rulesEngineOperator(String rulesEngineOperator) {
             this.rulesEngineOperator = Objects.requireNonNull(rulesEngineOperator);
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTransforms(@Nullable List<String> transforms) {
+        public Builder transforms(@Nullable List<String> transforms) {
             this.transforms = transforms;
             return this;
         }

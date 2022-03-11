@@ -27,11 +27,11 @@ public final class LibraryRequirementsResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"content","filename","time"})
+    @OutputCustomType.Constructor
     private LibraryRequirementsResponse(
-        @Nullable String content,
-        @Nullable String filename,
-        String time) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("filename") @Nullable String filename,
+        @OutputCustomType.Parameter("time") String time) {
         this.content = content;
         this.filename = filename;
         this.time = time;
@@ -83,17 +83,17 @@ public final class LibraryRequirementsResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setFilename(@Nullable String filename) {
+        public Builder filename(@Nullable String filename) {
             this.filename = filename;
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

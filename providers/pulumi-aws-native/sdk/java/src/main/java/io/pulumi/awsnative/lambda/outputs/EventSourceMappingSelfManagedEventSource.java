@@ -17,8 +17,8 @@ public final class EventSourceMappingSelfManagedEventSource {
      */
     private final @Nullable EventSourceMappingEndpoints endpoints;
 
-    @OutputCustomType.Constructor({"endpoints"})
-    private EventSourceMappingSelfManagedEventSource(@Nullable EventSourceMappingEndpoints endpoints) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingSelfManagedEventSource(@OutputCustomType.Parameter("endpoints") @Nullable EventSourceMappingEndpoints endpoints) {
         this.endpoints = endpoints;
     }
 
@@ -50,7 +50,7 @@ public final class EventSourceMappingSelfManagedEventSource {
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder setEndpoints(@Nullable EventSourceMappingEndpoints endpoints) {
+        public Builder endpoints(@Nullable EventSourceMappingEndpoints endpoints) {
             this.endpoints = endpoints;
             return this;
         }

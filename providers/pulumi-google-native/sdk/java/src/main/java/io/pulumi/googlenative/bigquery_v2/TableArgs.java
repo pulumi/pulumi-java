@@ -314,172 +314,172 @@ public final class TableArgs extends io.pulumi.resources.ResourceArgs {
     	      this.view = defaults.view;
         }
 
-        public Builder setClustering(@Nullable Input<ClusteringArgs> clustering) {
+        public Builder clustering(@Nullable Input<ClusteringArgs> clustering) {
             this.clustering = clustering;
             return this;
         }
 
-        public Builder setClustering(@Nullable ClusteringArgs clustering) {
+        public Builder clustering(@Nullable ClusteringArgs clustering) {
             this.clustering = Input.ofNullable(clustering);
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable Input<EncryptionConfigurationArgs> encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable EncryptionConfigurationArgs encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable EncryptionConfigurationArgs encryptionConfiguration) {
             this.encryptionConfiguration = Input.ofNullable(encryptionConfiguration);
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setExternalDataConfiguration(@Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable Input<ExternalDataConfigurationArgs> externalDataConfiguration) {
             this.externalDataConfiguration = externalDataConfiguration;
             return this;
         }
 
-        public Builder setExternalDataConfiguration(@Nullable ExternalDataConfigurationArgs externalDataConfiguration) {
+        public Builder externalDataConfiguration(@Nullable ExternalDataConfigurationArgs externalDataConfiguration) {
             this.externalDataConfiguration = Input.ofNullable(externalDataConfiguration);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMaterializedView(@Nullable Input<MaterializedViewDefinitionArgs> materializedView) {
+        public Builder materializedView(@Nullable Input<MaterializedViewDefinitionArgs> materializedView) {
             this.materializedView = materializedView;
             return this;
         }
 
-        public Builder setMaterializedView(@Nullable MaterializedViewDefinitionArgs materializedView) {
+        public Builder materializedView(@Nullable MaterializedViewDefinitionArgs materializedView) {
             this.materializedView = Input.ofNullable(materializedView);
             return this;
         }
 
-        public Builder setModel(@Nullable Input<ModelDefinitionArgs> model) {
+        public Builder model(@Nullable Input<ModelDefinitionArgs> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable ModelDefinitionArgs model) {
+        public Builder model(@Nullable ModelDefinitionArgs model) {
             this.model = Input.ofNullable(model);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable Input<RangePartitioningArgs> rangePartitioning) {
+        public Builder rangePartitioning(@Nullable Input<RangePartitioningArgs> rangePartitioning) {
             this.rangePartitioning = rangePartitioning;
             return this;
         }
 
-        public Builder setRangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
+        public Builder rangePartitioning(@Nullable RangePartitioningArgs rangePartitioning) {
             this.rangePartitioning = Input.ofNullable(rangePartitioning);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Input<Boolean> requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Input.ofNullable(requirePartitionFilter);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<TableSchemaArgs> schema) {
+        public Builder schema(@Nullable Input<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable TableSchemaArgs schema) {
+        public Builder schema(@Nullable TableSchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setTableReference(@Nullable Input<TableReferenceArgs> tableReference) {
+        public Builder tableReference(@Nullable Input<TableReferenceArgs> tableReference) {
             this.tableReference = tableReference;
             return this;
         }
 
-        public Builder setTableReference(@Nullable TableReferenceArgs tableReference) {
+        public Builder tableReference(@Nullable TableReferenceArgs tableReference) {
             this.tableReference = Input.ofNullable(tableReference);
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable Input<TimePartitioningArgs> timePartitioning) {
+        public Builder timePartitioning(@Nullable Input<TimePartitioningArgs> timePartitioning) {
             this.timePartitioning = timePartitioning;
             return this;
         }
 
-        public Builder setTimePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
+        public Builder timePartitioning(@Nullable TimePartitioningArgs timePartitioning) {
             this.timePartitioning = Input.ofNullable(timePartitioning);
             return this;
         }
 
-        public Builder setView(@Nullable Input<ViewDefinitionArgs> view) {
+        public Builder view(@Nullable Input<ViewDefinitionArgs> view) {
             this.view = view;
             return this;
         }
 
-        public Builder setView(@Nullable ViewDefinitionArgs view) {
+        public Builder view(@Nullable ViewDefinitionArgs view) {
             this.view = Input.ofNullable(view);
             return this;
         }

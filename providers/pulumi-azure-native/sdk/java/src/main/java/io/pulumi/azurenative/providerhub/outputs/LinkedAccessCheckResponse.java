@@ -17,13 +17,13 @@ public final class LinkedAccessCheckResponse {
     private final @Nullable String linkedProperty;
     private final @Nullable String linkedType;
 
-    @OutputCustomType.Constructor({"actionName","linkedAction","linkedActionVerb","linkedProperty","linkedType"})
+    @OutputCustomType.Constructor
     private LinkedAccessCheckResponse(
-        @Nullable String actionName,
-        @Nullable String linkedAction,
-        @Nullable String linkedActionVerb,
-        @Nullable String linkedProperty,
-        @Nullable String linkedType) {
+        @OutputCustomType.Parameter("actionName") @Nullable String actionName,
+        @OutputCustomType.Parameter("linkedAction") @Nullable String linkedAction,
+        @OutputCustomType.Parameter("linkedActionVerb") @Nullable String linkedActionVerb,
+        @OutputCustomType.Parameter("linkedProperty") @Nullable String linkedProperty,
+        @OutputCustomType.Parameter("linkedType") @Nullable String linkedType) {
         this.actionName = actionName;
         this.linkedAction = linkedAction;
         this.linkedActionVerb = linkedActionVerb;
@@ -75,27 +75,27 @@ public final class LinkedAccessCheckResponse {
     	      this.linkedType = defaults.linkedType;
         }
 
-        public Builder setActionName(@Nullable String actionName) {
+        public Builder actionName(@Nullable String actionName) {
             this.actionName = actionName;
             return this;
         }
 
-        public Builder setLinkedAction(@Nullable String linkedAction) {
+        public Builder linkedAction(@Nullable String linkedAction) {
             this.linkedAction = linkedAction;
             return this;
         }
 
-        public Builder setLinkedActionVerb(@Nullable String linkedActionVerb) {
+        public Builder linkedActionVerb(@Nullable String linkedActionVerb) {
             this.linkedActionVerb = linkedActionVerb;
             return this;
         }
 
-        public Builder setLinkedProperty(@Nullable String linkedProperty) {
+        public Builder linkedProperty(@Nullable String linkedProperty) {
             this.linkedProperty = linkedProperty;
             return this;
         }
 
-        public Builder setLinkedType(@Nullable String linkedType) {
+        public Builder linkedType(@Nullable String linkedType) {
             this.linkedType = linkedType;
             return this;
         }

@@ -44,14 +44,14 @@ public final class CrawlerS3Target {
      */
     private final @Nullable Integer sampleSize;
 
-    @OutputCustomType.Constructor({"connectionName","dlqEventQueueArn","eventQueueArn","exclusions","path","sampleSize"})
+    @OutputCustomType.Constructor
     private CrawlerS3Target(
-        @Nullable String connectionName,
-        @Nullable String dlqEventQueueArn,
-        @Nullable String eventQueueArn,
-        @Nullable List<String> exclusions,
-        String path,
-        @Nullable Integer sampleSize) {
+        @OutputCustomType.Parameter("connectionName") @Nullable String connectionName,
+        @OutputCustomType.Parameter("dlqEventQueueArn") @Nullable String dlqEventQueueArn,
+        @OutputCustomType.Parameter("eventQueueArn") @Nullable String eventQueueArn,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<String> exclusions,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize) {
         this.connectionName = connectionName;
         this.dlqEventQueueArn = dlqEventQueueArn;
         this.eventQueueArn = eventQueueArn;
@@ -133,32 +133,32 @@ public final class CrawlerS3Target {
     	      this.sampleSize = defaults.sampleSize;
         }
 
-        public Builder setConnectionName(@Nullable String connectionName) {
+        public Builder connectionName(@Nullable String connectionName) {
             this.connectionName = connectionName;
             return this;
         }
 
-        public Builder setDlqEventQueueArn(@Nullable String dlqEventQueueArn) {
+        public Builder dlqEventQueueArn(@Nullable String dlqEventQueueArn) {
             this.dlqEventQueueArn = dlqEventQueueArn;
             return this;
         }
 
-        public Builder setEventQueueArn(@Nullable String eventQueueArn) {
+        public Builder eventQueueArn(@Nullable String eventQueueArn) {
             this.eventQueueArn = eventQueueArn;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<String> exclusions) {
+        public Builder exclusions(@Nullable List<String> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }

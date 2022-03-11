@@ -106,42 +106,42 @@ public final class SslConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.status = defaults.status;
         }
 
-        public Builder setCert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Input<String> cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = Input.ofNullable(cert);
             return this;
         }
 
-        public Builder setCname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Input<String> cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = Input.ofNullable(cname);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

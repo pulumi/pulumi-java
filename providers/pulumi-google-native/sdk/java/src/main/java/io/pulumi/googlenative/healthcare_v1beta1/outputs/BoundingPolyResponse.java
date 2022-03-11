@@ -22,10 +22,10 @@ public final class BoundingPolyResponse {
      */
     private final List<VertexResponse> vertices;
 
-    @OutputCustomType.Constructor({"label","vertices"})
+    @OutputCustomType.Constructor
     private BoundingPolyResponse(
-        String label,
-        List<VertexResponse> vertices) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("vertices") List<VertexResponse> vertices) {
         this.label = label;
         this.vertices = vertices;
     }
@@ -67,12 +67,12 @@ public final class BoundingPolyResponse {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setVertices(List<VertexResponse> vertices) {
+        public Builder vertices(List<VertexResponse> vertices) {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }

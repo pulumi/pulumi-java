@@ -20,10 +20,10 @@ public final class CategoryResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"categoryId","name"})
+    @OutputCustomType.Constructor
     private CategoryResponse(
-        String categoryId,
-        String name) {
+        @OutputCustomType.Parameter("categoryId") String categoryId,
+        @OutputCustomType.Parameter("name") String name) {
         this.categoryId = categoryId;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class CategoryResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCategoryId(String categoryId) {
+        public Builder categoryId(String categoryId) {
             this.categoryId = Objects.requireNonNull(categoryId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

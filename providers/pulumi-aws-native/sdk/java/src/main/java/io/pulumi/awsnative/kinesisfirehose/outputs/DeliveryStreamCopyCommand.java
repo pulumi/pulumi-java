@@ -15,11 +15,11 @@ public final class DeliveryStreamCopyCommand {
     private final @Nullable String dataTableColumns;
     private final String dataTableName;
 
-    @OutputCustomType.Constructor({"copyOptions","dataTableColumns","dataTableName"})
+    @OutputCustomType.Constructor
     private DeliveryStreamCopyCommand(
-        @Nullable String copyOptions,
-        @Nullable String dataTableColumns,
-        String dataTableName) {
+        @OutputCustomType.Parameter("copyOptions") @Nullable String copyOptions,
+        @OutputCustomType.Parameter("dataTableColumns") @Nullable String dataTableColumns,
+        @OutputCustomType.Parameter("dataTableName") String dataTableName) {
         this.copyOptions = copyOptions;
         this.dataTableColumns = dataTableColumns;
         this.dataTableName = dataTableName;
@@ -59,17 +59,17 @@ public final class DeliveryStreamCopyCommand {
     	      this.dataTableName = defaults.dataTableName;
         }
 
-        public Builder setCopyOptions(@Nullable String copyOptions) {
+        public Builder copyOptions(@Nullable String copyOptions) {
             this.copyOptions = copyOptions;
             return this;
         }
 
-        public Builder setDataTableColumns(@Nullable String dataTableColumns) {
+        public Builder dataTableColumns(@Nullable String dataTableColumns) {
             this.dataTableColumns = dataTableColumns;
             return this;
         }
 
-        public Builder setDataTableName(String dataTableName) {
+        public Builder dataTableName(String dataTableName) {
             this.dataTableName = Objects.requireNonNull(dataTableName);
             return this;
         }

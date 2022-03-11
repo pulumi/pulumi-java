@@ -27,11 +27,11 @@ public final class RoboStartingIntentResponse {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"launcherActivity","startActivity","timeout"})
+    @OutputCustomType.Constructor
     private RoboStartingIntentResponse(
-        LauncherActivityIntentResponse launcherActivity,
-        StartActivityIntentResponse startActivity,
-        String timeout) {
+        @OutputCustomType.Parameter("launcherActivity") LauncherActivityIntentResponse launcherActivity,
+        @OutputCustomType.Parameter("startActivity") StartActivityIntentResponse startActivity,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.launcherActivity = launcherActivity;
         this.startActivity = startActivity;
         this.timeout = timeout;
@@ -83,17 +83,17 @@ public final class RoboStartingIntentResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setLauncherActivity(LauncherActivityIntentResponse launcherActivity) {
+        public Builder launcherActivity(LauncherActivityIntentResponse launcherActivity) {
             this.launcherActivity = Objects.requireNonNull(launcherActivity);
             return this;
         }
 
-        public Builder setStartActivity(StartActivityIntentResponse startActivity) {
+        public Builder startActivity(StartActivityIntentResponse startActivity) {
             this.startActivity = Objects.requireNonNull(startActivity);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

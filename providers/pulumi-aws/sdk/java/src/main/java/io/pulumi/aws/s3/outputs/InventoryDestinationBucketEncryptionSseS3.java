@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class InventoryDestinationBucketEncryptionSseS3 {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private InventoryDestinationBucketEncryptionSseS3() {
     }
 

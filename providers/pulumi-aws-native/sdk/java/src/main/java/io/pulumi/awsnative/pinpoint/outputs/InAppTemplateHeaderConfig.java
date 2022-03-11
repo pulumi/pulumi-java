@@ -16,11 +16,11 @@ public final class InAppTemplateHeaderConfig {
     private final @Nullable String header;
     private final @Nullable String textColor;
 
-    @OutputCustomType.Constructor({"alignment","header","textColor"})
+    @OutputCustomType.Constructor
     private InAppTemplateHeaderConfig(
-        @Nullable InAppTemplateAlignment alignment,
-        @Nullable String header,
-        @Nullable String textColor) {
+        @OutputCustomType.Parameter("alignment") @Nullable InAppTemplateAlignment alignment,
+        @OutputCustomType.Parameter("header") @Nullable String header,
+        @OutputCustomType.Parameter("textColor") @Nullable String textColor) {
         this.alignment = alignment;
         this.header = header;
         this.textColor = textColor;
@@ -60,17 +60,17 @@ public final class InAppTemplateHeaderConfig {
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setHeader(@Nullable String header) {
+        public Builder header(@Nullable String header) {
             this.header = header;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

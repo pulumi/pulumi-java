@@ -20,10 +20,10 @@ public final class GetDelegatedServicesDelegatedService {
      */
     private final String servicePrincipal;
 
-    @OutputCustomType.Constructor({"delegationEnabledDate","servicePrincipal"})
+    @OutputCustomType.Constructor
     private GetDelegatedServicesDelegatedService(
-        String delegationEnabledDate,
-        String servicePrincipal) {
+        @OutputCustomType.Parameter("delegationEnabledDate") String delegationEnabledDate,
+        @OutputCustomType.Parameter("servicePrincipal") String servicePrincipal) {
         this.delegationEnabledDate = delegationEnabledDate;
         this.servicePrincipal = servicePrincipal;
     }
@@ -65,12 +65,12 @@ public final class GetDelegatedServicesDelegatedService {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setDelegationEnabledDate(String delegationEnabledDate) {
+        public Builder delegationEnabledDate(String delegationEnabledDate) {
             this.delegationEnabledDate = Objects.requireNonNull(delegationEnabledDate);
             return this;
         }
 
-        public Builder setServicePrincipal(String servicePrincipal) {
+        public Builder servicePrincipal(String servicePrincipal) {
             this.servicePrincipal = Objects.requireNonNull(servicePrincipal);
             return this;
         }

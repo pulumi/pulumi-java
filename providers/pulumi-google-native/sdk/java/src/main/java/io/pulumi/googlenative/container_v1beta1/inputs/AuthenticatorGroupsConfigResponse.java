@@ -73,12 +73,12 @@ public final class AuthenticatorGroupsConfigResponse extends io.pulumi.resources
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

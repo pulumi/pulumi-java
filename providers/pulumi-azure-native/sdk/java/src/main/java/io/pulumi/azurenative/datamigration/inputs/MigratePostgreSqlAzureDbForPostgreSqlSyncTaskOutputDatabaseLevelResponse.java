@@ -311,87 +311,87 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseLe
     	      this.startedOn = defaults.startedOn;
         }
 
-        public Builder setAppliedChanges(Double appliedChanges) {
+        public Builder appliedChanges(Double appliedChanges) {
             this.appliedChanges = Objects.requireNonNull(appliedChanges);
             return this;
         }
 
-        public Builder setCdcDeleteCounter(Double cdcDeleteCounter) {
+        public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
             this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
             return this;
         }
 
-        public Builder setCdcInsertCounter(Double cdcInsertCounter) {
+        public Builder cdcInsertCounter(Double cdcInsertCounter) {
             this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
             return this;
         }
 
-        public Builder setCdcUpdateCounter(Double cdcUpdateCounter) {
+        public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setFullLoadCompletedTables(Double fullLoadCompletedTables) {
+        public Builder fullLoadCompletedTables(Double fullLoadCompletedTables) {
             this.fullLoadCompletedTables = Objects.requireNonNull(fullLoadCompletedTables);
             return this;
         }
 
-        public Builder setFullLoadErroredTables(Double fullLoadErroredTables) {
+        public Builder fullLoadErroredTables(Double fullLoadErroredTables) {
             this.fullLoadErroredTables = Objects.requireNonNull(fullLoadErroredTables);
             return this;
         }
 
-        public Builder setFullLoadLoadingTables(Double fullLoadLoadingTables) {
+        public Builder fullLoadLoadingTables(Double fullLoadLoadingTables) {
             this.fullLoadLoadingTables = Objects.requireNonNull(fullLoadLoadingTables);
             return this;
         }
 
-        public Builder setFullLoadQueuedTables(Double fullLoadQueuedTables) {
+        public Builder fullLoadQueuedTables(Double fullLoadQueuedTables) {
             this.fullLoadQueuedTables = Objects.requireNonNull(fullLoadQueuedTables);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncomingChanges(Double incomingChanges) {
+        public Builder incomingChanges(Double incomingChanges) {
             this.incomingChanges = Objects.requireNonNull(incomingChanges);
             return this;
         }
 
-        public Builder setInitializationCompleted(Boolean initializationCompleted) {
+        public Builder initializationCompleted(Boolean initializationCompleted) {
             this.initializationCompleted = Objects.requireNonNull(initializationCompleted);
             return this;
         }
 
-        public Builder setLatency(Double latency) {
+        public Builder latency(Double latency) {
             this.latency = Objects.requireNonNull(latency);
             return this;
         }
 
-        public Builder setMigrationState(String migrationState) {
+        public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }

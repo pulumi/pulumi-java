@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
      */
     private final String expiresAt;
 
-    @OutputCustomType.Constructor({"enabled","expiresAt"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ConnectorsPlatformConfigResponse(
-        Boolean enabled,
-        String expiresAt) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt) {
         this.enabled = enabled;
         this.expiresAt = expiresAt;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudApigeeV1ConnectorsPlatformConfigResponse {
     	      this.expiresAt = defaults.expiresAt;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }

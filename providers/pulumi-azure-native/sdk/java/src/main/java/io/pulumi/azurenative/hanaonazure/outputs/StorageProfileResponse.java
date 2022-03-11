@@ -29,11 +29,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable List<DiskResponse> osDisks;
 
-    @OutputCustomType.Constructor({"hanaSids","nfsIpAddress","osDisks"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable List<SAPSystemIDResponse> hanaSids,
-        String nfsIpAddress,
-        @Nullable List<DiskResponse> osDisks) {
+        @OutputCustomType.Parameter("hanaSids") @Nullable List<SAPSystemIDResponse> hanaSids,
+        @OutputCustomType.Parameter("nfsIpAddress") String nfsIpAddress,
+        @OutputCustomType.Parameter("osDisks") @Nullable List<DiskResponse> osDisks) {
         this.hanaSids = hanaSids;
         this.nfsIpAddress = nfsIpAddress;
         this.osDisks = osDisks;
@@ -85,17 +85,17 @@ public final class StorageProfileResponse {
     	      this.osDisks = defaults.osDisks;
         }
 
-        public Builder setHanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
+        public Builder hanaSids(@Nullable List<SAPSystemIDResponse> hanaSids) {
             this.hanaSids = hanaSids;
             return this;
         }
 
-        public Builder setNfsIpAddress(String nfsIpAddress) {
+        public Builder nfsIpAddress(String nfsIpAddress) {
             this.nfsIpAddress = Objects.requireNonNull(nfsIpAddress);
             return this;
         }
 
-        public Builder setOsDisks(@Nullable List<DiskResponse> osDisks) {
+        public Builder osDisks(@Nullable List<DiskResponse> osDisks) {
             this.osDisks = osDisks;
             return this;
         }

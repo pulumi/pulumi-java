@@ -15,13 +15,13 @@ public final class GetDatabaseInstanceServerCaCert {
     private final String expirationTime;
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"cert","commonName","createTime","expirationTime","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceServerCaCert(
-        String cert,
-        String commonName,
-        String createTime,
-        String expirationTime,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("cert") String cert,
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.commonName = commonName;
         this.createTime = createTime;
@@ -73,27 +73,27 @@ public final class GetDatabaseInstanceServerCaCert {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(String cert) {
+        public Builder cert(String cert) {
             this.cert = Objects.requireNonNull(cert);
             return this;
         }
 
-        public Builder setCommonName(String commonName) {
+        public Builder commonName(String commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setSha1Fingerprint(String sha1Fingerprint) {
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }

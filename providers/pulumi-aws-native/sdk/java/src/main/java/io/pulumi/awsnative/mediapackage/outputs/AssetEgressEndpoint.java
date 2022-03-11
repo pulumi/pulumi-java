@@ -20,10 +20,10 @@ public final class AssetEgressEndpoint {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"packagingConfigurationId","url"})
+    @OutputCustomType.Constructor
     private AssetEgressEndpoint(
-        String packagingConfigurationId,
-        String url) {
+        @OutputCustomType.Parameter("packagingConfigurationId") String packagingConfigurationId,
+        @OutputCustomType.Parameter("url") String url) {
         this.packagingConfigurationId = packagingConfigurationId;
         this.url = url;
     }
@@ -65,12 +65,12 @@ public final class AssetEgressEndpoint {
     	      this.url = defaults.url;
         }
 
-        public Builder setPackagingConfigurationId(String packagingConfigurationId) {
+        public Builder packagingConfigurationId(String packagingConfigurationId) {
             this.packagingConfigurationId = Objects.requireNonNull(packagingConfigurationId);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

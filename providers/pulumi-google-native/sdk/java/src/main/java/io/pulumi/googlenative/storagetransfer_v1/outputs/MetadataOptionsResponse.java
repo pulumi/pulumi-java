@@ -50,16 +50,16 @@ public final class MetadataOptionsResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"acl","gid","kmsKey","mode","storageClass","symlink","temporaryHold","uid"})
+    @OutputCustomType.Constructor
     private MetadataOptionsResponse(
-        String acl,
-        String gid,
-        String kmsKey,
-        String mode,
-        String storageClass,
-        String symlink,
-        String temporaryHold,
-        String uid) {
+        @OutputCustomType.Parameter("acl") String acl,
+        @OutputCustomType.Parameter("gid") String gid,
+        @OutputCustomType.Parameter("kmsKey") String kmsKey,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("symlink") String symlink,
+        @OutputCustomType.Parameter("temporaryHold") String temporaryHold,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.acl = acl;
         this.gid = gid;
         this.kmsKey = kmsKey;
@@ -161,42 +161,42 @@ public final class MetadataOptionsResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAcl(String acl) {
+        public Builder acl(String acl) {
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setSymlink(String symlink) {
+        public Builder symlink(String symlink) {
             this.symlink = Objects.requireNonNull(symlink);
             return this;
         }
 
-        public Builder setTemporaryHold(String temporaryHold) {
+        public Builder temporaryHold(String temporaryHold) {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

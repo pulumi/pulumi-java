@@ -17,8 +17,8 @@ public final class CnameRecordResponse {
      */
     private final @Nullable String cname;
 
-    @OutputCustomType.Constructor({"cname"})
-    private CnameRecordResponse(@Nullable String cname) {
+    @OutputCustomType.Constructor
+    private CnameRecordResponse(@OutputCustomType.Parameter("cname") @Nullable String cname) {
         this.cname = cname;
     }
 
@@ -50,7 +50,7 @@ public final class CnameRecordResponse {
     	      this.cname = defaults.cname;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }

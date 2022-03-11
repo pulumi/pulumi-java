@@ -35,12 +35,12 @@ public final class StageCanarySetting {
      */
     private final @Nullable Boolean useStageCache;
 
-    @OutputCustomType.Constructor({"deploymentId","percentTraffic","stageVariableOverrides","useStageCache"})
+    @OutputCustomType.Constructor
     private StageCanarySetting(
-        @Nullable String deploymentId,
-        @Nullable Double percentTraffic,
-        @Nullable Object stageVariableOverrides,
-        @Nullable Boolean useStageCache) {
+        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @OutputCustomType.Parameter("percentTraffic") @Nullable Double percentTraffic,
+        @OutputCustomType.Parameter("stageVariableOverrides") @Nullable Object stageVariableOverrides,
+        @OutputCustomType.Parameter("useStageCache") @Nullable Boolean useStageCache) {
         this.deploymentId = deploymentId;
         this.percentTraffic = percentTraffic;
         this.stageVariableOverrides = stageVariableOverrides;
@@ -102,22 +102,22 @@ public final class StageCanarySetting {
     	      this.useStageCache = defaults.useStageCache;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setPercentTraffic(@Nullable Double percentTraffic) {
+        public Builder percentTraffic(@Nullable Double percentTraffic) {
             this.percentTraffic = percentTraffic;
             return this;
         }
 
-        public Builder setStageVariableOverrides(@Nullable Object stageVariableOverrides) {
+        public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
             this.stageVariableOverrides = stageVariableOverrides;
             return this;
         }
 
-        public Builder setUseStageCache(@Nullable Boolean useStageCache) {
+        public Builder useStageCache(@Nullable Boolean useStageCache) {
             this.useStageCache = useStageCache;
             return this;
         }

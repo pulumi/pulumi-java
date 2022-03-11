@@ -47,14 +47,14 @@ public final class ListOperationalizationClusterKeysResult {
      */
     private final @Nullable StorageAccountCredentialsResponse storageAccount;
 
-    @OutputCustomType.Constructor({"appInsights","containerRegistry","containerService","serviceAuthConfiguration","sslConfiguration","storageAccount"})
+    @OutputCustomType.Constructor
     private ListOperationalizationClusterKeysResult(
-        @Nullable AppInsightsCredentialsResponse appInsights,
-        @Nullable ContainerRegistryCredentialsResponse containerRegistry,
-        @Nullable ContainerServiceCredentialsResponse containerService,
-        @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
-        @Nullable SslConfigurationResponse sslConfiguration,
-        @Nullable StorageAccountCredentialsResponse storageAccount) {
+        @OutputCustomType.Parameter("appInsights") @Nullable AppInsightsCredentialsResponse appInsights,
+        @OutputCustomType.Parameter("containerRegistry") @Nullable ContainerRegistryCredentialsResponse containerRegistry,
+        @OutputCustomType.Parameter("containerService") @Nullable ContainerServiceCredentialsResponse containerService,
+        @OutputCustomType.Parameter("serviceAuthConfiguration") @Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration,
+        @OutputCustomType.Parameter("sslConfiguration") @Nullable SslConfigurationResponse sslConfiguration,
+        @OutputCustomType.Parameter("storageAccount") @Nullable StorageAccountCredentialsResponse storageAccount) {
         this.appInsights = appInsights;
         this.containerRegistry = containerRegistry;
         this.containerService = containerService;
@@ -136,32 +136,32 @@ public final class ListOperationalizationClusterKeysResult {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setAppInsights(@Nullable AppInsightsCredentialsResponse appInsights) {
+        public Builder appInsights(@Nullable AppInsightsCredentialsResponse appInsights) {
             this.appInsights = appInsights;
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable ContainerRegistryCredentialsResponse containerRegistry) {
+        public Builder containerRegistry(@Nullable ContainerRegistryCredentialsResponse containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setContainerService(@Nullable ContainerServiceCredentialsResponse containerService) {
+        public Builder containerService(@Nullable ContainerServiceCredentialsResponse containerService) {
             this.containerService = containerService;
             return this;
         }
 
-        public Builder setServiceAuthConfiguration(@Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration) {
+        public Builder serviceAuthConfiguration(@Nullable ServiceAuthConfigurationResponse serviceAuthConfiguration) {
             this.serviceAuthConfiguration = serviceAuthConfiguration;
             return this;
         }
 
-        public Builder setSslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
+        public Builder sslConfiguration(@Nullable SslConfigurationResponse sslConfiguration) {
             this.sslConfiguration = sslConfiguration;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountCredentialsResponse storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountCredentialsResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }

@@ -33,12 +33,12 @@ public final class OraclePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"partitionColumnName","partitionLowerBound","partitionNames","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private OraclePartitionSettingsResponse(
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable List<Object> partitionNames,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionNames") @Nullable List<Object> partitionNames,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
         this.partitionNames = partitionNames;
@@ -100,22 +100,22 @@ public final class OraclePartitionSettingsResponse {
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionNames(@Nullable List<Object> partitionNames) {
+        public Builder partitionNames(@Nullable List<Object> partitionNames) {
             this.partitionNames = partitionNames;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }

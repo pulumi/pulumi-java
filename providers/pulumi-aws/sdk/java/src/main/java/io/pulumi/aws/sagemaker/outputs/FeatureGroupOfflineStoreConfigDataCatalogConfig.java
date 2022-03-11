@@ -27,11 +27,11 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
      */
     private final @Nullable String tableName;
 
-    @OutputCustomType.Constructor({"catalog","database","tableName"})
+    @OutputCustomType.Constructor
     private FeatureGroupOfflineStoreConfigDataCatalogConfig(
-        @Nullable String catalog,
-        @Nullable String database,
-        @Nullable String tableName) {
+        @OutputCustomType.Parameter("catalog") @Nullable String catalog,
+        @OutputCustomType.Parameter("database") @Nullable String database,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName) {
         this.catalog = catalog;
         this.database = database;
         this.tableName = tableName;
@@ -83,17 +83,17 @@ public final class FeatureGroupOfflineStoreConfigDataCatalogConfig {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalog(@Nullable String catalog) {
+        public Builder catalog(@Nullable String catalog) {
             this.catalog = catalog;
             return this;
         }
 
-        public Builder setDatabase(@Nullable String database) {
+        public Builder database(@Nullable String database) {
             this.database = database;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }

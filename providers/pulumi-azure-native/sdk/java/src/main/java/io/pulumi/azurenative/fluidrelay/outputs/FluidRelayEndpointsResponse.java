@@ -21,10 +21,10 @@ public final class FluidRelayEndpointsResponse {
      */
     private final List<String> storageEndpoints;
 
-    @OutputCustomType.Constructor({"ordererEndpoints","storageEndpoints"})
+    @OutputCustomType.Constructor
     private FluidRelayEndpointsResponse(
-        List<String> ordererEndpoints,
-        List<String> storageEndpoints) {
+        @OutputCustomType.Parameter("ordererEndpoints") List<String> ordererEndpoints,
+        @OutputCustomType.Parameter("storageEndpoints") List<String> storageEndpoints) {
         this.ordererEndpoints = ordererEndpoints;
         this.storageEndpoints = storageEndpoints;
     }
@@ -66,12 +66,12 @@ public final class FluidRelayEndpointsResponse {
     	      this.storageEndpoints = defaults.storageEndpoints;
         }
 
-        public Builder setOrdererEndpoints(List<String> ordererEndpoints) {
+        public Builder ordererEndpoints(List<String> ordererEndpoints) {
             this.ordererEndpoints = Objects.requireNonNull(ordererEndpoints);
             return this;
         }
 
-        public Builder setStorageEndpoints(List<String> storageEndpoints) {
+        public Builder storageEndpoints(List<String> storageEndpoints) {
             this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
             return this;
         }

@@ -442,252 +442,252 @@ public final class DevEndpointState extends io.pulumi.resources.ResourceArgs {
     	      this.zeppelinRemoteSparkInterpreterPort = defaults.zeppelinRemoteSparkInterpreterPort;
         }
 
-        public Builder setArguments(@Nullable Input<Map<String,Object>> arguments) {
+        public Builder arguments(@Nullable Input<Map<String,Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable Map<String,Object> arguments) {
+        public Builder arguments(@Nullable Map<String,Object> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable Input<String> availabilityZone) {
+        public Builder availabilityZone(@Nullable Input<String> availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = Input.ofNullable(availabilityZone);
             return this;
         }
 
-        public Builder setExtraJarsS3Path(@Nullable Input<String> extraJarsS3Path) {
+        public Builder extraJarsS3Path(@Nullable Input<String> extraJarsS3Path) {
             this.extraJarsS3Path = extraJarsS3Path;
             return this;
         }
 
-        public Builder setExtraJarsS3Path(@Nullable String extraJarsS3Path) {
+        public Builder extraJarsS3Path(@Nullable String extraJarsS3Path) {
             this.extraJarsS3Path = Input.ofNullable(extraJarsS3Path);
             return this;
         }
 
-        public Builder setExtraPythonLibsS3Path(@Nullable Input<String> extraPythonLibsS3Path) {
+        public Builder extraPythonLibsS3Path(@Nullable Input<String> extraPythonLibsS3Path) {
             this.extraPythonLibsS3Path = extraPythonLibsS3Path;
             return this;
         }
 
-        public Builder setExtraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
+        public Builder extraPythonLibsS3Path(@Nullable String extraPythonLibsS3Path) {
             this.extraPythonLibsS3Path = Input.ofNullable(extraPythonLibsS3Path);
             return this;
         }
 
-        public Builder setFailureReason(@Nullable Input<String> failureReason) {
+        public Builder failureReason(@Nullable Input<String> failureReason) {
             this.failureReason = failureReason;
             return this;
         }
 
-        public Builder setFailureReason(@Nullable String failureReason) {
+        public Builder failureReason(@Nullable String failureReason) {
             this.failureReason = Input.ofNullable(failureReason);
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable Input<String> glueVersion) {
+        public Builder glueVersion(@Nullable Input<String> glueVersion) {
             this.glueVersion = glueVersion;
             return this;
         }
 
-        public Builder setGlueVersion(@Nullable String glueVersion) {
+        public Builder glueVersion(@Nullable String glueVersion) {
             this.glueVersion = Input.ofNullable(glueVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Input<Integer> numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Input<Integer> numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = Input.ofNullable(numberOfNodes);
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Input<Integer> numberOfWorkers) {
             this.numberOfWorkers = numberOfWorkers;
             return this;
         }
 
-        public Builder setNumberOfWorkers(@Nullable Integer numberOfWorkers) {
+        public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
             this.numberOfWorkers = Input.ofNullable(numberOfWorkers);
             return this;
         }
 
-        public Builder setPrivateAddress(@Nullable Input<String> privateAddress) {
+        public Builder privateAddress(@Nullable Input<String> privateAddress) {
             this.privateAddress = privateAddress;
             return this;
         }
 
-        public Builder setPrivateAddress(@Nullable String privateAddress) {
+        public Builder privateAddress(@Nullable String privateAddress) {
             this.privateAddress = Input.ofNullable(privateAddress);
             return this;
         }
 
-        public Builder setPublicAddress(@Nullable Input<String> publicAddress) {
+        public Builder publicAddress(@Nullable Input<String> publicAddress) {
             this.publicAddress = publicAddress;
             return this;
         }
 
-        public Builder setPublicAddress(@Nullable String publicAddress) {
+        public Builder publicAddress(@Nullable String publicAddress) {
             this.publicAddress = Input.ofNullable(publicAddress);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable Input<String> publicKey) {
+        public Builder publicKey(@Nullable Input<String> publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = Input.ofNullable(publicKey);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable Input<List<String>> publicKeys) {
+        public Builder publicKeys(@Nullable Input<List<String>> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<String> publicKeys) {
+        public Builder publicKeys(@Nullable List<String> publicKeys) {
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable Input<String> securityConfiguration) {
+        public Builder securityConfiguration(@Nullable Input<String> securityConfiguration) {
             this.securityConfiguration = securityConfiguration;
             return this;
         }
 
-        public Builder setSecurityConfiguration(@Nullable String securityConfiguration) {
+        public Builder securityConfiguration(@Nullable String securityConfiguration) {
             this.securityConfiguration = Input.ofNullable(securityConfiguration);
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable Input<List<String>> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = Input.ofNullable(securityGroupIds);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
 
-        public Builder setWorkerType(@Nullable Input<String> workerType) {
+        public Builder workerType(@Nullable Input<String> workerType) {
             this.workerType = workerType;
             return this;
         }
 
-        public Builder setWorkerType(@Nullable String workerType) {
+        public Builder workerType(@Nullable String workerType) {
             this.workerType = Input.ofNullable(workerType);
             return this;
         }
 
-        public Builder setYarnEndpointAddress(@Nullable Input<String> yarnEndpointAddress) {
+        public Builder yarnEndpointAddress(@Nullable Input<String> yarnEndpointAddress) {
             this.yarnEndpointAddress = yarnEndpointAddress;
             return this;
         }
 
-        public Builder setYarnEndpointAddress(@Nullable String yarnEndpointAddress) {
+        public Builder yarnEndpointAddress(@Nullable String yarnEndpointAddress) {
             this.yarnEndpointAddress = Input.ofNullable(yarnEndpointAddress);
             return this;
         }
 
-        public Builder setZeppelinRemoteSparkInterpreterPort(@Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort) {
+        public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Input<Integer> zeppelinRemoteSparkInterpreterPort) {
             this.zeppelinRemoteSparkInterpreterPort = zeppelinRemoteSparkInterpreterPort;
             return this;
         }
 
-        public Builder setZeppelinRemoteSparkInterpreterPort(@Nullable Integer zeppelinRemoteSparkInterpreterPort) {
+        public Builder zeppelinRemoteSparkInterpreterPort(@Nullable Integer zeppelinRemoteSparkInterpreterPort) {
             this.zeppelinRemoteSparkInterpreterPort = Input.ofNullable(zeppelinRemoteSparkInterpreterPort);
             return this;
         }

@@ -36,12 +36,12 @@ public final class FlexibleAppVersionResources {
      */
     private final @Nullable List<FlexibleAppVersionResourcesVolume> volumes;
 
-    @OutputCustomType.Constructor({"cpu","diskGb","memoryGb","volumes"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionResources(
-        @Nullable Integer cpu,
-        @Nullable Integer diskGb,
-        @Nullable Double memoryGb,
-        @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
+        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
+        @OutputCustomType.Parameter("diskGb") @Nullable Integer diskGb,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("volumes") @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.memoryGb = memoryGb;
@@ -104,22 +104,22 @@ public final class FlexibleAppVersionResources {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setDiskGb(@Nullable Integer diskGb) {
+        public Builder diskGb(@Nullable Integer diskGb) {
             this.diskGb = diskGb;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
+        public Builder volumes(@Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
             this.volumes = volumes;
             return this;
         }

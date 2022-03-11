@@ -56,17 +56,17 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
      */
     private final String linuxIsolation;
 
-    @OutputCustomType.Constructor({"containerImageSources","dockerAddCapabilities","dockerChrootPath","dockerNetwork","dockerPrivileged","dockerRunAsRoot","dockerRuntime","dockerSiblingContainers","linuxIsolation"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyResponse(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
-        String linuxIsolation) {
+        @OutputCustomType.Parameter("containerImageSources") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources,
+        @OutputCustomType.Parameter("dockerAddCapabilities") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities,
+        @OutputCustomType.Parameter("dockerChrootPath") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath,
+        @OutputCustomType.Parameter("dockerNetwork") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork,
+        @OutputCustomType.Parameter("dockerPrivileged") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged,
+        @OutputCustomType.Parameter("dockerRunAsRoot") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot,
+        @OutputCustomType.Parameter("dockerRuntime") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime,
+        @OutputCustomType.Parameter("dockerSiblingContainers") GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers,
+        @OutputCustomType.Parameter("linuxIsolation") String linuxIsolation) {
         this.containerImageSources = containerImageSources;
         this.dockerAddCapabilities = dockerAddCapabilities;
         this.dockerChrootPath = dockerChrootPath;
@@ -178,47 +178,47 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyRe
     	      this.linuxIsolation = defaults.linuxIsolation;
         }
 
-        public Builder setContainerImageSources(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources) {
+        public Builder containerImageSources(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse containerImageSources) {
             this.containerImageSources = Objects.requireNonNull(containerImageSources);
             return this;
         }
 
-        public Builder setDockerAddCapabilities(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities) {
+        public Builder dockerAddCapabilities(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerAddCapabilities) {
             this.dockerAddCapabilities = Objects.requireNonNull(dockerAddCapabilities);
             return this;
         }
 
-        public Builder setDockerChrootPath(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath) {
+        public Builder dockerChrootPath(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerChrootPath) {
             this.dockerChrootPath = Objects.requireNonNull(dockerChrootPath);
             return this;
         }
 
-        public Builder setDockerNetwork(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork) {
+        public Builder dockerNetwork(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerNetwork) {
             this.dockerNetwork = Objects.requireNonNull(dockerNetwork);
             return this;
         }
 
-        public Builder setDockerPrivileged(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged) {
+        public Builder dockerPrivileged(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerPrivileged) {
             this.dockerPrivileged = Objects.requireNonNull(dockerPrivileged);
             return this;
         }
 
-        public Builder setDockerRunAsRoot(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot) {
+        public Builder dockerRunAsRoot(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRunAsRoot) {
             this.dockerRunAsRoot = Objects.requireNonNull(dockerRunAsRoot);
             return this;
         }
 
-        public Builder setDockerRuntime(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime) {
+        public Builder dockerRuntime(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerRuntime) {
             this.dockerRuntime = Objects.requireNonNull(dockerRuntime);
             return this;
         }
 
-        public Builder setDockerSiblingContainers(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers) {
+        public Builder dockerSiblingContainers(GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse dockerSiblingContainers) {
             this.dockerSiblingContainers = Objects.requireNonNull(dockerSiblingContainers);
             return this;
         }
 
-        public Builder setLinuxIsolation(String linuxIsolation) {
+        public Builder linuxIsolation(String linuxIsolation) {
             this.linuxIsolation = Objects.requireNonNull(linuxIsolation);
             return this;
         }

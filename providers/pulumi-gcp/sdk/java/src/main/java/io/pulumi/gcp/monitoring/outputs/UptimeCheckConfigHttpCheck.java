@@ -70,18 +70,18 @@ public final class UptimeCheckConfigHttpCheck {
      */
     private final @Nullable Boolean validateSsl;
 
-    @OutputCustomType.Constructor({"authInfo","body","contentType","headers","maskHeaders","path","port","requestMethod","useSsl","validateSsl"})
+    @OutputCustomType.Constructor
     private UptimeCheckConfigHttpCheck(
-        @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
-        @Nullable String body,
-        @Nullable String contentType,
-        @Nullable Map<String,String> headers,
-        @Nullable Boolean maskHeaders,
-        @Nullable String path,
-        @Nullable Integer port,
-        @Nullable String requestMethod,
-        @Nullable Boolean useSsl,
-        @Nullable Boolean validateSsl) {
+        @OutputCustomType.Parameter("authInfo") @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("maskHeaders") @Nullable Boolean maskHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("requestMethod") @Nullable String requestMethod,
+        @OutputCustomType.Parameter("useSsl") @Nullable Boolean useSsl,
+        @OutputCustomType.Parameter("validateSsl") @Nullable Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;
@@ -207,52 +207,52 @@ public final class UptimeCheckConfigHttpCheck {
     	      this.validateSsl = defaults.validateSsl;
         }
 
-        public Builder setAuthInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo) {
+        public Builder authInfo(@Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo) {
             this.authInfo = authInfo;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMaskHeaders(@Nullable Boolean maskHeaders) {
+        public Builder maskHeaders(@Nullable Boolean maskHeaders) {
             this.maskHeaders = maskHeaders;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable String requestMethod) {
+        public Builder requestMethod(@Nullable String requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setUseSsl(@Nullable Boolean useSsl) {
+        public Builder useSsl(@Nullable Boolean useSsl) {
             this.useSsl = useSsl;
             return this;
         }
 
-        public Builder setValidateSsl(@Nullable Boolean validateSsl) {
+        public Builder validateSsl(@Nullable Boolean validateSsl) {
             this.validateSsl = validateSsl;
             return this;
         }

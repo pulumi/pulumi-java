@@ -23,10 +23,10 @@ public final class TargetPropertiesResponse {
      */
     private final @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries;
 
-    @OutputCustomType.Constructor({"azureQueries","nonAzureQueries"})
+    @OutputCustomType.Constructor
     private TargetPropertiesResponse(
-        @Nullable List<AzureQueryPropertiesResponse> azureQueries,
-        @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
+        @OutputCustomType.Parameter("azureQueries") @Nullable List<AzureQueryPropertiesResponse> azureQueries,
+        @OutputCustomType.Parameter("nonAzureQueries") @Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
         this.azureQueries = azureQueries;
         this.nonAzureQueries = nonAzureQueries;
     }
@@ -68,12 +68,12 @@ public final class TargetPropertiesResponse {
     	      this.nonAzureQueries = defaults.nonAzureQueries;
         }
 
-        public Builder setAzureQueries(@Nullable List<AzureQueryPropertiesResponse> azureQueries) {
+        public Builder azureQueries(@Nullable List<AzureQueryPropertiesResponse> azureQueries) {
             this.azureQueries = azureQueries;
             return this;
         }
 
-        public Builder setNonAzureQueries(@Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
+        public Builder nonAzureQueries(@Nullable List<NonAzureQueryPropertiesResponse> nonAzureQueries) {
             this.nonAzureQueries = nonAzureQueries;
             return this;
         }

@@ -57,7 +57,7 @@ public final class TransferConfigurationResponseTransferAllDetails extends io.pu
     	      this.include = defaults.include;
         }
 
-        public Builder setInclude(@Nullable TransferAllDetailsResponse include) {
+        public Builder include(@Nullable TransferAllDetailsResponse include) {
             this.include = include;
             return this;
         }

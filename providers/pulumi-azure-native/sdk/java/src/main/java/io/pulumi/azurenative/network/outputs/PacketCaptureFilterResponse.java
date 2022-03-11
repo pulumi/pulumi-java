@@ -37,13 +37,13 @@ public final class PacketCaptureFilterResponse {
      */
     private final @Nullable String remotePort;
 
-    @OutputCustomType.Constructor({"localIPAddress","localPort","protocol","remoteIPAddress","remotePort"})
+    @OutputCustomType.Constructor
     private PacketCaptureFilterResponse(
-        @Nullable String localIPAddress,
-        @Nullable String localPort,
-        @Nullable String protocol,
-        @Nullable String remoteIPAddress,
-        @Nullable String remotePort) {
+        @OutputCustomType.Parameter("localIPAddress") @Nullable String localIPAddress,
+        @OutputCustomType.Parameter("localPort") @Nullable String localPort,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("remoteIPAddress") @Nullable String remoteIPAddress,
+        @OutputCustomType.Parameter("remotePort") @Nullable String remotePort) {
         this.localIPAddress = localIPAddress;
         this.localPort = localPort;
         this.protocol = protocol;
@@ -115,27 +115,27 @@ public final class PacketCaptureFilterResponse {
     	      this.remotePort = defaults.remotePort;
         }
 
-        public Builder setLocalIPAddress(@Nullable String localIPAddress) {
+        public Builder localIPAddress(@Nullable String localIPAddress) {
             this.localIPAddress = localIPAddress;
             return this;
         }
 
-        public Builder setLocalPort(@Nullable String localPort) {
+        public Builder localPort(@Nullable String localPort) {
             this.localPort = localPort;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setRemoteIPAddress(@Nullable String remoteIPAddress) {
+        public Builder remoteIPAddress(@Nullable String remoteIPAddress) {
             this.remoteIPAddress = remoteIPAddress;
             return this;
         }
 
-        public Builder setRemotePort(@Nullable String remotePort) {
+        public Builder remotePort(@Nullable String remotePort) {
             this.remotePort = remotePort;
             return this;
         }

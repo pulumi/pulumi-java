@@ -149,47 +149,47 @@ public final class GetBackendServiceCdnPolicy extends io.pulumi.resources.Invoke
     	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
         }
 
-        public Builder setCacheKeyPolicies(List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies) {
+        public Builder cacheKeyPolicies(List<GetBackendServiceCdnPolicyCacheKeyPolicy> cacheKeyPolicies) {
             this.cacheKeyPolicies = Objects.requireNonNull(cacheKeyPolicies);
             return this;
         }
 
-        public Builder setCacheMode(String cacheMode) {
+        public Builder cacheMode(String cacheMode) {
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(Integer clientTtl) {
+        public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(Integer defaultTtl) {
+        public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(Integer maxTtl) {
+        public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(Boolean negativeCaching) {
+        public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicies(List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
+        public Builder negativeCachingPolicies(List<GetBackendServiceCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = Objects.requireNonNull(negativeCachingPolicies);
             return this;
         }
 
-        public Builder setServeWhileStale(Integer serveWhileStale) {
+        public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }

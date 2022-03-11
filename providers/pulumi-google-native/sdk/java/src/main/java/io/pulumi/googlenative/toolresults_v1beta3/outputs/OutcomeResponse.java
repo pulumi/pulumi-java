@@ -39,13 +39,13 @@ public final class OutcomeResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor({"failureDetail","inconclusiveDetail","skippedDetail","successDetail","summary"})
+    @OutputCustomType.Constructor
     private OutcomeResponse(
-        FailureDetailResponse failureDetail,
-        InconclusiveDetailResponse inconclusiveDetail,
-        SkippedDetailResponse skippedDetail,
-        SuccessDetailResponse successDetail,
-        String summary) {
+        @OutputCustomType.Parameter("failureDetail") FailureDetailResponse failureDetail,
+        @OutputCustomType.Parameter("inconclusiveDetail") InconclusiveDetailResponse inconclusiveDetail,
+        @OutputCustomType.Parameter("skippedDetail") SkippedDetailResponse skippedDetail,
+        @OutputCustomType.Parameter("successDetail") SuccessDetailResponse successDetail,
+        @OutputCustomType.Parameter("summary") String summary) {
         this.failureDetail = failureDetail;
         this.inconclusiveDetail = inconclusiveDetail;
         this.skippedDetail = skippedDetail;
@@ -117,27 +117,27 @@ public final class OutcomeResponse {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setFailureDetail(FailureDetailResponse failureDetail) {
+        public Builder failureDetail(FailureDetailResponse failureDetail) {
             this.failureDetail = Objects.requireNonNull(failureDetail);
             return this;
         }
 
-        public Builder setInconclusiveDetail(InconclusiveDetailResponse inconclusiveDetail) {
+        public Builder inconclusiveDetail(InconclusiveDetailResponse inconclusiveDetail) {
             this.inconclusiveDetail = Objects.requireNonNull(inconclusiveDetail);
             return this;
         }
 
-        public Builder setSkippedDetail(SkippedDetailResponse skippedDetail) {
+        public Builder skippedDetail(SkippedDetailResponse skippedDetail) {
             this.skippedDetail = Objects.requireNonNull(skippedDetail);
             return this;
         }
 
-        public Builder setSuccessDetail(SuccessDetailResponse successDetail) {
+        public Builder successDetail(SuccessDetailResponse successDetail) {
             this.successDetail = Objects.requireNonNull(successDetail);
             return this;
         }
 
-        public Builder setSummary(String summary) {
+        public Builder summary(String summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

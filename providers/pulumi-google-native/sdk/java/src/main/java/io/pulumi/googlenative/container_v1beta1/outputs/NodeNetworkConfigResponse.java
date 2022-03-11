@@ -26,11 +26,11 @@ public final class NodeNetworkConfigResponse {
      */
     private final String podRange;
 
-    @OutputCustomType.Constructor({"createPodRange","podIpv4CidrBlock","podRange"})
+    @OutputCustomType.Constructor
     private NodeNetworkConfigResponse(
-        Boolean createPodRange,
-        String podIpv4CidrBlock,
-        String podRange) {
+        @OutputCustomType.Parameter("createPodRange") Boolean createPodRange,
+        @OutputCustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
+        @OutputCustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;
@@ -82,17 +82,17 @@ public final class NodeNetworkConfigResponse {
     	      this.podRange = defaults.podRange;
         }
 
-        public Builder setCreatePodRange(Boolean createPodRange) {
+        public Builder createPodRange(Boolean createPodRange) {
             this.createPodRange = Objects.requireNonNull(createPodRange);
             return this;
         }
 
-        public Builder setPodIpv4CidrBlock(String podIpv4CidrBlock) {
+        public Builder podIpv4CidrBlock(String podIpv4CidrBlock) {
             this.podIpv4CidrBlock = Objects.requireNonNull(podIpv4CidrBlock);
             return this;
         }
 
-        public Builder setPodRange(String podRange) {
+        public Builder podRange(String podRange) {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }

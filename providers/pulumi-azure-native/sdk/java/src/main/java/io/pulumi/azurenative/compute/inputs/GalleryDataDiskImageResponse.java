@@ -108,22 +108,22 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
     	      this.source = defaults.source;
         }
 
-        public Builder setHostCaching(@Nullable String hostCaching) {
+        public Builder hostCaching(@Nullable String hostCaching) {
             this.hostCaching = hostCaching;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
 
-        public Builder setSizeInGB(Integer sizeInGB) {
+        public Builder sizeInGB(Integer sizeInGB) {
             this.sizeInGB = Objects.requireNonNull(sizeInGB);
             return this;
         }
 
-        public Builder setSource(@Nullable GalleryArtifactVersionSourceResponse source) {
+        public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             this.source = source;
             return this;
         }

@@ -23,10 +23,10 @@ public final class ThingTypeProperties {
      */
     private final @Nullable List<String> searchableAttributes;
 
-    @OutputCustomType.Constructor({"description","searchableAttributes"})
+    @OutputCustomType.Constructor
     private ThingTypeProperties(
-        @Nullable String description,
-        @Nullable List<String> searchableAttributes) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("searchableAttributes") @Nullable List<String> searchableAttributes) {
         this.description = description;
         this.searchableAttributes = searchableAttributes;
     }
@@ -68,12 +68,12 @@ public final class ThingTypeProperties {
     	      this.searchableAttributes = defaults.searchableAttributes;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSearchableAttributes(@Nullable List<String> searchableAttributes) {
+        public Builder searchableAttributes(@Nullable List<String> searchableAttributes) {
             this.searchableAttributes = searchableAttributes;
             return this;
         }

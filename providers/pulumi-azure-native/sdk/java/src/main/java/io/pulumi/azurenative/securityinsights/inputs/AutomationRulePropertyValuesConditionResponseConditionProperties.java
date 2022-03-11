@@ -91,17 +91,17 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     	      this.propertyValues = defaults.propertyValues;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setPropertyName(@Nullable String propertyName) {
+        public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }
 
-        public Builder setPropertyValues(@Nullable List<String> propertyValues) {
+        public Builder propertyValues(@Nullable List<String> propertyValues) {
             this.propertyValues = propertyValues;
             return this;
         }

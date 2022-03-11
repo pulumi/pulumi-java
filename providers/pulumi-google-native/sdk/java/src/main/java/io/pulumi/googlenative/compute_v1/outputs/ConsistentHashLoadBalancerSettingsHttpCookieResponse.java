@@ -26,11 +26,11 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
      */
     private final DurationResponse ttl;
 
-    @OutputCustomType.Constructor({"name","path","ttl"})
+    @OutputCustomType.Constructor
     private ConsistentHashLoadBalancerSettingsHttpCookieResponse(
-        String name,
-        String path,
-        DurationResponse ttl) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("ttl") DurationResponse ttl) {
         this.name = name;
         this.path = path;
         this.ttl = ttl;
@@ -82,17 +82,17 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTtl(DurationResponse ttl) {
+        public Builder ttl(DurationResponse ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

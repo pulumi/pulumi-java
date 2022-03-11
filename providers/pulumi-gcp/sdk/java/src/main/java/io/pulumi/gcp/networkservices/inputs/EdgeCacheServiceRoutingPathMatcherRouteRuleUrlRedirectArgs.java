@@ -142,62 +142,62 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectArgs ex
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder setHostRedirect(@Nullable Input<String> hostRedirect) {
+        public Builder hostRedirect(@Nullable Input<String> hostRedirect) {
             this.hostRedirect = hostRedirect;
             return this;
         }
 
-        public Builder setHostRedirect(@Nullable String hostRedirect) {
+        public Builder hostRedirect(@Nullable String hostRedirect) {
             this.hostRedirect = Input.ofNullable(hostRedirect);
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Input<Boolean> httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Input<Boolean> httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Boolean httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = Input.ofNullable(httpsRedirect);
             return this;
         }
 
-        public Builder setPathRedirect(@Nullable Input<String> pathRedirect) {
+        public Builder pathRedirect(@Nullable Input<String> pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
 
-        public Builder setPathRedirect(@Nullable String pathRedirect) {
+        public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = Input.ofNullable(pathRedirect);
             return this;
         }
 
-        public Builder setPrefixRedirect(@Nullable Input<String> prefixRedirect) {
+        public Builder prefixRedirect(@Nullable Input<String> prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
 
-        public Builder setPrefixRedirect(@Nullable String prefixRedirect) {
+        public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = Input.ofNullable(prefixRedirect);
             return this;
         }
 
-        public Builder setRedirectResponseCode(@Nullable Input<String> redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable Input<String> redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
 
-        public Builder setRedirectResponseCode(@Nullable String redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
             this.redirectResponseCode = Input.ofNullable(redirectResponseCode);
             return this;
         }
 
-        public Builder setStripQuery(@Nullable Input<Boolean> stripQuery) {
+        public Builder stripQuery(@Nullable Input<Boolean> stripQuery) {
             this.stripQuery = stripQuery;
             return this;
         }
 
-        public Builder setStripQuery(@Nullable Boolean stripQuery) {
+        public Builder stripQuery(@Nullable Boolean stripQuery) {
             this.stripQuery = Input.ofNullable(stripQuery);
             return this;
         }

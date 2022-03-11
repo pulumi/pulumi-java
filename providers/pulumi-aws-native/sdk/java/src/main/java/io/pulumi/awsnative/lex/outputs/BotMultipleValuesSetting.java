@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BotMultipleValuesSetting {
     private final @Nullable Boolean allowMultipleValues;
 
-    @OutputCustomType.Constructor({"allowMultipleValues"})
-    private BotMultipleValuesSetting(@Nullable Boolean allowMultipleValues) {
+    @OutputCustomType.Constructor
+    private BotMultipleValuesSetting(@OutputCustomType.Parameter("allowMultipleValues") @Nullable Boolean allowMultipleValues) {
         this.allowMultipleValues = allowMultipleValues;
     }
 
@@ -42,7 +42,7 @@ public final class BotMultipleValuesSetting {
     	      this.allowMultipleValues = defaults.allowMultipleValues;
         }
 
-        public Builder setAllowMultipleValues(@Nullable Boolean allowMultipleValues) {
+        public Builder allowMultipleValues(@Nullable Boolean allowMultipleValues) {
             this.allowMultipleValues = allowMultipleValues;
             return this;
         }

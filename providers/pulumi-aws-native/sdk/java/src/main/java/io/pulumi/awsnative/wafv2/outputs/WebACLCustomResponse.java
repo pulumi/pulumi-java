@@ -26,11 +26,11 @@ public final class WebACLCustomResponse {
      */
     private final @Nullable List<WebACLCustomHTTPHeader> responseHeaders;
 
-    @OutputCustomType.Constructor({"customResponseBodyKey","responseCode","responseHeaders"})
+    @OutputCustomType.Constructor
     private WebACLCustomResponse(
-        @Nullable String customResponseBodyKey,
-        Integer responseCode,
-        @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
+        @OutputCustomType.Parameter("customResponseBodyKey") @Nullable String customResponseBodyKey,
+        @OutputCustomType.Parameter("responseCode") Integer responseCode,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
         this.customResponseBodyKey = customResponseBodyKey;
         this.responseCode = responseCode;
         this.responseHeaders = responseHeaders;
@@ -78,17 +78,17 @@ public final class WebACLCustomResponse {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable String customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
-        public Builder setResponseCode(Integer responseCode) {
+        public Builder responseCode(Integer responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<WebACLCustomHTTPHeader> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }

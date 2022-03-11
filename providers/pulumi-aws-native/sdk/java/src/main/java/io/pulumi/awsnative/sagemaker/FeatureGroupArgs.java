@@ -179,92 +179,92 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventTimeFeatureName(Input<String> eventTimeFeatureName) {
+        public Builder eventTimeFeatureName(Input<String> eventTimeFeatureName) {
             this.eventTimeFeatureName = Objects.requireNonNull(eventTimeFeatureName);
             return this;
         }
 
-        public Builder setEventTimeFeatureName(String eventTimeFeatureName) {
+        public Builder eventTimeFeatureName(String eventTimeFeatureName) {
             this.eventTimeFeatureName = Input.of(Objects.requireNonNull(eventTimeFeatureName));
             return this;
         }
 
-        public Builder setFeatureDefinitions(Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
+        public Builder featureDefinitions(Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions) {
             this.featureDefinitions = Objects.requireNonNull(featureDefinitions);
             return this;
         }
 
-        public Builder setFeatureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
+        public Builder featureDefinitions(List<FeatureGroupFeatureDefinitionArgs> featureDefinitions) {
             this.featureDefinitions = Input.of(Objects.requireNonNull(featureDefinitions));
             return this;
         }
 
-        public Builder setFeatureGroupName(@Nullable Input<String> featureGroupName) {
+        public Builder featureGroupName(@Nullable Input<String> featureGroupName) {
             this.featureGroupName = featureGroupName;
             return this;
         }
 
-        public Builder setFeatureGroupName(@Nullable String featureGroupName) {
+        public Builder featureGroupName(@Nullable String featureGroupName) {
             this.featureGroupName = Input.ofNullable(featureGroupName);
             return this;
         }
 
-        public Builder setOfflineStoreConfig(@Nullable Input<OfflineStoreConfigPropertiesArgs> offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable Input<OfflineStoreConfigPropertiesArgs> offlineStoreConfig) {
             this.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
 
-        public Builder setOfflineStoreConfig(@Nullable OfflineStoreConfigPropertiesArgs offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable OfflineStoreConfigPropertiesArgs offlineStoreConfig) {
             this.offlineStoreConfig = Input.ofNullable(offlineStoreConfig);
             return this;
         }
 
-        public Builder setOnlineStoreConfig(@Nullable Input<OnlineStoreConfigPropertiesArgs> onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable Input<OnlineStoreConfigPropertiesArgs> onlineStoreConfig) {
             this.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
 
-        public Builder setOnlineStoreConfig(@Nullable OnlineStoreConfigPropertiesArgs onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable OnlineStoreConfigPropertiesArgs onlineStoreConfig) {
             this.onlineStoreConfig = Input.ofNullable(onlineStoreConfig);
             return this;
         }
 
-        public Builder setRecordIdentifierFeatureName(Input<String> recordIdentifierFeatureName) {
+        public Builder recordIdentifierFeatureName(Input<String> recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Objects.requireNonNull(recordIdentifierFeatureName);
             return this;
         }
 
-        public Builder setRecordIdentifierFeatureName(String recordIdentifierFeatureName) {
+        public Builder recordIdentifierFeatureName(String recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Input.of(Objects.requireNonNull(recordIdentifierFeatureName));
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FeatureGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FeatureGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FeatureGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<FeatureGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

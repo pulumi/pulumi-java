@@ -235,122 +235,122 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setBuildId(Input<String> buildId) {
+        public Builder buildId(Input<String> buildId) {
             this.buildId = Objects.requireNonNull(buildId);
             return this;
         }
 
-        public Builder setBuildId(String buildId) {
+        public Builder buildId(String buildId) {
             this.buildId = Input.of(Objects.requireNonNull(buildId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEc2InboundPermissions(@Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable Input<List<FleetEc2InboundPermissionArgs>> ec2InboundPermissions) {
             this.ec2InboundPermissions = ec2InboundPermissions;
             return this;
         }
 
-        public Builder setEc2InboundPermissions(@Nullable List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
+        public Builder ec2InboundPermissions(@Nullable List<FleetEc2InboundPermissionArgs> ec2InboundPermissions) {
             this.ec2InboundPermissions = Input.ofNullable(ec2InboundPermissions);
             return this;
         }
 
-        public Builder setEc2InstanceType(Input<String> ec2InstanceType) {
+        public Builder ec2InstanceType(Input<String> ec2InstanceType) {
             this.ec2InstanceType = Objects.requireNonNull(ec2InstanceType);
             return this;
         }
 
-        public Builder setEc2InstanceType(String ec2InstanceType) {
+        public Builder ec2InstanceType(String ec2InstanceType) {
             this.ec2InstanceType = Input.of(Objects.requireNonNull(ec2InstanceType));
             return this;
         }
 
-        public Builder setFleetType(@Nullable Input<String> fleetType) {
+        public Builder fleetType(@Nullable Input<String> fleetType) {
             this.fleetType = fleetType;
             return this;
         }
 
-        public Builder setFleetType(@Nullable String fleetType) {
+        public Builder fleetType(@Nullable String fleetType) {
             this.fleetType = Input.ofNullable(fleetType);
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable Input<String> instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable Input<String> instanceRoleArn) {
             this.instanceRoleArn = instanceRoleArn;
             return this;
         }
 
-        public Builder setInstanceRoleArn(@Nullable String instanceRoleArn) {
+        public Builder instanceRoleArn(@Nullable String instanceRoleArn) {
             this.instanceRoleArn = Input.ofNullable(instanceRoleArn);
             return this;
         }
 
-        public Builder setMetricGroups(@Nullable Input<List<String>> metricGroups) {
+        public Builder metricGroups(@Nullable Input<List<String>> metricGroups) {
             this.metricGroups = metricGroups;
             return this;
         }
 
-        public Builder setMetricGroups(@Nullable List<String> metricGroups) {
+        public Builder metricGroups(@Nullable List<String> metricGroups) {
             this.metricGroups = Input.ofNullable(metricGroups);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNewGameSessionProtectionPolicy(@Nullable Input<String> newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable Input<String> newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = newGameSessionProtectionPolicy;
             return this;
         }
 
-        public Builder setNewGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
+        public Builder newGameSessionProtectionPolicy(@Nullable String newGameSessionProtectionPolicy) {
             this.newGameSessionProtectionPolicy = Input.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
 
-        public Builder setResourceCreationLimitPolicy(@Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable Input<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = resourceCreationLimitPolicy;
             return this;
         }
 
-        public Builder setResourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
+        public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
             this.resourceCreationLimitPolicy = Input.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
 
-        public Builder setRuntimeConfiguration(@Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable Input<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
             this.runtimeConfiguration = runtimeConfiguration;
             return this;
         }
 
-        public Builder setRuntimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
+        public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
             this.runtimeConfiguration = Input.ofNullable(runtimeConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

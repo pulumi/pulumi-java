@@ -22,10 +22,10 @@ public final class MigrationEligibilityInfoResponse {
      */
     private final List<String> validationMessages;
 
-    @OutputCustomType.Constructor({"isEligibleForMigration","validationMessages"})
+    @OutputCustomType.Constructor
     private MigrationEligibilityInfoResponse(
-        Boolean isEligibleForMigration,
-        List<String> validationMessages) {
+        @OutputCustomType.Parameter("isEligibleForMigration") Boolean isEligibleForMigration,
+        @OutputCustomType.Parameter("validationMessages") List<String> validationMessages) {
         this.isEligibleForMigration = isEligibleForMigration;
         this.validationMessages = validationMessages;
     }
@@ -67,12 +67,12 @@ public final class MigrationEligibilityInfoResponse {
     	      this.validationMessages = defaults.validationMessages;
         }
 
-        public Builder setIsEligibleForMigration(Boolean isEligibleForMigration) {
+        public Builder isEligibleForMigration(Boolean isEligibleForMigration) {
             this.isEligibleForMigration = Objects.requireNonNull(isEligibleForMigration);
             return this;
         }
 
-        public Builder setValidationMessages(List<String> validationMessages) {
+        public Builder validationMessages(List<String> validationMessages) {
             this.validationMessages = Objects.requireNonNull(validationMessages);
             return this;
         }

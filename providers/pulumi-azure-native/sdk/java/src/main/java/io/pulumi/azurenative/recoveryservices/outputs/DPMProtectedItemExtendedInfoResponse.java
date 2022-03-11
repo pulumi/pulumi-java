@@ -85,22 +85,22 @@ public final class DPMProtectedItemExtendedInfoResponse {
      */
     private final @Nullable String totalDiskStorageSizeInBytes;
 
-    @OutputCustomType.Constructor({"diskStorageUsedInBytes","isCollocated","isPresentOnCloud","lastBackupStatus","lastRefreshedAt","oldestRecoveryPoint","onPremiseLatestRecoveryPoint","onPremiseOldestRecoveryPoint","onPremiseRecoveryPointCount","protectableObjectLoadPath","$protected","protectionGroupName","recoveryPointCount","totalDiskStorageSizeInBytes"})
+    @OutputCustomType.Constructor
     private DPMProtectedItemExtendedInfoResponse(
-        @Nullable String diskStorageUsedInBytes,
-        @Nullable Boolean isCollocated,
-        @Nullable Boolean isPresentOnCloud,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastRefreshedAt,
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String onPremiseLatestRecoveryPoint,
-        @Nullable String onPremiseOldestRecoveryPoint,
-        @Nullable Integer onPremiseRecoveryPointCount,
-        @Nullable Map<String,String> protectableObjectLoadPath,
-        @Nullable Boolean $protected,
-        @Nullable String protectionGroupName,
-        @Nullable Integer recoveryPointCount,
-        @Nullable String totalDiskStorageSizeInBytes) {
+        @OutputCustomType.Parameter("diskStorageUsedInBytes") @Nullable String diskStorageUsedInBytes,
+        @OutputCustomType.Parameter("isCollocated") @Nullable Boolean isCollocated,
+        @OutputCustomType.Parameter("isPresentOnCloud") @Nullable Boolean isPresentOnCloud,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("onPremiseLatestRecoveryPoint") @Nullable String onPremiseLatestRecoveryPoint,
+        @OutputCustomType.Parameter("onPremiseOldestRecoveryPoint") @Nullable String onPremiseOldestRecoveryPoint,
+        @OutputCustomType.Parameter("onPremiseRecoveryPointCount") @Nullable Integer onPremiseRecoveryPointCount,
+        @OutputCustomType.Parameter("protectableObjectLoadPath") @Nullable Map<String,String> protectableObjectLoadPath,
+        @OutputCustomType.Parameter("protected") @Nullable Boolean $protected,
+        @OutputCustomType.Parameter("protectionGroupName") @Nullable String protectionGroupName,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
+        @OutputCustomType.Parameter("totalDiskStorageSizeInBytes") @Nullable String totalDiskStorageSizeInBytes) {
         this.diskStorageUsedInBytes = diskStorageUsedInBytes;
         this.isCollocated = isCollocated;
         this.isPresentOnCloud = isPresentOnCloud;
@@ -262,72 +262,72 @@ public final class DPMProtectedItemExtendedInfoResponse {
     	      this.totalDiskStorageSizeInBytes = defaults.totalDiskStorageSizeInBytes;
         }
 
-        public Builder setDiskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
+        public Builder diskStorageUsedInBytes(@Nullable String diskStorageUsedInBytes) {
             this.diskStorageUsedInBytes = diskStorageUsedInBytes;
             return this;
         }
 
-        public Builder setIsCollocated(@Nullable Boolean isCollocated) {
+        public Builder isCollocated(@Nullable Boolean isCollocated) {
             this.isCollocated = isCollocated;
             return this;
         }
 
-        public Builder setIsPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
+        public Builder isPresentOnCloud(@Nullable Boolean isPresentOnCloud) {
             this.isPresentOnCloud = isPresentOnCloud;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
+        public Builder onPremiseLatestRecoveryPoint(@Nullable String onPremiseLatestRecoveryPoint) {
             this.onPremiseLatestRecoveryPoint = onPremiseLatestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
+        public Builder onPremiseOldestRecoveryPoint(@Nullable String onPremiseOldestRecoveryPoint) {
             this.onPremiseOldestRecoveryPoint = onPremiseOldestRecoveryPoint;
             return this;
         }
 
-        public Builder setOnPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
+        public Builder onPremiseRecoveryPointCount(@Nullable Integer onPremiseRecoveryPointCount) {
             this.onPremiseRecoveryPointCount = onPremiseRecoveryPointCount;
             return this;
         }
 
-        public Builder setProtectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
+        public Builder protectableObjectLoadPath(@Nullable Map<String,String> protectableObjectLoadPath) {
             this.protectableObjectLoadPath = protectableObjectLoadPath;
             return this;
         }
 
-        public Builder set$protected(@Nullable Boolean $protected) {
+        public Builder $protected(@Nullable Boolean $protected) {
             this.$protected = $protected;
             return this;
         }
 
-        public Builder setProtectionGroupName(@Nullable String protectionGroupName) {
+        public Builder protectionGroupName(@Nullable String protectionGroupName) {
             this.protectionGroupName = protectionGroupName;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
-        public Builder setTotalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
+        public Builder totalDiskStorageSizeInBytes(@Nullable String totalDiskStorageSizeInBytes) {
             this.totalDiskStorageSizeInBytes = totalDiskStorageSizeInBytes;
             return this;
         }

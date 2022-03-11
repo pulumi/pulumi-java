@@ -78,20 +78,20 @@ public final class GetAlertPolicyResult {
      */
     private final StatusResponse validity;
 
-    @OutputCustomType.Constructor({"alertStrategy","combiner","conditions","creationRecord","displayName","documentation","enabled","mutationRecord","name","notificationChannels","userLabels","validity"})
+    @OutputCustomType.Constructor
     private GetAlertPolicyResult(
-        AlertStrategyResponse alertStrategy,
-        String combiner,
-        List<ConditionResponse> conditions,
-        MutationRecordResponse creationRecord,
-        String displayName,
-        DocumentationResponse documentation,
-        Boolean enabled,
-        MutationRecordResponse mutationRecord,
-        String name,
-        List<String> notificationChannels,
-        Map<String,String> userLabels,
-        StatusResponse validity) {
+        @OutputCustomType.Parameter("alertStrategy") AlertStrategyResponse alertStrategy,
+        @OutputCustomType.Parameter("combiner") String combiner,
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("documentation") DocumentationResponse documentation,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("mutationRecord") MutationRecordResponse mutationRecord,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationChannels") List<String> notificationChannels,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("validity") StatusResponse validity) {
         this.alertStrategy = alertStrategy;
         this.combiner = combiner;
         this.conditions = conditions;
@@ -233,62 +233,62 @@ public final class GetAlertPolicyResult {
     	      this.validity = defaults.validity;
         }
 
-        public Builder setAlertStrategy(AlertStrategyResponse alertStrategy) {
+        public Builder alertStrategy(AlertStrategyResponse alertStrategy) {
             this.alertStrategy = Objects.requireNonNull(alertStrategy);
             return this;
         }
 
-        public Builder setCombiner(String combiner) {
+        public Builder combiner(String combiner) {
             this.combiner = Objects.requireNonNull(combiner);
             return this;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setCreationRecord(MutationRecordResponse creationRecord) {
+        public Builder creationRecord(MutationRecordResponse creationRecord) {
             this.creationRecord = Objects.requireNonNull(creationRecord);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDocumentation(DocumentationResponse documentation) {
+        public Builder documentation(DocumentationResponse documentation) {
             this.documentation = Objects.requireNonNull(documentation);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setMutationRecord(MutationRecordResponse mutationRecord) {
+        public Builder mutationRecord(MutationRecordResponse mutationRecord) {
             this.mutationRecord = Objects.requireNonNull(mutationRecord);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationChannels(List<String> notificationChannels) {
+        public Builder notificationChannels(List<String> notificationChannels) {
             this.notificationChannels = Objects.requireNonNull(notificationChannels);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
 
-        public Builder setValidity(StatusResponse validity) {
+        public Builder validity(StatusResponse validity) {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }

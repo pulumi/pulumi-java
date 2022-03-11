@@ -72,17 +72,17 @@ public final class GetPackageVersionArgs extends io.pulumi.resources.InvokeArgs 
     	      this.patchVersion = defaults.patchVersion;
         }
 
-        public Builder setPackageId(String packageId) {
+        public Builder packageId(String packageId) {
             this.packageId = Objects.requireNonNull(packageId);
             return this;
         }
 
-        public Builder setPackageVersion(String packageVersion) {
+        public Builder packageVersion(String packageVersion) {
             this.packageVersion = Objects.requireNonNull(packageVersion);
             return this;
         }
 
-        public Builder setPatchVersion(String patchVersion) {
+        public Builder patchVersion(String patchVersion) {
             this.patchVersion = Objects.requireNonNull(patchVersion);
             return this;
         }

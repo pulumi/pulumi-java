@@ -32,12 +32,12 @@ public final class VersionResponse {
      */
     private final String versionNumber;
 
-    @OutputCustomType.Constructor({"availableFeatures","defaultVersion","type","versionNumber"})
+    @OutputCustomType.Constructor
     private VersionResponse(
-        List<String> availableFeatures,
-        Boolean defaultVersion,
-        String type,
-        String versionNumber) {
+        @OutputCustomType.Parameter("availableFeatures") List<String> availableFeatures,
+        @OutputCustomType.Parameter("defaultVersion") Boolean defaultVersion,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versionNumber") String versionNumber) {
         this.availableFeatures = availableFeatures;
         this.defaultVersion = defaultVersion;
         this.type = type;
@@ -99,22 +99,22 @@ public final class VersionResponse {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setAvailableFeatures(List<String> availableFeatures) {
+        public Builder availableFeatures(List<String> availableFeatures) {
             this.availableFeatures = Objects.requireNonNull(availableFeatures);
             return this;
         }
 
-        public Builder setDefaultVersion(Boolean defaultVersion) {
+        public Builder defaultVersion(Boolean defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersionNumber(String versionNumber) {
+        public Builder versionNumber(String versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }

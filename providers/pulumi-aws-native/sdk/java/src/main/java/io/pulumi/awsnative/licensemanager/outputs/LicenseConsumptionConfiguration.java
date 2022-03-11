@@ -17,11 +17,11 @@ public final class LicenseConsumptionConfiguration {
     private final @Nullable LicenseProvisionalConfiguration provisionalConfiguration;
     private final @Nullable String renewType;
 
-    @OutputCustomType.Constructor({"borrowConfiguration","provisionalConfiguration","renewType"})
+    @OutputCustomType.Constructor
     private LicenseConsumptionConfiguration(
-        @Nullable LicenseBorrowConfiguration borrowConfiguration,
-        @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
-        @Nullable String renewType) {
+        @OutputCustomType.Parameter("borrowConfiguration") @Nullable LicenseBorrowConfiguration borrowConfiguration,
+        @OutputCustomType.Parameter("provisionalConfiguration") @Nullable LicenseProvisionalConfiguration provisionalConfiguration,
+        @OutputCustomType.Parameter("renewType") @Nullable String renewType) {
         this.borrowConfiguration = borrowConfiguration;
         this.provisionalConfiguration = provisionalConfiguration;
         this.renewType = renewType;
@@ -61,17 +61,17 @@ public final class LicenseConsumptionConfiguration {
     	      this.renewType = defaults.renewType;
         }
 
-        public Builder setBorrowConfiguration(@Nullable LicenseBorrowConfiguration borrowConfiguration) {
+        public Builder borrowConfiguration(@Nullable LicenseBorrowConfiguration borrowConfiguration) {
             this.borrowConfiguration = borrowConfiguration;
             return this;
         }
 
-        public Builder setProvisionalConfiguration(@Nullable LicenseProvisionalConfiguration provisionalConfiguration) {
+        public Builder provisionalConfiguration(@Nullable LicenseProvisionalConfiguration provisionalConfiguration) {
             this.provisionalConfiguration = provisionalConfiguration;
             return this;
         }
 
-        public Builder setRenewType(@Nullable String renewType) {
+        public Builder renewType(@Nullable String renewType) {
             this.renewType = renewType;
             return this;
         }

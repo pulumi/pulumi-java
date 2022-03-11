@@ -180,82 +180,82 @@ public final class ServicesPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.publicNetworkAccess = defaults.publicNetworkAccess;
         }
 
-        public Builder setAccessPolicies(@Nullable Input<List<ServiceAccessPolicyEntryArgs>> accessPolicies) {
+        public Builder accessPolicies(@Nullable Input<List<ServiceAccessPolicyEntryArgs>> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAccessPolicies(@Nullable List<ServiceAccessPolicyEntryArgs> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<ServiceAccessPolicyEntryArgs> accessPolicies) {
             this.accessPolicies = Input.ofNullable(accessPolicies);
             return this;
         }
 
-        public Builder setAcrConfiguration(@Nullable Input<ServiceAcrConfigurationInfoArgs> acrConfiguration) {
+        public Builder acrConfiguration(@Nullable Input<ServiceAcrConfigurationInfoArgs> acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
 
-        public Builder setAcrConfiguration(@Nullable ServiceAcrConfigurationInfoArgs acrConfiguration) {
+        public Builder acrConfiguration(@Nullable ServiceAcrConfigurationInfoArgs acrConfiguration) {
             this.acrConfiguration = Input.ofNullable(acrConfiguration);
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable Input<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable Input<ServiceAuthenticationConfigurationInfoArgs> authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfigurationInfoArgs authenticationConfiguration) {
             this.authenticationConfiguration = Input.ofNullable(authenticationConfiguration);
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable Input<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
+        public Builder corsConfiguration(@Nullable Input<ServiceCorsConfigurationInfoArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable ServiceCorsConfigurationInfoArgs corsConfiguration) {
+        public Builder corsConfiguration(@Nullable ServiceCorsConfigurationInfoArgs corsConfiguration) {
             this.corsConfiguration = Input.ofNullable(corsConfiguration);
             return this;
         }
 
-        public Builder setCosmosDbConfiguration(@Nullable Input<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
+        public Builder cosmosDbConfiguration(@Nullable Input<ServiceCosmosDbConfigurationInfoArgs> cosmosDbConfiguration) {
             this.cosmosDbConfiguration = cosmosDbConfiguration;
             return this;
         }
 
-        public Builder setCosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
+        public Builder cosmosDbConfiguration(@Nullable ServiceCosmosDbConfigurationInfoArgs cosmosDbConfiguration) {
             this.cosmosDbConfiguration = Input.ofNullable(cosmosDbConfiguration);
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable Input<ServiceExportConfigurationInfoArgs> exportConfiguration) {
+        public Builder exportConfiguration(@Nullable Input<ServiceExportConfigurationInfoArgs> exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable ServiceExportConfigurationInfoArgs exportConfiguration) {
+        public Builder exportConfiguration(@Nullable ServiceExportConfigurationInfoArgs exportConfiguration) {
             this.exportConfiguration = Input.ofNullable(exportConfiguration);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionArgs> privateEndpointConnections) {
             this.privateEndpointConnections = Input.ofNullable(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }

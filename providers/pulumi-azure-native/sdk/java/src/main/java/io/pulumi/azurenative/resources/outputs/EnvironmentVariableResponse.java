@@ -27,11 +27,11 @@ public final class EnvironmentVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","secureValue","value"})
+    @OutputCustomType.Constructor
     private EnvironmentVariableResponse(
-        String name,
-        @Nullable String secureValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.secureValue = secureValue;
         this.value = value;
@@ -83,17 +83,17 @@ public final class EnvironmentVariableResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecureValue(@Nullable String secureValue) {
+        public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = secureValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -143,32 +143,32 @@ public final class SettingsResponse {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor({"activationPolicy","activeDirectoryConfig","availabilityType","backupConfiguration","collation","crashSafeReplicationEnabled","dataDiskSizeGb","dataDiskType","databaseFlags","databaseReplicationEnabled","denyMaintenancePeriods","insightsConfig","ipConfiguration","kind","locationPreference","maintenanceWindow","passwordValidationPolicy","pricingPlan","settingsVersion","sqlServerAuditConfig","storageAutoResize","storageAutoResizeLimit","tier","userLabels"})
+    @OutputCustomType.Constructor
     private SettingsResponse(
-        String activationPolicy,
-        SqlActiveDirectoryConfigResponse activeDirectoryConfig,
-        String availabilityType,
-        BackupConfigurationResponse backupConfiguration,
-        String collation,
-        Boolean crashSafeReplicationEnabled,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        List<DatabaseFlagsResponse> databaseFlags,
-        Boolean databaseReplicationEnabled,
-        List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
-        InsightsConfigResponse insightsConfig,
-        IpConfigurationResponse ipConfiguration,
-        String kind,
-        LocationPreferenceResponse locationPreference,
-        MaintenanceWindowResponse maintenanceWindow,
-        PasswordValidationPolicyResponse passwordValidationPolicy,
-        String pricingPlan,
-        String settingsVersion,
-        SqlServerAuditConfigResponse sqlServerAuditConfig,
-        Boolean storageAutoResize,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels) {
+        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
+        @OutputCustomType.Parameter("activeDirectoryConfig") SqlActiveDirectoryConfigResponse activeDirectoryConfig,
+        @OutputCustomType.Parameter("availabilityType") String availabilityType,
+        @OutputCustomType.Parameter("backupConfiguration") BackupConfigurationResponse backupConfiguration,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("crashSafeReplicationEnabled") Boolean crashSafeReplicationEnabled,
+        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
+        @OutputCustomType.Parameter("databaseFlags") List<DatabaseFlagsResponse> databaseFlags,
+        @OutputCustomType.Parameter("databaseReplicationEnabled") Boolean databaseReplicationEnabled,
+        @OutputCustomType.Parameter("denyMaintenancePeriods") List<DenyMaintenancePeriodResponse> denyMaintenancePeriods,
+        @OutputCustomType.Parameter("insightsConfig") InsightsConfigResponse insightsConfig,
+        @OutputCustomType.Parameter("ipConfiguration") IpConfigurationResponse ipConfiguration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("locationPreference") LocationPreferenceResponse locationPreference,
+        @OutputCustomType.Parameter("maintenanceWindow") MaintenanceWindowResponse maintenanceWindow,
+        @OutputCustomType.Parameter("passwordValidationPolicy") PasswordValidationPolicyResponse passwordValidationPolicy,
+        @OutputCustomType.Parameter("pricingPlan") String pricingPlan,
+        @OutputCustomType.Parameter("settingsVersion") String settingsVersion,
+        @OutputCustomType.Parameter("sqlServerAuditConfig") SqlServerAuditConfigResponse sqlServerAuditConfig,
+        @OutputCustomType.Parameter("storageAutoResize") Boolean storageAutoResize,
+        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.activationPolicy = activationPolicy;
         this.activeDirectoryConfig = activeDirectoryConfig;
         this.availabilityType = availabilityType;
@@ -430,122 +430,122 @@ public final class SettingsResponse {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setActivationPolicy(String activationPolicy) {
+        public Builder activationPolicy(String activationPolicy) {
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
 
-        public Builder setActiveDirectoryConfig(SqlActiveDirectoryConfigResponse activeDirectoryConfig) {
+        public Builder activeDirectoryConfig(SqlActiveDirectoryConfigResponse activeDirectoryConfig) {
             this.activeDirectoryConfig = Objects.requireNonNull(activeDirectoryConfig);
             return this;
         }
 
-        public Builder setAvailabilityType(String availabilityType) {
+        public Builder availabilityType(String availabilityType) {
             this.availabilityType = Objects.requireNonNull(availabilityType);
             return this;
         }
 
-        public Builder setBackupConfiguration(BackupConfigurationResponse backupConfiguration) {
+        public Builder backupConfiguration(BackupConfigurationResponse backupConfiguration) {
             this.backupConfiguration = Objects.requireNonNull(backupConfiguration);
             return this;
         }
 
-        public Builder setCollation(String collation) {
+        public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
 
-        public Builder setCrashSafeReplicationEnabled(Boolean crashSafeReplicationEnabled) {
+        public Builder crashSafeReplicationEnabled(Boolean crashSafeReplicationEnabled) {
             this.crashSafeReplicationEnabled = Objects.requireNonNull(crashSafeReplicationEnabled);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(String dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(String dataDiskType) {
+        public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
 
-        public Builder setDatabaseFlags(List<DatabaseFlagsResponse> databaseFlags) {
+        public Builder databaseFlags(List<DatabaseFlagsResponse> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
 
-        public Builder setDatabaseReplicationEnabled(Boolean databaseReplicationEnabled) {
+        public Builder databaseReplicationEnabled(Boolean databaseReplicationEnabled) {
             this.databaseReplicationEnabled = Objects.requireNonNull(databaseReplicationEnabled);
             return this;
         }
 
-        public Builder setDenyMaintenancePeriods(List<DenyMaintenancePeriodResponse> denyMaintenancePeriods) {
+        public Builder denyMaintenancePeriods(List<DenyMaintenancePeriodResponse> denyMaintenancePeriods) {
             this.denyMaintenancePeriods = Objects.requireNonNull(denyMaintenancePeriods);
             return this;
         }
 
-        public Builder setInsightsConfig(InsightsConfigResponse insightsConfig) {
+        public Builder insightsConfig(InsightsConfigResponse insightsConfig) {
             this.insightsConfig = Objects.requireNonNull(insightsConfig);
             return this;
         }
 
-        public Builder setIpConfiguration(IpConfigurationResponse ipConfiguration) {
+        public Builder ipConfiguration(IpConfigurationResponse ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocationPreference(LocationPreferenceResponse locationPreference) {
+        public Builder locationPreference(LocationPreferenceResponse locationPreference) {
             this.locationPreference = Objects.requireNonNull(locationPreference);
             return this;
         }
 
-        public Builder setMaintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
+        public Builder maintenanceWindow(MaintenanceWindowResponse maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setPasswordValidationPolicy(PasswordValidationPolicyResponse passwordValidationPolicy) {
+        public Builder passwordValidationPolicy(PasswordValidationPolicyResponse passwordValidationPolicy) {
             this.passwordValidationPolicy = Objects.requireNonNull(passwordValidationPolicy);
             return this;
         }
 
-        public Builder setPricingPlan(String pricingPlan) {
+        public Builder pricingPlan(String pricingPlan) {
             this.pricingPlan = Objects.requireNonNull(pricingPlan);
             return this;
         }
 
-        public Builder setSettingsVersion(String settingsVersion) {
+        public Builder settingsVersion(String settingsVersion) {
             this.settingsVersion = Objects.requireNonNull(settingsVersion);
             return this;
         }
 
-        public Builder setSqlServerAuditConfig(SqlServerAuditConfigResponse sqlServerAuditConfig) {
+        public Builder sqlServerAuditConfig(SqlServerAuditConfigResponse sqlServerAuditConfig) {
             this.sqlServerAuditConfig = Objects.requireNonNull(sqlServerAuditConfig);
             return this;
         }
 
-        public Builder setStorageAutoResize(Boolean storageAutoResize) {
+        public Builder storageAutoResize(Boolean storageAutoResize) {
             this.storageAutoResize = Objects.requireNonNull(storageAutoResize);
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(String storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }

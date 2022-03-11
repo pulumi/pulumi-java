@@ -74,12 +74,12 @@ public final class RegistryPasswordResponse extends io.pulumi.resources.InvokeAr
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

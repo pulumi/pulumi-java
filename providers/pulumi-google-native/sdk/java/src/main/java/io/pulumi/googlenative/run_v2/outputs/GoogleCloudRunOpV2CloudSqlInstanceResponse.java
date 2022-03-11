@@ -16,8 +16,8 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
      */
     private final List<String> connections;
 
-    @OutputCustomType.Constructor({"connections"})
-    private GoogleCloudRunOpV2CloudSqlInstanceResponse(List<String> connections) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRunOpV2CloudSqlInstanceResponse(@OutputCustomType.Parameter("connections") List<String> connections) {
         this.connections = connections;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceResponse {
     	      this.connections = defaults.connections;
         }
 
-        public Builder setConnections(List<String> connections) {
+        public Builder connections(List<String> connections) {
             this.connections = Objects.requireNonNull(connections);
             return this;
         }

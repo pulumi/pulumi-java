@@ -16,10 +16,10 @@ public final class SkuResourceResponseProperties {
     private final @Nullable String provisioningState;
     private final List<SkuSettingResponse> skuSettings;
 
-    @OutputCustomType.Constructor({"provisioningState","skuSettings"})
+    @OutputCustomType.Constructor
     private SkuResourceResponseProperties(
-        @Nullable String provisioningState,
-        List<SkuSettingResponse> skuSettings) {
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("skuSettings") List<SkuSettingResponse> skuSettings) {
         this.provisioningState = provisioningState;
         this.skuSettings = skuSettings;
     }
@@ -53,12 +53,12 @@ public final class SkuResourceResponseProperties {
     	      this.skuSettings = defaults.skuSettings;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSkuSettings(List<SkuSettingResponse> skuSettings) {
+        public Builder skuSettings(List<SkuSettingResponse> skuSettings) {
             this.skuSettings = Objects.requireNonNull(skuSettings);
             return this;
         }

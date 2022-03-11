@@ -135,62 +135,62 @@ public final class TargetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceNamespace = defaults.serviceNamespace;
         }
 
-        public Builder setMaxCapacity(Input<Integer> maxCapacity) {
+        public Builder maxCapacity(Input<Integer> maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
-        public Builder setMaxCapacity(Integer maxCapacity) {
+        public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Input.of(Objects.requireNonNull(maxCapacity));
             return this;
         }
 
-        public Builder setMinCapacity(Input<Integer> minCapacity) {
+        public Builder minCapacity(Input<Integer> minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Input.of(Objects.requireNonNull(minCapacity));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setScalableDimension(Input<String> scalableDimension) {
+        public Builder scalableDimension(Input<String> scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Input.of(Objects.requireNonNull(scalableDimension));
             return this;
         }
 
-        public Builder setServiceNamespace(Input<String> serviceNamespace) {
+        public Builder serviceNamespace(Input<String> serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Input.of(Objects.requireNonNull(serviceNamespace));
             return this;
         }

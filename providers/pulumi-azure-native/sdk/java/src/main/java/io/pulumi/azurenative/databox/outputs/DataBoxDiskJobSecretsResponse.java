@@ -46,14 +46,14 @@ public final class DataBoxDiskJobSecretsResponse {
      */
     private final String passKey;
 
-    @OutputCustomType.Constructor({"dcAccessSecurityCode","diskSecrets","error","isPasskeyUserDefined","jobSecretsType","passKey"})
+    @OutputCustomType.Constructor
     private DataBoxDiskJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        List<DiskSecretResponse> diskSecrets,
-        CloudErrorResponse error,
-        Boolean isPasskeyUserDefined,
-        String jobSecretsType,
-        String passKey) {
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("diskSecrets") List<DiskSecretResponse> diskSecrets,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("isPasskeyUserDefined") Boolean isPasskeyUserDefined,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @OutputCustomType.Parameter("passKey") String passKey) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.diskSecrets = diskSecrets;
         this.error = error;
@@ -136,32 +136,32 @@ public final class DataBoxDiskJobSecretsResponse {
     	      this.passKey = defaults.passKey;
         }
 
-        public Builder setDcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
+        public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
 
-        public Builder setDiskSecrets(List<DiskSecretResponse> diskSecrets) {
+        public Builder diskSecrets(List<DiskSecretResponse> diskSecrets) {
             this.diskSecrets = Objects.requireNonNull(diskSecrets);
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setIsPasskeyUserDefined(Boolean isPasskeyUserDefined) {
+        public Builder isPasskeyUserDefined(Boolean isPasskeyUserDefined) {
             this.isPasskeyUserDefined = Objects.requireNonNull(isPasskeyUserDefined);
             return this;
         }
 
-        public Builder setJobSecretsType(String jobSecretsType) {
+        public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
 
-        public Builder setPassKey(String passKey) {
+        public Builder passKey(String passKey) {
             this.passKey = Objects.requireNonNull(passKey);
             return this;
         }

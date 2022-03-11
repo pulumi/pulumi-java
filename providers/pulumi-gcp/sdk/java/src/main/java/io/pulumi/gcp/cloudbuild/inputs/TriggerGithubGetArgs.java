@@ -109,42 +109,42 @@ public final class TriggerGithubGetArgs extends io.pulumi.resources.ResourceArgs
     	      this.push = defaults.push;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setPullRequest(@Nullable Input<TriggerGithubPullRequestGetArgs> pullRequest) {
+        public Builder pullRequest(@Nullable Input<TriggerGithubPullRequestGetArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
-        public Builder setPullRequest(@Nullable TriggerGithubPullRequestGetArgs pullRequest) {
+        public Builder pullRequest(@Nullable TriggerGithubPullRequestGetArgs pullRequest) {
             this.pullRequest = Input.ofNullable(pullRequest);
             return this;
         }
 
-        public Builder setPush(@Nullable Input<TriggerGithubPushGetArgs> push) {
+        public Builder push(@Nullable Input<TriggerGithubPushGetArgs> push) {
             this.push = push;
             return this;
         }
 
-        public Builder setPush(@Nullable TriggerGithubPushGetArgs push) {
+        public Builder push(@Nullable TriggerGithubPushGetArgs push) {
             this.push = Input.ofNullable(push);
             return this;
         }

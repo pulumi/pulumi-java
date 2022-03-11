@@ -39,13 +39,13 @@ public final class VirtualMachineExtensionInstanceViewResponse {
      */
     private final @Nullable String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"name","statuses","substatuses","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineExtensionInstanceViewResponse(
-        @Nullable String name,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable List<InstanceViewStatusResponse> substatuses,
-        @Nullable String type,
-        @Nullable String typeHandlerVersion) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("substatuses") @Nullable List<InstanceViewStatusResponse> substatuses,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") @Nullable String typeHandlerVersion) {
         this.name = name;
         this.statuses = statuses;
         this.substatuses = substatuses;
@@ -117,27 +117,27 @@ public final class VirtualMachineExtensionInstanceViewResponse {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setSubstatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
+        public Builder substatuses(@Nullable List<InstanceViewStatusResponse> substatuses) {
             this.substatuses = substatuses;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setTypeHandlerVersion(@Nullable String typeHandlerVersion) {
+        public Builder typeHandlerVersion(@Nullable String typeHandlerVersion) {
             this.typeHandlerVersion = typeHandlerVersion;
             return this;
         }

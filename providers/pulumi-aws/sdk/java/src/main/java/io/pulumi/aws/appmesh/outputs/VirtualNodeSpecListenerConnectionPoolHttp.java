@@ -22,10 +22,10 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
      */
     private final @Nullable Integer maxPendingRequests;
 
-    @OutputCustomType.Constructor({"maxConnections","maxPendingRequests"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerConnectionPoolHttp(
-        Integer maxConnections,
-        @Nullable Integer maxPendingRequests) {
+        @OutputCustomType.Parameter("maxConnections") Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") @Nullable Integer maxPendingRequests) {
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
     }
@@ -67,12 +67,12 @@ public final class VirtualNodeSpecListenerConnectionPoolHttp {
     	      this.maxPendingRequests = defaults.maxPendingRequests;
         }
 
-        public Builder setMaxConnections(Integer maxConnections) {
+        public Builder maxConnections(Integer maxConnections) {
             this.maxConnections = Objects.requireNonNull(maxConnections);
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Integer maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }

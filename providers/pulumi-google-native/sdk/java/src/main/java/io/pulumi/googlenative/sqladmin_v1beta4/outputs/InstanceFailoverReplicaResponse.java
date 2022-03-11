@@ -21,10 +21,10 @@ public final class InstanceFailoverReplicaResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"available","name"})
+    @OutputCustomType.Constructor
     private InstanceFailoverReplicaResponse(
-        Boolean available,
-        String name) {
+        @OutputCustomType.Parameter("available") Boolean available,
+        @OutputCustomType.Parameter("name") String name) {
         this.available = available;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class InstanceFailoverReplicaResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAvailable(Boolean available) {
+        public Builder available(Boolean available) {
             this.available = Objects.requireNonNull(available);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

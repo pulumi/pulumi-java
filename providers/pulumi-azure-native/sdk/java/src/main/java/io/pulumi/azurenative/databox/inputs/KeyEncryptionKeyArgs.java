@@ -109,42 +109,42 @@ public final class KeyEncryptionKeyArgs extends io.pulumi.resources.ResourceArgs
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setIdentityProperties(@Nullable Input<IdentityPropertiesArgs> identityProperties) {
+        public Builder identityProperties(@Nullable Input<IdentityPropertiesArgs> identityProperties) {
             this.identityProperties = identityProperties;
             return this;
         }
 
-        public Builder setIdentityProperties(@Nullable IdentityPropertiesArgs identityProperties) {
+        public Builder identityProperties(@Nullable IdentityPropertiesArgs identityProperties) {
             this.identityProperties = Input.ofNullable(identityProperties);
             return this;
         }
 
-        public Builder setKekType(Input<Either<String,KekType>> kekType) {
+        public Builder kekType(Input<Either<String,KekType>> kekType) {
             this.kekType = Objects.requireNonNull(kekType);
             return this;
         }
 
-        public Builder setKekType(Either<String,KekType> kekType) {
+        public Builder kekType(Either<String,KekType> kekType) {
             this.kekType = Input.of(Objects.requireNonNull(kekType));
             return this;
         }
 
-        public Builder setKekUrl(@Nullable Input<String> kekUrl) {
+        public Builder kekUrl(@Nullable Input<String> kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = Input.ofNullable(kekUrl);
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable Input<String> kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable Input<String> kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = Input.ofNullable(kekVaultResourceID);
             return this;
         }

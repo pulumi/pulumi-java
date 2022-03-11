@@ -63,12 +63,12 @@ public final class NotificationEndpointResponse extends io.pulumi.resources.Invo
     	      this.notificationDestination = defaults.notificationDestination;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setNotificationDestination(@Nullable String notificationDestination) {
+        public Builder notificationDestination(@Nullable String notificationDestination) {
             this.notificationDestination = notificationDestination;
             return this;
         }

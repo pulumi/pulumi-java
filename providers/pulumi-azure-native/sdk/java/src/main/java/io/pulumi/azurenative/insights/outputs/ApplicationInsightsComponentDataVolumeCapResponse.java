@@ -44,14 +44,14 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
      */
     private final @Nullable Integer warningThreshold;
 
-    @OutputCustomType.Constructor({"cap","maxHistoryCap","resetTime","stopSendNotificationWhenHitCap","stopSendNotificationWhenHitThreshold","warningThreshold"})
+    @OutputCustomType.Constructor
     private ApplicationInsightsComponentDataVolumeCapResponse(
-        @Nullable Double cap,
-        Double maxHistoryCap,
-        Integer resetTime,
-        @Nullable Boolean stopSendNotificationWhenHitCap,
-        @Nullable Boolean stopSendNotificationWhenHitThreshold,
-        @Nullable Integer warningThreshold) {
+        @OutputCustomType.Parameter("cap") @Nullable Double cap,
+        @OutputCustomType.Parameter("maxHistoryCap") Double maxHistoryCap,
+        @OutputCustomType.Parameter("resetTime") Integer resetTime,
+        @OutputCustomType.Parameter("stopSendNotificationWhenHitCap") @Nullable Boolean stopSendNotificationWhenHitCap,
+        @OutputCustomType.Parameter("stopSendNotificationWhenHitThreshold") @Nullable Boolean stopSendNotificationWhenHitThreshold,
+        @OutputCustomType.Parameter("warningThreshold") @Nullable Integer warningThreshold) {
         this.cap = cap;
         this.maxHistoryCap = maxHistoryCap;
         this.resetTime = resetTime;
@@ -133,32 +133,32 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
     	      this.warningThreshold = defaults.warningThreshold;
         }
 
-        public Builder setCap(@Nullable Double cap) {
+        public Builder cap(@Nullable Double cap) {
             this.cap = cap;
             return this;
         }
 
-        public Builder setMaxHistoryCap(Double maxHistoryCap) {
+        public Builder maxHistoryCap(Double maxHistoryCap) {
             this.maxHistoryCap = Objects.requireNonNull(maxHistoryCap);
             return this;
         }
 
-        public Builder setResetTime(Integer resetTime) {
+        public Builder resetTime(Integer resetTime) {
             this.resetTime = Objects.requireNonNull(resetTime);
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
+        public Builder stopSendNotificationWhenHitCap(@Nullable Boolean stopSendNotificationWhenHitCap) {
             this.stopSendNotificationWhenHitCap = stopSendNotificationWhenHitCap;
             return this;
         }
 
-        public Builder setStopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
+        public Builder stopSendNotificationWhenHitThreshold(@Nullable Boolean stopSendNotificationWhenHitThreshold) {
             this.stopSendNotificationWhenHitThreshold = stopSendNotificationWhenHitThreshold;
             return this;
         }
 
-        public Builder setWarningThreshold(@Nullable Integer warningThreshold) {
+        public Builder warningThreshold(@Nullable Integer warningThreshold) {
             this.warningThreshold = warningThreshold;
             return this;
         }

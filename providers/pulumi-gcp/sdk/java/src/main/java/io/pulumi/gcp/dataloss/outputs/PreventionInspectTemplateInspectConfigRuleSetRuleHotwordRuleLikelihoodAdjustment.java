@@ -29,10 +29,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      */
     private final @Nullable Integer relativeLikelihood;
 
-    @OutputCustomType.Constructor({"fixedLikelihood","relativeLikelihood"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment(
-        @Nullable String fixedLikelihood,
-        @Nullable Integer relativeLikelihood) {
+        @OutputCustomType.Parameter("fixedLikelihood") @Nullable String fixedLikelihood,
+        @OutputCustomType.Parameter("relativeLikelihood") @Nullable Integer relativeLikelihood) {
         this.fixedLikelihood = fixedLikelihood;
         this.relativeLikelihood = relativeLikelihood;
     }
@@ -80,12 +80,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder setFixedLikelihood(@Nullable String fixedLikelihood) {
+        public Builder fixedLikelihood(@Nullable String fixedLikelihood) {
             this.fixedLikelihood = fixedLikelihood;
             return this;
         }
 
-        public Builder setRelativeLikelihood(@Nullable Integer relativeLikelihood) {
+        public Builder relativeLikelihood(@Nullable Integer relativeLikelihood) {
             this.relativeLikelihood = relativeLikelihood;
             return this;
         }

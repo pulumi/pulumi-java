@@ -15,10 +15,10 @@ public final class ObjectWithNodeOptionalInputs {
     private final @Nullable Integer bar;
     private final String foo;
 
-    @OutputCustomType.Constructor({"bar","foo"})
+    @OutputCustomType.Constructor
     private ObjectWithNodeOptionalInputs(
-        @Nullable Integer bar,
-        String foo) {
+        @OutputCustomType.Parameter("bar") @Nullable Integer bar,
+        @OutputCustomType.Parameter("foo") String foo) {
         this.bar = bar;
         this.foo = foo;
     }
@@ -52,12 +52,12 @@ public final class ObjectWithNodeOptionalInputs {
     	      this.foo = defaults.foo;
         }
 
-        public Builder setBar(@Nullable Integer bar) {
+        public Builder bar(@Nullable Integer bar) {
             this.bar = bar;
             return this;
         }
 
-        public Builder setFoo(String foo) {
+        public Builder foo(String foo) {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }

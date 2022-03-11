@@ -14,10 +14,10 @@ public final class GetAppBlockResult {
     private final @Nullable String arn;
     private final @Nullable String createdTime;
 
-    @OutputCustomType.Constructor({"arn","createdTime"})
+    @OutputCustomType.Constructor
     private GetAppBlockResult(
-        @Nullable String arn,
-        @Nullable String createdTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime) {
         this.arn = arn;
         this.createdTime = createdTime;
     }
@@ -51,12 +51,12 @@ public final class GetAppBlockResult {
     	      this.createdTime = defaults.createdTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }

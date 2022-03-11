@@ -25,11 +25,11 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
      */
     private final String portalUrl;
 
-    @OutputCustomType.Constructor({"interconnectName","partnerName","portalUrl"})
+    @OutputCustomType.Constructor
     private InterconnectAttachmentPartnerMetadataResponse(
-        String interconnectName,
-        String partnerName,
-        String portalUrl) {
+        @OutputCustomType.Parameter("interconnectName") String interconnectName,
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("portalUrl") String portalUrl) {
         this.interconnectName = interconnectName;
         this.partnerName = partnerName;
         this.portalUrl = portalUrl;
@@ -81,17 +81,17 @@ public final class InterconnectAttachmentPartnerMetadataResponse {
     	      this.portalUrl = defaults.portalUrl;
         }
 
-        public Builder setInterconnectName(String interconnectName) {
+        public Builder interconnectName(String interconnectName) {
             this.interconnectName = Objects.requireNonNull(interconnectName);
             return this;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setPortalUrl(String portalUrl) {
+        public Builder portalUrl(String portalUrl) {
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }

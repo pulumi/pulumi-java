@@ -140,32 +140,32 @@ public final class StreamingLocatorContentKeyResponse extends io.pulumi.resource
     	      this.value = defaults.value;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
+        public Builder labelReferenceInStreamingPolicy(@Nullable String labelReferenceInStreamingPolicy) {
             this.labelReferenceInStreamingPolicy = labelReferenceInStreamingPolicy;
             return this;
         }
 
-        public Builder setPolicyName(String policyName) {
+        public Builder policyName(String policyName) {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
 
-        public Builder setTracks(List<TrackSelectionResponse> tracks) {
+        public Builder tracks(List<TrackSelectionResponse> tracks) {
             this.tracks = Objects.requireNonNull(tracks);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

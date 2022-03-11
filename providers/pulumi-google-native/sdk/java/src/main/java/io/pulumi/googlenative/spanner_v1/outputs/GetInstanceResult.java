@@ -47,15 +47,15 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","displayName","labels","name","nodeCount","processingUnits","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String config,
-        String displayName,
-        Map<String,String> labels,
-        String name,
-        Integer nodeCount,
-        Integer processingUnits,
-        String state) {
+        @OutputCustomType.Parameter("config") String config,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("processingUnits") Integer processingUnits,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.displayName = displayName;
         this.labels = labels;
@@ -147,37 +147,37 @@ public final class GetInstanceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(String config) {
+        public Builder config(String config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setProcessingUnits(Integer processingUnits) {
+        public Builder processingUnits(Integer processingUnits) {
             this.processingUnits = Objects.requireNonNull(processingUnits);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

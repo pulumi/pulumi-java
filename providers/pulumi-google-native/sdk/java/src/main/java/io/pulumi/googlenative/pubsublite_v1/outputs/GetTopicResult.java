@@ -33,12 +33,12 @@ public final class GetTopicResult {
      */
     private final RetentionConfigResponse retentionConfig;
 
-    @OutputCustomType.Constructor({"name","partitionConfig","reservationConfig","retentionConfig"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String name,
-        PartitionConfigResponse partitionConfig,
-        ReservationConfigResponse reservationConfig,
-        RetentionConfigResponse retentionConfig) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partitionConfig") PartitionConfigResponse partitionConfig,
+        @OutputCustomType.Parameter("reservationConfig") ReservationConfigResponse reservationConfig,
+        @OutputCustomType.Parameter("retentionConfig") RetentionConfigResponse retentionConfig) {
         this.name = name;
         this.partitionConfig = partitionConfig;
         this.reservationConfig = reservationConfig;
@@ -100,22 +100,22 @@ public final class GetTopicResult {
     	      this.retentionConfig = defaults.retentionConfig;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartitionConfig(PartitionConfigResponse partitionConfig) {
+        public Builder partitionConfig(PartitionConfigResponse partitionConfig) {
             this.partitionConfig = Objects.requireNonNull(partitionConfig);
             return this;
         }
 
-        public Builder setReservationConfig(ReservationConfigResponse reservationConfig) {
+        public Builder reservationConfig(ReservationConfigResponse reservationConfig) {
             this.reservationConfig = Objects.requireNonNull(reservationConfig);
             return this;
         }
 
-        public Builder setRetentionConfig(RetentionConfigResponse retentionConfig) {
+        public Builder retentionConfig(RetentionConfigResponse retentionConfig) {
             this.retentionConfig = Objects.requireNonNull(retentionConfig);
             return this;
         }

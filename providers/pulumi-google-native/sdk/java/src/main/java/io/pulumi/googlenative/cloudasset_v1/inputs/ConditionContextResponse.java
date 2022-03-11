@@ -55,7 +55,7 @@ public final class ConditionContextResponse extends io.pulumi.resources.InvokeAr
     	      this.accessTime = defaults.accessTime;
         }
 
-        public Builder setAccessTime(String accessTime) {
+        public Builder accessTime(String accessTime) {
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
         }

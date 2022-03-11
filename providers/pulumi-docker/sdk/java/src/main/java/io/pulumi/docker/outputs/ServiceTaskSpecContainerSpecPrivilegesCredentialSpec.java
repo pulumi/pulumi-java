@@ -14,10 +14,10 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
     private final @Nullable String file;
     private final @Nullable String registry;
 
-    @OutputCustomType.Constructor({"file","registry"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivilegesCredentialSpec(
-        @Nullable String file,
-        @Nullable String registry) {
+        @OutputCustomType.Parameter("file") @Nullable String file,
+        @OutputCustomType.Parameter("registry") @Nullable String registry) {
         this.file = file;
         this.registry = registry;
     }
@@ -51,12 +51,12 @@ public final class ServiceTaskSpecContainerSpecPrivilegesCredentialSpec {
     	      this.registry = defaults.registry;
         }
 
-        public Builder setFile(@Nullable String file) {
+        public Builder file(@Nullable String file) {
             this.file = file;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }

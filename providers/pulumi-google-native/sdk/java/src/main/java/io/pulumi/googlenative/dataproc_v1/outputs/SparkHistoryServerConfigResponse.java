@@ -15,8 +15,8 @@ public final class SparkHistoryServerConfigResponse {
      */
     private final String dataprocCluster;
 
-    @OutputCustomType.Constructor({"dataprocCluster"})
-    private SparkHistoryServerConfigResponse(String dataprocCluster) {
+    @OutputCustomType.Constructor
+    private SparkHistoryServerConfigResponse(@OutputCustomType.Parameter("dataprocCluster") String dataprocCluster) {
         this.dataprocCluster = dataprocCluster;
     }
 
@@ -48,7 +48,7 @@ public final class SparkHistoryServerConfigResponse {
     	      this.dataprocCluster = defaults.dataprocCluster;
         }
 
-        public Builder setDataprocCluster(String dataprocCluster) {
+        public Builder dataprocCluster(String dataprocCluster) {
             this.dataprocCluster = Objects.requireNonNull(dataprocCluster);
             return this;
         }

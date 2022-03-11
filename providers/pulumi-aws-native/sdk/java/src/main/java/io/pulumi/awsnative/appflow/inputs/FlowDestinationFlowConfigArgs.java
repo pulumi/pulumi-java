@@ -92,32 +92,32 @@ public final class FlowDestinationFlowConfigArgs extends io.pulumi.resources.Res
     	      this.destinationConnectorProperties = defaults.destinationConnectorProperties;
         }
 
-        public Builder setConnectorProfileName(@Nullable Input<String> connectorProfileName) {
+        public Builder connectorProfileName(@Nullable Input<String> connectorProfileName) {
             this.connectorProfileName = connectorProfileName;
             return this;
         }
 
-        public Builder setConnectorProfileName(@Nullable String connectorProfileName) {
+        public Builder connectorProfileName(@Nullable String connectorProfileName) {
             this.connectorProfileName = Input.ofNullable(connectorProfileName);
             return this;
         }
 
-        public Builder setConnectorType(Input<FlowConnectorType> connectorType) {
+        public Builder connectorType(Input<FlowConnectorType> connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setConnectorType(FlowConnectorType connectorType) {
+        public Builder connectorType(FlowConnectorType connectorType) {
             this.connectorType = Input.of(Objects.requireNonNull(connectorType));
             return this;
         }
 
-        public Builder setDestinationConnectorProperties(Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
+        public Builder destinationConnectorProperties(Input<FlowDestinationConnectorPropertiesArgs> destinationConnectorProperties) {
             this.destinationConnectorProperties = Objects.requireNonNull(destinationConnectorProperties);
             return this;
         }
 
-        public Builder setDestinationConnectorProperties(FlowDestinationConnectorPropertiesArgs destinationConnectorProperties) {
+        public Builder destinationConnectorProperties(FlowDestinationConnectorPropertiesArgs destinationConnectorProperties) {
             this.destinationConnectorProperties = Input.of(Objects.requireNonNull(destinationConnectorProperties));
             return this;
         }

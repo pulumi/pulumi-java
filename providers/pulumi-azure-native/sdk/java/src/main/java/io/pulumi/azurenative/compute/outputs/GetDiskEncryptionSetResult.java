@@ -77,20 +77,20 @@ public final class GetDiskEncryptionSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"activeKey","encryptionType","id","identity","lastKeyRotationTimestamp","location","name","previousKeys","provisioningState","rotationToLatestKeyVersionEnabled","tags","type"})
+    @OutputCustomType.Constructor
     private GetDiskEncryptionSetResult(
-        @Nullable KeyForDiskEncryptionSetResponse activeKey,
-        @Nullable String encryptionType,
-        String id,
-        @Nullable EncryptionSetIdentityResponse identity,
-        String lastKeyRotationTimestamp,
-        String location,
-        String name,
-        List<KeyForDiskEncryptionSetResponse> previousKeys,
-        String provisioningState,
-        @Nullable Boolean rotationToLatestKeyVersionEnabled,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("activeKey") @Nullable KeyForDiskEncryptionSetResponse activeKey,
+        @OutputCustomType.Parameter("encryptionType") @Nullable String encryptionType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable EncryptionSetIdentityResponse identity,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("previousKeys") List<KeyForDiskEncryptionSetResponse> previousKeys,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rotationToLatestKeyVersionEnabled") @Nullable Boolean rotationToLatestKeyVersionEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.activeKey = activeKey;
         this.encryptionType = encryptionType;
         this.id = id;
@@ -232,62 +232,62 @@ public final class GetDiskEncryptionSetResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActiveKey(@Nullable KeyForDiskEncryptionSetResponse activeKey) {
+        public Builder activeKey(@Nullable KeyForDiskEncryptionSetResponse activeKey) {
             this.activeKey = activeKey;
             return this;
         }
 
-        public Builder setEncryptionType(@Nullable String encryptionType) {
+        public Builder encryptionType(@Nullable String encryptionType) {
             this.encryptionType = encryptionType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable EncryptionSetIdentityResponse identity) {
+        public Builder identity(@Nullable EncryptionSetIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
+        public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreviousKeys(List<KeyForDiskEncryptionSetResponse> previousKeys) {
+        public Builder previousKeys(List<KeyForDiskEncryptionSetResponse> previousKeys) {
             this.previousKeys = Objects.requireNonNull(previousKeys);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
+        public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
             this.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

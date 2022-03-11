@@ -33,12 +33,12 @@ public final class GetOnlineEndpointTokenResult {
      */
     private final @Nullable String tokenType;
 
-    @OutputCustomType.Constructor({"accessToken","expiryTimeUtc","refreshAfterTimeUtc","tokenType"})
+    @OutputCustomType.Constructor
     private GetOnlineEndpointTokenResult(
-        @Nullable String accessToken,
-        @Nullable Double expiryTimeUtc,
-        @Nullable Double refreshAfterTimeUtc,
-        @Nullable String tokenType) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("expiryTimeUtc") @Nullable Double expiryTimeUtc,
+        @OutputCustomType.Parameter("refreshAfterTimeUtc") @Nullable Double refreshAfterTimeUtc,
+        @OutputCustomType.Parameter("tokenType") @Nullable String tokenType) {
         this.accessToken = accessToken;
         this.expiryTimeUtc = expiryTimeUtc;
         this.refreshAfterTimeUtc = refreshAfterTimeUtc;
@@ -100,22 +100,22 @@ public final class GetOnlineEndpointTokenResult {
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setExpiryTimeUtc(@Nullable Double expiryTimeUtc) {
+        public Builder expiryTimeUtc(@Nullable Double expiryTimeUtc) {
             this.expiryTimeUtc = expiryTimeUtc;
             return this;
         }
 
-        public Builder setRefreshAfterTimeUtc(@Nullable Double refreshAfterTimeUtc) {
+        public Builder refreshAfterTimeUtc(@Nullable Double refreshAfterTimeUtc) {
             this.refreshAfterTimeUtc = refreshAfterTimeUtc;
             return this;
         }
 
-        public Builder setTokenType(@Nullable String tokenType) {
+        public Builder tokenType(@Nullable String tokenType) {
             this.tokenType = tokenType;
             return this;
         }

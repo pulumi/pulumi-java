@@ -21,10 +21,10 @@ public final class MetricRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"metricCosts","selector"})
+    @OutputCustomType.Constructor
     private MetricRuleResponse(
-        Map<String,String> metricCosts,
-        String selector) {
+        @OutputCustomType.Parameter("metricCosts") Map<String,String> metricCosts,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.metricCosts = metricCosts;
         this.selector = selector;
     }
@@ -66,12 +66,12 @@ public final class MetricRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setMetricCosts(Map<String,String> metricCosts) {
+        public Builder metricCosts(Map<String,String> metricCosts) {
             this.metricCosts = Objects.requireNonNull(metricCosts);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

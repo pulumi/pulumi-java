@@ -32,12 +32,12 @@ public final class ContainerIdentityInfoResponse {
      */
     private final @Nullable String uniqueName;
 
-    @OutputCustomType.Constructor({"aadTenantId","audience","servicePrincipalClientId","uniqueName"})
+    @OutputCustomType.Constructor
     private ContainerIdentityInfoResponse(
-        @Nullable String aadTenantId,
-        @Nullable String audience,
-        @Nullable String servicePrincipalClientId,
-        @Nullable String uniqueName) {
+        @OutputCustomType.Parameter("aadTenantId") @Nullable String aadTenantId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("servicePrincipalClientId") @Nullable String servicePrincipalClientId,
+        @OutputCustomType.Parameter("uniqueName") @Nullable String uniqueName) {
         this.aadTenantId = aadTenantId;
         this.audience = audience;
         this.servicePrincipalClientId = servicePrincipalClientId;
@@ -99,22 +99,22 @@ public final class ContainerIdentityInfoResponse {
     	      this.uniqueName = defaults.uniqueName;
         }
 
-        public Builder setAadTenantId(@Nullable String aadTenantId) {
+        public Builder aadTenantId(@Nullable String aadTenantId) {
             this.aadTenantId = aadTenantId;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setServicePrincipalClientId(@Nullable String servicePrincipalClientId) {
+        public Builder servicePrincipalClientId(@Nullable String servicePrincipalClientId) {
             this.servicePrincipalClientId = servicePrincipalClientId;
             return this;
         }
 
-        public Builder setUniqueName(@Nullable String uniqueName) {
+        public Builder uniqueName(@Nullable String uniqueName) {
             this.uniqueName = uniqueName;
             return this;
         }

@@ -36,12 +36,12 @@ public final class BgpSettingsResponse {
      */
     private final @Nullable Integer peerWeight;
 
-    @OutputCustomType.Constructor({"asn","bgpPeeringAddress","bgpPeeringAddresses","peerWeight"})
+    @OutputCustomType.Constructor
     private BgpSettingsResponse(
-        @Nullable Double asn,
-        @Nullable String bgpPeeringAddress,
-        @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
-        @Nullable Integer peerWeight) {
+        @OutputCustomType.Parameter("asn") @Nullable Double asn,
+        @OutputCustomType.Parameter("bgpPeeringAddress") @Nullable String bgpPeeringAddress,
+        @OutputCustomType.Parameter("bgpPeeringAddresses") @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses,
+        @OutputCustomType.Parameter("peerWeight") @Nullable Integer peerWeight) {
         this.asn = asn;
         this.bgpPeeringAddress = bgpPeeringAddress;
         this.bgpPeeringAddresses = bgpPeeringAddresses;
@@ -103,22 +103,22 @@ public final class BgpSettingsResponse {
     	      this.peerWeight = defaults.peerWeight;
         }
 
-        public Builder setAsn(@Nullable Double asn) {
+        public Builder asn(@Nullable Double asn) {
             this.asn = asn;
             return this;
         }
 
-        public Builder setBgpPeeringAddress(@Nullable String bgpPeeringAddress) {
+        public Builder bgpPeeringAddress(@Nullable String bgpPeeringAddress) {
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
 
-        public Builder setBgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses) {
+        public Builder bgpPeeringAddresses(@Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses) {
             this.bgpPeeringAddresses = bgpPeeringAddresses;
             return this;
         }
 
-        public Builder setPeerWeight(@Nullable Integer peerWeight) {
+        public Builder peerWeight(@Nullable Integer peerWeight) {
             this.peerWeight = peerWeight;
             return this;
         }

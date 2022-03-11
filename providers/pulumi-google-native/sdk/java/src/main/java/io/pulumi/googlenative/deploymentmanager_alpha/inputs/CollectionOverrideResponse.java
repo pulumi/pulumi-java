@@ -90,17 +90,17 @@ public final class CollectionOverrideResponse extends io.pulumi.resources.Invoke
     	      this.options = defaults.options;
         }
 
-        public Builder setCollection(String collection) {
+        public Builder collection(String collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
-        public Builder setMethodMap(MethodMapResponse methodMap) {
+        public Builder methodMap(MethodMapResponse methodMap) {
             this.methodMap = Objects.requireNonNull(methodMap);
             return this;
         }
 
-        public Builder setOptions(OptionsResponse options) {
+        public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

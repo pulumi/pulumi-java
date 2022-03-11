@@ -22,10 +22,10 @@ public final class IpTagResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"ipTagType","tag"})
+    @OutputCustomType.Constructor
     private IpTagResponse(
-        @Nullable String ipTagType,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("ipTagType") @Nullable String ipTagType,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.ipTagType = ipTagType;
         this.tag = tag;
     }
@@ -67,12 +67,12 @@ public final class IpTagResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setIpTagType(@Nullable String ipTagType) {
+        public Builder ipTagType(@Nullable String ipTagType) {
             this.ipTagType = ipTagType;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

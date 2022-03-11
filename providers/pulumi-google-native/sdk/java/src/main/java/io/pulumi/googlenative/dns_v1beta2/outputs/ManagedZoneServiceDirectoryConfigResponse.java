@@ -17,10 +17,10 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
      */
     private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
-    @OutputCustomType.Constructor({"kind","namespace"})
+    @OutputCustomType.Constructor
     private ManagedZoneServiceDirectoryConfigResponse(
-        String kind,
-        ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("namespace") ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
         this.kind = kind;
         this.namespace = namespace;
     }
@@ -58,12 +58,12 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNamespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
+        public Builder namespace(ManagedZoneServiceDirectoryConfigNamespaceResponse namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

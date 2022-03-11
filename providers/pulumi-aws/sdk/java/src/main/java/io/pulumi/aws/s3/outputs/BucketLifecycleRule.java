@@ -65,17 +65,17 @@ public final class BucketLifecycleRule {
      */
     private final @Nullable List<BucketLifecycleRuleTransition> transitions;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUploadDays","enabled","expiration","id","noncurrentVersionExpiration","noncurrentVersionTransitions","prefix","tags","transitions"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRule(
-        @Nullable Integer abortIncompleteMultipartUploadDays,
-        Boolean enabled,
-        @Nullable BucketLifecycleRuleExpiration expiration,
-        @Nullable String id,
-        @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
-        @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
-        @Nullable String prefix,
-        @Nullable Map<String,String> tags,
-        @Nullable List<BucketLifecycleRuleTransition> transitions) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUploadDays") @Nullable Integer abortIncompleteMultipartUploadDays,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expiration") @Nullable BucketLifecycleRuleExpiration expiration,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration,
+        @OutputCustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transitions") @Nullable List<BucketLifecycleRuleTransition> transitions) {
         this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
         this.enabled = enabled;
         this.expiration = expiration;
@@ -187,47 +187,47 @@ public final class BucketLifecycleRule {
     	      this.transitions = defaults.transitions;
         }
 
-        public Builder setAbortIncompleteMultipartUploadDays(@Nullable Integer abortIncompleteMultipartUploadDays) {
+        public Builder abortIncompleteMultipartUploadDays(@Nullable Integer abortIncompleteMultipartUploadDays) {
             this.abortIncompleteMultipartUploadDays = abortIncompleteMultipartUploadDays;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpiration(@Nullable BucketLifecycleRuleExpiration expiration) {
+        public Builder expiration(@Nullable BucketLifecycleRuleExpiration expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable BucketLifecycleRuleNoncurrentVersionExpiration noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable List<BucketLifecycleRuleNoncurrentVersionTransition> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitions(@Nullable List<BucketLifecycleRuleTransition> transitions) {
+        public Builder transitions(@Nullable List<BucketLifecycleRuleTransition> transitions) {
             this.transitions = transitions;
             return this;
         }

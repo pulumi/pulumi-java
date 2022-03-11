@@ -23,10 +23,10 @@ public final class WebAclLoggingConfiguration {
      */
     private final @Nullable WebAclLoggingConfigurationRedactedFields redactedFields;
 
-    @OutputCustomType.Constructor({"logDestination","redactedFields"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfiguration(
-        String logDestination,
-        @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
+        @OutputCustomType.Parameter("logDestination") String logDestination,
+        @OutputCustomType.Parameter("redactedFields") @Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
         this.logDestination = logDestination;
         this.redactedFields = redactedFields;
     }
@@ -68,12 +68,12 @@ public final class WebAclLoggingConfiguration {
     	      this.redactedFields = defaults.redactedFields;
         }
 
-        public Builder setLogDestination(String logDestination) {
+        public Builder logDestination(String logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
+        public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFields redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }

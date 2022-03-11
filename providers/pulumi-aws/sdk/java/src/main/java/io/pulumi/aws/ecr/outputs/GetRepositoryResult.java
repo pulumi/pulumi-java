@@ -51,17 +51,17 @@ public final class GetRepositoryResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","encryptionConfigurations","id","imageScanningConfigurations","imageTagMutability","name","registryId","repositoryUrl","tags"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String arn,
-        List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
-        String id,
-        List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
-        String imageTagMutability,
-        String name,
-        String registryId,
-        String repositoryUrl,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("encryptionConfigurations") List<GetRepositoryEncryptionConfiguration> encryptionConfigurations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageScanningConfigurations") List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations,
+        @OutputCustomType.Parameter("imageTagMutability") String imageTagMutability,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("registryId") String registryId,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.encryptionConfigurations = encryptionConfigurations;
         this.id = id;
@@ -165,47 +165,47 @@ public final class GetRepositoryResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setEncryptionConfigurations(List<GetRepositoryEncryptionConfiguration> encryptionConfigurations) {
+        public Builder encryptionConfigurations(List<GetRepositoryEncryptionConfiguration> encryptionConfigurations) {
             this.encryptionConfigurations = Objects.requireNonNull(encryptionConfigurations);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageScanningConfigurations(List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations) {
+        public Builder imageScanningConfigurations(List<GetRepositoryImageScanningConfiguration> imageScanningConfigurations) {
             this.imageScanningConfigurations = Objects.requireNonNull(imageScanningConfigurations);
             return this;
         }
 
-        public Builder setImageTagMutability(String imageTagMutability) {
+        public Builder imageTagMutability(String imageTagMutability) {
             this.imageTagMutability = Objects.requireNonNull(imageTagMutability);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

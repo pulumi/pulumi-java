@@ -16,8 +16,8 @@ public final class ManagedZonePeeringConfig {
      */
     private final ManagedZonePeeringConfigTargetNetwork targetNetwork;
 
-    @OutputCustomType.Constructor({"targetNetwork"})
-    private ManagedZonePeeringConfig(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
+    @OutputCustomType.Constructor
+    private ManagedZonePeeringConfig(@OutputCustomType.Parameter("targetNetwork") ManagedZonePeeringConfigTargetNetwork targetNetwork) {
         this.targetNetwork = targetNetwork;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedZonePeeringConfig {
     	      this.targetNetwork = defaults.targetNetwork;
         }
 
-        public Builder setTargetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
+        public Builder targetNetwork(ManagedZonePeeringConfigTargetNetwork targetNetwork) {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }

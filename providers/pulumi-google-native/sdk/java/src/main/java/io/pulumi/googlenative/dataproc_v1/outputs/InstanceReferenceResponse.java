@@ -30,12 +30,12 @@ public final class InstanceReferenceResponse {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","publicEciesKey","publicKey"})
+    @OutputCustomType.Constructor
     private InstanceReferenceResponse(
-        String instanceId,
-        String instanceName,
-        String publicEciesKey,
-        String publicKey) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceName") String instanceName,
+        @OutputCustomType.Parameter("publicEciesKey") String publicEciesKey,
+        @OutputCustomType.Parameter("publicKey") String publicKey) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.publicEciesKey = publicEciesKey;
@@ -97,22 +97,22 @@ public final class InstanceReferenceResponse {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setPublicEciesKey(String publicEciesKey) {
+        public Builder publicEciesKey(String publicEciesKey) {
             this.publicEciesKey = Objects.requireNonNull(publicEciesKey);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

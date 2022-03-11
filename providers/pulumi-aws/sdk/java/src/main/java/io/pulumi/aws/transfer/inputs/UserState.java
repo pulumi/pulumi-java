@@ -218,112 +218,112 @@ public final class UserState extends io.pulumi.resources.ResourceArgs {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable Input<String> homeDirectory) {
+        public Builder homeDirectory(@Nullable Input<String> homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = Input.ofNullable(homeDirectory);
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable Input<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable Input<List<UserHomeDirectoryMappingGetArgs>> homeDirectoryMappings) {
             this.homeDirectoryMappings = homeDirectoryMappings;
             return this;
         }
 
-        public Builder setHomeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
+        public Builder homeDirectoryMappings(@Nullable List<UserHomeDirectoryMappingGetArgs> homeDirectoryMappings) {
             this.homeDirectoryMappings = Input.ofNullable(homeDirectoryMappings);
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable Input<String> homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable Input<String> homeDirectoryType) {
             this.homeDirectoryType = homeDirectoryType;
             return this;
         }
 
-        public Builder setHomeDirectoryType(@Nullable String homeDirectoryType) {
+        public Builder homeDirectoryType(@Nullable String homeDirectoryType) {
             this.homeDirectoryType = Input.ofNullable(homeDirectoryType);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable Input<UserPosixProfileGetArgs> posixProfile) {
+        public Builder posixProfile(@Nullable Input<UserPosixProfileGetArgs> posixProfile) {
             this.posixProfile = posixProfile;
             return this;
         }
 
-        public Builder setPosixProfile(@Nullable UserPosixProfileGetArgs posixProfile) {
+        public Builder posixProfile(@Nullable UserPosixProfileGetArgs posixProfile) {
             this.posixProfile = Input.ofNullable(posixProfile);
             return this;
         }
 
-        public Builder setRole(@Nullable Input<String> role) {
+        public Builder role(@Nullable Input<String> role) {
             this.role = role;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = Input.ofNullable(role);
             return this;
         }
 
-        public Builder setServerId(@Nullable Input<String> serverId) {
+        public Builder serverId(@Nullable Input<String> serverId) {
             this.serverId = serverId;
             return this;
         }
 
-        public Builder setServerId(@Nullable String serverId) {
+        public Builder serverId(@Nullable String serverId) {
             this.serverId = Input.ofNullable(serverId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserName(@Nullable Input<String> userName) {
+        public Builder userName(@Nullable Input<String> userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = Input.ofNullable(userName);
             return this;
         }

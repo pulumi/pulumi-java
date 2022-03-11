@@ -86,32 +86,32 @@ public final class RoutineReferenceArgs extends io.pulumi.resources.ResourceArgs
     	      this.routineId = defaults.routineId;
         }
 
-        public Builder setDatasetId(@Nullable Input<String> datasetId) {
+        public Builder datasetId(@Nullable Input<String> datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = Input.ofNullable(datasetId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRoutineId(@Nullable Input<String> routineId) {
+        public Builder routineId(@Nullable Input<String> routineId) {
             this.routineId = routineId;
             return this;
         }
 
-        public Builder setRoutineId(@Nullable String routineId) {
+        public Builder routineId(@Nullable String routineId) {
             this.routineId = Input.ofNullable(routineId);
             return this;
         }

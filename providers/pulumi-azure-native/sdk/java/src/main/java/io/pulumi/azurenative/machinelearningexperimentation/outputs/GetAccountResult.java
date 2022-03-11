@@ -89,23 +89,23 @@ public final class GetAccountResult {
      */
     private final String vsoAccountId;
 
-    @OutputCustomType.Constructor({"accountId","creationDate","description","discoveryUri","friendlyName","id","keyVaultId","location","name","provisioningState","seats","storageAccount","tags","type","vsoAccountId"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String accountId,
-        String creationDate,
-        @Nullable String description,
-        String discoveryUri,
-        @Nullable String friendlyName,
-        String id,
-        String keyVaultId,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String seats,
-        StorageAccountPropertiesResponse storageAccount,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vsoAccountId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("discoveryUri") String discoveryUri,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("seats") @Nullable String seats,
+        @OutputCustomType.Parameter("storageAccount") StorageAccountPropertiesResponse storageAccount,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vsoAccountId") String vsoAccountId) {
         this.accountId = accountId;
         this.creationDate = creationDate;
         this.description = description;
@@ -277,77 +277,77 @@ public final class GetAccountResult {
     	      this.vsoAccountId = defaults.vsoAccountId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiscoveryUri(String discoveryUri) {
+        public Builder discoveryUri(String discoveryUri) {
             this.discoveryUri = Objects.requireNonNull(discoveryUri);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVaultId(String keyVaultId) {
+        public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSeats(@Nullable String seats) {
+        public Builder seats(@Nullable String seats) {
             this.seats = seats;
             return this;
         }
 
-        public Builder setStorageAccount(StorageAccountPropertiesResponse storageAccount) {
+        public Builder storageAccount(StorageAccountPropertiesResponse storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVsoAccountId(String vsoAccountId) {
+        public Builder vsoAccountId(String vsoAccountId) {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }

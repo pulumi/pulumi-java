@@ -18,10 +18,10 @@ public final class GetLogDeliveryCanonicalUserIdResult {
     private final String id;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"id","region"})
+    @OutputCustomType.Constructor
     private GetLogDeliveryCanonicalUserIdResult(
-        String id,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.id = id;
         this.region = region;
     }
@@ -59,12 +59,12 @@ public final class GetLogDeliveryCanonicalUserIdResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

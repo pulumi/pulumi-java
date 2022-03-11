@@ -37,13 +37,13 @@ public final class CorsRuleResponse {
      */
     private final Integer maxAgeInSeconds;
 
-    @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposedHeaders","maxAgeInSeconds"})
+    @OutputCustomType.Constructor
     private CorsRuleResponse(
-        List<String> allowedHeaders,
-        List<String> allowedMethods,
-        List<String> allowedOrigins,
-        List<String> exposedHeaders,
-        Integer maxAgeInSeconds) {
+        @OutputCustomType.Parameter("allowedHeaders") List<String> allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @OutputCustomType.Parameter("exposedHeaders") List<String> exposedHeaders,
+        @OutputCustomType.Parameter("maxAgeInSeconds") Integer maxAgeInSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;
@@ -115,27 +115,27 @@ public final class CorsRuleResponse {
     	      this.maxAgeInSeconds = defaults.maxAgeInSeconds;
         }
 
-        public Builder setAllowedHeaders(List<String> allowedHeaders) {
+        public Builder allowedHeaders(List<String> allowedHeaders) {
             this.allowedHeaders = Objects.requireNonNull(allowedHeaders);
             return this;
         }
 
-        public Builder setAllowedMethods(List<String> allowedMethods) {
+        public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedOrigins(List<String> allowedOrigins) {
+        public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setExposedHeaders(List<String> exposedHeaders) {
+        public Builder exposedHeaders(List<String> exposedHeaders) {
             this.exposedHeaders = Objects.requireNonNull(exposedHeaders);
             return this;
         }
 
-        public Builder setMaxAgeInSeconds(Integer maxAgeInSeconds) {
+        public Builder maxAgeInSeconds(Integer maxAgeInSeconds) {
             this.maxAgeInSeconds = Objects.requireNonNull(maxAgeInSeconds);
             return this;
         }

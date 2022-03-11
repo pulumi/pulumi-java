@@ -51,7 +51,7 @@ public final class GetCodeSigningConfigPolicy extends io.pulumi.resources.Invoke
     	      this.untrustedArtifactOnDeployment = defaults.untrustedArtifactOnDeployment;
         }
 
-        public Builder setUntrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
+        public Builder untrustedArtifactOnDeployment(String untrustedArtifactOnDeployment) {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }

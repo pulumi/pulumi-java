@@ -87,17 +87,17 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
     	      this.scope = defaults.scope;
         }
 
-        public Builder setExpandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
+        public Builder expandRegistrationDefinition(@Nullable Boolean expandRegistrationDefinition) {
             this.expandRegistrationDefinition = expandRegistrationDefinition;
             return this;
         }
 
-        public Builder setRegistrationAssignmentId(String registrationAssignmentId) {
+        public Builder registrationAssignmentId(String registrationAssignmentId) {
             this.registrationAssignmentId = Objects.requireNonNull(registrationAssignmentId);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FleetCertificateConfiguration {
     private final FleetCertificateConfigurationCertificateType certificateType;
 
-    @OutputCustomType.Constructor({"certificateType"})
-    private FleetCertificateConfiguration(FleetCertificateConfigurationCertificateType certificateType) {
+    @OutputCustomType.Constructor
+    private FleetCertificateConfiguration(@OutputCustomType.Parameter("certificateType") FleetCertificateConfigurationCertificateType certificateType) {
         this.certificateType = certificateType;
     }
 
@@ -40,7 +40,7 @@ public final class FleetCertificateConfiguration {
     	      this.certificateType = defaults.certificateType;
         }
 
-        public Builder setCertificateType(FleetCertificateConfigurationCertificateType certificateType) {
+        public Builder certificateType(FleetCertificateConfigurationCertificateType certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }

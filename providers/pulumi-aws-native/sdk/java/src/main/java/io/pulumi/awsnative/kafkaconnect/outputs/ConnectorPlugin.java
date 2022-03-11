@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ConnectorPlugin {
     private final ConnectorCustomPlugin customPlugin;
 
-    @OutputCustomType.Constructor({"customPlugin"})
-    private ConnectorPlugin(ConnectorCustomPlugin customPlugin) {
+    @OutputCustomType.Constructor
+    private ConnectorPlugin(@OutputCustomType.Parameter("customPlugin") ConnectorCustomPlugin customPlugin) {
         this.customPlugin = customPlugin;
     }
 
@@ -40,7 +40,7 @@ public final class ConnectorPlugin {
     	      this.customPlugin = defaults.customPlugin;
         }
 
-        public Builder setCustomPlugin(ConnectorCustomPlugin customPlugin) {
+        public Builder customPlugin(ConnectorCustomPlugin customPlugin) {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
         }

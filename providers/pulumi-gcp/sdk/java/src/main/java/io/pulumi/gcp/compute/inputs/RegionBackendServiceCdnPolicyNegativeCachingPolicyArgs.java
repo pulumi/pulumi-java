@@ -72,22 +72,22 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs extend
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCode(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Input<Integer> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<Integer> ttl) {
+        public Builder ttl(@Nullable Input<Integer> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

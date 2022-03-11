@@ -28,11 +28,11 @@ public final class ArmRoleReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"name","roleId","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private ArmRoleReceiverResponse(
-        String name,
-        String roleId,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.name = name;
         this.roleId = roleId;
         this.useCommonAlertSchema = useCommonAlertSchema;
@@ -84,17 +84,17 @@ public final class ArmRoleReceiverResponse {
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

@@ -86,22 +86,22 @@ public final class GetPrivateStoreOfferResult {
      */
     private final @Nullable Boolean updateSuppressedDueIdempotence;
 
-    @OutputCustomType.Constructor({"createdAt","eTag","iconFileUris","id","modifiedAt","name","offerDisplayName","plans","privateStoreId","publisherDisplayName","specificPlanIdsLimitation","type","uniqueOfferId","updateSuppressedDueIdempotence"})
+    @OutputCustomType.Constructor
     private GetPrivateStoreOfferResult(
-        String createdAt,
-        @Nullable String eTag,
-        @Nullable Map<String,String> iconFileUris,
-        String id,
-        String modifiedAt,
-        String name,
-        String offerDisplayName,
-        @Nullable List<PlanResponse> plans,
-        String privateStoreId,
-        String publisherDisplayName,
-        @Nullable List<String> specificPlanIdsLimitation,
-        String type,
-        String uniqueOfferId,
-        @Nullable Boolean updateSuppressedDueIdempotence) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("iconFileUris") @Nullable Map<String,String> iconFileUris,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("modifiedAt") String modifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offerDisplayName") String offerDisplayName,
+        @OutputCustomType.Parameter("plans") @Nullable List<PlanResponse> plans,
+        @OutputCustomType.Parameter("privateStoreId") String privateStoreId,
+        @OutputCustomType.Parameter("publisherDisplayName") String publisherDisplayName,
+        @OutputCustomType.Parameter("specificPlanIdsLimitation") @Nullable List<String> specificPlanIdsLimitation,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueOfferId") String uniqueOfferId,
+        @OutputCustomType.Parameter("updateSuppressedDueIdempotence") @Nullable Boolean updateSuppressedDueIdempotence) {
         this.createdAt = createdAt;
         this.eTag = eTag;
         this.iconFileUris = iconFileUris;
@@ -263,72 +263,72 @@ public final class GetPrivateStoreOfferResult {
     	      this.updateSuppressedDueIdempotence = defaults.updateSuppressedDueIdempotence;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setIconFileUris(@Nullable Map<String,String> iconFileUris) {
+        public Builder iconFileUris(@Nullable Map<String,String> iconFileUris) {
             this.iconFileUris = iconFileUris;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setModifiedAt(String modifiedAt) {
+        public Builder modifiedAt(String modifiedAt) {
             this.modifiedAt = Objects.requireNonNull(modifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOfferDisplayName(String offerDisplayName) {
+        public Builder offerDisplayName(String offerDisplayName) {
             this.offerDisplayName = Objects.requireNonNull(offerDisplayName);
             return this;
         }
 
-        public Builder setPlans(@Nullable List<PlanResponse> plans) {
+        public Builder plans(@Nullable List<PlanResponse> plans) {
             this.plans = plans;
             return this;
         }
 
-        public Builder setPrivateStoreId(String privateStoreId) {
+        public Builder privateStoreId(String privateStoreId) {
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
 
-        public Builder setPublisherDisplayName(String publisherDisplayName) {
+        public Builder publisherDisplayName(String publisherDisplayName) {
             this.publisherDisplayName = Objects.requireNonNull(publisherDisplayName);
             return this;
         }
 
-        public Builder setSpecificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
+        public Builder specificPlanIdsLimitation(@Nullable List<String> specificPlanIdsLimitation) {
             this.specificPlanIdsLimitation = specificPlanIdsLimitation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueOfferId(String uniqueOfferId) {
+        public Builder uniqueOfferId(String uniqueOfferId) {
             this.uniqueOfferId = Objects.requireNonNull(uniqueOfferId);
             return this;
         }
 
-        public Builder setUpdateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
+        public Builder updateSuppressedDueIdempotence(@Nullable Boolean updateSuppressedDueIdempotence) {
             this.updateSuppressedDueIdempotence = updateSuppressedDueIdempotence;
             return this;
         }

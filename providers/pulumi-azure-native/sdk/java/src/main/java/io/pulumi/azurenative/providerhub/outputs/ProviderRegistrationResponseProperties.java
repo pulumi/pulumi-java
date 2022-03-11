@@ -38,23 +38,23 @@ public final class ProviderRegistrationResponseProperties {
     private final @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications;
     private final @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions;
 
-    @OutputCustomType.Constructor({"capabilities","featuresRule","management","metadata","namespace","providerAuthentication","providerAuthorizations","providerHubMetadata","providerType","providerVersion","provisioningState","requestHeaderOptions","requiredFeatures","subscriptionLifecycleNotificationSpecifications","templateDeploymentOptions"})
+    @OutputCustomType.Constructor
     private ProviderRegistrationResponseProperties(
-        @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
-        @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
-        @Nullable ResourceProviderManifestPropertiesResponseManagement management,
-        @Nullable Object metadata,
-        @Nullable String namespace,
-        @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
-        @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
-        @Nullable String providerType,
-        @Nullable String providerVersion,
-        @Nullable String provisioningState,
-        @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
-        @Nullable List<String> requiredFeatures,
-        @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
-        @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
+        @OutputCustomType.Parameter("capabilities") @Nullable List<ResourceProviderCapabilitiesResponse> capabilities,
+        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule,
+        @OutputCustomType.Parameter("management") @Nullable ResourceProviderManifestPropertiesResponseManagement management,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("providerAuthentication") @Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication,
+        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @OutputCustomType.Parameter("providerHubMetadata") @Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata,
+        @OutputCustomType.Parameter("providerType") @Nullable String providerType,
+        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("requestHeaderOptions") @Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("subscriptionLifecycleNotificationSpecifications") @Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications,
+        @OutputCustomType.Parameter("templateDeploymentOptions") @Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
         this.capabilities = capabilities;
         this.featuresRule = featuresRule;
         this.management = management;
@@ -166,77 +166,77 @@ public final class ProviderRegistrationResponseProperties {
     	      this.templateDeploymentOptions = defaults.templateDeploymentOptions;
         }
 
-        public Builder setCapabilities(@Nullable List<ResourceProviderCapabilitiesResponse> capabilities) {
+        public Builder capabilities(@Nullable List<ResourceProviderCapabilitiesResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule) {
+        public Builder featuresRule(@Nullable ResourceProviderManifestPropertiesResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setManagement(@Nullable ResourceProviderManifestPropertiesResponseManagement management) {
+        public Builder management(@Nullable ResourceProviderManifestPropertiesResponseManagement management) {
             this.management = management;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setProviderAuthentication(@Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication) {
+        public Builder providerAuthentication(@Nullable ResourceProviderManifestPropertiesResponseProviderAuthentication providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
-        public Builder setProviderHubMetadata(@Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata) {
+        public Builder providerHubMetadata(@Nullable ProviderRegistrationPropertiesResponseProviderHubMetadata providerHubMetadata) {
             this.providerHubMetadata = providerHubMetadata;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setProviderVersion(@Nullable String providerVersion) {
+        public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRequestHeaderOptions(@Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
+        public Builder requestHeaderOptions(@Nullable ResourceProviderManifestPropertiesResponseRequestHeaderOptions requestHeaderOptions) {
             this.requestHeaderOptions = requestHeaderOptions;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setSubscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
+        public Builder subscriptionLifecycleNotificationSpecifications(@Nullable ProviderRegistrationPropertiesResponseSubscriptionLifecycleNotificationSpecifications subscriptionLifecycleNotificationSpecifications) {
             this.subscriptionLifecycleNotificationSpecifications = subscriptionLifecycleNotificationSpecifications;
             return this;
         }
 
-        public Builder setTemplateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
+        public Builder templateDeploymentOptions(@Nullable ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions templateDeploymentOptions) {
             this.templateDeploymentOptions = templateDeploymentOptions;
             return this;
         }

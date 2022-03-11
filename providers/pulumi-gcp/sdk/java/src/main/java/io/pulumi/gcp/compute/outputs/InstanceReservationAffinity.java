@@ -24,10 +24,10 @@ public final class InstanceReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservation","type"})
+    @OutputCustomType.Constructor
     private InstanceReservationAffinity(
-        @Nullable InstanceReservationAffinitySpecificReservation specificReservation,
-        String type) {
+        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceReservationAffinitySpecificReservation specificReservation,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }
@@ -70,12 +70,12 @@ public final class InstanceReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceReservationAffinitySpecificReservation specificReservation) {
+        public Builder specificReservation(@Nullable InstanceReservationAffinitySpecificReservation specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

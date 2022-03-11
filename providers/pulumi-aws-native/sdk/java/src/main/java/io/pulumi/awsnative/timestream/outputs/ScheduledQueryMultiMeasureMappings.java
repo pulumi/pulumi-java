@@ -16,10 +16,10 @@ public final class ScheduledQueryMultiMeasureMappings {
     private final List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings;
     private final @Nullable String targetMultiMeasureName;
 
-    @OutputCustomType.Constructor({"multiMeasureAttributeMappings","targetMultiMeasureName"})
+    @OutputCustomType.Constructor
     private ScheduledQueryMultiMeasureMappings(
-        List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
-        @Nullable String targetMultiMeasureName) {
+        @OutputCustomType.Parameter("multiMeasureAttributeMappings") List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings,
+        @OutputCustomType.Parameter("targetMultiMeasureName") @Nullable String targetMultiMeasureName) {
         this.multiMeasureAttributeMappings = multiMeasureAttributeMappings;
         this.targetMultiMeasureName = targetMultiMeasureName;
     }
@@ -53,12 +53,12 @@ public final class ScheduledQueryMultiMeasureMappings {
     	      this.targetMultiMeasureName = defaults.targetMultiMeasureName;
         }
 
-        public Builder setMultiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings) {
+        public Builder multiMeasureAttributeMappings(List<ScheduledQueryMultiMeasureAttributeMapping> multiMeasureAttributeMappings) {
             this.multiMeasureAttributeMappings = Objects.requireNonNull(multiMeasureAttributeMappings);
             return this;
         }
 
-        public Builder setTargetMultiMeasureName(@Nullable String targetMultiMeasureName) {
+        public Builder targetMultiMeasureName(@Nullable String targetMultiMeasureName) {
             this.targetMultiMeasureName = targetMultiMeasureName;
             return this;
         }

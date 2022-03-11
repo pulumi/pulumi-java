@@ -20,10 +20,10 @@ public final class JsonFileFormatResponse {
      */
     private final String schemaFileFormat;
 
-    @OutputCustomType.Constructor({"compression","schemaFileFormat"})
+    @OutputCustomType.Constructor
     private JsonFileFormatResponse(
-        String compression,
-        String schemaFileFormat) {
+        @OutputCustomType.Parameter("compression") String compression,
+        @OutputCustomType.Parameter("schemaFileFormat") String schemaFileFormat) {
         this.compression = compression;
         this.schemaFileFormat = schemaFileFormat;
     }
@@ -65,12 +65,12 @@ public final class JsonFileFormatResponse {
     	      this.schemaFileFormat = defaults.schemaFileFormat;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setSchemaFileFormat(String schemaFileFormat) {
+        public Builder schemaFileFormat(String schemaFileFormat) {
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }

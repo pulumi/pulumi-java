@@ -26,11 +26,11 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
      */
     private final List<String> targets;
 
-    @OutputCustomType.Constructor({"generatedRulesType","targetTypes","targets"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceRulesSourceList(
-        String generatedRulesType,
-        List<String> targetTypes,
-        List<String> targets) {
+        @OutputCustomType.Parameter("generatedRulesType") String generatedRulesType,
+        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes,
+        @OutputCustomType.Parameter("targets") List<String> targets) {
         this.generatedRulesType = generatedRulesType;
         this.targetTypes = targetTypes;
         this.targets = targets;
@@ -82,17 +82,17 @@ public final class RuleGroupRuleGroupRulesSourceRulesSourceList {
     	      this.targets = defaults.targets;
         }
 
-        public Builder setGeneratedRulesType(String generatedRulesType) {
+        public Builder generatedRulesType(String generatedRulesType) {
             this.generatedRulesType = Objects.requireNonNull(generatedRulesType);
             return this;
         }
 
-        public Builder setTargetTypes(List<String> targetTypes) {
+        public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }
 
-        public Builder setTargets(List<String> targets) {
+        public Builder targets(List<String> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }

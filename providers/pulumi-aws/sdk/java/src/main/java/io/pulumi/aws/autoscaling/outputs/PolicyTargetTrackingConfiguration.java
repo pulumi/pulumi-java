@@ -35,12 +35,12 @@ public final class PolicyTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"customizedMetricSpecification","disableScaleIn","predefinedMetricSpecification","targetValue"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingConfiguration(
-        @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
-        @Nullable Boolean disableScaleIn,
-        @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
-        Double targetValue) {
+        @OutputCustomType.Parameter("customizedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification,
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("predefinedMetricSpecification") @Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.customizedMetricSpecification = customizedMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.predefinedMetricSpecification = predefinedMetricSpecification;
@@ -102,22 +102,22 @@ public final class PolicyTargetTrackingConfiguration {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setCustomizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification) {
+        public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecification customizedMetricSpecification) {
             this.customizedMetricSpecification = customizedMetricSpecification;
             return this;
         }
 
-        public Builder setDisableScaleIn(@Nullable Boolean disableScaleIn) {
+        public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
 
-        public Builder setPredefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification) {
+        public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecification predefinedMetricSpecification) {
             this.predefinedMetricSpecification = predefinedMetricSpecification;
             return this;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

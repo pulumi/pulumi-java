@@ -50,15 +50,15 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddresses","backendIPConfigurations","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendAddressPoolResponse(
-        @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
-        List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendAddresses") @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses,
+        @OutputCustomType.Parameter("backendIPConfigurations") List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddresses = backendAddresses;
         this.backendIPConfigurations = backendIPConfigurations;
         this.etag = etag;
@@ -150,37 +150,37 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendAddresses(@Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses) {
+        public Builder backendAddresses(@Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses) {
             this.backendAddresses = backendAddresses;
             return this;
         }
 
-        public Builder setBackendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
+        public Builder backendIPConfigurations(List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations) {
             this.backendIPConfigurations = Objects.requireNonNull(backendIPConfigurations);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

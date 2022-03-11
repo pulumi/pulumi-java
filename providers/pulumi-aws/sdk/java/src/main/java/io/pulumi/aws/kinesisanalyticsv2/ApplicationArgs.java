@@ -186,92 +186,92 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration) {
+        public Builder applicationConfiguration(@Nullable Input<ApplicationApplicationConfigurationArgs> applicationConfiguration) {
             this.applicationConfiguration = applicationConfiguration;
             return this;
         }
 
-        public Builder setApplicationConfiguration(@Nullable ApplicationApplicationConfigurationArgs applicationConfiguration) {
+        public Builder applicationConfiguration(@Nullable ApplicationApplicationConfigurationArgs applicationConfiguration) {
             this.applicationConfiguration = Input.ofNullable(applicationConfiguration);
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable Input<ApplicationCloudwatchLoggingOptionsArgs> cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable ApplicationCloudwatchLoggingOptionsArgs cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = Input.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setForceStop(@Nullable Input<Boolean> forceStop) {
+        public Builder forceStop(@Nullable Input<Boolean> forceStop) {
             this.forceStop = forceStop;
             return this;
         }
 
-        public Builder setForceStop(@Nullable Boolean forceStop) {
+        public Builder forceStop(@Nullable Boolean forceStop) {
             this.forceStop = Input.ofNullable(forceStop);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuntimeEnvironment(Input<String> runtimeEnvironment) {
+        public Builder runtimeEnvironment(Input<String> runtimeEnvironment) {
             this.runtimeEnvironment = Objects.requireNonNull(runtimeEnvironment);
             return this;
         }
 
-        public Builder setRuntimeEnvironment(String runtimeEnvironment) {
+        public Builder runtimeEnvironment(String runtimeEnvironment) {
             this.runtimeEnvironment = Input.of(Objects.requireNonNull(runtimeEnvironment));
             return this;
         }
 
-        public Builder setServiceExecutionRole(Input<String> serviceExecutionRole) {
+        public Builder serviceExecutionRole(Input<String> serviceExecutionRole) {
             this.serviceExecutionRole = Objects.requireNonNull(serviceExecutionRole);
             return this;
         }
 
-        public Builder setServiceExecutionRole(String serviceExecutionRole) {
+        public Builder serviceExecutionRole(String serviceExecutionRole) {
             this.serviceExecutionRole = Input.of(Objects.requireNonNull(serviceExecutionRole));
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Input<Boolean> startApplication) {
+        public Builder startApplication(@Nullable Input<Boolean> startApplication) {
             this.startApplication = startApplication;
             return this;
         }
 
-        public Builder setStartApplication(@Nullable Boolean startApplication) {
+        public Builder startApplication(@Nullable Boolean startApplication) {
             this.startApplication = Input.ofNullable(startApplication);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

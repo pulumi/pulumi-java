@@ -57,12 +57,12 @@ public final class HourDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.minute = defaults.minute;
         }
 
-        public Builder setMinute(@Nullable Input<Integer> minute) {
+        public Builder minute(@Nullable Input<Integer> minute) {
             this.minute = minute;
             return this;
         }
 
-        public Builder setMinute(@Nullable Integer minute) {
+        public Builder minute(@Nullable Integer minute) {
             this.minute = Input.ofNullable(minute);
             return this;
         }

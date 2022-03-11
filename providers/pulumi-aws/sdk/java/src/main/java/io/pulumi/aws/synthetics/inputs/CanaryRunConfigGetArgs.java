@@ -87,32 +87,32 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Input<Boolean> activeTracing) {
+        public Builder activeTracing(@Nullable Input<Boolean> activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = Input.ofNullable(activeTracing);
             return this;
         }
 
-        public Builder setMemoryInMb(@Nullable Input<Integer> memoryInMb) {
+        public Builder memoryInMb(@Nullable Input<Integer> memoryInMb) {
             this.memoryInMb = memoryInMb;
             return this;
         }
 
-        public Builder setMemoryInMb(@Nullable Integer memoryInMb) {
+        public Builder memoryInMb(@Nullable Integer memoryInMb) {
             this.memoryInMb = Input.ofNullable(memoryInMb);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Input<Integer> timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = Input.ofNullable(timeoutInSeconds);
             return this;
         }

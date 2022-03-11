@@ -26,11 +26,11 @@ public final class DataSourceTeradataParameters {
      */
     private final Double port;
 
-    @OutputCustomType.Constructor({"database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceTeradataParameters(
-        String database,
-        String host,
-        Double port) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Double port) {
         this.database = database;
         this.host = host;
         this.port = port;
@@ -82,17 +82,17 @@ public final class DataSourceTeradataParameters {
     	      this.port = defaults.port;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Double port) {
+        public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

@@ -43,14 +43,14 @@ public final class HttpTargetResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"body","headers","httpMethod","oauthToken","oidcToken","uri"})
+    @OutputCustomType.Constructor
     private HttpTargetResponse(
-        String body,
-        Map<String,String> headers,
-        String httpMethod,
-        OAuthTokenResponse oauthToken,
-        OidcTokenResponse oidcToken,
-        String uri) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("oauthToken") OAuthTokenResponse oauthToken,
+        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.body = body;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -132,32 +132,32 @@ public final class HttpTargetResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOauthToken(OAuthTokenResponse oauthToken) {
+        public Builder oauthToken(OAuthTokenResponse oauthToken) {
             this.oauthToken = Objects.requireNonNull(oauthToken);
             return this;
         }
 
-        public Builder setOidcToken(OidcTokenResponse oidcToken) {
+        public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -90,23 +90,23 @@ public final class FlowSource {
      */
     private final @Nullable String whitelistCidr;
 
-    @OutputCustomType.Constructor({"decryption","description","entitlementArn","ingestIp","ingestPort","maxBitrate","maxLatency","minLatency","name","protocol","sourceArn","sourceIngestPort","streamId","vpcInterfaceName","whitelistCidr"})
+    @OutputCustomType.Constructor
     private FlowSource(
-        @Nullable FlowEncryption decryption,
-        @Nullable String description,
-        @Nullable String entitlementArn,
-        @Nullable String ingestIp,
-        @Nullable Integer ingestPort,
-        @Nullable Integer maxBitrate,
-        @Nullable Integer maxLatency,
-        @Nullable Integer minLatency,
-        @Nullable String name,
-        @Nullable FlowSourceProtocol protocol,
-        @Nullable String sourceArn,
-        @Nullable String sourceIngestPort,
-        @Nullable String streamId,
-        @Nullable String vpcInterfaceName,
-        @Nullable String whitelistCidr) {
+        @OutputCustomType.Parameter("decryption") @Nullable FlowEncryption decryption,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entitlementArn") @Nullable String entitlementArn,
+        @OutputCustomType.Parameter("ingestIp") @Nullable String ingestIp,
+        @OutputCustomType.Parameter("ingestPort") @Nullable Integer ingestPort,
+        @OutputCustomType.Parameter("maxBitrate") @Nullable Integer maxBitrate,
+        @OutputCustomType.Parameter("maxLatency") @Nullable Integer maxLatency,
+        @OutputCustomType.Parameter("minLatency") @Nullable Integer minLatency,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable FlowSourceProtocol protocol,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @OutputCustomType.Parameter("sourceIngestPort") @Nullable String sourceIngestPort,
+        @OutputCustomType.Parameter("streamId") @Nullable String streamId,
+        @OutputCustomType.Parameter("vpcInterfaceName") @Nullable String vpcInterfaceName,
+        @OutputCustomType.Parameter("whitelistCidr") @Nullable String whitelistCidr) {
         this.decryption = decryption;
         this.description = description;
         this.entitlementArn = entitlementArn;
@@ -278,77 +278,77 @@ public final class FlowSource {
     	      this.whitelistCidr = defaults.whitelistCidr;
         }
 
-        public Builder setDecryption(@Nullable FlowEncryption decryption) {
+        public Builder decryption(@Nullable FlowEncryption decryption) {
             this.decryption = decryption;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntitlementArn(@Nullable String entitlementArn) {
+        public Builder entitlementArn(@Nullable String entitlementArn) {
             this.entitlementArn = entitlementArn;
             return this;
         }
 
-        public Builder setIngestIp(@Nullable String ingestIp) {
+        public Builder ingestIp(@Nullable String ingestIp) {
             this.ingestIp = ingestIp;
             return this;
         }
 
-        public Builder setIngestPort(@Nullable Integer ingestPort) {
+        public Builder ingestPort(@Nullable Integer ingestPort) {
             this.ingestPort = ingestPort;
             return this;
         }
 
-        public Builder setMaxBitrate(@Nullable Integer maxBitrate) {
+        public Builder maxBitrate(@Nullable Integer maxBitrate) {
             this.maxBitrate = maxBitrate;
             return this;
         }
 
-        public Builder setMaxLatency(@Nullable Integer maxLatency) {
+        public Builder maxLatency(@Nullable Integer maxLatency) {
             this.maxLatency = maxLatency;
             return this;
         }
 
-        public Builder setMinLatency(@Nullable Integer minLatency) {
+        public Builder minLatency(@Nullable Integer minLatency) {
             this.minLatency = minLatency;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable FlowSourceProtocol protocol) {
+        public Builder protocol(@Nullable FlowSourceProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
-        public Builder setSourceIngestPort(@Nullable String sourceIngestPort) {
+        public Builder sourceIngestPort(@Nullable String sourceIngestPort) {
             this.sourceIngestPort = sourceIngestPort;
             return this;
         }
 
-        public Builder setStreamId(@Nullable String streamId) {
+        public Builder streamId(@Nullable String streamId) {
             this.streamId = streamId;
             return this;
         }
 
-        public Builder setVpcInterfaceName(@Nullable String vpcInterfaceName) {
+        public Builder vpcInterfaceName(@Nullable String vpcInterfaceName) {
             this.vpcInterfaceName = vpcInterfaceName;
             return this;
         }
 
-        public Builder setWhitelistCidr(@Nullable String whitelistCidr) {
+        public Builder whitelistCidr(@Nullable String whitelistCidr) {
             this.whitelistCidr = whitelistCidr;
             return this;
         }

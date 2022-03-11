@@ -39,13 +39,13 @@ public final class MethodIntegrationResponse {
      */
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentHandling","responseParameters","responseTemplates","selectionPattern","statusCode"})
+    @OutputCustomType.Constructor
     private MethodIntegrationResponse(
-        @Nullable MethodIntegrationResponseContentHandling contentHandling,
-        @Nullable Object responseParameters,
-        @Nullable Object responseTemplates,
-        @Nullable String selectionPattern,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationResponseContentHandling contentHandling,
+        @OutputCustomType.Parameter("responseParameters") @Nullable Object responseParameters,
+        @OutputCustomType.Parameter("responseTemplates") @Nullable Object responseTemplates,
+        @OutputCustomType.Parameter("selectionPattern") @Nullable String selectionPattern,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentHandling = contentHandling;
         this.responseParameters = responseParameters;
         this.responseTemplates = responseTemplates;
@@ -117,27 +117,27 @@ public final class MethodIntegrationResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
+        public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Object responseParameters) {
+        public Builder responseParameters(@Nullable Object responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseTemplates(@Nullable Object responseTemplates) {
+        public Builder responseTemplates(@Nullable Object responseTemplates) {
             this.responseTemplates = responseTemplates;
             return this;
         }
 
-        public Builder setSelectionPattern(@Nullable String selectionPattern) {
+        public Builder selectionPattern(@Nullable String selectionPattern) {
             this.selectionPattern = selectionPattern;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

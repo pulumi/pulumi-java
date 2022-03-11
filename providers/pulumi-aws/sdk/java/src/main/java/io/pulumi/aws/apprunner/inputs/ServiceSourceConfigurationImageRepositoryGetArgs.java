@@ -88,32 +88,32 @@ public final class ServiceSourceConfigurationImageRepositoryGetArgs extends io.p
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder setImageConfiguration(@Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration) {
+        public Builder imageConfiguration(@Nullable Input<ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs> imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
-        public Builder setImageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs imageConfiguration) {
+        public Builder imageConfiguration(@Nullable ServiceSourceConfigurationImageRepositoryImageConfigurationGetArgs imageConfiguration) {
             this.imageConfiguration = Input.ofNullable(imageConfiguration);
             return this;
         }
 
-        public Builder setImageIdentifier(Input<String> imageIdentifier) {
+        public Builder imageIdentifier(Input<String> imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
-        public Builder setImageIdentifier(String imageIdentifier) {
+        public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Input.of(Objects.requireNonNull(imageIdentifier));
             return this;
         }
 
-        public Builder setImageRepositoryType(Input<String> imageRepositoryType) {
+        public Builder imageRepositoryType(Input<String> imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
 
-        public Builder setImageRepositoryType(String imageRepositoryType) {
+        public Builder imageRepositoryType(String imageRepositoryType) {
             this.imageRepositoryType = Input.of(Objects.requireNonNull(imageRepositoryType));
             return this;
         }

@@ -47,15 +47,15 @@ public final class GetClusterVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"clusterSecurityGroupId","endpointPrivateAccess","endpointPublicAccess","publicAccessCidrs","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetClusterVpcConfig(
-        String clusterSecurityGroupId,
-        Boolean endpointPrivateAccess,
-        Boolean endpointPublicAccess,
-        List<String> publicAccessCidrs,
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("clusterSecurityGroupId") String clusterSecurityGroupId,
+        @OutputCustomType.Parameter("endpointPrivateAccess") Boolean endpointPrivateAccess,
+        @OutputCustomType.Parameter("endpointPublicAccess") Boolean endpointPublicAccess,
+        @OutputCustomType.Parameter("publicAccessCidrs") List<String> publicAccessCidrs,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.clusterSecurityGroupId = clusterSecurityGroupId;
         this.endpointPrivateAccess = endpointPrivateAccess;
         this.endpointPublicAccess = endpointPublicAccess;
@@ -147,37 +147,37 @@ public final class GetClusterVpcConfig {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setClusterSecurityGroupId(String clusterSecurityGroupId) {
+        public Builder clusterSecurityGroupId(String clusterSecurityGroupId) {
             this.clusterSecurityGroupId = Objects.requireNonNull(clusterSecurityGroupId);
             return this;
         }
 
-        public Builder setEndpointPrivateAccess(Boolean endpointPrivateAccess) {
+        public Builder endpointPrivateAccess(Boolean endpointPrivateAccess) {
             this.endpointPrivateAccess = Objects.requireNonNull(endpointPrivateAccess);
             return this;
         }
 
-        public Builder setEndpointPublicAccess(Boolean endpointPublicAccess) {
+        public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.endpointPublicAccess = Objects.requireNonNull(endpointPublicAccess);
             return this;
         }
 
-        public Builder setPublicAccessCidrs(List<String> publicAccessCidrs) {
+        public Builder publicAccessCidrs(List<String> publicAccessCidrs) {
             this.publicAccessCidrs = Objects.requireNonNull(publicAccessCidrs);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

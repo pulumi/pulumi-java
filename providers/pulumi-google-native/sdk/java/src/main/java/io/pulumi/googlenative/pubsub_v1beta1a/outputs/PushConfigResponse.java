@@ -15,8 +15,8 @@ public final class PushConfigResponse {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor({"pushEndpoint"})
-    private PushConfigResponse(String pushEndpoint) {
+    @OutputCustomType.Constructor
+    private PushConfigResponse(@OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.pushEndpoint = pushEndpoint;
     }
 
@@ -48,7 +48,7 @@ public final class PushConfigResponse {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

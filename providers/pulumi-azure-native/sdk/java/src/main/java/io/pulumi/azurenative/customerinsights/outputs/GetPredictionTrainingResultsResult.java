@@ -39,13 +39,13 @@ public final class GetPredictionTrainingResultsResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"canonicalProfiles","predictionDistribution","primaryProfileInstanceCount","scoreName","tenantId"})
+    @OutputCustomType.Constructor
     private GetPredictionTrainingResultsResult(
-        List<CanonicalProfileDefinitionResponse> canonicalProfiles,
-        PredictionDistributionDefinitionResponse predictionDistribution,
-        Double primaryProfileInstanceCount,
-        String scoreName,
-        String tenantId) {
+        @OutputCustomType.Parameter("canonicalProfiles") List<CanonicalProfileDefinitionResponse> canonicalProfiles,
+        @OutputCustomType.Parameter("predictionDistribution") PredictionDistributionDefinitionResponse predictionDistribution,
+        @OutputCustomType.Parameter("primaryProfileInstanceCount") Double primaryProfileInstanceCount,
+        @OutputCustomType.Parameter("scoreName") String scoreName,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.canonicalProfiles = canonicalProfiles;
         this.predictionDistribution = predictionDistribution;
         this.primaryProfileInstanceCount = primaryProfileInstanceCount;
@@ -117,27 +117,27 @@ public final class GetPredictionTrainingResultsResult {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setCanonicalProfiles(List<CanonicalProfileDefinitionResponse> canonicalProfiles) {
+        public Builder canonicalProfiles(List<CanonicalProfileDefinitionResponse> canonicalProfiles) {
             this.canonicalProfiles = Objects.requireNonNull(canonicalProfiles);
             return this;
         }
 
-        public Builder setPredictionDistribution(PredictionDistributionDefinitionResponse predictionDistribution) {
+        public Builder predictionDistribution(PredictionDistributionDefinitionResponse predictionDistribution) {
             this.predictionDistribution = Objects.requireNonNull(predictionDistribution);
             return this;
         }
 
-        public Builder setPrimaryProfileInstanceCount(Double primaryProfileInstanceCount) {
+        public Builder primaryProfileInstanceCount(Double primaryProfileInstanceCount) {
             this.primaryProfileInstanceCount = Objects.requireNonNull(primaryProfileInstanceCount);
             return this;
         }
 
-        public Builder setScoreName(String scoreName) {
+        public Builder scoreName(String scoreName) {
             this.scoreName = Objects.requireNonNull(scoreName);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

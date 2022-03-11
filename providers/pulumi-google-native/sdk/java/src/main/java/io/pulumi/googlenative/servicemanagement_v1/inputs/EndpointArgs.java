@@ -91,32 +91,32 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.target = defaults.target;
         }
 
-        public Builder setAllowCors(@Nullable Input<Boolean> allowCors) {
+        public Builder allowCors(@Nullable Input<Boolean> allowCors) {
             this.allowCors = allowCors;
             return this;
         }
 
-        public Builder setAllowCors(@Nullable Boolean allowCors) {
+        public Builder allowCors(@Nullable Boolean allowCors) {
             this.allowCors = Input.ofNullable(allowCors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

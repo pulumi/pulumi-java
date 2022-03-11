@@ -15,8 +15,8 @@ public final class FeedOutputConfigResponse {
      */
     private final PubsubDestinationResponse pubsubDestination;
 
-    @OutputCustomType.Constructor({"pubsubDestination"})
-    private FeedOutputConfigResponse(PubsubDestinationResponse pubsubDestination) {
+    @OutputCustomType.Constructor
+    private FeedOutputConfigResponse(@OutputCustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 
@@ -48,7 +48,7 @@ public final class FeedOutputConfigResponse {
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(PubsubDestinationResponse pubsubDestination) {
+        public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }

@@ -89,17 +89,17 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.subpages = defaults.subpages;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubpages(List<PageResponse> subpages) {
+        public Builder subpages(List<PageResponse> subpages) {
             this.subpages = Objects.requireNonNull(subpages);
             return this;
         }

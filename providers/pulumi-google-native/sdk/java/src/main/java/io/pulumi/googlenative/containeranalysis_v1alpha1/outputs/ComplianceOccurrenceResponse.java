@@ -22,10 +22,10 @@ public final class ComplianceOccurrenceResponse {
      */
     private final List<NonCompliantFileResponse> nonCompliantFiles;
 
-    @OutputCustomType.Constructor({"nonComplianceReason","nonCompliantFiles"})
+    @OutputCustomType.Constructor
     private ComplianceOccurrenceResponse(
-        String nonComplianceReason,
-        List<NonCompliantFileResponse> nonCompliantFiles) {
+        @OutputCustomType.Parameter("nonComplianceReason") String nonComplianceReason,
+        @OutputCustomType.Parameter("nonCompliantFiles") List<NonCompliantFileResponse> nonCompliantFiles) {
         this.nonComplianceReason = nonComplianceReason;
         this.nonCompliantFiles = nonCompliantFiles;
     }
@@ -67,12 +67,12 @@ public final class ComplianceOccurrenceResponse {
     	      this.nonCompliantFiles = defaults.nonCompliantFiles;
         }
 
-        public Builder setNonComplianceReason(String nonComplianceReason) {
+        public Builder nonComplianceReason(String nonComplianceReason) {
             this.nonComplianceReason = Objects.requireNonNull(nonComplianceReason);
             return this;
         }
 
-        public Builder setNonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
+        public Builder nonCompliantFiles(List<NonCompliantFileResponse> nonCompliantFiles) {
             this.nonCompliantFiles = Objects.requireNonNull(nonCompliantFiles);
             return this;
         }

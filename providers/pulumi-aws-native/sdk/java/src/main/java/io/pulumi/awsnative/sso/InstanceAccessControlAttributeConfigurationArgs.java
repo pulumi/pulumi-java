@@ -85,32 +85,32 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     	      this.instanceArn = defaults.instanceArn;
         }
 
-        public Builder setAccessControlAttributes(@Nullable Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
+        public Builder accessControlAttributes(@Nullable Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes) {
             this.accessControlAttributes = accessControlAttributes;
             return this;
         }
 
-        public Builder setAccessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
+        public Builder accessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs> accessControlAttributes) {
             this.accessControlAttributes = Input.ofNullable(accessControlAttributes);
             return this;
         }
 
-        public Builder setInstanceAccessControlAttributeConfiguration(@Nullable Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration) {
+        public Builder instanceAccessControlAttributeConfiguration(@Nullable Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }
 
-        public Builder setInstanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
+        public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationPropertiesArgs instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = Input.ofNullable(instanceAccessControlAttributeConfiguration);
             return this;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }

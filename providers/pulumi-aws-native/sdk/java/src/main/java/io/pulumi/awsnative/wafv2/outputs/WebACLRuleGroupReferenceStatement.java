@@ -15,10 +15,10 @@ public final class WebACLRuleGroupReferenceStatement {
     private final String arn;
     private final @Nullable List<WebACLExcludedRule> excludedRules;
 
-    @OutputCustomType.Constructor({"arn","excludedRules"})
+    @OutputCustomType.Constructor
     private WebACLRuleGroupReferenceStatement(
-        String arn,
-        @Nullable List<WebACLExcludedRule> excludedRules) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebACLExcludedRule> excludedRules) {
         this.arn = arn;
         this.excludedRules = excludedRules;
     }
@@ -52,12 +52,12 @@ public final class WebACLRuleGroupReferenceStatement {
     	      this.excludedRules = defaults.excludedRules;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebACLExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }

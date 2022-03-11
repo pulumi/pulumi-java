@@ -74,12 +74,12 @@ public final class CustomErrorResponse extends io.pulumi.resources.InvokeArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder setRules(List<CustomErrorRuleResponse> rules) {
+        public Builder rules(List<CustomErrorRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }

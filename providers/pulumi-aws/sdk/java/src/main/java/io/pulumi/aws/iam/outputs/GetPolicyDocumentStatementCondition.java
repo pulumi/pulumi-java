@@ -26,11 +26,11 @@ public final class GetPolicyDocumentStatementCondition {
      */
     private final String variable;
 
-    @OutputCustomType.Constructor({"test","values","variable"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentStatementCondition(
-        String test,
-        List<String> values,
-        String variable) {
+        @OutputCustomType.Parameter("test") String test,
+        @OutputCustomType.Parameter("values") List<String> values,
+        @OutputCustomType.Parameter("variable") String variable) {
         this.test = test;
         this.values = values;
         this.variable = variable;
@@ -82,17 +82,17 @@ public final class GetPolicyDocumentStatementCondition {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setTest(String test) {
+        public Builder test(String test) {
             this.test = Objects.requireNonNull(test);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setVariable(String variable) {
+        public Builder variable(String variable) {
             this.variable = Objects.requireNonNull(variable);
             return this;
         }

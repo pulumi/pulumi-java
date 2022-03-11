@@ -40,13 +40,13 @@ public final class LoadBalancerConfigurationResponse {
      */
     private final @Nullable List<String> sqlVirtualMachineInstances;
 
-    @OutputCustomType.Constructor({"loadBalancerResourceId","privateIpAddress","probePort","publicIpAddressResourceId","sqlVirtualMachineInstances"})
+    @OutputCustomType.Constructor
     private LoadBalancerConfigurationResponse(
-        @Nullable String loadBalancerResourceId,
-        @Nullable PrivateIPAddressResponse privateIpAddress,
-        @Nullable Integer probePort,
-        @Nullable String publicIpAddressResourceId,
-        @Nullable List<String> sqlVirtualMachineInstances) {
+        @OutputCustomType.Parameter("loadBalancerResourceId") @Nullable String loadBalancerResourceId,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable PrivateIPAddressResponse privateIpAddress,
+        @OutputCustomType.Parameter("probePort") @Nullable Integer probePort,
+        @OutputCustomType.Parameter("publicIpAddressResourceId") @Nullable String publicIpAddressResourceId,
+        @OutputCustomType.Parameter("sqlVirtualMachineInstances") @Nullable List<String> sqlVirtualMachineInstances) {
         this.loadBalancerResourceId = loadBalancerResourceId;
         this.privateIpAddress = privateIpAddress;
         this.probePort = probePort;
@@ -118,27 +118,27 @@ public final class LoadBalancerConfigurationResponse {
     	      this.sqlVirtualMachineInstances = defaults.sqlVirtualMachineInstances;
         }
 
-        public Builder setLoadBalancerResourceId(@Nullable String loadBalancerResourceId) {
+        public Builder loadBalancerResourceId(@Nullable String loadBalancerResourceId) {
             this.loadBalancerResourceId = loadBalancerResourceId;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
+        public Builder privateIpAddress(@Nullable PrivateIPAddressResponse privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setProbePort(@Nullable Integer probePort) {
+        public Builder probePort(@Nullable Integer probePort) {
             this.probePort = probePort;
             return this;
         }
 
-        public Builder setPublicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
+        public Builder publicIpAddressResourceId(@Nullable String publicIpAddressResourceId) {
             this.publicIpAddressResourceId = publicIpAddressResourceId;
             return this;
         }
 
-        public Builder setSqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
+        public Builder sqlVirtualMachineInstances(@Nullable List<String> sqlVirtualMachineInstances) {
             this.sqlVirtualMachineInstances = sqlVirtualMachineInstances;
             return this;
         }

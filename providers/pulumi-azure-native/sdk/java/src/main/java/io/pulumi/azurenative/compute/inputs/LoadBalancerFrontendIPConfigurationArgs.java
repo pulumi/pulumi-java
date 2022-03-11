@@ -70,22 +70,22 @@ public final class LoadBalancerFrontendIPConfigurationArgs extends io.pulumi.res
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProperties(Input<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
+        public Builder properties(Input<LoadBalancerFrontendIPConfigurationPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(LoadBalancerFrontendIPConfigurationPropertiesArgs properties) {
+        public Builder properties(LoadBalancerFrontendIPConfigurationPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }

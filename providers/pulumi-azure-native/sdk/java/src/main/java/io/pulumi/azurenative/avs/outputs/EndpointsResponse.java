@@ -25,11 +25,11 @@ public final class EndpointsResponse {
      */
     private final String vcsa;
 
-    @OutputCustomType.Constructor({"hcxCloudManager","nsxtManager","vcsa"})
+    @OutputCustomType.Constructor
     private EndpointsResponse(
-        String hcxCloudManager,
-        String nsxtManager,
-        String vcsa) {
+        @OutputCustomType.Parameter("hcxCloudManager") String hcxCloudManager,
+        @OutputCustomType.Parameter("nsxtManager") String nsxtManager,
+        @OutputCustomType.Parameter("vcsa") String vcsa) {
         this.hcxCloudManager = hcxCloudManager;
         this.nsxtManager = nsxtManager;
         this.vcsa = vcsa;
@@ -81,17 +81,17 @@ public final class EndpointsResponse {
     	      this.vcsa = defaults.vcsa;
         }
 
-        public Builder setHcxCloudManager(String hcxCloudManager) {
+        public Builder hcxCloudManager(String hcxCloudManager) {
             this.hcxCloudManager = Objects.requireNonNull(hcxCloudManager);
             return this;
         }
 
-        public Builder setNsxtManager(String nsxtManager) {
+        public Builder nsxtManager(String nsxtManager) {
             this.nsxtManager = Objects.requireNonNull(nsxtManager);
             return this;
         }
 
-        public Builder setVcsa(String vcsa) {
+        public Builder vcsa(String vcsa) {
             this.vcsa = Objects.requireNonNull(vcsa);
             return this;
         }

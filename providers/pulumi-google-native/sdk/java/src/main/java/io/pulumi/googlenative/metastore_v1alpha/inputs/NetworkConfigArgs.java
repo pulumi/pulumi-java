@@ -58,12 +58,12 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.consumers = defaults.consumers;
         }
 
-        public Builder setConsumers(@Nullable Input<List<ConsumerArgs>> consumers) {
+        public Builder consumers(@Nullable Input<List<ConsumerArgs>> consumers) {
             this.consumers = consumers;
             return this;
         }
 
-        public Builder setConsumers(@Nullable List<ConsumerArgs> consumers) {
+        public Builder consumers(@Nullable List<ConsumerArgs> consumers) {
             this.consumers = Input.ofNullable(consumers);
             return this;
         }

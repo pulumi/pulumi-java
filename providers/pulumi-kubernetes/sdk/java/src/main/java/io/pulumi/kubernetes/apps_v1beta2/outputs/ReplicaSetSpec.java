@@ -34,12 +34,12 @@ public final class ReplicaSetSpec {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","replicas","selector","template"})
+    @OutputCustomType.Constructor
     private ReplicaSetSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Integer replicas,
-        LabelSelector selector,
-        @Nullable PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("selector") LabelSelector selector,
+        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = selector;
@@ -101,22 +101,22 @@ public final class ReplicaSetSpec {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setSelector(LabelSelector selector) {
+        public Builder selector(LabelSelector selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setTemplate(@Nullable PodTemplateSpec template) {
+        public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
         }

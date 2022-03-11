@@ -24,10 +24,10 @@ public final class SyncGroupSchemaResponse {
      */
     private final @Nullable List<SyncGroupSchemaTableResponse> tables;
 
-    @OutputCustomType.Constructor({"masterSyncMemberName","tables"})
+    @OutputCustomType.Constructor
     private SyncGroupSchemaResponse(
-        @Nullable String masterSyncMemberName,
-        @Nullable List<SyncGroupSchemaTableResponse> tables) {
+        @OutputCustomType.Parameter("masterSyncMemberName") @Nullable String masterSyncMemberName,
+        @OutputCustomType.Parameter("tables") @Nullable List<SyncGroupSchemaTableResponse> tables) {
         this.masterSyncMemberName = masterSyncMemberName;
         this.tables = tables;
     }
@@ -69,12 +69,12 @@ public final class SyncGroupSchemaResponse {
     	      this.tables = defaults.tables;
         }
 
-        public Builder setMasterSyncMemberName(@Nullable String masterSyncMemberName) {
+        public Builder masterSyncMemberName(@Nullable String masterSyncMemberName) {
             this.masterSyncMemberName = masterSyncMemberName;
             return this;
         }
 
-        public Builder setTables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
+        public Builder tables(@Nullable List<SyncGroupSchemaTableResponse> tables) {
             this.tables = tables;
             return this;
         }

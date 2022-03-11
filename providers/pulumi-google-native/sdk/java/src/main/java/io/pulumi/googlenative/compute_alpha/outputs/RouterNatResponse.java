@@ -102,26 +102,26 @@ public final class RouterNatResponse {
      */
     private final Integer udpIdleTimeoutSec;
 
-    @OutputCustomType.Constructor({"drainNatIps","enableDynamicPortAllocation","enableEndpointIndependentMapping","icmpIdleTimeoutSec","logConfig","maxPortsPerVm","minPortsPerVm","name","natIpAllocateOption","natIps","rules","sourceSubnetworkIpRangesToNat","subnetworks","tcpEstablishedIdleTimeoutSec","tcpTimeWaitTimeoutSec","tcpTransitoryIdleTimeoutSec","type","udpIdleTimeoutSec"})
+    @OutputCustomType.Constructor
     private RouterNatResponse(
-        List<String> drainNatIps,
-        Boolean enableDynamicPortAllocation,
-        Boolean enableEndpointIndependentMapping,
-        Integer icmpIdleTimeoutSec,
-        RouterNatLogConfigResponse logConfig,
-        Integer maxPortsPerVm,
-        Integer minPortsPerVm,
-        String name,
-        String natIpAllocateOption,
-        List<String> natIps,
-        List<RouterNatRuleResponse> rules,
-        String sourceSubnetworkIpRangesToNat,
-        List<RouterNatSubnetworkToNatResponse> subnetworks,
-        Integer tcpEstablishedIdleTimeoutSec,
-        Integer tcpTimeWaitTimeoutSec,
-        Integer tcpTransitoryIdleTimeoutSec,
-        String type,
-        Integer udpIdleTimeoutSec) {
+        @OutputCustomType.Parameter("drainNatIps") List<String> drainNatIps,
+        @OutputCustomType.Parameter("enableDynamicPortAllocation") Boolean enableDynamicPortAllocation,
+        @OutputCustomType.Parameter("enableEndpointIndependentMapping") Boolean enableEndpointIndependentMapping,
+        @OutputCustomType.Parameter("icmpIdleTimeoutSec") Integer icmpIdleTimeoutSec,
+        @OutputCustomType.Parameter("logConfig") RouterNatLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("maxPortsPerVm") Integer maxPortsPerVm,
+        @OutputCustomType.Parameter("minPortsPerVm") Integer minPortsPerVm,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natIpAllocateOption") String natIpAllocateOption,
+        @OutputCustomType.Parameter("natIps") List<String> natIps,
+        @OutputCustomType.Parameter("rules") List<RouterNatRuleResponse> rules,
+        @OutputCustomType.Parameter("sourceSubnetworkIpRangesToNat") String sourceSubnetworkIpRangesToNat,
+        @OutputCustomType.Parameter("subnetworks") List<RouterNatSubnetworkToNatResponse> subnetworks,
+        @OutputCustomType.Parameter("tcpEstablishedIdleTimeoutSec") Integer tcpEstablishedIdleTimeoutSec,
+        @OutputCustomType.Parameter("tcpTimeWaitTimeoutSec") Integer tcpTimeWaitTimeoutSec,
+        @OutputCustomType.Parameter("tcpTransitoryIdleTimeoutSec") Integer tcpTransitoryIdleTimeoutSec,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("udpIdleTimeoutSec") Integer udpIdleTimeoutSec) {
         this.drainNatIps = drainNatIps;
         this.enableDynamicPortAllocation = enableDynamicPortAllocation;
         this.enableEndpointIndependentMapping = enableEndpointIndependentMapping;
@@ -319,92 +319,92 @@ public final class RouterNatResponse {
     	      this.udpIdleTimeoutSec = defaults.udpIdleTimeoutSec;
         }
 
-        public Builder setDrainNatIps(List<String> drainNatIps) {
+        public Builder drainNatIps(List<String> drainNatIps) {
             this.drainNatIps = Objects.requireNonNull(drainNatIps);
             return this;
         }
 
-        public Builder setEnableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
+        public Builder enableDynamicPortAllocation(Boolean enableDynamicPortAllocation) {
             this.enableDynamicPortAllocation = Objects.requireNonNull(enableDynamicPortAllocation);
             return this;
         }
 
-        public Builder setEnableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
+        public Builder enableEndpointIndependentMapping(Boolean enableEndpointIndependentMapping) {
             this.enableEndpointIndependentMapping = Objects.requireNonNull(enableEndpointIndependentMapping);
             return this;
         }
 
-        public Builder setIcmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
+        public Builder icmpIdleTimeoutSec(Integer icmpIdleTimeoutSec) {
             this.icmpIdleTimeoutSec = Objects.requireNonNull(icmpIdleTimeoutSec);
             return this;
         }
 
-        public Builder setLogConfig(RouterNatLogConfigResponse logConfig) {
+        public Builder logConfig(RouterNatLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setMaxPortsPerVm(Integer maxPortsPerVm) {
+        public Builder maxPortsPerVm(Integer maxPortsPerVm) {
             this.maxPortsPerVm = Objects.requireNonNull(maxPortsPerVm);
             return this;
         }
 
-        public Builder setMinPortsPerVm(Integer minPortsPerVm) {
+        public Builder minPortsPerVm(Integer minPortsPerVm) {
             this.minPortsPerVm = Objects.requireNonNull(minPortsPerVm);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatIpAllocateOption(String natIpAllocateOption) {
+        public Builder natIpAllocateOption(String natIpAllocateOption) {
             this.natIpAllocateOption = Objects.requireNonNull(natIpAllocateOption);
             return this;
         }
 
-        public Builder setNatIps(List<String> natIps) {
+        public Builder natIps(List<String> natIps) {
             this.natIps = Objects.requireNonNull(natIps);
             return this;
         }
 
-        public Builder setRules(List<RouterNatRuleResponse> rules) {
+        public Builder rules(List<RouterNatRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setSourceSubnetworkIpRangesToNat(String sourceSubnetworkIpRangesToNat) {
+        public Builder sourceSubnetworkIpRangesToNat(String sourceSubnetworkIpRangesToNat) {
             this.sourceSubnetworkIpRangesToNat = Objects.requireNonNull(sourceSubnetworkIpRangesToNat);
             return this;
         }
 
-        public Builder setSubnetworks(List<RouterNatSubnetworkToNatResponse> subnetworks) {
+        public Builder subnetworks(List<RouterNatSubnetworkToNatResponse> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
 
-        public Builder setTcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
+        public Builder tcpEstablishedIdleTimeoutSec(Integer tcpEstablishedIdleTimeoutSec) {
             this.tcpEstablishedIdleTimeoutSec = Objects.requireNonNull(tcpEstablishedIdleTimeoutSec);
             return this;
         }
 
-        public Builder setTcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
+        public Builder tcpTimeWaitTimeoutSec(Integer tcpTimeWaitTimeoutSec) {
             this.tcpTimeWaitTimeoutSec = Objects.requireNonNull(tcpTimeWaitTimeoutSec);
             return this;
         }
 
-        public Builder setTcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
+        public Builder tcpTransitoryIdleTimeoutSec(Integer tcpTransitoryIdleTimeoutSec) {
             this.tcpTransitoryIdleTimeoutSec = Objects.requireNonNull(tcpTransitoryIdleTimeoutSec);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUdpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
+        public Builder udpIdleTimeoutSec(Integer udpIdleTimeoutSec) {
             this.udpIdleTimeoutSec = Objects.requireNonNull(udpIdleTimeoutSec);
             return this;
         }

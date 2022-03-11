@@ -74,22 +74,22 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.network = defaults.network;
         }
 
-        public Builder setIpAllocation(@Nullable Input<String> ipAllocation) {
+        public Builder ipAllocation(@Nullable Input<String> ipAllocation) {
             this.ipAllocation = ipAllocation;
             return this;
         }
 
-        public Builder setIpAllocation(@Nullable String ipAllocation) {
+        public Builder ipAllocation(@Nullable String ipAllocation) {
             this.ipAllocation = Input.ofNullable(ipAllocation);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }

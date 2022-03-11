@@ -77,22 +77,22 @@ public final class Hl7SchemaConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder setMessageSchemaConfigs(@Nullable Input<Map<String,String>> messageSchemaConfigs) {
+        public Builder messageSchemaConfigs(@Nullable Input<Map<String,String>> messageSchemaConfigs) {
             this.messageSchemaConfigs = messageSchemaConfigs;
             return this;
         }
 
-        public Builder setMessageSchemaConfigs(@Nullable Map<String,String> messageSchemaConfigs) {
+        public Builder messageSchemaConfigs(@Nullable Map<String,String> messageSchemaConfigs) {
             this.messageSchemaConfigs = Input.ofNullable(messageSchemaConfigs);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<List<VersionSourceArgs>> version) {
+        public Builder version(@Nullable Input<List<VersionSourceArgs>> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable List<VersionSourceArgs> version) {
+        public Builder version(@Nullable List<VersionSourceArgs> version) {
             this.version = Input.ofNullable(version);
             return this;
         }

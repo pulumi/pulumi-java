@@ -15,8 +15,8 @@ public final class DiscoveryResponse {
      */
     private final String analysisKind;
 
-    @OutputCustomType.Constructor({"analysisKind"})
-    private DiscoveryResponse(String analysisKind) {
+    @OutputCustomType.Constructor
+    private DiscoveryResponse(@OutputCustomType.Parameter("analysisKind") String analysisKind) {
         this.analysisKind = analysisKind;
     }
 
@@ -48,7 +48,7 @@ public final class DiscoveryResponse {
     	      this.analysisKind = defaults.analysisKind;
         }
 
-        public Builder setAnalysisKind(String analysisKind) {
+        public Builder analysisKind(String analysisKind) {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }

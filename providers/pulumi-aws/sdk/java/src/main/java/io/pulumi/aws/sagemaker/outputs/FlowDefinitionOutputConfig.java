@@ -22,10 +22,10 @@ public final class FlowDefinitionOutputConfig {
      */
     private final String s3OutputPath;
 
-    @OutputCustomType.Constructor({"kmsKeyId","s3OutputPath"})
+    @OutputCustomType.Constructor
     private FlowDefinitionOutputConfig(
-        @Nullable String kmsKeyId,
-        String s3OutputPath) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("s3OutputPath") String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.s3OutputPath = s3OutputPath;
     }
@@ -67,12 +67,12 @@ public final class FlowDefinitionOutputConfig {
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setS3OutputPath(String s3OutputPath) {
+        public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
         }

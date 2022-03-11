@@ -104,42 +104,42 @@ public final class VpcIpamPreviewNextCidrState extends io.pulumi.resources.Resou
     	      this.netmaskLength = defaults.netmaskLength;
         }
 
-        public Builder setCidr(@Nullable Input<String> cidr) {
+        public Builder cidr(@Nullable Input<String> cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = Input.ofNullable(cidr);
             return this;
         }
 
-        public Builder setDisallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable Input<List<String>> disallowedCidrs) {
             this.disallowedCidrs = disallowedCidrs;
             return this;
         }
 
-        public Builder setDisallowedCidrs(@Nullable List<String> disallowedCidrs) {
+        public Builder disallowedCidrs(@Nullable List<String> disallowedCidrs) {
             this.disallowedCidrs = Input.ofNullable(disallowedCidrs);
             return this;
         }
 
-        public Builder setIpamPoolId(@Nullable Input<String> ipamPoolId) {
+        public Builder ipamPoolId(@Nullable Input<String> ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
 
-        public Builder setIpamPoolId(@Nullable String ipamPoolId) {
+        public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = Input.ofNullable(ipamPoolId);
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Input<Integer> netmaskLength) {
+        public Builder netmaskLength(@Nullable Input<Integer> netmaskLength) {
             this.netmaskLength = netmaskLength;
             return this;
         }
 
-        public Builder setNetmaskLength(@Nullable Integer netmaskLength) {
+        public Builder netmaskLength(@Nullable Integer netmaskLength) {
             this.netmaskLength = Input.ofNullable(netmaskLength);
             return this;
         }

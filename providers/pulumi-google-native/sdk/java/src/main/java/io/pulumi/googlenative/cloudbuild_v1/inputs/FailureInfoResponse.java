@@ -72,12 +72,12 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDetail(String detail) {
+        public Builder detail(String detail) {
             this.detail = Objects.requireNonNull(detail);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -68,12 +68,12 @@ public final class GetBlockchainMemberArgs extends io.pulumi.resources.InvokeArg
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setBlockchainMemberName(String blockchainMemberName) {
+        public Builder blockchainMemberName(String blockchainMemberName) {
             this.blockchainMemberName = Objects.requireNonNull(blockchainMemberName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

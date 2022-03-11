@@ -34,12 +34,12 @@ public final class ToolExecutionResponse {
      */
     private final List<ToolOutputReferenceResponse> toolOutputs;
 
-    @OutputCustomType.Constructor({"commandLineArguments","exitCode","toolLogs","toolOutputs"})
+    @OutputCustomType.Constructor
     private ToolExecutionResponse(
-        List<String> commandLineArguments,
-        ToolExitCodeResponse exitCode,
-        List<FileReferenceResponse> toolLogs,
-        List<ToolOutputReferenceResponse> toolOutputs) {
+        @OutputCustomType.Parameter("commandLineArguments") List<String> commandLineArguments,
+        @OutputCustomType.Parameter("exitCode") ToolExitCodeResponse exitCode,
+        @OutputCustomType.Parameter("toolLogs") List<FileReferenceResponse> toolLogs,
+        @OutputCustomType.Parameter("toolOutputs") List<ToolOutputReferenceResponse> toolOutputs) {
         this.commandLineArguments = commandLineArguments;
         this.exitCode = exitCode;
         this.toolLogs = toolLogs;
@@ -101,22 +101,22 @@ public final class ToolExecutionResponse {
     	      this.toolOutputs = defaults.toolOutputs;
         }
 
-        public Builder setCommandLineArguments(List<String> commandLineArguments) {
+        public Builder commandLineArguments(List<String> commandLineArguments) {
             this.commandLineArguments = Objects.requireNonNull(commandLineArguments);
             return this;
         }
 
-        public Builder setExitCode(ToolExitCodeResponse exitCode) {
+        public Builder exitCode(ToolExitCodeResponse exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setToolLogs(List<FileReferenceResponse> toolLogs) {
+        public Builder toolLogs(List<FileReferenceResponse> toolLogs) {
             this.toolLogs = Objects.requireNonNull(toolLogs);
             return this;
         }
 
-        public Builder setToolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
+        public Builder toolOutputs(List<ToolOutputReferenceResponse> toolOutputs) {
             this.toolOutputs = Objects.requireNonNull(toolOutputs);
             return this;
         }

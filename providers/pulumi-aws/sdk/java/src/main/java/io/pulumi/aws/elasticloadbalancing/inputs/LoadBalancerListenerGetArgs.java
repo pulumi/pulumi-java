@@ -122,52 +122,52 @@ public final class LoadBalancerListenerGetArgs extends io.pulumi.resources.Resou
     	      this.sslCertificateId = defaults.sslCertificateId;
         }
 
-        public Builder setInstancePort(Input<Integer> instancePort) {
+        public Builder instancePort(Input<Integer> instancePort) {
             this.instancePort = Objects.requireNonNull(instancePort);
             return this;
         }
 
-        public Builder setInstancePort(Integer instancePort) {
+        public Builder instancePort(Integer instancePort) {
             this.instancePort = Input.of(Objects.requireNonNull(instancePort));
             return this;
         }
 
-        public Builder setInstanceProtocol(Input<String> instanceProtocol) {
+        public Builder instanceProtocol(Input<String> instanceProtocol) {
             this.instanceProtocol = Objects.requireNonNull(instanceProtocol);
             return this;
         }
 
-        public Builder setInstanceProtocol(String instanceProtocol) {
+        public Builder instanceProtocol(String instanceProtocol) {
             this.instanceProtocol = Input.of(Objects.requireNonNull(instanceProtocol));
             return this;
         }
 
-        public Builder setLbPort(Input<Integer> lbPort) {
+        public Builder lbPort(Input<Integer> lbPort) {
             this.lbPort = Objects.requireNonNull(lbPort);
             return this;
         }
 
-        public Builder setLbPort(Integer lbPort) {
+        public Builder lbPort(Integer lbPort) {
             this.lbPort = Input.of(Objects.requireNonNull(lbPort));
             return this;
         }
 
-        public Builder setLbProtocol(Input<String> lbProtocol) {
+        public Builder lbProtocol(Input<String> lbProtocol) {
             this.lbProtocol = Objects.requireNonNull(lbProtocol);
             return this;
         }
 
-        public Builder setLbProtocol(String lbProtocol) {
+        public Builder lbProtocol(String lbProtocol) {
             this.lbProtocol = Input.of(Objects.requireNonNull(lbProtocol));
             return this;
         }
 
-        public Builder setSslCertificateId(@Nullable Input<String> sslCertificateId) {
+        public Builder sslCertificateId(@Nullable Input<String> sslCertificateId) {
             this.sslCertificateId = sslCertificateId;
             return this;
         }
 
-        public Builder setSslCertificateId(@Nullable String sslCertificateId) {
+        public Builder sslCertificateId(@Nullable String sslCertificateId) {
             this.sslCertificateId = Input.ofNullable(sslCertificateId);
             return this;
         }

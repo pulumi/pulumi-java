@@ -43,32 +43,32 @@ public final class GetForwardingRuleResult {
     private final String subnetwork;
     private final String target;
 
-    @OutputCustomType.Constructor({"allPorts","allowGlobalAccess","backendService","creationTimestamp","description","id","ipAddress","ipProtocol","isMirroringCollector","labelFingerprint","labels","loadBalancingScheme","name","network","networkTier","portRange","ports","project","region","selfLink","serviceLabel","serviceName","subnetwork","target"})
+    @OutputCustomType.Constructor
     private GetForwardingRuleResult(
-        Boolean allPorts,
-        Boolean allowGlobalAccess,
-        String backendService,
-        String creationTimestamp,
-        String description,
-        String id,
-        String ipAddress,
-        String ipProtocol,
-        Boolean isMirroringCollector,
-        String labelFingerprint,
-        Map<String,String> labels,
-        String loadBalancingScheme,
-        String name,
-        String network,
-        String networkTier,
-        String portRange,
-        List<String> ports,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        String serviceLabel,
-        String serviceName,
-        String subnetwork,
-        String target) {
+        @OutputCustomType.Parameter("allPorts") Boolean allPorts,
+        @OutputCustomType.Parameter("allowGlobalAccess") Boolean allowGlobalAccess,
+        @OutputCustomType.Parameter("backendService") String backendService,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
+        @OutputCustomType.Parameter("isMirroringCollector") Boolean isMirroringCollector,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("portRange") String portRange,
+        @OutputCustomType.Parameter("ports") List<String> ports,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceLabel") String serviceLabel,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("target") String target) {
         this.allPorts = allPorts;
         this.allowGlobalAccess = allowGlobalAccess;
         this.backendService = backendService;
@@ -238,122 +238,122 @@ public final class GetForwardingRuleResult {
     	      this.target = defaults.target;
         }
 
-        public Builder setAllPorts(Boolean allPorts) {
+        public Builder allPorts(Boolean allPorts) {
             this.allPorts = Objects.requireNonNull(allPorts);
             return this;
         }
 
-        public Builder setAllowGlobalAccess(Boolean allowGlobalAccess) {
+        public Builder allowGlobalAccess(Boolean allowGlobalAccess) {
             this.allowGlobalAccess = Objects.requireNonNull(allowGlobalAccess);
             return this;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setIpProtocol(String ipProtocol) {
+        public Builder ipProtocol(String ipProtocol) {
             this.ipProtocol = Objects.requireNonNull(ipProtocol);
             return this;
         }
 
-        public Builder setIsMirroringCollector(Boolean isMirroringCollector) {
+        public Builder isMirroringCollector(Boolean isMirroringCollector) {
             this.isMirroringCollector = Objects.requireNonNull(isMirroringCollector);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(String loadBalancingScheme) {
+        public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setPortRange(String portRange) {
+        public Builder portRange(String portRange) {
             this.portRange = Objects.requireNonNull(portRange);
             return this;
         }
 
-        public Builder setPorts(List<String> ports) {
+        public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServiceLabel(String serviceLabel) {
+        public Builder serviceLabel(String serviceLabel) {
             this.serviceLabel = Objects.requireNonNull(serviceLabel);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

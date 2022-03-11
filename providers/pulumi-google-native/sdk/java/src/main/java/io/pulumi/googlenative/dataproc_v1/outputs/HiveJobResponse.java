@@ -44,14 +44,14 @@ public final class HiveJobResponse {
      */
     private final Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private HiveJobResponse(
-        Boolean continueOnFailure,
-        List<String> jarFileUris,
-        Map<String,String> properties,
-        String queryFileUri,
-        QueryListResponse queryList,
-        Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") String queryFileUri,
+        @OutputCustomType.Parameter("queryList") QueryListResponse queryList,
+        @OutputCustomType.Parameter("scriptVariables") Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;
@@ -133,32 +133,32 @@ public final class HiveJobResponse {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setContinueOnFailure(Boolean continueOnFailure) {
+        public Builder continueOnFailure(Boolean continueOnFailure) {
             this.continueOnFailure = Objects.requireNonNull(continueOnFailure);
             return this;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(String queryFileUri) {
+        public Builder queryFileUri(String queryFileUri) {
             this.queryFileUri = Objects.requireNonNull(queryFileUri);
             return this;
         }
 
-        public Builder setQueryList(QueryListResponse queryList) {
+        public Builder queryList(QueryListResponse queryList) {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
 
-        public Builder setScriptVariables(Map<String,String> scriptVariables) {
+        public Builder scriptVariables(Map<String,String> scriptVariables) {
             this.scriptVariables = Objects.requireNonNull(scriptVariables);
             return this;
         }

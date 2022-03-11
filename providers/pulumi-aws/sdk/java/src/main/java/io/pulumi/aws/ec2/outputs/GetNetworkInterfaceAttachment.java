@@ -15,12 +15,12 @@ public final class GetNetworkInterfaceAttachment {
     private final String instanceId;
     private final String instanceOwnerId;
 
-    @OutputCustomType.Constructor({"attachmentId","deviceIndex","instanceId","instanceOwnerId"})
+    @OutputCustomType.Constructor
     private GetNetworkInterfaceAttachment(
-        String attachmentId,
-        Integer deviceIndex,
-        String instanceId,
-        String instanceOwnerId) {
+        @OutputCustomType.Parameter("attachmentId") String attachmentId,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceOwnerId") String instanceOwnerId) {
         this.attachmentId = attachmentId;
         this.deviceIndex = deviceIndex;
         this.instanceId = instanceId;
@@ -66,22 +66,22 @@ public final class GetNetworkInterfaceAttachment {
     	      this.instanceOwnerId = defaults.instanceOwnerId;
         }
 
-        public Builder setAttachmentId(String attachmentId) {
+        public Builder attachmentId(String attachmentId) {
             this.attachmentId = Objects.requireNonNull(attachmentId);
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceOwnerId(String instanceOwnerId) {
+        public Builder instanceOwnerId(String instanceOwnerId) {
             this.instanceOwnerId = Objects.requireNonNull(instanceOwnerId);
             return this;
         }

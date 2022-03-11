@@ -28,11 +28,11 @@ public final class InnerErrorResponse {
      */
     private final @Nullable InnerErrorResponse embeddedInnerError;
 
-    @OutputCustomType.Constructor({"additionalInfo","code","embeddedInnerError"})
+    @OutputCustomType.Constructor
     private InnerErrorResponse(
-        @Nullable Map<String,String> additionalInfo,
-        @Nullable String code,
-        @Nullable InnerErrorResponse embeddedInnerError) {
+        @OutputCustomType.Parameter("additionalInfo") @Nullable Map<String,String> additionalInfo,
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("embeddedInnerError") @Nullable InnerErrorResponse embeddedInnerError) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.embeddedInnerError = embeddedInnerError;
@@ -84,17 +84,17 @@ public final class InnerErrorResponse {
     	      this.embeddedInnerError = defaults.embeddedInnerError;
         }
 
-        public Builder setAdditionalInfo(@Nullable Map<String,String> additionalInfo) {
+        public Builder additionalInfo(@Nullable Map<String,String> additionalInfo) {
             this.additionalInfo = additionalInfo;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setEmbeddedInnerError(@Nullable InnerErrorResponse embeddedInnerError) {
+        public Builder embeddedInnerError(@Nullable InnerErrorResponse embeddedInnerError) {
             this.embeddedInnerError = embeddedInnerError;
             return this;
         }

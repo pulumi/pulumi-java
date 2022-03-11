@@ -105,42 +105,42 @@ public final class WorkforceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workforceName = defaults.workforceName;
         }
 
-        public Builder setCognitoConfig(@Nullable Input<WorkforceCognitoConfigArgs> cognitoConfig) {
+        public Builder cognitoConfig(@Nullable Input<WorkforceCognitoConfigArgs> cognitoConfig) {
             this.cognitoConfig = cognitoConfig;
             return this;
         }
 
-        public Builder setCognitoConfig(@Nullable WorkforceCognitoConfigArgs cognitoConfig) {
+        public Builder cognitoConfig(@Nullable WorkforceCognitoConfigArgs cognitoConfig) {
             this.cognitoConfig = Input.ofNullable(cognitoConfig);
             return this;
         }
 
-        public Builder setOidcConfig(@Nullable Input<WorkforceOidcConfigArgs> oidcConfig) {
+        public Builder oidcConfig(@Nullable Input<WorkforceOidcConfigArgs> oidcConfig) {
             this.oidcConfig = oidcConfig;
             return this;
         }
 
-        public Builder setOidcConfig(@Nullable WorkforceOidcConfigArgs oidcConfig) {
+        public Builder oidcConfig(@Nullable WorkforceOidcConfigArgs oidcConfig) {
             this.oidcConfig = Input.ofNullable(oidcConfig);
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable Input<WorkforceSourceIpConfigArgs> sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable Input<WorkforceSourceIpConfigArgs> sourceIpConfig) {
             this.sourceIpConfig = sourceIpConfig;
             return this;
         }
 
-        public Builder setSourceIpConfig(@Nullable WorkforceSourceIpConfigArgs sourceIpConfig) {
+        public Builder sourceIpConfig(@Nullable WorkforceSourceIpConfigArgs sourceIpConfig) {
             this.sourceIpConfig = Input.ofNullable(sourceIpConfig);
             return this;
         }
 
-        public Builder setWorkforceName(Input<String> workforceName) {
+        public Builder workforceName(Input<String> workforceName) {
             this.workforceName = Objects.requireNonNull(workforceName);
             return this;
         }
 
-        public Builder setWorkforceName(String workforceName) {
+        public Builder workforceName(String workforceName) {
             this.workforceName = Input.of(Objects.requireNonNull(workforceName));
             return this;
         }

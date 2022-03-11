@@ -22,10 +22,10 @@ public final class ConnectorProvisionedCapacity {
      */
     private final Integer workerCount;
 
-    @OutputCustomType.Constructor({"mcuCount","workerCount"})
+    @OutputCustomType.Constructor
     private ConnectorProvisionedCapacity(
-        @Nullable Integer mcuCount,
-        Integer workerCount) {
+        @OutputCustomType.Parameter("mcuCount") @Nullable Integer mcuCount,
+        @OutputCustomType.Parameter("workerCount") Integer workerCount) {
         this.mcuCount = mcuCount;
         this.workerCount = workerCount;
     }
@@ -67,12 +67,12 @@ public final class ConnectorProvisionedCapacity {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setMcuCount(@Nullable Integer mcuCount) {
+        public Builder mcuCount(@Nullable Integer mcuCount) {
             this.mcuCount = mcuCount;
             return this;
         }
 
-        public Builder setWorkerCount(Integer workerCount) {
+        public Builder workerCount(Integer workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }

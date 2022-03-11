@@ -63,18 +63,18 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
      */
     private final String targetManagedDiskId;
 
-    @OutputCustomType.Constructor({"capacityInBytes","diskId","diskName","diskPath","diskType","isOSDisk","logStorageAccountId","logStorageAccountSasSecretName","seedManagedDiskId","targetManagedDiskId"})
+    @OutputCustomType.Constructor
     private VMwareCbtProtectedDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskId,
-        String diskName,
-        String diskPath,
-        @Nullable String diskType,
-        String isOSDisk,
-        String logStorageAccountId,
-        String logStorageAccountSasSecretName,
-        String seedManagedDiskId,
-        String targetManagedDiskId) {
+        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @OutputCustomType.Parameter("diskId") String diskId,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskPath") String diskPath,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
+        @OutputCustomType.Parameter("logStorageAccountId") String logStorageAccountId,
+        @OutputCustomType.Parameter("logStorageAccountSasSecretName") String logStorageAccountSasSecretName,
+        @OutputCustomType.Parameter("seedManagedDiskId") String seedManagedDiskId,
+        @OutputCustomType.Parameter("targetManagedDiskId") String targetManagedDiskId) {
         this.capacityInBytes = capacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;
@@ -196,52 +196,52 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
     	      this.targetManagedDiskId = defaults.targetManagedDiskId;
         }
 
-        public Builder setCapacityInBytes(Double capacityInBytes) {
+        public Builder capacityInBytes(Double capacityInBytes) {
             this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
             return this;
         }
 
-        public Builder setDiskId(String diskId) {
+        public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskPath(String diskPath) {
+        public Builder diskPath(String diskPath) {
             this.diskPath = Objects.requireNonNull(diskPath);
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setIsOSDisk(String isOSDisk) {
+        public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
 
-        public Builder setLogStorageAccountId(String logStorageAccountId) {
+        public Builder logStorageAccountId(String logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
 
-        public Builder setLogStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
+        public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
             return this;
         }
 
-        public Builder setSeedManagedDiskId(String seedManagedDiskId) {
+        public Builder seedManagedDiskId(String seedManagedDiskId) {
             this.seedManagedDiskId = Objects.requireNonNull(seedManagedDiskId);
             return this;
         }
 
-        public Builder setTargetManagedDiskId(String targetManagedDiskId) {
+        public Builder targetManagedDiskId(String targetManagedDiskId) {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }

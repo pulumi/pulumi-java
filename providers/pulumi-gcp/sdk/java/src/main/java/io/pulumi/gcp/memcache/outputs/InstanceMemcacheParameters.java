@@ -24,10 +24,10 @@ public final class InstanceMemcacheParameters {
      */
     private final @Nullable Map<String,String> params;
 
-    @OutputCustomType.Constructor({"id","params"})
+    @OutputCustomType.Constructor
     private InstanceMemcacheParameters(
-        @Nullable String id,
-        @Nullable Map<String,String> params) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("params") @Nullable Map<String,String> params) {
         this.id = id;
         this.params = params;
     }
@@ -70,12 +70,12 @@ public final class InstanceMemcacheParameters {
     	      this.params = defaults.params;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setParams(@Nullable Map<String,String> params) {
+        public Builder params(@Nullable Map<String,String> params) {
             this.params = params;
             return this;
         }

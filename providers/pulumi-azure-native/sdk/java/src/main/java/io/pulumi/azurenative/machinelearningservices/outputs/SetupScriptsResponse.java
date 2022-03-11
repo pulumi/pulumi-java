@@ -17,8 +17,8 @@ public final class SetupScriptsResponse {
      */
     private final @Nullable ScriptsToExecuteResponse scripts;
 
-    @OutputCustomType.Constructor({"scripts"})
-    private SetupScriptsResponse(@Nullable ScriptsToExecuteResponse scripts) {
+    @OutputCustomType.Constructor
+    private SetupScriptsResponse(@OutputCustomType.Parameter("scripts") @Nullable ScriptsToExecuteResponse scripts) {
         this.scripts = scripts;
     }
 
@@ -50,7 +50,7 @@ public final class SetupScriptsResponse {
     	      this.scripts = defaults.scripts;
         }
 
-        public Builder setScripts(@Nullable ScriptsToExecuteResponse scripts) {
+        public Builder scripts(@Nullable ScriptsToExecuteResponse scripts) {
             this.scripts = scripts;
             return this;
         }

@@ -20,10 +20,10 @@ public final class DocumentationResponse {
      */
     private final String mimeType;
 
-    @OutputCustomType.Constructor({"content","mimeType"})
+    @OutputCustomType.Constructor
     private DocumentationResponse(
-        String content,
-        String mimeType) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("mimeType") String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }
@@ -65,12 +65,12 @@ public final class DocumentationResponse {
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }

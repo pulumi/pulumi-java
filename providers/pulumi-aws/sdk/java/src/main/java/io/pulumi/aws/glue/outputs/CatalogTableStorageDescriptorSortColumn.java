@@ -21,10 +21,10 @@ public final class CatalogTableStorageDescriptorSortColumn {
      */
     private final Integer sortOrder;
 
-    @OutputCustomType.Constructor({"column","sortOrder"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSortColumn(
-        String column,
-        Integer sortOrder) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("sortOrder") Integer sortOrder) {
         this.column = column;
         this.sortOrder = sortOrder;
     }
@@ -66,12 +66,12 @@ public final class CatalogTableStorageDescriptorSortColumn {
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setSortOrder(Integer sortOrder) {
+        public Builder sortOrder(Integer sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }

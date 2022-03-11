@@ -13,11 +13,11 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
     private final Double memoryGb;
     private final Double storageGb;
 
-    @OutputCustomType.Constructor({"cpu","memoryGb","storageGb"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigWorkloadsConfigWebServer(
-        Double cpu,
-        Double memoryGb,
-        Double storageGb) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryGb") Double memoryGb,
+        @OutputCustomType.Parameter("storageGb") Double storageGb) {
         this.cpu = cpu;
         this.memoryGb = memoryGb;
         this.storageGb = storageGb;
@@ -57,17 +57,17 @@ public final class GetEnvironmentConfigWorkloadsConfigWebServer {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setMemoryGb(Double memoryGb) {
+        public Builder memoryGb(Double memoryGb) {
             this.memoryGb = Objects.requireNonNull(memoryGb);
             return this;
         }
 
-        public Builder setStorageGb(Double storageGb) {
+        public Builder storageGb(Double storageGb) {
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }

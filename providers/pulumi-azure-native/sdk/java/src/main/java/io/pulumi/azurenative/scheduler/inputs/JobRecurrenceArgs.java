@@ -117,52 +117,52 @@ public final class JobRecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setFrequency(@Nullable Input<RecurrenceFrequency> frequency) {
+        public Builder frequency(@Nullable Input<RecurrenceFrequency> frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setFrequency(@Nullable RecurrenceFrequency frequency) {
+        public Builder frequency(@Nullable RecurrenceFrequency frequency) {
             this.frequency = Input.ofNullable(frequency);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<JobRecurrenceScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<JobRecurrenceScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable JobRecurrenceScheduleArgs schedule) {
+        public Builder schedule(@Nullable JobRecurrenceScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }

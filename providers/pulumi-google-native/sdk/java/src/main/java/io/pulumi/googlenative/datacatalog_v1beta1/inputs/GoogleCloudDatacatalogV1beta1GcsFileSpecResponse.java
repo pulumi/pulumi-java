@@ -89,17 +89,17 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse extends io.p
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setFilePath(String filePath) {
+        public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setGcsTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps) {
+        public Builder gcsTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps) {
             this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }

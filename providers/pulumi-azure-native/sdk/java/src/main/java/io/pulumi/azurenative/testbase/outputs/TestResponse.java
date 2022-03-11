@@ -35,12 +35,12 @@ public final class TestResponse {
      */
     private final String validationRunStatus;
 
-    @OutputCustomType.Constructor({"commands","isActive","testType","validationRunStatus"})
+    @OutputCustomType.Constructor
     private TestResponse(
-        List<CommandResponse> commands,
-        @Nullable Boolean isActive,
-        String testType,
-        String validationRunStatus) {
+        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("testType") String testType,
+        @OutputCustomType.Parameter("validationRunStatus") String validationRunStatus) {
         this.commands = commands;
         this.isActive = isActive;
         this.testType = testType;
@@ -102,22 +102,22 @@ public final class TestResponse {
     	      this.validationRunStatus = defaults.validationRunStatus;
         }
 
-        public Builder setCommands(List<CommandResponse> commands) {
+        public Builder commands(List<CommandResponse> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setTestType(String testType) {
+        public Builder testType(String testType) {
             this.testType = Objects.requireNonNull(testType);
             return this;
         }
 
-        public Builder setValidationRunStatus(String validationRunStatus) {
+        public Builder validationRunStatus(String validationRunStatus) {
             this.validationRunStatus = Objects.requireNonNull(validationRunStatus);
             return this;
         }

@@ -42,13 +42,13 @@ public final class RouteSpec {
      */
     private final @Nullable RouteSpecTcpRoute tcpRoute;
 
-    @OutputCustomType.Constructor({"grpcRoute","http2Route","httpRoute","priority","tcpRoute"})
+    @OutputCustomType.Constructor
     private RouteSpec(
-        @Nullable RouteSpecGrpcRoute grpcRoute,
-        @Nullable RouteSpecHttp2Route http2Route,
-        @Nullable RouteSpecHttpRoute httpRoute,
-        @Nullable Integer priority,
-        @Nullable RouteSpecTcpRoute tcpRoute) {
+        @OutputCustomType.Parameter("grpcRoute") @Nullable RouteSpecGrpcRoute grpcRoute,
+        @OutputCustomType.Parameter("http2Route") @Nullable RouteSpecHttp2Route http2Route,
+        @OutputCustomType.Parameter("httpRoute") @Nullable RouteSpecHttpRoute httpRoute,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("tcpRoute") @Nullable RouteSpecTcpRoute tcpRoute) {
         this.grpcRoute = grpcRoute;
         this.http2Route = http2Route;
         this.httpRoute = httpRoute;
@@ -121,27 +121,27 @@ public final class RouteSpec {
     	      this.tcpRoute = defaults.tcpRoute;
         }
 
-        public Builder setGrpcRoute(@Nullable RouteSpecGrpcRoute grpcRoute) {
+        public Builder grpcRoute(@Nullable RouteSpecGrpcRoute grpcRoute) {
             this.grpcRoute = grpcRoute;
             return this;
         }
 
-        public Builder setHttp2Route(@Nullable RouteSpecHttp2Route http2Route) {
+        public Builder http2Route(@Nullable RouteSpecHttp2Route http2Route) {
             this.http2Route = http2Route;
             return this;
         }
 
-        public Builder setHttpRoute(@Nullable RouteSpecHttpRoute httpRoute) {
+        public Builder httpRoute(@Nullable RouteSpecHttpRoute httpRoute) {
             this.httpRoute = httpRoute;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setTcpRoute(@Nullable RouteSpecTcpRoute tcpRoute) {
+        public Builder tcpRoute(@Nullable RouteSpecTcpRoute tcpRoute) {
             this.tcpRoute = tcpRoute;
             return this;
         }

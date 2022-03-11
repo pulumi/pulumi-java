@@ -172,82 +172,82 @@ public final class EventSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEventCategories(@Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
+        public Builder eventCategories(@Nullable Input<List<EventSubscriptionEventCategoriesItem>> eventCategories) {
             this.eventCategories = eventCategories;
             return this;
         }
 
-        public Builder setEventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
+        public Builder eventCategories(@Nullable List<EventSubscriptionEventCategoriesItem> eventCategories) {
             this.eventCategories = Input.ofNullable(eventCategories);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<EventSubscriptionSeverity> severity) {
+        public Builder severity(@Nullable Input<EventSubscriptionSeverity> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable EventSubscriptionSeverity severity) {
+        public Builder severity(@Nullable EventSubscriptionSeverity severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable Input<String> snsTopicArn) {
+        public Builder snsTopicArn(@Nullable Input<String> snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = Input.ofNullable(snsTopicArn);
             return this;
         }
 
-        public Builder setSourceIds(@Nullable Input<List<String>> sourceIds) {
+        public Builder sourceIds(@Nullable Input<List<String>> sourceIds) {
             this.sourceIds = sourceIds;
             return this;
         }
 
-        public Builder setSourceIds(@Nullable List<String> sourceIds) {
+        public Builder sourceIds(@Nullable List<String> sourceIds) {
             this.sourceIds = Input.ofNullable(sourceIds);
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<EventSubscriptionSourceType> sourceType) {
+        public Builder sourceType(@Nullable Input<EventSubscriptionSourceType> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable EventSubscriptionSourceType sourceType) {
+        public Builder sourceType(@Nullable EventSubscriptionSourceType sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
 
-        public Builder setSubscriptionName(Input<String> subscriptionName) {
+        public Builder subscriptionName(Input<String> subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }
 
-        public Builder setSubscriptionName(String subscriptionName) {
+        public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = Input.of(Objects.requireNonNull(subscriptionName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<EventSubscriptionTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<EventSubscriptionTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<EventSubscriptionTagArgs> tags) {
+        public Builder tags(@Nullable List<EventSubscriptionTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

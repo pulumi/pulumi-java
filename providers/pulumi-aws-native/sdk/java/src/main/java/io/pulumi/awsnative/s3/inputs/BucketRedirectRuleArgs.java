@@ -123,52 +123,52 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.replaceKeyWith = defaults.replaceKeyWith;
         }
 
-        public Builder setHostName(@Nullable Input<String> hostName) {
+        public Builder hostName(@Nullable Input<String> hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = Input.ofNullable(hostName);
             return this;
         }
 
-        public Builder setHttpRedirectCode(@Nullable Input<String> httpRedirectCode) {
+        public Builder httpRedirectCode(@Nullable Input<String> httpRedirectCode) {
             this.httpRedirectCode = httpRedirectCode;
             return this;
         }
 
-        public Builder setHttpRedirectCode(@Nullable String httpRedirectCode) {
+        public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
             this.httpRedirectCode = Input.ofNullable(httpRedirectCode);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<BucketRedirectRuleProtocol> protocol) {
+        public Builder protocol(@Nullable Input<BucketRedirectRuleProtocol> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable BucketRedirectRuleProtocol protocol) {
+        public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setReplaceKeyPrefixWith(@Nullable Input<String> replaceKeyPrefixWith) {
+        public Builder replaceKeyPrefixWith(@Nullable Input<String> replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = replaceKeyPrefixWith;
             return this;
         }
 
-        public Builder setReplaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
+        public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
             this.replaceKeyPrefixWith = Input.ofNullable(replaceKeyPrefixWith);
             return this;
         }
 
-        public Builder setReplaceKeyWith(@Nullable Input<String> replaceKeyWith) {
+        public Builder replaceKeyWith(@Nullable Input<String> replaceKeyWith) {
             this.replaceKeyWith = replaceKeyWith;
             return this;
         }
 
-        public Builder setReplaceKeyWith(@Nullable String replaceKeyWith) {
+        public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
             this.replaceKeyWith = Input.ofNullable(replaceKeyWith);
             return this;
         }

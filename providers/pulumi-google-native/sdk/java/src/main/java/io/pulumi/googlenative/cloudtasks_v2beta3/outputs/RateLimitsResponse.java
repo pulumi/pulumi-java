@@ -26,11 +26,11 @@ public final class RateLimitsResponse {
      */
     private final Double maxDispatchesPerSecond;
 
-    @OutputCustomType.Constructor({"maxBurstSize","maxConcurrentDispatches","maxDispatchesPerSecond"})
+    @OutputCustomType.Constructor
     private RateLimitsResponse(
-        Integer maxBurstSize,
-        Integer maxConcurrentDispatches,
-        Double maxDispatchesPerSecond) {
+        @OutputCustomType.Parameter("maxBurstSize") Integer maxBurstSize,
+        @OutputCustomType.Parameter("maxConcurrentDispatches") Integer maxConcurrentDispatches,
+        @OutputCustomType.Parameter("maxDispatchesPerSecond") Double maxDispatchesPerSecond) {
         this.maxBurstSize = maxBurstSize;
         this.maxConcurrentDispatches = maxConcurrentDispatches;
         this.maxDispatchesPerSecond = maxDispatchesPerSecond;
@@ -82,17 +82,17 @@ public final class RateLimitsResponse {
     	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
         }
 
-        public Builder setMaxBurstSize(Integer maxBurstSize) {
+        public Builder maxBurstSize(Integer maxBurstSize) {
             this.maxBurstSize = Objects.requireNonNull(maxBurstSize);
             return this;
         }
 
-        public Builder setMaxConcurrentDispatches(Integer maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = Objects.requireNonNull(maxConcurrentDispatches);
             return this;
         }
 
-        public Builder setMaxDispatchesPerSecond(Double maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = Objects.requireNonNull(maxDispatchesPerSecond);
             return this;
         }

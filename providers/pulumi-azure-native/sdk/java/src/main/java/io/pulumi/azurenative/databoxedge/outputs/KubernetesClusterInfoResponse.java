@@ -28,11 +28,11 @@ public final class KubernetesClusterInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"etcdInfo","nodes","version"})
+    @OutputCustomType.Constructor
     private KubernetesClusterInfoResponse(
-        EtcdInfoResponse etcdInfo,
-        List<NodeInfoResponse> nodes,
-        String version) {
+        @OutputCustomType.Parameter("etcdInfo") EtcdInfoResponse etcdInfo,
+        @OutputCustomType.Parameter("nodes") List<NodeInfoResponse> nodes,
+        @OutputCustomType.Parameter("version") String version) {
         this.etcdInfo = etcdInfo;
         this.nodes = nodes;
         this.version = version;
@@ -84,17 +84,17 @@ public final class KubernetesClusterInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setEtcdInfo(EtcdInfoResponse etcdInfo) {
+        public Builder etcdInfo(EtcdInfoResponse etcdInfo) {
             this.etcdInfo = Objects.requireNonNull(etcdInfo);
             return this;
         }
 
-        public Builder setNodes(List<NodeInfoResponse> nodes) {
+        public Builder nodes(List<NodeInfoResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -91,32 +91,32 @@ public final class PrivateEndpointConnectionPropertiesPrivateLinkServiceConnecti
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(@Nullable Input<String> actionsRequired) {
+        public Builder actionsRequired(@Nullable Input<String> actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
-        public Builder setActionsRequired(@Nullable String actionsRequired) {
+        public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = Input.ofNullable(actionsRequired);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<PrivateLinkServiceConnectionStatus> status) {
+        public Builder status(@Nullable Input<PrivateLinkServiceConnectionStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable PrivateLinkServiceConnectionStatus status) {
+        public Builder status(@Nullable PrivateLinkServiceConnectionStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

@@ -200,102 +200,102 @@ public final class VirtualGatewayState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable Input<String> createdDate) {
+        public Builder createdDate(@Nullable Input<String> createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = Input.ofNullable(createdDate);
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable Input<String> lastUpdatedDate) {
             this.lastUpdatedDate = lastUpdatedDate;
             return this;
         }
 
-        public Builder setLastUpdatedDate(@Nullable String lastUpdatedDate) {
+        public Builder lastUpdatedDate(@Nullable String lastUpdatedDate) {
             this.lastUpdatedDate = Input.ofNullable(lastUpdatedDate);
             return this;
         }
 
-        public Builder setMeshName(@Nullable Input<String> meshName) {
+        public Builder meshName(@Nullable Input<String> meshName) {
             this.meshName = meshName;
             return this;
         }
 
-        public Builder setMeshName(@Nullable String meshName) {
+        public Builder meshName(@Nullable String meshName) {
             this.meshName = Input.ofNullable(meshName);
             return this;
         }
 
-        public Builder setMeshOwner(@Nullable Input<String> meshOwner) {
+        public Builder meshOwner(@Nullable Input<String> meshOwner) {
             this.meshOwner = meshOwner;
             return this;
         }
 
-        public Builder setMeshOwner(@Nullable String meshOwner) {
+        public Builder meshOwner(@Nullable String meshOwner) {
             this.meshOwner = Input.ofNullable(meshOwner);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceOwner(@Nullable Input<String> resourceOwner) {
+        public Builder resourceOwner(@Nullable Input<String> resourceOwner) {
             this.resourceOwner = resourceOwner;
             return this;
         }
 
-        public Builder setResourceOwner(@Nullable String resourceOwner) {
+        public Builder resourceOwner(@Nullable String resourceOwner) {
             this.resourceOwner = Input.ofNullable(resourceOwner);
             return this;
         }
 
-        public Builder setSpec(@Nullable Input<VirtualGatewaySpecGetArgs> spec) {
+        public Builder spec(@Nullable Input<VirtualGatewaySpecGetArgs> spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setSpec(@Nullable VirtualGatewaySpecGetArgs spec) {
+        public Builder spec(@Nullable VirtualGatewaySpecGetArgs spec) {
             this.spec = Input.ofNullable(spec);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

@@ -20,10 +20,10 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
      */
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"interconnectAttachment","ipAddress"})
+    @OutputCustomType.Constructor
     private VpnGatewayVpnGatewayInterfaceResponse(
-        String interconnectAttachment,
-        String ipAddress) {
+        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;
     }
@@ -65,12 +65,12 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setInterconnectAttachment(String interconnectAttachment) {
+        public Builder interconnectAttachment(String interconnectAttachment) {
             this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

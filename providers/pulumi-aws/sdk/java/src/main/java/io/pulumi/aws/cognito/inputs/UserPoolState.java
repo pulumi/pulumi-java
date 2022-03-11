@@ -533,302 +533,302 @@ public final class UserPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.verificationMessageTemplate = defaults.verificationMessageTemplate;
         }
 
-        public Builder setAccountRecoverySetting(@Nullable Input<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting) {
+        public Builder accountRecoverySetting(@Nullable Input<UserPoolAccountRecoverySettingGetArgs> accountRecoverySetting) {
             this.accountRecoverySetting = accountRecoverySetting;
             return this;
         }
 
-        public Builder setAccountRecoverySetting(@Nullable UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
+        public Builder accountRecoverySetting(@Nullable UserPoolAccountRecoverySettingGetArgs accountRecoverySetting) {
             this.accountRecoverySetting = Input.ofNullable(accountRecoverySetting);
             return this;
         }
 
-        public Builder setAdminCreateUserConfig(@Nullable Input<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig) {
+        public Builder adminCreateUserConfig(@Nullable Input<UserPoolAdminCreateUserConfigGetArgs> adminCreateUserConfig) {
             this.adminCreateUserConfig = adminCreateUserConfig;
             return this;
         }
 
-        public Builder setAdminCreateUserConfig(@Nullable UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
+        public Builder adminCreateUserConfig(@Nullable UserPoolAdminCreateUserConfigGetArgs adminCreateUserConfig) {
             this.adminCreateUserConfig = Input.ofNullable(adminCreateUserConfig);
             return this;
         }
 
-        public Builder setAliasAttributes(@Nullable Input<List<String>> aliasAttributes) {
+        public Builder aliasAttributes(@Nullable Input<List<String>> aliasAttributes) {
             this.aliasAttributes = aliasAttributes;
             return this;
         }
 
-        public Builder setAliasAttributes(@Nullable List<String> aliasAttributes) {
+        public Builder aliasAttributes(@Nullable List<String> aliasAttributes) {
             this.aliasAttributes = Input.ofNullable(aliasAttributes);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoVerifiedAttributes(@Nullable Input<List<String>> autoVerifiedAttributes) {
+        public Builder autoVerifiedAttributes(@Nullable Input<List<String>> autoVerifiedAttributes) {
             this.autoVerifiedAttributes = autoVerifiedAttributes;
             return this;
         }
 
-        public Builder setAutoVerifiedAttributes(@Nullable List<String> autoVerifiedAttributes) {
+        public Builder autoVerifiedAttributes(@Nullable List<String> autoVerifiedAttributes) {
             this.autoVerifiedAttributes = Input.ofNullable(autoVerifiedAttributes);
             return this;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setCustomDomain(@Nullable Input<String> customDomain) {
+        public Builder customDomain(@Nullable Input<String> customDomain) {
             this.customDomain = customDomain;
             return this;
         }
 
-        public Builder setCustomDomain(@Nullable String customDomain) {
+        public Builder customDomain(@Nullable String customDomain) {
             this.customDomain = Input.ofNullable(customDomain);
             return this;
         }
 
-        public Builder setDeviceConfiguration(@Nullable Input<UserPoolDeviceConfigurationGetArgs> deviceConfiguration) {
+        public Builder deviceConfiguration(@Nullable Input<UserPoolDeviceConfigurationGetArgs> deviceConfiguration) {
             this.deviceConfiguration = deviceConfiguration;
             return this;
         }
 
-        public Builder setDeviceConfiguration(@Nullable UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
+        public Builder deviceConfiguration(@Nullable UserPoolDeviceConfigurationGetArgs deviceConfiguration) {
             this.deviceConfiguration = Input.ofNullable(deviceConfiguration);
             return this;
         }
 
-        public Builder setDomain(@Nullable Input<String> domain) {
+        public Builder domain(@Nullable Input<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = Input.ofNullable(domain);
             return this;
         }
 
-        public Builder setEmailConfiguration(@Nullable Input<UserPoolEmailConfigurationGetArgs> emailConfiguration) {
+        public Builder emailConfiguration(@Nullable Input<UserPoolEmailConfigurationGetArgs> emailConfiguration) {
             this.emailConfiguration = emailConfiguration;
             return this;
         }
 
-        public Builder setEmailConfiguration(@Nullable UserPoolEmailConfigurationGetArgs emailConfiguration) {
+        public Builder emailConfiguration(@Nullable UserPoolEmailConfigurationGetArgs emailConfiguration) {
             this.emailConfiguration = Input.ofNullable(emailConfiguration);
             return this;
         }
 
-        public Builder setEmailVerificationMessage(@Nullable Input<String> emailVerificationMessage) {
+        public Builder emailVerificationMessage(@Nullable Input<String> emailVerificationMessage) {
             this.emailVerificationMessage = emailVerificationMessage;
             return this;
         }
 
-        public Builder setEmailVerificationMessage(@Nullable String emailVerificationMessage) {
+        public Builder emailVerificationMessage(@Nullable String emailVerificationMessage) {
             this.emailVerificationMessage = Input.ofNullable(emailVerificationMessage);
             return this;
         }
 
-        public Builder setEmailVerificationSubject(@Nullable Input<String> emailVerificationSubject) {
+        public Builder emailVerificationSubject(@Nullable Input<String> emailVerificationSubject) {
             this.emailVerificationSubject = emailVerificationSubject;
             return this;
         }
 
-        public Builder setEmailVerificationSubject(@Nullable String emailVerificationSubject) {
+        public Builder emailVerificationSubject(@Nullable String emailVerificationSubject) {
             this.emailVerificationSubject = Input.ofNullable(emailVerificationSubject);
             return this;
         }
 
-        public Builder setEndpoint(@Nullable Input<String> endpoint) {
+        public Builder endpoint(@Nullable Input<String> endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
 
-        public Builder setEstimatedNumberOfUsers(@Nullable Input<Integer> estimatedNumberOfUsers) {
+        public Builder estimatedNumberOfUsers(@Nullable Input<Integer> estimatedNumberOfUsers) {
             this.estimatedNumberOfUsers = estimatedNumberOfUsers;
             return this;
         }
 
-        public Builder setEstimatedNumberOfUsers(@Nullable Integer estimatedNumberOfUsers) {
+        public Builder estimatedNumberOfUsers(@Nullable Integer estimatedNumberOfUsers) {
             this.estimatedNumberOfUsers = Input.ofNullable(estimatedNumberOfUsers);
             return this;
         }
 
-        public Builder setLambdaConfig(@Nullable Input<UserPoolLambdaConfigGetArgs> lambdaConfig) {
+        public Builder lambdaConfig(@Nullable Input<UserPoolLambdaConfigGetArgs> lambdaConfig) {
             this.lambdaConfig = lambdaConfig;
             return this;
         }
 
-        public Builder setLambdaConfig(@Nullable UserPoolLambdaConfigGetArgs lambdaConfig) {
+        public Builder lambdaConfig(@Nullable UserPoolLambdaConfigGetArgs lambdaConfig) {
             this.lambdaConfig = Input.ofNullable(lambdaConfig);
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable Input<String> lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable Input<String> lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable String lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = Input.ofNullable(lastModifiedDate);
             return this;
         }
 
-        public Builder setMfaConfiguration(@Nullable Input<String> mfaConfiguration) {
+        public Builder mfaConfiguration(@Nullable Input<String> mfaConfiguration) {
             this.mfaConfiguration = mfaConfiguration;
             return this;
         }
 
-        public Builder setMfaConfiguration(@Nullable String mfaConfiguration) {
+        public Builder mfaConfiguration(@Nullable String mfaConfiguration) {
             this.mfaConfiguration = Input.ofNullable(mfaConfiguration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPasswordPolicy(@Nullable Input<UserPoolPasswordPolicyGetArgs> passwordPolicy) {
+        public Builder passwordPolicy(@Nullable Input<UserPoolPasswordPolicyGetArgs> passwordPolicy) {
             this.passwordPolicy = passwordPolicy;
             return this;
         }
 
-        public Builder setPasswordPolicy(@Nullable UserPoolPasswordPolicyGetArgs passwordPolicy) {
+        public Builder passwordPolicy(@Nullable UserPoolPasswordPolicyGetArgs passwordPolicy) {
             this.passwordPolicy = Input.ofNullable(passwordPolicy);
             return this;
         }
 
-        public Builder setSchemas(@Nullable Input<List<UserPoolSchemaGetArgs>> schemas) {
+        public Builder schemas(@Nullable Input<List<UserPoolSchemaGetArgs>> schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder setSchemas(@Nullable List<UserPoolSchemaGetArgs> schemas) {
+        public Builder schemas(@Nullable List<UserPoolSchemaGetArgs> schemas) {
             this.schemas = Input.ofNullable(schemas);
             return this;
         }
 
-        public Builder setSmsAuthenticationMessage(@Nullable Input<String> smsAuthenticationMessage) {
+        public Builder smsAuthenticationMessage(@Nullable Input<String> smsAuthenticationMessage) {
             this.smsAuthenticationMessage = smsAuthenticationMessage;
             return this;
         }
 
-        public Builder setSmsAuthenticationMessage(@Nullable String smsAuthenticationMessage) {
+        public Builder smsAuthenticationMessage(@Nullable String smsAuthenticationMessage) {
             this.smsAuthenticationMessage = Input.ofNullable(smsAuthenticationMessage);
             return this;
         }
 
-        public Builder setSmsConfiguration(@Nullable Input<UserPoolSmsConfigurationGetArgs> smsConfiguration) {
+        public Builder smsConfiguration(@Nullable Input<UserPoolSmsConfigurationGetArgs> smsConfiguration) {
             this.smsConfiguration = smsConfiguration;
             return this;
         }
 
-        public Builder setSmsConfiguration(@Nullable UserPoolSmsConfigurationGetArgs smsConfiguration) {
+        public Builder smsConfiguration(@Nullable UserPoolSmsConfigurationGetArgs smsConfiguration) {
             this.smsConfiguration = Input.ofNullable(smsConfiguration);
             return this;
         }
 
-        public Builder setSmsVerificationMessage(@Nullable Input<String> smsVerificationMessage) {
+        public Builder smsVerificationMessage(@Nullable Input<String> smsVerificationMessage) {
             this.smsVerificationMessage = smsVerificationMessage;
             return this;
         }
 
-        public Builder setSmsVerificationMessage(@Nullable String smsVerificationMessage) {
+        public Builder smsVerificationMessage(@Nullable String smsVerificationMessage) {
             this.smsVerificationMessage = Input.ofNullable(smsVerificationMessage);
             return this;
         }
 
-        public Builder setSoftwareTokenMfaConfiguration(@Nullable Input<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration) {
+        public Builder softwareTokenMfaConfiguration(@Nullable Input<UserPoolSoftwareTokenMfaConfigurationGetArgs> softwareTokenMfaConfiguration) {
             this.softwareTokenMfaConfiguration = softwareTokenMfaConfiguration;
             return this;
         }
 
-        public Builder setSoftwareTokenMfaConfiguration(@Nullable UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
+        public Builder softwareTokenMfaConfiguration(@Nullable UserPoolSoftwareTokenMfaConfigurationGetArgs softwareTokenMfaConfiguration) {
             this.softwareTokenMfaConfiguration = Input.ofNullable(softwareTokenMfaConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUserPoolAddOns(@Nullable Input<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns) {
+        public Builder userPoolAddOns(@Nullable Input<UserPoolUserPoolAddOnsGetArgs> userPoolAddOns) {
             this.userPoolAddOns = userPoolAddOns;
             return this;
         }
 
-        public Builder setUserPoolAddOns(@Nullable UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
+        public Builder userPoolAddOns(@Nullable UserPoolUserPoolAddOnsGetArgs userPoolAddOns) {
             this.userPoolAddOns = Input.ofNullable(userPoolAddOns);
             return this;
         }
 
-        public Builder setUsernameAttributes(@Nullable Input<List<String>> usernameAttributes) {
+        public Builder usernameAttributes(@Nullable Input<List<String>> usernameAttributes) {
             this.usernameAttributes = usernameAttributes;
             return this;
         }
 
-        public Builder setUsernameAttributes(@Nullable List<String> usernameAttributes) {
+        public Builder usernameAttributes(@Nullable List<String> usernameAttributes) {
             this.usernameAttributes = Input.ofNullable(usernameAttributes);
             return this;
         }
 
-        public Builder setUsernameConfiguration(@Nullable Input<UserPoolUsernameConfigurationGetArgs> usernameConfiguration) {
+        public Builder usernameConfiguration(@Nullable Input<UserPoolUsernameConfigurationGetArgs> usernameConfiguration) {
             this.usernameConfiguration = usernameConfiguration;
             return this;
         }
 
-        public Builder setUsernameConfiguration(@Nullable UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
+        public Builder usernameConfiguration(@Nullable UserPoolUsernameConfigurationGetArgs usernameConfiguration) {
             this.usernameConfiguration = Input.ofNullable(usernameConfiguration);
             return this;
         }
 
-        public Builder setVerificationMessageTemplate(@Nullable Input<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
+        public Builder verificationMessageTemplate(@Nullable Input<UserPoolVerificationMessageTemplateGetArgs> verificationMessageTemplate) {
             this.verificationMessageTemplate = verificationMessageTemplate;
             return this;
         }
 
-        public Builder setVerificationMessageTemplate(@Nullable UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
+        public Builder verificationMessageTemplate(@Nullable UserPoolVerificationMessageTemplateGetArgs verificationMessageTemplate) {
             this.verificationMessageTemplate = Input.ofNullable(verificationMessageTemplate);
             return this;
         }

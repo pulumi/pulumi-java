@@ -33,12 +33,12 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
      */
     private final @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest;
 
-    @OutputCustomType.Constructor({"accessToken","clientId","clientSecret","connectorOAuthRequest"})
+    @OutputCustomType.Constructor
     private ConnectorProfileZendeskConnectorProfileCredentials(
-        @Nullable String accessToken,
-        String clientId,
-        String clientSecret,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
         this.accessToken = accessToken;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -100,22 +100,22 @@ public final class ConnectorProfileZendeskConnectorProfileCredentials {
     	      this.connectorOAuthRequest = defaults.connectorOAuthRequest;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setConnectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }

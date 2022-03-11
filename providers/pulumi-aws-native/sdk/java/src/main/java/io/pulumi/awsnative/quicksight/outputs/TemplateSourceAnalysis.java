@@ -23,10 +23,10 @@ public final class TemplateSourceAnalysis {
      */
     private final List<TemplateDataSetReference> dataSetReferences;
 
-    @OutputCustomType.Constructor({"arn","dataSetReferences"})
+    @OutputCustomType.Constructor
     private TemplateSourceAnalysis(
-        String arn,
-        List<TemplateDataSetReference> dataSetReferences) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataSetReferences") List<TemplateDataSetReference> dataSetReferences) {
         this.arn = arn;
         this.dataSetReferences = dataSetReferences;
     }
@@ -69,12 +69,12 @@ public final class TemplateSourceAnalysis {
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDataSetReferences(List<TemplateDataSetReference> dataSetReferences) {
+        public Builder dataSetReferences(List<TemplateDataSetReference> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }

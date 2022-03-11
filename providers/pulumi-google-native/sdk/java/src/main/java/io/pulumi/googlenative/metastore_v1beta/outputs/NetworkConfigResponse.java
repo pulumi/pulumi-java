@@ -16,8 +16,8 @@ public final class NetworkConfigResponse {
      */
     private final List<ConsumerResponse> consumers;
 
-    @OutputCustomType.Constructor({"consumers"})
-    private NetworkConfigResponse(List<ConsumerResponse> consumers) {
+    @OutputCustomType.Constructor
+    private NetworkConfigResponse(@OutputCustomType.Parameter("consumers") List<ConsumerResponse> consumers) {
         this.consumers = consumers;
     }
 
@@ -49,7 +49,7 @@ public final class NetworkConfigResponse {
     	      this.consumers = defaults.consumers;
         }
 
-        public Builder setConsumers(List<ConsumerResponse> consumers) {
+        public Builder consumers(List<ConsumerResponse> consumers) {
             this.consumers = Objects.requireNonNull(consumers);
             return this;
         }

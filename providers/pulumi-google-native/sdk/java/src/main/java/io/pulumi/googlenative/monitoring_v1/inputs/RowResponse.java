@@ -74,12 +74,12 @@ public final class RowResponse extends io.pulumi.resources.InvokeArgs {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder setWeight(String weight) {
+        public Builder weight(String weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWidgets(List<WidgetResponse> widgets) {
+        public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }

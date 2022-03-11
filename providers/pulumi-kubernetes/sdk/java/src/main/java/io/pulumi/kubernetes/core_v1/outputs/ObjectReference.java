@@ -47,15 +47,15 @@ public final class ObjectReference {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"apiVersion","fieldPath","kind","name","namespace","resourceVersion","uid"})
+    @OutputCustomType.Constructor
     private ObjectReference(
-        @Nullable String apiVersion,
-        @Nullable String fieldPath,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String resourceVersion,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("fieldPath") @Nullable String fieldPath,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
         this.kind = kind;
@@ -147,37 +147,37 @@ public final class ObjectReference {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setFieldPath(@Nullable String fieldPath) {
+        public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }

@@ -203,102 +203,102 @@ public final class MachineLearningServiceArgs extends io.pulumi.resources.Resour
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setComputeType(Input<Either<String,ComputeEnvironmentType>> computeType) {
+        public Builder computeType(Input<Either<String,ComputeEnvironmentType>> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(Either<String,ComputeEnvironmentType> computeType) {
+        public Builder computeType(Either<String,ComputeEnvironmentType> computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Input.ofNullable(environmentImageRequest);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
+        public Builder keys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable CreateServiceRequestKeysArgs keys) {
+        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setKvTags(@Nullable Input<Map<String,String>> kvTags) {
+        public Builder kvTags(@Nullable Input<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Input.ofNullable(kvTags);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

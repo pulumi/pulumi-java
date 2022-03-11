@@ -68,12 +68,12 @@ public final class GetPolicyAssignmentArgs extends io.pulumi.resources.InvokeArg
     	      this.scope = defaults.scope;
         }
 
-        public Builder setPolicyAssignmentName(String policyAssignmentName) {
+        public Builder policyAssignmentName(String policyAssignmentName) {
             this.policyAssignmentName = Objects.requireNonNull(policyAssignmentName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

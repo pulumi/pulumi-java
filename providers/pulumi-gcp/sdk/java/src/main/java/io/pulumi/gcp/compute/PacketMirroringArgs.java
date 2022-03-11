@@ -200,92 +200,92 @@ public final class PacketMirroringArgs extends io.pulumi.resources.ResourceArgs 
     	      this.region = defaults.region;
         }
 
-        public Builder setCollectorIlb(Input<PacketMirroringCollectorIlbArgs> collectorIlb) {
+        public Builder collectorIlb(Input<PacketMirroringCollectorIlbArgs> collectorIlb) {
             this.collectorIlb = Objects.requireNonNull(collectorIlb);
             return this;
         }
 
-        public Builder setCollectorIlb(PacketMirroringCollectorIlbArgs collectorIlb) {
+        public Builder collectorIlb(PacketMirroringCollectorIlbArgs collectorIlb) {
             this.collectorIlb = Input.of(Objects.requireNonNull(collectorIlb));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<PacketMirroringFilterArgs> filter) {
+        public Builder filter(@Nullable Input<PacketMirroringFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable PacketMirroringFilterArgs filter) {
+        public Builder filter(@Nullable PacketMirroringFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setMirroredResources(Input<PacketMirroringMirroredResourcesArgs> mirroredResources) {
+        public Builder mirroredResources(Input<PacketMirroringMirroredResourcesArgs> mirroredResources) {
             this.mirroredResources = Objects.requireNonNull(mirroredResources);
             return this;
         }
 
-        public Builder setMirroredResources(PacketMirroringMirroredResourcesArgs mirroredResources) {
+        public Builder mirroredResources(PacketMirroringMirroredResourcesArgs mirroredResources) {
             this.mirroredResources = Input.of(Objects.requireNonNull(mirroredResources));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(Input<PacketMirroringNetworkArgs> network) {
+        public Builder network(Input<PacketMirroringNetworkArgs> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(PacketMirroringNetworkArgs network) {
+        public Builder network(PacketMirroringNetworkArgs network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }

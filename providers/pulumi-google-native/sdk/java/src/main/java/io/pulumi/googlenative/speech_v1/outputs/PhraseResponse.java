@@ -21,10 +21,10 @@ public final class PhraseResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"boost","value"})
+    @OutputCustomType.Constructor
     private PhraseResponse(
-        Double boost,
-        String value) {
+        @OutputCustomType.Parameter("boost") Double boost,
+        @OutputCustomType.Parameter("value") String value) {
         this.boost = boost;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class PhraseResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setBoost(Double boost) {
+        public Builder boost(Double boost) {
             this.boost = Objects.requireNonNull(boost);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

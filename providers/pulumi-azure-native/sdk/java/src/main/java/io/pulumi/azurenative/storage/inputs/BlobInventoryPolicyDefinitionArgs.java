@@ -56,12 +56,12 @@ public final class BlobInventoryPolicyDefinitionArgs extends io.pulumi.resources
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(Input<BlobInventoryPolicyFilterArgs> filters) {
+        public Builder filters(Input<BlobInventoryPolicyFilterArgs> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setFilters(BlobInventoryPolicyFilterArgs filters) {
+        public Builder filters(BlobInventoryPolicyFilterArgs filters) {
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }

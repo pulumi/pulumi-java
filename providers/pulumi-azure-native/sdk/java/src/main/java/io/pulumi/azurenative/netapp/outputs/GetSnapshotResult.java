@@ -45,15 +45,15 @@ public final class GetSnapshotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"created","id","location","name","provisioningState","snapshotId","type"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String created,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String snapshotId,
-        String type) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("snapshotId") String snapshotId,
+        @OutputCustomType.Parameter("type") String type) {
         this.created = created;
         this.id = id;
         this.location = location;
@@ -145,37 +145,37 @@ public final class GetSnapshotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

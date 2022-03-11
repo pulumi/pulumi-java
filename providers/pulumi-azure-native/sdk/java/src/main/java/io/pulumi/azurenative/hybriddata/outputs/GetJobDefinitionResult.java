@@ -76,20 +76,20 @@ public final class GetJobDefinitionResult {
      */
     private final @Nullable String userConfirmation;
 
-    @OutputCustomType.Constructor({"customerSecrets","dataServiceInput","dataSinkId","dataSourceId","id","lastModifiedTime","name","runLocation","schedules","state","type","userConfirmation"})
+    @OutputCustomType.Constructor
     private GetJobDefinitionResult(
-        @Nullable List<CustomerSecretResponse> customerSecrets,
-        @Nullable Object dataServiceInput,
-        String dataSinkId,
-        String dataSourceId,
-        String id,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable String runLocation,
-        @Nullable List<ScheduleResponse> schedules,
-        String state,
-        String type,
-        @Nullable String userConfirmation) {
+        @OutputCustomType.Parameter("customerSecrets") @Nullable List<CustomerSecretResponse> customerSecrets,
+        @OutputCustomType.Parameter("dataServiceInput") @Nullable Object dataServiceInput,
+        @OutputCustomType.Parameter("dataSinkId") String dataSinkId,
+        @OutputCustomType.Parameter("dataSourceId") String dataSourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("runLocation") @Nullable String runLocation,
+        @OutputCustomType.Parameter("schedules") @Nullable List<ScheduleResponse> schedules,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userConfirmation") @Nullable String userConfirmation) {
         this.customerSecrets = customerSecrets;
         this.dataServiceInput = dataServiceInput;
         this.dataSinkId = dataSinkId;
@@ -231,62 +231,62 @@ public final class GetJobDefinitionResult {
     	      this.userConfirmation = defaults.userConfirmation;
         }
 
-        public Builder setCustomerSecrets(@Nullable List<CustomerSecretResponse> customerSecrets) {
+        public Builder customerSecrets(@Nullable List<CustomerSecretResponse> customerSecrets) {
             this.customerSecrets = customerSecrets;
             return this;
         }
 
-        public Builder setDataServiceInput(@Nullable Object dataServiceInput) {
+        public Builder dataServiceInput(@Nullable Object dataServiceInput) {
             this.dataServiceInput = dataServiceInput;
             return this;
         }
 
-        public Builder setDataSinkId(String dataSinkId) {
+        public Builder dataSinkId(String dataSinkId) {
             this.dataSinkId = Objects.requireNonNull(dataSinkId);
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRunLocation(@Nullable String runLocation) {
+        public Builder runLocation(@Nullable String runLocation) {
             this.runLocation = runLocation;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<ScheduleResponse> schedules) {
+        public Builder schedules(@Nullable List<ScheduleResponse> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserConfirmation(@Nullable String userConfirmation) {
+        public Builder userConfirmation(@Nullable String userConfirmation) {
             this.userConfirmation = userConfirmation;
             return this;
         }

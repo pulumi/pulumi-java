@@ -249,132 +249,132 @@ public final class MaintenanceWindowState extends io.pulumi.resources.ResourceAr
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setAllowUnassociatedTargets(@Nullable Input<Boolean> allowUnassociatedTargets) {
+        public Builder allowUnassociatedTargets(@Nullable Input<Boolean> allowUnassociatedTargets) {
             this.allowUnassociatedTargets = allowUnassociatedTargets;
             return this;
         }
 
-        public Builder setAllowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
+        public Builder allowUnassociatedTargets(@Nullable Boolean allowUnassociatedTargets) {
             this.allowUnassociatedTargets = Input.ofNullable(allowUnassociatedTargets);
             return this;
         }
 
-        public Builder setCutoff(@Nullable Input<Integer> cutoff) {
+        public Builder cutoff(@Nullable Input<Integer> cutoff) {
             this.cutoff = cutoff;
             return this;
         }
 
-        public Builder setCutoff(@Nullable Integer cutoff) {
+        public Builder cutoff(@Nullable Integer cutoff) {
             this.cutoff = Input.ofNullable(cutoff);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<Integer> duration) {
+        public Builder duration(@Nullable Input<Integer> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable Integer duration) {
+        public Builder duration(@Nullable Integer duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEndDate(@Nullable Input<String> endDate) {
+        public Builder endDate(@Nullable Input<String> endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = Input.ofNullable(endDate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Input<Integer> scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Input<Integer> scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Integer scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = Input.ofNullable(scheduleOffset);
             return this;
         }
 
-        public Builder setScheduleTimezone(@Nullable Input<String> scheduleTimezone) {
+        public Builder scheduleTimezone(@Nullable Input<String> scheduleTimezone) {
             this.scheduleTimezone = scheduleTimezone;
             return this;
         }
 
-        public Builder setScheduleTimezone(@Nullable String scheduleTimezone) {
+        public Builder scheduleTimezone(@Nullable String scheduleTimezone) {
             this.scheduleTimezone = Input.ofNullable(scheduleTimezone);
             return this;
         }
 
-        public Builder setStartDate(@Nullable Input<String> startDate) {
+        public Builder startDate(@Nullable Input<String> startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = Input.ofNullable(startDate);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

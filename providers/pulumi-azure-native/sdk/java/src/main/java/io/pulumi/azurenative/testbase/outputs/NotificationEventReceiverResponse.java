@@ -23,10 +23,10 @@ public final class NotificationEventReceiverResponse {
      */
     private final @Nullable NotificationReceiverValueResponse receiverValue;
 
-    @OutputCustomType.Constructor({"receiverType","receiverValue"})
+    @OutputCustomType.Constructor
     private NotificationEventReceiverResponse(
-        @Nullable String receiverType,
-        @Nullable NotificationReceiverValueResponse receiverValue) {
+        @OutputCustomType.Parameter("receiverType") @Nullable String receiverType,
+        @OutputCustomType.Parameter("receiverValue") @Nullable NotificationReceiverValueResponse receiverValue) {
         this.receiverType = receiverType;
         this.receiverValue = receiverValue;
     }
@@ -68,12 +68,12 @@ public final class NotificationEventReceiverResponse {
     	      this.receiverValue = defaults.receiverValue;
         }
 
-        public Builder setReceiverType(@Nullable String receiverType) {
+        public Builder receiverType(@Nullable String receiverType) {
             this.receiverType = receiverType;
             return this;
         }
 
-        public Builder setReceiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
+        public Builder receiverValue(@Nullable NotificationReceiverValueResponse receiverValue) {
             this.receiverValue = receiverValue;
             return this;
         }

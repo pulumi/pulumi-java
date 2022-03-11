@@ -142,32 +142,32 @@ public final class GetVirtualNetworkGatewayResult {
      */
     private final @Nullable String vpnType;
 
-    @OutputCustomType.Constructor({"activeActive","bgpSettings","customRoutes","enableBgp","enableDnsForwarding","enablePrivateIpAddress","etag","extendedLocation","gatewayDefaultSite","gatewayType","id","inboundDnsForwardingEndpoint","ipConfigurations","location","name","provisioningState","resourceGuid","sku","tags","type","vNetExtendedLocationResourceId","vpnClientConfiguration","vpnGatewayGeneration","vpnType"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkGatewayResult(
-        @Nullable Boolean activeActive,
-        @Nullable BgpSettingsResponse bgpSettings,
-        @Nullable AddressSpaceResponse customRoutes,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableDnsForwarding,
-        @Nullable Boolean enablePrivateIpAddress,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable SubResourceResponse gatewayDefaultSite,
-        @Nullable String gatewayType,
-        @Nullable String id,
-        String inboundDnsForwardingEndpoint,
-        @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable VirtualNetworkGatewaySkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vNetExtendedLocationResourceId,
-        @Nullable VpnClientConfigurationResponse vpnClientConfiguration,
-        @Nullable String vpnGatewayGeneration,
-        @Nullable String vpnType) {
+        @OutputCustomType.Parameter("activeActive") @Nullable Boolean activeActive,
+        @OutputCustomType.Parameter("bgpSettings") @Nullable BgpSettingsResponse bgpSettings,
+        @OutputCustomType.Parameter("customRoutes") @Nullable AddressSpaceResponse customRoutes,
+        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @OutputCustomType.Parameter("enableDnsForwarding") @Nullable Boolean enableDnsForwarding,
+        @OutputCustomType.Parameter("enablePrivateIpAddress") @Nullable Boolean enablePrivateIpAddress,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("gatewayDefaultSite") @Nullable SubResourceResponse gatewayDefaultSite,
+        @OutputCustomType.Parameter("gatewayType") @Nullable String gatewayType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("inboundDnsForwardingEndpoint") String inboundDnsForwardingEndpoint,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable VirtualNetworkGatewaySkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vNetExtendedLocationResourceId") @Nullable String vNetExtendedLocationResourceId,
+        @OutputCustomType.Parameter("vpnClientConfiguration") @Nullable VpnClientConfigurationResponse vpnClientConfiguration,
+        @OutputCustomType.Parameter("vpnGatewayGeneration") @Nullable String vpnGatewayGeneration,
+        @OutputCustomType.Parameter("vpnType") @Nullable String vpnType) {
         this.activeActive = activeActive;
         this.bgpSettings = bgpSettings;
         this.customRoutes = customRoutes;
@@ -429,122 +429,122 @@ public final class GetVirtualNetworkGatewayResult {
     	      this.vpnType = defaults.vpnType;
         }
 
-        public Builder setActiveActive(@Nullable Boolean activeActive) {
+        public Builder activeActive(@Nullable Boolean activeActive) {
             this.activeActive = activeActive;
             return this;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsResponse bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setCustomRoutes(@Nullable AddressSpaceResponse customRoutes) {
+        public Builder customRoutes(@Nullable AddressSpaceResponse customRoutes) {
             this.customRoutes = customRoutes;
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEnableDnsForwarding(@Nullable Boolean enableDnsForwarding) {
+        public Builder enableDnsForwarding(@Nullable Boolean enableDnsForwarding) {
             this.enableDnsForwarding = enableDnsForwarding;
             return this;
         }
 
-        public Builder setEnablePrivateIpAddress(@Nullable Boolean enablePrivateIpAddress) {
+        public Builder enablePrivateIpAddress(@Nullable Boolean enablePrivateIpAddress) {
             this.enablePrivateIpAddress = enablePrivateIpAddress;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setGatewayDefaultSite(@Nullable SubResourceResponse gatewayDefaultSite) {
+        public Builder gatewayDefaultSite(@Nullable SubResourceResponse gatewayDefaultSite) {
             this.gatewayDefaultSite = gatewayDefaultSite;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable String gatewayType) {
+        public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInboundDnsForwardingEndpoint(String inboundDnsForwardingEndpoint) {
+        public Builder inboundDnsForwardingEndpoint(String inboundDnsForwardingEndpoint) {
             this.inboundDnsForwardingEndpoint = Objects.requireNonNull(inboundDnsForwardingEndpoint);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<VirtualNetworkGatewayIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSku(@Nullable VirtualNetworkGatewaySkuResponse sku) {
+        public Builder sku(@Nullable VirtualNetworkGatewaySkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVNetExtendedLocationResourceId(@Nullable String vNetExtendedLocationResourceId) {
+        public Builder vNetExtendedLocationResourceId(@Nullable String vNetExtendedLocationResourceId) {
             this.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
             return this;
         }
 
-        public Builder setVpnClientConfiguration(@Nullable VpnClientConfigurationResponse vpnClientConfiguration) {
+        public Builder vpnClientConfiguration(@Nullable VpnClientConfigurationResponse vpnClientConfiguration) {
             this.vpnClientConfiguration = vpnClientConfiguration;
             return this;
         }
 
-        public Builder setVpnGatewayGeneration(@Nullable String vpnGatewayGeneration) {
+        public Builder vpnGatewayGeneration(@Nullable String vpnGatewayGeneration) {
             this.vpnGatewayGeneration = vpnGatewayGeneration;
             return this;
         }
 
-        public Builder setVpnType(@Nullable String vpnType) {
+        public Builder vpnType(@Nullable String vpnType) {
             this.vpnType = vpnType;
             return this;
         }

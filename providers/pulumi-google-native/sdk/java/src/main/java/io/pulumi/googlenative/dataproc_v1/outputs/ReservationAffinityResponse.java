@@ -26,11 +26,11 @@ public final class ReservationAffinityResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"consumeReservationType","key","values"})
+    @OutputCustomType.Constructor
     private ReservationAffinityResponse(
-        String consumeReservationType,
-        String key,
-        List<String> values) {
+        @OutputCustomType.Parameter("consumeReservationType") String consumeReservationType,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.consumeReservationType = consumeReservationType;
         this.key = key;
         this.values = values;
@@ -82,17 +82,17 @@ public final class ReservationAffinityResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setConsumeReservationType(String consumeReservationType) {
+        public Builder consumeReservationType(String consumeReservationType) {
             this.consumeReservationType = Objects.requireNonNull(consumeReservationType);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -38,13 +38,13 @@ public final class ManagementGroupChildInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"children","displayName","id","name","type"})
+    @OutputCustomType.Constructor
     private ManagementGroupChildInfoResponse(
-        @Nullable List<ManagementGroupChildInfoResponse> children,
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("children") @Nullable List<ManagementGroupChildInfoResponse> children,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.children = children;
         this.displayName = displayName;
         this.id = id;
@@ -116,27 +116,27 @@ public final class ManagementGroupChildInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setChildren(@Nullable List<ManagementGroupChildInfoResponse> children) {
+        public Builder children(@Nullable List<ManagementGroupChildInfoResponse> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

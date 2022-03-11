@@ -29,11 +29,11 @@ public final class ContainerPublicEndpoint {
      */
     private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","healthCheckConfig"})
+    @OutputCustomType.Constructor
     private ContainerPublicEndpoint(
-        @Nullable String containerName,
-        @Nullable Integer containerPort,
-        @Nullable ContainerHealthCheckConfig healthCheckConfig) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("healthCheckConfig") @Nullable ContainerHealthCheckConfig healthCheckConfig) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.healthCheckConfig = healthCheckConfig;
@@ -85,17 +85,17 @@ public final class ContainerPublicEndpoint {
     	      this.healthCheckConfig = defaults.healthCheckConfig;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setHealthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
+        public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfig healthCheckConfig) {
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }

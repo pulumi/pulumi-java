@@ -27,10 +27,10 @@ public final class NonResourcePolicyRule {
      */
     private final List<String> verbs;
 
-    @OutputCustomType.Constructor({"nonResourceURLs","verbs"})
+    @OutputCustomType.Constructor
     private NonResourcePolicyRule(
-        List<String> nonResourceURLs,
-        List<String> verbs) {
+        @OutputCustomType.Parameter("nonResourceURLs") List<String> nonResourceURLs,
+        @OutputCustomType.Parameter("verbs") List<String> verbs) {
         this.nonResourceURLs = nonResourceURLs;
         this.verbs = verbs;
     }
@@ -78,12 +78,12 @@ public final class NonResourcePolicyRule {
     	      this.verbs = defaults.verbs;
         }
 
-        public Builder setNonResourceURLs(List<String> nonResourceURLs) {
+        public Builder nonResourceURLs(List<String> nonResourceURLs) {
             this.nonResourceURLs = Objects.requireNonNull(nonResourceURLs);
             return this;
         }
 
-        public Builder setVerbs(List<String> verbs) {
+        public Builder verbs(List<String> verbs) {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }

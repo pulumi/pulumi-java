@@ -18,11 +18,11 @@ public final class GetPipelineResult {
     private final @Nullable List<PipelineActivity> pipelineActivities;
     private final @Nullable List<PipelineTag> tags;
 
-    @OutputCustomType.Constructor({"id","pipelineActivities","tags"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        @Nullable String id,
-        @Nullable List<PipelineActivity> pipelineActivities,
-        @Nullable List<PipelineTag> tags) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("pipelineActivities") @Nullable List<PipelineActivity> pipelineActivities,
+        @OutputCustomType.Parameter("tags") @Nullable List<PipelineTag> tags) {
         this.id = id;
         this.pipelineActivities = pipelineActivities;
         this.tags = tags;
@@ -62,17 +62,17 @@ public final class GetPipelineResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPipelineActivities(@Nullable List<PipelineActivity> pipelineActivities) {
+        public Builder pipelineActivities(@Nullable List<PipelineActivity> pipelineActivities) {
             this.pipelineActivities = pipelineActivities;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PipelineTag> tags) {
+        public Builder tags(@Nullable List<PipelineTag> tags) {
             this.tags = tags;
             return this;
         }

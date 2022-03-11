@@ -22,10 +22,10 @@ public final class RecoveryPlanProtectedItemResponse {
      */
     private final @Nullable String virtualMachineId;
 
-    @OutputCustomType.Constructor({"id","virtualMachineId"})
+    @OutputCustomType.Constructor
     private RecoveryPlanProtectedItemResponse(
-        @Nullable String id,
-        @Nullable String virtualMachineId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("virtualMachineId") @Nullable String virtualMachineId) {
         this.id = id;
         this.virtualMachineId = virtualMachineId;
     }
@@ -67,12 +67,12 @@ public final class RecoveryPlanProtectedItemResponse {
     	      this.virtualMachineId = defaults.virtualMachineId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setVirtualMachineId(@Nullable String virtualMachineId) {
+        public Builder virtualMachineId(@Nullable String virtualMachineId) {
             this.virtualMachineId = virtualMachineId;
             return this;
         }

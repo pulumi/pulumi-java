@@ -60,16 +60,16 @@ public final class TagField {
      */
     private final @Nullable String timestampValue;
 
-    @OutputCustomType.Constructor({"boolValue","displayName","doubleValue","enumValue","fieldName","order","stringValue","timestampValue"})
+    @OutputCustomType.Constructor
     private TagField(
-        @Nullable Boolean boolValue,
-        @Nullable String displayName,
-        @Nullable Double doubleValue,
-        @Nullable String enumValue,
-        String fieldName,
-        @Nullable Integer order,
-        @Nullable String stringValue,
-        @Nullable String timestampValue) {
+        @OutputCustomType.Parameter("boolValue") @Nullable Boolean boolValue,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @OutputCustomType.Parameter("enumValue") @Nullable String enumValue,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("timestampValue") @Nullable String timestampValue) {
         this.boolValue = boolValue;
         this.displayName = displayName;
         this.doubleValue = doubleValue;
@@ -176,42 +176,42 @@ public final class TagField {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBoolValue(@Nullable Boolean boolValue) {
+        public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setEnumValue(@Nullable String enumValue) {
+        public Builder enumValue(@Nullable String enumValue) {
             this.enumValue = enumValue;
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setTimestampValue(@Nullable String timestampValue) {
+        public Builder timestampValue(@Nullable String timestampValue) {
             this.timestampValue = timestampValue;
             return this;
         }

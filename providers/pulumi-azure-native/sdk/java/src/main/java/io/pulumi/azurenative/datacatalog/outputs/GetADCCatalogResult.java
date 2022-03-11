@@ -77,20 +77,20 @@ public final class GetADCCatalogResult {
      */
     private final @Nullable List<PrincipalsResponse> users;
 
-    @OutputCustomType.Constructor({"admins","enableAutomaticUnitAdjustment","etag","id","location","name","sku","successfullyProvisioned","tags","type","units","users"})
+    @OutputCustomType.Constructor
     private GetADCCatalogResult(
-        @Nullable List<PrincipalsResponse> admins,
-        @Nullable Boolean enableAutomaticUnitAdjustment,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String sku,
-        @Nullable Boolean successfullyProvisioned,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Integer units,
-        @Nullable List<PrincipalsResponse> users) {
+        @OutputCustomType.Parameter("admins") @Nullable List<PrincipalsResponse> admins,
+        @OutputCustomType.Parameter("enableAutomaticUnitAdjustment") @Nullable Boolean enableAutomaticUnitAdjustment,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("successfullyProvisioned") @Nullable Boolean successfullyProvisioned,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("units") @Nullable Integer units,
+        @OutputCustomType.Parameter("users") @Nullable List<PrincipalsResponse> users) {
         this.admins = admins;
         this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
         this.etag = etag;
@@ -232,62 +232,62 @@ public final class GetADCCatalogResult {
     	      this.users = defaults.users;
         }
 
-        public Builder setAdmins(@Nullable List<PrincipalsResponse> admins) {
+        public Builder admins(@Nullable List<PrincipalsResponse> admins) {
             this.admins = admins;
             return this;
         }
 
-        public Builder setEnableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
+        public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
             this.enableAutomaticUnitAdjustment = enableAutomaticUnitAdjustment;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSuccessfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
+        public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
             this.successfullyProvisioned = successfullyProvisioned;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnits(@Nullable Integer units) {
+        public Builder units(@Nullable Integer units) {
             this.units = units;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<PrincipalsResponse> users) {
+        public Builder users(@Nullable List<PrincipalsResponse> users) {
             this.users = users;
             return this;
         }

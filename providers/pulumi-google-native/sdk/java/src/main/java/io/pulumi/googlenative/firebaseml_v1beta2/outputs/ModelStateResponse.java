@@ -21,10 +21,10 @@ public final class ModelStateResponse {
      */
     private final StatusResponse validationError;
 
-    @OutputCustomType.Constructor({"published","validationError"})
+    @OutputCustomType.Constructor
     private ModelStateResponse(
-        Boolean published,
-        StatusResponse validationError) {
+        @OutputCustomType.Parameter("published") Boolean published,
+        @OutputCustomType.Parameter("validationError") StatusResponse validationError) {
         this.published = published;
         this.validationError = validationError;
     }
@@ -66,12 +66,12 @@ public final class ModelStateResponse {
     	      this.validationError = defaults.validationError;
         }
 
-        public Builder setPublished(Boolean published) {
+        public Builder published(Boolean published) {
             this.published = Objects.requireNonNull(published);
             return this;
         }
 
-        public Builder setValidationError(StatusResponse validationError) {
+        public Builder validationError(StatusResponse validationError) {
             this.validationError = Objects.requireNonNull(validationError);
             return this;
         }

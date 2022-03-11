@@ -53,12 +53,12 @@ public final class RuleGroupRuleActionBlockArgs extends io.pulumi.resources.Reso
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
+        public Builder customResponse(@Nullable Input<RuleGroupRuleActionBlockCustomResponseArgs> customResponse) {
             this.customResponse = customResponse;
             return this;
         }
 
-        public Builder setCustomResponse(@Nullable RuleGroupRuleActionBlockCustomResponseArgs customResponse) {
+        public Builder customResponse(@Nullable RuleGroupRuleActionBlockCustomResponseArgs customResponse) {
             this.customResponse = Input.ofNullable(customResponse);
             return this;
         }

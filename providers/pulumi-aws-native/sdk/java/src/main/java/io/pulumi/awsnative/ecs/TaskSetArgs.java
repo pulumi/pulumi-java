@@ -196,102 +196,102 @@ public final class TaskSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.taskDefinition = defaults.taskDefinition;
         }
 
-        public Builder setCluster(Input<String> cluster) {
+        public Builder cluster(Input<String> cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Input.of(Objects.requireNonNull(cluster));
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setLaunchType(@Nullable Input<TaskSetLaunchType> launchType) {
+        public Builder launchType(@Nullable Input<TaskSetLaunchType> launchType) {
             this.launchType = launchType;
             return this;
         }
 
-        public Builder setLaunchType(@Nullable TaskSetLaunchType launchType) {
+        public Builder launchType(@Nullable TaskSetLaunchType launchType) {
             this.launchType = Input.ofNullable(launchType);
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable Input<List<TaskSetLoadBalancerArgs>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Input<List<TaskSetLoadBalancerArgs>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable List<TaskSetLoadBalancerArgs> loadBalancers) {
+        public Builder loadBalancers(@Nullable List<TaskSetLoadBalancerArgs> loadBalancers) {
             this.loadBalancers = Input.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable Input<TaskSetNetworkConfigurationArgs> networkConfiguration) {
+        public Builder networkConfiguration(@Nullable Input<TaskSetNetworkConfigurationArgs> networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable TaskSetNetworkConfigurationArgs networkConfiguration) {
+        public Builder networkConfiguration(@Nullable TaskSetNetworkConfigurationArgs networkConfiguration) {
             this.networkConfiguration = Input.ofNullable(networkConfiguration);
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable Input<String> platformVersion) {
+        public Builder platformVersion(@Nullable Input<String> platformVersion) {
             this.platformVersion = platformVersion;
             return this;
         }
 
-        public Builder setPlatformVersion(@Nullable String platformVersion) {
+        public Builder platformVersion(@Nullable String platformVersion) {
             this.platformVersion = Input.ofNullable(platformVersion);
             return this;
         }
 
-        public Builder setScale(@Nullable Input<TaskSetScaleArgs> scale) {
+        public Builder scale(@Nullable Input<TaskSetScaleArgs> scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setScale(@Nullable TaskSetScaleArgs scale) {
+        public Builder scale(@Nullable TaskSetScaleArgs scale) {
             this.scale = Input.ofNullable(scale);
             return this;
         }
 
-        public Builder setService(Input<String> service) {
+        public Builder service(Input<String> service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable Input<List<TaskSetServiceRegistryArgs>> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable Input<List<TaskSetServiceRegistryArgs>> serviceRegistries) {
             this.serviceRegistries = serviceRegistries;
             return this;
         }
 
-        public Builder setServiceRegistries(@Nullable List<TaskSetServiceRegistryArgs> serviceRegistries) {
+        public Builder serviceRegistries(@Nullable List<TaskSetServiceRegistryArgs> serviceRegistries) {
             this.serviceRegistries = Input.ofNullable(serviceRegistries);
             return this;
         }
 
-        public Builder setTaskDefinition(Input<String> taskDefinition) {
+        public Builder taskDefinition(Input<String> taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }
 
-        public Builder setTaskDefinition(String taskDefinition) {
+        public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Input.of(Objects.requireNonNull(taskDefinition));
             return this;
         }

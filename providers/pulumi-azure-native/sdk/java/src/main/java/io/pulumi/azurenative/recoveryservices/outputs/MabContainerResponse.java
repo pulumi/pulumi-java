@@ -81,20 +81,20 @@ public final class MabContainerResponse {
      */
     private final @Nullable String registrationStatus;
 
-    @OutputCustomType.Constructor({"agentVersion","backupManagementType","canReRegister","containerHealthState","containerId","containerType","extendedInfo","friendlyName","healthStatus","mabContainerHealthDetails","protectedItemCount","registrationStatus"})
+    @OutputCustomType.Constructor
     private MabContainerResponse(
-        @Nullable String agentVersion,
-        @Nullable String backupManagementType,
-        @Nullable Boolean canReRegister,
-        @Nullable String containerHealthState,
-        @Nullable Double containerId,
-        String containerType,
-        @Nullable MabContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails,
-        @Nullable Double protectedItemCount,
-        @Nullable String registrationStatus) {
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
+        @OutputCustomType.Parameter("containerHealthState") @Nullable String containerHealthState,
+        @OutputCustomType.Parameter("containerId") @Nullable Double containerId,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable MabContainerExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("mabContainerHealthDetails") @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus) {
         this.agentVersion = agentVersion;
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
@@ -240,62 +240,62 @@ public final class MabContainerResponse {
     	      this.registrationStatus = defaults.registrationStatus;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setCanReRegister(@Nullable Boolean canReRegister) {
+        public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
 
-        public Builder setContainerHealthState(@Nullable String containerHealthState) {
+        public Builder containerHealthState(@Nullable String containerHealthState) {
             this.containerHealthState = containerHealthState;
             return this;
         }
 
-        public Builder setContainerId(@Nullable Double containerId) {
+        public Builder containerId(@Nullable Double containerId) {
             this.containerId = containerId;
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable MabContainerExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable MabContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setMabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails) {
+        public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails) {
             this.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Double protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }

@@ -57,16 +57,16 @@ public final class ConnectionMonitorTestConfigurationResponse {
      */
     private final @Nullable Integer testFrequencySec;
 
-    @OutputCustomType.Constructor({"httpConfiguration","icmpConfiguration","name","preferredIPVersion","protocol","successThreshold","tcpConfiguration","testFrequencySec"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorTestConfigurationResponse(
-        @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
-        @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
-        String name,
-        @Nullable String preferredIPVersion,
-        String protocol,
-        @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
-        @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
-        @Nullable Integer testFrequencySec) {
+        @OutputCustomType.Parameter("httpConfiguration") @Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration,
+        @OutputCustomType.Parameter("icmpConfiguration") @Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preferredIPVersion") @Nullable String preferredIPVersion,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("successThreshold") @Nullable ConnectionMonitorSuccessThresholdResponse successThreshold,
+        @OutputCustomType.Parameter("tcpConfiguration") @Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration,
+        @OutputCustomType.Parameter("testFrequencySec") @Nullable Integer testFrequencySec) {
         this.httpConfiguration = httpConfiguration;
         this.icmpConfiguration = icmpConfiguration;
         this.name = name;
@@ -168,42 +168,42 @@ public final class ConnectionMonitorTestConfigurationResponse {
     	      this.testFrequencySec = defaults.testFrequencySec;
         }
 
-        public Builder setHttpConfiguration(@Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration) {
+        public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationResponse httpConfiguration) {
             this.httpConfiguration = httpConfiguration;
             return this;
         }
 
-        public Builder setIcmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration) {
+        public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationResponse icmpConfiguration) {
             this.icmpConfiguration = icmpConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreferredIPVersion(@Nullable String preferredIPVersion) {
+        public Builder preferredIPVersion(@Nullable String preferredIPVersion) {
             this.preferredIPVersion = preferredIPVersion;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable ConnectionMonitorSuccessThresholdResponse successThreshold) {
+        public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdResponse successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setTcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration) {
+        public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationResponse tcpConfiguration) {
             this.tcpConfiguration = tcpConfiguration;
             return this;
         }
 
-        public Builder setTestFrequencySec(@Nullable Integer testFrequencySec) {
+        public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
             this.testFrequencySec = testFrequencySec;
             return this;
         }

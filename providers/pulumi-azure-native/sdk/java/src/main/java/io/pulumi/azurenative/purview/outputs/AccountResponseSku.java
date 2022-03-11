@@ -23,10 +23,10 @@ public final class AccountResponseSku {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private AccountResponseSku(
-        @Nullable Integer capacity,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }
@@ -68,12 +68,12 @@ public final class AccountResponseSku {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

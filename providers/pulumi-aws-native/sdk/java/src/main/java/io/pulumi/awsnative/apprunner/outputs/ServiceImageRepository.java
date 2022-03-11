@@ -25,11 +25,11 @@ public final class ServiceImageRepository {
      */
     private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
-    @OutputCustomType.Constructor({"imageConfiguration","imageIdentifier","imageRepositoryType"})
+    @OutputCustomType.Constructor
     private ServiceImageRepository(
-        @Nullable ServiceImageConfiguration imageConfiguration,
-        String imageIdentifier,
-        ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
+        @OutputCustomType.Parameter("imageConfiguration") @Nullable ServiceImageConfiguration imageConfiguration,
+        @OutputCustomType.Parameter("imageIdentifier") String imageIdentifier,
+        @OutputCustomType.Parameter("imageRepositoryType") ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
         this.imageConfiguration = imageConfiguration;
         this.imageIdentifier = imageIdentifier;
         this.imageRepositoryType = imageRepositoryType;
@@ -77,17 +77,17 @@ public final class ServiceImageRepository {
     	      this.imageRepositoryType = defaults.imageRepositoryType;
         }
 
-        public Builder setImageConfiguration(@Nullable ServiceImageConfiguration imageConfiguration) {
+        public Builder imageConfiguration(@Nullable ServiceImageConfiguration imageConfiguration) {
             this.imageConfiguration = imageConfiguration;
             return this;
         }
 
-        public Builder setImageIdentifier(String imageIdentifier) {
+        public Builder imageIdentifier(String imageIdentifier) {
             this.imageIdentifier = Objects.requireNonNull(imageIdentifier);
             return this;
         }
 
-        public Builder setImageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
+        public Builder imageRepositoryType(ServiceImageRepositoryImageRepositoryType imageRepositoryType) {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }

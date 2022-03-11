@@ -33,12 +33,12 @@ public final class BillingMeterDetailsResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"frequency","meterDetails","meteringType","name"})
+    @OutputCustomType.Constructor
     private BillingMeterDetailsResponse(
-        String frequency,
-        Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
-        String meteringType,
-        String name) {
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("meterDetails") Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails,
+        @OutputCustomType.Parameter("meteringType") String meteringType,
+        @OutputCustomType.Parameter("name") String name) {
         this.frequency = frequency;
         this.meterDetails = meterDetails;
         this.meteringType = meteringType;
@@ -100,22 +100,22 @@ public final class BillingMeterDetailsResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setMeterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
+        public Builder meterDetails(Either<Pav2MeterDetailsResponse,PurchaseMeterDetailsResponse> meterDetails) {
             this.meterDetails = Objects.requireNonNull(meterDetails);
             return this;
         }
 
-        public Builder setMeteringType(String meteringType) {
+        public Builder meteringType(String meteringType) {
             this.meteringType = Objects.requireNonNull(meteringType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -44,13 +44,13 @@ public final class ReferenceInputPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"datasource","diagnostics","etag","serialization","type"})
+    @OutputCustomType.Constructor
     private ReferenceInputPropertiesResponse(
-        @Nullable BlobReferenceInputDataSourceResponse datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        @Nullable Object serialization,
-        String type) {
+        @OutputCustomType.Parameter("datasource") @Nullable BlobReferenceInputDataSourceResponse datasource,
+        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
+        @OutputCustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;
@@ -123,27 +123,27 @@ public final class ReferenceInputPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatasource(@Nullable BlobReferenceInputDataSourceResponse datasource) {
+        public Builder datasource(@Nullable BlobReferenceInputDataSourceResponse datasource) {
             this.datasource = datasource;
             return this;
         }
 
-        public Builder setDiagnostics(DiagnosticsResponse diagnostics) {
+        public Builder diagnostics(DiagnosticsResponse diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setSerialization(@Nullable Object serialization) {
+        public Builder serialization(@Nullable Object serialization) {
             this.serialization = serialization;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

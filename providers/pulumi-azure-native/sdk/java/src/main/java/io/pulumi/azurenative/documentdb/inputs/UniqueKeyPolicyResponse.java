@@ -58,7 +58,7 @@ public final class UniqueKeyPolicyResponse extends io.pulumi.resources.InvokeArg
     	      this.uniqueKeys = defaults.uniqueKeys;
         }
 
-        public Builder setUniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
+        public Builder uniqueKeys(@Nullable List<UniqueKeyResponse> uniqueKeys) {
             this.uniqueKeys = uniqueKeys;
             return this;
         }

@@ -35,12 +35,12 @@ public final class GetScriptDagNode {
      */
     private final String nodeType;
 
-    @OutputCustomType.Constructor({"args","id","lineNumber","nodeType"})
+    @OutputCustomType.Constructor
     private GetScriptDagNode(
-        List<GetScriptDagNodeArg> args,
-        String id,
-        @Nullable Integer lineNumber,
-        String nodeType) {
+        @OutputCustomType.Parameter("args") List<GetScriptDagNodeArg> args,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lineNumber") @Nullable Integer lineNumber,
+        @OutputCustomType.Parameter("nodeType") String nodeType) {
         this.args = args;
         this.id = id;
         this.lineNumber = lineNumber;
@@ -102,22 +102,22 @@ public final class GetScriptDagNode {
     	      this.nodeType = defaults.nodeType;
         }
 
-        public Builder setArgs(List<GetScriptDagNodeArg> args) {
+        public Builder args(List<GetScriptDagNodeArg> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLineNumber(@Nullable Integer lineNumber) {
+        public Builder lineNumber(@Nullable Integer lineNumber) {
             this.lineNumber = lineNumber;
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }

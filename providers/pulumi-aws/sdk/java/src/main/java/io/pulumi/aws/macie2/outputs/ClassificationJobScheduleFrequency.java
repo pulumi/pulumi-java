@@ -29,11 +29,11 @@ public final class ClassificationJobScheduleFrequency {
      */
     private final @Nullable String weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","monthlySchedule","weeklySchedule"})
+    @OutputCustomType.Constructor
     private ClassificationJobScheduleFrequency(
-        @Nullable Boolean dailySchedule,
-        @Nullable Integer monthlySchedule,
-        @Nullable String weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") @Nullable Boolean dailySchedule,
+        @OutputCustomType.Parameter("monthlySchedule") @Nullable Integer monthlySchedule,
+        @OutputCustomType.Parameter("weeklySchedule") @Nullable String weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.monthlySchedule = monthlySchedule;
         this.weeklySchedule = weeklySchedule;
@@ -85,17 +85,17 @@ public final class ClassificationJobScheduleFrequency {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable Boolean dailySchedule) {
+        public Builder dailySchedule(@Nullable Boolean dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setMonthlySchedule(@Nullable Integer monthlySchedule) {
+        public Builder monthlySchedule(@Nullable Integer monthlySchedule) {
             this.monthlySchedule = monthlySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable String weeklySchedule) {
+        public Builder weeklySchedule(@Nullable String weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }

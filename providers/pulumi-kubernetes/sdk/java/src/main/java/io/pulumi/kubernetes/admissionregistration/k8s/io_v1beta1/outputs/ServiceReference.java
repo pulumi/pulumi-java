@@ -33,12 +33,12 @@ public final class ServiceReference {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","namespace","path","port"})
+    @OutputCustomType.Constructor
     private ServiceReference(
-        String name,
-        String namespace,
-        @Nullable String path,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.namespace = namespace;
         this.path = path;
@@ -100,22 +100,22 @@ public final class ServiceReference {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

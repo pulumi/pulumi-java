@@ -15,8 +15,8 @@ public final class PrivateConnectivityResponse {
      */
     private final String privateConnection;
 
-    @OutputCustomType.Constructor({"privateConnection"})
-    private PrivateConnectivityResponse(String privateConnection) {
+    @OutputCustomType.Constructor
+    private PrivateConnectivityResponse(@OutputCustomType.Parameter("privateConnection") String privateConnection) {
         this.privateConnection = privateConnection;
     }
 
@@ -48,7 +48,7 @@ public final class PrivateConnectivityResponse {
     	      this.privateConnection = defaults.privateConnection;
         }
 
-        public Builder setPrivateConnection(String privateConnection) {
+        public Builder privateConnection(String privateConnection) {
             this.privateConnection = Objects.requireNonNull(privateConnection);
             return this;
         }

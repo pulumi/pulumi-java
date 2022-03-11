@@ -73,12 +73,12 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
     	      this.subjectAltNames = defaults.subjectAltNames;
         }
 
-        public Builder setClientTlsPolicy(String clientTlsPolicy) {
+        public Builder clientTlsPolicy(String clientTlsPolicy) {
             this.clientTlsPolicy = Objects.requireNonNull(clientTlsPolicy);
             return this;
         }
 
-        public Builder setSubjectAltNames(List<String> subjectAltNames) {
+        public Builder subjectAltNames(List<String> subjectAltNames) {
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }

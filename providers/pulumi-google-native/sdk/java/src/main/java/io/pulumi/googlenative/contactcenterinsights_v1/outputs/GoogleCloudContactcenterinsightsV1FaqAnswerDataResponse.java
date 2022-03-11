@@ -42,14 +42,14 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"answer","confidenceScore","metadata","queryRecord","question","source"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(
-        String answer,
-        Double confidenceScore,
-        Map<String,String> metadata,
-        String queryRecord,
-        String question,
-        String source) {
+        @OutputCustomType.Parameter("answer") String answer,
+        @OutputCustomType.Parameter("confidenceScore") Double confidenceScore,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("queryRecord") String queryRecord,
+        @OutputCustomType.Parameter("question") String question,
+        @OutputCustomType.Parameter("source") String source) {
         this.answer = answer;
         this.confidenceScore = confidenceScore;
         this.metadata = metadata;
@@ -131,32 +131,32 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setAnswer(String answer) {
+        public Builder answer(String answer) {
             this.answer = Objects.requireNonNull(answer);
             return this;
         }
 
-        public Builder setConfidenceScore(Double confidenceScore) {
+        public Builder confidenceScore(Double confidenceScore) {
             this.confidenceScore = Objects.requireNonNull(confidenceScore);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setQueryRecord(String queryRecord) {
+        public Builder queryRecord(String queryRecord) {
             this.queryRecord = Objects.requireNonNull(queryRecord);
             return this;
         }
 
-        public Builder setQuestion(String question) {
+        public Builder question(String question) {
             this.question = Objects.requireNonNull(question);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

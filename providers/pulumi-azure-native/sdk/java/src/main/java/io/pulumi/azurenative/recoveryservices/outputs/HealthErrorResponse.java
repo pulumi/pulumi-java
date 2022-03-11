@@ -89,23 +89,23 @@ public final class HealthErrorResponse {
      */
     private final @Nullable String summaryMessage;
 
-    @OutputCustomType.Constructor({"creationTimeUtc","customerResolvability","entityId","errorCategory","errorCode","errorId","errorLevel","errorMessage","errorSource","errorType","innerHealthErrors","possibleCauses","recommendedAction","recoveryProviderErrorMessage","summaryMessage"})
+    @OutputCustomType.Constructor
     private HealthErrorResponse(
-        @Nullable String creationTimeUtc,
-        @Nullable String customerResolvability,
-        @Nullable String entityId,
-        @Nullable String errorCategory,
-        @Nullable String errorCode,
-        @Nullable String errorId,
-        @Nullable String errorLevel,
-        @Nullable String errorMessage,
-        @Nullable String errorSource,
-        @Nullable String errorType,
-        @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
-        @Nullable String possibleCauses,
-        @Nullable String recommendedAction,
-        @Nullable String recoveryProviderErrorMessage,
-        @Nullable String summaryMessage) {
+        @OutputCustomType.Parameter("creationTimeUtc") @Nullable String creationTimeUtc,
+        @OutputCustomType.Parameter("customerResolvability") @Nullable String customerResolvability,
+        @OutputCustomType.Parameter("entityId") @Nullable String entityId,
+        @OutputCustomType.Parameter("errorCategory") @Nullable String errorCategory,
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorId") @Nullable String errorId,
+        @OutputCustomType.Parameter("errorLevel") @Nullable String errorLevel,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("errorSource") @Nullable String errorSource,
+        @OutputCustomType.Parameter("errorType") @Nullable String errorType,
+        @OutputCustomType.Parameter("innerHealthErrors") @Nullable List<InnerHealthErrorResponse> innerHealthErrors,
+        @OutputCustomType.Parameter("possibleCauses") @Nullable String possibleCauses,
+        @OutputCustomType.Parameter("recommendedAction") @Nullable String recommendedAction,
+        @OutputCustomType.Parameter("recoveryProviderErrorMessage") @Nullable String recoveryProviderErrorMessage,
+        @OutputCustomType.Parameter("summaryMessage") @Nullable String summaryMessage) {
         this.creationTimeUtc = creationTimeUtc;
         this.customerResolvability = customerResolvability;
         this.entityId = entityId;
@@ -277,77 +277,77 @@ public final class HealthErrorResponse {
     	      this.summaryMessage = defaults.summaryMessage;
         }
 
-        public Builder setCreationTimeUtc(@Nullable String creationTimeUtc) {
+        public Builder creationTimeUtc(@Nullable String creationTimeUtc) {
             this.creationTimeUtc = creationTimeUtc;
             return this;
         }
 
-        public Builder setCustomerResolvability(@Nullable String customerResolvability) {
+        public Builder customerResolvability(@Nullable String customerResolvability) {
             this.customerResolvability = customerResolvability;
             return this;
         }
 
-        public Builder setEntityId(@Nullable String entityId) {
+        public Builder entityId(@Nullable String entityId) {
             this.entityId = entityId;
             return this;
         }
 
-        public Builder setErrorCategory(@Nullable String errorCategory) {
+        public Builder errorCategory(@Nullable String errorCategory) {
             this.errorCategory = errorCategory;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorId(@Nullable String errorId) {
+        public Builder errorId(@Nullable String errorId) {
             this.errorId = errorId;
             return this;
         }
 
-        public Builder setErrorLevel(@Nullable String errorLevel) {
+        public Builder errorLevel(@Nullable String errorLevel) {
             this.errorLevel = errorLevel;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setErrorSource(@Nullable String errorSource) {
+        public Builder errorSource(@Nullable String errorSource) {
             this.errorSource = errorSource;
             return this;
         }
 
-        public Builder setErrorType(@Nullable String errorType) {
+        public Builder errorType(@Nullable String errorType) {
             this.errorType = errorType;
             return this;
         }
 
-        public Builder setInnerHealthErrors(@Nullable List<InnerHealthErrorResponse> innerHealthErrors) {
+        public Builder innerHealthErrors(@Nullable List<InnerHealthErrorResponse> innerHealthErrors) {
             this.innerHealthErrors = innerHealthErrors;
             return this;
         }
 
-        public Builder setPossibleCauses(@Nullable String possibleCauses) {
+        public Builder possibleCauses(@Nullable String possibleCauses) {
             this.possibleCauses = possibleCauses;
             return this;
         }
 
-        public Builder setRecommendedAction(@Nullable String recommendedAction) {
+        public Builder recommendedAction(@Nullable String recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
 
-        public Builder setRecoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
+        public Builder recoveryProviderErrorMessage(@Nullable String recoveryProviderErrorMessage) {
             this.recoveryProviderErrorMessage = recoveryProviderErrorMessage;
             return this;
         }
 
-        public Builder setSummaryMessage(@Nullable String summaryMessage) {
+        public Builder summaryMessage(@Nullable String summaryMessage) {
             this.summaryMessage = summaryMessage;
             return this;
         }

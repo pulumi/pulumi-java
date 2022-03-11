@@ -87,32 +87,32 @@ public final class NodeTemplateNodeTypeFlexibilityGetArgs extends io.pulumi.reso
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpus(@Nullable Input<String> cpus) {
+        public Builder cpus(@Nullable Input<String> cpus) {
             this.cpus = cpus;
             return this;
         }
 
-        public Builder setCpus(@Nullable String cpus) {
+        public Builder cpus(@Nullable String cpus) {
             this.cpus = Input.ofNullable(cpus);
             return this;
         }
 
-        public Builder setLocalSsd(@Nullable Input<String> localSsd) {
+        public Builder localSsd(@Nullable Input<String> localSsd) {
             this.localSsd = localSsd;
             return this;
         }
 
-        public Builder setLocalSsd(@Nullable String localSsd) {
+        public Builder localSsd(@Nullable String localSsd) {
             this.localSsd = Input.ofNullable(localSsd);
             return this;
         }
 
-        public Builder setMemory(@Nullable Input<String> memory) {
+        public Builder memory(@Nullable Input<String> memory) {
             this.memory = memory;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = Input.ofNullable(memory);
             return this;
         }

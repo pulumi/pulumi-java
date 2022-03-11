@@ -25,11 +25,11 @@ public final class BuildStorageLocation {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucket","key","roleArn"})
+    @OutputCustomType.Constructor
     private BuildStorageLocation(
-        String bucket,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.key = key;
         this.roleArn = roleArn;
@@ -81,17 +81,17 @@ public final class BuildStorageLocation {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

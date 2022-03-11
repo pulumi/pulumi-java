@@ -86,32 +86,32 @@ public final class ResponseHeadersPolicyCustomHeadersConfigItemGetArgs extends i
     	      this.value = defaults.value;
         }
 
-        public Builder setHeader(Input<String> header) {
+        public Builder header(Input<String> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setHeader(String header) {
+        public Builder header(String header) {
             this.header = Input.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder setOverride(Input<Boolean> override) {
+        public Builder override(Input<Boolean> override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

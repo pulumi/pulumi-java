@@ -15,11 +15,11 @@ public final class ChannelCustomerManagedS3 {
     private final @Nullable String keyPrefix;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucket","keyPrefix","roleArn"})
+    @OutputCustomType.Constructor
     private ChannelCustomerManagedS3(
-        String bucket,
-        @Nullable String keyPrefix,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("keyPrefix") @Nullable String keyPrefix,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucket = bucket;
         this.keyPrefix = keyPrefix;
         this.roleArn = roleArn;
@@ -59,17 +59,17 @@ public final class ChannelCustomerManagedS3 {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKeyPrefix(@Nullable String keyPrefix) {
+        public Builder keyPrefix(@Nullable String keyPrefix) {
             this.keyPrefix = keyPrefix;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

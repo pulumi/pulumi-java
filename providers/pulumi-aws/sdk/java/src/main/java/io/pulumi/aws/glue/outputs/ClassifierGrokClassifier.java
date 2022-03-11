@@ -27,11 +27,11 @@ public final class ClassifierGrokClassifier {
      */
     private final String grokPattern;
 
-    @OutputCustomType.Constructor({"classification","customPatterns","grokPattern"})
+    @OutputCustomType.Constructor
     private ClassifierGrokClassifier(
-        String classification,
-        @Nullable String customPatterns,
-        String grokPattern) {
+        @OutputCustomType.Parameter("classification") String classification,
+        @OutputCustomType.Parameter("customPatterns") @Nullable String customPatterns,
+        @OutputCustomType.Parameter("grokPattern") String grokPattern) {
         this.classification = classification;
         this.customPatterns = customPatterns;
         this.grokPattern = grokPattern;
@@ -83,17 +83,17 @@ public final class ClassifierGrokClassifier {
     	      this.grokPattern = defaults.grokPattern;
         }
 
-        public Builder setClassification(String classification) {
+        public Builder classification(String classification) {
             this.classification = Objects.requireNonNull(classification);
             return this;
         }
 
-        public Builder setCustomPatterns(@Nullable String customPatterns) {
+        public Builder customPatterns(@Nullable String customPatterns) {
             this.customPatterns = customPatterns;
             return this;
         }
 
-        public Builder setGrokPattern(String grokPattern) {
+        public Builder grokPattern(String grokPattern) {
             this.grokPattern = Objects.requireNonNull(grokPattern);
             return this;
         }

@@ -25,10 +25,10 @@ public final class AuthorityConfigSubjectConfig {
      */
     private final @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName;
 
-    @OutputCustomType.Constructor({"subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private AuthorityConfigSubjectConfig(
-        AuthorityConfigSubjectConfigSubject subject,
-        @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
+        @OutputCustomType.Parameter("subject") AuthorityConfigSubjectConfigSubject subject,
+        @OutputCustomType.Parameter("subjectAltName") @Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }
@@ -72,12 +72,12 @@ public final class AuthorityConfigSubjectConfig {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setSubject(AuthorityConfigSubjectConfigSubject subject) {
+        public Builder subject(AuthorityConfigSubjectConfigSubject subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
+        public Builder subjectAltName(@Nullable AuthorityConfigSubjectConfigSubjectAltName subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }

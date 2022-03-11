@@ -109,42 +109,42 @@ public final class VmGuestHealthAlertCriterionArgs extends io.pulumi.resources.R
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setHealthStates(Input<List<HealthStateArgs>> healthStates) {
+        public Builder healthStates(Input<List<HealthStateArgs>> healthStates) {
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
 
-        public Builder setHealthStates(List<HealthStateArgs> healthStates) {
+        public Builder healthStates(List<HealthStateArgs> healthStates) {
             this.healthStates = Input.of(Objects.requireNonNull(healthStates));
             return this;
         }
 
-        public Builder setMonitorNames(@Nullable Input<List<String>> monitorNames) {
+        public Builder monitorNames(@Nullable Input<List<String>> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
 
-        public Builder setMonitorNames(@Nullable List<String> monitorNames) {
+        public Builder monitorNames(@Nullable List<String> monitorNames) {
             this.monitorNames = Input.ofNullable(monitorNames);
             return this;
         }
 
-        public Builder setMonitorTypes(@Nullable Input<List<String>> monitorTypes) {
+        public Builder monitorTypes(@Nullable Input<List<String>> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
 
-        public Builder setMonitorTypes(@Nullable List<String> monitorTypes) {
+        public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             this.monitorTypes = Input.ofNullable(monitorTypes);
             return this;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }

@@ -19,12 +19,12 @@ public final class TaskDefinitionVolume {
     private final @Nullable TaskDefinitionHostVolumeProperties host;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dockerVolumeConfiguration","eFSVolumeConfiguration","host","name"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolume(
-        @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
-        @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
-        @Nullable TaskDefinitionHostVolumeProperties host,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration,
+        @OutputCustomType.Parameter("eFSVolumeConfiguration") @Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration,
+        @OutputCustomType.Parameter("host") @Nullable TaskDefinitionHostVolumeProperties host,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.eFSVolumeConfiguration = eFSVolumeConfiguration;
         this.host = host;
@@ -70,22 +70,22 @@ public final class TaskDefinitionVolume {
     	      this.name = defaults.name;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionDockerVolumeConfiguration dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
 
-        public Builder setEFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration) {
+        public Builder eFSVolumeConfiguration(@Nullable TaskDefinitionEFSVolumeConfiguration eFSVolumeConfiguration) {
             this.eFSVolumeConfiguration = eFSVolumeConfiguration;
             return this;
         }
 
-        public Builder setHost(@Nullable TaskDefinitionHostVolumeProperties host) {
+        public Builder host(@Nullable TaskDefinitionHostVolumeProperties host) {
             this.host = host;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

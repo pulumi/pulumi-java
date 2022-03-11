@@ -28,11 +28,11 @@ public final class AssetProperty {
      */
     private final @Nullable AssetPropertyNotificationState notificationState;
 
-    @OutputCustomType.Constructor({"alias","logicalId","notificationState"})
+    @OutputCustomType.Constructor
     private AssetProperty(
-        @Nullable String alias,
-        String logicalId,
-        @Nullable AssetPropertyNotificationState notificationState) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("logicalId") String logicalId,
+        @OutputCustomType.Parameter("notificationState") @Nullable AssetPropertyNotificationState notificationState) {
         this.alias = alias;
         this.logicalId = logicalId;
         this.notificationState = notificationState;
@@ -84,17 +84,17 @@ public final class AssetProperty {
     	      this.notificationState = defaults.notificationState;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setLogicalId(String logicalId) {
+        public Builder logicalId(String logicalId) {
             this.logicalId = Objects.requireNonNull(logicalId);
             return this;
         }
 
-        public Builder setNotificationState(@Nullable AssetPropertyNotificationState notificationState) {
+        public Builder notificationState(@Nullable AssetPropertyNotificationState notificationState) {
             this.notificationState = notificationState;
             return this;
         }

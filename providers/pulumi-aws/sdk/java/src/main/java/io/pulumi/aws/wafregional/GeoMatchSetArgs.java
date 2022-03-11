@@ -72,22 +72,22 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setGeoMatchConstraints(@Nullable Input<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints) {
+        public Builder geoMatchConstraints(@Nullable Input<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints) {
             this.geoMatchConstraints = geoMatchConstraints;
             return this;
         }
 
-        public Builder setGeoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintArgs> geoMatchConstraints) {
+        public Builder geoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintArgs> geoMatchConstraints) {
             this.geoMatchConstraints = Input.ofNullable(geoMatchConstraints);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

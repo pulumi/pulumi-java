@@ -24,10 +24,10 @@ public final class ContainerRecipeInstanceConfiguration {
      */
     private final @Nullable String image;
 
-    @OutputCustomType.Constructor({"blockDeviceMappings","image"})
+    @OutputCustomType.Constructor
     private ContainerRecipeInstanceConfiguration(
-        @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
-        @Nullable String image) {
+        @OutputCustomType.Parameter("blockDeviceMappings") @Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("image") @Nullable String image) {
         this.blockDeviceMappings = blockDeviceMappings;
         this.image = image;
     }
@@ -69,12 +69,12 @@ public final class ContainerRecipeInstanceConfiguration {
     	      this.image = defaults.image;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<ContainerRecipeInstanceBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }

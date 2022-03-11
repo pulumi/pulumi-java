@@ -204,102 +204,102 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcessCapacityTerminationPolicy(@Nullable Input<String> excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable Input<String> excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = excessCapacityTerminationPolicy;
             return this;
         }
 
-        public Builder setExcessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
+        public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
             this.excessCapacityTerminationPolicy = Input.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
 
-        public Builder setLaunchTemplateConfig(Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
+        public Builder launchTemplateConfig(Input<FleetLaunchTemplateConfigArgs> launchTemplateConfig) {
             this.launchTemplateConfig = Objects.requireNonNull(launchTemplateConfig);
             return this;
         }
 
-        public Builder setLaunchTemplateConfig(FleetLaunchTemplateConfigArgs launchTemplateConfig) {
+        public Builder launchTemplateConfig(FleetLaunchTemplateConfigArgs launchTemplateConfig) {
             this.launchTemplateConfig = Input.of(Objects.requireNonNull(launchTemplateConfig));
             return this;
         }
 
-        public Builder setOnDemandOptions(@Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions) {
+        public Builder onDemandOptions(@Nullable Input<FleetOnDemandOptionsArgs> onDemandOptions) {
             this.onDemandOptions = onDemandOptions;
             return this;
         }
 
-        public Builder setOnDemandOptions(@Nullable FleetOnDemandOptionsArgs onDemandOptions) {
+        public Builder onDemandOptions(@Nullable FleetOnDemandOptionsArgs onDemandOptions) {
             this.onDemandOptions = Input.ofNullable(onDemandOptions);
             return this;
         }
 
-        public Builder setReplaceUnhealthyInstances(@Nullable Input<Boolean> replaceUnhealthyInstances) {
+        public Builder replaceUnhealthyInstances(@Nullable Input<Boolean> replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = replaceUnhealthyInstances;
             return this;
         }
 
-        public Builder setReplaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
+        public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
             this.replaceUnhealthyInstances = Input.ofNullable(replaceUnhealthyInstances);
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable Input<FleetSpotOptionsArgs> spotOptions) {
+        public Builder spotOptions(@Nullable Input<FleetSpotOptionsArgs> spotOptions) {
             this.spotOptions = spotOptions;
             return this;
         }
 
-        public Builder setSpotOptions(@Nullable FleetSpotOptionsArgs spotOptions) {
+        public Builder spotOptions(@Nullable FleetSpotOptionsArgs spotOptions) {
             this.spotOptions = Input.ofNullable(spotOptions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetCapacitySpecification(Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(Input<FleetTargetCapacitySpecificationArgs> targetCapacitySpecification) {
             this.targetCapacitySpecification = Objects.requireNonNull(targetCapacitySpecification);
             return this;
         }
 
-        public Builder setTargetCapacitySpecification(FleetTargetCapacitySpecificationArgs targetCapacitySpecification) {
+        public Builder targetCapacitySpecification(FleetTargetCapacitySpecificationArgs targetCapacitySpecification) {
             this.targetCapacitySpecification = Input.of(Objects.requireNonNull(targetCapacitySpecification));
             return this;
         }
 
-        public Builder setTerminateInstances(@Nullable Input<Boolean> terminateInstances) {
+        public Builder terminateInstances(@Nullable Input<Boolean> terminateInstances) {
             this.terminateInstances = terminateInstances;
             return this;
         }
 
-        public Builder setTerminateInstances(@Nullable Boolean terminateInstances) {
+        public Builder terminateInstances(@Nullable Boolean terminateInstances) {
             this.terminateInstances = Input.ofNullable(terminateInstances);
             return this;
         }
 
-        public Builder setTerminateInstancesWithExpiration(@Nullable Input<Boolean> terminateInstancesWithExpiration) {
+        public Builder terminateInstancesWithExpiration(@Nullable Input<Boolean> terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = terminateInstancesWithExpiration;
             return this;
         }
 
-        public Builder setTerminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
+        public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
             this.terminateInstancesWithExpiration = Input.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

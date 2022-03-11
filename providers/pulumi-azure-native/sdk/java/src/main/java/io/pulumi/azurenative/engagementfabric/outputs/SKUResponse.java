@@ -22,10 +22,10 @@ public final class SKUResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private SKUResponse(
-        String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.name = name;
         this.tier = tier;
     }
@@ -67,12 +67,12 @@ public final class SKUResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

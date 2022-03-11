@@ -22,10 +22,10 @@ public final class ScalingPlanApplicationSourceTagFilter {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"key","values"})
+    @OutputCustomType.Constructor
     private ScalingPlanApplicationSourceTagFilter(
-        String key,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.values = values;
     }
@@ -67,12 +67,12 @@ public final class ScalingPlanApplicationSourceTagFilter {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

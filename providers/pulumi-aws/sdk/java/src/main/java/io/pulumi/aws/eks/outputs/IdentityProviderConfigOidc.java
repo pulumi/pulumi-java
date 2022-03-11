@@ -53,16 +53,16 @@ public final class IdentityProviderConfigOidc {
      */
     private final @Nullable String usernamePrefix;
 
-    @OutputCustomType.Constructor({"clientId","groupsClaim","groupsPrefix","identityProviderConfigName","issuerUrl","requiredClaims","usernameClaim","usernamePrefix"})
+    @OutputCustomType.Constructor
     private IdentityProviderConfigOidc(
-        String clientId,
-        @Nullable String groupsClaim,
-        @Nullable String groupsPrefix,
-        String identityProviderConfigName,
-        String issuerUrl,
-        @Nullable Map<String,String> requiredClaims,
-        @Nullable String usernameClaim,
-        @Nullable String usernamePrefix) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("groupsClaim") @Nullable String groupsClaim,
+        @OutputCustomType.Parameter("groupsPrefix") @Nullable String groupsPrefix,
+        @OutputCustomType.Parameter("identityProviderConfigName") String identityProviderConfigName,
+        @OutputCustomType.Parameter("issuerUrl") String issuerUrl,
+        @OutputCustomType.Parameter("requiredClaims") @Nullable Map<String,String> requiredClaims,
+        @OutputCustomType.Parameter("usernameClaim") @Nullable String usernameClaim,
+        @OutputCustomType.Parameter("usernamePrefix") @Nullable String usernamePrefix) {
         this.clientId = clientId;
         this.groupsClaim = groupsClaim;
         this.groupsPrefix = groupsPrefix;
@@ -164,42 +164,42 @@ public final class IdentityProviderConfigOidc {
     	      this.usernamePrefix = defaults.usernamePrefix;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setGroupsClaim(@Nullable String groupsClaim) {
+        public Builder groupsClaim(@Nullable String groupsClaim) {
             this.groupsClaim = groupsClaim;
             return this;
         }
 
-        public Builder setGroupsPrefix(@Nullable String groupsPrefix) {
+        public Builder groupsPrefix(@Nullable String groupsPrefix) {
             this.groupsPrefix = groupsPrefix;
             return this;
         }
 
-        public Builder setIdentityProviderConfigName(String identityProviderConfigName) {
+        public Builder identityProviderConfigName(String identityProviderConfigName) {
             this.identityProviderConfigName = Objects.requireNonNull(identityProviderConfigName);
             return this;
         }
 
-        public Builder setIssuerUrl(String issuerUrl) {
+        public Builder issuerUrl(String issuerUrl) {
             this.issuerUrl = Objects.requireNonNull(issuerUrl);
             return this;
         }
 
-        public Builder setRequiredClaims(@Nullable Map<String,String> requiredClaims) {
+        public Builder requiredClaims(@Nullable Map<String,String> requiredClaims) {
             this.requiredClaims = requiredClaims;
             return this;
         }
 
-        public Builder setUsernameClaim(@Nullable String usernameClaim) {
+        public Builder usernameClaim(@Nullable String usernameClaim) {
             this.usernameClaim = usernameClaim;
             return this;
         }
 
-        public Builder setUsernamePrefix(@Nullable String usernamePrefix) {
+        public Builder usernamePrefix(@Nullable String usernamePrefix) {
             this.usernamePrefix = usernamePrefix;
             return this;
         }

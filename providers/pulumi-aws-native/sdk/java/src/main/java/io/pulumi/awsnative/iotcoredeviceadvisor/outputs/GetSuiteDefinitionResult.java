@@ -36,13 +36,13 @@ public final class GetSuiteDefinitionResult {
      */
     private final @Nullable List<SuiteDefinitionTag> tags;
 
-    @OutputCustomType.Constructor({"suiteDefinitionArn","suiteDefinitionConfiguration","suiteDefinitionId","suiteDefinitionVersion","tags"})
+    @OutputCustomType.Constructor
     private GetSuiteDefinitionResult(
-        @Nullable String suiteDefinitionArn,
-        @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
-        @Nullable String suiteDefinitionId,
-        @Nullable String suiteDefinitionVersion,
-        @Nullable List<SuiteDefinitionTag> tags) {
+        @OutputCustomType.Parameter("suiteDefinitionArn") @Nullable String suiteDefinitionArn,
+        @OutputCustomType.Parameter("suiteDefinitionConfiguration") @Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration,
+        @OutputCustomType.Parameter("suiteDefinitionId") @Nullable String suiteDefinitionId,
+        @OutputCustomType.Parameter("suiteDefinitionVersion") @Nullable String suiteDefinitionVersion,
+        @OutputCustomType.Parameter("tags") @Nullable List<SuiteDefinitionTag> tags) {
         this.suiteDefinitionArn = suiteDefinitionArn;
         this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
         this.suiteDefinitionId = suiteDefinitionId;
@@ -110,27 +110,27 @@ public final class GetSuiteDefinitionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setSuiteDefinitionArn(@Nullable String suiteDefinitionArn) {
+        public Builder suiteDefinitionArn(@Nullable String suiteDefinitionArn) {
             this.suiteDefinitionArn = suiteDefinitionArn;
             return this;
         }
 
-        public Builder setSuiteDefinitionConfiguration(@Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration) {
+        public Builder suiteDefinitionConfiguration(@Nullable SuiteDefinitionConfigurationProperties suiteDefinitionConfiguration) {
             this.suiteDefinitionConfiguration = suiteDefinitionConfiguration;
             return this;
         }
 
-        public Builder setSuiteDefinitionId(@Nullable String suiteDefinitionId) {
+        public Builder suiteDefinitionId(@Nullable String suiteDefinitionId) {
             this.suiteDefinitionId = suiteDefinitionId;
             return this;
         }
 
-        public Builder setSuiteDefinitionVersion(@Nullable String suiteDefinitionVersion) {
+        public Builder suiteDefinitionVersion(@Nullable String suiteDefinitionVersion) {
             this.suiteDefinitionVersion = suiteDefinitionVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SuiteDefinitionTag> tags) {
+        public Builder tags(@Nullable List<SuiteDefinitionTag> tags) {
             this.tags = tags;
             return this;
         }

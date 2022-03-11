@@ -47,7 +47,7 @@ public final class GetEnvironmentConfigDatabaseConfig extends io.pulumi.resource
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

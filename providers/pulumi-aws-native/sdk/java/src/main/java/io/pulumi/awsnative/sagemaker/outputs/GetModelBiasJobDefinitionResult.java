@@ -22,10 +22,10 @@ public final class GetModelBiasJobDefinitionResult {
      */
     private final @Nullable String jobDefinitionArn;
 
-    @OutputCustomType.Constructor({"creationTime","jobDefinitionArn"})
+    @OutputCustomType.Constructor
     private GetModelBiasJobDefinitionResult(
-        @Nullable String creationTime,
-        @Nullable String jobDefinitionArn) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("jobDefinitionArn") @Nullable String jobDefinitionArn) {
         this.creationTime = creationTime;
         this.jobDefinitionArn = jobDefinitionArn;
     }
@@ -67,12 +67,12 @@ public final class GetModelBiasJobDefinitionResult {
     	      this.jobDefinitionArn = defaults.jobDefinitionArn;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setJobDefinitionArn(@Nullable String jobDefinitionArn) {
+        public Builder jobDefinitionArn(@Nullable String jobDefinitionArn) {
             this.jobDefinitionArn = jobDefinitionArn;
             return this;
         }

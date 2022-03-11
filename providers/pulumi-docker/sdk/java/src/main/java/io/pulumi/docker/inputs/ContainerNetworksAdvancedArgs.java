@@ -87,42 +87,42 @@ public final class ContainerNetworksAdvancedArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder setAliases(@Nullable Input<List<String>> aliases) {
+        public Builder aliases(@Nullable Input<List<String>> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setAliases(@Nullable List<String> aliases) {
+        public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = Input.ofNullable(aliases);
             return this;
         }
 
-        public Builder setIpv4Address(@Nullable Input<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Input<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
 
-        public Builder setIpv4Address(@Nullable String ipv4Address) {
+        public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Input.ofNullable(ipv4Address);
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Input.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

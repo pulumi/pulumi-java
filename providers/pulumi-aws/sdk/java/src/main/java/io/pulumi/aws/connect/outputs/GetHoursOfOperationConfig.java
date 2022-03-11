@@ -28,11 +28,11 @@ public final class GetHoursOfOperationConfig {
      */
     private final List<GetHoursOfOperationConfigStartTime> startTimes;
 
-    @OutputCustomType.Constructor({"day","endTimes","startTimes"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationConfig(
-        String day,
-        List<GetHoursOfOperationConfigEndTime> endTimes,
-        List<GetHoursOfOperationConfigStartTime> startTimes) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("endTimes") List<GetHoursOfOperationConfigEndTime> endTimes,
+        @OutputCustomType.Parameter("startTimes") List<GetHoursOfOperationConfigStartTime> startTimes) {
         this.day = day;
         this.endTimes = endTimes;
         this.startTimes = startTimes;
@@ -84,17 +84,17 @@ public final class GetHoursOfOperationConfig {
     	      this.startTimes = defaults.startTimes;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setEndTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
+        public Builder endTimes(List<GetHoursOfOperationConfigEndTime> endTimes) {
             this.endTimes = Objects.requireNonNull(endTimes);
             return this;
         }
 
-        public Builder setStartTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
+        public Builder startTimes(List<GetHoursOfOperationConfigStartTime> startTimes) {
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }

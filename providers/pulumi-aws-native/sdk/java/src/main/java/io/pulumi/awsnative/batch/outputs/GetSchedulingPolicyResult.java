@@ -15,10 +15,10 @@ public final class GetSchedulingPolicyResult {
     private final @Nullable String arn;
     private final @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy;
 
-    @OutputCustomType.Constructor({"arn","fairsharePolicy"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyResult(
-        @Nullable String arn,
-        @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("fairsharePolicy") @Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
         this.arn = arn;
         this.fairsharePolicy = fairsharePolicy;
     }
@@ -52,12 +52,12 @@ public final class GetSchedulingPolicyResult {
     	      this.fairsharePolicy = defaults.fairsharePolicy;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setFairsharePolicy(@Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
+        public Builder fairsharePolicy(@Nullable SchedulingPolicyFairsharePolicy fairsharePolicy) {
             this.fairsharePolicy = fairsharePolicy;
             return this;
         }

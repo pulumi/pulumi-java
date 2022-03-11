@@ -17,8 +17,8 @@ public final class ControllerDetailsResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ControllerDetailsResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private ControllerDetailsResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 
@@ -50,7 +50,7 @@ public final class ControllerDetailsResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

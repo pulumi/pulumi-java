@@ -87,32 +87,32 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.accessPolicyResource = defaults.accessPolicyResource;
         }
 
-        public Builder setAccessPolicyIdentity(Input<AccessPolicyIdentityArgs> accessPolicyIdentity) {
+        public Builder accessPolicyIdentity(Input<AccessPolicyIdentityArgs> accessPolicyIdentity) {
             this.accessPolicyIdentity = Objects.requireNonNull(accessPolicyIdentity);
             return this;
         }
 
-        public Builder setAccessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
+        public Builder accessPolicyIdentity(AccessPolicyIdentityArgs accessPolicyIdentity) {
             this.accessPolicyIdentity = Input.of(Objects.requireNonNull(accessPolicyIdentity));
             return this;
         }
 
-        public Builder setAccessPolicyPermission(Input<String> accessPolicyPermission) {
+        public Builder accessPolicyPermission(Input<String> accessPolicyPermission) {
             this.accessPolicyPermission = Objects.requireNonNull(accessPolicyPermission);
             return this;
         }
 
-        public Builder setAccessPolicyPermission(String accessPolicyPermission) {
+        public Builder accessPolicyPermission(String accessPolicyPermission) {
             this.accessPolicyPermission = Input.of(Objects.requireNonNull(accessPolicyPermission));
             return this;
         }
 
-        public Builder setAccessPolicyResource(Input<AccessPolicyResourceArgs> accessPolicyResource) {
+        public Builder accessPolicyResource(Input<AccessPolicyResourceArgs> accessPolicyResource) {
             this.accessPolicyResource = Objects.requireNonNull(accessPolicyResource);
             return this;
         }
 
-        public Builder setAccessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
+        public Builder accessPolicyResource(AccessPolicyResourceArgs accessPolicyResource) {
             this.accessPolicyResource = Input.of(Objects.requireNonNull(accessPolicyResource));
             return this;
         }

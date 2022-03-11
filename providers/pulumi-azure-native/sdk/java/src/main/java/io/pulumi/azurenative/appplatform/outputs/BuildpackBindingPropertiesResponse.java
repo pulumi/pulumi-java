@@ -28,11 +28,11 @@ public final class BuildpackBindingPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"bindingType","launchProperties","provisioningState"})
+    @OutputCustomType.Constructor
     private BuildpackBindingPropertiesResponse(
-        @Nullable String bindingType,
-        @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
-        String provisioningState) {
+        @OutputCustomType.Parameter("bindingType") @Nullable String bindingType,
+        @OutputCustomType.Parameter("launchProperties") @Nullable BuildpackBindingLaunchPropertiesResponse launchProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.bindingType = bindingType;
         this.launchProperties = launchProperties;
         this.provisioningState = provisioningState;
@@ -84,17 +84,17 @@ public final class BuildpackBindingPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setBindingType(@Nullable String bindingType) {
+        public Builder bindingType(@Nullable String bindingType) {
             this.bindingType = bindingType;
             return this;
         }
 
-        public Builder setLaunchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
+        public Builder launchProperties(@Nullable BuildpackBindingLaunchPropertiesResponse launchProperties) {
             this.launchProperties = launchProperties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

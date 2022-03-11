@@ -22,10 +22,10 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
      */
     private final @Nullable String snapshotName;
 
-    @OutputCustomType.Constructor({"applicationRestoreType","snapshotName"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration(
-        @Nullable String applicationRestoreType,
-        @Nullable String snapshotName) {
+        @OutputCustomType.Parameter("applicationRestoreType") @Nullable String applicationRestoreType,
+        @OutputCustomType.Parameter("snapshotName") @Nullable String snapshotName) {
         this.applicationRestoreType = applicationRestoreType;
         this.snapshotName = snapshotName;
     }
@@ -67,12 +67,12 @@ public final class ApplicationApplicationConfigurationRunConfigurationApplicatio
     	      this.snapshotName = defaults.snapshotName;
         }
 
-        public Builder setApplicationRestoreType(@Nullable String applicationRestoreType) {
+        public Builder applicationRestoreType(@Nullable String applicationRestoreType) {
             this.applicationRestoreType = applicationRestoreType;
             return this;
         }
 
-        public Builder setSnapshotName(@Nullable String snapshotName) {
+        public Builder snapshotName(@Nullable String snapshotName) {
             this.snapshotName = snapshotName;
             return this;
         }

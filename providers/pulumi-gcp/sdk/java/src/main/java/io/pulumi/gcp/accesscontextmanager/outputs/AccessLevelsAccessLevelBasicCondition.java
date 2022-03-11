@@ -71,14 +71,14 @@ public final class AccessLevelsAccessLevelBasicCondition {
      */
     private final @Nullable List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor({"devicePolicy","ipSubnetworks","members","negate","regions","requiredAccessLevels"})
+    @OutputCustomType.Constructor
     private AccessLevelsAccessLevelBasicCondition(
-        @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
-        @Nullable List<String> ipSubnetworks,
-        @Nullable List<String> members,
-        @Nullable Boolean negate,
-        @Nullable List<String> regions,
-        @Nullable List<String> requiredAccessLevels) {
+        @OutputCustomType.Parameter("devicePolicy") @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
+        @OutputCustomType.Parameter("ipSubnetworks") @Nullable List<String> ipSubnetworks,
+        @OutputCustomType.Parameter("members") @Nullable List<String> members,
+        @OutputCustomType.Parameter("negate") @Nullable Boolean negate,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("requiredAccessLevels") @Nullable List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;
@@ -186,32 +186,32 @@ public final class AccessLevelsAccessLevelBasicCondition {
     	      this.requiredAccessLevels = defaults.requiredAccessLevels;
         }
 
-        public Builder setDevicePolicy(@Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy) {
+        public Builder devicePolicy(@Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy) {
             this.devicePolicy = devicePolicy;
             return this;
         }
 
-        public Builder setIpSubnetworks(@Nullable List<String> ipSubnetworks) {
+        public Builder ipSubnetworks(@Nullable List<String> ipSubnetworks) {
             this.ipSubnetworks = ipSubnetworks;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRequiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
+        public Builder requiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
             this.requiredAccessLevels = requiredAccessLevels;
             return this;
         }

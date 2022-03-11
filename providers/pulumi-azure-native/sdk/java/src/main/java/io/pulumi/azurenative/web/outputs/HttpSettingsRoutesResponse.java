@@ -17,8 +17,8 @@ public final class HttpSettingsRoutesResponse {
      */
     private final @Nullable String apiPrefix;
 
-    @OutputCustomType.Constructor({"apiPrefix"})
-    private HttpSettingsRoutesResponse(@Nullable String apiPrefix) {
+    @OutputCustomType.Constructor
+    private HttpSettingsRoutesResponse(@OutputCustomType.Parameter("apiPrefix") @Nullable String apiPrefix) {
         this.apiPrefix = apiPrefix;
     }
 
@@ -50,7 +50,7 @@ public final class HttpSettingsRoutesResponse {
     	      this.apiPrefix = defaults.apiPrefix;
         }
 
-        public Builder setApiPrefix(@Nullable String apiPrefix) {
+        public Builder apiPrefix(@Nullable String apiPrefix) {
             this.apiPrefix = apiPrefix;
             return this;
         }

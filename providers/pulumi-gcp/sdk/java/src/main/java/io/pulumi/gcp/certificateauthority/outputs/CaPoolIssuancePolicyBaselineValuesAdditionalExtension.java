@@ -29,11 +29,11 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"critical","objectId","value"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyBaselineValuesAdditionalExtension(
-        Boolean critical,
-        CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
-        String value) {
+        @OutputCustomType.Parameter("critical") Boolean critical,
+        @OutputCustomType.Parameter("objectId") CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId,
+        @OutputCustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;
@@ -87,17 +87,17 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtension {
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(Boolean critical) {
+        public Builder critical(Boolean critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
-        public Builder setObjectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId) {
+        public Builder objectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -29,12 +29,12 @@ public final class UrlRewriteActionParametersResponse {
      */
     private final String sourcePattern;
 
-    @OutputCustomType.Constructor({"destination","odataType","preserveUnmatchedPath","sourcePattern"})
+    @OutputCustomType.Constructor
     private UrlRewriteActionParametersResponse(
-        String destination,
-        String odataType,
-        @Nullable Boolean preserveUnmatchedPath,
-        String sourcePattern) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("preserveUnmatchedPath") @Nullable Boolean preserveUnmatchedPath,
+        @OutputCustomType.Parameter("sourcePattern") String sourcePattern) {
         this.destination = destination;
         this.odataType = odataType;
         this.preserveUnmatchedPath = preserveUnmatchedPath;
@@ -92,22 +92,22 @@ public final class UrlRewriteActionParametersResponse {
     	      this.sourcePattern = defaults.sourcePattern;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setPreserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
+        public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
             this.preserveUnmatchedPath = preserveUnmatchedPath;
             return this;
         }
 
-        public Builder setSourcePattern(String sourcePattern) {
+        public Builder sourcePattern(String sourcePattern) {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }

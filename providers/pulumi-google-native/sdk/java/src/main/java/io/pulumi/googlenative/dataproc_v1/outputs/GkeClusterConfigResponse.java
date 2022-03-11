@@ -15,8 +15,8 @@ public final class GkeClusterConfigResponse {
      */
     private final NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget;
 
-    @OutputCustomType.Constructor({"namespacedGkeDeploymentTarget"})
-    private GkeClusterConfigResponse(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
+    @OutputCustomType.Constructor
+    private GkeClusterConfigResponse(@OutputCustomType.Parameter("namespacedGkeDeploymentTarget") NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
         this.namespacedGkeDeploymentTarget = namespacedGkeDeploymentTarget;
     }
 
@@ -48,7 +48,7 @@ public final class GkeClusterConfigResponse {
     	      this.namespacedGkeDeploymentTarget = defaults.namespacedGkeDeploymentTarget;
         }
 
-        public Builder setNamespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
+        public Builder namespacedGkeDeploymentTarget(NamespacedGkeDeploymentTargetResponse namespacedGkeDeploymentTarget) {
             this.namespacedGkeDeploymentTarget = Objects.requireNonNull(namespacedGkeDeploymentTarget);
             return this;
         }

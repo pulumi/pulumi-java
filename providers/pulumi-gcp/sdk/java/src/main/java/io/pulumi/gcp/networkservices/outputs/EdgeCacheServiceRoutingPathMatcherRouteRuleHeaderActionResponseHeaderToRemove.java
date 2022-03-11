@@ -16,8 +16,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor({"headerName"})
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove(String headerName) {
+    @OutputCustomType.Constructor
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToRemove(@OutputCustomType.Parameter("headerName") String headerName) {
         this.headerName = headerName;
     }
 
@@ -50,7 +50,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }

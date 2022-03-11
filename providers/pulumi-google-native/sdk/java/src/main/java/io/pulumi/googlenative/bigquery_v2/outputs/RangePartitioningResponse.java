@@ -21,10 +21,10 @@ public final class RangePartitioningResponse {
      */
     private final RangePartitioningRangeResponse range;
 
-    @OutputCustomType.Constructor({"field","range"})
+    @OutputCustomType.Constructor
     private RangePartitioningResponse(
-        String field,
-        RangePartitioningRangeResponse range) {
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("range") RangePartitioningRangeResponse range) {
         this.field = field;
         this.range = range;
     }
@@ -66,12 +66,12 @@ public final class RangePartitioningResponse {
     	      this.range = defaults.range;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setRange(RangePartitioningRangeResponse range) {
+        public Builder range(RangePartitioningRangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

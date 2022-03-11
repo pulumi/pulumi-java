@@ -51,7 +51,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

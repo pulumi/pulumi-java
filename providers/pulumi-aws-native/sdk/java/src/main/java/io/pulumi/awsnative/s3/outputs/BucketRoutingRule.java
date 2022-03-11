@@ -19,10 +19,10 @@ public final class BucketRoutingRule {
     private final BucketRedirectRule redirectRule;
     private final @Nullable BucketRoutingRuleCondition routingRuleCondition;
 
-    @OutputCustomType.Constructor({"redirectRule","routingRuleCondition"})
+    @OutputCustomType.Constructor
     private BucketRoutingRule(
-        BucketRedirectRule redirectRule,
-        @Nullable BucketRoutingRuleCondition routingRuleCondition) {
+        @OutputCustomType.Parameter("redirectRule") BucketRedirectRule redirectRule,
+        @OutputCustomType.Parameter("routingRuleCondition") @Nullable BucketRoutingRuleCondition routingRuleCondition) {
         this.redirectRule = redirectRule;
         this.routingRuleCondition = routingRuleCondition;
     }
@@ -60,12 +60,12 @@ public final class BucketRoutingRule {
     	      this.routingRuleCondition = defaults.routingRuleCondition;
         }
 
-        public Builder setRedirectRule(BucketRedirectRule redirectRule) {
+        public Builder redirectRule(BucketRedirectRule redirectRule) {
             this.redirectRule = Objects.requireNonNull(redirectRule);
             return this;
         }
 
-        public Builder setRoutingRuleCondition(@Nullable BucketRoutingRuleCondition routingRuleCondition) {
+        public Builder routingRuleCondition(@Nullable BucketRoutingRuleCondition routingRuleCondition) {
             this.routingRuleCondition = routingRuleCondition;
             return this;
         }

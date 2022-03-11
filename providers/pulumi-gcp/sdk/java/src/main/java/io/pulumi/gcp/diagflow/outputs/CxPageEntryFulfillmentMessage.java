@@ -17,8 +17,8 @@ public final class CxPageEntryFulfillmentMessage {
      */
     private final @Nullable CxPageEntryFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor({"text"})
-    private CxPageEntryFulfillmentMessage(@Nullable CxPageEntryFulfillmentMessageText text) {
+    @OutputCustomType.Constructor
+    private CxPageEntryFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxPageEntryFulfillmentMessageText text) {
         this.text = text;
     }
 
@@ -50,7 +50,7 @@ public final class CxPageEntryFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxPageEntryFulfillmentMessageText text) {
+        public Builder text(@Nullable CxPageEntryFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

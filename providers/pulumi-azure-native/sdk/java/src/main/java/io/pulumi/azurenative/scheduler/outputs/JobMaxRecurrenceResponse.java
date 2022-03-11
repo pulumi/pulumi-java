@@ -23,10 +23,10 @@ public final class JobMaxRecurrenceResponse {
      */
     private final @Nullable Integer interval;
 
-    @OutputCustomType.Constructor({"frequency","interval"})
+    @OutputCustomType.Constructor
     private JobMaxRecurrenceResponse(
-        @Nullable String frequency,
-        @Nullable Integer interval) {
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval) {
         this.frequency = frequency;
         this.interval = interval;
     }
@@ -68,12 +68,12 @@ public final class JobMaxRecurrenceResponse {
     	      this.interval = defaults.interval;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }

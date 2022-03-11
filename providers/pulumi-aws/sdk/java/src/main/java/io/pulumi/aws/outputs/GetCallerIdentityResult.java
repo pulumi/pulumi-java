@@ -30,12 +30,12 @@ public final class GetCallerIdentityResult {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"accountId","arn","id","userId"})
+    @OutputCustomType.Constructor
     private GetCallerIdentityResult(
-        String accountId,
-        String arn,
-        String id,
-        String userId) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.accountId = accountId;
         this.arn = arn;
         this.id = id;
@@ -97,22 +97,22 @@ public final class GetCallerIdentityResult {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

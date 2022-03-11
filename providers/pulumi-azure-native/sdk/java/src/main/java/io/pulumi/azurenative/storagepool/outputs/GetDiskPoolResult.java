@@ -80,21 +80,21 @@ public final class GetDiskPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalCapabilities","availabilityZones","disks","id","location","name","provisioningState","status","subnetId","systemData","tags","tier","type"})
+    @OutputCustomType.Constructor
     private GetDiskPoolResult(
-        @Nullable List<String> additionalCapabilities,
-        List<String> availabilityZones,
-        @Nullable List<DiskResponse> disks,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        String status,
-        String subnetId,
-        SystemMetadataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tier,
-        String type) {
+        @OutputCustomType.Parameter("additionalCapabilities") @Nullable List<String> additionalCapabilities,
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("disks") @Nullable List<DiskResponse> disks,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("systemData") SystemMetadataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalCapabilities = additionalCapabilities;
         this.availabilityZones = availabilityZones;
         this.disks = disks;
@@ -246,67 +246,67 @@ public final class GetDiskPoolResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalCapabilities(@Nullable List<String> additionalCapabilities) {
+        public Builder additionalCapabilities(@Nullable List<String> additionalCapabilities) {
             this.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setDisks(@Nullable List<DiskResponse> disks) {
+        public Builder disks(@Nullable List<DiskResponse> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSystemData(SystemMetadataResponse systemData) {
+        public Builder systemData(SystemMetadataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

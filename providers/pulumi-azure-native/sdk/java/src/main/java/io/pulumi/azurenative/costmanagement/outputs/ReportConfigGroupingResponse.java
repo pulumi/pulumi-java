@@ -20,10 +20,10 @@ public final class ReportConfigGroupingResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private ReportConfigGroupingResponse(
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class ReportConfigGroupingResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

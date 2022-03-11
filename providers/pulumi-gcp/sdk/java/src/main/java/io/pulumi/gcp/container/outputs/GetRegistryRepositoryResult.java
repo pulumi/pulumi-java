@@ -20,12 +20,12 @@ public final class GetRegistryRepositoryResult {
     private final @Nullable String region;
     private final String repositoryUrl;
 
-    @OutputCustomType.Constructor({"id","project","region","repositoryUrl"})
+    @OutputCustomType.Constructor
     private GetRegistryRepositoryResult(
-        String id,
-        String project,
-        @Nullable String region,
-        String repositoryUrl) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl) {
         this.id = id;
         this.project = project;
         this.region = region;
@@ -75,22 +75,22 @@ public final class GetRegistryRepositoryResult {
     	      this.repositoryUrl = defaults.repositoryUrl;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }

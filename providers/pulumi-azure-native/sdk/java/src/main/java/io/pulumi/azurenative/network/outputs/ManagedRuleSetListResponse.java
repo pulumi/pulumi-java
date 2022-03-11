@@ -17,8 +17,8 @@ public final class ManagedRuleSetListResponse {
      */
     private final @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets;
 
-    @OutputCustomType.Constructor({"managedRuleSets"})
-    private ManagedRuleSetListResponse(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
+    @OutputCustomType.Constructor
+    private ManagedRuleSetListResponse(@OutputCustomType.Parameter("managedRuleSets") @Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
         this.managedRuleSets = managedRuleSets;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedRuleSetListResponse {
     	      this.managedRuleSets = defaults.managedRuleSets;
         }
 
-        public Builder setManagedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
+        public Builder managedRuleSets(@Nullable List<FrontDoorManagedRuleSetResponse> managedRuleSets) {
             this.managedRuleSets = managedRuleSets;
             return this;
         }

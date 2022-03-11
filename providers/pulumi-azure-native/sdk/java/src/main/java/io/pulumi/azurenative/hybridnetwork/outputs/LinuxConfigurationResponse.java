@@ -17,8 +17,8 @@ public final class LinuxConfigurationResponse {
      */
     private final @Nullable SshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"ssh"})
-    private LinuxConfigurationResponse(@Nullable SshConfigurationResponse ssh) {
+    @OutputCustomType.Constructor
+    private LinuxConfigurationResponse(@OutputCustomType.Parameter("ssh") @Nullable SshConfigurationResponse ssh) {
         this.ssh = ssh;
     }
 
@@ -50,7 +50,7 @@ public final class LinuxConfigurationResponse {
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setSsh(@Nullable SshConfigurationResponse ssh) {
+        public Builder ssh(@Nullable SshConfigurationResponse ssh) {
             this.ssh = ssh;
             return this;
         }

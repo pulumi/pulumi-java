@@ -12,10 +12,10 @@ public final class LaunchConfigurationEphemeralBlockDevice {
     private final String deviceName;
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","virtualName"})
+    @OutputCustomType.Constructor
     private LaunchConfigurationEphemeralBlockDevice(
-        String deviceName,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.virtualName = virtualName;
     }
@@ -49,12 +49,12 @@ public final class LaunchConfigurationEphemeralBlockDevice {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setVirtualName(String virtualName) {
+        public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }

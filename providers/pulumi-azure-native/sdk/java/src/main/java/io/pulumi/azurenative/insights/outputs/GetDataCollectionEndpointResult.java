@@ -87,22 +87,22 @@ public final class GetDataCollectionEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"configurationAccess","description","etag","id","immutableId","kind","location","logsIngestion","name","networkAcls","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectionEndpointResult(
-        @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
-        @Nullable String description,
-        String etag,
-        String id,
-        @Nullable String immutableId,
-        @Nullable String kind,
-        String location,
-        @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
-        String name,
-        @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
-        String provisioningState,
-        DataCollectionEndpointResourceResponseSystemData systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("configurationAccess") @Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutableId") @Nullable String immutableId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logsIngestion") @Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkAcls") @Nullable DataCollectionEndpointResponseNetworkAcls networkAcls,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") DataCollectionEndpointResourceResponseSystemData systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.configurationAccess = configurationAccess;
         this.description = description;
         this.etag = etag;
@@ -264,72 +264,72 @@ public final class GetDataCollectionEndpointResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfigurationAccess(@Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess) {
+        public Builder configurationAccess(@Nullable DataCollectionEndpointResponseConfigurationAccess configurationAccess) {
             this.configurationAccess = configurationAccess;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImmutableId(@Nullable String immutableId) {
+        public Builder immutableId(@Nullable String immutableId) {
             this.immutableId = immutableId;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLogsIngestion(@Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion) {
+        public Builder logsIngestion(@Nullable DataCollectionEndpointResponseLogsIngestion logsIngestion) {
             this.logsIngestion = logsIngestion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable DataCollectionEndpointResponseNetworkAcls networkAcls) {
+        public Builder networkAcls(@Nullable DataCollectionEndpointResponseNetworkAcls networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(DataCollectionEndpointResourceResponseSystemData systemData) {
+        public Builder systemData(DataCollectionEndpointResourceResponseSystemData systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

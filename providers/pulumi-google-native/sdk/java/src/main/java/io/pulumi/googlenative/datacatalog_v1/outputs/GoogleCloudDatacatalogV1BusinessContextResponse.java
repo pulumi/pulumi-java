@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
      */
     private final GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview;
 
-    @OutputCustomType.Constructor({"contacts","entryOverview"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1BusinessContextResponse(
-        GoogleCloudDatacatalogV1ContactsResponse contacts,
-        GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
+        @OutputCustomType.Parameter("contacts") GoogleCloudDatacatalogV1ContactsResponse contacts,
+        @OutputCustomType.Parameter("entryOverview") GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
         this.contacts = contacts;
         this.entryOverview = entryOverview;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDatacatalogV1BusinessContextResponse {
     	      this.entryOverview = defaults.entryOverview;
         }
 
-        public Builder setContacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
+        public Builder contacts(GoogleCloudDatacatalogV1ContactsResponse contacts) {
             this.contacts = Objects.requireNonNull(contacts);
             return this;
         }
 
-        public Builder setEntryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
+        public Builder entryOverview(GoogleCloudDatacatalogV1EntryOverviewResponse entryOverview) {
             this.entryOverview = Objects.requireNonNull(entryOverview);
             return this;
         }

@@ -17,8 +17,8 @@ public final class DataLakeAnalyticsResponseProperties {
      */
     private final @Nullable String dataLakeStoreAccountName;
 
-    @OutputCustomType.Constructor({"dataLakeStoreAccountName"})
-    private DataLakeAnalyticsResponseProperties(@Nullable String dataLakeStoreAccountName) {
+    @OutputCustomType.Constructor
+    private DataLakeAnalyticsResponseProperties(@OutputCustomType.Parameter("dataLakeStoreAccountName") @Nullable String dataLakeStoreAccountName) {
         this.dataLakeStoreAccountName = dataLakeStoreAccountName;
     }
 
@@ -50,7 +50,7 @@ public final class DataLakeAnalyticsResponseProperties {
     	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
         }
 
-        public Builder setDataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
+        public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }

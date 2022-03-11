@@ -32,12 +32,12 @@ public final class MongoDbCursorMethodsPropertiesResponse {
      */
     private final @Nullable Object sort;
 
-    @OutputCustomType.Constructor({"limit","project","skip","sort"})
+    @OutputCustomType.Constructor
     private MongoDbCursorMethodsPropertiesResponse(
-        @Nullable Object limit,
-        @Nullable Object project,
-        @Nullable Object skip,
-        @Nullable Object sort) {
+        @OutputCustomType.Parameter("limit") @Nullable Object limit,
+        @OutputCustomType.Parameter("project") @Nullable Object project,
+        @OutputCustomType.Parameter("skip") @Nullable Object skip,
+        @OutputCustomType.Parameter("sort") @Nullable Object sort) {
         this.limit = limit;
         this.project = project;
         this.skip = skip;
@@ -99,22 +99,22 @@ public final class MongoDbCursorMethodsPropertiesResponse {
     	      this.sort = defaults.sort;
         }
 
-        public Builder setLimit(@Nullable Object limit) {
+        public Builder limit(@Nullable Object limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setProject(@Nullable Object project) {
+        public Builder project(@Nullable Object project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSkip(@Nullable Object skip) {
+        public Builder skip(@Nullable Object skip) {
             this.skip = skip;
             return this;
         }
 
-        public Builder setSort(@Nullable Object sort) {
+        public Builder sort(@Nullable Object sort) {
             this.sort = sort;
             return this;
         }

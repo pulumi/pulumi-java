@@ -35,13 +35,13 @@ public final class GetFirewallRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endIP","id","name","startIP","type"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleResult(
-        String endIP,
-        String id,
-        String name,
-        String startIP,
-        String type) {
+        @OutputCustomType.Parameter("endIP") String endIP,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startIP") String startIP,
+        @OutputCustomType.Parameter("type") String type) {
         this.endIP = endIP;
         this.id = id;
         this.name = name;
@@ -113,27 +113,27 @@ public final class GetFirewallRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndIP(String endIP) {
+        public Builder endIP(String endIP) {
             this.endIP = Objects.requireNonNull(endIP);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartIP(String startIP) {
+        public Builder startIP(String startIP) {
             this.startIP = Objects.requireNonNull(startIP);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

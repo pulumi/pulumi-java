@@ -20,10 +20,10 @@ public final class GraphParameterLinkResponse {
      */
     private final String parameterKey;
 
-    @OutputCustomType.Constructor({"nodeId","parameterKey"})
+    @OutputCustomType.Constructor
     private GraphParameterLinkResponse(
-        String nodeId,
-        String parameterKey) {
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("parameterKey") String parameterKey) {
         this.nodeId = nodeId;
         this.parameterKey = parameterKey;
     }
@@ -65,12 +65,12 @@ public final class GraphParameterLinkResponse {
     	      this.parameterKey = defaults.parameterKey;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setParameterKey(String parameterKey) {
+        public Builder parameterKey(String parameterKey) {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }

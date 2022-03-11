@@ -25,11 +25,11 @@ public final class ApplicationArtifactResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","type","uri"})
+    @OutputCustomType.Constructor
     private ApplicationArtifactResponse(
-        String name,
-        String type,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.type = type;
         this.uri = uri;
@@ -81,17 +81,17 @@ public final class ApplicationArtifactResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

@@ -17,8 +17,8 @@ public final class InstanceMonthlyTransfer {
      */
     private final @Nullable String gbPerMonthAllocated;
 
-    @OutputCustomType.Constructor({"gbPerMonthAllocated"})
-    private InstanceMonthlyTransfer(@Nullable String gbPerMonthAllocated) {
+    @OutputCustomType.Constructor
+    private InstanceMonthlyTransfer(@OutputCustomType.Parameter("gbPerMonthAllocated") @Nullable String gbPerMonthAllocated) {
         this.gbPerMonthAllocated = gbPerMonthAllocated;
     }
 
@@ -50,7 +50,7 @@ public final class InstanceMonthlyTransfer {
     	      this.gbPerMonthAllocated = defaults.gbPerMonthAllocated;
         }
 
-        public Builder setGbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
+        public Builder gbPerMonthAllocated(@Nullable String gbPerMonthAllocated) {
             this.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }

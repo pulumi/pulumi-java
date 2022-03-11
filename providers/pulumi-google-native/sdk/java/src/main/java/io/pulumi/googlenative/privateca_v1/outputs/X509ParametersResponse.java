@@ -40,13 +40,13 @@ public final class X509ParametersResponse {
      */
     private final List<ObjectIdResponse> policyIds;
 
-    @OutputCustomType.Constructor({"additionalExtensions","aiaOcspServers","caOptions","keyUsage","policyIds"})
+    @OutputCustomType.Constructor
     private X509ParametersResponse(
-        List<X509ExtensionResponse> additionalExtensions,
-        List<String> aiaOcspServers,
-        CaOptionsResponse caOptions,
-        KeyUsageResponse keyUsage,
-        List<ObjectIdResponse> policyIds) {
+        @OutputCustomType.Parameter("additionalExtensions") List<X509ExtensionResponse> additionalExtensions,
+        @OutputCustomType.Parameter("aiaOcspServers") List<String> aiaOcspServers,
+        @OutputCustomType.Parameter("caOptions") CaOptionsResponse caOptions,
+        @OutputCustomType.Parameter("keyUsage") KeyUsageResponse keyUsage,
+        @OutputCustomType.Parameter("policyIds") List<ObjectIdResponse> policyIds) {
         this.additionalExtensions = additionalExtensions;
         this.aiaOcspServers = aiaOcspServers;
         this.caOptions = caOptions;
@@ -118,27 +118,27 @@ public final class X509ParametersResponse {
     	      this.policyIds = defaults.policyIds;
         }
 
-        public Builder setAdditionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
+        public Builder additionalExtensions(List<X509ExtensionResponse> additionalExtensions) {
             this.additionalExtensions = Objects.requireNonNull(additionalExtensions);
             return this;
         }
 
-        public Builder setAiaOcspServers(List<String> aiaOcspServers) {
+        public Builder aiaOcspServers(List<String> aiaOcspServers) {
             this.aiaOcspServers = Objects.requireNonNull(aiaOcspServers);
             return this;
         }
 
-        public Builder setCaOptions(CaOptionsResponse caOptions) {
+        public Builder caOptions(CaOptionsResponse caOptions) {
             this.caOptions = Objects.requireNonNull(caOptions);
             return this;
         }
 
-        public Builder setKeyUsage(KeyUsageResponse keyUsage) {
+        public Builder keyUsage(KeyUsageResponse keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setPolicyIds(List<ObjectIdResponse> policyIds) {
+        public Builder policyIds(List<ObjectIdResponse> policyIds) {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }

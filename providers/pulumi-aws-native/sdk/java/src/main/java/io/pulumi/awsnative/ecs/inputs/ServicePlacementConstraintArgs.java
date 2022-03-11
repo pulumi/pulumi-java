@@ -63,22 +63,22 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setExpression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Input<String> expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = Input.ofNullable(expression);
             return this;
         }
 
-        public Builder setType(Input<ServicePlacementConstraintType> type) {
+        public Builder type(Input<ServicePlacementConstraintType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(ServicePlacementConstraintType type) {
+        public Builder type(ServicePlacementConstraintType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

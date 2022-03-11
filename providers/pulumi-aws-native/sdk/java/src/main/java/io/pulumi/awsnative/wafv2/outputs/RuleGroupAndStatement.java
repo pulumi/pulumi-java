@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class RuleGroupAndStatement {
     private final List<RuleGroupStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private RuleGroupAndStatement(List<RuleGroupStatement> statements) {
+    @OutputCustomType.Constructor
+    private RuleGroupAndStatement(@OutputCustomType.Parameter("statements") List<RuleGroupStatement> statements) {
         this.statements = statements;
     }
 
@@ -41,7 +41,7 @@ public final class RuleGroupAndStatement {
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<RuleGroupStatement> statements) {
+        public Builder statements(List<RuleGroupStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

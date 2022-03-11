@@ -26,11 +26,11 @@ public final class GeoFilterResponse {
      */
     private final String relativePath;
 
-    @OutputCustomType.Constructor({"action","countryCodes","relativePath"})
+    @OutputCustomType.Constructor
     private GeoFilterResponse(
-        String action,
-        List<String> countryCodes,
-        String relativePath) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("countryCodes") List<String> countryCodes,
+        @OutputCustomType.Parameter("relativePath") String relativePath) {
         this.action = action;
         this.countryCodes = countryCodes;
         this.relativePath = relativePath;
@@ -82,17 +82,17 @@ public final class GeoFilterResponse {
     	      this.relativePath = defaults.relativePath;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCountryCodes(List<String> countryCodes) {
+        public Builder countryCodes(List<String> countryCodes) {
             this.countryCodes = Objects.requireNonNull(countryCodes);
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }

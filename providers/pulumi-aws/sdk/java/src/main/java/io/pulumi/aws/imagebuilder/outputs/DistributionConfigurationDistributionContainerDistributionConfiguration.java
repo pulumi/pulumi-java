@@ -29,11 +29,11 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository;
 
-    @OutputCustomType.Constructor({"containerTags","description","targetRepository"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfiguration(
-        @Nullable List<String> containerTags,
-        @Nullable String description,
-        DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
+        @OutputCustomType.Parameter("containerTags") @Nullable List<String> containerTags,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("targetRepository") DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
         this.targetRepository = targetRepository;
@@ -85,17 +85,17 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder setContainerTags(@Nullable List<String> containerTags) {
+        public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTargetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
+        public Builder targetRepository(DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository targetRepository) {
             this.targetRepository = Objects.requireNonNull(targetRepository);
             return this;
         }

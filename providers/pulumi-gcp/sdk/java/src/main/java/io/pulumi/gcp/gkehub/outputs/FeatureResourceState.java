@@ -15,10 +15,10 @@ public final class FeatureResourceState {
     private final @Nullable Boolean hasResources;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"hasResources","state"})
+    @OutputCustomType.Constructor
     private FeatureResourceState(
-        @Nullable Boolean hasResources,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("hasResources") @Nullable Boolean hasResources,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.hasResources = hasResources;
         this.state = state;
     }
@@ -52,12 +52,12 @@ public final class FeatureResourceState {
     	      this.state = defaults.state;
         }
 
-        public Builder setHasResources(@Nullable Boolean hasResources) {
+        public Builder hasResources(@Nullable Boolean hasResources) {
             this.hasResources = hasResources;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

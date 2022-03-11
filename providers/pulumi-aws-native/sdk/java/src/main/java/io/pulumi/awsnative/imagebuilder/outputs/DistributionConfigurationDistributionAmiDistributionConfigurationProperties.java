@@ -45,14 +45,14 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> targetAccountIds;
 
-    @OutputCustomType.Constructor({"amiTags","description","kmsKeyId","launchPermissionConfiguration","name","targetAccountIds"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationProperties(
-        @Nullable Object amiTags,
-        @Nullable String description,
-        @Nullable String kmsKeyId,
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration,
-        @Nullable String name,
-        @Nullable List<String> targetAccountIds) {
+        @OutputCustomType.Parameter("amiTags") @Nullable Object amiTags,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("launchPermissionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetAccountIds") @Nullable List<String> targetAccountIds) {
         this.amiTags = amiTags;
         this.description = description;
         this.kmsKeyId = kmsKeyId;
@@ -134,32 +134,32 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.targetAccountIds = defaults.targetAccountIds;
         }
 
-        public Builder setAmiTags(@Nullable Object amiTags) {
+        public Builder amiTags(@Nullable Object amiTags) {
             this.amiTags = amiTags;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setLaunchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration) {
+        public Builder launchPermissionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties launchPermissionConfiguration) {
             this.launchPermissionConfiguration = launchPermissionConfiguration;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetAccountIds(@Nullable List<String> targetAccountIds) {
+        public Builder targetAccountIds(@Nullable List<String> targetAccountIds) {
             this.targetAccountIds = targetAccountIds;
             return this;
         }

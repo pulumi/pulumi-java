@@ -85,22 +85,22 @@ public final class GetCertificateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"certificateDescription","certificateTemplate","config","createTime","issuerCertificateAuthority","labels","lifetime","name","pemCertificate","pemCertificateChain","pemCsr","revocationDetails","subjectMode","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        CertificateDescriptionResponse certificateDescription,
-        String certificateTemplate,
-        CertificateConfigResponse config,
-        String createTime,
-        String issuerCertificateAuthority,
-        Map<String,String> labels,
-        String lifetime,
-        String name,
-        String pemCertificate,
-        List<String> pemCertificateChain,
-        String pemCsr,
-        RevocationDetailsResponse revocationDetails,
-        String subjectMode,
-        String updateTime) {
+        @OutputCustomType.Parameter("certificateDescription") CertificateDescriptionResponse certificateDescription,
+        @OutputCustomType.Parameter("certificateTemplate") String certificateTemplate,
+        @OutputCustomType.Parameter("config") CertificateConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("issuerCertificateAuthority") String issuerCertificateAuthority,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pemCertificate") String pemCertificate,
+        @OutputCustomType.Parameter("pemCertificateChain") List<String> pemCertificateChain,
+        @OutputCustomType.Parameter("pemCsr") String pemCsr,
+        @OutputCustomType.Parameter("revocationDetails") RevocationDetailsResponse revocationDetails,
+        @OutputCustomType.Parameter("subjectMode") String subjectMode,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.certificateDescription = certificateDescription;
         this.certificateTemplate = certificateTemplate;
         this.config = config;
@@ -262,72 +262,72 @@ public final class GetCertificateResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCertificateDescription(CertificateDescriptionResponse certificateDescription) {
+        public Builder certificateDescription(CertificateDescriptionResponse certificateDescription) {
             this.certificateDescription = Objects.requireNonNull(certificateDescription);
             return this;
         }
 
-        public Builder setCertificateTemplate(String certificateTemplate) {
+        public Builder certificateTemplate(String certificateTemplate) {
             this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
             return this;
         }
 
-        public Builder setConfig(CertificateConfigResponse config) {
+        public Builder config(CertificateConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setIssuerCertificateAuthority(String issuerCertificateAuthority) {
+        public Builder issuerCertificateAuthority(String issuerCertificateAuthority) {
             this.issuerCertificateAuthority = Objects.requireNonNull(issuerCertificateAuthority);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPemCertificate(String pemCertificate) {
+        public Builder pemCertificate(String pemCertificate) {
             this.pemCertificate = Objects.requireNonNull(pemCertificate);
             return this;
         }
 
-        public Builder setPemCertificateChain(List<String> pemCertificateChain) {
+        public Builder pemCertificateChain(List<String> pemCertificateChain) {
             this.pemCertificateChain = Objects.requireNonNull(pemCertificateChain);
             return this;
         }
 
-        public Builder setPemCsr(String pemCsr) {
+        public Builder pemCsr(String pemCsr) {
             this.pemCsr = Objects.requireNonNull(pemCsr);
             return this;
         }
 
-        public Builder setRevocationDetails(RevocationDetailsResponse revocationDetails) {
+        public Builder revocationDetails(RevocationDetailsResponse revocationDetails) {
             this.revocationDetails = Objects.requireNonNull(revocationDetails);
             return this;
         }
 
-        public Builder setSubjectMode(String subjectMode) {
+        public Builder subjectMode(String subjectMode) {
             this.subjectMode = Objects.requireNonNull(subjectMode);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

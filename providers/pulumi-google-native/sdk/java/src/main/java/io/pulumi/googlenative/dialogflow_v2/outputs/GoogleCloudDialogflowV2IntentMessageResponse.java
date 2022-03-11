@@ -99,23 +99,23 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
      */
     private final GoogleCloudDialogflowV2IntentMessageTextResponse text;
 
-    @OutputCustomType.Constructor({"basicCard","browseCarouselCard","card","carouselSelect","image","linkOutSuggestion","listSelect","mediaContent","payload","platform","quickReplies","simpleResponses","suggestions","tableCard","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageResponse(
-        GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard,
-        GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard,
-        GoogleCloudDialogflowV2IntentMessageCardResponse card,
-        GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
-        GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect,
-        GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent,
-        Map<String,String> payload,
-        String platform,
-        GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies,
-        GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses,
-        GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
-        GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
-        GoogleCloudDialogflowV2IntentMessageTextResponse text) {
+        @OutputCustomType.Parameter("basicCard") GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard,
+        @OutputCustomType.Parameter("browseCarouselCard") GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard,
+        @OutputCustomType.Parameter("card") GoogleCloudDialogflowV2IntentMessageCardResponse card,
+        @OutputCustomType.Parameter("carouselSelect") GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("linkOutSuggestion") GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion,
+        @OutputCustomType.Parameter("listSelect") GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect,
+        @OutputCustomType.Parameter("mediaContent") GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent,
+        @OutputCustomType.Parameter("payload") Map<String,String> payload,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("quickReplies") GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies,
+        @OutputCustomType.Parameter("simpleResponses") GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses,
+        @OutputCustomType.Parameter("suggestions") GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions,
+        @OutputCustomType.Parameter("tableCard") GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard,
+        @OutputCustomType.Parameter("text") GoogleCloudDialogflowV2IntentMessageTextResponse text) {
         this.basicCard = basicCard;
         this.browseCarouselCard = browseCarouselCard;
         this.card = card;
@@ -287,77 +287,77 @@ public final class GoogleCloudDialogflowV2IntentMessageResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setBasicCard(GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard) {
+        public Builder basicCard(GoogleCloudDialogflowV2IntentMessageBasicCardResponse basicCard) {
             this.basicCard = Objects.requireNonNull(basicCard);
             return this;
         }
 
-        public Builder setBrowseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
+        public Builder browseCarouselCard(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse browseCarouselCard) {
             this.browseCarouselCard = Objects.requireNonNull(browseCarouselCard);
             return this;
         }
 
-        public Builder setCard(GoogleCloudDialogflowV2IntentMessageCardResponse card) {
+        public Builder card(GoogleCloudDialogflowV2IntentMessageCardResponse card) {
             this.card = Objects.requireNonNull(card);
             return this;
         }
 
-        public Builder setCarouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect) {
+        public Builder carouselSelect(GoogleCloudDialogflowV2IntentMessageCarouselSelectResponse carouselSelect) {
             this.carouselSelect = Objects.requireNonNull(carouselSelect);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setLinkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
+        public Builder linkOutSuggestion(GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse linkOutSuggestion) {
             this.linkOutSuggestion = Objects.requireNonNull(linkOutSuggestion);
             return this;
         }
 
-        public Builder setListSelect(GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect) {
+        public Builder listSelect(GoogleCloudDialogflowV2IntentMessageListSelectResponse listSelect) {
             this.listSelect = Objects.requireNonNull(listSelect);
             return this;
         }
 
-        public Builder setMediaContent(GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent) {
+        public Builder mediaContent(GoogleCloudDialogflowV2IntentMessageMediaContentResponse mediaContent) {
             this.mediaContent = Objects.requireNonNull(mediaContent);
             return this;
         }
 
-        public Builder setPayload(Map<String,String> payload) {
+        public Builder payload(Map<String,String> payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setQuickReplies(GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies) {
+        public Builder quickReplies(GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse quickReplies) {
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
 
-        public Builder setSimpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses) {
+        public Builder simpleResponses(GoogleCloudDialogflowV2IntentMessageSimpleResponsesResponse simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }
 
-        public Builder setSuggestions(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions) {
+        public Builder suggestions(GoogleCloudDialogflowV2IntentMessageSuggestionsResponse suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
 
-        public Builder setTableCard(GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard) {
+        public Builder tableCard(GoogleCloudDialogflowV2IntentMessageTableCardResponse tableCard) {
             this.tableCard = Objects.requireNonNull(tableCard);
             return this;
         }
 
-        public Builder setText(GoogleCloudDialogflowV2IntentMessageTextResponse text) {
+        public Builder text(GoogleCloudDialogflowV2IntentMessageTextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

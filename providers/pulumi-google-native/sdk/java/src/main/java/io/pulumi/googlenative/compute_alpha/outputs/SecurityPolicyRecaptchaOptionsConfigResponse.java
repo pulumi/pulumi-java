@@ -15,8 +15,8 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse {
      */
     private final String redirectSiteKey;
 
-    @OutputCustomType.Constructor({"redirectSiteKey"})
-    private SecurityPolicyRecaptchaOptionsConfigResponse(String redirectSiteKey) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRecaptchaOptionsConfigResponse(@OutputCustomType.Parameter("redirectSiteKey") String redirectSiteKey) {
         this.redirectSiteKey = redirectSiteKey;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigResponse {
     	      this.redirectSiteKey = defaults.redirectSiteKey;
         }
 
-        public Builder setRedirectSiteKey(String redirectSiteKey) {
+        public Builder redirectSiteKey(String redirectSiteKey) {
             this.redirectSiteKey = Objects.requireNonNull(redirectSiteKey);
             return this;
         }

@@ -25,11 +25,11 @@ public final class LabelDescriptorResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"description","key","valueType"})
+    @OutputCustomType.Constructor
     private LabelDescriptorResponse(
-        String description,
-        String key,
-        String valueType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.description = description;
         this.key = key;
         this.valueType = valueType;
@@ -81,17 +81,17 @@ public final class LabelDescriptorResponse {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

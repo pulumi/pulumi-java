@@ -566,7 +566,7 @@ public class Release extends io.pulumi.resources.CustomResource {
     private static ReleaseArgs makeArgs(ReleaseArgs args) {
         var builder = args == null ? ReleaseArgs.builder() : ReleaseArgs.builder(args);
         return builder
-            .setCompat("true")
+            .compat("true")
             .build();
     }
 

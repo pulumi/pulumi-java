@@ -92,32 +92,32 @@ public final class ActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sqlExpression = defaults.sqlExpression;
         }
 
-        public Builder setCompatibilityLevel(@Nullable Input<Integer> compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Input<Integer> compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
-        public Builder setCompatibilityLevel(@Nullable Integer compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable Integer compatibilityLevel) {
             this.compatibilityLevel = Input.ofNullable(compatibilityLevel);
             return this;
         }
 
-        public Builder setRequiresPreprocessing(@Nullable Input<Boolean> requiresPreprocessing) {
+        public Builder requiresPreprocessing(@Nullable Input<Boolean> requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
-        public Builder setRequiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
+        public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = Input.ofNullable(requiresPreprocessing);
             return this;
         }
 
-        public Builder setSqlExpression(@Nullable Input<String> sqlExpression) {
+        public Builder sqlExpression(@Nullable Input<String> sqlExpression) {
             this.sqlExpression = sqlExpression;
             return this;
         }
 
-        public Builder setSqlExpression(@Nullable String sqlExpression) {
+        public Builder sqlExpression(@Nullable String sqlExpression) {
             this.sqlExpression = Input.ofNullable(sqlExpression);
             return this;
         }

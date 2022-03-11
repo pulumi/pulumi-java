@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketCorsConfiguration {
     private final List<BucketCorsRule> corsRules;
 
-    @OutputCustomType.Constructor({"corsRules"})
-    private BucketCorsConfiguration(List<BucketCorsRule> corsRules) {
+    @OutputCustomType.Constructor
+    private BucketCorsConfiguration(@OutputCustomType.Parameter("corsRules") List<BucketCorsRule> corsRules) {
         this.corsRules = corsRules;
     }
 
@@ -41,7 +41,7 @@ public final class BucketCorsConfiguration {
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder setCorsRules(List<BucketCorsRule> corsRules) {
+        public Builder corsRules(List<BucketCorsRule> corsRules) {
             this.corsRules = Objects.requireNonNull(corsRules);
             return this;
         }

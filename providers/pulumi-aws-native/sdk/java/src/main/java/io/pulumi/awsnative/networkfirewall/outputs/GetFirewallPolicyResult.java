@@ -20,13 +20,13 @@ public final class GetFirewallPolicyResult {
     private final @Nullable String firewallPolicyId;
     private final @Nullable List<FirewallPolicyTag> tags;
 
-    @OutputCustomType.Constructor({"description","firewallPolicy","firewallPolicyArn","firewallPolicyId","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallPolicyResult(
-        @Nullable String description,
-        @Nullable FirewallPolicy firewallPolicy,
-        @Nullable String firewallPolicyArn,
-        @Nullable String firewallPolicyId,
-        @Nullable List<FirewallPolicyTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable FirewallPolicy firewallPolicy,
+        @OutputCustomType.Parameter("firewallPolicyArn") @Nullable String firewallPolicyArn,
+        @OutputCustomType.Parameter("firewallPolicyId") @Nullable String firewallPolicyId,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallPolicyTag> tags) {
         this.description = description;
         this.firewallPolicy = firewallPolicy;
         this.firewallPolicyArn = firewallPolicyArn;
@@ -78,27 +78,27 @@ public final class GetFirewallPolicyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable FirewallPolicy firewallPolicy) {
+        public Builder firewallPolicy(@Nullable FirewallPolicy firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setFirewallPolicyArn(@Nullable String firewallPolicyArn) {
+        public Builder firewallPolicyArn(@Nullable String firewallPolicyArn) {
             this.firewallPolicyArn = firewallPolicyArn;
             return this;
         }
 
-        public Builder setFirewallPolicyId(@Nullable String firewallPolicyId) {
+        public Builder firewallPolicyId(@Nullable String firewallPolicyId) {
             this.firewallPolicyId = firewallPolicyId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallPolicyTag> tags) {
+        public Builder tags(@Nullable List<FirewallPolicyTag> tags) {
             this.tags = tags;
             return this;
         }

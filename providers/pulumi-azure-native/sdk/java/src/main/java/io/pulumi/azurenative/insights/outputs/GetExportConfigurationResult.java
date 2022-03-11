@@ -107,27 +107,27 @@ public final class GetExportConfigurationResult {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"applicationName","containerName","destinationAccountId","destinationStorageLocationId","destinationStorageSubscriptionId","destinationType","exportId","exportStatus","instrumentationKey","isUserEnabled","lastGapTime","lastSuccessTime","lastUserUpdate","notificationQueueEnabled","permanentErrorReason","recordTypes","resourceGroup","storageName","subscriptionId"})
+    @OutputCustomType.Constructor
     private GetExportConfigurationResult(
-        String applicationName,
-        String containerName,
-        String destinationAccountId,
-        String destinationStorageLocationId,
-        String destinationStorageSubscriptionId,
-        String destinationType,
-        String exportId,
-        String exportStatus,
-        String instrumentationKey,
-        String isUserEnabled,
-        String lastGapTime,
-        String lastSuccessTime,
-        String lastUserUpdate,
-        @Nullable String notificationQueueEnabled,
-        String permanentErrorReason,
-        @Nullable String recordTypes,
-        String resourceGroup,
-        String storageName,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("destinationAccountId") String destinationAccountId,
+        @OutputCustomType.Parameter("destinationStorageLocationId") String destinationStorageLocationId,
+        @OutputCustomType.Parameter("destinationStorageSubscriptionId") String destinationStorageSubscriptionId,
+        @OutputCustomType.Parameter("destinationType") String destinationType,
+        @OutputCustomType.Parameter("exportId") String exportId,
+        @OutputCustomType.Parameter("exportStatus") String exportStatus,
+        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @OutputCustomType.Parameter("isUserEnabled") String isUserEnabled,
+        @OutputCustomType.Parameter("lastGapTime") String lastGapTime,
+        @OutputCustomType.Parameter("lastSuccessTime") String lastSuccessTime,
+        @OutputCustomType.Parameter("lastUserUpdate") String lastUserUpdate,
+        @OutputCustomType.Parameter("notificationQueueEnabled") @Nullable String notificationQueueEnabled,
+        @OutputCustomType.Parameter("permanentErrorReason") String permanentErrorReason,
+        @OutputCustomType.Parameter("recordTypes") @Nullable String recordTypes,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("storageName") String storageName,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.applicationName = applicationName;
         this.containerName = containerName;
         this.destinationAccountId = destinationAccountId;
@@ -339,97 +339,97 @@ public final class GetExportConfigurationResult {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setDestinationAccountId(String destinationAccountId) {
+        public Builder destinationAccountId(String destinationAccountId) {
             this.destinationAccountId = Objects.requireNonNull(destinationAccountId);
             return this;
         }
 
-        public Builder setDestinationStorageLocationId(String destinationStorageLocationId) {
+        public Builder destinationStorageLocationId(String destinationStorageLocationId) {
             this.destinationStorageLocationId = Objects.requireNonNull(destinationStorageLocationId);
             return this;
         }
 
-        public Builder setDestinationStorageSubscriptionId(String destinationStorageSubscriptionId) {
+        public Builder destinationStorageSubscriptionId(String destinationStorageSubscriptionId) {
             this.destinationStorageSubscriptionId = Objects.requireNonNull(destinationStorageSubscriptionId);
             return this;
         }
 
-        public Builder setDestinationType(String destinationType) {
+        public Builder destinationType(String destinationType) {
             this.destinationType = Objects.requireNonNull(destinationType);
             return this;
         }
 
-        public Builder setExportId(String exportId) {
+        public Builder exportId(String exportId) {
             this.exportId = Objects.requireNonNull(exportId);
             return this;
         }
 
-        public Builder setExportStatus(String exportStatus) {
+        public Builder exportStatus(String exportStatus) {
             this.exportStatus = Objects.requireNonNull(exportStatus);
             return this;
         }
 
-        public Builder setInstrumentationKey(String instrumentationKey) {
+        public Builder instrumentationKey(String instrumentationKey) {
             this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
             return this;
         }
 
-        public Builder setIsUserEnabled(String isUserEnabled) {
+        public Builder isUserEnabled(String isUserEnabled) {
             this.isUserEnabled = Objects.requireNonNull(isUserEnabled);
             return this;
         }
 
-        public Builder setLastGapTime(String lastGapTime) {
+        public Builder lastGapTime(String lastGapTime) {
             this.lastGapTime = Objects.requireNonNull(lastGapTime);
             return this;
         }
 
-        public Builder setLastSuccessTime(String lastSuccessTime) {
+        public Builder lastSuccessTime(String lastSuccessTime) {
             this.lastSuccessTime = Objects.requireNonNull(lastSuccessTime);
             return this;
         }
 
-        public Builder setLastUserUpdate(String lastUserUpdate) {
+        public Builder lastUserUpdate(String lastUserUpdate) {
             this.lastUserUpdate = Objects.requireNonNull(lastUserUpdate);
             return this;
         }
 
-        public Builder setNotificationQueueEnabled(@Nullable String notificationQueueEnabled) {
+        public Builder notificationQueueEnabled(@Nullable String notificationQueueEnabled) {
             this.notificationQueueEnabled = notificationQueueEnabled;
             return this;
         }
 
-        public Builder setPermanentErrorReason(String permanentErrorReason) {
+        public Builder permanentErrorReason(String permanentErrorReason) {
             this.permanentErrorReason = Objects.requireNonNull(permanentErrorReason);
             return this;
         }
 
-        public Builder setRecordTypes(@Nullable String recordTypes) {
+        public Builder recordTypes(@Nullable String recordTypes) {
             this.recordTypes = recordTypes;
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setStorageName(String storageName) {
+        public Builder storageName(String storageName) {
             this.storageName = Objects.requireNonNull(storageName);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

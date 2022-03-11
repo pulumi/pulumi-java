@@ -35,12 +35,12 @@ public final class MHSMNetworkRuleSetResponse {
      */
     private final @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"bypass","defaultAction","ipRules","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private MHSMNetworkRuleSetResponse(
-        @Nullable String bypass,
-        @Nullable String defaultAction,
-        @Nullable List<MHSMIPRuleResponse> ipRules,
-        @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("bypass") @Nullable String bypass,
+        @OutputCustomType.Parameter("defaultAction") @Nullable String defaultAction,
+        @OutputCustomType.Parameter("ipRules") @Nullable List<MHSMIPRuleResponse> ipRules,
+        @OutputCustomType.Parameter("virtualNetworkRules") @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
         this.bypass = bypass;
         this.defaultAction = defaultAction;
         this.ipRules = ipRules;
@@ -102,22 +102,22 @@ public final class MHSMNetworkRuleSetResponse {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable String bypass) {
+        public Builder bypass(@Nullable String bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

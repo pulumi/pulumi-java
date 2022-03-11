@@ -22,10 +22,10 @@ public final class AccessReviewReviewerResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor({"principalId","principalType"})
+    @OutputCustomType.Constructor
     private AccessReviewReviewerResponse(
-        @Nullable String principalId,
-        String principalType) {
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalType = principalType;
     }
@@ -67,12 +67,12 @@ public final class AccessReviewReviewerResponse {
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }

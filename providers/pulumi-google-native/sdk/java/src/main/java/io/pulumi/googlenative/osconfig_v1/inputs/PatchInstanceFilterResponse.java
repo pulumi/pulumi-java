@@ -123,27 +123,27 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAll(Boolean all) {
+        public Builder all(Boolean all) {
             this.all = Objects.requireNonNull(all);
             return this;
         }
 
-        public Builder setGroupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
+        public Builder groupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
             this.groupLabels = Objects.requireNonNull(groupLabels);
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(List<String> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
             return this;
         }
 
-        public Builder setInstances(List<String> instances) {
+        public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

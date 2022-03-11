@@ -15,11 +15,11 @@ public final class BudgetsActionSsmActionDefinition {
     private final String region;
     private final BudgetsActionSsmActionDefinitionSubtype subtype;
 
-    @OutputCustomType.Constructor({"instanceIds","region","subtype"})
+    @OutputCustomType.Constructor
     private BudgetsActionSsmActionDefinition(
-        List<String> instanceIds,
-        String region,
-        BudgetsActionSsmActionDefinitionSubtype subtype) {
+        @OutputCustomType.Parameter("instanceIds") List<String> instanceIds,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("subtype") BudgetsActionSsmActionDefinitionSubtype subtype) {
         this.instanceIds = instanceIds;
         this.region = region;
         this.subtype = subtype;
@@ -59,17 +59,17 @@ public final class BudgetsActionSsmActionDefinition {
     	      this.subtype = defaults.subtype;
         }
 
-        public Builder setInstanceIds(List<String> instanceIds) {
+        public Builder instanceIds(List<String> instanceIds) {
             this.instanceIds = Objects.requireNonNull(instanceIds);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSubtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
+        public Builder subtype(BudgetsActionSsmActionDefinitionSubtype subtype) {
             this.subtype = Objects.requireNonNull(subtype);
             return this;
         }

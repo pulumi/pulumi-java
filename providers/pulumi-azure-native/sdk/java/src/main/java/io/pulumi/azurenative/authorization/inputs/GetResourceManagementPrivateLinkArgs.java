@@ -68,12 +68,12 @@ public final class GetResourceManagementPrivateLinkArgs extends io.pulumi.resour
     	      this.rmplName = defaults.rmplName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRmplName(String rmplName) {
+        public Builder rmplName(String rmplName) {
             this.rmplName = Objects.requireNonNull(rmplName);
             return this;
         }

@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","audio","uri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmentResponse(
-        Boolean allowPlaybackInterruption,
-        String audio,
-        String uri) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("audio") String audio,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.audio = audio;
         this.uri = uri;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegmen
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setAudio(String audio) {
+        public Builder audio(String audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

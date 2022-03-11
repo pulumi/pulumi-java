@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse {
      */
     private final List<String> synonyms;
 
-    @OutputCustomType.Constructor({"key","synonyms"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse(
-        String key,
-        List<String> synonyms) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("synonyms") List<String> synonyms) {
         this.key = key;
         this.synonyms = synonyms;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2IntentMessageSelectItemInfoResponse {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }

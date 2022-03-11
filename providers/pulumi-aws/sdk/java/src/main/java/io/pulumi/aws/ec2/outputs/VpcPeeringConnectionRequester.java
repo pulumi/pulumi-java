@@ -32,11 +32,11 @@ public final class VpcPeeringConnectionRequester {
      */
     private final @Nullable Boolean allowVpcToRemoteClassicLink;
 
-    @OutputCustomType.Constructor({"allowClassicLinkToRemoteVpc","allowRemoteVpcDnsResolution","allowVpcToRemoteClassicLink"})
+    @OutputCustomType.Constructor
     private VpcPeeringConnectionRequester(
-        @Nullable Boolean allowClassicLinkToRemoteVpc,
-        @Nullable Boolean allowRemoteVpcDnsResolution,
-        @Nullable Boolean allowVpcToRemoteClassicLink) {
+        @OutputCustomType.Parameter("allowClassicLinkToRemoteVpc") @Nullable Boolean allowClassicLinkToRemoteVpc,
+        @OutputCustomType.Parameter("allowRemoteVpcDnsResolution") @Nullable Boolean allowRemoteVpcDnsResolution,
+        @OutputCustomType.Parameter("allowVpcToRemoteClassicLink") @Nullable Boolean allowVpcToRemoteClassicLink) {
         this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
         this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
         this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
@@ -93,17 +93,17 @@ public final class VpcPeeringConnectionRequester {
     	      this.allowVpcToRemoteClassicLink = defaults.allowVpcToRemoteClassicLink;
         }
 
-        public Builder setAllowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
+        public Builder allowClassicLinkToRemoteVpc(@Nullable Boolean allowClassicLinkToRemoteVpc) {
             this.allowClassicLinkToRemoteVpc = allowClassicLinkToRemoteVpc;
             return this;
         }
 
-        public Builder setAllowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
+        public Builder allowRemoteVpcDnsResolution(@Nullable Boolean allowRemoteVpcDnsResolution) {
             this.allowRemoteVpcDnsResolution = allowRemoteVpcDnsResolution;
             return this;
         }
 
-        public Builder setAllowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
+        public Builder allowVpcToRemoteClassicLink(@Nullable Boolean allowVpcToRemoteClassicLink) {
             this.allowVpcToRemoteClassicLink = allowVpcToRemoteClassicLink;
             return this;
         }

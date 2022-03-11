@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AssessmentAWSService {
     private final @Nullable String serviceName;
 
-    @OutputCustomType.Constructor({"serviceName"})
-    private AssessmentAWSService(@Nullable String serviceName) {
+    @OutputCustomType.Constructor
+    private AssessmentAWSService(@OutputCustomType.Parameter("serviceName") @Nullable String serviceName) {
         this.serviceName = serviceName;
     }
 
@@ -42,7 +42,7 @@ public final class AssessmentAWSService {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = serviceName;
             return this;
         }

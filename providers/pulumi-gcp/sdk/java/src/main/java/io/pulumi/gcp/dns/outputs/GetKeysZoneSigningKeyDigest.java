@@ -22,10 +22,10 @@ public final class GetKeysZoneSigningKeyDigest {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"digest","type"})
+    @OutputCustomType.Constructor
     private GetKeysZoneSigningKeyDigest(
-        @Nullable String digest,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.digest = digest;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class GetKeysZoneSigningKeyDigest {
     	      this.type = defaults.type;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

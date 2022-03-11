@@ -185,92 +185,92 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalNetworkId(Input<String> globalNetworkId) {
+        public Builder globalNetworkId(Input<String> globalNetworkId) {
             this.globalNetworkId = Objects.requireNonNull(globalNetworkId);
             return this;
         }
 
-        public Builder setGlobalNetworkId(String globalNetworkId) {
+        public Builder globalNetworkId(String globalNetworkId) {
             this.globalNetworkId = Input.of(Objects.requireNonNull(globalNetworkId));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<DeviceLocationArgs> location) {
+        public Builder location(@Nullable Input<DeviceLocationArgs> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable DeviceLocationArgs location) {
+        public Builder location(@Nullable DeviceLocationArgs location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setModel(@Nullable Input<String> model) {
+        public Builder model(@Nullable Input<String> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable String model) {
+        public Builder model(@Nullable String model) {
             this.model = Input.ofNullable(model);
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable Input<String> serialNumber) {
+        public Builder serialNumber(@Nullable Input<String> serialNumber) {
             this.serialNumber = serialNumber;
             return this;
         }
 
-        public Builder setSerialNumber(@Nullable String serialNumber) {
+        public Builder serialNumber(@Nullable String serialNumber) {
             this.serialNumber = Input.ofNullable(serialNumber);
             return this;
         }
 
-        public Builder setSiteId(@Nullable Input<String> siteId) {
+        public Builder siteId(@Nullable Input<String> siteId) {
             this.siteId = siteId;
             return this;
         }
 
-        public Builder setSiteId(@Nullable String siteId) {
+        public Builder siteId(@Nullable String siteId) {
             this.siteId = Input.ofNullable(siteId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DeviceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DeviceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceTagArgs> tags) {
+        public Builder tags(@Nullable List<DeviceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVendor(@Nullable Input<String> vendor) {
+        public Builder vendor(@Nullable Input<String> vendor) {
             this.vendor = vendor;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }

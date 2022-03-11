@@ -138,32 +138,32 @@ public final class GetComponentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appId","applicationId","applicationType","connectionString","creationDate","disableIpMasking","flowType","hockeyAppId","hockeyAppToken","id","immediatePurgeDataOn30Days","ingestionMode","instrumentationKey","kind","location","name","privateLinkScopedResources","provisioningState","requestSource","retentionInDays","samplingPercentage","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetComponentResult(
-        String appId,
-        String applicationId,
-        String applicationType,
-        String connectionString,
-        String creationDate,
-        @Nullable Boolean disableIpMasking,
-        @Nullable String flowType,
-        @Nullable String hockeyAppId,
-        String hockeyAppToken,
-        String id,
-        @Nullable Boolean immediatePurgeDataOn30Days,
-        @Nullable String ingestionMode,
-        String instrumentationKey,
-        String kind,
-        String location,
-        String name,
-        List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        String provisioningState,
-        @Nullable String requestSource,
-        @Nullable Integer retentionInDays,
-        @Nullable Double samplingPercentage,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("applicationType") String applicationType,
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("disableIpMasking") @Nullable Boolean disableIpMasking,
+        @OutputCustomType.Parameter("flowType") @Nullable String flowType,
+        @OutputCustomType.Parameter("hockeyAppId") @Nullable String hockeyAppId,
+        @OutputCustomType.Parameter("hockeyAppToken") String hockeyAppToken,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immediatePurgeDataOn30Days") @Nullable Boolean immediatePurgeDataOn30Days,
+        @OutputCustomType.Parameter("ingestionMode") @Nullable String ingestionMode,
+        @OutputCustomType.Parameter("instrumentationKey") String instrumentationKey,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestSource") @Nullable String requestSource,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("samplingPercentage") @Nullable Double samplingPercentage,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.appId = appId;
         this.applicationId = applicationId;
         this.applicationType = applicationType;
@@ -425,122 +425,122 @@ public final class GetComponentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationType(String applicationType) {
+        public Builder applicationType(String applicationType) {
             this.applicationType = Objects.requireNonNull(applicationType);
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDisableIpMasking(@Nullable Boolean disableIpMasking) {
+        public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
             this.disableIpMasking = disableIpMasking;
             return this;
         }
 
-        public Builder setFlowType(@Nullable String flowType) {
+        public Builder flowType(@Nullable String flowType) {
             this.flowType = flowType;
             return this;
         }
 
-        public Builder setHockeyAppId(@Nullable String hockeyAppId) {
+        public Builder hockeyAppId(@Nullable String hockeyAppId) {
             this.hockeyAppId = hockeyAppId;
             return this;
         }
 
-        public Builder setHockeyAppToken(String hockeyAppToken) {
+        public Builder hockeyAppToken(String hockeyAppToken) {
             this.hockeyAppToken = Objects.requireNonNull(hockeyAppToken);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImmediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
+        public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
 
-        public Builder setIngestionMode(@Nullable String ingestionMode) {
+        public Builder ingestionMode(@Nullable String ingestionMode) {
             this.ingestionMode = ingestionMode;
             return this;
         }
 
-        public Builder setInstrumentationKey(String instrumentationKey) {
+        public Builder instrumentationKey(String instrumentationKey) {
             this.instrumentationKey = Objects.requireNonNull(instrumentationKey);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
+        public Builder privateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
             this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestSource(@Nullable String requestSource) {
+        public Builder requestSource(@Nullable String requestSource) {
             this.requestSource = requestSource;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSamplingPercentage(@Nullable Double samplingPercentage) {
+        public Builder samplingPercentage(@Nullable Double samplingPercentage) {
             this.samplingPercentage = samplingPercentage;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -157,37 +157,37 @@ public final class AutomationRuleModifyPropertiesActionResponseActionConfigurati
     	      this.status = defaults.status;
         }
 
-        public Builder setClassification(@Nullable String classification) {
+        public Builder classification(@Nullable String classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable String classificationComment) {
+        public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable String classificationReason) {
+        public Builder classificationReason(@Nullable String classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<IncidentLabelResponse> labels) {
+        public Builder labels(@Nullable List<IncidentLabelResponse> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setOwner(@Nullable IncidentOwnerInfoResponse owner) {
+        public Builder owner(@Nullable IncidentOwnerInfoResponse owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setSeverity(@Nullable String severity) {
+        public Builder severity(@Nullable String severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -12,10 +12,10 @@ public final class PipelineDatastore {
     private final String datastoreName;
     private final String name;
 
-    @OutputCustomType.Constructor({"datastoreName","name"})
+    @OutputCustomType.Constructor
     private PipelineDatastore(
-        String datastoreName,
-        String name) {
+        @OutputCustomType.Parameter("datastoreName") String datastoreName,
+        @OutputCustomType.Parameter("name") String name) {
         this.datastoreName = datastoreName;
         this.name = name;
     }
@@ -49,12 +49,12 @@ public final class PipelineDatastore {
     	      this.name = defaults.name;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

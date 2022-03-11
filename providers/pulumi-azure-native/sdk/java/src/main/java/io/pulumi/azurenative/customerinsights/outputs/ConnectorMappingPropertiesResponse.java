@@ -59,16 +59,16 @@ public final class ConnectorMappingPropertiesResponse {
      */
     private final List<ConnectorMappingStructureResponse> structure;
 
-    @OutputCustomType.Constructor({"availability","completeOperation","errorManagement","fileFilter","folderPath","format","hasHeader","structure"})
+    @OutputCustomType.Constructor
     private ConnectorMappingPropertiesResponse(
-        ConnectorMappingAvailabilityResponse availability,
-        ConnectorMappingCompleteOperationResponse completeOperation,
-        ConnectorMappingErrorManagementResponse errorManagement,
-        @Nullable String fileFilter,
-        @Nullable String folderPath,
-        ConnectorMappingFormatResponse format,
-        @Nullable Boolean hasHeader,
-        List<ConnectorMappingStructureResponse> structure) {
+        @OutputCustomType.Parameter("availability") ConnectorMappingAvailabilityResponse availability,
+        @OutputCustomType.Parameter("completeOperation") ConnectorMappingCompleteOperationResponse completeOperation,
+        @OutputCustomType.Parameter("errorManagement") ConnectorMappingErrorManagementResponse errorManagement,
+        @OutputCustomType.Parameter("fileFilter") @Nullable String fileFilter,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("format") ConnectorMappingFormatResponse format,
+        @OutputCustomType.Parameter("hasHeader") @Nullable Boolean hasHeader,
+        @OutputCustomType.Parameter("structure") List<ConnectorMappingStructureResponse> structure) {
         this.availability = availability;
         this.completeOperation = completeOperation;
         this.errorManagement = errorManagement;
@@ -170,42 +170,42 @@ public final class ConnectorMappingPropertiesResponse {
     	      this.structure = defaults.structure;
         }
 
-        public Builder setAvailability(ConnectorMappingAvailabilityResponse availability) {
+        public Builder availability(ConnectorMappingAvailabilityResponse availability) {
             this.availability = Objects.requireNonNull(availability);
             return this;
         }
 
-        public Builder setCompleteOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
+        public Builder completeOperation(ConnectorMappingCompleteOperationResponse completeOperation) {
             this.completeOperation = Objects.requireNonNull(completeOperation);
             return this;
         }
 
-        public Builder setErrorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
+        public Builder errorManagement(ConnectorMappingErrorManagementResponse errorManagement) {
             this.errorManagement = Objects.requireNonNull(errorManagement);
             return this;
         }
 
-        public Builder setFileFilter(@Nullable String fileFilter) {
+        public Builder fileFilter(@Nullable String fileFilter) {
             this.fileFilter = fileFilter;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFormat(ConnectorMappingFormatResponse format) {
+        public Builder format(ConnectorMappingFormatResponse format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setHasHeader(@Nullable Boolean hasHeader) {
+        public Builder hasHeader(@Nullable Boolean hasHeader) {
             this.hasHeader = hasHeader;
             return this;
         }
 
-        public Builder setStructure(List<ConnectorMappingStructureResponse> structure) {
+        public Builder structure(List<ConnectorMappingStructureResponse> structure) {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }

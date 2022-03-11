@@ -21,10 +21,10 @@ public final class ManagementGroupLogSettingsResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"category","enabled"})
+    @OutputCustomType.Constructor
     private ManagementGroupLogSettingsResponse(
-        String category,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.category = category;
         this.enabled = enabled;
     }
@@ -66,12 +66,12 @@ public final class ManagementGroupLogSettingsResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

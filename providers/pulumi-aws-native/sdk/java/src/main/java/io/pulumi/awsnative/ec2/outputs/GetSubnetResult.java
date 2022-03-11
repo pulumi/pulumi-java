@@ -22,15 +22,15 @@ public final class GetSubnetResult {
     private final @Nullable String subnetId;
     private final @Nullable List<SubnetTag> tags;
 
-    @OutputCustomType.Constructor({"assignIpv6AddressOnCreation","ipv6CidrBlock","ipv6CidrBlocks","mapPublicIpOnLaunch","networkAclAssociationId","subnetId","tags"})
+    @OutputCustomType.Constructor
     private GetSubnetResult(
-        @Nullable Boolean assignIpv6AddressOnCreation,
-        @Nullable String ipv6CidrBlock,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable Boolean mapPublicIpOnLaunch,
-        @Nullable String networkAclAssociationId,
-        @Nullable String subnetId,
-        @Nullable List<SubnetTag> tags) {
+        @OutputCustomType.Parameter("assignIpv6AddressOnCreation") @Nullable Boolean assignIpv6AddressOnCreation,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("mapPublicIpOnLaunch") @Nullable Boolean mapPublicIpOnLaunch,
+        @OutputCustomType.Parameter("networkAclAssociationId") @Nullable String networkAclAssociationId,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable List<SubnetTag> tags) {
         this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
         this.ipv6CidrBlock = ipv6CidrBlock;
         this.ipv6CidrBlocks = ipv6CidrBlocks;
@@ -94,37 +94,37 @@ public final class GetSubnetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
+        public Builder assignIpv6AddressOnCreation(@Nullable Boolean assignIpv6AddressOnCreation) {
             this.assignIpv6AddressOnCreation = assignIpv6AddressOnCreation;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setMapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
+        public Builder mapPublicIpOnLaunch(@Nullable Boolean mapPublicIpOnLaunch) {
             this.mapPublicIpOnLaunch = mapPublicIpOnLaunch;
             return this;
         }
 
-        public Builder setNetworkAclAssociationId(@Nullable String networkAclAssociationId) {
+        public Builder networkAclAssociationId(@Nullable String networkAclAssociationId) {
             this.networkAclAssociationId = networkAclAssociationId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SubnetTag> tags) {
+        public Builder tags(@Nullable List<SubnetTag> tags) {
             this.tags = tags;
             return this;
         }

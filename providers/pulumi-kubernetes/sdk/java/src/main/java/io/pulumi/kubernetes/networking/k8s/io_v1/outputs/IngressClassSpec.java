@@ -23,10 +23,10 @@ public final class IngressClassSpec {
      */
     private final @Nullable IngressClassParametersReference parameters;
 
-    @OutputCustomType.Constructor({"controller","parameters"})
+    @OutputCustomType.Constructor
     private IngressClassSpec(
-        @Nullable String controller,
-        @Nullable IngressClassParametersReference parameters) {
+        @OutputCustomType.Parameter("controller") @Nullable String controller,
+        @OutputCustomType.Parameter("parameters") @Nullable IngressClassParametersReference parameters) {
         this.controller = controller;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class IngressClassSpec {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setController(@Nullable String controller) {
+        public Builder controller(@Nullable String controller) {
             this.controller = controller;
             return this;
         }
 
-        public Builder setParameters(@Nullable IngressClassParametersReference parameters) {
+        public Builder parameters(@Nullable IngressClassParametersReference parameters) {
             this.parameters = parameters;
             return this;
         }

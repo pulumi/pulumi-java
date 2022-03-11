@@ -93,32 +93,32 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
     	      this.nodesList = defaults.nodesList;
         }
 
-        public Builder setHostServerName(@Nullable Input<String> hostServerName) {
+        public Builder hostServerName(@Nullable Input<String> hostServerName) {
             this.hostServerName = hostServerName;
             return this;
         }
 
-        public Builder setHostServerName(@Nullable String hostServerName) {
+        public Builder hostServerName(@Nullable String hostServerName) {
             this.hostServerName = Input.ofNullable(hostServerName);
             return this;
         }
 
-        public Builder setInquiryInfo(@Nullable Input<InquiryInfoArgs> inquiryInfo) {
+        public Builder inquiryInfo(@Nullable Input<InquiryInfoArgs> inquiryInfo) {
             this.inquiryInfo = inquiryInfo;
             return this;
         }
 
-        public Builder setInquiryInfo(@Nullable InquiryInfoArgs inquiryInfo) {
+        public Builder inquiryInfo(@Nullable InquiryInfoArgs inquiryInfo) {
             this.inquiryInfo = Input.ofNullable(inquiryInfo);
             return this;
         }
 
-        public Builder setNodesList(@Nullable Input<List<DistributedNodesInfoArgs>> nodesList) {
+        public Builder nodesList(@Nullable Input<List<DistributedNodesInfoArgs>> nodesList) {
             this.nodesList = nodesList;
             return this;
         }
 
-        public Builder setNodesList(@Nullable List<DistributedNodesInfoArgs> nodesList) {
+        public Builder nodesList(@Nullable List<DistributedNodesInfoArgs> nodesList) {
             this.nodesList = Input.ofNullable(nodesList);
             return this;
         }

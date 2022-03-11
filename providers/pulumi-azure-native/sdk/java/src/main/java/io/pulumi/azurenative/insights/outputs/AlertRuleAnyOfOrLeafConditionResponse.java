@@ -35,12 +35,12 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
      */
     private final @Nullable String field;
 
-    @OutputCustomType.Constructor({"anyOf","containsAny","equals","field"})
+    @OutputCustomType.Constructor
     private AlertRuleAnyOfOrLeafConditionResponse(
-        @Nullable List<AlertRuleLeafConditionResponse> anyOf,
-        @Nullable List<String> containsAny,
-        @Nullable String equals,
-        @Nullable String field) {
+        @OutputCustomType.Parameter("anyOf") @Nullable List<AlertRuleLeafConditionResponse> anyOf,
+        @OutputCustomType.Parameter("containsAny") @Nullable List<String> containsAny,
+        @OutputCustomType.Parameter("equals") @Nullable String equals,
+        @OutputCustomType.Parameter("field") @Nullable String field) {
         this.anyOf = anyOf;
         this.containsAny = containsAny;
         this.equals = equals;
@@ -103,22 +103,22 @@ public final class AlertRuleAnyOfOrLeafConditionResponse {
     	      this.field = defaults.field;
         }
 
-        public Builder setAnyOf(@Nullable List<AlertRuleLeafConditionResponse> anyOf) {
+        public Builder anyOf(@Nullable List<AlertRuleLeafConditionResponse> anyOf) {
             this.anyOf = anyOf;
             return this;
         }
 
-        public Builder setContainsAny(@Nullable List<String> containsAny) {
+        public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
 
-        public Builder setEquals(@Nullable String equals) {
+        public Builder equals(@Nullable String equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }

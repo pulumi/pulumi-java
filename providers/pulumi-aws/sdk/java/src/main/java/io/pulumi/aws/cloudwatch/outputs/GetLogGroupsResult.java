@@ -27,12 +27,12 @@ public final class GetLogGroupsResult {
      */
     private final List<String> logGroupNames;
 
-    @OutputCustomType.Constructor({"arns","id","logGroupNamePrefix","logGroupNames"})
+    @OutputCustomType.Constructor
     private GetLogGroupsResult(
-        List<String> arns,
-        String id,
-        String logGroupNamePrefix,
-        List<String> logGroupNames) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logGroupNamePrefix") String logGroupNamePrefix,
+        @OutputCustomType.Parameter("logGroupNames") List<String> logGroupNames) {
         this.arns = arns;
         this.id = id;
         this.logGroupNamePrefix = logGroupNamePrefix;
@@ -90,22 +90,22 @@ public final class GetLogGroupsResult {
     	      this.logGroupNames = defaults.logGroupNames;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogGroupNamePrefix(String logGroupNamePrefix) {
+        public Builder logGroupNamePrefix(String logGroupNamePrefix) {
             this.logGroupNamePrefix = Objects.requireNonNull(logGroupNamePrefix);
             return this;
         }
 
-        public Builder setLogGroupNames(List<String> logGroupNames) {
+        public Builder logGroupNames(List<String> logGroupNames) {
             this.logGroupNames = Objects.requireNonNull(logGroupNames);
             return this;
         }

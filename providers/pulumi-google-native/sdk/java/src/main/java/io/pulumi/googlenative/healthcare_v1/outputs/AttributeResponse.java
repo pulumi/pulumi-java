@@ -21,10 +21,10 @@ public final class AttributeResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"attributeDefinitionId","values"})
+    @OutputCustomType.Constructor
     private AttributeResponse(
-        String attributeDefinitionId,
-        List<String> values) {
+        @OutputCustomType.Parameter("attributeDefinitionId") String attributeDefinitionId,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.attributeDefinitionId = attributeDefinitionId;
         this.values = values;
     }
@@ -66,12 +66,12 @@ public final class AttributeResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setAttributeDefinitionId(String attributeDefinitionId) {
+        public Builder attributeDefinitionId(String attributeDefinitionId) {
             this.attributeDefinitionId = Objects.requireNonNull(attributeDefinitionId);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

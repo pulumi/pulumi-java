@@ -51,7 +51,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
     	      this.prefixListId = defaults.prefixListId;
         }
 
-        public Builder setPrefixListId(String prefixListId) {
+        public Builder prefixListId(String prefixListId) {
             this.prefixListId = Objects.requireNonNull(prefixListId);
             return this;
         }

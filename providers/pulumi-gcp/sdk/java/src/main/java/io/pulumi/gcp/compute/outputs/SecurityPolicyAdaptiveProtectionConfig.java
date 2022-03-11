@@ -17,8 +17,8 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
      */
     private final @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig;
 
-    @OutputCustomType.Constructor({"layer7DdosDefenseConfig"})
-    private SecurityPolicyAdaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyAdaptiveProtectionConfig(@OutputCustomType.Parameter("layer7DdosDefenseConfig") @Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
         this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
     }
 
@@ -50,7 +50,7 @@ public final class SecurityPolicyAdaptiveProtectionConfig {
     	      this.layer7DdosDefenseConfig = defaults.layer7DdosDefenseConfig;
         }
 
-        public Builder setLayer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
+        public Builder layer7DdosDefenseConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig layer7DdosDefenseConfig) {
             this.layer7DdosDefenseConfig = layer7DdosDefenseConfig;
             return this;
         }

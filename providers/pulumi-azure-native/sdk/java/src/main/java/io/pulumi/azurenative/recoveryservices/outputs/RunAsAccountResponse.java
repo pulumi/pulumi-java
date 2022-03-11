@@ -22,10 +22,10 @@ public final class RunAsAccountResponse {
      */
     private final @Nullable String accountName;
 
-    @OutputCustomType.Constructor({"accountId","accountName"})
+    @OutputCustomType.Constructor
     private RunAsAccountResponse(
-        @Nullable String accountId,
-        @Nullable String accountName) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName) {
         this.accountId = accountId;
         this.accountName = accountName;
     }
@@ -67,12 +67,12 @@ public final class RunAsAccountResponse {
     	      this.accountName = defaults.accountName;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }

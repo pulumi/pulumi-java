@@ -131,16 +131,16 @@ public final class AlertPolicyConditionConditionThreshold {
      */
     private final @Nullable AlertPolicyConditionConditionThresholdTrigger trigger;
 
-    @OutputCustomType.Constructor({"aggregations","comparison","denominatorAggregations","denominatorFilter","duration","filter","thresholdValue","trigger"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionThreshold(
-        @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
-        String comparison,
-        @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
-        @Nullable String denominatorFilter,
-        String duration,
-        @Nullable String filter,
-        @Nullable Double thresholdValue,
-        @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
+        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations,
+        @OutputCustomType.Parameter("comparison") String comparison,
+        @OutputCustomType.Parameter("denominatorAggregations") @Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations,
+        @OutputCustomType.Parameter("denominatorFilter") @Nullable String denominatorFilter,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("thresholdValue") @Nullable Double thresholdValue,
+        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
         this.aggregations = aggregations;
         this.comparison = comparison;
         this.denominatorAggregations = denominatorAggregations;
@@ -316,42 +316,42 @@ public final class AlertPolicyConditionConditionThreshold {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations) {
+        public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregation> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
-        public Builder setComparison(String comparison) {
+        public Builder comparison(String comparison) {
             this.comparison = Objects.requireNonNull(comparison);
             return this;
         }
 
-        public Builder setDenominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations) {
+        public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregation> denominatorAggregations) {
             this.denominatorAggregations = denominatorAggregations;
             return this;
         }
 
-        public Builder setDenominatorFilter(@Nullable String denominatorFilter) {
+        public Builder denominatorFilter(@Nullable String denominatorFilter) {
             this.denominatorFilter = denominatorFilter;
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setThresholdValue(@Nullable Double thresholdValue) {
+        public Builder thresholdValue(@Nullable Double thresholdValue) {
             this.thresholdValue = thresholdValue;
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTrigger trigger) {
             this.trigger = trigger;
             return this;
         }

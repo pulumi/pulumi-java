@@ -84,17 +84,17 @@ public final class GetWebPubSubSharedPrivateLinkResourceArgs extends io.pulumi.r
     	      this.sharedPrivateLinkResourceName = defaults.sharedPrivateLinkResourceName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
+        public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
             this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
             return this;
         }

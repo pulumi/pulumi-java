@@ -38,13 +38,13 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
      */
     private final @Nullable String dualStandbyPairName;
 
-    @OutputCustomType.Constructor({"catalogAdminPassword","catalogAdminUserName","catalogPricingTier","catalogServerEndpoint","dualStandbyPairName"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeSsisCatalogInfoResponse(
-        @Nullable SecureStringResponse catalogAdminPassword,
-        @Nullable String catalogAdminUserName,
-        @Nullable String catalogPricingTier,
-        @Nullable String catalogServerEndpoint,
-        @Nullable String dualStandbyPairName) {
+        @OutputCustomType.Parameter("catalogAdminPassword") @Nullable SecureStringResponse catalogAdminPassword,
+        @OutputCustomType.Parameter("catalogAdminUserName") @Nullable String catalogAdminUserName,
+        @OutputCustomType.Parameter("catalogPricingTier") @Nullable String catalogPricingTier,
+        @OutputCustomType.Parameter("catalogServerEndpoint") @Nullable String catalogServerEndpoint,
+        @OutputCustomType.Parameter("dualStandbyPairName") @Nullable String dualStandbyPairName) {
         this.catalogAdminPassword = catalogAdminPassword;
         this.catalogAdminUserName = catalogAdminUserName;
         this.catalogPricingTier = catalogPricingTier;
@@ -116,27 +116,27 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
     	      this.dualStandbyPairName = defaults.dualStandbyPairName;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable String catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable String catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable String catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
 
-        public Builder setDualStandbyPairName(@Nullable String dualStandbyPairName) {
+        public Builder dualStandbyPairName(@Nullable String dualStandbyPairName) {
             this.dualStandbyPairName = dualStandbyPairName;
             return this;
         }

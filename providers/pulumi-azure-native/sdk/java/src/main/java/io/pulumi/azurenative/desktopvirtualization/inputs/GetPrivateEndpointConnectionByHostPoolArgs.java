@@ -84,17 +84,17 @@ public final class GetPrivateEndpointConnectionByHostPoolArgs extends io.pulumi.
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setHostPoolName(String hostPoolName) {
+        public Builder hostPoolName(String hostPoolName) {
             this.hostPoolName = Objects.requireNonNull(hostPoolName);
             return this;
         }
 
-        public Builder setPrivateEndpointConnectionName(String privateEndpointConnectionName) {
+        public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             this.privateEndpointConnectionName = Objects.requireNonNull(privateEndpointConnectionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

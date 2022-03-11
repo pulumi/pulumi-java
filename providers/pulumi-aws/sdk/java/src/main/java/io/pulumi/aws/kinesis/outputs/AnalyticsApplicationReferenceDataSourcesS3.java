@@ -25,11 +25,11 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationReferenceDataSourcesS3(
-        String bucketArn,
-        String fileKey,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
         this.roleArn = roleArn;
@@ -81,17 +81,17 @@ public final class AnalyticsApplicationReferenceDataSourcesS3 {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFileKey(String fileKey) {
+        public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

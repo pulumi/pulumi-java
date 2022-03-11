@@ -76,20 +76,20 @@ public final class DatasetResponse {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"createdTime","datasetId","datasetState","datasetType","defaultCompute","description","etag","isVisible","latest","modifiedTime","name","tags"})
+    @OutputCustomType.Constructor
     private DatasetResponse(
-        String createdTime,
-        String datasetId,
-        @Nullable DatasetStateResponse datasetState,
-        String datasetType,
-        String defaultCompute,
-        String description,
-        String etag,
-        Boolean isVisible,
-        @Nullable DatasetResponseLatest latest,
-        String modifiedTime,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("datasetState") @Nullable DatasetStateResponse datasetState,
+        @OutputCustomType.Parameter("datasetType") String datasetType,
+        @OutputCustomType.Parameter("defaultCompute") String defaultCompute,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("isVisible") Boolean isVisible,
+        @OutputCustomType.Parameter("latest") @Nullable DatasetResponseLatest latest,
+        @OutputCustomType.Parameter("modifiedTime") String modifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.createdTime = createdTime;
         this.datasetId = datasetId;
         this.datasetState = datasetState;
@@ -231,62 +231,62 @@ public final class DatasetResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetState(@Nullable DatasetStateResponse datasetState) {
+        public Builder datasetState(@Nullable DatasetStateResponse datasetState) {
             this.datasetState = datasetState;
             return this;
         }
 
-        public Builder setDatasetType(String datasetType) {
+        public Builder datasetType(String datasetType) {
             this.datasetType = Objects.requireNonNull(datasetType);
             return this;
         }
 
-        public Builder setDefaultCompute(String defaultCompute) {
+        public Builder defaultCompute(String defaultCompute) {
             this.defaultCompute = Objects.requireNonNull(defaultCompute);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setIsVisible(Boolean isVisible) {
+        public Builder isVisible(Boolean isVisible) {
             this.isVisible = Objects.requireNonNull(isVisible);
             return this;
         }
 
-        public Builder setLatest(@Nullable DatasetResponseLatest latest) {
+        public Builder latest(@Nullable DatasetResponseLatest latest) {
             this.latest = latest;
             return this;
         }
 
-        public Builder setModifiedTime(String modifiedTime) {
+        public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = Objects.requireNonNull(modifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

@@ -122,52 +122,52 @@ public final class DataCatalogArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Object> parameters) {
+        public Builder parameters(@Nullable Input<Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataCatalogTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataCatalogTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataCatalogTagArgs> tags) {
+        public Builder tags(@Nullable List<DataCatalogTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<DataCatalogType> type) {
+        public Builder type(Input<DataCatalogType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DataCatalogType type) {
+        public Builder type(DataCatalogType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

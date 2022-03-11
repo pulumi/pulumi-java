@@ -16,8 +16,8 @@ public final class PoolEndpointConfigurationResponse {
      */
     private final List<InboundNatPoolResponse> inboundNatPools;
 
-    @OutputCustomType.Constructor({"inboundNatPools"})
-    private PoolEndpointConfigurationResponse(List<InboundNatPoolResponse> inboundNatPools) {
+    @OutputCustomType.Constructor
+    private PoolEndpointConfigurationResponse(@OutputCustomType.Parameter("inboundNatPools") List<InboundNatPoolResponse> inboundNatPools) {
         this.inboundNatPools = inboundNatPools;
     }
 
@@ -49,7 +49,7 @@ public final class PoolEndpointConfigurationResponse {
     	      this.inboundNatPools = defaults.inboundNatPools;
         }
 
-        public Builder setInboundNatPools(List<InboundNatPoolResponse> inboundNatPools) {
+        public Builder inboundNatPools(List<InboundNatPoolResponse> inboundNatPools) {
             this.inboundNatPools = Objects.requireNonNull(inboundNatPools);
             return this;
         }

@@ -13,10 +13,10 @@ public final class WebACLForwardedIPConfiguration {
     private final WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior;
     private final String headerName;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName"})
+    @OutputCustomType.Constructor
     private WebACLForwardedIPConfiguration(
-        WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
-        String headerName) {
+        @OutputCustomType.Parameter("fallbackBehavior") WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
     }
@@ -50,12 +50,12 @@ public final class WebACLForwardedIPConfiguration {
     	      this.headerName = defaults.headerName;
         }
 
-        public Builder setFallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
+        public Builder fallbackBehavior(WebACLForwardedIPConfigurationFallbackBehavior fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }

@@ -95,17 +95,17 @@ public final class ServicePerimetersServicePerimeter {
      */
     private final @Nullable Boolean useExplicitDryRunSpec;
 
-    @OutputCustomType.Constructor({"createTime","description","name","perimeterType","spec","status","title","updateTime","useExplicitDryRunSpec"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeter(
-        @Nullable String createTime,
-        @Nullable String description,
-        String name,
-        @Nullable String perimeterType,
-        @Nullable ServicePerimetersServicePerimeterSpec spec,
-        @Nullable ServicePerimetersServicePerimeterStatus status,
-        String title,
-        @Nullable String updateTime,
-        @Nullable Boolean useExplicitDryRunSpec) {
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perimeterType") @Nullable String perimeterType,
+        @OutputCustomType.Parameter("spec") @Nullable ServicePerimetersServicePerimeterSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable ServicePerimetersServicePerimeterStatus status,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime,
+        @OutputCustomType.Parameter("useExplicitDryRunSpec") @Nullable Boolean useExplicitDryRunSpec) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;
@@ -252,47 +252,47 @@ public final class ServicePerimetersServicePerimeter {
     	      this.useExplicitDryRunSpec = defaults.useExplicitDryRunSpec;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerimeterType(@Nullable String perimeterType) {
+        public Builder perimeterType(@Nullable String perimeterType) {
             this.perimeterType = perimeterType;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServicePerimetersServicePerimeterSpec spec) {
+        public Builder spec(@Nullable ServicePerimetersServicePerimeterSpec spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setStatus(@Nullable ServicePerimetersServicePerimeterStatus status) {
+        public Builder status(@Nullable ServicePerimetersServicePerimeterStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setUseExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
+        public Builder useExplicitDryRunSpec(@Nullable Boolean useExplicitDryRunSpec) {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }

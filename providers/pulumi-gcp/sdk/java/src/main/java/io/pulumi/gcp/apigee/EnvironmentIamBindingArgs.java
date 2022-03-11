@@ -110,52 +110,52 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(@Nullable Input<EnvironmentIamBindingConditionArgs> condition) {
+        public Builder condition(@Nullable Input<EnvironmentIamBindingConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable EnvironmentIamBindingConditionArgs condition) {
+        public Builder condition(@Nullable EnvironmentIamBindingConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setEnvId(Input<String> envId) {
+        public Builder envId(Input<String> envId) {
             this.envId = Objects.requireNonNull(envId);
             return this;
         }
 
-        public Builder setEnvId(String envId) {
+        public Builder envId(String envId) {
             this.envId = Input.of(Objects.requireNonNull(envId));
             return this;
         }
 
-        public Builder setMembers(Input<List<String>> members) {
+        public Builder members(Input<List<String>> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }
 
-        public Builder setOrgId(Input<String> orgId) {
+        public Builder orgId(Input<String> orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }
 
-        public Builder setRole(Input<String> role) {
+        public Builder role(Input<String> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }

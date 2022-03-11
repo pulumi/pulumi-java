@@ -26,11 +26,11 @@ public final class OnPremClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"adminCluster","clusterMissing","resourceLink"})
+    @OutputCustomType.Constructor
     private OnPremClusterResponse(
-        Boolean adminCluster,
-        Boolean clusterMissing,
-        String resourceLink) {
+        @OutputCustomType.Parameter("adminCluster") Boolean adminCluster,
+        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.adminCluster = adminCluster;
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;
@@ -82,17 +82,17 @@ public final class OnPremClusterResponse {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder setAdminCluster(Boolean adminCluster) {
+        public Builder adminCluster(Boolean adminCluster) {
             this.adminCluster = Objects.requireNonNull(adminCluster);
             return this;
         }
 
-        public Builder setClusterMissing(Boolean clusterMissing) {
+        public Builder clusterMissing(Boolean clusterMissing) {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
 
-        public Builder setResourceLink(String resourceLink) {
+        public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }

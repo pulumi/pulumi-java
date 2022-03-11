@@ -60,15 +60,15 @@ public final class GuestPoliciesRecipeUpdateStep {
      */
     private final @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun;
 
-    @OutputCustomType.Constructor({"archiveExtraction","dpkgInstallation","fileCopy","fileExec","msiInstallation","rpmInstallation","scriptRun"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeUpdateStep(
-        @Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction,
-        @Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation,
-        @Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy,
-        @Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec,
-        @Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation,
-        @Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation,
-        @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
+        @OutputCustomType.Parameter("archiveExtraction") @Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction,
+        @OutputCustomType.Parameter("dpkgInstallation") @Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation,
+        @OutputCustomType.Parameter("fileCopy") @Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy,
+        @OutputCustomType.Parameter("fileExec") @Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec,
+        @OutputCustomType.Parameter("msiInstallation") @Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation,
+        @OutputCustomType.Parameter("rpmInstallation") @Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation,
+        @OutputCustomType.Parameter("scriptRun") @Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
         this.archiveExtraction = archiveExtraction;
         this.dpkgInstallation = dpkgInstallation;
         this.fileCopy = fileCopy;
@@ -167,37 +167,37 @@ public final class GuestPoliciesRecipeUpdateStep {
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(@Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction) {
+        public Builder archiveExtraction(@Nullable GuestPoliciesRecipeUpdateStepArchiveExtraction archiveExtraction) {
             this.archiveExtraction = archiveExtraction;
             return this;
         }
 
-        public Builder setDpkgInstallation(@Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation) {
+        public Builder dpkgInstallation(@Nullable GuestPoliciesRecipeUpdateStepDpkgInstallation dpkgInstallation) {
             this.dpkgInstallation = dpkgInstallation;
             return this;
         }
 
-        public Builder setFileCopy(@Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy) {
+        public Builder fileCopy(@Nullable GuestPoliciesRecipeUpdateStepFileCopy fileCopy) {
             this.fileCopy = fileCopy;
             return this;
         }
 
-        public Builder setFileExec(@Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec) {
+        public Builder fileExec(@Nullable GuestPoliciesRecipeUpdateStepFileExec fileExec) {
             this.fileExec = fileExec;
             return this;
         }
 
-        public Builder setMsiInstallation(@Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation) {
+        public Builder msiInstallation(@Nullable GuestPoliciesRecipeUpdateStepMsiInstallation msiInstallation) {
             this.msiInstallation = msiInstallation;
             return this;
         }
 
-        public Builder setRpmInstallation(@Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation) {
+        public Builder rpmInstallation(@Nullable GuestPoliciesRecipeUpdateStepRpmInstallation rpmInstallation) {
             this.rpmInstallation = rpmInstallation;
             return this;
         }
 
-        public Builder setScriptRun(@Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
+        public Builder scriptRun(@Nullable GuestPoliciesRecipeUpdateStepScriptRun scriptRun) {
             this.scriptRun = scriptRun;
             return this;
         }

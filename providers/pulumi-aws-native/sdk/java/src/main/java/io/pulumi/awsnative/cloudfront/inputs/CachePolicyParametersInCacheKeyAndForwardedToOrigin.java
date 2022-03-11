@@ -101,27 +101,27 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin extends i
     	      this.queryStringsConfig = defaults.queryStringsConfig;
         }
 
-        public Builder setCookiesConfig(CachePolicyCookiesConfig cookiesConfig) {
+        public Builder cookiesConfig(CachePolicyCookiesConfig cookiesConfig) {
             this.cookiesConfig = Objects.requireNonNull(cookiesConfig);
             return this;
         }
 
-        public Builder setEnableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
+        public Builder enableAcceptEncodingBrotli(@Nullable Boolean enableAcceptEncodingBrotli) {
             this.enableAcceptEncodingBrotli = enableAcceptEncodingBrotli;
             return this;
         }
 
-        public Builder setEnableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
+        public Builder enableAcceptEncodingGzip(Boolean enableAcceptEncodingGzip) {
             this.enableAcceptEncodingGzip = Objects.requireNonNull(enableAcceptEncodingGzip);
             return this;
         }
 
-        public Builder setHeadersConfig(CachePolicyHeadersConfig headersConfig) {
+        public Builder headersConfig(CachePolicyHeadersConfig headersConfig) {
             this.headersConfig = Objects.requireNonNull(headersConfig);
             return this;
         }
 
-        public Builder setQueryStringsConfig(CachePolicyQueryStringsConfig queryStringsConfig) {
+        public Builder queryStringsConfig(CachePolicyQueryStringsConfig queryStringsConfig) {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }

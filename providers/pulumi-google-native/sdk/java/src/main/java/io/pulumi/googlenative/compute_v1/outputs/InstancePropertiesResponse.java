@@ -125,28 +125,28 @@ public final class InstancePropertiesResponse {
      */
     private final TagsResponse tags;
 
-    @OutputCustomType.Constructor({"advancedMachineFeatures","canIpForward","confidentialInstanceConfig","description","disks","guestAccelerators","labels","machineType","metadata","minCpuPlatform","networkInterfaces","networkPerformanceConfig","privateIpv6GoogleAccess","reservationAffinity","resourceManagerTags","resourcePolicies","scheduling","serviceAccounts","shieldedInstanceConfig","tags"})
+    @OutputCustomType.Constructor
     private InstancePropertiesResponse(
-        AdvancedMachineFeaturesResponse advancedMachineFeatures,
-        Boolean canIpForward,
-        ConfidentialInstanceConfigResponse confidentialInstanceConfig,
-        String description,
-        List<AttachedDiskResponse> disks,
-        List<AcceleratorConfigResponse> guestAccelerators,
-        Map<String,String> labels,
-        String machineType,
-        MetadataResponse metadata,
-        String minCpuPlatform,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        NetworkPerformanceConfigResponse networkPerformanceConfig,
-        String privateIpv6GoogleAccess,
-        ReservationAffinityResponse reservationAffinity,
-        Map<String,String> resourceManagerTags,
-        List<String> resourcePolicies,
-        SchedulingResponse scheduling,
-        List<ServiceAccountResponse> serviceAccounts,
-        ShieldedInstanceConfigResponse shieldedInstanceConfig,
-        TagsResponse tags) {
+        @OutputCustomType.Parameter("advancedMachineFeatures") AdvancedMachineFeaturesResponse advancedMachineFeatures,
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("confidentialInstanceConfig") ConfidentialInstanceConfigResponse confidentialInstanceConfig,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<AttachedDiskResponse> disks,
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") MetadataResponse metadata,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("networkPerformanceConfig") NetworkPerformanceConfigResponse networkPerformanceConfig,
+        @OutputCustomType.Parameter("privateIpv6GoogleAccess") String privateIpv6GoogleAccess,
+        @OutputCustomType.Parameter("reservationAffinity") ReservationAffinityResponse reservationAffinity,
+        @OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("scheduling") SchedulingResponse scheduling,
+        @OutputCustomType.Parameter("serviceAccounts") List<ServiceAccountResponse> serviceAccounts,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") ShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("tags") TagsResponse tags) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfig = confidentialInstanceConfig;
@@ -368,102 +368,102 @@ public final class InstancePropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdvancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(AdvancedMachineFeaturesResponse advancedMachineFeatures) {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setConfidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
+        public Builder confidentialInstanceConfig(ConfidentialInstanceConfigResponse confidentialInstanceConfig) {
             this.confidentialInstanceConfig = Objects.requireNonNull(confidentialInstanceConfig);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisks(List<AttachedDiskResponse> disks) {
+        public Builder disks(List<AttachedDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setGuestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
+        public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(MetadataResponse metadata) {
+        public Builder metadata(MetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
+        public Builder networkPerformanceConfig(NetworkPerformanceConfigResponse networkPerformanceConfig) {
             this.networkPerformanceConfig = Objects.requireNonNull(networkPerformanceConfig);
             return this;
         }
 
-        public Builder setPrivateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
+        public Builder privateIpv6GoogleAccess(String privateIpv6GoogleAccess) {
             this.privateIpv6GoogleAccess = Objects.requireNonNull(privateIpv6GoogleAccess);
             return this;
         }
 
-        public Builder setReservationAffinity(ReservationAffinityResponse reservationAffinity) {
+        public Builder reservationAffinity(ReservationAffinityResponse reservationAffinity) {
             this.reservationAffinity = Objects.requireNonNull(reservationAffinity);
             return this;
         }
 
-        public Builder setResourceManagerTags(Map<String,String> resourceManagerTags) {
+        public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setScheduling(SchedulingResponse scheduling) {
+        public Builder scheduling(SchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setServiceAccounts(List<ServiceAccountResponse> serviceAccounts) {
+        public Builder serviceAccounts(List<ServiceAccountResponse> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(ShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setTags(TagsResponse tags) {
+        public Builder tags(TagsResponse tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

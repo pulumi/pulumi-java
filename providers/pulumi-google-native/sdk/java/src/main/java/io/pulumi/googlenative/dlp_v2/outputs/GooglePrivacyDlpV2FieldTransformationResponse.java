@@ -34,12 +34,12 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor({"condition","fields","infoTypeTransformations","primitiveTransformation"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FieldTransformationResponse(
-        GooglePrivacyDlpV2RecordConditionResponse condition,
-        List<GooglePrivacyDlpV2FieldIdResponse> fields,
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @OutputCustomType.Parameter("condition") GooglePrivacyDlpV2RecordConditionResponse condition,
+        @OutputCustomType.Parameter("fields") List<GooglePrivacyDlpV2FieldIdResponse> fields,
+        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.condition = condition;
         this.fields = fields;
         this.infoTypeTransformations = infoTypeTransformations;
@@ -101,22 +101,22 @@ public final class GooglePrivacyDlpV2FieldTransformationResponse {
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setCondition(GooglePrivacyDlpV2RecordConditionResponse condition) {
+        public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setFields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
+        public Builder fields(List<GooglePrivacyDlpV2FieldIdResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setInfoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }

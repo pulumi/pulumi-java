@@ -19,13 +19,13 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     private final @Nullable List<String> sourceAddresses;
     private final @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges;
 
-    @OutputCustomType.Constructor({"destinationAddresses","destinationPortRanges","protocol","sourceAddresses","sourcePortRanges"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisAnalysisPacketHeader(
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
-        @Nullable String protocol,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
         this.destinationAddresses = destinationAddresses;
         this.destinationPortRanges = destinationPortRanges;
         this.protocol = protocol;
@@ -77,27 +77,27 @@ public final class NetworkInsightsAnalysisAnalysisPacketHeader {
     	      this.sourcePortRanges = defaults.sourcePortRanges;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<NetworkInsightsAnalysisPortRange> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }

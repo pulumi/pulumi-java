@@ -39,13 +39,13 @@ public final class TableSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","format","properties","title","type"})
+    @OutputCustomType.Constructor
     private TableSpecificationResponse(
-        @Nullable String description,
-        @Nullable String format,
-        @Nullable Map<String,ColumnSpecificationResponse> properties,
-        @Nullable String title,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,ColumnSpecificationResponse> properties,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.format = format;
         this.properties = properties;
@@ -117,27 +117,27 @@ public final class TableSpecificationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,ColumnSpecificationResponse> properties) {
+        public Builder properties(@Nullable Map<String,ColumnSpecificationResponse> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

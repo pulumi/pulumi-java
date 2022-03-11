@@ -24,10 +24,10 @@ public final class ResolverCachingConfig {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor({"cachingKeys","ttl"})
+    @OutputCustomType.Constructor
     private ResolverCachingConfig(
-        @Nullable List<String> cachingKeys,
-        @Nullable Integer ttl) {
+        @OutputCustomType.Parameter("cachingKeys") @Nullable List<String> cachingKeys,
+        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.cachingKeys = cachingKeys;
         this.ttl = ttl;
     }
@@ -69,12 +69,12 @@ public final class ResolverCachingConfig {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCachingKeys(@Nullable List<String> cachingKeys) {
+        public Builder cachingKeys(@Nullable List<String> cachingKeys) {
             this.cachingKeys = cachingKeys;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
         }

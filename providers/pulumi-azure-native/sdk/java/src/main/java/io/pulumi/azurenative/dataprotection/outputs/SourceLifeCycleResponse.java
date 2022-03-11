@@ -25,11 +25,11 @@ public final class SourceLifeCycleResponse {
     private final DataStoreInfoBaseResponse sourceDataStore;
     private final @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings;
 
-    @OutputCustomType.Constructor({"deleteAfter","sourceDataStore","targetDataStoreCopySettings"})
+    @OutputCustomType.Constructor
     private SourceLifeCycleResponse(
-        AbsoluteDeleteOptionResponse deleteAfter,
-        DataStoreInfoBaseResponse sourceDataStore,
-        @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
+        @OutputCustomType.Parameter("deleteAfter") AbsoluteDeleteOptionResponse deleteAfter,
+        @OutputCustomType.Parameter("sourceDataStore") DataStoreInfoBaseResponse sourceDataStore,
+        @OutputCustomType.Parameter("targetDataStoreCopySettings") @Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
         this.deleteAfter = deleteAfter;
         this.sourceDataStore = sourceDataStore;
         this.targetDataStoreCopySettings = targetDataStoreCopySettings;
@@ -77,17 +77,17 @@ public final class SourceLifeCycleResponse {
     	      this.targetDataStoreCopySettings = defaults.targetDataStoreCopySettings;
         }
 
-        public Builder setDeleteAfter(AbsoluteDeleteOptionResponse deleteAfter) {
+        public Builder deleteAfter(AbsoluteDeleteOptionResponse deleteAfter) {
             this.deleteAfter = Objects.requireNonNull(deleteAfter);
             return this;
         }
 
-        public Builder setSourceDataStore(DataStoreInfoBaseResponse sourceDataStore) {
+        public Builder sourceDataStore(DataStoreInfoBaseResponse sourceDataStore) {
             this.sourceDataStore = Objects.requireNonNull(sourceDataStore);
             return this;
         }
 
-        public Builder setTargetDataStoreCopySettings(@Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
+        public Builder targetDataStoreCopySettings(@Nullable List<TargetCopySettingResponse> targetDataStoreCopySettings) {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }

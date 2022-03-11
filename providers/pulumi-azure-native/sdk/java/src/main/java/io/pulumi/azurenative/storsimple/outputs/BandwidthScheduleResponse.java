@@ -33,12 +33,12 @@ public final class BandwidthScheduleResponse {
      */
     private final TimeResponse stop;
 
-    @OutputCustomType.Constructor({"days","rateInMbps","start","stop"})
+    @OutputCustomType.Constructor
     private BandwidthScheduleResponse(
-        List<String> days,
-        Integer rateInMbps,
-        TimeResponse start,
-        TimeResponse stop) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("rateInMbps") Integer rateInMbps,
+        @OutputCustomType.Parameter("start") TimeResponse start,
+        @OutputCustomType.Parameter("stop") TimeResponse stop) {
         this.days = days;
         this.rateInMbps = rateInMbps;
         this.start = start;
@@ -100,22 +100,22 @@ public final class BandwidthScheduleResponse {
     	      this.stop = defaults.stop;
         }
 
-        public Builder setDays(List<String> days) {
+        public Builder days(List<String> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setRateInMbps(Integer rateInMbps) {
+        public Builder rateInMbps(Integer rateInMbps) {
             this.rateInMbps = Objects.requireNonNull(rateInMbps);
             return this;
         }
 
-        public Builder setStart(TimeResponse start) {
+        public Builder start(TimeResponse start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStop(TimeResponse stop) {
+        public Builder stop(TimeResponse stop) {
             this.stop = Objects.requireNonNull(stop);
             return this;
         }

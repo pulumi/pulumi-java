@@ -91,17 +91,17 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker extends io.p
     	      this.baseImageRegistry = defaults.baseImageRegistry;
         }
 
-        public Builder setBaseDockerfile(@Nullable String baseDockerfile) {
+        public Builder baseDockerfile(@Nullable String baseDockerfile) {
             this.baseDockerfile = baseDockerfile;
             return this;
         }
 
-        public Builder setBaseImage(@Nullable String baseImage) {
+        public Builder baseImage(@Nullable String baseImage) {
             this.baseImage = baseImage;
             return this;
         }
 
-        public Builder setBaseImageRegistry(@Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
+        public Builder baseImageRegistry(@Nullable ModelDockerSectionResponseResponseBaseImageRegistry baseImageRegistry) {
             this.baseImageRegistry = baseImageRegistry;
             return this;
         }

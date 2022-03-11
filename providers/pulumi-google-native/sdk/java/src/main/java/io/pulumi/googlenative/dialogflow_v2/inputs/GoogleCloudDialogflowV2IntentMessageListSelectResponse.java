@@ -90,17 +90,17 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse extend
     	      this.title = defaults.title;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

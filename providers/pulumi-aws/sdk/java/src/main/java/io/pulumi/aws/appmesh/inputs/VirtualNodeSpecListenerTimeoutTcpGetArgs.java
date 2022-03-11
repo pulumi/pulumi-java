@@ -53,12 +53,12 @@ public final class VirtualNodeSpecListenerTimeoutTcpGetArgs extends io.pulumi.re
     	      this.idle = defaults.idle;
         }
 
-        public Builder setIdle(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
+        public Builder idle(@Nullable Input<VirtualNodeSpecListenerTimeoutTcpIdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
-        public Builder setIdle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdleGetArgs idle) {
+        public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdleGetArgs idle) {
             this.idle = Input.ofNullable(idle);
             return this;
         }

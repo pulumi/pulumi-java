@@ -23,10 +23,10 @@ public final class ClassificationJobS3JobDefinitionScoping {
      */
     private final @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes;
 
-    @OutputCustomType.Constructor({"excludes","includes"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScoping(
-        @Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes,
-        @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
+        @OutputCustomType.Parameter("excludes") @Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes,
+        @OutputCustomType.Parameter("includes") @Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
         this.excludes = excludes;
         this.includes = includes;
     }
@@ -68,12 +68,12 @@ public final class ClassificationJobS3JobDefinitionScoping {
     	      this.includes = defaults.includes;
         }
 
-        public Builder setExcludes(@Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes) {
+        public Builder excludes(@Nullable ClassificationJobS3JobDefinitionScopingExcludes excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setIncludes(@Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
+        public Builder includes(@Nullable ClassificationJobS3JobDefinitionScopingIncludes includes) {
             this.includes = includes;
             return this;
         }

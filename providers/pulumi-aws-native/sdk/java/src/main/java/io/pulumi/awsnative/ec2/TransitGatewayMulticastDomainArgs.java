@@ -89,32 +89,32 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setOptions(@Nullable Input<OptionsPropertiesArgs> options) {
+        public Builder options(@Nullable Input<OptionsPropertiesArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsPropertiesArgs options) {
+        public Builder options(@Nullable OptionsPropertiesArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TransitGatewayMulticastDomainTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TransitGatewayMulticastDomainTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayMulticastDomainTagArgs> tags) {
+        public Builder tags(@Nullable List<TransitGatewayMulticastDomainTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Input<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetEnvironmentConfigWebServerConfig {
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private GetEnvironmentConfigWebServerConfig(String machineType) {
+    @OutputCustomType.Constructor
+    private GetEnvironmentConfigWebServerConfig(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 
@@ -40,7 +40,7 @@ public final class GetEnvironmentConfigWebServerConfig {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

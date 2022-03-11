@@ -21,10 +21,10 @@ public final class BucketLifecycleRule {
      */
     private final BucketLifecycleRuleCondition condition;
 
-    @OutputCustomType.Constructor({"action","condition"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRule(
-        BucketLifecycleRuleAction action,
-        BucketLifecycleRuleCondition condition) {
+        @OutputCustomType.Parameter("action") BucketLifecycleRuleAction action,
+        @OutputCustomType.Parameter("condition") BucketLifecycleRuleCondition condition) {
         this.action = action;
         this.condition = condition;
     }
@@ -66,12 +66,12 @@ public final class BucketLifecycleRule {
     	      this.condition = defaults.condition;
         }
 
-        public Builder setAction(BucketLifecycleRuleAction action) {
+        public Builder action(BucketLifecycleRuleAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCondition(BucketLifecycleRuleCondition condition) {
+        public Builder condition(BucketLifecycleRuleCondition condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

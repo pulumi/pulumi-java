@@ -21,10 +21,10 @@ public final class ProcessingOptionsResponse {
      */
     private final String htmlSanitization;
 
-    @OutputCustomType.Constructor({"disableStreetAddressResolution","htmlSanitization"})
+    @OutputCustomType.Constructor
     private ProcessingOptionsResponse(
-        Boolean disableStreetAddressResolution,
-        String htmlSanitization) {
+        @OutputCustomType.Parameter("disableStreetAddressResolution") Boolean disableStreetAddressResolution,
+        @OutputCustomType.Parameter("htmlSanitization") String htmlSanitization) {
         this.disableStreetAddressResolution = disableStreetAddressResolution;
         this.htmlSanitization = htmlSanitization;
     }
@@ -66,12 +66,12 @@ public final class ProcessingOptionsResponse {
     	      this.htmlSanitization = defaults.htmlSanitization;
         }
 
-        public Builder setDisableStreetAddressResolution(Boolean disableStreetAddressResolution) {
+        public Builder disableStreetAddressResolution(Boolean disableStreetAddressResolution) {
             this.disableStreetAddressResolution = Objects.requireNonNull(disableStreetAddressResolution);
             return this;
         }
 
-        public Builder setHtmlSanitization(String htmlSanitization) {
+        public Builder htmlSanitization(String htmlSanitization) {
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
         }

@@ -121,52 +121,52 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<WorkerPoolRegionsItem>> regions) {
+        public Builder regions(@Nullable Input<List<WorkerPoolRegionsItem>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<WorkerPoolRegionsItem> regions) {
+        public Builder regions(@Nullable List<WorkerPoolRegionsItem> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<WorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable WorkerConfigArgs workerConfig) {
+        public Builder workerConfig(@Nullable WorkerConfigArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable Input<String> workerCount) {
+        public Builder workerCount(@Nullable Input<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable String workerCount) {
+        public Builder workerCount(@Nullable String workerCount) {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }

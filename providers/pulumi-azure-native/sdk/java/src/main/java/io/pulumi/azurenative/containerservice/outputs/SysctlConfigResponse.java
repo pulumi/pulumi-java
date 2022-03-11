@@ -154,36 +154,36 @@ public final class SysctlConfigResponse {
      */
     private final @Nullable Integer vmVfsCachePressure;
 
-    @OutputCustomType.Constructor({"fsAioMaxNr","fsFileMax","fsInotifyMaxUserWatches","fsNrOpen","kernelThreadsMax","netCoreNetdevMaxBacklog","netCoreOptmemMax","netCoreRmemDefault","netCoreRmemMax","netCoreSomaxconn","netCoreWmemDefault","netCoreWmemMax","netIpv4IpLocalPortRange","netIpv4NeighDefaultGcThresh1","netIpv4NeighDefaultGcThresh2","netIpv4NeighDefaultGcThresh3","netIpv4TcpFinTimeout","netIpv4TcpKeepaliveProbes","netIpv4TcpKeepaliveTime","netIpv4TcpMaxSynBacklog","netIpv4TcpMaxTwBuckets","netIpv4TcpTwReuse","netIpv4TcpkeepaliveIntvl","netNetfilterNfConntrackBuckets","netNetfilterNfConntrackMax","vmMaxMapCount","vmSwappiness","vmVfsCachePressure"})
+    @OutputCustomType.Constructor
     private SysctlConfigResponse(
-        @Nullable Integer fsAioMaxNr,
-        @Nullable Integer fsFileMax,
-        @Nullable Integer fsInotifyMaxUserWatches,
-        @Nullable Integer fsNrOpen,
-        @Nullable Integer kernelThreadsMax,
-        @Nullable Integer netCoreNetdevMaxBacklog,
-        @Nullable Integer netCoreOptmemMax,
-        @Nullable Integer netCoreRmemDefault,
-        @Nullable Integer netCoreRmemMax,
-        @Nullable Integer netCoreSomaxconn,
-        @Nullable Integer netCoreWmemDefault,
-        @Nullable Integer netCoreWmemMax,
-        @Nullable String netIpv4IpLocalPortRange,
-        @Nullable Integer netIpv4NeighDefaultGcThresh1,
-        @Nullable Integer netIpv4NeighDefaultGcThresh2,
-        @Nullable Integer netIpv4NeighDefaultGcThresh3,
-        @Nullable Integer netIpv4TcpFinTimeout,
-        @Nullable Integer netIpv4TcpKeepaliveProbes,
-        @Nullable Integer netIpv4TcpKeepaliveTime,
-        @Nullable Integer netIpv4TcpMaxSynBacklog,
-        @Nullable Integer netIpv4TcpMaxTwBuckets,
-        @Nullable Boolean netIpv4TcpTwReuse,
-        @Nullable Integer netIpv4TcpkeepaliveIntvl,
-        @Nullable Integer netNetfilterNfConntrackBuckets,
-        @Nullable Integer netNetfilterNfConntrackMax,
-        @Nullable Integer vmMaxMapCount,
-        @Nullable Integer vmSwappiness,
-        @Nullable Integer vmVfsCachePressure) {
+        @OutputCustomType.Parameter("fsAioMaxNr") @Nullable Integer fsAioMaxNr,
+        @OutputCustomType.Parameter("fsFileMax") @Nullable Integer fsFileMax,
+        @OutputCustomType.Parameter("fsInotifyMaxUserWatches") @Nullable Integer fsInotifyMaxUserWatches,
+        @OutputCustomType.Parameter("fsNrOpen") @Nullable Integer fsNrOpen,
+        @OutputCustomType.Parameter("kernelThreadsMax") @Nullable Integer kernelThreadsMax,
+        @OutputCustomType.Parameter("netCoreNetdevMaxBacklog") @Nullable Integer netCoreNetdevMaxBacklog,
+        @OutputCustomType.Parameter("netCoreOptmemMax") @Nullable Integer netCoreOptmemMax,
+        @OutputCustomType.Parameter("netCoreRmemDefault") @Nullable Integer netCoreRmemDefault,
+        @OutputCustomType.Parameter("netCoreRmemMax") @Nullable Integer netCoreRmemMax,
+        @OutputCustomType.Parameter("netCoreSomaxconn") @Nullable Integer netCoreSomaxconn,
+        @OutputCustomType.Parameter("netCoreWmemDefault") @Nullable Integer netCoreWmemDefault,
+        @OutputCustomType.Parameter("netCoreWmemMax") @Nullable Integer netCoreWmemMax,
+        @OutputCustomType.Parameter("netIpv4IpLocalPortRange") @Nullable String netIpv4IpLocalPortRange,
+        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh1") @Nullable Integer netIpv4NeighDefaultGcThresh1,
+        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh2") @Nullable Integer netIpv4NeighDefaultGcThresh2,
+        @OutputCustomType.Parameter("netIpv4NeighDefaultGcThresh3") @Nullable Integer netIpv4NeighDefaultGcThresh3,
+        @OutputCustomType.Parameter("netIpv4TcpFinTimeout") @Nullable Integer netIpv4TcpFinTimeout,
+        @OutputCustomType.Parameter("netIpv4TcpKeepaliveProbes") @Nullable Integer netIpv4TcpKeepaliveProbes,
+        @OutputCustomType.Parameter("netIpv4TcpKeepaliveTime") @Nullable Integer netIpv4TcpKeepaliveTime,
+        @OutputCustomType.Parameter("netIpv4TcpMaxSynBacklog") @Nullable Integer netIpv4TcpMaxSynBacklog,
+        @OutputCustomType.Parameter("netIpv4TcpMaxTwBuckets") @Nullable Integer netIpv4TcpMaxTwBuckets,
+        @OutputCustomType.Parameter("netIpv4TcpTwReuse") @Nullable Boolean netIpv4TcpTwReuse,
+        @OutputCustomType.Parameter("netIpv4TcpkeepaliveIntvl") @Nullable Integer netIpv4TcpkeepaliveIntvl,
+        @OutputCustomType.Parameter("netNetfilterNfConntrackBuckets") @Nullable Integer netNetfilterNfConntrackBuckets,
+        @OutputCustomType.Parameter("netNetfilterNfConntrackMax") @Nullable Integer netNetfilterNfConntrackMax,
+        @OutputCustomType.Parameter("vmMaxMapCount") @Nullable Integer vmMaxMapCount,
+        @OutputCustomType.Parameter("vmSwappiness") @Nullable Integer vmSwappiness,
+        @OutputCustomType.Parameter("vmVfsCachePressure") @Nullable Integer vmVfsCachePressure) {
         this.fsAioMaxNr = fsAioMaxNr;
         this.fsFileMax = fsFileMax;
         this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
@@ -485,142 +485,142 @@ public final class SysctlConfigResponse {
     	      this.vmVfsCachePressure = defaults.vmVfsCachePressure;
         }
 
-        public Builder setFsAioMaxNr(@Nullable Integer fsAioMaxNr) {
+        public Builder fsAioMaxNr(@Nullable Integer fsAioMaxNr) {
             this.fsAioMaxNr = fsAioMaxNr;
             return this;
         }
 
-        public Builder setFsFileMax(@Nullable Integer fsFileMax) {
+        public Builder fsFileMax(@Nullable Integer fsFileMax) {
             this.fsFileMax = fsFileMax;
             return this;
         }
 
-        public Builder setFsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
+        public Builder fsInotifyMaxUserWatches(@Nullable Integer fsInotifyMaxUserWatches) {
             this.fsInotifyMaxUserWatches = fsInotifyMaxUserWatches;
             return this;
         }
 
-        public Builder setFsNrOpen(@Nullable Integer fsNrOpen) {
+        public Builder fsNrOpen(@Nullable Integer fsNrOpen) {
             this.fsNrOpen = fsNrOpen;
             return this;
         }
 
-        public Builder setKernelThreadsMax(@Nullable Integer kernelThreadsMax) {
+        public Builder kernelThreadsMax(@Nullable Integer kernelThreadsMax) {
             this.kernelThreadsMax = kernelThreadsMax;
             return this;
         }
 
-        public Builder setNetCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
+        public Builder netCoreNetdevMaxBacklog(@Nullable Integer netCoreNetdevMaxBacklog) {
             this.netCoreNetdevMaxBacklog = netCoreNetdevMaxBacklog;
             return this;
         }
 
-        public Builder setNetCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
+        public Builder netCoreOptmemMax(@Nullable Integer netCoreOptmemMax) {
             this.netCoreOptmemMax = netCoreOptmemMax;
             return this;
         }
 
-        public Builder setNetCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
+        public Builder netCoreRmemDefault(@Nullable Integer netCoreRmemDefault) {
             this.netCoreRmemDefault = netCoreRmemDefault;
             return this;
         }
 
-        public Builder setNetCoreRmemMax(@Nullable Integer netCoreRmemMax) {
+        public Builder netCoreRmemMax(@Nullable Integer netCoreRmemMax) {
             this.netCoreRmemMax = netCoreRmemMax;
             return this;
         }
 
-        public Builder setNetCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
+        public Builder netCoreSomaxconn(@Nullable Integer netCoreSomaxconn) {
             this.netCoreSomaxconn = netCoreSomaxconn;
             return this;
         }
 
-        public Builder setNetCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
+        public Builder netCoreWmemDefault(@Nullable Integer netCoreWmemDefault) {
             this.netCoreWmemDefault = netCoreWmemDefault;
             return this;
         }
 
-        public Builder setNetCoreWmemMax(@Nullable Integer netCoreWmemMax) {
+        public Builder netCoreWmemMax(@Nullable Integer netCoreWmemMax) {
             this.netCoreWmemMax = netCoreWmemMax;
             return this;
         }
 
-        public Builder setNetIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
+        public Builder netIpv4IpLocalPortRange(@Nullable String netIpv4IpLocalPortRange) {
             this.netIpv4IpLocalPortRange = netIpv4IpLocalPortRange;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
+        public Builder netIpv4NeighDefaultGcThresh1(@Nullable Integer netIpv4NeighDefaultGcThresh1) {
             this.netIpv4NeighDefaultGcThresh1 = netIpv4NeighDefaultGcThresh1;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
+        public Builder netIpv4NeighDefaultGcThresh2(@Nullable Integer netIpv4NeighDefaultGcThresh2) {
             this.netIpv4NeighDefaultGcThresh2 = netIpv4NeighDefaultGcThresh2;
             return this;
         }
 
-        public Builder setNetIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
+        public Builder netIpv4NeighDefaultGcThresh3(@Nullable Integer netIpv4NeighDefaultGcThresh3) {
             this.netIpv4NeighDefaultGcThresh3 = netIpv4NeighDefaultGcThresh3;
             return this;
         }
 
-        public Builder setNetIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
+        public Builder netIpv4TcpFinTimeout(@Nullable Integer netIpv4TcpFinTimeout) {
             this.netIpv4TcpFinTimeout = netIpv4TcpFinTimeout;
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
+        public Builder netIpv4TcpKeepaliveProbes(@Nullable Integer netIpv4TcpKeepaliveProbes) {
             this.netIpv4TcpKeepaliveProbes = netIpv4TcpKeepaliveProbes;
             return this;
         }
 
-        public Builder setNetIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
+        public Builder netIpv4TcpKeepaliveTime(@Nullable Integer netIpv4TcpKeepaliveTime) {
             this.netIpv4TcpKeepaliveTime = netIpv4TcpKeepaliveTime;
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
+        public Builder netIpv4TcpMaxSynBacklog(@Nullable Integer netIpv4TcpMaxSynBacklog) {
             this.netIpv4TcpMaxSynBacklog = netIpv4TcpMaxSynBacklog;
             return this;
         }
 
-        public Builder setNetIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
+        public Builder netIpv4TcpMaxTwBuckets(@Nullable Integer netIpv4TcpMaxTwBuckets) {
             this.netIpv4TcpMaxTwBuckets = netIpv4TcpMaxTwBuckets;
             return this;
         }
 
-        public Builder setNetIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
+        public Builder netIpv4TcpTwReuse(@Nullable Boolean netIpv4TcpTwReuse) {
             this.netIpv4TcpTwReuse = netIpv4TcpTwReuse;
             return this;
         }
 
-        public Builder setNetIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
+        public Builder netIpv4TcpkeepaliveIntvl(@Nullable Integer netIpv4TcpkeepaliveIntvl) {
             this.netIpv4TcpkeepaliveIntvl = netIpv4TcpkeepaliveIntvl;
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
+        public Builder netNetfilterNfConntrackBuckets(@Nullable Integer netNetfilterNfConntrackBuckets) {
             this.netNetfilterNfConntrackBuckets = netNetfilterNfConntrackBuckets;
             return this;
         }
 
-        public Builder setNetNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
+        public Builder netNetfilterNfConntrackMax(@Nullable Integer netNetfilterNfConntrackMax) {
             this.netNetfilterNfConntrackMax = netNetfilterNfConntrackMax;
             return this;
         }
 
-        public Builder setVmMaxMapCount(@Nullable Integer vmMaxMapCount) {
+        public Builder vmMaxMapCount(@Nullable Integer vmMaxMapCount) {
             this.vmMaxMapCount = vmMaxMapCount;
             return this;
         }
 
-        public Builder setVmSwappiness(@Nullable Integer vmSwappiness) {
+        public Builder vmSwappiness(@Nullable Integer vmSwappiness) {
             this.vmSwappiness = vmSwappiness;
             return this;
         }
 
-        public Builder setVmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
+        public Builder vmVfsCachePressure(@Nullable Integer vmVfsCachePressure) {
             this.vmVfsCachePressure = vmVfsCachePressure;
             return this;
         }

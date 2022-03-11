@@ -75,22 +75,22 @@ public final class TriggerDependencyReferenceArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setReferenceTrigger(Input<TriggerReferenceArgs> referenceTrigger) {
+        public Builder referenceTrigger(Input<TriggerReferenceArgs> referenceTrigger) {
             this.referenceTrigger = Objects.requireNonNull(referenceTrigger);
             return this;
         }
 
-        public Builder setReferenceTrigger(TriggerReferenceArgs referenceTrigger) {
+        public Builder referenceTrigger(TriggerReferenceArgs referenceTrigger) {
             this.referenceTrigger = Input.of(Objects.requireNonNull(referenceTrigger));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

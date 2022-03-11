@@ -35,13 +35,13 @@ public final class GetWorkspaceSettingResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"id","name","scope","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetWorkspaceSettingResult(
-        String id,
-        String name,
-        String scope,
-        String type,
-        String workspaceId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.id = id;
         this.name = name;
         this.scope = scope;
@@ -113,27 +113,27 @@ public final class GetWorkspaceSettingResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

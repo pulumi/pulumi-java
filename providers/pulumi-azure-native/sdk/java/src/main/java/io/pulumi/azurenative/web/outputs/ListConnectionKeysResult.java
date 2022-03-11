@@ -24,10 +24,10 @@ public final class ListConnectionKeysResult {
      */
     private final @Nullable Map<String,Object> parameterValues;
 
-    @OutputCustomType.Constructor({"connectionKey","parameterValues"})
+    @OutputCustomType.Constructor
     private ListConnectionKeysResult(
-        @Nullable String connectionKey,
-        @Nullable Map<String,Object> parameterValues) {
+        @OutputCustomType.Parameter("connectionKey") @Nullable String connectionKey,
+        @OutputCustomType.Parameter("parameterValues") @Nullable Map<String,Object> parameterValues) {
         this.connectionKey = connectionKey;
         this.parameterValues = parameterValues;
     }
@@ -69,12 +69,12 @@ public final class ListConnectionKeysResult {
     	      this.parameterValues = defaults.parameterValues;
         }
 
-        public Builder setConnectionKey(@Nullable String connectionKey) {
+        public Builder connectionKey(@Nullable String connectionKey) {
             this.connectionKey = connectionKey;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Map<String,Object> parameterValues) {
+        public Builder parameterValues(@Nullable Map<String,Object> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }

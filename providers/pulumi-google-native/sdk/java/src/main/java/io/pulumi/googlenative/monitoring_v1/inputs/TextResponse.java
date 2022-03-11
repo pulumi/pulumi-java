@@ -72,12 +72,12 @@ public final class TextResponse extends io.pulumi.resources.InvokeArgs {
     	      this.format = defaults.format;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }

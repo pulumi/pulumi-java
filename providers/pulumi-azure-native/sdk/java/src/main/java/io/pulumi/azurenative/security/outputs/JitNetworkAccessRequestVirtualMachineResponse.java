@@ -22,10 +22,10 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
      */
     private final List<JitNetworkAccessRequestPortResponse> ports;
 
-    @OutputCustomType.Constructor({"id","ports"})
+    @OutputCustomType.Constructor
     private JitNetworkAccessRequestVirtualMachineResponse(
-        String id,
-        List<JitNetworkAccessRequestPortResponse> ports) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ports") List<JitNetworkAccessRequestPortResponse> ports) {
         this.id = id;
         this.ports = ports;
     }
@@ -67,12 +67,12 @@ public final class JitNetworkAccessRequestVirtualMachineResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPorts(List<JitNetworkAccessRequestPortResponse> ports) {
+        public Builder ports(List<JitNetworkAccessRequestPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

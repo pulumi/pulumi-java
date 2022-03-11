@@ -110,22 +110,22 @@ public final class NetworkFunctionUserConfigurationResponse extends io.pulumi.re
     	      this.userDataParameters = defaults.userDataParameters;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile) {
+        public Builder osProfile(@Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setUserDataParameters(@Nullable Object userDataParameters) {
+        public Builder userDataParameters(@Nullable Object userDataParameters) {
             this.userDataParameters = userDataParameters;
             return this;
         }

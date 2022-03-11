@@ -51,15 +51,15 @@ public final class BlobStreamInputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"container","dateFormat","pathPattern","sourcePartitionCount","storageAccounts","timeFormat","type"})
+    @OutputCustomType.Constructor
     private BlobStreamInputDataSourceResponse(
-        @Nullable String container,
-        @Nullable String dateFormat,
-        @Nullable String pathPattern,
-        @Nullable Integer sourcePartitionCount,
-        @Nullable List<StorageAccountResponse> storageAccounts,
-        @Nullable String timeFormat,
-        String type) {
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @OutputCustomType.Parameter("pathPattern") @Nullable String pathPattern,
+        @OutputCustomType.Parameter("sourcePartitionCount") @Nullable Integer sourcePartitionCount,
+        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @OutputCustomType.Parameter("type") String type) {
         this.container = container;
         this.dateFormat = dateFormat;
         this.pathPattern = pathPattern;
@@ -152,37 +152,37 @@ public final class BlobStreamInputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = container;
             return this;
         }
 
-        public Builder setDateFormat(@Nullable String dateFormat) {
+        public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
-        public Builder setPathPattern(@Nullable String pathPattern) {
+        public Builder pathPattern(@Nullable String pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
 
-        public Builder setSourcePartitionCount(@Nullable Integer sourcePartitionCount) {
+        public Builder sourcePartitionCount(@Nullable Integer sourcePartitionCount) {
             this.sourcePartitionCount = sourcePartitionCount;
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
+        public Builder storageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
-        public Builder setTimeFormat(@Nullable String timeFormat) {
+        public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

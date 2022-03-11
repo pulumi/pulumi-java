@@ -14,10 +14,10 @@ public final class RuleGroupRuleOption {
     private final String keyword;
     private final @Nullable List<String> settings;
 
-    @OutputCustomType.Constructor({"keyword","settings"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleOption(
-        String keyword,
-        @Nullable List<String> settings) {
+        @OutputCustomType.Parameter("keyword") String keyword,
+        @OutputCustomType.Parameter("settings") @Nullable List<String> settings) {
         this.keyword = keyword;
         this.settings = settings;
     }
@@ -51,12 +51,12 @@ public final class RuleGroupRuleOption {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setKeyword(String keyword) {
+        public Builder keyword(String keyword) {
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
 
-        public Builder setSettings(@Nullable List<String> settings) {
+        public Builder settings(@Nullable List<String> settings) {
             this.settings = settings;
             return this;
         }

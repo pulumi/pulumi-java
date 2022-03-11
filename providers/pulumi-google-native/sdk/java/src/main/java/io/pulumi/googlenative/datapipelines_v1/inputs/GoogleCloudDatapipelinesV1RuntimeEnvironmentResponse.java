@@ -300,82 +300,82 @@ public final class GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse extends 
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalExperiments(List<String> additionalExperiments) {
+        public Builder additionalExperiments(List<String> additionalExperiments) {
             this.additionalExperiments = Objects.requireNonNull(additionalExperiments);
             return this;
         }
 
-        public Builder setAdditionalUserLabels(Map<String,String> additionalUserLabels) {
+        public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
             this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels);
             return this;
         }
 
-        public Builder setBypassTempDirValidation(Boolean bypassTempDirValidation) {
+        public Builder bypassTempDirValidation(Boolean bypassTempDirValidation) {
             this.bypassTempDirValidation = Objects.requireNonNull(bypassTempDirValidation);
             return this;
         }
 
-        public Builder setEnableStreamingEngine(Boolean enableStreamingEngine) {
+        public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine);
             return this;
         }
 
-        public Builder setIpConfiguration(String ipConfiguration) {
+        public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMaxWorkers(Integer maxWorkers) {
+        public Builder maxWorkers(Integer maxWorkers) {
             this.maxWorkers = Objects.requireNonNull(maxWorkers);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNumWorkers(Integer numWorkers) {
+        public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTempLocation(String tempLocation) {
+        public Builder tempLocation(String tempLocation) {
             this.tempLocation = Objects.requireNonNull(tempLocation);
             return this;
         }
 
-        public Builder setWorkerRegion(String workerRegion) {
+        public Builder workerRegion(String workerRegion) {
             this.workerRegion = Objects.requireNonNull(workerRegion);
             return this;
         }
 
-        public Builder setWorkerZone(String workerZone) {
+        public Builder workerZone(String workerZone) {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

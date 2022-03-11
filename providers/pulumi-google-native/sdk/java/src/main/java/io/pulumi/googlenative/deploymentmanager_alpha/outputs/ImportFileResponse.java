@@ -20,10 +20,10 @@ public final class ImportFileResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"content","name"})
+    @OutputCustomType.Constructor
     private ImportFileResponse(
-        String content,
-        String name) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("name") String name) {
         this.content = content;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class ImportFileResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

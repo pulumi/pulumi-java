@@ -22,10 +22,10 @@ public final class ReportSettingProperties {
      */
     private final String reportTemplate;
 
-    @OutputCustomType.Constructor({"frameworkArns","reportTemplate"})
+    @OutputCustomType.Constructor
     private ReportSettingProperties(
-        @Nullable List<String> frameworkArns,
-        String reportTemplate) {
+        @OutputCustomType.Parameter("frameworkArns") @Nullable List<String> frameworkArns,
+        @OutputCustomType.Parameter("reportTemplate") String reportTemplate) {
         this.frameworkArns = frameworkArns;
         this.reportTemplate = reportTemplate;
     }
@@ -67,12 +67,12 @@ public final class ReportSettingProperties {
     	      this.reportTemplate = defaults.reportTemplate;
         }
 
-        public Builder setFrameworkArns(@Nullable List<String> frameworkArns) {
+        public Builder frameworkArns(@Nullable List<String> frameworkArns) {
             this.frameworkArns = frameworkArns;
             return this;
         }
 
-        public Builder setReportTemplate(String reportTemplate) {
+        public Builder reportTemplate(String reportTemplate) {
             this.reportTemplate = Objects.requireNonNull(reportTemplate);
             return this;
         }

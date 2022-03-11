@@ -72,22 +72,22 @@ public final class ByteMatchSetState extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setByteMatchTuples(@Nullable Input<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples) {
+        public Builder byteMatchTuples(@Nullable Input<List<ByteMatchSetByteMatchTupleGetArgs>> byteMatchTuples) {
             this.byteMatchTuples = byteMatchTuples;
             return this;
         }
 
-        public Builder setByteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
+        public Builder byteMatchTuples(@Nullable List<ByteMatchSetByteMatchTupleGetArgs> byteMatchTuples) {
             this.byteMatchTuples = Input.ofNullable(byteMatchTuples);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

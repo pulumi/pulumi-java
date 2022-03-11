@@ -48,14 +48,14 @@ public final class CxPageFormParameter {
      */
     private final @Nullable Boolean required;
 
-    @OutputCustomType.Constructor({"displayName","entityType","fillBehavior","isList","redact","required"})
+    @OutputCustomType.Constructor
     private CxPageFormParameter(
-        @Nullable String displayName,
-        @Nullable String entityType,
-        @Nullable CxPageFormParameterFillBehavior fillBehavior,
-        @Nullable Boolean isList,
-        @Nullable Boolean redact,
-        @Nullable Boolean required) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("entityType") @Nullable String entityType,
+        @OutputCustomType.Parameter("fillBehavior") @Nullable CxPageFormParameterFillBehavior fillBehavior,
+        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
+        @OutputCustomType.Parameter("redact") @Nullable Boolean redact,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required) {
         this.displayName = displayName;
         this.entityType = entityType;
         this.fillBehavior = fillBehavior;
@@ -141,32 +141,32 @@ public final class CxPageFormParameter {
     	      this.required = defaults.required;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(@Nullable String entityType) {
+        public Builder entityType(@Nullable String entityType) {
             this.entityType = entityType;
             return this;
         }
 
-        public Builder setFillBehavior(@Nullable CxPageFormParameterFillBehavior fillBehavior) {
+        public Builder fillBehavior(@Nullable CxPageFormParameterFillBehavior fillBehavior) {
             this.fillBehavior = fillBehavior;
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = redact;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }

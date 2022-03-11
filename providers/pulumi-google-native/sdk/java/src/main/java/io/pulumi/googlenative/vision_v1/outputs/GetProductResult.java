@@ -37,13 +37,13 @@ public final class GetProductResult {
      */
     private final List<KeyValueResponse> productLabels;
 
-    @OutputCustomType.Constructor({"description","displayName","name","productCategory","productLabels"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        String description,
-        String displayName,
-        String name,
-        String productCategory,
-        List<KeyValueResponse> productLabels) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("productCategory") String productCategory,
+        @OutputCustomType.Parameter("productLabels") List<KeyValueResponse> productLabels) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetProductResult {
     	      this.productLabels = defaults.productLabels;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProductCategory(String productCategory) {
+        public Builder productCategory(String productCategory) {
             this.productCategory = Objects.requireNonNull(productCategory);
             return this;
         }
 
-        public Builder setProductLabels(List<KeyValueResponse> productLabels) {
+        public Builder productLabels(List<KeyValueResponse> productLabels) {
             this.productLabels = Objects.requireNonNull(productLabels);
             return this;
         }

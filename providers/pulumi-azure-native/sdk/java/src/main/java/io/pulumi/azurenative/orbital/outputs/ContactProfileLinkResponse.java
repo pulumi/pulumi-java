@@ -40,13 +40,13 @@ public final class ContactProfileLinkResponse {
      */
     private final String polarization;
 
-    @OutputCustomType.Constructor({"channels","direction","eirpdBW","gainOverTemperature","polarization"})
+    @OutputCustomType.Constructor
     private ContactProfileLinkResponse(
-        List<ContactProfileLinkChannelResponse> channels,
-        String direction,
-        @Nullable Double eirpdBW,
-        @Nullable Double gainOverTemperature,
-        String polarization) {
+        @OutputCustomType.Parameter("channels") List<ContactProfileLinkChannelResponse> channels,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("eirpdBW") @Nullable Double eirpdBW,
+        @OutputCustomType.Parameter("gainOverTemperature") @Nullable Double gainOverTemperature,
+        @OutputCustomType.Parameter("polarization") String polarization) {
         this.channels = channels;
         this.direction = direction;
         this.eirpdBW = eirpdBW;
@@ -118,27 +118,27 @@ public final class ContactProfileLinkResponse {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setChannels(List<ContactProfileLinkChannelResponse> channels) {
+        public Builder channels(List<ContactProfileLinkChannelResponse> channels) {
             this.channels = Objects.requireNonNull(channels);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setEirpdBW(@Nullable Double eirpdBW) {
+        public Builder eirpdBW(@Nullable Double eirpdBW) {
             this.eirpdBW = eirpdBW;
             return this;
         }
 
-        public Builder setGainOverTemperature(@Nullable Double gainOverTemperature) {
+        public Builder gainOverTemperature(@Nullable Double gainOverTemperature) {
             this.gainOverTemperature = gainOverTemperature;
             return this;
         }
 
-        public Builder setPolarization(String polarization) {
+        public Builder polarization(String polarization) {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }

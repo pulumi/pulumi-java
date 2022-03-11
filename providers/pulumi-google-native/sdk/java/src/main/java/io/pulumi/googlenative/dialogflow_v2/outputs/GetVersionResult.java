@@ -36,13 +36,13 @@ public final class GetVersionResult {
      */
     private final Integer versionNumber;
 
-    @OutputCustomType.Constructor({"createTime","description","name","status","versionNumber"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        String createTime,
-        String description,
-        String name,
-        String status,
-        Integer versionNumber) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("versionNumber") Integer versionNumber) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;
@@ -114,27 +114,27 @@ public final class GetVersionResult {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersionNumber(Integer versionNumber) {
+        public Builder versionNumber(Integer versionNumber) {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }

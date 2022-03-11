@@ -92,22 +92,22 @@ public final class ScalingPlanScalingInstruction {
      */
     private final List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations;
 
-    @OutputCustomType.Constructor({"customizedLoadMetricSpecification","disableDynamicScaling","maxCapacity","minCapacity","predefinedLoadMetricSpecification","predictiveScalingMaxCapacityBehavior","predictiveScalingMaxCapacityBuffer","predictiveScalingMode","resourceId","scalableDimension","scalingPolicyUpdateBehavior","scheduledActionBufferTime","serviceNamespace","targetTrackingConfigurations"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstruction(
-        @Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification,
-        @Nullable Boolean disableDynamicScaling,
-        Integer maxCapacity,
-        Integer minCapacity,
-        @Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
-        @Nullable String predictiveScalingMaxCapacityBehavior,
-        @Nullable Integer predictiveScalingMaxCapacityBuffer,
-        @Nullable String predictiveScalingMode,
-        String resourceId,
-        String scalableDimension,
-        @Nullable String scalingPolicyUpdateBehavior,
-        @Nullable Integer scheduledActionBufferTime,
-        String serviceNamespace,
-        List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
+        @OutputCustomType.Parameter("customizedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification,
+        @OutputCustomType.Parameter("disableDynamicScaling") @Nullable Boolean disableDynamicScaling,
+        @OutputCustomType.Parameter("maxCapacity") Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") Integer minCapacity,
+        @OutputCustomType.Parameter("predefinedLoadMetricSpecification") @Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification,
+        @OutputCustomType.Parameter("predictiveScalingMaxCapacityBehavior") @Nullable String predictiveScalingMaxCapacityBehavior,
+        @OutputCustomType.Parameter("predictiveScalingMaxCapacityBuffer") @Nullable Integer predictiveScalingMaxCapacityBuffer,
+        @OutputCustomType.Parameter("predictiveScalingMode") @Nullable String predictiveScalingMode,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("scalableDimension") String scalableDimension,
+        @OutputCustomType.Parameter("scalingPolicyUpdateBehavior") @Nullable String scalingPolicyUpdateBehavior,
+        @OutputCustomType.Parameter("scheduledActionBufferTime") @Nullable Integer scheduledActionBufferTime,
+        @OutputCustomType.Parameter("serviceNamespace") String serviceNamespace,
+        @OutputCustomType.Parameter("targetTrackingConfigurations") List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
         this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
         this.disableDynamicScaling = disableDynamicScaling;
         this.maxCapacity = maxCapacity;
@@ -273,72 +273,72 @@ public final class ScalingPlanScalingInstruction {
     	      this.targetTrackingConfigurations = defaults.targetTrackingConfigurations;
         }
 
-        public Builder setCustomizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification) {
+        public Builder customizedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionCustomizedLoadMetricSpecification customizedLoadMetricSpecification) {
             this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setDisableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
+        public Builder disableDynamicScaling(@Nullable Boolean disableDynamicScaling) {
             this.disableDynamicScaling = disableDynamicScaling;
             return this;
         }
 
-        public Builder setMaxCapacity(Integer maxCapacity) {
+        public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
-        public Builder setPredefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
+        public Builder predefinedLoadMetricSpecification(@Nullable ScalingPlanScalingInstructionPredefinedLoadMetricSpecification predefinedLoadMetricSpecification) {
             this.predefinedLoadMetricSpecification = predefinedLoadMetricSpecification;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
+        public Builder predictiveScalingMaxCapacityBehavior(@Nullable String predictiveScalingMaxCapacityBehavior) {
             this.predictiveScalingMaxCapacityBehavior = predictiveScalingMaxCapacityBehavior;
             return this;
         }
 
-        public Builder setPredictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
+        public Builder predictiveScalingMaxCapacityBuffer(@Nullable Integer predictiveScalingMaxCapacityBuffer) {
             this.predictiveScalingMaxCapacityBuffer = predictiveScalingMaxCapacityBuffer;
             return this;
         }
 
-        public Builder setPredictiveScalingMode(@Nullable String predictiveScalingMode) {
+        public Builder predictiveScalingMode(@Nullable String predictiveScalingMode) {
             this.predictiveScalingMode = predictiveScalingMode;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setScalableDimension(String scalableDimension) {
+        public Builder scalableDimension(String scalableDimension) {
             this.scalableDimension = Objects.requireNonNull(scalableDimension);
             return this;
         }
 
-        public Builder setScalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
+        public Builder scalingPolicyUpdateBehavior(@Nullable String scalingPolicyUpdateBehavior) {
             this.scalingPolicyUpdateBehavior = scalingPolicyUpdateBehavior;
             return this;
         }
 
-        public Builder setScheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
+        public Builder scheduledActionBufferTime(@Nullable Integer scheduledActionBufferTime) {
             this.scheduledActionBufferTime = scheduledActionBufferTime;
             return this;
         }
 
-        public Builder setServiceNamespace(String serviceNamespace) {
+        public Builder serviceNamespace(String serviceNamespace) {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
 
-        public Builder setTargetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
+        public Builder targetTrackingConfigurations(List<ScalingPlanScalingInstructionTargetTrackingConfiguration> targetTrackingConfigurations) {
             this.targetTrackingConfigurations = Objects.requireNonNull(targetTrackingConfigurations);
             return this;
         }

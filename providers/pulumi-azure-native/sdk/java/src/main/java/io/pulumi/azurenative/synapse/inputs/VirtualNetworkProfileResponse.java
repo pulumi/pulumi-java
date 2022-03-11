@@ -57,7 +57,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
     	      this.computeSubnetId = defaults.computeSubnetId;
         }
 
-        public Builder setComputeSubnetId(@Nullable String computeSubnetId) {
+        public Builder computeSubnetId(@Nullable String computeSubnetId) {
             this.computeSubnetId = computeSubnetId;
             return this;
         }

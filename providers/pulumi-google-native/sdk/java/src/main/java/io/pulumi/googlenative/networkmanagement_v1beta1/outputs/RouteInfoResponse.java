@@ -57,17 +57,17 @@ public final class RouteInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"destIpRange","displayName","instanceTags","networkUri","nextHop","nextHopType","priority","routeType","uri"})
+    @OutputCustomType.Constructor
     private RouteInfoResponse(
-        String destIpRange,
-        String displayName,
-        List<String> instanceTags,
-        String networkUri,
-        String nextHop,
-        String nextHopType,
-        Integer priority,
-        String routeType,
-        String uri) {
+        @OutputCustomType.Parameter("destIpRange") String destIpRange,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("instanceTags") List<String> instanceTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeType") String routeType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.destIpRange = destIpRange;
         this.displayName = displayName;
         this.instanceTags = instanceTags;
@@ -179,47 +179,47 @@ public final class RouteInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDestIpRange(String destIpRange) {
+        public Builder destIpRange(String destIpRange) {
             this.destIpRange = Objects.requireNonNull(destIpRange);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInstanceTags(List<String> instanceTags) {
+        public Builder instanceTags(List<String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteType(String routeType) {
+        public Builder routeType(String routeType) {
             this.routeType = Objects.requireNonNull(routeType);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

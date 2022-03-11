@@ -25,13 +25,13 @@ public final class GetAttributeGroupAssociationResult {
     private final @Nullable String attributeGroupArn;
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"application","applicationArn","attributeGroup","attributeGroupArn","id"})
+    @OutputCustomType.Constructor
     private GetAttributeGroupAssociationResult(
-        @Nullable String application,
-        @Nullable String applicationArn,
-        @Nullable String attributeGroup,
-        @Nullable String attributeGroupArn,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("application") @Nullable String application,
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("attributeGroup") @Nullable String attributeGroup,
+        @OutputCustomType.Parameter("attributeGroupArn") @Nullable String attributeGroupArn,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.attributeGroup = attributeGroup;
@@ -91,27 +91,27 @@ public final class GetAttributeGroupAssociationResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setApplication(@Nullable String application) {
+        public Builder application(@Nullable String application) {
             this.application = application;
             return this;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setAttributeGroup(@Nullable String attributeGroup) {
+        public Builder attributeGroup(@Nullable String attributeGroup) {
             this.attributeGroup = attributeGroup;
             return this;
         }
 
-        public Builder setAttributeGroupArn(@Nullable String attributeGroupArn) {
+        public Builder attributeGroupArn(@Nullable String attributeGroupArn) {
             this.attributeGroupArn = attributeGroupArn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

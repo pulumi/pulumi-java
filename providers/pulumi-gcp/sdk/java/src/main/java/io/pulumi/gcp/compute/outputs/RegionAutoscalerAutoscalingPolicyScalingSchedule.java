@@ -49,15 +49,15 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"description","disabled","durationSec","minRequiredReplicas","name","schedule","timeZone"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyScalingSchedule(
-        @Nullable String description,
-        @Nullable Boolean disabled,
-        Integer durationSec,
-        Integer minRequiredReplicas,
-        String name,
-        String schedule,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("durationSec") Integer durationSec,
+        @OutputCustomType.Parameter("minRequiredReplicas") Integer minRequiredReplicas,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.description = description;
         this.disabled = disabled;
         this.durationSec = durationSec;
@@ -149,37 +149,37 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDurationSec(Integer durationSec) {
+        public Builder durationSec(Integer durationSec) {
             this.durationSec = Objects.requireNonNull(durationSec);
             return this;
         }
 
-        public Builder setMinRequiredReplicas(Integer minRequiredReplicas) {
+        public Builder minRequiredReplicas(Integer minRequiredReplicas) {
             this.minRequiredReplicas = Objects.requireNonNull(minRequiredReplicas);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

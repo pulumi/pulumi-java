@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2ProximityResponse {
      */
     private final Integer windowBefore;
 
-    @OutputCustomType.Constructor({"windowAfter","windowBefore"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ProximityResponse(
-        Integer windowAfter,
-        Integer windowBefore) {
+        @OutputCustomType.Parameter("windowAfter") Integer windowAfter,
+        @OutputCustomType.Parameter("windowBefore") Integer windowBefore) {
         this.windowAfter = windowAfter;
         this.windowBefore = windowBefore;
     }
@@ -65,12 +65,12 @@ public final class GooglePrivacyDlpV2ProximityResponse {
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder setWindowAfter(Integer windowAfter) {
+        public Builder windowAfter(Integer windowAfter) {
             this.windowAfter = Objects.requireNonNull(windowAfter);
             return this;
         }
 
-        public Builder setWindowBefore(Integer windowBefore) {
+        public Builder windowBefore(Integer windowBefore) {
             this.windowBefore = Objects.requireNonNull(windowBefore);
             return this;
         }

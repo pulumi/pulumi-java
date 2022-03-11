@@ -72,12 +72,12 @@ public final class KeyVaultReferenceResponse extends io.pulumi.resources.InvokeA
     	      this.url = defaults.url;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

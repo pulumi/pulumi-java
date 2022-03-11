@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
      */
     private final Integer recentSentencesCount;
 
-    @OutputCustomType.Constructor({"recentSentencesCount"})
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse(Integer recentSentencesCount) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationProcessConfigResponse(@OutputCustomType.Parameter("recentSentencesCount") Integer recentSentencesCount) {
         this.recentSentencesCount = recentSentencesCount;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationP
     	      this.recentSentencesCount = defaults.recentSentencesCount;
         }
 
-        public Builder setRecentSentencesCount(Integer recentSentencesCount) {
+        public Builder recentSentencesCount(Integer recentSentencesCount) {
             this.recentSentencesCount = Objects.requireNonNull(recentSentencesCount);
             return this;
         }

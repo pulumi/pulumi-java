@@ -62,22 +62,22 @@ public final class DatasetRetentionPeriodArgs extends io.pulumi.resources.Resour
     	      this.unlimited = defaults.unlimited;
         }
 
-        public Builder setNumberOfDays(Input<Integer> numberOfDays) {
+        public Builder numberOfDays(Input<Integer> numberOfDays) {
             this.numberOfDays = Objects.requireNonNull(numberOfDays);
             return this;
         }
 
-        public Builder setNumberOfDays(Integer numberOfDays) {
+        public Builder numberOfDays(Integer numberOfDays) {
             this.numberOfDays = Input.of(Objects.requireNonNull(numberOfDays));
             return this;
         }
 
-        public Builder setUnlimited(Input<Boolean> unlimited) {
+        public Builder unlimited(Input<Boolean> unlimited) {
             this.unlimited = Objects.requireNonNull(unlimited);
             return this;
         }
 
-        public Builder setUnlimited(Boolean unlimited) {
+        public Builder unlimited(Boolean unlimited) {
             this.unlimited = Input.of(Objects.requireNonNull(unlimited));
             return this;
         }

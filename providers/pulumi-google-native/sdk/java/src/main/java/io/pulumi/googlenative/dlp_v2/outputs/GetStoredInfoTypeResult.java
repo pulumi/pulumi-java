@@ -27,11 +27,11 @@ public final class GetStoredInfoTypeResult {
      */
     private final List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions;
 
-    @OutputCustomType.Constructor({"currentVersion","name","pendingVersions"})
+    @OutputCustomType.Constructor
     private GetStoredInfoTypeResult(
-        GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
-        String name,
-        List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
+        @OutputCustomType.Parameter("currentVersion") GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pendingVersions") List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
         this.currentVersion = currentVersion;
         this.name = name;
         this.pendingVersions = pendingVersions;
@@ -83,17 +83,17 @@ public final class GetStoredInfoTypeResult {
     	      this.pendingVersions = defaults.pendingVersions;
         }
 
-        public Builder setCurrentVersion(GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion) {
+        public Builder currentVersion(GooglePrivacyDlpV2StoredInfoTypeVersionResponse currentVersion) {
             this.currentVersion = Objects.requireNonNull(currentVersion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPendingVersions(List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
+        public Builder pendingVersions(List<GooglePrivacyDlpV2StoredInfoTypeVersionResponse> pendingVersions) {
             this.pendingVersions = Objects.requireNonNull(pendingVersions);
             return this;
         }

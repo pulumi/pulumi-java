@@ -32,12 +32,12 @@ public final class SELinuxOptions {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"level","role","type","user"})
+    @OutputCustomType.Constructor
     private SELinuxOptions(
-        @Nullable String level,
-        @Nullable String role,
-        @Nullable String type,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.level = level;
         this.role = role;
         this.type = type;
@@ -99,22 +99,22 @@ public final class SELinuxOptions {
     	      this.user = defaults.user;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

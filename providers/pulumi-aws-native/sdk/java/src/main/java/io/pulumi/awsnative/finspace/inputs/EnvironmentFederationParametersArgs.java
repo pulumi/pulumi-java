@@ -139,62 +139,62 @@ public final class EnvironmentFederationParametersArgs extends io.pulumi.resourc
     	      this.samlMetadataURL = defaults.samlMetadataURL;
         }
 
-        public Builder setApplicationCallBackURL(@Nullable Input<String> applicationCallBackURL) {
+        public Builder applicationCallBackURL(@Nullable Input<String> applicationCallBackURL) {
             this.applicationCallBackURL = applicationCallBackURL;
             return this;
         }
 
-        public Builder setApplicationCallBackURL(@Nullable String applicationCallBackURL) {
+        public Builder applicationCallBackURL(@Nullable String applicationCallBackURL) {
             this.applicationCallBackURL = Input.ofNullable(applicationCallBackURL);
             return this;
         }
 
-        public Builder setAttributeMap(@Nullable Input<Object> attributeMap) {
+        public Builder attributeMap(@Nullable Input<Object> attributeMap) {
             this.attributeMap = attributeMap;
             return this;
         }
 
-        public Builder setAttributeMap(@Nullable Object attributeMap) {
+        public Builder attributeMap(@Nullable Object attributeMap) {
             this.attributeMap = Input.ofNullable(attributeMap);
             return this;
         }
 
-        public Builder setFederationProviderName(@Nullable Input<String> federationProviderName) {
+        public Builder federationProviderName(@Nullable Input<String> federationProviderName) {
             this.federationProviderName = federationProviderName;
             return this;
         }
 
-        public Builder setFederationProviderName(@Nullable String federationProviderName) {
+        public Builder federationProviderName(@Nullable String federationProviderName) {
             this.federationProviderName = Input.ofNullable(federationProviderName);
             return this;
         }
 
-        public Builder setFederationURN(@Nullable Input<String> federationURN) {
+        public Builder federationURN(@Nullable Input<String> federationURN) {
             this.federationURN = federationURN;
             return this;
         }
 
-        public Builder setFederationURN(@Nullable String federationURN) {
+        public Builder federationURN(@Nullable String federationURN) {
             this.federationURN = Input.ofNullable(federationURN);
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable Input<String> samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable Input<String> samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable String samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = Input.ofNullable(samlMetadataDocument);
             return this;
         }
 
-        public Builder setSamlMetadataURL(@Nullable Input<String> samlMetadataURL) {
+        public Builder samlMetadataURL(@Nullable Input<String> samlMetadataURL) {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }
 
-        public Builder setSamlMetadataURL(@Nullable String samlMetadataURL) {
+        public Builder samlMetadataURL(@Nullable String samlMetadataURL) {
             this.samlMetadataURL = Input.ofNullable(samlMetadataURL);
             return this;
         }

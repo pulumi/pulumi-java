@@ -144,32 +144,32 @@ public final class VirtualNetworkResourceSettingsResponse extends io.pulumi.reso
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setAddressSpace(@Nullable List<String> addressSpace) {
+        public Builder addressSpace(@Nullable List<String> addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Boolean enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<SubnetResourceSettingsResponse> subnets) {
+        public Builder subnets(@Nullable List<SubnetResourceSettingsResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }

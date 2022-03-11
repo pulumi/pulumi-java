@@ -34,12 +34,12 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
      */
     private final @Nullable Integer parallelismPerKpu;
 
-    @OutputCustomType.Constructor({"autoScalingEnabled","configurationType","parallelism","parallelismPerKpu"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationParallelismConfiguration(
-        @Nullable Boolean autoScalingEnabled,
-        String configurationType,
-        @Nullable Integer parallelism,
-        @Nullable Integer parallelismPerKpu) {
+        @OutputCustomType.Parameter("autoScalingEnabled") @Nullable Boolean autoScalingEnabled,
+        @OutputCustomType.Parameter("configurationType") String configurationType,
+        @OutputCustomType.Parameter("parallelism") @Nullable Integer parallelism,
+        @OutputCustomType.Parameter("parallelismPerKpu") @Nullable Integer parallelismPerKpu) {
         this.autoScalingEnabled = autoScalingEnabled;
         this.configurationType = configurationType;
         this.parallelism = parallelism;
@@ -101,22 +101,22 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     	      this.parallelismPerKpu = defaults.parallelismPerKpu;
         }
 
-        public Builder setAutoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
+        public Builder autoScalingEnabled(@Nullable Boolean autoScalingEnabled) {
             this.autoScalingEnabled = autoScalingEnabled;
             return this;
         }
 
-        public Builder setConfigurationType(String configurationType) {
+        public Builder configurationType(String configurationType) {
             this.configurationType = Objects.requireNonNull(configurationType);
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelismPerKpu(@Nullable Integer parallelismPerKpu) {
+        public Builder parallelismPerKpu(@Nullable Integer parallelismPerKpu) {
             this.parallelismPerKpu = parallelismPerKpu;
             return this;
         }

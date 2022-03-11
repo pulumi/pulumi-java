@@ -20,10 +20,10 @@ public final class GoogleMonitoringV3RangeResponse {
      */
     private final Double min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private GoogleMonitoringV3RangeResponse(
-        Double max,
-        Double min) {
+        @OutputCustomType.Parameter("max") Double max,
+        @OutputCustomType.Parameter("min") Double min) {
         this.max = max;
         this.min = min;
     }
@@ -65,12 +65,12 @@ public final class GoogleMonitoringV3RangeResponse {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(Double max) {
+        public Builder max(Double max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMin(Double min) {
+        public Builder min(Double min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }

@@ -22,10 +22,10 @@ public final class UserPoolSchemaStringAttributeConstraints {
      */
     private final @Nullable String minLength;
 
-    @OutputCustomType.Constructor({"maxLength","minLength"})
+    @OutputCustomType.Constructor
     private UserPoolSchemaStringAttributeConstraints(
-        @Nullable String maxLength,
-        @Nullable String minLength) {
+        @OutputCustomType.Parameter("maxLength") @Nullable String maxLength,
+        @OutputCustomType.Parameter("minLength") @Nullable String minLength) {
         this.maxLength = maxLength;
         this.minLength = minLength;
     }
@@ -67,12 +67,12 @@ public final class UserPoolSchemaStringAttributeConstraints {
     	      this.minLength = defaults.minLength;
         }
 
-        public Builder setMaxLength(@Nullable String maxLength) {
+        public Builder maxLength(@Nullable String maxLength) {
             this.maxLength = maxLength;
             return this;
         }
 
-        public Builder setMinLength(@Nullable String minLength) {
+        public Builder minLength(@Nullable String minLength) {
             this.minLength = minLength;
             return this;
         }

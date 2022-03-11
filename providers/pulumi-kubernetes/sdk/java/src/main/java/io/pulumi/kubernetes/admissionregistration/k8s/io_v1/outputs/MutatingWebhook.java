@@ -114,19 +114,19 @@ public final class MutatingWebhook {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"admissionReviewVersions","clientConfig","failurePolicy","matchPolicy","name","namespaceSelector","objectSelector","reinvocationPolicy","rules","sideEffects","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private MutatingWebhook(
-        List<String> admissionReviewVersions,
-        WebhookClientConfig clientConfig,
-        @Nullable String failurePolicy,
-        @Nullable String matchPolicy,
-        String name,
-        @Nullable LabelSelector namespaceSelector,
-        @Nullable LabelSelector objectSelector,
-        @Nullable String reinvocationPolicy,
-        @Nullable List<RuleWithOperations> rules,
-        String sideEffects,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("admissionReviewVersions") List<String> admissionReviewVersions,
+        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @OutputCustomType.Parameter("failurePolicy") @Nullable String failurePolicy,
+        @OutputCustomType.Parameter("matchPolicy") @Nullable String matchPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @OutputCustomType.Parameter("objectSelector") @Nullable LabelSelector objectSelector,
+        @OutputCustomType.Parameter("reinvocationPolicy") @Nullable String reinvocationPolicy,
+        @OutputCustomType.Parameter("rules") @Nullable List<RuleWithOperations> rules,
+        @OutputCustomType.Parameter("sideEffects") String sideEffects,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.admissionReviewVersions = admissionReviewVersions;
         this.clientConfig = clientConfig;
         this.failurePolicy = failurePolicy;
@@ -300,57 +300,57 @@ public final class MutatingWebhook {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setAdmissionReviewVersions(List<String> admissionReviewVersions) {
+        public Builder admissionReviewVersions(List<String> admissionReviewVersions) {
             this.admissionReviewVersions = Objects.requireNonNull(admissionReviewVersions);
             return this;
         }
 
-        public Builder setClientConfig(WebhookClientConfig clientConfig) {
+        public Builder clientConfig(WebhookClientConfig clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable String failurePolicy) {
+        public Builder failurePolicy(@Nullable String failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
-        public Builder setMatchPolicy(@Nullable String matchPolicy) {
+        public Builder matchPolicy(@Nullable String matchPolicy) {
             this.matchPolicy = matchPolicy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelector namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setObjectSelector(@Nullable LabelSelector objectSelector) {
+        public Builder objectSelector(@Nullable LabelSelector objectSelector) {
             this.objectSelector = objectSelector;
             return this;
         }
 
-        public Builder setReinvocationPolicy(@Nullable String reinvocationPolicy) {
+        public Builder reinvocationPolicy(@Nullable String reinvocationPolicy) {
             this.reinvocationPolicy = reinvocationPolicy;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RuleWithOperations> rules) {
+        public Builder rules(@Nullable List<RuleWithOperations> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setSideEffects(String sideEffects) {
+        public Builder sideEffects(String sideEffects) {
             this.sideEffects = Objects.requireNonNull(sideEffects);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

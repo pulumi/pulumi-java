@@ -43,21 +43,21 @@ public final class GetWorkspaceResult {
     private final String workspaceId;
     private final List<GetWorkspaceWorkspaceProperty> workspaceProperties;
 
-    @OutputCustomType.Constructor({"bundleId","computerName","directoryId","id","ipAddress","rootVolumeEncryptionEnabled","state","tags","userName","userVolumeEncryptionEnabled","volumeEncryptionKey","workspaceId","workspaceProperties"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String bundleId,
-        String computerName,
-        String directoryId,
-        String id,
-        String ipAddress,
-        Boolean rootVolumeEncryptionEnabled,
-        String state,
-        Map<String,String> tags,
-        String userName,
-        Boolean userVolumeEncryptionEnabled,
-        String volumeEncryptionKey,
-        String workspaceId,
-        List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("computerName") String computerName,
+        @OutputCustomType.Parameter("directoryId") String directoryId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("rootVolumeEncryptionEnabled") Boolean rootVolumeEncryptionEnabled,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("userVolumeEncryptionEnabled") Boolean userVolumeEncryptionEnabled,
+        @OutputCustomType.Parameter("volumeEncryptionKey") String volumeEncryptionKey,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceProperties") List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
         this.bundleId = bundleId;
         this.computerName = computerName;
         this.directoryId = directoryId;
@@ -173,67 +173,67 @@ public final class GetWorkspaceResult {
     	      this.workspaceProperties = defaults.workspaceProperties;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setComputerName(String computerName) {
+        public Builder computerName(String computerName) {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }
 
-        public Builder setDirectoryId(String directoryId) {
+        public Builder directoryId(String directoryId) {
             this.directoryId = Objects.requireNonNull(directoryId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setRootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
+        public Builder rootVolumeEncryptionEnabled(Boolean rootVolumeEncryptionEnabled) {
             this.rootVolumeEncryptionEnabled = Objects.requireNonNull(rootVolumeEncryptionEnabled);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setUserVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
+        public Builder userVolumeEncryptionEnabled(Boolean userVolumeEncryptionEnabled) {
             this.userVolumeEncryptionEnabled = Objects.requireNonNull(userVolumeEncryptionEnabled);
             return this;
         }
 
-        public Builder setVolumeEncryptionKey(String volumeEncryptionKey) {
+        public Builder volumeEncryptionKey(String volumeEncryptionKey) {
             this.volumeEncryptionKey = Objects.requireNonNull(volumeEncryptionKey);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceProperties(List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
+        public Builder workspaceProperties(List<GetWorkspaceWorkspaceProperty> workspaceProperties) {
             this.workspaceProperties = Objects.requireNonNull(workspaceProperties);
             return this;
         }

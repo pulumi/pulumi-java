@@ -39,13 +39,13 @@ public final class LinkResponse {
      */
     private final List<GrafeasV1beta1IntotoArtifactResponse> products;
 
-    @OutputCustomType.Constructor({"byproducts","command","environment","materials","products"})
+    @OutputCustomType.Constructor
     private LinkResponse(
-        ByProductsResponse byproducts,
-        List<String> command,
-        EnvironmentResponse environment,
-        List<GrafeasV1beta1IntotoArtifactResponse> materials,
-        List<GrafeasV1beta1IntotoArtifactResponse> products) {
+        @OutputCustomType.Parameter("byproducts") ByProductsResponse byproducts,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
+        @OutputCustomType.Parameter("materials") List<GrafeasV1beta1IntotoArtifactResponse> materials,
+        @OutputCustomType.Parameter("products") List<GrafeasV1beta1IntotoArtifactResponse> products) {
         this.byproducts = byproducts;
         this.command = command;
         this.environment = environment;
@@ -117,27 +117,27 @@ public final class LinkResponse {
     	      this.products = defaults.products;
         }
 
-        public Builder setByproducts(ByProductsResponse byproducts) {
+        public Builder byproducts(ByProductsResponse byproducts) {
             this.byproducts = Objects.requireNonNull(byproducts);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnvironment(EnvironmentResponse environment) {
+        public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setMaterials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
+        public Builder materials(List<GrafeasV1beta1IntotoArtifactResponse> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setProducts(List<GrafeasV1beta1IntotoArtifactResponse> products) {
+        public Builder products(List<GrafeasV1beta1IntotoArtifactResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }

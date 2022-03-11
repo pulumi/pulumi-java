@@ -15,10 +15,10 @@ public final class ComponentVersionComponentPlatform {
     private final @Nullable Object attributes;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"attributes","name"})
+    @OutputCustomType.Constructor
     private ComponentVersionComponentPlatform(
-        @Nullable Object attributes,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.attributes = attributes;
         this.name = name;
     }
@@ -52,12 +52,12 @@ public final class ComponentVersionComponentPlatform {
     	      this.name = defaults.name;
         }
 
-        public Builder setAttributes(@Nullable Object attributes) {
+        public Builder attributes(@Nullable Object attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

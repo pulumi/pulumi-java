@@ -26,11 +26,11 @@ public final class ContainerResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"container","current","name"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricStatus(
-        String container,
-        MetricValueStatus current,
-        String name) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("current") MetricValueStatus current,
+        @OutputCustomType.Parameter("name") String name) {
         this.container = container;
         this.current = current;
         this.name = name;
@@ -82,17 +82,17 @@ public final class ContainerResourceMetricStatus {
     	      this.name = defaults.name;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setCurrent(MetricValueStatus current) {
+        public Builder current(MetricValueStatus current) {
             this.current = Objects.requireNonNull(current);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

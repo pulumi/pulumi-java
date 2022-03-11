@@ -28,11 +28,11 @@ public final class HubBillingInfoFormatResponse {
      */
     private final @Nullable String skuName;
 
-    @OutputCustomType.Constructor({"maxUnits","minUnits","skuName"})
+    @OutputCustomType.Constructor
     private HubBillingInfoFormatResponse(
-        @Nullable Integer maxUnits,
-        @Nullable Integer minUnits,
-        @Nullable String skuName) {
+        @OutputCustomType.Parameter("maxUnits") @Nullable Integer maxUnits,
+        @OutputCustomType.Parameter("minUnits") @Nullable Integer minUnits,
+        @OutputCustomType.Parameter("skuName") @Nullable String skuName) {
         this.maxUnits = maxUnits;
         this.minUnits = minUnits;
         this.skuName = skuName;
@@ -84,17 +84,17 @@ public final class HubBillingInfoFormatResponse {
     	      this.skuName = defaults.skuName;
         }
 
-        public Builder setMaxUnits(@Nullable Integer maxUnits) {
+        public Builder maxUnits(@Nullable Integer maxUnits) {
             this.maxUnits = maxUnits;
             return this;
         }
 
-        public Builder setMinUnits(@Nullable Integer minUnits) {
+        public Builder minUnits(@Nullable Integer minUnits) {
             this.minUnits = minUnits;
             return this;
         }
 
-        public Builder setSkuName(@Nullable String skuName) {
+        public Builder skuName(@Nullable String skuName) {
             this.skuName = skuName;
             return this;
         }

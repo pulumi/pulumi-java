@@ -38,13 +38,13 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
      */
     private final String resourceStateSyncTime;
 
-    @OutputCustomType.Constructor({"oldestRecoveryPoint","policyState","recoveryPointCount","resourceState","resourceStateSyncTime"})
+    @OutputCustomType.Constructor
     private AzureFileshareProtectedItemExtendedInfoResponse(
-        @Nullable String oldestRecoveryPoint,
-        @Nullable String policyState,
-        @Nullable Integer recoveryPointCount,
-        String resourceState,
-        String resourceStateSyncTime) {
+        @OutputCustomType.Parameter("oldestRecoveryPoint") @Nullable String oldestRecoveryPoint,
+        @OutputCustomType.Parameter("policyState") @Nullable String policyState,
+        @OutputCustomType.Parameter("recoveryPointCount") @Nullable Integer recoveryPointCount,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("resourceStateSyncTime") String resourceStateSyncTime) {
         this.oldestRecoveryPoint = oldestRecoveryPoint;
         this.policyState = policyState;
         this.recoveryPointCount = recoveryPointCount;
@@ -116,27 +116,27 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
     	      this.resourceStateSyncTime = defaults.resourceStateSyncTime;
         }
 
-        public Builder setOldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
+        public Builder oldestRecoveryPoint(@Nullable String oldestRecoveryPoint) {
             this.oldestRecoveryPoint = oldestRecoveryPoint;
             return this;
         }
 
-        public Builder setPolicyState(@Nullable String policyState) {
+        public Builder policyState(@Nullable String policyState) {
             this.policyState = policyState;
             return this;
         }
 
-        public Builder setRecoveryPointCount(@Nullable Integer recoveryPointCount) {
+        public Builder recoveryPointCount(@Nullable Integer recoveryPointCount) {
             this.recoveryPointCount = recoveryPointCount;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setResourceStateSyncTime(String resourceStateSyncTime) {
+        public Builder resourceStateSyncTime(String resourceStateSyncTime) {
             this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
             return this;
         }

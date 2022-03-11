@@ -34,12 +34,12 @@ public final class BotWaitAndContinueSpecification {
      */
     private final BotResponseSpecification waitingResponse;
 
-    @OutputCustomType.Constructor({"continueResponse","isActive","stillWaitingResponse","waitingResponse"})
+    @OutputCustomType.Constructor
     private BotWaitAndContinueSpecification(
-        BotResponseSpecification continueResponse,
-        @Nullable Boolean isActive,
-        @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
-        BotResponseSpecification waitingResponse) {
+        @OutputCustomType.Parameter("continueResponse") BotResponseSpecification continueResponse,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("stillWaitingResponse") @Nullable BotStillWaitingResponseSpecification stillWaitingResponse,
+        @OutputCustomType.Parameter("waitingResponse") BotResponseSpecification waitingResponse) {
         this.continueResponse = continueResponse;
         this.isActive = isActive;
         this.stillWaitingResponse = stillWaitingResponse;
@@ -101,22 +101,22 @@ public final class BotWaitAndContinueSpecification {
     	      this.waitingResponse = defaults.waitingResponse;
         }
 
-        public Builder setContinueResponse(BotResponseSpecification continueResponse) {
+        public Builder continueResponse(BotResponseSpecification continueResponse) {
             this.continueResponse = Objects.requireNonNull(continueResponse);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setStillWaitingResponse(@Nullable BotStillWaitingResponseSpecification stillWaitingResponse) {
+        public Builder stillWaitingResponse(@Nullable BotStillWaitingResponseSpecification stillWaitingResponse) {
             this.stillWaitingResponse = stillWaitingResponse;
             return this;
         }
 
-        public Builder setWaitingResponse(BotResponseSpecification waitingResponse) {
+        public Builder waitingResponse(BotResponseSpecification waitingResponse) {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }

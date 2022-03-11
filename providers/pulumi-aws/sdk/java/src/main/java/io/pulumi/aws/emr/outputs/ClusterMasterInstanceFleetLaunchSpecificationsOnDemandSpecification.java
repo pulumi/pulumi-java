@@ -15,8 +15,8 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
      */
     private final String allocationStrategy;
 
-    @OutputCustomType.Constructor({"allocationStrategy"})
-    private ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification(String allocationStrategy) {
+    @OutputCustomType.Constructor
+    private ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecification(@OutputCustomType.Parameter("allocationStrategy") String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsOnDemandSpecifi
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(String allocationStrategy) {
+        public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }

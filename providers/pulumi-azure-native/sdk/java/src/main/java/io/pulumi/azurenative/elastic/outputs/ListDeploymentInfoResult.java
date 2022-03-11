@@ -30,12 +30,12 @@ public final class ListDeploymentInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"diskCapacity","memoryCapacity","status","version"})
+    @OutputCustomType.Constructor
     private ListDeploymentInfoResult(
-        String diskCapacity,
-        String memoryCapacity,
-        String status,
-        String version) {
+        @OutputCustomType.Parameter("diskCapacity") String diskCapacity,
+        @OutputCustomType.Parameter("memoryCapacity") String memoryCapacity,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version) {
         this.diskCapacity = diskCapacity;
         this.memoryCapacity = memoryCapacity;
         this.status = status;
@@ -97,22 +97,22 @@ public final class ListDeploymentInfoResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDiskCapacity(String diskCapacity) {
+        public Builder diskCapacity(String diskCapacity) {
             this.diskCapacity = Objects.requireNonNull(diskCapacity);
             return this;
         }
 
-        public Builder setMemoryCapacity(String memoryCapacity) {
+        public Builder memoryCapacity(String memoryCapacity) {
             this.memoryCapacity = Objects.requireNonNull(memoryCapacity);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

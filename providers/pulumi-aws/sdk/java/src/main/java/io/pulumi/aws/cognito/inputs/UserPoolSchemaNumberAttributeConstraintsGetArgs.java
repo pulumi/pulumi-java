@@ -70,22 +70,22 @@ public final class UserPoolSchemaNumberAttributeConstraintsGetArgs extends io.pu
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder setMaxValue(@Nullable Input<String> maxValue) {
+        public Builder maxValue(@Nullable Input<String> maxValue) {
             this.maxValue = maxValue;
             return this;
         }
 
-        public Builder setMaxValue(@Nullable String maxValue) {
+        public Builder maxValue(@Nullable String maxValue) {
             this.maxValue = Input.ofNullable(maxValue);
             return this;
         }
 
-        public Builder setMinValue(@Nullable Input<String> minValue) {
+        public Builder minValue(@Nullable Input<String> minValue) {
             this.minValue = minValue;
             return this;
         }
 
-        public Builder setMinValue(@Nullable String minValue) {
+        public Builder minValue(@Nullable String minValue) {
             this.minValue = Input.ofNullable(minValue);
             return this;
         }

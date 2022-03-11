@@ -23,10 +23,10 @@ public final class ClusterClientAuthentication {
      */
     private final @Nullable ClusterClientAuthenticationTls tls;
 
-    @OutputCustomType.Constructor({"sasl","tls"})
+    @OutputCustomType.Constructor
     private ClusterClientAuthentication(
-        @Nullable ClusterClientAuthenticationSasl sasl,
-        @Nullable ClusterClientAuthenticationTls tls) {
+        @OutputCustomType.Parameter("sasl") @Nullable ClusterClientAuthenticationSasl sasl,
+        @OutputCustomType.Parameter("tls") @Nullable ClusterClientAuthenticationTls tls) {
         this.sasl = sasl;
         this.tls = tls;
     }
@@ -68,12 +68,12 @@ public final class ClusterClientAuthentication {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setSasl(@Nullable ClusterClientAuthenticationSasl sasl) {
+        public Builder sasl(@Nullable ClusterClientAuthenticationSasl sasl) {
             this.sasl = sasl;
             return this;
         }
 
-        public Builder setTls(@Nullable ClusterClientAuthenticationTls tls) {
+        public Builder tls(@Nullable ClusterClientAuthenticationTls tls) {
             this.tls = tls;
             return this;
         }

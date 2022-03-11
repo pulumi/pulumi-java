@@ -124,52 +124,52 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
     	      this.zones = defaults.zones;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable Input<String> privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable Input<String> privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = Input.ofNullable(privateIpAllocationMethod);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetReferenceArgs subnet) {
+        public Builder subnet(@Nullable SubnetReferenceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<String> zones) {
+        public Builder zones(@Nullable Input<String> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable String zones) {
+        public Builder zones(@Nullable String zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

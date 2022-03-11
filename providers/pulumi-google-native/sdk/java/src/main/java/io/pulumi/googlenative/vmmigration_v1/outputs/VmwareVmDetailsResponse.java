@@ -71,20 +71,20 @@ public final class VmwareVmDetailsResponse {
      */
     private final String vmId;
 
-    @OutputCustomType.Constructor({"bootOption","committedStorageMb","cpuCount","datacenterDescription","datacenterId","diskCount","displayName","guestDescription","memoryMb","powerState","uuid","vmId"})
+    @OutputCustomType.Constructor
     private VmwareVmDetailsResponse(
-        String bootOption,
-        String committedStorageMb,
-        Integer cpuCount,
-        String datacenterDescription,
-        String datacenterId,
-        Integer diskCount,
-        String displayName,
-        String guestDescription,
-        Integer memoryMb,
-        String powerState,
-        String uuid,
-        String vmId) {
+        @OutputCustomType.Parameter("bootOption") String bootOption,
+        @OutputCustomType.Parameter("committedStorageMb") String committedStorageMb,
+        @OutputCustomType.Parameter("cpuCount") Integer cpuCount,
+        @OutputCustomType.Parameter("datacenterDescription") String datacenterDescription,
+        @OutputCustomType.Parameter("datacenterId") String datacenterId,
+        @OutputCustomType.Parameter("diskCount") Integer diskCount,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("guestDescription") String guestDescription,
+        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
+        @OutputCustomType.Parameter("powerState") String powerState,
+        @OutputCustomType.Parameter("uuid") String uuid,
+        @OutputCustomType.Parameter("vmId") String vmId) {
         this.bootOption = bootOption;
         this.committedStorageMb = committedStorageMb;
         this.cpuCount = cpuCount;
@@ -226,62 +226,62 @@ public final class VmwareVmDetailsResponse {
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setBootOption(String bootOption) {
+        public Builder bootOption(String bootOption) {
             this.bootOption = Objects.requireNonNull(bootOption);
             return this;
         }
 
-        public Builder setCommittedStorageMb(String committedStorageMb) {
+        public Builder committedStorageMb(String committedStorageMb) {
             this.committedStorageMb = Objects.requireNonNull(committedStorageMb);
             return this;
         }
 
-        public Builder setCpuCount(Integer cpuCount) {
+        public Builder cpuCount(Integer cpuCount) {
             this.cpuCount = Objects.requireNonNull(cpuCount);
             return this;
         }
 
-        public Builder setDatacenterDescription(String datacenterDescription) {
+        public Builder datacenterDescription(String datacenterDescription) {
             this.datacenterDescription = Objects.requireNonNull(datacenterDescription);
             return this;
         }
 
-        public Builder setDatacenterId(String datacenterId) {
+        public Builder datacenterId(String datacenterId) {
             this.datacenterId = Objects.requireNonNull(datacenterId);
             return this;
         }
 
-        public Builder setDiskCount(Integer diskCount) {
+        public Builder diskCount(Integer diskCount) {
             this.diskCount = Objects.requireNonNull(diskCount);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGuestDescription(String guestDescription) {
+        public Builder guestDescription(String guestDescription) {
             this.guestDescription = Objects.requireNonNull(guestDescription);
             return this;
         }
 
-        public Builder setMemoryMb(Integer memoryMb) {
+        public Builder memoryMb(Integer memoryMb) {
             this.memoryMb = Objects.requireNonNull(memoryMb);
             return this;
         }
 
-        public Builder setPowerState(String powerState) {
+        public Builder powerState(String powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }

@@ -122,27 +122,27 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse extends io
     	      this.values = defaults.values;
         }
 
-        public Builder setAllowAll(Boolean allowAll) {
+        public Builder allowAll(Boolean allowAll) {
             this.allowAll = Objects.requireNonNull(allowAll);
             return this;
         }
 
-        public Builder setCondition(GoogleTypeExprResponse condition) {
+        public Builder condition(GoogleTypeExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setDenyAll(Boolean denyAll) {
+        public Builder denyAll(Boolean denyAll) {
             this.denyAll = Objects.requireNonNull(denyAll);
             return this;
         }
 
-        public Builder setEnforce(Boolean enforce) {
+        public Builder enforce(Boolean enforce) {
             this.enforce = Objects.requireNonNull(enforce);
             return this;
         }
 
-        public Builder setValues(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
+        public Builder values(GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

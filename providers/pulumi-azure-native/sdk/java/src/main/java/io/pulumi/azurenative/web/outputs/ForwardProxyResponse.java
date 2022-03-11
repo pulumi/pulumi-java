@@ -27,11 +27,11 @@ public final class ForwardProxyResponse {
      */
     private final @Nullable String customProtoHeaderName;
 
-    @OutputCustomType.Constructor({"convention","customHostHeaderName","customProtoHeaderName"})
+    @OutputCustomType.Constructor
     private ForwardProxyResponse(
-        @Nullable String convention,
-        @Nullable String customHostHeaderName,
-        @Nullable String customProtoHeaderName) {
+        @OutputCustomType.Parameter("convention") @Nullable String convention,
+        @OutputCustomType.Parameter("customHostHeaderName") @Nullable String customHostHeaderName,
+        @OutputCustomType.Parameter("customProtoHeaderName") @Nullable String customProtoHeaderName) {
         this.convention = convention;
         this.customHostHeaderName = customHostHeaderName;
         this.customProtoHeaderName = customProtoHeaderName;
@@ -83,17 +83,17 @@ public final class ForwardProxyResponse {
     	      this.customProtoHeaderName = defaults.customProtoHeaderName;
         }
 
-        public Builder setConvention(@Nullable String convention) {
+        public Builder convention(@Nullable String convention) {
             this.convention = convention;
             return this;
         }
 
-        public Builder setCustomHostHeaderName(@Nullable String customHostHeaderName) {
+        public Builder customHostHeaderName(@Nullable String customHostHeaderName) {
             this.customHostHeaderName = customHostHeaderName;
             return this;
         }
 
-        public Builder setCustomProtoHeaderName(@Nullable String customProtoHeaderName) {
+        public Builder customProtoHeaderName(@Nullable String customProtoHeaderName) {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }

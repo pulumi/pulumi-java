@@ -16,8 +16,8 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
      */
     private final List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private GoogleCloudDatacatalogV1beta1SchemaResponse(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1beta1SchemaResponse(@OutputCustomType.Parameter("columns") List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
         this.columns = columns;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1beta1SchemaResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
+        public Builder columns(List<GoogleCloudDatacatalogV1beta1ColumnSchemaResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

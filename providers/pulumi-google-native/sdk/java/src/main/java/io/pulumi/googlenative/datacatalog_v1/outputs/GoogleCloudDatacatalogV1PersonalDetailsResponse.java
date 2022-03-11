@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
      */
     private final Boolean starred;
 
-    @OutputCustomType.Constructor({"starTime","starred"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1PersonalDetailsResponse(
-        String starTime,
-        Boolean starred) {
+        @OutputCustomType.Parameter("starTime") String starTime,
+        @OutputCustomType.Parameter("starred") Boolean starred) {
         this.starTime = starTime;
         this.starred = starred;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
     	      this.starred = defaults.starred;
         }
 
-        public Builder setStarTime(String starTime) {
+        public Builder starTime(String starTime) {
             this.starTime = Objects.requireNonNull(starTime);
             return this;
         }
 
-        public Builder setStarred(Boolean starred) {
+        public Builder starred(Boolean starred) {
             this.starred = Objects.requireNonNull(starred);
             return this;
         }

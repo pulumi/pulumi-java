@@ -21,10 +21,10 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
      */
     private final Boolean forwardWhenContentTypeIsUnknown;
 
-    @OutputCustomType.Constructor({"contentTypeProfiles","forwardWhenContentTypeIsUnknown"})
+    @OutputCustomType.Constructor
     private FieldLevelEncryptionConfigContentTypeProfileConfig(
-        FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
-        Boolean forwardWhenContentTypeIsUnknown) {
+        @OutputCustomType.Parameter("contentTypeProfiles") FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles,
+        @OutputCustomType.Parameter("forwardWhenContentTypeIsUnknown") Boolean forwardWhenContentTypeIsUnknown) {
         this.contentTypeProfiles = contentTypeProfiles;
         this.forwardWhenContentTypeIsUnknown = forwardWhenContentTypeIsUnknown;
     }
@@ -66,12 +66,12 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfig {
     	      this.forwardWhenContentTypeIsUnknown = defaults.forwardWhenContentTypeIsUnknown;
         }
 
-        public Builder setContentTypeProfiles(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles) {
+        public Builder contentTypeProfiles(FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfiles contentTypeProfiles) {
             this.contentTypeProfiles = Objects.requireNonNull(contentTypeProfiles);
             return this;
         }
 
-        public Builder setForwardWhenContentTypeIsUnknown(Boolean forwardWhenContentTypeIsUnknown) {
+        public Builder forwardWhenContentTypeIsUnknown(Boolean forwardWhenContentTypeIsUnknown) {
             this.forwardWhenContentTypeIsUnknown = Objects.requireNonNull(forwardWhenContentTypeIsUnknown);
             return this;
         }

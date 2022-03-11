@@ -15,10 +15,10 @@ public final class SpotFleetLoadBalancersConfig {
     private final @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig;
     private final @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig;
 
-    @OutputCustomType.Constructor({"classicLoadBalancersConfig","targetGroupsConfig"})
+    @OutputCustomType.Constructor
     private SpotFleetLoadBalancersConfig(
-        @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig,
-        @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
+        @OutputCustomType.Parameter("classicLoadBalancersConfig") @Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig,
+        @OutputCustomType.Parameter("targetGroupsConfig") @Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
         this.classicLoadBalancersConfig = classicLoadBalancersConfig;
         this.targetGroupsConfig = targetGroupsConfig;
     }
@@ -52,12 +52,12 @@ public final class SpotFleetLoadBalancersConfig {
     	      this.targetGroupsConfig = defaults.targetGroupsConfig;
         }
 
-        public Builder setClassicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig) {
+        public Builder classicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfig classicLoadBalancersConfig) {
             this.classicLoadBalancersConfig = classicLoadBalancersConfig;
             return this;
         }
 
-        public Builder setTargetGroupsConfig(@Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
+        public Builder targetGroupsConfig(@Nullable SpotFleetTargetGroupsConfig targetGroupsConfig) {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
         }

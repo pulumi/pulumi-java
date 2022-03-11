@@ -20,10 +20,10 @@ public final class WebhookConfigResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"secret","state"})
+    @OutputCustomType.Constructor
     private WebhookConfigResponse(
-        String secret,
-        String state) {
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("state") String state) {
         this.secret = secret;
         this.state = state;
     }
@@ -65,12 +65,12 @@ public final class WebhookConfigResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -72,22 +72,22 @@ public final class AnalyticsApplicationInputsSchemaRecordFormatGetArgs extends i
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setMappingParameters(@Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs> mappingParameters) {
+        public Builder mappingParameters(@Nullable Input<AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs> mappingParameters) {
             this.mappingParameters = mappingParameters;
             return this;
         }
 
-        public Builder setMappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs mappingParameters) {
+        public Builder mappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParametersGetArgs mappingParameters) {
             this.mappingParameters = Input.ofNullable(mappingParameters);
             return this;
         }
 
-        public Builder setRecordFormatType(@Nullable Input<String> recordFormatType) {
+        public Builder recordFormatType(@Nullable Input<String> recordFormatType) {
             this.recordFormatType = recordFormatType;
             return this;
         }
 
-        public Builder setRecordFormatType(@Nullable String recordFormatType) {
+        public Builder recordFormatType(@Nullable String recordFormatType) {
             this.recordFormatType = Input.ofNullable(recordFormatType);
             return this;
         }

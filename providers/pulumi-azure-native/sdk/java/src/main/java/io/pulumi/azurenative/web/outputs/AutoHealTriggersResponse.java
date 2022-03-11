@@ -47,14 +47,14 @@ public final class AutoHealTriggersResponse {
      */
     private final @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange;
 
-    @OutputCustomType.Constructor({"privateBytesInKB","requests","slowRequests","slowRequestsWithPath","statusCodes","statusCodesRange"})
+    @OutputCustomType.Constructor
     private AutoHealTriggersResponse(
-        @Nullable Integer privateBytesInKB,
-        @Nullable RequestsBasedTriggerResponse requests,
-        @Nullable SlowRequestsBasedTriggerResponse slowRequests,
-        @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
-        @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
-        @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
+        @OutputCustomType.Parameter("privateBytesInKB") @Nullable Integer privateBytesInKB,
+        @OutputCustomType.Parameter("requests") @Nullable RequestsBasedTriggerResponse requests,
+        @OutputCustomType.Parameter("slowRequests") @Nullable SlowRequestsBasedTriggerResponse slowRequests,
+        @OutputCustomType.Parameter("slowRequestsWithPath") @Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath,
+        @OutputCustomType.Parameter("statusCodes") @Nullable List<StatusCodesBasedTriggerResponse> statusCodes,
+        @OutputCustomType.Parameter("statusCodesRange") @Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
         this.privateBytesInKB = privateBytesInKB;
         this.requests = requests;
         this.slowRequests = slowRequests;
@@ -136,32 +136,32 @@ public final class AutoHealTriggersResponse {
     	      this.statusCodesRange = defaults.statusCodesRange;
         }
 
-        public Builder setPrivateBytesInKB(@Nullable Integer privateBytesInKB) {
+        public Builder privateBytesInKB(@Nullable Integer privateBytesInKB) {
             this.privateBytesInKB = privateBytesInKB;
             return this;
         }
 
-        public Builder setRequests(@Nullable RequestsBasedTriggerResponse requests) {
+        public Builder requests(@Nullable RequestsBasedTriggerResponse requests) {
             this.requests = requests;
             return this;
         }
 
-        public Builder setSlowRequests(@Nullable SlowRequestsBasedTriggerResponse slowRequests) {
+        public Builder slowRequests(@Nullable SlowRequestsBasedTriggerResponse slowRequests) {
             this.slowRequests = slowRequests;
             return this;
         }
 
-        public Builder setSlowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath) {
+        public Builder slowRequestsWithPath(@Nullable List<SlowRequestsBasedTriggerResponse> slowRequestsWithPath) {
             this.slowRequestsWithPath = slowRequestsWithPath;
             return this;
         }
 
-        public Builder setStatusCodes(@Nullable List<StatusCodesBasedTriggerResponse> statusCodes) {
+        public Builder statusCodes(@Nullable List<StatusCodesBasedTriggerResponse> statusCodes) {
             this.statusCodes = statusCodes;
             return this;
         }
 
-        public Builder setStatusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
+        public Builder statusCodesRange(@Nullable List<StatusCodesRangeBasedTriggerResponse> statusCodesRange) {
             this.statusCodesRange = statusCodesRange;
             return this;
         }

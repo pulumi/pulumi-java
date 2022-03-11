@@ -22,10 +22,10 @@ public final class ArtifactsResponse {
      */
     private final ArtifactObjectsResponse objects;
 
-    @OutputCustomType.Constructor({"images","objects"})
+    @OutputCustomType.Constructor
     private ArtifactsResponse(
-        List<String> images,
-        ArtifactObjectsResponse objects) {
+        @OutputCustomType.Parameter("images") List<String> images,
+        @OutputCustomType.Parameter("objects") ArtifactObjectsResponse objects) {
         this.images = images;
         this.objects = objects;
     }
@@ -67,12 +67,12 @@ public final class ArtifactsResponse {
     	      this.objects = defaults.objects;
         }
 
-        public Builder setImages(List<String> images) {
+        public Builder images(List<String> images) {
             this.images = Objects.requireNonNull(images);
             return this;
         }
 
-        public Builder setObjects(ArtifactObjectsResponse objects) {
+        public Builder objects(ArtifactObjectsResponse objects) {
             this.objects = Objects.requireNonNull(objects);
             return this;
         }

@@ -17,8 +17,8 @@ public final class WebTestGeolocationResponse {
      */
     private final @Nullable String location;
 
-    @OutputCustomType.Constructor({"location"})
-    private WebTestGeolocationResponse(@Nullable String location) {
+    @OutputCustomType.Constructor
+    private WebTestGeolocationResponse(@OutputCustomType.Parameter("location") @Nullable String location) {
         this.location = location;
     }
 
@@ -50,7 +50,7 @@ public final class WebTestGeolocationResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }

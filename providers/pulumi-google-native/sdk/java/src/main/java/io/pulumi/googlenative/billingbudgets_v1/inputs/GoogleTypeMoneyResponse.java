@@ -89,17 +89,17 @@ public final class GoogleTypeMoneyResponse extends io.pulumi.resources.InvokeArg
     	      this.units = defaults.units;
         }
 
-        public Builder setCurrencyCode(String currencyCode) {
+        public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
 
-        public Builder setNanos(Integer nanos) {
+        public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
 
-        public Builder setUnits(String units) {
+        public Builder units(String units) {
             this.units = Objects.requireNonNull(units);
             return this;
         }

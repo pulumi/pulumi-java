@@ -21,10 +21,10 @@ public final class CardinalityResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"number","path"})
+    @OutputCustomType.Constructor
     private CardinalityResponse(
-        Integer number,
-        String path) {
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("path") String path) {
         this.number = number;
         this.path = path;
     }
@@ -66,12 +66,12 @@ public final class CardinalityResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

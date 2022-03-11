@@ -72,12 +72,12 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(Double max) {
+        public Builder max(Double max) {
             this.max = Objects.requireNonNull(max);
             return this;
         }
 
-        public Builder setMin(Double min) {
+        public Builder min(Double min) {
             this.min = Objects.requireNonNull(min);
             return this;
         }

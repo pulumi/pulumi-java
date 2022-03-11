@@ -139,62 +139,62 @@ public final class TableLevelSharingPropertiesArgs extends io.pulumi.resources.R
     	      this.tablesToInclude = defaults.tablesToInclude;
         }
 
-        public Builder setExternalTablesToExclude(@Nullable Input<List<String>> externalTablesToExclude) {
+        public Builder externalTablesToExclude(@Nullable Input<List<String>> externalTablesToExclude) {
             this.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
 
-        public Builder setExternalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
+        public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
             this.externalTablesToExclude = Input.ofNullable(externalTablesToExclude);
             return this;
         }
 
-        public Builder setExternalTablesToInclude(@Nullable Input<List<String>> externalTablesToInclude) {
+        public Builder externalTablesToInclude(@Nullable Input<List<String>> externalTablesToInclude) {
             this.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
 
-        public Builder setExternalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
+        public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
             this.externalTablesToInclude = Input.ofNullable(externalTablesToInclude);
             return this;
         }
 
-        public Builder setMaterializedViewsToExclude(@Nullable Input<List<String>> materializedViewsToExclude) {
+        public Builder materializedViewsToExclude(@Nullable Input<List<String>> materializedViewsToExclude) {
             this.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
+        public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
             this.materializedViewsToExclude = Input.ofNullable(materializedViewsToExclude);
             return this;
         }
 
-        public Builder setMaterializedViewsToInclude(@Nullable Input<List<String>> materializedViewsToInclude) {
+        public Builder materializedViewsToInclude(@Nullable Input<List<String>> materializedViewsToInclude) {
             this.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
+        public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
             this.materializedViewsToInclude = Input.ofNullable(materializedViewsToInclude);
             return this;
         }
 
-        public Builder setTablesToExclude(@Nullable Input<List<String>> tablesToExclude) {
+        public Builder tablesToExclude(@Nullable Input<List<String>> tablesToExclude) {
             this.tablesToExclude = tablesToExclude;
             return this;
         }
 
-        public Builder setTablesToExclude(@Nullable List<String> tablesToExclude) {
+        public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
             this.tablesToExclude = Input.ofNullable(tablesToExclude);
             return this;
         }
 
-        public Builder setTablesToInclude(@Nullable Input<List<String>> tablesToInclude) {
+        public Builder tablesToInclude(@Nullable Input<List<String>> tablesToInclude) {
             this.tablesToInclude = tablesToInclude;
             return this;
         }
 
-        public Builder setTablesToInclude(@Nullable List<String> tablesToInclude) {
+        public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
             this.tablesToInclude = Input.ofNullable(tablesToInclude);
             return this;
         }

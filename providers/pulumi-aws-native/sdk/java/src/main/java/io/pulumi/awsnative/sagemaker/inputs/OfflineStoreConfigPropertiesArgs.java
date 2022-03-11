@@ -76,32 +76,32 @@ public final class OfflineStoreConfigPropertiesArgs extends io.pulumi.resources.
     	      this.s3StorageConfig = defaults.s3StorageConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable Input<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable Input<FeatureGroupDataCatalogConfigArgs> dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDataCatalogConfig(@Nullable FeatureGroupDataCatalogConfigArgs dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable FeatureGroupDataCatalogConfigArgs dataCatalogConfig) {
             this.dataCatalogConfig = Input.ofNullable(dataCatalogConfig);
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Input<Boolean> disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Input<Boolean> disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = Input.ofNullable(disableGlueTableCreation);
             return this;
         }
 
-        public Builder setS3StorageConfig(Input<FeatureGroupS3StorageConfigArgs> s3StorageConfig) {
+        public Builder s3StorageConfig(Input<FeatureGroupS3StorageConfigArgs> s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }
 
-        public Builder setS3StorageConfig(FeatureGroupS3StorageConfigArgs s3StorageConfig) {
+        public Builder s3StorageConfig(FeatureGroupS3StorageConfigArgs s3StorageConfig) {
             this.s3StorageConfig = Input.of(Objects.requireNonNull(s3StorageConfig));
             return this;
         }

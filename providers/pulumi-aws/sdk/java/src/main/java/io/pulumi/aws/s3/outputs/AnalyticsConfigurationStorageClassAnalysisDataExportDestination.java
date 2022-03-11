@@ -15,8 +15,8 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
      */
     private final AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination;
 
-    @OutputCustomType.Constructor({"s3BucketDestination"})
-    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
+    @OutputCustomType.Constructor
+    private AnalyticsConfigurationStorageClassAnalysisDataExportDestination(@OutputCustomType.Parameter("s3BucketDestination") AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
         this.s3BucketDestination = s3BucketDestination;
     }
 
@@ -48,7 +48,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExportDestinati
     	      this.s3BucketDestination = defaults.s3BucketDestination;
         }
 
-        public Builder setS3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
+        public Builder s3BucketDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestinationS3BucketDestination s3BucketDestination) {
             this.s3BucketDestination = Objects.requireNonNull(s3BucketDestination);
             return this;
         }

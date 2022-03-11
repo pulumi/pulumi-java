@@ -71,22 +71,22 @@ public final class GetMountTargetResult {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"accessPointId","availabilityZoneId","availabilityZoneName","dnsName","fileSystemArn","fileSystemId","id","ipAddress","mountTargetDnsName","mountTargetId","networkInterfaceId","ownerId","securityGroups","subnetId"})
+    @OutputCustomType.Constructor
     private GetMountTargetResult(
-        @Nullable String accessPointId,
-        String availabilityZoneId,
-        String availabilityZoneName,
-        String dnsName,
-        String fileSystemArn,
-        String fileSystemId,
-        String id,
-        String ipAddress,
-        String mountTargetDnsName,
-        String mountTargetId,
-        String networkInterfaceId,
-        String ownerId,
-        List<String> securityGroups,
-        String subnetId) {
+        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("mountTargetDnsName") String mountTargetDnsName,
+        @OutputCustomType.Parameter("mountTargetId") String mountTargetId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("securityGroups") List<String> securityGroups,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.accessPointId = accessPointId;
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;
@@ -236,72 +236,72 @@ public final class GetMountTargetResult {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setAvailabilityZoneId(String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
 
-        public Builder setAvailabilityZoneName(String availabilityZoneName) {
+        public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setFileSystemArn(String fileSystemArn) {
+        public Builder fileSystemArn(String fileSystemArn) {
             this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setMountTargetDnsName(String mountTargetDnsName) {
+        public Builder mountTargetDnsName(String mountTargetDnsName) {
             this.mountTargetDnsName = Objects.requireNonNull(mountTargetDnsName);
             return this;
         }
 
-        public Builder setMountTargetId(String mountTargetId) {
+        public Builder mountTargetId(String mountTargetId) {
             this.mountTargetId = Objects.requireNonNull(mountTargetId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setSecurityGroups(List<String> securityGroups) {
+        public Builder securityGroups(List<String> securityGroups) {
             this.securityGroups = Objects.requireNonNull(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

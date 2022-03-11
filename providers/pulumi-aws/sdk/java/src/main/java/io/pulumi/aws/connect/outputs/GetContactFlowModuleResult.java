@@ -49,18 +49,18 @@ public final class GetContactFlowModuleResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","contactFlowModuleId","content","description","id","instanceId","name","state","status","tags"})
+    @OutputCustomType.Constructor
     private GetContactFlowModuleResult(
-        String arn,
-        String contactFlowModuleId,
-        String content,
-        String description,
-        String id,
-        String instanceId,
-        String name,
-        String state,
-        String status,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("contactFlowModuleId") String contactFlowModuleId,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.contactFlowModuleId = contactFlowModuleId;
         this.content = content;
@@ -170,52 +170,52 @@ public final class GetContactFlowModuleResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setContactFlowModuleId(String contactFlowModuleId) {
+        public Builder contactFlowModuleId(String contactFlowModuleId) {
             this.contactFlowModuleId = Objects.requireNonNull(contactFlowModuleId);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

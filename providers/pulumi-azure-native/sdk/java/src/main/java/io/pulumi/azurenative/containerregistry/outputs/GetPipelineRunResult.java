@@ -55,16 +55,16 @@ public final class GetPipelineRunResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"forceUpdateTag","id","name","provisioningState","request","response","systemData","type"})
+    @OutputCustomType.Constructor
     private GetPipelineRunResult(
-        @Nullable String forceUpdateTag,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable PipelineRunRequestResponse request,
-        PipelineRunResponseResponse response,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("request") @Nullable PipelineRunRequestResponse request,
+        @OutputCustomType.Parameter("response") PipelineRunResponseResponse response,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.forceUpdateTag = forceUpdateTag;
         this.id = id;
         this.name = name;
@@ -166,42 +166,42 @@ public final class GetPipelineRunResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequest(@Nullable PipelineRunRequestResponse request) {
+        public Builder request(@Nullable PipelineRunRequestResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setResponse(PipelineRunResponseResponse response) {
+        public Builder response(PipelineRunResponseResponse response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

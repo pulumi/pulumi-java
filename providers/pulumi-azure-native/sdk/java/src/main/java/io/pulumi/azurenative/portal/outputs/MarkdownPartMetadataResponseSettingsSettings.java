@@ -38,13 +38,13 @@ public final class MarkdownPartMetadataResponseSettingsSettings {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"content","markdownSource","markdownUri","subtitle","title"})
+    @OutputCustomType.Constructor
     private MarkdownPartMetadataResponseSettingsSettings(
-        @Nullable String content,
-        @Nullable Integer markdownSource,
-        @Nullable String markdownUri,
-        @Nullable String subtitle,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("markdownSource") @Nullable Integer markdownSource,
+        @OutputCustomType.Parameter("markdownUri") @Nullable String markdownUri,
+        @OutputCustomType.Parameter("subtitle") @Nullable String subtitle,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.content = content;
         this.markdownSource = markdownSource;
         this.markdownUri = markdownUri;
@@ -116,27 +116,27 @@ public final class MarkdownPartMetadataResponseSettingsSettings {
     	      this.title = defaults.title;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setMarkdownSource(@Nullable Integer markdownSource) {
+        public Builder markdownSource(@Nullable Integer markdownSource) {
             this.markdownSource = markdownSource;
             return this;
         }
 
-        public Builder setMarkdownUri(@Nullable String markdownUri) {
+        public Builder markdownUri(@Nullable String markdownUri) {
             this.markdownUri = markdownUri;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

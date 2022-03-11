@@ -66,18 +66,18 @@ public final class GetRouteFilterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","ipv6Peerings","location","name","peerings","provisioningState","rules","tags","type"})
+    @OutputCustomType.Constructor
     private GetRouteFilterResult(
-        String etag,
-        @Nullable String id,
-        List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
-        String location,
-        String name,
-        List<ExpressRouteCircuitPeeringResponse> peerings,
-        String provisioningState,
-        @Nullable List<RouteFilterRuleResponse> rules,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6Peerings") List<ExpressRouteCircuitPeeringResponse> ipv6Peerings,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerings") List<ExpressRouteCircuitPeeringResponse> peerings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rules") @Nullable List<RouteFilterRuleResponse> rules,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.ipv6Peerings = ipv6Peerings;
@@ -199,52 +199,52 @@ public final class GetRouteFilterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpv6Peerings(List<ExpressRouteCircuitPeeringResponse> ipv6Peerings) {
+        public Builder ipv6Peerings(List<ExpressRouteCircuitPeeringResponse> ipv6Peerings) {
             this.ipv6Peerings = Objects.requireNonNull(ipv6Peerings);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerings(List<ExpressRouteCircuitPeeringResponse> peerings) {
+        public Builder peerings(List<ExpressRouteCircuitPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRules(@Nullable List<RouteFilterRuleResponse> rules) {
+        public Builder rules(@Nullable List<RouteFilterRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

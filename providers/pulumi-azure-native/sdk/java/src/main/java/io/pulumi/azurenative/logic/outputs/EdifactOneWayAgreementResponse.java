@@ -26,11 +26,11 @@ public final class EdifactOneWayAgreementResponse {
      */
     private final BusinessIdentityResponse senderBusinessIdentity;
 
-    @OutputCustomType.Constructor({"protocolSettings","receiverBusinessIdentity","senderBusinessIdentity"})
+    @OutputCustomType.Constructor
     private EdifactOneWayAgreementResponse(
-        EdifactProtocolSettingsResponse protocolSettings,
-        BusinessIdentityResponse receiverBusinessIdentity,
-        BusinessIdentityResponse senderBusinessIdentity) {
+        @OutputCustomType.Parameter("protocolSettings") EdifactProtocolSettingsResponse protocolSettings,
+        @OutputCustomType.Parameter("receiverBusinessIdentity") BusinessIdentityResponse receiverBusinessIdentity,
+        @OutputCustomType.Parameter("senderBusinessIdentity") BusinessIdentityResponse senderBusinessIdentity) {
         this.protocolSettings = protocolSettings;
         this.receiverBusinessIdentity = receiverBusinessIdentity;
         this.senderBusinessIdentity = senderBusinessIdentity;
@@ -82,17 +82,17 @@ public final class EdifactOneWayAgreementResponse {
     	      this.senderBusinessIdentity = defaults.senderBusinessIdentity;
         }
 
-        public Builder setProtocolSettings(EdifactProtocolSettingsResponse protocolSettings) {
+        public Builder protocolSettings(EdifactProtocolSettingsResponse protocolSettings) {
             this.protocolSettings = Objects.requireNonNull(protocolSettings);
             return this;
         }
 
-        public Builder setReceiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
+        public Builder receiverBusinessIdentity(BusinessIdentityResponse receiverBusinessIdentity) {
             this.receiverBusinessIdentity = Objects.requireNonNull(receiverBusinessIdentity);
             return this;
         }
 
-        public Builder setSenderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
+        public Builder senderBusinessIdentity(BusinessIdentityResponse senderBusinessIdentity) {
             this.senderBusinessIdentity = Objects.requireNonNull(senderBusinessIdentity);
             return this;
         }

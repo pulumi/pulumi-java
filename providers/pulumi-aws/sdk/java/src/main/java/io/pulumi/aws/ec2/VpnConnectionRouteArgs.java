@@ -69,22 +69,22 @@ public final class VpnConnectionRouteArgs extends io.pulumi.resources.ResourceAr
     	      this.vpnConnectionId = defaults.vpnConnectionId;
         }
 
-        public Builder setDestinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder setVpnConnectionId(Input<String> vpnConnectionId) {
+        public Builder vpnConnectionId(Input<String> vpnConnectionId) {
             this.vpnConnectionId = Objects.requireNonNull(vpnConnectionId);
             return this;
         }
 
-        public Builder setVpnConnectionId(String vpnConnectionId) {
+        public Builder vpnConnectionId(String vpnConnectionId) {
             this.vpnConnectionId = Input.of(Objects.requireNonNull(vpnConnectionId));
             return this;
         }

@@ -29,11 +29,11 @@ public final class PredictionDistributionDefinitionResponse {
      */
     private final @Nullable Double totalPositives;
 
-    @OutputCustomType.Constructor({"distributions","totalNegatives","totalPositives"})
+    @OutputCustomType.Constructor
     private PredictionDistributionDefinitionResponse(
-        @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions,
-        @Nullable Double totalNegatives,
-        @Nullable Double totalPositives) {
+        @OutputCustomType.Parameter("distributions") @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions,
+        @OutputCustomType.Parameter("totalNegatives") @Nullable Double totalNegatives,
+        @OutputCustomType.Parameter("totalPositives") @Nullable Double totalPositives) {
         this.distributions = distributions;
         this.totalNegatives = totalNegatives;
         this.totalPositives = totalPositives;
@@ -85,17 +85,17 @@ public final class PredictionDistributionDefinitionResponse {
     	      this.totalPositives = defaults.totalPositives;
         }
 
-        public Builder setDistributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
+        public Builder distributions(@Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions) {
             this.distributions = distributions;
             return this;
         }
 
-        public Builder setTotalNegatives(@Nullable Double totalNegatives) {
+        public Builder totalNegatives(@Nullable Double totalNegatives) {
             this.totalNegatives = totalNegatives;
             return this;
         }
 
-        public Builder setTotalPositives(@Nullable Double totalPositives) {
+        public Builder totalPositives(@Nullable Double totalPositives) {
             this.totalPositives = totalPositives;
             return this;
         }

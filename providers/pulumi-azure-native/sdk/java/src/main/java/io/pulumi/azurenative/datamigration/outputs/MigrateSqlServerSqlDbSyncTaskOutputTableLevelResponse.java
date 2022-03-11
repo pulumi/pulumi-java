@@ -87,23 +87,23 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
      */
     private final Double totalChangesApplied;
 
-    @OutputCustomType.Constructor({"cdcDeleteCounter","cdcInsertCounter","cdcUpdateCounter","dataErrorsCounter","databaseName","fullLoadEndedOn","fullLoadEstFinishTime","fullLoadStartedOn","fullLoadTotalRows","id","lastModifiedTime","resultType","state","tableName","totalChangesApplied"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse(
-        Double cdcDeleteCounter,
-        Double cdcInsertCounter,
-        Double cdcUpdateCounter,
-        Double dataErrorsCounter,
-        String databaseName,
-        String fullLoadEndedOn,
-        String fullLoadEstFinishTime,
-        String fullLoadStartedOn,
-        Double fullLoadTotalRows,
-        String id,
-        String lastModifiedTime,
-        String resultType,
-        String state,
-        String tableName,
-        Double totalChangesApplied) {
+        @OutputCustomType.Parameter("cdcDeleteCounter") Double cdcDeleteCounter,
+        @OutputCustomType.Parameter("cdcInsertCounter") Double cdcInsertCounter,
+        @OutputCustomType.Parameter("cdcUpdateCounter") Double cdcUpdateCounter,
+        @OutputCustomType.Parameter("dataErrorsCounter") Double dataErrorsCounter,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("fullLoadEndedOn") String fullLoadEndedOn,
+        @OutputCustomType.Parameter("fullLoadEstFinishTime") String fullLoadEstFinishTime,
+        @OutputCustomType.Parameter("fullLoadStartedOn") String fullLoadStartedOn,
+        @OutputCustomType.Parameter("fullLoadTotalRows") Double fullLoadTotalRows,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("totalChangesApplied") Double totalChangesApplied) {
         this.cdcDeleteCounter = cdcDeleteCounter;
         this.cdcInsertCounter = cdcInsertCounter;
         this.cdcUpdateCounter = cdcUpdateCounter;
@@ -276,77 +276,77 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse {
     	      this.totalChangesApplied = defaults.totalChangesApplied;
         }
 
-        public Builder setCdcDeleteCounter(Double cdcDeleteCounter) {
+        public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
             this.cdcDeleteCounter = Objects.requireNonNull(cdcDeleteCounter);
             return this;
         }
 
-        public Builder setCdcInsertCounter(Double cdcInsertCounter) {
+        public Builder cdcInsertCounter(Double cdcInsertCounter) {
             this.cdcInsertCounter = Objects.requireNonNull(cdcInsertCounter);
             return this;
         }
 
-        public Builder setCdcUpdateCounter(Double cdcUpdateCounter) {
+        public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             this.cdcUpdateCounter = Objects.requireNonNull(cdcUpdateCounter);
             return this;
         }
 
-        public Builder setDataErrorsCounter(Double dataErrorsCounter) {
+        public Builder dataErrorsCounter(Double dataErrorsCounter) {
             this.dataErrorsCounter = Objects.requireNonNull(dataErrorsCounter);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setFullLoadEndedOn(String fullLoadEndedOn) {
+        public Builder fullLoadEndedOn(String fullLoadEndedOn) {
             this.fullLoadEndedOn = Objects.requireNonNull(fullLoadEndedOn);
             return this;
         }
 
-        public Builder setFullLoadEstFinishTime(String fullLoadEstFinishTime) {
+        public Builder fullLoadEstFinishTime(String fullLoadEstFinishTime) {
             this.fullLoadEstFinishTime = Objects.requireNonNull(fullLoadEstFinishTime);
             return this;
         }
 
-        public Builder setFullLoadStartedOn(String fullLoadStartedOn) {
+        public Builder fullLoadStartedOn(String fullLoadStartedOn) {
             this.fullLoadStartedOn = Objects.requireNonNull(fullLoadStartedOn);
             return this;
         }
 
-        public Builder setFullLoadTotalRows(Double fullLoadTotalRows) {
+        public Builder fullLoadTotalRows(Double fullLoadTotalRows) {
             this.fullLoadTotalRows = Objects.requireNonNull(fullLoadTotalRows);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTotalChangesApplied(Double totalChangesApplied) {
+        public Builder totalChangesApplied(Double totalChangesApplied) {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }

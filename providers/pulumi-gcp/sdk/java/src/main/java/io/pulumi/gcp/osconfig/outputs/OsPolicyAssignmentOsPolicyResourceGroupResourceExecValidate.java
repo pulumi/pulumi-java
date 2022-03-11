@@ -39,13 +39,13 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"args","file","interpreter","outputFilePath","script"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(
-        @Nullable List<String> args,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
-        String interpreter,
-        @Nullable String outputFilePath,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("args") @Nullable List<String> args,
+        @OutputCustomType.Parameter("file") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("outputFilePath") @Nullable String outputFilePath,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.args = args;
         this.file = file;
         this.interpreter = interpreter;
@@ -117,27 +117,27 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
     	      this.script = defaults.script;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setFile(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file) {
+        public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setOutputFilePath(@Nullable String outputFilePath) {
+        public Builder outputFilePath(@Nullable String outputFilePath) {
             this.outputFilePath = outputFilePath;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

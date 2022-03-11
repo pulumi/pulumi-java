@@ -26,15 +26,15 @@ public final class GetAmiIdsResult {
     private final List<String> owners;
     private final @Nullable Boolean sortAscending;
 
-    @OutputCustomType.Constructor({"executableUsers","filters","id","ids","nameRegex","owners","sortAscending"})
+    @OutputCustomType.Constructor
     private GetAmiIdsResult(
-        @Nullable List<String> executableUsers,
-        @Nullable List<GetAmiIdsFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable String nameRegex,
-        List<String> owners,
-        @Nullable Boolean sortAscending) {
+        @OutputCustomType.Parameter("executableUsers") @Nullable List<String> executableUsers,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAmiIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @OutputCustomType.Parameter("owners") List<String> owners,
+        @OutputCustomType.Parameter("sortAscending") @Nullable Boolean sortAscending) {
         this.executableUsers = executableUsers;
         this.filters = filters;
         this.id = id;
@@ -102,37 +102,37 @@ public final class GetAmiIdsResult {
     	      this.sortAscending = defaults.sortAscending;
         }
 
-        public Builder setExecutableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable List<String> executableUsers) {
             this.executableUsers = executableUsers;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAmiIdsFilter> filters) {
+        public Builder filters(@Nullable List<GetAmiIdsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setNameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
 
-        public Builder setOwners(List<String> owners) {
+        public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
 
-        public Builder setSortAscending(@Nullable Boolean sortAscending) {
+        public Builder sortAscending(@Nullable Boolean sortAscending) {
             this.sortAscending = sortAscending;
             return this;
         }

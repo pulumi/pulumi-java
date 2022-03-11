@@ -17,8 +17,8 @@ public final class OSDiskImageEncryptionResponse {
      */
     private final @Nullable String diskEncryptionSetId;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId"})
-    private OSDiskImageEncryptionResponse(@Nullable String diskEncryptionSetId) {
+    @OutputCustomType.Constructor
+    private OSDiskImageEncryptionResponse(@OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId) {
         this.diskEncryptionSetId = diskEncryptionSetId;
     }
 
@@ -50,7 +50,7 @@ public final class OSDiskImageEncryptionResponse {
     	      this.diskEncryptionSetId = defaults.diskEncryptionSetId;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }

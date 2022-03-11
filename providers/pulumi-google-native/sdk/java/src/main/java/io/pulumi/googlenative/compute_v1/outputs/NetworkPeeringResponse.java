@@ -67,19 +67,19 @@ public final class NetworkPeeringResponse {
      */
     private final String stateDetails;
 
-    @OutputCustomType.Constructor({"autoCreateRoutes","exchangeSubnetRoutes","exportCustomRoutes","exportSubnetRoutesWithPublicIp","importCustomRoutes","importSubnetRoutesWithPublicIp","name","network","peerMtu","state","stateDetails"})
+    @OutputCustomType.Constructor
     private NetworkPeeringResponse(
-        Boolean autoCreateRoutes,
-        Boolean exchangeSubnetRoutes,
-        Boolean exportCustomRoutes,
-        Boolean exportSubnetRoutesWithPublicIp,
-        Boolean importCustomRoutes,
-        Boolean importSubnetRoutesWithPublicIp,
-        String name,
-        String network,
-        Integer peerMtu,
-        String state,
-        String stateDetails) {
+        @OutputCustomType.Parameter("autoCreateRoutes") Boolean autoCreateRoutes,
+        @OutputCustomType.Parameter("exchangeSubnetRoutes") Boolean exchangeSubnetRoutes,
+        @OutputCustomType.Parameter("exportCustomRoutes") Boolean exportCustomRoutes,
+        @OutputCustomType.Parameter("exportSubnetRoutesWithPublicIp") Boolean exportSubnetRoutesWithPublicIp,
+        @OutputCustomType.Parameter("importCustomRoutes") Boolean importCustomRoutes,
+        @OutputCustomType.Parameter("importSubnetRoutesWithPublicIp") Boolean importSubnetRoutesWithPublicIp,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("peerMtu") Integer peerMtu,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateDetails") String stateDetails) {
         this.autoCreateRoutes = autoCreateRoutes;
         this.exchangeSubnetRoutes = exchangeSubnetRoutes;
         this.exportCustomRoutes = exportCustomRoutes;
@@ -211,57 +211,57 @@ public final class NetworkPeeringResponse {
     	      this.stateDetails = defaults.stateDetails;
         }
 
-        public Builder setAutoCreateRoutes(Boolean autoCreateRoutes) {
+        public Builder autoCreateRoutes(Boolean autoCreateRoutes) {
             this.autoCreateRoutes = Objects.requireNonNull(autoCreateRoutes);
             return this;
         }
 
-        public Builder setExchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
+        public Builder exchangeSubnetRoutes(Boolean exchangeSubnetRoutes) {
             this.exchangeSubnetRoutes = Objects.requireNonNull(exchangeSubnetRoutes);
             return this;
         }
 
-        public Builder setExportCustomRoutes(Boolean exportCustomRoutes) {
+        public Builder exportCustomRoutes(Boolean exportCustomRoutes) {
             this.exportCustomRoutes = Objects.requireNonNull(exportCustomRoutes);
             return this;
         }
 
-        public Builder setExportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
+        public Builder exportSubnetRoutesWithPublicIp(Boolean exportSubnetRoutesWithPublicIp) {
             this.exportSubnetRoutesWithPublicIp = Objects.requireNonNull(exportSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setImportCustomRoutes(Boolean importCustomRoutes) {
+        public Builder importCustomRoutes(Boolean importCustomRoutes) {
             this.importCustomRoutes = Objects.requireNonNull(importCustomRoutes);
             return this;
         }
 
-        public Builder setImportSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
+        public Builder importSubnetRoutesWithPublicIp(Boolean importSubnetRoutesWithPublicIp) {
             this.importSubnetRoutesWithPublicIp = Objects.requireNonNull(importSubnetRoutesWithPublicIp);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPeerMtu(Integer peerMtu) {
+        public Builder peerMtu(Integer peerMtu) {
             this.peerMtu = Objects.requireNonNull(peerMtu);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateDetails(String stateDetails) {
+        public Builder stateDetails(String stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }

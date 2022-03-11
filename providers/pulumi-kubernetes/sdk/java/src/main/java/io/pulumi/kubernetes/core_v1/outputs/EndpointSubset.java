@@ -28,11 +28,11 @@ public final class EndpointSubset {
      */
     private final @Nullable List<EndpointPort> ports;
 
-    @OutputCustomType.Constructor({"addresses","notReadyAddresses","ports"})
+    @OutputCustomType.Constructor
     private EndpointSubset(
-        @Nullable List<EndpointAddress> addresses,
-        @Nullable List<EndpointAddress> notReadyAddresses,
-        @Nullable List<EndpointPort> ports) {
+        @OutputCustomType.Parameter("addresses") @Nullable List<EndpointAddress> addresses,
+        @OutputCustomType.Parameter("notReadyAddresses") @Nullable List<EndpointAddress> notReadyAddresses,
+        @OutputCustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
         this.addresses = addresses;
         this.notReadyAddresses = notReadyAddresses;
         this.ports = ports;
@@ -84,17 +84,17 @@ public final class EndpointSubset {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setAddresses(@Nullable List<EndpointAddress> addresses) {
+        public Builder addresses(@Nullable List<EndpointAddress> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setNotReadyAddresses(@Nullable List<EndpointAddress> notReadyAddresses) {
+        public Builder notReadyAddresses(@Nullable List<EndpointAddress> notReadyAddresses) {
             this.notReadyAddresses = notReadyAddresses;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<EndpointPort> ports) {
+        public Builder ports(@Nullable List<EndpointPort> ports) {
             this.ports = ports;
             return this;
         }

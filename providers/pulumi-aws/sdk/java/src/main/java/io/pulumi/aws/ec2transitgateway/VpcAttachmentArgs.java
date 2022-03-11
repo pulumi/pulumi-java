@@ -185,92 +185,92 @@ public final class VpcAttachmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setApplianceModeSupport(@Nullable Input<String> applianceModeSupport) {
+        public Builder applianceModeSupport(@Nullable Input<String> applianceModeSupport) {
             this.applianceModeSupport = applianceModeSupport;
             return this;
         }
 
-        public Builder setApplianceModeSupport(@Nullable String applianceModeSupport) {
+        public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
             this.applianceModeSupport = Input.ofNullable(applianceModeSupport);
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable Input<String> dnsSupport) {
+        public Builder dnsSupport(@Nullable Input<String> dnsSupport) {
             this.dnsSupport = dnsSupport;
             return this;
         }
 
-        public Builder setDnsSupport(@Nullable String dnsSupport) {
+        public Builder dnsSupport(@Nullable String dnsSupport) {
             this.dnsSupport = Input.ofNullable(dnsSupport);
             return this;
         }
 
-        public Builder setIpv6Support(@Nullable Input<String> ipv6Support) {
+        public Builder ipv6Support(@Nullable Input<String> ipv6Support) {
             this.ipv6Support = ipv6Support;
             return this;
         }
 
-        public Builder setIpv6Support(@Nullable String ipv6Support) {
+        public Builder ipv6Support(@Nullable String ipv6Support) {
             this.ipv6Support = Input.ofNullable(ipv6Support);
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Input<Boolean> transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = transitGatewayDefaultRouteTableAssociation;
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
+        public Builder transitGatewayDefaultRouteTableAssociation(@Nullable Boolean transitGatewayDefaultRouteTableAssociation) {
             this.transitGatewayDefaultRouteTableAssociation = Input.ofNullable(transitGatewayDefaultRouteTableAssociation);
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Input<Boolean> transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = transitGatewayDefaultRouteTablePropagation;
             return this;
         }
 
-        public Builder setTransitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
+        public Builder transitGatewayDefaultRouteTablePropagation(@Nullable Boolean transitGatewayDefaultRouteTablePropagation) {
             this.transitGatewayDefaultRouteTablePropagation = Input.ofNullable(transitGatewayDefaultRouteTablePropagation);
             return this;
         }
 
-        public Builder setTransitGatewayId(Input<String> transitGatewayId) {
+        public Builder transitGatewayId(Input<String> transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }
 
-        public Builder setVpcId(Input<String> vpcId) {
+        public Builder vpcId(Input<String> vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }

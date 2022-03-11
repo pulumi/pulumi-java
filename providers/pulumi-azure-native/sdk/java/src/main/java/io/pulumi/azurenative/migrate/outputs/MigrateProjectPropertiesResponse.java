@@ -42,13 +42,13 @@ public final class MigrateProjectPropertiesResponse {
      */
     private final Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary;
 
-    @OutputCustomType.Constructor({"lastSummaryRefreshedTime","provisioningState","refreshSummaryState","registeredTools","summary"})
+    @OutputCustomType.Constructor
     private MigrateProjectPropertiesResponse(
-        String lastSummaryRefreshedTime,
-        @Nullable String provisioningState,
-        String refreshSummaryState,
-        @Nullable List<String> registeredTools,
-        Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("refreshSummaryState") String refreshSummaryState,
+        @OutputCustomType.Parameter("registeredTools") @Nullable List<String> registeredTools,
+        @OutputCustomType.Parameter("summary") Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
         this.provisioningState = provisioningState;
         this.refreshSummaryState = refreshSummaryState;
@@ -120,27 +120,27 @@ public final class MigrateProjectPropertiesResponse {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setLastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
+        public Builder lastSummaryRefreshedTime(String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = Objects.requireNonNull(lastSummaryRefreshedTime);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRefreshSummaryState(String refreshSummaryState) {
+        public Builder refreshSummaryState(String refreshSummaryState) {
             this.refreshSummaryState = Objects.requireNonNull(refreshSummaryState);
             return this;
         }
 
-        public Builder setRegisteredTools(@Nullable List<String> registeredTools) {
+        public Builder registeredTools(@Nullable List<String> registeredTools) {
             this.registeredTools = registeredTools;
             return this;
         }
 
-        public Builder setSummary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
+        public Builder summary(Map<String,Either<DatabaseProjectSummaryResponse,ServersProjectSummaryResponse>> summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

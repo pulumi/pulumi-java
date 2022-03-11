@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor({"magnitude","score"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1SentimentDataResponse(
-        Double magnitude,
-        Double score) {
+        @OutputCustomType.Parameter("magnitude") Double magnitude,
+        @OutputCustomType.Parameter("score") Double score) {
         this.magnitude = magnitude;
         this.score = score;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse {
     	      this.score = defaults.score;
         }
 
-        public Builder setMagnitude(Double magnitude) {
+        public Builder magnitude(Double magnitude) {
             this.magnitude = Objects.requireNonNull(magnitude);
             return this;
         }
 
-        public Builder setScore(Double score) {
+        public Builder score(Double score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }

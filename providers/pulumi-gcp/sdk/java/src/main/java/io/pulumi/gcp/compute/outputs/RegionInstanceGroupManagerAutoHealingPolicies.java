@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
      */
     private final Integer initialDelaySec;
 
-    @OutputCustomType.Constructor({"healthCheck","initialDelaySec"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerAutoHealingPolicies(
-        String healthCheck,
-        Integer initialDelaySec) {
+        @OutputCustomType.Parameter("healthCheck") String healthCheck,
+        @OutputCustomType.Parameter("initialDelaySec") Integer initialDelaySec) {
         this.healthCheck = healthCheck;
         this.initialDelaySec = initialDelaySec;
     }
@@ -68,12 +68,12 @@ public final class RegionInstanceGroupManagerAutoHealingPolicies {
     	      this.initialDelaySec = defaults.initialDelaySec;
         }
 
-        public Builder setHealthCheck(String healthCheck) {
+        public Builder healthCheck(String healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(Integer initialDelaySec) {
+        public Builder initialDelaySec(Integer initialDelaySec) {
             this.initialDelaySec = Objects.requireNonNull(initialDelaySec);
             return this;
         }

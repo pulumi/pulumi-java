@@ -355,192 +355,192 @@ public final class IntegrationState extends io.pulumi.resources.ResourceArgs {
     	      this.tlsConfig = defaults.tlsConfig;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setConnectionType(@Nullable Input<String> connectionType) {
+        public Builder connectionType(@Nullable Input<String> connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable String connectionType) {
+        public Builder connectionType(@Nullable String connectionType) {
             this.connectionType = Input.ofNullable(connectionType);
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable Input<String> contentHandlingStrategy) {
             this.contentHandlingStrategy = contentHandlingStrategy;
             return this;
         }
 
-        public Builder setContentHandlingStrategy(@Nullable String contentHandlingStrategy) {
+        public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
             this.contentHandlingStrategy = Input.ofNullable(contentHandlingStrategy);
             return this;
         }
 
-        public Builder setCredentialsArn(@Nullable Input<String> credentialsArn) {
+        public Builder credentialsArn(@Nullable Input<String> credentialsArn) {
             this.credentialsArn = credentialsArn;
             return this;
         }
 
-        public Builder setCredentialsArn(@Nullable String credentialsArn) {
+        public Builder credentialsArn(@Nullable String credentialsArn) {
             this.credentialsArn = Input.ofNullable(credentialsArn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIntegrationMethod(@Nullable Input<String> integrationMethod) {
+        public Builder integrationMethod(@Nullable Input<String> integrationMethod) {
             this.integrationMethod = integrationMethod;
             return this;
         }
 
-        public Builder setIntegrationMethod(@Nullable String integrationMethod) {
+        public Builder integrationMethod(@Nullable String integrationMethod) {
             this.integrationMethod = Input.ofNullable(integrationMethod);
             return this;
         }
 
-        public Builder setIntegrationResponseSelectionExpression(@Nullable Input<String> integrationResponseSelectionExpression) {
+        public Builder integrationResponseSelectionExpression(@Nullable Input<String> integrationResponseSelectionExpression) {
             this.integrationResponseSelectionExpression = integrationResponseSelectionExpression;
             return this;
         }
 
-        public Builder setIntegrationResponseSelectionExpression(@Nullable String integrationResponseSelectionExpression) {
+        public Builder integrationResponseSelectionExpression(@Nullable String integrationResponseSelectionExpression) {
             this.integrationResponseSelectionExpression = Input.ofNullable(integrationResponseSelectionExpression);
             return this;
         }
 
-        public Builder setIntegrationSubtype(@Nullable Input<String> integrationSubtype) {
+        public Builder integrationSubtype(@Nullable Input<String> integrationSubtype) {
             this.integrationSubtype = integrationSubtype;
             return this;
         }
 
-        public Builder setIntegrationSubtype(@Nullable String integrationSubtype) {
+        public Builder integrationSubtype(@Nullable String integrationSubtype) {
             this.integrationSubtype = Input.ofNullable(integrationSubtype);
             return this;
         }
 
-        public Builder setIntegrationType(@Nullable Input<String> integrationType) {
+        public Builder integrationType(@Nullable Input<String> integrationType) {
             this.integrationType = integrationType;
             return this;
         }
 
-        public Builder setIntegrationType(@Nullable String integrationType) {
+        public Builder integrationType(@Nullable String integrationType) {
             this.integrationType = Input.ofNullable(integrationType);
             return this;
         }
 
-        public Builder setIntegrationUri(@Nullable Input<String> integrationUri) {
+        public Builder integrationUri(@Nullable Input<String> integrationUri) {
             this.integrationUri = integrationUri;
             return this;
         }
 
-        public Builder setIntegrationUri(@Nullable String integrationUri) {
+        public Builder integrationUri(@Nullable String integrationUri) {
             this.integrationUri = Input.ofNullable(integrationUri);
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable Input<String> passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable Input<String> passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable String passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable String passthroughBehavior) {
             this.passthroughBehavior = Input.ofNullable(passthroughBehavior);
             return this;
         }
 
-        public Builder setPayloadFormatVersion(@Nullable Input<String> payloadFormatVersion) {
+        public Builder payloadFormatVersion(@Nullable Input<String> payloadFormatVersion) {
             this.payloadFormatVersion = payloadFormatVersion;
             return this;
         }
 
-        public Builder setPayloadFormatVersion(@Nullable String payloadFormatVersion) {
+        public Builder payloadFormatVersion(@Nullable String payloadFormatVersion) {
             this.payloadFormatVersion = Input.ofNullable(payloadFormatVersion);
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Input<Map<String,String>> requestParameters) {
+        public Builder requestParameters(@Nullable Input<Map<String,String>> requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Map<String,String> requestParameters) {
+        public Builder requestParameters(@Nullable Map<String,String> requestParameters) {
             this.requestParameters = Input.ofNullable(requestParameters);
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Input<Map<String,String>> requestTemplates) {
+        public Builder requestTemplates(@Nullable Input<Map<String,String>> requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Map<String,String> requestTemplates) {
+        public Builder requestTemplates(@Nullable Map<String,String> requestTemplates) {
             this.requestTemplates = Input.ofNullable(requestTemplates);
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable Input<List<IntegrationResponseParameterGetArgs>> responseParameters) {
+        public Builder responseParameters(@Nullable Input<List<IntegrationResponseParameterGetArgs>> responseParameters) {
             this.responseParameters = responseParameters;
             return this;
         }
 
-        public Builder setResponseParameters(@Nullable List<IntegrationResponseParameterGetArgs> responseParameters) {
+        public Builder responseParameters(@Nullable List<IntegrationResponseParameterGetArgs> responseParameters) {
             this.responseParameters = Input.ofNullable(responseParameters);
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable Input<String> templateSelectionExpression) {
             this.templateSelectionExpression = templateSelectionExpression;
             return this;
         }
 
-        public Builder setTemplateSelectionExpression(@Nullable String templateSelectionExpression) {
+        public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
             this.templateSelectionExpression = Input.ofNullable(templateSelectionExpression);
             return this;
         }
 
-        public Builder setTimeoutMilliseconds(@Nullable Input<Integer> timeoutMilliseconds) {
+        public Builder timeoutMilliseconds(@Nullable Input<Integer> timeoutMilliseconds) {
             this.timeoutMilliseconds = timeoutMilliseconds;
             return this;
         }
 
-        public Builder setTimeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
+        public Builder timeoutMilliseconds(@Nullable Integer timeoutMilliseconds) {
             this.timeoutMilliseconds = Input.ofNullable(timeoutMilliseconds);
             return this;
         }
 
-        public Builder setTlsConfig(@Nullable Input<IntegrationTlsConfigGetArgs> tlsConfig) {
+        public Builder tlsConfig(@Nullable Input<IntegrationTlsConfigGetArgs> tlsConfig) {
             this.tlsConfig = tlsConfig;
             return this;
         }
 
-        public Builder setTlsConfig(@Nullable IntegrationTlsConfigGetArgs tlsConfig) {
+        public Builder tlsConfig(@Nullable IntegrationTlsConfigGetArgs tlsConfig) {
             this.tlsConfig = Input.ofNullable(tlsConfig);
             return this;
         }

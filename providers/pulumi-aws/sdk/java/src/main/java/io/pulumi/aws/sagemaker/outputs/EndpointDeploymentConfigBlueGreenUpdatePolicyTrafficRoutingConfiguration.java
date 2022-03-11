@@ -35,12 +35,12 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
      */
     private final Integer waitIntervalInSeconds;
 
-    @OutputCustomType.Constructor({"canarySize","linearStepSize","type","waitIntervalInSeconds"})
+    @OutputCustomType.Constructor
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfiguration(
-        @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
-        @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
-        String type,
-        Integer waitIntervalInSeconds) {
+        @OutputCustomType.Parameter("canarySize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize,
+        @OutputCustomType.Parameter("linearStepSize") @Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("waitIntervalInSeconds") Integer waitIntervalInSeconds) {
         this.canarySize = canarySize;
         this.linearStepSize = linearStepSize;
         this.type = type;
@@ -102,22 +102,22 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     	      this.waitIntervalInSeconds = defaults.waitIntervalInSeconds;
         }
 
-        public Builder setCanarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize) {
+        public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySize canarySize) {
             this.canarySize = canarySize;
             return this;
         }
 
-        public Builder setLinearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize) {
+        public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSize linearStepSize) {
             this.linearStepSize = linearStepSize;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWaitIntervalInSeconds(Integer waitIntervalInSeconds) {
+        public Builder waitIntervalInSeconds(Integer waitIntervalInSeconds) {
             this.waitIntervalInSeconds = Objects.requireNonNull(waitIntervalInSeconds);
             return this;
         }

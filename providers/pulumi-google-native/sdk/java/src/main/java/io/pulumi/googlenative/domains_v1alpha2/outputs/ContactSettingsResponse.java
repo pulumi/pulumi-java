@@ -31,12 +31,12 @@ public final class ContactSettingsResponse {
      */
     private final ContactResponse technicalContact;
 
-    @OutputCustomType.Constructor({"adminContact","privacy","registrantContact","technicalContact"})
+    @OutputCustomType.Constructor
     private ContactSettingsResponse(
-        ContactResponse adminContact,
-        String privacy,
-        ContactResponse registrantContact,
-        ContactResponse technicalContact) {
+        @OutputCustomType.Parameter("adminContact") ContactResponse adminContact,
+        @OutputCustomType.Parameter("privacy") String privacy,
+        @OutputCustomType.Parameter("registrantContact") ContactResponse registrantContact,
+        @OutputCustomType.Parameter("technicalContact") ContactResponse technicalContact) {
         this.adminContact = adminContact;
         this.privacy = privacy;
         this.registrantContact = registrantContact;
@@ -98,22 +98,22 @@ public final class ContactSettingsResponse {
     	      this.technicalContact = defaults.technicalContact;
         }
 
-        public Builder setAdminContact(ContactResponse adminContact) {
+        public Builder adminContact(ContactResponse adminContact) {
             this.adminContact = Objects.requireNonNull(adminContact);
             return this;
         }
 
-        public Builder setPrivacy(String privacy) {
+        public Builder privacy(String privacy) {
             this.privacy = Objects.requireNonNull(privacy);
             return this;
         }
 
-        public Builder setRegistrantContact(ContactResponse registrantContact) {
+        public Builder registrantContact(ContactResponse registrantContact) {
             this.registrantContact = Objects.requireNonNull(registrantContact);
             return this;
         }
 
-        public Builder setTechnicalContact(ContactResponse technicalContact) {
+        public Builder technicalContact(ContactResponse technicalContact) {
             this.technicalContact = Objects.requireNonNull(technicalContact);
             return this;
         }

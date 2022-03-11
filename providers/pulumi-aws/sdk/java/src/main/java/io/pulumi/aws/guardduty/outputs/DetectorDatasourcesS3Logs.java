@@ -15,8 +15,8 @@ public final class DetectorDatasourcesS3Logs {
      */
     private final Boolean enable;
 
-    @OutputCustomType.Constructor({"enable"})
-    private DetectorDatasourcesS3Logs(Boolean enable) {
+    @OutputCustomType.Constructor
+    private DetectorDatasourcesS3Logs(@OutputCustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 
@@ -48,7 +48,7 @@ public final class DetectorDatasourcesS3Logs {
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }

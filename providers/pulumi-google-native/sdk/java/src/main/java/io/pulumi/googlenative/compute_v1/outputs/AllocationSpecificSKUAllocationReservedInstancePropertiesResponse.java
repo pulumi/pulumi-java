@@ -38,13 +38,13 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
      */
     private final String minCpuPlatform;
 
-    @OutputCustomType.Constructor({"guestAccelerators","localSsds","locationHint","machineType","minCpuPlatform"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(
-        List<AcceleratorConfigResponse> guestAccelerators,
-        List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
-        String locationHint,
-        String machineType,
-        String minCpuPlatform) {
+        @OutputCustomType.Parameter("guestAccelerators") List<AcceleratorConfigResponse> guestAccelerators,
+        @OutputCustomType.Parameter("localSsds") List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds,
+        @OutputCustomType.Parameter("locationHint") String locationHint,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform) {
         this.guestAccelerators = guestAccelerators;
         this.localSsds = localSsds;
         this.locationHint = locationHint;
@@ -116,27 +116,27 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
     	      this.minCpuPlatform = defaults.minCpuPlatform;
         }
 
-        public Builder setGuestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
+        public Builder guestAccelerators(List<AcceleratorConfigResponse> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setLocalSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
+        public Builder localSsds(List<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse> localSsds) {
             this.localSsds = Objects.requireNonNull(localSsds);
             return this;
         }
 
-        public Builder setLocationHint(String locationHint) {
+        public Builder locationHint(String locationHint) {
             this.locationHint = Objects.requireNonNull(locationHint);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }

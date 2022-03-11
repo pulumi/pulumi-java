@@ -21,10 +21,10 @@ public final class StreamEncryption {
      */
     private final String keyId;
 
-    @OutputCustomType.Constructor({"encryptionType","keyId"})
+    @OutputCustomType.Constructor
     private StreamEncryption(
-        StreamEncryptionEncryptionType encryptionType,
-        String keyId) {
+        @OutputCustomType.Parameter("encryptionType") StreamEncryptionEncryptionType encryptionType,
+        @OutputCustomType.Parameter("keyId") String keyId) {
         this.encryptionType = encryptionType;
         this.keyId = keyId;
     }
@@ -66,12 +66,12 @@ public final class StreamEncryption {
     	      this.keyId = defaults.keyId;
         }
 
-        public Builder setEncryptionType(StreamEncryptionEncryptionType encryptionType) {
+        public Builder encryptionType(StreamEncryptionEncryptionType encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }

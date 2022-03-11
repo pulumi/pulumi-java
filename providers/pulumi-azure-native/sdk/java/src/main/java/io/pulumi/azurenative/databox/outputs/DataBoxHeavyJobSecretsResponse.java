@@ -35,12 +35,12 @@ public final class DataBoxHeavyJobSecretsResponse {
      */
     private final String jobSecretsType;
 
-    @OutputCustomType.Constructor({"cabinetPodSecrets","dcAccessSecurityCode","error","jobSecretsType"})
+    @OutputCustomType.Constructor
     private DataBoxHeavyJobSecretsResponse(
-        List<DataBoxHeavySecretResponse> cabinetPodSecrets,
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType) {
+        @OutputCustomType.Parameter("cabinetPodSecrets") List<DataBoxHeavySecretResponse> cabinetPodSecrets,
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType) {
         this.cabinetPodSecrets = cabinetPodSecrets;
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;
@@ -103,22 +103,22 @@ public final class DataBoxHeavyJobSecretsResponse {
     	      this.jobSecretsType = defaults.jobSecretsType;
         }
 
-        public Builder setCabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
+        public Builder cabinetPodSecrets(List<DataBoxHeavySecretResponse> cabinetPodSecrets) {
             this.cabinetPodSecrets = Objects.requireNonNull(cabinetPodSecrets);
             return this;
         }
 
-        public Builder setDcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
+        public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setJobSecretsType(String jobSecretsType) {
+        public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }

@@ -106,22 +106,22 @@ public final class SignatureResponse extends io.pulumi.resources.InvokeArgs {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setImage(ImageResponse image) {
+        public Builder image(ImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSignatureTime(String signatureTime) {
+        public Builder signatureTime(String signatureTime) {
             this.signatureTime = Objects.requireNonNull(signatureTime);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

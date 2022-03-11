@@ -86,32 +86,32 @@ public final class AccessPointRootDirectoryCreationInfoGetArgs extends io.pulumi
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setOwnerGid(Input<Integer> ownerGid) {
+        public Builder ownerGid(Input<Integer> ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
-        public Builder setOwnerGid(Integer ownerGid) {
+        public Builder ownerGid(Integer ownerGid) {
             this.ownerGid = Input.of(Objects.requireNonNull(ownerGid));
             return this;
         }
 
-        public Builder setOwnerUid(Input<Integer> ownerUid) {
+        public Builder ownerUid(Input<Integer> ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
-        public Builder setOwnerUid(Integer ownerUid) {
+        public Builder ownerUid(Integer ownerUid) {
             this.ownerUid = Input.of(Objects.requireNonNull(ownerUid));
             return this;
         }
 
-        public Builder setPermissions(Input<String> permissions) {
+        public Builder permissions(Input<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }

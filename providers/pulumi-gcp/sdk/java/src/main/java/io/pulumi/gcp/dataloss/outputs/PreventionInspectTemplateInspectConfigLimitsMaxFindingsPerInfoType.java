@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      */
     private final Integer maxFindings;
 
-    @OutputCustomType.Constructor({"infoType","maxFindings"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType(
-        PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
-        Integer maxFindings) {
+        @OutputCustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType,
+        @OutputCustomType.Parameter("maxFindings") Integer maxFindings) {
         this.infoType = infoType;
         this.maxFindings = maxFindings;
     }
@@ -74,12 +74,12 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     	      this.maxFindings = defaults.maxFindings;
         }
 
-        public Builder setInfoType(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType) {
+        public Builder infoType(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setMaxFindings(Integer maxFindings) {
+        public Builder maxFindings(Integer maxFindings) {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }

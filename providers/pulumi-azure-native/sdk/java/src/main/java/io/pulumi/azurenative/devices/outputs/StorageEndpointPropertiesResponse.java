@@ -32,12 +32,12 @@ public final class StorageEndpointPropertiesResponse {
      */
     private final @Nullable String sasTtlAsIso8601;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionString","containerName","sasTtlAsIso8601"})
+    @OutputCustomType.Constructor
     private StorageEndpointPropertiesResponse(
-        @Nullable String authenticationType,
-        String connectionString,
-        String containerName,
-        @Nullable String sasTtlAsIso8601) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("sasTtlAsIso8601") @Nullable String sasTtlAsIso8601) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.containerName = containerName;
@@ -99,22 +99,22 @@ public final class StorageEndpointPropertiesResponse {
     	      this.sasTtlAsIso8601 = defaults.sasTtlAsIso8601;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setSasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
+        public Builder sasTtlAsIso8601(@Nullable String sasTtlAsIso8601) {
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }

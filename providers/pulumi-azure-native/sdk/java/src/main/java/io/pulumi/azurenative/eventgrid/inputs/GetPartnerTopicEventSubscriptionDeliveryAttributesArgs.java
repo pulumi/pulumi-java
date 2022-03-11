@@ -84,17 +84,17 @@ public final class GetPartnerTopicEventSubscriptionDeliveryAttributesArgs extend
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setEventSubscriptionName(String eventSubscriptionName) {
+        public Builder eventSubscriptionName(String eventSubscriptionName) {
             this.eventSubscriptionName = Objects.requireNonNull(eventSubscriptionName);
             return this;
         }
 
-        public Builder setPartnerTopicName(String partnerTopicName) {
+        public Builder partnerTopicName(String partnerTopicName) {
             this.partnerTopicName = Objects.requireNonNull(partnerTopicName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

@@ -22,10 +22,10 @@ public final class FhirStoreStreamConfigBigqueryDestination {
      */
     private final FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig;
 
-    @OutputCustomType.Constructor({"datasetUri","schemaConfig"})
+    @OutputCustomType.Constructor
     private FhirStoreStreamConfigBigqueryDestination(
-        String datasetUri,
-        FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
+        @OutputCustomType.Parameter("datasetUri") String datasetUri,
+        @OutputCustomType.Parameter("schemaConfig") FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
         this.datasetUri = datasetUri;
         this.schemaConfig = schemaConfig;
     }
@@ -68,12 +68,12 @@ public final class FhirStoreStreamConfigBigqueryDestination {
     	      this.schemaConfig = defaults.schemaConfig;
         }
 
-        public Builder setDatasetUri(String datasetUri) {
+        public Builder datasetUri(String datasetUri) {
             this.datasetUri = Objects.requireNonNull(datasetUri);
             return this;
         }
 
-        public Builder setSchemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
+        public Builder schemaConfig(FhirStoreStreamConfigBigqueryDestinationSchemaConfig schemaConfig) {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }

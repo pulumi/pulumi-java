@@ -24,10 +24,10 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfig {
      */
     private final List<ModelQualityJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<ModelQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<ModelQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }
@@ -69,12 +69,12 @@ public final class ModelQualityJobDefinitionMonitoringOutputConfig {
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<ModelQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
+        public Builder monitoringOutputs(List<ModelQualityJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }

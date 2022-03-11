@@ -22,10 +22,10 @@ public final class StackPropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","version"})
+    @OutputCustomType.Constructor
     private StackPropertiesResponse(
-        @Nullable String id,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }
@@ -67,12 +67,12 @@ public final class StackPropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

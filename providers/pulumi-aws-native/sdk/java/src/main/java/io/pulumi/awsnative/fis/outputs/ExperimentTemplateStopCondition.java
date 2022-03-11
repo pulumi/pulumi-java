@@ -14,10 +14,10 @@ public final class ExperimentTemplateStopCondition {
     private final String source;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"source","value"})
+    @OutputCustomType.Constructor
     private ExperimentTemplateStopCondition(
-        String source,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.source = source;
         this.value = value;
     }
@@ -51,12 +51,12 @@ public final class ExperimentTemplateStopCondition {
     	      this.value = defaults.value;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

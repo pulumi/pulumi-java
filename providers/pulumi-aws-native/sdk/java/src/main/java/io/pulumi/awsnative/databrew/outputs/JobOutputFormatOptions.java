@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class JobOutputFormatOptions {
     private final @Nullable JobCsvOutputOptions csv;
 
-    @OutputCustomType.Constructor({"csv"})
-    private JobOutputFormatOptions(@Nullable JobCsvOutputOptions csv) {
+    @OutputCustomType.Constructor
+    private JobOutputFormatOptions(@OutputCustomType.Parameter("csv") @Nullable JobCsvOutputOptions csv) {
         this.csv = csv;
     }
 
@@ -42,7 +42,7 @@ public final class JobOutputFormatOptions {
     	      this.csv = defaults.csv;
         }
 
-        public Builder setCsv(@Nullable JobCsvOutputOptions csv) {
+        public Builder csv(@Nullable JobCsvOutputOptions csv) {
             this.csv = csv;
             return this;
         }

@@ -30,12 +30,12 @@ public final class GetReleaseResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","name","rulesetName","updateTime"})
+    @OutputCustomType.Constructor
     private GetReleaseResult(
-        String createTime,
-        String name,
-        String rulesetName,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rulesetName") String rulesetName,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.name = name;
         this.rulesetName = rulesetName;
@@ -97,22 +97,22 @@ public final class GetReleaseResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRulesetName(String rulesetName) {
+        public Builder rulesetName(String rulesetName) {
             this.rulesetName = Objects.requireNonNull(rulesetName);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

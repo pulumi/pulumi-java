@@ -68,19 +68,19 @@ public final class GetShareResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"createdAt","description","id","name","provisioningState","shareKind","systemData","terms","type","userEmail","userName"})
+    @OutputCustomType.Constructor
     private GetShareResult(
-        String createdAt,
-        @Nullable String description,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable String shareKind,
-        SystemDataResponse systemData,
-        @Nullable String terms,
-        String type,
-        String userEmail,
-        String userName) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("shareKind") @Nullable String shareKind,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("terms") @Nullable String terms,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userEmail") String userEmail,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.createdAt = createdAt;
         this.description = description;
         this.id = id;
@@ -212,57 +212,57 @@ public final class GetShareResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setShareKind(@Nullable String shareKind) {
+        public Builder shareKind(@Nullable String shareKind) {
             this.shareKind = shareKind;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTerms(@Nullable String terms) {
+        public Builder terms(@Nullable String terms) {
             this.terms = terms;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserEmail(String userEmail) {
+        public Builder userEmail(String userEmail) {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

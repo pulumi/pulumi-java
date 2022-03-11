@@ -23,10 +23,10 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTime 
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"minutes","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRuleDestinationReplicationTime(
-        @Nullable Integer minutes,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.minutes = minutes;
         this.status = status;
     }
@@ -68,12 +68,12 @@ public final class BucketReplicationConfigurationRuleDestinationReplicationTime 
     	      this.status = defaults.status;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

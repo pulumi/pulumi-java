@@ -103,42 +103,42 @@ public final class TrafficMirrorTargetArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkLoadBalancerArn(@Nullable Input<String> networkLoadBalancerArn) {
+        public Builder networkLoadBalancerArn(@Nullable Input<String> networkLoadBalancerArn) {
             this.networkLoadBalancerArn = networkLoadBalancerArn;
             return this;
         }
 
-        public Builder setNetworkLoadBalancerArn(@Nullable String networkLoadBalancerArn) {
+        public Builder networkLoadBalancerArn(@Nullable String networkLoadBalancerArn) {
             this.networkLoadBalancerArn = Input.ofNullable(networkLoadBalancerArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

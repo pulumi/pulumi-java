@@ -173,82 +173,82 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     	      this.xmlSource = defaults.xmlSource;
         }
 
-        public Builder setElapsedTime(@Nullable Input<DurationArgs> elapsedTime) {
+        public Builder elapsedTime(@Nullable Input<DurationArgs> elapsedTime) {
             this.elapsedTime = elapsedTime;
             return this;
         }
 
-        public Builder setElapsedTime(@Nullable DurationArgs elapsedTime) {
+        public Builder elapsedTime(@Nullable DurationArgs elapsedTime) {
             this.elapsedTime = Input.ofNullable(elapsedTime);
             return this;
         }
 
-        public Builder setErrorCount(@Nullable Input<Integer> errorCount) {
+        public Builder errorCount(@Nullable Input<Integer> errorCount) {
             this.errorCount = errorCount;
             return this;
         }
 
-        public Builder setErrorCount(@Nullable Integer errorCount) {
+        public Builder errorCount(@Nullable Integer errorCount) {
             this.errorCount = Input.ofNullable(errorCount);
             return this;
         }
 
-        public Builder setFailureCount(@Nullable Input<Integer> failureCount) {
+        public Builder failureCount(@Nullable Input<Integer> failureCount) {
             this.failureCount = failureCount;
             return this;
         }
 
-        public Builder setFailureCount(@Nullable Integer failureCount) {
+        public Builder failureCount(@Nullable Integer failureCount) {
             this.failureCount = Input.ofNullable(failureCount);
             return this;
         }
 
-        public Builder setFlakyCount(@Nullable Input<Integer> flakyCount) {
+        public Builder flakyCount(@Nullable Input<Integer> flakyCount) {
             this.flakyCount = flakyCount;
             return this;
         }
 
-        public Builder setFlakyCount(@Nullable Integer flakyCount) {
+        public Builder flakyCount(@Nullable Integer flakyCount) {
             this.flakyCount = Input.ofNullable(flakyCount);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSkippedCount(@Nullable Input<Integer> skippedCount) {
+        public Builder skippedCount(@Nullable Input<Integer> skippedCount) {
             this.skippedCount = skippedCount;
             return this;
         }
 
-        public Builder setSkippedCount(@Nullable Integer skippedCount) {
+        public Builder skippedCount(@Nullable Integer skippedCount) {
             this.skippedCount = Input.ofNullable(skippedCount);
             return this;
         }
 
-        public Builder setTotalCount(@Nullable Input<Integer> totalCount) {
+        public Builder totalCount(@Nullable Input<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
-        public Builder setTotalCount(@Nullable Integer totalCount) {
+        public Builder totalCount(@Nullable Integer totalCount) {
             this.totalCount = Input.ofNullable(totalCount);
             return this;
         }
 
-        public Builder setXmlSource(@Nullable Input<FileReferenceArgs> xmlSource) {
+        public Builder xmlSource(@Nullable Input<FileReferenceArgs> xmlSource) {
             this.xmlSource = xmlSource;
             return this;
         }
 
-        public Builder setXmlSource(@Nullable FileReferenceArgs xmlSource) {
+        public Builder xmlSource(@Nullable FileReferenceArgs xmlSource) {
             this.xmlSource = Input.ofNullable(xmlSource);
             return this;
         }

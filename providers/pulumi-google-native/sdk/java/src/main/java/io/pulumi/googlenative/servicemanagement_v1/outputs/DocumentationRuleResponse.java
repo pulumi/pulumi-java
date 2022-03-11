@@ -25,11 +25,11 @@ public final class DocumentationRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"deprecationDescription","description","selector"})
+    @OutputCustomType.Constructor
     private DocumentationRuleResponse(
-        String deprecationDescription,
-        String description,
-        String selector) {
+        @OutputCustomType.Parameter("deprecationDescription") String deprecationDescription,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.deprecationDescription = deprecationDescription;
         this.description = description;
         this.selector = selector;
@@ -81,17 +81,17 @@ public final class DocumentationRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setDeprecationDescription(String deprecationDescription) {
+        public Builder deprecationDescription(String deprecationDescription) {
             this.deprecationDescription = Objects.requireNonNull(deprecationDescription);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

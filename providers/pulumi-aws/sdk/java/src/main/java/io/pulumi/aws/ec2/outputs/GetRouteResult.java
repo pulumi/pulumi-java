@@ -28,22 +28,22 @@ public final class GetRouteResult {
     private final String transitGatewayId;
     private final String vpcPeeringConnectionId;
 
-    @OutputCustomType.Constructor({"carrierGatewayId","destinationCidrBlock","destinationIpv6CidrBlock","destinationPrefixListId","egressOnlyGatewayId","gatewayId","id","instanceId","localGatewayId","natGatewayId","networkInterfaceId","routeTableId","transitGatewayId","vpcPeeringConnectionId"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        String carrierGatewayId,
-        String destinationCidrBlock,
-        String destinationIpv6CidrBlock,
-        String destinationPrefixListId,
-        String egressOnlyGatewayId,
-        String gatewayId,
-        String id,
-        String instanceId,
-        String localGatewayId,
-        String natGatewayId,
-        String networkInterfaceId,
-        String routeTableId,
-        String transitGatewayId,
-        String vpcPeeringConnectionId) {
+        @OutputCustomType.Parameter("carrierGatewayId") String carrierGatewayId,
+        @OutputCustomType.Parameter("destinationCidrBlock") String destinationCidrBlock,
+        @OutputCustomType.Parameter("destinationIpv6CidrBlock") String destinationIpv6CidrBlock,
+        @OutputCustomType.Parameter("destinationPrefixListId") String destinationPrefixListId,
+        @OutputCustomType.Parameter("egressOnlyGatewayId") String egressOnlyGatewayId,
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("localGatewayId") String localGatewayId,
+        @OutputCustomType.Parameter("natGatewayId") String natGatewayId,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId,
+        @OutputCustomType.Parameter("vpcPeeringConnectionId") String vpcPeeringConnectionId) {
         this.carrierGatewayId = carrierGatewayId;
         this.destinationCidrBlock = destinationCidrBlock;
         this.destinationIpv6CidrBlock = destinationIpv6CidrBlock;
@@ -153,72 +153,72 @@ public final class GetRouteResult {
     	      this.vpcPeeringConnectionId = defaults.vpcPeeringConnectionId;
         }
 
-        public Builder setCarrierGatewayId(String carrierGatewayId) {
+        public Builder carrierGatewayId(String carrierGatewayId) {
             this.carrierGatewayId = Objects.requireNonNull(carrierGatewayId);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
+        public Builder destinationIpv6CidrBlock(String destinationIpv6CidrBlock) {
             this.destinationIpv6CidrBlock = Objects.requireNonNull(destinationIpv6CidrBlock);
             return this;
         }
 
-        public Builder setDestinationPrefixListId(String destinationPrefixListId) {
+        public Builder destinationPrefixListId(String destinationPrefixListId) {
             this.destinationPrefixListId = Objects.requireNonNull(destinationPrefixListId);
             return this;
         }
 
-        public Builder setEgressOnlyGatewayId(String egressOnlyGatewayId) {
+        public Builder egressOnlyGatewayId(String egressOnlyGatewayId) {
             this.egressOnlyGatewayId = Objects.requireNonNull(egressOnlyGatewayId);
             return this;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setLocalGatewayId(String localGatewayId) {
+        public Builder localGatewayId(String localGatewayId) {
             this.localGatewayId = Objects.requireNonNull(localGatewayId);
             return this;
         }
 
-        public Builder setNatGatewayId(String natGatewayId) {
+        public Builder natGatewayId(String natGatewayId) {
             this.natGatewayId = Objects.requireNonNull(natGatewayId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }
 
-        public Builder setVpcPeeringConnectionId(String vpcPeeringConnectionId) {
+        public Builder vpcPeeringConnectionId(String vpcPeeringConnectionId) {
             this.vpcPeeringConnectionId = Objects.requireNonNull(vpcPeeringConnectionId);
             return this;
         }

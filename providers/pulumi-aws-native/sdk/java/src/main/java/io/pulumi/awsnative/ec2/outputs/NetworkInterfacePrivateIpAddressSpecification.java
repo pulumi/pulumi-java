@@ -13,10 +13,10 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
     private final Boolean primary;
     private final String privateIpAddress;
 
-    @OutputCustomType.Constructor({"primary","privateIpAddress"})
+    @OutputCustomType.Constructor
     private NetworkInterfacePrivateIpAddressSpecification(
-        Boolean primary,
-        String privateIpAddress) {
+        @OutputCustomType.Parameter("primary") Boolean primary,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress) {
         this.primary = primary;
         this.privateIpAddress = privateIpAddress;
     }
@@ -50,12 +50,12 @@ public final class NetworkInterfacePrivateIpAddressSpecification {
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setPrimary(Boolean primary) {
+        public Builder primary(Boolean primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }

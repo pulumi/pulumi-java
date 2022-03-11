@@ -64,12 +64,12 @@ public final class SkuZoneDetailResponse extends io.pulumi.resources.InvokeArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setCapabilities(@Nullable List<SkuCapabilityResponse> capabilities) {
+        public Builder capabilities(@Nullable List<SkuCapabilityResponse> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setName(@Nullable List<String> name) {
+        public Builder name(@Nullable List<String> name) {
             this.name = name;
             return this;
         }

@@ -341,182 +341,182 @@ public final class JobDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setBackupDriveManifest(@Nullable Input<Boolean> backupDriveManifest) {
+        public Builder backupDriveManifest(@Nullable Input<Boolean> backupDriveManifest) {
             this.backupDriveManifest = backupDriveManifest;
             return this;
         }
 
-        public Builder setBackupDriveManifest(@Nullable Boolean backupDriveManifest) {
+        public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
             this.backupDriveManifest = Input.ofNullable(backupDriveManifest);
             return this;
         }
 
-        public Builder setCancelRequested(@Nullable Input<Boolean> cancelRequested) {
+        public Builder cancelRequested(@Nullable Input<Boolean> cancelRequested) {
             this.cancelRequested = cancelRequested;
             return this;
         }
 
-        public Builder setCancelRequested(@Nullable Boolean cancelRequested) {
+        public Builder cancelRequested(@Nullable Boolean cancelRequested) {
             this.cancelRequested = Input.ofNullable(cancelRequested);
             return this;
         }
 
-        public Builder setDeliveryPackage(@Nullable Input<DeliveryPackageInformationArgs> deliveryPackage) {
+        public Builder deliveryPackage(@Nullable Input<DeliveryPackageInformationArgs> deliveryPackage) {
             this.deliveryPackage = deliveryPackage;
             return this;
         }
 
-        public Builder setDeliveryPackage(@Nullable DeliveryPackageInformationArgs deliveryPackage) {
+        public Builder deliveryPackage(@Nullable DeliveryPackageInformationArgs deliveryPackage) {
             this.deliveryPackage = Input.ofNullable(deliveryPackage);
             return this;
         }
 
-        public Builder setDiagnosticsPath(@Nullable Input<String> diagnosticsPath) {
+        public Builder diagnosticsPath(@Nullable Input<String> diagnosticsPath) {
             this.diagnosticsPath = diagnosticsPath;
             return this;
         }
 
-        public Builder setDiagnosticsPath(@Nullable String diagnosticsPath) {
+        public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
             this.diagnosticsPath = Input.ofNullable(diagnosticsPath);
             return this;
         }
 
-        public Builder setDriveList(@Nullable Input<List<DriveStatusArgs>> driveList) {
+        public Builder driveList(@Nullable Input<List<DriveStatusArgs>> driveList) {
             this.driveList = driveList;
             return this;
         }
 
-        public Builder setDriveList(@Nullable List<DriveStatusArgs> driveList) {
+        public Builder driveList(@Nullable List<DriveStatusArgs> driveList) {
             this.driveList = Input.ofNullable(driveList);
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable Input<EncryptionKeyDetailsArgs> encryptionKey) {
+        public Builder encryptionKey(@Nullable Input<EncryptionKeyDetailsArgs> encryptionKey) {
             this.encryptionKey = encryptionKey;
             return this;
         }
 
-        public Builder setEncryptionKey(@Nullable EncryptionKeyDetailsArgs encryptionKey) {
+        public Builder encryptionKey(@Nullable EncryptionKeyDetailsArgs encryptionKey) {
             this.encryptionKey = Input.ofNullable(encryptionKey);
             return this;
         }
 
-        public Builder setExport(@Nullable Input<ExportArgs> export) {
+        public Builder export(@Nullable Input<ExportArgs> export) {
             this.export = export;
             return this;
         }
 
-        public Builder setExport(@Nullable ExportArgs export) {
+        public Builder export(@Nullable ExportArgs export) {
             this.export = Input.ofNullable(export);
             return this;
         }
 
-        public Builder setIncompleteBlobListUri(@Nullable Input<String> incompleteBlobListUri) {
+        public Builder incompleteBlobListUri(@Nullable Input<String> incompleteBlobListUri) {
             this.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
 
-        public Builder setIncompleteBlobListUri(@Nullable String incompleteBlobListUri) {
+        public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
             this.incompleteBlobListUri = Input.ofNullable(incompleteBlobListUri);
             return this;
         }
 
-        public Builder setJobType(@Nullable Input<String> jobType) {
+        public Builder jobType(@Nullable Input<String> jobType) {
             this.jobType = jobType;
             return this;
         }
 
-        public Builder setJobType(@Nullable String jobType) {
+        public Builder jobType(@Nullable String jobType) {
             this.jobType = Input.ofNullable(jobType);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<String> logLevel) {
+        public Builder logLevel(@Nullable Input<String> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setPercentComplete(@Nullable Input<Integer> percentComplete) {
+        public Builder percentComplete(@Nullable Input<Integer> percentComplete) {
             this.percentComplete = percentComplete;
             return this;
         }
 
-        public Builder setPercentComplete(@Nullable Integer percentComplete) {
+        public Builder percentComplete(@Nullable Integer percentComplete) {
             this.percentComplete = Input.ofNullable(percentComplete);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable Input<String> provisioningState) {
+        public Builder provisioningState(@Nullable Input<String> provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
 
-        public Builder setReturnAddress(@Nullable Input<ReturnAddressArgs> returnAddress) {
+        public Builder returnAddress(@Nullable Input<ReturnAddressArgs> returnAddress) {
             this.returnAddress = returnAddress;
             return this;
         }
 
-        public Builder setReturnAddress(@Nullable ReturnAddressArgs returnAddress) {
+        public Builder returnAddress(@Nullable ReturnAddressArgs returnAddress) {
             this.returnAddress = Input.ofNullable(returnAddress);
             return this;
         }
 
-        public Builder setReturnPackage(@Nullable Input<PackageInformationArgs> returnPackage) {
+        public Builder returnPackage(@Nullable Input<PackageInformationArgs> returnPackage) {
             this.returnPackage = returnPackage;
             return this;
         }
 
-        public Builder setReturnPackage(@Nullable PackageInformationArgs returnPackage) {
+        public Builder returnPackage(@Nullable PackageInformationArgs returnPackage) {
             this.returnPackage = Input.ofNullable(returnPackage);
             return this;
         }
 
-        public Builder setReturnShipping(@Nullable Input<ReturnShippingArgs> returnShipping) {
+        public Builder returnShipping(@Nullable Input<ReturnShippingArgs> returnShipping) {
             this.returnShipping = returnShipping;
             return this;
         }
 
-        public Builder setReturnShipping(@Nullable ReturnShippingArgs returnShipping) {
+        public Builder returnShipping(@Nullable ReturnShippingArgs returnShipping) {
             this.returnShipping = Input.ofNullable(returnShipping);
             return this;
         }
 
-        public Builder setShippingInformation(@Nullable Input<ShippingInformationArgs> shippingInformation) {
+        public Builder shippingInformation(@Nullable Input<ShippingInformationArgs> shippingInformation) {
             this.shippingInformation = shippingInformation;
             return this;
         }
 
-        public Builder setShippingInformation(@Nullable ShippingInformationArgs shippingInformation) {
+        public Builder shippingInformation(@Nullable ShippingInformationArgs shippingInformation) {
             this.shippingInformation = Input.ofNullable(shippingInformation);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable Input<String> storageAccountId) {
+        public Builder storageAccountId(@Nullable Input<String> storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = Input.ofNullable(storageAccountId);
             return this;
         }

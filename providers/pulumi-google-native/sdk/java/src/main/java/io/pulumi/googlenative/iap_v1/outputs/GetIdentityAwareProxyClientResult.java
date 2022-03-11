@@ -25,11 +25,11 @@ public final class GetIdentityAwareProxyClientResult {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"displayName","name","secret"})
+    @OutputCustomType.Constructor
     private GetIdentityAwareProxyClientResult(
-        String displayName,
-        String name,
-        String secret) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.displayName = displayName;
         this.name = name;
         this.secret = secret;
@@ -81,17 +81,17 @@ public final class GetIdentityAwareProxyClientResult {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

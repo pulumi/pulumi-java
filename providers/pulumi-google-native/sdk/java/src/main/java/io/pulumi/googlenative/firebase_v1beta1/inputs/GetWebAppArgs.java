@@ -62,12 +62,12 @@ public final class GetWebAppArgs extends io.pulumi.resources.InvokeArgs {
     	      this.webAppId = defaults.webAppId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWebAppId(String webAppId) {
+        public Builder webAppId(String webAppId) {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
         }

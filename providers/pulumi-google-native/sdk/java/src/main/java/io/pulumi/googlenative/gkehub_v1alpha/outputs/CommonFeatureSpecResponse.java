@@ -27,11 +27,11 @@ public final class CommonFeatureSpecResponse {
      */
     private final MultiClusterIngressFeatureSpecResponse multiclusteringress;
 
-    @OutputCustomType.Constructor({"appdevexperience","cloudauditlogging","multiclusteringress"})
+    @OutputCustomType.Constructor
     private CommonFeatureSpecResponse(
-        AppDevExperienceFeatureSpecResponse appdevexperience,
-        CloudAuditLoggingFeatureSpecResponse cloudauditlogging,
-        MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        @OutputCustomType.Parameter("appdevexperience") AppDevExperienceFeatureSpecResponse appdevexperience,
+        @OutputCustomType.Parameter("cloudauditlogging") CloudAuditLoggingFeatureSpecResponse cloudauditlogging,
+        @OutputCustomType.Parameter("multiclusteringress") MultiClusterIngressFeatureSpecResponse multiclusteringress) {
         this.appdevexperience = appdevexperience;
         this.cloudauditlogging = cloudauditlogging;
         this.multiclusteringress = multiclusteringress;
@@ -83,17 +83,17 @@ public final class CommonFeatureSpecResponse {
     	      this.multiclusteringress = defaults.multiclusteringress;
         }
 
-        public Builder setAppdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
+        public Builder appdevexperience(AppDevExperienceFeatureSpecResponse appdevexperience) {
             this.appdevexperience = Objects.requireNonNull(appdevexperience);
             return this;
         }
 
-        public Builder setCloudauditlogging(CloudAuditLoggingFeatureSpecResponse cloudauditlogging) {
+        public Builder cloudauditlogging(CloudAuditLoggingFeatureSpecResponse cloudauditlogging) {
             this.cloudauditlogging = Objects.requireNonNull(cloudauditlogging);
             return this;
         }
 
-        public Builder setMulticlusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
+        public Builder multiclusteringress(MultiClusterIngressFeatureSpecResponse multiclusteringress) {
             this.multiclusteringress = Objects.requireNonNull(multiclusteringress);
             return this;
         }

@@ -26,11 +26,11 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor({"end","fee","start"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1RateRangeResponse(
-        String end,
-        GoogleTypeMoneyResponse fee,
-        String start) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("fee") GoogleTypeMoneyResponse fee,
+        @OutputCustomType.Parameter("start") String start) {
         this.end = end;
         this.fee = fee;
         this.start = start;
@@ -82,17 +82,17 @@ public final class GoogleCloudApigeeV1RateRangeResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setFee(GoogleTypeMoneyResponse fee) {
+        public Builder fee(GoogleTypeMoneyResponse fee) {
             this.fee = Objects.requireNonNull(fee);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

@@ -17,8 +17,8 @@ public final class PropertiesResponseNetworkInjection {
      */
     private final @Nullable VirtualNetworkPropertiesListResponse virtualNetworks;
 
-    @OutputCustomType.Constructor({"virtualNetworks"})
-    private PropertiesResponseNetworkInjection(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
+    @OutputCustomType.Constructor
+    private PropertiesResponseNetworkInjection(@OutputCustomType.Parameter("virtualNetworks") @Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
         this.virtualNetworks = virtualNetworks;
     }
 
@@ -50,7 +50,7 @@ public final class PropertiesResponseNetworkInjection {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setVirtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
+        public Builder virtualNetworks(@Nullable VirtualNetworkPropertiesListResponse virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }

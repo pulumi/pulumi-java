@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelBiasJobDefinitionMonitoringOutput {
     private final ModelBiasJobDefinitionS3Output s3Output;
 
-    @OutputCustomType.Constructor({"s3Output"})
-    private ModelBiasJobDefinitionMonitoringOutput(ModelBiasJobDefinitionS3Output s3Output) {
+    @OutputCustomType.Constructor
+    private ModelBiasJobDefinitionMonitoringOutput(@OutputCustomType.Parameter("s3Output") ModelBiasJobDefinitionS3Output s3Output) {
         this.s3Output = s3Output;
     }
 
@@ -40,7 +40,7 @@ public final class ModelBiasJobDefinitionMonitoringOutput {
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(ModelBiasJobDefinitionS3Output s3Output) {
+        public Builder s3Output(ModelBiasJobDefinitionS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }

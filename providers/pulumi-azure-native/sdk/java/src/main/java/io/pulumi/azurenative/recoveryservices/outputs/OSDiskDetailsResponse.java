@@ -27,11 +27,11 @@ public final class OSDiskDetailsResponse {
      */
     private final @Nullable String vhdName;
 
-    @OutputCustomType.Constructor({"osType","osVhdId","vhdName"})
+    @OutputCustomType.Constructor
     private OSDiskDetailsResponse(
-        @Nullable String osType,
-        @Nullable String osVhdId,
-        @Nullable String vhdName) {
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("osVhdId") @Nullable String osVhdId,
+        @OutputCustomType.Parameter("vhdName") @Nullable String vhdName) {
         this.osType = osType;
         this.osVhdId = osVhdId;
         this.vhdName = vhdName;
@@ -83,17 +83,17 @@ public final class OSDiskDetailsResponse {
     	      this.vhdName = defaults.vhdName;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsVhdId(@Nullable String osVhdId) {
+        public Builder osVhdId(@Nullable String osVhdId) {
             this.osVhdId = osVhdId;
             return this;
         }
 
-        public Builder setVhdName(@Nullable String vhdName) {
+        public Builder vhdName(@Nullable String vhdName) {
             this.vhdName = vhdName;
             return this;
         }

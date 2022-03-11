@@ -15,8 +15,8 @@ public final class IdentityForCmkResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"userAssignedIdentity"})
-    private IdentityForCmkResponse(String userAssignedIdentity) {
+    @OutputCustomType.Constructor
+    private IdentityForCmkResponse(@OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
@@ -48,7 +48,7 @@ public final class IdentityForCmkResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }

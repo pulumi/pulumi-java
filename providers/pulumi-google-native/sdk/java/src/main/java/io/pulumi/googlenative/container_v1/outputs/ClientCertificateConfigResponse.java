@@ -15,8 +15,8 @@ public final class ClientCertificateConfigResponse {
      */
     private final Boolean issueClientCertificate;
 
-    @OutputCustomType.Constructor({"issueClientCertificate"})
-    private ClientCertificateConfigResponse(Boolean issueClientCertificate) {
+    @OutputCustomType.Constructor
+    private ClientCertificateConfigResponse(@OutputCustomType.Parameter("issueClientCertificate") Boolean issueClientCertificate) {
         this.issueClientCertificate = issueClientCertificate;
     }
 
@@ -48,7 +48,7 @@ public final class ClientCertificateConfigResponse {
     	      this.issueClientCertificate = defaults.issueClientCertificate;
         }
 
-        public Builder setIssueClientCertificate(Boolean issueClientCertificate) {
+        public Builder issueClientCertificate(Boolean issueClientCertificate) {
             this.issueClientCertificate = Objects.requireNonNull(issueClientCertificate);
             return this;
         }

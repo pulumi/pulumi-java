@@ -18,8 +18,8 @@ public final class PreventionJobTriggerTrigger {
      */
     private final @Nullable PreventionJobTriggerTriggerSchedule schedule;
 
-    @OutputCustomType.Constructor({"schedule"})
-    private PreventionJobTriggerTrigger(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
+    @OutputCustomType.Constructor
+    private PreventionJobTriggerTrigger(@OutputCustomType.Parameter("schedule") @Nullable PreventionJobTriggerTriggerSchedule schedule) {
         this.schedule = schedule;
     }
 
@@ -52,7 +52,7 @@ public final class PreventionJobTriggerTrigger {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
+        public Builder schedule(@Nullable PreventionJobTriggerTriggerSchedule schedule) {
             this.schedule = schedule;
             return this;
         }

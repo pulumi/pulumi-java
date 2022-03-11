@@ -50,16 +50,16 @@ public final class GetCompositeTypeResult {
      */
     private final TemplateContentsResponse templateContents;
 
-    @OutputCustomType.Constructor({"description","insertTime","labels","name","operation","selfLink","status","templateContents"})
+    @OutputCustomType.Constructor
     private GetCompositeTypeResult(
-        String description,
-        String insertTime,
-        List<CompositeTypeLabelEntryResponse> labels,
-        String name,
-        OperationResponse operation,
-        String selfLink,
-        String status,
-        TemplateContentsResponse templateContents) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("labels") List<CompositeTypeLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") OperationResponse operation,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("templateContents") TemplateContentsResponse templateContents) {
         this.description = description;
         this.insertTime = insertTime;
         this.labels = labels;
@@ -157,42 +157,42 @@ public final class GetCompositeTypeResult {
     	      this.templateContents = defaults.templateContents;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setInsertTime(String insertTime) {
+        public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
 
-        public Builder setLabels(List<CompositeTypeLabelEntryResponse> labels) {
+        public Builder labels(List<CompositeTypeLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperation(OperationResponse operation) {
+        public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTemplateContents(TemplateContentsResponse templateContents) {
+        public Builder templateContents(TemplateContentsResponse templateContents) {
             this.templateContents = Objects.requireNonNull(templateContents);
             return this;
         }

@@ -44,16 +44,16 @@ public final class GetOrganizationResult {
     private final String orgId;
     private final @Nullable String organization;
 
-    @OutputCustomType.Constructor({"createTime","directoryCustomerId","domain","id","lifecycleState","name","orgId","organization"})
+    @OutputCustomType.Constructor
     private GetOrganizationResult(
-        String createTime,
-        String directoryCustomerId,
-        String domain,
-        String id,
-        String lifecycleState,
-        String name,
-        String orgId,
-        @Nullable String organization) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("directoryCustomerId") String directoryCustomerId,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orgId") String orgId,
+        @OutputCustomType.Parameter("organization") @Nullable String organization) {
         this.createTime = createTime;
         this.directoryCustomerId = directoryCustomerId;
         this.domain = domain;
@@ -147,42 +147,42 @@ public final class GetOrganizationResult {
     	      this.organization = defaults.organization;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDirectoryCustomerId(String directoryCustomerId) {
+        public Builder directoryCustomerId(String directoryCustomerId) {
             this.directoryCustomerId = Objects.requireNonNull(directoryCustomerId);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLifecycleState(String lifecycleState) {
+        public Builder lifecycleState(String lifecycleState) {
             this.lifecycleState = Objects.requireNonNull(lifecycleState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrgId(String orgId) {
+        public Builder orgId(String orgId) {
             this.orgId = Objects.requireNonNull(orgId);
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = organization;
             return this;
         }

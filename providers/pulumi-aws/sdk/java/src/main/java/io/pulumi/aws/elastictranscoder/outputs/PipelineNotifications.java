@@ -32,12 +32,12 @@ public final class PipelineNotifications {
      */
     private final @Nullable String warning;
 
-    @OutputCustomType.Constructor({"completed","error","progressing","warning"})
+    @OutputCustomType.Constructor
     private PipelineNotifications(
-        @Nullable String completed,
-        @Nullable String error,
-        @Nullable String progressing,
-        @Nullable String warning) {
+        @OutputCustomType.Parameter("completed") @Nullable String completed,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("progressing") @Nullable String progressing,
+        @OutputCustomType.Parameter("warning") @Nullable String warning) {
         this.completed = completed;
         this.error = error;
         this.progressing = progressing;
@@ -99,22 +99,22 @@ public final class PipelineNotifications {
     	      this.warning = defaults.warning;
         }
 
-        public Builder setCompleted(@Nullable String completed) {
+        public Builder completed(@Nullable String completed) {
             this.completed = completed;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setProgressing(@Nullable String progressing) {
+        public Builder progressing(@Nullable String progressing) {
             this.progressing = progressing;
             return this;
         }
 
-        public Builder setWarning(@Nullable String warning) {
+        public Builder warning(@Nullable String warning) {
             this.warning = warning;
             return this;
         }

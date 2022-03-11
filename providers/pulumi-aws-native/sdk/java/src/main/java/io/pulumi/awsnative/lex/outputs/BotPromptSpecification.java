@@ -22,11 +22,11 @@ public final class BotPromptSpecification {
     private final Integer maxRetries;
     private final List<BotMessageGroup> messageGroupsList;
 
-    @OutputCustomType.Constructor({"allowInterrupt","maxRetries","messageGroupsList"})
+    @OutputCustomType.Constructor
     private BotPromptSpecification(
-        @Nullable Boolean allowInterrupt,
-        Integer maxRetries,
-        List<BotMessageGroup> messageGroupsList) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("maxRetries") Integer maxRetries,
+        @OutputCustomType.Parameter("messageGroupsList") List<BotMessageGroup> messageGroupsList) {
         this.allowInterrupt = allowInterrupt;
         this.maxRetries = maxRetries;
         this.messageGroupsList = messageGroupsList;
@@ -70,17 +70,17 @@ public final class BotPromptSpecification {
     	      this.messageGroupsList = defaults.messageGroupsList;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setMaxRetries(Integer maxRetries) {
+        public Builder maxRetries(Integer maxRetries) {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
 
-        public Builder setMessageGroupsList(List<BotMessageGroup> messageGroupsList) {
+        public Builder messageGroupsList(List<BotMessageGroup> messageGroupsList) {
             this.messageGroupsList = Objects.requireNonNull(messageGroupsList);
             return this;
         }

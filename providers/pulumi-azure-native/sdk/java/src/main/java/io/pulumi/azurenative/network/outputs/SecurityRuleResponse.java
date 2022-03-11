@@ -115,28 +115,28 @@ public final class SecurityRuleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"access","description","destinationAddressPrefix","destinationAddressPrefixes","destinationApplicationSecurityGroups","destinationPortRange","destinationPortRanges","direction","etag","id","name","priority","protocol","provisioningState","sourceAddressPrefix","sourceAddressPrefixes","sourceApplicationSecurityGroups","sourcePortRange","sourcePortRanges","type"})
+    @OutputCustomType.Constructor
     private SecurityRuleResponse(
-        String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable List<String> destinationAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
-        @Nullable String destinationPortRange,
-        @Nullable List<String> destinationPortRanges,
-        String direction,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable String sourceAddressPrefix,
-        @Nullable List<String> sourceAddressPrefixes,
-        @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
-        @Nullable String sourcePortRange,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @OutputCustomType.Parameter("destinationAddressPrefixes") @Nullable List<String> destinationAddressPrefixes,
+        @OutputCustomType.Parameter("destinationApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups,
+        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @OutputCustomType.Parameter("sourceAddressPrefixes") @Nullable List<String> sourceAddressPrefixes,
+        @OutputCustomType.Parameter("sourceApplicationSecurityGroups") @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups,
+        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;
@@ -358,102 +358,102 @@ public final class SecurityRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddressPrefix(@Nullable String destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
-        public Builder setDestinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
+        public Builder destinationAddressPrefixes(@Nullable List<String> destinationAddressPrefixes) {
             this.destinationAddressPrefixes = destinationAddressPrefixes;
             return this;
         }
 
-        public Builder setDestinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups) {
+        public Builder destinationApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups) {
             this.destinationApplicationSecurityGroups = destinationApplicationSecurityGroups;
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable String destinationPortRange) {
+        public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<String> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceAddressPrefix(@Nullable String sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
-        public Builder setSourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
+        public Builder sourceAddressPrefixes(@Nullable List<String> sourceAddressPrefixes) {
             this.sourceAddressPrefixes = sourceAddressPrefixes;
             return this;
         }
 
-        public Builder setSourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups) {
+        public Builder sourceApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups) {
             this.sourceApplicationSecurityGroups = sourceApplicationSecurityGroups;
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable String sourcePortRange) {
+        public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -132,62 +132,62 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.url = defaults.url;
         }
 
-        public Builder setMirrorConfig(@Nullable Input<MirrorConfigArgs> mirrorConfig) {
+        public Builder mirrorConfig(@Nullable Input<MirrorConfigArgs> mirrorConfig) {
             this.mirrorConfig = mirrorConfig;
             return this;
         }
 
-        public Builder setMirrorConfig(@Nullable MirrorConfigArgs mirrorConfig) {
+        public Builder mirrorConfig(@Nullable MirrorConfigArgs mirrorConfig) {
             this.mirrorConfig = Input.ofNullable(mirrorConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPubsubConfigs(@Nullable Input<Map<String,String>> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable Input<Map<String,String>> pubsubConfigs) {
             this.pubsubConfigs = pubsubConfigs;
             return this;
         }
 
-        public Builder setPubsubConfigs(@Nullable Map<String,String> pubsubConfigs) {
+        public Builder pubsubConfigs(@Nullable Map<String,String> pubsubConfigs) {
             this.pubsubConfigs = Input.ofNullable(pubsubConfigs);
             return this;
         }
 
-        public Builder setSize(@Nullable Input<String> size) {
+        public Builder size(@Nullable Input<String> size) {
             this.size = size;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = Input.ofNullable(size);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

@@ -46,14 +46,14 @@ public final class HorizontalPodAutoscalerStatus {
      */
     private final @Nullable Integer observedGeneration;
 
-    @OutputCustomType.Constructor({"conditions","currentMetrics","currentReplicas","desiredReplicas","lastScaleTime","observedGeneration"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerStatus(
-        @Nullable List<HorizontalPodAutoscalerCondition> conditions,
-        @Nullable List<MetricStatus> currentMetrics,
-        @Nullable Integer currentReplicas,
-        Integer desiredReplicas,
-        @Nullable String lastScaleTime,
-        @Nullable Integer observedGeneration) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<HorizontalPodAutoscalerCondition> conditions,
+        @OutputCustomType.Parameter("currentMetrics") @Nullable List<MetricStatus> currentMetrics,
+        @OutputCustomType.Parameter("currentReplicas") @Nullable Integer currentReplicas,
+        @OutputCustomType.Parameter("desiredReplicas") Integer desiredReplicas,
+        @OutputCustomType.Parameter("lastScaleTime") @Nullable String lastScaleTime,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration) {
         this.conditions = conditions;
         this.currentMetrics = currentMetrics;
         this.currentReplicas = currentReplicas;
@@ -135,32 +135,32 @@ public final class HorizontalPodAutoscalerStatus {
     	      this.observedGeneration = defaults.observedGeneration;
         }
 
-        public Builder setConditions(@Nullable List<HorizontalPodAutoscalerCondition> conditions) {
+        public Builder conditions(@Nullable List<HorizontalPodAutoscalerCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCurrentMetrics(@Nullable List<MetricStatus> currentMetrics) {
+        public Builder currentMetrics(@Nullable List<MetricStatus> currentMetrics) {
             this.currentMetrics = currentMetrics;
             return this;
         }
 
-        public Builder setCurrentReplicas(@Nullable Integer currentReplicas) {
+        public Builder currentReplicas(@Nullable Integer currentReplicas) {
             this.currentReplicas = currentReplicas;
             return this;
         }
 
-        public Builder setDesiredReplicas(Integer desiredReplicas) {
+        public Builder desiredReplicas(Integer desiredReplicas) {
             this.desiredReplicas = Objects.requireNonNull(desiredReplicas);
             return this;
         }
 
-        public Builder setLastScaleTime(@Nullable String lastScaleTime) {
+        public Builder lastScaleTime(@Nullable String lastScaleTime) {
             this.lastScaleTime = lastScaleTime;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }

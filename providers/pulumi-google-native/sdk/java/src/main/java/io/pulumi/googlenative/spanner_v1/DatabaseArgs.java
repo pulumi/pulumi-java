@@ -129,62 +129,62 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setCreateStatement(Input<String> createStatement) {
+        public Builder createStatement(Input<String> createStatement) {
             this.createStatement = Objects.requireNonNull(createStatement);
             return this;
         }
 
-        public Builder setCreateStatement(String createStatement) {
+        public Builder createStatement(String createStatement) {
             this.createStatement = Input.of(Objects.requireNonNull(createStatement));
             return this;
         }
 
-        public Builder setDatabaseDialect(@Nullable Input<DatabaseDatabaseDialect> databaseDialect) {
+        public Builder databaseDialect(@Nullable Input<DatabaseDatabaseDialect> databaseDialect) {
             this.databaseDialect = databaseDialect;
             return this;
         }
 
-        public Builder setDatabaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
+        public Builder databaseDialect(@Nullable DatabaseDatabaseDialect databaseDialect) {
             this.databaseDialect = Input.ofNullable(databaseDialect);
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
+        public Builder encryptionConfig(@Nullable Input<EncryptionConfigArgs> encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
+        public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
             this.encryptionConfig = Input.ofNullable(encryptionConfig);
             return this;
         }
 
-        public Builder setExtraStatements(@Nullable Input<List<String>> extraStatements) {
+        public Builder extraStatements(@Nullable Input<List<String>> extraStatements) {
             this.extraStatements = extraStatements;
             return this;
         }
 
-        public Builder setExtraStatements(@Nullable List<String> extraStatements) {
+        public Builder extraStatements(@Nullable List<String> extraStatements) {
             this.extraStatements = Input.ofNullable(extraStatements);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

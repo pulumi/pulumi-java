@@ -100,27 +100,27 @@ public final class DistributionLegacyCustomOrigin extends io.pulumi.resources.In
     	      this.originSSLProtocols = defaults.originSSLProtocols;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setHTTPPort(@Nullable Integer hTTPPort) {
+        public Builder hTTPPort(@Nullable Integer hTTPPort) {
             this.hTTPPort = hTTPPort;
             return this;
         }
 
-        public Builder setHTTPSPort(@Nullable Integer hTTPSPort) {
+        public Builder hTTPSPort(@Nullable Integer hTTPSPort) {
             this.hTTPSPort = hTTPSPort;
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(String originProtocolPolicy) {
+        public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
-        public Builder setOriginSSLProtocols(List<String> originSSLProtocols) {
+        public Builder originSSLProtocols(List<String> originSSLProtocols) {
             this.originSSLProtocols = Objects.requireNonNull(originSSLProtocols);
             return this;
         }

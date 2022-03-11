@@ -25,11 +25,11 @@ public final class CertificateInformationResponse {
      */
     private final String thumbprint;
 
-    @OutputCustomType.Constructor({"expiry","subject","thumbprint"})
+    @OutputCustomType.Constructor
     private CertificateInformationResponse(
-        String expiry,
-        String subject,
-        String thumbprint) {
+        @OutputCustomType.Parameter("expiry") String expiry,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint) {
         this.expiry = expiry;
         this.subject = subject;
         this.thumbprint = thumbprint;
@@ -81,17 +81,17 @@ public final class CertificateInformationResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setExpiry(String expiry) {
+        public Builder expiry(String expiry) {
             this.expiry = Objects.requireNonNull(expiry);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }

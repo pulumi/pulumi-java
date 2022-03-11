@@ -21,10 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"day","startTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek(
-        String day,
-        String startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.startTime = startTime;
     }
@@ -67,12 +67,12 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

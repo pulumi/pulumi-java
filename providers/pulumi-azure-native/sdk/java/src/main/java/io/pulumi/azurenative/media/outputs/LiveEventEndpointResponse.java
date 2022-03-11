@@ -22,10 +22,10 @@ public final class LiveEventEndpointResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"protocol","url"})
+    @OutputCustomType.Constructor
     private LiveEventEndpointResponse(
-        @Nullable String protocol,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.protocol = protocol;
         this.url = url;
     }
@@ -67,12 +67,12 @@ public final class LiveEventEndpointResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

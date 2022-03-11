@@ -70,20 +70,20 @@ public final class GetRestApiResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"apiKeySource","arn","binaryMediaTypes","description","endpointConfigurations","executionArn","id","minimumCompressionSize","name","policy","rootResourceId","tags"})
+    @OutputCustomType.Constructor
     private GetRestApiResult(
-        String apiKeySource,
-        String arn,
-        List<String> binaryMediaTypes,
-        String description,
-        List<GetRestApiEndpointConfiguration> endpointConfigurations,
-        String executionArn,
-        String id,
-        Integer minimumCompressionSize,
-        String name,
-        String policy,
-        String rootResourceId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("apiKeySource") String apiKeySource,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("binaryMediaTypes") List<String> binaryMediaTypes,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointConfigurations") List<GetRestApiEndpointConfiguration> endpointConfigurations,
+        @OutputCustomType.Parameter("executionArn") String executionArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("minimumCompressionSize") Integer minimumCompressionSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("rootResourceId") String rootResourceId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.apiKeySource = apiKeySource;
         this.arn = arn;
         this.binaryMediaTypes = binaryMediaTypes;
@@ -221,62 +221,62 @@ public final class GetRestApiResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApiKeySource(String apiKeySource) {
+        public Builder apiKeySource(String apiKeySource) {
             this.apiKeySource = Objects.requireNonNull(apiKeySource);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBinaryMediaTypes(List<String> binaryMediaTypes) {
+        public Builder binaryMediaTypes(List<String> binaryMediaTypes) {
             this.binaryMediaTypes = Objects.requireNonNull(binaryMediaTypes);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpointConfigurations(List<GetRestApiEndpointConfiguration> endpointConfigurations) {
+        public Builder endpointConfigurations(List<GetRestApiEndpointConfiguration> endpointConfigurations) {
             this.endpointConfigurations = Objects.requireNonNull(endpointConfigurations);
             return this;
         }
 
-        public Builder setExecutionArn(String executionArn) {
+        public Builder executionArn(String executionArn) {
             this.executionArn = Objects.requireNonNull(executionArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMinimumCompressionSize(Integer minimumCompressionSize) {
+        public Builder minimumCompressionSize(Integer minimumCompressionSize) {
             this.minimumCompressionSize = Objects.requireNonNull(minimumCompressionSize);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setRootResourceId(String rootResourceId) {
+        public Builder rootResourceId(String rootResourceId) {
             this.rootResourceId = Objects.requireNonNull(rootResourceId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

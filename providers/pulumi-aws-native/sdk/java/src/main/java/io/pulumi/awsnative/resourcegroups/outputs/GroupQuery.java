@@ -17,11 +17,11 @@ public final class GroupQuery {
     private final @Nullable String stackIdentifier;
     private final @Nullable List<GroupTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"resourceTypeFilters","stackIdentifier","tagFilters"})
+    @OutputCustomType.Constructor
     private GroupQuery(
-        @Nullable List<String> resourceTypeFilters,
-        @Nullable String stackIdentifier,
-        @Nullable List<GroupTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("resourceTypeFilters") @Nullable List<String> resourceTypeFilters,
+        @OutputCustomType.Parameter("stackIdentifier") @Nullable String stackIdentifier,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<GroupTagFilter> tagFilters) {
         this.resourceTypeFilters = resourceTypeFilters;
         this.stackIdentifier = stackIdentifier;
         this.tagFilters = tagFilters;
@@ -61,17 +61,17 @@ public final class GroupQuery {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setResourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
 
-        public Builder setStackIdentifier(@Nullable String stackIdentifier) {
+        public Builder stackIdentifier(@Nullable String stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<GroupTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<GroupTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

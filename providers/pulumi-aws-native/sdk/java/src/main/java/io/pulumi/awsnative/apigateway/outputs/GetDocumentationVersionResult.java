@@ -17,8 +17,8 @@ public final class GetDocumentationVersionResult {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"description"})
-    private GetDocumentationVersionResult(@Nullable String description) {
+    @OutputCustomType.Constructor
+    private GetDocumentationVersionResult(@OutputCustomType.Parameter("description") @Nullable String description) {
         this.description = description;
     }
 
@@ -50,7 +50,7 @@ public final class GetDocumentationVersionResult {
     	      this.description = defaults.description;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

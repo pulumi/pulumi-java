@@ -107,26 +107,26 @@ public final class GetDefaultAdminRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"access","description","destinationPortRanges","destinations","direction","displayName","etag","flag","id","kind","name","priority","protocol","provisioningState","sourcePortRanges","sources","systemData","type"})
+    @OutputCustomType.Constructor
     private GetDefaultAdminRuleResult(
-        String access,
-        String description,
-        List<String> destinationPortRanges,
-        List<AddressPrefixItemResponse> destinations,
-        String direction,
-        String displayName,
-        String etag,
-        @Nullable String flag,
-        String id,
-        String kind,
-        String name,
-        Integer priority,
-        String protocol,
-        String provisioningState,
-        List<String> sourcePortRanges,
-        List<AddressPrefixItemResponse> sources,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flag") @Nullable String flag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.access = access;
         this.description = description;
         this.destinationPortRanges = destinationPortRanges;
@@ -329,92 +329,92 @@ public final class GetDefaultAdminRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestinationPortRanges(List<String> destinationPortRanges) {
+        public Builder destinationPortRanges(List<String> destinationPortRanges) {
             this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
             return this;
         }
 
-        public Builder setDestinations(List<AddressPrefixItemResponse> destinations) {
+        public Builder destinations(List<AddressPrefixItemResponse> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFlag(@Nullable String flag) {
+        public Builder flag(@Nullable String flag) {
             this.flag = flag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourcePortRanges(List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(List<String> sourcePortRanges) {
             this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
             return this;
         }
 
-        public Builder setSources(List<AddressPrefixItemResponse> sources) {
+        public Builder sources(List<AddressPrefixItemResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

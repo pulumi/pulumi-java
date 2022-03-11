@@ -21,10 +21,10 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"frameOption","override"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfigFrameOptions(
-        String frameOption,
-        Boolean override) {
+        @OutputCustomType.Parameter("frameOption") String frameOption,
+        @OutputCustomType.Parameter("override") Boolean override) {
         this.frameOption = frameOption;
         this.override = override;
     }
@@ -66,12 +66,12 @@ public final class ResponseHeadersPolicySecurityHeadersConfigFrameOptions {
     	      this.override = defaults.override;
         }
 
-        public Builder setFrameOption(String frameOption) {
+        public Builder frameOption(String frameOption) {
             this.frameOption = Objects.requireNonNull(frameOption);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

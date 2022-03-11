@@ -76,22 +76,22 @@ public final class TemplateSourceAnalysisArgs extends io.pulumi.resources.Resour
     	      this.dataSetReferences = defaults.dataSetReferences;
         }
 
-        public Builder setArn(Input<String> arn) {
+        public Builder arn(Input<String> arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Input.of(Objects.requireNonNull(arn));
             return this;
         }
 
-        public Builder setDataSetReferences(Input<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
+        public Builder dataSetReferences(Input<List<TemplateDataSetReferenceArgs>> dataSetReferences) {
             this.dataSetReferences = Objects.requireNonNull(dataSetReferences);
             return this;
         }
 
-        public Builder setDataSetReferences(List<TemplateDataSetReferenceArgs> dataSetReferences) {
+        public Builder dataSetReferences(List<TemplateDataSetReferenceArgs> dataSetReferences) {
             this.dataSetReferences = Input.of(Objects.requireNonNull(dataSetReferences));
             return this;
         }

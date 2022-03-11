@@ -17,8 +17,8 @@ public final class AuthenticationResponse {
      */
     private final @Nullable SymmetricKeyResponse symmetricKey;
 
-    @OutputCustomType.Constructor({"symmetricKey"})
-    private AuthenticationResponse(@Nullable SymmetricKeyResponse symmetricKey) {
+    @OutputCustomType.Constructor
+    private AuthenticationResponse(@OutputCustomType.Parameter("symmetricKey") @Nullable SymmetricKeyResponse symmetricKey) {
         this.symmetricKey = symmetricKey;
     }
 
@@ -50,7 +50,7 @@ public final class AuthenticationResponse {
     	      this.symmetricKey = defaults.symmetricKey;
         }
 
-        public Builder setSymmetricKey(@Nullable SymmetricKeyResponse symmetricKey) {
+        public Builder symmetricKey(@Nullable SymmetricKeyResponse symmetricKey) {
             this.symmetricKey = symmetricKey;
             return this;
         }

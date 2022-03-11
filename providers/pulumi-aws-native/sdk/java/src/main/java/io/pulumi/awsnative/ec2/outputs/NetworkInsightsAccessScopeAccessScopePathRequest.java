@@ -17,11 +17,11 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
     private final @Nullable NetworkInsightsAccessScopePathStatementRequest source;
     private final @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources;
 
-    @OutputCustomType.Constructor({"destination","source","throughResources"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAccessScopeAccessScopePathRequest(
-        @Nullable NetworkInsightsAccessScopePathStatementRequest destination,
-        @Nullable NetworkInsightsAccessScopePathStatementRequest source,
-        @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
+        @OutputCustomType.Parameter("destination") @Nullable NetworkInsightsAccessScopePathStatementRequest destination,
+        @OutputCustomType.Parameter("source") @Nullable NetworkInsightsAccessScopePathStatementRequest source,
+        @OutputCustomType.Parameter("throughResources") @Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
         this.destination = destination;
         this.source = source;
         this.throughResources = throughResources;
@@ -61,17 +61,17 @@ public final class NetworkInsightsAccessScopeAccessScopePathRequest {
     	      this.throughResources = defaults.throughResources;
         }
 
-        public Builder setDestination(@Nullable NetworkInsightsAccessScopePathStatementRequest destination) {
+        public Builder destination(@Nullable NetworkInsightsAccessScopePathStatementRequest destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setSource(@Nullable NetworkInsightsAccessScopePathStatementRequest source) {
+        public Builder source(@Nullable NetworkInsightsAccessScopePathStatementRequest source) {
             this.source = source;
             return this;
         }
 
-        public Builder setThroughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
+        public Builder throughResources(@Nullable List<NetworkInsightsAccessScopeThroughResourcesStatementRequest> throughResources) {
             this.throughResources = throughResources;
             return this;
         }

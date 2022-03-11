@@ -15,8 +15,8 @@ public final class ApiEndpointHandlerResponse {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor({"scriptPath"})
-    private ApiEndpointHandlerResponse(String scriptPath) {
+    @OutputCustomType.Constructor
+    private ApiEndpointHandlerResponse(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 
@@ -48,7 +48,7 @@ public final class ApiEndpointHandlerResponse {
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder setScriptPath(String scriptPath) {
+        public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }

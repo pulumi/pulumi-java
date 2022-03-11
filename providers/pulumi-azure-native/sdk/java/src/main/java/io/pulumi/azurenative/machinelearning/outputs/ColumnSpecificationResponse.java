@@ -40,13 +40,13 @@ public final class ColumnSpecificationResponse {
      */
     private final @Nullable Boolean xMsIsordered;
 
-    @OutputCustomType.Constructor({"$enum","format","type","xMsIsnullable","xMsIsordered"})
+    @OutputCustomType.Constructor
     private ColumnSpecificationResponse(
-        @Nullable List<Object> $enum,
-        @Nullable String format,
-        String type,
-        @Nullable Boolean xMsIsnullable,
-        @Nullable Boolean xMsIsordered) {
+        @OutputCustomType.Parameter("enum") @Nullable List<Object> $enum,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("xMsIsnullable") @Nullable Boolean xMsIsnullable,
+        @OutputCustomType.Parameter("xMsIsordered") @Nullable Boolean xMsIsordered) {
         this.$enum = $enum;
         this.format = format;
         this.type = type;
@@ -118,27 +118,27 @@ public final class ColumnSpecificationResponse {
     	      this.xMsIsordered = defaults.xMsIsordered;
         }
 
-        public Builder set$enum(@Nullable List<Object> $enum) {
+        public Builder $enum(@Nullable List<Object> $enum) {
             this.$enum = $enum;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setXMsIsnullable(@Nullable Boolean xMsIsnullable) {
+        public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
             this.xMsIsnullable = xMsIsnullable;
             return this;
         }
 
-        public Builder setXMsIsordered(@Nullable Boolean xMsIsordered) {
+        public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
             this.xMsIsordered = xMsIsordered;
             return this;
         }

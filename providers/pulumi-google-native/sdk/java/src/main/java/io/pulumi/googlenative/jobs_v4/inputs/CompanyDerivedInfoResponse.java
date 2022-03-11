@@ -55,7 +55,7 @@ public final class CompanyDerivedInfoResponse extends io.pulumi.resources.Invoke
     	      this.headquartersLocation = defaults.headquartersLocation;
         }
 
-        public Builder setHeadquartersLocation(LocationResponse headquartersLocation) {
+        public Builder headquartersLocation(LocationResponse headquartersLocation) {
             this.headquartersLocation = Objects.requireNonNull(headquartersLocation);
             return this;
         }

@@ -32,12 +32,12 @@ public final class InMageAgentDetailsResponse {
      */
     private final @Nullable String postUpdateRebootStatus;
 
-    @OutputCustomType.Constructor({"agentExpiryDate","agentUpdateStatus","agentVersion","postUpdateRebootStatus"})
+    @OutputCustomType.Constructor
     private InMageAgentDetailsResponse(
-        @Nullable String agentExpiryDate,
-        @Nullable String agentUpdateStatus,
-        @Nullable String agentVersion,
-        @Nullable String postUpdateRebootStatus) {
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentUpdateStatus") @Nullable String agentUpdateStatus,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("postUpdateRebootStatus") @Nullable String postUpdateRebootStatus) {
         this.agentExpiryDate = agentExpiryDate;
         this.agentUpdateStatus = agentUpdateStatus;
         this.agentVersion = agentVersion;
@@ -99,22 +99,22 @@ public final class InMageAgentDetailsResponse {
     	      this.postUpdateRebootStatus = defaults.postUpdateRebootStatus;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentUpdateStatus(@Nullable String agentUpdateStatus) {
+        public Builder agentUpdateStatus(@Nullable String agentUpdateStatus) {
             this.agentUpdateStatus = agentUpdateStatus;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setPostUpdateRebootStatus(@Nullable String postUpdateRebootStatus) {
+        public Builder postUpdateRebootStatus(@Nullable String postUpdateRebootStatus) {
             this.postUpdateRebootStatus = postUpdateRebootStatus;
             return this;
         }

@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class EnvironmentResponse {
     private final Map<String,String> customValues;
 
-    @OutputCustomType.Constructor({"customValues"})
-    private EnvironmentResponse(Map<String,String> customValues) {
+    @OutputCustomType.Constructor
+    private EnvironmentResponse(@OutputCustomType.Parameter("customValues") Map<String,String> customValues) {
         this.customValues = customValues;
     }
 
@@ -41,7 +41,7 @@ public final class EnvironmentResponse {
     	      this.customValues = defaults.customValues;
         }
 
-        public Builder setCustomValues(Map<String,String> customValues) {
+        public Builder customValues(Map<String,String> customValues) {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }

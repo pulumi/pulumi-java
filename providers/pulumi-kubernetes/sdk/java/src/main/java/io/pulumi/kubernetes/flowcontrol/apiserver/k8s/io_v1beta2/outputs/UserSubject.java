@@ -15,8 +15,8 @@ public final class UserSubject {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private UserSubject(String name) {
+    @OutputCustomType.Constructor
+    private UserSubject(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -48,7 +48,7 @@ public final class UserSubject {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

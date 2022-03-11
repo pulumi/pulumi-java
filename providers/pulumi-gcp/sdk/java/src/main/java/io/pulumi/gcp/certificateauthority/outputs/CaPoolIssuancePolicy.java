@@ -52,13 +52,13 @@ public final class CaPoolIssuancePolicy {
      */
     private final @Nullable String maximumLifetime;
 
-    @OutputCustomType.Constructor({"allowedIssuanceModes","allowedKeyTypes","baselineValues","identityConstraints","maximumLifetime"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicy(
-        @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
-        @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
-        @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
-        @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
-        @Nullable String maximumLifetime) {
+        @OutputCustomType.Parameter("allowedIssuanceModes") @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedKeyTypes") @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
+        @OutputCustomType.Parameter("baselineValues") @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
+        @OutputCustomType.Parameter("identityConstraints") @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
+        @OutputCustomType.Parameter("maximumLifetime") @Nullable String maximumLifetime) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;
@@ -140,27 +140,27 @@ public final class CaPoolIssuancePolicy {
     	      this.maximumLifetime = defaults.maximumLifetime;
         }
 
-        public Builder setAllowedIssuanceModes(@Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(@Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes) {
             this.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
-        public Builder setAllowedKeyTypes(@Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes) {
+        public Builder allowedKeyTypes(@Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes) {
             this.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
 
-        public Builder setBaselineValues(@Nullable CaPoolIssuancePolicyBaselineValues baselineValues) {
+        public Builder baselineValues(@Nullable CaPoolIssuancePolicyBaselineValues baselineValues) {
             this.baselineValues = baselineValues;
             return this;
         }
 
-        public Builder setIdentityConstraints(@Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints) {
+        public Builder identityConstraints(@Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints) {
             this.identityConstraints = identityConstraints;
             return this;
         }
 
-        public Builder setMaximumLifetime(@Nullable String maximumLifetime) {
+        public Builder maximumLifetime(@Nullable String maximumLifetime) {
             this.maximumLifetime = maximumLifetime;
             return this;
         }

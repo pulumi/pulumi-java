@@ -21,15 +21,15 @@ public final class GetPluginResult {
     private final String name;
     private final String pluginReference;
 
-    @OutputCustomType.Constructor({"alias","enabled","envs","grantAllPermissions","id","name","pluginReference"})
+    @OutputCustomType.Constructor
     private GetPluginResult(
-        @Nullable String alias,
-        Boolean enabled,
-        List<String> envs,
-        Boolean grantAllPermissions,
-        @Nullable String id,
-        String name,
-        String pluginReference) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("envs") List<String> envs,
+        @OutputCustomType.Parameter("grantAllPermissions") Boolean grantAllPermissions,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pluginReference") String pluginReference) {
         this.alias = alias;
         this.enabled = enabled;
         this.envs = envs;
@@ -93,37 +93,37 @@ public final class GetPluginResult {
     	      this.pluginReference = defaults.pluginReference;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnvs(List<String> envs) {
+        public Builder envs(List<String> envs) {
             this.envs = Objects.requireNonNull(envs);
             return this;
         }
 
-        public Builder setGrantAllPermissions(Boolean grantAllPermissions) {
+        public Builder grantAllPermissions(Boolean grantAllPermissions) {
             this.grantAllPermissions = Objects.requireNonNull(grantAllPermissions);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPluginReference(String pluginReference) {
+        public Builder pluginReference(String pluginReference) {
             this.pluginReference = Objects.requireNonNull(pluginReference);
             return this;
         }

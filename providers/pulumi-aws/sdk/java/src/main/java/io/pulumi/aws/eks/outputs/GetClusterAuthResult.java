@@ -21,11 +21,11 @@ public final class GetClusterAuthResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"id","name","token"})
+    @OutputCustomType.Constructor
     private GetClusterAuthResult(
-        String id,
-        String name,
-        String token) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("token") String token) {
         this.id = id;
         this.name = name;
         this.token = token;
@@ -73,17 +73,17 @@ public final class GetClusterAuthResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

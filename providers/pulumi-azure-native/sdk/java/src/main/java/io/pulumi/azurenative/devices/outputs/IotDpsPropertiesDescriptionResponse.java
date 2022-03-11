@@ -72,19 +72,19 @@ public final class IotDpsPropertiesDescriptionResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"allocationPolicy","authorizationPolicies","deviceProvisioningHostName","idScope","iotHubs","ipFilterRules","privateEndpointConnections","provisioningState","publicNetworkAccess","serviceOperationsHostName","state"})
+    @OutputCustomType.Constructor
     private IotDpsPropertiesDescriptionResponse(
-        @Nullable String allocationPolicy,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
-        String deviceProvisioningHostName,
-        String idScope,
-        @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
-        @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String serviceOperationsHostName,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("allocationPolicy") @Nullable String allocationPolicy,
+        @OutputCustomType.Parameter("authorizationPolicies") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies,
+        @OutputCustomType.Parameter("deviceProvisioningHostName") String deviceProvisioningHostName,
+        @OutputCustomType.Parameter("idScope") String idScope,
+        @OutputCustomType.Parameter("iotHubs") @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs,
+        @OutputCustomType.Parameter("ipFilterRules") @Nullable List<TargetIpFilterRuleResponse> ipFilterRules,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("serviceOperationsHostName") String serviceOperationsHostName,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.allocationPolicy = allocationPolicy;
         this.authorizationPolicies = authorizationPolicies;
         this.deviceProvisioningHostName = deviceProvisioningHostName;
@@ -216,57 +216,57 @@ public final class IotDpsPropertiesDescriptionResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAllocationPolicy(@Nullable String allocationPolicy) {
+        public Builder allocationPolicy(@Nullable String allocationPolicy) {
             this.allocationPolicy = allocationPolicy;
             return this;
         }
 
-        public Builder setAuthorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
+        public Builder authorizationPolicies(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies) {
             this.authorizationPolicies = authorizationPolicies;
             return this;
         }
 
-        public Builder setDeviceProvisioningHostName(String deviceProvisioningHostName) {
+        public Builder deviceProvisioningHostName(String deviceProvisioningHostName) {
             this.deviceProvisioningHostName = Objects.requireNonNull(deviceProvisioningHostName);
             return this;
         }
 
-        public Builder setIdScope(String idScope) {
+        public Builder idScope(String idScope) {
             this.idScope = Objects.requireNonNull(idScope);
             return this;
         }
 
-        public Builder setIotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
+        public Builder iotHubs(@Nullable List<IotHubDefinitionDescriptionResponse> iotHubs) {
             this.iotHubs = iotHubs;
             return this;
         }
 
-        public Builder setIpFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
+        public Builder ipFilterRules(@Nullable List<TargetIpFilterRuleResponse> ipFilterRules) {
             this.ipFilterRules = ipFilterRules;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setServiceOperationsHostName(String serviceOperationsHostName) {
+        public Builder serviceOperationsHostName(String serviceOperationsHostName) {
             this.serviceOperationsHostName = Objects.requireNonNull(serviceOperationsHostName);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

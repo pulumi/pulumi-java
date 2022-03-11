@@ -58,17 +58,17 @@ public final class GetGatewayHostnameConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateId","hostname","http2Enabled","id","name","negotiateClientCertificate","tls10Enabled","tls11Enabled","type"})
+    @OutputCustomType.Constructor
     private GetGatewayHostnameConfigurationResult(
-        @Nullable String certificateId,
-        @Nullable String hostname,
-        @Nullable Boolean http2Enabled,
-        String id,
-        String name,
-        @Nullable Boolean negotiateClientCertificate,
-        @Nullable Boolean tls10Enabled,
-        @Nullable Boolean tls11Enabled,
-        String type) {
+        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("http2Enabled") @Nullable Boolean http2Enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("negotiateClientCertificate") @Nullable Boolean negotiateClientCertificate,
+        @OutputCustomType.Parameter("tls10Enabled") @Nullable Boolean tls10Enabled,
+        @OutputCustomType.Parameter("tls11Enabled") @Nullable Boolean tls11Enabled,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateId = certificateId;
         this.hostname = hostname;
         this.http2Enabled = http2Enabled;
@@ -180,47 +180,47 @@ public final class GetGatewayHostnameConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setHttp2Enabled(@Nullable Boolean http2Enabled) {
+        public Builder http2Enabled(@Nullable Boolean http2Enabled) {
             this.http2Enabled = http2Enabled;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNegotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
+        public Builder negotiateClientCertificate(@Nullable Boolean negotiateClientCertificate) {
             this.negotiateClientCertificate = negotiateClientCertificate;
             return this;
         }
 
-        public Builder setTls10Enabled(@Nullable Boolean tls10Enabled) {
+        public Builder tls10Enabled(@Nullable Boolean tls10Enabled) {
             this.tls10Enabled = tls10Enabled;
             return this;
         }
 
-        public Builder setTls11Enabled(@Nullable Boolean tls11Enabled) {
+        public Builder tls11Enabled(@Nullable Boolean tls11Enabled) {
             this.tls11Enabled = tls11Enabled;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

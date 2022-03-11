@@ -29,11 +29,11 @@ public final class CacheHealthResponse {
      */
     private final @Nullable String statusDescription;
 
-    @OutputCustomType.Constructor({"conditions","state","statusDescription"})
+    @OutputCustomType.Constructor
     private CacheHealthResponse(
-        List<ConditionResponse> conditions,
-        @Nullable String state,
-        @Nullable String statusDescription) {
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription) {
         this.conditions = conditions;
         this.state = state;
         this.statusDescription = statusDescription;
@@ -85,17 +85,17 @@ public final class CacheHealthResponse {
     	      this.statusDescription = defaults.statusDescription;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStatusDescription(@Nullable String statusDescription) {
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }

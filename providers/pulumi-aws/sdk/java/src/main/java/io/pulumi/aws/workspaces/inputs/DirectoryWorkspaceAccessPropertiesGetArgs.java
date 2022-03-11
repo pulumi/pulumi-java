@@ -166,82 +166,82 @@ public final class DirectoryWorkspaceAccessPropertiesGetArgs extends io.pulumi.r
     	      this.deviceTypeZeroclient = defaults.deviceTypeZeroclient;
         }
 
-        public Builder setDeviceTypeAndroid(@Nullable Input<String> deviceTypeAndroid) {
+        public Builder deviceTypeAndroid(@Nullable Input<String> deviceTypeAndroid) {
             this.deviceTypeAndroid = deviceTypeAndroid;
             return this;
         }
 
-        public Builder setDeviceTypeAndroid(@Nullable String deviceTypeAndroid) {
+        public Builder deviceTypeAndroid(@Nullable String deviceTypeAndroid) {
             this.deviceTypeAndroid = Input.ofNullable(deviceTypeAndroid);
             return this;
         }
 
-        public Builder setDeviceTypeChromeos(@Nullable Input<String> deviceTypeChromeos) {
+        public Builder deviceTypeChromeos(@Nullable Input<String> deviceTypeChromeos) {
             this.deviceTypeChromeos = deviceTypeChromeos;
             return this;
         }
 
-        public Builder setDeviceTypeChromeos(@Nullable String deviceTypeChromeos) {
+        public Builder deviceTypeChromeos(@Nullable String deviceTypeChromeos) {
             this.deviceTypeChromeos = Input.ofNullable(deviceTypeChromeos);
             return this;
         }
 
-        public Builder setDeviceTypeIos(@Nullable Input<String> deviceTypeIos) {
+        public Builder deviceTypeIos(@Nullable Input<String> deviceTypeIos) {
             this.deviceTypeIos = deviceTypeIos;
             return this;
         }
 
-        public Builder setDeviceTypeIos(@Nullable String deviceTypeIos) {
+        public Builder deviceTypeIos(@Nullable String deviceTypeIos) {
             this.deviceTypeIos = Input.ofNullable(deviceTypeIos);
             return this;
         }
 
-        public Builder setDeviceTypeLinux(@Nullable Input<String> deviceTypeLinux) {
+        public Builder deviceTypeLinux(@Nullable Input<String> deviceTypeLinux) {
             this.deviceTypeLinux = deviceTypeLinux;
             return this;
         }
 
-        public Builder setDeviceTypeLinux(@Nullable String deviceTypeLinux) {
+        public Builder deviceTypeLinux(@Nullable String deviceTypeLinux) {
             this.deviceTypeLinux = Input.ofNullable(deviceTypeLinux);
             return this;
         }
 
-        public Builder setDeviceTypeOsx(@Nullable Input<String> deviceTypeOsx) {
+        public Builder deviceTypeOsx(@Nullable Input<String> deviceTypeOsx) {
             this.deviceTypeOsx = deviceTypeOsx;
             return this;
         }
 
-        public Builder setDeviceTypeOsx(@Nullable String deviceTypeOsx) {
+        public Builder deviceTypeOsx(@Nullable String deviceTypeOsx) {
             this.deviceTypeOsx = Input.ofNullable(deviceTypeOsx);
             return this;
         }
 
-        public Builder setDeviceTypeWeb(@Nullable Input<String> deviceTypeWeb) {
+        public Builder deviceTypeWeb(@Nullable Input<String> deviceTypeWeb) {
             this.deviceTypeWeb = deviceTypeWeb;
             return this;
         }
 
-        public Builder setDeviceTypeWeb(@Nullable String deviceTypeWeb) {
+        public Builder deviceTypeWeb(@Nullable String deviceTypeWeb) {
             this.deviceTypeWeb = Input.ofNullable(deviceTypeWeb);
             return this;
         }
 
-        public Builder setDeviceTypeWindows(@Nullable Input<String> deviceTypeWindows) {
+        public Builder deviceTypeWindows(@Nullable Input<String> deviceTypeWindows) {
             this.deviceTypeWindows = deviceTypeWindows;
             return this;
         }
 
-        public Builder setDeviceTypeWindows(@Nullable String deviceTypeWindows) {
+        public Builder deviceTypeWindows(@Nullable String deviceTypeWindows) {
             this.deviceTypeWindows = Input.ofNullable(deviceTypeWindows);
             return this;
         }
 
-        public Builder setDeviceTypeZeroclient(@Nullable Input<String> deviceTypeZeroclient) {
+        public Builder deviceTypeZeroclient(@Nullable Input<String> deviceTypeZeroclient) {
             this.deviceTypeZeroclient = deviceTypeZeroclient;
             return this;
         }
 
-        public Builder setDeviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
+        public Builder deviceTypeZeroclient(@Nullable String deviceTypeZeroclient) {
             this.deviceTypeZeroclient = Input.ofNullable(deviceTypeZeroclient);
             return this;
         }

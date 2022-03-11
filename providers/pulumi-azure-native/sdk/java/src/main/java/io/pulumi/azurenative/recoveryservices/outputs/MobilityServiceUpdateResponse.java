@@ -27,11 +27,11 @@ public final class MobilityServiceUpdateResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"osType","rebootStatus","version"})
+    @OutputCustomType.Constructor
     private MobilityServiceUpdateResponse(
-        @Nullable String osType,
-        @Nullable String rebootStatus,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("osType") @Nullable String osType,
+        @OutputCustomType.Parameter("rebootStatus") @Nullable String rebootStatus,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.osType = osType;
         this.rebootStatus = rebootStatus;
         this.version = version;
@@ -83,17 +83,17 @@ public final class MobilityServiceUpdateResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setRebootStatus(@Nullable String rebootStatus) {
+        public Builder rebootStatus(@Nullable String rebootStatus) {
             this.rebootStatus = rebootStatus;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

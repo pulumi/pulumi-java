@@ -55,16 +55,16 @@ public final class GoogleCloudRunOpV2ContainerResponse {
      */
     private final List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"args","command","env","image","name","ports","resources","volumeMounts"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ContainerResponse(
-        List<String> args,
-        List<String> command,
-        List<GoogleCloudRunOpV2EnvVarResponse> env,
-        String image,
-        String name,
-        List<GoogleCloudRunOpV2ContainerPortResponse> ports,
-        GoogleCloudRunOpV2ResourceRequirementsResponse resources,
-        List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("command") List<String> command,
+        @OutputCustomType.Parameter("env") List<GoogleCloudRunOpV2EnvVarResponse> env,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") List<GoogleCloudRunOpV2ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("resources") GoogleCloudRunOpV2ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("volumeMounts") List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
         this.args = args;
         this.command = command;
         this.env = env;
@@ -166,42 +166,42 @@ public final class GoogleCloudRunOpV2ContainerResponse {
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setEnv(List<GoogleCloudRunOpV2EnvVarResponse> env) {
+        public Builder env(List<GoogleCloudRunOpV2EnvVarResponse> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPorts(List<GoogleCloudRunOpV2ContainerPortResponse> ports) {
+        public Builder ports(List<GoogleCloudRunOpV2ContainerPortResponse> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setResources(GoogleCloudRunOpV2ResourceRequirementsResponse resources) {
+        public Builder resources(GoogleCloudRunOpV2ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setVolumeMounts(List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
+        public Builder volumeMounts(List<GoogleCloudRunOpV2VolumeMountResponse> volumeMounts) {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }

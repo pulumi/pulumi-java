@@ -58,17 +58,17 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","dateFormat","filePathPrefix","refreshToken","tenantId","timeFormat","tokenUserDisplayName","tokenUserPrincipalName","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreOutputDataSourceResponse(
-        @Nullable String accountName,
-        @Nullable String dateFormat,
-        @Nullable String filePathPrefix,
-        @Nullable String refreshToken,
-        @Nullable String tenantId,
-        @Nullable String timeFormat,
-        @Nullable String tokenUserDisplayName,
-        @Nullable String tokenUserPrincipalName,
-        String type) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("dateFormat") @Nullable String dateFormat,
+        @OutputCustomType.Parameter("filePathPrefix") @Nullable String filePathPrefix,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("timeFormat") @Nullable String timeFormat,
+        @OutputCustomType.Parameter("tokenUserDisplayName") @Nullable String tokenUserDisplayName,
+        @OutputCustomType.Parameter("tokenUserPrincipalName") @Nullable String tokenUserPrincipalName,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.dateFormat = dateFormat;
         this.filePathPrefix = filePathPrefix;
@@ -181,47 +181,47 @@ public final class AzureDataLakeStoreOutputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setDateFormat(@Nullable String dateFormat) {
+        public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
-        public Builder setFilePathPrefix(@Nullable String filePathPrefix) {
+        public Builder filePathPrefix(@Nullable String filePathPrefix) {
             this.filePathPrefix = filePathPrefix;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTimeFormat(@Nullable String timeFormat) {
+        public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
-        public Builder setTokenUserDisplayName(@Nullable String tokenUserDisplayName) {
+        public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
             this.tokenUserDisplayName = tokenUserDisplayName;
             return this;
         }
 
-        public Builder setTokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
+        public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
             this.tokenUserPrincipalName = tokenUserPrincipalName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

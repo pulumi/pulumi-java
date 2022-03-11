@@ -36,12 +36,12 @@ public final class PeeringPropertiesDirectResponse {
      */
     private final Boolean useForPeeringService;
 
-    @OutputCustomType.Constructor({"connections","directPeeringType","peerAsn","useForPeeringService"})
+    @OutputCustomType.Constructor
     private PeeringPropertiesDirectResponse(
-        @Nullable List<DirectConnectionResponse> connections,
-        @Nullable String directPeeringType,
-        @Nullable SubResourceResponse peerAsn,
-        Boolean useForPeeringService) {
+        @OutputCustomType.Parameter("connections") @Nullable List<DirectConnectionResponse> connections,
+        @OutputCustomType.Parameter("directPeeringType") @Nullable String directPeeringType,
+        @OutputCustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn,
+        @OutputCustomType.Parameter("useForPeeringService") Boolean useForPeeringService) {
         this.connections = connections;
         this.directPeeringType = directPeeringType;
         this.peerAsn = peerAsn;
@@ -103,22 +103,22 @@ public final class PeeringPropertiesDirectResponse {
     	      this.useForPeeringService = defaults.useForPeeringService;
         }
 
-        public Builder setConnections(@Nullable List<DirectConnectionResponse> connections) {
+        public Builder connections(@Nullable List<DirectConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setDirectPeeringType(@Nullable String directPeeringType) {
+        public Builder directPeeringType(@Nullable String directPeeringType) {
             this.directPeeringType = directPeeringType;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceResponse peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setUseForPeeringService(Boolean useForPeeringService) {
+        public Builder useForPeeringService(Boolean useForPeeringService) {
             this.useForPeeringService = Objects.requireNonNull(useForPeeringService);
             return this;
         }

@@ -147,34 +147,34 @@ public final class GetWatchlistResult {
      */
     private final @Nullable String watchlistType;
 
-    @OutputCustomType.Constructor({"contentType","created","createdBy","defaultDuration","description","displayName","etag","id","isDeleted","itemsSearchKey","labels","name","numberOfLinesToSkip","provider","rawContent","source","systemData","tenantId","type","updated","updatedBy","uploadStatus","watchlistAlias","watchlistId","watchlistItemsCount","watchlistType"})
+    @OutputCustomType.Constructor
     private GetWatchlistResult(
-        @Nullable String contentType,
-        @Nullable String created,
-        @Nullable WatchlistUserInfoResponse createdBy,
-        @Nullable String defaultDuration,
-        @Nullable String description,
-        String displayName,
-        @Nullable String etag,
-        String id,
-        @Nullable Boolean isDeleted,
-        String itemsSearchKey,
-        @Nullable List<String> labels,
-        String name,
-        @Nullable Integer numberOfLinesToSkip,
-        String provider,
-        @Nullable String rawContent,
-        String source,
-        SystemDataResponse systemData,
-        @Nullable String tenantId,
-        String type,
-        @Nullable String updated,
-        @Nullable WatchlistUserInfoResponse updatedBy,
-        @Nullable String uploadStatus,
-        @Nullable String watchlistAlias,
-        @Nullable String watchlistId,
-        @Nullable Integer watchlistItemsCount,
-        @Nullable String watchlistType) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
+        @OutputCustomType.Parameter("defaultDuration") @Nullable String defaultDuration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
+        @OutputCustomType.Parameter("itemsSearchKey") String itemsSearchKey,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfLinesToSkip") @Nullable Integer numberOfLinesToSkip,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("rawContent") @Nullable String rawContent,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updated") @Nullable String updated,
+        @OutputCustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
+        @OutputCustomType.Parameter("uploadStatus") @Nullable String uploadStatus,
+        @OutputCustomType.Parameter("watchlistAlias") @Nullable String watchlistAlias,
+        @OutputCustomType.Parameter("watchlistId") @Nullable String watchlistId,
+        @OutputCustomType.Parameter("watchlistItemsCount") @Nullable Integer watchlistItemsCount,
+        @OutputCustomType.Parameter("watchlistType") @Nullable String watchlistType) {
         this.contentType = contentType;
         this.created = created;
         this.createdBy = createdBy;
@@ -456,132 +456,132 @@ public final class GetWatchlistResult {
     	      this.watchlistType = defaults.watchlistType;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable WatchlistUserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable WatchlistUserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDefaultDuration(@Nullable String defaultDuration) {
+        public Builder defaultDuration(@Nullable String defaultDuration) {
             this.defaultDuration = defaultDuration;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsDeleted(@Nullable Boolean isDeleted) {
+        public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
 
-        public Builder setItemsSearchKey(String itemsSearchKey) {
+        public Builder itemsSearchKey(String itemsSearchKey) {
             this.itemsSearchKey = Objects.requireNonNull(itemsSearchKey);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfLinesToSkip(@Nullable Integer numberOfLinesToSkip) {
+        public Builder numberOfLinesToSkip(@Nullable Integer numberOfLinesToSkip) {
             this.numberOfLinesToSkip = numberOfLinesToSkip;
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setRawContent(@Nullable String rawContent) {
+        public Builder rawContent(@Nullable String rawContent) {
             this.rawContent = rawContent;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
+        public Builder updatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setUploadStatus(@Nullable String uploadStatus) {
+        public Builder uploadStatus(@Nullable String uploadStatus) {
             this.uploadStatus = uploadStatus;
             return this;
         }
 
-        public Builder setWatchlistAlias(@Nullable String watchlistAlias) {
+        public Builder watchlistAlias(@Nullable String watchlistAlias) {
             this.watchlistAlias = watchlistAlias;
             return this;
         }
 
-        public Builder setWatchlistId(@Nullable String watchlistId) {
+        public Builder watchlistId(@Nullable String watchlistId) {
             this.watchlistId = watchlistId;
             return this;
         }
 
-        public Builder setWatchlistItemsCount(@Nullable Integer watchlistItemsCount) {
+        public Builder watchlistItemsCount(@Nullable Integer watchlistItemsCount) {
             this.watchlistItemsCount = watchlistItemsCount;
             return this;
         }
 
-        public Builder setWatchlistType(@Nullable String watchlistType) {
+        public Builder watchlistType(@Nullable String watchlistType) {
             this.watchlistType = watchlistType;
             return this;
         }

@@ -14,10 +14,10 @@ public final class KeyRingImportJobAttestation {
     private final @Nullable String content;
     private final @Nullable String format;
 
-    @OutputCustomType.Constructor({"content","format"})
+    @OutputCustomType.Constructor
     private KeyRingImportJobAttestation(
-        @Nullable String content,
-        @Nullable String format) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("format") @Nullable String format) {
         this.content = content;
         this.format = format;
     }
@@ -51,12 +51,12 @@ public final class KeyRingImportJobAttestation {
     	      this.format = defaults.format;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }

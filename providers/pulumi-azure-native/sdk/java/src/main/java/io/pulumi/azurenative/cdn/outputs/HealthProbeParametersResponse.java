@@ -33,12 +33,12 @@ public final class HealthProbeParametersResponse {
      */
     private final @Nullable String probeRequestType;
 
-    @OutputCustomType.Constructor({"probeIntervalInSeconds","probePath","probeProtocol","probeRequestType"})
+    @OutputCustomType.Constructor
     private HealthProbeParametersResponse(
-        @Nullable Integer probeIntervalInSeconds,
-        @Nullable String probePath,
-        @Nullable String probeProtocol,
-        @Nullable String probeRequestType) {
+        @OutputCustomType.Parameter("probeIntervalInSeconds") @Nullable Integer probeIntervalInSeconds,
+        @OutputCustomType.Parameter("probePath") @Nullable String probePath,
+        @OutputCustomType.Parameter("probeProtocol") @Nullable String probeProtocol,
+        @OutputCustomType.Parameter("probeRequestType") @Nullable String probeRequestType) {
         this.probeIntervalInSeconds = probeIntervalInSeconds;
         this.probePath = probePath;
         this.probeProtocol = probeProtocol;
@@ -100,22 +100,22 @@ public final class HealthProbeParametersResponse {
     	      this.probeRequestType = defaults.probeRequestType;
         }
 
-        public Builder setProbeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
+        public Builder probeIntervalInSeconds(@Nullable Integer probeIntervalInSeconds) {
             this.probeIntervalInSeconds = probeIntervalInSeconds;
             return this;
         }
 
-        public Builder setProbePath(@Nullable String probePath) {
+        public Builder probePath(@Nullable String probePath) {
             this.probePath = probePath;
             return this;
         }
 
-        public Builder setProbeProtocol(@Nullable String probeProtocol) {
+        public Builder probeProtocol(@Nullable String probeProtocol) {
             this.probeProtocol = probeProtocol;
             return this;
         }
 
-        public Builder setProbeRequestType(@Nullable String probeRequestType) {
+        public Builder probeRequestType(@Nullable String probeRequestType) {
             this.probeRequestType = probeRequestType;
             return this;
         }

@@ -26,11 +26,11 @@ public final class BootDiagnosticsInstanceViewResponse {
      */
     private final InstanceViewStatusResponse status;
 
-    @OutputCustomType.Constructor({"consoleScreenshotBlobUri","serialConsoleLogBlobUri","status"})
+    @OutputCustomType.Constructor
     private BootDiagnosticsInstanceViewResponse(
-        String consoleScreenshotBlobUri,
-        String serialConsoleLogBlobUri,
-        InstanceViewStatusResponse status) {
+        @OutputCustomType.Parameter("consoleScreenshotBlobUri") String consoleScreenshotBlobUri,
+        @OutputCustomType.Parameter("serialConsoleLogBlobUri") String serialConsoleLogBlobUri,
+        @OutputCustomType.Parameter("status") InstanceViewStatusResponse status) {
         this.consoleScreenshotBlobUri = consoleScreenshotBlobUri;
         this.serialConsoleLogBlobUri = serialConsoleLogBlobUri;
         this.status = status;
@@ -82,17 +82,17 @@ public final class BootDiagnosticsInstanceViewResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setConsoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
+        public Builder consoleScreenshotBlobUri(String consoleScreenshotBlobUri) {
             this.consoleScreenshotBlobUri = Objects.requireNonNull(consoleScreenshotBlobUri);
             return this;
         }
 
-        public Builder setSerialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
+        public Builder serialConsoleLogBlobUri(String serialConsoleLogBlobUri) {
             this.serialConsoleLogBlobUri = Objects.requireNonNull(serialConsoleLogBlobUri);
             return this;
         }
 
-        public Builder setStatus(InstanceViewStatusResponse status) {
+        public Builder status(InstanceViewStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

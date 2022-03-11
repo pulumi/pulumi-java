@@ -38,13 +38,13 @@ public final class WorkbookTemplateGalleryResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"category","name","order","resourceType","type"})
+    @OutputCustomType.Constructor
     private WorkbookTemplateGalleryResponse(
-        @Nullable String category,
-        @Nullable String name,
-        @Nullable Integer order,
-        @Nullable String resourceType,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.category = category;
         this.name = name;
         this.order = order;
@@ -116,27 +116,27 @@ public final class WorkbookTemplateGalleryResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

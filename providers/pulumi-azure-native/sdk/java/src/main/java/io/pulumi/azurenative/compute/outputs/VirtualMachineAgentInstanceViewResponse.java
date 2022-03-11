@@ -30,11 +30,11 @@ public final class VirtualMachineAgentInstanceViewResponse {
      */
     private final @Nullable String vmAgentVersion;
 
-    @OutputCustomType.Constructor({"extensionHandlers","statuses","vmAgentVersion"})
+    @OutputCustomType.Constructor
     private VirtualMachineAgentInstanceViewResponse(
-        @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
-        @Nullable List<InstanceViewStatusResponse> statuses,
-        @Nullable String vmAgentVersion) {
+        @OutputCustomType.Parameter("extensionHandlers") @Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("vmAgentVersion") @Nullable String vmAgentVersion) {
         this.extensionHandlers = extensionHandlers;
         this.statuses = statuses;
         this.vmAgentVersion = vmAgentVersion;
@@ -86,17 +86,17 @@ public final class VirtualMachineAgentInstanceViewResponse {
     	      this.vmAgentVersion = defaults.vmAgentVersion;
         }
 
-        public Builder setExtensionHandlers(@Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers) {
+        public Builder extensionHandlers(@Nullable List<VirtualMachineExtensionHandlerInstanceViewResponse> extensionHandlers) {
             this.extensionHandlers = extensionHandlers;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setVmAgentVersion(@Nullable String vmAgentVersion) {
+        public Builder vmAgentVersion(@Nullable String vmAgentVersion) {
             this.vmAgentVersion = vmAgentVersion;
             return this;
         }

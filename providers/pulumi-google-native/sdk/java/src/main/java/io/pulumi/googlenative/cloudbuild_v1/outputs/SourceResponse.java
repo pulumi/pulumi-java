@@ -27,11 +27,11 @@ public final class SourceResponse {
      */
     private final StorageSourceManifestResponse storageSourceManifest;
 
-    @OutputCustomType.Constructor({"repoSource","storageSource","storageSourceManifest"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource,
-        StorageSourceManifestResponse storageSourceManifest) {
+        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource,
+        @OutputCustomType.Parameter("storageSourceManifest") StorageSourceManifestResponse storageSourceManifest) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
         this.storageSourceManifest = storageSourceManifest;
@@ -83,17 +83,17 @@ public final class SourceResponse {
     	      this.storageSourceManifest = defaults.storageSourceManifest;
         }
 
-        public Builder setRepoSource(RepoSourceResponse repoSource) {
+        public Builder repoSource(RepoSourceResponse repoSource) {
             this.repoSource = Objects.requireNonNull(repoSource);
             return this;
         }
 
-        public Builder setStorageSource(StorageSourceResponse storageSource) {
+        public Builder storageSource(StorageSourceResponse storageSource) {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
 
-        public Builder setStorageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
+        public Builder storageSourceManifest(StorageSourceManifestResponse storageSourceManifest) {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
         }

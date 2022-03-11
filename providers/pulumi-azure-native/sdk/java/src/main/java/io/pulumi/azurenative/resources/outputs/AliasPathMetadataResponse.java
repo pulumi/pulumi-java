@@ -20,10 +20,10 @@ public final class AliasPathMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"attributes","type"})
+    @OutputCustomType.Constructor
     private AliasPathMetadataResponse(
-        String attributes,
-        String type) {
+        @OutputCustomType.Parameter("attributes") String attributes,
+        @OutputCustomType.Parameter("type") String type) {
         this.attributes = attributes;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class AliasPathMetadataResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAttributes(String attributes) {
+        public Builder attributes(String attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

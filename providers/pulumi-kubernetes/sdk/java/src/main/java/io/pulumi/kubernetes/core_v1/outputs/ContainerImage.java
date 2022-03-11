@@ -24,10 +24,10 @@ public final class ContainerImage {
      */
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"names","sizeBytes"})
+    @OutputCustomType.Constructor
     private ContainerImage(
-        List<String> names,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.names = names;
         this.sizeBytes = sizeBytes;
     }
@@ -69,12 +69,12 @@ public final class ContainerImage {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }

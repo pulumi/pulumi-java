@@ -47,15 +47,15 @@ public final class ConditionsResponse {
      */
     private final @Nullable ConditionResponse targetResourceType;
 
-    @OutputCustomType.Constructor({"alertContext","alertRuleId","description","monitorCondition","monitorService","severity","targetResourceType"})
+    @OutputCustomType.Constructor
     private ConditionsResponse(
-        @Nullable ConditionResponse alertContext,
-        @Nullable ConditionResponse alertRuleId,
-        @Nullable ConditionResponse description,
-        @Nullable ConditionResponse monitorCondition,
-        @Nullable ConditionResponse monitorService,
-        @Nullable ConditionResponse severity,
-        @Nullable ConditionResponse targetResourceType) {
+        @OutputCustomType.Parameter("alertContext") @Nullable ConditionResponse alertContext,
+        @OutputCustomType.Parameter("alertRuleId") @Nullable ConditionResponse alertRuleId,
+        @OutputCustomType.Parameter("description") @Nullable ConditionResponse description,
+        @OutputCustomType.Parameter("monitorCondition") @Nullable ConditionResponse monitorCondition,
+        @OutputCustomType.Parameter("monitorService") @Nullable ConditionResponse monitorService,
+        @OutputCustomType.Parameter("severity") @Nullable ConditionResponse severity,
+        @OutputCustomType.Parameter("targetResourceType") @Nullable ConditionResponse targetResourceType) {
         this.alertContext = alertContext;
         this.alertRuleId = alertRuleId;
         this.description = description;
@@ -147,37 +147,37 @@ public final class ConditionsResponse {
     	      this.targetResourceType = defaults.targetResourceType;
         }
 
-        public Builder setAlertContext(@Nullable ConditionResponse alertContext) {
+        public Builder alertContext(@Nullable ConditionResponse alertContext) {
             this.alertContext = alertContext;
             return this;
         }
 
-        public Builder setAlertRuleId(@Nullable ConditionResponse alertRuleId) {
+        public Builder alertRuleId(@Nullable ConditionResponse alertRuleId) {
             this.alertRuleId = alertRuleId;
             return this;
         }
 
-        public Builder setDescription(@Nullable ConditionResponse description) {
+        public Builder description(@Nullable ConditionResponse description) {
             this.description = description;
             return this;
         }
 
-        public Builder setMonitorCondition(@Nullable ConditionResponse monitorCondition) {
+        public Builder monitorCondition(@Nullable ConditionResponse monitorCondition) {
             this.monitorCondition = monitorCondition;
             return this;
         }
 
-        public Builder setMonitorService(@Nullable ConditionResponse monitorService) {
+        public Builder monitorService(@Nullable ConditionResponse monitorService) {
             this.monitorService = monitorService;
             return this;
         }
 
-        public Builder setSeverity(@Nullable ConditionResponse severity) {
+        public Builder severity(@Nullable ConditionResponse severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable ConditionResponse targetResourceType) {
+        public Builder targetResourceType(@Nullable ConditionResponse targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }

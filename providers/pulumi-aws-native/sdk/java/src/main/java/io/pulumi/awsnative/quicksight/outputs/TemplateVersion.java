@@ -62,17 +62,17 @@ public final class TemplateVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"createdTime","dataSetConfigurations","description","errors","sheets","sourceEntityArn","status","themeArn","versionNumber"})
+    @OutputCustomType.Constructor
     private TemplateVersion(
-        @Nullable String createdTime,
-        @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
-        @Nullable String description,
-        @Nullable List<TemplateError> errors,
-        @Nullable List<TemplateSheet> sheets,
-        @Nullable String sourceEntityArn,
-        @Nullable TemplateResourceStatus status,
-        @Nullable String themeArn,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSetConfigurations") @Nullable List<TemplateDataSetConfiguration> dataSetConfigurations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<TemplateError> errors,
+        @OutputCustomType.Parameter("sheets") @Nullable List<TemplateSheet> sheets,
+        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @OutputCustomType.Parameter("status") @Nullable TemplateResourceStatus status,
+        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.createdTime = createdTime;
         this.dataSetConfigurations = dataSetConfigurations;
         this.description = description;
@@ -183,47 +183,47 @@ public final class TemplateVersion {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSetConfigurations(@Nullable List<TemplateDataSetConfiguration> dataSetConfigurations) {
+        public Builder dataSetConfigurations(@Nullable List<TemplateDataSetConfiguration> dataSetConfigurations) {
             this.dataSetConfigurations = dataSetConfigurations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<TemplateError> errors) {
+        public Builder errors(@Nullable List<TemplateError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setSheets(@Nullable List<TemplateSheet> sheets) {
+        public Builder sheets(@Nullable List<TemplateSheet> sheets) {
             this.sheets = sheets;
             return this;
         }
 
-        public Builder setSourceEntityArn(@Nullable String sourceEntityArn) {
+        public Builder sourceEntityArn(@Nullable String sourceEntityArn) {
             this.sourceEntityArn = sourceEntityArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable TemplateResourceStatus status) {
+        public Builder status(@Nullable TemplateResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Double versionNumber) {
+        public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

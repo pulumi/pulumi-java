@@ -38,14 +38,14 @@ public final class GetGrantResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"grantArn","grantName","homeRegion","licenseArn","status","version"})
+    @OutputCustomType.Constructor
     private GetGrantResult(
-        @Nullable String grantArn,
-        @Nullable String grantName,
-        @Nullable String homeRegion,
-        @Nullable String licenseArn,
-        @Nullable String status,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("grantArn") @Nullable String grantArn,
+        @OutputCustomType.Parameter("grantName") @Nullable String grantName,
+        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.grantArn = grantArn;
         this.grantName = grantName;
         this.homeRegion = homeRegion;
@@ -123,32 +123,32 @@ public final class GetGrantResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setGrantArn(@Nullable String grantArn) {
+        public Builder grantArn(@Nullable String grantArn) {
             this.grantArn = grantArn;
             return this;
         }
 
-        public Builder setGrantName(@Nullable String grantName) {
+        public Builder grantName(@Nullable String grantName) {
             this.grantName = grantName;
             return this;
         }
 
-        public Builder setHomeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
 
-        public Builder setLicenseArn(@Nullable String licenseArn) {
+        public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

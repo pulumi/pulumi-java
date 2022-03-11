@@ -46,14 +46,14 @@ public final class WorkflowTemplateJobSparkSqlJob {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobSparkSqlJob(
-        @Nullable List<String> jarFileUris,
-        @Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;
@@ -135,32 +135,32 @@ public final class WorkflowTemplateJobSparkSqlJob {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobSparkSqlJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList) {
+        public Builder queryList(@Nullable WorkflowTemplateJobSparkSqlJobQueryList queryList) {
             this.queryList = queryList;
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Map<String,String> scriptVariables) {
+        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }

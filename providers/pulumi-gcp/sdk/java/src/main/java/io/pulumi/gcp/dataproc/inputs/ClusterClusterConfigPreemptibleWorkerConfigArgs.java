@@ -86,32 +86,32 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigArgs extends io.pu
     	      this.numInstances = defaults.numInstances;
         }
 
-        public Builder setDiskConfig(@Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig) {
+        public Builder diskConfig(@Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs> diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
+        public Builder diskConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfigDiskConfigArgs diskConfig) {
             this.diskConfig = Input.ofNullable(diskConfig);
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable Input<List<String>> instanceNames) {
+        public Builder instanceNames(@Nullable Input<List<String>> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = Input.ofNullable(instanceNames);
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Input<Integer> numInstances) {
+        public Builder numInstances(@Nullable Input<Integer> numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }

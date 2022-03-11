@@ -37,11 +37,11 @@ public final class QueueRateLimits {
      */
     private final @Nullable Double maxDispatchesPerSecond;
 
-    @OutputCustomType.Constructor({"maxBurstSize","maxConcurrentDispatches","maxDispatchesPerSecond"})
+    @OutputCustomType.Constructor
     private QueueRateLimits(
-        @Nullable Integer maxBurstSize,
-        @Nullable Integer maxConcurrentDispatches,
-        @Nullable Double maxDispatchesPerSecond) {
+        @OutputCustomType.Parameter("maxBurstSize") @Nullable Integer maxBurstSize,
+        @OutputCustomType.Parameter("maxConcurrentDispatches") @Nullable Integer maxConcurrentDispatches,
+        @OutputCustomType.Parameter("maxDispatchesPerSecond") @Nullable Double maxDispatchesPerSecond) {
         this.maxBurstSize = maxBurstSize;
         this.maxConcurrentDispatches = maxConcurrentDispatches;
         this.maxDispatchesPerSecond = maxDispatchesPerSecond;
@@ -102,17 +102,17 @@ public final class QueueRateLimits {
     	      this.maxDispatchesPerSecond = defaults.maxDispatchesPerSecond;
         }
 
-        public Builder setMaxBurstSize(@Nullable Integer maxBurstSize) {
+        public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
             this.maxBurstSize = maxBurstSize;
             return this;
         }
 
-        public Builder setMaxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
+        public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
             this.maxConcurrentDispatches = maxConcurrentDispatches;
             return this;
         }
 
-        public Builder setMaxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
+        public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
             this.maxDispatchesPerSecond = maxDispatchesPerSecond;
             return this;
         }

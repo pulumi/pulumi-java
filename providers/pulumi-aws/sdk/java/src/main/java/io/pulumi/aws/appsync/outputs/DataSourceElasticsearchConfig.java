@@ -22,10 +22,10 @@ public final class DataSourceElasticsearchConfig {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"endpoint","region"})
+    @OutputCustomType.Constructor
     private DataSourceElasticsearchConfig(
-        String endpoint,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.endpoint = endpoint;
         this.region = region;
     }
@@ -67,12 +67,12 @@ public final class DataSourceElasticsearchConfig {
     	      this.region = defaults.region;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

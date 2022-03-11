@@ -43,14 +43,14 @@ public final class ReportableExceptionResponse {
      */
     private final String stackTrace;
 
-    @OutputCustomType.Constructor({"actionableMessage","filePath","hResult","lineNumber","message","stackTrace"})
+    @OutputCustomType.Constructor
     private ReportableExceptionResponse(
-        @Nullable String actionableMessage,
-        String filePath,
-        Integer hResult,
-        String lineNumber,
-        String message,
-        String stackTrace) {
+        @OutputCustomType.Parameter("actionableMessage") @Nullable String actionableMessage,
+        @OutputCustomType.Parameter("filePath") String filePath,
+        @OutputCustomType.Parameter("hResult") Integer hResult,
+        @OutputCustomType.Parameter("lineNumber") String lineNumber,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("stackTrace") String stackTrace) {
         this.actionableMessage = actionableMessage;
         this.filePath = filePath;
         this.hResult = hResult;
@@ -132,32 +132,32 @@ public final class ReportableExceptionResponse {
     	      this.stackTrace = defaults.stackTrace;
         }
 
-        public Builder setActionableMessage(@Nullable String actionableMessage) {
+        public Builder actionableMessage(@Nullable String actionableMessage) {
             this.actionableMessage = actionableMessage;
             return this;
         }
 
-        public Builder setFilePath(String filePath) {
+        public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setHResult(Integer hResult) {
+        public Builder hResult(Integer hResult) {
             this.hResult = Objects.requireNonNull(hResult);
             return this;
         }
 
-        public Builder setLineNumber(String lineNumber) {
+        public Builder lineNumber(String lineNumber) {
             this.lineNumber = Objects.requireNonNull(lineNumber);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setStackTrace(String stackTrace) {
+        public Builder stackTrace(String stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }

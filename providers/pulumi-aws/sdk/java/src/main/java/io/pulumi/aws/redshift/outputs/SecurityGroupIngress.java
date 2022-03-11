@@ -28,11 +28,11 @@ public final class SecurityGroupIngress {
      */
     private final @Nullable String securityGroupOwnerId;
 
-    @OutputCustomType.Constructor({"cidr","securityGroupName","securityGroupOwnerId"})
+    @OutputCustomType.Constructor
     private SecurityGroupIngress(
-        @Nullable String cidr,
-        @Nullable String securityGroupName,
-        @Nullable String securityGroupOwnerId) {
+        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
+        @OutputCustomType.Parameter("securityGroupName") @Nullable String securityGroupName,
+        @OutputCustomType.Parameter("securityGroupOwnerId") @Nullable String securityGroupOwnerId) {
         this.cidr = cidr;
         this.securityGroupName = securityGroupName;
         this.securityGroupOwnerId = securityGroupOwnerId;
@@ -85,17 +85,17 @@ public final class SecurityGroupIngress {
     	      this.securityGroupOwnerId = defaults.securityGroupOwnerId;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setSecurityGroupName(@Nullable String securityGroupName) {
+        public Builder securityGroupName(@Nullable String securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
 
-        public Builder setSecurityGroupOwnerId(@Nullable String securityGroupOwnerId) {
+        public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }

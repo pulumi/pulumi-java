@@ -104,42 +104,42 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFilterAction(Input<FilterAction> filterAction) {
+        public Builder filterAction(Input<FilterAction> filterAction) {
             this.filterAction = Objects.requireNonNull(filterAction);
             return this;
         }
 
-        public Builder setFilterAction(FilterAction filterAction) {
+        public Builder filterAction(FilterAction filterAction) {
             this.filterAction = Input.of(Objects.requireNonNull(filterAction));
             return this;
         }
 
-        public Builder setFilterCriteria(Input<FilterCriteriaArgs> filterCriteria) {
+        public Builder filterCriteria(Input<FilterCriteriaArgs> filterCriteria) {
             this.filterCriteria = Objects.requireNonNull(filterCriteria);
             return this;
         }
 
-        public Builder setFilterCriteria(FilterCriteriaArgs filterCriteria) {
+        public Builder filterCriteria(FilterCriteriaArgs filterCriteria) {
             this.filterCriteria = Input.of(Objects.requireNonNull(filterCriteria));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

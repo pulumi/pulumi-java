@@ -120,52 +120,52 @@ public final class ServerTrustGroupArgs extends io.pulumi.resources.ResourceArgs
     	      this.trustScopes = defaults.trustScopes;
         }
 
-        public Builder setGroupMembers(Input<List<ServerInfoArgs>> groupMembers) {
+        public Builder groupMembers(Input<List<ServerInfoArgs>> groupMembers) {
             this.groupMembers = Objects.requireNonNull(groupMembers);
             return this;
         }
 
-        public Builder setGroupMembers(List<ServerInfoArgs> groupMembers) {
+        public Builder groupMembers(List<ServerInfoArgs> groupMembers) {
             this.groupMembers = Input.of(Objects.requireNonNull(groupMembers));
             return this;
         }
 
-        public Builder setLocationName(Input<String> locationName) {
+        public Builder locationName(Input<String> locationName) {
             this.locationName = Objects.requireNonNull(locationName);
             return this;
         }
 
-        public Builder setLocationName(String locationName) {
+        public Builder locationName(String locationName) {
             this.locationName = Input.of(Objects.requireNonNull(locationName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerTrustGroupName(@Nullable Input<String> serverTrustGroupName) {
+        public Builder serverTrustGroupName(@Nullable Input<String> serverTrustGroupName) {
             this.serverTrustGroupName = serverTrustGroupName;
             return this;
         }
 
-        public Builder setServerTrustGroupName(@Nullable String serverTrustGroupName) {
+        public Builder serverTrustGroupName(@Nullable String serverTrustGroupName) {
             this.serverTrustGroupName = Input.ofNullable(serverTrustGroupName);
             return this;
         }
 
-        public Builder setTrustScopes(Input<List<String>> trustScopes) {
+        public Builder trustScopes(Input<List<String>> trustScopes) {
             this.trustScopes = Objects.requireNonNull(trustScopes);
             return this;
         }
 
-        public Builder setTrustScopes(List<String> trustScopes) {
+        public Builder trustScopes(List<String> trustScopes) {
             this.trustScopes = Input.of(Objects.requireNonNull(trustScopes));
             return this;
         }

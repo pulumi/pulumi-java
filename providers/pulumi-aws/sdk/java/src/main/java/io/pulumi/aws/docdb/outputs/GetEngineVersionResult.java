@@ -48,18 +48,18 @@ public final class GetEngineVersionResult {
      */
     private final String versionDescription;
 
-    @OutputCustomType.Constructor({"engine","engineDescription","exportableLogTypes","id","parameterGroupFamily","preferredVersions","supportsLogExportsToCloudwatch","validUpgradeTargets","version","versionDescription"})
+    @OutputCustomType.Constructor
     private GetEngineVersionResult(
-        @Nullable String engine,
-        String engineDescription,
-        List<String> exportableLogTypes,
-        String id,
-        String parameterGroupFamily,
-        @Nullable List<String> preferredVersions,
-        Boolean supportsLogExportsToCloudwatch,
-        List<String> validUpgradeTargets,
-        String version,
-        String versionDescription) {
+        @OutputCustomType.Parameter("engine") @Nullable String engine,
+        @OutputCustomType.Parameter("engineDescription") String engineDescription,
+        @OutputCustomType.Parameter("exportableLogTypes") List<String> exportableLogTypes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameterGroupFamily") String parameterGroupFamily,
+        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @OutputCustomType.Parameter("supportsLogExportsToCloudwatch") Boolean supportsLogExportsToCloudwatch,
+        @OutputCustomType.Parameter("validUpgradeTargets") List<String> validUpgradeTargets,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionDescription") String versionDescription) {
         this.engine = engine;
         this.engineDescription = engineDescription;
         this.exportableLogTypes = exportableLogTypes;
@@ -165,52 +165,52 @@ public final class GetEngineVersionResult {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setEngine(@Nullable String engine) {
+        public Builder engine(@Nullable String engine) {
             this.engine = engine;
             return this;
         }
 
-        public Builder setEngineDescription(String engineDescription) {
+        public Builder engineDescription(String engineDescription) {
             this.engineDescription = Objects.requireNonNull(engineDescription);
             return this;
         }
 
-        public Builder setExportableLogTypes(List<String> exportableLogTypes) {
+        public Builder exportableLogTypes(List<String> exportableLogTypes) {
             this.exportableLogTypes = Objects.requireNonNull(exportableLogTypes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameterGroupFamily(String parameterGroupFamily) {
+        public Builder parameterGroupFamily(String parameterGroupFamily) {
             this.parameterGroupFamily = Objects.requireNonNull(parameterGroupFamily);
             return this;
         }
 
-        public Builder setPreferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
 
-        public Builder setSupportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
+        public Builder supportsLogExportsToCloudwatch(Boolean supportsLogExportsToCloudwatch) {
             this.supportsLogExportsToCloudwatch = Objects.requireNonNull(supportsLogExportsToCloudwatch);
             return this;
         }
 
-        public Builder setValidUpgradeTargets(List<String> validUpgradeTargets) {
+        public Builder validUpgradeTargets(List<String> validUpgradeTargets) {
             this.validUpgradeTargets = Objects.requireNonNull(validUpgradeTargets);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionDescription(String versionDescription) {
+        public Builder versionDescription(String versionDescription) {
             this.versionDescription = Objects.requireNonNull(versionDescription);
             return this;
         }

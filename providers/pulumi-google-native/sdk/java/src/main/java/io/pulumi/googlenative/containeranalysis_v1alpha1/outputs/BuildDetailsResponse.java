@@ -27,11 +27,11 @@ public final class BuildDetailsResponse {
      */
     private final String provenanceBytes;
 
-    @OutputCustomType.Constructor({"intotoStatement","provenance","provenanceBytes"})
+    @OutputCustomType.Constructor
     private BuildDetailsResponse(
-        InTotoStatementResponse intotoStatement,
-        BuildProvenanceResponse provenance,
-        String provenanceBytes) {
+        @OutputCustomType.Parameter("intotoStatement") InTotoStatementResponse intotoStatement,
+        @OutputCustomType.Parameter("provenance") BuildProvenanceResponse provenance,
+        @OutputCustomType.Parameter("provenanceBytes") String provenanceBytes) {
         this.intotoStatement = intotoStatement;
         this.provenance = provenance;
         this.provenanceBytes = provenanceBytes;
@@ -83,17 +83,17 @@ public final class BuildDetailsResponse {
     	      this.provenanceBytes = defaults.provenanceBytes;
         }
 
-        public Builder setIntotoStatement(InTotoStatementResponse intotoStatement) {
+        public Builder intotoStatement(InTotoStatementResponse intotoStatement) {
             this.intotoStatement = Objects.requireNonNull(intotoStatement);
             return this;
         }
 
-        public Builder setProvenance(BuildProvenanceResponse provenance) {
+        public Builder provenance(BuildProvenanceResponse provenance) {
             this.provenance = Objects.requireNonNull(provenance);
             return this;
         }
 
-        public Builder setProvenanceBytes(String provenanceBytes) {
+        public Builder provenanceBytes(String provenanceBytes) {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }

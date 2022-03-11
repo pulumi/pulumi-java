@@ -103,42 +103,42 @@ public final class ManagementConfigurationArgs extends io.pulumi.resources.Resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagementConfigurationName(@Nullable Input<String> managementConfigurationName) {
+        public Builder managementConfigurationName(@Nullable Input<String> managementConfigurationName) {
             this.managementConfigurationName = managementConfigurationName;
             return this;
         }
 
-        public Builder setManagementConfigurationName(@Nullable String managementConfigurationName) {
+        public Builder managementConfigurationName(@Nullable String managementConfigurationName) {
             this.managementConfigurationName = Input.ofNullable(managementConfigurationName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<ManagementConfigurationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ManagementConfigurationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ManagementConfigurationPropertiesArgs properties) {
+        public Builder properties(@Nullable ManagementConfigurationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

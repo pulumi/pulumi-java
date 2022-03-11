@@ -22,10 +22,10 @@ public final class OSPolicyResourceGroupResponse {
      */
     private final List<OSPolicyResourceResponse> resources;
 
-    @OutputCustomType.Constructor({"inventoryFilters","resources"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceGroupResponse(
-        List<OSPolicyInventoryFilterResponse> inventoryFilters,
-        List<OSPolicyResourceResponse> resources) {
+        @OutputCustomType.Parameter("inventoryFilters") List<OSPolicyInventoryFilterResponse> inventoryFilters,
+        @OutputCustomType.Parameter("resources") List<OSPolicyResourceResponse> resources) {
         this.inventoryFilters = inventoryFilters;
         this.resources = resources;
     }
@@ -67,12 +67,12 @@ public final class OSPolicyResourceGroupResponse {
     	      this.resources = defaults.resources;
         }
 
-        public Builder setInventoryFilters(List<OSPolicyInventoryFilterResponse> inventoryFilters) {
+        public Builder inventoryFilters(List<OSPolicyInventoryFilterResponse> inventoryFilters) {
             this.inventoryFilters = Objects.requireNonNull(inventoryFilters);
             return this;
         }
 
-        public Builder setResources(List<OSPolicyResourceResponse> resources) {
+        public Builder resources(List<OSPolicyResourceResponse> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }

@@ -30,12 +30,12 @@ public final class ReplicatingStepResponse {
      */
     private final String totalBytes;
 
-    @OutputCustomType.Constructor({"lastThirtyMinutesAverageBytesPerSecond","lastTwoMinutesAverageBytesPerSecond","replicatedBytes","totalBytes"})
+    @OutputCustomType.Constructor
     private ReplicatingStepResponse(
-        String lastThirtyMinutesAverageBytesPerSecond,
-        String lastTwoMinutesAverageBytesPerSecond,
-        String replicatedBytes,
-        String totalBytes) {
+        @OutputCustomType.Parameter("lastThirtyMinutesAverageBytesPerSecond") String lastThirtyMinutesAverageBytesPerSecond,
+        @OutputCustomType.Parameter("lastTwoMinutesAverageBytesPerSecond") String lastTwoMinutesAverageBytesPerSecond,
+        @OutputCustomType.Parameter("replicatedBytes") String replicatedBytes,
+        @OutputCustomType.Parameter("totalBytes") String totalBytes) {
         this.lastThirtyMinutesAverageBytesPerSecond = lastThirtyMinutesAverageBytesPerSecond;
         this.lastTwoMinutesAverageBytesPerSecond = lastTwoMinutesAverageBytesPerSecond;
         this.replicatedBytes = replicatedBytes;
@@ -97,22 +97,22 @@ public final class ReplicatingStepResponse {
     	      this.totalBytes = defaults.totalBytes;
         }
 
-        public Builder setLastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
+        public Builder lastThirtyMinutesAverageBytesPerSecond(String lastThirtyMinutesAverageBytesPerSecond) {
             this.lastThirtyMinutesAverageBytesPerSecond = Objects.requireNonNull(lastThirtyMinutesAverageBytesPerSecond);
             return this;
         }
 
-        public Builder setLastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
+        public Builder lastTwoMinutesAverageBytesPerSecond(String lastTwoMinutesAverageBytesPerSecond) {
             this.lastTwoMinutesAverageBytesPerSecond = Objects.requireNonNull(lastTwoMinutesAverageBytesPerSecond);
             return this;
         }
 
-        public Builder setReplicatedBytes(String replicatedBytes) {
+        public Builder replicatedBytes(String replicatedBytes) {
             this.replicatedBytes = Objects.requireNonNull(replicatedBytes);
             return this;
         }
 
-        public Builder setTotalBytes(String totalBytes) {
+        public Builder totalBytes(String totalBytes) {
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }

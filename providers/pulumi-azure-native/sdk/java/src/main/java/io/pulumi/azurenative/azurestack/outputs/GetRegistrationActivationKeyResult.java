@@ -17,8 +17,8 @@ public final class GetRegistrationActivationKeyResult {
      */
     private final @Nullable String activationKey;
 
-    @OutputCustomType.Constructor({"activationKey"})
-    private GetRegistrationActivationKeyResult(@Nullable String activationKey) {
+    @OutputCustomType.Constructor
+    private GetRegistrationActivationKeyResult(@OutputCustomType.Parameter("activationKey") @Nullable String activationKey) {
         this.activationKey = activationKey;
     }
 
@@ -50,7 +50,7 @@ public final class GetRegistrationActivationKeyResult {
     	      this.activationKey = defaults.activationKey;
         }
 
-        public Builder setActivationKey(@Nullable String activationKey) {
+        public Builder activationKey(@Nullable String activationKey) {
             this.activationKey = activationKey;
             return this;
         }

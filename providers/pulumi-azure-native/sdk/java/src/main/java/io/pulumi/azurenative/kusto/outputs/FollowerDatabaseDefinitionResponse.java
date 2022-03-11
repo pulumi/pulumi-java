@@ -25,11 +25,11 @@ public final class FollowerDatabaseDefinitionResponse {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor({"attachedDatabaseConfigurationName","clusterResourceId","databaseName"})
+    @OutputCustomType.Constructor
     private FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String clusterResourceId,
-        String databaseName) {
+        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @OutputCustomType.Parameter("clusterResourceId") String clusterResourceId,
+        @OutputCustomType.Parameter("databaseName") String databaseName) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.clusterResourceId = clusterResourceId;
         this.databaseName = databaseName;
@@ -81,17 +81,17 @@ public final class FollowerDatabaseDefinitionResponse {
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setClusterResourceId(String clusterResourceId) {
+        public Builder clusterResourceId(String clusterResourceId) {
             this.clusterResourceId = Objects.requireNonNull(clusterResourceId);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }

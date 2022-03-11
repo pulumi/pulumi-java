@@ -75,20 +75,20 @@ public final class FirewallPolicyRuleResponse {
      */
     private final List<String> targetServiceAccounts;
 
-    @OutputCustomType.Constructor({"action","description","direction","disabled","enableLogging","kind","match","priority","ruleTupleCount","targetResources","targetSecureTags","targetServiceAccounts"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleResponse(
-        String action,
-        String description,
-        String direction,
-        Boolean disabled,
-        Boolean enableLogging,
-        String kind,
-        FirewallPolicyRuleMatcherResponse match,
-        Integer priority,
-        Integer ruleTupleCount,
-        List<String> targetResources,
-        List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
-        List<String> targetServiceAccounts) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("match") FirewallPolicyRuleMatcherResponse match,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleTupleCount") Integer ruleTupleCount,
+        @OutputCustomType.Parameter("targetResources") List<String> targetResources,
+        @OutputCustomType.Parameter("targetSecureTags") List<FirewallPolicyRuleSecureTagResponse> targetSecureTags,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts) {
         this.action = action;
         this.description = description;
         this.direction = direction;
@@ -230,62 +230,62 @@ public final class FirewallPolicyRuleResponse {
     	      this.targetServiceAccounts = defaults.targetServiceAccounts;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMatch(FirewallPolicyRuleMatcherResponse match) {
+        public Builder match(FirewallPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleTupleCount(Integer ruleTupleCount) {
+        public Builder ruleTupleCount(Integer ruleTupleCount) {
             this.ruleTupleCount = Objects.requireNonNull(ruleTupleCount);
             return this;
         }
 
-        public Builder setTargetResources(List<String> targetResources) {
+        public Builder targetResources(List<String> targetResources) {
             this.targetResources = Objects.requireNonNull(targetResources);
             return this;
         }
 
-        public Builder setTargetSecureTags(List<FirewallPolicyRuleSecureTagResponse> targetSecureTags) {
+        public Builder targetSecureTags(List<FirewallPolicyRuleSecureTagResponse> targetSecureTags) {
             this.targetSecureTags = Objects.requireNonNull(targetSecureTags);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }

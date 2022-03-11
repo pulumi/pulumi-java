@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
      */
     private final Boolean enableStackdriverLogging;
 
-    @OutputCustomType.Constructor({"enableStackdriverLogging"})
-    private GoogleCloudDialogflowV2beta1LoggingConfigResponse(Boolean enableStackdriverLogging) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1LoggingConfigResponse(@OutputCustomType.Parameter("enableStackdriverLogging") Boolean enableStackdriverLogging) {
         this.enableStackdriverLogging = enableStackdriverLogging;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigResponse {
     	      this.enableStackdriverLogging = defaults.enableStackdriverLogging;
         }
 
-        public Builder setEnableStackdriverLogging(Boolean enableStackdriverLogging) {
+        public Builder enableStackdriverLogging(Boolean enableStackdriverLogging) {
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }

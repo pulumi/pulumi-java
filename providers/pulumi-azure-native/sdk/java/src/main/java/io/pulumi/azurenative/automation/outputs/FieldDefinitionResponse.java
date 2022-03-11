@@ -28,11 +28,11 @@ public final class FieldDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"isEncrypted","isOptional","type"})
+    @OutputCustomType.Constructor
     private FieldDefinitionResponse(
-        @Nullable Boolean isEncrypted,
-        @Nullable Boolean isOptional,
-        String type) {
+        @OutputCustomType.Parameter("isEncrypted") @Nullable Boolean isEncrypted,
+        @OutputCustomType.Parameter("isOptional") @Nullable Boolean isOptional,
+        @OutputCustomType.Parameter("type") String type) {
         this.isEncrypted = isEncrypted;
         this.isOptional = isOptional;
         this.type = type;
@@ -84,17 +84,17 @@ public final class FieldDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIsEncrypted(@Nullable Boolean isEncrypted) {
+        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
-        public Builder setIsOptional(@Nullable Boolean isOptional) {
+        public Builder isOptional(@Nullable Boolean isOptional) {
             this.isOptional = isOptional;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

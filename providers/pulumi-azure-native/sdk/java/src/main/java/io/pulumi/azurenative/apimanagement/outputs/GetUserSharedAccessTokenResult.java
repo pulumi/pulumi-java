@@ -17,8 +17,8 @@ public final class GetUserSharedAccessTokenResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetUserSharedAccessTokenResult(@Nullable String value) {
+    @OutputCustomType.Constructor
+    private GetUserSharedAccessTokenResult(@OutputCustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class GetUserSharedAccessTokenResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

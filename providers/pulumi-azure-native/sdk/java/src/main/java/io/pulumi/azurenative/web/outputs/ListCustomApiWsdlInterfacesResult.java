@@ -17,8 +17,8 @@ public final class ListCustomApiWsdlInterfacesResult {
      */
     private final @Nullable List<WsdlServiceResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListCustomApiWsdlInterfacesResult(@Nullable List<WsdlServiceResponse> value) {
+    @OutputCustomType.Constructor
+    private ListCustomApiWsdlInterfacesResult(@OutputCustomType.Parameter("value") @Nullable List<WsdlServiceResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListCustomApiWsdlInterfacesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<WsdlServiceResponse> value) {
+        public Builder value(@Nullable List<WsdlServiceResponse> value) {
             this.value = value;
             return this;
         }

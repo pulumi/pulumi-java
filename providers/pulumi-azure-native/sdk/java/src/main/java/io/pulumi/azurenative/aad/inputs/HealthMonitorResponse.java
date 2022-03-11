@@ -88,17 +88,17 @@ public final class HealthMonitorResponse extends io.pulumi.resources.InvokeArgs 
     	      this.name = defaults.name;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

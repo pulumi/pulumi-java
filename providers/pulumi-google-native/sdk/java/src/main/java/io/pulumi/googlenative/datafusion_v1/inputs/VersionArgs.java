@@ -109,42 +109,42 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setAvailableFeatures(@Nullable Input<List<String>> availableFeatures) {
+        public Builder availableFeatures(@Nullable Input<List<String>> availableFeatures) {
             this.availableFeatures = availableFeatures;
             return this;
         }
 
-        public Builder setAvailableFeatures(@Nullable List<String> availableFeatures) {
+        public Builder availableFeatures(@Nullable List<String> availableFeatures) {
             this.availableFeatures = Input.ofNullable(availableFeatures);
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Input<Boolean> defaultVersion) {
+        public Builder defaultVersion(@Nullable Input<Boolean> defaultVersion) {
             this.defaultVersion = defaultVersion;
             return this;
         }
 
-        public Builder setDefaultVersion(@Nullable Boolean defaultVersion) {
+        public Builder defaultVersion(@Nullable Boolean defaultVersion) {
             this.defaultVersion = Input.ofNullable(defaultVersion);
             return this;
         }
 
-        public Builder setType(@Nullable Input<VersionType> type) {
+        public Builder type(@Nullable Input<VersionType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable VersionType type) {
+        public Builder type(@Nullable VersionType type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Input<String> versionNumber) {
+        public Builder versionNumber(@Nullable Input<String> versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable String versionNumber) {
+        public Builder versionNumber(@Nullable String versionNumber) {
             this.versionNumber = Input.ofNullable(versionNumber);
             return this;
         }

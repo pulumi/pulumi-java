@@ -57,16 +57,16 @@ public final class WidgetResponse {
      */
     private final XyChartResponse xyChart;
 
-    @OutputCustomType.Constructor({"alertChart","blank","logsPanel","scorecard","text","timeSeriesTable","title","xyChart"})
+    @OutputCustomType.Constructor
     private WidgetResponse(
-        AlertChartResponse alertChart,
-        EmptyResponse blank,
-        LogsPanelResponse logsPanel,
-        ScorecardResponse scorecard,
-        TextResponse text,
-        TimeSeriesTableResponse timeSeriesTable,
-        String title,
-        XyChartResponse xyChart) {
+        @OutputCustomType.Parameter("alertChart") AlertChartResponse alertChart,
+        @OutputCustomType.Parameter("blank") EmptyResponse blank,
+        @OutputCustomType.Parameter("logsPanel") LogsPanelResponse logsPanel,
+        @OutputCustomType.Parameter("scorecard") ScorecardResponse scorecard,
+        @OutputCustomType.Parameter("text") TextResponse text,
+        @OutputCustomType.Parameter("timeSeriesTable") TimeSeriesTableResponse timeSeriesTable,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("xyChart") XyChartResponse xyChart) {
         this.alertChart = alertChart;
         this.blank = blank;
         this.logsPanel = logsPanel;
@@ -168,42 +168,42 @@ public final class WidgetResponse {
     	      this.xyChart = defaults.xyChart;
         }
 
-        public Builder setAlertChart(AlertChartResponse alertChart) {
+        public Builder alertChart(AlertChartResponse alertChart) {
             this.alertChart = Objects.requireNonNull(alertChart);
             return this;
         }
 
-        public Builder setBlank(EmptyResponse blank) {
+        public Builder blank(EmptyResponse blank) {
             this.blank = Objects.requireNonNull(blank);
             return this;
         }
 
-        public Builder setLogsPanel(LogsPanelResponse logsPanel) {
+        public Builder logsPanel(LogsPanelResponse logsPanel) {
             this.logsPanel = Objects.requireNonNull(logsPanel);
             return this;
         }
 
-        public Builder setScorecard(ScorecardResponse scorecard) {
+        public Builder scorecard(ScorecardResponse scorecard) {
             this.scorecard = Objects.requireNonNull(scorecard);
             return this;
         }
 
-        public Builder setText(TextResponse text) {
+        public Builder text(TextResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setTimeSeriesTable(TimeSeriesTableResponse timeSeriesTable) {
+        public Builder timeSeriesTable(TimeSeriesTableResponse timeSeriesTable) {
             this.timeSeriesTable = Objects.requireNonNull(timeSeriesTable);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setXyChart(XyChartResponse xyChart) {
+        public Builder xyChart(XyChartResponse xyChart) {
             this.xyChart = Objects.requireNonNull(xyChart);
             return this;
         }

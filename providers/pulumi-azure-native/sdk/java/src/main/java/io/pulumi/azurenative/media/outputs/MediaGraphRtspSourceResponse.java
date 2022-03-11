@@ -34,12 +34,12 @@ public final class MediaGraphRtspSourceResponse {
      */
     private final String transport;
 
-    @OutputCustomType.Constructor({"endpoint","name","odataType","transport"})
+    @OutputCustomType.Constructor
     private MediaGraphRtspSourceResponse(
-        Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
-        String name,
-        String odataType,
-        String transport) {
+        @OutputCustomType.Parameter("endpoint") Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("transport") String transport) {
         this.endpoint = endpoint;
         this.name = name;
         this.odataType = odataType;
@@ -102,22 +102,22 @@ public final class MediaGraphRtspSourceResponse {
     	      this.transport = defaults.transport;
         }
 
-        public Builder setEndpoint(Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint) {
+        public Builder endpoint(Either<MediaGraphClearEndpointResponse,MediaGraphTlsEndpointResponse> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTransport(String transport) {
+        public Builder transport(String transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }

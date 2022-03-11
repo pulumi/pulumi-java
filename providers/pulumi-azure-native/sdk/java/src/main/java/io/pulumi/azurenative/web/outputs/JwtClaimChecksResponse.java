@@ -22,10 +22,10 @@ public final class JwtClaimChecksResponse {
      */
     private final @Nullable List<String> allowedGroups;
 
-    @OutputCustomType.Constructor({"allowedClientApplications","allowedGroups"})
+    @OutputCustomType.Constructor
     private JwtClaimChecksResponse(
-        @Nullable List<String> allowedClientApplications,
-        @Nullable List<String> allowedGroups) {
+        @OutputCustomType.Parameter("allowedClientApplications") @Nullable List<String> allowedClientApplications,
+        @OutputCustomType.Parameter("allowedGroups") @Nullable List<String> allowedGroups) {
         this.allowedClientApplications = allowedClientApplications;
         this.allowedGroups = allowedGroups;
     }
@@ -67,12 +67,12 @@ public final class JwtClaimChecksResponse {
     	      this.allowedGroups = defaults.allowedGroups;
         }
 
-        public Builder setAllowedClientApplications(@Nullable List<String> allowedClientApplications) {
+        public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
             this.allowedClientApplications = allowedClientApplications;
             return this;
         }
 
-        public Builder setAllowedGroups(@Nullable List<String> allowedGroups) {
+        public Builder allowedGroups(@Nullable List<String> allowedGroups) {
             this.allowedGroups = allowedGroups;
             return this;
         }

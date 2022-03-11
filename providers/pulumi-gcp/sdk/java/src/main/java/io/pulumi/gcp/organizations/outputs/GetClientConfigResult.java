@@ -35,13 +35,13 @@ public final class GetClientConfigResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"accessToken","id","project","region","zone"})
+    @OutputCustomType.Constructor
     private GetClientConfigResult(
-        String accessToken,
-        String id,
-        String project,
-        String region,
-        String zone) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.accessToken = accessToken;
         this.id = id;
         this.project = project;
@@ -113,27 +113,27 @@ public final class GetClientConfigResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

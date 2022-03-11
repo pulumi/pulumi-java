@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      */
     private final String unclassifiedConversationsCount;
 
-    @OutputCustomType.Constructor({"analyzedConversationsCount","issueStats","unclassifiedConversationsCount"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(
-        String analyzedConversationsCount,
-        Map<String,String> issueStats,
-        String unclassifiedConversationsCount) {
+        @OutputCustomType.Parameter("analyzedConversationsCount") String analyzedConversationsCount,
+        @OutputCustomType.Parameter("issueStats") Map<String,String> issueStats,
+        @OutputCustomType.Parameter("unclassifiedConversationsCount") String unclassifiedConversationsCount) {
         this.analyzedConversationsCount = analyzedConversationsCount;
         this.issueStats = issueStats;
         this.unclassifiedConversationsCount = unclassifiedConversationsCount;
@@ -82,17 +82,17 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
     	      this.unclassifiedConversationsCount = defaults.unclassifiedConversationsCount;
         }
 
-        public Builder setAnalyzedConversationsCount(String analyzedConversationsCount) {
+        public Builder analyzedConversationsCount(String analyzedConversationsCount) {
             this.analyzedConversationsCount = Objects.requireNonNull(analyzedConversationsCount);
             return this;
         }
 
-        public Builder setIssueStats(Map<String,String> issueStats) {
+        public Builder issueStats(Map<String,String> issueStats) {
             this.issueStats = Objects.requireNonNull(issueStats);
             return this;
         }
 
-        public Builder setUnclassifiedConversationsCount(String unclassifiedConversationsCount) {
+        public Builder unclassifiedConversationsCount(String unclassifiedConversationsCount) {
             this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
             return this;
         }

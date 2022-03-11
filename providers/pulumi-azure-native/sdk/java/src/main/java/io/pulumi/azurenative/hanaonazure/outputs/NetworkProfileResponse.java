@@ -23,10 +23,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<IpAddressResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor({"circuitId","networkInterfaces"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        String circuitId,
-        @Nullable List<IpAddressResponse> networkInterfaces) {
+        @OutputCustomType.Parameter("circuitId") String circuitId,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<IpAddressResponse> networkInterfaces) {
         this.circuitId = circuitId;
         this.networkInterfaces = networkInterfaces;
     }
@@ -68,12 +68,12 @@ public final class NetworkProfileResponse {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setCircuitId(String circuitId) {
+        public Builder circuitId(String circuitId) {
             this.circuitId = Objects.requireNonNull(circuitId);
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<IpAddressResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }

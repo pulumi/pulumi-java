@@ -37,13 +37,13 @@ public final class FlowSchemaCondition {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","reason","status","type"})
+    @OutputCustomType.Constructor
     private FlowSchemaCondition(
-        @Nullable String lastTransitionTime,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable String status,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") @Nullable String lastTransitionTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.reason = reason;
@@ -115,27 +115,27 @@ public final class FlowSchemaCondition {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastTransitionTime(@Nullable String lastTransitionTime) {
+        public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

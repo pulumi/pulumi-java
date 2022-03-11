@@ -189,92 +189,92 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     	      this.volumeHandle = defaults.volumeHandle;
         }
 
-        public Builder setControllerExpandSecretRef(@Nullable Input<SecretReferenceArgs> controllerExpandSecretRef) {
+        public Builder controllerExpandSecretRef(@Nullable Input<SecretReferenceArgs> controllerExpandSecretRef) {
             this.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
 
-        public Builder setControllerExpandSecretRef(@Nullable SecretReferenceArgs controllerExpandSecretRef) {
+        public Builder controllerExpandSecretRef(@Nullable SecretReferenceArgs controllerExpandSecretRef) {
             this.controllerExpandSecretRef = Input.ofNullable(controllerExpandSecretRef);
             return this;
         }
 
-        public Builder setControllerPublishSecretRef(@Nullable Input<SecretReferenceArgs> controllerPublishSecretRef) {
+        public Builder controllerPublishSecretRef(@Nullable Input<SecretReferenceArgs> controllerPublishSecretRef) {
             this.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
 
-        public Builder setControllerPublishSecretRef(@Nullable SecretReferenceArgs controllerPublishSecretRef) {
+        public Builder controllerPublishSecretRef(@Nullable SecretReferenceArgs controllerPublishSecretRef) {
             this.controllerPublishSecretRef = Input.ofNullable(controllerPublishSecretRef);
             return this;
         }
 
-        public Builder setDriver(Input<String> driver) {
+        public Builder driver(Input<String> driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Input.of(Objects.requireNonNull(driver));
             return this;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable Input<SecretReferenceArgs> nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable Input<SecretReferenceArgs> nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable SecretReferenceArgs nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable SecretReferenceArgs nodePublishSecretRef) {
             this.nodePublishSecretRef = Input.ofNullable(nodePublishSecretRef);
             return this;
         }
 
-        public Builder setNodeStageSecretRef(@Nullable Input<SecretReferenceArgs> nodeStageSecretRef) {
+        public Builder nodeStageSecretRef(@Nullable Input<SecretReferenceArgs> nodeStageSecretRef) {
             this.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
 
-        public Builder setNodeStageSecretRef(@Nullable SecretReferenceArgs nodeStageSecretRef) {
+        public Builder nodeStageSecretRef(@Nullable SecretReferenceArgs nodeStageSecretRef) {
             this.nodeStageSecretRef = Input.ofNullable(nodeStageSecretRef);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Input<Map<String,String>> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Input<Map<String,String>> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Map<String,String> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = Input.ofNullable(volumeAttributes);
             return this;
         }
 
-        public Builder setVolumeHandle(Input<String> volumeHandle) {
+        public Builder volumeHandle(Input<String> volumeHandle) {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }
 
-        public Builder setVolumeHandle(String volumeHandle) {
+        public Builder volumeHandle(String volumeHandle) {
             this.volumeHandle = Input.of(Objects.requireNonNull(volumeHandle));
             return this;
         }

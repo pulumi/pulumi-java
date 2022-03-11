@@ -60,17 +60,17 @@ public final class PngImageResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"keyFrameInterval","label","layers","odataType","range","start","step","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private PngImageResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<PngLayerResponse> layers,
-        String odataType,
-        @Nullable String range,
-        String start,
-        @Nullable String step,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("layers") @Nullable List<PngLayerResponse> layers,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("range") @Nullable String range,
+        @OutputCustomType.Parameter("start") String start,
+        @OutputCustomType.Parameter("step") @Nullable String step,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.layers = layers;
@@ -183,47 +183,47 @@ public final class PngImageResponse {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLayers(@Nullable List<PngLayerResponse> layers) {
+        public Builder layers(@Nullable List<PngLayerResponse> layers) {
             this.layers = layers;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setRange(@Nullable String range) {
+        public Builder range(@Nullable String range) {
             this.range = range;
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }
 
-        public Builder setStep(@Nullable String step) {
+        public Builder step(@Nullable String step) {
             this.step = step;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable String stretchMode) {
+        public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setSyncMode(@Nullable String syncMode) {
+        public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
         }

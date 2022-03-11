@@ -31,12 +31,12 @@ public final class AttemptResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor({"dispatchTime","responseStatus","responseTime","scheduleTime"})
+    @OutputCustomType.Constructor
     private AttemptResponse(
-        String dispatchTime,
-        StatusResponse responseStatus,
-        String responseTime,
-        String scheduleTime) {
+        @OutputCustomType.Parameter("dispatchTime") String dispatchTime,
+        @OutputCustomType.Parameter("responseStatus") StatusResponse responseStatus,
+        @OutputCustomType.Parameter("responseTime") String responseTime,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
         this.dispatchTime = dispatchTime;
         this.responseStatus = responseStatus;
         this.responseTime = responseTime;
@@ -98,22 +98,22 @@ public final class AttemptResponse {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setDispatchTime(String dispatchTime) {
+        public Builder dispatchTime(String dispatchTime) {
             this.dispatchTime = Objects.requireNonNull(dispatchTime);
             return this;
         }
 
-        public Builder setResponseStatus(StatusResponse responseStatus) {
+        public Builder responseStatus(StatusResponse responseStatus) {
             this.responseStatus = Objects.requireNonNull(responseStatus);
             return this;
         }
 
-        public Builder setResponseTime(String responseTime) {
+        public Builder responseTime(String responseTime) {
             this.responseTime = Objects.requireNonNull(responseTime);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }

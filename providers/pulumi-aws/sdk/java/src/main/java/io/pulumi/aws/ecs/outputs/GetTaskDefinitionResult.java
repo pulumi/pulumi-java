@@ -47,16 +47,16 @@ public final class GetTaskDefinitionResult {
      */
     private final String taskRoleArn;
 
-    @OutputCustomType.Constructor({"arn","family","id","networkMode","revision","status","taskDefinition","taskRoleArn"})
+    @OutputCustomType.Constructor
     private GetTaskDefinitionResult(
-        String arn,
-        String family,
-        String id,
-        String networkMode,
-        Integer revision,
-        String status,
-        String taskDefinition,
-        String taskRoleArn) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkMode") String networkMode,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("taskDefinition") String taskDefinition,
+        @OutputCustomType.Parameter("taskRoleArn") String taskRoleArn) {
         this.arn = arn;
         this.family = family;
         this.id = id;
@@ -154,42 +154,42 @@ public final class GetTaskDefinitionResult {
     	      this.taskRoleArn = defaults.taskRoleArn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetworkMode(String networkMode) {
+        public Builder networkMode(String networkMode) {
             this.networkMode = Objects.requireNonNull(networkMode);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTaskDefinition(String taskDefinition) {
+        public Builder taskDefinition(String taskDefinition) {
             this.taskDefinition = Objects.requireNonNull(taskDefinition);
             return this;
         }
 
-        public Builder setTaskRoleArn(String taskRoleArn) {
+        public Builder taskRoleArn(String taskRoleArn) {
             this.taskRoleArn = Objects.requireNonNull(taskRoleArn);
             return this;
         }

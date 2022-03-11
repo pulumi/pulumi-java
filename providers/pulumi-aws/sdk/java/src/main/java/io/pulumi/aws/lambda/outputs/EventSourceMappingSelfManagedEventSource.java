@@ -16,8 +16,8 @@ public final class EventSourceMappingSelfManagedEventSource {
      */
     private final Map<String,String> endpoints;
 
-    @OutputCustomType.Constructor({"endpoints"})
-    private EventSourceMappingSelfManagedEventSource(Map<String,String> endpoints) {
+    @OutputCustomType.Constructor
+    private EventSourceMappingSelfManagedEventSource(@OutputCustomType.Parameter("endpoints") Map<String,String> endpoints) {
         this.endpoints = endpoints;
     }
 
@@ -49,7 +49,7 @@ public final class EventSourceMappingSelfManagedEventSource {
     	      this.endpoints = defaults.endpoints;
         }
 
-        public Builder setEndpoints(Map<String,String> endpoints) {
+        public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }

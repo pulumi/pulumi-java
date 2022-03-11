@@ -81,20 +81,20 @@ public final class FileTaskRunRequestResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","credentials","isArchiveEnabled","logTemplate","platform","sourceLocation","taskFilePath","timeout","type","values","valuesFilePath"})
+    @OutputCustomType.Constructor
     private FileTaskRunRequestResponse(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        @Nullable CredentialsResponse credentials,
-        @Nullable Boolean isArchiveEnabled,
-        @Nullable String logTemplate,
-        PlatformPropertiesResponse platform,
-        @Nullable String sourceLocation,
-        String taskFilePath,
-        @Nullable Integer timeout,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("isArchiveEnabled") @Nullable Boolean isArchiveEnabled,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("platform") PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("sourceLocation") @Nullable String sourceLocation,
+        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
@@ -238,62 +238,62 @@ public final class FileTaskRunRequestResponse {
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsResponse credentials) {
+        public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setIsArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
+        public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             this.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setPlatform(PlatformPropertiesResponse platform) {
+        public Builder platform(PlatformPropertiesResponse platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setSourceLocation(@Nullable String sourceLocation) {
+        public Builder sourceLocation(@Nullable String sourceLocation) {
             this.sourceLocation = sourceLocation;
             return this;
         }
 
-        public Builder setTaskFilePath(String taskFilePath) {
+        public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable String valuesFilePath) {
+        public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }

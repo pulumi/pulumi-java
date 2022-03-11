@@ -127,52 +127,52 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setEnumvalue(@Nullable Input<List<EnumValueArgs>> enumvalue) {
+        public Builder enumvalue(@Nullable Input<List<EnumValueArgs>> enumvalue) {
             this.enumvalue = enumvalue;
             return this;
         }
 
-        public Builder setEnumvalue(@Nullable List<EnumValueArgs> enumvalue) {
+        public Builder enumvalue(@Nullable List<EnumValueArgs> enumvalue) {
             this.enumvalue = Input.ofNullable(enumvalue);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
+        public Builder sourceContext(@Nullable Input<SourceContextArgs> sourceContext) {
             this.sourceContext = sourceContext;
             return this;
         }
 
-        public Builder setSourceContext(@Nullable SourceContextArgs sourceContext) {
+        public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
             this.sourceContext = Input.ofNullable(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<EnumSyntax> syntax) {
+        public Builder syntax(@Nullable Input<EnumSyntax> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable EnumSyntax syntax) {
+        public Builder syntax(@Nullable EnumSyntax syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }

@@ -32,12 +32,12 @@ public final class ParameterDeclarationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","description","name","type"})
+    @OutputCustomType.Constructor
     private ParameterDeclarationResponse(
-        @Nullable String $default,
-        @Nullable String description,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("default") @Nullable String $default,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.description = description;
         this.name = name;
@@ -99,22 +99,22 @@ public final class ParameterDeclarationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder set$default(@Nullable String $default) {
+        public Builder $default(@Nullable String $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

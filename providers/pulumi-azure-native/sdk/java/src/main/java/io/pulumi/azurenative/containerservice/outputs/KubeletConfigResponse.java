@@ -70,19 +70,19 @@ public final class KubeletConfigResponse {
      */
     private final @Nullable String topologyManagerPolicy;
 
-    @OutputCustomType.Constructor({"allowedUnsafeSysctls","containerLogMaxFiles","containerLogMaxSizeMB","cpuCfsQuota","cpuCfsQuotaPeriod","cpuManagerPolicy","failSwapOn","imageGcHighThreshold","imageGcLowThreshold","podMaxPids","topologyManagerPolicy"})
+    @OutputCustomType.Constructor
     private KubeletConfigResponse(
-        @Nullable List<String> allowedUnsafeSysctls,
-        @Nullable Integer containerLogMaxFiles,
-        @Nullable Integer containerLogMaxSizeMB,
-        @Nullable Boolean cpuCfsQuota,
-        @Nullable String cpuCfsQuotaPeriod,
-        @Nullable String cpuManagerPolicy,
-        @Nullable Boolean failSwapOn,
-        @Nullable Integer imageGcHighThreshold,
-        @Nullable Integer imageGcLowThreshold,
-        @Nullable Integer podMaxPids,
-        @Nullable String topologyManagerPolicy) {
+        @OutputCustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
+        @OutputCustomType.Parameter("containerLogMaxFiles") @Nullable Integer containerLogMaxFiles,
+        @OutputCustomType.Parameter("containerLogMaxSizeMB") @Nullable Integer containerLogMaxSizeMB,
+        @OutputCustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
+        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
+        @OutputCustomType.Parameter("cpuManagerPolicy") @Nullable String cpuManagerPolicy,
+        @OutputCustomType.Parameter("failSwapOn") @Nullable Boolean failSwapOn,
+        @OutputCustomType.Parameter("imageGcHighThreshold") @Nullable Integer imageGcHighThreshold,
+        @OutputCustomType.Parameter("imageGcLowThreshold") @Nullable Integer imageGcLowThreshold,
+        @OutputCustomType.Parameter("podMaxPids") @Nullable Integer podMaxPids,
+        @OutputCustomType.Parameter("topologyManagerPolicy") @Nullable String topologyManagerPolicy) {
         this.allowedUnsafeSysctls = allowedUnsafeSysctls;
         this.containerLogMaxFiles = containerLogMaxFiles;
         this.containerLogMaxSizeMB = containerLogMaxSizeMB;
@@ -214,57 +214,57 @@ public final class KubeletConfigResponse {
     	      this.topologyManagerPolicy = defaults.topologyManagerPolicy;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
-        public Builder setContainerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
+        public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
             this.containerLogMaxFiles = containerLogMaxFiles;
             return this;
         }
 
-        public Builder setContainerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
+        public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
             this.containerLogMaxSizeMB = containerLogMaxSizeMB;
             return this;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
-        public Builder setCpuManagerPolicy(@Nullable String cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
-        public Builder setFailSwapOn(@Nullable Boolean failSwapOn) {
+        public Builder failSwapOn(@Nullable Boolean failSwapOn) {
             this.failSwapOn = failSwapOn;
             return this;
         }
 
-        public Builder setImageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
+        public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
             this.imageGcHighThreshold = imageGcHighThreshold;
             return this;
         }
 
-        public Builder setImageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
+        public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
             this.imageGcLowThreshold = imageGcLowThreshold;
             return this;
         }
 
-        public Builder setPodMaxPids(@Nullable Integer podMaxPids) {
+        public Builder podMaxPids(@Nullable Integer podMaxPids) {
             this.podMaxPids = podMaxPids;
             return this;
         }
 
-        public Builder setTopologyManagerPolicy(@Nullable String topologyManagerPolicy) {
+        public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
             this.topologyManagerPolicy = topologyManagerPolicy;
             return this;
         }

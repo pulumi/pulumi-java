@@ -13,10 +13,10 @@ public final class RuleGroupTextTransformation {
     private final Integer priority;
     private final RuleGroupTextTransformationType type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private RuleGroupTextTransformation(
-        Integer priority,
-        RuleGroupTextTransformationType type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") RuleGroupTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }
@@ -50,12 +50,12 @@ public final class RuleGroupTextTransformation {
     	      this.type = defaults.type;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setType(RuleGroupTextTransformationType type) {
+        public Builder type(RuleGroupTextTransformationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

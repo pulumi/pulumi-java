@@ -37,13 +37,13 @@ public final class FunctionCode {
      */
     private final @Nullable String zipFile;
 
-    @OutputCustomType.Constructor({"imageUri","s3Bucket","s3Key","s3ObjectVersion","zipFile"})
+    @OutputCustomType.Constructor
     private FunctionCode(
-        @Nullable String imageUri,
-        @Nullable String s3Bucket,
-        @Nullable String s3Key,
-        @Nullable String s3ObjectVersion,
-        @Nullable String zipFile) {
+        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
+        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @OutputCustomType.Parameter("zipFile") @Nullable String zipFile) {
         this.imageUri = imageUri;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
@@ -115,27 +115,27 @@ public final class FunctionCode {
     	      this.zipFile = defaults.zipFile;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Key(@Nullable String s3Key) {
+        public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable String s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
-        public Builder setZipFile(@Nullable String zipFile) {
+        public Builder zipFile(@Nullable String zipFile) {
             this.zipFile = zipFile;
             return this;
         }

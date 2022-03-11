@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetMeshIstioServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private GetMeshIstioServiceTelemetry(String resourceName) {
+    @OutputCustomType.Constructor
+    private GetMeshIstioServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 
@@ -40,7 +40,7 @@ public final class GetMeshIstioServiceTelemetry {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

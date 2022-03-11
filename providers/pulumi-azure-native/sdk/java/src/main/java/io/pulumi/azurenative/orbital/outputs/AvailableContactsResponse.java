@@ -69,19 +69,19 @@ public final class AvailableContactsResponse {
      */
     private final String txStartTime;
 
-    @OutputCustomType.Constructor({"endAzimuthDegrees","endElevationDegrees","groundStationName","maximumElevationDegrees","rxEndTime","rxStartTime","spacecraft","startAzimuthDegrees","startElevationDegrees","txEndTime","txStartTime"})
+    @OutputCustomType.Constructor
     private AvailableContactsResponse(
-        Double endAzimuthDegrees,
-        Double endElevationDegrees,
-        String groundStationName,
-        Double maximumElevationDegrees,
-        String rxEndTime,
-        String rxStartTime,
-        @Nullable ResourceReferenceResponse spacecraft,
-        Double startAzimuthDegrees,
-        Double startElevationDegrees,
-        String txEndTime,
-        String txStartTime) {
+        @OutputCustomType.Parameter("endAzimuthDegrees") Double endAzimuthDegrees,
+        @OutputCustomType.Parameter("endElevationDegrees") Double endElevationDegrees,
+        @OutputCustomType.Parameter("groundStationName") String groundStationName,
+        @OutputCustomType.Parameter("maximumElevationDegrees") Double maximumElevationDegrees,
+        @OutputCustomType.Parameter("rxEndTime") String rxEndTime,
+        @OutputCustomType.Parameter("rxStartTime") String rxStartTime,
+        @OutputCustomType.Parameter("spacecraft") @Nullable ResourceReferenceResponse spacecraft,
+        @OutputCustomType.Parameter("startAzimuthDegrees") Double startAzimuthDegrees,
+        @OutputCustomType.Parameter("startElevationDegrees") Double startElevationDegrees,
+        @OutputCustomType.Parameter("txEndTime") String txEndTime,
+        @OutputCustomType.Parameter("txStartTime") String txStartTime) {
         this.endAzimuthDegrees = endAzimuthDegrees;
         this.endElevationDegrees = endElevationDegrees;
         this.groundStationName = groundStationName;
@@ -213,57 +213,57 @@ public final class AvailableContactsResponse {
     	      this.txStartTime = defaults.txStartTime;
         }
 
-        public Builder setEndAzimuthDegrees(Double endAzimuthDegrees) {
+        public Builder endAzimuthDegrees(Double endAzimuthDegrees) {
             this.endAzimuthDegrees = Objects.requireNonNull(endAzimuthDegrees);
             return this;
         }
 
-        public Builder setEndElevationDegrees(Double endElevationDegrees) {
+        public Builder endElevationDegrees(Double endElevationDegrees) {
             this.endElevationDegrees = Objects.requireNonNull(endElevationDegrees);
             return this;
         }
 
-        public Builder setGroundStationName(String groundStationName) {
+        public Builder groundStationName(String groundStationName) {
             this.groundStationName = Objects.requireNonNull(groundStationName);
             return this;
         }
 
-        public Builder setMaximumElevationDegrees(Double maximumElevationDegrees) {
+        public Builder maximumElevationDegrees(Double maximumElevationDegrees) {
             this.maximumElevationDegrees = Objects.requireNonNull(maximumElevationDegrees);
             return this;
         }
 
-        public Builder setRxEndTime(String rxEndTime) {
+        public Builder rxEndTime(String rxEndTime) {
             this.rxEndTime = Objects.requireNonNull(rxEndTime);
             return this;
         }
 
-        public Builder setRxStartTime(String rxStartTime) {
+        public Builder rxStartTime(String rxStartTime) {
             this.rxStartTime = Objects.requireNonNull(rxStartTime);
             return this;
         }
 
-        public Builder setSpacecraft(@Nullable ResourceReferenceResponse spacecraft) {
+        public Builder spacecraft(@Nullable ResourceReferenceResponse spacecraft) {
             this.spacecraft = spacecraft;
             return this;
         }
 
-        public Builder setStartAzimuthDegrees(Double startAzimuthDegrees) {
+        public Builder startAzimuthDegrees(Double startAzimuthDegrees) {
             this.startAzimuthDegrees = Objects.requireNonNull(startAzimuthDegrees);
             return this;
         }
 
-        public Builder setStartElevationDegrees(Double startElevationDegrees) {
+        public Builder startElevationDegrees(Double startElevationDegrees) {
             this.startElevationDegrees = Objects.requireNonNull(startElevationDegrees);
             return this;
         }
 
-        public Builder setTxEndTime(String txEndTime) {
+        public Builder txEndTime(String txEndTime) {
             this.txEndTime = Objects.requireNonNull(txEndTime);
             return this;
         }
 
-        public Builder setTxStartTime(String txStartTime) {
+        public Builder txStartTime(String txStartTime) {
             this.txStartTime = Objects.requireNonNull(txStartTime);
             return this;
         }

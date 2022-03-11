@@ -68,12 +68,12 @@ public final class GetPipelineDefinitionParameterValue extends io.pulumi.resourc
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

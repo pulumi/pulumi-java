@@ -29,11 +29,11 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse {
      */
     private final @Nullable Double value;
 
-    @OutputCustomType.Constructor({"key","operatorType","value"})
+    @OutputCustomType.Constructor
     private NumberGreaterThanOrEqualsAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType,
-        @Nullable Double value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType,
+        @OutputCustomType.Parameter("value") @Nullable Double value) {
         this.key = key;
         this.operatorType = operatorType;
         this.value = value;
@@ -86,17 +86,17 @@ public final class NumberGreaterThanOrEqualsAdvancedFilterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
 
-        public Builder setValue(@Nullable Double value) {
+        public Builder value(@Nullable Double value) {
             this.value = value;
             return this;
         }

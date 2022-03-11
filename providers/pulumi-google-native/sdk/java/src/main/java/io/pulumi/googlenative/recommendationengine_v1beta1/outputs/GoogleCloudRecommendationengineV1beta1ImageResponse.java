@@ -26,11 +26,11 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
      */
     private final Integer width;
 
-    @OutputCustomType.Constructor({"height","uri","width"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecommendationengineV1beta1ImageResponse(
-        Integer height,
-        String uri,
-        Integer width) {
+        @OutputCustomType.Parameter("height") Integer height,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("width") Integer width) {
         this.height = height;
         this.uri = uri;
         this.width = width;
@@ -82,17 +82,17 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(Integer height) {
+        public Builder height(Integer height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setWidth(Integer width) {
+        public Builder width(Integer width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }

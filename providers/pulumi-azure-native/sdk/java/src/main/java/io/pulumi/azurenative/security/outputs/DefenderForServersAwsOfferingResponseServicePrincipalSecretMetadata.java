@@ -27,11 +27,11 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
      */
     private final @Nullable String parameterStoreRegion;
 
-    @OutputCustomType.Constructor({"expiryDate","parameterNameInStore","parameterStoreRegion"})
+    @OutputCustomType.Constructor
     private DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(
-        @Nullable String expiryDate,
-        @Nullable String parameterNameInStore,
-        @Nullable String parameterStoreRegion) {
+        @OutputCustomType.Parameter("expiryDate") @Nullable String expiryDate,
+        @OutputCustomType.Parameter("parameterNameInStore") @Nullable String parameterNameInStore,
+        @OutputCustomType.Parameter("parameterStoreRegion") @Nullable String parameterStoreRegion) {
         this.expiryDate = expiryDate;
         this.parameterNameInStore = parameterNameInStore;
         this.parameterStoreRegion = parameterStoreRegion;
@@ -83,17 +83,17 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     	      this.parameterStoreRegion = defaults.parameterStoreRegion;
         }
 
-        public Builder setExpiryDate(@Nullable String expiryDate) {
+        public Builder expiryDate(@Nullable String expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
-        public Builder setParameterNameInStore(@Nullable String parameterNameInStore) {
+        public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
-        public Builder setParameterStoreRegion(@Nullable String parameterStoreRegion) {
+        public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }

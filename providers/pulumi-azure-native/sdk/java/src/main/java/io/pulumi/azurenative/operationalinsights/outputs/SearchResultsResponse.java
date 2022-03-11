@@ -43,14 +43,14 @@ public final class SearchResultsResponse {
      */
     private final @Nullable String startSearchTime;
 
-    @OutputCustomType.Constructor({"description","endSearchTime","limit","query","sourceTable","startSearchTime"})
+    @OutputCustomType.Constructor
     private SearchResultsResponse(
-        @Nullable String description,
-        @Nullable String endSearchTime,
-        @Nullable Integer limit,
-        @Nullable String query,
-        String sourceTable,
-        @Nullable String startSearchTime) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("endSearchTime") @Nullable String endSearchTime,
+        @OutputCustomType.Parameter("limit") @Nullable Integer limit,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startSearchTime") @Nullable String startSearchTime) {
         this.description = description;
         this.endSearchTime = endSearchTime;
         this.limit = limit;
@@ -132,32 +132,32 @@ public final class SearchResultsResponse {
     	      this.startSearchTime = defaults.startSearchTime;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEndSearchTime(@Nullable String endSearchTime) {
+        public Builder endSearchTime(@Nullable String endSearchTime) {
             this.endSearchTime = endSearchTime;
             return this;
         }
 
-        public Builder setLimit(@Nullable Integer limit) {
+        public Builder limit(@Nullable Integer limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setStartSearchTime(@Nullable String startSearchTime) {
+        public Builder startSearchTime(@Nullable String startSearchTime) {
             this.startSearchTime = startSearchTime;
             return this;
         }

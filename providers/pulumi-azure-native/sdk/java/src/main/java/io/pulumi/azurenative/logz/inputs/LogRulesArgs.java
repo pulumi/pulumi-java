@@ -108,42 +108,42 @@ public final class LogRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sendSubscriptionLogs = defaults.sendSubscriptionLogs;
         }
 
-        public Builder setFilteringTags(@Nullable Input<List<FilteringTagArgs>> filteringTags) {
+        public Builder filteringTags(@Nullable Input<List<FilteringTagArgs>> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagArgs> filteringTags) {
             this.filteringTags = Input.ofNullable(filteringTags);
             return this;
         }
 
-        public Builder setSendAadLogs(@Nullable Input<Boolean> sendAadLogs) {
+        public Builder sendAadLogs(@Nullable Input<Boolean> sendAadLogs) {
             this.sendAadLogs = sendAadLogs;
             return this;
         }
 
-        public Builder setSendAadLogs(@Nullable Boolean sendAadLogs) {
+        public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             this.sendAadLogs = Input.ofNullable(sendAadLogs);
             return this;
         }
 
-        public Builder setSendActivityLogs(@Nullable Input<Boolean> sendActivityLogs) {
+        public Builder sendActivityLogs(@Nullable Input<Boolean> sendActivityLogs) {
             this.sendActivityLogs = sendActivityLogs;
             return this;
         }
 
-        public Builder setSendActivityLogs(@Nullable Boolean sendActivityLogs) {
+        public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             this.sendActivityLogs = Input.ofNullable(sendActivityLogs);
             return this;
         }
 
-        public Builder setSendSubscriptionLogs(@Nullable Input<Boolean> sendSubscriptionLogs) {
+        public Builder sendSubscriptionLogs(@Nullable Input<Boolean> sendSubscriptionLogs) {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }
 
-        public Builder setSendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
+        public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             this.sendSubscriptionLogs = Input.ofNullable(sendSubscriptionLogs);
             return this;
         }

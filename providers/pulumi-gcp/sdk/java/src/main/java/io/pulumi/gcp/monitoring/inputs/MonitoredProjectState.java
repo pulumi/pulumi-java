@@ -86,32 +86,32 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     	      this.name = defaults.name;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setMetricsScope(@Nullable Input<String> metricsScope) {
+        public Builder metricsScope(@Nullable Input<String> metricsScope) {
             this.metricsScope = metricsScope;
             return this;
         }
 
-        public Builder setMetricsScope(@Nullable String metricsScope) {
+        public Builder metricsScope(@Nullable String metricsScope) {
             this.metricsScope = Input.ofNullable(metricsScope);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

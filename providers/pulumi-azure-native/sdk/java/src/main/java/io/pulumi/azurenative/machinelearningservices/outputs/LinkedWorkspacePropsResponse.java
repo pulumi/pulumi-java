@@ -22,10 +22,10 @@ public final class LinkedWorkspacePropsResponse {
      */
     private final @Nullable String userAssignedIdentityResourceId;
 
-    @OutputCustomType.Constructor({"linkedWorkspaceResourceId","userAssignedIdentityResourceId"})
+    @OutputCustomType.Constructor
     private LinkedWorkspacePropsResponse(
-        @Nullable String linkedWorkspaceResourceId,
-        @Nullable String userAssignedIdentityResourceId) {
+        @OutputCustomType.Parameter("linkedWorkspaceResourceId") @Nullable String linkedWorkspaceResourceId,
+        @OutputCustomType.Parameter("userAssignedIdentityResourceId") @Nullable String userAssignedIdentityResourceId) {
         this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
         this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
     }
@@ -67,12 +67,12 @@ public final class LinkedWorkspacePropsResponse {
     	      this.userAssignedIdentityResourceId = defaults.userAssignedIdentityResourceId;
         }
 
-        public Builder setLinkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
+        public Builder linkedWorkspaceResourceId(@Nullable String linkedWorkspaceResourceId) {
             this.linkedWorkspaceResourceId = linkedWorkspaceResourceId;
             return this;
         }
 
-        public Builder setUserAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
+        public Builder userAssignedIdentityResourceId(@Nullable String userAssignedIdentityResourceId) {
             this.userAssignedIdentityResourceId = userAssignedIdentityResourceId;
             return this;
         }

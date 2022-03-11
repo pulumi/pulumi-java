@@ -67,22 +67,22 @@ public final class ThemeSheetStyleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tileLayout = defaults.tileLayout;
         }
 
-        public Builder setTile(@Nullable Input<ThemeTileStyleArgs> tile) {
+        public Builder tile(@Nullable Input<ThemeTileStyleArgs> tile) {
             this.tile = tile;
             return this;
         }
 
-        public Builder setTile(@Nullable ThemeTileStyleArgs tile) {
+        public Builder tile(@Nullable ThemeTileStyleArgs tile) {
             this.tile = Input.ofNullable(tile);
             return this;
         }
 
-        public Builder setTileLayout(@Nullable Input<ThemeTileLayoutStyleArgs> tileLayout) {
+        public Builder tileLayout(@Nullable Input<ThemeTileLayoutStyleArgs> tileLayout) {
             this.tileLayout = tileLayout;
             return this;
         }
 
-        public Builder setTileLayout(@Nullable ThemeTileLayoutStyleArgs tileLayout) {
+        public Builder tileLayout(@Nullable ThemeTileLayoutStyleArgs tileLayout) {
             this.tileLayout = Input.ofNullable(tileLayout);
             return this;
         }

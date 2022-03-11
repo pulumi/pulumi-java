@@ -33,12 +33,12 @@ public final class SecurityGroupIngress {
      */
     private final @Nullable String securityGroupOwnerId;
 
-    @OutputCustomType.Constructor({"cidr","securityGroupId","securityGroupName","securityGroupOwnerId"})
+    @OutputCustomType.Constructor
     private SecurityGroupIngress(
-        @Nullable String cidr,
-        @Nullable String securityGroupId,
-        @Nullable String securityGroupName,
-        @Nullable String securityGroupOwnerId) {
+        @OutputCustomType.Parameter("cidr") @Nullable String cidr,
+        @OutputCustomType.Parameter("securityGroupId") @Nullable String securityGroupId,
+        @OutputCustomType.Parameter("securityGroupName") @Nullable String securityGroupName,
+        @OutputCustomType.Parameter("securityGroupOwnerId") @Nullable String securityGroupOwnerId) {
         this.cidr = cidr;
         this.securityGroupId = securityGroupId;
         this.securityGroupName = securityGroupName;
@@ -101,22 +101,22 @@ public final class SecurityGroupIngress {
     	      this.securityGroupOwnerId = defaults.securityGroupOwnerId;
         }
 
-        public Builder setCidr(@Nullable String cidr) {
+        public Builder cidr(@Nullable String cidr) {
             this.cidr = cidr;
             return this;
         }
 
-        public Builder setSecurityGroupId(@Nullable String securityGroupId) {
+        public Builder securityGroupId(@Nullable String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
 
-        public Builder setSecurityGroupName(@Nullable String securityGroupName) {
+        public Builder securityGroupName(@Nullable String securityGroupName) {
             this.securityGroupName = securityGroupName;
             return this;
         }
 
-        public Builder setSecurityGroupOwnerId(@Nullable String securityGroupOwnerId) {
+        public Builder securityGroupOwnerId(@Nullable String securityGroupOwnerId) {
             this.securityGroupOwnerId = securityGroupOwnerId;
             return this;
         }

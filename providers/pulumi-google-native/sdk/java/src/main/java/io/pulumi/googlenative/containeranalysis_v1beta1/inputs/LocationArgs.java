@@ -91,32 +91,32 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCpeUri(Input<String> cpeUri) {
+        public Builder cpeUri(Input<String> cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Input.of(Objects.requireNonNull(cpeUri));
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<VersionArgs> version) {
+        public Builder version(@Nullable Input<VersionArgs> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable VersionArgs version) {
+        public Builder version(@Nullable VersionArgs version) {
             this.version = Input.ofNullable(version);
             return this;
         }

@@ -24,10 +24,10 @@ public final class JobLoadDestinationEncryptionConfiguration {
      */
     private final @Nullable String kmsKeyVersion;
 
-    @OutputCustomType.Constructor({"kmsKeyName","kmsKeyVersion"})
+    @OutputCustomType.Constructor
     private JobLoadDestinationEncryptionConfiguration(
-        String kmsKeyName,
-        @Nullable String kmsKeyVersion) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("kmsKeyVersion") @Nullable String kmsKeyVersion) {
         this.kmsKeyName = kmsKeyName;
         this.kmsKeyVersion = kmsKeyVersion;
     }
@@ -71,12 +71,12 @@ public final class JobLoadDestinationEncryptionConfiguration {
     	      this.kmsKeyVersion = defaults.kmsKeyVersion;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setKmsKeyVersion(@Nullable String kmsKeyVersion) {
+        public Builder kmsKeyVersion(@Nullable String kmsKeyVersion) {
             this.kmsKeyVersion = kmsKeyVersion;
             return this;
         }

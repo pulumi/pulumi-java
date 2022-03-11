@@ -52,16 +52,16 @@ public final class GetRegisteredPrefixResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"errorMessage","id","name","peeringServicePrefixKey","prefix","prefixValidationState","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetRegisteredPrefixResult(
-        String errorMessage,
-        String id,
-        String name,
-        String peeringServicePrefixKey,
-        @Nullable String prefix,
-        String prefixValidationState,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringServicePrefixKey") String peeringServicePrefixKey,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("prefixValidationState") String prefixValidationState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;
@@ -163,42 +163,42 @@ public final class GetRegisteredPrefixResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringServicePrefixKey(String peeringServicePrefixKey) {
+        public Builder peeringServicePrefixKey(String peeringServicePrefixKey) {
             this.peeringServicePrefixKey = Objects.requireNonNull(peeringServicePrefixKey);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefixValidationState(String prefixValidationState) {
+        public Builder prefixValidationState(String prefixValidationState) {
             this.prefixValidationState = Objects.requireNonNull(prefixValidationState);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

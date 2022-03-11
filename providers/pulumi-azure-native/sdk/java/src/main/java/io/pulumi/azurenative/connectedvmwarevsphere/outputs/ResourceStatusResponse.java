@@ -40,14 +40,14 @@ public final class ResourceStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastUpdatedAt","message","reason","severity","status","type"})
+    @OutputCustomType.Constructor
     private ResourceStatusResponse(
-        String lastUpdatedAt,
-        String message,
-        String reason,
-        String severity,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastUpdatedAt") String lastUpdatedAt,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastUpdatedAt = lastUpdatedAt;
         this.message = message;
         this.reason = reason;
@@ -129,32 +129,32 @@ public final class ResourceStatusResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastUpdatedAt(String lastUpdatedAt) {
+        public Builder lastUpdatedAt(String lastUpdatedAt) {
             this.lastUpdatedAt = Objects.requireNonNull(lastUpdatedAt);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -56,16 +56,16 @@ public final class ProjectEnvironment {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","computeType","environmentVariables","image","imagePullCredentialsType","privilegedMode","registryCredential","type"})
+    @OutputCustomType.Constructor
     private ProjectEnvironment(
-        @Nullable String certificate,
-        String computeType,
-        @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
-        String image,
-        @Nullable String imagePullCredentialsType,
-        @Nullable Boolean privilegedMode,
-        @Nullable ProjectEnvironmentRegistryCredential registryCredential,
-        String type) {
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imagePullCredentialsType") @Nullable String imagePullCredentialsType,
+        @OutputCustomType.Parameter("privilegedMode") @Nullable Boolean privilegedMode,
+        @OutputCustomType.Parameter("registryCredential") @Nullable ProjectEnvironmentRegistryCredential registryCredential,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.computeType = computeType;
         this.environmentVariables = environmentVariables;
@@ -167,42 +167,42 @@ public final class ProjectEnvironment {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImagePullCredentialsType(@Nullable String imagePullCredentialsType) {
+        public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
             this.imagePullCredentialsType = imagePullCredentialsType;
             return this;
         }
 
-        public Builder setPrivilegedMode(@Nullable Boolean privilegedMode) {
+        public Builder privilegedMode(@Nullable Boolean privilegedMode) {
             this.privilegedMode = privilegedMode;
             return this;
         }
 
-        public Builder setRegistryCredential(@Nullable ProjectEnvironmentRegistryCredential registryCredential) {
+        public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredential registryCredential) {
             this.registryCredential = registryCredential;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -123,52 +123,52 @@ public final class InsightsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.recordClientAddress = defaults.recordClientAddress;
         }
 
-        public Builder setQueryInsightsEnabled(@Nullable Input<Boolean> queryInsightsEnabled) {
+        public Builder queryInsightsEnabled(@Nullable Input<Boolean> queryInsightsEnabled) {
             this.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
 
-        public Builder setQueryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
+        public Builder queryInsightsEnabled(@Nullable Boolean queryInsightsEnabled) {
             this.queryInsightsEnabled = Input.ofNullable(queryInsightsEnabled);
             return this;
         }
 
-        public Builder setQueryPlansPerMinute(@Nullable Input<Integer> queryPlansPerMinute) {
+        public Builder queryPlansPerMinute(@Nullable Input<Integer> queryPlansPerMinute) {
             this.queryPlansPerMinute = queryPlansPerMinute;
             return this;
         }
 
-        public Builder setQueryPlansPerMinute(@Nullable Integer queryPlansPerMinute) {
+        public Builder queryPlansPerMinute(@Nullable Integer queryPlansPerMinute) {
             this.queryPlansPerMinute = Input.ofNullable(queryPlansPerMinute);
             return this;
         }
 
-        public Builder setQueryStringLength(@Nullable Input<Integer> queryStringLength) {
+        public Builder queryStringLength(@Nullable Input<Integer> queryStringLength) {
             this.queryStringLength = queryStringLength;
             return this;
         }
 
-        public Builder setQueryStringLength(@Nullable Integer queryStringLength) {
+        public Builder queryStringLength(@Nullable Integer queryStringLength) {
             this.queryStringLength = Input.ofNullable(queryStringLength);
             return this;
         }
 
-        public Builder setRecordApplicationTags(@Nullable Input<Boolean> recordApplicationTags) {
+        public Builder recordApplicationTags(@Nullable Input<Boolean> recordApplicationTags) {
             this.recordApplicationTags = recordApplicationTags;
             return this;
         }
 
-        public Builder setRecordApplicationTags(@Nullable Boolean recordApplicationTags) {
+        public Builder recordApplicationTags(@Nullable Boolean recordApplicationTags) {
             this.recordApplicationTags = Input.ofNullable(recordApplicationTags);
             return this;
         }
 
-        public Builder setRecordClientAddress(@Nullable Input<Boolean> recordClientAddress) {
+        public Builder recordClientAddress(@Nullable Input<Boolean> recordClientAddress) {
             this.recordClientAddress = recordClientAddress;
             return this;
         }
 
-        public Builder setRecordClientAddress(@Nullable Boolean recordClientAddress) {
+        public Builder recordClientAddress(@Nullable Boolean recordClientAddress) {
             this.recordClientAddress = Input.ofNullable(recordClientAddress);
             return this;
         }

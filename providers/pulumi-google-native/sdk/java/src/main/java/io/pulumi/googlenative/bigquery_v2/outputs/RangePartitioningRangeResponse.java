@@ -25,11 +25,11 @@ public final class RangePartitioningRangeResponse {
      */
     private final String start;
 
-    @OutputCustomType.Constructor({"end","interval","start"})
+    @OutputCustomType.Constructor
     private RangePartitioningRangeResponse(
-        String end,
-        String interval,
-        String start) {
+        @OutputCustomType.Parameter("end") String end,
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("start") String start) {
         this.end = end;
         this.interval = interval;
         this.start = start;
@@ -81,17 +81,17 @@ public final class RangePartitioningRangeResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setStart(String start) {
+        public Builder start(String start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

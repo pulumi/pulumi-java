@@ -96,32 +96,32 @@ public final class CxIntentTrainingPhraseArgs extends io.pulumi.resources.Resour
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setParts(Input<List<CxIntentTrainingPhrasePartArgs>> parts) {
+        public Builder parts(Input<List<CxIntentTrainingPhrasePartArgs>> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setParts(List<CxIntentTrainingPhrasePartArgs> parts) {
+        public Builder parts(List<CxIntentTrainingPhrasePartArgs> parts) {
             this.parts = Input.of(Objects.requireNonNull(parts));
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Input<Integer> repeatCount) {
+        public Builder repeatCount(@Nullable Input<Integer> repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Integer repeatCount) {
+        public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = Input.ofNullable(repeatCount);
             return this;
         }

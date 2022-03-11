@@ -37,13 +37,13 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"appId","objectId","principalId","principalName","tenantId"})
+    @OutputCustomType.Constructor
     private UserIdentityResponse(
-        @Nullable String appId,
-        @Nullable String objectId,
-        @Nullable String principalId,
-        @Nullable String principalName,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("principalName") @Nullable String principalName,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.appId = appId;
         this.objectId = objectId;
         this.principalId = principalId;
@@ -115,27 +115,27 @@ public final class UserIdentityResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalName(@Nullable String principalName) {
+        public Builder principalName(@Nullable String principalName) {
             this.principalName = principalName;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

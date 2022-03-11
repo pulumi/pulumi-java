@@ -57,12 +57,12 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(Input<List<String>> values) {
+        public Builder values(Input<List<String>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

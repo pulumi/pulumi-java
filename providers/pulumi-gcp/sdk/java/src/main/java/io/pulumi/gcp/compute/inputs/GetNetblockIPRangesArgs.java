@@ -53,7 +53,7 @@ public final class GetNetblockIPRangesArgs extends io.pulumi.resources.InvokeArg
     	      this.rangeType = defaults.rangeType;
         }
 
-        public Builder setRangeType(@Nullable String rangeType) {
+        public Builder rangeType(@Nullable String rangeType) {
             this.rangeType = rangeType;
             return this;
         }

@@ -65,22 +65,22 @@ public final class SubscriptionStateRuleArgs extends io.pulumi.resources.Resourc
     	      this.state = defaults.state;
         }
 
-        public Builder setAllowedActions(@Nullable Input<List<String>> allowedActions) {
+        public Builder allowedActions(@Nullable Input<List<String>> allowedActions) {
             this.allowedActions = allowedActions;
             return this;
         }
 
-        public Builder setAllowedActions(@Nullable List<String> allowedActions) {
+        public Builder allowedActions(@Nullable List<String> allowedActions) {
             this.allowedActions = Input.ofNullable(allowedActions);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,SubscriptionState>> state) {
+        public Builder state(@Nullable Input<Either<String,SubscriptionState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,SubscriptionState> state) {
+        public Builder state(@Nullable Either<String,SubscriptionState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

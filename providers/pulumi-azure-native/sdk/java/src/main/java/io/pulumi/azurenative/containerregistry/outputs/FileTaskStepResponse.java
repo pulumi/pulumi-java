@@ -51,15 +51,15 @@ public final class FileTaskStepResponse {
      */
     private final @Nullable String valuesFilePath;
 
-    @OutputCustomType.Constructor({"baseImageDependencies","contextAccessToken","contextPath","taskFilePath","type","values","valuesFilePath"})
+    @OutputCustomType.Constructor
     private FileTaskStepResponse(
-        List<BaseImageDependencyResponse> baseImageDependencies,
-        @Nullable String contextAccessToken,
-        @Nullable String contextPath,
-        String taskFilePath,
-        String type,
-        @Nullable List<SetValueResponse> values,
-        @Nullable String valuesFilePath) {
+        @OutputCustomType.Parameter("baseImageDependencies") List<BaseImageDependencyResponse> baseImageDependencies,
+        @OutputCustomType.Parameter("contextAccessToken") @Nullable String contextAccessToken,
+        @OutputCustomType.Parameter("contextPath") @Nullable String contextPath,
+        @OutputCustomType.Parameter("taskFilePath") String taskFilePath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<SetValueResponse> values,
+        @OutputCustomType.Parameter("valuesFilePath") @Nullable String valuesFilePath) {
         this.baseImageDependencies = baseImageDependencies;
         this.contextAccessToken = contextAccessToken;
         this.contextPath = contextPath;
@@ -152,37 +152,37 @@ public final class FileTaskStepResponse {
     	      this.valuesFilePath = defaults.valuesFilePath;
         }
 
-        public Builder setBaseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
+        public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             this.baseImageDependencies = Objects.requireNonNull(baseImageDependencies);
             return this;
         }
 
-        public Builder setContextAccessToken(@Nullable String contextAccessToken) {
+        public Builder contextAccessToken(@Nullable String contextAccessToken) {
             this.contextAccessToken = contextAccessToken;
             return this;
         }
 
-        public Builder setContextPath(@Nullable String contextPath) {
+        public Builder contextPath(@Nullable String contextPath) {
             this.contextPath = contextPath;
             return this;
         }
 
-        public Builder setTaskFilePath(String taskFilePath) {
+        public Builder taskFilePath(String taskFilePath) {
             this.taskFilePath = Objects.requireNonNull(taskFilePath);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<SetValueResponse> values) {
+        public Builder values(@Nullable List<SetValueResponse> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValuesFilePath(@Nullable String valuesFilePath) {
+        public Builder valuesFilePath(@Nullable String valuesFilePath) {
             this.valuesFilePath = valuesFilePath;
             return this;
         }

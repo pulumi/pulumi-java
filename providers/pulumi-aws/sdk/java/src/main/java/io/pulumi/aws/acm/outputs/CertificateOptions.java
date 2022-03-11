@@ -17,8 +17,8 @@ public final class CertificateOptions {
      */
     private final @Nullable String certificateTransparencyLoggingPreference;
 
-    @OutputCustomType.Constructor({"certificateTransparencyLoggingPreference"})
-    private CertificateOptions(@Nullable String certificateTransparencyLoggingPreference) {
+    @OutputCustomType.Constructor
+    private CertificateOptions(@OutputCustomType.Parameter("certificateTransparencyLoggingPreference") @Nullable String certificateTransparencyLoggingPreference) {
         this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
     }
 
@@ -50,7 +50,7 @@ public final class CertificateOptions {
     	      this.certificateTransparencyLoggingPreference = defaults.certificateTransparencyLoggingPreference;
         }
 
-        public Builder setCertificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
+        public Builder certificateTransparencyLoggingPreference(@Nullable String certificateTransparencyLoggingPreference) {
             this.certificateTransparencyLoggingPreference = certificateTransparencyLoggingPreference;
             return this;
         }

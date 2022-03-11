@@ -15,8 +15,8 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
      */
     private final LogAnalyticsOutputResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private GetLogAnalyticExportRequestRateByIntervalResult(LogAnalyticsOutputResponse properties) {
+    @OutputCustomType.Constructor
+    private GetLogAnalyticExportRequestRateByIntervalResult(@OutputCustomType.Parameter("properties") LogAnalyticsOutputResponse properties) {
         this.properties = properties;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogAnalyticExportRequestRateByIntervalResult {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(LogAnalyticsOutputResponse properties) {
+        public Builder properties(LogAnalyticsOutputResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

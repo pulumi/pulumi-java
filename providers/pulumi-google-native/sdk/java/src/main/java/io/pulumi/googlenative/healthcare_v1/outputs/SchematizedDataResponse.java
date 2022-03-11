@@ -20,10 +20,10 @@ public final class SchematizedDataResponse {
      */
     private final String error;
 
-    @OutputCustomType.Constructor({"data","error"})
+    @OutputCustomType.Constructor
     private SchematizedDataResponse(
-        String data,
-        String error) {
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("error") String error) {
         this.data = data;
         this.error = error;
     }
@@ -65,12 +65,12 @@ public final class SchematizedDataResponse {
     	      this.error = defaults.error;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setError(String error) {
+        public Builder error(String error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }

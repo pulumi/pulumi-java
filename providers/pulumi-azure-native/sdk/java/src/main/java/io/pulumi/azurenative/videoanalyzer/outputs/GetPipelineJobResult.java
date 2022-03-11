@@ -66,18 +66,18 @@ public final class GetPipelineJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","error","expiration","id","name","parameters","state","systemData","topologyName","type"})
+    @OutputCustomType.Constructor
     private GetPipelineJobResult(
-        @Nullable String description,
-        PipelineJobErrorResponse error,
-        String expiration,
-        String id,
-        String name,
-        @Nullable List<ParameterDefinitionResponse> parameters,
-        String state,
-        SystemDataResponse systemData,
-        String topologyName,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("error") PipelineJobErrorResponse error,
+        @OutputCustomType.Parameter("expiration") String expiration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("topologyName") String topologyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.error = error;
         this.expiration = expiration;
@@ -199,52 +199,52 @@ public final class GetPipelineJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setError(PipelineJobErrorResponse error) {
+        public Builder error(PipelineJobErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setExpiration(String expiration) {
+        public Builder expiration(String expiration) {
             this.expiration = Objects.requireNonNull(expiration);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ParameterDefinitionResponse> parameters) {
+        public Builder parameters(@Nullable List<ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTopologyName(String topologyName) {
+        public Builder topologyName(String topologyName) {
             this.topologyName = Objects.requireNonNull(topologyName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

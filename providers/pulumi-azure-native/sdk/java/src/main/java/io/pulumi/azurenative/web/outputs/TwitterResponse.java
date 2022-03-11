@@ -23,10 +23,10 @@ public final class TwitterResponse {
      */
     private final @Nullable TwitterRegistrationResponse registration;
 
-    @OutputCustomType.Constructor({"enabled","registration"})
+    @OutputCustomType.Constructor
     private TwitterResponse(
-        @Nullable Boolean enabled,
-        @Nullable TwitterRegistrationResponse registration) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("registration") @Nullable TwitterRegistrationResponse registration) {
         this.enabled = enabled;
         this.registration = registration;
     }
@@ -68,12 +68,12 @@ public final class TwitterResponse {
     	      this.registration = defaults.registration;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRegistration(@Nullable TwitterRegistrationResponse registration) {
+        public Builder registration(@Nullable TwitterRegistrationResponse registration) {
             this.registration = registration;
             return this;
         }

@@ -22,10 +22,10 @@ public final class RowResponse {
      */
     private final List<WidgetResponse> widgets;
 
-    @OutputCustomType.Constructor({"weight","widgets"})
+    @OutputCustomType.Constructor
     private RowResponse(
-        String weight,
-        List<WidgetResponse> widgets) {
+        @OutputCustomType.Parameter("weight") String weight,
+        @OutputCustomType.Parameter("widgets") List<WidgetResponse> widgets) {
         this.weight = weight;
         this.widgets = widgets;
     }
@@ -67,12 +67,12 @@ public final class RowResponse {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder setWeight(String weight) {
+        public Builder weight(String weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWidgets(List<WidgetResponse> widgets) {
+        public Builder widgets(List<WidgetResponse> widgets) {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }

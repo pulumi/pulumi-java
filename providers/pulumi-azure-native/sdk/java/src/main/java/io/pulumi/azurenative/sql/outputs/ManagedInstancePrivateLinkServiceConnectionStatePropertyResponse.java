@@ -25,11 +25,11 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"actionsRequired","description","status"})
+    @OutputCustomType.Constructor
     private ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse(
-        String actionsRequired,
-        String description,
-        String status) {
+        @OutputCustomType.Parameter("actionsRequired") String actionsRequired,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;
@@ -81,17 +81,17 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(String actionsRequired) {
+        public Builder actionsRequired(String actionsRequired) {
             this.actionsRequired = Objects.requireNonNull(actionsRequired);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

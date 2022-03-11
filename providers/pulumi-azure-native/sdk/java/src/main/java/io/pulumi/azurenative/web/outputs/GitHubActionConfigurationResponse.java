@@ -34,12 +34,12 @@ public final class GitHubActionConfigurationResponse {
      */
     private final @Nullable Boolean isLinux;
 
-    @OutputCustomType.Constructor({"codeConfiguration","containerConfiguration","generateWorkflowFile","isLinux"})
+    @OutputCustomType.Constructor
     private GitHubActionConfigurationResponse(
-        @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
-        @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
-        @Nullable Boolean generateWorkflowFile,
-        @Nullable Boolean isLinux) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable GitHubActionCodeConfigurationResponse codeConfiguration,
+        @OutputCustomType.Parameter("containerConfiguration") @Nullable GitHubActionContainerConfigurationResponse containerConfiguration,
+        @OutputCustomType.Parameter("generateWorkflowFile") @Nullable Boolean generateWorkflowFile,
+        @OutputCustomType.Parameter("isLinux") @Nullable Boolean isLinux) {
         this.codeConfiguration = codeConfiguration;
         this.containerConfiguration = containerConfiguration;
         this.generateWorkflowFile = generateWorkflowFile;
@@ -101,22 +101,22 @@ public final class GitHubActionConfigurationResponse {
     	      this.isLinux = defaults.isLinux;
         }
 
-        public Builder setCodeConfiguration(@Nullable GitHubActionCodeConfigurationResponse codeConfiguration) {
+        public Builder codeConfiguration(@Nullable GitHubActionCodeConfigurationResponse codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setContainerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
+        public Builder containerConfiguration(@Nullable GitHubActionContainerConfigurationResponse containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setGenerateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
+        public Builder generateWorkflowFile(@Nullable Boolean generateWorkflowFile) {
             this.generateWorkflowFile = generateWorkflowFile;
             return this;
         }
 
-        public Builder setIsLinux(@Nullable Boolean isLinux) {
+        public Builder isLinux(@Nullable Boolean isLinux) {
             this.isLinux = isLinux;
             return this;
         }

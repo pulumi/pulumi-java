@@ -24,10 +24,10 @@ public final class EngineSplitTrafficSplit {
      */
     private final @Nullable String shardBy;
 
-    @OutputCustomType.Constructor({"allocations","shardBy"})
+    @OutputCustomType.Constructor
     private EngineSplitTrafficSplit(
-        Map<String,String> allocations,
-        @Nullable String shardBy) {
+        @OutputCustomType.Parameter("allocations") Map<String,String> allocations,
+        @OutputCustomType.Parameter("shardBy") @Nullable String shardBy) {
         this.allocations = allocations;
         this.shardBy = shardBy;
     }
@@ -70,12 +70,12 @@ public final class EngineSplitTrafficSplit {
     	      this.shardBy = defaults.shardBy;
         }
 
-        public Builder setAllocations(Map<String,String> allocations) {
+        public Builder allocations(Map<String,String> allocations) {
             this.allocations = Objects.requireNonNull(allocations);
             return this;
         }
 
-        public Builder setShardBy(@Nullable String shardBy) {
+        public Builder shardBy(@Nullable String shardBy) {
             this.shardBy = shardBy;
             return this;
         }

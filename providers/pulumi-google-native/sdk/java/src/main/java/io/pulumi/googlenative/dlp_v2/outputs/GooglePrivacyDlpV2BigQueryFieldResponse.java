@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse table;
 
-    @OutputCustomType.Constructor({"field","table"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2BigQueryFieldResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        GooglePrivacyDlpV2BigQueryTableResponse table) {
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("table") GooglePrivacyDlpV2BigQueryTableResponse table) {
         this.field = field;
         this.table = table;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2BigQueryFieldResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setTable(GooglePrivacyDlpV2BigQueryTableResponse table) {
+        public Builder table(GooglePrivacyDlpV2BigQueryTableResponse table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

@@ -67,19 +67,19 @@ public final class AccessReviewHistoryInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","downloadUri","expiration","fulfilledDateTime","id","name","reviewHistoryPeriodEndDateTime","reviewHistoryPeriodStartDateTime","runDateTime","status","type"})
+    @OutputCustomType.Constructor
     private AccessReviewHistoryInstanceResponse(
-        @Nullable String displayName,
-        String downloadUri,
-        @Nullable String expiration,
-        @Nullable String fulfilledDateTime,
-        String id,
-        String name,
-        @Nullable String reviewHistoryPeriodEndDateTime,
-        @Nullable String reviewHistoryPeriodStartDateTime,
-        @Nullable String runDateTime,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("downloadUri") String downloadUri,
+        @OutputCustomType.Parameter("expiration") @Nullable String expiration,
+        @OutputCustomType.Parameter("fulfilledDateTime") @Nullable String fulfilledDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("reviewHistoryPeriodEndDateTime") @Nullable String reviewHistoryPeriodEndDateTime,
+        @OutputCustomType.Parameter("reviewHistoryPeriodStartDateTime") @Nullable String reviewHistoryPeriodStartDateTime,
+        @OutputCustomType.Parameter("runDateTime") @Nullable String runDateTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.downloadUri = downloadUri;
         this.expiration = expiration;
@@ -211,57 +211,57 @@ public final class AccessReviewHistoryInstanceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDownloadUri(String downloadUri) {
+        public Builder downloadUri(String downloadUri) {
             this.downloadUri = Objects.requireNonNull(downloadUri);
             return this;
         }
 
-        public Builder setExpiration(@Nullable String expiration) {
+        public Builder expiration(@Nullable String expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setFulfilledDateTime(@Nullable String fulfilledDateTime) {
+        public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
             this.fulfilledDateTime = fulfilledDateTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
+        public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
             this.reviewHistoryPeriodEndDateTime = reviewHistoryPeriodEndDateTime;
             return this;
         }
 
-        public Builder setReviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
+        public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
             this.reviewHistoryPeriodStartDateTime = reviewHistoryPeriodStartDateTime;
             return this;
         }
 
-        public Builder setRunDateTime(@Nullable String runDateTime) {
+        public Builder runDateTime(@Nullable String runDateTime) {
             this.runDateTime = runDateTime;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

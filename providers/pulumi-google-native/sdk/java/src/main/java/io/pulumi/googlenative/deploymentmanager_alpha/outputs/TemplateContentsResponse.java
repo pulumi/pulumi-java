@@ -37,13 +37,13 @@ public final class TemplateContentsResponse {
      */
     private final String template;
 
-    @OutputCustomType.Constructor({"imports","interpreter","mainTemplate","schema","template"})
+    @OutputCustomType.Constructor
     private TemplateContentsResponse(
-        List<ImportFileResponse> imports,
-        String interpreter,
-        String mainTemplate,
-        String schema,
-        String template) {
+        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("mainTemplate") String mainTemplate,
+        @OutputCustomType.Parameter("schema") String schema,
+        @OutputCustomType.Parameter("template") String template) {
         this.imports = imports;
         this.interpreter = interpreter;
         this.mainTemplate = mainTemplate;
@@ -115,27 +115,27 @@ public final class TemplateContentsResponse {
     	      this.template = defaults.template;
         }
 
-        public Builder setImports(List<ImportFileResponse> imports) {
+        public Builder imports(List<ImportFileResponse> imports) {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setMainTemplate(String mainTemplate) {
+        public Builder mainTemplate(String mainTemplate) {
             this.mainTemplate = Objects.requireNonNull(mainTemplate);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setTemplate(String template) {
+        public Builder template(String template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }

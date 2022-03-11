@@ -29,11 +29,11 @@ public final class SolutionDetailsResponse {
      */
     private final @Nullable Integer groupCount;
 
-    @OutputCustomType.Constructor({"assessmentCount","extendedDetails","groupCount"})
+    @OutputCustomType.Constructor
     private SolutionDetailsResponse(
-        @Nullable Integer assessmentCount,
-        @Nullable Map<String,String> extendedDetails,
-        @Nullable Integer groupCount) {
+        @OutputCustomType.Parameter("assessmentCount") @Nullable Integer assessmentCount,
+        @OutputCustomType.Parameter("extendedDetails") @Nullable Map<String,String> extendedDetails,
+        @OutputCustomType.Parameter("groupCount") @Nullable Integer groupCount) {
         this.assessmentCount = assessmentCount;
         this.extendedDetails = extendedDetails;
         this.groupCount = groupCount;
@@ -85,17 +85,17 @@ public final class SolutionDetailsResponse {
     	      this.groupCount = defaults.groupCount;
         }
 
-        public Builder setAssessmentCount(@Nullable Integer assessmentCount) {
+        public Builder assessmentCount(@Nullable Integer assessmentCount) {
             this.assessmentCount = assessmentCount;
             return this;
         }
 
-        public Builder setExtendedDetails(@Nullable Map<String,String> extendedDetails) {
+        public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             this.extendedDetails = extendedDetails;
             return this;
         }
 
-        public Builder setGroupCount(@Nullable Integer groupCount) {
+        public Builder groupCount(@Nullable Integer groupCount) {
             this.groupCount = groupCount;
             return this;
         }

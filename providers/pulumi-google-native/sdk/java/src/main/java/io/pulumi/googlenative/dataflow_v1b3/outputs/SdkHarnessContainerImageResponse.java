@@ -26,11 +26,11 @@ public final class SdkHarnessContainerImageResponse {
      */
     private final Boolean useSingleCorePerContainer;
 
-    @OutputCustomType.Constructor({"containerImage","environmentId","useSingleCorePerContainer"})
+    @OutputCustomType.Constructor
     private SdkHarnessContainerImageResponse(
-        String containerImage,
-        String environmentId,
-        Boolean useSingleCorePerContainer) {
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("environmentId") String environmentId,
+        @OutputCustomType.Parameter("useSingleCorePerContainer") Boolean useSingleCorePerContainer) {
         this.containerImage = containerImage;
         this.environmentId = environmentId;
         this.useSingleCorePerContainer = useSingleCorePerContainer;
@@ -82,17 +82,17 @@ public final class SdkHarnessContainerImageResponse {
     	      this.useSingleCorePerContainer = defaults.useSingleCorePerContainer;
         }
 
-        public Builder setContainerImage(String containerImage) {
+        public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setUseSingleCorePerContainer(Boolean useSingleCorePerContainer) {
+        public Builder useSingleCorePerContainer(Boolean useSingleCorePerContainer) {
             this.useSingleCorePerContainer = Objects.requireNonNull(useSingleCorePerContainer);
             return this;
         }

@@ -16,13 +16,13 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
     private final String spotInstanceType;
     private final String validUntil;
 
-    @OutputCustomType.Constructor({"blockDurationMinutes","instanceInterruptionBehavior","maxPrice","spotInstanceType","validUntil"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateInstanceMarketOptionSpotOption(
-        Integer blockDurationMinutes,
-        String instanceInterruptionBehavior,
-        String maxPrice,
-        String spotInstanceType,
-        String validUntil) {
+        @OutputCustomType.Parameter("blockDurationMinutes") Integer blockDurationMinutes,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") String instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("maxPrice") String maxPrice,
+        @OutputCustomType.Parameter("spotInstanceType") String spotInstanceType,
+        @OutputCustomType.Parameter("validUntil") String validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;
@@ -74,27 +74,27 @@ public final class GetLaunchTemplateInstanceMarketOptionSpotOption {
     	      this.validUntil = defaults.validUntil;
         }
 
-        public Builder setBlockDurationMinutes(Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(Integer blockDurationMinutes) {
             this.blockDurationMinutes = Objects.requireNonNull(blockDurationMinutes);
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(String instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = Objects.requireNonNull(instanceInterruptionBehavior);
             return this;
         }
 
-        public Builder setMaxPrice(String maxPrice) {
+        public Builder maxPrice(String maxPrice) {
             this.maxPrice = Objects.requireNonNull(maxPrice);
             return this;
         }
 
-        public Builder setSpotInstanceType(String spotInstanceType) {
+        public Builder spotInstanceType(String spotInstanceType) {
             this.spotInstanceType = Objects.requireNonNull(spotInstanceType);
             return this;
         }
 
-        public Builder setValidUntil(String validUntil) {
+        public Builder validUntil(String validUntil) {
             this.validUntil = Objects.requireNonNull(validUntil);
             return this;
         }

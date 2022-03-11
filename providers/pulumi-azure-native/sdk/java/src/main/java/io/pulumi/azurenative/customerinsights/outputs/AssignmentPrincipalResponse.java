@@ -27,11 +27,11 @@ public final class AssignmentPrincipalResponse {
      */
     private final String principalType;
 
-    @OutputCustomType.Constructor({"principalId","principalMetadata","principalType"})
+    @OutputCustomType.Constructor
     private AssignmentPrincipalResponse(
-        String principalId,
-        @Nullable Map<String,String> principalMetadata,
-        String principalType) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalMetadata") @Nullable Map<String,String> principalMetadata,
+        @OutputCustomType.Parameter("principalType") String principalType) {
         this.principalId = principalId;
         this.principalMetadata = principalMetadata;
         this.principalType = principalType;
@@ -83,17 +83,17 @@ public final class AssignmentPrincipalResponse {
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalMetadata(@Nullable Map<String,String> principalMetadata) {
+        public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
             this.principalMetadata = principalMetadata;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }

@@ -25,11 +25,11 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
      */
     private final String object;
 
-    @OutputCustomType.Constructor({"bucket","generationNumber","object"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject(
-        String bucket,
-        String generationNumber,
-        String object) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("generationNumber") String generationNumber,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucket = bucket;
         this.generationNumber = generationNumber;
         this.object = object;
@@ -81,17 +81,17 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setGenerationNumber(String generationNumber) {
+        public Builder generationNumber(String generationNumber) {
             this.generationNumber = Objects.requireNonNull(generationNumber);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

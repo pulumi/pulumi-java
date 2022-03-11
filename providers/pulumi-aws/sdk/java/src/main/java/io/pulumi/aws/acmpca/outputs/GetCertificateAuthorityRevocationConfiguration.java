@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetCertificateAuthorityRevocationConfiguration {
     private final List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations;
 
-    @OutputCustomType.Constructor({"crlConfigurations"})
-    private GetCertificateAuthorityRevocationConfiguration(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
+    @OutputCustomType.Constructor
+    private GetCertificateAuthorityRevocationConfiguration(@OutputCustomType.Parameter("crlConfigurations") List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
         this.crlConfigurations = crlConfigurations;
     }
 
@@ -41,7 +41,7 @@ public final class GetCertificateAuthorityRevocationConfiguration {
     	      this.crlConfigurations = defaults.crlConfigurations;
         }
 
-        public Builder setCrlConfigurations(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
+        public Builder crlConfigurations(List<GetCertificateAuthorityRevocationConfigurationCrlConfiguration> crlConfigurations) {
             this.crlConfigurations = Objects.requireNonNull(crlConfigurations);
             return this;
         }

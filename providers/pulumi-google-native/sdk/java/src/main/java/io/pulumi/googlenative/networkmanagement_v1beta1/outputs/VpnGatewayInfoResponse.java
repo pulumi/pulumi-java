@@ -40,14 +40,14 @@ public final class VpnGatewayInfoResponse {
      */
     private final String vpnTunnelUri;
 
-    @OutputCustomType.Constructor({"displayName","ipAddress","networkUri","region","uri","vpnTunnelUri"})
+    @OutputCustomType.Constructor
     private VpnGatewayInfoResponse(
-        String displayName,
-        String ipAddress,
-        String networkUri,
-        String region,
-        String uri,
-        String vpnTunnelUri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("vpnTunnelUri") String vpnTunnelUri) {
         this.displayName = displayName;
         this.ipAddress = ipAddress;
         this.networkUri = networkUri;
@@ -129,32 +129,32 @@ public final class VpnGatewayInfoResponse {
     	      this.vpnTunnelUri = defaults.vpnTunnelUri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVpnTunnelUri(String vpnTunnelUri) {
+        public Builder vpnTunnelUri(String vpnTunnelUri) {
             this.vpnTunnelUri = Objects.requireNonNull(vpnTunnelUri);
             return this;
         }

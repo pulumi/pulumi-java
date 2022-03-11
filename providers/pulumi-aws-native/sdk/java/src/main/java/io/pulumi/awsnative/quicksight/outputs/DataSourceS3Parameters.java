@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataSourceS3Parameters {
     private final DataSourceManifestFileLocation manifestFileLocation;
 
-    @OutputCustomType.Constructor({"manifestFileLocation"})
-    private DataSourceS3Parameters(DataSourceManifestFileLocation manifestFileLocation) {
+    @OutputCustomType.Constructor
+    private DataSourceS3Parameters(@OutputCustomType.Parameter("manifestFileLocation") DataSourceManifestFileLocation manifestFileLocation) {
         this.manifestFileLocation = manifestFileLocation;
     }
 
@@ -40,7 +40,7 @@ public final class DataSourceS3Parameters {
     	      this.manifestFileLocation = defaults.manifestFileLocation;
         }
 
-        public Builder setManifestFileLocation(DataSourceManifestFileLocation manifestFileLocation) {
+        public Builder manifestFileLocation(DataSourceManifestFileLocation manifestFileLocation) {
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }

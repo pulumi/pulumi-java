@@ -45,14 +45,14 @@ public final class ManagedPrivateEndpointResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"connectionState","fqdns","groupId","isReserved","privateLinkResourceId","provisioningState"})
+    @OutputCustomType.Constructor
     private ManagedPrivateEndpointResponse(
-        @Nullable ConnectionStatePropertiesResponse connectionState,
-        @Nullable List<String> fqdns,
-        @Nullable String groupId,
-        Boolean isReserved,
-        @Nullable String privateLinkResourceId,
-        String provisioningState) {
+        @OutputCustomType.Parameter("connectionState") @Nullable ConnectionStatePropertiesResponse connectionState,
+        @OutputCustomType.Parameter("fqdns") @Nullable List<String> fqdns,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("isReserved") Boolean isReserved,
+        @OutputCustomType.Parameter("privateLinkResourceId") @Nullable String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.connectionState = connectionState;
         this.fqdns = fqdns;
         this.groupId = groupId;
@@ -134,32 +134,32 @@ public final class ManagedPrivateEndpointResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setConnectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
+        public Builder connectionState(@Nullable ConnectionStatePropertiesResponse connectionState) {
             this.connectionState = connectionState;
             return this;
         }
 
-        public Builder setFqdns(@Nullable List<String> fqdns) {
+        public Builder fqdns(@Nullable List<String> fqdns) {
             this.fqdns = fqdns;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setIsReserved(Boolean isReserved) {
+        public Builder isReserved(Boolean isReserved) {
             this.isReserved = Objects.requireNonNull(isReserved);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(@Nullable String privateLinkResourceId) {
+        public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             this.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

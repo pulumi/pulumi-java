@@ -20,10 +20,10 @@ public final class GetBillingServiceAccountResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","id"})
+    @OutputCustomType.Constructor
     private GetBillingServiceAccountResult(
-        String arn,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.id = id;
     }
@@ -65,12 +65,12 @@ public final class GetBillingServiceAccountResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

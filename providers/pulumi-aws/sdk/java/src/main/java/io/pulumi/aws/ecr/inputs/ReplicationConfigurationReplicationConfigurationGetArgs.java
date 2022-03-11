@@ -52,12 +52,12 @@ public final class ReplicationConfigurationReplicationConfigurationGetArgs exten
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
+        public Builder rule(Input<ReplicationConfigurationReplicationConfigurationRuleGetArgs> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setRule(ReplicationConfigurationReplicationConfigurationRuleGetArgs rule) {
+        public Builder rule(ReplicationConfigurationReplicationConfigurationRuleGetArgs rule) {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }

@@ -41,14 +41,14 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
      */
     private final String recommendedAction;
 
-    @OutputCustomType.Constructor({"errorCode","errorMessage","errorMessageParameters","errorTags","possibleCauses","recommendedAction"})
+    @OutputCustomType.Constructor
     private InMageRcmLastAgentUpgradeErrorDetailsResponse(
-        String errorCode,
-        String errorMessage,
-        Map<String,String> errorMessageParameters,
-        Map<String,String> errorTags,
-        String possibleCauses,
-        String recommendedAction) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("errorMessageParameters") Map<String,String> errorMessageParameters,
+        @OutputCustomType.Parameter("errorTags") Map<String,String> errorTags,
+        @OutputCustomType.Parameter("possibleCauses") String possibleCauses,
+        @OutputCustomType.Parameter("recommendedAction") String recommendedAction) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.errorMessageParameters = errorMessageParameters;
@@ -130,32 +130,32 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
     	      this.recommendedAction = defaults.recommendedAction;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setErrorMessageParameters(Map<String,String> errorMessageParameters) {
+        public Builder errorMessageParameters(Map<String,String> errorMessageParameters) {
             this.errorMessageParameters = Objects.requireNonNull(errorMessageParameters);
             return this;
         }
 
-        public Builder setErrorTags(Map<String,String> errorTags) {
+        public Builder errorTags(Map<String,String> errorTags) {
             this.errorTags = Objects.requireNonNull(errorTags);
             return this;
         }
 
-        public Builder setPossibleCauses(String possibleCauses) {
+        public Builder possibleCauses(String possibleCauses) {
             this.possibleCauses = Objects.requireNonNull(possibleCauses);
             return this;
         }
 
-        public Builder setRecommendedAction(String recommendedAction) {
+        public Builder recommendedAction(String recommendedAction) {
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
         }

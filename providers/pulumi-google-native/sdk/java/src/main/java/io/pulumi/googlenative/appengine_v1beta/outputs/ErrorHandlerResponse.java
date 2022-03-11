@@ -25,11 +25,11 @@ public final class ErrorHandlerResponse {
      */
     private final String staticFile;
 
-    @OutputCustomType.Constructor({"errorCode","mimeType","staticFile"})
+    @OutputCustomType.Constructor
     private ErrorHandlerResponse(
-        String errorCode,
-        String mimeType,
-        String staticFile) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("staticFile") String staticFile) {
         this.errorCode = errorCode;
         this.mimeType = mimeType;
         this.staticFile = staticFile;
@@ -81,17 +81,17 @@ public final class ErrorHandlerResponse {
     	      this.staticFile = defaults.staticFile;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setStaticFile(String staticFile) {
+        public Builder staticFile(String staticFile) {
             this.staticFile = Objects.requireNonNull(staticFile);
             return this;
         }

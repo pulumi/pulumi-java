@@ -30,12 +30,12 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
      */
     private final Double upperBound;
 
-    @OutputCustomType.Constructor({"confidenceLevel","lowerBound","ratio","upperBound"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceIntervalResponse(
-        Double confidenceLevel,
-        Double lowerBound,
-        Double ratio,
-        Double upperBound) {
+        @OutputCustomType.Parameter("confidenceLevel") Double confidenceLevel,
+        @OutputCustomType.Parameter("lowerBound") Double lowerBound,
+        @OutputCustomType.Parameter("ratio") Double ratio,
+        @OutputCustomType.Parameter("upperBound") Double upperBound) {
         this.confidenceLevel = confidenceLevel;
         this.lowerBound = lowerBound;
         this.ratio = ratio;
@@ -97,22 +97,22 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultConfidenceInter
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder setConfidenceLevel(Double confidenceLevel) {
+        public Builder confidenceLevel(Double confidenceLevel) {
             this.confidenceLevel = Objects.requireNonNull(confidenceLevel);
             return this;
         }
 
-        public Builder setLowerBound(Double lowerBound) {
+        public Builder lowerBound(Double lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
 
-        public Builder setRatio(Double ratio) {
+        public Builder ratio(Double ratio) {
             this.ratio = Objects.requireNonNull(ratio);
             return this;
         }
 
-        public Builder setUpperBound(Double upperBound) {
+        public Builder upperBound(Double upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }

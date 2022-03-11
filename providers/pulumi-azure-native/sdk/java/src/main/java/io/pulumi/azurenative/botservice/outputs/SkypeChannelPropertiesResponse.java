@@ -63,18 +63,18 @@ public final class SkypeChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"callingWebHook","enableCalling","enableGroups","enableMediaCards","enableMessaging","enableScreenSharing","enableVideo","groupsMode","incomingCallRoute","isEnabled"})
+    @OutputCustomType.Constructor
     private SkypeChannelPropertiesResponse(
-        @Nullable String callingWebHook,
-        @Nullable Boolean enableCalling,
-        @Nullable Boolean enableGroups,
-        @Nullable Boolean enableMediaCards,
-        @Nullable Boolean enableMessaging,
-        @Nullable Boolean enableScreenSharing,
-        @Nullable Boolean enableVideo,
-        @Nullable String groupsMode,
-        @Nullable String incomingCallRoute,
-        Boolean isEnabled) {
+        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @OutputCustomType.Parameter("enableGroups") @Nullable Boolean enableGroups,
+        @OutputCustomType.Parameter("enableMediaCards") @Nullable Boolean enableMediaCards,
+        @OutputCustomType.Parameter("enableMessaging") @Nullable Boolean enableMessaging,
+        @OutputCustomType.Parameter("enableScreenSharing") @Nullable Boolean enableScreenSharing,
+        @OutputCustomType.Parameter("enableVideo") @Nullable Boolean enableVideo,
+        @OutputCustomType.Parameter("groupsMode") @Nullable String groupsMode,
+        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.callingWebHook = callingWebHook;
         this.enableCalling = enableCalling;
         this.enableGroups = enableGroups;
@@ -196,52 +196,52 @@ public final class SkypeChannelPropertiesResponse {
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setCallingWebHook(@Nullable String callingWebHook) {
+        public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Boolean enableCalling) {
+        public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
-        public Builder setEnableGroups(@Nullable Boolean enableGroups) {
+        public Builder enableGroups(@Nullable Boolean enableGroups) {
             this.enableGroups = enableGroups;
             return this;
         }
 
-        public Builder setEnableMediaCards(@Nullable Boolean enableMediaCards) {
+        public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
             this.enableMediaCards = enableMediaCards;
             return this;
         }
 
-        public Builder setEnableMessaging(@Nullable Boolean enableMessaging) {
+        public Builder enableMessaging(@Nullable Boolean enableMessaging) {
             this.enableMessaging = enableMessaging;
             return this;
         }
 
-        public Builder setEnableScreenSharing(@Nullable Boolean enableScreenSharing) {
+        public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
             this.enableScreenSharing = enableScreenSharing;
             return this;
         }
 
-        public Builder setEnableVideo(@Nullable Boolean enableVideo) {
+        public Builder enableVideo(@Nullable Boolean enableVideo) {
             this.enableVideo = enableVideo;
             return this;
         }
 
-        public Builder setGroupsMode(@Nullable String groupsMode) {
+        public Builder groupsMode(@Nullable String groupsMode) {
             this.groupsMode = groupsMode;
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable String incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }

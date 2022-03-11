@@ -12,10 +12,10 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabel {
     private final String label;
     private final String value;
 
-    @OutputCustomType.Constructor({"label","value"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecMountVolumeOptionsLabel(
-        String label,
-        String value) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("value") String value) {
         this.label = label;
         this.value = value;
     }
@@ -49,12 +49,12 @@ public final class ServiceTaskSpecContainerSpecMountVolumeOptionsLabel {
     	      this.value = defaults.value;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

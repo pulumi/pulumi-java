@@ -76,17 +76,17 @@ public final class DataflowEndpointGroupDataflowEndpoint extends io.pulumi.resou
     	      this.name = defaults.name;
         }
 
-        public Builder setAddress(@Nullable DataflowEndpointGroupSocketAddress address) {
+        public Builder address(@Nullable DataflowEndpointGroupSocketAddress address) {
             this.address = address;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

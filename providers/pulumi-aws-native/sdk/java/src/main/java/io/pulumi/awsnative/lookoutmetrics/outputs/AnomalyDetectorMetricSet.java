@@ -51,17 +51,17 @@ public final class AnomalyDetectorMetricSet {
     private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor({"dimensionList","metricList","metricSetDescription","metricSetFrequency","metricSetName","metricSource","offset","timestampColumn","timezone"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetricSet(
-        @Nullable List<String> dimensionList,
-        List<AnomalyDetectorMetric> metricList,
-        @Nullable String metricSetDescription,
-        @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
-        String metricSetName,
-        AnomalyDetectorMetricSource metricSource,
-        @Nullable Integer offset,
-        @Nullable AnomalyDetectorTimestampColumn timestampColumn,
-        @Nullable String timezone) {
+        @OutputCustomType.Parameter("dimensionList") @Nullable List<String> dimensionList,
+        @OutputCustomType.Parameter("metricList") List<AnomalyDetectorMetric> metricList,
+        @OutputCustomType.Parameter("metricSetDescription") @Nullable String metricSetDescription,
+        @OutputCustomType.Parameter("metricSetFrequency") @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency,
+        @OutputCustomType.Parameter("metricSetName") String metricSetName,
+        @OutputCustomType.Parameter("metricSource") AnomalyDetectorMetricSource metricSource,
+        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
+        @OutputCustomType.Parameter("timestampColumn") @Nullable AnomalyDetectorTimestampColumn timestampColumn,
+        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
         this.dimensionList = dimensionList;
         this.metricList = metricList;
         this.metricSetDescription = metricSetDescription;
@@ -161,47 +161,47 @@ public final class AnomalyDetectorMetricSet {
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDimensionList(@Nullable List<String> dimensionList) {
+        public Builder dimensionList(@Nullable List<String> dimensionList) {
             this.dimensionList = dimensionList;
             return this;
         }
 
-        public Builder setMetricList(List<AnomalyDetectorMetric> metricList) {
+        public Builder metricList(List<AnomalyDetectorMetric> metricList) {
             this.metricList = Objects.requireNonNull(metricList);
             return this;
         }
 
-        public Builder setMetricSetDescription(@Nullable String metricSetDescription) {
+        public Builder metricSetDescription(@Nullable String metricSetDescription) {
             this.metricSetDescription = metricSetDescription;
             return this;
         }
 
-        public Builder setMetricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
+        public Builder metricSetFrequency(@Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency) {
             this.metricSetFrequency = metricSetFrequency;
             return this;
         }
 
-        public Builder setMetricSetName(String metricSetName) {
+        public Builder metricSetName(String metricSetName) {
             this.metricSetName = Objects.requireNonNull(metricSetName);
             return this;
         }
 
-        public Builder setMetricSource(AnomalyDetectorMetricSource metricSource) {
+        public Builder metricSource(AnomalyDetectorMetricSource metricSource) {
             this.metricSource = Objects.requireNonNull(metricSource);
             return this;
         }
 
-        public Builder setOffset(@Nullable Integer offset) {
+        public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setTimestampColumn(@Nullable AnomalyDetectorTimestampColumn timestampColumn) {
+        public Builder timestampColumn(@Nullable AnomalyDetectorTimestampColumn timestampColumn) {
             this.timestampColumn = timestampColumn;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }

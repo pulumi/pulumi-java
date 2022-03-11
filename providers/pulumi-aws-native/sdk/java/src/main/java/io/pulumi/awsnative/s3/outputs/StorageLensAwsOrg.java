@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class StorageLensAwsOrg {
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private StorageLensAwsOrg(String arn) {
+    @OutputCustomType.Constructor
+    private StorageLensAwsOrg(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 
@@ -40,7 +40,7 @@ public final class StorageLensAwsOrg {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }

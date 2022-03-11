@@ -74,12 +74,12 @@ public final class DeliveryRuleRemoteAddressConditionResponse extends io.pulumi.
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(RemoteAddressMatchConditionParametersResponse parameters) {
+        public Builder parameters(RemoteAddressMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

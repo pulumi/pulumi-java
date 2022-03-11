@@ -34,12 +34,12 @@ public final class GetMembershipIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetMembershipIamPolicyResult(
-        List<AuditConfigResponse> auditConfigs,
-        List<BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;
@@ -101,22 +101,22 @@ public final class GetMembershipIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(List<AuditConfigResponse> auditConfigs) {
+        public Builder auditConfigs(List<AuditConfigResponse> auditConfigs) {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(List<BindingResponse> bindings) {
+        public Builder bindings(List<BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

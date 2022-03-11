@@ -15,8 +15,8 @@ public final class DeliveryConfigResponse {
      */
     private final String deliveryRequirement;
 
-    @OutputCustomType.Constructor({"deliveryRequirement"})
-    private DeliveryConfigResponse(String deliveryRequirement) {
+    @OutputCustomType.Constructor
+    private DeliveryConfigResponse(@OutputCustomType.Parameter("deliveryRequirement") String deliveryRequirement) {
         this.deliveryRequirement = deliveryRequirement;
     }
 
@@ -48,7 +48,7 @@ public final class DeliveryConfigResponse {
     	      this.deliveryRequirement = defaults.deliveryRequirement;
         }
 
-        public Builder setDeliveryRequirement(String deliveryRequirement) {
+        public Builder deliveryRequirement(String deliveryRequirement) {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }

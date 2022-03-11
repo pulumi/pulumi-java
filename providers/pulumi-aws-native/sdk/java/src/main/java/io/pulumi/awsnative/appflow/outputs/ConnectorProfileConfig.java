@@ -15,10 +15,10 @@ public final class ConnectorProfileConfig {
     private final ConnectorProfileCredentials connectorProfileCredentials;
     private final @Nullable ConnectorProfileProperties connectorProfileProperties;
 
-    @OutputCustomType.Constructor({"connectorProfileCredentials","connectorProfileProperties"})
+    @OutputCustomType.Constructor
     private ConnectorProfileConfig(
-        ConnectorProfileCredentials connectorProfileCredentials,
-        @Nullable ConnectorProfileProperties connectorProfileProperties) {
+        @OutputCustomType.Parameter("connectorProfileCredentials") ConnectorProfileCredentials connectorProfileCredentials,
+        @OutputCustomType.Parameter("connectorProfileProperties") @Nullable ConnectorProfileProperties connectorProfileProperties) {
         this.connectorProfileCredentials = connectorProfileCredentials;
         this.connectorProfileProperties = connectorProfileProperties;
     }
@@ -52,12 +52,12 @@ public final class ConnectorProfileConfig {
     	      this.connectorProfileProperties = defaults.connectorProfileProperties;
         }
 
-        public Builder setConnectorProfileCredentials(ConnectorProfileCredentials connectorProfileCredentials) {
+        public Builder connectorProfileCredentials(ConnectorProfileCredentials connectorProfileCredentials) {
             this.connectorProfileCredentials = Objects.requireNonNull(connectorProfileCredentials);
             return this;
         }
 
-        public Builder setConnectorProfileProperties(@Nullable ConnectorProfileProperties connectorProfileProperties) {
+        public Builder connectorProfileProperties(@Nullable ConnectorProfileProperties connectorProfileProperties) {
             this.connectorProfileProperties = connectorProfileProperties;
             return this;
         }

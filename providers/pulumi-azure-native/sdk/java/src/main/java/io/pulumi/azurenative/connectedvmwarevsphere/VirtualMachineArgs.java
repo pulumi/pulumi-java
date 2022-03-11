@@ -353,192 +353,192 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setFirmwareType(@Nullable Input<Either<String,FirmwareType>> firmwareType) {
+        public Builder firmwareType(@Nullable Input<Either<String,FirmwareType>> firmwareType) {
             this.firmwareType = firmwareType;
             return this;
         }
 
-        public Builder setFirmwareType(@Nullable Either<String,FirmwareType> firmwareType) {
+        public Builder firmwareType(@Nullable Either<String,FirmwareType> firmwareType) {
             this.firmwareType = Input.ofNullable(firmwareType);
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
+        public Builder hardwareProfile(@Nullable Input<HardwareProfileArgs> hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileArgs hardwareProfile) {
             this.hardwareProfile = Input.ofNullable(hardwareProfile);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<IdentityArgs> identity) {
+        public Builder identity(@Nullable Input<IdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityArgs identity) {
+        public Builder identity(@Nullable IdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setInventoryItemId(@Nullable Input<String> inventoryItemId) {
+        public Builder inventoryItemId(@Nullable Input<String> inventoryItemId) {
             this.inventoryItemId = inventoryItemId;
             return this;
         }
 
-        public Builder setInventoryItemId(@Nullable String inventoryItemId) {
+        public Builder inventoryItemId(@Nullable String inventoryItemId) {
             this.inventoryItemId = Input.ofNullable(inventoryItemId);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMoRefId(@Nullable Input<String> moRefId) {
+        public Builder moRefId(@Nullable Input<String> moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
-        public Builder setMoRefId(@Nullable String moRefId) {
+        public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = Input.ofNullable(moRefId);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
+        public Builder networkProfile(@Nullable Input<NetworkProfileArgs> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable NetworkProfileArgs networkProfile) {
+        public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable Input<OsProfileArgs> osProfile) {
+        public Builder osProfile(@Nullable Input<OsProfileArgs> osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OsProfileArgs osProfile) {
+        public Builder osProfile(@Nullable OsProfileArgs osProfile) {
             this.osProfile = Input.ofNullable(osProfile);
             return this;
         }
 
-        public Builder setPlacementProfile(@Nullable Input<PlacementProfileArgs> placementProfile) {
+        public Builder placementProfile(@Nullable Input<PlacementProfileArgs> placementProfile) {
             this.placementProfile = placementProfile;
             return this;
         }
 
-        public Builder setPlacementProfile(@Nullable PlacementProfileArgs placementProfile) {
+        public Builder placementProfile(@Nullable PlacementProfileArgs placementProfile) {
             this.placementProfile = Input.ofNullable(placementProfile);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable Input<String> resourcePoolId) {
+        public Builder resourcePoolId(@Nullable Input<String> resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable String resourcePoolId) {
+        public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = Input.ofNullable(resourcePoolId);
             return this;
         }
 
-        public Builder setSmbiosUuid(@Nullable Input<String> smbiosUuid) {
+        public Builder smbiosUuid(@Nullable Input<String> smbiosUuid) {
             this.smbiosUuid = smbiosUuid;
             return this;
         }
 
-        public Builder setSmbiosUuid(@Nullable String smbiosUuid) {
+        public Builder smbiosUuid(@Nullable String smbiosUuid) {
             this.smbiosUuid = Input.ofNullable(smbiosUuid);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateId(@Nullable Input<String> templateId) {
+        public Builder templateId(@Nullable Input<String> templateId) {
             this.templateId = templateId;
             return this;
         }
 
-        public Builder setTemplateId(@Nullable String templateId) {
+        public Builder templateId(@Nullable String templateId) {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }
 
-        public Builder setVCenterId(@Nullable Input<String> vCenterId) {
+        public Builder vCenterId(@Nullable Input<String> vCenterId) {
             this.vCenterId = vCenterId;
             return this;
         }
 
-        public Builder setVCenterId(@Nullable String vCenterId) {
+        public Builder vCenterId(@Nullable String vCenterId) {
             this.vCenterId = Input.ofNullable(vCenterId);
             return this;
         }
 
-        public Builder setVirtualMachineName(@Nullable Input<String> virtualMachineName) {
+        public Builder virtualMachineName(@Nullable Input<String> virtualMachineName) {
             this.virtualMachineName = virtualMachineName;
             return this;
         }
 
-        public Builder setVirtualMachineName(@Nullable String virtualMachineName) {
+        public Builder virtualMachineName(@Nullable String virtualMachineName) {
             this.virtualMachineName = Input.ofNullable(virtualMachineName);
             return this;
         }

@@ -103,22 +103,22 @@ public final class GetHoursOfOperationArgs extends io.pulumi.resources.InvokeArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setHoursOfOperationId(@Nullable String hoursOfOperationId) {
+        public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
             this.hoursOfOperationId = hoursOfOperationId;
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

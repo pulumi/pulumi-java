@@ -28,15 +28,15 @@ public final class GetLaunchResult {
      */
     private final @Nullable List<LaunchTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","groups","metricMonitors","randomizationSalt","scheduledSplitsConfig","tags"})
+    @OutputCustomType.Constructor
     private GetLaunchResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable List<LaunchGroupObject> groups,
-        @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
-        @Nullable String randomizationSalt,
-        @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
-        @Nullable List<LaunchTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("groups") @Nullable List<LaunchGroupObject> groups,
+        @OutputCustomType.Parameter("metricMonitors") @Nullable List<LaunchMetricDefinitionObject> metricMonitors,
+        @OutputCustomType.Parameter("randomizationSalt") @Nullable String randomizationSalt,
+        @OutputCustomType.Parameter("scheduledSplitsConfig") @Nullable List<LaunchStepConfig> scheduledSplitsConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<LaunchTag> tags) {
         this.arn = arn;
         this.description = description;
         this.groups = groups;
@@ -104,37 +104,37 @@ public final class GetLaunchResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<LaunchGroupObject> groups) {
+        public Builder groups(@Nullable List<LaunchGroupObject> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setMetricMonitors(@Nullable List<LaunchMetricDefinitionObject> metricMonitors) {
+        public Builder metricMonitors(@Nullable List<LaunchMetricDefinitionObject> metricMonitors) {
             this.metricMonitors = metricMonitors;
             return this;
         }
 
-        public Builder setRandomizationSalt(@Nullable String randomizationSalt) {
+        public Builder randomizationSalt(@Nullable String randomizationSalt) {
             this.randomizationSalt = randomizationSalt;
             return this;
         }
 
-        public Builder setScheduledSplitsConfig(@Nullable List<LaunchStepConfig> scheduledSplitsConfig) {
+        public Builder scheduledSplitsConfig(@Nullable List<LaunchStepConfig> scheduledSplitsConfig) {
             this.scheduledSplitsConfig = scheduledSplitsConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LaunchTag> tags) {
+        public Builder tags(@Nullable List<LaunchTag> tags) {
             this.tags = tags;
             return this;
         }

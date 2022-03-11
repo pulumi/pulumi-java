@@ -105,42 +105,42 @@ public final class ConsentStoreIamPolicyState extends io.pulumi.resources.Resour
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setConsentStoreId(@Nullable Input<String> consentStoreId) {
+        public Builder consentStoreId(@Nullable Input<String> consentStoreId) {
             this.consentStoreId = consentStoreId;
             return this;
         }
 
-        public Builder setConsentStoreId(@Nullable String consentStoreId) {
+        public Builder consentStoreId(@Nullable String consentStoreId) {
             this.consentStoreId = Input.ofNullable(consentStoreId);
             return this;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }

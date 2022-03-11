@@ -15,8 +15,8 @@ public final class QueryContentResponse {
      */
     private final IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery;
 
-    @OutputCustomType.Constructor({"iamPolicyAnalysisQuery"})
-    private QueryContentResponse(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
+    @OutputCustomType.Constructor
+    private QueryContentResponse(@OutputCustomType.Parameter("iamPolicyAnalysisQuery") IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
         this.iamPolicyAnalysisQuery = iamPolicyAnalysisQuery;
     }
 
@@ -48,7 +48,7 @@ public final class QueryContentResponse {
     	      this.iamPolicyAnalysisQuery = defaults.iamPolicyAnalysisQuery;
         }
 
-        public Builder setIamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
+        public Builder iamPolicyAnalysisQuery(IamPolicyAnalysisQueryResponse iamPolicyAnalysisQuery) {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
         }

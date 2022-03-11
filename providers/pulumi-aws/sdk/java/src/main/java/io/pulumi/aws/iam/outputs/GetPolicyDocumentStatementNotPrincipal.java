@@ -21,10 +21,10 @@ public final class GetPolicyDocumentStatementNotPrincipal {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"identifiers","type"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentStatementNotPrincipal(
-        List<String> identifiers,
-        String type) {
+        @OutputCustomType.Parameter("identifiers") List<String> identifiers,
+        @OutputCustomType.Parameter("type") String type) {
         this.identifiers = identifiers;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class GetPolicyDocumentStatementNotPrincipal {
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentifiers(List<String> identifiers) {
+        public Builder identifiers(List<String> identifiers) {
             this.identifiers = Objects.requireNonNull(identifiers);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

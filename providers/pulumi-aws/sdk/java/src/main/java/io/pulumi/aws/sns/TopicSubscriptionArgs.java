@@ -200,97 +200,97 @@ public final class TopicSubscriptionArgs extends io.pulumi.resources.ResourceArg
     	      this.topic = defaults.topic;
         }
 
-        public Builder setConfirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Input<Integer> confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = confirmationTimeoutInMinutes;
             return this;
         }
 
-        public Builder setConfirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
+        public Builder confirmationTimeoutInMinutes(@Nullable Integer confirmationTimeoutInMinutes) {
             this.confirmationTimeoutInMinutes = Input.ofNullable(confirmationTimeoutInMinutes);
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable Input<String> deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable Input<String> deliveryPolicy) {
             this.deliveryPolicy = deliveryPolicy;
             return this;
         }
 
-        public Builder setDeliveryPolicy(@Nullable String deliveryPolicy) {
+        public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
             this.deliveryPolicy = Input.ofNullable(deliveryPolicy);
             return this;
         }
 
-        public Builder setEndpoint(Input<String> endpoint) {
+        public Builder endpoint(Input<String> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setEndpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Input<Boolean> endpointAutoConfirms) {
             this.endpointAutoConfirms = endpointAutoConfirms;
             return this;
         }
 
-        public Builder setEndpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
+        public Builder endpointAutoConfirms(@Nullable Boolean endpointAutoConfirms) {
             this.endpointAutoConfirms = Input.ofNullable(endpointAutoConfirms);
             return this;
         }
 
-        public Builder setFilterPolicy(@Nullable Input<String> filterPolicy) {
+        public Builder filterPolicy(@Nullable Input<String> filterPolicy) {
             this.filterPolicy = filterPolicy;
             return this;
         }
 
-        public Builder setFilterPolicy(@Nullable String filterPolicy) {
+        public Builder filterPolicy(@Nullable String filterPolicy) {
             this.filterPolicy = Input.ofNullable(filterPolicy);
             return this;
         }
 
-        public Builder setProtocol(Input<String> protocol) {
+        public Builder protocol(Input<String> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setRawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Input<Boolean> rawMessageDelivery) {
             this.rawMessageDelivery = rawMessageDelivery;
             return this;
         }
 
-        public Builder setRawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
+        public Builder rawMessageDelivery(@Nullable Boolean rawMessageDelivery) {
             this.rawMessageDelivery = Input.ofNullable(rawMessageDelivery);
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable Input<String> redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Input<String> redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable String redrivePolicy) {
+        public Builder redrivePolicy(@Nullable String redrivePolicy) {
             this.redrivePolicy = Input.ofNullable(redrivePolicy);
             return this;
         }
 
-        public Builder setSubscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable Input<String> subscriptionRoleArn) {
             this.subscriptionRoleArn = subscriptionRoleArn;
             return this;
         }
 
-        public Builder setSubscriptionRoleArn(@Nullable String subscriptionRoleArn) {
+        public Builder subscriptionRoleArn(@Nullable String subscriptionRoleArn) {
             this.subscriptionRoleArn = Input.ofNullable(subscriptionRoleArn);
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

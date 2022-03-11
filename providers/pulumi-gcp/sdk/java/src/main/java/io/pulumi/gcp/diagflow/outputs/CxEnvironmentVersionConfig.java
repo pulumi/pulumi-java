@@ -15,8 +15,8 @@ public final class CxEnvironmentVersionConfig {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private CxEnvironmentVersionConfig(String version) {
+    @OutputCustomType.Constructor
+    private CxEnvironmentVersionConfig(@OutputCustomType.Parameter("version") String version) {
         this.version = version;
     }
 
@@ -48,7 +48,7 @@ public final class CxEnvironmentVersionConfig {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

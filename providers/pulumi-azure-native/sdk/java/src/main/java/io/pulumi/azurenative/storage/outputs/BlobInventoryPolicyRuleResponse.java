@@ -27,11 +27,11 @@ public final class BlobInventoryPolicyRuleResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"definition","enabled","name"})
+    @OutputCustomType.Constructor
     private BlobInventoryPolicyRuleResponse(
-        BlobInventoryPolicyDefinitionResponse definition,
-        Boolean enabled,
-        String name) {
+        @OutputCustomType.Parameter("definition") BlobInventoryPolicyDefinitionResponse definition,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("name") String name) {
         this.definition = definition;
         this.enabled = enabled;
         this.name = name;
@@ -83,17 +83,17 @@ public final class BlobInventoryPolicyRuleResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDefinition(BlobInventoryPolicyDefinitionResponse definition) {
+        public Builder definition(BlobInventoryPolicyDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

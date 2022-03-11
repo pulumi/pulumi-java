@@ -25,10 +25,10 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
      */
     private final @Nullable Integer terminationWaitTimeInMinutes;
 
-    @OutputCustomType.Constructor({"action","terminationWaitTimeInMinutes"})
+    @OutputCustomType.Constructor
     private DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstancesOnDeploymentSuccess(
-        @Nullable String action,
-        @Nullable Integer terminationWaitTimeInMinutes) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("terminationWaitTimeInMinutes") @Nullable Integer terminationWaitTimeInMinutes) {
         this.action = action;
         this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
     }
@@ -72,12 +72,12 @@ public final class DeploymentGroupBlueGreenDeploymentConfigTerminateBlueInstance
     	      this.terminationWaitTimeInMinutes = defaults.terminationWaitTimeInMinutes;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setTerminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
+        public Builder terminationWaitTimeInMinutes(@Nullable Integer terminationWaitTimeInMinutes) {
             this.terminationWaitTimeInMinutes = terminationWaitTimeInMinutes;
             return this;
         }

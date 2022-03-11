@@ -124,52 +124,52 @@ public final class OracleCloudStorageLocationArgs extends io.pulumi.resources.Re
     	      this.version = defaults.version;
         }
 
-        public Builder setBucketName(@Nullable Input<Object> bucketName) {
+        public Builder bucketName(@Nullable Input<Object> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable Object bucketName) {
+        public Builder bucketName(@Nullable Object bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setFileName(@Nullable Input<Object> fileName) {
+        public Builder fileName(@Nullable Input<Object> fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = Input.ofNullable(fileName);
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Input<Object> folderPath) {
+        public Builder folderPath(@Nullable Input<Object> folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = Input.ofNullable(folderPath);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Object> version) {
+        public Builder version(@Nullable Input<Object> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = Input.ofNullable(version);
             return this;
         }

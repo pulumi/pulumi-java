@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
      */
     private final GooglePrivacyDlpV2ThrowErrorResponse throwError;
 
-    @OutputCustomType.Constructor({"leaveUntransformed","throwError"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TransformationErrorHandlingResponse(
-        GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
-        GooglePrivacyDlpV2ThrowErrorResponse throwError) {
+        @OutputCustomType.Parameter("leaveUntransformed") GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed,
+        @OutputCustomType.Parameter("throwError") GooglePrivacyDlpV2ThrowErrorResponse throwError) {
         this.leaveUntransformed = leaveUntransformed;
         this.throwError = throwError;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2TransformationErrorHandlingResponse {
     	      this.throwError = defaults.throwError;
         }
 
-        public Builder setLeaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
+        public Builder leaveUntransformed(GooglePrivacyDlpV2LeaveUntransformedResponse leaveUntransformed) {
             this.leaveUntransformed = Objects.requireNonNull(leaveUntransformed);
             return this;
         }
 
-        public Builder setThrowError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
+        public Builder throwError(GooglePrivacyDlpV2ThrowErrorResponse throwError) {
             this.throwError = Objects.requireNonNull(throwError);
             return this;
         }

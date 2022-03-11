@@ -57,16 +57,16 @@ public final class HyperVReplicaReplicationDetailsResponse {
      */
     private final @Nullable String vmProtectionStateDescription;
 
-    @OutputCustomType.Constructor({"initialReplicationDetails","instanceType","lastReplicatedTime","vMDiskDetails","vmId","vmNics","vmProtectionState","vmProtectionStateDescription"})
+    @OutputCustomType.Constructor
     private HyperVReplicaReplicationDetailsResponse(
-        @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
-        String instanceType,
-        @Nullable String lastReplicatedTime,
-        @Nullable List<DiskDetailsResponse> vMDiskDetails,
-        @Nullable String vmId,
-        @Nullable List<VMNicDetailsResponse> vmNics,
-        @Nullable String vmProtectionState,
-        @Nullable String vmProtectionStateDescription) {
+        @OutputCustomType.Parameter("initialReplicationDetails") @Nullable InitialReplicationDetailsResponse initialReplicationDetails,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastReplicatedTime") @Nullable String lastReplicatedTime,
+        @OutputCustomType.Parameter("vMDiskDetails") @Nullable List<DiskDetailsResponse> vMDiskDetails,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
+        @OutputCustomType.Parameter("vmNics") @Nullable List<VMNicDetailsResponse> vmNics,
+        @OutputCustomType.Parameter("vmProtectionState") @Nullable String vmProtectionState,
+        @OutputCustomType.Parameter("vmProtectionStateDescription") @Nullable String vmProtectionStateDescription) {
         this.initialReplicationDetails = initialReplicationDetails;
         this.instanceType = instanceType;
         this.lastReplicatedTime = lastReplicatedTime;
@@ -169,42 +169,42 @@ public final class HyperVReplicaReplicationDetailsResponse {
     	      this.vmProtectionStateDescription = defaults.vmProtectionStateDescription;
         }
 
-        public Builder setInitialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
+        public Builder initialReplicationDetails(@Nullable InitialReplicationDetailsResponse initialReplicationDetails) {
             this.initialReplicationDetails = initialReplicationDetails;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastReplicatedTime(@Nullable String lastReplicatedTime) {
+        public Builder lastReplicatedTime(@Nullable String lastReplicatedTime) {
             this.lastReplicatedTime = lastReplicatedTime;
             return this;
         }
 
-        public Builder setVMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
+        public Builder vMDiskDetails(@Nullable List<DiskDetailsResponse> vMDiskDetails) {
             this.vMDiskDetails = vMDiskDetails;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
+        public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             this.vmNics = vmNics;
             return this;
         }
 
-        public Builder setVmProtectionState(@Nullable String vmProtectionState) {
+        public Builder vmProtectionState(@Nullable String vmProtectionState) {
             this.vmProtectionState = vmProtectionState;
             return this;
         }
 
-        public Builder setVmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
+        public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }

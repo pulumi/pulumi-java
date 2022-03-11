@@ -58,12 +58,12 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(@Nullable Input<List<JSONWebKeyArgs>> keys) {
+        public Builder keys(@Nullable Input<List<JSONWebKeyArgs>> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<JSONWebKeyArgs> keys) {
+        public Builder keys(@Nullable List<JSONWebKeyArgs> keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }

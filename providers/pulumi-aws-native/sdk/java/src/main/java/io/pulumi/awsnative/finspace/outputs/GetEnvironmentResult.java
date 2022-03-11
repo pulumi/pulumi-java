@@ -66,19 +66,19 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable EnvironmentStatus status;
 
-    @OutputCustomType.Constructor({"awsAccountId","dedicatedServiceAccountId","description","environmentArn","environmentId","environmentUrl","federationMode","federationParameters","name","sageMakerStudioDomainUrl","status"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String awsAccountId,
-        @Nullable String dedicatedServiceAccountId,
-        @Nullable String description,
-        @Nullable String environmentArn,
-        @Nullable String environmentId,
-        @Nullable String environmentUrl,
-        @Nullable EnvironmentFederationMode federationMode,
-        @Nullable EnvironmentFederationParameters federationParameters,
-        @Nullable String name,
-        @Nullable String sageMakerStudioDomainUrl,
-        @Nullable EnvironmentStatus status) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("dedicatedServiceAccountId") @Nullable String dedicatedServiceAccountId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentArn") @Nullable String environmentArn,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentUrl") @Nullable String environmentUrl,
+        @OutputCustomType.Parameter("federationMode") @Nullable EnvironmentFederationMode federationMode,
+        @OutputCustomType.Parameter("federationParameters") @Nullable EnvironmentFederationParameters federationParameters,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sageMakerStudioDomainUrl") @Nullable String sageMakerStudioDomainUrl,
+        @OutputCustomType.Parameter("status") @Nullable EnvironmentStatus status) {
         this.awsAccountId = awsAccountId;
         this.dedicatedServiceAccountId = dedicatedServiceAccountId;
         this.description = description;
@@ -206,57 +206,57 @@ public final class GetEnvironmentResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setDedicatedServiceAccountId(@Nullable String dedicatedServiceAccountId) {
+        public Builder dedicatedServiceAccountId(@Nullable String dedicatedServiceAccountId) {
             this.dedicatedServiceAccountId = dedicatedServiceAccountId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironmentArn(@Nullable String environmentArn) {
+        public Builder environmentArn(@Nullable String environmentArn) {
             this.environmentArn = environmentArn;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentUrl(@Nullable String environmentUrl) {
+        public Builder environmentUrl(@Nullable String environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
 
-        public Builder setFederationMode(@Nullable EnvironmentFederationMode federationMode) {
+        public Builder federationMode(@Nullable EnvironmentFederationMode federationMode) {
             this.federationMode = federationMode;
             return this;
         }
 
-        public Builder setFederationParameters(@Nullable EnvironmentFederationParameters federationParameters) {
+        public Builder federationParameters(@Nullable EnvironmentFederationParameters federationParameters) {
             this.federationParameters = federationParameters;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSageMakerStudioDomainUrl(@Nullable String sageMakerStudioDomainUrl) {
+        public Builder sageMakerStudioDomainUrl(@Nullable String sageMakerStudioDomainUrl) {
             this.sageMakerStudioDomainUrl = sageMakerStudioDomainUrl;
             return this;
         }
 
-        public Builder setStatus(@Nullable EnvironmentStatus status) {
+        public Builder status(@Nullable EnvironmentStatus status) {
             this.status = status;
             return this;
         }

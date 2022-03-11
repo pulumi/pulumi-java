@@ -57,16 +57,16 @@ public final class Endpoint {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"addresses","conditions","deprecatedTopology","hints","hostname","nodeName","targetRef","zone"})
+    @OutputCustomType.Constructor
     private Endpoint(
-        List<String> addresses,
-        @Nullable EndpointConditions conditions,
-        @Nullable Map<String,String> deprecatedTopology,
-        @Nullable EndpointHints hints,
-        @Nullable String hostname,
-        @Nullable String nodeName,
-        @Nullable ObjectReference targetRef,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("addresses") List<String> addresses,
+        @OutputCustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
+        @OutputCustomType.Parameter("deprecatedTopology") @Nullable Map<String,String> deprecatedTopology,
+        @OutputCustomType.Parameter("hints") @Nullable EndpointHints hints,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.addresses = addresses;
         this.conditions = conditions;
         this.deprecatedTopology = deprecatedTopology;
@@ -168,42 +168,42 @@ public final class Endpoint {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setConditions(@Nullable EndpointConditions conditions) {
+        public Builder conditions(@Nullable EndpointConditions conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setDeprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
+        public Builder deprecatedTopology(@Nullable Map<String,String> deprecatedTopology) {
             this.deprecatedTopology = deprecatedTopology;
             return this;
         }
 
-        public Builder setHints(@Nullable EndpointHints hints) {
+        public Builder hints(@Nullable EndpointHints hints) {
             this.hints = hints;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReference targetRef) {
+        public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

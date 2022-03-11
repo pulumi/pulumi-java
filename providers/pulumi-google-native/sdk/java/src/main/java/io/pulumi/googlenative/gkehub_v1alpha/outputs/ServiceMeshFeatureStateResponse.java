@@ -16,8 +16,8 @@ public final class ServiceMeshFeatureStateResponse {
      */
     private final List<ServiceMeshAnalysisMessageResponse> analysisMessages;
 
-    @OutputCustomType.Constructor({"analysisMessages"})
-    private ServiceMeshFeatureStateResponse(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
+    @OutputCustomType.Constructor
+    private ServiceMeshFeatureStateResponse(@OutputCustomType.Parameter("analysisMessages") List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
         this.analysisMessages = analysisMessages;
     }
 
@@ -49,7 +49,7 @@ public final class ServiceMeshFeatureStateResponse {
     	      this.analysisMessages = defaults.analysisMessages;
         }
 
-        public Builder setAnalysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
+        public Builder analysisMessages(List<ServiceMeshAnalysisMessageResponse> analysisMessages) {
             this.analysisMessages = Objects.requireNonNull(analysisMessages);
             return this;
         }

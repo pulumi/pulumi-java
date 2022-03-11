@@ -16,8 +16,8 @@ public final class StackTraceResponse {
      */
     private final List<StackTraceElementResponse> elements;
 
-    @OutputCustomType.Constructor({"elements"})
-    private StackTraceResponse(List<StackTraceElementResponse> elements) {
+    @OutputCustomType.Constructor
+    private StackTraceResponse(@OutputCustomType.Parameter("elements") List<StackTraceElementResponse> elements) {
         this.elements = elements;
     }
 
@@ -49,7 +49,7 @@ public final class StackTraceResponse {
     	      this.elements = defaults.elements;
         }
 
-        public Builder setElements(List<StackTraceElementResponse> elements) {
+        public Builder elements(List<StackTraceElementResponse> elements) {
             this.elements = Objects.requireNonNull(elements);
             return this;
         }

@@ -51,16 +51,16 @@ public final class GetChannelPartnerLinkResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"channelPartnerCloudIdentityInfo","createTime","inviteLinkUri","linkState","name","publicId","resellerCloudIdentityId","updateTime"})
+    @OutputCustomType.Constructor
     private GetChannelPartnerLinkResult(
-        GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo,
-        String createTime,
-        String inviteLinkUri,
-        String linkState,
-        String name,
-        String publicId,
-        String resellerCloudIdentityId,
-        String updateTime) {
+        @OutputCustomType.Parameter("channelPartnerCloudIdentityInfo") GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("inviteLinkUri") String inviteLinkUri,
+        @OutputCustomType.Parameter("linkState") String linkState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicId") String publicId,
+        @OutputCustomType.Parameter("resellerCloudIdentityId") String resellerCloudIdentityId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.channelPartnerCloudIdentityInfo = channelPartnerCloudIdentityInfo;
         this.createTime = createTime;
         this.inviteLinkUri = inviteLinkUri;
@@ -162,42 +162,42 @@ public final class GetChannelPartnerLinkResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setChannelPartnerCloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo) {
+        public Builder channelPartnerCloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfoResponse channelPartnerCloudIdentityInfo) {
             this.channelPartnerCloudIdentityInfo = Objects.requireNonNull(channelPartnerCloudIdentityInfo);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setInviteLinkUri(String inviteLinkUri) {
+        public Builder inviteLinkUri(String inviteLinkUri) {
             this.inviteLinkUri = Objects.requireNonNull(inviteLinkUri);
             return this;
         }
 
-        public Builder setLinkState(String linkState) {
+        public Builder linkState(String linkState) {
             this.linkState = Objects.requireNonNull(linkState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicId(String publicId) {
+        public Builder publicId(String publicId) {
             this.publicId = Objects.requireNonNull(publicId);
             return this;
         }
 
-        public Builder setResellerCloudIdentityId(String resellerCloudIdentityId) {
+        public Builder resellerCloudIdentityId(String resellerCloudIdentityId) {
             this.resellerCloudIdentityId = Objects.requireNonNull(resellerCloudIdentityId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

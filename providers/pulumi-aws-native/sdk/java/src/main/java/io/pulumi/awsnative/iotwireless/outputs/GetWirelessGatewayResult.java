@@ -60,17 +60,17 @@ public final class GetWirelessGatewayResult {
      */
     private final @Nullable String thingName;
 
-    @OutputCustomType.Constructor({"arn","description","id","lastUplinkReceivedAt","loRaWAN","name","tags","thingArn","thingName"})
+    @OutputCustomType.Constructor
     private GetWirelessGatewayResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String lastUplinkReceivedAt,
-        @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
-        @Nullable String name,
-        @Nullable List<WirelessGatewayTag> tags,
-        @Nullable String thingArn,
-        @Nullable String thingName) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessGatewayLoRaWANGateway loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<WirelessGatewayTag> tags,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
+        @OutputCustomType.Parameter("thingName") @Nullable String thingName) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -182,47 +182,47 @@ public final class GetWirelessGatewayResult {
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
+        public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable WirelessGatewayLoRaWANGateway loRaWAN) {
+        public Builder loRaWAN(@Nullable WirelessGatewayLoRaWANGateway loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WirelessGatewayTag> tags) {
+        public Builder tags(@Nullable List<WirelessGatewayTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThingArn(@Nullable String thingArn) {
+        public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = thingArn;
             return this;
         }
 
-        public Builder setThingName(@Nullable String thingName) {
+        public Builder thingName(@Nullable String thingName) {
             this.thingName = thingName;
             return this;
         }

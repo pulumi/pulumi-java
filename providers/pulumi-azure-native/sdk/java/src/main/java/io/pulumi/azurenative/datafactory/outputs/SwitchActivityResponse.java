@@ -96,16 +96,16 @@ public final class SwitchActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"cases","defaultActivities","dependsOn","description","name","on","type","userProperties"})
+    @OutputCustomType.Constructor
     private SwitchActivityResponse(
-        @Nullable List<SwitchCaseResponse> cases,
-        @Nullable List<Object> defaultActivities,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        String name,
-        ExpressionResponse on,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("cases") @Nullable List<SwitchCaseResponse> cases,
+        @OutputCustomType.Parameter("defaultActivities") @Nullable List<Object> defaultActivities,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("on") ExpressionResponse on,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.cases = cases;
         this.defaultActivities = defaultActivities;
         this.dependsOn = dependsOn;
@@ -208,42 +208,42 @@ public final class SwitchActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCases(@Nullable List<SwitchCaseResponse> cases) {
+        public Builder cases(@Nullable List<SwitchCaseResponse> cases) {
             this.cases = cases;
             return this;
         }
 
-        public Builder setDefaultActivities(@Nullable List<Object> defaultActivities) {
+        public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
             this.defaultActivities = defaultActivities;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOn(ExpressionResponse on) {
+        public Builder on(ExpressionResponse on) {
             this.on = Objects.requireNonNull(on);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

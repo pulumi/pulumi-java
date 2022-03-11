@@ -33,12 +33,12 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
      */
     private final @Nullable String catalogServerEndpoint;
 
-    @OutputCustomType.Constructor({"catalogAdminPassword","catalogAdminUserName","catalogPricingTier","catalogServerEndpoint"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeSsisCatalogInfoResponse(
-        @Nullable SecureStringResponse catalogAdminPassword,
-        @Nullable String catalogAdminUserName,
-        @Nullable String catalogPricingTier,
-        @Nullable String catalogServerEndpoint) {
+        @OutputCustomType.Parameter("catalogAdminPassword") @Nullable SecureStringResponse catalogAdminPassword,
+        @OutputCustomType.Parameter("catalogAdminUserName") @Nullable String catalogAdminUserName,
+        @OutputCustomType.Parameter("catalogPricingTier") @Nullable String catalogPricingTier,
+        @OutputCustomType.Parameter("catalogServerEndpoint") @Nullable String catalogServerEndpoint) {
         this.catalogAdminPassword = catalogAdminPassword;
         this.catalogAdminUserName = catalogAdminUserName;
         this.catalogPricingTier = catalogPricingTier;
@@ -100,22 +100,22 @@ public final class IntegrationRuntimeSsisCatalogInfoResponse {
     	      this.catalogServerEndpoint = defaults.catalogServerEndpoint;
         }
 
-        public Builder setCatalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
+        public Builder catalogAdminPassword(@Nullable SecureStringResponse catalogAdminPassword) {
             this.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
-        public Builder setCatalogAdminUserName(@Nullable String catalogAdminUserName) {
+        public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
             this.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
-        public Builder setCatalogPricingTier(@Nullable String catalogPricingTier) {
+        public Builder catalogPricingTier(@Nullable String catalogPricingTier) {
             this.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
-        public Builder setCatalogServerEndpoint(@Nullable String catalogServerEndpoint) {
+        public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
             this.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }

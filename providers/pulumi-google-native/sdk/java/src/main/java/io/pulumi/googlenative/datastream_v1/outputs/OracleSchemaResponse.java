@@ -22,10 +22,10 @@ public final class OracleSchemaResponse {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor({"oracleTables","schema"})
+    @OutputCustomType.Constructor
     private OracleSchemaResponse(
-        List<OracleTableResponse> oracleTables,
-        String schema) {
+        @OutputCustomType.Parameter("oracleTables") List<OracleTableResponse> oracleTables,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.oracleTables = oracleTables;
         this.schema = schema;
     }
@@ -67,12 +67,12 @@ public final class OracleSchemaResponse {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setOracleTables(List<OracleTableResponse> oracleTables) {
+        public Builder oracleTables(List<OracleTableResponse> oracleTables) {
             this.oracleTables = Objects.requireNonNull(oracleTables);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }

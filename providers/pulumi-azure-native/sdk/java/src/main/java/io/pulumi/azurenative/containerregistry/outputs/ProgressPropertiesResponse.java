@@ -17,8 +17,8 @@ public final class ProgressPropertiesResponse {
      */
     private final @Nullable String percentage;
 
-    @OutputCustomType.Constructor({"percentage"})
-    private ProgressPropertiesResponse(@Nullable String percentage) {
+    @OutputCustomType.Constructor
+    private ProgressPropertiesResponse(@OutputCustomType.Parameter("percentage") @Nullable String percentage) {
         this.percentage = percentage;
     }
 
@@ -50,7 +50,7 @@ public final class ProgressPropertiesResponse {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setPercentage(@Nullable String percentage) {
+        public Builder percentage(@Nullable String percentage) {
             this.percentage = percentage;
             return this;
         }

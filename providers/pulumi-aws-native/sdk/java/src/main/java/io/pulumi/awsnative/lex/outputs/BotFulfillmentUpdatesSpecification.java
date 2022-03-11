@@ -27,12 +27,12 @@ public final class BotFulfillmentUpdatesSpecification {
     private final @Nullable Integer timeoutInSeconds;
     private final @Nullable BotFulfillmentUpdateResponseSpecification updateResponse;
 
-    @OutputCustomType.Constructor({"active","startResponse","timeoutInSeconds","updateResponse"})
+    @OutputCustomType.Constructor
     private BotFulfillmentUpdatesSpecification(
-        Boolean active,
-        @Nullable BotFulfillmentStartResponseSpecification startResponse,
-        @Nullable Integer timeoutInSeconds,
-        @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("startResponse") @Nullable BotFulfillmentStartResponseSpecification startResponse,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @OutputCustomType.Parameter("updateResponse") @Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
         this.active = active;
         this.startResponse = startResponse;
         this.timeoutInSeconds = timeoutInSeconds;
@@ -86,22 +86,22 @@ public final class BotFulfillmentUpdatesSpecification {
     	      this.updateResponse = defaults.updateResponse;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setStartResponse(@Nullable BotFulfillmentStartResponseSpecification startResponse) {
+        public Builder startResponse(@Nullable BotFulfillmentStartResponseSpecification startResponse) {
             this.startResponse = startResponse;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setUpdateResponse(@Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
+        public Builder updateResponse(@Nullable BotFulfillmentUpdateResponseSpecification updateResponse) {
             this.updateResponse = updateResponse;
             return this;
         }

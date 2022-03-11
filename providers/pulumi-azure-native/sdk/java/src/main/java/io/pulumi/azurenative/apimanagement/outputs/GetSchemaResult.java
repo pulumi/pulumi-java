@@ -42,14 +42,14 @@ public final class GetSchemaResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"description","id","name","schemaType","type","value"})
+    @OutputCustomType.Constructor
     private GetSchemaResult(
-        @Nullable String description,
-        String id,
-        String name,
-        String schemaType,
-        String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaType") String schemaType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetSchemaResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchemaType(String schemaType) {
+        public Builder schemaType(String schemaType) {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

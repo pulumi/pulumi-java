@@ -24,10 +24,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable ApiEntityReferenceResponse subnet;
 
-    @OutputCustomType.Constructor({"networkInterfaces","subnet"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable ApiEntityReferenceResponse subnet) {
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("subnet") @Nullable ApiEntityReferenceResponse subnet) {
         this.networkInterfaces = networkInterfaces;
         this.subnet = subnet;
     }
@@ -69,12 +69,12 @@ public final class NetworkProfileResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ApiEntityReferenceResponse subnet) {
+        public Builder subnet(@Nullable ApiEntityReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
         }

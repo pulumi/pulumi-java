@@ -30,12 +30,12 @@ public final class LifecycleConfigResponse {
      */
     private final String idleStartTime;
 
-    @OutputCustomType.Constructor({"autoDeleteTime","autoDeleteTtl","idleDeleteTtl","idleStartTime"})
+    @OutputCustomType.Constructor
     private LifecycleConfigResponse(
-        String autoDeleteTime,
-        String autoDeleteTtl,
-        String idleDeleteTtl,
-        String idleStartTime) {
+        @OutputCustomType.Parameter("autoDeleteTime") String autoDeleteTime,
+        @OutputCustomType.Parameter("autoDeleteTtl") String autoDeleteTtl,
+        @OutputCustomType.Parameter("idleDeleteTtl") String idleDeleteTtl,
+        @OutputCustomType.Parameter("idleStartTime") String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.autoDeleteTtl = autoDeleteTtl;
         this.idleDeleteTtl = idleDeleteTtl;
@@ -97,22 +97,22 @@ public final class LifecycleConfigResponse {
     	      this.idleStartTime = defaults.idleStartTime;
         }
 
-        public Builder setAutoDeleteTime(String autoDeleteTime) {
+        public Builder autoDeleteTime(String autoDeleteTime) {
             this.autoDeleteTime = Objects.requireNonNull(autoDeleteTime);
             return this;
         }
 
-        public Builder setAutoDeleteTtl(String autoDeleteTtl) {
+        public Builder autoDeleteTtl(String autoDeleteTtl) {
             this.autoDeleteTtl = Objects.requireNonNull(autoDeleteTtl);
             return this;
         }
 
-        public Builder setIdleDeleteTtl(String idleDeleteTtl) {
+        public Builder idleDeleteTtl(String idleDeleteTtl) {
             this.idleDeleteTtl = Objects.requireNonNull(idleDeleteTtl);
             return this;
         }
 
-        public Builder setIdleStartTime(String idleStartTime) {
+        public Builder idleStartTime(String idleStartTime) {
             this.idleStartTime = Objects.requireNonNull(idleStartTime);
             return this;
         }

@@ -38,13 +38,13 @@ public final class ImageTemplateRestartCustomizerResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","restartCheckCommand","restartCommand","restartTimeout","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateRestartCustomizerResponse(
-        @Nullable String name,
-        @Nullable String restartCheckCommand,
-        @Nullable String restartCommand,
-        @Nullable String restartTimeout,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("restartCheckCommand") @Nullable String restartCheckCommand,
+        @OutputCustomType.Parameter("restartCommand") @Nullable String restartCommand,
+        @OutputCustomType.Parameter("restartTimeout") @Nullable String restartTimeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.restartCheckCommand = restartCheckCommand;
         this.restartCommand = restartCommand;
@@ -117,27 +117,27 @@ public final class ImageTemplateRestartCustomizerResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRestartCheckCommand(@Nullable String restartCheckCommand) {
+        public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
             this.restartCheckCommand = restartCheckCommand;
             return this;
         }
 
-        public Builder setRestartCommand(@Nullable String restartCommand) {
+        public Builder restartCommand(@Nullable String restartCommand) {
             this.restartCommand = restartCommand;
             return this;
         }
 
-        public Builder setRestartTimeout(@Nullable String restartTimeout) {
+        public Builder restartTimeout(@Nullable String restartTimeout) {
             this.restartTimeout = restartTimeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

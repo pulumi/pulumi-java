@@ -31,12 +31,12 @@ public final class DiskInstantiationConfigResponse {
      */
     private final String instantiateFrom;
 
-    @OutputCustomType.Constructor({"autoDelete","customImage","deviceName","instantiateFrom"})
+    @OutputCustomType.Constructor
     private DiskInstantiationConfigResponse(
-        Boolean autoDelete,
-        String customImage,
-        String deviceName,
-        String instantiateFrom) {
+        @OutputCustomType.Parameter("autoDelete") Boolean autoDelete,
+        @OutputCustomType.Parameter("customImage") String customImage,
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("instantiateFrom") String instantiateFrom) {
         this.autoDelete = autoDelete;
         this.customImage = customImage;
         this.deviceName = deviceName;
@@ -98,22 +98,22 @@ public final class DiskInstantiationConfigResponse {
     	      this.instantiateFrom = defaults.instantiateFrom;
         }
 
-        public Builder setAutoDelete(Boolean autoDelete) {
+        public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
 
-        public Builder setCustomImage(String customImage) {
+        public Builder customImage(String customImage) {
             this.customImage = Objects.requireNonNull(customImage);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setInstantiateFrom(String instantiateFrom) {
+        public Builder instantiateFrom(String instantiateFrom) {
             this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
             return this;
         }

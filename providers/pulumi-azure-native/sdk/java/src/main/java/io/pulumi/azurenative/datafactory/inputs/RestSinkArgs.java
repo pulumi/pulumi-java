@@ -236,122 +236,122 @@ public final class RestSinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.writeBatchTimeout = defaults.writeBatchTimeout;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Input<Object> additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Input<Object> additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Object additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = Input.ofNullable(additionalHeaders);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setHttpCompressionType(@Nullable Input<Object> httpCompressionType) {
+        public Builder httpCompressionType(@Nullable Input<Object> httpCompressionType) {
             this.httpCompressionType = httpCompressionType;
             return this;
         }
 
-        public Builder setHttpCompressionType(@Nullable Object httpCompressionType) {
+        public Builder httpCompressionType(@Nullable Object httpCompressionType) {
             this.httpCompressionType = Input.ofNullable(httpCompressionType);
             return this;
         }
 
-        public Builder setHttpRequestTimeout(@Nullable Input<Object> httpRequestTimeout) {
+        public Builder httpRequestTimeout(@Nullable Input<Object> httpRequestTimeout) {
             this.httpRequestTimeout = httpRequestTimeout;
             return this;
         }
 
-        public Builder setHttpRequestTimeout(@Nullable Object httpRequestTimeout) {
+        public Builder httpRequestTimeout(@Nullable Object httpRequestTimeout) {
             this.httpRequestTimeout = Input.ofNullable(httpRequestTimeout);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Input<Object> requestInterval) {
+        public Builder requestInterval(@Nullable Input<Object> requestInterval) {
             this.requestInterval = requestInterval;
             return this;
         }
 
-        public Builder setRequestInterval(@Nullable Object requestInterval) {
+        public Builder requestInterval(@Nullable Object requestInterval) {
             this.requestInterval = Input.ofNullable(requestInterval);
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Input<Object> requestMethod) {
+        public Builder requestMethod(@Nullable Input<Object> requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Object requestMethod) {
+        public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = Input.ofNullable(requestMethod);
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Input<Object> sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = Input.ofNullable(sinkRetryCount);
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Input<Object> sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = Input.ofNullable(sinkRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Input<Object> writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Input<Object> writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = Input.ofNullable(writeBatchSize);
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Input<Object> writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = Input.ofNullable(writeBatchTimeout);
             return this;
         }

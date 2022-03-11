@@ -31,11 +31,11 @@ public final class MarkdownPartMetadataResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inputs","settings","type"})
+    @OutputCustomType.Constructor
     private MarkdownPartMetadataResponse(
-        @Nullable List<Object> inputs,
-        @Nullable MarkdownPartMetadataResponseSettings settings,
-        String type) {
+        @OutputCustomType.Parameter("inputs") @Nullable List<Object> inputs,
+        @OutputCustomType.Parameter("settings") @Nullable MarkdownPartMetadataResponseSettings settings,
+        @OutputCustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.settings = settings;
         this.type = type;
@@ -88,17 +88,17 @@ public final class MarkdownPartMetadataResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInputs(@Nullable List<Object> inputs) {
+        public Builder inputs(@Nullable List<Object> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setSettings(@Nullable MarkdownPartMetadataResponseSettings settings) {
+        public Builder settings(@Nullable MarkdownPartMetadataResponseSettings settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

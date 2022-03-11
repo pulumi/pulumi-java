@@ -32,12 +32,12 @@ public final class GraphQLApiUserPoolConfig {
      */
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"appIdClientRegex","awsRegion","defaultAction","userPoolId"})
+    @OutputCustomType.Constructor
     private GraphQLApiUserPoolConfig(
-        @Nullable String appIdClientRegex,
-        @Nullable String awsRegion,
-        String defaultAction,
-        String userPoolId) {
+        @OutputCustomType.Parameter("appIdClientRegex") @Nullable String appIdClientRegex,
+        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @OutputCustomType.Parameter("defaultAction") String defaultAction,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
         this.defaultAction = defaultAction;
@@ -99,22 +99,22 @@ public final class GraphQLApiUserPoolConfig {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAppIdClientRegex(@Nullable String appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setDefaultAction(String defaultAction) {
+        public Builder defaultAction(String defaultAction) {
             this.defaultAction = Objects.requireNonNull(defaultAction);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }

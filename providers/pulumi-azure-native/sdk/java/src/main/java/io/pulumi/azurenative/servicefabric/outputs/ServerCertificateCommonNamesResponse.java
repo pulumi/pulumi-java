@@ -24,10 +24,10 @@ public final class ServerCertificateCommonNamesResponse {
      */
     private final @Nullable String x509StoreName;
 
-    @OutputCustomType.Constructor({"commonNames","x509StoreName"})
+    @OutputCustomType.Constructor
     private ServerCertificateCommonNamesResponse(
-        @Nullable List<ServerCertificateCommonNameResponse> commonNames,
-        @Nullable String x509StoreName) {
+        @OutputCustomType.Parameter("commonNames") @Nullable List<ServerCertificateCommonNameResponse> commonNames,
+        @OutputCustomType.Parameter("x509StoreName") @Nullable String x509StoreName) {
         this.commonNames = commonNames;
         this.x509StoreName = x509StoreName;
     }
@@ -69,12 +69,12 @@ public final class ServerCertificateCommonNamesResponse {
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder setCommonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
+        public Builder commonNames(@Nullable List<ServerCertificateCommonNameResponse> commonNames) {
             this.commonNames = commonNames;
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable String x509StoreName) {
+        public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }

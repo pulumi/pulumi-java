@@ -119,27 +119,27 @@ public final class GetActionGroupResult {
      */
     private final @Nullable List<WebhookReceiverResponse> webhookReceivers;
 
-    @OutputCustomType.Constructor({"armRoleReceivers","automationRunbookReceivers","azureAppPushReceivers","azureFunctionReceivers","emailReceivers","enabled","groupShortName","id","identity","itsmReceivers","kind","location","logicAppReceivers","name","smsReceivers","tags","type","voiceReceivers","webhookReceivers"})
+    @OutputCustomType.Constructor
     private GetActionGroupResult(
-        @Nullable List<ArmRoleReceiverResponse> armRoleReceivers,
-        @Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers,
-        @Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers,
-        @Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers,
-        @Nullable List<EmailReceiverResponse> emailReceivers,
-        Boolean enabled,
-        String groupShortName,
-        String id,
-        String identity,
-        @Nullable List<ItsmReceiverResponse> itsmReceivers,
-        String kind,
-        String location,
-        @Nullable List<LogicAppReceiverResponse> logicAppReceivers,
-        String name,
-        @Nullable List<SmsReceiverResponse> smsReceivers,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VoiceReceiverResponse> voiceReceivers,
-        @Nullable List<WebhookReceiverResponse> webhookReceivers) {
+        @OutputCustomType.Parameter("armRoleReceivers") @Nullable List<ArmRoleReceiverResponse> armRoleReceivers,
+        @OutputCustomType.Parameter("automationRunbookReceivers") @Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers,
+        @OutputCustomType.Parameter("azureAppPushReceivers") @Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers,
+        @OutputCustomType.Parameter("azureFunctionReceivers") @Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers,
+        @OutputCustomType.Parameter("emailReceivers") @Nullable List<EmailReceiverResponse> emailReceivers,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("groupShortName") String groupShortName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") String identity,
+        @OutputCustomType.Parameter("itsmReceivers") @Nullable List<ItsmReceiverResponse> itsmReceivers,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logicAppReceivers") @Nullable List<LogicAppReceiverResponse> logicAppReceivers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("smsReceivers") @Nullable List<SmsReceiverResponse> smsReceivers,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("voiceReceivers") @Nullable List<VoiceReceiverResponse> voiceReceivers,
+        @OutputCustomType.Parameter("webhookReceivers") @Nullable List<WebhookReceiverResponse> webhookReceivers) {
         this.armRoleReceivers = armRoleReceivers;
         this.automationRunbookReceivers = automationRunbookReceivers;
         this.azureAppPushReceivers = azureAppPushReceivers;
@@ -351,97 +351,97 @@ public final class GetActionGroupResult {
     	      this.webhookReceivers = defaults.webhookReceivers;
         }
 
-        public Builder setArmRoleReceivers(@Nullable List<ArmRoleReceiverResponse> armRoleReceivers) {
+        public Builder armRoleReceivers(@Nullable List<ArmRoleReceiverResponse> armRoleReceivers) {
             this.armRoleReceivers = armRoleReceivers;
             return this;
         }
 
-        public Builder setAutomationRunbookReceivers(@Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers) {
+        public Builder automationRunbookReceivers(@Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers) {
             this.automationRunbookReceivers = automationRunbookReceivers;
             return this;
         }
 
-        public Builder setAzureAppPushReceivers(@Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers) {
+        public Builder azureAppPushReceivers(@Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers) {
             this.azureAppPushReceivers = azureAppPushReceivers;
             return this;
         }
 
-        public Builder setAzureFunctionReceivers(@Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers) {
+        public Builder azureFunctionReceivers(@Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers) {
             this.azureFunctionReceivers = azureFunctionReceivers;
             return this;
         }
 
-        public Builder setEmailReceivers(@Nullable List<EmailReceiverResponse> emailReceivers) {
+        public Builder emailReceivers(@Nullable List<EmailReceiverResponse> emailReceivers) {
             this.emailReceivers = emailReceivers;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setGroupShortName(String groupShortName) {
+        public Builder groupShortName(String groupShortName) {
             this.groupShortName = Objects.requireNonNull(groupShortName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(String identity) {
+        public Builder identity(String identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setItsmReceivers(@Nullable List<ItsmReceiverResponse> itsmReceivers) {
+        public Builder itsmReceivers(@Nullable List<ItsmReceiverResponse> itsmReceivers) {
             this.itsmReceivers = itsmReceivers;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLogicAppReceivers(@Nullable List<LogicAppReceiverResponse> logicAppReceivers) {
+        public Builder logicAppReceivers(@Nullable List<LogicAppReceiverResponse> logicAppReceivers) {
             this.logicAppReceivers = logicAppReceivers;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSmsReceivers(@Nullable List<SmsReceiverResponse> smsReceivers) {
+        public Builder smsReceivers(@Nullable List<SmsReceiverResponse> smsReceivers) {
             this.smsReceivers = smsReceivers;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVoiceReceivers(@Nullable List<VoiceReceiverResponse> voiceReceivers) {
+        public Builder voiceReceivers(@Nullable List<VoiceReceiverResponse> voiceReceivers) {
             this.voiceReceivers = voiceReceivers;
             return this;
         }
 
-        public Builder setWebhookReceivers(@Nullable List<WebhookReceiverResponse> webhookReceivers) {
+        public Builder webhookReceivers(@Nullable List<WebhookReceiverResponse> webhookReceivers) {
             this.webhookReceivers = webhookReceivers;
             return this;
         }

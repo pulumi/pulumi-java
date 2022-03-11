@@ -55,7 +55,7 @@ public final class FeatureResourceStateResponse extends io.pulumi.resources.Invo
     	      this.state = defaults.state;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

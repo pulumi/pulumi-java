@@ -17,8 +17,8 @@ public final class PtrRecordResponse {
      */
     private final @Nullable String ptrdname;
 
-    @OutputCustomType.Constructor({"ptrdname"})
-    private PtrRecordResponse(@Nullable String ptrdname) {
+    @OutputCustomType.Constructor
+    private PtrRecordResponse(@OutputCustomType.Parameter("ptrdname") @Nullable String ptrdname) {
         this.ptrdname = ptrdname;
     }
 
@@ -50,7 +50,7 @@ public final class PtrRecordResponse {
     	      this.ptrdname = defaults.ptrdname;
         }
 
-        public Builder setPtrdname(@Nullable String ptrdname) {
+        public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = ptrdname;
             return this;
         }

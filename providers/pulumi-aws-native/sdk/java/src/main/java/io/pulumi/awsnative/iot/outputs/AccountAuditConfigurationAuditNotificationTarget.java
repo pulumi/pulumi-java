@@ -28,11 +28,11 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
      */
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor({"enabled","roleArn","targetArn"})
+    @OutputCustomType.Constructor
     private AccountAuditConfigurationAuditNotificationTarget(
-        @Nullable Boolean enabled,
-        @Nullable String roleArn,
-        @Nullable String targetArn) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.enabled = enabled;
         this.roleArn = roleArn;
         this.targetArn = targetArn;
@@ -84,17 +84,17 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

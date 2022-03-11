@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GlobalTableStreamSpecification {
     private final String streamViewType;
 
-    @OutputCustomType.Constructor({"streamViewType"})
-    private GlobalTableStreamSpecification(String streamViewType) {
+    @OutputCustomType.Constructor
+    private GlobalTableStreamSpecification(@OutputCustomType.Parameter("streamViewType") String streamViewType) {
         this.streamViewType = streamViewType;
     }
 
@@ -40,7 +40,7 @@ public final class GlobalTableStreamSpecification {
     	      this.streamViewType = defaults.streamViewType;
         }
 
-        public Builder setStreamViewType(String streamViewType) {
+        public Builder streamViewType(String streamViewType) {
             this.streamViewType = Objects.requireNonNull(streamViewType);
             return this;
         }

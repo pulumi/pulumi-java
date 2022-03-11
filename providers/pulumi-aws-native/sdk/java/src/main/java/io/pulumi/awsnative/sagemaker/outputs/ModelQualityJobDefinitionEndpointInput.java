@@ -52,17 +52,17 @@ public final class ModelQualityJobDefinitionEndpointInput {
      */
     private final @Nullable String startTimeOffset;
 
-    @OutputCustomType.Constructor({"endTimeOffset","endpointName","inferenceAttribute","localPath","probabilityAttribute","probabilityThresholdAttribute","s3DataDistributionType","s3InputMode","startTimeOffset"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionEndpointInput(
-        @Nullable String endTimeOffset,
-        String endpointName,
-        @Nullable String inferenceAttribute,
-        String localPath,
-        @Nullable String probabilityAttribute,
-        @Nullable Double probabilityThresholdAttribute,
-        @Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
-        @Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode,
-        @Nullable String startTimeOffset) {
+        @OutputCustomType.Parameter("endTimeOffset") @Nullable String endTimeOffset,
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("inferenceAttribute") @Nullable String inferenceAttribute,
+        @OutputCustomType.Parameter("localPath") String localPath,
+        @OutputCustomType.Parameter("probabilityAttribute") @Nullable String probabilityAttribute,
+        @OutputCustomType.Parameter("probabilityThresholdAttribute") @Nullable Double probabilityThresholdAttribute,
+        @OutputCustomType.Parameter("s3DataDistributionType") @Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType,
+        @OutputCustomType.Parameter("s3InputMode") @Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode,
+        @OutputCustomType.Parameter("startTimeOffset") @Nullable String startTimeOffset) {
         this.endTimeOffset = endTimeOffset;
         this.endpointName = endpointName;
         this.inferenceAttribute = inferenceAttribute;
@@ -166,47 +166,47 @@ public final class ModelQualityJobDefinitionEndpointInput {
     	      this.startTimeOffset = defaults.startTimeOffset;
         }
 
-        public Builder setEndTimeOffset(@Nullable String endTimeOffset) {
+        public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setInferenceAttribute(@Nullable String inferenceAttribute) {
+        public Builder inferenceAttribute(@Nullable String inferenceAttribute) {
             this.inferenceAttribute = inferenceAttribute;
             return this;
         }
 
-        public Builder setLocalPath(String localPath) {
+        public Builder localPath(String localPath) {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
 
-        public Builder setProbabilityAttribute(@Nullable String probabilityAttribute) {
+        public Builder probabilityAttribute(@Nullable String probabilityAttribute) {
             this.probabilityAttribute = probabilityAttribute;
             return this;
         }
 
-        public Builder setProbabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
+        public Builder probabilityThresholdAttribute(@Nullable Double probabilityThresholdAttribute) {
             this.probabilityThresholdAttribute = probabilityThresholdAttribute;
             return this;
         }
 
-        public Builder setS3DataDistributionType(@Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
+        public Builder s3DataDistributionType(@Nullable ModelQualityJobDefinitionEndpointInputS3DataDistributionType s3DataDistributionType) {
             this.s3DataDistributionType = s3DataDistributionType;
             return this;
         }
 
-        public Builder setS3InputMode(@Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
+        public Builder s3InputMode(@Nullable ModelQualityJobDefinitionEndpointInputS3InputMode s3InputMode) {
             this.s3InputMode = s3InputMode;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }

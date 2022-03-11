@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ServiceDeploymentController {
     private final @Nullable ServiceDeploymentControllerType type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ServiceDeploymentController(@Nullable ServiceDeploymentControllerType type) {
+    @OutputCustomType.Constructor
+    private ServiceDeploymentController(@OutputCustomType.Parameter("type") @Nullable ServiceDeploymentControllerType type) {
         this.type = type;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceDeploymentController {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable ServiceDeploymentControllerType type) {
+        public Builder type(@Nullable ServiceDeploymentControllerType type) {
             this.type = type;
             return this;
         }

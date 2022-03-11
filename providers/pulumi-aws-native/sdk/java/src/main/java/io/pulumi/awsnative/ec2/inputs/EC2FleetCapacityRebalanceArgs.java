@@ -63,22 +63,22 @@ public final class EC2FleetCapacityRebalanceArgs extends io.pulumi.resources.Res
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder setReplacementStrategy(@Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy) {
+        public Builder replacementStrategy(@Nullable Input<EC2FleetCapacityRebalanceReplacementStrategy> replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
-        public Builder setReplacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
+        public Builder replacementStrategy(@Nullable EC2FleetCapacityRebalanceReplacementStrategy replacementStrategy) {
             this.replacementStrategy = Input.ofNullable(replacementStrategy);
             return this;
         }
 
-        public Builder setTerminationDelay(@Nullable Input<Integer> terminationDelay) {
+        public Builder terminationDelay(@Nullable Input<Integer> terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }
 
-        public Builder setTerminationDelay(@Nullable Integer terminationDelay) {
+        public Builder terminationDelay(@Nullable Integer terminationDelay) {
             this.terminationDelay = Input.ofNullable(terminationDelay);
             return this;
         }

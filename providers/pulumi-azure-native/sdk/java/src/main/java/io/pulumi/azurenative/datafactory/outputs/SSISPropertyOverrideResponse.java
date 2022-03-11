@@ -23,10 +23,10 @@ public final class SSISPropertyOverrideResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"isSensitive","value"})
+    @OutputCustomType.Constructor
     private SSISPropertyOverrideResponse(
-        @Nullable Boolean isSensitive,
-        Object value) {
+        @OutputCustomType.Parameter("isSensitive") @Nullable Boolean isSensitive,
+        @OutputCustomType.Parameter("value") Object value) {
         this.isSensitive = isSensitive;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class SSISPropertyOverrideResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setIsSensitive(@Nullable Boolean isSensitive) {
+        public Builder isSensitive(@Nullable Boolean isSensitive) {
             this.isSensitive = isSensitive;
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

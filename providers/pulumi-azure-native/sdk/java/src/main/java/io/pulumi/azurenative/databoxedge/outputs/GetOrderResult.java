@@ -72,19 +72,19 @@ public final class GetOrderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contactInformation","currentStatus","deliveryTrackingInfo","id","name","orderHistory","returnTrackingInfo","serialNumber","shipmentType","shippingAddress","type"})
+    @OutputCustomType.Constructor
     private GetOrderResult(
-        ContactDetailsResponse contactInformation,
-        OrderStatusResponse currentStatus,
-        List<TrackingInfoResponse> deliveryTrackingInfo,
-        String id,
-        String name,
-        List<OrderStatusResponse> orderHistory,
-        List<TrackingInfoResponse> returnTrackingInfo,
-        String serialNumber,
-        @Nullable String shipmentType,
-        @Nullable AddressResponse shippingAddress,
-        String type) {
+        @OutputCustomType.Parameter("contactInformation") ContactDetailsResponse contactInformation,
+        @OutputCustomType.Parameter("currentStatus") OrderStatusResponse currentStatus,
+        @OutputCustomType.Parameter("deliveryTrackingInfo") List<TrackingInfoResponse> deliveryTrackingInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("orderHistory") List<OrderStatusResponse> orderHistory,
+        @OutputCustomType.Parameter("returnTrackingInfo") List<TrackingInfoResponse> returnTrackingInfo,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("shipmentType") @Nullable String shipmentType,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable AddressResponse shippingAddress,
+        @OutputCustomType.Parameter("type") String type) {
         this.contactInformation = contactInformation;
         this.currentStatus = currentStatus;
         this.deliveryTrackingInfo = deliveryTrackingInfo;
@@ -216,57 +216,57 @@ public final class GetOrderResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setContactInformation(ContactDetailsResponse contactInformation) {
+        public Builder contactInformation(ContactDetailsResponse contactInformation) {
             this.contactInformation = Objects.requireNonNull(contactInformation);
             return this;
         }
 
-        public Builder setCurrentStatus(OrderStatusResponse currentStatus) {
+        public Builder currentStatus(OrderStatusResponse currentStatus) {
             this.currentStatus = Objects.requireNonNull(currentStatus);
             return this;
         }
 
-        public Builder setDeliveryTrackingInfo(List<TrackingInfoResponse> deliveryTrackingInfo) {
+        public Builder deliveryTrackingInfo(List<TrackingInfoResponse> deliveryTrackingInfo) {
             this.deliveryTrackingInfo = Objects.requireNonNull(deliveryTrackingInfo);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrderHistory(List<OrderStatusResponse> orderHistory) {
+        public Builder orderHistory(List<OrderStatusResponse> orderHistory) {
             this.orderHistory = Objects.requireNonNull(orderHistory);
             return this;
         }
 
-        public Builder setReturnTrackingInfo(List<TrackingInfoResponse> returnTrackingInfo) {
+        public Builder returnTrackingInfo(List<TrackingInfoResponse> returnTrackingInfo) {
             this.returnTrackingInfo = Objects.requireNonNull(returnTrackingInfo);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setShipmentType(@Nullable String shipmentType) {
+        public Builder shipmentType(@Nullable String shipmentType) {
             this.shipmentType = shipmentType;
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable AddressResponse shippingAddress) {
+        public Builder shippingAddress(@Nullable AddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

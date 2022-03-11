@@ -53,12 +53,12 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudwatchRoleArn = defaults.cloudwatchRoleArn;
         }
 
-        public Builder setCloudwatchRoleArn(@Nullable Input<String> cloudwatchRoleArn) {
+        public Builder cloudwatchRoleArn(@Nullable Input<String> cloudwatchRoleArn) {
             this.cloudwatchRoleArn = cloudwatchRoleArn;
             return this;
         }
 
-        public Builder setCloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
+        public Builder cloudwatchRoleArn(@Nullable String cloudwatchRoleArn) {
             this.cloudwatchRoleArn = Input.ofNullable(cloudwatchRoleArn);
             return this;
         }

@@ -33,12 +33,12 @@ public final class MachineExtensionInstanceViewResponse {
      */
     private final String typeHandlerVersion;
 
-    @OutputCustomType.Constructor({"name","status","type","typeHandlerVersion"})
+    @OutputCustomType.Constructor
     private MachineExtensionInstanceViewResponse(
-        String name,
-        @Nullable MachineExtensionInstanceViewResponseStatus status,
-        String type,
-        String typeHandlerVersion) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") @Nullable MachineExtensionInstanceViewResponseStatus status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("typeHandlerVersion") String typeHandlerVersion) {
         this.name = name;
         this.status = status;
         this.type = type;
@@ -100,22 +100,22 @@ public final class MachineExtensionInstanceViewResponse {
     	      this.typeHandlerVersion = defaults.typeHandlerVersion;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable MachineExtensionInstanceViewResponseStatus status) {
+        public Builder status(@Nullable MachineExtensionInstanceViewResponseStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setTypeHandlerVersion(String typeHandlerVersion) {
+        public Builder typeHandlerVersion(String typeHandlerVersion) {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }

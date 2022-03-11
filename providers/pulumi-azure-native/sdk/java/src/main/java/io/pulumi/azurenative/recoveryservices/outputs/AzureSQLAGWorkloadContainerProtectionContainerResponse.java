@@ -67,18 +67,18 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
      */
     private final @Nullable String workloadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","containerType","extendedInfo","friendlyName","healthStatus","lastUpdatedTime","operationType","registrationStatus","sourceResourceId","workloadType"})
+    @OutputCustomType.Constructor
     private AzureSQLAGWorkloadContainerProtectionContainerResponse(
-        @Nullable String backupManagementType,
-        String containerType,
-        @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable String lastUpdatedTime,
-        @Nullable String operationType,
-        @Nullable String registrationStatus,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("operationType") @Nullable String operationType,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadType") @Nullable String workloadType) {
         this.backupManagementType = backupManagementType;
         this.containerType = containerType;
         this.extendedInfo = extendedInfo;
@@ -204,52 +204,52 @@ public final class AzureSQLAGWorkloadContainerProtectionContainerResponse {
     	      this.workloadType = defaults.workloadType;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable AzureWorkloadContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setOperationType(@Nullable String operationType) {
+        public Builder operationType(@Nullable String operationType) {
             this.operationType = operationType;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setWorkloadType(@Nullable String workloadType) {
+        public Builder workloadType(@Nullable String workloadType) {
             this.workloadType = workloadType;
             return this;
         }

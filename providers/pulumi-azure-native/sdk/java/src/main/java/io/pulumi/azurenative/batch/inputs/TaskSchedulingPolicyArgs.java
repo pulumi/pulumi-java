@@ -48,12 +48,12 @@ public final class TaskSchedulingPolicyArgs extends io.pulumi.resources.Resource
     	      this.nodeFillType = defaults.nodeFillType;
         }
 
-        public Builder setNodeFillType(Input<ComputeNodeFillType> nodeFillType) {
+        public Builder nodeFillType(Input<ComputeNodeFillType> nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }
 
-        public Builder setNodeFillType(ComputeNodeFillType nodeFillType) {
+        public Builder nodeFillType(ComputeNodeFillType nodeFillType) {
             this.nodeFillType = Input.of(Objects.requireNonNull(nodeFillType));
             return this;
         }

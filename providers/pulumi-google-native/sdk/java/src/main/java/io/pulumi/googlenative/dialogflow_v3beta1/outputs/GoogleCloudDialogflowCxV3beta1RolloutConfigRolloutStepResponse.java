@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
      */
     private final Integer trafficPercent;
 
-    @OutputCustomType.Constructor({"displayName","minDuration","trafficPercent"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepResponse(
-        String displayName,
-        String minDuration,
-        Integer trafficPercent) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("minDuration") String minDuration,
+        @OutputCustomType.Parameter("trafficPercent") Integer trafficPercent) {
         this.displayName = displayName;
         this.minDuration = minDuration;
         this.trafficPercent = trafficPercent;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepRespons
     	      this.trafficPercent = defaults.trafficPercent;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMinDuration(String minDuration) {
+        public Builder minDuration(String minDuration) {
             this.minDuration = Objects.requireNonNull(minDuration);
             return this;
         }
 
-        public Builder setTrafficPercent(Integer trafficPercent) {
+        public Builder trafficPercent(Integer trafficPercent) {
             this.trafficPercent = Objects.requireNonNull(trafficPercent);
             return this;
         }

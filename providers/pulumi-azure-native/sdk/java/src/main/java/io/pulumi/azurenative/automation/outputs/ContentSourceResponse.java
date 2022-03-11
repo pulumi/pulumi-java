@@ -33,12 +33,12 @@ public final class ContentSourceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"hash","type","value","version"})
+    @OutputCustomType.Constructor
     private ContentSourceResponse(
-        @Nullable ContentHashResponse hash,
-        @Nullable String type,
-        @Nullable String value,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("hash") @Nullable ContentHashResponse hash,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.hash = hash;
         this.type = type;
         this.value = value;
@@ -100,22 +100,22 @@ public final class ContentSourceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setHash(@Nullable ContentHashResponse hash) {
+        public Builder hash(@Nullable ContentHashResponse hash) {
             this.hash = hash;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

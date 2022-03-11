@@ -22,10 +22,10 @@ public final class UserIdentityPropertiesResponse {
      */
     private final @Nullable String principalId;
 
-    @OutputCustomType.Constructor({"clientId","principalId"})
+    @OutputCustomType.Constructor
     private UserIdentityPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String principalId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId) {
         this.clientId = clientId;
         this.principalId = principalId;
     }
@@ -67,12 +67,12 @@ public final class UserIdentityPropertiesResponse {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }

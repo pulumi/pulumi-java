@@ -125,52 +125,52 @@ public final class GcsDestinationConfigArgs extends io.pulumi.resources.Resource
     	      this.path = defaults.path;
         }
 
-        public Builder setAvroFileFormat(@Nullable Input<AvroFileFormatArgs> avroFileFormat) {
+        public Builder avroFileFormat(@Nullable Input<AvroFileFormatArgs> avroFileFormat) {
             this.avroFileFormat = avroFileFormat;
             return this;
         }
 
-        public Builder setAvroFileFormat(@Nullable AvroFileFormatArgs avroFileFormat) {
+        public Builder avroFileFormat(@Nullable AvroFileFormatArgs avroFileFormat) {
             this.avroFileFormat = Input.ofNullable(avroFileFormat);
             return this;
         }
 
-        public Builder setFileRotationInterval(@Nullable Input<String> fileRotationInterval) {
+        public Builder fileRotationInterval(@Nullable Input<String> fileRotationInterval) {
             this.fileRotationInterval = fileRotationInterval;
             return this;
         }
 
-        public Builder setFileRotationInterval(@Nullable String fileRotationInterval) {
+        public Builder fileRotationInterval(@Nullable String fileRotationInterval) {
             this.fileRotationInterval = Input.ofNullable(fileRotationInterval);
             return this;
         }
 
-        public Builder setFileRotationMb(@Nullable Input<Integer> fileRotationMb) {
+        public Builder fileRotationMb(@Nullable Input<Integer> fileRotationMb) {
             this.fileRotationMb = fileRotationMb;
             return this;
         }
 
-        public Builder setFileRotationMb(@Nullable Integer fileRotationMb) {
+        public Builder fileRotationMb(@Nullable Integer fileRotationMb) {
             this.fileRotationMb = Input.ofNullable(fileRotationMb);
             return this;
         }
 
-        public Builder setJsonFileFormat(@Nullable Input<JsonFileFormatArgs> jsonFileFormat) {
+        public Builder jsonFileFormat(@Nullable Input<JsonFileFormatArgs> jsonFileFormat) {
             this.jsonFileFormat = jsonFileFormat;
             return this;
         }
 
-        public Builder setJsonFileFormat(@Nullable JsonFileFormatArgs jsonFileFormat) {
+        public Builder jsonFileFormat(@Nullable JsonFileFormatArgs jsonFileFormat) {
             this.jsonFileFormat = Input.ofNullable(jsonFileFormat);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

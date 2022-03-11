@@ -17,8 +17,8 @@ public final class VMResourcesResponse {
      */
     private final @Nullable String vmResourceId;
 
-    @OutputCustomType.Constructor({"vmResourceId"})
-    private VMResourcesResponse(@Nullable String vmResourceId) {
+    @OutputCustomType.Constructor
+    private VMResourcesResponse(@OutputCustomType.Parameter("vmResourceId") @Nullable String vmResourceId) {
         this.vmResourceId = vmResourceId;
     }
 
@@ -50,7 +50,7 @@ public final class VMResourcesResponse {
     	      this.vmResourceId = defaults.vmResourceId;
         }
 
-        public Builder setVmResourceId(@Nullable String vmResourceId) {
+        public Builder vmResourceId(@Nullable String vmResourceId) {
             this.vmResourceId = vmResourceId;
             return this;
         }

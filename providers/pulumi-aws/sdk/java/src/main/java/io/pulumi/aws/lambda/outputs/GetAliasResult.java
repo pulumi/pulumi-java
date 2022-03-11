@@ -37,15 +37,15 @@ public final class GetAliasResult {
     private final String invokeArn;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","description","functionName","functionVersion","id","invokeArn","name"})
+    @OutputCustomType.Constructor
     private GetAliasResult(
-        String arn,
-        String description,
-        String functionName,
-        String functionVersion,
-        String id,
-        String invokeArn,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("functionName") String functionName,
+        @OutputCustomType.Parameter("functionVersion") String functionVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invokeArn") String invokeArn,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.description = description;
         this.functionName = functionName;
@@ -129,37 +129,37 @@ public final class GetAliasResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setFunctionVersion(String functionVersion) {
+        public Builder functionVersion(String functionVersion) {
             this.functionVersion = Objects.requireNonNull(functionVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInvokeArn(String invokeArn) {
+        public Builder invokeArn(String invokeArn) {
             this.invokeArn = Objects.requireNonNull(invokeArn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

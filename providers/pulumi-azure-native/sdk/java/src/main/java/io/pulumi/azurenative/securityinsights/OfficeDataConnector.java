@@ -167,7 +167,7 @@ public class OfficeDataConnector extends io.pulumi.resources.CustomResource {
     private static OfficeDataConnectorArgs makeArgs(OfficeDataConnectorArgs args) {
         var builder = args == null ? OfficeDataConnectorArgs.builder() : OfficeDataConnectorArgs.builder(args);
         return builder
-            .setKind("Office365")
+            .kind("Office365")
             .build();
     }
 

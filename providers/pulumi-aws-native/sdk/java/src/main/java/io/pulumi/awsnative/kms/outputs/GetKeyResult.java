@@ -60,18 +60,18 @@ public final class GetKeyResult {
      */
     private final @Nullable List<KeyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","enableKeyRotation","enabled","keyId","keyPolicy","keySpec","keyUsage","multiRegion","tags"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Boolean enableKeyRotation,
-        @Nullable Boolean enabled,
-        @Nullable String keyId,
-        @Nullable Object keyPolicy,
-        @Nullable KeySpec keySpec,
-        @Nullable KeyUsage keyUsage,
-        @Nullable Boolean multiRegion,
-        @Nullable List<KeyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableKeyRotation") @Nullable Boolean enableKeyRotation,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @OutputCustomType.Parameter("keySpec") @Nullable KeySpec keySpec,
+        @OutputCustomType.Parameter("keyUsage") @Nullable KeyUsage keyUsage,
+        @OutputCustomType.Parameter("multiRegion") @Nullable Boolean multiRegion,
+        @OutputCustomType.Parameter("tags") @Nullable List<KeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enableKeyRotation = enableKeyRotation;
@@ -185,52 +185,52 @@ public final class GetKeyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableKeyRotation(@Nullable Boolean enableKeyRotation) {
+        public Builder enableKeyRotation(@Nullable Boolean enableKeyRotation) {
             this.enableKeyRotation = enableKeyRotation;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyPolicy(@Nullable Object keyPolicy) {
+        public Builder keyPolicy(@Nullable Object keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
 
-        public Builder setKeySpec(@Nullable KeySpec keySpec) {
+        public Builder keySpec(@Nullable KeySpec keySpec) {
             this.keySpec = keySpec;
             return this;
         }
 
-        public Builder setKeyUsage(@Nullable KeyUsage keyUsage) {
+        public Builder keyUsage(@Nullable KeyUsage keyUsage) {
             this.keyUsage = keyUsage;
             return this;
         }
 
-        public Builder setMultiRegion(@Nullable Boolean multiRegion) {
+        public Builder multiRegion(@Nullable Boolean multiRegion) {
             this.multiRegion = multiRegion;
             return this;
         }
 
-        public Builder setTags(@Nullable List<KeyTag> tags) {
+        public Builder tags(@Nullable List<KeyTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -27,11 +27,11 @@ public final class JobTemplateExponentialRolloutRate {
      */
     private final JobTemplateRateIncreaseCriteria rateIncreaseCriteria;
 
-    @OutputCustomType.Constructor({"baseRatePerMinute","incrementFactor","rateIncreaseCriteria"})
+    @OutputCustomType.Constructor
     private JobTemplateExponentialRolloutRate(
-        Integer baseRatePerMinute,
-        Double incrementFactor,
-        JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
+        @OutputCustomType.Parameter("baseRatePerMinute") Integer baseRatePerMinute,
+        @OutputCustomType.Parameter("incrementFactor") Double incrementFactor,
+        @OutputCustomType.Parameter("rateIncreaseCriteria") JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
         this.baseRatePerMinute = baseRatePerMinute;
         this.incrementFactor = incrementFactor;
         this.rateIncreaseCriteria = rateIncreaseCriteria;
@@ -83,17 +83,17 @@ public final class JobTemplateExponentialRolloutRate {
     	      this.rateIncreaseCriteria = defaults.rateIncreaseCriteria;
         }
 
-        public Builder setBaseRatePerMinute(Integer baseRatePerMinute) {
+        public Builder baseRatePerMinute(Integer baseRatePerMinute) {
             this.baseRatePerMinute = Objects.requireNonNull(baseRatePerMinute);
             return this;
         }
 
-        public Builder setIncrementFactor(Double incrementFactor) {
+        public Builder incrementFactor(Double incrementFactor) {
             this.incrementFactor = Objects.requireNonNull(incrementFactor);
             return this;
         }
 
-        public Builder setRateIncreaseCriteria(JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
+        public Builder rateIncreaseCriteria(JobTemplateRateIncreaseCriteria rateIncreaseCriteria) {
             this.rateIncreaseCriteria = Objects.requireNonNull(rateIncreaseCriteria);
             return this;
         }

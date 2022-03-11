@@ -119,28 +119,28 @@ public final class GetPrivateCloudResult {
      */
     private final String vmotionNetwork;
 
-    @OutputCustomType.Constructor({"circuit","endpoints","id","identitySources","internet","location","managementCluster","managementNetwork","name","networkBlock","nsxtCertificateThumbprint","nsxtPassword","provisioningNetwork","provisioningState","sku","tags","type","vcenterCertificateThumbprint","vcenterPassword","vmotionNetwork"})
+    @OutputCustomType.Constructor
     private GetPrivateCloudResult(
-        @Nullable CircuitResponse circuit,
-        EndpointsResponse endpoints,
-        String id,
-        @Nullable List<IdentitySourceResponse> identitySources,
-        @Nullable String internet,
-        String location,
-        ManagementClusterResponse managementCluster,
-        String managementNetwork,
-        String name,
-        String networkBlock,
-        String nsxtCertificateThumbprint,
-        @Nullable String nsxtPassword,
-        String provisioningNetwork,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vcenterCertificateThumbprint,
-        @Nullable String vcenterPassword,
-        String vmotionNetwork) {
+        @OutputCustomType.Parameter("circuit") @Nullable CircuitResponse circuit,
+        @OutputCustomType.Parameter("endpoints") EndpointsResponse endpoints,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identitySources") @Nullable List<IdentitySourceResponse> identitySources,
+        @OutputCustomType.Parameter("internet") @Nullable String internet,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managementCluster") ManagementClusterResponse managementCluster,
+        @OutputCustomType.Parameter("managementNetwork") String managementNetwork,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkBlock") String networkBlock,
+        @OutputCustomType.Parameter("nsxtCertificateThumbprint") String nsxtCertificateThumbprint,
+        @OutputCustomType.Parameter("nsxtPassword") @Nullable String nsxtPassword,
+        @OutputCustomType.Parameter("provisioningNetwork") String provisioningNetwork,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vcenterCertificateThumbprint") String vcenterCertificateThumbprint,
+        @OutputCustomType.Parameter("vcenterPassword") @Nullable String vcenterPassword,
+        @OutputCustomType.Parameter("vmotionNetwork") String vmotionNetwork) {
         this.circuit = circuit;
         this.endpoints = endpoints;
         this.id = id;
@@ -362,102 +362,102 @@ public final class GetPrivateCloudResult {
     	      this.vmotionNetwork = defaults.vmotionNetwork;
         }
 
-        public Builder setCircuit(@Nullable CircuitResponse circuit) {
+        public Builder circuit(@Nullable CircuitResponse circuit) {
             this.circuit = circuit;
             return this;
         }
 
-        public Builder setEndpoints(EndpointsResponse endpoints) {
+        public Builder endpoints(EndpointsResponse endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentitySources(@Nullable List<IdentitySourceResponse> identitySources) {
+        public Builder identitySources(@Nullable List<IdentitySourceResponse> identitySources) {
             this.identitySources = identitySources;
             return this;
         }
 
-        public Builder setInternet(@Nullable String internet) {
+        public Builder internet(@Nullable String internet) {
             this.internet = internet;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagementCluster(ManagementClusterResponse managementCluster) {
+        public Builder managementCluster(ManagementClusterResponse managementCluster) {
             this.managementCluster = Objects.requireNonNull(managementCluster);
             return this;
         }
 
-        public Builder setManagementNetwork(String managementNetwork) {
+        public Builder managementNetwork(String managementNetwork) {
             this.managementNetwork = Objects.requireNonNull(managementNetwork);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkBlock(String networkBlock) {
+        public Builder networkBlock(String networkBlock) {
             this.networkBlock = Objects.requireNonNull(networkBlock);
             return this;
         }
 
-        public Builder setNsxtCertificateThumbprint(String nsxtCertificateThumbprint) {
+        public Builder nsxtCertificateThumbprint(String nsxtCertificateThumbprint) {
             this.nsxtCertificateThumbprint = Objects.requireNonNull(nsxtCertificateThumbprint);
             return this;
         }
 
-        public Builder setNsxtPassword(@Nullable String nsxtPassword) {
+        public Builder nsxtPassword(@Nullable String nsxtPassword) {
             this.nsxtPassword = nsxtPassword;
             return this;
         }
 
-        public Builder setProvisioningNetwork(String provisioningNetwork) {
+        public Builder provisioningNetwork(String provisioningNetwork) {
             this.provisioningNetwork = Objects.requireNonNull(provisioningNetwork);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVcenterCertificateThumbprint(String vcenterCertificateThumbprint) {
+        public Builder vcenterCertificateThumbprint(String vcenterCertificateThumbprint) {
             this.vcenterCertificateThumbprint = Objects.requireNonNull(vcenterCertificateThumbprint);
             return this;
         }
 
-        public Builder setVcenterPassword(@Nullable String vcenterPassword) {
+        public Builder vcenterPassword(@Nullable String vcenterPassword) {
             this.vcenterPassword = vcenterPassword;
             return this;
         }
 
-        public Builder setVmotionNetwork(String vmotionNetwork) {
+        public Builder vmotionNetwork(String vmotionNetwork) {
             this.vmotionNetwork = Objects.requireNonNull(vmotionNetwork);
             return this;
         }

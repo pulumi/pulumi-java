@@ -88,17 +88,17 @@ public final class SchemaComparisonValidationResultTypeResponse extends io.pulum
     	      this.updateAction = defaults.updateAction;
         }
 
-        public Builder setObjectName(String objectName) {
+        public Builder objectName(String objectName) {
             this.objectName = Objects.requireNonNull(objectName);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setUpdateAction(String updateAction) {
+        public Builder updateAction(String updateAction) {
             this.updateAction = Objects.requireNonNull(updateAction);
             return this;
         }

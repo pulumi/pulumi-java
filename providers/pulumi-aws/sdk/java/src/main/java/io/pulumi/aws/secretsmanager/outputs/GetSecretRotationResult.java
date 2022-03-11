@@ -34,13 +34,13 @@ public final class GetSecretRotationResult {
     private final List<GetSecretRotationRotationRule> rotationRules;
     private final String secretId;
 
-    @OutputCustomType.Constructor({"id","rotationEnabled","rotationLambdaArn","rotationRules","secretId"})
+    @OutputCustomType.Constructor
     private GetSecretRotationResult(
-        String id,
-        Boolean rotationEnabled,
-        String rotationLambdaArn,
-        List<GetSecretRotationRotationRule> rotationRules,
-        String secretId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rotationEnabled") Boolean rotationEnabled,
+        @OutputCustomType.Parameter("rotationLambdaArn") String rotationLambdaArn,
+        @OutputCustomType.Parameter("rotationRules") List<GetSecretRotationRotationRule> rotationRules,
+        @OutputCustomType.Parameter("secretId") String secretId) {
         this.id = id;
         this.rotationEnabled = rotationEnabled;
         this.rotationLambdaArn = rotationLambdaArn;
@@ -108,27 +108,27 @@ public final class GetSecretRotationResult {
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRotationEnabled(Boolean rotationEnabled) {
+        public Builder rotationEnabled(Boolean rotationEnabled) {
             this.rotationEnabled = Objects.requireNonNull(rotationEnabled);
             return this;
         }
 
-        public Builder setRotationLambdaArn(String rotationLambdaArn) {
+        public Builder rotationLambdaArn(String rotationLambdaArn) {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
 
-        public Builder setRotationRules(List<GetSecretRotationRotationRule> rotationRules) {
+        public Builder rotationRules(List<GetSecretRotationRotationRule> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }

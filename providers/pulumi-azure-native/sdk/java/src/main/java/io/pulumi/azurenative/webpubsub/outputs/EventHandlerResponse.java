@@ -39,12 +39,12 @@ public final class EventHandlerResponse {
      */
     private final @Nullable String userEventPattern;
 
-    @OutputCustomType.Constructor({"auth","systemEvents","urlTemplate","userEventPattern"})
+    @OutputCustomType.Constructor
     private EventHandlerResponse(
-        @Nullable UpstreamAuthSettingsResponse auth,
-        @Nullable List<String> systemEvents,
-        String urlTemplate,
-        @Nullable String userEventPattern) {
+        @OutputCustomType.Parameter("auth") @Nullable UpstreamAuthSettingsResponse auth,
+        @OutputCustomType.Parameter("systemEvents") @Nullable List<String> systemEvents,
+        @OutputCustomType.Parameter("urlTemplate") String urlTemplate,
+        @OutputCustomType.Parameter("userEventPattern") @Nullable String userEventPattern) {
         this.auth = auth;
         this.systemEvents = systemEvents;
         this.urlTemplate = urlTemplate;
@@ -111,22 +111,22 @@ public final class EventHandlerResponse {
     	      this.userEventPattern = defaults.userEventPattern;
         }
 
-        public Builder setAuth(@Nullable UpstreamAuthSettingsResponse auth) {
+        public Builder auth(@Nullable UpstreamAuthSettingsResponse auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setSystemEvents(@Nullable List<String> systemEvents) {
+        public Builder systemEvents(@Nullable List<String> systemEvents) {
             this.systemEvents = systemEvents;
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUserEventPattern(@Nullable String userEventPattern) {
+        public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }

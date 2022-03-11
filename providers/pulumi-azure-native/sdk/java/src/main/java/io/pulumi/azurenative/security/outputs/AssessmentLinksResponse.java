@@ -15,8 +15,8 @@ public final class AssessmentLinksResponse {
      */
     private final String azurePortalUri;
 
-    @OutputCustomType.Constructor({"azurePortalUri"})
-    private AssessmentLinksResponse(String azurePortalUri) {
+    @OutputCustomType.Constructor
+    private AssessmentLinksResponse(@OutputCustomType.Parameter("azurePortalUri") String azurePortalUri) {
         this.azurePortalUri = azurePortalUri;
     }
 
@@ -48,7 +48,7 @@ public final class AssessmentLinksResponse {
     	      this.azurePortalUri = defaults.azurePortalUri;
         }
 
-        public Builder setAzurePortalUri(String azurePortalUri) {
+        public Builder azurePortalUri(String azurePortalUri) {
             this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
             return this;
         }

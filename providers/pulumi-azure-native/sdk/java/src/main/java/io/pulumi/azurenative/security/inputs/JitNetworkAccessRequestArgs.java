@@ -100,42 +100,42 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setJustification(@Nullable Input<String> justification) {
+        public Builder justification(@Nullable Input<String> justification) {
             this.justification = justification;
             return this;
         }
 
-        public Builder setJustification(@Nullable String justification) {
+        public Builder justification(@Nullable String justification) {
             this.justification = Input.ofNullable(justification);
             return this;
         }
 
-        public Builder setRequestor(Input<String> requestor) {
+        public Builder requestor(Input<String> requestor) {
             this.requestor = Objects.requireNonNull(requestor);
             return this;
         }
 
-        public Builder setRequestor(String requestor) {
+        public Builder requestor(String requestor) {
             this.requestor = Input.of(Objects.requireNonNull(requestor));
             return this;
         }
 
-        public Builder setStartTimeUtc(Input<String> startTimeUtc) {
+        public Builder startTimeUtc(Input<String> startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Input.of(Objects.requireNonNull(startTimeUtc));
             return this;
         }
 
-        public Builder setVirtualMachines(Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
+        public Builder virtualMachines(Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
 
-        public Builder setVirtualMachines(List<JitNetworkAccessRequestVirtualMachineArgs> virtualMachines) {
+        public Builder virtualMachines(List<JitNetworkAccessRequestVirtualMachineArgs> virtualMachines) {
             this.virtualMachines = Input.of(Objects.requireNonNull(virtualMachines));
             return this;
         }

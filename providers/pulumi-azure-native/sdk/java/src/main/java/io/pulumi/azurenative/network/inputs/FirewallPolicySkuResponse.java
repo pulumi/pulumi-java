@@ -57,7 +57,7 @@ public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeA
     	      this.tier = defaults.tier;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

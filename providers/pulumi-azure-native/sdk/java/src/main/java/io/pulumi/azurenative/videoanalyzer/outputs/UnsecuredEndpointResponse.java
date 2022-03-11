@@ -35,12 +35,12 @@ public final class UnsecuredEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"credentials","tunnel","type","url"})
+    @OutputCustomType.Constructor
     private UnsecuredEndpointResponse(
-        UsernamePasswordCredentialsResponse credentials,
-        @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
-        String type,
-        String url) {
+        @OutputCustomType.Parameter("credentials") UsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("tunnel") @Nullable SecureIotDeviceRemoteTunnelResponse tunnel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.tunnel = tunnel;
         this.type = type;
@@ -103,22 +103,22 @@ public final class UnsecuredEndpointResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setCredentials(UsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(UsernamePasswordCredentialsResponse credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setTunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
+        public Builder tunnel(@Nullable SecureIotDeviceRemoteTunnelResponse tunnel) {
             this.tunnel = tunnel;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

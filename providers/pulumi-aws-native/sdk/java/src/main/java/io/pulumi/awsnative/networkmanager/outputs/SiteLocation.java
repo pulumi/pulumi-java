@@ -27,11 +27,11 @@ public final class SiteLocation {
      */
     private final @Nullable String longitude;
 
-    @OutputCustomType.Constructor({"address","latitude","longitude"})
+    @OutputCustomType.Constructor
     private SiteLocation(
-        @Nullable String address,
-        @Nullable String latitude,
-        @Nullable String longitude) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("latitude") @Nullable String latitude,
+        @OutputCustomType.Parameter("longitude") @Nullable String longitude) {
         this.address = address;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -83,17 +83,17 @@ public final class SiteLocation {
     	      this.longitude = defaults.longitude;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setLatitude(@Nullable String latitude) {
+        public Builder latitude(@Nullable String latitude) {
             this.latitude = latitude;
             return this;
         }
 
-        public Builder setLongitude(@Nullable String longitude) {
+        public Builder longitude(@Nullable String longitude) {
             this.longitude = longitude;
             return this;
         }

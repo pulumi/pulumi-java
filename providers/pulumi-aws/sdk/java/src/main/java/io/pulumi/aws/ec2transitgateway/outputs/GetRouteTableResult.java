@@ -46,15 +46,15 @@ public final class GetRouteTableResult {
      */
     private final String transitGatewayId;
 
-    @OutputCustomType.Constructor({"arn","defaultAssociationRouteTable","defaultPropagationRouteTable","filters","id","tags","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        String arn,
-        Boolean defaultAssociationRouteTable,
-        Boolean defaultPropagationRouteTable,
-        @Nullable List<GetRouteTableFilter> filters,
-        String id,
-        Map<String,String> tags,
-        String transitGatewayId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("defaultAssociationRouteTable") Boolean defaultAssociationRouteTable,
+        @OutputCustomType.Parameter("defaultPropagationRouteTable") Boolean defaultPropagationRouteTable,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("transitGatewayId") String transitGatewayId) {
         this.arn = arn;
         this.defaultAssociationRouteTable = defaultAssociationRouteTable;
         this.defaultPropagationRouteTable = defaultPropagationRouteTable;
@@ -142,37 +142,37 @@ public final class GetRouteTableResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDefaultAssociationRouteTable(Boolean defaultAssociationRouteTable) {
+        public Builder defaultAssociationRouteTable(Boolean defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = Objects.requireNonNull(defaultAssociationRouteTable);
             return this;
         }
 
-        public Builder setDefaultPropagationRouteTable(Boolean defaultPropagationRouteTable) {
+        public Builder defaultPropagationRouteTable(Boolean defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = Objects.requireNonNull(defaultPropagationRouteTable);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetRouteTableFilter> filters) {
+        public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTransitGatewayId(String transitGatewayId) {
+        public Builder transitGatewayId(String transitGatewayId) {
             this.transitGatewayId = Objects.requireNonNull(transitGatewayId);
             return this;
         }

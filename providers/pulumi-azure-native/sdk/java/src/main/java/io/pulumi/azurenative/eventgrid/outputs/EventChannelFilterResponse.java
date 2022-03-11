@@ -43,10 +43,10 @@ public final class EventChannelFilterResponse {
      */
     private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
-    @OutputCustomType.Constructor({"advancedFilters","enableAdvancedFilteringOnArrays"})
+    @OutputCustomType.Constructor
     private EventChannelFilterResponse(
-        @Nullable List<Object> advancedFilters,
-        @Nullable Boolean enableAdvancedFilteringOnArrays) {
+        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @OutputCustomType.Parameter("enableAdvancedFilteringOnArrays") @Nullable Boolean enableAdvancedFilteringOnArrays) {
         this.advancedFilters = advancedFilters;
         this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
     }
@@ -88,12 +88,12 @@ public final class EventChannelFilterResponse {
     	      this.enableAdvancedFilteringOnArrays = defaults.enableAdvancedFilteringOnArrays;
         }
 
-        public Builder setAdvancedFilters(@Nullable List<Object> advancedFilters) {
+        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = advancedFilters;
             return this;
         }
 
-        public Builder setEnableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }

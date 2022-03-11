@@ -76,22 +76,22 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     	      this.rules = defaults.rules;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRules(Input<List<DeliveryRuleArgs>> rules) {
+        public Builder rules(Input<List<DeliveryRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<DeliveryRuleArgs> rules) {
+        public Builder rules(List<DeliveryRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }

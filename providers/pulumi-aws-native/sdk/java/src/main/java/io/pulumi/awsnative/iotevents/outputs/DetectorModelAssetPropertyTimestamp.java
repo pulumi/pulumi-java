@@ -22,10 +22,10 @@ public final class DetectorModelAssetPropertyTimestamp {
      */
     private final String timeInSeconds;
 
-    @OutputCustomType.Constructor({"offsetInNanos","timeInSeconds"})
+    @OutputCustomType.Constructor
     private DetectorModelAssetPropertyTimestamp(
-        @Nullable String offsetInNanos,
-        String timeInSeconds) {
+        @OutputCustomType.Parameter("offsetInNanos") @Nullable String offsetInNanos,
+        @OutputCustomType.Parameter("timeInSeconds") String timeInSeconds) {
         this.offsetInNanos = offsetInNanos;
         this.timeInSeconds = timeInSeconds;
     }
@@ -67,12 +67,12 @@ public final class DetectorModelAssetPropertyTimestamp {
     	      this.timeInSeconds = defaults.timeInSeconds;
         }
 
-        public Builder setOffsetInNanos(@Nullable String offsetInNanos) {
+        public Builder offsetInNanos(@Nullable String offsetInNanos) {
             this.offsetInNanos = offsetInNanos;
             return this;
         }
 
-        public Builder setTimeInSeconds(String timeInSeconds) {
+        public Builder timeInSeconds(String timeInSeconds) {
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }

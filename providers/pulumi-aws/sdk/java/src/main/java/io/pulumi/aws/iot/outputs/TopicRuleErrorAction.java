@@ -41,23 +41,23 @@ public final class TopicRuleErrorAction {
     private final @Nullable TopicRuleErrorActionSqs sqs;
     private final @Nullable TopicRuleErrorActionStepFunctions stepFunctions;
 
-    @OutputCustomType.Constructor({"cloudwatchAlarm","cloudwatchMetric","dynamodb","dynamodbv2","elasticsearch","firehose","iotAnalytics","iotEvents","kinesis","lambda","republish","s3","sns","sqs","stepFunctions"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorAction(
-        @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm,
-        @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric,
-        @Nullable TopicRuleErrorActionDynamodb dynamodb,
-        @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2,
-        @Nullable TopicRuleErrorActionElasticsearch elasticsearch,
-        @Nullable TopicRuleErrorActionFirehose firehose,
-        @Nullable TopicRuleErrorActionIotAnalytics iotAnalytics,
-        @Nullable TopicRuleErrorActionIotEvents iotEvents,
-        @Nullable TopicRuleErrorActionKinesis kinesis,
-        @Nullable TopicRuleErrorActionLambda lambda,
-        @Nullable TopicRuleErrorActionRepublish republish,
-        @Nullable TopicRuleErrorActionS3 s3,
-        @Nullable TopicRuleErrorActionSns sns,
-        @Nullable TopicRuleErrorActionSqs sqs,
-        @Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
+        @OutputCustomType.Parameter("cloudwatchAlarm") @Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm,
+        @OutputCustomType.Parameter("cloudwatchMetric") @Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric,
+        @OutputCustomType.Parameter("dynamodb") @Nullable TopicRuleErrorActionDynamodb dynamodb,
+        @OutputCustomType.Parameter("dynamodbv2") @Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2,
+        @OutputCustomType.Parameter("elasticsearch") @Nullable TopicRuleErrorActionElasticsearch elasticsearch,
+        @OutputCustomType.Parameter("firehose") @Nullable TopicRuleErrorActionFirehose firehose,
+        @OutputCustomType.Parameter("iotAnalytics") @Nullable TopicRuleErrorActionIotAnalytics iotAnalytics,
+        @OutputCustomType.Parameter("iotEvents") @Nullable TopicRuleErrorActionIotEvents iotEvents,
+        @OutputCustomType.Parameter("kinesis") @Nullable TopicRuleErrorActionKinesis kinesis,
+        @OutputCustomType.Parameter("lambda") @Nullable TopicRuleErrorActionLambda lambda,
+        @OutputCustomType.Parameter("republish") @Nullable TopicRuleErrorActionRepublish republish,
+        @OutputCustomType.Parameter("s3") @Nullable TopicRuleErrorActionS3 s3,
+        @OutputCustomType.Parameter("sns") @Nullable TopicRuleErrorActionSns sns,
+        @OutputCustomType.Parameter("sqs") @Nullable TopicRuleErrorActionSqs sqs,
+        @OutputCustomType.Parameter("stepFunctions") @Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
         this.cloudwatchAlarm = cloudwatchAlarm;
         this.cloudwatchMetric = cloudwatchMetric;
         this.dynamodb = dynamodb;
@@ -169,77 +169,77 @@ public final class TopicRuleErrorAction {
     	      this.stepFunctions = defaults.stepFunctions;
         }
 
-        public Builder setCloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm) {
+        public Builder cloudwatchAlarm(@Nullable TopicRuleErrorActionCloudwatchAlarm cloudwatchAlarm) {
             this.cloudwatchAlarm = cloudwatchAlarm;
             return this;
         }
 
-        public Builder setCloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
+        public Builder cloudwatchMetric(@Nullable TopicRuleErrorActionCloudwatchMetric cloudwatchMetric) {
             this.cloudwatchMetric = cloudwatchMetric;
             return this;
         }
 
-        public Builder setDynamodb(@Nullable TopicRuleErrorActionDynamodb dynamodb) {
+        public Builder dynamodb(@Nullable TopicRuleErrorActionDynamodb dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder setDynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2) {
+        public Builder dynamodbv2(@Nullable TopicRuleErrorActionDynamodbv2 dynamodbv2) {
             this.dynamodbv2 = dynamodbv2;
             return this;
         }
 
-        public Builder setElasticsearch(@Nullable TopicRuleErrorActionElasticsearch elasticsearch) {
+        public Builder elasticsearch(@Nullable TopicRuleErrorActionElasticsearch elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
 
-        public Builder setFirehose(@Nullable TopicRuleErrorActionFirehose firehose) {
+        public Builder firehose(@Nullable TopicRuleErrorActionFirehose firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setIotAnalytics(@Nullable TopicRuleErrorActionIotAnalytics iotAnalytics) {
+        public Builder iotAnalytics(@Nullable TopicRuleErrorActionIotAnalytics iotAnalytics) {
             this.iotAnalytics = iotAnalytics;
             return this;
         }
 
-        public Builder setIotEvents(@Nullable TopicRuleErrorActionIotEvents iotEvents) {
+        public Builder iotEvents(@Nullable TopicRuleErrorActionIotEvents iotEvents) {
             this.iotEvents = iotEvents;
             return this;
         }
 
-        public Builder setKinesis(@Nullable TopicRuleErrorActionKinesis kinesis) {
+        public Builder kinesis(@Nullable TopicRuleErrorActionKinesis kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder setLambda(@Nullable TopicRuleErrorActionLambda lambda) {
+        public Builder lambda(@Nullable TopicRuleErrorActionLambda lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setRepublish(@Nullable TopicRuleErrorActionRepublish republish) {
+        public Builder republish(@Nullable TopicRuleErrorActionRepublish republish) {
             this.republish = republish;
             return this;
         }
 
-        public Builder setS3(@Nullable TopicRuleErrorActionS3 s3) {
+        public Builder s3(@Nullable TopicRuleErrorActionS3 s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSns(@Nullable TopicRuleErrorActionSns sns) {
+        public Builder sns(@Nullable TopicRuleErrorActionSns sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable TopicRuleErrorActionSqs sqs) {
+        public Builder sqs(@Nullable TopicRuleErrorActionSqs sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder setStepFunctions(@Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
+        public Builder stepFunctions(@Nullable TopicRuleErrorActionStepFunctions stepFunctions) {
             this.stepFunctions = stepFunctions;
             return this;
         }

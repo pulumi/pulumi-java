@@ -27,11 +27,11 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"actionsRequired","description","status"})
+    @OutputCustomType.Constructor
     private ConnectionPropertiesResponsePrivateLinkServiceConnectionState(
-        @Nullable String actionsRequired,
-        String description,
-        String status) {
+        @OutputCustomType.Parameter("actionsRequired") @Nullable String actionsRequired,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("status") String status) {
         this.actionsRequired = actionsRequired;
         this.description = description;
         this.status = status;
@@ -83,17 +83,17 @@ public final class ConnectionPropertiesResponsePrivateLinkServiceConnectionState
     	      this.status = defaults.status;
         }
 
-        public Builder setActionsRequired(@Nullable String actionsRequired) {
+        public Builder actionsRequired(@Nullable String actionsRequired) {
             this.actionsRequired = actionsRequired;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

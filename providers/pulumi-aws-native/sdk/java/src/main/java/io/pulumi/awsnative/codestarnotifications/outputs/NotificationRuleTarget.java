@@ -12,10 +12,10 @@ public final class NotificationRuleTarget {
     private final String targetAddress;
     private final String targetType;
 
-    @OutputCustomType.Constructor({"targetAddress","targetType"})
+    @OutputCustomType.Constructor
     private NotificationRuleTarget(
-        String targetAddress,
-        String targetType) {
+        @OutputCustomType.Parameter("targetAddress") String targetAddress,
+        @OutputCustomType.Parameter("targetType") String targetType) {
         this.targetAddress = targetAddress;
         this.targetType = targetType;
     }
@@ -49,12 +49,12 @@ public final class NotificationRuleTarget {
     	      this.targetType = defaults.targetType;
         }
 
-        public Builder setTargetAddress(String targetAddress) {
+        public Builder targetAddress(String targetAddress) {
             this.targetAddress = Objects.requireNonNull(targetAddress);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }

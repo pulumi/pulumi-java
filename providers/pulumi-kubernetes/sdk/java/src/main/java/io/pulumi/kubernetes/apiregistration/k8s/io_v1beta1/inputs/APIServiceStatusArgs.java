@@ -58,12 +58,12 @@ public final class APIServiceStatusArgs extends io.pulumi.resources.ResourceArgs
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable Input<List<APIServiceConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<APIServiceConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<APIServiceConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<APIServiceConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }

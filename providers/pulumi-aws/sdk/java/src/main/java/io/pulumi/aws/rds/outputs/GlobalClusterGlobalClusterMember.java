@@ -23,10 +23,10 @@ public final class GlobalClusterGlobalClusterMember {
      */
     private final @Nullable Boolean isWriter;
 
-    @OutputCustomType.Constructor({"dbClusterArn","isWriter"})
+    @OutputCustomType.Constructor
     private GlobalClusterGlobalClusterMember(
-        @Nullable String dbClusterArn,
-        @Nullable Boolean isWriter) {
+        @OutputCustomType.Parameter("dbClusterArn") @Nullable String dbClusterArn,
+        @OutputCustomType.Parameter("isWriter") @Nullable Boolean isWriter) {
         this.dbClusterArn = dbClusterArn;
         this.isWriter = isWriter;
     }
@@ -68,12 +68,12 @@ public final class GlobalClusterGlobalClusterMember {
     	      this.isWriter = defaults.isWriter;
         }
 
-        public Builder setDbClusterArn(@Nullable String dbClusterArn) {
+        public Builder dbClusterArn(@Nullable String dbClusterArn) {
             this.dbClusterArn = dbClusterArn;
             return this;
         }
 
-        public Builder setIsWriter(@Nullable Boolean isWriter) {
+        public Builder isWriter(@Nullable Boolean isWriter) {
             this.isWriter = isWriter;
             return this;
         }

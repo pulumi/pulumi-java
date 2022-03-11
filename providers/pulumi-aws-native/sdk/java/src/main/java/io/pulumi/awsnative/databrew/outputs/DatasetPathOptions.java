@@ -18,11 +18,11 @@ public final class DatasetPathOptions {
     private final @Nullable DatasetFilterExpression lastModifiedDateCondition;
     private final @Nullable List<DatasetPathParameter> parameters;
 
-    @OutputCustomType.Constructor({"filesLimit","lastModifiedDateCondition","parameters"})
+    @OutputCustomType.Constructor
     private DatasetPathOptions(
-        @Nullable DatasetFilesLimit filesLimit,
-        @Nullable DatasetFilterExpression lastModifiedDateCondition,
-        @Nullable List<DatasetPathParameter> parameters) {
+        @OutputCustomType.Parameter("filesLimit") @Nullable DatasetFilesLimit filesLimit,
+        @OutputCustomType.Parameter("lastModifiedDateCondition") @Nullable DatasetFilterExpression lastModifiedDateCondition,
+        @OutputCustomType.Parameter("parameters") @Nullable List<DatasetPathParameter> parameters) {
         this.filesLimit = filesLimit;
         this.lastModifiedDateCondition = lastModifiedDateCondition;
         this.parameters = parameters;
@@ -62,17 +62,17 @@ public final class DatasetPathOptions {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setFilesLimit(@Nullable DatasetFilesLimit filesLimit) {
+        public Builder filesLimit(@Nullable DatasetFilesLimit filesLimit) {
             this.filesLimit = filesLimit;
             return this;
         }
 
-        public Builder setLastModifiedDateCondition(@Nullable DatasetFilterExpression lastModifiedDateCondition) {
+        public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpression lastModifiedDateCondition) {
             this.lastModifiedDateCondition = lastModifiedDateCondition;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<DatasetPathParameter> parameters) {
+        public Builder parameters(@Nullable List<DatasetPathParameter> parameters) {
             this.parameters = parameters;
             return this;
         }

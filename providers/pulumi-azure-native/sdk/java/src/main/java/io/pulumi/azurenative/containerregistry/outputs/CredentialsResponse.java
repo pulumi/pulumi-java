@@ -27,10 +27,10 @@ public final class CredentialsResponse {
      */
     private final @Nullable SourceRegistryCredentialsResponse sourceRegistry;
 
-    @OutputCustomType.Constructor({"customRegistries","sourceRegistry"})
+    @OutputCustomType.Constructor
     private CredentialsResponse(
-        @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
-        @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
+        @OutputCustomType.Parameter("customRegistries") @Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries,
+        @OutputCustomType.Parameter("sourceRegistry") @Nullable SourceRegistryCredentialsResponse sourceRegistry) {
         this.customRegistries = customRegistries;
         this.sourceRegistry = sourceRegistry;
     }
@@ -74,12 +74,12 @@ public final class CredentialsResponse {
     	      this.sourceRegistry = defaults.sourceRegistry;
         }
 
-        public Builder setCustomRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
+        public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsResponse> customRegistries) {
             this.customRegistries = customRegistries;
             return this;
         }
 
-        public Builder setSourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
+        public Builder sourceRegistry(@Nullable SourceRegistryCredentialsResponse sourceRegistry) {
             this.sourceRegistry = sourceRegistry;
             return this;
         }

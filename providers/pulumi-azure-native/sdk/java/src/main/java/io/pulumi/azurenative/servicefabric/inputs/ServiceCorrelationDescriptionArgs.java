@@ -75,22 +75,22 @@ public final class ServiceCorrelationDescriptionArgs extends io.pulumi.resources
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setScheme(Input<Either<String,ServiceCorrelationScheme>> scheme) {
+        public Builder scheme(Input<Either<String,ServiceCorrelationScheme>> scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
 
-        public Builder setScheme(Either<String,ServiceCorrelationScheme> scheme) {
+        public Builder scheme(Either<String,ServiceCorrelationScheme> scheme) {
             this.scheme = Input.of(Objects.requireNonNull(scheme));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

@@ -44,14 +44,14 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final @Nullable String planType;
 
-    @OutputCustomType.Constructor({"autoRenew","current","hostingModel","last","next","planType"})
+    @OutputCustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        @Nullable Boolean autoRenew,
-        @Nullable CommitmentPeriodResponse current,
-        @Nullable String hostingModel,
-        CommitmentPeriodResponse last,
-        @Nullable CommitmentPeriodResponse next,
-        @Nullable String planType) {
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("current") @Nullable CommitmentPeriodResponse current,
+        @OutputCustomType.Parameter("hostingModel") @Nullable String hostingModel,
+        @OutputCustomType.Parameter("last") CommitmentPeriodResponse last,
+        @OutputCustomType.Parameter("next") @Nullable CommitmentPeriodResponse next,
+        @OutputCustomType.Parameter("planType") @Nullable String planType) {
         this.autoRenew = autoRenew;
         this.current = current;
         this.hostingModel = hostingModel;
@@ -133,32 +133,32 @@ public final class CommitmentPlanPropertiesResponse {
     	      this.planType = defaults.planType;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setCurrent(@Nullable CommitmentPeriodResponse current) {
+        public Builder current(@Nullable CommitmentPeriodResponse current) {
             this.current = current;
             return this;
         }
 
-        public Builder setHostingModel(@Nullable String hostingModel) {
+        public Builder hostingModel(@Nullable String hostingModel) {
             this.hostingModel = hostingModel;
             return this;
         }
 
-        public Builder setLast(CommitmentPeriodResponse last) {
+        public Builder last(CommitmentPeriodResponse last) {
             this.last = Objects.requireNonNull(last);
             return this;
         }
 
-        public Builder setNext(@Nullable CommitmentPeriodResponse next) {
+        public Builder next(@Nullable CommitmentPeriodResponse next) {
             this.next = next;
             return this;
         }
 
-        public Builder setPlanType(@Nullable String planType) {
+        public Builder planType(@Nullable String planType) {
             this.planType = planType;
             return this;
         }

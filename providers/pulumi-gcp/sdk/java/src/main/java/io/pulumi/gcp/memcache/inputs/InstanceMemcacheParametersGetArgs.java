@@ -72,22 +72,22 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
     	      this.params = defaults.params;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setParams(@Nullable Input<Map<String,String>> params) {
+        public Builder params(@Nullable Input<Map<String,String>> params) {
             this.params = params;
             return this;
         }
 
-        public Builder setParams(@Nullable Map<String,String> params) {
+        public Builder params(@Nullable Map<String,String> params) {
             this.params = Input.ofNullable(params);
             return this;
         }

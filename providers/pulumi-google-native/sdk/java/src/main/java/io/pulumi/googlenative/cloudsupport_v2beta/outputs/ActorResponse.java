@@ -31,12 +31,12 @@ public final class ActorResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"displayName","email","googleSupport","principalId"})
+    @OutputCustomType.Constructor
     private ActorResponse(
-        String displayName,
-        String email,
-        Boolean googleSupport,
-        String principalId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("googleSupport") Boolean googleSupport,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.displayName = displayName;
         this.email = email;
         this.googleSupport = googleSupport;
@@ -98,22 +98,22 @@ public final class ActorResponse {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setGoogleSupport(Boolean googleSupport) {
+        public Builder googleSupport(Boolean googleSupport) {
             this.googleSupport = Objects.requireNonNull(googleSupport);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }

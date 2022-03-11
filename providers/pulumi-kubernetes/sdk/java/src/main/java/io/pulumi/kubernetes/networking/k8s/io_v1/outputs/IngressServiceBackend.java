@@ -23,10 +23,10 @@ public final class IngressServiceBackend {
      */
     private final @Nullable ServiceBackendPort port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private IngressServiceBackend(
-        String name,
-        @Nullable ServiceBackendPort port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable ServiceBackendPort port) {
         this.name = name;
         this.port = port;
     }
@@ -68,12 +68,12 @@ public final class IngressServiceBackend {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable ServiceBackendPort port) {
+        public Builder port(@Nullable ServiceBackendPort port) {
             this.port = port;
             return this;
         }

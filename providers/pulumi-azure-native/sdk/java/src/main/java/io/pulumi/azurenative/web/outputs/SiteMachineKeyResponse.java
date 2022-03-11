@@ -32,12 +32,12 @@ public final class SiteMachineKeyResponse {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor({"decryption","decryptionKey","validation","validationKey"})
+    @OutputCustomType.Constructor
     private SiteMachineKeyResponse(
-        @Nullable String decryption,
-        @Nullable String decryptionKey,
-        @Nullable String validation,
-        @Nullable String validationKey) {
+        @OutputCustomType.Parameter("decryption") @Nullable String decryption,
+        @OutputCustomType.Parameter("decryptionKey") @Nullable String decryptionKey,
+        @OutputCustomType.Parameter("validation") @Nullable String validation,
+        @OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.decryption = decryption;
         this.decryptionKey = decryptionKey;
         this.validation = validation;
@@ -99,22 +99,22 @@ public final class SiteMachineKeyResponse {
     	      this.validationKey = defaults.validationKey;
         }
 
-        public Builder setDecryption(@Nullable String decryption) {
+        public Builder decryption(@Nullable String decryption) {
             this.decryption = decryption;
             return this;
         }
 
-        public Builder setDecryptionKey(@Nullable String decryptionKey) {
+        public Builder decryptionKey(@Nullable String decryptionKey) {
             this.decryptionKey = decryptionKey;
             return this;
         }
 
-        public Builder setValidation(@Nullable String validation) {
+        public Builder validation(@Nullable String validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidationKey(@Nullable String validationKey) {
+        public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
         }

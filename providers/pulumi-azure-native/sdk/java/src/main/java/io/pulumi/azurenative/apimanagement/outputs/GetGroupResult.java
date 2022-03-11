@@ -48,15 +48,15 @@ public final class GetGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"builtIn","description","displayName","externalId","id","name","type"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        Boolean builtIn,
-        @Nullable String description,
-        String displayName,
-        @Nullable String externalId,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("builtIn") Boolean builtIn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.builtIn = builtIn;
         this.description = description;
         this.displayName = displayName;
@@ -148,37 +148,37 @@ public final class GetGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBuiltIn(Boolean builtIn) {
+        public Builder builtIn(Boolean builtIn) {
             this.builtIn = Objects.requireNonNull(builtIn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

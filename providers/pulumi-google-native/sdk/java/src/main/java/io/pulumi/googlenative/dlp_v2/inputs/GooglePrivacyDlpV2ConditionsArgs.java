@@ -58,12 +58,12 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(@Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<GooglePrivacyDlpV2ConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<GooglePrivacyDlpV2ConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }

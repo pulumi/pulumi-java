@@ -21,10 +21,10 @@ public final class ServiceDnsConfigDnsRecord {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ttl","type"})
+    @OutputCustomType.Constructor
     private ServiceDnsConfigDnsRecord(
-        Integer ttl,
-        String type) {
+        @OutputCustomType.Parameter("ttl") Integer ttl,
+        @OutputCustomType.Parameter("type") String type) {
         this.ttl = ttl;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class ServiceDnsConfigDnsRecord {
     	      this.type = defaults.type;
         }
 
-        public Builder setTtl(Integer ttl) {
+        public Builder ttl(Integer ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

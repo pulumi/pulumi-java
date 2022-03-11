@@ -35,13 +35,13 @@ public final class PeeringServicePrefixEventResponse {
      */
     private final String eventType;
 
-    @OutputCustomType.Constructor({"eventDescription","eventLevel","eventSummary","eventTimestamp","eventType"})
+    @OutputCustomType.Constructor
     private PeeringServicePrefixEventResponse(
-        String eventDescription,
-        String eventLevel,
-        String eventSummary,
-        String eventTimestamp,
-        String eventType) {
+        @OutputCustomType.Parameter("eventDescription") String eventDescription,
+        @OutputCustomType.Parameter("eventLevel") String eventLevel,
+        @OutputCustomType.Parameter("eventSummary") String eventSummary,
+        @OutputCustomType.Parameter("eventTimestamp") String eventTimestamp,
+        @OutputCustomType.Parameter("eventType") String eventType) {
         this.eventDescription = eventDescription;
         this.eventLevel = eventLevel;
         this.eventSummary = eventSummary;
@@ -113,27 +113,27 @@ public final class PeeringServicePrefixEventResponse {
     	      this.eventType = defaults.eventType;
         }
 
-        public Builder setEventDescription(String eventDescription) {
+        public Builder eventDescription(String eventDescription) {
             this.eventDescription = Objects.requireNonNull(eventDescription);
             return this;
         }
 
-        public Builder setEventLevel(String eventLevel) {
+        public Builder eventLevel(String eventLevel) {
             this.eventLevel = Objects.requireNonNull(eventLevel);
             return this;
         }
 
-        public Builder setEventSummary(String eventSummary) {
+        public Builder eventSummary(String eventSummary) {
             this.eventSummary = Objects.requireNonNull(eventSummary);
             return this;
         }
 
-        public Builder setEventTimestamp(String eventTimestamp) {
+        public Builder eventTimestamp(String eventTimestamp) {
             this.eventTimestamp = Objects.requireNonNull(eventTimestamp);
             return this;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }

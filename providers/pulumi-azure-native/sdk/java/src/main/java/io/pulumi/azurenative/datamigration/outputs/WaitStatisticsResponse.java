@@ -26,11 +26,11 @@ public final class WaitStatisticsResponse {
      */
     private final String waitType;
 
-    @OutputCustomType.Constructor({"waitCount","waitTimeMs","waitType"})
+    @OutputCustomType.Constructor
     private WaitStatisticsResponse(
-        Double waitCount,
-        Double waitTimeMs,
-        String waitType) {
+        @OutputCustomType.Parameter("waitCount") Double waitCount,
+        @OutputCustomType.Parameter("waitTimeMs") Double waitTimeMs,
+        @OutputCustomType.Parameter("waitType") String waitType) {
         this.waitCount = waitCount;
         this.waitTimeMs = waitTimeMs;
         this.waitType = waitType;
@@ -82,17 +82,17 @@ public final class WaitStatisticsResponse {
     	      this.waitType = defaults.waitType;
         }
 
-        public Builder setWaitCount(Double waitCount) {
+        public Builder waitCount(Double waitCount) {
             this.waitCount = Objects.requireNonNull(waitCount);
             return this;
         }
 
-        public Builder setWaitTimeMs(Double waitTimeMs) {
+        public Builder waitTimeMs(Double waitTimeMs) {
             this.waitTimeMs = Objects.requireNonNull(waitTimeMs);
             return this;
         }
 
-        public Builder setWaitType(String waitType) {
+        public Builder waitType(String waitType) {
             this.waitType = Objects.requireNonNull(waitType);
             return this;
         }

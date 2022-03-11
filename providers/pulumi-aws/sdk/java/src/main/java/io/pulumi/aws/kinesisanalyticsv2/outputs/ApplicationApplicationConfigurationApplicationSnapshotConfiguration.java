@@ -15,8 +15,8 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
      */
     private final Boolean snapshotsEnabled;
 
-    @OutputCustomType.Constructor({"snapshotsEnabled"})
-    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(Boolean snapshotsEnabled) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationApplicationSnapshotConfiguration(@OutputCustomType.Parameter("snapshotsEnabled") Boolean snapshotsEnabled) {
         this.snapshotsEnabled = snapshotsEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationApplicationConfigurationApplicationSnapshotConfigu
     	      this.snapshotsEnabled = defaults.snapshotsEnabled;
         }
 
-        public Builder setSnapshotsEnabled(Boolean snapshotsEnabled) {
+        public Builder snapshotsEnabled(Boolean snapshotsEnabled) {
             this.snapshotsEnabled = Objects.requireNonNull(snapshotsEnabled);
             return this;
         }

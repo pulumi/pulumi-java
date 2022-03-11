@@ -38,13 +38,13 @@ public final class ManagedScalingPolicyComputeLimit {
      */
     private final String unitType;
 
-    @OutputCustomType.Constructor({"maximumCapacityUnits","maximumCoreCapacityUnits","maximumOndemandCapacityUnits","minimumCapacityUnits","unitType"})
+    @OutputCustomType.Constructor
     private ManagedScalingPolicyComputeLimit(
-        Integer maximumCapacityUnits,
-        @Nullable Integer maximumCoreCapacityUnits,
-        @Nullable Integer maximumOndemandCapacityUnits,
-        Integer minimumCapacityUnits,
-        String unitType) {
+        @OutputCustomType.Parameter("maximumCapacityUnits") Integer maximumCapacityUnits,
+        @OutputCustomType.Parameter("maximumCoreCapacityUnits") @Nullable Integer maximumCoreCapacityUnits,
+        @OutputCustomType.Parameter("maximumOndemandCapacityUnits") @Nullable Integer maximumOndemandCapacityUnits,
+        @OutputCustomType.Parameter("minimumCapacityUnits") Integer minimumCapacityUnits,
+        @OutputCustomType.Parameter("unitType") String unitType) {
         this.maximumCapacityUnits = maximumCapacityUnits;
         this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
         this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
@@ -116,27 +116,27 @@ public final class ManagedScalingPolicyComputeLimit {
     	      this.unitType = defaults.unitType;
         }
 
-        public Builder setMaximumCapacityUnits(Integer maximumCapacityUnits) {
+        public Builder maximumCapacityUnits(Integer maximumCapacityUnits) {
             this.maximumCapacityUnits = Objects.requireNonNull(maximumCapacityUnits);
             return this;
         }
 
-        public Builder setMaximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
+        public Builder maximumCoreCapacityUnits(@Nullable Integer maximumCoreCapacityUnits) {
             this.maximumCoreCapacityUnits = maximumCoreCapacityUnits;
             return this;
         }
 
-        public Builder setMaximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
+        public Builder maximumOndemandCapacityUnits(@Nullable Integer maximumOndemandCapacityUnits) {
             this.maximumOndemandCapacityUnits = maximumOndemandCapacityUnits;
             return this;
         }
 
-        public Builder setMinimumCapacityUnits(Integer minimumCapacityUnits) {
+        public Builder minimumCapacityUnits(Integer minimumCapacityUnits) {
             this.minimumCapacityUnits = Objects.requireNonNull(minimumCapacityUnits);
             return this;
         }
 
-        public Builder setUnitType(String unitType) {
+        public Builder unitType(String unitType) {
             this.unitType = Objects.requireNonNull(unitType);
             return this;
         }

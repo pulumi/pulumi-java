@@ -55,7 +55,7 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
     	      this.environment = defaults.environment;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }

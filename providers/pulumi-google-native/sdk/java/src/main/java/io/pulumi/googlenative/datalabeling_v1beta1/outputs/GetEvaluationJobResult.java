@@ -64,18 +64,18 @@ public final class GetEvaluationJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"annotationSpecSet","attempts","createTime","description","evaluationJobConfig","labelMissingGroundTruth","modelVersion","name","schedule","state"})
+    @OutputCustomType.Constructor
     private GetEvaluationJobResult(
-        String annotationSpecSet,
-        List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
-        String createTime,
-        String description,
-        GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
-        Boolean labelMissingGroundTruth,
-        String modelVersion,
-        String name,
-        String schedule,
-        String state) {
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("attempts") List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("evaluationJobConfig") GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig,
+        @OutputCustomType.Parameter("labelMissingGroundTruth") Boolean labelMissingGroundTruth,
+        @OutputCustomType.Parameter("modelVersion") String modelVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("state") String state) {
         this.annotationSpecSet = annotationSpecSet;
         this.attempts = attempts;
         this.createTime = createTime;
@@ -197,52 +197,52 @@ public final class GetEvaluationJobResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAttempts(List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts) {
+        public Builder attempts(List<GoogleCloudDatalabelingV1beta1AttemptResponse> attempts) {
             this.attempts = Objects.requireNonNull(attempts);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEvaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig) {
+        public Builder evaluationJobConfig(GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse evaluationJobConfig) {
             this.evaluationJobConfig = Objects.requireNonNull(evaluationJobConfig);
             return this;
         }
 
-        public Builder setLabelMissingGroundTruth(Boolean labelMissingGroundTruth) {
+        public Builder labelMissingGroundTruth(Boolean labelMissingGroundTruth) {
             this.labelMissingGroundTruth = Objects.requireNonNull(labelMissingGroundTruth);
             return this;
         }
 
-        public Builder setModelVersion(String modelVersion) {
+        public Builder modelVersion(String modelVersion) {
             this.modelVersion = Objects.requireNonNull(modelVersion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -54,16 +54,16 @@ public final class GetHybridConnectionResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor({"createdAt","id","listenerCount","name","requiresClientAuthorization","type","updatedAt","userMetadata"})
+    @OutputCustomType.Constructor
     private GetHybridConnectionResult(
-        String createdAt,
-        String id,
-        Integer listenerCount,
-        String name,
-        @Nullable Boolean requiresClientAuthorization,
-        String type,
-        String updatedAt,
-        @Nullable String userMetadata) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("listenerCount") Integer listenerCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiresClientAuthorization") @Nullable Boolean requiresClientAuthorization,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt,
+        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.listenerCount = listenerCount;
@@ -165,42 +165,42 @@ public final class GetHybridConnectionResult {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setListenerCount(Integer listenerCount) {
+        public Builder listenerCount(Integer listenerCount) {
             this.listenerCount = Objects.requireNonNull(listenerCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable String userMetadata) {
+        public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }

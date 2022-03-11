@@ -29,11 +29,11 @@ public final class SelectAudioTrackByIdResponse {
      */
     private final Double trackId;
 
-    @OutputCustomType.Constructor({"channelMapping","odataType","trackId"})
+    @OutputCustomType.Constructor
     private SelectAudioTrackByIdResponse(
-        @Nullable String channelMapping,
-        String odataType,
-        Double trackId) {
+        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trackId") Double trackId) {
         this.channelMapping = channelMapping;
         this.odataType = odataType;
         this.trackId = trackId;
@@ -86,17 +86,17 @@ public final class SelectAudioTrackByIdResponse {
     	      this.trackId = defaults.trackId;
         }
 
-        public Builder setChannelMapping(@Nullable String channelMapping) {
+        public Builder channelMapping(@Nullable String channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTrackId(Double trackId) {
+        public Builder trackId(Double trackId) {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }

@@ -15,8 +15,8 @@ public final class DestinationResponse {
      */
     private final CloudRunServiceResponse cloudRunService;
 
-    @OutputCustomType.Constructor({"cloudRunService"})
-    private DestinationResponse(CloudRunServiceResponse cloudRunService) {
+    @OutputCustomType.Constructor
+    private DestinationResponse(@OutputCustomType.Parameter("cloudRunService") CloudRunServiceResponse cloudRunService) {
         this.cloudRunService = cloudRunService;
     }
 
@@ -48,7 +48,7 @@ public final class DestinationResponse {
     	      this.cloudRunService = defaults.cloudRunService;
         }
 
-        public Builder setCloudRunService(CloudRunServiceResponse cloudRunService) {
+        public Builder cloudRunService(CloudRunServiceResponse cloudRunService) {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }

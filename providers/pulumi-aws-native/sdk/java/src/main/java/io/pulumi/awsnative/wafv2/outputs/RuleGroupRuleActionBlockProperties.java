@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupRuleActionBlockProperties {
     private final @Nullable RuleGroupCustomResponse customResponse;
 
-    @OutputCustomType.Constructor({"customResponse"})
-    private RuleGroupRuleActionBlockProperties(@Nullable RuleGroupCustomResponse customResponse) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionBlockProperties(@OutputCustomType.Parameter("customResponse") @Nullable RuleGroupCustomResponse customResponse) {
         this.customResponse = customResponse;
     }
 
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionBlockProperties {
     	      this.customResponse = defaults.customResponse;
         }
 
-        public Builder setCustomResponse(@Nullable RuleGroupCustomResponse customResponse) {
+        public Builder customResponse(@Nullable RuleGroupCustomResponse customResponse) {
             this.customResponse = customResponse;
             return this;
         }

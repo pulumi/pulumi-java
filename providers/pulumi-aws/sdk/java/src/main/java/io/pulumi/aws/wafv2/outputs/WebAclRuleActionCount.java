@@ -17,8 +17,8 @@ public final class WebAclRuleActionCount {
      */
     private final @Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebAclRuleActionCount(@Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebAclRuleActionCount(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclRuleActionCount {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebAclRuleActionCountCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

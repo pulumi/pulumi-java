@@ -32,12 +32,12 @@ public final class ListNotebookProxyCredentialsResult {
      */
     private final @Nullable String secondaryAccessKey;
 
-    @OutputCustomType.Constructor({"hostname","primaryAccessKey","resourceId","secondaryAccessKey"})
+    @OutputCustomType.Constructor
     private ListNotebookProxyCredentialsResult(
-        @Nullable String hostname,
-        @Nullable String primaryAccessKey,
-        @Nullable String resourceId,
-        @Nullable String secondaryAccessKey) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("primaryAccessKey") @Nullable String primaryAccessKey,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("secondaryAccessKey") @Nullable String secondaryAccessKey) {
         this.hostname = hostname;
         this.primaryAccessKey = primaryAccessKey;
         this.resourceId = resourceId;
@@ -99,22 +99,22 @@ public final class ListNotebookProxyCredentialsResult {
     	      this.secondaryAccessKey = defaults.secondaryAccessKey;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setPrimaryAccessKey(@Nullable String primaryAccessKey) {
+        public Builder primaryAccessKey(@Nullable String primaryAccessKey) {
             this.primaryAccessKey = primaryAccessKey;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setSecondaryAccessKey(@Nullable String secondaryAccessKey) {
+        public Builder secondaryAccessKey(@Nullable String secondaryAccessKey) {
             this.secondaryAccessKey = secondaryAccessKey;
             return this;
         }

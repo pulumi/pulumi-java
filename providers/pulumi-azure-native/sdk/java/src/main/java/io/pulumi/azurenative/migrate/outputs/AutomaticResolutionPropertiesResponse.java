@@ -18,8 +18,8 @@ public final class AutomaticResolutionPropertiesResponse {
      */
     private final @Nullable String moveResourceId;
 
-    @OutputCustomType.Constructor({"moveResourceId"})
-    private AutomaticResolutionPropertiesResponse(@Nullable String moveResourceId) {
+    @OutputCustomType.Constructor
+    private AutomaticResolutionPropertiesResponse(@OutputCustomType.Parameter("moveResourceId") @Nullable String moveResourceId) {
         this.moveResourceId = moveResourceId;
     }
 
@@ -52,7 +52,7 @@ public final class AutomaticResolutionPropertiesResponse {
     	      this.moveResourceId = defaults.moveResourceId;
         }
 
-        public Builder setMoveResourceId(@Nullable String moveResourceId) {
+        public Builder moveResourceId(@Nullable String moveResourceId) {
             this.moveResourceId = moveResourceId;
             return this;
         }

@@ -71,22 +71,22 @@ public final class ProxyDefaultTargetGroupArgs extends io.pulumi.resources.Resou
     	      this.dbProxyName = defaults.dbProxyName;
         }
 
-        public Builder setConnectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable Input<ProxyDefaultTargetGroupConnectionPoolConfigArgs> connectionPoolConfig) {
             this.connectionPoolConfig = connectionPoolConfig;
             return this;
         }
 
-        public Builder setConnectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
+        public Builder connectionPoolConfig(@Nullable ProxyDefaultTargetGroupConnectionPoolConfigArgs connectionPoolConfig) {
             this.connectionPoolConfig = Input.ofNullable(connectionPoolConfig);
             return this;
         }
 
-        public Builder setDbProxyName(Input<String> dbProxyName) {
+        public Builder dbProxyName(Input<String> dbProxyName) {
             this.dbProxyName = Objects.requireNonNull(dbProxyName);
             return this;
         }
 
-        public Builder setDbProxyName(String dbProxyName) {
+        public Builder dbProxyName(String dbProxyName) {
             this.dbProxyName = Input.of(Objects.requireNonNull(dbProxyName));
             return this;
         }

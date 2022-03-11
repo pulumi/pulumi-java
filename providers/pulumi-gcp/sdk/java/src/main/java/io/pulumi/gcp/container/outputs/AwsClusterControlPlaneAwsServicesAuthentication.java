@@ -22,10 +22,10 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
      */
     private final @Nullable String roleSessionName;
 
-    @OutputCustomType.Constructor({"roleArn","roleSessionName"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlaneAwsServicesAuthentication(
-        String roleArn,
-        @Nullable String roleSessionName) {
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("roleSessionName") @Nullable String roleSessionName) {
         this.roleArn = roleArn;
         this.roleSessionName = roleSessionName;
     }
@@ -67,12 +67,12 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
     	      this.roleSessionName = defaults.roleSessionName;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleSessionName(@Nullable String roleSessionName) {
+        public Builder roleSessionName(@Nullable String roleSessionName) {
             this.roleSessionName = roleSessionName;
             return this;
         }

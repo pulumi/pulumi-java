@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
      */
     private final Integer maxFindings;
 
-    @OutputCustomType.Constructor({"infoType","maxFindings"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeLimitResponse(
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        Integer maxFindings) {
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
+        @OutputCustomType.Parameter("maxFindings") Integer maxFindings) {
         this.infoType = infoType;
         this.maxFindings = maxFindings;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
     	      this.maxFindings = defaults.maxFindings;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setMaxFindings(Integer maxFindings) {
+        public Builder maxFindings(Integer maxFindings) {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }

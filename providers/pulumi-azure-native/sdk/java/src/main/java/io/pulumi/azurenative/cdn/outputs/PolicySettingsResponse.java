@@ -38,13 +38,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"defaultCustomBlockResponseBody","defaultCustomBlockResponseStatusCode","defaultRedirectUrl","enabledState","mode"})
+    @OutputCustomType.Constructor
     private PolicySettingsResponse(
-        @Nullable String defaultCustomBlockResponseBody,
-        @Nullable Integer defaultCustomBlockResponseStatusCode,
-        @Nullable String defaultRedirectUrl,
-        @Nullable String enabledState,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("defaultCustomBlockResponseBody") @Nullable String defaultCustomBlockResponseBody,
+        @OutputCustomType.Parameter("defaultCustomBlockResponseStatusCode") @Nullable Integer defaultCustomBlockResponseStatusCode,
+        @OutputCustomType.Parameter("defaultRedirectUrl") @Nullable String defaultRedirectUrl,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
         this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
         this.defaultRedirectUrl = defaultRedirectUrl;
@@ -116,27 +116,27 @@ public final class PolicySettingsResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setDefaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
+        public Builder defaultCustomBlockResponseBody(@Nullable String defaultCustomBlockResponseBody) {
             this.defaultCustomBlockResponseBody = defaultCustomBlockResponseBody;
             return this;
         }
 
-        public Builder setDefaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
+        public Builder defaultCustomBlockResponseStatusCode(@Nullable Integer defaultCustomBlockResponseStatusCode) {
             this.defaultCustomBlockResponseStatusCode = defaultCustomBlockResponseStatusCode;
             return this;
         }
 
-        public Builder setDefaultRedirectUrl(@Nullable String defaultRedirectUrl) {
+        public Builder defaultRedirectUrl(@Nullable String defaultRedirectUrl) {
             this.defaultRedirectUrl = defaultRedirectUrl;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

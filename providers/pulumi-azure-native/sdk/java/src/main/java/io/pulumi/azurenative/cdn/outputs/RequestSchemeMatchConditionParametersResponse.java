@@ -30,12 +30,12 @@ public final class RequestSchemeMatchConditionParametersResponse {
      */
     private final String operator;
 
-    @OutputCustomType.Constructor({"matchValues","negateCondition","odataType","operator"})
+    @OutputCustomType.Constructor
     private RequestSchemeMatchConditionParametersResponse(
-        @Nullable List<String> matchValues,
-        @Nullable Boolean negateCondition,
-        String odataType,
-        String operator) {
+        @OutputCustomType.Parameter("matchValues") @Nullable List<String> matchValues,
+        @OutputCustomType.Parameter("negateCondition") @Nullable Boolean negateCondition,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operator") String operator) {
         this.matchValues = matchValues;
         this.negateCondition = negateCondition;
         this.odataType = odataType;
@@ -93,22 +93,22 @@ public final class RequestSchemeMatchConditionParametersResponse {
     	      this.operator = defaults.operator;
         }
 
-        public Builder setMatchValues(@Nullable List<String> matchValues) {
+        public Builder matchValues(@Nullable List<String> matchValues) {
             this.matchValues = matchValues;
             return this;
         }
 
-        public Builder setNegateCondition(@Nullable Boolean negateCondition) {
+        public Builder negateCondition(@Nullable Boolean negateCondition) {
             this.negateCondition = negateCondition;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }

@@ -20,10 +20,10 @@ public final class OidcTokenResponse {
      */
     private final String serviceAccountEmail;
 
-    @OutputCustomType.Constructor({"audience","serviceAccountEmail"})
+    @OutputCustomType.Constructor
     private OidcTokenResponse(
-        String audience,
-        String serviceAccountEmail) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail) {
         this.audience = audience;
         this.serviceAccountEmail = serviceAccountEmail;
     }
@@ -65,12 +65,12 @@ public final class OidcTokenResponse {
     	      this.serviceAccountEmail = defaults.serviceAccountEmail;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }

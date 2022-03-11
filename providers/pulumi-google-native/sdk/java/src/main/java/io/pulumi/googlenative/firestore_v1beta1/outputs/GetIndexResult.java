@@ -32,12 +32,12 @@ public final class GetIndexResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"collectionId","fields","name","state"})
+    @OutputCustomType.Constructor
     private GetIndexResult(
-        String collectionId,
-        List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("collectionId") String collectionId,
+        @OutputCustomType.Parameter("fields") List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.collectionId = collectionId;
         this.fields = fields;
         this.name = name;
@@ -99,22 +99,22 @@ public final class GetIndexResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCollectionId(String collectionId) {
+        public Builder collectionId(String collectionId) {
             this.collectionId = Objects.requireNonNull(collectionId);
             return this;
         }
 
-        public Builder setFields(List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields) {
+        public Builder fields(List<GoogleFirestoreAdminV1beta1IndexFieldResponse> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

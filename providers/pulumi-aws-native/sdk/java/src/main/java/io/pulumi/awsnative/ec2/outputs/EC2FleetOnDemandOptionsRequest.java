@@ -21,14 +21,14 @@ public final class EC2FleetOnDemandOptionsRequest {
     private final @Nullable Boolean singleAvailabilityZone;
     private final @Nullable Boolean singleInstanceType;
 
-    @OutputCustomType.Constructor({"allocationStrategy","capacityReservationOptions","maxTotalPrice","minTargetCapacity","singleAvailabilityZone","singleInstanceType"})
+    @OutputCustomType.Constructor
     private EC2FleetOnDemandOptionsRequest(
-        @Nullable String allocationStrategy,
-        @Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions,
-        @Nullable String maxTotalPrice,
-        @Nullable Integer minTargetCapacity,
-        @Nullable Boolean singleAvailabilityZone,
-        @Nullable Boolean singleInstanceType) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @OutputCustomType.Parameter("capacityReservationOptions") @Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions,
+        @OutputCustomType.Parameter("maxTotalPrice") @Nullable String maxTotalPrice,
+        @OutputCustomType.Parameter("minTargetCapacity") @Nullable Integer minTargetCapacity,
+        @OutputCustomType.Parameter("singleAvailabilityZone") @Nullable Boolean singleAvailabilityZone,
+        @OutputCustomType.Parameter("singleInstanceType") @Nullable Boolean singleInstanceType) {
         this.allocationStrategy = allocationStrategy;
         this.capacityReservationOptions = capacityReservationOptions;
         this.maxTotalPrice = maxTotalPrice;
@@ -86,32 +86,32 @@ public final class EC2FleetOnDemandOptionsRequest {
     	      this.singleInstanceType = defaults.singleInstanceType;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setCapacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions) {
+        public Builder capacityReservationOptions(@Nullable EC2FleetCapacityReservationOptionsRequest capacityReservationOptions) {
             this.capacityReservationOptions = capacityReservationOptions;
             return this;
         }
 
-        public Builder setMaxTotalPrice(@Nullable String maxTotalPrice) {
+        public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
             this.maxTotalPrice = maxTotalPrice;
             return this;
         }
 
-        public Builder setMinTargetCapacity(@Nullable Integer minTargetCapacity) {
+        public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
             this.minTargetCapacity = minTargetCapacity;
             return this;
         }
 
-        public Builder setSingleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
+        public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
             this.singleAvailabilityZone = singleAvailabilityZone;
             return this;
         }
 
-        public Builder setSingleInstanceType(@Nullable Boolean singleInstanceType) {
+        public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
             this.singleInstanceType = singleInstanceType;
             return this;
         }

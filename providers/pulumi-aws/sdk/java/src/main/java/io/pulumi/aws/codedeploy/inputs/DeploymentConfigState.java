@@ -120,52 +120,52 @@ public final class DeploymentConfigState extends io.pulumi.resources.ResourceArg
     	      this.trafficRoutingConfig = defaults.trafficRoutingConfig;
         }
 
-        public Builder setComputePlatform(@Nullable Input<String> computePlatform) {
+        public Builder computePlatform(@Nullable Input<String> computePlatform) {
             this.computePlatform = computePlatform;
             return this;
         }
 
-        public Builder setComputePlatform(@Nullable String computePlatform) {
+        public Builder computePlatform(@Nullable String computePlatform) {
             this.computePlatform = Input.ofNullable(computePlatform);
             return this;
         }
 
-        public Builder setDeploymentConfigId(@Nullable Input<String> deploymentConfigId) {
+        public Builder deploymentConfigId(@Nullable Input<String> deploymentConfigId) {
             this.deploymentConfigId = deploymentConfigId;
             return this;
         }
 
-        public Builder setDeploymentConfigId(@Nullable String deploymentConfigId) {
+        public Builder deploymentConfigId(@Nullable String deploymentConfigId) {
             this.deploymentConfigId = Input.ofNullable(deploymentConfigId);
             return this;
         }
 
-        public Builder setDeploymentConfigName(@Nullable Input<String> deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable Input<String> deploymentConfigName) {
             this.deploymentConfigName = deploymentConfigName;
             return this;
         }
 
-        public Builder setDeploymentConfigName(@Nullable String deploymentConfigName) {
+        public Builder deploymentConfigName(@Nullable String deploymentConfigName) {
             this.deploymentConfigName = Input.ofNullable(deploymentConfigName);
             return this;
         }
 
-        public Builder setMinimumHealthyHosts(@Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable Input<DeploymentConfigMinimumHealthyHostsGetArgs> minimumHealthyHosts) {
             this.minimumHealthyHosts = minimumHealthyHosts;
             return this;
         }
 
-        public Builder setMinimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
+        public Builder minimumHealthyHosts(@Nullable DeploymentConfigMinimumHealthyHostsGetArgs minimumHealthyHosts) {
             this.minimumHealthyHosts = Input.ofNullable(minimumHealthyHosts);
             return this;
         }
 
-        public Builder setTrafficRoutingConfig(@Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable Input<DeploymentConfigTrafficRoutingConfigGetArgs> trafficRoutingConfig) {
             this.trafficRoutingConfig = trafficRoutingConfig;
             return this;
         }
 
-        public Builder setTrafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
+        public Builder trafficRoutingConfig(@Nullable DeploymentConfigTrafficRoutingConfigGetArgs trafficRoutingConfig) {
             this.trafficRoutingConfig = Input.ofNullable(trafficRoutingConfig);
             return this;
         }

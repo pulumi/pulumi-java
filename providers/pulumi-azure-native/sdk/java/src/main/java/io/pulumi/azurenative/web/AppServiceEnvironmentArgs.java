@@ -253,132 +253,132 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
     	      this.virtualNetwork = defaults.virtualNetwork;
         }
 
-        public Builder setClusterSettings(@Nullable Input<List<NameValuePairArgs>> clusterSettings) {
+        public Builder clusterSettings(@Nullable Input<List<NameValuePairArgs>> clusterSettings) {
             this.clusterSettings = clusterSettings;
             return this;
         }
 
-        public Builder setClusterSettings(@Nullable List<NameValuePairArgs> clusterSettings) {
+        public Builder clusterSettings(@Nullable List<NameValuePairArgs> clusterSettings) {
             this.clusterSettings = Input.ofNullable(clusterSettings);
             return this;
         }
 
-        public Builder setDnsSuffix(@Nullable Input<String> dnsSuffix) {
+        public Builder dnsSuffix(@Nullable Input<String> dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
 
-        public Builder setDnsSuffix(@Nullable String dnsSuffix) {
+        public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = Input.ofNullable(dnsSuffix);
             return this;
         }
 
-        public Builder setFrontEndScaleFactor(@Nullable Input<Integer> frontEndScaleFactor) {
+        public Builder frontEndScaleFactor(@Nullable Input<Integer> frontEndScaleFactor) {
             this.frontEndScaleFactor = frontEndScaleFactor;
             return this;
         }
 
-        public Builder setFrontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
+        public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
             this.frontEndScaleFactor = Input.ofNullable(frontEndScaleFactor);
             return this;
         }
 
-        public Builder setInternalLoadBalancingMode(@Nullable Input<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
+        public Builder internalLoadBalancingMode(@Nullable Input<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
             this.internalLoadBalancingMode = internalLoadBalancingMode;
             return this;
         }
 
-        public Builder setInternalLoadBalancingMode(@Nullable Either<String,LoadBalancingMode> internalLoadBalancingMode) {
+        public Builder internalLoadBalancingMode(@Nullable Either<String,LoadBalancingMode> internalLoadBalancingMode) {
             this.internalLoadBalancingMode = Input.ofNullable(internalLoadBalancingMode);
             return this;
         }
 
-        public Builder setIpsslAddressCount(@Nullable Input<Integer> ipsslAddressCount) {
+        public Builder ipsslAddressCount(@Nullable Input<Integer> ipsslAddressCount) {
             this.ipsslAddressCount = ipsslAddressCount;
             return this;
         }
 
-        public Builder setIpsslAddressCount(@Nullable Integer ipsslAddressCount) {
+        public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
             this.ipsslAddressCount = Input.ofNullable(ipsslAddressCount);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMultiSize(@Nullable Input<String> multiSize) {
+        public Builder multiSize(@Nullable Input<String> multiSize) {
             this.multiSize = multiSize;
             return this;
         }
 
-        public Builder setMultiSize(@Nullable String multiSize) {
+        public Builder multiSize(@Nullable String multiSize) {
             this.multiSize = Input.ofNullable(multiSize);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserWhitelistedIpRanges(@Nullable Input<List<String>> userWhitelistedIpRanges) {
+        public Builder userWhitelistedIpRanges(@Nullable Input<List<String>> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = userWhitelistedIpRanges;
             return this;
         }
 
-        public Builder setUserWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
+        public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
             this.userWhitelistedIpRanges = Input.ofNullable(userWhitelistedIpRanges);
             return this;
         }
 
-        public Builder setVirtualNetwork(Input<VirtualNetworkProfileArgs> virtualNetwork) {
+        public Builder virtualNetwork(Input<VirtualNetworkProfileArgs> virtualNetwork) {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
 
-        public Builder setVirtualNetwork(VirtualNetworkProfileArgs virtualNetwork) {
+        public Builder virtualNetwork(VirtualNetworkProfileArgs virtualNetwork) {
             this.virtualNetwork = Input.of(Objects.requireNonNull(virtualNetwork));
             return this;
         }

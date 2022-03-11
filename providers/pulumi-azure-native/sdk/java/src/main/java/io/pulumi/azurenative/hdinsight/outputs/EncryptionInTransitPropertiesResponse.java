@@ -17,8 +17,8 @@ public final class EncryptionInTransitPropertiesResponse {
      */
     private final @Nullable Boolean isEncryptionInTransitEnabled;
 
-    @OutputCustomType.Constructor({"isEncryptionInTransitEnabled"})
-    private EncryptionInTransitPropertiesResponse(@Nullable Boolean isEncryptionInTransitEnabled) {
+    @OutputCustomType.Constructor
+    private EncryptionInTransitPropertiesResponse(@OutputCustomType.Parameter("isEncryptionInTransitEnabled") @Nullable Boolean isEncryptionInTransitEnabled) {
         this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class EncryptionInTransitPropertiesResponse {
     	      this.isEncryptionInTransitEnabled = defaults.isEncryptionInTransitEnabled;
         }
 
-        public Builder setIsEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
+        public Builder isEncryptionInTransitEnabled(@Nullable Boolean isEncryptionInTransitEnabled) {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }

@@ -29,13 +29,13 @@ public final class GetCaCertsResult {
     private final String instance;
     private final String project;
 
-    @OutputCustomType.Constructor({"activeVersion","certs","id","instance","project"})
+    @OutputCustomType.Constructor
     private GetCaCertsResult(
-        String activeVersion,
-        List<GetCaCertsCert> certs,
-        String id,
-        String instance,
-        String project) {
+        @OutputCustomType.Parameter("activeVersion") String activeVersion,
+        @OutputCustomType.Parameter("certs") List<GetCaCertsCert> certs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("project") String project) {
         this.activeVersion = activeVersion;
         this.certs = certs;
         this.id = id;
@@ -99,27 +99,27 @@ public final class GetCaCertsResult {
     	      this.project = defaults.project;
         }
 
-        public Builder setActiveVersion(String activeVersion) {
+        public Builder activeVersion(String activeVersion) {
             this.activeVersion = Objects.requireNonNull(activeVersion);
             return this;
         }
 
-        public Builder setCerts(List<GetCaCertsCert> certs) {
+        public Builder certs(List<GetCaCertsCert> certs) {
             this.certs = Objects.requireNonNull(certs);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

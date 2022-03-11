@@ -34,12 +34,12 @@ public final class MetricSettingsResponse {
      */
     private final @Nullable String timeGrain;
 
-    @OutputCustomType.Constructor({"category","enabled","retentionPolicy","timeGrain"})
+    @OutputCustomType.Constructor
     private MetricSettingsResponse(
-        @Nullable String category,
-        Boolean enabled,
-        @Nullable RetentionPolicyResponse retentionPolicy,
-        @Nullable String timeGrain) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("timeGrain") @Nullable String timeGrain) {
         this.category = category;
         this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;
@@ -101,22 +101,22 @@ public final class MetricSettingsResponse {
     	      this.timeGrain = defaults.timeGrain;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setTimeGrain(@Nullable String timeGrain) {
+        public Builder timeGrain(@Nullable String timeGrain) {
             this.timeGrain = timeGrain;
             return this;
         }

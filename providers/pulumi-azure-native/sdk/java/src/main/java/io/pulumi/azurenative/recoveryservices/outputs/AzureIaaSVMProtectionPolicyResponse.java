@@ -53,15 +53,15 @@ public final class AzureIaaSVMProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"backupManagementType","instantRPDetails","instantRpRetentionRangeInDays","protectedItemsCount","retentionPolicy","schedulePolicy","timeZone"})
+    @OutputCustomType.Constructor
     private AzureIaaSVMProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
-        @Nullable Integer instantRpRetentionRangeInDays,
-        @Nullable Integer protectedItemsCount,
-        @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
-        @Nullable Object schedulePolicy,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("instantRPDetails") @Nullable InstantRPAdditionalDetailsResponse instantRPDetails,
+        @OutputCustomType.Parameter("instantRpRetentionRangeInDays") @Nullable Integer instantRpRetentionRangeInDays,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy,
+        @OutputCustomType.Parameter("schedulePolicy") @Nullable Object schedulePolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.instantRPDetails = instantRPDetails;
         this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
@@ -150,37 +150,37 @@ public final class AzureIaaSVMProtectionPolicyResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setInstantRPDetails(@Nullable InstantRPAdditionalDetailsResponse instantRPDetails) {
+        public Builder instantRPDetails(@Nullable InstantRPAdditionalDetailsResponse instantRPDetails) {
             this.instantRPDetails = instantRPDetails;
             return this;
         }
 
-        public Builder setInstantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
+        public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             this.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setSchedulePolicy(@Nullable Object schedulePolicy) {
+        public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

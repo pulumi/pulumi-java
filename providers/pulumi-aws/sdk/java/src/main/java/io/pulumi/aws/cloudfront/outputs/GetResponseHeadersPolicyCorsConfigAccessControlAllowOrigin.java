@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(List<String> items) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 
@@ -41,7 +41,7 @@ public final class GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

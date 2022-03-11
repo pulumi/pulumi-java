@@ -47,15 +47,15 @@ public final class SubjectDescriptionResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor({"commonName","hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private SubjectDescriptionResponse(
-        String commonName,
-        String hexSerialNumber,
-        String lifetime,
-        String notAfterTime,
-        String notBeforeTime,
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
+        @OutputCustomType.Parameter("commonName") String commonName,
+        @OutputCustomType.Parameter("hexSerialNumber") String hexSerialNumber,
+        @OutputCustomType.Parameter("lifetime") String lifetime,
+        @OutputCustomType.Parameter("notAfterTime") String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") String notBeforeTime,
+        @OutputCustomType.Parameter("subject") SubjectResponse subject,
+        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.commonName = commonName;
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
@@ -147,37 +147,37 @@ public final class SubjectDescriptionResponse {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setCommonName(String commonName) {
+        public Builder commonName(String commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
-        public Builder setHexSerialNumber(String hexSerialNumber) {
+        public Builder hexSerialNumber(String hexSerialNumber) {
             this.hexSerialNumber = Objects.requireNonNull(hexSerialNumber);
             return this;
         }
 
-        public Builder setLifetime(String lifetime) {
+        public Builder lifetime(String lifetime) {
             this.lifetime = Objects.requireNonNull(lifetime);
             return this;
         }
 
-        public Builder setNotAfterTime(String notAfterTime) {
+        public Builder notAfterTime(String notAfterTime) {
             this.notAfterTime = Objects.requireNonNull(notAfterTime);
             return this;
         }
 
-        public Builder setNotBeforeTime(String notBeforeTime) {
+        public Builder notBeforeTime(String notBeforeTime) {
             this.notBeforeTime = Objects.requireNonNull(notBeforeTime);
             return this;
         }
 
-        public Builder setSubject(SubjectResponse subject) {
+        public Builder subject(SubjectResponse subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAltName(SubjectAltNamesResponse subjectAltName) {
+        public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }

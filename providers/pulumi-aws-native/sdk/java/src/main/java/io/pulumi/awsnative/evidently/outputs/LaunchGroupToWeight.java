@@ -13,10 +13,10 @@ public final class LaunchGroupToWeight {
     private final String groupName;
     private final Integer splitWeight;
 
-    @OutputCustomType.Constructor({"groupName","splitWeight"})
+    @OutputCustomType.Constructor
     private LaunchGroupToWeight(
-        String groupName,
-        Integer splitWeight) {
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("splitWeight") Integer splitWeight) {
         this.groupName = groupName;
         this.splitWeight = splitWeight;
     }
@@ -50,12 +50,12 @@ public final class LaunchGroupToWeight {
     	      this.splitWeight = defaults.splitWeight;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setSplitWeight(Integer splitWeight) {
+        public Builder splitWeight(Integer splitWeight) {
             this.splitWeight = Objects.requireNonNull(splitWeight);
             return this;
         }

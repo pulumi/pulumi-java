@@ -17,8 +17,8 @@ public final class ProtocolSettingsResponse {
      */
     private final @Nullable SmbSettingResponse smb;
 
-    @OutputCustomType.Constructor({"smb"})
-    private ProtocolSettingsResponse(@Nullable SmbSettingResponse smb) {
+    @OutputCustomType.Constructor
+    private ProtocolSettingsResponse(@OutputCustomType.Parameter("smb") @Nullable SmbSettingResponse smb) {
         this.smb = smb;
     }
 
@@ -50,7 +50,7 @@ public final class ProtocolSettingsResponse {
     	      this.smb = defaults.smb;
         }
 
-        public Builder setSmb(@Nullable SmbSettingResponse smb) {
+        public Builder smb(@Nullable SmbSettingResponse smb) {
             this.smb = smb;
             return this;
         }

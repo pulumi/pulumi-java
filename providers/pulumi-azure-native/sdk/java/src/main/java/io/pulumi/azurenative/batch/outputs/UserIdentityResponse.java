@@ -23,10 +23,10 @@ public final class UserIdentityResponse {
      */
     private final @Nullable String userName;
 
-    @OutputCustomType.Constructor({"autoUser","userName"})
+    @OutputCustomType.Constructor
     private UserIdentityResponse(
-        @Nullable AutoUserSpecificationResponse autoUser,
-        @Nullable String userName) {
+        @OutputCustomType.Parameter("autoUser") @Nullable AutoUserSpecificationResponse autoUser,
+        @OutputCustomType.Parameter("userName") @Nullable String userName) {
         this.autoUser = autoUser;
         this.userName = userName;
     }
@@ -68,12 +68,12 @@ public final class UserIdentityResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAutoUser(@Nullable AutoUserSpecificationResponse autoUser) {
+        public Builder autoUser(@Nullable AutoUserSpecificationResponse autoUser) {
             this.autoUser = autoUser;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }

@@ -54,7 +54,7 @@ public final class GetDnsResourceReferenceByTarResourcesArgs extends io.pulumi.r
     	      this.targetResources = defaults.targetResources;
         }
 
-        public Builder setTargetResources(@Nullable List<SubResource> targetResources) {
+        public Builder targetResources(@Nullable List<SubResource> targetResources) {
             this.targetResources = targetResources;
             return this;
         }

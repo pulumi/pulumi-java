@@ -28,11 +28,11 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"endpointType","queueName","resourceId"})
+    @OutputCustomType.Constructor
     private StorageQueueEventSubscriptionDestinationResponse(
-        String endpointType,
-        @Nullable String queueName,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.endpointType = endpointType;
         this.queueName = queueName;
         this.resourceId = resourceId;
@@ -85,17 +85,17 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

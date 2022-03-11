@@ -110,32 +110,32 @@ public final class GetFhirArgs extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setFhirId(String fhirId) {
+        public Builder fhirId(String fhirId) {
             this.fhirId = Objects.requireNonNull(fhirId);
             return this;
         }
 
-        public Builder setFhirId1(String fhirId1) {
+        public Builder fhirId1(String fhirId1) {
             this.fhirId1 = Objects.requireNonNull(fhirId1);
             return this;
         }
 
-        public Builder setFhirStoreId(String fhirStoreId) {
+        public Builder fhirStoreId(String fhirStoreId) {
             this.fhirStoreId = Objects.requireNonNull(fhirStoreId);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

@@ -24,10 +24,10 @@ public final class PrivilegeResponse {
      */
     private final @Nullable PrivilegeResponseResource resource;
 
-    @OutputCustomType.Constructor({"actions","resource"})
+    @OutputCustomType.Constructor
     private PrivilegeResponse(
-        @Nullable List<String> actions,
-        @Nullable PrivilegeResponseResource resource) {
+        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
+        @OutputCustomType.Parameter("resource") @Nullable PrivilegeResponseResource resource) {
         this.actions = actions;
         this.resource = resource;
     }
@@ -69,12 +69,12 @@ public final class PrivilegeResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setResource(@Nullable PrivilegeResponseResource resource) {
+        public Builder resource(@Nullable PrivilegeResponseResource resource) {
             this.resource = resource;
             return this;
         }

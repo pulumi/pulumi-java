@@ -62,12 +62,12 @@ public final class DatastoreTimestampPartition extends io.pulumi.resources.Invok
     	      this.timestampFormat = defaults.timestampFormat;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setTimestampFormat(@Nullable String timestampFormat) {
+        public Builder timestampFormat(@Nullable String timestampFormat) {
             this.timestampFormat = timestampFormat;
             return this;
         }

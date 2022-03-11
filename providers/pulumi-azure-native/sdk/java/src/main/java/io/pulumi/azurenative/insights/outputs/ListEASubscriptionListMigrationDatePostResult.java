@@ -23,10 +23,10 @@ public final class ListEASubscriptionListMigrationDatePostResult {
      */
     private final @Nullable String optedInDate;
 
-    @OutputCustomType.Constructor({"isGrandFatherableSubscription","optedInDate"})
+    @OutputCustomType.Constructor
     private ListEASubscriptionListMigrationDatePostResult(
-        @Nullable Boolean isGrandFatherableSubscription,
-        @Nullable String optedInDate) {
+        @OutputCustomType.Parameter("isGrandFatherableSubscription") @Nullable Boolean isGrandFatherableSubscription,
+        @OutputCustomType.Parameter("optedInDate") @Nullable String optedInDate) {
         this.isGrandFatherableSubscription = isGrandFatherableSubscription;
         this.optedInDate = optedInDate;
     }
@@ -68,12 +68,12 @@ public final class ListEASubscriptionListMigrationDatePostResult {
     	      this.optedInDate = defaults.optedInDate;
         }
 
-        public Builder setIsGrandFatherableSubscription(@Nullable Boolean isGrandFatherableSubscription) {
+        public Builder isGrandFatherableSubscription(@Nullable Boolean isGrandFatherableSubscription) {
             this.isGrandFatherableSubscription = isGrandFatherableSubscription;
             return this;
         }
 
-        public Builder setOptedInDate(@Nullable String optedInDate) {
+        public Builder optedInDate(@Nullable String optedInDate) {
             this.optedInDate = optedInDate;
             return this;
         }

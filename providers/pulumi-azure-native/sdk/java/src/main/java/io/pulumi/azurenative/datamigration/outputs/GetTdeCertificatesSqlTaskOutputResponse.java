@@ -23,10 +23,10 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"base64EncodedCertificates","validationErrors"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskOutputResponse(
-        Map<String,List<String>> base64EncodedCertificates,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("base64EncodedCertificates") Map<String,List<String>> base64EncodedCertificates,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.base64EncodedCertificates = base64EncodedCertificates;
         this.validationErrors = validationErrors;
     }
@@ -68,12 +68,12 @@ public final class GetTdeCertificatesSqlTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setBase64EncodedCertificates(Map<String,List<String>> base64EncodedCertificates) {
+        public Builder base64EncodedCertificates(Map<String,List<String>> base64EncodedCertificates) {
             this.base64EncodedCertificates = Objects.requireNonNull(base64EncodedCertificates);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

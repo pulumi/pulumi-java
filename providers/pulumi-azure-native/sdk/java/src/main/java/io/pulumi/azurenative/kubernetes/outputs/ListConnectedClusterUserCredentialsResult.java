@@ -22,10 +22,10 @@ public final class ListConnectedClusterUserCredentialsResult {
      */
     private final List<CredentialResultResponse> kubeconfigs;
 
-    @OutputCustomType.Constructor({"hybridConnectionConfig","kubeconfigs"})
+    @OutputCustomType.Constructor
     private ListConnectedClusterUserCredentialsResult(
-        HybridConnectionConfigResponse hybridConnectionConfig,
-        List<CredentialResultResponse> kubeconfigs) {
+        @OutputCustomType.Parameter("hybridConnectionConfig") HybridConnectionConfigResponse hybridConnectionConfig,
+        @OutputCustomType.Parameter("kubeconfigs") List<CredentialResultResponse> kubeconfigs) {
         this.hybridConnectionConfig = hybridConnectionConfig;
         this.kubeconfigs = kubeconfigs;
     }
@@ -67,12 +67,12 @@ public final class ListConnectedClusterUserCredentialsResult {
     	      this.kubeconfigs = defaults.kubeconfigs;
         }
 
-        public Builder setHybridConnectionConfig(HybridConnectionConfigResponse hybridConnectionConfig) {
+        public Builder hybridConnectionConfig(HybridConnectionConfigResponse hybridConnectionConfig) {
             this.hybridConnectionConfig = Objects.requireNonNull(hybridConnectionConfig);
             return this;
         }
 
-        public Builder setKubeconfigs(List<CredentialResultResponse> kubeconfigs) {
+        public Builder kubeconfigs(List<CredentialResultResponse> kubeconfigs) {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }

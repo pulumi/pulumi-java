@@ -33,12 +33,12 @@ public final class ImageAssetResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"id","mimeType","unpack","url"})
+    @OutputCustomType.Constructor
     private ImageAssetResponse(
-        @Nullable String id,
-        @Nullable String mimeType,
-        @Nullable Boolean unpack,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType,
+        @OutputCustomType.Parameter("unpack") @Nullable Boolean unpack,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.id = id;
         this.mimeType = mimeType;
         this.unpack = unpack;
@@ -100,22 +100,22 @@ public final class ImageAssetResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-        public Builder setUnpack(@Nullable Boolean unpack) {
+        public Builder unpack(@Nullable Boolean unpack) {
             this.unpack = unpack;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

@@ -20,10 +20,10 @@ public final class RevocationDetailsResponse {
      */
     private final String revocationTime;
 
-    @OutputCustomType.Constructor({"revocationState","revocationTime"})
+    @OutputCustomType.Constructor
     private RevocationDetailsResponse(
-        String revocationState,
-        String revocationTime) {
+        @OutputCustomType.Parameter("revocationState") String revocationState,
+        @OutputCustomType.Parameter("revocationTime") String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }
@@ -65,12 +65,12 @@ public final class RevocationDetailsResponse {
     	      this.revocationTime = defaults.revocationTime;
         }
 
-        public Builder setRevocationState(String revocationState) {
+        public Builder revocationState(String revocationState) {
             this.revocationState = Objects.requireNonNull(revocationState);
             return this;
         }
 
-        public Builder setRevocationTime(String revocationTime) {
+        public Builder revocationTime(String revocationTime) {
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
         }

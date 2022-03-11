@@ -22,10 +22,10 @@ public final class WorkloadResourceSetting {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"resourceId","resourceType"})
+    @OutputCustomType.Constructor
     private WorkloadResourceSetting(
-        @Nullable String resourceId,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
     }
@@ -67,12 +67,12 @@ public final class WorkloadResourceSetting {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }

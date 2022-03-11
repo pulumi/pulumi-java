@@ -21,10 +21,10 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
      */
     private final Double minAcceptableMeanAveragePrecision;
 
-    @OutputCustomType.Constructor({"email","minAcceptableMeanAveragePrecision"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse(
-        String email,
-        Double minAcceptableMeanAveragePrecision) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("minAcceptableMeanAveragePrecision") Double minAcceptableMeanAveragePrecision) {
         this.email = email;
         this.minAcceptableMeanAveragePrecision = minAcceptableMeanAveragePrecision;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigRespons
     	      this.minAcceptableMeanAveragePrecision = defaults.minAcceptableMeanAveragePrecision;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setMinAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
+        public Builder minAcceptableMeanAveragePrecision(Double minAcceptableMeanAveragePrecision) {
             this.minAcceptableMeanAveragePrecision = Objects.requireNonNull(minAcceptableMeanAveragePrecision);
             return this;
         }

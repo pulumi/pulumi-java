@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MitigationActionUpdateCACertificateParams {
     private final MitigationActionUpdateCACertificateParamsAction action;
 
-    @OutputCustomType.Constructor({"action"})
-    private MitigationActionUpdateCACertificateParams(MitigationActionUpdateCACertificateParamsAction action) {
+    @OutputCustomType.Constructor
+    private MitigationActionUpdateCACertificateParams(@OutputCustomType.Parameter("action") MitigationActionUpdateCACertificateParamsAction action) {
         this.action = action;
     }
 
@@ -40,7 +40,7 @@ public final class MitigationActionUpdateCACertificateParams {
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(MitigationActionUpdateCACertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

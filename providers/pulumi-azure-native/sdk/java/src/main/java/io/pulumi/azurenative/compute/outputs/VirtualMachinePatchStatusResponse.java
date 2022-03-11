@@ -30,11 +30,11 @@ public final class VirtualMachinePatchStatusResponse {
      */
     private final @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary;
 
-    @OutputCustomType.Constructor({"availablePatchSummary","configurationStatuses","lastPatchInstallationSummary"})
+    @OutputCustomType.Constructor
     private VirtualMachinePatchStatusResponse(
-        @Nullable AvailablePatchSummaryResponse availablePatchSummary,
-        List<InstanceViewStatusResponse> configurationStatuses,
-        @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
+        @OutputCustomType.Parameter("availablePatchSummary") @Nullable AvailablePatchSummaryResponse availablePatchSummary,
+        @OutputCustomType.Parameter("configurationStatuses") List<InstanceViewStatusResponse> configurationStatuses,
+        @OutputCustomType.Parameter("lastPatchInstallationSummary") @Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
         this.availablePatchSummary = availablePatchSummary;
         this.configurationStatuses = configurationStatuses;
         this.lastPatchInstallationSummary = lastPatchInstallationSummary;
@@ -86,17 +86,17 @@ public final class VirtualMachinePatchStatusResponse {
     	      this.lastPatchInstallationSummary = defaults.lastPatchInstallationSummary;
         }
 
-        public Builder setAvailablePatchSummary(@Nullable AvailablePatchSummaryResponse availablePatchSummary) {
+        public Builder availablePatchSummary(@Nullable AvailablePatchSummaryResponse availablePatchSummary) {
             this.availablePatchSummary = availablePatchSummary;
             return this;
         }
 
-        public Builder setConfigurationStatuses(List<InstanceViewStatusResponse> configurationStatuses) {
+        public Builder configurationStatuses(List<InstanceViewStatusResponse> configurationStatuses) {
             this.configurationStatuses = Objects.requireNonNull(configurationStatuses);
             return this;
         }
 
-        public Builder setLastPatchInstallationSummary(@Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
+        public Builder lastPatchInstallationSummary(@Nullable LastPatchInstallationSummaryResponse lastPatchInstallationSummary) {
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
         }

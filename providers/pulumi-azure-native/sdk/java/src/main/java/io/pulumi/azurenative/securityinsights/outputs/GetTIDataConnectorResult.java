@@ -54,16 +54,16 @@ public final class GetTIDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","tenantId","tipLookbackPeriod","type"})
+    @OutputCustomType.Constructor
     private GetTIDataConnectorResult(
-        @Nullable TIDataConnectorDataTypesResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        @Nullable String tenantId,
-        @Nullable String tipLookbackPeriod,
-        String type) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable TIDataConnectorDataTypesResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("tipLookbackPeriod") @Nullable String tipLookbackPeriod,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
         this.id = id;
@@ -166,42 +166,42 @@ public final class GetTIDataConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataTypes(@Nullable TIDataConnectorDataTypesResponse dataTypes) {
+        public Builder dataTypes(@Nullable TIDataConnectorDataTypesResponse dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTipLookbackPeriod(@Nullable String tipLookbackPeriod) {
+        public Builder tipLookbackPeriod(@Nullable String tipLookbackPeriod) {
             this.tipLookbackPeriod = tipLookbackPeriod;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

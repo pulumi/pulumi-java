@@ -15,8 +15,8 @@ public final class AppDevExperienceFeatureStateResponse {
      */
     private final StatusResponse networkingInstallSucceeded;
 
-    @OutputCustomType.Constructor({"networkingInstallSucceeded"})
-    private AppDevExperienceFeatureStateResponse(StatusResponse networkingInstallSucceeded) {
+    @OutputCustomType.Constructor
+    private AppDevExperienceFeatureStateResponse(@OutputCustomType.Parameter("networkingInstallSucceeded") StatusResponse networkingInstallSucceeded) {
         this.networkingInstallSucceeded = networkingInstallSucceeded;
     }
 
@@ -48,7 +48,7 @@ public final class AppDevExperienceFeatureStateResponse {
     	      this.networkingInstallSucceeded = defaults.networkingInstallSucceeded;
         }
 
-        public Builder setNetworkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
+        public Builder networkingInstallSucceeded(StatusResponse networkingInstallSucceeded) {
             this.networkingInstallSucceeded = Objects.requireNonNull(networkingInstallSucceeded);
             return this;
         }

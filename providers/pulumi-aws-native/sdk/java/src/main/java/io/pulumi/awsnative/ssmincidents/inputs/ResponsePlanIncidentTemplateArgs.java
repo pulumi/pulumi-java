@@ -125,52 +125,52 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
     	      this.title = defaults.title;
         }
 
-        public Builder setDedupeString(@Nullable Input<String> dedupeString) {
+        public Builder dedupeString(@Nullable Input<String> dedupeString) {
             this.dedupeString = dedupeString;
             return this;
         }
 
-        public Builder setDedupeString(@Nullable String dedupeString) {
+        public Builder dedupeString(@Nullable String dedupeString) {
             this.dedupeString = Input.ofNullable(dedupeString);
             return this;
         }
 
-        public Builder setImpact(Input<Integer> impact) {
+        public Builder impact(Input<Integer> impact) {
             this.impact = Objects.requireNonNull(impact);
             return this;
         }
 
-        public Builder setImpact(Integer impact) {
+        public Builder impact(Integer impact) {
             this.impact = Input.of(Objects.requireNonNull(impact));
             return this;
         }
 
-        public Builder setNotificationTargets(@Nullable Input<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets) {
+        public Builder notificationTargets(@Nullable Input<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets) {
             this.notificationTargets = notificationTargets;
             return this;
         }
 
-        public Builder setNotificationTargets(@Nullable List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
+        public Builder notificationTargets(@Nullable List<ResponsePlanNotificationTargetItemArgs> notificationTargets) {
             this.notificationTargets = Input.ofNullable(notificationTargets);
             return this;
         }
 
-        public Builder setSummary(@Nullable Input<String> summary) {
+        public Builder summary(@Nullable Input<String> summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setSummary(@Nullable String summary) {
+        public Builder summary(@Nullable String summary) {
             this.summary = Input.ofNullable(summary);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

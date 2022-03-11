@@ -75,22 +75,22 @@ public final class RecurrenceScheduleOccurrenceArgs extends io.pulumi.resources.
     	      this.occurrence = defaults.occurrence;
         }
 
-        public Builder setDay(@Nullable Input<DayOfWeek> day) {
+        public Builder day(@Nullable Input<DayOfWeek> day) {
             this.day = day;
             return this;
         }
 
-        public Builder setDay(@Nullable DayOfWeek day) {
+        public Builder day(@Nullable DayOfWeek day) {
             this.day = Input.ofNullable(day);
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Input<Integer> occurrence) {
+        public Builder occurrence(@Nullable Input<Integer> occurrence) {
             this.occurrence = occurrence;
             return this;
         }
 
-        public Builder setOccurrence(@Nullable Integer occurrence) {
+        public Builder occurrence(@Nullable Integer occurrence) {
             this.occurrence = Input.ofNullable(occurrence);
             return this;
         }

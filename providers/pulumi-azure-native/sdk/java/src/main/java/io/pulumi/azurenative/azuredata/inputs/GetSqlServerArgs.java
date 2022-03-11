@@ -102,22 +102,22 @@ public final class GetSqlServerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.sqlServerRegistrationName = defaults.sqlServerRegistrationName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlServerName(String sqlServerName) {
+        public Builder sqlServerName(String sqlServerName) {
             this.sqlServerName = Objects.requireNonNull(sqlServerName);
             return this;
         }
 
-        public Builder setSqlServerRegistrationName(String sqlServerRegistrationName) {
+        public Builder sqlServerRegistrationName(String sqlServerRegistrationName) {
             this.sqlServerRegistrationName = Objects.requireNonNull(sqlServerRegistrationName);
             return this;
         }

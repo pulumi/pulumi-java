@@ -61,17 +61,17 @@ public final class SecurityPolicyRuleResponse {
      */
     private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
-    @OutputCustomType.Constructor({"action","description","headerAction","kind","match","preview","priority","rateLimitOptions","redirectOptions"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleResponse(
-        String action,
-        String description,
-        SecurityPolicyRuleHttpHeaderActionResponse headerAction,
-        String kind,
-        SecurityPolicyRuleMatcherResponse match,
-        Boolean preview,
-        Integer priority,
-        SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
-        SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") SecurityPolicyRuleHttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("match") SecurityPolicyRuleMatcherResponse match,
+        @OutputCustomType.Parameter("preview") Boolean preview,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitOptions") SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions,
+        @OutputCustomType.Parameter("redirectOptions") SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
         this.action = action;
         this.description = description;
         this.headerAction = headerAction;
@@ -183,47 +183,47 @@ public final class SecurityPolicyRuleResponse {
     	      this.redirectOptions = defaults.redirectOptions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHeaderAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
+        public Builder headerAction(SecurityPolicyRuleHttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMatch(SecurityPolicyRuleMatcherResponse match) {
+        public Builder match(SecurityPolicyRuleMatcherResponse match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }
 
-        public Builder setPreview(Boolean preview) {
+        public Builder preview(Boolean preview) {
             this.preview = Objects.requireNonNull(preview);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
+        public Builder rateLimitOptions(SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions) {
             this.rateLimitOptions = Objects.requireNonNull(rateLimitOptions);
             return this;
         }
 
-        public Builder setRedirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
+        public Builder redirectOptions(SecurityPolicyRuleRedirectOptionsResponse redirectOptions) {
             this.redirectOptions = Objects.requireNonNull(redirectOptions);
             return this;
         }

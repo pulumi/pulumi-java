@@ -21,10 +21,10 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"authorizationType","resourceId"})
+    @OutputCustomType.Constructor
     private LinkedIntegrationRuntimeRbacAuthorizationResponse(
-        String authorizationType,
-        String resourceId) {
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.authorizationType = authorizationType;
         this.resourceId = resourceId;
     }
@@ -67,12 +67,12 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

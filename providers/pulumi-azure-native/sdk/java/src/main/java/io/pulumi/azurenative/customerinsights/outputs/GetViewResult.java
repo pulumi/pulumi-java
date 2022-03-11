@@ -63,18 +63,18 @@ public final class GetViewResult {
      */
     private final String viewName;
 
-    @OutputCustomType.Constructor({"changed","created","definition","displayName","id","name","tenantId","type","userId","viewName"})
+    @OutputCustomType.Constructor
     private GetViewResult(
-        String changed,
-        String created,
-        String definition,
-        @Nullable Map<String,String> displayName,
-        String id,
-        String name,
-        String tenantId,
-        String type,
-        @Nullable String userId,
-        String viewName) {
+        @OutputCustomType.Parameter("changed") String changed,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userId") @Nullable String userId,
+        @OutputCustomType.Parameter("viewName") String viewName) {
         this.changed = changed;
         this.created = created;
         this.definition = definition;
@@ -196,52 +196,52 @@ public final class GetViewResult {
     	      this.viewName = defaults.viewName;
         }
 
-        public Builder setChanged(String changed) {
+        public Builder changed(String changed) {
             this.changed = Objects.requireNonNull(changed);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDefinition(String definition) {
+        public Builder definition(String definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setViewName(String viewName) {
+        public Builder viewName(String viewName) {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }

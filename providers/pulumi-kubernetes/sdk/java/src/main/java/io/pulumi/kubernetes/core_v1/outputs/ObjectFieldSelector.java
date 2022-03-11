@@ -22,10 +22,10 @@ public final class ObjectFieldSelector {
      */
     private final String fieldPath;
 
-    @OutputCustomType.Constructor({"apiVersion","fieldPath"})
+    @OutputCustomType.Constructor
     private ObjectFieldSelector(
-        @Nullable String apiVersion,
-        String fieldPath) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("fieldPath") String fieldPath) {
         this.apiVersion = apiVersion;
         this.fieldPath = fieldPath;
     }
@@ -67,12 +67,12 @@ public final class ObjectFieldSelector {
     	      this.fieldPath = defaults.fieldPath;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setFieldPath(String fieldPath) {
+        public Builder fieldPath(String fieldPath) {
             this.fieldPath = Objects.requireNonNull(fieldPath);
             return this;
         }

@@ -21,10 +21,10 @@ public final class EnvironmentNetworkConfiguration {
      */
     private final List<String> subnetIds;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds"})
+    @OutputCustomType.Constructor
     private EnvironmentNetworkConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
     }
@@ -66,12 +66,12 @@ public final class EnvironmentNetworkConfiguration {
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }

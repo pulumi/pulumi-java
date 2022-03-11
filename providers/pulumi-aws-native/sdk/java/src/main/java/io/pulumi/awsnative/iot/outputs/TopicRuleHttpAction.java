@@ -19,12 +19,12 @@ public final class TopicRuleHttpAction {
     private final @Nullable List<TopicRuleHttpActionHeader> headers;
     private final String url;
 
-    @OutputCustomType.Constructor({"auth","confirmationUrl","headers","url"})
+    @OutputCustomType.Constructor
     private TopicRuleHttpAction(
-        @Nullable TopicRuleHttpAuthorization auth,
-        @Nullable String confirmationUrl,
-        @Nullable List<TopicRuleHttpActionHeader> headers,
-        String url) {
+        @OutputCustomType.Parameter("auth") @Nullable TopicRuleHttpAuthorization auth,
+        @OutputCustomType.Parameter("confirmationUrl") @Nullable String confirmationUrl,
+        @OutputCustomType.Parameter("headers") @Nullable List<TopicRuleHttpActionHeader> headers,
+        @OutputCustomType.Parameter("url") String url) {
         this.auth = auth;
         this.confirmationUrl = confirmationUrl;
         this.headers = headers;
@@ -70,22 +70,22 @@ public final class TopicRuleHttpAction {
     	      this.url = defaults.url;
         }
 
-        public Builder setAuth(@Nullable TopicRuleHttpAuthorization auth) {
+        public Builder auth(@Nullable TopicRuleHttpAuthorization auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<TopicRuleHttpActionHeader> headers) {
+        public Builder headers(@Nullable List<TopicRuleHttpActionHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

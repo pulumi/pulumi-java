@@ -331,92 +331,92 @@ public final class ProcessServerDetailsResponse extends io.pulumi.resources.Invo
     	      this.version = defaults.version;
         }
 
-        public Builder setAvailableMemoryInBytes(Double availableMemoryInBytes) {
+        public Builder availableMemoryInBytes(Double availableMemoryInBytes) {
             this.availableMemoryInBytes = Objects.requireNonNull(availableMemoryInBytes);
             return this;
         }
 
-        public Builder setAvailableSpaceInBytes(Double availableSpaceInBytes) {
+        public Builder availableSpaceInBytes(Double availableSpaceInBytes) {
             this.availableSpaceInBytes = Objects.requireNonNull(availableSpaceInBytes);
             return this;
         }
 
-        public Builder setFreeSpacePercentage(Double freeSpacePercentage) {
+        public Builder freeSpacePercentage(Double freeSpacePercentage) {
             this.freeSpacePercentage = Objects.requireNonNull(freeSpacePercentage);
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthErrors(List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             this.healthErrors = Objects.requireNonNull(healthErrors);
             return this;
         }
 
-        public Builder setHistoricHealth(String historicHealth) {
+        public Builder historicHealth(String historicHealth) {
             this.historicHealth = Objects.requireNonNull(historicHealth);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHeartbeatUtc(String lastHeartbeatUtc) {
+        public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
 
-        public Builder setMemoryUsagePercentage(Double memoryUsagePercentage) {
+        public Builder memoryUsagePercentage(Double memoryUsagePercentage) {
             this.memoryUsagePercentage = Objects.requireNonNull(memoryUsagePercentage);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProcessorUsagePercentage(Double processorUsagePercentage) {
+        public Builder processorUsagePercentage(Double processorUsagePercentage) {
             this.processorUsagePercentage = Objects.requireNonNull(processorUsagePercentage);
             return this;
         }
 
-        public Builder setThroughputInBytes(Double throughputInBytes) {
+        public Builder throughputInBytes(Double throughputInBytes) {
             this.throughputInBytes = Objects.requireNonNull(throughputInBytes);
             return this;
         }
 
-        public Builder setThroughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
+        public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
             this.throughputUploadPendingDataInBytes = Objects.requireNonNull(throughputUploadPendingDataInBytes);
             return this;
         }
 
-        public Builder setTotalMemoryInBytes(Double totalMemoryInBytes) {
+        public Builder totalMemoryInBytes(Double totalMemoryInBytes) {
             this.totalMemoryInBytes = Objects.requireNonNull(totalMemoryInBytes);
             return this;
         }
 
-        public Builder setTotalSpaceInBytes(Double totalSpaceInBytes) {
+        public Builder totalSpaceInBytes(Double totalSpaceInBytes) {
             this.totalSpaceInBytes = Objects.requireNonNull(totalSpaceInBytes);
             return this;
         }
 
-        public Builder setUsedMemoryInBytes(Double usedMemoryInBytes) {
+        public Builder usedMemoryInBytes(Double usedMemoryInBytes) {
             this.usedMemoryInBytes = Objects.requireNonNull(usedMemoryInBytes);
             return this;
         }
 
-        public Builder setUsedSpaceInBytes(Double usedSpaceInBytes) {
+        public Builder usedSpaceInBytes(Double usedSpaceInBytes) {
             this.usedSpaceInBytes = Objects.requireNonNull(usedSpaceInBytes);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

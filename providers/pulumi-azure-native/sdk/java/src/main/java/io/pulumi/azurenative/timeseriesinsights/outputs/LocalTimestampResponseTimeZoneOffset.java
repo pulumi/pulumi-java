@@ -17,8 +17,8 @@ public final class LocalTimestampResponseTimeZoneOffset {
      */
     private final @Nullable String propertyName;
 
-    @OutputCustomType.Constructor({"propertyName"})
-    private LocalTimestampResponseTimeZoneOffset(@Nullable String propertyName) {
+    @OutputCustomType.Constructor
+    private LocalTimestampResponseTimeZoneOffset(@OutputCustomType.Parameter("propertyName") @Nullable String propertyName) {
         this.propertyName = propertyName;
     }
 
@@ -50,7 +50,7 @@ public final class LocalTimestampResponseTimeZoneOffset {
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder setPropertyName(@Nullable String propertyName) {
+        public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }

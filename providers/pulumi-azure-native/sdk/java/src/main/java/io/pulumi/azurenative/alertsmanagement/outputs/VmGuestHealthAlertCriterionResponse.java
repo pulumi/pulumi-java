@@ -34,12 +34,12 @@ public final class VmGuestHealthAlertCriterionResponse {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"healthStates","monitorNames","monitorTypes","namespace"})
+    @OutputCustomType.Constructor
     private VmGuestHealthAlertCriterionResponse(
-        List<HealthStateResponse> healthStates,
-        @Nullable List<String> monitorNames,
-        @Nullable List<String> monitorTypes,
-        String namespace) {
+        @OutputCustomType.Parameter("healthStates") List<HealthStateResponse> healthStates,
+        @OutputCustomType.Parameter("monitorNames") @Nullable List<String> monitorNames,
+        @OutputCustomType.Parameter("monitorTypes") @Nullable List<String> monitorTypes,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.healthStates = healthStates;
         this.monitorNames = monitorNames;
         this.monitorTypes = monitorTypes;
@@ -102,22 +102,22 @@ public final class VmGuestHealthAlertCriterionResponse {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setHealthStates(List<HealthStateResponse> healthStates) {
+        public Builder healthStates(List<HealthStateResponse> healthStates) {
             this.healthStates = Objects.requireNonNull(healthStates);
             return this;
         }
 
-        public Builder setMonitorNames(@Nullable List<String> monitorNames) {
+        public Builder monitorNames(@Nullable List<String> monitorNames) {
             this.monitorNames = monitorNames;
             return this;
         }
 
-        public Builder setMonitorTypes(@Nullable List<String> monitorTypes) {
+        public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             this.monitorTypes = monitorTypes;
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

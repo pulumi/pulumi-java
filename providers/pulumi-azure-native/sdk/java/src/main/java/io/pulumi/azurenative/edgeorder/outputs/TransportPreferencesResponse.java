@@ -15,8 +15,8 @@ public final class TransportPreferencesResponse {
      */
     private final String preferredShipmentType;
 
-    @OutputCustomType.Constructor({"preferredShipmentType"})
-    private TransportPreferencesResponse(String preferredShipmentType) {
+    @OutputCustomType.Constructor
+    private TransportPreferencesResponse(@OutputCustomType.Parameter("preferredShipmentType") String preferredShipmentType) {
         this.preferredShipmentType = preferredShipmentType;
     }
 
@@ -48,7 +48,7 @@ public final class TransportPreferencesResponse {
     	      this.preferredShipmentType = defaults.preferredShipmentType;
         }
 
-        public Builder setPreferredShipmentType(String preferredShipmentType) {
+        public Builder preferredShipmentType(String preferredShipmentType) {
             this.preferredShipmentType = Objects.requireNonNull(preferredShipmentType);
             return this;
         }

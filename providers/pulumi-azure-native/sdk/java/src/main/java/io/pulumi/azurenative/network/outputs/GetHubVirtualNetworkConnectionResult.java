@@ -60,17 +60,17 @@ public final class GetHubVirtualNetworkConnectionResult {
      */
     private final @Nullable RoutingConfigurationResponse routingConfiguration;
 
-    @OutputCustomType.Constructor({"allowHubToRemoteVnetTransit","allowRemoteVnetToUseHubVnetGateways","enableInternetSecurity","etag","id","name","provisioningState","remoteVirtualNetwork","routingConfiguration"})
+    @OutputCustomType.Constructor
     private GetHubVirtualNetworkConnectionResult(
-        @Nullable Boolean allowHubToRemoteVnetTransit,
-        @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
-        @Nullable Boolean enableInternetSecurity,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable SubResourceResponse remoteVirtualNetwork,
-        @Nullable RoutingConfigurationResponse routingConfiguration) {
+        @OutputCustomType.Parameter("allowHubToRemoteVnetTransit") @Nullable Boolean allowHubToRemoteVnetTransit,
+        @OutputCustomType.Parameter("allowRemoteVnetToUseHubVnetGateways") @Nullable Boolean allowRemoteVnetToUseHubVnetGateways,
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("remoteVirtualNetwork") @Nullable SubResourceResponse remoteVirtualNetwork,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration) {
         this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
         this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
         this.enableInternetSecurity = enableInternetSecurity;
@@ -182,47 +182,47 @@ public final class GetHubVirtualNetworkConnectionResult {
     	      this.routingConfiguration = defaults.routingConfiguration;
         }
 
-        public Builder setAllowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
+        public Builder allowHubToRemoteVnetTransit(@Nullable Boolean allowHubToRemoteVnetTransit) {
             this.allowHubToRemoteVnetTransit = allowHubToRemoteVnetTransit;
             return this;
         }
 
-        public Builder setAllowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
+        public Builder allowRemoteVnetToUseHubVnetGateways(@Nullable Boolean allowRemoteVnetToUseHubVnetGateways) {
             this.allowRemoteVnetToUseHubVnetGateways = allowRemoteVnetToUseHubVnetGateways;
             return this;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRemoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
+        public Builder remoteVirtualNetwork(@Nullable SubResourceResponse remoteVirtualNetwork) {
             this.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }

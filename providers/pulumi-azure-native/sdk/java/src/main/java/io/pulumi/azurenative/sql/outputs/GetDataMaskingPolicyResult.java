@@ -57,17 +57,17 @@ public final class GetDataMaskingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationPrincipals","dataMaskingState","exemptPrincipals","id","kind","location","maskingLevel","name","type"})
+    @OutputCustomType.Constructor
     private GetDataMaskingPolicyResult(
-        String applicationPrincipals,
-        String dataMaskingState,
-        @Nullable String exemptPrincipals,
-        String id,
-        String kind,
-        String location,
-        String maskingLevel,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("applicationPrincipals") String applicationPrincipals,
+        @OutputCustomType.Parameter("dataMaskingState") String dataMaskingState,
+        @OutputCustomType.Parameter("exemptPrincipals") @Nullable String exemptPrincipals,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maskingLevel") String maskingLevel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationPrincipals = applicationPrincipals;
         this.dataMaskingState = dataMaskingState;
         this.exemptPrincipals = exemptPrincipals;
@@ -179,47 +179,47 @@ public final class GetDataMaskingPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationPrincipals(String applicationPrincipals) {
+        public Builder applicationPrincipals(String applicationPrincipals) {
             this.applicationPrincipals = Objects.requireNonNull(applicationPrincipals);
             return this;
         }
 
-        public Builder setDataMaskingState(String dataMaskingState) {
+        public Builder dataMaskingState(String dataMaskingState) {
             this.dataMaskingState = Objects.requireNonNull(dataMaskingState);
             return this;
         }
 
-        public Builder setExemptPrincipals(@Nullable String exemptPrincipals) {
+        public Builder exemptPrincipals(@Nullable String exemptPrincipals) {
             this.exemptPrincipals = exemptPrincipals;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaskingLevel(String maskingLevel) {
+        public Builder maskingLevel(String maskingLevel) {
             this.maskingLevel = Objects.requireNonNull(maskingLevel);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

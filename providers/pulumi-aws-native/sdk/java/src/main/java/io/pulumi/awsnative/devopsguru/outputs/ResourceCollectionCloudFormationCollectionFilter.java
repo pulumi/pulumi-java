@@ -17,8 +17,8 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
      */
     private final @Nullable List<String> stackNames;
 
-    @OutputCustomType.Constructor({"stackNames"})
-    private ResourceCollectionCloudFormationCollectionFilter(@Nullable List<String> stackNames) {
+    @OutputCustomType.Constructor
+    private ResourceCollectionCloudFormationCollectionFilter(@OutputCustomType.Parameter("stackNames") @Nullable List<String> stackNames) {
         this.stackNames = stackNames;
     }
 
@@ -50,7 +50,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter {
     	      this.stackNames = defaults.stackNames;
         }
 
-        public Builder setStackNames(@Nullable List<String> stackNames) {
+        public Builder stackNames(@Nullable List<String> stackNames) {
             this.stackNames = stackNames;
             return this;
         }

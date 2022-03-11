@@ -51,16 +51,16 @@ public final class GetJitNetworkAccessPolicyResult {
      */
     private final List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"id","kind","location","name","provisioningState","requests","type","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetJitNetworkAccessPolicyResult(
-        String id,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable List<JitNetworkAccessRequestResponse> requests,
-        String type,
-        List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requests") @Nullable List<JitNetworkAccessRequestResponse> requests,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachines") List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
         this.id = id;
         this.kind = kind;
         this.location = location;
@@ -158,42 +158,42 @@ public final class GetJitNetworkAccessPolicyResult {
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequests(@Nullable List<JitNetworkAccessRequestResponse> requests) {
+        public Builder requests(@Nullable List<JitNetworkAccessRequestResponse> requests) {
             this.requests = requests;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachines(List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
+        public Builder virtualMachines(List<JitNetworkAccessPolicyVirtualMachineResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }

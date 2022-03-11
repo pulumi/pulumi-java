@@ -134,62 +134,62 @@ public final class AlternativeContactState extends io.pulumi.resources.ResourceA
     	      this.title = defaults.title;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setAlternateContactType(@Nullable Input<String> alternateContactType) {
+        public Builder alternateContactType(@Nullable Input<String> alternateContactType) {
             this.alternateContactType = alternateContactType;
             return this;
         }
 
-        public Builder setAlternateContactType(@Nullable String alternateContactType) {
+        public Builder alternateContactType(@Nullable String alternateContactType) {
             this.alternateContactType = Input.ofNullable(alternateContactType);
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable Input<String> emailAddress) {
+        public Builder emailAddress(@Nullable Input<String> emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = Input.ofNullable(emailAddress);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable Input<String> phoneNumber) {
+        public Builder phoneNumber(@Nullable Input<String> phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable String phoneNumber) {
+        public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = Input.ofNullable(phoneNumber);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

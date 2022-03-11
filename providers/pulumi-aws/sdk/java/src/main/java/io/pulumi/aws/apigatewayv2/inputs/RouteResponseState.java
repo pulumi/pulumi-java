@@ -119,52 +119,52 @@ public final class RouteResponseState extends io.pulumi.resources.ResourceArgs {
     	      this.routeResponseKey = defaults.routeResponseKey;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable Input<String> modelSelectionExpression) {
             this.modelSelectionExpression = modelSelectionExpression;
             return this;
         }
 
-        public Builder setModelSelectionExpression(@Nullable String modelSelectionExpression) {
+        public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
             this.modelSelectionExpression = Input.ofNullable(modelSelectionExpression);
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Input<Map<String,String>> responseModels) {
+        public Builder responseModels(@Nullable Input<Map<String,String>> responseModels) {
             this.responseModels = responseModels;
             return this;
         }
 
-        public Builder setResponseModels(@Nullable Map<String,String> responseModels) {
+        public Builder responseModels(@Nullable Map<String,String> responseModels) {
             this.responseModels = Input.ofNullable(responseModels);
             return this;
         }
 
-        public Builder setRouteId(@Nullable Input<String> routeId) {
+        public Builder routeId(@Nullable Input<String> routeId) {
             this.routeId = routeId;
             return this;
         }
 
-        public Builder setRouteId(@Nullable String routeId) {
+        public Builder routeId(@Nullable String routeId) {
             this.routeId = Input.ofNullable(routeId);
             return this;
         }
 
-        public Builder setRouteResponseKey(@Nullable Input<String> routeResponseKey) {
+        public Builder routeResponseKey(@Nullable Input<String> routeResponseKey) {
             this.routeResponseKey = routeResponseKey;
             return this;
         }
 
-        public Builder setRouteResponseKey(@Nullable String routeResponseKey) {
+        public Builder routeResponseKey(@Nullable String routeResponseKey) {
             this.routeResponseKey = Input.ofNullable(routeResponseKey);
             return this;
         }

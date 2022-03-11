@@ -68,12 +68,12 @@ public final class GetPartnerRegistrationArgs extends io.pulumi.resources.Invoke
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPartnerRegistrationName(String partnerRegistrationName) {
+        public Builder partnerRegistrationName(String partnerRegistrationName) {
             this.partnerRegistrationName = Objects.requireNonNull(partnerRegistrationName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

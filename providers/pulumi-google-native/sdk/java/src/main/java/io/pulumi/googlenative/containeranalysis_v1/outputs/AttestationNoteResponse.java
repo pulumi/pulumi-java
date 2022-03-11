@@ -15,8 +15,8 @@ public final class AttestationNoteResponse {
      */
     private final HintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private AttestationNoteResponse(HintResponse hint) {
+    @OutputCustomType.Constructor
+    private AttestationNoteResponse(@OutputCustomType.Parameter("hint") HintResponse hint) {
         this.hint = hint;
     }
 
@@ -48,7 +48,7 @@ public final class AttestationNoteResponse {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(HintResponse hint) {
+        public Builder hint(HintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

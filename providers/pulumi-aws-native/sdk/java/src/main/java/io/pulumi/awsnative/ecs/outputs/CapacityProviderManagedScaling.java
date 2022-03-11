@@ -18,13 +18,13 @@ public final class CapacityProviderManagedScaling {
     private final @Nullable CapacityProviderManagedScalingStatus status;
     private final @Nullable Integer targetCapacity;
 
-    @OutputCustomType.Constructor({"instanceWarmupPeriod","maximumScalingStepSize","minimumScalingStepSize","status","targetCapacity"})
+    @OutputCustomType.Constructor
     private CapacityProviderManagedScaling(
-        @Nullable Integer instanceWarmupPeriod,
-        @Nullable Integer maximumScalingStepSize,
-        @Nullable Integer minimumScalingStepSize,
-        @Nullable CapacityProviderManagedScalingStatus status,
-        @Nullable Integer targetCapacity) {
+        @OutputCustomType.Parameter("instanceWarmupPeriod") @Nullable Integer instanceWarmupPeriod,
+        @OutputCustomType.Parameter("maximumScalingStepSize") @Nullable Integer maximumScalingStepSize,
+        @OutputCustomType.Parameter("minimumScalingStepSize") @Nullable Integer minimumScalingStepSize,
+        @OutputCustomType.Parameter("status") @Nullable CapacityProviderManagedScalingStatus status,
+        @OutputCustomType.Parameter("targetCapacity") @Nullable Integer targetCapacity) {
         this.instanceWarmupPeriod = instanceWarmupPeriod;
         this.maximumScalingStepSize = maximumScalingStepSize;
         this.minimumScalingStepSize = minimumScalingStepSize;
@@ -76,27 +76,27 @@ public final class CapacityProviderManagedScaling {
     	      this.targetCapacity = defaults.targetCapacity;
         }
 
-        public Builder setInstanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
+        public Builder instanceWarmupPeriod(@Nullable Integer instanceWarmupPeriod) {
             this.instanceWarmupPeriod = instanceWarmupPeriod;
             return this;
         }
 
-        public Builder setMaximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
+        public Builder maximumScalingStepSize(@Nullable Integer maximumScalingStepSize) {
             this.maximumScalingStepSize = maximumScalingStepSize;
             return this;
         }
 
-        public Builder setMinimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
+        public Builder minimumScalingStepSize(@Nullable Integer minimumScalingStepSize) {
             this.minimumScalingStepSize = minimumScalingStepSize;
             return this;
         }
 
-        public Builder setStatus(@Nullable CapacityProviderManagedScalingStatus status) {
+        public Builder status(@Nullable CapacityProviderManagedScalingStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetCapacity(@Nullable Integer targetCapacity) {
+        public Builder targetCapacity(@Nullable Integer targetCapacity) {
             this.targetCapacity = targetCapacity;
             return this;
         }

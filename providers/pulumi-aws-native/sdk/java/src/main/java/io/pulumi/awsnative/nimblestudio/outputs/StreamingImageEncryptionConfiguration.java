@@ -19,10 +19,10 @@ public final class StreamingImageEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StreamingImageEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyArn","keyType"})
+    @OutputCustomType.Constructor
     private StreamingImageEncryptionConfiguration(
-        @Nullable String keyArn,
-        StreamingImageEncryptionConfigurationKeyType keyType) {
+        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
+        @OutputCustomType.Parameter("keyType") StreamingImageEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }
@@ -60,12 +60,12 @@ public final class StreamingImageEncryptionConfiguration {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyType(StreamingImageEncryptionConfigurationKeyType keyType) {
+        public Builder keyType(StreamingImageEncryptionConfigurationKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

@@ -28,11 +28,11 @@ public final class InboundNatRuleResponse {
      */
     private final @Nullable String transportProtocol;
 
-    @OutputCustomType.Constructor({"backendPort","frontendPort","transportProtocol"})
+    @OutputCustomType.Constructor
     private InboundNatRuleResponse(
-        @Nullable Integer backendPort,
-        @Nullable Integer frontendPort,
-        @Nullable String transportProtocol) {
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
+        @OutputCustomType.Parameter("transportProtocol") @Nullable String transportProtocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.transportProtocol = transportProtocol;
@@ -84,17 +84,17 @@ public final class InboundNatRuleResponse {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable Integer frontendPort) {
+        public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }

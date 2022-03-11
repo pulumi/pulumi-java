@@ -32,12 +32,12 @@ public final class ProtocolCustomSettingsFormatResponse {
      */
     private final @Nullable String triggerSensitivityOverride;
 
-    @OutputCustomType.Constructor({"protocol","sourceRateOverride","triggerRateOverride","triggerSensitivityOverride"})
+    @OutputCustomType.Constructor
     private ProtocolCustomSettingsFormatResponse(
-        @Nullable String protocol,
-        @Nullable String sourceRateOverride,
-        @Nullable String triggerRateOverride,
-        @Nullable String triggerSensitivityOverride) {
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceRateOverride") @Nullable String sourceRateOverride,
+        @OutputCustomType.Parameter("triggerRateOverride") @Nullable String triggerRateOverride,
+        @OutputCustomType.Parameter("triggerSensitivityOverride") @Nullable String triggerSensitivityOverride) {
         this.protocol = protocol;
         this.sourceRateOverride = sourceRateOverride;
         this.triggerRateOverride = triggerRateOverride;
@@ -99,22 +99,22 @@ public final class ProtocolCustomSettingsFormatResponse {
     	      this.triggerSensitivityOverride = defaults.triggerSensitivityOverride;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceRateOverride(@Nullable String sourceRateOverride) {
+        public Builder sourceRateOverride(@Nullable String sourceRateOverride) {
             this.sourceRateOverride = sourceRateOverride;
             return this;
         }
 
-        public Builder setTriggerRateOverride(@Nullable String triggerRateOverride) {
+        public Builder triggerRateOverride(@Nullable String triggerRateOverride) {
             this.triggerRateOverride = triggerRateOverride;
             return this;
         }
 
-        public Builder setTriggerSensitivityOverride(@Nullable String triggerSensitivityOverride) {
+        public Builder triggerSensitivityOverride(@Nullable String triggerSensitivityOverride) {
             this.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }

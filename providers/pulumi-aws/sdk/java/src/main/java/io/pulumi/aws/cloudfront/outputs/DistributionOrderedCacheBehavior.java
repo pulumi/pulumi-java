@@ -146,28 +146,28 @@ public final class DistributionOrderedCacheBehavior {
      */
     private final String viewerProtocolPolicy;
 
-    @OutputCustomType.Constructor({"allowedMethods","cachePolicyId","cachedMethods","compress","defaultTtl","fieldLevelEncryptionId","forwardedValues","functionAssociations","lambdaFunctionAssociations","maxTtl","minTtl","originRequestPolicyId","pathPattern","realtimeLogConfigArn","responseHeadersPolicyId","smoothStreaming","targetOriginId","trustedKeyGroups","trustedSigners","viewerProtocolPolicy"})
+    @OutputCustomType.Constructor
     private DistributionOrderedCacheBehavior(
-        List<String> allowedMethods,
-        @Nullable String cachePolicyId,
-        List<String> cachedMethods,
-        @Nullable Boolean compress,
-        @Nullable Integer defaultTtl,
-        @Nullable String fieldLevelEncryptionId,
-        @Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues,
-        @Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations,
-        @Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations,
-        @Nullable Integer maxTtl,
-        @Nullable Integer minTtl,
-        @Nullable String originRequestPolicyId,
-        String pathPattern,
-        @Nullable String realtimeLogConfigArn,
-        @Nullable String responseHeadersPolicyId,
-        @Nullable Boolean smoothStreaming,
-        String targetOriginId,
-        @Nullable List<String> trustedKeyGroups,
-        @Nullable List<String> trustedSigners,
-        String viewerProtocolPolicy) {
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("cachePolicyId") @Nullable String cachePolicyId,
+        @OutputCustomType.Parameter("cachedMethods") List<String> cachedMethods,
+        @OutputCustomType.Parameter("compress") @Nullable Boolean compress,
+        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @OutputCustomType.Parameter("fieldLevelEncryptionId") @Nullable String fieldLevelEncryptionId,
+        @OutputCustomType.Parameter("forwardedValues") @Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues,
+        @OutputCustomType.Parameter("functionAssociations") @Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations,
+        @OutputCustomType.Parameter("lambdaFunctionAssociations") @Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations,
+        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @OutputCustomType.Parameter("minTtl") @Nullable Integer minTtl,
+        @OutputCustomType.Parameter("originRequestPolicyId") @Nullable String originRequestPolicyId,
+        @OutputCustomType.Parameter("pathPattern") String pathPattern,
+        @OutputCustomType.Parameter("realtimeLogConfigArn") @Nullable String realtimeLogConfigArn,
+        @OutputCustomType.Parameter("responseHeadersPolicyId") @Nullable String responseHeadersPolicyId,
+        @OutputCustomType.Parameter("smoothStreaming") @Nullable Boolean smoothStreaming,
+        @OutputCustomType.Parameter("targetOriginId") String targetOriginId,
+        @OutputCustomType.Parameter("trustedKeyGroups") @Nullable List<String> trustedKeyGroups,
+        @OutputCustomType.Parameter("trustedSigners") @Nullable List<String> trustedSigners,
+        @OutputCustomType.Parameter("viewerProtocolPolicy") String viewerProtocolPolicy) {
         this.allowedMethods = allowedMethods;
         this.cachePolicyId = cachePolicyId;
         this.cachedMethods = cachedMethods;
@@ -417,102 +417,102 @@ public final class DistributionOrderedCacheBehavior {
     	      this.viewerProtocolPolicy = defaults.viewerProtocolPolicy;
         }
 
-        public Builder setAllowedMethods(List<String> allowedMethods) {
+        public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setCachePolicyId(@Nullable String cachePolicyId) {
+        public Builder cachePolicyId(@Nullable String cachePolicyId) {
             this.cachePolicyId = cachePolicyId;
             return this;
         }
 
-        public Builder setCachedMethods(List<String> cachedMethods) {
+        public Builder cachedMethods(List<String> cachedMethods) {
             this.cachedMethods = Objects.requireNonNull(cachedMethods);
             return this;
         }
 
-        public Builder setCompress(@Nullable Boolean compress) {
+        public Builder compress(@Nullable Boolean compress) {
             this.compress = compress;
             return this;
         }
 
-        public Builder setDefaultTtl(@Nullable Integer defaultTtl) {
+        public Builder defaultTtl(@Nullable Integer defaultTtl) {
             this.defaultTtl = defaultTtl;
             return this;
         }
 
-        public Builder setFieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
+        public Builder fieldLevelEncryptionId(@Nullable String fieldLevelEncryptionId) {
             this.fieldLevelEncryptionId = fieldLevelEncryptionId;
             return this;
         }
 
-        public Builder setForwardedValues(@Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues) {
+        public Builder forwardedValues(@Nullable DistributionOrderedCacheBehaviorForwardedValues forwardedValues) {
             this.forwardedValues = forwardedValues;
             return this;
         }
 
-        public Builder setFunctionAssociations(@Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations) {
+        public Builder functionAssociations(@Nullable List<DistributionOrderedCacheBehaviorFunctionAssociation> functionAssociations) {
             this.functionAssociations = functionAssociations;
             return this;
         }
 
-        public Builder setLambdaFunctionAssociations(@Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations) {
+        public Builder lambdaFunctionAssociations(@Nullable List<DistributionOrderedCacheBehaviorLambdaFunctionAssociation> lambdaFunctionAssociations) {
             this.lambdaFunctionAssociations = lambdaFunctionAssociations;
             return this;
         }
 
-        public Builder setMaxTtl(@Nullable Integer maxTtl) {
+        public Builder maxTtl(@Nullable Integer maxTtl) {
             this.maxTtl = maxTtl;
             return this;
         }
 
-        public Builder setMinTtl(@Nullable Integer minTtl) {
+        public Builder minTtl(@Nullable Integer minTtl) {
             this.minTtl = minTtl;
             return this;
         }
 
-        public Builder setOriginRequestPolicyId(@Nullable String originRequestPolicyId) {
+        public Builder originRequestPolicyId(@Nullable String originRequestPolicyId) {
             this.originRequestPolicyId = originRequestPolicyId;
             return this;
         }
 
-        public Builder setPathPattern(String pathPattern) {
+        public Builder pathPattern(String pathPattern) {
             this.pathPattern = Objects.requireNonNull(pathPattern);
             return this;
         }
 
-        public Builder setRealtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
+        public Builder realtimeLogConfigArn(@Nullable String realtimeLogConfigArn) {
             this.realtimeLogConfigArn = realtimeLogConfigArn;
             return this;
         }
 
-        public Builder setResponseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
+        public Builder responseHeadersPolicyId(@Nullable String responseHeadersPolicyId) {
             this.responseHeadersPolicyId = responseHeadersPolicyId;
             return this;
         }
 
-        public Builder setSmoothStreaming(@Nullable Boolean smoothStreaming) {
+        public Builder smoothStreaming(@Nullable Boolean smoothStreaming) {
             this.smoothStreaming = smoothStreaming;
             return this;
         }
 
-        public Builder setTargetOriginId(String targetOriginId) {
+        public Builder targetOriginId(String targetOriginId) {
             this.targetOriginId = Objects.requireNonNull(targetOriginId);
             return this;
         }
 
-        public Builder setTrustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
+        public Builder trustedKeyGroups(@Nullable List<String> trustedKeyGroups) {
             this.trustedKeyGroups = trustedKeyGroups;
             return this;
         }
 
-        public Builder setTrustedSigners(@Nullable List<String> trustedSigners) {
+        public Builder trustedSigners(@Nullable List<String> trustedSigners) {
             this.trustedSigners = trustedSigners;
             return this;
         }
 
-        public Builder setViewerProtocolPolicy(String viewerProtocolPolicy) {
+        public Builder viewerProtocolPolicy(String viewerProtocolPolicy) {
             this.viewerProtocolPolicy = Objects.requireNonNull(viewerProtocolPolicy);
             return this;
         }

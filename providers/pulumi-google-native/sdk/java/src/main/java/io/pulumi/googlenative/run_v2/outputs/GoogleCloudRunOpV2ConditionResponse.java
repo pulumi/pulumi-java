@@ -60,18 +60,18 @@ public final class GoogleCloudRunOpV2ConditionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"domainMappingReason","executionReason","internalReason","lastTransitionTime","message","reason","revisionReason","severity","state","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2ConditionResponse(
-        String domainMappingReason,
-        String executionReason,
-        String internalReason,
-        String lastTransitionTime,
-        String message,
-        String reason,
-        String revisionReason,
-        String severity,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("domainMappingReason") String domainMappingReason,
+        @OutputCustomType.Parameter("executionReason") String executionReason,
+        @OutputCustomType.Parameter("internalReason") String internalReason,
+        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("revisionReason") String revisionReason,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.domainMappingReason = domainMappingReason;
         this.executionReason = executionReason;
         this.internalReason = internalReason;
@@ -193,52 +193,52 @@ public final class GoogleCloudRunOpV2ConditionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDomainMappingReason(String domainMappingReason) {
+        public Builder domainMappingReason(String domainMappingReason) {
             this.domainMappingReason = Objects.requireNonNull(domainMappingReason);
             return this;
         }
 
-        public Builder setExecutionReason(String executionReason) {
+        public Builder executionReason(String executionReason) {
             this.executionReason = Objects.requireNonNull(executionReason);
             return this;
         }
 
-        public Builder setInternalReason(String internalReason) {
+        public Builder internalReason(String internalReason) {
             this.internalReason = Objects.requireNonNull(internalReason);
             return this;
         }
 
-        public Builder setLastTransitionTime(String lastTransitionTime) {
+        public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRevisionReason(String revisionReason) {
+        public Builder revisionReason(String revisionReason) {
             this.revisionReason = Objects.requireNonNull(revisionReason);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

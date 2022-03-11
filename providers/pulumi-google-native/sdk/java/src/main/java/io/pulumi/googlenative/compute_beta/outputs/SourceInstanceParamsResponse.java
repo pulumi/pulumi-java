@@ -16,8 +16,8 @@ public final class SourceInstanceParamsResponse {
      */
     private final List<DiskInstantiationConfigResponse> diskConfigs;
 
-    @OutputCustomType.Constructor({"diskConfigs"})
-    private SourceInstanceParamsResponse(List<DiskInstantiationConfigResponse> diskConfigs) {
+    @OutputCustomType.Constructor
+    private SourceInstanceParamsResponse(@OutputCustomType.Parameter("diskConfigs") List<DiskInstantiationConfigResponse> diskConfigs) {
         this.diskConfigs = diskConfigs;
     }
 
@@ -49,7 +49,7 @@ public final class SourceInstanceParamsResponse {
     	      this.diskConfigs = defaults.diskConfigs;
         }
 
-        public Builder setDiskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
+        public Builder diskConfigs(List<DiskInstantiationConfigResponse> diskConfigs) {
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }

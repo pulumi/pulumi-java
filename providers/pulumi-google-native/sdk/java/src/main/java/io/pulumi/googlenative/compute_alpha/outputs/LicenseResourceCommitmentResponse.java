@@ -25,11 +25,11 @@ public final class LicenseResourceCommitmentResponse {
      */
     private final String license;
 
-    @OutputCustomType.Constructor({"amount","coresPerLicense","license"})
+    @OutputCustomType.Constructor
     private LicenseResourceCommitmentResponse(
-        String amount,
-        String coresPerLicense,
-        String license) {
+        @OutputCustomType.Parameter("amount") String amount,
+        @OutputCustomType.Parameter("coresPerLicense") String coresPerLicense,
+        @OutputCustomType.Parameter("license") String license) {
         this.amount = amount;
         this.coresPerLicense = coresPerLicense;
         this.license = license;
@@ -81,17 +81,17 @@ public final class LicenseResourceCommitmentResponse {
     	      this.license = defaults.license;
         }
 
-        public Builder setAmount(String amount) {
+        public Builder amount(String amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setCoresPerLicense(String coresPerLicense) {
+        public Builder coresPerLicense(String coresPerLicense) {
             this.coresPerLicense = Objects.requireNonNull(coresPerLicense);
             return this;
         }
 
-        public Builder setLicense(String license) {
+        public Builder license(String license) {
             this.license = Objects.requireNonNull(license);
             return this;
         }

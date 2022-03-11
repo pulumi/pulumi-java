@@ -22,10 +22,10 @@ public final class ResourceQuotaStatus {
      */
     private final @Nullable Map<String,String> used;
 
-    @OutputCustomType.Constructor({"hard","used"})
+    @OutputCustomType.Constructor
     private ResourceQuotaStatus(
-        @Nullable Map<String,String> hard,
-        @Nullable Map<String,String> used) {
+        @OutputCustomType.Parameter("hard") @Nullable Map<String,String> hard,
+        @OutputCustomType.Parameter("used") @Nullable Map<String,String> used) {
         this.hard = hard;
         this.used = used;
     }
@@ -67,12 +67,12 @@ public final class ResourceQuotaStatus {
     	      this.used = defaults.used;
         }
 
-        public Builder setHard(@Nullable Map<String,String> hard) {
+        public Builder hard(@Nullable Map<String,String> hard) {
             this.hard = hard;
             return this;
         }
 
-        public Builder setUsed(@Nullable Map<String,String> used) {
+        public Builder used(@Nullable Map<String,String> used) {
             this.used = used;
             return this;
         }

@@ -25,11 +25,11 @@ public final class JwtLocationResponse {
      */
     private final String valuePrefix;
 
-    @OutputCustomType.Constructor({"header","query","valuePrefix"})
+    @OutputCustomType.Constructor
     private JwtLocationResponse(
-        String header,
-        String query,
-        String valuePrefix) {
+        @OutputCustomType.Parameter("header") String header,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("valuePrefix") String valuePrefix) {
         this.header = header;
         this.query = query;
         this.valuePrefix = valuePrefix;
@@ -81,17 +81,17 @@ public final class JwtLocationResponse {
     	      this.valuePrefix = defaults.valuePrefix;
         }
 
-        public Builder setHeader(String header) {
+        public Builder header(String header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setValuePrefix(String valuePrefix) {
+        public Builder valuePrefix(String valuePrefix) {
             this.valuePrefix = Objects.requireNonNull(valuePrefix);
             return this;
         }

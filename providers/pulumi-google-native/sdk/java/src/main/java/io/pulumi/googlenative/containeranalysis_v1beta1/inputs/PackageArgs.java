@@ -76,22 +76,22 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setDistribution(@Nullable Input<List<DistributionArgs>> distribution) {
+        public Builder distribution(@Nullable Input<List<DistributionArgs>> distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setDistribution(@Nullable List<DistributionArgs> distribution) {
+        public Builder distribution(@Nullable List<DistributionArgs> distribution) {
             this.distribution = Input.ofNullable(distribution);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

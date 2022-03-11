@@ -28,11 +28,11 @@ public final class GlobalReplicationGroupMember {
      */
     private final @Nullable GlobalReplicationGroupMemberRole role;
 
-    @OutputCustomType.Constructor({"replicationGroupId","replicationGroupRegion","role"})
+    @OutputCustomType.Constructor
     private GlobalReplicationGroupMember(
-        @Nullable String replicationGroupId,
-        @Nullable String replicationGroupRegion,
-        @Nullable GlobalReplicationGroupMemberRole role) {
+        @OutputCustomType.Parameter("replicationGroupId") @Nullable String replicationGroupId,
+        @OutputCustomType.Parameter("replicationGroupRegion") @Nullable String replicationGroupRegion,
+        @OutputCustomType.Parameter("role") @Nullable GlobalReplicationGroupMemberRole role) {
         this.replicationGroupId = replicationGroupId;
         this.replicationGroupRegion = replicationGroupRegion;
         this.role = role;
@@ -84,17 +84,17 @@ public final class GlobalReplicationGroupMember {
     	      this.role = defaults.role;
         }
 
-        public Builder setReplicationGroupId(@Nullable String replicationGroupId) {
+        public Builder replicationGroupId(@Nullable String replicationGroupId) {
             this.replicationGroupId = replicationGroupId;
             return this;
         }
 
-        public Builder setReplicationGroupRegion(@Nullable String replicationGroupRegion) {
+        public Builder replicationGroupRegion(@Nullable String replicationGroupRegion) {
             this.replicationGroupRegion = replicationGroupRegion;
             return this;
         }
 
-        public Builder setRole(@Nullable GlobalReplicationGroupMemberRole role) {
+        public Builder role(@Nullable GlobalReplicationGroupMemberRole role) {
             this.role = role;
             return this;
         }

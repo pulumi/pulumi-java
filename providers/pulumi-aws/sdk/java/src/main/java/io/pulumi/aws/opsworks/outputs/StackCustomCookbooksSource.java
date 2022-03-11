@@ -42,14 +42,14 @@ public final class StackCustomCookbooksSource {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","revision","sshKey","type","url","username"})
+    @OutputCustomType.Constructor
     private StackCustomCookbooksSource(
-        @Nullable String password,
-        @Nullable String revision,
-        @Nullable String sshKey,
-        String type,
-        String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("revision") @Nullable String revision,
+        @OutputCustomType.Parameter("sshKey") @Nullable String sshKey,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.revision = revision;
         this.sshKey = sshKey;
@@ -131,32 +131,32 @@ public final class StackCustomCookbooksSource {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setRevision(@Nullable String revision) {
+        public Builder revision(@Nullable String revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setSshKey(@Nullable String sshKey) {
+        public Builder sshKey(@Nullable String sshKey) {
             this.sshKey = sshKey;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

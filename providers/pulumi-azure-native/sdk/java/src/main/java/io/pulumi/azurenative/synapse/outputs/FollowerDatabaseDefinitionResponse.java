@@ -25,11 +25,11 @@ public final class FollowerDatabaseDefinitionResponse {
      */
     private final String kustoPoolResourceId;
 
-    @OutputCustomType.Constructor({"attachedDatabaseConfigurationName","databaseName","kustoPoolResourceId"})
+    @OutputCustomType.Constructor
     private FollowerDatabaseDefinitionResponse(
-        String attachedDatabaseConfigurationName,
-        String databaseName,
-        String kustoPoolResourceId) {
+        @OutputCustomType.Parameter("attachedDatabaseConfigurationName") String attachedDatabaseConfigurationName,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("kustoPoolResourceId") String kustoPoolResourceId) {
         this.attachedDatabaseConfigurationName = attachedDatabaseConfigurationName;
         this.databaseName = databaseName;
         this.kustoPoolResourceId = kustoPoolResourceId;
@@ -81,17 +81,17 @@ public final class FollowerDatabaseDefinitionResponse {
     	      this.kustoPoolResourceId = defaults.kustoPoolResourceId;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setKustoPoolResourceId(String kustoPoolResourceId) {
+        public Builder kustoPoolResourceId(String kustoPoolResourceId) {
             this.kustoPoolResourceId = Objects.requireNonNull(kustoPoolResourceId);
             return this;
         }

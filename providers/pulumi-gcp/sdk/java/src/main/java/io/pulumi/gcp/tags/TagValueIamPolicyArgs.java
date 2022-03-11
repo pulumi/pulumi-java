@@ -70,22 +70,22 @@ public final class TagValueIamPolicyArgs extends io.pulumi.resources.ResourceArg
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setPolicyData(Input<String> policyData) {
+        public Builder policyData(Input<String> policyData) {
             this.policyData = Objects.requireNonNull(policyData);
             return this;
         }
 
-        public Builder setPolicyData(String policyData) {
+        public Builder policyData(String policyData) {
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
 
-        public Builder setTagValue(Input<String> tagValue) {
+        public Builder tagValue(Input<String> tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Input.of(Objects.requireNonNull(tagValue));
             return this;
         }

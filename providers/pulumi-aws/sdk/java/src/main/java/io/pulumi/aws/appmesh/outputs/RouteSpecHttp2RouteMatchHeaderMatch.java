@@ -39,13 +39,13 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
      */
     private final @Nullable String suffix;
 
-    @OutputCustomType.Constructor({"exact","prefix","range","regex","suffix"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatchHeaderMatch(
-        @Nullable String exact,
-        @Nullable String prefix,
-        @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
-        @Nullable String regex,
-        @Nullable String suffix) {
+        @OutputCustomType.Parameter("exact") @Nullable String exact,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("range") @Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range,
+        @OutputCustomType.Parameter("regex") @Nullable String regex,
+        @OutputCustomType.Parameter("suffix") @Nullable String suffix) {
         this.exact = exact;
         this.prefix = prefix;
         this.range = range;
@@ -118,27 +118,27 @@ public final class RouteSpecHttp2RouteMatchHeaderMatch {
     	      this.suffix = defaults.suffix;
         }
 
-        public Builder setExact(@Nullable String exact) {
+        public Builder exact(@Nullable String exact) {
             this.exact = exact;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRange(@Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range) {
+        public Builder range(@Nullable RouteSpecHttp2RouteMatchHeaderMatchRange range) {
             this.range = range;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setSuffix(@Nullable String suffix) {
+        public Builder suffix(@Nullable String suffix) {
             this.suffix = suffix;
             return this;
         }

@@ -17,8 +17,8 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResource(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private ResourceSetResourceDnsTargetResourceTargetResourceNlbResource(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -50,7 +50,7 @@ public final class ResourceSetResourceDnsTargetResourceTargetResourceNlbResource
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

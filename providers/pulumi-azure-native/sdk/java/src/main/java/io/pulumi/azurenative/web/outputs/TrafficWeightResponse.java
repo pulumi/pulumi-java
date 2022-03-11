@@ -29,11 +29,11 @@ public final class TrafficWeightResponse {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"latestRevision","revisionName","weight"})
+    @OutputCustomType.Constructor
     private TrafficWeightResponse(
-        @Nullable Boolean latestRevision,
-        @Nullable String revisionName,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("latestRevision") @Nullable Boolean latestRevision,
+        @OutputCustomType.Parameter("revisionName") @Nullable String revisionName,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.latestRevision = latestRevision;
         this.revisionName = revisionName;
         this.weight = weight;
@@ -85,17 +85,17 @@ public final class TrafficWeightResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setLatestRevision(@Nullable Boolean latestRevision) {
+        public Builder latestRevision(@Nullable Boolean latestRevision) {
             this.latestRevision = latestRevision;
             return this;
         }
 
-        public Builder setRevisionName(@Nullable String revisionName) {
+        public Builder revisionName(@Nullable String revisionName) {
             this.revisionName = revisionName;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

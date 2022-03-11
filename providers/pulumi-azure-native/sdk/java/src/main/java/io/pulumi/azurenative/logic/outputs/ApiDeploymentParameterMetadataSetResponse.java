@@ -22,10 +22,10 @@ public final class ApiDeploymentParameterMetadataSetResponse {
      */
     private final @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString;
 
-    @OutputCustomType.Constructor({"packageContentLink","redisCacheConnectionString"})
+    @OutputCustomType.Constructor
     private ApiDeploymentParameterMetadataSetResponse(
-        @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
-        @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
+        @OutputCustomType.Parameter("packageContentLink") @Nullable ApiDeploymentParameterMetadataResponse packageContentLink,
+        @OutputCustomType.Parameter("redisCacheConnectionString") @Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
         this.packageContentLink = packageContentLink;
         this.redisCacheConnectionString = redisCacheConnectionString;
     }
@@ -67,12 +67,12 @@ public final class ApiDeploymentParameterMetadataSetResponse {
     	      this.redisCacheConnectionString = defaults.redisCacheConnectionString;
         }
 
-        public Builder setPackageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
+        public Builder packageContentLink(@Nullable ApiDeploymentParameterMetadataResponse packageContentLink) {
             this.packageContentLink = packageContentLink;
             return this;
         }
 
-        public Builder setRedisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
+        public Builder redisCacheConnectionString(@Nullable ApiDeploymentParameterMetadataResponse redisCacheConnectionString) {
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
         }

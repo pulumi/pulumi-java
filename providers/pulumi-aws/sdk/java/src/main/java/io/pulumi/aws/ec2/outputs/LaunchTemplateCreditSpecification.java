@@ -17,8 +17,8 @@ public final class LaunchTemplateCreditSpecification {
      */
     private final @Nullable String cpuCredits;
 
-    @OutputCustomType.Constructor({"cpuCredits"})
-    private LaunchTemplateCreditSpecification(@Nullable String cpuCredits) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateCreditSpecification(@OutputCustomType.Parameter("cpuCredits") @Nullable String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 
@@ -50,7 +50,7 @@ public final class LaunchTemplateCreditSpecification {
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder setCpuCredits(@Nullable String cpuCredits) {
+        public Builder cpuCredits(@Nullable String cpuCredits) {
             this.cpuCredits = cpuCredits;
             return this;
         }

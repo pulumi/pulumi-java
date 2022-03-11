@@ -101,25 +101,25 @@ public final class SaasResourceResponseProperties {
      */
     private final @Nullable String termId;
 
-    @OutputCustomType.Constructor({"autoRenew","created","isFreeTrial","lastModified","offerId","paymentChannelMetadata","paymentChannelType","publisherId","publisherTestEnvironment","quantity","saasResourceName","saasSessionId","saasSubscriptionId","skuId","status","term","termId"})
+    @OutputCustomType.Constructor
     private SaasResourceResponseProperties(
-        @Nullable Boolean autoRenew,
-        String created,
-        @Nullable Boolean isFreeTrial,
-        @Nullable String lastModified,
-        @Nullable String offerId,
-        @Nullable Map<String,String> paymentChannelMetadata,
-        @Nullable String paymentChannelType,
-        @Nullable String publisherId,
-        @Nullable String publisherTestEnvironment,
-        @Nullable Double quantity,
-        @Nullable String saasResourceName,
-        @Nullable String saasSessionId,
-        @Nullable String saasSubscriptionId,
-        @Nullable String skuId,
-        @Nullable String status,
-        @Nullable SaasPropertiesResponseTerm term,
-        @Nullable String termId) {
+        @OutputCustomType.Parameter("autoRenew") @Nullable Boolean autoRenew,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("isFreeTrial") @Nullable Boolean isFreeTrial,
+        @OutputCustomType.Parameter("lastModified") @Nullable String lastModified,
+        @OutputCustomType.Parameter("offerId") @Nullable String offerId,
+        @OutputCustomType.Parameter("paymentChannelMetadata") @Nullable Map<String,String> paymentChannelMetadata,
+        @OutputCustomType.Parameter("paymentChannelType") @Nullable String paymentChannelType,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("publisherTestEnvironment") @Nullable String publisherTestEnvironment,
+        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
+        @OutputCustomType.Parameter("saasResourceName") @Nullable String saasResourceName,
+        @OutputCustomType.Parameter("saasSessionId") @Nullable String saasSessionId,
+        @OutputCustomType.Parameter("saasSubscriptionId") @Nullable String saasSubscriptionId,
+        @OutputCustomType.Parameter("skuId") @Nullable String skuId,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("term") @Nullable SaasPropertiesResponseTerm term,
+        @OutputCustomType.Parameter("termId") @Nullable String termId) {
         this.autoRenew = autoRenew;
         this.created = created;
         this.isFreeTrial = isFreeTrial;
@@ -311,87 +311,87 @@ public final class SaasResourceResponseProperties {
     	      this.termId = defaults.termId;
         }
 
-        public Builder setAutoRenew(@Nullable Boolean autoRenew) {
+        public Builder autoRenew(@Nullable Boolean autoRenew) {
             this.autoRenew = autoRenew;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setIsFreeTrial(@Nullable Boolean isFreeTrial) {
+        public Builder isFreeTrial(@Nullable Boolean isFreeTrial) {
             this.isFreeTrial = isFreeTrial;
             return this;
         }
 
-        public Builder setLastModified(@Nullable String lastModified) {
+        public Builder lastModified(@Nullable String lastModified) {
             this.lastModified = lastModified;
             return this;
         }
 
-        public Builder setOfferId(@Nullable String offerId) {
+        public Builder offerId(@Nullable String offerId) {
             this.offerId = offerId;
             return this;
         }
 
-        public Builder setPaymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
+        public Builder paymentChannelMetadata(@Nullable Map<String,String> paymentChannelMetadata) {
             this.paymentChannelMetadata = paymentChannelMetadata;
             return this;
         }
 
-        public Builder setPaymentChannelType(@Nullable String paymentChannelType) {
+        public Builder paymentChannelType(@Nullable String paymentChannelType) {
             this.paymentChannelType = paymentChannelType;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setPublisherTestEnvironment(@Nullable String publisherTestEnvironment) {
+        public Builder publisherTestEnvironment(@Nullable String publisherTestEnvironment) {
             this.publisherTestEnvironment = publisherTestEnvironment;
             return this;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setSaasResourceName(@Nullable String saasResourceName) {
+        public Builder saasResourceName(@Nullable String saasResourceName) {
             this.saasResourceName = saasResourceName;
             return this;
         }
 
-        public Builder setSaasSessionId(@Nullable String saasSessionId) {
+        public Builder saasSessionId(@Nullable String saasSessionId) {
             this.saasSessionId = saasSessionId;
             return this;
         }
 
-        public Builder setSaasSubscriptionId(@Nullable String saasSubscriptionId) {
+        public Builder saasSubscriptionId(@Nullable String saasSubscriptionId) {
             this.saasSubscriptionId = saasSubscriptionId;
             return this;
         }
 
-        public Builder setSkuId(@Nullable String skuId) {
+        public Builder skuId(@Nullable String skuId) {
             this.skuId = skuId;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTerm(@Nullable SaasPropertiesResponseTerm term) {
+        public Builder term(@Nullable SaasPropertiesResponseTerm term) {
             this.term = term;
             return this;
         }
 
-        public Builder setTermId(@Nullable String termId) {
+        public Builder termId(@Nullable String termId) {
             this.termId = termId;
             return this;
         }

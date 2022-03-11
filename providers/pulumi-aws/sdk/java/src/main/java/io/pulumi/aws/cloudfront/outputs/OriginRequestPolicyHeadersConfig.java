@@ -15,10 +15,10 @@ public final class OriginRequestPolicyHeadersConfig {
     private final @Nullable String headerBehavior;
     private final @Nullable OriginRequestPolicyHeadersConfigHeaders headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private OriginRequestPolicyHeadersConfig(
-        @Nullable String headerBehavior,
-        @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
+        @OutputCustomType.Parameter("headerBehavior") @Nullable String headerBehavior,
+        @OutputCustomType.Parameter("headers") @Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
@@ -52,12 +52,12 @@ public final class OriginRequestPolicyHeadersConfig {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(@Nullable String headerBehavior) {
+        public Builder headerBehavior(@Nullable String headerBehavior) {
             this.headerBehavior = headerBehavior;
             return this;
         }
 
-        public Builder setHeaders(@Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
+        public Builder headers(@Nullable OriginRequestPolicyHeadersConfigHeaders headers) {
             this.headers = headers;
             return this;
         }

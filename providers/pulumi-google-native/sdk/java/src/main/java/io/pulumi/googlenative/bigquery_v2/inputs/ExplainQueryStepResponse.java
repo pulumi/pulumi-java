@@ -69,12 +69,12 @@ public final class ExplainQueryStepResponse extends io.pulumi.resources.InvokeAr
     	      this.substeps = defaults.substeps;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSubsteps(List<String> substeps) {
+        public Builder substeps(List<String> substeps) {
             this.substeps = Objects.requireNonNull(substeps);
             return this;
         }

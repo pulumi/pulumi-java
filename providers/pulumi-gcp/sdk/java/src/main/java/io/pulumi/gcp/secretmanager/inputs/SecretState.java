@@ -218,102 +218,102 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setExpireTime(@Nullable Input<String> expireTime) {
+        public Builder expireTime(@Nullable Input<String> expireTime) {
             this.expireTime = expireTime;
             return this;
         }
 
-        public Builder setExpireTime(@Nullable String expireTime) {
+        public Builder expireTime(@Nullable String expireTime) {
             this.expireTime = Input.ofNullable(expireTime);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReplication(@Nullable Input<SecretReplicationGetArgs> replication) {
+        public Builder replication(@Nullable Input<SecretReplicationGetArgs> replication) {
             this.replication = replication;
             return this;
         }
 
-        public Builder setReplication(@Nullable SecretReplicationGetArgs replication) {
+        public Builder replication(@Nullable SecretReplicationGetArgs replication) {
             this.replication = Input.ofNullable(replication);
             return this;
         }
 
-        public Builder setRotation(@Nullable Input<SecretRotationGetArgs> rotation) {
+        public Builder rotation(@Nullable Input<SecretRotationGetArgs> rotation) {
             this.rotation = rotation;
             return this;
         }
 
-        public Builder setRotation(@Nullable SecretRotationGetArgs rotation) {
+        public Builder rotation(@Nullable SecretRotationGetArgs rotation) {
             this.rotation = Input.ofNullable(rotation);
             return this;
         }
 
-        public Builder setSecretId(@Nullable Input<String> secretId) {
+        public Builder secretId(@Nullable Input<String> secretId) {
             this.secretId = secretId;
             return this;
         }
 
-        public Builder setSecretId(@Nullable String secretId) {
+        public Builder secretId(@Nullable String secretId) {
             this.secretId = Input.ofNullable(secretId);
             return this;
         }
 
-        public Builder setTopics(@Nullable Input<List<SecretTopicGetArgs>> topics) {
+        public Builder topics(@Nullable Input<List<SecretTopicGetArgs>> topics) {
             this.topics = topics;
             return this;
         }
 
-        public Builder setTopics(@Nullable List<SecretTopicGetArgs> topics) {
+        public Builder topics(@Nullable List<SecretTopicGetArgs> topics) {
             this.topics = Input.ofNullable(topics);
             return this;
         }
 
-        public Builder setTtl(@Nullable Input<String> ttl) {
+        public Builder ttl(@Nullable Input<String> ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }

@@ -45,14 +45,14 @@ public final class MembershipEndpointResponse {
      */
     private final OnPremClusterResponse onPremCluster;
 
-    @OutputCustomType.Constructor({"edgeCluster","gkeCluster","kubernetesMetadata","kubernetesResource","multiCloudCluster","onPremCluster"})
+    @OutputCustomType.Constructor
     private MembershipEndpointResponse(
-        EdgeClusterResponse edgeCluster,
-        GkeClusterResponse gkeCluster,
-        KubernetesMetadataResponse kubernetesMetadata,
-        KubernetesResourceResponse kubernetesResource,
-        MultiCloudClusterResponse multiCloudCluster,
-        OnPremClusterResponse onPremCluster) {
+        @OutputCustomType.Parameter("edgeCluster") EdgeClusterResponse edgeCluster,
+        @OutputCustomType.Parameter("gkeCluster") GkeClusterResponse gkeCluster,
+        @OutputCustomType.Parameter("kubernetesMetadata") KubernetesMetadataResponse kubernetesMetadata,
+        @OutputCustomType.Parameter("kubernetesResource") KubernetesResourceResponse kubernetesResource,
+        @OutputCustomType.Parameter("multiCloudCluster") MultiCloudClusterResponse multiCloudCluster,
+        @OutputCustomType.Parameter("onPremCluster") OnPremClusterResponse onPremCluster) {
         this.edgeCluster = edgeCluster;
         this.gkeCluster = gkeCluster;
         this.kubernetesMetadata = kubernetesMetadata;
@@ -134,32 +134,32 @@ public final class MembershipEndpointResponse {
     	      this.onPremCluster = defaults.onPremCluster;
         }
 
-        public Builder setEdgeCluster(EdgeClusterResponse edgeCluster) {
+        public Builder edgeCluster(EdgeClusterResponse edgeCluster) {
             this.edgeCluster = Objects.requireNonNull(edgeCluster);
             return this;
         }
 
-        public Builder setGkeCluster(GkeClusterResponse gkeCluster) {
+        public Builder gkeCluster(GkeClusterResponse gkeCluster) {
             this.gkeCluster = Objects.requireNonNull(gkeCluster);
             return this;
         }
 
-        public Builder setKubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
+        public Builder kubernetesMetadata(KubernetesMetadataResponse kubernetesMetadata) {
             this.kubernetesMetadata = Objects.requireNonNull(kubernetesMetadata);
             return this;
         }
 
-        public Builder setKubernetesResource(KubernetesResourceResponse kubernetesResource) {
+        public Builder kubernetesResource(KubernetesResourceResponse kubernetesResource) {
             this.kubernetesResource = Objects.requireNonNull(kubernetesResource);
             return this;
         }
 
-        public Builder setMultiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
+        public Builder multiCloudCluster(MultiCloudClusterResponse multiCloudCluster) {
             this.multiCloudCluster = Objects.requireNonNull(multiCloudCluster);
             return this;
         }
 
-        public Builder setOnPremCluster(OnPremClusterResponse onPremCluster) {
+        public Builder onPremCluster(OnPremClusterResponse onPremCluster) {
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
         }

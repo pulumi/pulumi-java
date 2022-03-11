@@ -46,15 +46,15 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
      */
     private final @Nullable String recordPreprocessorSourceUri;
 
-    @OutputCustomType.Constructor({"containerArguments","containerEntrypoint","environment","imageUri","postAnalyticsProcessorSourceUri","problemType","recordPreprocessorSourceUri"})
+    @OutputCustomType.Constructor
     private ModelQualityJobDefinitionModelQualityAppSpecification(
-        @Nullable List<String> containerArguments,
-        @Nullable List<String> containerEntrypoint,
-        @Nullable Object environment,
-        String imageUri,
-        @Nullable String postAnalyticsProcessorSourceUri,
-        ModelQualityJobDefinitionProblemType problemType,
-        @Nullable String recordPreprocessorSourceUri) {
+        @OutputCustomType.Parameter("containerArguments") @Nullable List<String> containerArguments,
+        @OutputCustomType.Parameter("containerEntrypoint") @Nullable List<String> containerEntrypoint,
+        @OutputCustomType.Parameter("environment") @Nullable Object environment,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("postAnalyticsProcessorSourceUri") @Nullable String postAnalyticsProcessorSourceUri,
+        @OutputCustomType.Parameter("problemType") ModelQualityJobDefinitionProblemType problemType,
+        @OutputCustomType.Parameter("recordPreprocessorSourceUri") @Nullable String recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.environment = environment;
@@ -142,37 +142,37 @@ public final class ModelQualityJobDefinitionModelQualityAppSpecification {
     	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
         }
 
-        public Builder setContainerArguments(@Nullable List<String> containerArguments) {
+        public Builder containerArguments(@Nullable List<String> containerArguments) {
             this.containerArguments = containerArguments;
             return this;
         }
 
-        public Builder setContainerEntrypoint(@Nullable List<String> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Object environment) {
+        public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setPostAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
-        public Builder setProblemType(ModelQualityJobDefinitionProblemType problemType) {
+        public Builder problemType(ModelQualityJobDefinitionProblemType problemType) {
             this.problemType = Objects.requireNonNull(problemType);
             return this;
         }
 
-        public Builder setRecordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }

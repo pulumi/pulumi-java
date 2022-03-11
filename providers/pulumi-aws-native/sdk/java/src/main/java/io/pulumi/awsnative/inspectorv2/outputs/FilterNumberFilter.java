@@ -14,10 +14,10 @@ public final class FilterNumberFilter {
     private final @Nullable Double lowerInclusive;
     private final @Nullable Double upperInclusive;
 
-    @OutputCustomType.Constructor({"lowerInclusive","upperInclusive"})
+    @OutputCustomType.Constructor
     private FilterNumberFilter(
-        @Nullable Double lowerInclusive,
-        @Nullable Double upperInclusive) {
+        @OutputCustomType.Parameter("lowerInclusive") @Nullable Double lowerInclusive,
+        @OutputCustomType.Parameter("upperInclusive") @Nullable Double upperInclusive) {
         this.lowerInclusive = lowerInclusive;
         this.upperInclusive = upperInclusive;
     }
@@ -51,12 +51,12 @@ public final class FilterNumberFilter {
     	      this.upperInclusive = defaults.upperInclusive;
         }
 
-        public Builder setLowerInclusive(@Nullable Double lowerInclusive) {
+        public Builder lowerInclusive(@Nullable Double lowerInclusive) {
             this.lowerInclusive = lowerInclusive;
             return this;
         }
 
-        public Builder setUpperInclusive(@Nullable Double upperInclusive) {
+        public Builder upperInclusive(@Nullable Double upperInclusive) {
             this.upperInclusive = upperInclusive;
             return this;
         }

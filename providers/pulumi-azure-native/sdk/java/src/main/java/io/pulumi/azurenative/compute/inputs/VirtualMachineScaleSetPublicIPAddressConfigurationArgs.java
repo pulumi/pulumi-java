@@ -179,82 +179,82 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     	      this.sku = defaults.sku;
         }
 
-        public Builder setDeleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
+        public Builder deleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
+        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Input.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Input<Integer> idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = Input.ofNullable(idleTimeoutInMinutes);
             return this;
         }
 
-        public Builder setIpTags(@Nullable Input<List<VirtualMachineScaleSetIpTagArgs>> ipTags) {
+        public Builder ipTags(@Nullable Input<List<VirtualMachineScaleSetIpTagArgs>> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
-        public Builder setIpTags(@Nullable List<VirtualMachineScaleSetIpTagArgs> ipTags) {
+        public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagArgs> ipTags) {
             this.ipTags = Input.ofNullable(ipTags);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable Input<Either<String,IPVersion>> publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable Input<Either<String,IPVersion>> publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
             this.publicIPAddressVersion = Input.ofNullable(publicIPAddressVersion);
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable Input<SubResourceArgs> publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable Input<SubResourceArgs> publicIPPrefix) {
             this.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
-        public Builder setPublicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
+        public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
             this.publicIPPrefix = Input.ofNullable(publicIPPrefix);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<PublicIPAddressSkuArgs> sku) {
+        public Builder sku(@Nullable Input<PublicIPAddressSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable PublicIPAddressSkuArgs sku) {
+        public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }

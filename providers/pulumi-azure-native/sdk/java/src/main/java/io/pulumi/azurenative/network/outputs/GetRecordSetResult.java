@@ -121,27 +121,27 @@ public final class GetRecordSetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"aRecords","aaaaRecords","caaRecords","cnameRecord","etag","fqdn","id","metadata","mxRecords","name","nsRecords","provisioningState","ptrRecords","soaRecord","srvRecords","targetResource","ttl","txtRecords","type"})
+    @OutputCustomType.Constructor
     private GetRecordSetResult(
-        @Nullable List<ARecordResponse> aRecords,
-        @Nullable List<AaaaRecordResponse> aaaaRecords,
-        @Nullable List<CaaRecordResponse> caaRecords,
-        @Nullable CnameRecordResponse cnameRecord,
-        @Nullable String etag,
-        String fqdn,
-        String id,
-        @Nullable Map<String,String> metadata,
-        @Nullable List<MxRecordResponse> mxRecords,
-        String name,
-        @Nullable List<NsRecordResponse> nsRecords,
-        String provisioningState,
-        @Nullable List<PtrRecordResponse> ptrRecords,
-        @Nullable SoaRecordResponse soaRecord,
-        @Nullable List<SrvRecordResponse> srvRecords,
-        @Nullable SubResourceResponse targetResource,
-        @Nullable Double ttl,
-        @Nullable List<TxtRecordResponse> txtRecords,
-        String type) {
+        @OutputCustomType.Parameter("aRecords") @Nullable List<ARecordResponse> aRecords,
+        @OutputCustomType.Parameter("aaaaRecords") @Nullable List<AaaaRecordResponse> aaaaRecords,
+        @OutputCustomType.Parameter("caaRecords") @Nullable List<CaaRecordResponse> caaRecords,
+        @OutputCustomType.Parameter("cnameRecord") @Nullable CnameRecordResponse cnameRecord,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("mxRecords") @Nullable List<MxRecordResponse> mxRecords,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nsRecords") @Nullable List<NsRecordResponse> nsRecords,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ptrRecords") @Nullable List<PtrRecordResponse> ptrRecords,
+        @OutputCustomType.Parameter("soaRecord") @Nullable SoaRecordResponse soaRecord,
+        @OutputCustomType.Parameter("srvRecords") @Nullable List<SrvRecordResponse> srvRecords,
+        @OutputCustomType.Parameter("targetResource") @Nullable SubResourceResponse targetResource,
+        @OutputCustomType.Parameter("ttl") @Nullable Double ttl,
+        @OutputCustomType.Parameter("txtRecords") @Nullable List<TxtRecordResponse> txtRecords,
+        @OutputCustomType.Parameter("type") String type) {
         this.aRecords = aRecords;
         this.aaaaRecords = aaaaRecords;
         this.caaRecords = caaRecords;
@@ -353,97 +353,97 @@ public final class GetRecordSetResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setARecords(@Nullable List<ARecordResponse> aRecords) {
+        public Builder aRecords(@Nullable List<ARecordResponse> aRecords) {
             this.aRecords = aRecords;
             return this;
         }
 
-        public Builder setAaaaRecords(@Nullable List<AaaaRecordResponse> aaaaRecords) {
+        public Builder aaaaRecords(@Nullable List<AaaaRecordResponse> aaaaRecords) {
             this.aaaaRecords = aaaaRecords;
             return this;
         }
 
-        public Builder setCaaRecords(@Nullable List<CaaRecordResponse> caaRecords) {
+        public Builder caaRecords(@Nullable List<CaaRecordResponse> caaRecords) {
             this.caaRecords = caaRecords;
             return this;
         }
 
-        public Builder setCnameRecord(@Nullable CnameRecordResponse cnameRecord) {
+        public Builder cnameRecord(@Nullable CnameRecordResponse cnameRecord) {
             this.cnameRecord = cnameRecord;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMxRecords(@Nullable List<MxRecordResponse> mxRecords) {
+        public Builder mxRecords(@Nullable List<MxRecordResponse> mxRecords) {
             this.mxRecords = mxRecords;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNsRecords(@Nullable List<NsRecordResponse> nsRecords) {
+        public Builder nsRecords(@Nullable List<NsRecordResponse> nsRecords) {
             this.nsRecords = nsRecords;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPtrRecords(@Nullable List<PtrRecordResponse> ptrRecords) {
+        public Builder ptrRecords(@Nullable List<PtrRecordResponse> ptrRecords) {
             this.ptrRecords = ptrRecords;
             return this;
         }
 
-        public Builder setSoaRecord(@Nullable SoaRecordResponse soaRecord) {
+        public Builder soaRecord(@Nullable SoaRecordResponse soaRecord) {
             this.soaRecord = soaRecord;
             return this;
         }
 
-        public Builder setSrvRecords(@Nullable List<SrvRecordResponse> srvRecords) {
+        public Builder srvRecords(@Nullable List<SrvRecordResponse> srvRecords) {
             this.srvRecords = srvRecords;
             return this;
         }
 
-        public Builder setTargetResource(@Nullable SubResourceResponse targetResource) {
+        public Builder targetResource(@Nullable SubResourceResponse targetResource) {
             this.targetResource = targetResource;
             return this;
         }
 
-        public Builder setTtl(@Nullable Double ttl) {
+        public Builder ttl(@Nullable Double ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setTxtRecords(@Nullable List<TxtRecordResponse> txtRecords) {
+        public Builder txtRecords(@Nullable List<TxtRecordResponse> txtRecords) {
             this.txtRecords = txtRecords;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

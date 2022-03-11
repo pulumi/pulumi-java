@@ -37,13 +37,13 @@ public final class PasswordValidationPolicyResponse {
      */
     private final Integer reuseInterval;
 
-    @OutputCustomType.Constructor({"complexity","disallowUsernameSubstring","minLength","passwordChangeInterval","reuseInterval"})
+    @OutputCustomType.Constructor
     private PasswordValidationPolicyResponse(
-        String complexity,
-        Boolean disallowUsernameSubstring,
-        Integer minLength,
-        String passwordChangeInterval,
-        Integer reuseInterval) {
+        @OutputCustomType.Parameter("complexity") String complexity,
+        @OutputCustomType.Parameter("disallowUsernameSubstring") Boolean disallowUsernameSubstring,
+        @OutputCustomType.Parameter("minLength") Integer minLength,
+        @OutputCustomType.Parameter("passwordChangeInterval") String passwordChangeInterval,
+        @OutputCustomType.Parameter("reuseInterval") Integer reuseInterval) {
         this.complexity = complexity;
         this.disallowUsernameSubstring = disallowUsernameSubstring;
         this.minLength = minLength;
@@ -115,27 +115,27 @@ public final class PasswordValidationPolicyResponse {
     	      this.reuseInterval = defaults.reuseInterval;
         }
 
-        public Builder setComplexity(String complexity) {
+        public Builder complexity(String complexity) {
             this.complexity = Objects.requireNonNull(complexity);
             return this;
         }
 
-        public Builder setDisallowUsernameSubstring(Boolean disallowUsernameSubstring) {
+        public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
             return this;
         }
 
-        public Builder setMinLength(Integer minLength) {
+        public Builder minLength(Integer minLength) {
             this.minLength = Objects.requireNonNull(minLength);
             return this;
         }
 
-        public Builder setPasswordChangeInterval(String passwordChangeInterval) {
+        public Builder passwordChangeInterval(String passwordChangeInterval) {
             this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval);
             return this;
         }
 
-        public Builder setReuseInterval(Integer reuseInterval) {
+        public Builder reuseInterval(Integer reuseInterval) {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }

@@ -19,10 +19,10 @@ public final class BucketServerSideEncryptionByDefault {
     private final @Nullable String kMSMasterKeyID;
     private final BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm;
 
-    @OutputCustomType.Constructor({"kMSMasterKeyID","sSEAlgorithm"})
+    @OutputCustomType.Constructor
     private BucketServerSideEncryptionByDefault(
-        @Nullable String kMSMasterKeyID,
-        BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
+        @OutputCustomType.Parameter("kMSMasterKeyID") @Nullable String kMSMasterKeyID,
+        @OutputCustomType.Parameter("sSEAlgorithm") BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
         this.kMSMasterKeyID = kMSMasterKeyID;
         this.sSEAlgorithm = sSEAlgorithm;
     }
@@ -60,12 +60,12 @@ public final class BucketServerSideEncryptionByDefault {
     	      this.sSEAlgorithm = defaults.sSEAlgorithm;
         }
 
-        public Builder setKMSMasterKeyID(@Nullable String kMSMasterKeyID) {
+        public Builder kMSMasterKeyID(@Nullable String kMSMasterKeyID) {
             this.kMSMasterKeyID = kMSMasterKeyID;
             return this;
         }
 
-        public Builder setSSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
+        public Builder sSEAlgorithm(BucketServerSideEncryptionByDefaultSSEAlgorithm sSEAlgorithm) {
             this.sSEAlgorithm = Objects.requireNonNull(sSEAlgorithm);
             return this;
         }

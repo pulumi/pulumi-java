@@ -28,11 +28,11 @@ public final class BasicAuthenticationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","type","username"})
+    @OutputCustomType.Constructor
     private BasicAuthenticationResponse(
-        @Nullable String password,
-        String type,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.type = type;
         this.username = username;
@@ -85,17 +85,17 @@ public final class BasicAuthenticationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

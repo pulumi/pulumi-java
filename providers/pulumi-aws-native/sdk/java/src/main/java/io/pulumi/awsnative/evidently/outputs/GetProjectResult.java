@@ -23,12 +23,12 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","dataDelivery","description","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String arn,
-        @Nullable ProjectDataDeliveryObject dataDelivery,
-        @Nullable String description,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataDelivery") @Nullable ProjectDataDeliveryObject dataDelivery,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.arn = arn;
         this.dataDelivery = dataDelivery;
         this.description = description;
@@ -78,22 +78,22 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataDelivery(@Nullable ProjectDataDeliveryObject dataDelivery) {
+        public Builder dataDelivery(@Nullable ProjectDataDeliveryObject dataDelivery) {
             this.dataDelivery = dataDelivery;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

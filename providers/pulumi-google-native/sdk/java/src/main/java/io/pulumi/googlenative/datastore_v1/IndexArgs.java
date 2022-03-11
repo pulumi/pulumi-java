@@ -101,42 +101,42 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setAncestor(Input<IndexAncestor> ancestor) {
+        public Builder ancestor(Input<IndexAncestor> ancestor) {
             this.ancestor = Objects.requireNonNull(ancestor);
             return this;
         }
 
-        public Builder setAncestor(IndexAncestor ancestor) {
+        public Builder ancestor(IndexAncestor ancestor) {
             this.ancestor = Input.of(Objects.requireNonNull(ancestor));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProperties(Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
+        public Builder properties(Input<List<GoogleDatastoreAdminV1IndexedPropertyArgs>> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
+        public Builder properties(List<GoogleDatastoreAdminV1IndexedPropertyArgs> properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }

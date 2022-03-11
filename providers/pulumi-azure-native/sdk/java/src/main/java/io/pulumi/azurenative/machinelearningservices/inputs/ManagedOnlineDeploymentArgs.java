@@ -259,132 +259,132 @@ public final class ManagedOnlineDeploymentArgs extends io.pulumi.resources.Resou
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Input.ofNullable(appInsightsEnabled);
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable Input<CodeConfigurationArgs> codeConfiguration) {
+        public Builder codeConfiguration(@Nullable Input<CodeConfigurationArgs> codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setCodeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
+        public Builder codeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
             this.codeConfiguration = Input.ofNullable(codeConfiguration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpointComputeType(Input<String> endpointComputeType) {
+        public Builder endpointComputeType(Input<String> endpointComputeType) {
             this.endpointComputeType = Objects.requireNonNull(endpointComputeType);
             return this;
         }
 
-        public Builder setEndpointComputeType(String endpointComputeType) {
+        public Builder endpointComputeType(String endpointComputeType) {
             this.endpointComputeType = Input.of(Objects.requireNonNull(endpointComputeType));
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable Input<String> environmentId) {
+        public Builder environmentId(@Nullable Input<String> environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = Input.ofNullable(environmentId);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<Map<String,String>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable Input<String> instanceType) {
+        public Builder instanceType(@Nullable Input<String> instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable Input<ProbeSettingsArgs> livenessProbe) {
+        public Builder livenessProbe(@Nullable Input<ProbeSettingsArgs> livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ProbeSettingsArgs livenessProbe) {
+        public Builder livenessProbe(@Nullable ProbeSettingsArgs livenessProbe) {
             this.livenessProbe = Input.ofNullable(livenessProbe);
             return this;
         }
 
-        public Builder setModel(@Nullable Input<Object> model) {
+        public Builder model(@Nullable Input<Object> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable Object model) {
+        public Builder model(@Nullable Object model) {
             this.model = Input.ofNullable(model);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable Input<ProbeSettingsArgs> readinessProbe) {
+        public Builder readinessProbe(@Nullable Input<ProbeSettingsArgs> readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable ProbeSettingsArgs readinessProbe) {
+        public Builder readinessProbe(@Nullable ProbeSettingsArgs readinessProbe) {
             this.readinessProbe = Input.ofNullable(readinessProbe);
             return this;
         }
 
-        public Builder setRequestSettings(@Nullable Input<OnlineRequestSettingsArgs> requestSettings) {
+        public Builder requestSettings(@Nullable Input<OnlineRequestSettingsArgs> requestSettings) {
             this.requestSettings = requestSettings;
             return this;
         }
 
-        public Builder setRequestSettings(@Nullable OnlineRequestSettingsArgs requestSettings) {
+        public Builder requestSettings(@Nullable OnlineRequestSettingsArgs requestSettings) {
             this.requestSettings = Input.ofNullable(requestSettings);
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
+        public Builder scaleSettings(@Nullable Input<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
+        public Builder scaleSettings(@Nullable Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }

@@ -15,8 +15,8 @@ public final class AutomaticResponse {
      */
     private final CustomerManagedEncryptionResponse customerManagedEncryption;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption"})
-    private AutomaticResponse(CustomerManagedEncryptionResponse customerManagedEncryption) {
+    @OutputCustomType.Constructor
+    private AutomaticResponse(@OutputCustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption) {
         this.customerManagedEncryption = customerManagedEncryption;
     }
 
@@ -48,7 +48,7 @@ public final class AutomaticResponse {
     	      this.customerManagedEncryption = defaults.customerManagedEncryption;
         }
 
-        public Builder setCustomerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
+        public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }

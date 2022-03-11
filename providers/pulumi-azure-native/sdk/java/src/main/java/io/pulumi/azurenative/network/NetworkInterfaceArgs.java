@@ -273,142 +273,142 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDnsSettings(@Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable NetworkInterfaceDnsSettingsArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable NetworkInterfaceDnsSettingsArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = Input.ofNullable(enableAcceleratedNetworking);
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Input<Boolean> enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Input<Boolean> enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Boolean enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = Input.ofNullable(enableIPForwarding);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMigrationPhase(@Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
+        public Builder migrationPhase(@Nullable Input<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
             this.migrationPhase = migrationPhase;
             return this;
         }
 
-        public Builder setMigrationPhase(@Nullable Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
+        public Builder migrationPhase(@Nullable Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
             this.migrationPhase = Input.ofNullable(migrationPhase);
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable Input<String> networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable Input<String> networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable String networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = Input.ofNullable(networkInterfaceName);
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Input<NetworkSecurityGroupArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable NetworkSecurityGroupArgs networkSecurityGroup) {
             this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
             return this;
         }
 
-        public Builder setNicType(@Nullable Input<Either<String,NetworkInterfaceNicType>> nicType) {
+        public Builder nicType(@Nullable Input<Either<String,NetworkInterfaceNicType>> nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setNicType(@Nullable Either<String,NetworkInterfaceNicType> nicType) {
+        public Builder nicType(@Nullable Either<String,NetworkInterfaceNicType> nicType) {
             this.nicType = Input.ofNullable(nicType);
             return this;
         }
 
-        public Builder setPrivateLinkService(@Nullable Input<PrivateLinkServiceArgs> privateLinkService) {
+        public Builder privateLinkService(@Nullable Input<PrivateLinkServiceArgs> privateLinkService) {
             this.privateLinkService = privateLinkService;
             return this;
         }
 
-        public Builder setPrivateLinkService(@Nullable PrivateLinkServiceArgs privateLinkService) {
+        public Builder privateLinkService(@Nullable PrivateLinkServiceArgs privateLinkService) {
             this.privateLinkService = Input.ofNullable(privateLinkService);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

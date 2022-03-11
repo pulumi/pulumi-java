@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
      */
     private final List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses;
 
-    @OutputCustomType.Constructor({"simpleResponses"})
-    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse(@OutputCustomType.Parameter("simpleResponses") List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
         this.simpleResponses = simpleResponses;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesRespo
     	      this.simpleResponses = defaults.simpleResponses;
         }
 
-        public Builder setSimpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
+        public Builder simpleResponses(List<GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse> simpleResponses) {
             this.simpleResponses = Objects.requireNonNull(simpleResponses);
             return this;
         }

@@ -48,15 +48,15 @@ public final class GetWaiterResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"createTime","done","error","failure","name","success","timeout"})
+    @OutputCustomType.Constructor
     private GetWaiterResult(
-        String createTime,
-        Boolean done,
-        StatusResponse error,
-        EndConditionResponse failure,
-        String name,
-        EndConditionResponse success,
-        String timeout) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("done") Boolean done,
+        @OutputCustomType.Parameter("error") StatusResponse error,
+        @OutputCustomType.Parameter("failure") EndConditionResponse failure,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("success") EndConditionResponse success,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.createTime = createTime;
         this.done = done;
         this.error = error;
@@ -148,37 +148,37 @@ public final class GetWaiterResult {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDone(Boolean done) {
+        public Builder done(Boolean done) {
             this.done = Objects.requireNonNull(done);
             return this;
         }
 
-        public Builder setError(StatusResponse error) {
+        public Builder error(StatusResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setFailure(EndConditionResponse failure) {
+        public Builder failure(EndConditionResponse failure) {
             this.failure = Objects.requireNonNull(failure);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSuccess(EndConditionResponse success) {
+        public Builder success(EndConditionResponse success) {
             this.success = Objects.requireNonNull(success);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

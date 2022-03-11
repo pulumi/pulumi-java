@@ -51,7 +51,7 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }

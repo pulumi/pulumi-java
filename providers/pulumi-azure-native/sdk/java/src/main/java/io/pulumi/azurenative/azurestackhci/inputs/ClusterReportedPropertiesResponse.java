@@ -122,27 +122,27 @@ public final class ClusterReportedPropertiesResponse extends io.pulumi.resources
     	      this.nodes = defaults.nodes;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setLastUpdated(String lastUpdated) {
+        public Builder lastUpdated(String lastUpdated) {
             this.lastUpdated = Objects.requireNonNull(lastUpdated);
             return this;
         }
 
-        public Builder setNodes(List<ClusterNodeResponse> nodes) {
+        public Builder nodes(List<ClusterNodeResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }

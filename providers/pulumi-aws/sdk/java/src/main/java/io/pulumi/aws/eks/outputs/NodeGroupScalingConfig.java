@@ -25,11 +25,11 @@ public final class NodeGroupScalingConfig {
      */
     private final Integer minSize;
 
-    @OutputCustomType.Constructor({"desiredSize","maxSize","minSize"})
+    @OutputCustomType.Constructor
     private NodeGroupScalingConfig(
-        Integer desiredSize,
-        Integer maxSize,
-        Integer minSize) {
+        @OutputCustomType.Parameter("desiredSize") Integer desiredSize,
+        @OutputCustomType.Parameter("maxSize") Integer maxSize,
+        @OutputCustomType.Parameter("minSize") Integer minSize) {
         this.desiredSize = desiredSize;
         this.maxSize = maxSize;
         this.minSize = minSize;
@@ -81,17 +81,17 @@ public final class NodeGroupScalingConfig {
     	      this.minSize = defaults.minSize;
         }
 
-        public Builder setDesiredSize(Integer desiredSize) {
+        public Builder desiredSize(Integer desiredSize) {
             this.desiredSize = Objects.requireNonNull(desiredSize);
             return this;
         }
 
-        public Builder setMaxSize(Integer maxSize) {
+        public Builder maxSize(Integer maxSize) {
             this.maxSize = Objects.requireNonNull(maxSize);
             return this;
         }
 
-        public Builder setMinSize(Integer minSize) {
+        public Builder minSize(Integer minSize) {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }

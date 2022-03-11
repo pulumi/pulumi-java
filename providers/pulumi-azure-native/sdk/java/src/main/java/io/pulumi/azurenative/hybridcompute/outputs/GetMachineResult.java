@@ -140,33 +140,33 @@ public final class GetMachineResult {
      */
     private final String vmUuid;
 
-    @OutputCustomType.Constructor({"adFqdn","agentVersion","clientPublicKey","displayName","dnsFqdn","domainName","errorDetails","extensions","id","identity","lastStatusChange","location","locationData","machineFqdn","name","osName","osProfile","osSku","osVersion","provisioningState","status","tags","type","vmId","vmUuid"})
+    @OutputCustomType.Constructor
     private GetMachineResult(
-        String adFqdn,
-        String agentVersion,
-        @Nullable String clientPublicKey,
-        String displayName,
-        String dnsFqdn,
-        String domainName,
-        List<ErrorDetailResponse> errorDetails,
-        List<MachineExtensionInstanceViewResponse> extensions,
-        String id,
-        @Nullable MachineResponseIdentity identity,
-        String lastStatusChange,
-        String location,
-        @Nullable LocationDataResponse locationData,
-        String machineFqdn,
-        String name,
-        String osName,
-        @Nullable MachinePropertiesResponseOsProfile osProfile,
-        String osSku,
-        String osVersion,
-        String provisioningState,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vmId,
-        String vmUuid) {
+        @OutputCustomType.Parameter("adFqdn") String adFqdn,
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("clientPublicKey") @Nullable String clientPublicKey,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("dnsFqdn") String dnsFqdn,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
+        @OutputCustomType.Parameter("extensions") List<MachineExtensionInstanceViewResponse> extensions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable MachineResponseIdentity identity,
+        @OutputCustomType.Parameter("lastStatusChange") String lastStatusChange,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locationData") @Nullable LocationDataResponse locationData,
+        @OutputCustomType.Parameter("machineFqdn") String machineFqdn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osName") String osName,
+        @OutputCustomType.Parameter("osProfile") @Nullable MachinePropertiesResponseOsProfile osProfile,
+        @OutputCustomType.Parameter("osSku") String osSku,
+        @OutputCustomType.Parameter("osVersion") String osVersion,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmId") @Nullable String vmId,
+        @OutputCustomType.Parameter("vmUuid") String vmUuid) {
         this.adFqdn = adFqdn;
         this.agentVersion = agentVersion;
         this.clientPublicKey = clientPublicKey;
@@ -434,127 +434,127 @@ public final class GetMachineResult {
     	      this.vmUuid = defaults.vmUuid;
         }
 
-        public Builder setAdFqdn(String adFqdn) {
+        public Builder adFqdn(String adFqdn) {
             this.adFqdn = Objects.requireNonNull(adFqdn);
             return this;
         }
 
-        public Builder setAgentVersion(String agentVersion) {
+        public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
 
-        public Builder setClientPublicKey(@Nullable String clientPublicKey) {
+        public Builder clientPublicKey(@Nullable String clientPublicKey) {
             this.clientPublicKey = clientPublicKey;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDnsFqdn(String dnsFqdn) {
+        public Builder dnsFqdn(String dnsFqdn) {
             this.dnsFqdn = Objects.requireNonNull(dnsFqdn);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setErrorDetails(List<ErrorDetailResponse> errorDetails) {
+        public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
 
-        public Builder setExtensions(List<MachineExtensionInstanceViewResponse> extensions) {
+        public Builder extensions(List<MachineExtensionInstanceViewResponse> extensions) {
             this.extensions = Objects.requireNonNull(extensions);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable MachineResponseIdentity identity) {
+        public Builder identity(@Nullable MachineResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLastStatusChange(String lastStatusChange) {
+        public Builder lastStatusChange(String lastStatusChange) {
             this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocationData(@Nullable LocationDataResponse locationData) {
+        public Builder locationData(@Nullable LocationDataResponse locationData) {
             this.locationData = locationData;
             return this;
         }
 
-        public Builder setMachineFqdn(String machineFqdn) {
+        public Builder machineFqdn(String machineFqdn) {
             this.machineFqdn = Objects.requireNonNull(machineFqdn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsName(String osName) {
+        public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
 
-        public Builder setOsProfile(@Nullable MachinePropertiesResponseOsProfile osProfile) {
+        public Builder osProfile(@Nullable MachinePropertiesResponseOsProfile osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setOsSku(String osSku) {
+        public Builder osSku(String osSku) {
             this.osSku = Objects.requireNonNull(osSku);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }
 
-        public Builder setVmUuid(String vmUuid) {
+        public Builder vmUuid(String vmUuid) {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }

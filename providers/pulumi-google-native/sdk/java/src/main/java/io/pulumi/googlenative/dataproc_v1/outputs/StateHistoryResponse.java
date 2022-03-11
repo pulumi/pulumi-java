@@ -25,11 +25,11 @@ public final class StateHistoryResponse {
      */
     private final String stateStartTime;
 
-    @OutputCustomType.Constructor({"state","stateMessage","stateStartTime"})
+    @OutputCustomType.Constructor
     private StateHistoryResponse(
-        String state,
-        String stateMessage,
-        String stateStartTime) {
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateMessage") String stateMessage,
+        @OutputCustomType.Parameter("stateStartTime") String stateStartTime) {
         this.state = state;
         this.stateMessage = stateMessage;
         this.stateStartTime = stateStartTime;
@@ -81,17 +81,17 @@ public final class StateHistoryResponse {
     	      this.stateStartTime = defaults.stateStartTime;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateMessage(String stateMessage) {
+        public Builder stateMessage(String stateMessage) {
             this.stateMessage = Objects.requireNonNull(stateMessage);
             return this;
         }
 
-        public Builder setStateStartTime(String stateStartTime) {
+        public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }

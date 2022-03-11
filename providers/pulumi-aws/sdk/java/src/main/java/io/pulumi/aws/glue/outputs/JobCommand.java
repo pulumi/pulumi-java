@@ -27,11 +27,11 @@ public final class JobCommand {
      */
     private final String scriptLocation;
 
-    @OutputCustomType.Constructor({"name","pythonVersion","scriptLocation"})
+    @OutputCustomType.Constructor
     private JobCommand(
-        @Nullable String name,
-        @Nullable String pythonVersion,
-        String scriptLocation) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @OutputCustomType.Parameter("scriptLocation") String scriptLocation) {
         this.name = name;
         this.pythonVersion = pythonVersion;
         this.scriptLocation = scriptLocation;
@@ -83,17 +83,17 @@ public final class JobCommand {
     	      this.scriptLocation = defaults.scriptLocation;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setScriptLocation(String scriptLocation) {
+        public Builder scriptLocation(String scriptLocation) {
             this.scriptLocation = Objects.requireNonNull(scriptLocation);
             return this;
         }

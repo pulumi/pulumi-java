@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
      */
     private final String regionCode;
 
-    @OutputCustomType.Constructor({"auxiliaryTables","quasiIds","regionCode"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse(
-        List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
-        List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
-        String regionCode) {
+        @OutputCustomType.Parameter("auxiliaryTables") List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables,
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds,
+        @OutputCustomType.Parameter("regionCode") String regionCode) {
         this.auxiliaryTables = auxiliaryTables;
         this.quasiIds = quasiIds;
         this.regionCode = regionCode;
@@ -84,17 +84,17 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse {
     	      this.regionCode = defaults.regionCode;
         }
 
-        public Builder setAuxiliaryTables(List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables) {
+        public Builder auxiliaryTables(List<GooglePrivacyDlpV2StatisticalTableResponse> auxiliaryTables) {
             this.auxiliaryTables = Objects.requireNonNull(auxiliaryTables);
             return this;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2QuasiIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }
 
-        public Builder setRegionCode(String regionCode) {
+        public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }

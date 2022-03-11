@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
      */
     private final String dialogflowIntentId;
 
-    @OutputCustomType.Constructor({"confidence","dialogflowIntentId"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse(
-        Double confidence,
-        String dialogflowIntentId) {
+        @OutputCustomType.Parameter("confidence") Double confidence,
+        @OutputCustomType.Parameter("dialogflowIntentId") String dialogflowIntentId) {
         this.confidence = confidence;
         this.dialogflowIntentId = dialogflowIntentId;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowInteractionDataRe
     	      this.dialogflowIntentId = defaults.dialogflowIntentId;
         }
 
-        public Builder setConfidence(Double confidence) {
+        public Builder confidence(Double confidence) {
             this.confidence = Objects.requireNonNull(confidence);
             return this;
         }
 
-        public Builder setDialogflowIntentId(String dialogflowIntentId) {
+        public Builder dialogflowIntentId(String dialogflowIntentId) {
             this.dialogflowIntentId = Objects.requireNonNull(dialogflowIntentId);
             return this;
         }

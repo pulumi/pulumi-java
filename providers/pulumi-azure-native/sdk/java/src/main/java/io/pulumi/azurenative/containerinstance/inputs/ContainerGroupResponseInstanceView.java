@@ -74,12 +74,12 @@ public final class ContainerGroupResponseInstanceView extends io.pulumi.resource
     	      this.state = defaults.state;
         }
 
-        public Builder setEvents(List<EventResponse> events) {
+        public Builder events(List<EventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

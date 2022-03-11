@@ -24,10 +24,10 @@ public final class WorkflowStepTagStepDetailsProperties {
      */
     private final @Nullable List<WorkflowS3Tag> tags;
 
-    @OutputCustomType.Constructor({"name","tags"})
+    @OutputCustomType.Constructor
     private WorkflowStepTagStepDetailsProperties(
-        @Nullable String name,
-        @Nullable List<WorkflowS3Tag> tags) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<WorkflowS3Tag> tags) {
         this.name = name;
         this.tags = tags;
     }
@@ -69,12 +69,12 @@ public final class WorkflowStepTagStepDetailsProperties {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkflowS3Tag> tags) {
+        public Builder tags(@Nullable List<WorkflowS3Tag> tags) {
             this.tags = tags;
             return this;
         }

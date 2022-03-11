@@ -20,10 +20,10 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
      */
     private final String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"s3BucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private GetInfrastructureConfigurationLoggingS3Log(
-        String s3BucketName,
-        String s3KeyPrefix) {
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") String s3KeyPrefix) {
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }
@@ -65,12 +65,12 @@ public final class GetInfrastructureConfigurationLoggingS3Log {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3KeyPrefix(String s3KeyPrefix) {
+        public Builder s3KeyPrefix(String s3KeyPrefix) {
             this.s3KeyPrefix = Objects.requireNonNull(s3KeyPrefix);
             return this;
         }

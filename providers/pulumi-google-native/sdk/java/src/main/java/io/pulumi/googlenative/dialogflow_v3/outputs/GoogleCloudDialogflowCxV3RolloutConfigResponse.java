@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
      */
     private final List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps;
 
-    @OutputCustomType.Constructor({"failureCondition","rolloutCondition","rolloutSteps"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3RolloutConfigResponse(
-        String failureCondition,
-        String rolloutCondition,
-        List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
+        @OutputCustomType.Parameter("failureCondition") String failureCondition,
+        @OutputCustomType.Parameter("rolloutCondition") String rolloutCondition,
+        @OutputCustomType.Parameter("rolloutSteps") List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
         this.failureCondition = failureCondition;
         this.rolloutCondition = rolloutCondition;
         this.rolloutSteps = rolloutSteps;
@@ -83,17 +83,17 @@ public final class GoogleCloudDialogflowCxV3RolloutConfigResponse {
     	      this.rolloutSteps = defaults.rolloutSteps;
         }
 
-        public Builder setFailureCondition(String failureCondition) {
+        public Builder failureCondition(String failureCondition) {
             this.failureCondition = Objects.requireNonNull(failureCondition);
             return this;
         }
 
-        public Builder setRolloutCondition(String rolloutCondition) {
+        public Builder rolloutCondition(String rolloutCondition) {
             this.rolloutCondition = Objects.requireNonNull(rolloutCondition);
             return this;
         }
 
-        public Builder setRolloutSteps(List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
+        public Builder rolloutSteps(List<GoogleCloudDialogflowCxV3RolloutConfigRolloutStepResponse> rolloutSteps) {
             this.rolloutSteps = Objects.requireNonNull(rolloutSteps);
             return this;
         }

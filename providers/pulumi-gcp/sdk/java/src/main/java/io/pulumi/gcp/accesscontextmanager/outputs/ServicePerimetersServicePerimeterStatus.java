@@ -72,14 +72,14 @@ public final class ServicePerimetersServicePerimeterStatus {
      */
     private final @Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices;
 
-    @OutputCustomType.Constructor({"accessLevels","egressPolicies","ingressPolicies","resources","restrictedServices","vpcAccessibleServices"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterStatus(
-        @Nullable List<String> accessLevels,
-        @Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies,
-        @Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies,
-        @Nullable List<String> resources,
-        @Nullable List<String> restrictedServices,
-        @Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
+        @OutputCustomType.Parameter("accessLevels") @Nullable List<String> accessLevels,
+        @OutputCustomType.Parameter("egressPolicies") @Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies,
+        @OutputCustomType.Parameter("ingressPolicies") @Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("restrictedServices") @Nullable List<String> restrictedServices,
+        @OutputCustomType.Parameter("vpcAccessibleServices") @Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;
@@ -187,32 +187,32 @@ public final class ServicePerimetersServicePerimeterStatus {
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(@Nullable List<String> accessLevels) {
+        public Builder accessLevels(@Nullable List<String> accessLevels) {
             this.accessLevels = accessLevels;
             return this;
         }
 
-        public Builder setEgressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies) {
+        public Builder egressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusEgressPolicy> egressPolicies) {
             this.egressPolicies = egressPolicies;
             return this;
         }
 
-        public Builder setIngressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies) {
+        public Builder ingressPolicies(@Nullable List<ServicePerimetersServicePerimeterStatusIngressPolicy> ingressPolicies) {
             this.ingressPolicies = ingressPolicies;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setRestrictedServices(@Nullable List<String> restrictedServices) {
+        public Builder restrictedServices(@Nullable List<String> restrictedServices) {
             this.restrictedServices = restrictedServices;
             return this;
         }
 
-        public Builder setVpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(@Nullable ServicePerimetersServicePerimeterStatusVpcAccessibleServices vpcAccessibleServices) {
             this.vpcAccessibleServices = vpcAccessibleServices;
             return this;
         }

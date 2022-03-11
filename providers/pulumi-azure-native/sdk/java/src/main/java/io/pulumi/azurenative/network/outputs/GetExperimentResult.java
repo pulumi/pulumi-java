@@ -74,20 +74,20 @@ public final class GetExperimentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","enabledState","endpointA","endpointB","id","location","name","resourceState","scriptFileUri","status","tags","type"})
+    @OutputCustomType.Constructor
     private GetExperimentResult(
-        @Nullable String description,
-        @Nullable String enabledState,
-        @Nullable ExperimentEndpointResponse endpointA,
-        @Nullable ExperimentEndpointResponse endpointB,
-        String id,
-        @Nullable String location,
-        String name,
-        String resourceState,
-        String scriptFileUri,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("endpointA") @Nullable ExperimentEndpointResponse endpointA,
+        @OutputCustomType.Parameter("endpointB") @Nullable ExperimentEndpointResponse endpointB,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("scriptFileUri") String scriptFileUri,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.enabledState = enabledState;
         this.endpointA = endpointA;
@@ -229,62 +229,62 @@ public final class GetExperimentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEndpointA(@Nullable ExperimentEndpointResponse endpointA) {
+        public Builder endpointA(@Nullable ExperimentEndpointResponse endpointA) {
             this.endpointA = endpointA;
             return this;
         }
 
-        public Builder setEndpointB(@Nullable ExperimentEndpointResponse endpointB) {
+        public Builder endpointB(@Nullable ExperimentEndpointResponse endpointB) {
             this.endpointB = endpointB;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setScriptFileUri(String scriptFileUri) {
+        public Builder scriptFileUri(String scriptFileUri) {
             this.scriptFileUri = Objects.requireNonNull(scriptFileUri);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -67,14 +67,14 @@ public final class BudgetBudgetFilter {
      */
     private final @Nullable List<String> subaccounts;
 
-    @OutputCustomType.Constructor({"creditTypes","creditTypesTreatment","labels","projects","services","subaccounts"})
+    @OutputCustomType.Constructor
     private BudgetBudgetFilter(
-        @Nullable List<String> creditTypes,
-        @Nullable String creditTypesTreatment,
-        @Nullable Map<String,String> labels,
-        @Nullable List<String> projects,
-        @Nullable List<String> services,
-        @Nullable List<String> subaccounts) {
+        @OutputCustomType.Parameter("creditTypes") @Nullable List<String> creditTypes,
+        @OutputCustomType.Parameter("creditTypesTreatment") @Nullable String creditTypesTreatment,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("projects") @Nullable List<String> projects,
+        @OutputCustomType.Parameter("services") @Nullable List<String> services,
+        @OutputCustomType.Parameter("subaccounts") @Nullable List<String> subaccounts) {
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;
         this.labels = labels;
@@ -179,32 +179,32 @@ public final class BudgetBudgetFilter {
     	      this.subaccounts = defaults.subaccounts;
         }
 
-        public Builder setCreditTypes(@Nullable List<String> creditTypes) {
+        public Builder creditTypes(@Nullable List<String> creditTypes) {
             this.creditTypes = creditTypes;
             return this;
         }
 
-        public Builder setCreditTypesTreatment(@Nullable String creditTypesTreatment) {
+        public Builder creditTypesTreatment(@Nullable String creditTypesTreatment) {
             this.creditTypesTreatment = creditTypesTreatment;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setProjects(@Nullable List<String> projects) {
+        public Builder projects(@Nullable List<String> projects) {
             this.projects = projects;
             return this;
         }
 
-        public Builder setServices(@Nullable List<String> services) {
+        public Builder services(@Nullable List<String> services) {
             this.services = services;
             return this;
         }
 
-        public Builder setSubaccounts(@Nullable List<String> subaccounts) {
+        public Builder subaccounts(@Nullable List<String> subaccounts) {
             this.subaccounts = subaccounts;
             return this;
         }

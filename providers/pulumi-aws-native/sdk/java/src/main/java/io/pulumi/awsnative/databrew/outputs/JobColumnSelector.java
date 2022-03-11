@@ -14,10 +14,10 @@ public final class JobColumnSelector {
     private final @Nullable String name;
     private final @Nullable String regex;
 
-    @OutputCustomType.Constructor({"name","regex"})
+    @OutputCustomType.Constructor
     private JobColumnSelector(
-        @Nullable String name,
-        @Nullable String regex) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("regex") @Nullable String regex) {
         this.name = name;
         this.regex = regex;
     }
@@ -51,12 +51,12 @@ public final class JobColumnSelector {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRegex(@Nullable String regex) {
+        public Builder regex(@Nullable String regex) {
             this.regex = regex;
             return this;
         }

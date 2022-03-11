@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
      */
     private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
-    @OutputCustomType.Constructor({"conditions"})
-    private GooglePrivacyDlpV2ConditionsResponse(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2ConditionsResponse(@OutputCustomType.Parameter("conditions") List<GooglePrivacyDlpV2ConditionResponse> conditions) {
         this.conditions = conditions;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse {
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
+        public Builder conditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

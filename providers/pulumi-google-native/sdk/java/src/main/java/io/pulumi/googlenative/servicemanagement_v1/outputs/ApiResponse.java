@@ -50,15 +50,15 @@ public final class ApiResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"methods","mixins","name","options","sourceContext","syntax","version"})
+    @OutputCustomType.Constructor
     private ApiResponse(
-        List<MethodResponse> methods,
-        List<MixinResponse> mixins,
-        String name,
-        List<OptionResponse> options,
-        SourceContextResponse sourceContext,
-        String syntax,
-        String version) {
+        @OutputCustomType.Parameter("methods") List<MethodResponse> methods,
+        @OutputCustomType.Parameter("mixins") List<MixinResponse> mixins,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("sourceContext") SourceContextResponse sourceContext,
+        @OutputCustomType.Parameter("syntax") String syntax,
+        @OutputCustomType.Parameter("version") String version) {
         this.methods = methods;
         this.mixins = mixins;
         this.name = name;
@@ -150,37 +150,37 @@ public final class ApiResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setMethods(List<MethodResponse> methods) {
+        public Builder methods(List<MethodResponse> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setMixins(List<MixinResponse> mixins) {
+        public Builder mixins(List<MixinResponse> mixins) {
             this.mixins = Objects.requireNonNull(mixins);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setSourceContext(SourceContextResponse sourceContext) {
+        public Builder sourceContext(SourceContextResponse sourceContext) {
             this.sourceContext = Objects.requireNonNull(sourceContext);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

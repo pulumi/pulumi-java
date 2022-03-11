@@ -49,16 +49,16 @@ public final class GetClusterResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","clusterName","id","pendingTasksCount","registeredContainerInstancesCount","runningTasksCount","settings","status"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        String clusterName,
-        String id,
-        Integer pendingTasksCount,
-        Integer registeredContainerInstancesCount,
-        Integer runningTasksCount,
-        List<GetClusterSetting> settings,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("pendingTasksCount") Integer pendingTasksCount,
+        @OutputCustomType.Parameter("registeredContainerInstancesCount") Integer registeredContainerInstancesCount,
+        @OutputCustomType.Parameter("runningTasksCount") Integer runningTasksCount,
+        @OutputCustomType.Parameter("settings") List<GetClusterSetting> settings,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.clusterName = clusterName;
         this.id = id;
@@ -156,42 +156,42 @@ public final class GetClusterResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPendingTasksCount(Integer pendingTasksCount) {
+        public Builder pendingTasksCount(Integer pendingTasksCount) {
             this.pendingTasksCount = Objects.requireNonNull(pendingTasksCount);
             return this;
         }
 
-        public Builder setRegisteredContainerInstancesCount(Integer registeredContainerInstancesCount) {
+        public Builder registeredContainerInstancesCount(Integer registeredContainerInstancesCount) {
             this.registeredContainerInstancesCount = Objects.requireNonNull(registeredContainerInstancesCount);
             return this;
         }
 
-        public Builder setRunningTasksCount(Integer runningTasksCount) {
+        public Builder runningTasksCount(Integer runningTasksCount) {
             this.runningTasksCount = Objects.requireNonNull(runningTasksCount);
             return this;
         }
 
-        public Builder setSettings(List<GetClusterSetting> settings) {
+        public Builder settings(List<GetClusterSetting> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

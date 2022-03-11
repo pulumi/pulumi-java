@@ -23,10 +23,10 @@ public final class ParameterSpecificationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultValue","type"})
+    @OutputCustomType.Constructor
     private ParameterSpecificationResponse(
-        @Nullable Object defaultValue,
-        String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultValue = defaultValue;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class ParameterSpecificationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -171,82 +171,82 @@ public final class IAMCustomRoleState extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setDeleted(@Nullable Input<Boolean> deleted) {
+        public Builder deleted(@Nullable Input<Boolean> deleted) {
             this.deleted = deleted;
             return this;
         }
 
-        public Builder setDeleted(@Nullable Boolean deleted) {
+        public Builder deleted(@Nullable Boolean deleted) {
             this.deleted = Input.ofNullable(deleted);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<String>> permissions) {
+        public Builder permissions(@Nullable Input<List<String>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<String> permissions) {
+        public Builder permissions(@Nullable List<String> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRoleId(@Nullable Input<String> roleId) {
+        public Builder roleId(@Nullable Input<String> roleId) {
             this.roleId = roleId;
             return this;
         }
 
-        public Builder setRoleId(@Nullable String roleId) {
+        public Builder roleId(@Nullable String roleId) {
             this.roleId = Input.ofNullable(roleId);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

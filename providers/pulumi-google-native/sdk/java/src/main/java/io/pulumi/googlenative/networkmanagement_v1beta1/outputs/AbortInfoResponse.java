@@ -20,10 +20,10 @@ public final class AbortInfoResponse {
      */
     private final String resourceUri;
 
-    @OutputCustomType.Constructor({"cause","resourceUri"})
+    @OutputCustomType.Constructor
     private AbortInfoResponse(
-        String cause,
-        String resourceUri) {
+        @OutputCustomType.Parameter("cause") String cause,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
         this.cause = cause;
         this.resourceUri = resourceUri;
     }
@@ -65,12 +65,12 @@ public final class AbortInfoResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setCause(String cause) {
+        public Builder cause(String cause) {
             this.cause = Objects.requireNonNull(cause);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

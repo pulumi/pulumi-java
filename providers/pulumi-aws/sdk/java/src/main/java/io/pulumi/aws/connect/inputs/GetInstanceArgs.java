@@ -70,12 +70,12 @@ public final class GetInstanceArgs extends io.pulumi.resources.InvokeArgs {
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder setInstanceAlias(@Nullable String instanceAlias) {
+        public Builder instanceAlias(@Nullable String instanceAlias) {
             this.instanceAlias = instanceAlias;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }

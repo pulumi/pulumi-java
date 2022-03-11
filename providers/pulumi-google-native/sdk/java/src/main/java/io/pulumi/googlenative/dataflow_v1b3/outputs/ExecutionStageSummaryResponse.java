@@ -49,15 +49,15 @@ public final class ExecutionStageSummaryResponse {
      */
     private final List<String> prerequisiteStage;
 
-    @OutputCustomType.Constructor({"componentSource","componentTransform","inputSource","kind","name","outputSource","prerequisiteStage"})
+    @OutputCustomType.Constructor
     private ExecutionStageSummaryResponse(
-        List<ComponentSourceResponse> componentSource,
-        List<ComponentTransformResponse> componentTransform,
-        List<StageSourceResponse> inputSource,
-        String kind,
-        String name,
-        List<StageSourceResponse> outputSource,
-        List<String> prerequisiteStage) {
+        @OutputCustomType.Parameter("componentSource") List<ComponentSourceResponse> componentSource,
+        @OutputCustomType.Parameter("componentTransform") List<ComponentTransformResponse> componentTransform,
+        @OutputCustomType.Parameter("inputSource") List<StageSourceResponse> inputSource,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputSource") List<StageSourceResponse> outputSource,
+        @OutputCustomType.Parameter("prerequisiteStage") List<String> prerequisiteStage) {
         this.componentSource = componentSource;
         this.componentTransform = componentTransform;
         this.inputSource = inputSource;
@@ -149,37 +149,37 @@ public final class ExecutionStageSummaryResponse {
     	      this.prerequisiteStage = defaults.prerequisiteStage;
         }
 
-        public Builder setComponentSource(List<ComponentSourceResponse> componentSource) {
+        public Builder componentSource(List<ComponentSourceResponse> componentSource) {
             this.componentSource = Objects.requireNonNull(componentSource);
             return this;
         }
 
-        public Builder setComponentTransform(List<ComponentTransformResponse> componentTransform) {
+        public Builder componentTransform(List<ComponentTransformResponse> componentTransform) {
             this.componentTransform = Objects.requireNonNull(componentTransform);
             return this;
         }
 
-        public Builder setInputSource(List<StageSourceResponse> inputSource) {
+        public Builder inputSource(List<StageSourceResponse> inputSource) {
             this.inputSource = Objects.requireNonNull(inputSource);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputSource(List<StageSourceResponse> outputSource) {
+        public Builder outputSource(List<StageSourceResponse> outputSource) {
             this.outputSource = Objects.requireNonNull(outputSource);
             return this;
         }
 
-        public Builder setPrerequisiteStage(List<String> prerequisiteStage) {
+        public Builder prerequisiteStage(List<String> prerequisiteStage) {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }

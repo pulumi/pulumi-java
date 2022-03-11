@@ -29,11 +29,11 @@ public final class GetLocationS3Result {
      */
     private final @Nullable List<LocationS3Tag> tags;
 
-    @OutputCustomType.Constructor({"locationArn","locationUri","tags"})
+    @OutputCustomType.Constructor
     private GetLocationS3Result(
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable List<LocationS3Tag> tags) {
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationS3Tag> tags) {
         this.locationArn = locationArn;
         this.locationUri = locationUri;
         this.tags = tags;
@@ -85,17 +85,17 @@ public final class GetLocationS3Result {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationS3Tag> tags) {
+        public Builder tags(@Nullable List<LocationS3Tag> tags) {
             this.tags = tags;
             return this;
         }

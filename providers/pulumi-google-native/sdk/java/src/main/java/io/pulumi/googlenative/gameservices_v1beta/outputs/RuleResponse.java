@@ -48,15 +48,15 @@ public final class RuleResponse {
      */
     private final List<String> permissions;
 
-    @OutputCustomType.Constructor({"action","conditions","description","in","logConfig","notIn","permissions"})
+    @OutputCustomType.Constructor
     private RuleResponse(
-        String action,
-        List<ConditionResponse> conditions,
-        String description,
-        List<String> in,
-        List<LogConfigResponse> logConfig,
-        List<String> notIn,
-        List<String> permissions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("conditions") List<ConditionResponse> conditions,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("in") List<String> in,
+        @OutputCustomType.Parameter("logConfig") List<LogConfigResponse> logConfig,
+        @OutputCustomType.Parameter("notIn") List<String> notIn,
+        @OutputCustomType.Parameter("permissions") List<String> permissions) {
         this.action = action;
         this.conditions = conditions;
         this.description = description;
@@ -148,37 +148,37 @@ public final class RuleResponse {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setConditions(List<ConditionResponse> conditions) {
+        public Builder conditions(List<ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIn(List<String> in) {
+        public Builder in(List<String> in) {
             this.in = Objects.requireNonNull(in);
             return this;
         }
 
-        public Builder setLogConfig(List<LogConfigResponse> logConfig) {
+        public Builder logConfig(List<LogConfigResponse> logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setNotIn(List<String> notIn) {
+        public Builder notIn(List<String> notIn) {
             this.notIn = Objects.requireNonNull(notIn);
             return this;
         }
 
-        public Builder setPermissions(List<String> permissions) {
+        public Builder permissions(List<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

@@ -28,11 +28,11 @@ public final class StagingSettingsResponse {
      */
     private final @Nullable Object path;
 
-    @OutputCustomType.Constructor({"enableCompression","linkedServiceName","path"})
+    @OutputCustomType.Constructor
     private StagingSettingsResponse(
-        @Nullable Object enableCompression,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object path) {
+        @OutputCustomType.Parameter("enableCompression") @Nullable Object enableCompression,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("path") @Nullable Object path) {
         this.enableCompression = enableCompression;
         this.linkedServiceName = linkedServiceName;
         this.path = path;
@@ -84,17 +84,17 @@ public final class StagingSettingsResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setEnableCompression(@Nullable Object enableCompression) {
+        public Builder enableCompression(@Nullable Object enableCompression) {
             this.enableCompression = enableCompression;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }

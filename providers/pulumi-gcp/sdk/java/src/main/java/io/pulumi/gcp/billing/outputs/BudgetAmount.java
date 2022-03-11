@@ -29,10 +29,10 @@ public final class BudgetAmount {
      */
     private final @Nullable BudgetAmountSpecifiedAmount specifiedAmount;
 
-    @OutputCustomType.Constructor({"lastPeriodAmount","specifiedAmount"})
+    @OutputCustomType.Constructor
     private BudgetAmount(
-        @Nullable Boolean lastPeriodAmount,
-        @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
+        @OutputCustomType.Parameter("lastPeriodAmount") @Nullable Boolean lastPeriodAmount,
+        @OutputCustomType.Parameter("specifiedAmount") @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }
@@ -80,12 +80,12 @@ public final class BudgetAmount {
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Boolean lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
+        public Builder specifiedAmount(@Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }

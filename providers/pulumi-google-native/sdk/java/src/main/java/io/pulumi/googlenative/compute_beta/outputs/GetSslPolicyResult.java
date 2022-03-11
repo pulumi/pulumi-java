@@ -67,19 +67,19 @@ public final class GetSslPolicyResult {
      */
     private final List<SslPolicyWarningsItemResponse> warnings;
 
-    @OutputCustomType.Constructor({"creationTimestamp","customFeatures","description","enabledFeatures","fingerprint","kind","minTlsVersion","name","profile","selfLink","warnings"})
+    @OutputCustomType.Constructor
     private GetSslPolicyResult(
-        String creationTimestamp,
-        List<String> customFeatures,
-        String description,
-        List<String> enabledFeatures,
-        String fingerprint,
-        String kind,
-        String minTlsVersion,
-        String name,
-        String profile,
-        String selfLink,
-        List<SslPolicyWarningsItemResponse> warnings) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customFeatures") List<String> customFeatures,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabledFeatures") List<String> enabledFeatures,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("minTlsVersion") String minTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("warnings") List<SslPolicyWarningsItemResponse> warnings) {
         this.creationTimestamp = creationTimestamp;
         this.customFeatures = customFeatures;
         this.description = description;
@@ -211,57 +211,57 @@ public final class GetSslPolicyResult {
     	      this.warnings = defaults.warnings;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomFeatures(List<String> customFeatures) {
+        public Builder customFeatures(List<String> customFeatures) {
             this.customFeatures = Objects.requireNonNull(customFeatures);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnabledFeatures(List<String> enabledFeatures) {
+        public Builder enabledFeatures(List<String> enabledFeatures) {
             this.enabledFeatures = Objects.requireNonNull(enabledFeatures);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMinTlsVersion(String minTlsVersion) {
+        public Builder minTlsVersion(String minTlsVersion) {
             this.minTlsVersion = Objects.requireNonNull(minTlsVersion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProfile(String profile) {
+        public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setWarnings(List<SslPolicyWarningsItemResponse> warnings) {
+        public Builder warnings(List<SslPolicyWarningsItemResponse> warnings) {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }

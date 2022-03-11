@@ -21,10 +21,10 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"customerManagedEncryption","location"})
+    @OutputCustomType.Constructor
     private ReplicaResponse(
-        CustomerManagedEncryptionResponse customerManagedEncryption,
-        String location) {
+        @OutputCustomType.Parameter("customerManagedEncryption") CustomerManagedEncryptionResponse customerManagedEncryption,
+        @OutputCustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }
@@ -66,12 +66,12 @@ public final class ReplicaResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setCustomerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
+        public Builder customerManagedEncryption(CustomerManagedEncryptionResponse customerManagedEncryption) {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

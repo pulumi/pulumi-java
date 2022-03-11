@@ -27,11 +27,11 @@ public final class TlsCertificateContextResponse {
      */
     private final SdsConfigResponse sdsConfig;
 
-    @OutputCustomType.Constructor({"certificatePaths","certificateSource","sdsConfig"})
+    @OutputCustomType.Constructor
     private TlsCertificateContextResponse(
-        TlsCertificatePathsResponse certificatePaths,
-        String certificateSource,
-        SdsConfigResponse sdsConfig) {
+        @OutputCustomType.Parameter("certificatePaths") TlsCertificatePathsResponse certificatePaths,
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("sdsConfig") SdsConfigResponse sdsConfig) {
         this.certificatePaths = certificatePaths;
         this.certificateSource = certificateSource;
         this.sdsConfig = sdsConfig;
@@ -83,17 +83,17 @@ public final class TlsCertificateContextResponse {
     	      this.sdsConfig = defaults.sdsConfig;
         }
 
-        public Builder setCertificatePaths(TlsCertificatePathsResponse certificatePaths) {
+        public Builder certificatePaths(TlsCertificatePathsResponse certificatePaths) {
             this.certificatePaths = Objects.requireNonNull(certificatePaths);
             return this;
         }
 
-        public Builder setCertificateSource(String certificateSource) {
+        public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
 
-        public Builder setSdsConfig(SdsConfigResponse sdsConfig) {
+        public Builder sdsConfig(SdsConfigResponse sdsConfig) {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }

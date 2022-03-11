@@ -17,8 +17,8 @@ public final class DistributionGroupListReceiverValueResponse {
      */
     private final @Nullable List<String> distributionGroups;
 
-    @OutputCustomType.Constructor({"distributionGroups"})
-    private DistributionGroupListReceiverValueResponse(@Nullable List<String> distributionGroups) {
+    @OutputCustomType.Constructor
+    private DistributionGroupListReceiverValueResponse(@OutputCustomType.Parameter("distributionGroups") @Nullable List<String> distributionGroups) {
         this.distributionGroups = distributionGroups;
     }
 
@@ -50,7 +50,7 @@ public final class DistributionGroupListReceiverValueResponse {
     	      this.distributionGroups = defaults.distributionGroups;
         }
 
-        public Builder setDistributionGroups(@Nullable List<String> distributionGroups) {
+        public Builder distributionGroups(@Nullable List<String> distributionGroups) {
             this.distributionGroups = distributionGroups;
             return this;
         }

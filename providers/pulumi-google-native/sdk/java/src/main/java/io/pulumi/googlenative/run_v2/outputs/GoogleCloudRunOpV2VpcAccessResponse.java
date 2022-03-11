@@ -20,10 +20,10 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
      */
     private final String egress;
 
-    @OutputCustomType.Constructor({"connector","egress"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2VpcAccessResponse(
-        String connector,
-        String egress) {
+        @OutputCustomType.Parameter("connector") String connector,
+        @OutputCustomType.Parameter("egress") String egress) {
         this.connector = connector;
         this.egress = egress;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudRunOpV2VpcAccessResponse {
     	      this.egress = defaults.egress;
         }
 
-        public Builder setConnector(String connector) {
+        public Builder connector(String connector) {
             this.connector = Objects.requireNonNull(connector);
             return this;
         }
 
-        public Builder setEgress(String egress) {
+        public Builder egress(String egress) {
             this.egress = Objects.requireNonNull(egress);
             return this;
         }

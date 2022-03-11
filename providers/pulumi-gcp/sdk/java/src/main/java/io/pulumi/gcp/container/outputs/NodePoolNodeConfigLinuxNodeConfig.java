@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class NodePoolNodeConfigLinuxNodeConfig {
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private NodePoolNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private NodePoolNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 
@@ -41,7 +41,7 @@ public final class NodePoolNodeConfigLinuxNodeConfig {
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder setSysctls(Map<String,String> sysctls) {
+        public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }

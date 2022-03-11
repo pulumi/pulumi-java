@@ -73,14 +73,14 @@ public final class RegionUrlMapPathMatcherRouteRule {
      */
     private final @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"headerAction","matchRules","priority","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRule(
-        @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
-        @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
-        Integer priority,
-        @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
-        @Nullable String service,
-        @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("headerAction") @Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction,
+        @OutputCustomType.Parameter("matchRules") @Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
         this.headerAction = headerAction;
         this.matchRules = matchRules;
         this.priority = priority;
@@ -187,32 +187,32 @@ public final class RegionUrlMapPathMatcherRouteRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setHeaderAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction) {
+        public Builder headerAction(@Nullable RegionUrlMapPathMatcherRouteRuleHeaderAction headerAction) {
             this.headerAction = headerAction;
             return this;
         }
 
-        public Builder setMatchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules) {
+        public Builder matchRules(@Nullable List<RegionUrlMapPathMatcherRouteRuleMatchRule> matchRules) {
             this.matchRules = matchRules;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable RegionUrlMapPathMatcherRouteRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherRouteRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

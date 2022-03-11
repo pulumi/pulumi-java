@@ -31,12 +31,12 @@ public final class GetCertificateAuthorityResult {
     private final @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration;
     private final @Nullable List<CertificateAuthorityTag> tags;
 
-    @OutputCustomType.Constructor({"arn","certificateSigningRequest","revocationConfiguration","tags"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityResult(
-        @Nullable String arn,
-        @Nullable String certificateSigningRequest,
-        @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
-        @Nullable List<CertificateAuthorityTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("certificateSigningRequest") @Nullable String certificateSigningRequest,
+        @OutputCustomType.Parameter("revocationConfiguration") @Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable List<CertificateAuthorityTag> tags) {
         this.arn = arn;
         this.certificateSigningRequest = certificateSigningRequest;
         this.revocationConfiguration = revocationConfiguration;
@@ -94,22 +94,22 @@ public final class GetCertificateAuthorityResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCertificateSigningRequest(@Nullable String certificateSigningRequest) {
+        public Builder certificateSigningRequest(@Nullable String certificateSigningRequest) {
             this.certificateSigningRequest = certificateSigningRequest;
             return this;
         }
 
-        public Builder setRevocationConfiguration(@Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration) {
+        public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfiguration revocationConfiguration) {
             this.revocationConfiguration = revocationConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CertificateAuthorityTag> tags) {
+        public Builder tags(@Nullable List<CertificateAuthorityTag> tags) {
             this.tags = tags;
             return this;
         }

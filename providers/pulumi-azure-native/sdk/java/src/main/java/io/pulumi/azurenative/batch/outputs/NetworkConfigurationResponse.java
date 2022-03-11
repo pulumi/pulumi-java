@@ -29,11 +29,11 @@ public final class NetworkConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"endpointConfiguration","publicIPAddressConfiguration","subnetId"})
+    @OutputCustomType.Constructor
     private NetworkConfigurationResponse(
-        @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
-        @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("endpointConfiguration") @Nullable PoolEndpointConfigurationResponse endpointConfiguration,
+        @OutputCustomType.Parameter("publicIPAddressConfiguration") @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.endpointConfiguration = endpointConfiguration;
         this.publicIPAddressConfiguration = publicIPAddressConfiguration;
         this.subnetId = subnetId;
@@ -85,17 +85,17 @@ public final class NetworkConfigurationResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setEndpointConfiguration(@Nullable PoolEndpointConfigurationResponse endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable PoolEndpointConfigurationResponse endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setPublicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
+        public Builder publicIPAddressConfiguration(@Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration) {
             this.publicIPAddressConfiguration = publicIPAddressConfiguration;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

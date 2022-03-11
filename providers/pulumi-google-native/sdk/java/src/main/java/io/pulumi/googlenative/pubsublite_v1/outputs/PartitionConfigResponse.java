@@ -21,10 +21,10 @@ public final class PartitionConfigResponse {
      */
     private final String count;
 
-    @OutputCustomType.Constructor({"capacity","count"})
+    @OutputCustomType.Constructor
     private PartitionConfigResponse(
-        CapacityResponse capacity,
-        String count) {
+        @OutputCustomType.Parameter("capacity") CapacityResponse capacity,
+        @OutputCustomType.Parameter("count") String count) {
         this.capacity = capacity;
         this.count = count;
     }
@@ -66,12 +66,12 @@ public final class PartitionConfigResponse {
     	      this.count = defaults.count;
         }
 
-        public Builder setCapacity(CapacityResponse capacity) {
+        public Builder capacity(CapacityResponse capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }

@@ -29,11 +29,11 @@ public final class OfficeDataConnectorDataTypesResponse {
      */
     private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
-    @OutputCustomType.Constructor({"exchange","sharePoint","teams"})
+    @OutputCustomType.Constructor
     private OfficeDataConnectorDataTypesResponse(
-        @Nullable OfficeDataConnectorDataTypesResponseExchange exchange,
-        @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint,
-        @Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
+        @OutputCustomType.Parameter("exchange") @Nullable OfficeDataConnectorDataTypesResponseExchange exchange,
+        @OutputCustomType.Parameter("sharePoint") @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint,
+        @OutputCustomType.Parameter("teams") @Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
         this.exchange = exchange;
         this.sharePoint = sharePoint;
         this.teams = teams;
@@ -85,17 +85,17 @@ public final class OfficeDataConnectorDataTypesResponse {
     	      this.teams = defaults.teams;
         }
 
-        public Builder setExchange(@Nullable OfficeDataConnectorDataTypesResponseExchange exchange) {
+        public Builder exchange(@Nullable OfficeDataConnectorDataTypesResponseExchange exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setSharePoint(@Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint) {
+        public Builder sharePoint(@Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint) {
             this.sharePoint = sharePoint;
             return this;
         }
 
-        public Builder setTeams(@Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
+        public Builder teams(@Nullable OfficeDataConnectorDataTypesResponseTeams teams) {
             this.teams = teams;
             return this;
         }

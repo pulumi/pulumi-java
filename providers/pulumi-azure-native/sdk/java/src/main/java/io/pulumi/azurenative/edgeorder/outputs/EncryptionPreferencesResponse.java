@@ -17,8 +17,8 @@ public final class EncryptionPreferencesResponse {
      */
     private final @Nullable String doubleEncryptionStatus;
 
-    @OutputCustomType.Constructor({"doubleEncryptionStatus"})
-    private EncryptionPreferencesResponse(@Nullable String doubleEncryptionStatus) {
+    @OutputCustomType.Constructor
+    private EncryptionPreferencesResponse(@OutputCustomType.Parameter("doubleEncryptionStatus") @Nullable String doubleEncryptionStatus) {
         this.doubleEncryptionStatus = doubleEncryptionStatus;
     }
 
@@ -50,7 +50,7 @@ public final class EncryptionPreferencesResponse {
     	      this.doubleEncryptionStatus = defaults.doubleEncryptionStatus;
         }
 
-        public Builder setDoubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
+        public Builder doubleEncryptionStatus(@Nullable String doubleEncryptionStatus) {
             this.doubleEncryptionStatus = doubleEncryptionStatus;
             return this;
         }

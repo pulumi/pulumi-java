@@ -62,12 +62,12 @@ public final class NetworkInsightsAnalysisAlternatePathHint extends io.pulumi.re
     	      this.componentId = defaults.componentId;
         }
 
-        public Builder setComponentArn(@Nullable String componentArn) {
+        public Builder componentArn(@Nullable String componentArn) {
             this.componentArn = componentArn;
             return this;
         }
 
-        public Builder setComponentId(@Nullable String componentId) {
+        public Builder componentId(@Nullable String componentId) {
             this.componentId = componentId;
             return this;
         }

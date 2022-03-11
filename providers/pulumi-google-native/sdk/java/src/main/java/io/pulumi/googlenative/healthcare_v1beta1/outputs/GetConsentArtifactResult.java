@@ -54,16 +54,16 @@ public final class GetConsentArtifactResult {
      */
     private final SignatureResponse witnessSignature;
 
-    @OutputCustomType.Constructor({"consentContentScreenshots","consentContentVersion","guardianSignature","metadata","name","userId","userSignature","witnessSignature"})
+    @OutputCustomType.Constructor
     private GetConsentArtifactResult(
-        List<ImageResponse> consentContentScreenshots,
-        String consentContentVersion,
-        SignatureResponse guardianSignature,
-        Map<String,String> metadata,
-        String name,
-        String userId,
-        SignatureResponse userSignature,
-        SignatureResponse witnessSignature) {
+        @OutputCustomType.Parameter("consentContentScreenshots") List<ImageResponse> consentContentScreenshots,
+        @OutputCustomType.Parameter("consentContentVersion") String consentContentVersion,
+        @OutputCustomType.Parameter("guardianSignature") SignatureResponse guardianSignature,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userSignature") SignatureResponse userSignature,
+        @OutputCustomType.Parameter("witnessSignature") SignatureResponse witnessSignature) {
         this.consentContentScreenshots = consentContentScreenshots;
         this.consentContentVersion = consentContentVersion;
         this.guardianSignature = guardianSignature;
@@ -165,42 +165,42 @@ public final class GetConsentArtifactResult {
     	      this.witnessSignature = defaults.witnessSignature;
         }
 
-        public Builder setConsentContentScreenshots(List<ImageResponse> consentContentScreenshots) {
+        public Builder consentContentScreenshots(List<ImageResponse> consentContentScreenshots) {
             this.consentContentScreenshots = Objects.requireNonNull(consentContentScreenshots);
             return this;
         }
 
-        public Builder setConsentContentVersion(String consentContentVersion) {
+        public Builder consentContentVersion(String consentContentVersion) {
             this.consentContentVersion = Objects.requireNonNull(consentContentVersion);
             return this;
         }
 
-        public Builder setGuardianSignature(SignatureResponse guardianSignature) {
+        public Builder guardianSignature(SignatureResponse guardianSignature) {
             this.guardianSignature = Objects.requireNonNull(guardianSignature);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserSignature(SignatureResponse userSignature) {
+        public Builder userSignature(SignatureResponse userSignature) {
             this.userSignature = Objects.requireNonNull(userSignature);
             return this;
         }
 
-        public Builder setWitnessSignature(SignatureResponse witnessSignature) {
+        public Builder witnessSignature(SignatureResponse witnessSignature) {
             this.witnessSignature = Objects.requireNonNull(witnessSignature);
             return this;
         }

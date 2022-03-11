@@ -77,22 +77,22 @@ public final class FlowLogFormatParametersArgs extends io.pulumi.resources.Resou
     	      this.version = defaults.version;
         }
 
-        public Builder setType(@Nullable Input<Either<String,FlowLogFormatType>> type) {
+        public Builder type(@Nullable Input<Either<String,FlowLogFormatType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,FlowLogFormatType> type) {
+        public Builder type(@Nullable Either<String,FlowLogFormatType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

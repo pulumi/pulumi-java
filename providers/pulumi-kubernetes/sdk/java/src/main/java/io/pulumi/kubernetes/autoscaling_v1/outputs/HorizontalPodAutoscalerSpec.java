@@ -33,12 +33,12 @@ public final class HorizontalPodAutoscalerSpec {
      */
     private final @Nullable Integer targetCPUUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"maxReplicas","minReplicas","scaleTargetRef","targetCPUUtilizationPercentage"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerSpec(
-        Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        CrossVersionObjectReference scaleTargetRef,
-        @Nullable Integer targetCPUUtilizationPercentage) {
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("scaleTargetRef") CrossVersionObjectReference scaleTargetRef,
+        @OutputCustomType.Parameter("targetCPUUtilizationPercentage") @Nullable Integer targetCPUUtilizationPercentage) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.scaleTargetRef = scaleTargetRef;
@@ -100,22 +100,22 @@ public final class HorizontalPodAutoscalerSpec {
     	      this.targetCPUUtilizationPercentage = defaults.targetCPUUtilizationPercentage;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setScaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
+        public Builder scaleTargetRef(CrossVersionObjectReference scaleTargetRef) {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
 
-        public Builder setTargetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
+        public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
             this.targetCPUUtilizationPercentage = targetCPUUtilizationPercentage;
             return this;
         }

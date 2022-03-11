@@ -220,112 +220,112 @@ public final class SapOpenHubSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Input<Object> additionalColumns) {
+        public Builder additionalColumns(@Nullable Input<Object> additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = Input.ofNullable(additionalColumns);
             return this;
         }
 
-        public Builder setBaseRequestId(@Nullable Input<Object> baseRequestId) {
+        public Builder baseRequestId(@Nullable Input<Object> baseRequestId) {
             this.baseRequestId = baseRequestId;
             return this;
         }
 
-        public Builder setBaseRequestId(@Nullable Object baseRequestId) {
+        public Builder baseRequestId(@Nullable Object baseRequestId) {
             this.baseRequestId = Input.ofNullable(baseRequestId);
             return this;
         }
 
-        public Builder setCustomRfcReadTableFunctionModule(@Nullable Input<Object> customRfcReadTableFunctionModule) {
+        public Builder customRfcReadTableFunctionModule(@Nullable Input<Object> customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = customRfcReadTableFunctionModule;
             return this;
         }
 
-        public Builder setCustomRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
+        public Builder customRfcReadTableFunctionModule(@Nullable Object customRfcReadTableFunctionModule) {
             this.customRfcReadTableFunctionModule = Input.ofNullable(customRfcReadTableFunctionModule);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setExcludeLastRequest(@Nullable Input<Object> excludeLastRequest) {
+        public Builder excludeLastRequest(@Nullable Input<Object> excludeLastRequest) {
             this.excludeLastRequest = excludeLastRequest;
             return this;
         }
 
-        public Builder setExcludeLastRequest(@Nullable Object excludeLastRequest) {
+        public Builder excludeLastRequest(@Nullable Object excludeLastRequest) {
             this.excludeLastRequest = Input.ofNullable(excludeLastRequest);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Input<Object> queryTimeout) {
+        public Builder queryTimeout(@Nullable Input<Object> queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = Input.ofNullable(queryTimeout);
             return this;
         }
 
-        public Builder setSapDataColumnDelimiter(@Nullable Input<Object> sapDataColumnDelimiter) {
+        public Builder sapDataColumnDelimiter(@Nullable Input<Object> sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = sapDataColumnDelimiter;
             return this;
         }
 
-        public Builder setSapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
+        public Builder sapDataColumnDelimiter(@Nullable Object sapDataColumnDelimiter) {
             this.sapDataColumnDelimiter = Input.ofNullable(sapDataColumnDelimiter);
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Input<Object> sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = Input.ofNullable(sourceRetryCount);
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Input<Object> sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = Input.ofNullable(sourceRetryWait);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -22,10 +22,10 @@ public final class ClusterNodeConfigShieldedInstanceConfig {
      */
     private final @Nullable Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
+    @OutputCustomType.Constructor
     private ClusterNodeConfigShieldedInstanceConfig(
-        @Nullable Boolean enableIntegrityMonitoring,
-        @Nullable Boolean enableSecureBoot) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }
@@ -67,12 +67,12 @@ public final class ClusterNodeConfigShieldedInstanceConfig {
     	      this.enableSecureBoot = defaults.enableSecureBoot;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }

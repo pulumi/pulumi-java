@@ -73,20 +73,20 @@ public final class GetSourceControlResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoSync","branch","creationTime","description","folderPath","id","lastModifiedTime","name","publishRunbook","repoUrl","sourceType","type"})
+    @OutputCustomType.Constructor
     private GetSourceControlResult(
-        @Nullable Boolean autoSync,
-        @Nullable String branch,
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String folderPath,
-        String id,
-        @Nullable String lastModifiedTime,
-        String name,
-        @Nullable Boolean publishRunbook,
-        @Nullable String repoUrl,
-        @Nullable String sourceType,
-        String type) {
+        @OutputCustomType.Parameter("autoSync") @Nullable Boolean autoSync,
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folderPath") @Nullable String folderPath,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publishRunbook") @Nullable Boolean publishRunbook,
+        @OutputCustomType.Parameter("repoUrl") @Nullable String repoUrl,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoSync = autoSync;
         this.branch = branch;
         this.creationTime = creationTime;
@@ -228,62 +228,62 @@ public final class GetSourceControlResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoSync(@Nullable Boolean autoSync) {
+        public Builder autoSync(@Nullable Boolean autoSync) {
             this.autoSync = autoSync;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable String folderPath) {
+        public Builder folderPath(@Nullable String folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublishRunbook(@Nullable Boolean publishRunbook) {
+        public Builder publishRunbook(@Nullable Boolean publishRunbook) {
             this.publishRunbook = publishRunbook;
             return this;
         }
 
-        public Builder setRepoUrl(@Nullable String repoUrl) {
+        public Builder repoUrl(@Nullable String repoUrl) {
             this.repoUrl = repoUrl;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

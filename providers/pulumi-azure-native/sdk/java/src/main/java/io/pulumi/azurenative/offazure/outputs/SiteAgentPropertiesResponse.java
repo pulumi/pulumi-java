@@ -37,13 +37,13 @@ public final class SiteAgentPropertiesResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"id","keyVaultId","keyVaultUri","lastHeartBeatUtc","version"})
+    @OutputCustomType.Constructor
     private SiteAgentPropertiesResponse(
-        String id,
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultUri,
-        String lastHeartBeatUtc,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @OutputCustomType.Parameter("lastHeartBeatUtc") String lastHeartBeatUtc,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;
@@ -115,27 +115,27 @@ public final class SiteAgentPropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
-        public Builder setLastHeartBeatUtc(String lastHeartBeatUtc) {
+        public Builder lastHeartBeatUtc(String lastHeartBeatUtc) {
             this.lastHeartBeatUtc = Objects.requireNonNull(lastHeartBeatUtc);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

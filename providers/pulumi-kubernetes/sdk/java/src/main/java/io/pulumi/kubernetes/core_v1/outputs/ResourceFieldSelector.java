@@ -27,11 +27,11 @@ public final class ResourceFieldSelector {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor({"containerName","divisor","resource"})
+    @OutputCustomType.Constructor
     private ResourceFieldSelector(
-        @Nullable String containerName,
-        @Nullable String divisor,
-        String resource) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("divisor") @Nullable String divisor,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.containerName = containerName;
         this.divisor = divisor;
         this.resource = resource;
@@ -83,17 +83,17 @@ public final class ResourceFieldSelector {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setDivisor(@Nullable String divisor) {
+        public Builder divisor(@Nullable String divisor) {
             this.divisor = divisor;
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

@@ -15,12 +15,12 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
     private final List<String> oauthScopes;
     private final String serviceAccount;
 
-    @OutputCustomType.Constructor({"imageType","minCpuPlatform","oauthScopes","serviceAccount"})
+    @OutputCustomType.Constructor
     private GetClusterClusterAutoscalingAutoProvisioningDefault(
-        String imageType,
-        String minCpuPlatform,
-        List<String> oauthScopes,
-        String serviceAccount) {
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;
@@ -66,22 +66,22 @@ public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }

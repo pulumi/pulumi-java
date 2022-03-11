@@ -50,15 +50,15 @@ public final class ManagedIntegrationRuntimeStatusResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","dataFactoryName","lastOperation","nodes","otherErrors","state","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeStatusResponse(
-        String createTime,
-        String dataFactoryName,
-        ManagedIntegrationRuntimeOperationResultResponse lastOperation,
-        List<ManagedIntegrationRuntimeNodeResponse> nodes,
-        List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataFactoryName") String dataFactoryName,
+        @OutputCustomType.Parameter("lastOperation") ManagedIntegrationRuntimeOperationResultResponse lastOperation,
+        @OutputCustomType.Parameter("nodes") List<ManagedIntegrationRuntimeNodeResponse> nodes,
+        @OutputCustomType.Parameter("otherErrors") List<ManagedIntegrationRuntimeErrorResponse> otherErrors,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.dataFactoryName = dataFactoryName;
         this.lastOperation = lastOperation;
@@ -151,37 +151,37 @@ public final class ManagedIntegrationRuntimeStatusResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataFactoryName(String dataFactoryName) {
+        public Builder dataFactoryName(String dataFactoryName) {
             this.dataFactoryName = Objects.requireNonNull(dataFactoryName);
             return this;
         }
 
-        public Builder setLastOperation(ManagedIntegrationRuntimeOperationResultResponse lastOperation) {
+        public Builder lastOperation(ManagedIntegrationRuntimeOperationResultResponse lastOperation) {
             this.lastOperation = Objects.requireNonNull(lastOperation);
             return this;
         }
 
-        public Builder setNodes(List<ManagedIntegrationRuntimeNodeResponse> nodes) {
+        public Builder nodes(List<ManagedIntegrationRuntimeNodeResponse> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setOtherErrors(List<ManagedIntegrationRuntimeErrorResponse> otherErrors) {
+        public Builder otherErrors(List<ManagedIntegrationRuntimeErrorResponse> otherErrors) {
             this.otherErrors = Objects.requireNonNull(otherErrors);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

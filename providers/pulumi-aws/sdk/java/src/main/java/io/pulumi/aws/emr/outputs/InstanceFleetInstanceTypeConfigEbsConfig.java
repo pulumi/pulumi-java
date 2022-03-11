@@ -33,12 +33,12 @@ public final class InstanceFleetInstanceTypeConfigEbsConfig {
      */
     private final @Nullable Integer volumesPerInstance;
 
-    @OutputCustomType.Constructor({"iops","size","type","volumesPerInstance"})
+    @OutputCustomType.Constructor
     private InstanceFleetInstanceTypeConfigEbsConfig(
-        @Nullable Integer iops,
-        Integer size,
-        String type,
-        @Nullable Integer volumesPerInstance) {
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumesPerInstance") @Nullable Integer volumesPerInstance) {
         this.iops = iops;
         this.size = size;
         this.type = type;
@@ -100,22 +100,22 @@ public final class InstanceFleetInstanceTypeConfigEbsConfig {
     	      this.volumesPerInstance = defaults.volumesPerInstance;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumesPerInstance(@Nullable Integer volumesPerInstance) {
+        public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
             this.volumesPerInstance = volumesPerInstance;
             return this;
         }

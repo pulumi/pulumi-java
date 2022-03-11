@@ -15,10 +15,10 @@ public final class TaskDefinitionVolumeFrom {
     private final @Nullable Boolean readOnly;
     private final @Nullable String sourceContainer;
 
-    @OutputCustomType.Constructor({"readOnly","sourceContainer"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeFrom(
-        @Nullable Boolean readOnly,
-        @Nullable String sourceContainer) {
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("sourceContainer") @Nullable String sourceContainer) {
         this.readOnly = readOnly;
         this.sourceContainer = sourceContainer;
     }
@@ -52,12 +52,12 @@ public final class TaskDefinitionVolumeFrom {
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSourceContainer(@Nullable String sourceContainer) {
+        public Builder sourceContainer(@Nullable String sourceContainer) {
             this.sourceContainer = sourceContainer;
             return this;
         }

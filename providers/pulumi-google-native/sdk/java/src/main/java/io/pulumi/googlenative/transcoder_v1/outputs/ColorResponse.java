@@ -25,11 +25,11 @@ public final class ColorResponse {
      */
     private final Double saturation;
 
-    @OutputCustomType.Constructor({"brightness","contrast","saturation"})
+    @OutputCustomType.Constructor
     private ColorResponse(
-        Double brightness,
-        Double contrast,
-        Double saturation) {
+        @OutputCustomType.Parameter("brightness") Double brightness,
+        @OutputCustomType.Parameter("contrast") Double contrast,
+        @OutputCustomType.Parameter("saturation") Double saturation) {
         this.brightness = brightness;
         this.contrast = contrast;
         this.saturation = saturation;
@@ -81,17 +81,17 @@ public final class ColorResponse {
     	      this.saturation = defaults.saturation;
         }
 
-        public Builder setBrightness(Double brightness) {
+        public Builder brightness(Double brightness) {
             this.brightness = Objects.requireNonNull(brightness);
             return this;
         }
 
-        public Builder setContrast(Double contrast) {
+        public Builder contrast(Double contrast) {
             this.contrast = Objects.requireNonNull(contrast);
             return this;
         }
 
-        public Builder setSaturation(Double saturation) {
+        public Builder saturation(Double saturation) {
             this.saturation = Objects.requireNonNull(saturation);
             return this;
         }

@@ -20,11 +20,11 @@ public final class BotKendraConfiguration {
      */
     private final @Nullable Boolean queryFilterStringEnabled;
 
-    @OutputCustomType.Constructor({"kendraIndex","queryFilterString","queryFilterStringEnabled"})
+    @OutputCustomType.Constructor
     private BotKendraConfiguration(
-        String kendraIndex,
-        @Nullable String queryFilterString,
-        @Nullable Boolean queryFilterStringEnabled) {
+        @OutputCustomType.Parameter("kendraIndex") String kendraIndex,
+        @OutputCustomType.Parameter("queryFilterString") @Nullable String queryFilterString,
+        @OutputCustomType.Parameter("queryFilterStringEnabled") @Nullable Boolean queryFilterStringEnabled) {
         this.kendraIndex = kendraIndex;
         this.queryFilterString = queryFilterString;
         this.queryFilterStringEnabled = queryFilterStringEnabled;
@@ -68,17 +68,17 @@ public final class BotKendraConfiguration {
     	      this.queryFilterStringEnabled = defaults.queryFilterStringEnabled;
         }
 
-        public Builder setKendraIndex(String kendraIndex) {
+        public Builder kendraIndex(String kendraIndex) {
             this.kendraIndex = Objects.requireNonNull(kendraIndex);
             return this;
         }
 
-        public Builder setQueryFilterString(@Nullable String queryFilterString) {
+        public Builder queryFilterString(@Nullable String queryFilterString) {
             this.queryFilterString = queryFilterString;
             return this;
         }
 
-        public Builder setQueryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
+        public Builder queryFilterStringEnabled(@Nullable Boolean queryFilterStringEnabled) {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }

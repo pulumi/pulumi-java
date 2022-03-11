@@ -37,11 +37,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
      */
     private final @Nullable String pathTemplateRewrite;
 
-    @OutputCustomType.Constructor({"hostRewrite","pathPrefixRewrite","pathTemplateRewrite"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewrite(
-        @Nullable String hostRewrite,
-        @Nullable String pathPrefixRewrite,
-        @Nullable String pathTemplateRewrite) {
+        @OutputCustomType.Parameter("hostRewrite") @Nullable String hostRewrite,
+        @OutputCustomType.Parameter("pathPrefixRewrite") @Nullable String pathPrefixRewrite,
+        @OutputCustomType.Parameter("pathTemplateRewrite") @Nullable String pathTemplateRewrite) {
         this.hostRewrite = hostRewrite;
         this.pathPrefixRewrite = pathPrefixRewrite;
         this.pathTemplateRewrite = pathTemplateRewrite;
@@ -103,17 +103,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionUrlRewr
     	      this.pathTemplateRewrite = defaults.pathTemplateRewrite;
         }
 
-        public Builder setHostRewrite(@Nullable String hostRewrite) {
+        public Builder hostRewrite(@Nullable String hostRewrite) {
             this.hostRewrite = hostRewrite;
             return this;
         }
 
-        public Builder setPathPrefixRewrite(@Nullable String pathPrefixRewrite) {
+        public Builder pathPrefixRewrite(@Nullable String pathPrefixRewrite) {
             this.pathPrefixRewrite = pathPrefixRewrite;
             return this;
         }
 
-        public Builder setPathTemplateRewrite(@Nullable String pathTemplateRewrite) {
+        public Builder pathTemplateRewrite(@Nullable String pathTemplateRewrite) {
             this.pathTemplateRewrite = pathTemplateRewrite;
             return this;
         }

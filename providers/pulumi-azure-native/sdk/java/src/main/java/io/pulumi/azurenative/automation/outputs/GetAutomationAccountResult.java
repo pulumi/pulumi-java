@@ -115,27 +115,27 @@ public final class GetAutomationAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"automationHybridServiceUrl","creationTime","description","disableLocalAuth","encryption","etag","id","identity","lastModifiedBy","lastModifiedTime","location","name","privateEndpointConnections","publicNetworkAccess","sku","state","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAutomationAccountResult(
-        @Nullable String automationHybridServiceUrl,
-        String creationTime,
-        @Nullable String description,
-        @Nullable Boolean disableLocalAuth,
-        @Nullable EncryptionPropertiesResponse encryption,
-        @Nullable String etag,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String lastModifiedBy,
-        String lastModifiedTime,
-        @Nullable String location,
-        String name,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable Boolean publicNetworkAccess,
-        @Nullable SkuResponse sku,
-        String state,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("automationHybridServiceUrl") @Nullable String automationHybridServiceUrl,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disableLocalAuth") @Nullable Boolean disableLocalAuth,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertiesResponse encryption,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("lastModifiedBy") @Nullable String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable Boolean publicNetworkAccess,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.automationHybridServiceUrl = automationHybridServiceUrl;
         this.creationTime = creationTime;
         this.description = description;
@@ -347,97 +347,97 @@ public final class GetAutomationAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutomationHybridServiceUrl(@Nullable String automationHybridServiceUrl) {
+        public Builder automationHybridServiceUrl(@Nullable String automationHybridServiceUrl) {
             this.automationHybridServiceUrl = automationHybridServiceUrl;
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisableLocalAuth(@Nullable Boolean disableLocalAuth) {
+        public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
             this.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertiesResponse encryption) {
+        public Builder encryption(@Nullable EncryptionPropertiesResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLastModifiedBy(@Nullable String lastModifiedBy) {
+        public Builder lastModifiedBy(@Nullable String lastModifiedBy) {
             this.lastModifiedBy = lastModifiedBy;
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Boolean publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -27,11 +27,11 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"id","logStreamArn","roleArn"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationCloudwatchLoggingOptions(
-        @Nullable String id,
-        String logStreamArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("logStreamArn") String logStreamArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.id = id;
         this.logStreamArn = logStreamArn;
         this.roleArn = roleArn;
@@ -83,17 +83,17 @@ public final class AnalyticsApplicationCloudwatchLoggingOptions {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLogStreamArn(String logStreamArn) {
+        public Builder logStreamArn(String logStreamArn) {
             this.logStreamArn = Objects.requireNonNull(logStreamArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -105,42 +105,42 @@ public final class RouteSpecHttpRouteMatchGetArgs extends io.pulumi.resources.Re
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHeaders(@Nullable Input<List<RouteSpecHttpRouteMatchHeaderGetArgs>> headers) {
+        public Builder headers(@Nullable Input<List<RouteSpecHttpRouteMatchHeaderGetArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<RouteSpecHttpRouteMatchHeaderGetArgs> headers) {
+        public Builder headers(@Nullable List<RouteSpecHttpRouteMatchHeaderGetArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setMethod(@Nullable Input<String> method) {
+        public Builder method(@Nullable Input<String> method) {
             this.method = method;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = Input.ofNullable(method);
             return this;
         }
 
-        public Builder setPrefix(Input<String> prefix) {
+        public Builder prefix(Input<String> prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Input.of(Objects.requireNonNull(prefix));
             return this;
         }
 
-        public Builder setScheme(@Nullable Input<String> scheme) {
+        public Builder scheme(@Nullable Input<String> scheme) {
             this.scheme = scheme;
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = Input.ofNullable(scheme);
             return this;
         }

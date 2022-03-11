@@ -26,11 +26,11 @@ public final class DomainMappingSpecResponse {
      */
     private final String routeName;
 
-    @OutputCustomType.Constructor({"certificateMode","forceOverride","routeName"})
+    @OutputCustomType.Constructor
     private DomainMappingSpecResponse(
-        String certificateMode,
-        Boolean forceOverride,
-        String routeName) {
+        @OutputCustomType.Parameter("certificateMode") String certificateMode,
+        @OutputCustomType.Parameter("forceOverride") Boolean forceOverride,
+        @OutputCustomType.Parameter("routeName") String routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = routeName;
@@ -82,17 +82,17 @@ public final class DomainMappingSpecResponse {
     	      this.routeName = defaults.routeName;
         }
 
-        public Builder setCertificateMode(String certificateMode) {
+        public Builder certificateMode(String certificateMode) {
             this.certificateMode = Objects.requireNonNull(certificateMode);
             return this;
         }
 
-        public Builder setForceOverride(Boolean forceOverride) {
+        public Builder forceOverride(Boolean forceOverride) {
             this.forceOverride = Objects.requireNonNull(forceOverride);
             return this;
         }
 
-        public Builder setRouteName(String routeName) {
+        public Builder routeName(String routeName) {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }

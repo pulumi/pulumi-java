@@ -38,13 +38,13 @@ public final class PatchInstanceFilterResponse {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"all","groupLabels","instanceNamePrefixes","instances","zones"})
+    @OutputCustomType.Constructor
     private PatchInstanceFilterResponse(
-        Boolean all,
-        List<PatchInstanceFilterGroupLabelResponse> groupLabels,
-        List<String> instanceNamePrefixes,
-        List<String> instances,
-        List<String> zones) {
+        @OutputCustomType.Parameter("all") Boolean all,
+        @OutputCustomType.Parameter("groupLabels") List<PatchInstanceFilterGroupLabelResponse> groupLabels,
+        @OutputCustomType.Parameter("instanceNamePrefixes") List<String> instanceNamePrefixes,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.all = all;
         this.groupLabels = groupLabels;
         this.instanceNamePrefixes = instanceNamePrefixes;
@@ -116,27 +116,27 @@ public final class PatchInstanceFilterResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAll(Boolean all) {
+        public Builder all(Boolean all) {
             this.all = Objects.requireNonNull(all);
             return this;
         }
 
-        public Builder setGroupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
+        public Builder groupLabels(List<PatchInstanceFilterGroupLabelResponse> groupLabels) {
             this.groupLabels = Objects.requireNonNull(groupLabels);
             return this;
         }
 
-        public Builder setInstanceNamePrefixes(List<String> instanceNamePrefixes) {
+        public Builder instanceNamePrefixes(List<String> instanceNamePrefixes) {
             this.instanceNamePrefixes = Objects.requireNonNull(instanceNamePrefixes);
             return this;
         }
 
-        public Builder setInstances(List<String> instances) {
+        public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

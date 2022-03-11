@@ -25,11 +25,11 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
      */
     private final String developerEmailAddress;
 
-    @OutputCustomType.Constructor({"applicationName","clientName","developerEmailAddress"})
+    @OutputCustomType.Constructor
     private BackendServiceIAPOAuth2ClientInfoResponse(
-        String applicationName,
-        String clientName,
-        String developerEmailAddress) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("clientName") String clientName,
+        @OutputCustomType.Parameter("developerEmailAddress") String developerEmailAddress) {
         this.applicationName = applicationName;
         this.clientName = clientName;
         this.developerEmailAddress = developerEmailAddress;
@@ -81,17 +81,17 @@ public final class BackendServiceIAPOAuth2ClientInfoResponse {
     	      this.developerEmailAddress = defaults.developerEmailAddress;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setClientName(String clientName) {
+        public Builder clientName(String clientName) {
             this.clientName = Objects.requireNonNull(clientName);
             return this;
         }
 
-        public Builder setDeveloperEmailAddress(String developerEmailAddress) {
+        public Builder developerEmailAddress(String developerEmailAddress) {
             this.developerEmailAddress = Objects.requireNonNull(developerEmailAddress);
             return this;
         }

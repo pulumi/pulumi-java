@@ -25,11 +25,11 @@ public final class ElasticCloudUserResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"elasticCloudSsoDefaultUrl","emailAddress","id"})
+    @OutputCustomType.Constructor
     private ElasticCloudUserResponse(
-        String elasticCloudSsoDefaultUrl,
-        String emailAddress,
-        String id) {
+        @OutputCustomType.Parameter("elasticCloudSsoDefaultUrl") String elasticCloudSsoDefaultUrl,
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("id") String id) {
         this.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
         this.emailAddress = emailAddress;
         this.id = id;
@@ -81,17 +81,17 @@ public final class ElasticCloudUserResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setElasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
+        public Builder elasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
             this.elasticCloudSsoDefaultUrl = Objects.requireNonNull(elasticCloudSsoDefaultUrl);
             return this;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

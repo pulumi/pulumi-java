@@ -84,18 +84,18 @@ public final class GetRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","conditions","deploymentStatus","id","matchProcessingBehavior","name","order","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetRuleResult(
-        List<Object> actions,
-        @Nullable List<Object> conditions,
-        String deploymentStatus,
-        String id,
-        @Nullable String matchProcessingBehavior,
-        String name,
-        Integer order,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("actions") List<Object> actions,
+        @OutputCustomType.Parameter("conditions") @Nullable List<Object> conditions,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("matchProcessingBehavior") @Nullable String matchProcessingBehavior,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.conditions = conditions;
         this.deploymentStatus = deploymentStatus;
@@ -213,52 +213,52 @@ public final class GetRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActions(List<Object> actions) {
+        public Builder actions(List<Object> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setConditions(@Nullable List<Object> conditions) {
+        public Builder conditions(@Nullable List<Object> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMatchProcessingBehavior(@Nullable String matchProcessingBehavior) {
+        public Builder matchProcessingBehavior(@Nullable String matchProcessingBehavior) {
             this.matchProcessingBehavior = matchProcessingBehavior;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

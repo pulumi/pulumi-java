@@ -13,10 +13,10 @@ public final class InstanceFromTemplateGuestAccelerator {
     private final Integer count;
     private final String type;
 
-    @OutputCustomType.Constructor({"count","type"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateGuestAccelerator(
-        Integer count,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.type = type;
     }
@@ -50,12 +50,12 @@ public final class InstanceFromTemplateGuestAccelerator {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

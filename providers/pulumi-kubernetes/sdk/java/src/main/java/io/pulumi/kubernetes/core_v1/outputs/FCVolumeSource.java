@@ -40,13 +40,13 @@ public final class FCVolumeSource {
      */
     private final @Nullable List<String> wwids;
 
-    @OutputCustomType.Constructor({"fsType","lun","readOnly","targetWWNs","wwids"})
+    @OutputCustomType.Constructor
     private FCVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer lun,
-        @Nullable Boolean readOnly,
-        @Nullable List<String> targetWWNs,
-        @Nullable List<String> wwids) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("targetWWNs") @Nullable List<String> targetWWNs,
+        @OutputCustomType.Parameter("wwids") @Nullable List<String> wwids) {
         this.fsType = fsType;
         this.lun = lun;
         this.readOnly = readOnly;
@@ -118,27 +118,27 @@ public final class FCVolumeSource {
     	      this.wwids = defaults.wwids;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setLun(@Nullable Integer lun) {
+        public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setTargetWWNs(@Nullable List<String> targetWWNs) {
+        public Builder targetWWNs(@Nullable List<String> targetWWNs) {
             this.targetWWNs = targetWWNs;
             return this;
         }
 
-        public Builder setWwids(@Nullable List<String> wwids) {
+        public Builder wwids(@Nullable List<String> wwids) {
             this.wwids = wwids;
             return this;
         }

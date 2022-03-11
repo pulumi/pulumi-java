@@ -29,12 +29,12 @@ public final class GetAutoscalingGroupsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetAutoscalingGroupsResult(
-        List<String> arns,
-        @Nullable List<GetAutoscalingGroupsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetAutoscalingGroupsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;
@@ -92,22 +92,22 @@ public final class GetAutoscalingGroupsResult {
     	      this.names = defaults.names;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
+        public Builder filters(@Nullable List<GetAutoscalingGroupsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

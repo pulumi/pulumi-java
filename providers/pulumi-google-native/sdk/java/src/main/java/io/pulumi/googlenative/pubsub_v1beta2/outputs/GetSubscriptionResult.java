@@ -32,12 +32,12 @@ public final class GetSubscriptionResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"ackDeadlineSeconds","name","pushConfig","topic"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        Integer ackDeadlineSeconds,
-        String name,
-        PushConfigResponse pushConfig,
-        String topic) {
+        @OutputCustomType.Parameter("ackDeadlineSeconds") Integer ackDeadlineSeconds,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pushConfig") PushConfigResponse pushConfig,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.ackDeadlineSeconds = ackDeadlineSeconds;
         this.name = name;
         this.pushConfig = pushConfig;
@@ -99,22 +99,22 @@ public final class GetSubscriptionResult {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setAckDeadlineSeconds(Integer ackDeadlineSeconds) {
+        public Builder ackDeadlineSeconds(Integer ackDeadlineSeconds) {
             this.ackDeadlineSeconds = Objects.requireNonNull(ackDeadlineSeconds);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPushConfig(PushConfigResponse pushConfig) {
+        public Builder pushConfig(PushConfigResponse pushConfig) {
             this.pushConfig = Objects.requireNonNull(pushConfig);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

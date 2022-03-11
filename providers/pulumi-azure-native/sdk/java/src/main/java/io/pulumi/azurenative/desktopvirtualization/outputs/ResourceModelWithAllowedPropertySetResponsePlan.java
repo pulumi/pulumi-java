@@ -37,13 +37,13 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"name","product","promotionCode","publisher","version"})
+    @OutputCustomType.Constructor
     private ResourceModelWithAllowedPropertySetResponsePlan(
-        String name,
-        String product,
-        @Nullable String promotionCode,
-        String publisher,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("product") String product,
+        @OutputCustomType.Parameter("promotionCode") @Nullable String promotionCode,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.product = product;
         this.promotionCode = promotionCode;
@@ -115,27 +115,27 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProduct(String product) {
+        public Builder product(String product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
 
-        public Builder setPromotionCode(@Nullable String promotionCode) {
+        public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

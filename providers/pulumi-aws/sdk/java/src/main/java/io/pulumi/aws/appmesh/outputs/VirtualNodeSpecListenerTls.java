@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTls {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidation validation;
 
-    @OutputCustomType.Constructor({"certificate","mode","validation"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTls(
-        VirtualNodeSpecListenerTlsCertificate certificate,
-        String mode,
-        @Nullable VirtualNodeSpecListenerTlsValidation validation) {
+        @OutputCustomType.Parameter("certificate") VirtualNodeSpecListenerTlsCertificate certificate,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("validation") @Nullable VirtualNodeSpecListenerTlsValidation validation) {
         this.certificate = certificate;
         this.mode = mode;
         this.validation = validation;
@@ -85,17 +85,17 @@ public final class VirtualNodeSpecListenerTls {
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(VirtualNodeSpecListenerTlsCertificate certificate) {
+        public Builder certificate(VirtualNodeSpecListenerTlsCertificate certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setValidation(@Nullable VirtualNodeSpecListenerTlsValidation validation) {
+        public Builder validation(@Nullable VirtualNodeSpecListenerTlsValidation validation) {
             this.validation = validation;
             return this;
         }

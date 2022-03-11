@@ -36,13 +36,13 @@ public final class NetworkConfigResponse {
      */
     private final String reservedIpRange;
 
-    @OutputCustomType.Constructor({"connectMode","ipAddresses","modes","network","reservedIpRange"})
+    @OutputCustomType.Constructor
     private NetworkConfigResponse(
-        String connectMode,
-        List<String> ipAddresses,
-        List<String> modes,
-        String network,
-        String reservedIpRange) {
+        @OutputCustomType.Parameter("connectMode") String connectMode,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("modes") List<String> modes,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("reservedIpRange") String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;
@@ -114,27 +114,27 @@ public final class NetworkConfigResponse {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(String connectMode) {
+        public Builder connectMode(String connectMode) {
             this.connectMode = Objects.requireNonNull(connectMode);
             return this;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setModes(List<String> modes) {
+        public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setReservedIpRange(String reservedIpRange) {
+        public Builder reservedIpRange(String reservedIpRange) {
             this.reservedIpRange = Objects.requireNonNull(reservedIpRange);
             return this;
         }

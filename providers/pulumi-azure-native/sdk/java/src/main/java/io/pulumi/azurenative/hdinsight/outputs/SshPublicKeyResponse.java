@@ -17,8 +17,8 @@ public final class SshPublicKeyResponse {
      */
     private final @Nullable String certificateData;
 
-    @OutputCustomType.Constructor({"certificateData"})
-    private SshPublicKeyResponse(@Nullable String certificateData) {
+    @OutputCustomType.Constructor
+    private SshPublicKeyResponse(@OutputCustomType.Parameter("certificateData") @Nullable String certificateData) {
         this.certificateData = certificateData;
     }
 
@@ -50,7 +50,7 @@ public final class SshPublicKeyResponse {
     	      this.certificateData = defaults.certificateData;
         }
 
-        public Builder setCertificateData(@Nullable String certificateData) {
+        public Builder certificateData(@Nullable String certificateData) {
             this.certificateData = certificateData;
             return this;
         }

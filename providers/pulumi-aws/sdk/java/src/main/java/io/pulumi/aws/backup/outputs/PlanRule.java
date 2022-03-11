@@ -63,17 +63,17 @@ public final class PlanRule {
      */
     private final String targetVaultName;
 
-    @OutputCustomType.Constructor({"completionWindow","copyActions","enableContinuousBackup","lifecycle","recoveryPointTags","ruleName","schedule","startWindow","targetVaultName"})
+    @OutputCustomType.Constructor
     private PlanRule(
-        @Nullable Integer completionWindow,
-        @Nullable List<PlanRuleCopyAction> copyActions,
-        @Nullable Boolean enableContinuousBackup,
-        @Nullable PlanRuleLifecycle lifecycle,
-        @Nullable Map<String,String> recoveryPointTags,
-        String ruleName,
-        @Nullable String schedule,
-        @Nullable Integer startWindow,
-        String targetVaultName) {
+        @OutputCustomType.Parameter("completionWindow") @Nullable Integer completionWindow,
+        @OutputCustomType.Parameter("copyActions") @Nullable List<PlanRuleCopyAction> copyActions,
+        @OutputCustomType.Parameter("enableContinuousBackup") @Nullable Boolean enableContinuousBackup,
+        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleLifecycle lifecycle,
+        @OutputCustomType.Parameter("recoveryPointTags") @Nullable Map<String,String> recoveryPointTags,
+        @OutputCustomType.Parameter("ruleName") String ruleName,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("startWindow") @Nullable Integer startWindow,
+        @OutputCustomType.Parameter("targetVaultName") String targetVaultName) {
         this.completionWindow = completionWindow;
         this.copyActions = copyActions;
         this.enableContinuousBackup = enableContinuousBackup;
@@ -185,47 +185,47 @@ public final class PlanRule {
     	      this.targetVaultName = defaults.targetVaultName;
         }
 
-        public Builder setCompletionWindow(@Nullable Integer completionWindow) {
+        public Builder completionWindow(@Nullable Integer completionWindow) {
             this.completionWindow = completionWindow;
             return this;
         }
 
-        public Builder setCopyActions(@Nullable List<PlanRuleCopyAction> copyActions) {
+        public Builder copyActions(@Nullable List<PlanRuleCopyAction> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable PlanRuleLifecycle lifecycle) {
+        public Builder lifecycle(@Nullable PlanRuleLifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStartWindow(@Nullable Integer startWindow) {
+        public Builder startWindow(@Nullable Integer startWindow) {
             this.startWindow = startWindow;
             return this;
         }
 
-        public Builder setTargetVaultName(String targetVaultName) {
+        public Builder targetVaultName(String targetVaultName) {
             this.targetVaultName = Objects.requireNonNull(targetVaultName);
             return this;
         }

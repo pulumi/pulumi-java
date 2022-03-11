@@ -20,10 +20,10 @@ public final class AttachedDiskResponse {
      */
     private final String sourceDisk;
 
-    @OutputCustomType.Constructor({"mode","sourceDisk"})
+    @OutputCustomType.Constructor
     private AttachedDiskResponse(
-        String mode,
-        String sourceDisk) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk) {
         this.mode = mode;
         this.sourceDisk = sourceDisk;
     }
@@ -65,12 +65,12 @@ public final class AttachedDiskResponse {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }

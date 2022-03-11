@@ -20,10 +20,10 @@ public final class NamespacedGkeDeploymentTargetResponse {
      */
     private final String targetGkeCluster;
 
-    @OutputCustomType.Constructor({"clusterNamespace","targetGkeCluster"})
+    @OutputCustomType.Constructor
     private NamespacedGkeDeploymentTargetResponse(
-        String clusterNamespace,
-        String targetGkeCluster) {
+        @OutputCustomType.Parameter("clusterNamespace") String clusterNamespace,
+        @OutputCustomType.Parameter("targetGkeCluster") String targetGkeCluster) {
         this.clusterNamespace = clusterNamespace;
         this.targetGkeCluster = targetGkeCluster;
     }
@@ -65,12 +65,12 @@ public final class NamespacedGkeDeploymentTargetResponse {
     	      this.targetGkeCluster = defaults.targetGkeCluster;
         }
 
-        public Builder setClusterNamespace(String clusterNamespace) {
+        public Builder clusterNamespace(String clusterNamespace) {
             this.clusterNamespace = Objects.requireNonNull(clusterNamespace);
             return this;
         }
 
-        public Builder setTargetGkeCluster(String targetGkeCluster) {
+        public Builder targetGkeCluster(String targetGkeCluster) {
             this.targetGkeCluster = Objects.requireNonNull(targetGkeCluster);
             return this;
         }

@@ -74,22 +74,22 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextArgs e
     	      this.text = defaults.text;
         }
 
-        public Builder setSsml(@Nullable Input<String> ssml) {
+        public Builder ssml(@Nullable Input<String> ssml) {
             this.ssml = ssml;
             return this;
         }
 
-        public Builder setSsml(@Nullable String ssml) {
+        public Builder ssml(@Nullable String ssml) {
             this.ssml = Input.ofNullable(ssml);
             return this;
         }
 
-        public Builder setText(@Nullable Input<String> text) {
+        public Builder text(@Nullable Input<String> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = Input.ofNullable(text);
             return this;
         }

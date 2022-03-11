@@ -16,8 +16,8 @@ public final class TestTargetsForShardResponse {
      */
     private final List<String> testTargets;
 
-    @OutputCustomType.Constructor({"testTargets"})
-    private TestTargetsForShardResponse(List<String> testTargets) {
+    @OutputCustomType.Constructor
+    private TestTargetsForShardResponse(@OutputCustomType.Parameter("testTargets") List<String> testTargets) {
         this.testTargets = testTargets;
     }
 
@@ -49,7 +49,7 @@ public final class TestTargetsForShardResponse {
     	      this.testTargets = defaults.testTargets;
         }
 
-        public Builder setTestTargets(List<String> testTargets) {
+        public Builder testTargets(List<String> testTargets) {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }

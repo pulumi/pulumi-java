@@ -58,17 +58,17 @@ public final class AS2MdnSettingsResponse {
      */
     private final Boolean signOutboundMDNIfOptional;
 
-    @OutputCustomType.Constructor({"dispositionNotificationTo","mdnText","micHashingAlgorithm","needMDN","receiptDeliveryUrl","sendInboundMDNToMessageBox","sendMDNAsynchronously","signMDN","signOutboundMDNIfOptional"})
+    @OutputCustomType.Constructor
     private AS2MdnSettingsResponse(
-        @Nullable String dispositionNotificationTo,
-        @Nullable String mdnText,
-        String micHashingAlgorithm,
-        Boolean needMDN,
-        @Nullable String receiptDeliveryUrl,
-        Boolean sendInboundMDNToMessageBox,
-        Boolean sendMDNAsynchronously,
-        Boolean signMDN,
-        Boolean signOutboundMDNIfOptional) {
+        @OutputCustomType.Parameter("dispositionNotificationTo") @Nullable String dispositionNotificationTo,
+        @OutputCustomType.Parameter("mdnText") @Nullable String mdnText,
+        @OutputCustomType.Parameter("micHashingAlgorithm") String micHashingAlgorithm,
+        @OutputCustomType.Parameter("needMDN") Boolean needMDN,
+        @OutputCustomType.Parameter("receiptDeliveryUrl") @Nullable String receiptDeliveryUrl,
+        @OutputCustomType.Parameter("sendInboundMDNToMessageBox") Boolean sendInboundMDNToMessageBox,
+        @OutputCustomType.Parameter("sendMDNAsynchronously") Boolean sendMDNAsynchronously,
+        @OutputCustomType.Parameter("signMDN") Boolean signMDN,
+        @OutputCustomType.Parameter("signOutboundMDNIfOptional") Boolean signOutboundMDNIfOptional) {
         this.dispositionNotificationTo = dispositionNotificationTo;
         this.mdnText = mdnText;
         this.micHashingAlgorithm = micHashingAlgorithm;
@@ -180,47 +180,47 @@ public final class AS2MdnSettingsResponse {
     	      this.signOutboundMDNIfOptional = defaults.signOutboundMDNIfOptional;
         }
 
-        public Builder setDispositionNotificationTo(@Nullable String dispositionNotificationTo) {
+        public Builder dispositionNotificationTo(@Nullable String dispositionNotificationTo) {
             this.dispositionNotificationTo = dispositionNotificationTo;
             return this;
         }
 
-        public Builder setMdnText(@Nullable String mdnText) {
+        public Builder mdnText(@Nullable String mdnText) {
             this.mdnText = mdnText;
             return this;
         }
 
-        public Builder setMicHashingAlgorithm(String micHashingAlgorithm) {
+        public Builder micHashingAlgorithm(String micHashingAlgorithm) {
             this.micHashingAlgorithm = Objects.requireNonNull(micHashingAlgorithm);
             return this;
         }
 
-        public Builder setNeedMDN(Boolean needMDN) {
+        public Builder needMDN(Boolean needMDN) {
             this.needMDN = Objects.requireNonNull(needMDN);
             return this;
         }
 
-        public Builder setReceiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
+        public Builder receiptDeliveryUrl(@Nullable String receiptDeliveryUrl) {
             this.receiptDeliveryUrl = receiptDeliveryUrl;
             return this;
         }
 
-        public Builder setSendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
+        public Builder sendInboundMDNToMessageBox(Boolean sendInboundMDNToMessageBox) {
             this.sendInboundMDNToMessageBox = Objects.requireNonNull(sendInboundMDNToMessageBox);
             return this;
         }
 
-        public Builder setSendMDNAsynchronously(Boolean sendMDNAsynchronously) {
+        public Builder sendMDNAsynchronously(Boolean sendMDNAsynchronously) {
             this.sendMDNAsynchronously = Objects.requireNonNull(sendMDNAsynchronously);
             return this;
         }
 
-        public Builder setSignMDN(Boolean signMDN) {
+        public Builder signMDN(Boolean signMDN) {
             this.signMDN = Objects.requireNonNull(signMDN);
             return this;
         }
 
-        public Builder setSignOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
+        public Builder signOutboundMDNIfOptional(Boolean signOutboundMDNIfOptional) {
             this.signOutboundMDNIfOptional = Objects.requireNonNull(signOutboundMDNIfOptional);
             return this;
         }

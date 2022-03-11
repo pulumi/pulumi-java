@@ -22,10 +22,10 @@ public final class ServiceAuthenticationConfiguration {
      */
     private final @Nullable String connectionArn;
 
-    @OutputCustomType.Constructor({"accessRoleArn","connectionArn"})
+    @OutputCustomType.Constructor
     private ServiceAuthenticationConfiguration(
-        @Nullable String accessRoleArn,
-        @Nullable String connectionArn) {
+        @OutputCustomType.Parameter("accessRoleArn") @Nullable String accessRoleArn,
+        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn) {
         this.accessRoleArn = accessRoleArn;
         this.connectionArn = connectionArn;
     }
@@ -67,12 +67,12 @@ public final class ServiceAuthenticationConfiguration {
     	      this.connectionArn = defaults.connectionArn;
         }
 
-        public Builder setAccessRoleArn(@Nullable String accessRoleArn) {
+        public Builder accessRoleArn(@Nullable String accessRoleArn) {
             this.accessRoleArn = accessRoleArn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }

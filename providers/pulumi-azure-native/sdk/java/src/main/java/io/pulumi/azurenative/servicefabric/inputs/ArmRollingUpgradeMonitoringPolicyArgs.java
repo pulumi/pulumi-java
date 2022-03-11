@@ -140,62 +140,62 @@ public final class ArmRollingUpgradeMonitoringPolicyArgs extends io.pulumi.resou
     	      this.upgradeTimeout = defaults.upgradeTimeout;
         }
 
-        public Builder setFailureAction(@Nullable Input<Either<String,ArmUpgradeFailureAction>> failureAction) {
+        public Builder failureAction(@Nullable Input<Either<String,ArmUpgradeFailureAction>> failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
-        public Builder setFailureAction(@Nullable Either<String,ArmUpgradeFailureAction> failureAction) {
+        public Builder failureAction(@Nullable Either<String,ArmUpgradeFailureAction> failureAction) {
             this.failureAction = Input.ofNullable(failureAction);
             return this;
         }
 
-        public Builder setHealthCheckRetryTimeout(@Nullable Input<String> healthCheckRetryTimeout) {
+        public Builder healthCheckRetryTimeout(@Nullable Input<String> healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
 
-        public Builder setHealthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
+        public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Input.ofNullable(healthCheckRetryTimeout);
             return this;
         }
 
-        public Builder setHealthCheckStableDuration(@Nullable Input<String> healthCheckStableDuration) {
+        public Builder healthCheckStableDuration(@Nullable Input<String> healthCheckStableDuration) {
             this.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
 
-        public Builder setHealthCheckStableDuration(@Nullable String healthCheckStableDuration) {
+        public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
             this.healthCheckStableDuration = Input.ofNullable(healthCheckStableDuration);
             return this;
         }
 
-        public Builder setHealthCheckWaitDuration(@Nullable Input<String> healthCheckWaitDuration) {
+        public Builder healthCheckWaitDuration(@Nullable Input<String> healthCheckWaitDuration) {
             this.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
 
-        public Builder setHealthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
+        public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Input.ofNullable(healthCheckWaitDuration);
             return this;
         }
 
-        public Builder setUpgradeDomainTimeout(@Nullable Input<String> upgradeDomainTimeout) {
+        public Builder upgradeDomainTimeout(@Nullable Input<String> upgradeDomainTimeout) {
             this.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
 
-        public Builder setUpgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
+        public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Input.ofNullable(upgradeDomainTimeout);
             return this;
         }
 
-        public Builder setUpgradeTimeout(@Nullable Input<String> upgradeTimeout) {
+        public Builder upgradeTimeout(@Nullable Input<String> upgradeTimeout) {
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }
 
-        public Builder setUpgradeTimeout(@Nullable String upgradeTimeout) {
+        public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
             this.upgradeTimeout = Input.ofNullable(upgradeTimeout);
             return this;
         }

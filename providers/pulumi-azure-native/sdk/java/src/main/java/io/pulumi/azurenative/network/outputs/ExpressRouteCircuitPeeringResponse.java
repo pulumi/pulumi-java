@@ -142,32 +142,32 @@ public final class ExpressRouteCircuitPeeringResponse {
      */
     private final @Nullable Integer vlanId;
 
-    @OutputCustomType.Constructor({"azureASN","connections","etag","expressRouteConnection","gatewayManagerEtag","id","ipv6PeeringConfig","lastModifiedBy","microsoftPeeringConfig","name","peerASN","peeredConnections","peeringType","primaryAzurePort","primaryPeerAddressPrefix","provisioningState","routeFilter","secondaryAzurePort","secondaryPeerAddressPrefix","sharedKey","state","stats","type","vlanId"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitPeeringResponse(
-        @Nullable Integer azureASN,
-        @Nullable List<ExpressRouteCircuitConnectionResponse> connections,
-        String etag,
-        @Nullable ExpressRouteConnectionIdResponse expressRouteConnection,
-        @Nullable String gatewayManagerEtag,
-        @Nullable String id,
-        @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
-        String lastModifiedBy,
-        @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @Nullable String name,
-        @Nullable Double peerASN,
-        List<PeerExpressRouteCircuitConnectionResponse> peeredConnections,
-        @Nullable String peeringType,
-        @Nullable String primaryAzurePort,
-        @Nullable String primaryPeerAddressPrefix,
-        String provisioningState,
-        @Nullable SubResourceResponse routeFilter,
-        @Nullable String secondaryAzurePort,
-        @Nullable String secondaryPeerAddressPrefix,
-        @Nullable String sharedKey,
-        @Nullable String state,
-        @Nullable ExpressRouteCircuitStatsResponse stats,
-        String type,
-        @Nullable Integer vlanId) {
+        @OutputCustomType.Parameter("azureASN") @Nullable Integer azureASN,
+        @OutputCustomType.Parameter("connections") @Nullable List<ExpressRouteCircuitConnectionResponse> connections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteConnection") @Nullable ExpressRouteConnectionIdResponse expressRouteConnection,
+        @OutputCustomType.Parameter("gatewayManagerEtag") @Nullable String gatewayManagerEtag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipv6PeeringConfig") @Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("peerASN") @Nullable Double peerASN,
+        @OutputCustomType.Parameter("peeredConnections") List<PeerExpressRouteCircuitConnectionResponse> peeredConnections,
+        @OutputCustomType.Parameter("peeringType") @Nullable String peeringType,
+        @OutputCustomType.Parameter("primaryAzurePort") @Nullable String primaryAzurePort,
+        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
+        @OutputCustomType.Parameter("secondaryAzurePort") @Nullable String secondaryAzurePort,
+        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stats") @Nullable ExpressRouteCircuitStatsResponse stats,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vlanId") @Nullable Integer vlanId) {
         this.azureASN = azureASN;
         this.connections = connections;
         this.etag = etag;
@@ -429,122 +429,122 @@ public final class ExpressRouteCircuitPeeringResponse {
     	      this.vlanId = defaults.vlanId;
         }
 
-        public Builder setAzureASN(@Nullable Integer azureASN) {
+        public Builder azureASN(@Nullable Integer azureASN) {
             this.azureASN = azureASN;
             return this;
         }
 
-        public Builder setConnections(@Nullable List<ExpressRouteCircuitConnectionResponse> connections) {
+        public Builder connections(@Nullable List<ExpressRouteCircuitConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpressRouteConnection(@Nullable ExpressRouteConnectionIdResponse expressRouteConnection) {
+        public Builder expressRouteConnection(@Nullable ExpressRouteConnectionIdResponse expressRouteConnection) {
             this.expressRouteConnection = expressRouteConnection;
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable String gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
+        public Builder ipv6PeeringConfig(@Nullable Ipv6ExpressRouteCircuitPeeringConfigResponse ipv6PeeringConfig) {
             this.ipv6PeeringConfig = ipv6PeeringConfig;
             return this;
         }
 
-        public Builder setLastModifiedBy(String lastModifiedBy) {
+        public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPeerASN(@Nullable Double peerASN) {
+        public Builder peerASN(@Nullable Double peerASN) {
             this.peerASN = peerASN;
             return this;
         }
 
-        public Builder setPeeredConnections(List<PeerExpressRouteCircuitConnectionResponse> peeredConnections) {
+        public Builder peeredConnections(List<PeerExpressRouteCircuitConnectionResponse> peeredConnections) {
             this.peeredConnections = Objects.requireNonNull(peeredConnections);
             return this;
         }
 
-        public Builder setPeeringType(@Nullable String peeringType) {
+        public Builder peeringType(@Nullable String peeringType) {
             this.peeringType = peeringType;
             return this;
         }
 
-        public Builder setPrimaryAzurePort(@Nullable String primaryAzurePort) {
+        public Builder primaryAzurePort(@Nullable String primaryAzurePort) {
             this.primaryAzurePort = primaryAzurePort;
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRouteFilter(@Nullable SubResourceResponse routeFilter) {
+        public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
 
-        public Builder setSecondaryAzurePort(@Nullable String secondaryAzurePort) {
+        public Builder secondaryAzurePort(@Nullable String secondaryAzurePort) {
             this.secondaryAzurePort = secondaryAzurePort;
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStats(@Nullable ExpressRouteCircuitStatsResponse stats) {
+        public Builder stats(@Nullable ExpressRouteCircuitStatsResponse stats) {
             this.stats = stats;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVlanId(@Nullable Integer vlanId) {
+        public Builder vlanId(@Nullable Integer vlanId) {
             this.vlanId = vlanId;
             return this;
         }

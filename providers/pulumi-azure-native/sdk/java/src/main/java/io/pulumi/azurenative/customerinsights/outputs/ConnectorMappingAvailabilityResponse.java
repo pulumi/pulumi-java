@@ -23,10 +23,10 @@ public final class ConnectorMappingAvailabilityResponse {
      */
     private final Integer interval;
 
-    @OutputCustomType.Constructor({"frequency","interval"})
+    @OutputCustomType.Constructor
     private ConnectorMappingAvailabilityResponse(
-        @Nullable String frequency,
-        Integer interval) {
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") Integer interval) {
         this.frequency = frequency;
         this.interval = interval;
     }
@@ -68,12 +68,12 @@ public final class ConnectorMappingAvailabilityResponse {
     	      this.interval = defaults.interval;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }

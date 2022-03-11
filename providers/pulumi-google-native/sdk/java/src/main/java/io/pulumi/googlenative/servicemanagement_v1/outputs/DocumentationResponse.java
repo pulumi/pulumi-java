@@ -43,14 +43,14 @@ public final class DocumentationResponse {
      */
     private final String summary;
 
-    @OutputCustomType.Constructor({"documentationRootUrl","overview","pages","rules","serviceRootUrl","summary"})
+    @OutputCustomType.Constructor
     private DocumentationResponse(
-        String documentationRootUrl,
-        String overview,
-        List<PageResponse> pages,
-        List<DocumentationRuleResponse> rules,
-        String serviceRootUrl,
-        String summary) {
+        @OutputCustomType.Parameter("documentationRootUrl") String documentationRootUrl,
+        @OutputCustomType.Parameter("overview") String overview,
+        @OutputCustomType.Parameter("pages") List<PageResponse> pages,
+        @OutputCustomType.Parameter("rules") List<DocumentationRuleResponse> rules,
+        @OutputCustomType.Parameter("serviceRootUrl") String serviceRootUrl,
+        @OutputCustomType.Parameter("summary") String summary) {
         this.documentationRootUrl = documentationRootUrl;
         this.overview = overview;
         this.pages = pages;
@@ -132,32 +132,32 @@ public final class DocumentationResponse {
     	      this.summary = defaults.summary;
         }
 
-        public Builder setDocumentationRootUrl(String documentationRootUrl) {
+        public Builder documentationRootUrl(String documentationRootUrl) {
             this.documentationRootUrl = Objects.requireNonNull(documentationRootUrl);
             return this;
         }
 
-        public Builder setOverview(String overview) {
+        public Builder overview(String overview) {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
 
-        public Builder setPages(List<PageResponse> pages) {
+        public Builder pages(List<PageResponse> pages) {
             this.pages = Objects.requireNonNull(pages);
             return this;
         }
 
-        public Builder setRules(List<DocumentationRuleResponse> rules) {
+        public Builder rules(List<DocumentationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setServiceRootUrl(String serviceRootUrl) {
+        public Builder serviceRootUrl(String serviceRootUrl) {
             this.serviceRootUrl = Objects.requireNonNull(serviceRootUrl);
             return this;
         }
 
-        public Builder setSummary(String summary) {
+        public Builder summary(String summary) {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }

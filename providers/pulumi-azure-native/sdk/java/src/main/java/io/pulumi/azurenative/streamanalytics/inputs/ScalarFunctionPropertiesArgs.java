@@ -113,42 +113,42 @@ public final class ScalarFunctionPropertiesArgs extends io.pulumi.resources.Reso
     	      this.type = defaults.type;
         }
 
-        public Builder setBinding(@Nullable Input<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding) {
+        public Builder binding(@Nullable Input<Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs>> binding) {
             this.binding = binding;
             return this;
         }
 
-        public Builder setBinding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
+        public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingArgs,JavaScriptFunctionBindingArgs> binding) {
             this.binding = Input.ofNullable(binding);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<List<FunctionInputArgs>> inputs) {
+        public Builder inputs(@Nullable Input<List<FunctionInputArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<FunctionInputArgs> inputs) {
+        public Builder inputs(@Nullable List<FunctionInputArgs> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<FunctionOutputArgs> output) {
+        public Builder output(@Nullable Input<FunctionOutputArgs> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable FunctionOutputArgs output) {
+        public Builder output(@Nullable FunctionOutputArgs output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

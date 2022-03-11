@@ -22,10 +22,10 @@ public final class GoogleCloudRetailV2betaConditionResponse {
      */
     private final List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms;
 
-    @OutputCustomType.Constructor({"activeTimeRange","queryTerms"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaConditionResponse(
-        List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange,
-        List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
+        @OutputCustomType.Parameter("activeTimeRange") List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange,
+        @OutputCustomType.Parameter("queryTerms") List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
         this.activeTimeRange = activeTimeRange;
         this.queryTerms = queryTerms;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudRetailV2betaConditionResponse {
     	      this.queryTerms = defaults.queryTerms;
         }
 
-        public Builder setActiveTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
+        public Builder activeTimeRange(List<GoogleCloudRetailV2betaConditionTimeRangeResponse> activeTimeRange) {
             this.activeTimeRange = Objects.requireNonNull(activeTimeRange);
             return this;
         }
 
-        public Builder setQueryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
+        public Builder queryTerms(List<GoogleCloudRetailV2betaConditionQueryTermResponse> queryTerms) {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }

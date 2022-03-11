@@ -20,10 +20,10 @@ public final class DomainSamlOptionsSamlOptionsIdp {
      */
     private final String metadataContent;
 
-    @OutputCustomType.Constructor({"entityId","metadataContent"})
+    @OutputCustomType.Constructor
     private DomainSamlOptionsSamlOptionsIdp(
-        String entityId,
-        String metadataContent) {
+        @OutputCustomType.Parameter("entityId") String entityId,
+        @OutputCustomType.Parameter("metadataContent") String metadataContent) {
         this.entityId = entityId;
         this.metadataContent = metadataContent;
     }
@@ -65,12 +65,12 @@ public final class DomainSamlOptionsSamlOptionsIdp {
     	      this.metadataContent = defaults.metadataContent;
         }
 
-        public Builder setEntityId(String entityId) {
+        public Builder entityId(String entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setMetadataContent(String metadataContent) {
+        public Builder metadataContent(String metadataContent) {
             this.metadataContent = Objects.requireNonNull(metadataContent);
             return this;
         }

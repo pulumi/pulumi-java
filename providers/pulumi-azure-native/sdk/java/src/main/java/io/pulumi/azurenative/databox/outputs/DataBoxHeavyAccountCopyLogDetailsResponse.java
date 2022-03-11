@@ -32,12 +32,12 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
      */
     private final List<String> copyVerboseLogLink;
 
-    @OutputCustomType.Constructor({"accountName","copyLogDetailsType","copyLogLink","copyVerboseLogLink"})
+    @OutputCustomType.Constructor
     private DataBoxHeavyAccountCopyLogDetailsResponse(
-        String accountName,
-        String copyLogDetailsType,
-        List<String> copyLogLink,
-        List<String> copyVerboseLogLink) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @OutputCustomType.Parameter("copyLogLink") List<String> copyLogLink,
+        @OutputCustomType.Parameter("copyVerboseLogLink") List<String> copyVerboseLogLink) {
         this.accountName = accountName;
         this.copyLogDetailsType = copyLogDetailsType;
         this.copyLogLink = copyLogLink;
@@ -100,22 +100,22 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse {
     	      this.copyVerboseLogLink = defaults.copyVerboseLogLink;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setCopyLogDetailsType(String copyLogDetailsType) {
+        public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
 
-        public Builder setCopyLogLink(List<String> copyLogLink) {
+        public Builder copyLogLink(List<String> copyLogLink) {
             this.copyLogLink = Objects.requireNonNull(copyLogLink);
             return this;
         }
 
-        public Builder setCopyVerboseLogLink(List<String> copyVerboseLogLink) {
+        public Builder copyVerboseLogLink(List<String> copyVerboseLogLink) {
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }

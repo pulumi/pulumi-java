@@ -72,22 +72,22 @@ public final class GoogleCloudApigeeV1ReportPropertyArgs extends io.pulumi.resou
     	      this.value = defaults.value;
         }
 
-        public Builder setProperty(@Nullable Input<String> property) {
+        public Builder property(@Nullable Input<String> property) {
             this.property = property;
             return this;
         }
 
-        public Builder setProperty(@Nullable String property) {
+        public Builder property(@Nullable String property) {
             this.property = Input.ofNullable(property);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> value) {
+        public Builder value(@Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable List<GoogleCloudApigeeV1AttributeArgs> value) {
+        public Builder value(@Nullable List<GoogleCloudApigeeV1AttributeArgs> value) {
             this.value = Input.ofNullable(value);
             return this;
         }

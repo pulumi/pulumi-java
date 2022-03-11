@@ -65,18 +65,18 @@ public final class GetLogProfileResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categories","id","location","locations","name","retentionPolicy","serviceBusRuleId","storageAccountId","tags","type"})
+    @OutputCustomType.Constructor
     private GetLogProfileResult(
-        List<String> categories,
-        String id,
-        String location,
-        List<String> locations,
-        String name,
-        RetentionPolicyResponse retentionPolicy,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locations") List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retentionPolicy") RetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.categories = categories;
         this.id = id;
         this.location = location;
@@ -198,52 +198,52 @@ public final class GetLogProfileResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocations(List<String> locations) {
+        public Builder locations(List<String> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRetentionPolicy(RetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
 
-        public Builder setServiceBusRuleId(@Nullable String serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

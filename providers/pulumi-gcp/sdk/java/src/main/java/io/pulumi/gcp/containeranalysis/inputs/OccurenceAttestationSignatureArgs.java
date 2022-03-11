@@ -85,22 +85,22 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
     	      this.signature = defaults.signature;
         }
 
-        public Builder setPublicKeyId(Input<String> publicKeyId) {
+        public Builder publicKeyId(Input<String> publicKeyId) {
             this.publicKeyId = Objects.requireNonNull(publicKeyId);
             return this;
         }
 
-        public Builder setPublicKeyId(String publicKeyId) {
+        public Builder publicKeyId(String publicKeyId) {
             this.publicKeyId = Input.of(Objects.requireNonNull(publicKeyId));
             return this;
         }
 
-        public Builder setSignature(@Nullable Input<String> signature) {
+        public Builder signature(@Nullable Input<String> signature) {
             this.signature = signature;
             return this;
         }
 
-        public Builder setSignature(@Nullable String signature) {
+        public Builder signature(@Nullable String signature) {
             this.signature = Input.ofNullable(signature);
             return this;
         }

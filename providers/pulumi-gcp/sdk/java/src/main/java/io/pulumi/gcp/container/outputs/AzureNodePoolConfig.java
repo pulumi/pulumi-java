@@ -35,12 +35,12 @@ public final class AzureNodePoolConfig {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor({"rootVolume","sshConfig","tags","vmSize"})
+    @OutputCustomType.Constructor
     private AzureNodePoolConfig(
-        @Nullable AzureNodePoolConfigRootVolume rootVolume,
-        AzureNodePoolConfigSshConfig sshConfig,
-        @Nullable Map<String,String> tags,
-        @Nullable String vmSize) {
+        @OutputCustomType.Parameter("rootVolume") @Nullable AzureNodePoolConfigRootVolume rootVolume,
+        @OutputCustomType.Parameter("sshConfig") AzureNodePoolConfigSshConfig sshConfig,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.rootVolume = rootVolume;
         this.sshConfig = sshConfig;
         this.tags = tags;
@@ -102,22 +102,22 @@ public final class AzureNodePoolConfig {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setRootVolume(@Nullable AzureNodePoolConfigRootVolume rootVolume) {
+        public Builder rootVolume(@Nullable AzureNodePoolConfigRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setSshConfig(AzureNodePoolConfigSshConfig sshConfig) {
+        public Builder sshConfig(AzureNodePoolConfigSshConfig sshConfig) {
             this.sshConfig = Objects.requireNonNull(sshConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = vmSize;
             return this;
         }

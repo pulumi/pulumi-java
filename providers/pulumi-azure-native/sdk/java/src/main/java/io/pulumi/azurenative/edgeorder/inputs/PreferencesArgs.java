@@ -110,42 +110,42 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable Input<EncryptionPreferencesArgs> encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable Input<EncryptionPreferencesArgs> encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
             this.encryptionPreferences = Input.ofNullable(encryptionPreferences);
             return this;
         }
 
-        public Builder setManagementResourcePreferences(@Nullable Input<ManagementResourcePreferencesArgs> managementResourcePreferences) {
+        public Builder managementResourcePreferences(@Nullable Input<ManagementResourcePreferencesArgs> managementResourcePreferences) {
             this.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
 
-        public Builder setManagementResourcePreferences(@Nullable ManagementResourcePreferencesArgs managementResourcePreferences) {
+        public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesArgs managementResourcePreferences) {
             this.managementResourcePreferences = Input.ofNullable(managementResourcePreferences);
             return this;
         }
 
-        public Builder setNotificationPreferences(@Nullable Input<List<NotificationPreferenceArgs>> notificationPreferences) {
+        public Builder notificationPreferences(@Nullable Input<List<NotificationPreferenceArgs>> notificationPreferences) {
             this.notificationPreferences = notificationPreferences;
             return this;
         }
 
-        public Builder setNotificationPreferences(@Nullable List<NotificationPreferenceArgs> notificationPreferences) {
+        public Builder notificationPreferences(@Nullable List<NotificationPreferenceArgs> notificationPreferences) {
             this.notificationPreferences = Input.ofNullable(notificationPreferences);
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable Input<TransportPreferencesArgs> transportPreferences) {
+        public Builder transportPreferences(@Nullable Input<TransportPreferencesArgs> transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
             this.transportPreferences = Input.ofNullable(transportPreferences);
             return this;
         }

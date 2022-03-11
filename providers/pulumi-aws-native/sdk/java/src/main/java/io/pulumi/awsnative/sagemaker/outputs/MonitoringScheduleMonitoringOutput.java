@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MonitoringScheduleMonitoringOutput {
     private final MonitoringScheduleS3Output s3Output;
 
-    @OutputCustomType.Constructor({"s3Output"})
-    private MonitoringScheduleMonitoringOutput(MonitoringScheduleS3Output s3Output) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleMonitoringOutput(@OutputCustomType.Parameter("s3Output") MonitoringScheduleS3Output s3Output) {
         this.s3Output = s3Output;
     }
 
@@ -40,7 +40,7 @@ public final class MonitoringScheduleMonitoringOutput {
     	      this.s3Output = defaults.s3Output;
         }
 
-        public Builder setS3Output(MonitoringScheduleS3Output s3Output) {
+        public Builder s3Output(MonitoringScheduleS3Output s3Output) {
             this.s3Output = Objects.requireNonNull(s3Output);
             return this;
         }

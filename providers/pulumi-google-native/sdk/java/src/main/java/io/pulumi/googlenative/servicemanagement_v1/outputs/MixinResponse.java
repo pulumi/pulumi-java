@@ -20,10 +20,10 @@ public final class MixinResponse {
      */
     private final String root;
 
-    @OutputCustomType.Constructor({"name","root"})
+    @OutputCustomType.Constructor
     private MixinResponse(
-        String name,
-        String root) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("root") String root) {
         this.name = name;
         this.root = root;
     }
@@ -65,12 +65,12 @@ public final class MixinResponse {
     	      this.root = defaults.root;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoot(String root) {
+        public Builder root(String root) {
             this.root = Objects.requireNonNull(root);
             return this;
         }

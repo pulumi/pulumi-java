@@ -22,10 +22,10 @@ public final class ContainerGroupResponseInstanceView {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"events","state"})
+    @OutputCustomType.Constructor
     private ContainerGroupResponseInstanceView(
-        List<EventResponse> events,
-        String state) {
+        @OutputCustomType.Parameter("events") List<EventResponse> events,
+        @OutputCustomType.Parameter("state") String state) {
         this.events = events;
         this.state = state;
     }
@@ -67,12 +67,12 @@ public final class ContainerGroupResponseInstanceView {
     	      this.state = defaults.state;
         }
 
-        public Builder setEvents(List<EventResponse> events) {
+        public Builder events(List<EventResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -41,23 +41,23 @@ public final class WebACLStatement {
     private final @Nullable WebACLSqliMatchStatement sqliMatchStatement;
     private final @Nullable WebACLXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"andStatement","byteMatchStatement","geoMatchStatement","iPSetReferenceStatement","labelMatchStatement","managedRuleGroupStatement","notStatement","orStatement","rateBasedStatement","regexMatchStatement","regexPatternSetReferenceStatement","ruleGroupReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private WebACLStatement(
-        @Nullable WebACLAndStatement andStatement,
-        @Nullable WebACLByteMatchStatement byteMatchStatement,
-        @Nullable WebACLGeoMatchStatement geoMatchStatement,
-        @Nullable WebACLIPSetReferenceStatement iPSetReferenceStatement,
-        @Nullable WebACLLabelMatchStatement labelMatchStatement,
-        @Nullable WebACLManagedRuleGroupStatement managedRuleGroupStatement,
-        @Nullable WebACLNotStatement notStatement,
-        @Nullable WebACLOrStatement orStatement,
-        @Nullable WebACLRateBasedStatement rateBasedStatement,
-        @Nullable WebACLRegexMatchStatement regexMatchStatement,
-        @Nullable WebACLRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable WebACLRuleGroupReferenceStatement ruleGroupReferenceStatement,
-        @Nullable WebACLSizeConstraintStatement sizeConstraintStatement,
-        @Nullable WebACLSqliMatchStatement sqliMatchStatement,
-        @Nullable WebACLXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("andStatement") @Nullable WebACLAndStatement andStatement,
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable WebACLByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable WebACLGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("iPSetReferenceStatement") @Nullable WebACLIPSetReferenceStatement iPSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable WebACLLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("managedRuleGroupStatement") @Nullable WebACLManagedRuleGroupStatement managedRuleGroupStatement,
+        @OutputCustomType.Parameter("notStatement") @Nullable WebACLNotStatement notStatement,
+        @OutputCustomType.Parameter("orStatement") @Nullable WebACLOrStatement orStatement,
+        @OutputCustomType.Parameter("rateBasedStatement") @Nullable WebACLRateBasedStatement rateBasedStatement,
+        @OutputCustomType.Parameter("regexMatchStatement") @Nullable WebACLRegexMatchStatement regexMatchStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable WebACLRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("ruleGroupReferenceStatement") @Nullable WebACLRuleGroupReferenceStatement ruleGroupReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable WebACLSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable WebACLSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable WebACLXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
@@ -169,77 +169,77 @@ public final class WebACLStatement {
     	      this.xssMatchStatement = defaults.xssMatchStatement;
         }
 
-        public Builder setAndStatement(@Nullable WebACLAndStatement andStatement) {
+        public Builder andStatement(@Nullable WebACLAndStatement andStatement) {
             this.andStatement = andStatement;
             return this;
         }
 
-        public Builder setByteMatchStatement(@Nullable WebACLByteMatchStatement byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable WebACLByteMatchStatement byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
-        public Builder setGeoMatchStatement(@Nullable WebACLGeoMatchStatement geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable WebACLGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
-        public Builder setIPSetReferenceStatement(@Nullable WebACLIPSetReferenceStatement iPSetReferenceStatement) {
+        public Builder iPSetReferenceStatement(@Nullable WebACLIPSetReferenceStatement iPSetReferenceStatement) {
             this.iPSetReferenceStatement = iPSetReferenceStatement;
             return this;
         }
 
-        public Builder setLabelMatchStatement(@Nullable WebACLLabelMatchStatement labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable WebACLLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
-        public Builder setManagedRuleGroupStatement(@Nullable WebACLManagedRuleGroupStatement managedRuleGroupStatement) {
+        public Builder managedRuleGroupStatement(@Nullable WebACLManagedRuleGroupStatement managedRuleGroupStatement) {
             this.managedRuleGroupStatement = managedRuleGroupStatement;
             return this;
         }
 
-        public Builder setNotStatement(@Nullable WebACLNotStatement notStatement) {
+        public Builder notStatement(@Nullable WebACLNotStatement notStatement) {
             this.notStatement = notStatement;
             return this;
         }
 
-        public Builder setOrStatement(@Nullable WebACLOrStatement orStatement) {
+        public Builder orStatement(@Nullable WebACLOrStatement orStatement) {
             this.orStatement = orStatement;
             return this;
         }
 
-        public Builder setRateBasedStatement(@Nullable WebACLRateBasedStatement rateBasedStatement) {
+        public Builder rateBasedStatement(@Nullable WebACLRateBasedStatement rateBasedStatement) {
             this.rateBasedStatement = rateBasedStatement;
             return this;
         }
 
-        public Builder setRegexMatchStatement(@Nullable WebACLRegexMatchStatement regexMatchStatement) {
+        public Builder regexMatchStatement(@Nullable WebACLRegexMatchStatement regexMatchStatement) {
             this.regexMatchStatement = regexMatchStatement;
             return this;
         }
 
-        public Builder setRegexPatternSetReferenceStatement(@Nullable WebACLRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable WebACLRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
-        public Builder setRuleGroupReferenceStatement(@Nullable WebACLRuleGroupReferenceStatement ruleGroupReferenceStatement) {
+        public Builder ruleGroupReferenceStatement(@Nullable WebACLRuleGroupReferenceStatement ruleGroupReferenceStatement) {
             this.ruleGroupReferenceStatement = ruleGroupReferenceStatement;
             return this;
         }
 
-        public Builder setSizeConstraintStatement(@Nullable WebACLSizeConstraintStatement sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable WebACLSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
-        public Builder setSqliMatchStatement(@Nullable WebACLSqliMatchStatement sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable WebACLSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
-        public Builder setXssMatchStatement(@Nullable WebACLXssMatchStatement xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable WebACLXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }

@@ -125,27 +125,27 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
     	      this.summaryResults = defaults.summaryResults;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMigrationId(String migrationId) {
+        public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSummaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
+        public Builder summaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
             this.summaryResults = summaryResults;
             return this;
         }

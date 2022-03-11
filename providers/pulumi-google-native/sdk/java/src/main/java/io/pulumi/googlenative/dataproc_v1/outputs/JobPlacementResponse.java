@@ -26,11 +26,11 @@ public final class JobPlacementResponse {
      */
     private final String clusterUuid;
 
-    @OutputCustomType.Constructor({"clusterLabels","clusterName","clusterUuid"})
+    @OutputCustomType.Constructor
     private JobPlacementResponse(
-        Map<String,String> clusterLabels,
-        String clusterName,
-        String clusterUuid) {
+        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterUuid") String clusterUuid) {
         this.clusterLabels = clusterLabels;
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
@@ -82,17 +82,17 @@ public final class JobPlacementResponse {
     	      this.clusterUuid = defaults.clusterUuid;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterUuid(String clusterUuid) {
+        public Builder clusterUuid(String clusterUuid) {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }

@@ -100,22 +100,22 @@ public final class GetKustoPoolAttachedDatabaseConfigurationArgs extends io.pulu
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAttachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
+        public Builder attachedDatabaseConfigurationName(String attachedDatabaseConfigurationName) {
             this.attachedDatabaseConfigurationName = Objects.requireNonNull(attachedDatabaseConfigurationName);
             return this;
         }
 
-        public Builder setKustoPoolName(String kustoPoolName) {
+        public Builder kustoPoolName(String kustoPoolName) {
             this.kustoPoolName = Objects.requireNonNull(kustoPoolName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }

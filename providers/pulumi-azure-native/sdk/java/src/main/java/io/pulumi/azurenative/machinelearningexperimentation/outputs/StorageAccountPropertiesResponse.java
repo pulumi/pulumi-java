@@ -20,10 +20,10 @@ public final class StorageAccountPropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"accessKey","storageAccountId"})
+    @OutputCustomType.Constructor
     private StorageAccountPropertiesResponse(
-        String accessKey,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("accessKey") String accessKey,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.accessKey = accessKey;
         this.storageAccountId = storageAccountId;
     }
@@ -65,12 +65,12 @@ public final class StorageAccountPropertiesResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setAccessKey(String accessKey) {
+        public Builder accessKey(String accessKey) {
             this.accessKey = Objects.requireNonNull(accessKey);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

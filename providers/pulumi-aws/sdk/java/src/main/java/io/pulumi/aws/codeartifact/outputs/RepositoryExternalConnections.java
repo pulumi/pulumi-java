@@ -19,11 +19,11 @@ public final class RepositoryExternalConnections {
     private final @Nullable String packageFormat;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"externalConnectionName","packageFormat","status"})
+    @OutputCustomType.Constructor
     private RepositoryExternalConnections(
-        String externalConnectionName,
-        @Nullable String packageFormat,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("externalConnectionName") String externalConnectionName,
+        @OutputCustomType.Parameter("packageFormat") @Nullable String packageFormat,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.externalConnectionName = externalConnectionName;
         this.packageFormat = packageFormat;
         this.status = status;
@@ -67,17 +67,17 @@ public final class RepositoryExternalConnections {
     	      this.status = defaults.status;
         }
 
-        public Builder setExternalConnectionName(String externalConnectionName) {
+        public Builder externalConnectionName(String externalConnectionName) {
             this.externalConnectionName = Objects.requireNonNull(externalConnectionName);
             return this;
         }
 
-        public Builder setPackageFormat(@Nullable String packageFormat) {
+        public Builder packageFormat(@Nullable String packageFormat) {
             this.packageFormat = packageFormat;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

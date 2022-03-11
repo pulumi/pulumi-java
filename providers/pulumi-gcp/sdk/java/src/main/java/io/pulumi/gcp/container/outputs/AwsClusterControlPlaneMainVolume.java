@@ -33,12 +33,12 @@ public final class AwsClusterControlPlaneMainVolume {
      */
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"iops","kmsKeyArn","sizeGib","volumeType"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlaneMainVolume(
-        @Nullable Integer iops,
-        @Nullable String kmsKeyArn,
-        @Nullable Integer sizeGib,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("sizeGib") @Nullable Integer sizeGib,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.iops = iops;
         this.kmsKeyArn = kmsKeyArn;
         this.sizeGib = sizeGib;
@@ -100,22 +100,22 @@ public final class AwsClusterControlPlaneMainVolume {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setSizeGib(@Nullable Integer sizeGib) {
+        public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

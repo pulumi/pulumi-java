@@ -18,10 +18,10 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"kind","networks"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigResponse(
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
         this.kind = kind;
         this.networks = networks;
     }
@@ -59,12 +59,12 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

@@ -22,10 +22,10 @@ public final class LoadBalancerSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"name","tier"})
+    @OutputCustomType.Constructor
     private LoadBalancerSkuResponse(
-        @Nullable String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.name = name;
         this.tier = tier;
     }
@@ -67,12 +67,12 @@ public final class LoadBalancerSkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

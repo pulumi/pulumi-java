@@ -23,10 +23,10 @@ public final class AdditionalErrorInfoResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"info","type"})
+    @OutputCustomType.Constructor
     private AdditionalErrorInfoResponse(
-        @Nullable Object info,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("info") @Nullable Object info,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.info = info;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class AdditionalErrorInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInfo(@Nullable Object info) {
+        public Builder info(@Nullable Object info) {
             this.info = info;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

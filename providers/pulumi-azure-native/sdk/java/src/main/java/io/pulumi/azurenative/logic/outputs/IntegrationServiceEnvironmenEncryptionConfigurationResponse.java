@@ -17,8 +17,8 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
      */
     private final @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference;
 
-    @OutputCustomType.Constructor({"encryptionKeyReference"})
-    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
+    @OutputCustomType.Constructor
+    private IntegrationServiceEnvironmenEncryptionConfigurationResponse(@OutputCustomType.Parameter("encryptionKeyReference") @Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
         this.encryptionKeyReference = encryptionKeyReference;
     }
 
@@ -50,7 +50,7 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
     	      this.encryptionKeyReference = defaults.encryptionKeyReference;
         }
 
-        public Builder setEncryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
+        public Builder encryptionKeyReference(@Nullable IntegrationServiceEnvironmenEncryptionKeyReferenceResponse encryptionKeyReference) {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }

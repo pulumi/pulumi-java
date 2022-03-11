@@ -24,10 +24,10 @@ public final class CronJobStatus {
      */
     private final @Nullable String lastScheduleTime;
 
-    @OutputCustomType.Constructor({"active","lastScheduleTime"})
+    @OutputCustomType.Constructor
     private CronJobStatus(
-        @Nullable List<ObjectReference> active,
-        @Nullable String lastScheduleTime) {
+        @OutputCustomType.Parameter("active") @Nullable List<ObjectReference> active,
+        @OutputCustomType.Parameter("lastScheduleTime") @Nullable String lastScheduleTime) {
         this.active = active;
         this.lastScheduleTime = lastScheduleTime;
     }
@@ -69,12 +69,12 @@ public final class CronJobStatus {
     	      this.lastScheduleTime = defaults.lastScheduleTime;
         }
 
-        public Builder setActive(@Nullable List<ObjectReference> active) {
+        public Builder active(@Nullable List<ObjectReference> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setLastScheduleTime(@Nullable String lastScheduleTime) {
+        public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }

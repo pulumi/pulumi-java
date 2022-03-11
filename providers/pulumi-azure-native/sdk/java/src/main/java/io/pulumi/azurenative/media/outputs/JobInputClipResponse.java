@@ -51,14 +51,14 @@ public final class JobInputClipResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor({"end","files","inputDefinitions","label","odataType","start"})
+    @OutputCustomType.Constructor
     private JobInputClipResponse(
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @Nullable List<String> files,
-        @Nullable List<Object> inputDefinitions,
-        @Nullable String label,
-        String odataType,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @OutputCustomType.Parameter("files") @Nullable List<String> files,
+        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.end = end;
         this.files = files;
         this.inputDefinitions = inputDefinitions;
@@ -141,32 +141,32 @@ public final class JobInputClipResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
+        public Builder end(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<String> files) {
+        public Builder files(@Nullable List<String> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setInputDefinitions(@Nullable List<Object> inputDefinitions) {
+        public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setStart(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
             this.start = start;
             return this;
         }

@@ -15,10 +15,10 @@ public final class ServiceMode {
     private final @Nullable Boolean global;
     private final @Nullable ServiceModeReplicated replicated;
 
-    @OutputCustomType.Constructor({"global","replicated"})
+    @OutputCustomType.Constructor
     private ServiceMode(
-        @Nullable Boolean global,
-        @Nullable ServiceModeReplicated replicated) {
+        @OutputCustomType.Parameter("global") @Nullable Boolean global,
+        @OutputCustomType.Parameter("replicated") @Nullable ServiceModeReplicated replicated) {
         this.global = global;
         this.replicated = replicated;
     }
@@ -52,12 +52,12 @@ public final class ServiceMode {
     	      this.replicated = defaults.replicated;
         }
 
-        public Builder setGlobal(@Nullable Boolean global) {
+        public Builder global(@Nullable Boolean global) {
             this.global = global;
             return this;
         }
 
-        public Builder setReplicated(@Nullable ServiceModeReplicated replicated) {
+        public Builder replicated(@Nullable ServiceModeReplicated replicated) {
             this.replicated = replicated;
             return this;
         }

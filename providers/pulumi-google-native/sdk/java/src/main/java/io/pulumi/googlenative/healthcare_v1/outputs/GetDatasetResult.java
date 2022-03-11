@@ -20,10 +20,10 @@ public final class GetDatasetResult {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"name","timeZone"})
+    @OutputCustomType.Constructor
     private GetDatasetResult(
-        String name,
-        String timeZone) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.name = name;
         this.timeZone = timeZone;
     }
@@ -65,12 +65,12 @@ public final class GetDatasetResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

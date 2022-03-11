@@ -123,29 +123,29 @@ public final class WorkerPoolResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoscalingSettings","dataDisks","defaultPackageSet","diskSizeGb","diskSourceImage","diskType","ipConfiguration","kind","machineType","metadata","network","numThreadsPerWorker","numWorkers","onHostMaintenance","packages","poolArgs","sdkHarnessContainerImages","subnetwork","taskrunnerSettings","teardownPolicy","zone"})
+    @OutputCustomType.Constructor
     private WorkerPoolResponse(
-        AutoscalingSettingsResponse autoscalingSettings,
-        List<DiskResponse> dataDisks,
-        String defaultPackageSet,
-        Integer diskSizeGb,
-        String diskSourceImage,
-        String diskType,
-        String ipConfiguration,
-        String kind,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        Integer numThreadsPerWorker,
-        Integer numWorkers,
-        String onHostMaintenance,
-        List<PackageResponse> packages,
-        Map<String,String> poolArgs,
-        List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
-        String subnetwork,
-        TaskRunnerSettingsResponse taskrunnerSettings,
-        String teardownPolicy,
-        String zone) {
+        @OutputCustomType.Parameter("autoscalingSettings") AutoscalingSettingsResponse autoscalingSettings,
+        @OutputCustomType.Parameter("dataDisks") List<DiskResponse> dataDisks,
+        @OutputCustomType.Parameter("defaultPackageSet") String defaultPackageSet,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskSourceImage") String diskSourceImage,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("numThreadsPerWorker") Integer numThreadsPerWorker,
+        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
+        @OutputCustomType.Parameter("poolArgs") Map<String,String> poolArgs,
+        @OutputCustomType.Parameter("sdkHarnessContainerImages") List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("taskrunnerSettings") TaskRunnerSettingsResponse taskrunnerSettings,
+        @OutputCustomType.Parameter("teardownPolicy") String teardownPolicy,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoscalingSettings = autoscalingSettings;
         this.dataDisks = dataDisks;
         this.defaultPackageSet = defaultPackageSet;
@@ -377,107 +377,107 @@ public final class WorkerPoolResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingSettings(AutoscalingSettingsResponse autoscalingSettings) {
+        public Builder autoscalingSettings(AutoscalingSettingsResponse autoscalingSettings) {
             this.autoscalingSettings = Objects.requireNonNull(autoscalingSettings);
             return this;
         }
 
-        public Builder setDataDisks(List<DiskResponse> dataDisks) {
+        public Builder dataDisks(List<DiskResponse> dataDisks) {
             this.dataDisks = Objects.requireNonNull(dataDisks);
             return this;
         }
 
-        public Builder setDefaultPackageSet(String defaultPackageSet) {
+        public Builder defaultPackageSet(String defaultPackageSet) {
             this.defaultPackageSet = Objects.requireNonNull(defaultPackageSet);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskSourceImage(String diskSourceImage) {
+        public Builder diskSourceImage(String diskSourceImage) {
             this.diskSourceImage = Objects.requireNonNull(diskSourceImage);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setIpConfiguration(String ipConfiguration) {
+        public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNumThreadsPerWorker(Integer numThreadsPerWorker) {
+        public Builder numThreadsPerWorker(Integer numThreadsPerWorker) {
             this.numThreadsPerWorker = Objects.requireNonNull(numThreadsPerWorker);
             return this;
         }
 
-        public Builder setNumWorkers(Integer numWorkers) {
+        public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setPackages(List<PackageResponse> packages) {
+        public Builder packages(List<PackageResponse> packages) {
             this.packages = Objects.requireNonNull(packages);
             return this;
         }
 
-        public Builder setPoolArgs(Map<String,String> poolArgs) {
+        public Builder poolArgs(Map<String,String> poolArgs) {
             this.poolArgs = Objects.requireNonNull(poolArgs);
             return this;
         }
 
-        public Builder setSdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
+        public Builder sdkHarnessContainerImages(List<SdkHarnessContainerImageResponse> sdkHarnessContainerImages) {
             this.sdkHarnessContainerImages = Objects.requireNonNull(sdkHarnessContainerImages);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTaskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
+        public Builder taskrunnerSettings(TaskRunnerSettingsResponse taskrunnerSettings) {
             this.taskrunnerSettings = Objects.requireNonNull(taskrunnerSettings);
             return this;
         }
 
-        public Builder setTeardownPolicy(String teardownPolicy) {
+        public Builder teardownPolicy(String teardownPolicy) {
             this.teardownPolicy = Objects.requireNonNull(teardownPolicy);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

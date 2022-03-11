@@ -36,14 +36,14 @@ public final class GetDefaultServiceAccountResult {
      */
     private final String uniqueId;
 
-    @OutputCustomType.Constructor({"displayName","email","id","name","project","uniqueId"})
+    @OutputCustomType.Constructor
     private GetDefaultServiceAccountResult(
-        String displayName,
-        String email,
-        String id,
-        String name,
-        String project,
-        String uniqueId) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId) {
         this.displayName = displayName;
         this.email = email;
         this.id = id;
@@ -121,32 +121,32 @@ public final class GetDefaultServiceAccountResult {
     	      this.uniqueId = defaults.uniqueId;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }

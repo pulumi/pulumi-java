@@ -62,18 +62,18 @@ public final class GetImportJobResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"attestation","createTime","expireEventTime","expireTime","generateTime","importMethod","name","protectionLevel","publicKey","state"})
+    @OutputCustomType.Constructor
     private GetImportJobResult(
-        KeyOperationAttestationResponse attestation,
-        String createTime,
-        String expireEventTime,
-        String expireTime,
-        String generateTime,
-        String importMethod,
-        String name,
-        String protectionLevel,
-        WrappingPublicKeyResponse publicKey,
-        String state) {
+        @OutputCustomType.Parameter("attestation") KeyOperationAttestationResponse attestation,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireEventTime") String expireEventTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("generateTime") String generateTime,
+        @OutputCustomType.Parameter("importMethod") String importMethod,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel,
+        @OutputCustomType.Parameter("publicKey") WrappingPublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("state") String state) {
         this.attestation = attestation;
         this.createTime = createTime;
         this.expireEventTime = expireEventTime;
@@ -195,52 +195,52 @@ public final class GetImportJobResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setAttestation(KeyOperationAttestationResponse attestation) {
+        public Builder attestation(KeyOperationAttestationResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpireEventTime(String expireEventTime) {
+        public Builder expireEventTime(String expireEventTime) {
             this.expireEventTime = Objects.requireNonNull(expireEventTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setGenerateTime(String generateTime) {
+        public Builder generateTime(String generateTime) {
             this.generateTime = Objects.requireNonNull(generateTime);
             return this;
         }
 
-        public Builder setImportMethod(String importMethod) {
+        public Builder importMethod(String importMethod) {
             this.importMethod = Objects.requireNonNull(importMethod);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProtectionLevel(String protectionLevel) {
+        public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }
 
-        public Builder setPublicKey(WrappingPublicKeyResponse publicKey) {
+        public Builder publicKey(WrappingPublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

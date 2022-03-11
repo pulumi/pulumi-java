@@ -82,21 +82,21 @@ public final class GetSmartDetectorAlertRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actionGroups","description","detector","frequency","id","location","name","scope","severity","state","tags","throttling","type"})
+    @OutputCustomType.Constructor
     private GetSmartDetectorAlertRuleResult(
-        ActionGroupsInformationResponse actionGroups,
-        @Nullable String description,
-        DetectorResponse detector,
-        String frequency,
-        String id,
-        @Nullable String location,
-        String name,
-        List<String> scope,
-        String severity,
-        String state,
-        @Nullable Map<String,String> tags,
-        @Nullable ThrottlingInformationResponse throttling,
-        String type) {
+        @OutputCustomType.Parameter("actionGroups") ActionGroupsInformationResponse actionGroups,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("detector") DetectorResponse detector,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") List<String> scope,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("throttling") @Nullable ThrottlingInformationResponse throttling,
+        @OutputCustomType.Parameter("type") String type) {
         this.actionGroups = actionGroups;
         this.description = description;
         this.detector = detector;
@@ -248,67 +248,67 @@ public final class GetSmartDetectorAlertRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActionGroups(ActionGroupsInformationResponse actionGroups) {
+        public Builder actionGroups(ActionGroupsInformationResponse actionGroups) {
             this.actionGroups = Objects.requireNonNull(actionGroups);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDetector(DetectorResponse detector) {
+        public Builder detector(DetectorResponse detector) {
             this.detector = Objects.requireNonNull(detector);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(List<String> scope) {
+        public Builder scope(List<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThrottling(@Nullable ThrottlingInformationResponse throttling) {
+        public Builder throttling(@Nullable ThrottlingInformationResponse throttling) {
             this.throttling = throttling;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -47,15 +47,15 @@ public final class EndpointResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"address","createTime","metadata","name","network","port","updateTime"})
+    @OutputCustomType.Constructor
     private EndpointResponse(
-        String address,
-        String createTime,
-        Map<String,String> metadata,
-        String name,
-        String network,
-        Integer port,
-        String updateTime) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.address = address;
         this.createTime = createTime;
         this.metadata = metadata;
@@ -147,37 +147,37 @@ public final class EndpointResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

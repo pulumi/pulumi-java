@@ -15,8 +15,8 @@ public final class GatewayRouteSpecGrpcRouteActionTarget {
      */
     private final GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService;
 
-    @OutputCustomType.Constructor({"virtualService"})
-    private GatewayRouteSpecGrpcRouteActionTarget(GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService) {
+    @OutputCustomType.Constructor
+    private GatewayRouteSpecGrpcRouteActionTarget(@OutputCustomType.Parameter("virtualService") GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService) {
         this.virtualService = virtualService;
     }
 
@@ -48,7 +48,7 @@ public final class GatewayRouteSpecGrpcRouteActionTarget {
     	      this.virtualService = defaults.virtualService;
         }
 
-        public Builder setVirtualService(GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService) {
+        public Builder virtualService(GatewayRouteSpecGrpcRouteActionTargetVirtualService virtualService) {
             this.virtualService = Objects.requireNonNull(virtualService);
             return this;
         }

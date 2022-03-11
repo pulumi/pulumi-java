@@ -23,10 +23,10 @@ public final class TriggerBuildAvailableSecretsSecretManager {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor({"env","versionName"})
+    @OutputCustomType.Constructor
     private TriggerBuildAvailableSecretsSecretManager(
-        String env,
-        String versionName) {
+        @OutputCustomType.Parameter("env") String env,
+        @OutputCustomType.Parameter("versionName") String versionName) {
         this.env = env;
         this.versionName = versionName;
     }
@@ -71,12 +71,12 @@ public final class TriggerBuildAvailableSecretsSecretManager {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setVersionName(String versionName) {
+        public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }

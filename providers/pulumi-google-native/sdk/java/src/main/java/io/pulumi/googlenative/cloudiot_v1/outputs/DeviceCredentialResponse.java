@@ -21,10 +21,10 @@ public final class DeviceCredentialResponse {
      */
     private final PublicKeyCredentialResponse publicKey;
 
-    @OutputCustomType.Constructor({"expirationTime","publicKey"})
+    @OutputCustomType.Constructor
     private DeviceCredentialResponse(
-        String expirationTime,
-        PublicKeyCredentialResponse publicKey) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("publicKey") PublicKeyCredentialResponse publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }
@@ -66,12 +66,12 @@ public final class DeviceCredentialResponse {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setPublicKey(PublicKeyCredentialResponse publicKey) {
+        public Builder publicKey(PublicKeyCredentialResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
      */
     private final String intent;
 
-    @OutputCustomType.Constructor({"intent"})
-    private GoogleCloudDialogflowCxV3beta1IntentInputResponse(String intent) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1IntentInputResponse(@OutputCustomType.Parameter("intent") String intent) {
         this.intent = intent;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
     	      this.intent = defaults.intent;
         }
 
-        public Builder setIntent(String intent) {
+        public Builder intent(String intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }

@@ -24,10 +24,10 @@ public final class ListRegistryCredentialsResult {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"passwords","username"})
+    @OutputCustomType.Constructor
     private ListRegistryCredentialsResult(
-        @Nullable List<RegistryPasswordResponse> passwords,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("passwords") @Nullable List<RegistryPasswordResponse> passwords,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.passwords = passwords;
         this.username = username;
     }
@@ -69,12 +69,12 @@ public final class ListRegistryCredentialsResult {
     	      this.username = defaults.username;
         }
 
-        public Builder setPasswords(@Nullable List<RegistryPasswordResponse> passwords) {
+        public Builder passwords(@Nullable List<RegistryPasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

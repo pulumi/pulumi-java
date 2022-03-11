@@ -44,14 +44,14 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
      */
     private final @Nullable List<String> regions;
 
-    @OutputCustomType.Constructor({"accounts","failureToleranceCount","failureTolerancePercentage","maxConcurrencyCount","maxConcurrencyPercentage","regions"})
+    @OutputCustomType.Constructor
     private ProvisionedProductStackSetProvisioningPreferences(
-        @Nullable List<String> accounts,
-        @Nullable Integer failureToleranceCount,
-        @Nullable Integer failureTolerancePercentage,
-        @Nullable Integer maxConcurrencyCount,
-        @Nullable Integer maxConcurrencyPercentage,
-        @Nullable List<String> regions) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("failureToleranceCount") @Nullable Integer failureToleranceCount,
+        @OutputCustomType.Parameter("failureTolerancePercentage") @Nullable Integer failureTolerancePercentage,
+        @OutputCustomType.Parameter("maxConcurrencyCount") @Nullable Integer maxConcurrencyCount,
+        @OutputCustomType.Parameter("maxConcurrencyPercentage") @Nullable Integer maxConcurrencyPercentage,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions) {
         this.accounts = accounts;
         this.failureToleranceCount = failureToleranceCount;
         this.failureTolerancePercentage = failureTolerancePercentage;
@@ -133,32 +133,32 @@ public final class ProvisionedProductStackSetProvisioningPreferences {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setFailureToleranceCount(@Nullable Integer failureToleranceCount) {
+        public Builder failureToleranceCount(@Nullable Integer failureToleranceCount) {
             this.failureToleranceCount = failureToleranceCount;
             return this;
         }
 
-        public Builder setFailureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
+        public Builder failureTolerancePercentage(@Nullable Integer failureTolerancePercentage) {
             this.failureTolerancePercentage = failureTolerancePercentage;
             return this;
         }
 
-        public Builder setMaxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
+        public Builder maxConcurrencyCount(@Nullable Integer maxConcurrencyCount) {
             this.maxConcurrencyCount = maxConcurrencyCount;
             return this;
         }
 
-        public Builder setMaxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
+        public Builder maxConcurrencyPercentage(@Nullable Integer maxConcurrencyPercentage) {
             this.maxConcurrencyPercentage = maxConcurrencyPercentage;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }

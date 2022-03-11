@@ -23,12 +23,12 @@ public final class DetectorModelState {
      */
     private final String stateName;
 
-    @OutputCustomType.Constructor({"onEnter","onExit","onInput","stateName"})
+    @OutputCustomType.Constructor
     private DetectorModelState(
-        @Nullable DetectorModelOnEnter onEnter,
-        @Nullable DetectorModelOnExit onExit,
-        @Nullable DetectorModelOnInput onInput,
-        String stateName) {
+        @OutputCustomType.Parameter("onEnter") @Nullable DetectorModelOnEnter onEnter,
+        @OutputCustomType.Parameter("onExit") @Nullable DetectorModelOnExit onExit,
+        @OutputCustomType.Parameter("onInput") @Nullable DetectorModelOnInput onInput,
+        @OutputCustomType.Parameter("stateName") String stateName) {
         this.onEnter = onEnter;
         this.onExit = onExit;
         this.onInput = onInput;
@@ -78,22 +78,22 @@ public final class DetectorModelState {
     	      this.stateName = defaults.stateName;
         }
 
-        public Builder setOnEnter(@Nullable DetectorModelOnEnter onEnter) {
+        public Builder onEnter(@Nullable DetectorModelOnEnter onEnter) {
             this.onEnter = onEnter;
             return this;
         }
 
-        public Builder setOnExit(@Nullable DetectorModelOnExit onExit) {
+        public Builder onExit(@Nullable DetectorModelOnExit onExit) {
             this.onExit = onExit;
             return this;
         }
 
-        public Builder setOnInput(@Nullable DetectorModelOnInput onInput) {
+        public Builder onInput(@Nullable DetectorModelOnInput onInput) {
             this.onInput = onInput;
             return this;
         }
 
-        public Builder setStateName(String stateName) {
+        public Builder stateName(String stateName) {
             this.stateName = Objects.requireNonNull(stateName);
             return this;
         }

@@ -17,8 +17,8 @@ public final class SloBasicSliLatency {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor({"threshold"})
-    private SloBasicSliLatency(String threshold) {
+    @OutputCustomType.Constructor
+    private SloBasicSliLatency(@OutputCustomType.Parameter("threshold") String threshold) {
         this.threshold = threshold;
     }
 
@@ -52,7 +52,7 @@ public final class SloBasicSliLatency {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setThreshold(String threshold) {
+        public Builder threshold(String threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

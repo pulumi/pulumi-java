@@ -27,11 +27,11 @@ public final class GoogleCloudRunOpV2VolumeResponse {
      */
     private final GoogleCloudRunOpV2SecretVolumeSourceResponse secret;
 
-    @OutputCustomType.Constructor({"cloudSqlInstance","name","secret"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2VolumeResponse(
-        GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
-        String name,
-        GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
+        @OutputCustomType.Parameter("cloudSqlInstance") GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
         this.cloudSqlInstance = cloudSqlInstance;
         this.name = name;
         this.secret = secret;
@@ -83,17 +83,17 @@ public final class GoogleCloudRunOpV2VolumeResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setCloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
+        public Builder cloudSqlInstance(GoogleCloudRunOpV2CloudSqlInstanceResponse cloudSqlInstance) {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
+        public Builder secret(GoogleCloudRunOpV2SecretVolumeSourceResponse secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

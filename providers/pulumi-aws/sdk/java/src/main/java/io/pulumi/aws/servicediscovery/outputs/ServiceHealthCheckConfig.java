@@ -28,11 +28,11 @@ public final class ServiceHealthCheckConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"failureThreshold","resourcePath","type"})
+    @OutputCustomType.Constructor
     private ServiceHealthCheckConfig(
-        @Nullable Integer failureThreshold,
-        @Nullable String resourcePath,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.failureThreshold = failureThreshold;
         this.resourcePath = resourcePath;
         this.type = type;
@@ -84,17 +84,17 @@ public final class ServiceHealthCheckConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

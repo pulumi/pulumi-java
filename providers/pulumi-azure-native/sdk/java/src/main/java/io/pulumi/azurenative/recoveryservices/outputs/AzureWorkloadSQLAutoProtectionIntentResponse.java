@@ -48,15 +48,15 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
      */
     private final @Nullable String workloadItemType;
 
-    @OutputCustomType.Constructor({"backupManagementType","itemId","policyId","protectionIntentItemType","protectionState","sourceResourceId","workloadItemType"})
+    @OutputCustomType.Constructor
     private AzureWorkloadSQLAutoProtectionIntentResponse(
-        @Nullable String backupManagementType,
-        @Nullable String itemId,
-        @Nullable String policyId,
-        String protectionIntentItemType,
-        @Nullable String protectionState,
-        @Nullable String sourceResourceId,
-        @Nullable String workloadItemType) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("itemId") @Nullable String itemId,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("protectionIntentItemType") String protectionIntentItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId,
+        @OutputCustomType.Parameter("workloadItemType") @Nullable String workloadItemType) {
         this.backupManagementType = backupManagementType;
         this.itemId = itemId;
         this.policyId = policyId;
@@ -149,37 +149,37 @@ public final class AzureWorkloadSQLAutoProtectionIntentResponse {
     	      this.workloadItemType = defaults.workloadItemType;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setItemId(@Nullable String itemId) {
+        public Builder itemId(@Nullable String itemId) {
             this.itemId = itemId;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProtectionIntentItemType(String protectionIntentItemType) {
+        public Builder protectionIntentItemType(String protectionIntentItemType) {
             this.protectionIntentItemType = Objects.requireNonNull(protectionIntentItemType);
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }
 
-        public Builder setWorkloadItemType(@Nullable String workloadItemType) {
+        public Builder workloadItemType(@Nullable String workloadItemType) {
             this.workloadItemType = workloadItemType;
             return this;
         }

@@ -27,17 +27,17 @@ public final class GetApplicationResult {
     private final @Nullable List<ApplicationTag> tags;
     private final @Nullable String vpcLinkId;
 
-    @OutputCustomType.Constructor({"apiGatewayId","applicationIdentifier","arn","nlbArn","nlbName","proxyUrl","stageName","tags","vpcLinkId"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String apiGatewayId,
-        @Nullable String applicationIdentifier,
-        @Nullable String arn,
-        @Nullable String nlbArn,
-        @Nullable String nlbName,
-        @Nullable String proxyUrl,
-        @Nullable String stageName,
-        @Nullable List<ApplicationTag> tags,
-        @Nullable String vpcLinkId) {
+        @OutputCustomType.Parameter("apiGatewayId") @Nullable String apiGatewayId,
+        @OutputCustomType.Parameter("applicationIdentifier") @Nullable String applicationIdentifier,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("nlbArn") @Nullable String nlbArn,
+        @OutputCustomType.Parameter("nlbName") @Nullable String nlbName,
+        @OutputCustomType.Parameter("proxyUrl") @Nullable String proxyUrl,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags,
+        @OutputCustomType.Parameter("vpcLinkId") @Nullable String vpcLinkId) {
         this.apiGatewayId = apiGatewayId;
         this.applicationIdentifier = applicationIdentifier;
         this.arn = arn;
@@ -117,47 +117,47 @@ public final class GetApplicationResult {
     	      this.vpcLinkId = defaults.vpcLinkId;
         }
 
-        public Builder setApiGatewayId(@Nullable String apiGatewayId) {
+        public Builder apiGatewayId(@Nullable String apiGatewayId) {
             this.apiGatewayId = apiGatewayId;
             return this;
         }
 
-        public Builder setApplicationIdentifier(@Nullable String applicationIdentifier) {
+        public Builder applicationIdentifier(@Nullable String applicationIdentifier) {
             this.applicationIdentifier = applicationIdentifier;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setNlbArn(@Nullable String nlbArn) {
+        public Builder nlbArn(@Nullable String nlbArn) {
             this.nlbArn = nlbArn;
             return this;
         }
 
-        public Builder setNlbName(@Nullable String nlbName) {
+        public Builder nlbName(@Nullable String nlbName) {
             this.nlbName = nlbName;
             return this;
         }
 
-        public Builder setProxyUrl(@Nullable String proxyUrl) {
+        public Builder proxyUrl(@Nullable String proxyUrl) {
             this.proxyUrl = proxyUrl;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTag> tags) {
+        public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcLinkId(@Nullable String vpcLinkId) {
+        public Builder vpcLinkId(@Nullable String vpcLinkId) {
             this.vpcLinkId = vpcLinkId;
             return this;
         }

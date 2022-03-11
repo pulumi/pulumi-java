@@ -14,10 +14,10 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
     private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"localObjectReferences","optional"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpecContainerEnvFromSecretRef(
-        List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
-        Boolean optional) {
+        @OutputCustomType.Parameter("localObjectReferences") List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.localObjectReferences = localObjectReferences;
         this.optional = optional;
     }
@@ -51,12 +51,12 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setLocalObjectReferences(List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences) {
+        public Builder localObjectReferences(List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences) {
             this.localObjectReferences = Objects.requireNonNull(localObjectReferences);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

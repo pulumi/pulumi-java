@@ -26,17 +26,17 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
     private final @Nullable String statusMessage;
     private final @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags;
 
-    @OutputCustomType.Constructor({"analyzedEniCount","endDate","findingsFound","networkInsightsAccessScopeAnalysisArn","networkInsightsAccessScopeAnalysisId","startDate","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsAccessScopeAnalysisResult(
-        @Nullable Integer analyzedEniCount,
-        @Nullable String endDate,
-        @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
-        @Nullable String networkInsightsAccessScopeAnalysisArn,
-        @Nullable String networkInsightsAccessScopeAnalysisId,
-        @Nullable String startDate,
-        @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
+        @OutputCustomType.Parameter("analyzedEniCount") @Nullable Integer analyzedEniCount,
+        @OutputCustomType.Parameter("endDate") @Nullable String endDate,
+        @OutputCustomType.Parameter("findingsFound") @Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisArn") @Nullable String networkInsightsAccessScopeAnalysisArn,
+        @OutputCustomType.Parameter("networkInsightsAccessScopeAnalysisId") @Nullable String networkInsightsAccessScopeAnalysisId,
+        @OutputCustomType.Parameter("startDate") @Nullable String startDate,
+        @OutputCustomType.Parameter("status") @Nullable NetworkInsightsAccessScopeAnalysisStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
         this.analyzedEniCount = analyzedEniCount;
         this.endDate = endDate;
         this.findingsFound = findingsFound;
@@ -112,47 +112,47 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnalyzedEniCount(@Nullable Integer analyzedEniCount) {
+        public Builder analyzedEniCount(@Nullable Integer analyzedEniCount) {
             this.analyzedEniCount = analyzedEniCount;
             return this;
         }
 
-        public Builder setEndDate(@Nullable String endDate) {
+        public Builder endDate(@Nullable String endDate) {
             this.endDate = endDate;
             return this;
         }
 
-        public Builder setFindingsFound(@Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound) {
+        public Builder findingsFound(@Nullable NetworkInsightsAccessScopeAnalysisFindingsFound findingsFound) {
             this.findingsFound = findingsFound;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeAnalysisArn(@Nullable String networkInsightsAccessScopeAnalysisArn) {
+        public Builder networkInsightsAccessScopeAnalysisArn(@Nullable String networkInsightsAccessScopeAnalysisArn) {
             this.networkInsightsAccessScopeAnalysisArn = networkInsightsAccessScopeAnalysisArn;
             return this;
         }
 
-        public Builder setNetworkInsightsAccessScopeAnalysisId(@Nullable String networkInsightsAccessScopeAnalysisId) {
+        public Builder networkInsightsAccessScopeAnalysisId(@Nullable String networkInsightsAccessScopeAnalysisId) {
             this.networkInsightsAccessScopeAnalysisId = networkInsightsAccessScopeAnalysisId;
             return this;
         }
 
-        public Builder setStartDate(@Nullable String startDate) {
+        public Builder startDate(@Nullable String startDate) {
             this.startDate = startDate;
             return this;
         }
 
-        public Builder setStatus(@Nullable NetworkInsightsAccessScopeAnalysisStatus status) {
+        public Builder status(@Nullable NetworkInsightsAccessScopeAnalysisStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAccessScopeAnalysisTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -23,10 +23,10 @@ public final class JobQueryUserDefinedFunctionResource {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor({"inlineCode","resourceUri"})
+    @OutputCustomType.Constructor
     private JobQueryUserDefinedFunctionResource(
-        @Nullable String inlineCode,
-        @Nullable String resourceUri) {
+        @OutputCustomType.Parameter("inlineCode") @Nullable String inlineCode,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.inlineCode = inlineCode;
         this.resourceUri = resourceUri;
     }
@@ -69,12 +69,12 @@ public final class JobQueryUserDefinedFunctionResource {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setInlineCode(@Nullable String inlineCode) {
+        public Builder inlineCode(@Nullable String inlineCode) {
             this.inlineCode = inlineCode;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }

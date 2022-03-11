@@ -20,10 +20,10 @@ public final class LanguageCodePairResponse {
      */
     private final String targetLanguageCode;
 
-    @OutputCustomType.Constructor({"sourceLanguageCode","targetLanguageCode"})
+    @OutputCustomType.Constructor
     private LanguageCodePairResponse(
-        String sourceLanguageCode,
-        String targetLanguageCode) {
+        @OutputCustomType.Parameter("sourceLanguageCode") String sourceLanguageCode,
+        @OutputCustomType.Parameter("targetLanguageCode") String targetLanguageCode) {
         this.sourceLanguageCode = sourceLanguageCode;
         this.targetLanguageCode = targetLanguageCode;
     }
@@ -65,12 +65,12 @@ public final class LanguageCodePairResponse {
     	      this.targetLanguageCode = defaults.targetLanguageCode;
         }
 
-        public Builder setSourceLanguageCode(String sourceLanguageCode) {
+        public Builder sourceLanguageCode(String sourceLanguageCode) {
             this.sourceLanguageCode = Objects.requireNonNull(sourceLanguageCode);
             return this;
         }
 
-        public Builder setTargetLanguageCode(String targetLanguageCode) {
+        public Builder targetLanguageCode(String targetLanguageCode) {
             this.targetLanguageCode = Objects.requireNonNull(targetLanguageCode);
             return this;
         }

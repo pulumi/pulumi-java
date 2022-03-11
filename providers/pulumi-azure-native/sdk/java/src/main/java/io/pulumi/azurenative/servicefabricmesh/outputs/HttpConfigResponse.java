@@ -28,11 +28,11 @@ public final class HttpConfigResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"hosts","name","port"})
+    @OutputCustomType.Constructor
     private HttpConfigResponse(
-        List<HttpHostConfigResponse> hosts,
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("hosts") List<HttpHostConfigResponse> hosts,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.hosts = hosts;
         this.name = name;
         this.port = port;
@@ -84,17 +84,17 @@ public final class HttpConfigResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setHosts(List<HttpHostConfigResponse> hosts) {
+        public Builder hosts(List<HttpHostConfigResponse> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

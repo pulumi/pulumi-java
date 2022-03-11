@@ -35,13 +35,13 @@ public final class MonitorPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"elasticProperties","liftrResourceCategory","liftrResourcePreference","monitoringStatus","provisioningState"})
+    @OutputCustomType.Constructor
     private MonitorPropertiesResponse(
-        @Nullable ElasticPropertiesResponse elasticProperties,
-        String liftrResourceCategory,
-        Integer liftrResourcePreference,
-        @Nullable String monitoringStatus,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("elasticProperties") @Nullable ElasticPropertiesResponse elasticProperties,
+        @OutputCustomType.Parameter("liftrResourceCategory") String liftrResourceCategory,
+        @OutputCustomType.Parameter("liftrResourcePreference") Integer liftrResourcePreference,
+        @OutputCustomType.Parameter("monitoringStatus") @Nullable String monitoringStatus,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.elasticProperties = elasticProperties;
         this.liftrResourceCategory = liftrResourceCategory;
         this.liftrResourcePreference = liftrResourcePreference;
@@ -109,27 +109,27 @@ public final class MonitorPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setElasticProperties(@Nullable ElasticPropertiesResponse elasticProperties) {
+        public Builder elasticProperties(@Nullable ElasticPropertiesResponse elasticProperties) {
             this.elasticProperties = elasticProperties;
             return this;
         }
 
-        public Builder setLiftrResourceCategory(String liftrResourceCategory) {
+        public Builder liftrResourceCategory(String liftrResourceCategory) {
             this.liftrResourceCategory = Objects.requireNonNull(liftrResourceCategory);
             return this;
         }
 
-        public Builder setLiftrResourcePreference(Integer liftrResourcePreference) {
+        public Builder liftrResourcePreference(Integer liftrResourcePreference) {
             this.liftrResourcePreference = Objects.requireNonNull(liftrResourcePreference);
             return this;
         }
 
-        public Builder setMonitoringStatus(@Nullable String monitoringStatus) {
+        public Builder monitoringStatus(@Nullable String monitoringStatus) {
             this.monitoringStatus = monitoringStatus;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

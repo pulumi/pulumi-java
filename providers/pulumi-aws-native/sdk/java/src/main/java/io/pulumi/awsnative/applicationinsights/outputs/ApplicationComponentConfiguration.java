@@ -24,10 +24,10 @@ public final class ApplicationComponentConfiguration {
      */
     private final @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations;
 
-    @OutputCustomType.Constructor({"configurationDetails","subComponentTypeConfigurations"})
+    @OutputCustomType.Constructor
     private ApplicationComponentConfiguration(
-        @Nullable ApplicationConfigurationDetails configurationDetails,
-        @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
+        @OutputCustomType.Parameter("configurationDetails") @Nullable ApplicationConfigurationDetails configurationDetails,
+        @OutputCustomType.Parameter("subComponentTypeConfigurations") @Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
         this.configurationDetails = configurationDetails;
         this.subComponentTypeConfigurations = subComponentTypeConfigurations;
     }
@@ -69,12 +69,12 @@ public final class ApplicationComponentConfiguration {
     	      this.subComponentTypeConfigurations = defaults.subComponentTypeConfigurations;
         }
 
-        public Builder setConfigurationDetails(@Nullable ApplicationConfigurationDetails configurationDetails) {
+        public Builder configurationDetails(@Nullable ApplicationConfigurationDetails configurationDetails) {
             this.configurationDetails = configurationDetails;
             return this;
         }
 
-        public Builder setSubComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
+        public Builder subComponentTypeConfigurations(@Nullable List<ApplicationSubComponentTypeConfiguration> subComponentTypeConfigurations) {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }

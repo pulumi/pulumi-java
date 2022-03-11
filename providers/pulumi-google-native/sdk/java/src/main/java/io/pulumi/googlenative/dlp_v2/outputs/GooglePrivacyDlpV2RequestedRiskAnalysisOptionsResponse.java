@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
      */
     private final GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig;
 
-    @OutputCustomType.Constructor({"jobConfig"})
-    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse(@OutputCustomType.Parameter("jobConfig") GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
         this.jobConfig = jobConfig;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2RequestedRiskAnalysisOptionsResponse {
     	      this.jobConfig = defaults.jobConfig;
         }
 
-        public Builder setJobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
+        public Builder jobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfigResponse jobConfig) {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodeConfigGcfsConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private GetClusterNodeConfigGcfsConfig(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private GetClusterNodeConfigGcfsConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterNodeConfigGcfsConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

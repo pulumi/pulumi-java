@@ -53,18 +53,18 @@ public final class GetInstanceGroupResult {
     private final Integer size;
     private final String zone;
 
-    @OutputCustomType.Constructor({"description","id","instances","name","namedPorts","network","project","selfLink","size","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceGroupResult(
-        String description,
-        String id,
-        List<String> instances,
-        @Nullable String name,
-        List<GetInstanceGroupNamedPort> namedPorts,
-        String network,
-        String project,
-        String selfLink,
-        Integer size,
-        String zone) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<String> instances,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namedPorts") List<GetInstanceGroupNamedPort> namedPorts,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.description = description;
         this.id = id;
         this.instances = instances;
@@ -174,52 +174,52 @@ public final class GetInstanceGroupResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstances(List<String> instances) {
+        public Builder instances(List<String> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamedPorts(List<GetInstanceGroupNamedPort> namedPorts) {
+        public Builder namedPorts(List<GetInstanceGroupNamedPort> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

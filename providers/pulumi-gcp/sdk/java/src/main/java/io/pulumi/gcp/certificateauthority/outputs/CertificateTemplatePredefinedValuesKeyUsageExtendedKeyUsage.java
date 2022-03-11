@@ -42,14 +42,14 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
      */
     private final @Nullable Boolean timeStamping;
 
-    @OutputCustomType.Constructor({"clientAuth","codeSigning","emailProtection","ocspSigning","serverAuth","timeStamping"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage(
-        @Nullable Boolean clientAuth,
-        @Nullable Boolean codeSigning,
-        @Nullable Boolean emailProtection,
-        @Nullable Boolean ocspSigning,
-        @Nullable Boolean serverAuth,
-        @Nullable Boolean timeStamping) {
+        @OutputCustomType.Parameter("clientAuth") @Nullable Boolean clientAuth,
+        @OutputCustomType.Parameter("codeSigning") @Nullable Boolean codeSigning,
+        @OutputCustomType.Parameter("emailProtection") @Nullable Boolean emailProtection,
+        @OutputCustomType.Parameter("ocspSigning") @Nullable Boolean ocspSigning,
+        @OutputCustomType.Parameter("serverAuth") @Nullable Boolean serverAuth,
+        @OutputCustomType.Parameter("timeStamping") @Nullable Boolean timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;
@@ -131,32 +131,32 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
     	      this.timeStamping = defaults.timeStamping;
         }
 
-        public Builder setClientAuth(@Nullable Boolean clientAuth) {
+        public Builder clientAuth(@Nullable Boolean clientAuth) {
             this.clientAuth = clientAuth;
             return this;
         }
 
-        public Builder setCodeSigning(@Nullable Boolean codeSigning) {
+        public Builder codeSigning(@Nullable Boolean codeSigning) {
             this.codeSigning = codeSigning;
             return this;
         }
 
-        public Builder setEmailProtection(@Nullable Boolean emailProtection) {
+        public Builder emailProtection(@Nullable Boolean emailProtection) {
             this.emailProtection = emailProtection;
             return this;
         }
 
-        public Builder setOcspSigning(@Nullable Boolean ocspSigning) {
+        public Builder ocspSigning(@Nullable Boolean ocspSigning) {
             this.ocspSigning = ocspSigning;
             return this;
         }
 
-        public Builder setServerAuth(@Nullable Boolean serverAuth) {
+        public Builder serverAuth(@Nullable Boolean serverAuth) {
             this.serverAuth = serverAuth;
             return this;
         }
 
-        public Builder setTimeStamping(@Nullable Boolean timeStamping) {
+        public Builder timeStamping(@Nullable Boolean timeStamping) {
             this.timeStamping = timeStamping;
             return this;
         }

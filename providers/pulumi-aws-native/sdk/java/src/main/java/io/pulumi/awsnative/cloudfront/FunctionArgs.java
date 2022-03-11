@@ -101,52 +101,52 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setAutoPublish(@Nullable Input<Boolean> autoPublish) {
+        public Builder autoPublish(@Nullable Input<Boolean> autoPublish) {
             this.autoPublish = autoPublish;
             return this;
         }
 
-        public Builder setAutoPublish(@Nullable Boolean autoPublish) {
+        public Builder autoPublish(@Nullable Boolean autoPublish) {
             this.autoPublish = Input.ofNullable(autoPublish);
             return this;
         }
 
-        public Builder setFunctionCode(@Nullable Input<String> functionCode) {
+        public Builder functionCode(@Nullable Input<String> functionCode) {
             this.functionCode = functionCode;
             return this;
         }
 
-        public Builder setFunctionCode(@Nullable String functionCode) {
+        public Builder functionCode(@Nullable String functionCode) {
             this.functionCode = Input.ofNullable(functionCode);
             return this;
         }
 
-        public Builder setFunctionConfig(@Nullable Input<FunctionConfigArgs> functionConfig) {
+        public Builder functionConfig(@Nullable Input<FunctionConfigArgs> functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
 
-        public Builder setFunctionConfig(@Nullable FunctionConfigArgs functionConfig) {
+        public Builder functionConfig(@Nullable FunctionConfigArgs functionConfig) {
             this.functionConfig = Input.ofNullable(functionConfig);
             return this;
         }
 
-        public Builder setFunctionMetadata(@Nullable Input<FunctionMetadataArgs> functionMetadata) {
+        public Builder functionMetadata(@Nullable Input<FunctionMetadataArgs> functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
 
-        public Builder setFunctionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
+        public Builder functionMetadata(@Nullable FunctionMetadataArgs functionMetadata) {
             this.functionMetadata = Input.ofNullable(functionMetadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

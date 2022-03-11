@@ -22,10 +22,10 @@ public final class ExperimentEndpointResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"endpoint","name"})
+    @OutputCustomType.Constructor
     private ExperimentEndpointResponse(
-        @Nullable String endpoint,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.endpoint = endpoint;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class ExperimentEndpointResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

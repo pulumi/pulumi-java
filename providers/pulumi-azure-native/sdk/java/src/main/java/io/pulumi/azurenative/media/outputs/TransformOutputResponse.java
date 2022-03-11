@@ -33,11 +33,11 @@ public final class TransformOutputResponse {
      */
     private final @Nullable String relativePriority;
 
-    @OutputCustomType.Constructor({"onError","preset","relativePriority"})
+    @OutputCustomType.Constructor
     private TransformOutputResponse(
-        @Nullable String onError,
-        Object preset,
-        @Nullable String relativePriority) {
+        @OutputCustomType.Parameter("onError") @Nullable String onError,
+        @OutputCustomType.Parameter("preset") Object preset,
+        @OutputCustomType.Parameter("relativePriority") @Nullable String relativePriority) {
         this.onError = onError;
         this.preset = preset;
         this.relativePriority = relativePriority;
@@ -89,17 +89,17 @@ public final class TransformOutputResponse {
     	      this.relativePriority = defaults.relativePriority;
         }
 
-        public Builder setOnError(@Nullable String onError) {
+        public Builder onError(@Nullable String onError) {
             this.onError = onError;
             return this;
         }
 
-        public Builder setPreset(Object preset) {
+        public Builder preset(Object preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
-        public Builder setRelativePriority(@Nullable String relativePriority) {
+        public Builder relativePriority(@Nullable String relativePriority) {
             this.relativePriority = relativePriority;
             return this;
         }

@@ -20,10 +20,10 @@ public final class ParticipantProfilePropertyReferenceResponse {
      */
     private final String profilePropertyName;
 
-    @OutputCustomType.Constructor({"interactionPropertyName","profilePropertyName"})
+    @OutputCustomType.Constructor
     private ParticipantProfilePropertyReferenceResponse(
-        String interactionPropertyName,
-        String profilePropertyName) {
+        @OutputCustomType.Parameter("interactionPropertyName") String interactionPropertyName,
+        @OutputCustomType.Parameter("profilePropertyName") String profilePropertyName) {
         this.interactionPropertyName = interactionPropertyName;
         this.profilePropertyName = profilePropertyName;
     }
@@ -65,12 +65,12 @@ public final class ParticipantProfilePropertyReferenceResponse {
     	      this.profilePropertyName = defaults.profilePropertyName;
         }
 
-        public Builder setInteractionPropertyName(String interactionPropertyName) {
+        public Builder interactionPropertyName(String interactionPropertyName) {
             this.interactionPropertyName = Objects.requireNonNull(interactionPropertyName);
             return this;
         }
 
-        public Builder setProfilePropertyName(String profilePropertyName) {
+        public Builder profilePropertyName(String profilePropertyName) {
             this.profilePropertyName = Objects.requireNonNull(profilePropertyName);
             return this;
         }

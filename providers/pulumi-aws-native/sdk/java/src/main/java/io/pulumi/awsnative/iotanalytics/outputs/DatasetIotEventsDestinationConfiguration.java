@@ -12,10 +12,10 @@ public final class DatasetIotEventsDestinationConfiguration {
     private final String inputName;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"inputName","roleArn"})
+    @OutputCustomType.Constructor
     private DatasetIotEventsDestinationConfiguration(
-        String inputName,
-        String roleArn) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.roleArn = roleArn;
     }
@@ -49,12 +49,12 @@ public final class DatasetIotEventsDestinationConfiguration {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

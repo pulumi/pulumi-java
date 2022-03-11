@@ -19,12 +19,12 @@ public final class ResourceDataSyncSyncSource {
     private final List<String> sourceRegions;
     private final String sourceType;
 
-    @OutputCustomType.Constructor({"awsOrganizationsSource","includeFutureRegions","sourceRegions","sourceType"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncSyncSource(
-        @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
-        @Nullable Boolean includeFutureRegions,
-        List<String> sourceRegions,
-        String sourceType) {
+        @OutputCustomType.Parameter("awsOrganizationsSource") @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource,
+        @OutputCustomType.Parameter("includeFutureRegions") @Nullable Boolean includeFutureRegions,
+        @OutputCustomType.Parameter("sourceRegions") List<String> sourceRegions,
+        @OutputCustomType.Parameter("sourceType") String sourceType) {
         this.awsOrganizationsSource = awsOrganizationsSource;
         this.includeFutureRegions = includeFutureRegions;
         this.sourceRegions = sourceRegions;
@@ -70,22 +70,22 @@ public final class ResourceDataSyncSyncSource {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setAwsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
+        public Builder awsOrganizationsSource(@Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource) {
             this.awsOrganizationsSource = awsOrganizationsSource;
             return this;
         }
 
-        public Builder setIncludeFutureRegions(@Nullable Boolean includeFutureRegions) {
+        public Builder includeFutureRegions(@Nullable Boolean includeFutureRegions) {
             this.includeFutureRegions = includeFutureRegions;
             return this;
         }
 
-        public Builder setSourceRegions(List<String> sourceRegions) {
+        public Builder sourceRegions(List<String> sourceRegions) {
             this.sourceRegions = Objects.requireNonNull(sourceRegions);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }

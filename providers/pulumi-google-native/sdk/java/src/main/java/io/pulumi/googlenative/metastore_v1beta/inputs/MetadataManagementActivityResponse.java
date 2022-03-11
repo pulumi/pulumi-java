@@ -74,12 +74,12 @@ public final class MetadataManagementActivityResponse extends io.pulumi.resource
     	      this.restores = defaults.restores;
         }
 
-        public Builder setMetadataExports(List<MetadataExportResponse> metadataExports) {
+        public Builder metadataExports(List<MetadataExportResponse> metadataExports) {
             this.metadataExports = Objects.requireNonNull(metadataExports);
             return this;
         }
 
-        public Builder setRestores(List<RestoreResponse> restores) {
+        public Builder restores(List<RestoreResponse> restores) {
             this.restores = Objects.requireNonNull(restores);
             return this;
         }

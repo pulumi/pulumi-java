@@ -47,13 +47,13 @@ public final class InstanceNetwork {
      */
     private final @Nullable String reservedIpRange;
 
-    @OutputCustomType.Constructor({"connectMode","ipAddresses","modes","network","reservedIpRange"})
+    @OutputCustomType.Constructor
     private InstanceNetwork(
-        @Nullable String connectMode,
-        @Nullable List<String> ipAddresses,
-        List<String> modes,
-        String network,
-        @Nullable String reservedIpRange) {
+        @OutputCustomType.Parameter("connectMode") @Nullable String connectMode,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("modes") List<String> modes,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("reservedIpRange") @Nullable String reservedIpRange) {
         this.connectMode = connectMode;
         this.ipAddresses = ipAddresses;
         this.modes = modes;
@@ -134,27 +134,27 @@ public final class InstanceNetwork {
     	      this.reservedIpRange = defaults.reservedIpRange;
         }
 
-        public Builder setConnectMode(@Nullable String connectMode) {
+        public Builder connectMode(@Nullable String connectMode) {
             this.connectMode = connectMode;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setModes(List<String> modes) {
+        public Builder modes(List<String> modes) {
             this.modes = Objects.requireNonNull(modes);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setReservedIpRange(@Nullable String reservedIpRange) {
+        public Builder reservedIpRange(@Nullable String reservedIpRange) {
             this.reservedIpRange = reservedIpRange;
             return this;
         }

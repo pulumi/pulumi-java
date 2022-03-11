@@ -18,8 +18,8 @@ public final class BillingAccountSinkBigqueryOptions {
      */
     private final Boolean usePartitionedTables;
 
-    @OutputCustomType.Constructor({"usePartitionedTables"})
-    private BillingAccountSinkBigqueryOptions(Boolean usePartitionedTables) {
+    @OutputCustomType.Constructor
+    private BillingAccountSinkBigqueryOptions(@OutputCustomType.Parameter("usePartitionedTables") Boolean usePartitionedTables) {
         this.usePartitionedTables = usePartitionedTables;
     }
 
@@ -54,7 +54,7 @@ public final class BillingAccountSinkBigqueryOptions {
     	      this.usePartitionedTables = defaults.usePartitionedTables;
         }
 
-        public Builder setUsePartitionedTables(Boolean usePartitionedTables) {
+        public Builder usePartitionedTables(Boolean usePartitionedTables) {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }

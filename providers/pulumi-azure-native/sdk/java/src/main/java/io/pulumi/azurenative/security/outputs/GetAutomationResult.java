@@ -81,20 +81,20 @@ public final class GetAutomationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","description","etag","id","isEnabled","kind","location","name","scopes","sources","tags","type"})
+    @OutputCustomType.Constructor
     private GetAutomationResult(
-        @Nullable List<Object> actions,
-        @Nullable String description,
-        @Nullable String etag,
-        String id,
-        @Nullable Boolean isEnabled,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        @Nullable List<AutomationScopeResponse> scopes,
-        @Nullable List<AutomationSourceResponse> sources,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("actions") @Nullable List<Object> actions,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") @Nullable Boolean isEnabled,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") @Nullable List<AutomationScopeResponse> scopes,
+        @OutputCustomType.Parameter("sources") @Nullable List<AutomationSourceResponse> sources,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.description = description;
         this.etag = etag;
@@ -236,62 +236,62 @@ public final class GetAutomationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActions(@Nullable List<Object> actions) {
+        public Builder actions(@Nullable List<Object> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopes(@Nullable List<AutomationScopeResponse> scopes) {
+        public Builder scopes(@Nullable List<AutomationScopeResponse> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setSources(@Nullable List<AutomationSourceResponse> sources) {
+        public Builder sources(@Nullable List<AutomationSourceResponse> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

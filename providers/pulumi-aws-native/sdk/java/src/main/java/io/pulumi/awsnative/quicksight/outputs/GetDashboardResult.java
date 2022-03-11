@@ -45,13 +45,13 @@ public final class GetDashboardResult {
      */
     private final @Nullable List<DashboardTag> tags;
 
-    @OutputCustomType.Constructor({"arn","lastPublishedTime","name","permissions","tags"})
+    @OutputCustomType.Constructor
     private GetDashboardResult(
-        @Nullable String arn,
-        @Nullable String lastPublishedTime,
-        @Nullable String name,
-        @Nullable List<DashboardResourcePermission> permissions,
-        @Nullable List<DashboardTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("lastPublishedTime") @Nullable String lastPublishedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<DashboardResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<DashboardTag> tags) {
         this.arn = arn;
         this.lastPublishedTime = lastPublishedTime;
         this.name = name;
@@ -128,27 +128,27 @@ public final class GetDashboardResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setLastPublishedTime(@Nullable String lastPublishedTime) {
+        public Builder lastPublishedTime(@Nullable String lastPublishedTime) {
             this.lastPublishedTime = lastPublishedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DashboardResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<DashboardResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DashboardTag> tags) {
+        public Builder tags(@Nullable List<DashboardTag> tags) {
             this.tags = tags;
             return this;
         }

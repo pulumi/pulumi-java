@@ -171,82 +171,82 @@ public final class InventoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setDestination(Input<InventoryDestinationArgs> destination) {
+        public Builder destination(Input<InventoryDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(InventoryDestinationArgs destination) {
+        public Builder destination(InventoryDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<InventoryFilterArgs> filter) {
+        public Builder filter(@Nullable Input<InventoryFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable InventoryFilterArgs filter) {
+        public Builder filter(@Nullable InventoryFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setIncludedObjectVersions(Input<String> includedObjectVersions) {
+        public Builder includedObjectVersions(Input<String> includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
 
-        public Builder setIncludedObjectVersions(String includedObjectVersions) {
+        public Builder includedObjectVersions(String includedObjectVersions) {
             this.includedObjectVersions = Input.of(Objects.requireNonNull(includedObjectVersions));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable Input<List<String>> optionalFields) {
+        public Builder optionalFields(@Nullable Input<List<String>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable List<String> optionalFields) {
+        public Builder optionalFields(@Nullable List<String> optionalFields) {
             this.optionalFields = Input.ofNullable(optionalFields);
             return this;
         }
 
-        public Builder setSchedule(Input<InventoryScheduleArgs> schedule) {
+        public Builder schedule(Input<InventoryScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(InventoryScheduleArgs schedule) {
+        public Builder schedule(InventoryScheduleArgs schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }

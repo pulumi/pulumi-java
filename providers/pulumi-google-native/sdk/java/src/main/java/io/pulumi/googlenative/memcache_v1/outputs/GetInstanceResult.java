@@ -97,24 +97,24 @@ public final class GetInstanceResult {
      */
     private final List<String> zones;
 
-    @OutputCustomType.Constructor({"authorizedNetwork","createTime","discoveryEndpoint","displayName","instanceMessages","labels","memcacheFullVersion","memcacheNodes","memcacheVersion","name","nodeConfig","nodeCount","parameters","state","updateTime","zones"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String authorizedNetwork,
-        String createTime,
-        String discoveryEndpoint,
-        String displayName,
-        List<InstanceMessageResponse> instanceMessages,
-        Map<String,String> labels,
-        String memcacheFullVersion,
-        List<NodeResponse> memcacheNodes,
-        String memcacheVersion,
-        String name,
-        NodeConfigResponse nodeConfig,
-        Integer nodeCount,
-        MemcacheParametersResponse parameters,
-        String state,
-        String updateTime,
-        List<String> zones) {
+        @OutputCustomType.Parameter("authorizedNetwork") String authorizedNetwork,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("discoveryEndpoint") String discoveryEndpoint,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("instanceMessages") List<InstanceMessageResponse> instanceMessages,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("memcacheFullVersion") String memcacheFullVersion,
+        @OutputCustomType.Parameter("memcacheNodes") List<NodeResponse> memcacheNodes,
+        @OutputCustomType.Parameter("memcacheVersion") String memcacheVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeConfig") NodeConfigResponse nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("zones") List<String> zones) {
         this.authorizedNetwork = authorizedNetwork;
         this.createTime = createTime;
         this.discoveryEndpoint = discoveryEndpoint;
@@ -296,82 +296,82 @@ public final class GetInstanceResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAuthorizedNetwork(String authorizedNetwork) {
+        public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDiscoveryEndpoint(String discoveryEndpoint) {
+        public Builder discoveryEndpoint(String discoveryEndpoint) {
             this.discoveryEndpoint = Objects.requireNonNull(discoveryEndpoint);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInstanceMessages(List<InstanceMessageResponse> instanceMessages) {
+        public Builder instanceMessages(List<InstanceMessageResponse> instanceMessages) {
             this.instanceMessages = Objects.requireNonNull(instanceMessages);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMemcacheFullVersion(String memcacheFullVersion) {
+        public Builder memcacheFullVersion(String memcacheFullVersion) {
             this.memcacheFullVersion = Objects.requireNonNull(memcacheFullVersion);
             return this;
         }
 
-        public Builder setMemcacheNodes(List<NodeResponse> memcacheNodes) {
+        public Builder memcacheNodes(List<NodeResponse> memcacheNodes) {
             this.memcacheNodes = Objects.requireNonNull(memcacheNodes);
             return this;
         }
 
-        public Builder setMemcacheVersion(String memcacheVersion) {
+        public Builder memcacheVersion(String memcacheVersion) {
             this.memcacheVersion = Objects.requireNonNull(memcacheVersion);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeConfig(NodeConfigResponse nodeConfig) {
+        public Builder nodeConfig(NodeConfigResponse nodeConfig) {
             this.nodeConfig = Objects.requireNonNull(nodeConfig);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setParameters(MemcacheParametersResponse parameters) {
+        public Builder parameters(MemcacheParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setZones(List<String> zones) {
+        public Builder zones(List<String> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

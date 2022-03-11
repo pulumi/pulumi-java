@@ -23,10 +23,10 @@ public final class AudioEncoderAacResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","type"})
+    @OutputCustomType.Constructor
     private AudioEncoderAacResponse(
-        @Nullable String bitrateKbps,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.type = type;
     }
@@ -69,12 +69,12 @@ public final class AudioEncoderAacResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBitrateKbps(@Nullable String bitrateKbps) {
+        public Builder bitrateKbps(@Nullable String bitrateKbps) {
             this.bitrateKbps = bitrateKbps;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

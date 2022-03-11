@@ -36,13 +36,13 @@ public final class TestIssueResponse {
      */
     private final AnyResponse warning;
 
-    @OutputCustomType.Constructor({"category","errorMessage","severity","type","warning"})
+    @OutputCustomType.Constructor
     private TestIssueResponse(
-        String category,
-        String errorMessage,
-        String severity,
-        String type,
-        AnyResponse warning) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("warning") AnyResponse warning) {
         this.category = category;
         this.errorMessage = errorMessage;
         this.severity = severity;
@@ -114,27 +114,27 @@ public final class TestIssueResponse {
     	      this.warning = defaults.warning;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWarning(AnyResponse warning) {
+        public Builder warning(AnyResponse warning) {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }

@@ -16,11 +16,11 @@ public final class TaskDefinitionPortMapping {
     private final @Nullable Integer hostPort;
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"containerPort","hostPort","protocol"})
+    @OutputCustomType.Constructor
     private TaskDefinitionPortMapping(
-        @Nullable Integer containerPort,
-        @Nullable Integer hostPort,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("hostPort") @Nullable Integer hostPort,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
         this.hostPort = hostPort;
         this.protocol = protocol;
@@ -60,17 +60,17 @@ public final class TaskDefinitionPortMapping {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setHostPort(@Nullable Integer hostPort) {
+        public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

@@ -39,13 +39,13 @@ public final class SlackChannelResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"channelName","etag","location","properties","provisioningState"})
+    @OutputCustomType.Constructor
     private SlackChannelResponse(
-        String channelName,
-        @Nullable String etag,
-        @Nullable String location,
-        @Nullable SlackChannelPropertiesResponse properties,
-        String provisioningState) {
+        @OutputCustomType.Parameter("channelName") String channelName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("properties") @Nullable SlackChannelPropertiesResponse properties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.channelName = channelName;
         this.etag = etag;
         this.location = location;
@@ -118,27 +118,27 @@ public final class SlackChannelResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProperties(@Nullable SlackChannelPropertiesResponse properties) {
+        public Builder properties(@Nullable SlackChannelPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

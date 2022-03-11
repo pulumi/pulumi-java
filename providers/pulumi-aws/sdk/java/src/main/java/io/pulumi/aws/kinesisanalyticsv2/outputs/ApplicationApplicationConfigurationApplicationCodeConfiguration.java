@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final String codeContentType;
 
-    @OutputCustomType.Constructor({"codeContent","codeContentType"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfiguration(
-        @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
-        String codeContentType) {
+        @OutputCustomType.Parameter("codeContent") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent,
+        @OutputCustomType.Parameter("codeContentType") String codeContentType) {
         this.codeContent = codeContent;
         this.codeContentType = codeContentType;
     }
@@ -68,12 +68,12 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.codeContentType = defaults.codeContentType;
         }
 
-        public Builder setCodeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent) {
+        public Builder codeContent(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent codeContent) {
             this.codeContent = codeContent;
             return this;
         }
 
-        public Builder setCodeContentType(String codeContentType) {
+        public Builder codeContentType(String codeContentType) {
             this.codeContentType = Objects.requireNonNull(codeContentType);
             return this;
         }

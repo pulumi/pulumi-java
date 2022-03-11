@@ -21,10 +21,10 @@ public final class BillingDestinationResponse {
      */
     private final String monitoredResource;
 
-    @OutputCustomType.Constructor({"metrics","monitoredResource"})
+    @OutputCustomType.Constructor
     private BillingDestinationResponse(
-        List<String> metrics,
-        String monitoredResource) {
+        @OutputCustomType.Parameter("metrics") List<String> metrics,
+        @OutputCustomType.Parameter("monitoredResource") String monitoredResource) {
         this.metrics = metrics;
         this.monitoredResource = monitoredResource;
     }
@@ -66,12 +66,12 @@ public final class BillingDestinationResponse {
     	      this.monitoredResource = defaults.monitoredResource;
         }
 
-        public Builder setMetrics(List<String> metrics) {
+        public Builder metrics(List<String> metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setMonitoredResource(String monitoredResource) {
+        public Builder monitoredResource(String monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }

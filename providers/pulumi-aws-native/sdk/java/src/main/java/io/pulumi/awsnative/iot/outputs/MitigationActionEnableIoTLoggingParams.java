@@ -21,10 +21,10 @@ public final class MitigationActionEnableIoTLoggingParams {
      */
     private final String roleArnForLogging;
 
-    @OutputCustomType.Constructor({"logLevel","roleArnForLogging"})
+    @OutputCustomType.Constructor
     private MitigationActionEnableIoTLoggingParams(
-        MitigationActionEnableIoTLoggingParamsLogLevel logLevel,
-        String roleArnForLogging) {
+        @OutputCustomType.Parameter("logLevel") MitigationActionEnableIoTLoggingParamsLogLevel logLevel,
+        @OutputCustomType.Parameter("roleArnForLogging") String roleArnForLogging) {
         this.logLevel = logLevel;
         this.roleArnForLogging = roleArnForLogging;
     }
@@ -66,12 +66,12 @@ public final class MitigationActionEnableIoTLoggingParams {
     	      this.roleArnForLogging = defaults.roleArnForLogging;
         }
 
-        public Builder setLogLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
+        public Builder logLevel(MitigationActionEnableIoTLoggingParamsLogLevel logLevel) {
             this.logLevel = Objects.requireNonNull(logLevel);
             return this;
         }
 
-        public Builder setRoleArnForLogging(String roleArnForLogging) {
+        public Builder roleArnForLogging(String roleArnForLogging) {
             this.roleArnForLogging = Objects.requireNonNull(roleArnForLogging);
             return this;
         }

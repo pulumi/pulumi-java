@@ -44,14 +44,14 @@ public final class GetRoutingIntentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","routingPolicies","type"})
+    @OutputCustomType.Constructor
     private GetRoutingIntentResult(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable List<RoutingPolicyResponse> routingPolicies,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingPolicies") @Nullable List<RoutingPolicyResponse> routingPolicies,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -133,32 +133,32 @@ public final class GetRoutingIntentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingPolicies(@Nullable List<RoutingPolicyResponse> routingPolicies) {
+        public Builder routingPolicies(@Nullable List<RoutingPolicyResponse> routingPolicies) {
             this.routingPolicies = routingPolicies;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

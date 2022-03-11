@@ -27,11 +27,11 @@ public final class ComputeVmInstanceViewStatusResponse {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"code","displayStatus","message"})
+    @OutputCustomType.Constructor
     private ComputeVmInstanceViewStatusResponse(
-        @Nullable String code,
-        @Nullable String displayStatus,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("displayStatus") @Nullable String displayStatus,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.code = code;
         this.displayStatus = displayStatus;
         this.message = message;
@@ -83,17 +83,17 @@ public final class ComputeVmInstanceViewStatusResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDisplayStatus(@Nullable String displayStatus) {
+        public Builder displayStatus(@Nullable String displayStatus) {
             this.displayStatus = displayStatus;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }

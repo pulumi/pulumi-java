@@ -92,32 +92,32 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder setContainerTags(@Nullable Input<List<String>> containerTags) {
+        public Builder containerTags(@Nullable Input<List<String>> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
-        public Builder setContainerTags(@Nullable List<String> containerTags) {
+        public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = Input.ofNullable(containerTags);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTargetRepository(@Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository) {
+        public Builder targetRepository(@Nullable Input<DistributionConfigurationTargetContainerRepositoryArgs> targetRepository) {
             this.targetRepository = targetRepository;
             return this;
         }
 
-        public Builder setTargetRepository(@Nullable DistributionConfigurationTargetContainerRepositoryArgs targetRepository) {
+        public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepositoryArgs targetRepository) {
             this.targetRepository = Input.ofNullable(targetRepository);
             return this;
         }

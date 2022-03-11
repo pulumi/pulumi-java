@@ -21,10 +21,10 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
      */
     private final String widevineTemplate;
 
-    @OutputCustomType.Constructor({"odataType","widevineTemplate"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyWidevineConfigurationResponse(
-        String odataType,
-        String widevineTemplate) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("widevineTemplate") String widevineTemplate) {
         this.odataType = odataType;
         this.widevineTemplate = widevineTemplate;
     }
@@ -67,12 +67,12 @@ public final class ContentKeyPolicyWidevineConfigurationResponse {
     	      this.widevineTemplate = defaults.widevineTemplate;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setWidevineTemplate(String widevineTemplate) {
+        public Builder widevineTemplate(String widevineTemplate) {
             this.widevineTemplate = Objects.requireNonNull(widevineTemplate);
             return this;
         }

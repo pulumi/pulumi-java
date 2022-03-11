@@ -47,15 +47,15 @@ public final class UserInfoResponse {
      */
     private final @Nullable String userTenantId;
 
-    @OutputCustomType.Constructor({"userAltSecId","userIdp","userIss","userName","userObjectId","userPuId","userTenantId"})
+    @OutputCustomType.Constructor
     private UserInfoResponse(
-        @Nullable String userAltSecId,
-        @Nullable String userIdp,
-        @Nullable String userIss,
-        @Nullable String userName,
-        @Nullable String userObjectId,
-        @Nullable String userPuId,
-        @Nullable String userTenantId) {
+        @OutputCustomType.Parameter("userAltSecId") @Nullable String userAltSecId,
+        @OutputCustomType.Parameter("userIdp") @Nullable String userIdp,
+        @OutputCustomType.Parameter("userIss") @Nullable String userIss,
+        @OutputCustomType.Parameter("userName") @Nullable String userName,
+        @OutputCustomType.Parameter("userObjectId") @Nullable String userObjectId,
+        @OutputCustomType.Parameter("userPuId") @Nullable String userPuId,
+        @OutputCustomType.Parameter("userTenantId") @Nullable String userTenantId) {
         this.userAltSecId = userAltSecId;
         this.userIdp = userIdp;
         this.userIss = userIss;
@@ -147,37 +147,37 @@ public final class UserInfoResponse {
     	      this.userTenantId = defaults.userTenantId;
         }
 
-        public Builder setUserAltSecId(@Nullable String userAltSecId) {
+        public Builder userAltSecId(@Nullable String userAltSecId) {
             this.userAltSecId = userAltSecId;
             return this;
         }
 
-        public Builder setUserIdp(@Nullable String userIdp) {
+        public Builder userIdp(@Nullable String userIdp) {
             this.userIdp = userIdp;
             return this;
         }
 
-        public Builder setUserIss(@Nullable String userIss) {
+        public Builder userIss(@Nullable String userIss) {
             this.userIss = userIss;
             return this;
         }
 
-        public Builder setUserName(@Nullable String userName) {
+        public Builder userName(@Nullable String userName) {
             this.userName = userName;
             return this;
         }
 
-        public Builder setUserObjectId(@Nullable String userObjectId) {
+        public Builder userObjectId(@Nullable String userObjectId) {
             this.userObjectId = userObjectId;
             return this;
         }
 
-        public Builder setUserPuId(@Nullable String userPuId) {
+        public Builder userPuId(@Nullable String userPuId) {
             this.userPuId = userPuId;
             return this;
         }
 
-        public Builder setUserTenantId(@Nullable String userTenantId) {
+        public Builder userTenantId(@Nullable String userTenantId) {
             this.userTenantId = userTenantId;
             return this;
         }

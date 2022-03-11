@@ -28,11 +28,11 @@ public final class ReceiptRuleWorkmailAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"organizationArn","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleWorkmailAction(
-        String organizationArn,
-        Integer position,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("organizationArn") String organizationArn,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.organizationArn = organizationArn;
         this.position = position;
         this.topicArn = topicArn;
@@ -84,17 +84,17 @@ public final class ReceiptRuleWorkmailAction {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setOrganizationArn(String organizationArn) {
+        public Builder organizationArn(String organizationArn) {
             this.organizationArn = Objects.requireNonNull(organizationArn);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

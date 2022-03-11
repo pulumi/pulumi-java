@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class PlaceIndexDataSourceConfiguration {
     private final @Nullable PlaceIndexIntendedUse intendedUse;
 
-    @OutputCustomType.Constructor({"intendedUse"})
-    private PlaceIndexDataSourceConfiguration(@Nullable PlaceIndexIntendedUse intendedUse) {
+    @OutputCustomType.Constructor
+    private PlaceIndexDataSourceConfiguration(@OutputCustomType.Parameter("intendedUse") @Nullable PlaceIndexIntendedUse intendedUse) {
         this.intendedUse = intendedUse;
     }
 
@@ -42,7 +42,7 @@ public final class PlaceIndexDataSourceConfiguration {
     	      this.intendedUse = defaults.intendedUse;
         }
 
-        public Builder setIntendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
+        public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
             this.intendedUse = intendedUse;
             return this;
         }

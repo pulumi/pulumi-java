@@ -58,12 +58,12 @@ public final class VirtualHubRouteTableArgs extends io.pulumi.resources.Resource
     	      this.routes = defaults.routes;
         }
 
-        public Builder setRoutes(@Nullable Input<List<VirtualHubRouteArgs>> routes) {
+        public Builder routes(@Nullable Input<List<VirtualHubRouteArgs>> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<VirtualHubRouteArgs> routes) {
+        public Builder routes(@Nullable List<VirtualHubRouteArgs> routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }

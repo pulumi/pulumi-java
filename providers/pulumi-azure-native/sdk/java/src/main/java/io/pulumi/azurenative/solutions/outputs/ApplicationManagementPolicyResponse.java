@@ -17,8 +17,8 @@ public final class ApplicationManagementPolicyResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private ApplicationManagementPolicyResponse(@Nullable String mode) {
+    @OutputCustomType.Constructor
+    private ApplicationManagementPolicyResponse(@OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.mode = mode;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationManagementPolicyResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

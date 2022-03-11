@@ -30,12 +30,12 @@ public final class RelationshipOccurrenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"comment","source","target","type"})
+    @OutputCustomType.Constructor
     private RelationshipOccurrenceResponse(
-        String comment,
-        String source,
-        String target,
-        String type) {
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.comment = comment;
         this.source = source;
         this.target = target;
@@ -97,22 +97,22 @@ public final class RelationshipOccurrenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

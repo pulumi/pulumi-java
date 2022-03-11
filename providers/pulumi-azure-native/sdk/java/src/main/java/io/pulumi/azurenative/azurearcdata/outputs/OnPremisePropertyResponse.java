@@ -27,11 +27,11 @@ public final class OnPremisePropertyResponse {
      */
     private final @Nullable String signingCertificateThumbprint;
 
-    @OutputCustomType.Constructor({"id","publicSigningKey","signingCertificateThumbprint"})
+    @OutputCustomType.Constructor
     private OnPremisePropertyResponse(
-        String id,
-        String publicSigningKey,
-        @Nullable String signingCertificateThumbprint) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("publicSigningKey") String publicSigningKey,
+        @OutputCustomType.Parameter("signingCertificateThumbprint") @Nullable String signingCertificateThumbprint) {
         this.id = id;
         this.publicSigningKey = publicSigningKey;
         this.signingCertificateThumbprint = signingCertificateThumbprint;
@@ -83,17 +83,17 @@ public final class OnPremisePropertyResponse {
     	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPublicSigningKey(String publicSigningKey) {
+        public Builder publicSigningKey(String publicSigningKey) {
             this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
             return this;
         }
 
-        public Builder setSigningCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
+        public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }

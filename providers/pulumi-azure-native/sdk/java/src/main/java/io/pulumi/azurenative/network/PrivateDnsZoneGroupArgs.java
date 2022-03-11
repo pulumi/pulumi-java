@@ -136,62 +136,62 @@ public final class PrivateDnsZoneGroupArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateDnsZoneConfigs(@Nullable Input<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs) {
+        public Builder privateDnsZoneConfigs(@Nullable Input<List<PrivateDnsZoneConfigArgs>> privateDnsZoneConfigs) {
             this.privateDnsZoneConfigs = privateDnsZoneConfigs;
             return this;
         }
 
-        public Builder setPrivateDnsZoneConfigs(@Nullable List<PrivateDnsZoneConfigArgs> privateDnsZoneConfigs) {
+        public Builder privateDnsZoneConfigs(@Nullable List<PrivateDnsZoneConfigArgs> privateDnsZoneConfigs) {
             this.privateDnsZoneConfigs = Input.ofNullable(privateDnsZoneConfigs);
             return this;
         }
 
-        public Builder setPrivateDnsZoneGroupName(@Nullable Input<String> privateDnsZoneGroupName) {
+        public Builder privateDnsZoneGroupName(@Nullable Input<String> privateDnsZoneGroupName) {
             this.privateDnsZoneGroupName = privateDnsZoneGroupName;
             return this;
         }
 
-        public Builder setPrivateDnsZoneGroupName(@Nullable String privateDnsZoneGroupName) {
+        public Builder privateDnsZoneGroupName(@Nullable String privateDnsZoneGroupName) {
             this.privateDnsZoneGroupName = Input.ofNullable(privateDnsZoneGroupName);
             return this;
         }
 
-        public Builder setPrivateEndpointName(Input<String> privateEndpointName) {
+        public Builder privateEndpointName(Input<String> privateEndpointName) {
             this.privateEndpointName = Objects.requireNonNull(privateEndpointName);
             return this;
         }
 
-        public Builder setPrivateEndpointName(String privateEndpointName) {
+        public Builder privateEndpointName(String privateEndpointName) {
             this.privateEndpointName = Input.of(Objects.requireNonNull(privateEndpointName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

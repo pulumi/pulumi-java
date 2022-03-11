@@ -17,8 +17,8 @@ public final class PreventionStoredInfoTypeDictionaryWordList {
      */
     private final List<String> words;
 
-    @OutputCustomType.Constructor({"words"})
-    private PreventionStoredInfoTypeDictionaryWordList(List<String> words) {
+    @OutputCustomType.Constructor
+    private PreventionStoredInfoTypeDictionaryWordList(@OutputCustomType.Parameter("words") List<String> words) {
         this.words = words;
     }
 
@@ -51,7 +51,7 @@ public final class PreventionStoredInfoTypeDictionaryWordList {
     	      this.words = defaults.words;
         }
 
-        public Builder setWords(List<String> words) {
+        public Builder words(List<String> words) {
             this.words = Objects.requireNonNull(words);
             return this;
         }

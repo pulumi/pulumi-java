@@ -16,10 +16,10 @@ public final class ThemeValue {
     private final @Nullable List<ThemeValues> children;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"children","value"})
+    @OutputCustomType.Constructor
     private ThemeValue(
-        @Nullable List<ThemeValues> children,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("children") @Nullable List<ThemeValues> children,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.children = children;
         this.value = value;
     }
@@ -53,12 +53,12 @@ public final class ThemeValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setChildren(@Nullable List<ThemeValues> children) {
+        public Builder children(@Nullable List<ThemeValues> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

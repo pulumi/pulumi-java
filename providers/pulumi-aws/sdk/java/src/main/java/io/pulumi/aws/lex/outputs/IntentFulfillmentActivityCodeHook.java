@@ -22,10 +22,10 @@ public final class IntentFulfillmentActivityCodeHook {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"messageVersion","uri"})
+    @OutputCustomType.Constructor
     private IntentFulfillmentActivityCodeHook(
-        String messageVersion,
-        String uri) {
+        @OutputCustomType.Parameter("messageVersion") String messageVersion,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.messageVersion = messageVersion;
         this.uri = uri;
     }
@@ -69,12 +69,12 @@ public final class IntentFulfillmentActivityCodeHook {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setMessageVersion(String messageVersion) {
+        public Builder messageVersion(String messageVersion) {
             this.messageVersion = Objects.requireNonNull(messageVersion);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

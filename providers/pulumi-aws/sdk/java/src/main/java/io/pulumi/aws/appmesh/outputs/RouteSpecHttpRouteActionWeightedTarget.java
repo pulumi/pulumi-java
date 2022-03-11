@@ -21,10 +21,10 @@ public final class RouteSpecHttpRouteActionWeightedTarget {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"virtualNode","weight"})
+    @OutputCustomType.Constructor
     private RouteSpecHttpRouteActionWeightedTarget(
-        String virtualNode,
-        Integer weight) {
+        @OutputCustomType.Parameter("virtualNode") String virtualNode,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.virtualNode = virtualNode;
         this.weight = weight;
     }
@@ -66,12 +66,12 @@ public final class RouteSpecHttpRouteActionWeightedTarget {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setVirtualNode(String virtualNode) {
+        public Builder virtualNode(String virtualNode) {
             this.virtualNode = Objects.requireNonNull(virtualNode);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

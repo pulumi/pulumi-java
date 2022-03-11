@@ -22,10 +22,10 @@ public final class MigrateSyncCompleteCommandOutputResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"errors","id"})
+    @OutputCustomType.Constructor
     private MigrateSyncCompleteCommandOutputResponse(
-        List<ReportableExceptionResponse> errors,
-        String id) {
+        @OutputCustomType.Parameter("errors") List<ReportableExceptionResponse> errors,
+        @OutputCustomType.Parameter("id") String id) {
         this.errors = errors;
         this.id = id;
     }
@@ -67,12 +67,12 @@ public final class MigrateSyncCompleteCommandOutputResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setErrors(List<ReportableExceptionResponse> errors) {
+        public Builder errors(List<ReportableExceptionResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

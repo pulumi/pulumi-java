@@ -108,22 +108,22 @@ public final class AutoPatchingSettingsResponse extends io.pulumi.resources.Invo
     	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
         }
 
-        public Builder setDayOfWeek(@Nullable String dayOfWeek) {
+        public Builder dayOfWeek(@Nullable String dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setMaintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
+        public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
+        public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }

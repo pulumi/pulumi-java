@@ -32,12 +32,12 @@ public final class ConnectionProfileResponse {
      */
     private final @Nullable String webSshAccess;
 
-    @OutputCustomType.Constructor({"clientRdpAccess","clientSshAccess","webRdpAccess","webSshAccess"})
+    @OutputCustomType.Constructor
     private ConnectionProfileResponse(
-        @Nullable String clientRdpAccess,
-        @Nullable String clientSshAccess,
-        @Nullable String webRdpAccess,
-        @Nullable String webSshAccess) {
+        @OutputCustomType.Parameter("clientRdpAccess") @Nullable String clientRdpAccess,
+        @OutputCustomType.Parameter("clientSshAccess") @Nullable String clientSshAccess,
+        @OutputCustomType.Parameter("webRdpAccess") @Nullable String webRdpAccess,
+        @OutputCustomType.Parameter("webSshAccess") @Nullable String webSshAccess) {
         this.clientRdpAccess = clientRdpAccess;
         this.clientSshAccess = clientSshAccess;
         this.webRdpAccess = webRdpAccess;
@@ -99,22 +99,22 @@ public final class ConnectionProfileResponse {
     	      this.webSshAccess = defaults.webSshAccess;
         }
 
-        public Builder setClientRdpAccess(@Nullable String clientRdpAccess) {
+        public Builder clientRdpAccess(@Nullable String clientRdpAccess) {
             this.clientRdpAccess = clientRdpAccess;
             return this;
         }
 
-        public Builder setClientSshAccess(@Nullable String clientSshAccess) {
+        public Builder clientSshAccess(@Nullable String clientSshAccess) {
             this.clientSshAccess = clientSshAccess;
             return this;
         }
 
-        public Builder setWebRdpAccess(@Nullable String webRdpAccess) {
+        public Builder webRdpAccess(@Nullable String webRdpAccess) {
             this.webRdpAccess = webRdpAccess;
             return this;
         }
 
-        public Builder setWebSshAccess(@Nullable String webSshAccess) {
+        public Builder webSshAccess(@Nullable String webSshAccess) {
             this.webSshAccess = webSshAccess;
             return this;
         }

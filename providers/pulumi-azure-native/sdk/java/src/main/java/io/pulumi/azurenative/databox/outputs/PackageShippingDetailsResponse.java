@@ -25,11 +25,11 @@ public final class PackageShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierName","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private PackageShippingDetailsResponse(
-        String carrierName,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierName = carrierName;
         this.trackingId = trackingId;
         this.trackingUrl = trackingUrl;
@@ -81,17 +81,17 @@ public final class PackageShippingDetailsResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setTrackingId(String trackingId) {
+        public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

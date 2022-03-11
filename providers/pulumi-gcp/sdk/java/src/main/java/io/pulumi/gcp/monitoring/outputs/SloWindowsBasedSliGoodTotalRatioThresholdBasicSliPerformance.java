@@ -57,13 +57,13 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      */
     private final @Nullable List<String> versions;
 
-    @OutputCustomType.Constructor({"availability","latency","locations","methods","versions"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance(
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency,
-        @Nullable List<String> locations,
-        @Nullable List<String> methods,
-        @Nullable List<String> versions) {
+        @OutputCustomType.Parameter("availability") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability,
+        @OutputCustomType.Parameter("latency") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("versions") @Nullable List<String> versions) {
         this.availability = availability;
         this.latency = latency;
         this.locations = locations;
@@ -152,27 +152,27 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAvailability(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability) {
+        public Builder availability(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability) {
             this.availability = availability;
             return this;
         }
 
-        public Builder setLatency(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency) {
+        public Builder latency(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency) {
             this.latency = latency;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<String> versions) {
+        public Builder versions(@Nullable List<String> versions) {
             this.versions = versions;
             return this;
         }

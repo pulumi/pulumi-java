@@ -46,15 +46,15 @@ public final class X12ValidationOverrideResponse {
      */
     private final Boolean validateXSDTypes;
 
-    @OutputCustomType.Constructor({"allowLeadingAndTrailingSpacesAndZeroes","messageId","trailingSeparatorPolicy","trimLeadingAndTrailingSpacesAndZeroes","validateCharacterSet","validateEDITypes","validateXSDTypes"})
+    @OutputCustomType.Constructor
     private X12ValidationOverrideResponse(
-        Boolean allowLeadingAndTrailingSpacesAndZeroes,
-        String messageId,
-        String trailingSeparatorPolicy,
-        Boolean trimLeadingAndTrailingSpacesAndZeroes,
-        Boolean validateCharacterSet,
-        Boolean validateEDITypes,
-        Boolean validateXSDTypes) {
+        @OutputCustomType.Parameter("allowLeadingAndTrailingSpacesAndZeroes") Boolean allowLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("trailingSeparatorPolicy") String trailingSeparatorPolicy,
+        @OutputCustomType.Parameter("trimLeadingAndTrailingSpacesAndZeroes") Boolean trimLeadingAndTrailingSpacesAndZeroes,
+        @OutputCustomType.Parameter("validateCharacterSet") Boolean validateCharacterSet,
+        @OutputCustomType.Parameter("validateEDITypes") Boolean validateEDITypes,
+        @OutputCustomType.Parameter("validateXSDTypes") Boolean validateXSDTypes) {
         this.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
         this.messageId = messageId;
         this.trailingSeparatorPolicy = trailingSeparatorPolicy;
@@ -146,37 +146,37 @@ public final class X12ValidationOverrideResponse {
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(String trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setValidateCharacterSet(Boolean validateCharacterSet) {
+        public Builder validateCharacterSet(Boolean validateCharacterSet) {
             this.validateCharacterSet = Objects.requireNonNull(validateCharacterSet);
             return this;
         }
 
-        public Builder setValidateEDITypes(Boolean validateEDITypes) {
+        public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
-        public Builder setValidateXSDTypes(Boolean validateXSDTypes) {
+        public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }

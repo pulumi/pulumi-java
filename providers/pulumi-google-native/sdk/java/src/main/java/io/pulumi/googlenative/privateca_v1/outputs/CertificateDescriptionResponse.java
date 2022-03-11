@@ -56,16 +56,16 @@ public final class CertificateDescriptionResponse {
      */
     private final X509ParametersResponse x509Description;
 
-    @OutputCustomType.Constructor({"aiaIssuingCertificateUrls","authorityKeyId","certFingerprint","crlDistributionPoints","publicKey","subjectDescription","subjectKeyId","x509Description"})
+    @OutputCustomType.Constructor
     private CertificateDescriptionResponse(
-        List<String> aiaIssuingCertificateUrls,
-        KeyIdResponse authorityKeyId,
-        CertificateFingerprintResponse certFingerprint,
-        List<String> crlDistributionPoints,
-        PublicKeyResponse publicKey,
-        SubjectDescriptionResponse subjectDescription,
-        KeyIdResponse subjectKeyId,
-        X509ParametersResponse x509Description) {
+        @OutputCustomType.Parameter("aiaIssuingCertificateUrls") List<String> aiaIssuingCertificateUrls,
+        @OutputCustomType.Parameter("authorityKeyId") KeyIdResponse authorityKeyId,
+        @OutputCustomType.Parameter("certFingerprint") CertificateFingerprintResponse certFingerprint,
+        @OutputCustomType.Parameter("crlDistributionPoints") List<String> crlDistributionPoints,
+        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("subjectDescription") SubjectDescriptionResponse subjectDescription,
+        @OutputCustomType.Parameter("subjectKeyId") KeyIdResponse subjectKeyId,
+        @OutputCustomType.Parameter("x509Description") X509ParametersResponse x509Description) {
         this.aiaIssuingCertificateUrls = aiaIssuingCertificateUrls;
         this.authorityKeyId = authorityKeyId;
         this.certFingerprint = certFingerprint;
@@ -167,42 +167,42 @@ public final class CertificateDescriptionResponse {
     	      this.x509Description = defaults.x509Description;
         }
 
-        public Builder setAiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls);
             return this;
         }
 
-        public Builder setAuthorityKeyId(KeyIdResponse authorityKeyId) {
+        public Builder authorityKeyId(KeyIdResponse authorityKeyId) {
             this.authorityKeyId = Objects.requireNonNull(authorityKeyId);
             return this;
         }
 
-        public Builder setCertFingerprint(CertificateFingerprintResponse certFingerprint) {
+        public Builder certFingerprint(CertificateFingerprintResponse certFingerprint) {
             this.certFingerprint = Objects.requireNonNull(certFingerprint);
             return this;
         }
 
-        public Builder setCrlDistributionPoints(List<String> crlDistributionPoints) {
+        public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
             this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints);
             return this;
         }
 
-        public Builder setPublicKey(PublicKeyResponse publicKey) {
+        public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSubjectDescription(SubjectDescriptionResponse subjectDescription) {
+        public Builder subjectDescription(SubjectDescriptionResponse subjectDescription) {
             this.subjectDescription = Objects.requireNonNull(subjectDescription);
             return this;
         }
 
-        public Builder setSubjectKeyId(KeyIdResponse subjectKeyId) {
+        public Builder subjectKeyId(KeyIdResponse subjectKeyId) {
             this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
             return this;
         }
 
-        public Builder setX509Description(X509ParametersResponse x509Description) {
+        public Builder x509Description(X509ParametersResponse x509Description) {
             this.x509Description = Objects.requireNonNull(x509Description);
             return this;
         }

@@ -58,12 +58,12 @@ public final class CustomRuleListArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable Input<List<CustomRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<CustomRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<CustomRuleArgs> rules) {
+        public Builder rules(@Nullable List<CustomRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }

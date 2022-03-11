@@ -15,8 +15,8 @@ public final class ScanRunWarningTraceResponse {
      */
     private final String code;
 
-    @OutputCustomType.Constructor({"code"})
-    private ScanRunWarningTraceResponse(String code) {
+    @OutputCustomType.Constructor
+    private ScanRunWarningTraceResponse(@OutputCustomType.Parameter("code") String code) {
         this.code = code;
     }
 
@@ -48,7 +48,7 @@ public final class ScanRunWarningTraceResponse {
     	      this.code = defaults.code;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }

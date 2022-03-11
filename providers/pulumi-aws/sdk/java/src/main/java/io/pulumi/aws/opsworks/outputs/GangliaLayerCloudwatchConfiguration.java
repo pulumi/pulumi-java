@@ -16,10 +16,10 @@ public final class GangliaLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private GangliaLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }
@@ -53,12 +53,12 @@ public final class GangliaLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<GangliaLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

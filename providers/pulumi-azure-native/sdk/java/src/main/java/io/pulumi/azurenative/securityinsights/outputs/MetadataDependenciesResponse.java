@@ -43,14 +43,14 @@ public final class MetadataDependenciesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"contentId","criteria","kind","name","operator","version"})
+    @OutputCustomType.Constructor
     private MetadataDependenciesResponse(
-        @Nullable String contentId,
-        @Nullable List<MetadataDependenciesResponse> criteria,
-        @Nullable String kind,
-        @Nullable String name,
-        @Nullable String operator,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("contentId") @Nullable String contentId,
+        @OutputCustomType.Parameter("criteria") @Nullable List<MetadataDependenciesResponse> criteria,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.contentId = contentId;
         this.criteria = criteria;
         this.kind = kind;
@@ -132,32 +132,32 @@ public final class MetadataDependenciesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContentId(@Nullable String contentId) {
+        public Builder contentId(@Nullable String contentId) {
             this.contentId = contentId;
             return this;
         }
 
-        public Builder setCriteria(@Nullable List<MetadataDependenciesResponse> criteria) {
+        public Builder criteria(@Nullable List<MetadataDependenciesResponse> criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

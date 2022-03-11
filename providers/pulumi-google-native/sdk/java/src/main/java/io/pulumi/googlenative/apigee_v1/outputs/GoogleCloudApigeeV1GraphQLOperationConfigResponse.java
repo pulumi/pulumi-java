@@ -34,12 +34,12 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse {
      */
     private final GoogleCloudApigeeV1QuotaResponse quota;
 
-    @OutputCustomType.Constructor({"apiSource","attributes","operations","quota"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1GraphQLOperationConfigResponse(
-        String apiSource,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        List<GoogleCloudApigeeV1GraphQLOperationResponse> operations,
-        GoogleCloudApigeeV1QuotaResponse quota) {
+        @OutputCustomType.Parameter("apiSource") String apiSource,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("operations") List<GoogleCloudApigeeV1GraphQLOperationResponse> operations,
+        @OutputCustomType.Parameter("quota") GoogleCloudApigeeV1QuotaResponse quota) {
         this.apiSource = apiSource;
         this.attributes = attributes;
         this.operations = operations;
@@ -101,22 +101,22 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse {
     	      this.quota = defaults.quota;
         }
 
-        public Builder setApiSource(String apiSource) {
+        public Builder apiSource(String apiSource) {
             this.apiSource = Objects.requireNonNull(apiSource);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setOperations(List<GoogleCloudApigeeV1GraphQLOperationResponse> operations) {
+        public Builder operations(List<GoogleCloudApigeeV1GraphQLOperationResponse> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
 
-        public Builder setQuota(GoogleCloudApigeeV1QuotaResponse quota) {
+        public Builder quota(GoogleCloudApigeeV1QuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }

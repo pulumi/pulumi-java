@@ -33,12 +33,12 @@ public final class ListTenantAccessGitSecretsResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"enabled","id","primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListTenantAccessGitSecretsResult(
-        @Nullable Boolean enabled,
-        @Nullable String id,
-        @Nullable String primaryKey,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.enabled = enabled;
         this.id = id;
         this.primaryKey = primaryKey;
@@ -100,22 +100,22 @@ public final class ListTenantAccessGitSecretsResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

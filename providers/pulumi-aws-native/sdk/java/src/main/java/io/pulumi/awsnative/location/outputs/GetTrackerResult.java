@@ -16,12 +16,12 @@ public final class GetTrackerResult {
     private final @Nullable String trackerArn;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor({"arn","createTime","trackerArn","updateTime"})
+    @OutputCustomType.Constructor
     private GetTrackerResult(
-        @Nullable String arn,
-        @Nullable String createTime,
-        @Nullable String trackerArn,
-        @Nullable String updateTime) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("trackerArn") @Nullable String trackerArn,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.arn = arn;
         this.createTime = createTime;
         this.trackerArn = trackerArn;
@@ -67,22 +67,22 @@ public final class GetTrackerResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setTrackerArn(@Nullable String trackerArn) {
+        public Builder trackerArn(@Nullable String trackerArn) {
             this.trackerArn = trackerArn;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }

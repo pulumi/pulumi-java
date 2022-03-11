@@ -124,72 +124,72 @@ public final class ConnectorProfileSAPODataConnectorProfilePropertiesArgs extend
     	      this.privateLinkServiceName = defaults.privateLinkServiceName;
         }
 
-        public Builder setApplicationHostUrl(@Nullable Input<String> applicationHostUrl) {
+        public Builder applicationHostUrl(@Nullable Input<String> applicationHostUrl) {
             this.applicationHostUrl = applicationHostUrl;
             return this;
         }
 
-        public Builder setApplicationHostUrl(@Nullable String applicationHostUrl) {
+        public Builder applicationHostUrl(@Nullable String applicationHostUrl) {
             this.applicationHostUrl = Input.ofNullable(applicationHostUrl);
             return this;
         }
 
-        public Builder setApplicationServicePath(@Nullable Input<String> applicationServicePath) {
+        public Builder applicationServicePath(@Nullable Input<String> applicationServicePath) {
             this.applicationServicePath = applicationServicePath;
             return this;
         }
 
-        public Builder setApplicationServicePath(@Nullable String applicationServicePath) {
+        public Builder applicationServicePath(@Nullable String applicationServicePath) {
             this.applicationServicePath = Input.ofNullable(applicationServicePath);
             return this;
         }
 
-        public Builder setClientNumber(@Nullable Input<String> clientNumber) {
+        public Builder clientNumber(@Nullable Input<String> clientNumber) {
             this.clientNumber = clientNumber;
             return this;
         }
 
-        public Builder setClientNumber(@Nullable String clientNumber) {
+        public Builder clientNumber(@Nullable String clientNumber) {
             this.clientNumber = Input.ofNullable(clientNumber);
             return this;
         }
 
-        public Builder setLogonLanguage(@Nullable Input<String> logonLanguage) {
+        public Builder logonLanguage(@Nullable Input<String> logonLanguage) {
             this.logonLanguage = logonLanguage;
             return this;
         }
 
-        public Builder setLogonLanguage(@Nullable String logonLanguage) {
+        public Builder logonLanguage(@Nullable String logonLanguage) {
             this.logonLanguage = Input.ofNullable(logonLanguage);
             return this;
         }
 
-        public Builder setOAuthProperties(@Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties) {
+        public Builder oAuthProperties(@Nullable Input<ConnectorProfileOAuthPropertiesArgs> oAuthProperties) {
             this.oAuthProperties = oAuthProperties;
             return this;
         }
 
-        public Builder setOAuthProperties(@Nullable ConnectorProfileOAuthPropertiesArgs oAuthProperties) {
+        public Builder oAuthProperties(@Nullable ConnectorProfileOAuthPropertiesArgs oAuthProperties) {
             this.oAuthProperties = Input.ofNullable(oAuthProperties);
             return this;
         }
 
-        public Builder setPortNumber(@Nullable Input<Integer> portNumber) {
+        public Builder portNumber(@Nullable Input<Integer> portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
-        public Builder setPortNumber(@Nullable Integer portNumber) {
+        public Builder portNumber(@Nullable Integer portNumber) {
             this.portNumber = Input.ofNullable(portNumber);
             return this;
         }
 
-        public Builder setPrivateLinkServiceName(@Nullable Input<String> privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable Input<String> privateLinkServiceName) {
             this.privateLinkServiceName = privateLinkServiceName;
             return this;
         }
 
-        public Builder setPrivateLinkServiceName(@Nullable String privateLinkServiceName) {
+        public Builder privateLinkServiceName(@Nullable String privateLinkServiceName) {
             this.privateLinkServiceName = Input.ofNullable(privateLinkServiceName);
             return this;
         }

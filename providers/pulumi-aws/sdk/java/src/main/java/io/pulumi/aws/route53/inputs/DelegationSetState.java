@@ -89,32 +89,32 @@ public final class DelegationSetState extends io.pulumi.resources.ResourceArgs {
     	      this.referenceName = defaults.referenceName;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setNameServers(@Nullable Input<List<String>> nameServers) {
+        public Builder nameServers(@Nullable Input<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
 
-        public Builder setNameServers(@Nullable List<String> nameServers) {
+        public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = Input.ofNullable(nameServers);
             return this;
         }
 
-        public Builder setReferenceName(@Nullable Input<String> referenceName) {
+        public Builder referenceName(@Nullable Input<String> referenceName) {
             this.referenceName = referenceName;
             return this;
         }
 
-        public Builder setReferenceName(@Nullable String referenceName) {
+        public Builder referenceName(@Nullable String referenceName) {
             this.referenceName = Input.ofNullable(referenceName);
             return this;
         }

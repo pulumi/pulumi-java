@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ServiceTaskSpecContainerSpecMountBindOptions {
     private final @Nullable String propagation;
 
-    @OutputCustomType.Constructor({"propagation"})
-    private ServiceTaskSpecContainerSpecMountBindOptions(@Nullable String propagation) {
+    @OutputCustomType.Constructor
+    private ServiceTaskSpecContainerSpecMountBindOptions(@OutputCustomType.Parameter("propagation") @Nullable String propagation) {
         this.propagation = propagation;
     }
 
@@ -42,7 +42,7 @@ public final class ServiceTaskSpecContainerSpecMountBindOptions {
     	      this.propagation = defaults.propagation;
         }
 
-        public Builder setPropagation(@Nullable String propagation) {
+        public Builder propagation(@Nullable String propagation) {
             this.propagation = propagation;
             return this;
         }

@@ -101,27 +101,27 @@ public final class SuiteDefinitionConfigurationProperties extends io.pulumi.reso
     	      this.suiteDefinitionName = defaults.suiteDefinitionName;
         }
 
-        public Builder setDevicePermissionRoleArn(String devicePermissionRoleArn) {
+        public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
 
-        public Builder setDevices(@Nullable List<SuiteDefinitionDeviceUnderTest> devices) {
+        public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTest> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setIntendedForQualification(@Nullable Boolean intendedForQualification) {
+        public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
 
-        public Builder setRootGroup(String rootGroup) {
+        public Builder rootGroup(String rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
 
-        public Builder setSuiteDefinitionName(@Nullable String suiteDefinitionName) {
+        public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }

@@ -31,11 +31,11 @@ public final class DataExportDetailsResponse {
      */
     private final TransferConfigurationResponse transferConfiguration;
 
-    @OutputCustomType.Constructor({"accountDetails","logCollectionLevel","transferConfiguration"})
+    @OutputCustomType.Constructor
     private DataExportDetailsResponse(
-        Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
-        @Nullable String logCollectionLevel,
-        TransferConfigurationResponse transferConfiguration) {
+        @OutputCustomType.Parameter("accountDetails") Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails,
+        @OutputCustomType.Parameter("logCollectionLevel") @Nullable String logCollectionLevel,
+        @OutputCustomType.Parameter("transferConfiguration") TransferConfigurationResponse transferConfiguration) {
         this.accountDetails = accountDetails;
         this.logCollectionLevel = logCollectionLevel;
         this.transferConfiguration = transferConfiguration;
@@ -87,17 +87,17 @@ public final class DataExportDetailsResponse {
     	      this.transferConfiguration = defaults.transferConfiguration;
         }
 
-        public Builder setAccountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
+        public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
 
-        public Builder setLogCollectionLevel(@Nullable String logCollectionLevel) {
+        public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
             this.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
-        public Builder setTransferConfiguration(TransferConfigurationResponse transferConfiguration) {
+        public Builder transferConfiguration(TransferConfigurationResponse transferConfiguration) {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }

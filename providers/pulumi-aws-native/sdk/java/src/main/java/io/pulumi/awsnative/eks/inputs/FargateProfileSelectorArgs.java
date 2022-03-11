@@ -64,22 +64,22 @@ public final class FargateProfileSelectorArgs extends io.pulumi.resources.Resour
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setLabels(@Nullable Input<List<FargateProfileLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<FargateProfileLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<FargateProfileLabelArgs> labels) {
+        public Builder labels(@Nullable List<FargateProfileLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }

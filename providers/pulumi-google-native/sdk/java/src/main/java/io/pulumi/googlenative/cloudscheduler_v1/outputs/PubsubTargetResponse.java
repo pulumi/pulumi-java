@@ -26,11 +26,11 @@ public final class PubsubTargetResponse {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"attributes","data","topicName"})
+    @OutputCustomType.Constructor
     private PubsubTargetResponse(
-        Map<String,String> attributes,
-        String data,
-        String topicName) {
+        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;
@@ -82,17 +82,17 @@ public final class PubsubTargetResponse {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAttributes(Map<String,String> attributes) {
+        public Builder attributes(Map<String,String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

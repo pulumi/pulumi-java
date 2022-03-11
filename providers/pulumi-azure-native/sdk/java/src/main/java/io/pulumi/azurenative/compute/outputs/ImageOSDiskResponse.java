@@ -60,17 +60,17 @@ public final class ImageOSDiskResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"blobUri","caching","diskEncryptionSet","diskSizeGB","managedDisk","osState","osType","snapshot","storageAccountType"})
+    @OutputCustomType.Constructor
     private ImageOSDiskResponse(
-        @Nullable String blobUri,
-        @Nullable String caching,
-        @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
-        @Nullable Integer diskSizeGB,
-        @Nullable SubResourceResponse managedDisk,
-        String osState,
-        String osType,
-        @Nullable SubResourceResponse snapshot,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("blobUri") @Nullable String blobUri,
+        @OutputCustomType.Parameter("caching") @Nullable String caching,
+        @OutputCustomType.Parameter("diskEncryptionSet") @Nullable DiskEncryptionSetParametersResponse diskEncryptionSet,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("managedDisk") @Nullable SubResourceResponse managedDisk,
+        @OutputCustomType.Parameter("osState") String osState,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("snapshot") @Nullable SubResourceResponse snapshot,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.blobUri = blobUri;
         this.caching = caching;
         this.diskEncryptionSet = diskEncryptionSet;
@@ -182,47 +182,47 @@ public final class ImageOSDiskResponse {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setBlobUri(@Nullable String blobUri) {
+        public Builder blobUri(@Nullable String blobUri) {
             this.blobUri = blobUri;
             return this;
         }
 
-        public Builder setCaching(@Nullable String caching) {
+        public Builder caching(@Nullable String caching) {
             this.caching = caching;
             return this;
         }
 
-        public Builder setDiskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
+        public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersResponse diskEncryptionSet) {
             this.diskEncryptionSet = diskEncryptionSet;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setManagedDisk(@Nullable SubResourceResponse managedDisk) {
+        public Builder managedDisk(@Nullable SubResourceResponse managedDisk) {
             this.managedDisk = managedDisk;
             return this;
         }
 
-        public Builder setOsState(String osState) {
+        public Builder osState(String osState) {
             this.osState = Objects.requireNonNull(osState);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setSnapshot(@Nullable SubResourceResponse snapshot) {
+        public Builder snapshot(@Nullable SubResourceResponse snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }

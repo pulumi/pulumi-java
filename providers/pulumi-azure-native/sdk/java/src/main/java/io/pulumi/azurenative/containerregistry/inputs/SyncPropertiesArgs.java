@@ -106,42 +106,42 @@ public final class SyncPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenId = defaults.tokenId;
         }
 
-        public Builder setMessageTtl(Input<String> messageTtl) {
+        public Builder messageTtl(Input<String> messageTtl) {
             this.messageTtl = Objects.requireNonNull(messageTtl);
             return this;
         }
 
-        public Builder setMessageTtl(String messageTtl) {
+        public Builder messageTtl(String messageTtl) {
             this.messageTtl = Input.of(Objects.requireNonNull(messageTtl));
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setSyncWindow(@Nullable Input<String> syncWindow) {
+        public Builder syncWindow(@Nullable Input<String> syncWindow) {
             this.syncWindow = syncWindow;
             return this;
         }
 
-        public Builder setSyncWindow(@Nullable String syncWindow) {
+        public Builder syncWindow(@Nullable String syncWindow) {
             this.syncWindow = Input.ofNullable(syncWindow);
             return this;
         }
 
-        public Builder setTokenId(Input<String> tokenId) {
+        public Builder tokenId(Input<String> tokenId) {
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }
 
-        public Builder setTokenId(String tokenId) {
+        public Builder tokenId(String tokenId) {
             this.tokenId = Input.of(Objects.requireNonNull(tokenId));
             return this;
         }

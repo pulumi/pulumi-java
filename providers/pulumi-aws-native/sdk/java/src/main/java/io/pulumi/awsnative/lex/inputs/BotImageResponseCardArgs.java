@@ -108,42 +108,42 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(@Nullable Input<List<BotButtonArgs>> buttons) {
+        public Builder buttons(@Nullable Input<List<BotButtonArgs>> buttons) {
             this.buttons = buttons;
             return this;
         }
 
-        public Builder setButtons(@Nullable List<BotButtonArgs> buttons) {
+        public Builder buttons(@Nullable List<BotButtonArgs> buttons) {
             this.buttons = Input.ofNullable(buttons);
             return this;
         }
 
-        public Builder setImageUrl(@Nullable Input<String> imageUrl) {
+        public Builder imageUrl(@Nullable Input<String> imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = Input.ofNullable(imageUrl);
             return this;
         }
 
-        public Builder setSubtitle(@Nullable Input<String> subtitle) {
+        public Builder subtitle(@Nullable Input<String> subtitle) {
             this.subtitle = subtitle;
             return this;
         }
 
-        public Builder setSubtitle(@Nullable String subtitle) {
+        public Builder subtitle(@Nullable String subtitle) {
             this.subtitle = Input.ofNullable(subtitle);
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }

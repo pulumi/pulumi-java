@@ -45,14 +45,14 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"cmkArn","copyTags","deprecateRule","encrypted","retainRule","target"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule(
-        @Nullable String cmkArn,
-        @Nullable Boolean copyTags,
-        @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
-        Boolean encrypted,
-        @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
-        String target) {
+        @OutputCustomType.Parameter("cmkArn") @Nullable String cmkArn,
+        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @OutputCustomType.Parameter("deprecateRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("retainRule") @Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule,
+        @OutputCustomType.Parameter("target") String target) {
         this.cmkArn = cmkArn;
         this.copyTags = copyTags;
         this.deprecateRule = deprecateRule;
@@ -134,32 +134,32 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule {
     	      this.target = defaults.target;
         }
 
-        public Builder setCmkArn(@Nullable String cmkArn) {
+        public Builder cmkArn(@Nullable String cmkArn) {
             this.cmkArn = cmkArn;
             return this;
         }
 
-        public Builder setCopyTags(@Nullable Boolean copyTags) {
+        public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
-        public Builder setDeprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule) {
+        public Builder deprecateRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule deprecateRule) {
             this.deprecateRule = deprecateRule;
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setRetainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule) {
+        public Builder retainRule(@Nullable LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleRetainRule retainRule) {
             this.retainRule = retainRule;
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

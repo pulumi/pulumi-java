@@ -27,11 +27,11 @@ public final class GoogleIamV1__BindingResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"condition","members","role"})
+    @OutputCustomType.Constructor
     private GoogleIamV1__BindingResponse(
-        GoogleType__ExprResponse condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("condition") GoogleType__ExprResponse condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;
@@ -83,17 +83,17 @@ public final class GoogleIamV1__BindingResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(GoogleType__ExprResponse condition) {
+        public Builder condition(GoogleType__ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

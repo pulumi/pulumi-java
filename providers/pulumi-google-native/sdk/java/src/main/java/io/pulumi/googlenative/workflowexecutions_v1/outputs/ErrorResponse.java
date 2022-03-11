@@ -26,11 +26,11 @@ public final class ErrorResponse {
      */
     private final StackTraceResponse stackTrace;
 
-    @OutputCustomType.Constructor({"context","payload","stackTrace"})
+    @OutputCustomType.Constructor
     private ErrorResponse(
-        String context,
-        String payload,
-        StackTraceResponse stackTrace) {
+        @OutputCustomType.Parameter("context") String context,
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("stackTrace") StackTraceResponse stackTrace) {
         this.context = context;
         this.payload = payload;
         this.stackTrace = stackTrace;
@@ -82,17 +82,17 @@ public final class ErrorResponse {
     	      this.stackTrace = defaults.stackTrace;
         }
 
-        public Builder setContext(String context) {
+        public Builder context(String context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setStackTrace(StackTraceResponse stackTrace) {
+        public Builder stackTrace(StackTraceResponse stackTrace) {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }

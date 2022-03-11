@@ -23,10 +23,10 @@ public final class DistributionConfigurationTargetContainerRepository {
      */
     private final @Nullable DistributionConfigurationTargetContainerRepositoryService service;
 
-    @OutputCustomType.Constructor({"repositoryName","service"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationTargetContainerRepository(
-        @Nullable String repositoryName,
-        @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("service") @Nullable DistributionConfigurationTargetContainerRepositoryService service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }
@@ -68,12 +68,12 @@ public final class DistributionConfigurationTargetContainerRepository {
     	      this.service = defaults.service;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setService(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
+        public Builder service(@Nullable DistributionConfigurationTargetContainerRepositoryService service) {
             this.service = service;
             return this;
         }

@@ -37,13 +37,13 @@ public final class ValidationConfigResponse {
      */
     private final List<String> enabledImplementationGuides;
 
-    @OutputCustomType.Constructor({"disableFhirpathValidation","disableProfileValidation","disableReferenceTypeValidation","disableRequiredFieldValidation","enabledImplementationGuides"})
+    @OutputCustomType.Constructor
     private ValidationConfigResponse(
-        Boolean disableFhirpathValidation,
-        Boolean disableProfileValidation,
-        Boolean disableReferenceTypeValidation,
-        Boolean disableRequiredFieldValidation,
-        List<String> enabledImplementationGuides) {
+        @OutputCustomType.Parameter("disableFhirpathValidation") Boolean disableFhirpathValidation,
+        @OutputCustomType.Parameter("disableProfileValidation") Boolean disableProfileValidation,
+        @OutputCustomType.Parameter("disableReferenceTypeValidation") Boolean disableReferenceTypeValidation,
+        @OutputCustomType.Parameter("disableRequiredFieldValidation") Boolean disableRequiredFieldValidation,
+        @OutputCustomType.Parameter("enabledImplementationGuides") List<String> enabledImplementationGuides) {
         this.disableFhirpathValidation = disableFhirpathValidation;
         this.disableProfileValidation = disableProfileValidation;
         this.disableReferenceTypeValidation = disableReferenceTypeValidation;
@@ -115,27 +115,27 @@ public final class ValidationConfigResponse {
     	      this.enabledImplementationGuides = defaults.enabledImplementationGuides;
         }
 
-        public Builder setDisableFhirpathValidation(Boolean disableFhirpathValidation) {
+        public Builder disableFhirpathValidation(Boolean disableFhirpathValidation) {
             this.disableFhirpathValidation = Objects.requireNonNull(disableFhirpathValidation);
             return this;
         }
 
-        public Builder setDisableProfileValidation(Boolean disableProfileValidation) {
+        public Builder disableProfileValidation(Boolean disableProfileValidation) {
             this.disableProfileValidation = Objects.requireNonNull(disableProfileValidation);
             return this;
         }
 
-        public Builder setDisableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
+        public Builder disableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
             this.disableReferenceTypeValidation = Objects.requireNonNull(disableReferenceTypeValidation);
             return this;
         }
 
-        public Builder setDisableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
+        public Builder disableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
             this.disableRequiredFieldValidation = Objects.requireNonNull(disableRequiredFieldValidation);
             return this;
         }
 
-        public Builder setEnabledImplementationGuides(List<String> enabledImplementationGuides) {
+        public Builder enabledImplementationGuides(List<String> enabledImplementationGuides) {
             this.enabledImplementationGuides = Objects.requireNonNull(enabledImplementationGuides);
             return this;
         }

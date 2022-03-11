@@ -75,17 +75,17 @@ public final class TaskDefinitionUpdateWirelessGatewayTaskCreate extends io.pulu
     	      this.updateDataSource = defaults.updateDataSource;
         }
 
-        public Builder setLoRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN) {
+        public Builder loRaWAN(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskCreate loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setUpdateDataRole(@Nullable String updateDataRole) {
+        public Builder updateDataRole(@Nullable String updateDataRole) {
             this.updateDataRole = updateDataRole;
             return this;
         }
 
-        public Builder setUpdateDataSource(@Nullable String updateDataSource) {
+        public Builder updateDataSource(@Nullable String updateDataSource) {
             this.updateDataSource = updateDataSource;
             return this;
         }

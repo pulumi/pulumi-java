@@ -29,11 +29,11 @@ public final class TaskSetAwsVpcConfiguration {
      */
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"assignPublicIp","securityGroups","subnets"})
+    @OutputCustomType.Constructor
     private TaskSetAwsVpcConfiguration(
-        @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @Nullable List<String> securityGroups,
-        List<String> subnets) {
+        @OutputCustomType.Parameter("assignPublicIp") @Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;
@@ -85,17 +85,17 @@ public final class TaskSetAwsVpcConfiguration {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+        public Builder assignPublicIp(@Nullable TaskSetAwsVpcConfigurationAssignPublicIp assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

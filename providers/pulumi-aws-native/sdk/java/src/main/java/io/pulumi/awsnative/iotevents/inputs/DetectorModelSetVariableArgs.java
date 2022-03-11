@@ -73,22 +73,22 @@ public final class DetectorModelSetVariableArgs extends io.pulumi.resources.Reso
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
 
-        public Builder setVariableName(Input<String> variableName) {
+        public Builder variableName(Input<String> variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Input.of(Objects.requireNonNull(variableName));
             return this;
         }

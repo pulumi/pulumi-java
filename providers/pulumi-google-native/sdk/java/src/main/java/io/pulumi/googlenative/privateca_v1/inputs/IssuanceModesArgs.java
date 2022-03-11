@@ -74,22 +74,22 @@ public final class IssuanceModesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
         }
 
-        public Builder setAllowConfigBasedIssuance(@Nullable Input<Boolean> allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(@Nullable Input<Boolean> allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = allowConfigBasedIssuance;
             return this;
         }
 
-        public Builder setAllowConfigBasedIssuance(@Nullable Boolean allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(@Nullable Boolean allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Input.ofNullable(allowConfigBasedIssuance);
             return this;
         }
 
-        public Builder setAllowCsrBasedIssuance(@Nullable Input<Boolean> allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(@Nullable Input<Boolean> allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = allowCsrBasedIssuance;
             return this;
         }
 
-        public Builder setAllowCsrBasedIssuance(@Nullable Boolean allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(@Nullable Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Input.ofNullable(allowCsrBasedIssuance);
             return this;
         }

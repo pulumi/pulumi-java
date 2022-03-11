@@ -203,102 +203,102 @@ public final class TemplateArtifactArgs extends io.pulumi.resources.ResourceArgs
     	      this.template = defaults.template;
         }
 
-        public Builder setArtifactName(@Nullable Input<String> artifactName) {
+        public Builder artifactName(@Nullable Input<String> artifactName) {
             this.artifactName = artifactName;
             return this;
         }
 
-        public Builder setArtifactName(@Nullable String artifactName) {
+        public Builder artifactName(@Nullable String artifactName) {
             this.artifactName = Input.ofNullable(artifactName);
             return this;
         }
 
-        public Builder setBlueprintName(Input<String> blueprintName) {
+        public Builder blueprintName(Input<String> blueprintName) {
             this.blueprintName = Objects.requireNonNull(blueprintName);
             return this;
         }
 
-        public Builder setBlueprintName(String blueprintName) {
+        public Builder blueprintName(String blueprintName) {
             this.blueprintName = Input.of(Objects.requireNonNull(blueprintName));
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<String>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<String>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<String> dependsOn) {
+        public Builder dependsOn(@Nullable List<String> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setParameters(Input<Map<String,ParameterValueArgs>> parameters) {
+        public Builder parameters(Input<Map<String,ParameterValueArgs>> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(Map<String,ParameterValueArgs> parameters) {
+        public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setResourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Input<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }
 
-        public Builder setTemplate(Input<Object> template) {
+        public Builder template(Input<Object> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(Object template) {
+        public Builder template(Object template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

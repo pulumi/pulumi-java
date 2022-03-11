@@ -74,22 +74,22 @@ public final class GooglePrivacyDlpV2ProximityArgs extends io.pulumi.resources.R
     	      this.windowBefore = defaults.windowBefore;
         }
 
-        public Builder setWindowAfter(@Nullable Input<Integer> windowAfter) {
+        public Builder windowAfter(@Nullable Input<Integer> windowAfter) {
             this.windowAfter = windowAfter;
             return this;
         }
 
-        public Builder setWindowAfter(@Nullable Integer windowAfter) {
+        public Builder windowAfter(@Nullable Integer windowAfter) {
             this.windowAfter = Input.ofNullable(windowAfter);
             return this;
         }
 
-        public Builder setWindowBefore(@Nullable Input<Integer> windowBefore) {
+        public Builder windowBefore(@Nullable Input<Integer> windowBefore) {
             this.windowBefore = windowBefore;
             return this;
         }
 
-        public Builder setWindowBefore(@Nullable Integer windowBefore) {
+        public Builder windowBefore(@Nullable Integer windowBefore) {
             this.windowBefore = Input.ofNullable(windowBefore);
             return this;
         }

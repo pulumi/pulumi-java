@@ -46,10 +46,10 @@ public final class ValidationRule {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor({"message","rule"})
+    @OutputCustomType.Constructor
     private ValidationRule(
-        @Nullable String message,
-        String rule) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("rule") String rule) {
         this.message = message;
         this.rule = rule;
     }
@@ -115,12 +115,12 @@ public final class ValidationRule {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

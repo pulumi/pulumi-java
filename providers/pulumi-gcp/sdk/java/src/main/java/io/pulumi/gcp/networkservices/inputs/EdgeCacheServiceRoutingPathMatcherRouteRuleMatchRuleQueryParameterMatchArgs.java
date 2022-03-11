@@ -87,32 +87,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
     	      this.presentMatch = defaults.presentMatch;
         }
 
-        public Builder setExactMatch(@Nullable Input<String> exactMatch) {
+        public Builder exactMatch(@Nullable Input<String> exactMatch) {
             this.exactMatch = exactMatch;
             return this;
         }
 
-        public Builder setExactMatch(@Nullable String exactMatch) {
+        public Builder exactMatch(@Nullable String exactMatch) {
             this.exactMatch = Input.ofNullable(exactMatch);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Input<Boolean> presentMatch) {
+        public Builder presentMatch(@Nullable Input<Boolean> presentMatch) {
             this.presentMatch = presentMatch;
             return this;
         }
 
-        public Builder setPresentMatch(@Nullable Boolean presentMatch) {
+        public Builder presentMatch(@Nullable Boolean presentMatch) {
             this.presentMatch = Input.ofNullable(presentMatch);
             return this;
         }

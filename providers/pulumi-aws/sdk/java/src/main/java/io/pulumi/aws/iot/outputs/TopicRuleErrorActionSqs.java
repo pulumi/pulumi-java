@@ -26,11 +26,11 @@ public final class TopicRuleErrorActionSqs {
      */
     private final Boolean useBase64;
 
-    @OutputCustomType.Constructor({"queueUrl","roleArn","useBase64"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionSqs(
-        String queueUrl,
-        String roleArn,
-        Boolean useBase64) {
+        @OutputCustomType.Parameter("queueUrl") String queueUrl,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("useBase64") Boolean useBase64) {
         this.queueUrl = queueUrl;
         this.roleArn = roleArn;
         this.useBase64 = useBase64;
@@ -82,17 +82,17 @@ public final class TopicRuleErrorActionSqs {
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setUseBase64(Boolean useBase64) {
+        public Builder useBase64(Boolean useBase64) {
             this.useBase64 = Objects.requireNonNull(useBase64);
             return this;
         }

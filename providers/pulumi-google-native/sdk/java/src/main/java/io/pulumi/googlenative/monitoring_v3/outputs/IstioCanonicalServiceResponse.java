@@ -25,11 +25,11 @@ public final class IstioCanonicalServiceResponse {
      */
     private final String meshUid;
 
-    @OutputCustomType.Constructor({"canonicalService","canonicalServiceNamespace","meshUid"})
+    @OutputCustomType.Constructor
     private IstioCanonicalServiceResponse(
-        String canonicalService,
-        String canonicalServiceNamespace,
-        String meshUid) {
+        @OutputCustomType.Parameter("canonicalService") String canonicalService,
+        @OutputCustomType.Parameter("canonicalServiceNamespace") String canonicalServiceNamespace,
+        @OutputCustomType.Parameter("meshUid") String meshUid) {
         this.canonicalService = canonicalService;
         this.canonicalServiceNamespace = canonicalServiceNamespace;
         this.meshUid = meshUid;
@@ -81,17 +81,17 @@ public final class IstioCanonicalServiceResponse {
     	      this.meshUid = defaults.meshUid;
         }
 
-        public Builder setCanonicalService(String canonicalService) {
+        public Builder canonicalService(String canonicalService) {
             this.canonicalService = Objects.requireNonNull(canonicalService);
             return this;
         }
 
-        public Builder setCanonicalServiceNamespace(String canonicalServiceNamespace) {
+        public Builder canonicalServiceNamespace(String canonicalServiceNamespace) {
             this.canonicalServiceNamespace = Objects.requireNonNull(canonicalServiceNamespace);
             return this;
         }
 
-        public Builder setMeshUid(String meshUid) {
+        public Builder meshUid(String meshUid) {
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }

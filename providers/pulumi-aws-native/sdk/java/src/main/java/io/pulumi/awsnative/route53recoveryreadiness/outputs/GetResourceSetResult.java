@@ -30,11 +30,11 @@ public final class GetResourceSetResult {
      */
     private final @Nullable List<ResourceSetTag> tags;
 
-    @OutputCustomType.Constructor({"resourceSetArn","resources","tags"})
+    @OutputCustomType.Constructor
     private GetResourceSetResult(
-        @Nullable String resourceSetArn,
-        @Nullable List<ResourceSetResource> resources,
-        @Nullable List<ResourceSetTag> tags) {
+        @OutputCustomType.Parameter("resourceSetArn") @Nullable String resourceSetArn,
+        @OutputCustomType.Parameter("resources") @Nullable List<ResourceSetResource> resources,
+        @OutputCustomType.Parameter("tags") @Nullable List<ResourceSetTag> tags) {
         this.resourceSetArn = resourceSetArn;
         this.resources = resources;
         this.tags = tags;
@@ -86,17 +86,17 @@ public final class GetResourceSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setResourceSetArn(@Nullable String resourceSetArn) {
+        public Builder resourceSetArn(@Nullable String resourceSetArn) {
             this.resourceSetArn = resourceSetArn;
             return this;
         }
 
-        public Builder setResources(@Nullable List<ResourceSetResource> resources) {
+        public Builder resources(@Nullable List<ResourceSetResource> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ResourceSetTag> tags) {
+        public Builder tags(@Nullable List<ResourceSetTag> tags) {
             this.tags = tags;
             return this;
         }

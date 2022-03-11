@@ -16,8 +16,8 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
      */
     private final List<String> certificateAuthorityArns;
 
-    @OutputCustomType.Constructor({"certificateAuthorityArns"})
-    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm(List<String> certificateAuthorityArns) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm(@OutputCustomType.Parameter("certificateAuthorityArns") List<String> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 
@@ -49,7 +49,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustA
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder setCertificateAuthorityArns(List<String> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = Objects.requireNonNull(certificateAuthorityArns);
             return this;
         }

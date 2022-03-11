@@ -30,11 +30,11 @@ public final class ClusterClusterAutoscalingResourceLimit {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"maximum","minimum","resourceType"})
+    @OutputCustomType.Constructor
     private ClusterClusterAutoscalingResourceLimit(
-        @Nullable Integer maximum,
-        @Nullable Integer minimum,
-        String resourceType) {
+        @OutputCustomType.Parameter("maximum") @Nullable Integer maximum,
+        @OutputCustomType.Parameter("minimum") @Nullable Integer minimum,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.maximum = maximum;
         this.minimum = minimum;
         this.resourceType = resourceType;
@@ -88,17 +88,17 @@ public final class ClusterClusterAutoscalingResourceLimit {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setMaximum(@Nullable Integer maximum) {
+        public Builder maximum(@Nullable Integer maximum) {
             this.maximum = maximum;
             return this;
         }
 
-        public Builder setMinimum(@Nullable Integer minimum) {
+        public Builder minimum(@Nullable Integer minimum) {
             this.minimum = minimum;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

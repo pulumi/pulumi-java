@@ -28,11 +28,11 @@ public final class LogAnalyticsDestinationResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"name","workspaceId","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private LogAnalyticsDestinationResponse(
-        @Nullable String name,
-        String workspaceId,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.name = name;
         this.workspaceId = workspaceId;
         this.workspaceResourceId = workspaceResourceId;
@@ -85,17 +85,17 @@ public final class LogAnalyticsDestinationResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

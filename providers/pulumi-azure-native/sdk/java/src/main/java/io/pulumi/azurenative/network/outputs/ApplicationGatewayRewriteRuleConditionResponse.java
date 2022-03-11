@@ -33,12 +33,12 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
      */
     private final @Nullable String variable;
 
-    @OutputCustomType.Constructor({"ignoreCase","negate","pattern","variable"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleConditionResponse(
-        @Nullable Boolean ignoreCase,
-        @Nullable Boolean negate,
-        @Nullable String pattern,
-        @Nullable String variable) {
+        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @OutputCustomType.Parameter("negate") @Nullable Boolean negate,
+        @OutputCustomType.Parameter("pattern") @Nullable String pattern,
+        @OutputCustomType.Parameter("variable") @Nullable String variable) {
         this.ignoreCase = ignoreCase;
         this.negate = negate;
         this.pattern = pattern;
@@ -100,22 +100,22 @@ public final class ApplicationGatewayRewriteRuleConditionResponse {
     	      this.variable = defaults.variable;
         }
 
-        public Builder setIgnoreCase(@Nullable Boolean ignoreCase) {
+        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setPattern(@Nullable String pattern) {
+        public Builder pattern(@Nullable String pattern) {
             this.pattern = pattern;
             return this;
         }
 
-        public Builder setVariable(@Nullable String variable) {
+        public Builder variable(@Nullable String variable) {
             this.variable = variable;
             return this;
         }

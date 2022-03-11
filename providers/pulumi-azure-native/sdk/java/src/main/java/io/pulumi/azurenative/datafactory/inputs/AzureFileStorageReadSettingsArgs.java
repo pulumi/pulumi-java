@@ -253,132 +253,132 @@ public final class AzureFileStorageReadSettingsArgs extends io.pulumi.resources.
     	      this.wildcardFolderPath = defaults.wildcardFolderPath;
         }
 
-        public Builder setDeleteFilesAfterCompletion(@Nullable Input<Object> deleteFilesAfterCompletion) {
+        public Builder deleteFilesAfterCompletion(@Nullable Input<Object> deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
 
-        public Builder setDeleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
+        public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = Input.ofNullable(deleteFilesAfterCompletion);
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Input<Object> disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = Input.ofNullable(disableMetricsCollection);
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Input<Boolean> enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Input<Boolean> enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = Input.ofNullable(enablePartitionDiscovery);
             return this;
         }
 
-        public Builder setFileListPath(@Nullable Input<Object> fileListPath) {
+        public Builder fileListPath(@Nullable Input<Object> fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
 
-        public Builder setFileListPath(@Nullable Object fileListPath) {
+        public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = Input.ofNullable(fileListPath);
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Input<Object> maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = Input.ofNullable(maxConcurrentConnections);
             return this;
         }
 
-        public Builder setModifiedDatetimeEnd(@Nullable Input<Object> modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Input<Object> modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
-        public Builder setModifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = Input.ofNullable(modifiedDatetimeEnd);
             return this;
         }
 
-        public Builder setModifiedDatetimeStart(@Nullable Input<Object> modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Input<Object> modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
-        public Builder setModifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = Input.ofNullable(modifiedDatetimeStart);
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Input<Object> partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Input<Object> partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Object partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = Input.ofNullable(partitionRootPath);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<Object> prefix) {
+        public Builder prefix(@Nullable Input<Object> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable Object prefix) {
+        public Builder prefix(@Nullable Object prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setRecursive(@Nullable Input<Object> recursive) {
+        public Builder recursive(@Nullable Input<Object> recursive) {
             this.recursive = recursive;
             return this;
         }
 
-        public Builder setRecursive(@Nullable Object recursive) {
+        public Builder recursive(@Nullable Object recursive) {
             this.recursive = Input.ofNullable(recursive);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setWildcardFileName(@Nullable Input<Object> wildcardFileName) {
+        public Builder wildcardFileName(@Nullable Input<Object> wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
 
-        public Builder setWildcardFileName(@Nullable Object wildcardFileName) {
+        public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = Input.ofNullable(wildcardFileName);
             return this;
         }
 
-        public Builder setWildcardFolderPath(@Nullable Input<Object> wildcardFolderPath) {
+        public Builder wildcardFolderPath(@Nullable Input<Object> wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }
 
-        public Builder setWildcardFolderPath(@Nullable Object wildcardFolderPath) {
+        public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = Input.ofNullable(wildcardFolderPath);
             return this;
         }

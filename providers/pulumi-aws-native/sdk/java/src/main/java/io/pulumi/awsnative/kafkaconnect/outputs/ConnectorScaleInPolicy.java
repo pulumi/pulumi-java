@@ -15,8 +15,8 @@ public final class ConnectorScaleInPolicy {
      */
     private final Integer cpuUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"cpuUtilizationPercentage"})
-    private ConnectorScaleInPolicy(Integer cpuUtilizationPercentage) {
+    @OutputCustomType.Constructor
+    private ConnectorScaleInPolicy(@OutputCustomType.Parameter("cpuUtilizationPercentage") Integer cpuUtilizationPercentage) {
         this.cpuUtilizationPercentage = cpuUtilizationPercentage;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorScaleInPolicy {
     	      this.cpuUtilizationPercentage = defaults.cpuUtilizationPercentage;
         }
 
-        public Builder setCpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
+        public Builder cpuUtilizationPercentage(Integer cpuUtilizationPercentage) {
             this.cpuUtilizationPercentage = Objects.requireNonNull(cpuUtilizationPercentage);
             return this;
         }

@@ -126,8 +126,8 @@ public class ClusterRoleList extends io.pulumi.resources.CustomResource {
     private static ClusterRoleListArgs makeArgs(ClusterRoleListArgs args) {
         var builder = args == null ? ClusterRoleListArgs.builder() : ClusterRoleListArgs.builder(args);
         return builder
-            .setApiVersion("rbac.authorization.k8s.io/v1alpha1")
-            .setKind("ClusterRoleList")
+            .apiVersion("rbac.authorization.k8s.io/v1alpha1")
+            .kind("ClusterRoleList")
             .build();
     }
 

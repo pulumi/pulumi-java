@@ -17,8 +17,8 @@ public final class ServiceHealthCheckCustomConfig {
      */
     private final @Nullable Integer failureThreshold;
 
-    @OutputCustomType.Constructor({"failureThreshold"})
-    private ServiceHealthCheckCustomConfig(@Nullable Integer failureThreshold) {
+    @OutputCustomType.Constructor
+    private ServiceHealthCheckCustomConfig(@OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold) {
         this.failureThreshold = failureThreshold;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceHealthCheckCustomConfig {
     	      this.failureThreshold = defaults.failureThreshold;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }

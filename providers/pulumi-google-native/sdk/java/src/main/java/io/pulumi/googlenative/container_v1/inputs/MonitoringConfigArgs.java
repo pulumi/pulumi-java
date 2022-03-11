@@ -57,12 +57,12 @@ public final class MonitoringConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.componentConfig = defaults.componentConfig;
         }
 
-        public Builder setComponentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
+        public Builder componentConfig(@Nullable Input<MonitoringComponentConfigArgs> componentConfig) {
             this.componentConfig = componentConfig;
             return this;
         }
 
-        public Builder setComponentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
+        public Builder componentConfig(@Nullable MonitoringComponentConfigArgs componentConfig) {
             this.componentConfig = Input.ofNullable(componentConfig);
             return this;
         }

@@ -34,12 +34,12 @@ public final class BrokerUser {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"consoleAccess","groups","password","username"})
+    @OutputCustomType.Constructor
     private BrokerUser(
-        @Nullable Boolean consoleAccess,
-        @Nullable List<String> groups,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("consoleAccess") @Nullable Boolean consoleAccess,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.consoleAccess = consoleAccess;
         this.groups = groups;
         this.password = password;
@@ -101,22 +101,22 @@ public final class BrokerUser {
     	      this.username = defaults.username;
         }
 
-        public Builder setConsoleAccess(@Nullable Boolean consoleAccess) {
+        public Builder consoleAccess(@Nullable Boolean consoleAccess) {
             this.consoleAccess = consoleAccess;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

@@ -135,31 +135,31 @@ public final class GetManagedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addonFeatures","adminPassword","adminUserName","azureActiveDirectory","clientConnectionPort","clients","clusterCertificateThumbprint","clusterCodeVersion","clusterId","clusterState","dnsName","etag","fabricSettings","fqdn","httpGatewayConnectionPort","id","loadBalancingRules","location","name","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetManagedClusterResult(
-        @Nullable List<String> addonFeatures,
-        @Nullable String adminPassword,
-        String adminUserName,
-        @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
-        @Nullable Integer clientConnectionPort,
-        @Nullable List<ClientCertificateResponse> clients,
-        String clusterCertificateThumbprint,
-        @Nullable String clusterCodeVersion,
-        String clusterId,
-        String clusterState,
-        String dnsName,
-        String etag,
-        @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
-        String fqdn,
-        @Nullable Integer httpGatewayConnectionPort,
-        String id,
-        @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("addonFeatures") @Nullable List<String> addonFeatures,
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUserName") String adminUserName,
+        @OutputCustomType.Parameter("azureActiveDirectory") @Nullable AzureActiveDirectoryResponse azureActiveDirectory,
+        @OutputCustomType.Parameter("clientConnectionPort") @Nullable Integer clientConnectionPort,
+        @OutputCustomType.Parameter("clients") @Nullable List<ClientCertificateResponse> clients,
+        @OutputCustomType.Parameter("clusterCertificateThumbprint") String clusterCertificateThumbprint,
+        @OutputCustomType.Parameter("clusterCodeVersion") @Nullable String clusterCodeVersion,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("clusterState") String clusterState,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("fabricSettings") @Nullable List<SettingsSectionDescriptionResponse> fabricSettings,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("httpGatewayConnectionPort") @Nullable Integer httpGatewayConnectionPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancingRules") @Nullable List<LoadBalancingRuleResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.addonFeatures = addonFeatures;
         this.adminPassword = adminPassword;
         this.adminUserName = adminUserName;
@@ -411,117 +411,117 @@ public final class GetManagedClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddonFeatures(@Nullable List<String> addonFeatures) {
+        public Builder addonFeatures(@Nullable List<String> addonFeatures) {
             this.addonFeatures = addonFeatures;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryResponse azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setClientConnectionPort(@Nullable Integer clientConnectionPort) {
+        public Builder clientConnectionPort(@Nullable Integer clientConnectionPort) {
             this.clientConnectionPort = clientConnectionPort;
             return this;
         }
 
-        public Builder setClients(@Nullable List<ClientCertificateResponse> clients) {
+        public Builder clients(@Nullable List<ClientCertificateResponse> clients) {
             this.clients = clients;
             return this;
         }
 
-        public Builder setClusterCertificateThumbprint(String clusterCertificateThumbprint) {
+        public Builder clusterCertificateThumbprint(String clusterCertificateThumbprint) {
             this.clusterCertificateThumbprint = Objects.requireNonNull(clusterCertificateThumbprint);
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable String clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterState(String clusterState) {
+        public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
+        public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionResponse> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setHttpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
+        public Builder httpGatewayConnectionPort(@Nullable Integer httpGatewayConnectionPort) {
             this.httpGatewayConnectionPort = httpGatewayConnectionPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
+        public Builder loadBalancingRules(@Nullable List<LoadBalancingRuleResponse> loadBalancingRules) {
             this.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -28,11 +28,11 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
      */
     private final @Nullable String lastModifiedDateTime;
 
-    @OutputCustomType.Constructor({"id","lastModifiedBy","lastModifiedDateTime"})
+    @OutputCustomType.Constructor
     private PolicyAssignmentPropertiesResponsePolicy(
-        @Nullable String id,
-        PrincipalResponse lastModifiedBy,
-        @Nullable String lastModifiedDateTime) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedBy") PrincipalResponse lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedDateTime") @Nullable String lastModifiedDateTime) {
         this.id = id;
         this.lastModifiedBy = lastModifiedBy;
         this.lastModifiedDateTime = lastModifiedDateTime;
@@ -84,17 +84,17 @@ public final class PolicyAssignmentPropertiesResponsePolicy {
     	      this.lastModifiedDateTime = defaults.lastModifiedDateTime;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedBy(PrincipalResponse lastModifiedBy) {
+        public Builder lastModifiedBy(PrincipalResponse lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedDateTime(@Nullable String lastModifiedDateTime) {
+        public Builder lastModifiedDateTime(@Nullable String lastModifiedDateTime) {
             this.lastModifiedDateTime = lastModifiedDateTime;
             return this;
         }

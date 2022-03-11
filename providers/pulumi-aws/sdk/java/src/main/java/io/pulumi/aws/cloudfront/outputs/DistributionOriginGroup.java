@@ -28,11 +28,11 @@ public final class DistributionOriginGroup {
      */
     private final String originId;
 
-    @OutputCustomType.Constructor({"failoverCriteria","members","originId"})
+    @OutputCustomType.Constructor
     private DistributionOriginGroup(
-        DistributionOriginGroupFailoverCriteria failoverCriteria,
-        List<DistributionOriginGroupMember> members,
-        String originId) {
+        @OutputCustomType.Parameter("failoverCriteria") DistributionOriginGroupFailoverCriteria failoverCriteria,
+        @OutputCustomType.Parameter("members") List<DistributionOriginGroupMember> members,
+        @OutputCustomType.Parameter("originId") String originId) {
         this.failoverCriteria = failoverCriteria;
         this.members = members;
         this.originId = originId;
@@ -84,17 +84,17 @@ public final class DistributionOriginGroup {
     	      this.originId = defaults.originId;
         }
 
-        public Builder setFailoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
+        public Builder failoverCriteria(DistributionOriginGroupFailoverCriteria failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
-        public Builder setMembers(List<DistributionOriginGroupMember> members) {
+        public Builder members(List<DistributionOriginGroupMember> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setOriginId(String originId) {
+        public Builder originId(String originId) {
             this.originId = Objects.requireNonNull(originId);
             return this;
         }

@@ -32,12 +32,12 @@ public final class EndpointAccessNetworkInterface {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"availabilityZone","networkInterfaceId","privateIpAddress","subnetId"})
+    @OutputCustomType.Constructor
     private EndpointAccessNetworkInterface(
-        @Nullable String availabilityZone,
-        @Nullable String networkInterfaceId,
-        @Nullable String privateIpAddress,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.availabilityZone = availabilityZone;
         this.networkInterfaceId = networkInterfaceId;
         this.privateIpAddress = privateIpAddress;
@@ -99,22 +99,22 @@ public final class EndpointAccessNetworkInterface {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

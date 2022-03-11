@@ -25,11 +25,11 @@ public final class ListAccountKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"id","primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListAccountKeysResult(
-        String id,
-        String primaryKey,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.id = id;
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
@@ -81,17 +81,17 @@ public final class ListAccountKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }

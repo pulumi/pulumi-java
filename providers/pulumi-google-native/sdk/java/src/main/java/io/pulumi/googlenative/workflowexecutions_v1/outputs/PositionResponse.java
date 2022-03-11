@@ -25,11 +25,11 @@ public final class PositionResponse {
      */
     private final String line;
 
-    @OutputCustomType.Constructor({"column","length","line"})
+    @OutputCustomType.Constructor
     private PositionResponse(
-        String column,
-        String length,
-        String line) {
+        @OutputCustomType.Parameter("column") String column,
+        @OutputCustomType.Parameter("length") String length,
+        @OutputCustomType.Parameter("line") String line) {
         this.column = column;
         this.length = length;
         this.line = line;
@@ -81,17 +81,17 @@ public final class PositionResponse {
     	      this.line = defaults.line;
         }
 
-        public Builder setColumn(String column) {
+        public Builder column(String column) {
             this.column = Objects.requireNonNull(column);
             return this;
         }
 
-        public Builder setLength(String length) {
+        public Builder length(String length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
-        public Builder setLine(String line) {
+        public Builder line(String line) {
             this.line = Objects.requireNonNull(line);
             return this;
         }

@@ -31,13 +31,13 @@ public final class GetTestablePermissionsResult {
     private final List<GetTestablePermissionsPermission> permissions;
     private final @Nullable List<String> stages;
 
-    @OutputCustomType.Constructor({"customSupportLevel","fullResourceName","id","permissions","stages"})
+    @OutputCustomType.Constructor
     private GetTestablePermissionsResult(
-        @Nullable String customSupportLevel,
-        String fullResourceName,
-        String id,
-        List<GetTestablePermissionsPermission> permissions,
-        @Nullable List<String> stages) {
+        @OutputCustomType.Parameter("customSupportLevel") @Nullable String customSupportLevel,
+        @OutputCustomType.Parameter("fullResourceName") String fullResourceName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("permissions") List<GetTestablePermissionsPermission> permissions,
+        @OutputCustomType.Parameter("stages") @Nullable List<String> stages) {
         this.customSupportLevel = customSupportLevel;
         this.fullResourceName = fullResourceName;
         this.id = id;
@@ -101,27 +101,27 @@ public final class GetTestablePermissionsResult {
     	      this.stages = defaults.stages;
         }
 
-        public Builder setCustomSupportLevel(@Nullable String customSupportLevel) {
+        public Builder customSupportLevel(@Nullable String customSupportLevel) {
             this.customSupportLevel = customSupportLevel;
             return this;
         }
 
-        public Builder setFullResourceName(String fullResourceName) {
+        public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPermissions(List<GetTestablePermissionsPermission> permissions) {
+        public Builder permissions(List<GetTestablePermissionsPermission> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setStages(@Nullable List<String> stages) {
+        public Builder stages(@Nullable List<String> stages) {
             this.stages = stages;
             return this;
         }

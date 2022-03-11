@@ -23,10 +23,10 @@ public final class GetLoggingResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"defaultLogLevel","roleArn"})
+    @OutputCustomType.Constructor
     private GetLoggingResult(
-        @Nullable LoggingDefaultLogLevel defaultLogLevel,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("defaultLogLevel") @Nullable LoggingDefaultLogLevel defaultLogLevel,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.defaultLogLevel = defaultLogLevel;
         this.roleArn = roleArn;
     }
@@ -68,12 +68,12 @@ public final class GetLoggingResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setDefaultLogLevel(@Nullable LoggingDefaultLogLevel defaultLogLevel) {
+        public Builder defaultLogLevel(@Nullable LoggingDefaultLogLevel defaultLogLevel) {
             this.defaultLogLevel = defaultLogLevel;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

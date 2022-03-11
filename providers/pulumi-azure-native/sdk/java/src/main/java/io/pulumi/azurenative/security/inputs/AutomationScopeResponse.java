@@ -74,12 +74,12 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
     	      this.scopePath = defaults.scopePath;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setScopePath(@Nullable String scopePath) {
+        public Builder scopePath(@Nullable String scopePath) {
             this.scopePath = scopePath;
             return this;
         }

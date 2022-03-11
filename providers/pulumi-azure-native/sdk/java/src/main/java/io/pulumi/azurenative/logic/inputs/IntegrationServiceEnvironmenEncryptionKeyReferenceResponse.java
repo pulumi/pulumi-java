@@ -91,17 +91,17 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
     	      this.keyVersion = defaults.keyVersion;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable ResourceReferenceResponse keyVault) {
+        public Builder keyVault(@Nullable ResourceReferenceResponse keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }

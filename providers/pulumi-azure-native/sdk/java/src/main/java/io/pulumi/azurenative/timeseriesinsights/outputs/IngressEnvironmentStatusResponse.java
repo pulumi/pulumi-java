@@ -23,10 +23,10 @@ public final class IngressEnvironmentStatusResponse {
      */
     private final EnvironmentStateDetailsResponse stateDetails;
 
-    @OutputCustomType.Constructor({"state","stateDetails"})
+    @OutputCustomType.Constructor
     private IngressEnvironmentStatusResponse(
-        @Nullable String state,
-        EnvironmentStateDetailsResponse stateDetails) {
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("stateDetails") EnvironmentStateDetailsResponse stateDetails) {
         this.state = state;
         this.stateDetails = stateDetails;
     }
@@ -68,12 +68,12 @@ public final class IngressEnvironmentStatusResponse {
     	      this.stateDetails = defaults.stateDetails;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setStateDetails(EnvironmentStateDetailsResponse stateDetails) {
+        public Builder stateDetails(EnvironmentStateDetailsResponse stateDetails) {
             this.stateDetails = Objects.requireNonNull(stateDetails);
             return this;
         }

@@ -54,12 +54,12 @@ public final class ResolverPipelineConfigArgs extends io.pulumi.resources.Resour
     	      this.functions = defaults.functions;
         }
 
-        public Builder setFunctions(@Nullable Input<List<String>> functions) {
+        public Builder functions(@Nullable Input<List<String>> functions) {
             this.functions = functions;
             return this;
         }
 
-        public Builder setFunctions(@Nullable List<String> functions) {
+        public Builder functions(@Nullable List<String> functions) {
             this.functions = Input.ofNullable(functions);
             return this;
         }

@@ -35,12 +35,12 @@ public final class DistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"amiDistributionConfiguration","containerDistributionConfiguration","licenseConfigurationArns","region"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistribution(
-        @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
-        @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
-        @Nullable List<String> licenseConfigurationArns,
-        String region) {
+        @OutputCustomType.Parameter("amiDistributionConfiguration") @Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration,
+        @OutputCustomType.Parameter("containerDistributionConfiguration") @Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration,
+        @OutputCustomType.Parameter("licenseConfigurationArns") @Nullable List<String> licenseConfigurationArns,
+        @OutputCustomType.Parameter("region") String region) {
         this.amiDistributionConfiguration = amiDistributionConfiguration;
         this.containerDistributionConfiguration = containerDistributionConfiguration;
         this.licenseConfigurationArns = licenseConfigurationArns;
@@ -102,22 +102,22 @@ public final class DistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration) {
+        public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfiguration amiDistributionConfiguration) {
             this.amiDistributionConfiguration = amiDistributionConfiguration;
             return this;
         }
 
-        public Builder setContainerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration) {
+        public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfiguration containerDistributionConfiguration) {
             this.containerDistributionConfiguration = containerDistributionConfiguration;
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = licenseConfigurationArns;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

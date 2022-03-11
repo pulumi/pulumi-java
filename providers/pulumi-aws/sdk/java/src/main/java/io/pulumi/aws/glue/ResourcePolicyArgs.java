@@ -66,22 +66,22 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setEnableHybrid(@Nullable Input<String> enableHybrid) {
+        public Builder enableHybrid(@Nullable Input<String> enableHybrid) {
             this.enableHybrid = enableHybrid;
             return this;
         }
 
-        public Builder setEnableHybrid(@Nullable String enableHybrid) {
+        public Builder enableHybrid(@Nullable String enableHybrid) {
             this.enableHybrid = Input.ofNullable(enableHybrid);
             return this;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }

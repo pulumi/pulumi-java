@@ -17,8 +17,8 @@ public final class AzureFirewallPublicIPAddressResponse {
      */
     private final @Nullable String address;
 
-    @OutputCustomType.Constructor({"address"})
-    private AzureFirewallPublicIPAddressResponse(@Nullable String address) {
+    @OutputCustomType.Constructor
+    private AzureFirewallPublicIPAddressResponse(@OutputCustomType.Parameter("address") @Nullable String address) {
         this.address = address;
     }
 
@@ -50,7 +50,7 @@ public final class AzureFirewallPublicIPAddressResponse {
     	      this.address = defaults.address;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }

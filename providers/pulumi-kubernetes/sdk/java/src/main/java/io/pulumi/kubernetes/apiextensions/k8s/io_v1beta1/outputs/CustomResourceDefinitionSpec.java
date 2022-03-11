@@ -70,18 +70,18 @@ public final class CustomResourceDefinitionSpec {
      */
     private final @Nullable List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor({"additionalPrinterColumns","conversion","group","names","preserveUnknownFields","scope","subresources","validation","version","versions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
-        @Nullable CustomResourceConversion conversion,
-        String group,
-        CustomResourceDefinitionNames names,
-        @Nullable Boolean preserveUnknownFields,
-        String scope,
-        @Nullable CustomResourceSubresources subresources,
-        @Nullable CustomResourceValidation validation,
-        @Nullable String version,
-        @Nullable List<CustomResourceDefinitionVersion> versions) {
+        @OutputCustomType.Parameter("additionalPrinterColumns") @Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns,
+        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("subresources") @Nullable CustomResourceSubresources subresources,
+        @OutputCustomType.Parameter("validation") @Nullable CustomResourceValidation validation,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("versions") @Nullable List<CustomResourceDefinitionVersion> versions) {
         this.additionalPrinterColumns = additionalPrinterColumns;
         this.conversion = conversion;
         this.group = group;
@@ -203,52 +203,52 @@ public final class CustomResourceDefinitionSpec {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAdditionalPrinterColumns(@Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns) {
+        public Builder additionalPrinterColumns(@Nullable List<CustomResourceColumnDefinition> additionalPrinterColumns) {
             this.additionalPrinterColumns = additionalPrinterColumns;
             return this;
         }
 
-        public Builder setConversion(@Nullable CustomResourceConversion conversion) {
+        public Builder conversion(@Nullable CustomResourceConversion conversion) {
             this.conversion = conversion;
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setNames(CustomResourceDefinitionNames names) {
+        public Builder names(CustomResourceDefinitionNames names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSubresources(@Nullable CustomResourceSubresources subresources) {
+        public Builder subresources(@Nullable CustomResourceSubresources subresources) {
             this.subresources = subresources;
             return this;
         }
 
-        public Builder setValidation(@Nullable CustomResourceValidation validation) {
+        public Builder validation(@Nullable CustomResourceValidation validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<CustomResourceDefinitionVersion> versions) {
+        public Builder versions(@Nullable List<CustomResourceDefinitionVersion> versions) {
             this.versions = versions;
             return this;
         }

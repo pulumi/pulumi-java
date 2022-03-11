@@ -219,112 +219,112 @@ public final class FeatureGroupState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEventTimeFeatureName(@Nullable Input<String> eventTimeFeatureName) {
+        public Builder eventTimeFeatureName(@Nullable Input<String> eventTimeFeatureName) {
             this.eventTimeFeatureName = eventTimeFeatureName;
             return this;
         }
 
-        public Builder setEventTimeFeatureName(@Nullable String eventTimeFeatureName) {
+        public Builder eventTimeFeatureName(@Nullable String eventTimeFeatureName) {
             this.eventTimeFeatureName = Input.ofNullable(eventTimeFeatureName);
             return this;
         }
 
-        public Builder setFeatureDefinitions(@Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
+        public Builder featureDefinitions(@Nullable Input<List<FeatureGroupFeatureDefinitionGetArgs>> featureDefinitions) {
             this.featureDefinitions = featureDefinitions;
             return this;
         }
 
-        public Builder setFeatureDefinitions(@Nullable List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
+        public Builder featureDefinitions(@Nullable List<FeatureGroupFeatureDefinitionGetArgs> featureDefinitions) {
             this.featureDefinitions = Input.ofNullable(featureDefinitions);
             return this;
         }
 
-        public Builder setFeatureGroupName(@Nullable Input<String> featureGroupName) {
+        public Builder featureGroupName(@Nullable Input<String> featureGroupName) {
             this.featureGroupName = featureGroupName;
             return this;
         }
 
-        public Builder setFeatureGroupName(@Nullable String featureGroupName) {
+        public Builder featureGroupName(@Nullable String featureGroupName) {
             this.featureGroupName = Input.ofNullable(featureGroupName);
             return this;
         }
 
-        public Builder setOfflineStoreConfig(@Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable Input<FeatureGroupOfflineStoreConfigGetArgs> offlineStoreConfig) {
             this.offlineStoreConfig = offlineStoreConfig;
             return this;
         }
 
-        public Builder setOfflineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
+        public Builder offlineStoreConfig(@Nullable FeatureGroupOfflineStoreConfigGetArgs offlineStoreConfig) {
             this.offlineStoreConfig = Input.ofNullable(offlineStoreConfig);
             return this;
         }
 
-        public Builder setOnlineStoreConfig(@Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable Input<FeatureGroupOnlineStoreConfigGetArgs> onlineStoreConfig) {
             this.onlineStoreConfig = onlineStoreConfig;
             return this;
         }
 
-        public Builder setOnlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
+        public Builder onlineStoreConfig(@Nullable FeatureGroupOnlineStoreConfigGetArgs onlineStoreConfig) {
             this.onlineStoreConfig = Input.ofNullable(onlineStoreConfig);
             return this;
         }
 
-        public Builder setRecordIdentifierFeatureName(@Nullable Input<String> recordIdentifierFeatureName) {
+        public Builder recordIdentifierFeatureName(@Nullable Input<String> recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = recordIdentifierFeatureName;
             return this;
         }
 
-        public Builder setRecordIdentifierFeatureName(@Nullable String recordIdentifierFeatureName) {
+        public Builder recordIdentifierFeatureName(@Nullable String recordIdentifierFeatureName) {
             this.recordIdentifierFeatureName = Input.ofNullable(recordIdentifierFeatureName);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

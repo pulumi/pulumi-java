@@ -114,31 +114,31 @@ public final class GetUserPoolClientResult {
      */
     private final List<String> writeAttributes;
 
-    @OutputCustomType.Constructor({"accessTokenValidity","allowedOauthFlows","allowedOauthFlowsUserPoolClient","allowedOauthScopes","analyticsConfigurations","callbackUrls","clientId","clientSecret","defaultRedirectUri","enableTokenRevocation","explicitAuthFlows","generateSecret","id","idTokenValidity","logoutUrls","name","preventUserExistenceErrors","readAttributes","refreshTokenValidity","supportedIdentityProviders","tokenValidityUnits","userPoolId","writeAttributes"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientResult(
-        Integer accessTokenValidity,
-        List<String> allowedOauthFlows,
-        Boolean allowedOauthFlowsUserPoolClient,
-        List<String> allowedOauthScopes,
-        List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
-        List<String> callbackUrls,
-        String clientId,
-        String clientSecret,
-        String defaultRedirectUri,
-        Boolean enableTokenRevocation,
-        List<String> explicitAuthFlows,
-        Boolean generateSecret,
-        String id,
-        Integer idTokenValidity,
-        List<String> logoutUrls,
-        String name,
-        String preventUserExistenceErrors,
-        List<String> readAttributes,
-        Integer refreshTokenValidity,
-        List<String> supportedIdentityProviders,
-        List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
-        String userPoolId,
-        List<String> writeAttributes) {
+        @OutputCustomType.Parameter("accessTokenValidity") Integer accessTokenValidity,
+        @OutputCustomType.Parameter("allowedOauthFlows") List<String> allowedOauthFlows,
+        @OutputCustomType.Parameter("allowedOauthFlowsUserPoolClient") Boolean allowedOauthFlowsUserPoolClient,
+        @OutputCustomType.Parameter("allowedOauthScopes") List<String> allowedOauthScopes,
+        @OutputCustomType.Parameter("analyticsConfigurations") List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations,
+        @OutputCustomType.Parameter("callbackUrls") List<String> callbackUrls,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("defaultRedirectUri") String defaultRedirectUri,
+        @OutputCustomType.Parameter("enableTokenRevocation") Boolean enableTokenRevocation,
+        @OutputCustomType.Parameter("explicitAuthFlows") List<String> explicitAuthFlows,
+        @OutputCustomType.Parameter("generateSecret") Boolean generateSecret,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("idTokenValidity") Integer idTokenValidity,
+        @OutputCustomType.Parameter("logoutUrls") List<String> logoutUrls,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preventUserExistenceErrors") String preventUserExistenceErrors,
+        @OutputCustomType.Parameter("readAttributes") List<String> readAttributes,
+        @OutputCustomType.Parameter("refreshTokenValidity") Integer refreshTokenValidity,
+        @OutputCustomType.Parameter("supportedIdentityProviders") List<String> supportedIdentityProviders,
+        @OutputCustomType.Parameter("tokenValidityUnits") List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId,
+        @OutputCustomType.Parameter("writeAttributes") List<String> writeAttributes) {
         this.accessTokenValidity = accessTokenValidity;
         this.allowedOauthFlows = allowedOauthFlows;
         this.allowedOauthFlowsUserPoolClient = allowedOauthFlowsUserPoolClient;
@@ -374,117 +374,117 @@ public final class GetUserPoolClientResult {
     	      this.writeAttributes = defaults.writeAttributes;
         }
 
-        public Builder setAccessTokenValidity(Integer accessTokenValidity) {
+        public Builder accessTokenValidity(Integer accessTokenValidity) {
             this.accessTokenValidity = Objects.requireNonNull(accessTokenValidity);
             return this;
         }
 
-        public Builder setAllowedOauthFlows(List<String> allowedOauthFlows) {
+        public Builder allowedOauthFlows(List<String> allowedOauthFlows) {
             this.allowedOauthFlows = Objects.requireNonNull(allowedOauthFlows);
             return this;
         }
 
-        public Builder setAllowedOauthFlowsUserPoolClient(Boolean allowedOauthFlowsUserPoolClient) {
+        public Builder allowedOauthFlowsUserPoolClient(Boolean allowedOauthFlowsUserPoolClient) {
             this.allowedOauthFlowsUserPoolClient = Objects.requireNonNull(allowedOauthFlowsUserPoolClient);
             return this;
         }
 
-        public Builder setAllowedOauthScopes(List<String> allowedOauthScopes) {
+        public Builder allowedOauthScopes(List<String> allowedOauthScopes) {
             this.allowedOauthScopes = Objects.requireNonNull(allowedOauthScopes);
             return this;
         }
 
-        public Builder setAnalyticsConfigurations(List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations) {
+        public Builder analyticsConfigurations(List<GetUserPoolClientAnalyticsConfiguration> analyticsConfigurations) {
             this.analyticsConfigurations = Objects.requireNonNull(analyticsConfigurations);
             return this;
         }
 
-        public Builder setCallbackUrls(List<String> callbackUrls) {
+        public Builder callbackUrls(List<String> callbackUrls) {
             this.callbackUrls = Objects.requireNonNull(callbackUrls);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setDefaultRedirectUri(String defaultRedirectUri) {
+        public Builder defaultRedirectUri(String defaultRedirectUri) {
             this.defaultRedirectUri = Objects.requireNonNull(defaultRedirectUri);
             return this;
         }
 
-        public Builder setEnableTokenRevocation(Boolean enableTokenRevocation) {
+        public Builder enableTokenRevocation(Boolean enableTokenRevocation) {
             this.enableTokenRevocation = Objects.requireNonNull(enableTokenRevocation);
             return this;
         }
 
-        public Builder setExplicitAuthFlows(List<String> explicitAuthFlows) {
+        public Builder explicitAuthFlows(List<String> explicitAuthFlows) {
             this.explicitAuthFlows = Objects.requireNonNull(explicitAuthFlows);
             return this;
         }
 
-        public Builder setGenerateSecret(Boolean generateSecret) {
+        public Builder generateSecret(Boolean generateSecret) {
             this.generateSecret = Objects.requireNonNull(generateSecret);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdTokenValidity(Integer idTokenValidity) {
+        public Builder idTokenValidity(Integer idTokenValidity) {
             this.idTokenValidity = Objects.requireNonNull(idTokenValidity);
             return this;
         }
 
-        public Builder setLogoutUrls(List<String> logoutUrls) {
+        public Builder logoutUrls(List<String> logoutUrls) {
             this.logoutUrls = Objects.requireNonNull(logoutUrls);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreventUserExistenceErrors(String preventUserExistenceErrors) {
+        public Builder preventUserExistenceErrors(String preventUserExistenceErrors) {
             this.preventUserExistenceErrors = Objects.requireNonNull(preventUserExistenceErrors);
             return this;
         }
 
-        public Builder setReadAttributes(List<String> readAttributes) {
+        public Builder readAttributes(List<String> readAttributes) {
             this.readAttributes = Objects.requireNonNull(readAttributes);
             return this;
         }
 
-        public Builder setRefreshTokenValidity(Integer refreshTokenValidity) {
+        public Builder refreshTokenValidity(Integer refreshTokenValidity) {
             this.refreshTokenValidity = Objects.requireNonNull(refreshTokenValidity);
             return this;
         }
 
-        public Builder setSupportedIdentityProviders(List<String> supportedIdentityProviders) {
+        public Builder supportedIdentityProviders(List<String> supportedIdentityProviders) {
             this.supportedIdentityProviders = Objects.requireNonNull(supportedIdentityProviders);
             return this;
         }
 
-        public Builder setTokenValidityUnits(List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits) {
+        public Builder tokenValidityUnits(List<GetUserPoolClientTokenValidityUnit> tokenValidityUnits) {
             this.tokenValidityUnits = Objects.requireNonNull(tokenValidityUnits);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }
 
-        public Builder setWriteAttributes(List<String> writeAttributes) {
+        public Builder writeAttributes(List<String> writeAttributes) {
             this.writeAttributes = Objects.requireNonNull(writeAttributes);
             return this;
         }

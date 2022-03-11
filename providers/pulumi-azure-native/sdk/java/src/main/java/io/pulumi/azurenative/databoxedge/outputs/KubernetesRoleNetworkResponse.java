@@ -21,10 +21,10 @@ public final class KubernetesRoleNetworkResponse {
      */
     private final LoadBalancerConfigResponse loadBalancerConfig;
 
-    @OutputCustomType.Constructor({"cniConfig","loadBalancerConfig"})
+    @OutputCustomType.Constructor
     private KubernetesRoleNetworkResponse(
-        CniConfigResponse cniConfig,
-        LoadBalancerConfigResponse loadBalancerConfig) {
+        @OutputCustomType.Parameter("cniConfig") CniConfigResponse cniConfig,
+        @OutputCustomType.Parameter("loadBalancerConfig") LoadBalancerConfigResponse loadBalancerConfig) {
         this.cniConfig = cniConfig;
         this.loadBalancerConfig = loadBalancerConfig;
     }
@@ -66,12 +66,12 @@ public final class KubernetesRoleNetworkResponse {
     	      this.loadBalancerConfig = defaults.loadBalancerConfig;
         }
 
-        public Builder setCniConfig(CniConfigResponse cniConfig) {
+        public Builder cniConfig(CniConfigResponse cniConfig) {
             this.cniConfig = Objects.requireNonNull(cniConfig);
             return this;
         }
 
-        public Builder setLoadBalancerConfig(LoadBalancerConfigResponse loadBalancerConfig) {
+        public Builder loadBalancerConfig(LoadBalancerConfigResponse loadBalancerConfig) {
             this.loadBalancerConfig = Objects.requireNonNull(loadBalancerConfig);
             return this;
         }

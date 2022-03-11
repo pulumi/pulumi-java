@@ -39,13 +39,13 @@ public final class ActivityPolicyResponse {
      */
     private final @Nullable Object timeout;
 
-    @OutputCustomType.Constructor({"retry","retryIntervalInSeconds","secureInput","secureOutput","timeout"})
+    @OutputCustomType.Constructor
     private ActivityPolicyResponse(
-        @Nullable Object retry,
-        @Nullable Integer retryIntervalInSeconds,
-        @Nullable Boolean secureInput,
-        @Nullable Boolean secureOutput,
-        @Nullable Object timeout) {
+        @OutputCustomType.Parameter("retry") @Nullable Object retry,
+        @OutputCustomType.Parameter("retryIntervalInSeconds") @Nullable Integer retryIntervalInSeconds,
+        @OutputCustomType.Parameter("secureInput") @Nullable Boolean secureInput,
+        @OutputCustomType.Parameter("secureOutput") @Nullable Boolean secureOutput,
+        @OutputCustomType.Parameter("timeout") @Nullable Object timeout) {
         this.retry = retry;
         this.retryIntervalInSeconds = retryIntervalInSeconds;
         this.secureInput = secureInput;
@@ -117,27 +117,27 @@ public final class ActivityPolicyResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setRetry(@Nullable Object retry) {
+        public Builder retry(@Nullable Object retry) {
             this.retry = retry;
             return this;
         }
 
-        public Builder setRetryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
+        public Builder retryIntervalInSeconds(@Nullable Integer retryIntervalInSeconds) {
             this.retryIntervalInSeconds = retryIntervalInSeconds;
             return this;
         }
 
-        public Builder setSecureInput(@Nullable Boolean secureInput) {
+        public Builder secureInput(@Nullable Boolean secureInput) {
             this.secureInput = secureInput;
             return this;
         }
 
-        public Builder setSecureOutput(@Nullable Boolean secureOutput) {
+        public Builder secureOutput(@Nullable Boolean secureOutput) {
             this.secureOutput = secureOutput;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Object timeout) {
+        public Builder timeout(@Nullable Object timeout) {
             this.timeout = timeout;
             return this;
         }

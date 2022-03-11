@@ -23,10 +23,10 @@ public final class BatchRetrySettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"maxRetries","timeout"})
+    @OutputCustomType.Constructor
     private BatchRetrySettingsResponse(
-        @Nullable Integer maxRetries,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.maxRetries = maxRetries;
         this.timeout = timeout;
     }
@@ -68,12 +68,12 @@ public final class BatchRetrySettingsResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

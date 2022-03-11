@@ -200,92 +200,92 @@ public final class FlexTemplateJobState extends io.pulumi.resources.ResourceArgs
     	      this.state = defaults.state;
         }
 
-        public Builder setContainerSpecGcsPath(@Nullable Input<String> containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(@Nullable Input<String> containerSpecGcsPath) {
             this.containerSpecGcsPath = containerSpecGcsPath;
             return this;
         }
 
-        public Builder setContainerSpecGcsPath(@Nullable String containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(@Nullable String containerSpecGcsPath) {
             this.containerSpecGcsPath = Input.ofNullable(containerSpecGcsPath);
             return this;
         }
 
-        public Builder setJobId(@Nullable Input<String> jobId) {
+        public Builder jobId(@Nullable Input<String> jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = Input.ofNullable(jobId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,Object>> labels) {
+        public Builder labels(@Nullable Input<Map<String,Object>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,Object> labels) {
+        public Builder labels(@Nullable Map<String,Object> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOnDelete(@Nullable Input<String> onDelete) {
+        public Builder onDelete(@Nullable Input<String> onDelete) {
             this.onDelete = onDelete;
             return this;
         }
 
-        public Builder setOnDelete(@Nullable String onDelete) {
+        public Builder onDelete(@Nullable String onDelete) {
             this.onDelete = Input.ofNullable(onDelete);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,Object>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,Object>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setState(@Nullable Input<String> state) {
+        public Builder state(@Nullable Input<String> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = Input.ofNullable(state);
             return this;
         }

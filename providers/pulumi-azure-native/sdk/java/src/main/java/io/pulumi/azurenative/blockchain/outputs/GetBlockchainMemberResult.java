@@ -117,28 +117,28 @@ public final class GetBlockchainMemberResult {
      */
     private final @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku;
 
-    @OutputCustomType.Constructor({"consortium","consortiumManagementAccountAddress","consortiumManagementAccountPassword","consortiumMemberDisplayName","consortiumRole","dns","firewallRules","id","location","name","password","protocol","provisioningState","publicKey","rootContractAddress","sku","tags","type","userName","validatorNodesSku"})
+    @OutputCustomType.Constructor
     private GetBlockchainMemberResult(
-        @Nullable String consortium,
-        String consortiumManagementAccountAddress,
-        @Nullable String consortiumManagementAccountPassword,
-        @Nullable String consortiumMemberDisplayName,
-        @Nullable String consortiumRole,
-        String dns,
-        @Nullable List<FirewallRuleResponse> firewallRules,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String password,
-        @Nullable String protocol,
-        String provisioningState,
-        String publicKey,
-        String rootContractAddress,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        String userName,
-        @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
+        @OutputCustomType.Parameter("consortium") @Nullable String consortium,
+        @OutputCustomType.Parameter("consortiumManagementAccountAddress") String consortiumManagementAccountAddress,
+        @OutputCustomType.Parameter("consortiumManagementAccountPassword") @Nullable String consortiumManagementAccountPassword,
+        @OutputCustomType.Parameter("consortiumMemberDisplayName") @Nullable String consortiumMemberDisplayName,
+        @OutputCustomType.Parameter("consortiumRole") @Nullable String consortiumRole,
+        @OutputCustomType.Parameter("dns") String dns,
+        @OutputCustomType.Parameter("firewallRules") @Nullable List<FirewallRuleResponse> firewallRules,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("rootContractAddress") String rootContractAddress,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("validatorNodesSku") @Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
         this.consortium = consortium;
         this.consortiumManagementAccountAddress = consortiumManagementAccountAddress;
         this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
@@ -360,102 +360,102 @@ public final class GetBlockchainMemberResult {
     	      this.validatorNodesSku = defaults.validatorNodesSku;
         }
 
-        public Builder setConsortium(@Nullable String consortium) {
+        public Builder consortium(@Nullable String consortium) {
             this.consortium = consortium;
             return this;
         }
 
-        public Builder setConsortiumManagementAccountAddress(String consortiumManagementAccountAddress) {
+        public Builder consortiumManagementAccountAddress(String consortiumManagementAccountAddress) {
             this.consortiumManagementAccountAddress = Objects.requireNonNull(consortiumManagementAccountAddress);
             return this;
         }
 
-        public Builder setConsortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
+        public Builder consortiumManagementAccountPassword(@Nullable String consortiumManagementAccountPassword) {
             this.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
 
-        public Builder setConsortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
+        public Builder consortiumMemberDisplayName(@Nullable String consortiumMemberDisplayName) {
             this.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
 
-        public Builder setConsortiumRole(@Nullable String consortiumRole) {
+        public Builder consortiumRole(@Nullable String consortiumRole) {
             this.consortiumRole = consortiumRole;
             return this;
         }
 
-        public Builder setDns(String dns) {
+        public Builder dns(String dns) {
             this.dns = Objects.requireNonNull(dns);
             return this;
         }
 
-        public Builder setFirewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(@Nullable List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = firewallRules;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setRootContractAddress(String rootContractAddress) {
+        public Builder rootContractAddress(String rootContractAddress) {
             this.rootContractAddress = Objects.requireNonNull(rootContractAddress);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setValidatorNodesSku(@Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
+        public Builder validatorNodesSku(@Nullable BlockchainMemberNodesSkuResponse validatorNodesSku) {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }

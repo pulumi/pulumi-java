@@ -15,8 +15,8 @@ public final class DatabaseConfigResponse {
      */
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private DatabaseConfigResponse(String machineType) {
+    @OutputCustomType.Constructor
+    private DatabaseConfigResponse(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseConfigResponse {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

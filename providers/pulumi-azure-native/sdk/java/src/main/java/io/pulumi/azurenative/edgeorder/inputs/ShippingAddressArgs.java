@@ -204,102 +204,102 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zipExtendedCode = defaults.zipExtendedCode;
         }
 
-        public Builder setAddressType(@Nullable Input<Either<String,AddressType>> addressType) {
+        public Builder addressType(@Nullable Input<Either<String,AddressType>> addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setAddressType(@Nullable Either<String,AddressType> addressType) {
+        public Builder addressType(@Nullable Either<String,AddressType> addressType) {
             this.addressType = Input.ofNullable(addressType);
             return this;
         }
 
-        public Builder setCity(@Nullable Input<String> city) {
+        public Builder city(@Nullable Input<String> city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = Input.ofNullable(city);
             return this;
         }
 
-        public Builder setCompanyName(@Nullable Input<String> companyName) {
+        public Builder companyName(@Nullable Input<String> companyName) {
             this.companyName = companyName;
             return this;
         }
 
-        public Builder setCompanyName(@Nullable String companyName) {
+        public Builder companyName(@Nullable String companyName) {
             this.companyName = Input.ofNullable(companyName);
             return this;
         }
 
-        public Builder setCountry(Input<String> country) {
+        public Builder country(Input<String> country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Input.of(Objects.requireNonNull(country));
             return this;
         }
 
-        public Builder setPostalCode(@Nullable Input<String> postalCode) {
+        public Builder postalCode(@Nullable Input<String> postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = Input.ofNullable(postalCode);
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable Input<String> stateOrProvince) {
+        public Builder stateOrProvince(@Nullable Input<String> stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable String stateOrProvince) {
+        public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = Input.ofNullable(stateOrProvince);
             return this;
         }
 
-        public Builder setStreetAddress1(Input<String> streetAddress1) {
+        public Builder streetAddress1(Input<String> streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
 
-        public Builder setStreetAddress1(String streetAddress1) {
+        public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Input.of(Objects.requireNonNull(streetAddress1));
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable Input<String> streetAddress2) {
+        public Builder streetAddress2(@Nullable Input<String> streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable String streetAddress2) {
+        public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = Input.ofNullable(streetAddress2);
             return this;
         }
 
-        public Builder setStreetAddress3(@Nullable Input<String> streetAddress3) {
+        public Builder streetAddress3(@Nullable Input<String> streetAddress3) {
             this.streetAddress3 = streetAddress3;
             return this;
         }
 
-        public Builder setStreetAddress3(@Nullable String streetAddress3) {
+        public Builder streetAddress3(@Nullable String streetAddress3) {
             this.streetAddress3 = Input.ofNullable(streetAddress3);
             return this;
         }
 
-        public Builder setZipExtendedCode(@Nullable Input<String> zipExtendedCode) {
+        public Builder zipExtendedCode(@Nullable Input<String> zipExtendedCode) {
             this.zipExtendedCode = zipExtendedCode;
             return this;
         }
 
-        public Builder setZipExtendedCode(@Nullable String zipExtendedCode) {
+        public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
             this.zipExtendedCode = Input.ofNullable(zipExtendedCode);
             return this;
         }

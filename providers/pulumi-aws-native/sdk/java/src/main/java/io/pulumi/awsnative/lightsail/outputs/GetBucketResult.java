@@ -53,17 +53,17 @@ public final class GetBucketResult {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"ableToUpdateBundle","accessRules","bucketArn","bundleId","objectVersioning","readOnlyAccessAccounts","resourcesReceivingAccess","tags","url"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        @Nullable Boolean ableToUpdateBundle,
-        @Nullable BucketAccessRules accessRules,
-        @Nullable String bucketArn,
-        @Nullable String bundleId,
-        @Nullable Boolean objectVersioning,
-        @Nullable List<String> readOnlyAccessAccounts,
-        @Nullable List<String> resourcesReceivingAccess,
-        @Nullable List<BucketTag> tags,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("ableToUpdateBundle") @Nullable Boolean ableToUpdateBundle,
+        @OutputCustomType.Parameter("accessRules") @Nullable BucketAccessRules accessRules,
+        @OutputCustomType.Parameter("bucketArn") @Nullable String bucketArn,
+        @OutputCustomType.Parameter("bundleId") @Nullable String bundleId,
+        @OutputCustomType.Parameter("objectVersioning") @Nullable Boolean objectVersioning,
+        @OutputCustomType.Parameter("readOnlyAccessAccounts") @Nullable List<String> readOnlyAccessAccounts,
+        @OutputCustomType.Parameter("resourcesReceivingAccess") @Nullable List<String> resourcesReceivingAccess,
+        @OutputCustomType.Parameter("tags") @Nullable List<BucketTag> tags,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.ableToUpdateBundle = ableToUpdateBundle;
         this.accessRules = accessRules;
         this.bucketArn = bucketArn;
@@ -167,47 +167,47 @@ public final class GetBucketResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setAbleToUpdateBundle(@Nullable Boolean ableToUpdateBundle) {
+        public Builder ableToUpdateBundle(@Nullable Boolean ableToUpdateBundle) {
             this.ableToUpdateBundle = ableToUpdateBundle;
             return this;
         }
 
-        public Builder setAccessRules(@Nullable BucketAccessRules accessRules) {
+        public Builder accessRules(@Nullable BucketAccessRules accessRules) {
             this.accessRules = accessRules;
             return this;
         }
 
-        public Builder setBucketArn(@Nullable String bucketArn) {
+        public Builder bucketArn(@Nullable String bucketArn) {
             this.bucketArn = bucketArn;
             return this;
         }
 
-        public Builder setBundleId(@Nullable String bundleId) {
+        public Builder bundleId(@Nullable String bundleId) {
             this.bundleId = bundleId;
             return this;
         }
 
-        public Builder setObjectVersioning(@Nullable Boolean objectVersioning) {
+        public Builder objectVersioning(@Nullable Boolean objectVersioning) {
             this.objectVersioning = objectVersioning;
             return this;
         }
 
-        public Builder setReadOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
+        public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
             this.readOnlyAccessAccounts = readOnlyAccessAccounts;
             return this;
         }
 
-        public Builder setResourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
+        public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
             this.resourcesReceivingAccess = resourcesReceivingAccess;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTag> tags) {
+        public Builder tags(@Nullable List<BucketTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

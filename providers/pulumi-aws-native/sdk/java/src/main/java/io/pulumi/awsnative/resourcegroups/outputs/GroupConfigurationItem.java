@@ -16,10 +16,10 @@ public final class GroupConfigurationItem {
     private final @Nullable List<GroupConfigurationParameter> parameters;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private GroupConfigurationItem(
-        @Nullable List<GroupConfigurationParameter> parameters,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<GroupConfigurationParameter> parameters,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.parameters = parameters;
         this.type = type;
     }
@@ -53,12 +53,12 @@ public final class GroupConfigurationItem {
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable List<GroupConfigurationParameter> parameters) {
+        public Builder parameters(@Nullable List<GroupConfigurationParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

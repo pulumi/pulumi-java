@@ -40,12 +40,12 @@ public final class GuestPoliciesRecipeArtifact {
      */
     private final @Nullable GuestPoliciesRecipeArtifactRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","id","remote"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeArtifact(
-        @Nullable Boolean allowInsecure,
-        @Nullable GuestPoliciesRecipeArtifactGcs gcs,
-        String id,
-        @Nullable GuestPoliciesRecipeArtifactRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable GuestPoliciesRecipeArtifactGcs gcs,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("remote") @Nullable GuestPoliciesRecipeArtifactRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.id = id;
@@ -112,22 +112,22 @@ public final class GuestPoliciesRecipeArtifact {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setGcs(@Nullable GuestPoliciesRecipeArtifactGcs gcs) {
+        public Builder gcs(@Nullable GuestPoliciesRecipeArtifactGcs gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRemote(@Nullable GuestPoliciesRecipeArtifactRemote remote) {
+        public Builder remote(@Nullable GuestPoliciesRecipeArtifactRemote remote) {
             this.remote = remote;
             return this;
         }

@@ -42,14 +42,14 @@ public final class AutoShutdownProfileResponse {
      */
     private final @Nullable String shutdownWhenNotConnected;
 
-    @OutputCustomType.Constructor({"disconnectDelay","idleDelay","noConnectDelay","shutdownOnDisconnect","shutdownOnIdle","shutdownWhenNotConnected"})
+    @OutputCustomType.Constructor
     private AutoShutdownProfileResponse(
-        @Nullable String disconnectDelay,
-        @Nullable String idleDelay,
-        @Nullable String noConnectDelay,
-        @Nullable String shutdownOnDisconnect,
-        @Nullable String shutdownOnIdle,
-        @Nullable String shutdownWhenNotConnected) {
+        @OutputCustomType.Parameter("disconnectDelay") @Nullable String disconnectDelay,
+        @OutputCustomType.Parameter("idleDelay") @Nullable String idleDelay,
+        @OutputCustomType.Parameter("noConnectDelay") @Nullable String noConnectDelay,
+        @OutputCustomType.Parameter("shutdownOnDisconnect") @Nullable String shutdownOnDisconnect,
+        @OutputCustomType.Parameter("shutdownOnIdle") @Nullable String shutdownOnIdle,
+        @OutputCustomType.Parameter("shutdownWhenNotConnected") @Nullable String shutdownWhenNotConnected) {
         this.disconnectDelay = disconnectDelay;
         this.idleDelay = idleDelay;
         this.noConnectDelay = noConnectDelay;
@@ -131,32 +131,32 @@ public final class AutoShutdownProfileResponse {
     	      this.shutdownWhenNotConnected = defaults.shutdownWhenNotConnected;
         }
 
-        public Builder setDisconnectDelay(@Nullable String disconnectDelay) {
+        public Builder disconnectDelay(@Nullable String disconnectDelay) {
             this.disconnectDelay = disconnectDelay;
             return this;
         }
 
-        public Builder setIdleDelay(@Nullable String idleDelay) {
+        public Builder idleDelay(@Nullable String idleDelay) {
             this.idleDelay = idleDelay;
             return this;
         }
 
-        public Builder setNoConnectDelay(@Nullable String noConnectDelay) {
+        public Builder noConnectDelay(@Nullable String noConnectDelay) {
             this.noConnectDelay = noConnectDelay;
             return this;
         }
 
-        public Builder setShutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
+        public Builder shutdownOnDisconnect(@Nullable String shutdownOnDisconnect) {
             this.shutdownOnDisconnect = shutdownOnDisconnect;
             return this;
         }
 
-        public Builder setShutdownOnIdle(@Nullable String shutdownOnIdle) {
+        public Builder shutdownOnIdle(@Nullable String shutdownOnIdle) {
             this.shutdownOnIdle = shutdownOnIdle;
             return this;
         }
 
-        public Builder setShutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
+        public Builder shutdownWhenNotConnected(@Nullable String shutdownWhenNotConnected) {
             this.shutdownWhenNotConnected = shutdownWhenNotConnected;
             return this;
         }

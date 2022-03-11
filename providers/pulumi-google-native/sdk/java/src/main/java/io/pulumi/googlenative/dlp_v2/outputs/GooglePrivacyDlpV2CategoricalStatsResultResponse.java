@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
      */
     private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
-    @OutputCustomType.Constructor({"valueFrequencyHistogramBuckets"})
-    private GooglePrivacyDlpV2CategoricalStatsResultResponse(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CategoricalStatsResultResponse(@OutputCustomType.Parameter("valueFrequencyHistogramBuckets") List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
         this.valueFrequencyHistogramBuckets = valueFrequencyHistogramBuckets;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse {
     	      this.valueFrequencyHistogramBuckets = defaults.valueFrequencyHistogramBuckets;
         }
 
-        public Builder setValueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
+        public Builder valueFrequencyHistogramBuckets(List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets) {
             this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
             return this;
         }

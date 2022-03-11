@@ -23,10 +23,10 @@ public final class DashboardSheet {
      */
     private final @Nullable String sheetId;
 
-    @OutputCustomType.Constructor({"name","sheetId"})
+    @OutputCustomType.Constructor
     private DashboardSheet(
-        @Nullable String name,
-        @Nullable String sheetId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sheetId") @Nullable String sheetId) {
         this.name = name;
         this.sheetId = sheetId;
     }
@@ -69,12 +69,12 @@ public final class DashboardSheet {
     	      this.sheetId = defaults.sheetId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSheetId(@Nullable String sheetId) {
+        public Builder sheetId(@Nullable String sheetId) {
             this.sheetId = sheetId;
             return this;
         }

@@ -25,11 +25,11 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
      */
     private final String serviceDirectoryRegion;
 
-    @OutputCustomType.Constructor({"namespace","service","serviceDirectoryRegion"})
+    @OutputCustomType.Constructor
     private ForwardingRuleServiceDirectoryRegistrationResponse(
-        String namespace,
-        String service,
-        String serviceDirectoryRegion) {
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("serviceDirectoryRegion") String serviceDirectoryRegion) {
         this.namespace = namespace;
         this.service = service;
         this.serviceDirectoryRegion = serviceDirectoryRegion;
@@ -81,17 +81,17 @@ public final class ForwardingRuleServiceDirectoryRegistrationResponse {
     	      this.serviceDirectoryRegion = defaults.serviceDirectoryRegion;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setServiceDirectoryRegion(String serviceDirectoryRegion) {
+        public Builder serviceDirectoryRegion(String serviceDirectoryRegion) {
             this.serviceDirectoryRegion = Objects.requireNonNull(serviceDirectoryRegion);
             return this;
         }

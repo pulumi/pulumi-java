@@ -15,8 +15,8 @@ public final class ReservationConfigResponse {
      */
     private final String throughputReservation;
 
-    @OutputCustomType.Constructor({"throughputReservation"})
-    private ReservationConfigResponse(String throughputReservation) {
+    @OutputCustomType.Constructor
+    private ReservationConfigResponse(@OutputCustomType.Parameter("throughputReservation") String throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 
@@ -48,7 +48,7 @@ public final class ReservationConfigResponse {
     	      this.throughputReservation = defaults.throughputReservation;
         }
 
-        public Builder setThroughputReservation(String throughputReservation) {
+        public Builder throughputReservation(String throughputReservation) {
             this.throughputReservation = Objects.requireNonNull(throughputReservation);
             return this;
         }

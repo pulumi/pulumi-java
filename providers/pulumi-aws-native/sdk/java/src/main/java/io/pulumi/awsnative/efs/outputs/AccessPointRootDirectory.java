@@ -23,10 +23,10 @@ public final class AccessPointRootDirectory {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"creationInfo","path"})
+    @OutputCustomType.Constructor
     private AccessPointRootDirectory(
-        @Nullable AccessPointCreationInfo creationInfo,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("creationInfo") @Nullable AccessPointCreationInfo creationInfo,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.creationInfo = creationInfo;
         this.path = path;
     }
@@ -68,12 +68,12 @@ public final class AccessPointRootDirectory {
     	      this.path = defaults.path;
         }
 
-        public Builder setCreationInfo(@Nullable AccessPointCreationInfo creationInfo) {
+        public Builder creationInfo(@Nullable AccessPointCreationInfo creationInfo) {
             this.creationInfo = creationInfo;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

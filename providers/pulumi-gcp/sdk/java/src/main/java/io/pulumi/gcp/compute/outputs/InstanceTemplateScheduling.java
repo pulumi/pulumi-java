@@ -46,13 +46,13 @@ public final class InstanceTemplateScheduling {
      */
     private final @Nullable Boolean preemptible;
 
-    @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
+    @OutputCustomType.Constructor
     private InstanceTemplateScheduling(
-        @Nullable Boolean automaticRestart,
-        @Nullable Integer minNodeCpus,
-        @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities,
-        @Nullable String onHostMaintenance,
-        @Nullable Boolean preemptible) {
+        @OutputCustomType.Parameter("automaticRestart") @Nullable Boolean automaticRestart,
+        @OutputCustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
@@ -129,27 +129,27 @@ public final class InstanceTemplateScheduling {
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable String onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }

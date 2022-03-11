@@ -90,32 +90,32 @@ public final class RecipeConditionExpressionArgs extends io.pulumi.resources.Res
     	      this.value = defaults.value;
         }
 
-        public Builder setCondition(Input<String> condition) {
+        public Builder condition(Input<String> condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }
 
-        public Builder setTargetColumn(Input<String> targetColumn) {
+        public Builder targetColumn(Input<String> targetColumn) {
             this.targetColumn = Objects.requireNonNull(targetColumn);
             return this;
         }
 
-        public Builder setTargetColumn(String targetColumn) {
+        public Builder targetColumn(String targetColumn) {
             this.targetColumn = Input.of(Objects.requireNonNull(targetColumn));
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

@@ -23,10 +23,10 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
      */
     private final String storageClass;
 
-    @OutputCustomType.Constructor({"days","storageClass"})
+    @OutputCustomType.Constructor
     private BucketLifecycleRuleNoncurrentVersionTransition(
-        @Nullable Integer days,
-        String storageClass) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("storageClass") String storageClass) {
         this.days = days;
         this.storageClass = storageClass;
     }
@@ -68,12 +68,12 @@ public final class BucketLifecycleRuleNoncurrentVersionTransition {
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }

@@ -18,10 +18,10 @@ public final class PolicyAlternativeNameServerConfigResponse {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers;
 
-    @OutputCustomType.Constructor({"kind","targetNameServers"})
+    @OutputCustomType.Constructor
     private PolicyAlternativeNameServerConfigResponse(
-        String kind,
-        List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
         this.kind = kind;
         this.targetNameServers = targetNameServers;
     }
@@ -59,12 +59,12 @@ public final class PolicyAlternativeNameServerConfigResponse {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setTargetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
+        public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServerResponse> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

@@ -21,10 +21,10 @@ public final class EventSeries {
      */
     private final String lastObservedTime;
 
-    @OutputCustomType.Constructor({"count","lastObservedTime"})
+    @OutputCustomType.Constructor
     private EventSeries(
-        Integer count,
-        String lastObservedTime) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("lastObservedTime") String lastObservedTime) {
         this.count = count;
         this.lastObservedTime = lastObservedTime;
     }
@@ -66,12 +66,12 @@ public final class EventSeries {
     	      this.lastObservedTime = defaults.lastObservedTime;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setLastObservedTime(String lastObservedTime) {
+        public Builder lastObservedTime(String lastObservedTime) {
             this.lastObservedTime = Objects.requireNonNull(lastObservedTime);
             return this;
         }

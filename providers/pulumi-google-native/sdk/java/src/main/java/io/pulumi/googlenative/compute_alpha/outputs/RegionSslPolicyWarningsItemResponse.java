@@ -27,11 +27,11 @@ public final class RegionSslPolicyWarningsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","data","message"})
+    @OutputCustomType.Constructor
     private RegionSslPolicyWarningsItemResponse(
-        String code,
-        List<RegionSslPolicyWarningsItemDataItemResponse> data,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("data") List<RegionSslPolicyWarningsItemDataItemResponse> data,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.data = data;
         this.message = message;
@@ -83,17 +83,17 @@ public final class RegionSslPolicyWarningsItemResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setData(List<RegionSslPolicyWarningsItemDataItemResponse> data) {
+        public Builder data(List<RegionSslPolicyWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetOutputFileUriValue {
     private final String fileName;
 
-    @OutputCustomType.Constructor({"fileName"})
-    private DatasetOutputFileUriValue(String fileName) {
+    @OutputCustomType.Constructor
+    private DatasetOutputFileUriValue(@OutputCustomType.Parameter("fileName") String fileName) {
         this.fileName = fileName;
     }
 
@@ -40,7 +40,7 @@ public final class DatasetOutputFileUriValue {
     	      this.fileName = defaults.fileName;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }

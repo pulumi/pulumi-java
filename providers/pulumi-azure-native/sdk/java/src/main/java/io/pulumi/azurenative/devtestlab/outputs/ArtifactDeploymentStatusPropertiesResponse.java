@@ -28,11 +28,11 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
      */
     private final @Nullable Integer totalArtifacts;
 
-    @OutputCustomType.Constructor({"artifactsApplied","deploymentStatus","totalArtifacts"})
+    @OutputCustomType.Constructor
     private ArtifactDeploymentStatusPropertiesResponse(
-        @Nullable Integer artifactsApplied,
-        @Nullable String deploymentStatus,
-        @Nullable Integer totalArtifacts) {
+        @OutputCustomType.Parameter("artifactsApplied") @Nullable Integer artifactsApplied,
+        @OutputCustomType.Parameter("deploymentStatus") @Nullable String deploymentStatus,
+        @OutputCustomType.Parameter("totalArtifacts") @Nullable Integer totalArtifacts) {
         this.artifactsApplied = artifactsApplied;
         this.deploymentStatus = deploymentStatus;
         this.totalArtifacts = totalArtifacts;
@@ -84,17 +84,17 @@ public final class ArtifactDeploymentStatusPropertiesResponse {
     	      this.totalArtifacts = defaults.totalArtifacts;
         }
 
-        public Builder setArtifactsApplied(@Nullable Integer artifactsApplied) {
+        public Builder artifactsApplied(@Nullable Integer artifactsApplied) {
             this.artifactsApplied = artifactsApplied;
             return this;
         }
 
-        public Builder setDeploymentStatus(@Nullable String deploymentStatus) {
+        public Builder deploymentStatus(@Nullable String deploymentStatus) {
             this.deploymentStatus = deploymentStatus;
             return this;
         }
 
-        public Builder setTotalArtifacts(@Nullable Integer totalArtifacts) {
+        public Builder totalArtifacts(@Nullable Integer totalArtifacts) {
             this.totalArtifacts = totalArtifacts;
             return this;
         }

@@ -34,12 +34,12 @@ public final class JobEndpointResponse {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"endpoint","jobEndpointType","port","properties"})
+    @OutputCustomType.Constructor
     private JobEndpointResponse(
-        @Nullable String endpoint,
-        @Nullable String jobEndpointType,
-        @Nullable Integer port,
-        @Nullable Map<String,String> properties) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("jobEndpointType") @Nullable String jobEndpointType,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.endpoint = endpoint;
         this.jobEndpointType = jobEndpointType;
         this.port = port;
@@ -101,22 +101,22 @@ public final class JobEndpointResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setJobEndpointType(@Nullable String jobEndpointType) {
+        public Builder jobEndpointType(@Nullable String jobEndpointType) {
             this.jobEndpointType = jobEndpointType;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }

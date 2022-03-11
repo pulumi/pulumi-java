@@ -22,10 +22,10 @@ public final class RetryPolicyResponse {
      */
     private final @Nullable Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor({"eventTimeToLiveInMinutes","maxDeliveryAttempts"})
+    @OutputCustomType.Constructor
     private RetryPolicyResponse(
-        @Nullable Integer eventTimeToLiveInMinutes,
-        @Nullable Integer maxDeliveryAttempts) {
+        @OutputCustomType.Parameter("eventTimeToLiveInMinutes") @Nullable Integer eventTimeToLiveInMinutes,
+        @OutputCustomType.Parameter("maxDeliveryAttempts") @Nullable Integer maxDeliveryAttempts) {
         this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }
@@ -67,12 +67,12 @@ public final class RetryPolicyResponse {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setEventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
+        public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
             this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }

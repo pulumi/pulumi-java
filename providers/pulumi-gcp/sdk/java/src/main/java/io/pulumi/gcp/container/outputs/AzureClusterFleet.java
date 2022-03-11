@@ -23,10 +23,10 @@ public final class AzureClusterFleet {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"membership","project"})
+    @OutputCustomType.Constructor
     private AzureClusterFleet(
-        @Nullable String membership,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("membership") @Nullable String membership,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.membership = membership;
         this.project = project;
     }
@@ -69,12 +69,12 @@ public final class AzureClusterFleet {
     	      this.project = defaults.project;
         }
 
-        public Builder setMembership(@Nullable String membership) {
+        public Builder membership(@Nullable String membership) {
             this.membership = membership;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

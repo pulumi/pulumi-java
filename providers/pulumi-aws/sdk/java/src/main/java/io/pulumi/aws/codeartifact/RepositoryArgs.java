@@ -154,72 +154,72 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upstreams = defaults.upstreams;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Input<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Input.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable Input<RepositoryExternalConnectionsArgs> externalConnections) {
+        public Builder externalConnections(@Nullable Input<RepositoryExternalConnectionsArgs> externalConnections) {
             this.externalConnections = externalConnections;
             return this;
         }
 
-        public Builder setExternalConnections(@Nullable RepositoryExternalConnectionsArgs externalConnections) {
+        public Builder externalConnections(@Nullable RepositoryExternalConnectionsArgs externalConnections) {
             this.externalConnections = Input.ofNullable(externalConnections);
             return this;
         }
 
-        public Builder setRepository(Input<String> repository) {
+        public Builder repository(Input<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpstreams(@Nullable Input<List<RepositoryUpstreamArgs>> upstreams) {
+        public Builder upstreams(@Nullable Input<List<RepositoryUpstreamArgs>> upstreams) {
             this.upstreams = upstreams;
             return this;
         }
 
-        public Builder setUpstreams(@Nullable List<RepositoryUpstreamArgs> upstreams) {
+        public Builder upstreams(@Nullable List<RepositoryUpstreamArgs> upstreams) {
             this.upstreams = Input.ofNullable(upstreams);
             return this;
         }

@@ -34,12 +34,12 @@ public final class TestExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor({"testIssues","testSuiteOverviews","testTiming","toolExecution"})
+    @OutputCustomType.Constructor
     private TestExecutionStepResponse(
-        List<TestIssueResponse> testIssues,
-        List<TestSuiteOverviewResponse> testSuiteOverviews,
-        TestTimingResponse testTiming,
-        ToolExecutionResponse toolExecution) {
+        @OutputCustomType.Parameter("testIssues") List<TestIssueResponse> testIssues,
+        @OutputCustomType.Parameter("testSuiteOverviews") List<TestSuiteOverviewResponse> testSuiteOverviews,
+        @OutputCustomType.Parameter("testTiming") TestTimingResponse testTiming,
+        @OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.testIssues = testIssues;
         this.testSuiteOverviews = testSuiteOverviews;
         this.testTiming = testTiming;
@@ -101,22 +101,22 @@ public final class TestExecutionStepResponse {
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder setTestIssues(List<TestIssueResponse> testIssues) {
+        public Builder testIssues(List<TestIssueResponse> testIssues) {
             this.testIssues = Objects.requireNonNull(testIssues);
             return this;
         }
 
-        public Builder setTestSuiteOverviews(List<TestSuiteOverviewResponse> testSuiteOverviews) {
+        public Builder testSuiteOverviews(List<TestSuiteOverviewResponse> testSuiteOverviews) {
             this.testSuiteOverviews = Objects.requireNonNull(testSuiteOverviews);
             return this;
         }
 
-        public Builder setTestTiming(TestTimingResponse testTiming) {
+        public Builder testTiming(TestTimingResponse testTiming) {
             this.testTiming = Objects.requireNonNull(testTiming);
             return this;
         }
 
-        public Builder setToolExecution(ToolExecutionResponse toolExecution) {
+        public Builder toolExecution(ToolExecutionResponse toolExecution) {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }

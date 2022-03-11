@@ -21,10 +21,10 @@ public final class HealthStateResponse {
      */
     private final Double severity;
 
-    @OutputCustomType.Constructor({"healthStateName","severity"})
+    @OutputCustomType.Constructor
     private HealthStateResponse(
-        String healthStateName,
-        Double severity) {
+        @OutputCustomType.Parameter("healthStateName") String healthStateName,
+        @OutputCustomType.Parameter("severity") Double severity) {
         this.healthStateName = healthStateName;
         this.severity = severity;
     }
@@ -66,12 +66,12 @@ public final class HealthStateResponse {
     	      this.severity = defaults.severity;
         }
 
-        public Builder setHealthStateName(String healthStateName) {
+        public Builder healthStateName(String healthStateName) {
             this.healthStateName = Objects.requireNonNull(healthStateName);
             return this;
         }
 
-        public Builder setSeverity(Double severity) {
+        public Builder severity(Double severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }

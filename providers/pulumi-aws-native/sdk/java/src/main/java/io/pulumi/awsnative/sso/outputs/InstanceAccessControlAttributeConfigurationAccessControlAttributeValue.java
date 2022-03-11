@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class InstanceAccessControlAttributeConfigurationAccessControlAttributeValue {
     private final List<String> source;
 
-    @OutputCustomType.Constructor({"source"})
-    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(List<String> source) {
+    @OutputCustomType.Constructor
+    private InstanceAccessControlAttributeConfigurationAccessControlAttributeValue(@OutputCustomType.Parameter("source") List<String> source) {
         this.source = source;
     }
 
@@ -41,7 +41,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     	      this.source = defaults.source;
         }
 
-        public Builder setSource(List<String> source) {
+        public Builder source(List<String> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

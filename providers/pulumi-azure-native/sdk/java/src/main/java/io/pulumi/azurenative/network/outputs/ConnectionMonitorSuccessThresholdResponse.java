@@ -23,10 +23,10 @@ public final class ConnectionMonitorSuccessThresholdResponse {
      */
     private final @Nullable Double roundTripTimeMs;
 
-    @OutputCustomType.Constructor({"checksFailedPercent","roundTripTimeMs"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorSuccessThresholdResponse(
-        @Nullable Integer checksFailedPercent,
-        @Nullable Double roundTripTimeMs) {
+        @OutputCustomType.Parameter("checksFailedPercent") @Nullable Integer checksFailedPercent,
+        @OutputCustomType.Parameter("roundTripTimeMs") @Nullable Double roundTripTimeMs) {
         this.checksFailedPercent = checksFailedPercent;
         this.roundTripTimeMs = roundTripTimeMs;
     }
@@ -68,12 +68,12 @@ public final class ConnectionMonitorSuccessThresholdResponse {
     	      this.roundTripTimeMs = defaults.roundTripTimeMs;
         }
 
-        public Builder setChecksFailedPercent(@Nullable Integer checksFailedPercent) {
+        public Builder checksFailedPercent(@Nullable Integer checksFailedPercent) {
             this.checksFailedPercent = checksFailedPercent;
             return this;
         }
 
-        public Builder setRoundTripTimeMs(@Nullable Double roundTripTimeMs) {
+        public Builder roundTripTimeMs(@Nullable Double roundTripTimeMs) {
             this.roundTripTimeMs = roundTripTimeMs;
             return this;
         }

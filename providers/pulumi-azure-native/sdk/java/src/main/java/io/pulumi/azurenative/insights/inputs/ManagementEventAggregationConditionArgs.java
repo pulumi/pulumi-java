@@ -92,32 +92,32 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setOperator(@Nullable Input<ConditionOperator> operator) {
+        public Builder operator(@Nullable Input<ConditionOperator> operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setOperator(@Nullable ConditionOperator operator) {
+        public Builder operator(@Nullable ConditionOperator operator) {
             this.operator = Input.ofNullable(operator);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Input<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
 
-        public Builder setWindowSize(@Nullable Input<String> windowSize) {
+        public Builder windowSize(@Nullable Input<String> windowSize) {
             this.windowSize = windowSize;
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = Input.ofNullable(windowSize);
             return this;
         }

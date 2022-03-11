@@ -22,10 +22,10 @@ public final class BuildpackBindingLaunchPropertiesResponse {
      */
     private final @Nullable Map<String,String> secrets;
 
-    @OutputCustomType.Constructor({"properties","secrets"})
+    @OutputCustomType.Constructor
     private BuildpackBindingLaunchPropertiesResponse(
-        @Nullable Map<String,String> properties,
-        @Nullable Map<String,String> secrets) {
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("secrets") @Nullable Map<String,String> secrets) {
         this.properties = properties;
         this.secrets = secrets;
     }
@@ -67,12 +67,12 @@ public final class BuildpackBindingLaunchPropertiesResponse {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSecrets(@Nullable Map<String,String> secrets) {
+        public Builder secrets(@Nullable Map<String,String> secrets) {
             this.secrets = secrets;
             return this;
         }

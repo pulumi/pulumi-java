@@ -37,13 +37,13 @@ public final class GetRepoResult {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"mirrorConfig","name","pubsubConfigs","size","url"})
+    @OutputCustomType.Constructor
     private GetRepoResult(
-        MirrorConfigResponse mirrorConfig,
-        String name,
-        Map<String,String> pubsubConfigs,
-        String size,
-        String url) {
+        @OutputCustomType.Parameter("mirrorConfig") MirrorConfigResponse mirrorConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pubsubConfigs") Map<String,String> pubsubConfigs,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("url") String url) {
         this.mirrorConfig = mirrorConfig;
         this.name = name;
         this.pubsubConfigs = pubsubConfigs;
@@ -115,27 +115,27 @@ public final class GetRepoResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setMirrorConfig(MirrorConfigResponse mirrorConfig) {
+        public Builder mirrorConfig(MirrorConfigResponse mirrorConfig) {
             this.mirrorConfig = Objects.requireNonNull(mirrorConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPubsubConfigs(Map<String,String> pubsubConfigs) {
+        public Builder pubsubConfigs(Map<String,String> pubsubConfigs) {
             this.pubsubConfigs = Objects.requireNonNull(pubsubConfigs);
             return this;
         }
 
-        public Builder setSize(String size) {
+        public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

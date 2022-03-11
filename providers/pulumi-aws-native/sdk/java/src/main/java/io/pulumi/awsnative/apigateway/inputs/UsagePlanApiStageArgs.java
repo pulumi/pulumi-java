@@ -87,32 +87,32 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder setApiId(@Nullable Input<String> apiId) {
+        public Builder apiId(@Nullable Input<String> apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = Input.ofNullable(apiId);
             return this;
         }
 
-        public Builder setStage(@Nullable Input<String> stage) {
+        public Builder stage(@Nullable Input<String> stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = Input.ofNullable(stage);
             return this;
         }
 
-        public Builder setThrottle(@Nullable Input<Object> throttle) {
+        public Builder throttle(@Nullable Input<Object> throttle) {
             this.throttle = throttle;
             return this;
         }
 
-        public Builder setThrottle(@Nullable Object throttle) {
+        public Builder throttle(@Nullable Object throttle) {
             this.throttle = Input.ofNullable(throttle);
             return this;
         }

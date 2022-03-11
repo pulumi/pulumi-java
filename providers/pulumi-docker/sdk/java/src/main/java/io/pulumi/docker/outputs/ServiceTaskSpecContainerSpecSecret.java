@@ -19,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecSecret {
     private final String secretId;
     private final @Nullable String secretName;
 
-    @OutputCustomType.Constructor({"fileGid","fileMode","fileName","fileUid","secretId","secretName"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecSecret(
-        @Nullable String fileGid,
-        @Nullable Integer fileMode,
-        String fileName,
-        @Nullable String fileUid,
-        String secretId,
-        @Nullable String secretName) {
+        @OutputCustomType.Parameter("fileGid") @Nullable String fileGid,
+        @OutputCustomType.Parameter("fileMode") @Nullable Integer fileMode,
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("fileUid") @Nullable String fileUid,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName) {
         this.fileGid = fileGid;
         this.fileMode = fileMode;
         this.fileName = fileName;
@@ -84,32 +84,32 @@ public final class ServiceTaskSpecContainerSpecSecret {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setFileGid(@Nullable String fileGid) {
+        public Builder fileGid(@Nullable String fileGid) {
             this.fileGid = fileGid;
             return this;
         }
 
-        public Builder setFileMode(@Nullable Integer fileMode) {
+        public Builder fileMode(@Nullable Integer fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setFileUid(@Nullable String fileUid) {
+        public Builder fileUid(@Nullable String fileUid) {
             this.fileUid = fileUid;
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }

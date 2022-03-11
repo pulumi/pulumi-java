@@ -173,82 +173,82 @@ public final class ProviderAssumeRoleArgs extends io.pulumi.resources.ResourceAr
     	      this.transitiveTagKeys = defaults.transitiveTagKeys;
         }
 
-        public Builder setDurationSeconds(@Nullable Input<Integer> durationSeconds) {
+        public Builder durationSeconds(@Nullable Input<Integer> durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = Input.ofNullable(durationSeconds);
             return this;
         }
 
-        public Builder setExternalId(@Nullable Input<String> externalId) {
+        public Builder externalId(@Nullable Input<String> externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = Input.ofNullable(externalId);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPolicyArns(@Nullable Input<List<String>> policyArns) {
+        public Builder policyArns(@Nullable Input<List<String>> policyArns) {
             this.policyArns = policyArns;
             return this;
         }
 
-        public Builder setPolicyArns(@Nullable List<String> policyArns) {
+        public Builder policyArns(@Nullable List<String> policyArns) {
             this.policyArns = Input.ofNullable(policyArns);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setSessionName(@Nullable Input<String> sessionName) {
+        public Builder sessionName(@Nullable Input<String> sessionName) {
             this.sessionName = sessionName;
             return this;
         }
 
-        public Builder setSessionName(@Nullable String sessionName) {
+        public Builder sessionName(@Nullable String sessionName) {
             this.sessionName = Input.ofNullable(sessionName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTransitiveTagKeys(@Nullable Input<List<String>> transitiveTagKeys) {
+        public Builder transitiveTagKeys(@Nullable Input<List<String>> transitiveTagKeys) {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
 
-        public Builder setTransitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
+        public Builder transitiveTagKeys(@Nullable List<String> transitiveTagKeys) {
             this.transitiveTagKeys = Input.ofNullable(transitiveTagKeys);
             return this;
         }

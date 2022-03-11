@@ -27,11 +27,11 @@ public final class AzureActiveDirectoryResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientApplication","clusterApplication","tenantId"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryResponse(
-        @Nullable String clientApplication,
-        @Nullable String clusterApplication,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientApplication") @Nullable String clientApplication,
+        @OutputCustomType.Parameter("clusterApplication") @Nullable String clusterApplication,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientApplication = clientApplication;
         this.clusterApplication = clusterApplication;
         this.tenantId = tenantId;
@@ -83,17 +83,17 @@ public final class AzureActiveDirectoryResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientApplication(@Nullable String clientApplication) {
+        public Builder clientApplication(@Nullable String clientApplication) {
             this.clientApplication = clientApplication;
             return this;
         }
 
-        public Builder setClusterApplication(@Nullable String clusterApplication) {
+        public Builder clusterApplication(@Nullable String clusterApplication) {
             this.clusterApplication = clusterApplication;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

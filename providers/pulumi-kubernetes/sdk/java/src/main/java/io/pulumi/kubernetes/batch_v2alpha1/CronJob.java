@@ -142,8 +142,8 @@ public class CronJob extends io.pulumi.resources.CustomResource {
     private static CronJobArgs makeArgs(@Nullable CronJobArgs args) {
         var builder = args == null ? CronJobArgs.builder() : CronJobArgs.builder(args);
         return builder
-            .setApiVersion("batch/v2alpha1")
-            .setKind("CronJob")
+            .apiVersion("batch/v2alpha1")
+            .kind("CronJob")
             .build();
     }
 

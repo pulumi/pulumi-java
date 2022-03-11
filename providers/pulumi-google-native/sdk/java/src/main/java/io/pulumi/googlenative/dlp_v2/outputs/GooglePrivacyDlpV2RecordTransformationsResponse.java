@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
      */
     private final List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions;
 
-    @OutputCustomType.Constructor({"fieldTransformations","recordSuppressions"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RecordTransformationsResponse(
-        List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
-        List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
+        @OutputCustomType.Parameter("fieldTransformations") List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations,
+        @OutputCustomType.Parameter("recordSuppressions") List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
         this.fieldTransformations = fieldTransformations;
         this.recordSuppressions = recordSuppressions;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
     	      this.recordSuppressions = defaults.recordSuppressions;
         }
 
-        public Builder setFieldTransformations(List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations) {
+        public Builder fieldTransformations(List<GooglePrivacyDlpV2FieldTransformationResponse> fieldTransformations) {
             this.fieldTransformations = Objects.requireNonNull(fieldTransformations);
             return this;
         }
 
-        public Builder setRecordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
+        public Builder recordSuppressions(List<GooglePrivacyDlpV2RecordSuppressionResponse> recordSuppressions) {
             this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
             return this;
         }

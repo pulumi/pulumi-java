@@ -43,14 +43,14 @@ public final class ErrorEntityResponse {
      */
     private final @Nullable List<String> parameters;
 
-    @OutputCustomType.Constructor({"code","extendedCode","innerErrors","message","messageTemplate","parameters"})
+    @OutputCustomType.Constructor
     private ErrorEntityResponse(
-        @Nullable String code,
-        @Nullable String extendedCode,
-        @Nullable List<ErrorEntityResponse> innerErrors,
-        @Nullable String message,
-        @Nullable String messageTemplate,
-        @Nullable List<String> parameters) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("extendedCode") @Nullable String extendedCode,
+        @OutputCustomType.Parameter("innerErrors") @Nullable List<ErrorEntityResponse> innerErrors,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("messageTemplate") @Nullable String messageTemplate,
+        @OutputCustomType.Parameter("parameters") @Nullable List<String> parameters) {
         this.code = code;
         this.extendedCode = extendedCode;
         this.innerErrors = innerErrors;
@@ -132,32 +132,32 @@ public final class ErrorEntityResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setExtendedCode(@Nullable String extendedCode) {
+        public Builder extendedCode(@Nullable String extendedCode) {
             this.extendedCode = extendedCode;
             return this;
         }
 
-        public Builder setInnerErrors(@Nullable List<ErrorEntityResponse> innerErrors) {
+        public Builder innerErrors(@Nullable List<ErrorEntityResponse> innerErrors) {
             this.innerErrors = innerErrors;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessageTemplate(@Nullable String messageTemplate) {
+        public Builder messageTemplate(@Nullable String messageTemplate) {
             this.messageTemplate = messageTemplate;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<String> parameters) {
+        public Builder parameters(@Nullable List<String> parameters) {
             this.parameters = parameters;
             return this;
         }

@@ -18,12 +18,12 @@ public final class GetCapacityReservationFleetResult {
     private final @Nullable Boolean removeEndDate;
     private final @Nullable Integer totalTargetCapacity;
 
-    @OutputCustomType.Constructor({"capacityReservationFleetId","noRemoveEndDate","removeEndDate","totalTargetCapacity"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationFleetResult(
-        @Nullable String capacityReservationFleetId,
-        @Nullable Boolean noRemoveEndDate,
-        @Nullable Boolean removeEndDate,
-        @Nullable Integer totalTargetCapacity) {
+        @OutputCustomType.Parameter("capacityReservationFleetId") @Nullable String capacityReservationFleetId,
+        @OutputCustomType.Parameter("noRemoveEndDate") @Nullable Boolean noRemoveEndDate,
+        @OutputCustomType.Parameter("removeEndDate") @Nullable Boolean removeEndDate,
+        @OutputCustomType.Parameter("totalTargetCapacity") @Nullable Integer totalTargetCapacity) {
         this.capacityReservationFleetId = capacityReservationFleetId;
         this.noRemoveEndDate = noRemoveEndDate;
         this.removeEndDate = removeEndDate;
@@ -69,22 +69,22 @@ public final class GetCapacityReservationFleetResult {
     	      this.totalTargetCapacity = defaults.totalTargetCapacity;
         }
 
-        public Builder setCapacityReservationFleetId(@Nullable String capacityReservationFleetId) {
+        public Builder capacityReservationFleetId(@Nullable String capacityReservationFleetId) {
             this.capacityReservationFleetId = capacityReservationFleetId;
             return this;
         }
 
-        public Builder setNoRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
+        public Builder noRemoveEndDate(@Nullable Boolean noRemoveEndDate) {
             this.noRemoveEndDate = noRemoveEndDate;
             return this;
         }
 
-        public Builder setRemoveEndDate(@Nullable Boolean removeEndDate) {
+        public Builder removeEndDate(@Nullable Boolean removeEndDate) {
             this.removeEndDate = removeEndDate;
             return this;
         }
 
-        public Builder setTotalTargetCapacity(@Nullable Integer totalTargetCapacity) {
+        public Builder totalTargetCapacity(@Nullable Integer totalTargetCapacity) {
             this.totalTargetCapacity = totalTargetCapacity;
             return this;
         }

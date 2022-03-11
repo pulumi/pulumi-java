@@ -23,10 +23,10 @@ public final class ContainerResourcesResponse {
      */
     private final @Nullable String memory;
 
-    @OutputCustomType.Constructor({"cpu","memory"})
+    @OutputCustomType.Constructor
     private ContainerResourcesResponse(
-        @Nullable Double cpu,
-        @Nullable String memory) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("memory") @Nullable String memory) {
         this.cpu = cpu;
         this.memory = memory;
     }
@@ -68,12 +68,12 @@ public final class ContainerResourcesResponse {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMemory(@Nullable String memory) {
+        public Builder memory(@Nullable String memory) {
             this.memory = memory;
             return this;
         }

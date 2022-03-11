@@ -29,11 +29,11 @@ public final class CustomResourceDefinitionStatus {
      */
     private final List<String> storedVersions;
 
-    @OutputCustomType.Constructor({"acceptedNames","conditions","storedVersions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionStatus(
-        CustomResourceDefinitionNames acceptedNames,
-        @Nullable List<CustomResourceDefinitionCondition> conditions,
-        List<String> storedVersions) {
+        @OutputCustomType.Parameter("acceptedNames") CustomResourceDefinitionNames acceptedNames,
+        @OutputCustomType.Parameter("conditions") @Nullable List<CustomResourceDefinitionCondition> conditions,
+        @OutputCustomType.Parameter("storedVersions") List<String> storedVersions) {
         this.acceptedNames = acceptedNames;
         this.conditions = conditions;
         this.storedVersions = storedVersions;
@@ -85,17 +85,17 @@ public final class CustomResourceDefinitionStatus {
     	      this.storedVersions = defaults.storedVersions;
         }
 
-        public Builder setAcceptedNames(CustomResourceDefinitionNames acceptedNames) {
+        public Builder acceptedNames(CustomResourceDefinitionNames acceptedNames) {
             this.acceptedNames = Objects.requireNonNull(acceptedNames);
             return this;
         }
 
-        public Builder setConditions(@Nullable List<CustomResourceDefinitionCondition> conditions) {
+        public Builder conditions(@Nullable List<CustomResourceDefinitionCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setStoredVersions(List<String> storedVersions) {
+        public Builder storedVersions(List<String> storedVersions) {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }

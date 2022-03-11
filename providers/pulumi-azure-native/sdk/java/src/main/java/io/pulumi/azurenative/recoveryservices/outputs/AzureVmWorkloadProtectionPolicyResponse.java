@@ -48,14 +48,14 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
      */
     private final @Nullable String workLoadType;
 
-    @OutputCustomType.Constructor({"backupManagementType","makePolicyConsistent","protectedItemsCount","settings","subProtectionPolicy","workLoadType"})
+    @OutputCustomType.Constructor
     private AzureVmWorkloadProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable Boolean makePolicyConsistent,
-        @Nullable Integer protectedItemsCount,
-        @Nullable SettingsResponse settings,
-        @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @Nullable String workLoadType) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("makePolicyConsistent") @Nullable Boolean makePolicyConsistent,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("settings") @Nullable SettingsResponse settings,
+        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @OutputCustomType.Parameter("workLoadType") @Nullable String workLoadType) {
         this.backupManagementType = backupManagementType;
         this.makePolicyConsistent = makePolicyConsistent;
         this.protectedItemsCount = protectedItemsCount;
@@ -138,32 +138,32 @@ public final class AzureVmWorkloadProtectionPolicyResponse {
     	      this.workLoadType = defaults.workLoadType;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setMakePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
+        public Builder makePolicyConsistent(@Nullable Boolean makePolicyConsistent) {
             this.makePolicyConsistent = makePolicyConsistent;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setSettings(@Nullable SettingsResponse settings) {
+        public Builder settings(@Nullable SettingsResponse settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
-        public Builder setWorkLoadType(@Nullable String workLoadType) {
+        public Builder workLoadType(@Nullable String workLoadType) {
             this.workLoadType = workLoadType;
             return this;
         }

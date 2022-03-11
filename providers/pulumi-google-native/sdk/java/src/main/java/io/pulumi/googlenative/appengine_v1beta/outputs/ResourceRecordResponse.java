@@ -25,11 +25,11 @@ public final class ResourceRecordResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","rrdata","type"})
+    @OutputCustomType.Constructor
     private ResourceRecordResponse(
-        String name,
-        String rrdata,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rrdata") String rrdata,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.rrdata = rrdata;
         this.type = type;
@@ -81,17 +81,17 @@ public final class ResourceRecordResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRrdata(String rrdata) {
+        public Builder rrdata(String rrdata) {
             this.rrdata = Objects.requireNonNull(rrdata);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

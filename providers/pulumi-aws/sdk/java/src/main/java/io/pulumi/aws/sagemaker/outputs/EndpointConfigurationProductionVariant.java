@@ -44,14 +44,14 @@ public final class EndpointConfigurationProductionVariant {
      */
     private final @Nullable String variantName;
 
-    @OutputCustomType.Constructor({"acceleratorType","initialInstanceCount","initialVariantWeight","instanceType","modelName","variantName"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationProductionVariant(
-        @Nullable String acceleratorType,
-        Integer initialInstanceCount,
-        @Nullable Double initialVariantWeight,
-        String instanceType,
-        String modelName,
-        @Nullable String variantName) {
+        @OutputCustomType.Parameter("acceleratorType") @Nullable String acceleratorType,
+        @OutputCustomType.Parameter("initialInstanceCount") Integer initialInstanceCount,
+        @OutputCustomType.Parameter("initialVariantWeight") @Nullable Double initialVariantWeight,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("modelName") String modelName,
+        @OutputCustomType.Parameter("variantName") @Nullable String variantName) {
         this.acceleratorType = acceleratorType;
         this.initialInstanceCount = initialInstanceCount;
         this.initialVariantWeight = initialVariantWeight;
@@ -133,32 +133,32 @@ public final class EndpointConfigurationProductionVariant {
     	      this.variantName = defaults.variantName;
         }
 
-        public Builder setAcceleratorType(@Nullable String acceleratorType) {
+        public Builder acceleratorType(@Nullable String acceleratorType) {
             this.acceleratorType = acceleratorType;
             return this;
         }
 
-        public Builder setInitialInstanceCount(Integer initialInstanceCount) {
+        public Builder initialInstanceCount(Integer initialInstanceCount) {
             this.initialInstanceCount = Objects.requireNonNull(initialInstanceCount);
             return this;
         }
 
-        public Builder setInitialVariantWeight(@Nullable Double initialVariantWeight) {
+        public Builder initialVariantWeight(@Nullable Double initialVariantWeight) {
             this.initialVariantWeight = initialVariantWeight;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setModelName(String modelName) {
+        public Builder modelName(String modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
 
-        public Builder setVariantName(@Nullable String variantName) {
+        public Builder variantName(@Nullable String variantName) {
             this.variantName = variantName;
             return this;
         }

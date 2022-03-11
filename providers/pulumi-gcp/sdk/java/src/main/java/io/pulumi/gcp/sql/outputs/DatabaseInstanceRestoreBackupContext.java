@@ -29,11 +29,11 @@ public final class DatabaseInstanceRestoreBackupContext {
      */
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor({"backupRunId","instanceId","project"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceRestoreBackupContext(
-        Integer backupRunId,
-        @Nullable String instanceId,
-        @Nullable String project) {
+        @OutputCustomType.Parameter("backupRunId") Integer backupRunId,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("project") @Nullable String project) {
         this.backupRunId = backupRunId;
         this.instanceId = instanceId;
         this.project = project;
@@ -86,17 +86,17 @@ public final class DatabaseInstanceRestoreBackupContext {
     	      this.project = defaults.project;
         }
 
-        public Builder setBackupRunId(Integer backupRunId) {
+        public Builder backupRunId(Integer backupRunId) {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

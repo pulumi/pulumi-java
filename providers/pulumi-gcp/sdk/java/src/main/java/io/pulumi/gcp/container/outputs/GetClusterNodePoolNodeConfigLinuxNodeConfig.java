@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterNodePoolNodeConfigLinuxNodeConfig {
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private GetClusterNodePoolNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private GetClusterNodePoolNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 
@@ -41,7 +41,7 @@ public final class GetClusterNodePoolNodeConfigLinuxNodeConfig {
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder setSysctls(Map<String,String> sysctls) {
+        public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }

@@ -123,29 +123,29 @@ public final class VpnSiteLinkConnectionResponse {
      */
     private final @Nullable SubResourceResponse vpnSiteLink;
 
-    @OutputCustomType.Constructor({"connectionBandwidth","connectionStatus","egressBytesTransferred","egressNatRules","enableBgp","enableRateLimiting","etag","id","ingressBytesTransferred","ingressNatRules","ipsecPolicies","name","provisioningState","routingWeight","sharedKey","type","useLocalAzureIpAddress","usePolicyBasedTrafficSelectors","vpnConnectionProtocolType","vpnLinkConnectionMode","vpnSiteLink"})
+    @OutputCustomType.Constructor
     private VpnSiteLinkConnectionResponse(
-        @Nullable Integer connectionBandwidth,
-        String connectionStatus,
-        Double egressBytesTransferred,
-        @Nullable List<SubResourceResponse> egressNatRules,
-        @Nullable Boolean enableBgp,
-        @Nullable Boolean enableRateLimiting,
-        String etag,
-        @Nullable String id,
-        Double ingressBytesTransferred,
-        @Nullable List<SubResourceResponse> ingressNatRules,
-        @Nullable List<IpsecPolicyResponse> ipsecPolicies,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable Integer routingWeight,
-        @Nullable String sharedKey,
-        String type,
-        @Nullable Boolean useLocalAzureIpAddress,
-        @Nullable Boolean usePolicyBasedTrafficSelectors,
-        @Nullable String vpnConnectionProtocolType,
-        @Nullable String vpnLinkConnectionMode,
-        @Nullable SubResourceResponse vpnSiteLink) {
+        @OutputCustomType.Parameter("connectionBandwidth") @Nullable Integer connectionBandwidth,
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("egressBytesTransferred") Double egressBytesTransferred,
+        @OutputCustomType.Parameter("egressNatRules") @Nullable List<SubResourceResponse> egressNatRules,
+        @OutputCustomType.Parameter("enableBgp") @Nullable Boolean enableBgp,
+        @OutputCustomType.Parameter("enableRateLimiting") @Nullable Boolean enableRateLimiting,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ingressBytesTransferred") Double ingressBytesTransferred,
+        @OutputCustomType.Parameter("ingressNatRules") @Nullable List<SubResourceResponse> ingressNatRules,
+        @OutputCustomType.Parameter("ipsecPolicies") @Nullable List<IpsecPolicyResponse> ipsecPolicies,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingWeight") @Nullable Integer routingWeight,
+        @OutputCustomType.Parameter("sharedKey") @Nullable String sharedKey,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useLocalAzureIpAddress") @Nullable Boolean useLocalAzureIpAddress,
+        @OutputCustomType.Parameter("usePolicyBasedTrafficSelectors") @Nullable Boolean usePolicyBasedTrafficSelectors,
+        @OutputCustomType.Parameter("vpnConnectionProtocolType") @Nullable String vpnConnectionProtocolType,
+        @OutputCustomType.Parameter("vpnLinkConnectionMode") @Nullable String vpnLinkConnectionMode,
+        @OutputCustomType.Parameter("vpnSiteLink") @Nullable SubResourceResponse vpnSiteLink) {
         this.connectionBandwidth = connectionBandwidth;
         this.connectionStatus = connectionStatus;
         this.egressBytesTransferred = egressBytesTransferred;
@@ -377,107 +377,107 @@ public final class VpnSiteLinkConnectionResponse {
     	      this.vpnSiteLink = defaults.vpnSiteLink;
         }
 
-        public Builder setConnectionBandwidth(@Nullable Integer connectionBandwidth) {
+        public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
 
-        public Builder setConnectionStatus(String connectionStatus) {
+        public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
 
-        public Builder setEgressBytesTransferred(Double egressBytesTransferred) {
+        public Builder egressBytesTransferred(Double egressBytesTransferred) {
             this.egressBytesTransferred = Objects.requireNonNull(egressBytesTransferred);
             return this;
         }
 
-        public Builder setEgressNatRules(@Nullable List<SubResourceResponse> egressNatRules) {
+        public Builder egressNatRules(@Nullable List<SubResourceResponse> egressNatRules) {
             this.egressNatRules = egressNatRules;
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEnableRateLimiting(@Nullable Boolean enableRateLimiting) {
+        public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIngressBytesTransferred(Double ingressBytesTransferred) {
+        public Builder ingressBytesTransferred(Double ingressBytesTransferred) {
             this.ingressBytesTransferred = Objects.requireNonNull(ingressBytesTransferred);
             return this;
         }
 
-        public Builder setIngressNatRules(@Nullable List<SubResourceResponse> ingressNatRules) {
+        public Builder ingressNatRules(@Nullable List<SubResourceResponse> ingressNatRules) {
             this.ingressNatRules = ingressNatRules;
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable List<IpsecPolicyResponse> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
-        public Builder setVpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
+        public Builder vpnConnectionProtocolType(@Nullable String vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
 
-        public Builder setVpnLinkConnectionMode(@Nullable String vpnLinkConnectionMode) {
+        public Builder vpnLinkConnectionMode(@Nullable String vpnLinkConnectionMode) {
             this.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
 
-        public Builder setVpnSiteLink(@Nullable SubResourceResponse vpnSiteLink) {
+        public Builder vpnSiteLink(@Nullable SubResourceResponse vpnSiteLink) {
             this.vpnSiteLink = vpnSiteLink;
             return this;
         }

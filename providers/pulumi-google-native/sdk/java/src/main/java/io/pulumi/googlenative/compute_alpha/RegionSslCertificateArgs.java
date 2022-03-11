@@ -189,102 +189,102 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(@Nullable Input<String> certificate) {
+        public Builder certificate(@Nullable Input<String> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setManaged(@Nullable Input<SslCertificateManagedSslCertificateArgs> managed) {
+        public Builder managed(@Nullable Input<SslCertificateManagedSslCertificateArgs> managed) {
             this.managed = managed;
             return this;
         }
 
-        public Builder setManaged(@Nullable SslCertificateManagedSslCertificateArgs managed) {
+        public Builder managed(@Nullable SslCertificateManagedSslCertificateArgs managed) {
             this.managed = Input.ofNullable(managed);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSelfManaged(@Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged) {
+        public Builder selfManaged(@Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged) {
             this.selfManaged = selfManaged;
             return this;
         }
 
-        public Builder setSelfManaged(@Nullable SslCertificateSelfManagedSslCertificateArgs selfManaged) {
+        public Builder selfManaged(@Nullable SslCertificateSelfManagedSslCertificateArgs selfManaged) {
             this.selfManaged = Input.ofNullable(selfManaged);
             return this;
         }
 
-        public Builder setType(@Nullable Input<RegionSslCertificateType> type) {
+        public Builder type(@Nullable Input<RegionSslCertificateType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RegionSslCertificateType type) {
+        public Builder type(@Nullable RegionSslCertificateType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

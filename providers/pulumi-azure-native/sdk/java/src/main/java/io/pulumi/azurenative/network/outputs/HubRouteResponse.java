@@ -36,13 +36,13 @@ public final class HubRouteResponse {
      */
     private final String nextHopType;
 
-    @OutputCustomType.Constructor({"destinationType","destinations","name","nextHop","nextHopType"})
+    @OutputCustomType.Constructor
     private HubRouteResponse(
-        String destinationType,
-        List<String> destinations,
-        String name,
-        String nextHop,
-        String nextHopType) {
+        @OutputCustomType.Parameter("destinationType") String destinationType,
+        @OutputCustomType.Parameter("destinations") List<String> destinations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType) {
         this.destinationType = destinationType;
         this.destinations = destinations;
         this.name = name;
@@ -114,27 +114,27 @@ public final class HubRouteResponse {
     	      this.nextHopType = defaults.nextHopType;
         }
 
-        public Builder setDestinationType(String destinationType) {
+        public Builder destinationType(String destinationType) {
             this.destinationType = Objects.requireNonNull(destinationType);
             return this;
         }
 
-        public Builder setDestinations(List<String> destinations) {
+        public Builder destinations(List<String> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }

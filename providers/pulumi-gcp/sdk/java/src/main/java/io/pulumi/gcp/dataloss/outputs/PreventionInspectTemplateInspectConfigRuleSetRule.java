@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule;
 
-    @OutputCustomType.Constructor({"exclusionRule","hotwordRule"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRule(
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
-        @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
+        @OutputCustomType.Parameter("exclusionRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule,
+        @OutputCustomType.Parameter("hotwordRule") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
         this.exclusionRule = exclusionRule;
         this.hotwordRule = hotwordRule;
     }
@@ -72,12 +72,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
     	      this.hotwordRule = defaults.hotwordRule;
         }
 
-        public Builder setExclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule) {
+        public Builder exclusionRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule exclusionRule) {
             this.exclusionRule = exclusionRule;
             return this;
         }
 
-        public Builder setHotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
+        public Builder hotwordRule(@Nullable PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule hotwordRule) {
             this.hotwordRule = hotwordRule;
             return this;
         }

@@ -122,27 +122,27 @@ public final class WorkflowTriggerListCallbackUrlQueriesResponse extends io.pulu
     	      this.sv = defaults.sv;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setSe(@Nullable String se) {
+        public Builder se(@Nullable String se) {
             this.se = se;
             return this;
         }
 
-        public Builder setSig(@Nullable String sig) {
+        public Builder sig(@Nullable String sig) {
             this.sig = sig;
             return this;
         }
 
-        public Builder setSp(@Nullable String sp) {
+        public Builder sp(@Nullable String sp) {
             this.sp = sp;
             return this;
         }
 
-        public Builder setSv(@Nullable String sv) {
+        public Builder sv(@Nullable String sv) {
             this.sv = sv;
             return this;
         }

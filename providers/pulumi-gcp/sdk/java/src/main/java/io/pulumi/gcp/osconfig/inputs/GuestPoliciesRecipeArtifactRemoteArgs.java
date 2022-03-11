@@ -72,22 +72,22 @@ public final class GuestPoliciesRecipeArtifactRemoteArgs extends io.pulumi.resou
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCheckSum(@Nullable Input<String> checkSum) {
+        public Builder checkSum(@Nullable Input<String> checkSum) {
             this.checkSum = checkSum;
             return this;
         }
 
-        public Builder setCheckSum(@Nullable String checkSum) {
+        public Builder checkSum(@Nullable String checkSum) {
             this.checkSum = Input.ofNullable(checkSum);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

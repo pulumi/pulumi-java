@@ -15,8 +15,8 @@ public final class IdentitySelectorResponse {
      */
     private final String identity;
 
-    @OutputCustomType.Constructor({"identity"})
-    private IdentitySelectorResponse(String identity) {
+    @OutputCustomType.Constructor
+    private IdentitySelectorResponse(@OutputCustomType.Parameter("identity") String identity) {
         this.identity = identity;
     }
 
@@ -48,7 +48,7 @@ public final class IdentitySelectorResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setIdentity(String identity) {
+        public Builder identity(String identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }

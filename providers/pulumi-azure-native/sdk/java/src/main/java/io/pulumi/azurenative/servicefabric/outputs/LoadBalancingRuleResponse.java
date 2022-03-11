@@ -38,13 +38,13 @@ public final class LoadBalancingRuleResponse {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"backendPort","frontendPort","probeProtocol","probeRequestPath","protocol"})
+    @OutputCustomType.Constructor
     private LoadBalancingRuleResponse(
-        Integer backendPort,
-        Integer frontendPort,
-        String probeProtocol,
-        @Nullable String probeRequestPath,
-        String protocol) {
+        @OutputCustomType.Parameter("backendPort") Integer backendPort,
+        @OutputCustomType.Parameter("frontendPort") Integer frontendPort,
+        @OutputCustomType.Parameter("probeProtocol") String probeProtocol,
+        @OutputCustomType.Parameter("probeRequestPath") @Nullable String probeRequestPath,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPort = frontendPort;
         this.probeProtocol = probeProtocol;
@@ -116,27 +116,27 @@ public final class LoadBalancingRuleResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setFrontendPort(Integer frontendPort) {
+        public Builder frontendPort(Integer frontendPort) {
             this.frontendPort = Objects.requireNonNull(frontendPort);
             return this;
         }
 
-        public Builder setProbeProtocol(String probeProtocol) {
+        public Builder probeProtocol(String probeProtocol) {
             this.probeProtocol = Objects.requireNonNull(probeProtocol);
             return this;
         }
 
-        public Builder setProbeRequestPath(@Nullable String probeRequestPath) {
+        public Builder probeRequestPath(@Nullable String probeRequestPath) {
             this.probeRequestPath = probeRequestPath;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

@@ -33,12 +33,12 @@ public final class StorageProfileResponse {
      */
     private final @Nullable Integer storageMB;
 
-    @OutputCustomType.Constructor({"backupRetentionDays","geoRedundantBackup","storageAutogrow","storageMB"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable Integer backupRetentionDays,
-        @Nullable String geoRedundantBackup,
-        @Nullable String storageAutogrow,
-        @Nullable Integer storageMB) {
+        @OutputCustomType.Parameter("backupRetentionDays") @Nullable Integer backupRetentionDays,
+        @OutputCustomType.Parameter("geoRedundantBackup") @Nullable String geoRedundantBackup,
+        @OutputCustomType.Parameter("storageAutogrow") @Nullable String storageAutogrow,
+        @OutputCustomType.Parameter("storageMB") @Nullable Integer storageMB) {
         this.backupRetentionDays = backupRetentionDays;
         this.geoRedundantBackup = geoRedundantBackup;
         this.storageAutogrow = storageAutogrow;
@@ -100,22 +100,22 @@ public final class StorageProfileResponse {
     	      this.storageMB = defaults.storageMB;
         }
 
-        public Builder setBackupRetentionDays(@Nullable Integer backupRetentionDays) {
+        public Builder backupRetentionDays(@Nullable Integer backupRetentionDays) {
             this.backupRetentionDays = backupRetentionDays;
             return this;
         }
 
-        public Builder setGeoRedundantBackup(@Nullable String geoRedundantBackup) {
+        public Builder geoRedundantBackup(@Nullable String geoRedundantBackup) {
             this.geoRedundantBackup = geoRedundantBackup;
             return this;
         }
 
-        public Builder setStorageAutogrow(@Nullable String storageAutogrow) {
+        public Builder storageAutogrow(@Nullable String storageAutogrow) {
             this.storageAutogrow = storageAutogrow;
             return this;
         }
 
-        public Builder setStorageMB(@Nullable Integer storageMB) {
+        public Builder storageMB(@Nullable Integer storageMB) {
             this.storageMB = storageMB;
             return this;
         }

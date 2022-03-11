@@ -25,11 +25,11 @@ public final class NonCompliantFileResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"displayCommand","path","reason"})
+    @OutputCustomType.Constructor
     private NonCompliantFileResponse(
-        String displayCommand,
-        String path,
-        String reason) {
+        @OutputCustomType.Parameter("displayCommand") String displayCommand,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.displayCommand = displayCommand;
         this.path = path;
         this.reason = reason;
@@ -81,17 +81,17 @@ public final class NonCompliantFileResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setDisplayCommand(String displayCommand) {
+        public Builder displayCommand(String displayCommand) {
             this.displayCommand = Objects.requireNonNull(displayCommand);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

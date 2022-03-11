@@ -58,12 +58,12 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.corsRules = defaults.corsRules;
         }
 
-        public Builder setCorsRules(@Nullable Input<List<CorsRuleArgs>> corsRules) {
+        public Builder corsRules(@Nullable Input<List<CorsRuleArgs>> corsRules) {
             this.corsRules = corsRules;
             return this;
         }
 
-        public Builder setCorsRules(@Nullable List<CorsRuleArgs> corsRules) {
+        public Builder corsRules(@Nullable List<CorsRuleArgs> corsRules) {
             this.corsRules = Input.ofNullable(corsRules);
             return this;
         }

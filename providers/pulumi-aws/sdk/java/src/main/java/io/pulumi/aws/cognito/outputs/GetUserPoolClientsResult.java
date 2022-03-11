@@ -27,12 +27,12 @@ public final class GetUserPoolClientsResult {
     private final String id;
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"clientIds","clientNames","id","userPoolId"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientsResult(
-        List<String> clientIds,
-        List<String> clientNames,
-        String id,
-        String userPoolId) {
+        @OutputCustomType.Parameter("clientIds") List<String> clientIds,
+        @OutputCustomType.Parameter("clientNames") List<String> clientNames,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.clientIds = clientIds;
         this.clientNames = clientNames;
         this.id = id;
@@ -90,22 +90,22 @@ public final class GetUserPoolClientsResult {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setClientIds(List<String> clientIds) {
+        public Builder clientIds(List<String> clientIds) {
             this.clientIds = Objects.requireNonNull(clientIds);
             return this;
         }
 
-        public Builder setClientNames(List<String> clientNames) {
+        public Builder clientNames(List<String> clientNames) {
             this.clientNames = Objects.requireNonNull(clientNames);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }

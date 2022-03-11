@@ -102,52 +102,52 @@ public final class AnomalyDetectorMetricSourceArgs extends io.pulumi.resources.R
     	      this.s3SourceConfig = defaults.s3SourceConfig;
         }
 
-        public Builder setAppFlowConfig(@Nullable Input<AnomalyDetectorAppFlowConfigArgs> appFlowConfig) {
+        public Builder appFlowConfig(@Nullable Input<AnomalyDetectorAppFlowConfigArgs> appFlowConfig) {
             this.appFlowConfig = appFlowConfig;
             return this;
         }
 
-        public Builder setAppFlowConfig(@Nullable AnomalyDetectorAppFlowConfigArgs appFlowConfig) {
+        public Builder appFlowConfig(@Nullable AnomalyDetectorAppFlowConfigArgs appFlowConfig) {
             this.appFlowConfig = Input.ofNullable(appFlowConfig);
             return this;
         }
 
-        public Builder setCloudwatchConfig(@Nullable Input<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable Input<AnomalyDetectorCloudwatchConfigArgs> cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
 
-        public Builder setCloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfigArgs cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfigArgs cloudwatchConfig) {
             this.cloudwatchConfig = Input.ofNullable(cloudwatchConfig);
             return this;
         }
 
-        public Builder setRDSSourceConfig(@Nullable Input<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig) {
+        public Builder rDSSourceConfig(@Nullable Input<AnomalyDetectorRDSSourceConfigArgs> rDSSourceConfig) {
             this.rDSSourceConfig = rDSSourceConfig;
             return this;
         }
 
-        public Builder setRDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfigArgs rDSSourceConfig) {
+        public Builder rDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfigArgs rDSSourceConfig) {
             this.rDSSourceConfig = Input.ofNullable(rDSSourceConfig);
             return this;
         }
 
-        public Builder setRedshiftSourceConfig(@Nullable Input<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig) {
+        public Builder redshiftSourceConfig(@Nullable Input<AnomalyDetectorRedshiftSourceConfigArgs> redshiftSourceConfig) {
             this.redshiftSourceConfig = redshiftSourceConfig;
             return this;
         }
 
-        public Builder setRedshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfigArgs redshiftSourceConfig) {
+        public Builder redshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfigArgs redshiftSourceConfig) {
             this.redshiftSourceConfig = Input.ofNullable(redshiftSourceConfig);
             return this;
         }
 
-        public Builder setS3SourceConfig(@Nullable Input<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig) {
+        public Builder s3SourceConfig(@Nullable Input<AnomalyDetectorS3SourceConfigArgs> s3SourceConfig) {
             this.s3SourceConfig = s3SourceConfig;
             return this;
         }
 
-        public Builder setS3SourceConfig(@Nullable AnomalyDetectorS3SourceConfigArgs s3SourceConfig) {
+        public Builder s3SourceConfig(@Nullable AnomalyDetectorS3SourceConfigArgs s3SourceConfig) {
             this.s3SourceConfig = Input.ofNullable(s3SourceConfig);
             return this;
         }

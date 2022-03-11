@@ -23,10 +23,10 @@ public final class KeyForDiskEncryptionSetResponse {
      */
     private final @Nullable SourceVaultResponse sourceVault;
 
-    @OutputCustomType.Constructor({"keyUrl","sourceVault"})
+    @OutputCustomType.Constructor
     private KeyForDiskEncryptionSetResponse(
-        String keyUrl,
-        @Nullable SourceVaultResponse sourceVault) {
+        @OutputCustomType.Parameter("keyUrl") String keyUrl,
+        @OutputCustomType.Parameter("sourceVault") @Nullable SourceVaultResponse sourceVault) {
         this.keyUrl = keyUrl;
         this.sourceVault = sourceVault;
     }
@@ -68,12 +68,12 @@ public final class KeyForDiskEncryptionSetResponse {
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setKeyUrl(String keyUrl) {
+        public Builder keyUrl(String keyUrl) {
             this.keyUrl = Objects.requireNonNull(keyUrl);
             return this;
         }
 
-        public Builder setSourceVault(@Nullable SourceVaultResponse sourceVault) {
+        public Builder sourceVault(@Nullable SourceVaultResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }

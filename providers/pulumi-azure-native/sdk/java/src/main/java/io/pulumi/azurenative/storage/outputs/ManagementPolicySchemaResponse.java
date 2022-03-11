@@ -16,8 +16,8 @@ public final class ManagementPolicySchemaResponse {
      */
     private final List<ManagementPolicyRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private ManagementPolicySchemaResponse(List<ManagementPolicyRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private ManagementPolicySchemaResponse(@OutputCustomType.Parameter("rules") List<ManagementPolicyRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -49,7 +49,7 @@ public final class ManagementPolicySchemaResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<ManagementPolicyRuleResponse> rules) {
+        public Builder rules(List<ManagementPolicyRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

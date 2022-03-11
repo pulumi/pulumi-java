@@ -21,10 +21,10 @@ public final class VaultNotification {
      */
     private final String snsTopic;
 
-    @OutputCustomType.Constructor({"events","snsTopic"})
+    @OutputCustomType.Constructor
     private VaultNotification(
-        List<String> events,
-        String snsTopic) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("snsTopic") String snsTopic) {
         this.events = events;
         this.snsTopic = snsTopic;
     }
@@ -66,12 +66,12 @@ public final class VaultNotification {
     	      this.snsTopic = defaults.snsTopic;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setSnsTopic(String snsTopic) {
+        public Builder snsTopic(String snsTopic) {
             this.snsTopic = Objects.requireNonNull(snsTopic);
             return this;
         }

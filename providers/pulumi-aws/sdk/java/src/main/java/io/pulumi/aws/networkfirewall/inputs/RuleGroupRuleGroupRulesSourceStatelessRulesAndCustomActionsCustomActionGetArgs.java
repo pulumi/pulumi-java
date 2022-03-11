@@ -70,22 +70,22 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     	      this.actionName = defaults.actionName;
         }
 
-        public Builder setActionDefinition(Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition) {
+        public Builder actionDefinition(Input<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs> actionDefinition) {
             this.actionDefinition = Objects.requireNonNull(actionDefinition);
             return this;
         }
 
-        public Builder setActionDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs actionDefinition) {
+        public Builder actionDefinition(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionGetArgs actionDefinition) {
             this.actionDefinition = Input.of(Objects.requireNonNull(actionDefinition));
             return this;
         }
 
-        public Builder setActionName(Input<String> actionName) {
+        public Builder actionName(Input<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }

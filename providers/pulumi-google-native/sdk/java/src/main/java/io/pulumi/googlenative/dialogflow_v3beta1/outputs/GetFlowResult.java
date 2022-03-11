@@ -49,15 +49,15 @@ public final class GetFlowResult {
      */
     private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
 
-    @OutputCustomType.Constructor({"description","displayName","eventHandlers","name","nluSettings","transitionRouteGroups","transitionRoutes"})
+    @OutputCustomType.Constructor
     private GetFlowResult(
-        String description,
-        String displayName,
-        List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers,
-        String name,
-        GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
-        List<String> transitionRouteGroups,
-        List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("eventHandlers") List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nluSettings") GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings,
+        @OutputCustomType.Parameter("transitionRouteGroups") List<String> transitionRouteGroups,
+        @OutputCustomType.Parameter("transitionRoutes") List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
         this.description = description;
         this.displayName = displayName;
         this.eventHandlers = eventHandlers;
@@ -149,37 +149,37 @@ public final class GetFlowResult {
     	      this.transitionRoutes = defaults.transitionRoutes;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers) {
+        public Builder eventHandlers(List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers) {
             this.eventHandlers = Objects.requireNonNull(eventHandlers);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNluSettings(GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings) {
+        public Builder nluSettings(GoogleCloudDialogflowCxV3beta1NluSettingsResponse nluSettings) {
             this.nluSettings = Objects.requireNonNull(nluSettings);
             return this;
         }
 
-        public Builder setTransitionRouteGroups(List<String> transitionRouteGroups) {
+        public Builder transitionRouteGroups(List<String> transitionRouteGroups) {
             this.transitionRouteGroups = Objects.requireNonNull(transitionRouteGroups);
             return this;
         }
 
-        public Builder setTransitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
+        public Builder transitionRoutes(List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes) {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }

@@ -22,10 +22,10 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor({"managementGroups","subscriptions"})
+    @OutputCustomType.Constructor
     private NetworkManagerPropertiesResponseNetworkManagerScopes(
-        @Nullable List<String> managementGroups,
-        @Nullable List<String> subscriptions) {
+        @OutputCustomType.Parameter("managementGroups") @Nullable List<String> managementGroups,
+        @OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.managementGroups = managementGroups;
         this.subscriptions = subscriptions;
     }
@@ -67,12 +67,12 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setManagementGroups(@Nullable List<String> managementGroups) {
+        public Builder managementGroups(@Nullable List<String> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

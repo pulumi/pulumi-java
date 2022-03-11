@@ -20,10 +20,10 @@ public final class Hl7V2NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"filter","pubsubTopic"})
+    @OutputCustomType.Constructor
     private Hl7V2NotificationConfigResponse(
-        String filter,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }
@@ -65,12 +65,12 @@ public final class Hl7V2NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

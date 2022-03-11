@@ -15,8 +15,8 @@ public final class SessionInfoResponse {
      */
     private final String sessionId;
 
-    @OutputCustomType.Constructor({"sessionId"})
-    private SessionInfoResponse(String sessionId) {
+    @OutputCustomType.Constructor
+    private SessionInfoResponse(@OutputCustomType.Parameter("sessionId") String sessionId) {
         this.sessionId = sessionId;
     }
 
@@ -48,7 +48,7 @@ public final class SessionInfoResponse {
     	      this.sessionId = defaults.sessionId;
         }
 
-        public Builder setSessionId(String sessionId) {
+        public Builder sessionId(String sessionId) {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }

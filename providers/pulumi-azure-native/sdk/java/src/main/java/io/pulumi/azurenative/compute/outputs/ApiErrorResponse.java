@@ -40,13 +40,13 @@ public final class ApiErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","innererror","message","target"})
+    @OutputCustomType.Constructor
     private ApiErrorResponse(
-        @Nullable String code,
-        @Nullable List<ApiErrorBaseResponse> details,
-        @Nullable InnerErrorResponse innererror,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<ApiErrorBaseResponse> details,
+        @OutputCustomType.Parameter("innererror") @Nullable InnerErrorResponse innererror,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.innererror = innererror;
@@ -118,27 +118,27 @@ public final class ApiErrorResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<ApiErrorBaseResponse> details) {
+        public Builder details(@Nullable List<ApiErrorBaseResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setInnererror(@Nullable InnerErrorResponse innererror) {
+        public Builder innererror(@Nullable InnerErrorResponse innererror) {
             this.innererror = innererror;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

@@ -168,82 +168,82 @@ public final class ScheduledActionState extends io.pulumi.resources.ResourceArgs
     	      this.targetAction = defaults.targetAction;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setIamRole(@Nullable Input<String> iamRole) {
+        public Builder iamRole(@Nullable Input<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setIamRole(@Nullable String iamRole) {
+        public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = Input.ofNullable(iamRole);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTargetAction(@Nullable Input<ScheduledActionTargetActionGetArgs> targetAction) {
+        public Builder targetAction(@Nullable Input<ScheduledActionTargetActionGetArgs> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
 
-        public Builder setTargetAction(@Nullable ScheduledActionTargetActionGetArgs targetAction) {
+        public Builder targetAction(@Nullable ScheduledActionTargetActionGetArgs targetAction) {
             this.targetAction = Input.ofNullable(targetAction);
             return this;
         }

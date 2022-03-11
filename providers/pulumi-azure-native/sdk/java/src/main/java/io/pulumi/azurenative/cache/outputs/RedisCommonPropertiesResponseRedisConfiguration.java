@@ -67,19 +67,19 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
      */
     private final @Nullable String rdbStorageConnectionString;
 
-    @OutputCustomType.Constructor({"aofStorageConnectionString0","aofStorageConnectionString1","maxclients","maxfragmentationmemoryReserved","maxmemoryDelta","maxmemoryPolicy","maxmemoryReserved","rdbBackupEnabled","rdbBackupFrequency","rdbBackupMaxSnapshotCount","rdbStorageConnectionString"})
+    @OutputCustomType.Constructor
     private RedisCommonPropertiesResponseRedisConfiguration(
-        @Nullable String aofStorageConnectionString0,
-        @Nullable String aofStorageConnectionString1,
-        String maxclients,
-        @Nullable String maxfragmentationmemoryReserved,
-        @Nullable String maxmemoryDelta,
-        @Nullable String maxmemoryPolicy,
-        @Nullable String maxmemoryReserved,
-        @Nullable String rdbBackupEnabled,
-        @Nullable String rdbBackupFrequency,
-        @Nullable String rdbBackupMaxSnapshotCount,
-        @Nullable String rdbStorageConnectionString) {
+        @OutputCustomType.Parameter("aofStorageConnectionString0") @Nullable String aofStorageConnectionString0,
+        @OutputCustomType.Parameter("aofStorageConnectionString1") @Nullable String aofStorageConnectionString1,
+        @OutputCustomType.Parameter("maxclients") String maxclients,
+        @OutputCustomType.Parameter("maxfragmentationmemoryReserved") @Nullable String maxfragmentationmemoryReserved,
+        @OutputCustomType.Parameter("maxmemoryDelta") @Nullable String maxmemoryDelta,
+        @OutputCustomType.Parameter("maxmemoryPolicy") @Nullable String maxmemoryPolicy,
+        @OutputCustomType.Parameter("maxmemoryReserved") @Nullable String maxmemoryReserved,
+        @OutputCustomType.Parameter("rdbBackupEnabled") @Nullable String rdbBackupEnabled,
+        @OutputCustomType.Parameter("rdbBackupFrequency") @Nullable String rdbBackupFrequency,
+        @OutputCustomType.Parameter("rdbBackupMaxSnapshotCount") @Nullable String rdbBackupMaxSnapshotCount,
+        @OutputCustomType.Parameter("rdbStorageConnectionString") @Nullable String rdbStorageConnectionString) {
         this.aofStorageConnectionString0 = aofStorageConnectionString0;
         this.aofStorageConnectionString1 = aofStorageConnectionString1;
         this.maxclients = maxclients;
@@ -211,57 +211,57 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
     	      this.rdbStorageConnectionString = defaults.rdbStorageConnectionString;
         }
 
-        public Builder setAofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
+        public Builder aofStorageConnectionString0(@Nullable String aofStorageConnectionString0) {
             this.aofStorageConnectionString0 = aofStorageConnectionString0;
             return this;
         }
 
-        public Builder setAofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
+        public Builder aofStorageConnectionString1(@Nullable String aofStorageConnectionString1) {
             this.aofStorageConnectionString1 = aofStorageConnectionString1;
             return this;
         }
 
-        public Builder setMaxclients(String maxclients) {
+        public Builder maxclients(String maxclients) {
             this.maxclients = Objects.requireNonNull(maxclients);
             return this;
         }
 
-        public Builder setMaxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
+        public Builder maxfragmentationmemoryReserved(@Nullable String maxfragmentationmemoryReserved) {
             this.maxfragmentationmemoryReserved = maxfragmentationmemoryReserved;
             return this;
         }
 
-        public Builder setMaxmemoryDelta(@Nullable String maxmemoryDelta) {
+        public Builder maxmemoryDelta(@Nullable String maxmemoryDelta) {
             this.maxmemoryDelta = maxmemoryDelta;
             return this;
         }
 
-        public Builder setMaxmemoryPolicy(@Nullable String maxmemoryPolicy) {
+        public Builder maxmemoryPolicy(@Nullable String maxmemoryPolicy) {
             this.maxmemoryPolicy = maxmemoryPolicy;
             return this;
         }
 
-        public Builder setMaxmemoryReserved(@Nullable String maxmemoryReserved) {
+        public Builder maxmemoryReserved(@Nullable String maxmemoryReserved) {
             this.maxmemoryReserved = maxmemoryReserved;
             return this;
         }
 
-        public Builder setRdbBackupEnabled(@Nullable String rdbBackupEnabled) {
+        public Builder rdbBackupEnabled(@Nullable String rdbBackupEnabled) {
             this.rdbBackupEnabled = rdbBackupEnabled;
             return this;
         }
 
-        public Builder setRdbBackupFrequency(@Nullable String rdbBackupFrequency) {
+        public Builder rdbBackupFrequency(@Nullable String rdbBackupFrequency) {
             this.rdbBackupFrequency = rdbBackupFrequency;
             return this;
         }
 
-        public Builder setRdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
+        public Builder rdbBackupMaxSnapshotCount(@Nullable String rdbBackupMaxSnapshotCount) {
             this.rdbBackupMaxSnapshotCount = rdbBackupMaxSnapshotCount;
             return this;
         }
 
-        public Builder setRdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
+        public Builder rdbStorageConnectionString(@Nullable String rdbStorageConnectionString) {
             this.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
         }

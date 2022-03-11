@@ -30,12 +30,12 @@ public final class StorageAccountKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"creationTime","keyName","permissions","value"})
+    @OutputCustomType.Constructor
     private StorageAccountKeyResponse(
-        String creationTime,
-        String keyName,
-        String permissions,
-        String value) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.keyName = keyName;
         this.permissions = permissions;
@@ -97,22 +97,22 @@ public final class StorageAccountKeyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

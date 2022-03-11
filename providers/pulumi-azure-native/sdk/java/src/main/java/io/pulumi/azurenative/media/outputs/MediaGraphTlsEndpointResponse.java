@@ -41,13 +41,13 @@ public final class MediaGraphTlsEndpointResponse {
      */
     private final @Nullable MediaGraphTlsValidationOptionsResponse validationOptions;
 
-    @OutputCustomType.Constructor({"credentials","odataType","trustedCertificates","url","validationOptions"})
+    @OutputCustomType.Constructor
     private MediaGraphTlsEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
-        String url,
-        @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
+        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("trustedCertificates") @Nullable MediaGraphPemCertificateListResponse trustedCertificates,
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("validationOptions") @Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.trustedCertificates = trustedCertificates;
@@ -120,27 +120,27 @@ public final class MediaGraphTlsEndpointResponse {
     	      this.validationOptions = defaults.validationOptions;
         }
 
-        public Builder setCredentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setTrustedCertificates(@Nullable MediaGraphPemCertificateListResponse trustedCertificates) {
+        public Builder trustedCertificates(@Nullable MediaGraphPemCertificateListResponse trustedCertificates) {
             this.trustedCertificates = trustedCertificates;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setValidationOptions(@Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(@Nullable MediaGraphTlsValidationOptionsResponse validationOptions) {
             this.validationOptions = validationOptions;
             return this;
         }

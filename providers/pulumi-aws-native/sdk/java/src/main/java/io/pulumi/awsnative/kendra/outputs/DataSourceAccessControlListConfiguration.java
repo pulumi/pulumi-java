@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceAccessControlListConfiguration {
     private final @Nullable String keyPath;
 
-    @OutputCustomType.Constructor({"keyPath"})
-    private DataSourceAccessControlListConfiguration(@Nullable String keyPath) {
+    @OutputCustomType.Constructor
+    private DataSourceAccessControlListConfiguration(@OutputCustomType.Parameter("keyPath") @Nullable String keyPath) {
         this.keyPath = keyPath;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceAccessControlListConfiguration {
     	      this.keyPath = defaults.keyPath;
         }
 
-        public Builder setKeyPath(@Nullable String keyPath) {
+        public Builder keyPath(@Nullable String keyPath) {
             this.keyPath = keyPath;
             return this;
         }

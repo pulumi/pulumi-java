@@ -22,10 +22,10 @@ public final class GetSharedKeysResult {
      */
     private final @Nullable String secondarySharedKey;
 
-    @OutputCustomType.Constructor({"primarySharedKey","secondarySharedKey"})
+    @OutputCustomType.Constructor
     private GetSharedKeysResult(
-        @Nullable String primarySharedKey,
-        @Nullable String secondarySharedKey) {
+        @OutputCustomType.Parameter("primarySharedKey") @Nullable String primarySharedKey,
+        @OutputCustomType.Parameter("secondarySharedKey") @Nullable String secondarySharedKey) {
         this.primarySharedKey = primarySharedKey;
         this.secondarySharedKey = secondarySharedKey;
     }
@@ -67,12 +67,12 @@ public final class GetSharedKeysResult {
     	      this.secondarySharedKey = defaults.secondarySharedKey;
         }
 
-        public Builder setPrimarySharedKey(@Nullable String primarySharedKey) {
+        public Builder primarySharedKey(@Nullable String primarySharedKey) {
             this.primarySharedKey = primarySharedKey;
             return this;
         }
 
-        public Builder setSecondarySharedKey(@Nullable String secondarySharedKey) {
+        public Builder secondarySharedKey(@Nullable String secondarySharedKey) {
             this.secondarySharedKey = secondarySharedKey;
             return this;
         }

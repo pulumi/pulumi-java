@@ -30,11 +30,11 @@ public final class GalleryImageVersionStorageProfileResponse {
      */
     private final @Nullable GalleryArtifactVersionSourceResponse source;
 
-    @OutputCustomType.Constructor({"dataDiskImages","osDiskImage","source"})
+    @OutputCustomType.Constructor
     private GalleryImageVersionStorageProfileResponse(
-        @Nullable List<GalleryDataDiskImageResponse> dataDiskImages,
-        @Nullable GalleryOSDiskImageResponse osDiskImage,
-        @Nullable GalleryArtifactVersionSourceResponse source) {
+        @OutputCustomType.Parameter("dataDiskImages") @Nullable List<GalleryDataDiskImageResponse> dataDiskImages,
+        @OutputCustomType.Parameter("osDiskImage") @Nullable GalleryOSDiskImageResponse osDiskImage,
+        @OutputCustomType.Parameter("source") @Nullable GalleryArtifactVersionSourceResponse source) {
         this.dataDiskImages = dataDiskImages;
         this.osDiskImage = osDiskImage;
         this.source = source;
@@ -86,17 +86,17 @@ public final class GalleryImageVersionStorageProfileResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setDataDiskImages(@Nullable List<GalleryDataDiskImageResponse> dataDiskImages) {
+        public Builder dataDiskImages(@Nullable List<GalleryDataDiskImageResponse> dataDiskImages) {
             this.dataDiskImages = dataDiskImages;
             return this;
         }
 
-        public Builder setOsDiskImage(@Nullable GalleryOSDiskImageResponse osDiskImage) {
+        public Builder osDiskImage(@Nullable GalleryOSDiskImageResponse osDiskImage) {
             this.osDiskImage = osDiskImage;
             return this;
         }
 
-        public Builder setSource(@Nullable GalleryArtifactVersionSourceResponse source) {
+        public Builder source(@Nullable GalleryArtifactVersionSourceResponse source) {
             this.source = source;
             return this;
         }

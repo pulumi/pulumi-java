@@ -15,10 +15,10 @@ public final class ThemeTileLayoutStyle {
     private final @Nullable ThemeGutterStyle gutter;
     private final @Nullable ThemeMarginStyle margin;
 
-    @OutputCustomType.Constructor({"gutter","margin"})
+    @OutputCustomType.Constructor
     private ThemeTileLayoutStyle(
-        @Nullable ThemeGutterStyle gutter,
-        @Nullable ThemeMarginStyle margin) {
+        @OutputCustomType.Parameter("gutter") @Nullable ThemeGutterStyle gutter,
+        @OutputCustomType.Parameter("margin") @Nullable ThemeMarginStyle margin) {
         this.gutter = gutter;
         this.margin = margin;
     }
@@ -52,12 +52,12 @@ public final class ThemeTileLayoutStyle {
     	      this.margin = defaults.margin;
         }
 
-        public Builder setGutter(@Nullable ThemeGutterStyle gutter) {
+        public Builder gutter(@Nullable ThemeGutterStyle gutter) {
             this.gutter = gutter;
             return this;
         }
 
-        public Builder setMargin(@Nullable ThemeMarginStyle margin) {
+        public Builder margin(@Nullable ThemeMarginStyle margin) {
             this.margin = margin;
             return this;
         }

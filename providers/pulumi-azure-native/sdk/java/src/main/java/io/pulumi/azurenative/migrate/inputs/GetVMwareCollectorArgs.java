@@ -84,17 +84,17 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
     	      this.vmWareCollectorName = defaults.vmWareCollectorName;
         }
 
-        public Builder setProjectName(String projectName) {
+        public Builder projectName(String projectName) {
             this.projectName = Objects.requireNonNull(projectName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVmWareCollectorName(String vmWareCollectorName) {
+        public Builder vmWareCollectorName(String vmWareCollectorName) {
             this.vmWareCollectorName = Objects.requireNonNull(vmWareCollectorName);
             return this;
         }

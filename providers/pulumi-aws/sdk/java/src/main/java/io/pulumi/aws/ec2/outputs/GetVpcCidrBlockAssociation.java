@@ -26,11 +26,11 @@ public final class GetVpcCidrBlockAssociation {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"associationId","cidrBlock","state"})
+    @OutputCustomType.Constructor
     private GetVpcCidrBlockAssociation(
-        String associationId,
-        String cidrBlock,
-        String state) {
+        @OutputCustomType.Parameter("associationId") String associationId,
+        @OutputCustomType.Parameter("cidrBlock") String cidrBlock,
+        @OutputCustomType.Parameter("state") String state) {
         this.associationId = associationId;
         this.cidrBlock = cidrBlock;
         this.state = state;
@@ -83,17 +83,17 @@ public final class GetVpcCidrBlockAssociation {
     	      this.state = defaults.state;
         }
 
-        public Builder setAssociationId(String associationId) {
+        public Builder associationId(String associationId) {
             this.associationId = Objects.requireNonNull(associationId);
             return this;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

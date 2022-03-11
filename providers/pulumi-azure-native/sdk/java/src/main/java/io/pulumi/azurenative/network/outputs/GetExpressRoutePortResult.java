@@ -109,26 +109,26 @@ public final class GetExpressRoutePortResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocationDate","bandwidthInGbps","circuits","encapsulation","etag","etherType","id","identity","links","location","mtu","name","peeringLocation","provisionedBandwidthInGbps","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private GetExpressRoutePortResult(
-        String allocationDate,
-        @Nullable Integer bandwidthInGbps,
-        List<SubResourceResponse> circuits,
-        @Nullable String encapsulation,
-        String etag,
-        String etherType,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable List<ExpressRouteLinkResponse> links,
-        @Nullable String location,
-        String mtu,
-        String name,
-        @Nullable String peeringLocation,
-        Double provisionedBandwidthInGbps,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allocationDate") String allocationDate,
+        @OutputCustomType.Parameter("bandwidthInGbps") @Nullable Integer bandwidthInGbps,
+        @OutputCustomType.Parameter("circuits") List<SubResourceResponse> circuits,
+        @OutputCustomType.Parameter("encapsulation") @Nullable String encapsulation,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("etherType") String etherType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("links") @Nullable List<ExpressRouteLinkResponse> links,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mtu") String mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("provisionedBandwidthInGbps") Double provisionedBandwidthInGbps,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocationDate = allocationDate;
         this.bandwidthInGbps = bandwidthInGbps;
         this.circuits = circuits;
@@ -330,92 +330,92 @@ public final class GetExpressRoutePortResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocationDate(String allocationDate) {
+        public Builder allocationDate(String allocationDate) {
             this.allocationDate = Objects.requireNonNull(allocationDate);
             return this;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Integer bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
-        public Builder setCircuits(List<SubResourceResponse> circuits) {
+        public Builder circuits(List<SubResourceResponse> circuits) {
             this.circuits = Objects.requireNonNull(circuits);
             return this;
         }
 
-        public Builder setEncapsulation(@Nullable String encapsulation) {
+        public Builder encapsulation(@Nullable String encapsulation) {
             this.encapsulation = encapsulation;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEtherType(String etherType) {
+        public Builder etherType(String etherType) {
             this.etherType = Objects.requireNonNull(etherType);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLinks(@Nullable List<ExpressRouteLinkResponse> links) {
+        public Builder links(@Nullable List<ExpressRouteLinkResponse> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMtu(String mtu) {
+        public Builder mtu(String mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setProvisionedBandwidthInGbps(Double provisionedBandwidthInGbps) {
+        public Builder provisionedBandwidthInGbps(Double provisionedBandwidthInGbps) {
             this.provisionedBandwidthInGbps = Objects.requireNonNull(provisionedBandwidthInGbps);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

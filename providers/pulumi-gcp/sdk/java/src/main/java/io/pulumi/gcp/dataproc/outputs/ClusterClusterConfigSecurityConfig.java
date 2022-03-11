@@ -15,8 +15,8 @@ public final class ClusterClusterConfigSecurityConfig {
      */
     private final ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig;
 
-    @OutputCustomType.Constructor({"kerberosConfig"})
-    private ClusterClusterConfigSecurityConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+    @OutputCustomType.Constructor
+    private ClusterClusterConfigSecurityConfig(@OutputCustomType.Parameter("kerberosConfig") ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterClusterConfigSecurityConfig {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
+        public Builder kerberosConfig(ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }

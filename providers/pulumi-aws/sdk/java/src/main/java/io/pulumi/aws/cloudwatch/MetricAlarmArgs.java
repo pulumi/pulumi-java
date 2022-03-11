@@ -404,222 +404,222 @@ public final class MetricAlarmArgs extends io.pulumi.resources.ResourceArgs {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setActionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
-        public Builder setActionsEnabled(@Nullable Boolean actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Input.ofNullable(actionsEnabled);
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable Input<List<String>> alarmActions) {
+        public Builder alarmActions(@Nullable Input<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable List<String> alarmActions) {
+        public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Input.ofNullable(alarmActions);
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable Input<String> alarmDescription) {
+        public Builder alarmDescription(@Nullable Input<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable String alarmDescription) {
+        public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Input.ofNullable(alarmDescription);
             return this;
         }
 
-        public Builder setComparisonOperator(Input<String> comparisonOperator) {
+        public Builder comparisonOperator(Input<String> comparisonOperator) {
             this.comparisonOperator = Objects.requireNonNull(comparisonOperator);
             return this;
         }
 
-        public Builder setComparisonOperator(String comparisonOperator) {
+        public Builder comparisonOperator(String comparisonOperator) {
             this.comparisonOperator = Input.of(Objects.requireNonNull(comparisonOperator));
             return this;
         }
 
-        public Builder setDatapointsToAlarm(@Nullable Input<Integer> datapointsToAlarm) {
+        public Builder datapointsToAlarm(@Nullable Input<Integer> datapointsToAlarm) {
             this.datapointsToAlarm = datapointsToAlarm;
             return this;
         }
 
-        public Builder setDatapointsToAlarm(@Nullable Integer datapointsToAlarm) {
+        public Builder datapointsToAlarm(@Nullable Integer datapointsToAlarm) {
             this.datapointsToAlarm = Input.ofNullable(datapointsToAlarm);
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<Map<String,String>> dimensions) {
+        public Builder dimensions(@Nullable Input<Map<String,String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setEvaluateLowSampleCountPercentiles(@Nullable Input<String> evaluateLowSampleCountPercentiles) {
+        public Builder evaluateLowSampleCountPercentiles(@Nullable Input<String> evaluateLowSampleCountPercentiles) {
             this.evaluateLowSampleCountPercentiles = evaluateLowSampleCountPercentiles;
             return this;
         }
 
-        public Builder setEvaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
+        public Builder evaluateLowSampleCountPercentiles(@Nullable String evaluateLowSampleCountPercentiles) {
             this.evaluateLowSampleCountPercentiles = Input.ofNullable(evaluateLowSampleCountPercentiles);
             return this;
         }
 
-        public Builder setEvaluationPeriods(Input<Integer> evaluationPeriods) {
+        public Builder evaluationPeriods(Input<Integer> evaluationPeriods) {
             this.evaluationPeriods = Objects.requireNonNull(evaluationPeriods);
             return this;
         }
 
-        public Builder setEvaluationPeriods(Integer evaluationPeriods) {
+        public Builder evaluationPeriods(Integer evaluationPeriods) {
             this.evaluationPeriods = Input.of(Objects.requireNonNull(evaluationPeriods));
             return this;
         }
 
-        public Builder setExtendedStatistic(@Nullable Input<String> extendedStatistic) {
+        public Builder extendedStatistic(@Nullable Input<String> extendedStatistic) {
             this.extendedStatistic = extendedStatistic;
             return this;
         }
 
-        public Builder setExtendedStatistic(@Nullable String extendedStatistic) {
+        public Builder extendedStatistic(@Nullable String extendedStatistic) {
             this.extendedStatistic = Input.ofNullable(extendedStatistic);
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable List<String> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Input.ofNullable(insufficientDataActions);
             return this;
         }
 
-        public Builder setMetricName(@Nullable Input<String> metricName) {
+        public Builder metricName(@Nullable Input<String> metricName) {
             this.metricName = metricName;
             return this;
         }
 
-        public Builder setMetricName(@Nullable String metricName) {
+        public Builder metricName(@Nullable String metricName) {
             this.metricName = Input.ofNullable(metricName);
             return this;
         }
 
-        public Builder setMetricQueries(@Nullable Input<List<MetricAlarmMetricQueryArgs>> metricQueries) {
+        public Builder metricQueries(@Nullable Input<List<MetricAlarmMetricQueryArgs>> metricQueries) {
             this.metricQueries = metricQueries;
             return this;
         }
 
-        public Builder setMetricQueries(@Nullable List<MetricAlarmMetricQueryArgs> metricQueries) {
+        public Builder metricQueries(@Nullable List<MetricAlarmMetricQueryArgs> metricQueries) {
             this.metricQueries = Input.ofNullable(metricQueries);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setOkActions(@Nullable Input<List<String>> okActions) {
+        public Builder okActions(@Nullable Input<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
 
-        public Builder setOkActions(@Nullable List<String> okActions) {
+        public Builder okActions(@Nullable List<String> okActions) {
             this.okActions = Input.ofNullable(okActions);
             return this;
         }
 
-        public Builder setPeriod(@Nullable Input<Integer> period) {
+        public Builder period(@Nullable Input<Integer> period) {
             this.period = period;
             return this;
         }
 
-        public Builder setPeriod(@Nullable Integer period) {
+        public Builder period(@Nullable Integer period) {
             this.period = Input.ofNullable(period);
             return this;
         }
 
-        public Builder setStatistic(@Nullable Input<String> statistic) {
+        public Builder statistic(@Nullable Input<String> statistic) {
             this.statistic = statistic;
             return this;
         }
 
-        public Builder setStatistic(@Nullable String statistic) {
+        public Builder statistic(@Nullable String statistic) {
             this.statistic = Input.ofNullable(statistic);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Input<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
 
-        public Builder setThresholdMetricId(@Nullable Input<String> thresholdMetricId) {
+        public Builder thresholdMetricId(@Nullable Input<String> thresholdMetricId) {
             this.thresholdMetricId = thresholdMetricId;
             return this;
         }
 
-        public Builder setThresholdMetricId(@Nullable String thresholdMetricId) {
+        public Builder thresholdMetricId(@Nullable String thresholdMetricId) {
             this.thresholdMetricId = Input.ofNullable(thresholdMetricId);
             return this;
         }
 
-        public Builder setTreatMissingData(@Nullable Input<String> treatMissingData) {
+        public Builder treatMissingData(@Nullable Input<String> treatMissingData) {
             this.treatMissingData = treatMissingData;
             return this;
         }
 
-        public Builder setTreatMissingData(@Nullable String treatMissingData) {
+        public Builder treatMissingData(@Nullable String treatMissingData) {
             this.treatMissingData = Input.ofNullable(treatMissingData);
             return this;
         }
 
-        public Builder setUnit(@Nullable Input<String> unit) {
+        public Builder unit(@Nullable Input<String> unit) {
             this.unit = unit;
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = Input.ofNullable(unit);
             return this;
         }

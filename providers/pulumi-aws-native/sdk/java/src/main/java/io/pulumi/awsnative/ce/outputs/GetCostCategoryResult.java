@@ -35,14 +35,14 @@ public final class GetCostCategoryResult {
      */
     private final @Nullable String splitChargeRules;
 
-    @OutputCustomType.Constructor({"arn","defaultValue","effectiveStart","ruleVersion","rules","splitChargeRules"})
+    @OutputCustomType.Constructor
     private GetCostCategoryResult(
-        @Nullable String arn,
-        @Nullable String defaultValue,
-        @Nullable String effectiveStart,
-        @Nullable CostCategoryRuleVersion ruleVersion,
-        @Nullable String rules,
-        @Nullable String splitChargeRules) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("effectiveStart") @Nullable String effectiveStart,
+        @OutputCustomType.Parameter("ruleVersion") @Nullable CostCategoryRuleVersion ruleVersion,
+        @OutputCustomType.Parameter("rules") @Nullable String rules,
+        @OutputCustomType.Parameter("splitChargeRules") @Nullable String splitChargeRules) {
         this.arn = arn;
         this.defaultValue = defaultValue;
         this.effectiveStart = effectiveStart;
@@ -116,32 +116,32 @@ public final class GetCostCategoryResult {
     	      this.splitChargeRules = defaults.splitChargeRules;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setEffectiveStart(@Nullable String effectiveStart) {
+        public Builder effectiveStart(@Nullable String effectiveStart) {
             this.effectiveStart = effectiveStart;
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable CostCategoryRuleVersion ruleVersion) {
+        public Builder ruleVersion(@Nullable CostCategoryRuleVersion ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
-        public Builder setRules(@Nullable String rules) {
+        public Builder rules(@Nullable String rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setSplitChargeRules(@Nullable String splitChargeRules) {
+        public Builder splitChargeRules(@Nullable String splitChargeRules) {
             this.splitChargeRules = splitChargeRules;
             return this;
         }

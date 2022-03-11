@@ -102,22 +102,22 @@ public final class GetPrefixArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setPeeringServiceName(String peeringServiceName) {
+        public Builder peeringServiceName(String peeringServiceName) {
             this.peeringServiceName = Objects.requireNonNull(peeringServiceName);
             return this;
         }
 
-        public Builder setPrefixName(String prefixName) {
+        public Builder prefixName(String prefixName) {
             this.prefixName = Objects.requireNonNull(prefixName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

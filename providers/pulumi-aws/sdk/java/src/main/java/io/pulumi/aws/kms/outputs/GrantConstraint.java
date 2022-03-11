@@ -22,10 +22,10 @@ public final class GrantConstraint {
      */
     private final @Nullable Map<String,String> encryptionContextSubset;
 
-    @OutputCustomType.Constructor({"encryptionContextEquals","encryptionContextSubset"})
+    @OutputCustomType.Constructor
     private GrantConstraint(
-        @Nullable Map<String,String> encryptionContextEquals,
-        @Nullable Map<String,String> encryptionContextSubset) {
+        @OutputCustomType.Parameter("encryptionContextEquals") @Nullable Map<String,String> encryptionContextEquals,
+        @OutputCustomType.Parameter("encryptionContextSubset") @Nullable Map<String,String> encryptionContextSubset) {
         this.encryptionContextEquals = encryptionContextEquals;
         this.encryptionContextSubset = encryptionContextSubset;
     }
@@ -67,12 +67,12 @@ public final class GrantConstraint {
     	      this.encryptionContextSubset = defaults.encryptionContextSubset;
         }
 
-        public Builder setEncryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
+        public Builder encryptionContextEquals(@Nullable Map<String,String> encryptionContextEquals) {
             this.encryptionContextEquals = encryptionContextEquals;
             return this;
         }
 
-        public Builder setEncryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
+        public Builder encryptionContextSubset(@Nullable Map<String,String> encryptionContextSubset) {
             this.encryptionContextSubset = encryptionContextSubset;
             return this;
         }

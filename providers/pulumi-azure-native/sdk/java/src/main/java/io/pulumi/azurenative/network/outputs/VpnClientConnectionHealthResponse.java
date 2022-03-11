@@ -35,12 +35,12 @@ public final class VpnClientConnectionHealthResponse {
      */
     private final @Nullable Integer vpnClientConnectionsCount;
 
-    @OutputCustomType.Constructor({"allocatedIpAddresses","totalEgressBytesTransferred","totalIngressBytesTransferred","vpnClientConnectionsCount"})
+    @OutputCustomType.Constructor
     private VpnClientConnectionHealthResponse(
-        @Nullable List<String> allocatedIpAddresses,
-        Double totalEgressBytesTransferred,
-        Double totalIngressBytesTransferred,
-        @Nullable Integer vpnClientConnectionsCount) {
+        @OutputCustomType.Parameter("allocatedIpAddresses") @Nullable List<String> allocatedIpAddresses,
+        @OutputCustomType.Parameter("totalEgressBytesTransferred") Double totalEgressBytesTransferred,
+        @OutputCustomType.Parameter("totalIngressBytesTransferred") Double totalIngressBytesTransferred,
+        @OutputCustomType.Parameter("vpnClientConnectionsCount") @Nullable Integer vpnClientConnectionsCount) {
         this.allocatedIpAddresses = allocatedIpAddresses;
         this.totalEgressBytesTransferred = totalEgressBytesTransferred;
         this.totalIngressBytesTransferred = totalIngressBytesTransferred;
@@ -102,22 +102,22 @@ public final class VpnClientConnectionHealthResponse {
     	      this.vpnClientConnectionsCount = defaults.vpnClientConnectionsCount;
         }
 
-        public Builder setAllocatedIpAddresses(@Nullable List<String> allocatedIpAddresses) {
+        public Builder allocatedIpAddresses(@Nullable List<String> allocatedIpAddresses) {
             this.allocatedIpAddresses = allocatedIpAddresses;
             return this;
         }
 
-        public Builder setTotalEgressBytesTransferred(Double totalEgressBytesTransferred) {
+        public Builder totalEgressBytesTransferred(Double totalEgressBytesTransferred) {
             this.totalEgressBytesTransferred = Objects.requireNonNull(totalEgressBytesTransferred);
             return this;
         }
 
-        public Builder setTotalIngressBytesTransferred(Double totalIngressBytesTransferred) {
+        public Builder totalIngressBytesTransferred(Double totalIngressBytesTransferred) {
             this.totalIngressBytesTransferred = Objects.requireNonNull(totalIngressBytesTransferred);
             return this;
         }
 
-        public Builder setVpnClientConnectionsCount(@Nullable Integer vpnClientConnectionsCount) {
+        public Builder vpnClientConnectionsCount(@Nullable Integer vpnClientConnectionsCount) {
             this.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
         }

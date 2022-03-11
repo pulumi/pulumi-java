@@ -81,22 +81,22 @@ public final class GetImageRecipeResult {
      */
     private final String workingDirectory;
 
-    @OutputCustomType.Constructor({"arn","blockDeviceMappings","components","dateCreated","description","id","name","owner","parentImage","platform","tags","userDataBase64","version","workingDirectory"})
+    @OutputCustomType.Constructor
     private GetImageRecipeResult(
-        String arn,
-        List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
-        List<GetImageRecipeComponent> components,
-        String dateCreated,
-        String description,
-        String id,
-        String name,
-        String owner,
-        String parentImage,
-        String platform,
-        @Nullable Map<String,String> tags,
-        String userDataBase64,
-        String version,
-        String workingDirectory) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("blockDeviceMappings") List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings,
+        @OutputCustomType.Parameter("components") List<GetImageRecipeComponent> components,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("parentImage") String parentImage,
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("userDataBase64") String userDataBase64,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("workingDirectory") String workingDirectory) {
         this.arn = arn;
         this.blockDeviceMappings = blockDeviceMappings;
         this.components = components;
@@ -254,72 +254,72 @@ public final class GetImageRecipeResult {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings) {
+        public Builder blockDeviceMappings(List<GetImageRecipeBlockDeviceMapping> blockDeviceMappings) {
             this.blockDeviceMappings = Objects.requireNonNull(blockDeviceMappings);
             return this;
         }
 
-        public Builder setComponents(List<GetImageRecipeComponent> components) {
+        public Builder components(List<GetImageRecipeComponent> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setDateCreated(String dateCreated) {
+        public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setParentImage(String parentImage) {
+        public Builder parentImage(String parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUserDataBase64(String userDataBase64) {
+        public Builder userDataBase64(String userDataBase64) {
             this.userDataBase64 = Objects.requireNonNull(userDataBase64);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setWorkingDirectory(String workingDirectory) {
+        public Builder workingDirectory(String workingDirectory) {
             this.workingDirectory = Objects.requireNonNull(workingDirectory);
             return this;
         }

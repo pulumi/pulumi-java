@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetSecretRotationRule {
     private final Integer automaticallyAfterDays;
 
-    @OutputCustomType.Constructor({"automaticallyAfterDays"})
-    private GetSecretRotationRule(Integer automaticallyAfterDays) {
+    @OutputCustomType.Constructor
+    private GetSecretRotationRule(@OutputCustomType.Parameter("automaticallyAfterDays") Integer automaticallyAfterDays) {
         this.automaticallyAfterDays = automaticallyAfterDays;
     }
 
@@ -40,7 +40,7 @@ public final class GetSecretRotationRule {
     	      this.automaticallyAfterDays = defaults.automaticallyAfterDays;
         }
 
-        public Builder setAutomaticallyAfterDays(Integer automaticallyAfterDays) {
+        public Builder automaticallyAfterDays(Integer automaticallyAfterDays) {
             this.automaticallyAfterDays = Objects.requireNonNull(automaticallyAfterDays);
             return this;
         }

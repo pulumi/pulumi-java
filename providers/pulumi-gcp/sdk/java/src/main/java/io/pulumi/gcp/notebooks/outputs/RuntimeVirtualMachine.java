@@ -31,11 +31,11 @@ public final class RuntimeVirtualMachine {
      */
     private final @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","virtualMachineConfig"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachine(
-        @Nullable String instanceId,
-        @Nullable String instanceName,
-        @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
+        @OutputCustomType.Parameter("virtualMachineConfig") @Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;
@@ -90,17 +90,17 @@ public final class RuntimeVirtualMachine {
     	      this.virtualMachineConfig = defaults.virtualMachineConfig;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setVirtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
+        public Builder virtualMachineConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfig virtualMachineConfig) {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }

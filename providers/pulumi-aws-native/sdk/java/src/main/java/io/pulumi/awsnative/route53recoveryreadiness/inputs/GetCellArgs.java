@@ -51,7 +51,7 @@ public final class GetCellArgs extends io.pulumi.resources.InvokeArgs {
     	      this.cellName = defaults.cellName;
         }
 
-        public Builder setCellName(String cellName) {
+        public Builder cellName(String cellName) {
             this.cellName = Objects.requireNonNull(cellName);
             return this;
         }

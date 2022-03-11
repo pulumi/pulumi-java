@@ -86,32 +86,32 @@ public final class MaintenanceWindowTaskTaskInvocationParametersLambdaParameters
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setClientContext(@Nullable Input<String> clientContext) {
+        public Builder clientContext(@Nullable Input<String> clientContext) {
             this.clientContext = clientContext;
             return this;
         }
 
-        public Builder setClientContext(@Nullable String clientContext) {
+        public Builder clientContext(@Nullable String clientContext) {
             this.clientContext = Input.ofNullable(clientContext);
             return this;
         }
 
-        public Builder setPayload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Input<String> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable String payload) {
+        public Builder payload(@Nullable String payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setQualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Input<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Input.ofNullable(qualifier);
             return this;
         }

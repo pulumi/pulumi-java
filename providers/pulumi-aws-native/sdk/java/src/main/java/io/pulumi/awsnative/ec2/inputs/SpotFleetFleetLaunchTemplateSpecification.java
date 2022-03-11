@@ -74,17 +74,17 @@ public final class SpotFleetFleetLaunchTemplateSpecification extends io.pulumi.r
     	      this.version = defaults.version;
         }
 
-        public Builder setLaunchTemplateId(@Nullable String launchTemplateId) {
+        public Builder launchTemplateId(@Nullable String launchTemplateId) {
             this.launchTemplateId = launchTemplateId;
             return this;
         }
 
-        public Builder setLaunchTemplateName(@Nullable String launchTemplateName) {
+        public Builder launchTemplateName(@Nullable String launchTemplateName) {
             this.launchTemplateName = launchTemplateName;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

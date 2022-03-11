@@ -125,52 +125,52 @@ public final class AuthInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tokenType = defaults.tokenType;
         }
 
-        public Builder setExpiresIn(@Nullable Input<Integer> expiresIn) {
+        public Builder expiresIn(@Nullable Input<Integer> expiresIn) {
             this.expiresIn = expiresIn;
             return this;
         }
 
-        public Builder setExpiresIn(@Nullable Integer expiresIn) {
+        public Builder expiresIn(@Nullable Integer expiresIn) {
             this.expiresIn = Input.ofNullable(expiresIn);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Input<String> refreshToken) {
+        public Builder refreshToken(@Nullable Input<String> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setToken(Input<String> token) {
+        public Builder token(Input<String> token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Input.of(Objects.requireNonNull(token));
             return this;
         }
 
-        public Builder setTokenType(Input<Either<String,TokenType>> tokenType) {
+        public Builder tokenType(Input<Either<String,TokenType>> tokenType) {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
 
-        public Builder setTokenType(Either<String,TokenType> tokenType) {
+        public Builder tokenType(Either<String,TokenType> tokenType) {
             this.tokenType = Input.of(Objects.requireNonNull(tokenType));
             return this;
         }

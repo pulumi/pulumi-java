@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      */
     private final String mediaType;
 
-    @OutputCustomType.Constructor({"mediaObjects","mediaType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
-        String mediaType) {
+        @OutputCustomType.Parameter("mediaObjects") List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects,
+        @OutputCustomType.Parameter("mediaType") String mediaType) {
         this.mediaObjects = mediaObjects;
         this.mediaType = mediaType;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
     	      this.mediaType = defaults.mediaType;
         }
 
-        public Builder setMediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
+        public Builder mediaObjects(List<GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectResponse> mediaObjects) {
             this.mediaObjects = Objects.requireNonNull(mediaObjects);
             return this;
         }
 
-        public Builder setMediaType(String mediaType) {
+        public Builder mediaType(String mediaType) {
             this.mediaType = Objects.requireNonNull(mediaType);
             return this;
         }

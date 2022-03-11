@@ -68,12 +68,12 @@ public final class GetCustomResourceProviderArgs extends io.pulumi.resources.Inv
     	      this.resourceProviderName = defaults.resourceProviderName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceProviderName(String resourceProviderName) {
+        public Builder resourceProviderName(String resourceProviderName) {
             this.resourceProviderName = Objects.requireNonNull(resourceProviderName);
             return this;
         }

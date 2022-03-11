@@ -22,10 +22,10 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
      */
     private final List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfig(
-        String headerBehavior,
-        List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
+        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
+        @OutputCustomType.Parameter("headers") List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
@@ -67,12 +67,12 @@ public final class GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeaders
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(String headerBehavior) {
+        public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
+        public Builder headers(List<GetCachePolicyParametersInCacheKeyAndForwardedToOriginHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }

@@ -32,12 +32,12 @@ public final class DestinationResponse {
      */
     private final @Nullable String storageAccountResourceId;
 
-    @OutputCustomType.Constructor({"archiveNameFormat","blobContainer","name","storageAccountResourceId"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        @Nullable String archiveNameFormat,
-        @Nullable String blobContainer,
-        @Nullable String name,
-        @Nullable String storageAccountResourceId) {
+        @OutputCustomType.Parameter("archiveNameFormat") @Nullable String archiveNameFormat,
+        @OutputCustomType.Parameter("blobContainer") @Nullable String blobContainer,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
         this.archiveNameFormat = archiveNameFormat;
         this.blobContainer = blobContainer;
         this.name = name;
@@ -99,22 +99,22 @@ public final class DestinationResponse {
     	      this.storageAccountResourceId = defaults.storageAccountResourceId;
         }
 
-        public Builder setArchiveNameFormat(@Nullable String archiveNameFormat) {
+        public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
             this.archiveNameFormat = archiveNameFormat;
             return this;
         }
 
-        public Builder setBlobContainer(@Nullable String blobContainer) {
+        public Builder blobContainer(@Nullable String blobContainer) {
             this.blobContainer = blobContainer;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }

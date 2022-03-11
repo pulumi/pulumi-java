@@ -18,10 +18,10 @@ public final class BotMessageGroup {
      */
     private final @Nullable List<BotMessage> variations;
 
-    @OutputCustomType.Constructor({"message","variations"})
+    @OutputCustomType.Constructor
     private BotMessageGroup(
-        BotMessage message,
-        @Nullable List<BotMessage> variations) {
+        @OutputCustomType.Parameter("message") BotMessage message,
+        @OutputCustomType.Parameter("variations") @Nullable List<BotMessage> variations) {
         this.message = message;
         this.variations = variations;
     }
@@ -59,12 +59,12 @@ public final class BotMessageGroup {
     	      this.variations = defaults.variations;
         }
 
-        public Builder setMessage(BotMessage message) {
+        public Builder message(BotMessage message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setVariations(@Nullable List<BotMessage> variations) {
+        public Builder variations(@Nullable List<BotMessage> variations) {
             this.variations = variations;
             return this;
         }

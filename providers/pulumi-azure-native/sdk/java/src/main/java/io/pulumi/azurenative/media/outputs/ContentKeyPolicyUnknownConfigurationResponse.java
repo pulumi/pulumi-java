@@ -16,8 +16,8 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private ContentKeyPolicyUnknownConfigurationResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private ContentKeyPolicyUnknownConfigurationResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 
@@ -50,7 +50,7 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

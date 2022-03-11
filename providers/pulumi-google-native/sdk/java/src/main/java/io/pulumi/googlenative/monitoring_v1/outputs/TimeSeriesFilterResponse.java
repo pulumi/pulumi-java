@@ -32,12 +32,12 @@ public final class TimeSeriesFilterResponse {
      */
     private final AggregationResponse secondaryAggregation;
 
-    @OutputCustomType.Constructor({"aggregation","filter","pickTimeSeriesFilter","secondaryAggregation"})
+    @OutputCustomType.Constructor
     private TimeSeriesFilterResponse(
-        AggregationResponse aggregation,
-        String filter,
-        PickTimeSeriesFilterResponse pickTimeSeriesFilter,
-        AggregationResponse secondaryAggregation) {
+        @OutputCustomType.Parameter("aggregation") AggregationResponse aggregation,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("pickTimeSeriesFilter") PickTimeSeriesFilterResponse pickTimeSeriesFilter,
+        @OutputCustomType.Parameter("secondaryAggregation") AggregationResponse secondaryAggregation) {
         this.aggregation = aggregation;
         this.filter = filter;
         this.pickTimeSeriesFilter = pickTimeSeriesFilter;
@@ -99,22 +99,22 @@ public final class TimeSeriesFilterResponse {
     	      this.secondaryAggregation = defaults.secondaryAggregation;
         }
 
-        public Builder setAggregation(AggregationResponse aggregation) {
+        public Builder aggregation(AggregationResponse aggregation) {
             this.aggregation = Objects.requireNonNull(aggregation);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setPickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
+        public Builder pickTimeSeriesFilter(PickTimeSeriesFilterResponse pickTimeSeriesFilter) {
             this.pickTimeSeriesFilter = Objects.requireNonNull(pickTimeSeriesFilter);
             return this;
         }
 
-        public Builder setSecondaryAggregation(AggregationResponse secondaryAggregation) {
+        public Builder secondaryAggregation(AggregationResponse secondaryAggregation) {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
         }

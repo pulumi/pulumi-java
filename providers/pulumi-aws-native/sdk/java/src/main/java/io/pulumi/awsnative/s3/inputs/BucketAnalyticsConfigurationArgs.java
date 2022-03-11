@@ -101,42 +101,42 @@ public final class BucketAnalyticsConfigurationArgs extends io.pulumi.resources.
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setStorageClassAnalysis(Input<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
+        public Builder storageClassAnalysis(Input<BucketStorageClassAnalysisArgs> storageClassAnalysis) {
             this.storageClassAnalysis = Objects.requireNonNull(storageClassAnalysis);
             return this;
         }
 
-        public Builder setStorageClassAnalysis(BucketStorageClassAnalysisArgs storageClassAnalysis) {
+        public Builder storageClassAnalysis(BucketStorageClassAnalysisArgs storageClassAnalysis) {
             this.storageClassAnalysis = Input.of(Objects.requireNonNull(storageClassAnalysis));
             return this;
         }
 
-        public Builder setTagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
+        public Builder tagFilters(@Nullable Input<List<BucketTagFilterArgs>> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilterArgs> tagFilters) {
             this.tagFilters = Input.ofNullable(tagFilters);
             return this;
         }

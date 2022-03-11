@@ -57,12 +57,12 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
     	      this.canonicalScopes = defaults.canonicalScopes;
         }
 
-        public Builder setCanonicalScopes(@Nullable Input<String> canonicalScopes) {
+        public Builder canonicalScopes(@Nullable Input<String> canonicalScopes) {
             this.canonicalScopes = canonicalScopes;
             return this;
         }
 
-        public Builder setCanonicalScopes(@Nullable String canonicalScopes) {
+        public Builder canonicalScopes(@Nullable String canonicalScopes) {
             this.canonicalScopes = Input.ofNullable(canonicalScopes);
             return this;
         }

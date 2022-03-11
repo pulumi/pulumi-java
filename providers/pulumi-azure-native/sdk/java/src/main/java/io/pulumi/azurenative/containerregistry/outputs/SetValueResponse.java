@@ -28,11 +28,11 @@ public final class SetValueResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"isSecret","name","value"})
+    @OutputCustomType.Constructor
     private SetValueResponse(
-        @Nullable Boolean isSecret,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("isSecret") @Nullable Boolean isSecret,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.isSecret = isSecret;
         this.name = name;
         this.value = value;
@@ -84,17 +84,17 @@ public final class SetValueResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setIsSecret(@Nullable Boolean isSecret) {
+        public Builder isSecret(@Nullable Boolean isSecret) {
             this.isSecret = isSecret;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

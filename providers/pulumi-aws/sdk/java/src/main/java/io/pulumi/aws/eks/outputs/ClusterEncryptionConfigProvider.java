@@ -15,8 +15,8 @@ public final class ClusterEncryptionConfigProvider {
      */
     private final String keyArn;
 
-    @OutputCustomType.Constructor({"keyArn"})
-    private ClusterEncryptionConfigProvider(String keyArn) {
+    @OutputCustomType.Constructor
+    private ClusterEncryptionConfigProvider(@OutputCustomType.Parameter("keyArn") String keyArn) {
         this.keyArn = keyArn;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterEncryptionConfigProvider {
     	      this.keyArn = defaults.keyArn;
         }
 
-        public Builder setKeyArn(String keyArn) {
+        public Builder keyArn(String keyArn) {
             this.keyArn = Objects.requireNonNull(keyArn);
             return this;
         }

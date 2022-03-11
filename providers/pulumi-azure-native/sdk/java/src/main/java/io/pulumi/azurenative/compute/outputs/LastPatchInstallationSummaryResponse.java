@@ -68,19 +68,19 @@ public final class LastPatchInstallationSummaryResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"error","excludedPatchCount","failedPatchCount","installationActivityId","installedPatchCount","lastModifiedTime","maintenanceWindowExceeded","notSelectedPatchCount","pendingPatchCount","startTime","status"})
+    @OutputCustomType.Constructor
     private LastPatchInstallationSummaryResponse(
-        ApiErrorResponse error,
-        Integer excludedPatchCount,
-        Integer failedPatchCount,
-        String installationActivityId,
-        Integer installedPatchCount,
-        String lastModifiedTime,
-        Boolean maintenanceWindowExceeded,
-        Integer notSelectedPatchCount,
-        Integer pendingPatchCount,
-        String startTime,
-        String status) {
+        @OutputCustomType.Parameter("error") ApiErrorResponse error,
+        @OutputCustomType.Parameter("excludedPatchCount") Integer excludedPatchCount,
+        @OutputCustomType.Parameter("failedPatchCount") Integer failedPatchCount,
+        @OutputCustomType.Parameter("installationActivityId") String installationActivityId,
+        @OutputCustomType.Parameter("installedPatchCount") Integer installedPatchCount,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("maintenanceWindowExceeded") Boolean maintenanceWindowExceeded,
+        @OutputCustomType.Parameter("notSelectedPatchCount") Integer notSelectedPatchCount,
+        @OutputCustomType.Parameter("pendingPatchCount") Integer pendingPatchCount,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.error = error;
         this.excludedPatchCount = excludedPatchCount;
         this.failedPatchCount = failedPatchCount;
@@ -212,57 +212,57 @@ public final class LastPatchInstallationSummaryResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setError(ApiErrorResponse error) {
+        public Builder error(ApiErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setExcludedPatchCount(Integer excludedPatchCount) {
+        public Builder excludedPatchCount(Integer excludedPatchCount) {
             this.excludedPatchCount = Objects.requireNonNull(excludedPatchCount);
             return this;
         }
 
-        public Builder setFailedPatchCount(Integer failedPatchCount) {
+        public Builder failedPatchCount(Integer failedPatchCount) {
             this.failedPatchCount = Objects.requireNonNull(failedPatchCount);
             return this;
         }
 
-        public Builder setInstallationActivityId(String installationActivityId) {
+        public Builder installationActivityId(String installationActivityId) {
             this.installationActivityId = Objects.requireNonNull(installationActivityId);
             return this;
         }
 
-        public Builder setInstalledPatchCount(Integer installedPatchCount) {
+        public Builder installedPatchCount(Integer installedPatchCount) {
             this.installedPatchCount = Objects.requireNonNull(installedPatchCount);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setMaintenanceWindowExceeded(Boolean maintenanceWindowExceeded) {
+        public Builder maintenanceWindowExceeded(Boolean maintenanceWindowExceeded) {
             this.maintenanceWindowExceeded = Objects.requireNonNull(maintenanceWindowExceeded);
             return this;
         }
 
-        public Builder setNotSelectedPatchCount(Integer notSelectedPatchCount) {
+        public Builder notSelectedPatchCount(Integer notSelectedPatchCount) {
             this.notSelectedPatchCount = Objects.requireNonNull(notSelectedPatchCount);
             return this;
         }
 
-        public Builder setPendingPatchCount(Integer pendingPatchCount) {
+        public Builder pendingPatchCount(Integer pendingPatchCount) {
             this.pendingPatchCount = Objects.requireNonNull(pendingPatchCount);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

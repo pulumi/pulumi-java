@@ -56,7 +56,7 @@ public final class OperationErrorResponse extends io.pulumi.resources.InvokeArgs
     	      this.errors = defaults.errors;
         }
 
-        public Builder setErrors(List<OperationErrorErrorsItemResponse> errors) {
+        public Builder errors(List<OperationErrorErrorsItemResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }

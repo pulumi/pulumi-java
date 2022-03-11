@@ -66,17 +66,17 @@ public final class GetVPCResult {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"cidrBlockAssociations","defaultNetworkAcl","defaultSecurityGroup","enableDnsHostnames","enableDnsSupport","instanceTenancy","ipv6CidrBlocks","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetVPCResult(
-        @Nullable List<String> cidrBlockAssociations,
-        @Nullable String defaultNetworkAcl,
-        @Nullable String defaultSecurityGroup,
-        @Nullable Boolean enableDnsHostnames,
-        @Nullable Boolean enableDnsSupport,
-        @Nullable String instanceTenancy,
-        @Nullable List<String> ipv6CidrBlocks,
-        @Nullable List<VPCTag> tags,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("cidrBlockAssociations") @Nullable List<String> cidrBlockAssociations,
+        @OutputCustomType.Parameter("defaultNetworkAcl") @Nullable String defaultNetworkAcl,
+        @OutputCustomType.Parameter("defaultSecurityGroup") @Nullable String defaultSecurityGroup,
+        @OutputCustomType.Parameter("enableDnsHostnames") @Nullable Boolean enableDnsHostnames,
+        @OutputCustomType.Parameter("enableDnsSupport") @Nullable Boolean enableDnsSupport,
+        @OutputCustomType.Parameter("instanceTenancy") @Nullable String instanceTenancy,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") @Nullable List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("tags") @Nullable List<VPCTag> tags,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.cidrBlockAssociations = cidrBlockAssociations;
         this.defaultNetworkAcl = defaultNetworkAcl;
         this.defaultSecurityGroup = defaultSecurityGroup;
@@ -194,47 +194,47 @@ public final class GetVPCResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setCidrBlockAssociations(@Nullable List<String> cidrBlockAssociations) {
+        public Builder cidrBlockAssociations(@Nullable List<String> cidrBlockAssociations) {
             this.cidrBlockAssociations = cidrBlockAssociations;
             return this;
         }
 
-        public Builder setDefaultNetworkAcl(@Nullable String defaultNetworkAcl) {
+        public Builder defaultNetworkAcl(@Nullable String defaultNetworkAcl) {
             this.defaultNetworkAcl = defaultNetworkAcl;
             return this;
         }
 
-        public Builder setDefaultSecurityGroup(@Nullable String defaultSecurityGroup) {
+        public Builder defaultSecurityGroup(@Nullable String defaultSecurityGroup) {
             this.defaultSecurityGroup = defaultSecurityGroup;
             return this;
         }
 
-        public Builder setEnableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
+        public Builder enableDnsHostnames(@Nullable Boolean enableDnsHostnames) {
             this.enableDnsHostnames = enableDnsHostnames;
             return this;
         }
 
-        public Builder setEnableDnsSupport(@Nullable Boolean enableDnsSupport) {
+        public Builder enableDnsSupport(@Nullable Boolean enableDnsSupport) {
             this.enableDnsSupport = enableDnsSupport;
             return this;
         }
 
-        public Builder setInstanceTenancy(@Nullable String instanceTenancy) {
+        public Builder instanceTenancy(@Nullable String instanceTenancy) {
             this.instanceTenancy = instanceTenancy;
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(@Nullable List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = ipv6CidrBlocks;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VPCTag> tags) {
+        public Builder tags(@Nullable List<VPCTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

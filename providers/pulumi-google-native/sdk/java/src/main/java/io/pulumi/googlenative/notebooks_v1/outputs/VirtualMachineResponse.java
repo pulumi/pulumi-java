@@ -26,11 +26,11 @@ public final class VirtualMachineResponse {
      */
     private final VirtualMachineConfigResponse virtualMachineConfig;
 
-    @OutputCustomType.Constructor({"instanceId","instanceName","virtualMachineConfig"})
+    @OutputCustomType.Constructor
     private VirtualMachineResponse(
-        String instanceId,
-        String instanceName,
-        VirtualMachineConfigResponse virtualMachineConfig) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("instanceName") String instanceName,
+        @OutputCustomType.Parameter("virtualMachineConfig") VirtualMachineConfigResponse virtualMachineConfig) {
         this.instanceId = instanceId;
         this.instanceName = instanceName;
         this.virtualMachineConfig = virtualMachineConfig;
@@ -82,17 +82,17 @@ public final class VirtualMachineResponse {
     	      this.virtualMachineConfig = defaults.virtualMachineConfig;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceName(String instanceName) {
+        public Builder instanceName(String instanceName) {
             this.instanceName = Objects.requireNonNull(instanceName);
             return this;
         }
 
-        public Builder setVirtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
+        public Builder virtualMachineConfig(VirtualMachineConfigResponse virtualMachineConfig) {
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
         }

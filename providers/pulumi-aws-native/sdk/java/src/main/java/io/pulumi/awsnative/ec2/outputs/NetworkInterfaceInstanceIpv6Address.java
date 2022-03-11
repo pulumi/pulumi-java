@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class NetworkInterfaceInstanceIpv6Address {
     private final String ipv6Address;
 
-    @OutputCustomType.Constructor({"ipv6Address"})
-    private NetworkInterfaceInstanceIpv6Address(String ipv6Address) {
+    @OutputCustomType.Constructor
+    private NetworkInterfaceInstanceIpv6Address(@OutputCustomType.Parameter("ipv6Address") String ipv6Address) {
         this.ipv6Address = ipv6Address;
     }
 
@@ -40,7 +40,7 @@ public final class NetworkInterfaceInstanceIpv6Address {
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }

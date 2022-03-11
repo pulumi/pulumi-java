@@ -21,10 +21,10 @@ public final class SpecificationResponse {
      */
     private final IosTestResponse iosTest;
 
-    @OutputCustomType.Constructor({"androidTest","iosTest"})
+    @OutputCustomType.Constructor
     private SpecificationResponse(
-        AndroidTestResponse androidTest,
-        IosTestResponse iosTest) {
+        @OutputCustomType.Parameter("androidTest") AndroidTestResponse androidTest,
+        @OutputCustomType.Parameter("iosTest") IosTestResponse iosTest) {
         this.androidTest = androidTest;
         this.iosTest = iosTest;
     }
@@ -66,12 +66,12 @@ public final class SpecificationResponse {
     	      this.iosTest = defaults.iosTest;
         }
 
-        public Builder setAndroidTest(AndroidTestResponse androidTest) {
+        public Builder androidTest(AndroidTestResponse androidTest) {
             this.androidTest = Objects.requireNonNull(androidTest);
             return this;
         }
 
-        public Builder setIosTest(IosTestResponse iosTest) {
+        public Builder iosTest(IosTestResponse iosTest) {
             this.iosTest = Objects.requireNonNull(iosTest);
             return this;
         }

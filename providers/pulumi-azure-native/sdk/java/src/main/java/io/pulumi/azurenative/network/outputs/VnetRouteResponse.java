@@ -17,8 +17,8 @@ public final class VnetRouteResponse {
      */
     private final @Nullable List<StaticRouteResponse> staticRoutes;
 
-    @OutputCustomType.Constructor({"staticRoutes"})
-    private VnetRouteResponse(@Nullable List<StaticRouteResponse> staticRoutes) {
+    @OutputCustomType.Constructor
+    private VnetRouteResponse(@OutputCustomType.Parameter("staticRoutes") @Nullable List<StaticRouteResponse> staticRoutes) {
         this.staticRoutes = staticRoutes;
     }
 
@@ -50,7 +50,7 @@ public final class VnetRouteResponse {
     	      this.staticRoutes = defaults.staticRoutes;
         }
 
-        public Builder setStaticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
+        public Builder staticRoutes(@Nullable List<StaticRouteResponse> staticRoutes) {
             this.staticRoutes = staticRoutes;
             return this;
         }

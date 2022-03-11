@@ -39,11 +39,11 @@ public final class BackendServiceConsistentHash {
      */
     private final @Nullable Integer minimumRingSize;
 
-    @OutputCustomType.Constructor({"httpCookie","httpHeaderName","minimumRingSize"})
+    @OutputCustomType.Constructor
     private BackendServiceConsistentHash(
-        @Nullable BackendServiceConsistentHashHttpCookie httpCookie,
-        @Nullable String httpHeaderName,
-        @Nullable Integer minimumRingSize) {
+        @OutputCustomType.Parameter("httpCookie") @Nullable BackendServiceConsistentHashHttpCookie httpCookie,
+        @OutputCustomType.Parameter("httpHeaderName") @Nullable String httpHeaderName,
+        @OutputCustomType.Parameter("minimumRingSize") @Nullable Integer minimumRingSize) {
         this.httpCookie = httpCookie;
         this.httpHeaderName = httpHeaderName;
         this.minimumRingSize = minimumRingSize;
@@ -105,17 +105,17 @@ public final class BackendServiceConsistentHash {
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookie(@Nullable BackendServiceConsistentHashHttpCookie httpCookie) {
+        public Builder httpCookie(@Nullable BackendServiceConsistentHashHttpCookie httpCookie) {
             this.httpCookie = httpCookie;
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable String httpHeaderName) {
+        public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable Integer minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Integer minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }

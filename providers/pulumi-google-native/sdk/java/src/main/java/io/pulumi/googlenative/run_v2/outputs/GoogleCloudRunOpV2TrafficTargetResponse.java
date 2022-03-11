@@ -31,12 +31,12 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"percent","revision","tag","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRunOpV2TrafficTargetResponse(
-        Integer percent,
-        String revision,
-        String tag,
-        String type) {
+        @OutputCustomType.Parameter("percent") Integer percent,
+        @OutputCustomType.Parameter("revision") String revision,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("type") String type) {
         this.percent = percent;
         this.revision = revision;
         this.tag = tag;
@@ -98,22 +98,22 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPercent(Integer percent) {
+        public Builder percent(Integer percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
 
-        public Builder setRevision(String revision) {
+        public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -17,8 +17,8 @@ public final class GetAlertResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private GetAlertResult(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private GetAlertResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -50,7 +50,7 @@ public final class GetAlertResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

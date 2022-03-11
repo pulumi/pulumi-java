@@ -23,10 +23,10 @@ public final class HubIPAddressesResponse {
      */
     private final @Nullable HubPublicIPAddressesResponse publicIPs;
 
-    @OutputCustomType.Constructor({"privateIPAddress","publicIPs"})
+    @OutputCustomType.Constructor
     private HubIPAddressesResponse(
-        @Nullable String privateIPAddress,
-        @Nullable HubPublicIPAddressesResponse publicIPs) {
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("publicIPs") @Nullable HubPublicIPAddressesResponse publicIPs) {
         this.privateIPAddress = privateIPAddress;
         this.publicIPs = publicIPs;
     }
@@ -68,12 +68,12 @@ public final class HubIPAddressesResponse {
     	      this.publicIPs = defaults.publicIPs;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPublicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
+        public Builder publicIPs(@Nullable HubPublicIPAddressesResponse publicIPs) {
             this.publicIPs = publicIPs;
             return this;
         }

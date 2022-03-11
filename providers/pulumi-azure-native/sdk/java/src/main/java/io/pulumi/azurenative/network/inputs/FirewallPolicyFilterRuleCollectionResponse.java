@@ -130,27 +130,27 @@ public final class FirewallPolicyFilterRuleCollectionResponse extends io.pulumi.
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
+        public Builder action(@Nullable FirewallPolicyFilterRuleCollectionActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setRuleCollectionType(String ruleCollectionType) {
+        public Builder ruleCollectionType(String ruleCollectionType) {
             this.ruleCollectionType = Objects.requireNonNull(ruleCollectionType);
             return this;
         }
 
-        public Builder setRules(@Nullable List<Object> rules) {
+        public Builder rules(@Nullable List<Object> rules) {
             this.rules = rules;
             return this;
         }

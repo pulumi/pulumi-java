@@ -21,10 +21,10 @@ public final class GkeClusterResponse {
      */
     private final String resourceLink;
 
-    @OutputCustomType.Constructor({"clusterMissing","resourceLink"})
+    @OutputCustomType.Constructor
     private GkeClusterResponse(
-        Boolean clusterMissing,
-        String resourceLink) {
+        @OutputCustomType.Parameter("clusterMissing") Boolean clusterMissing,
+        @OutputCustomType.Parameter("resourceLink") String resourceLink) {
         this.clusterMissing = clusterMissing;
         this.resourceLink = resourceLink;
     }
@@ -66,12 +66,12 @@ public final class GkeClusterResponse {
     	      this.resourceLink = defaults.resourceLink;
         }
 
-        public Builder setClusterMissing(Boolean clusterMissing) {
+        public Builder clusterMissing(Boolean clusterMissing) {
             this.clusterMissing = Objects.requireNonNull(clusterMissing);
             return this;
         }
 
-        public Builder setResourceLink(String resourceLink) {
+        public Builder resourceLink(String resourceLink) {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }

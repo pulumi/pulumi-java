@@ -16,8 +16,8 @@ public final class CapacityReservationGroupInstanceViewResponse {
      */
     private final List<CapacityReservationInstanceViewWithNameResponse> capacityReservations;
 
-    @OutputCustomType.Constructor({"capacityReservations"})
-    private CapacityReservationGroupInstanceViewResponse(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
+    @OutputCustomType.Constructor
+    private CapacityReservationGroupInstanceViewResponse(@OutputCustomType.Parameter("capacityReservations") List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
         this.capacityReservations = capacityReservations;
     }
 
@@ -49,7 +49,7 @@ public final class CapacityReservationGroupInstanceViewResponse {
     	      this.capacityReservations = defaults.capacityReservations;
         }
 
-        public Builder setCapacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
+        public Builder capacityReservations(List<CapacityReservationInstanceViewWithNameResponse> capacityReservations) {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }

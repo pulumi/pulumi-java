@@ -15,8 +15,8 @@ public final class DataprocParametersResponse {
      */
     private final String cluster;
 
-    @OutputCustomType.Constructor({"cluster"})
-    private DataprocParametersResponse(String cluster) {
+    @OutputCustomType.Constructor
+    private DataprocParametersResponse(@OutputCustomType.Parameter("cluster") String cluster) {
         this.cluster = cluster;
     }
 
@@ -48,7 +48,7 @@ public final class DataprocParametersResponse {
     	      this.cluster = defaults.cluster;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }

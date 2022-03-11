@@ -39,13 +39,13 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
      */
     private final @Nullable String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"enabled","trafficAnalyticsInterval","workspaceId","workspaceRegion","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private TrafficAnalyticsConfigurationPropertiesResponse(
-        @Nullable Boolean enabled,
-        @Nullable Integer trafficAnalyticsInterval,
-        @Nullable String workspaceId,
-        @Nullable String workspaceRegion,
-        @Nullable String workspaceResourceId) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("trafficAnalyticsInterval") @Nullable Integer trafficAnalyticsInterval,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId,
+        @OutputCustomType.Parameter("workspaceRegion") @Nullable String workspaceRegion,
+        @OutputCustomType.Parameter("workspaceResourceId") @Nullable String workspaceResourceId) {
         this.enabled = enabled;
         this.trafficAnalyticsInterval = trafficAnalyticsInterval;
         this.workspaceId = workspaceId;
@@ -117,27 +117,27 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setTrafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
+        public Builder trafficAnalyticsInterval(@Nullable Integer trafficAnalyticsInterval) {
             this.trafficAnalyticsInterval = trafficAnalyticsInterval;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }
 
-        public Builder setWorkspaceRegion(@Nullable String workspaceRegion) {
+        public Builder workspaceRegion(@Nullable String workspaceRegion) {
             this.workspaceRegion = workspaceRegion;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

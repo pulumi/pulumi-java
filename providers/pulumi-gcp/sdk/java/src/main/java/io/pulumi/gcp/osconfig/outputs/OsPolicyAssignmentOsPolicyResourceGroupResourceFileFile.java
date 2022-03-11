@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","localPath","remote"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile(
-        @Nullable Boolean allowInsecure,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs,
-        @Nullable String localPath,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
+        @OutputCustomType.Parameter("allowInsecure") @Nullable Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs,
+        @OutputCustomType.Parameter("localPath") @Nullable String localPath,
+        @OutputCustomType.Parameter("remote") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.localPath = localPath;
@@ -102,22 +102,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setGcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs) {
+        public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setRemote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
+        public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileRemote remote) {
             this.remote = remote;
             return this;
         }

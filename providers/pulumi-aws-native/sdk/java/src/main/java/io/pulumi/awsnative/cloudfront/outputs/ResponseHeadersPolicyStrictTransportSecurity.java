@@ -17,12 +17,12 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
     private final Boolean override;
     private final @Nullable Boolean preload;
 
-    @OutputCustomType.Constructor({"accessControlMaxAgeSec","includeSubdomains","override","preload"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyStrictTransportSecurity(
-        Integer accessControlMaxAgeSec,
-        @Nullable Boolean includeSubdomains,
-        Boolean override,
-        @Nullable Boolean preload) {
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("includeSubdomains") @Nullable Boolean includeSubdomains,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("preload") @Nullable Boolean preload) {
         this.accessControlMaxAgeSec = accessControlMaxAgeSec;
         this.includeSubdomains = includeSubdomains;
         this.override = override;
@@ -68,22 +68,22 @@ public final class ResponseHeadersPolicyStrictTransportSecurity {
     	      this.preload = defaults.preload;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setIncludeSubdomains(@Nullable Boolean includeSubdomains) {
+        public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
             this.includeSubdomains = includeSubdomains;
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setPreload(@Nullable Boolean preload) {
+        public Builder preload(@Nullable Boolean preload) {
             this.preload = preload;
             return this;
         }

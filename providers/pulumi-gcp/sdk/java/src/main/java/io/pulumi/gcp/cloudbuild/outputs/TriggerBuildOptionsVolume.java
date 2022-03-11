@@ -26,10 +26,10 @@ public final class TriggerBuildOptionsVolume {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"name","path"})
+    @OutputCustomType.Constructor
     private TriggerBuildOptionsVolume(
-        @Nullable String name,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.name = name;
         this.path = path;
     }
@@ -75,12 +75,12 @@ public final class TriggerBuildOptionsVolume {
     	      this.path = defaults.path;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

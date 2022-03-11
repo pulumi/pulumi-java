@@ -109,42 +109,42 @@ public final class PathRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setPaths(@Nullable Input<List<String>> paths) {
+        public Builder paths(@Nullable Input<List<String>> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = Input.ofNullable(paths);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
+        public Builder routeAction(@Nullable Input<HttpRouteActionArgs> routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setRouteAction(@Nullable HttpRouteActionArgs routeAction) {
+        public Builder routeAction(@Nullable HttpRouteActionArgs routeAction) {
             this.routeAction = Input.ofNullable(routeAction);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
+        public Builder urlRedirect(@Nullable Input<HttpRedirectActionArgs> urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
+        public Builder urlRedirect(@Nullable HttpRedirectActionArgs urlRedirect) {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }

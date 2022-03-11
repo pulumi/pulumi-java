@@ -24,10 +24,10 @@ public final class EnterpriseKeyIosSettings {
      */
     private final @Nullable List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor({"allowAllBundleIds","allowedBundleIds"})
+    @OutputCustomType.Constructor
     private EnterpriseKeyIosSettings(
-        @Nullable Boolean allowAllBundleIds,
-        @Nullable List<String> allowedBundleIds) {
+        @OutputCustomType.Parameter("allowAllBundleIds") @Nullable Boolean allowAllBundleIds,
+        @OutputCustomType.Parameter("allowedBundleIds") @Nullable List<String> allowedBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         this.allowedBundleIds = allowedBundleIds;
     }
@@ -69,12 +69,12 @@ public final class EnterpriseKeyIosSettings {
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder setAllowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
+        public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
             this.allowAllBundleIds = allowAllBundleIds;
             return this;
         }
 
-        public Builder setAllowedBundleIds(@Nullable List<String> allowedBundleIds) {
+        public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
             this.allowedBundleIds = allowedBundleIds;
             return this;
         }

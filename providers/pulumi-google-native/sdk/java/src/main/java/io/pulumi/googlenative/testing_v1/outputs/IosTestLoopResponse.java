@@ -28,11 +28,11 @@ public final class IosTestLoopResponse {
      */
     private final List<Integer> scenarios;
 
-    @OutputCustomType.Constructor({"appBundleId","appIpa","scenarios"})
+    @OutputCustomType.Constructor
     private IosTestLoopResponse(
-        String appBundleId,
-        FileReferenceResponse appIpa,
-        List<Integer> scenarios) {
+        @OutputCustomType.Parameter("appBundleId") String appBundleId,
+        @OutputCustomType.Parameter("appIpa") FileReferenceResponse appIpa,
+        @OutputCustomType.Parameter("scenarios") List<Integer> scenarios) {
         this.appBundleId = appBundleId;
         this.appIpa = appIpa;
         this.scenarios = scenarios;
@@ -84,17 +84,17 @@ public final class IosTestLoopResponse {
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppBundleId(String appBundleId) {
+        public Builder appBundleId(String appBundleId) {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
 
-        public Builder setAppIpa(FileReferenceResponse appIpa) {
+        public Builder appIpa(FileReferenceResponse appIpa) {
             this.appIpa = Objects.requireNonNull(appIpa);
             return this;
         }
 
-        public Builder setScenarios(List<Integer> scenarios) {
+        public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }

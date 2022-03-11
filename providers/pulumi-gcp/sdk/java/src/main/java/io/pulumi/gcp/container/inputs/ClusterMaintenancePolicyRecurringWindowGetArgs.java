@@ -73,32 +73,32 @@ public final class ClusterMaintenancePolicyRecurringWindowGetArgs extends io.pul
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(Input<String> endTime) {
+        public Builder endTime(Input<String> endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Input.of(Objects.requireNonNull(endTime));
             return this;
         }
 
-        public Builder setRecurrence(Input<String> recurrence) {
+        public Builder recurrence(Input<String> recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setRecurrence(String recurrence) {
+        public Builder recurrence(String recurrence) {
             this.recurrence = Input.of(Objects.requireNonNull(recurrence));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

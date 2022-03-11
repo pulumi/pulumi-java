@@ -23,10 +23,10 @@ public final class MetricIdentifier {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor({"name","selector"})
+    @OutputCustomType.Constructor
     private MetricIdentifier(
-        String name,
-        @Nullable LabelSelector selector) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.name = name;
         this.selector = selector;
     }
@@ -68,12 +68,12 @@ public final class MetricIdentifier {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }

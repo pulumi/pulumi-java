@@ -23,10 +23,10 @@ public final class CriteriaResponse {
      */
     private final String metricName;
 
-    @OutputCustomType.Constructor({"dimensions","metricName"})
+    @OutputCustomType.Constructor
     private CriteriaResponse(
-        @Nullable List<DimensionResponse> dimensions,
-        String metricName) {
+        @OutputCustomType.Parameter("dimensions") @Nullable List<DimensionResponse> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName) {
         this.dimensions = dimensions;
         this.metricName = metricName;
     }
@@ -68,12 +68,12 @@ public final class CriteriaResponse {
     	      this.metricName = defaults.metricName;
         }
 
-        public Builder setDimensions(@Nullable List<DimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<DimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }

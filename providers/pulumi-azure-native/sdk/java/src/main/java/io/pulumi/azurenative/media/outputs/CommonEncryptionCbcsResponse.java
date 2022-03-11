@@ -36,12 +36,12 @@ public final class CommonEncryptionCbcsResponse {
      */
     private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
-    @OutputCustomType.Constructor({"clearTracks","contentKeys","drm","enabledProtocols"})
+    @OutputCustomType.Constructor
     private CommonEncryptionCbcsResponse(
-        @Nullable List<TrackSelectionResponse> clearTracks,
-        @Nullable StreamingPolicyContentKeysResponse contentKeys,
-        @Nullable CbcsDrmConfigurationResponse drm,
-        @Nullable EnabledProtocolsResponse enabledProtocols) {
+        @OutputCustomType.Parameter("clearTracks") @Nullable List<TrackSelectionResponse> clearTracks,
+        @OutputCustomType.Parameter("contentKeys") @Nullable StreamingPolicyContentKeysResponse contentKeys,
+        @OutputCustomType.Parameter("drm") @Nullable CbcsDrmConfigurationResponse drm,
+        @OutputCustomType.Parameter("enabledProtocols") @Nullable EnabledProtocolsResponse enabledProtocols) {
         this.clearTracks = clearTracks;
         this.contentKeys = contentKeys;
         this.drm = drm;
@@ -103,22 +103,22 @@ public final class CommonEncryptionCbcsResponse {
     	      this.enabledProtocols = defaults.enabledProtocols;
         }
 
-        public Builder setClearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
+        public Builder clearTracks(@Nullable List<TrackSelectionResponse> clearTracks) {
             this.clearTracks = clearTracks;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
+        public Builder contentKeys(@Nullable StreamingPolicyContentKeysResponse contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setDrm(@Nullable CbcsDrmConfigurationResponse drm) {
+        public Builder drm(@Nullable CbcsDrmConfigurationResponse drm) {
             this.drm = drm;
             return this;
         }
 
-        public Builder setEnabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
+        public Builder enabledProtocols(@Nullable EnabledProtocolsResponse enabledProtocols) {
             this.enabledProtocols = enabledProtocols;
             return this;
         }

@@ -69,19 +69,19 @@ public final class GetCryptoKeyResult {
      */
     private final CryptoKeyVersionTemplateResponse versionTemplate;
 
-    @OutputCustomType.Constructor({"createTime","cryptoKeyBackend","destroyScheduledDuration","importOnly","labels","name","nextRotationTime","primary","purpose","rotationPeriod","versionTemplate"})
+    @OutputCustomType.Constructor
     private GetCryptoKeyResult(
-        String createTime,
-        String cryptoKeyBackend,
-        String destroyScheduledDuration,
-        Boolean importOnly,
-        Map<String,String> labels,
-        String name,
-        String nextRotationTime,
-        CryptoKeyVersionResponse primary,
-        String purpose,
-        String rotationPeriod,
-        CryptoKeyVersionTemplateResponse versionTemplate) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("cryptoKeyBackend") String cryptoKeyBackend,
+        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRotationTime") String nextRotationTime,
+        @OutputCustomType.Parameter("primary") CryptoKeyVersionResponse primary,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @OutputCustomType.Parameter("versionTemplate") CryptoKeyVersionTemplateResponse versionTemplate) {
         this.createTime = createTime;
         this.cryptoKeyBackend = cryptoKeyBackend;
         this.destroyScheduledDuration = destroyScheduledDuration;
@@ -213,57 +213,57 @@ public final class GetCryptoKeyResult {
     	      this.versionTemplate = defaults.versionTemplate;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCryptoKeyBackend(String cryptoKeyBackend) {
+        public Builder cryptoKeyBackend(String cryptoKeyBackend) {
             this.cryptoKeyBackend = Objects.requireNonNull(cryptoKeyBackend);
             return this;
         }
 
-        public Builder setDestroyScheduledDuration(String destroyScheduledDuration) {
+        public Builder destroyScheduledDuration(String destroyScheduledDuration) {
             this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
             return this;
         }
 
-        public Builder setImportOnly(Boolean importOnly) {
+        public Builder importOnly(Boolean importOnly) {
             this.importOnly = Objects.requireNonNull(importOnly);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextRotationTime(String nextRotationTime) {
+        public Builder nextRotationTime(String nextRotationTime) {
             this.nextRotationTime = Objects.requireNonNull(nextRotationTime);
             return this;
         }
 
-        public Builder setPrimary(CryptoKeyVersionResponse primary) {
+        public Builder primary(CryptoKeyVersionResponse primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setPurpose(String purpose) {
+        public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
 
-        public Builder setRotationPeriod(String rotationPeriod) {
+        public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
 
-        public Builder setVersionTemplate(CryptoKeyVersionTemplateResponse versionTemplate) {
+        public Builder versionTemplate(CryptoKeyVersionTemplateResponse versionTemplate) {
             this.versionTemplate = Objects.requireNonNull(versionTemplate);
             return this;
         }

@@ -71,20 +71,20 @@ public final class GetRegionHealthCheckServiceResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","healthChecks","healthStatusAggregationPolicy","kind","name","networkEndpointGroups","notificationEndpoints","region","selfLink","selfLinkWithId"})
+    @OutputCustomType.Constructor
     private GetRegionHealthCheckServiceResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        List<String> healthChecks,
-        String healthStatusAggregationPolicy,
-        String kind,
-        String name,
-        List<String> networkEndpointGroups,
-        List<String> notificationEndpoints,
-        String region,
-        String selfLink,
-        String selfLinkWithId) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
+        @OutputCustomType.Parameter("healthStatusAggregationPolicy") String healthStatusAggregationPolicy,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkEndpointGroups") List<String> networkEndpointGroups,
+        @OutputCustomType.Parameter("notificationEndpoints") List<String> notificationEndpoints,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;
@@ -226,62 +226,62 @@ public final class GetRegionHealthCheckServiceResult {
     	      this.selfLinkWithId = defaults.selfLinkWithId;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHealthChecks(List<String> healthChecks) {
+        public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setHealthStatusAggregationPolicy(String healthStatusAggregationPolicy) {
+        public Builder healthStatusAggregationPolicy(String healthStatusAggregationPolicy) {
             this.healthStatusAggregationPolicy = Objects.requireNonNull(healthStatusAggregationPolicy);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkEndpointGroups(List<String> networkEndpointGroups) {
+        public Builder networkEndpointGroups(List<String> networkEndpointGroups) {
             this.networkEndpointGroups = Objects.requireNonNull(networkEndpointGroups);
             return this;
         }
 
-        public Builder setNotificationEndpoints(List<String> notificationEndpoints) {
+        public Builder notificationEndpoints(List<String> notificationEndpoints) {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }

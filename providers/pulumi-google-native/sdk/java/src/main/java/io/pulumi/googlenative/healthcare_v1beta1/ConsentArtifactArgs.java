@@ -218,122 +218,122 @@ public final class ConsentArtifactArgs extends io.pulumi.resources.ResourceArgs 
     	      this.witnessSignature = defaults.witnessSignature;
         }
 
-        public Builder setConsentContentScreenshots(@Nullable Input<List<ImageArgs>> consentContentScreenshots) {
+        public Builder consentContentScreenshots(@Nullable Input<List<ImageArgs>> consentContentScreenshots) {
             this.consentContentScreenshots = consentContentScreenshots;
             return this;
         }
 
-        public Builder setConsentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
+        public Builder consentContentScreenshots(@Nullable List<ImageArgs> consentContentScreenshots) {
             this.consentContentScreenshots = Input.ofNullable(consentContentScreenshots);
             return this;
         }
 
-        public Builder setConsentContentVersion(@Nullable Input<String> consentContentVersion) {
+        public Builder consentContentVersion(@Nullable Input<String> consentContentVersion) {
             this.consentContentVersion = consentContentVersion;
             return this;
         }
 
-        public Builder setConsentContentVersion(@Nullable String consentContentVersion) {
+        public Builder consentContentVersion(@Nullable String consentContentVersion) {
             this.consentContentVersion = Input.ofNullable(consentContentVersion);
             return this;
         }
 
-        public Builder setConsentStoreId(Input<String> consentStoreId) {
+        public Builder consentStoreId(Input<String> consentStoreId) {
             this.consentStoreId = Objects.requireNonNull(consentStoreId);
             return this;
         }
 
-        public Builder setConsentStoreId(String consentStoreId) {
+        public Builder consentStoreId(String consentStoreId) {
             this.consentStoreId = Input.of(Objects.requireNonNull(consentStoreId));
             return this;
         }
 
-        public Builder setDatasetId(Input<String> datasetId) {
+        public Builder datasetId(Input<String> datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Input.of(Objects.requireNonNull(datasetId));
             return this;
         }
 
-        public Builder setGuardianSignature(@Nullable Input<SignatureArgs> guardianSignature) {
+        public Builder guardianSignature(@Nullable Input<SignatureArgs> guardianSignature) {
             this.guardianSignature = guardianSignature;
             return this;
         }
 
-        public Builder setGuardianSignature(@Nullable SignatureArgs guardianSignature) {
+        public Builder guardianSignature(@Nullable SignatureArgs guardianSignature) {
             this.guardianSignature = Input.ofNullable(guardianSignature);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setUserId(Input<String> userId) {
+        public Builder userId(Input<String> userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
 
-        public Builder setUserSignature(@Nullable Input<SignatureArgs> userSignature) {
+        public Builder userSignature(@Nullable Input<SignatureArgs> userSignature) {
             this.userSignature = userSignature;
             return this;
         }
 
-        public Builder setUserSignature(@Nullable SignatureArgs userSignature) {
+        public Builder userSignature(@Nullable SignatureArgs userSignature) {
             this.userSignature = Input.ofNullable(userSignature);
             return this;
         }
 
-        public Builder setWitnessSignature(@Nullable Input<SignatureArgs> witnessSignature) {
+        public Builder witnessSignature(@Nullable Input<SignatureArgs> witnessSignature) {
             this.witnessSignature = witnessSignature;
             return this;
         }
 
-        public Builder setWitnessSignature(@Nullable SignatureArgs witnessSignature) {
+        public Builder witnessSignature(@Nullable SignatureArgs witnessSignature) {
             this.witnessSignature = Input.ofNullable(witnessSignature);
             return this;
         }

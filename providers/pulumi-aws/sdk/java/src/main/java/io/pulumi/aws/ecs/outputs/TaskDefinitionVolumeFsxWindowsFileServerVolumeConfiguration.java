@@ -26,11 +26,11 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
      */
     private final String rootDirectory;
 
-    @OutputCustomType.Constructor({"authorizationConfig","fileSystemId","rootDirectory"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration(
-        TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
-        String fileSystemId,
-        String rootDirectory) {
+        @OutputCustomType.Parameter("authorizationConfig") TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("rootDirectory") String rootDirectory) {
         this.authorizationConfig = authorizationConfig;
         this.fileSystemId = fileSystemId;
         this.rootDirectory = rootDirectory;
@@ -82,17 +82,17 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration {
     	      this.rootDirectory = defaults.rootDirectory;
         }
 
-        public Builder setAuthorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig) {
+        public Builder authorizationConfig(TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfig authorizationConfig) {
             this.authorizationConfig = Objects.requireNonNull(authorizationConfig);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setRootDirectory(String rootDirectory) {
+        public Builder rootDirectory(String rootDirectory) {
             this.rootDirectory = Objects.requireNonNull(rootDirectory);
             return this;
         }

@@ -203,102 +203,102 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setAuthorization(Input<AwsClusterAuthorizationArgs> authorization) {
+        public Builder authorization(Input<AwsClusterAuthorizationArgs> authorization) {
             this.authorization = Objects.requireNonNull(authorization);
             return this;
         }
 
-        public Builder setAuthorization(AwsClusterAuthorizationArgs authorization) {
+        public Builder authorization(AwsClusterAuthorizationArgs authorization) {
             this.authorization = Input.of(Objects.requireNonNull(authorization));
             return this;
         }
 
-        public Builder setAwsRegion(Input<String> awsRegion) {
+        public Builder awsRegion(Input<String> awsRegion) {
             this.awsRegion = Objects.requireNonNull(awsRegion);
             return this;
         }
 
-        public Builder setAwsRegion(String awsRegion) {
+        public Builder awsRegion(String awsRegion) {
             this.awsRegion = Input.of(Objects.requireNonNull(awsRegion));
             return this;
         }
 
-        public Builder setControlPlane(Input<AwsClusterControlPlaneArgs> controlPlane) {
+        public Builder controlPlane(Input<AwsClusterControlPlaneArgs> controlPlane) {
             this.controlPlane = Objects.requireNonNull(controlPlane);
             return this;
         }
 
-        public Builder setControlPlane(AwsClusterControlPlaneArgs controlPlane) {
+        public Builder controlPlane(AwsClusterControlPlaneArgs controlPlane) {
             this.controlPlane = Input.of(Objects.requireNonNull(controlPlane));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFleet(Input<AwsClusterFleetArgs> fleet) {
+        public Builder fleet(Input<AwsClusterFleetArgs> fleet) {
             this.fleet = Objects.requireNonNull(fleet);
             return this;
         }
 
-        public Builder setFleet(AwsClusterFleetArgs fleet) {
+        public Builder fleet(AwsClusterFleetArgs fleet) {
             this.fleet = Input.of(Objects.requireNonNull(fleet));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworking(Input<AwsClusterNetworkingArgs> networking) {
+        public Builder networking(Input<AwsClusterNetworkingArgs> networking) {
             this.networking = Objects.requireNonNull(networking);
             return this;
         }
 
-        public Builder setNetworking(AwsClusterNetworkingArgs networking) {
+        public Builder networking(AwsClusterNetworkingArgs networking) {
             this.networking = Input.of(Objects.requireNonNull(networking));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

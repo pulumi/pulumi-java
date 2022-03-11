@@ -37,11 +37,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
      */
     private final @Nullable Boolean enableVtpm;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfig(
-        @Nullable Boolean enableIntegrityMonitoring,
-        @Nullable Boolean enableSecureBoot,
-        @Nullable Boolean enableVtpm) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") @Nullable Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") @Nullable Boolean enableSecureBoot,
+        @OutputCustomType.Parameter("enableVtpm") @Nullable Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;
@@ -103,17 +103,17 @@ public final class RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConf
     	      this.enableVtpm = defaults.enableVtpm;
         }
 
-        public Builder setEnableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = enableIntegrityMonitoring;
             return this;
         }
 
-        public Builder setEnableSecureBoot(@Nullable Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
             this.enableSecureBoot = enableSecureBoot;
             return this;
         }
 
-        public Builder setEnableVtpm(@Nullable Boolean enableVtpm) {
+        public Builder enableVtpm(@Nullable Boolean enableVtpm) {
             this.enableVtpm = enableVtpm;
             return this;
         }

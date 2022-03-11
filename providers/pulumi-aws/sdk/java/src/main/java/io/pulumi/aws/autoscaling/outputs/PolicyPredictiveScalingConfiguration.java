@@ -38,13 +38,13 @@ public final class PolicyPredictiveScalingConfiguration {
      */
     private final @Nullable String schedulingBufferTime;
 
-    @OutputCustomType.Constructor({"maxCapacityBreachBehavior","maxCapacityBuffer","metricSpecification","mode","schedulingBufferTime"})
+    @OutputCustomType.Constructor
     private PolicyPredictiveScalingConfiguration(
-        @Nullable String maxCapacityBreachBehavior,
-        @Nullable String maxCapacityBuffer,
-        PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
-        @Nullable String mode,
-        @Nullable String schedulingBufferTime) {
+        @OutputCustomType.Parameter("maxCapacityBreachBehavior") @Nullable String maxCapacityBreachBehavior,
+        @OutputCustomType.Parameter("maxCapacityBuffer") @Nullable String maxCapacityBuffer,
+        @OutputCustomType.Parameter("metricSpecification") PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("schedulingBufferTime") @Nullable String schedulingBufferTime) {
         this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
         this.maxCapacityBuffer = maxCapacityBuffer;
         this.metricSpecification = metricSpecification;
@@ -116,27 +116,27 @@ public final class PolicyPredictiveScalingConfiguration {
     	      this.schedulingBufferTime = defaults.schedulingBufferTime;
         }
 
-        public Builder setMaxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
+        public Builder maxCapacityBreachBehavior(@Nullable String maxCapacityBreachBehavior) {
             this.maxCapacityBreachBehavior = maxCapacityBreachBehavior;
             return this;
         }
 
-        public Builder setMaxCapacityBuffer(@Nullable String maxCapacityBuffer) {
+        public Builder maxCapacityBuffer(@Nullable String maxCapacityBuffer) {
             this.maxCapacityBuffer = maxCapacityBuffer;
             return this;
         }
 
-        public Builder setMetricSpecification(PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification) {
+        public Builder metricSpecification(PolicyPredictiveScalingConfigurationMetricSpecification metricSpecification) {
             this.metricSpecification = Objects.requireNonNull(metricSpecification);
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSchedulingBufferTime(@Nullable String schedulingBufferTime) {
+        public Builder schedulingBufferTime(@Nullable String schedulingBufferTime) {
             this.schedulingBufferTime = schedulingBufferTime;
             return this;
         }

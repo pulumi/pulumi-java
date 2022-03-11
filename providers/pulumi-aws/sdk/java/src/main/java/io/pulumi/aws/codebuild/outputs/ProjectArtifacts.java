@@ -63,18 +63,18 @@ public final class ProjectArtifacts {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactIdentifier","bucketOwnerAccess","encryptionDisabled","location","name","namespaceType","overrideArtifactName","packaging","path","type"})
+    @OutputCustomType.Constructor
     private ProjectArtifacts(
-        @Nullable String artifactIdentifier,
-        @Nullable String bucketOwnerAccess,
-        @Nullable Boolean encryptionDisabled,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable String namespaceType,
-        @Nullable Boolean overrideArtifactName,
-        @Nullable String packaging,
-        @Nullable String path,
-        String type) {
+        @OutputCustomType.Parameter("artifactIdentifier") @Nullable String artifactIdentifier,
+        @OutputCustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
+        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespaceType") @Nullable String namespaceType,
+        @OutputCustomType.Parameter("overrideArtifactName") @Nullable Boolean overrideArtifactName,
+        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactIdentifier = artifactIdentifier;
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
@@ -196,52 +196,52 @@ public final class ProjectArtifacts {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactIdentifier(@Nullable String artifactIdentifier) {
+        public Builder artifactIdentifier(@Nullable String artifactIdentifier) {
             this.artifactIdentifier = artifactIdentifier;
             return this;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespaceType(@Nullable String namespaceType) {
+        public Builder namespaceType(@Nullable String namespaceType) {
             this.namespaceType = namespaceType;
             return this;
         }
 
-        public Builder setOverrideArtifactName(@Nullable Boolean overrideArtifactName) {
+        public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
             this.overrideArtifactName = overrideArtifactName;
             return this;
         }
 
-        public Builder setPackaging(@Nullable String packaging) {
+        public Builder packaging(@Nullable String packaging) {
             this.packaging = packaging;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

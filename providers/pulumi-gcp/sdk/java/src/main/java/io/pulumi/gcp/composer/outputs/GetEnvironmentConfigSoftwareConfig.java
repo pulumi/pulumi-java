@@ -18,14 +18,14 @@ public final class GetEnvironmentConfigSoftwareConfig {
     private final String pythonVersion;
     private final Integer schedulerCount;
 
-    @OutputCustomType.Constructor({"airflowConfigOverrides","envVariables","imageVersion","pypiPackages","pythonVersion","schedulerCount"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigSoftwareConfig(
-        Map<String,String> airflowConfigOverrides,
-        Map<String,String> envVariables,
-        String imageVersion,
-        Map<String,String> pypiPackages,
-        String pythonVersion,
-        Integer schedulerCount) {
+        @OutputCustomType.Parameter("airflowConfigOverrides") Map<String,String> airflowConfigOverrides,
+        @OutputCustomType.Parameter("envVariables") Map<String,String> envVariables,
+        @OutputCustomType.Parameter("imageVersion") String imageVersion,
+        @OutputCustomType.Parameter("pypiPackages") Map<String,String> pypiPackages,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("schedulerCount") Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;
@@ -83,32 +83,32 @@ public final class GetEnvironmentConfigSoftwareConfig {
     	      this.schedulerCount = defaults.schedulerCount;
         }
 
-        public Builder setAirflowConfigOverrides(Map<String,String> airflowConfigOverrides) {
+        public Builder airflowConfigOverrides(Map<String,String> airflowConfigOverrides) {
             this.airflowConfigOverrides = Objects.requireNonNull(airflowConfigOverrides);
             return this;
         }
 
-        public Builder setEnvVariables(Map<String,String> envVariables) {
+        public Builder envVariables(Map<String,String> envVariables) {
             this.envVariables = Objects.requireNonNull(envVariables);
             return this;
         }
 
-        public Builder setImageVersion(String imageVersion) {
+        public Builder imageVersion(String imageVersion) {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
 
-        public Builder setPypiPackages(Map<String,String> pypiPackages) {
+        public Builder pypiPackages(Map<String,String> pypiPackages) {
             this.pypiPackages = Objects.requireNonNull(pypiPackages);
             return this;
         }
 
-        public Builder setPythonVersion(String pythonVersion) {
+        public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
 
-        public Builder setSchedulerCount(Integer schedulerCount) {
+        public Builder schedulerCount(Integer schedulerCount) {
             this.schedulerCount = Objects.requireNonNull(schedulerCount);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetExportConfigurationArgs extends io.pulumi.resources.Invoke
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setExportId(String exportId) {
+        public Builder exportId(String exportId) {
             this.exportId = Objects.requireNonNull(exportId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

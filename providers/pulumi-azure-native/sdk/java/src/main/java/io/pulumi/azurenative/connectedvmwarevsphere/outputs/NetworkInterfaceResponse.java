@@ -71,19 +71,19 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String powerOnBoot;
 
-    @OutputCustomType.Constructor({"deviceKey","ipAddresses","ipSettings","label","macAddress","name","networkId","networkMoName","networkMoRefId","nicType","powerOnBoot"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        @Nullable Integer deviceKey,
-        List<String> ipAddresses,
-        @Nullable NicIPSettingsResponse ipSettings,
-        String label,
-        String macAddress,
-        @Nullable String name,
-        @Nullable String networkId,
-        String networkMoName,
-        String networkMoRefId,
-        @Nullable String nicType,
-        @Nullable String powerOnBoot) {
+        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("ipSettings") @Nullable NicIPSettingsResponse ipSettings,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("macAddress") String macAddress,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("networkId") @Nullable String networkId,
+        @OutputCustomType.Parameter("networkMoName") String networkMoName,
+        @OutputCustomType.Parameter("networkMoRefId") String networkMoRefId,
+        @OutputCustomType.Parameter("nicType") @Nullable String nicType,
+        @OutputCustomType.Parameter("powerOnBoot") @Nullable String powerOnBoot) {
         this.deviceKey = deviceKey;
         this.ipAddresses = ipAddresses;
         this.ipSettings = ipSettings;
@@ -216,57 +216,57 @@ public final class NetworkInterfaceResponse {
     	      this.powerOnBoot = defaults.powerOnBoot;
         }
 
-        public Builder setDeviceKey(@Nullable Integer deviceKey) {
+        public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setIpSettings(@Nullable NicIPSettingsResponse ipSettings) {
+        public Builder ipSettings(@Nullable NicIPSettingsResponse ipSettings) {
             this.ipSettings = ipSettings;
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setMacAddress(String macAddress) {
+        public Builder macAddress(String macAddress) {
             this.macAddress = Objects.requireNonNull(macAddress);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetworkId(@Nullable String networkId) {
+        public Builder networkId(@Nullable String networkId) {
             this.networkId = networkId;
             return this;
         }
 
-        public Builder setNetworkMoName(String networkMoName) {
+        public Builder networkMoName(String networkMoName) {
             this.networkMoName = Objects.requireNonNull(networkMoName);
             return this;
         }
 
-        public Builder setNetworkMoRefId(String networkMoRefId) {
+        public Builder networkMoRefId(String networkMoRefId) {
             this.networkMoRefId = Objects.requireNonNull(networkMoRefId);
             return this;
         }
 
-        public Builder setNicType(@Nullable String nicType) {
+        public Builder nicType(@Nullable String nicType) {
             this.nicType = nicType;
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable String powerOnBoot) {
+        public Builder powerOnBoot(@Nullable String powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }

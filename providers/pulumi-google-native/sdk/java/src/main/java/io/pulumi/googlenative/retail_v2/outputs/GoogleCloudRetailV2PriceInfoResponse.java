@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2PriceInfoResponse {
      */
     private final GoogleCloudRetailV2PriceInfoPriceRangeResponse priceRange;
 
-    @OutputCustomType.Constructor({"cost","currencyCode","originalPrice","price","priceEffectiveTime","priceExpireTime","priceRange"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2PriceInfoResponse(
-        Double cost,
-        String currencyCode,
-        Double originalPrice,
-        Double price,
-        String priceEffectiveTime,
-        String priceExpireTime,
-        GoogleCloudRetailV2PriceInfoPriceRangeResponse priceRange) {
+        @OutputCustomType.Parameter("cost") Double cost,
+        @OutputCustomType.Parameter("currencyCode") String currencyCode,
+        @OutputCustomType.Parameter("originalPrice") Double originalPrice,
+        @OutputCustomType.Parameter("price") Double price,
+        @OutputCustomType.Parameter("priceEffectiveTime") String priceEffectiveTime,
+        @OutputCustomType.Parameter("priceExpireTime") String priceExpireTime,
+        @OutputCustomType.Parameter("priceRange") GoogleCloudRetailV2PriceInfoPriceRangeResponse priceRange) {
         this.cost = cost;
         this.currencyCode = currencyCode;
         this.originalPrice = originalPrice;
@@ -147,37 +147,37 @@ public final class GoogleCloudRetailV2PriceInfoResponse {
     	      this.priceRange = defaults.priceRange;
         }
 
-        public Builder setCost(Double cost) {
+        public Builder cost(Double cost) {
             this.cost = Objects.requireNonNull(cost);
             return this;
         }
 
-        public Builder setCurrencyCode(String currencyCode) {
+        public Builder currencyCode(String currencyCode) {
             this.currencyCode = Objects.requireNonNull(currencyCode);
             return this;
         }
 
-        public Builder setOriginalPrice(Double originalPrice) {
+        public Builder originalPrice(Double originalPrice) {
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
 
-        public Builder setPrice(Double price) {
+        public Builder price(Double price) {
             this.price = Objects.requireNonNull(price);
             return this;
         }
 
-        public Builder setPriceEffectiveTime(String priceEffectiveTime) {
+        public Builder priceEffectiveTime(String priceEffectiveTime) {
             this.priceEffectiveTime = Objects.requireNonNull(priceEffectiveTime);
             return this;
         }
 
-        public Builder setPriceExpireTime(String priceExpireTime) {
+        public Builder priceExpireTime(String priceExpireTime) {
             this.priceExpireTime = Objects.requireNonNull(priceExpireTime);
             return this;
         }
 
-        public Builder setPriceRange(GoogleCloudRetailV2PriceInfoPriceRangeResponse priceRange) {
+        public Builder priceRange(GoogleCloudRetailV2PriceInfoPriceRangeResponse priceRange) {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }

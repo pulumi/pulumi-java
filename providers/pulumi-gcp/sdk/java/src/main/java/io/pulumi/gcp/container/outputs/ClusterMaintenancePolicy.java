@@ -32,11 +32,11 @@ public final class ClusterMaintenancePolicy {
      */
     private final @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow;
 
-    @OutputCustomType.Constructor({"dailyMaintenanceWindow","maintenanceExclusions","recurringWindow"})
+    @OutputCustomType.Constructor
     private ClusterMaintenancePolicy(
-        @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
-        @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
-        @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
+        @OutputCustomType.Parameter("dailyMaintenanceWindow") @Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow,
+        @OutputCustomType.Parameter("maintenanceExclusions") @Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions,
+        @OutputCustomType.Parameter("recurringWindow") @Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
         this.dailyMaintenanceWindow = dailyMaintenanceWindow;
         this.maintenanceExclusions = maintenanceExclusions;
         this.recurringWindow = recurringWindow;
@@ -90,17 +90,17 @@ public final class ClusterMaintenancePolicy {
     	      this.recurringWindow = defaults.recurringWindow;
         }
 
-        public Builder setDailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow) {
+        public Builder dailyMaintenanceWindow(@Nullable ClusterMaintenancePolicyDailyMaintenanceWindow dailyMaintenanceWindow) {
             this.dailyMaintenanceWindow = dailyMaintenanceWindow;
             return this;
         }
 
-        public Builder setMaintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
+        public Builder maintenanceExclusions(@Nullable List<ClusterMaintenancePolicyMaintenanceExclusion> maintenanceExclusions) {
             this.maintenanceExclusions = maintenanceExclusions;
             return this;
         }
 
-        public Builder setRecurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
+        public Builder recurringWindow(@Nullable ClusterMaintenancePolicyRecurringWindow recurringWindow) {
             this.recurringWindow = recurringWindow;
             return this;
         }

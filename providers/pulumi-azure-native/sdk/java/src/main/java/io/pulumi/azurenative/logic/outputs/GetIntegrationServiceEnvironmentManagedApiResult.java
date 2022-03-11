@@ -112,26 +112,26 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"apiDefinitionUrl","apiDefinitions","backendService","capabilities","category","connectionParameters","deploymentParameters","generalInformation","id","integrationServiceEnvironment","location","metadata","name","policies","provisioningState","runtimeUrls","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationServiceEnvironmentManagedApiResult(
-        String apiDefinitionUrl,
-        ApiResourceDefinitionsResponse apiDefinitions,
-        ApiResourceBackendServiceResponse backendService,
-        List<String> capabilities,
-        String category,
-        Map<String,Object> connectionParameters,
-        @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
-        ApiResourceGeneralInformationResponse generalInformation,
-        String id,
-        @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @Nullable String location,
-        ApiResourceMetadataResponse metadata,
-        String name,
-        ApiResourcePoliciesResponse policies,
-        String provisioningState,
-        List<String> runtimeUrls,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("apiDefinitionUrl") String apiDefinitionUrl,
+        @OutputCustomType.Parameter("apiDefinitions") ApiResourceDefinitionsResponse apiDefinitions,
+        @OutputCustomType.Parameter("backendService") ApiResourceBackendServiceResponse backendService,
+        @OutputCustomType.Parameter("capabilities") List<String> capabilities,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("connectionParameters") Map<String,Object> connectionParameters,
+        @OutputCustomType.Parameter("deploymentParameters") @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters,
+        @OutputCustomType.Parameter("generalInformation") ApiResourceGeneralInformationResponse generalInformation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") ApiResourceMetadataResponse metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policies") ApiResourcePoliciesResponse policies,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("runtimeUrls") List<String> runtimeUrls,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.apiDefinitionUrl = apiDefinitionUrl;
         this.apiDefinitions = apiDefinitions;
         this.backendService = backendService;
@@ -333,92 +333,92 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiDefinitionUrl(String apiDefinitionUrl) {
+        public Builder apiDefinitionUrl(String apiDefinitionUrl) {
             this.apiDefinitionUrl = Objects.requireNonNull(apiDefinitionUrl);
             return this;
         }
 
-        public Builder setApiDefinitions(ApiResourceDefinitionsResponse apiDefinitions) {
+        public Builder apiDefinitions(ApiResourceDefinitionsResponse apiDefinitions) {
             this.apiDefinitions = Objects.requireNonNull(apiDefinitions);
             return this;
         }
 
-        public Builder setBackendService(ApiResourceBackendServiceResponse backendService) {
+        public Builder backendService(ApiResourceBackendServiceResponse backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
 
-        public Builder setCapabilities(List<String> capabilities) {
+        public Builder capabilities(List<String> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setConnectionParameters(Map<String,Object> connectionParameters) {
+        public Builder connectionParameters(Map<String,Object> connectionParameters) {
             this.connectionParameters = Objects.requireNonNull(connectionParameters);
             return this;
         }
 
-        public Builder setDeploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters) {
+        public Builder deploymentParameters(@Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters) {
             this.deploymentParameters = deploymentParameters;
             return this;
         }
 
-        public Builder setGeneralInformation(ApiResourceGeneralInformationResponse generalInformation) {
+        public Builder generalInformation(ApiResourceGeneralInformationResponse generalInformation) {
             this.generalInformation = Objects.requireNonNull(generalInformation);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(ApiResourceMetadataResponse metadata) {
+        public Builder metadata(ApiResourceMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicies(ApiResourcePoliciesResponse policies) {
+        public Builder policies(ApiResourcePoliciesResponse policies) {
             this.policies = Objects.requireNonNull(policies);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRuntimeUrls(List<String> runtimeUrls) {
+        public Builder runtimeUrls(List<String> runtimeUrls) {
             this.runtimeUrls = Objects.requireNonNull(runtimeUrls);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

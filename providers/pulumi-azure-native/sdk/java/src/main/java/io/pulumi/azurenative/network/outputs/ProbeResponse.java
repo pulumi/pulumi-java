@@ -70,19 +70,19 @@ public final class ProbeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","intervalInSeconds","loadBalancingRules","name","numberOfProbes","port","protocol","provisioningState","requestPath","type"})
+    @OutputCustomType.Constructor
     private ProbeResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        List<SubResourceResponse> loadBalancingRules,
-        @Nullable String name,
-        @Nullable Integer numberOfProbes,
-        Integer port,
-        String protocol,
-        String provisioningState,
-        @Nullable String requestPath,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("loadBalancingRules") List<SubResourceResponse> loadBalancingRules,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("numberOfProbes") @Nullable Integer numberOfProbes,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.intervalInSeconds = intervalInSeconds;
@@ -214,57 +214,57 @@ public final class ProbeResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setLoadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
+        public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             this.loadBalancingRules = Objects.requireNonNull(loadBalancingRules);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNumberOfProbes(@Nullable Integer numberOfProbes) {
+        public Builder numberOfProbes(@Nullable Integer numberOfProbes) {
             this.numberOfProbes = numberOfProbes;
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestPath(@Nullable String requestPath) {
+        public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

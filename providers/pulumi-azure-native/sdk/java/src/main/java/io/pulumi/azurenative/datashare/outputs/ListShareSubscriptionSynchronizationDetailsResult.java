@@ -24,10 +24,10 @@ public final class ListShareSubscriptionSynchronizationDetailsResult {
      */
     private final List<SynchronizationDetailsResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListShareSubscriptionSynchronizationDetailsResult(
-        @Nullable String nextLink,
-        List<SynchronizationDetailsResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") List<SynchronizationDetailsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListShareSubscriptionSynchronizationDetailsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(List<SynchronizationDetailsResponse> value) {
+        public Builder value(List<SynchronizationDetailsResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

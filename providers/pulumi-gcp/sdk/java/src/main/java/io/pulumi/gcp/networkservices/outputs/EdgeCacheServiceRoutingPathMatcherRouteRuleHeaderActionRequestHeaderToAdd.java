@@ -29,11 +29,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      */
     private final @Nullable Boolean replace;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","replace"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToAdd(
-        String headerName,
-        String headerValue,
-        @Nullable Boolean replace) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue,
+        @OutputCustomType.Parameter("replace") @Nullable Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;
@@ -86,17 +86,17 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setReplace(@Nullable Boolean replace) {
+        public Builder replace(@Nullable Boolean replace) {
             this.replace = replace;
             return this;
         }

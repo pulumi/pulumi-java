@@ -22,10 +22,10 @@ public final class EndpointAccessVpcSecurityGroup {
      */
     private final @Nullable String vpcSecurityGroupId;
 
-    @OutputCustomType.Constructor({"status","vpcSecurityGroupId"})
+    @OutputCustomType.Constructor
     private EndpointAccessVpcSecurityGroup(
-        @Nullable String status,
-        @Nullable String vpcSecurityGroupId) {
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("vpcSecurityGroupId") @Nullable String vpcSecurityGroupId) {
         this.status = status;
         this.vpcSecurityGroupId = vpcSecurityGroupId;
     }
@@ -67,12 +67,12 @@ public final class EndpointAccessVpcSecurityGroup {
     	      this.vpcSecurityGroupId = defaults.vpcSecurityGroupId;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
+        public Builder vpcSecurityGroupId(@Nullable String vpcSecurityGroupId) {
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
         }

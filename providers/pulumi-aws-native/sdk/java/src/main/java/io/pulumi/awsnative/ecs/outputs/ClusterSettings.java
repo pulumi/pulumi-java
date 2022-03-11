@@ -14,10 +14,10 @@ public final class ClusterSettings {
     private final @Nullable String name;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private ClusterSettings(
-        @Nullable String name,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }
@@ -51,12 +51,12 @@ public final class ClusterSettings {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

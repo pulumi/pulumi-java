@@ -89,24 +89,24 @@ public final class GetVolumeResult {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"arn","availabilityZone","encrypted","filters","id","iops","kmsKeyId","mostRecent","multiAttachEnabled","outpostArn","size","snapshotId","tags","throughput","volumeId","volumeType"})
+    @OutputCustomType.Constructor
     private GetVolumeResult(
-        String arn,
-        String availabilityZone,
-        Boolean encrypted,
-        @Nullable List<GetVolumeFilter> filters,
-        String id,
-        Integer iops,
-        String kmsKeyId,
-        @Nullable Boolean mostRecent,
-        Boolean multiAttachEnabled,
-        String outpostArn,
-        Integer size,
-        String snapshotId,
-        Map<String,String> tags,
-        Integer throughput,
-        String volumeId,
-        String volumeType) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVolumeFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("multiAttachEnabled") Boolean multiAttachEnabled,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("snapshotId") String snapshotId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("throughput") Integer throughput,
+        @OutputCustomType.Parameter("volumeId") String volumeId,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.encrypted = encrypted;
@@ -280,82 +280,82 @@ public final class GetVolumeResult {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVolumeFilter> filters) {
+        public Builder filters(@Nullable List<GetVolumeFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIops(Integer iops) {
+        public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setMultiAttachEnabled(Boolean multiAttachEnabled) {
+        public Builder multiAttachEnabled(Boolean multiAttachEnabled) {
             this.multiAttachEnabled = Objects.requireNonNull(multiAttachEnabled);
             return this;
         }
 
-        public Builder setOutpostArn(String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setThroughput(Integer throughput) {
+        public Builder throughput(Integer throughput) {
             this.throughput = Objects.requireNonNull(throughput);
             return this;
         }
 
-        public Builder setVolumeId(String volumeId) {
+        public Builder volumeId(String volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

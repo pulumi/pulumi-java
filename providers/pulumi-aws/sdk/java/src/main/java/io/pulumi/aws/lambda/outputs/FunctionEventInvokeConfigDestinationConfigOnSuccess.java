@@ -15,8 +15,8 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
      */
     private final String destination;
 
-    @OutputCustomType.Constructor({"destination"})
-    private FunctionEventInvokeConfigDestinationConfigOnSuccess(String destination) {
+    @OutputCustomType.Constructor
+    private FunctionEventInvokeConfigDestinationConfigOnSuccess(@OutputCustomType.Parameter("destination") String destination) {
         this.destination = destination;
     }
 
@@ -48,7 +48,7 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccess {
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }

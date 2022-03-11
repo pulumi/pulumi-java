@@ -44,14 +44,14 @@ public final class ConditionResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"conditionAbsent","conditionMatchedLog","conditionMonitoringQueryLanguage","conditionThreshold","displayName","name"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        MetricAbsenceResponse conditionAbsent,
-        LogMatchResponse conditionMatchedLog,
-        MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
-        MetricThresholdResponse conditionThreshold,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("conditionAbsent") MetricAbsenceResponse conditionAbsent,
+        @OutputCustomType.Parameter("conditionMatchedLog") LogMatchResponse conditionMatchedLog,
+        @OutputCustomType.Parameter("conditionMonitoringQueryLanguage") MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage,
+        @OutputCustomType.Parameter("conditionThreshold") MetricThresholdResponse conditionThreshold,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.conditionAbsent = conditionAbsent;
         this.conditionMatchedLog = conditionMatchedLog;
         this.conditionMonitoringQueryLanguage = conditionMonitoringQueryLanguage;
@@ -133,32 +133,32 @@ public final class ConditionResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setConditionAbsent(MetricAbsenceResponse conditionAbsent) {
+        public Builder conditionAbsent(MetricAbsenceResponse conditionAbsent) {
             this.conditionAbsent = Objects.requireNonNull(conditionAbsent);
             return this;
         }
 
-        public Builder setConditionMatchedLog(LogMatchResponse conditionMatchedLog) {
+        public Builder conditionMatchedLog(LogMatchResponse conditionMatchedLog) {
             this.conditionMatchedLog = Objects.requireNonNull(conditionMatchedLog);
             return this;
         }
 
-        public Builder setConditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage) {
+        public Builder conditionMonitoringQueryLanguage(MonitoringQueryLanguageConditionResponse conditionMonitoringQueryLanguage) {
             this.conditionMonitoringQueryLanguage = Objects.requireNonNull(conditionMonitoringQueryLanguage);
             return this;
         }
 
-        public Builder setConditionThreshold(MetricThresholdResponse conditionThreshold) {
+        public Builder conditionThreshold(MetricThresholdResponse conditionThreshold) {
             this.conditionThreshold = Objects.requireNonNull(conditionThreshold);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

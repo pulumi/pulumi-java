@@ -41,14 +41,14 @@ public final class GetAttributeDefinitionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"allowedValues","category","consentDefaultValues","dataMappingDefaultValue","description","name"})
+    @OutputCustomType.Constructor
     private GetAttributeDefinitionResult(
-        List<String> allowedValues,
-        String category,
-        List<String> consentDefaultValues,
-        String dataMappingDefaultValue,
-        String description,
-        String name) {
+        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("consentDefaultValues") List<String> consentDefaultValues,
+        @OutputCustomType.Parameter("dataMappingDefaultValue") String dataMappingDefaultValue,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name) {
         this.allowedValues = allowedValues;
         this.category = category;
         this.consentDefaultValues = consentDefaultValues;
@@ -130,32 +130,32 @@ public final class GetAttributeDefinitionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setConsentDefaultValues(List<String> consentDefaultValues) {
+        public Builder consentDefaultValues(List<String> consentDefaultValues) {
             this.consentDefaultValues = Objects.requireNonNull(consentDefaultValues);
             return this;
         }
 
-        public Builder setDataMappingDefaultValue(String dataMappingDefaultValue) {
+        public Builder dataMappingDefaultValue(String dataMappingDefaultValue) {
             this.dataMappingDefaultValue = Objects.requireNonNull(dataMappingDefaultValue);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

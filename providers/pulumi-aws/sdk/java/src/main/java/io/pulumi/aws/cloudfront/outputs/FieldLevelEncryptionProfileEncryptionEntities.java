@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FieldLevelEncryptionProfileEncryptionEntities {
     private final @Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private FieldLevelEncryptionProfileEncryptionEntities(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
+    @OutputCustomType.Constructor
+    private FieldLevelEncryptionProfileEncryptionEntities(@OutputCustomType.Parameter("items") @Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
         this.items = items;
     }
 
@@ -42,7 +42,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntities {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
+        public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItem> items) {
             this.items = items;
             return this;
         }

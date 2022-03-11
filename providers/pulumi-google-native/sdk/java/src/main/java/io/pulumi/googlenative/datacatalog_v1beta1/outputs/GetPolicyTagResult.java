@@ -36,13 +36,13 @@ public final class GetPolicyTagResult {
      */
     private final String parentPolicyTag;
 
-    @OutputCustomType.Constructor({"childPolicyTags","description","displayName","name","parentPolicyTag"})
+    @OutputCustomType.Constructor
     private GetPolicyTagResult(
-        List<String> childPolicyTags,
-        String description,
-        String displayName,
-        String name,
-        String parentPolicyTag) {
+        @OutputCustomType.Parameter("childPolicyTags") List<String> childPolicyTags,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentPolicyTag") String parentPolicyTag) {
         this.childPolicyTags = childPolicyTags;
         this.description = description;
         this.displayName = displayName;
@@ -114,27 +114,27 @@ public final class GetPolicyTagResult {
     	      this.parentPolicyTag = defaults.parentPolicyTag;
         }
 
-        public Builder setChildPolicyTags(List<String> childPolicyTags) {
+        public Builder childPolicyTags(List<String> childPolicyTags) {
             this.childPolicyTags = Objects.requireNonNull(childPolicyTags);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentPolicyTag(String parentPolicyTag) {
+        public Builder parentPolicyTag(String parentPolicyTag) {
             this.parentPolicyTag = Objects.requireNonNull(parentPolicyTag);
             return this;
         }

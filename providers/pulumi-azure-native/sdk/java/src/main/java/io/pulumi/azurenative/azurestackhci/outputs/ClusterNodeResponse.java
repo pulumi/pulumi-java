@@ -56,17 +56,17 @@ public final class ClusterNodeResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor({"coreCount","id","manufacturer","memoryInGiB","model","name","osName","osVersion","serialNumber"})
+    @OutputCustomType.Constructor
     private ClusterNodeResponse(
-        Double coreCount,
-        Double id,
-        String manufacturer,
-        Double memoryInGiB,
-        String model,
-        String name,
-        String osName,
-        String osVersion,
-        String serialNumber) {
+        @OutputCustomType.Parameter("coreCount") Double coreCount,
+        @OutputCustomType.Parameter("id") Double id,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("memoryInGiB") Double memoryInGiB,
+        @OutputCustomType.Parameter("model") String model,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("osName") String osName,
+        @OutputCustomType.Parameter("osVersion") String osVersion,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
         this.coreCount = coreCount;
         this.id = id;
         this.manufacturer = manufacturer;
@@ -178,47 +178,47 @@ public final class ClusterNodeResponse {
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setCoreCount(Double coreCount) {
+        public Builder coreCount(Double coreCount) {
             this.coreCount = Objects.requireNonNull(coreCount);
             return this;
         }
 
-        public Builder setId(Double id) {
+        public Builder id(Double id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setManufacturer(String manufacturer) {
+        public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
 
-        public Builder setMemoryInGiB(Double memoryInGiB) {
+        public Builder memoryInGiB(Double memoryInGiB) {
             this.memoryInGiB = Objects.requireNonNull(memoryInGiB);
             return this;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOsName(String osName) {
+        public Builder osName(String osName) {
             this.osName = Objects.requireNonNull(osName);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }

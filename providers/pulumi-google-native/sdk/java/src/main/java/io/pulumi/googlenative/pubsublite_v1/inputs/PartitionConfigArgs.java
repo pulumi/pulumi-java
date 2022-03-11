@@ -75,22 +75,22 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.count = defaults.count;
         }
 
-        public Builder setCapacity(@Nullable Input<CapacityArgs> capacity) {
+        public Builder capacity(@Nullable Input<CapacityArgs> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable CapacityArgs capacity) {
+        public Builder capacity(@Nullable CapacityArgs capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<String> count) {
+        public Builder count(@Nullable Input<String> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable String count) {
+        public Builder count(@Nullable String count) {
             this.count = Input.ofNullable(count);
             return this;
         }

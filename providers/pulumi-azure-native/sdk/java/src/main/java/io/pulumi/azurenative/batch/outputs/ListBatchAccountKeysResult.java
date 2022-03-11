@@ -25,11 +25,11 @@ public final class ListBatchAccountKeysResult {
      */
     private final String secondary;
 
-    @OutputCustomType.Constructor({"accountName","primary","secondary"})
+    @OutputCustomType.Constructor
     private ListBatchAccountKeysResult(
-        String accountName,
-        String primary,
-        String secondary) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("primary") String primary,
+        @OutputCustomType.Parameter("secondary") String secondary) {
         this.accountName = accountName;
         this.primary = primary;
         this.secondary = secondary;
@@ -81,17 +81,17 @@ public final class ListBatchAccountKeysResult {
     	      this.secondary = defaults.secondary;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setPrimary(String primary) {
+        public Builder primary(String primary) {
             this.primary = Objects.requireNonNull(primary);
             return this;
         }
 
-        public Builder setSecondary(String secondary) {
+        public Builder secondary(String secondary) {
             this.secondary = Objects.requireNonNull(secondary);
             return this;
         }

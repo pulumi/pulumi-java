@@ -19,12 +19,12 @@ public final class GetRealtimeLogConfigResult {
     private final @Nullable List<String> fields;
     private final @Nullable Double samplingRate;
 
-    @OutputCustomType.Constructor({"arn","endPoints","fields","samplingRate"})
+    @OutputCustomType.Constructor
     private GetRealtimeLogConfigResult(
-        @Nullable String arn,
-        @Nullable List<RealtimeLogConfigEndPoint> endPoints,
-        @Nullable List<String> fields,
-        @Nullable Double samplingRate) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("endPoints") @Nullable List<RealtimeLogConfigEndPoint> endPoints,
+        @OutputCustomType.Parameter("fields") @Nullable List<String> fields,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Double samplingRate) {
         this.arn = arn;
         this.endPoints = endPoints;
         this.fields = fields;
@@ -70,22 +70,22 @@ public final class GetRealtimeLogConfigResult {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEndPoints(@Nullable List<RealtimeLogConfigEndPoint> endPoints) {
+        public Builder endPoints(@Nullable List<RealtimeLogConfigEndPoint> endPoints) {
             this.endPoints = endPoints;
             return this;
         }
 
-        public Builder setFields(@Nullable List<String> fields) {
+        public Builder fields(@Nullable List<String> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Double samplingRate) {
+        public Builder samplingRate(@Nullable Double samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }

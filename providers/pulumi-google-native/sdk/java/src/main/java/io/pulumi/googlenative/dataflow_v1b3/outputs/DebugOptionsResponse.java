@@ -15,8 +15,8 @@ public final class DebugOptionsResponse {
      */
     private final Boolean enableHotKeyLogging;
 
-    @OutputCustomType.Constructor({"enableHotKeyLogging"})
-    private DebugOptionsResponse(Boolean enableHotKeyLogging) {
+    @OutputCustomType.Constructor
+    private DebugOptionsResponse(@OutputCustomType.Parameter("enableHotKeyLogging") Boolean enableHotKeyLogging) {
         this.enableHotKeyLogging = enableHotKeyLogging;
     }
 
@@ -48,7 +48,7 @@ public final class DebugOptionsResponse {
     	      this.enableHotKeyLogging = defaults.enableHotKeyLogging;
         }
 
-        public Builder setEnableHotKeyLogging(Boolean enableHotKeyLogging) {
+        public Builder enableHotKeyLogging(Boolean enableHotKeyLogging) {
             this.enableHotKeyLogging = Objects.requireNonNull(enableHotKeyLogging);
             return this;
         }

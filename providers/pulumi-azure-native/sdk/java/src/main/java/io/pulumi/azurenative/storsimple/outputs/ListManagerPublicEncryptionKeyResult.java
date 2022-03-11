@@ -27,11 +27,11 @@ public final class ListManagerPublicEncryptionKeyResult {
      */
     private final @Nullable String valueCertificateThumbprint;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","value","valueCertificateThumbprint"})
+    @OutputCustomType.Constructor
     private ListManagerPublicEncryptionKeyResult(
-        String encryptionAlgorithm,
-        String value,
-        @Nullable String valueCertificateThumbprint) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueCertificateThumbprint") @Nullable String valueCertificateThumbprint) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.value = value;
         this.valueCertificateThumbprint = valueCertificateThumbprint;
@@ -83,17 +83,17 @@ public final class ListManagerPublicEncryptionKeyResult {
     	      this.valueCertificateThumbprint = defaults.valueCertificateThumbprint;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueCertificateThumbprint(@Nullable String valueCertificateThumbprint) {
+        public Builder valueCertificateThumbprint(@Nullable String valueCertificateThumbprint) {
             this.valueCertificateThumbprint = valueCertificateThumbprint;
             return this;
         }

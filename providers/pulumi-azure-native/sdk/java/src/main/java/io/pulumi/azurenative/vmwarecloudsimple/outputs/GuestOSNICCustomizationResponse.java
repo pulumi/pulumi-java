@@ -48,15 +48,15 @@ public final class GuestOSNICCustomizationResponse {
      */
     private final @Nullable String secondaryWinsServer;
 
-    @OutputCustomType.Constructor({"allocation","dnsServers","gateway","ipAddress","mask","primaryWinsServer","secondaryWinsServer"})
+    @OutputCustomType.Constructor
     private GuestOSNICCustomizationResponse(
-        @Nullable String allocation,
-        @Nullable List<String> dnsServers,
-        @Nullable List<String> gateway,
-        @Nullable String ipAddress,
-        @Nullable String mask,
-        @Nullable String primaryWinsServer,
-        @Nullable String secondaryWinsServer) {
+        @OutputCustomType.Parameter("allocation") @Nullable String allocation,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("gateway") @Nullable List<String> gateway,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("mask") @Nullable String mask,
+        @OutputCustomType.Parameter("primaryWinsServer") @Nullable String primaryWinsServer,
+        @OutputCustomType.Parameter("secondaryWinsServer") @Nullable String secondaryWinsServer) {
         this.allocation = allocation;
         this.dnsServers = dnsServers;
         this.gateway = gateway;
@@ -148,37 +148,37 @@ public final class GuestOSNICCustomizationResponse {
     	      this.secondaryWinsServer = defaults.secondaryWinsServer;
         }
 
-        public Builder setAllocation(@Nullable String allocation) {
+        public Builder allocation(@Nullable String allocation) {
             this.allocation = allocation;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setGateway(@Nullable List<String> gateway) {
+        public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setMask(@Nullable String mask) {
+        public Builder mask(@Nullable String mask) {
             this.mask = mask;
             return this;
         }
 
-        public Builder setPrimaryWinsServer(@Nullable String primaryWinsServer) {
+        public Builder primaryWinsServer(@Nullable String primaryWinsServer) {
             this.primaryWinsServer = primaryWinsServer;
             return this;
         }
 
-        public Builder setSecondaryWinsServer(@Nullable String secondaryWinsServer) {
+        public Builder secondaryWinsServer(@Nullable String secondaryWinsServer) {
             this.secondaryWinsServer = secondaryWinsServer;
             return this;
         }

@@ -21,10 +21,10 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
      */
     private final Boolean returnConnectionPasswordEncrypted;
 
-    @OutputCustomType.Constructor({"awsKmsKeyId","returnConnectionPasswordEncrypted"})
+    @OutputCustomType.Constructor
     private GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingConnectionPasswordEncryption(
-        String awsKmsKeyId,
-        Boolean returnConnectionPasswordEncrypted) {
+        @OutputCustomType.Parameter("awsKmsKeyId") String awsKmsKeyId,
+        @OutputCustomType.Parameter("returnConnectionPasswordEncrypted") Boolean returnConnectionPasswordEncrypted) {
         this.awsKmsKeyId = awsKmsKeyId;
         this.returnConnectionPasswordEncrypted = returnConnectionPasswordEncrypted;
     }
@@ -66,12 +66,12 @@ public final class GetDataCatalogEncryptionSettingsDataCatalogEncryptionSettingC
     	      this.returnConnectionPasswordEncrypted = defaults.returnConnectionPasswordEncrypted;
         }
 
-        public Builder setAwsKmsKeyId(String awsKmsKeyId) {
+        public Builder awsKmsKeyId(String awsKmsKeyId) {
             this.awsKmsKeyId = Objects.requireNonNull(awsKmsKeyId);
             return this;
         }
 
-        public Builder setReturnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
+        public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
             return this;
         }

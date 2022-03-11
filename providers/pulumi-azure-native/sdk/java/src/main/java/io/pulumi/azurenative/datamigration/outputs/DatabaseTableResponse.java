@@ -21,10 +21,10 @@ public final class DatabaseTableResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"hasRows","name"})
+    @OutputCustomType.Constructor
     private DatabaseTableResponse(
-        Boolean hasRows,
-        String name) {
+        @OutputCustomType.Parameter("hasRows") Boolean hasRows,
+        @OutputCustomType.Parameter("name") String name) {
         this.hasRows = hasRows;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class DatabaseTableResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setHasRows(Boolean hasRows) {
+        public Builder hasRows(Boolean hasRows) {
             this.hasRows = Objects.requireNonNull(hasRows);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

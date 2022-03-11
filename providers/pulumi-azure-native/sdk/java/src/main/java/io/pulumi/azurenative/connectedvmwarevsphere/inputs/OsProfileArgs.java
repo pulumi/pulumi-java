@@ -108,42 +108,42 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.osType = defaults.osType;
         }
 
-        public Builder setAdminPassword(@Nullable Input<String> adminPassword) {
+        public Builder adminPassword(@Nullable Input<String> adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = Input.ofNullable(adminPassword);
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable Input<String> adminUsername) {
+        public Builder adminUsername(@Nullable Input<String> adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = Input.ofNullable(adminUsername);
             return this;
         }
 
-        public Builder setComputerName(@Nullable Input<String> computerName) {
+        public Builder computerName(@Nullable Input<String> computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = Input.ofNullable(computerName);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<Either<String,OsType>> osType) {
+        public Builder osType(@Nullable Input<Either<String,OsType>> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable Either<String,OsType> osType) {
+        public Builder osType(@Nullable Either<String,OsType> osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }

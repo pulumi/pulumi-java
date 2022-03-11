@@ -126,8 +126,8 @@ public class DaemonSetList extends io.pulumi.resources.CustomResource {
     private static DaemonSetListArgs makeArgs(DaemonSetListArgs args) {
         var builder = args == null ? DaemonSetListArgs.builder() : DaemonSetListArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("DaemonSetList")
+            .apiVersion("extensions/v1beta1")
+            .kind("DaemonSetList")
             .build();
     }
 

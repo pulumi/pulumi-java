@@ -33,12 +33,12 @@ public final class DeploymentUpdateResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor({"credential","description","labels","manifest"})
+    @OutputCustomType.Constructor
     private DeploymentUpdateResponse(
-        CredentialResponse credential,
-        String description,
-        List<DeploymentUpdateLabelEntryResponse> labels,
-        String manifest) {
+        @OutputCustomType.Parameter("credential") CredentialResponse credential,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("manifest") String manifest) {
         this.credential = credential;
         this.description = description;
         this.labels = labels;
@@ -100,22 +100,22 @@ public final class DeploymentUpdateResponse {
     	      this.manifest = defaults.manifest;
         }
 
-        public Builder setCredential(CredentialResponse credential) {
+        public Builder credential(CredentialResponse credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(List<DeploymentUpdateLabelEntryResponse> labels) {
+        public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }

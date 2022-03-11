@@ -24,10 +24,10 @@ public final class NetworkRefResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"endpointRefs","name"})
+    @OutputCustomType.Constructor
     private NetworkRefResponse(
-        @Nullable List<EndpointRefResponse> endpointRefs,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("endpointRefs") @Nullable List<EndpointRefResponse> endpointRefs,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.endpointRefs = endpointRefs;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class NetworkRefResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEndpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
+        public Builder endpointRefs(@Nullable List<EndpointRefResponse> endpointRefs) {
             this.endpointRefs = endpointRefs;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

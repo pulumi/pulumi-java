@@ -20,13 +20,13 @@ public final class GetBackupVaultResult {
     private final @Nullable BackupVaultLockConfigurationType lockConfiguration;
     private final @Nullable BackupVaultNotificationObjectType notifications;
 
-    @OutputCustomType.Constructor({"accessPolicy","backupVaultArn","backupVaultTags","lockConfiguration","notifications"})
+    @OutputCustomType.Constructor
     private GetBackupVaultResult(
-        @Nullable Object accessPolicy,
-        @Nullable String backupVaultArn,
-        @Nullable Object backupVaultTags,
-        @Nullable BackupVaultLockConfigurationType lockConfiguration,
-        @Nullable BackupVaultNotificationObjectType notifications) {
+        @OutputCustomType.Parameter("accessPolicy") @Nullable Object accessPolicy,
+        @OutputCustomType.Parameter("backupVaultArn") @Nullable String backupVaultArn,
+        @OutputCustomType.Parameter("backupVaultTags") @Nullable Object backupVaultTags,
+        @OutputCustomType.Parameter("lockConfiguration") @Nullable BackupVaultLockConfigurationType lockConfiguration,
+        @OutputCustomType.Parameter("notifications") @Nullable BackupVaultNotificationObjectType notifications) {
         this.accessPolicy = accessPolicy;
         this.backupVaultArn = backupVaultArn;
         this.backupVaultTags = backupVaultTags;
@@ -78,27 +78,27 @@ public final class GetBackupVaultResult {
     	      this.notifications = defaults.notifications;
         }
 
-        public Builder setAccessPolicy(@Nullable Object accessPolicy) {
+        public Builder accessPolicy(@Nullable Object accessPolicy) {
             this.accessPolicy = accessPolicy;
             return this;
         }
 
-        public Builder setBackupVaultArn(@Nullable String backupVaultArn) {
+        public Builder backupVaultArn(@Nullable String backupVaultArn) {
             this.backupVaultArn = backupVaultArn;
             return this;
         }
 
-        public Builder setBackupVaultTags(@Nullable Object backupVaultTags) {
+        public Builder backupVaultTags(@Nullable Object backupVaultTags) {
             this.backupVaultTags = backupVaultTags;
             return this;
         }
 
-        public Builder setLockConfiguration(@Nullable BackupVaultLockConfigurationType lockConfiguration) {
+        public Builder lockConfiguration(@Nullable BackupVaultLockConfigurationType lockConfiguration) {
             this.lockConfiguration = lockConfiguration;
             return this;
         }
 
-        public Builder setNotifications(@Nullable BackupVaultNotificationObjectType notifications) {
+        public Builder notifications(@Nullable BackupVaultNotificationObjectType notifications) {
             this.notifications = notifications;
             return this;
         }

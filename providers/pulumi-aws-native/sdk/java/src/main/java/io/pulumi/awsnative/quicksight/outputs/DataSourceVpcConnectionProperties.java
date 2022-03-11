@@ -15,8 +15,8 @@ public final class DataSourceVpcConnectionProperties {
      */
     private final String vpcConnectionArn;
 
-    @OutputCustomType.Constructor({"vpcConnectionArn"})
-    private DataSourceVpcConnectionProperties(String vpcConnectionArn) {
+    @OutputCustomType.Constructor
+    private DataSourceVpcConnectionProperties(@OutputCustomType.Parameter("vpcConnectionArn") String vpcConnectionArn) {
         this.vpcConnectionArn = vpcConnectionArn;
     }
 
@@ -48,7 +48,7 @@ public final class DataSourceVpcConnectionProperties {
     	      this.vpcConnectionArn = defaults.vpcConnectionArn;
         }
 
-        public Builder setVpcConnectionArn(String vpcConnectionArn) {
+        public Builder vpcConnectionArn(String vpcConnectionArn) {
             this.vpcConnectionArn = Objects.requireNonNull(vpcConnectionArn);
             return this;
         }

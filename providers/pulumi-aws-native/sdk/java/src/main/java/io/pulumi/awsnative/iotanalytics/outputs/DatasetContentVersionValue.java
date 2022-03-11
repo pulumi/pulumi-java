@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetContentVersionValue {
     private final String datasetName;
 
-    @OutputCustomType.Constructor({"datasetName"})
-    private DatasetContentVersionValue(String datasetName) {
+    @OutputCustomType.Constructor
+    private DatasetContentVersionValue(@OutputCustomType.Parameter("datasetName") String datasetName) {
         this.datasetName = datasetName;
     }
 
@@ -40,7 +40,7 @@ public final class DatasetContentVersionValue {
     	      this.datasetName = defaults.datasetName;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }

@@ -113,27 +113,27 @@ public final class GetViewResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accumulated","chart","createdOn","currency","dataSet","dateRange","displayName","eTag","id","includeMonetaryCommitment","kpis","metric","modifiedOn","name","pivots","scope","timePeriod","timeframe","type"})
+    @OutputCustomType.Constructor
     private GetViewResult(
-        @Nullable String accumulated,
-        @Nullable String chart,
-        String createdOn,
-        String currency,
-        @Nullable ReportConfigDatasetResponse dataSet,
-        String dateRange,
-        @Nullable String displayName,
-        @Nullable String eTag,
-        String id,
-        Boolean includeMonetaryCommitment,
-        @Nullable List<KpiPropertiesResponse> kpis,
-        @Nullable String metric,
-        String modifiedOn,
-        String name,
-        @Nullable List<PivotPropertiesResponse> pivots,
-        @Nullable String scope,
-        @Nullable ReportConfigTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
+        @OutputCustomType.Parameter("accumulated") @Nullable String accumulated,
+        @OutputCustomType.Parameter("chart") @Nullable String chart,
+        @OutputCustomType.Parameter("createdOn") String createdOn,
+        @OutputCustomType.Parameter("currency") String currency,
+        @OutputCustomType.Parameter("dataSet") @Nullable ReportConfigDatasetResponse dataSet,
+        @OutputCustomType.Parameter("dateRange") String dateRange,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("includeMonetaryCommitment") Boolean includeMonetaryCommitment,
+        @OutputCustomType.Parameter("kpis") @Nullable List<KpiPropertiesResponse> kpis,
+        @OutputCustomType.Parameter("metric") @Nullable String metric,
+        @OutputCustomType.Parameter("modifiedOn") String modifiedOn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pivots") @Nullable List<PivotPropertiesResponse> pivots,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("timePeriod") @Nullable ReportConfigTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("timeframe") String timeframe,
+        @OutputCustomType.Parameter("type") String type) {
         this.accumulated = accumulated;
         this.chart = chart;
         this.createdOn = createdOn;
@@ -345,97 +345,97 @@ public final class GetViewResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccumulated(@Nullable String accumulated) {
+        public Builder accumulated(@Nullable String accumulated) {
             this.accumulated = accumulated;
             return this;
         }
 
-        public Builder setChart(@Nullable String chart) {
+        public Builder chart(@Nullable String chart) {
             this.chart = chart;
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setCurrency(String currency) {
+        public Builder currency(String currency) {
             this.currency = Objects.requireNonNull(currency);
             return this;
         }
 
-        public Builder setDataSet(@Nullable ReportConfigDatasetResponse dataSet) {
+        public Builder dataSet(@Nullable ReportConfigDatasetResponse dataSet) {
             this.dataSet = dataSet;
             return this;
         }
 
-        public Builder setDateRange(String dateRange) {
+        public Builder dateRange(String dateRange) {
             this.dateRange = Objects.requireNonNull(dateRange);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIncludeMonetaryCommitment(Boolean includeMonetaryCommitment) {
+        public Builder includeMonetaryCommitment(Boolean includeMonetaryCommitment) {
             this.includeMonetaryCommitment = Objects.requireNonNull(includeMonetaryCommitment);
             return this;
         }
 
-        public Builder setKpis(@Nullable List<KpiPropertiesResponse> kpis) {
+        public Builder kpis(@Nullable List<KpiPropertiesResponse> kpis) {
             this.kpis = kpis;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setModifiedOn(String modifiedOn) {
+        public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPivots(@Nullable List<PivotPropertiesResponse> pivots) {
+        public Builder pivots(@Nullable List<PivotPropertiesResponse> pivots) {
             this.pivots = pivots;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ReportConfigTimePeriodResponse timePeriod) {
+        public Builder timePeriod(@Nullable ReportConfigTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimeframe(String timeframe) {
+        public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

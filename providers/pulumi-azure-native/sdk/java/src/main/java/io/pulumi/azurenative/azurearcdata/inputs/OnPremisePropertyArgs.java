@@ -90,32 +90,32 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
     	      this.signingCertificateThumbprint = defaults.signingCertificateThumbprint;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPublicSigningKey(Input<String> publicSigningKey) {
+        public Builder publicSigningKey(Input<String> publicSigningKey) {
             this.publicSigningKey = Objects.requireNonNull(publicSigningKey);
             return this;
         }
 
-        public Builder setPublicSigningKey(String publicSigningKey) {
+        public Builder publicSigningKey(String publicSigningKey) {
             this.publicSigningKey = Input.of(Objects.requireNonNull(publicSigningKey));
             return this;
         }
 
-        public Builder setSigningCertificateThumbprint(@Nullable Input<String> signingCertificateThumbprint) {
+        public Builder signingCertificateThumbprint(@Nullable Input<String> signingCertificateThumbprint) {
             this.signingCertificateThumbprint = signingCertificateThumbprint;
             return this;
         }
 
-        public Builder setSigningCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
+        public Builder signingCertificateThumbprint(@Nullable String signingCertificateThumbprint) {
             this.signingCertificateThumbprint = Input.ofNullable(signingCertificateThumbprint);
             return this;
         }

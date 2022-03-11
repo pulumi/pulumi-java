@@ -220,112 +220,112 @@ public final class NetworkInterfaceArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGroupSet(@Nullable Input<List<String>> groupSet) {
+        public Builder groupSet(@Nullable Input<List<String>> groupSet) {
             this.groupSet = groupSet;
             return this;
         }
 
-        public Builder setGroupSet(@Nullable List<String> groupSet) {
+        public Builder groupSet(@Nullable List<String> groupSet) {
             this.groupSet = Input.ofNullable(groupSet);
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable Input<String> interfaceType) {
+        public Builder interfaceType(@Nullable Input<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable String interfaceType) {
+        public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = Input.ofNullable(interfaceType);
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<NetworkInterfaceInstanceIpv6AddressArgs>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6AddressArgs> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<NetworkInterfaceInstanceIpv6AddressArgs> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable Input<String> privateIpAddress) {
+        public Builder privateIpAddress(@Nullable Input<String> privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = Input.ofNullable(privateIpAddress);
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable Input<List<NetworkInterfacePrivateIpAddressSpecificationArgs>> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecificationArgs> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<NetworkInterfacePrivateIpAddressSpecificationArgs> privateIpAddresses) {
             this.privateIpAddresses = Input.ofNullable(privateIpAddresses);
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Input<Integer> secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Input<Integer> secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = Input.ofNullable(secondaryPrivateIpAddressCount);
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Boolean sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = Input.ofNullable(sourceDestCheck);
             return this;
         }
 
-        public Builder setSubnetId(Input<String> subnetId) {
+        public Builder subnetId(Input<String> subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<NetworkInterfaceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<NetworkInterfaceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInterfaceTagArgs> tags) {
+        public Builder tags(@Nullable List<NetworkInterfaceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

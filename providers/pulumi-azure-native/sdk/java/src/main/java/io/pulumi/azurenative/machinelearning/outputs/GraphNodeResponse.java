@@ -34,12 +34,12 @@ public final class GraphNodeResponse {
      */
     private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
-    @OutputCustomType.Constructor({"assetId","inputId","outputId","parameters"})
+    @OutputCustomType.Constructor
     private GraphNodeResponse(
-        @Nullable String assetId,
-        @Nullable String inputId,
-        @Nullable String outputId,
-        @Nullable Map<String,WebServiceParameterResponse> parameters) {
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("inputId") @Nullable String inputId,
+        @OutputCustomType.Parameter("outputId") @Nullable String outputId,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WebServiceParameterResponse> parameters) {
         this.assetId = assetId;
         this.inputId = inputId;
         this.outputId = outputId;
@@ -101,22 +101,22 @@ public final class GraphNodeResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setInputId(@Nullable String inputId) {
+        public Builder inputId(@Nullable String inputId) {
             this.inputId = inputId;
             return this;
         }
 
-        public Builder setOutputId(@Nullable String outputId) {
+        public Builder outputId(@Nullable String outputId) {
             this.outputId = outputId;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }

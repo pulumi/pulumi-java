@@ -13,10 +13,10 @@ public final class ResourceStatusResponse {
     private final ResourceStatusSchedulingResponse scheduling;
     private final ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance;
 
-    @OutputCustomType.Constructor({"scheduling","upcomingMaintenance"})
+    @OutputCustomType.Constructor
     private ResourceStatusResponse(
-        ResourceStatusSchedulingResponse scheduling,
-        ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
+        @OutputCustomType.Parameter("scheduling") ResourceStatusSchedulingResponse scheduling,
+        @OutputCustomType.Parameter("upcomingMaintenance") ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
         this.scheduling = scheduling;
         this.upcomingMaintenance = upcomingMaintenance;
     }
@@ -50,12 +50,12 @@ public final class ResourceStatusResponse {
     	      this.upcomingMaintenance = defaults.upcomingMaintenance;
         }
 
-        public Builder setScheduling(ResourceStatusSchedulingResponse scheduling) {
+        public Builder scheduling(ResourceStatusSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setUpcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
+        public Builder upcomingMaintenance(ResourceStatusUpcomingMaintenanceResponse upcomingMaintenance) {
             this.upcomingMaintenance = Objects.requireNonNull(upcomingMaintenance);
             return this;
         }

@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse upperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","lowerBound","upperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(
-        Double bucketSize,
-        GooglePrivacyDlpV2ValueResponse lowerBound,
-        GooglePrivacyDlpV2ValueResponse upperBound) {
+        @OutputCustomType.Parameter("bucketSize") Double bucketSize,
+        @OutputCustomType.Parameter("lowerBound") GooglePrivacyDlpV2ValueResponse lowerBound,
+        @OutputCustomType.Parameter("upperBound") GooglePrivacyDlpV2ValueResponse upperBound) {
         this.bucketSize = bucketSize;
         this.lowerBound = lowerBound;
         this.upperBound = upperBound;
@@ -82,17 +82,17 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
     	      this.upperBound = defaults.upperBound;
         }
 
-        public Builder setBucketSize(Double bucketSize) {
+        public Builder bucketSize(Double bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setLowerBound(GooglePrivacyDlpV2ValueResponse lowerBound) {
+        public Builder lowerBound(GooglePrivacyDlpV2ValueResponse lowerBound) {
             this.lowerBound = Objects.requireNonNull(lowerBound);
             return this;
         }
 
-        public Builder setUpperBound(GooglePrivacyDlpV2ValueResponse upperBound) {
+        public Builder upperBound(GooglePrivacyDlpV2ValueResponse upperBound) {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }

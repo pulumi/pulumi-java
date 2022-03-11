@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String gcePdKmsKeyName;
 
-    @OutputCustomType.Constructor({"gcePdKmsKeyName"})
-    private EncryptionConfigResponse(String gcePdKmsKeyName) {
+    @OutputCustomType.Constructor
+    private EncryptionConfigResponse(@OutputCustomType.Parameter("gcePdKmsKeyName") String gcePdKmsKeyName) {
         this.gcePdKmsKeyName = gcePdKmsKeyName;
     }
 
@@ -48,7 +48,7 @@ public final class EncryptionConfigResponse {
     	      this.gcePdKmsKeyName = defaults.gcePdKmsKeyName;
         }
 
-        public Builder setGcePdKmsKeyName(String gcePdKmsKeyName) {
+        public Builder gcePdKmsKeyName(String gcePdKmsKeyName) {
             this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName);
             return this;
         }

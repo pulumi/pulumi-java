@@ -15,8 +15,8 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOption {
      */
     private final String captureMode;
 
-    @OutputCustomType.Constructor({"captureMode"})
-    private EndpointConfigurationDataCaptureConfigCaptureOption(String captureMode) {
+    @OutputCustomType.Constructor
+    private EndpointConfigurationDataCaptureConfigCaptureOption(@OutputCustomType.Parameter("captureMode") String captureMode) {
         this.captureMode = captureMode;
     }
 
@@ -48,7 +48,7 @@ public final class EndpointConfigurationDataCaptureConfigCaptureOption {
     	      this.captureMode = defaults.captureMode;
         }
 
-        public Builder setCaptureMode(String captureMode) {
+        public Builder captureMode(String captureMode) {
             this.captureMode = Objects.requireNonNull(captureMode);
             return this;
         }

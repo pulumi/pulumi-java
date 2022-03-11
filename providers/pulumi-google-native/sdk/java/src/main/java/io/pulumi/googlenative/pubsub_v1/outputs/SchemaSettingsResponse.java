@@ -20,10 +20,10 @@ public final class SchemaSettingsResponse {
      */
     private final String schema;
 
-    @OutputCustomType.Constructor({"encoding","schema"})
+    @OutputCustomType.Constructor
     private SchemaSettingsResponse(
-        String encoding,
-        String schema) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }
@@ -65,12 +65,12 @@ public final class SchemaSettingsResponse {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setSchema(String schema) {
+        public Builder schema(String schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }

@@ -24,10 +24,10 @@ public final class TargetCopySettingResponse {
      */
     private final DataStoreInfoBaseResponse dataStore;
 
-    @OutputCustomType.Constructor({"copyAfter","dataStore"})
+    @OutputCustomType.Constructor
     private TargetCopySettingResponse(
-        Object copyAfter,
-        DataStoreInfoBaseResponse dataStore) {
+        @OutputCustomType.Parameter("copyAfter") Object copyAfter,
+        @OutputCustomType.Parameter("dataStore") DataStoreInfoBaseResponse dataStore) {
         this.copyAfter = copyAfter;
         this.dataStore = dataStore;
     }
@@ -69,12 +69,12 @@ public final class TargetCopySettingResponse {
     	      this.dataStore = defaults.dataStore;
         }
 
-        public Builder setCopyAfter(Object copyAfter) {
+        public Builder copyAfter(Object copyAfter) {
             this.copyAfter = Objects.requireNonNull(copyAfter);
             return this;
         }
 
-        public Builder setDataStore(DataStoreInfoBaseResponse dataStore) {
+        public Builder dataStore(DataStoreInfoBaseResponse dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }

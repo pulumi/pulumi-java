@@ -607,362 +607,362 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.website = defaults.website;
         }
 
-        public Builder setAcl(@Nullable Input<List<BucketAccessControlArgs>> acl) {
+        public Builder acl(@Nullable Input<List<BucketAccessControlArgs>> acl) {
             this.acl = acl;
             return this;
         }
 
-        public Builder setAcl(@Nullable List<BucketAccessControlArgs> acl) {
+        public Builder acl(@Nullable List<BucketAccessControlArgs> acl) {
             this.acl = Input.ofNullable(acl);
             return this;
         }
 
-        public Builder setAutoclass(@Nullable Input<BucketAutoclassArgs> autoclass) {
+        public Builder autoclass(@Nullable Input<BucketAutoclassArgs> autoclass) {
             this.autoclass = autoclass;
             return this;
         }
 
-        public Builder setAutoclass(@Nullable BucketAutoclassArgs autoclass) {
+        public Builder autoclass(@Nullable BucketAutoclassArgs autoclass) {
             this.autoclass = Input.ofNullable(autoclass);
             return this;
         }
 
-        public Builder setBilling(@Nullable Input<BucketBillingArgs> billing) {
+        public Builder billing(@Nullable Input<BucketBillingArgs> billing) {
             this.billing = billing;
             return this;
         }
 
-        public Builder setBilling(@Nullable BucketBillingArgs billing) {
+        public Builder billing(@Nullable BucketBillingArgs billing) {
             this.billing = Input.ofNullable(billing);
             return this;
         }
 
-        public Builder setCors(@Nullable Input<List<BucketCorsItemArgs>> cors) {
+        public Builder cors(@Nullable Input<List<BucketCorsItemArgs>> cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setCors(@Nullable List<BucketCorsItemArgs> cors) {
+        public Builder cors(@Nullable List<BucketCorsItemArgs> cors) {
             this.cors = Input.ofNullable(cors);
             return this;
         }
 
-        public Builder setCustomPlacementConfig(@Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig) {
+        public Builder customPlacementConfig(@Nullable Input<BucketCustomPlacementConfigArgs> customPlacementConfig) {
             this.customPlacementConfig = customPlacementConfig;
             return this;
         }
 
-        public Builder setCustomPlacementConfig(@Nullable BucketCustomPlacementConfigArgs customPlacementConfig) {
+        public Builder customPlacementConfig(@Nullable BucketCustomPlacementConfigArgs customPlacementConfig) {
             this.customPlacementConfig = Input.ofNullable(customPlacementConfig);
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Input<Boolean> defaultEventBasedHold) {
             this.defaultEventBasedHold = defaultEventBasedHold;
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(@Nullable Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Input.ofNullable(defaultEventBasedHold);
             return this;
         }
 
-        public Builder setDefaultObjectAcl(@Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl) {
+        public Builder defaultObjectAcl(@Nullable Input<List<ObjectAccessControlArgs>> defaultObjectAcl) {
             this.defaultObjectAcl = defaultObjectAcl;
             return this;
         }
 
-        public Builder setDefaultObjectAcl(@Nullable List<ObjectAccessControlArgs> defaultObjectAcl) {
+        public Builder defaultObjectAcl(@Nullable List<ObjectAccessControlArgs> defaultObjectAcl) {
             this.defaultObjectAcl = Input.ofNullable(defaultObjectAcl);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<BucketEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<BucketEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable BucketEncryptionArgs encryption) {
+        public Builder encryption(@Nullable BucketEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setIamConfiguration(@Nullable Input<BucketIamConfigurationArgs> iamConfiguration) {
+        public Builder iamConfiguration(@Nullable Input<BucketIamConfigurationArgs> iamConfiguration) {
             this.iamConfiguration = iamConfiguration;
             return this;
         }
 
-        public Builder setIamConfiguration(@Nullable BucketIamConfigurationArgs iamConfiguration) {
+        public Builder iamConfiguration(@Nullable BucketIamConfigurationArgs iamConfiguration) {
             this.iamConfiguration = Input.ofNullable(iamConfiguration);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLifecycle(@Nullable Input<BucketLifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Input<BucketLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable BucketLifecycleArgs lifecycle) {
+        public Builder lifecycle(@Nullable BucketLifecycleArgs lifecycle) {
             this.lifecycle = Input.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setLocationType(@Nullable Input<String> locationType) {
+        public Builder locationType(@Nullable Input<String> locationType) {
             this.locationType = locationType;
             return this;
         }
 
-        public Builder setLocationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable String locationType) {
             this.locationType = Input.ofNullable(locationType);
             return this;
         }
 
-        public Builder setLogging(@Nullable Input<BucketLoggingArgs> logging) {
+        public Builder logging(@Nullable Input<BucketLoggingArgs> logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setLogging(@Nullable BucketLoggingArgs logging) {
+        public Builder logging(@Nullable BucketLoggingArgs logging) {
             this.logging = Input.ofNullable(logging);
             return this;
         }
 
-        public Builder setMetageneration(@Nullable Input<String> metageneration) {
+        public Builder metageneration(@Nullable Input<String> metageneration) {
             this.metageneration = metageneration;
             return this;
         }
 
-        public Builder setMetageneration(@Nullable String metageneration) {
+        public Builder metageneration(@Nullable String metageneration) {
             this.metageneration = Input.ofNullable(metageneration);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<BucketOwnerArgs> owner) {
+        public Builder owner(@Nullable Input<BucketOwnerArgs> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable BucketOwnerArgs owner) {
+        public Builder owner(@Nullable BucketOwnerArgs owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable Input<String> predefinedAcl) {
+        public Builder predefinedAcl(@Nullable Input<String> predefinedAcl) {
             this.predefinedAcl = predefinedAcl;
             return this;
         }
 
-        public Builder setPredefinedAcl(@Nullable String predefinedAcl) {
+        public Builder predefinedAcl(@Nullable String predefinedAcl) {
             this.predefinedAcl = Input.ofNullable(predefinedAcl);
             return this;
         }
 
-        public Builder setPredefinedDefaultObjectAcl(@Nullable Input<String> predefinedDefaultObjectAcl) {
+        public Builder predefinedDefaultObjectAcl(@Nullable Input<String> predefinedDefaultObjectAcl) {
             this.predefinedDefaultObjectAcl = predefinedDefaultObjectAcl;
             return this;
         }
 
-        public Builder setPredefinedDefaultObjectAcl(@Nullable String predefinedDefaultObjectAcl) {
+        public Builder predefinedDefaultObjectAcl(@Nullable String predefinedDefaultObjectAcl) {
             this.predefinedDefaultObjectAcl = Input.ofNullable(predefinedDefaultObjectAcl);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable Input<String> projectNumber) {
+        public Builder projectNumber(@Nullable Input<String> projectNumber) {
             this.projectNumber = projectNumber;
             return this;
         }
 
-        public Builder setProjectNumber(@Nullable String projectNumber) {
+        public Builder projectNumber(@Nullable String projectNumber) {
             this.projectNumber = Input.ofNullable(projectNumber);
             return this;
         }
 
-        public Builder setProjection(@Nullable Input<String> projection) {
+        public Builder projection(@Nullable Input<String> projection) {
             this.projection = projection;
             return this;
         }
 
-        public Builder setProjection(@Nullable String projection) {
+        public Builder projection(@Nullable String projection) {
             this.projection = Input.ofNullable(projection);
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable Input<String> provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable Input<String> provisionalUserProject) {
             this.provisionalUserProject = provisionalUserProject;
             return this;
         }
 
-        public Builder setProvisionalUserProject(@Nullable String provisionalUserProject) {
+        public Builder provisionalUserProject(@Nullable String provisionalUserProject) {
             this.provisionalUserProject = Input.ofNullable(provisionalUserProject);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable Input<BucketRetentionPolicyArgs> retentionPolicy) {
+        public Builder retentionPolicy(@Nullable Input<BucketRetentionPolicyArgs> retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable BucketRetentionPolicyArgs retentionPolicy) {
+        public Builder retentionPolicy(@Nullable BucketRetentionPolicyArgs retentionPolicy) {
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
 
-        public Builder setRpo(@Nullable Input<String> rpo) {
+        public Builder rpo(@Nullable Input<String> rpo) {
             this.rpo = rpo;
             return this;
         }
 
-        public Builder setRpo(@Nullable String rpo) {
+        public Builder rpo(@Nullable String rpo) {
             this.rpo = Input.ofNullable(rpo);
             return this;
         }
 
-        public Builder setSatisfiesPZS(@Nullable Input<Boolean> satisfiesPZS) {
+        public Builder satisfiesPZS(@Nullable Input<Boolean> satisfiesPZS) {
             this.satisfiesPZS = satisfiesPZS;
             return this;
         }
 
-        public Builder setSatisfiesPZS(@Nullable Boolean satisfiesPZS) {
+        public Builder satisfiesPZS(@Nullable Boolean satisfiesPZS) {
             this.satisfiesPZS = Input.ofNullable(satisfiesPZS);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<String> storageClass) {
+        public Builder storageClass(@Nullable Input<String> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable Input<String> timeCreated) {
+        public Builder timeCreated(@Nullable Input<String> timeCreated) {
             this.timeCreated = timeCreated;
             return this;
         }
 
-        public Builder setTimeCreated(@Nullable String timeCreated) {
+        public Builder timeCreated(@Nullable String timeCreated) {
             this.timeCreated = Input.ofNullable(timeCreated);
             return this;
         }
 
-        public Builder setUpdated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Input<String> updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = Input.ofNullable(updated);
             return this;
         }
 
-        public Builder setUserProject(@Nullable Input<String> userProject) {
+        public Builder userProject(@Nullable Input<String> userProject) {
             this.userProject = userProject;
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = Input.ofNullable(userProject);
             return this;
         }
 
-        public Builder setVersioning(@Nullable Input<BucketVersioningArgs> versioning) {
+        public Builder versioning(@Nullable Input<BucketVersioningArgs> versioning) {
             this.versioning = versioning;
             return this;
         }
 
-        public Builder setVersioning(@Nullable BucketVersioningArgs versioning) {
+        public Builder versioning(@Nullable BucketVersioningArgs versioning) {
             this.versioning = Input.ofNullable(versioning);
             return this;
         }
 
-        public Builder setWebsite(@Nullable Input<BucketWebsiteArgs> website) {
+        public Builder website(@Nullable Input<BucketWebsiteArgs> website) {
             this.website = website;
             return this;
         }
 
-        public Builder setWebsite(@Nullable BucketWebsiteArgs website) {
+        public Builder website(@Nullable BucketWebsiteArgs website) {
             this.website = Input.ofNullable(website);
             return this;
         }

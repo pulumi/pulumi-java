@@ -57,7 +57,7 @@ public final class ProductPropertiesResponse extends io.pulumi.resources.InvokeA
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

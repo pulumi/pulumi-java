@@ -20,10 +20,10 @@ public final class ImageRawDiskResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"containerType","source"})
+    @OutputCustomType.Constructor
     private ImageRawDiskResponse(
-        String containerType,
-        String source) {
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.source = source;
     }
@@ -65,12 +65,12 @@ public final class ImageRawDiskResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

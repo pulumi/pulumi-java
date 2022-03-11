@@ -68,12 +68,12 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setDashboardName(String dashboardName) {
+        public Builder dashboardName(String dashboardName) {
             this.dashboardName = Objects.requireNonNull(dashboardName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

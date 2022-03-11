@@ -196,102 +196,102 @@ public final class EndpointGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trafficDialPercentage = defaults.trafficDialPercentage;
         }
 
-        public Builder setEndpointConfigurations(@Nullable Input<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations) {
+        public Builder endpointConfigurations(@Nullable Input<List<EndpointGroupEndpointConfigurationArgs>> endpointConfigurations) {
             this.endpointConfigurations = endpointConfigurations;
             return this;
         }
 
-        public Builder setEndpointConfigurations(@Nullable List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
+        public Builder endpointConfigurations(@Nullable List<EndpointGroupEndpointConfigurationArgs> endpointConfigurations) {
             this.endpointConfigurations = Input.ofNullable(endpointConfigurations);
             return this;
         }
 
-        public Builder setEndpointGroupRegion(Input<String> endpointGroupRegion) {
+        public Builder endpointGroupRegion(Input<String> endpointGroupRegion) {
             this.endpointGroupRegion = Objects.requireNonNull(endpointGroupRegion);
             return this;
         }
 
-        public Builder setEndpointGroupRegion(String endpointGroupRegion) {
+        public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.endpointGroupRegion = Input.of(Objects.requireNonNull(endpointGroupRegion));
             return this;
         }
 
-        public Builder setHealthCheckIntervalSeconds(@Nullable Input<Integer> healthCheckIntervalSeconds) {
+        public Builder healthCheckIntervalSeconds(@Nullable Input<Integer> healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = healthCheckIntervalSeconds;
             return this;
         }
 
-        public Builder setHealthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
+        public Builder healthCheckIntervalSeconds(@Nullable Integer healthCheckIntervalSeconds) {
             this.healthCheckIntervalSeconds = Input.ofNullable(healthCheckIntervalSeconds);
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable Input<String> healthCheckPath) {
+        public Builder healthCheckPath(@Nullable Input<String> healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
             return this;
         }
 
-        public Builder setHealthCheckPath(@Nullable String healthCheckPath) {
+        public Builder healthCheckPath(@Nullable String healthCheckPath) {
             this.healthCheckPath = Input.ofNullable(healthCheckPath);
             return this;
         }
 
-        public Builder setHealthCheckPort(@Nullable Input<Integer> healthCheckPort) {
+        public Builder healthCheckPort(@Nullable Input<Integer> healthCheckPort) {
             this.healthCheckPort = healthCheckPort;
             return this;
         }
 
-        public Builder setHealthCheckPort(@Nullable Integer healthCheckPort) {
+        public Builder healthCheckPort(@Nullable Integer healthCheckPort) {
             this.healthCheckPort = Input.ofNullable(healthCheckPort);
             return this;
         }
 
-        public Builder setHealthCheckProtocol(@Nullable Input<EndpointGroupHealthCheckProtocol> healthCheckProtocol) {
+        public Builder healthCheckProtocol(@Nullable Input<EndpointGroupHealthCheckProtocol> healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;
             return this;
         }
 
-        public Builder setHealthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
+        public Builder healthCheckProtocol(@Nullable EndpointGroupHealthCheckProtocol healthCheckProtocol) {
             this.healthCheckProtocol = Input.ofNullable(healthCheckProtocol);
             return this;
         }
 
-        public Builder setListenerArn(Input<String> listenerArn) {
+        public Builder listenerArn(Input<String> listenerArn) {
             this.listenerArn = Objects.requireNonNull(listenerArn);
             return this;
         }
 
-        public Builder setListenerArn(String listenerArn) {
+        public Builder listenerArn(String listenerArn) {
             this.listenerArn = Input.of(Objects.requireNonNull(listenerArn));
             return this;
         }
 
-        public Builder setPortOverrides(@Nullable Input<List<EndpointGroupPortOverrideArgs>> portOverrides) {
+        public Builder portOverrides(@Nullable Input<List<EndpointGroupPortOverrideArgs>> portOverrides) {
             this.portOverrides = portOverrides;
             return this;
         }
 
-        public Builder setPortOverrides(@Nullable List<EndpointGroupPortOverrideArgs> portOverrides) {
+        public Builder portOverrides(@Nullable List<EndpointGroupPortOverrideArgs> portOverrides) {
             this.portOverrides = Input.ofNullable(portOverrides);
             return this;
         }
 
-        public Builder setThresholdCount(@Nullable Input<Integer> thresholdCount) {
+        public Builder thresholdCount(@Nullable Input<Integer> thresholdCount) {
             this.thresholdCount = thresholdCount;
             return this;
         }
 
-        public Builder setThresholdCount(@Nullable Integer thresholdCount) {
+        public Builder thresholdCount(@Nullable Integer thresholdCount) {
             this.thresholdCount = Input.ofNullable(thresholdCount);
             return this;
         }
 
-        public Builder setTrafficDialPercentage(@Nullable Input<Double> trafficDialPercentage) {
+        public Builder trafficDialPercentage(@Nullable Input<Double> trafficDialPercentage) {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
 
-        public Builder setTrafficDialPercentage(@Nullable Double trafficDialPercentage) {
+        public Builder trafficDialPercentage(@Nullable Double trafficDialPercentage) {
             this.trafficDialPercentage = Input.ofNullable(trafficDialPercentage);
             return this;
         }

@@ -105,42 +105,42 @@ public final class DatasetGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDatasetArns(@Nullable Input<List<String>> datasetArns) {
+        public Builder datasetArns(@Nullable Input<List<String>> datasetArns) {
             this.datasetArns = datasetArns;
             return this;
         }
 
-        public Builder setDatasetArns(@Nullable List<String> datasetArns) {
+        public Builder datasetArns(@Nullable List<String> datasetArns) {
             this.datasetArns = Input.ofNullable(datasetArns);
             return this;
         }
 
-        public Builder setDatasetGroupName(@Nullable Input<String> datasetGroupName) {
+        public Builder datasetGroupName(@Nullable Input<String> datasetGroupName) {
             this.datasetGroupName = datasetGroupName;
             return this;
         }
 
-        public Builder setDatasetGroupName(@Nullable String datasetGroupName) {
+        public Builder datasetGroupName(@Nullable String datasetGroupName) {
             this.datasetGroupName = Input.ofNullable(datasetGroupName);
             return this;
         }
 
-        public Builder setDomain(Input<DatasetGroupDomain> domain) {
+        public Builder domain(Input<DatasetGroupDomain> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(DatasetGroupDomain domain) {
+        public Builder domain(DatasetGroupDomain domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DatasetGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DatasetGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DatasetGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<DatasetGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

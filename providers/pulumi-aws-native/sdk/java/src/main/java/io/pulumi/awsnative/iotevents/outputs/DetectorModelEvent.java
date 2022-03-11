@@ -29,11 +29,11 @@ public final class DetectorModelEvent {
      */
     private final String eventName;
 
-    @OutputCustomType.Constructor({"actions","condition","eventName"})
+    @OutputCustomType.Constructor
     private DetectorModelEvent(
-        @Nullable List<DetectorModelAction> actions,
-        @Nullable String condition,
-        String eventName) {
+        @OutputCustomType.Parameter("actions") @Nullable List<DetectorModelAction> actions,
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("eventName") String eventName) {
         this.actions = actions;
         this.condition = condition;
         this.eventName = eventName;
@@ -85,17 +85,17 @@ public final class DetectorModelEvent {
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder setActions(@Nullable List<DetectorModelAction> actions) {
+        public Builder actions(@Nullable List<DetectorModelAction> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }

@@ -37,13 +37,13 @@ public final class ResourceDataSyncS3Destination {
      */
     private final @Nullable String syncFormat;
 
-    @OutputCustomType.Constructor({"bucketName","kmsKeyArn","prefix","region","syncFormat"})
+    @OutputCustomType.Constructor
     private ResourceDataSyncS3Destination(
-        String bucketName,
-        @Nullable String kmsKeyArn,
-        @Nullable String prefix,
-        String region,
-        @Nullable String syncFormat) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("syncFormat") @Nullable String syncFormat) {
         this.bucketName = bucketName;
         this.kmsKeyArn = kmsKeyArn;
         this.prefix = prefix;
@@ -115,27 +115,27 @@ public final class ResourceDataSyncS3Destination {
     	      this.syncFormat = defaults.syncFormat;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSyncFormat(@Nullable String syncFormat) {
+        public Builder syncFormat(@Nullable String syncFormat) {
             this.syncFormat = syncFormat;
             return this;
         }

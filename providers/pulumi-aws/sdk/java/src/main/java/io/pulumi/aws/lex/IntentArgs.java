@@ -260,122 +260,122 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setConclusionStatement(@Nullable Input<IntentConclusionStatementArgs> conclusionStatement) {
+        public Builder conclusionStatement(@Nullable Input<IntentConclusionStatementArgs> conclusionStatement) {
             this.conclusionStatement = conclusionStatement;
             return this;
         }
 
-        public Builder setConclusionStatement(@Nullable IntentConclusionStatementArgs conclusionStatement) {
+        public Builder conclusionStatement(@Nullable IntentConclusionStatementArgs conclusionStatement) {
             this.conclusionStatement = Input.ofNullable(conclusionStatement);
             return this;
         }
 
-        public Builder setConfirmationPrompt(@Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable Input<IntentConfirmationPromptArgs> confirmationPrompt) {
             this.confirmationPrompt = confirmationPrompt;
             return this;
         }
 
-        public Builder setConfirmationPrompt(@Nullable IntentConfirmationPromptArgs confirmationPrompt) {
+        public Builder confirmationPrompt(@Nullable IntentConfirmationPromptArgs confirmationPrompt) {
             this.confirmationPrompt = Input.ofNullable(confirmationPrompt);
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Input<Boolean> createVersion) {
+        public Builder createVersion(@Nullable Input<Boolean> createVersion) {
             this.createVersion = createVersion;
             return this;
         }
 
-        public Builder setCreateVersion(@Nullable Boolean createVersion) {
+        public Builder createVersion(@Nullable Boolean createVersion) {
             this.createVersion = Input.ofNullable(createVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable Input<IntentDialogCodeHookArgs> dialogCodeHook) {
             this.dialogCodeHook = dialogCodeHook;
             return this;
         }
 
-        public Builder setDialogCodeHook(@Nullable IntentDialogCodeHookArgs dialogCodeHook) {
+        public Builder dialogCodeHook(@Nullable IntentDialogCodeHookArgs dialogCodeHook) {
             this.dialogCodeHook = Input.ofNullable(dialogCodeHook);
             return this;
         }
 
-        public Builder setFollowUpPrompt(@Nullable Input<IntentFollowUpPromptArgs> followUpPrompt) {
+        public Builder followUpPrompt(@Nullable Input<IntentFollowUpPromptArgs> followUpPrompt) {
             this.followUpPrompt = followUpPrompt;
             return this;
         }
 
-        public Builder setFollowUpPrompt(@Nullable IntentFollowUpPromptArgs followUpPrompt) {
+        public Builder followUpPrompt(@Nullable IntentFollowUpPromptArgs followUpPrompt) {
             this.followUpPrompt = Input.ofNullable(followUpPrompt);
             return this;
         }
 
-        public Builder setFulfillmentActivity(Input<IntentFulfillmentActivityArgs> fulfillmentActivity) {
+        public Builder fulfillmentActivity(Input<IntentFulfillmentActivityArgs> fulfillmentActivity) {
             this.fulfillmentActivity = Objects.requireNonNull(fulfillmentActivity);
             return this;
         }
 
-        public Builder setFulfillmentActivity(IntentFulfillmentActivityArgs fulfillmentActivity) {
+        public Builder fulfillmentActivity(IntentFulfillmentActivityArgs fulfillmentActivity) {
             this.fulfillmentActivity = Input.of(Objects.requireNonNull(fulfillmentActivity));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable Input<String> parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable Input<String> parentIntentSignature) {
             this.parentIntentSignature = parentIntentSignature;
             return this;
         }
 
-        public Builder setParentIntentSignature(@Nullable String parentIntentSignature) {
+        public Builder parentIntentSignature(@Nullable String parentIntentSignature) {
             this.parentIntentSignature = Input.ofNullable(parentIntentSignature);
             return this;
         }
 
-        public Builder setRejectionStatement(@Nullable Input<IntentRejectionStatementArgs> rejectionStatement) {
+        public Builder rejectionStatement(@Nullable Input<IntentRejectionStatementArgs> rejectionStatement) {
             this.rejectionStatement = rejectionStatement;
             return this;
         }
 
-        public Builder setRejectionStatement(@Nullable IntentRejectionStatementArgs rejectionStatement) {
+        public Builder rejectionStatement(@Nullable IntentRejectionStatementArgs rejectionStatement) {
             this.rejectionStatement = Input.ofNullable(rejectionStatement);
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Input<List<String>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<String> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = Input.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder setSlots(@Nullable Input<List<IntentSlotArgs>> slots) {
+        public Builder slots(@Nullable Input<List<IntentSlotArgs>> slots) {
             this.slots = slots;
             return this;
         }
 
-        public Builder setSlots(@Nullable List<IntentSlotArgs> slots) {
+        public Builder slots(@Nullable List<IntentSlotArgs> slots) {
             this.slots = Input.ofNullable(slots);
             return this;
         }

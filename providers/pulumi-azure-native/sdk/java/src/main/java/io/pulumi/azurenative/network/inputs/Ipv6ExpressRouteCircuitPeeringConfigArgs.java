@@ -126,52 +126,52 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends io.pulumi.re
     	      this.state = defaults.state;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable Input<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
             this.microsoftPeeringConfig = Input.ofNullable(microsoftPeeringConfig);
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable Input<String> primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable Input<String> primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = Input.ofNullable(primaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder setRouteFilter(@Nullable Input<SubResourceArgs> routeFilter) {
+        public Builder routeFilter(@Nullable Input<SubResourceArgs> routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
 
-        public Builder setRouteFilter(@Nullable SubResourceArgs routeFilter) {
+        public Builder routeFilter(@Nullable SubResourceArgs routeFilter) {
             this.routeFilter = Input.ofNullable(routeFilter);
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable Input<String> secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable Input<String> secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = Input.ofNullable(secondaryPeerAddressPrefix);
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,ExpressRouteCircuitPeeringState>> state) {
+        public Builder state(@Nullable Input<Either<String,ExpressRouteCircuitPeeringState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,ExpressRouteCircuitPeeringState> state) {
+        public Builder state(@Nullable Either<String,ExpressRouteCircuitPeeringState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

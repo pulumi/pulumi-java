@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse {
      */
     private final List<String> trackingParameters;
 
-    @OutputCustomType.Constructor({"flow","trackingParameters"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3TestConfigResponse(
-        String flow,
-        List<String> trackingParameters) {
+        @OutputCustomType.Parameter("flow") String flow,
+        @OutputCustomType.Parameter("trackingParameters") List<String> trackingParameters) {
         this.flow = flow;
         this.trackingParameters = trackingParameters;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3TestConfigResponse {
     	      this.trackingParameters = defaults.trackingParameters;
         }
 
-        public Builder setFlow(String flow) {
+        public Builder flow(String flow) {
             this.flow = Objects.requireNonNull(flow);
             return this;
         }
 
-        public Builder setTrackingParameters(List<String> trackingParameters) {
+        public Builder trackingParameters(List<String> trackingParameters) {
             this.trackingParameters = Objects.requireNonNull(trackingParameters);
             return this;
         }

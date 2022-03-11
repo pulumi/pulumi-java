@@ -16,10 +16,10 @@ public final class MemcachedLayerCloudwatchConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams;
 
-    @OutputCustomType.Constructor({"enabled","logStreams"})
+    @OutputCustomType.Constructor
     private MemcachedLayerCloudwatchConfiguration(
-        @Nullable Boolean enabled,
-        @Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logStreams") @Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams) {
         this.enabled = enabled;
         this.logStreams = logStreams;
     }
@@ -53,12 +53,12 @@ public final class MemcachedLayerCloudwatchConfiguration {
     	      this.logStreams = defaults.logStreams;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogStreams(@Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams) {
+        public Builder logStreams(@Nullable List<MemcachedLayerCloudwatchConfigurationLogStream> logStreams) {
             this.logStreams = logStreams;
             return this;
         }

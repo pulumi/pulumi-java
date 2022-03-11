@@ -268,142 +268,142 @@ public final class SyncGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usePrivateLinkConnection = defaults.usePrivateLinkConnection;
         }
 
-        public Builder setConflictLoggingRetentionInDays(@Nullable Input<Integer> conflictLoggingRetentionInDays) {
+        public Builder conflictLoggingRetentionInDays(@Nullable Input<Integer> conflictLoggingRetentionInDays) {
             this.conflictLoggingRetentionInDays = conflictLoggingRetentionInDays;
             return this;
         }
 
-        public Builder setConflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
+        public Builder conflictLoggingRetentionInDays(@Nullable Integer conflictLoggingRetentionInDays) {
             this.conflictLoggingRetentionInDays = Input.ofNullable(conflictLoggingRetentionInDays);
             return this;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable Input<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable Input<Either<String,SyncConflictResolutionPolicy>> conflictResolutionPolicy) {
             this.conflictResolutionPolicy = conflictResolutionPolicy;
             return this;
         }
 
-        public Builder setConflictResolutionPolicy(@Nullable Either<String,SyncConflictResolutionPolicy> conflictResolutionPolicy) {
+        public Builder conflictResolutionPolicy(@Nullable Either<String,SyncConflictResolutionPolicy> conflictResolutionPolicy) {
             this.conflictResolutionPolicy = Input.ofNullable(conflictResolutionPolicy);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setEnableConflictLogging(@Nullable Input<Boolean> enableConflictLogging) {
+        public Builder enableConflictLogging(@Nullable Input<Boolean> enableConflictLogging) {
             this.enableConflictLogging = enableConflictLogging;
             return this;
         }
 
-        public Builder setEnableConflictLogging(@Nullable Boolean enableConflictLogging) {
+        public Builder enableConflictLogging(@Nullable Boolean enableConflictLogging) {
             this.enableConflictLogging = Input.ofNullable(enableConflictLogging);
             return this;
         }
 
-        public Builder setHubDatabasePassword(@Nullable Input<String> hubDatabasePassword) {
+        public Builder hubDatabasePassword(@Nullable Input<String> hubDatabasePassword) {
             this.hubDatabasePassword = hubDatabasePassword;
             return this;
         }
 
-        public Builder setHubDatabasePassword(@Nullable String hubDatabasePassword) {
+        public Builder hubDatabasePassword(@Nullable String hubDatabasePassword) {
             this.hubDatabasePassword = Input.ofNullable(hubDatabasePassword);
             return this;
         }
 
-        public Builder setHubDatabaseUserName(@Nullable Input<String> hubDatabaseUserName) {
+        public Builder hubDatabaseUserName(@Nullable Input<String> hubDatabaseUserName) {
             this.hubDatabaseUserName = hubDatabaseUserName;
             return this;
         }
 
-        public Builder setHubDatabaseUserName(@Nullable String hubDatabaseUserName) {
+        public Builder hubDatabaseUserName(@Nullable String hubDatabaseUserName) {
             this.hubDatabaseUserName = Input.ofNullable(hubDatabaseUserName);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<SyncGroupSchemaArgs> schema) {
+        public Builder schema(@Nullable Input<SyncGroupSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable SyncGroupSchemaArgs schema) {
+        public Builder schema(@Nullable SyncGroupSchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable Input<String> syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable Input<String> syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable String syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = Input.ofNullable(syncDatabaseId);
             return this;
         }
 
-        public Builder setSyncGroupName(@Nullable Input<String> syncGroupName) {
+        public Builder syncGroupName(@Nullable Input<String> syncGroupName) {
             this.syncGroupName = syncGroupName;
             return this;
         }
 
-        public Builder setSyncGroupName(@Nullable String syncGroupName) {
+        public Builder syncGroupName(@Nullable String syncGroupName) {
             this.syncGroupName = Input.ofNullable(syncGroupName);
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Input<Boolean> usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Input<Boolean> usePrivateLinkConnection) {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
 
-        public Builder setUsePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
+        public Builder usePrivateLinkConnection(@Nullable Boolean usePrivateLinkConnection) {
             this.usePrivateLinkConnection = Input.ofNullable(usePrivateLinkConnection);
             return this;
         }

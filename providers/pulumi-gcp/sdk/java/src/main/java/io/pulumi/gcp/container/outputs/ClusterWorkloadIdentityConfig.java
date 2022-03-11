@@ -17,8 +17,8 @@ public final class ClusterWorkloadIdentityConfig {
      */
     private final @Nullable String workloadPool;
 
-    @OutputCustomType.Constructor({"workloadPool"})
-    private ClusterWorkloadIdentityConfig(@Nullable String workloadPool) {
+    @OutputCustomType.Constructor
+    private ClusterWorkloadIdentityConfig(@OutputCustomType.Parameter("workloadPool") @Nullable String workloadPool) {
         this.workloadPool = workloadPool;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterWorkloadIdentityConfig {
     	      this.workloadPool = defaults.workloadPool;
         }
 
-        public Builder setWorkloadPool(@Nullable String workloadPool) {
+        public Builder workloadPool(@Nullable String workloadPool) {
             this.workloadPool = workloadPool;
             return this;
         }

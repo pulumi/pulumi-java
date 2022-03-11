@@ -33,12 +33,12 @@ public final class NodeConfigStatus {
      */
     private final @Nullable NodeConfigSource lastKnownGood;
 
-    @OutputCustomType.Constructor({"active","assigned","error","lastKnownGood"})
+    @OutputCustomType.Constructor
     private NodeConfigStatus(
-        @Nullable NodeConfigSource active,
-        @Nullable NodeConfigSource assigned,
-        @Nullable String error,
-        @Nullable NodeConfigSource lastKnownGood) {
+        @OutputCustomType.Parameter("active") @Nullable NodeConfigSource active,
+        @OutputCustomType.Parameter("assigned") @Nullable NodeConfigSource assigned,
+        @OutputCustomType.Parameter("error") @Nullable String error,
+        @OutputCustomType.Parameter("lastKnownGood") @Nullable NodeConfigSource lastKnownGood) {
         this.active = active;
         this.assigned = assigned;
         this.error = error;
@@ -100,22 +100,22 @@ public final class NodeConfigStatus {
     	      this.lastKnownGood = defaults.lastKnownGood;
         }
 
-        public Builder setActive(@Nullable NodeConfigSource active) {
+        public Builder active(@Nullable NodeConfigSource active) {
             this.active = active;
             return this;
         }
 
-        public Builder setAssigned(@Nullable NodeConfigSource assigned) {
+        public Builder assigned(@Nullable NodeConfigSource assigned) {
             this.assigned = assigned;
             return this;
         }
 
-        public Builder setError(@Nullable String error) {
+        public Builder error(@Nullable String error) {
             this.error = error;
             return this;
         }
 
-        public Builder setLastKnownGood(@Nullable NodeConfigSource lastKnownGood) {
+        public Builder lastKnownGood(@Nullable NodeConfigSource lastKnownGood) {
             this.lastKnownGood = lastKnownGood;
             return this;
         }

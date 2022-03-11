@@ -52,15 +52,15 @@ public final class JobMetadataResponse {
      */
     private final List<SpannerIODetailsResponse> spannerDetails;
 
-    @OutputCustomType.Constructor({"bigTableDetails","bigqueryDetails","datastoreDetails","fileDetails","pubsubDetails","sdkVersion","spannerDetails"})
+    @OutputCustomType.Constructor
     private JobMetadataResponse(
-        List<BigTableIODetailsResponse> bigTableDetails,
-        List<BigQueryIODetailsResponse> bigqueryDetails,
-        List<DatastoreIODetailsResponse> datastoreDetails,
-        List<FileIODetailsResponse> fileDetails,
-        List<PubSubIODetailsResponse> pubsubDetails,
-        SdkVersionResponse sdkVersion,
-        List<SpannerIODetailsResponse> spannerDetails) {
+        @OutputCustomType.Parameter("bigTableDetails") List<BigTableIODetailsResponse> bigTableDetails,
+        @OutputCustomType.Parameter("bigqueryDetails") List<BigQueryIODetailsResponse> bigqueryDetails,
+        @OutputCustomType.Parameter("datastoreDetails") List<DatastoreIODetailsResponse> datastoreDetails,
+        @OutputCustomType.Parameter("fileDetails") List<FileIODetailsResponse> fileDetails,
+        @OutputCustomType.Parameter("pubsubDetails") List<PubSubIODetailsResponse> pubsubDetails,
+        @OutputCustomType.Parameter("sdkVersion") SdkVersionResponse sdkVersion,
+        @OutputCustomType.Parameter("spannerDetails") List<SpannerIODetailsResponse> spannerDetails) {
         this.bigTableDetails = bigTableDetails;
         this.bigqueryDetails = bigqueryDetails;
         this.datastoreDetails = datastoreDetails;
@@ -152,37 +152,37 @@ public final class JobMetadataResponse {
     	      this.spannerDetails = defaults.spannerDetails;
         }
 
-        public Builder setBigTableDetails(List<BigTableIODetailsResponse> bigTableDetails) {
+        public Builder bigTableDetails(List<BigTableIODetailsResponse> bigTableDetails) {
             this.bigTableDetails = Objects.requireNonNull(bigTableDetails);
             return this;
         }
 
-        public Builder setBigqueryDetails(List<BigQueryIODetailsResponse> bigqueryDetails) {
+        public Builder bigqueryDetails(List<BigQueryIODetailsResponse> bigqueryDetails) {
             this.bigqueryDetails = Objects.requireNonNull(bigqueryDetails);
             return this;
         }
 
-        public Builder setDatastoreDetails(List<DatastoreIODetailsResponse> datastoreDetails) {
+        public Builder datastoreDetails(List<DatastoreIODetailsResponse> datastoreDetails) {
             this.datastoreDetails = Objects.requireNonNull(datastoreDetails);
             return this;
         }
 
-        public Builder setFileDetails(List<FileIODetailsResponse> fileDetails) {
+        public Builder fileDetails(List<FileIODetailsResponse> fileDetails) {
             this.fileDetails = Objects.requireNonNull(fileDetails);
             return this;
         }
 
-        public Builder setPubsubDetails(List<PubSubIODetailsResponse> pubsubDetails) {
+        public Builder pubsubDetails(List<PubSubIODetailsResponse> pubsubDetails) {
             this.pubsubDetails = Objects.requireNonNull(pubsubDetails);
             return this;
         }
 
-        public Builder setSdkVersion(SdkVersionResponse sdkVersion) {
+        public Builder sdkVersion(SdkVersionResponse sdkVersion) {
             this.sdkVersion = Objects.requireNonNull(sdkVersion);
             return this;
         }
 
-        public Builder setSpannerDetails(List<SpannerIODetailsResponse> spannerDetails) {
+        public Builder spannerDetails(List<SpannerIODetailsResponse> spannerDetails) {
             this.spannerDetails = Objects.requireNonNull(spannerDetails);
             return this;
         }

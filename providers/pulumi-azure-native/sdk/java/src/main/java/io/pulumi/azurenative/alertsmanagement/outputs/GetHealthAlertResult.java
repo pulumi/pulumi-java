@@ -71,19 +71,19 @@ public final class GetHealthAlertResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"actions","criteria","description","enabled","id","lastUpdatedTime","location","name","scopes","tags","type"})
+    @OutputCustomType.Constructor
     private GetHealthAlertResult(
-        @Nullable List<HealthAlertActionResponse> actions,
-        HealthAlertCriteriaResponse criteria,
-        String description,
-        Boolean enabled,
-        String id,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        @Nullable List<String> scopes,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("actions") @Nullable List<HealthAlertActionResponse> actions,
+        @OutputCustomType.Parameter("criteria") HealthAlertCriteriaResponse criteria,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.actions = actions;
         this.criteria = criteria;
         this.description = description;
@@ -215,57 +215,57 @@ public final class GetHealthAlertResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActions(@Nullable List<HealthAlertActionResponse> actions) {
+        public Builder actions(@Nullable List<HealthAlertActionResponse> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCriteria(HealthAlertCriteriaResponse criteria) {
+        public Builder criteria(HealthAlertCriteriaResponse criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

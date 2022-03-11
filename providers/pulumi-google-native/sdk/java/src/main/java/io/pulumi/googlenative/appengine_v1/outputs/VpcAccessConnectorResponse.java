@@ -20,10 +20,10 @@ public final class VpcAccessConnectorResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"egressSetting","name"})
+    @OutputCustomType.Constructor
     private VpcAccessConnectorResponse(
-        String egressSetting,
-        String name) {
+        @OutputCustomType.Parameter("egressSetting") String egressSetting,
+        @OutputCustomType.Parameter("name") String name) {
         this.egressSetting = egressSetting;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class VpcAccessConnectorResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setEgressSetting(String egressSetting) {
+        public Builder egressSetting(String egressSetting) {
             this.egressSetting = Objects.requireNonNull(egressSetting);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

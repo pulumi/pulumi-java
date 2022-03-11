@@ -39,13 +39,13 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","expiryDateTime","maxConcurrentConnections","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeStoreWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object expiryDateTime,
-        @Nullable Object maxConcurrentConnections,
-        String type) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("expiryDateTime") @Nullable Object expiryDateTime,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("type") String type) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.expiryDateTime = expiryDateTime;
@@ -118,27 +118,27 @@ public final class AzureDataLakeStoreWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setExpiryDateTime(@Nullable Object expiryDateTime) {
+        public Builder expiryDateTime(@Nullable Object expiryDateTime) {
             this.expiryDateTime = expiryDateTime;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

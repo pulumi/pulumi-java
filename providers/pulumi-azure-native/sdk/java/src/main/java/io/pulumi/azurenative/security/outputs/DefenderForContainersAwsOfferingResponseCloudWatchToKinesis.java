@@ -17,8 +17,8 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis {
      */
     private final @Nullable String cloudRoleArn;
 
-    @OutputCustomType.Constructor({"cloudRoleArn"})
-    private DefenderForContainersAwsOfferingResponseCloudWatchToKinesis(@Nullable String cloudRoleArn) {
+    @OutputCustomType.Constructor
+    private DefenderForContainersAwsOfferingResponseCloudWatchToKinesis(@OutputCustomType.Parameter("cloudRoleArn") @Nullable String cloudRoleArn) {
         this.cloudRoleArn = cloudRoleArn;
     }
 
@@ -50,7 +50,7 @@ public final class DefenderForContainersAwsOfferingResponseCloudWatchToKinesis {
     	      this.cloudRoleArn = defaults.cloudRoleArn;
         }
 
-        public Builder setCloudRoleArn(@Nullable String cloudRoleArn) {
+        public Builder cloudRoleArn(@Nullable String cloudRoleArn) {
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }

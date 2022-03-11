@@ -33,12 +33,12 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
      */
     private final GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig;
 
-    @OutputCustomType.Constructor({"advancedApiOpsConfig","connectorsPlatformConfig","integrationConfig","monetizationConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1AddonsConfigResponse(
-        GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
-        GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
-        GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
-        GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
+        @OutputCustomType.Parameter("advancedApiOpsConfig") GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig,
+        @OutputCustomType.Parameter("connectorsPlatformConfig") GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig,
+        @OutputCustomType.Parameter("integrationConfig") GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig,
+        @OutputCustomType.Parameter("monetizationConfig") GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
         this.advancedApiOpsConfig = advancedApiOpsConfig;
         this.connectorsPlatformConfig = connectorsPlatformConfig;
         this.integrationConfig = integrationConfig;
@@ -100,22 +100,22 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
     	      this.monetizationConfig = defaults.monetizationConfig;
         }
 
-        public Builder setAdvancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
+        public Builder advancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfigResponse advancedApiOpsConfig) {
             this.advancedApiOpsConfig = Objects.requireNonNull(advancedApiOpsConfig);
             return this;
         }
 
-        public Builder setConnectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
+        public Builder connectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfigResponse connectorsPlatformConfig) {
             this.connectorsPlatformConfig = Objects.requireNonNull(connectorsPlatformConfig);
             return this;
         }
 
-        public Builder setIntegrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
+        public Builder integrationConfig(GoogleCloudApigeeV1IntegrationConfigResponse integrationConfig) {
             this.integrationConfig = Objects.requireNonNull(integrationConfig);
             return this;
         }
 
-        public Builder setMonetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
+        public Builder monetizationConfig(GoogleCloudApigeeV1MonetizationConfigResponse monetizationConfig) {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }

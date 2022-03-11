@@ -129,30 +129,30 @@ public final class GetServerResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"administratorLogin","byokEnforcement","earliestRestoreDate","fullyQualifiedDomainName","id","identity","infrastructureEncryption","location","masterServerId","minimalTlsVersion","name","privateEndpointConnections","publicNetworkAccess","replicaCapacity","replicationRole","sku","sslEnforcement","storageProfile","tags","type","userVisibleState","version"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String administratorLogin,
-        String byokEnforcement,
-        @Nullable String earliestRestoreDate,
-        @Nullable String fullyQualifiedDomainName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String infrastructureEncryption,
-        String location,
-        @Nullable String masterServerId,
-        @Nullable String minimalTlsVersion,
-        String name,
-        List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String publicNetworkAccess,
-        @Nullable Integer replicaCapacity,
-        @Nullable String replicationRole,
-        @Nullable SkuResponse sku,
-        @Nullable String sslEnforcement,
-        @Nullable StorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String userVisibleState,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @OutputCustomType.Parameter("byokEnforcement") String byokEnforcement,
+        @OutputCustomType.Parameter("earliestRestoreDate") @Nullable String earliestRestoreDate,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") @Nullable String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("masterServerId") @Nullable String masterServerId,
+        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("replicaCapacity") @Nullable Integer replicaCapacity,
+        @OutputCustomType.Parameter("replicationRole") @Nullable String replicationRole,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("sslEnforcement") @Nullable String sslEnforcement,
+        @OutputCustomType.Parameter("storageProfile") @Nullable StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userVisibleState") @Nullable String userVisibleState,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.administratorLogin = administratorLogin;
         this.byokEnforcement = byokEnforcement;
         this.earliestRestoreDate = earliestRestoreDate;
@@ -394,112 +394,112 @@ public final class GetServerResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setByokEnforcement(String byokEnforcement) {
+        public Builder byokEnforcement(String byokEnforcement) {
             this.byokEnforcement = Objects.requireNonNull(byokEnforcement);
             return this;
         }
 
-        public Builder setEarliestRestoreDate(@Nullable String earliestRestoreDate) {
+        public Builder earliestRestoreDate(@Nullable String earliestRestoreDate) {
             this.earliestRestoreDate = earliestRestoreDate;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(@Nullable String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = fullyQualifiedDomainName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInfrastructureEncryption(@Nullable String infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable String infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMasterServerId(@Nullable String masterServerId) {
+        public Builder masterServerId(@Nullable String masterServerId) {
             this.masterServerId = masterServerId;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setReplicaCapacity(@Nullable Integer replicaCapacity) {
+        public Builder replicaCapacity(@Nullable Integer replicaCapacity) {
             this.replicaCapacity = replicaCapacity;
             return this;
         }
 
-        public Builder setReplicationRole(@Nullable String replicationRole) {
+        public Builder replicationRole(@Nullable String replicationRole) {
             this.replicationRole = replicationRole;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSslEnforcement(@Nullable String sslEnforcement) {
+        public Builder sslEnforcement(@Nullable String sslEnforcement) {
             this.sslEnforcement = sslEnforcement;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserVisibleState(@Nullable String userVisibleState) {
+        public Builder userVisibleState(@Nullable String userVisibleState) {
             this.userVisibleState = userVisibleState;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -25,11 +25,11 @@ public final class VirtualNetworkConfigurationResponse {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"dataManagementPublicIpId","enginePublicIpId","subnetId"})
+    @OutputCustomType.Constructor
     private VirtualNetworkConfigurationResponse(
-        String dataManagementPublicIpId,
-        String enginePublicIpId,
-        String subnetId) {
+        @OutputCustomType.Parameter("dataManagementPublicIpId") String dataManagementPublicIpId,
+        @OutputCustomType.Parameter("enginePublicIpId") String enginePublicIpId,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.dataManagementPublicIpId = dataManagementPublicIpId;
         this.enginePublicIpId = enginePublicIpId;
         this.subnetId = subnetId;
@@ -81,17 +81,17 @@ public final class VirtualNetworkConfigurationResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDataManagementPublicIpId(String dataManagementPublicIpId) {
+        public Builder dataManagementPublicIpId(String dataManagementPublicIpId) {
             this.dataManagementPublicIpId = Objects.requireNonNull(dataManagementPublicIpId);
             return this;
         }
 
-        public Builder setEnginePublicIpId(String enginePublicIpId) {
+        public Builder enginePublicIpId(String enginePublicIpId) {
             this.enginePublicIpId = Objects.requireNonNull(enginePublicIpId);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataSourceAclConfiguration {
     private final String allowedGroupsColumnName;
 
-    @OutputCustomType.Constructor({"allowedGroupsColumnName"})
-    private DataSourceAclConfiguration(String allowedGroupsColumnName) {
+    @OutputCustomType.Constructor
+    private DataSourceAclConfiguration(@OutputCustomType.Parameter("allowedGroupsColumnName") String allowedGroupsColumnName) {
         this.allowedGroupsColumnName = allowedGroupsColumnName;
     }
 
@@ -40,7 +40,7 @@ public final class DataSourceAclConfiguration {
     	      this.allowedGroupsColumnName = defaults.allowedGroupsColumnName;
         }
 
-        public Builder setAllowedGroupsColumnName(String allowedGroupsColumnName) {
+        public Builder allowedGroupsColumnName(String allowedGroupsColumnName) {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }

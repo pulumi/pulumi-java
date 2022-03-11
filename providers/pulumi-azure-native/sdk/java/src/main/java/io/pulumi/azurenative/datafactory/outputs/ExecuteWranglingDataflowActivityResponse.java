@@ -100,23 +100,23 @@ public final class ExecuteWranglingDataflowActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"compute","continueOnError","dataFlow","dependsOn","description","integrationRuntime","name","policy","queries","runConcurrently","sinks","staging","traceLevel","type","userProperties"})
+    @OutputCustomType.Constructor
     private ExecuteWranglingDataflowActivityResponse(
-        @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
-        @Nullable Object continueOnError,
-        DataFlowReferenceResponse dataFlow,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<PowerQuerySinkMappingResponse> queries,
-        @Nullable Object runConcurrently,
-        @Nullable Map<String,PowerQuerySinkResponse> sinks,
-        @Nullable DataFlowStagingInfoResponse staging,
-        @Nullable Object traceLevel,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("compute") @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
+        @OutputCustomType.Parameter("continueOnError") @Nullable Object continueOnError,
+        @OutputCustomType.Parameter("dataFlow") DataFlowReferenceResponse dataFlow,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("integrationRuntime") @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("queries") @Nullable List<PowerQuerySinkMappingResponse> queries,
+        @OutputCustomType.Parameter("runConcurrently") @Nullable Object runConcurrently,
+        @OutputCustomType.Parameter("sinks") @Nullable Map<String,PowerQuerySinkResponse> sinks,
+        @OutputCustomType.Parameter("staging") @Nullable DataFlowStagingInfoResponse staging,
+        @OutputCustomType.Parameter("traceLevel") @Nullable Object traceLevel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.compute = compute;
         this.continueOnError = continueOnError;
         this.dataFlow = dataFlow;
@@ -289,77 +289,77 @@ public final class ExecuteWranglingDataflowActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCompute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
+        public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
             this.compute = compute;
             return this;
         }
 
-        public Builder setContinueOnError(@Nullable Object continueOnError) {
+        public Builder continueOnError(@Nullable Object continueOnError) {
             this.continueOnError = continueOnError;
             return this;
         }
 
-        public Builder setDataFlow(DataFlowReferenceResponse dataFlow) {
+        public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
             this.dataFlow = Objects.requireNonNull(dataFlow);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIntegrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
+        public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
             this.integrationRuntime = integrationRuntime;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setQueries(@Nullable List<PowerQuerySinkMappingResponse> queries) {
+        public Builder queries(@Nullable List<PowerQuerySinkMappingResponse> queries) {
             this.queries = queries;
             return this;
         }
 
-        public Builder setRunConcurrently(@Nullable Object runConcurrently) {
+        public Builder runConcurrently(@Nullable Object runConcurrently) {
             this.runConcurrently = runConcurrently;
             return this;
         }
 
-        public Builder setSinks(@Nullable Map<String,PowerQuerySinkResponse> sinks) {
+        public Builder sinks(@Nullable Map<String,PowerQuerySinkResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setStaging(@Nullable DataFlowStagingInfoResponse staging) {
+        public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
             this.staging = staging;
             return this;
         }
 
-        public Builder setTraceLevel(@Nullable Object traceLevel) {
+        public Builder traceLevel(@Nullable Object traceLevel) {
             this.traceLevel = traceLevel;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

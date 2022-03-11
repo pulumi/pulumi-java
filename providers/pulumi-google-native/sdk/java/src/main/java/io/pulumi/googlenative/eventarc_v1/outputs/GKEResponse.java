@@ -35,13 +35,13 @@ public final class GKEResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"cluster","location","namespace","path","service"})
+    @OutputCustomType.Constructor
     private GKEResponse(
-        String cluster,
-        String location,
-        String namespace,
-        String path,
-        String service) {
+        @OutputCustomType.Parameter("cluster") String cluster,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("service") String service) {
         this.cluster = cluster;
         this.location = location;
         this.namespace = namespace;
@@ -113,27 +113,27 @@ public final class GKEResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

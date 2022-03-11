@@ -24,10 +24,10 @@ public final class ListMonitorHostsResult {
      */
     private final @Nullable List<DatadogHostResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListMonitorHostsResult(
-        @Nullable String nextLink,
-        @Nullable List<DatadogHostResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<DatadogHostResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListMonitorHostsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<DatadogHostResponse> value) {
+        public Builder value(@Nullable List<DatadogHostResponse> value) {
             this.value = value;
             return this;
         }

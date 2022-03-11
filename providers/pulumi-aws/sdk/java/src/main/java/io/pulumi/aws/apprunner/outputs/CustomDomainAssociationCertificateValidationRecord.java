@@ -32,12 +32,12 @@ public final class CustomDomainAssociationCertificateValidationRecord {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","status","type","value"})
+    @OutputCustomType.Constructor
     private CustomDomainAssociationCertificateValidationRecord(
-        @Nullable String name,
-        @Nullable String status,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.status = status;
         this.type = type;
@@ -99,22 +99,22 @@ public final class CustomDomainAssociationCertificateValidationRecord {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

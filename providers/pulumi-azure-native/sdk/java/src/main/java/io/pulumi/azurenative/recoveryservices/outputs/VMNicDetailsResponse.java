@@ -150,35 +150,35 @@ public final class VMNicDetailsResponse {
      */
     private final @Nullable String vMSubnetName;
 
-    @OutputCustomType.Constructor({"enableAcceleratedNetworkingOnRecovery","enableAcceleratedNetworkingOnTfo","ipAddressType","nicId","primaryNicStaticIPAddress","recoveryLBBackendAddressPoolIds","recoveryNetworkSecurityGroupId","recoveryNicIpAddressType","recoveryNicName","recoveryNicResourceGroupName","recoveryPublicIpAddressId","recoveryVMNetworkId","recoveryVMSubnetName","replicaNicId","replicaNicStaticIPAddress","reuseExistingNic","selectionType","sourceNicArmId","tfoIPConfigs","tfoNetworkSecurityGroupId","tfoRecoveryNicName","tfoRecoveryNicResourceGroupName","tfoReuseExistingNic","tfoVMNetworkId","tfoVMSubnetName","vMNetworkName","vMSubnetName"})
+    @OutputCustomType.Constructor
     private VMNicDetailsResponse(
-        @Nullable Boolean enableAcceleratedNetworkingOnRecovery,
-        @Nullable Boolean enableAcceleratedNetworkingOnTfo,
-        @Nullable String ipAddressType,
-        @Nullable String nicId,
-        @Nullable String primaryNicStaticIPAddress,
-        @Nullable List<String> recoveryLBBackendAddressPoolIds,
-        @Nullable String recoveryNetworkSecurityGroupId,
-        @Nullable String recoveryNicIpAddressType,
-        @Nullable String recoveryNicName,
-        @Nullable String recoveryNicResourceGroupName,
-        @Nullable String recoveryPublicIpAddressId,
-        @Nullable String recoveryVMNetworkId,
-        @Nullable String recoveryVMSubnetName,
-        @Nullable String replicaNicId,
-        @Nullable String replicaNicStaticIPAddress,
-        @Nullable Boolean reuseExistingNic,
-        @Nullable String selectionType,
-        @Nullable String sourceNicArmId,
-        @Nullable List<IPConfigResponse> tfoIPConfigs,
-        @Nullable String tfoNetworkSecurityGroupId,
-        @Nullable String tfoRecoveryNicName,
-        @Nullable String tfoRecoveryNicResourceGroupName,
-        @Nullable Boolean tfoReuseExistingNic,
-        @Nullable String tfoVMNetworkId,
-        @Nullable String tfoVMSubnetName,
-        @Nullable String vMNetworkName,
-        @Nullable String vMSubnetName) {
+        @OutputCustomType.Parameter("enableAcceleratedNetworkingOnRecovery") @Nullable Boolean enableAcceleratedNetworkingOnRecovery,
+        @OutputCustomType.Parameter("enableAcceleratedNetworkingOnTfo") @Nullable Boolean enableAcceleratedNetworkingOnTfo,
+        @OutputCustomType.Parameter("ipAddressType") @Nullable String ipAddressType,
+        @OutputCustomType.Parameter("nicId") @Nullable String nicId,
+        @OutputCustomType.Parameter("primaryNicStaticIPAddress") @Nullable String primaryNicStaticIPAddress,
+        @OutputCustomType.Parameter("recoveryLBBackendAddressPoolIds") @Nullable List<String> recoveryLBBackendAddressPoolIds,
+        @OutputCustomType.Parameter("recoveryNetworkSecurityGroupId") @Nullable String recoveryNetworkSecurityGroupId,
+        @OutputCustomType.Parameter("recoveryNicIpAddressType") @Nullable String recoveryNicIpAddressType,
+        @OutputCustomType.Parameter("recoveryNicName") @Nullable String recoveryNicName,
+        @OutputCustomType.Parameter("recoveryNicResourceGroupName") @Nullable String recoveryNicResourceGroupName,
+        @OutputCustomType.Parameter("recoveryPublicIpAddressId") @Nullable String recoveryPublicIpAddressId,
+        @OutputCustomType.Parameter("recoveryVMNetworkId") @Nullable String recoveryVMNetworkId,
+        @OutputCustomType.Parameter("recoveryVMSubnetName") @Nullable String recoveryVMSubnetName,
+        @OutputCustomType.Parameter("replicaNicId") @Nullable String replicaNicId,
+        @OutputCustomType.Parameter("replicaNicStaticIPAddress") @Nullable String replicaNicStaticIPAddress,
+        @OutputCustomType.Parameter("reuseExistingNic") @Nullable Boolean reuseExistingNic,
+        @OutputCustomType.Parameter("selectionType") @Nullable String selectionType,
+        @OutputCustomType.Parameter("sourceNicArmId") @Nullable String sourceNicArmId,
+        @OutputCustomType.Parameter("tfoIPConfigs") @Nullable List<IPConfigResponse> tfoIPConfigs,
+        @OutputCustomType.Parameter("tfoNetworkSecurityGroupId") @Nullable String tfoNetworkSecurityGroupId,
+        @OutputCustomType.Parameter("tfoRecoveryNicName") @Nullable String tfoRecoveryNicName,
+        @OutputCustomType.Parameter("tfoRecoveryNicResourceGroupName") @Nullable String tfoRecoveryNicResourceGroupName,
+        @OutputCustomType.Parameter("tfoReuseExistingNic") @Nullable Boolean tfoReuseExistingNic,
+        @OutputCustomType.Parameter("tfoVMNetworkId") @Nullable String tfoVMNetworkId,
+        @OutputCustomType.Parameter("tfoVMSubnetName") @Nullable String tfoVMSubnetName,
+        @OutputCustomType.Parameter("vMNetworkName") @Nullable String vMNetworkName,
+        @OutputCustomType.Parameter("vMSubnetName") @Nullable String vMSubnetName) {
         this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
         this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
         this.ipAddressType = ipAddressType;
@@ -470,137 +470,137 @@ public final class VMNicDetailsResponse {
     	      this.vMSubnetName = defaults.vMSubnetName;
         }
 
-        public Builder setEnableAcceleratedNetworkingOnRecovery(@Nullable Boolean enableAcceleratedNetworkingOnRecovery) {
+        public Builder enableAcceleratedNetworkingOnRecovery(@Nullable Boolean enableAcceleratedNetworkingOnRecovery) {
             this.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworkingOnTfo(@Nullable Boolean enableAcceleratedNetworkingOnTfo) {
+        public Builder enableAcceleratedNetworkingOnTfo(@Nullable Boolean enableAcceleratedNetworkingOnTfo) {
             this.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
             return this;
         }
 
-        public Builder setIpAddressType(@Nullable String ipAddressType) {
+        public Builder ipAddressType(@Nullable String ipAddressType) {
             this.ipAddressType = ipAddressType;
             return this;
         }
 
-        public Builder setNicId(@Nullable String nicId) {
+        public Builder nicId(@Nullable String nicId) {
             this.nicId = nicId;
             return this;
         }
 
-        public Builder setPrimaryNicStaticIPAddress(@Nullable String primaryNicStaticIPAddress) {
+        public Builder primaryNicStaticIPAddress(@Nullable String primaryNicStaticIPAddress) {
             this.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
             return this;
         }
 
-        public Builder setRecoveryLBBackendAddressPoolIds(@Nullable List<String> recoveryLBBackendAddressPoolIds) {
+        public Builder recoveryLBBackendAddressPoolIds(@Nullable List<String> recoveryLBBackendAddressPoolIds) {
             this.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
             return this;
         }
 
-        public Builder setRecoveryNetworkSecurityGroupId(@Nullable String recoveryNetworkSecurityGroupId) {
+        public Builder recoveryNetworkSecurityGroupId(@Nullable String recoveryNetworkSecurityGroupId) {
             this.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
             return this;
         }
 
-        public Builder setRecoveryNicIpAddressType(@Nullable String recoveryNicIpAddressType) {
+        public Builder recoveryNicIpAddressType(@Nullable String recoveryNicIpAddressType) {
             this.recoveryNicIpAddressType = recoveryNicIpAddressType;
             return this;
         }
 
-        public Builder setRecoveryNicName(@Nullable String recoveryNicName) {
+        public Builder recoveryNicName(@Nullable String recoveryNicName) {
             this.recoveryNicName = recoveryNicName;
             return this;
         }
 
-        public Builder setRecoveryNicResourceGroupName(@Nullable String recoveryNicResourceGroupName) {
+        public Builder recoveryNicResourceGroupName(@Nullable String recoveryNicResourceGroupName) {
             this.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
             return this;
         }
 
-        public Builder setRecoveryPublicIpAddressId(@Nullable String recoveryPublicIpAddressId) {
+        public Builder recoveryPublicIpAddressId(@Nullable String recoveryPublicIpAddressId) {
             this.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
             return this;
         }
 
-        public Builder setRecoveryVMNetworkId(@Nullable String recoveryVMNetworkId) {
+        public Builder recoveryVMNetworkId(@Nullable String recoveryVMNetworkId) {
             this.recoveryVMNetworkId = recoveryVMNetworkId;
             return this;
         }
 
-        public Builder setRecoveryVMSubnetName(@Nullable String recoveryVMSubnetName) {
+        public Builder recoveryVMSubnetName(@Nullable String recoveryVMSubnetName) {
             this.recoveryVMSubnetName = recoveryVMSubnetName;
             return this;
         }
 
-        public Builder setReplicaNicId(@Nullable String replicaNicId) {
+        public Builder replicaNicId(@Nullable String replicaNicId) {
             this.replicaNicId = replicaNicId;
             return this;
         }
 
-        public Builder setReplicaNicStaticIPAddress(@Nullable String replicaNicStaticIPAddress) {
+        public Builder replicaNicStaticIPAddress(@Nullable String replicaNicStaticIPAddress) {
             this.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
             return this;
         }
 
-        public Builder setReuseExistingNic(@Nullable Boolean reuseExistingNic) {
+        public Builder reuseExistingNic(@Nullable Boolean reuseExistingNic) {
             this.reuseExistingNic = reuseExistingNic;
             return this;
         }
 
-        public Builder setSelectionType(@Nullable String selectionType) {
+        public Builder selectionType(@Nullable String selectionType) {
             this.selectionType = selectionType;
             return this;
         }
 
-        public Builder setSourceNicArmId(@Nullable String sourceNicArmId) {
+        public Builder sourceNicArmId(@Nullable String sourceNicArmId) {
             this.sourceNicArmId = sourceNicArmId;
             return this;
         }
 
-        public Builder setTfoIPConfigs(@Nullable List<IPConfigResponse> tfoIPConfigs) {
+        public Builder tfoIPConfigs(@Nullable List<IPConfigResponse> tfoIPConfigs) {
             this.tfoIPConfigs = tfoIPConfigs;
             return this;
         }
 
-        public Builder setTfoNetworkSecurityGroupId(@Nullable String tfoNetworkSecurityGroupId) {
+        public Builder tfoNetworkSecurityGroupId(@Nullable String tfoNetworkSecurityGroupId) {
             this.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
             return this;
         }
 
-        public Builder setTfoRecoveryNicName(@Nullable String tfoRecoveryNicName) {
+        public Builder tfoRecoveryNicName(@Nullable String tfoRecoveryNicName) {
             this.tfoRecoveryNicName = tfoRecoveryNicName;
             return this;
         }
 
-        public Builder setTfoRecoveryNicResourceGroupName(@Nullable String tfoRecoveryNicResourceGroupName) {
+        public Builder tfoRecoveryNicResourceGroupName(@Nullable String tfoRecoveryNicResourceGroupName) {
             this.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
             return this;
         }
 
-        public Builder setTfoReuseExistingNic(@Nullable Boolean tfoReuseExistingNic) {
+        public Builder tfoReuseExistingNic(@Nullable Boolean tfoReuseExistingNic) {
             this.tfoReuseExistingNic = tfoReuseExistingNic;
             return this;
         }
 
-        public Builder setTfoVMNetworkId(@Nullable String tfoVMNetworkId) {
+        public Builder tfoVMNetworkId(@Nullable String tfoVMNetworkId) {
             this.tfoVMNetworkId = tfoVMNetworkId;
             return this;
         }
 
-        public Builder setTfoVMSubnetName(@Nullable String tfoVMSubnetName) {
+        public Builder tfoVMSubnetName(@Nullable String tfoVMSubnetName) {
             this.tfoVMSubnetName = tfoVMSubnetName;
             return this;
         }
 
-        public Builder setVMNetworkName(@Nullable String vMNetworkName) {
+        public Builder vMNetworkName(@Nullable String vMNetworkName) {
             this.vMNetworkName = vMNetworkName;
             return this;
         }
 
-        public Builder setVMSubnetName(@Nullable String vMSubnetName) {
+        public Builder vMSubnetName(@Nullable String vMSubnetName) {
             this.vMSubnetName = vMSubnetName;
             return this;
         }

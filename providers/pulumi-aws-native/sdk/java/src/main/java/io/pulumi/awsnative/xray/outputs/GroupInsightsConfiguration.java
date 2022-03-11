@@ -22,10 +22,10 @@ public final class GroupInsightsConfiguration {
      */
     private final @Nullable Boolean notificationsEnabled;
 
-    @OutputCustomType.Constructor({"insightsEnabled","notificationsEnabled"})
+    @OutputCustomType.Constructor
     private GroupInsightsConfiguration(
-        @Nullable Boolean insightsEnabled,
-        @Nullable Boolean notificationsEnabled) {
+        @OutputCustomType.Parameter("insightsEnabled") @Nullable Boolean insightsEnabled,
+        @OutputCustomType.Parameter("notificationsEnabled") @Nullable Boolean notificationsEnabled) {
         this.insightsEnabled = insightsEnabled;
         this.notificationsEnabled = notificationsEnabled;
     }
@@ -67,12 +67,12 @@ public final class GroupInsightsConfiguration {
     	      this.notificationsEnabled = defaults.notificationsEnabled;
         }
 
-        public Builder setInsightsEnabled(@Nullable Boolean insightsEnabled) {
+        public Builder insightsEnabled(@Nullable Boolean insightsEnabled) {
             this.insightsEnabled = insightsEnabled;
             return this;
         }
 
-        public Builder setNotificationsEnabled(@Nullable Boolean notificationsEnabled) {
+        public Builder notificationsEnabled(@Nullable Boolean notificationsEnabled) {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }

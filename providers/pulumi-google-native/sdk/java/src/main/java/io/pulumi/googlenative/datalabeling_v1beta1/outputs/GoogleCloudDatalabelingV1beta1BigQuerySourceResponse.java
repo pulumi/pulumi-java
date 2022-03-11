@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse {
      */
     private final String inputUri;
 
-    @OutputCustomType.Constructor({"inputUri"})
-    private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse(String inputUri) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1BigQuerySourceResponse(@OutputCustomType.Parameter("inputUri") String inputUri) {
         this.inputUri = inputUri;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceResponse {
     	      this.inputUri = defaults.inputUri;
         }
 
-        public Builder setInputUri(String inputUri) {
+        public Builder inputUri(String inputUri) {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }

@@ -69,19 +69,19 @@ public final class ConfigurationServiceGitRepositoryResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"hostKey","hostKeyAlgorithm","label","name","password","patterns","privateKey","searchPaths","strictHostKeyChecking","uri","username"})
+    @OutputCustomType.Constructor
     private ConfigurationServiceGitRepositoryResponse(
-        @Nullable String hostKey,
-        @Nullable String hostKeyAlgorithm,
-        String label,
-        String name,
-        @Nullable String password,
-        List<String> patterns,
-        @Nullable String privateKey,
-        @Nullable List<String> searchPaths,
-        @Nullable Boolean strictHostKeyChecking,
-        String uri,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("hostKey") @Nullable String hostKey,
+        @OutputCustomType.Parameter("hostKeyAlgorithm") @Nullable String hostKeyAlgorithm,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("patterns") List<String> patterns,
+        @OutputCustomType.Parameter("privateKey") @Nullable String privateKey,
+        @OutputCustomType.Parameter("searchPaths") @Nullable List<String> searchPaths,
+        @OutputCustomType.Parameter("strictHostKeyChecking") @Nullable Boolean strictHostKeyChecking,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.hostKey = hostKey;
         this.hostKeyAlgorithm = hostKeyAlgorithm;
         this.label = label;
@@ -213,57 +213,57 @@ public final class ConfigurationServiceGitRepositoryResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setHostKey(@Nullable String hostKey) {
+        public Builder hostKey(@Nullable String hostKey) {
             this.hostKey = hostKey;
             return this;
         }
 
-        public Builder setHostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
+        public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
             this.hostKeyAlgorithm = hostKeyAlgorithm;
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPatterns(List<String> patterns) {
+        public Builder patterns(List<String> patterns) {
             this.patterns = Objects.requireNonNull(patterns);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setSearchPaths(@Nullable List<String> searchPaths) {
+        public Builder searchPaths(@Nullable List<String> searchPaths) {
             this.searchPaths = searchPaths;
             return this;
         }
 
-        public Builder setStrictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
+        public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
             this.strictHostKeyChecking = strictHostKeyChecking;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

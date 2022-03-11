@@ -55,13 +55,13 @@ public final class SubnetworkLogConfig {
      */
     private final @Nullable List<String> metadataFields;
 
-    @OutputCustomType.Constructor({"aggregationInterval","filterExpr","flowSampling","metadata","metadataFields"})
+    @OutputCustomType.Constructor
     private SubnetworkLogConfig(
-        @Nullable String aggregationInterval,
-        @Nullable String filterExpr,
-        @Nullable Double flowSampling,
-        @Nullable String metadata,
-        @Nullable List<String> metadataFields) {
+        @OutputCustomType.Parameter("aggregationInterval") @Nullable String aggregationInterval,
+        @OutputCustomType.Parameter("filterExpr") @Nullable String filterExpr,
+        @OutputCustomType.Parameter("flowSampling") @Nullable Double flowSampling,
+        @OutputCustomType.Parameter("metadata") @Nullable String metadata,
+        @OutputCustomType.Parameter("metadataFields") @Nullable List<String> metadataFields) {
         this.aggregationInterval = aggregationInterval;
         this.filterExpr = filterExpr;
         this.flowSampling = flowSampling;
@@ -149,27 +149,27 @@ public final class SubnetworkLogConfig {
     	      this.metadataFields = defaults.metadataFields;
         }
 
-        public Builder setAggregationInterval(@Nullable String aggregationInterval) {
+        public Builder aggregationInterval(@Nullable String aggregationInterval) {
             this.aggregationInterval = aggregationInterval;
             return this;
         }
 
-        public Builder setFilterExpr(@Nullable String filterExpr) {
+        public Builder filterExpr(@Nullable String filterExpr) {
             this.filterExpr = filterExpr;
             return this;
         }
 
-        public Builder setFlowSampling(@Nullable Double flowSampling) {
+        public Builder flowSampling(@Nullable Double flowSampling) {
             this.flowSampling = flowSampling;
             return this;
         }
 
-        public Builder setMetadata(@Nullable String metadata) {
+        public Builder metadata(@Nullable String metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadataFields(@Nullable List<String> metadataFields) {
+        public Builder metadataFields(@Nullable List<String> metadataFields) {
             this.metadataFields = metadataFields;
             return this;
         }

@@ -22,10 +22,10 @@ public final class UserSecretStoreResponse {
      */
     private final @Nullable String keyVaultUri;
 
-    @OutputCustomType.Constructor({"keyVaultId","keyVaultUri"})
+    @OutputCustomType.Constructor
     private UserSecretStoreResponse(
-        @Nullable String keyVaultId,
-        @Nullable String keyVaultUri) {
+        @OutputCustomType.Parameter("keyVaultId") @Nullable String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri) {
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;
     }
@@ -67,12 +67,12 @@ public final class UserSecretStoreResponse {
     	      this.keyVaultUri = defaults.keyVaultUri;
         }
 
-        public Builder setKeyVaultId(@Nullable String keyVaultId) {
+        public Builder keyVaultId(@Nullable String keyVaultId) {
             this.keyVaultId = keyVaultId;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }

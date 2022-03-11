@@ -57,7 +57,7 @@ public final class StandardComponentPropertiesResponse extends io.pulumi.resourc
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

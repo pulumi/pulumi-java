@@ -27,17 +27,17 @@ public final class DistributionOrigin {
     private final @Nullable DistributionOriginShield originShield;
     private final @Nullable DistributionS3OriginConfig s3OriginConfig;
 
-    @OutputCustomType.Constructor({"connectionAttempts","connectionTimeout","customOriginConfig","domainName","id","originCustomHeaders","originPath","originShield","s3OriginConfig"})
+    @OutputCustomType.Constructor
     private DistributionOrigin(
-        @Nullable Integer connectionAttempts,
-        @Nullable Integer connectionTimeout,
-        @Nullable DistributionCustomOriginConfig customOriginConfig,
-        String domainName,
-        String id,
-        @Nullable List<DistributionOriginCustomHeader> originCustomHeaders,
-        @Nullable String originPath,
-        @Nullable DistributionOriginShield originShield,
-        @Nullable DistributionS3OriginConfig s3OriginConfig) {
+        @OutputCustomType.Parameter("connectionAttempts") @Nullable Integer connectionAttempts,
+        @OutputCustomType.Parameter("connectionTimeout") @Nullable Integer connectionTimeout,
+        @OutputCustomType.Parameter("customOriginConfig") @Nullable DistributionCustomOriginConfig customOriginConfig,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("originCustomHeaders") @Nullable List<DistributionOriginCustomHeader> originCustomHeaders,
+        @OutputCustomType.Parameter("originPath") @Nullable String originPath,
+        @OutputCustomType.Parameter("originShield") @Nullable DistributionOriginShield originShield,
+        @OutputCustomType.Parameter("s3OriginConfig") @Nullable DistributionS3OriginConfig s3OriginConfig) {
         this.connectionAttempts = connectionAttempts;
         this.connectionTimeout = connectionTimeout;
         this.customOriginConfig = customOriginConfig;
@@ -113,47 +113,47 @@ public final class DistributionOrigin {
     	      this.s3OriginConfig = defaults.s3OriginConfig;
         }
 
-        public Builder setConnectionAttempts(@Nullable Integer connectionAttempts) {
+        public Builder connectionAttempts(@Nullable Integer connectionAttempts) {
             this.connectionAttempts = connectionAttempts;
             return this;
         }
 
-        public Builder setConnectionTimeout(@Nullable Integer connectionTimeout) {
+        public Builder connectionTimeout(@Nullable Integer connectionTimeout) {
             this.connectionTimeout = connectionTimeout;
             return this;
         }
 
-        public Builder setCustomOriginConfig(@Nullable DistributionCustomOriginConfig customOriginConfig) {
+        public Builder customOriginConfig(@Nullable DistributionCustomOriginConfig customOriginConfig) {
             this.customOriginConfig = customOriginConfig;
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOriginCustomHeaders(@Nullable List<DistributionOriginCustomHeader> originCustomHeaders) {
+        public Builder originCustomHeaders(@Nullable List<DistributionOriginCustomHeader> originCustomHeaders) {
             this.originCustomHeaders = originCustomHeaders;
             return this;
         }
 
-        public Builder setOriginPath(@Nullable String originPath) {
+        public Builder originPath(@Nullable String originPath) {
             this.originPath = originPath;
             return this;
         }
 
-        public Builder setOriginShield(@Nullable DistributionOriginShield originShield) {
+        public Builder originShield(@Nullable DistributionOriginShield originShield) {
             this.originShield = originShield;
             return this;
         }
 
-        public Builder setS3OriginConfig(@Nullable DistributionS3OriginConfig s3OriginConfig) {
+        public Builder s3OriginConfig(@Nullable DistributionS3OriginConfig s3OriginConfig) {
             this.s3OriginConfig = s3OriginConfig;
             return this;
         }

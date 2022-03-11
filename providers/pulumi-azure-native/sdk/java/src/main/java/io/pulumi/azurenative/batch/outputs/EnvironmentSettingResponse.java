@@ -14,10 +14,10 @@ public final class EnvironmentSettingResponse {
     private final String name;
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private EnvironmentSettingResponse(
-        String name,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.value = value;
     }
@@ -51,12 +51,12 @@ public final class EnvironmentSettingResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

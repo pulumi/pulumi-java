@@ -29,11 +29,11 @@ public final class StreamingPolicyContentKeyResponse {
      */
     private final @Nullable List<TrackSelectionResponse> tracks;
 
-    @OutputCustomType.Constructor({"label","policyName","tracks"})
+    @OutputCustomType.Constructor
     private StreamingPolicyContentKeyResponse(
-        @Nullable String label,
-        @Nullable String policyName,
-        @Nullable List<TrackSelectionResponse> tracks) {
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("tracks") @Nullable List<TrackSelectionResponse> tracks) {
         this.label = label;
         this.policyName = policyName;
         this.tracks = tracks;
@@ -85,17 +85,17 @@ public final class StreamingPolicyContentKeyResponse {
     	      this.tracks = defaults.tracks;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setTracks(@Nullable List<TrackSelectionResponse> tracks) {
+        public Builder tracks(@Nullable List<TrackSelectionResponse> tracks) {
             this.tracks = tracks;
             return this;
         }

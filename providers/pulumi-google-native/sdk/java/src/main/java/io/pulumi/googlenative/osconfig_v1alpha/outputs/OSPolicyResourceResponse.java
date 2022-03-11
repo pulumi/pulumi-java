@@ -33,12 +33,12 @@ public final class OSPolicyResourceResponse {
      */
     private final OSPolicyResourceRepositoryResourceResponse repository;
 
-    @OutputCustomType.Constructor({"exec","file","pkg","repository"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceResponse(
-        OSPolicyResourceExecResourceResponse exec,
-        OSPolicyResourceFileResourceResponse file,
-        OSPolicyResourcePackageResourceResponse pkg,
-        OSPolicyResourceRepositoryResourceResponse repository) {
+        @OutputCustomType.Parameter("exec") OSPolicyResourceExecResourceResponse exec,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResourceResponse file,
+        @OutputCustomType.Parameter("pkg") OSPolicyResourcePackageResourceResponse pkg,
+        @OutputCustomType.Parameter("repository") OSPolicyResourceRepositoryResourceResponse repository) {
         this.exec = exec;
         this.file = file;
         this.pkg = pkg;
@@ -100,22 +100,22 @@ public final class OSPolicyResourceResponse {
     	      this.repository = defaults.repository;
         }
 
-        public Builder setExec(OSPolicyResourceExecResourceResponse exec) {
+        public Builder exec(OSPolicyResourceExecResourceResponse exec) {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResourceResponse file) {
+        public Builder file(OSPolicyResourceFileResourceResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setPkg(OSPolicyResourcePackageResourceResponse pkg) {
+        public Builder pkg(OSPolicyResourcePackageResourceResponse pkg) {
             this.pkg = Objects.requireNonNull(pkg);
             return this;
         }
 
-        public Builder setRepository(OSPolicyResourceRepositoryResourceResponse repository) {
+        public Builder repository(OSPolicyResourceRepositoryResourceResponse repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }

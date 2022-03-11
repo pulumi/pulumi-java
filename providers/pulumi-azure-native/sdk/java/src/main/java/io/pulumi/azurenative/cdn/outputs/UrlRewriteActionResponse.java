@@ -22,10 +22,10 @@ public final class UrlRewriteActionResponse {
      */
     private final UrlRewriteActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private UrlRewriteActionResponse(
-        String name,
-        UrlRewriteActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") UrlRewriteActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class UrlRewriteActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(UrlRewriteActionParametersResponse parameters) {
+        public Builder parameters(UrlRewriteActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

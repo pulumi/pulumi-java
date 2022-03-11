@@ -20,10 +20,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"clientId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        String clientId,
-        String secret) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.clientId = clientId;
         this.secret = secret;
     }
@@ -65,12 +65,12 @@ public final class ServicePrincipalPropertiesResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

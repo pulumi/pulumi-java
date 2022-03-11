@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
      */
     private final GooglePrivacyDlpV2RegexResponse regex;
 
-    @OutputCustomType.Constructor({"dictionary","excludeInfoTypes","matchingType","regex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ExclusionRuleResponse(
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
-        String matchingType,
-        GooglePrivacyDlpV2RegexResponse regex) {
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("excludeInfoTypes") GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes,
+        @OutputCustomType.Parameter("matchingType") String matchingType,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;
@@ -100,22 +100,22 @@ public final class GooglePrivacyDlpV2ExclusionRuleResponse {
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
+        public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes) {
+        public Builder excludeInfoTypes(GooglePrivacyDlpV2ExcludeInfoTypesResponse excludeInfoTypes) {
             this.excludeInfoTypes = Objects.requireNonNull(excludeInfoTypes);
             return this;
         }
 
-        public Builder setMatchingType(String matchingType) {
+        public Builder matchingType(String matchingType) {
             this.matchingType = Objects.requireNonNull(matchingType);
             return this;
         }
 
-        public Builder setRegex(GooglePrivacyDlpV2RegexResponse regex) {
+        public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }

@@ -25,11 +25,11 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse {
      */
     private final String textToSpeech;
 
-    @OutputCustomType.Constructor({"displayText","ssml","textToSpeech"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(
-        String displayText,
-        String ssml,
-        String textToSpeech) {
+        @OutputCustomType.Parameter("displayText") String displayText,
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("textToSpeech") String textToSpeech) {
         this.displayText = displayText;
         this.ssml = ssml;
         this.textToSpeech = textToSpeech;
@@ -81,17 +81,17 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse {
     	      this.textToSpeech = defaults.textToSpeech;
         }
 
-        public Builder setDisplayText(String displayText) {
+        public Builder displayText(String displayText) {
             this.displayText = Objects.requireNonNull(displayText);
             return this;
         }
 
-        public Builder setSsml(String ssml) {
+        public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
 
-        public Builder setTextToSpeech(String textToSpeech) {
+        public Builder textToSpeech(String textToSpeech) {
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
         }

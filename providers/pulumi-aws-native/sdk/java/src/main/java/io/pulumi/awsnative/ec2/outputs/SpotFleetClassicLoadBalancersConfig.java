@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class SpotFleetClassicLoadBalancersConfig {
     private final List<SpotFleetClassicLoadBalancer> classicLoadBalancers;
 
-    @OutputCustomType.Constructor({"classicLoadBalancers"})
-    private SpotFleetClassicLoadBalancersConfig(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
+    @OutputCustomType.Constructor
+    private SpotFleetClassicLoadBalancersConfig(@OutputCustomType.Parameter("classicLoadBalancers") List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
         this.classicLoadBalancers = classicLoadBalancers;
     }
 
@@ -41,7 +41,7 @@ public final class SpotFleetClassicLoadBalancersConfig {
     	      this.classicLoadBalancers = defaults.classicLoadBalancers;
         }
 
-        public Builder setClassicLoadBalancers(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
+        public Builder classicLoadBalancers(List<SpotFleetClassicLoadBalancer> classicLoadBalancers) {
             this.classicLoadBalancers = Objects.requireNonNull(classicLoadBalancers);
             return this;
         }

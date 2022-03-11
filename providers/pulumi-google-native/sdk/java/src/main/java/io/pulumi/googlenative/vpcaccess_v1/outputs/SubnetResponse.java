@@ -20,10 +20,10 @@ public final class SubnetResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"name","project"})
+    @OutputCustomType.Constructor
     private SubnetResponse(
-        String name,
-        String project) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project) {
         this.name = name;
         this.project = project;
     }
@@ -65,12 +65,12 @@ public final class SubnetResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

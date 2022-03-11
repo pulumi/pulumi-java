@@ -55,7 +55,7 @@ public final class RequestMirrorPolicyResponse extends io.pulumi.resources.Invok
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }

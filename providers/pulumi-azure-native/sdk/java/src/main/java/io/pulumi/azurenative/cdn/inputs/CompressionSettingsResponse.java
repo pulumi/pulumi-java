@@ -76,12 +76,12 @@ public final class CompressionSettingsResponse extends io.pulumi.resources.Invok
     	      this.isCompressionEnabled = defaults.isCompressionEnabled;
         }
 
-        public Builder setContentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }

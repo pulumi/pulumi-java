@@ -29,11 +29,11 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
      */
     private final @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings;
 
-    @OutputCustomType.Constructor({"bodies","headers","queryStrings"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersInvocationHttpParameters(
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
-        @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
+        @OutputCustomType.Parameter("bodies") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies,
+        @OutputCustomType.Parameter("headers") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers,
+        @OutputCustomType.Parameter("queryStrings") @Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
         this.bodies = bodies;
         this.headers = headers;
         this.queryStrings = queryStrings;
@@ -85,17 +85,17 @@ public final class EventConnectionAuthParametersInvocationHttpParameters {
     	      this.queryStrings = defaults.queryStrings;
         }
 
-        public Builder setBodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies) {
+        public Builder bodies(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersBody> bodies) {
             this.bodies = bodies;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers) {
+        public Builder headers(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersHeader> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
+        public Builder queryStrings(@Nullable List<EventConnectionAuthParametersInvocationHttpParametersQueryString> queryStrings) {
             this.queryStrings = queryStrings;
             return this;
         }

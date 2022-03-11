@@ -27,11 +27,11 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
      */
     private final List<ReportableExceptionResponse> validationErrors;
 
-    @OutputCustomType.Constructor({"id","name","validationErrors"})
+    @OutputCustomType.Constructor
     private ValidateSyncMigrationInputSqlServerTaskOutputResponse(
-        String id,
-        String name,
-        List<ReportableExceptionResponse> validationErrors) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("validationErrors") List<ReportableExceptionResponse> validationErrors) {
         this.id = id;
         this.name = name;
         this.validationErrors = validationErrors;
@@ -83,17 +83,17 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValidationErrors(List<ReportableExceptionResponse> validationErrors) {
+        public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

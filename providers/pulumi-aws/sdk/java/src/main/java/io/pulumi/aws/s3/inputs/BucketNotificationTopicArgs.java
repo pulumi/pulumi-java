@@ -119,52 +119,52 @@ public final class BucketNotificationTopicArgs extends io.pulumi.resources.Resou
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setEvents(Input<List<String>> events) {
+        public Builder events(Input<List<String>> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Input.of(Objects.requireNonNull(events));
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable Input<String> filterPrefix) {
+        public Builder filterPrefix(@Nullable Input<String> filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable String filterPrefix) {
+        public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = Input.ofNullable(filterPrefix);
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable Input<String> filterSuffix) {
+        public Builder filterSuffix(@Nullable Input<String> filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable String filterSuffix) {
+        public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = Input.ofNullable(filterSuffix);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setTopicArn(Input<String> topicArn) {
+        public Builder topicArn(Input<String> topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Input.of(Objects.requireNonNull(topicArn));
             return this;
         }

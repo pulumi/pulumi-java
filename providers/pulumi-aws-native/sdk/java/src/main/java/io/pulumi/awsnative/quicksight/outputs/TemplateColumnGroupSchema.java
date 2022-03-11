@@ -24,10 +24,10 @@ public final class TemplateColumnGroupSchema {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"columnGroupColumnSchemaList","name"})
+    @OutputCustomType.Constructor
     private TemplateColumnGroupSchema(
-        @Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("columnGroupColumnSchemaList") @Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.columnGroupColumnSchemaList = columnGroupColumnSchemaList;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class TemplateColumnGroupSchema {
     	      this.name = defaults.name;
         }
 
-        public Builder setColumnGroupColumnSchemaList(@Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList) {
+        public Builder columnGroupColumnSchemaList(@Nullable List<TemplateColumnGroupColumnSchema> columnGroupColumnSchemaList) {
             this.columnGroupColumnSchemaList = columnGroupColumnSchemaList;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

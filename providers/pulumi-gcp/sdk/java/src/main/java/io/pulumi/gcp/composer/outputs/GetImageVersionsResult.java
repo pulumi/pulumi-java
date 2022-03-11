@@ -24,12 +24,12 @@ public final class GetImageVersionsResult {
     private final String project;
     private final String region;
 
-    @OutputCustomType.Constructor({"id","imageVersions","project","region"})
+    @OutputCustomType.Constructor
     private GetImageVersionsResult(
-        String id,
-        List<GetImageVersionsImageVersion> imageVersions,
-        String project,
-        String region) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageVersions") List<GetImageVersionsImageVersion> imageVersions,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region) {
         this.id = id;
         this.imageVersions = imageVersions;
         this.project = project;
@@ -83,22 +83,22 @@ public final class GetImageVersionsResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageVersions(List<GetImageVersionsImageVersion> imageVersions) {
+        public Builder imageVersions(List<GetImageVersionsImageVersion> imageVersions) {
             this.imageVersions = Objects.requireNonNull(imageVersions);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

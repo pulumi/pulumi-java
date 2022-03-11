@@ -28,11 +28,11 @@ public final class CrawlerMongodbTarget {
      */
     private final @Nullable Boolean scanAll;
 
-    @OutputCustomType.Constructor({"connectionName","path","scanAll"})
+    @OutputCustomType.Constructor
     private CrawlerMongodbTarget(
-        String connectionName,
-        String path,
-        @Nullable Boolean scanAll) {
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scanAll") @Nullable Boolean scanAll) {
         this.connectionName = connectionName;
         this.path = path;
         this.scanAll = scanAll;
@@ -84,17 +84,17 @@ public final class CrawlerMongodbTarget {
     	      this.scanAll = defaults.scanAll;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setScanAll(@Nullable Boolean scanAll) {
+        public Builder scanAll(@Nullable Boolean scanAll) {
             this.scanAll = scanAll;
             return this;
         }

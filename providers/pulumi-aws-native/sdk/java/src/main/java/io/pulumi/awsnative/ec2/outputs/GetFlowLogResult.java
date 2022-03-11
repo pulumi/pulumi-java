@@ -24,10 +24,10 @@ public final class GetFlowLogResult {
      */
     private final @Nullable List<FlowLogTag> tags;
 
-    @OutputCustomType.Constructor({"id","tags"})
+    @OutputCustomType.Constructor
     private GetFlowLogResult(
-        @Nullable String id,
-        @Nullable List<FlowLogTag> tags) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<FlowLogTag> tags) {
         this.id = id;
         this.tags = tags;
     }
@@ -69,12 +69,12 @@ public final class GetFlowLogResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FlowLogTag> tags) {
+        public Builder tags(@Nullable List<FlowLogTag> tags) {
             this.tags = tags;
             return this;
         }

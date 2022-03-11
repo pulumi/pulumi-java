@@ -34,12 +34,12 @@ public final class GCEPersistentDiskVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"fsType","partition","pdName","readOnly"})
+    @OutputCustomType.Constructor
     private GCEPersistentDiskVolumeSource(
-        @Nullable String fsType,
-        @Nullable Integer partition,
-        String pdName,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("partition") @Nullable Integer partition,
+        @OutputCustomType.Parameter("pdName") String pdName,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.fsType = fsType;
         this.partition = partition;
         this.pdName = pdName;
@@ -101,22 +101,22 @@ public final class GCEPersistentDiskVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setPartition(@Nullable Integer partition) {
+        public Builder partition(@Nullable Integer partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setPdName(String pdName) {
+        public Builder pdName(String pdName) {
             this.pdName = Objects.requireNonNull(pdName);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

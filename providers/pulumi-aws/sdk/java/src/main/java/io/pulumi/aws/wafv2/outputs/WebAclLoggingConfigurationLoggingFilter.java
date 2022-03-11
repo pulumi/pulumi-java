@@ -22,10 +22,10 @@ public final class WebAclLoggingConfigurationLoggingFilter {
      */
     private final List<WebAclLoggingConfigurationLoggingFilterFilter> filters;
 
-    @OutputCustomType.Constructor({"defaultBehavior","filters"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilter(
-        String defaultBehavior,
-        List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
+        @OutputCustomType.Parameter("defaultBehavior") String defaultBehavior,
+        @OutputCustomType.Parameter("filters") List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
         this.defaultBehavior = defaultBehavior;
         this.filters = filters;
     }
@@ -67,12 +67,12 @@ public final class WebAclLoggingConfigurationLoggingFilter {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setDefaultBehavior(String defaultBehavior) {
+        public Builder defaultBehavior(String defaultBehavior) {
             this.defaultBehavior = Objects.requireNonNull(defaultBehavior);
             return this;
         }
 
-        public Builder setFilters(List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
+        public Builder filters(List<WebAclLoggingConfigurationLoggingFilterFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }

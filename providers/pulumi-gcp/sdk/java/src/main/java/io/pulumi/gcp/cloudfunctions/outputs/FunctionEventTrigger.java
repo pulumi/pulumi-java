@@ -31,11 +31,11 @@ public final class FunctionEventTrigger {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor({"eventType","failurePolicy","resource"})
+    @OutputCustomType.Constructor
     private FunctionEventTrigger(
-        String eventType,
-        @Nullable FunctionEventTriggerFailurePolicy failurePolicy,
-        String resource) {
+        @OutputCustomType.Parameter("eventType") String eventType,
+        @OutputCustomType.Parameter("failurePolicy") @Nullable FunctionEventTriggerFailurePolicy failurePolicy,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.eventType = eventType;
         this.failurePolicy = failurePolicy;
         this.resource = resource;
@@ -90,17 +90,17 @@ public final class FunctionEventTrigger {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setEventType(String eventType) {
+        public Builder eventType(String eventType) {
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable FunctionEventTriggerFailurePolicy failurePolicy) {
+        public Builder failurePolicy(@Nullable FunctionEventTriggerFailurePolicy failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

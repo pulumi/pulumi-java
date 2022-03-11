@@ -15,10 +15,10 @@ public final class AlertAction {
     private final @Nullable AlertLambdaConfiguration lambdaConfiguration;
     private final @Nullable AlertSNSConfiguration sNSConfiguration;
 
-    @OutputCustomType.Constructor({"lambdaConfiguration","sNSConfiguration"})
+    @OutputCustomType.Constructor
     private AlertAction(
-        @Nullable AlertLambdaConfiguration lambdaConfiguration,
-        @Nullable AlertSNSConfiguration sNSConfiguration) {
+        @OutputCustomType.Parameter("lambdaConfiguration") @Nullable AlertLambdaConfiguration lambdaConfiguration,
+        @OutputCustomType.Parameter("sNSConfiguration") @Nullable AlertSNSConfiguration sNSConfiguration) {
         this.lambdaConfiguration = lambdaConfiguration;
         this.sNSConfiguration = sNSConfiguration;
     }
@@ -52,12 +52,12 @@ public final class AlertAction {
     	      this.sNSConfiguration = defaults.sNSConfiguration;
         }
 
-        public Builder setLambdaConfiguration(@Nullable AlertLambdaConfiguration lambdaConfiguration) {
+        public Builder lambdaConfiguration(@Nullable AlertLambdaConfiguration lambdaConfiguration) {
             this.lambdaConfiguration = lambdaConfiguration;
             return this;
         }
 
-        public Builder setSNSConfiguration(@Nullable AlertSNSConfiguration sNSConfiguration) {
+        public Builder sNSConfiguration(@Nullable AlertSNSConfiguration sNSConfiguration) {
             this.sNSConfiguration = sNSConfiguration;
             return this;
         }

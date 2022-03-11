@@ -22,10 +22,10 @@ public final class DatasetStateResponseDeprecatedBy {
      */
     private final @Nullable String definitionVersion;
 
-    @OutputCustomType.Constructor({"datasetId","definitionVersion"})
+    @OutputCustomType.Constructor
     private DatasetStateResponseDeprecatedBy(
-        String datasetId,
-        @Nullable String definitionVersion) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("definitionVersion") @Nullable String definitionVersion) {
         this.datasetId = datasetId;
         this.definitionVersion = definitionVersion;
     }
@@ -67,12 +67,12 @@ public final class DatasetStateResponseDeprecatedBy {
     	      this.definitionVersion = defaults.definitionVersion;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setDefinitionVersion(@Nullable String definitionVersion) {
+        public Builder definitionVersion(@Nullable String definitionVersion) {
             this.definitionVersion = definitionVersion;
             return this;
         }

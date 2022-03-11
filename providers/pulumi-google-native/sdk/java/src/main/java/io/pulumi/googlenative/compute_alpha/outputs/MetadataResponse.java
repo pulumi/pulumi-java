@@ -27,11 +27,11 @@ public final class MetadataResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"fingerprint","items","kind"})
+    @OutputCustomType.Constructor
     private MetadataResponse(
-        String fingerprint,
-        List<MetadataItemsItemResponse> items,
-        String kind) {
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("items") List<MetadataItemsItemResponse> items,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.fingerprint = fingerprint;
         this.items = items;
         this.kind = kind;
@@ -83,17 +83,17 @@ public final class MetadataResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setItems(List<MetadataItemsItemResponse> items) {
+        public Builder items(List<MetadataItemsItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

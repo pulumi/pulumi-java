@@ -23,10 +23,10 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
      */
     private final Double percentage;
 
-    @OutputCustomType.Constructor({"fixedDelay","percentage"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay(
-        URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
-        Double percentage) {
+        @OutputCustomType.Parameter("fixedDelay") URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay,
+        @OutputCustomType.Parameter("percentage") Double percentage) {
         this.fixedDelay = fixedDelay;
         this.percentage = percentage;
     }
@@ -70,12 +70,12 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixedDelay(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay) {
+        public Builder fixedDelay(URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay) {
             this.fixedDelay = Objects.requireNonNull(fixedDelay);
             return this;
         }
 
-        public Builder setPercentage(Double percentage) {
+        public Builder percentage(Double percentage) {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }

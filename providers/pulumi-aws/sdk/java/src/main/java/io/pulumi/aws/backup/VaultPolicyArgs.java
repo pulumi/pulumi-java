@@ -69,22 +69,22 @@ public final class VaultPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setBackupVaultName(Input<String> backupVaultName) {
+        public Builder backupVaultName(Input<String> backupVaultName) {
             this.backupVaultName = Objects.requireNonNull(backupVaultName);
             return this;
         }
 
-        public Builder setBackupVaultName(String backupVaultName) {
+        public Builder backupVaultName(String backupVaultName) {
             this.backupVaultName = Input.of(Objects.requireNonNull(backupVaultName));
             return this;
         }
 
-        public Builder setPolicy(Input<String> policy) {
+        public Builder policy(Input<String> policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Input.of(Objects.requireNonNull(policy));
             return this;
         }

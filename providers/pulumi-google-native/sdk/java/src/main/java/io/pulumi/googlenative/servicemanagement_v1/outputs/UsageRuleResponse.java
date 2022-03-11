@@ -26,11 +26,11 @@ public final class UsageRuleResponse {
      */
     private final Boolean skipServiceControl;
 
-    @OutputCustomType.Constructor({"allowUnregisteredCalls","selector","skipServiceControl"})
+    @OutputCustomType.Constructor
     private UsageRuleResponse(
-        Boolean allowUnregisteredCalls,
-        String selector,
-        Boolean skipServiceControl) {
+        @OutputCustomType.Parameter("allowUnregisteredCalls") Boolean allowUnregisteredCalls,
+        @OutputCustomType.Parameter("selector") String selector,
+        @OutputCustomType.Parameter("skipServiceControl") Boolean skipServiceControl) {
         this.allowUnregisteredCalls = allowUnregisteredCalls;
         this.selector = selector;
         this.skipServiceControl = skipServiceControl;
@@ -82,17 +82,17 @@ public final class UsageRuleResponse {
     	      this.skipServiceControl = defaults.skipServiceControl;
         }
 
-        public Builder setAllowUnregisteredCalls(Boolean allowUnregisteredCalls) {
+        public Builder allowUnregisteredCalls(Boolean allowUnregisteredCalls) {
             this.allowUnregisteredCalls = Objects.requireNonNull(allowUnregisteredCalls);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
 
-        public Builder setSkipServiceControl(Boolean skipServiceControl) {
+        public Builder skipServiceControl(Boolean skipServiceControl) {
             this.skipServiceControl = Objects.requireNonNull(skipServiceControl);
             return this;
         }

@@ -57,12 +57,12 @@ public final class FunctionTracingConfigArgs extends io.pulumi.resources.Resourc
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable Input<FunctionTracingConfigMode> mode) {
+        public Builder mode(@Nullable Input<FunctionTracingConfigMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable FunctionTracingConfigMode mode) {
+        public Builder mode(@Nullable FunctionTracingConfigMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

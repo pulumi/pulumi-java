@@ -24,10 +24,10 @@ public final class AzureMachineLearningWebServiceInputsResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"columnNames","name"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceInputsResponse(
-        @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("columnNames") @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.columnNames = columnNames;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class AzureMachineLearningWebServiceInputsResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setColumnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
+        public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

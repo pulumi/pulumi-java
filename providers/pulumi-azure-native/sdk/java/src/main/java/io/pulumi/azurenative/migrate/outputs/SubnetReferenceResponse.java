@@ -22,10 +22,10 @@ public final class SubnetReferenceResponse {
      */
     private final String sourceArmResourceId;
 
-    @OutputCustomType.Constructor({"name","sourceArmResourceId"})
+    @OutputCustomType.Constructor
     private SubnetReferenceResponse(
-        @Nullable String name,
-        String sourceArmResourceId) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceArmResourceId") String sourceArmResourceId) {
         this.name = name;
         this.sourceArmResourceId = sourceArmResourceId;
     }
@@ -67,12 +67,12 @@ public final class SubnetReferenceResponse {
     	      this.sourceArmResourceId = defaults.sourceArmResourceId;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceArmResourceId(String sourceArmResourceId) {
+        public Builder sourceArmResourceId(String sourceArmResourceId) {
             this.sourceArmResourceId = Objects.requireNonNull(sourceArmResourceId);
             return this;
         }

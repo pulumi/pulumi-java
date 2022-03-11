@@ -20,10 +20,10 @@ public final class GoogleSheetsOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor({"range","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private GoogleSheetsOptionsResponse(
-        String range,
-        String skipLeadingRows) {
+        @OutputCustomType.Parameter("range") String range,
+        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }
@@ -65,12 +65,12 @@ public final class GoogleSheetsOptionsResponse {
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setRange(String range) {
+        public Builder range(String range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setSkipLeadingRows(String skipLeadingRows) {
+        public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }

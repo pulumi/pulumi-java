@@ -362,202 +362,202 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     	      this.websiteConfiguration = defaults.websiteConfiguration;
         }
 
-        public Builder setAccelerateConfiguration(@Nullable Input<BucketAccelerateConfigurationArgs> accelerateConfiguration) {
+        public Builder accelerateConfiguration(@Nullable Input<BucketAccelerateConfigurationArgs> accelerateConfiguration) {
             this.accelerateConfiguration = accelerateConfiguration;
             return this;
         }
 
-        public Builder setAccelerateConfiguration(@Nullable BucketAccelerateConfigurationArgs accelerateConfiguration) {
+        public Builder accelerateConfiguration(@Nullable BucketAccelerateConfigurationArgs accelerateConfiguration) {
             this.accelerateConfiguration = Input.ofNullable(accelerateConfiguration);
             return this;
         }
 
-        public Builder setAccessControl(@Nullable Input<BucketAccessControl> accessControl) {
+        public Builder accessControl(@Nullable Input<BucketAccessControl> accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessControl(@Nullable BucketAccessControl accessControl) {
+        public Builder accessControl(@Nullable BucketAccessControl accessControl) {
             this.accessControl = Input.ofNullable(accessControl);
             return this;
         }
 
-        public Builder setAnalyticsConfigurations(@Nullable Input<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations) {
+        public Builder analyticsConfigurations(@Nullable Input<List<BucketAnalyticsConfigurationArgs>> analyticsConfigurations) {
             this.analyticsConfigurations = analyticsConfigurations;
             return this;
         }
 
-        public Builder setAnalyticsConfigurations(@Nullable List<BucketAnalyticsConfigurationArgs> analyticsConfigurations) {
+        public Builder analyticsConfigurations(@Nullable List<BucketAnalyticsConfigurationArgs> analyticsConfigurations) {
             this.analyticsConfigurations = Input.ofNullable(analyticsConfigurations);
             return this;
         }
 
-        public Builder setBucketEncryption(@Nullable Input<BucketEncryptionArgs> bucketEncryption) {
+        public Builder bucketEncryption(@Nullable Input<BucketEncryptionArgs> bucketEncryption) {
             this.bucketEncryption = bucketEncryption;
             return this;
         }
 
-        public Builder setBucketEncryption(@Nullable BucketEncryptionArgs bucketEncryption) {
+        public Builder bucketEncryption(@Nullable BucketEncryptionArgs bucketEncryption) {
             this.bucketEncryption = Input.ofNullable(bucketEncryption);
             return this;
         }
 
-        public Builder setBucketName(@Nullable Input<String> bucketName) {
+        public Builder bucketName(@Nullable Input<String> bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = Input.ofNullable(bucketName);
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable Input<BucketCorsConfigurationArgs> corsConfiguration) {
+        public Builder corsConfiguration(@Nullable Input<BucketCorsConfigurationArgs> corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable BucketCorsConfigurationArgs corsConfiguration) {
+        public Builder corsConfiguration(@Nullable BucketCorsConfigurationArgs corsConfiguration) {
             this.corsConfiguration = Input.ofNullable(corsConfiguration);
             return this;
         }
 
-        public Builder setIntelligentTieringConfigurations(@Nullable Input<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations) {
+        public Builder intelligentTieringConfigurations(@Nullable Input<List<BucketIntelligentTieringConfigurationArgs>> intelligentTieringConfigurations) {
             this.intelligentTieringConfigurations = intelligentTieringConfigurations;
             return this;
         }
 
-        public Builder setIntelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfigurationArgs> intelligentTieringConfigurations) {
+        public Builder intelligentTieringConfigurations(@Nullable List<BucketIntelligentTieringConfigurationArgs> intelligentTieringConfigurations) {
             this.intelligentTieringConfigurations = Input.ofNullable(intelligentTieringConfigurations);
             return this;
         }
 
-        public Builder setInventoryConfigurations(@Nullable Input<List<BucketInventoryConfigurationArgs>> inventoryConfigurations) {
+        public Builder inventoryConfigurations(@Nullable Input<List<BucketInventoryConfigurationArgs>> inventoryConfigurations) {
             this.inventoryConfigurations = inventoryConfigurations;
             return this;
         }
 
-        public Builder setInventoryConfigurations(@Nullable List<BucketInventoryConfigurationArgs> inventoryConfigurations) {
+        public Builder inventoryConfigurations(@Nullable List<BucketInventoryConfigurationArgs> inventoryConfigurations) {
             this.inventoryConfigurations = Input.ofNullable(inventoryConfigurations);
             return this;
         }
 
-        public Builder setLifecycleConfiguration(@Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable Input<BucketLifecycleConfigurationArgs> lifecycleConfiguration) {
             this.lifecycleConfiguration = lifecycleConfiguration;
             return this;
         }
 
-        public Builder setLifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
+        public Builder lifecycleConfiguration(@Nullable BucketLifecycleConfigurationArgs lifecycleConfiguration) {
             this.lifecycleConfiguration = Input.ofNullable(lifecycleConfiguration);
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable Input<BucketLoggingConfigurationArgs> loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable Input<BucketLoggingConfigurationArgs> loggingConfiguration) {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
 
-        public Builder setLoggingConfiguration(@Nullable BucketLoggingConfigurationArgs loggingConfiguration) {
+        public Builder loggingConfiguration(@Nullable BucketLoggingConfigurationArgs loggingConfiguration) {
             this.loggingConfiguration = Input.ofNullable(loggingConfiguration);
             return this;
         }
 
-        public Builder setMetricsConfigurations(@Nullable Input<List<BucketMetricsConfigurationArgs>> metricsConfigurations) {
+        public Builder metricsConfigurations(@Nullable Input<List<BucketMetricsConfigurationArgs>> metricsConfigurations) {
             this.metricsConfigurations = metricsConfigurations;
             return this;
         }
 
-        public Builder setMetricsConfigurations(@Nullable List<BucketMetricsConfigurationArgs> metricsConfigurations) {
+        public Builder metricsConfigurations(@Nullable List<BucketMetricsConfigurationArgs> metricsConfigurations) {
             this.metricsConfigurations = Input.ofNullable(metricsConfigurations);
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable Input<BucketNotificationConfigurationArgs> notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable Input<BucketNotificationConfigurationArgs> notificationConfiguration) {
             this.notificationConfiguration = notificationConfiguration;
             return this;
         }
 
-        public Builder setNotificationConfiguration(@Nullable BucketNotificationConfigurationArgs notificationConfiguration) {
+        public Builder notificationConfiguration(@Nullable BucketNotificationConfigurationArgs notificationConfiguration) {
             this.notificationConfiguration = Input.ofNullable(notificationConfiguration);
             return this;
         }
 
-        public Builder setObjectLockConfiguration(@Nullable Input<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable Input<BucketObjectLockConfigurationArgs> objectLockConfiguration) {
             this.objectLockConfiguration = objectLockConfiguration;
             return this;
         }
 
-        public Builder setObjectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
+        public Builder objectLockConfiguration(@Nullable BucketObjectLockConfigurationArgs objectLockConfiguration) {
             this.objectLockConfiguration = Input.ofNullable(objectLockConfiguration);
             return this;
         }
 
-        public Builder setObjectLockEnabled(@Nullable Input<Boolean> objectLockEnabled) {
+        public Builder objectLockEnabled(@Nullable Input<Boolean> objectLockEnabled) {
             this.objectLockEnabled = objectLockEnabled;
             return this;
         }
 
-        public Builder setObjectLockEnabled(@Nullable Boolean objectLockEnabled) {
+        public Builder objectLockEnabled(@Nullable Boolean objectLockEnabled) {
             this.objectLockEnabled = Input.ofNullable(objectLockEnabled);
             return this;
         }
 
-        public Builder setOwnershipControls(@Nullable Input<BucketOwnershipControlsArgs> ownershipControls) {
+        public Builder ownershipControls(@Nullable Input<BucketOwnershipControlsArgs> ownershipControls) {
             this.ownershipControls = ownershipControls;
             return this;
         }
 
-        public Builder setOwnershipControls(@Nullable BucketOwnershipControlsArgs ownershipControls) {
+        public Builder ownershipControls(@Nullable BucketOwnershipControlsArgs ownershipControls) {
             this.ownershipControls = Input.ofNullable(ownershipControls);
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable Input<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable Input<BucketPublicAccessBlockConfigurationArgs> publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = publicAccessBlockConfiguration;
             return this;
         }
 
-        public Builder setPublicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
+        public Builder publicAccessBlockConfiguration(@Nullable BucketPublicAccessBlockConfigurationArgs publicAccessBlockConfiguration) {
             this.publicAccessBlockConfiguration = Input.ofNullable(publicAccessBlockConfiguration);
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable Input<BucketReplicationConfigurationArgs> replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable Input<BucketReplicationConfigurationArgs> replicationConfiguration) {
             this.replicationConfiguration = replicationConfiguration;
             return this;
         }
 
-        public Builder setReplicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
+        public Builder replicationConfiguration(@Nullable BucketReplicationConfigurationArgs replicationConfiguration) {
             this.replicationConfiguration = Input.ofNullable(replicationConfiguration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<BucketTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<BucketTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<BucketTagArgs> tags) {
+        public Builder tags(@Nullable List<BucketTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersioningConfiguration(@Nullable Input<BucketVersioningConfigurationArgs> versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable Input<BucketVersioningConfigurationArgs> versioningConfiguration) {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
 
-        public Builder setVersioningConfiguration(@Nullable BucketVersioningConfigurationArgs versioningConfiguration) {
+        public Builder versioningConfiguration(@Nullable BucketVersioningConfigurationArgs versioningConfiguration) {
             this.versioningConfiguration = Input.ofNullable(versioningConfiguration);
             return this;
         }
 
-        public Builder setWebsiteConfiguration(@Nullable Input<BucketWebsiteConfigurationArgs> websiteConfiguration) {
+        public Builder websiteConfiguration(@Nullable Input<BucketWebsiteConfigurationArgs> websiteConfiguration) {
             this.websiteConfiguration = websiteConfiguration;
             return this;
         }
 
-        public Builder setWebsiteConfiguration(@Nullable BucketWebsiteConfigurationArgs websiteConfiguration) {
+        public Builder websiteConfiguration(@Nullable BucketWebsiteConfigurationArgs websiteConfiguration) {
             this.websiteConfiguration = Input.ofNullable(websiteConfiguration);
             return this;
         }

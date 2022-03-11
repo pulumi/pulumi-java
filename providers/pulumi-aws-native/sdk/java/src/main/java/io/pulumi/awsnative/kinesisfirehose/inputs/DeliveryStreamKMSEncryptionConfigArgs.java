@@ -48,12 +48,12 @@ public final class DeliveryStreamKMSEncryptionConfigArgs extends io.pulumi.resou
     	      this.aWSKMSKeyARN = defaults.aWSKMSKeyARN;
         }
 
-        public Builder setAWSKMSKeyARN(Input<String> aWSKMSKeyARN) {
+        public Builder aWSKMSKeyARN(Input<String> aWSKMSKeyARN) {
             this.aWSKMSKeyARN = Objects.requireNonNull(aWSKMSKeyARN);
             return this;
         }
 
-        public Builder setAWSKMSKeyARN(String aWSKMSKeyARN) {
+        public Builder aWSKMSKeyARN(String aWSKMSKeyARN) {
             this.aWSKMSKeyARN = Input.of(Objects.requireNonNull(aWSKMSKeyARN));
             return this;
         }

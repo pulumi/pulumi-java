@@ -35,11 +35,11 @@ public final class PolicyStepAdjustment {
      */
     private final Integer scalingAdjustment;
 
-    @OutputCustomType.Constructor({"metricIntervalLowerBound","metricIntervalUpperBound","scalingAdjustment"})
+    @OutputCustomType.Constructor
     private PolicyStepAdjustment(
-        @Nullable String metricIntervalLowerBound,
-        @Nullable String metricIntervalUpperBound,
-        Integer scalingAdjustment) {
+        @OutputCustomType.Parameter("metricIntervalLowerBound") @Nullable String metricIntervalLowerBound,
+        @OutputCustomType.Parameter("metricIntervalUpperBound") @Nullable String metricIntervalUpperBound,
+        @OutputCustomType.Parameter("scalingAdjustment") Integer scalingAdjustment) {
         this.metricIntervalLowerBound = metricIntervalLowerBound;
         this.metricIntervalUpperBound = metricIntervalUpperBound;
         this.scalingAdjustment = scalingAdjustment;
@@ -98,17 +98,17 @@ public final class PolicyStepAdjustment {
     	      this.scalingAdjustment = defaults.scalingAdjustment;
         }
 
-        public Builder setMetricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
+        public Builder metricIntervalLowerBound(@Nullable String metricIntervalLowerBound) {
             this.metricIntervalLowerBound = metricIntervalLowerBound;
             return this;
         }
 
-        public Builder setMetricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
+        public Builder metricIntervalUpperBound(@Nullable String metricIntervalUpperBound) {
             this.metricIntervalUpperBound = metricIntervalUpperBound;
             return this;
         }
 
-        public Builder setScalingAdjustment(Integer scalingAdjustment) {
+        public Builder scalingAdjustment(Integer scalingAdjustment) {
             this.scalingAdjustment = Objects.requireNonNull(scalingAdjustment);
             return this;
         }

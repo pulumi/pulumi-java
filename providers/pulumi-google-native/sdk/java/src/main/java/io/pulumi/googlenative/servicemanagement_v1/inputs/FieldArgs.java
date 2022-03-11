@@ -208,102 +208,102 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.typeUrl = defaults.typeUrl;
         }
 
-        public Builder setCardinality(@Nullable Input<FieldCardinality> cardinality) {
+        public Builder cardinality(@Nullable Input<FieldCardinality> cardinality) {
             this.cardinality = cardinality;
             return this;
         }
 
-        public Builder setCardinality(@Nullable FieldCardinality cardinality) {
+        public Builder cardinality(@Nullable FieldCardinality cardinality) {
             this.cardinality = Input.ofNullable(cardinality);
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Input<String> defaultValue) {
+        public Builder defaultValue(@Nullable Input<String> defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
 
-        public Builder setJsonName(@Nullable Input<String> jsonName) {
+        public Builder jsonName(@Nullable Input<String> jsonName) {
             this.jsonName = jsonName;
             return this;
         }
 
-        public Builder setJsonName(@Nullable String jsonName) {
+        public Builder jsonName(@Nullable String jsonName) {
             this.jsonName = Input.ofNullable(jsonName);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<FieldKind> kind) {
+        public Builder kind(@Nullable Input<FieldKind> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable FieldKind kind) {
+        public Builder kind(@Nullable FieldKind kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNumber(@Nullable Input<Integer> number) {
+        public Builder number(@Nullable Input<Integer> number) {
             this.number = number;
             return this;
         }
 
-        public Builder setNumber(@Nullable Integer number) {
+        public Builder number(@Nullable Integer number) {
             this.number = Input.ofNullable(number);
             return this;
         }
 
-        public Builder setOneofIndex(@Nullable Input<Integer> oneofIndex) {
+        public Builder oneofIndex(@Nullable Input<Integer> oneofIndex) {
             this.oneofIndex = oneofIndex;
             return this;
         }
 
-        public Builder setOneofIndex(@Nullable Integer oneofIndex) {
+        public Builder oneofIndex(@Nullable Integer oneofIndex) {
             this.oneofIndex = Input.ofNullable(oneofIndex);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<List<OptionArgs>> options) {
+        public Builder options(@Nullable Input<List<OptionArgs>> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable List<OptionArgs> options) {
+        public Builder options(@Nullable List<OptionArgs> options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setPacked(@Nullable Input<Boolean> packed) {
+        public Builder packed(@Nullable Input<Boolean> packed) {
             this.packed = packed;
             return this;
         }
 
-        public Builder setPacked(@Nullable Boolean packed) {
+        public Builder packed(@Nullable Boolean packed) {
             this.packed = Input.ofNullable(packed);
             return this;
         }
 
-        public Builder setTypeUrl(@Nullable Input<String> typeUrl) {
+        public Builder typeUrl(@Nullable Input<String> typeUrl) {
             this.typeUrl = typeUrl;
             return this;
         }
 
-        public Builder setTypeUrl(@Nullable String typeUrl) {
+        public Builder typeUrl(@Nullable String typeUrl) {
             this.typeUrl = Input.ofNullable(typeUrl);
             return this;
         }

@@ -29,11 +29,11 @@ public final class GroupInstanceRefresh {
      */
     private final @Nullable List<String> triggers;
 
-    @OutputCustomType.Constructor({"preferences","strategy","triggers"})
+    @OutputCustomType.Constructor
     private GroupInstanceRefresh(
-        @Nullable GroupInstanceRefreshPreferences preferences,
-        String strategy,
-        @Nullable List<String> triggers) {
+        @OutputCustomType.Parameter("preferences") @Nullable GroupInstanceRefreshPreferences preferences,
+        @OutputCustomType.Parameter("strategy") String strategy,
+        @OutputCustomType.Parameter("triggers") @Nullable List<String> triggers) {
         this.preferences = preferences;
         this.strategy = strategy;
         this.triggers = triggers;
@@ -85,17 +85,17 @@ public final class GroupInstanceRefresh {
     	      this.triggers = defaults.triggers;
         }
 
-        public Builder setPreferences(@Nullable GroupInstanceRefreshPreferences preferences) {
+        public Builder preferences(@Nullable GroupInstanceRefreshPreferences preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<String> triggers) {
+        public Builder triggers(@Nullable List<String> triggers) {
             this.triggers = triggers;
             return this;
         }

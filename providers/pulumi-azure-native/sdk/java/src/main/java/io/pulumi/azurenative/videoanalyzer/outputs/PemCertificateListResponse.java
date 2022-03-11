@@ -22,10 +22,10 @@ public final class PemCertificateListResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificates","type"})
+    @OutputCustomType.Constructor
     private PemCertificateListResponse(
-        List<String> certificates,
-        String type) {
+        @OutputCustomType.Parameter("certificates") List<String> certificates,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificates = certificates;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class PemCertificateListResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificates(List<String> certificates) {
+        public Builder certificates(List<String> certificates) {
             this.certificates = Objects.requireNonNull(certificates);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

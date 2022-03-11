@@ -76,32 +76,32 @@ public final class TaskDefinitionProxyConfigurationArgs extends io.pulumi.resour
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerName(Input<String> containerName) {
+        public Builder containerName(Input<String> containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Input.of(Objects.requireNonNull(containerName));
             return this;
         }
 
-        public Builder setProxyConfigurationProperties(@Nullable Input<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties) {
+        public Builder proxyConfigurationProperties(@Nullable Input<List<TaskDefinitionKeyValuePairArgs>> proxyConfigurationProperties) {
             this.proxyConfigurationProperties = proxyConfigurationProperties;
             return this;
         }
 
-        public Builder setProxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePairArgs> proxyConfigurationProperties) {
+        public Builder proxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePairArgs> proxyConfigurationProperties) {
             this.proxyConfigurationProperties = Input.ofNullable(proxyConfigurationProperties);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -27,11 +27,11 @@ public final class RosettaNetPipActivitySettingsResponse {
      */
     private final String activityType;
 
-    @OutputCustomType.Constructor({"acknowledgmentOfReceiptSettings","activityBehavior","activityType"})
+    @OutputCustomType.Constructor
     private RosettaNetPipActivitySettingsResponse(
-        RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
-        RosettaNetPipActivityBehaviorResponse activityBehavior,
-        String activityType) {
+        @OutputCustomType.Parameter("acknowledgmentOfReceiptSettings") RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings,
+        @OutputCustomType.Parameter("activityBehavior") RosettaNetPipActivityBehaviorResponse activityBehavior,
+        @OutputCustomType.Parameter("activityType") String activityType) {
         this.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
         this.activityBehavior = activityBehavior;
         this.activityType = activityType;
@@ -83,17 +83,17 @@ public final class RosettaNetPipActivitySettingsResponse {
     	      this.activityType = defaults.activityType;
         }
 
-        public Builder setAcknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
+        public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsResponse acknowledgmentOfReceiptSettings) {
             this.acknowledgmentOfReceiptSettings = Objects.requireNonNull(acknowledgmentOfReceiptSettings);
             return this;
         }
 
-        public Builder setActivityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
+        public Builder activityBehavior(RosettaNetPipActivityBehaviorResponse activityBehavior) {
             this.activityBehavior = Objects.requireNonNull(activityBehavior);
             return this;
         }
 
-        public Builder setActivityType(String activityType) {
+        public Builder activityType(String activityType) {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }

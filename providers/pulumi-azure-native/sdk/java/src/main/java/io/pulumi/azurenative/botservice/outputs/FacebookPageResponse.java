@@ -22,10 +22,10 @@ public final class FacebookPageResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"accessToken","id"})
+    @OutputCustomType.Constructor
     private FacebookPageResponse(
-        @Nullable String accessToken,
-        String id) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("id") String id) {
         this.accessToken = accessToken;
         this.id = id;
     }
@@ -67,12 +67,12 @@ public final class FacebookPageResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

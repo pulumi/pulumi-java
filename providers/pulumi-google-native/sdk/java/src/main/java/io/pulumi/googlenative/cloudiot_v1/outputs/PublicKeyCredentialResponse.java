@@ -20,10 +20,10 @@ public final class PublicKeyCredentialResponse {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"format","key"})
+    @OutputCustomType.Constructor
     private PublicKeyCredentialResponse(
-        String format,
-        String key) {
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("key") String key) {
         this.format = format;
         this.key = key;
     }
@@ -65,12 +65,12 @@ public final class PublicKeyCredentialResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

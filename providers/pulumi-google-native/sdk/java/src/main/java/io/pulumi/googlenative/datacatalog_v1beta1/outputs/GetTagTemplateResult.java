@@ -26,11 +26,11 @@ public final class GetTagTemplateResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","fields","name"})
+    @OutputCustomType.Constructor
     private GetTagTemplateResult(
-        String displayName,
-        Map<String,String> fields,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("fields") Map<String,String> fields,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.fields = fields;
         this.name = name;
@@ -82,17 +82,17 @@ public final class GetTagTemplateResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFields(Map<String,String> fields) {
+        public Builder fields(Map<String,String> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

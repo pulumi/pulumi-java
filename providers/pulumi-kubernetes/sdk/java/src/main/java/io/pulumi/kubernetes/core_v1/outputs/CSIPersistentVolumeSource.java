@@ -60,17 +60,17 @@ public final class CSIPersistentVolumeSource {
      */
     private final String volumeHandle;
 
-    @OutputCustomType.Constructor({"controllerExpandSecretRef","controllerPublishSecretRef","driver","fsType","nodePublishSecretRef","nodeStageSecretRef","readOnly","volumeAttributes","volumeHandle"})
+    @OutputCustomType.Constructor
     private CSIPersistentVolumeSource(
-        @Nullable SecretReference controllerExpandSecretRef,
-        @Nullable SecretReference controllerPublishSecretRef,
-        String driver,
-        @Nullable String fsType,
-        @Nullable SecretReference nodePublishSecretRef,
-        @Nullable SecretReference nodeStageSecretRef,
-        @Nullable Boolean readOnly,
-        @Nullable Map<String,String> volumeAttributes,
-        String volumeHandle) {
+        @OutputCustomType.Parameter("controllerExpandSecretRef") @Nullable SecretReference controllerExpandSecretRef,
+        @OutputCustomType.Parameter("controllerPublishSecretRef") @Nullable SecretReference controllerPublishSecretRef,
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("nodePublishSecretRef") @Nullable SecretReference nodePublishSecretRef,
+        @OutputCustomType.Parameter("nodeStageSecretRef") @Nullable SecretReference nodeStageSecretRef,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("volumeAttributes") @Nullable Map<String,String> volumeAttributes,
+        @OutputCustomType.Parameter("volumeHandle") String volumeHandle) {
         this.controllerExpandSecretRef = controllerExpandSecretRef;
         this.controllerPublishSecretRef = controllerPublishSecretRef;
         this.driver = driver;
@@ -182,47 +182,47 @@ public final class CSIPersistentVolumeSource {
     	      this.volumeHandle = defaults.volumeHandle;
         }
 
-        public Builder setControllerExpandSecretRef(@Nullable SecretReference controllerExpandSecretRef) {
+        public Builder controllerExpandSecretRef(@Nullable SecretReference controllerExpandSecretRef) {
             this.controllerExpandSecretRef = controllerExpandSecretRef;
             return this;
         }
 
-        public Builder setControllerPublishSecretRef(@Nullable SecretReference controllerPublishSecretRef) {
+        public Builder controllerPublishSecretRef(@Nullable SecretReference controllerPublishSecretRef) {
             this.controllerPublishSecretRef = controllerPublishSecretRef;
             return this;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable SecretReference nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable SecretReference nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
-        public Builder setNodeStageSecretRef(@Nullable SecretReference nodeStageSecretRef) {
+        public Builder nodeStageSecretRef(@Nullable SecretReference nodeStageSecretRef) {
             this.nodeStageSecretRef = nodeStageSecretRef;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Map<String,String> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
 
-        public Builder setVolumeHandle(String volumeHandle) {
+        public Builder volumeHandle(String volumeHandle) {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }

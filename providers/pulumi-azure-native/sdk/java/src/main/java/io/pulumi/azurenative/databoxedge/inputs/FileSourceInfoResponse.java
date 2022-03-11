@@ -55,7 +55,7 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

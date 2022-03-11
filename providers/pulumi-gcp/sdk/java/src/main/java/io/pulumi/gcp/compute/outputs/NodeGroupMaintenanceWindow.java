@@ -15,8 +15,8 @@ public final class NodeGroupMaintenanceWindow {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"startTime"})
-    private NodeGroupMaintenanceWindow(String startTime) {
+    @OutputCustomType.Constructor
+    private NodeGroupMaintenanceWindow(@OutputCustomType.Parameter("startTime") String startTime) {
         this.startTime = startTime;
     }
 
@@ -48,7 +48,7 @@ public final class NodeGroupMaintenanceWindow {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

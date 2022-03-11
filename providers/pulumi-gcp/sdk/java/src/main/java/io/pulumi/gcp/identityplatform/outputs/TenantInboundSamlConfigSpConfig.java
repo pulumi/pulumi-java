@@ -30,11 +30,11 @@ public final class TenantInboundSamlConfigSpConfig {
      */
     private final String spEntityId;
 
-    @OutputCustomType.Constructor({"callbackUri","spCertificates","spEntityId"})
+    @OutputCustomType.Constructor
     private TenantInboundSamlConfigSpConfig(
-        String callbackUri,
-        @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates,
-        String spEntityId) {
+        @OutputCustomType.Parameter("callbackUri") String callbackUri,
+        @OutputCustomType.Parameter("spCertificates") @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates,
+        @OutputCustomType.Parameter("spEntityId") String spEntityId) {
         this.callbackUri = callbackUri;
         this.spCertificates = spCertificates;
         this.spEntityId = spEntityId;
@@ -88,17 +88,17 @@ public final class TenantInboundSamlConfigSpConfig {
     	      this.spEntityId = defaults.spEntityId;
         }
 
-        public Builder setCallbackUri(String callbackUri) {
+        public Builder callbackUri(String callbackUri) {
             this.callbackUri = Objects.requireNonNull(callbackUri);
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates) {
+        public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
 
-        public Builder setSpEntityId(String spEntityId) {
+        public Builder spEntityId(String spEntityId) {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }

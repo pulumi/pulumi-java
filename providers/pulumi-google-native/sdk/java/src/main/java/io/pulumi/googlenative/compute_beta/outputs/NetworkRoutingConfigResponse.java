@@ -15,8 +15,8 @@ public final class NetworkRoutingConfigResponse {
      */
     private final String routingMode;
 
-    @OutputCustomType.Constructor({"routingMode"})
-    private NetworkRoutingConfigResponse(String routingMode) {
+    @OutputCustomType.Constructor
+    private NetworkRoutingConfigResponse(@OutputCustomType.Parameter("routingMode") String routingMode) {
         this.routingMode = routingMode;
     }
 
@@ -48,7 +48,7 @@ public final class NetworkRoutingConfigResponse {
     	      this.routingMode = defaults.routingMode;
         }
 
-        public Builder setRoutingMode(String routingMode) {
+        public Builder routingMode(String routingMode) {
             this.routingMode = Objects.requireNonNull(routingMode);
             return this;
         }

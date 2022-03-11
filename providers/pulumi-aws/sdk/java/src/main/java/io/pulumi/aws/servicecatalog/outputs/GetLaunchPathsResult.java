@@ -26,12 +26,12 @@ public final class GetLaunchPathsResult {
      */
     private final List<GetLaunchPathsSummary> summaries;
 
-    @OutputCustomType.Constructor({"acceptLanguage","id","productId","summaries"})
+    @OutputCustomType.Constructor
     private GetLaunchPathsResult(
-        @Nullable String acceptLanguage,
-        String id,
-        String productId,
-        List<GetLaunchPathsSummary> summaries) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("summaries") List<GetLaunchPathsSummary> summaries) {
         this.acceptLanguage = acceptLanguage;
         this.id = id;
         this.productId = productId;
@@ -85,22 +85,22 @@ public final class GetLaunchPathsResult {
     	      this.summaries = defaults.summaries;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setSummaries(List<GetLaunchPathsSummary> summaries) {
+        public Builder summaries(List<GetLaunchPathsSummary> summaries) {
             this.summaries = Objects.requireNonNull(summaries);
             return this;
         }

@@ -30,11 +30,11 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor({"encryptionPreferences","preferredDataCenterRegion","transportPreferences"})
+    @OutputCustomType.Constructor
     private PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable List<String> preferredDataCenterRegion,
-        @Nullable TransportPreferencesResponse transportPreferences) {
+        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @OutputCustomType.Parameter("preferredDataCenterRegion") @Nullable List<String> preferredDataCenterRegion,
+        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.preferredDataCenterRegion = preferredDataCenterRegion;
         this.transportPreferences = transportPreferences;
@@ -86,17 +86,17 @@ public final class PreferencesResponse {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setPreferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
+        public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
             this.preferredDataCenterRegion = preferredDataCenterRegion;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }

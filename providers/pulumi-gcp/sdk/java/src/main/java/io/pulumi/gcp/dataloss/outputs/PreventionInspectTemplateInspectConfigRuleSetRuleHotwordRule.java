@@ -34,11 +34,11 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
      */
     private final PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity;
 
-    @OutputCustomType.Constructor({"hotwordRegex","likelihoodAdjustment","proximity"})
+    @OutputCustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule(
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
-        PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
+        @OutputCustomType.Parameter("hotwordRegex") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex,
+        @OutputCustomType.Parameter("likelihoodAdjustment") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment,
+        @OutputCustomType.Parameter("proximity") PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;
@@ -97,17 +97,17 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule 
     	      this.proximity = defaults.proximity;
         }
 
-        public Builder setHotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex) {
+        public Builder hotwordRegex(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegex hotwordRegex) {
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustment likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
 
-        public Builder setProximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
+        public Builder proximity(PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }

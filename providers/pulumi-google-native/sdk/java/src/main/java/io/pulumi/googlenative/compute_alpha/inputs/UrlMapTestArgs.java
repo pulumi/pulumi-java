@@ -173,82 +173,82 @@ public final class UrlMapTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setBackendServiceWeight(@Nullable Input<Integer> backendServiceWeight) {
+        public Builder backendServiceWeight(@Nullable Input<Integer> backendServiceWeight) {
             this.backendServiceWeight = backendServiceWeight;
             return this;
         }
 
-        public Builder setBackendServiceWeight(@Nullable Integer backendServiceWeight) {
+        public Builder backendServiceWeight(@Nullable Integer backendServiceWeight) {
             this.backendServiceWeight = Input.ofNullable(backendServiceWeight);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExpectedOutputUrl(@Nullable Input<String> expectedOutputUrl) {
+        public Builder expectedOutputUrl(@Nullable Input<String> expectedOutputUrl) {
             this.expectedOutputUrl = expectedOutputUrl;
             return this;
         }
 
-        public Builder setExpectedOutputUrl(@Nullable String expectedOutputUrl) {
+        public Builder expectedOutputUrl(@Nullable String expectedOutputUrl) {
             this.expectedOutputUrl = Input.ofNullable(expectedOutputUrl);
             return this;
         }
 
-        public Builder setExpectedRedirectResponseCode(@Nullable Input<Integer> expectedRedirectResponseCode) {
+        public Builder expectedRedirectResponseCode(@Nullable Input<Integer> expectedRedirectResponseCode) {
             this.expectedRedirectResponseCode = expectedRedirectResponseCode;
             return this;
         }
 
-        public Builder setExpectedRedirectResponseCode(@Nullable Integer expectedRedirectResponseCode) {
+        public Builder expectedRedirectResponseCode(@Nullable Integer expectedRedirectResponseCode) {
             this.expectedRedirectResponseCode = Input.ofNullable(expectedRedirectResponseCode);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<UrlMapTestHeaderArgs>> headers) {
+        public Builder headers(@Nullable Input<List<UrlMapTestHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<UrlMapTestHeaderArgs> headers) {
+        public Builder headers(@Nullable List<UrlMapTestHeaderArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

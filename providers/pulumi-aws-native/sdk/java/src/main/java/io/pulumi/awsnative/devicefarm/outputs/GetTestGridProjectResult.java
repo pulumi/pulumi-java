@@ -18,12 +18,12 @@ public final class GetTestGridProjectResult {
     private final @Nullable String name;
     private final @Nullable List<TestGridProjectTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","name","tags"})
+    @OutputCustomType.Constructor
     private GetTestGridProjectResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String name,
-        @Nullable List<TestGridProjectTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<TestGridProjectTag> tags) {
         this.arn = arn;
         this.description = description;
         this.name = name;
@@ -69,22 +69,22 @@ public final class GetTestGridProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TestGridProjectTag> tags) {
+        public Builder tags(@Nullable List<TestGridProjectTag> tags) {
             this.tags = tags;
             return this;
         }

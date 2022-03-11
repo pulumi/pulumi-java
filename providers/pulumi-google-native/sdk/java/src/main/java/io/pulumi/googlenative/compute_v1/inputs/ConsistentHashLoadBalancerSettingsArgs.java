@@ -91,32 +91,32 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
     	      this.minimumRingSize = defaults.minimumRingSize;
         }
 
-        public Builder setHttpCookie(@Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie) {
+        public Builder httpCookie(@Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie) {
             this.httpCookie = httpCookie;
             return this;
         }
 
-        public Builder setHttpCookie(@Nullable ConsistentHashLoadBalancerSettingsHttpCookieArgs httpCookie) {
+        public Builder httpCookie(@Nullable ConsistentHashLoadBalancerSettingsHttpCookieArgs httpCookie) {
             this.httpCookie = Input.ofNullable(httpCookie);
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable Input<String> httpHeaderName) {
+        public Builder httpHeaderName(@Nullable Input<String> httpHeaderName) {
             this.httpHeaderName = httpHeaderName;
             return this;
         }
 
-        public Builder setHttpHeaderName(@Nullable String httpHeaderName) {
+        public Builder httpHeaderName(@Nullable String httpHeaderName) {
             this.httpHeaderName = Input.ofNullable(httpHeaderName);
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable Input<String> minimumRingSize) {
+        public Builder minimumRingSize(@Nullable Input<String> minimumRingSize) {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
 
-        public Builder setMinimumRingSize(@Nullable String minimumRingSize) {
+        public Builder minimumRingSize(@Nullable String minimumRingSize) {
             this.minimumRingSize = Input.ofNullable(minimumRingSize);
             return this;
         }

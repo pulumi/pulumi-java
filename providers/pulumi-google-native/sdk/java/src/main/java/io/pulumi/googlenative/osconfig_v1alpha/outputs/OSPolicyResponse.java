@@ -33,12 +33,12 @@ public final class OSPolicyResponse {
      */
     private final List<OSPolicyResourceGroupResponse> resourceGroups;
 
-    @OutputCustomType.Constructor({"allowNoResourceGroupMatch","description","mode","resourceGroups"})
+    @OutputCustomType.Constructor
     private OSPolicyResponse(
-        Boolean allowNoResourceGroupMatch,
-        String description,
-        String mode,
-        List<OSPolicyResourceGroupResponse> resourceGroups) {
+        @OutputCustomType.Parameter("allowNoResourceGroupMatch") Boolean allowNoResourceGroupMatch,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("resourceGroups") List<OSPolicyResourceGroupResponse> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.mode = mode;
@@ -100,22 +100,22 @@ public final class OSPolicyResponse {
     	      this.resourceGroups = defaults.resourceGroups;
         }
 
-        public Builder setAllowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
+        public Builder allowNoResourceGroupMatch(Boolean allowNoResourceGroupMatch) {
             this.allowNoResourceGroupMatch = Objects.requireNonNull(allowNoResourceGroupMatch);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setResourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
+        public Builder resourceGroups(List<OSPolicyResourceGroupResponse> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }

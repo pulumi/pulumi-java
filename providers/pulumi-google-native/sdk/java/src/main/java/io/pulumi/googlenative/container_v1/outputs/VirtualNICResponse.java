@@ -15,8 +15,8 @@ public final class VirtualNICResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private VirtualNICResponse(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private VirtualNICResponse(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNICResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

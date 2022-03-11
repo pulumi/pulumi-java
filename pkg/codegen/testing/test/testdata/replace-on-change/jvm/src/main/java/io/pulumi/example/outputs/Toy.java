@@ -16,11 +16,11 @@ public final class Toy {
     private final @Nullable String color;
     private final @Nullable Double wear;
 
-    @OutputCustomType.Constructor({"associated","color","wear"})
+    @OutputCustomType.Constructor
     private Toy(
-        @Nullable Toy associated,
-        @Nullable String color,
-        @Nullable Double wear) {
+        @OutputCustomType.Parameter("associated") @Nullable Toy associated,
+        @OutputCustomType.Parameter("color") @Nullable String color,
+        @OutputCustomType.Parameter("wear") @Nullable Double wear) {
         this.associated = associated;
         this.color = color;
         this.wear = wear;
@@ -60,17 +60,17 @@ public final class Toy {
     	      this.wear = defaults.wear;
         }
 
-        public Builder setAssociated(@Nullable Toy associated) {
+        public Builder associated(@Nullable Toy associated) {
             this.associated = associated;
             return this;
         }
 
-        public Builder setColor(@Nullable String color) {
+        public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
 
-        public Builder setWear(@Nullable Double wear) {
+        public Builder wear(@Nullable Double wear) {
             this.wear = wear;
             return this;
         }

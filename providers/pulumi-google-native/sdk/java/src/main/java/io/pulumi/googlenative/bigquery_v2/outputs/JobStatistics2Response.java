@@ -166,36 +166,36 @@ public final class JobStatistics2Response {
      */
     private final List<QueryParameterResponse> undeclaredQueryParameters;
 
-    @OutputCustomType.Constructor({"biEngineStatistics","billingTier","cacheHit","ddlAffectedRowAccessPolicyCount","ddlDestinationTable","ddlOperationPerformed","ddlTargetDataset","ddlTargetRoutine","ddlTargetRowAccessPolicy","ddlTargetTable","dmlStats","estimatedBytesProcessed","mlStatistics","modelTraining","numDmlAffectedRows","queryPlan","referencedRoutines","referencedTables","reservationUsage","schema","statementType","timeline","totalBytesBilled","totalBytesProcessed","totalBytesProcessedAccuracy","totalPartitionsProcessed","totalSlotMs","undeclaredQueryParameters"})
+    @OutputCustomType.Constructor
     private JobStatistics2Response(
-        BiEngineStatisticsResponse biEngineStatistics,
-        Integer billingTier,
-        Boolean cacheHit,
-        String ddlAffectedRowAccessPolicyCount,
-        TableReferenceResponse ddlDestinationTable,
-        String ddlOperationPerformed,
-        DatasetReferenceResponse ddlTargetDataset,
-        RoutineReferenceResponse ddlTargetRoutine,
-        RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy,
-        TableReferenceResponse ddlTargetTable,
-        DmlStatisticsResponse dmlStats,
-        String estimatedBytesProcessed,
-        MlStatisticsResponse mlStatistics,
-        BigQueryModelTrainingResponse modelTraining,
-        String numDmlAffectedRows,
-        List<ExplainQueryStageResponse> queryPlan,
-        List<RoutineReferenceResponse> referencedRoutines,
-        List<TableReferenceResponse> referencedTables,
-        List<JobStatistics2ReservationUsageItemResponse> reservationUsage,
-        TableSchemaResponse schema,
-        String statementType,
-        List<QueryTimelineSampleResponse> timeline,
-        String totalBytesBilled,
-        String totalBytesProcessed,
-        String totalBytesProcessedAccuracy,
-        String totalPartitionsProcessed,
-        String totalSlotMs,
-        List<QueryParameterResponse> undeclaredQueryParameters) {
+        @OutputCustomType.Parameter("biEngineStatistics") BiEngineStatisticsResponse biEngineStatistics,
+        @OutputCustomType.Parameter("billingTier") Integer billingTier,
+        @OutputCustomType.Parameter("cacheHit") Boolean cacheHit,
+        @OutputCustomType.Parameter("ddlAffectedRowAccessPolicyCount") String ddlAffectedRowAccessPolicyCount,
+        @OutputCustomType.Parameter("ddlDestinationTable") TableReferenceResponse ddlDestinationTable,
+        @OutputCustomType.Parameter("ddlOperationPerformed") String ddlOperationPerformed,
+        @OutputCustomType.Parameter("ddlTargetDataset") DatasetReferenceResponse ddlTargetDataset,
+        @OutputCustomType.Parameter("ddlTargetRoutine") RoutineReferenceResponse ddlTargetRoutine,
+        @OutputCustomType.Parameter("ddlTargetRowAccessPolicy") RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy,
+        @OutputCustomType.Parameter("ddlTargetTable") TableReferenceResponse ddlTargetTable,
+        @OutputCustomType.Parameter("dmlStats") DmlStatisticsResponse dmlStats,
+        @OutputCustomType.Parameter("estimatedBytesProcessed") String estimatedBytesProcessed,
+        @OutputCustomType.Parameter("mlStatistics") MlStatisticsResponse mlStatistics,
+        @OutputCustomType.Parameter("modelTraining") BigQueryModelTrainingResponse modelTraining,
+        @OutputCustomType.Parameter("numDmlAffectedRows") String numDmlAffectedRows,
+        @OutputCustomType.Parameter("queryPlan") List<ExplainQueryStageResponse> queryPlan,
+        @OutputCustomType.Parameter("referencedRoutines") List<RoutineReferenceResponse> referencedRoutines,
+        @OutputCustomType.Parameter("referencedTables") List<TableReferenceResponse> referencedTables,
+        @OutputCustomType.Parameter("reservationUsage") List<JobStatistics2ReservationUsageItemResponse> reservationUsage,
+        @OutputCustomType.Parameter("schema") TableSchemaResponse schema,
+        @OutputCustomType.Parameter("statementType") String statementType,
+        @OutputCustomType.Parameter("timeline") List<QueryTimelineSampleResponse> timeline,
+        @OutputCustomType.Parameter("totalBytesBilled") String totalBytesBilled,
+        @OutputCustomType.Parameter("totalBytesProcessed") String totalBytesProcessed,
+        @OutputCustomType.Parameter("totalBytesProcessedAccuracy") String totalBytesProcessedAccuracy,
+        @OutputCustomType.Parameter("totalPartitionsProcessed") String totalPartitionsProcessed,
+        @OutputCustomType.Parameter("totalSlotMs") String totalSlotMs,
+        @OutputCustomType.Parameter("undeclaredQueryParameters") List<QueryParameterResponse> undeclaredQueryParameters) {
         this.biEngineStatistics = biEngineStatistics;
         this.billingTier = billingTier;
         this.cacheHit = cacheHit;
@@ -497,142 +497,142 @@ public final class JobStatistics2Response {
     	      this.undeclaredQueryParameters = defaults.undeclaredQueryParameters;
         }
 
-        public Builder setBiEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
+        public Builder biEngineStatistics(BiEngineStatisticsResponse biEngineStatistics) {
             this.biEngineStatistics = Objects.requireNonNull(biEngineStatistics);
             return this;
         }
 
-        public Builder setBillingTier(Integer billingTier) {
+        public Builder billingTier(Integer billingTier) {
             this.billingTier = Objects.requireNonNull(billingTier);
             return this;
         }
 
-        public Builder setCacheHit(Boolean cacheHit) {
+        public Builder cacheHit(Boolean cacheHit) {
             this.cacheHit = Objects.requireNonNull(cacheHit);
             return this;
         }
 
-        public Builder setDdlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
+        public Builder ddlAffectedRowAccessPolicyCount(String ddlAffectedRowAccessPolicyCount) {
             this.ddlAffectedRowAccessPolicyCount = Objects.requireNonNull(ddlAffectedRowAccessPolicyCount);
             return this;
         }
 
-        public Builder setDdlDestinationTable(TableReferenceResponse ddlDestinationTable) {
+        public Builder ddlDestinationTable(TableReferenceResponse ddlDestinationTable) {
             this.ddlDestinationTable = Objects.requireNonNull(ddlDestinationTable);
             return this;
         }
 
-        public Builder setDdlOperationPerformed(String ddlOperationPerformed) {
+        public Builder ddlOperationPerformed(String ddlOperationPerformed) {
             this.ddlOperationPerformed = Objects.requireNonNull(ddlOperationPerformed);
             return this;
         }
 
-        public Builder setDdlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
+        public Builder ddlTargetDataset(DatasetReferenceResponse ddlTargetDataset) {
             this.ddlTargetDataset = Objects.requireNonNull(ddlTargetDataset);
             return this;
         }
 
-        public Builder setDdlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
+        public Builder ddlTargetRoutine(RoutineReferenceResponse ddlTargetRoutine) {
             this.ddlTargetRoutine = Objects.requireNonNull(ddlTargetRoutine);
             return this;
         }
 
-        public Builder setDdlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
+        public Builder ddlTargetRowAccessPolicy(RowAccessPolicyReferenceResponse ddlTargetRowAccessPolicy) {
             this.ddlTargetRowAccessPolicy = Objects.requireNonNull(ddlTargetRowAccessPolicy);
             return this;
         }
 
-        public Builder setDdlTargetTable(TableReferenceResponse ddlTargetTable) {
+        public Builder ddlTargetTable(TableReferenceResponse ddlTargetTable) {
             this.ddlTargetTable = Objects.requireNonNull(ddlTargetTable);
             return this;
         }
 
-        public Builder setDmlStats(DmlStatisticsResponse dmlStats) {
+        public Builder dmlStats(DmlStatisticsResponse dmlStats) {
             this.dmlStats = Objects.requireNonNull(dmlStats);
             return this;
         }
 
-        public Builder setEstimatedBytesProcessed(String estimatedBytesProcessed) {
+        public Builder estimatedBytesProcessed(String estimatedBytesProcessed) {
             this.estimatedBytesProcessed = Objects.requireNonNull(estimatedBytesProcessed);
             return this;
         }
 
-        public Builder setMlStatistics(MlStatisticsResponse mlStatistics) {
+        public Builder mlStatistics(MlStatisticsResponse mlStatistics) {
             this.mlStatistics = Objects.requireNonNull(mlStatistics);
             return this;
         }
 
-        public Builder setModelTraining(BigQueryModelTrainingResponse modelTraining) {
+        public Builder modelTraining(BigQueryModelTrainingResponse modelTraining) {
             this.modelTraining = Objects.requireNonNull(modelTraining);
             return this;
         }
 
-        public Builder setNumDmlAffectedRows(String numDmlAffectedRows) {
+        public Builder numDmlAffectedRows(String numDmlAffectedRows) {
             this.numDmlAffectedRows = Objects.requireNonNull(numDmlAffectedRows);
             return this;
         }
 
-        public Builder setQueryPlan(List<ExplainQueryStageResponse> queryPlan) {
+        public Builder queryPlan(List<ExplainQueryStageResponse> queryPlan) {
             this.queryPlan = Objects.requireNonNull(queryPlan);
             return this;
         }
 
-        public Builder setReferencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
+        public Builder referencedRoutines(List<RoutineReferenceResponse> referencedRoutines) {
             this.referencedRoutines = Objects.requireNonNull(referencedRoutines);
             return this;
         }
 
-        public Builder setReferencedTables(List<TableReferenceResponse> referencedTables) {
+        public Builder referencedTables(List<TableReferenceResponse> referencedTables) {
             this.referencedTables = Objects.requireNonNull(referencedTables);
             return this;
         }
 
-        public Builder setReservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
+        public Builder reservationUsage(List<JobStatistics2ReservationUsageItemResponse> reservationUsage) {
             this.reservationUsage = Objects.requireNonNull(reservationUsage);
             return this;
         }
 
-        public Builder setSchema(TableSchemaResponse schema) {
+        public Builder schema(TableSchemaResponse schema) {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
 
-        public Builder setStatementType(String statementType) {
+        public Builder statementType(String statementType) {
             this.statementType = Objects.requireNonNull(statementType);
             return this;
         }
 
-        public Builder setTimeline(List<QueryTimelineSampleResponse> timeline) {
+        public Builder timeline(List<QueryTimelineSampleResponse> timeline) {
             this.timeline = Objects.requireNonNull(timeline);
             return this;
         }
 
-        public Builder setTotalBytesBilled(String totalBytesBilled) {
+        public Builder totalBytesBilled(String totalBytesBilled) {
             this.totalBytesBilled = Objects.requireNonNull(totalBytesBilled);
             return this;
         }
 
-        public Builder setTotalBytesProcessed(String totalBytesProcessed) {
+        public Builder totalBytesProcessed(String totalBytesProcessed) {
             this.totalBytesProcessed = Objects.requireNonNull(totalBytesProcessed);
             return this;
         }
 
-        public Builder setTotalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
+        public Builder totalBytesProcessedAccuracy(String totalBytesProcessedAccuracy) {
             this.totalBytesProcessedAccuracy = Objects.requireNonNull(totalBytesProcessedAccuracy);
             return this;
         }
 
-        public Builder setTotalPartitionsProcessed(String totalPartitionsProcessed) {
+        public Builder totalPartitionsProcessed(String totalPartitionsProcessed) {
             this.totalPartitionsProcessed = Objects.requireNonNull(totalPartitionsProcessed);
             return this;
         }
 
-        public Builder setTotalSlotMs(String totalSlotMs) {
+        public Builder totalSlotMs(String totalSlotMs) {
             this.totalSlotMs = Objects.requireNonNull(totalSlotMs);
             return this;
         }
 
-        public Builder setUndeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
+        public Builder undeclaredQueryParameters(List<QueryParameterResponse> undeclaredQueryParameters) {
             this.undeclaredQueryParameters = Objects.requireNonNull(undeclaredQueryParameters);
             return this;
         }

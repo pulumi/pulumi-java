@@ -25,11 +25,11 @@ public final class DNSConfigResponse {
      */
     private final String clusterDnsScope;
 
-    @OutputCustomType.Constructor({"clusterDns","clusterDnsDomain","clusterDnsScope"})
+    @OutputCustomType.Constructor
     private DNSConfigResponse(
-        String clusterDns,
-        String clusterDnsDomain,
-        String clusterDnsScope) {
+        @OutputCustomType.Parameter("clusterDns") String clusterDns,
+        @OutputCustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
+        @OutputCustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;
@@ -81,17 +81,17 @@ public final class DNSConfigResponse {
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder setClusterDns(String clusterDns) {
+        public Builder clusterDns(String clusterDns) {
             this.clusterDns = Objects.requireNonNull(clusterDns);
             return this;
         }
 
-        public Builder setClusterDnsDomain(String clusterDnsDomain) {
+        public Builder clusterDnsDomain(String clusterDnsDomain) {
             this.clusterDnsDomain = Objects.requireNonNull(clusterDnsDomain);
             return this;
         }
 
-        public Builder setClusterDnsScope(String clusterDnsScope) {
+        public Builder clusterDnsScope(String clusterDnsScope) {
             this.clusterDnsScope = Objects.requireNonNull(clusterDnsScope);
             return this;
         }

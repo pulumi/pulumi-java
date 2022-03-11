@@ -20,10 +20,10 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String fileKey;
 
-    @OutputCustomType.Constructor({"bucketArn","fileKey"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource(
-        String bucketArn,
-        String fileKey) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("fileKey") String fileKey) {
         this.bucketArn = bucketArn;
         this.fileKey = fileKey;
     }
@@ -65,12 +65,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.fileKey = defaults.fileKey;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFileKey(String fileKey) {
+        public Builder fileKey(String fileKey) {
             this.fileKey = Objects.requireNonNull(fileKey);
             return this;
         }

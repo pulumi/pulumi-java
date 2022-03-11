@@ -23,10 +23,10 @@ public final class MoveResourceDependencyOverrideResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"id","targetId"})
+    @OutputCustomType.Constructor
     private MoveResourceDependencyOverrideResponse(
-        @Nullable String id,
-        @Nullable String targetId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.id = id;
         this.targetId = targetId;
     }
@@ -69,12 +69,12 @@ public final class MoveResourceDependencyOverrideResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

@@ -53,16 +53,16 @@ public final class StaticSiteBuildPropertiesResponse {
      */
     private final @Nullable Boolean skipGithubActionWorkflowGeneration;
 
-    @OutputCustomType.Constructor({"apiBuildCommand","apiLocation","appArtifactLocation","appBuildCommand","appLocation","githubActionSecretNameOverride","outputLocation","skipGithubActionWorkflowGeneration"})
+    @OutputCustomType.Constructor
     private StaticSiteBuildPropertiesResponse(
-        @Nullable String apiBuildCommand,
-        @Nullable String apiLocation,
-        @Nullable String appArtifactLocation,
-        @Nullable String appBuildCommand,
-        @Nullable String appLocation,
-        @Nullable String githubActionSecretNameOverride,
-        @Nullable String outputLocation,
-        @Nullable Boolean skipGithubActionWorkflowGeneration) {
+        @OutputCustomType.Parameter("apiBuildCommand") @Nullable String apiBuildCommand,
+        @OutputCustomType.Parameter("apiLocation") @Nullable String apiLocation,
+        @OutputCustomType.Parameter("appArtifactLocation") @Nullable String appArtifactLocation,
+        @OutputCustomType.Parameter("appBuildCommand") @Nullable String appBuildCommand,
+        @OutputCustomType.Parameter("appLocation") @Nullable String appLocation,
+        @OutputCustomType.Parameter("githubActionSecretNameOverride") @Nullable String githubActionSecretNameOverride,
+        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation,
+        @OutputCustomType.Parameter("skipGithubActionWorkflowGeneration") @Nullable Boolean skipGithubActionWorkflowGeneration) {
         this.apiBuildCommand = apiBuildCommand;
         this.apiLocation = apiLocation;
         this.appArtifactLocation = appArtifactLocation;
@@ -164,42 +164,42 @@ public final class StaticSiteBuildPropertiesResponse {
     	      this.skipGithubActionWorkflowGeneration = defaults.skipGithubActionWorkflowGeneration;
         }
 
-        public Builder setApiBuildCommand(@Nullable String apiBuildCommand) {
+        public Builder apiBuildCommand(@Nullable String apiBuildCommand) {
             this.apiBuildCommand = apiBuildCommand;
             return this;
         }
 
-        public Builder setApiLocation(@Nullable String apiLocation) {
+        public Builder apiLocation(@Nullable String apiLocation) {
             this.apiLocation = apiLocation;
             return this;
         }
 
-        public Builder setAppArtifactLocation(@Nullable String appArtifactLocation) {
+        public Builder appArtifactLocation(@Nullable String appArtifactLocation) {
             this.appArtifactLocation = appArtifactLocation;
             return this;
         }
 
-        public Builder setAppBuildCommand(@Nullable String appBuildCommand) {
+        public Builder appBuildCommand(@Nullable String appBuildCommand) {
             this.appBuildCommand = appBuildCommand;
             return this;
         }
 
-        public Builder setAppLocation(@Nullable String appLocation) {
+        public Builder appLocation(@Nullable String appLocation) {
             this.appLocation = appLocation;
             return this;
         }
 
-        public Builder setGithubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
+        public Builder githubActionSecretNameOverride(@Nullable String githubActionSecretNameOverride) {
             this.githubActionSecretNameOverride = githubActionSecretNameOverride;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setSkipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
+        public Builder skipGithubActionWorkflowGeneration(@Nullable Boolean skipGithubActionWorkflowGeneration) {
             this.skipGithubActionWorkflowGeneration = skipGithubActionWorkflowGeneration;
             return this;
         }

@@ -30,12 +30,12 @@ public final class GitFileSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"path","repoType","revision","uri"})
+    @OutputCustomType.Constructor
     private GitFileSourceResponse(
-        String path,
-        String repoType,
-        String revision,
-        String uri) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("repoType") String repoType,
+        @OutputCustomType.Parameter("revision") String revision,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.path = path;
         this.repoType = repoType;
         this.revision = revision;
@@ -97,22 +97,22 @@ public final class GitFileSourceResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRepoType(String repoType) {
+        public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
-        public Builder setRevision(String revision) {
+        public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

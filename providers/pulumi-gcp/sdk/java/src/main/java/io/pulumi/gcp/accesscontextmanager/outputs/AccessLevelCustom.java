@@ -18,8 +18,8 @@ public final class AccessLevelCustom {
      */
     private final AccessLevelCustomExpr expr;
 
-    @OutputCustomType.Constructor({"expr"})
-    private AccessLevelCustom(AccessLevelCustomExpr expr) {
+    @OutputCustomType.Constructor
+    private AccessLevelCustom(@OutputCustomType.Parameter("expr") AccessLevelCustomExpr expr) {
         this.expr = expr;
     }
 
@@ -54,7 +54,7 @@ public final class AccessLevelCustom {
     	      this.expr = defaults.expr;
         }
 
-        public Builder setExpr(AccessLevelCustomExpr expr) {
+        public Builder expr(AccessLevelCustomExpr expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }

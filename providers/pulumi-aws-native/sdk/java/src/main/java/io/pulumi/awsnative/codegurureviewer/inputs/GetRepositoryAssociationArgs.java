@@ -51,7 +51,7 @@ public final class GetRepositoryAssociationArgs extends io.pulumi.resources.Invo
     	      this.associationArn = defaults.associationArn;
         }
 
-        public Builder setAssociationArn(String associationArn) {
+        public Builder associationArn(String associationArn) {
             this.associationArn = Objects.requireNonNull(associationArn);
             return this;
         }

@@ -170,57 +170,57 @@ public final class GetDatabaseInstanceReplicaConfiguration extends io.pulumi.res
     	      this.verifyServerCertificate = defaults.verifyServerCertificate;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setConnectRetryInterval(Integer connectRetryInterval) {
+        public Builder connectRetryInterval(Integer connectRetryInterval) {
             this.connectRetryInterval = Objects.requireNonNull(connectRetryInterval);
             return this;
         }
 
-        public Builder setDumpFilePath(String dumpFilePath) {
+        public Builder dumpFilePath(String dumpFilePath) {
             this.dumpFilePath = Objects.requireNonNull(dumpFilePath);
             return this;
         }
 
-        public Builder setFailoverTarget(Boolean failoverTarget) {
+        public Builder failoverTarget(Boolean failoverTarget) {
             this.failoverTarget = Objects.requireNonNull(failoverTarget);
             return this;
         }
 
-        public Builder setMasterHeartbeatPeriod(Integer masterHeartbeatPeriod) {
+        public Builder masterHeartbeatPeriod(Integer masterHeartbeatPeriod) {
             this.masterHeartbeatPeriod = Objects.requireNonNull(masterHeartbeatPeriod);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setSslCipher(String sslCipher) {
+        public Builder sslCipher(String sslCipher) {
             this.sslCipher = Objects.requireNonNull(sslCipher);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setVerifyServerCertificate(Boolean verifyServerCertificate) {
+        public Builder verifyServerCertificate(Boolean verifyServerCertificate) {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }

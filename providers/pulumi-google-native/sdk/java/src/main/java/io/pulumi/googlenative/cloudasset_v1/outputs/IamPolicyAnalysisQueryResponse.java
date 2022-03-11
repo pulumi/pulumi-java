@@ -45,14 +45,14 @@ public final class IamPolicyAnalysisQueryResponse {
      */
     private final String scope;
 
-    @OutputCustomType.Constructor({"accessSelector","conditionContext","identitySelector","options","resourceSelector","scope"})
+    @OutputCustomType.Constructor
     private IamPolicyAnalysisQueryResponse(
-        AccessSelectorResponse accessSelector,
-        ConditionContextResponse conditionContext,
-        IdentitySelectorResponse identitySelector,
-        OptionsResponse options,
-        ResourceSelectorResponse resourceSelector,
-        String scope) {
+        @OutputCustomType.Parameter("accessSelector") AccessSelectorResponse accessSelector,
+        @OutputCustomType.Parameter("conditionContext") ConditionContextResponse conditionContext,
+        @OutputCustomType.Parameter("identitySelector") IdentitySelectorResponse identitySelector,
+        @OutputCustomType.Parameter("options") OptionsResponse options,
+        @OutputCustomType.Parameter("resourceSelector") ResourceSelectorResponse resourceSelector,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.accessSelector = accessSelector;
         this.conditionContext = conditionContext;
         this.identitySelector = identitySelector;
@@ -134,32 +134,32 @@ public final class IamPolicyAnalysisQueryResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAccessSelector(AccessSelectorResponse accessSelector) {
+        public Builder accessSelector(AccessSelectorResponse accessSelector) {
             this.accessSelector = Objects.requireNonNull(accessSelector);
             return this;
         }
 
-        public Builder setConditionContext(ConditionContextResponse conditionContext) {
+        public Builder conditionContext(ConditionContextResponse conditionContext) {
             this.conditionContext = Objects.requireNonNull(conditionContext);
             return this;
         }
 
-        public Builder setIdentitySelector(IdentitySelectorResponse identitySelector) {
+        public Builder identitySelector(IdentitySelectorResponse identitySelector) {
             this.identitySelector = Objects.requireNonNull(identitySelector);
             return this;
         }
 
-        public Builder setOptions(OptionsResponse options) {
+        public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setResourceSelector(ResourceSelectorResponse resourceSelector) {
+        public Builder resourceSelector(ResourceSelectorResponse resourceSelector) {
             this.resourceSelector = Objects.requireNonNull(resourceSelector);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

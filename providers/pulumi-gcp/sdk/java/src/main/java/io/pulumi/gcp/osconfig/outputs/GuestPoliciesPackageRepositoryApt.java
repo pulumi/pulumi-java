@@ -41,13 +41,13 @@ public final class GuestPoliciesPackageRepositoryApt {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"archiveType","components","distribution","gpgKey","uri"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepositoryApt(
-        @Nullable String archiveType,
-        List<String> components,
-        String distribution,
-        @Nullable String gpgKey,
-        String uri) {
+        @OutputCustomType.Parameter("archiveType") @Nullable String archiveType,
+        @OutputCustomType.Parameter("components") List<String> components,
+        @OutputCustomType.Parameter("distribution") String distribution,
+        @OutputCustomType.Parameter("gpgKey") @Nullable String gpgKey,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.archiveType = archiveType;
         this.components = components;
         this.distribution = distribution;
@@ -122,27 +122,27 @@ public final class GuestPoliciesPackageRepositoryApt {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setArchiveType(@Nullable String archiveType) {
+        public Builder archiveType(@Nullable String archiveType) {
             this.archiveType = archiveType;
             return this;
         }
 
-        public Builder setComponents(List<String> components) {
+        public Builder components(List<String> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setDistribution(String distribution) {
+        public Builder distribution(String distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder setGpgKey(@Nullable String gpgKey) {
+        public Builder gpgKey(@Nullable String gpgKey) {
             this.gpgKey = gpgKey;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

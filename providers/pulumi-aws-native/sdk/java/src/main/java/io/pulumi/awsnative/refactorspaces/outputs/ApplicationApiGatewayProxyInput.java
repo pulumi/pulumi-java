@@ -15,10 +15,10 @@ public final class ApplicationApiGatewayProxyInput {
     private final @Nullable ApplicationApiGatewayEndpointType endpointType;
     private final @Nullable String stageName;
 
-    @OutputCustomType.Constructor({"endpointType","stageName"})
+    @OutputCustomType.Constructor
     private ApplicationApiGatewayProxyInput(
-        @Nullable ApplicationApiGatewayEndpointType endpointType,
-        @Nullable String stageName) {
+        @OutputCustomType.Parameter("endpointType") @Nullable ApplicationApiGatewayEndpointType endpointType,
+        @OutputCustomType.Parameter("stageName") @Nullable String stageName) {
         this.endpointType = endpointType;
         this.stageName = stageName;
     }
@@ -52,12 +52,12 @@ public final class ApplicationApiGatewayProxyInput {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setEndpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
+        public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }

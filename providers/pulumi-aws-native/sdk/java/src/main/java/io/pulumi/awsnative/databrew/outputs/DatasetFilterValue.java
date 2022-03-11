@@ -16,10 +16,10 @@ public final class DatasetFilterValue {
      */
     private final String valueReference;
 
-    @OutputCustomType.Constructor({"value","valueReference"})
+    @OutputCustomType.Constructor
     private DatasetFilterValue(
-        String value,
-        String valueReference) {
+        @OutputCustomType.Parameter("value") String value,
+        @OutputCustomType.Parameter("valueReference") String valueReference) {
         this.value = value;
         this.valueReference = valueReference;
     }
@@ -57,12 +57,12 @@ public final class DatasetFilterValue {
     	      this.valueReference = defaults.valueReference;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValueReference(String valueReference) {
+        public Builder valueReference(String valueReference) {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }

@@ -36,13 +36,13 @@ public final class JobStatusResponse {
      */
     private final String nextExecutionTime;
 
-    @OutputCustomType.Constructor({"executionCount","failureCount","faultedCount","lastExecutionTime","nextExecutionTime"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        Integer executionCount,
-        Integer failureCount,
-        Integer faultedCount,
-        String lastExecutionTime,
-        String nextExecutionTime) {
+        @OutputCustomType.Parameter("executionCount") Integer executionCount,
+        @OutputCustomType.Parameter("failureCount") Integer failureCount,
+        @OutputCustomType.Parameter("faultedCount") Integer faultedCount,
+        @OutputCustomType.Parameter("lastExecutionTime") String lastExecutionTime,
+        @OutputCustomType.Parameter("nextExecutionTime") String nextExecutionTime) {
         this.executionCount = executionCount;
         this.failureCount = failureCount;
         this.faultedCount = faultedCount;
@@ -114,27 +114,27 @@ public final class JobStatusResponse {
     	      this.nextExecutionTime = defaults.nextExecutionTime;
         }
 
-        public Builder setExecutionCount(Integer executionCount) {
+        public Builder executionCount(Integer executionCount) {
             this.executionCount = Objects.requireNonNull(executionCount);
             return this;
         }
 
-        public Builder setFailureCount(Integer failureCount) {
+        public Builder failureCount(Integer failureCount) {
             this.failureCount = Objects.requireNonNull(failureCount);
             return this;
         }
 
-        public Builder setFaultedCount(Integer faultedCount) {
+        public Builder faultedCount(Integer faultedCount) {
             this.faultedCount = Objects.requireNonNull(faultedCount);
             return this;
         }
 
-        public Builder setLastExecutionTime(String lastExecutionTime) {
+        public Builder lastExecutionTime(String lastExecutionTime) {
             this.lastExecutionTime = Objects.requireNonNull(lastExecutionTime);
             return this;
         }
 
-        public Builder setNextExecutionTime(String nextExecutionTime) {
+        public Builder nextExecutionTime(String nextExecutionTime) {
             this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
             return this;
         }

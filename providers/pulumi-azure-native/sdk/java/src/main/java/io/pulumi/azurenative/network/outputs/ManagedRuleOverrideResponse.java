@@ -22,10 +22,10 @@ public final class ManagedRuleOverrideResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"ruleId","state"})
+    @OutputCustomType.Constructor
     private ManagedRuleOverrideResponse(
-        String ruleId,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("ruleId") String ruleId,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.ruleId = ruleId;
         this.state = state;
     }
@@ -67,12 +67,12 @@ public final class ManagedRuleOverrideResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

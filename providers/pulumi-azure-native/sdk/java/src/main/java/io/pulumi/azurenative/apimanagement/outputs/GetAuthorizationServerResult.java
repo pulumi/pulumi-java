@@ -110,27 +110,27 @@ public final class GetAuthorizationServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","authorizationMethods","bearerTokenSendingMethods","clientAuthenticationMethod","clientId","clientRegistrationEndpoint","clientSecret","defaultScope","description","displayName","grantTypes","id","name","resourceOwnerPassword","resourceOwnerUsername","supportState","tokenBodyParameters","tokenEndpoint","type"})
+    @OutputCustomType.Constructor
     private GetAuthorizationServerResult(
-        String authorizationEndpoint,
-        @Nullable List<String> authorizationMethods,
-        @Nullable List<String> bearerTokenSendingMethods,
-        @Nullable List<String> clientAuthenticationMethod,
-        String clientId,
-        String clientRegistrationEndpoint,
-        @Nullable String clientSecret,
-        @Nullable String defaultScope,
-        @Nullable String description,
-        String displayName,
-        List<String> grantTypes,
-        String id,
-        String name,
-        @Nullable String resourceOwnerPassword,
-        @Nullable String resourceOwnerUsername,
-        @Nullable Boolean supportState,
-        @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
-        @Nullable String tokenEndpoint,
-        String type) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("authorizationMethods") @Nullable List<String> authorizationMethods,
+        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @OutputCustomType.Parameter("clientAuthenticationMethod") @Nullable List<String> clientAuthenticationMethod,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientRegistrationEndpoint") String clientRegistrationEndpoint,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("defaultScope") @Nullable String defaultScope,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("grantTypes") List<String> grantTypes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceOwnerPassword") @Nullable String resourceOwnerPassword,
+        @OutputCustomType.Parameter("resourceOwnerUsername") @Nullable String resourceOwnerUsername,
+        @OutputCustomType.Parameter("supportState") @Nullable Boolean supportState,
+        @OutputCustomType.Parameter("tokenBodyParameters") @Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters,
+        @OutputCustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
+        @OutputCustomType.Parameter("type") String type) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.authorizationMethods = authorizationMethods;
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
@@ -342,97 +342,97 @@ public final class GetAuthorizationServerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setAuthorizationMethods(@Nullable List<String> authorizationMethods) {
+        public Builder authorizationMethods(@Nullable List<String> authorizationMethods) {
             this.authorizationMethods = authorizationMethods;
             return this;
         }
 
-        public Builder setBearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
-        public Builder setClientAuthenticationMethod(@Nullable List<String> clientAuthenticationMethod) {
+        public Builder clientAuthenticationMethod(@Nullable List<String> clientAuthenticationMethod) {
             this.clientAuthenticationMethod = clientAuthenticationMethod;
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientRegistrationEndpoint(String clientRegistrationEndpoint) {
+        public Builder clientRegistrationEndpoint(String clientRegistrationEndpoint) {
             this.clientRegistrationEndpoint = Objects.requireNonNull(clientRegistrationEndpoint);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setDefaultScope(@Nullable String defaultScope) {
+        public Builder defaultScope(@Nullable String defaultScope) {
             this.defaultScope = defaultScope;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGrantTypes(List<String> grantTypes) {
+        public Builder grantTypes(List<String> grantTypes) {
             this.grantTypes = Objects.requireNonNull(grantTypes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceOwnerPassword(@Nullable String resourceOwnerPassword) {
+        public Builder resourceOwnerPassword(@Nullable String resourceOwnerPassword) {
             this.resourceOwnerPassword = resourceOwnerPassword;
             return this;
         }
 
-        public Builder setResourceOwnerUsername(@Nullable String resourceOwnerUsername) {
+        public Builder resourceOwnerUsername(@Nullable String resourceOwnerUsername) {
             this.resourceOwnerUsername = resourceOwnerUsername;
             return this;
         }
 
-        public Builder setSupportState(@Nullable Boolean supportState) {
+        public Builder supportState(@Nullable Boolean supportState) {
             this.supportState = supportState;
             return this;
         }
 
-        public Builder setTokenBodyParameters(@Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters) {
+        public Builder tokenBodyParameters(@Nullable List<TokenBodyParameterContractResponse> tokenBodyParameters) {
             this.tokenBodyParameters = tokenBodyParameters;
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable String tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

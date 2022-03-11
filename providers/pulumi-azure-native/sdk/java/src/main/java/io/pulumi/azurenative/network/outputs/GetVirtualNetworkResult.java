@@ -112,26 +112,26 @@ public final class GetVirtualNetworkResult {
      */
     private final @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings;
 
-    @OutputCustomType.Constructor({"addressSpace","bgpCommunities","ddosProtectionPlan","dhcpOptions","enableDdosProtection","enableVmProtection","etag","extendedLocation","id","ipAllocations","location","name","provisioningState","resourceGuid","subnets","tags","type","virtualNetworkPeerings"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkResult(
-        @Nullable AddressSpaceResponse addressSpace,
-        @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
-        @Nullable SubResourceResponse ddosProtectionPlan,
-        @Nullable DhcpOptionsResponse dhcpOptions,
-        @Nullable Boolean enableDdosProtection,
-        @Nullable Boolean enableVmProtection,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable List<SubResourceResponse> ipAllocations,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable List<SubnetResponse> subnets,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
+        @OutputCustomType.Parameter("addressSpace") @Nullable AddressSpaceResponse addressSpace,
+        @OutputCustomType.Parameter("bgpCommunities") @Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities,
+        @OutputCustomType.Parameter("ddosProtectionPlan") @Nullable SubResourceResponse ddosProtectionPlan,
+        @OutputCustomType.Parameter("dhcpOptions") @Nullable DhcpOptionsResponse dhcpOptions,
+        @OutputCustomType.Parameter("enableDdosProtection") @Nullable Boolean enableDdosProtection,
+        @OutputCustomType.Parameter("enableVmProtection") @Nullable Boolean enableVmProtection,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipAllocations") @Nullable List<SubResourceResponse> ipAllocations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("subnets") @Nullable List<SubnetResponse> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkPeerings") @Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
         this.addressSpace = addressSpace;
         this.bgpCommunities = bgpCommunities;
         this.ddosProtectionPlan = ddosProtectionPlan;
@@ -333,92 +333,92 @@ public final class GetVirtualNetworkResult {
     	      this.virtualNetworkPeerings = defaults.virtualNetworkPeerings;
         }
 
-        public Builder setAddressSpace(@Nullable AddressSpaceResponse addressSpace) {
+        public Builder addressSpace(@Nullable AddressSpaceResponse addressSpace) {
             this.addressSpace = addressSpace;
             return this;
         }
 
-        public Builder setBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities) {
+        public Builder bgpCommunities(@Nullable VirtualNetworkBgpCommunitiesResponse bgpCommunities) {
             this.bgpCommunities = bgpCommunities;
             return this;
         }
 
-        public Builder setDdosProtectionPlan(@Nullable SubResourceResponse ddosProtectionPlan) {
+        public Builder ddosProtectionPlan(@Nullable SubResourceResponse ddosProtectionPlan) {
             this.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
 
-        public Builder setDhcpOptions(@Nullable DhcpOptionsResponse dhcpOptions) {
+        public Builder dhcpOptions(@Nullable DhcpOptionsResponse dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
             return this;
         }
 
-        public Builder setEnableDdosProtection(@Nullable Boolean enableDdosProtection) {
+        public Builder enableDdosProtection(@Nullable Boolean enableDdosProtection) {
             this.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
-        public Builder setEnableVmProtection(@Nullable Boolean enableVmProtection) {
+        public Builder enableVmProtection(@Nullable Boolean enableVmProtection) {
             this.enableVmProtection = enableVmProtection;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
+        public Builder ipAllocations(@Nullable List<SubResourceResponse> ipAllocations) {
             this.ipAllocations = ipAllocations;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<SubnetResponse> subnets) {
+        public Builder subnets(@Nullable List<SubnetResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
+        public Builder virtualNetworkPeerings(@Nullable List<VirtualNetworkPeeringResponse> virtualNetworkPeerings) {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }

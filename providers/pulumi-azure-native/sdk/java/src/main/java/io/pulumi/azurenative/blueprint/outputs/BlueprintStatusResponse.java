@@ -20,10 +20,10 @@ public final class BlueprintStatusResponse {
      */
     private final String timeCreated;
 
-    @OutputCustomType.Constructor({"lastModified","timeCreated"})
+    @OutputCustomType.Constructor
     private BlueprintStatusResponse(
-        String lastModified,
-        String timeCreated) {
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated) {
         this.lastModified = lastModified;
         this.timeCreated = timeCreated;
     }
@@ -65,12 +65,12 @@ public final class BlueprintStatusResponse {
     	      this.timeCreated = defaults.timeCreated;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }

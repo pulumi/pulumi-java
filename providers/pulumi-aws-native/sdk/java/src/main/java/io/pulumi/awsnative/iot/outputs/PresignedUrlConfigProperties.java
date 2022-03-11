@@ -15,10 +15,10 @@ public final class PresignedUrlConfigProperties {
     private final @Nullable Integer expiresInSec;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"expiresInSec","roleArn"})
+    @OutputCustomType.Constructor
     private PresignedUrlConfigProperties(
-        @Nullable Integer expiresInSec,
-        String roleArn) {
+        @OutputCustomType.Parameter("expiresInSec") @Nullable Integer expiresInSec,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.expiresInSec = expiresInSec;
         this.roleArn = roleArn;
     }
@@ -52,12 +52,12 @@ public final class PresignedUrlConfigProperties {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setExpiresInSec(@Nullable Integer expiresInSec) {
+        public Builder expiresInSec(@Nullable Integer expiresInSec) {
             this.expiresInSec = expiresInSec;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

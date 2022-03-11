@@ -24,10 +24,10 @@ public final class PeeringPropertiesExchangeResponse {
      */
     private final @Nullable SubResourceResponse peerAsn;
 
-    @OutputCustomType.Constructor({"connections","peerAsn"})
+    @OutputCustomType.Constructor
     private PeeringPropertiesExchangeResponse(
-        @Nullable List<ExchangeConnectionResponse> connections,
-        @Nullable SubResourceResponse peerAsn) {
+        @OutputCustomType.Parameter("connections") @Nullable List<ExchangeConnectionResponse> connections,
+        @OutputCustomType.Parameter("peerAsn") @Nullable SubResourceResponse peerAsn) {
         this.connections = connections;
         this.peerAsn = peerAsn;
     }
@@ -69,12 +69,12 @@ public final class PeeringPropertiesExchangeResponse {
     	      this.peerAsn = defaults.peerAsn;
         }
 
-        public Builder setConnections(@Nullable List<ExchangeConnectionResponse> connections) {
+        public Builder connections(@Nullable List<ExchangeConnectionResponse> connections) {
             this.connections = connections;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable SubResourceResponse peerAsn) {
+        public Builder peerAsn(@Nullable SubResourceResponse peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }

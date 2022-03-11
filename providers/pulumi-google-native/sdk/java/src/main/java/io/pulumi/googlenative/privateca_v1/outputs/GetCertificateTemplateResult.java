@@ -54,16 +54,16 @@ public final class GetCertificateTemplateResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","identityConstraints","labels","name","passthroughExtensions","predefinedValues","updateTime"})
+    @OutputCustomType.Constructor
     private GetCertificateTemplateResult(
-        String createTime,
-        String description,
-        CertificateIdentityConstraintsResponse identityConstraints,
-        Map<String,String> labels,
-        String name,
-        CertificateExtensionConstraintsResponse passthroughExtensions,
-        X509ParametersResponse predefinedValues,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions,
+        @OutputCustomType.Parameter("predefinedValues") X509ParametersResponse predefinedValues,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.identityConstraints = identityConstraints;
@@ -165,42 +165,42 @@ public final class GetCertificateTemplateResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIdentityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
+        public Builder identityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
             this.identityConstraints = Objects.requireNonNull(identityConstraints);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPassthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
+        public Builder passthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }
 
-        public Builder setPredefinedValues(X509ParametersResponse predefinedValues) {
+        public Builder predefinedValues(X509ParametersResponse predefinedValues) {
             this.predefinedValues = Objects.requireNonNull(predefinedValues);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

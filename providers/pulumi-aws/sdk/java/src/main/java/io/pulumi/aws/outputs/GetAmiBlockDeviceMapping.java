@@ -31,12 +31,12 @@ public final class GetAmiBlockDeviceMapping {
      */
     private final String virtualName;
 
-    @OutputCustomType.Constructor({"deviceName","ebs","noDevice","virtualName"})
+    @OutputCustomType.Constructor
     private GetAmiBlockDeviceMapping(
-        String deviceName,
-        Map<String,String> ebs,
-        String noDevice,
-        String virtualName) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("ebs") Map<String,String> ebs,
+        @OutputCustomType.Parameter("noDevice") String noDevice,
+        @OutputCustomType.Parameter("virtualName") String virtualName) {
         this.deviceName = deviceName;
         this.ebs = ebs;
         this.noDevice = noDevice;
@@ -98,22 +98,22 @@ public final class GetAmiBlockDeviceMapping {
     	      this.virtualName = defaults.virtualName;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setEbs(Map<String,String> ebs) {
+        public Builder ebs(Map<String,String> ebs) {
             this.ebs = Objects.requireNonNull(ebs);
             return this;
         }
 
-        public Builder setNoDevice(String noDevice) {
+        public Builder noDevice(String noDevice) {
             this.noDevice = Objects.requireNonNull(noDevice);
             return this;
         }
 
-        public Builder setVirtualName(String virtualName) {
+        public Builder virtualName(String virtualName) {
             this.virtualName = Objects.requireNonNull(virtualName);
             return this;
         }

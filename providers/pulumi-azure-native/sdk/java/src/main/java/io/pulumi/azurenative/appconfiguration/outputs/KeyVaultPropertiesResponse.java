@@ -22,10 +22,10 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyIdentifier;
 
-    @OutputCustomType.Constructor({"identityClientId","keyIdentifier"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @Nullable String identityClientId,
-        @Nullable String keyIdentifier) {
+        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @OutputCustomType.Parameter("keyIdentifier") @Nullable String keyIdentifier) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = keyIdentifier;
     }
@@ -67,12 +67,12 @@ public final class KeyVaultPropertiesResponse {
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }

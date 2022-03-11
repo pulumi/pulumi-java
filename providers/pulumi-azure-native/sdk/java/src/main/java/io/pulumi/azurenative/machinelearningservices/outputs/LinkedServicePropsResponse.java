@@ -32,12 +32,12 @@ public final class LinkedServicePropsResponse {
      */
     private final @Nullable String modifiedTime;
 
-    @OutputCustomType.Constructor({"createdTime","linkType","linkedServiceResourceId","modifiedTime"})
+    @OutputCustomType.Constructor
     private LinkedServicePropsResponse(
-        @Nullable String createdTime,
-        @Nullable String linkType,
-        String linkedServiceResourceId,
-        @Nullable String modifiedTime) {
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
+        @OutputCustomType.Parameter("linkedServiceResourceId") String linkedServiceResourceId,
+        @OutputCustomType.Parameter("modifiedTime") @Nullable String modifiedTime) {
         this.createdTime = createdTime;
         this.linkType = linkType;
         this.linkedServiceResourceId = linkedServiceResourceId;
@@ -99,22 +99,22 @@ public final class LinkedServicePropsResponse {
     	      this.modifiedTime = defaults.modifiedTime;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setLinkType(@Nullable String linkType) {
+        public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setLinkedServiceResourceId(String linkedServiceResourceId) {
+        public Builder linkedServiceResourceId(String linkedServiceResourceId) {
             this.linkedServiceResourceId = Objects.requireNonNull(linkedServiceResourceId);
             return this;
         }
 
-        public Builder setModifiedTime(@Nullable String modifiedTime) {
+        public Builder modifiedTime(@Nullable String modifiedTime) {
             this.modifiedTime = modifiedTime;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupDimension {
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private RuleGroupDimension(String value) {
+    @OutputCustomType.Constructor
+    private RuleGroupDimension(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -40,7 +40,7 @@ public final class RuleGroupDimension {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -72,17 +72,17 @@ public final class GetOverrideArgs extends io.pulumi.resources.InvokeArgs {
     	      this.overrideId = defaults.overrideId;
         }
 
-        public Builder setEnvironmentId(String environmentId) {
+        public Builder environmentId(String environmentId) {
             this.environmentId = Objects.requireNonNull(environmentId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOverrideId(String overrideId) {
+        public Builder overrideId(String overrideId) {
             this.overrideId = Objects.requireNonNull(overrideId);
             return this;
         }

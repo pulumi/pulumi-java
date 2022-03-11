@@ -23,10 +23,10 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
      */
     private final @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor({"file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTlsValidationTrust(
-        @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
-        @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsValidationTrustFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
         this.file = file;
         this.sds = sds;
     }
@@ -68,12 +68,12 @@ public final class VirtualNodeSpecListenerTlsValidationTrust {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsValidationTrustFile file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
         }

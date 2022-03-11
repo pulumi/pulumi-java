@@ -37,12 +37,12 @@ public final class DeviceGatewayConfig {
      */
     private final @Nullable String lastAccessedGatewayTime;
 
-    @OutputCustomType.Constructor({"gatewayAuthMethod","gatewayType","lastAccessedGatewayId","lastAccessedGatewayTime"})
+    @OutputCustomType.Constructor
     private DeviceGatewayConfig(
-        @Nullable String gatewayAuthMethod,
-        @Nullable String gatewayType,
-        @Nullable String lastAccessedGatewayId,
-        @Nullable String lastAccessedGatewayTime) {
+        @OutputCustomType.Parameter("gatewayAuthMethod") @Nullable String gatewayAuthMethod,
+        @OutputCustomType.Parameter("gatewayType") @Nullable String gatewayType,
+        @OutputCustomType.Parameter("lastAccessedGatewayId") @Nullable String lastAccessedGatewayId,
+        @OutputCustomType.Parameter("lastAccessedGatewayTime") @Nullable String lastAccessedGatewayTime) {
         this.gatewayAuthMethod = gatewayAuthMethod;
         this.gatewayType = gatewayType;
         this.lastAccessedGatewayId = lastAccessedGatewayId;
@@ -109,22 +109,22 @@ public final class DeviceGatewayConfig {
     	      this.lastAccessedGatewayTime = defaults.lastAccessedGatewayTime;
         }
 
-        public Builder setGatewayAuthMethod(@Nullable String gatewayAuthMethod) {
+        public Builder gatewayAuthMethod(@Nullable String gatewayAuthMethod) {
             this.gatewayAuthMethod = gatewayAuthMethod;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable String gatewayType) {
+        public Builder gatewayType(@Nullable String gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setLastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
+        public Builder lastAccessedGatewayId(@Nullable String lastAccessedGatewayId) {
             this.lastAccessedGatewayId = lastAccessedGatewayId;
             return this;
         }
 
-        public Builder setLastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
+        public Builder lastAccessedGatewayTime(@Nullable String lastAccessedGatewayTime) {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }

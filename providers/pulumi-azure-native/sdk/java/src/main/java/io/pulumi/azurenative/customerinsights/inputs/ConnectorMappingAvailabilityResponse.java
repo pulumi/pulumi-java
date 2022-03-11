@@ -75,12 +75,12 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
     	      this.interval = defaults.interval;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }

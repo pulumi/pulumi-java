@@ -34,12 +34,12 @@ public final class MetricConfigurationResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"counterSets","mdmAccount","metricNameSpace","resourceId"})
+    @OutputCustomType.Constructor
     private MetricConfigurationResponse(
-        List<MetricCounterSetResponse> counterSets,
-        @Nullable String mdmAccount,
-        @Nullable String metricNameSpace,
-        String resourceId) {
+        @OutputCustomType.Parameter("counterSets") List<MetricCounterSetResponse> counterSets,
+        @OutputCustomType.Parameter("mdmAccount") @Nullable String mdmAccount,
+        @OutputCustomType.Parameter("metricNameSpace") @Nullable String metricNameSpace,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.counterSets = counterSets;
         this.mdmAccount = mdmAccount;
         this.metricNameSpace = metricNameSpace;
@@ -101,22 +101,22 @@ public final class MetricConfigurationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setCounterSets(List<MetricCounterSetResponse> counterSets) {
+        public Builder counterSets(List<MetricCounterSetResponse> counterSets) {
             this.counterSets = Objects.requireNonNull(counterSets);
             return this;
         }
 
-        public Builder setMdmAccount(@Nullable String mdmAccount) {
+        public Builder mdmAccount(@Nullable String mdmAccount) {
             this.mdmAccount = mdmAccount;
             return this;
         }
 
-        public Builder setMetricNameSpace(@Nullable String metricNameSpace) {
+        public Builder metricNameSpace(@Nullable String metricNameSpace) {
             this.metricNameSpace = metricNameSpace;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

@@ -35,11 +35,11 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
      */
     private final @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources;
 
-    @OutputCustomType.Constructor({"identities","identityType","sources"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom(
-        @Nullable List<String> identities,
-        @Nullable String identityType,
-        @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
+        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
+        @OutputCustomType.Parameter("identityType") @Nullable String identityType,
+        @OutputCustomType.Parameter("sources") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;
@@ -97,17 +97,17 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
     	      this.sources = defaults.sources;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = identityType;
             return this;
         }
 
-        public Builder setSources(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
+        public Builder sources(@Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
             this.sources = sources;
             return this;
         }

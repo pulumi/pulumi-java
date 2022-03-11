@@ -95,32 +95,32 @@ public final class DelimitedTextReadSettingsArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setCompressionProperties(@Nullable Input<Object> compressionProperties) {
+        public Builder compressionProperties(@Nullable Input<Object> compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = Input.ofNullable(compressionProperties);
             return this;
         }
 
-        public Builder setSkipLineCount(@Nullable Input<Object> skipLineCount) {
+        public Builder skipLineCount(@Nullable Input<Object> skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
 
-        public Builder setSkipLineCount(@Nullable Object skipLineCount) {
+        public Builder skipLineCount(@Nullable Object skipLineCount) {
             this.skipLineCount = Input.ofNullable(skipLineCount);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

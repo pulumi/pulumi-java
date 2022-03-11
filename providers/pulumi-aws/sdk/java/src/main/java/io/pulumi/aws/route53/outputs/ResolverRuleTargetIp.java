@@ -23,10 +23,10 @@ public final class ResolverRuleTargetIp {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"ip","port"})
+    @OutputCustomType.Constructor
     private ResolverRuleTargetIp(
-        String ip,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("ip") String ip,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.ip = ip;
         this.port = port;
     }
@@ -68,12 +68,12 @@ public final class ResolverRuleTargetIp {
     	      this.port = defaults.port;
         }
 
-        public Builder setIp(String ip) {
+        public Builder ip(String ip) {
             this.ip = Objects.requireNonNull(ip);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

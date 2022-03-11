@@ -439,252 +439,252 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookConfig = defaults.webhookConfig;
         }
 
-        public Builder setApprovalConfig(@Nullable Input<ApprovalConfigArgs> approvalConfig) {
+        public Builder approvalConfig(@Nullable Input<ApprovalConfigArgs> approvalConfig) {
             this.approvalConfig = approvalConfig;
             return this;
         }
 
-        public Builder setApprovalConfig(@Nullable ApprovalConfigArgs approvalConfig) {
+        public Builder approvalConfig(@Nullable ApprovalConfigArgs approvalConfig) {
             this.approvalConfig = Input.ofNullable(approvalConfig);
             return this;
         }
 
-        public Builder setAutodetect(@Nullable Input<Boolean> autodetect) {
+        public Builder autodetect(@Nullable Input<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
 
-        public Builder setAutodetect(@Nullable Boolean autodetect) {
+        public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Input.ofNullable(autodetect);
             return this;
         }
 
-        public Builder setBitbucketServerTriggerConfig(@Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
+        public Builder bitbucketServerTriggerConfig(@Nullable Input<BitbucketServerTriggerConfigArgs> bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = bitbucketServerTriggerConfig;
             return this;
         }
 
-        public Builder setBitbucketServerTriggerConfig(@Nullable BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
+        public Builder bitbucketServerTriggerConfig(@Nullable BitbucketServerTriggerConfigArgs bitbucketServerTriggerConfig) {
             this.bitbucketServerTriggerConfig = Input.ofNullable(bitbucketServerTriggerConfig);
             return this;
         }
 
-        public Builder setBuild(@Nullable Input<BuildArgs> build) {
+        public Builder build(@Nullable Input<BuildArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable BuildArgs build) {
+        public Builder build(@Nullable BuildArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setEventType(@Nullable Input<TriggerEventType> eventType) {
+        public Builder eventType(@Nullable Input<TriggerEventType> eventType) {
             this.eventType = eventType;
             return this;
         }
 
-        public Builder setEventType(@Nullable TriggerEventType eventType) {
+        public Builder eventType(@Nullable TriggerEventType eventType) {
             this.eventType = Input.ofNullable(eventType);
             return this;
         }
 
-        public Builder setFilename(@Nullable Input<String> filename) {
+        public Builder filename(@Nullable Input<String> filename) {
             this.filename = filename;
             return this;
         }
 
-        public Builder setFilename(@Nullable String filename) {
+        public Builder filename(@Nullable String filename) {
             this.filename = Input.ofNullable(filename);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setGitFileSource(@Nullable Input<GitFileSourceArgs> gitFileSource) {
+        public Builder gitFileSource(@Nullable Input<GitFileSourceArgs> gitFileSource) {
             this.gitFileSource = gitFileSource;
             return this;
         }
 
-        public Builder setGitFileSource(@Nullable GitFileSourceArgs gitFileSource) {
+        public Builder gitFileSource(@Nullable GitFileSourceArgs gitFileSource) {
             this.gitFileSource = Input.ofNullable(gitFileSource);
             return this;
         }
 
-        public Builder setGithub(@Nullable Input<GitHubEventsConfigArgs> github) {
+        public Builder github(@Nullable Input<GitHubEventsConfigArgs> github) {
             this.github = github;
             return this;
         }
 
-        public Builder setGithub(@Nullable GitHubEventsConfigArgs github) {
+        public Builder github(@Nullable GitHubEventsConfigArgs github) {
             this.github = Input.ofNullable(github);
             return this;
         }
 
-        public Builder setIgnoredFiles(@Nullable Input<List<String>> ignoredFiles) {
+        public Builder ignoredFiles(@Nullable Input<List<String>> ignoredFiles) {
             this.ignoredFiles = ignoredFiles;
             return this;
         }
 
-        public Builder setIgnoredFiles(@Nullable List<String> ignoredFiles) {
+        public Builder ignoredFiles(@Nullable List<String> ignoredFiles) {
             this.ignoredFiles = Input.ofNullable(ignoredFiles);
             return this;
         }
 
-        public Builder setIncludedFiles(@Nullable Input<List<String>> includedFiles) {
+        public Builder includedFiles(@Nullable Input<List<String>> includedFiles) {
             this.includedFiles = includedFiles;
             return this;
         }
 
-        public Builder setIncludedFiles(@Nullable List<String> includedFiles) {
+        public Builder includedFiles(@Nullable List<String> includedFiles) {
             this.includedFiles = Input.ofNullable(includedFiles);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProjectId(Input<String> projectId) {
+        public Builder projectId(Input<String> projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Input.of(Objects.requireNonNull(projectId));
             return this;
         }
 
-        public Builder setPubsubConfig(@Nullable Input<PubsubConfigArgs> pubsubConfig) {
+        public Builder pubsubConfig(@Nullable Input<PubsubConfigArgs> pubsubConfig) {
             this.pubsubConfig = pubsubConfig;
             return this;
         }
 
-        public Builder setPubsubConfig(@Nullable PubsubConfigArgs pubsubConfig) {
+        public Builder pubsubConfig(@Nullable PubsubConfigArgs pubsubConfig) {
             this.pubsubConfig = Input.ofNullable(pubsubConfig);
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setSourceToBuild(@Nullable Input<GitRepoSourceArgs> sourceToBuild) {
+        public Builder sourceToBuild(@Nullable Input<GitRepoSourceArgs> sourceToBuild) {
             this.sourceToBuild = sourceToBuild;
             return this;
         }
 
-        public Builder setSourceToBuild(@Nullable GitRepoSourceArgs sourceToBuild) {
+        public Builder sourceToBuild(@Nullable GitRepoSourceArgs sourceToBuild) {
             this.sourceToBuild = Input.ofNullable(sourceToBuild);
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Input<Map<String,String>> substitutions) {
+        public Builder substitutions(@Nullable Input<Map<String,String>> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Map<String,String> substitutions) {
+        public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = Input.ofNullable(substitutions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTriggerTemplate(@Nullable Input<RepoSourceArgs> triggerTemplate) {
+        public Builder triggerTemplate(@Nullable Input<RepoSourceArgs> triggerTemplate) {
             this.triggerTemplate = triggerTemplate;
             return this;
         }
 
-        public Builder setTriggerTemplate(@Nullable RepoSourceArgs triggerTemplate) {
+        public Builder triggerTemplate(@Nullable RepoSourceArgs triggerTemplate) {
             this.triggerTemplate = Input.ofNullable(triggerTemplate);
             return this;
         }
 
-        public Builder setWebhookConfig(@Nullable Input<WebhookConfigArgs> webhookConfig) {
+        public Builder webhookConfig(@Nullable Input<WebhookConfigArgs> webhookConfig) {
             this.webhookConfig = webhookConfig;
             return this;
         }
 
-        public Builder setWebhookConfig(@Nullable WebhookConfigArgs webhookConfig) {
+        public Builder webhookConfig(@Nullable WebhookConfigArgs webhookConfig) {
             this.webhookConfig = Input.ofNullable(webhookConfig);
             return this;
         }

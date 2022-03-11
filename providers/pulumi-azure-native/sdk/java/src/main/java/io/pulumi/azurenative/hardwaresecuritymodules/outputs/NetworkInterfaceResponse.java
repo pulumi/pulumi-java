@@ -22,10 +22,10 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String privateIpAddress;
 
-    @OutputCustomType.Constructor({"id","privateIpAddress"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        String id,
-        @Nullable String privateIpAddress) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress) {
         this.id = id;
         this.privateIpAddress = privateIpAddress;
     }
@@ -67,12 +67,12 @@ public final class NetworkInterfaceResponse {
     	      this.privateIpAddress = defaults.privateIpAddress;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }

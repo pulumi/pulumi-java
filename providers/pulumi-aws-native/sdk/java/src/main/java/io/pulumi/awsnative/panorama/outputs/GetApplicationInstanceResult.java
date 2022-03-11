@@ -29,19 +29,19 @@ public final class GetApplicationInstanceResult {
     private final @Nullable ApplicationInstanceStatusFilter statusFilter;
     private final @Nullable List<ApplicationInstanceTag> tags;
 
-    @OutputCustomType.Constructor({"applicationInstanceId","arn","createdTime","defaultRuntimeContextDeviceName","deviceId","healthStatus","lastUpdatedTime","status","statusDescription","statusFilter","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationInstanceResult(
-        @Nullable String applicationInstanceId,
-        @Nullable String arn,
-        @Nullable Integer createdTime,
-        @Nullable String defaultRuntimeContextDeviceName,
-        @Nullable String deviceId,
-        @Nullable ApplicationInstanceHealthStatus healthStatus,
-        @Nullable Integer lastUpdatedTime,
-        @Nullable ApplicationInstanceStatus status,
-        @Nullable String statusDescription,
-        @Nullable ApplicationInstanceStatusFilter statusFilter,
-        @Nullable List<ApplicationInstanceTag> tags) {
+        @OutputCustomType.Parameter("applicationInstanceId") @Nullable String applicationInstanceId,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @OutputCustomType.Parameter("defaultRuntimeContextDeviceName") @Nullable String defaultRuntimeContextDeviceName,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("healthStatus") @Nullable ApplicationInstanceHealthStatus healthStatus,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable Integer lastUpdatedTime,
+        @OutputCustomType.Parameter("status") @Nullable ApplicationInstanceStatus status,
+        @OutputCustomType.Parameter("statusDescription") @Nullable String statusDescription,
+        @OutputCustomType.Parameter("statusFilter") @Nullable ApplicationInstanceStatusFilter statusFilter,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationInstanceTag> tags) {
         this.applicationInstanceId = applicationInstanceId;
         this.arn = arn;
         this.createdTime = createdTime;
@@ -129,57 +129,57 @@ public final class GetApplicationInstanceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationInstanceId(@Nullable String applicationInstanceId) {
+        public Builder applicationInstanceId(@Nullable String applicationInstanceId) {
             this.applicationInstanceId = applicationInstanceId;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Integer createdTime) {
+        public Builder createdTime(@Nullable Integer createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDefaultRuntimeContextDeviceName(@Nullable String defaultRuntimeContextDeviceName) {
+        public Builder defaultRuntimeContextDeviceName(@Nullable String defaultRuntimeContextDeviceName) {
             this.defaultRuntimeContextDeviceName = defaultRuntimeContextDeviceName;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable ApplicationInstanceHealthStatus healthStatus) {
+        public Builder healthStatus(@Nullable ApplicationInstanceHealthStatus healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Integer lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Integer lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable ApplicationInstanceStatus status) {
+        public Builder status(@Nullable ApplicationInstanceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusDescription(@Nullable String statusDescription) {
+        public Builder statusDescription(@Nullable String statusDescription) {
             this.statusDescription = statusDescription;
             return this;
         }
 
-        public Builder setStatusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
+        public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
             this.statusFilter = statusFilter;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationInstanceTag> tags) {
+        public Builder tags(@Nullable List<ApplicationInstanceTag> tags) {
             this.tags = tags;
             return this;
         }

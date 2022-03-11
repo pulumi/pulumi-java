@@ -44,14 +44,14 @@ public final class ServiceHealthCheckConfiguration {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","interval","path","protocol","timeout","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ServiceHealthCheckConfiguration(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer interval,
-        @Nullable String path,
-        @Nullable ServiceHealthCheckConfigurationProtocol protocol,
-        @Nullable Integer timeout,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("protocol") @Nullable ServiceHealthCheckConfigurationProtocol protocol,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.interval = interval;
         this.path = path;
@@ -133,32 +133,32 @@ public final class ServiceHealthCheckConfiguration {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(@Nullable Integer healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setProtocol(@Nullable ServiceHealthCheckConfigurationProtocol protocol) {
+        public Builder protocol(@Nullable ServiceHealthCheckConfigurationProtocol protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }

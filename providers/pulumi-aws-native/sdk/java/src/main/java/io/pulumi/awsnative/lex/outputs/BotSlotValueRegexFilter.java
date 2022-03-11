@@ -15,8 +15,8 @@ public final class BotSlotValueRegexFilter {
      */
     private final String pattern;
 
-    @OutputCustomType.Constructor({"pattern"})
-    private BotSlotValueRegexFilter(String pattern) {
+    @OutputCustomType.Constructor
+    private BotSlotValueRegexFilter(@OutputCustomType.Parameter("pattern") String pattern) {
         this.pattern = pattern;
     }
 
@@ -48,7 +48,7 @@ public final class BotSlotValueRegexFilter {
     	      this.pattern = defaults.pattern;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }

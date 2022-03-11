@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class WebACLNotStatement {
     private final WebACLStatement statement;
 
-    @OutputCustomType.Constructor({"statement"})
-    private WebACLNotStatement(WebACLStatement statement) {
+    @OutputCustomType.Constructor
+    private WebACLNotStatement(@OutputCustomType.Parameter("statement") WebACLStatement statement) {
         this.statement = statement;
     }
 
@@ -40,7 +40,7 @@ public final class WebACLNotStatement {
     	      this.statement = defaults.statement;
         }
 
-        public Builder setStatement(WebACLStatement statement) {
+        public Builder statement(WebACLStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }

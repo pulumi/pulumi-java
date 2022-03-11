@@ -15,8 +15,8 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kmsKeyName"})
-    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(String kmsKeyName) {
+    @OutputCustomType.Constructor
+    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 
@@ -48,7 +48,7 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

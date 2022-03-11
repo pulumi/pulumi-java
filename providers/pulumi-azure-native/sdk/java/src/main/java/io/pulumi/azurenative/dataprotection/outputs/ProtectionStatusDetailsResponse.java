@@ -23,10 +23,10 @@ public final class ProtectionStatusDetailsResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetails","status"})
+    @OutputCustomType.Constructor
     private ProtectionStatusDetailsResponse(
-        @Nullable UserFacingErrorResponse errorDetails,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetails") @Nullable UserFacingErrorResponse errorDetails,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetails = errorDetails;
         this.status = status;
     }
@@ -68,12 +68,12 @@ public final class ProtectionStatusDetailsResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorDetails(@Nullable UserFacingErrorResponse errorDetails) {
+        public Builder errorDetails(@Nullable UserFacingErrorResponse errorDetails) {
             this.errorDetails = errorDetails;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

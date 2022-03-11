@@ -78,20 +78,20 @@ public final class GetVirtualNetworkTapResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destinationLoadBalancerFrontEndIPConfiguration","destinationNetworkInterfaceIPConfiguration","destinationPort","etag","id","location","name","networkInterfaceTapConfigurations","provisioningState","resourceGuid","tags","type"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkTapResult(
-        @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration,
-        @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration,
-        @Nullable Integer destinationPort,
-        String etag,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations,
-        String provisioningState,
-        String resourceGuid,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("destinationLoadBalancerFrontEndIPConfiguration") @Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration,
+        @OutputCustomType.Parameter("destinationNetworkInterfaceIPConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration,
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaceTapConfigurations") List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
         this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
         this.destinationPort = destinationPort;
@@ -233,62 +233,62 @@ public final class GetVirtualNetworkTapResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration) {
+        public Builder destinationLoadBalancerFrontEndIPConfiguration(@Nullable FrontendIPConfigurationResponse destinationLoadBalancerFrontEndIPConfiguration) {
             this.destinationLoadBalancerFrontEndIPConfiguration = destinationLoadBalancerFrontEndIPConfiguration;
             return this;
         }
 
-        public Builder setDestinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration) {
+        public Builder destinationNetworkInterfaceIPConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse destinationNetworkInterfaceIPConfiguration) {
             this.destinationNetworkInterfaceIPConfiguration = destinationNetworkInterfaceIPConfiguration;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkInterfaceTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations) {
+        public Builder networkInterfaceTapConfigurations(List<NetworkInterfaceTapConfigurationResponse> networkInterfaceTapConfigurations) {
             this.networkInterfaceTapConfigurations = Objects.requireNonNull(networkInterfaceTapConfigurations);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -22,10 +22,10 @@ public final class ParametersLinkResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"contentVersion","uri"})
+    @OutputCustomType.Constructor
     private ParametersLinkResponse(
-        @Nullable String contentVersion,
-        String uri) {
+        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.contentVersion = contentVersion;
         this.uri = uri;
     }
@@ -67,12 +67,12 @@ public final class ParametersLinkResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentVersion(@Nullable String contentVersion) {
+        public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

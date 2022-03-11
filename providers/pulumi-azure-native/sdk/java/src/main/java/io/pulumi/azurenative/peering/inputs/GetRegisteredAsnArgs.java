@@ -84,17 +84,17 @@ public final class GetRegisteredAsnArgs extends io.pulumi.resources.InvokeArgs {
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setPeeringName(String peeringName) {
+        public Builder peeringName(String peeringName) {
             this.peeringName = Objects.requireNonNull(peeringName);
             return this;
         }
 
-        public Builder setRegisteredAsnName(String registeredAsnName) {
+        public Builder registeredAsnName(String registeredAsnName) {
             this.registeredAsnName = Objects.requireNonNull(registeredAsnName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

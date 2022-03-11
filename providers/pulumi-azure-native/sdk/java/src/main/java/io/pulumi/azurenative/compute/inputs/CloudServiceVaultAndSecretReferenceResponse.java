@@ -63,12 +63,12 @@ public final class CloudServiceVaultAndSecretReferenceResponse extends io.pulumi
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setSecretUrl(@Nullable String secretUrl) {
+        public Builder secretUrl(@Nullable String secretUrl) {
             this.secretUrl = secretUrl;
             return this;
         }
 
-        public Builder setSourceVault(@Nullable SubResourceResponse sourceVault) {
+        public Builder sourceVault(@Nullable SubResourceResponse sourceVault) {
             this.sourceVault = sourceVault;
             return this;
         }

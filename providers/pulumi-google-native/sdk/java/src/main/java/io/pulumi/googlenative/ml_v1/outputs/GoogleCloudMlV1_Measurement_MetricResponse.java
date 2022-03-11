@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"metric","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_Measurement_MetricResponse(
-        String metric,
-        Double value) {
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("value") Double value) {
         this.metric = metric;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudMlV1_Measurement_MetricResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -129,62 +129,62 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.state = defaults.state;
         }
 
-        public Builder setCollectionId(@Nullable Input<String> collectionId) {
+        public Builder collectionId(@Nullable Input<String> collectionId) {
             this.collectionId = collectionId;
             return this;
         }
 
-        public Builder setCollectionId(@Nullable String collectionId) {
+        public Builder collectionId(@Nullable String collectionId) {
             this.collectionId = Input.ofNullable(collectionId);
             return this;
         }
 
-        public Builder setDatabaseId(Input<String> databaseId) {
+        public Builder databaseId(Input<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Input.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
+        public Builder fields(@Nullable Input<List<GoogleFirestoreAdminV1beta1IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
+        public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta1IndexFieldArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setState(@Nullable Input<IndexState> state) {
+        public Builder state(@Nullable Input<IndexState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable IndexState state) {
+        public Builder state(@Nullable IndexState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

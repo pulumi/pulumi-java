@@ -24,10 +24,10 @@ public final class ListJobCredentialsResult {
      */
     private final @Nullable List<UnencryptedCredentialsResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListJobCredentialsResult(
-        @Nullable String nextLink,
-        @Nullable List<UnencryptedCredentialsResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<UnencryptedCredentialsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListJobCredentialsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<UnencryptedCredentialsResponse> value) {
+        public Builder value(@Nullable List<UnencryptedCredentialsResponse> value) {
             this.value = value;
             return this;
         }

@@ -91,17 +91,17 @@ public final class HourlyScheduleResponse extends io.pulumi.resources.InvokeArgs
     	      this.usedBytes = defaults.usedBytes;
         }
 
-        public Builder setMinute(@Nullable Integer minute) {
+        public Builder minute(@Nullable Integer minute) {
             this.minute = minute;
             return this;
         }
 
-        public Builder setSnapshotsToKeep(@Nullable Integer snapshotsToKeep) {
+        public Builder snapshotsToKeep(@Nullable Integer snapshotsToKeep) {
             this.snapshotsToKeep = snapshotsToKeep;
             return this;
         }
 
-        public Builder setUsedBytes(@Nullable Double usedBytes) {
+        public Builder usedBytes(@Nullable Double usedBytes) {
             this.usedBytes = usedBytes;
             return this;
         }

@@ -136,31 +136,31 @@ public final class GetBigDataPoolResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoPause","autoScale","cacheSize","creationDate","customLibraries","defaultSparkLogFolder","dynamicExecutorAllocation","id","isComputeIsolationEnabled","lastSucceededTimestamp","libraryRequirements","location","name","nodeCount","nodeSize","nodeSizeFamily","provisioningState","sessionLevelPackagesEnabled","sparkConfigProperties","sparkEventsFolder","sparkVersion","tags","type"})
+    @OutputCustomType.Constructor
     private GetBigDataPoolResult(
-        @Nullable AutoPausePropertiesResponse autoPause,
-        @Nullable AutoScalePropertiesResponse autoScale,
-        @Nullable Integer cacheSize,
-        @Nullable String creationDate,
-        @Nullable List<LibraryInfoResponse> customLibraries,
-        @Nullable String defaultSparkLogFolder,
-        @Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation,
-        String id,
-        @Nullable Boolean isComputeIsolationEnabled,
-        String lastSucceededTimestamp,
-        @Nullable LibraryRequirementsResponse libraryRequirements,
-        String location,
-        String name,
-        @Nullable Integer nodeCount,
-        @Nullable String nodeSize,
-        @Nullable String nodeSizeFamily,
-        @Nullable String provisioningState,
-        @Nullable Boolean sessionLevelPackagesEnabled,
-        @Nullable LibraryRequirementsResponse sparkConfigProperties,
-        @Nullable String sparkEventsFolder,
-        @Nullable String sparkVersion,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("autoPause") @Nullable AutoPausePropertiesResponse autoPause,
+        @OutputCustomType.Parameter("autoScale") @Nullable AutoScalePropertiesResponse autoScale,
+        @OutputCustomType.Parameter("cacheSize") @Nullable Integer cacheSize,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("customLibraries") @Nullable List<LibraryInfoResponse> customLibraries,
+        @OutputCustomType.Parameter("defaultSparkLogFolder") @Nullable String defaultSparkLogFolder,
+        @OutputCustomType.Parameter("dynamicExecutorAllocation") @Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isComputeIsolationEnabled") @Nullable Boolean isComputeIsolationEnabled,
+        @OutputCustomType.Parameter("lastSucceededTimestamp") String lastSucceededTimestamp,
+        @OutputCustomType.Parameter("libraryRequirements") @Nullable LibraryRequirementsResponse libraryRequirements,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @OutputCustomType.Parameter("nodeSize") @Nullable String nodeSize,
+        @OutputCustomType.Parameter("nodeSizeFamily") @Nullable String nodeSizeFamily,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("sessionLevelPackagesEnabled") @Nullable Boolean sessionLevelPackagesEnabled,
+        @OutputCustomType.Parameter("sparkConfigProperties") @Nullable LibraryRequirementsResponse sparkConfigProperties,
+        @OutputCustomType.Parameter("sparkEventsFolder") @Nullable String sparkEventsFolder,
+        @OutputCustomType.Parameter("sparkVersion") @Nullable String sparkVersion,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoPause = autoPause;
         this.autoScale = autoScale;
         this.cacheSize = cacheSize;
@@ -412,117 +412,117 @@ public final class GetBigDataPoolResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoPause(@Nullable AutoPausePropertiesResponse autoPause) {
+        public Builder autoPause(@Nullable AutoPausePropertiesResponse autoPause) {
             this.autoPause = autoPause;
             return this;
         }
 
-        public Builder setAutoScale(@Nullable AutoScalePropertiesResponse autoScale) {
+        public Builder autoScale(@Nullable AutoScalePropertiesResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setCacheSize(@Nullable Integer cacheSize) {
+        public Builder cacheSize(@Nullable Integer cacheSize) {
             this.cacheSize = cacheSize;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCustomLibraries(@Nullable List<LibraryInfoResponse> customLibraries) {
+        public Builder customLibraries(@Nullable List<LibraryInfoResponse> customLibraries) {
             this.customLibraries = customLibraries;
             return this;
         }
 
-        public Builder setDefaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
+        public Builder defaultSparkLogFolder(@Nullable String defaultSparkLogFolder) {
             this.defaultSparkLogFolder = defaultSparkLogFolder;
             return this;
         }
 
-        public Builder setDynamicExecutorAllocation(@Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation) {
+        public Builder dynamicExecutorAllocation(@Nullable DynamicExecutorAllocationResponse dynamicExecutorAllocation) {
             this.dynamicExecutorAllocation = dynamicExecutorAllocation;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
+        public Builder isComputeIsolationEnabled(@Nullable Boolean isComputeIsolationEnabled) {
             this.isComputeIsolationEnabled = isComputeIsolationEnabled;
             return this;
         }
 
-        public Builder setLastSucceededTimestamp(String lastSucceededTimestamp) {
+        public Builder lastSucceededTimestamp(String lastSucceededTimestamp) {
             this.lastSucceededTimestamp = Objects.requireNonNull(lastSucceededTimestamp);
             return this;
         }
 
-        public Builder setLibraryRequirements(@Nullable LibraryRequirementsResponse libraryRequirements) {
+        public Builder libraryRequirements(@Nullable LibraryRequirementsResponse libraryRequirements) {
             this.libraryRequirements = libraryRequirements;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeSize(@Nullable String nodeSize) {
+        public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
 
-        public Builder setNodeSizeFamily(@Nullable String nodeSizeFamily) {
+        public Builder nodeSizeFamily(@Nullable String nodeSizeFamily) {
             this.nodeSizeFamily = nodeSizeFamily;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
+        public Builder sessionLevelPackagesEnabled(@Nullable Boolean sessionLevelPackagesEnabled) {
             this.sessionLevelPackagesEnabled = sessionLevelPackagesEnabled;
             return this;
         }
 
-        public Builder setSparkConfigProperties(@Nullable LibraryRequirementsResponse sparkConfigProperties) {
+        public Builder sparkConfigProperties(@Nullable LibraryRequirementsResponse sparkConfigProperties) {
             this.sparkConfigProperties = sparkConfigProperties;
             return this;
         }
 
-        public Builder setSparkEventsFolder(@Nullable String sparkEventsFolder) {
+        public Builder sparkEventsFolder(@Nullable String sparkEventsFolder) {
             this.sparkEventsFolder = sparkEventsFolder;
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable String sparkVersion) {
+        public Builder sparkVersion(@Nullable String sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

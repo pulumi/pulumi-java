@@ -38,13 +38,13 @@ public final class ConnectivityEndpointResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"location","name","port","privateIPAddress","protocol"})
+    @OutputCustomType.Constructor
     private ConnectivityEndpointResponse(
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable Integer port,
-        @Nullable String privateIPAddress,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("privateIPAddress") @Nullable String privateIPAddress,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.location = location;
         this.name = name;
         this.port = port;
@@ -116,27 +116,27 @@ public final class ConnectivityEndpointResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

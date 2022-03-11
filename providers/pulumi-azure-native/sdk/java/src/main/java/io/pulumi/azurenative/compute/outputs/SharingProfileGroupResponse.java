@@ -23,10 +23,10 @@ public final class SharingProfileGroupResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"ids","type"})
+    @OutputCustomType.Constructor
     private SharingProfileGroupResponse(
-        @Nullable List<String> ids,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("ids") @Nullable List<String> ids,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.ids = ids;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class SharingProfileGroupResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIds(@Nullable List<String> ids) {
+        public Builder ids(@Nullable List<String> ids) {
             this.ids = ids;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

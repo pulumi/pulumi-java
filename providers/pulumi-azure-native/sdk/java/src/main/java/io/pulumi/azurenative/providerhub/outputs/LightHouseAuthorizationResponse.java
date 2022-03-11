@@ -12,10 +12,10 @@ public final class LightHouseAuthorizationResponse {
     private final String principalId;
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"principalId","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private LightHouseAuthorizationResponse(
-        String principalId,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.principalId = principalId;
         this.roleDefinitionId = roleDefinitionId;
     }
@@ -49,12 +49,12 @@ public final class LightHouseAuthorizationResponse {
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }

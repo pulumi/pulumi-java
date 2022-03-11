@@ -15,8 +15,8 @@ public final class WorkloadIdentityPoolProviderAws {
      */
     private final String accountId;
 
-    @OutputCustomType.Constructor({"accountId"})
-    private WorkloadIdentityPoolProviderAws(String accountId) {
+    @OutputCustomType.Constructor
+    private WorkloadIdentityPoolProviderAws(@OutputCustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 
@@ -48,7 +48,7 @@ public final class WorkloadIdentityPoolProviderAws {
     	      this.accountId = defaults.accountId;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }

@@ -34,12 +34,12 @@ public final class OptionsResponse {
      */
     private final String virtualProperties;
 
-    @OutputCustomType.Constructor({"asyncOptions","inputMappings","validationOptions","virtualProperties"})
+    @OutputCustomType.Constructor
     private OptionsResponse(
-        List<AsyncOptionsResponse> asyncOptions,
-        List<InputMappingResponse> inputMappings,
-        ValidationOptionsResponse validationOptions,
-        String virtualProperties) {
+        @OutputCustomType.Parameter("asyncOptions") List<AsyncOptionsResponse> asyncOptions,
+        @OutputCustomType.Parameter("inputMappings") List<InputMappingResponse> inputMappings,
+        @OutputCustomType.Parameter("validationOptions") ValidationOptionsResponse validationOptions,
+        @OutputCustomType.Parameter("virtualProperties") String virtualProperties) {
         this.asyncOptions = asyncOptions;
         this.inputMappings = inputMappings;
         this.validationOptions = validationOptions;
@@ -101,22 +101,22 @@ public final class OptionsResponse {
     	      this.virtualProperties = defaults.virtualProperties;
         }
 
-        public Builder setAsyncOptions(List<AsyncOptionsResponse> asyncOptions) {
+        public Builder asyncOptions(List<AsyncOptionsResponse> asyncOptions) {
             this.asyncOptions = Objects.requireNonNull(asyncOptions);
             return this;
         }
 
-        public Builder setInputMappings(List<InputMappingResponse> inputMappings) {
+        public Builder inputMappings(List<InputMappingResponse> inputMappings) {
             this.inputMappings = Objects.requireNonNull(inputMappings);
             return this;
         }
 
-        public Builder setValidationOptions(ValidationOptionsResponse validationOptions) {
+        public Builder validationOptions(ValidationOptionsResponse validationOptions) {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }
 
-        public Builder setVirtualProperties(String virtualProperties) {
+        public Builder virtualProperties(String virtualProperties) {
             this.virtualProperties = Objects.requireNonNull(virtualProperties);
             return this;
         }

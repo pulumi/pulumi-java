@@ -28,12 +28,12 @@ public final class ContactListTopic {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"defaultSubscriptionStatus","description","displayName","topicName"})
+    @OutputCustomType.Constructor
     private ContactListTopic(
-        String defaultSubscriptionStatus,
-        @Nullable String description,
-        String displayName,
-        String topicName) {
+        @OutputCustomType.Parameter("defaultSubscriptionStatus") String defaultSubscriptionStatus,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.defaultSubscriptionStatus = defaultSubscriptionStatus;
         this.description = description;
         this.displayName = displayName;
@@ -91,22 +91,22 @@ public final class ContactListTopic {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setDefaultSubscriptionStatus(String defaultSubscriptionStatus) {
+        public Builder defaultSubscriptionStatus(String defaultSubscriptionStatus) {
             this.defaultSubscriptionStatus = Objects.requireNonNull(defaultSubscriptionStatus);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

@@ -20,10 +20,10 @@ public final class IngestionConnectionStringResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"location","value"})
+    @OutputCustomType.Constructor
     private IngestionConnectionStringResponse(
-        String location,
-        String value) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("value") String value) {
         this.location = location;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class IngestionConnectionStringResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

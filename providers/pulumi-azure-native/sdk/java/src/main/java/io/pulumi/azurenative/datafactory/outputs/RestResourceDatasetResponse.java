@@ -84,21 +84,21 @@ public final class RestResourceDatasetResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalHeaders","annotations","description","folder","linkedServiceName","paginationRules","parameters","relativeUrl","requestBody","requestMethod","schema","structure","type"})
+    @OutputCustomType.Constructor
     private RestResourceDatasetResponse(
-        @Nullable Object additionalHeaders,
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DatasetResponseFolder folder,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object paginationRules,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object relativeUrl,
-        @Nullable Object requestBody,
-        @Nullable Object requestMethod,
-        @Nullable Object schema,
-        @Nullable Object structure,
-        String type) {
+        @OutputCustomType.Parameter("additionalHeaders") @Nullable Object additionalHeaders,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DatasetResponseFolder folder,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("paginationRules") @Nullable Object paginationRules,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
+        @OutputCustomType.Parameter("requestBody") @Nullable Object requestBody,
+        @OutputCustomType.Parameter("requestMethod") @Nullable Object requestMethod,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema,
+        @OutputCustomType.Parameter("structure") @Nullable Object structure,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalHeaders = additionalHeaders;
         this.annotations = annotations;
         this.description = description;
@@ -251,67 +251,67 @@ public final class RestResourceDatasetResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalHeaders(@Nullable Object additionalHeaders) {
+        public Builder additionalHeaders(@Nullable Object additionalHeaders) {
             this.additionalHeaders = additionalHeaders;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolder(@Nullable DatasetResponseFolder folder) {
+        public Builder folder(@Nullable DatasetResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setPaginationRules(@Nullable Object paginationRules) {
+        public Builder paginationRules(@Nullable Object paginationRules) {
             this.paginationRules = paginationRules;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable Object relativeUrl) {
+        public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
-        public Builder setRequestBody(@Nullable Object requestBody) {
+        public Builder requestBody(@Nullable Object requestBody) {
             this.requestBody = requestBody;
             return this;
         }
 
-        public Builder setRequestMethod(@Nullable Object requestMethod) {
+        public Builder requestMethod(@Nullable Object requestMethod) {
             this.requestMethod = requestMethod;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setStructure(@Nullable Object structure) {
+        public Builder structure(@Nullable Object structure) {
             this.structure = structure;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

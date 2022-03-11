@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
     	      this.partToExtract = defaults.partToExtract;
         }
 
-        public Builder setPartToExtract(@Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
+        public Builder partToExtract(@Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract) {
             this.partToExtract = partToExtract;
             return this;
         }
 
-        public Builder setPartToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
+        public Builder partToExtract(@Nullable GooglePrivacyDlpV2TimePartConfigPartToExtract partToExtract) {
             this.partToExtract = Input.ofNullable(partToExtract);
             return this;
         }

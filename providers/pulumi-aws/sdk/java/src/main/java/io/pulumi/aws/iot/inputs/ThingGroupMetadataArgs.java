@@ -80,32 +80,32 @@ public final class ThingGroupMetadataArgs extends io.pulumi.resources.ResourceAr
     	      this.rootToParentGroups = defaults.rootToParentGroups;
         }
 
-        public Builder setCreationDate(@Nullable Input<String> creationDate) {
+        public Builder creationDate(@Nullable Input<String> creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = Input.ofNullable(creationDate);
             return this;
         }
 
-        public Builder setParentGroupName(@Nullable Input<String> parentGroupName) {
+        public Builder parentGroupName(@Nullable Input<String> parentGroupName) {
             this.parentGroupName = parentGroupName;
             return this;
         }
 
-        public Builder setParentGroupName(@Nullable String parentGroupName) {
+        public Builder parentGroupName(@Nullable String parentGroupName) {
             this.parentGroupName = Input.ofNullable(parentGroupName);
             return this;
         }
 
-        public Builder setRootToParentGroups(@Nullable Input<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups) {
+        public Builder rootToParentGroups(@Nullable Input<List<ThingGroupMetadataRootToParentGroupArgs>> rootToParentGroups) {
             this.rootToParentGroups = rootToParentGroups;
             return this;
         }
 
-        public Builder setRootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupArgs> rootToParentGroups) {
+        public Builder rootToParentGroups(@Nullable List<ThingGroupMetadataRootToParentGroupArgs> rootToParentGroups) {
             this.rootToParentGroups = Input.ofNullable(rootToParentGroups);
             return this;
         }

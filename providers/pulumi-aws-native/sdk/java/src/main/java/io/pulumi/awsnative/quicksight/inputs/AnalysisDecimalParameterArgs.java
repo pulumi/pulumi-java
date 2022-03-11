@@ -75,22 +75,22 @@ public final class AnalysisDecimalParameterArgs extends io.pulumi.resources.Reso
     	      this.values = defaults.values;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setValues(Input<List<Double>> values) {
+        public Builder values(Input<List<Double>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<Double> values) {
+        public Builder values(List<Double> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

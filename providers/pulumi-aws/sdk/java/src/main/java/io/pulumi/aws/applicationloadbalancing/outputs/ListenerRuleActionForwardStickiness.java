@@ -23,10 +23,10 @@ public final class ListenerRuleActionForwardStickiness {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"duration","enabled"})
+    @OutputCustomType.Constructor
     private ListenerRuleActionForwardStickiness(
-        Integer duration,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("duration") Integer duration,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.duration = duration;
         this.enabled = enabled;
     }
@@ -68,12 +68,12 @@ public final class ListenerRuleActionForwardStickiness {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

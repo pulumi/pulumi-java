@@ -184,47 +184,47 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
     	      this.upgradedResourceId = defaults.upgradedResourceId;
         }
 
-        public Builder setEndTimeUtc(String endTimeUtc) {
+        public Builder endTimeUtc(String endTimeUtc) {
             this.endTimeUtc = Objects.requireNonNull(endTimeUtc);
             return this;
         }
 
-        public Builder setLastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
+        public Builder lastUpdatedTimeUtc(String lastUpdatedTimeUtc) {
             this.lastUpdatedTimeUtc = Objects.requireNonNull(lastUpdatedTimeUtc);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setOperationId(String operationId) {
+        public Builder operationId(String operationId) {
             this.operationId = Objects.requireNonNull(operationId);
             return this;
         }
 
-        public Builder setPreviousResourceId(String previousResourceId) {
+        public Builder previousResourceId(String previousResourceId) {
             this.previousResourceId = Objects.requireNonNull(previousResourceId);
             return this;
         }
 
-        public Builder setStartTimeUtc(String startTimeUtc) {
+        public Builder startTimeUtc(String startTimeUtc) {
             this.startTimeUtc = Objects.requireNonNull(startTimeUtc);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTriggerType(String triggerType) {
+        public Builder triggerType(String triggerType) {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
 
-        public Builder setUpgradedResourceId(String upgradedResourceId) {
+        public Builder upgradedResourceId(String upgradedResourceId) {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }

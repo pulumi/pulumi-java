@@ -50,18 +50,18 @@ public final class GetServiceQuotaResult {
      */
     private final Double value;
 
-    @OutputCustomType.Constructor({"adjustable","arn","defaultValue","globalQuota","id","quotaCode","quotaName","serviceCode","serviceName","value"})
+    @OutputCustomType.Constructor
     private GetServiceQuotaResult(
-        Boolean adjustable,
-        String arn,
-        Double defaultValue,
-        Boolean globalQuota,
-        String id,
-        String quotaCode,
-        String quotaName,
-        String serviceCode,
-        String serviceName,
-        Double value) {
+        @OutputCustomType.Parameter("adjustable") Boolean adjustable,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("defaultValue") Double defaultValue,
+        @OutputCustomType.Parameter("globalQuota") Boolean globalQuota,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("quotaCode") String quotaCode,
+        @OutputCustomType.Parameter("quotaName") String quotaName,
+        @OutputCustomType.Parameter("serviceCode") String serviceCode,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("value") Double value) {
         this.adjustable = adjustable;
         this.arn = arn;
         this.defaultValue = defaultValue;
@@ -171,52 +171,52 @@ public final class GetServiceQuotaResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setAdjustable(Boolean adjustable) {
+        public Builder adjustable(Boolean adjustable) {
             this.adjustable = Objects.requireNonNull(adjustable);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDefaultValue(Double defaultValue) {
+        public Builder defaultValue(Double defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setGlobalQuota(Boolean globalQuota) {
+        public Builder globalQuota(Boolean globalQuota) {
             this.globalQuota = Objects.requireNonNull(globalQuota);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setQuotaCode(String quotaCode) {
+        public Builder quotaCode(String quotaCode) {
             this.quotaCode = Objects.requireNonNull(quotaCode);
             return this;
         }
 
-        public Builder setQuotaName(String quotaName) {
+        public Builder quotaName(String quotaName) {
             this.quotaName = Objects.requireNonNull(quotaName);
             return this;
         }
 
-        public Builder setServiceCode(String serviceCode) {
+        public Builder serviceCode(String serviceCode) {
             this.serviceCode = Objects.requireNonNull(serviceCode);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

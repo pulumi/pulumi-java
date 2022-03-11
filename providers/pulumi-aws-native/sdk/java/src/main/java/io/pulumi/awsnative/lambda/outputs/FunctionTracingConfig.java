@@ -17,8 +17,8 @@ public final class FunctionTracingConfig {
      */
     private final @Nullable FunctionTracingConfigMode mode;
 
-    @OutputCustomType.Constructor({"mode"})
-    private FunctionTracingConfig(@Nullable FunctionTracingConfigMode mode) {
+    @OutputCustomType.Constructor
+    private FunctionTracingConfig(@OutputCustomType.Parameter("mode") @Nullable FunctionTracingConfigMode mode) {
         this.mode = mode;
     }
 
@@ -50,7 +50,7 @@ public final class FunctionTracingConfig {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMode(@Nullable FunctionTracingConfigMode mode) {
+        public Builder mode(@Nullable FunctionTracingConfigMode mode) {
             this.mode = mode;
             return this;
         }

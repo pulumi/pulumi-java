@@ -17,8 +17,8 @@ public final class AlertsDataTypeOfDataConnectorResponse {
      */
     private final @Nullable DataConnectorDataTypeCommonResponse alerts;
 
-    @OutputCustomType.Constructor({"alerts"})
-    private AlertsDataTypeOfDataConnectorResponse(@Nullable DataConnectorDataTypeCommonResponse alerts) {
+    @OutputCustomType.Constructor
+    private AlertsDataTypeOfDataConnectorResponse(@OutputCustomType.Parameter("alerts") @Nullable DataConnectorDataTypeCommonResponse alerts) {
         this.alerts = alerts;
     }
 
@@ -50,7 +50,7 @@ public final class AlertsDataTypeOfDataConnectorResponse {
     	      this.alerts = defaults.alerts;
         }
 
-        public Builder setAlerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
+        public Builder alerts(@Nullable DataConnectorDataTypeCommonResponse alerts) {
             this.alerts = alerts;
             return this;
         }

@@ -42,14 +42,14 @@ public final class GetNamespaceIpFilterRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"action","filterName","id","ipMask","name","type"})
+    @OutputCustomType.Constructor
     private GetNamespaceIpFilterRuleResult(
-        @Nullable String action,
-        @Nullable String filterName,
-        String id,
-        @Nullable String ipMask,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("filterName") @Nullable String filterName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipMask") @Nullable String ipMask,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.action = action;
         this.filterName = filterName;
         this.id = id;
@@ -131,32 +131,32 @@ public final class GetNamespaceIpFilterRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setFilterName(@Nullable String filterName) {
+        public Builder filterName(@Nullable String filterName) {
             this.filterName = filterName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpMask(@Nullable String ipMask) {
+        public Builder ipMask(@Nullable String ipMask) {
             this.ipMask = ipMask;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

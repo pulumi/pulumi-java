@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetAzsResult {
     private final List<String> azs;
 
-    @OutputCustomType.Constructor({"azs"})
-    private GetAzsResult(List<String> azs) {
+    @OutputCustomType.Constructor
+    private GetAzsResult(@OutputCustomType.Parameter("azs") List<String> azs) {
         this.azs = azs;
     }
 
@@ -41,7 +41,7 @@ public final class GetAzsResult {
     	      this.azs = defaults.azs;
         }
 
-        public Builder setAzs(List<String> azs) {
+        public Builder azs(List<String> azs) {
             this.azs = Objects.requireNonNull(azs);
             return this;
         }

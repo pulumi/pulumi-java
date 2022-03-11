@@ -136,62 +136,62 @@ public final class IdentityProviderState extends io.pulumi.resources.ResourceArg
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAttributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
+        public Builder attributeMapping(@Nullable Input<Map<String,String>> attributeMapping) {
             this.attributeMapping = attributeMapping;
             return this;
         }
 
-        public Builder setAttributeMapping(@Nullable Map<String,String> attributeMapping) {
+        public Builder attributeMapping(@Nullable Map<String,String> attributeMapping) {
             this.attributeMapping = Input.ofNullable(attributeMapping);
             return this;
         }
 
-        public Builder setIdpIdentifiers(@Nullable Input<List<String>> idpIdentifiers) {
+        public Builder idpIdentifiers(@Nullable Input<List<String>> idpIdentifiers) {
             this.idpIdentifiers = idpIdentifiers;
             return this;
         }
 
-        public Builder setIdpIdentifiers(@Nullable List<String> idpIdentifiers) {
+        public Builder idpIdentifiers(@Nullable List<String> idpIdentifiers) {
             this.idpIdentifiers = Input.ofNullable(idpIdentifiers);
             return this;
         }
 
-        public Builder setProviderDetails(@Nullable Input<Map<String,String>> providerDetails) {
+        public Builder providerDetails(@Nullable Input<Map<String,String>> providerDetails) {
             this.providerDetails = providerDetails;
             return this;
         }
 
-        public Builder setProviderDetails(@Nullable Map<String,String> providerDetails) {
+        public Builder providerDetails(@Nullable Map<String,String> providerDetails) {
             this.providerDetails = Input.ofNullable(providerDetails);
             return this;
         }
 
-        public Builder setProviderName(@Nullable Input<String> providerName) {
+        public Builder providerName(@Nullable Input<String> providerName) {
             this.providerName = providerName;
             return this;
         }
 
-        public Builder setProviderName(@Nullable String providerName) {
+        public Builder providerName(@Nullable String providerName) {
             this.providerName = Input.ofNullable(providerName);
             return this;
         }
 
-        public Builder setProviderType(@Nullable Input<String> providerType) {
+        public Builder providerType(@Nullable Input<String> providerType) {
             this.providerType = providerType;
             return this;
         }
 
-        public Builder setProviderType(@Nullable String providerType) {
+        public Builder providerType(@Nullable String providerType) {
             this.providerType = Input.ofNullable(providerType);
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable Input<String> userPoolId) {
+        public Builder userPoolId(@Nullable Input<String> userPoolId) {
             this.userPoolId = userPoolId;
             return this;
         }
 
-        public Builder setUserPoolId(@Nullable String userPoolId) {
+        public Builder userPoolId(@Nullable String userPoolId) {
             this.userPoolId = Input.ofNullable(userPoolId);
             return this;
         }

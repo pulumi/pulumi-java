@@ -49,15 +49,15 @@ public final class GetPropertyResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"displayName","id","name","secret","tags","type","value"})
+    @OutputCustomType.Constructor
     private GetPropertyResult(
-        String displayName,
-        String id,
-        String name,
-        @Nullable Boolean secret,
-        @Nullable List<String> tags,
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Boolean secret,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;
@@ -149,37 +149,37 @@ public final class GetPropertyResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(@Nullable Boolean secret) {
+        public Builder secret(@Nullable Boolean secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

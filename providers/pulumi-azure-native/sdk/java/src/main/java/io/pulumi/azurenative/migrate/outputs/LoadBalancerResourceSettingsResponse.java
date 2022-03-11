@@ -47,14 +47,14 @@ public final class LoadBalancerResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor({"backendAddressPools","frontendIPConfigurations","resourceType","sku","targetResourceName","zones"})
+    @OutputCustomType.Constructor
     private LoadBalancerResourceSettingsResponse(
-        @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
-        @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
-        String resourceType,
-        @Nullable String sku,
-        String targetResourceName,
-        @Nullable String zones) {
+        @OutputCustomType.Parameter("backendAddressPools") @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools,
+        @OutputCustomType.Parameter("frontendIPConfigurations") @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zones") @Nullable String zones) {
         this.backendAddressPools = backendAddressPools;
         this.frontendIPConfigurations = frontendIPConfigurations;
         this.resourceType = resourceType;
@@ -138,32 +138,32 @@ public final class LoadBalancerResourceSettingsResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setBackendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools) {
+        public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools) {
             this.backendAddressPools = backendAddressPools;
             return this;
         }
 
-        public Builder setFrontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setZones(@Nullable String zones) {
+        public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
         }

@@ -21,10 +21,10 @@ public final class UserPropertyResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private UserPropertyResponse(
-        String name,
-        Object value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") Object value) {
         this.name = name;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class UserPropertyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

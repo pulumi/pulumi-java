@@ -25,11 +25,11 @@ public final class SigningJobSourceS3 {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"bucket","key","version"})
+    @OutputCustomType.Constructor
     private SigningJobSourceS3(
-        String bucket,
-        String key,
-        String version) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("version") String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;
@@ -81,17 +81,17 @@ public final class SigningJobSourceS3 {
     	      this.version = defaults.version;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

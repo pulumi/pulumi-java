@@ -12,10 +12,10 @@ public final class CertificateAuthorityEdiPartyName {
     private final String nameAssigner;
     private final String partyName;
 
-    @OutputCustomType.Constructor({"nameAssigner","partyName"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityEdiPartyName(
-        String nameAssigner,
-        String partyName) {
+        @OutputCustomType.Parameter("nameAssigner") String nameAssigner,
+        @OutputCustomType.Parameter("partyName") String partyName) {
         this.nameAssigner = nameAssigner;
         this.partyName = partyName;
     }
@@ -49,12 +49,12 @@ public final class CertificateAuthorityEdiPartyName {
     	      this.partyName = defaults.partyName;
         }
 
-        public Builder setNameAssigner(String nameAssigner) {
+        public Builder nameAssigner(String nameAssigner) {
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
 
-        public Builder setPartyName(String partyName) {
+        public Builder partyName(String partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }

@@ -40,13 +40,13 @@ public final class GetDeviceProfileResult {
      */
     private final @Nullable List<DeviceProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","loRaWAN","name","tags"})
+    @OutputCustomType.Constructor
     private GetDeviceProfileResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
-        @Nullable String name,
-        @Nullable List<DeviceProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeviceProfileTag> tags) {
         this.arn = arn;
         this.id = id;
         this.loRaWAN = loRaWAN;
@@ -118,27 +118,27 @@ public final class GetDeviceProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN) {
+        public Builder loRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfile loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeviceProfileTag> tags) {
+        public Builder tags(@Nullable List<DeviceProfileTag> tags) {
             this.tags = tags;
             return this;
         }

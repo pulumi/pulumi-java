@@ -33,12 +33,12 @@ public final class ServiceMeshAnalysisMessageResponse {
      */
     private final List<String> resourcePaths;
 
-    @OutputCustomType.Constructor({"args","description","messageBase","resourcePaths"})
+    @OutputCustomType.Constructor
     private ServiceMeshAnalysisMessageResponse(
-        Map<String,String> args,
-        String description,
-        ServiceMeshAnalysisMessageBaseResponse messageBase,
-        List<String> resourcePaths) {
+        @OutputCustomType.Parameter("args") Map<String,String> args,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("messageBase") ServiceMeshAnalysisMessageBaseResponse messageBase,
+        @OutputCustomType.Parameter("resourcePaths") List<String> resourcePaths) {
         this.args = args;
         this.description = description;
         this.messageBase = messageBase;
@@ -100,22 +100,22 @@ public final class ServiceMeshAnalysisMessageResponse {
     	      this.resourcePaths = defaults.resourcePaths;
         }
 
-        public Builder setArgs(Map<String,String> args) {
+        public Builder args(Map<String,String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMessageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
+        public Builder messageBase(ServiceMeshAnalysisMessageBaseResponse messageBase) {
             this.messageBase = Objects.requireNonNull(messageBase);
             return this;
         }
 
-        public Builder setResourcePaths(List<String> resourcePaths) {
+        public Builder resourcePaths(List<String> resourcePaths) {
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }

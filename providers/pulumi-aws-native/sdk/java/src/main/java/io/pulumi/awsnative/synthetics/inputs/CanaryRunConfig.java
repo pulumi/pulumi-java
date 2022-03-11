@@ -104,22 +104,22 @@ public final class CanaryRunConfig extends io.pulumi.resources.InvokeArgs {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Object environmentVariables) {
+        public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setMemoryInMB(@Nullable Integer memoryInMB) {
+        public Builder memoryInMB(@Nullable Integer memoryInMB) {
             this.memoryInMB = memoryInMB;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }

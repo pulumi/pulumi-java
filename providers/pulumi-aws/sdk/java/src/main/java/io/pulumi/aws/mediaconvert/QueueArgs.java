@@ -136,62 +136,62 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<String> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<String> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable String pricingPlan) {
+        public Builder pricingPlan(@Nullable String pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder setReservationPlanSettings(@Nullable Input<QueueReservationPlanSettingsArgs> reservationPlanSettings) {
+        public Builder reservationPlanSettings(@Nullable Input<QueueReservationPlanSettingsArgs> reservationPlanSettings) {
             this.reservationPlanSettings = reservationPlanSettings;
             return this;
         }
 
-        public Builder setReservationPlanSettings(@Nullable QueueReservationPlanSettingsArgs reservationPlanSettings) {
+        public Builder reservationPlanSettings(@Nullable QueueReservationPlanSettingsArgs reservationPlanSettings) {
             this.reservationPlanSettings = Input.ofNullable(reservationPlanSettings);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

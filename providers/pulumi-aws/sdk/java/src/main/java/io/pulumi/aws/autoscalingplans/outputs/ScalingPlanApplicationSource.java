@@ -24,10 +24,10 @@ public final class ScalingPlanApplicationSource {
      */
     private final @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters;
 
-    @OutputCustomType.Constructor({"cloudformationStackArn","tagFilters"})
+    @OutputCustomType.Constructor
     private ScalingPlanApplicationSource(
-        @Nullable String cloudformationStackArn,
-        @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
+        @OutputCustomType.Parameter("cloudformationStackArn") @Nullable String cloudformationStackArn,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
         this.cloudformationStackArn = cloudformationStackArn;
         this.tagFilters = tagFilters;
     }
@@ -69,12 +69,12 @@ public final class ScalingPlanApplicationSource {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setCloudformationStackArn(@Nullable String cloudformationStackArn) {
+        public Builder cloudformationStackArn(@Nullable String cloudformationStackArn) {
             this.cloudformationStackArn = cloudformationStackArn;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<ScalingPlanApplicationSourceTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

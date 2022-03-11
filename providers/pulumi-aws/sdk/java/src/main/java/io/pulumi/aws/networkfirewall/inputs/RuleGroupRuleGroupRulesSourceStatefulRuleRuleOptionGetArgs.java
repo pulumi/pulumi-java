@@ -72,22 +72,22 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionGetArgs ex
     	      this.settings = defaults.settings;
         }
 
-        public Builder setKeyword(Input<String> keyword) {
+        public Builder keyword(Input<String> keyword) {
             this.keyword = Objects.requireNonNull(keyword);
             return this;
         }
 
-        public Builder setKeyword(String keyword) {
+        public Builder keyword(String keyword) {
             this.keyword = Input.of(Objects.requireNonNull(keyword));
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<List<String>> settings) {
+        public Builder settings(@Nullable Input<List<String>> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<String> settings) {
+        public Builder settings(@Nullable List<String> settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

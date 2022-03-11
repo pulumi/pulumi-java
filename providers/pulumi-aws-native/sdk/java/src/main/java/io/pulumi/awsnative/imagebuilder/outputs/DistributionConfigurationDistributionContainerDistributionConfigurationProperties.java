@@ -29,11 +29,11 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final @Nullable DistributionConfigurationTargetContainerRepository targetRepository;
 
-    @OutputCustomType.Constructor({"containerTags","description","targetRepository"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfigurationProperties(
-        @Nullable List<String> containerTags,
-        @Nullable String description,
-        @Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
+        @OutputCustomType.Parameter("containerTags") @Nullable List<String> containerTags,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("targetRepository") @Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
         this.containerTags = containerTags;
         this.description = description;
         this.targetRepository = targetRepository;
@@ -85,17 +85,17 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.targetRepository = defaults.targetRepository;
         }
 
-        public Builder setContainerTags(@Nullable List<String> containerTags) {
+        public Builder containerTags(@Nullable List<String> containerTags) {
             this.containerTags = containerTags;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setTargetRepository(@Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
+        public Builder targetRepository(@Nullable DistributionConfigurationTargetContainerRepository targetRepository) {
             this.targetRepository = targetRepository;
             return this;
         }

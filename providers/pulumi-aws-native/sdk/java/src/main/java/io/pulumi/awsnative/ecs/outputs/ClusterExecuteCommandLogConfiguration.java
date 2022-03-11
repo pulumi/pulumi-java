@@ -18,13 +18,13 @@ public final class ClusterExecuteCommandLogConfiguration {
     private final @Nullable Boolean s3EncryptionEnabled;
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"cloudWatchEncryptionEnabled","cloudWatchLogGroupName","s3BucketName","s3EncryptionEnabled","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterExecuteCommandLogConfiguration(
-        @Nullable Boolean cloudWatchEncryptionEnabled,
-        @Nullable String cloudWatchLogGroupName,
-        @Nullable String s3BucketName,
-        @Nullable Boolean s3EncryptionEnabled,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("cloudWatchEncryptionEnabled") @Nullable Boolean cloudWatchEncryptionEnabled,
+        @OutputCustomType.Parameter("cloudWatchLogGroupName") @Nullable String cloudWatchLogGroupName,
+        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @OutputCustomType.Parameter("s3EncryptionEnabled") @Nullable Boolean s3EncryptionEnabled,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
         this.cloudWatchLogGroupName = cloudWatchLogGroupName;
         this.s3BucketName = s3BucketName;
@@ -76,27 +76,27 @@ public final class ClusterExecuteCommandLogConfiguration {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setCloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
+        public Builder cloudWatchEncryptionEnabled(@Nullable Boolean cloudWatchEncryptionEnabled) {
             this.cloudWatchEncryptionEnabled = cloudWatchEncryptionEnabled;
             return this;
         }
 
-        public Builder setCloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
+        public Builder cloudWatchLogGroupName(@Nullable String cloudWatchLogGroupName) {
             this.cloudWatchLogGroupName = cloudWatchLogGroupName;
             return this;
         }
 
-        public Builder setS3BucketName(@Nullable String s3BucketName) {
+        public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
 
-        public Builder setS3EncryptionEnabled(@Nullable Boolean s3EncryptionEnabled) {
+        public Builder s3EncryptionEnabled(@Nullable Boolean s3EncryptionEnabled) {
             this.s3EncryptionEnabled = s3EncryptionEnabled;
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

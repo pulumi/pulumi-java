@@ -22,10 +22,10 @@ public final class ModelDefinitionResponse {
      */
     private final List<BqmlTrainingRunResponse> trainingRuns;
 
-    @OutputCustomType.Constructor({"modelOptions","trainingRuns"})
+    @OutputCustomType.Constructor
     private ModelDefinitionResponse(
-        ModelDefinitionModelOptionsResponse modelOptions,
-        List<BqmlTrainingRunResponse> trainingRuns) {
+        @OutputCustomType.Parameter("modelOptions") ModelDefinitionModelOptionsResponse modelOptions,
+        @OutputCustomType.Parameter("trainingRuns") List<BqmlTrainingRunResponse> trainingRuns) {
         this.modelOptions = modelOptions;
         this.trainingRuns = trainingRuns;
     }
@@ -67,12 +67,12 @@ public final class ModelDefinitionResponse {
     	      this.trainingRuns = defaults.trainingRuns;
         }
 
-        public Builder setModelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
+        public Builder modelOptions(ModelDefinitionModelOptionsResponse modelOptions) {
             this.modelOptions = Objects.requireNonNull(modelOptions);
             return this;
         }
 
-        public Builder setTrainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
+        public Builder trainingRuns(List<BqmlTrainingRunResponse> trainingRuns) {
             this.trainingRuns = Objects.requireNonNull(trainingRuns);
             return this;
         }

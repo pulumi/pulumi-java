@@ -78,32 +78,32 @@ public final class RuleGroupVisibilityConfigArgs extends io.pulumi.resources.Res
     	      this.sampledRequestsEnabled = defaults.sampledRequestsEnabled;
         }
 
-        public Builder setCloudWatchMetricsEnabled(Input<Boolean> cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(Input<Boolean> cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Objects.requireNonNull(cloudWatchMetricsEnabled);
             return this;
         }
 
-        public Builder setCloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = Input.of(Objects.requireNonNull(cloudWatchMetricsEnabled));
             return this;
         }
 
-        public Builder setMetricName(Input<String> metricName) {
+        public Builder metricName(Input<String> metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
 
-        public Builder setSampledRequestsEnabled(Input<Boolean> sampledRequestsEnabled) {
+        public Builder sampledRequestsEnabled(Input<Boolean> sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Objects.requireNonNull(sampledRequestsEnabled);
             return this;
         }
 
-        public Builder setSampledRequestsEnabled(Boolean sampledRequestsEnabled) {
+        public Builder sampledRequestsEnabled(Boolean sampledRequestsEnabled) {
             this.sampledRequestsEnabled = Input.of(Objects.requireNonNull(sampledRequestsEnabled));
             return this;
         }

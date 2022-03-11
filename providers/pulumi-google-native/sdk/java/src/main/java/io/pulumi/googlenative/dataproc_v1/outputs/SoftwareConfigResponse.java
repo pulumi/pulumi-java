@@ -27,11 +27,11 @@ public final class SoftwareConfigResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"imageVersion","optionalComponents","properties"})
+    @OutputCustomType.Constructor
     private SoftwareConfigResponse(
-        String imageVersion,
-        List<String> optionalComponents,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("imageVersion") String imageVersion,
+        @OutputCustomType.Parameter("optionalComponents") List<String> optionalComponents,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;
@@ -83,17 +83,17 @@ public final class SoftwareConfigResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setImageVersion(String imageVersion) {
+        public Builder imageVersion(String imageVersion) {
             this.imageVersion = Objects.requireNonNull(imageVersion);
             return this;
         }
 
-        public Builder setOptionalComponents(List<String> optionalComponents) {
+        public Builder optionalComponents(List<String> optionalComponents) {
             this.optionalComponents = Objects.requireNonNull(optionalComponents);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

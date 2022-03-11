@@ -27,10 +27,10 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
      */
     private final @Nullable Double percent;
 
-    @OutputCustomType.Constructor({"count","percent"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionMonitoringQueryLanguageTrigger(
-        @Nullable Integer count,
-        @Nullable Double percent) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("percent") @Nullable Double percent) {
         this.count = count;
         this.percent = percent;
     }
@@ -76,12 +76,12 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguageTrigger {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setPercent(@Nullable Double percent) {
+        public Builder percent(@Nullable Double percent) {
             this.percent = percent;
             return this;
         }

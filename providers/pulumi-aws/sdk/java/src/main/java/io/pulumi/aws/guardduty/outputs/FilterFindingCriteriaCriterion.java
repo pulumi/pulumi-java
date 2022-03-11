@@ -48,15 +48,15 @@ public final class FilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> notEquals;
 
-    @OutputCustomType.Constructor({"equals","field","greaterThan","greaterThanOrEqual","lessThan","lessThanOrEqual","notEquals"})
+    @OutputCustomType.Constructor
     private FilterFindingCriteriaCriterion(
-        @Nullable List<String> equals,
-        String field,
-        @Nullable String greaterThan,
-        @Nullable String greaterThanOrEqual,
-        @Nullable String lessThan,
-        @Nullable String lessThanOrEqual,
-        @Nullable List<String> notEquals) {
+        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("greaterThan") @Nullable String greaterThan,
+        @OutputCustomType.Parameter("greaterThanOrEqual") @Nullable String greaterThanOrEqual,
+        @OutputCustomType.Parameter("lessThan") @Nullable String lessThan,
+        @OutputCustomType.Parameter("lessThanOrEqual") @Nullable String lessThanOrEqual,
+        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals) {
         this.equals = equals;
         this.field = field;
         this.greaterThan = greaterThan;
@@ -148,37 +148,37 @@ public final class FilterFindingCriteriaCriterion {
     	      this.notEquals = defaults.notEquals;
         }
 
-        public Builder setEquals(@Nullable List<String> equals) {
+        public Builder equals(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setGreaterThan(@Nullable String greaterThan) {
+        public Builder greaterThan(@Nullable String greaterThan) {
             this.greaterThan = greaterThan;
             return this;
         }
 
-        public Builder setGreaterThanOrEqual(@Nullable String greaterThanOrEqual) {
+        public Builder greaterThanOrEqual(@Nullable String greaterThanOrEqual) {
             this.greaterThanOrEqual = greaterThanOrEqual;
             return this;
         }
 
-        public Builder setLessThan(@Nullable String lessThan) {
+        public Builder lessThan(@Nullable String lessThan) {
             this.lessThan = lessThan;
             return this;
         }
 
-        public Builder setLessThanOrEqual(@Nullable String lessThanOrEqual) {
+        public Builder lessThanOrEqual(@Nullable String lessThanOrEqual) {
             this.lessThanOrEqual = lessThanOrEqual;
             return this;
         }
 
-        public Builder setNotEquals(@Nullable List<String> notEquals) {
+        public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = notEquals;
             return this;
         }

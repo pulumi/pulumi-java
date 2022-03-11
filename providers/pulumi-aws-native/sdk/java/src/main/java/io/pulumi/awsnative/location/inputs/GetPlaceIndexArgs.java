@@ -47,7 +47,7 @@ public final class GetPlaceIndexArgs extends io.pulumi.resources.InvokeArgs {
     	      this.indexName = defaults.indexName;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }

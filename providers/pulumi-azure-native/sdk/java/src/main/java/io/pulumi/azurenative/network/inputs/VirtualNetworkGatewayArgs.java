@@ -344,182 +344,182 @@ public final class VirtualNetworkGatewayArgs extends io.pulumi.resources.Resourc
     	      this.vpnType = defaults.vpnType;
         }
 
-        public Builder setActiveActive(@Nullable Input<Boolean> activeActive) {
+        public Builder activeActive(@Nullable Input<Boolean> activeActive) {
             this.activeActive = activeActive;
             return this;
         }
 
-        public Builder setActiveActive(@Nullable Boolean activeActive) {
+        public Builder activeActive(@Nullable Boolean activeActive) {
             this.activeActive = Input.ofNullable(activeActive);
             return this;
         }
 
-        public Builder setBgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
+        public Builder bgpSettings(@Nullable Input<BgpSettingsArgs> bgpSettings) {
             this.bgpSettings = bgpSettings;
             return this;
         }
 
-        public Builder setBgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
+        public Builder bgpSettings(@Nullable BgpSettingsArgs bgpSettings) {
             this.bgpSettings = Input.ofNullable(bgpSettings);
             return this;
         }
 
-        public Builder setCustomRoutes(@Nullable Input<AddressSpaceArgs> customRoutes) {
+        public Builder customRoutes(@Nullable Input<AddressSpaceArgs> customRoutes) {
             this.customRoutes = customRoutes;
             return this;
         }
 
-        public Builder setCustomRoutes(@Nullable AddressSpaceArgs customRoutes) {
+        public Builder customRoutes(@Nullable AddressSpaceArgs customRoutes) {
             this.customRoutes = Input.ofNullable(customRoutes);
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Input<Boolean> enableBgp) {
+        public Builder enableBgp(@Nullable Input<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = Input.ofNullable(enableBgp);
             return this;
         }
 
-        public Builder setEnableDnsForwarding(@Nullable Input<Boolean> enableDnsForwarding) {
+        public Builder enableDnsForwarding(@Nullable Input<Boolean> enableDnsForwarding) {
             this.enableDnsForwarding = enableDnsForwarding;
             return this;
         }
 
-        public Builder setEnableDnsForwarding(@Nullable Boolean enableDnsForwarding) {
+        public Builder enableDnsForwarding(@Nullable Boolean enableDnsForwarding) {
             this.enableDnsForwarding = Input.ofNullable(enableDnsForwarding);
             return this;
         }
 
-        public Builder setEnablePrivateIpAddress(@Nullable Input<Boolean> enablePrivateIpAddress) {
+        public Builder enablePrivateIpAddress(@Nullable Input<Boolean> enablePrivateIpAddress) {
             this.enablePrivateIpAddress = enablePrivateIpAddress;
             return this;
         }
 
-        public Builder setEnablePrivateIpAddress(@Nullable Boolean enablePrivateIpAddress) {
+        public Builder enablePrivateIpAddress(@Nullable Boolean enablePrivateIpAddress) {
             this.enablePrivateIpAddress = Input.ofNullable(enablePrivateIpAddress);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
+        public Builder extendedLocation(@Nullable Input<ExtendedLocationArgs> extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
             this.extendedLocation = Input.ofNullable(extendedLocation);
             return this;
         }
 
-        public Builder setGatewayDefaultSite(@Nullable Input<SubResourceArgs> gatewayDefaultSite) {
+        public Builder gatewayDefaultSite(@Nullable Input<SubResourceArgs> gatewayDefaultSite) {
             this.gatewayDefaultSite = gatewayDefaultSite;
             return this;
         }
 
-        public Builder setGatewayDefaultSite(@Nullable SubResourceArgs gatewayDefaultSite) {
+        public Builder gatewayDefaultSite(@Nullable SubResourceArgs gatewayDefaultSite) {
             this.gatewayDefaultSite = Input.ofNullable(gatewayDefaultSite);
             return this;
         }
 
-        public Builder setGatewayType(@Nullable Input<Either<String,VirtualNetworkGatewayType>> gatewayType) {
+        public Builder gatewayType(@Nullable Input<Either<String,VirtualNetworkGatewayType>> gatewayType) {
             this.gatewayType = gatewayType;
             return this;
         }
 
-        public Builder setGatewayType(@Nullable Either<String,VirtualNetworkGatewayType> gatewayType) {
+        public Builder gatewayType(@Nullable Either<String,VirtualNetworkGatewayType> gatewayType) {
             this.gatewayType = Input.ofNullable(gatewayType);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<VirtualNetworkGatewayIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<VirtualNetworkGatewayIPConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<VirtualNetworkGatewayIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<VirtualNetworkGatewaySkuArgs> sku) {
+        public Builder sku(@Nullable Input<VirtualNetworkGatewaySkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable VirtualNetworkGatewaySkuArgs sku) {
+        public Builder sku(@Nullable VirtualNetworkGatewaySkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVNetExtendedLocationResourceId(@Nullable Input<String> vNetExtendedLocationResourceId) {
+        public Builder vNetExtendedLocationResourceId(@Nullable Input<String> vNetExtendedLocationResourceId) {
             this.vNetExtendedLocationResourceId = vNetExtendedLocationResourceId;
             return this;
         }
 
-        public Builder setVNetExtendedLocationResourceId(@Nullable String vNetExtendedLocationResourceId) {
+        public Builder vNetExtendedLocationResourceId(@Nullable String vNetExtendedLocationResourceId) {
             this.vNetExtendedLocationResourceId = Input.ofNullable(vNetExtendedLocationResourceId);
             return this;
         }
 
-        public Builder setVpnClientConfiguration(@Nullable Input<VpnClientConfigurationArgs> vpnClientConfiguration) {
+        public Builder vpnClientConfiguration(@Nullable Input<VpnClientConfigurationArgs> vpnClientConfiguration) {
             this.vpnClientConfiguration = vpnClientConfiguration;
             return this;
         }
 
-        public Builder setVpnClientConfiguration(@Nullable VpnClientConfigurationArgs vpnClientConfiguration) {
+        public Builder vpnClientConfiguration(@Nullable VpnClientConfigurationArgs vpnClientConfiguration) {
             this.vpnClientConfiguration = Input.ofNullable(vpnClientConfiguration);
             return this;
         }
 
-        public Builder setVpnGatewayGeneration(@Nullable Input<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration) {
+        public Builder vpnGatewayGeneration(@Nullable Input<Either<String,VpnGatewayGeneration>> vpnGatewayGeneration) {
             this.vpnGatewayGeneration = vpnGatewayGeneration;
             return this;
         }
 
-        public Builder setVpnGatewayGeneration(@Nullable Either<String,VpnGatewayGeneration> vpnGatewayGeneration) {
+        public Builder vpnGatewayGeneration(@Nullable Either<String,VpnGatewayGeneration> vpnGatewayGeneration) {
             this.vpnGatewayGeneration = Input.ofNullable(vpnGatewayGeneration);
             return this;
         }
 
-        public Builder setVpnType(@Nullable Input<Either<String,VpnType>> vpnType) {
+        public Builder vpnType(@Nullable Input<Either<String,VpnType>> vpnType) {
             this.vpnType = vpnType;
             return this;
         }
 
-        public Builder setVpnType(@Nullable Either<String,VpnType> vpnType) {
+        public Builder vpnType(@Nullable Either<String,VpnType> vpnType) {
             this.vpnType = Input.ofNullable(vpnType);
             return this;
         }

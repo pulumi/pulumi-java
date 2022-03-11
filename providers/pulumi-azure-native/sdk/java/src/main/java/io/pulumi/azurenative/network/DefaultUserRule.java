@@ -294,7 +294,7 @@ public class DefaultUserRule extends io.pulumi.resources.CustomResource {
     private static DefaultUserRuleArgs makeArgs(DefaultUserRuleArgs args) {
         var builder = args == null ? DefaultUserRuleArgs.builder() : DefaultUserRuleArgs.builder(args);
         return builder
-            .setKind("Default")
+            .kind("Default")
             .build();
     }
 

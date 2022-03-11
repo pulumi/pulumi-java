@@ -22,10 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      */
     private final @Nullable String executionTimeout;
 
-    @OutputCustomType.Constructor({"executableFile","executionTimeout"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigInitializationAction(
-        @Nullable String executableFile,
-        @Nullable String executionTimeout) {
+        @OutputCustomType.Parameter("executableFile") @Nullable String executableFile,
+        @OutputCustomType.Parameter("executionTimeout") @Nullable String executionTimeout) {
         this.executableFile = executableFile;
         this.executionTimeout = executionTimeout;
     }
@@ -67,12 +67,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     	      this.executionTimeout = defaults.executionTimeout;
         }
 
-        public Builder setExecutableFile(@Nullable String executableFile) {
+        public Builder executableFile(@Nullable String executableFile) {
             this.executableFile = executableFile;
             return this;
         }
 
-        public Builder setExecutionTimeout(@Nullable String executionTimeout) {
+        public Builder executionTimeout(@Nullable String executionTimeout) {
             this.executionTimeout = executionTimeout;
             return this;
         }

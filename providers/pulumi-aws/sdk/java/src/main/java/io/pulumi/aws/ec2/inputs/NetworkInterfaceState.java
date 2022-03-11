@@ -443,262 +443,262 @@ public final class NetworkInterfaceState extends io.pulumi.resources.ResourceArg
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAttachments(@Nullable Input<List<NetworkInterfaceAttachmentGetArgs>> attachments) {
+        public Builder attachments(@Nullable Input<List<NetworkInterfaceAttachmentGetArgs>> attachments) {
             this.attachments = attachments;
             return this;
         }
 
-        public Builder setAttachments(@Nullable List<NetworkInterfaceAttachmentGetArgs> attachments) {
+        public Builder attachments(@Nullable List<NetworkInterfaceAttachmentGetArgs> attachments) {
             this.attachments = Input.ofNullable(attachments);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable Input<String> interfaceType) {
+        public Builder interfaceType(@Nullable Input<String> interfaceType) {
             this.interfaceType = interfaceType;
             return this;
         }
 
-        public Builder setInterfaceType(@Nullable String interfaceType) {
+        public Builder interfaceType(@Nullable String interfaceType) {
             this.interfaceType = Input.ofNullable(interfaceType);
             return this;
         }
 
-        public Builder setIpv4PrefixCount(@Nullable Input<Integer> ipv4PrefixCount) {
+        public Builder ipv4PrefixCount(@Nullable Input<Integer> ipv4PrefixCount) {
             this.ipv4PrefixCount = ipv4PrefixCount;
             return this;
         }
 
-        public Builder setIpv4PrefixCount(@Nullable Integer ipv4PrefixCount) {
+        public Builder ipv4PrefixCount(@Nullable Integer ipv4PrefixCount) {
             this.ipv4PrefixCount = Input.ofNullable(ipv4PrefixCount);
             return this;
         }
 
-        public Builder setIpv4Prefixes(@Nullable Input<List<String>> ipv4Prefixes) {
+        public Builder ipv4Prefixes(@Nullable Input<List<String>> ipv4Prefixes) {
             this.ipv4Prefixes = ipv4Prefixes;
             return this;
         }
 
-        public Builder setIpv4Prefixes(@Nullable List<String> ipv4Prefixes) {
+        public Builder ipv4Prefixes(@Nullable List<String> ipv4Prefixes) {
             this.ipv4Prefixes = Input.ofNullable(ipv4Prefixes);
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Input<Integer> ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = Input.ofNullable(ipv6AddressCount);
             return this;
         }
 
-        public Builder setIpv6AddressListEnabled(@Nullable Input<Boolean> ipv6AddressListEnabled) {
+        public Builder ipv6AddressListEnabled(@Nullable Input<Boolean> ipv6AddressListEnabled) {
             this.ipv6AddressListEnabled = ipv6AddressListEnabled;
             return this;
         }
 
-        public Builder setIpv6AddressListEnabled(@Nullable Boolean ipv6AddressListEnabled) {
+        public Builder ipv6AddressListEnabled(@Nullable Boolean ipv6AddressListEnabled) {
             this.ipv6AddressListEnabled = Input.ofNullable(ipv6AddressListEnabled);
             return this;
         }
 
-        public Builder setIpv6AddressLists(@Nullable Input<List<String>> ipv6AddressLists) {
+        public Builder ipv6AddressLists(@Nullable Input<List<String>> ipv6AddressLists) {
             this.ipv6AddressLists = ipv6AddressLists;
             return this;
         }
 
-        public Builder setIpv6AddressLists(@Nullable List<String> ipv6AddressLists) {
+        public Builder ipv6AddressLists(@Nullable List<String> ipv6AddressLists) {
             this.ipv6AddressLists = Input.ofNullable(ipv6AddressLists);
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable Input<List<String>> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
             this.ipv6Addresses = Input.ofNullable(ipv6Addresses);
             return this;
         }
 
-        public Builder setIpv6PrefixCount(@Nullable Input<Integer> ipv6PrefixCount) {
+        public Builder ipv6PrefixCount(@Nullable Input<Integer> ipv6PrefixCount) {
             this.ipv6PrefixCount = ipv6PrefixCount;
             return this;
         }
 
-        public Builder setIpv6PrefixCount(@Nullable Integer ipv6PrefixCount) {
+        public Builder ipv6PrefixCount(@Nullable Integer ipv6PrefixCount) {
             this.ipv6PrefixCount = Input.ofNullable(ipv6PrefixCount);
             return this;
         }
 
-        public Builder setIpv6Prefixes(@Nullable Input<List<String>> ipv6Prefixes) {
+        public Builder ipv6Prefixes(@Nullable Input<List<String>> ipv6Prefixes) {
             this.ipv6Prefixes = ipv6Prefixes;
             return this;
         }
 
-        public Builder setIpv6Prefixes(@Nullable List<String> ipv6Prefixes) {
+        public Builder ipv6Prefixes(@Nullable List<String> ipv6Prefixes) {
             this.ipv6Prefixes = Input.ofNullable(ipv6Prefixes);
             return this;
         }
 
-        public Builder setMacAddress(@Nullable Input<String> macAddress) {
+        public Builder macAddress(@Nullable Input<String> macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = Input.ofNullable(macAddress);
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable Input<String> outpostArn) {
+        public Builder outpostArn(@Nullable Input<String> outpostArn) {
             this.outpostArn = outpostArn;
             return this;
         }
 
-        public Builder setOutpostArn(@Nullable String outpostArn) {
+        public Builder outpostArn(@Nullable String outpostArn) {
             this.outpostArn = Input.ofNullable(outpostArn);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable Input<String> ownerId) {
+        public Builder ownerId(@Nullable Input<String> ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = Input.ofNullable(ownerId);
             return this;
         }
 
-        public Builder setPrivateDnsName(@Nullable Input<String> privateDnsName) {
+        public Builder privateDnsName(@Nullable Input<String> privateDnsName) {
             this.privateDnsName = privateDnsName;
             return this;
         }
 
-        public Builder setPrivateDnsName(@Nullable String privateDnsName) {
+        public Builder privateDnsName(@Nullable String privateDnsName) {
             this.privateDnsName = Input.ofNullable(privateDnsName);
             return this;
         }
 
-        public Builder setPrivateIp(@Nullable Input<String> privateIp) {
+        public Builder privateIp(@Nullable Input<String> privateIp) {
             this.privateIp = privateIp;
             return this;
         }
 
-        public Builder setPrivateIp(@Nullable String privateIp) {
+        public Builder privateIp(@Nullable String privateIp) {
             this.privateIp = Input.ofNullable(privateIp);
             return this;
         }
 
-        public Builder setPrivateIpListEnabled(@Nullable Input<Boolean> privateIpListEnabled) {
+        public Builder privateIpListEnabled(@Nullable Input<Boolean> privateIpListEnabled) {
             this.privateIpListEnabled = privateIpListEnabled;
             return this;
         }
 
-        public Builder setPrivateIpListEnabled(@Nullable Boolean privateIpListEnabled) {
+        public Builder privateIpListEnabled(@Nullable Boolean privateIpListEnabled) {
             this.privateIpListEnabled = Input.ofNullable(privateIpListEnabled);
             return this;
         }
 
-        public Builder setPrivateIpLists(@Nullable Input<List<String>> privateIpLists) {
+        public Builder privateIpLists(@Nullable Input<List<String>> privateIpLists) {
             this.privateIpLists = privateIpLists;
             return this;
         }
 
-        public Builder setPrivateIpLists(@Nullable List<String> privateIpLists) {
+        public Builder privateIpLists(@Nullable List<String> privateIpLists) {
             this.privateIpLists = Input.ofNullable(privateIpLists);
             return this;
         }
 
-        public Builder setPrivateIps(@Nullable Input<List<String>> privateIps) {
+        public Builder privateIps(@Nullable Input<List<String>> privateIps) {
             this.privateIps = privateIps;
             return this;
         }
 
-        public Builder setPrivateIps(@Nullable List<String> privateIps) {
+        public Builder privateIps(@Nullable List<String> privateIps) {
             this.privateIps = Input.ofNullable(privateIps);
             return this;
         }
 
-        public Builder setPrivateIpsCount(@Nullable Input<Integer> privateIpsCount) {
+        public Builder privateIpsCount(@Nullable Input<Integer> privateIpsCount) {
             this.privateIpsCount = privateIpsCount;
             return this;
         }
 
-        public Builder setPrivateIpsCount(@Nullable Integer privateIpsCount) {
+        public Builder privateIpsCount(@Nullable Integer privateIpsCount) {
             this.privateIpsCount = Input.ofNullable(privateIpsCount);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Input<Boolean> sourceDestCheck) {
             this.sourceDestCheck = sourceDestCheck;
             return this;
         }
 
-        public Builder setSourceDestCheck(@Nullable Boolean sourceDestCheck) {
+        public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
             this.sourceDestCheck = Input.ofNullable(sourceDestCheck);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

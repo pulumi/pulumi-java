@@ -50,15 +50,15 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String serviceRuntimeSubnetId;
 
-    @OutputCustomType.Constructor({"appNetworkResourceGroup","appSubnetId","outboundIPs","requiredTraffics","serviceCidr","serviceRuntimeNetworkResourceGroup","serviceRuntimeSubnetId"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String appNetworkResourceGroup,
-        @Nullable String appSubnetId,
-        NetworkProfileResponseOutboundIPs outboundIPs,
-        List<RequiredTrafficResponse> requiredTraffics,
-        @Nullable String serviceCidr,
-        @Nullable String serviceRuntimeNetworkResourceGroup,
-        @Nullable String serviceRuntimeSubnetId) {
+        @OutputCustomType.Parameter("appNetworkResourceGroup") @Nullable String appNetworkResourceGroup,
+        @OutputCustomType.Parameter("appSubnetId") @Nullable String appSubnetId,
+        @OutputCustomType.Parameter("outboundIPs") NetworkProfileResponseOutboundIPs outboundIPs,
+        @OutputCustomType.Parameter("requiredTraffics") List<RequiredTrafficResponse> requiredTraffics,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @OutputCustomType.Parameter("serviceRuntimeNetworkResourceGroup") @Nullable String serviceRuntimeNetworkResourceGroup,
+        @OutputCustomType.Parameter("serviceRuntimeSubnetId") @Nullable String serviceRuntimeSubnetId) {
         this.appNetworkResourceGroup = appNetworkResourceGroup;
         this.appSubnetId = appSubnetId;
         this.outboundIPs = outboundIPs;
@@ -150,37 +150,37 @@ public final class NetworkProfileResponse {
     	      this.serviceRuntimeSubnetId = defaults.serviceRuntimeSubnetId;
         }
 
-        public Builder setAppNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
+        public Builder appNetworkResourceGroup(@Nullable String appNetworkResourceGroup) {
             this.appNetworkResourceGroup = appNetworkResourceGroup;
             return this;
         }
 
-        public Builder setAppSubnetId(@Nullable String appSubnetId) {
+        public Builder appSubnetId(@Nullable String appSubnetId) {
             this.appSubnetId = appSubnetId;
             return this;
         }
 
-        public Builder setOutboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
+        public Builder outboundIPs(NetworkProfileResponseOutboundIPs outboundIPs) {
             this.outboundIPs = Objects.requireNonNull(outboundIPs);
             return this;
         }
 
-        public Builder setRequiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
+        public Builder requiredTraffics(List<RequiredTrafficResponse> requiredTraffics) {
             this.requiredTraffics = Objects.requireNonNull(requiredTraffics);
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setServiceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
+        public Builder serviceRuntimeNetworkResourceGroup(@Nullable String serviceRuntimeNetworkResourceGroup) {
             this.serviceRuntimeNetworkResourceGroup = serviceRuntimeNetworkResourceGroup;
             return this;
         }
 
-        public Builder setServiceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
+        public Builder serviceRuntimeSubnetId(@Nullable String serviceRuntimeSubnetId) {
             this.serviceRuntimeSubnetId = serviceRuntimeSubnetId;
             return this;
         }

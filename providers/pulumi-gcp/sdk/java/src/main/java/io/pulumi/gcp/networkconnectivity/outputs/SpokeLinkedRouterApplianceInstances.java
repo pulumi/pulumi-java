@@ -22,10 +22,10 @@ public final class SpokeLinkedRouterApplianceInstances {
      */
     private final Boolean siteToSiteDataTransfer;
 
-    @OutputCustomType.Constructor({"instances","siteToSiteDataTransfer"})
+    @OutputCustomType.Constructor
     private SpokeLinkedRouterApplianceInstances(
-        List<SpokeLinkedRouterApplianceInstancesInstance> instances,
-        Boolean siteToSiteDataTransfer) {
+        @OutputCustomType.Parameter("instances") List<SpokeLinkedRouterApplianceInstancesInstance> instances,
+        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }
@@ -67,12 +67,12 @@ public final class SpokeLinkedRouterApplianceInstances {
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder setInstances(List<SpokeLinkedRouterApplianceInstancesInstance> instances) {
+        public Builder instances(List<SpokeLinkedRouterApplianceInstancesInstance> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }

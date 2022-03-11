@@ -183,47 +183,47 @@ public final class GetLogAnalyticExportThrottledRequestsArgs extends io.pulumi.r
     	      this.toTime = defaults.toTime;
         }
 
-        public Builder setBlobContainerSasUri(String blobContainerSasUri) {
+        public Builder blobContainerSasUri(String blobContainerSasUri) {
             this.blobContainerSasUri = Objects.requireNonNull(blobContainerSasUri);
             return this;
         }
 
-        public Builder setFromTime(String fromTime) {
+        public Builder fromTime(String fromTime) {
             this.fromTime = Objects.requireNonNull(fromTime);
             return this;
         }
 
-        public Builder setGroupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
+        public Builder groupByClientApplicationId(@Nullable Boolean groupByClientApplicationId) {
             this.groupByClientApplicationId = groupByClientApplicationId;
             return this;
         }
 
-        public Builder setGroupByOperationName(@Nullable Boolean groupByOperationName) {
+        public Builder groupByOperationName(@Nullable Boolean groupByOperationName) {
             this.groupByOperationName = groupByOperationName;
             return this;
         }
 
-        public Builder setGroupByResourceName(@Nullable Boolean groupByResourceName) {
+        public Builder groupByResourceName(@Nullable Boolean groupByResourceName) {
             this.groupByResourceName = groupByResourceName;
             return this;
         }
 
-        public Builder setGroupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
+        public Builder groupByThrottlePolicy(@Nullable Boolean groupByThrottlePolicy) {
             this.groupByThrottlePolicy = groupByThrottlePolicy;
             return this;
         }
 
-        public Builder setGroupByUserAgent(@Nullable Boolean groupByUserAgent) {
+        public Builder groupByUserAgent(@Nullable Boolean groupByUserAgent) {
             this.groupByUserAgent = groupByUserAgent;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setToTime(String toTime) {
+        public Builder toTime(String toTime) {
             this.toTime = Objects.requireNonNull(toTime);
             return this;
         }

@@ -34,12 +34,12 @@ public final class GetApiIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetApiIamPolicyResult(
-        List<ApigatewayAuditConfigResponse> auditConfigs,
-        List<ApigatewayBindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<ApigatewayAuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<ApigatewayBindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;
@@ -101,22 +101,22 @@ public final class GetApiIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(List<ApigatewayAuditConfigResponse> auditConfigs) {
+        public Builder auditConfigs(List<ApigatewayAuditConfigResponse> auditConfigs) {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(List<ApigatewayBindingResponse> bindings) {
+        public Builder bindings(List<ApigatewayBindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

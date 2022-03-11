@@ -49,12 +49,12 @@ public final class DatastoreIotSiteWiseMultiLayerStorageArgs extends io.pulumi.r
     	      this.customerManagedS3Storage = defaults.customerManagedS3Storage;
         }
 
-        public Builder setCustomerManagedS3Storage(@Nullable Input<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage) {
+        public Builder customerManagedS3Storage(@Nullable Input<DatastoreCustomerManagedS3StorageArgs> customerManagedS3Storage) {
             this.customerManagedS3Storage = customerManagedS3Storage;
             return this;
         }
 
-        public Builder setCustomerManagedS3Storage(@Nullable DatastoreCustomerManagedS3StorageArgs customerManagedS3Storage) {
+        public Builder customerManagedS3Storage(@Nullable DatastoreCustomerManagedS3StorageArgs customerManagedS3Storage) {
             this.customerManagedS3Storage = Input.ofNullable(customerManagedS3Storage);
             return this;
         }

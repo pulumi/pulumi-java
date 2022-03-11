@@ -53,16 +53,16 @@ public final class FindingsFilterFindingCriteriaCriterion {
      */
     private final @Nullable List<String> neqs;
 
-    @OutputCustomType.Constructor({"eqExactMatches","eqs","field","gt","gte","lt","lte","neqs"})
+    @OutputCustomType.Constructor
     private FindingsFilterFindingCriteriaCriterion(
-        @Nullable List<String> eqExactMatches,
-        @Nullable List<String> eqs,
-        String field,
-        @Nullable String gt,
-        @Nullable String gte,
-        @Nullable String lt,
-        @Nullable String lte,
-        @Nullable List<String> neqs) {
+        @OutputCustomType.Parameter("eqExactMatches") @Nullable List<String> eqExactMatches,
+        @OutputCustomType.Parameter("eqs") @Nullable List<String> eqs,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("gt") @Nullable String gt,
+        @OutputCustomType.Parameter("gte") @Nullable String gte,
+        @OutputCustomType.Parameter("lt") @Nullable String lt,
+        @OutputCustomType.Parameter("lte") @Nullable String lte,
+        @OutputCustomType.Parameter("neqs") @Nullable List<String> neqs) {
         this.eqExactMatches = eqExactMatches;
         this.eqs = eqs;
         this.field = field;
@@ -164,42 +164,42 @@ public final class FindingsFilterFindingCriteriaCriterion {
     	      this.neqs = defaults.neqs;
         }
 
-        public Builder setEqExactMatches(@Nullable List<String> eqExactMatches) {
+        public Builder eqExactMatches(@Nullable List<String> eqExactMatches) {
             this.eqExactMatches = eqExactMatches;
             return this;
         }
 
-        public Builder setEqs(@Nullable List<String> eqs) {
+        public Builder eqs(@Nullable List<String> eqs) {
             this.eqs = eqs;
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setGt(@Nullable String gt) {
+        public Builder gt(@Nullable String gt) {
             this.gt = gt;
             return this;
         }
 
-        public Builder setGte(@Nullable String gte) {
+        public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
 
-        public Builder setLt(@Nullable String lt) {
+        public Builder lt(@Nullable String lt) {
             this.lt = lt;
             return this;
         }
 
-        public Builder setLte(@Nullable String lte) {
+        public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
         }
 
-        public Builder setNeqs(@Nullable List<String> neqs) {
+        public Builder neqs(@Nullable List<String> neqs) {
             this.neqs = neqs;
             return this;
         }

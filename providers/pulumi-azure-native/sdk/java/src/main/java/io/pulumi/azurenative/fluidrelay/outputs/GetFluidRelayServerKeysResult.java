@@ -20,10 +20,10 @@ public final class GetFluidRelayServerKeysResult {
      */
     private final String key2;
 
-    @OutputCustomType.Constructor({"key1","key2"})
+    @OutputCustomType.Constructor
     private GetFluidRelayServerKeysResult(
-        String key1,
-        String key2) {
+        @OutputCustomType.Parameter("key1") String key1,
+        @OutputCustomType.Parameter("key2") String key2) {
         this.key1 = key1;
         this.key2 = key2;
     }
@@ -65,12 +65,12 @@ public final class GetFluidRelayServerKeysResult {
     	      this.key2 = defaults.key2;
         }
 
-        public Builder setKey1(String key1) {
+        public Builder key1(String key1) {
             this.key1 = Objects.requireNonNull(key1);
             return this;
         }
 
-        public Builder setKey2(String key2) {
+        public Builder key2(String key2) {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }

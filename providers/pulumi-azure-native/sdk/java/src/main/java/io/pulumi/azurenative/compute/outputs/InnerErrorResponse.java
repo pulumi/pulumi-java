@@ -22,10 +22,10 @@ public final class InnerErrorResponse {
      */
     private final @Nullable String exceptiontype;
 
-    @OutputCustomType.Constructor({"errordetail","exceptiontype"})
+    @OutputCustomType.Constructor
     private InnerErrorResponse(
-        @Nullable String errordetail,
-        @Nullable String exceptiontype) {
+        @OutputCustomType.Parameter("errordetail") @Nullable String errordetail,
+        @OutputCustomType.Parameter("exceptiontype") @Nullable String exceptiontype) {
         this.errordetail = errordetail;
         this.exceptiontype = exceptiontype;
     }
@@ -67,12 +67,12 @@ public final class InnerErrorResponse {
     	      this.exceptiontype = defaults.exceptiontype;
         }
 
-        public Builder setErrordetail(@Nullable String errordetail) {
+        public Builder errordetail(@Nullable String errordetail) {
             this.errordetail = errordetail;
             return this;
         }
 
-        public Builder setExceptiontype(@Nullable String exceptiontype) {
+        public Builder exceptiontype(@Nullable String exceptiontype) {
             this.exceptiontype = exceptiontype;
             return this;
         }

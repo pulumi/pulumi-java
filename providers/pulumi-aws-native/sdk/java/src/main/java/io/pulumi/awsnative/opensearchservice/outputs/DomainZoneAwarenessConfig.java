@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DomainZoneAwarenessConfig {
     private final @Nullable Integer availabilityZoneCount;
 
-    @OutputCustomType.Constructor({"availabilityZoneCount"})
-    private DomainZoneAwarenessConfig(@Nullable Integer availabilityZoneCount) {
+    @OutputCustomType.Constructor
+    private DomainZoneAwarenessConfig(@OutputCustomType.Parameter("availabilityZoneCount") @Nullable Integer availabilityZoneCount) {
         this.availabilityZoneCount = availabilityZoneCount;
     }
 
@@ -42,7 +42,7 @@ public final class DomainZoneAwarenessConfig {
     	      this.availabilityZoneCount = defaults.availabilityZoneCount;
         }
 
-        public Builder setAvailabilityZoneCount(@Nullable Integer availabilityZoneCount) {
+        public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
             this.availabilityZoneCount = availabilityZoneCount;
             return this;
         }

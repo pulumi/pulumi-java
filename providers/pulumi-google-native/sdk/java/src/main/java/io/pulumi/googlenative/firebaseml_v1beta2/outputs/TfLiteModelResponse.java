@@ -25,11 +25,11 @@ public final class TfLiteModelResponse {
      */
     private final String sizeBytes;
 
-    @OutputCustomType.Constructor({"automlModel","gcsTfliteUri","sizeBytes"})
+    @OutputCustomType.Constructor
     private TfLiteModelResponse(
-        String automlModel,
-        String gcsTfliteUri,
-        String sizeBytes) {
+        @OutputCustomType.Parameter("automlModel") String automlModel,
+        @OutputCustomType.Parameter("gcsTfliteUri") String gcsTfliteUri,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes) {
         this.automlModel = automlModel;
         this.gcsTfliteUri = gcsTfliteUri;
         this.sizeBytes = sizeBytes;
@@ -81,17 +81,17 @@ public final class TfLiteModelResponse {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setAutomlModel(String automlModel) {
+        public Builder automlModel(String automlModel) {
             this.automlModel = Objects.requireNonNull(automlModel);
             return this;
         }
 
-        public Builder setGcsTfliteUri(String gcsTfliteUri) {
+        public Builder gcsTfliteUri(String gcsTfliteUri) {
             this.gcsTfliteUri = Objects.requireNonNull(gcsTfliteUri);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }

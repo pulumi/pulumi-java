@@ -144,62 +144,62 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder set$default(@Nullable Input<Map<String,String>> $default) {
+        public Builder $default(@Nullable Input<Map<String,String>> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder set$default(@Nullable Map<String,String> $default) {
+        public Builder $default(@Nullable Map<String,String> $default) {
             this.$default = Input.ofNullable($default);
             return this;
         }
 
-        public Builder setDefaultRequest(@Nullable Input<Map<String,String>> defaultRequest) {
+        public Builder defaultRequest(@Nullable Input<Map<String,String>> defaultRequest) {
             this.defaultRequest = defaultRequest;
             return this;
         }
 
-        public Builder setDefaultRequest(@Nullable Map<String,String> defaultRequest) {
+        public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
             this.defaultRequest = Input.ofNullable(defaultRequest);
             return this;
         }
 
-        public Builder setMax(@Nullable Input<Map<String,String>> max) {
+        public Builder max(@Nullable Input<Map<String,String>> max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMax(@Nullable Map<String,String> max) {
+        public Builder max(@Nullable Map<String,String> max) {
             this.max = Input.ofNullable(max);
             return this;
         }
 
-        public Builder setMaxLimitRequestRatio(@Nullable Input<Map<String,String>> maxLimitRequestRatio) {
+        public Builder maxLimitRequestRatio(@Nullable Input<Map<String,String>> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
 
-        public Builder setMaxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
+        public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = Input.ofNullable(maxLimitRequestRatio);
             return this;
         }
 
-        public Builder setMin(@Nullable Input<Map<String,String>> min) {
+        public Builder min(@Nullable Input<Map<String,String>> min) {
             this.min = min;
             return this;
         }
 
-        public Builder setMin(@Nullable Map<String,String> min) {
+        public Builder min(@Nullable Map<String,String> min) {
             this.min = Input.ofNullable(min);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

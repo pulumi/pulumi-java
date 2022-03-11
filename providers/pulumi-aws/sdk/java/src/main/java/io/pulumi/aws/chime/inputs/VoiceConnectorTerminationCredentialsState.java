@@ -72,22 +72,22 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder setCredentials(@Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
+        public Builder credentials(@Nullable Input<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setCredentials(@Nullable List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
+        public Builder credentials(@Nullable List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
             this.credentials = Input.ofNullable(credentials);
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable Input<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable String voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
             this.voiceConnectorId = Input.ofNullable(voiceConnectorId);
             return this;
         }

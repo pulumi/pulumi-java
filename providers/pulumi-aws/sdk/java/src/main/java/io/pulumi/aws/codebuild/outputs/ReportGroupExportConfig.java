@@ -23,10 +23,10 @@ public final class ReportGroupExportConfig {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"s3Destination","type"})
+    @OutputCustomType.Constructor
     private ReportGroupExportConfig(
-        @Nullable ReportGroupExportConfigS3Destination s3Destination,
-        String type) {
+        @OutputCustomType.Parameter("s3Destination") @Nullable ReportGroupExportConfigS3Destination s3Destination,
+        @OutputCustomType.Parameter("type") String type) {
         this.s3Destination = s3Destination;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class ReportGroupExportConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setS3Destination(@Nullable ReportGroupExportConfigS3Destination s3Destination) {
+        public Builder s3Destination(@Nullable ReportGroupExportConfigS3Destination s3Destination) {
             this.s3Destination = s3Destination;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

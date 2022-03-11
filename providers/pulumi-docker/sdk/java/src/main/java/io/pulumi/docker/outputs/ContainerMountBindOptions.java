@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ContainerMountBindOptions {
     private final @Nullable String propagation;
 
-    @OutputCustomType.Constructor({"propagation"})
-    private ContainerMountBindOptions(@Nullable String propagation) {
+    @OutputCustomType.Constructor
+    private ContainerMountBindOptions(@OutputCustomType.Parameter("propagation") @Nullable String propagation) {
         this.propagation = propagation;
     }
 
@@ -42,7 +42,7 @@ public final class ContainerMountBindOptions {
     	      this.propagation = defaults.propagation;
         }
 
-        public Builder setPropagation(@Nullable String propagation) {
+        public Builder propagation(@Nullable String propagation) {
             this.propagation = propagation;
             return this;
         }

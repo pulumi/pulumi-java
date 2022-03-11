@@ -108,42 +108,42 @@ public final class IncidentInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setIncidentId(@Nullable Input<String> incidentId) {
+        public Builder incidentId(@Nullable Input<String> incidentId) {
             this.incidentId = incidentId;
             return this;
         }
 
-        public Builder setIncidentId(@Nullable String incidentId) {
+        public Builder incidentId(@Nullable String incidentId) {
             this.incidentId = Input.ofNullable(incidentId);
             return this;
         }
 
-        public Builder setRelationName(@Nullable Input<String> relationName) {
+        public Builder relationName(@Nullable Input<String> relationName) {
             this.relationName = relationName;
             return this;
         }
 
-        public Builder setRelationName(@Nullable String relationName) {
+        public Builder relationName(@Nullable String relationName) {
             this.relationName = Input.ofNullable(relationName);
             return this;
         }
 
-        public Builder setSeverity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(@Nullable Input<Either<String,IncidentSeverity>> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSeverity(@Nullable Either<String,IncidentSeverity> severity) {
+        public Builder severity(@Nullable Either<String,IncidentSeverity> severity) {
             this.severity = Input.ofNullable(severity);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

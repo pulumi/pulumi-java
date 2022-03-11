@@ -19,10 +19,10 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     private final @Nullable String netbiosName;
     private final @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration;
 
-    @OutputCustomType.Constructor({"netbiosName","selfManagedActiveDirectoryConfiguration"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineActiveDirectoryConfiguration(
-        @Nullable String netbiosName,
-        @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
+        @OutputCustomType.Parameter("netbiosName") @Nullable String netbiosName,
+        @OutputCustomType.Parameter("selfManagedActiveDirectoryConfiguration") @Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
         this.netbiosName = netbiosName;
         this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
     }
@@ -60,12 +60,12 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfiguration {
     	      this.selfManagedActiveDirectoryConfiguration = defaults.selfManagedActiveDirectoryConfiguration;
         }
 
-        public Builder setNetbiosName(@Nullable String netbiosName) {
+        public Builder netbiosName(@Nullable String netbiosName) {
             this.netbiosName = netbiosName;
             return this;
         }
 
-        public Builder setSelfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
+        public Builder selfManagedActiveDirectoryConfiguration(@Nullable OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration selfManagedActiveDirectoryConfiguration) {
             this.selfManagedActiveDirectoryConfiguration = selfManagedActiveDirectoryConfiguration;
             return this;
         }

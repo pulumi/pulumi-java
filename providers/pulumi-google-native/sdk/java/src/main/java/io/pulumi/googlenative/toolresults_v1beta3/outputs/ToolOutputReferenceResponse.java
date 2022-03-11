@@ -27,11 +27,11 @@ public final class ToolOutputReferenceResponse {
      */
     private final TestCaseReferenceResponse testCase;
 
-    @OutputCustomType.Constructor({"creationTime","output","testCase"})
+    @OutputCustomType.Constructor
     private ToolOutputReferenceResponse(
-        TimestampResponse creationTime,
-        FileReferenceResponse output,
-        TestCaseReferenceResponse testCase) {
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("output") FileReferenceResponse output,
+        @OutputCustomType.Parameter("testCase") TestCaseReferenceResponse testCase) {
         this.creationTime = creationTime;
         this.output = output;
         this.testCase = testCase;
@@ -83,17 +83,17 @@ public final class ToolOutputReferenceResponse {
     	      this.testCase = defaults.testCase;
         }
 
-        public Builder setCreationTime(TimestampResponse creationTime) {
+        public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setOutput(FileReferenceResponse output) {
+        public Builder output(FileReferenceResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setTestCase(TestCaseReferenceResponse testCase) {
+        public Builder testCase(TestCaseReferenceResponse testCase) {
             this.testCase = Objects.requireNonNull(testCase);
             return this;
         }

@@ -22,10 +22,10 @@ public final class OverlayResponse {
      */
     private final ImageResponse image;
 
-    @OutputCustomType.Constructor({"animations","image"})
+    @OutputCustomType.Constructor
     private OverlayResponse(
-        List<AnimationResponse> animations,
-        ImageResponse image) {
+        @OutputCustomType.Parameter("animations") List<AnimationResponse> animations,
+        @OutputCustomType.Parameter("image") ImageResponse image) {
         this.animations = animations;
         this.image = image;
     }
@@ -67,12 +67,12 @@ public final class OverlayResponse {
     	      this.image = defaults.image;
         }
 
-        public Builder setAnimations(List<AnimationResponse> animations) {
+        public Builder animations(List<AnimationResponse> animations) {
             this.animations = Objects.requireNonNull(animations);
             return this;
         }
 
-        public Builder setImage(ImageResponse image) {
+        public Builder image(ImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }

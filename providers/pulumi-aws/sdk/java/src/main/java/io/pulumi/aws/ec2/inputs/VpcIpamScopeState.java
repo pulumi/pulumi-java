@@ -169,92 +169,92 @@ public final class VpcIpamScopeState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpamArn(@Nullable Input<String> ipamArn) {
+        public Builder ipamArn(@Nullable Input<String> ipamArn) {
             this.ipamArn = ipamArn;
             return this;
         }
 
-        public Builder setIpamArn(@Nullable String ipamArn) {
+        public Builder ipamArn(@Nullable String ipamArn) {
             this.ipamArn = Input.ofNullable(ipamArn);
             return this;
         }
 
-        public Builder setIpamId(@Nullable Input<String> ipamId) {
+        public Builder ipamId(@Nullable Input<String> ipamId) {
             this.ipamId = ipamId;
             return this;
         }
 
-        public Builder setIpamId(@Nullable String ipamId) {
+        public Builder ipamId(@Nullable String ipamId) {
             this.ipamId = Input.ofNullable(ipamId);
             return this;
         }
 
-        public Builder setIpamScopeType(@Nullable Input<String> ipamScopeType) {
+        public Builder ipamScopeType(@Nullable Input<String> ipamScopeType) {
             this.ipamScopeType = ipamScopeType;
             return this;
         }
 
-        public Builder setIpamScopeType(@Nullable String ipamScopeType) {
+        public Builder ipamScopeType(@Nullable String ipamScopeType) {
             this.ipamScopeType = Input.ofNullable(ipamScopeType);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Input.ofNullable(isDefault);
             return this;
         }
 
-        public Builder setPoolCount(@Nullable Input<Integer> poolCount) {
+        public Builder poolCount(@Nullable Input<Integer> poolCount) {
             this.poolCount = poolCount;
             return this;
         }
 
-        public Builder setPoolCount(@Nullable Integer poolCount) {
+        public Builder poolCount(@Nullable Integer poolCount) {
             this.poolCount = Input.ofNullable(poolCount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

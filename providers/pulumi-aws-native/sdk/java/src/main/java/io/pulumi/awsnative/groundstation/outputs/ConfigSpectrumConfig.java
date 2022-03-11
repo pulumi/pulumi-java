@@ -17,11 +17,11 @@ public final class ConfigSpectrumConfig {
     private final @Nullable ConfigFrequency centerFrequency;
     private final @Nullable ConfigPolarization polarization;
 
-    @OutputCustomType.Constructor({"bandwidth","centerFrequency","polarization"})
+    @OutputCustomType.Constructor
     private ConfigSpectrumConfig(
-        @Nullable ConfigFrequencyBandwidth bandwidth,
-        @Nullable ConfigFrequency centerFrequency,
-        @Nullable ConfigPolarization polarization) {
+        @OutputCustomType.Parameter("bandwidth") @Nullable ConfigFrequencyBandwidth bandwidth,
+        @OutputCustomType.Parameter("centerFrequency") @Nullable ConfigFrequency centerFrequency,
+        @OutputCustomType.Parameter("polarization") @Nullable ConfigPolarization polarization) {
         this.bandwidth = bandwidth;
         this.centerFrequency = centerFrequency;
         this.polarization = polarization;
@@ -61,17 +61,17 @@ public final class ConfigSpectrumConfig {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setBandwidth(@Nullable ConfigFrequencyBandwidth bandwidth) {
+        public Builder bandwidth(@Nullable ConfigFrequencyBandwidth bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
 
-        public Builder setCenterFrequency(@Nullable ConfigFrequency centerFrequency) {
+        public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
-        public Builder setPolarization(@Nullable ConfigPolarization polarization) {
+        public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = polarization;
             return this;
         }

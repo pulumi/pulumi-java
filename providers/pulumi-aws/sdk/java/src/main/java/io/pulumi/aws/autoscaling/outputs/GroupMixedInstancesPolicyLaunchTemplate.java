@@ -23,10 +23,10 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
      */
     private final @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides;
 
-    @OutputCustomType.Constructor({"launchTemplateSpecification","overrides"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplate(
-        GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
+        @OutputCustomType.Parameter("launchTemplateSpecification") GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("overrides") @Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.overrides = overrides;
     }
@@ -68,12 +68,12 @@ public final class GroupMixedInstancesPolicyLaunchTemplate {
     	      this.overrides = defaults.overrides;
         }
 
-        public Builder setLaunchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(GroupMixedInstancesPolicyLaunchTemplateLaunchTemplateSpecification launchTemplateSpecification) {
             this.launchTemplateSpecification = Objects.requireNonNull(launchTemplateSpecification);
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
+        public Builder overrides(@Nullable List<GroupMixedInstancesPolicyLaunchTemplateOverride> overrides) {
             this.overrides = overrides;
             return this;
         }

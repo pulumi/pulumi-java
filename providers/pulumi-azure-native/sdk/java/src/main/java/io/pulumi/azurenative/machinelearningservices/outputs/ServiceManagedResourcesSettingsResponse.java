@@ -17,8 +17,8 @@ public final class ServiceManagedResourcesSettingsResponse {
      */
     private final @Nullable CosmosDbSettingsResponse cosmosDb;
 
-    @OutputCustomType.Constructor({"cosmosDb"})
-    private ServiceManagedResourcesSettingsResponse(@Nullable CosmosDbSettingsResponse cosmosDb) {
+    @OutputCustomType.Constructor
+    private ServiceManagedResourcesSettingsResponse(@OutputCustomType.Parameter("cosmosDb") @Nullable CosmosDbSettingsResponse cosmosDb) {
         this.cosmosDb = cosmosDb;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceManagedResourcesSettingsResponse {
     	      this.cosmosDb = defaults.cosmosDb;
         }
 
-        public Builder setCosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
+        public Builder cosmosDb(@Nullable CosmosDbSettingsResponse cosmosDb) {
             this.cosmosDb = cosmosDb;
             return this;
         }

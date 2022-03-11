@@ -108,42 +108,42 @@ public final class BudgetFilterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable Input<List<BudgetFilterPropertiesArgs>> and) {
+        public Builder and(@Nullable Input<List<BudgetFilterPropertiesArgs>> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setAnd(@Nullable List<BudgetFilterPropertiesArgs> and) {
+        public Builder and(@Nullable List<BudgetFilterPropertiesArgs> and) {
             this.and = Input.ofNullable(and);
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<BudgetComparisonExpressionArgs> dimensions) {
+        public Builder dimensions(@Nullable Input<BudgetComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
+        public Builder dimensions(@Nullable BudgetComparisonExpressionArgs dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setNot(@Nullable Input<BudgetFilterPropertiesArgs> not) {
+        public Builder not(@Nullable Input<BudgetFilterPropertiesArgs> not) {
             this.not = not;
             return this;
         }
 
-        public Builder setNot(@Nullable BudgetFilterPropertiesArgs not) {
+        public Builder not(@Nullable BudgetFilterPropertiesArgs not) {
             this.not = Input.ofNullable(not);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<BudgetComparisonExpressionArgs> tags) {
+        public Builder tags(@Nullable Input<BudgetComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable BudgetComparisonExpressionArgs tags) {
+        public Builder tags(@Nullable BudgetComparisonExpressionArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

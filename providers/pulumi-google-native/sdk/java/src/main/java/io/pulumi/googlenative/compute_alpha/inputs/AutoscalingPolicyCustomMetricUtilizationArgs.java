@@ -124,52 +124,52 @@ public final class AutoscalingPolicyCustomMetricUtilizationArgs extends io.pulum
     	      this.utilizationTargetType = defaults.utilizationTargetType;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Input<String> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Input<Double> singleInstanceAssignment) {
             this.singleInstanceAssignment = singleInstanceAssignment;
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(@Nullable Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Input.ofNullable(singleInstanceAssignment);
             return this;
         }
 
-        public Builder setUtilizationTarget(@Nullable Input<Double> utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Input<Double> utilizationTarget) {
             this.utilizationTarget = utilizationTarget;
             return this;
         }
 
-        public Builder setUtilizationTarget(@Nullable Double utilizationTarget) {
+        public Builder utilizationTarget(@Nullable Double utilizationTarget) {
             this.utilizationTarget = Input.ofNullable(utilizationTarget);
             return this;
         }
 
-        public Builder setUtilizationTargetType(@Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
+        public Builder utilizationTargetType(@Nullable Input<AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType> utilizationTargetType) {
             this.utilizationTargetType = utilizationTargetType;
             return this;
         }
 
-        public Builder setUtilizationTargetType(@Nullable AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType utilizationTargetType) {
+        public Builder utilizationTargetType(@Nullable AutoscalingPolicyCustomMetricUtilizationUtilizationTargetType utilizationTargetType) {
             this.utilizationTargetType = Input.ofNullable(utilizationTargetType);
             return this;
         }

@@ -18,8 +18,8 @@ public final class HealthCheckLogConfig {
      */
     private final @Nullable Boolean enable;
 
-    @OutputCustomType.Constructor({"enable"})
-    private HealthCheckLogConfig(@Nullable Boolean enable) {
+    @OutputCustomType.Constructor
+    private HealthCheckLogConfig(@OutputCustomType.Parameter("enable") @Nullable Boolean enable) {
         this.enable = enable;
     }
 
@@ -52,7 +52,7 @@ public final class HealthCheckLogConfig {
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }

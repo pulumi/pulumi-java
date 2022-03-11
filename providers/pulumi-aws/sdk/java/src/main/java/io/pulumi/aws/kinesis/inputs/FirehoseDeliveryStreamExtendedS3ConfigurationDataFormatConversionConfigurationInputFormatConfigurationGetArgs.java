@@ -52,12 +52,12 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.deserializer = defaults.deserializer;
         }
 
-        public Builder setDeserializer(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
+        public Builder deserializer(Input<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs> deserializer) {
             this.deserializer = Objects.requireNonNull(deserializer);
             return this;
         }
 
-        public Builder setDeserializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs deserializer) {
+        public Builder deserializer(FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerGetArgs deserializer) {
             this.deserializer = Input.of(Objects.requireNonNull(deserializer));
             return this;
         }

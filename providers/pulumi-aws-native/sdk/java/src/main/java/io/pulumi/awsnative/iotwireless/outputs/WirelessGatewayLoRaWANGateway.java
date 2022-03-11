@@ -12,10 +12,10 @@ public final class WirelessGatewayLoRaWANGateway {
     private final String gatewayEui;
     private final String rfRegion;
 
-    @OutputCustomType.Constructor({"gatewayEui","rfRegion"})
+    @OutputCustomType.Constructor
     private WirelessGatewayLoRaWANGateway(
-        String gatewayEui,
-        String rfRegion) {
+        @OutputCustomType.Parameter("gatewayEui") String gatewayEui,
+        @OutputCustomType.Parameter("rfRegion") String rfRegion) {
         this.gatewayEui = gatewayEui;
         this.rfRegion = rfRegion;
     }
@@ -49,12 +49,12 @@ public final class WirelessGatewayLoRaWANGateway {
     	      this.rfRegion = defaults.rfRegion;
         }
 
-        public Builder setGatewayEui(String gatewayEui) {
+        public Builder gatewayEui(String gatewayEui) {
             this.gatewayEui = Objects.requireNonNull(gatewayEui);
             return this;
         }
 
-        public Builder setRfRegion(String rfRegion) {
+        public Builder rfRegion(String rfRegion) {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }

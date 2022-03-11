@@ -20,10 +20,10 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"repositoryName","service"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionContainerDistributionConfigurationTargetRepository(
-        String repositoryName,
-        String service) {
+        @OutputCustomType.Parameter("repositoryName") String repositoryName,
+        @OutputCustomType.Parameter("service") String service) {
         this.repositoryName = repositoryName;
         this.service = service;
     }
@@ -65,12 +65,12 @@ public final class DistributionConfigurationDistributionContainerDistributionCon
     	      this.service = defaults.service;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

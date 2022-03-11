@@ -70,22 +70,22 @@ public final class TaskDefinitionRuntimePlatformArgs extends io.pulumi.resources
     	      this.operatingSystemFamily = defaults.operatingSystemFamily;
         }
 
-        public Builder setCpuArchitecture(@Nullable Input<String> cpuArchitecture) {
+        public Builder cpuArchitecture(@Nullable Input<String> cpuArchitecture) {
             this.cpuArchitecture = cpuArchitecture;
             return this;
         }
 
-        public Builder setCpuArchitecture(@Nullable String cpuArchitecture) {
+        public Builder cpuArchitecture(@Nullable String cpuArchitecture) {
             this.cpuArchitecture = Input.ofNullable(cpuArchitecture);
             return this;
         }
 
-        public Builder setOperatingSystemFamily(@Nullable Input<String> operatingSystemFamily) {
+        public Builder operatingSystemFamily(@Nullable Input<String> operatingSystemFamily) {
             this.operatingSystemFamily = operatingSystemFamily;
             return this;
         }
 
-        public Builder setOperatingSystemFamily(@Nullable String operatingSystemFamily) {
+        public Builder operatingSystemFamily(@Nullable String operatingSystemFamily) {
             this.operatingSystemFamily = Input.ofNullable(operatingSystemFamily);
             return this;
         }

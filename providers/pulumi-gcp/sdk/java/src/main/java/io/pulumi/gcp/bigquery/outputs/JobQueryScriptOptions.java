@@ -29,11 +29,11 @@ public final class JobQueryScriptOptions {
      */
     private final @Nullable String statementTimeoutMs;
 
-    @OutputCustomType.Constructor({"keyResultStatement","statementByteBudget","statementTimeoutMs"})
+    @OutputCustomType.Constructor
     private JobQueryScriptOptions(
-        @Nullable String keyResultStatement,
-        @Nullable String statementByteBudget,
-        @Nullable String statementTimeoutMs) {
+        @OutputCustomType.Parameter("keyResultStatement") @Nullable String keyResultStatement,
+        @OutputCustomType.Parameter("statementByteBudget") @Nullable String statementByteBudget,
+        @OutputCustomType.Parameter("statementTimeoutMs") @Nullable String statementTimeoutMs) {
         this.keyResultStatement = keyResultStatement;
         this.statementByteBudget = statementByteBudget;
         this.statementTimeoutMs = statementTimeoutMs;
@@ -87,17 +87,17 @@ public final class JobQueryScriptOptions {
     	      this.statementTimeoutMs = defaults.statementTimeoutMs;
         }
 
-        public Builder setKeyResultStatement(@Nullable String keyResultStatement) {
+        public Builder keyResultStatement(@Nullable String keyResultStatement) {
             this.keyResultStatement = keyResultStatement;
             return this;
         }
 
-        public Builder setStatementByteBudget(@Nullable String statementByteBudget) {
+        public Builder statementByteBudget(@Nullable String statementByteBudget) {
             this.statementByteBudget = statementByteBudget;
             return this;
         }
 
-        public Builder setStatementTimeoutMs(@Nullable String statementTimeoutMs) {
+        public Builder statementTimeoutMs(@Nullable String statementTimeoutMs) {
             this.statementTimeoutMs = statementTimeoutMs;
             return this;
         }

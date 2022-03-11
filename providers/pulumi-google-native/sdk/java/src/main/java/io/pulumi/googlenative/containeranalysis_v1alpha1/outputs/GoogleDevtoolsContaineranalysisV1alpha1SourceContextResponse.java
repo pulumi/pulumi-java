@@ -34,12 +34,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"cloudRepo","gerrit","git","labels"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo,
-        GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit,
-        GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("cloudRepo") GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo,
+        @OutputCustomType.Parameter("gerrit") GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit,
+        @OutputCustomType.Parameter("git") GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.cloudRepo = cloudRepo;
         this.gerrit = gerrit;
         this.git = git;
@@ -101,22 +101,22 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
     	      this.labels = defaults.labels;
         }
 
-        public Builder setCloudRepo(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo) {
+        public Builder cloudRepo(GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse cloudRepo) {
             this.cloudRepo = Objects.requireNonNull(cloudRepo);
             return this;
         }
 
-        public Builder setGerrit(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit) {
+        public Builder gerrit(GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse gerrit) {
             this.gerrit = Objects.requireNonNull(gerrit);
             return this;
         }
 
-        public Builder setGit(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git) {
+        public Builder git(GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse git) {
             this.git = Objects.requireNonNull(git);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

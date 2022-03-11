@@ -104,42 +104,42 @@ public final class ReplicationSubnetGroupArgs extends io.pulumi.resources.Resour
     	      this.tags = defaults.tags;
         }
 
-        public Builder setReplicationSubnetGroupDescription(Input<String> replicationSubnetGroupDescription) {
+        public Builder replicationSubnetGroupDescription(Input<String> replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Objects.requireNonNull(replicationSubnetGroupDescription);
             return this;
         }
 
-        public Builder setReplicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
+        public Builder replicationSubnetGroupDescription(String replicationSubnetGroupDescription) {
             this.replicationSubnetGroupDescription = Input.of(Objects.requireNonNull(replicationSubnetGroupDescription));
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(Input<String> replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(Input<String> replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Objects.requireNonNull(replicationSubnetGroupId);
             return this;
         }
 
-        public Builder setReplicationSubnetGroupId(String replicationSubnetGroupId) {
+        public Builder replicationSubnetGroupId(String replicationSubnetGroupId) {
             this.replicationSubnetGroupId = Input.of(Objects.requireNonNull(replicationSubnetGroupId));
             return this;
         }
 
-        public Builder setSubnetIds(Input<List<String>> subnetIds) {
+        public Builder subnetIds(Input<List<String>> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AttestationAuthorityResponse {
     private final AttestationAuthorityHintResponse hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private AttestationAuthorityResponse(AttestationAuthorityHintResponse hint) {
+    @OutputCustomType.Constructor
+    private AttestationAuthorityResponse(@OutputCustomType.Parameter("hint") AttestationAuthorityHintResponse hint) {
         this.hint = hint;
     }
 
@@ -40,7 +40,7 @@ public final class AttestationAuthorityResponse {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(AttestationAuthorityHintResponse hint) {
+        public Builder hint(AttestationAuthorityHintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

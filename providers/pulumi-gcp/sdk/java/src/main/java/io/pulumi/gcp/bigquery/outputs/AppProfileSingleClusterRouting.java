@@ -24,10 +24,10 @@ public final class AppProfileSingleClusterRouting {
      */
     private final String clusterId;
 
-    @OutputCustomType.Constructor({"allowTransactionalWrites","clusterId"})
+    @OutputCustomType.Constructor
     private AppProfileSingleClusterRouting(
-        @Nullable Boolean allowTransactionalWrites,
-        String clusterId) {
+        @OutputCustomType.Parameter("allowTransactionalWrites") @Nullable Boolean allowTransactionalWrites,
+        @OutputCustomType.Parameter("clusterId") String clusterId) {
         this.allowTransactionalWrites = allowTransactionalWrites;
         this.clusterId = clusterId;
     }
@@ -70,12 +70,12 @@ public final class AppProfileSingleClusterRouting {
     	      this.clusterId = defaults.clusterId;
         }
 
-        public Builder setAllowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
+        public Builder allowTransactionalWrites(@Nullable Boolean allowTransactionalWrites) {
             this.allowTransactionalWrites = allowTransactionalWrites;
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }

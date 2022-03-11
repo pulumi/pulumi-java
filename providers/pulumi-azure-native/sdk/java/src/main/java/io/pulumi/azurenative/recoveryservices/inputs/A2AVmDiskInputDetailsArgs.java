@@ -90,32 +90,32 @@ public final class A2AVmDiskInputDetailsArgs extends io.pulumi.resources.Resourc
     	      this.recoveryAzureStorageAccountId = defaults.recoveryAzureStorageAccountId;
         }
 
-        public Builder setDiskUri(@Nullable Input<String> diskUri) {
+        public Builder diskUri(@Nullable Input<String> diskUri) {
             this.diskUri = diskUri;
             return this;
         }
 
-        public Builder setDiskUri(@Nullable String diskUri) {
+        public Builder diskUri(@Nullable String diskUri) {
             this.diskUri = Input.ofNullable(diskUri);
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable Input<String> primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable Input<String> primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
-        public Builder setPrimaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
+        public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             this.primaryStagingAzureStorageAccountId = Input.ofNullable(primaryStagingAzureStorageAccountId);
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccountId(@Nullable Input<String> recoveryAzureStorageAccountId) {
+        public Builder recoveryAzureStorageAccountId(@Nullable Input<String> recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
 
-        public Builder setRecoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
+        public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
             this.recoveryAzureStorageAccountId = Input.ofNullable(recoveryAzureStorageAccountId);
             return this;
         }

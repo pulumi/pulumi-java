@@ -51,15 +51,15 @@ public final class BucketReplicationConfigurationRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"accessControlTranslation","accountId","bucket","metrics","replicaKmsKeyId","replicationTime","storageClass"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigurationRuleDestination(
-        @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
-        @Nullable String accountId,
-        String bucket,
-        @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
-        @Nullable String replicaKmsKeyId,
-        @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation,
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics,
+        @OutputCustomType.Parameter("replicaKmsKeyId") @Nullable String replicaKmsKeyId,
+        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.accountId = accountId;
         this.bucket = bucket;
@@ -152,37 +152,37 @@ public final class BucketReplicationConfigurationRuleDestination {
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setAccessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable BucketReplicationConfigurationRuleDestinationAccessControlTranslation accessControlTranslation) {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setMetrics(@Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics) {
+        public Builder metrics(@Nullable BucketReplicationConfigurationRuleDestinationMetrics metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setReplicaKmsKeyId(@Nullable String replicaKmsKeyId) {
+        public Builder replicaKmsKeyId(@Nullable String replicaKmsKeyId) {
             this.replicaKmsKeyId = replicaKmsKeyId;
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime) {
+        public Builder replicationTime(@Nullable BucketReplicationConfigurationRuleDestinationReplicationTime replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
         }

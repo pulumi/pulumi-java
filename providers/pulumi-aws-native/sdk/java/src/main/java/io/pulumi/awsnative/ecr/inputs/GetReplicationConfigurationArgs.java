@@ -51,7 +51,7 @@ public final class GetReplicationConfigurationArgs extends io.pulumi.resources.I
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }

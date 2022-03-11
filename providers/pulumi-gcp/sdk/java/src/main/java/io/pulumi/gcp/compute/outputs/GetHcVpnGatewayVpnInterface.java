@@ -14,11 +14,11 @@ public final class GetHcVpnGatewayVpnInterface {
     private final String interconnectAttachment;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"id","interconnectAttachment","ipAddress"})
+    @OutputCustomType.Constructor
     private GetHcVpnGatewayVpnInterface(
-        Integer id,
-        String interconnectAttachment,
-        String ipAddress) {
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("interconnectAttachment") String interconnectAttachment,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.id = id;
         this.interconnectAttachment = interconnectAttachment;
         this.ipAddress = ipAddress;
@@ -58,17 +58,17 @@ public final class GetHcVpnGatewayVpnInterface {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInterconnectAttachment(String interconnectAttachment) {
+        public Builder interconnectAttachment(String interconnectAttachment) {
             this.interconnectAttachment = Objects.requireNonNull(interconnectAttachment);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

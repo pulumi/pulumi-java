@@ -23,10 +23,10 @@ public final class VirtualNodeSpecServiceDiscovery {
      */
     private final @Nullable VirtualNodeSpecServiceDiscoveryDns dns;
 
-    @OutputCustomType.Constructor({"awsCloudMap","dns"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecServiceDiscovery(
-        @Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap,
-        @Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
+        @OutputCustomType.Parameter("awsCloudMap") @Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap,
+        @OutputCustomType.Parameter("dns") @Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
         this.awsCloudMap = awsCloudMap;
         this.dns = dns;
     }
@@ -68,12 +68,12 @@ public final class VirtualNodeSpecServiceDiscovery {
     	      this.dns = defaults.dns;
         }
 
-        public Builder setAwsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap) {
+        public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMap awsCloudMap) {
             this.awsCloudMap = awsCloudMap;
             return this;
         }
 
-        public Builder setDns(@Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
+        public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDns dns) {
             this.dns = dns;
             return this;
         }

@@ -91,32 +91,32 @@ public final class ConnStringInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setConnectionString(@Nullable Input<String> connectionString) {
+        public Builder connectionString(@Nullable Input<String> connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = Input.ofNullable(connectionString);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setType(@Nullable Input<ConnectionStringType> type) {
+        public Builder type(@Nullable Input<ConnectionStringType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable ConnectionStringType type) {
+        public Builder type(@Nullable ConnectionStringType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

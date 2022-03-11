@@ -43,14 +43,14 @@ public final class HostNameResponse {
      */
     private final @Nullable List<String> siteNames;
 
-    @OutputCustomType.Constructor({"azureResourceName","azureResourceType","customHostNameDnsRecordType","hostNameType","name","siteNames"})
+    @OutputCustomType.Constructor
     private HostNameResponse(
-        @Nullable String azureResourceName,
-        @Nullable String azureResourceType,
-        @Nullable String customHostNameDnsRecordType,
-        @Nullable String hostNameType,
-        @Nullable String name,
-        @Nullable List<String> siteNames) {
+        @OutputCustomType.Parameter("azureResourceName") @Nullable String azureResourceName,
+        @OutputCustomType.Parameter("azureResourceType") @Nullable String azureResourceType,
+        @OutputCustomType.Parameter("customHostNameDnsRecordType") @Nullable String customHostNameDnsRecordType,
+        @OutputCustomType.Parameter("hostNameType") @Nullable String hostNameType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("siteNames") @Nullable List<String> siteNames) {
         this.azureResourceName = azureResourceName;
         this.azureResourceType = azureResourceType;
         this.customHostNameDnsRecordType = customHostNameDnsRecordType;
@@ -132,32 +132,32 @@ public final class HostNameResponse {
     	      this.siteNames = defaults.siteNames;
         }
 
-        public Builder setAzureResourceName(@Nullable String azureResourceName) {
+        public Builder azureResourceName(@Nullable String azureResourceName) {
             this.azureResourceName = azureResourceName;
             return this;
         }
 
-        public Builder setAzureResourceType(@Nullable String azureResourceType) {
+        public Builder azureResourceType(@Nullable String azureResourceType) {
             this.azureResourceType = azureResourceType;
             return this;
         }
 
-        public Builder setCustomHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
+        public Builder customHostNameDnsRecordType(@Nullable String customHostNameDnsRecordType) {
             this.customHostNameDnsRecordType = customHostNameDnsRecordType;
             return this;
         }
 
-        public Builder setHostNameType(@Nullable String hostNameType) {
+        public Builder hostNameType(@Nullable String hostNameType) {
             this.hostNameType = hostNameType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSiteNames(@Nullable List<String> siteNames) {
+        public Builder siteNames(@Nullable List<String> siteNames) {
             this.siteNames = siteNames;
             return this;
         }

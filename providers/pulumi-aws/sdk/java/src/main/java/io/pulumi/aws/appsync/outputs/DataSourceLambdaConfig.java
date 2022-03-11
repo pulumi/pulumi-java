@@ -15,8 +15,8 @@ public final class DataSourceLambdaConfig {
      */
     private final String functionArn;
 
-    @OutputCustomType.Constructor({"functionArn"})
-    private DataSourceLambdaConfig(String functionArn) {
+    @OutputCustomType.Constructor
+    private DataSourceLambdaConfig(@OutputCustomType.Parameter("functionArn") String functionArn) {
         this.functionArn = functionArn;
     }
 
@@ -48,7 +48,7 @@ public final class DataSourceLambdaConfig {
     	      this.functionArn = defaults.functionArn;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }

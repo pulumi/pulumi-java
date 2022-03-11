@@ -69,18 +69,18 @@ public final class ContainerResponse {
      */
     private final @Nullable List<VolumeMountResponse> volumeMounts;
 
-    @OutputCustomType.Constructor({"command","environmentVariables","image","instanceView","livenessProbe","name","ports","readinessProbe","resources","volumeMounts"})
+    @OutputCustomType.Constructor
     private ContainerResponse(
-        @Nullable List<String> command,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        String image,
-        ContainerPropertiesResponseInstanceView instanceView,
-        @Nullable ContainerProbeResponse livenessProbe,
-        String name,
-        @Nullable List<ContainerPortResponse> ports,
-        @Nullable ContainerProbeResponse readinessProbe,
-        ResourceRequirementsResponse resources,
-        @Nullable List<VolumeMountResponse> volumeMounts) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("instanceView") ContainerPropertiesResponseInstanceView instanceView,
+        @OutputCustomType.Parameter("livenessProbe") @Nullable ContainerProbeResponse livenessProbe,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortResponse> ports,
+        @OutputCustomType.Parameter("readinessProbe") @Nullable ContainerProbeResponse readinessProbe,
+        @OutputCustomType.Parameter("resources") ResourceRequirementsResponse resources,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMountResponse> volumeMounts) {
         this.command = command;
         this.environmentVariables = environmentVariables;
         this.image = image;
@@ -202,52 +202,52 @@ public final class ContainerResponse {
     	      this.volumeMounts = defaults.volumeMounts;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setInstanceView(ContainerPropertiesResponseInstanceView instanceView) {
+        public Builder instanceView(ContainerPropertiesResponseInstanceView instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLivenessProbe(@Nullable ContainerProbeResponse livenessProbe) {
+        public Builder livenessProbe(@Nullable ContainerProbeResponse livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPortResponse> ports) {
+        public Builder ports(@Nullable List<ContainerPortResponse> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setReadinessProbe(@Nullable ContainerProbeResponse readinessProbe) {
+        public Builder readinessProbe(@Nullable ContainerProbeResponse readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
 
-        public Builder setResources(ResourceRequirementsResponse resources) {
+        public Builder resources(ResourceRequirementsResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMountResponse> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }

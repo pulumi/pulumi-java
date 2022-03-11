@@ -191,42 +191,42 @@ public final class GetAccountResult {
      */
     private final List<VirtualNetworkRuleResponse> virtualNetworkRules;
 
-    @OutputCustomType.Constructor({"accountId","computePolicies","creationTime","currentTier","dataLakeStoreAccounts","debugDataAccessLevel","defaultDataLakeStoreAccount","endpoint","firewallAllowAzureIps","firewallRules","firewallState","hiveMetastores","id","lastModifiedTime","location","maxActiveJobCountPerUser","maxDegreeOfParallelism","maxDegreeOfParallelismPerJob","maxJobCount","maxJobRunningTimeInMin","maxQueuedJobCountPerUser","minPriorityPerJob","name","newTier","provisioningState","publicDataLakeStoreAccounts","queryStoreRetention","state","storageAccounts","systemMaxDegreeOfParallelism","systemMaxJobCount","tags","type","virtualNetworkRules"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        String accountId,
-        List<ComputePolicyResponse> computePolicies,
-        String creationTime,
-        String currentTier,
-        List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts,
-        String debugDataAccessLevel,
-        String defaultDataLakeStoreAccount,
-        String endpoint,
-        @Nullable String firewallAllowAzureIps,
-        List<FirewallRuleResponse> firewallRules,
-        @Nullable String firewallState,
-        List<HiveMetastoreResponse> hiveMetastores,
-        String id,
-        String lastModifiedTime,
-        String location,
-        Integer maxActiveJobCountPerUser,
-        @Nullable Integer maxDegreeOfParallelism,
-        @Nullable Integer maxDegreeOfParallelismPerJob,
-        @Nullable Integer maxJobCount,
-        Integer maxJobRunningTimeInMin,
-        Integer maxQueuedJobCountPerUser,
-        Integer minPriorityPerJob,
-        String name,
-        @Nullable String newTier,
-        String provisioningState,
-        @Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts,
-        @Nullable Integer queryStoreRetention,
-        String state,
-        List<StorageAccountInformationResponse> storageAccounts,
-        Integer systemMaxDegreeOfParallelism,
-        Integer systemMaxJobCount,
-        Map<String,String> tags,
-        String type,
-        List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("computePolicies") List<ComputePolicyResponse> computePolicies,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("currentTier") String currentTier,
+        @OutputCustomType.Parameter("dataLakeStoreAccounts") List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts,
+        @OutputCustomType.Parameter("debugDataAccessLevel") String debugDataAccessLevel,
+        @OutputCustomType.Parameter("defaultDataLakeStoreAccount") String defaultDataLakeStoreAccount,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("firewallAllowAzureIps") @Nullable String firewallAllowAzureIps,
+        @OutputCustomType.Parameter("firewallRules") List<FirewallRuleResponse> firewallRules,
+        @OutputCustomType.Parameter("firewallState") @Nullable String firewallState,
+        @OutputCustomType.Parameter("hiveMetastores") List<HiveMetastoreResponse> hiveMetastores,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxActiveJobCountPerUser") Integer maxActiveJobCountPerUser,
+        @OutputCustomType.Parameter("maxDegreeOfParallelism") @Nullable Integer maxDegreeOfParallelism,
+        @OutputCustomType.Parameter("maxDegreeOfParallelismPerJob") @Nullable Integer maxDegreeOfParallelismPerJob,
+        @OutputCustomType.Parameter("maxJobCount") @Nullable Integer maxJobCount,
+        @OutputCustomType.Parameter("maxJobRunningTimeInMin") Integer maxJobRunningTimeInMin,
+        @OutputCustomType.Parameter("maxQueuedJobCountPerUser") Integer maxQueuedJobCountPerUser,
+        @OutputCustomType.Parameter("minPriorityPerJob") Integer minPriorityPerJob,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("newTier") @Nullable String newTier,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicDataLakeStoreAccounts") @Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts,
+        @OutputCustomType.Parameter("queryStoreRetention") @Nullable Integer queryStoreRetention,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccounts") List<StorageAccountInformationResponse> storageAccounts,
+        @OutputCustomType.Parameter("systemMaxDegreeOfParallelism") Integer systemMaxDegreeOfParallelism,
+        @OutputCustomType.Parameter("systemMaxJobCount") Integer systemMaxJobCount,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetworkRules") List<VirtualNetworkRuleResponse> virtualNetworkRules) {
         this.accountId = accountId;
         this.computePolicies = computePolicies;
         this.creationTime = creationTime;
@@ -588,172 +588,172 @@ public final class GetAccountResult {
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setComputePolicies(List<ComputePolicyResponse> computePolicies) {
+        public Builder computePolicies(List<ComputePolicyResponse> computePolicies) {
             this.computePolicies = Objects.requireNonNull(computePolicies);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setCurrentTier(String currentTier) {
+        public Builder currentTier(String currentTier) {
             this.currentTier = Objects.requireNonNull(currentTier);
             return this;
         }
 
-        public Builder setDataLakeStoreAccounts(List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts) {
+        public Builder dataLakeStoreAccounts(List<DataLakeStoreAccountInformationResponse> dataLakeStoreAccounts) {
             this.dataLakeStoreAccounts = Objects.requireNonNull(dataLakeStoreAccounts);
             return this;
         }
 
-        public Builder setDebugDataAccessLevel(String debugDataAccessLevel) {
+        public Builder debugDataAccessLevel(String debugDataAccessLevel) {
             this.debugDataAccessLevel = Objects.requireNonNull(debugDataAccessLevel);
             return this;
         }
 
-        public Builder setDefaultDataLakeStoreAccount(String defaultDataLakeStoreAccount) {
+        public Builder defaultDataLakeStoreAccount(String defaultDataLakeStoreAccount) {
             this.defaultDataLakeStoreAccount = Objects.requireNonNull(defaultDataLakeStoreAccount);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setFirewallAllowAzureIps(@Nullable String firewallAllowAzureIps) {
+        public Builder firewallAllowAzureIps(@Nullable String firewallAllowAzureIps) {
             this.firewallAllowAzureIps = firewallAllowAzureIps;
             return this;
         }
 
-        public Builder setFirewallRules(List<FirewallRuleResponse> firewallRules) {
+        public Builder firewallRules(List<FirewallRuleResponse> firewallRules) {
             this.firewallRules = Objects.requireNonNull(firewallRules);
             return this;
         }
 
-        public Builder setFirewallState(@Nullable String firewallState) {
+        public Builder firewallState(@Nullable String firewallState) {
             this.firewallState = firewallState;
             return this;
         }
 
-        public Builder setHiveMetastores(List<HiveMetastoreResponse> hiveMetastores) {
+        public Builder hiveMetastores(List<HiveMetastoreResponse> hiveMetastores) {
             this.hiveMetastores = Objects.requireNonNull(hiveMetastores);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxActiveJobCountPerUser(Integer maxActiveJobCountPerUser) {
+        public Builder maxActiveJobCountPerUser(Integer maxActiveJobCountPerUser) {
             this.maxActiveJobCountPerUser = Objects.requireNonNull(maxActiveJobCountPerUser);
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelism(@Nullable Integer maxDegreeOfParallelism) {
+        public Builder maxDegreeOfParallelism(@Nullable Integer maxDegreeOfParallelism) {
             this.maxDegreeOfParallelism = maxDegreeOfParallelism;
             return this;
         }
 
-        public Builder setMaxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
+        public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
             this.maxDegreeOfParallelismPerJob = maxDegreeOfParallelismPerJob;
             return this;
         }
 
-        public Builder setMaxJobCount(@Nullable Integer maxJobCount) {
+        public Builder maxJobCount(@Nullable Integer maxJobCount) {
             this.maxJobCount = maxJobCount;
             return this;
         }
 
-        public Builder setMaxJobRunningTimeInMin(Integer maxJobRunningTimeInMin) {
+        public Builder maxJobRunningTimeInMin(Integer maxJobRunningTimeInMin) {
             this.maxJobRunningTimeInMin = Objects.requireNonNull(maxJobRunningTimeInMin);
             return this;
         }
 
-        public Builder setMaxQueuedJobCountPerUser(Integer maxQueuedJobCountPerUser) {
+        public Builder maxQueuedJobCountPerUser(Integer maxQueuedJobCountPerUser) {
             this.maxQueuedJobCountPerUser = Objects.requireNonNull(maxQueuedJobCountPerUser);
             return this;
         }
 
-        public Builder setMinPriorityPerJob(Integer minPriorityPerJob) {
+        public Builder minPriorityPerJob(Integer minPriorityPerJob) {
             this.minPriorityPerJob = Objects.requireNonNull(minPriorityPerJob);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNewTier(@Nullable String newTier) {
+        public Builder newTier(@Nullable String newTier) {
             this.newTier = newTier;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicDataLakeStoreAccounts(@Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts) {
+        public Builder publicDataLakeStoreAccounts(@Nullable List<DataLakeStoreAccountInformationResponse> publicDataLakeStoreAccounts) {
             this.publicDataLakeStoreAccounts = publicDataLakeStoreAccounts;
             return this;
         }
 
-        public Builder setQueryStoreRetention(@Nullable Integer queryStoreRetention) {
+        public Builder queryStoreRetention(@Nullable Integer queryStoreRetention) {
             this.queryStoreRetention = queryStoreRetention;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageAccounts(List<StorageAccountInformationResponse> storageAccounts) {
+        public Builder storageAccounts(List<StorageAccountInformationResponse> storageAccounts) {
             this.storageAccounts = Objects.requireNonNull(storageAccounts);
             return this;
         }
 
-        public Builder setSystemMaxDegreeOfParallelism(Integer systemMaxDegreeOfParallelism) {
+        public Builder systemMaxDegreeOfParallelism(Integer systemMaxDegreeOfParallelism) {
             this.systemMaxDegreeOfParallelism = Objects.requireNonNull(systemMaxDegreeOfParallelism);
             return this;
         }
 
-        public Builder setSystemMaxJobCount(Integer systemMaxJobCount) {
+        public Builder systemMaxJobCount(Integer systemMaxJobCount) {
             this.systemMaxJobCount = Objects.requireNonNull(systemMaxJobCount);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetworkRules(List<VirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(List<VirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }

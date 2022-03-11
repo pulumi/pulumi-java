@@ -17,8 +17,8 @@ public final class AgentPropertiesResponse {
      */
     private final @Nullable Integer cpu;
 
-    @OutputCustomType.Constructor({"cpu"})
-    private AgentPropertiesResponse(@Nullable Integer cpu) {
+    @OutputCustomType.Constructor
+    private AgentPropertiesResponse(@OutputCustomType.Parameter("cpu") @Nullable Integer cpu) {
         this.cpu = cpu;
     }
 
@@ -50,7 +50,7 @@ public final class AgentPropertiesResponse {
     	      this.cpu = defaults.cpu;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }

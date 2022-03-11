@@ -14,12 +14,12 @@ public final class TopicRuleCloudwatchAlarmAction {
     private final String stateReason;
     private final String stateValue;
 
-    @OutputCustomType.Constructor({"alarmName","roleArn","stateReason","stateValue"})
+    @OutputCustomType.Constructor
     private TopicRuleCloudwatchAlarmAction(
-        String alarmName,
-        String roleArn,
-        String stateReason,
-        String stateValue) {
+        @OutputCustomType.Parameter("alarmName") String alarmName,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("stateReason") String stateReason,
+        @OutputCustomType.Parameter("stateValue") String stateValue) {
         this.alarmName = alarmName;
         this.roleArn = roleArn;
         this.stateReason = stateReason;
@@ -65,22 +65,22 @@ public final class TopicRuleCloudwatchAlarmAction {
     	      this.stateValue = defaults.stateValue;
         }
 
-        public Builder setAlarmName(String alarmName) {
+        public Builder alarmName(String alarmName) {
             this.alarmName = Objects.requireNonNull(alarmName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStateReason(String stateReason) {
+        public Builder stateReason(String stateReason) {
             this.stateReason = Objects.requireNonNull(stateReason);
             return this;
         }
 
-        public Builder setStateValue(String stateValue) {
+        public Builder stateValue(String stateValue) {
             this.stateValue = Objects.requireNonNull(stateValue);
             return this;
         }

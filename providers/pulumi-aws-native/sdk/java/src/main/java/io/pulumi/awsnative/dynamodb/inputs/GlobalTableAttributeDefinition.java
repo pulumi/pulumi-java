@@ -60,12 +60,12 @@ public final class GlobalTableAttributeDefinition extends io.pulumi.resources.In
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeType(String attributeType) {
+        public Builder attributeType(String attributeType) {
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
         }

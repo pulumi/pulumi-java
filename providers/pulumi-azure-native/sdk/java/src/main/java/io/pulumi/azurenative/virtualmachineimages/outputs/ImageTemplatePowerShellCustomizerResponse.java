@@ -56,16 +56,16 @@ public final class ImageTemplatePowerShellCustomizerResponse {
      */
     private final @Nullable List<Integer> validExitCodes;
 
-    @OutputCustomType.Constructor({"inline","name","runAsSystem","runElevated","scriptUri","sha256Checksum","type","validExitCodes"})
+    @OutputCustomType.Constructor
     private ImageTemplatePowerShellCustomizerResponse(
-        @Nullable List<String> inline,
-        @Nullable String name,
-        @Nullable Boolean runAsSystem,
-        @Nullable Boolean runElevated,
-        @Nullable String scriptUri,
-        @Nullable String sha256Checksum,
-        String type,
-        @Nullable List<Integer> validExitCodes) {
+        @OutputCustomType.Parameter("inline") @Nullable List<String> inline,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("runAsSystem") @Nullable Boolean runAsSystem,
+        @OutputCustomType.Parameter("runElevated") @Nullable Boolean runElevated,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri,
+        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validExitCodes") @Nullable List<Integer> validExitCodes) {
         this.inline = inline;
         this.name = name;
         this.runAsSystem = runAsSystem;
@@ -168,42 +168,42 @@ public final class ImageTemplatePowerShellCustomizerResponse {
     	      this.validExitCodes = defaults.validExitCodes;
         }
 
-        public Builder setInline(@Nullable List<String> inline) {
+        public Builder inline(@Nullable List<String> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRunAsSystem(@Nullable Boolean runAsSystem) {
+        public Builder runAsSystem(@Nullable Boolean runAsSystem) {
             this.runAsSystem = runAsSystem;
             return this;
         }
 
-        public Builder setRunElevated(@Nullable Boolean runElevated) {
+        public Builder runElevated(@Nullable Boolean runElevated) {
             this.runElevated = runElevated;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }
 
-        public Builder setSha256Checksum(@Nullable String sha256Checksum) {
+        public Builder sha256Checksum(@Nullable String sha256Checksum) {
             this.sha256Checksum = sha256Checksum;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidExitCodes(@Nullable List<Integer> validExitCodes) {
+        public Builder validExitCodes(@Nullable List<Integer> validExitCodes) {
             this.validExitCodes = validExitCodes;
             return this;
         }

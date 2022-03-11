@@ -19,13 +19,13 @@ public final class CertificateAuthorityCrlConfiguration {
     private final @Nullable String s3BucketName;
     private final @Nullable String s3ObjectAcl;
 
-    @OutputCustomType.Constructor({"customCname","enabled","expirationInDays","s3BucketName","s3ObjectAcl"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityCrlConfiguration(
-        @Nullable String customCname,
-        @Nullable Boolean enabled,
-        @Nullable Integer expirationInDays,
-        @Nullable String s3BucketName,
-        @Nullable String s3ObjectAcl) {
+        @OutputCustomType.Parameter("customCname") @Nullable String customCname,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @OutputCustomType.Parameter("s3BucketName") @Nullable String s3BucketName,
+        @OutputCustomType.Parameter("s3ObjectAcl") @Nullable String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
         this.expirationInDays = expirationInDays;
@@ -77,27 +77,27 @@ public final class CertificateAuthorityCrlConfiguration {
     	      this.s3ObjectAcl = defaults.s3ObjectAcl;
         }
 
-        public Builder setCustomCname(@Nullable String customCname) {
+        public Builder customCname(@Nullable String customCname) {
             this.customCname = customCname;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setS3BucketName(@Nullable String s3BucketName) {
+        public Builder s3BucketName(@Nullable String s3BucketName) {
             this.s3BucketName = s3BucketName;
             return this;
         }
 
-        public Builder setS3ObjectAcl(@Nullable String s3ObjectAcl) {
+        public Builder s3ObjectAcl(@Nullable String s3ObjectAcl) {
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }

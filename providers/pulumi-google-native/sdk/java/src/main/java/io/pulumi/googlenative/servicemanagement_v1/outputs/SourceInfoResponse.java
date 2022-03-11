@@ -17,8 +17,8 @@ public final class SourceInfoResponse {
      */
     private final List<Map<String,String>> sourceFiles;
 
-    @OutputCustomType.Constructor({"sourceFiles"})
-    private SourceInfoResponse(List<Map<String,String>> sourceFiles) {
+    @OutputCustomType.Constructor
+    private SourceInfoResponse(@OutputCustomType.Parameter("sourceFiles") List<Map<String,String>> sourceFiles) {
         this.sourceFiles = sourceFiles;
     }
 
@@ -50,7 +50,7 @@ public final class SourceInfoResponse {
     	      this.sourceFiles = defaults.sourceFiles;
         }
 
-        public Builder setSourceFiles(List<Map<String,String>> sourceFiles) {
+        public Builder sourceFiles(List<Map<String,String>> sourceFiles) {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }

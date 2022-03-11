@@ -14,10 +14,10 @@ public final class SubscriptionRegisteredFeaturesResponse {
     private final @Nullable String name;
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"name","state"})
+    @OutputCustomType.Constructor
     private SubscriptionRegisteredFeaturesResponse(
-        @Nullable String name,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.name = name;
         this.state = state;
     }
@@ -51,12 +51,12 @@ public final class SubscriptionRegisteredFeaturesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

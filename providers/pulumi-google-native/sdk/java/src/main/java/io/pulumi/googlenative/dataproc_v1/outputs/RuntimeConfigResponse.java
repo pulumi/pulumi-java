@@ -26,11 +26,11 @@ public final class RuntimeConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"containerImage","properties","version"})
+    @OutputCustomType.Constructor
     private RuntimeConfigResponse(
-        String containerImage,
-        Map<String,String> properties,
-        String version) {
+        @OutputCustomType.Parameter("containerImage") String containerImage,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties,
+        @OutputCustomType.Parameter("version") String version) {
         this.containerImage = containerImage;
         this.properties = properties;
         this.version = version;
@@ -82,17 +82,17 @@ public final class RuntimeConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContainerImage(String containerImage) {
+        public Builder containerImage(String containerImage) {
             this.containerImage = Objects.requireNonNull(containerImage);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

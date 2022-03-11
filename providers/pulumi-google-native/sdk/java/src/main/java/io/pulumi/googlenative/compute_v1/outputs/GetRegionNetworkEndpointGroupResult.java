@@ -100,25 +100,25 @@ public final class GetRegionNetworkEndpointGroupResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"annotations","appEngine","cloudFunction","cloudRun","creationTimestamp","defaultPort","description","kind","name","network","networkEndpointType","pscTargetService","region","selfLink","size","subnetwork","zone"})
+    @OutputCustomType.Constructor
     private GetRegionNetworkEndpointGroupResult(
-        Map<String,String> annotations,
-        NetworkEndpointGroupAppEngineResponse appEngine,
-        NetworkEndpointGroupCloudFunctionResponse cloudFunction,
-        NetworkEndpointGroupCloudRunResponse cloudRun,
-        String creationTimestamp,
-        Integer defaultPort,
-        String description,
-        String kind,
-        String name,
-        String network,
-        String networkEndpointType,
-        String pscTargetService,
-        String region,
-        String selfLink,
-        Integer size,
-        String subnetwork,
-        String zone) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("appEngine") NetworkEndpointGroupAppEngineResponse appEngine,
+        @OutputCustomType.Parameter("cloudFunction") NetworkEndpointGroupCloudFunctionResponse cloudFunction,
+        @OutputCustomType.Parameter("cloudRun") NetworkEndpointGroupCloudRunResponse cloudRun,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @OutputCustomType.Parameter("pscTargetService") String pscTargetService,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.annotations = annotations;
         this.appEngine = appEngine;
         this.cloudFunction = cloudFunction;
@@ -310,87 +310,87 @@ public final class GetRegionNetworkEndpointGroupResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setAppEngine(NetworkEndpointGroupAppEngineResponse appEngine) {
+        public Builder appEngine(NetworkEndpointGroupAppEngineResponse appEngine) {
             this.appEngine = Objects.requireNonNull(appEngine);
             return this;
         }
 
-        public Builder setCloudFunction(NetworkEndpointGroupCloudFunctionResponse cloudFunction) {
+        public Builder cloudFunction(NetworkEndpointGroupCloudFunctionResponse cloudFunction) {
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(NetworkEndpointGroupCloudRunResponse cloudRun) {
+        public Builder cloudRun(NetworkEndpointGroupCloudRunResponse cloudRun) {
             this.cloudRun = Objects.requireNonNull(cloudRun);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDefaultPort(Integer defaultPort) {
+        public Builder defaultPort(Integer defaultPort) {
             this.defaultPort = Objects.requireNonNull(defaultPort);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkEndpointType(String networkEndpointType) {
+        public Builder networkEndpointType(String networkEndpointType) {
             this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
             return this;
         }
 
-        public Builder setPscTargetService(String pscTargetService) {
+        public Builder pscTargetService(String pscTargetService) {
             this.pscTargetService = Objects.requireNonNull(pscTargetService);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

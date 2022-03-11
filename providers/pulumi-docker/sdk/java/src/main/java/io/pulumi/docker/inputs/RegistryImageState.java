@@ -121,52 +121,52 @@ public final class RegistryImageState extends io.pulumi.resources.ResourceArgs {
     	      this.sha256Digest = defaults.sha256Digest;
         }
 
-        public Builder setBuild(@Nullable Input<RegistryImageBuildGetArgs> build) {
+        public Builder build(@Nullable Input<RegistryImageBuildGetArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable RegistryImageBuildGetArgs build) {
+        public Builder build(@Nullable RegistryImageBuildGetArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setInsecureSkipVerify(@Nullable Input<Boolean> insecureSkipVerify) {
+        public Builder insecureSkipVerify(@Nullable Input<Boolean> insecureSkipVerify) {
             this.insecureSkipVerify = insecureSkipVerify;
             return this;
         }
 
-        public Builder setInsecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
+        public Builder insecureSkipVerify(@Nullable Boolean insecureSkipVerify) {
             this.insecureSkipVerify = Input.ofNullable(insecureSkipVerify);
             return this;
         }
 
-        public Builder setKeepRemotely(@Nullable Input<Boolean> keepRemotely) {
+        public Builder keepRemotely(@Nullable Input<Boolean> keepRemotely) {
             this.keepRemotely = keepRemotely;
             return this;
         }
 
-        public Builder setKeepRemotely(@Nullable Boolean keepRemotely) {
+        public Builder keepRemotely(@Nullable Boolean keepRemotely) {
             this.keepRemotely = Input.ofNullable(keepRemotely);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSha256Digest(@Nullable Input<String> sha256Digest) {
+        public Builder sha256Digest(@Nullable Input<String> sha256Digest) {
             this.sha256Digest = sha256Digest;
             return this;
         }
 
-        public Builder setSha256Digest(@Nullable String sha256Digest) {
+        public Builder sha256Digest(@Nullable String sha256Digest) {
             this.sha256Digest = Input.ofNullable(sha256Digest);
             return this;
         }

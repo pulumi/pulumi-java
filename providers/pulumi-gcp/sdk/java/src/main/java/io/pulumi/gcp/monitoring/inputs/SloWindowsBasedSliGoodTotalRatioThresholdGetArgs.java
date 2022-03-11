@@ -92,32 +92,32 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance) {
             this.basicSliPerformance = basicSliPerformance;
             return this;
         }
 
-        public Builder setBasicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs basicSliPerformance) {
+        public Builder basicSliPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs basicSliPerformance) {
             this.basicSliPerformance = Input.ofNullable(basicSliPerformance);
             return this;
         }
 
-        public Builder setPerformance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance) {
+        public Builder performance(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance) {
             this.performance = performance;
             return this;
         }
 
-        public Builder setPerformance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs performance) {
+        public Builder performance(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs performance) {
             this.performance = Input.ofNullable(performance);
             return this;
         }
 
-        public Builder setThreshold(@Nullable Input<Double> threshold) {
+        public Builder threshold(@Nullable Input<Double> threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = Input.ofNullable(threshold);
             return this;
         }

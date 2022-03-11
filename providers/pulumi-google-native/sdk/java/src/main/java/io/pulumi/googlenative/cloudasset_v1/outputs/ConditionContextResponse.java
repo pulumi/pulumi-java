@@ -15,8 +15,8 @@ public final class ConditionContextResponse {
      */
     private final String accessTime;
 
-    @OutputCustomType.Constructor({"accessTime"})
-    private ConditionContextResponse(String accessTime) {
+    @OutputCustomType.Constructor
+    private ConditionContextResponse(@OutputCustomType.Parameter("accessTime") String accessTime) {
         this.accessTime = accessTime;
     }
 
@@ -48,7 +48,7 @@ public final class ConditionContextResponse {
     	      this.accessTime = defaults.accessTime;
         }
 
-        public Builder setAccessTime(String accessTime) {
+        public Builder accessTime(String accessTime) {
             this.accessTime = Objects.requireNonNull(accessTime);
             return this;
         }

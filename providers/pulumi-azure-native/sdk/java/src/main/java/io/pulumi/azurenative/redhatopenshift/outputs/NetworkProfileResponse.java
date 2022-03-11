@@ -22,10 +22,10 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable String serviceCidr;
 
-    @OutputCustomType.Constructor({"podCidr","serviceCidr"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String podCidr,
-        @Nullable String serviceCidr) {
+        @OutputCustomType.Parameter("podCidr") @Nullable String podCidr,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr) {
         this.podCidr = podCidr;
         this.serviceCidr = serviceCidr;
     }
@@ -67,12 +67,12 @@ public final class NetworkProfileResponse {
     	      this.serviceCidr = defaults.serviceCidr;
         }
 
-        public Builder setPodCidr(@Nullable String podCidr) {
+        public Builder podCidr(@Nullable String podCidr) {
             this.podCidr = podCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }

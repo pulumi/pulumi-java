@@ -202,102 +202,102 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setDirectoryUserId(@Nullable Input<String> directoryUserId) {
+        public Builder directoryUserId(@Nullable Input<String> directoryUserId) {
             this.directoryUserId = directoryUserId;
             return this;
         }
 
-        public Builder setDirectoryUserId(@Nullable String directoryUserId) {
+        public Builder directoryUserId(@Nullable String directoryUserId) {
             this.directoryUserId = Input.ofNullable(directoryUserId);
             return this;
         }
 
-        public Builder setHierarchyGroupArn(@Nullable Input<String> hierarchyGroupArn) {
+        public Builder hierarchyGroupArn(@Nullable Input<String> hierarchyGroupArn) {
             this.hierarchyGroupArn = hierarchyGroupArn;
             return this;
         }
 
-        public Builder setHierarchyGroupArn(@Nullable String hierarchyGroupArn) {
+        public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
             this.hierarchyGroupArn = Input.ofNullable(hierarchyGroupArn);
             return this;
         }
 
-        public Builder setIdentityInfo(@Nullable Input<UserIdentityInfoArgs> identityInfo) {
+        public Builder identityInfo(@Nullable Input<UserIdentityInfoArgs> identityInfo) {
             this.identityInfo = identityInfo;
             return this;
         }
 
-        public Builder setIdentityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
+        public Builder identityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
             this.identityInfo = Input.ofNullable(identityInfo);
             return this;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setPhoneConfig(Input<UserPhoneConfigArgs> phoneConfig) {
+        public Builder phoneConfig(Input<UserPhoneConfigArgs> phoneConfig) {
             this.phoneConfig = Objects.requireNonNull(phoneConfig);
             return this;
         }
 
-        public Builder setPhoneConfig(UserPhoneConfigArgs phoneConfig) {
+        public Builder phoneConfig(UserPhoneConfigArgs phoneConfig) {
             this.phoneConfig = Input.of(Objects.requireNonNull(phoneConfig));
             return this;
         }
 
-        public Builder setRoutingProfileArn(Input<String> routingProfileArn) {
+        public Builder routingProfileArn(Input<String> routingProfileArn) {
             this.routingProfileArn = Objects.requireNonNull(routingProfileArn);
             return this;
         }
 
-        public Builder setRoutingProfileArn(String routingProfileArn) {
+        public Builder routingProfileArn(String routingProfileArn) {
             this.routingProfileArn = Input.of(Objects.requireNonNull(routingProfileArn));
             return this;
         }
 
-        public Builder setSecurityProfileArns(Input<List<String>> securityProfileArns) {
+        public Builder securityProfileArns(Input<List<String>> securityProfileArns) {
             this.securityProfileArns = Objects.requireNonNull(securityProfileArns);
             return this;
         }
 
-        public Builder setSecurityProfileArns(List<String> securityProfileArns) {
+        public Builder securityProfileArns(List<String> securityProfileArns) {
             this.securityProfileArns = Input.of(Objects.requireNonNull(securityProfileArns));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<UserTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<UserTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UserTagArgs> tags) {
+        public Builder tags(@Nullable List<UserTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

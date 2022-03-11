@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"fullMatch","value"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2alphaConditionQueryTermResponse(
-        Boolean fullMatch,
-        String value) {
+        @OutputCustomType.Parameter("fullMatch") Boolean fullMatch,
+        @OutputCustomType.Parameter("value") String value) {
         this.fullMatch = fullMatch;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2alphaConditionQueryTermResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFullMatch(Boolean fullMatch) {
+        public Builder fullMatch(Boolean fullMatch) {
             this.fullMatch = Objects.requireNonNull(fullMatch);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

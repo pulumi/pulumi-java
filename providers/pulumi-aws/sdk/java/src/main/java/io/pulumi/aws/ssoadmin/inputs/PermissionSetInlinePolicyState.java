@@ -86,32 +86,32 @@ public final class PermissionSetInlinePolicyState extends io.pulumi.resources.Re
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder setInlinePolicy(@Nullable Input<String> inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Input<String> inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
 
-        public Builder setInlinePolicy(@Nullable String inlinePolicy) {
+        public Builder inlinePolicy(@Nullable String inlinePolicy) {
             this.inlinePolicy = Input.ofNullable(inlinePolicy);
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable Input<String> instanceArn) {
+        public Builder instanceArn(@Nullable Input<String> instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = Input.ofNullable(instanceArn);
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable Input<String> permissionSetArn) {
+        public Builder permissionSetArn(@Nullable Input<String> permissionSetArn) {
             this.permissionSetArn = permissionSetArn;
             return this;
         }
 
-        public Builder setPermissionSetArn(@Nullable String permissionSetArn) {
+        public Builder permissionSetArn(@Nullable String permissionSetArn) {
             this.permissionSetArn = Input.ofNullable(permissionSetArn);
             return this;
         }

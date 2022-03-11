@@ -188,92 +188,92 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.phone = defaults.phone;
         }
 
-        public Builder setAddressMailing(@Nullable Input<AddressArgs> addressMailing) {
+        public Builder addressMailing(@Nullable Input<AddressArgs> addressMailing) {
             this.addressMailing = addressMailing;
             return this;
         }
 
-        public Builder setAddressMailing(@Nullable AddressArgs addressMailing) {
+        public Builder addressMailing(@Nullable AddressArgs addressMailing) {
             this.addressMailing = Input.ofNullable(addressMailing);
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setFax(@Nullable Input<String> fax) {
+        public Builder fax(@Nullable Input<String> fax) {
             this.fax = fax;
             return this;
         }
 
-        public Builder setFax(@Nullable String fax) {
+        public Builder fax(@Nullable String fax) {
             this.fax = Input.ofNullable(fax);
             return this;
         }
 
-        public Builder setJobTitle(@Nullable Input<String> jobTitle) {
+        public Builder jobTitle(@Nullable Input<String> jobTitle) {
             this.jobTitle = jobTitle;
             return this;
         }
 
-        public Builder setJobTitle(@Nullable String jobTitle) {
+        public Builder jobTitle(@Nullable String jobTitle) {
             this.jobTitle = Input.ofNullable(jobTitle);
             return this;
         }
 
-        public Builder setNameFirst(Input<String> nameFirst) {
+        public Builder nameFirst(Input<String> nameFirst) {
             this.nameFirst = Objects.requireNonNull(nameFirst);
             return this;
         }
 
-        public Builder setNameFirst(String nameFirst) {
+        public Builder nameFirst(String nameFirst) {
             this.nameFirst = Input.of(Objects.requireNonNull(nameFirst));
             return this;
         }
 
-        public Builder setNameLast(Input<String> nameLast) {
+        public Builder nameLast(Input<String> nameLast) {
             this.nameLast = Objects.requireNonNull(nameLast);
             return this;
         }
 
-        public Builder setNameLast(String nameLast) {
+        public Builder nameLast(String nameLast) {
             this.nameLast = Input.of(Objects.requireNonNull(nameLast));
             return this;
         }
 
-        public Builder setNameMiddle(@Nullable Input<String> nameMiddle) {
+        public Builder nameMiddle(@Nullable Input<String> nameMiddle) {
             this.nameMiddle = nameMiddle;
             return this;
         }
 
-        public Builder setNameMiddle(@Nullable String nameMiddle) {
+        public Builder nameMiddle(@Nullable String nameMiddle) {
             this.nameMiddle = Input.ofNullable(nameMiddle);
             return this;
         }
 
-        public Builder setOrganization(@Nullable Input<String> organization) {
+        public Builder organization(@Nullable Input<String> organization) {
             this.organization = organization;
             return this;
         }
 
-        public Builder setOrganization(@Nullable String organization) {
+        public Builder organization(@Nullable String organization) {
             this.organization = Input.ofNullable(organization);
             return this;
         }
 
-        public Builder setPhone(Input<String> phone) {
+        public Builder phone(Input<String> phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Input.of(Objects.requireNonNull(phone));
             return this;
         }

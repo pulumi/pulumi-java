@@ -21,10 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
      */
     private final String onSourceDiskDelete;
 
-    @OutputCustomType.Constructor({"maxRetentionDays","onSourceDiskDelete"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse(
-        Integer maxRetentionDays,
-        String onSourceDiskDelete) {
+        @OutputCustomType.Parameter("maxRetentionDays") Integer maxRetentionDays,
+        @OutputCustomType.Parameter("onSourceDiskDelete") String onSourceDiskDelete) {
         this.maxRetentionDays = maxRetentionDays;
         this.onSourceDiskDelete = onSourceDiskDelete;
     }
@@ -66,12 +66,12 @@ public final class ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse {
     	      this.onSourceDiskDelete = defaults.onSourceDiskDelete;
         }
 
-        public Builder setMaxRetentionDays(Integer maxRetentionDays) {
+        public Builder maxRetentionDays(Integer maxRetentionDays) {
             this.maxRetentionDays = Objects.requireNonNull(maxRetentionDays);
             return this;
         }
 
-        public Builder setOnSourceDiskDelete(String onSourceDiskDelete) {
+        public Builder onSourceDiskDelete(String onSourceDiskDelete) {
             this.onSourceDiskDelete = Objects.requireNonNull(onSourceDiskDelete);
             return this;
         }

@@ -91,32 +91,32 @@ public final class BackendServiceIAPArgs extends io.pulumi.resources.ResourceArg
     	      this.oauth2ClientSecret = defaults.oauth2ClientSecret;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setOauth2ClientId(@Nullable Input<String> oauth2ClientId) {
+        public Builder oauth2ClientId(@Nullable Input<String> oauth2ClientId) {
             this.oauth2ClientId = oauth2ClientId;
             return this;
         }
 
-        public Builder setOauth2ClientId(@Nullable String oauth2ClientId) {
+        public Builder oauth2ClientId(@Nullable String oauth2ClientId) {
             this.oauth2ClientId = Input.ofNullable(oauth2ClientId);
             return this;
         }
 
-        public Builder setOauth2ClientSecret(@Nullable Input<String> oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(@Nullable Input<String> oauth2ClientSecret) {
             this.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
 
-        public Builder setOauth2ClientSecret(@Nullable String oauth2ClientSecret) {
+        public Builder oauth2ClientSecret(@Nullable String oauth2ClientSecret) {
             this.oauth2ClientSecret = Input.ofNullable(oauth2ClientSecret);
             return this;
         }

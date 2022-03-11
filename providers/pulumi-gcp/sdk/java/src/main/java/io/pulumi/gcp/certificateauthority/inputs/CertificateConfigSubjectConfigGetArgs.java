@@ -73,22 +73,22 @@ public final class CertificateConfigSubjectConfigGetArgs extends io.pulumi.resou
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setSubject(Input<CertificateConfigSubjectConfigSubjectGetArgs> subject) {
+        public Builder subject(Input<CertificateConfigSubjectConfigSubjectGetArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(CertificateConfigSubjectConfigSubjectGetArgs subject) {
+        public Builder subject(CertificateConfigSubjectConfigSubjectGetArgs subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
+        public Builder subjectAltName(@Nullable Input<CertificateConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
             this.subjectAltName = subjectAltName;
             return this;
         }
 
-        public Builder setSubjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
+        public Builder subjectAltName(@Nullable CertificateConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }

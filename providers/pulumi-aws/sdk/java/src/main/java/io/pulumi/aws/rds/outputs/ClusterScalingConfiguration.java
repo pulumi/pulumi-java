@@ -39,13 +39,13 @@ public final class ClusterScalingConfiguration {
      */
     private final @Nullable String timeoutAction;
 
-    @OutputCustomType.Constructor({"autoPause","maxCapacity","minCapacity","secondsUntilAutoPause","timeoutAction"})
+    @OutputCustomType.Constructor
     private ClusterScalingConfiguration(
-        @Nullable Boolean autoPause,
-        @Nullable Integer maxCapacity,
-        @Nullable Integer minCapacity,
-        @Nullable Integer secondsUntilAutoPause,
-        @Nullable String timeoutAction) {
+        @OutputCustomType.Parameter("autoPause") @Nullable Boolean autoPause,
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") @Nullable Integer minCapacity,
+        @OutputCustomType.Parameter("secondsUntilAutoPause") @Nullable Integer secondsUntilAutoPause,
+        @OutputCustomType.Parameter("timeoutAction") @Nullable String timeoutAction) {
         this.autoPause = autoPause;
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
@@ -117,27 +117,27 @@ public final class ClusterScalingConfiguration {
     	      this.timeoutAction = defaults.timeoutAction;
         }
 
-        public Builder setAutoPause(@Nullable Boolean autoPause) {
+        public Builder autoPause(@Nullable Boolean autoPause) {
             this.autoPause = autoPause;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setSecondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
+        public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
             this.secondsUntilAutoPause = secondsUntilAutoPause;
             return this;
         }
 
-        public Builder setTimeoutAction(@Nullable String timeoutAction) {
+        public Builder timeoutAction(@Nullable String timeoutAction) {
             this.timeoutAction = timeoutAction;
             return this;
         }

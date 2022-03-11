@@ -34,11 +34,11 @@ public final class IntentConfirmationPrompt {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"maxAttempts","messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentConfirmationPrompt(
-        Integer maxAttempts,
-        List<IntentConfirmationPromptMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("messages") List<IntentConfirmationPromptMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.maxAttempts = maxAttempts;
         this.messages = messages;
         this.responseCard = responseCard;
@@ -94,17 +94,17 @@ public final class IntentConfirmationPrompt {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMaxAttempts(Integer maxAttempts) {
+        public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
-        public Builder setMessages(List<IntentConfirmationPromptMessage> messages) {
+        public Builder messages(List<IntentConfirmationPromptMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

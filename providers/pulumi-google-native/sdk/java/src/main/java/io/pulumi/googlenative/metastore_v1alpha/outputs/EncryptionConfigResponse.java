@@ -15,8 +15,8 @@ public final class EncryptionConfigResponse {
      */
     private final String kmsKey;
 
-    @OutputCustomType.Constructor({"kmsKey"})
-    private EncryptionConfigResponse(String kmsKey) {
+    @OutputCustomType.Constructor
+    private EncryptionConfigResponse(@OutputCustomType.Parameter("kmsKey") String kmsKey) {
         this.kmsKey = kmsKey;
     }
 
@@ -48,7 +48,7 @@ public final class EncryptionConfigResponse {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }

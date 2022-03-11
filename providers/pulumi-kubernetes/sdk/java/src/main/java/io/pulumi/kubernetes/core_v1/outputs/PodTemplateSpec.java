@@ -23,10 +23,10 @@ public final class PodTemplateSpec {
      */
     private final @Nullable PodSpec spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private PodTemplateSpec(
-        @Nullable ObjectMeta metadata,
-        @Nullable PodSpec spec) {
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable PodSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }
@@ -68,12 +68,12 @@ public final class PodTemplateSpec {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable PodSpec spec) {
+        public Builder spec(@Nullable PodSpec spec) {
             this.spec = spec;
             return this;
         }

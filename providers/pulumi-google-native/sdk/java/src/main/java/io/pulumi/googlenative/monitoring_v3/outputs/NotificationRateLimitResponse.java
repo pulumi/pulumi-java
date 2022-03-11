@@ -15,8 +15,8 @@ public final class NotificationRateLimitResponse {
      */
     private final String period;
 
-    @OutputCustomType.Constructor({"period"})
-    private NotificationRateLimitResponse(String period) {
+    @OutputCustomType.Constructor
+    private NotificationRateLimitResponse(@OutputCustomType.Parameter("period") String period) {
         this.period = period;
     }
 
@@ -48,7 +48,7 @@ public final class NotificationRateLimitResponse {
     	      this.period = defaults.period;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }

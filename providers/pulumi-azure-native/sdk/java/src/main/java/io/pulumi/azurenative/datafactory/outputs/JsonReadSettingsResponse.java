@@ -27,10 +27,10 @@ public final class JsonReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compressionProperties","type"})
+    @OutputCustomType.Constructor
     private JsonReadSettingsResponse(
-        @Nullable Object compressionProperties,
-        String type) {
+        @OutputCustomType.Parameter("compressionProperties") @Nullable Object compressionProperties,
+        @OutputCustomType.Parameter("type") String type) {
         this.compressionProperties = compressionProperties;
         this.type = type;
     }
@@ -73,12 +73,12 @@ public final class JsonReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

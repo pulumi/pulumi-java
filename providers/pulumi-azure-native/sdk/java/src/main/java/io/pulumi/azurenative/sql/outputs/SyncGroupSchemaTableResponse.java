@@ -24,10 +24,10 @@ public final class SyncGroupSchemaTableResponse {
      */
     private final @Nullable String quotedName;
 
-    @OutputCustomType.Constructor({"columns","quotedName"})
+    @OutputCustomType.Constructor
     private SyncGroupSchemaTableResponse(
-        @Nullable List<SyncGroupSchemaTableColumnResponse> columns,
-        @Nullable String quotedName) {
+        @OutputCustomType.Parameter("columns") @Nullable List<SyncGroupSchemaTableColumnResponse> columns,
+        @OutputCustomType.Parameter("quotedName") @Nullable String quotedName) {
         this.columns = columns;
         this.quotedName = quotedName;
     }
@@ -69,12 +69,12 @@ public final class SyncGroupSchemaTableResponse {
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder setColumns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
+        public Builder columns(@Nullable List<SyncGroupSchemaTableColumnResponse> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setQuotedName(@Nullable String quotedName) {
+        public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = quotedName;
             return this;
         }

@@ -32,12 +32,12 @@ public final class CertificateDomainValidationOption {
      */
     private final @Nullable String resourceRecordValue;
 
-    @OutputCustomType.Constructor({"domainName","resourceRecordName","resourceRecordType","resourceRecordValue"})
+    @OutputCustomType.Constructor
     private CertificateDomainValidationOption(
-        @Nullable String domainName,
-        @Nullable String resourceRecordName,
-        @Nullable String resourceRecordType,
-        @Nullable String resourceRecordValue) {
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("resourceRecordName") @Nullable String resourceRecordName,
+        @OutputCustomType.Parameter("resourceRecordType") @Nullable String resourceRecordType,
+        @OutputCustomType.Parameter("resourceRecordValue") @Nullable String resourceRecordValue) {
         this.domainName = domainName;
         this.resourceRecordName = resourceRecordName;
         this.resourceRecordType = resourceRecordType;
@@ -99,22 +99,22 @@ public final class CertificateDomainValidationOption {
     	      this.resourceRecordValue = defaults.resourceRecordValue;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setResourceRecordName(@Nullable String resourceRecordName) {
+        public Builder resourceRecordName(@Nullable String resourceRecordName) {
             this.resourceRecordName = resourceRecordName;
             return this;
         }
 
-        public Builder setResourceRecordType(@Nullable String resourceRecordType) {
+        public Builder resourceRecordType(@Nullable String resourceRecordType) {
             this.resourceRecordType = resourceRecordType;
             return this;
         }
 
-        public Builder setResourceRecordValue(@Nullable String resourceRecordValue) {
+        public Builder resourceRecordValue(@Nullable String resourceRecordValue) {
             this.resourceRecordValue = resourceRecordValue;
             return this;
         }

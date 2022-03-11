@@ -83,22 +83,22 @@ public final class GetPolicyResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"createdDate","description","evaluatorType","factData","factName","id","location","name","provisioningState","status","tags","threshold","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        String createdDate,
-        @Nullable String description,
-        @Nullable String evaluatorType,
-        @Nullable String factData,
-        @Nullable String factName,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String threshold,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("evaluatorType") @Nullable String evaluatorType,
+        @OutputCustomType.Parameter("factData") @Nullable String factData,
+        @OutputCustomType.Parameter("factName") @Nullable String factName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("threshold") @Nullable String threshold,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.createdDate = createdDate;
         this.description = description;
         this.evaluatorType = evaluatorType;
@@ -260,72 +260,72 @@ public final class GetPolicyResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEvaluatorType(@Nullable String evaluatorType) {
+        public Builder evaluatorType(@Nullable String evaluatorType) {
             this.evaluatorType = evaluatorType;
             return this;
         }
 
-        public Builder setFactData(@Nullable String factData) {
+        public Builder factData(@Nullable String factData) {
             this.factData = factData;
             return this;
         }
 
-        public Builder setFactName(@Nullable String factName) {
+        public Builder factName(@Nullable String factName) {
             this.factName = factName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThreshold(@Nullable String threshold) {
+        public Builder threshold(@Nullable String threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

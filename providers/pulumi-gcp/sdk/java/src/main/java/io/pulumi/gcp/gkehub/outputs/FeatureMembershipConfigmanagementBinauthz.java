@@ -17,8 +17,8 @@ public final class FeatureMembershipConfigmanagementBinauthz {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private FeatureMembershipConfigmanagementBinauthz(@Nullable Boolean enabled) {
+    @OutputCustomType.Constructor
+    private FeatureMembershipConfigmanagementBinauthz(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -50,7 +50,7 @@ public final class FeatureMembershipConfigmanagementBinauthz {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

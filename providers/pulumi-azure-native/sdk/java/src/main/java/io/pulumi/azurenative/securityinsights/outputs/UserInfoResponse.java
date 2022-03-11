@@ -27,11 +27,11 @@ public final class UserInfoResponse {
      */
     private final @Nullable String objectId;
 
-    @OutputCustomType.Constructor({"email","name","objectId"})
+    @OutputCustomType.Constructor
     private UserInfoResponse(
-        String email,
-        String name,
-        @Nullable String objectId) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId) {
         this.email = email;
         this.name = name;
         this.objectId = objectId;
@@ -83,17 +83,17 @@ public final class UserInfoResponse {
     	      this.objectId = defaults.objectId;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }

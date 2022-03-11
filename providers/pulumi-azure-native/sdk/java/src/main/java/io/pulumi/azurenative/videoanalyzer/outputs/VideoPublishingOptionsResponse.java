@@ -22,10 +22,10 @@ public final class VideoPublishingOptionsResponse {
      */
     private final @Nullable String disableRtspPublishing;
 
-    @OutputCustomType.Constructor({"disableArchive","disableRtspPublishing"})
+    @OutputCustomType.Constructor
     private VideoPublishingOptionsResponse(
-        @Nullable String disableArchive,
-        @Nullable String disableRtspPublishing) {
+        @OutputCustomType.Parameter("disableArchive") @Nullable String disableArchive,
+        @OutputCustomType.Parameter("disableRtspPublishing") @Nullable String disableRtspPublishing) {
         this.disableArchive = disableArchive;
         this.disableRtspPublishing = disableRtspPublishing;
     }
@@ -67,12 +67,12 @@ public final class VideoPublishingOptionsResponse {
     	      this.disableRtspPublishing = defaults.disableRtspPublishing;
         }
 
-        public Builder setDisableArchive(@Nullable String disableArchive) {
+        public Builder disableArchive(@Nullable String disableArchive) {
             this.disableArchive = disableArchive;
             return this;
         }
 
-        public Builder setDisableRtspPublishing(@Nullable String disableRtspPublishing) {
+        public Builder disableRtspPublishing(@Nullable String disableRtspPublishing) {
             this.disableRtspPublishing = disableRtspPublishing;
             return this;
         }

@@ -67,19 +67,19 @@ public final class GetEndpointResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","endpointForwardingRule","endpointIp","labels","name","network","severity","state","trafficLogs","updateTime"})
+    @OutputCustomType.Constructor
     private GetEndpointResult(
-        String createTime,
-        String description,
-        String endpointForwardingRule,
-        String endpointIp,
-        Map<String,String> labels,
-        String name,
-        String network,
-        String severity,
-        String state,
-        Boolean trafficLogs,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointForwardingRule") String endpointForwardingRule,
+        @OutputCustomType.Parameter("endpointIp") String endpointIp,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trafficLogs") Boolean trafficLogs,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.endpointForwardingRule = endpointForwardingRule;
@@ -211,57 +211,57 @@ public final class GetEndpointResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpointForwardingRule(String endpointForwardingRule) {
+        public Builder endpointForwardingRule(String endpointForwardingRule) {
             this.endpointForwardingRule = Objects.requireNonNull(endpointForwardingRule);
             return this;
         }
 
-        public Builder setEndpointIp(String endpointIp) {
+        public Builder endpointIp(String endpointIp) {
             this.endpointIp = Objects.requireNonNull(endpointIp);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrafficLogs(Boolean trafficLogs) {
+        public Builder trafficLogs(Boolean trafficLogs) {
             this.trafficLogs = Objects.requireNonNull(trafficLogs);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

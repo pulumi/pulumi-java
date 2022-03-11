@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterNodeConfigSandboxConfig {
     private final String sandboxType;
 
-    @OutputCustomType.Constructor({"sandboxType"})
-    private GetClusterNodeConfigSandboxConfig(String sandboxType) {
+    @OutputCustomType.Constructor
+    private GetClusterNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterNodeConfigSandboxConfig {
     	      this.sandboxType = defaults.sandboxType;
         }
 
-        public Builder setSandboxType(String sandboxType) {
+        public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }

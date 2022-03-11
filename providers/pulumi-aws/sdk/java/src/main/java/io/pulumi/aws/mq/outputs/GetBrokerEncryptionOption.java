@@ -13,10 +13,10 @@ public final class GetBrokerEncryptionOption {
     private final String kmsKeyId;
     private final Boolean useAwsOwnedKey;
 
-    @OutputCustomType.Constructor({"kmsKeyId","useAwsOwnedKey"})
+    @OutputCustomType.Constructor
     private GetBrokerEncryptionOption(
-        String kmsKeyId,
-        Boolean useAwsOwnedKey) {
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("useAwsOwnedKey") Boolean useAwsOwnedKey) {
         this.kmsKeyId = kmsKeyId;
         this.useAwsOwnedKey = useAwsOwnedKey;
     }
@@ -50,12 +50,12 @@ public final class GetBrokerEncryptionOption {
     	      this.useAwsOwnedKey = defaults.useAwsOwnedKey;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setUseAwsOwnedKey(Boolean useAwsOwnedKey) {
+        public Builder useAwsOwnedKey(Boolean useAwsOwnedKey) {
             this.useAwsOwnedKey = Objects.requireNonNull(useAwsOwnedKey);
             return this;
         }

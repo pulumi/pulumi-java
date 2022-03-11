@@ -90,32 +90,32 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setCertificateKey(@Nullable Input<String> certificateKey) {
+        public Builder certificateKey(@Nullable Input<String> certificateKey) {
             this.certificateKey = certificateKey;
             return this;
         }
 
-        public Builder setCertificateKey(@Nullable String certificateKey) {
+        public Builder certificateKey(@Nullable String certificateKey) {
             this.certificateKey = Input.ofNullable(certificateKey);
             return this;
         }
 
-        public Builder setMpnsCertificate(@Nullable Input<String> mpnsCertificate) {
+        public Builder mpnsCertificate(@Nullable Input<String> mpnsCertificate) {
             this.mpnsCertificate = mpnsCertificate;
             return this;
         }
 
-        public Builder setMpnsCertificate(@Nullable String mpnsCertificate) {
+        public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
             this.mpnsCertificate = Input.ofNullable(mpnsCertificate);
             return this;
         }
 
-        public Builder setThumbprint(@Nullable Input<String> thumbprint) {
+        public Builder thumbprint(@Nullable Input<String> thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = Input.ofNullable(thumbprint);
             return this;
         }

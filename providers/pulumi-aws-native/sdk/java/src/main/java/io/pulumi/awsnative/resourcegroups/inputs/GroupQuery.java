@@ -76,17 +76,17 @@ public final class GroupQuery extends io.pulumi.resources.InvokeArgs {
     	      this.tagFilters = defaults.tagFilters;
         }
 
-        public Builder setResourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
+        public Builder resourceTypeFilters(@Nullable List<String> resourceTypeFilters) {
             this.resourceTypeFilters = resourceTypeFilters;
             return this;
         }
 
-        public Builder setStackIdentifier(@Nullable String stackIdentifier) {
+        public Builder stackIdentifier(@Nullable String stackIdentifier) {
             this.stackIdentifier = stackIdentifier;
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<GroupTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<GroupTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }

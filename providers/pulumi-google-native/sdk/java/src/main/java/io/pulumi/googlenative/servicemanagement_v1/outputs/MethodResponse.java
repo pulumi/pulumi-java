@@ -48,15 +48,15 @@ public final class MethodResponse {
      */
     private final String syntax;
 
-    @OutputCustomType.Constructor({"name","options","requestStreaming","requestTypeUrl","responseStreaming","responseTypeUrl","syntax"})
+    @OutputCustomType.Constructor
     private MethodResponse(
-        String name,
-        List<OptionResponse> options,
-        Boolean requestStreaming,
-        String requestTypeUrl,
-        Boolean responseStreaming,
-        String responseTypeUrl,
-        String syntax) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("requestStreaming") Boolean requestStreaming,
+        @OutputCustomType.Parameter("requestTypeUrl") String requestTypeUrl,
+        @OutputCustomType.Parameter("responseStreaming") Boolean responseStreaming,
+        @OutputCustomType.Parameter("responseTypeUrl") String responseTypeUrl,
+        @OutputCustomType.Parameter("syntax") String syntax) {
         this.name = name;
         this.options = options;
         this.requestStreaming = requestStreaming;
@@ -148,37 +148,37 @@ public final class MethodResponse {
     	      this.syntax = defaults.syntax;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setRequestStreaming(Boolean requestStreaming) {
+        public Builder requestStreaming(Boolean requestStreaming) {
             this.requestStreaming = Objects.requireNonNull(requestStreaming);
             return this;
         }
 
-        public Builder setRequestTypeUrl(String requestTypeUrl) {
+        public Builder requestTypeUrl(String requestTypeUrl) {
             this.requestTypeUrl = Objects.requireNonNull(requestTypeUrl);
             return this;
         }
 
-        public Builder setResponseStreaming(Boolean responseStreaming) {
+        public Builder responseStreaming(Boolean responseStreaming) {
             this.responseStreaming = Objects.requireNonNull(responseStreaming);
             return this;
         }
 
-        public Builder setResponseTypeUrl(String responseTypeUrl) {
+        public Builder responseTypeUrl(String responseTypeUrl) {
             this.responseTypeUrl = Objects.requireNonNull(responseTypeUrl);
             return this;
         }
 
-        public Builder setSyntax(String syntax) {
+        public Builder syntax(String syntax) {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }

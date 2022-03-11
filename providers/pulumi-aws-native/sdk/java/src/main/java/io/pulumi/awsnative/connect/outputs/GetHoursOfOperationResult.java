@@ -50,15 +50,15 @@ public final class GetHoursOfOperationResult {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"config","description","hoursOfOperationArn","instanceArn","name","tags","timeZone"})
+    @OutputCustomType.Constructor
     private GetHoursOfOperationResult(
-        @Nullable List<HoursOfOperationConfig> config,
-        @Nullable String description,
-        @Nullable String hoursOfOperationArn,
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable List<HoursOfOperationTag> tags,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("config") @Nullable List<HoursOfOperationConfig> config,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hoursOfOperationArn") @Nullable String hoursOfOperationArn,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<HoursOfOperationTag> tags,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.config = config;
         this.description = description;
         this.hoursOfOperationArn = hoursOfOperationArn;
@@ -150,37 +150,37 @@ public final class GetHoursOfOperationResult {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setConfig(@Nullable List<HoursOfOperationConfig> config) {
+        public Builder config(@Nullable List<HoursOfOperationConfig> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHoursOfOperationArn(@Nullable String hoursOfOperationArn) {
+        public Builder hoursOfOperationArn(@Nullable String hoursOfOperationArn) {
             this.hoursOfOperationArn = hoursOfOperationArn;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<HoursOfOperationTag> tags) {
+        public Builder tags(@Nullable List<HoursOfOperationTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

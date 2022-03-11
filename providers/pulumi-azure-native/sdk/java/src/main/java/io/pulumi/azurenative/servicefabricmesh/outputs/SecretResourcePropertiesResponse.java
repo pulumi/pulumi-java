@@ -43,14 +43,14 @@ public final class SecretResourcePropertiesResponse {
      */
     private final String statusDetails;
 
-    @OutputCustomType.Constructor({"contentType","description","kind","provisioningState","status","statusDetails"})
+    @OutputCustomType.Constructor
     private SecretResourcePropertiesResponse(
-        @Nullable String contentType,
-        @Nullable String description,
-        String kind,
-        String provisioningState,
-        String status,
-        String statusDetails) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") String statusDetails) {
         this.contentType = contentType;
         this.description = description;
         this.kind = kind;
@@ -133,32 +133,32 @@ public final class SecretResourcePropertiesResponse {
     	      this.statusDetails = defaults.statusDetails;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(String statusDetails) {
+        public Builder statusDetails(String statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }

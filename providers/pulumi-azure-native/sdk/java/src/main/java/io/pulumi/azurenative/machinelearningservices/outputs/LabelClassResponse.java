@@ -23,10 +23,10 @@ public final class LabelClassResponse {
      */
     private final @Nullable Map<String,LabelClassResponse> subclasses;
 
-    @OutputCustomType.Constructor({"displayName","subclasses"})
+    @OutputCustomType.Constructor
     private LabelClassResponse(
-        @Nullable String displayName,
-        @Nullable Map<String,LabelClassResponse> subclasses) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("subclasses") @Nullable Map<String,LabelClassResponse> subclasses) {
         this.displayName = displayName;
         this.subclasses = subclasses;
     }
@@ -68,12 +68,12 @@ public final class LabelClassResponse {
     	      this.subclasses = defaults.subclasses;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setSubclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
+        public Builder subclasses(@Nullable Map<String,LabelClassResponse> subclasses) {
             this.subclasses = subclasses;
             return this;
         }

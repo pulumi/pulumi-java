@@ -20,10 +20,10 @@ public final class AxisResponse {
      */
     private final String scale;
 
-    @OutputCustomType.Constructor({"label","scale"})
+    @OutputCustomType.Constructor
     private AxisResponse(
-        String label,
-        String scale) {
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("scale") String scale) {
         this.label = label;
         this.scale = scale;
     }
@@ -65,12 +65,12 @@ public final class AxisResponse {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setScale(String scale) {
+        public Builder scale(String scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }

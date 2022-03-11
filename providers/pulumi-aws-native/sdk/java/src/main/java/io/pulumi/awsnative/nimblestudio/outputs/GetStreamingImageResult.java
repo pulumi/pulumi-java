@@ -41,15 +41,15 @@ public final class GetStreamingImageResult {
     private final @Nullable String platform;
     private final @Nullable String streamingImageId;
 
-    @OutputCustomType.Constructor({"description","encryptionConfiguration","eulaIds","name","owner","platform","streamingImageId"})
+    @OutputCustomType.Constructor
     private GetStreamingImageResult(
-        @Nullable String description,
-        @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
-        @Nullable List<String> eulaIds,
-        @Nullable String name,
-        @Nullable String owner,
-        @Nullable String platform,
-        @Nullable String streamingImageId) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable StreamingImageEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("eulaIds") @Nullable List<String> eulaIds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("platform") @Nullable String platform,
+        @OutputCustomType.Parameter("streamingImageId") @Nullable String streamingImageId) {
         this.description = description;
         this.encryptionConfiguration = encryptionConfiguration;
         this.eulaIds = eulaIds;
@@ -133,37 +133,37 @@ public final class GetStreamingImageResult {
     	      this.streamingImageId = defaults.streamingImageId;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable StreamingImageEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable StreamingImageEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEulaIds(@Nullable List<String> eulaIds) {
+        public Builder eulaIds(@Nullable List<String> eulaIds) {
             this.eulaIds = eulaIds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setPlatform(@Nullable String platform) {
+        public Builder platform(@Nullable String platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setStreamingImageId(@Nullable String streamingImageId) {
+        public Builder streamingImageId(@Nullable String streamingImageId) {
             this.streamingImageId = streamingImageId;
             return this;
         }

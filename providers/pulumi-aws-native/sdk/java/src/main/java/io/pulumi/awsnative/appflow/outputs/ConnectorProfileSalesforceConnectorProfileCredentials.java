@@ -33,12 +33,12 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","clientCredentialsArn","connectorOAuthRequest","refreshToken"})
+    @OutputCustomType.Constructor
     private ConnectorProfileSalesforceConnectorProfileCredentials(
-        @Nullable String accessToken,
-        @Nullable String clientCredentialsArn,
-        @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("clientCredentialsArn") @Nullable String clientCredentialsArn,
+        @OutputCustomType.Parameter("connectorOAuthRequest") @Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.clientCredentialsArn = clientCredentialsArn;
         this.connectorOAuthRequest = connectorOAuthRequest;
@@ -100,22 +100,22 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setClientCredentialsArn(@Nullable String clientCredentialsArn) {
+        public Builder clientCredentialsArn(@Nullable String clientCredentialsArn) {
             this.clientCredentialsArn = clientCredentialsArn;
             return this;
         }
 
-        public Builder setConnectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
+        public Builder connectorOAuthRequest(@Nullable ConnectorProfileConnectorOAuthRequest connectorOAuthRequest) {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }

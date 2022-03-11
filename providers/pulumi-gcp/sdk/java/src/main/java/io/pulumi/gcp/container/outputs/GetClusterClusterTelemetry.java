@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterClusterTelemetry {
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private GetClusterClusterTelemetry(String type) {
+    @OutputCustomType.Constructor
+    private GetClusterClusterTelemetry(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterClusterTelemetry {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

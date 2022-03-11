@@ -39,13 +39,13 @@ public final class ClusterAutoscalingResponse {
      */
     private final List<ResourceLimitResponse> resourceLimits;
 
-    @OutputCustomType.Constructor({"autoprovisioningLocations","autoprovisioningNodePoolDefaults","autoscalingProfile","enableNodeAutoprovisioning","resourceLimits"})
+    @OutputCustomType.Constructor
     private ClusterAutoscalingResponse(
-        List<String> autoprovisioningLocations,
-        AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
-        String autoscalingProfile,
-        Boolean enableNodeAutoprovisioning,
-        List<ResourceLimitResponse> resourceLimits) {
+        @OutputCustomType.Parameter("autoprovisioningLocations") List<String> autoprovisioningLocations,
+        @OutputCustomType.Parameter("autoprovisioningNodePoolDefaults") AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults,
+        @OutputCustomType.Parameter("autoscalingProfile") String autoscalingProfile,
+        @OutputCustomType.Parameter("enableNodeAutoprovisioning") Boolean enableNodeAutoprovisioning,
+        @OutputCustomType.Parameter("resourceLimits") List<ResourceLimitResponse> resourceLimits) {
         this.autoprovisioningLocations = autoprovisioningLocations;
         this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
         this.autoscalingProfile = autoscalingProfile;
@@ -117,27 +117,27 @@ public final class ClusterAutoscalingResponse {
     	      this.resourceLimits = defaults.resourceLimits;
         }
 
-        public Builder setAutoprovisioningLocations(List<String> autoprovisioningLocations) {
+        public Builder autoprovisioningLocations(List<String> autoprovisioningLocations) {
             this.autoprovisioningLocations = Objects.requireNonNull(autoprovisioningLocations);
             return this;
         }
 
-        public Builder setAutoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults) {
+        public Builder autoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaultsResponse autoprovisioningNodePoolDefaults) {
             this.autoprovisioningNodePoolDefaults = Objects.requireNonNull(autoprovisioningNodePoolDefaults);
             return this;
         }
 
-        public Builder setAutoscalingProfile(String autoscalingProfile) {
+        public Builder autoscalingProfile(String autoscalingProfile) {
             this.autoscalingProfile = Objects.requireNonNull(autoscalingProfile);
             return this;
         }
 
-        public Builder setEnableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
+        public Builder enableNodeAutoprovisioning(Boolean enableNodeAutoprovisioning) {
             this.enableNodeAutoprovisioning = Objects.requireNonNull(enableNodeAutoprovisioning);
             return this;
         }
 
-        public Builder setResourceLimits(List<ResourceLimitResponse> resourceLimits) {
+        public Builder resourceLimits(List<ResourceLimitResponse> resourceLimits) {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }

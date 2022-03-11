@@ -24,12 +24,12 @@ public final class GetKafkaVersionResult {
     private final String status;
     private final String version;
 
-    @OutputCustomType.Constructor({"id","preferredVersions","status","version"})
+    @OutputCustomType.Constructor
     private GetKafkaVersionResult(
-        String id,
-        @Nullable List<String> preferredVersions,
-        String status,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("preferredVersions") @Nullable List<String> preferredVersions,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.preferredVersions = preferredVersions;
         this.status = status;
@@ -83,22 +83,22 @@ public final class GetKafkaVersionResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPreferredVersions(@Nullable List<String> preferredVersions) {
+        public Builder preferredVersions(@Nullable List<String> preferredVersions) {
             this.preferredVersions = preferredVersions;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

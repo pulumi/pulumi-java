@@ -295,152 +295,152 @@ public final class ExecuteWranglingDataflowActivityArgs extends io.pulumi.resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCompute(@Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute) {
+        public Builder compute(@Nullable Input<ExecuteDataFlowActivityTypePropertiesComputeArgs> compute) {
             this.compute = compute;
             return this;
         }
 
-        public Builder setCompute(@Nullable ExecuteDataFlowActivityTypePropertiesComputeArgs compute) {
+        public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesComputeArgs compute) {
             this.compute = Input.ofNullable(compute);
             return this;
         }
 
-        public Builder setContinueOnError(@Nullable Input<Object> continueOnError) {
+        public Builder continueOnError(@Nullable Input<Object> continueOnError) {
             this.continueOnError = continueOnError;
             return this;
         }
 
-        public Builder setContinueOnError(@Nullable Object continueOnError) {
+        public Builder continueOnError(@Nullable Object continueOnError) {
             this.continueOnError = Input.ofNullable(continueOnError);
             return this;
         }
 
-        public Builder setDataFlow(Input<DataFlowReferenceArgs> dataFlow) {
+        public Builder dataFlow(Input<DataFlowReferenceArgs> dataFlow) {
             this.dataFlow = Objects.requireNonNull(dataFlow);
             return this;
         }
 
-        public Builder setDataFlow(DataFlowReferenceArgs dataFlow) {
+        public Builder dataFlow(DataFlowReferenceArgs dataFlow) {
             this.dataFlow = Input.of(Objects.requireNonNull(dataFlow));
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIntegrationRuntime(@Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime) {
+        public Builder integrationRuntime(@Nullable Input<IntegrationRuntimeReferenceArgs> integrationRuntime) {
             this.integrationRuntime = integrationRuntime;
             return this;
         }
 
-        public Builder setIntegrationRuntime(@Nullable IntegrationRuntimeReferenceArgs integrationRuntime) {
+        public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceArgs integrationRuntime) {
             this.integrationRuntime = Input.ofNullable(integrationRuntime);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setQueries(@Nullable Input<List<PowerQuerySinkMappingArgs>> queries) {
+        public Builder queries(@Nullable Input<List<PowerQuerySinkMappingArgs>> queries) {
             this.queries = queries;
             return this;
         }
 
-        public Builder setQueries(@Nullable List<PowerQuerySinkMappingArgs> queries) {
+        public Builder queries(@Nullable List<PowerQuerySinkMappingArgs> queries) {
             this.queries = Input.ofNullable(queries);
             return this;
         }
 
-        public Builder setRunConcurrently(@Nullable Input<Object> runConcurrently) {
+        public Builder runConcurrently(@Nullable Input<Object> runConcurrently) {
             this.runConcurrently = runConcurrently;
             return this;
         }
 
-        public Builder setRunConcurrently(@Nullable Object runConcurrently) {
+        public Builder runConcurrently(@Nullable Object runConcurrently) {
             this.runConcurrently = Input.ofNullable(runConcurrently);
             return this;
         }
 
-        public Builder setSinks(@Nullable Input<Map<String,PowerQuerySinkArgs>> sinks) {
+        public Builder sinks(@Nullable Input<Map<String,PowerQuerySinkArgs>> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setSinks(@Nullable Map<String,PowerQuerySinkArgs> sinks) {
+        public Builder sinks(@Nullable Map<String,PowerQuerySinkArgs> sinks) {
             this.sinks = Input.ofNullable(sinks);
             return this;
         }
 
-        public Builder setStaging(@Nullable Input<DataFlowStagingInfoArgs> staging) {
+        public Builder staging(@Nullable Input<DataFlowStagingInfoArgs> staging) {
             this.staging = staging;
             return this;
         }
 
-        public Builder setStaging(@Nullable DataFlowStagingInfoArgs staging) {
+        public Builder staging(@Nullable DataFlowStagingInfoArgs staging) {
             this.staging = Input.ofNullable(staging);
             return this;
         }
 
-        public Builder setTraceLevel(@Nullable Input<Object> traceLevel) {
+        public Builder traceLevel(@Nullable Input<Object> traceLevel) {
             this.traceLevel = traceLevel;
             return this;
         }
 
-        public Builder setTraceLevel(@Nullable Object traceLevel) {
+        public Builder traceLevel(@Nullable Object traceLevel) {
             this.traceLevel = Input.ofNullable(traceLevel);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

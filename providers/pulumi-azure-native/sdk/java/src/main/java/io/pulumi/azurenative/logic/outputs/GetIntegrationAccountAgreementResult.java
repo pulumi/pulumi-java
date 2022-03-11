@@ -86,22 +86,22 @@ public final class GetIntegrationAccountAgreementResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agreementType","changedTime","content","createdTime","guestIdentity","guestPartner","hostIdentity","hostPartner","id","location","metadata","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountAgreementResult(
-        String agreementType,
-        String changedTime,
-        AgreementContentResponse content,
-        String createdTime,
-        BusinessIdentityResponse guestIdentity,
-        String guestPartner,
-        BusinessIdentityResponse hostIdentity,
-        String hostPartner,
-        String id,
-        @Nullable String location,
-        @Nullable Object metadata,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("agreementType") String agreementType,
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("content") AgreementContentResponse content,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("guestIdentity") BusinessIdentityResponse guestIdentity,
+        @OutputCustomType.Parameter("guestPartner") String guestPartner,
+        @OutputCustomType.Parameter("hostIdentity") BusinessIdentityResponse hostIdentity,
+        @OutputCustomType.Parameter("hostPartner") String hostPartner,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.agreementType = agreementType;
         this.changedTime = changedTime;
         this.content = content;
@@ -263,72 +263,72 @@ public final class GetIntegrationAccountAgreementResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgreementType(String agreementType) {
+        public Builder agreementType(String agreementType) {
             this.agreementType = Objects.requireNonNull(agreementType);
             return this;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setContent(AgreementContentResponse content) {
+        public Builder content(AgreementContentResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setGuestIdentity(BusinessIdentityResponse guestIdentity) {
+        public Builder guestIdentity(BusinessIdentityResponse guestIdentity) {
             this.guestIdentity = Objects.requireNonNull(guestIdentity);
             return this;
         }
 
-        public Builder setGuestPartner(String guestPartner) {
+        public Builder guestPartner(String guestPartner) {
             this.guestPartner = Objects.requireNonNull(guestPartner);
             return this;
         }
 
-        public Builder setHostIdentity(BusinessIdentityResponse hostIdentity) {
+        public Builder hostIdentity(BusinessIdentityResponse hostIdentity) {
             this.hostIdentity = Objects.requireNonNull(hostIdentity);
             return this;
         }
 
-        public Builder setHostPartner(String hostPartner) {
+        public Builder hostPartner(String hostPartner) {
             this.hostPartner = Objects.requireNonNull(hostPartner);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

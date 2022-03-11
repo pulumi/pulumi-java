@@ -72,19 +72,19 @@ public final class GetBlueprintResult {
      */
     private final @Nullable Object versions;
 
-    @OutputCustomType.Constructor({"description","displayName","id","layout","name","parameters","resourceGroups","status","targetScope","type","versions"})
+    @OutputCustomType.Constructor
     private GetBlueprintResult(
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        Object layout,
-        String name,
-        @Nullable Map<String,ParameterDefinitionResponse> parameters,
-        @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
-        BlueprintStatusResponse status,
-        String targetScope,
-        String type,
-        @Nullable Object versions) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("layout") Object layout,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterDefinitionResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroups") @Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups,
+        @OutputCustomType.Parameter("status") BlueprintStatusResponse status,
+        @OutputCustomType.Parameter("targetScope") String targetScope,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versions") @Nullable Object versions) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;
@@ -216,57 +216,57 @@ public final class GetBlueprintResult {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLayout(Object layout) {
+        public Builder layout(Object layout) {
             this.layout = Objects.requireNonNull(layout);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
+        public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionResponse> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
 
-        public Builder setStatus(BlueprintStatusResponse status) {
+        public Builder status(BlueprintStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetScope(String targetScope) {
+        public Builder targetScope(String targetScope) {
             this.targetScope = Objects.requireNonNull(targetScope);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersions(@Nullable Object versions) {
+        public Builder versions(@Nullable Object versions) {
             this.versions = versions;
             return this;
         }

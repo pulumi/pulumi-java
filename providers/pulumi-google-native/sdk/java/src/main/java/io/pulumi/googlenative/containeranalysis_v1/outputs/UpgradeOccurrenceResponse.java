@@ -33,12 +33,12 @@ public final class UpgradeOccurrenceResponse {
      */
     private final WindowsUpdateResponse windowsUpdate;
 
-    @OutputCustomType.Constructor({"distribution","$package","parsedVersion","windowsUpdate"})
+    @OutputCustomType.Constructor
     private UpgradeOccurrenceResponse(
-        UpgradeDistributionResponse distribution,
-        String $package,
-        VersionResponse parsedVersion,
-        WindowsUpdateResponse windowsUpdate) {
+        @OutputCustomType.Parameter("distribution") UpgradeDistributionResponse distribution,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("parsedVersion") VersionResponse parsedVersion,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distribution = distribution;
         this.$package = $package;
         this.parsedVersion = parsedVersion;
@@ -100,22 +100,22 @@ public final class UpgradeOccurrenceResponse {
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
 
-        public Builder setDistribution(UpgradeDistributionResponse distribution) {
+        public Builder distribution(UpgradeDistributionResponse distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder set$package(String $package) {
+        public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setParsedVersion(VersionResponse parsedVersion) {
+        public Builder parsedVersion(VersionResponse parsedVersion) {
             this.parsedVersion = Objects.requireNonNull(parsedVersion);
             return this;
         }
 
-        public Builder setWindowsUpdate(WindowsUpdateResponse windowsUpdate) {
+        public Builder windowsUpdate(WindowsUpdateResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }

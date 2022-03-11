@@ -15,8 +15,8 @@ public final class DetectorModelResetTimer {
      */
     private final String timerName;
 
-    @OutputCustomType.Constructor({"timerName"})
-    private DetectorModelResetTimer(String timerName) {
+    @OutputCustomType.Constructor
+    private DetectorModelResetTimer(@OutputCustomType.Parameter("timerName") String timerName) {
         this.timerName = timerName;
     }
 
@@ -48,7 +48,7 @@ public final class DetectorModelResetTimer {
     	      this.timerName = defaults.timerName;
         }
 
-        public Builder setTimerName(String timerName) {
+        public Builder timerName(String timerName) {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }

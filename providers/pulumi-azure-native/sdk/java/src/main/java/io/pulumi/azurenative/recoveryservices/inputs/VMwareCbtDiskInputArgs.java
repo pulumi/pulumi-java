@@ -124,52 +124,52 @@ public final class VMwareCbtDiskInputArgs extends io.pulumi.resources.ResourceAr
     	      this.logStorageAccountSasSecretName = defaults.logStorageAccountSasSecretName;
         }
 
-        public Builder setDiskId(Input<String> diskId) {
+        public Builder diskId(Input<String> diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
-        public Builder setDiskId(String diskId) {
+        public Builder diskId(String diskId) {
             this.diskId = Input.of(Objects.requireNonNull(diskId));
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
+        public Builder diskType(@Nullable Input<Either<String,DiskAccountType>> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable Either<String,DiskAccountType> diskType) {
+        public Builder diskType(@Nullable Either<String,DiskAccountType> diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setIsOSDisk(Input<String> isOSDisk) {
+        public Builder isOSDisk(Input<String> isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
 
-        public Builder setIsOSDisk(String isOSDisk) {
+        public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Input.of(Objects.requireNonNull(isOSDisk));
             return this;
         }
 
-        public Builder setLogStorageAccountId(Input<String> logStorageAccountId) {
+        public Builder logStorageAccountId(Input<String> logStorageAccountId) {
             this.logStorageAccountId = Objects.requireNonNull(logStorageAccountId);
             return this;
         }
 
-        public Builder setLogStorageAccountId(String logStorageAccountId) {
+        public Builder logStorageAccountId(String logStorageAccountId) {
             this.logStorageAccountId = Input.of(Objects.requireNonNull(logStorageAccountId));
             return this;
         }
 
-        public Builder setLogStorageAccountSasSecretName(Input<String> logStorageAccountSasSecretName) {
+        public Builder logStorageAccountSasSecretName(Input<String> logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Objects.requireNonNull(logStorageAccountSasSecretName);
             return this;
         }
 
-        public Builder setLogStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
+        public Builder logStorageAccountSasSecretName(String logStorageAccountSasSecretName) {
             this.logStorageAccountSasSecretName = Input.of(Objects.requireNonNull(logStorageAccountSasSecretName));
             return this;
         }

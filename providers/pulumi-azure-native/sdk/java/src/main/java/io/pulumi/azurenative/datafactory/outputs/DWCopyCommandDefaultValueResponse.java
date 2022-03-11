@@ -22,10 +22,10 @@ public final class DWCopyCommandDefaultValueResponse {
      */
     private final @Nullable Object defaultValue;
 
-    @OutputCustomType.Constructor({"columnName","defaultValue"})
+    @OutputCustomType.Constructor
     private DWCopyCommandDefaultValueResponse(
-        @Nullable Object columnName,
-        @Nullable Object defaultValue) {
+        @OutputCustomType.Parameter("columnName") @Nullable Object columnName,
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue) {
         this.columnName = columnName;
         this.defaultValue = defaultValue;
     }
@@ -67,12 +67,12 @@ public final class DWCopyCommandDefaultValueResponse {
     	      this.defaultValue = defaults.defaultValue;
         }
 
-        public Builder setColumnName(@Nullable Object columnName) {
+        public Builder columnName(@Nullable Object columnName) {
             this.columnName = columnName;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }

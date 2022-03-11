@@ -47,15 +47,15 @@ public final class PrivateEnvironmentConfigResponse {
      */
     private final String webServerIpv4ReservedRange;
 
-    @OutputCustomType.Constructor({"cloudComposerNetworkIpv4CidrBlock","cloudComposerNetworkIpv4ReservedRange","cloudSqlIpv4CidrBlock","enablePrivateEnvironment","privateClusterConfig","webServerIpv4CidrBlock","webServerIpv4ReservedRange"})
+    @OutputCustomType.Constructor
     private PrivateEnvironmentConfigResponse(
-        String cloudComposerNetworkIpv4CidrBlock,
-        String cloudComposerNetworkIpv4ReservedRange,
-        String cloudSqlIpv4CidrBlock,
-        Boolean enablePrivateEnvironment,
-        PrivateClusterConfigResponse privateClusterConfig,
-        String webServerIpv4CidrBlock,
-        String webServerIpv4ReservedRange) {
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4CidrBlock") String cloudComposerNetworkIpv4CidrBlock,
+        @OutputCustomType.Parameter("cloudComposerNetworkIpv4ReservedRange") String cloudComposerNetworkIpv4ReservedRange,
+        @OutputCustomType.Parameter("cloudSqlIpv4CidrBlock") String cloudSqlIpv4CidrBlock,
+        @OutputCustomType.Parameter("enablePrivateEnvironment") Boolean enablePrivateEnvironment,
+        @OutputCustomType.Parameter("privateClusterConfig") PrivateClusterConfigResponse privateClusterConfig,
+        @OutputCustomType.Parameter("webServerIpv4CidrBlock") String webServerIpv4CidrBlock,
+        @OutputCustomType.Parameter("webServerIpv4ReservedRange") String webServerIpv4ReservedRange) {
         this.cloudComposerNetworkIpv4CidrBlock = cloudComposerNetworkIpv4CidrBlock;
         this.cloudComposerNetworkIpv4ReservedRange = cloudComposerNetworkIpv4ReservedRange;
         this.cloudSqlIpv4CidrBlock = cloudSqlIpv4CidrBlock;
@@ -147,37 +147,37 @@ public final class PrivateEnvironmentConfigResponse {
     	      this.webServerIpv4ReservedRange = defaults.webServerIpv4ReservedRange;
         }
 
-        public Builder setCloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
+        public Builder cloudComposerNetworkIpv4CidrBlock(String cloudComposerNetworkIpv4CidrBlock) {
             this.cloudComposerNetworkIpv4CidrBlock = Objects.requireNonNull(cloudComposerNetworkIpv4CidrBlock);
             return this;
         }
 
-        public Builder setCloudComposerNetworkIpv4ReservedRange(String cloudComposerNetworkIpv4ReservedRange) {
+        public Builder cloudComposerNetworkIpv4ReservedRange(String cloudComposerNetworkIpv4ReservedRange) {
             this.cloudComposerNetworkIpv4ReservedRange = Objects.requireNonNull(cloudComposerNetworkIpv4ReservedRange);
             return this;
         }
 
-        public Builder setCloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
+        public Builder cloudSqlIpv4CidrBlock(String cloudSqlIpv4CidrBlock) {
             this.cloudSqlIpv4CidrBlock = Objects.requireNonNull(cloudSqlIpv4CidrBlock);
             return this;
         }
 
-        public Builder setEnablePrivateEnvironment(Boolean enablePrivateEnvironment) {
+        public Builder enablePrivateEnvironment(Boolean enablePrivateEnvironment) {
             this.enablePrivateEnvironment = Objects.requireNonNull(enablePrivateEnvironment);
             return this;
         }
 
-        public Builder setPrivateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
+        public Builder privateClusterConfig(PrivateClusterConfigResponse privateClusterConfig) {
             this.privateClusterConfig = Objects.requireNonNull(privateClusterConfig);
             return this;
         }
 
-        public Builder setWebServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
+        public Builder webServerIpv4CidrBlock(String webServerIpv4CidrBlock) {
             this.webServerIpv4CidrBlock = Objects.requireNonNull(webServerIpv4CidrBlock);
             return this;
         }
 
-        public Builder setWebServerIpv4ReservedRange(String webServerIpv4ReservedRange) {
+        public Builder webServerIpv4ReservedRange(String webServerIpv4ReservedRange) {
             this.webServerIpv4ReservedRange = Objects.requireNonNull(webServerIpv4ReservedRange);
             return this;
         }

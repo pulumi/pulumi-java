@@ -23,10 +23,10 @@ public final class StreamingEndpointAccessControlResponse {
      */
     private final @Nullable IPAccessControlResponse ip;
 
-    @OutputCustomType.Constructor({"akamai","ip"})
+    @OutputCustomType.Constructor
     private StreamingEndpointAccessControlResponse(
-        @Nullable AkamaiAccessControlResponse akamai,
-        @Nullable IPAccessControlResponse ip) {
+        @OutputCustomType.Parameter("akamai") @Nullable AkamaiAccessControlResponse akamai,
+        @OutputCustomType.Parameter("ip") @Nullable IPAccessControlResponse ip) {
         this.akamai = akamai;
         this.ip = ip;
     }
@@ -68,12 +68,12 @@ public final class StreamingEndpointAccessControlResponse {
     	      this.ip = defaults.ip;
         }
 
-        public Builder setAkamai(@Nullable AkamaiAccessControlResponse akamai) {
+        public Builder akamai(@Nullable AkamaiAccessControlResponse akamai) {
             this.akamai = akamai;
             return this;
         }
 
-        public Builder setIp(@Nullable IPAccessControlResponse ip) {
+        public Builder ip(@Nullable IPAccessControlResponse ip) {
             this.ip = ip;
             return this;
         }

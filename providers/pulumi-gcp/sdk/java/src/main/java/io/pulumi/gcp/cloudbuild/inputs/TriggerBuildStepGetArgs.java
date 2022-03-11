@@ -253,112 +253,112 @@ public final class TriggerBuildStepGetArgs extends io.pulumi.resources.ResourceA
     	      this.waitFors = defaults.waitFors;
         }
 
-        public Builder setArgs(@Nullable Input<List<String>> args) {
+        public Builder args(@Nullable Input<List<String>> args) {
             this.args = args;
             return this;
         }
 
-        public Builder setArgs(@Nullable List<String> args) {
+        public Builder args(@Nullable List<String> args) {
             this.args = Input.ofNullable(args);
             return this;
         }
 
-        public Builder setDir(@Nullable Input<String> dir) {
+        public Builder dir(@Nullable Input<String> dir) {
             this.dir = dir;
             return this;
         }
 
-        public Builder setDir(@Nullable String dir) {
+        public Builder dir(@Nullable String dir) {
             this.dir = Input.ofNullable(dir);
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable Input<String> entrypoint) {
+        public Builder entrypoint(@Nullable Input<String> entrypoint) {
             this.entrypoint = entrypoint;
             return this;
         }
 
-        public Builder setEntrypoint(@Nullable String entrypoint) {
+        public Builder entrypoint(@Nullable String entrypoint) {
             this.entrypoint = Input.ofNullable(entrypoint);
             return this;
         }
 
-        public Builder setEnvs(@Nullable Input<List<String>> envs) {
+        public Builder envs(@Nullable Input<List<String>> envs) {
             this.envs = envs;
             return this;
         }
 
-        public Builder setEnvs(@Nullable List<String> envs) {
+        public Builder envs(@Nullable List<String> envs) {
             this.envs = Input.ofNullable(envs);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSecretEnvs(@Nullable Input<List<String>> secretEnvs) {
+        public Builder secretEnvs(@Nullable Input<List<String>> secretEnvs) {
             this.secretEnvs = secretEnvs;
             return this;
         }
 
-        public Builder setSecretEnvs(@Nullable List<String> secretEnvs) {
+        public Builder secretEnvs(@Nullable List<String> secretEnvs) {
             this.secretEnvs = Input.ofNullable(secretEnvs);
             return this;
         }
 
-        public Builder setTimeout(@Nullable Input<String> timeout) {
+        public Builder timeout(@Nullable Input<String> timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
 
-        public Builder setTiming(@Nullable Input<String> timing) {
+        public Builder timing(@Nullable Input<String> timing) {
             this.timing = timing;
             return this;
         }
 
-        public Builder setTiming(@Nullable String timing) {
+        public Builder timing(@Nullable String timing) {
             this.timing = Input.ofNullable(timing);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<TriggerBuildStepVolumeGetArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<TriggerBuildStepVolumeGetArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<TriggerBuildStepVolumeGetArgs> volumes) {
+        public Builder volumes(@Nullable List<TriggerBuildStepVolumeGetArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }
 
-        public Builder setWaitFors(@Nullable Input<List<String>> waitFors) {
+        public Builder waitFors(@Nullable Input<List<String>> waitFors) {
             this.waitFors = waitFors;
             return this;
         }
 
-        public Builder setWaitFors(@Nullable List<String> waitFors) {
+        public Builder waitFors(@Nullable List<String> waitFors) {
             this.waitFors = Input.ofNullable(waitFors);
             return this;
         }

@@ -22,15 +22,15 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
     private final @Nullable String filterQuery;
     private final @Nullable List<String> includeAttachmentFilePatterns;
 
-    @OutputCustomType.Constructor({"crawlAttachments","documentDataFieldName","documentTitleFieldName","excludeAttachmentFilePatterns","fieldMappings","filterQuery","includeAttachmentFilePatterns"})
+    @OutputCustomType.Constructor
     private DataSourceServiceNowKnowledgeArticleConfiguration(
-        @Nullable Boolean crawlAttachments,
-        String documentDataFieldName,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable String filterQuery,
-        @Nullable List<String> includeAttachmentFilePatterns) {
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("documentDataFieldName") String documentDataFieldName,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("filterQuery") @Nullable String filterQuery,
+        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns) {
         this.crawlAttachments = crawlAttachments;
         this.documentDataFieldName = documentDataFieldName;
         this.documentTitleFieldName = documentTitleFieldName;
@@ -94,37 +94,37 @@ public final class DataSourceServiceNowKnowledgeArticleConfiguration {
     	      this.includeAttachmentFilePatterns = defaults.includeAttachmentFilePatterns;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setDocumentDataFieldName(String documentDataFieldName) {
+        public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setExcludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFilterQuery(@Nullable String filterQuery) {
+        public Builder filterQuery(@Nullable String filterQuery) {
             this.filterQuery = filterQuery;
             return this;
         }
 
-        public Builder setIncludeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }

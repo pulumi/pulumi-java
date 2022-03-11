@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AnalysisSourceEntity {
     private final @Nullable AnalysisSourceTemplate sourceTemplate;
 
-    @OutputCustomType.Constructor({"sourceTemplate"})
-    private AnalysisSourceEntity(@Nullable AnalysisSourceTemplate sourceTemplate) {
+    @OutputCustomType.Constructor
+    private AnalysisSourceEntity(@OutputCustomType.Parameter("sourceTemplate") @Nullable AnalysisSourceTemplate sourceTemplate) {
         this.sourceTemplate = sourceTemplate;
     }
 
@@ -42,7 +42,7 @@ public final class AnalysisSourceEntity {
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceTemplate(@Nullable AnalysisSourceTemplate sourceTemplate) {
+        public Builder sourceTemplate(@Nullable AnalysisSourceTemplate sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }

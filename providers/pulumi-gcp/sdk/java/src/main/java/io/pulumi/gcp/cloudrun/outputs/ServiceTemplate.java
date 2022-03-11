@@ -26,10 +26,10 @@ public final class ServiceTemplate {
      */
     private final @Nullable ServiceTemplateSpec spec;
 
-    @OutputCustomType.Constructor({"metadata","spec"})
+    @OutputCustomType.Constructor
     private ServiceTemplate(
-        @Nullable ServiceTemplateMetadata metadata,
-        @Nullable ServiceTemplateSpec spec) {
+        @OutputCustomType.Parameter("metadata") @Nullable ServiceTemplateMetadata metadata,
+        @OutputCustomType.Parameter("spec") @Nullable ServiceTemplateSpec spec) {
         this.metadata = metadata;
         this.spec = spec;
     }
@@ -74,12 +74,12 @@ public final class ServiceTemplate {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setMetadata(@Nullable ServiceTemplateMetadata metadata) {
+        public Builder metadata(@Nullable ServiceTemplateMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable ServiceTemplateSpec spec) {
+        public Builder spec(@Nullable ServiceTemplateSpec spec) {
             this.spec = spec;
             return this;
         }

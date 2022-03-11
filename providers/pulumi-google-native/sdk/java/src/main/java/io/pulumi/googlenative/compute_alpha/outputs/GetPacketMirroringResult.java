@@ -80,21 +80,21 @@ public final class GetPacketMirroringResult {
      */
     private final String selfLinkWithId;
 
-    @OutputCustomType.Constructor({"collectorIlb","creationTimestamp","description","enable","filter","kind","mirroredResources","name","network","priority","region","selfLink","selfLinkWithId"})
+    @OutputCustomType.Constructor
     private GetPacketMirroringResult(
-        PacketMirroringForwardingRuleInfoResponse collectorIlb,
-        String creationTimestamp,
-        String description,
-        String enable,
-        PacketMirroringFilterResponse filter,
-        String kind,
-        PacketMirroringMirroredResourceInfoResponse mirroredResources,
-        String name,
-        PacketMirroringNetworkInfoResponse network,
-        Integer priority,
-        String region,
-        String selfLink,
-        String selfLinkWithId) {
+        @OutputCustomType.Parameter("collectorIlb") PacketMirroringForwardingRuleInfoResponse collectorIlb,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enable") String enable,
+        @OutputCustomType.Parameter("filter") PacketMirroringFilterResponse filter,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mirroredResources") PacketMirroringMirroredResourceInfoResponse mirroredResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") PacketMirroringNetworkInfoResponse network,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId) {
         this.collectorIlb = collectorIlb;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -246,67 +246,67 @@ public final class GetPacketMirroringResult {
     	      this.selfLinkWithId = defaults.selfLinkWithId;
         }
 
-        public Builder setCollectorIlb(PacketMirroringForwardingRuleInfoResponse collectorIlb) {
+        public Builder collectorIlb(PacketMirroringForwardingRuleInfoResponse collectorIlb) {
             this.collectorIlb = Objects.requireNonNull(collectorIlb);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnable(String enable) {
+        public Builder enable(String enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setFilter(PacketMirroringFilterResponse filter) {
+        public Builder filter(PacketMirroringFilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMirroredResources(PacketMirroringMirroredResourceInfoResponse mirroredResources) {
+        public Builder mirroredResources(PacketMirroringMirroredResourceInfoResponse mirroredResources) {
             this.mirroredResources = Objects.requireNonNull(mirroredResources);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(PacketMirroringNetworkInfoResponse network) {
+        public Builder network(PacketMirroringNetworkInfoResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }

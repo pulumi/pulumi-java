@@ -81,21 +81,21 @@ public final class GetInboundNatRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendIPConfiguration","backendPort","enableFloatingIP","enableTcpReset","etag","frontendIPConfiguration","frontendPort","id","idleTimeoutInMinutes","name","protocol","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetInboundNatRuleResult(
-        NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
-        @Nullable Integer backendPort,
-        @Nullable Boolean enableFloatingIP,
-        @Nullable Boolean enableTcpReset,
-        String etag,
-        @Nullable SubResourceResponse frontendIPConfiguration,
-        @Nullable Integer frontendPort,
-        @Nullable String id,
-        @Nullable Integer idleTimeoutInMinutes,
-        @Nullable String name,
-        @Nullable String protocol,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("backendIPConfiguration") NetworkInterfaceIPConfigurationResponse backendIPConfiguration,
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("enableFloatingIP") @Nullable Boolean enableFloatingIP,
+        @OutputCustomType.Parameter("enableTcpReset") @Nullable Boolean enableTcpReset,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("frontendIPConfiguration") @Nullable SubResourceResponse frontendIPConfiguration,
+        @OutputCustomType.Parameter("frontendPort") @Nullable Integer frontendPort,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("idleTimeoutInMinutes") @Nullable Integer idleTimeoutInMinutes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendIPConfiguration = backendIPConfiguration;
         this.backendPort = backendPort;
         this.enableFloatingIP = enableFloatingIP;
@@ -247,67 +247,67 @@ public final class GetInboundNatRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendIPConfiguration(NetworkInterfaceIPConfigurationResponse backendIPConfiguration) {
+        public Builder backendIPConfiguration(NetworkInterfaceIPConfigurationResponse backendIPConfiguration) {
             this.backendIPConfiguration = Objects.requireNonNull(backendIPConfiguration);
             return this;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setEnableFloatingIP(@Nullable Boolean enableFloatingIP) {
+        public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
             this.enableFloatingIP = enableFloatingIP;
             return this;
         }
 
-        public Builder setEnableTcpReset(@Nullable Boolean enableTcpReset) {
+        public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
             this.enableTcpReset = enableTcpReset;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFrontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
+        public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             this.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
-        public Builder setFrontendPort(@Nullable Integer frontendPort) {
+        public Builder frontendPort(@Nullable Integer frontendPort) {
             this.frontendPort = frontendPort;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
+        public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
             this.idleTimeoutInMinutes = idleTimeoutInMinutes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

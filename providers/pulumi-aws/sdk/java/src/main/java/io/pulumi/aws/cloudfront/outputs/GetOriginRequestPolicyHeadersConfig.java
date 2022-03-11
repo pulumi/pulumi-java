@@ -14,10 +14,10 @@ public final class GetOriginRequestPolicyHeadersConfig {
     private final String headerBehavior;
     private final List<GetOriginRequestPolicyHeadersConfigHeader> headers;
 
-    @OutputCustomType.Constructor({"headerBehavior","headers"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyHeadersConfig(
-        String headerBehavior,
-        List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
+        @OutputCustomType.Parameter("headerBehavior") String headerBehavior,
+        @OutputCustomType.Parameter("headers") List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
         this.headerBehavior = headerBehavior;
         this.headers = headers;
     }
@@ -51,12 +51,12 @@ public final class GetOriginRequestPolicyHeadersConfig {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setHeaderBehavior(String headerBehavior) {
+        public Builder headerBehavior(String headerBehavior) {
             this.headerBehavior = Objects.requireNonNull(headerBehavior);
             return this;
         }
 
-        public Builder setHeaders(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
+        public Builder headers(List<GetOriginRequestPolicyHeadersConfigHeader> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }

@@ -33,12 +33,12 @@ public final class DestinationResponse {
      */
     private final List<Integer> ports;
 
-    @OutputCustomType.Constructor({"hosts","httpHeaderMatch","methods","ports"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        List<String> hosts,
-        HttpHeaderMatchResponse httpHeaderMatch,
-        List<String> methods,
-        List<Integer> ports) {
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("httpHeaderMatch") HttpHeaderMatchResponse httpHeaderMatch,
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("ports") List<Integer> ports) {
         this.hosts = hosts;
         this.httpHeaderMatch = httpHeaderMatch;
         this.methods = methods;
@@ -100,22 +100,22 @@ public final class DestinationResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setHosts(List<String> hosts) {
+        public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setHttpHeaderMatch(HttpHeaderMatchResponse httpHeaderMatch) {
+        public Builder httpHeaderMatch(HttpHeaderMatchResponse httpHeaderMatch) {
             this.httpHeaderMatch = Objects.requireNonNull(httpHeaderMatch);
             return this;
         }
 
-        public Builder setMethods(List<String> methods) {
+        public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setPorts(List<Integer> ports) {
+        public Builder ports(List<Integer> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

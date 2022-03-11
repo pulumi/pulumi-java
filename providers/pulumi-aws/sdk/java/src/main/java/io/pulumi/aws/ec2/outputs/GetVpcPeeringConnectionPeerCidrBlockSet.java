@@ -15,8 +15,8 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet {
      */
     private final String cidrBlock;
 
-    @OutputCustomType.Constructor({"cidrBlock"})
-    private GetVpcPeeringConnectionPeerCidrBlockSet(String cidrBlock) {
+    @OutputCustomType.Constructor
+    private GetVpcPeeringConnectionPeerCidrBlockSet(@OutputCustomType.Parameter("cidrBlock") String cidrBlock) {
         this.cidrBlock = cidrBlock;
     }
 
@@ -48,7 +48,7 @@ public final class GetVpcPeeringConnectionPeerCidrBlockSet {
     	      this.cidrBlock = defaults.cidrBlock;
         }
 
-        public Builder setCidrBlock(String cidrBlock) {
+        public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = Objects.requireNonNull(cidrBlock);
             return this;
         }

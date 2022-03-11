@@ -12,10 +12,10 @@ public final class GetBackendServiceOutlierDetectionInterval {
     private final Integer nanos;
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private GetBackendServiceOutlierDetectionInterval(
-        Integer nanos,
-        Integer seconds) {
+        @OutputCustomType.Parameter("nanos") Integer nanos,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }
@@ -49,12 +49,12 @@ public final class GetBackendServiceOutlierDetectionInterval {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(Integer nanos) {
+        public Builder nanos(Integer nanos) {
             this.nanos = Objects.requireNonNull(nanos);
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

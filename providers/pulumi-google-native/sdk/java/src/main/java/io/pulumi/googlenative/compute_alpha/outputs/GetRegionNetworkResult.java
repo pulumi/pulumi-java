@@ -96,25 +96,25 @@ public final class GetRegionNetworkResult {
      */
     private final List<String> subnetworks;
 
-    @OutputCustomType.Constructor({"autoCreateSubnetworks","creationTimestamp","description","enableUlaInternalIpv6","firewallPolicy","gatewayIPv4","internalIpv6Range","kind","mtu","name","networkFirewallPolicyEnforcementOrder","peerings","region","routingConfig","selfLink","selfLinkWithId","subnetworks"})
+    @OutputCustomType.Constructor
     private GetRegionNetworkResult(
-        Boolean autoCreateSubnetworks,
-        String creationTimestamp,
-        String description,
-        Boolean enableUlaInternalIpv6,
-        String firewallPolicy,
-        String gatewayIPv4,
-        String internalIpv6Range,
-        String kind,
-        Integer mtu,
-        String name,
-        String networkFirewallPolicyEnforcementOrder,
-        List<NetworkPeeringResponse> peerings,
-        String region,
-        NetworkRoutingConfigResponse routingConfig,
-        String selfLink,
-        String selfLinkWithId,
-        List<String> subnetworks) {
+        @OutputCustomType.Parameter("autoCreateSubnetworks") Boolean autoCreateSubnetworks,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enableUlaInternalIpv6") Boolean enableUlaInternalIpv6,
+        @OutputCustomType.Parameter("firewallPolicy") String firewallPolicy,
+        @OutputCustomType.Parameter("gatewayIPv4") String gatewayIPv4,
+        @OutputCustomType.Parameter("internalIpv6Range") String internalIpv6Range,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mtu") Integer mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkFirewallPolicyEnforcementOrder") String networkFirewallPolicyEnforcementOrder,
+        @OutputCustomType.Parameter("peerings") List<NetworkPeeringResponse> peerings,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("routingConfig") NetworkRoutingConfigResponse routingConfig,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("subnetworks") List<String> subnetworks) {
         this.autoCreateSubnetworks = autoCreateSubnetworks;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -302,87 +302,87 @@ public final class GetRegionNetworkResult {
     	      this.subnetworks = defaults.subnetworks;
         }
 
-        public Builder setAutoCreateSubnetworks(Boolean autoCreateSubnetworks) {
+        public Builder autoCreateSubnetworks(Boolean autoCreateSubnetworks) {
             this.autoCreateSubnetworks = Objects.requireNonNull(autoCreateSubnetworks);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
+        public Builder enableUlaInternalIpv6(Boolean enableUlaInternalIpv6) {
             this.enableUlaInternalIpv6 = Objects.requireNonNull(enableUlaInternalIpv6);
             return this;
         }
 
-        public Builder setFirewallPolicy(String firewallPolicy) {
+        public Builder firewallPolicy(String firewallPolicy) {
             this.firewallPolicy = Objects.requireNonNull(firewallPolicy);
             return this;
         }
 
-        public Builder setGatewayIPv4(String gatewayIPv4) {
+        public Builder gatewayIPv4(String gatewayIPv4) {
             this.gatewayIPv4 = Objects.requireNonNull(gatewayIPv4);
             return this;
         }
 
-        public Builder setInternalIpv6Range(String internalIpv6Range) {
+        public Builder internalIpv6Range(String internalIpv6Range) {
             this.internalIpv6Range = Objects.requireNonNull(internalIpv6Range);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMtu(Integer mtu) {
+        public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkFirewallPolicyEnforcementOrder(String networkFirewallPolicyEnforcementOrder) {
+        public Builder networkFirewallPolicyEnforcementOrder(String networkFirewallPolicyEnforcementOrder) {
             this.networkFirewallPolicyEnforcementOrder = Objects.requireNonNull(networkFirewallPolicyEnforcementOrder);
             return this;
         }
 
-        public Builder setPeerings(List<NetworkPeeringResponse> peerings) {
+        public Builder peerings(List<NetworkPeeringResponse> peerings) {
             this.peerings = Objects.requireNonNull(peerings);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRoutingConfig(NetworkRoutingConfigResponse routingConfig) {
+        public Builder routingConfig(NetworkRoutingConfigResponse routingConfig) {
             this.routingConfig = Objects.requireNonNull(routingConfig);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setSubnetworks(List<String> subnetworks) {
+        public Builder subnetworks(List<String> subnetworks) {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }

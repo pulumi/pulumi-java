@@ -15,10 +15,10 @@ public final class InstanceFromMachineImageReservationAffinity {
     private final @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation;
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservation","type"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageReservationAffinity(
-        @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation,
-        String type) {
+        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class InstanceFromMachineImageReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation) {
+        public Builder specificReservation(@Nullable InstanceFromMachineImageReservationAffinitySpecificReservation specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

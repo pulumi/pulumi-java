@@ -154,72 +154,72 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     	      this.updateConfiguration = defaults.updateConfiguration;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setError(@Nullable Input<ErrorResponseArgs> error) {
+        public Builder error(@Nullable Input<ErrorResponseArgs> error) {
             this.error = error;
             return this;
         }
 
-        public Builder setError(@Nullable ErrorResponseArgs error) {
+        public Builder error(@Nullable ErrorResponseArgs error) {
             this.error = Input.ofNullable(error);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScheduleInfo(Input<SUCSchedulePropertiesArgs> scheduleInfo) {
+        public Builder scheduleInfo(Input<SUCSchedulePropertiesArgs> scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
 
-        public Builder setScheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
+        public Builder scheduleInfo(SUCSchedulePropertiesArgs scheduleInfo) {
             this.scheduleInfo = Input.of(Objects.requireNonNull(scheduleInfo));
             return this;
         }
 
-        public Builder setSoftwareUpdateConfigurationName(@Nullable Input<String> softwareUpdateConfigurationName) {
+        public Builder softwareUpdateConfigurationName(@Nullable Input<String> softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = softwareUpdateConfigurationName;
             return this;
         }
 
-        public Builder setSoftwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
+        public Builder softwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
             this.softwareUpdateConfigurationName = Input.ofNullable(softwareUpdateConfigurationName);
             return this;
         }
 
-        public Builder setTasks(@Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks) {
+        public Builder tasks(@Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks) {
             this.tasks = tasks;
             return this;
         }
 
-        public Builder setTasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
+        public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
             this.tasks = Input.ofNullable(tasks);
             return this;
         }
 
-        public Builder setUpdateConfiguration(Input<UpdateConfigurationArgs> updateConfiguration) {
+        public Builder updateConfiguration(Input<UpdateConfigurationArgs> updateConfiguration) {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
         }
 
-        public Builder setUpdateConfiguration(UpdateConfigurationArgs updateConfiguration) {
+        public Builder updateConfiguration(UpdateConfigurationArgs updateConfiguration) {
             this.updateConfiguration = Input.of(Objects.requireNonNull(updateConfiguration));
             return this;
         }

@@ -52,12 +52,12 @@ public final class VirtualServiceSpecProviderVirtualRouterGetArgs extends io.pul
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setVirtualRouterName(Input<String> virtualRouterName) {
+        public Builder virtualRouterName(Input<String> virtualRouterName) {
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
 
-        public Builder setVirtualRouterName(String virtualRouterName) {
+        public Builder virtualRouterName(String virtualRouterName) {
             this.virtualRouterName = Input.of(Objects.requireNonNull(virtualRouterName));
             return this;
         }

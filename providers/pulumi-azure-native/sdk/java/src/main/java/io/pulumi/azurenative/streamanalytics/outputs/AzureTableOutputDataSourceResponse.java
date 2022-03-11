@@ -55,16 +55,16 @@ public final class AzureTableOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","batchSize","columnsToRemove","partitionKey","rowKey","table","type"})
+    @OutputCustomType.Constructor
     private AzureTableOutputDataSourceResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Integer batchSize,
-        @Nullable List<String> columnsToRemove,
-        @Nullable String partitionKey,
-        @Nullable String rowKey,
-        @Nullable String table,
-        String type) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("batchSize") @Nullable Integer batchSize,
+        @OutputCustomType.Parameter("columnsToRemove") @Nullable List<String> columnsToRemove,
+        @OutputCustomType.Parameter("partitionKey") @Nullable String partitionKey,
+        @OutputCustomType.Parameter("rowKey") @Nullable String rowKey,
+        @OutputCustomType.Parameter("table") @Nullable String table,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.batchSize = batchSize;
@@ -167,42 +167,42 @@ public final class AzureTableOutputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setColumnsToRemove(@Nullable List<String> columnsToRemove) {
+        public Builder columnsToRemove(@Nullable List<String> columnsToRemove) {
             this.columnsToRemove = columnsToRemove;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setRowKey(@Nullable String rowKey) {
+        public Builder rowKey(@Nullable String rowKey) {
             this.rowKey = rowKey;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = table;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

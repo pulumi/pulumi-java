@@ -17,8 +17,8 @@ public final class ControllerConnectionDetailsResponse {
      */
     private final @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
-    @OutputCustomType.Constructor({"orchestratorSpecificConnectionDetails"})
-    private ControllerConnectionDetailsResponse(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
+    @OutputCustomType.Constructor
+    private ControllerConnectionDetailsResponse(@OutputCustomType.Parameter("orchestratorSpecificConnectionDetails") @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
         this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
     }
 
@@ -50,7 +50,7 @@ public final class ControllerConnectionDetailsResponse {
     	      this.orchestratorSpecificConnectionDetails = defaults.orchestratorSpecificConnectionDetails;
         }
 
-        public Builder setOrchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
+        public Builder orchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
             this.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;
         }

@@ -56,12 +56,12 @@ public final class VirtualNetworkBgpCommunitiesArgs extends io.pulumi.resources.
     	      this.virtualNetworkCommunity = defaults.virtualNetworkCommunity;
         }
 
-        public Builder setVirtualNetworkCommunity(Input<String> virtualNetworkCommunity) {
+        public Builder virtualNetworkCommunity(Input<String> virtualNetworkCommunity) {
             this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
             return this;
         }
 
-        public Builder setVirtualNetworkCommunity(String virtualNetworkCommunity) {
+        public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
             this.virtualNetworkCommunity = Input.of(Objects.requireNonNull(virtualNetworkCommunity));
             return this;
         }

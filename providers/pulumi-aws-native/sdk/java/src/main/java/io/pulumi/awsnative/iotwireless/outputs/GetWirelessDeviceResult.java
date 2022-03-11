@@ -71,19 +71,19 @@ public final class GetWirelessDeviceResult {
      */
     private final @Nullable WirelessDeviceType type;
 
-    @OutputCustomType.Constructor({"arn","description","destinationName","id","lastUplinkReceivedAt","loRaWAN","name","tags","thingArn","thingName","type"})
+    @OutputCustomType.Constructor
     private GetWirelessDeviceResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String destinationName,
-        @Nullable String id,
-        @Nullable String lastUplinkReceivedAt,
-        @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
-        @Nullable String name,
-        @Nullable List<WirelessDeviceTag> tags,
-        @Nullable String thingArn,
-        @Nullable String thingName,
-        @Nullable WirelessDeviceType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationName") @Nullable String destinationName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastUplinkReceivedAt") @Nullable String lastUplinkReceivedAt,
+        @OutputCustomType.Parameter("loRaWAN") @Nullable WirelessDeviceLoRaWANDevice loRaWAN,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<WirelessDeviceTag> tags,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn,
+        @OutputCustomType.Parameter("thingName") @Nullable String thingName,
+        @OutputCustomType.Parameter("type") @Nullable WirelessDeviceType type) {
         this.arn = arn;
         this.description = description;
         this.destinationName = destinationName;
@@ -215,57 +215,57 @@ public final class GetWirelessDeviceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationName(@Nullable String destinationName) {
+        public Builder destinationName(@Nullable String destinationName) {
             this.destinationName = destinationName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
+        public Builder lastUplinkReceivedAt(@Nullable String lastUplinkReceivedAt) {
             this.lastUplinkReceivedAt = lastUplinkReceivedAt;
             return this;
         }
 
-        public Builder setLoRaWAN(@Nullable WirelessDeviceLoRaWANDevice loRaWAN) {
+        public Builder loRaWAN(@Nullable WirelessDeviceLoRaWANDevice loRaWAN) {
             this.loRaWAN = loRaWAN;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WirelessDeviceTag> tags) {
+        public Builder tags(@Nullable List<WirelessDeviceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThingArn(@Nullable String thingArn) {
+        public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = thingArn;
             return this;
         }
 
-        public Builder setThingName(@Nullable String thingName) {
+        public Builder thingName(@Nullable String thingName) {
             this.thingName = thingName;
             return this;
         }
 
-        public Builder setType(@Nullable WirelessDeviceType type) {
+        public Builder type(@Nullable WirelessDeviceType type) {
             this.type = type;
             return this;
         }

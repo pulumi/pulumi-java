@@ -50,15 +50,15 @@ public final class CronJobSpec {
      */
     private final @Nullable Boolean suspend;
 
-    @OutputCustomType.Constructor({"concurrencyPolicy","failedJobsHistoryLimit","jobTemplate","schedule","startingDeadlineSeconds","successfulJobsHistoryLimit","suspend"})
+    @OutputCustomType.Constructor
     private CronJobSpec(
-        @Nullable String concurrencyPolicy,
-        @Nullable Integer failedJobsHistoryLimit,
-        JobTemplateSpec jobTemplate,
-        String schedule,
-        @Nullable Integer startingDeadlineSeconds,
-        @Nullable Integer successfulJobsHistoryLimit,
-        @Nullable Boolean suspend) {
+        @OutputCustomType.Parameter("concurrencyPolicy") @Nullable String concurrencyPolicy,
+        @OutputCustomType.Parameter("failedJobsHistoryLimit") @Nullable Integer failedJobsHistoryLimit,
+        @OutputCustomType.Parameter("jobTemplate") JobTemplateSpec jobTemplate,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("startingDeadlineSeconds") @Nullable Integer startingDeadlineSeconds,
+        @OutputCustomType.Parameter("successfulJobsHistoryLimit") @Nullable Integer successfulJobsHistoryLimit,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend) {
         this.concurrencyPolicy = concurrencyPolicy;
         this.failedJobsHistoryLimit = failedJobsHistoryLimit;
         this.jobTemplate = jobTemplate;
@@ -150,37 +150,37 @@ public final class CronJobSpec {
     	      this.suspend = defaults.suspend;
         }
 
-        public Builder setConcurrencyPolicy(@Nullable String concurrencyPolicy) {
+        public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
 
-        public Builder setFailedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
+        public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
 
-        public Builder setJobTemplate(JobTemplateSpec jobTemplate) {
+        public Builder jobTemplate(JobTemplateSpec jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStartingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
+        public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
 
-        public Builder setSuccessfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
+        public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }

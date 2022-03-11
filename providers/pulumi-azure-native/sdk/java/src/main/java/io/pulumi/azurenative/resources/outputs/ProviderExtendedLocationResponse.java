@@ -28,11 +28,11 @@ public final class ProviderExtendedLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"extendedLocations","location","type"})
+    @OutputCustomType.Constructor
     private ProviderExtendedLocationResponse(
-        @Nullable List<String> extendedLocations,
-        @Nullable String location,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;
@@ -84,17 +84,17 @@ public final class ProviderExtendedLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setExtendedLocations(@Nullable List<String> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

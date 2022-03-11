@@ -92,32 +92,32 @@ public final class PullRequestFilterArgs extends io.pulumi.resources.ResourceArg
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder setBranch(@Nullable Input<String> branch) {
+        public Builder branch(@Nullable Input<String> branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = Input.ofNullable(branch);
             return this;
         }
 
-        public Builder setCommentControl(@Nullable Input<PullRequestFilterCommentControl> commentControl) {
+        public Builder commentControl(@Nullable Input<PullRequestFilterCommentControl> commentControl) {
             this.commentControl = commentControl;
             return this;
         }
 
-        public Builder setCommentControl(@Nullable PullRequestFilterCommentControl commentControl) {
+        public Builder commentControl(@Nullable PullRequestFilterCommentControl commentControl) {
             this.commentControl = Input.ofNullable(commentControl);
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Input<Boolean> invertRegex) {
+        public Builder invertRegex(@Nullable Input<Boolean> invertRegex) {
             this.invertRegex = invertRegex;
             return this;
         }
 
-        public Builder setInvertRegex(@Nullable Boolean invertRegex) {
+        public Builder invertRegex(@Nullable Boolean invertRegex) {
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }

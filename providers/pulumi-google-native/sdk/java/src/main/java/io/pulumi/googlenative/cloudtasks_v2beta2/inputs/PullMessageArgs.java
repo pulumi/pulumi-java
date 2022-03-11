@@ -74,22 +74,22 @@ public final class PullMessageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setPayload(@Nullable Input<String> payload) {
+        public Builder payload(@Nullable Input<String> payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setPayload(@Nullable String payload) {
+        public Builder payload(@Nullable String payload) {
             this.payload = Input.ofNullable(payload);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }

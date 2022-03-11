@@ -45,14 +45,14 @@ public final class GetTransitGatewayMulticastDomainResult {
      */
     private final @Nullable String transitGatewayMulticastDomainId;
 
-    @OutputCustomType.Constructor({"creationTime","options","state","tags","transitGatewayMulticastDomainArn","transitGatewayMulticastDomainId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayMulticastDomainResult(
-        @Nullable String creationTime,
-        @Nullable OptionsProperties options,
-        @Nullable String state,
-        @Nullable List<TransitGatewayMulticastDomainTag> tags,
-        @Nullable String transitGatewayMulticastDomainArn,
-        @Nullable String transitGatewayMulticastDomainId) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayMulticastDomainTag> tags,
+        @OutputCustomType.Parameter("transitGatewayMulticastDomainArn") @Nullable String transitGatewayMulticastDomainArn,
+        @OutputCustomType.Parameter("transitGatewayMulticastDomainId") @Nullable String transitGatewayMulticastDomainId) {
         this.creationTime = creationTime;
         this.options = options;
         this.state = state;
@@ -134,32 +134,32 @@ public final class GetTransitGatewayMulticastDomainResult {
     	      this.transitGatewayMulticastDomainId = defaults.transitGatewayMulticastDomainId;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsProperties options) {
+        public Builder options(@Nullable OptionsProperties options) {
             this.options = options;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayMulticastDomainTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayMulticastDomainTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainArn(@Nullable String transitGatewayMulticastDomainArn) {
+        public Builder transitGatewayMulticastDomainArn(@Nullable String transitGatewayMulticastDomainArn) {
             this.transitGatewayMulticastDomainArn = transitGatewayMulticastDomainArn;
             return this;
         }
 
-        public Builder setTransitGatewayMulticastDomainId(@Nullable String transitGatewayMulticastDomainId) {
+        public Builder transitGatewayMulticastDomainId(@Nullable String transitGatewayMulticastDomainId) {
             this.transitGatewayMulticastDomainId = transitGatewayMulticastDomainId;
             return this;
         }

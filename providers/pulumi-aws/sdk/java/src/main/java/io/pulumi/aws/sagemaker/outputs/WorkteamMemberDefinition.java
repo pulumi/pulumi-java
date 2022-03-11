@@ -23,10 +23,10 @@ public final class WorkteamMemberDefinition {
      */
     private final @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition;
 
-    @OutputCustomType.Constructor({"cognitoMemberDefinition","oidcMemberDefinition"})
+    @OutputCustomType.Constructor
     private WorkteamMemberDefinition(
-        @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
-        @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
+        @OutputCustomType.Parameter("cognitoMemberDefinition") @Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition,
+        @OutputCustomType.Parameter("oidcMemberDefinition") @Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
         this.cognitoMemberDefinition = cognitoMemberDefinition;
         this.oidcMemberDefinition = oidcMemberDefinition;
     }
@@ -68,12 +68,12 @@ public final class WorkteamMemberDefinition {
     	      this.oidcMemberDefinition = defaults.oidcMemberDefinition;
         }
 
-        public Builder setCognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition) {
+        public Builder cognitoMemberDefinition(@Nullable WorkteamMemberDefinitionCognitoMemberDefinition cognitoMemberDefinition) {
             this.cognitoMemberDefinition = cognitoMemberDefinition;
             return this;
         }
 
-        public Builder setOidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
+        public Builder oidcMemberDefinition(@Nullable WorkteamMemberDefinitionOidcMemberDefinition oidcMemberDefinition) {
             this.oidcMemberDefinition = oidcMemberDefinition;
             return this;
         }

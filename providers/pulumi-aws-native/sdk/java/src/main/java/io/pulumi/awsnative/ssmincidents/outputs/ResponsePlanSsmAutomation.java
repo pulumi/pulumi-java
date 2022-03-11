@@ -40,13 +40,13 @@ public final class ResponsePlanSsmAutomation {
      */
     private final @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount;
 
-    @OutputCustomType.Constructor({"documentName","documentVersion","parameters","roleArn","targetAccount"})
+    @OutputCustomType.Constructor
     private ResponsePlanSsmAutomation(
-        String documentName,
-        @Nullable String documentVersion,
-        @Nullable List<ResponsePlanSsmParameter> parameters,
-        String roleArn,
-        @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
+        @OutputCustomType.Parameter("documentName") String documentName,
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ResponsePlanSsmParameter> parameters,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("targetAccount") @Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
         this.documentName = documentName;
         this.documentVersion = documentVersion;
         this.parameters = parameters;
@@ -118,27 +118,27 @@ public final class ResponsePlanSsmAutomation {
     	      this.targetAccount = defaults.targetAccount;
         }
 
-        public Builder setDocumentName(String documentName) {
+        public Builder documentName(String documentName) {
             this.documentName = Objects.requireNonNull(documentName);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
+        public Builder parameters(@Nullable List<ResponsePlanSsmParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTargetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
+        public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
             this.targetAccount = targetAccount;
             return this;
         }

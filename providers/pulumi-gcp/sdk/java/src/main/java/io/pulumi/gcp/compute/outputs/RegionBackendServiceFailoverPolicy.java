@@ -45,11 +45,11 @@ public final class RegionBackendServiceFailoverPolicy {
      */
     private final @Nullable Double failoverRatio;
 
-    @OutputCustomType.Constructor({"disableConnectionDrainOnFailover","dropTrafficIfUnhealthy","failoverRatio"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceFailoverPolicy(
-        @Nullable Boolean disableConnectionDrainOnFailover,
-        @Nullable Boolean dropTrafficIfUnhealthy,
-        @Nullable Double failoverRatio) {
+        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") @Nullable Boolean disableConnectionDrainOnFailover,
+        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") @Nullable Boolean dropTrafficIfUnhealthy,
+        @OutputCustomType.Parameter("failoverRatio") @Nullable Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;
@@ -118,17 +118,17 @@ public final class RegionBackendServiceFailoverPolicy {
     	      this.failoverRatio = defaults.failoverRatio;
         }
 
-        public Builder setDisableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
+        public Builder disableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
             this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
             return this;
         }
 
-        public Builder setDropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
+        public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
             this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
             return this;
         }
 
-        public Builder setFailoverRatio(@Nullable Double failoverRatio) {
+        public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }

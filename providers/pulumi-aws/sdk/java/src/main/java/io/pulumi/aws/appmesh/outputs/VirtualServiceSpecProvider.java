@@ -23,10 +23,10 @@ public final class VirtualServiceSpecProvider {
      */
     private final @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter;
 
-    @OutputCustomType.Constructor({"virtualNode","virtualRouter"})
+    @OutputCustomType.Constructor
     private VirtualServiceSpecProvider(
-        @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
-        @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
+        @OutputCustomType.Parameter("virtualNode") @Nullable VirtualServiceSpecProviderVirtualNode virtualNode,
+        @OutputCustomType.Parameter("virtualRouter") @Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
         this.virtualNode = virtualNode;
         this.virtualRouter = virtualRouter;
     }
@@ -68,12 +68,12 @@ public final class VirtualServiceSpecProvider {
     	      this.virtualRouter = defaults.virtualRouter;
         }
 
-        public Builder setVirtualNode(@Nullable VirtualServiceSpecProviderVirtualNode virtualNode) {
+        public Builder virtualNode(@Nullable VirtualServiceSpecProviderVirtualNode virtualNode) {
             this.virtualNode = virtualNode;
             return this;
         }
 
-        public Builder setVirtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
+        public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouter virtualRouter) {
             this.virtualRouter = virtualRouter;
             return this;
         }

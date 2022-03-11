@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketS3KeyFilter {
     private final List<BucketFilterRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BucketS3KeyFilter(List<BucketFilterRule> rules) {
+    @OutputCustomType.Constructor
+    private BucketS3KeyFilter(@OutputCustomType.Parameter("rules") List<BucketFilterRule> rules) {
         this.rules = rules;
     }
 
@@ -41,7 +41,7 @@ public final class BucketS3KeyFilter {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BucketFilterRule> rules) {
+        public Builder rules(List<BucketFilterRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

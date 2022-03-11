@@ -49,7 +49,7 @@ public final class DistributionS3OriginConfig extends io.pulumi.resources.Invoke
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }

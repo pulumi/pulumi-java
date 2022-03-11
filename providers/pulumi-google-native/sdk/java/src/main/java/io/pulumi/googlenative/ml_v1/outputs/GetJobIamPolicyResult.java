@@ -34,12 +34,12 @@ public final class GetJobIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"auditConfigs","bindings","etag","version"})
+    @OutputCustomType.Constructor
     private GetJobIamPolicyResult(
-        List<GoogleIamV1__AuditConfigResponse> auditConfigs,
-        List<GoogleIamV1__BindingResponse> bindings,
-        String etag,
-        Integer version) {
+        @OutputCustomType.Parameter("auditConfigs") List<GoogleIamV1__AuditConfigResponse> auditConfigs,
+        @OutputCustomType.Parameter("bindings") List<GoogleIamV1__BindingResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.etag = etag;
@@ -101,22 +101,22 @@ public final class GetJobIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAuditConfigs(List<GoogleIamV1__AuditConfigResponse> auditConfigs) {
+        public Builder auditConfigs(List<GoogleIamV1__AuditConfigResponse> auditConfigs) {
             this.auditConfigs = Objects.requireNonNull(auditConfigs);
             return this;
         }
 
-        public Builder setBindings(List<GoogleIamV1__BindingResponse> bindings) {
+        public Builder bindings(List<GoogleIamV1__BindingResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

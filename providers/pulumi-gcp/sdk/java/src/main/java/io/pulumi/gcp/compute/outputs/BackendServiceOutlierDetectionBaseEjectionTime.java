@@ -25,10 +25,10 @@ public final class BackendServiceOutlierDetectionBaseEjectionTime {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"nanos","seconds"})
+    @OutputCustomType.Constructor
     private BackendServiceOutlierDetectionBaseEjectionTime(
-        @Nullable Integer nanos,
-        Integer seconds) {
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }
@@ -73,12 +73,12 @@ public final class BackendServiceOutlierDetectionBaseEjectionTime {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

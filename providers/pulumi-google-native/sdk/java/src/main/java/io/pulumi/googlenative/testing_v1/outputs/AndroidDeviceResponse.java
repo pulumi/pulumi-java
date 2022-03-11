@@ -30,12 +30,12 @@ public final class AndroidDeviceResponse {
      */
     private final String orientation;
 
-    @OutputCustomType.Constructor({"androidModelId","androidVersionId","locale","orientation"})
+    @OutputCustomType.Constructor
     private AndroidDeviceResponse(
-        String androidModelId,
-        String androidVersionId,
-        String locale,
-        String orientation) {
+        @OutputCustomType.Parameter("androidModelId") String androidModelId,
+        @OutputCustomType.Parameter("androidVersionId") String androidVersionId,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("orientation") String orientation) {
         this.androidModelId = androidModelId;
         this.androidVersionId = androidVersionId;
         this.locale = locale;
@@ -97,22 +97,22 @@ public final class AndroidDeviceResponse {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder setAndroidModelId(String androidModelId) {
+        public Builder androidModelId(String androidModelId) {
             this.androidModelId = Objects.requireNonNull(androidModelId);
             return this;
         }
 
-        public Builder setAndroidVersionId(String androidVersionId) {
+        public Builder androidVersionId(String androidVersionId) {
             this.androidVersionId = Objects.requireNonNull(androidVersionId);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setOrientation(String orientation) {
+        public Builder orientation(String orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }

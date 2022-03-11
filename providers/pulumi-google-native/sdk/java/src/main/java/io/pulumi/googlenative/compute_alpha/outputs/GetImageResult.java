@@ -194,43 +194,43 @@ public final class GetImageResult {
      */
     private final List<String> userLicenses;
 
-    @OutputCustomType.Constructor({"architecture","archiveSizeBytes","creationTimestamp","deprecated","description","diskSizeGb","family","guestOsFeatures","imageEncryptionKey","kind","labelFingerprint","labels","licenseCodes","licenses","locked","name","rawDisk","rolloutOverride","satisfiesPzs","selfLink","selfLinkWithId","shieldedInstanceInitialState","sourceDisk","sourceDiskEncryptionKey","sourceDiskId","sourceImage","sourceImageEncryptionKey","sourceImageId","sourceSnapshot","sourceSnapshotEncryptionKey","sourceSnapshotId","sourceType","status","storageLocations","userLicenses"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String architecture,
-        String archiveSizeBytes,
-        String creationTimestamp,
-        DeprecationStatusResponse deprecated,
-        String description,
-        String diskSizeGb,
-        String family,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        CustomerEncryptionKeyResponse imageEncryptionKey,
-        String kind,
-        String labelFingerprint,
-        Map<String,String> labels,
-        List<String> licenseCodes,
-        List<String> licenses,
-        Boolean locked,
-        String name,
-        ImageRawDiskResponse rawDisk,
-        RolloutPolicyResponse rolloutOverride,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String selfLinkWithId,
-        InitialStateConfigResponse shieldedInstanceInitialState,
-        String sourceDisk,
-        CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
-        String sourceDiskId,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceImageId,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
-        String sourceSnapshotId,
-        String sourceType,
-        String status,
-        List<String> storageLocations,
-        List<String> userLicenses) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("archiveSizeBytes") String archiveSizeBytes,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("deprecated") DeprecationStatusResponse deprecated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("family") String family,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("imageEncryptionKey") CustomerEncryptionKeyResponse imageEncryptionKey,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rawDisk") ImageRawDiskResponse rawDisk,
+        @OutputCustomType.Parameter("rolloutOverride") RolloutPolicyResponse rolloutOverride,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("shieldedInstanceInitialState") InitialStateConfigResponse shieldedInstanceInitialState,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk,
+        @OutputCustomType.Parameter("sourceDiskEncryptionKey") CustomerEncryptionKeyResponse sourceDiskEncryptionKey,
+        @OutputCustomType.Parameter("sourceDiskId") String sourceDiskId,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @OutputCustomType.Parameter("sourceImageId") String sourceImageId,
+        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey,
+        @OutputCustomType.Parameter("sourceSnapshotId") String sourceSnapshotId,
+        @OutputCustomType.Parameter("sourceType") String sourceType,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("storageLocations") List<String> storageLocations,
+        @OutputCustomType.Parameter("userLicenses") List<String> userLicenses) {
         this.architecture = architecture;
         this.archiveSizeBytes = archiveSizeBytes;
         this.creationTimestamp = creationTimestamp;
@@ -602,177 +602,177 @@ public final class GetImageResult {
     	      this.userLicenses = defaults.userLicenses;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setArchiveSizeBytes(String archiveSizeBytes) {
+        public Builder archiveSizeBytes(String archiveSizeBytes) {
             this.archiveSizeBytes = Objects.requireNonNull(archiveSizeBytes);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDeprecated(DeprecationStatusResponse deprecated) {
+        public Builder deprecated(DeprecationStatusResponse deprecated) {
             this.deprecated = Objects.requireNonNull(deprecated);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setFamily(String family) {
+        public Builder family(String family) {
             this.family = Objects.requireNonNull(family);
             return this;
         }
 
-        public Builder setGuestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
+        public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
 
-        public Builder setImageEncryptionKey(CustomerEncryptionKeyResponse imageEncryptionKey) {
+        public Builder imageEncryptionKey(CustomerEncryptionKeyResponse imageEncryptionKey) {
             this.imageEncryptionKey = Objects.requireNonNull(imageEncryptionKey);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabelFingerprint(String labelFingerprint) {
+        public Builder labelFingerprint(String labelFingerprint) {
             this.labelFingerprint = Objects.requireNonNull(labelFingerprint);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenseCodes(List<String> licenseCodes) {
+        public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setLocked(Boolean locked) {
+        public Builder locked(Boolean locked) {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRawDisk(ImageRawDiskResponse rawDisk) {
+        public Builder rawDisk(ImageRawDiskResponse rawDisk) {
             this.rawDisk = Objects.requireNonNull(rawDisk);
             return this;
         }
 
-        public Builder setRolloutOverride(RolloutPolicyResponse rolloutOverride) {
+        public Builder rolloutOverride(RolloutPolicyResponse rolloutOverride) {
             this.rolloutOverride = Objects.requireNonNull(rolloutOverride);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setShieldedInstanceInitialState(InitialStateConfigResponse shieldedInstanceInitialState) {
+        public Builder shieldedInstanceInitialState(InitialStateConfigResponse shieldedInstanceInitialState) {
             this.shieldedInstanceInitialState = Objects.requireNonNull(shieldedInstanceInitialState);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
 
-        public Builder setSourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
+        public Builder sourceDiskEncryptionKey(CustomerEncryptionKeyResponse sourceDiskEncryptionKey) {
             this.sourceDiskEncryptionKey = Objects.requireNonNull(sourceDiskEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDiskId(String sourceDiskId) {
+        public Builder sourceDiskId(String sourceDiskId) {
             this.sourceDiskId = Objects.requireNonNull(sourceDiskId);
             return this;
         }
 
-        public Builder setSourceImage(String sourceImage) {
+        public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceImageId(String sourceImageId) {
+        public Builder sourceImageId(String sourceImageId) {
             this.sourceImageId = Objects.requireNonNull(sourceImageId);
             return this;
         }
 
-        public Builder setSourceSnapshot(String sourceSnapshot) {
+        public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
 
-        public Builder setSourceSnapshotId(String sourceSnapshotId) {
+        public Builder sourceSnapshotId(String sourceSnapshotId) {
             this.sourceSnapshotId = Objects.requireNonNull(sourceSnapshotId);
             return this;
         }
 
-        public Builder setSourceType(String sourceType) {
+        public Builder sourceType(String sourceType) {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageLocations(List<String> storageLocations) {
+        public Builder storageLocations(List<String> storageLocations) {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
 
-        public Builder setUserLicenses(List<String> userLicenses) {
+        public Builder userLicenses(List<String> userLicenses) {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }

@@ -56,12 +56,12 @@ public final class ResourceSelectorArgs extends io.pulumi.resources.ResourceArgs
     	      this.fullResourceName = defaults.fullResourceName;
         }
 
-        public Builder setFullResourceName(Input<String> fullResourceName) {
+        public Builder fullResourceName(Input<String> fullResourceName) {
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
 
-        public Builder setFullResourceName(String fullResourceName) {
+        public Builder fullResourceName(String fullResourceName) {
             this.fullResourceName = Input.of(Objects.requireNonNull(fullResourceName));
             return this;
         }

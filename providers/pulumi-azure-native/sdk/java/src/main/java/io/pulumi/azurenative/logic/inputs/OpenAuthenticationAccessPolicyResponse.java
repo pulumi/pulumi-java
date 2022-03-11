@@ -76,12 +76,12 @@ public final class OpenAuthenticationAccessPolicyResponse extends io.pulumi.reso
     	      this.type = defaults.type;
         }
 
-        public Builder setClaims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
+        public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimResponse> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

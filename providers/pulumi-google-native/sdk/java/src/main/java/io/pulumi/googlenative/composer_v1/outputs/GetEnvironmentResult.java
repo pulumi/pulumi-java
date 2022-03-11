@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"config","createTime","labels","name","state","updateTime","uuid"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        EnvironmentConfigResponse config,
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String updateTime,
-        String uuid) {
+        @OutputCustomType.Parameter("config") EnvironmentConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.config = config;
         this.createTime = createTime;
         this.labels = labels;
@@ -147,37 +147,37 @@ public final class GetEnvironmentResult {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setConfig(EnvironmentConfigResponse config) {
+        public Builder config(EnvironmentConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }

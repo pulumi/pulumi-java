@@ -22,10 +22,10 @@ public final class PrivateLinkScopedResourceResponse {
      */
     private final @Nullable String scopeId;
 
-    @OutputCustomType.Constructor({"resourceId","scopeId"})
+    @OutputCustomType.Constructor
     private PrivateLinkScopedResourceResponse(
-        @Nullable String resourceId,
-        @Nullable String scopeId) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("scopeId") @Nullable String scopeId) {
         this.resourceId = resourceId;
         this.scopeId = scopeId;
     }
@@ -67,12 +67,12 @@ public final class PrivateLinkScopedResourceResponse {
     	      this.scopeId = defaults.scopeId;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setScopeId(@Nullable String scopeId) {
+        public Builder scopeId(@Nullable String scopeId) {
             this.scopeId = scopeId;
             return this;
         }

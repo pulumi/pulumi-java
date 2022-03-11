@@ -53,12 +53,12 @@ public final class DicomStoreStreamConfigGetArgs extends io.pulumi.resources.Res
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder setBigqueryDestination(Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
+        public Builder bigqueryDestination(Input<DicomStoreStreamConfigBigqueryDestinationGetArgs> bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setBigqueryDestination(DicomStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
+        public Builder bigqueryDestination(DicomStoreStreamConfigBigqueryDestinationGetArgs bigqueryDestination) {
             this.bigqueryDestination = Input.of(Objects.requireNonNull(bigqueryDestination));
             return this;
         }

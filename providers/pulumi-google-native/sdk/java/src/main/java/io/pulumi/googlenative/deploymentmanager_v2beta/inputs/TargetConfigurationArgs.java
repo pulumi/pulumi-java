@@ -72,22 +72,22 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(@Nullable Input<ConfigFileArgs> config) {
+        public Builder config(@Nullable Input<ConfigFileArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable ConfigFileArgs config) {
+        public Builder config(@Nullable ConfigFileArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setImports(@Nullable Input<List<ImportFileArgs>> imports) {
+        public Builder imports(@Nullable Input<List<ImportFileArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
-        public Builder setImports(@Nullable List<ImportFileArgs> imports) {
+        public Builder imports(@Nullable List<ImportFileArgs> imports) {
             this.imports = Input.ofNullable(imports);
             return this;
         }

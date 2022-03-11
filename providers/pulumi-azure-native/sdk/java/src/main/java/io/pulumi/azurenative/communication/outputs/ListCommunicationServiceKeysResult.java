@@ -32,12 +32,12 @@ public final class ListCommunicationServiceKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryConnectionString","primaryKey","secondaryConnectionString","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListCommunicationServiceKeysResult(
-        @Nullable String primaryConnectionString,
-        @Nullable String primaryKey,
-        @Nullable String secondaryConnectionString,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryConnectionString = primaryConnectionString;
         this.primaryKey = primaryKey;
         this.secondaryConnectionString = secondaryConnectionString;
@@ -99,22 +99,22 @@ public final class ListCommunicationServiceKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryConnectionString(@Nullable String primaryConnectionString) {
+        public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setSecondaryConnectionString(@Nullable String secondaryConnectionString) {
+        public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

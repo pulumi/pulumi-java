@@ -225,7 +225,7 @@ public class KubernetesRole extends io.pulumi.resources.CustomResource {
     private static KubernetesRoleArgs makeArgs(KubernetesRoleArgs args) {
         var builder = args == null ? KubernetesRoleArgs.builder() : KubernetesRoleArgs.builder(args);
         return builder
-            .setKind("Kubernetes")
+            .kind("Kubernetes")
             .build();
     }
 

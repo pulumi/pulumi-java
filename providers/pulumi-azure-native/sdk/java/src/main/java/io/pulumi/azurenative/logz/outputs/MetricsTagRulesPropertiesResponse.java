@@ -32,12 +32,12 @@ public final class MetricsTagRulesPropertiesResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor({"metricRules","provisioningState","sendMetrics","systemData"})
+    @OutputCustomType.Constructor
     private MetricsTagRulesPropertiesResponse(
-        @Nullable List<MetricRulesResponse> metricRules,
-        String provisioningState,
-        @Nullable Boolean sendMetrics,
-        SystemDataResponse systemData) {
+        @OutputCustomType.Parameter("metricRules") @Nullable List<MetricRulesResponse> metricRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sendMetrics") @Nullable Boolean sendMetrics,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.metricRules = metricRules;
         this.provisioningState = provisioningState;
         this.sendMetrics = sendMetrics;
@@ -95,22 +95,22 @@ public final class MetricsTagRulesPropertiesResponse {
     	      this.systemData = defaults.systemData;
         }
 
-        public Builder setMetricRules(@Nullable List<MetricRulesResponse> metricRules) {
+        public Builder metricRules(@Nullable List<MetricRulesResponse> metricRules) {
             this.metricRules = metricRules;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSendMetrics(@Nullable Boolean sendMetrics) {
+        public Builder sendMetrics(@Nullable Boolean sendMetrics) {
             this.sendMetrics = sendMetrics;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }

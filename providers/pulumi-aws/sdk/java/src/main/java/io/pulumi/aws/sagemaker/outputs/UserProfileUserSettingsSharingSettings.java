@@ -27,11 +27,11 @@ public final class UserProfileUserSettingsSharingSettings {
      */
     private final @Nullable String s3OutputPath;
 
-    @OutputCustomType.Constructor({"notebookOutputOption","s3KmsKeyId","s3OutputPath"})
+    @OutputCustomType.Constructor
     private UserProfileUserSettingsSharingSettings(
-        @Nullable String notebookOutputOption,
-        @Nullable String s3KmsKeyId,
-        @Nullable String s3OutputPath) {
+        @OutputCustomType.Parameter("notebookOutputOption") @Nullable String notebookOutputOption,
+        @OutputCustomType.Parameter("s3KmsKeyId") @Nullable String s3KmsKeyId,
+        @OutputCustomType.Parameter("s3OutputPath") @Nullable String s3OutputPath) {
         this.notebookOutputOption = notebookOutputOption;
         this.s3KmsKeyId = s3KmsKeyId;
         this.s3OutputPath = s3OutputPath;
@@ -83,17 +83,17 @@ public final class UserProfileUserSettingsSharingSettings {
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setNotebookOutputOption(@Nullable String notebookOutputOption) {
+        public Builder notebookOutputOption(@Nullable String notebookOutputOption) {
             this.notebookOutputOption = notebookOutputOption;
             return this;
         }
 
-        public Builder setS3KmsKeyId(@Nullable String s3KmsKeyId) {
+        public Builder s3KmsKeyId(@Nullable String s3KmsKeyId) {
             this.s3KmsKeyId = s3KmsKeyId;
             return this;
         }
 
-        public Builder setS3OutputPath(@Nullable String s3OutputPath) {
+        public Builder s3OutputPath(@Nullable String s3OutputPath) {
             this.s3OutputPath = s3OutputPath;
             return this;
         }

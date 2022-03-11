@@ -62,18 +62,18 @@ public final class Vp9CodecSettingsResponse {
      */
     private final Integer widthPixels;
 
-    @OutputCustomType.Constructor({"bitrateBps","crfLevel","frameRate","gopDuration","gopFrameCount","heightPixels","pixelFormat","profile","rateControlMode","widthPixels"})
+    @OutputCustomType.Constructor
     private Vp9CodecSettingsResponse(
-        Integer bitrateBps,
-        Integer crfLevel,
-        Double frameRate,
-        String gopDuration,
-        Integer gopFrameCount,
-        Integer heightPixels,
-        String pixelFormat,
-        String profile,
-        String rateControlMode,
-        Integer widthPixels) {
+        @OutputCustomType.Parameter("bitrateBps") Integer bitrateBps,
+        @OutputCustomType.Parameter("crfLevel") Integer crfLevel,
+        @OutputCustomType.Parameter("frameRate") Double frameRate,
+        @OutputCustomType.Parameter("gopDuration") String gopDuration,
+        @OutputCustomType.Parameter("gopFrameCount") Integer gopFrameCount,
+        @OutputCustomType.Parameter("heightPixels") Integer heightPixels,
+        @OutputCustomType.Parameter("pixelFormat") String pixelFormat,
+        @OutputCustomType.Parameter("profile") String profile,
+        @OutputCustomType.Parameter("rateControlMode") String rateControlMode,
+        @OutputCustomType.Parameter("widthPixels") Integer widthPixels) {
         this.bitrateBps = bitrateBps;
         this.crfLevel = crfLevel;
         this.frameRate = frameRate;
@@ -195,52 +195,52 @@ public final class Vp9CodecSettingsResponse {
     	      this.widthPixels = defaults.widthPixels;
         }
 
-        public Builder setBitrateBps(Integer bitrateBps) {
+        public Builder bitrateBps(Integer bitrateBps) {
             this.bitrateBps = Objects.requireNonNull(bitrateBps);
             return this;
         }
 
-        public Builder setCrfLevel(Integer crfLevel) {
+        public Builder crfLevel(Integer crfLevel) {
             this.crfLevel = Objects.requireNonNull(crfLevel);
             return this;
         }
 
-        public Builder setFrameRate(Double frameRate) {
+        public Builder frameRate(Double frameRate) {
             this.frameRate = Objects.requireNonNull(frameRate);
             return this;
         }
 
-        public Builder setGopDuration(String gopDuration) {
+        public Builder gopDuration(String gopDuration) {
             this.gopDuration = Objects.requireNonNull(gopDuration);
             return this;
         }
 
-        public Builder setGopFrameCount(Integer gopFrameCount) {
+        public Builder gopFrameCount(Integer gopFrameCount) {
             this.gopFrameCount = Objects.requireNonNull(gopFrameCount);
             return this;
         }
 
-        public Builder setHeightPixels(Integer heightPixels) {
+        public Builder heightPixels(Integer heightPixels) {
             this.heightPixels = Objects.requireNonNull(heightPixels);
             return this;
         }
 
-        public Builder setPixelFormat(String pixelFormat) {
+        public Builder pixelFormat(String pixelFormat) {
             this.pixelFormat = Objects.requireNonNull(pixelFormat);
             return this;
         }
 
-        public Builder setProfile(String profile) {
+        public Builder profile(String profile) {
             this.profile = Objects.requireNonNull(profile);
             return this;
         }
 
-        public Builder setRateControlMode(String rateControlMode) {
+        public Builder rateControlMode(String rateControlMode) {
             this.rateControlMode = Objects.requireNonNull(rateControlMode);
             return this;
         }
 
-        public Builder setWidthPixels(Integer widthPixels) {
+        public Builder widthPixels(Integer widthPixels) {
             this.widthPixels = Objects.requireNonNull(widthPixels);
             return this;
         }

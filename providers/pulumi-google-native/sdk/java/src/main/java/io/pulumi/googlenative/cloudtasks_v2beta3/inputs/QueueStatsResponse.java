@@ -121,27 +121,27 @@ public final class QueueStatsResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tasksCount = defaults.tasksCount;
         }
 
-        public Builder setConcurrentDispatchesCount(String concurrentDispatchesCount) {
+        public Builder concurrentDispatchesCount(String concurrentDispatchesCount) {
             this.concurrentDispatchesCount = Objects.requireNonNull(concurrentDispatchesCount);
             return this;
         }
 
-        public Builder setEffectiveExecutionRate(Double effectiveExecutionRate) {
+        public Builder effectiveExecutionRate(Double effectiveExecutionRate) {
             this.effectiveExecutionRate = Objects.requireNonNull(effectiveExecutionRate);
             return this;
         }
 
-        public Builder setExecutedLastMinuteCount(String executedLastMinuteCount) {
+        public Builder executedLastMinuteCount(String executedLastMinuteCount) {
             this.executedLastMinuteCount = Objects.requireNonNull(executedLastMinuteCount);
             return this;
         }
 
-        public Builder setOldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
+        public Builder oldestEstimatedArrivalTime(String oldestEstimatedArrivalTime) {
             this.oldestEstimatedArrivalTime = Objects.requireNonNull(oldestEstimatedArrivalTime);
             return this;
         }
 
-        public Builder setTasksCount(String tasksCount) {
+        public Builder tasksCount(String tasksCount) {
             this.tasksCount = Objects.requireNonNull(tasksCount);
             return this;
         }

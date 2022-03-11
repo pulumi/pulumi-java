@@ -24,10 +24,10 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerResult {
      */
     private final @Nullable List<EffectiveVirtualNetworkResponse> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListEffectiveVirtualNetworkByNetworkManagerResult(
-        @Nullable String skipToken,
-        @Nullable List<EffectiveVirtualNetworkResponse> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<EffectiveVirtualNetworkResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListEffectiveVirtualNetworkByNetworkManagerResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setValue(@Nullable List<EffectiveVirtualNetworkResponse> value) {
+        public Builder value(@Nullable List<EffectiveVirtualNetworkResponse> value) {
             this.value = value;
             return this;
         }

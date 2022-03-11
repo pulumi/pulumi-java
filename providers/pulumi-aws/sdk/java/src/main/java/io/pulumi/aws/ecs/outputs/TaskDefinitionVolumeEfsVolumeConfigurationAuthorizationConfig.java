@@ -22,10 +22,10 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
      */
     private final @Nullable String iam;
 
-    @OutputCustomType.Constructor({"accessPointId","iam"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig(
-        @Nullable String accessPointId,
-        @Nullable String iam) {
+        @OutputCustomType.Parameter("accessPointId") @Nullable String accessPointId,
+        @OutputCustomType.Parameter("iam") @Nullable String iam) {
         this.accessPointId = accessPointId;
         this.iam = iam;
     }
@@ -67,12 +67,12 @@ public final class TaskDefinitionVolumeEfsVolumeConfigurationAuthorizationConfig
     	      this.iam = defaults.iam;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setIam(@Nullable String iam) {
+        public Builder iam(@Nullable String iam) {
             this.iam = iam;
             return this;
         }

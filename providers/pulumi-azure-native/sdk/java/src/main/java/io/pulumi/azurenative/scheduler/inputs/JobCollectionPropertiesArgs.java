@@ -88,32 +88,32 @@ public final class JobCollectionPropertiesArgs extends io.pulumi.resources.Resou
     	      this.state = defaults.state;
         }
 
-        public Builder setQuota(@Nullable Input<JobCollectionQuotaArgs> quota) {
+        public Builder quota(@Nullable Input<JobCollectionQuotaArgs> quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setQuota(@Nullable JobCollectionQuotaArgs quota) {
+        public Builder quota(@Nullable JobCollectionQuotaArgs quota) {
             this.quota = Input.ofNullable(quota);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setState(@Nullable Input<JobCollectionState> state) {
+        public Builder state(@Nullable Input<JobCollectionState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable JobCollectionState state) {
+        public Builder state(@Nullable JobCollectionState state) {
             this.state = Input.ofNullable(state);
             return this;
         }

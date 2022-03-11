@@ -47,11 +47,11 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
      */
     private final @Nullable List<String> retryConditions;
 
-    @OutputCustomType.Constructor({"numRetries","perTryTimeout","retryConditions"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionRetryPolicy(
-        @Nullable Integer numRetries,
-        @Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout perTryTimeout,
-        @Nullable List<String> retryConditions) {
+        @OutputCustomType.Parameter("numRetries") @Nullable Integer numRetries,
+        @OutputCustomType.Parameter("perTryTimeout") @Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout perTryTimeout,
+        @OutputCustomType.Parameter("retryConditions") @Nullable List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;
@@ -120,17 +120,17 @@ public final class URLMapPathMatcherDefaultRouteActionRetryPolicy {
     	      this.retryConditions = defaults.retryConditions;
         }
 
-        public Builder setNumRetries(@Nullable Integer numRetries) {
+        public Builder numRetries(@Nullable Integer numRetries) {
             this.numRetries = numRetries;
             return this;
         }
 
-        public Builder setPerTryTimeout(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
+        public Builder perTryTimeout(@Nullable URLMapPathMatcherDefaultRouteActionRetryPolicyPerTryTimeout perTryTimeout) {
             this.perTryTimeout = perTryTimeout;
             return this;
         }
 
-        public Builder setRetryConditions(@Nullable List<String> retryConditions) {
+        public Builder retryConditions(@Nullable List<String> retryConditions) {
             this.retryConditions = retryConditions;
             return this;
         }

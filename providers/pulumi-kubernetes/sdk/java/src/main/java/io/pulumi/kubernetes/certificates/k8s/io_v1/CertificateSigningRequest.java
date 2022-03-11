@@ -140,8 +140,8 @@ public class CertificateSigningRequest extends io.pulumi.resources.CustomResourc
     private static CertificateSigningRequestArgs makeArgs(CertificateSigningRequestArgs args) {
         var builder = args == null ? CertificateSigningRequestArgs.builder() : CertificateSigningRequestArgs.builder(args);
         return builder
-            .setApiVersion("certificates.k8s.io/v1")
-            .setKind("CertificateSigningRequest")
+            .apiVersion("certificates.k8s.io/v1")
+            .kind("CertificateSigningRequest")
             .build();
     }
 

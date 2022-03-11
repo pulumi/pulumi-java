@@ -23,10 +23,10 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
      */
     private final @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides;
 
-    @OutputCustomType.Constructor({"bypassTrafficSettings","signatureOverrides"})
+    @OutputCustomType.Constructor
     private FirewallPolicyIntrusionDetectionConfigurationResponse(
-        @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
-        @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
+        @OutputCustomType.Parameter("bypassTrafficSettings") @Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings,
+        @OutputCustomType.Parameter("signatureOverrides") @Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
         this.bypassTrafficSettings = bypassTrafficSettings;
         this.signatureOverrides = signatureOverrides;
     }
@@ -68,12 +68,12 @@ public final class FirewallPolicyIntrusionDetectionConfigurationResponse {
     	      this.signatureOverrides = defaults.signatureOverrides;
         }
 
-        public Builder setBypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
+        public Builder bypassTrafficSettings(@Nullable List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsResponse> bypassTrafficSettings) {
             this.bypassTrafficSettings = bypassTrafficSettings;
             return this;
         }
 
-        public Builder setSignatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
+        public Builder signatureOverrides(@Nullable List<FirewallPolicyIntrusionDetectionSignatureSpecificationResponse> signatureOverrides) {
             this.signatureOverrides = signatureOverrides;
             return this;
         }

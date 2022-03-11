@@ -21,11 +21,11 @@ public final class GetAccountAuditConfigurationResult {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"auditCheckConfigurations","auditNotificationTargetConfigurations","roleArn"})
+    @OutputCustomType.Constructor
     private GetAccountAuditConfigurationResult(
-        @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations,
-        @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("auditCheckConfigurations") @Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations,
+        @OutputCustomType.Parameter("auditNotificationTargetConfigurations") @Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.auditCheckConfigurations = auditCheckConfigurations;
         this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
         this.roleArn = roleArn;
@@ -69,17 +69,17 @@ public final class GetAccountAuditConfigurationResult {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAuditCheckConfigurations(@Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations) {
+        public Builder auditCheckConfigurations(@Nullable AccountAuditConfigurationAuditCheckConfigurations auditCheckConfigurations) {
             this.auditCheckConfigurations = auditCheckConfigurations;
             return this;
         }
 
-        public Builder setAuditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations) {
+        public Builder auditNotificationTargetConfigurations(@Nullable AccountAuditConfigurationAuditNotificationTargetConfigurations auditNotificationTargetConfigurations) {
             this.auditNotificationTargetConfigurations = auditNotificationTargetConfigurations;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

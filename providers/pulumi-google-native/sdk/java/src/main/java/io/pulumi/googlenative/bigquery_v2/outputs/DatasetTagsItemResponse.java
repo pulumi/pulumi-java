@@ -20,10 +20,10 @@ public final class DatasetTagsItemResponse {
      */
     private final String tagValue;
 
-    @OutputCustomType.Constructor({"tagKey","tagValue"})
+    @OutputCustomType.Constructor
     private DatasetTagsItemResponse(
-        String tagKey,
-        String tagValue) {
+        @OutputCustomType.Parameter("tagKey") String tagKey,
+        @OutputCustomType.Parameter("tagValue") String tagValue) {
         this.tagKey = tagKey;
         this.tagValue = tagValue;
     }
@@ -65,12 +65,12 @@ public final class DatasetTagsItemResponse {
     	      this.tagValue = defaults.tagValue;
         }
 
-        public Builder setTagKey(String tagKey) {
+        public Builder tagKey(String tagKey) {
             this.tagKey = Objects.requireNonNull(tagKey);
             return this;
         }
 
-        public Builder setTagValue(String tagValue) {
+        public Builder tagValue(String tagValue) {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }

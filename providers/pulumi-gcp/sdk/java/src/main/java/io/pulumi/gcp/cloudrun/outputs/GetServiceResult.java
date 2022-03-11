@@ -31,17 +31,17 @@ public final class GetServiceResult {
     private final List<GetServiceTemplate> templates;
     private final List<GetServiceTraffic> traffics;
 
-    @OutputCustomType.Constructor({"autogenerateRevisionName","id","location","metadatas","name","project","statuses","templates","traffics"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        Boolean autogenerateRevisionName,
-        String id,
-        String location,
-        List<GetServiceMetadata> metadatas,
-        String name,
-        @Nullable String project,
-        List<GetServiceStatus> statuses,
-        List<GetServiceTemplate> templates,
-        List<GetServiceTraffic> traffics) {
+        @OutputCustomType.Parameter("autogenerateRevisionName") Boolean autogenerateRevisionName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("metadatas") List<GetServiceMetadata> metadatas,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("statuses") List<GetServiceStatus> statuses,
+        @OutputCustomType.Parameter("templates") List<GetServiceTemplate> templates,
+        @OutputCustomType.Parameter("traffics") List<GetServiceTraffic> traffics) {
         this.autogenerateRevisionName = autogenerateRevisionName;
         this.id = id;
         this.location = location;
@@ -121,47 +121,47 @@ public final class GetServiceResult {
     	      this.traffics = defaults.traffics;
         }
 
-        public Builder setAutogenerateRevisionName(Boolean autogenerateRevisionName) {
+        public Builder autogenerateRevisionName(Boolean autogenerateRevisionName) {
             this.autogenerateRevisionName = Objects.requireNonNull(autogenerateRevisionName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMetadatas(List<GetServiceMetadata> metadatas) {
+        public Builder metadatas(List<GetServiceMetadata> metadatas) {
             this.metadatas = Objects.requireNonNull(metadatas);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setStatuses(List<GetServiceStatus> statuses) {
+        public Builder statuses(List<GetServiceStatus> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
 
-        public Builder setTemplates(List<GetServiceTemplate> templates) {
+        public Builder templates(List<GetServiceTemplate> templates) {
             this.templates = Objects.requireNonNull(templates);
             return this;
         }
 
-        public Builder setTraffics(List<GetServiceTraffic> traffics) {
+        public Builder traffics(List<GetServiceTraffic> traffics) {
             this.traffics = Objects.requireNonNull(traffics);
             return this;
         }

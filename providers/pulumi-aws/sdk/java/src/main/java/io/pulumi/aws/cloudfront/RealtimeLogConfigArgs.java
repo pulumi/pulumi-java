@@ -105,42 +105,42 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setEndpoint(Input<RealtimeLogConfigEndpointArgs> endpoint) {
+        public Builder endpoint(Input<RealtimeLogConfigEndpointArgs> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(RealtimeLogConfigEndpointArgs endpoint) {
+        public Builder endpoint(RealtimeLogConfigEndpointArgs endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setFields(Input<List<String>> fields) {
+        public Builder fields(Input<List<String>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<String> fields) {
+        public Builder fields(List<String> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSamplingRate(Input<Integer> samplingRate) {
+        public Builder samplingRate(Input<Integer> samplingRate) {
             this.samplingRate = Objects.requireNonNull(samplingRate);
             return this;
         }
 
-        public Builder setSamplingRate(Integer samplingRate) {
+        public Builder samplingRate(Integer samplingRate) {
             this.samplingRate = Input.of(Objects.requireNonNull(samplingRate));
             return this;
         }

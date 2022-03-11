@@ -34,12 +34,12 @@ public final class FrontDoorManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor({"action","enabledState","exclusions","ruleId"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleId) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.exclusions = exclusions;
@@ -101,22 +101,22 @@ public final class FrontDoorManagedRuleOverrideResponse {
     	      this.ruleId = defaults.ruleId;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setExclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
+        public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }

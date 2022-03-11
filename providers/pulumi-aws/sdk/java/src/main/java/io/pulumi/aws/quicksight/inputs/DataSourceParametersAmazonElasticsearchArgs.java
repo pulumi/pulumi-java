@@ -52,12 +52,12 @@ public final class DataSourceParametersAmazonElasticsearchArgs extends io.pulumi
     	      this.domain = defaults.domain;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }

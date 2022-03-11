@@ -17,13 +17,13 @@ public final class ClusterClusterCertificate {
     private final @Nullable String hsmCertificate;
     private final @Nullable String manufacturerHardwareCertificate;
 
-    @OutputCustomType.Constructor({"awsHardwareCertificate","clusterCertificate","clusterCsr","hsmCertificate","manufacturerHardwareCertificate"})
+    @OutputCustomType.Constructor
     private ClusterClusterCertificate(
-        @Nullable String awsHardwareCertificate,
-        @Nullable String clusterCertificate,
-        @Nullable String clusterCsr,
-        @Nullable String hsmCertificate,
-        @Nullable String manufacturerHardwareCertificate) {
+        @OutputCustomType.Parameter("awsHardwareCertificate") @Nullable String awsHardwareCertificate,
+        @OutputCustomType.Parameter("clusterCertificate") @Nullable String clusterCertificate,
+        @OutputCustomType.Parameter("clusterCsr") @Nullable String clusterCsr,
+        @OutputCustomType.Parameter("hsmCertificate") @Nullable String hsmCertificate,
+        @OutputCustomType.Parameter("manufacturerHardwareCertificate") @Nullable String manufacturerHardwareCertificate) {
         this.awsHardwareCertificate = awsHardwareCertificate;
         this.clusterCertificate = clusterCertificate;
         this.clusterCsr = clusterCsr;
@@ -75,27 +75,27 @@ public final class ClusterClusterCertificate {
     	      this.manufacturerHardwareCertificate = defaults.manufacturerHardwareCertificate;
         }
 
-        public Builder setAwsHardwareCertificate(@Nullable String awsHardwareCertificate) {
+        public Builder awsHardwareCertificate(@Nullable String awsHardwareCertificate) {
             this.awsHardwareCertificate = awsHardwareCertificate;
             return this;
         }
 
-        public Builder setClusterCertificate(@Nullable String clusterCertificate) {
+        public Builder clusterCertificate(@Nullable String clusterCertificate) {
             this.clusterCertificate = clusterCertificate;
             return this;
         }
 
-        public Builder setClusterCsr(@Nullable String clusterCsr) {
+        public Builder clusterCsr(@Nullable String clusterCsr) {
             this.clusterCsr = clusterCsr;
             return this;
         }
 
-        public Builder setHsmCertificate(@Nullable String hsmCertificate) {
+        public Builder hsmCertificate(@Nullable String hsmCertificate) {
             this.hsmCertificate = hsmCertificate;
             return this;
         }
 
-        public Builder setManufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
+        public Builder manufacturerHardwareCertificate(@Nullable String manufacturerHardwareCertificate) {
             this.manufacturerHardwareCertificate = manufacturerHardwareCertificate;
             return this;
         }

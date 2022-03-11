@@ -21,10 +21,10 @@ public final class ApiManagementServiceSkuPropertiesResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private ApiManagementServiceSkuPropertiesResponse(
-        Integer capacity,
-        String name) {
+        @OutputCustomType.Parameter("capacity") Integer capacity,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacity = capacity;
         this.name = name;
     }
@@ -66,12 +66,12 @@ public final class ApiManagementServiceSkuPropertiesResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(Integer capacity) {
+        public Builder capacity(Integer capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

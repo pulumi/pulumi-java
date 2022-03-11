@@ -22,10 +22,10 @@ public final class CrossSiteAccessPoliciesResponse {
      */
     private final @Nullable String crossDomainPolicy;
 
-    @OutputCustomType.Constructor({"clientAccessPolicy","crossDomainPolicy"})
+    @OutputCustomType.Constructor
     private CrossSiteAccessPoliciesResponse(
-        @Nullable String clientAccessPolicy,
-        @Nullable String crossDomainPolicy) {
+        @OutputCustomType.Parameter("clientAccessPolicy") @Nullable String clientAccessPolicy,
+        @OutputCustomType.Parameter("crossDomainPolicy") @Nullable String crossDomainPolicy) {
         this.clientAccessPolicy = clientAccessPolicy;
         this.crossDomainPolicy = crossDomainPolicy;
     }
@@ -67,12 +67,12 @@ public final class CrossSiteAccessPoliciesResponse {
     	      this.crossDomainPolicy = defaults.crossDomainPolicy;
         }
 
-        public Builder setClientAccessPolicy(@Nullable String clientAccessPolicy) {
+        public Builder clientAccessPolicy(@Nullable String clientAccessPolicy) {
             this.clientAccessPolicy = clientAccessPolicy;
             return this;
         }
 
-        public Builder setCrossDomainPolicy(@Nullable String crossDomainPolicy) {
+        public Builder crossDomainPolicy(@Nullable String crossDomainPolicy) {
             this.crossDomainPolicy = crossDomainPolicy;
             return this;
         }

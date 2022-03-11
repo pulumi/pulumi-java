@@ -92,32 +92,32 @@ public final class AffinityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.podAntiAffinity = defaults.podAntiAffinity;
         }
 
-        public Builder setNodeAffinity(@Nullable Input<NodeAffinityArgs> nodeAffinity) {
+        public Builder nodeAffinity(@Nullable Input<NodeAffinityArgs> nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
 
-        public Builder setNodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
+        public Builder nodeAffinity(@Nullable NodeAffinityArgs nodeAffinity) {
             this.nodeAffinity = Input.ofNullable(nodeAffinity);
             return this;
         }
 
-        public Builder setPodAffinity(@Nullable Input<PodAffinityArgs> podAffinity) {
+        public Builder podAffinity(@Nullable Input<PodAffinityArgs> podAffinity) {
             this.podAffinity = podAffinity;
             return this;
         }
 
-        public Builder setPodAffinity(@Nullable PodAffinityArgs podAffinity) {
+        public Builder podAffinity(@Nullable PodAffinityArgs podAffinity) {
             this.podAffinity = Input.ofNullable(podAffinity);
             return this;
         }
 
-        public Builder setPodAntiAffinity(@Nullable Input<PodAntiAffinityArgs> podAntiAffinity) {
+        public Builder podAntiAffinity(@Nullable Input<PodAntiAffinityArgs> podAntiAffinity) {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
 
-        public Builder setPodAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
+        public Builder podAntiAffinity(@Nullable PodAntiAffinityArgs podAntiAffinity) {
             this.podAntiAffinity = Input.ofNullable(podAntiAffinity);
             return this;
         }

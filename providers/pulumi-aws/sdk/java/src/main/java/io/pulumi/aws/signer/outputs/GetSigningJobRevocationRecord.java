@@ -13,11 +13,11 @@ public final class GetSigningJobRevocationRecord {
     private final String revokedAt;
     private final String revokedBy;
 
-    @OutputCustomType.Constructor({"reason","revokedAt","revokedBy"})
+    @OutputCustomType.Constructor
     private GetSigningJobRevocationRecord(
-        String reason,
-        String revokedAt,
-        String revokedBy) {
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("revokedAt") String revokedAt,
+        @OutputCustomType.Parameter("revokedBy") String revokedBy) {
         this.reason = reason;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;
@@ -57,17 +57,17 @@ public final class GetSigningJobRevocationRecord {
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRevokedAt(String revokedAt) {
+        public Builder revokedAt(String revokedAt) {
             this.revokedAt = Objects.requireNonNull(revokedAt);
             return this;
         }
 
-        public Builder setRevokedBy(String revokedBy) {
+        public Builder revokedBy(String revokedBy) {
             this.revokedBy = Objects.requireNonNull(revokedBy);
             return this;
         }

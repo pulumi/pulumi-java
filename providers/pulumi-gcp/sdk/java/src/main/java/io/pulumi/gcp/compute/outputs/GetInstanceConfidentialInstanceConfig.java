@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetInstanceConfidentialInstanceConfig {
     private final Boolean enableConfidentialCompute;
 
-    @OutputCustomType.Constructor({"enableConfidentialCompute"})
-    private GetInstanceConfidentialInstanceConfig(Boolean enableConfidentialCompute) {
+    @OutputCustomType.Constructor
+    private GetInstanceConfidentialInstanceConfig(@OutputCustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
@@ -40,7 +40,7 @@ public final class GetInstanceConfidentialInstanceConfig {
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder setEnableConfidentialCompute(Boolean enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }

@@ -42,14 +42,14 @@ public final class GetConsumerGroupResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor({"createdAt","id","name","type","updatedAt","userMetadata"})
+    @OutputCustomType.Constructor
     private GetConsumerGroupResult(
-        String createdAt,
-        String id,
-        String name,
-        String type,
-        String updatedAt,
-        @Nullable String userMetadata) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt,
+        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetConsumerGroupResult {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable String userMetadata) {
+        public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }

@@ -26,11 +26,11 @@ public final class GlueRecordResponse {
      */
     private final List<String> ipv6Addresses;
 
-    @OutputCustomType.Constructor({"hostName","ipv4Addresses","ipv6Addresses"})
+    @OutputCustomType.Constructor
     private GlueRecordResponse(
-        String hostName,
-        List<String> ipv4Addresses,
-        List<String> ipv6Addresses) {
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("ipv4Addresses") List<String> ipv4Addresses,
+        @OutputCustomType.Parameter("ipv6Addresses") List<String> ipv6Addresses) {
         this.hostName = hostName;
         this.ipv4Addresses = ipv4Addresses;
         this.ipv6Addresses = ipv6Addresses;
@@ -82,17 +82,17 @@ public final class GlueRecordResponse {
     	      this.ipv6Addresses = defaults.ipv6Addresses;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setIpv4Addresses(List<String> ipv4Addresses) {
+        public Builder ipv4Addresses(List<String> ipv4Addresses) {
             this.ipv4Addresses = Objects.requireNonNull(ipv4Addresses);
             return this;
         }
 
-        public Builder setIpv6Addresses(List<String> ipv6Addresses) {
+        public Builder ipv6Addresses(List<String> ipv6Addresses) {
             this.ipv6Addresses = Objects.requireNonNull(ipv6Addresses);
             return this;
         }

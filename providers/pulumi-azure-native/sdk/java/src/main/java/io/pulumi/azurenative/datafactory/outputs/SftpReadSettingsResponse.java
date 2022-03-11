@@ -80,21 +80,21 @@ public final class SftpReadSettingsResponse {
      */
     private final @Nullable Object wildcardFolderPath;
 
-    @OutputCustomType.Constructor({"deleteFilesAfterCompletion","disableChunking","disableMetricsCollection","enablePartitionDiscovery","fileListPath","maxConcurrentConnections","modifiedDatetimeEnd","modifiedDatetimeStart","partitionRootPath","recursive","type","wildcardFileName","wildcardFolderPath"})
+    @OutputCustomType.Constructor
     private SftpReadSettingsResponse(
-        @Nullable Object deleteFilesAfterCompletion,
-        @Nullable Object disableChunking,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Boolean enablePartitionDiscovery,
-        @Nullable Object fileListPath,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object modifiedDatetimeEnd,
-        @Nullable Object modifiedDatetimeStart,
-        @Nullable Object partitionRootPath,
-        @Nullable Object recursive,
-        String type,
-        @Nullable Object wildcardFileName,
-        @Nullable Object wildcardFolderPath) {
+        @OutputCustomType.Parameter("deleteFilesAfterCompletion") @Nullable Object deleteFilesAfterCompletion,
+        @OutputCustomType.Parameter("disableChunking") @Nullable Object disableChunking,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("enablePartitionDiscovery") @Nullable Boolean enablePartitionDiscovery,
+        @OutputCustomType.Parameter("fileListPath") @Nullable Object fileListPath,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("modifiedDatetimeEnd") @Nullable Object modifiedDatetimeEnd,
+        @OutputCustomType.Parameter("modifiedDatetimeStart") @Nullable Object modifiedDatetimeStart,
+        @OutputCustomType.Parameter("partitionRootPath") @Nullable Object partitionRootPath,
+        @OutputCustomType.Parameter("recursive") @Nullable Object recursive,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wildcardFileName") @Nullable Object wildcardFileName,
+        @OutputCustomType.Parameter("wildcardFolderPath") @Nullable Object wildcardFolderPath) {
         this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
         this.disableChunking = disableChunking;
         this.disableMetricsCollection = disableMetricsCollection;
@@ -247,67 +247,67 @@ public final class SftpReadSettingsResponse {
     	      this.wildcardFolderPath = defaults.wildcardFolderPath;
         }
 
-        public Builder setDeleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
+        public Builder deleteFilesAfterCompletion(@Nullable Object deleteFilesAfterCompletion) {
             this.deleteFilesAfterCompletion = deleteFilesAfterCompletion;
             return this;
         }
 
-        public Builder setDisableChunking(@Nullable Object disableChunking) {
+        public Builder disableChunking(@Nullable Object disableChunking) {
             this.disableChunking = disableChunking;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setEnablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
+        public Builder enablePartitionDiscovery(@Nullable Boolean enablePartitionDiscovery) {
             this.enablePartitionDiscovery = enablePartitionDiscovery;
             return this;
         }
 
-        public Builder setFileListPath(@Nullable Object fileListPath) {
+        public Builder fileListPath(@Nullable Object fileListPath) {
             this.fileListPath = fileListPath;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setModifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
+        public Builder modifiedDatetimeEnd(@Nullable Object modifiedDatetimeEnd) {
             this.modifiedDatetimeEnd = modifiedDatetimeEnd;
             return this;
         }
 
-        public Builder setModifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
+        public Builder modifiedDatetimeStart(@Nullable Object modifiedDatetimeStart) {
             this.modifiedDatetimeStart = modifiedDatetimeStart;
             return this;
         }
 
-        public Builder setPartitionRootPath(@Nullable Object partitionRootPath) {
+        public Builder partitionRootPath(@Nullable Object partitionRootPath) {
             this.partitionRootPath = partitionRootPath;
             return this;
         }
 
-        public Builder setRecursive(@Nullable Object recursive) {
+        public Builder recursive(@Nullable Object recursive) {
             this.recursive = recursive;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWildcardFileName(@Nullable Object wildcardFileName) {
+        public Builder wildcardFileName(@Nullable Object wildcardFileName) {
             this.wildcardFileName = wildcardFileName;
             return this;
         }
 
-        public Builder setWildcardFolderPath(@Nullable Object wildcardFolderPath) {
+        public Builder wildcardFolderPath(@Nullable Object wildcardFolderPath) {
             this.wildcardFolderPath = wildcardFolderPath;
             return this;
         }

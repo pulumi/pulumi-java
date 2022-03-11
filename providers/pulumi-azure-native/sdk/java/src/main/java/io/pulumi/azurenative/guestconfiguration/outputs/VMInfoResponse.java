@@ -20,10 +20,10 @@ public final class VMInfoResponse {
      */
     private final String uuid;
 
-    @OutputCustomType.Constructor({"id","uuid"})
+    @OutputCustomType.Constructor
     private VMInfoResponse(
-        String id,
-        String uuid) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("uuid") String uuid) {
         this.id = id;
         this.uuid = uuid;
     }
@@ -65,12 +65,12 @@ public final class VMInfoResponse {
     	      this.uuid = defaults.uuid;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setUuid(String uuid) {
+        public Builder uuid(String uuid) {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }

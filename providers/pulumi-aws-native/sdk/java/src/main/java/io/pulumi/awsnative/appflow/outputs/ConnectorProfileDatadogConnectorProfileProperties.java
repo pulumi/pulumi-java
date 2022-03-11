@@ -15,8 +15,8 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
      */
     private final String instanceUrl;
 
-    @OutputCustomType.Constructor({"instanceUrl"})
-    private ConnectorProfileDatadogConnectorProfileProperties(String instanceUrl) {
+    @OutputCustomType.Constructor
+    private ConnectorProfileDatadogConnectorProfileProperties(@OutputCustomType.Parameter("instanceUrl") String instanceUrl) {
         this.instanceUrl = instanceUrl;
     }
 
@@ -48,7 +48,7 @@ public final class ConnectorProfileDatadogConnectorProfileProperties {
     	      this.instanceUrl = defaults.instanceUrl;
         }
 
-        public Builder setInstanceUrl(String instanceUrl) {
+        public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = Objects.requireNonNull(instanceUrl);
             return this;
         }

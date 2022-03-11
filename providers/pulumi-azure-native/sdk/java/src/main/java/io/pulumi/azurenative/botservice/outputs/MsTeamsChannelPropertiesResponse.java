@@ -43,14 +43,14 @@ public final class MsTeamsChannelPropertiesResponse {
      */
     private final Boolean isEnabled;
 
-    @OutputCustomType.Constructor({"acceptedTerms","callingWebHook","deploymentEnvironment","enableCalling","incomingCallRoute","isEnabled"})
+    @OutputCustomType.Constructor
     private MsTeamsChannelPropertiesResponse(
-        @Nullable Boolean acceptedTerms,
-        @Nullable String callingWebHook,
-        @Nullable String deploymentEnvironment,
-        @Nullable Boolean enableCalling,
-        @Nullable String incomingCallRoute,
-        Boolean isEnabled) {
+        @OutputCustomType.Parameter("acceptedTerms") @Nullable Boolean acceptedTerms,
+        @OutputCustomType.Parameter("callingWebHook") @Nullable String callingWebHook,
+        @OutputCustomType.Parameter("deploymentEnvironment") @Nullable String deploymentEnvironment,
+        @OutputCustomType.Parameter("enableCalling") @Nullable Boolean enableCalling,
+        @OutputCustomType.Parameter("incomingCallRoute") @Nullable String incomingCallRoute,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled) {
         this.acceptedTerms = acceptedTerms;
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;
@@ -132,32 +132,32 @@ public final class MsTeamsChannelPropertiesResponse {
     	      this.isEnabled = defaults.isEnabled;
         }
 
-        public Builder setAcceptedTerms(@Nullable Boolean acceptedTerms) {
+        public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
             this.acceptedTerms = acceptedTerms;
             return this;
         }
 
-        public Builder setCallingWebHook(@Nullable String callingWebHook) {
+        public Builder callingWebHook(@Nullable String callingWebHook) {
             this.callingWebHook = callingWebHook;
             return this;
         }
 
-        public Builder setDeploymentEnvironment(@Nullable String deploymentEnvironment) {
+        public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
             this.deploymentEnvironment = deploymentEnvironment;
             return this;
         }
 
-        public Builder setEnableCalling(@Nullable Boolean enableCalling) {
+        public Builder enableCalling(@Nullable Boolean enableCalling) {
             this.enableCalling = enableCalling;
             return this;
         }
 
-        public Builder setIncomingCallRoute(@Nullable String incomingCallRoute) {
+        public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
             this.incomingCallRoute = incomingCallRoute;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }

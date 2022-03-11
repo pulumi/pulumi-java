@@ -123,52 +123,52 @@ public final class AndroidRoboTestArgs extends io.pulumi.resources.ResourceArgs 
     	      this.maxSteps = defaults.maxSteps;
         }
 
-        public Builder setAppInitialActivity(@Nullable Input<String> appInitialActivity) {
+        public Builder appInitialActivity(@Nullable Input<String> appInitialActivity) {
             this.appInitialActivity = appInitialActivity;
             return this;
         }
 
-        public Builder setAppInitialActivity(@Nullable String appInitialActivity) {
+        public Builder appInitialActivity(@Nullable String appInitialActivity) {
             this.appInitialActivity = Input.ofNullable(appInitialActivity);
             return this;
         }
 
-        public Builder setBootstrapPackageId(@Nullable Input<String> bootstrapPackageId) {
+        public Builder bootstrapPackageId(@Nullable Input<String> bootstrapPackageId) {
             this.bootstrapPackageId = bootstrapPackageId;
             return this;
         }
 
-        public Builder setBootstrapPackageId(@Nullable String bootstrapPackageId) {
+        public Builder bootstrapPackageId(@Nullable String bootstrapPackageId) {
             this.bootstrapPackageId = Input.ofNullable(bootstrapPackageId);
             return this;
         }
 
-        public Builder setBootstrapRunnerClass(@Nullable Input<String> bootstrapRunnerClass) {
+        public Builder bootstrapRunnerClass(@Nullable Input<String> bootstrapRunnerClass) {
             this.bootstrapRunnerClass = bootstrapRunnerClass;
             return this;
         }
 
-        public Builder setBootstrapRunnerClass(@Nullable String bootstrapRunnerClass) {
+        public Builder bootstrapRunnerClass(@Nullable String bootstrapRunnerClass) {
             this.bootstrapRunnerClass = Input.ofNullable(bootstrapRunnerClass);
             return this;
         }
 
-        public Builder setMaxDepth(@Nullable Input<Integer> maxDepth) {
+        public Builder maxDepth(@Nullable Input<Integer> maxDepth) {
             this.maxDepth = maxDepth;
             return this;
         }
 
-        public Builder setMaxDepth(@Nullable Integer maxDepth) {
+        public Builder maxDepth(@Nullable Integer maxDepth) {
             this.maxDepth = Input.ofNullable(maxDepth);
             return this;
         }
 
-        public Builder setMaxSteps(@Nullable Input<Integer> maxSteps) {
+        public Builder maxSteps(@Nullable Input<Integer> maxSteps) {
             this.maxSteps = maxSteps;
             return this;
         }
 
-        public Builder setMaxSteps(@Nullable Integer maxSteps) {
+        public Builder maxSteps(@Nullable Integer maxSteps) {
             this.maxSteps = Input.ofNullable(maxSteps);
             return this;
         }

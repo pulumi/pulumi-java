@@ -53,7 +53,7 @@ public final class DatadogLogsAgentResponse extends io.pulumi.resources.InvokeAr
     	      this.transport = defaults.transport;
         }
 
-        public Builder setTransport(@Nullable String transport) {
+        public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
         }

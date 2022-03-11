@@ -265,7 +265,7 @@ public class MicrosoftSecurityIncidentCreationAlertRule extends io.pulumi.resour
     private static MicrosoftSecurityIncidentCreationAlertRuleArgs makeArgs(MicrosoftSecurityIncidentCreationAlertRuleArgs args) {
         var builder = args == null ? MicrosoftSecurityIncidentCreationAlertRuleArgs.builder() : MicrosoftSecurityIncidentCreationAlertRuleArgs.builder(args);
         return builder
-            .setKind("MicrosoftSecurityIncidentCreation")
+            .kind("MicrosoftSecurityIncidentCreation")
             .build();
     }
 

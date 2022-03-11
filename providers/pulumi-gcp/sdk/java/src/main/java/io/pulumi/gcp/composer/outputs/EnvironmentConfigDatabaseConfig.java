@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class EnvironmentConfigDatabaseConfig {
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private EnvironmentConfigDatabaseConfig(String machineType) {
+    @OutputCustomType.Constructor
+    private EnvironmentConfigDatabaseConfig(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 
@@ -40,7 +40,7 @@ public final class EnvironmentConfigDatabaseConfig {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

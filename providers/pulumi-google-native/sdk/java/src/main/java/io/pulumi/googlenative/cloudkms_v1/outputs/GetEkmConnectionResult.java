@@ -32,12 +32,12 @@ public final class GetEkmConnectionResult {
      */
     private final List<ServiceResolverResponse> serviceResolvers;
 
-    @OutputCustomType.Constructor({"createTime","etag","name","serviceResolvers"})
+    @OutputCustomType.Constructor
     private GetEkmConnectionResult(
-        String createTime,
-        String etag,
-        String name,
-        List<ServiceResolverResponse> serviceResolvers) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceResolvers") List<ServiceResolverResponse> serviceResolvers) {
         this.createTime = createTime;
         this.etag = etag;
         this.name = name;
@@ -99,22 +99,22 @@ public final class GetEkmConnectionResult {
     	      this.serviceResolvers = defaults.serviceResolvers;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceResolvers(List<ServiceResolverResponse> serviceResolvers) {
+        public Builder serviceResolvers(List<ServiceResolverResponse> serviceResolvers) {
             this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
             return this;
         }

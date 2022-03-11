@@ -17,8 +17,8 @@ public final class LoginRoutesResponse {
      */
     private final @Nullable String logoutEndpoint;
 
-    @OutputCustomType.Constructor({"logoutEndpoint"})
-    private LoginRoutesResponse(@Nullable String logoutEndpoint) {
+    @OutputCustomType.Constructor
+    private LoginRoutesResponse(@OutputCustomType.Parameter("logoutEndpoint") @Nullable String logoutEndpoint) {
         this.logoutEndpoint = logoutEndpoint;
     }
 
@@ -50,7 +50,7 @@ public final class LoginRoutesResponse {
     	      this.logoutEndpoint = defaults.logoutEndpoint;
         }
 
-        public Builder setLogoutEndpoint(@Nullable String logoutEndpoint) {
+        public Builder logoutEndpoint(@Nullable String logoutEndpoint) {
             this.logoutEndpoint = logoutEndpoint;
             return this;
         }

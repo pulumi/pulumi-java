@@ -106,22 +106,22 @@ public final class ShareSettingsResponse extends io.pulumi.resources.InvokeArgs 
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder setFolderMap(Map<String,String> folderMap) {
+        public Builder folderMap(Map<String,String> folderMap) {
             this.folderMap = Objects.requireNonNull(folderMap);
             return this;
         }
 
-        public Builder setProjectMap(Map<String,String> projectMap) {
+        public Builder projectMap(Map<String,String> projectMap) {
             this.projectMap = Objects.requireNonNull(projectMap);
             return this;
         }
 
-        public Builder setProjects(List<String> projects) {
+        public Builder projects(List<String> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
 
-        public Builder setShareType(String shareType) {
+        public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }

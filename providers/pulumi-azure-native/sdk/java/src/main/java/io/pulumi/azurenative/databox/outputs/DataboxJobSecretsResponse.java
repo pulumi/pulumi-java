@@ -36,12 +36,12 @@ public final class DataboxJobSecretsResponse {
      */
     private final @Nullable List<DataBoxSecretResponse> podSecrets;
 
-    @OutputCustomType.Constructor({"dcAccessSecurityCode","error","jobSecretsType","podSecrets"})
+    @OutputCustomType.Constructor
     private DataboxJobSecretsResponse(
-        DcAccessSecurityCodeResponse dcAccessSecurityCode,
-        CloudErrorResponse error,
-        String jobSecretsType,
-        @Nullable List<DataBoxSecretResponse> podSecrets) {
+        @OutputCustomType.Parameter("dcAccessSecurityCode") DcAccessSecurityCodeResponse dcAccessSecurityCode,
+        @OutputCustomType.Parameter("error") CloudErrorResponse error,
+        @OutputCustomType.Parameter("jobSecretsType") String jobSecretsType,
+        @OutputCustomType.Parameter("podSecrets") @Nullable List<DataBoxSecretResponse> podSecrets) {
         this.dcAccessSecurityCode = dcAccessSecurityCode;
         this.error = error;
         this.jobSecretsType = jobSecretsType;
@@ -104,22 +104,22 @@ public final class DataboxJobSecretsResponse {
     	      this.podSecrets = defaults.podSecrets;
         }
 
-        public Builder setDcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
+        public Builder dcAccessSecurityCode(DcAccessSecurityCodeResponse dcAccessSecurityCode) {
             this.dcAccessSecurityCode = Objects.requireNonNull(dcAccessSecurityCode);
             return this;
         }
 
-        public Builder setError(CloudErrorResponse error) {
+        public Builder error(CloudErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setJobSecretsType(String jobSecretsType) {
+        public Builder jobSecretsType(String jobSecretsType) {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
 
-        public Builder setPodSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
+        public Builder podSecrets(@Nullable List<DataBoxSecretResponse> podSecrets) {
             this.podSecrets = podSecrets;
             return this;
         }

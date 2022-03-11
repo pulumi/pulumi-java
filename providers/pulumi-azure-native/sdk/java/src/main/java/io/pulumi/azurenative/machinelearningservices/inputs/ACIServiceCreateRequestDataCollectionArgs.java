@@ -74,22 +74,22 @@ public final class ACIServiceCreateRequestDataCollectionArgs extends io.pulumi.r
     	      this.storageEnabled = defaults.storageEnabled;
         }
 
-        public Builder setEventHubEnabled(@Nullable Input<Boolean> eventHubEnabled) {
+        public Builder eventHubEnabled(@Nullable Input<Boolean> eventHubEnabled) {
             this.eventHubEnabled = eventHubEnabled;
             return this;
         }
 
-        public Builder setEventHubEnabled(@Nullable Boolean eventHubEnabled) {
+        public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
             this.eventHubEnabled = Input.ofNullable(eventHubEnabled);
             return this;
         }
 
-        public Builder setStorageEnabled(@Nullable Input<Boolean> storageEnabled) {
+        public Builder storageEnabled(@Nullable Input<Boolean> storageEnabled) {
             this.storageEnabled = storageEnabled;
             return this;
         }
 
-        public Builder setStorageEnabled(@Nullable Boolean storageEnabled) {
+        public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             this.storageEnabled = Input.ofNullable(storageEnabled);
             return this;
         }

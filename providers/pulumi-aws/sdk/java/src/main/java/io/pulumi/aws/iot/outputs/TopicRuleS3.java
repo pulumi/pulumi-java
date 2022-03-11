@@ -25,11 +25,11 @@ public final class TopicRuleS3 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketName","key","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleS3(
-        String bucketName,
-        String key,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketName = bucketName;
         this.key = key;
         this.roleArn = roleArn;
@@ -81,17 +81,17 @@ public final class TopicRuleS3 {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

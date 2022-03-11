@@ -17,8 +17,8 @@ public final class WindowsConfigurationResponse {
      */
     private final @Nullable Boolean enableAutomaticUpdates;
 
-    @OutputCustomType.Constructor({"enableAutomaticUpdates"})
-    private WindowsConfigurationResponse(@Nullable Boolean enableAutomaticUpdates) {
+    @OutputCustomType.Constructor
+    private WindowsConfigurationResponse(@OutputCustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates) {
         this.enableAutomaticUpdates = enableAutomaticUpdates;
     }
 
@@ -50,7 +50,7 @@ public final class WindowsConfigurationResponse {
     	      this.enableAutomaticUpdates = defaults.enableAutomaticUpdates;
         }
 
-        public Builder setEnableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }

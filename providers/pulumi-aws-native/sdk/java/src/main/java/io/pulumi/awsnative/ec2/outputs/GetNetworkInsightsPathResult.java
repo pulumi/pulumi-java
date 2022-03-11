@@ -18,12 +18,12 @@ public final class GetNetworkInsightsPathResult {
     private final @Nullable String networkInsightsPathId;
     private final @Nullable List<NetworkInsightsPathTag> tags;
 
-    @OutputCustomType.Constructor({"createdDate","networkInsightsPathArn","networkInsightsPathId","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkInsightsPathResult(
-        @Nullable String createdDate,
-        @Nullable String networkInsightsPathArn,
-        @Nullable String networkInsightsPathId,
-        @Nullable List<NetworkInsightsPathTag> tags) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("networkInsightsPathArn") @Nullable String networkInsightsPathArn,
+        @OutputCustomType.Parameter("networkInsightsPathId") @Nullable String networkInsightsPathId,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkInsightsPathTag> tags) {
         this.createdDate = createdDate;
         this.networkInsightsPathArn = networkInsightsPathArn;
         this.networkInsightsPathId = networkInsightsPathId;
@@ -69,22 +69,22 @@ public final class GetNetworkInsightsPathResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setNetworkInsightsPathArn(@Nullable String networkInsightsPathArn) {
+        public Builder networkInsightsPathArn(@Nullable String networkInsightsPathArn) {
             this.networkInsightsPathArn = networkInsightsPathArn;
             return this;
         }
 
-        public Builder setNetworkInsightsPathId(@Nullable String networkInsightsPathId) {
+        public Builder networkInsightsPathId(@Nullable String networkInsightsPathId) {
             this.networkInsightsPathId = networkInsightsPathId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsPathTag> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsPathTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -17,8 +17,8 @@ public final class A2AUnprotectedDiskDetailsResponse {
      */
     private final @Nullable Integer diskLunId;
 
-    @OutputCustomType.Constructor({"diskLunId"})
-    private A2AUnprotectedDiskDetailsResponse(@Nullable Integer diskLunId) {
+    @OutputCustomType.Constructor
+    private A2AUnprotectedDiskDetailsResponse(@OutputCustomType.Parameter("diskLunId") @Nullable Integer diskLunId) {
         this.diskLunId = diskLunId;
     }
 
@@ -50,7 +50,7 @@ public final class A2AUnprotectedDiskDetailsResponse {
     	      this.diskLunId = defaults.diskLunId;
         }
 
-        public Builder setDiskLunId(@Nullable Integer diskLunId) {
+        public Builder diskLunId(@Nullable Integer diskLunId) {
             this.diskLunId = diskLunId;
             return this;
         }

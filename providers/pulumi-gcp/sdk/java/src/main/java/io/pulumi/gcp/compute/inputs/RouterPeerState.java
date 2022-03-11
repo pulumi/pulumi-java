@@ -314,152 +314,152 @@ public final class RouterPeerState extends io.pulumi.resources.ResourceArgs {
     	      this.router = defaults.router;
         }
 
-        public Builder setAdvertiseMode(@Nullable Input<String> advertiseMode) {
+        public Builder advertiseMode(@Nullable Input<String> advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
-        public Builder setAdvertiseMode(@Nullable String advertiseMode) {
+        public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = Input.ofNullable(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable Input<List<String>> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable Input<List<String>> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable List<String> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = Input.ofNullable(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable Input<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable Input<List<RouterPeerAdvertisedIpRangeGetArgs>> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable List<RouterPeerAdvertisedIpRangeGetArgs> advertisedIpRanges) {
             this.advertisedIpRanges = Input.ofNullable(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAdvertisedRoutePriority(@Nullable Input<Integer> advertisedRoutePriority) {
+        public Builder advertisedRoutePriority(@Nullable Input<Integer> advertisedRoutePriority) {
             this.advertisedRoutePriority = advertisedRoutePriority;
             return this;
         }
 
-        public Builder setAdvertisedRoutePriority(@Nullable Integer advertisedRoutePriority) {
+        public Builder advertisedRoutePriority(@Nullable Integer advertisedRoutePriority) {
             this.advertisedRoutePriority = Input.ofNullable(advertisedRoutePriority);
             return this;
         }
 
-        public Builder setBfd(@Nullable Input<RouterPeerBfdGetArgs> bfd) {
+        public Builder bfd(@Nullable Input<RouterPeerBfdGetArgs> bfd) {
             this.bfd = bfd;
             return this;
         }
 
-        public Builder setBfd(@Nullable RouterPeerBfdGetArgs bfd) {
+        public Builder bfd(@Nullable RouterPeerBfdGetArgs bfd) {
             this.bfd = Input.ofNullable(bfd);
             return this;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder set$interface(@Nullable Input<String> $interface) {
+        public Builder $interface(@Nullable Input<String> $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = Input.ofNullable($interface);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setManagementType(@Nullable Input<String> managementType) {
+        public Builder managementType(@Nullable Input<String> managementType) {
             this.managementType = managementType;
             return this;
         }
 
-        public Builder setManagementType(@Nullable String managementType) {
+        public Builder managementType(@Nullable String managementType) {
             this.managementType = Input.ofNullable(managementType);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Input<Integer> peerAsn) {
+        public Builder peerAsn(@Nullable Input<Integer> peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Integer peerAsn) {
+        public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = Input.ofNullable(peerAsn);
             return this;
         }
 
-        public Builder setPeerIpAddress(@Nullable Input<String> peerIpAddress) {
+        public Builder peerIpAddress(@Nullable Input<String> peerIpAddress) {
             this.peerIpAddress = peerIpAddress;
             return this;
         }
 
-        public Builder setPeerIpAddress(@Nullable String peerIpAddress) {
+        public Builder peerIpAddress(@Nullable String peerIpAddress) {
             this.peerIpAddress = Input.ofNullable(peerIpAddress);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setRouter(@Nullable Input<String> router) {
+        public Builder router(@Nullable Input<String> router) {
             this.router = router;
             return this;
         }
 
-        public Builder setRouter(@Nullable String router) {
+        public Builder router(@Nullable String router) {
             this.router = Input.ofNullable(router);
             return this;
         }

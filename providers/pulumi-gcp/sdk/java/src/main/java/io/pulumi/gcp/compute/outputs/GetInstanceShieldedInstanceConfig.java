@@ -13,11 +13,11 @@ public final class GetInstanceShieldedInstanceConfig {
     private final Boolean enableSecureBoot;
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot","enableVtpm"})
+    @OutputCustomType.Constructor
     private GetInstanceShieldedInstanceConfig(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot,
-        Boolean enableVtpm) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;
@@ -57,17 +57,17 @@ public final class GetInstanceShieldedInstanceConfig {
     	      this.enableVtpm = defaults.enableVtpm;
         }
 
-        public Builder setEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder setEnableSecureBoot(Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }
 
-        public Builder setEnableVtpm(Boolean enableVtpm) {
+        public Builder enableVtpm(Boolean enableVtpm) {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }

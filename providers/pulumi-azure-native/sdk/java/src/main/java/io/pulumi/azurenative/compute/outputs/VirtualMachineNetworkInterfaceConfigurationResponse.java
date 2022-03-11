@@ -63,18 +63,18 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
      */
     private final @Nullable Boolean primary;
 
-    @OutputCustomType.Constructor({"deleteOption","dnsSettings","dscpConfiguration","enableAcceleratedNetworking","enableFpga","enableIPForwarding","ipConfigurations","name","networkSecurityGroup","primary"})
+    @OutputCustomType.Constructor
     private VirtualMachineNetworkInterfaceConfigurationResponse(
-        @Nullable String deleteOption,
-        @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
-        @Nullable SubResourceResponse dscpConfiguration,
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable Boolean enableFpga,
-        @Nullable Boolean enableIPForwarding,
-        List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        String name,
-        @Nullable SubResourceResponse networkSecurityGroup,
-        @Nullable Boolean primary) {
+        @OutputCustomType.Parameter("deleteOption") @Nullable String deleteOption,
+        @OutputCustomType.Parameter("dnsSettings") @Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings,
+        @OutputCustomType.Parameter("dscpConfiguration") @Nullable SubResourceResponse dscpConfiguration,
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("enableFpga") @Nullable Boolean enableFpga,
+        @OutputCustomType.Parameter("enableIPForwarding") @Nullable Boolean enableIPForwarding,
+        @OutputCustomType.Parameter("ipConfigurations") List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroup") @Nullable SubResourceResponse networkSecurityGroup,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary) {
         this.deleteOption = deleteOption;
         this.dnsSettings = dnsSettings;
         this.dscpConfiguration = dscpConfiguration;
@@ -192,52 +192,52 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
     	      this.primary = defaults.primary;
         }
 
-        public Builder setDeleteOption(@Nullable String deleteOption) {
+        public Builder deleteOption(@Nullable String deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings) {
+        public Builder dnsSettings(@Nullable VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDscpConfiguration(@Nullable SubResourceResponse dscpConfiguration) {
+        public Builder dscpConfiguration(@Nullable SubResourceResponse dscpConfiguration) {
             this.dscpConfiguration = dscpConfiguration;
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setEnableFpga(@Nullable Boolean enableFpga) {
+        public Builder enableFpga(@Nullable Boolean enableFpga) {
             this.enableFpga = enableFpga;
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Boolean enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
-        public Builder setIpConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(List<VirtualMachineNetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable SubResourceResponse networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }

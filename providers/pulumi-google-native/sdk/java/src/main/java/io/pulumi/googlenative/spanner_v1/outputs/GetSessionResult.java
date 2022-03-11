@@ -31,12 +31,12 @@ public final class GetSessionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"approximateLastUseTime","createTime","labels","name"})
+    @OutputCustomType.Constructor
     private GetSessionResult(
-        String approximateLastUseTime,
-        String createTime,
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("approximateLastUseTime") String approximateLastUseTime,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.approximateLastUseTime = approximateLastUseTime;
         this.createTime = createTime;
         this.labels = labels;
@@ -98,22 +98,22 @@ public final class GetSessionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setApproximateLastUseTime(String approximateLastUseTime) {
+        public Builder approximateLastUseTime(String approximateLastUseTime) {
             this.approximateLastUseTime = Objects.requireNonNull(approximateLastUseTime);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

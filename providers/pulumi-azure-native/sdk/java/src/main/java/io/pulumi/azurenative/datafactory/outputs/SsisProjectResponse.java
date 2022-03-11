@@ -57,16 +57,16 @@ public final class SsisProjectResponse {
      */
     private final @Nullable Double version;
 
-    @OutputCustomType.Constructor({"description","environmentRefs","folderId","id","name","parameters","type","version"})
+    @OutputCustomType.Constructor
     private SsisProjectResponse(
-        @Nullable String description,
-        @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
-        @Nullable Double folderId,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable List<SsisParameterResponse> parameters,
-        String type,
-        @Nullable Double version) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentRefs") @Nullable List<SsisEnvironmentReferenceResponse> environmentRefs,
+        @OutputCustomType.Parameter("folderId") @Nullable Double folderId,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<SsisParameterResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Double version) {
         this.description = description;
         this.environmentRefs = environmentRefs;
         this.folderId = folderId;
@@ -169,42 +169,42 @@ public final class SsisProjectResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
+        public Builder environmentRefs(@Nullable List<SsisEnvironmentReferenceResponse> environmentRefs) {
             this.environmentRefs = environmentRefs;
             return this;
         }
 
-        public Builder setFolderId(@Nullable Double folderId) {
+        public Builder folderId(@Nullable Double folderId) {
             this.folderId = folderId;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<SsisParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<SsisParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Double version) {
+        public Builder version(@Nullable Double version) {
             this.version = version;
             return this;
         }

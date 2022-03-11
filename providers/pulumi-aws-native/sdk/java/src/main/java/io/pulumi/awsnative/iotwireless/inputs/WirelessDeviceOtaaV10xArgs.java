@@ -61,22 +61,22 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
     	      this.appKey = defaults.appKey;
         }
 
-        public Builder setAppEui(Input<String> appEui) {
+        public Builder appEui(Input<String> appEui) {
             this.appEui = Objects.requireNonNull(appEui);
             return this;
         }
 
-        public Builder setAppEui(String appEui) {
+        public Builder appEui(String appEui) {
             this.appEui = Input.of(Objects.requireNonNull(appEui));
             return this;
         }
 
-        public Builder setAppKey(Input<String> appKey) {
+        public Builder appKey(Input<String> appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Input.of(Objects.requireNonNull(appKey));
             return this;
         }

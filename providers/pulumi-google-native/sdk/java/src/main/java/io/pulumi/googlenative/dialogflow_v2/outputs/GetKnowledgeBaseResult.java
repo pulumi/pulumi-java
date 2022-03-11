@@ -25,11 +25,11 @@ public final class GetKnowledgeBaseResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","languageCode","name"})
+    @OutputCustomType.Constructor
     private GetKnowledgeBaseResult(
-        String displayName,
-        String languageCode,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.languageCode = languageCode;
         this.name = name;
@@ -81,17 +81,17 @@ public final class GetKnowledgeBaseResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

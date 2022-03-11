@@ -37,13 +37,13 @@ public final class ForestTrustResponse {
      */
     private final @Nullable String trustedDomainFqdn;
 
-    @OutputCustomType.Constructor({"friendlyName","remoteDnsIps","trustDirection","trustPassword","trustedDomainFqdn"})
+    @OutputCustomType.Constructor
     private ForestTrustResponse(
-        @Nullable String friendlyName,
-        @Nullable String remoteDnsIps,
-        @Nullable String trustDirection,
-        @Nullable String trustPassword,
-        @Nullable String trustedDomainFqdn) {
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("remoteDnsIps") @Nullable String remoteDnsIps,
+        @OutputCustomType.Parameter("trustDirection") @Nullable String trustDirection,
+        @OutputCustomType.Parameter("trustPassword") @Nullable String trustPassword,
+        @OutputCustomType.Parameter("trustedDomainFqdn") @Nullable String trustedDomainFqdn) {
         this.friendlyName = friendlyName;
         this.remoteDnsIps = remoteDnsIps;
         this.trustDirection = trustDirection;
@@ -115,27 +115,27 @@ public final class ForestTrustResponse {
     	      this.trustedDomainFqdn = defaults.trustedDomainFqdn;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setRemoteDnsIps(@Nullable String remoteDnsIps) {
+        public Builder remoteDnsIps(@Nullable String remoteDnsIps) {
             this.remoteDnsIps = remoteDnsIps;
             return this;
         }
 
-        public Builder setTrustDirection(@Nullable String trustDirection) {
+        public Builder trustDirection(@Nullable String trustDirection) {
             this.trustDirection = trustDirection;
             return this;
         }
 
-        public Builder setTrustPassword(@Nullable String trustPassword) {
+        public Builder trustPassword(@Nullable String trustPassword) {
             this.trustPassword = trustPassword;
             return this;
         }
 
-        public Builder setTrustedDomainFqdn(@Nullable String trustedDomainFqdn) {
+        public Builder trustedDomainFqdn(@Nullable String trustedDomainFqdn) {
             this.trustedDomainFqdn = trustedDomainFqdn;
             return this;
         }

@@ -29,11 +29,11 @@ public final class CbcsDrmConfigurationResponse {
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    @OutputCustomType.Constructor({"fairPlay","playReady","widevine"})
+    @OutputCustomType.Constructor
     private CbcsDrmConfigurationResponse(
-        @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        @OutputCustomType.Parameter("fairPlay") @Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay,
+        @OutputCustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
+        @OutputCustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
         this.fairPlay = fairPlay;
         this.playReady = playReady;
         this.widevine = widevine;
@@ -85,17 +85,17 @@ public final class CbcsDrmConfigurationResponse {
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder setFairPlay(@Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay) {
+        public Builder fairPlay(@Nullable StreamingPolicyFairPlayConfigurationResponse fairPlay) {
             this.fairPlay = fairPlay;
             return this;
         }
 
-        public Builder setPlayReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
+        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             this.playReady = playReady;
             return this;
         }
 
-        public Builder setWidevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             this.widevine = widevine;
             return this;
         }

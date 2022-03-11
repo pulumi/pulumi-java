@@ -28,11 +28,11 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
      */
     private final @Nullable String weightedCapacity;
 
-    @OutputCustomType.Constructor({"instanceType","launchTemplateSpecification","weightedCapacity"})
+    @OutputCustomType.Constructor
     private GroupMixedInstancesPolicyLaunchTemplateOverride(
-        @Nullable String instanceType,
-        @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
-        @Nullable String weightedCapacity) {
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("launchTemplateSpecification") @Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification,
+        @OutputCustomType.Parameter("weightedCapacity") @Nullable String weightedCapacity) {
         this.instanceType = instanceType;
         this.launchTemplateSpecification = launchTemplateSpecification;
         this.weightedCapacity = weightedCapacity;
@@ -84,17 +84,17 @@ public final class GroupMixedInstancesPolicyLaunchTemplateOverride {
     	      this.weightedCapacity = defaults.weightedCapacity;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setLaunchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification) {
+        public Builder launchTemplateSpecification(@Nullable GroupMixedInstancesPolicyLaunchTemplateOverrideLaunchTemplateSpecification launchTemplateSpecification) {
             this.launchTemplateSpecification = launchTemplateSpecification;
             return this;
         }
 
-        public Builder setWeightedCapacity(@Nullable String weightedCapacity) {
+        public Builder weightedCapacity(@Nullable String weightedCapacity) {
             this.weightedCapacity = weightedCapacity;
             return this;
         }

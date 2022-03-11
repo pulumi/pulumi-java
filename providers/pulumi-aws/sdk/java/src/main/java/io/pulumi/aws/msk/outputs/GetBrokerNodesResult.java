@@ -19,11 +19,11 @@ public final class GetBrokerNodesResult {
     private final String id;
     private final List<GetBrokerNodesNodeInfoList> nodeInfoLists;
 
-    @OutputCustomType.Constructor({"clusterArn","id","nodeInfoLists"})
+    @OutputCustomType.Constructor
     private GetBrokerNodesResult(
-        String clusterArn,
-        String id,
-        List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
+        @OutputCustomType.Parameter("clusterArn") String clusterArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("nodeInfoLists") List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
         this.clusterArn = clusterArn;
         this.id = id;
         this.nodeInfoLists = nodeInfoLists;
@@ -67,17 +67,17 @@ public final class GetBrokerNodesResult {
     	      this.nodeInfoLists = defaults.nodeInfoLists;
         }
 
-        public Builder setClusterArn(String clusterArn) {
+        public Builder clusterArn(String clusterArn) {
             this.clusterArn = Objects.requireNonNull(clusterArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNodeInfoLists(List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
+        public Builder nodeInfoLists(List<GetBrokerNodesNodeInfoList> nodeInfoLists) {
             this.nodeInfoLists = Objects.requireNonNull(nodeInfoLists);
             return this;
         }

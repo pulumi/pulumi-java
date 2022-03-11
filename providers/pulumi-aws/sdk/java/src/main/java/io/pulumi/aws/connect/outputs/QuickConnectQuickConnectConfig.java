@@ -35,12 +35,12 @@ public final class QuickConnectQuickConnectConfig {
      */
     private final @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs;
 
-    @OutputCustomType.Constructor({"phoneConfigs","queueConfigs","quickConnectType","userConfigs"})
+    @OutputCustomType.Constructor
     private QuickConnectQuickConnectConfig(
-        @Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
-        @Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs,
-        String quickConnectType,
-        @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        @OutputCustomType.Parameter("phoneConfigs") @Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs,
+        @OutputCustomType.Parameter("queueConfigs") @Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs,
+        @OutputCustomType.Parameter("quickConnectType") String quickConnectType,
+        @OutputCustomType.Parameter("userConfigs") @Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
         this.phoneConfigs = phoneConfigs;
         this.queueConfigs = queueConfigs;
         this.quickConnectType = quickConnectType;
@@ -102,22 +102,22 @@ public final class QuickConnectQuickConnectConfig {
     	      this.userConfigs = defaults.userConfigs;
         }
 
-        public Builder setPhoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
+        public Builder phoneConfigs(@Nullable List<QuickConnectQuickConnectConfigPhoneConfig> phoneConfigs) {
             this.phoneConfigs = phoneConfigs;
             return this;
         }
 
-        public Builder setQueueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
+        public Builder queueConfigs(@Nullable List<QuickConnectQuickConnectConfigQueueConfig> queueConfigs) {
             this.queueConfigs = queueConfigs;
             return this;
         }
 
-        public Builder setQuickConnectType(String quickConnectType) {
+        public Builder quickConnectType(String quickConnectType) {
             this.quickConnectType = Objects.requireNonNull(quickConnectType);
             return this;
         }
 
-        public Builder setUserConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
+        public Builder userConfigs(@Nullable List<QuickConnectQuickConnectConfigUserConfig> userConfigs) {
             this.userConfigs = userConfigs;
             return this;
         }

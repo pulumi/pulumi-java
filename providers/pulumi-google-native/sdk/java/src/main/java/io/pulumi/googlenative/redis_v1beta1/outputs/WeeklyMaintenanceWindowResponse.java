@@ -26,11 +26,11 @@ public final class WeeklyMaintenanceWindowResponse {
      */
     private final TimeOfDayResponse startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private WeeklyMaintenanceWindowResponse(
-        String day,
-        String duration,
-        TimeOfDayResponse startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") TimeOfDayResponse startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;
@@ -82,17 +82,17 @@ public final class WeeklyMaintenanceWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(TimeOfDayResponse startTime) {
+        public Builder startTime(TimeOfDayResponse startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

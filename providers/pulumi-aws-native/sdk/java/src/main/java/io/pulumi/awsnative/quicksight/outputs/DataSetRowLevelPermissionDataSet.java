@@ -26,12 +26,12 @@ public final class DataSetRowLevelPermissionDataSet {
     private final @Nullable String namespace;
     private final DataSetRowLevelPermissionPolicy permissionPolicy;
 
-    @OutputCustomType.Constructor({"arn","formatVersion","namespace","permissionPolicy"})
+    @OutputCustomType.Constructor
     private DataSetRowLevelPermissionDataSet(
-        String arn,
-        @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
-        @Nullable String namespace,
-        DataSetRowLevelPermissionPolicy permissionPolicy) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("formatVersion") @Nullable DataSetRowLevelPermissionFormatVersion formatVersion,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("permissionPolicy") DataSetRowLevelPermissionPolicy permissionPolicy) {
         this.arn = arn;
         this.formatVersion = formatVersion;
         this.namespace = namespace;
@@ -85,22 +85,22 @@ public final class DataSetRowLevelPermissionDataSet {
     	      this.permissionPolicy = defaults.permissionPolicy;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFormatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
+        public Builder formatVersion(@Nullable DataSetRowLevelPermissionFormatVersion formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setPermissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
+        public Builder permissionPolicy(DataSetRowLevelPermissionPolicy permissionPolicy) {
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }

@@ -50,17 +50,17 @@ public final class GetCertificateResult {
      */
     private final String validTill;
 
-    @OutputCustomType.Constructor({"arn","certificateType","customerOverride","customerOverrideValidTill","id","latestValidTill","thumbprint","validFrom","validTill"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String certificateType,
-        Boolean customerOverride,
-        String customerOverrideValidTill,
-        String id,
-        @Nullable Boolean latestValidTill,
-        String thumbprint,
-        String validFrom,
-        String validTill) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("certificateType") String certificateType,
+        @OutputCustomType.Parameter("customerOverride") Boolean customerOverride,
+        @OutputCustomType.Parameter("customerOverrideValidTill") String customerOverrideValidTill,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestValidTill") @Nullable Boolean latestValidTill,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("validFrom") String validFrom,
+        @OutputCustomType.Parameter("validTill") String validTill) {
         this.arn = arn;
         this.certificateType = certificateType;
         this.customerOverride = customerOverride;
@@ -164,47 +164,47 @@ public final class GetCertificateResult {
     	      this.validTill = defaults.validTill;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCertificateType(String certificateType) {
+        public Builder certificateType(String certificateType) {
             this.certificateType = Objects.requireNonNull(certificateType);
             return this;
         }
 
-        public Builder setCustomerOverride(Boolean customerOverride) {
+        public Builder customerOverride(Boolean customerOverride) {
             this.customerOverride = Objects.requireNonNull(customerOverride);
             return this;
         }
 
-        public Builder setCustomerOverrideValidTill(String customerOverrideValidTill) {
+        public Builder customerOverrideValidTill(String customerOverrideValidTill) {
             this.customerOverrideValidTill = Objects.requireNonNull(customerOverrideValidTill);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLatestValidTill(@Nullable Boolean latestValidTill) {
+        public Builder latestValidTill(@Nullable Boolean latestValidTill) {
             this.latestValidTill = latestValidTill;
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setValidFrom(String validFrom) {
+        public Builder validFrom(String validFrom) {
             this.validFrom = Objects.requireNonNull(validFrom);
             return this;
         }
 
-        public Builder setValidTill(String validTill) {
+        public Builder validTill(String validTill) {
             this.validTill = Objects.requireNonNull(validTill);
             return this;
         }

@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
      */
     private final Boolean displayed;
 
-    @OutputCustomType.Constructor({"clicked","correctnessLevel","displayed"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse(
-        Boolean clicked,
-        String correctnessLevel,
-        Boolean displayed) {
+        @OutputCustomType.Parameter("clicked") Boolean clicked,
+        @OutputCustomType.Parameter("correctnessLevel") String correctnessLevel,
+        @OutputCustomType.Parameter("displayed") Boolean displayed) {
         this.clicked = clicked;
         this.correctnessLevel = correctnessLevel;
         this.displayed = displayed;
@@ -82,17 +82,17 @@ public final class GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse {
     	      this.displayed = defaults.displayed;
         }
 
-        public Builder setClicked(Boolean clicked) {
+        public Builder clicked(Boolean clicked) {
             this.clicked = Objects.requireNonNull(clicked);
             return this;
         }
 
-        public Builder setCorrectnessLevel(String correctnessLevel) {
+        public Builder correctnessLevel(String correctnessLevel) {
             this.correctnessLevel = Objects.requireNonNull(correctnessLevel);
             return this;
         }
 
-        public Builder setDisplayed(Boolean displayed) {
+        public Builder displayed(Boolean displayed) {
             this.displayed = Objects.requireNonNull(displayed);
             return this;
         }

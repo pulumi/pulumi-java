@@ -26,11 +26,11 @@ public final class NodeGroupAutoscalingPolicyResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"maxNodes","minNodes","mode"})
+    @OutputCustomType.Constructor
     private NodeGroupAutoscalingPolicyResponse(
-        Integer maxNodes,
-        Integer minNodes,
-        String mode) {
+        @OutputCustomType.Parameter("maxNodes") Integer maxNodes,
+        @OutputCustomType.Parameter("minNodes") Integer minNodes,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.maxNodes = maxNodes;
         this.minNodes = minNodes;
         this.mode = mode;
@@ -82,17 +82,17 @@ public final class NodeGroupAutoscalingPolicyResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setMaxNodes(Integer maxNodes) {
+        public Builder maxNodes(Integer maxNodes) {
             this.maxNodes = Objects.requireNonNull(maxNodes);
             return this;
         }
 
-        public Builder setMinNodes(Integer minNodes) {
+        public Builder minNodes(Integer minNodes) {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

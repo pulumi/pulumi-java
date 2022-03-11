@@ -55,16 +55,16 @@ public final class CustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority","rateLimitDurationInMinutes","rateLimitThreshold","ruleType"})
+    @OutputCustomType.Constructor
     private CustomRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<FrontDoorMatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        @Nullable Integer rateLimitDurationInMinutes,
-        @Nullable Integer rateLimitThreshold,
-        String ruleType) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("matchConditions") List<FrontDoorMatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitDurationInMinutes") @Nullable Integer rateLimitDurationInMinutes,
+        @OutputCustomType.Parameter("rateLimitThreshold") @Nullable Integer rateLimitThreshold,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;
@@ -166,42 +166,42 @@ public final class CustomRuleResponse {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setMatchConditions(List<FrontDoorMatchConditionResponse> matchConditions) {
+        public Builder matchConditions(List<FrontDoorMatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
+        public Builder rateLimitDurationInMinutes(@Nullable Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = rateLimitDurationInMinutes;
             return this;
         }
 
-        public Builder setRateLimitThreshold(@Nullable Integer rateLimitThreshold) {
+        public Builder rateLimitThreshold(@Nullable Integer rateLimitThreshold) {
             this.rateLimitThreshold = rateLimitThreshold;
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }

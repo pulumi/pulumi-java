@@ -41,16 +41,16 @@ public final class GetSecretVersionResult {
     private final @Nullable String versionStage;
     private final List<String> versionStages;
 
-    @OutputCustomType.Constructor({"arn","id","secretBinary","secretId","secretString","versionId","versionStage","versionStages"})
+    @OutputCustomType.Constructor
     private GetSecretVersionResult(
-        String arn,
-        String id,
-        String secretBinary,
-        String secretId,
-        String secretString,
-        String versionId,
-        @Nullable String versionStage,
-        List<String> versionStages) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("secretBinary") String secretBinary,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("secretString") String secretString,
+        @OutputCustomType.Parameter("versionId") String versionId,
+        @OutputCustomType.Parameter("versionStage") @Nullable String versionStage,
+        @OutputCustomType.Parameter("versionStages") List<String> versionStages) {
         this.arn = arn;
         this.id = id;
         this.secretBinary = secretBinary;
@@ -140,42 +140,42 @@ public final class GetSecretVersionResult {
     	      this.versionStages = defaults.versionStages;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSecretBinary(String secretBinary) {
+        public Builder secretBinary(String secretBinary) {
             this.secretBinary = Objects.requireNonNull(secretBinary);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretString(String secretString) {
+        public Builder secretString(String secretString) {
             this.secretString = Objects.requireNonNull(secretString);
             return this;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
 
-        public Builder setVersionStage(@Nullable String versionStage) {
+        public Builder versionStage(@Nullable String versionStage) {
             this.versionStage = versionStage;
             return this;
         }
 
-        public Builder setVersionStages(List<String> versionStages) {
+        public Builder versionStages(List<String> versionStages) {
             this.versionStages = Objects.requireNonNull(versionStages);
             return this;
         }

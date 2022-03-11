@@ -175,42 +175,42 @@ public final class RestorePointSourceMetadataResponse extends io.pulumi.resource
     	      this.vmId = defaults.vmId;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setHardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
+        public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             this.hardwareProfile = hardwareProfile;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable OSProfileResponse osProfile) {
+        public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileResponse securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable RestorePointSourceVMStorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable RestorePointSourceVMStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setVmId(@Nullable String vmId) {
+        public Builder vmId(@Nullable String vmId) {
             this.vmId = vmId;
             return this;
         }

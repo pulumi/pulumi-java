@@ -39,12 +39,12 @@ public final class ArmApplicationHealthPolicyResponse {
      */
     private final @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap;
 
-    @OutputCustomType.Constructor({"considerWarningAsError","defaultServiceTypeHealthPolicy","maxPercentUnhealthyDeployedApplications","serviceTypeHealthPolicyMap"})
+    @OutputCustomType.Constructor
     private ArmApplicationHealthPolicyResponse(
-        @Nullable Boolean considerWarningAsError,
-        @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
-        @Nullable Integer maxPercentUnhealthyDeployedApplications,
-        @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
+        @OutputCustomType.Parameter("considerWarningAsError") @Nullable Boolean considerWarningAsError,
+        @OutputCustomType.Parameter("defaultServiceTypeHealthPolicy") @Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy,
+        @OutputCustomType.Parameter("maxPercentUnhealthyDeployedApplications") @Nullable Integer maxPercentUnhealthyDeployedApplications,
+        @OutputCustomType.Parameter("serviceTypeHealthPolicyMap") @Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
         this.considerWarningAsError = considerWarningAsError;
         this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
         this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
@@ -109,22 +109,22 @@ public final class ArmApplicationHealthPolicyResponse {
     	      this.serviceTypeHealthPolicyMap = defaults.serviceTypeHealthPolicyMap;
         }
 
-        public Builder setConsiderWarningAsError(@Nullable Boolean considerWarningAsError) {
+        public Builder considerWarningAsError(@Nullable Boolean considerWarningAsError) {
             this.considerWarningAsError = considerWarningAsError;
             return this;
         }
 
-        public Builder setDefaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
+        public Builder defaultServiceTypeHealthPolicy(@Nullable ArmServiceTypeHealthPolicyResponse defaultServiceTypeHealthPolicy) {
             this.defaultServiceTypeHealthPolicy = defaultServiceTypeHealthPolicy;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
+        public Builder maxPercentUnhealthyDeployedApplications(@Nullable Integer maxPercentUnhealthyDeployedApplications) {
             this.maxPercentUnhealthyDeployedApplications = maxPercentUnhealthyDeployedApplications;
             return this;
         }
 
-        public Builder setServiceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
+        public Builder serviceTypeHealthPolicyMap(@Nullable Map<String,ArmServiceTypeHealthPolicyResponse> serviceTypeHealthPolicyMap) {
             this.serviceTypeHealthPolicyMap = serviceTypeHealthPolicyMap;
             return this;
         }

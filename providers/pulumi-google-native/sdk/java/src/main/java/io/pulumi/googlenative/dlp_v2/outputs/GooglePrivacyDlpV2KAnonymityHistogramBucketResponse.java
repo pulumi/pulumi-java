@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
      */
     private final String equivalenceClassSizeUpperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","equivalenceClassSizeLowerBound","equivalenceClassSizeUpperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
-        String equivalenceClassSizeLowerBound,
-        String equivalenceClassSizeUpperBound) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues,
+        @OutputCustomType.Parameter("equivalenceClassSizeLowerBound") String equivalenceClassSizeLowerBound,
+        @OutputCustomType.Parameter("equivalenceClassSizeUpperBound") String equivalenceClassSizeUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;
@@ -115,27 +115,27 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
     	      this.equivalenceClassSizeUpperBound = defaults.equivalenceClassSizeUpperBound;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setEquivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
+        public Builder equivalenceClassSizeLowerBound(String equivalenceClassSizeLowerBound) {
             this.equivalenceClassSizeLowerBound = Objects.requireNonNull(equivalenceClassSizeLowerBound);
             return this;
         }
 
-        public Builder setEquivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
+        public Builder equivalenceClassSizeUpperBound(String equivalenceClassSizeUpperBound) {
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
         }

@@ -15,8 +15,8 @@ public final class DaemonEndpoint {
      */
     private final Integer Port;
 
-    @OutputCustomType.Constructor({"Port"})
-    private DaemonEndpoint(Integer Port) {
+    @OutputCustomType.Constructor
+    private DaemonEndpoint(@OutputCustomType.Parameter("Port") Integer Port) {
         this.Port = Port;
     }
 
@@ -48,7 +48,7 @@ public final class DaemonEndpoint {
     	      this.Port = defaults.Port;
         }
 
-        public Builder setPort(Integer Port) {
+        public Builder port(Integer Port) {
             this.Port = Objects.requireNonNull(Port);
             return this;
         }

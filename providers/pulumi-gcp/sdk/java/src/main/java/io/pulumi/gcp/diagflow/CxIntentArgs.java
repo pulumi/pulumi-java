@@ -198,92 +198,92 @@ public final class CxIntentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trainingPhrases = defaults.trainingPhrases;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Input<Boolean> isFallback) {
+        public Builder isFallback(@Nullable Input<Boolean> isFallback) {
             this.isFallback = isFallback;
             return this;
         }
 
-        public Builder setIsFallback(@Nullable Boolean isFallback) {
+        public Builder isFallback(@Nullable Boolean isFallback) {
             this.isFallback = Input.ofNullable(isFallback);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable Input<String> languageCode) {
+        public Builder languageCode(@Nullable Input<String> languageCode) {
             this.languageCode = languageCode;
             return this;
         }
 
-        public Builder setLanguageCode(@Nullable String languageCode) {
+        public Builder languageCode(@Nullable String languageCode) {
             this.languageCode = Input.ofNullable(languageCode);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<List<CxIntentParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<List<CxIntentParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<CxIntentParameterArgs> parameters) {
+        public Builder parameters(@Nullable List<CxIntentParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setPriority(@Nullable Input<Integer> priority) {
+        public Builder priority(@Nullable Input<Integer> priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = Input.ofNullable(priority);
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable Input<List<CxIntentTrainingPhraseArgs>> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable Input<List<CxIntentTrainingPhraseArgs>> trainingPhrases) {
             this.trainingPhrases = trainingPhrases;
             return this;
         }
 
-        public Builder setTrainingPhrases(@Nullable List<CxIntentTrainingPhraseArgs> trainingPhrases) {
+        public Builder trainingPhrases(@Nullable List<CxIntentTrainingPhraseArgs> trainingPhrases) {
             this.trainingPhrases = Input.ofNullable(trainingPhrases);
             return this;
         }

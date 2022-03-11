@@ -16,8 +16,8 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
      */
     private final ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef;
 
-    @OutputCustomType.Constructor({"secretKeyRef"})
-    private ServiceTemplateSpecContainerEnvValueFrom(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
+    @OutputCustomType.Constructor
+    private ServiceTemplateSpecContainerEnvValueFrom(@OutputCustomType.Parameter("secretKeyRef") ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
         this.secretKeyRef = secretKeyRef;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setSecretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
+        public Builder secretKeyRef(ServiceTemplateSpecContainerEnvValueFromSecretKeyRef secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }

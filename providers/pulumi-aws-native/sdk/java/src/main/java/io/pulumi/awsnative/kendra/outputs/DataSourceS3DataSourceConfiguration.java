@@ -21,14 +21,14 @@ public final class DataSourceS3DataSourceConfiguration {
     private final @Nullable List<String> inclusionPatterns;
     private final @Nullable List<String> inclusionPrefixes;
 
-    @OutputCustomType.Constructor({"accessControlListConfiguration","bucketName","documentsMetadataConfiguration","exclusionPatterns","inclusionPatterns","inclusionPrefixes"})
+    @OutputCustomType.Constructor
     private DataSourceS3DataSourceConfiguration(
-        @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration,
-        String bucketName,
-        @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<String> inclusionPatterns,
-        @Nullable List<String> inclusionPrefixes) {
+        @OutputCustomType.Parameter("accessControlListConfiguration") @Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("documentsMetadataConfiguration") @Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("inclusionPrefixes") @Nullable List<String> inclusionPrefixes) {
         this.accessControlListConfiguration = accessControlListConfiguration;
         this.bucketName = bucketName;
         this.documentsMetadataConfiguration = documentsMetadataConfiguration;
@@ -86,32 +86,32 @@ public final class DataSourceS3DataSourceConfiguration {
     	      this.inclusionPrefixes = defaults.inclusionPrefixes;
         }
 
-        public Builder setAccessControlListConfiguration(@Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration) {
+        public Builder accessControlListConfiguration(@Nullable DataSourceAccessControlListConfiguration accessControlListConfiguration) {
             this.accessControlListConfiguration = accessControlListConfiguration;
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setDocumentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
+        public Builder documentsMetadataConfiguration(@Nullable DataSourceDocumentsMetadataConfiguration documentsMetadataConfiguration) {
             this.documentsMetadataConfiguration = documentsMetadataConfiguration;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
+        public Builder inclusionPrefixes(@Nullable List<String> inclusionPrefixes) {
             this.inclusionPrefixes = inclusionPrefixes;
             return this;
         }

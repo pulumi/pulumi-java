@@ -14,10 +14,10 @@ public final class DomainNameMutualTlsAuthentication {
     private final @Nullable String truststoreUri;
     private final @Nullable String truststoreVersion;
 
-    @OutputCustomType.Constructor({"truststoreUri","truststoreVersion"})
+    @OutputCustomType.Constructor
     private DomainNameMutualTlsAuthentication(
-        @Nullable String truststoreUri,
-        @Nullable String truststoreVersion) {
+        @OutputCustomType.Parameter("truststoreUri") @Nullable String truststoreUri,
+        @OutputCustomType.Parameter("truststoreVersion") @Nullable String truststoreVersion) {
         this.truststoreUri = truststoreUri;
         this.truststoreVersion = truststoreVersion;
     }
@@ -51,12 +51,12 @@ public final class DomainNameMutualTlsAuthentication {
     	      this.truststoreVersion = defaults.truststoreVersion;
         }
 
-        public Builder setTruststoreUri(@Nullable String truststoreUri) {
+        public Builder truststoreUri(@Nullable String truststoreUri) {
             this.truststoreUri = truststoreUri;
             return this;
         }
 
-        public Builder setTruststoreVersion(@Nullable String truststoreVersion) {
+        public Builder truststoreVersion(@Nullable String truststoreVersion) {
             this.truststoreVersion = truststoreVersion;
             return this;
         }

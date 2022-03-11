@@ -35,12 +35,12 @@ public final class VolumeProjection {
      */
     private final @Nullable ServiceAccountTokenProjection serviceAccountToken;
 
-    @OutputCustomType.Constructor({"configMap","downwardAPI","secret","serviceAccountToken"})
+    @OutputCustomType.Constructor
     private VolumeProjection(
-        @Nullable ConfigMapProjection configMap,
-        @Nullable DownwardAPIProjection downwardAPI,
-        @Nullable SecretProjection secret,
-        @Nullable ServiceAccountTokenProjection serviceAccountToken) {
+        @OutputCustomType.Parameter("configMap") @Nullable ConfigMapProjection configMap,
+        @OutputCustomType.Parameter("downwardAPI") @Nullable DownwardAPIProjection downwardAPI,
+        @OutputCustomType.Parameter("secret") @Nullable SecretProjection secret,
+        @OutputCustomType.Parameter("serviceAccountToken") @Nullable ServiceAccountTokenProjection serviceAccountToken) {
         this.configMap = configMap;
         this.downwardAPI = downwardAPI;
         this.secret = secret;
@@ -102,22 +102,22 @@ public final class VolumeProjection {
     	      this.serviceAccountToken = defaults.serviceAccountToken;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapProjection configMap) {
+        public Builder configMap(@Nullable ConfigMapProjection configMap) {
             this.configMap = configMap;
             return this;
         }
 
-        public Builder setDownwardAPI(@Nullable DownwardAPIProjection downwardAPI) {
+        public Builder downwardAPI(@Nullable DownwardAPIProjection downwardAPI) {
             this.downwardAPI = downwardAPI;
             return this;
         }
 
-        public Builder setSecret(@Nullable SecretProjection secret) {
+        public Builder secret(@Nullable SecretProjection secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setServiceAccountToken(@Nullable ServiceAccountTokenProjection serviceAccountToken) {
+        public Builder serviceAccountToken(@Nullable ServiceAccountTokenProjection serviceAccountToken) {
             this.serviceAccountToken = serviceAccountToken;
             return this;
         }

@@ -27,11 +27,11 @@ public final class GoogleDomainsDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor({"dsRecords","dsState","nameServers"})
+    @OutputCustomType.Constructor
     private GoogleDomainsDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        String dsState,
-        List<String> nameServers) {
+        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @OutputCustomType.Parameter("dsState") String dsState,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.dsState = dsState;
         this.nameServers = nameServers;
@@ -83,17 +83,17 @@ public final class GoogleDomainsDnsResponse {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setDsRecords(List<DsRecordResponse> dsRecords) {
+        public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
 
-        public Builder setDsState(String dsState) {
+        public Builder dsState(String dsState) {
             this.dsState = Objects.requireNonNull(dsState);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }

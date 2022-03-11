@@ -74,12 +74,12 @@ public final class RetryPolicyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setEventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
+        public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
             this.eventTimeToLiveInMinutes = eventTimeToLiveInMinutes;
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }

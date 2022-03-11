@@ -33,12 +33,12 @@ public final class PersistenceResponse {
      */
     private final @Nullable String rdbFrequency;
 
-    @OutputCustomType.Constructor({"aofEnabled","aofFrequency","rdbEnabled","rdbFrequency"})
+    @OutputCustomType.Constructor
     private PersistenceResponse(
-        @Nullable Boolean aofEnabled,
-        @Nullable String aofFrequency,
-        @Nullable Boolean rdbEnabled,
-        @Nullable String rdbFrequency) {
+        @OutputCustomType.Parameter("aofEnabled") @Nullable Boolean aofEnabled,
+        @OutputCustomType.Parameter("aofFrequency") @Nullable String aofFrequency,
+        @OutputCustomType.Parameter("rdbEnabled") @Nullable Boolean rdbEnabled,
+        @OutputCustomType.Parameter("rdbFrequency") @Nullable String rdbFrequency) {
         this.aofEnabled = aofEnabled;
         this.aofFrequency = aofFrequency;
         this.rdbEnabled = rdbEnabled;
@@ -100,22 +100,22 @@ public final class PersistenceResponse {
     	      this.rdbFrequency = defaults.rdbFrequency;
         }
 
-        public Builder setAofEnabled(@Nullable Boolean aofEnabled) {
+        public Builder aofEnabled(@Nullable Boolean aofEnabled) {
             this.aofEnabled = aofEnabled;
             return this;
         }
 
-        public Builder setAofFrequency(@Nullable String aofFrequency) {
+        public Builder aofFrequency(@Nullable String aofFrequency) {
             this.aofFrequency = aofFrequency;
             return this;
         }
 
-        public Builder setRdbEnabled(@Nullable Boolean rdbEnabled) {
+        public Builder rdbEnabled(@Nullable Boolean rdbEnabled) {
             this.rdbEnabled = rdbEnabled;
             return this;
         }
 
-        public Builder setRdbFrequency(@Nullable String rdbFrequency) {
+        public Builder rdbFrequency(@Nullable String rdbFrequency) {
             this.rdbFrequency = rdbFrequency;
             return this;
         }

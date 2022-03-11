@@ -15,8 +15,8 @@ public final class ClusterAuthenticatorGroupsConfig {
      */
     private final String securityGroup;
 
-    @OutputCustomType.Constructor({"securityGroup"})
-    private ClusterAuthenticatorGroupsConfig(String securityGroup) {
+    @OutputCustomType.Constructor
+    private ClusterAuthenticatorGroupsConfig(@OutputCustomType.Parameter("securityGroup") String securityGroup) {
         this.securityGroup = securityGroup;
     }
 
@@ -48,7 +48,7 @@ public final class ClusterAuthenticatorGroupsConfig {
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

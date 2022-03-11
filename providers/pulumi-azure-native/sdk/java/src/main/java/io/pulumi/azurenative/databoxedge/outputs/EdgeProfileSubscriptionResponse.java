@@ -32,18 +32,18 @@ public final class EdgeProfileSubscriptionResponse {
     private final @Nullable String subscriptionId;
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"id","locationPlacementId","quotaId","registeredFeatures","registrationDate","registrationId","serializedDetails","state","subscriptionId","tenantId"})
+    @OutputCustomType.Constructor
     private EdgeProfileSubscriptionResponse(
-        @Nullable String id,
-        @Nullable String locationPlacementId,
-        @Nullable String quotaId,
-        @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
-        @Nullable String registrationDate,
-        @Nullable String registrationId,
-        @Nullable String serializedDetails,
-        @Nullable String state,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("locationPlacementId") @Nullable String locationPlacementId,
+        @OutputCustomType.Parameter("quotaId") @Nullable String quotaId,
+        @OutputCustomType.Parameter("registeredFeatures") @Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures,
+        @OutputCustomType.Parameter("registrationDate") @Nullable String registrationDate,
+        @OutputCustomType.Parameter("registrationId") @Nullable String registrationId,
+        @OutputCustomType.Parameter("serializedDetails") @Nullable String serializedDetails,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.id = id;
         this.locationPlacementId = locationPlacementId;
         this.quotaId = quotaId;
@@ -133,52 +133,52 @@ public final class EdgeProfileSubscriptionResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocationPlacementId(@Nullable String locationPlacementId) {
+        public Builder locationPlacementId(@Nullable String locationPlacementId) {
             this.locationPlacementId = locationPlacementId;
             return this;
         }
 
-        public Builder setQuotaId(@Nullable String quotaId) {
+        public Builder quotaId(@Nullable String quotaId) {
             this.quotaId = quotaId;
             return this;
         }
 
-        public Builder setRegisteredFeatures(@Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures) {
+        public Builder registeredFeatures(@Nullable List<SubscriptionRegisteredFeaturesResponse> registeredFeatures) {
             this.registeredFeatures = registeredFeatures;
             return this;
         }
 
-        public Builder setRegistrationDate(@Nullable String registrationDate) {
+        public Builder registrationDate(@Nullable String registrationDate) {
             this.registrationDate = registrationDate;
             return this;
         }
 
-        public Builder setRegistrationId(@Nullable String registrationId) {
+        public Builder registrationId(@Nullable String registrationId) {
             this.registrationId = registrationId;
             return this;
         }
 
-        public Builder setSerializedDetails(@Nullable String serializedDetails) {
+        public Builder serializedDetails(@Nullable String serializedDetails) {
             this.serializedDetails = serializedDetails;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

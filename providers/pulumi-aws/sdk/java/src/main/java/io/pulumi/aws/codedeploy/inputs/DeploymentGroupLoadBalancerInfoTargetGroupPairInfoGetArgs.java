@@ -89,32 +89,32 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs ext
     	      this.testTrafficRoute = defaults.testTrafficRoute;
         }
 
-        public Builder setProdTrafficRoute(Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute) {
+        public Builder prodTrafficRoute(Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs> prodTrafficRoute) {
             this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
             return this;
         }
 
-        public Builder setProdTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs prodTrafficRoute) {
+        public Builder prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRouteGetArgs prodTrafficRoute) {
             this.prodTrafficRoute = Input.of(Objects.requireNonNull(prodTrafficRoute));
             return this;
         }
 
-        public Builder setTargetGroups(Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups) {
+        public Builder targetGroups(Input<List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs>> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
-        public Builder setTargetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs> targetGroups) {
+        public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroupGetArgs> targetGroups) {
             this.targetGroups = Input.of(Objects.requireNonNull(targetGroups));
             return this;
         }
 
-        public Builder setTestTrafficRoute(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
+        public Builder testTrafficRoute(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs> testTrafficRoute) {
             this.testTrafficRoute = testTrafficRoute;
             return this;
         }
 
-        public Builder setTestTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs testTrafficRoute) {
+        public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteGetArgs testTrafficRoute) {
             this.testTrafficRoute = Input.ofNullable(testTrafficRoute);
             return this;
         }

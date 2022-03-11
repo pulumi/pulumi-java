@@ -75,22 +75,22 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     	      this.scalingPlanEnabled = defaults.scalingPlanEnabled;
         }
 
-        public Builder setHostPoolArmPath(@Nullable Input<String> hostPoolArmPath) {
+        public Builder hostPoolArmPath(@Nullable Input<String> hostPoolArmPath) {
             this.hostPoolArmPath = hostPoolArmPath;
             return this;
         }
 
-        public Builder setHostPoolArmPath(@Nullable String hostPoolArmPath) {
+        public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
             this.hostPoolArmPath = Input.ofNullable(hostPoolArmPath);
             return this;
         }
 
-        public Builder setScalingPlanEnabled(@Nullable Input<Boolean> scalingPlanEnabled) {
+        public Builder scalingPlanEnabled(@Nullable Input<Boolean> scalingPlanEnabled) {
             this.scalingPlanEnabled = scalingPlanEnabled;
             return this;
         }
 
-        public Builder setScalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
+        public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
             this.scalingPlanEnabled = Input.ofNullable(scalingPlanEnabled);
             return this;
         }

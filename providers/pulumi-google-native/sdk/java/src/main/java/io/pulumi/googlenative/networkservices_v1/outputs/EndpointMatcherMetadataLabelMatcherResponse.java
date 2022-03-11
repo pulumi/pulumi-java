@@ -22,10 +22,10 @@ public final class EndpointMatcherMetadataLabelMatcherResponse {
      */
     private final List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels;
 
-    @OutputCustomType.Constructor({"metadataLabelMatchCriteria","metadataLabels"})
+    @OutputCustomType.Constructor
     private EndpointMatcherMetadataLabelMatcherResponse(
-        String metadataLabelMatchCriteria,
-        List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
+        @OutputCustomType.Parameter("metadataLabelMatchCriteria") String metadataLabelMatchCriteria,
+        @OutputCustomType.Parameter("metadataLabels") List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
         this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
         this.metadataLabels = metadataLabels;
     }
@@ -67,12 +67,12 @@ public final class EndpointMatcherMetadataLabelMatcherResponse {
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder setMetadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(String metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = Objects.requireNonNull(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder setMetadataLabels(List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
+        public Builder metadataLabels(List<EndpointMatcherMetadataLabelMatcherMetadataLabelsResponse> metadataLabels) {
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }

@@ -88,32 +88,32 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
     	      this.publicIpAddress = defaults.publicIpAddress;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setPorts(Input<List<JitNetworkAccessPortRuleArgs>> ports) {
+        public Builder ports(Input<List<JitNetworkAccessPortRuleArgs>> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
 
-        public Builder setPorts(List<JitNetworkAccessPortRuleArgs> ports) {
+        public Builder ports(List<JitNetworkAccessPortRuleArgs> ports) {
             this.ports = Input.of(Objects.requireNonNull(ports));
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable Input<String> publicIpAddress) {
+        public Builder publicIpAddress(@Nullable Input<String> publicIpAddress) {
             this.publicIpAddress = publicIpAddress;
             return this;
         }
 
-        public Builder setPublicIpAddress(@Nullable String publicIpAddress) {
+        public Builder publicIpAddress(@Nullable String publicIpAddress) {
             this.publicIpAddress = Input.ofNullable(publicIpAddress);
             return this;
         }

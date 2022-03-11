@@ -40,13 +40,13 @@ public final class SimpleSchedulePolicyResponse {
      */
     private final @Nullable Integer scheduleWeeklyFrequency;
 
-    @OutputCustomType.Constructor({"schedulePolicyType","scheduleRunDays","scheduleRunFrequency","scheduleRunTimes","scheduleWeeklyFrequency"})
+    @OutputCustomType.Constructor
     private SimpleSchedulePolicyResponse(
-        String schedulePolicyType,
-        @Nullable List<String> scheduleRunDays,
-        @Nullable String scheduleRunFrequency,
-        @Nullable List<String> scheduleRunTimes,
-        @Nullable Integer scheduleWeeklyFrequency) {
+        @OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType,
+        @OutputCustomType.Parameter("scheduleRunDays") @Nullable List<String> scheduleRunDays,
+        @OutputCustomType.Parameter("scheduleRunFrequency") @Nullable String scheduleRunFrequency,
+        @OutputCustomType.Parameter("scheduleRunTimes") @Nullable List<String> scheduleRunTimes,
+        @OutputCustomType.Parameter("scheduleWeeklyFrequency") @Nullable Integer scheduleWeeklyFrequency) {
         this.schedulePolicyType = schedulePolicyType;
         this.scheduleRunDays = scheduleRunDays;
         this.scheduleRunFrequency = scheduleRunFrequency;
@@ -119,27 +119,27 @@ public final class SimpleSchedulePolicyResponse {
     	      this.scheduleWeeklyFrequency = defaults.scheduleWeeklyFrequency;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
 
-        public Builder setScheduleRunDays(@Nullable List<String> scheduleRunDays) {
+        public Builder scheduleRunDays(@Nullable List<String> scheduleRunDays) {
             this.scheduleRunDays = scheduleRunDays;
             return this;
         }
 
-        public Builder setScheduleRunFrequency(@Nullable String scheduleRunFrequency) {
+        public Builder scheduleRunFrequency(@Nullable String scheduleRunFrequency) {
             this.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
 
-        public Builder setScheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
+        public Builder scheduleRunTimes(@Nullable List<String> scheduleRunTimes) {
             this.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
 
-        public Builder setScheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
+        public Builder scheduleWeeklyFrequency(@Nullable Integer scheduleWeeklyFrequency) {
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }

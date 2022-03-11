@@ -74,12 +74,12 @@ public final class PrivateIPAddressResponse extends io.pulumi.resources.InvokeAr
     	      this.subnetResourceId = defaults.subnetResourceId;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setSubnetResourceId(@Nullable String subnetResourceId) {
+        public Builder subnetResourceId(@Nullable String subnetResourceId) {
             this.subnetResourceId = subnetResourceId;
             return this;
         }

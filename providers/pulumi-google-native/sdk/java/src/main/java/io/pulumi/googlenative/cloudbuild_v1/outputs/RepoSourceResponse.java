@@ -52,16 +52,16 @@ public final class RepoSourceResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"branchName","commitSha","dir","invertRegex","project","repoName","substitutions","tagName"})
+    @OutputCustomType.Constructor
     private RepoSourceResponse(
-        String branchName,
-        String commitSha,
-        String dir,
-        Boolean invertRegex,
-        String project,
-        String repoName,
-        Map<String,String> substitutions,
-        String tagName) {
+        @OutputCustomType.Parameter("branchName") String branchName,
+        @OutputCustomType.Parameter("commitSha") String commitSha,
+        @OutputCustomType.Parameter("dir") String dir,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("repoName") String repoName,
+        @OutputCustomType.Parameter("substitutions") Map<String,String> substitutions,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.branchName = branchName;
         this.commitSha = commitSha;
         this.dir = dir;
@@ -163,42 +163,42 @@ public final class RepoSourceResponse {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setBranchName(String branchName) {
+        public Builder branchName(String branchName) {
             this.branchName = Objects.requireNonNull(branchName);
             return this;
         }
 
-        public Builder setCommitSha(String commitSha) {
+        public Builder commitSha(String commitSha) {
             this.commitSha = Objects.requireNonNull(commitSha);
             return this;
         }
 
-        public Builder setDir(String dir) {
+        public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
 
-        public Builder setInvertRegex(Boolean invertRegex) {
+        public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRepoName(String repoName) {
+        public Builder repoName(String repoName) {
             this.repoName = Objects.requireNonNull(repoName);
             return this;
         }
 
-        public Builder setSubstitutions(Map<String,String> substitutions) {
+        public Builder substitutions(Map<String,String> substitutions) {
             this.substitutions = Objects.requireNonNull(substitutions);
             return this;
         }
 
-        public Builder setTagName(String tagName) {
+        public Builder tagName(String tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }

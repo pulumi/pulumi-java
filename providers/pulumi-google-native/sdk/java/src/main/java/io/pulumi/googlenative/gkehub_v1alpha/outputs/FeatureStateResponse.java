@@ -25,11 +25,11 @@ public final class FeatureStateResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"code","description","updateTime"})
+    @OutputCustomType.Constructor
     private FeatureStateResponse(
-        String code,
-        String description,
-        String updateTime) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.code = code;
         this.description = description;
         this.updateTime = updateTime;
@@ -81,17 +81,17 @@ public final class FeatureStateResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

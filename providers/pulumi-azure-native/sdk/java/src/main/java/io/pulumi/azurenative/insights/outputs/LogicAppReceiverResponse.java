@@ -33,12 +33,12 @@ public final class LogicAppReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"callbackUrl","name","resourceId","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private LogicAppReceiverResponse(
-        String callbackUrl,
-        String name,
-        String resourceId,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.callbackUrl = callbackUrl;
         this.name = name;
         this.resourceId = resourceId;
@@ -100,22 +100,22 @@ public final class LogicAppReceiverResponse {
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

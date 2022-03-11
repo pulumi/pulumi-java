@@ -158,37 +158,37 @@ public final class UpdateConfigurationResponse extends io.pulumi.resources.Invok
     	      this.windows = defaults.windows;
         }
 
-        public Builder setAzureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
+        public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setLinux(@Nullable LinuxPropertiesResponse linux) {
+        public Builder linux(@Nullable LinuxPropertiesResponse linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setNonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
+        public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
 
-        public Builder setOperatingSystem(String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setTargets(@Nullable TargetPropertiesResponse targets) {
+        public Builder targets(@Nullable TargetPropertiesResponse targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setWindows(@Nullable WindowsPropertiesResponse windows) {
+        public Builder windows(@Nullable WindowsPropertiesResponse windows) {
             this.windows = windows;
             return this;
         }

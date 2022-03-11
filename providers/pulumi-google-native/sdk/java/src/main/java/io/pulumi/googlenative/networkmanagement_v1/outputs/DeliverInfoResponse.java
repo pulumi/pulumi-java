@@ -20,10 +20,10 @@ public final class DeliverInfoResponse {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"resourceUri","target"})
+    @OutputCustomType.Constructor
     private DeliverInfoResponse(
-        String resourceUri,
-        String target) {
+        @OutputCustomType.Parameter("resourceUri") String resourceUri,
+        @OutputCustomType.Parameter("target") String target) {
         this.resourceUri = resourceUri;
         this.target = target;
     }
@@ -65,12 +65,12 @@ public final class DeliverInfoResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

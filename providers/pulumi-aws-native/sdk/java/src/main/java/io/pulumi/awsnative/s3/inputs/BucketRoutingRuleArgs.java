@@ -71,22 +71,22 @@ public final class BucketRoutingRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.routingRuleCondition = defaults.routingRuleCondition;
         }
 
-        public Builder setRedirectRule(Input<BucketRedirectRuleArgs> redirectRule) {
+        public Builder redirectRule(Input<BucketRedirectRuleArgs> redirectRule) {
             this.redirectRule = Objects.requireNonNull(redirectRule);
             return this;
         }
 
-        public Builder setRedirectRule(BucketRedirectRuleArgs redirectRule) {
+        public Builder redirectRule(BucketRedirectRuleArgs redirectRule) {
             this.redirectRule = Input.of(Objects.requireNonNull(redirectRule));
             return this;
         }
 
-        public Builder setRoutingRuleCondition(@Nullable Input<BucketRoutingRuleConditionArgs> routingRuleCondition) {
+        public Builder routingRuleCondition(@Nullable Input<BucketRoutingRuleConditionArgs> routingRuleCondition) {
             this.routingRuleCondition = routingRuleCondition;
             return this;
         }
 
-        public Builder setRoutingRuleCondition(@Nullable BucketRoutingRuleConditionArgs routingRuleCondition) {
+        public Builder routingRuleCondition(@Nullable BucketRoutingRuleConditionArgs routingRuleCondition) {
             this.routingRuleCondition = Input.ofNullable(routingRuleCondition);
             return this;
         }

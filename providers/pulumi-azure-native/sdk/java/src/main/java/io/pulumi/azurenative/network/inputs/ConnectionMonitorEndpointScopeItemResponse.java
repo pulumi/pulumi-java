@@ -57,7 +57,7 @@ public final class ConnectionMonitorEndpointScopeItemResponse extends io.pulumi.
     	      this.address = defaults.address;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }

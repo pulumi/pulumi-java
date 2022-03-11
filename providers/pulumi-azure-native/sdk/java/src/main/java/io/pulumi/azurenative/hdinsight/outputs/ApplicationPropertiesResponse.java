@@ -73,19 +73,19 @@ public final class ApplicationPropertiesResponse {
      */
     private final @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions;
 
-    @OutputCustomType.Constructor({"applicationState","applicationType","computeProfile","createdDate","errors","httpsEndpoints","installScriptActions","marketplaceIdentifier","provisioningState","sshEndpoints","uninstallScriptActions"})
+    @OutputCustomType.Constructor
     private ApplicationPropertiesResponse(
-        String applicationState,
-        @Nullable String applicationType,
-        @Nullable ComputeProfileResponse computeProfile,
-        String createdDate,
-        @Nullable List<ErrorsResponse> errors,
-        @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> installScriptActions,
-        String marketplaceIdentifier,
-        String provisioningState,
-        @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
-        @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
+        @OutputCustomType.Parameter("applicationState") String applicationState,
+        @OutputCustomType.Parameter("applicationType") @Nullable String applicationType,
+        @OutputCustomType.Parameter("computeProfile") @Nullable ComputeProfileResponse computeProfile,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("errors") @Nullable List<ErrorsResponse> errors,
+        @OutputCustomType.Parameter("httpsEndpoints") @Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints,
+        @OutputCustomType.Parameter("installScriptActions") @Nullable List<RuntimeScriptActionResponse> installScriptActions,
+        @OutputCustomType.Parameter("marketplaceIdentifier") String marketplaceIdentifier,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sshEndpoints") @Nullable List<ApplicationGetEndpointResponse> sshEndpoints,
+        @OutputCustomType.Parameter("uninstallScriptActions") @Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
         this.applicationState = applicationState;
         this.applicationType = applicationType;
         this.computeProfile = computeProfile;
@@ -217,57 +217,57 @@ public final class ApplicationPropertiesResponse {
     	      this.uninstallScriptActions = defaults.uninstallScriptActions;
         }
 
-        public Builder setApplicationState(String applicationState) {
+        public Builder applicationState(String applicationState) {
             this.applicationState = Objects.requireNonNull(applicationState);
             return this;
         }
 
-        public Builder setApplicationType(@Nullable String applicationType) {
+        public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable ComputeProfileResponse computeProfile) {
+        public Builder computeProfile(@Nullable ComputeProfileResponse computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ErrorsResponse> errors) {
+        public Builder errors(@Nullable List<ErrorsResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setHttpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
+        public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointResponse> httpsEndpoints) {
             this.httpsEndpoints = httpsEndpoints;
             return this;
         }
 
-        public Builder setInstallScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
+        public Builder installScriptActions(@Nullable List<RuntimeScriptActionResponse> installScriptActions) {
             this.installScriptActions = installScriptActions;
             return this;
         }
 
-        public Builder setMarketplaceIdentifier(String marketplaceIdentifier) {
+        public Builder marketplaceIdentifier(String marketplaceIdentifier) {
             this.marketplaceIdentifier = Objects.requireNonNull(marketplaceIdentifier);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
+        public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointResponse> sshEndpoints) {
             this.sshEndpoints = sshEndpoints;
             return this;
         }
 
-        public Builder setUninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
+        public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionResponse> uninstallScriptActions) {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }

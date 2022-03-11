@@ -20,10 +20,10 @@ public final class ExpressionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private ExpressionResponse(
-        String type,
-        String value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class ExpressionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -32,12 +32,12 @@ public final class UserInfoResponse {
      */
     private final @Nullable String phoneNumber;
 
-    @OutputCustomType.Constructor({"emailAddress","firstName","lastName","phoneNumber"})
+    @OutputCustomType.Constructor
     private UserInfoResponse(
-        @Nullable String emailAddress,
-        @Nullable String firstName,
-        @Nullable String lastName,
-        @Nullable String phoneNumber) {
+        @OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress,
+        @OutputCustomType.Parameter("firstName") @Nullable String firstName,
+        @OutputCustomType.Parameter("lastName") @Nullable String lastName,
+        @OutputCustomType.Parameter("phoneNumber") @Nullable String phoneNumber) {
         this.emailAddress = emailAddress;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -99,22 +99,22 @@ public final class UserInfoResponse {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }
 
-        public Builder setFirstName(@Nullable String firstName) {
+        public Builder firstName(@Nullable String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Builder setLastName(@Nullable String lastName) {
+        public Builder lastName(@Nullable String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-        public Builder setPhoneNumber(@Nullable String phoneNumber) {
+        public Builder phoneNumber(@Nullable String phoneNumber) {
             this.phoneNumber = phoneNumber;
             return this;
         }

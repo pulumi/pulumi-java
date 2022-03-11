@@ -50,16 +50,16 @@ public final class GitHubEnterpriseSecretsResponse {
      */
     private final String webhookSecretVersionName;
 
-    @OutputCustomType.Constructor({"oauthClientIdName","oauthClientIdVersionName","oauthSecretName","oauthSecretVersionName","privateKeyName","privateKeyVersionName","webhookSecretName","webhookSecretVersionName"})
+    @OutputCustomType.Constructor
     private GitHubEnterpriseSecretsResponse(
-        String oauthClientIdName,
-        String oauthClientIdVersionName,
-        String oauthSecretName,
-        String oauthSecretVersionName,
-        String privateKeyName,
-        String privateKeyVersionName,
-        String webhookSecretName,
-        String webhookSecretVersionName) {
+        @OutputCustomType.Parameter("oauthClientIdName") String oauthClientIdName,
+        @OutputCustomType.Parameter("oauthClientIdVersionName") String oauthClientIdVersionName,
+        @OutputCustomType.Parameter("oauthSecretName") String oauthSecretName,
+        @OutputCustomType.Parameter("oauthSecretVersionName") String oauthSecretVersionName,
+        @OutputCustomType.Parameter("privateKeyName") String privateKeyName,
+        @OutputCustomType.Parameter("privateKeyVersionName") String privateKeyVersionName,
+        @OutputCustomType.Parameter("webhookSecretName") String webhookSecretName,
+        @OutputCustomType.Parameter("webhookSecretVersionName") String webhookSecretVersionName) {
         this.oauthClientIdName = oauthClientIdName;
         this.oauthClientIdVersionName = oauthClientIdVersionName;
         this.oauthSecretName = oauthSecretName;
@@ -161,42 +161,42 @@ public final class GitHubEnterpriseSecretsResponse {
     	      this.webhookSecretVersionName = defaults.webhookSecretVersionName;
         }
 
-        public Builder setOauthClientIdName(String oauthClientIdName) {
+        public Builder oauthClientIdName(String oauthClientIdName) {
             this.oauthClientIdName = Objects.requireNonNull(oauthClientIdName);
             return this;
         }
 
-        public Builder setOauthClientIdVersionName(String oauthClientIdVersionName) {
+        public Builder oauthClientIdVersionName(String oauthClientIdVersionName) {
             this.oauthClientIdVersionName = Objects.requireNonNull(oauthClientIdVersionName);
             return this;
         }
 
-        public Builder setOauthSecretName(String oauthSecretName) {
+        public Builder oauthSecretName(String oauthSecretName) {
             this.oauthSecretName = Objects.requireNonNull(oauthSecretName);
             return this;
         }
 
-        public Builder setOauthSecretVersionName(String oauthSecretVersionName) {
+        public Builder oauthSecretVersionName(String oauthSecretVersionName) {
             this.oauthSecretVersionName = Objects.requireNonNull(oauthSecretVersionName);
             return this;
         }
 
-        public Builder setPrivateKeyName(String privateKeyName) {
+        public Builder privateKeyName(String privateKeyName) {
             this.privateKeyName = Objects.requireNonNull(privateKeyName);
             return this;
         }
 
-        public Builder setPrivateKeyVersionName(String privateKeyVersionName) {
+        public Builder privateKeyVersionName(String privateKeyVersionName) {
             this.privateKeyVersionName = Objects.requireNonNull(privateKeyVersionName);
             return this;
         }
 
-        public Builder setWebhookSecretName(String webhookSecretName) {
+        public Builder webhookSecretName(String webhookSecretName) {
             this.webhookSecretName = Objects.requireNonNull(webhookSecretName);
             return this;
         }
 
-        public Builder setWebhookSecretVersionName(String webhookSecretVersionName) {
+        public Builder webhookSecretVersionName(String webhookSecretVersionName) {
             this.webhookSecretVersionName = Objects.requireNonNull(webhookSecretVersionName);
             return this;
         }

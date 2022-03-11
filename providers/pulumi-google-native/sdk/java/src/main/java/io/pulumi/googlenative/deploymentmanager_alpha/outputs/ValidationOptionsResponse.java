@@ -20,10 +20,10 @@ public final class ValidationOptionsResponse {
      */
     private final String undeclaredProperties;
 
-    @OutputCustomType.Constructor({"schemaValidation","undeclaredProperties"})
+    @OutputCustomType.Constructor
     private ValidationOptionsResponse(
-        String schemaValidation,
-        String undeclaredProperties) {
+        @OutputCustomType.Parameter("schemaValidation") String schemaValidation,
+        @OutputCustomType.Parameter("undeclaredProperties") String undeclaredProperties) {
         this.schemaValidation = schemaValidation;
         this.undeclaredProperties = undeclaredProperties;
     }
@@ -65,12 +65,12 @@ public final class ValidationOptionsResponse {
     	      this.undeclaredProperties = defaults.undeclaredProperties;
         }
 
-        public Builder setSchemaValidation(String schemaValidation) {
+        public Builder schemaValidation(String schemaValidation) {
             this.schemaValidation = Objects.requireNonNull(schemaValidation);
             return this;
         }
 
-        public Builder setUndeclaredProperties(String undeclaredProperties) {
+        public Builder undeclaredProperties(String undeclaredProperties) {
             this.undeclaredProperties = Objects.requireNonNull(undeclaredProperties);
             return this;
         }

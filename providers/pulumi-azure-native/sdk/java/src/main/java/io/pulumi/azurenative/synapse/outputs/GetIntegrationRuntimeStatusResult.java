@@ -23,10 +23,10 @@ public final class GetIntegrationRuntimeStatusResult {
      */
     private final Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties;
 
-    @OutputCustomType.Constructor({"name","properties"})
+    @OutputCustomType.Constructor
     private GetIntegrationRuntimeStatusResult(
-        String name,
-        Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
         this.name = name;
         this.properties = properties;
     }
@@ -68,12 +68,12 @@ public final class GetIntegrationRuntimeStatusResult {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
+        public Builder properties(Either<ManagedIntegrationRuntimeStatusResponse,SelfHostedIntegrationRuntimeStatusResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

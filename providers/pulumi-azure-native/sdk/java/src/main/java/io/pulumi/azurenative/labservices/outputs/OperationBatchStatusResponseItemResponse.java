@@ -20,10 +20,10 @@ public final class OperationBatchStatusResponseItemResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"operationUrl","status"})
+    @OutputCustomType.Constructor
     private OperationBatchStatusResponseItemResponse(
-        String operationUrl,
-        String status) {
+        @OutputCustomType.Parameter("operationUrl") String operationUrl,
+        @OutputCustomType.Parameter("status") String status) {
         this.operationUrl = operationUrl;
         this.status = status;
     }
@@ -65,12 +65,12 @@ public final class OperationBatchStatusResponseItemResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setOperationUrl(String operationUrl) {
+        public Builder operationUrl(String operationUrl) {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

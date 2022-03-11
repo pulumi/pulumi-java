@@ -15,8 +15,8 @@ public final class FileSourceInfoResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor({"shareId"})
-    private FileSourceInfoResponse(String shareId) {
+    @OutputCustomType.Constructor
+    private FileSourceInfoResponse(@OutputCustomType.Parameter("shareId") String shareId) {
         this.shareId = shareId;
     }
 
@@ -48,7 +48,7 @@ public final class FileSourceInfoResponse {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

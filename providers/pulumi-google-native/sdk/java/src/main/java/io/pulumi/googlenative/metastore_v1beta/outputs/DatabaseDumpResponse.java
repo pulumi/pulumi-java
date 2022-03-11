@@ -30,12 +30,12 @@ public final class DatabaseDumpResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseType","gcsUri","sourceDatabase","type"})
+    @OutputCustomType.Constructor
     private DatabaseDumpResponse(
-        String databaseType,
-        String gcsUri,
-        String sourceDatabase,
-        String type) {
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("gcsUri") String gcsUri,
+        @OutputCustomType.Parameter("sourceDatabase") String sourceDatabase,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseType = databaseType;
         this.gcsUri = gcsUri;
         this.sourceDatabase = sourceDatabase;
@@ -97,22 +97,22 @@ public final class DatabaseDumpResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setGcsUri(String gcsUri) {
+        public Builder gcsUri(String gcsUri) {
             this.gcsUri = Objects.requireNonNull(gcsUri);
             return this;
         }
 
-        public Builder setSourceDatabase(String sourceDatabase) {
+        public Builder sourceDatabase(String sourceDatabase) {
             this.sourceDatabase = Objects.requireNonNull(sourceDatabase);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

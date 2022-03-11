@@ -23,10 +23,10 @@ public final class DeploymentStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"rollingUpdate","type"})
+    @OutputCustomType.Constructor
     private DeploymentStrategy(
-        @Nullable RollingUpdateDeployment rollingUpdate,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateDeployment rollingUpdate,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class DeploymentStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateDeployment rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateDeployment rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

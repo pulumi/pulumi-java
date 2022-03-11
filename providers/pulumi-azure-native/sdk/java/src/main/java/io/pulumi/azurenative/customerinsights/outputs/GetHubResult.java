@@ -65,18 +65,18 @@ public final class GetHubResult {
      */
     private final String webEndpoint;
 
-    @OutputCustomType.Constructor({"apiEndpoint","hubBillingInfo","id","location","name","provisioningState","tags","tenantFeatures","type","webEndpoint"})
+    @OutputCustomType.Constructor
     private GetHubResult(
-        String apiEndpoint,
-        @Nullable HubBillingInfoFormatResponse hubBillingInfo,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer tenantFeatures,
-        String type,
-        String webEndpoint) {
+        @OutputCustomType.Parameter("apiEndpoint") String apiEndpoint,
+        @OutputCustomType.Parameter("hubBillingInfo") @Nullable HubBillingInfoFormatResponse hubBillingInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantFeatures") @Nullable Integer tenantFeatures,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("webEndpoint") String webEndpoint) {
         this.apiEndpoint = apiEndpoint;
         this.hubBillingInfo = hubBillingInfo;
         this.id = id;
@@ -198,52 +198,52 @@ public final class GetHubResult {
     	      this.webEndpoint = defaults.webEndpoint;
         }
 
-        public Builder setApiEndpoint(String apiEndpoint) {
+        public Builder apiEndpoint(String apiEndpoint) {
             this.apiEndpoint = Objects.requireNonNull(apiEndpoint);
             return this;
         }
 
-        public Builder setHubBillingInfo(@Nullable HubBillingInfoFormatResponse hubBillingInfo) {
+        public Builder hubBillingInfo(@Nullable HubBillingInfoFormatResponse hubBillingInfo) {
             this.hubBillingInfo = hubBillingInfo;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenantFeatures(@Nullable Integer tenantFeatures) {
+        public Builder tenantFeatures(@Nullable Integer tenantFeatures) {
             this.tenantFeatures = tenantFeatures;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWebEndpoint(String webEndpoint) {
+        public Builder webEndpoint(String webEndpoint) {
             this.webEndpoint = Objects.requireNonNull(webEndpoint);
             return this;
         }

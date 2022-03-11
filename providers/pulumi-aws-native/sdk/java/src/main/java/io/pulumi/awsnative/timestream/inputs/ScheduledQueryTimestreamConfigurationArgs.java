@@ -130,72 +130,72 @@ public final class ScheduledQueryTimestreamConfigurationArgs extends io.pulumi.r
     	      this.timeColumn = defaults.timeColumn;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setDimensionMappings(Input<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings) {
+        public Builder dimensionMappings(Input<List<ScheduledQueryDimensionMappingArgs>> dimensionMappings) {
             this.dimensionMappings = Objects.requireNonNull(dimensionMappings);
             return this;
         }
 
-        public Builder setDimensionMappings(List<ScheduledQueryDimensionMappingArgs> dimensionMappings) {
+        public Builder dimensionMappings(List<ScheduledQueryDimensionMappingArgs> dimensionMappings) {
             this.dimensionMappings = Input.of(Objects.requireNonNull(dimensionMappings));
             return this;
         }
 
-        public Builder setMeasureNameColumn(@Nullable Input<String> measureNameColumn) {
+        public Builder measureNameColumn(@Nullable Input<String> measureNameColumn) {
             this.measureNameColumn = measureNameColumn;
             return this;
         }
 
-        public Builder setMeasureNameColumn(@Nullable String measureNameColumn) {
+        public Builder measureNameColumn(@Nullable String measureNameColumn) {
             this.measureNameColumn = Input.ofNullable(measureNameColumn);
             return this;
         }
 
-        public Builder setMixedMeasureMappings(@Nullable Input<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings) {
+        public Builder mixedMeasureMappings(@Nullable Input<List<ScheduledQueryMixedMeasureMappingArgs>> mixedMeasureMappings) {
             this.mixedMeasureMappings = mixedMeasureMappings;
             return this;
         }
 
-        public Builder setMixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMappingArgs> mixedMeasureMappings) {
+        public Builder mixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMappingArgs> mixedMeasureMappings) {
             this.mixedMeasureMappings = Input.ofNullable(mixedMeasureMappings);
             return this;
         }
 
-        public Builder setMultiMeasureMappings(@Nullable Input<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings) {
+        public Builder multiMeasureMappings(@Nullable Input<ScheduledQueryMultiMeasureMappingsArgs> multiMeasureMappings) {
             this.multiMeasureMappings = multiMeasureMappings;
             return this;
         }
 
-        public Builder setMultiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappingsArgs multiMeasureMappings) {
+        public Builder multiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappingsArgs multiMeasureMappings) {
             this.multiMeasureMappings = Input.ofNullable(multiMeasureMappings);
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }
 
-        public Builder setTimeColumn(Input<String> timeColumn) {
+        public Builder timeColumn(Input<String> timeColumn) {
             this.timeColumn = Objects.requireNonNull(timeColumn);
             return this;
         }
 
-        public Builder setTimeColumn(String timeColumn) {
+        public Builder timeColumn(String timeColumn) {
             this.timeColumn = Input.of(Objects.requireNonNull(timeColumn));
             return this;
         }

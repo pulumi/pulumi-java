@@ -38,13 +38,13 @@ public final class BucketNotificationLambdaFunction {
      */
     private final @Nullable String lambdaFunctionArn;
 
-    @OutputCustomType.Constructor({"events","filterPrefix","filterSuffix","id","lambdaFunctionArn"})
+    @OutputCustomType.Constructor
     private BucketNotificationLambdaFunction(
-        List<String> events,
-        @Nullable String filterPrefix,
-        @Nullable String filterSuffix,
-        @Nullable String id,
-        @Nullable String lambdaFunctionArn) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
+        @OutputCustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lambdaFunctionArn") @Nullable String lambdaFunctionArn) {
         this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
@@ -116,27 +116,27 @@ public final class BucketNotificationLambdaFunction {
     	      this.lambdaFunctionArn = defaults.lambdaFunctionArn;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable String filterPrefix) {
+        public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable String filterSuffix) {
+        public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLambdaFunctionArn(@Nullable String lambdaFunctionArn) {
+        public Builder lambdaFunctionArn(@Nullable String lambdaFunctionArn) {
             this.lambdaFunctionArn = lambdaFunctionArn;
             return this;
         }

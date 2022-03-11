@@ -36,13 +36,13 @@ public final class OnPremiseResourceDetailsResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"machineName","source","sourceComputerId","vmuuid","workspaceId"})
+    @OutputCustomType.Constructor
     private OnPremiseResourceDetailsResponse(
-        String machineName,
-        String source,
-        String sourceComputerId,
-        String vmuuid,
-        String workspaceId) {
+        @OutputCustomType.Parameter("machineName") String machineName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceComputerId") String sourceComputerId,
+        @OutputCustomType.Parameter("vmuuid") String vmuuid,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.machineName = machineName;
         this.source = source;
         this.sourceComputerId = sourceComputerId;
@@ -115,27 +115,27 @@ public final class OnPremiseResourceDetailsResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setMachineName(String machineName) {
+        public Builder machineName(String machineName) {
             this.machineName = Objects.requireNonNull(machineName);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceComputerId(String sourceComputerId) {
+        public Builder sourceComputerId(String sourceComputerId) {
             this.sourceComputerId = Objects.requireNonNull(sourceComputerId);
             return this;
         }
 
-        public Builder setVmuuid(String vmuuid) {
+        public Builder vmuuid(String vmuuid) {
             this.vmuuid = Objects.requireNonNull(vmuuid);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

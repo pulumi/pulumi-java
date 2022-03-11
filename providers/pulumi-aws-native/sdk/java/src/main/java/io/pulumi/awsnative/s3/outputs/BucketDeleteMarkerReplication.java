@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BucketDeleteMarkerReplication {
     private final @Nullable BucketDeleteMarkerReplicationStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketDeleteMarkerReplication(@Nullable BucketDeleteMarkerReplicationStatus status) {
+    @OutputCustomType.Constructor
+    private BucketDeleteMarkerReplication(@OutputCustomType.Parameter("status") @Nullable BucketDeleteMarkerReplicationStatus status) {
         this.status = status;
     }
 
@@ -42,7 +42,7 @@ public final class BucketDeleteMarkerReplication {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(@Nullable BucketDeleteMarkerReplicationStatus status) {
+        public Builder status(@Nullable BucketDeleteMarkerReplicationStatus status) {
             this.status = status;
             return this;
         }

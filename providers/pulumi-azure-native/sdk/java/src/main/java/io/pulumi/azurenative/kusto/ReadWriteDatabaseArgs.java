@@ -151,72 +151,72 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
     	      this.softDeletePeriod = defaults.softDeletePeriod;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setHotCachePeriod(@Nullable Input<String> hotCachePeriod) {
+        public Builder hotCachePeriod(@Nullable Input<String> hotCachePeriod) {
             this.hotCachePeriod = hotCachePeriod;
             return this;
         }
 
-        public Builder setHotCachePeriod(@Nullable String hotCachePeriod) {
+        public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
             this.hotCachePeriod = Input.ofNullable(hotCachePeriod);
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSoftDeletePeriod(@Nullable Input<String> softDeletePeriod) {
+        public Builder softDeletePeriod(@Nullable Input<String> softDeletePeriod) {
             this.softDeletePeriod = softDeletePeriod;
             return this;
         }
 
-        public Builder setSoftDeletePeriod(@Nullable String softDeletePeriod) {
+        public Builder softDeletePeriod(@Nullable String softDeletePeriod) {
             this.softDeletePeriod = Input.ofNullable(softDeletePeriod);
             return this;
         }

@@ -109,42 +109,42 @@ public final class GooglePrivacyDlpV2ExclusionRuleArgs extends io.pulumi.resourc
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<GooglePrivacyDlpV2DictionaryArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
+        public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable Input<GooglePrivacyDlpV2ExcludeInfoTypesArgs> excludeInfoTypes) {
             this.excludeInfoTypes = excludeInfoTypes;
             return this;
         }
 
-        public Builder setExcludeInfoTypes(@Nullable GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
+        public Builder excludeInfoTypes(@Nullable GooglePrivacyDlpV2ExcludeInfoTypesArgs excludeInfoTypes) {
             this.excludeInfoTypes = Input.ofNullable(excludeInfoTypes);
             return this;
         }
 
-        public Builder setMatchingType(@Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
+        public Builder matchingType(@Nullable Input<GooglePrivacyDlpV2ExclusionRuleMatchingType> matchingType) {
             this.matchingType = matchingType;
             return this;
         }
 
-        public Builder setMatchingType(@Nullable GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
+        public Builder matchingType(@Nullable GooglePrivacyDlpV2ExclusionRuleMatchingType matchingType) {
             this.matchingType = Input.ofNullable(matchingType);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
+        public Builder regex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
+        public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }

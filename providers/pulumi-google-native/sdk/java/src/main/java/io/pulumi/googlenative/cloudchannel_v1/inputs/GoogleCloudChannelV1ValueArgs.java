@@ -125,52 +125,52 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBoolValue(@Nullable Input<Boolean> boolValue) {
+        public Builder boolValue(@Nullable Input<Boolean> boolValue) {
             this.boolValue = boolValue;
             return this;
         }
 
-        public Builder setBoolValue(@Nullable Boolean boolValue) {
+        public Builder boolValue(@Nullable Boolean boolValue) {
             this.boolValue = Input.ofNullable(boolValue);
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Input<Double> doubleValue) {
+        public Builder doubleValue(@Nullable Input<Double> doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = Input.ofNullable(doubleValue);
             return this;
         }
 
-        public Builder setInt64Value(@Nullable Input<String> int64Value) {
+        public Builder int64Value(@Nullable Input<String> int64Value) {
             this.int64Value = int64Value;
             return this;
         }
 
-        public Builder setInt64Value(@Nullable String int64Value) {
+        public Builder int64Value(@Nullable String int64Value) {
             this.int64Value = Input.ofNullable(int64Value);
             return this;
         }
 
-        public Builder setProtoValue(@Nullable Input<Map<String,String>> protoValue) {
+        public Builder protoValue(@Nullable Input<Map<String,String>> protoValue) {
             this.protoValue = protoValue;
             return this;
         }
 
-        public Builder setProtoValue(@Nullable Map<String,String> protoValue) {
+        public Builder protoValue(@Nullable Map<String,String> protoValue) {
             this.protoValue = Input.ofNullable(protoValue);
             return this;
         }
 
-        public Builder setStringValue(@Nullable Input<String> stringValue) {
+        public Builder stringValue(@Nullable Input<String> stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }

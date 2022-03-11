@@ -34,12 +34,12 @@ public final class ClusterDefinitionResponse {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor({"blueprint","componentVersion","configurations","kind"})
+    @OutputCustomType.Constructor
     private ClusterDefinitionResponse(
-        @Nullable String blueprint,
-        @Nullable Map<String,String> componentVersion,
-        @Nullable Object configurations,
-        @Nullable String kind) {
+        @OutputCustomType.Parameter("blueprint") @Nullable String blueprint,
+        @OutputCustomType.Parameter("componentVersion") @Nullable Map<String,String> componentVersion,
+        @OutputCustomType.Parameter("configurations") @Nullable Object configurations,
+        @OutputCustomType.Parameter("kind") @Nullable String kind) {
         this.blueprint = blueprint;
         this.componentVersion = componentVersion;
         this.configurations = configurations;
@@ -101,22 +101,22 @@ public final class ClusterDefinitionResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setBlueprint(@Nullable String blueprint) {
+        public Builder blueprint(@Nullable String blueprint) {
             this.blueprint = blueprint;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable Map<String,String> componentVersion) {
+        public Builder componentVersion(@Nullable Map<String,String> componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setConfigurations(@Nullable Object configurations) {
+        public Builder configurations(@Nullable Object configurations) {
             this.configurations = configurations;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }

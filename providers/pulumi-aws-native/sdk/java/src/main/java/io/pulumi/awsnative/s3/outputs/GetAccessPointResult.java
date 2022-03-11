@@ -36,13 +36,13 @@ public final class GetAccessPointResult {
     private final @Nullable Object policy;
     private final @Nullable PolicyStatusProperties policyStatus;
 
-    @OutputCustomType.Constructor({"alias","arn","networkOrigin","policy","policyStatus"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        @Nullable String alias,
-        @Nullable String arn,
-        @Nullable AccessPointNetworkOrigin networkOrigin,
-        @Nullable Object policy,
-        @Nullable PolicyStatusProperties policyStatus) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("networkOrigin") @Nullable AccessPointNetworkOrigin networkOrigin,
+        @OutputCustomType.Parameter("policy") @Nullable Object policy,
+        @OutputCustomType.Parameter("policyStatus") @Nullable PolicyStatusProperties policyStatus) {
         this.alias = alias;
         this.arn = arn;
         this.networkOrigin = networkOrigin;
@@ -110,27 +110,27 @@ public final class GetAccessPointResult {
     	      this.policyStatus = defaults.policyStatus;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setNetworkOrigin(@Nullable AccessPointNetworkOrigin networkOrigin) {
+        public Builder networkOrigin(@Nullable AccessPointNetworkOrigin networkOrigin) {
             this.networkOrigin = networkOrigin;
             return this;
         }
 
-        public Builder setPolicy(@Nullable Object policy) {
+        public Builder policy(@Nullable Object policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicyStatus(@Nullable PolicyStatusProperties policyStatus) {
+        public Builder policyStatus(@Nullable PolicyStatusProperties policyStatus) {
             this.policyStatus = policyStatus;
             return this;
         }

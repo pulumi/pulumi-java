@@ -37,13 +37,13 @@ public final class BotAliasConversationLogsLogSetting {
      */
     private final @Nullable String resourcePrefix;
 
-    @OutputCustomType.Constructor({"destination","kmsKeyArn","logType","resourceArn","resourcePrefix"})
+    @OutputCustomType.Constructor
     private BotAliasConversationLogsLogSetting(
-        String destination,
-        @Nullable String kmsKeyArn,
-        String logType,
-        String resourceArn,
-        @Nullable String resourcePrefix) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("logType") String logType,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn,
+        @OutputCustomType.Parameter("resourcePrefix") @Nullable String resourcePrefix) {
         this.destination = destination;
         this.kmsKeyArn = kmsKeyArn;
         this.logType = logType;
@@ -115,27 +115,27 @@ public final class BotAliasConversationLogsLogSetting {
     	      this.resourcePrefix = defaults.resourcePrefix;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setLogType(String logType) {
+        public Builder logType(String logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourcePrefix(@Nullable String resourcePrefix) {
+        public Builder resourcePrefix(@Nullable String resourcePrefix) {
             this.resourcePrefix = resourcePrefix;
             return this;
         }

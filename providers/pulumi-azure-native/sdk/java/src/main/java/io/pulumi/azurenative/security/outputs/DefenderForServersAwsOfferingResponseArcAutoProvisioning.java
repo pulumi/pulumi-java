@@ -23,10 +23,10 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
      */
     private final @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata;
 
-    @OutputCustomType.Constructor({"enabled","servicePrincipalSecretMetadata"})
+    @OutputCustomType.Constructor
     private DefenderForServersAwsOfferingResponseArcAutoProvisioning(
-        @Nullable Boolean enabled,
-        @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("servicePrincipalSecretMetadata") @Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
         this.enabled = enabled;
         this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
     }
@@ -68,12 +68,12 @@ public final class DefenderForServersAwsOfferingResponseArcAutoProvisioning {
     	      this.servicePrincipalSecretMetadata = defaults.servicePrincipalSecretMetadata;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setServicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
+        public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }

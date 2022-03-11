@@ -15,8 +15,8 @@ public final class ApigatewayGatewayConfigResponse {
      */
     private final ApigatewayBackendConfigResponse backendConfig;
 
-    @OutputCustomType.Constructor({"backendConfig"})
-    private ApigatewayGatewayConfigResponse(ApigatewayBackendConfigResponse backendConfig) {
+    @OutputCustomType.Constructor
+    private ApigatewayGatewayConfigResponse(@OutputCustomType.Parameter("backendConfig") ApigatewayBackendConfigResponse backendConfig) {
         this.backendConfig = backendConfig;
     }
 
@@ -48,7 +48,7 @@ public final class ApigatewayGatewayConfigResponse {
     	      this.backendConfig = defaults.backendConfig;
         }
 
-        public Builder setBackendConfig(ApigatewayBackendConfigResponse backendConfig) {
+        public Builder backendConfig(ApigatewayBackendConfigResponse backendConfig) {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }

@@ -129,52 +129,52 @@ public final class ExternalVpnGatewayArgs extends io.pulumi.resources.ResourceAr
     	      this.redundancyType = defaults.redundancyType;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInterfaces(@Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
+        public Builder interfaces(@Nullable Input<List<ExternalVpnGatewayInterfaceArgs>> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
 
-        public Builder setInterfaces(@Nullable List<ExternalVpnGatewayInterfaceArgs> interfaces) {
+        public Builder interfaces(@Nullable List<ExternalVpnGatewayInterfaceArgs> interfaces) {
             this.interfaces = Input.ofNullable(interfaces);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRedundancyType(@Nullable Input<String> redundancyType) {
+        public Builder redundancyType(@Nullable Input<String> redundancyType) {
             this.redundancyType = redundancyType;
             return this;
         }
 
-        public Builder setRedundancyType(@Nullable String redundancyType) {
+        public Builder redundancyType(@Nullable String redundancyType) {
             this.redundancyType = Input.ofNullable(redundancyType);
             return this;
         }

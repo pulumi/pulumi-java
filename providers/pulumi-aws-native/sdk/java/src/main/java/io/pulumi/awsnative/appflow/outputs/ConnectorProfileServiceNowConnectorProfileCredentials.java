@@ -20,10 +20,10 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","username"})
+    @OutputCustomType.Constructor
     private ConnectorProfileServiceNowConnectorProfileCredentials(
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.username = username;
     }
@@ -65,12 +65,12 @@ public final class ConnectorProfileServiceNowConnectorProfileCredentials {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

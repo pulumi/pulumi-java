@@ -35,12 +35,12 @@ public final class TaggingCriteriaResponse {
      */
     private final Double taggingPriority;
 
-    @OutputCustomType.Constructor({"criteria","isDefault","tagInfo","taggingPriority"})
+    @OutputCustomType.Constructor
     private TaggingCriteriaResponse(
-        @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
-        Boolean isDefault,
-        RetentionTagResponse tagInfo,
-        Double taggingPriority) {
+        @OutputCustomType.Parameter("criteria") @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria,
+        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
+        @OutputCustomType.Parameter("tagInfo") RetentionTagResponse tagInfo,
+        @OutputCustomType.Parameter("taggingPriority") Double taggingPriority) {
         this.criteria = criteria;
         this.isDefault = isDefault;
         this.tagInfo = tagInfo;
@@ -102,22 +102,22 @@ public final class TaggingCriteriaResponse {
     	      this.taggingPriority = defaults.taggingPriority;
         }
 
-        public Builder setCriteria(@Nullable List<ScheduleBasedBackupCriteriaResponse> criteria) {
+        public Builder criteria(@Nullable List<ScheduleBasedBackupCriteriaResponse> criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setIsDefault(Boolean isDefault) {
+        public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
 
-        public Builder setTagInfo(RetentionTagResponse tagInfo) {
+        public Builder tagInfo(RetentionTagResponse tagInfo) {
             this.tagInfo = Objects.requireNonNull(tagInfo);
             return this;
         }
 
-        public Builder setTaggingPriority(Double taggingPriority) {
+        public Builder taggingPriority(Double taggingPriority) {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }

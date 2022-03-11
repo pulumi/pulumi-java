@@ -75,21 +75,21 @@ public final class GetInstanceResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"createdAt","description","diskEncryptionKeyName","displayName","host","ipRange","lastModifiedAt","location","name","peeringCidrRange","port","runtimeVersion","state"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String createdAt,
-        String description,
-        String diskEncryptionKeyName,
-        String displayName,
-        String host,
-        String ipRange,
-        String lastModifiedAt,
-        String location,
-        String name,
-        String peeringCidrRange,
-        String port,
-        String runtimeVersion,
-        String state) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskEncryptionKeyName") String diskEncryptionKeyName,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringCidrRange") String peeringCidrRange,
+        @OutputCustomType.Parameter("port") String port,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("state") String state) {
         this.createdAt = createdAt;
         this.description = description;
         this.diskEncryptionKeyName = diskEncryptionKeyName;
@@ -241,67 +241,67 @@ public final class GetInstanceResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskEncryptionKeyName(String diskEncryptionKeyName) {
+        public Builder diskEncryptionKeyName(String diskEncryptionKeyName) {
             this.diskEncryptionKeyName = Objects.requireNonNull(diskEncryptionKeyName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringCidrRange(String peeringCidrRange) {
+        public Builder peeringCidrRange(String peeringCidrRange) {
             this.peeringCidrRange = Objects.requireNonNull(peeringCidrRange);
             return this;
         }
 
-        public Builder setPort(String port) {
+        public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

@@ -88,42 +88,42 @@ public final class ComponentChildArgs extends io.pulumi.resources.ResourceArgs {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setChildren(@Nullable Input<List<ComponentChildArgs>> children) {
+        public Builder children(@Nullable Input<List<ComponentChildArgs>> children) {
             this.children = children;
             return this;
         }
 
-        public Builder setChildren(@Nullable List<ComponentChildArgs> children) {
+        public Builder children(@Nullable List<ComponentChildArgs> children) {
             this.children = Input.ofNullable(children);
             return this;
         }
 
-        public Builder setComponentType(Input<String> componentType) {
+        public Builder componentType(Input<String> componentType) {
             this.componentType = Objects.requireNonNull(componentType);
             return this;
         }
 
-        public Builder setComponentType(String componentType) {
+        public Builder componentType(String componentType) {
             this.componentType = Input.of(Objects.requireNonNull(componentType));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProperties(Input<ComponentPropertiesArgs> properties) {
+        public Builder properties(Input<ComponentPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(ComponentPropertiesArgs properties) {
+        public Builder properties(ComponentPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }

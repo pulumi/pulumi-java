@@ -32,12 +32,12 @@ public final class SecretKeySelectorResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"key","localObjectReference","name","optional"})
+    @OutputCustomType.Constructor
     private SecretKeySelectorResponse(
-        String key,
-        LocalObjectReferenceResponse localObjectReference,
-        String name,
-        Boolean optional) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("localObjectReference") LocalObjectReferenceResponse localObjectReference,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.key = key;
         this.localObjectReference = localObjectReference;
         this.name = name;
@@ -99,22 +99,22 @@ public final class SecretKeySelectorResponse {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLocalObjectReference(LocalObjectReferenceResponse localObjectReference) {
+        public Builder localObjectReference(LocalObjectReferenceResponse localObjectReference) {
             this.localObjectReference = Objects.requireNonNull(localObjectReference);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

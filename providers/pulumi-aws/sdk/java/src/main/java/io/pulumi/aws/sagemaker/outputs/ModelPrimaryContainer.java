@@ -45,14 +45,14 @@ public final class ModelPrimaryContainer {
      */
     private final @Nullable String modelDataUrl;
 
-    @OutputCustomType.Constructor({"containerHostname","environment","image","imageConfig","mode","modelDataUrl"})
+    @OutputCustomType.Constructor
     private ModelPrimaryContainer(
-        @Nullable String containerHostname,
-        @Nullable Map<String,String> environment,
-        String image,
-        @Nullable ModelPrimaryContainerImageConfig imageConfig,
-        @Nullable String mode,
-        @Nullable String modelDataUrl) {
+        @OutputCustomType.Parameter("containerHostname") @Nullable String containerHostname,
+        @OutputCustomType.Parameter("environment") @Nullable Map<String,String> environment,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("imageConfig") @Nullable ModelPrimaryContainerImageConfig imageConfig,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("modelDataUrl") @Nullable String modelDataUrl) {
         this.containerHostname = containerHostname;
         this.environment = environment;
         this.image = image;
@@ -135,32 +135,32 @@ public final class ModelPrimaryContainer {
     	      this.modelDataUrl = defaults.modelDataUrl;
         }
 
-        public Builder setContainerHostname(@Nullable String containerHostname) {
+        public Builder containerHostname(@Nullable String containerHostname) {
             this.containerHostname = containerHostname;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Map<String,String> environment) {
+        public Builder environment(@Nullable Map<String,String> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setImageConfig(@Nullable ModelPrimaryContainerImageConfig imageConfig) {
+        public Builder imageConfig(@Nullable ModelPrimaryContainerImageConfig imageConfig) {
             this.imageConfig = imageConfig;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setModelDataUrl(@Nullable String modelDataUrl) {
+        public Builder modelDataUrl(@Nullable String modelDataUrl) {
             this.modelDataUrl = modelDataUrl;
             return this;
         }

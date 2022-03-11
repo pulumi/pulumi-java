@@ -74,22 +74,22 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.keyIdentifier = defaults.keyIdentifier;
         }
 
-        public Builder setIdentityClientId(@Nullable Input<String> identityClientId) {
+        public Builder identityClientId(@Nullable Input<String> identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = Input.ofNullable(identityClientId);
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable Input<String> keyIdentifier) {
+        public Builder keyIdentifier(@Nullable Input<String> keyIdentifier) {
             this.keyIdentifier = keyIdentifier;
             return this;
         }
 
-        public Builder setKeyIdentifier(@Nullable String keyIdentifier) {
+        public Builder keyIdentifier(@Nullable String keyIdentifier) {
             this.keyIdentifier = Input.ofNullable(keyIdentifier);
             return this;
         }

@@ -108,27 +108,27 @@ public final class TaskRunnerSettingsResponse {
      */
     private final String workflowFileName;
 
-    @OutputCustomType.Constructor({"alsologtostderr","baseTaskDir","baseUrl","commandlinesFileName","continueOnException","dataflowApiVersion","harnessCommand","languageHint","logDir","logToSerialconsole","logUploadLocation","oauthScopes","parallelWorkerSettings","streamingWorkerMainClass","taskGroup","taskUser","tempStoragePrefix","vmId","workflowFileName"})
+    @OutputCustomType.Constructor
     private TaskRunnerSettingsResponse(
-        Boolean alsologtostderr,
-        String baseTaskDir,
-        String baseUrl,
-        String commandlinesFileName,
-        Boolean continueOnException,
-        String dataflowApiVersion,
-        String harnessCommand,
-        String languageHint,
-        String logDir,
-        Boolean logToSerialconsole,
-        String logUploadLocation,
-        List<String> oauthScopes,
-        WorkerSettingsResponse parallelWorkerSettings,
-        String streamingWorkerMainClass,
-        String taskGroup,
-        String taskUser,
-        String tempStoragePrefix,
-        String vmId,
-        String workflowFileName) {
+        @OutputCustomType.Parameter("alsologtostderr") Boolean alsologtostderr,
+        @OutputCustomType.Parameter("baseTaskDir") String baseTaskDir,
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("commandlinesFileName") String commandlinesFileName,
+        @OutputCustomType.Parameter("continueOnException") Boolean continueOnException,
+        @OutputCustomType.Parameter("dataflowApiVersion") String dataflowApiVersion,
+        @OutputCustomType.Parameter("harnessCommand") String harnessCommand,
+        @OutputCustomType.Parameter("languageHint") String languageHint,
+        @OutputCustomType.Parameter("logDir") String logDir,
+        @OutputCustomType.Parameter("logToSerialconsole") Boolean logToSerialconsole,
+        @OutputCustomType.Parameter("logUploadLocation") String logUploadLocation,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("parallelWorkerSettings") WorkerSettingsResponse parallelWorkerSettings,
+        @OutputCustomType.Parameter("streamingWorkerMainClass") String streamingWorkerMainClass,
+        @OutputCustomType.Parameter("taskGroup") String taskGroup,
+        @OutputCustomType.Parameter("taskUser") String taskUser,
+        @OutputCustomType.Parameter("tempStoragePrefix") String tempStoragePrefix,
+        @OutputCustomType.Parameter("vmId") String vmId,
+        @OutputCustomType.Parameter("workflowFileName") String workflowFileName) {
         this.alsologtostderr = alsologtostderr;
         this.baseTaskDir = baseTaskDir;
         this.baseUrl = baseUrl;
@@ -340,97 +340,97 @@ public final class TaskRunnerSettingsResponse {
     	      this.workflowFileName = defaults.workflowFileName;
         }
 
-        public Builder setAlsologtostderr(Boolean alsologtostderr) {
+        public Builder alsologtostderr(Boolean alsologtostderr) {
             this.alsologtostderr = Objects.requireNonNull(alsologtostderr);
             return this;
         }
 
-        public Builder setBaseTaskDir(String baseTaskDir) {
+        public Builder baseTaskDir(String baseTaskDir) {
             this.baseTaskDir = Objects.requireNonNull(baseTaskDir);
             return this;
         }
 
-        public Builder setBaseUrl(String baseUrl) {
+        public Builder baseUrl(String baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setCommandlinesFileName(String commandlinesFileName) {
+        public Builder commandlinesFileName(String commandlinesFileName) {
             this.commandlinesFileName = Objects.requireNonNull(commandlinesFileName);
             return this;
         }
 
-        public Builder setContinueOnException(Boolean continueOnException) {
+        public Builder continueOnException(Boolean continueOnException) {
             this.continueOnException = Objects.requireNonNull(continueOnException);
             return this;
         }
 
-        public Builder setDataflowApiVersion(String dataflowApiVersion) {
+        public Builder dataflowApiVersion(String dataflowApiVersion) {
             this.dataflowApiVersion = Objects.requireNonNull(dataflowApiVersion);
             return this;
         }
 
-        public Builder setHarnessCommand(String harnessCommand) {
+        public Builder harnessCommand(String harnessCommand) {
             this.harnessCommand = Objects.requireNonNull(harnessCommand);
             return this;
         }
 
-        public Builder setLanguageHint(String languageHint) {
+        public Builder languageHint(String languageHint) {
             this.languageHint = Objects.requireNonNull(languageHint);
             return this;
         }
 
-        public Builder setLogDir(String logDir) {
+        public Builder logDir(String logDir) {
             this.logDir = Objects.requireNonNull(logDir);
             return this;
         }
 
-        public Builder setLogToSerialconsole(Boolean logToSerialconsole) {
+        public Builder logToSerialconsole(Boolean logToSerialconsole) {
             this.logToSerialconsole = Objects.requireNonNull(logToSerialconsole);
             return this;
         }
 
-        public Builder setLogUploadLocation(String logUploadLocation) {
+        public Builder logUploadLocation(String logUploadLocation) {
             this.logUploadLocation = Objects.requireNonNull(logUploadLocation);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setParallelWorkerSettings(WorkerSettingsResponse parallelWorkerSettings) {
+        public Builder parallelWorkerSettings(WorkerSettingsResponse parallelWorkerSettings) {
             this.parallelWorkerSettings = Objects.requireNonNull(parallelWorkerSettings);
             return this;
         }
 
-        public Builder setStreamingWorkerMainClass(String streamingWorkerMainClass) {
+        public Builder streamingWorkerMainClass(String streamingWorkerMainClass) {
             this.streamingWorkerMainClass = Objects.requireNonNull(streamingWorkerMainClass);
             return this;
         }
 
-        public Builder setTaskGroup(String taskGroup) {
+        public Builder taskGroup(String taskGroup) {
             this.taskGroup = Objects.requireNonNull(taskGroup);
             return this;
         }
 
-        public Builder setTaskUser(String taskUser) {
+        public Builder taskUser(String taskUser) {
             this.taskUser = Objects.requireNonNull(taskUser);
             return this;
         }
 
-        public Builder setTempStoragePrefix(String tempStoragePrefix) {
+        public Builder tempStoragePrefix(String tempStoragePrefix) {
             this.tempStoragePrefix = Objects.requireNonNull(tempStoragePrefix);
             return this;
         }
 
-        public Builder setVmId(String vmId) {
+        public Builder vmId(String vmId) {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
 
-        public Builder setWorkflowFileName(String workflowFileName) {
+        public Builder workflowFileName(String workflowFileName) {
             this.workflowFileName = Objects.requireNonNull(workflowFileName);
             return this;
         }

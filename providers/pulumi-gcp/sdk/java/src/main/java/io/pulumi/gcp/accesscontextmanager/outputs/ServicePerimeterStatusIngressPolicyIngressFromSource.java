@@ -34,10 +34,10 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
      */
     private final @Nullable String resource;
 
-    @OutputCustomType.Constructor({"accessLevel","resource"})
+    @OutputCustomType.Constructor
     private ServicePerimeterStatusIngressPolicyIngressFromSource(
-        @Nullable String accessLevel,
-        @Nullable String resource) {
+        @OutputCustomType.Parameter("accessLevel") @Nullable String accessLevel,
+        @OutputCustomType.Parameter("resource") @Nullable String resource) {
         this.accessLevel = accessLevel;
         this.resource = resource;
     }
@@ -91,12 +91,12 @@ public final class ServicePerimeterStatusIngressPolicyIngressFromSource {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setAccessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable String accessLevel) {
             this.accessLevel = accessLevel;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }

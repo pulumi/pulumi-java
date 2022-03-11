@@ -28,11 +28,11 @@ public final class NodeInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ipConfiguration","name","type"})
+    @OutputCustomType.Constructor
     private NodeInfoResponse(
-        @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable List<KubernetesIPConfigurationResponse> ipConfiguration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.ipConfiguration = ipConfiguration;
         this.name = name;
         this.type = type;
@@ -84,17 +84,17 @@ public final class NodeInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIpConfiguration(@Nullable List<KubernetesIPConfigurationResponse> ipConfiguration) {
+        public Builder ipConfiguration(@Nullable List<KubernetesIPConfigurationResponse> ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

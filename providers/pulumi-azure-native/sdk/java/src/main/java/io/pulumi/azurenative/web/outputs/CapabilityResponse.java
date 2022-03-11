@@ -27,11 +27,11 @@ public final class CapabilityResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","reason","value"})
+    @OutputCustomType.Constructor
     private CapabilityResponse(
-        @Nullable String name,
-        @Nullable String reason,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.reason = reason;
         this.value = value;
@@ -83,17 +83,17 @@ public final class CapabilityResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -14,10 +14,10 @@ public final class SuiteDefinitionDeviceUnderTest {
     private final @Nullable String certificateArn;
     private final @Nullable String thingArn;
 
-    @OutputCustomType.Constructor({"certificateArn","thingArn"})
+    @OutputCustomType.Constructor
     private SuiteDefinitionDeviceUnderTest(
-        @Nullable String certificateArn,
-        @Nullable String thingArn) {
+        @OutputCustomType.Parameter("certificateArn") @Nullable String certificateArn,
+        @OutputCustomType.Parameter("thingArn") @Nullable String thingArn) {
         this.certificateArn = certificateArn;
         this.thingArn = thingArn;
     }
@@ -51,12 +51,12 @@ public final class SuiteDefinitionDeviceUnderTest {
     	      this.thingArn = defaults.thingArn;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setThingArn(@Nullable String thingArn) {
+        public Builder thingArn(@Nullable String thingArn) {
             this.thingArn = thingArn;
             return this;
         }

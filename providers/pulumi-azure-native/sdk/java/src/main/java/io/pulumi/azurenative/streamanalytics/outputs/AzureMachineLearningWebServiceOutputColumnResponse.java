@@ -22,10 +22,10 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dataType","name"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceOutputColumnResponse(
-        @Nullable String dataType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class AzureMachineLearningWebServiceOutputColumnResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

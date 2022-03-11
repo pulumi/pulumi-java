@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2PromotionResponse {
      */
     private final String promotionId;
 
-    @OutputCustomType.Constructor({"promotionId"})
-    private GoogleCloudRetailV2PromotionResponse(String promotionId) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2PromotionResponse(@OutputCustomType.Parameter("promotionId") String promotionId) {
         this.promotionId = promotionId;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2PromotionResponse {
     	      this.promotionId = defaults.promotionId;
         }
 
-        public Builder setPromotionId(String promotionId) {
+        public Builder promotionId(String promotionId) {
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
         }

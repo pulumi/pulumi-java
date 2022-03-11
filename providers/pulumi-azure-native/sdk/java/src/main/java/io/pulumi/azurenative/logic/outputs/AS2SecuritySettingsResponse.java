@@ -63,18 +63,18 @@ public final class AS2SecuritySettingsResponse {
      */
     private final @Nullable String signingCertificateName;
 
-    @OutputCustomType.Constructor({"enableNRRForInboundDecodedMessages","enableNRRForInboundEncodedMessages","enableNRRForInboundMDN","enableNRRForOutboundDecodedMessages","enableNRRForOutboundEncodedMessages","enableNRRForOutboundMDN","encryptionCertificateName","overrideGroupSigningCertificate","sha2AlgorithmFormat","signingCertificateName"})
+    @OutputCustomType.Constructor
     private AS2SecuritySettingsResponse(
-        Boolean enableNRRForInboundDecodedMessages,
-        Boolean enableNRRForInboundEncodedMessages,
-        Boolean enableNRRForInboundMDN,
-        Boolean enableNRRForOutboundDecodedMessages,
-        Boolean enableNRRForOutboundEncodedMessages,
-        Boolean enableNRRForOutboundMDN,
-        @Nullable String encryptionCertificateName,
-        Boolean overrideGroupSigningCertificate,
-        @Nullable String sha2AlgorithmFormat,
-        @Nullable String signingCertificateName) {
+        @OutputCustomType.Parameter("enableNRRForInboundDecodedMessages") Boolean enableNRRForInboundDecodedMessages,
+        @OutputCustomType.Parameter("enableNRRForInboundEncodedMessages") Boolean enableNRRForInboundEncodedMessages,
+        @OutputCustomType.Parameter("enableNRRForInboundMDN") Boolean enableNRRForInboundMDN,
+        @OutputCustomType.Parameter("enableNRRForOutboundDecodedMessages") Boolean enableNRRForOutboundDecodedMessages,
+        @OutputCustomType.Parameter("enableNRRForOutboundEncodedMessages") Boolean enableNRRForOutboundEncodedMessages,
+        @OutputCustomType.Parameter("enableNRRForOutboundMDN") Boolean enableNRRForOutboundMDN,
+        @OutputCustomType.Parameter("encryptionCertificateName") @Nullable String encryptionCertificateName,
+        @OutputCustomType.Parameter("overrideGroupSigningCertificate") Boolean overrideGroupSigningCertificate,
+        @OutputCustomType.Parameter("sha2AlgorithmFormat") @Nullable String sha2AlgorithmFormat,
+        @OutputCustomType.Parameter("signingCertificateName") @Nullable String signingCertificateName) {
         this.enableNRRForInboundDecodedMessages = enableNRRForInboundDecodedMessages;
         this.enableNRRForInboundEncodedMessages = enableNRRForInboundEncodedMessages;
         this.enableNRRForInboundMDN = enableNRRForInboundMDN;
@@ -196,52 +196,52 @@ public final class AS2SecuritySettingsResponse {
     	      this.signingCertificateName = defaults.signingCertificateName;
         }
 
-        public Builder setEnableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
+        public Builder enableNRRForInboundDecodedMessages(Boolean enableNRRForInboundDecodedMessages) {
             this.enableNRRForInboundDecodedMessages = Objects.requireNonNull(enableNRRForInboundDecodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
+        public Builder enableNRRForInboundEncodedMessages(Boolean enableNRRForInboundEncodedMessages) {
             this.enableNRRForInboundEncodedMessages = Objects.requireNonNull(enableNRRForInboundEncodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
+        public Builder enableNRRForInboundMDN(Boolean enableNRRForInboundMDN) {
             this.enableNRRForInboundMDN = Objects.requireNonNull(enableNRRForInboundMDN);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
+        public Builder enableNRRForOutboundDecodedMessages(Boolean enableNRRForOutboundDecodedMessages) {
             this.enableNRRForOutboundDecodedMessages = Objects.requireNonNull(enableNRRForOutboundDecodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
+        public Builder enableNRRForOutboundEncodedMessages(Boolean enableNRRForOutboundEncodedMessages) {
             this.enableNRRForOutboundEncodedMessages = Objects.requireNonNull(enableNRRForOutboundEncodedMessages);
             return this;
         }
 
-        public Builder setEnableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
+        public Builder enableNRRForOutboundMDN(Boolean enableNRRForOutboundMDN) {
             this.enableNRRForOutboundMDN = Objects.requireNonNull(enableNRRForOutboundMDN);
             return this;
         }
 
-        public Builder setEncryptionCertificateName(@Nullable String encryptionCertificateName) {
+        public Builder encryptionCertificateName(@Nullable String encryptionCertificateName) {
             this.encryptionCertificateName = encryptionCertificateName;
             return this;
         }
 
-        public Builder setOverrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
+        public Builder overrideGroupSigningCertificate(Boolean overrideGroupSigningCertificate) {
             this.overrideGroupSigningCertificate = Objects.requireNonNull(overrideGroupSigningCertificate);
             return this;
         }
 
-        public Builder setSha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
+        public Builder sha2AlgorithmFormat(@Nullable String sha2AlgorithmFormat) {
             this.sha2AlgorithmFormat = sha2AlgorithmFormat;
             return this;
         }
 
-        public Builder setSigningCertificateName(@Nullable String signingCertificateName) {
+        public Builder signingCertificateName(@Nullable String signingCertificateName) {
             this.signingCertificateName = signingCertificateName;
             return this;
         }

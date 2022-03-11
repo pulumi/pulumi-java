@@ -65,18 +65,18 @@ public final class GetTriggerResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","destination","etag","eventFilters","labels","name","serviceAccount","transport","uid","updateTime"})
+    @OutputCustomType.Constructor
     private GetTriggerResult(
-        String createTime,
-        DestinationResponse destination,
-        String etag,
-        List<EventFilterResponse> eventFilters,
-        Map<String,String> labels,
-        String name,
-        String serviceAccount,
-        TransportResponse transport,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destination") DestinationResponse destination,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventFilters") List<EventFilterResponse> eventFilters,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("transport") TransportResponse transport,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.destination = destination;
         this.etag = etag;
@@ -198,52 +198,52 @@ public final class GetTriggerResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDestination(DestinationResponse destination) {
+        public Builder destination(DestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEventFilters(List<EventFilterResponse> eventFilters) {
+        public Builder eventFilters(List<EventFilterResponse> eventFilters) {
             this.eventFilters = Objects.requireNonNull(eventFilters);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setTransport(TransportResponse transport) {
+        public Builder transport(TransportResponse transport) {
             this.transport = Objects.requireNonNull(transport);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

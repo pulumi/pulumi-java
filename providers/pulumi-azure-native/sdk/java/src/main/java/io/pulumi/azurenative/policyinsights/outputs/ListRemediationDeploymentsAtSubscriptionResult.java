@@ -22,10 +22,10 @@ public final class ListRemediationDeploymentsAtSubscriptionResult {
      */
     private final List<RemediationDeploymentResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListRemediationDeploymentsAtSubscriptionResult(
-        String nextLink,
-        List<RemediationDeploymentResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<RemediationDeploymentResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListRemediationDeploymentsAtSubscriptionResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<RemediationDeploymentResponse> value) {
+        public Builder value(List<RemediationDeploymentResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

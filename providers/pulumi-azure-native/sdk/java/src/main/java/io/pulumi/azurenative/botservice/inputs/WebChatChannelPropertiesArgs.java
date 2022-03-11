@@ -58,12 +58,12 @@ public final class WebChatChannelPropertiesArgs extends io.pulumi.resources.Reso
     	      this.sites = defaults.sites;
         }
 
-        public Builder setSites(@Nullable Input<List<WebChatSiteArgs>> sites) {
+        public Builder sites(@Nullable Input<List<WebChatSiteArgs>> sites) {
             this.sites = sites;
             return this;
         }
 
-        public Builder setSites(@Nullable List<WebChatSiteArgs> sites) {
+        public Builder sites(@Nullable List<WebChatSiteArgs> sites) {
             this.sites = Input.ofNullable(sites);
             return this;
         }

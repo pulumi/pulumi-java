@@ -20,10 +20,10 @@ public final class GetTenantResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"externalId","name"})
+    @OutputCustomType.Constructor
     private GetTenantResult(
-        String externalId,
-        String name) {
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("name") String name) {
         this.externalId = externalId;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class GetTenantResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

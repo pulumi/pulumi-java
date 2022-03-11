@@ -14,10 +14,10 @@ public final class GetGlobalForwardingRuleMetadataFilter {
     private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor({"filterLabels","filterMatchCriteria"})
+    @OutputCustomType.Constructor
     private GetGlobalForwardingRuleMetadataFilter(
-        List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        String filterMatchCriteria) {
+        @OutputCustomType.Parameter("filterLabels") List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
+        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }
@@ -51,12 +51,12 @@ public final class GetGlobalForwardingRuleMetadataFilter {
     	      this.filterMatchCriteria = defaults.filterMatchCriteria;
         }
 
-        public Builder setFilterLabels(List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels) {
+        public Builder filterLabels(List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels) {
             this.filterLabels = Objects.requireNonNull(filterLabels);
             return this;
         }
 
-        public Builder setFilterMatchCriteria(String filterMatchCriteria) {
+        public Builder filterMatchCriteria(String filterMatchCriteria) {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }

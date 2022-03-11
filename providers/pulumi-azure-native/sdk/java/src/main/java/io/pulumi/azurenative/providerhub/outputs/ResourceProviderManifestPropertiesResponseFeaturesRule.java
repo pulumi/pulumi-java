@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
     private final String requiredFeaturesPolicy;
 
-    @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
-    private ResourceProviderManifestPropertiesResponseFeaturesRule(String requiredFeaturesPolicy) {
+    @OutputCustomType.Constructor
+    private ResourceProviderManifestPropertiesResponseFeaturesRule(@OutputCustomType.Parameter("requiredFeaturesPolicy") String requiredFeaturesPolicy) {
         this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
     	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
         }
 
-        public Builder setRequiredFeaturesPolicy(String requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }

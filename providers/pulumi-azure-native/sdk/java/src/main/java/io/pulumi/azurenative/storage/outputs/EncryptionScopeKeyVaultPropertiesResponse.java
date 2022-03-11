@@ -27,11 +27,11 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor({"currentVersionedKeyIdentifier","keyUri","lastKeyRotationTimestamp"})
+    @OutputCustomType.Constructor
     private EncryptionScopeKeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyUri,
-        String lastKeyRotationTimestamp) {
+        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @OutputCustomType.Parameter("keyUri") @Nullable String keyUri,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyUri = keyUri;
         this.lastKeyRotationTimestamp = lastKeyRotationTimestamp;
@@ -83,17 +83,17 @@ public final class EncryptionScopeKeyVaultPropertiesResponse {
     	      this.lastKeyRotationTimestamp = defaults.lastKeyRotationTimestamp;
         }
 
-        public Builder setCurrentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
+        public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
             this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
             return this;
         }
 
-        public Builder setKeyUri(@Nullable String keyUri) {
+        public Builder keyUri(@Nullable String keyUri) {
             this.keyUri = keyUri;
             return this;
         }
 
-        public Builder setLastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
+        public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }

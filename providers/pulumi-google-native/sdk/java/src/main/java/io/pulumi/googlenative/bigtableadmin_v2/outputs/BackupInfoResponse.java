@@ -30,12 +30,12 @@ public final class BackupInfoResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"backup","endTime","sourceTable","startTime"})
+    @OutputCustomType.Constructor
     private BackupInfoResponse(
-        String backup,
-        String endTime,
-        String sourceTable,
-        String startTime) {
+        @OutputCustomType.Parameter("backup") String backup,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.backup = backup;
         this.endTime = endTime;
         this.sourceTable = sourceTable;
@@ -97,22 +97,22 @@ public final class BackupInfoResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setBackup(String backup) {
+        public Builder backup(String backup) {
             this.backup = Objects.requireNonNull(backup);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

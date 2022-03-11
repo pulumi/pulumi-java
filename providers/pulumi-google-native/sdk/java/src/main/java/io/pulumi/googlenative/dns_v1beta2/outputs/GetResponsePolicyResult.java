@@ -34,13 +34,13 @@ public final class GetResponsePolicyResult {
      */
     private final String responsePolicyName;
 
-    @OutputCustomType.Constructor({"description","gkeClusters","kind","networks","responsePolicyName"})
+    @OutputCustomType.Constructor
     private GetResponsePolicyResult(
-        String description,
-        List<ResponsePolicyGKEClusterResponse> gkeClusters,
-        String kind,
-        List<ResponsePolicyNetworkResponse> networks,
-        String responsePolicyName) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("gkeClusters") List<ResponsePolicyGKEClusterResponse> gkeClusters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ResponsePolicyNetworkResponse> networks,
+        @OutputCustomType.Parameter("responsePolicyName") String responsePolicyName) {
         this.description = description;
         this.gkeClusters = gkeClusters;
         this.kind = kind;
@@ -108,27 +108,27 @@ public final class GetResponsePolicyResult {
     	      this.responsePolicyName = defaults.responsePolicyName;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGkeClusters(List<ResponsePolicyGKEClusterResponse> gkeClusters) {
+        public Builder gkeClusters(List<ResponsePolicyGKEClusterResponse> gkeClusters) {
             this.gkeClusters = Objects.requireNonNull(gkeClusters);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworks(List<ResponsePolicyNetworkResponse> networks) {
+        public Builder networks(List<ResponsePolicyNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
 
-        public Builder setResponsePolicyName(String responsePolicyName) {
+        public Builder responsePolicyName(String responsePolicyName) {
             this.responsePolicyName = Objects.requireNonNull(responsePolicyName);
             return this;
         }

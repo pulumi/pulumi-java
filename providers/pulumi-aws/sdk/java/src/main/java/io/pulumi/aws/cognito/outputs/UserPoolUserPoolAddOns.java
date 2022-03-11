@@ -15,8 +15,8 @@ public final class UserPoolUserPoolAddOns {
      */
     private final String advancedSecurityMode;
 
-    @OutputCustomType.Constructor({"advancedSecurityMode"})
-    private UserPoolUserPoolAddOns(String advancedSecurityMode) {
+    @OutputCustomType.Constructor
+    private UserPoolUserPoolAddOns(@OutputCustomType.Parameter("advancedSecurityMode") String advancedSecurityMode) {
         this.advancedSecurityMode = advancedSecurityMode;
     }
 
@@ -48,7 +48,7 @@ public final class UserPoolUserPoolAddOns {
     	      this.advancedSecurityMode = defaults.advancedSecurityMode;
         }
 
-        public Builder setAdvancedSecurityMode(String advancedSecurityMode) {
+        public Builder advancedSecurityMode(String advancedSecurityMode) {
             this.advancedSecurityMode = Objects.requireNonNull(advancedSecurityMode);
             return this;
         }

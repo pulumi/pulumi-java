@@ -21,10 +21,10 @@ public final class QueryAnalysisValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor({"queryResults","validationErrors"})
+    @OutputCustomType.Constructor
     private QueryAnalysisValidationResultResponse(
-        QueryExecutionResultResponse queryResults,
-        ValidationErrorResponse validationErrors) {
+        @OutputCustomType.Parameter("queryResults") QueryExecutionResultResponse queryResults,
+        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.queryResults = queryResults;
         this.validationErrors = validationErrors;
     }
@@ -66,12 +66,12 @@ public final class QueryAnalysisValidationResultResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setQueryResults(QueryExecutionResultResponse queryResults) {
+        public Builder queryResults(QueryExecutionResultResponse queryResults) {
             this.queryResults = Objects.requireNonNull(queryResults);
             return this;
         }
 
-        public Builder setValidationErrors(ValidationErrorResponse validationErrors) {
+        public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

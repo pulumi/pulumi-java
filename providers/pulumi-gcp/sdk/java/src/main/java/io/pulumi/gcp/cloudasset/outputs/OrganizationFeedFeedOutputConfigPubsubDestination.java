@@ -15,8 +15,8 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestination {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private OrganizationFeedFeedOutputConfigPubsubDestination(String topic) {
+    @OutputCustomType.Constructor
+    private OrganizationFeedFeedOutputConfigPubsubDestination(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 
@@ -48,7 +48,7 @@ public final class OrganizationFeedFeedOutputConfigPubsubDestination {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

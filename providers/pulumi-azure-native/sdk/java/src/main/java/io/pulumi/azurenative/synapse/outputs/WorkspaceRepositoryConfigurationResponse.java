@@ -57,17 +57,17 @@ public final class WorkspaceRepositoryConfigurationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"accountName","collaborationBranch","hostName","lastCommitId","projectName","repositoryName","rootFolder","tenantId","type"})
+    @OutputCustomType.Constructor
     private WorkspaceRepositoryConfigurationResponse(
-        @Nullable String accountName,
-        @Nullable String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        @Nullable String projectName,
-        @Nullable String repositoryName,
-        @Nullable String rootFolder,
-        @Nullable String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("collaborationBranch") @Nullable String collaborationBranch,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("rootFolder") @Nullable String rootFolder,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.accountName = accountName;
         this.collaborationBranch = collaborationBranch;
         this.hostName = hostName;
@@ -179,47 +179,47 @@ public final class WorkspaceRepositoryConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setCollaborationBranch(@Nullable String collaborationBranch) {
+        public Builder collaborationBranch(@Nullable String collaborationBranch) {
             this.collaborationBranch = collaborationBranch;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable String lastCommitId) {
+        public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setRootFolder(@Nullable String rootFolder) {
+        public Builder rootFolder(@Nullable String rootFolder) {
             this.rootFolder = rootFolder;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

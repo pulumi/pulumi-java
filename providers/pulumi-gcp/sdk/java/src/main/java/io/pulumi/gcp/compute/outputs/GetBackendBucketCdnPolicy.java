@@ -22,16 +22,16 @@ public final class GetBackendBucketCdnPolicy {
     private final Integer serveWhileStale;
     private final Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor({"cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicies","serveWhileStale","signedUrlCacheMaxAgeSec"})
+    @OutputCustomType.Constructor
     private GetBackendBucketCdnPolicy(
-        String cacheMode,
-        Integer clientTtl,
-        Integer defaultTtl,
-        Integer maxTtl,
-        Boolean negativeCaching,
-        List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        Integer serveWhileStale,
-        Integer signedUrlCacheMaxAgeSec) {
+        @OutputCustomType.Parameter("cacheMode") String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicies") List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") Integer signedUrlCacheMaxAgeSec) {
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;
         this.defaultTtl = defaultTtl;
@@ -101,42 +101,42 @@ public final class GetBackendBucketCdnPolicy {
     	      this.signedUrlCacheMaxAgeSec = defaults.signedUrlCacheMaxAgeSec;
         }
 
-        public Builder setCacheMode(String cacheMode) {
+        public Builder cacheMode(String cacheMode) {
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(Integer clientTtl) {
+        public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(Integer defaultTtl) {
+        public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(Integer maxTtl) {
+        public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(Boolean negativeCaching) {
+        public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicies(List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
+        public Builder negativeCachingPolicies(List<GetBackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies) {
             this.negativeCachingPolicies = Objects.requireNonNull(negativeCachingPolicies);
             return this;
         }
 
-        public Builder setServeWhileStale(Integer serveWhileStale) {
+        public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(Integer signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }

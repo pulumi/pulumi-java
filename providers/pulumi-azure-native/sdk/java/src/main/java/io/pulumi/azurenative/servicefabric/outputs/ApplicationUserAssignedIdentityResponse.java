@@ -20,10 +20,10 @@ public final class ApplicationUserAssignedIdentityResponse {
      */
     private final String principalId;
 
-    @OutputCustomType.Constructor({"name","principalId"})
+    @OutputCustomType.Constructor
     private ApplicationUserAssignedIdentityResponse(
-        String name,
-        String principalId) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalId") String principalId) {
         this.name = name;
         this.principalId = principalId;
     }
@@ -65,12 +65,12 @@ public final class ApplicationUserAssignedIdentityResponse {
     	      this.principalId = defaults.principalId;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }

@@ -48,12 +48,12 @@ public final class VpcIpamOrganizationAdminAccountArgs extends io.pulumi.resourc
     	      this.delegatedAdminAccountId = defaults.delegatedAdminAccountId;
         }
 
-        public Builder setDelegatedAdminAccountId(Input<String> delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(Input<String> delegatedAdminAccountId) {
             this.delegatedAdminAccountId = Objects.requireNonNull(delegatedAdminAccountId);
             return this;
         }
 
-        public Builder setDelegatedAdminAccountId(String delegatedAdminAccountId) {
+        public Builder delegatedAdminAccountId(String delegatedAdminAccountId) {
             this.delegatedAdminAccountId = Input.of(Objects.requireNonNull(delegatedAdminAccountId));
             return this;
         }

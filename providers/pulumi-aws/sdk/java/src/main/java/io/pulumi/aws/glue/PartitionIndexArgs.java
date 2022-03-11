@@ -103,42 +103,42 @@ public final class PartitionIndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setPartitionIndex(Input<PartitionIndexPartitionIndexArgs> partitionIndex) {
+        public Builder partitionIndex(Input<PartitionIndexPartitionIndexArgs> partitionIndex) {
             this.partitionIndex = Objects.requireNonNull(partitionIndex);
             return this;
         }
 
-        public Builder setPartitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
+        public Builder partitionIndex(PartitionIndexPartitionIndexArgs partitionIndex) {
             this.partitionIndex = Input.of(Objects.requireNonNull(partitionIndex));
             return this;
         }
 
-        public Builder setTableName(Input<String> tableName) {
+        public Builder tableName(Input<String> tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Input.of(Objects.requireNonNull(tableName));
             return this;
         }

@@ -27,11 +27,11 @@ public final class HumanTaskUIUiTemplate {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"content","contentSha256","url"})
+    @OutputCustomType.Constructor
     private HumanTaskUIUiTemplate(
-        @Nullable String content,
-        @Nullable String contentSha256,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentSha256") @Nullable String contentSha256,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.content = content;
         this.contentSha256 = contentSha256;
         this.url = url;
@@ -83,17 +83,17 @@ public final class HumanTaskUIUiTemplate {
     	      this.url = defaults.url;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentSha256(@Nullable String contentSha256) {
+        public Builder contentSha256(@Nullable String contentSha256) {
             this.contentSha256 = contentSha256;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

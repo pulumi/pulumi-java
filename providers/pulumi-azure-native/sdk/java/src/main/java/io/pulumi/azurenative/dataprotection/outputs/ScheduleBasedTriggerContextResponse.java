@@ -29,11 +29,11 @@ public final class ScheduleBasedTriggerContextResponse {
      */
     private final List<TaggingCriteriaResponse> taggingCriteria;
 
-    @OutputCustomType.Constructor({"objectType","schedule","taggingCriteria"})
+    @OutputCustomType.Constructor
     private ScheduleBasedTriggerContextResponse(
-        String objectType,
-        BackupScheduleResponse schedule,
-        List<TaggingCriteriaResponse> taggingCriteria) {
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("schedule") BackupScheduleResponse schedule,
+        @OutputCustomType.Parameter("taggingCriteria") List<TaggingCriteriaResponse> taggingCriteria) {
         this.objectType = objectType;
         this.schedule = schedule;
         this.taggingCriteria = taggingCriteria;
@@ -86,17 +86,17 @@ public final class ScheduleBasedTriggerContextResponse {
     	      this.taggingCriteria = defaults.taggingCriteria;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setSchedule(BackupScheduleResponse schedule) {
+        public Builder schedule(BackupScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setTaggingCriteria(List<TaggingCriteriaResponse> taggingCriteria) {
+        public Builder taggingCriteria(List<TaggingCriteriaResponse> taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }

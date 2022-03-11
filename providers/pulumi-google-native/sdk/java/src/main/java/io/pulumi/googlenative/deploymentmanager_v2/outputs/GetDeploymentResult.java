@@ -70,19 +70,19 @@ public final class GetDeploymentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"description","fingerprint","insertTime","labels","manifest","name","operation","selfLink","target","update","updateTime"})
+    @OutputCustomType.Constructor
     private GetDeploymentResult(
-        String description,
-        String fingerprint,
-        String insertTime,
-        List<DeploymentLabelEntryResponse> labels,
-        String manifest,
-        String name,
-        OperationResponse operation,
-        String selfLink,
-        TargetConfigurationResponse target,
-        DeploymentUpdateResponse update,
-        String updateTime) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("insertTime") String insertTime,
+        @OutputCustomType.Parameter("labels") List<DeploymentLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("manifest") String manifest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operation") OperationResponse operation,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("target") TargetConfigurationResponse target,
+        @OutputCustomType.Parameter("update") DeploymentUpdateResponse update,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.description = description;
         this.fingerprint = fingerprint;
         this.insertTime = insertTime;
@@ -214,57 +214,57 @@ public final class GetDeploymentResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setInsertTime(String insertTime) {
+        public Builder insertTime(String insertTime) {
             this.insertTime = Objects.requireNonNull(insertTime);
             return this;
         }
 
-        public Builder setLabels(List<DeploymentLabelEntryResponse> labels) {
+        public Builder labels(List<DeploymentLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperation(OperationResponse operation) {
+        public Builder operation(OperationResponse operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTarget(TargetConfigurationResponse target) {
+        public Builder target(TargetConfigurationResponse target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setUpdate(DeploymentUpdateResponse update) {
+        public Builder update(DeploymentUpdateResponse update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

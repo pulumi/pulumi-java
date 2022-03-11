@@ -24,10 +24,10 @@ public final class SubscriptionRetryPolicy {
      */
     private final @Nullable String minimumBackoff;
 
-    @OutputCustomType.Constructor({"maximumBackoff","minimumBackoff"})
+    @OutputCustomType.Constructor
     private SubscriptionRetryPolicy(
-        @Nullable String maximumBackoff,
-        @Nullable String minimumBackoff) {
+        @OutputCustomType.Parameter("maximumBackoff") @Nullable String maximumBackoff,
+        @OutputCustomType.Parameter("minimumBackoff") @Nullable String minimumBackoff) {
         this.maximumBackoff = maximumBackoff;
         this.minimumBackoff = minimumBackoff;
     }
@@ -71,12 +71,12 @@ public final class SubscriptionRetryPolicy {
     	      this.minimumBackoff = defaults.minimumBackoff;
         }
 
-        public Builder setMaximumBackoff(@Nullable String maximumBackoff) {
+        public Builder maximumBackoff(@Nullable String maximumBackoff) {
             this.maximumBackoff = maximumBackoff;
             return this;
         }
 
-        public Builder setMinimumBackoff(@Nullable String minimumBackoff) {
+        public Builder minimumBackoff(@Nullable String minimumBackoff) {
             this.minimumBackoff = minimumBackoff;
             return this;
         }

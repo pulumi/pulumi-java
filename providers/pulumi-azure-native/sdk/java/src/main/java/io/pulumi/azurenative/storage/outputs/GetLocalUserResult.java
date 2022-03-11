@@ -72,19 +72,19 @@ public final class GetLocalUserResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hasSharedKey","hasSshKey","hasSshPassword","homeDirectory","id","name","permissionScopes","sid","sshAuthorizedKeys","systemData","type"})
+    @OutputCustomType.Constructor
     private GetLocalUserResult(
-        @Nullable Boolean hasSharedKey,
-        @Nullable Boolean hasSshKey,
-        @Nullable Boolean hasSshPassword,
-        @Nullable String homeDirectory,
-        String id,
-        String name,
-        @Nullable List<PermissionScopeResponse> permissionScopes,
-        String sid,
-        @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("hasSharedKey") @Nullable Boolean hasSharedKey,
+        @OutputCustomType.Parameter("hasSshKey") @Nullable Boolean hasSshKey,
+        @OutputCustomType.Parameter("hasSshPassword") @Nullable Boolean hasSshPassword,
+        @OutputCustomType.Parameter("homeDirectory") @Nullable String homeDirectory,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissionScopes") @Nullable List<PermissionScopeResponse> permissionScopes,
+        @OutputCustomType.Parameter("sid") String sid,
+        @OutputCustomType.Parameter("sshAuthorizedKeys") @Nullable List<SshPublicKeyResponse> sshAuthorizedKeys,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.hasSharedKey = hasSharedKey;
         this.hasSshKey = hasSshKey;
         this.hasSshPassword = hasSshPassword;
@@ -216,57 +216,57 @@ public final class GetLocalUserResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHasSharedKey(@Nullable Boolean hasSharedKey) {
+        public Builder hasSharedKey(@Nullable Boolean hasSharedKey) {
             this.hasSharedKey = hasSharedKey;
             return this;
         }
 
-        public Builder setHasSshKey(@Nullable Boolean hasSshKey) {
+        public Builder hasSshKey(@Nullable Boolean hasSshKey) {
             this.hasSshKey = hasSshKey;
             return this;
         }
 
-        public Builder setHasSshPassword(@Nullable Boolean hasSshPassword) {
+        public Builder hasSshPassword(@Nullable Boolean hasSshPassword) {
             this.hasSshPassword = hasSshPassword;
             return this;
         }
 
-        public Builder setHomeDirectory(@Nullable String homeDirectory) {
+        public Builder homeDirectory(@Nullable String homeDirectory) {
             this.homeDirectory = homeDirectory;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPermissionScopes(@Nullable List<PermissionScopeResponse> permissionScopes) {
+        public Builder permissionScopes(@Nullable List<PermissionScopeResponse> permissionScopes) {
             this.permissionScopes = permissionScopes;
             return this;
         }
 
-        public Builder setSid(String sid) {
+        public Builder sid(String sid) {
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
 
-        public Builder setSshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
+        public Builder sshAuthorizedKeys(@Nullable List<SshPublicKeyResponse> sshAuthorizedKeys) {
             this.sshAuthorizedKeys = sshAuthorizedKeys;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

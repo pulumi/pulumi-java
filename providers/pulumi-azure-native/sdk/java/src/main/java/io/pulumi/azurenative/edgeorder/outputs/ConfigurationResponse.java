@@ -64,17 +64,17 @@ public final class ConfigurationResponse {
      */
     private final List<SpecificationResponse> specifications;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","dimensions","displayName","filterableProperties","hierarchyInformation","imageInformation","specifications"})
+    @OutputCustomType.Constructor
     private ConfigurationResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        DimensionsResponse dimensions,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<SpecificationResponse> specifications) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("dimensions") DimensionsResponse dimensions,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("specifications") List<SpecificationResponse> specifications) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;
@@ -186,47 +186,47 @@ public final class ConfigurationResponse {
     	      this.specifications = defaults.specifications;
         }
 
-        public Builder setAvailabilityInformation(AvailabilityInformationResponse availabilityInformation) {
+        public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
 
-        public Builder setCostInformation(CostInformationResponse costInformation) {
+        public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
 
-        public Builder setDescription(DescriptionResponse description) {
+        public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDimensions(DimensionsResponse dimensions) {
+        public Builder dimensions(DimensionsResponse dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFilterableProperties(List<FilterablePropertyResponse> filterableProperties) {
+        public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
-        public Builder setImageInformation(List<ImageInformationResponse> imageInformation) {
+        public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
 
-        public Builder setSpecifications(List<SpecificationResponse> specifications) {
+        public Builder specifications(List<SpecificationResponse> specifications) {
             this.specifications = Objects.requireNonNull(specifications);
             return this;
         }

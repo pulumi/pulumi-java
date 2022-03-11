@@ -19,12 +19,12 @@ public final class AccessPointObjectLambdaConfiguration {
     private final String supportingAccessPoint;
     private final List<AccessPointTransformationConfiguration> transformationConfigurations;
 
-    @OutputCustomType.Constructor({"allowedFeatures","cloudWatchMetricsEnabled","supportingAccessPoint","transformationConfigurations"})
+    @OutputCustomType.Constructor
     private AccessPointObjectLambdaConfiguration(
-        @Nullable List<String> allowedFeatures,
-        @Nullable Boolean cloudWatchMetricsEnabled,
-        String supportingAccessPoint,
-        List<AccessPointTransformationConfiguration> transformationConfigurations) {
+        @OutputCustomType.Parameter("allowedFeatures") @Nullable List<String> allowedFeatures,
+        @OutputCustomType.Parameter("cloudWatchMetricsEnabled") @Nullable Boolean cloudWatchMetricsEnabled,
+        @OutputCustomType.Parameter("supportingAccessPoint") String supportingAccessPoint,
+        @OutputCustomType.Parameter("transformationConfigurations") List<AccessPointTransformationConfiguration> transformationConfigurations) {
         this.allowedFeatures = allowedFeatures;
         this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
         this.supportingAccessPoint = supportingAccessPoint;
@@ -70,22 +70,22 @@ public final class AccessPointObjectLambdaConfiguration {
     	      this.transformationConfigurations = defaults.transformationConfigurations;
         }
 
-        public Builder setAllowedFeatures(@Nullable List<String> allowedFeatures) {
+        public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
             this.allowedFeatures = allowedFeatures;
             return this;
         }
 
-        public Builder setCloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
 
-        public Builder setSupportingAccessPoint(String supportingAccessPoint) {
+        public Builder supportingAccessPoint(String supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
 
-        public Builder setTransformationConfigurations(List<AccessPointTransformationConfiguration> transformationConfigurations) {
+        public Builder transformationConfigurations(List<AccessPointTransformationConfiguration> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }

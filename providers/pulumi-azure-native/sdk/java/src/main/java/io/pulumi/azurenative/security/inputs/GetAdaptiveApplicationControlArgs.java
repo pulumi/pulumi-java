@@ -68,12 +68,12 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
     	      this.groupName = defaults.groupName;
         }
 
-        public Builder setAscLocation(String ascLocation) {
+        public Builder ascLocation(String ascLocation) {
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }

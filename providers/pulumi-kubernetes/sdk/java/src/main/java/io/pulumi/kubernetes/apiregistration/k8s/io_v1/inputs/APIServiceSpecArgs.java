@@ -157,72 +157,72 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionPriority = defaults.versionPriority;
         }
 
-        public Builder setCaBundle(@Nullable Input<String> caBundle) {
+        public Builder caBundle(@Nullable Input<String> caBundle) {
             this.caBundle = caBundle;
             return this;
         }
 
-        public Builder setCaBundle(@Nullable String caBundle) {
+        public Builder caBundle(@Nullable String caBundle) {
             this.caBundle = Input.ofNullable(caBundle);
             return this;
         }
 
-        public Builder setGroup(@Nullable Input<String> group) {
+        public Builder group(@Nullable Input<String> group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = Input.ofNullable(group);
             return this;
         }
 
-        public Builder setGroupPriorityMinimum(Input<Integer> groupPriorityMinimum) {
+        public Builder groupPriorityMinimum(Input<Integer> groupPriorityMinimum) {
             this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
             return this;
         }
 
-        public Builder setGroupPriorityMinimum(Integer groupPriorityMinimum) {
+        public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
             this.groupPriorityMinimum = Input.of(Objects.requireNonNull(groupPriorityMinimum));
             return this;
         }
 
-        public Builder setInsecureSkipTLSVerify(@Nullable Input<Boolean> insecureSkipTLSVerify) {
+        public Builder insecureSkipTLSVerify(@Nullable Input<Boolean> insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
 
-        public Builder setInsecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
+        public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = Input.ofNullable(insecureSkipTLSVerify);
             return this;
         }
 
-        public Builder setService(@Nullable Input<ServiceReferenceArgs> service) {
+        public Builder service(@Nullable Input<ServiceReferenceArgs> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable ServiceReferenceArgs service) {
+        public Builder service(@Nullable ServiceReferenceArgs service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setVersionPriority(Input<Integer> versionPriority) {
+        public Builder versionPriority(Input<Integer> versionPriority) {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }
 
-        public Builder setVersionPriority(Integer versionPriority) {
+        public Builder versionPriority(Integer versionPriority) {
             this.versionPriority = Input.of(Objects.requireNonNull(versionPriority));
             return this;
         }

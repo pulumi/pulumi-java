@@ -35,13 +35,13 @@ public final class GetPortfolioConstraintsResult {
      */
     private final @Nullable String productId;
 
-    @OutputCustomType.Constructor({"acceptLanguage","details","id","portfolioId","productId"})
+    @OutputCustomType.Constructor
     private GetPortfolioConstraintsResult(
-        @Nullable String acceptLanguage,
-        List<GetPortfolioConstraintsDetail> details,
-        String id,
-        String portfolioId,
-        @Nullable String productId) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("details") List<GetPortfolioConstraintsDetail> details,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("portfolioId") String portfolioId,
+        @OutputCustomType.Parameter("productId") @Nullable String productId) {
         this.acceptLanguage = acceptLanguage;
         this.details = details;
         this.id = id;
@@ -109,27 +109,27 @@ public final class GetPortfolioConstraintsResult {
     	      this.productId = defaults.productId;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setDetails(List<GetPortfolioConstraintsDetail> details) {
+        public Builder details(List<GetPortfolioConstraintsDetail> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPortfolioId(String portfolioId) {
+        public Builder portfolioId(String portfolioId) {
             this.portfolioId = Objects.requireNonNull(portfolioId);
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
         }

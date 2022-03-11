@@ -23,10 +23,10 @@ public final class ScheduleResponse {
      */
     private final @Nullable List<String> policyList;
 
-    @OutputCustomType.Constructor({"name","policyList"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        @Nullable String name,
-        @Nullable List<String> policyList) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyList") @Nullable List<String> policyList) {
         this.name = name;
         this.policyList = policyList;
     }
@@ -68,12 +68,12 @@ public final class ScheduleResponse {
     	      this.policyList = defaults.policyList;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicyList(@Nullable List<String> policyList) {
+        public Builder policyList(@Nullable List<String> policyList) {
             this.policyList = policyList;
             return this;
         }

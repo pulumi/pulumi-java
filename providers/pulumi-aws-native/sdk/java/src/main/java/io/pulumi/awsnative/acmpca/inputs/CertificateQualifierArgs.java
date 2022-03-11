@@ -52,12 +52,12 @@ public final class CertificateQualifierArgs extends io.pulumi.resources.Resource
     	      this.cpsUri = defaults.cpsUri;
         }
 
-        public Builder setCpsUri(Input<String> cpsUri) {
+        public Builder cpsUri(Input<String> cpsUri) {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
         }
 
-        public Builder setCpsUri(String cpsUri) {
+        public Builder cpsUri(String cpsUri) {
             this.cpsUri = Input.of(Objects.requireNonNull(cpsUri));
             return this;
         }

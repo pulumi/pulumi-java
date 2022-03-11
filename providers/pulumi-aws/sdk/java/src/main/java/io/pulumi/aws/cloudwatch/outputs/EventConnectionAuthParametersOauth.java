@@ -34,12 +34,12 @@ public final class EventConnectionAuthParametersOauth {
      */
     private final EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientParameters","httpMethod","oauthHttpParameters"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParametersOauth(
-        String authorizationEndpoint,
-        @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
-        String httpMethod,
-        EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientParameters") @Nullable EventConnectionAuthParametersOauthClientParameters clientParameters,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("oauthHttpParameters") EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;
@@ -101,22 +101,22 @@ public final class EventConnectionAuthParametersOauth {
     	      this.oauthHttpParameters = defaults.oauthHttpParameters;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientParameters(@Nullable EventConnectionAuthParametersOauthClientParameters clientParameters) {
+        public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParameters clientParameters) {
             this.clientParameters = clientParameters;
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
+        public Builder oauthHttpParameters(EventConnectionAuthParametersOauthOauthHttpParameters oauthHttpParameters) {
             this.oauthHttpParameters = Objects.requireNonNull(oauthHttpParameters);
             return this;
         }

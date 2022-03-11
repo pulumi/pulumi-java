@@ -17,8 +17,8 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
      */
     private final @Nullable String capacityReservationId;
 
-    @OutputCustomType.Constructor({"capacityReservationId"})
-    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(@Nullable String capacityReservationId) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget(@OutputCustomType.Parameter("capacityReservationId") @Nullable String capacityReservationId) {
         this.capacityReservationId = capacityReservationId;
     }
 
@@ -50,7 +50,7 @@ public final class LaunchTemplateCapacityReservationSpecificationCapacityReserva
     	      this.capacityReservationId = defaults.capacityReservationId;
         }
 
-        public Builder setCapacityReservationId(@Nullable String capacityReservationId) {
+        public Builder capacityReservationId(@Nullable String capacityReservationId) {
             this.capacityReservationId = capacityReservationId;
             return this;
         }

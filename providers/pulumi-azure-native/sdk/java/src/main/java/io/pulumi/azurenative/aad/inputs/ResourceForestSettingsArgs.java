@@ -76,22 +76,22 @@ public final class ResourceForestSettingsArgs extends io.pulumi.resources.Resour
     	      this.settings = defaults.settings;
         }
 
-        public Builder setResourceForest(@Nullable Input<String> resourceForest) {
+        public Builder resourceForest(@Nullable Input<String> resourceForest) {
             this.resourceForest = resourceForest;
             return this;
         }
 
-        public Builder setResourceForest(@Nullable String resourceForest) {
+        public Builder resourceForest(@Nullable String resourceForest) {
             this.resourceForest = Input.ofNullable(resourceForest);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<List<ForestTrustArgs>> settings) {
+        public Builder settings(@Nullable Input<List<ForestTrustArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<ForestTrustArgs> settings) {
+        public Builder settings(@Nullable List<ForestTrustArgs> settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }

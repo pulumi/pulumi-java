@@ -37,13 +37,13 @@ public final class MetadataResponse {
      */
     private final Boolean reproducible;
 
-    @OutputCustomType.Constructor({"buildFinishedOn","buildInvocationId","buildStartedOn","completeness","reproducible"})
+    @OutputCustomType.Constructor
     private MetadataResponse(
-        String buildFinishedOn,
-        String buildInvocationId,
-        String buildStartedOn,
-        CompletenessResponse completeness,
-        Boolean reproducible) {
+        @OutputCustomType.Parameter("buildFinishedOn") String buildFinishedOn,
+        @OutputCustomType.Parameter("buildInvocationId") String buildInvocationId,
+        @OutputCustomType.Parameter("buildStartedOn") String buildStartedOn,
+        @OutputCustomType.Parameter("completeness") CompletenessResponse completeness,
+        @OutputCustomType.Parameter("reproducible") Boolean reproducible) {
         this.buildFinishedOn = buildFinishedOn;
         this.buildInvocationId = buildInvocationId;
         this.buildStartedOn = buildStartedOn;
@@ -115,27 +115,27 @@ public final class MetadataResponse {
     	      this.reproducible = defaults.reproducible;
         }
 
-        public Builder setBuildFinishedOn(String buildFinishedOn) {
+        public Builder buildFinishedOn(String buildFinishedOn) {
             this.buildFinishedOn = Objects.requireNonNull(buildFinishedOn);
             return this;
         }
 
-        public Builder setBuildInvocationId(String buildInvocationId) {
+        public Builder buildInvocationId(String buildInvocationId) {
             this.buildInvocationId = Objects.requireNonNull(buildInvocationId);
             return this;
         }
 
-        public Builder setBuildStartedOn(String buildStartedOn) {
+        public Builder buildStartedOn(String buildStartedOn) {
             this.buildStartedOn = Objects.requireNonNull(buildStartedOn);
             return this;
         }
 
-        public Builder setCompleteness(CompletenessResponse completeness) {
+        public Builder completeness(CompletenessResponse completeness) {
             this.completeness = Objects.requireNonNull(completeness);
             return this;
         }
 
-        public Builder setReproducible(Boolean reproducible) {
+        public Builder reproducible(Boolean reproducible) {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }

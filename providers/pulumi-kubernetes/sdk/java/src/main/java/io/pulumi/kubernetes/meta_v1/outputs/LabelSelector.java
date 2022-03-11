@@ -24,10 +24,10 @@ public final class LabelSelector {
      */
     private final @Nullable Map<String,String> matchLabels;
 
-    @OutputCustomType.Constructor({"matchExpressions","matchLabels"})
+    @OutputCustomType.Constructor
     private LabelSelector(
-        @Nullable List<LabelSelectorRequirement> matchExpressions,
-        @Nullable Map<String,String> matchLabels) {
+        @OutputCustomType.Parameter("matchExpressions") @Nullable List<LabelSelectorRequirement> matchExpressions,
+        @OutputCustomType.Parameter("matchLabels") @Nullable Map<String,String> matchLabels) {
         this.matchExpressions = matchExpressions;
         this.matchLabels = matchLabels;
     }
@@ -69,12 +69,12 @@ public final class LabelSelector {
     	      this.matchLabels = defaults.matchLabels;
         }
 
-        public Builder setMatchExpressions(@Nullable List<LabelSelectorRequirement> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<LabelSelectorRequirement> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchLabels(@Nullable Map<String,String> matchLabels) {
+        public Builder matchLabels(@Nullable Map<String,String> matchLabels) {
             this.matchLabels = matchLabels;
             return this;
         }

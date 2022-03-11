@@ -19,12 +19,12 @@ public final class AuthParametersProperties {
     private final @Nullable ConnectionHttpParameters invocationHttpParameters;
     private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
-    @OutputCustomType.Constructor({"apiKeyAuthParameters","basicAuthParameters","invocationHttpParameters","oAuthParameters"})
+    @OutputCustomType.Constructor
     private AuthParametersProperties(
-        @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
-        @Nullable ConnectionBasicAuthParameters basicAuthParameters,
-        @Nullable ConnectionHttpParameters invocationHttpParameters,
-        @Nullable ConnectionOAuthParameters oAuthParameters) {
+        @OutputCustomType.Parameter("apiKeyAuthParameters") @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters,
+        @OutputCustomType.Parameter("basicAuthParameters") @Nullable ConnectionBasicAuthParameters basicAuthParameters,
+        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable ConnectionHttpParameters invocationHttpParameters,
+        @OutputCustomType.Parameter("oAuthParameters") @Nullable ConnectionOAuthParameters oAuthParameters) {
         this.apiKeyAuthParameters = apiKeyAuthParameters;
         this.basicAuthParameters = basicAuthParameters;
         this.invocationHttpParameters = invocationHttpParameters;
@@ -70,22 +70,22 @@ public final class AuthParametersProperties {
     	      this.oAuthParameters = defaults.oAuthParameters;
         }
 
-        public Builder setApiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters) {
+        public Builder apiKeyAuthParameters(@Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters) {
             this.apiKeyAuthParameters = apiKeyAuthParameters;
             return this;
         }
 
-        public Builder setBasicAuthParameters(@Nullable ConnectionBasicAuthParameters basicAuthParameters) {
+        public Builder basicAuthParameters(@Nullable ConnectionBasicAuthParameters basicAuthParameters) {
             this.basicAuthParameters = basicAuthParameters;
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable ConnectionHttpParameters invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable ConnectionHttpParameters invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
-        public Builder setOAuthParameters(@Nullable ConnectionOAuthParameters oAuthParameters) {
+        public Builder oAuthParameters(@Nullable ConnectionOAuthParameters oAuthParameters) {
             this.oAuthParameters = oAuthParameters;
             return this;
         }

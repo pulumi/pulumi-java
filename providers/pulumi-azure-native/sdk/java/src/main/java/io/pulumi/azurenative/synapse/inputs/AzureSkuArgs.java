@@ -94,32 +94,32 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setName(Input<Either<String,AzureSkuName>> name) {
+        public Builder name(Input<Either<String,AzureSkuName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,AzureSkuName> name) {
+        public Builder name(Either<String,AzureSkuName> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setTier(Input<Either<String,AzureSkuTier>> tier) {
+        public Builder tier(Input<Either<String,AzureSkuTier>> tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setTier(Either<String,AzureSkuTier> tier) {
+        public Builder tier(Either<String,AzureSkuTier> tier) {
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }

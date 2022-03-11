@@ -68,19 +68,19 @@ public final class GetWebAppPremierAddOnSlotResult {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"id","kind","location","marketplaceOffer","marketplacePublisher","name","product","sku","tags","type","vendor"})
+    @OutputCustomType.Constructor
     private GetWebAppPremierAddOnSlotResult(
-        String id,
-        @Nullable String kind,
-        String location,
-        @Nullable String marketplaceOffer,
-        @Nullable String marketplacePublisher,
-        String name,
-        @Nullable String product,
-        @Nullable String sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("marketplaceOffer") @Nullable String marketplaceOffer,
+        @OutputCustomType.Parameter("marketplacePublisher") @Nullable String marketplacePublisher,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("product") @Nullable String product,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.id = id;
         this.kind = kind;
         this.location = location;
@@ -212,57 +212,57 @@ public final class GetWebAppPremierAddOnSlotResult {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMarketplaceOffer(@Nullable String marketplaceOffer) {
+        public Builder marketplaceOffer(@Nullable String marketplaceOffer) {
             this.marketplaceOffer = marketplaceOffer;
             return this;
         }
 
-        public Builder setMarketplacePublisher(@Nullable String marketplacePublisher) {
+        public Builder marketplacePublisher(@Nullable String marketplacePublisher) {
             this.marketplacePublisher = marketplacePublisher;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProduct(@Nullable String product) {
+        public Builder product(@Nullable String product) {
             this.product = product;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
         }

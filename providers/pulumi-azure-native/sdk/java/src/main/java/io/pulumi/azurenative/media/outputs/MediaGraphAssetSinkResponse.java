@@ -32,12 +32,12 @@ public final class MediaGraphAssetSinkResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"assetName","inputs","name","odataType"})
+    @OutputCustomType.Constructor
     private MediaGraphAssetSinkResponse(
-        String assetName,
-        List<String> inputs,
-        String name,
-        String odataType) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("inputs") List<String> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.assetName = assetName;
         this.inputs = inputs;
         this.name = name;
@@ -100,22 +100,22 @@ public final class MediaGraphAssetSinkResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setInputs(List<String> inputs) {
+        public Builder inputs(List<String> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

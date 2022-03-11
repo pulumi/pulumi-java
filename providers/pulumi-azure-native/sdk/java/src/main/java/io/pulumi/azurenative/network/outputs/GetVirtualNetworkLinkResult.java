@@ -65,18 +65,18 @@ public final class GetVirtualNetworkLinkResult {
      */
     private final String virtualNetworkLinkState;
 
-    @OutputCustomType.Constructor({"etag","id","location","name","provisioningState","registrationEnabled","tags","type","virtualNetwork","virtualNetworkLinkState"})
+    @OutputCustomType.Constructor
     private GetVirtualNetworkLinkResult(
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable Boolean registrationEnabled,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable SubResourceResponse virtualNetwork,
-        String virtualNetworkLinkState) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationEnabled") @Nullable Boolean registrationEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualNetwork") @Nullable SubResourceResponse virtualNetwork,
+        @OutputCustomType.Parameter("virtualNetworkLinkState") String virtualNetworkLinkState) {
         this.etag = etag;
         this.id = id;
         this.location = location;
@@ -198,52 +198,52 @@ public final class GetVirtualNetworkLinkResult {
     	      this.virtualNetworkLinkState = defaults.virtualNetworkLinkState;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegistrationEnabled(@Nullable Boolean registrationEnabled) {
+        public Builder registrationEnabled(@Nullable Boolean registrationEnabled) {
             this.registrationEnabled = registrationEnabled;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
+        public Builder virtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
             this.virtualNetwork = virtualNetwork;
             return this;
         }
 
-        public Builder setVirtualNetworkLinkState(String virtualNetworkLinkState) {
+        public Builder virtualNetworkLinkState(String virtualNetworkLinkState) {
             this.virtualNetworkLinkState = Objects.requireNonNull(virtualNetworkLinkState);
             return this;
         }

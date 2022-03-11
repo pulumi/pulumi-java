@@ -47,15 +47,15 @@ public final class GatewaySmbActiveDirectorySettings {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"activeDirectoryStatus","domainControllers","domainName","organizationalUnit","password","timeoutInSeconds","username"})
+    @OutputCustomType.Constructor
     private GatewaySmbActiveDirectorySettings(
-        @Nullable String activeDirectoryStatus,
-        @Nullable List<String> domainControllers,
-        String domainName,
-        @Nullable String organizationalUnit,
-        String password,
-        @Nullable Integer timeoutInSeconds,
-        String username) {
+        @OutputCustomType.Parameter("activeDirectoryStatus") @Nullable String activeDirectoryStatus,
+        @OutputCustomType.Parameter("domainControllers") @Nullable List<String> domainControllers,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("organizationalUnit") @Nullable String organizationalUnit,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds,
+        @OutputCustomType.Parameter("username") String username) {
         this.activeDirectoryStatus = activeDirectoryStatus;
         this.domainControllers = domainControllers;
         this.domainName = domainName;
@@ -145,37 +145,37 @@ public final class GatewaySmbActiveDirectorySettings {
     	      this.username = defaults.username;
         }
 
-        public Builder setActiveDirectoryStatus(@Nullable String activeDirectoryStatus) {
+        public Builder activeDirectoryStatus(@Nullable String activeDirectoryStatus) {
             this.activeDirectoryStatus = activeDirectoryStatus;
             return this;
         }
 
-        public Builder setDomainControllers(@Nullable List<String> domainControllers) {
+        public Builder domainControllers(@Nullable List<String> domainControllers) {
             this.domainControllers = domainControllers;
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setOrganizationalUnit(@Nullable String organizationalUnit) {
+        public Builder organizationalUnit(@Nullable String organizationalUnit) {
             this.organizationalUnit = organizationalUnit;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

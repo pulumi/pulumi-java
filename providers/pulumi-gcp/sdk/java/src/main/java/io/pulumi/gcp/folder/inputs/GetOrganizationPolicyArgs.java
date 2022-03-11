@@ -68,12 +68,12 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
     	      this.folder = defaults.folder;
         }
 
-        public Builder setConstraint(String constraint) {
+        public Builder constraint(String constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
 
-        public Builder setFolder(String folder) {
+        public Builder folder(String folder) {
             this.folder = Objects.requireNonNull(folder);
             return this;
         }

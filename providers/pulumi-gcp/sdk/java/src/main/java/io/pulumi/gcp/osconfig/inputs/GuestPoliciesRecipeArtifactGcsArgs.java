@@ -90,32 +90,32 @@ public final class GuestPoliciesRecipeArtifactGcsArgs extends io.pulumi.resource
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(@Nullable Input<String> bucket) {
+        public Builder bucket(@Nullable Input<String> bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = Input.ofNullable(bucket);
             return this;
         }
 
-        public Builder setGeneration(@Nullable Input<Integer> generation) {
+        public Builder generation(@Nullable Input<Integer> generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = Input.ofNullable(generation);
             return this;
         }
 
-        public Builder setObject(@Nullable Input<String> object) {
+        public Builder object(@Nullable Input<String> object) {
             this.object = object;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = Input.ofNullable(object);
             return this;
         }

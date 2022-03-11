@@ -50,16 +50,16 @@ public final class ThemeVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"arn","baseThemeId","configuration","createdTime","description","errors","status","versionNumber"})
+    @OutputCustomType.Constructor
     private ThemeVersion(
-        @Nullable String arn,
-        @Nullable String baseThemeId,
-        @Nullable ThemeConfiguration configuration,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<ThemeError> errors,
-        @Nullable ThemeResourceStatus status,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("baseThemeId") @Nullable String baseThemeId,
+        @OutputCustomType.Parameter("configuration") @Nullable ThemeConfiguration configuration,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<ThemeError> errors,
+        @OutputCustomType.Parameter("status") @Nullable ThemeResourceStatus status,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.baseThemeId = baseThemeId;
         this.configuration = configuration;
@@ -154,42 +154,42 @@ public final class ThemeVersion {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBaseThemeId(@Nullable String baseThemeId) {
+        public Builder baseThemeId(@Nullable String baseThemeId) {
             this.baseThemeId = baseThemeId;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable ThemeConfiguration configuration) {
+        public Builder configuration(@Nullable ThemeConfiguration configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ThemeError> errors) {
+        public Builder errors(@Nullable List<ThemeError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setStatus(@Nullable ThemeResourceStatus status) {
+        public Builder status(@Nullable ThemeResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Double versionNumber) {
+        public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetTagArgs extends io.pulumi.resources.InvokeArgs {
     	      this.tagId = defaults.tagId;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setTagId(String tagId) {
+        public Builder tagId(String tagId) {
             this.tagId = Objects.requireNonNull(tagId);
             return this;
         }

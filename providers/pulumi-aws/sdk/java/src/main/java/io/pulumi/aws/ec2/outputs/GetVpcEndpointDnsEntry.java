@@ -20,10 +20,10 @@ public final class GetVpcEndpointDnsEntry {
      */
     private final String hostedZoneId;
 
-    @OutputCustomType.Constructor({"dnsName","hostedZoneId"})
+    @OutputCustomType.Constructor
     private GetVpcEndpointDnsEntry(
-        String dnsName,
-        String hostedZoneId) {
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId) {
         this.dnsName = dnsName;
         this.hostedZoneId = hostedZoneId;
     }
@@ -65,12 +65,12 @@ public final class GetVpcEndpointDnsEntry {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }

@@ -17,8 +17,8 @@ public final class SignalRCorsSettingsResponse {
      */
     private final @Nullable List<String> allowedOrigins;
 
-    @OutputCustomType.Constructor({"allowedOrigins"})
-    private SignalRCorsSettingsResponse(@Nullable List<String> allowedOrigins) {
+    @OutputCustomType.Constructor
+    private SignalRCorsSettingsResponse(@OutputCustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins) {
         this.allowedOrigins = allowedOrigins;
     }
 
@@ -50,7 +50,7 @@ public final class SignalRCorsSettingsResponse {
     	      this.allowedOrigins = defaults.allowedOrigins;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }

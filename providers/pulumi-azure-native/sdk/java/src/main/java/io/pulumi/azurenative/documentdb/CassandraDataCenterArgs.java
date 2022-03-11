@@ -103,42 +103,42 @@ public final class CassandraDataCenterArgs extends io.pulumi.resources.ResourceA
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDataCenterName(@Nullable Input<String> dataCenterName) {
+        public Builder dataCenterName(@Nullable Input<String> dataCenterName) {
             this.dataCenterName = dataCenterName;
             return this;
         }
 
-        public Builder setDataCenterName(@Nullable String dataCenterName) {
+        public Builder dataCenterName(@Nullable String dataCenterName) {
             this.dataCenterName = Input.ofNullable(dataCenterName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<DataCenterResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<DataCenterResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable DataCenterResourcePropertiesArgs properties) {
+        public Builder properties(@Nullable DataCenterResourcePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }

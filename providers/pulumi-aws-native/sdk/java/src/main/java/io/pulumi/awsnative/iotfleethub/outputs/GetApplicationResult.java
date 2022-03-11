@@ -75,20 +75,20 @@ public final class GetApplicationResult {
      */
     private final @Nullable List<ApplicationTag> tags;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationCreationDate","applicationDescription","applicationId","applicationLastUpdateDate","applicationName","applicationState","applicationUrl","errorMessage","roleArn","ssoClientId","tags"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        @Nullable String applicationArn,
-        @Nullable Integer applicationCreationDate,
-        @Nullable String applicationDescription,
-        @Nullable String applicationId,
-        @Nullable Integer applicationLastUpdateDate,
-        @Nullable String applicationName,
-        @Nullable String applicationState,
-        @Nullable String applicationUrl,
-        @Nullable String errorMessage,
-        @Nullable String roleArn,
-        @Nullable String ssoClientId,
-        @Nullable List<ApplicationTag> tags) {
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("applicationCreationDate") @Nullable Integer applicationCreationDate,
+        @OutputCustomType.Parameter("applicationDescription") @Nullable String applicationDescription,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("applicationLastUpdateDate") @Nullable Integer applicationLastUpdateDate,
+        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
+        @OutputCustomType.Parameter("applicationState") @Nullable String applicationState,
+        @OutputCustomType.Parameter("applicationUrl") @Nullable String applicationUrl,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("ssoClientId") @Nullable String ssoClientId,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApplicationTag> tags) {
         this.applicationArn = applicationArn;
         this.applicationCreationDate = applicationCreationDate;
         this.applicationDescription = applicationDescription;
@@ -230,62 +230,62 @@ public final class GetApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setApplicationCreationDate(@Nullable Integer applicationCreationDate) {
+        public Builder applicationCreationDate(@Nullable Integer applicationCreationDate) {
             this.applicationCreationDate = applicationCreationDate;
             return this;
         }
 
-        public Builder setApplicationDescription(@Nullable String applicationDescription) {
+        public Builder applicationDescription(@Nullable String applicationDescription) {
             this.applicationDescription = applicationDescription;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setApplicationLastUpdateDate(@Nullable Integer applicationLastUpdateDate) {
+        public Builder applicationLastUpdateDate(@Nullable Integer applicationLastUpdateDate) {
             this.applicationLastUpdateDate = applicationLastUpdateDate;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationState(@Nullable String applicationState) {
+        public Builder applicationState(@Nullable String applicationState) {
             this.applicationState = applicationState;
             return this;
         }
 
-        public Builder setApplicationUrl(@Nullable String applicationUrl) {
+        public Builder applicationUrl(@Nullable String applicationUrl) {
             this.applicationUrl = applicationUrl;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSsoClientId(@Nullable String ssoClientId) {
+        public Builder ssoClientId(@Nullable String ssoClientId) {
             this.ssoClientId = ssoClientId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationTag> tags) {
+        public Builder tags(@Nullable List<ApplicationTag> tags) {
             this.tags = tags;
             return this;
         }

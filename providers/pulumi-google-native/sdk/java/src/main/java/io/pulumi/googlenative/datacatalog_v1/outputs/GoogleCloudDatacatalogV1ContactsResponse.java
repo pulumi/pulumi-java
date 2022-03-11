@@ -16,8 +16,8 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
      */
     private final List<GoogleCloudDatacatalogV1ContactsPersonResponse> people;
 
-    @OutputCustomType.Constructor({"people"})
-    private GoogleCloudDatacatalogV1ContactsResponse(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatacatalogV1ContactsResponse(@OutputCustomType.Parameter("people") List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
         this.people = people;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDatacatalogV1ContactsResponse {
     	      this.people = defaults.people;
         }
 
-        public Builder setPeople(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
+        public Builder people(List<GoogleCloudDatacatalogV1ContactsPersonResponse> people) {
             this.people = Objects.requireNonNull(people);
             return this;
         }

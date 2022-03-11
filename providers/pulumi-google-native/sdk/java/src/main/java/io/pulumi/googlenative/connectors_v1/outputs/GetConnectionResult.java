@@ -97,24 +97,24 @@ public final class GetConnectionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"authConfig","configVariables","connectorVersion","createTime","description","egressBackends","envoyImageLocation","imageLocation","labels","lockConfig","name","serviceAccount","serviceDirectory","status","suspended","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        AuthConfigResponse authConfig,
-        List<ConfigVariableResponse> configVariables,
-        String connectorVersion,
-        String createTime,
-        String description,
-        List<String> egressBackends,
-        String envoyImageLocation,
-        String imageLocation,
-        Map<String,String> labels,
-        LockConfigResponse lockConfig,
-        String name,
-        String serviceAccount,
-        String serviceDirectory,
-        ConnectionStatusResponse status,
-        Boolean suspended,
-        String updateTime) {
+        @OutputCustomType.Parameter("authConfig") AuthConfigResponse authConfig,
+        @OutputCustomType.Parameter("configVariables") List<ConfigVariableResponse> configVariables,
+        @OutputCustomType.Parameter("connectorVersion") String connectorVersion,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("egressBackends") List<String> egressBackends,
+        @OutputCustomType.Parameter("envoyImageLocation") String envoyImageLocation,
+        @OutputCustomType.Parameter("imageLocation") String imageLocation,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lockConfig") LockConfigResponse lockConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("serviceDirectory") String serviceDirectory,
+        @OutputCustomType.Parameter("status") ConnectionStatusResponse status,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.authConfig = authConfig;
         this.configVariables = configVariables;
         this.connectorVersion = connectorVersion;
@@ -296,82 +296,82 @@ public final class GetConnectionResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAuthConfig(AuthConfigResponse authConfig) {
+        public Builder authConfig(AuthConfigResponse authConfig) {
             this.authConfig = Objects.requireNonNull(authConfig);
             return this;
         }
 
-        public Builder setConfigVariables(List<ConfigVariableResponse> configVariables) {
+        public Builder configVariables(List<ConfigVariableResponse> configVariables) {
             this.configVariables = Objects.requireNonNull(configVariables);
             return this;
         }
 
-        public Builder setConnectorVersion(String connectorVersion) {
+        public Builder connectorVersion(String connectorVersion) {
             this.connectorVersion = Objects.requireNonNull(connectorVersion);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEgressBackends(List<String> egressBackends) {
+        public Builder egressBackends(List<String> egressBackends) {
             this.egressBackends = Objects.requireNonNull(egressBackends);
             return this;
         }
 
-        public Builder setEnvoyImageLocation(String envoyImageLocation) {
+        public Builder envoyImageLocation(String envoyImageLocation) {
             this.envoyImageLocation = Objects.requireNonNull(envoyImageLocation);
             return this;
         }
 
-        public Builder setImageLocation(String imageLocation) {
+        public Builder imageLocation(String imageLocation) {
             this.imageLocation = Objects.requireNonNull(imageLocation);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLockConfig(LockConfigResponse lockConfig) {
+        public Builder lockConfig(LockConfigResponse lockConfig) {
             this.lockConfig = Objects.requireNonNull(lockConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServiceDirectory(String serviceDirectory) {
+        public Builder serviceDirectory(String serviceDirectory) {
             this.serviceDirectory = Objects.requireNonNull(serviceDirectory);
             return this;
         }
 
-        public Builder setStatus(ConnectionStatusResponse status) {
+        public Builder status(ConnectionStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSuspended(Boolean suspended) {
+        public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

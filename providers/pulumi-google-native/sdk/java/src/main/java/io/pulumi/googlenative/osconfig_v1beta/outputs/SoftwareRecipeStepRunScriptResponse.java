@@ -27,11 +27,11 @@ public final class SoftwareRecipeStepRunScriptResponse {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","interpreter","script"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeStepRunScriptResponse(
-        List<Integer> allowedExitCodes,
-        String interpreter,
-        String script) {
+        @OutputCustomType.Parameter("allowedExitCodes") List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("interpreter") String interpreter,
+        @OutputCustomType.Parameter("script") String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = script;
@@ -83,17 +83,17 @@ public final class SoftwareRecipeStepRunScriptResponse {
     	      this.script = defaults.script;
         }
 
-        public Builder setAllowedExitCodes(List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(List<Integer> allowedExitCodes) {
             this.allowedExitCodes = Objects.requireNonNull(allowedExitCodes);
             return this;
         }
 
-        public Builder setInterpreter(String interpreter) {
+        public Builder interpreter(String interpreter) {
             this.interpreter = Objects.requireNonNull(interpreter);
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetTrackerArgs extends io.pulumi.resources.InvokeArgs {
     	      this.trackerName = defaults.trackerName;
         }
 
-        public Builder setTrackerName(String trackerName) {
+        public Builder trackerName(String trackerName) {
             this.trackerName = Objects.requireNonNull(trackerName);
             return this;
         }

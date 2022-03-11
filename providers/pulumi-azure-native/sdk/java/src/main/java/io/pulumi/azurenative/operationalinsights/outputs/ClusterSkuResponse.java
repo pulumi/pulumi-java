@@ -23,10 +23,10 @@ public final class ClusterSkuResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"capacity","name"})
+    @OutputCustomType.Constructor
     private ClusterSkuResponse(
-        @Nullable Double capacity,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("capacity") @Nullable Double capacity,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.capacity = capacity;
         this.name = name;
     }
@@ -68,12 +68,12 @@ public final class ClusterSkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacity(@Nullable Double capacity) {
+        public Builder capacity(@Nullable Double capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

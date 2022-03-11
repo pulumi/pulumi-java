@@ -63,22 +63,22 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
     	      this.targetGroupsConfig = defaults.targetGroupsConfig;
         }
 
-        public Builder setClassicLoadBalancersConfig(@Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig) {
+        public Builder classicLoadBalancersConfig(@Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig) {
             this.classicLoadBalancersConfig = classicLoadBalancersConfig;
             return this;
         }
 
-        public Builder setClassicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfigArgs classicLoadBalancersConfig) {
+        public Builder classicLoadBalancersConfig(@Nullable SpotFleetClassicLoadBalancersConfigArgs classicLoadBalancersConfig) {
             this.classicLoadBalancersConfig = Input.ofNullable(classicLoadBalancersConfig);
             return this;
         }
 
-        public Builder setTargetGroupsConfig(@Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
+        public Builder targetGroupsConfig(@Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig) {
             this.targetGroupsConfig = targetGroupsConfig;
             return this;
         }
 
-        public Builder setTargetGroupsConfig(@Nullable SpotFleetTargetGroupsConfigArgs targetGroupsConfig) {
+        public Builder targetGroupsConfig(@Nullable SpotFleetTargetGroupsConfigArgs targetGroupsConfig) {
             this.targetGroupsConfig = Input.ofNullable(targetGroupsConfig);
             return this;
         }

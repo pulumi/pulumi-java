@@ -20,10 +20,10 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
      */
     private final String commonCharactersToIgnore;
 
-    @OutputCustomType.Constructor({"charactersToSkip","commonCharactersToIgnore"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CharsToIgnoreResponse(
-        String charactersToSkip,
-        String commonCharactersToIgnore) {
+        @OutputCustomType.Parameter("charactersToSkip") String charactersToSkip,
+        @OutputCustomType.Parameter("commonCharactersToIgnore") String commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }
@@ -65,12 +65,12 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse {
     	      this.commonCharactersToIgnore = defaults.commonCharactersToIgnore;
         }
 
-        public Builder setCharactersToSkip(String charactersToSkip) {
+        public Builder charactersToSkip(String charactersToSkip) {
             this.charactersToSkip = Objects.requireNonNull(charactersToSkip);
             return this;
         }
 
-        public Builder setCommonCharactersToIgnore(String commonCharactersToIgnore) {
+        public Builder commonCharactersToIgnore(String commonCharactersToIgnore) {
             this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore);
             return this;
         }

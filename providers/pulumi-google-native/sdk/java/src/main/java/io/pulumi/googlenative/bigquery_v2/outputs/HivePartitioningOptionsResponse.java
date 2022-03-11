@@ -26,11 +26,11 @@ public final class HivePartitioningOptionsResponse {
      */
     private final String sourceUriPrefix;
 
-    @OutputCustomType.Constructor({"mode","requirePartitionFilter","sourceUriPrefix"})
+    @OutputCustomType.Constructor
     private HivePartitioningOptionsResponse(
-        String mode,
-        Boolean requirePartitionFilter,
-        String sourceUriPrefix) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("sourceUriPrefix") String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;
@@ -82,17 +82,17 @@ public final class HivePartitioningOptionsResponse {
     	      this.sourceUriPrefix = defaults.sourceUriPrefix;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
 
-        public Builder setSourceUriPrefix(String sourceUriPrefix) {
+        public Builder sourceUriPrefix(String sourceUriPrefix) {
             this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
             return this;
         }

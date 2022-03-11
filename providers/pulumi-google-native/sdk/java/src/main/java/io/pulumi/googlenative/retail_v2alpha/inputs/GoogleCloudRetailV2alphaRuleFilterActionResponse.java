@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse extends io.p
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

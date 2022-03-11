@@ -121,52 +121,52 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transferSpec = defaults.transferSpec;
         }
 
-        public Builder setDescription(Input<String> description) {
+        public Builder description(Input<String> description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Input.of(Objects.requireNonNull(description));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<TransferJobScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<TransferJobScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TransferJobScheduleArgs schedule) {
+        public Builder schedule(@Nullable TransferJobScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTransferSpec(Input<TransferJobTransferSpecArgs> transferSpec) {
+        public Builder transferSpec(Input<TransferJobTransferSpecArgs> transferSpec) {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }
 
-        public Builder setTransferSpec(TransferJobTransferSpecArgs transferSpec) {
+        public Builder transferSpec(TransferJobTransferSpecArgs transferSpec) {
             this.transferSpec = Input.of(Objects.requireNonNull(transferSpec));
             return this;
         }

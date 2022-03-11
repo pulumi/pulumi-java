@@ -22,10 +22,10 @@ public final class WinRMListenerResponse {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"certificateUrl","protocol"})
+    @OutputCustomType.Constructor
     private WinRMListenerResponse(
-        @Nullable String certificateUrl,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("certificateUrl") @Nullable String certificateUrl,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.certificateUrl = certificateUrl;
         this.protocol = protocol;
     }
@@ -67,12 +67,12 @@ public final class WinRMListenerResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setCertificateUrl(@Nullable String certificateUrl) {
+        public Builder certificateUrl(@Nullable String certificateUrl) {
             this.certificateUrl = certificateUrl;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

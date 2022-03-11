@@ -123,52 +123,52 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setAllowedRequestExtensions(@Nullable Input<List<String>> allowedRequestExtensions) {
+        public Builder allowedRequestExtensions(@Nullable Input<List<String>> allowedRequestExtensions) {
             this.allowedRequestExtensions = allowedRequestExtensions;
             return this;
         }
 
-        public Builder setAllowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
+        public Builder allowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
             this.allowedRequestExtensions = Input.ofNullable(allowedRequestExtensions);
             return this;
         }
 
-        public Builder setAllowedResponseExtensions(@Nullable Input<List<String>> allowedResponseExtensions) {
+        public Builder allowedResponseExtensions(@Nullable Input<List<String>> allowedResponseExtensions) {
             this.allowedResponseExtensions = allowedResponseExtensions;
             return this;
         }
 
-        public Builder setAllowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
+        public Builder allowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
             this.allowedResponseExtensions = Input.ofNullable(allowedResponseExtensions);
             return this;
         }
 
-        public Builder setProvided(@Nullable Input<List<String>> provided) {
+        public Builder provided(@Nullable Input<List<String>> provided) {
             this.provided = provided;
             return this;
         }
 
-        public Builder setProvided(@Nullable List<String> provided) {
+        public Builder provided(@Nullable List<String> provided) {
             this.provided = Input.ofNullable(provided);
             return this;
         }
 
-        public Builder setRequested(@Nullable Input<List<String>> requested) {
+        public Builder requested(@Nullable Input<List<String>> requested) {
             this.requested = requested;
             return this;
         }
 
-        public Builder setRequested(@Nullable List<String> requested) {
+        public Builder requested(@Nullable List<String> requested) {
             this.requested = Input.ofNullable(requested);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<String> selector) {
+        public Builder selector(@Nullable Input<String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

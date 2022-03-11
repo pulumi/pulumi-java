@@ -22,11 +22,11 @@ public final class GetOutpostInstanceTypesResult {
      */
     private final List<String> instanceTypes;
 
-    @OutputCustomType.Constructor({"arn","id","instanceTypes"})
+    @OutputCustomType.Constructor
     private GetOutpostInstanceTypesResult(
-        String arn,
-        String id,
-        List<String> instanceTypes) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes) {
         this.arn = arn;
         this.id = id;
         this.instanceTypes = instanceTypes;
@@ -74,17 +74,17 @@ public final class GetOutpostInstanceTypesResult {
     	      this.instanceTypes = defaults.instanceTypes;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceTypes(List<String> instanceTypes) {
+        public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }

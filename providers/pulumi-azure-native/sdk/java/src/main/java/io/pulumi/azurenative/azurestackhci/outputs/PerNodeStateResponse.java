@@ -25,11 +25,11 @@ public final class PerNodeStateResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arcInstance","name","state"})
+    @OutputCustomType.Constructor
     private PerNodeStateResponse(
-        String arcInstance,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("arcInstance") String arcInstance,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.arcInstance = arcInstance;
         this.name = name;
         this.state = state;
@@ -81,17 +81,17 @@ public final class PerNodeStateResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setArcInstance(String arcInstance) {
+        public Builder arcInstance(String arcInstance) {
             this.arcInstance = Objects.requireNonNull(arcInstance);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

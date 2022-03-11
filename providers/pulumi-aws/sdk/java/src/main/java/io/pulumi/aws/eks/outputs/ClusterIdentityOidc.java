@@ -17,8 +17,8 @@ public final class ClusterIdentityOidc {
      */
     private final @Nullable String issuer;
 
-    @OutputCustomType.Constructor({"issuer"})
-    private ClusterIdentityOidc(@Nullable String issuer) {
+    @OutputCustomType.Constructor
+    private ClusterIdentityOidc(@OutputCustomType.Parameter("issuer") @Nullable String issuer) {
         this.issuer = issuer;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterIdentityOidc {
     	      this.issuer = defaults.issuer;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }

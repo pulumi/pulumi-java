@@ -28,11 +28,11 @@ public final class InsightFiltersCreatedAt {
      */
     private final @Nullable String start;
 
-    @OutputCustomType.Constructor({"dateRange","end","start"})
+    @OutputCustomType.Constructor
     private InsightFiltersCreatedAt(
-        @Nullable InsightFiltersCreatedAtDateRange dateRange,
-        @Nullable String end,
-        @Nullable String start) {
+        @OutputCustomType.Parameter("dateRange") @Nullable InsightFiltersCreatedAtDateRange dateRange,
+        @OutputCustomType.Parameter("end") @Nullable String end,
+        @OutputCustomType.Parameter("start") @Nullable String start) {
         this.dateRange = dateRange;
         this.end = end;
         this.start = start;
@@ -84,17 +84,17 @@ public final class InsightFiltersCreatedAt {
     	      this.start = defaults.start;
         }
 
-        public Builder setDateRange(@Nullable InsightFiltersCreatedAtDateRange dateRange) {
+        public Builder dateRange(@Nullable InsightFiltersCreatedAtDateRange dateRange) {
             this.dateRange = dateRange;
             return this;
         }
 
-        public Builder setEnd(@Nullable String end) {
+        public Builder end(@Nullable String end) {
             this.end = end;
             return this;
         }
 
-        public Builder setStart(@Nullable String start) {
+        public Builder start(@Nullable String start) {
             this.start = start;
             return this;
         }

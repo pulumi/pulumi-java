@@ -22,12 +22,12 @@ public final class GetDBProxyTargetGroupResult {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor({"connectionPoolConfigurationInfo","dBClusterIdentifiers","dBInstanceIdentifiers","targetGroupArn"})
+    @OutputCustomType.Constructor
     private GetDBProxyTargetGroupResult(
-        @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
-        @Nullable List<String> dBClusterIdentifiers,
-        @Nullable List<String> dBInstanceIdentifiers,
-        @Nullable String targetGroupArn) {
+        @OutputCustomType.Parameter("connectionPoolConfigurationInfo") @Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo,
+        @OutputCustomType.Parameter("dBClusterIdentifiers") @Nullable List<String> dBClusterIdentifiers,
+        @OutputCustomType.Parameter("dBInstanceIdentifiers") @Nullable List<String> dBInstanceIdentifiers,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
         this.dBClusterIdentifiers = dBClusterIdentifiers;
         this.dBInstanceIdentifiers = dBInstanceIdentifiers;
@@ -77,22 +77,22 @@ public final class GetDBProxyTargetGroupResult {
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder setConnectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo) {
+        public Builder connectionPoolConfigurationInfo(@Nullable DBProxyTargetGroupConnectionPoolConfigurationInfoFormat connectionPoolConfigurationInfo) {
             this.connectionPoolConfigurationInfo = connectionPoolConfigurationInfo;
             return this;
         }
 
-        public Builder setDBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
+        public Builder dBClusterIdentifiers(@Nullable List<String> dBClusterIdentifiers) {
             this.dBClusterIdentifiers = dBClusterIdentifiers;
             return this;
         }
 
-        public Builder setDBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
+        public Builder dBInstanceIdentifiers(@Nullable List<String> dBInstanceIdentifiers) {
             this.dBInstanceIdentifiers = dBInstanceIdentifiers;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }

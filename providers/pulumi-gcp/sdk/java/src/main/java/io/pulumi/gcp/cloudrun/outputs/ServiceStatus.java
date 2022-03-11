@@ -20,13 +20,13 @@ public final class ServiceStatus {
     private final @Nullable Integer observedGeneration;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"conditions","latestCreatedRevisionName","latestReadyRevisionName","observedGeneration","url"})
+    @OutputCustomType.Constructor
     private ServiceStatus(
-        @Nullable List<ServiceStatusCondition> conditions,
-        @Nullable String latestCreatedRevisionName,
-        @Nullable String latestReadyRevisionName,
-        @Nullable Integer observedGeneration,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("conditions") @Nullable List<ServiceStatusCondition> conditions,
+        @OutputCustomType.Parameter("latestCreatedRevisionName") @Nullable String latestCreatedRevisionName,
+        @OutputCustomType.Parameter("latestReadyRevisionName") @Nullable String latestReadyRevisionName,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
         this.latestReadyRevisionName = latestReadyRevisionName;
@@ -78,27 +78,27 @@ public final class ServiceStatus {
     	      this.url = defaults.url;
         }
 
-        public Builder setConditions(@Nullable List<ServiceStatusCondition> conditions) {
+        public Builder conditions(@Nullable List<ServiceStatusCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setLatestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(@Nullable String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = latestCreatedRevisionName;
             return this;
         }
 
-        public Builder setLatestReadyRevisionName(@Nullable String latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(@Nullable String latestReadyRevisionName) {
             this.latestReadyRevisionName = latestReadyRevisionName;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

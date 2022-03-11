@@ -64,18 +64,18 @@ public final class AS2ValidationSettingsResponse {
      */
     private final @Nullable String signingAlgorithm;
 
-    @OutputCustomType.Constructor({"checkCertificateRevocationListOnReceive","checkCertificateRevocationListOnSend","checkDuplicateMessage","compressMessage","encryptMessage","encryptionAlgorithm","interchangeDuplicatesValidityDays","overrideMessageProperties","signMessage","signingAlgorithm"})
+    @OutputCustomType.Constructor
     private AS2ValidationSettingsResponse(
-        Boolean checkCertificateRevocationListOnReceive,
-        Boolean checkCertificateRevocationListOnSend,
-        Boolean checkDuplicateMessage,
-        Boolean compressMessage,
-        Boolean encryptMessage,
-        String encryptionAlgorithm,
-        Integer interchangeDuplicatesValidityDays,
-        Boolean overrideMessageProperties,
-        Boolean signMessage,
-        @Nullable String signingAlgorithm) {
+        @OutputCustomType.Parameter("checkCertificateRevocationListOnReceive") Boolean checkCertificateRevocationListOnReceive,
+        @OutputCustomType.Parameter("checkCertificateRevocationListOnSend") Boolean checkCertificateRevocationListOnSend,
+        @OutputCustomType.Parameter("checkDuplicateMessage") Boolean checkDuplicateMessage,
+        @OutputCustomType.Parameter("compressMessage") Boolean compressMessage,
+        @OutputCustomType.Parameter("encryptMessage") Boolean encryptMessage,
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("interchangeDuplicatesValidityDays") Integer interchangeDuplicatesValidityDays,
+        @OutputCustomType.Parameter("overrideMessageProperties") Boolean overrideMessageProperties,
+        @OutputCustomType.Parameter("signMessage") Boolean signMessage,
+        @OutputCustomType.Parameter("signingAlgorithm") @Nullable String signingAlgorithm) {
         this.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
         this.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
         this.checkDuplicateMessage = checkDuplicateMessage;
@@ -197,52 +197,52 @@ public final class AS2ValidationSettingsResponse {
     	      this.signingAlgorithm = defaults.signingAlgorithm;
         }
 
-        public Builder setCheckCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
+        public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
             this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
             return this;
         }
 
-        public Builder setCheckCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
+        public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
             return this;
         }
 
-        public Builder setCheckDuplicateMessage(Boolean checkDuplicateMessage) {
+        public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
             return this;
         }
 
-        public Builder setCompressMessage(Boolean compressMessage) {
+        public Builder compressMessage(Boolean compressMessage) {
             this.compressMessage = Objects.requireNonNull(compressMessage);
             return this;
         }
 
-        public Builder setEncryptMessage(Boolean encryptMessage) {
+        public Builder encryptMessage(Boolean encryptMessage) {
             this.encryptMessage = Objects.requireNonNull(encryptMessage);
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setInterchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
+        public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
             return this;
         }
 
-        public Builder setOverrideMessageProperties(Boolean overrideMessageProperties) {
+        public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
             return this;
         }
 
-        public Builder setSignMessage(Boolean signMessage) {
+        public Builder signMessage(Boolean signMessage) {
             this.signMessage = Objects.requireNonNull(signMessage);
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable String signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }

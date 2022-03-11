@@ -17,8 +17,8 @@ public final class SpotFleetRequestSpotMaintenanceStrategies {
      */
     private final @Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance;
 
-    @OutputCustomType.Constructor({"capacityRebalance"})
-    private SpotFleetRequestSpotMaintenanceStrategies(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
+    @OutputCustomType.Constructor
+    private SpotFleetRequestSpotMaintenanceStrategies(@OutputCustomType.Parameter("capacityRebalance") @Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
         this.capacityRebalance = capacityRebalance;
     }
 
@@ -50,7 +50,7 @@ public final class SpotFleetRequestSpotMaintenanceStrategies {
     	      this.capacityRebalance = defaults.capacityRebalance;
         }
 
-        public Builder setCapacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
+        public Builder capacityRebalance(@Nullable SpotFleetRequestSpotMaintenanceStrategiesCapacityRebalance capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }

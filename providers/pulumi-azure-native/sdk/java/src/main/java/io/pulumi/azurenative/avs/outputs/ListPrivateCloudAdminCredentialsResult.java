@@ -30,12 +30,12 @@ public final class ListPrivateCloudAdminCredentialsResult {
      */
     private final String vcenterUsername;
 
-    @OutputCustomType.Constructor({"nsxtPassword","nsxtUsername","vcenterPassword","vcenterUsername"})
+    @OutputCustomType.Constructor
     private ListPrivateCloudAdminCredentialsResult(
-        String nsxtPassword,
-        String nsxtUsername,
-        String vcenterPassword,
-        String vcenterUsername) {
+        @OutputCustomType.Parameter("nsxtPassword") String nsxtPassword,
+        @OutputCustomType.Parameter("nsxtUsername") String nsxtUsername,
+        @OutputCustomType.Parameter("vcenterPassword") String vcenterPassword,
+        @OutputCustomType.Parameter("vcenterUsername") String vcenterUsername) {
         this.nsxtPassword = nsxtPassword;
         this.nsxtUsername = nsxtUsername;
         this.vcenterPassword = vcenterPassword;
@@ -97,22 +97,22 @@ public final class ListPrivateCloudAdminCredentialsResult {
     	      this.vcenterUsername = defaults.vcenterUsername;
         }
 
-        public Builder setNsxtPassword(String nsxtPassword) {
+        public Builder nsxtPassword(String nsxtPassword) {
             this.nsxtPassword = Objects.requireNonNull(nsxtPassword);
             return this;
         }
 
-        public Builder setNsxtUsername(String nsxtUsername) {
+        public Builder nsxtUsername(String nsxtUsername) {
             this.nsxtUsername = Objects.requireNonNull(nsxtUsername);
             return this;
         }
 
-        public Builder setVcenterPassword(String vcenterPassword) {
+        public Builder vcenterPassword(String vcenterPassword) {
             this.vcenterPassword = Objects.requireNonNull(vcenterPassword);
             return this;
         }
 
-        public Builder setVcenterUsername(String vcenterUsername) {
+        public Builder vcenterUsername(String vcenterUsername) {
             this.vcenterUsername = Objects.requireNonNull(vcenterUsername);
             return this;
         }

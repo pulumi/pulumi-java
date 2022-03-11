@@ -35,13 +35,13 @@ public final class ApprovalResultResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"approvalTime","approverAccount","comment","decision","url"})
+    @OutputCustomType.Constructor
     private ApprovalResultResponse(
-        String approvalTime,
-        String approverAccount,
-        String comment,
-        String decision,
-        String url) {
+        @OutputCustomType.Parameter("approvalTime") String approvalTime,
+        @OutputCustomType.Parameter("approverAccount") String approverAccount,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("decision") String decision,
+        @OutputCustomType.Parameter("url") String url) {
         this.approvalTime = approvalTime;
         this.approverAccount = approverAccount;
         this.comment = comment;
@@ -113,27 +113,27 @@ public final class ApprovalResultResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setApprovalTime(String approvalTime) {
+        public Builder approvalTime(String approvalTime) {
             this.approvalTime = Objects.requireNonNull(approvalTime);
             return this;
         }
 
-        public Builder setApproverAccount(String approverAccount) {
+        public Builder approverAccount(String approverAccount) {
             this.approverAccount = Objects.requireNonNull(approverAccount);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setDecision(String decision) {
+        public Builder decision(String decision) {
             this.decision = Objects.requireNonNull(decision);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

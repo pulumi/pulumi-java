@@ -21,10 +21,10 @@ public final class GlobalParameterSpecificationResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private GlobalParameterSpecificationResponse(
-        String type,
-        Object value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Object value) {
         this.type = type;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class GlobalParameterSpecificationResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

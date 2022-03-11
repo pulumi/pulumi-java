@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins {
     private final @Nullable List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins(@Nullable List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins(@OutputCustomType.Parameter("items") @Nullable List<String> items) {
         this.items = items;
     }
 
@@ -42,7 +42,7 @@ public final class ResponseHeadersPolicyCorsConfigAccessControlAllowOrigins {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<String> items) {
+        public Builder items(@Nullable List<String> items) {
             this.items = items;
             return this;
         }

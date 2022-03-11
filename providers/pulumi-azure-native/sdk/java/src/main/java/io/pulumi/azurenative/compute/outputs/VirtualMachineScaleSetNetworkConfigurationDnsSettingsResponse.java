@@ -17,8 +17,8 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
      */
     private final @Nullable List<String> dnsServers;
 
-    @OutputCustomType.Constructor({"dnsServers"})
-    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(@Nullable List<String> dnsServers) {
+    @OutputCustomType.Constructor
+    private VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse(@OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers) {
         this.dnsServers = dnsServers;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
     	      this.dnsServers = defaults.dnsServers;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }

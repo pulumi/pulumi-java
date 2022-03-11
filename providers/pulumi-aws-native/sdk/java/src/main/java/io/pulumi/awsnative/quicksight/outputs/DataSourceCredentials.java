@@ -22,10 +22,10 @@ public final class DataSourceCredentials {
     private final @Nullable String copySourceArn;
     private final @Nullable DataSourceCredentialPair credentialPair;
 
-    @OutputCustomType.Constructor({"copySourceArn","credentialPair"})
+    @OutputCustomType.Constructor
     private DataSourceCredentials(
-        @Nullable String copySourceArn,
-        @Nullable DataSourceCredentialPair credentialPair) {
+        @OutputCustomType.Parameter("copySourceArn") @Nullable String copySourceArn,
+        @OutputCustomType.Parameter("credentialPair") @Nullable DataSourceCredentialPair credentialPair) {
         this.copySourceArn = copySourceArn;
         this.credentialPair = credentialPair;
     }
@@ -66,12 +66,12 @@ public final class DataSourceCredentials {
     	      this.credentialPair = defaults.credentialPair;
         }
 
-        public Builder setCopySourceArn(@Nullable String copySourceArn) {
+        public Builder copySourceArn(@Nullable String copySourceArn) {
             this.copySourceArn = copySourceArn;
             return this;
         }
 
-        public Builder setCredentialPair(@Nullable DataSourceCredentialPair credentialPair) {
+        public Builder credentialPair(@Nullable DataSourceCredentialPair credentialPair) {
             this.credentialPair = credentialPair;
             return this;
         }

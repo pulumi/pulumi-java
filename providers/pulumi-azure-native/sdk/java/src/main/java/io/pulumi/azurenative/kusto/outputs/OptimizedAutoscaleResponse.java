@@ -31,12 +31,12 @@ public final class OptimizedAutoscaleResponse {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"isEnabled","maximum","minimum","version"})
+    @OutputCustomType.Constructor
     private OptimizedAutoscaleResponse(
-        Boolean isEnabled,
-        Integer maximum,
-        Integer minimum,
-        Integer version) {
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("maximum") Integer maximum,
+        @OutputCustomType.Parameter("minimum") Integer minimum,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.isEnabled = isEnabled;
         this.maximum = maximum;
         this.minimum = minimum;
@@ -98,22 +98,22 @@ public final class OptimizedAutoscaleResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setMaximum(Integer maximum) {
+        public Builder maximum(Integer maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMinimum(Integer minimum) {
+        public Builder minimum(Integer minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -111,22 +111,22 @@ public final class DataCollectionRuleResponseDataSources extends io.pulumi.resou
     	      this.windowsEventLogs = defaults.windowsEventLogs;
         }
 
-        public Builder setExtensions(@Nullable List<ExtensionDataSourceResponse> extensions) {
+        public Builder extensions(@Nullable List<ExtensionDataSourceResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setPerformanceCounters(@Nullable List<PerfCounterDataSourceResponse> performanceCounters) {
+        public Builder performanceCounters(@Nullable List<PerfCounterDataSourceResponse> performanceCounters) {
             this.performanceCounters = performanceCounters;
             return this;
         }
 
-        public Builder setSyslog(@Nullable List<SyslogDataSourceResponse> syslog) {
+        public Builder syslog(@Nullable List<SyslogDataSourceResponse> syslog) {
             this.syslog = syslog;
             return this;
         }
 
-        public Builder setWindowsEventLogs(@Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
+        public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceResponse> windowsEventLogs) {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }

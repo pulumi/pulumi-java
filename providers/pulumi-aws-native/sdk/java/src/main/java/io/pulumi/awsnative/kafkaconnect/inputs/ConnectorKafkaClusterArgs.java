@@ -52,12 +52,12 @@ public final class ConnectorKafkaClusterArgs extends io.pulumi.resources.Resourc
     	      this.apacheKafkaCluster = defaults.apacheKafkaCluster;
         }
 
-        public Builder setApacheKafkaCluster(Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
+        public Builder apacheKafkaCluster(Input<ConnectorApacheKafkaClusterArgs> apacheKafkaCluster) {
             this.apacheKafkaCluster = Objects.requireNonNull(apacheKafkaCluster);
             return this;
         }
 
-        public Builder setApacheKafkaCluster(ConnectorApacheKafkaClusterArgs apacheKafkaCluster) {
+        public Builder apacheKafkaCluster(ConnectorApacheKafkaClusterArgs apacheKafkaCluster) {
             this.apacheKafkaCluster = Input.of(Objects.requireNonNull(apacheKafkaCluster));
             return this;
         }

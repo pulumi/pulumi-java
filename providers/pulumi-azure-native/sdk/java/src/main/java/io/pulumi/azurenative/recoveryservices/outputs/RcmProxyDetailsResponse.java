@@ -42,14 +42,14 @@ public final class RcmProxyDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"health","healthErrors","id","lastHeartbeatUtc","name","version"})
+    @OutputCustomType.Constructor
     private RcmProxyDetailsResponse(
-        String health,
-        List<HealthErrorResponse> healthErrors,
-        String id,
-        String lastHeartbeatUtc,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthErrors") List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.health = health;
         this.healthErrors = healthErrors;
         this.id = id;
@@ -131,32 +131,32 @@ public final class RcmProxyDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthErrors(List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             this.healthErrors = Objects.requireNonNull(healthErrors);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHeartbeatUtc(String lastHeartbeatUtc) {
+        public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

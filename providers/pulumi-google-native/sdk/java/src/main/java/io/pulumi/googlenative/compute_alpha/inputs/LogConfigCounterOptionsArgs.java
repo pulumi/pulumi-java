@@ -92,32 +92,32 @@ public final class LogConfigCounterOptionsArgs extends io.pulumi.resources.Resou
     	      this.metric = defaults.metric;
         }
 
-        public Builder setCustomFields(@Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields) {
+        public Builder customFields(@Nullable Input<List<LogConfigCounterOptionsCustomFieldArgs>> customFields) {
             this.customFields = customFields;
             return this;
         }
 
-        public Builder setCustomFields(@Nullable List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
+        public Builder customFields(@Nullable List<LogConfigCounterOptionsCustomFieldArgs> customFields) {
             this.customFields = Input.ofNullable(customFields);
             return this;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Input<String> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }

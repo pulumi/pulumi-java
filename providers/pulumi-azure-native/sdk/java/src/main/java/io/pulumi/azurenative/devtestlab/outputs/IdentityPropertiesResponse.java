@@ -32,12 +32,12 @@ public final class IdentityPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"clientSecretUrl","principalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private IdentityPropertiesResponse(
-        @Nullable String clientSecretUrl,
-        @Nullable String principalId,
-        @Nullable String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("clientSecretUrl") @Nullable String clientSecretUrl,
+        @OutputCustomType.Parameter("principalId") @Nullable String principalId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.clientSecretUrl = clientSecretUrl;
         this.principalId = principalId;
         this.tenantId = tenantId;
@@ -99,22 +99,22 @@ public final class IdentityPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setClientSecretUrl(@Nullable String clientSecretUrl) {
+        public Builder clientSecretUrl(@Nullable String clientSecretUrl) {
             this.clientSecretUrl = clientSecretUrl;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

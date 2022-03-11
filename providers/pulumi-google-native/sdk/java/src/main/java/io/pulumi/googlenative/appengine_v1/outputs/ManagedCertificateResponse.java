@@ -20,10 +20,10 @@ public final class ManagedCertificateResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"lastRenewalTime","status"})
+    @OutputCustomType.Constructor
     private ManagedCertificateResponse(
-        String lastRenewalTime,
-        String status) {
+        @OutputCustomType.Parameter("lastRenewalTime") String lastRenewalTime,
+        @OutputCustomType.Parameter("status") String status) {
         this.lastRenewalTime = lastRenewalTime;
         this.status = status;
     }
@@ -65,12 +65,12 @@ public final class ManagedCertificateResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setLastRenewalTime(String lastRenewalTime) {
+        public Builder lastRenewalTime(String lastRenewalTime) {
             this.lastRenewalTime = Objects.requireNonNull(lastRenewalTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

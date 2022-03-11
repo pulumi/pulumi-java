@@ -150,62 +150,62 @@ public final class DicomStoreState extends io.pulumi.resources.ResourceArgs {
     	      this.streamConfigs = defaults.streamConfigs;
         }
 
-        public Builder setDataset(@Nullable Input<String> dataset) {
+        public Builder dataset(@Nullable Input<String> dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDataset(@Nullable String dataset) {
+        public Builder dataset(@Nullable String dataset) {
             this.dataset = Input.ofNullable(dataset);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig) {
+        public Builder notificationConfig(@Nullable Input<DicomStoreNotificationConfigGetArgs> notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable DicomStoreNotificationConfigGetArgs notificationConfig) {
+        public Builder notificationConfig(@Nullable DicomStoreNotificationConfigGetArgs notificationConfig) {
             this.notificationConfig = Input.ofNullable(notificationConfig);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
+        public Builder streamConfigs(@Nullable Input<List<DicomStoreStreamConfigGetArgs>> streamConfigs) {
             this.streamConfigs = streamConfigs;
             return this;
         }
 
-        public Builder setStreamConfigs(@Nullable List<DicomStoreStreamConfigGetArgs> streamConfigs) {
+        public Builder streamConfigs(@Nullable List<DicomStoreStreamConfigGetArgs> streamConfigs) {
             this.streamConfigs = Input.ofNullable(streamConfigs);
             return this;
         }

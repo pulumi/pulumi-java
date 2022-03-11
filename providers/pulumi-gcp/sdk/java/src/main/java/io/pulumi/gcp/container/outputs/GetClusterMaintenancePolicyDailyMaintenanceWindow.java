@@ -12,10 +12,10 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow {
     private final String duration;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","startTime"})
+    @OutputCustomType.Constructor
     private GetClusterMaintenancePolicyDailyMaintenanceWindow(
-        String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.startTime = startTime;
     }
@@ -49,12 +49,12 @@ public final class GetClusterMaintenancePolicyDailyMaintenanceWindow {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

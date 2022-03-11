@@ -24,10 +24,10 @@ public final class DataCollectionRuleResponseDestinations {
      */
     private final @Nullable List<LogAnalyticsDestinationResponse> logAnalytics;
 
-    @OutputCustomType.Constructor({"azureMonitorMetrics","logAnalytics"})
+    @OutputCustomType.Constructor
     private DataCollectionRuleResponseDestinations(
-        @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
-        @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
+        @OutputCustomType.Parameter("azureMonitorMetrics") @Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics,
+        @OutputCustomType.Parameter("logAnalytics") @Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
         this.azureMonitorMetrics = azureMonitorMetrics;
         this.logAnalytics = logAnalytics;
     }
@@ -69,12 +69,12 @@ public final class DataCollectionRuleResponseDestinations {
     	      this.logAnalytics = defaults.logAnalytics;
         }
 
-        public Builder setAzureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
+        public Builder azureMonitorMetrics(@Nullable DestinationsSpecResponseAzureMonitorMetrics azureMonitorMetrics) {
             this.azureMonitorMetrics = azureMonitorMetrics;
             return this;
         }
 
-        public Builder setLogAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
+        public Builder logAnalytics(@Nullable List<LogAnalyticsDestinationResponse> logAnalytics) {
             this.logAnalytics = logAnalytics;
             return this;
         }

@@ -26,11 +26,11 @@ public final class FileNoteResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"checksum","fileType","title"})
+    @OutputCustomType.Constructor
     private FileNoteResponse(
-        List<String> checksum,
-        String fileType,
-        String title) {
+        @OutputCustomType.Parameter("checksum") List<String> checksum,
+        @OutputCustomType.Parameter("fileType") String fileType,
+        @OutputCustomType.Parameter("title") String title) {
         this.checksum = checksum;
         this.fileType = fileType;
         this.title = title;
@@ -82,17 +82,17 @@ public final class FileNoteResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setChecksum(List<String> checksum) {
+        public Builder checksum(List<String> checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setFileType(String fileType) {
+        public Builder fileType(String fileType) {
             this.fileType = Objects.requireNonNull(fileType);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

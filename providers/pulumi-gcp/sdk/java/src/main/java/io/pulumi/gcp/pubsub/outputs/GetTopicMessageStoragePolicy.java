@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetTopicMessageStoragePolicy {
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor({"allowedPersistenceRegions"})
-    private GetTopicMessageStoragePolicy(List<String> allowedPersistenceRegions) {
+    @OutputCustomType.Constructor
+    private GetTopicMessageStoragePolicy(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 
@@ -41,7 +41,7 @@ public final class GetTopicMessageStoragePolicy {
     	      this.allowedPersistenceRegions = defaults.allowedPersistenceRegions;
         }
 
-        public Builder setAllowedPersistenceRegions(List<String> allowedPersistenceRegions) {
+        public Builder allowedPersistenceRegions(List<String> allowedPersistenceRegions) {
             this.allowedPersistenceRegions = Objects.requireNonNull(allowedPersistenceRegions);
             return this;
         }

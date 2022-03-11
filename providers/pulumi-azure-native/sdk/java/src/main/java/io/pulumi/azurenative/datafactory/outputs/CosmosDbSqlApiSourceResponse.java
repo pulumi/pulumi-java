@@ -64,18 +64,18 @@ public final class CosmosDbSqlApiSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"additionalColumns","detectDatetime","disableMetricsCollection","maxConcurrentConnections","pageSize","preferredRegions","query","sourceRetryCount","sourceRetryWait","type"})
+    @OutputCustomType.Constructor
     private CosmosDbSqlApiSourceResponse(
-        @Nullable Object additionalColumns,
-        @Nullable Object detectDatetime,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object pageSize,
-        @Nullable Object preferredRegions,
-        @Nullable Object query,
-        @Nullable Object sourceRetryCount,
-        @Nullable Object sourceRetryWait,
-        String type) {
+        @OutputCustomType.Parameter("additionalColumns") @Nullable Object additionalColumns,
+        @OutputCustomType.Parameter("detectDatetime") @Nullable Object detectDatetime,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("pageSize") @Nullable Object pageSize,
+        @OutputCustomType.Parameter("preferredRegions") @Nullable Object preferredRegions,
+        @OutputCustomType.Parameter("query") @Nullable Object query,
+        @OutputCustomType.Parameter("sourceRetryCount") @Nullable Object sourceRetryCount,
+        @OutputCustomType.Parameter("sourceRetryWait") @Nullable Object sourceRetryWait,
+        @OutputCustomType.Parameter("type") String type) {
         this.additionalColumns = additionalColumns;
         this.detectDatetime = detectDatetime;
         this.disableMetricsCollection = disableMetricsCollection;
@@ -198,52 +198,52 @@ public final class CosmosDbSqlApiSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setDetectDatetime(@Nullable Object detectDatetime) {
+        public Builder detectDatetime(@Nullable Object detectDatetime) {
             this.detectDatetime = detectDatetime;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPageSize(@Nullable Object pageSize) {
+        public Builder pageSize(@Nullable Object pageSize) {
             this.pageSize = pageSize;
             return this;
         }
 
-        public Builder setPreferredRegions(@Nullable Object preferredRegions) {
+        public Builder preferredRegions(@Nullable Object preferredRegions) {
             this.preferredRegions = preferredRegions;
             return this;
         }
 
-        public Builder setQuery(@Nullable Object query) {
+        public Builder query(@Nullable Object query) {
             this.query = query;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

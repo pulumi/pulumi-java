@@ -86,24 +86,24 @@ public final class GetWorkspaceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationGroupReferences","cloudPcResource","description","etag","friendlyName","id","identity","kind","location","managedBy","name","objectId","plan","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable List<String> applicationGroupReferences,
-        Boolean cloudPcResource,
-        @Nullable String description,
-        String etag,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        String name,
-        String objectId,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("applicationGroupReferences") @Nullable List<String> applicationGroupReferences,
+        @OutputCustomType.Parameter("cloudPcResource") Boolean cloudPcResource,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationGroupReferences = applicationGroupReferences;
         this.cloudPcResource = cloudPcResource;
         this.description = description;
@@ -273,82 +273,82 @@ public final class GetWorkspaceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
+        public Builder applicationGroupReferences(@Nullable List<String> applicationGroupReferences) {
             this.applicationGroupReferences = applicationGroupReferences;
             return this;
         }
 
-        public Builder setCloudPcResource(Boolean cloudPcResource) {
+        public Builder cloudPcResource(Boolean cloudPcResource) {
             this.cloudPcResource = Objects.requireNonNull(cloudPcResource);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
+        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
+        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
+        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

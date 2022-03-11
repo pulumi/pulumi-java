@@ -68,19 +68,19 @@ public final class GetAFDOriginGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"deploymentStatus","healthProbeSettings","id","loadBalancingSettings","name","provisioningState","responseBasedAfdOriginErrorDetectionSettings","sessionAffinityState","systemData","trafficRestorationTimeToHealedOrNewEndpointsInMinutes","type"})
+    @OutputCustomType.Constructor
     private GetAFDOriginGroupResult(
-        String deploymentStatus,
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String id,
-        @Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings,
-        String name,
-        String provisioningState,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings,
-        @Nullable String sessionAffinityState,
-        SystemDataResponse systemData,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
-        String type) {
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("responseBasedAfdOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings,
+        @OutputCustomType.Parameter("sessionAffinityState") @Nullable String sessionAffinityState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes,
+        @OutputCustomType.Parameter("type") String type) {
         this.deploymentStatus = deploymentStatus;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;
@@ -208,57 +208,57 @@ public final class GetAFDOriginGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable LoadBalancingSettingsParametersResponse loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResponseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings) {
+        public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedAfdOriginErrorDetectionSettings) {
             this.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
 
-        public Builder setSessionAffinityState(@Nullable String sessionAffinityState) {
+        public Builder sessionAffinityState(@Nullable String sessionAffinityState) {
             this.sessionAffinityState = sessionAffinityState;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

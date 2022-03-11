@@ -40,14 +40,14 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"displayName","email","firstName","lastName","phone","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ContactInfoResponse(
-        String displayName,
-        String email,
-        String firstName,
-        String lastName,
-        String phone,
-        String title) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("firstName") String firstName,
+        @OutputCustomType.Parameter("lastName") String lastName,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("title") String title) {
         this.displayName = displayName;
         this.email = email;
         this.firstName = firstName;
@@ -129,32 +129,32 @@ public final class GoogleCloudChannelV1ContactInfoResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setFirstName(String firstName) {
+        public Builder firstName(String firstName) {
             this.firstName = Objects.requireNonNull(firstName);
             return this;
         }
 
-        public Builder setLastName(String lastName) {
+        public Builder lastName(String lastName) {
             this.lastName = Objects.requireNonNull(lastName);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

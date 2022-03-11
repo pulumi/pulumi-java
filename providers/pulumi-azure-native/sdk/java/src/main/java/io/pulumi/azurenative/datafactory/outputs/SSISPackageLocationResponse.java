@@ -69,18 +69,18 @@ public final class SSISPackageLocationResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"accessCredential","childPackages","configurationAccessCredential","configurationPath","packageContent","packageLastModifiedDate","packageName","packagePassword","packagePath","type"})
+    @OutputCustomType.Constructor
     private SSISPackageLocationResponse(
-        @Nullable SSISAccessCredentialResponse accessCredential,
-        @Nullable List<SSISChildPackageResponse> childPackages,
-        @Nullable SSISAccessCredentialResponse configurationAccessCredential,
-        @Nullable Object configurationPath,
-        @Nullable Object packageContent,
-        @Nullable String packageLastModifiedDate,
-        @Nullable String packageName,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
-        @Nullable Object packagePath,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("accessCredential") @Nullable SSISAccessCredentialResponse accessCredential,
+        @OutputCustomType.Parameter("childPackages") @Nullable List<SSISChildPackageResponse> childPackages,
+        @OutputCustomType.Parameter("configurationAccessCredential") @Nullable SSISAccessCredentialResponse configurationAccessCredential,
+        @OutputCustomType.Parameter("configurationPath") @Nullable Object configurationPath,
+        @OutputCustomType.Parameter("packageContent") @Nullable Object packageContent,
+        @OutputCustomType.Parameter("packageLastModifiedDate") @Nullable String packageLastModifiedDate,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packagePassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword,
+        @OutputCustomType.Parameter("packagePath") @Nullable Object packagePath,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.accessCredential = accessCredential;
         this.childPackages = childPackages;
         this.configurationAccessCredential = configurationAccessCredential;
@@ -202,52 +202,52 @@ public final class SSISPackageLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
+        public Builder accessCredential(@Nullable SSISAccessCredentialResponse accessCredential) {
             this.accessCredential = accessCredential;
             return this;
         }
 
-        public Builder setChildPackages(@Nullable List<SSISChildPackageResponse> childPackages) {
+        public Builder childPackages(@Nullable List<SSISChildPackageResponse> childPackages) {
             this.childPackages = childPackages;
             return this;
         }
 
-        public Builder setConfigurationAccessCredential(@Nullable SSISAccessCredentialResponse configurationAccessCredential) {
+        public Builder configurationAccessCredential(@Nullable SSISAccessCredentialResponse configurationAccessCredential) {
             this.configurationAccessCredential = configurationAccessCredential;
             return this;
         }
 
-        public Builder setConfigurationPath(@Nullable Object configurationPath) {
+        public Builder configurationPath(@Nullable Object configurationPath) {
             this.configurationPath = configurationPath;
             return this;
         }
 
-        public Builder setPackageContent(@Nullable Object packageContent) {
+        public Builder packageContent(@Nullable Object packageContent) {
             this.packageContent = packageContent;
             return this;
         }
 
-        public Builder setPackageLastModifiedDate(@Nullable String packageLastModifiedDate) {
+        public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
             this.packageLastModifiedDate = packageLastModifiedDate;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackagePassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword) {
+        public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword) {
             this.packagePassword = packagePassword;
             return this;
         }
 
-        public Builder setPackagePath(@Nullable Object packagePath) {
+        public Builder packagePath(@Nullable Object packagePath) {
             this.packagePath = packagePath;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

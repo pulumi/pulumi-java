@@ -15,8 +15,8 @@ public final class DateAfterCreationResponse {
      */
     private final Double daysAfterCreationGreaterThan;
 
-    @OutputCustomType.Constructor({"daysAfterCreationGreaterThan"})
-    private DateAfterCreationResponse(Double daysAfterCreationGreaterThan) {
+    @OutputCustomType.Constructor
+    private DateAfterCreationResponse(@OutputCustomType.Parameter("daysAfterCreationGreaterThan") Double daysAfterCreationGreaterThan) {
         this.daysAfterCreationGreaterThan = daysAfterCreationGreaterThan;
     }
 
@@ -48,7 +48,7 @@ public final class DateAfterCreationResponse {
     	      this.daysAfterCreationGreaterThan = defaults.daysAfterCreationGreaterThan;
         }
 
-        public Builder setDaysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
+        public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
         }

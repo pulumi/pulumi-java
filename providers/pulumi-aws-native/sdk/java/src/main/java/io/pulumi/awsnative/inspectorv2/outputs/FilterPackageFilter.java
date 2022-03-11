@@ -19,14 +19,14 @@ public final class FilterPackageFilter {
     private final @Nullable FilterStringFilter sourceLayerHash;
     private final @Nullable FilterStringFilter version;
 
-    @OutputCustomType.Constructor({"architecture","epoch","name","release","sourceLayerHash","version"})
+    @OutputCustomType.Constructor
     private FilterPackageFilter(
-        @Nullable FilterStringFilter architecture,
-        @Nullable FilterNumberFilter epoch,
-        @Nullable FilterStringFilter name,
-        @Nullable FilterStringFilter release,
-        @Nullable FilterStringFilter sourceLayerHash,
-        @Nullable FilterStringFilter version) {
+        @OutputCustomType.Parameter("architecture") @Nullable FilterStringFilter architecture,
+        @OutputCustomType.Parameter("epoch") @Nullable FilterNumberFilter epoch,
+        @OutputCustomType.Parameter("name") @Nullable FilterStringFilter name,
+        @OutputCustomType.Parameter("release") @Nullable FilterStringFilter release,
+        @OutputCustomType.Parameter("sourceLayerHash") @Nullable FilterStringFilter sourceLayerHash,
+        @OutputCustomType.Parameter("version") @Nullable FilterStringFilter version) {
         this.architecture = architecture;
         this.epoch = epoch;
         this.name = name;
@@ -84,32 +84,32 @@ public final class FilterPackageFilter {
     	      this.version = defaults.version;
         }
 
-        public Builder setArchitecture(@Nullable FilterStringFilter architecture) {
+        public Builder architecture(@Nullable FilterStringFilter architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setEpoch(@Nullable FilterNumberFilter epoch) {
+        public Builder epoch(@Nullable FilterNumberFilter epoch) {
             this.epoch = epoch;
             return this;
         }
 
-        public Builder setName(@Nullable FilterStringFilter name) {
+        public Builder name(@Nullable FilterStringFilter name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRelease(@Nullable FilterStringFilter release) {
+        public Builder release(@Nullable FilterStringFilter release) {
             this.release = release;
             return this;
         }
 
-        public Builder setSourceLayerHash(@Nullable FilterStringFilter sourceLayerHash) {
+        public Builder sourceLayerHash(@Nullable FilterStringFilter sourceLayerHash) {
             this.sourceLayerHash = sourceLayerHash;
             return this;
         }
 
-        public Builder setVersion(@Nullable FilterStringFilter version) {
+        public Builder version(@Nullable FilterStringFilter version) {
             this.version = version;
             return this;
         }

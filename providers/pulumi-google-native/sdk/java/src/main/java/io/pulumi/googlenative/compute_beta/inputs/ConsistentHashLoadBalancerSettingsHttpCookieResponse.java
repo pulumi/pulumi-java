@@ -89,17 +89,17 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieResponse extends 
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTtl(DurationResponse ttl) {
+        public Builder ttl(DurationResponse ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

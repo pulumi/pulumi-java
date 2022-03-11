@@ -25,11 +25,11 @@ public final class CatalogTableTargetTable {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","name"})
+    @OutputCustomType.Constructor
     private CatalogTableTargetTable(
-        String catalogId,
-        String databaseName,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;
@@ -81,17 +81,17 @@ public final class CatalogTableTargetTable {
     	      this.name = defaults.name;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

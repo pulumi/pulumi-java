@@ -94,24 +94,24 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"additionalExperiments","additionalUserLabels","enableStreamingEngine","flexrsGoal","ipConfiguration","kmsKeyName","machineType","maxWorkers","network","numWorkers","serviceAccountEmail","subnetwork","tempLocation","workerRegion","workerZone","zone"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse(
-        List<String> additionalExperiments,
-        Map<String,String> additionalUserLabels,
-        Boolean enableStreamingEngine,
-        String flexrsGoal,
-        String ipConfiguration,
-        String kmsKeyName,
-        String machineType,
-        Integer maxWorkers,
-        String network,
-        Integer numWorkers,
-        String serviceAccountEmail,
-        String subnetwork,
-        String tempLocation,
-        String workerRegion,
-        String workerZone,
-        String zone) {
+        @OutputCustomType.Parameter("additionalExperiments") List<String> additionalExperiments,
+        @OutputCustomType.Parameter("additionalUserLabels") Map<String,String> additionalUserLabels,
+        @OutputCustomType.Parameter("enableStreamingEngine") Boolean enableStreamingEngine,
+        @OutputCustomType.Parameter("flexrsGoal") String flexrsGoal,
+        @OutputCustomType.Parameter("ipConfiguration") String ipConfiguration,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("maxWorkers") Integer maxWorkers,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("numWorkers") Integer numWorkers,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tempLocation") String tempLocation,
+        @OutputCustomType.Parameter("workerRegion") String workerRegion,
+        @OutputCustomType.Parameter("workerZone") String workerZone,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.additionalExperiments = additionalExperiments;
         this.additionalUserLabels = additionalUserLabels;
         this.enableStreamingEngine = enableStreamingEngine;
@@ -293,82 +293,82 @@ public final class GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentRespo
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAdditionalExperiments(List<String> additionalExperiments) {
+        public Builder additionalExperiments(List<String> additionalExperiments) {
             this.additionalExperiments = Objects.requireNonNull(additionalExperiments);
             return this;
         }
 
-        public Builder setAdditionalUserLabels(Map<String,String> additionalUserLabels) {
+        public Builder additionalUserLabels(Map<String,String> additionalUserLabels) {
             this.additionalUserLabels = Objects.requireNonNull(additionalUserLabels);
             return this;
         }
 
-        public Builder setEnableStreamingEngine(Boolean enableStreamingEngine) {
+        public Builder enableStreamingEngine(Boolean enableStreamingEngine) {
             this.enableStreamingEngine = Objects.requireNonNull(enableStreamingEngine);
             return this;
         }
 
-        public Builder setFlexrsGoal(String flexrsGoal) {
+        public Builder flexrsGoal(String flexrsGoal) {
             this.flexrsGoal = Objects.requireNonNull(flexrsGoal);
             return this;
         }
 
-        public Builder setIpConfiguration(String ipConfiguration) {
+        public Builder ipConfiguration(String ipConfiguration) {
             this.ipConfiguration = Objects.requireNonNull(ipConfiguration);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMaxWorkers(Integer maxWorkers) {
+        public Builder maxWorkers(Integer maxWorkers) {
             this.maxWorkers = Objects.requireNonNull(maxWorkers);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNumWorkers(Integer numWorkers) {
+        public Builder numWorkers(Integer numWorkers) {
             this.numWorkers = Objects.requireNonNull(numWorkers);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTempLocation(String tempLocation) {
+        public Builder tempLocation(String tempLocation) {
             this.tempLocation = Objects.requireNonNull(tempLocation);
             return this;
         }
 
-        public Builder setWorkerRegion(String workerRegion) {
+        public Builder workerRegion(String workerRegion) {
             this.workerRegion = Objects.requireNonNull(workerRegion);
             return this;
         }
 
-        public Builder setWorkerZone(String workerZone) {
+        public Builder workerZone(String workerZone) {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

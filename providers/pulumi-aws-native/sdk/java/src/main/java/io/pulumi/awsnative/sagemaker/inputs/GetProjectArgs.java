@@ -47,7 +47,7 @@ public final class GetProjectArgs extends io.pulumi.resources.InvokeArgs {
     	      this.projectArn = defaults.projectArn;
         }
 
-        public Builder setProjectArn(String projectArn) {
+        public Builder projectArn(String projectArn) {
             this.projectArn = Objects.requireNonNull(projectArn);
             return this;
         }

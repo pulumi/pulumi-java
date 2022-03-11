@@ -27,11 +27,11 @@ public final class AnalyticsApplicationInputsSchemaRecordColumn {
      */
     private final String sqlType;
 
-    @OutputCustomType.Constructor({"mapping","name","sqlType"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordColumn(
-        @Nullable String mapping,
-        String name,
-        String sqlType) {
+        @OutputCustomType.Parameter("mapping") @Nullable String mapping,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sqlType") String sqlType) {
         this.mapping = mapping;
         this.name = name;
         this.sqlType = sqlType;
@@ -83,17 +83,17 @@ public final class AnalyticsApplicationInputsSchemaRecordColumn {
     	      this.sqlType = defaults.sqlType;
         }
 
-        public Builder setMapping(@Nullable String mapping) {
+        public Builder mapping(@Nullable String mapping) {
             this.mapping = mapping;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSqlType(String sqlType) {
+        public Builder sqlType(String sqlType) {
             this.sqlType = Objects.requireNonNull(sqlType);
             return this;
         }

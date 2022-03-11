@@ -27,12 +27,12 @@ public final class GetRegionsResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"allRegions","filters","id","names"})
+    @OutputCustomType.Constructor
     private GetRegionsResult(
-        @Nullable Boolean allRegions,
-        @Nullable List<GetRegionsFilter> filters,
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("allRegions") @Nullable Boolean allRegions,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRegionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.allRegions = allRegions;
         this.filters = filters;
         this.id = id;
@@ -86,22 +86,22 @@ public final class GetRegionsResult {
     	      this.names = defaults.names;
         }
 
-        public Builder setAllRegions(@Nullable Boolean allRegions) {
+        public Builder allRegions(@Nullable Boolean allRegions) {
             this.allRegions = allRegions;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetRegionsFilter> filters) {
+        public Builder filters(@Nullable List<GetRegionsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

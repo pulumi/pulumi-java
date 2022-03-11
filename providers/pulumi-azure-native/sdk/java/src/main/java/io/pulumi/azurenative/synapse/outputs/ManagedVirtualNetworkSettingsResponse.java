@@ -29,11 +29,11 @@ public final class ManagedVirtualNetworkSettingsResponse {
      */
     private final @Nullable Boolean preventDataExfiltration;
 
-    @OutputCustomType.Constructor({"allowedAadTenantIdsForLinking","linkedAccessCheckOnTargetResource","preventDataExfiltration"})
+    @OutputCustomType.Constructor
     private ManagedVirtualNetworkSettingsResponse(
-        @Nullable List<String> allowedAadTenantIdsForLinking,
-        @Nullable Boolean linkedAccessCheckOnTargetResource,
-        @Nullable Boolean preventDataExfiltration) {
+        @OutputCustomType.Parameter("allowedAadTenantIdsForLinking") @Nullable List<String> allowedAadTenantIdsForLinking,
+        @OutputCustomType.Parameter("linkedAccessCheckOnTargetResource") @Nullable Boolean linkedAccessCheckOnTargetResource,
+        @OutputCustomType.Parameter("preventDataExfiltration") @Nullable Boolean preventDataExfiltration) {
         this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
         this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
         this.preventDataExfiltration = preventDataExfiltration;
@@ -85,17 +85,17 @@ public final class ManagedVirtualNetworkSettingsResponse {
     	      this.preventDataExfiltration = defaults.preventDataExfiltration;
         }
 
-        public Builder setAllowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
+        public Builder allowedAadTenantIdsForLinking(@Nullable List<String> allowedAadTenantIdsForLinking) {
             this.allowedAadTenantIdsForLinking = allowedAadTenantIdsForLinking;
             return this;
         }
 
-        public Builder setLinkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
+        public Builder linkedAccessCheckOnTargetResource(@Nullable Boolean linkedAccessCheckOnTargetResource) {
             this.linkedAccessCheckOnTargetResource = linkedAccessCheckOnTargetResource;
             return this;
         }
 
-        public Builder setPreventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
+        public Builder preventDataExfiltration(@Nullable Boolean preventDataExfiltration) {
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
         }

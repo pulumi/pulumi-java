@@ -17,8 +17,8 @@ public final class ExperimentsResponse {
      */
     private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
-    @OutputCustomType.Constructor({"rampUpRules"})
-    private ExperimentsResponse(@Nullable List<RampUpRuleResponse> rampUpRules) {
+    @OutputCustomType.Constructor
+    private ExperimentsResponse(@OutputCustomType.Parameter("rampUpRules") @Nullable List<RampUpRuleResponse> rampUpRules) {
         this.rampUpRules = rampUpRules;
     }
 
@@ -50,7 +50,7 @@ public final class ExperimentsResponse {
     	      this.rampUpRules = defaults.rampUpRules;
         }
 
-        public Builder setRampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
+        public Builder rampUpRules(@Nullable List<RampUpRuleResponse> rampUpRules) {
             this.rampUpRules = rampUpRules;
             return this;
         }

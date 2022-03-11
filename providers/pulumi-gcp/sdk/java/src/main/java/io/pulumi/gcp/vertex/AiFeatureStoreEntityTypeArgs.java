@@ -106,42 +106,42 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
     	      this.name = defaults.name;
         }
 
-        public Builder setFeaturestore(Input<String> featurestore) {
+        public Builder featurestore(Input<String> featurestore) {
             this.featurestore = Objects.requireNonNull(featurestore);
             return this;
         }
 
-        public Builder setFeaturestore(String featurestore) {
+        public Builder featurestore(String featurestore) {
             this.featurestore = Input.of(Objects.requireNonNull(featurestore));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMonitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
+        public Builder monitoringConfig(@Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig) {
             this.monitoringConfig = monitoringConfig;
             return this;
         }
 
-        public Builder setMonitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
+        public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigArgs monitoringConfig) {
             this.monitoringConfig = Input.ofNullable(monitoringConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

@@ -16,8 +16,8 @@ public final class LanguageCodesSetResponse {
      */
     private final List<String> languageCodes;
 
-    @OutputCustomType.Constructor({"languageCodes"})
-    private LanguageCodesSetResponse(List<String> languageCodes) {
+    @OutputCustomType.Constructor
+    private LanguageCodesSetResponse(@OutputCustomType.Parameter("languageCodes") List<String> languageCodes) {
         this.languageCodes = languageCodes;
     }
 
@@ -49,7 +49,7 @@ public final class LanguageCodesSetResponse {
     	      this.languageCodes = defaults.languageCodes;
         }
 
-        public Builder setLanguageCodes(List<String> languageCodes) {
+        public Builder languageCodes(List<String> languageCodes) {
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class MigrateProjectResponseTags {
     private final @Nullable String additionalProperties;
 
-    @OutputCustomType.Constructor({"additionalProperties"})
-    private MigrateProjectResponseTags(@Nullable String additionalProperties) {
+    @OutputCustomType.Constructor
+    private MigrateProjectResponseTags(@OutputCustomType.Parameter("additionalProperties") @Nullable String additionalProperties) {
         this.additionalProperties = additionalProperties;
     }
 
@@ -42,7 +42,7 @@ public final class MigrateProjectResponseTags {
     	      this.additionalProperties = defaults.additionalProperties;
         }
 
-        public Builder setAdditionalProperties(@Nullable String additionalProperties) {
+        public Builder additionalProperties(@Nullable String additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }

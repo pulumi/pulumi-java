@@ -26,11 +26,11 @@ public final class StepResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"kind","name","properties"})
+    @OutputCustomType.Constructor
     private StepResponse(
-        String kind,
-        String name,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.kind = kind;
         this.name = name;
         this.properties = properties;
@@ -82,17 +82,17 @@ public final class StepResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

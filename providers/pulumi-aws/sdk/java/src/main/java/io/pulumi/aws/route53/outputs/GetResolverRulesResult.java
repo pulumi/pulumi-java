@@ -27,14 +27,14 @@ public final class GetResolverRulesResult {
     private final @Nullable String ruleType;
     private final @Nullable String shareStatus;
 
-    @OutputCustomType.Constructor({"id","ownerId","resolverEndpointId","resolverRuleIds","ruleType","shareStatus"})
+    @OutputCustomType.Constructor
     private GetResolverRulesResult(
-        String id,
-        @Nullable String ownerId,
-        @Nullable String resolverEndpointId,
-        List<String> resolverRuleIds,
-        @Nullable String ruleType,
-        @Nullable String shareStatus) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("resolverEndpointId") @Nullable String resolverEndpointId,
+        @OutputCustomType.Parameter("resolverRuleIds") List<String> resolverRuleIds,
+        @OutputCustomType.Parameter("ruleType") @Nullable String ruleType,
+        @OutputCustomType.Parameter("shareStatus") @Nullable String shareStatus) {
         this.id = id;
         this.ownerId = ownerId;
         this.resolverEndpointId = resolverEndpointId;
@@ -100,32 +100,32 @@ public final class GetResolverRulesResult {
     	      this.shareStatus = defaults.shareStatus;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setResolverEndpointId(@Nullable String resolverEndpointId) {
+        public Builder resolverEndpointId(@Nullable String resolverEndpointId) {
             this.resolverEndpointId = resolverEndpointId;
             return this;
         }
 
-        public Builder setResolverRuleIds(List<String> resolverRuleIds) {
+        public Builder resolverRuleIds(List<String> resolverRuleIds) {
             this.resolverRuleIds = Objects.requireNonNull(resolverRuleIds);
             return this;
         }
 
-        public Builder setRuleType(@Nullable String ruleType) {
+        public Builder ruleType(@Nullable String ruleType) {
             this.ruleType = ruleType;
             return this;
         }
 
-        public Builder setShareStatus(@Nullable String shareStatus) {
+        public Builder shareStatus(@Nullable String shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }

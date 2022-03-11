@@ -31,12 +31,12 @@ public final class PipelineParameterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"defaultValue","description","localCopy","name"})
+    @OutputCustomType.Constructor
     private PipelineParameterResponse(
-        String defaultValue,
-        String description,
-        LocalCopyResponse localCopy,
-        String name) {
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("localCopy") LocalCopyResponse localCopy,
+        @OutputCustomType.Parameter("name") String name) {
         this.defaultValue = defaultValue;
         this.description = description;
         this.localCopy = localCopy;
@@ -98,22 +98,22 @@ public final class PipelineParameterResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLocalCopy(LocalCopyResponse localCopy) {
+        public Builder localCopy(LocalCopyResponse localCopy) {
             this.localCopy = Objects.requireNonNull(localCopy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

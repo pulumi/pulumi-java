@@ -22,10 +22,10 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
      */
     private final CacheKeyQueryStringActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private DeliveryRuleCacheKeyQueryStringActionResponse(
-        String name,
-        CacheKeyQueryStringActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") CacheKeyQueryStringActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class DeliveryRuleCacheKeyQueryStringActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(CacheKeyQueryStringActionParametersResponse parameters) {
+        public Builder parameters(CacheKeyQueryStringActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

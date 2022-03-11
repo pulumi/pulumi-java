@@ -52,16 +52,16 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
      */
     private final String primaryDomain;
 
-    @OutputCustomType.Constructor({"adminConsoleUri","alternateEmail","customerType","eduData","isDomainVerified","languageCode","phoneNumber","primaryDomain"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1CloudIdentityInfoResponse(
-        String adminConsoleUri,
-        String alternateEmail,
-        String customerType,
-        GoogleCloudChannelV1EduDataResponse eduData,
-        Boolean isDomainVerified,
-        String languageCode,
-        String phoneNumber,
-        String primaryDomain) {
+        @OutputCustomType.Parameter("adminConsoleUri") String adminConsoleUri,
+        @OutputCustomType.Parameter("alternateEmail") String alternateEmail,
+        @OutputCustomType.Parameter("customerType") String customerType,
+        @OutputCustomType.Parameter("eduData") GoogleCloudChannelV1EduDataResponse eduData,
+        @OutputCustomType.Parameter("isDomainVerified") Boolean isDomainVerified,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("primaryDomain") String primaryDomain) {
         this.adminConsoleUri = adminConsoleUri;
         this.alternateEmail = alternateEmail;
         this.customerType = customerType;
@@ -163,42 +163,42 @@ public final class GoogleCloudChannelV1CloudIdentityInfoResponse {
     	      this.primaryDomain = defaults.primaryDomain;
         }
 
-        public Builder setAdminConsoleUri(String adminConsoleUri) {
+        public Builder adminConsoleUri(String adminConsoleUri) {
             this.adminConsoleUri = Objects.requireNonNull(adminConsoleUri);
             return this;
         }
 
-        public Builder setAlternateEmail(String alternateEmail) {
+        public Builder alternateEmail(String alternateEmail) {
             this.alternateEmail = Objects.requireNonNull(alternateEmail);
             return this;
         }
 
-        public Builder setCustomerType(String customerType) {
+        public Builder customerType(String customerType) {
             this.customerType = Objects.requireNonNull(customerType);
             return this;
         }
 
-        public Builder setEduData(GoogleCloudChannelV1EduDataResponse eduData) {
+        public Builder eduData(GoogleCloudChannelV1EduDataResponse eduData) {
             this.eduData = Objects.requireNonNull(eduData);
             return this;
         }
 
-        public Builder setIsDomainVerified(Boolean isDomainVerified) {
+        public Builder isDomainVerified(Boolean isDomainVerified) {
             this.isDomainVerified = Objects.requireNonNull(isDomainVerified);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPrimaryDomain(String primaryDomain) {
+        public Builder primaryDomain(String primaryDomain) {
             this.primaryDomain = Objects.requireNonNull(primaryDomain);
             return this;
         }

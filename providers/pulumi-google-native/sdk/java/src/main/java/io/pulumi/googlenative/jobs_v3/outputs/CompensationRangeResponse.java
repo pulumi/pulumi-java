@@ -20,10 +20,10 @@ public final class CompensationRangeResponse {
      */
     private final MoneyResponse minCompensation;
 
-    @OutputCustomType.Constructor({"maxCompensation","minCompensation"})
+    @OutputCustomType.Constructor
     private CompensationRangeResponse(
-        MoneyResponse maxCompensation,
-        MoneyResponse minCompensation) {
+        @OutputCustomType.Parameter("maxCompensation") MoneyResponse maxCompensation,
+        @OutputCustomType.Parameter("minCompensation") MoneyResponse minCompensation) {
         this.maxCompensation = maxCompensation;
         this.minCompensation = minCompensation;
     }
@@ -65,12 +65,12 @@ public final class CompensationRangeResponse {
     	      this.minCompensation = defaults.minCompensation;
         }
 
-        public Builder setMaxCompensation(MoneyResponse maxCompensation) {
+        public Builder maxCompensation(MoneyResponse maxCompensation) {
             this.maxCompensation = Objects.requireNonNull(maxCompensation);
             return this;
         }
 
-        public Builder setMinCompensation(MoneyResponse minCompensation) {
+        public Builder minCompensation(MoneyResponse minCompensation) {
             this.minCompensation = Objects.requireNonNull(minCompensation);
             return this;
         }

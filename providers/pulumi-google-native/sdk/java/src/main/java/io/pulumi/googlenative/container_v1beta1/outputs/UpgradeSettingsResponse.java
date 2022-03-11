@@ -20,10 +20,10 @@ public final class UpgradeSettingsResponse {
      */
     private final Integer maxUnavailable;
 
-    @OutputCustomType.Constructor({"maxSurge","maxUnavailable"})
+    @OutputCustomType.Constructor
     private UpgradeSettingsResponse(
-        Integer maxSurge,
-        Integer maxUnavailable) {
+        @OutputCustomType.Parameter("maxSurge") Integer maxSurge,
+        @OutputCustomType.Parameter("maxUnavailable") Integer maxUnavailable) {
         this.maxSurge = maxSurge;
         this.maxUnavailable = maxUnavailable;
     }
@@ -65,12 +65,12 @@ public final class UpgradeSettingsResponse {
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxSurge(Integer maxSurge) {
+        public Builder maxSurge(Integer maxSurge) {
             this.maxSurge = Objects.requireNonNull(maxSurge);
             return this;
         }
 
-        public Builder setMaxUnavailable(Integer maxUnavailable) {
+        public Builder maxUnavailable(Integer maxUnavailable) {
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }

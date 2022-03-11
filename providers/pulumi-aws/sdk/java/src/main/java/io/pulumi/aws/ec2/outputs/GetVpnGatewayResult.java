@@ -22,16 +22,16 @@ public final class GetVpnGatewayResult {
     private final String state;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"amazonSideAsn","arn","attachedVpcId","availabilityZone","filters","id","state","tags"})
+    @OutputCustomType.Constructor
     private GetVpnGatewayResult(
-        String amazonSideAsn,
-        String arn,
-        String attachedVpcId,
-        String availabilityZone,
-        @Nullable List<GetVpnGatewayFilter> filters,
-        String id,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("amazonSideAsn") String amazonSideAsn,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attachedVpcId") String attachedVpcId,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpnGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.amazonSideAsn = amazonSideAsn;
         this.arn = arn;
         this.attachedVpcId = attachedVpcId;
@@ -101,42 +101,42 @@ public final class GetVpnGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAmazonSideAsn(String amazonSideAsn) {
+        public Builder amazonSideAsn(String amazonSideAsn) {
             this.amazonSideAsn = Objects.requireNonNull(amazonSideAsn);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAttachedVpcId(String attachedVpcId) {
+        public Builder attachedVpcId(String attachedVpcId) {
             this.attachedVpcId = Objects.requireNonNull(attachedVpcId);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpnGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetVpnGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

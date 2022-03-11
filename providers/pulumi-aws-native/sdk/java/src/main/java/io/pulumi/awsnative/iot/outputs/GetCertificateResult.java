@@ -16,11 +16,11 @@ public final class GetCertificateResult {
     private final @Nullable String id;
     private final @Nullable CertificateStatus status;
 
-    @OutputCustomType.Constructor({"arn","id","status"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable CertificateStatus status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("status") @Nullable CertificateStatus status) {
         this.arn = arn;
         this.id = id;
         this.status = status;
@@ -60,17 +60,17 @@ public final class GetCertificateResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setStatus(@Nullable CertificateStatus status) {
+        public Builder status(@Nullable CertificateStatus status) {
             this.status = status;
             return this;
         }

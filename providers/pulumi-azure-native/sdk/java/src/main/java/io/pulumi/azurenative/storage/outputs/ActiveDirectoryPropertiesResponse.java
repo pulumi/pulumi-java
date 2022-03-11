@@ -40,14 +40,14 @@ public final class ActiveDirectoryPropertiesResponse {
      */
     private final String netBiosDomainName;
 
-    @OutputCustomType.Constructor({"azureStorageSid","domainGuid","domainName","domainSid","forestName","netBiosDomainName"})
+    @OutputCustomType.Constructor
     private ActiveDirectoryPropertiesResponse(
-        String azureStorageSid,
-        String domainGuid,
-        String domainName,
-        String domainSid,
-        String forestName,
-        String netBiosDomainName) {
+        @OutputCustomType.Parameter("azureStorageSid") String azureStorageSid,
+        @OutputCustomType.Parameter("domainGuid") String domainGuid,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainSid") String domainSid,
+        @OutputCustomType.Parameter("forestName") String forestName,
+        @OutputCustomType.Parameter("netBiosDomainName") String netBiosDomainName) {
         this.azureStorageSid = azureStorageSid;
         this.domainGuid = domainGuid;
         this.domainName = domainName;
@@ -129,32 +129,32 @@ public final class ActiveDirectoryPropertiesResponse {
     	      this.netBiosDomainName = defaults.netBiosDomainName;
         }
 
-        public Builder setAzureStorageSid(String azureStorageSid) {
+        public Builder azureStorageSid(String azureStorageSid) {
             this.azureStorageSid = Objects.requireNonNull(azureStorageSid);
             return this;
         }
 
-        public Builder setDomainGuid(String domainGuid) {
+        public Builder domainGuid(String domainGuid) {
             this.domainGuid = Objects.requireNonNull(domainGuid);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainSid(String domainSid) {
+        public Builder domainSid(String domainSid) {
             this.domainSid = Objects.requireNonNull(domainSid);
             return this;
         }
 
-        public Builder setForestName(String forestName) {
+        public Builder forestName(String forestName) {
             this.forestName = Objects.requireNonNull(forestName);
             return this;
         }
 
-        public Builder setNetBiosDomainName(String netBiosDomainName) {
+        public Builder netBiosDomainName(String netBiosDomainName) {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }

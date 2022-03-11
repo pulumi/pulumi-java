@@ -28,11 +28,11 @@ public final class SSISAccessCredentialResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor({"domain","password","userName"})
+    @OutputCustomType.Constructor
     private SSISAccessCredentialResponse(
-        Object domain,
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object userName) {
+        @OutputCustomType.Parameter("domain") Object domain,
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("userName") Object userName) {
         this.domain = domain;
         this.password = password;
         this.userName = userName;
@@ -84,17 +84,17 @@ public final class SSISAccessCredentialResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setDomain(Object domain) {
+        public Builder domain(Object domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

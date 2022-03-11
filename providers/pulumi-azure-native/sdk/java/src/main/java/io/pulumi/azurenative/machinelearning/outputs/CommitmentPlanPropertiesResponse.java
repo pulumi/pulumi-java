@@ -64,18 +64,18 @@ public final class CommitmentPlanPropertiesResponse {
      */
     private final Boolean suspendPlanOnOverage;
 
-    @OutputCustomType.Constructor({"chargeForOverage","chargeForPlan","creationDate","includedQuantities","maxAssociationLimit","maxCapacityLimit","minCapacityLimit","planMeter","refillFrequencyInDays","suspendPlanOnOverage"})
+    @OutputCustomType.Constructor
     private CommitmentPlanPropertiesResponse(
-        Boolean chargeForOverage,
-        Boolean chargeForPlan,
-        String creationDate,
-        Map<String,PlanQuantityResponse> includedQuantities,
-        Integer maxAssociationLimit,
-        Integer maxCapacityLimit,
-        Integer minCapacityLimit,
-        String planMeter,
-        Integer refillFrequencyInDays,
-        Boolean suspendPlanOnOverage) {
+        @OutputCustomType.Parameter("chargeForOverage") Boolean chargeForOverage,
+        @OutputCustomType.Parameter("chargeForPlan") Boolean chargeForPlan,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("includedQuantities") Map<String,PlanQuantityResponse> includedQuantities,
+        @OutputCustomType.Parameter("maxAssociationLimit") Integer maxAssociationLimit,
+        @OutputCustomType.Parameter("maxCapacityLimit") Integer maxCapacityLimit,
+        @OutputCustomType.Parameter("minCapacityLimit") Integer minCapacityLimit,
+        @OutputCustomType.Parameter("planMeter") String planMeter,
+        @OutputCustomType.Parameter("refillFrequencyInDays") Integer refillFrequencyInDays,
+        @OutputCustomType.Parameter("suspendPlanOnOverage") Boolean suspendPlanOnOverage) {
         this.chargeForOverage = chargeForOverage;
         this.chargeForPlan = chargeForPlan;
         this.creationDate = creationDate;
@@ -197,52 +197,52 @@ public final class CommitmentPlanPropertiesResponse {
     	      this.suspendPlanOnOverage = defaults.suspendPlanOnOverage;
         }
 
-        public Builder setChargeForOverage(Boolean chargeForOverage) {
+        public Builder chargeForOverage(Boolean chargeForOverage) {
             this.chargeForOverage = Objects.requireNonNull(chargeForOverage);
             return this;
         }
 
-        public Builder setChargeForPlan(Boolean chargeForPlan) {
+        public Builder chargeForPlan(Boolean chargeForPlan) {
             this.chargeForPlan = Objects.requireNonNull(chargeForPlan);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setIncludedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
+        public Builder includedQuantities(Map<String,PlanQuantityResponse> includedQuantities) {
             this.includedQuantities = Objects.requireNonNull(includedQuantities);
             return this;
         }
 
-        public Builder setMaxAssociationLimit(Integer maxAssociationLimit) {
+        public Builder maxAssociationLimit(Integer maxAssociationLimit) {
             this.maxAssociationLimit = Objects.requireNonNull(maxAssociationLimit);
             return this;
         }
 
-        public Builder setMaxCapacityLimit(Integer maxCapacityLimit) {
+        public Builder maxCapacityLimit(Integer maxCapacityLimit) {
             this.maxCapacityLimit = Objects.requireNonNull(maxCapacityLimit);
             return this;
         }
 
-        public Builder setMinCapacityLimit(Integer minCapacityLimit) {
+        public Builder minCapacityLimit(Integer minCapacityLimit) {
             this.minCapacityLimit = Objects.requireNonNull(minCapacityLimit);
             return this;
         }
 
-        public Builder setPlanMeter(String planMeter) {
+        public Builder planMeter(String planMeter) {
             this.planMeter = Objects.requireNonNull(planMeter);
             return this;
         }
 
-        public Builder setRefillFrequencyInDays(Integer refillFrequencyInDays) {
+        public Builder refillFrequencyInDays(Integer refillFrequencyInDays) {
             this.refillFrequencyInDays = Objects.requireNonNull(refillFrequencyInDays);
             return this;
         }
 
-        public Builder setSuspendPlanOnOverage(Boolean suspendPlanOnOverage) {
+        public Builder suspendPlanOnOverage(Boolean suspendPlanOnOverage) {
             this.suspendPlanOnOverage = Objects.requireNonNull(suspendPlanOnOverage);
             return this;
         }

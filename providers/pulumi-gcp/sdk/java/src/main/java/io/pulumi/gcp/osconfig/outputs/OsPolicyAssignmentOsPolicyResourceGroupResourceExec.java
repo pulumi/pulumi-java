@@ -23,10 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
      */
     private final OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate;
 
-    @OutputCustomType.Constructor({"enforce","validate"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExec(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
-        OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
+        @OutputCustomType.Parameter("enforce") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce,
+        @OutputCustomType.Parameter("validate") OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
         this.enforce = enforce;
         this.validate = validate;
     }
@@ -68,12 +68,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExec {
     	      this.validate = defaults.validate;
         }
 
-        public Builder setEnforce(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce) {
+        public Builder enforce(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce enforce) {
             this.enforce = enforce;
             return this;
         }
 
-        public Builder setValidate(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
+        public Builder validate(OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate validate) {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }

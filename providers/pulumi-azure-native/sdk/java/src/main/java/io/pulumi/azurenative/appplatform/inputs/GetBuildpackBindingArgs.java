@@ -116,27 +116,27 @@ public final class GetBuildpackBindingArgs extends io.pulumi.resources.InvokeArg
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setBuildServiceName(String buildServiceName) {
+        public Builder buildServiceName(String buildServiceName) {
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
 
-        public Builder setBuilderName(String builderName) {
+        public Builder builderName(String builderName) {
             this.builderName = Objects.requireNonNull(builderName);
             return this;
         }
 
-        public Builder setBuildpackBindingName(String buildpackBindingName) {
+        public Builder buildpackBindingName(String buildpackBindingName) {
             this.buildpackBindingName = Objects.requireNonNull(buildpackBindingName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

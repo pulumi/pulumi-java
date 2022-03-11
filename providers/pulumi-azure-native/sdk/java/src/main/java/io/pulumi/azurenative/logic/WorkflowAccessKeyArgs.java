@@ -134,62 +134,62 @@ public final class WorkflowAccessKeyArgs extends io.pulumi.resources.ResourceArg
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder setAccessKeyName(@Nullable Input<String> accessKeyName) {
+        public Builder accessKeyName(@Nullable Input<String> accessKeyName) {
             this.accessKeyName = accessKeyName;
             return this;
         }
 
-        public Builder setAccessKeyName(@Nullable String accessKeyName) {
+        public Builder accessKeyName(@Nullable String accessKeyName) {
             this.accessKeyName = Input.ofNullable(accessKeyName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setNotAfter(@Nullable Input<String> notAfter) {
+        public Builder notAfter(@Nullable Input<String> notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
-        public Builder setNotAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = Input.ofNullable(notAfter);
             return this;
         }
 
-        public Builder setNotBefore(@Nullable Input<String> notBefore) {
+        public Builder notBefore(@Nullable Input<String> notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable String notBefore) {
+        public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setWorkflowName(Input<String> workflowName) {
+        public Builder workflowName(Input<String> workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
 
-        public Builder setWorkflowName(String workflowName) {
+        public Builder workflowName(String workflowName) {
             this.workflowName = Input.of(Objects.requireNonNull(workflowName));
             return this;
         }

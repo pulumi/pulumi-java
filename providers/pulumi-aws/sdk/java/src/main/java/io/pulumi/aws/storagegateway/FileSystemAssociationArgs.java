@@ -152,72 +152,72 @@ public final class FileSystemAssociationArgs extends io.pulumi.resources.Resourc
     	      this.username = defaults.username;
         }
 
-        public Builder setAuditDestinationArn(@Nullable Input<String> auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable Input<String> auditDestinationArn) {
             this.auditDestinationArn = auditDestinationArn;
             return this;
         }
 
-        public Builder setAuditDestinationArn(@Nullable String auditDestinationArn) {
+        public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
             this.auditDestinationArn = Input.ofNullable(auditDestinationArn);
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable Input<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
+        public Builder cacheAttributes(@Nullable Input<FileSystemAssociationCacheAttributesArgs> cacheAttributes) {
             this.cacheAttributes = cacheAttributes;
             return this;
         }
 
-        public Builder setCacheAttributes(@Nullable FileSystemAssociationCacheAttributesArgs cacheAttributes) {
+        public Builder cacheAttributes(@Nullable FileSystemAssociationCacheAttributesArgs cacheAttributes) {
             this.cacheAttributes = Input.ofNullable(cacheAttributes);
             return this;
         }
 
-        public Builder setGatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Input<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
 
-        public Builder setLocationArn(Input<String> locationArn) {
+        public Builder locationArn(Input<String> locationArn) {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
 
-        public Builder setLocationArn(String locationArn) {
+        public Builder locationArn(String locationArn) {
             this.locationArn = Input.of(Objects.requireNonNull(locationArn));
             return this;
         }
 
-        public Builder setPassword(Input<String> password) {
+        public Builder password(Input<String> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Input.of(Objects.requireNonNull(password));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUsername(Input<String> username) {
+        public Builder username(Input<String> username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }

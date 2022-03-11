@@ -46,14 +46,14 @@ public final class IssuancePolicyResponse {
      */
     private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
-    @OutputCustomType.Constructor({"allowedIssuanceModes","allowedKeyTypes","baselineValues","identityConstraints","maximumLifetime","passthroughExtensions"})
+    @OutputCustomType.Constructor
     private IssuancePolicyResponse(
-        IssuanceModesResponse allowedIssuanceModes,
-        List<AllowedKeyTypeResponse> allowedKeyTypes,
-        X509ParametersResponse baselineValues,
-        CertificateIdentityConstraintsResponse identityConstraints,
-        String maximumLifetime,
-        CertificateExtensionConstraintsResponse passthroughExtensions) {
+        @OutputCustomType.Parameter("allowedIssuanceModes") IssuanceModesResponse allowedIssuanceModes,
+        @OutputCustomType.Parameter("allowedKeyTypes") List<AllowedKeyTypeResponse> allowedKeyTypes,
+        @OutputCustomType.Parameter("baselineValues") X509ParametersResponse baselineValues,
+        @OutputCustomType.Parameter("identityConstraints") CertificateIdentityConstraintsResponse identityConstraints,
+        @OutputCustomType.Parameter("maximumLifetime") String maximumLifetime,
+        @OutputCustomType.Parameter("passthroughExtensions") CertificateExtensionConstraintsResponse passthroughExtensions) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;
@@ -135,32 +135,32 @@ public final class IssuancePolicyResponse {
     	      this.passthroughExtensions = defaults.passthroughExtensions;
         }
 
-        public Builder setAllowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
+        public Builder allowedIssuanceModes(IssuanceModesResponse allowedIssuanceModes) {
             this.allowedIssuanceModes = Objects.requireNonNull(allowedIssuanceModes);
             return this;
         }
 
-        public Builder setAllowedKeyTypes(List<AllowedKeyTypeResponse> allowedKeyTypes) {
+        public Builder allowedKeyTypes(List<AllowedKeyTypeResponse> allowedKeyTypes) {
             this.allowedKeyTypes = Objects.requireNonNull(allowedKeyTypes);
             return this;
         }
 
-        public Builder setBaselineValues(X509ParametersResponse baselineValues) {
+        public Builder baselineValues(X509ParametersResponse baselineValues) {
             this.baselineValues = Objects.requireNonNull(baselineValues);
             return this;
         }
 
-        public Builder setIdentityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
+        public Builder identityConstraints(CertificateIdentityConstraintsResponse identityConstraints) {
             this.identityConstraints = Objects.requireNonNull(identityConstraints);
             return this;
         }
 
-        public Builder setMaximumLifetime(String maximumLifetime) {
+        public Builder maximumLifetime(String maximumLifetime) {
             this.maximumLifetime = Objects.requireNonNull(maximumLifetime);
             return this;
         }
 
-        public Builder setPassthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
+        public Builder passthroughExtensions(CertificateExtensionConstraintsResponse passthroughExtensions) {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }

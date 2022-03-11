@@ -76,20 +76,20 @@ public final class MetricTriggerResponse {
      */
     private final String timeWindow;
 
-    @OutputCustomType.Constructor({"dimensions","dividePerInstance","metricName","metricNamespace","metricResourceLocation","metricResourceUri","operator","statistic","threshold","timeAggregation","timeGrain","timeWindow"})
+    @OutputCustomType.Constructor
     private MetricTriggerResponse(
-        @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
-        @Nullable Boolean dividePerInstance,
-        String metricName,
-        @Nullable String metricNamespace,
-        @Nullable String metricResourceLocation,
-        String metricResourceUri,
-        String operator,
-        String statistic,
-        Double threshold,
-        String timeAggregation,
-        String timeGrain,
-        String timeWindow) {
+        @OutputCustomType.Parameter("dimensions") @Nullable List<ScaleRuleMetricDimensionResponse> dimensions,
+        @OutputCustomType.Parameter("dividePerInstance") @Nullable Boolean dividePerInstance,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") @Nullable String metricNamespace,
+        @OutputCustomType.Parameter("metricResourceLocation") @Nullable String metricResourceLocation,
+        @OutputCustomType.Parameter("metricResourceUri") String metricResourceUri,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("statistic") String statistic,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("timeAggregation") String timeAggregation,
+        @OutputCustomType.Parameter("timeGrain") String timeGrain,
+        @OutputCustomType.Parameter("timeWindow") String timeWindow) {
         this.dimensions = dimensions;
         this.dividePerInstance = dividePerInstance;
         this.metricName = metricName;
@@ -231,62 +231,62 @@ public final class MetricTriggerResponse {
     	      this.timeWindow = defaults.timeWindow;
         }
 
-        public Builder setDimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
+        public Builder dimensions(@Nullable List<ScaleRuleMetricDimensionResponse> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDividePerInstance(@Nullable Boolean dividePerInstance) {
+        public Builder dividePerInstance(@Nullable Boolean dividePerInstance) {
             this.dividePerInstance = dividePerInstance;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(@Nullable String metricNamespace) {
+        public Builder metricNamespace(@Nullable String metricNamespace) {
             this.metricNamespace = metricNamespace;
             return this;
         }
 
-        public Builder setMetricResourceLocation(@Nullable String metricResourceLocation) {
+        public Builder metricResourceLocation(@Nullable String metricResourceLocation) {
             this.metricResourceLocation = metricResourceLocation;
             return this;
         }
 
-        public Builder setMetricResourceUri(String metricResourceUri) {
+        public Builder metricResourceUri(String metricResourceUri) {
             this.metricResourceUri = Objects.requireNonNull(metricResourceUri);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setTimeAggregation(String timeAggregation) {
+        public Builder timeAggregation(String timeAggregation) {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
 
-        public Builder setTimeGrain(String timeGrain) {
+        public Builder timeGrain(String timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setTimeWindow(String timeWindow) {
+        public Builder timeWindow(String timeWindow) {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }

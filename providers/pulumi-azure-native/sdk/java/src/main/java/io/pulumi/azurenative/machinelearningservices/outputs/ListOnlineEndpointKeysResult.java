@@ -22,10 +22,10 @@ public final class ListOnlineEndpointKeysResult {
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListOnlineEndpointKeysResult(
-        @Nullable String primaryKey,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }
@@ -67,12 +67,12 @@ public final class ListOnlineEndpointKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

@@ -57,12 +57,12 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.gatewayResourceId = defaults.gatewayResourceId;
         }
 
-        public Builder setGatewayResourceId(@Nullable Input<String> gatewayResourceId) {
+        public Builder gatewayResourceId(@Nullable Input<String> gatewayResourceId) {
             this.gatewayResourceId = gatewayResourceId;
             return this;
         }
 
-        public Builder setGatewayResourceId(@Nullable String gatewayResourceId) {
+        public Builder gatewayResourceId(@Nullable String gatewayResourceId) {
             this.gatewayResourceId = Input.ofNullable(gatewayResourceId);
             return this;
         }

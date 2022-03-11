@@ -25,11 +25,11 @@ public final class JwtClaimsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor({"audience","issuer","subject"})
+    @OutputCustomType.Constructor
     private JwtClaimsResponse(
-        String audience,
-        String issuer,
-        String subject) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("subject") String subject) {
         this.audience = audience;
         this.issuer = issuer;
         this.subject = subject;
@@ -81,17 +81,17 @@ public final class JwtClaimsResponse {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }

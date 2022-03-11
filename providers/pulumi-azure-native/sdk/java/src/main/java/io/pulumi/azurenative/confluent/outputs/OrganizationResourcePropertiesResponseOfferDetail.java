@@ -42,14 +42,14 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
      */
     private final @Nullable String termUnit;
 
-    @OutputCustomType.Constructor({"id","planId","planName","publisherId","status","termUnit"})
+    @OutputCustomType.Constructor
     private OrganizationResourcePropertiesResponseOfferDetail(
-        @Nullable String id,
-        @Nullable String planId,
-        @Nullable String planName,
-        @Nullable String publisherId,
-        String status,
-        @Nullable String termUnit) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("planId") @Nullable String planId,
+        @OutputCustomType.Parameter("planName") @Nullable String planName,
+        @OutputCustomType.Parameter("publisherId") @Nullable String publisherId,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("termUnit") @Nullable String termUnit) {
         this.id = id;
         this.planId = planId;
         this.planName = planName;
@@ -131,32 +131,32 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
     	      this.termUnit = defaults.termUnit;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPlanId(@Nullable String planId) {
+        public Builder planId(@Nullable String planId) {
             this.planId = planId;
             return this;
         }
 
-        public Builder setPlanName(@Nullable String planName) {
+        public Builder planName(@Nullable String planName) {
             this.planName = planName;
             return this;
         }
 
-        public Builder setPublisherId(@Nullable String publisherId) {
+        public Builder publisherId(@Nullable String publisherId) {
             this.publisherId = publisherId;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTermUnit(@Nullable String termUnit) {
+        public Builder termUnit(@Nullable String termUnit) {
             this.termUnit = termUnit;
             return this;
         }

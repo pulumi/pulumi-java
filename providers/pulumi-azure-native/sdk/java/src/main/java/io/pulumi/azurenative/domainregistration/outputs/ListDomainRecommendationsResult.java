@@ -22,10 +22,10 @@ public final class ListDomainRecommendationsResult {
      */
     private final List<NameIdentifierResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListDomainRecommendationsResult(
-        String nextLink,
-        List<NameIdentifierResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<NameIdentifierResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListDomainRecommendationsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<NameIdentifierResponse> value) {
+        public Builder value(List<NameIdentifierResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

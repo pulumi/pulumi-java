@@ -93,25 +93,25 @@ public final class GetJobResult {
      */
     private final @Nullable List<JobValidationConfiguration> validationConfigurations;
 
-    @OutputCustomType.Constructor({"dataCatalogOutputs","databaseOutputs","datasetName","encryptionKeyArn","encryptionMode","jobSample","logSubscription","maxCapacity","maxRetries","outputLocation","outputs","profileConfiguration","projectName","recipe","roleArn","timeout","validationConfigurations"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
-        @Nullable List<JobDatabaseOutput> databaseOutputs,
-        @Nullable String datasetName,
-        @Nullable String encryptionKeyArn,
-        @Nullable JobEncryptionMode encryptionMode,
-        @Nullable JobSample jobSample,
-        @Nullable JobLogSubscription logSubscription,
-        @Nullable Integer maxCapacity,
-        @Nullable Integer maxRetries,
-        @Nullable JobOutputLocation outputLocation,
-        @Nullable List<JobOutput> outputs,
-        @Nullable JobProfileConfiguration profileConfiguration,
-        @Nullable String projectName,
-        @Nullable JobRecipe recipe,
-        @Nullable String roleArn,
-        @Nullable Integer timeout,
-        @Nullable List<JobValidationConfiguration> validationConfigurations) {
+        @OutputCustomType.Parameter("dataCatalogOutputs") @Nullable List<JobDataCatalogOutput> dataCatalogOutputs,
+        @OutputCustomType.Parameter("databaseOutputs") @Nullable List<JobDatabaseOutput> databaseOutputs,
+        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
+        @OutputCustomType.Parameter("encryptionKeyArn") @Nullable String encryptionKeyArn,
+        @OutputCustomType.Parameter("encryptionMode") @Nullable JobEncryptionMode encryptionMode,
+        @OutputCustomType.Parameter("jobSample") @Nullable JobSample jobSample,
+        @OutputCustomType.Parameter("logSubscription") @Nullable JobLogSubscription logSubscription,
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries,
+        @OutputCustomType.Parameter("outputLocation") @Nullable JobOutputLocation outputLocation,
+        @OutputCustomType.Parameter("outputs") @Nullable List<JobOutput> outputs,
+        @OutputCustomType.Parameter("profileConfiguration") @Nullable JobProfileConfiguration profileConfiguration,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("recipe") @Nullable JobRecipe recipe,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("validationConfigurations") @Nullable List<JobValidationConfiguration> validationConfigurations) {
         this.dataCatalogOutputs = dataCatalogOutputs;
         this.databaseOutputs = databaseOutputs;
         this.datasetName = datasetName;
@@ -287,87 +287,87 @@ public final class GetJobResult {
     	      this.validationConfigurations = defaults.validationConfigurations;
         }
 
-        public Builder setDataCatalogOutputs(@Nullable List<JobDataCatalogOutput> dataCatalogOutputs) {
+        public Builder dataCatalogOutputs(@Nullable List<JobDataCatalogOutput> dataCatalogOutputs) {
             this.dataCatalogOutputs = dataCatalogOutputs;
             return this;
         }
 
-        public Builder setDatabaseOutputs(@Nullable List<JobDatabaseOutput> databaseOutputs) {
+        public Builder databaseOutputs(@Nullable List<JobDatabaseOutput> databaseOutputs) {
             this.databaseOutputs = databaseOutputs;
             return this;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setEncryptionKeyArn(@Nullable String encryptionKeyArn) {
+        public Builder encryptionKeyArn(@Nullable String encryptionKeyArn) {
             this.encryptionKeyArn = encryptionKeyArn;
             return this;
         }
 
-        public Builder setEncryptionMode(@Nullable JobEncryptionMode encryptionMode) {
+        public Builder encryptionMode(@Nullable JobEncryptionMode encryptionMode) {
             this.encryptionMode = encryptionMode;
             return this;
         }
 
-        public Builder setJobSample(@Nullable JobSample jobSample) {
+        public Builder jobSample(@Nullable JobSample jobSample) {
             this.jobSample = jobSample;
             return this;
         }
 
-        public Builder setLogSubscription(@Nullable JobLogSubscription logSubscription) {
+        public Builder logSubscription(@Nullable JobLogSubscription logSubscription) {
             this.logSubscription = logSubscription;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable JobOutputLocation outputLocation) {
+        public Builder outputLocation(@Nullable JobOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<JobOutput> outputs) {
+        public Builder outputs(@Nullable List<JobOutput> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setProfileConfiguration(@Nullable JobProfileConfiguration profileConfiguration) {
+        public Builder profileConfiguration(@Nullable JobProfileConfiguration profileConfiguration) {
             this.profileConfiguration = profileConfiguration;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setRecipe(@Nullable JobRecipe recipe) {
+        public Builder recipe(@Nullable JobRecipe recipe) {
             this.recipe = recipe;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setValidationConfigurations(@Nullable List<JobValidationConfiguration> validationConfigurations) {
+        public Builder validationConfigurations(@Nullable List<JobValidationConfiguration> validationConfigurations) {
             this.validationConfigurations = validationConfigurations;
             return this;
         }

@@ -15,8 +15,8 @@ public final class ResourceReferenceResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private ResourceReferenceResponse(String id) {
+    @OutputCustomType.Constructor
+    private ResourceReferenceResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceReferenceResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

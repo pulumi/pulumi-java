@@ -212,102 +212,102 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.sessionAffinity = defaults.sessionAffinity;
         }
 
-        public Builder setBackupPool(@Nullable Input<String> backupPool) {
+        public Builder backupPool(@Nullable Input<String> backupPool) {
             this.backupPool = backupPool;
             return this;
         }
 
-        public Builder setBackupPool(@Nullable String backupPool) {
+        public Builder backupPool(@Nullable String backupPool) {
             this.backupPool = Input.ofNullable(backupPool);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFailoverRatio(@Nullable Input<Double> failoverRatio) {
+        public Builder failoverRatio(@Nullable Input<Double> failoverRatio) {
             this.failoverRatio = failoverRatio;
             return this;
         }
 
-        public Builder setFailoverRatio(@Nullable Double failoverRatio) {
+        public Builder failoverRatio(@Nullable Double failoverRatio) {
             this.failoverRatio = Input.ofNullable(failoverRatio);
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable Input<String> healthChecks) {
+        public Builder healthChecks(@Nullable Input<String> healthChecks) {
             this.healthChecks = healthChecks;
             return this;
         }
 
-        public Builder setHealthChecks(@Nullable String healthChecks) {
+        public Builder healthChecks(@Nullable String healthChecks) {
             this.healthChecks = Input.ofNullable(healthChecks);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Input<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setSelfLink(@Nullable Input<String> selfLink) {
+        public Builder selfLink(@Nullable Input<String> selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Input<String> sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Input<String> sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable String sessionAffinity) {
+        public Builder sessionAffinity(@Nullable String sessionAffinity) {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }

@@ -52,16 +52,16 @@ public final class GetSavedQueryResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"content","createTime","creator","description","labels","lastUpdateTime","lastUpdater","name"})
+    @OutputCustomType.Constructor
     private GetSavedQueryResult(
-        QueryContentResponse content,
-        String createTime,
-        String creator,
-        String description,
-        Map<String,String> labels,
-        String lastUpdateTime,
-        String lastUpdater,
-        String name) {
+        @OutputCustomType.Parameter("content") QueryContentResponse content,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("lastUpdater") String lastUpdater,
+        @OutputCustomType.Parameter("name") String name) {
         this.content = content;
         this.createTime = createTime;
         this.creator = creator;
@@ -163,42 +163,42 @@ public final class GetSavedQueryResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setContent(QueryContentResponse content) {
+        public Builder content(QueryContentResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreator(String creator) {
+        public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setLastUpdater(String lastUpdater) {
+        public Builder lastUpdater(String lastUpdater) {
             this.lastUpdater = Objects.requireNonNull(lastUpdater);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -23,10 +23,10 @@ public final class AppImageConfigKernelGatewayImageConfig {
      */
     private final AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec;
 
-    @OutputCustomType.Constructor({"fileSystemConfig","kernelSpec"})
+    @OutputCustomType.Constructor
     private AppImageConfigKernelGatewayImageConfig(
-        @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig,
-        AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
+        @OutputCustomType.Parameter("fileSystemConfig") @Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig,
+        @OutputCustomType.Parameter("kernelSpec") AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
         this.fileSystemConfig = fileSystemConfig;
         this.kernelSpec = kernelSpec;
     }
@@ -68,12 +68,12 @@ public final class AppImageConfigKernelGatewayImageConfig {
     	      this.kernelSpec = defaults.kernelSpec;
         }
 
-        public Builder setFileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig) {
+        public Builder fileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfig fileSystemConfig) {
             this.fileSystemConfig = fileSystemConfig;
             return this;
         }
 
-        public Builder setKernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
+        public Builder kernelSpec(AppImageConfigKernelGatewayImageConfigKernelSpec kernelSpec) {
             this.kernelSpec = Objects.requireNonNull(kernelSpec);
             return this;
         }

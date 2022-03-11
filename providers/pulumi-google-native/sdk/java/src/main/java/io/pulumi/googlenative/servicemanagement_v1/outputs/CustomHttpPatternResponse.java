@@ -20,10 +20,10 @@ public final class CustomHttpPatternResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"kind","path"})
+    @OutputCustomType.Constructor
     private CustomHttpPatternResponse(
-        String kind,
-        String path) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("path") String path) {
         this.kind = kind;
         this.path = path;
     }
@@ -65,12 +65,12 @@ public final class CustomHttpPatternResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

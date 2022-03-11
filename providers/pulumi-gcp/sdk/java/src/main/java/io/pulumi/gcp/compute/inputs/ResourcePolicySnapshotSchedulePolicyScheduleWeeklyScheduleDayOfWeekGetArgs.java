@@ -70,22 +70,22 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(Input<String> day) {
+        public Builder day(Input<String> day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Input.of(Objects.requireNonNull(day));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

@@ -29,11 +29,11 @@ public final class RuntimeClassSpec {
      */
     private final @Nullable Scheduling scheduling;
 
-    @OutputCustomType.Constructor({"overhead","runtimeHandler","scheduling"})
+    @OutputCustomType.Constructor
     private RuntimeClassSpec(
-        @Nullable Overhead overhead,
-        String runtimeHandler,
-        @Nullable Scheduling scheduling) {
+        @OutputCustomType.Parameter("overhead") @Nullable Overhead overhead,
+        @OutputCustomType.Parameter("runtimeHandler") String runtimeHandler,
+        @OutputCustomType.Parameter("scheduling") @Nullable Scheduling scheduling) {
         this.overhead = overhead;
         this.runtimeHandler = runtimeHandler;
         this.scheduling = scheduling;
@@ -85,17 +85,17 @@ public final class RuntimeClassSpec {
     	      this.scheduling = defaults.scheduling;
         }
 
-        public Builder setOverhead(@Nullable Overhead overhead) {
+        public Builder overhead(@Nullable Overhead overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setRuntimeHandler(String runtimeHandler) {
+        public Builder runtimeHandler(String runtimeHandler) {
             this.runtimeHandler = Objects.requireNonNull(runtimeHandler);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Scheduling scheduling) {
+        public Builder scheduling(@Nullable Scheduling scheduling) {
             this.scheduling = scheduling;
             return this;
         }

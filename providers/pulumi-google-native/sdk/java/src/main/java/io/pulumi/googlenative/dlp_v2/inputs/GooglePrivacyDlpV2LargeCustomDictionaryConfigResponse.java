@@ -90,17 +90,17 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse extends
     	      this.outputPath = defaults.outputPath;
         }
 
-        public Builder setBigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
+        public Builder bigQueryField(GooglePrivacyDlpV2BigQueryFieldResponse bigQueryField) {
             this.bigQueryField = Objects.requireNonNull(bigQueryField);
             return this;
         }
 
-        public Builder setCloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
+        public Builder cloudStorageFileSet(GooglePrivacyDlpV2CloudStorageFileSetResponse cloudStorageFileSet) {
             this.cloudStorageFileSet = Objects.requireNonNull(cloudStorageFileSet);
             return this;
         }
 
-        public Builder setOutputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
+        public Builder outputPath(GooglePrivacyDlpV2CloudStoragePathResponse outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }

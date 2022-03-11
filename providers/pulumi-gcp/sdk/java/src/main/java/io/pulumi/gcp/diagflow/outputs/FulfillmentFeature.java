@@ -17,8 +17,8 @@ public final class FulfillmentFeature {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private FulfillmentFeature(String type) {
+    @OutputCustomType.Constructor
+    private FulfillmentFeature(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -52,7 +52,7 @@ public final class FulfillmentFeature {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

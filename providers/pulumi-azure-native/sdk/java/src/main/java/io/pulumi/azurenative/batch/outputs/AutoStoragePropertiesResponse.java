@@ -20,10 +20,10 @@ public final class AutoStoragePropertiesResponse {
      */
     private final String storageAccountId;
 
-    @OutputCustomType.Constructor({"lastKeySync","storageAccountId"})
+    @OutputCustomType.Constructor
     private AutoStoragePropertiesResponse(
-        String lastKeySync,
-        String storageAccountId) {
+        @OutputCustomType.Parameter("lastKeySync") String lastKeySync,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId) {
         this.lastKeySync = lastKeySync;
         this.storageAccountId = storageAccountId;
     }
@@ -65,12 +65,12 @@ public final class AutoStoragePropertiesResponse {
     	      this.storageAccountId = defaults.storageAccountId;
         }
 
-        public Builder setLastKeySync(String lastKeySync) {
+        public Builder lastKeySync(String lastKeySync) {
             this.lastKeySync = Objects.requireNonNull(lastKeySync);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }

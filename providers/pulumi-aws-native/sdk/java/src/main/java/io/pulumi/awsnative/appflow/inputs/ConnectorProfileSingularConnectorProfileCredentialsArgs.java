@@ -52,12 +52,12 @@ public final class ConnectorProfileSingularConnectorProfileCredentialsArgs exten
     	      this.apiKey = defaults.apiKey;
         }
 
-        public Builder setApiKey(Input<String> apiKey) {
+        public Builder apiKey(Input<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }

@@ -15,8 +15,8 @@ public final class BotSampleValue {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private BotSampleValue(String value) {
+    @OutputCustomType.Constructor
+    private BotSampleValue(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -48,7 +48,7 @@ public final class BotSampleValue {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

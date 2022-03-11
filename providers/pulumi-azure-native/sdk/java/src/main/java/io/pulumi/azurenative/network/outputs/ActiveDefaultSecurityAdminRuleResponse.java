@@ -128,30 +128,30 @@ public final class ActiveDefaultSecurityAdminRuleResponse {
      */
     private final List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor({"access","commitTime","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","flag","id","kind","priority","protocol","provisioningState","region","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
+    @OutputCustomType.Constructor
     private ActiveDefaultSecurityAdminRuleResponse(
-        String access,
-        @Nullable String commitTime,
-        @Nullable String configurationDescription,
-        @Nullable String configurationDisplayName,
-        String description,
-        List<String> destinationPortRanges,
-        List<AddressPrefixItemResponse> destinations,
-        String direction,
-        String displayName,
-        @Nullable String flag,
-        @Nullable String id,
-        String kind,
-        Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable String region,
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @Nullable String ruleCollectionDescription,
-        @Nullable String ruleCollectionDisplayName,
-        @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        List<String> sourcePortRanges,
-        List<AddressPrefixItemResponse> sources) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationPortRanges") List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("flag") @Nullable String flag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @OutputCustomType.Parameter("sourcePortRanges") List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") List<AddressPrefixItemResponse> sources) {
         this.access = access;
         this.commitTime = commitTime;
         this.configurationDescription = configurationDescription;
@@ -394,112 +394,112 @@ public final class ActiveDefaultSecurityAdminRuleResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setCommitTime(@Nullable String commitTime) {
+        public Builder commitTime(@Nullable String commitTime) {
             this.commitTime = commitTime;
             return this;
         }
 
-        public Builder setConfigurationDescription(@Nullable String configurationDescription) {
+        public Builder configurationDescription(@Nullable String configurationDescription) {
             this.configurationDescription = configurationDescription;
             return this;
         }
 
-        public Builder setConfigurationDisplayName(@Nullable String configurationDisplayName) {
+        public Builder configurationDisplayName(@Nullable String configurationDisplayName) {
             this.configurationDisplayName = configurationDisplayName;
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestinationPortRanges(List<String> destinationPortRanges) {
+        public Builder destinationPortRanges(List<String> destinationPortRanges) {
             this.destinationPortRanges = Objects.requireNonNull(destinationPortRanges);
             return this;
         }
 
-        public Builder setDestinations(List<AddressPrefixItemResponse> destinations) {
+        public Builder destinations(List<AddressPrefixItemResponse> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFlag(@Nullable String flag) {
+        public Builder flag(@Nullable String flag) {
             this.flag = flag;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRuleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
+        public Builder ruleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
             this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
             return this;
         }
 
-        public Builder setRuleCollectionDescription(@Nullable String ruleCollectionDescription) {
+        public Builder ruleCollectionDescription(@Nullable String ruleCollectionDescription) {
             this.ruleCollectionDescription = ruleCollectionDescription;
             return this;
         }
 
-        public Builder setRuleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
+        public Builder ruleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
             this.ruleCollectionDisplayName = ruleCollectionDisplayName;
             return this;
         }
 
-        public Builder setRuleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
+        public Builder ruleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
             this.ruleGroups = ruleGroups;
             return this;
         }
 
-        public Builder setSourcePortRanges(List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(List<String> sourcePortRanges) {
             this.sourcePortRanges = Objects.requireNonNull(sourcePortRanges);
             return this;
         }
 
-        public Builder setSources(List<AddressPrefixItemResponse> sources) {
+        public Builder sources(List<AddressPrefixItemResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }

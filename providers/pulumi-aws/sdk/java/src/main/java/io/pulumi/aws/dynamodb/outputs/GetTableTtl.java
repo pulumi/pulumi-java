@@ -13,10 +13,10 @@ public final class GetTableTtl {
     private final String attributeName;
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"attributeName","enabled"})
+    @OutputCustomType.Constructor
     private GetTableTtl(
-        String attributeName,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }
@@ -50,12 +50,12 @@ public final class GetTableTtl {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

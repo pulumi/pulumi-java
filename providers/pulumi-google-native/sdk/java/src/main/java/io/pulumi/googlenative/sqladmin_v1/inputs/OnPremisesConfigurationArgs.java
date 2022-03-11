@@ -187,92 +187,92 @@ public final class OnPremisesConfigurationArgs extends io.pulumi.resources.Resou
     	      this.username = defaults.username;
         }
 
-        public Builder setCaCertificate(@Nullable Input<String> caCertificate) {
+        public Builder caCertificate(@Nullable Input<String> caCertificate) {
             this.caCertificate = caCertificate;
             return this;
         }
 
-        public Builder setCaCertificate(@Nullable String caCertificate) {
+        public Builder caCertificate(@Nullable String caCertificate) {
             this.caCertificate = Input.ofNullable(caCertificate);
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable Input<String> clientCertificate) {
+        public Builder clientCertificate(@Nullable Input<String> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable String clientCertificate) {
+        public Builder clientCertificate(@Nullable String clientCertificate) {
             this.clientCertificate = Input.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder setClientKey(@Nullable Input<String> clientKey) {
+        public Builder clientKey(@Nullable Input<String> clientKey) {
             this.clientKey = clientKey;
             return this;
         }
 
-        public Builder setClientKey(@Nullable String clientKey) {
+        public Builder clientKey(@Nullable String clientKey) {
             this.clientKey = Input.ofNullable(clientKey);
             return this;
         }
 
-        public Builder setDumpFilePath(@Nullable Input<String> dumpFilePath) {
+        public Builder dumpFilePath(@Nullable Input<String> dumpFilePath) {
             this.dumpFilePath = dumpFilePath;
             return this;
         }
 
-        public Builder setDumpFilePath(@Nullable String dumpFilePath) {
+        public Builder dumpFilePath(@Nullable String dumpFilePath) {
             this.dumpFilePath = Input.ofNullable(dumpFilePath);
             return this;
         }
 
-        public Builder setHostPort(@Nullable Input<String> hostPort) {
+        public Builder hostPort(@Nullable Input<String> hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setHostPort(@Nullable String hostPort) {
+        public Builder hostPort(@Nullable String hostPort) {
             this.hostPort = Input.ofNullable(hostPort);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setPassword(@Nullable Input<String> password) {
+        public Builder password(@Nullable Input<String> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setSourceInstance(@Nullable Input<InstanceReferenceArgs> sourceInstance) {
+        public Builder sourceInstance(@Nullable Input<InstanceReferenceArgs> sourceInstance) {
             this.sourceInstance = sourceInstance;
             return this;
         }
 
-        public Builder setSourceInstance(@Nullable InstanceReferenceArgs sourceInstance) {
+        public Builder sourceInstance(@Nullable InstanceReferenceArgs sourceInstance) {
             this.sourceInstance = Input.ofNullable(sourceInstance);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

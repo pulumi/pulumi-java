@@ -17,11 +17,11 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     private final @Nullable List<String> awsRegions;
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"allAwsRegions","awsRegions","roleArn"})
+    @OutputCustomType.Constructor
     private ConfigurationAggregatorOrganizationAggregationSource(
-        @Nullable Boolean allAwsRegions,
-        @Nullable List<String> awsRegions,
-        String roleArn) {
+        @OutputCustomType.Parameter("allAwsRegions") @Nullable Boolean allAwsRegions,
+        @OutputCustomType.Parameter("awsRegions") @Nullable List<String> awsRegions,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.allAwsRegions = allAwsRegions;
         this.awsRegions = awsRegions;
         this.roleArn = roleArn;
@@ -61,17 +61,17 @@ public final class ConfigurationAggregatorOrganizationAggregationSource {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAllAwsRegions(@Nullable Boolean allAwsRegions) {
+        public Builder allAwsRegions(@Nullable Boolean allAwsRegions) {
             this.allAwsRegions = allAwsRegions;
             return this;
         }
 
-        public Builder setAwsRegions(@Nullable List<String> awsRegions) {
+        public Builder awsRegions(@Nullable List<String> awsRegions) {
             this.awsRegions = awsRegions;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

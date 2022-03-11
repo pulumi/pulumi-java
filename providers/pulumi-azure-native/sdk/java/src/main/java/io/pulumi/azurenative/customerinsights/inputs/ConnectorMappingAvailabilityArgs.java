@@ -75,22 +75,22 @@ public final class ConnectorMappingAvailabilityArgs extends io.pulumi.resources.
     	      this.interval = defaults.interval;
         }
 
-        public Builder setFrequency(@Nullable Input<FrequencyTypes> frequency) {
+        public Builder frequency(@Nullable Input<FrequencyTypes> frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setFrequency(@Nullable FrequencyTypes frequency) {
+        public Builder frequency(@Nullable FrequencyTypes frequency) {
             this.frequency = Input.ofNullable(frequency);
             return this;
         }
 
-        public Builder setInterval(Input<Integer> interval) {
+        public Builder interval(Input<Integer> interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Input.of(Objects.requireNonNull(interval));
             return this;
         }

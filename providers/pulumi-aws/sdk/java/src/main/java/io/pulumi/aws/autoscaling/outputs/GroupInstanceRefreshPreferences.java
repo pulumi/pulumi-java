@@ -34,12 +34,12 @@ public final class GroupInstanceRefreshPreferences {
      */
     private final @Nullable Integer minHealthyPercentage;
 
-    @OutputCustomType.Constructor({"checkpointDelay","checkpointPercentages","instanceWarmup","minHealthyPercentage"})
+    @OutputCustomType.Constructor
     private GroupInstanceRefreshPreferences(
-        @Nullable String checkpointDelay,
-        @Nullable List<Integer> checkpointPercentages,
-        @Nullable String instanceWarmup,
-        @Nullable Integer minHealthyPercentage) {
+        @OutputCustomType.Parameter("checkpointDelay") @Nullable String checkpointDelay,
+        @OutputCustomType.Parameter("checkpointPercentages") @Nullable List<Integer> checkpointPercentages,
+        @OutputCustomType.Parameter("instanceWarmup") @Nullable String instanceWarmup,
+        @OutputCustomType.Parameter("minHealthyPercentage") @Nullable Integer minHealthyPercentage) {
         this.checkpointDelay = checkpointDelay;
         this.checkpointPercentages = checkpointPercentages;
         this.instanceWarmup = instanceWarmup;
@@ -101,22 +101,22 @@ public final class GroupInstanceRefreshPreferences {
     	      this.minHealthyPercentage = defaults.minHealthyPercentage;
         }
 
-        public Builder setCheckpointDelay(@Nullable String checkpointDelay) {
+        public Builder checkpointDelay(@Nullable String checkpointDelay) {
             this.checkpointDelay = checkpointDelay;
             return this;
         }
 
-        public Builder setCheckpointPercentages(@Nullable List<Integer> checkpointPercentages) {
+        public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
             this.checkpointPercentages = checkpointPercentages;
             return this;
         }
 
-        public Builder setInstanceWarmup(@Nullable String instanceWarmup) {
+        public Builder instanceWarmup(@Nullable String instanceWarmup) {
             this.instanceWarmup = instanceWarmup;
             return this;
         }
 
-        public Builder setMinHealthyPercentage(@Nullable Integer minHealthyPercentage) {
+        public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
             this.minHealthyPercentage = minHealthyPercentage;
             return this;
         }

@@ -36,13 +36,13 @@ public final class JobStagesResponse {
      */
     private final String stageTime;
 
-    @OutputCustomType.Constructor({"displayName","jobStageDetails","stageName","stageStatus","stageTime"})
+    @OutputCustomType.Constructor
     private JobStagesResponse(
-        String displayName,
-        Object jobStageDetails,
-        String stageName,
-        String stageStatus,
-        String stageTime) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("jobStageDetails") Object jobStageDetails,
+        @OutputCustomType.Parameter("stageName") String stageName,
+        @OutputCustomType.Parameter("stageStatus") String stageStatus,
+        @OutputCustomType.Parameter("stageTime") String stageTime) {
         this.displayName = displayName;
         this.jobStageDetails = jobStageDetails;
         this.stageName = stageName;
@@ -114,27 +114,27 @@ public final class JobStagesResponse {
     	      this.stageTime = defaults.stageTime;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setJobStageDetails(Object jobStageDetails) {
+        public Builder jobStageDetails(Object jobStageDetails) {
             this.jobStageDetails = Objects.requireNonNull(jobStageDetails);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
 
-        public Builder setStageStatus(String stageStatus) {
+        public Builder stageStatus(String stageStatus) {
             this.stageStatus = Objects.requireNonNull(stageStatus);
             return this;
         }
 
-        public Builder setStageTime(String stageTime) {
+        public Builder stageTime(String stageTime) {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
         }

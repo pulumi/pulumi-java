@@ -40,13 +40,13 @@ public final class Node {
      */
     private final @Nullable NodeStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private Node(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable NodeSpec spec,
-        @Nullable NodeStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable NodeSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable NodeStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -118,27 +118,27 @@ public final class Node {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable NodeSpec spec) {
+        public Builder spec(@Nullable NodeSpec spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setStatus(@Nullable NodeStatus status) {
+        public Builder status(@Nullable NodeStatus status) {
             this.status = status;
             return this;
         }

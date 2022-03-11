@@ -15,10 +15,10 @@ public final class DeliveryStreamProcessor {
     private final @Nullable List<DeliveryStreamProcessorParameter> parameters;
     private final DeliveryStreamProcessorType type;
 
-    @OutputCustomType.Constructor({"parameters","type"})
+    @OutputCustomType.Constructor
     private DeliveryStreamProcessor(
-        @Nullable List<DeliveryStreamProcessorParameter> parameters,
-        DeliveryStreamProcessorType type) {
+        @OutputCustomType.Parameter("parameters") @Nullable List<DeliveryStreamProcessorParameter> parameters,
+        @OutputCustomType.Parameter("type") DeliveryStreamProcessorType type) {
         this.parameters = parameters;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class DeliveryStreamProcessor {
     	      this.type = defaults.type;
         }
 
-        public Builder setParameters(@Nullable List<DeliveryStreamProcessorParameter> parameters) {
+        public Builder parameters(@Nullable List<DeliveryStreamProcessorParameter> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(DeliveryStreamProcessorType type) {
+        public Builder type(DeliveryStreamProcessorType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -174,42 +174,42 @@ public final class CertificateDescriptionResponse extends io.pulumi.resources.In
     	      this.subjectKeyId = defaults.subjectKeyId;
         }
 
-        public Builder setAiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
+        public Builder aiaIssuingCertificateUrls(List<String> aiaIssuingCertificateUrls) {
             this.aiaIssuingCertificateUrls = Objects.requireNonNull(aiaIssuingCertificateUrls);
             return this;
         }
 
-        public Builder setAuthorityKeyId(KeyIdResponse authorityKeyId) {
+        public Builder authorityKeyId(KeyIdResponse authorityKeyId) {
             this.authorityKeyId = Objects.requireNonNull(authorityKeyId);
             return this;
         }
 
-        public Builder setCertFingerprint(CertificateFingerprintResponse certFingerprint) {
+        public Builder certFingerprint(CertificateFingerprintResponse certFingerprint) {
             this.certFingerprint = Objects.requireNonNull(certFingerprint);
             return this;
         }
 
-        public Builder setConfigValues(ReusableConfigValuesResponse configValues) {
+        public Builder configValues(ReusableConfigValuesResponse configValues) {
             this.configValues = Objects.requireNonNull(configValues);
             return this;
         }
 
-        public Builder setCrlDistributionPoints(List<String> crlDistributionPoints) {
+        public Builder crlDistributionPoints(List<String> crlDistributionPoints) {
             this.crlDistributionPoints = Objects.requireNonNull(crlDistributionPoints);
             return this;
         }
 
-        public Builder setPublicKey(PublicKeyResponse publicKey) {
+        public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSubjectDescription(SubjectDescriptionResponse subjectDescription) {
+        public Builder subjectDescription(SubjectDescriptionResponse subjectDescription) {
             this.subjectDescription = Objects.requireNonNull(subjectDescription);
             return this;
         }
 
-        public Builder setSubjectKeyId(KeyIdResponse subjectKeyId) {
+        public Builder subjectKeyId(KeyIdResponse subjectKeyId) {
             this.subjectKeyId = Objects.requireNonNull(subjectKeyId);
             return this;
         }

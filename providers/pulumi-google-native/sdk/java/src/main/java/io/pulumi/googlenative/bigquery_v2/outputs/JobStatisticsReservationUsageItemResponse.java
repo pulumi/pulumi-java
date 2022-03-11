@@ -20,10 +20,10 @@ public final class JobStatisticsReservationUsageItemResponse {
      */
     private final String slotMs;
 
-    @OutputCustomType.Constructor({"name","slotMs"})
+    @OutputCustomType.Constructor
     private JobStatisticsReservationUsageItemResponse(
-        String name,
-        String slotMs) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("slotMs") String slotMs) {
         this.name = name;
         this.slotMs = slotMs;
     }
@@ -65,12 +65,12 @@ public final class JobStatisticsReservationUsageItemResponse {
     	      this.slotMs = defaults.slotMs;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSlotMs(String slotMs) {
+        public Builder slotMs(String slotMs) {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }

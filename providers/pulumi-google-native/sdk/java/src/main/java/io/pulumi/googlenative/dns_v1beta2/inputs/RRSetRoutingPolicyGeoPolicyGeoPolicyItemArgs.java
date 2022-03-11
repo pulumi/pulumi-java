@@ -99,42 +99,42 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     	      this.signatureRrdatas = defaults.signatureRrdatas;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRrdatas(@Nullable Input<List<String>> rrdatas) {
+        public Builder rrdatas(@Nullable Input<List<String>> rrdatas) {
             this.rrdatas = rrdatas;
             return this;
         }
 
-        public Builder setRrdatas(@Nullable List<String> rrdatas) {
+        public Builder rrdatas(@Nullable List<String> rrdatas) {
             this.rrdatas = Input.ofNullable(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable Input<List<String>> signatureRrdatas) {
             this.signatureRrdatas = signatureRrdatas;
             return this;
         }
 
-        public Builder setSignatureRrdatas(@Nullable List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(@Nullable List<String> signatureRrdatas) {
             this.signatureRrdatas = Input.ofNullable(signatureRrdatas);
             return this;
         }

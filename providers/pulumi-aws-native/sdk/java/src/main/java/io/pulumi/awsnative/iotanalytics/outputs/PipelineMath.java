@@ -16,12 +16,12 @@ public final class PipelineMath {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"attribute","math","name","next"})
+    @OutputCustomType.Constructor
     private PipelineMath(
-        String attribute,
-        String math,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("math") String math,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.attribute = attribute;
         this.math = math;
         this.name = name;
@@ -67,22 +67,22 @@ public final class PipelineMath {
     	      this.next = defaults.next;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setMath(String math) {
+        public Builder math(String math) {
             this.math = Objects.requireNonNull(math);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

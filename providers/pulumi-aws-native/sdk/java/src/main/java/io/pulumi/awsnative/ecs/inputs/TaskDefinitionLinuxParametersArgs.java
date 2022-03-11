@@ -127,72 +127,72 @@ public final class TaskDefinitionLinuxParametersArgs extends io.pulumi.resources
     	      this.tmpfs = defaults.tmpfs;
         }
 
-        public Builder setCapabilities(@Nullable Input<TaskDefinitionKernelCapabilitiesArgs> capabilities) {
+        public Builder capabilities(@Nullable Input<TaskDefinitionKernelCapabilitiesArgs> capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable TaskDefinitionKernelCapabilitiesArgs capabilities) {
+        public Builder capabilities(@Nullable TaskDefinitionKernelCapabilitiesArgs capabilities) {
             this.capabilities = Input.ofNullable(capabilities);
             return this;
         }
 
-        public Builder setDevices(@Nullable Input<List<TaskDefinitionDeviceArgs>> devices) {
+        public Builder devices(@Nullable Input<List<TaskDefinitionDeviceArgs>> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setDevices(@Nullable List<TaskDefinitionDeviceArgs> devices) {
+        public Builder devices(@Nullable List<TaskDefinitionDeviceArgs> devices) {
             this.devices = Input.ofNullable(devices);
             return this;
         }
 
-        public Builder setInitProcessEnabled(@Nullable Input<Boolean> initProcessEnabled) {
+        public Builder initProcessEnabled(@Nullable Input<Boolean> initProcessEnabled) {
             this.initProcessEnabled = initProcessEnabled;
             return this;
         }
 
-        public Builder setInitProcessEnabled(@Nullable Boolean initProcessEnabled) {
+        public Builder initProcessEnabled(@Nullable Boolean initProcessEnabled) {
             this.initProcessEnabled = Input.ofNullable(initProcessEnabled);
             return this;
         }
 
-        public Builder setMaxSwap(@Nullable Input<Integer> maxSwap) {
+        public Builder maxSwap(@Nullable Input<Integer> maxSwap) {
             this.maxSwap = maxSwap;
             return this;
         }
 
-        public Builder setMaxSwap(@Nullable Integer maxSwap) {
+        public Builder maxSwap(@Nullable Integer maxSwap) {
             this.maxSwap = Input.ofNullable(maxSwap);
             return this;
         }
 
-        public Builder setSharedMemorySize(@Nullable Input<Integer> sharedMemorySize) {
+        public Builder sharedMemorySize(@Nullable Input<Integer> sharedMemorySize) {
             this.sharedMemorySize = sharedMemorySize;
             return this;
         }
 
-        public Builder setSharedMemorySize(@Nullable Integer sharedMemorySize) {
+        public Builder sharedMemorySize(@Nullable Integer sharedMemorySize) {
             this.sharedMemorySize = Input.ofNullable(sharedMemorySize);
             return this;
         }
 
-        public Builder setSwappiness(@Nullable Input<Integer> swappiness) {
+        public Builder swappiness(@Nullable Input<Integer> swappiness) {
             this.swappiness = swappiness;
             return this;
         }
 
-        public Builder setSwappiness(@Nullable Integer swappiness) {
+        public Builder swappiness(@Nullable Integer swappiness) {
             this.swappiness = Input.ofNullable(swappiness);
             return this;
         }
 
-        public Builder setTmpfs(@Nullable Input<List<TaskDefinitionTmpfsArgs>> tmpfs) {
+        public Builder tmpfs(@Nullable Input<List<TaskDefinitionTmpfsArgs>> tmpfs) {
             this.tmpfs = tmpfs;
             return this;
         }
 
-        public Builder setTmpfs(@Nullable List<TaskDefinitionTmpfsArgs> tmpfs) {
+        public Builder tmpfs(@Nullable List<TaskDefinitionTmpfsArgs> tmpfs) {
             this.tmpfs = Input.ofNullable(tmpfs);
             return this;
         }

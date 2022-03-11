@@ -52,16 +52,16 @@ public final class GetGlobalReachConnectionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","authorizationKey","circuitConnectionStatus","id","name","peerExpressRouteCircuit","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetGlobalReachConnectionResult(
-        String addressPrefix,
-        @Nullable String authorizationKey,
-        String circuitConnectionStatus,
-        String id,
-        String name,
-        @Nullable String peerExpressRouteCircuit,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("circuitConnectionStatus") String circuitConnectionStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerExpressRouteCircuit") @Nullable String peerExpressRouteCircuit,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.addressPrefix = addressPrefix;
         this.authorizationKey = authorizationKey;
         this.circuitConnectionStatus = circuitConnectionStatus;
@@ -163,42 +163,42 @@ public final class GetGlobalReachConnectionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(String addressPrefix) {
+        public Builder addressPrefix(String addressPrefix) {
             this.addressPrefix = Objects.requireNonNull(addressPrefix);
             return this;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setCircuitConnectionStatus(String circuitConnectionStatus) {
+        public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             this.circuitConnectionStatus = Objects.requireNonNull(circuitConnectionStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
+        public Builder peerExpressRouteCircuit(@Nullable String peerExpressRouteCircuit) {
             this.peerExpressRouteCircuit = peerExpressRouteCircuit;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

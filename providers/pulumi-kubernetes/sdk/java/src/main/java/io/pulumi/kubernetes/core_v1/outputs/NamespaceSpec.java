@@ -17,8 +17,8 @@ public final class NamespaceSpec {
      */
     private final @Nullable List<String> finalizers;
 
-    @OutputCustomType.Constructor({"finalizers"})
-    private NamespaceSpec(@Nullable List<String> finalizers) {
+    @OutputCustomType.Constructor
+    private NamespaceSpec(@OutputCustomType.Parameter("finalizers") @Nullable List<String> finalizers) {
         this.finalizers = finalizers;
     }
 
@@ -50,7 +50,7 @@ public final class NamespaceSpec {
     	      this.finalizers = defaults.finalizers;
         }
 
-        public Builder setFinalizers(@Nullable List<String> finalizers) {
+        public Builder finalizers(@Nullable List<String> finalizers) {
             this.finalizers = finalizers;
             return this;
         }

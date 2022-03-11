@@ -44,14 +44,14 @@ public final class AacAudioResponse {
      */
     private final @Nullable Integer samplingRate;
 
-    @OutputCustomType.Constructor({"bitrate","channels","label","odataType","profile","samplingRate"})
+    @OutputCustomType.Constructor
     private AacAudioResponse(
-        @Nullable Integer bitrate,
-        @Nullable Integer channels,
-        @Nullable String label,
-        String odataType,
-        @Nullable String profile,
-        @Nullable Integer samplingRate) {
+        @OutputCustomType.Parameter("bitrate") @Nullable Integer bitrate,
+        @OutputCustomType.Parameter("channels") @Nullable Integer channels,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("profile") @Nullable String profile,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;
@@ -134,32 +134,32 @@ public final class AacAudioResponse {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setBitrate(@Nullable Integer bitrate) {
+        public Builder bitrate(@Nullable Integer bitrate) {
             this.bitrate = bitrate;
             return this;
         }
 
-        public Builder setChannels(@Nullable Integer channels) {
+        public Builder channels(@Nullable Integer channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setProfile(@Nullable String profile) {
+        public Builder profile(@Nullable String profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }

@@ -108,42 +108,42 @@ public final class IdentityPropertiesArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setClientSecretUrl(@Nullable Input<String> clientSecretUrl) {
+        public Builder clientSecretUrl(@Nullable Input<String> clientSecretUrl) {
             this.clientSecretUrl = clientSecretUrl;
             return this;
         }
 
-        public Builder setClientSecretUrl(@Nullable String clientSecretUrl) {
+        public Builder clientSecretUrl(@Nullable String clientSecretUrl) {
             this.clientSecretUrl = Input.ofNullable(clientSecretUrl);
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable Input<String> principalId) {
+        public Builder principalId(@Nullable Input<String> principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = Input.ofNullable(principalId);
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,ManagedIdentityType>> type) {
+        public Builder type(@Nullable Input<Either<String,ManagedIdentityType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,ManagedIdentityType> type) {
+        public Builder type(@Nullable Either<String,ManagedIdentityType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

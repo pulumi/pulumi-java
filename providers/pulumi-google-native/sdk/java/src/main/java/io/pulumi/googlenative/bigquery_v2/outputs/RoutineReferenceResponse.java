@@ -25,11 +25,11 @@ public final class RoutineReferenceResponse {
      */
     private final String routineId;
 
-    @OutputCustomType.Constructor({"datasetId","project","routineId"})
+    @OutputCustomType.Constructor
     private RoutineReferenceResponse(
-        String datasetId,
-        String project,
-        String routineId) {
+        @OutputCustomType.Parameter("datasetId") String datasetId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("routineId") String routineId) {
         this.datasetId = datasetId;
         this.project = project;
         this.routineId = routineId;
@@ -81,17 +81,17 @@ public final class RoutineReferenceResponse {
     	      this.routineId = defaults.routineId;
         }
 
-        public Builder setDatasetId(String datasetId) {
+        public Builder datasetId(String datasetId) {
             this.datasetId = Objects.requireNonNull(datasetId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRoutineId(String routineId) {
+        public Builder routineId(String routineId) {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }

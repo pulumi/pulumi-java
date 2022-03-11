@@ -24,13 +24,13 @@ public final class GetTransitGatewayVpcAttachmentResult {
     private final @Nullable List<String> removeSubnetIds;
     private final @Nullable List<TransitGatewayVpcAttachmentTag> tags;
 
-    @OutputCustomType.Constructor({"addSubnetIds","id","options","removeSubnetIds","tags"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayVpcAttachmentResult(
-        @Nullable List<String> addSubnetIds,
-        @Nullable String id,
-        @Nullable OptionsProperties options,
-        @Nullable List<String> removeSubnetIds,
-        @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
+        @OutputCustomType.Parameter("addSubnetIds") @Nullable List<String> addSubnetIds,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("options") @Nullable OptionsProperties options,
+        @OutputCustomType.Parameter("removeSubnetIds") @Nullable List<String> removeSubnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayVpcAttachmentTag> tags) {
         this.addSubnetIds = addSubnetIds;
         this.id = id;
         this.options = options;
@@ -86,27 +86,27 @@ public final class GetTransitGatewayVpcAttachmentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddSubnetIds(@Nullable List<String> addSubnetIds) {
+        public Builder addSubnetIds(@Nullable List<String> addSubnetIds) {
             this.addSubnetIds = addSubnetIds;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOptions(@Nullable OptionsProperties options) {
+        public Builder options(@Nullable OptionsProperties options) {
             this.options = options;
             return this;
         }
 
-        public Builder setRemoveSubnetIds(@Nullable List<String> removeSubnetIds) {
+        public Builder removeSubnetIds(@Nullable List<String> removeSubnetIds) {
             this.removeSubnetIds = removeSubnetIds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayVpcAttachmentTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayVpcAttachmentTag> tags) {
             this.tags = tags;
             return this;
         }

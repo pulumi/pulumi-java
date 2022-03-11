@@ -60,17 +60,17 @@ public final class GetCapacityReservationGroupResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"capacityReservations","id","instanceView","location","name","tags","type","virtualMachinesAssociated","zones"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationGroupResult(
-        List<SubResourceReadOnlyResponse> capacityReservations,
-        String id,
-        CapacityReservationGroupInstanceViewResponse instanceView,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("capacityReservations") List<SubResourceReadOnlyResponse> capacityReservations,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") CapacityReservationGroupInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.capacityReservations = capacityReservations;
         this.id = id;
         this.instanceView = instanceView;
@@ -182,47 +182,47 @@ public final class GetCapacityReservationGroupResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setCapacityReservations(List<SubResourceReadOnlyResponse> capacityReservations) {
+        public Builder capacityReservations(List<SubResourceReadOnlyResponse> capacityReservations) {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(CapacityReservationGroupInstanceViewResponse instanceView) {
+        public Builder instanceView(CapacityReservationGroupInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
+        public Builder virtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
             this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

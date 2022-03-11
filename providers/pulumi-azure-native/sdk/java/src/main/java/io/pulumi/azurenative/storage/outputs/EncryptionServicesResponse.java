@@ -32,12 +32,12 @@ public final class EncryptionServicesResponse {
      */
     private final @Nullable EncryptionServiceResponse table;
 
-    @OutputCustomType.Constructor({"blob","file","queue","table"})
+    @OutputCustomType.Constructor
     private EncryptionServicesResponse(
-        @Nullable EncryptionServiceResponse blob,
-        @Nullable EncryptionServiceResponse file,
-        @Nullable EncryptionServiceResponse queue,
-        @Nullable EncryptionServiceResponse table) {
+        @OutputCustomType.Parameter("blob") @Nullable EncryptionServiceResponse blob,
+        @OutputCustomType.Parameter("file") @Nullable EncryptionServiceResponse file,
+        @OutputCustomType.Parameter("queue") @Nullable EncryptionServiceResponse queue,
+        @OutputCustomType.Parameter("table") @Nullable EncryptionServiceResponse table) {
         this.blob = blob;
         this.file = file;
         this.queue = queue;
@@ -99,22 +99,22 @@ public final class EncryptionServicesResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setBlob(@Nullable EncryptionServiceResponse blob) {
+        public Builder blob(@Nullable EncryptionServiceResponse blob) {
             this.blob = blob;
             return this;
         }
 
-        public Builder setFile(@Nullable EncryptionServiceResponse file) {
+        public Builder file(@Nullable EncryptionServiceResponse file) {
             this.file = file;
             return this;
         }
 
-        public Builder setQueue(@Nullable EncryptionServiceResponse queue) {
+        public Builder queue(@Nullable EncryptionServiceResponse queue) {
             this.queue = queue;
             return this;
         }
 
-        public Builder setTable(@Nullable EncryptionServiceResponse table) {
+        public Builder table(@Nullable EncryptionServiceResponse table) {
             this.table = table;
             return this;
         }

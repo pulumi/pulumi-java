@@ -22,10 +22,10 @@ public final class ReportConfigSortingResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"direction","name"})
+    @OutputCustomType.Constructor
     private ReportConfigSortingResponse(
-        @Nullable String direction,
-        String name) {
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("name") String name) {
         this.direction = direction;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class ReportConfigSortingResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

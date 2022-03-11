@@ -15,8 +15,8 @@ public final class DeploymentTargetConfig {
      */
     private final String content;
 
-    @OutputCustomType.Constructor({"content"})
-    private DeploymentTargetConfig(String content) {
+    @OutputCustomType.Constructor
+    private DeploymentTargetConfig(@OutputCustomType.Parameter("content") String content) {
         this.content = content;
     }
 
@@ -48,7 +48,7 @@ public final class DeploymentTargetConfig {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }

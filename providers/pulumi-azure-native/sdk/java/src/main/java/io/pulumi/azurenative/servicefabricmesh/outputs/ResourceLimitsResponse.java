@@ -22,10 +22,10 @@ public final class ResourceLimitsResponse {
      */
     private final @Nullable Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceLimitsResponse(
-        @Nullable Double cpu,
-        @Nullable Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Double memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }
@@ -67,12 +67,12 @@ public final class ResourceLimitsResponse {
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMemoryInGB(@Nullable Double memoryInGB) {
+        public Builder memoryInGB(@Nullable Double memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }

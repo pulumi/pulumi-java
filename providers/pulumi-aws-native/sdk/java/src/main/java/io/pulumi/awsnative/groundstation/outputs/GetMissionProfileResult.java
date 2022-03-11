@@ -42,18 +42,18 @@ public final class GetMissionProfileResult {
     private final @Nullable List<MissionProfileTag> tags;
     private final @Nullable String trackingConfigArn;
 
-    @OutputCustomType.Constructor({"arn","contactPostPassDurationSeconds","contactPrePassDurationSeconds","dataflowEdges","id","minimumViableContactDurationSeconds","name","region","tags","trackingConfigArn"})
+    @OutputCustomType.Constructor
     private GetMissionProfileResult(
-        @Nullable String arn,
-        @Nullable Integer contactPostPassDurationSeconds,
-        @Nullable Integer contactPrePassDurationSeconds,
-        @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
-        @Nullable String id,
-        @Nullable Integer minimumViableContactDurationSeconds,
-        @Nullable String name,
-        @Nullable String region,
-        @Nullable List<MissionProfileTag> tags,
-        @Nullable String trackingConfigArn) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("contactPostPassDurationSeconds") @Nullable Integer contactPostPassDurationSeconds,
+        @OutputCustomType.Parameter("contactPrePassDurationSeconds") @Nullable Integer contactPrePassDurationSeconds,
+        @OutputCustomType.Parameter("dataflowEdges") @Nullable List<MissionProfileDataflowEdge> dataflowEdges,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("minimumViableContactDurationSeconds") @Nullable Integer minimumViableContactDurationSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("tags") @Nullable List<MissionProfileTag> tags,
+        @OutputCustomType.Parameter("trackingConfigArn") @Nullable String trackingConfigArn) {
         this.arn = arn;
         this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
         this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
@@ -151,52 +151,52 @@ public final class GetMissionProfileResult {
     	      this.trackingConfigArn = defaults.trackingConfigArn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setContactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
+        public Builder contactPostPassDurationSeconds(@Nullable Integer contactPostPassDurationSeconds) {
             this.contactPostPassDurationSeconds = contactPostPassDurationSeconds;
             return this;
         }
 
-        public Builder setContactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
+        public Builder contactPrePassDurationSeconds(@Nullable Integer contactPrePassDurationSeconds) {
             this.contactPrePassDurationSeconds = contactPrePassDurationSeconds;
             return this;
         }
 
-        public Builder setDataflowEdges(@Nullable List<MissionProfileDataflowEdge> dataflowEdges) {
+        public Builder dataflowEdges(@Nullable List<MissionProfileDataflowEdge> dataflowEdges) {
             this.dataflowEdges = dataflowEdges;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMinimumViableContactDurationSeconds(@Nullable Integer minimumViableContactDurationSeconds) {
+        public Builder minimumViableContactDurationSeconds(@Nullable Integer minimumViableContactDurationSeconds) {
             this.minimumViableContactDurationSeconds = minimumViableContactDurationSeconds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setTags(@Nullable List<MissionProfileTag> tags) {
+        public Builder tags(@Nullable List<MissionProfileTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTrackingConfigArn(@Nullable String trackingConfigArn) {
+        public Builder trackingConfigArn(@Nullable String trackingConfigArn) {
             this.trackingConfigArn = trackingConfigArn;
             return this;
         }

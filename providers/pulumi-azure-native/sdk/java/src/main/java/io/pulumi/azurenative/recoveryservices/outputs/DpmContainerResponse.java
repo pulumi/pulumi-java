@@ -85,21 +85,21 @@ public final class DpmContainerResponse {
      */
     private final @Nullable Boolean upgradeAvailable;
 
-    @OutputCustomType.Constructor({"backupManagementType","canReRegister","containerId","containerType","dpmAgentVersion","dpmServers","extendedInfo","friendlyName","healthStatus","protectedItemCount","protectionStatus","registrationStatus","upgradeAvailable"})
+    @OutputCustomType.Constructor
     private DpmContainerResponse(
-        @Nullable String backupManagementType,
-        @Nullable Boolean canReRegister,
-        @Nullable String containerId,
-        String containerType,
-        @Nullable String dpmAgentVersion,
-        @Nullable List<String> dpmServers,
-        @Nullable DPMContainerExtendedInfoResponse extendedInfo,
-        @Nullable String friendlyName,
-        @Nullable String healthStatus,
-        @Nullable Double protectedItemCount,
-        @Nullable String protectionStatus,
-        @Nullable String registrationStatus,
-        @Nullable Boolean upgradeAvailable) {
+        @OutputCustomType.Parameter("backupManagementType") @Nullable String backupManagementType,
+        @OutputCustomType.Parameter("canReRegister") @Nullable Boolean canReRegister,
+        @OutputCustomType.Parameter("containerId") @Nullable String containerId,
+        @OutputCustomType.Parameter("containerType") String containerType,
+        @OutputCustomType.Parameter("dpmAgentVersion") @Nullable String dpmAgentVersion,
+        @OutputCustomType.Parameter("dpmServers") @Nullable List<String> dpmServers,
+        @OutputCustomType.Parameter("extendedInfo") @Nullable DPMContainerExtendedInfoResponse extendedInfo,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthStatus") @Nullable String healthStatus,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Double protectedItemCount,
+        @OutputCustomType.Parameter("protectionStatus") @Nullable String protectionStatus,
+        @OutputCustomType.Parameter("registrationStatus") @Nullable String registrationStatus,
+        @OutputCustomType.Parameter("upgradeAvailable") @Nullable Boolean upgradeAvailable) {
         this.backupManagementType = backupManagementType;
         this.canReRegister = canReRegister;
         this.containerId = containerId;
@@ -255,67 +255,67 @@ public final class DpmContainerResponse {
     	      this.upgradeAvailable = defaults.upgradeAvailable;
         }
 
-        public Builder setBackupManagementType(@Nullable String backupManagementType) {
+        public Builder backupManagementType(@Nullable String backupManagementType) {
             this.backupManagementType = backupManagementType;
             return this;
         }
 
-        public Builder setCanReRegister(@Nullable Boolean canReRegister) {
+        public Builder canReRegister(@Nullable Boolean canReRegister) {
             this.canReRegister = canReRegister;
             return this;
         }
 
-        public Builder setContainerId(@Nullable String containerId) {
+        public Builder containerId(@Nullable String containerId) {
             this.containerId = containerId;
             return this;
         }
 
-        public Builder setContainerType(String containerType) {
+        public Builder containerType(String containerType) {
             this.containerType = Objects.requireNonNull(containerType);
             return this;
         }
 
-        public Builder setDpmAgentVersion(@Nullable String dpmAgentVersion) {
+        public Builder dpmAgentVersion(@Nullable String dpmAgentVersion) {
             this.dpmAgentVersion = dpmAgentVersion;
             return this;
         }
 
-        public Builder setDpmServers(@Nullable List<String> dpmServers) {
+        public Builder dpmServers(@Nullable List<String> dpmServers) {
             this.dpmServers = dpmServers;
             return this;
         }
 
-        public Builder setExtendedInfo(@Nullable DPMContainerExtendedInfoResponse extendedInfo) {
+        public Builder extendedInfo(@Nullable DPMContainerExtendedInfoResponse extendedInfo) {
             this.extendedInfo = extendedInfo;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthStatus(@Nullable String healthStatus) {
+        public Builder healthStatus(@Nullable String healthStatus) {
             this.healthStatus = healthStatus;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Double protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setProtectionStatus(@Nullable String protectionStatus) {
+        public Builder protectionStatus(@Nullable String protectionStatus) {
             this.protectionStatus = protectionStatus;
             return this;
         }
 
-        public Builder setRegistrationStatus(@Nullable String registrationStatus) {
+        public Builder registrationStatus(@Nullable String registrationStatus) {
             this.registrationStatus = registrationStatus;
             return this;
         }
 
-        public Builder setUpgradeAvailable(@Nullable Boolean upgradeAvailable) {
+        public Builder upgradeAvailable(@Nullable Boolean upgradeAvailable) {
             this.upgradeAvailable = upgradeAvailable;
             return this;
         }

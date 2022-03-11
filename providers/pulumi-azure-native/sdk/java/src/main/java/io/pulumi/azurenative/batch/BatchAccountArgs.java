@@ -205,102 +205,102 @@ public final class BatchAccountArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setAutoStorage(@Nullable Input<AutoStorageBasePropertiesArgs> autoStorage) {
+        public Builder autoStorage(@Nullable Input<AutoStorageBasePropertiesArgs> autoStorage) {
             this.autoStorage = autoStorage;
             return this;
         }
 
-        public Builder setAutoStorage(@Nullable AutoStorageBasePropertiesArgs autoStorage) {
+        public Builder autoStorage(@Nullable AutoStorageBasePropertiesArgs autoStorage) {
             this.autoStorage = Input.ofNullable(autoStorage);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
+        public Builder encryption(@Nullable Input<EncryptionPropertiesArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertiesArgs encryption) {
+        public Builder encryption(@Nullable EncryptionPropertiesArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<BatchAccountIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<BatchAccountIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable BatchAccountIdentityArgs identity) {
+        public Builder identity(@Nullable BatchAccountIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setKeyVaultReference(@Nullable Input<KeyVaultReferenceArgs> keyVaultReference) {
+        public Builder keyVaultReference(@Nullable Input<KeyVaultReferenceArgs> keyVaultReference) {
             this.keyVaultReference = keyVaultReference;
             return this;
         }
 
-        public Builder setKeyVaultReference(@Nullable KeyVaultReferenceArgs keyVaultReference) {
+        public Builder keyVaultReference(@Nullable KeyVaultReferenceArgs keyVaultReference) {
             this.keyVaultReference = Input.ofNullable(keyVaultReference);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPoolAllocationMode(@Nullable Input<PoolAllocationMode> poolAllocationMode) {
+        public Builder poolAllocationMode(@Nullable Input<PoolAllocationMode> poolAllocationMode) {
             this.poolAllocationMode = poolAllocationMode;
             return this;
         }
 
-        public Builder setPoolAllocationMode(@Nullable PoolAllocationMode poolAllocationMode) {
+        public Builder poolAllocationMode(@Nullable PoolAllocationMode poolAllocationMode) {
             this.poolAllocationMode = Input.ofNullable(poolAllocationMode);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable Input<PublicNetworkAccessType> publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable Input<PublicNetworkAccessType> publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable PublicNetworkAccessType publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable PublicNetworkAccessType publicNetworkAccess) {
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

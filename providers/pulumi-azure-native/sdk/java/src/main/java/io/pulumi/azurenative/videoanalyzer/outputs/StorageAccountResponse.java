@@ -28,11 +28,11 @@ public final class StorageAccountResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"id","identity","status"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String id,
-        @Nullable ResourceIdentityResponse identity,
-        String status) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("status") String status) {
         this.id = id;
         this.identity = identity;
         this.status = status;
@@ -84,17 +84,17 @@ public final class StorageAccountResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

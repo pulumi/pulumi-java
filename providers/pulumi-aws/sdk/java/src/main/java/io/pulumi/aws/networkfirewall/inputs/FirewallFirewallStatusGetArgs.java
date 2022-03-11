@@ -54,12 +54,12 @@ public final class FirewallFirewallStatusGetArgs extends io.pulumi.resources.Res
     	      this.syncStates = defaults.syncStates;
         }
 
-        public Builder setSyncStates(@Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
+        public Builder syncStates(@Nullable Input<List<FirewallFirewallStatusSyncStateGetArgs>> syncStates) {
             this.syncStates = syncStates;
             return this;
         }
 
-        public Builder setSyncStates(@Nullable List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
+        public Builder syncStates(@Nullable List<FirewallFirewallStatusSyncStateGetArgs> syncStates) {
             this.syncStates = Input.ofNullable(syncStates);
             return this;
         }

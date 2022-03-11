@@ -33,12 +33,12 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
      */
     private final @Nullable String stacksetName;
 
-    @OutputCustomType.Constructor({"excludedAccountIds","organizationMembershipType","parentHierarchyId","stacksetName"})
+    @OutputCustomType.Constructor
     private SecurityConnectorPropertiesResponseOrganizationalData(
-        @Nullable List<String> excludedAccountIds,
-        @Nullable String organizationMembershipType,
-        @Nullable String parentHierarchyId,
-        @Nullable String stacksetName) {
+        @OutputCustomType.Parameter("excludedAccountIds") @Nullable List<String> excludedAccountIds,
+        @OutputCustomType.Parameter("organizationMembershipType") @Nullable String organizationMembershipType,
+        @OutputCustomType.Parameter("parentHierarchyId") @Nullable String parentHierarchyId,
+        @OutputCustomType.Parameter("stacksetName") @Nullable String stacksetName) {
         this.excludedAccountIds = excludedAccountIds;
         this.organizationMembershipType = organizationMembershipType;
         this.parentHierarchyId = parentHierarchyId;
@@ -100,22 +100,22 @@ public final class SecurityConnectorPropertiesResponseOrganizationalData {
     	      this.stacksetName = defaults.stacksetName;
         }
 
-        public Builder setExcludedAccountIds(@Nullable List<String> excludedAccountIds) {
+        public Builder excludedAccountIds(@Nullable List<String> excludedAccountIds) {
             this.excludedAccountIds = excludedAccountIds;
             return this;
         }
 
-        public Builder setOrganizationMembershipType(@Nullable String organizationMembershipType) {
+        public Builder organizationMembershipType(@Nullable String organizationMembershipType) {
             this.organizationMembershipType = organizationMembershipType;
             return this;
         }
 
-        public Builder setParentHierarchyId(@Nullable String parentHierarchyId) {
+        public Builder parentHierarchyId(@Nullable String parentHierarchyId) {
             this.parentHierarchyId = parentHierarchyId;
             return this;
         }
 
-        public Builder setStacksetName(@Nullable String stacksetName) {
+        public Builder stacksetName(@Nullable String stacksetName) {
             this.stacksetName = stacksetName;
             return this;
         }

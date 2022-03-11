@@ -109,42 +109,42 @@ public final class GlobalServiceConfigurationArgs extends io.pulumi.resources.Re
     	      this.ssl = defaults.ssl;
         }
 
-        public Builder setAutoScale(@Nullable Input<AutoScaleConfigurationArgs> autoScale) {
+        public Builder autoScale(@Nullable Input<AutoScaleConfigurationArgs> autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleConfigurationArgs autoScale) {
+        public Builder autoScale(@Nullable AutoScaleConfigurationArgs autoScale) {
             this.autoScale = Input.ofNullable(autoScale);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setServiceAuth(@Nullable Input<ServiceAuthConfigurationArgs> serviceAuth) {
+        public Builder serviceAuth(@Nullable Input<ServiceAuthConfigurationArgs> serviceAuth) {
             this.serviceAuth = serviceAuth;
             return this;
         }
 
-        public Builder setServiceAuth(@Nullable ServiceAuthConfigurationArgs serviceAuth) {
+        public Builder serviceAuth(@Nullable ServiceAuthConfigurationArgs serviceAuth) {
             this.serviceAuth = Input.ofNullable(serviceAuth);
             return this;
         }
 
-        public Builder setSsl(@Nullable Input<SslConfigurationArgs> ssl) {
+        public Builder ssl(@Nullable Input<SslConfigurationArgs> ssl) {
             this.ssl = ssl;
             return this;
         }
 
-        public Builder setSsl(@Nullable SslConfigurationArgs ssl) {
+        public Builder ssl(@Nullable SslConfigurationArgs ssl) {
             this.ssl = Input.ofNullable(ssl);
             return this;
         }

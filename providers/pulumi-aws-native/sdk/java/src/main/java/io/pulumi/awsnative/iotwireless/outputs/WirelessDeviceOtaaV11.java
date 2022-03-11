@@ -13,11 +13,11 @@ public final class WirelessDeviceOtaaV11 {
     private final String joinEui;
     private final String nwkKey;
 
-    @OutputCustomType.Constructor({"appKey","joinEui","nwkKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceOtaaV11(
-        String appKey,
-        String joinEui,
-        String nwkKey) {
+        @OutputCustomType.Parameter("appKey") String appKey,
+        @OutputCustomType.Parameter("joinEui") String joinEui,
+        @OutputCustomType.Parameter("nwkKey") String nwkKey) {
         this.appKey = appKey;
         this.joinEui = joinEui;
         this.nwkKey = nwkKey;
@@ -57,17 +57,17 @@ public final class WirelessDeviceOtaaV11 {
     	      this.nwkKey = defaults.nwkKey;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
-        public Builder setJoinEui(String joinEui) {
+        public Builder joinEui(String joinEui) {
             this.joinEui = Objects.requireNonNull(joinEui);
             return this;
         }
 
-        public Builder setNwkKey(String nwkKey) {
+        public Builder nwkKey(String nwkKey) {
             this.nwkKey = Objects.requireNonNull(nwkKey);
             return this;
         }

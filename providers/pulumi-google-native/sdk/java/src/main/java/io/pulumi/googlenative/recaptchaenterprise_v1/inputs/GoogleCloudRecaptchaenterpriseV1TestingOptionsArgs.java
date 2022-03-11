@@ -75,22 +75,22 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
     	      this.testingScore = defaults.testingScore;
         }
 
-        public Builder setTestingChallenge(@Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
+        public Builder testingChallenge(@Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge) {
             this.testingChallenge = testingChallenge;
             return this;
         }
 
-        public Builder setTestingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
+        public Builder testingChallenge(@Nullable GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge testingChallenge) {
             this.testingChallenge = Input.ofNullable(testingChallenge);
             return this;
         }
 
-        public Builder setTestingScore(@Nullable Input<Double> testingScore) {
+        public Builder testingScore(@Nullable Input<Double> testingScore) {
             this.testingScore = testingScore;
             return this;
         }
 
-        public Builder setTestingScore(@Nullable Double testingScore) {
+        public Builder testingScore(@Nullable Double testingScore) {
             this.testingScore = Input.ofNullable(testingScore);
             return this;
         }

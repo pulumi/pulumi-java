@@ -55,14 +55,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
      */
     private final @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches;
 
-    @OutputCustomType.Constructor({"fullPathMatch","headerMatches","ignoreCase","pathTemplateMatch","prefixMatch","queryParameterMatches"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(
-        @Nullable String fullPathMatch,
-        @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
-        @Nullable Boolean ignoreCase,
-        @Nullable String pathTemplateMatch,
-        @Nullable String prefixMatch,
-        @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
+        @OutputCustomType.Parameter("fullPathMatch") @Nullable String fullPathMatch,
+        @OutputCustomType.Parameter("headerMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches,
+        @OutputCustomType.Parameter("ignoreCase") @Nullable Boolean ignoreCase,
+        @OutputCustomType.Parameter("pathTemplateMatch") @Nullable String pathTemplateMatch,
+        @OutputCustomType.Parameter("prefixMatch") @Nullable String prefixMatch,
+        @OutputCustomType.Parameter("queryParameterMatches") @Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
         this.fullPathMatch = fullPathMatch;
         this.headerMatches = headerMatches;
         this.ignoreCase = ignoreCase;
@@ -153,32 +153,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
     	      this.queryParameterMatches = defaults.queryParameterMatches;
         }
 
-        public Builder setFullPathMatch(@Nullable String fullPathMatch) {
+        public Builder fullPathMatch(@Nullable String fullPathMatch) {
             this.fullPathMatch = fullPathMatch;
             return this;
         }
 
-        public Builder setHeaderMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches) {
+        public Builder headerMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch> headerMatches) {
             this.headerMatches = headerMatches;
             return this;
         }
 
-        public Builder setIgnoreCase(@Nullable Boolean ignoreCase) {
+        public Builder ignoreCase(@Nullable Boolean ignoreCase) {
             this.ignoreCase = ignoreCase;
             return this;
         }
 
-        public Builder setPathTemplateMatch(@Nullable String pathTemplateMatch) {
+        public Builder pathTemplateMatch(@Nullable String pathTemplateMatch) {
             this.pathTemplateMatch = pathTemplateMatch;
             return this;
         }
 
-        public Builder setPrefixMatch(@Nullable String prefixMatch) {
+        public Builder prefixMatch(@Nullable String prefixMatch) {
             this.prefixMatch = prefixMatch;
             return this;
         }
 
-        public Builder setQueryParameterMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
+        public Builder queryParameterMatches(@Nullable List<EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch> queryParameterMatches) {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }

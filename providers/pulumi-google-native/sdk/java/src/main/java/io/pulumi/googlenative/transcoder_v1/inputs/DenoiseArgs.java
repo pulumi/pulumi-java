@@ -75,22 +75,22 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tune = defaults.tune;
         }
 
-        public Builder setStrength(@Nullable Input<Double> strength) {
+        public Builder strength(@Nullable Input<Double> strength) {
             this.strength = strength;
             return this;
         }
 
-        public Builder setStrength(@Nullable Double strength) {
+        public Builder strength(@Nullable Double strength) {
             this.strength = Input.ofNullable(strength);
             return this;
         }
 
-        public Builder setTune(@Nullable Input<String> tune) {
+        public Builder tune(@Nullable Input<String> tune) {
             this.tune = tune;
             return this;
         }
 
-        public Builder setTune(@Nullable String tune) {
+        public Builder tune(@Nullable String tune) {
             this.tune = Input.ofNullable(tune);
             return this;
         }

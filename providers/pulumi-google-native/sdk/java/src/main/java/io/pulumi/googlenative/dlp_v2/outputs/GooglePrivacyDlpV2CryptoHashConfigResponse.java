@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
      */
     private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
-    @OutputCustomType.Constructor({"cryptoKey"})
-    private GooglePrivacyDlpV2CryptoHashConfigResponse(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2CryptoHashConfigResponse(@OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
         this.cryptoKey = cryptoKey;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2CryptoHashConfigResponse {
     	      this.cryptoKey = defaults.cryptoKey;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }

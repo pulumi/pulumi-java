@@ -24,14 +24,14 @@ public final class GetDomainConfigurationResult {
     private final @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates;
     private final @Nullable List<DomainConfigurationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","authorizerConfig","domainConfigurationStatus","domainType","serverCertificates","tags"})
+    @OutputCustomType.Constructor
     private GetDomainConfigurationResult(
-        @Nullable String arn,
-        @Nullable DomainConfigurationAuthorizerConfig authorizerConfig,
-        @Nullable DomainConfigurationStatus domainConfigurationStatus,
-        @Nullable DomainConfigurationDomainType domainType,
-        @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates,
-        @Nullable List<DomainConfigurationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorizerConfig") @Nullable DomainConfigurationAuthorizerConfig authorizerConfig,
+        @OutputCustomType.Parameter("domainConfigurationStatus") @Nullable DomainConfigurationStatus domainConfigurationStatus,
+        @OutputCustomType.Parameter("domainType") @Nullable DomainConfigurationDomainType domainType,
+        @OutputCustomType.Parameter("serverCertificates") @Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates,
+        @OutputCustomType.Parameter("tags") @Nullable List<DomainConfigurationTag> tags) {
         this.arn = arn;
         this.authorizerConfig = authorizerConfig;
         this.domainConfigurationStatus = domainConfigurationStatus;
@@ -89,32 +89,32 @@ public final class GetDomainConfigurationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorizerConfig(@Nullable DomainConfigurationAuthorizerConfig authorizerConfig) {
+        public Builder authorizerConfig(@Nullable DomainConfigurationAuthorizerConfig authorizerConfig) {
             this.authorizerConfig = authorizerConfig;
             return this;
         }
 
-        public Builder setDomainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
+        public Builder domainConfigurationStatus(@Nullable DomainConfigurationStatus domainConfigurationStatus) {
             this.domainConfigurationStatus = domainConfigurationStatus;
             return this;
         }
 
-        public Builder setDomainType(@Nullable DomainConfigurationDomainType domainType) {
+        public Builder domainType(@Nullable DomainConfigurationDomainType domainType) {
             this.domainType = domainType;
             return this;
         }
 
-        public Builder setServerCertificates(@Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates) {
+        public Builder serverCertificates(@Nullable List<DomainConfigurationServerCertificateSummary> serverCertificates) {
             this.serverCertificates = serverCertificates;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainConfigurationTag> tags) {
+        public Builder tags(@Nullable List<DomainConfigurationTag> tags) {
             this.tags = tags;
             return this;
         }

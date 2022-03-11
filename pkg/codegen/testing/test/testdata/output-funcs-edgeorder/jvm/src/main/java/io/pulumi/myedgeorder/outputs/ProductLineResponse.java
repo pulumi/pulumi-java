@@ -58,16 +58,16 @@ public final class ProductLineResponse {
      */
     private final List<ProductResponse> products;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","displayName","filterableProperties","hierarchyInformation","imageInformation","products"})
+    @OutputCustomType.Constructor
     private ProductLineResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<ProductResponse> products) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("products") List<ProductResponse> products) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;
@@ -169,42 +169,42 @@ public final class ProductLineResponse {
     	      this.products = defaults.products;
         }
 
-        public Builder setAvailabilityInformation(AvailabilityInformationResponse availabilityInformation) {
+        public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
 
-        public Builder setCostInformation(CostInformationResponse costInformation) {
+        public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
 
-        public Builder setDescription(DescriptionResponse description) {
+        public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFilterableProperties(List<FilterablePropertyResponse> filterableProperties) {
+        public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
-        public Builder setImageInformation(List<ImageInformationResponse> imageInformation) {
+        public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
 
-        public Builder setProducts(List<ProductResponse> products) {
+        public Builder products(List<ProductResponse> products) {
             this.products = Objects.requireNonNull(products);
             return this;
         }

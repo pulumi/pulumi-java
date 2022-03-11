@@ -30,11 +30,11 @@ public final class DedicatedHostInstanceViewResponse {
      */
     private final @Nullable List<InstanceViewStatusResponse> statuses;
 
-    @OutputCustomType.Constructor({"assetId","availableCapacity","statuses"})
+    @OutputCustomType.Constructor
     private DedicatedHostInstanceViewResponse(
-        String assetId,
-        @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
-        @Nullable List<InstanceViewStatusResponse> statuses) {
+        @OutputCustomType.Parameter("assetId") String assetId,
+        @OutputCustomType.Parameter("availableCapacity") @Nullable DedicatedHostAvailableCapacityResponse availableCapacity,
+        @OutputCustomType.Parameter("statuses") @Nullable List<InstanceViewStatusResponse> statuses) {
         this.assetId = assetId;
         this.availableCapacity = availableCapacity;
         this.statuses = statuses;
@@ -86,17 +86,17 @@ public final class DedicatedHostInstanceViewResponse {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setAssetId(String assetId) {
+        public Builder assetId(String assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
 
-        public Builder setAvailableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
+        public Builder availableCapacity(@Nullable DedicatedHostAvailableCapacityResponse availableCapacity) {
             this.availableCapacity = availableCapacity;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(@Nullable List<InstanceViewStatusResponse> statuses) {
             this.statuses = statuses;
             return this;
         }

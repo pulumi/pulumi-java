@@ -72,19 +72,19 @@ public final class ProtectionContainerMappingPropertiesResponse {
      */
     private final @Nullable String targetProtectionContainerId;
 
-    @OutputCustomType.Constructor({"health","healthErrorDetails","policyFriendlyName","policyId","providerSpecificDetails","sourceFabricFriendlyName","sourceProtectionContainerFriendlyName","state","targetFabricFriendlyName","targetProtectionContainerFriendlyName","targetProtectionContainerId"})
+    @OutputCustomType.Constructor
     private ProtectionContainerMappingPropertiesResponse(
-        @Nullable String health,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String policyFriendlyName,
-        @Nullable String policyId,
-        @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
-        @Nullable String sourceFabricFriendlyName,
-        @Nullable String sourceProtectionContainerFriendlyName,
-        @Nullable String state,
-        @Nullable String targetFabricFriendlyName,
-        @Nullable String targetProtectionContainerFriendlyName,
-        @Nullable String targetProtectionContainerId) {
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails,
+        @OutputCustomType.Parameter("sourceFabricFriendlyName") @Nullable String sourceFabricFriendlyName,
+        @OutputCustomType.Parameter("sourceProtectionContainerFriendlyName") @Nullable String sourceProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("targetFabricFriendlyName") @Nullable String targetFabricFriendlyName,
+        @OutputCustomType.Parameter("targetProtectionContainerFriendlyName") @Nullable String targetProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("targetProtectionContainerId") @Nullable String targetProtectionContainerId) {
         this.health = health;
         this.healthErrorDetails = healthErrorDetails;
         this.policyFriendlyName = policyFriendlyName;
@@ -216,57 +216,57 @@ public final class ProtectionContainerMappingPropertiesResponse {
     	      this.targetProtectionContainerId = defaults.targetProtectionContainerId;
         }
 
-        public Builder setHealth(@Nullable String health) {
+        public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
+        public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
-        public Builder setPolicyFriendlyName(@Nullable String policyFriendlyName) {
+        public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
             this.policyFriendlyName = policyFriendlyName;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Either<A2AProtectionContainerMappingDetailsResponse,VMwareCbtProtectionContainerMappingDetailsResponse> providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
-        public Builder setSourceFabricFriendlyName(@Nullable String sourceFabricFriendlyName) {
+        public Builder sourceFabricFriendlyName(@Nullable String sourceFabricFriendlyName) {
             this.sourceFabricFriendlyName = sourceFabricFriendlyName;
             return this;
         }
 
-        public Builder setSourceProtectionContainerFriendlyName(@Nullable String sourceProtectionContainerFriendlyName) {
+        public Builder sourceProtectionContainerFriendlyName(@Nullable String sourceProtectionContainerFriendlyName) {
             this.sourceProtectionContainerFriendlyName = sourceProtectionContainerFriendlyName;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTargetFabricFriendlyName(@Nullable String targetFabricFriendlyName) {
+        public Builder targetFabricFriendlyName(@Nullable String targetFabricFriendlyName) {
             this.targetFabricFriendlyName = targetFabricFriendlyName;
             return this;
         }
 
-        public Builder setTargetProtectionContainerFriendlyName(@Nullable String targetProtectionContainerFriendlyName) {
+        public Builder targetProtectionContainerFriendlyName(@Nullable String targetProtectionContainerFriendlyName) {
             this.targetProtectionContainerFriendlyName = targetProtectionContainerFriendlyName;
             return this;
         }
 
-        public Builder setTargetProtectionContainerId(@Nullable String targetProtectionContainerId) {
+        public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
             this.targetProtectionContainerId = targetProtectionContainerId;
             return this;
         }

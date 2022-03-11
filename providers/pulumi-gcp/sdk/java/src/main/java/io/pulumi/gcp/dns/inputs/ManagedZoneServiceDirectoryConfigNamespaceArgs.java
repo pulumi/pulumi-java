@@ -56,12 +56,12 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder setNamespaceUrl(Input<String> namespaceUrl) {
+        public Builder namespaceUrl(Input<String> namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }
 
-        public Builder setNamespaceUrl(String namespaceUrl) {
+        public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Input.of(Objects.requireNonNull(namespaceUrl));
             return this;
         }

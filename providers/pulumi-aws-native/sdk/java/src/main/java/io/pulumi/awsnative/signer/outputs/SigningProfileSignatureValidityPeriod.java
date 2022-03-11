@@ -15,10 +15,10 @@ public final class SigningProfileSignatureValidityPeriod {
     private final @Nullable SigningProfileSignatureValidityPeriodType type;
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private SigningProfileSignatureValidityPeriod(
-        @Nullable SigningProfileSignatureValidityPeriodType type,
-        @Nullable Integer value) {
+        @OutputCustomType.Parameter("type") @Nullable SigningProfileSignatureValidityPeriodType type,
+        @OutputCustomType.Parameter("value") @Nullable Integer value) {
         this.type = type;
         this.value = value;
     }
@@ -52,12 +52,12 @@ public final class SigningProfileSignatureValidityPeriod {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable SigningProfileSignatureValidityPeriodType type) {
+        public Builder type(@Nullable SigningProfileSignatureValidityPeriodType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

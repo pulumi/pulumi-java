@@ -125,52 +125,52 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
     	      this.template = defaults.template;
         }
 
-        public Builder setImports(@Nullable Input<List<ImportFileArgs>> imports) {
+        public Builder imports(@Nullable Input<List<ImportFileArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
-        public Builder setImports(@Nullable List<ImportFileArgs> imports) {
+        public Builder imports(@Nullable List<ImportFileArgs> imports) {
             this.imports = Input.ofNullable(imports);
             return this;
         }
 
-        public Builder setInterpreter(@Nullable Input<TemplateContentsInterpreter> interpreter) {
+        public Builder interpreter(@Nullable Input<TemplateContentsInterpreter> interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable TemplateContentsInterpreter interpreter) {
+        public Builder interpreter(@Nullable TemplateContentsInterpreter interpreter) {
             this.interpreter = Input.ofNullable(interpreter);
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable Input<String> mainTemplate) {
+        public Builder mainTemplate(@Nullable Input<String> mainTemplate) {
             this.mainTemplate = mainTemplate;
             return this;
         }
 
-        public Builder setMainTemplate(@Nullable String mainTemplate) {
+        public Builder mainTemplate(@Nullable String mainTemplate) {
             this.mainTemplate = Input.ofNullable(mainTemplate);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<String> template) {
+        public Builder template(@Nullable Input<String> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable String template) {
+        public Builder template(@Nullable String template) {
             this.template = Input.ofNullable(template);
             return this;
         }

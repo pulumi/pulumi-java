@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
      */
     private final GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate;
 
-    @OutputCustomType.Constructor({"jobConfig","snapshotInspectTemplate"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RequestedOptionsResponse(
-        GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
-        GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
+        @OutputCustomType.Parameter("jobConfig") GooglePrivacyDlpV2InspectJobConfigResponse jobConfig,
+        @OutputCustomType.Parameter("snapshotInspectTemplate") GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
         this.jobConfig = jobConfig;
         this.snapshotInspectTemplate = snapshotInspectTemplate;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2RequestedOptionsResponse {
     	      this.snapshotInspectTemplate = defaults.snapshotInspectTemplate;
         }
 
-        public Builder setJobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
+        public Builder jobConfig(GooglePrivacyDlpV2InspectJobConfigResponse jobConfig) {
             this.jobConfig = Objects.requireNonNull(jobConfig);
             return this;
         }
 
-        public Builder setSnapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
+        public Builder snapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplateResponse snapshotInspectTemplate) {
             this.snapshotInspectTemplate = Objects.requireNonNull(snapshotInspectTemplate);
             return this;
         }

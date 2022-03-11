@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetIstioCanonicalServiceTelemetry {
     private final String resourceName;
 
-    @OutputCustomType.Constructor({"resourceName"})
-    private GetIstioCanonicalServiceTelemetry(String resourceName) {
+    @OutputCustomType.Constructor
+    private GetIstioCanonicalServiceTelemetry(@OutputCustomType.Parameter("resourceName") String resourceName) {
         this.resourceName = resourceName;
     }
 
@@ -40,7 +40,7 @@ public final class GetIstioCanonicalServiceTelemetry {
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }

@@ -20,13 +20,13 @@ public final class DatasetVariable {
     private final @Nullable String stringValue;
     private final String variableName;
 
-    @OutputCustomType.Constructor({"datasetContentVersionValue","doubleValue","outputFileUriValue","stringValue","variableName"})
+    @OutputCustomType.Constructor
     private DatasetVariable(
-        @Nullable DatasetContentVersionValue datasetContentVersionValue,
-        @Nullable Double doubleValue,
-        @Nullable DatasetOutputFileUriValue outputFileUriValue,
-        @Nullable String stringValue,
-        String variableName) {
+        @OutputCustomType.Parameter("datasetContentVersionValue") @Nullable DatasetContentVersionValue datasetContentVersionValue,
+        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @OutputCustomType.Parameter("outputFileUriValue") @Nullable DatasetOutputFileUriValue outputFileUriValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.datasetContentVersionValue = datasetContentVersionValue;
         this.doubleValue = doubleValue;
         this.outputFileUriValue = outputFileUriValue;
@@ -78,27 +78,27 @@ public final class DatasetVariable {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setDatasetContentVersionValue(@Nullable DatasetContentVersionValue datasetContentVersionValue) {
+        public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValue datasetContentVersionValue) {
             this.datasetContentVersionValue = datasetContentVersionValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setOutputFileUriValue(@Nullable DatasetOutputFileUriValue outputFileUriValue) {
+        public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValue outputFileUriValue) {
             this.outputFileUriValue = outputFileUriValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

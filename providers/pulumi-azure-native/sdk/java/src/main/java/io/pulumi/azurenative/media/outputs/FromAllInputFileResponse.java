@@ -30,10 +30,10 @@ public final class FromAllInputFileResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"includedTracks","odataType"})
+    @OutputCustomType.Constructor
     private FromAllInputFileResponse(
-        @Nullable List<Object> includedTracks,
-        String odataType) {
+        @OutputCustomType.Parameter("includedTracks") @Nullable List<Object> includedTracks,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.includedTracks = includedTracks;
         this.odataType = odataType;
     }
@@ -76,12 +76,12 @@ public final class FromAllInputFileResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setIncludedTracks(@Nullable List<Object> includedTracks) {
+        public Builder includedTracks(@Nullable List<Object> includedTracks) {
             this.includedTracks = includedTracks;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

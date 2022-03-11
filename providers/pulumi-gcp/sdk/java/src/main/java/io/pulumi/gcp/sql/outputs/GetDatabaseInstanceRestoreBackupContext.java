@@ -18,11 +18,11 @@ public final class GetDatabaseInstanceRestoreBackupContext {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"backupRunId","instanceId","project"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceRestoreBackupContext(
-        Integer backupRunId,
-        String instanceId,
-        String project) {
+        @OutputCustomType.Parameter("backupRunId") Integer backupRunId,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("project") String project) {
         this.backupRunId = backupRunId;
         this.instanceId = instanceId;
         this.project = project;
@@ -66,17 +66,17 @@ public final class GetDatabaseInstanceRestoreBackupContext {
     	      this.project = defaults.project;
         }
 
-        public Builder setBackupRunId(Integer backupRunId) {
+        public Builder backupRunId(Integer backupRunId) {
             this.backupRunId = Objects.requireNonNull(backupRunId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

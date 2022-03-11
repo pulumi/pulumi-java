@@ -15,8 +15,8 @@ public final class ApplicationDeploymentPolicyResponse {
      */
     private final String deploymentMode;
 
-    @OutputCustomType.Constructor({"deploymentMode"})
-    private ApplicationDeploymentPolicyResponse(String deploymentMode) {
+    @OutputCustomType.Constructor
+    private ApplicationDeploymentPolicyResponse(@OutputCustomType.Parameter("deploymentMode") String deploymentMode) {
         this.deploymentMode = deploymentMode;
     }
 
@@ -48,7 +48,7 @@ public final class ApplicationDeploymentPolicyResponse {
     	      this.deploymentMode = defaults.deploymentMode;
         }
 
-        public Builder setDeploymentMode(String deploymentMode) {
+        public Builder deploymentMode(String deploymentMode) {
             this.deploymentMode = Objects.requireNonNull(deploymentMode);
             return this;
         }

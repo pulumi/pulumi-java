@@ -129,62 +129,62 @@ public final class CertificateCertificateDescriptionSubjectDescriptionArgs exten
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setHexSerialNumber(@Nullable Input<String> hexSerialNumber) {
+        public Builder hexSerialNumber(@Nullable Input<String> hexSerialNumber) {
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
 
-        public Builder setHexSerialNumber(@Nullable String hexSerialNumber) {
+        public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
             this.hexSerialNumber = Input.ofNullable(hexSerialNumber);
             return this;
         }
 
-        public Builder setLifetime(@Nullable Input<String> lifetime) {
+        public Builder lifetime(@Nullable Input<String> lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = Input.ofNullable(lifetime);
             return this;
         }
 
-        public Builder setNotAfterTime(@Nullable Input<String> notAfterTime) {
+        public Builder notAfterTime(@Nullable Input<String> notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
 
-        public Builder setNotAfterTime(@Nullable String notAfterTime) {
+        public Builder notAfterTime(@Nullable String notAfterTime) {
             this.notAfterTime = Input.ofNullable(notAfterTime);
             return this;
         }
 
-        public Builder setNotBeforeTime(@Nullable Input<String> notBeforeTime) {
+        public Builder notBeforeTime(@Nullable Input<String> notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
 
-        public Builder setNotBeforeTime(@Nullable String notBeforeTime) {
+        public Builder notBeforeTime(@Nullable String notBeforeTime) {
             this.notBeforeTime = Input.ofNullable(notBeforeTime);
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs>> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameArgs> subjectAltNames) {
             this.subjectAltNames = Input.ofNullable(subjectAltNames);
             return this;
         }
 
-        public Builder setSubjects(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
+        public Builder subjects(@Nullable Input<List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs>> subjects) {
             this.subjects = subjects;
             return this;
         }
 
-        public Builder setSubjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs> subjects) {
+        public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectArgs> subjects) {
             this.subjects = Input.ofNullable(subjects);
             return this;
         }

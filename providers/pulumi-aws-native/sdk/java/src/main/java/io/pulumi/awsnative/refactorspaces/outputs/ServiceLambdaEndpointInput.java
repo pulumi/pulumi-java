@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ServiceLambdaEndpointInput {
     private final String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private ServiceLambdaEndpointInput(String arn) {
+    @OutputCustomType.Constructor
+    private ServiceLambdaEndpointInput(@OutputCustomType.Parameter("arn") String arn) {
         this.arn = arn;
     }
 
@@ -40,7 +40,7 @@ public final class ServiceLambdaEndpointInput {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }

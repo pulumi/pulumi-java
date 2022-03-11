@@ -117,52 +117,52 @@ public final class SecurityProfileBehaviorArgs extends io.pulumi.resources.Resou
     	      this.suppressAlerts = defaults.suppressAlerts;
         }
 
-        public Builder setCriteria(@Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria) {
+        public Builder criteria(@Nullable Input<SecurityProfileBehaviorCriteriaArgs> criteria) {
             this.criteria = criteria;
             return this;
         }
 
-        public Builder setCriteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
+        public Builder criteria(@Nullable SecurityProfileBehaviorCriteriaArgs criteria) {
             this.criteria = Input.ofNullable(criteria);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<String> metric) {
+        public Builder metric(@Nullable Input<String> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable String metric) {
+        public Builder metric(@Nullable String metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
+        public Builder metricDimension(@Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension) {
             this.metricDimension = metricDimension;
             return this;
         }
 
-        public Builder setMetricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
+        public Builder metricDimension(@Nullable SecurityProfileMetricDimensionArgs metricDimension) {
             this.metricDimension = Input.ofNullable(metricDimension);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSuppressAlerts(@Nullable Input<Boolean> suppressAlerts) {
+        public Builder suppressAlerts(@Nullable Input<Boolean> suppressAlerts) {
             this.suppressAlerts = suppressAlerts;
             return this;
         }
 
-        public Builder setSuppressAlerts(@Nullable Boolean suppressAlerts) {
+        public Builder suppressAlerts(@Nullable Boolean suppressAlerts) {
             this.suppressAlerts = Input.ofNullable(suppressAlerts);
             return this;
         }

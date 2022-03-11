@@ -48,15 +48,15 @@ public final class MySqlConnectionProfileResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"cloudSqlId","host","password","passwordSet","port","ssl","username"})
+    @OutputCustomType.Constructor
     private MySqlConnectionProfileResponse(
-        String cloudSqlId,
-        String host,
-        String password,
-        Boolean passwordSet,
-        Integer port,
-        SslConfigResponse ssl,
-        String username) {
+        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("passwordSet") Boolean passwordSet,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("ssl") SslConfigResponse ssl,
+        @OutputCustomType.Parameter("username") String username) {
         this.cloudSqlId = cloudSqlId;
         this.host = host;
         this.password = password;
@@ -148,37 +148,37 @@ public final class MySqlConnectionProfileResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setCloudSqlId(String cloudSqlId) {
+        public Builder cloudSqlId(String cloudSqlId) {
             this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setPasswordSet(Boolean passwordSet) {
+        public Builder passwordSet(Boolean passwordSet) {
             this.passwordSet = Objects.requireNonNull(passwordSet);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setSsl(SslConfigResponse ssl) {
+        public Builder ssl(SslConfigResponse ssl) {
             this.ssl = Objects.requireNonNull(ssl);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

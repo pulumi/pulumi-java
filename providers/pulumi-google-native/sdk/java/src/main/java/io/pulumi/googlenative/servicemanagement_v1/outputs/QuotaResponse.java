@@ -22,10 +22,10 @@ public final class QuotaResponse {
      */
     private final List<MetricRuleResponse> metricRules;
 
-    @OutputCustomType.Constructor({"limits","metricRules"})
+    @OutputCustomType.Constructor
     private QuotaResponse(
-        List<QuotaLimitResponse> limits,
-        List<MetricRuleResponse> metricRules) {
+        @OutputCustomType.Parameter("limits") List<QuotaLimitResponse> limits,
+        @OutputCustomType.Parameter("metricRules") List<MetricRuleResponse> metricRules) {
         this.limits = limits;
         this.metricRules = metricRules;
     }
@@ -67,12 +67,12 @@ public final class QuotaResponse {
     	      this.metricRules = defaults.metricRules;
         }
 
-        public Builder setLimits(List<QuotaLimitResponse> limits) {
+        public Builder limits(List<QuotaLimitResponse> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
-        public Builder setMetricRules(List<MetricRuleResponse> metricRules) {
+        public Builder metricRules(List<MetricRuleResponse> metricRules) {
             this.metricRules = Objects.requireNonNull(metricRules);
             return this;
         }

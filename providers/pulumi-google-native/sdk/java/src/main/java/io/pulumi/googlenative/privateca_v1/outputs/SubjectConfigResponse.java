@@ -21,10 +21,10 @@ public final class SubjectConfigResponse {
      */
     private final SubjectAltNamesResponse subjectAltName;
 
-    @OutputCustomType.Constructor({"subject","subjectAltName"})
+    @OutputCustomType.Constructor
     private SubjectConfigResponse(
-        SubjectResponse subject,
-        SubjectAltNamesResponse subjectAltName) {
+        @OutputCustomType.Parameter("subject") SubjectResponse subject,
+        @OutputCustomType.Parameter("subjectAltName") SubjectAltNamesResponse subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }
@@ -66,12 +66,12 @@ public final class SubjectConfigResponse {
     	      this.subjectAltName = defaults.subjectAltName;
         }
 
-        public Builder setSubject(SubjectResponse subject) {
+        public Builder subject(SubjectResponse subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubjectAltName(SubjectAltNamesResponse subjectAltName) {
+        public Builder subjectAltName(SubjectAltNamesResponse subjectAltName) {
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }

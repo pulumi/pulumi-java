@@ -54,7 +54,7 @@ public final class GetInfrastructureConfigurationsArgs extends io.pulumi.resourc
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
+        public Builder filters(@Nullable List<GetInfrastructureConfigurationsFilter> filters) {
             this.filters = filters;
             return this;
         }

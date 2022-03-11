@@ -20,10 +20,10 @@ public final class IosXcTestResponse {
      */
     private final String xcodeVersion;
 
-    @OutputCustomType.Constructor({"bundleId","xcodeVersion"})
+    @OutputCustomType.Constructor
     private IosXcTestResponse(
-        String bundleId,
-        String xcodeVersion) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion) {
         this.bundleId = bundleId;
         this.xcodeVersion = xcodeVersion;
     }
@@ -65,12 +65,12 @@ public final class IosXcTestResponse {
     	      this.xcodeVersion = defaults.xcodeVersion;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setXcodeVersion(String xcodeVersion) {
+        public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }

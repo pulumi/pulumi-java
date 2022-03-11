@@ -74,22 +74,22 @@ public final class UefiSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vTpmEnabled = defaults.vTpmEnabled;
         }
 
-        public Builder setSecureBootEnabled(@Nullable Input<Boolean> secureBootEnabled) {
+        public Builder secureBootEnabled(@Nullable Input<Boolean> secureBootEnabled) {
             this.secureBootEnabled = secureBootEnabled;
             return this;
         }
 
-        public Builder setSecureBootEnabled(@Nullable Boolean secureBootEnabled) {
+        public Builder secureBootEnabled(@Nullable Boolean secureBootEnabled) {
             this.secureBootEnabled = Input.ofNullable(secureBootEnabled);
             return this;
         }
 
-        public Builder setVTpmEnabled(@Nullable Input<Boolean> vTpmEnabled) {
+        public Builder vTpmEnabled(@Nullable Input<Boolean> vTpmEnabled) {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
 
-        public Builder setVTpmEnabled(@Nullable Boolean vTpmEnabled) {
+        public Builder vTpmEnabled(@Nullable Boolean vTpmEnabled) {
             this.vTpmEnabled = Input.ofNullable(vTpmEnabled);
             return this;
         }

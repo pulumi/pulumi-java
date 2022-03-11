@@ -22,10 +22,10 @@ public final class GetVirtualServiceSpecProvider {
      */
     private final List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters;
 
-    @OutputCustomType.Constructor({"virtualNodes","virtualRouters"})
+    @OutputCustomType.Constructor
     private GetVirtualServiceSpecProvider(
-        List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes,
-        List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
+        @OutputCustomType.Parameter("virtualNodes") List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes,
+        @OutputCustomType.Parameter("virtualRouters") List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
         this.virtualNodes = virtualNodes;
         this.virtualRouters = virtualRouters;
     }
@@ -67,12 +67,12 @@ public final class GetVirtualServiceSpecProvider {
     	      this.virtualRouters = defaults.virtualRouters;
         }
 
-        public Builder setVirtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
+        public Builder virtualNodes(List<GetVirtualServiceSpecProviderVirtualNode> virtualNodes) {
             this.virtualNodes = Objects.requireNonNull(virtualNodes);
             return this;
         }
 
-        public Builder setVirtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
+        public Builder virtualRouters(List<GetVirtualServiceSpecProviderVirtualRouter> virtualRouters) {
             this.virtualRouters = Objects.requireNonNull(virtualRouters);
             return this;
         }

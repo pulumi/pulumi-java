@@ -62,17 +62,17 @@ public final class GetVariableResult {
      */
     private final @Nullable VariableType variableType;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSource","dataType","defaultValue","description","lastUpdatedTime","tags","variableType"})
+    @OutputCustomType.Constructor
     private GetVariableResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable VariableDataSource dataSource,
-        @Nullable VariableDataType dataType,
-        @Nullable String defaultValue,
-        @Nullable String description,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<VariableTag> tags,
-        @Nullable VariableType variableType) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSource") @Nullable VariableDataSource dataSource,
+        @OutputCustomType.Parameter("dataType") @Nullable VariableDataType dataType,
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("tags") @Nullable List<VariableTag> tags,
+        @OutputCustomType.Parameter("variableType") @Nullable VariableType variableType) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSource = dataSource;
@@ -184,47 +184,47 @@ public final class GetVariableResult {
     	      this.variableType = defaults.variableType;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSource(@Nullable VariableDataSource dataSource) {
+        public Builder dataSource(@Nullable VariableDataSource dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataType(@Nullable VariableDataType dataType) {
+        public Builder dataType(@Nullable VariableDataType dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setTags(@Nullable List<VariableTag> tags) {
+        public Builder tags(@Nullable List<VariableTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVariableType(@Nullable VariableType variableType) {
+        public Builder variableType(@Nullable VariableType variableType) {
             this.variableType = variableType;
             return this;
         }

@@ -78,21 +78,21 @@ public final class GetAppResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiProducts","appFamily","appId","attributes","callbackUrl","createdAt","credentials","developerId","keyExpiresIn","lastModifiedAt","name","scopes","status"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        List<String> apiProducts,
-        String appFamily,
-        String appId,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String callbackUrl,
-        String createdAt,
-        List<GoogleCloudApigeeV1CredentialResponse> credentials,
-        String developerId,
-        String keyExpiresIn,
-        String lastModifiedAt,
-        String name,
-        List<String> scopes,
-        String status) {
+        @OutputCustomType.Parameter("apiProducts") List<String> apiProducts,
+        @OutputCustomType.Parameter("appFamily") String appFamily,
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("callbackUrl") String callbackUrl,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("credentials") List<GoogleCloudApigeeV1CredentialResponse> credentials,
+        @OutputCustomType.Parameter("developerId") String developerId,
+        @OutputCustomType.Parameter("keyExpiresIn") String keyExpiresIn,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.appFamily = appFamily;
         this.appId = appId;
@@ -244,67 +244,67 @@ public final class GetAppResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiProducts(List<String> apiProducts) {
+        public Builder apiProducts(List<String> apiProducts) {
             this.apiProducts = Objects.requireNonNull(apiProducts);
             return this;
         }
 
-        public Builder setAppFamily(String appFamily) {
+        public Builder appFamily(String appFamily) {
             this.appFamily = Objects.requireNonNull(appFamily);
             return this;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setCallbackUrl(String callbackUrl) {
+        public Builder callbackUrl(String callbackUrl) {
             this.callbackUrl = Objects.requireNonNull(callbackUrl);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCredentials(List<GoogleCloudApigeeV1CredentialResponse> credentials) {
+        public Builder credentials(List<GoogleCloudApigeeV1CredentialResponse> credentials) {
             this.credentials = Objects.requireNonNull(credentials);
             return this;
         }
 
-        public Builder setDeveloperId(String developerId) {
+        public Builder developerId(String developerId) {
             this.developerId = Objects.requireNonNull(developerId);
             return this;
         }
 
-        public Builder setKeyExpiresIn(String keyExpiresIn) {
+        public Builder keyExpiresIn(String keyExpiresIn) {
             this.keyExpiresIn = Objects.requireNonNull(keyExpiresIn);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -60,17 +60,17 @@ public final class TestExecutionResponse {
      */
     private final ToolResultsStepResponse toolResultsStep;
 
-    @OutputCustomType.Constructor({"environment","matrixId","project","shard","state","testDetails","testSpecification","timestamp","toolResultsStep"})
+    @OutputCustomType.Constructor
     private TestExecutionResponse(
-        EnvironmentResponse environment,
-        String matrixId,
-        String project,
-        ShardResponse shard,
-        String state,
-        TestDetailsResponse testDetails,
-        TestSpecificationResponse testSpecification,
-        String timestamp,
-        ToolResultsStepResponse toolResultsStep) {
+        @OutputCustomType.Parameter("environment") EnvironmentResponse environment,
+        @OutputCustomType.Parameter("matrixId") String matrixId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("shard") ShardResponse shard,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testDetails") TestDetailsResponse testDetails,
+        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("toolResultsStep") ToolResultsStepResponse toolResultsStep) {
         this.environment = environment;
         this.matrixId = matrixId;
         this.project = project;
@@ -182,47 +182,47 @@ public final class TestExecutionResponse {
     	      this.toolResultsStep = defaults.toolResultsStep;
         }
 
-        public Builder setEnvironment(EnvironmentResponse environment) {
+        public Builder environment(EnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setMatrixId(String matrixId) {
+        public Builder matrixId(String matrixId) {
             this.matrixId = Objects.requireNonNull(matrixId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setShard(ShardResponse shard) {
+        public Builder shard(ShardResponse shard) {
             this.shard = Objects.requireNonNull(shard);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTestDetails(TestDetailsResponse testDetails) {
+        public Builder testDetails(TestDetailsResponse testDetails) {
             this.testDetails = Objects.requireNonNull(testDetails);
             return this;
         }
 
-        public Builder setTestSpecification(TestSpecificationResponse testSpecification) {
+        public Builder testSpecification(TestSpecificationResponse testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setToolResultsStep(ToolResultsStepResponse toolResultsStep) {
+        public Builder toolResultsStep(ToolResultsStepResponse toolResultsStep) {
             this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
             return this;
         }

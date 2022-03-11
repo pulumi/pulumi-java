@@ -71,22 +71,22 @@ public final class SlotTypeEnumerationValueArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(@Nullable Input<List<String>> synonyms) {
+        public Builder synonyms(@Nullable Input<List<String>> synonyms) {
             this.synonyms = synonyms;
             return this;
         }
 
-        public Builder setSynonyms(@Nullable List<String> synonyms) {
+        public Builder synonyms(@Nullable List<String> synonyms) {
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

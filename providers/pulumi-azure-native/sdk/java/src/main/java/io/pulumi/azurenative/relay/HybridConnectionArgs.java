@@ -119,52 +119,52 @@ public final class HybridConnectionArgs extends io.pulumi.resources.ResourceArgs
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder setHybridConnectionName(@Nullable Input<String> hybridConnectionName) {
+        public Builder hybridConnectionName(@Nullable Input<String> hybridConnectionName) {
             this.hybridConnectionName = hybridConnectionName;
             return this;
         }
 
-        public Builder setHybridConnectionName(@Nullable String hybridConnectionName) {
+        public Builder hybridConnectionName(@Nullable String hybridConnectionName) {
             this.hybridConnectionName = Input.ofNullable(hybridConnectionName);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setRequiresClientAuthorization(@Nullable Input<Boolean> requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Input<Boolean> requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
-        public Builder setRequiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
             this.requiresClientAuthorization = Input.ofNullable(requiresClientAuthorization);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable Input<String> userMetadata) {
+        public Builder userMetadata(@Nullable Input<String> userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable String userMetadata) {
+        public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = Input.ofNullable(userMetadata);
             return this;
         }

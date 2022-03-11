@@ -51,7 +51,7 @@ public final class GetWorkspaceSettingArgs extends io.pulumi.resources.InvokeArg
     	      this.workspaceSettingName = defaults.workspaceSettingName;
         }
 
-        public Builder setWorkspaceSettingName(String workspaceSettingName) {
+        public Builder workspaceSettingName(String workspaceSettingName) {
             this.workspaceSettingName = Objects.requireNonNull(workspaceSettingName);
             return this;
         }

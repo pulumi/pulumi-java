@@ -48,12 +48,12 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     	      this.ipv6Address = defaults.ipv6Address;
         }
 
-        public Builder setIpv6Address(Input<String> ipv6Address) {
+        public Builder ipv6Address(Input<String> ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Input.of(Objects.requireNonNull(ipv6Address));
             return this;
         }

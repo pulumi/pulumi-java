@@ -14,10 +14,10 @@ public final class ServiceUrlEndpointInput {
     private final @Nullable String healthUrl;
     private final String url;
 
-    @OutputCustomType.Constructor({"healthUrl","url"})
+    @OutputCustomType.Constructor
     private ServiceUrlEndpointInput(
-        @Nullable String healthUrl,
-        String url) {
+        @OutputCustomType.Parameter("healthUrl") @Nullable String healthUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.healthUrl = healthUrl;
         this.url = url;
     }
@@ -51,12 +51,12 @@ public final class ServiceUrlEndpointInput {
     	      this.url = defaults.url;
         }
 
-        public Builder setHealthUrl(@Nullable String healthUrl) {
+        public Builder healthUrl(@Nullable String healthUrl) {
             this.healthUrl = healthUrl;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

@@ -27,11 +27,11 @@ public final class BigtableOptionsResponse {
      */
     private final Boolean readRowkeyAsString;
 
-    @OutputCustomType.Constructor({"columnFamilies","ignoreUnspecifiedColumnFamilies","readRowkeyAsString"})
+    @OutputCustomType.Constructor
     private BigtableOptionsResponse(
-        List<BigtableColumnFamilyResponse> columnFamilies,
-        Boolean ignoreUnspecifiedColumnFamilies,
-        Boolean readRowkeyAsString) {
+        @OutputCustomType.Parameter("columnFamilies") List<BigtableColumnFamilyResponse> columnFamilies,
+        @OutputCustomType.Parameter("ignoreUnspecifiedColumnFamilies") Boolean ignoreUnspecifiedColumnFamilies,
+        @OutputCustomType.Parameter("readRowkeyAsString") Boolean readRowkeyAsString) {
         this.columnFamilies = columnFamilies;
         this.ignoreUnspecifiedColumnFamilies = ignoreUnspecifiedColumnFamilies;
         this.readRowkeyAsString = readRowkeyAsString;
@@ -83,17 +83,17 @@ public final class BigtableOptionsResponse {
     	      this.readRowkeyAsString = defaults.readRowkeyAsString;
         }
 
-        public Builder setColumnFamilies(List<BigtableColumnFamilyResponse> columnFamilies) {
+        public Builder columnFamilies(List<BigtableColumnFamilyResponse> columnFamilies) {
             this.columnFamilies = Objects.requireNonNull(columnFamilies);
             return this;
         }
 
-        public Builder setIgnoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
+        public Builder ignoreUnspecifiedColumnFamilies(Boolean ignoreUnspecifiedColumnFamilies) {
             this.ignoreUnspecifiedColumnFamilies = Objects.requireNonNull(ignoreUnspecifiedColumnFamilies);
             return this;
         }
 
-        public Builder setReadRowkeyAsString(Boolean readRowkeyAsString) {
+        public Builder readRowkeyAsString(Boolean readRowkeyAsString) {
             this.readRowkeyAsString = Objects.requireNonNull(readRowkeyAsString);
             return this;
         }

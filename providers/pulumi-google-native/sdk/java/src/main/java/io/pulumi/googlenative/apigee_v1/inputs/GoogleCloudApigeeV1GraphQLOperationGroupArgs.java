@@ -76,22 +76,22 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
     	      this.operationConfigs = defaults.operationConfigs;
         }
 
-        public Builder setOperationConfigType(@Nullable Input<String> operationConfigType) {
+        public Builder operationConfigType(@Nullable Input<String> operationConfigType) {
             this.operationConfigType = operationConfigType;
             return this;
         }
 
-        public Builder setOperationConfigType(@Nullable String operationConfigType) {
+        public Builder operationConfigType(@Nullable String operationConfigType) {
             this.operationConfigType = Input.ofNullable(operationConfigType);
             return this;
         }
 
-        public Builder setOperationConfigs(Input<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs) {
+        public Builder operationConfigs(Input<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs) {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
 
-        public Builder setOperationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigArgs> operationConfigs) {
+        public Builder operationConfigs(List<GoogleCloudApigeeV1GraphQLOperationConfigArgs> operationConfigs) {
             this.operationConfigs = Input.of(Objects.requireNonNull(operationConfigs));
             return this;
         }

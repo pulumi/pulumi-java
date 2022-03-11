@@ -75,17 +75,17 @@ public final class DataSourceConfluenceAttachmentToIndexFieldMapping extends io.
     	      this.indexFieldName = defaults.indexFieldName;
         }
 
-        public Builder setDataSourceFieldName(DataSourceConfluenceAttachmentFieldName dataSourceFieldName) {
+        public Builder dataSourceFieldName(DataSourceConfluenceAttachmentFieldName dataSourceFieldName) {
             this.dataSourceFieldName = Objects.requireNonNull(dataSourceFieldName);
             return this;
         }
 
-        public Builder setDateFieldFormat(@Nullable String dateFieldFormat) {
+        public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
             this.dateFieldFormat = dateFieldFormat;
             return this;
         }
 
-        public Builder setIndexFieldName(String indexFieldName) {
+        public Builder indexFieldName(String indexFieldName) {
             this.indexFieldName = Objects.requireNonNull(indexFieldName);
             return this;
         }

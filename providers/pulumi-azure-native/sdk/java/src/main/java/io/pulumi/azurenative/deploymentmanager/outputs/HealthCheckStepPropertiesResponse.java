@@ -22,10 +22,10 @@ public final class HealthCheckStepPropertiesResponse {
      */
     private final String stepType;
 
-    @OutputCustomType.Constructor({"attributes","stepType"})
+    @OutputCustomType.Constructor
     private HealthCheckStepPropertiesResponse(
-        RestHealthCheckStepAttributesResponse attributes,
-        String stepType) {
+        @OutputCustomType.Parameter("attributes") RestHealthCheckStepAttributesResponse attributes,
+        @OutputCustomType.Parameter("stepType") String stepType) {
         this.attributes = attributes;
         this.stepType = stepType;
     }
@@ -68,12 +68,12 @@ public final class HealthCheckStepPropertiesResponse {
     	      this.stepType = defaults.stepType;
         }
 
-        public Builder setAttributes(RestHealthCheckStepAttributesResponse attributes) {
+        public Builder attributes(RestHealthCheckStepAttributesResponse attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setStepType(String stepType) {
+        public Builder stepType(String stepType) {
             this.stepType = Objects.requireNonNull(stepType);
             return this;
         }

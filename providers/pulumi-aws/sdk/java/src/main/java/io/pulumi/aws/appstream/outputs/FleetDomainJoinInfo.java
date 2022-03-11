@@ -22,10 +22,10 @@ public final class FleetDomainJoinInfo {
      */
     private final @Nullable String organizationalUnitDistinguishedName;
 
-    @OutputCustomType.Constructor({"directoryName","organizationalUnitDistinguishedName"})
+    @OutputCustomType.Constructor
     private FleetDomainJoinInfo(
-        @Nullable String directoryName,
-        @Nullable String organizationalUnitDistinguishedName) {
+        @OutputCustomType.Parameter("directoryName") @Nullable String directoryName,
+        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName) {
         this.directoryName = directoryName;
         this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
     }
@@ -67,12 +67,12 @@ public final class FleetDomainJoinInfo {
     	      this.organizationalUnitDistinguishedName = defaults.organizationalUnitDistinguishedName;
         }
 
-        public Builder setDirectoryName(@Nullable String directoryName) {
+        public Builder directoryName(@Nullable String directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }

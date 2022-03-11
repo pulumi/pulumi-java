@@ -29,11 +29,11 @@ public final class RegexMatchSetRegexMatchTuple {
      */
     private final String textTransformation;
 
-    @OutputCustomType.Constructor({"fieldToMatch","regexPatternSetId","textTransformation"})
+    @OutputCustomType.Constructor
     private RegexMatchSetRegexMatchTuple(
-        RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
-        String regexPatternSetId,
-        String textTransformation) {
+        @OutputCustomType.Parameter("fieldToMatch") RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch,
+        @OutputCustomType.Parameter("regexPatternSetId") String regexPatternSetId,
+        @OutputCustomType.Parameter("textTransformation") String textTransformation) {
         this.fieldToMatch = fieldToMatch;
         this.regexPatternSetId = regexPatternSetId;
         this.textTransformation = textTransformation;
@@ -88,17 +88,17 @@ public final class RegexMatchSetRegexMatchTuple {
     	      this.textTransformation = defaults.textTransformation;
         }
 
-        public Builder setFieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch) {
+        public Builder fieldToMatch(RegexMatchSetRegexMatchTupleFieldToMatch fieldToMatch) {
             this.fieldToMatch = Objects.requireNonNull(fieldToMatch);
             return this;
         }
 
-        public Builder setRegexPatternSetId(String regexPatternSetId) {
+        public Builder regexPatternSetId(String regexPatternSetId) {
             this.regexPatternSetId = Objects.requireNonNull(regexPatternSetId);
             return this;
         }
 
-        public Builder setTextTransformation(String textTransformation) {
+        public Builder textTransformation(String textTransformation) {
             this.textTransformation = Objects.requireNonNull(textTransformation);
             return this;
         }

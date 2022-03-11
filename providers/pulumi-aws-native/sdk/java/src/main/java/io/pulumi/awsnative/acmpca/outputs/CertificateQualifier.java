@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class CertificateQualifier {
     private final String cpsUri;
 
-    @OutputCustomType.Constructor({"cpsUri"})
-    private CertificateQualifier(String cpsUri) {
+    @OutputCustomType.Constructor
+    private CertificateQualifier(@OutputCustomType.Parameter("cpsUri") String cpsUri) {
         this.cpsUri = cpsUri;
     }
 
@@ -40,7 +40,7 @@ public final class CertificateQualifier {
     	      this.cpsUri = defaults.cpsUri;
         }
 
-        public Builder setCpsUri(String cpsUri) {
+        public Builder cpsUri(String cpsUri) {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
         }

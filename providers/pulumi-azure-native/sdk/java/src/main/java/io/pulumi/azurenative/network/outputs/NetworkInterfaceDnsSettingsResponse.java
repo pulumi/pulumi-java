@@ -38,13 +38,13 @@ public final class NetworkInterfaceDnsSettingsResponse {
      */
     private final String internalFqdn;
 
-    @OutputCustomType.Constructor({"appliedDnsServers","dnsServers","internalDnsNameLabel","internalDomainNameSuffix","internalFqdn"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceDnsSettingsResponse(
-        List<String> appliedDnsServers,
-        @Nullable List<String> dnsServers,
-        @Nullable String internalDnsNameLabel,
-        String internalDomainNameSuffix,
-        String internalFqdn) {
+        @OutputCustomType.Parameter("appliedDnsServers") List<String> appliedDnsServers,
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("internalDnsNameLabel") @Nullable String internalDnsNameLabel,
+        @OutputCustomType.Parameter("internalDomainNameSuffix") String internalDomainNameSuffix,
+        @OutputCustomType.Parameter("internalFqdn") String internalFqdn) {
         this.appliedDnsServers = appliedDnsServers;
         this.dnsServers = dnsServers;
         this.internalDnsNameLabel = internalDnsNameLabel;
@@ -116,27 +116,27 @@ public final class NetworkInterfaceDnsSettingsResponse {
     	      this.internalFqdn = defaults.internalFqdn;
         }
 
-        public Builder setAppliedDnsServers(List<String> appliedDnsServers) {
+        public Builder appliedDnsServers(List<String> appliedDnsServers) {
             this.appliedDnsServers = Objects.requireNonNull(appliedDnsServers);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setInternalDnsNameLabel(@Nullable String internalDnsNameLabel) {
+        public Builder internalDnsNameLabel(@Nullable String internalDnsNameLabel) {
             this.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
 
-        public Builder setInternalDomainNameSuffix(String internalDomainNameSuffix) {
+        public Builder internalDomainNameSuffix(String internalDomainNameSuffix) {
             this.internalDomainNameSuffix = Objects.requireNonNull(internalDomainNameSuffix);
             return this;
         }
 
-        public Builder setInternalFqdn(String internalFqdn) {
+        public Builder internalFqdn(String internalFqdn) {
             this.internalFqdn = Objects.requireNonNull(internalFqdn);
             return this;
         }

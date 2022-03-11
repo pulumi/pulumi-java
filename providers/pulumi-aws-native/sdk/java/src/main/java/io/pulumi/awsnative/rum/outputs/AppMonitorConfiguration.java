@@ -61,17 +61,17 @@ public final class AppMonitorConfiguration {
      */
     private final @Nullable List<AppMonitorTelemetry> telemetries;
 
-    @OutputCustomType.Constructor({"allowCookies","enableXRay","excludedPages","favoritePages","guestRoleArn","identityPoolId","includedPages","sessionSampleRate","telemetries"})
+    @OutputCustomType.Constructor
     private AppMonitorConfiguration(
-        @Nullable Boolean allowCookies,
-        @Nullable Boolean enableXRay,
-        @Nullable List<String> excludedPages,
-        @Nullable List<String> favoritePages,
-        @Nullable String guestRoleArn,
-        @Nullable String identityPoolId,
-        @Nullable List<String> includedPages,
-        @Nullable Double sessionSampleRate,
-        @Nullable List<AppMonitorTelemetry> telemetries) {
+        @OutputCustomType.Parameter("allowCookies") @Nullable Boolean allowCookies,
+        @OutputCustomType.Parameter("enableXRay") @Nullable Boolean enableXRay,
+        @OutputCustomType.Parameter("excludedPages") @Nullable List<String> excludedPages,
+        @OutputCustomType.Parameter("favoritePages") @Nullable List<String> favoritePages,
+        @OutputCustomType.Parameter("guestRoleArn") @Nullable String guestRoleArn,
+        @OutputCustomType.Parameter("identityPoolId") @Nullable String identityPoolId,
+        @OutputCustomType.Parameter("includedPages") @Nullable List<String> includedPages,
+        @OutputCustomType.Parameter("sessionSampleRate") @Nullable Double sessionSampleRate,
+        @OutputCustomType.Parameter("telemetries") @Nullable List<AppMonitorTelemetry> telemetries) {
         this.allowCookies = allowCookies;
         this.enableXRay = enableXRay;
         this.excludedPages = excludedPages;
@@ -183,47 +183,47 @@ public final class AppMonitorConfiguration {
     	      this.telemetries = defaults.telemetries;
         }
 
-        public Builder setAllowCookies(@Nullable Boolean allowCookies) {
+        public Builder allowCookies(@Nullable Boolean allowCookies) {
             this.allowCookies = allowCookies;
             return this;
         }
 
-        public Builder setEnableXRay(@Nullable Boolean enableXRay) {
+        public Builder enableXRay(@Nullable Boolean enableXRay) {
             this.enableXRay = enableXRay;
             return this;
         }
 
-        public Builder setExcludedPages(@Nullable List<String> excludedPages) {
+        public Builder excludedPages(@Nullable List<String> excludedPages) {
             this.excludedPages = excludedPages;
             return this;
         }
 
-        public Builder setFavoritePages(@Nullable List<String> favoritePages) {
+        public Builder favoritePages(@Nullable List<String> favoritePages) {
             this.favoritePages = favoritePages;
             return this;
         }
 
-        public Builder setGuestRoleArn(@Nullable String guestRoleArn) {
+        public Builder guestRoleArn(@Nullable String guestRoleArn) {
             this.guestRoleArn = guestRoleArn;
             return this;
         }
 
-        public Builder setIdentityPoolId(@Nullable String identityPoolId) {
+        public Builder identityPoolId(@Nullable String identityPoolId) {
             this.identityPoolId = identityPoolId;
             return this;
         }
 
-        public Builder setIncludedPages(@Nullable List<String> includedPages) {
+        public Builder includedPages(@Nullable List<String> includedPages) {
             this.includedPages = includedPages;
             return this;
         }
 
-        public Builder setSessionSampleRate(@Nullable Double sessionSampleRate) {
+        public Builder sessionSampleRate(@Nullable Double sessionSampleRate) {
             this.sessionSampleRate = sessionSampleRate;
             return this;
         }
 
-        public Builder setTelemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
+        public Builder telemetries(@Nullable List<AppMonitorTelemetry> telemetries) {
             this.telemetries = telemetries;
             return this;
         }

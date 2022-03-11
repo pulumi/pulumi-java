@@ -30,12 +30,12 @@ public final class SmsReceiverResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"countryCode","name","phoneNumber","status"})
+    @OutputCustomType.Constructor
     private SmsReceiverResponse(
-        String countryCode,
-        String name,
-        String phoneNumber,
-        String status) {
+        @OutputCustomType.Parameter("countryCode") String countryCode,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("status") String status) {
         this.countryCode = countryCode;
         this.name = name;
         this.phoneNumber = phoneNumber;
@@ -97,22 +97,22 @@ public final class SmsReceiverResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCountryCode(String countryCode) {
+        public Builder countryCode(String countryCode) {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

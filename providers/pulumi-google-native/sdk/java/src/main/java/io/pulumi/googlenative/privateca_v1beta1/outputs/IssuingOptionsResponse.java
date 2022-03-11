@@ -20,10 +20,10 @@ public final class IssuingOptionsResponse {
      */
     private final Boolean includeCrlAccessUrl;
 
-    @OutputCustomType.Constructor({"includeCaCertUrl","includeCrlAccessUrl"})
+    @OutputCustomType.Constructor
     private IssuingOptionsResponse(
-        Boolean includeCaCertUrl,
-        Boolean includeCrlAccessUrl) {
+        @OutputCustomType.Parameter("includeCaCertUrl") Boolean includeCaCertUrl,
+        @OutputCustomType.Parameter("includeCrlAccessUrl") Boolean includeCrlAccessUrl) {
         this.includeCaCertUrl = includeCaCertUrl;
         this.includeCrlAccessUrl = includeCrlAccessUrl;
     }
@@ -65,12 +65,12 @@ public final class IssuingOptionsResponse {
     	      this.includeCrlAccessUrl = defaults.includeCrlAccessUrl;
         }
 
-        public Builder setIncludeCaCertUrl(Boolean includeCaCertUrl) {
+        public Builder includeCaCertUrl(Boolean includeCaCertUrl) {
             this.includeCaCertUrl = Objects.requireNonNull(includeCaCertUrl);
             return this;
         }
 
-        public Builder setIncludeCrlAccessUrl(Boolean includeCrlAccessUrl) {
+        public Builder includeCrlAccessUrl(Boolean includeCrlAccessUrl) {
             this.includeCrlAccessUrl = Objects.requireNonNull(includeCrlAccessUrl);
             return this;
         }

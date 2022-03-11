@@ -209,7 +209,7 @@ public class SqlDWTableDataSet extends io.pulumi.resources.CustomResource {
     private static SqlDWTableDataSetArgs makeArgs(SqlDWTableDataSetArgs args) {
         var builder = args == null ? SqlDWTableDataSetArgs.builder() : SqlDWTableDataSetArgs.builder(args);
         return builder
-            .setKind("SqlDWTable")
+            .kind("SqlDWTable")
             .build();
     }
 

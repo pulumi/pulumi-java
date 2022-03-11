@@ -27,11 +27,11 @@ public final class WsfcDomainCredentialsResponse {
      */
     private final @Nullable String sqlServiceAccountPassword;
 
-    @OutputCustomType.Constructor({"clusterBootstrapAccountPassword","clusterOperatorAccountPassword","sqlServiceAccountPassword"})
+    @OutputCustomType.Constructor
     private WsfcDomainCredentialsResponse(
-        @Nullable String clusterBootstrapAccountPassword,
-        @Nullable String clusterOperatorAccountPassword,
-        @Nullable String sqlServiceAccountPassword) {
+        @OutputCustomType.Parameter("clusterBootstrapAccountPassword") @Nullable String clusterBootstrapAccountPassword,
+        @OutputCustomType.Parameter("clusterOperatorAccountPassword") @Nullable String clusterOperatorAccountPassword,
+        @OutputCustomType.Parameter("sqlServiceAccountPassword") @Nullable String sqlServiceAccountPassword) {
         this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
         this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
         this.sqlServiceAccountPassword = sqlServiceAccountPassword;
@@ -83,17 +83,17 @@ public final class WsfcDomainCredentialsResponse {
     	      this.sqlServiceAccountPassword = defaults.sqlServiceAccountPassword;
         }
 
-        public Builder setClusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
+        public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
             this.clusterBootstrapAccountPassword = clusterBootstrapAccountPassword;
             return this;
         }
 
-        public Builder setClusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
+        public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
             this.clusterOperatorAccountPassword = clusterOperatorAccountPassword;
             return this;
         }
 
-        public Builder setSqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
+        public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }

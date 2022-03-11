@@ -22,10 +22,10 @@ public final class ComputeInstanceApplicationResponse {
      */
     private final @Nullable String endpointUri;
 
-    @OutputCustomType.Constructor({"displayName","endpointUri"})
+    @OutputCustomType.Constructor
     private ComputeInstanceApplicationResponse(
-        @Nullable String displayName,
-        @Nullable String endpointUri) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri) {
         this.displayName = displayName;
         this.endpointUri = endpointUri;
     }
@@ -67,12 +67,12 @@ public final class ComputeInstanceApplicationResponse {
     	      this.endpointUri = defaults.endpointUri;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }

@@ -155,72 +155,72 @@ public final class FlowDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFlowDefinitionName(Input<String> flowDefinitionName) {
+        public Builder flowDefinitionName(Input<String> flowDefinitionName) {
             this.flowDefinitionName = Objects.requireNonNull(flowDefinitionName);
             return this;
         }
 
-        public Builder setFlowDefinitionName(String flowDefinitionName) {
+        public Builder flowDefinitionName(String flowDefinitionName) {
             this.flowDefinitionName = Input.of(Objects.requireNonNull(flowDefinitionName));
             return this;
         }
 
-        public Builder setHumanLoopActivationConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable Input<FlowDefinitionHumanLoopActivationConfigArgs> humanLoopActivationConfig) {
             this.humanLoopActivationConfig = humanLoopActivationConfig;
             return this;
         }
 
-        public Builder setHumanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigArgs humanLoopActivationConfig) {
+        public Builder humanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigArgs humanLoopActivationConfig) {
             this.humanLoopActivationConfig = Input.ofNullable(humanLoopActivationConfig);
             return this;
         }
 
-        public Builder setHumanLoopConfig(Input<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig) {
+        public Builder humanLoopConfig(Input<FlowDefinitionHumanLoopConfigArgs> humanLoopConfig) {
             this.humanLoopConfig = Objects.requireNonNull(humanLoopConfig);
             return this;
         }
 
-        public Builder setHumanLoopConfig(FlowDefinitionHumanLoopConfigArgs humanLoopConfig) {
+        public Builder humanLoopConfig(FlowDefinitionHumanLoopConfigArgs humanLoopConfig) {
             this.humanLoopConfig = Input.of(Objects.requireNonNull(humanLoopConfig));
             return this;
         }
 
-        public Builder setHumanLoopRequestSource(@Nullable Input<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable Input<FlowDefinitionHumanLoopRequestSourceArgs> humanLoopRequestSource) {
             this.humanLoopRequestSource = humanLoopRequestSource;
             return this;
         }
 
-        public Builder setHumanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceArgs humanLoopRequestSource) {
+        public Builder humanLoopRequestSource(@Nullable FlowDefinitionHumanLoopRequestSourceArgs humanLoopRequestSource) {
             this.humanLoopRequestSource = Input.ofNullable(humanLoopRequestSource);
             return this;
         }
 
-        public Builder setOutputConfig(Input<FlowDefinitionOutputConfigArgs> outputConfig) {
+        public Builder outputConfig(Input<FlowDefinitionOutputConfigArgs> outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
 
-        public Builder setOutputConfig(FlowDefinitionOutputConfigArgs outputConfig) {
+        public Builder outputConfig(FlowDefinitionOutputConfigArgs outputConfig) {
             this.outputConfig = Input.of(Objects.requireNonNull(outputConfig));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

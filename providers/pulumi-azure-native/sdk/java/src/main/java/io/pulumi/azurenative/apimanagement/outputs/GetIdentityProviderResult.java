@@ -73,20 +73,20 @@ public final class GetIdentityProviderResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowedTenants","authority","clientId","clientSecret","id","name","passwordResetPolicyName","profileEditingPolicyName","signinPolicyName","signinTenant","signupPolicyName","type"})
+    @OutputCustomType.Constructor
     private GetIdentityProviderResult(
-        @Nullable List<String> allowedTenants,
-        @Nullable String authority,
-        String clientId,
-        @Nullable String clientSecret,
-        String id,
-        String name,
-        @Nullable String passwordResetPolicyName,
-        @Nullable String profileEditingPolicyName,
-        @Nullable String signinPolicyName,
-        @Nullable String signinTenant,
-        @Nullable String signupPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("allowedTenants") @Nullable List<String> allowedTenants,
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("passwordResetPolicyName") @Nullable String passwordResetPolicyName,
+        @OutputCustomType.Parameter("profileEditingPolicyName") @Nullable String profileEditingPolicyName,
+        @OutputCustomType.Parameter("signinPolicyName") @Nullable String signinPolicyName,
+        @OutputCustomType.Parameter("signinTenant") @Nullable String signinTenant,
+        @OutputCustomType.Parameter("signupPolicyName") @Nullable String signupPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowedTenants = allowedTenants;
         this.authority = authority;
         this.clientId = clientId;
@@ -228,62 +228,62 @@ public final class GetIdentityProviderResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedTenants(@Nullable List<String> allowedTenants) {
+        public Builder allowedTenants(@Nullable List<String> allowedTenants) {
             this.allowedTenants = allowedTenants;
             return this;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPasswordResetPolicyName(@Nullable String passwordResetPolicyName) {
+        public Builder passwordResetPolicyName(@Nullable String passwordResetPolicyName) {
             this.passwordResetPolicyName = passwordResetPolicyName;
             return this;
         }
 
-        public Builder setProfileEditingPolicyName(@Nullable String profileEditingPolicyName) {
+        public Builder profileEditingPolicyName(@Nullable String profileEditingPolicyName) {
             this.profileEditingPolicyName = profileEditingPolicyName;
             return this;
         }
 
-        public Builder setSigninPolicyName(@Nullable String signinPolicyName) {
+        public Builder signinPolicyName(@Nullable String signinPolicyName) {
             this.signinPolicyName = signinPolicyName;
             return this;
         }
 
-        public Builder setSigninTenant(@Nullable String signinTenant) {
+        public Builder signinTenant(@Nullable String signinTenant) {
             this.signinTenant = signinTenant;
             return this;
         }
 
-        public Builder setSignupPolicyName(@Nullable String signupPolicyName) {
+        public Builder signupPolicyName(@Nullable String signupPolicyName) {
             this.signupPolicyName = signupPolicyName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

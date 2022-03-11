@@ -163,102 +163,102 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationInstanceIdToReplace(@Nullable Input<String> applicationInstanceIdToReplace) {
+        public Builder applicationInstanceIdToReplace(@Nullable Input<String> applicationInstanceIdToReplace) {
             this.applicationInstanceIdToReplace = applicationInstanceIdToReplace;
             return this;
         }
 
-        public Builder setApplicationInstanceIdToReplace(@Nullable String applicationInstanceIdToReplace) {
+        public Builder applicationInstanceIdToReplace(@Nullable String applicationInstanceIdToReplace) {
             this.applicationInstanceIdToReplace = Input.ofNullable(applicationInstanceIdToReplace);
             return this;
         }
 
-        public Builder setDefaultRuntimeContextDevice(Input<String> defaultRuntimeContextDevice) {
+        public Builder defaultRuntimeContextDevice(Input<String> defaultRuntimeContextDevice) {
             this.defaultRuntimeContextDevice = Objects.requireNonNull(defaultRuntimeContextDevice);
             return this;
         }
 
-        public Builder setDefaultRuntimeContextDevice(String defaultRuntimeContextDevice) {
+        public Builder defaultRuntimeContextDevice(String defaultRuntimeContextDevice) {
             this.defaultRuntimeContextDevice = Input.of(Objects.requireNonNull(defaultRuntimeContextDevice));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceId(@Nullable Input<String> deviceId) {
+        public Builder deviceId(@Nullable Input<String> deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = Input.ofNullable(deviceId);
             return this;
         }
 
-        public Builder setManifestOverridesPayload(@Nullable Input<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload) {
+        public Builder manifestOverridesPayload(@Nullable Input<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload) {
             this.manifestOverridesPayload = manifestOverridesPayload;
             return this;
         }
 
-        public Builder setManifestOverridesPayload(@Nullable ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
+        public Builder manifestOverridesPayload(@Nullable ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
             this.manifestOverridesPayload = Input.ofNullable(manifestOverridesPayload);
             return this;
         }
 
-        public Builder setManifestPayload(Input<ApplicationInstanceManifestPayloadArgs> manifestPayload) {
+        public Builder manifestPayload(Input<ApplicationInstanceManifestPayloadArgs> manifestPayload) {
             this.manifestPayload = Objects.requireNonNull(manifestPayload);
             return this;
         }
 
-        public Builder setManifestPayload(ApplicationInstanceManifestPayloadArgs manifestPayload) {
+        public Builder manifestPayload(ApplicationInstanceManifestPayloadArgs manifestPayload) {
             this.manifestPayload = Input.of(Objects.requireNonNull(manifestPayload));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuntimeRoleArn(@Nullable Input<String> runtimeRoleArn) {
+        public Builder runtimeRoleArn(@Nullable Input<String> runtimeRoleArn) {
             this.runtimeRoleArn = runtimeRoleArn;
             return this;
         }
 
-        public Builder setRuntimeRoleArn(@Nullable String runtimeRoleArn) {
+        public Builder runtimeRoleArn(@Nullable String runtimeRoleArn) {
             this.runtimeRoleArn = Input.ofNullable(runtimeRoleArn);
             return this;
         }
 
-        public Builder setStatusFilter(@Nullable Input<ApplicationInstanceStatusFilter> statusFilter) {
+        public Builder statusFilter(@Nullable Input<ApplicationInstanceStatusFilter> statusFilter) {
             this.statusFilter = statusFilter;
             return this;
         }
 
-        public Builder setStatusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
+        public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
             this.statusFilter = Input.ofNullable(statusFilter);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ApplicationInstanceTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ApplicationInstanceTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApplicationInstanceTagArgs> tags) {
+        public Builder tags(@Nullable List<ApplicationInstanceTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

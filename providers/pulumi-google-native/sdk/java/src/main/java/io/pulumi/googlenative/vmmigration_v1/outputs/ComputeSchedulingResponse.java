@@ -33,12 +33,12 @@ public final class ComputeSchedulingResponse {
      */
     private final String restartType;
 
-    @OutputCustomType.Constructor({"minNodeCpus","nodeAffinities","onHostMaintenance","restartType"})
+    @OutputCustomType.Constructor
     private ComputeSchedulingResponse(
-        Integer minNodeCpus,
-        List<SchedulingNodeAffinityResponse> nodeAffinities,
-        String onHostMaintenance,
-        String restartType) {
+        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") List<SchedulingNodeAffinityResponse> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @OutputCustomType.Parameter("restartType") String restartType) {
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
         this.onHostMaintenance = onHostMaintenance;
@@ -100,22 +100,22 @@ public final class ComputeSchedulingResponse {
     	      this.restartType = defaults.restartType;
         }
 
-        public Builder setMinNodeCpus(Integer minNodeCpus) {
+        public Builder minNodeCpus(Integer minNodeCpus) {
             this.minNodeCpus = Objects.requireNonNull(minNodeCpus);
             return this;
         }
 
-        public Builder setNodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
+        public Builder nodeAffinities(List<SchedulingNodeAffinityResponse> nodeAffinities) {
             this.nodeAffinities = Objects.requireNonNull(nodeAffinities);
             return this;
         }
 
-        public Builder setOnHostMaintenance(String onHostMaintenance) {
+        public Builder onHostMaintenance(String onHostMaintenance) {
             this.onHostMaintenance = Objects.requireNonNull(onHostMaintenance);
             return this;
         }
 
-        public Builder setRestartType(String restartType) {
+        public Builder restartType(String restartType) {
             this.restartType = Objects.requireNonNull(restartType);
             return this;
         }

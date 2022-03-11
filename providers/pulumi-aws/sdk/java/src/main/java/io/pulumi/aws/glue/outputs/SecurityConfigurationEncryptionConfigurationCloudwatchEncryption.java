@@ -22,10 +22,10 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"cloudwatchEncryptionMode","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfigurationCloudwatchEncryption(
-        @Nullable String cloudwatchEncryptionMode,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("cloudwatchEncryptionMode") @Nullable String cloudwatchEncryptionMode,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
         this.kmsKeyArn = kmsKeyArn;
     }
@@ -67,12 +67,12 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setCloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
+        public Builder cloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
             this.cloudwatchEncryptionMode = cloudwatchEncryptionMode;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

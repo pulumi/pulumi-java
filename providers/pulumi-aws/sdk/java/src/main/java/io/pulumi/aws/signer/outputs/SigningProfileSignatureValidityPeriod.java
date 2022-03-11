@@ -13,10 +13,10 @@ public final class SigningProfileSignatureValidityPeriod {
     private final String type;
     private final Integer value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private SigningProfileSignatureValidityPeriod(
-        String type,
-        Integer value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.type = type;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class SigningProfileSignatureValidityPeriod {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

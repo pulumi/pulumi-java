@@ -35,12 +35,12 @@ public final class GetLogGroupResult {
      */
     private final @Nullable List<LogGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","kmsKeyId","retentionInDays","tags"})
+    @OutputCustomType.Constructor
     private GetLogGroupResult(
-        @Nullable String arn,
-        @Nullable String kmsKeyId,
-        @Nullable Integer retentionInDays,
-        @Nullable List<LogGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("tags") @Nullable List<LogGroupTag> tags) {
         this.arn = arn;
         this.kmsKeyId = kmsKeyId;
         this.retentionInDays = retentionInDays;
@@ -102,22 +102,22 @@ public final class GetLogGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LogGroupTag> tags) {
+        public Builder tags(@Nullable List<LogGroupTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -20,10 +20,10 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRange {
      */
     private final Integer start;
 
-    @OutputCustomType.Constructor({"end","start"})
+    @OutputCustomType.Constructor
     private RouteSpecHttp2RouteMatchHeaderMatchRange(
-        Integer end,
-        Integer start) {
+        @OutputCustomType.Parameter("end") Integer end,
+        @OutputCustomType.Parameter("start") Integer start) {
         this.end = end;
         this.start = start;
     }
@@ -65,12 +65,12 @@ public final class RouteSpecHttp2RouteMatchHeaderMatchRange {
     	      this.start = defaults.start;
         }
 
-        public Builder setEnd(Integer end) {
+        public Builder end(Integer end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }
 
-        public Builder setStart(Integer start) {
+        public Builder start(Integer start) {
             this.start = Objects.requireNonNull(start);
             return this;
         }

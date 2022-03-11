@@ -84,17 +84,17 @@ public final class GetJitNetworkAccessPolicyArgs extends io.pulumi.resources.Inv
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAscLocation(String ascLocation) {
+        public Builder ascLocation(String ascLocation) {
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
 
-        public Builder setJitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
+        public Builder jitNetworkAccessPolicyName(String jitNetworkAccessPolicyName) {
             this.jitNetworkAccessPolicyName = Objects.requireNonNull(jitNetworkAccessPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

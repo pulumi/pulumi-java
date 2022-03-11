@@ -16,8 +16,8 @@ public final class WebAclDefaultActionAllowCustomRequestHandling {
      */
     private final List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders;
 
-    @OutputCustomType.Constructor({"insertHeaders"})
-    private WebAclDefaultActionAllowCustomRequestHandling(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+    @OutputCustomType.Constructor
+    private WebAclDefaultActionAllowCustomRequestHandling(@OutputCustomType.Parameter("insertHeaders") List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
         this.insertHeaders = insertHeaders;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclDefaultActionAllowCustomRequestHandling {
     	      this.insertHeaders = defaults.insertHeaders;
         }
 
-        public Builder setInsertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
+        public Builder insertHeaders(List<WebAclDefaultActionAllowCustomRequestHandlingInsertHeader> insertHeaders) {
             this.insertHeaders = Objects.requireNonNull(insertHeaders);
             return this;
         }

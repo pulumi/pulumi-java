@@ -26,11 +26,11 @@ public final class ReportComparisonExpressionResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","operator","values"})
+    @OutputCustomType.Constructor
     private ReportComparisonExpressionResponse(
-        String name,
-        String operator,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.operator = operator;
         this.values = values;
@@ -82,17 +82,17 @@ public final class ReportComparisonExpressionResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

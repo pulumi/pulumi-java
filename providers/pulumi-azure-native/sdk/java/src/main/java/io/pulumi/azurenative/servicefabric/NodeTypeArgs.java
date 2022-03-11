@@ -333,182 +333,182 @@ public final class NodeTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmSize = defaults.vmSize;
         }
 
-        public Builder setApplicationPorts(@Nullable Input<EndpointRangeDescriptionArgs> applicationPorts) {
+        public Builder applicationPorts(@Nullable Input<EndpointRangeDescriptionArgs> applicationPorts) {
             this.applicationPorts = applicationPorts;
             return this;
         }
 
-        public Builder setApplicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
+        public Builder applicationPorts(@Nullable EndpointRangeDescriptionArgs applicationPorts) {
             this.applicationPorts = Input.ofNullable(applicationPorts);
             return this;
         }
 
-        public Builder setCapacities(@Nullable Input<Map<String,String>> capacities) {
+        public Builder capacities(@Nullable Input<Map<String,String>> capacities) {
             this.capacities = capacities;
             return this;
         }
 
-        public Builder setCapacities(@Nullable Map<String,String> capacities) {
+        public Builder capacities(@Nullable Map<String,String> capacities) {
             this.capacities = Input.ofNullable(capacities);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setDataDiskSizeGB(Input<Integer> dataDiskSizeGB) {
+        public Builder dataDiskSizeGB(Input<Integer> dataDiskSizeGB) {
             this.dataDiskSizeGB = Objects.requireNonNull(dataDiskSizeGB);
             return this;
         }
 
-        public Builder setDataDiskSizeGB(Integer dataDiskSizeGB) {
+        public Builder dataDiskSizeGB(Integer dataDiskSizeGB) {
             this.dataDiskSizeGB = Input.of(Objects.requireNonNull(dataDiskSizeGB));
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable Input<EndpointRangeDescriptionArgs> ephemeralPorts) {
             this.ephemeralPorts = ephemeralPorts;
             return this;
         }
 
-        public Builder setEphemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
+        public Builder ephemeralPorts(@Nullable EndpointRangeDescriptionArgs ephemeralPorts) {
             this.ephemeralPorts = Input.ofNullable(ephemeralPorts);
             return this;
         }
 
-        public Builder setIsPrimary(Input<Boolean> isPrimary) {
+        public Builder isPrimary(Input<Boolean> isPrimary) {
             this.isPrimary = Objects.requireNonNull(isPrimary);
             return this;
         }
 
-        public Builder setIsPrimary(Boolean isPrimary) {
+        public Builder isPrimary(Boolean isPrimary) {
             this.isPrimary = Input.of(Objects.requireNonNull(isPrimary));
             return this;
         }
 
-        public Builder setNodeTypeName(@Nullable Input<String> nodeTypeName) {
+        public Builder nodeTypeName(@Nullable Input<String> nodeTypeName) {
             this.nodeTypeName = nodeTypeName;
             return this;
         }
 
-        public Builder setNodeTypeName(@Nullable String nodeTypeName) {
+        public Builder nodeTypeName(@Nullable String nodeTypeName) {
             this.nodeTypeName = Input.ofNullable(nodeTypeName);
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Input<Map<String,String>> placementProperties) {
+        public Builder placementProperties(@Nullable Input<Map<String,String>> placementProperties) {
             this.placementProperties = placementProperties;
             return this;
         }
 
-        public Builder setPlacementProperties(@Nullable Map<String,String> placementProperties) {
+        public Builder placementProperties(@Nullable Map<String,String> placementProperties) {
             this.placementProperties = Input.ofNullable(placementProperties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVmExtensions(@Nullable Input<List<VMSSExtensionArgs>> vmExtensions) {
+        public Builder vmExtensions(@Nullable Input<List<VMSSExtensionArgs>> vmExtensions) {
             this.vmExtensions = vmExtensions;
             return this;
         }
 
-        public Builder setVmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
+        public Builder vmExtensions(@Nullable List<VMSSExtensionArgs> vmExtensions) {
             this.vmExtensions = Input.ofNullable(vmExtensions);
             return this;
         }
 
-        public Builder setVmImageOffer(@Nullable Input<String> vmImageOffer) {
+        public Builder vmImageOffer(@Nullable Input<String> vmImageOffer) {
             this.vmImageOffer = vmImageOffer;
             return this;
         }
 
-        public Builder setVmImageOffer(@Nullable String vmImageOffer) {
+        public Builder vmImageOffer(@Nullable String vmImageOffer) {
             this.vmImageOffer = Input.ofNullable(vmImageOffer);
             return this;
         }
 
-        public Builder setVmImagePublisher(@Nullable Input<String> vmImagePublisher) {
+        public Builder vmImagePublisher(@Nullable Input<String> vmImagePublisher) {
             this.vmImagePublisher = vmImagePublisher;
             return this;
         }
 
-        public Builder setVmImagePublisher(@Nullable String vmImagePublisher) {
+        public Builder vmImagePublisher(@Nullable String vmImagePublisher) {
             this.vmImagePublisher = Input.ofNullable(vmImagePublisher);
             return this;
         }
 
-        public Builder setVmImageSku(@Nullable Input<String> vmImageSku) {
+        public Builder vmImageSku(@Nullable Input<String> vmImageSku) {
             this.vmImageSku = vmImageSku;
             return this;
         }
 
-        public Builder setVmImageSku(@Nullable String vmImageSku) {
+        public Builder vmImageSku(@Nullable String vmImageSku) {
             this.vmImageSku = Input.ofNullable(vmImageSku);
             return this;
         }
 
-        public Builder setVmImageVersion(@Nullable Input<String> vmImageVersion) {
+        public Builder vmImageVersion(@Nullable Input<String> vmImageVersion) {
             this.vmImageVersion = vmImageVersion;
             return this;
         }
 
-        public Builder setVmImageVersion(@Nullable String vmImageVersion) {
+        public Builder vmImageVersion(@Nullable String vmImageVersion) {
             this.vmImageVersion = Input.ofNullable(vmImageVersion);
             return this;
         }
 
-        public Builder setVmInstanceCount(Input<Integer> vmInstanceCount) {
+        public Builder vmInstanceCount(Input<Integer> vmInstanceCount) {
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
 
-        public Builder setVmInstanceCount(Integer vmInstanceCount) {
+        public Builder vmInstanceCount(Integer vmInstanceCount) {
             this.vmInstanceCount = Input.of(Objects.requireNonNull(vmInstanceCount));
             return this;
         }
 
-        public Builder setVmSecrets(@Nullable Input<List<VaultSecretGroupArgs>> vmSecrets) {
+        public Builder vmSecrets(@Nullable Input<List<VaultSecretGroupArgs>> vmSecrets) {
             this.vmSecrets = vmSecrets;
             return this;
         }
 
-        public Builder setVmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
+        public Builder vmSecrets(@Nullable List<VaultSecretGroupArgs> vmSecrets) {
             this.vmSecrets = Input.ofNullable(vmSecrets);
             return this;
         }
 
-        public Builder setVmSize(@Nullable Input<String> vmSize) {
+        public Builder vmSize(@Nullable Input<String> vmSize) {
             this.vmSize = vmSize;
             return this;
         }
 
-        public Builder setVmSize(@Nullable String vmSize) {
+        public Builder vmSize(@Nullable String vmSize) {
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }

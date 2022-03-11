@@ -17,8 +17,8 @@ public final class ListDatabaseAccountConnectionStringsResult {
      */
     private final @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings;
 
-    @OutputCustomType.Constructor({"connectionStrings"})
-    private ListDatabaseAccountConnectionStringsResult(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
+    @OutputCustomType.Constructor
+    private ListDatabaseAccountConnectionStringsResult(@OutputCustomType.Parameter("connectionStrings") @Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
         this.connectionStrings = connectionStrings;
     }
 
@@ -50,7 +50,7 @@ public final class ListDatabaseAccountConnectionStringsResult {
     	      this.connectionStrings = defaults.connectionStrings;
         }
 
-        public Builder setConnectionStrings(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
+        public Builder connectionStrings(@Nullable List<DatabaseAccountConnectionStringResponse> connectionStrings) {
             this.connectionStrings = connectionStrings;
             return this;
         }

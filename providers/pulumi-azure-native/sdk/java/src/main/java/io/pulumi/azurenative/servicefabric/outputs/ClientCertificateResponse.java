@@ -33,12 +33,12 @@ public final class ClientCertificateResponse {
      */
     private final @Nullable String thumbprint;
 
-    @OutputCustomType.Constructor({"commonName","isAdmin","issuerThumbprint","thumbprint"})
+    @OutputCustomType.Constructor
     private ClientCertificateResponse(
-        @Nullable String commonName,
-        Boolean isAdmin,
-        @Nullable String issuerThumbprint,
-        @Nullable String thumbprint) {
+        @OutputCustomType.Parameter("commonName") @Nullable String commonName,
+        @OutputCustomType.Parameter("isAdmin") Boolean isAdmin,
+        @OutputCustomType.Parameter("issuerThumbprint") @Nullable String issuerThumbprint,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint) {
         this.commonName = commonName;
         this.isAdmin = isAdmin;
         this.issuerThumbprint = issuerThumbprint;
@@ -100,22 +100,22 @@ public final class ClientCertificateResponse {
     	      this.thumbprint = defaults.thumbprint;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setIsAdmin(Boolean isAdmin) {
+        public Builder isAdmin(Boolean isAdmin) {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
 
-        public Builder setIssuerThumbprint(@Nullable String issuerThumbprint) {
+        public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
             this.issuerThumbprint = issuerThumbprint;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }

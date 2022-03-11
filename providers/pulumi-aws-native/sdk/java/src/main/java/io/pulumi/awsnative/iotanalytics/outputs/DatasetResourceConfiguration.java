@@ -13,10 +13,10 @@ public final class DatasetResourceConfiguration {
     private final DatasetResourceConfigurationComputeType computeType;
     private final Integer volumeSizeInGB;
 
-    @OutputCustomType.Constructor({"computeType","volumeSizeInGB"})
+    @OutputCustomType.Constructor
     private DatasetResourceConfiguration(
-        DatasetResourceConfigurationComputeType computeType,
-        Integer volumeSizeInGB) {
+        @OutputCustomType.Parameter("computeType") DatasetResourceConfigurationComputeType computeType,
+        @OutputCustomType.Parameter("volumeSizeInGB") Integer volumeSizeInGB) {
         this.computeType = computeType;
         this.volumeSizeInGB = volumeSizeInGB;
     }
@@ -50,12 +50,12 @@ public final class DatasetResourceConfiguration {
     	      this.volumeSizeInGB = defaults.volumeSizeInGB;
         }
 
-        public Builder setComputeType(DatasetResourceConfigurationComputeType computeType) {
+        public Builder computeType(DatasetResourceConfigurationComputeType computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setVolumeSizeInGB(Integer volumeSizeInGB) {
+        public Builder volumeSizeInGB(Integer volumeSizeInGB) {
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }

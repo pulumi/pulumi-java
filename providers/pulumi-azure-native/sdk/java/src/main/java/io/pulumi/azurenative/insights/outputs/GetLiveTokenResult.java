@@ -15,8 +15,8 @@ public final class GetLiveTokenResult {
      */
     private final String liveToken;
 
-    @OutputCustomType.Constructor({"liveToken"})
-    private GetLiveTokenResult(String liveToken) {
+    @OutputCustomType.Constructor
+    private GetLiveTokenResult(@OutputCustomType.Parameter("liveToken") String liveToken) {
         this.liveToken = liveToken;
     }
 
@@ -48,7 +48,7 @@ public final class GetLiveTokenResult {
     	      this.liveToken = defaults.liveToken;
         }
 
-        public Builder setLiveToken(String liveToken) {
+        public Builder liveToken(String liveToken) {
             this.liveToken = Objects.requireNonNull(liveToken);
             return this;
         }

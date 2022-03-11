@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupCaptchaConfig {
     private final @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty;
 
-    @OutputCustomType.Constructor({"immunityTimeProperty"})
-    private RuleGroupCaptchaConfig(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
+    @OutputCustomType.Constructor
+    private RuleGroupCaptchaConfig(@OutputCustomType.Parameter("immunityTimeProperty") @Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
         this.immunityTimeProperty = immunityTimeProperty;
     }
 
@@ -42,7 +42,7 @@ public final class RuleGroupCaptchaConfig {
     	      this.immunityTimeProperty = defaults.immunityTimeProperty;
         }
 
-        public Builder setImmunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
+        public Builder immunityTimeProperty(@Nullable RuleGroupImmunityTimeProperty immunityTimeProperty) {
             this.immunityTimeProperty = immunityTimeProperty;
             return this;
         }

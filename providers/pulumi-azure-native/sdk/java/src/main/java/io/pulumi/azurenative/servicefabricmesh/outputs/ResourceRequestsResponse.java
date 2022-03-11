@@ -20,10 +20,10 @@ public final class ResourceRequestsResponse {
      */
     private final Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceRequestsResponse(
-        Double cpu,
-        Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB) {
         this.cpu = cpu;
         this.memoryInGB = memoryInGB;
     }
@@ -65,12 +65,12 @@ public final class ResourceRequestsResponse {
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }

@@ -25,11 +25,11 @@ public final class DateResponse {
      */
     private final Integer year;
 
-    @OutputCustomType.Constructor({"day","month","year"})
+    @OutputCustomType.Constructor
     private DateResponse(
-        Integer day,
-        Integer month,
-        Integer year) {
+        @OutputCustomType.Parameter("day") Integer day,
+        @OutputCustomType.Parameter("month") Integer month,
+        @OutputCustomType.Parameter("year") Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;
@@ -81,17 +81,17 @@ public final class DateResponse {
     	      this.year = defaults.year;
         }
 
-        public Builder setDay(Integer day) {
+        public Builder day(Integer day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setMonth(Integer month) {
+        public Builder month(Integer month) {
             this.month = Objects.requireNonNull(month);
             return this;
         }
 
-        public Builder setYear(Integer year) {
+        public Builder year(Integer year) {
             this.year = Objects.requireNonNull(year);
             return this;
         }

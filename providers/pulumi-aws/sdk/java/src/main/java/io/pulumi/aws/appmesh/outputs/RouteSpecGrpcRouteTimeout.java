@@ -23,10 +23,10 @@ public final class RouteSpecGrpcRouteTimeout {
      */
     private final @Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest;
 
-    @OutputCustomType.Constructor({"idle","perRequest"})
+    @OutputCustomType.Constructor
     private RouteSpecGrpcRouteTimeout(
-        @Nullable RouteSpecGrpcRouteTimeoutIdle idle,
-        @Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest) {
+        @OutputCustomType.Parameter("idle") @Nullable RouteSpecGrpcRouteTimeoutIdle idle,
+        @OutputCustomType.Parameter("perRequest") @Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest) {
         this.idle = idle;
         this.perRequest = perRequest;
     }
@@ -68,12 +68,12 @@ public final class RouteSpecGrpcRouteTimeout {
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder setIdle(@Nullable RouteSpecGrpcRouteTimeoutIdle idle) {
+        public Builder idle(@Nullable RouteSpecGrpcRouteTimeoutIdle idle) {
             this.idle = idle;
             return this;
         }
 
-        public Builder setPerRequest(@Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest) {
+        public Builder perRequest(@Nullable RouteSpecGrpcRouteTimeoutPerRequest perRequest) {
             this.perRequest = perRequest;
             return this;
         }

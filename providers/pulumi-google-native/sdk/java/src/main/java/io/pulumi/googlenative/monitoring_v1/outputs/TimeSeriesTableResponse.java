@@ -16,8 +16,8 @@ public final class TimeSeriesTableResponse {
      */
     private final List<TableDataSetResponse> dataSets;
 
-    @OutputCustomType.Constructor({"dataSets"})
-    private TimeSeriesTableResponse(List<TableDataSetResponse> dataSets) {
+    @OutputCustomType.Constructor
+    private TimeSeriesTableResponse(@OutputCustomType.Parameter("dataSets") List<TableDataSetResponse> dataSets) {
         this.dataSets = dataSets;
     }
 
@@ -49,7 +49,7 @@ public final class TimeSeriesTableResponse {
     	      this.dataSets = defaults.dataSets;
         }
 
-        public Builder setDataSets(List<TableDataSetResponse> dataSets) {
+        public Builder dataSets(List<TableDataSetResponse> dataSets) {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }

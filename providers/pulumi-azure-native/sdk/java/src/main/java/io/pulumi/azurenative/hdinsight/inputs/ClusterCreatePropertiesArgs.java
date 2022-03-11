@@ -261,132 +261,132 @@ public final class ClusterCreatePropertiesArgs extends io.pulumi.resources.Resou
     	      this.tier = defaults.tier;
         }
 
-        public Builder setClusterDefinition(@Nullable Input<ClusterDefinitionArgs> clusterDefinition) {
+        public Builder clusterDefinition(@Nullable Input<ClusterDefinitionArgs> clusterDefinition) {
             this.clusterDefinition = clusterDefinition;
             return this;
         }
 
-        public Builder setClusterDefinition(@Nullable ClusterDefinitionArgs clusterDefinition) {
+        public Builder clusterDefinition(@Nullable ClusterDefinitionArgs clusterDefinition) {
             this.clusterDefinition = Input.ofNullable(clusterDefinition);
             return this;
         }
 
-        public Builder setClusterVersion(@Nullable Input<String> clusterVersion) {
+        public Builder clusterVersion(@Nullable Input<String> clusterVersion) {
             this.clusterVersion = clusterVersion;
             return this;
         }
 
-        public Builder setClusterVersion(@Nullable String clusterVersion) {
+        public Builder clusterVersion(@Nullable String clusterVersion) {
             this.clusterVersion = Input.ofNullable(clusterVersion);
             return this;
         }
 
-        public Builder setComputeIsolationProperties(@Nullable Input<ComputeIsolationPropertiesArgs> computeIsolationProperties) {
+        public Builder computeIsolationProperties(@Nullable Input<ComputeIsolationPropertiesArgs> computeIsolationProperties) {
             this.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
 
-        public Builder setComputeIsolationProperties(@Nullable ComputeIsolationPropertiesArgs computeIsolationProperties) {
+        public Builder computeIsolationProperties(@Nullable ComputeIsolationPropertiesArgs computeIsolationProperties) {
             this.computeIsolationProperties = Input.ofNullable(computeIsolationProperties);
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable Input<ComputeProfileArgs> computeProfile) {
+        public Builder computeProfile(@Nullable Input<ComputeProfileArgs> computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable ComputeProfileArgs computeProfile) {
+        public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
             this.computeProfile = Input.ofNullable(computeProfile);
             return this;
         }
 
-        public Builder setDiskEncryptionProperties(@Nullable Input<DiskEncryptionPropertiesArgs> diskEncryptionProperties) {
+        public Builder diskEncryptionProperties(@Nullable Input<DiskEncryptionPropertiesArgs> diskEncryptionProperties) {
             this.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
 
-        public Builder setDiskEncryptionProperties(@Nullable DiskEncryptionPropertiesArgs diskEncryptionProperties) {
+        public Builder diskEncryptionProperties(@Nullable DiskEncryptionPropertiesArgs diskEncryptionProperties) {
             this.diskEncryptionProperties = Input.ofNullable(diskEncryptionProperties);
             return this;
         }
 
-        public Builder setEncryptionInTransitProperties(@Nullable Input<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties) {
+        public Builder encryptionInTransitProperties(@Nullable Input<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties) {
             this.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
 
-        public Builder setEncryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
+        public Builder encryptionInTransitProperties(@Nullable EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
             this.encryptionInTransitProperties = Input.ofNullable(encryptionInTransitProperties);
             return this;
         }
 
-        public Builder setKafkaRestProperties(@Nullable Input<KafkaRestPropertiesArgs> kafkaRestProperties) {
+        public Builder kafkaRestProperties(@Nullable Input<KafkaRestPropertiesArgs> kafkaRestProperties) {
             this.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
 
-        public Builder setKafkaRestProperties(@Nullable KafkaRestPropertiesArgs kafkaRestProperties) {
+        public Builder kafkaRestProperties(@Nullable KafkaRestPropertiesArgs kafkaRestProperties) {
             this.kafkaRestProperties = Input.ofNullable(kafkaRestProperties);
             return this;
         }
 
-        public Builder setMinSupportedTlsVersion(@Nullable Input<String> minSupportedTlsVersion) {
+        public Builder minSupportedTlsVersion(@Nullable Input<String> minSupportedTlsVersion) {
             this.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
 
-        public Builder setMinSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
+        public Builder minSupportedTlsVersion(@Nullable String minSupportedTlsVersion) {
             this.minSupportedTlsVersion = Input.ofNullable(minSupportedTlsVersion);
             return this;
         }
 
-        public Builder setNetworkProperties(@Nullable Input<NetworkPropertiesArgs> networkProperties) {
+        public Builder networkProperties(@Nullable Input<NetworkPropertiesArgs> networkProperties) {
             this.networkProperties = networkProperties;
             return this;
         }
 
-        public Builder setNetworkProperties(@Nullable NetworkPropertiesArgs networkProperties) {
+        public Builder networkProperties(@Nullable NetworkPropertiesArgs networkProperties) {
             this.networkProperties = Input.ofNullable(networkProperties);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<OSType> osType) {
+        public Builder osType(@Nullable Input<OSType> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable OSType osType) {
+        public Builder osType(@Nullable OSType osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
+        public Builder securityProfile(@Nullable Input<SecurityProfileArgs> securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileArgs securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
             this.securityProfile = Input.ofNullable(securityProfile);
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
+        public Builder storageProfile(@Nullable Input<StorageProfileArgs> storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable StorageProfileArgs storageProfile) {
+        public Builder storageProfile(@Nullable StorageProfileArgs storageProfile) {
             this.storageProfile = Input.ofNullable(storageProfile);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<Tier> tier) {
+        public Builder tier(@Nullable Input<Tier> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable Tier tier) {
+        public Builder tier(@Nullable Tier tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

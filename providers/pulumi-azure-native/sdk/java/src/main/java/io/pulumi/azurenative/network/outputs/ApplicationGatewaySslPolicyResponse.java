@@ -38,13 +38,13 @@ public final class ApplicationGatewaySslPolicyResponse {
      */
     private final @Nullable String policyType;
 
-    @OutputCustomType.Constructor({"cipherSuites","disabledSslProtocols","minProtocolVersion","policyName","policyType"})
+    @OutputCustomType.Constructor
     private ApplicationGatewaySslPolicyResponse(
-        @Nullable List<String> cipherSuites,
-        @Nullable List<String> disabledSslProtocols,
-        @Nullable String minProtocolVersion,
-        @Nullable String policyName,
-        @Nullable String policyType) {
+        @OutputCustomType.Parameter("cipherSuites") @Nullable List<String> cipherSuites,
+        @OutputCustomType.Parameter("disabledSslProtocols") @Nullable List<String> disabledSslProtocols,
+        @OutputCustomType.Parameter("minProtocolVersion") @Nullable String minProtocolVersion,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("policyType") @Nullable String policyType) {
         this.cipherSuites = cipherSuites;
         this.disabledSslProtocols = disabledSslProtocols;
         this.minProtocolVersion = minProtocolVersion;
@@ -116,27 +116,27 @@ public final class ApplicationGatewaySslPolicyResponse {
     	      this.policyType = defaults.policyType;
         }
 
-        public Builder setCipherSuites(@Nullable List<String> cipherSuites) {
+        public Builder cipherSuites(@Nullable List<String> cipherSuites) {
             this.cipherSuites = cipherSuites;
             return this;
         }
 
-        public Builder setDisabledSslProtocols(@Nullable List<String> disabledSslProtocols) {
+        public Builder disabledSslProtocols(@Nullable List<String> disabledSslProtocols) {
             this.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
 
-        public Builder setMinProtocolVersion(@Nullable String minProtocolVersion) {
+        public Builder minProtocolVersion(@Nullable String minProtocolVersion) {
             this.minProtocolVersion = minProtocolVersion;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = policyType;
             return this;
         }

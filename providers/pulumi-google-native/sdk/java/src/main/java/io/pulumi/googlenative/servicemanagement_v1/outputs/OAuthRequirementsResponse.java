@@ -15,8 +15,8 @@ public final class OAuthRequirementsResponse {
      */
     private final String canonicalScopes;
 
-    @OutputCustomType.Constructor({"canonicalScopes"})
-    private OAuthRequirementsResponse(String canonicalScopes) {
+    @OutputCustomType.Constructor
+    private OAuthRequirementsResponse(@OutputCustomType.Parameter("canonicalScopes") String canonicalScopes) {
         this.canonicalScopes = canonicalScopes;
     }
 
@@ -48,7 +48,7 @@ public final class OAuthRequirementsResponse {
     	      this.canonicalScopes = defaults.canonicalScopes;
         }
 
-        public Builder setCanonicalScopes(String canonicalScopes) {
+        public Builder canonicalScopes(String canonicalScopes) {
             this.canonicalScopes = Objects.requireNonNull(canonicalScopes);
             return this;
         }

@@ -35,12 +35,12 @@ public final class ReplicationControllerSpec {
      */
     private final @Nullable PodTemplateSpec template;
 
-    @OutputCustomType.Constructor({"minReadySeconds","replicas","selector","template"})
+    @OutputCustomType.Constructor
     private ReplicationControllerSpec(
-        @Nullable Integer minReadySeconds,
-        @Nullable Integer replicas,
-        @Nullable Map<String,String> selector,
-        @Nullable PodTemplateSpec template) {
+        @OutputCustomType.Parameter("minReadySeconds") @Nullable Integer minReadySeconds,
+        @OutputCustomType.Parameter("replicas") @Nullable Integer replicas,
+        @OutputCustomType.Parameter("selector") @Nullable Map<String,String> selector,
+        @OutputCustomType.Parameter("template") @Nullable PodTemplateSpec template) {
         this.minReadySeconds = minReadySeconds;
         this.replicas = replicas;
         this.selector = selector;
@@ -102,22 +102,22 @@ public final class ReplicationControllerSpec {
     	      this.template = defaults.template;
         }
 
-        public Builder setMinReadySeconds(@Nullable Integer minReadySeconds) {
+        public Builder minReadySeconds(@Nullable Integer minReadySeconds) {
             this.minReadySeconds = minReadySeconds;
             return this;
         }
 
-        public Builder setReplicas(@Nullable Integer replicas) {
+        public Builder replicas(@Nullable Integer replicas) {
             this.replicas = replicas;
             return this;
         }
 
-        public Builder setSelector(@Nullable Map<String,String> selector) {
+        public Builder selector(@Nullable Map<String,String> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTemplate(@Nullable PodTemplateSpec template) {
+        public Builder template(@Nullable PodTemplateSpec template) {
             this.template = template;
             return this;
         }

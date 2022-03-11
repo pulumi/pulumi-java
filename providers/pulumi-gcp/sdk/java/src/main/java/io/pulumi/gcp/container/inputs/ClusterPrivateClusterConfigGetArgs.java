@@ -166,72 +166,72 @@ public final class ClusterPrivateClusterConfigGetArgs extends io.pulumi.resource
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setEnablePrivateEndpoint(Input<Boolean> enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Input<Boolean> enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Input.of(Objects.requireNonNull(enablePrivateEndpoint));
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Input<Boolean> enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Input<Boolean> enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Input.ofNullable(enablePrivateNodes);
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs> masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfigGetArgs masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = Input.ofNullable(masterGlobalAccessConfig);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable Input<String> masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable Input<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Input.ofNullable(masterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setPeeringName(@Nullable Input<String> peeringName) {
+        public Builder peeringName(@Nullable Input<String> peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = Input.ofNullable(peeringName);
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable Input<String> privateEndpoint) {
+        public Builder privateEndpoint(@Nullable Input<String> privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable String privateEndpoint) {
+        public Builder privateEndpoint(@Nullable String privateEndpoint) {
             this.privateEndpoint = Input.ofNullable(privateEndpoint);
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable Input<String> publicEndpoint) {
+        public Builder publicEndpoint(@Nullable Input<String> publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable String publicEndpoint) {
+        public Builder publicEndpoint(@Nullable String publicEndpoint) {
             this.publicEndpoint = Input.ofNullable(publicEndpoint);
             return this;
         }

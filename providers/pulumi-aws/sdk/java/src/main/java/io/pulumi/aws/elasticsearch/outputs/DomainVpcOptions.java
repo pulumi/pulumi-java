@@ -25,12 +25,12 @@ public final class DomainVpcOptions {
     private final @Nullable List<String> subnetIds;
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","securityGroupIds","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private DomainVpcOptions(
-        @Nullable List<String> availabilityZones,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") @Nullable List<String> availabilityZones,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.availabilityZones = availabilityZones;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -84,22 +84,22 @@ public final class DomainVpcOptions {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

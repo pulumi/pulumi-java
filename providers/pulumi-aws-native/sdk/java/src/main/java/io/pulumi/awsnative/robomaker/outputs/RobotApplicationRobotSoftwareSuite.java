@@ -23,10 +23,10 @@ public final class RobotApplicationRobotSoftwareSuite {
      */
     private final @Nullable RobotApplicationRobotSoftwareSuiteVersion version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private RobotApplicationRobotSoftwareSuite(
-        RobotApplicationRobotSoftwareSuiteName name,
-        @Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
+        @OutputCustomType.Parameter("name") RobotApplicationRobotSoftwareSuiteName name,
+        @OutputCustomType.Parameter("version") @Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
         this.name = name;
         this.version = version;
     }
@@ -68,12 +68,12 @@ public final class RobotApplicationRobotSoftwareSuite {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(RobotApplicationRobotSoftwareSuiteName name) {
+        public Builder name(RobotApplicationRobotSoftwareSuiteName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
+        public Builder version(@Nullable RobotApplicationRobotSoftwareSuiteVersion version) {
             this.version = version;
             return this;
         }

@@ -15,8 +15,8 @@ public final class BackupPolicyBackupPolicy {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BackupPolicyBackupPolicy(String status) {
+    @OutputCustomType.Constructor
+    private BackupPolicyBackupPolicy(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 
@@ -48,7 +48,7 @@ public final class BackupPolicyBackupPolicy {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

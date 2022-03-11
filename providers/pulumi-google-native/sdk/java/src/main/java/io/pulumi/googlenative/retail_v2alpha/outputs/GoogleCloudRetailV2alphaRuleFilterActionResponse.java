@@ -15,8 +15,8 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
      */
     private final String filter;
 
-    @OutputCustomType.Constructor({"filter"})
-    private GoogleCloudRetailV2alphaRuleFilterActionResponse(String filter) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2alphaRuleFilterActionResponse(@OutputCustomType.Parameter("filter") String filter) {
         this.filter = filter;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudRetailV2alphaRuleFilterActionResponse {
     	      this.filter = defaults.filter;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }

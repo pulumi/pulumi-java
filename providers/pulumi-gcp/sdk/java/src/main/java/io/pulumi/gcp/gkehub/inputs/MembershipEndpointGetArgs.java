@@ -54,12 +54,12 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
     	      this.gkeCluster = defaults.gkeCluster;
         }
 
-        public Builder setGkeCluster(@Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
+        public Builder gkeCluster(@Nullable Input<MembershipEndpointGkeClusterGetArgs> gkeCluster) {
             this.gkeCluster = gkeCluster;
             return this;
         }
 
-        public Builder setGkeCluster(@Nullable MembershipEndpointGkeClusterGetArgs gkeCluster) {
+        public Builder gkeCluster(@Nullable MembershipEndpointGkeClusterGetArgs gkeCluster) {
             this.gkeCluster = Input.ofNullable(gkeCluster);
             return this;
         }

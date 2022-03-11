@@ -39,13 +39,13 @@ public final class AudioResponse {
      */
     private final @Nullable Integer samplingRate;
 
-    @OutputCustomType.Constructor({"bitrate","channels","label","odataType","samplingRate"})
+    @OutputCustomType.Constructor
     private AudioResponse(
-        @Nullable Integer bitrate,
-        @Nullable Integer channels,
-        @Nullable String label,
-        String odataType,
-        @Nullable Integer samplingRate) {
+        @OutputCustomType.Parameter("bitrate") @Nullable Integer bitrate,
+        @OutputCustomType.Parameter("channels") @Nullable Integer channels,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("samplingRate") @Nullable Integer samplingRate) {
         this.bitrate = bitrate;
         this.channels = channels;
         this.label = label;
@@ -118,27 +118,27 @@ public final class AudioResponse {
     	      this.samplingRate = defaults.samplingRate;
         }
 
-        public Builder setBitrate(@Nullable Integer bitrate) {
+        public Builder bitrate(@Nullable Integer bitrate) {
             this.bitrate = bitrate;
             return this;
         }
 
-        public Builder setChannels(@Nullable Integer channels) {
+        public Builder channels(@Nullable Integer channels) {
             this.channels = channels;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSamplingRate(@Nullable Integer samplingRate) {
+        public Builder samplingRate(@Nullable Integer samplingRate) {
             this.samplingRate = samplingRate;
             return this;
         }

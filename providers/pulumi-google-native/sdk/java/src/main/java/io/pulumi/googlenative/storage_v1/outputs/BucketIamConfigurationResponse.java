@@ -27,11 +27,11 @@ public final class BucketIamConfigurationResponse {
      */
     private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
-    @OutputCustomType.Constructor({"bucketPolicyOnly","publicAccessPrevention","uniformBucketLevelAccess"})
+    @OutputCustomType.Constructor
     private BucketIamConfigurationResponse(
-        BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
-        String publicAccessPrevention,
-        BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
+        @OutputCustomType.Parameter("bucketPolicyOnly") BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly,
+        @OutputCustomType.Parameter("publicAccessPrevention") String publicAccessPrevention,
+        @OutputCustomType.Parameter("uniformBucketLevelAccess") BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
         this.bucketPolicyOnly = bucketPolicyOnly;
         this.publicAccessPrevention = publicAccessPrevention;
         this.uniformBucketLevelAccess = uniformBucketLevelAccess;
@@ -83,17 +83,17 @@ public final class BucketIamConfigurationResponse {
     	      this.uniformBucketLevelAccess = defaults.uniformBucketLevelAccess;
         }
 
-        public Builder setBucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
+        public Builder bucketPolicyOnly(BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly) {
             this.bucketPolicyOnly = Objects.requireNonNull(bucketPolicyOnly);
             return this;
         }
 
-        public Builder setPublicAccessPrevention(String publicAccessPrevention) {
+        public Builder publicAccessPrevention(String publicAccessPrevention) {
             this.publicAccessPrevention = Objects.requireNonNull(publicAccessPrevention);
             return this;
         }
 
-        public Builder setUniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
+        public Builder uniformBucketLevelAccess(BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess) {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }

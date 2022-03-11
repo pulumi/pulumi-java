@@ -17,8 +17,8 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
      */
     private final @Nullable List<String> subscriptions;
 
-    @OutputCustomType.Constructor({"subscriptions"})
-    private PrivateLinkServicePropertiesResponseAutoApproval(@Nullable List<String> subscriptions) {
+    @OutputCustomType.Constructor
+    private PrivateLinkServicePropertiesResponseAutoApproval(@OutputCustomType.Parameter("subscriptions") @Nullable List<String> subscriptions) {
         this.subscriptions = subscriptions;
     }
 
@@ -50,7 +50,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval {
     	      this.subscriptions = defaults.subscriptions;
         }
 
-        public Builder setSubscriptions(@Nullable List<String> subscriptions) {
+        public Builder subscriptions(@Nullable List<String> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ConfigAntennaDownlinkConfig {
     private final @Nullable ConfigSpectrumConfig spectrumConfig;
 
-    @OutputCustomType.Constructor({"spectrumConfig"})
-    private ConfigAntennaDownlinkConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
+    @OutputCustomType.Constructor
+    private ConfigAntennaDownlinkConfig(@OutputCustomType.Parameter("spectrumConfig") @Nullable ConfigSpectrumConfig spectrumConfig) {
         this.spectrumConfig = spectrumConfig;
     }
 
@@ -42,7 +42,7 @@ public final class ConfigAntennaDownlinkConfig {
     	      this.spectrumConfig = defaults.spectrumConfig;
         }
 
-        public Builder setSpectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
+        public Builder spectrumConfig(@Nullable ConfigSpectrumConfig spectrumConfig) {
             this.spectrumConfig = spectrumConfig;
             return this;
         }

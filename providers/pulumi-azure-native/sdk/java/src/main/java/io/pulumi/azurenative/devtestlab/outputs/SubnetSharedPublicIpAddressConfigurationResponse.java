@@ -17,8 +17,8 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
      */
     private final @Nullable List<PortResponse> allowedPorts;
 
-    @OutputCustomType.Constructor({"allowedPorts"})
-    private SubnetSharedPublicIpAddressConfigurationResponse(@Nullable List<PortResponse> allowedPorts) {
+    @OutputCustomType.Constructor
+    private SubnetSharedPublicIpAddressConfigurationResponse(@OutputCustomType.Parameter("allowedPorts") @Nullable List<PortResponse> allowedPorts) {
         this.allowedPorts = allowedPorts;
     }
 
@@ -50,7 +50,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
     	      this.allowedPorts = defaults.allowedPorts;
         }
 
-        public Builder setAllowedPorts(@Nullable List<PortResponse> allowedPorts) {
+        public Builder allowedPorts(@Nullable List<PortResponse> allowedPorts) {
             this.allowedPorts = allowedPorts;
             return this;
         }

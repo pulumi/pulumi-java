@@ -13,10 +13,10 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
     private final Integer daysInCycle;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"daysInCycle","startTime"})
+    @OutputCustomType.Constructor
     private GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule(
-        Integer daysInCycle,
-        String startTime) {
+        @OutputCustomType.Parameter("daysInCycle") Integer daysInCycle,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.daysInCycle = daysInCycle;
         this.startTime = startTime;
     }
@@ -50,12 +50,12 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDaysInCycle(Integer daysInCycle) {
+        public Builder daysInCycle(Integer daysInCycle) {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

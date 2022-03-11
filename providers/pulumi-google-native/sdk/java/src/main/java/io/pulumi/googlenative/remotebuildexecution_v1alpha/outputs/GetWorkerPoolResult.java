@@ -42,14 +42,14 @@ public final class GetWorkerPoolResult {
      */
     private final String workerCount;
 
-    @OutputCustomType.Constructor({"autoscale","channel","name","state","workerConfig","workerCount"})
+    @OutputCustomType.Constructor
     private GetWorkerPoolResult(
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
-        String channel,
-        String name,
-        String state,
-        GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
-        String workerCount) {
+        @OutputCustomType.Parameter("autoscale") GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale,
+        @OutputCustomType.Parameter("channel") String channel,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workerConfig") GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig,
+        @OutputCustomType.Parameter("workerCount") String workerCount) {
         this.autoscale = autoscale;
         this.channel = channel;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetWorkerPoolResult {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setAutoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale) {
+        public Builder autoscale(GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse autoscale) {
             this.autoscale = Objects.requireNonNull(autoscale);
             return this;
         }
 
-        public Builder setChannel(String channel) {
+        public Builder channel(String channel) {
             this.channel = Objects.requireNonNull(channel);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setWorkerConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig) {
+        public Builder workerConfig(GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
 
-        public Builder setWorkerCount(String workerCount) {
+        public Builder workerCount(String workerCount) {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }

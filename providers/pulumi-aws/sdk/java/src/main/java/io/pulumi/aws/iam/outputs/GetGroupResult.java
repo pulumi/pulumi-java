@@ -38,14 +38,14 @@ public final class GetGroupResult {
      */
     private final List<GetGroupUser> users;
 
-    @OutputCustomType.Constructor({"arn","groupId","groupName","id","path","users"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        String arn,
-        String groupId,
-        String groupName,
-        String id,
-        String path,
-        List<GetGroupUser> users) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("users") List<GetGroupUser> users) {
         this.arn = arn;
         this.groupId = groupId;
         this.groupName = groupName;
@@ -123,32 +123,32 @@ public final class GetGroupResult {
     	      this.users = defaults.users;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setUsers(List<GetGroupUser> users) {
+        public Builder users(List<GetGroupUser> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }

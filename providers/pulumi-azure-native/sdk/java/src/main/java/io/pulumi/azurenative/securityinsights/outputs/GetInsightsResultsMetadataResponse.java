@@ -23,10 +23,10 @@ public final class GetInsightsResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"errors","totalCount"})
+    @OutputCustomType.Constructor
     private GetInsightsResultsMetadataResponse(
-        @Nullable List<GetInsightsErrorResponse> errors,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("errors") @Nullable List<GetInsightsErrorResponse> errors,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.errors = errors;
         this.totalCount = totalCount;
     }
@@ -68,12 +68,12 @@ public final class GetInsightsResultsMetadataResponse {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setErrors(@Nullable List<GetInsightsErrorResponse> errors) {
+        public Builder errors(@Nullable List<GetInsightsErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

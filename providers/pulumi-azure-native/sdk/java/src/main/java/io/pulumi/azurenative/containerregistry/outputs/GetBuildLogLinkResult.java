@@ -17,8 +17,8 @@ public final class GetBuildLogLinkResult {
      */
     private final @Nullable String logLink;
 
-    @OutputCustomType.Constructor({"logLink"})
-    private GetBuildLogLinkResult(@Nullable String logLink) {
+    @OutputCustomType.Constructor
+    private GetBuildLogLinkResult(@OutputCustomType.Parameter("logLink") @Nullable String logLink) {
         this.logLink = logLink;
     }
 
@@ -50,7 +50,7 @@ public final class GetBuildLogLinkResult {
     	      this.logLink = defaults.logLink;
         }
 
-        public Builder setLogLink(@Nullable String logLink) {
+        public Builder logLink(@Nullable String logLink) {
             this.logLink = logLink;
             return this;
         }

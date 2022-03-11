@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResourceTypeEndpointResponseFeaturesRule {
     private final String requiredFeaturesPolicy;
 
-    @OutputCustomType.Constructor({"requiredFeaturesPolicy"})
-    private ResourceTypeEndpointResponseFeaturesRule(String requiredFeaturesPolicy) {
+    @OutputCustomType.Constructor
+    private ResourceTypeEndpointResponseFeaturesRule(@OutputCustomType.Parameter("requiredFeaturesPolicy") String requiredFeaturesPolicy) {
         this.requiredFeaturesPolicy = requiredFeaturesPolicy;
     }
 
@@ -40,7 +40,7 @@ public final class ResourceTypeEndpointResponseFeaturesRule {
     	      this.requiredFeaturesPolicy = defaults.requiredFeaturesPolicy;
         }
 
-        public Builder setRequiredFeaturesPolicy(String requiredFeaturesPolicy) {
+        public Builder requiredFeaturesPolicy(String requiredFeaturesPolicy) {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }

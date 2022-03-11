@@ -19,10 +19,10 @@ public final class JobValidationConfiguration {
     private final String rulesetArn;
     private final @Nullable JobValidationMode validationMode;
 
-    @OutputCustomType.Constructor({"rulesetArn","validationMode"})
+    @OutputCustomType.Constructor
     private JobValidationConfiguration(
-        String rulesetArn,
-        @Nullable JobValidationMode validationMode) {
+        @OutputCustomType.Parameter("rulesetArn") String rulesetArn,
+        @OutputCustomType.Parameter("validationMode") @Nullable JobValidationMode validationMode) {
         this.rulesetArn = rulesetArn;
         this.validationMode = validationMode;
     }
@@ -60,12 +60,12 @@ public final class JobValidationConfiguration {
     	      this.validationMode = defaults.validationMode;
         }
 
-        public Builder setRulesetArn(String rulesetArn) {
+        public Builder rulesetArn(String rulesetArn) {
             this.rulesetArn = Objects.requireNonNull(rulesetArn);
             return this;
         }
 
-        public Builder setValidationMode(@Nullable JobValidationMode validationMode) {
+        public Builder validationMode(@Nullable JobValidationMode validationMode) {
             this.validationMode = validationMode;
             return this;
         }

@@ -90,32 +90,32 @@ public final class IndexFieldGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.order = defaults.order;
         }
 
-        public Builder setArrayConfig(@Nullable Input<String> arrayConfig) {
+        public Builder arrayConfig(@Nullable Input<String> arrayConfig) {
             this.arrayConfig = arrayConfig;
             return this;
         }
 
-        public Builder setArrayConfig(@Nullable String arrayConfig) {
+        public Builder arrayConfig(@Nullable String arrayConfig) {
             this.arrayConfig = Input.ofNullable(arrayConfig);
             return this;
         }
 
-        public Builder setFieldPath(@Nullable Input<String> fieldPath) {
+        public Builder fieldPath(@Nullable Input<String> fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
 
-        public Builder setFieldPath(@Nullable String fieldPath) {
+        public Builder fieldPath(@Nullable String fieldPath) {
             this.fieldPath = Input.ofNullable(fieldPath);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<String> order) {
+        public Builder order(@Nullable Input<String> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable String order) {
+        public Builder order(@Nullable String order) {
             this.order = Input.ofNullable(order);
             return this;
         }

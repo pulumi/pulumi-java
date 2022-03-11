@@ -22,10 +22,10 @@ public final class GatewayOperatorPropertiesResponse {
      */
     private final GatewayOperatorResourceRequestsResponse resourceRequests;
 
-    @OutputCustomType.Constructor({"instances","resourceRequests"})
+    @OutputCustomType.Constructor
     private GatewayOperatorPropertiesResponse(
-        List<GatewayInstanceResponse> instances,
-        GatewayOperatorResourceRequestsResponse resourceRequests) {
+        @OutputCustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
+        @OutputCustomType.Parameter("resourceRequests") GatewayOperatorResourceRequestsResponse resourceRequests) {
         this.instances = instances;
         this.resourceRequests = resourceRequests;
     }
@@ -67,12 +67,12 @@ public final class GatewayOperatorPropertiesResponse {
     	      this.resourceRequests = defaults.resourceRequests;
         }
 
-        public Builder setInstances(List<GatewayInstanceResponse> instances) {
+        public Builder instances(List<GatewayInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setResourceRequests(GatewayOperatorResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(GatewayOperatorResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }

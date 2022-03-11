@@ -75,22 +75,22 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setGroupId(@Nullable Input<String> groupId) {
+        public Builder groupId(@Nullable Input<String> groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = Input.ofNullable(groupId);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<ResourceGroupResourceType> resourceType) {
+        public Builder resourceType(@Nullable Input<ResourceGroupResourceType> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable ResourceGroupResourceType resourceType) {
+        public Builder resourceType(@Nullable ResourceGroupResourceType resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }

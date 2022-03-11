@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class CidrResult {
     private final List<String> subnets;
 
-    @OutputCustomType.Constructor({"subnets"})
-    private CidrResult(List<String> subnets) {
+    @OutputCustomType.Constructor
+    private CidrResult(@OutputCustomType.Parameter("subnets") List<String> subnets) {
         this.subnets = subnets;
     }
 
@@ -41,7 +41,7 @@ public final class CidrResult {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }

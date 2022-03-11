@@ -120,27 +120,27 @@ public final class TagPropertyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.upn = defaults.upn;
         }
 
-        public Builder setObjectIdentifier(String objectIdentifier) {
+        public Builder objectIdentifier(String objectIdentifier) {
             this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setUpn(String upn) {
+        public Builder upn(String upn) {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }

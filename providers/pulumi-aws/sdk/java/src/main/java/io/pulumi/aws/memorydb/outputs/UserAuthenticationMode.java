@@ -29,11 +29,11 @@ public final class UserAuthenticationMode {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"passwordCount","passwords","type"})
+    @OutputCustomType.Constructor
     private UserAuthenticationMode(
-        @Nullable Integer passwordCount,
-        List<String> passwords,
-        String type) {
+        @OutputCustomType.Parameter("passwordCount") @Nullable Integer passwordCount,
+        @OutputCustomType.Parameter("passwords") List<String> passwords,
+        @OutputCustomType.Parameter("type") String type) {
         this.passwordCount = passwordCount;
         this.passwords = passwords;
         this.type = type;
@@ -85,17 +85,17 @@ public final class UserAuthenticationMode {
     	      this.type = defaults.type;
         }
 
-        public Builder setPasswordCount(@Nullable Integer passwordCount) {
+        public Builder passwordCount(@Nullable Integer passwordCount) {
             this.passwordCount = passwordCount;
             return this;
         }
 
-        public Builder setPasswords(List<String> passwords) {
+        public Builder passwords(List<String> passwords) {
             this.passwords = Objects.requireNonNull(passwords);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

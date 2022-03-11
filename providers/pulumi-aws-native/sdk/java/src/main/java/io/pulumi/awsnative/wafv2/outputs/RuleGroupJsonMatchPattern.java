@@ -20,10 +20,10 @@ public final class RuleGroupJsonMatchPattern {
     private final @Nullable Object all;
     private final @Nullable List<String> includedPaths;
 
-    @OutputCustomType.Constructor({"all","includedPaths"})
+    @OutputCustomType.Constructor
     private RuleGroupJsonMatchPattern(
-        @Nullable Object all,
-        @Nullable List<String> includedPaths) {
+        @OutputCustomType.Parameter("all") @Nullable Object all,
+        @OutputCustomType.Parameter("includedPaths") @Nullable List<String> includedPaths) {
         this.all = all;
         this.includedPaths = includedPaths;
     }
@@ -61,12 +61,12 @@ public final class RuleGroupJsonMatchPattern {
     	      this.includedPaths = defaults.includedPaths;
         }
 
-        public Builder setAll(@Nullable Object all) {
+        public Builder all(@Nullable Object all) {
             this.all = all;
             return this;
         }
 
-        public Builder setIncludedPaths(@Nullable List<String> includedPaths) {
+        public Builder includedPaths(@Nullable List<String> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }

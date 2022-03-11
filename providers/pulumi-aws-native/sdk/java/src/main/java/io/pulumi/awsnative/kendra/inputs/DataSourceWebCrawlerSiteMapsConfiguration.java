@@ -48,7 +48,7 @@ public final class DataSourceWebCrawlerSiteMapsConfiguration extends io.pulumi.r
     	      this.siteMaps = defaults.siteMaps;
         }
 
-        public Builder setSiteMaps(List<String> siteMaps) {
+        public Builder siteMaps(List<String> siteMaps) {
             this.siteMaps = Objects.requireNonNull(siteMaps);
             return this;
         }

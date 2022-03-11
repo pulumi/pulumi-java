@@ -57,12 +57,12 @@ public final class AnnotationSourceArgs extends io.pulumi.resources.ResourceArgs
     	      this.cloudHealthcareSource = defaults.cloudHealthcareSource;
         }
 
-        public Builder setCloudHealthcareSource(@Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource) {
+        public Builder cloudHealthcareSource(@Nullable Input<CloudHealthcareSourceArgs> cloudHealthcareSource) {
             this.cloudHealthcareSource = cloudHealthcareSource;
             return this;
         }
 
-        public Builder setCloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
+        public Builder cloudHealthcareSource(@Nullable CloudHealthcareSourceArgs cloudHealthcareSource) {
             this.cloudHealthcareSource = Input.ofNullable(cloudHealthcareSource);
             return this;
         }

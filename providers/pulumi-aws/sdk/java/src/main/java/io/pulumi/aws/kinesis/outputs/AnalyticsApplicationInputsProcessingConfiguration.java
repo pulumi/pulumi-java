@@ -15,8 +15,8 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
      */
     private final AnalyticsApplicationInputsProcessingConfigurationLambda lambda;
 
-    @OutputCustomType.Constructor({"lambda"})
-    private AnalyticsApplicationInputsProcessingConfiguration(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationInputsProcessingConfiguration(@OutputCustomType.Parameter("lambda") AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
         this.lambda = lambda;
     }
 
@@ -48,7 +48,7 @@ public final class AnalyticsApplicationInputsProcessingConfiguration {
     	      this.lambda = defaults.lambda;
         }
 
-        public Builder setLambda(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
+        public Builder lambda(AnalyticsApplicationInputsProcessingConfigurationLambda lambda) {
             this.lambda = Objects.requireNonNull(lambda);
             return this;
         }

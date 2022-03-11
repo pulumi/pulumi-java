@@ -38,16 +38,16 @@ public final class GetImageResult {
     private final String registryId;
     private final String repositoryName;
 
-    @OutputCustomType.Constructor({"id","imageDigest","imagePushedAt","imageSizeInBytes","imageTag","imageTags","registryId","repositoryName"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String id,
-        String imageDigest,
-        Integer imagePushedAt,
-        Integer imageSizeInBytes,
-        @Nullable String imageTag,
-        List<String> imageTags,
-        String registryId,
-        String repositoryName) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageDigest") String imageDigest,
+        @OutputCustomType.Parameter("imagePushedAt") Integer imagePushedAt,
+        @OutputCustomType.Parameter("imageSizeInBytes") Integer imageSizeInBytes,
+        @OutputCustomType.Parameter("imageTag") @Nullable String imageTag,
+        @OutputCustomType.Parameter("imageTags") List<String> imageTags,
+        @OutputCustomType.Parameter("registryId") String registryId,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName) {
         this.id = id;
         this.imageDigest = imageDigest;
         this.imagePushedAt = imagePushedAt;
@@ -133,42 +133,42 @@ public final class GetImageResult {
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageDigest(String imageDigest) {
+        public Builder imageDigest(String imageDigest) {
             this.imageDigest = Objects.requireNonNull(imageDigest);
             return this;
         }
 
-        public Builder setImagePushedAt(Integer imagePushedAt) {
+        public Builder imagePushedAt(Integer imagePushedAt) {
             this.imagePushedAt = Objects.requireNonNull(imagePushedAt);
             return this;
         }
 
-        public Builder setImageSizeInBytes(Integer imageSizeInBytes) {
+        public Builder imageSizeInBytes(Integer imageSizeInBytes) {
             this.imageSizeInBytes = Objects.requireNonNull(imageSizeInBytes);
             return this;
         }
 
-        public Builder setImageTag(@Nullable String imageTag) {
+        public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
 
-        public Builder setImageTags(List<String> imageTags) {
+        public Builder imageTags(List<String> imageTags) {
             this.imageTags = Objects.requireNonNull(imageTags);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }

@@ -30,11 +30,11 @@ public final class AuthPlatformResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor({"configFilePath","enabled","runtimeVersion"})
+    @OutputCustomType.Constructor
     private AuthPlatformResponse(
-        @Nullable String configFilePath,
-        @Nullable Boolean enabled,
-        @Nullable String runtimeVersion) {
+        @OutputCustomType.Parameter("configFilePath") @Nullable String configFilePath,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.configFilePath = configFilePath;
         this.enabled = enabled;
         this.runtimeVersion = runtimeVersion;
@@ -88,17 +88,17 @@ public final class AuthPlatformResponse {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setConfigFilePath(@Nullable String configFilePath) {
+        public Builder configFilePath(@Nullable String configFilePath) {
             this.configFilePath = configFilePath;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }

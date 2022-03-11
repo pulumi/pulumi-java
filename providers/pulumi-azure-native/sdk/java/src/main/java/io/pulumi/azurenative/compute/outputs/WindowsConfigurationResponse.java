@@ -47,14 +47,14 @@ public final class WindowsConfigurationResponse {
      */
     private final @Nullable WinRMConfigurationResponse winRM;
 
-    @OutputCustomType.Constructor({"additionalUnattendContent","enableAutomaticUpdates","patchSettings","provisionVMAgent","timeZone","winRM"})
+    @OutputCustomType.Constructor
     private WindowsConfigurationResponse(
-        @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
-        @Nullable Boolean enableAutomaticUpdates,
-        @Nullable PatchSettingsResponse patchSettings,
-        @Nullable Boolean provisionVMAgent,
-        @Nullable String timeZone,
-        @Nullable WinRMConfigurationResponse winRM) {
+        @OutputCustomType.Parameter("additionalUnattendContent") @Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent,
+        @OutputCustomType.Parameter("enableAutomaticUpdates") @Nullable Boolean enableAutomaticUpdates,
+        @OutputCustomType.Parameter("patchSettings") @Nullable PatchSettingsResponse patchSettings,
+        @OutputCustomType.Parameter("provisionVMAgent") @Nullable Boolean provisionVMAgent,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
+        @OutputCustomType.Parameter("winRM") @Nullable WinRMConfigurationResponse winRM) {
         this.additionalUnattendContent = additionalUnattendContent;
         this.enableAutomaticUpdates = enableAutomaticUpdates;
         this.patchSettings = patchSettings;
@@ -136,32 +136,32 @@ public final class WindowsConfigurationResponse {
     	      this.winRM = defaults.winRM;
         }
 
-        public Builder setAdditionalUnattendContent(@Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent) {
+        public Builder additionalUnattendContent(@Nullable List<AdditionalUnattendContentResponse> additionalUnattendContent) {
             this.additionalUnattendContent = additionalUnattendContent;
             return this;
         }
 
-        public Builder setEnableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
+        public Builder enableAutomaticUpdates(@Nullable Boolean enableAutomaticUpdates) {
             this.enableAutomaticUpdates = enableAutomaticUpdates;
             return this;
         }
 
-        public Builder setPatchSettings(@Nullable PatchSettingsResponse patchSettings) {
+        public Builder patchSettings(@Nullable PatchSettingsResponse patchSettings) {
             this.patchSettings = patchSettings;
             return this;
         }
 
-        public Builder setProvisionVMAgent(@Nullable Boolean provisionVMAgent) {
+        public Builder provisionVMAgent(@Nullable Boolean provisionVMAgent) {
             this.provisionVMAgent = provisionVMAgent;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setWinRM(@Nullable WinRMConfigurationResponse winRM) {
+        public Builder winRM(@Nullable WinRMConfigurationResponse winRM) {
             this.winRM = winRM;
             return this;
         }

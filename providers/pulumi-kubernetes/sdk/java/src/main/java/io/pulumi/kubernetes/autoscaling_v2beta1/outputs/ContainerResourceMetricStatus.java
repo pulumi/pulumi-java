@@ -33,12 +33,12 @@ public final class ContainerResourceMetricStatus {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"container","currentAverageUtilization","currentAverageValue","name"})
+    @OutputCustomType.Constructor
     private ContainerResourceMetricStatus(
-        String container,
-        @Nullable Integer currentAverageUtilization,
-        String currentAverageValue,
-        String name) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("currentAverageUtilization") @Nullable Integer currentAverageUtilization,
+        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @OutputCustomType.Parameter("name") String name) {
         this.container = container;
         this.currentAverageUtilization = currentAverageUtilization;
         this.currentAverageValue = currentAverageValue;
@@ -100,22 +100,22 @@ public final class ContainerResourceMetricStatus {
     	      this.name = defaults.name;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setCurrentAverageUtilization(@Nullable Integer currentAverageUtilization) {
+        public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
             this.currentAverageUtilization = currentAverageUtilization;
             return this;
         }
 
-        public Builder setCurrentAverageValue(String currentAverageValue) {
+        public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

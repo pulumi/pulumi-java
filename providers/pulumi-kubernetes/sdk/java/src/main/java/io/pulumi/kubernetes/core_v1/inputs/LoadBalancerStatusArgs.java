@@ -58,12 +58,12 @@ public final class LoadBalancerStatusArgs extends io.pulumi.resources.ResourceAr
     	      this.ingress = defaults.ingress;
         }
 
-        public Builder setIngress(@Nullable Input<List<LoadBalancerIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<LoadBalancerIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<LoadBalancerIngressArgs> ingress) {
+        public Builder ingress(@Nullable List<LoadBalancerIngressArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }

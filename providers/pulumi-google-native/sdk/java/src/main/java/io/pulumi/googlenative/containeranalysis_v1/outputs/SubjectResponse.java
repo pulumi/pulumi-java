@@ -17,10 +17,10 @@ public final class SubjectResponse {
     private final Map<String,String> digest;
     private final String name;
 
-    @OutputCustomType.Constructor({"digest","name"})
+    @OutputCustomType.Constructor
     private SubjectResponse(
-        Map<String,String> digest,
-        String name) {
+        @OutputCustomType.Parameter("digest") Map<String,String> digest,
+        @OutputCustomType.Parameter("name") String name) {
         this.digest = digest;
         this.name = name;
     }
@@ -58,12 +58,12 @@ public final class SubjectResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDigest(Map<String,String> digest) {
+        public Builder digest(Map<String,String> digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

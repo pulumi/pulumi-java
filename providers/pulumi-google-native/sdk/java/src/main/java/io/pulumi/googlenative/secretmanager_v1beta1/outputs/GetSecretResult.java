@@ -32,12 +32,12 @@ public final class GetSecretResult {
      */
     private final ReplicationResponse replication;
 
-    @OutputCustomType.Constructor({"createTime","labels","name","replication"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        Map<String,String> labels,
-        String name,
-        ReplicationResponse replication) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("replication") ReplicationResponse replication) {
         this.createTime = createTime;
         this.labels = labels;
         this.name = name;
@@ -99,22 +99,22 @@ public final class GetSecretResult {
     	      this.replication = defaults.replication;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReplication(ReplicationResponse replication) {
+        public Builder replication(ReplicationResponse replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }

@@ -17,11 +17,11 @@ public final class BucketTransition {
     private final @Nullable String transitionDate;
     private final @Nullable Integer transitionInDays;
 
-    @OutputCustomType.Constructor({"storageClass","transitionDate","transitionInDays"})
+    @OutputCustomType.Constructor
     private BucketTransition(
-        BucketTransitionStorageClass storageClass,
-        @Nullable String transitionDate,
-        @Nullable Integer transitionInDays) {
+        @OutputCustomType.Parameter("storageClass") BucketTransitionStorageClass storageClass,
+        @OutputCustomType.Parameter("transitionDate") @Nullable String transitionDate,
+        @OutputCustomType.Parameter("transitionInDays") @Nullable Integer transitionInDays) {
         this.storageClass = storageClass;
         this.transitionDate = transitionDate;
         this.transitionInDays = transitionInDays;
@@ -61,17 +61,17 @@ public final class BucketTransition {
     	      this.transitionInDays = defaults.transitionInDays;
         }
 
-        public Builder setStorageClass(BucketTransitionStorageClass storageClass) {
+        public Builder storageClass(BucketTransitionStorageClass storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setTransitionDate(@Nullable String transitionDate) {
+        public Builder transitionDate(@Nullable String transitionDate) {
             this.transitionDate = transitionDate;
             return this;
         }
 
-        public Builder setTransitionInDays(@Nullable Integer transitionInDays) {
+        public Builder transitionInDays(@Nullable Integer transitionInDays) {
             this.transitionInDays = transitionInDays;
             return this;
         }

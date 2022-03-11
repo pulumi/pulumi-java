@@ -20,10 +20,10 @@ public final class TableRetentionProperties {
      */
     private final Integer memoryStoreRetentionPeriodInHours;
 
-    @OutputCustomType.Constructor({"magneticStoreRetentionPeriodInDays","memoryStoreRetentionPeriodInHours"})
+    @OutputCustomType.Constructor
     private TableRetentionProperties(
-        Integer magneticStoreRetentionPeriodInDays,
-        Integer memoryStoreRetentionPeriodInHours) {
+        @OutputCustomType.Parameter("magneticStoreRetentionPeriodInDays") Integer magneticStoreRetentionPeriodInDays,
+        @OutputCustomType.Parameter("memoryStoreRetentionPeriodInHours") Integer memoryStoreRetentionPeriodInHours) {
         this.magneticStoreRetentionPeriodInDays = magneticStoreRetentionPeriodInDays;
         this.memoryStoreRetentionPeriodInHours = memoryStoreRetentionPeriodInHours;
     }
@@ -65,12 +65,12 @@ public final class TableRetentionProperties {
     	      this.memoryStoreRetentionPeriodInHours = defaults.memoryStoreRetentionPeriodInHours;
         }
 
-        public Builder setMagneticStoreRetentionPeriodInDays(Integer magneticStoreRetentionPeriodInDays) {
+        public Builder magneticStoreRetentionPeriodInDays(Integer magneticStoreRetentionPeriodInDays) {
             this.magneticStoreRetentionPeriodInDays = Objects.requireNonNull(magneticStoreRetentionPeriodInDays);
             return this;
         }
 
-        public Builder setMemoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
+        public Builder memoryStoreRetentionPeriodInHours(Integer memoryStoreRetentionPeriodInHours) {
             this.memoryStoreRetentionPeriodInHours = Objects.requireNonNull(memoryStoreRetentionPeriodInHours);
             return this;
         }

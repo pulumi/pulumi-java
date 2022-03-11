@@ -138,82 +138,82 @@ public final class DomainNameArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable Input<DomainNameEndpointConfigurationArgs> endpointConfiguration) {
             this.endpointConfiguration = endpointConfiguration;
             return this;
         }
 
-        public Builder setEndpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
+        public Builder endpointConfiguration(@Nullable DomainNameEndpointConfigurationArgs endpointConfiguration) {
             this.endpointConfiguration = Input.ofNullable(endpointConfiguration);
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder setOwnershipVerificationCertificateArn(@Nullable Input<String> ownershipVerificationCertificateArn) {
+        public Builder ownershipVerificationCertificateArn(@Nullable Input<String> ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = ownershipVerificationCertificateArn;
             return this;
         }
 
-        public Builder setOwnershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
+        public Builder ownershipVerificationCertificateArn(@Nullable String ownershipVerificationCertificateArn) {
             this.ownershipVerificationCertificateArn = Input.ofNullable(ownershipVerificationCertificateArn);
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable Input<String> regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable Input<String> regionalCertificateArn) {
             this.regionalCertificateArn = regionalCertificateArn;
             return this;
         }
 
-        public Builder setRegionalCertificateArn(@Nullable String regionalCertificateArn) {
+        public Builder regionalCertificateArn(@Nullable String regionalCertificateArn) {
             this.regionalCertificateArn = Input.ofNullable(regionalCertificateArn);
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable Input<String> securityPolicy) {
+        public Builder securityPolicy(@Nullable Input<String> securityPolicy) {
             this.securityPolicy = securityPolicy;
             return this;
         }
 
-        public Builder setSecurityPolicy(@Nullable String securityPolicy) {
+        public Builder securityPolicy(@Nullable String securityPolicy) {
             this.securityPolicy = Input.ofNullable(securityPolicy);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DomainNameTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DomainNameTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DomainNameTagArgs> tags) {
+        public Builder tags(@Nullable List<DomainNameTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

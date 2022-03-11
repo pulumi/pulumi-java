@@ -15,8 +15,8 @@ public final class AppBundleResponse {
      */
     private final FileReferenceResponse bundleLocation;
 
-    @OutputCustomType.Constructor({"bundleLocation"})
-    private AppBundleResponse(FileReferenceResponse bundleLocation) {
+    @OutputCustomType.Constructor
+    private AppBundleResponse(@OutputCustomType.Parameter("bundleLocation") FileReferenceResponse bundleLocation) {
         this.bundleLocation = bundleLocation;
     }
 
@@ -48,7 +48,7 @@ public final class AppBundleResponse {
     	      this.bundleLocation = defaults.bundleLocation;
         }
 
-        public Builder setBundleLocation(FileReferenceResponse bundleLocation) {
+        public Builder bundleLocation(FileReferenceResponse bundleLocation) {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }

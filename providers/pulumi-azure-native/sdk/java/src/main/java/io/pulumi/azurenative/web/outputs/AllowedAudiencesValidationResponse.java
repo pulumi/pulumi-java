@@ -17,8 +17,8 @@ public final class AllowedAudiencesValidationResponse {
      */
     private final @Nullable List<String> allowedAudiences;
 
-    @OutputCustomType.Constructor({"allowedAudiences"})
-    private AllowedAudiencesValidationResponse(@Nullable List<String> allowedAudiences) {
+    @OutputCustomType.Constructor
+    private AllowedAudiencesValidationResponse(@OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences) {
         this.allowedAudiences = allowedAudiences;
     }
 
@@ -50,7 +50,7 @@ public final class AllowedAudiencesValidationResponse {
     	      this.allowedAudiences = defaults.allowedAudiences;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }

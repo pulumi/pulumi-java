@@ -23,10 +23,10 @@ public final class DashboardPartsResponse {
      */
     private final DashboardPartsResponsePosition position;
 
-    @OutputCustomType.Constructor({"metadata","position"})
+    @OutputCustomType.Constructor
     private DashboardPartsResponse(
-        @Nullable MarkdownPartMetadataResponse metadata,
-        DashboardPartsResponsePosition position) {
+        @OutputCustomType.Parameter("metadata") @Nullable MarkdownPartMetadataResponse metadata,
+        @OutputCustomType.Parameter("position") DashboardPartsResponsePosition position) {
         this.metadata = metadata;
         this.position = position;
     }
@@ -68,12 +68,12 @@ public final class DashboardPartsResponse {
     	      this.position = defaults.position;
         }
 
-        public Builder setMetadata(@Nullable MarkdownPartMetadataResponse metadata) {
+        public Builder metadata(@Nullable MarkdownPartMetadataResponse metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setPosition(DashboardPartsResponsePosition position) {
+        public Builder position(DashboardPartsResponsePosition position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

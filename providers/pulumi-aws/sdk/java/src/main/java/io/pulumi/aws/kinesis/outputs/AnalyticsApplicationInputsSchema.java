@@ -32,11 +32,11 @@ public final class AnalyticsApplicationInputsSchema {
      */
     private final AnalyticsApplicationInputsSchemaRecordFormat recordFormat;
 
-    @OutputCustomType.Constructor({"recordColumns","recordEncoding","recordFormat"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchema(
-        List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
-        @Nullable String recordEncoding,
-        AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
+        @OutputCustomType.Parameter("recordColumns") List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns,
+        @OutputCustomType.Parameter("recordEncoding") @Nullable String recordEncoding,
+        @OutputCustomType.Parameter("recordFormat") AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
         this.recordColumns = recordColumns;
         this.recordEncoding = recordEncoding;
         this.recordFormat = recordFormat;
@@ -90,17 +90,17 @@ public final class AnalyticsApplicationInputsSchema {
     	      this.recordFormat = defaults.recordFormat;
         }
 
-        public Builder setRecordColumns(List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns) {
+        public Builder recordColumns(List<AnalyticsApplicationInputsSchemaRecordColumn> recordColumns) {
             this.recordColumns = Objects.requireNonNull(recordColumns);
             return this;
         }
 
-        public Builder setRecordEncoding(@Nullable String recordEncoding) {
+        public Builder recordEncoding(@Nullable String recordEncoding) {
             this.recordEncoding = recordEncoding;
             return this;
         }
 
-        public Builder setRecordFormat(AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
+        public Builder recordFormat(AnalyticsApplicationInputsSchemaRecordFormat recordFormat) {
             this.recordFormat = Objects.requireNonNull(recordFormat);
             return this;
         }

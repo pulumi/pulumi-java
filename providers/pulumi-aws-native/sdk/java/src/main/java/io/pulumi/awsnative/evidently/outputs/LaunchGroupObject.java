@@ -16,12 +16,12 @@ public final class LaunchGroupObject {
     private final String groupName;
     private final String variation;
 
-    @OutputCustomType.Constructor({"description","feature","groupName","variation"})
+    @OutputCustomType.Constructor
     private LaunchGroupObject(
-        @Nullable String description,
-        String feature,
-        String groupName,
-        String variation) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("feature") String feature,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("variation") String variation) {
         this.description = description;
         this.feature = feature;
         this.groupName = groupName;
@@ -67,22 +67,22 @@ public final class LaunchGroupObject {
     	      this.variation = defaults.variation;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFeature(String feature) {
+        public Builder feature(String feature) {
             this.feature = Objects.requireNonNull(feature);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setVariation(String variation) {
+        public Builder variation(String variation) {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }

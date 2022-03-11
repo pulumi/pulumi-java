@@ -55,16 +55,16 @@ public final class GetPeerAsnResult {
      */
     private final @Nullable String validationState;
 
-    @OutputCustomType.Constructor({"errorMessage","id","name","peerAsn","peerContactDetail","peerName","type","validationState"})
+    @OutputCustomType.Constructor
     private GetPeerAsnResult(
-        String errorMessage,
-        String id,
-        String name,
-        @Nullable Integer peerAsn,
-        @Nullable List<ContactDetailResponse> peerContactDetail,
-        @Nullable String peerName,
-        String type,
-        @Nullable String validationState) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peerAsn") @Nullable Integer peerAsn,
+        @OutputCustomType.Parameter("peerContactDetail") @Nullable List<ContactDetailResponse> peerContactDetail,
+        @OutputCustomType.Parameter("peerName") @Nullable String peerName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationState") @Nullable String validationState) {
         this.errorMessage = errorMessage;
         this.id = id;
         this.name = name;
@@ -166,42 +166,42 @@ public final class GetPeerAsnResult {
     	      this.validationState = defaults.validationState;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeerAsn(@Nullable Integer peerAsn) {
+        public Builder peerAsn(@Nullable Integer peerAsn) {
             this.peerAsn = peerAsn;
             return this;
         }
 
-        public Builder setPeerContactDetail(@Nullable List<ContactDetailResponse> peerContactDetail) {
+        public Builder peerContactDetail(@Nullable List<ContactDetailResponse> peerContactDetail) {
             this.peerContactDetail = peerContactDetail;
             return this;
         }
 
-        public Builder setPeerName(@Nullable String peerName) {
+        public Builder peerName(@Nullable String peerName) {
             this.peerName = peerName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationState(@Nullable String validationState) {
+        public Builder validationState(@Nullable String validationState) {
             this.validationState = validationState;
             return this;
         }

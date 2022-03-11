@@ -38,12 +38,12 @@ public final class DistributionCustomErrorResponse {
      */
     private final @Nullable String responsePagePath;
 
-    @OutputCustomType.Constructor({"errorCachingMinTtl","errorCode","responseCode","responsePagePath"})
+    @OutputCustomType.Constructor
     private DistributionCustomErrorResponse(
-        @Nullable Integer errorCachingMinTtl,
-        Integer errorCode,
-        @Nullable Integer responseCode,
-        @Nullable String responsePagePath) {
+        @OutputCustomType.Parameter("errorCachingMinTtl") @Nullable Integer errorCachingMinTtl,
+        @OutputCustomType.Parameter("errorCode") Integer errorCode,
+        @OutputCustomType.Parameter("responseCode") @Nullable Integer responseCode,
+        @OutputCustomType.Parameter("responsePagePath") @Nullable String responsePagePath) {
         this.errorCachingMinTtl = errorCachingMinTtl;
         this.errorCode = errorCode;
         this.responseCode = responseCode;
@@ -110,22 +110,22 @@ public final class DistributionCustomErrorResponse {
     	      this.responsePagePath = defaults.responsePagePath;
         }
 
-        public Builder setErrorCachingMinTtl(@Nullable Integer errorCachingMinTtl) {
+        public Builder errorCachingMinTtl(@Nullable Integer errorCachingMinTtl) {
             this.errorCachingMinTtl = errorCachingMinTtl;
             return this;
         }
 
-        public Builder setErrorCode(Integer errorCode) {
+        public Builder errorCode(Integer errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setResponseCode(@Nullable Integer responseCode) {
+        public Builder responseCode(@Nullable Integer responseCode) {
             this.responseCode = responseCode;
             return this;
         }
 
-        public Builder setResponsePagePath(@Nullable String responsePagePath) {
+        public Builder responsePagePath(@Nullable String responsePagePath) {
             this.responsePagePath = responsePagePath;
             return this;
         }

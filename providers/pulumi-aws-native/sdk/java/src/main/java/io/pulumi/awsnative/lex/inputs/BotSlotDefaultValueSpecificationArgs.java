@@ -57,12 +57,12 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
     	      this.defaultValueList = defaults.defaultValueList;
         }
 
-        public Builder setDefaultValueList(Input<List<BotSlotDefaultValueArgs>> defaultValueList) {
+        public Builder defaultValueList(Input<List<BotSlotDefaultValueArgs>> defaultValueList) {
             this.defaultValueList = Objects.requireNonNull(defaultValueList);
             return this;
         }
 
-        public Builder setDefaultValueList(List<BotSlotDefaultValueArgs> defaultValueList) {
+        public Builder defaultValueList(List<BotSlotDefaultValueArgs> defaultValueList) {
             this.defaultValueList = Input.of(Objects.requireNonNull(defaultValueList));
             return this;
         }

@@ -22,10 +22,10 @@ public final class StreamConfigResponse {
      */
     private final List<String> resourceTypes;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","resourceTypes"})
+    @OutputCustomType.Constructor
     private StreamConfigResponse(
-        GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination,
-        List<String> resourceTypes) {
+        @OutputCustomType.Parameter("bigqueryDestination") GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination,
+        @OutputCustomType.Parameter("resourceTypes") List<String> resourceTypes) {
         this.bigqueryDestination = bigqueryDestination;
         this.resourceTypes = resourceTypes;
     }
@@ -67,12 +67,12 @@ public final class StreamConfigResponse {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setBigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1FhirBigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setResourceTypes(List<String> resourceTypes) {
+        public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }

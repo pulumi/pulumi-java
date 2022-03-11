@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetFunctionEnvironment {
     private final Map<String,String> variables;
 
-    @OutputCustomType.Constructor({"variables"})
-    private GetFunctionEnvironment(Map<String,String> variables) {
+    @OutputCustomType.Constructor
+    private GetFunctionEnvironment(@OutputCustomType.Parameter("variables") Map<String,String> variables) {
         this.variables = variables;
     }
 
@@ -41,7 +41,7 @@ public final class GetFunctionEnvironment {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setVariables(Map<String,String> variables) {
+        public Builder variables(Map<String,String> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }

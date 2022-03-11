@@ -32,12 +32,12 @@ public final class HTTPGetActionResponse {
      */
     private final String scheme;
 
-    @OutputCustomType.Constructor({"host","httpHeaders","path","scheme"})
+    @OutputCustomType.Constructor
     private HTTPGetActionResponse(
-        String host,
-        List<HTTPHeaderResponse> httpHeaders,
-        String path,
-        String scheme) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("httpHeaders") List<HTTPHeaderResponse> httpHeaders,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("scheme") String scheme) {
         this.host = host;
         this.httpHeaders = httpHeaders;
         this.path = path;
@@ -99,22 +99,22 @@ public final class HTTPGetActionResponse {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHttpHeaders(List<HTTPHeaderResponse> httpHeaders) {
+        public Builder httpHeaders(List<HTTPHeaderResponse> httpHeaders) {
             this.httpHeaders = Objects.requireNonNull(httpHeaders);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setScheme(String scheme) {
+        public Builder scheme(String scheme) {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }

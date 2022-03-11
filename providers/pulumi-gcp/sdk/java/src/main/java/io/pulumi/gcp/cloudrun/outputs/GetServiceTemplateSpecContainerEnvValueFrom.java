@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetServiceTemplateSpecContainerEnvValueFrom {
     private final List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
 
-    @OutputCustomType.Constructor({"secretKeyReves"})
-    private GetServiceTemplateSpecContainerEnvValueFrom(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
+    @OutputCustomType.Constructor
+    private GetServiceTemplateSpecContainerEnvValueFrom(@OutputCustomType.Parameter("secretKeyReves") List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
         this.secretKeyReves = secretKeyReves;
     }
 
@@ -41,7 +41,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
     	      this.secretKeyReves = defaults.secretKeyReves;
         }
 
-        public Builder setSecretKeyReves(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
+        public Builder secretKeyReves(List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves) {
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }

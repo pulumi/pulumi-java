@@ -27,11 +27,11 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
      */
     private final Boolean hasCredential;
 
-    @OutputCustomType.Constructor({"cloudSql","connectionType","hasCredential"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(
-        GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
-        String connectionType,
-        Boolean hasCredential) {
+        @OutputCustomType.Parameter("cloudSql") GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql,
+        @OutputCustomType.Parameter("connectionType") String connectionType,
+        @OutputCustomType.Parameter("hasCredential") Boolean hasCredential) {
         this.cloudSql = cloudSql;
         this.connectionType = connectionType;
         this.hasCredential = hasCredential;
@@ -83,17 +83,17 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse {
     	      this.hasCredential = defaults.hasCredential;
         }
 
-        public Builder setCloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
+        public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
             this.cloudSql = Objects.requireNonNull(cloudSql);
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setHasCredential(Boolean hasCredential) {
+        public Builder hasCredential(Boolean hasCredential) {
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
         }

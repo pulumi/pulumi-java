@@ -311,162 +311,162 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     	      this.statuses = defaults.statuses;
         }
 
-        public Builder setDriverControlsFilesUri(@Nullable Input<String> driverControlsFilesUri) {
+        public Builder driverControlsFilesUri(@Nullable Input<String> driverControlsFilesUri) {
             this.driverControlsFilesUri = driverControlsFilesUri;
             return this;
         }
 
-        public Builder setDriverControlsFilesUri(@Nullable String driverControlsFilesUri) {
+        public Builder driverControlsFilesUri(@Nullable String driverControlsFilesUri) {
             this.driverControlsFilesUri = Input.ofNullable(driverControlsFilesUri);
             return this;
         }
 
-        public Builder setDriverOutputResourceUri(@Nullable Input<String> driverOutputResourceUri) {
+        public Builder driverOutputResourceUri(@Nullable Input<String> driverOutputResourceUri) {
             this.driverOutputResourceUri = driverOutputResourceUri;
             return this;
         }
 
-        public Builder setDriverOutputResourceUri(@Nullable String driverOutputResourceUri) {
+        public Builder driverOutputResourceUri(@Nullable String driverOutputResourceUri) {
             this.driverOutputResourceUri = Input.ofNullable(driverOutputResourceUri);
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Boolean forceDelete) {
+        public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Input.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder setHadoopConfig(@Nullable Input<JobHadoopConfigGetArgs> hadoopConfig) {
+        public Builder hadoopConfig(@Nullable Input<JobHadoopConfigGetArgs> hadoopConfig) {
             this.hadoopConfig = hadoopConfig;
             return this;
         }
 
-        public Builder setHadoopConfig(@Nullable JobHadoopConfigGetArgs hadoopConfig) {
+        public Builder hadoopConfig(@Nullable JobHadoopConfigGetArgs hadoopConfig) {
             this.hadoopConfig = Input.ofNullable(hadoopConfig);
             return this;
         }
 
-        public Builder setHiveConfig(@Nullable Input<JobHiveConfigGetArgs> hiveConfig) {
+        public Builder hiveConfig(@Nullable Input<JobHiveConfigGetArgs> hiveConfig) {
             this.hiveConfig = hiveConfig;
             return this;
         }
 
-        public Builder setHiveConfig(@Nullable JobHiveConfigGetArgs hiveConfig) {
+        public Builder hiveConfig(@Nullable JobHiveConfigGetArgs hiveConfig) {
             this.hiveConfig = Input.ofNullable(hiveConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPigConfig(@Nullable Input<JobPigConfigGetArgs> pigConfig) {
+        public Builder pigConfig(@Nullable Input<JobPigConfigGetArgs> pigConfig) {
             this.pigConfig = pigConfig;
             return this;
         }
 
-        public Builder setPigConfig(@Nullable JobPigConfigGetArgs pigConfig) {
+        public Builder pigConfig(@Nullable JobPigConfigGetArgs pigConfig) {
             this.pigConfig = Input.ofNullable(pigConfig);
             return this;
         }
 
-        public Builder setPlacement(@Nullable Input<JobPlacementGetArgs> placement) {
+        public Builder placement(@Nullable Input<JobPlacementGetArgs> placement) {
             this.placement = placement;
             return this;
         }
 
-        public Builder setPlacement(@Nullable JobPlacementGetArgs placement) {
+        public Builder placement(@Nullable JobPlacementGetArgs placement) {
             this.placement = Input.ofNullable(placement);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPysparkConfig(@Nullable Input<JobPysparkConfigGetArgs> pysparkConfig) {
+        public Builder pysparkConfig(@Nullable Input<JobPysparkConfigGetArgs> pysparkConfig) {
             this.pysparkConfig = pysparkConfig;
             return this;
         }
 
-        public Builder setPysparkConfig(@Nullable JobPysparkConfigGetArgs pysparkConfig) {
+        public Builder pysparkConfig(@Nullable JobPysparkConfigGetArgs pysparkConfig) {
             this.pysparkConfig = Input.ofNullable(pysparkConfig);
             return this;
         }
 
-        public Builder setReference(@Nullable Input<JobReferenceGetArgs> reference) {
+        public Builder reference(@Nullable Input<JobReferenceGetArgs> reference) {
             this.reference = reference;
             return this;
         }
 
-        public Builder setReference(@Nullable JobReferenceGetArgs reference) {
+        public Builder reference(@Nullable JobReferenceGetArgs reference) {
             this.reference = Input.ofNullable(reference);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<JobSchedulingGetArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<JobSchedulingGetArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable JobSchedulingGetArgs scheduling) {
+        public Builder scheduling(@Nullable JobSchedulingGetArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable Input<JobSparkConfigGetArgs> sparkConfig) {
+        public Builder sparkConfig(@Nullable Input<JobSparkConfigGetArgs> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable JobSparkConfigGetArgs sparkConfig) {
+        public Builder sparkConfig(@Nullable JobSparkConfigGetArgs sparkConfig) {
             this.sparkConfig = Input.ofNullable(sparkConfig);
             return this;
         }
 
-        public Builder setSparksqlConfig(@Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable Input<JobSparksqlConfigGetArgs> sparksqlConfig) {
             this.sparksqlConfig = sparksqlConfig;
             return this;
         }
 
-        public Builder setSparksqlConfig(@Nullable JobSparksqlConfigGetArgs sparksqlConfig) {
+        public Builder sparksqlConfig(@Nullable JobSparksqlConfigGetArgs sparksqlConfig) {
             this.sparksqlConfig = Input.ofNullable(sparksqlConfig);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<JobStatusGetArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<JobStatusGetArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<JobStatusGetArgs> statuses) {
+        public Builder statuses(@Nullable List<JobStatusGetArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }

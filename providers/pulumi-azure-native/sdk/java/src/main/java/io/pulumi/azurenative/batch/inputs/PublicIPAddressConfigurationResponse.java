@@ -75,12 +75,12 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
     	      this.provision = defaults.provision;
         }
 
-        public Builder setIpAddressIds(@Nullable List<String> ipAddressIds) {
+        public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
             this.ipAddressIds = ipAddressIds;
             return this;
         }
 
-        public Builder setProvision(@Nullable String provision) {
+        public Builder provision(@Nullable String provision) {
             this.provision = provision;
             return this;
         }

@@ -25,11 +25,11 @@ public final class DetectorModelSqs {
      */
     private final @Nullable Boolean useBase64;
 
-    @OutputCustomType.Constructor({"payload","queueUrl","useBase64"})
+    @OutputCustomType.Constructor
     private DetectorModelSqs(
-        @Nullable DetectorModelPayload payload,
-        String queueUrl,
-        @Nullable Boolean useBase64) {
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload,
+        @OutputCustomType.Parameter("queueUrl") String queueUrl,
+        @OutputCustomType.Parameter("useBase64") @Nullable Boolean useBase64) {
         this.payload = payload;
         this.queueUrl = queueUrl;
         this.useBase64 = useBase64;
@@ -77,17 +77,17 @@ public final class DetectorModelSqs {
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setUseBase64(@Nullable Boolean useBase64) {
+        public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = useBase64;
             return this;
         }

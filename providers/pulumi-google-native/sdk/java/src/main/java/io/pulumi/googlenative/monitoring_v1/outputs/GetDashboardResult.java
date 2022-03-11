@@ -55,16 +55,16 @@ public final class GetDashboardResult {
      */
     private final RowLayoutResponse rowLayout;
 
-    @OutputCustomType.Constructor({"columnLayout","displayName","etag","gridLayout","labels","mosaicLayout","name","rowLayout"})
+    @OutputCustomType.Constructor
     private GetDashboardResult(
-        ColumnLayoutResponse columnLayout,
-        String displayName,
-        String etag,
-        GridLayoutResponse gridLayout,
-        Map<String,String> labels,
-        MosaicLayoutResponse mosaicLayout,
-        String name,
-        RowLayoutResponse rowLayout) {
+        @OutputCustomType.Parameter("columnLayout") ColumnLayoutResponse columnLayout,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("gridLayout") GridLayoutResponse gridLayout,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mosaicLayout") MosaicLayoutResponse mosaicLayout,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rowLayout") RowLayoutResponse rowLayout) {
         this.columnLayout = columnLayout;
         this.displayName = displayName;
         this.etag = etag;
@@ -166,42 +166,42 @@ public final class GetDashboardResult {
     	      this.rowLayout = defaults.rowLayout;
         }
 
-        public Builder setColumnLayout(ColumnLayoutResponse columnLayout) {
+        public Builder columnLayout(ColumnLayoutResponse columnLayout) {
             this.columnLayout = Objects.requireNonNull(columnLayout);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setGridLayout(GridLayoutResponse gridLayout) {
+        public Builder gridLayout(GridLayoutResponse gridLayout) {
             this.gridLayout = Objects.requireNonNull(gridLayout);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMosaicLayout(MosaicLayoutResponse mosaicLayout) {
+        public Builder mosaicLayout(MosaicLayoutResponse mosaicLayout) {
             this.mosaicLayout = Objects.requireNonNull(mosaicLayout);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRowLayout(RowLayoutResponse rowLayout) {
+        public Builder rowLayout(RowLayoutResponse rowLayout) {
             this.rowLayout = Objects.requireNonNull(rowLayout);
             return this;
         }

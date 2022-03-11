@@ -29,11 +29,11 @@ public final class ServiceSourceConfigurationCodeRepository {
      */
     private final ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion;
 
-    @OutputCustomType.Constructor({"codeConfiguration","repositoryUrl","sourceCodeVersion"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepository(
-        @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
-        String repositoryUrl,
-        ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
+        @OutputCustomType.Parameter("codeConfiguration") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("sourceCodeVersion") ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
         this.codeConfiguration = codeConfiguration;
         this.repositoryUrl = repositoryUrl;
         this.sourceCodeVersion = sourceCodeVersion;
@@ -85,17 +85,17 @@ public final class ServiceSourceConfigurationCodeRepository {
     	      this.sourceCodeVersion = defaults.sourceCodeVersion;
         }
 
-        public Builder setCodeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration) {
+        public Builder codeConfiguration(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfiguration codeConfiguration) {
             this.codeConfiguration = codeConfiguration;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
+        public Builder sourceCodeVersion(ServiceSourceConfigurationCodeRepositorySourceCodeVersion sourceCodeVersion) {
             this.sourceCodeVersion = Objects.requireNonNull(sourceCodeVersion);
             return this;
         }

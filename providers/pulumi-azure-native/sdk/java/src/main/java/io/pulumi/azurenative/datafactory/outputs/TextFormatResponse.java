@@ -74,20 +74,20 @@ public final class TextFormatResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"columnDelimiter","deserializer","encodingName","escapeChar","firstRowAsHeader","nullValue","quoteChar","rowDelimiter","serializer","skipLineCount","treatEmptyAsNull","type"})
+    @OutputCustomType.Constructor
     private TextFormatResponse(
-        @Nullable Object columnDelimiter,
-        @Nullable Object deserializer,
-        @Nullable Object encodingName,
-        @Nullable Object escapeChar,
-        @Nullable Object firstRowAsHeader,
-        @Nullable Object nullValue,
-        @Nullable Object quoteChar,
-        @Nullable Object rowDelimiter,
-        @Nullable Object serializer,
-        @Nullable Object skipLineCount,
-        @Nullable Object treatEmptyAsNull,
-        String type) {
+        @OutputCustomType.Parameter("columnDelimiter") @Nullable Object columnDelimiter,
+        @OutputCustomType.Parameter("deserializer") @Nullable Object deserializer,
+        @OutputCustomType.Parameter("encodingName") @Nullable Object encodingName,
+        @OutputCustomType.Parameter("escapeChar") @Nullable Object escapeChar,
+        @OutputCustomType.Parameter("firstRowAsHeader") @Nullable Object firstRowAsHeader,
+        @OutputCustomType.Parameter("nullValue") @Nullable Object nullValue,
+        @OutputCustomType.Parameter("quoteChar") @Nullable Object quoteChar,
+        @OutputCustomType.Parameter("rowDelimiter") @Nullable Object rowDelimiter,
+        @OutputCustomType.Parameter("serializer") @Nullable Object serializer,
+        @OutputCustomType.Parameter("skipLineCount") @Nullable Object skipLineCount,
+        @OutputCustomType.Parameter("treatEmptyAsNull") @Nullable Object treatEmptyAsNull,
+        @OutputCustomType.Parameter("type") String type) {
         this.columnDelimiter = columnDelimiter;
         this.deserializer = deserializer;
         this.encodingName = encodingName;
@@ -230,62 +230,62 @@ public final class TextFormatResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setColumnDelimiter(@Nullable Object columnDelimiter) {
+        public Builder columnDelimiter(@Nullable Object columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
-        public Builder setDeserializer(@Nullable Object deserializer) {
+        public Builder deserializer(@Nullable Object deserializer) {
             this.deserializer = deserializer;
             return this;
         }
 
-        public Builder setEncodingName(@Nullable Object encodingName) {
+        public Builder encodingName(@Nullable Object encodingName) {
             this.encodingName = encodingName;
             return this;
         }
 
-        public Builder setEscapeChar(@Nullable Object escapeChar) {
+        public Builder escapeChar(@Nullable Object escapeChar) {
             this.escapeChar = escapeChar;
             return this;
         }
 
-        public Builder setFirstRowAsHeader(@Nullable Object firstRowAsHeader) {
+        public Builder firstRowAsHeader(@Nullable Object firstRowAsHeader) {
             this.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
 
-        public Builder setNullValue(@Nullable Object nullValue) {
+        public Builder nullValue(@Nullable Object nullValue) {
             this.nullValue = nullValue;
             return this;
         }
 
-        public Builder setQuoteChar(@Nullable Object quoteChar) {
+        public Builder quoteChar(@Nullable Object quoteChar) {
             this.quoteChar = quoteChar;
             return this;
         }
 
-        public Builder setRowDelimiter(@Nullable Object rowDelimiter) {
+        public Builder rowDelimiter(@Nullable Object rowDelimiter) {
             this.rowDelimiter = rowDelimiter;
             return this;
         }
 
-        public Builder setSerializer(@Nullable Object serializer) {
+        public Builder serializer(@Nullable Object serializer) {
             this.serializer = serializer;
             return this;
         }
 
-        public Builder setSkipLineCount(@Nullable Object skipLineCount) {
+        public Builder skipLineCount(@Nullable Object skipLineCount) {
             this.skipLineCount = skipLineCount;
             return this;
         }
 
-        public Builder setTreatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
+        public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
             this.treatEmptyAsNull = treatEmptyAsNull;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

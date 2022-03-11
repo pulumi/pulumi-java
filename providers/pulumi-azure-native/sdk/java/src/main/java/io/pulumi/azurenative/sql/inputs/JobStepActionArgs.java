@@ -93,32 +93,32 @@ public final class JobStepActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setSource(@Nullable Input<Either<String,JobStepActionSource>> source) {
+        public Builder source(@Nullable Input<Either<String,JobStepActionSource>> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable Either<String,JobStepActionSource> source) {
+        public Builder source(@Nullable Either<String,JobStepActionSource> source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,JobStepActionType>> type) {
+        public Builder type(@Nullable Input<Either<String,JobStepActionType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,JobStepActionType> type) {
+        public Builder type(@Nullable Either<String,JobStepActionType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

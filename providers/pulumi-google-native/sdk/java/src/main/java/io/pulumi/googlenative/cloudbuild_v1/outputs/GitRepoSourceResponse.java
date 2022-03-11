@@ -25,11 +25,11 @@ public final class GitRepoSourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"ref","repoType","uri"})
+    @OutputCustomType.Constructor
     private GitRepoSourceResponse(
-        String ref,
-        String repoType,
-        String uri) {
+        @OutputCustomType.Parameter("ref") String ref,
+        @OutputCustomType.Parameter("repoType") String repoType,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.ref = ref;
         this.repoType = repoType;
         this.uri = uri;
@@ -81,17 +81,17 @@ public final class GitRepoSourceResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setRef(String ref) {
+        public Builder ref(String ref) {
             this.ref = Objects.requireNonNull(ref);
             return this;
         }
 
-        public Builder setRepoType(String repoType) {
+        public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

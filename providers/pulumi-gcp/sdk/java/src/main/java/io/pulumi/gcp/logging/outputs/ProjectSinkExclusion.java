@@ -34,12 +34,12 @@ public final class ProjectSinkExclusion {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","disabled","filter","name"})
+    @OutputCustomType.Constructor
     private ProjectSinkExclusion(
-        @Nullable String description,
-        @Nullable Boolean disabled,
-        String filter,
-        String name) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.disabled = disabled;
         this.filter = filter;
@@ -102,22 +102,22 @@ public final class ProjectSinkExclusion {
     	      this.name = defaults.name;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

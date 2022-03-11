@@ -90,32 +90,32 @@ public final class GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs extends i
     	      this.location = defaults.location;
         }
 
-        public Builder setEnv(@Nullable Input<String> env) {
+        public Builder env(@Nullable Input<String> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable String env) {
+        public Builder env(@Nullable String env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }

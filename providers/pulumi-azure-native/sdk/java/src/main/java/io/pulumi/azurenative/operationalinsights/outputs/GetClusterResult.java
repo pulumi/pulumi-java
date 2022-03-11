@@ -100,24 +100,24 @@ public final class GetClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"associatedWorkspaces","billingType","capacityReservationProperties","clusterId","createdDate","id","identity","isAvailabilityZonesEnabled","keyVaultProperties","lastModifiedDate","location","name","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
-        @Nullable String billingType,
-        @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
-        String clusterId,
-        String createdDate,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable Boolean isAvailabilityZonesEnabled,
-        @Nullable KeyVaultPropertiesResponse keyVaultProperties,
-        String lastModifiedDate,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable ClusterSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("associatedWorkspaces") @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces,
+        @OutputCustomType.Parameter("billingType") @Nullable String billingType,
+        @OutputCustomType.Parameter("capacityReservationProperties") @Nullable CapacityReservationPropertiesResponse capacityReservationProperties,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("isAvailabilityZonesEnabled") @Nullable Boolean isAvailabilityZonesEnabled,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable KeyVaultPropertiesResponse keyVaultProperties,
+        @OutputCustomType.Parameter("lastModifiedDate") String lastModifiedDate,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.associatedWorkspaces = associatedWorkspaces;
         this.billingType = billingType;
         this.capacityReservationProperties = capacityReservationProperties;
@@ -299,82 +299,82 @@ public final class GetClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssociatedWorkspaces(@Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces) {
+        public Builder associatedWorkspaces(@Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces) {
             this.associatedWorkspaces = associatedWorkspaces;
             return this;
         }
 
-        public Builder setBillingType(@Nullable String billingType) {
+        public Builder billingType(@Nullable String billingType) {
             this.billingType = billingType;
             return this;
         }
 
-        public Builder setCapacityReservationProperties(@Nullable CapacityReservationPropertiesResponse capacityReservationProperties) {
+        public Builder capacityReservationProperties(@Nullable CapacityReservationPropertiesResponse capacityReservationProperties) {
             this.capacityReservationProperties = capacityReservationProperties;
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIsAvailabilityZonesEnabled(@Nullable Boolean isAvailabilityZonesEnabled) {
+        public Builder isAvailabilityZonesEnabled(@Nullable Boolean isAvailabilityZonesEnabled) {
             this.isAvailabilityZonesEnabled = isAvailabilityZonesEnabled;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable KeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
-        public Builder setLastModifiedDate(String lastModifiedDate) {
+        public Builder lastModifiedDate(String lastModifiedDate) {
             this.lastModifiedDate = Objects.requireNonNull(lastModifiedDate);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable ClusterSkuResponse sku) {
+        public Builder sku(@Nullable ClusterSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

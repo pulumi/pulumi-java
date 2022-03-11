@@ -17,13 +17,13 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
     private final List<String> queryStringBlacklists;
     private final List<String> queryStringWhitelists;
 
-    @OutputCustomType.Constructor({"includeHost","includeProtocol","includeQueryString","queryStringBlacklists","queryStringWhitelists"})
+    @OutputCustomType.Constructor
     private GetBackendServiceCdnPolicyCacheKeyPolicy(
-        Boolean includeHost,
-        Boolean includeProtocol,
-        Boolean includeQueryString,
-        List<String> queryStringBlacklists,
-        List<String> queryStringWhitelists) {
+        @OutputCustomType.Parameter("includeHost") Boolean includeHost,
+        @OutputCustomType.Parameter("includeProtocol") Boolean includeProtocol,
+        @OutputCustomType.Parameter("includeQueryString") Boolean includeQueryString,
+        @OutputCustomType.Parameter("queryStringBlacklists") List<String> queryStringBlacklists,
+        @OutputCustomType.Parameter("queryStringWhitelists") List<String> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;
@@ -75,27 +75,27 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy {
     	      this.queryStringWhitelists = defaults.queryStringWhitelists;
         }
 
-        public Builder setIncludeHost(Boolean includeHost) {
+        public Builder includeHost(Boolean includeHost) {
             this.includeHost = Objects.requireNonNull(includeHost);
             return this;
         }
 
-        public Builder setIncludeProtocol(Boolean includeProtocol) {
+        public Builder includeProtocol(Boolean includeProtocol) {
             this.includeProtocol = Objects.requireNonNull(includeProtocol);
             return this;
         }
 
-        public Builder setIncludeQueryString(Boolean includeQueryString) {
+        public Builder includeQueryString(Boolean includeQueryString) {
             this.includeQueryString = Objects.requireNonNull(includeQueryString);
             return this;
         }
 
-        public Builder setQueryStringBlacklists(List<String> queryStringBlacklists) {
+        public Builder queryStringBlacklists(List<String> queryStringBlacklists) {
             this.queryStringBlacklists = Objects.requireNonNull(queryStringBlacklists);
             return this;
         }
 
-        public Builder setQueryStringWhitelists(List<String> queryStringWhitelists) {
+        public Builder queryStringWhitelists(List<String> queryStringWhitelists) {
             this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
             return this;
         }

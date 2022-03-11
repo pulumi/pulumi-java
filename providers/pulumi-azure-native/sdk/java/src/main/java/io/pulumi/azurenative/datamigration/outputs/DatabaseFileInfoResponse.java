@@ -48,15 +48,15 @@ public final class DatabaseFileInfoResponse {
      */
     private final @Nullable Double sizeMB;
 
-    @OutputCustomType.Constructor({"databaseName","fileType","id","logicalName","physicalFullName","restoreFullName","sizeMB"})
+    @OutputCustomType.Constructor
     private DatabaseFileInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String fileType,
-        @Nullable String id,
-        @Nullable String logicalName,
-        @Nullable String physicalFullName,
-        @Nullable String restoreFullName,
-        @Nullable Double sizeMB) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("fileType") @Nullable String fileType,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("logicalName") @Nullable String logicalName,
+        @OutputCustomType.Parameter("physicalFullName") @Nullable String physicalFullName,
+        @OutputCustomType.Parameter("restoreFullName") @Nullable String restoreFullName,
+        @OutputCustomType.Parameter("sizeMB") @Nullable Double sizeMB) {
         this.databaseName = databaseName;
         this.fileType = fileType;
         this.id = id;
@@ -148,37 +148,37 @@ public final class DatabaseFileInfoResponse {
     	      this.sizeMB = defaults.sizeMB;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setFileType(@Nullable String fileType) {
+        public Builder fileType(@Nullable String fileType) {
             this.fileType = fileType;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLogicalName(@Nullable String logicalName) {
+        public Builder logicalName(@Nullable String logicalName) {
             this.logicalName = logicalName;
             return this;
         }
 
-        public Builder setPhysicalFullName(@Nullable String physicalFullName) {
+        public Builder physicalFullName(@Nullable String physicalFullName) {
             this.physicalFullName = physicalFullName;
             return this;
         }
 
-        public Builder setRestoreFullName(@Nullable String restoreFullName) {
+        public Builder restoreFullName(@Nullable String restoreFullName) {
             this.restoreFullName = restoreFullName;
             return this;
         }
 
-        public Builder setSizeMB(@Nullable Double sizeMB) {
+        public Builder sizeMB(@Nullable Double sizeMB) {
             this.sizeMB = sizeMB;
             return this;
         }

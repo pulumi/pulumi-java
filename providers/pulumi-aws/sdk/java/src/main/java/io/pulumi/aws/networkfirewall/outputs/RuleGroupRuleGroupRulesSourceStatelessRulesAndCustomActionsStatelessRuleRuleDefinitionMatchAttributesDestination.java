@@ -15,8 +15,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
      */
     private final String addressDefinition;
 
-    @OutputCustomType.Constructor({"addressDefinition"})
-    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination(String addressDefinition) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesDestination(@OutputCustomType.Parameter("addressDefinition") String addressDefinition) {
         this.addressDefinition = addressDefinition;
     }
 
@@ -48,7 +48,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     	      this.addressDefinition = defaults.addressDefinition;
         }
 
-        public Builder setAddressDefinition(String addressDefinition) {
+        public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }

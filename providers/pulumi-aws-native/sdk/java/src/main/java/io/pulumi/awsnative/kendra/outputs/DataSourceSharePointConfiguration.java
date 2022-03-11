@@ -30,20 +30,20 @@ public final class DataSourceSharePointConfiguration {
     private final @Nullable Boolean useChangeLog;
     private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
-    @OutputCustomType.Constructor({"crawlAttachments","disableLocalGroups","documentTitleFieldName","exclusionPatterns","fieldMappings","inclusionPatterns","secretArn","sharePointVersion","sslCertificateS3Path","urls","useChangeLog","vpcConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceSharePointConfiguration(
-        @Nullable Boolean crawlAttachments,
-        @Nullable Boolean disableLocalGroups,
-        @Nullable String documentTitleFieldName,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String secretArn,
-        DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
-        @Nullable DataSourceS3Path sslCertificateS3Path,
-        List<String> urls,
-        @Nullable Boolean useChangeLog,
-        @Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
+        @OutputCustomType.Parameter("documentTitleFieldName") @Nullable String documentTitleFieldName,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("sharePointVersion") DataSourceSharePointConfigurationSharePointVersion sharePointVersion,
+        @OutputCustomType.Parameter("sslCertificateS3Path") @Nullable DataSourceS3Path sslCertificateS3Path,
+        @OutputCustomType.Parameter("urls") List<String> urls,
+        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog,
+        @OutputCustomType.Parameter("vpcConfiguration") @Nullable DataSourceVpcConfiguration vpcConfiguration) {
         this.crawlAttachments = crawlAttachments;
         this.disableLocalGroups = disableLocalGroups;
         this.documentTitleFieldName = documentTitleFieldName;
@@ -137,62 +137,62 @@ public final class DataSourceSharePointConfiguration {
     	      this.vpcConfiguration = defaults.vpcConfiguration;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Boolean disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
+        public Builder sharePointVersion(DataSourceSharePointConfigurationSharePointVersion sharePointVersion) {
             this.sharePointVersion = Objects.requireNonNull(sharePointVersion);
             return this;
         }
 
-        public Builder setSslCertificateS3Path(@Nullable DataSourceS3Path sslCertificateS3Path) {
+        public Builder sslCertificateS3Path(@Nullable DataSourceS3Path sslCertificateS3Path) {
             this.sslCertificateS3Path = sslCertificateS3Path;
             return this;
         }
 
-        public Builder setUrls(List<String> urls) {
+        public Builder urls(List<String> urls) {
             this.urls = Objects.requireNonNull(urls);
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Boolean useChangeLog) {
+        public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }
 
-        public Builder setVpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
+        public Builder vpcConfiguration(@Nullable DataSourceVpcConfiguration vpcConfiguration) {
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }

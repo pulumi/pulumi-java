@@ -22,10 +22,10 @@ public final class ServicePrincipalPropertiesResponse {
      */
     private final @Nullable String secret;
 
-    @OutputCustomType.Constructor({"applicationId","secret"})
+    @OutputCustomType.Constructor
     private ServicePrincipalPropertiesResponse(
-        @Nullable String applicationId,
-        @Nullable String secret) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("secret") @Nullable String secret) {
         this.applicationId = applicationId;
         this.secret = secret;
     }
@@ -67,12 +67,12 @@ public final class ServicePrincipalPropertiesResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }

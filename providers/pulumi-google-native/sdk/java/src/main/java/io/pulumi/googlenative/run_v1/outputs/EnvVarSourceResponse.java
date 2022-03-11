@@ -21,10 +21,10 @@ public final class EnvVarSourceResponse {
      */
     private final SecretKeySelectorResponse secretKeyRef;
 
-    @OutputCustomType.Constructor({"configMapKeyRef","secretKeyRef"})
+    @OutputCustomType.Constructor
     private EnvVarSourceResponse(
-        ConfigMapKeySelectorResponse configMapKeyRef,
-        SecretKeySelectorResponse secretKeyRef) {
+        @OutputCustomType.Parameter("configMapKeyRef") ConfigMapKeySelectorResponse configMapKeyRef,
+        @OutputCustomType.Parameter("secretKeyRef") SecretKeySelectorResponse secretKeyRef) {
         this.configMapKeyRef = configMapKeyRef;
         this.secretKeyRef = secretKeyRef;
     }
@@ -66,12 +66,12 @@ public final class EnvVarSourceResponse {
     	      this.secretKeyRef = defaults.secretKeyRef;
         }
 
-        public Builder setConfigMapKeyRef(ConfigMapKeySelectorResponse configMapKeyRef) {
+        public Builder configMapKeyRef(ConfigMapKeySelectorResponse configMapKeyRef) {
             this.configMapKeyRef = Objects.requireNonNull(configMapKeyRef);
             return this;
         }
 
-        public Builder setSecretKeyRef(SecretKeySelectorResponse secretKeyRef) {
+        public Builder secretKeyRef(SecretKeySelectorResponse secretKeyRef) {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }

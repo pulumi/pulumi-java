@@ -47,15 +47,15 @@ public final class DatabasePrincipalResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"appId","email","fqn","name","role","tenantName","type"})
+    @OutputCustomType.Constructor
     private DatabasePrincipalResponse(
-        @Nullable String appId,
-        @Nullable String email,
-        @Nullable String fqn,
-        String name,
-        String role,
-        String tenantName,
-        String type) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("fqn") @Nullable String fqn,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("tenantName") String tenantName,
+        @OutputCustomType.Parameter("type") String type) {
         this.appId = appId;
         this.email = email;
         this.fqn = fqn;
@@ -147,37 +147,37 @@ public final class DatabasePrincipalResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setFqn(@Nullable String fqn) {
+        public Builder fqn(@Nullable String fqn) {
             this.fqn = fqn;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setTenantName(String tenantName) {
+        public Builder tenantName(String tenantName) {
             this.tenantName = Objects.requireNonNull(tenantName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -34,12 +34,12 @@ public final class SlsaProvenanceResponse {
      */
     private final SlsaRecipeResponse recipe;
 
-    @OutputCustomType.Constructor({"builder","materials","metadata","recipe"})
+    @OutputCustomType.Constructor
     private SlsaProvenanceResponse(
-        SlsaBuilderResponse builder,
-        List<MaterialResponse> materials,
-        SlsaMetadataResponse metadata,
-        SlsaRecipeResponse recipe) {
+        @OutputCustomType.Parameter("builder") SlsaBuilderResponse builder,
+        @OutputCustomType.Parameter("materials") List<MaterialResponse> materials,
+        @OutputCustomType.Parameter("metadata") SlsaMetadataResponse metadata,
+        @OutputCustomType.Parameter("recipe") SlsaRecipeResponse recipe) {
         this.builder = builder;
         this.materials = materials;
         this.metadata = metadata;
@@ -101,22 +101,22 @@ public final class SlsaProvenanceResponse {
     	      this.recipe = defaults.recipe;
         }
 
-        public Builder setBuilder(SlsaBuilderResponse builder) {
+        public Builder builder(SlsaBuilderResponse builder) {
             this.builder = Objects.requireNonNull(builder);
             return this;
         }
 
-        public Builder setMaterials(List<MaterialResponse> materials) {
+        public Builder materials(List<MaterialResponse> materials) {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
 
-        public Builder setMetadata(SlsaMetadataResponse metadata) {
+        public Builder metadata(SlsaMetadataResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setRecipe(SlsaRecipeResponse recipe) {
+        public Builder recipe(SlsaRecipeResponse recipe) {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }

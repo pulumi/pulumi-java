@@ -26,11 +26,11 @@ public final class UserAssignedIdentityAuthInfoResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"authType","clientId","subscriptionId"})
+    @OutputCustomType.Constructor
     private UserAssignedIdentityAuthInfoResponse(
-        String authType,
-        String clientId,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("authType") String authType,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.authType = authType;
         this.clientId = clientId;
         this.subscriptionId = subscriptionId;
@@ -83,17 +83,17 @@ public final class UserAssignedIdentityAuthInfoResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

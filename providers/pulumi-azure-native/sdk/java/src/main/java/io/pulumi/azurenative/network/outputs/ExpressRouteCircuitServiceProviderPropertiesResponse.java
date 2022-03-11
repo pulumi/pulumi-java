@@ -28,11 +28,11 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
      */
     private final @Nullable String serviceProviderName;
 
-    @OutputCustomType.Constructor({"bandwidthInMbps","peeringLocation","serviceProviderName"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitServiceProviderPropertiesResponse(
-        @Nullable Integer bandwidthInMbps,
-        @Nullable String peeringLocation,
-        @Nullable String serviceProviderName) {
+        @OutputCustomType.Parameter("bandwidthInMbps") @Nullable Integer bandwidthInMbps,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("serviceProviderName") @Nullable String serviceProviderName) {
         this.bandwidthInMbps = bandwidthInMbps;
         this.peeringLocation = peeringLocation;
         this.serviceProviderName = serviceProviderName;
@@ -84,17 +84,17 @@ public final class ExpressRouteCircuitServiceProviderPropertiesResponse {
     	      this.serviceProviderName = defaults.serviceProviderName;
         }
 
-        public Builder setBandwidthInMbps(@Nullable Integer bandwidthInMbps) {
+        public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
             this.bandwidthInMbps = bandwidthInMbps;
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setServiceProviderName(@Nullable String serviceProviderName) {
+        public Builder serviceProviderName(@Nullable String serviceProviderName) {
             this.serviceProviderName = serviceProviderName;
             return this;
         }

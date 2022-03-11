@@ -31,12 +31,12 @@ public final class YarnApplicationResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"name","progress","state","trackingUrl"})
+    @OutputCustomType.Constructor
     private YarnApplicationResponse(
-        String name,
-        Double progress,
-        String state,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("progress") Double progress,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.name = name;
         this.progress = progress;
         this.state = state;
@@ -98,22 +98,22 @@ public final class YarnApplicationResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProgress(Double progress) {
+        public Builder progress(Double progress) {
             this.progress = Objects.requireNonNull(progress);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

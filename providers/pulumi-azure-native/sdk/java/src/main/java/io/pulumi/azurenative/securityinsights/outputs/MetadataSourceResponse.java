@@ -27,11 +27,11 @@ public final class MetadataSourceResponse {
      */
     private final @Nullable String sourceId;
 
-    @OutputCustomType.Constructor({"kind","name","sourceId"})
+    @OutputCustomType.Constructor
     private MetadataSourceResponse(
-        String kind,
-        @Nullable String name,
-        @Nullable String sourceId) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceId") @Nullable String sourceId) {
         this.kind = kind;
         this.name = name;
         this.sourceId = sourceId;
@@ -83,17 +83,17 @@ public final class MetadataSourceResponse {
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }

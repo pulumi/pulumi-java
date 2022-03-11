@@ -38,13 +38,13 @@ public final class VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"keyFrameInterval","label","odataType","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private VideoResponse(
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        String odataType,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
         this.odataType = odataType;
@@ -117,27 +117,27 @@ public final class VideoResponse {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setStretchMode(@Nullable String stretchMode) {
+        public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setSyncMode(@Nullable String syncMode) {
+        public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
         }

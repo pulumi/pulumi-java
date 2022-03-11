@@ -13,10 +13,10 @@ public final class WebACLLabelMatchStatement {
     private final String key;
     private final WebACLLabelMatchScope scope;
 
-    @OutputCustomType.Constructor({"key","scope"})
+    @OutputCustomType.Constructor
     private WebACLLabelMatchStatement(
-        String key,
-        WebACLLabelMatchScope scope) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("scope") WebACLLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }
@@ -50,12 +50,12 @@ public final class WebACLLabelMatchStatement {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setScope(WebACLLabelMatchScope scope) {
+        public Builder scope(WebACLLabelMatchScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

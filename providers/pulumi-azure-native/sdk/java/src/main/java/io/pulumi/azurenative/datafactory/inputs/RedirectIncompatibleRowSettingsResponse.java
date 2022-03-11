@@ -74,12 +74,12 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
     	      this.path = defaults.path;
         }
 
-        public Builder setLinkedServiceName(Object linkedServiceName) {
+        public Builder linkedServiceName(Object linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setPath(@Nullable Object path) {
+        public Builder path(@Nullable Object path) {
             this.path = path;
             return this;
         }

@@ -21,15 +21,15 @@ public final class GetPeeredDnsDomainResult {
     private final String project;
     private final String service;
 
-    @OutputCustomType.Constructor({"dnsSuffix","id","name","network","parent","project","service"})
+    @OutputCustomType.Constructor
     private GetPeeredDnsDomainResult(
-        String dnsSuffix,
-        String id,
-        String name,
-        String network,
-        String parent,
-        String project,
-        String service) {
+        @OutputCustomType.Parameter("dnsSuffix") String dnsSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("service") String service) {
         this.dnsSuffix = dnsSuffix;
         this.id = id;
         this.name = name;
@@ -97,37 +97,37 @@ public final class GetPeeredDnsDomainResult {
     	      this.service = defaults.service;
         }
 
-        public Builder setDnsSuffix(String dnsSuffix) {
+        public Builder dnsSuffix(String dnsSuffix) {
             this.dnsSuffix = Objects.requireNonNull(dnsSuffix);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

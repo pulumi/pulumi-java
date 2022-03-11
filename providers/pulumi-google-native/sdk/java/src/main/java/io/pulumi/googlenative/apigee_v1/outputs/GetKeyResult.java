@@ -58,17 +58,17 @@ public final class GetKeyResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"apiProducts","attributes","consumerKey","consumerSecret","expiresAt","expiresInSeconds","issuedAt","scopes","status"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        List<Object> apiProducts,
-        List<GoogleCloudApigeeV1AttributeResponse> attributes,
-        String consumerKey,
-        String consumerSecret,
-        String expiresAt,
-        String expiresInSeconds,
-        String issuedAt,
-        List<String> scopes,
-        String status) {
+        @OutputCustomType.Parameter("apiProducts") List<Object> apiProducts,
+        @OutputCustomType.Parameter("attributes") List<GoogleCloudApigeeV1AttributeResponse> attributes,
+        @OutputCustomType.Parameter("consumerKey") String consumerKey,
+        @OutputCustomType.Parameter("consumerSecret") String consumerSecret,
+        @OutputCustomType.Parameter("expiresAt") String expiresAt,
+        @OutputCustomType.Parameter("expiresInSeconds") String expiresInSeconds,
+        @OutputCustomType.Parameter("issuedAt") String issuedAt,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("status") String status) {
         this.apiProducts = apiProducts;
         this.attributes = attributes;
         this.consumerKey = consumerKey;
@@ -180,47 +180,47 @@ public final class GetKeyResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiProducts(List<Object> apiProducts) {
+        public Builder apiProducts(List<Object> apiProducts) {
             this.apiProducts = Objects.requireNonNull(apiProducts);
             return this;
         }
 
-        public Builder setAttributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
+        public Builder attributes(List<GoogleCloudApigeeV1AttributeResponse> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setConsumerKey(String consumerKey) {
+        public Builder consumerKey(String consumerKey) {
             this.consumerKey = Objects.requireNonNull(consumerKey);
             return this;
         }
 
-        public Builder setConsumerSecret(String consumerSecret) {
+        public Builder consumerSecret(String consumerSecret) {
             this.consumerSecret = Objects.requireNonNull(consumerSecret);
             return this;
         }
 
-        public Builder setExpiresAt(String expiresAt) {
+        public Builder expiresAt(String expiresAt) {
             this.expiresAt = Objects.requireNonNull(expiresAt);
             return this;
         }
 
-        public Builder setExpiresInSeconds(String expiresInSeconds) {
+        public Builder expiresInSeconds(String expiresInSeconds) {
             this.expiresInSeconds = Objects.requireNonNull(expiresInSeconds);
             return this;
         }
 
-        public Builder setIssuedAt(String issuedAt) {
+        public Builder issuedAt(String issuedAt) {
             this.issuedAt = Objects.requireNonNull(issuedAt);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

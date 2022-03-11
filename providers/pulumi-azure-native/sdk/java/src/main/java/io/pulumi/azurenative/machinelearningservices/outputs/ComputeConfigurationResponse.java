@@ -45,14 +45,14 @@ public final class ComputeConfigurationResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"instanceCount","instanceType","isLocal","location","properties","target"})
+    @OutputCustomType.Constructor
     private ComputeConfigurationResponse(
-        @Nullable Integer instanceCount,
-        @Nullable String instanceType,
-        @Nullable Boolean isLocal,
-        @Nullable String location,
-        @Nullable Map<String,String> properties,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("isLocal") @Nullable Boolean isLocal,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.instanceCount = instanceCount;
         this.instanceType = instanceType;
         this.isLocal = isLocal;
@@ -134,32 +134,32 @@ public final class ComputeConfigurationResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setIsLocal(@Nullable Boolean isLocal) {
+        public Builder isLocal(@Nullable Boolean isLocal) {
             this.isLocal = isLocal;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

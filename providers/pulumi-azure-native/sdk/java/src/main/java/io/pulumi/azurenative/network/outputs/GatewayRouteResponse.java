@@ -46,15 +46,15 @@ public final class GatewayRouteResponse {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"asPath","localAddress","network","nextHop","origin","sourcePeer","weight"})
+    @OutputCustomType.Constructor
     private GatewayRouteResponse(
-        String asPath,
-        String localAddress,
-        String network,
-        String nextHop,
-        String origin,
-        String sourcePeer,
-        Integer weight) {
+        @OutputCustomType.Parameter("asPath") String asPath,
+        @OutputCustomType.Parameter("localAddress") String localAddress,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nextHop") String nextHop,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("sourcePeer") String sourcePeer,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.asPath = asPath;
         this.localAddress = localAddress;
         this.network = network;
@@ -146,37 +146,37 @@ public final class GatewayRouteResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAsPath(String asPath) {
+        public Builder asPath(String asPath) {
             this.asPath = Objects.requireNonNull(asPath);
             return this;
         }
 
-        public Builder setLocalAddress(String localAddress) {
+        public Builder localAddress(String localAddress) {
             this.localAddress = Objects.requireNonNull(localAddress);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNextHop(String nextHop) {
+        public Builder nextHop(String nextHop) {
             this.nextHop = Objects.requireNonNull(nextHop);
             return this;
         }
 
-        public Builder setOrigin(String origin) {
+        public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setSourcePeer(String sourcePeer) {
+        public Builder sourcePeer(String sourcePeer) {
             this.sourcePeer = Objects.requireNonNull(sourcePeer);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

@@ -102,42 +102,42 @@ public final class AppProductionBranchGetArgs extends io.pulumi.resources.Resour
     	      this.thumbnailUrl = defaults.thumbnailUrl;
         }
 
-        public Builder setBranchName(@Nullable Input<String> branchName) {
+        public Builder branchName(@Nullable Input<String> branchName) {
             this.branchName = branchName;
             return this;
         }
 
-        public Builder setBranchName(@Nullable String branchName) {
+        public Builder branchName(@Nullable String branchName) {
             this.branchName = Input.ofNullable(branchName);
             return this;
         }
 
-        public Builder setLastDeployTime(@Nullable Input<String> lastDeployTime) {
+        public Builder lastDeployTime(@Nullable Input<String> lastDeployTime) {
             this.lastDeployTime = lastDeployTime;
             return this;
         }
 
-        public Builder setLastDeployTime(@Nullable String lastDeployTime) {
+        public Builder lastDeployTime(@Nullable String lastDeployTime) {
             this.lastDeployTime = Input.ofNullable(lastDeployTime);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setThumbnailUrl(@Nullable Input<String> thumbnailUrl) {
+        public Builder thumbnailUrl(@Nullable Input<String> thumbnailUrl) {
             this.thumbnailUrl = thumbnailUrl;
             return this;
         }
 
-        public Builder setThumbnailUrl(@Nullable String thumbnailUrl) {
+        public Builder thumbnailUrl(@Nullable String thumbnailUrl) {
             this.thumbnailUrl = Input.ofNullable(thumbnailUrl);
             return this;
         }

@@ -43,15 +43,15 @@ public final class GetManagedZoneResult {
      */
     private final String visibility;
 
-    @OutputCustomType.Constructor({"description","dnsName","id","name","nameServers","project","visibility"})
+    @OutputCustomType.Constructor
     private GetManagedZoneResult(
-        String description,
-        String dnsName,
-        String id,
-        String name,
-        List<String> nameServers,
-        @Nullable String project,
-        String visibility) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("visibility") String visibility) {
         this.description = description;
         this.dnsName = dnsName;
         this.id = id;
@@ -138,37 +138,37 @@ public final class GetManagedZoneResult {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setVisibility(String visibility) {
+        public Builder visibility(String visibility) {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }

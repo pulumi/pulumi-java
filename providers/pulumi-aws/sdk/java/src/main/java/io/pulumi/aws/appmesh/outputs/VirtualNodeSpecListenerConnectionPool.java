@@ -35,12 +35,12 @@ public final class VirtualNodeSpecListenerConnectionPool {
      */
     private final @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp;
 
-    @OutputCustomType.Constructor({"grpc","http","http2","tcp"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerConnectionPool(
-        @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
-        @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
-        @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
-        @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
+        @OutputCustomType.Parameter("grpc") @Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc,
+        @OutputCustomType.Parameter("http") @Nullable VirtualNodeSpecListenerConnectionPoolHttp http,
+        @OutputCustomType.Parameter("http2") @Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2,
+        @OutputCustomType.Parameter("tcp") @Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
         this.grpc = grpc;
         this.http = http;
         this.http2 = http2;
@@ -102,22 +102,22 @@ public final class VirtualNodeSpecListenerConnectionPool {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setGrpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc) {
+        public Builder grpc(@Nullable VirtualNodeSpecListenerConnectionPoolGrpc grpc) {
             this.grpc = grpc;
             return this;
         }
 
-        public Builder setHttp(@Nullable VirtualNodeSpecListenerConnectionPoolHttp http) {
+        public Builder http(@Nullable VirtualNodeSpecListenerConnectionPoolHttp http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2) {
+        public Builder http2(@Nullable VirtualNodeSpecListenerConnectionPoolHttp2 http2) {
             this.http2 = http2;
             return this;
         }
 
-        public Builder setTcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
+        public Builder tcp(@Nullable VirtualNodeSpecListenerConnectionPoolTcp tcp) {
             this.tcp = tcp;
             return this;
         }

@@ -20,10 +20,10 @@ public final class LicenseResponse {
      */
     private final String expression;
 
-    @OutputCustomType.Constructor({"comments","expression"})
+    @OutputCustomType.Constructor
     private LicenseResponse(
-        String comments,
-        String expression) {
+        @OutputCustomType.Parameter("comments") String comments,
+        @OutputCustomType.Parameter("expression") String expression) {
         this.comments = comments;
         this.expression = expression;
     }
@@ -65,12 +65,12 @@ public final class LicenseResponse {
     	      this.expression = defaults.expression;
         }
 
-        public Builder setComments(String comments) {
+        public Builder comments(String comments) {
             this.comments = Objects.requireNonNull(comments);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }

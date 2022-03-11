@@ -17,8 +17,8 @@ public final class ListDeviceFailoverSetsResult {
      */
     private final @Nullable List<FailoverSetResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListDeviceFailoverSetsResult(@Nullable List<FailoverSetResponse> value) {
+    @OutputCustomType.Constructor
+    private ListDeviceFailoverSetsResult(@OutputCustomType.Parameter("value") @Nullable List<FailoverSetResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListDeviceFailoverSetsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<FailoverSetResponse> value) {
+        public Builder value(@Nullable List<FailoverSetResponse> value) {
             this.value = value;
             return this;
         }

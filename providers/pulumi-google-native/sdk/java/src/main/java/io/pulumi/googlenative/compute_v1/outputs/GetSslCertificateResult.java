@@ -78,21 +78,21 @@ public final class GetSslCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificate","creationTimestamp","description","expireTime","kind","managed","name","privateKey","region","selfLink","selfManaged","subjectAlternativeNames","type"})
+    @OutputCustomType.Constructor
     private GetSslCertificateResult(
-        String certificate,
-        String creationTimestamp,
-        String description,
-        String expireTime,
-        String kind,
-        SslCertificateManagedSslCertificateResponse managed,
-        String name,
-        String privateKey,
-        String region,
-        String selfLink,
-        SslCertificateSelfManagedSslCertificateResponse selfManaged,
-        List<String> subjectAlternativeNames,
-        String type) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("managed") SslCertificateManagedSslCertificateResponse managed,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateKey") String privateKey,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfManaged") SslCertificateSelfManagedSslCertificateResponse selfManaged,
+        @OutputCustomType.Parameter("subjectAlternativeNames") List<String> subjectAlternativeNames,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificate = certificate;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -244,67 +244,67 @@ public final class GetSslCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setManaged(SslCertificateManagedSslCertificateResponse managed) {
+        public Builder managed(SslCertificateManagedSslCertificateResponse managed) {
             this.managed = Objects.requireNonNull(managed);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfManaged(SslCertificateSelfManagedSslCertificateResponse selfManaged) {
+        public Builder selfManaged(SslCertificateSelfManagedSslCertificateResponse selfManaged) {
             this.selfManaged = Objects.requireNonNull(selfManaged);
             return this;
         }
 
-        public Builder setSubjectAlternativeNames(List<String> subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = Objects.requireNonNull(subjectAlternativeNames);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

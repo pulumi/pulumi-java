@@ -28,11 +28,11 @@ public final class PackagingConfigurationStreamSelection {
      */
     private final @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder;
 
-    @OutputCustomType.Constructor({"maxVideoBitsPerSecond","minVideoBitsPerSecond","streamOrder"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationStreamSelection(
-        @Nullable Integer maxVideoBitsPerSecond,
-        @Nullable Integer minVideoBitsPerSecond,
-        @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
+        @OutputCustomType.Parameter("maxVideoBitsPerSecond") @Nullable Integer maxVideoBitsPerSecond,
+        @OutputCustomType.Parameter("minVideoBitsPerSecond") @Nullable Integer minVideoBitsPerSecond,
+        @OutputCustomType.Parameter("streamOrder") @Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
         this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
         this.minVideoBitsPerSecond = minVideoBitsPerSecond;
         this.streamOrder = streamOrder;
@@ -84,17 +84,17 @@ public final class PackagingConfigurationStreamSelection {
     	      this.streamOrder = defaults.streamOrder;
         }
 
-        public Builder setMaxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
+        public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setMinVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
+        public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setStreamOrder(@Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
+        public Builder streamOrder(@Nullable PackagingConfigurationStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }

@@ -26,11 +26,11 @@ public final class DataSourceParametersPresto {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"catalog","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceParametersPresto(
-        String catalog,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("catalog") String catalog,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.catalog = catalog;
         this.host = host;
         this.port = port;
@@ -82,17 +82,17 @@ public final class DataSourceParametersPresto {
     	      this.port = defaults.port;
         }
 
-        public Builder setCatalog(String catalog) {
+        public Builder catalog(String catalog) {
             this.catalog = Objects.requireNonNull(catalog);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

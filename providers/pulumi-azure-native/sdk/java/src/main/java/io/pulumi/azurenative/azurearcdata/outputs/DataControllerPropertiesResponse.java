@@ -54,16 +54,16 @@ public final class DataControllerPropertiesResponse {
      */
     private final @Nullable UploadWatermarkResponse uploadWatermark;
 
-    @OutputCustomType.Constructor({"basicLoginInformation","k8sRaw","lastUploadedDate","logAnalyticsWorkspaceConfig","onPremiseProperty","provisioningState","uploadServicePrincipal","uploadWatermark"})
+    @OutputCustomType.Constructor
     private DataControllerPropertiesResponse(
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
-        @Nullable OnPremisePropertyResponse onPremiseProperty,
-        String provisioningState,
-        @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
-        @Nullable UploadWatermarkResponse uploadWatermark) {
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("logAnalyticsWorkspaceConfig") @Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig,
+        @OutputCustomType.Parameter("onPremiseProperty") @Nullable OnPremisePropertyResponse onPremiseProperty,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("uploadServicePrincipal") @Nullable UploadServicePrincipalResponse uploadServicePrincipal,
+        @OutputCustomType.Parameter("uploadWatermark") @Nullable UploadWatermarkResponse uploadWatermark) {
         this.basicLoginInformation = basicLoginInformation;
         this.k8sRaw = k8sRaw;
         this.lastUploadedDate = lastUploadedDate;
@@ -161,42 +161,42 @@ public final class DataControllerPropertiesResponse {
     	      this.uploadWatermark = defaults.uploadWatermark;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setLogAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
+        public Builder logAnalyticsWorkspaceConfig(@Nullable LogAnalyticsWorkspaceConfigResponse logAnalyticsWorkspaceConfig) {
             this.logAnalyticsWorkspaceConfig = logAnalyticsWorkspaceConfig;
             return this;
         }
 
-        public Builder setOnPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
+        public Builder onPremiseProperty(@Nullable OnPremisePropertyResponse onPremiseProperty) {
             this.onPremiseProperty = onPremiseProperty;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setUploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
+        public Builder uploadServicePrincipal(@Nullable UploadServicePrincipalResponse uploadServicePrincipal) {
             this.uploadServicePrincipal = uploadServicePrincipal;
             return this;
         }
 
-        public Builder setUploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
+        public Builder uploadWatermark(@Nullable UploadWatermarkResponse uploadWatermark) {
             this.uploadWatermark = uploadWatermark;
             return this;
         }

@@ -109,26 +109,26 @@ public final class GetFluxConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"complianceState","configurationProtectedSettings","errorMessage","gitRepository","id","kustomizations","lastSourceSyncedAt","lastSourceSyncedCommitId","name","namespace","provisioningState","repositoryPublicKey","scope","sourceKind","statuses","suspend","systemData","type"})
+    @OutputCustomType.Constructor
     private GetFluxConfigurationResult(
-        String complianceState,
-        @Nullable Map<String,String> configurationProtectedSettings,
-        String errorMessage,
-        @Nullable GitRepositoryDefinitionResponse gitRepository,
-        String id,
-        @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
-        String lastSourceSyncedAt,
-        String lastSourceSyncedCommitId,
-        String name,
-        @Nullable String namespace,
-        String provisioningState,
-        String repositoryPublicKey,
-        @Nullable String scope,
-        @Nullable String sourceKind,
-        List<ObjectStatusDefinitionResponse> statuses,
-        @Nullable Boolean suspend,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("complianceState") String complianceState,
+        @OutputCustomType.Parameter("configurationProtectedSettings") @Nullable Map<String,String> configurationProtectedSettings,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("gitRepository") @Nullable GitRepositoryDefinitionResponse gitRepository,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kustomizations") @Nullable Map<String,KustomizationDefinitionResponse> kustomizations,
+        @OutputCustomType.Parameter("lastSourceSyncedAt") String lastSourceSyncedAt,
+        @OutputCustomType.Parameter("lastSourceSyncedCommitId") String lastSourceSyncedCommitId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("repositoryPublicKey") String repositoryPublicKey,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("sourceKind") @Nullable String sourceKind,
+        @OutputCustomType.Parameter("statuses") List<ObjectStatusDefinitionResponse> statuses,
+        @OutputCustomType.Parameter("suspend") @Nullable Boolean suspend,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.complianceState = complianceState;
         this.configurationProtectedSettings = configurationProtectedSettings;
         this.errorMessage = errorMessage;
@@ -330,92 +330,92 @@ public final class GetFluxConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setComplianceState(String complianceState) {
+        public Builder complianceState(String complianceState) {
             this.complianceState = Objects.requireNonNull(complianceState);
             return this;
         }
 
-        public Builder setConfigurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
+        public Builder configurationProtectedSettings(@Nullable Map<String,String> configurationProtectedSettings) {
             this.configurationProtectedSettings = configurationProtectedSettings;
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setGitRepository(@Nullable GitRepositoryDefinitionResponse gitRepository) {
+        public Builder gitRepository(@Nullable GitRepositoryDefinitionResponse gitRepository) {
             this.gitRepository = gitRepository;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKustomizations(@Nullable Map<String,KustomizationDefinitionResponse> kustomizations) {
+        public Builder kustomizations(@Nullable Map<String,KustomizationDefinitionResponse> kustomizations) {
             this.kustomizations = kustomizations;
             return this;
         }
 
-        public Builder setLastSourceSyncedAt(String lastSourceSyncedAt) {
+        public Builder lastSourceSyncedAt(String lastSourceSyncedAt) {
             this.lastSourceSyncedAt = Objects.requireNonNull(lastSourceSyncedAt);
             return this;
         }
 
-        public Builder setLastSourceSyncedCommitId(String lastSourceSyncedCommitId) {
+        public Builder lastSourceSyncedCommitId(String lastSourceSyncedCommitId) {
             this.lastSourceSyncedCommitId = Objects.requireNonNull(lastSourceSyncedCommitId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRepositoryPublicKey(String repositoryPublicKey) {
+        public Builder repositoryPublicKey(String repositoryPublicKey) {
             this.repositoryPublicKey = Objects.requireNonNull(repositoryPublicKey);
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setSourceKind(@Nullable String sourceKind) {
+        public Builder sourceKind(@Nullable String sourceKind) {
             this.sourceKind = sourceKind;
             return this;
         }
 
-        public Builder setStatuses(List<ObjectStatusDefinitionResponse> statuses) {
+        public Builder statuses(List<ObjectStatusDefinitionResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

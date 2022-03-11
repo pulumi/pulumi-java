@@ -17,8 +17,8 @@ public final class IpAddressRangeResponse {
      */
     private final @Nullable String addressRange;
 
-    @OutputCustomType.Constructor({"addressRange"})
-    private IpAddressRangeResponse(@Nullable String addressRange) {
+    @OutputCustomType.Constructor
+    private IpAddressRangeResponse(@OutputCustomType.Parameter("addressRange") @Nullable String addressRange) {
         this.addressRange = addressRange;
     }
 
@@ -50,7 +50,7 @@ public final class IpAddressRangeResponse {
     	      this.addressRange = defaults.addressRange;
         }
 
-        public Builder setAddressRange(@Nullable String addressRange) {
+        public Builder addressRange(@Nullable String addressRange) {
             this.addressRange = addressRange;
             return this;
         }

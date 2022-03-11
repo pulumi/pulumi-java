@@ -84,17 +84,17 @@ public final class GetAvailabilityGroupListenerArgs extends io.pulumi.resources.
     	      this.sqlVirtualMachineGroupName = defaults.sqlVirtualMachineGroupName;
         }
 
-        public Builder setAvailabilityGroupListenerName(String availabilityGroupListenerName) {
+        public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
             this.availabilityGroupListenerName = Objects.requireNonNull(availabilityGroupListenerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
+        public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }

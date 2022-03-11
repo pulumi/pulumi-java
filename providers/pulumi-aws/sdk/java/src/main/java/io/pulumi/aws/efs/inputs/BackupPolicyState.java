@@ -71,22 +71,22 @@ public final class BackupPolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.fileSystemId = defaults.fileSystemId;
         }
 
-        public Builder setBackupPolicy(@Nullable Input<BackupPolicyBackupPolicyGetArgs> backupPolicy) {
+        public Builder backupPolicy(@Nullable Input<BackupPolicyBackupPolicyGetArgs> backupPolicy) {
             this.backupPolicy = backupPolicy;
             return this;
         }
 
-        public Builder setBackupPolicy(@Nullable BackupPolicyBackupPolicyGetArgs backupPolicy) {
+        public Builder backupPolicy(@Nullable BackupPolicyBackupPolicyGetArgs backupPolicy) {
             this.backupPolicy = Input.ofNullable(backupPolicy);
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable Input<String> fileSystemId) {
+        public Builder fileSystemId(@Nullable Input<String> fileSystemId) {
             this.fileSystemId = fileSystemId;
             return this;
         }
 
-        public Builder setFileSystemId(@Nullable String fileSystemId) {
+        public Builder fileSystemId(@Nullable String fileSystemId) {
             this.fileSystemId = Input.ofNullable(fileSystemId);
             return this;
         }

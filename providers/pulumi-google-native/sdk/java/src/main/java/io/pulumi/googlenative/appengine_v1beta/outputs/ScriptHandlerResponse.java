@@ -15,8 +15,8 @@ public final class ScriptHandlerResponse {
      */
     private final String scriptPath;
 
-    @OutputCustomType.Constructor({"scriptPath"})
-    private ScriptHandlerResponse(String scriptPath) {
+    @OutputCustomType.Constructor
+    private ScriptHandlerResponse(@OutputCustomType.Parameter("scriptPath") String scriptPath) {
         this.scriptPath = scriptPath;
     }
 
@@ -48,7 +48,7 @@ public final class ScriptHandlerResponse {
     	      this.scriptPath = defaults.scriptPath;
         }
 
-        public Builder setScriptPath(String scriptPath) {
+        public Builder scriptPath(String scriptPath) {
             this.scriptPath = Objects.requireNonNull(scriptPath);
             return this;
         }

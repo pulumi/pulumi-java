@@ -42,13 +42,13 @@ public final class PodPresetSpec {
      */
     private final @Nullable List<Volume> volumes;
 
-    @OutputCustomType.Constructor({"env","envFrom","selector","volumeMounts","volumes"})
+    @OutputCustomType.Constructor
     private PodPresetSpec(
-        @Nullable List<EnvVar> env,
-        @Nullable List<EnvFromSource> envFrom,
-        @Nullable LabelSelector selector,
-        @Nullable List<VolumeMount> volumeMounts,
-        @Nullable List<Volume> volumes) {
+        @OutputCustomType.Parameter("env") @Nullable List<EnvVar> env,
+        @OutputCustomType.Parameter("envFrom") @Nullable List<EnvFromSource> envFrom,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("volumeMounts") @Nullable List<VolumeMount> volumeMounts,
+        @OutputCustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
         this.env = env;
         this.envFrom = envFrom;
         this.selector = selector;
@@ -120,27 +120,27 @@ public final class PodPresetSpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setEnv(@Nullable List<EnvVar> env) {
+        public Builder env(@Nullable List<EnvVar> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnvFrom(@Nullable List<EnvFromSource> envFrom) {
+        public Builder envFrom(@Nullable List<EnvFromSource> envFrom) {
             this.envFrom = envFrom;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setVolumeMounts(@Nullable List<VolumeMount> volumeMounts) {
+        public Builder volumeMounts(@Nullable List<VolumeMount> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<Volume> volumes) {
+        public Builder volumes(@Nullable List<Volume> volumes) {
             this.volumes = volumes;
             return this;
         }

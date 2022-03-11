@@ -57,17 +57,17 @@ public final class ListWebAppPublishingCredentialsSlotResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","publishingPassword","publishingPasswordHash","publishingPasswordHashSalt","publishingUserName","scmUri","type"})
+    @OutputCustomType.Constructor
     private ListWebAppPublishingCredentialsSlotResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        @Nullable String publishingPassword,
-        @Nullable String publishingPasswordHash,
-        @Nullable String publishingPasswordHashSalt,
-        String publishingUserName,
-        @Nullable String scmUri,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publishingPassword") @Nullable String publishingPassword,
+        @OutputCustomType.Parameter("publishingPasswordHash") @Nullable String publishingPasswordHash,
+        @OutputCustomType.Parameter("publishingPasswordHashSalt") @Nullable String publishingPasswordHashSalt,
+        @OutputCustomType.Parameter("publishingUserName") String publishingUserName,
+        @OutputCustomType.Parameter("scmUri") @Nullable String scmUri,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;
@@ -179,47 +179,47 @@ public final class ListWebAppPublishingCredentialsSlotResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublishingPassword(@Nullable String publishingPassword) {
+        public Builder publishingPassword(@Nullable String publishingPassword) {
             this.publishingPassword = publishingPassword;
             return this;
         }
 
-        public Builder setPublishingPasswordHash(@Nullable String publishingPasswordHash) {
+        public Builder publishingPasswordHash(@Nullable String publishingPasswordHash) {
             this.publishingPasswordHash = publishingPasswordHash;
             return this;
         }
 
-        public Builder setPublishingPasswordHashSalt(@Nullable String publishingPasswordHashSalt) {
+        public Builder publishingPasswordHashSalt(@Nullable String publishingPasswordHashSalt) {
             this.publishingPasswordHashSalt = publishingPasswordHashSalt;
             return this;
         }
 
-        public Builder setPublishingUserName(String publishingUserName) {
+        public Builder publishingUserName(String publishingUserName) {
             this.publishingUserName = Objects.requireNonNull(publishingUserName);
             return this;
         }
 
-        public Builder setScmUri(@Nullable String scmUri) {
+        public Builder scmUri(@Nullable String scmUri) {
             this.scmUri = scmUri;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

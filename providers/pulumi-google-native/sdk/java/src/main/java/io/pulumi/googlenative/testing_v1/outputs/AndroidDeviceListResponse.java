@@ -16,8 +16,8 @@ public final class AndroidDeviceListResponse {
      */
     private final List<AndroidDeviceResponse> androidDevices;
 
-    @OutputCustomType.Constructor({"androidDevices"})
-    private AndroidDeviceListResponse(List<AndroidDeviceResponse> androidDevices) {
+    @OutputCustomType.Constructor
+    private AndroidDeviceListResponse(@OutputCustomType.Parameter("androidDevices") List<AndroidDeviceResponse> androidDevices) {
         this.androidDevices = androidDevices;
     }
 
@@ -49,7 +49,7 @@ public final class AndroidDeviceListResponse {
     	      this.androidDevices = defaults.androidDevices;
         }
 
-        public Builder setAndroidDevices(List<AndroidDeviceResponse> androidDevices) {
+        public Builder androidDevices(List<AndroidDeviceResponse> androidDevices) {
             this.androidDevices = Objects.requireNonNull(androidDevices);
             return this;
         }

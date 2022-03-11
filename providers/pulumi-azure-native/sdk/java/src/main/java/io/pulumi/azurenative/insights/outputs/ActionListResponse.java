@@ -17,8 +17,8 @@ public final class ActionListResponse {
      */
     private final @Nullable List<ActionGroupResponse> actionGroups;
 
-    @OutputCustomType.Constructor({"actionGroups"})
-    private ActionListResponse(@Nullable List<ActionGroupResponse> actionGroups) {
+    @OutputCustomType.Constructor
+    private ActionListResponse(@OutputCustomType.Parameter("actionGroups") @Nullable List<ActionGroupResponse> actionGroups) {
         this.actionGroups = actionGroups;
     }
 
@@ -50,7 +50,7 @@ public final class ActionListResponse {
     	      this.actionGroups = defaults.actionGroups;
         }
 
-        public Builder setActionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
+        public Builder actionGroups(@Nullable List<ActionGroupResponse> actionGroups) {
             this.actionGroups = actionGroups;
             return this;
         }

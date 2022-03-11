@@ -89,32 +89,32 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs ext
     	      this.value = defaults.value;
         }
 
-        public Builder setCritical(Input<Boolean> critical) {
+        public Builder critical(Input<Boolean> critical) {
             this.critical = Objects.requireNonNull(critical);
             return this;
         }
 
-        public Builder setCritical(Boolean critical) {
+        public Builder critical(Boolean critical) {
             this.critical = Input.of(Objects.requireNonNull(critical));
             return this;
         }
 
-        public Builder setObjectId(Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId) {
+        public Builder objectId(Input<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs> objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setObjectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs objectId) {
+        public Builder objectId(CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectIdArgs objectId) {
             this.objectId = Input.of(Objects.requireNonNull(objectId));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

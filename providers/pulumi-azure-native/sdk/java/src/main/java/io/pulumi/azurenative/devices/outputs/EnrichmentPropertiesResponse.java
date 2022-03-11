@@ -26,11 +26,11 @@ public final class EnrichmentPropertiesResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"endpointNames","key","value"})
+    @OutputCustomType.Constructor
     private EnrichmentPropertiesResponse(
-        List<String> endpointNames,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.endpointNames = endpointNames;
         this.key = key;
         this.value = value;
@@ -82,17 +82,17 @@ public final class EnrichmentPropertiesResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setEndpointNames(List<String> endpointNames) {
+        public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

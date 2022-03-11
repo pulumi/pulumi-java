@@ -33,12 +33,12 @@ public final class KubernetesResourceResponse {
      */
     private final ResourceOptionsResponse resourceOptions;
 
-    @OutputCustomType.Constructor({"connectResources","membershipCrManifest","membershipResources","resourceOptions"})
+    @OutputCustomType.Constructor
     private KubernetesResourceResponse(
-        List<ResourceManifestResponse> connectResources,
-        String membershipCrManifest,
-        List<ResourceManifestResponse> membershipResources,
-        ResourceOptionsResponse resourceOptions) {
+        @OutputCustomType.Parameter("connectResources") List<ResourceManifestResponse> connectResources,
+        @OutputCustomType.Parameter("membershipCrManifest") String membershipCrManifest,
+        @OutputCustomType.Parameter("membershipResources") List<ResourceManifestResponse> membershipResources,
+        @OutputCustomType.Parameter("resourceOptions") ResourceOptionsResponse resourceOptions) {
         this.connectResources = connectResources;
         this.membershipCrManifest = membershipCrManifest;
         this.membershipResources = membershipResources;
@@ -100,22 +100,22 @@ public final class KubernetesResourceResponse {
     	      this.resourceOptions = defaults.resourceOptions;
         }
 
-        public Builder setConnectResources(List<ResourceManifestResponse> connectResources) {
+        public Builder connectResources(List<ResourceManifestResponse> connectResources) {
             this.connectResources = Objects.requireNonNull(connectResources);
             return this;
         }
 
-        public Builder setMembershipCrManifest(String membershipCrManifest) {
+        public Builder membershipCrManifest(String membershipCrManifest) {
             this.membershipCrManifest = Objects.requireNonNull(membershipCrManifest);
             return this;
         }
 
-        public Builder setMembershipResources(List<ResourceManifestResponse> membershipResources) {
+        public Builder membershipResources(List<ResourceManifestResponse> membershipResources) {
             this.membershipResources = Objects.requireNonNull(membershipResources);
             return this;
         }
 
-        public Builder setResourceOptions(ResourceOptionsResponse resourceOptions) {
+        public Builder resourceOptions(ResourceOptionsResponse resourceOptions) {
             this.resourceOptions = Objects.requireNonNull(resourceOptions);
             return this;
         }

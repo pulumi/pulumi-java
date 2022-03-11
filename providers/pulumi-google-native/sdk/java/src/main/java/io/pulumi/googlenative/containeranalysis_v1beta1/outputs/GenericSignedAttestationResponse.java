@@ -27,11 +27,11 @@ public final class GenericSignedAttestationResponse {
      */
     private final List<SignatureResponse> signatures;
 
-    @OutputCustomType.Constructor({"contentType","serializedPayload","signatures"})
+    @OutputCustomType.Constructor
     private GenericSignedAttestationResponse(
-        String contentType,
-        String serializedPayload,
-        List<SignatureResponse> signatures) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
+        @OutputCustomType.Parameter("signatures") List<SignatureResponse> signatures) {
         this.contentType = contentType;
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;
@@ -83,17 +83,17 @@ public final class GenericSignedAttestationResponse {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(List<SignatureResponse> signatures) {
+        public Builder signatures(List<SignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

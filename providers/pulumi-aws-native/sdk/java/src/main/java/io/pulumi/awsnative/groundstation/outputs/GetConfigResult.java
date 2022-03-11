@@ -21,14 +21,14 @@ public final class GetConfigResult {
     private final @Nullable List<ConfigTag> tags;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"arn","configData","id","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetConfigResult(
-        @Nullable String arn,
-        @Nullable ConfigData configData,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ConfigTag> tags,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("configData") @Nullable ConfigData configData,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<ConfigTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.arn = arn;
         this.configData = configData;
         this.id = id;
@@ -86,32 +86,32 @@ public final class GetConfigResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setConfigData(@Nullable ConfigData configData) {
+        public Builder configData(@Nullable ConfigData configData) {
             this.configData = configData;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConfigTag> tags) {
+        public Builder tags(@Nullable List<ConfigTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

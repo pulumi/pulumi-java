@@ -74,17 +74,17 @@ public final class GetClusterResourceUsageExportConfig extends io.pulumi.resourc
     	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
         }
 
-        public Builder setBigqueryDestinations(List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations) {
+        public Builder bigqueryDestinations(List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations) {
             this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
 
-        public Builder setEnableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
+        public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering);
             return this;
         }

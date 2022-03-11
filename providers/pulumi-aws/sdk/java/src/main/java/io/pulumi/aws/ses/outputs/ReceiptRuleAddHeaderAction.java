@@ -26,11 +26,11 @@ public final class ReceiptRuleAddHeaderAction {
      */
     private final Integer position;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","position"})
+    @OutputCustomType.Constructor
     private ReceiptRuleAddHeaderAction(
-        String headerName,
-        String headerValue,
-        Integer position) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue,
+        @OutputCustomType.Parameter("position") Integer position) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.position = position;
@@ -82,17 +82,17 @@ public final class ReceiptRuleAddHeaderAction {
     	      this.position = defaults.position;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

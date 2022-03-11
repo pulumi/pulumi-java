@@ -53,15 +53,15 @@ public final class GetFlowResult {
      */
     private final @Nullable FlowTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor({"description","destinationFlowConfigList","flowArn","sourceFlowConfig","tags","tasks","triggerConfig"})
+    @OutputCustomType.Constructor
     private GetFlowResult(
-        @Nullable String description,
-        @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
-        @Nullable String flowArn,
-        @Nullable FlowSourceFlowConfig sourceFlowConfig,
-        @Nullable List<FlowTag> tags,
-        @Nullable List<FlowTask> tasks,
-        @Nullable FlowTriggerConfig triggerConfig) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationFlowConfigList") @Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList,
+        @OutputCustomType.Parameter("flowArn") @Nullable String flowArn,
+        @OutputCustomType.Parameter("sourceFlowConfig") @Nullable FlowSourceFlowConfig sourceFlowConfig,
+        @OutputCustomType.Parameter("tags") @Nullable List<FlowTag> tags,
+        @OutputCustomType.Parameter("tasks") @Nullable List<FlowTask> tasks,
+        @OutputCustomType.Parameter("triggerConfig") @Nullable FlowTriggerConfig triggerConfig) {
         this.description = description;
         this.destinationFlowConfigList = destinationFlowConfigList;
         this.flowArn = flowArn;
@@ -153,37 +153,37 @@ public final class GetFlowResult {
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationFlowConfigList(@Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList) {
+        public Builder destinationFlowConfigList(@Nullable List<FlowDestinationFlowConfig> destinationFlowConfigList) {
             this.destinationFlowConfigList = destinationFlowConfigList;
             return this;
         }
 
-        public Builder setFlowArn(@Nullable String flowArn) {
+        public Builder flowArn(@Nullable String flowArn) {
             this.flowArn = flowArn;
             return this;
         }
 
-        public Builder setSourceFlowConfig(@Nullable FlowSourceFlowConfig sourceFlowConfig) {
+        public Builder sourceFlowConfig(@Nullable FlowSourceFlowConfig sourceFlowConfig) {
             this.sourceFlowConfig = sourceFlowConfig;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FlowTag> tags) {
+        public Builder tags(@Nullable List<FlowTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTasks(@Nullable List<FlowTask> tasks) {
+        public Builder tasks(@Nullable List<FlowTask> tasks) {
             this.tasks = tasks;
             return this;
         }
 
-        public Builder setTriggerConfig(@Nullable FlowTriggerConfig triggerConfig) {
+        public Builder triggerConfig(@Nullable FlowTriggerConfig triggerConfig) {
             this.triggerConfig = triggerConfig;
             return this;
         }

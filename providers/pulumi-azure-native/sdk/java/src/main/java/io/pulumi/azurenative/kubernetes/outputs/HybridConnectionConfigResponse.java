@@ -31,12 +31,12 @@ public final class HybridConnectionConfigResponse {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"expirationTime","hybridConnectionName","relay","token"})
+    @OutputCustomType.Constructor
     private HybridConnectionConfigResponse(
-        Double expirationTime,
-        String hybridConnectionName,
-        String relay,
-        String token) {
+        @OutputCustomType.Parameter("expirationTime") Double expirationTime,
+        @OutputCustomType.Parameter("hybridConnectionName") String hybridConnectionName,
+        @OutputCustomType.Parameter("relay") String relay,
+        @OutputCustomType.Parameter("token") String token) {
         this.expirationTime = expirationTime;
         this.hybridConnectionName = hybridConnectionName;
         this.relay = relay;
@@ -98,22 +98,22 @@ public final class HybridConnectionConfigResponse {
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTime(Double expirationTime) {
+        public Builder expirationTime(Double expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setHybridConnectionName(String hybridConnectionName) {
+        public Builder hybridConnectionName(String hybridConnectionName) {
             this.hybridConnectionName = Objects.requireNonNull(hybridConnectionName);
             return this;
         }
 
-        public Builder setRelay(String relay) {
+        public Builder relay(String relay) {
             this.relay = Objects.requireNonNull(relay);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

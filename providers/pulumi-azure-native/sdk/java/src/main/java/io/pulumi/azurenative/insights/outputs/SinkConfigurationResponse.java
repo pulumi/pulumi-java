@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SinkConfigurationResponse {
     private final String kind;
 
-    @OutputCustomType.Constructor({"kind"})
-    private SinkConfigurationResponse(String kind) {
+    @OutputCustomType.Constructor
+    private SinkConfigurationResponse(@OutputCustomType.Parameter("kind") String kind) {
         this.kind = kind;
     }
 
@@ -40,7 +40,7 @@ public final class SinkConfigurationResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

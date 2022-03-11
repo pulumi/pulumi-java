@@ -97,19 +97,19 @@ public final class RegionBackendServiceOutlierDetection {
      */
     private final @Nullable Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor({"baseEjectionTime","consecutiveErrors","consecutiveGatewayFailure","enforcingConsecutiveErrors","enforcingConsecutiveGatewayFailure","enforcingSuccessRate","interval","maxEjectionPercent","successRateMinimumHosts","successRateRequestVolume","successRateStdevFactor"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceOutlierDetection(
-        @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
-        @Nullable Integer consecutiveErrors,
-        @Nullable Integer consecutiveGatewayFailure,
-        @Nullable Integer enforcingConsecutiveErrors,
-        @Nullable Integer enforcingConsecutiveGatewayFailure,
-        @Nullable Integer enforcingSuccessRate,
-        @Nullable RegionBackendServiceOutlierDetectionInterval interval,
-        @Nullable Integer maxEjectionPercent,
-        @Nullable Integer successRateMinimumHosts,
-        @Nullable Integer successRateRequestVolume,
-        @Nullable Integer successRateStdevFactor) {
+        @OutputCustomType.Parameter("baseEjectionTime") @Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime,
+        @OutputCustomType.Parameter("consecutiveErrors") @Nullable Integer consecutiveErrors,
+        @OutputCustomType.Parameter("consecutiveGatewayFailure") @Nullable Integer consecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingConsecutiveErrors") @Nullable Integer enforcingConsecutiveErrors,
+        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") @Nullable Integer enforcingConsecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingSuccessRate") @Nullable Integer enforcingSuccessRate,
+        @OutputCustomType.Parameter("interval") @Nullable RegionBackendServiceOutlierDetectionInterval interval,
+        @OutputCustomType.Parameter("maxEjectionPercent") @Nullable Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("successRateMinimumHosts") @Nullable Integer successRateMinimumHosts,
+        @OutputCustomType.Parameter("successRateRequestVolume") @Nullable Integer successRateRequestVolume,
+        @OutputCustomType.Parameter("successRateStdevFactor") @Nullable Integer successRateStdevFactor) {
         this.baseEjectionTime = baseEjectionTime;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;
@@ -269,57 +269,57 @@ public final class RegionBackendServiceOutlierDetection {
     	      this.successRateStdevFactor = defaults.successRateStdevFactor;
         }
 
-        public Builder setBaseEjectionTime(@Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime) {
+        public Builder baseEjectionTime(@Nullable RegionBackendServiceOutlierDetectionBaseEjectionTime baseEjectionTime) {
             this.baseEjectionTime = baseEjectionTime;
             return this;
         }
 
-        public Builder setConsecutiveErrors(@Nullable Integer consecutiveErrors) {
+        public Builder consecutiveErrors(@Nullable Integer consecutiveErrors) {
             this.consecutiveErrors = consecutiveErrors;
             return this;
         }
 
-        public Builder setConsecutiveGatewayFailure(@Nullable Integer consecutiveGatewayFailure) {
+        public Builder consecutiveGatewayFailure(@Nullable Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = consecutiveGatewayFailure;
             return this;
         }
 
-        public Builder setEnforcingConsecutiveErrors(@Nullable Integer enforcingConsecutiveErrors) {
+        public Builder enforcingConsecutiveErrors(@Nullable Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = enforcingConsecutiveErrors;
             return this;
         }
 
-        public Builder setEnforcingConsecutiveGatewayFailure(@Nullable Integer enforcingConsecutiveGatewayFailure) {
+        public Builder enforcingConsecutiveGatewayFailure(@Nullable Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = enforcingConsecutiveGatewayFailure;
             return this;
         }
 
-        public Builder setEnforcingSuccessRate(@Nullable Integer enforcingSuccessRate) {
+        public Builder enforcingSuccessRate(@Nullable Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = enforcingSuccessRate;
             return this;
         }
 
-        public Builder setInterval(@Nullable RegionBackendServiceOutlierDetectionInterval interval) {
+        public Builder interval(@Nullable RegionBackendServiceOutlierDetectionInterval interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setMaxEjectionPercent(@Nullable Integer maxEjectionPercent) {
+        public Builder maxEjectionPercent(@Nullable Integer maxEjectionPercent) {
             this.maxEjectionPercent = maxEjectionPercent;
             return this;
         }
 
-        public Builder setSuccessRateMinimumHosts(@Nullable Integer successRateMinimumHosts) {
+        public Builder successRateMinimumHosts(@Nullable Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = successRateMinimumHosts;
             return this;
         }
 
-        public Builder setSuccessRateRequestVolume(@Nullable Integer successRateRequestVolume) {
+        public Builder successRateRequestVolume(@Nullable Integer successRateRequestVolume) {
             this.successRateRequestVolume = successRateRequestVolume;
             return this;
         }
 
-        public Builder setSuccessRateStdevFactor(@Nullable Integer successRateStdevFactor) {
+        public Builder successRateStdevFactor(@Nullable Integer successRateStdevFactor) {
             this.successRateStdevFactor = successRateStdevFactor;
             return this;
         }

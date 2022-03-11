@@ -17,8 +17,8 @@ public final class ContainerConfigurationResponse {
      */
     private final @Nullable String containerGroupName;
 
-    @OutputCustomType.Constructor({"containerGroupName"})
-    private ContainerConfigurationResponse(@Nullable String containerGroupName) {
+    @OutputCustomType.Constructor
+    private ContainerConfigurationResponse(@OutputCustomType.Parameter("containerGroupName") @Nullable String containerGroupName) {
         this.containerGroupName = containerGroupName;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerConfigurationResponse {
     	      this.containerGroupName = defaults.containerGroupName;
         }
 
-        public Builder setContainerGroupName(@Nullable String containerGroupName) {
+        public Builder containerGroupName(@Nullable String containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }

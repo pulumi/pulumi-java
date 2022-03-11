@@ -15,8 +15,8 @@ public final class GetConsoleWithLocationResult {
      */
     private final ConsolePropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private GetConsoleWithLocationResult(ConsolePropertiesResponse properties) {
+    @OutputCustomType.Constructor
+    private GetConsoleWithLocationResult(@OutputCustomType.Parameter("properties") ConsolePropertiesResponse properties) {
         this.properties = properties;
     }
 
@@ -48,7 +48,7 @@ public final class GetConsoleWithLocationResult {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(ConsolePropertiesResponse properties) {
+        public Builder properties(ConsolePropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

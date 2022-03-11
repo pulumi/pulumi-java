@@ -53,12 +53,12 @@ public final class FolderFeedFeedOutputConfigGetArgs extends io.pulumi.resources
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(Input<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
+        public Builder pubsubDestination(Input<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
 
-        public Builder setPubsubDestination(FolderFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
+        public Builder pubsubDestination(FolderFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
             this.pubsubDestination = Input.of(Objects.requireNonNull(pubsubDestination));
             return this;
         }

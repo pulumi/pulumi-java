@@ -17,11 +17,11 @@ public final class DataflowEndpointGroupDataflowEndpoint {
     private final @Nullable Integer mtu;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"address","mtu","name"})
+    @OutputCustomType.Constructor
     private DataflowEndpointGroupDataflowEndpoint(
-        @Nullable DataflowEndpointGroupSocketAddress address,
-        @Nullable Integer mtu,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("address") @Nullable DataflowEndpointGroupSocketAddress address,
+        @OutputCustomType.Parameter("mtu") @Nullable Integer mtu,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.address = address;
         this.mtu = mtu;
         this.name = name;
@@ -61,17 +61,17 @@ public final class DataflowEndpointGroupDataflowEndpoint {
     	      this.name = defaults.name;
         }
 
-        public Builder setAddress(@Nullable DataflowEndpointGroupSocketAddress address) {
+        public Builder address(@Nullable DataflowEndpointGroupSocketAddress address) {
             this.address = address;
             return this;
         }
 
-        public Builder setMtu(@Nullable Integer mtu) {
+        public Builder mtu(@Nullable Integer mtu) {
             this.mtu = mtu;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

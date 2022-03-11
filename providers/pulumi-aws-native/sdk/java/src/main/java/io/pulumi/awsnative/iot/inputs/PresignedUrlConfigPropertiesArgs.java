@@ -67,22 +67,22 @@ public final class PresignedUrlConfigPropertiesArgs extends io.pulumi.resources.
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setExpiresInSec(@Nullable Input<Integer> expiresInSec) {
+        public Builder expiresInSec(@Nullable Input<Integer> expiresInSec) {
             this.expiresInSec = expiresInSec;
             return this;
         }
 
-        public Builder setExpiresInSec(@Nullable Integer expiresInSec) {
+        public Builder expiresInSec(@Nullable Integer expiresInSec) {
             this.expiresInSec = Input.ofNullable(expiresInSec);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

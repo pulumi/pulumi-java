@@ -85,32 +85,32 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     	      this.segmentDurationSeconds = defaults.segmentDurationSeconds;
         }
 
-        public Builder setEncryption(@Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption) {
+        public Builder encryption(@Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationMssEncryptionArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setMssManifests(Input<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
+        public Builder mssManifests(Input<List<PackagingConfigurationMssManifestArgs>> mssManifests) {
             this.mssManifests = Objects.requireNonNull(mssManifests);
             return this;
         }
 
-        public Builder setMssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
+        public Builder mssManifests(List<PackagingConfigurationMssManifestArgs> mssManifests) {
             this.mssManifests = Input.of(Objects.requireNonNull(mssManifests));
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Input<Integer> segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }

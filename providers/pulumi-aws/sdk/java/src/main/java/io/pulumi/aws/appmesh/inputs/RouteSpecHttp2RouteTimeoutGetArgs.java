@@ -71,22 +71,22 @@ public final class RouteSpecHttp2RouteTimeoutGetArgs extends io.pulumi.resources
     	      this.perRequest = defaults.perRequest;
         }
 
-        public Builder setIdle(@Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle) {
+        public Builder idle(@Nullable Input<RouteSpecHttp2RouteTimeoutIdleGetArgs> idle) {
             this.idle = idle;
             return this;
         }
 
-        public Builder setIdle(@Nullable RouteSpecHttp2RouteTimeoutIdleGetArgs idle) {
+        public Builder idle(@Nullable RouteSpecHttp2RouteTimeoutIdleGetArgs idle) {
             this.idle = Input.ofNullable(idle);
             return this;
         }
 
-        public Builder setPerRequest(@Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
+        public Builder perRequest(@Nullable Input<RouteSpecHttp2RouteTimeoutPerRequestGetArgs> perRequest) {
             this.perRequest = perRequest;
             return this;
         }
 
-        public Builder setPerRequest(@Nullable RouteSpecHttp2RouteTimeoutPerRequestGetArgs perRequest) {
+        public Builder perRequest(@Nullable RouteSpecHttp2RouteTimeoutPerRequestGetArgs perRequest) {
             this.perRequest = Input.ofNullable(perRequest);
             return this;
         }

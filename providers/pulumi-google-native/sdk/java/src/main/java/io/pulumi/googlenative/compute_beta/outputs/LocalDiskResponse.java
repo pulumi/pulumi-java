@@ -26,11 +26,11 @@ public final class LocalDiskResponse {
      */
     private final String diskType;
 
-    @OutputCustomType.Constructor({"diskCount","diskSizeGb","diskType"})
+    @OutputCustomType.Constructor
     private LocalDiskResponse(
-        Integer diskCount,
-        Integer diskSizeGb,
-        String diskType) {
+        @OutputCustomType.Parameter("diskCount") Integer diskCount,
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType) {
         this.diskCount = diskCount;
         this.diskSizeGb = diskSizeGb;
         this.diskType = diskType;
@@ -82,17 +82,17 @@ public final class LocalDiskResponse {
     	      this.diskType = defaults.diskType;
         }
 
-        public Builder setDiskCount(Integer diskCount) {
+        public Builder diskCount(Integer diskCount) {
             this.diskCount = Objects.requireNonNull(diskCount);
             return this;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }

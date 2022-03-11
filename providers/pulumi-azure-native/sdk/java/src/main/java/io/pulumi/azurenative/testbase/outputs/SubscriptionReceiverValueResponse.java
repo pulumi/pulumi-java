@@ -27,11 +27,11 @@ public final class SubscriptionReceiverValueResponse {
      */
     private final @Nullable String subscriptionName;
 
-    @OutputCustomType.Constructor({"role","subscriptionId","subscriptionName"})
+    @OutputCustomType.Constructor
     private SubscriptionReceiverValueResponse(
-        @Nullable String role,
-        @Nullable String subscriptionId,
-        @Nullable String subscriptionName) {
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("subscriptionName") @Nullable String subscriptionName) {
         this.role = role;
         this.subscriptionId = subscriptionId;
         this.subscriptionName = subscriptionName;
@@ -83,17 +83,17 @@ public final class SubscriptionReceiverValueResponse {
     	      this.subscriptionName = defaults.subscriptionName;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionName(@Nullable String subscriptionName) {
+        public Builder subscriptionName(@Nullable String subscriptionName) {
             this.subscriptionName = subscriptionName;
             return this;
         }

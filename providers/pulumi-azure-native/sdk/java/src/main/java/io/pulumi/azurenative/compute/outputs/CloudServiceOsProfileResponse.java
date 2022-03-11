@@ -17,8 +17,8 @@ public final class CloudServiceOsProfileResponse {
      */
     private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
-    @OutputCustomType.Constructor({"secrets"})
-    private CloudServiceOsProfileResponse(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
+    @OutputCustomType.Constructor
+    private CloudServiceOsProfileResponse(@OutputCustomType.Parameter("secrets") @Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
         this.secrets = secrets;
     }
 
@@ -50,7 +50,7 @@ public final class CloudServiceOsProfileResponse {
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setSecrets(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
+        public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }

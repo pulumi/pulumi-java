@@ -59,17 +59,17 @@ public final class GetHubRouteTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"associatedConnections","etag","id","labels","name","propagatingConnections","provisioningState","routes","type"})
+    @OutputCustomType.Constructor
     private GetHubRouteTableResult(
-        List<String> associatedConnections,
-        String etag,
-        @Nullable String id,
-        @Nullable List<String> labels,
-        @Nullable String name,
-        List<String> propagatingConnections,
-        String provisioningState,
-        @Nullable List<HubRouteResponse> routes,
-        String type) {
+        @OutputCustomType.Parameter("associatedConnections") List<String> associatedConnections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("propagatingConnections") List<String> propagatingConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routes") @Nullable List<HubRouteResponse> routes,
+        @OutputCustomType.Parameter("type") String type) {
         this.associatedConnections = associatedConnections;
         this.etag = etag;
         this.id = id;
@@ -181,47 +181,47 @@ public final class GetHubRouteTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssociatedConnections(List<String> associatedConnections) {
+        public Builder associatedConnections(List<String> associatedConnections) {
             this.associatedConnections = Objects.requireNonNull(associatedConnections);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPropagatingConnections(List<String> propagatingConnections) {
+        public Builder propagatingConnections(List<String> propagatingConnections) {
             this.propagatingConnections = Objects.requireNonNull(propagatingConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutes(@Nullable List<HubRouteResponse> routes) {
+        public Builder routes(@Nullable List<HubRouteResponse> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

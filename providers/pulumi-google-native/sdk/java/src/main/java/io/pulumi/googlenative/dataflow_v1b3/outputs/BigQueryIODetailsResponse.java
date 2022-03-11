@@ -30,12 +30,12 @@ public final class BigQueryIODetailsResponse {
      */
     private final String table;
 
-    @OutputCustomType.Constructor({"dataset","project","query","table"})
+    @OutputCustomType.Constructor
     private BigQueryIODetailsResponse(
-        String dataset,
-        String project,
-        String query,
-        String table) {
+        @OutputCustomType.Parameter("dataset") String dataset,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("table") String table) {
         this.dataset = dataset;
         this.project = project;
         this.query = query;
@@ -97,22 +97,22 @@ public final class BigQueryIODetailsResponse {
     	      this.table = defaults.table;
         }
 
-        public Builder setDataset(String dataset) {
+        public Builder dataset(String dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }

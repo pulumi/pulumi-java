@@ -71,18 +71,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
      */
     private final @Nullable String preemptibility;
 
-    @OutputCustomType.Constructor({"accelerators","diskConfig","image","instanceNames","isPreemptible","machineType","managedGroupConfigs","minCpuPlatform","numInstances","preemptibility"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigWorkerConfig(
-        @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators,
-        @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig,
-        @Nullable String image,
-        @Nullable List<String> instanceNames,
-        @Nullable Boolean isPreemptible,
-        @Nullable String machineType,
-        @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs,
-        @Nullable String minCpuPlatform,
-        @Nullable Integer numInstances,
-        @Nullable String preemptibility) {
+        @OutputCustomType.Parameter("accelerators") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators,
+        @OutputCustomType.Parameter("diskConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @OutputCustomType.Parameter("isPreemptible") @Nullable Boolean isPreemptible,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("managedGroupConfigs") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances,
+        @OutputCustomType.Parameter("preemptibility") @Nullable String preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.image = image;
@@ -207,52 +207,52 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
     	      this.preemptibility = defaults.preemptibility;
         }
 
-        public Builder setAccelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators) {
+        public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig) {
+        public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setIsPreemptible(@Nullable Boolean isPreemptible) {
+        public Builder isPreemptible(@Nullable Boolean isPreemptible) {
             this.isPreemptible = isPreemptible;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setManagedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs) {
+        public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig> managedGroupConfigs) {
             this.managedGroupConfigs = managedGroupConfigs;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
         }
 
-        public Builder setPreemptibility(@Nullable String preemptibility) {
+        public Builder preemptibility(@Nullable String preemptibility) {
             this.preemptibility = preemptibility;
             return this;
         }

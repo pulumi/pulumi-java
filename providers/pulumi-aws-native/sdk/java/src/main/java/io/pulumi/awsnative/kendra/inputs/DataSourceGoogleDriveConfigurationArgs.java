@@ -124,72 +124,72 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setExcludeMimeTypes(@Nullable Input<List<String>> excludeMimeTypes) {
+        public Builder excludeMimeTypes(@Nullable Input<List<String>> excludeMimeTypes) {
             this.excludeMimeTypes = excludeMimeTypes;
             return this;
         }
 
-        public Builder setExcludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
+        public Builder excludeMimeTypes(@Nullable List<String> excludeMimeTypes) {
             this.excludeMimeTypes = Input.ofNullable(excludeMimeTypes);
             return this;
         }
 
-        public Builder setExcludeSharedDrives(@Nullable Input<List<String>> excludeSharedDrives) {
+        public Builder excludeSharedDrives(@Nullable Input<List<String>> excludeSharedDrives) {
             this.excludeSharedDrives = excludeSharedDrives;
             return this;
         }
 
-        public Builder setExcludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
+        public Builder excludeSharedDrives(@Nullable List<String> excludeSharedDrives) {
             this.excludeSharedDrives = Input.ofNullable(excludeSharedDrives);
             return this;
         }
 
-        public Builder setExcludeUserAccounts(@Nullable Input<List<String>> excludeUserAccounts) {
+        public Builder excludeUserAccounts(@Nullable Input<List<String>> excludeUserAccounts) {
             this.excludeUserAccounts = excludeUserAccounts;
             return this;
         }
 
-        public Builder setExcludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
+        public Builder excludeUserAccounts(@Nullable List<String> excludeUserAccounts) {
             this.excludeUserAccounts = Input.ofNullable(excludeUserAccounts);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }

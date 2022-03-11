@@ -23,15 +23,15 @@ public final class ResourceTypeEndpointResponse {
     private final @Nullable List<String> requiredFeatures;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"apiVersions","enabled","extensions","featuresRule","locations","requiredFeatures","timeout"})
+    @OutputCustomType.Constructor
     private ResourceTypeEndpointResponse(
-        @Nullable List<String> apiVersions,
-        @Nullable Boolean enabled,
-        @Nullable List<ResourceTypeExtensionResponse> extensions,
-        @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
-        @Nullable List<String> locations,
-        @Nullable List<String> requiredFeatures,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("extensions") @Nullable List<ResourceTypeExtensionResponse> extensions,
+        @OutputCustomType.Parameter("featuresRule") @Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.apiVersions = apiVersions;
         this.enabled = enabled;
         this.extensions = extensions;
@@ -95,37 +95,37 @@ public final class ResourceTypeEndpointResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<ResourceTypeExtensionResponse> extensions) {
+        public Builder extensions(@Nullable List<ResourceTypeExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setFeaturesRule(@Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule) {
+        public Builder featuresRule(@Nullable ResourceTypeEndpointResponseFeaturesRule featuresRule) {
             this.featuresRule = featuresRule;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

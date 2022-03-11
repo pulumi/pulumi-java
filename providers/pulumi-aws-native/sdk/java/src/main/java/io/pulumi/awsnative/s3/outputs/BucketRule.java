@@ -37,24 +37,24 @@ public final class BucketRule {
     private final @Nullable BucketTransition transition;
     private final @Nullable List<BucketTransition> transitions;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUpload","expirationDate","expirationInDays","expiredObjectDeleteMarker","id","noncurrentVersionExpiration","noncurrentVersionExpirationInDays","noncurrentVersionTransition","noncurrentVersionTransitions","objectSizeGreaterThan","objectSizeLessThan","prefix","status","tagFilters","transition","transitions"})
+    @OutputCustomType.Constructor
     private BucketRule(
-        @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable String expirationDate,
-        @Nullable Integer expirationInDays,
-        @Nullable Boolean expiredObjectDeleteMarker,
-        @Nullable String id,
-        @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration,
-        @Nullable Integer noncurrentVersionExpirationInDays,
-        @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition,
-        @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions,
-        @Nullable String objectSizeGreaterThan,
-        @Nullable String objectSizeLessThan,
-        @Nullable String prefix,
-        BucketRuleStatus status,
-        @Nullable List<BucketTagFilter> tagFilters,
-        @Nullable BucketTransition transition,
-        @Nullable List<BucketTransition> transitions) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @OutputCustomType.Parameter("expiredObjectDeleteMarker") @Nullable Boolean expiredObjectDeleteMarker,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("noncurrentVersionExpiration") @Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration,
+        @OutputCustomType.Parameter("noncurrentVersionExpirationInDays") @Nullable Integer noncurrentVersionExpirationInDays,
+        @OutputCustomType.Parameter("noncurrentVersionTransition") @Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition,
+        @OutputCustomType.Parameter("noncurrentVersionTransitions") @Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions,
+        @OutputCustomType.Parameter("objectSizeGreaterThan") @Nullable String objectSizeGreaterThan,
+        @OutputCustomType.Parameter("objectSizeLessThan") @Nullable String objectSizeLessThan,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("status") BucketRuleStatus status,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
+        @OutputCustomType.Parameter("transition") @Nullable BucketTransition transition,
+        @OutputCustomType.Parameter("transitions") @Nullable List<BucketTransition> transitions) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expirationDate = expirationDate;
         this.expirationInDays = expirationInDays;
@@ -172,82 +172,82 @@ public final class BucketRule {
     	      this.transitions = defaults.transitions;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration) {
+        public Builder noncurrentVersionExpiration(@Nullable BucketNoncurrentVersionExpiration noncurrentVersionExpiration) {
             this.noncurrentVersionExpiration = noncurrentVersionExpiration;
             return this;
         }
 
-        public Builder setNoncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
+        public Builder noncurrentVersionExpirationInDays(@Nullable Integer noncurrentVersionExpirationInDays) {
             this.noncurrentVersionExpirationInDays = noncurrentVersionExpirationInDays;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition) {
+        public Builder noncurrentVersionTransition(@Nullable BucketNoncurrentVersionTransition noncurrentVersionTransition) {
             this.noncurrentVersionTransition = noncurrentVersionTransition;
             return this;
         }
 
-        public Builder setNoncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions) {
+        public Builder noncurrentVersionTransitions(@Nullable List<BucketNoncurrentVersionTransition> noncurrentVersionTransitions) {
             this.noncurrentVersionTransitions = noncurrentVersionTransitions;
             return this;
         }
 
-        public Builder setObjectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
+        public Builder objectSizeGreaterThan(@Nullable String objectSizeGreaterThan) {
             this.objectSizeGreaterThan = objectSizeGreaterThan;
             return this;
         }
 
-        public Builder setObjectSizeLessThan(@Nullable String objectSizeLessThan) {
+        public Builder objectSizeLessThan(@Nullable String objectSizeLessThan) {
             this.objectSizeLessThan = objectSizeLessThan;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStatus(BucketRuleStatus status) {
+        public Builder status(BucketRuleStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTransition(@Nullable BucketTransition transition) {
+        public Builder transition(@Nullable BucketTransition transition) {
             this.transition = transition;
             return this;
         }
 
-        public Builder setTransitions(@Nullable List<BucketTransition> transitions) {
+        public Builder transitions(@Nullable List<BucketTransition> transitions) {
             this.transitions = transitions;
             return this;
         }

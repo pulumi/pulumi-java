@@ -14,10 +14,10 @@ public final class ServiceTaskSpecLogDriver {
     private final String name;
     private final @Nullable Map<String,String> options;
 
-    @OutputCustomType.Constructor({"name","options"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecLogDriver(
-        String name,
-        @Nullable Map<String,String> options) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable Map<String,String> options) {
         this.name = name;
         this.options = options;
     }
@@ -51,12 +51,12 @@ public final class ServiceTaskSpecLogDriver {
     	      this.options = defaults.options;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Map<String,String> options) {
+        public Builder options(@Nullable Map<String,String> options) {
             this.options = options;
             return this;
         }

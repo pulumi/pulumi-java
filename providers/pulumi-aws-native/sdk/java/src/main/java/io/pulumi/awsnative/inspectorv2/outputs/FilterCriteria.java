@@ -48,39 +48,39 @@ public final class FilterCriteria {
     private final @Nullable List<FilterStringFilter> vulnerabilitySource;
     private final @Nullable List<FilterPackageFilter> vulnerablePackages;
 
-    @OutputCustomType.Constructor({"awsAccountId","componentId","componentType","ec2InstanceImageId","ec2InstanceSubnetId","ec2InstanceVpcId","ecrImageArchitecture","ecrImageHash","ecrImagePushedAt","ecrImageRegistry","ecrImageRepositoryName","ecrImageTags","findingArn","findingStatus","findingType","firstObservedAt","inspectorScore","lastObservedAt","networkProtocol","portRange","relatedVulnerabilities","resourceId","resourceTags","resourceType","severity","title","updatedAt","vendorSeverity","vulnerabilityId","vulnerabilitySource","vulnerablePackages"})
+    @OutputCustomType.Constructor
     private FilterCriteria(
-        @Nullable List<FilterStringFilter> awsAccountId,
-        @Nullable List<FilterStringFilter> componentId,
-        @Nullable List<FilterStringFilter> componentType,
-        @Nullable List<FilterStringFilter> ec2InstanceImageId,
-        @Nullable List<FilterStringFilter> ec2InstanceSubnetId,
-        @Nullable List<FilterStringFilter> ec2InstanceVpcId,
-        @Nullable List<FilterStringFilter> ecrImageArchitecture,
-        @Nullable List<FilterStringFilter> ecrImageHash,
-        @Nullable List<FilterDateFilter> ecrImagePushedAt,
-        @Nullable List<FilterStringFilter> ecrImageRegistry,
-        @Nullable List<FilterStringFilter> ecrImageRepositoryName,
-        @Nullable List<FilterStringFilter> ecrImageTags,
-        @Nullable List<FilterStringFilter> findingArn,
-        @Nullable List<FilterStringFilter> findingStatus,
-        @Nullable List<FilterStringFilter> findingType,
-        @Nullable List<FilterDateFilter> firstObservedAt,
-        @Nullable List<FilterNumberFilter> inspectorScore,
-        @Nullable List<FilterDateFilter> lastObservedAt,
-        @Nullable List<FilterStringFilter> networkProtocol,
-        @Nullable List<FilterPortRangeFilter> portRange,
-        @Nullable List<FilterStringFilter> relatedVulnerabilities,
-        @Nullable List<FilterStringFilter> resourceId,
-        @Nullable List<FilterMapFilter> resourceTags,
-        @Nullable List<FilterStringFilter> resourceType,
-        @Nullable List<FilterStringFilter> severity,
-        @Nullable List<FilterStringFilter> title,
-        @Nullable List<FilterDateFilter> updatedAt,
-        @Nullable List<FilterStringFilter> vendorSeverity,
-        @Nullable List<FilterStringFilter> vulnerabilityId,
-        @Nullable List<FilterStringFilter> vulnerabilitySource,
-        @Nullable List<FilterPackageFilter> vulnerablePackages) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable List<FilterStringFilter> awsAccountId,
+        @OutputCustomType.Parameter("componentId") @Nullable List<FilterStringFilter> componentId,
+        @OutputCustomType.Parameter("componentType") @Nullable List<FilterStringFilter> componentType,
+        @OutputCustomType.Parameter("ec2InstanceImageId") @Nullable List<FilterStringFilter> ec2InstanceImageId,
+        @OutputCustomType.Parameter("ec2InstanceSubnetId") @Nullable List<FilterStringFilter> ec2InstanceSubnetId,
+        @OutputCustomType.Parameter("ec2InstanceVpcId") @Nullable List<FilterStringFilter> ec2InstanceVpcId,
+        @OutputCustomType.Parameter("ecrImageArchitecture") @Nullable List<FilterStringFilter> ecrImageArchitecture,
+        @OutputCustomType.Parameter("ecrImageHash") @Nullable List<FilterStringFilter> ecrImageHash,
+        @OutputCustomType.Parameter("ecrImagePushedAt") @Nullable List<FilterDateFilter> ecrImagePushedAt,
+        @OutputCustomType.Parameter("ecrImageRegistry") @Nullable List<FilterStringFilter> ecrImageRegistry,
+        @OutputCustomType.Parameter("ecrImageRepositoryName") @Nullable List<FilterStringFilter> ecrImageRepositoryName,
+        @OutputCustomType.Parameter("ecrImageTags") @Nullable List<FilterStringFilter> ecrImageTags,
+        @OutputCustomType.Parameter("findingArn") @Nullable List<FilterStringFilter> findingArn,
+        @OutputCustomType.Parameter("findingStatus") @Nullable List<FilterStringFilter> findingStatus,
+        @OutputCustomType.Parameter("findingType") @Nullable List<FilterStringFilter> findingType,
+        @OutputCustomType.Parameter("firstObservedAt") @Nullable List<FilterDateFilter> firstObservedAt,
+        @OutputCustomType.Parameter("inspectorScore") @Nullable List<FilterNumberFilter> inspectorScore,
+        @OutputCustomType.Parameter("lastObservedAt") @Nullable List<FilterDateFilter> lastObservedAt,
+        @OutputCustomType.Parameter("networkProtocol") @Nullable List<FilterStringFilter> networkProtocol,
+        @OutputCustomType.Parameter("portRange") @Nullable List<FilterPortRangeFilter> portRange,
+        @OutputCustomType.Parameter("relatedVulnerabilities") @Nullable List<FilterStringFilter> relatedVulnerabilities,
+        @OutputCustomType.Parameter("resourceId") @Nullable List<FilterStringFilter> resourceId,
+        @OutputCustomType.Parameter("resourceTags") @Nullable List<FilterMapFilter> resourceTags,
+        @OutputCustomType.Parameter("resourceType") @Nullable List<FilterStringFilter> resourceType,
+        @OutputCustomType.Parameter("severity") @Nullable List<FilterStringFilter> severity,
+        @OutputCustomType.Parameter("title") @Nullable List<FilterStringFilter> title,
+        @OutputCustomType.Parameter("updatedAt") @Nullable List<FilterDateFilter> updatedAt,
+        @OutputCustomType.Parameter("vendorSeverity") @Nullable List<FilterStringFilter> vendorSeverity,
+        @OutputCustomType.Parameter("vulnerabilityId") @Nullable List<FilterStringFilter> vulnerabilityId,
+        @OutputCustomType.Parameter("vulnerabilitySource") @Nullable List<FilterStringFilter> vulnerabilitySource,
+        @OutputCustomType.Parameter("vulnerablePackages") @Nullable List<FilterPackageFilter> vulnerablePackages) {
         this.awsAccountId = awsAccountId;
         this.componentId = componentId;
         this.componentType = componentType;
@@ -288,157 +288,157 @@ public final class FilterCriteria {
     	      this.vulnerablePackages = defaults.vulnerablePackages;
         }
 
-        public Builder setAwsAccountId(@Nullable List<FilterStringFilter> awsAccountId) {
+        public Builder awsAccountId(@Nullable List<FilterStringFilter> awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setComponentId(@Nullable List<FilterStringFilter> componentId) {
+        public Builder componentId(@Nullable List<FilterStringFilter> componentId) {
             this.componentId = componentId;
             return this;
         }
 
-        public Builder setComponentType(@Nullable List<FilterStringFilter> componentType) {
+        public Builder componentType(@Nullable List<FilterStringFilter> componentType) {
             this.componentType = componentType;
             return this;
         }
 
-        public Builder setEc2InstanceImageId(@Nullable List<FilterStringFilter> ec2InstanceImageId) {
+        public Builder ec2InstanceImageId(@Nullable List<FilterStringFilter> ec2InstanceImageId) {
             this.ec2InstanceImageId = ec2InstanceImageId;
             return this;
         }
 
-        public Builder setEc2InstanceSubnetId(@Nullable List<FilterStringFilter> ec2InstanceSubnetId) {
+        public Builder ec2InstanceSubnetId(@Nullable List<FilterStringFilter> ec2InstanceSubnetId) {
             this.ec2InstanceSubnetId = ec2InstanceSubnetId;
             return this;
         }
 
-        public Builder setEc2InstanceVpcId(@Nullable List<FilterStringFilter> ec2InstanceVpcId) {
+        public Builder ec2InstanceVpcId(@Nullable List<FilterStringFilter> ec2InstanceVpcId) {
             this.ec2InstanceVpcId = ec2InstanceVpcId;
             return this;
         }
 
-        public Builder setEcrImageArchitecture(@Nullable List<FilterStringFilter> ecrImageArchitecture) {
+        public Builder ecrImageArchitecture(@Nullable List<FilterStringFilter> ecrImageArchitecture) {
             this.ecrImageArchitecture = ecrImageArchitecture;
             return this;
         }
 
-        public Builder setEcrImageHash(@Nullable List<FilterStringFilter> ecrImageHash) {
+        public Builder ecrImageHash(@Nullable List<FilterStringFilter> ecrImageHash) {
             this.ecrImageHash = ecrImageHash;
             return this;
         }
 
-        public Builder setEcrImagePushedAt(@Nullable List<FilterDateFilter> ecrImagePushedAt) {
+        public Builder ecrImagePushedAt(@Nullable List<FilterDateFilter> ecrImagePushedAt) {
             this.ecrImagePushedAt = ecrImagePushedAt;
             return this;
         }
 
-        public Builder setEcrImageRegistry(@Nullable List<FilterStringFilter> ecrImageRegistry) {
+        public Builder ecrImageRegistry(@Nullable List<FilterStringFilter> ecrImageRegistry) {
             this.ecrImageRegistry = ecrImageRegistry;
             return this;
         }
 
-        public Builder setEcrImageRepositoryName(@Nullable List<FilterStringFilter> ecrImageRepositoryName) {
+        public Builder ecrImageRepositoryName(@Nullable List<FilterStringFilter> ecrImageRepositoryName) {
             this.ecrImageRepositoryName = ecrImageRepositoryName;
             return this;
         }
 
-        public Builder setEcrImageTags(@Nullable List<FilterStringFilter> ecrImageTags) {
+        public Builder ecrImageTags(@Nullable List<FilterStringFilter> ecrImageTags) {
             this.ecrImageTags = ecrImageTags;
             return this;
         }
 
-        public Builder setFindingArn(@Nullable List<FilterStringFilter> findingArn) {
+        public Builder findingArn(@Nullable List<FilterStringFilter> findingArn) {
             this.findingArn = findingArn;
             return this;
         }
 
-        public Builder setFindingStatus(@Nullable List<FilterStringFilter> findingStatus) {
+        public Builder findingStatus(@Nullable List<FilterStringFilter> findingStatus) {
             this.findingStatus = findingStatus;
             return this;
         }
 
-        public Builder setFindingType(@Nullable List<FilterStringFilter> findingType) {
+        public Builder findingType(@Nullable List<FilterStringFilter> findingType) {
             this.findingType = findingType;
             return this;
         }
 
-        public Builder setFirstObservedAt(@Nullable List<FilterDateFilter> firstObservedAt) {
+        public Builder firstObservedAt(@Nullable List<FilterDateFilter> firstObservedAt) {
             this.firstObservedAt = firstObservedAt;
             return this;
         }
 
-        public Builder setInspectorScore(@Nullable List<FilterNumberFilter> inspectorScore) {
+        public Builder inspectorScore(@Nullable List<FilterNumberFilter> inspectorScore) {
             this.inspectorScore = inspectorScore;
             return this;
         }
 
-        public Builder setLastObservedAt(@Nullable List<FilterDateFilter> lastObservedAt) {
+        public Builder lastObservedAt(@Nullable List<FilterDateFilter> lastObservedAt) {
             this.lastObservedAt = lastObservedAt;
             return this;
         }
 
-        public Builder setNetworkProtocol(@Nullable List<FilterStringFilter> networkProtocol) {
+        public Builder networkProtocol(@Nullable List<FilterStringFilter> networkProtocol) {
             this.networkProtocol = networkProtocol;
             return this;
         }
 
-        public Builder setPortRange(@Nullable List<FilterPortRangeFilter> portRange) {
+        public Builder portRange(@Nullable List<FilterPortRangeFilter> portRange) {
             this.portRange = portRange;
             return this;
         }
 
-        public Builder setRelatedVulnerabilities(@Nullable List<FilterStringFilter> relatedVulnerabilities) {
+        public Builder relatedVulnerabilities(@Nullable List<FilterStringFilter> relatedVulnerabilities) {
             this.relatedVulnerabilities = relatedVulnerabilities;
             return this;
         }
 
-        public Builder setResourceId(@Nullable List<FilterStringFilter> resourceId) {
+        public Builder resourceId(@Nullable List<FilterStringFilter> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable List<FilterMapFilter> resourceTags) {
+        public Builder resourceTags(@Nullable List<FilterMapFilter> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceType(@Nullable List<FilterStringFilter> resourceType) {
+        public Builder resourceType(@Nullable List<FilterStringFilter> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setSeverity(@Nullable List<FilterStringFilter> severity) {
+        public Builder severity(@Nullable List<FilterStringFilter> severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setTitle(@Nullable List<FilterStringFilter> title) {
+        public Builder title(@Nullable List<FilterStringFilter> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setUpdatedAt(@Nullable List<FilterDateFilter> updatedAt) {
+        public Builder updatedAt(@Nullable List<FilterDateFilter> updatedAt) {
             this.updatedAt = updatedAt;
             return this;
         }
 
-        public Builder setVendorSeverity(@Nullable List<FilterStringFilter> vendorSeverity) {
+        public Builder vendorSeverity(@Nullable List<FilterStringFilter> vendorSeverity) {
             this.vendorSeverity = vendorSeverity;
             return this;
         }
 
-        public Builder setVulnerabilityId(@Nullable List<FilterStringFilter> vulnerabilityId) {
+        public Builder vulnerabilityId(@Nullable List<FilterStringFilter> vulnerabilityId) {
             this.vulnerabilityId = vulnerabilityId;
             return this;
         }
 
-        public Builder setVulnerabilitySource(@Nullable List<FilterStringFilter> vulnerabilitySource) {
+        public Builder vulnerabilitySource(@Nullable List<FilterStringFilter> vulnerabilitySource) {
             this.vulnerabilitySource = vulnerabilitySource;
             return this;
         }
 
-        public Builder setVulnerablePackages(@Nullable List<FilterPackageFilter> vulnerablePackages) {
+        public Builder vulnerablePackages(@Nullable List<FilterPackageFilter> vulnerablePackages) {
             this.vulnerablePackages = vulnerablePackages;
             return this;
         }

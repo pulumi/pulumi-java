@@ -129,72 +129,72 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setExclusiveEndTime(@Nullable Input<String> exclusiveEndTime) {
+        public Builder exclusiveEndTime(@Nullable Input<String> exclusiveEndTime) {
             this.exclusiveEndTime = exclusiveEndTime;
             return this;
         }
 
-        public Builder setExclusiveEndTime(@Nullable String exclusiveEndTime) {
+        public Builder exclusiveEndTime(@Nullable String exclusiveEndTime) {
             this.exclusiveEndTime = Input.ofNullable(exclusiveEndTime);
             return this;
         }
 
-        public Builder setInclusiveStartTime(Input<String> inclusiveStartTime) {
+        public Builder inclusiveStartTime(Input<String> inclusiveStartTime) {
             this.inclusiveStartTime = Objects.requireNonNull(inclusiveStartTime);
             return this;
         }
 
-        public Builder setInclusiveStartTime(String inclusiveStartTime) {
+        public Builder inclusiveStartTime(String inclusiveStartTime) {
             this.inclusiveStartTime = Input.of(Objects.requireNonNull(inclusiveStartTime));
             return this;
         }
 
-        public Builder setKinesisConfiguration(Input<StreamKinesisConfigurationArgs> kinesisConfiguration) {
+        public Builder kinesisConfiguration(Input<StreamKinesisConfigurationArgs> kinesisConfiguration) {
             this.kinesisConfiguration = Objects.requireNonNull(kinesisConfiguration);
             return this;
         }
 
-        public Builder setKinesisConfiguration(StreamKinesisConfigurationArgs kinesisConfiguration) {
+        public Builder kinesisConfiguration(StreamKinesisConfigurationArgs kinesisConfiguration) {
             this.kinesisConfiguration = Input.of(Objects.requireNonNull(kinesisConfiguration));
             return this;
         }
 
-        public Builder setLedgerName(Input<String> ledgerName) {
+        public Builder ledgerName(Input<String> ledgerName) {
             this.ledgerName = Objects.requireNonNull(ledgerName);
             return this;
         }
 
-        public Builder setLedgerName(String ledgerName) {
+        public Builder ledgerName(String ledgerName) {
             this.ledgerName = Input.of(Objects.requireNonNull(ledgerName));
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStreamName(@Nullable Input<String> streamName) {
+        public Builder streamName(@Nullable Input<String> streamName) {
             this.streamName = streamName;
             return this;
         }
 
-        public Builder setStreamName(@Nullable String streamName) {
+        public Builder streamName(@Nullable String streamName) {
             this.streamName = Input.ofNullable(streamName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StreamTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StreamTagArgs> tags) {
+        public Builder tags(@Nullable List<StreamTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

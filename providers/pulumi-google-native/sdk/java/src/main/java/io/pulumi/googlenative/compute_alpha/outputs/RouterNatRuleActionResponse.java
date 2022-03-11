@@ -31,12 +31,12 @@ public final class RouterNatRuleActionResponse {
      */
     private final List<String> sourceNatDrainRanges;
 
-    @OutputCustomType.Constructor({"sourceNatActiveIps","sourceNatActiveRanges","sourceNatDrainIps","sourceNatDrainRanges"})
+    @OutputCustomType.Constructor
     private RouterNatRuleActionResponse(
-        List<String> sourceNatActiveIps,
-        List<String> sourceNatActiveRanges,
-        List<String> sourceNatDrainIps,
-        List<String> sourceNatDrainRanges) {
+        @OutputCustomType.Parameter("sourceNatActiveIps") List<String> sourceNatActiveIps,
+        @OutputCustomType.Parameter("sourceNatActiveRanges") List<String> sourceNatActiveRanges,
+        @OutputCustomType.Parameter("sourceNatDrainIps") List<String> sourceNatDrainIps,
+        @OutputCustomType.Parameter("sourceNatDrainRanges") List<String> sourceNatDrainRanges) {
         this.sourceNatActiveIps = sourceNatActiveIps;
         this.sourceNatActiveRanges = sourceNatActiveRanges;
         this.sourceNatDrainIps = sourceNatDrainIps;
@@ -98,22 +98,22 @@ public final class RouterNatRuleActionResponse {
     	      this.sourceNatDrainRanges = defaults.sourceNatDrainRanges;
         }
 
-        public Builder setSourceNatActiveIps(List<String> sourceNatActiveIps) {
+        public Builder sourceNatActiveIps(List<String> sourceNatActiveIps) {
             this.sourceNatActiveIps = Objects.requireNonNull(sourceNatActiveIps);
             return this;
         }
 
-        public Builder setSourceNatActiveRanges(List<String> sourceNatActiveRanges) {
+        public Builder sourceNatActiveRanges(List<String> sourceNatActiveRanges) {
             this.sourceNatActiveRanges = Objects.requireNonNull(sourceNatActiveRanges);
             return this;
         }
 
-        public Builder setSourceNatDrainIps(List<String> sourceNatDrainIps) {
+        public Builder sourceNatDrainIps(List<String> sourceNatDrainIps) {
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
 
-        public Builder setSourceNatDrainRanges(List<String> sourceNatDrainRanges) {
+        public Builder sourceNatDrainRanges(List<String> sourceNatDrainRanges) {
             this.sourceNatDrainRanges = Objects.requireNonNull(sourceNatDrainRanges);
             return this;
         }

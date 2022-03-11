@@ -35,13 +35,13 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
      */
     private final String tablePrefix;
 
-    @OutputCustomType.Constructor({"bucketName","datasetName","path","project","tablePrefix"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1DatastoreConfigResponse(
-        String bucketName,
-        String datasetName,
-        String path,
-        String project,
-        String tablePrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("datasetName") String datasetName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tablePrefix") String tablePrefix) {
         this.bucketName = bucketName;
         this.datasetName = datasetName;
         this.path = path;
@@ -113,27 +113,27 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
     	      this.tablePrefix = defaults.tablePrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setDatasetName(String datasetName) {
+        public Builder datasetName(String datasetName) {
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setTablePrefix(String tablePrefix) {
+        public Builder tablePrefix(String tablePrefix) {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }

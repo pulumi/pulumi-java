@@ -102,22 +102,22 @@ public final class GetPrebuiltEcrImageArgs extends io.pulumi.resources.InvokeArg
     	      this.repositoryName = defaults.repositoryName;
         }
 
-        public Builder setDnsSuffix(@Nullable String dnsSuffix) {
+        public Builder dnsSuffix(@Nullable String dnsSuffix) {
             this.dnsSuffix = dnsSuffix;
             return this;
         }
 
-        public Builder setImageTag(@Nullable String imageTag) {
+        public Builder imageTag(@Nullable String imageTag) {
             this.imageTag = imageTag;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }

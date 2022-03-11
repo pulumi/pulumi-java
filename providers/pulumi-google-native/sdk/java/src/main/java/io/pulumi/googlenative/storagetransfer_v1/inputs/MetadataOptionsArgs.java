@@ -177,82 +177,82 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAcl(@Nullable Input<MetadataOptionsAcl> acl) {
+        public Builder acl(@Nullable Input<MetadataOptionsAcl> acl) {
             this.acl = acl;
             return this;
         }
 
-        public Builder setAcl(@Nullable MetadataOptionsAcl acl) {
+        public Builder acl(@Nullable MetadataOptionsAcl acl) {
             this.acl = Input.ofNullable(acl);
             return this;
         }
 
-        public Builder setGid(@Nullable Input<MetadataOptionsGid> gid) {
+        public Builder gid(@Nullable Input<MetadataOptionsGid> gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setGid(@Nullable MetadataOptionsGid gid) {
+        public Builder gid(@Nullable MetadataOptionsGid gid) {
             this.gid = Input.ofNullable(gid);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<MetadataOptionsKmsKey> kmsKey) {
+        public Builder kmsKey(@Nullable Input<MetadataOptionsKmsKey> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable MetadataOptionsKmsKey kmsKey) {
+        public Builder kmsKey(@Nullable MetadataOptionsKmsKey kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<MetadataOptionsMode> mode) {
+        public Builder mode(@Nullable Input<MetadataOptionsMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable MetadataOptionsMode mode) {
+        public Builder mode(@Nullable MetadataOptionsMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }
 
-        public Builder setStorageClass(@Nullable Input<MetadataOptionsStorageClass> storageClass) {
+        public Builder storageClass(@Nullable Input<MetadataOptionsStorageClass> storageClass) {
             this.storageClass = storageClass;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable MetadataOptionsStorageClass storageClass) {
+        public Builder storageClass(@Nullable MetadataOptionsStorageClass storageClass) {
             this.storageClass = Input.ofNullable(storageClass);
             return this;
         }
 
-        public Builder setSymlink(@Nullable Input<MetadataOptionsSymlink> symlink) {
+        public Builder symlink(@Nullable Input<MetadataOptionsSymlink> symlink) {
             this.symlink = symlink;
             return this;
         }
 
-        public Builder setSymlink(@Nullable MetadataOptionsSymlink symlink) {
+        public Builder symlink(@Nullable MetadataOptionsSymlink symlink) {
             this.symlink = Input.ofNullable(symlink);
             return this;
         }
 
-        public Builder setTemporaryHold(@Nullable Input<MetadataOptionsTemporaryHold> temporaryHold) {
+        public Builder temporaryHold(@Nullable Input<MetadataOptionsTemporaryHold> temporaryHold) {
             this.temporaryHold = temporaryHold;
             return this;
         }
 
-        public Builder setTemporaryHold(@Nullable MetadataOptionsTemporaryHold temporaryHold) {
+        public Builder temporaryHold(@Nullable MetadataOptionsTemporaryHold temporaryHold) {
             this.temporaryHold = Input.ofNullable(temporaryHold);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<MetadataOptionsUid> uid) {
+        public Builder uid(@Nullable Input<MetadataOptionsUid> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable MetadataOptionsUid uid) {
+        public Builder uid(@Nullable MetadataOptionsUid uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

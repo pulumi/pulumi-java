@@ -14,10 +14,10 @@ public final class NetworkInsightsAnalysisPortRange {
     private final @Nullable Integer from;
     private final @Nullable Integer to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private NetworkInsightsAnalysisPortRange(
-        @Nullable Integer from,
-        @Nullable Integer to) {
+        @OutputCustomType.Parameter("from") @Nullable Integer from,
+        @OutputCustomType.Parameter("to") @Nullable Integer to) {
         this.from = from;
         this.to = to;
     }
@@ -51,12 +51,12 @@ public final class NetworkInsightsAnalysisPortRange {
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(@Nullable Integer from) {
+        public Builder from(@Nullable Integer from) {
             this.from = from;
             return this;
         }
 
-        public Builder setTo(@Nullable Integer to) {
+        public Builder to(@Nullable Integer to) {
             this.to = to;
             return this;
         }

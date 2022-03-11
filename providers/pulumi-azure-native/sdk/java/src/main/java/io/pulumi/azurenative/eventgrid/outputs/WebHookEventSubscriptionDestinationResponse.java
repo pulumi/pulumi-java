@@ -49,15 +49,15 @@ public final class WebHookEventSubscriptionDestinationResponse {
      */
     private final @Nullable Integer preferredBatchSizeInKilobytes;
 
-    @OutputCustomType.Constructor({"azureActiveDirectoryApplicationIdOrUri","azureActiveDirectoryTenantId","endpointBaseUrl","endpointType","endpointUrl","maxEventsPerBatch","preferredBatchSizeInKilobytes"})
+    @OutputCustomType.Constructor
     private WebHookEventSubscriptionDestinationResponse(
-        @Nullable String azureActiveDirectoryApplicationIdOrUri,
-        @Nullable String azureActiveDirectoryTenantId,
-        String endpointBaseUrl,
-        String endpointType,
-        @Nullable String endpointUrl,
-        @Nullable Integer maxEventsPerBatch,
-        @Nullable Integer preferredBatchSizeInKilobytes) {
+        @OutputCustomType.Parameter("azureActiveDirectoryApplicationIdOrUri") @Nullable String azureActiveDirectoryApplicationIdOrUri,
+        @OutputCustomType.Parameter("azureActiveDirectoryTenantId") @Nullable String azureActiveDirectoryTenantId,
+        @OutputCustomType.Parameter("endpointBaseUrl") String endpointBaseUrl,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("endpointUrl") @Nullable String endpointUrl,
+        @OutputCustomType.Parameter("maxEventsPerBatch") @Nullable Integer maxEventsPerBatch,
+        @OutputCustomType.Parameter("preferredBatchSizeInKilobytes") @Nullable Integer preferredBatchSizeInKilobytes) {
         this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
         this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
         this.endpointBaseUrl = endpointBaseUrl;
@@ -150,37 +150,37 @@ public final class WebHookEventSubscriptionDestinationResponse {
     	      this.preferredBatchSizeInKilobytes = defaults.preferredBatchSizeInKilobytes;
         }
 
-        public Builder setAzureActiveDirectoryApplicationIdOrUri(@Nullable String azureActiveDirectoryApplicationIdOrUri) {
+        public Builder azureActiveDirectoryApplicationIdOrUri(@Nullable String azureActiveDirectoryApplicationIdOrUri) {
             this.azureActiveDirectoryApplicationIdOrUri = azureActiveDirectoryApplicationIdOrUri;
             return this;
         }
 
-        public Builder setAzureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
+        public Builder azureActiveDirectoryTenantId(@Nullable String azureActiveDirectoryTenantId) {
             this.azureActiveDirectoryTenantId = azureActiveDirectoryTenantId;
             return this;
         }
 
-        public Builder setEndpointBaseUrl(String endpointBaseUrl) {
+        public Builder endpointBaseUrl(String endpointBaseUrl) {
             this.endpointBaseUrl = Objects.requireNonNull(endpointBaseUrl);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
-        public Builder setMaxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
+        public Builder maxEventsPerBatch(@Nullable Integer maxEventsPerBatch) {
             this.maxEventsPerBatch = maxEventsPerBatch;
             return this;
         }
 
-        public Builder setPreferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
+        public Builder preferredBatchSizeInKilobytes(@Nullable Integer preferredBatchSizeInKilobytes) {
             this.preferredBatchSizeInKilobytes = preferredBatchSizeInKilobytes;
             return this;
         }

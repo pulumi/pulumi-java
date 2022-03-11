@@ -17,8 +17,8 @@ public final class PipelineTriggerPropertiesResponse {
      */
     private final @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger;
 
-    @OutputCustomType.Constructor({"sourceTrigger"})
-    private PipelineTriggerPropertiesResponse(@Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
+    @OutputCustomType.Constructor
+    private PipelineTriggerPropertiesResponse(@OutputCustomType.Parameter("sourceTrigger") @Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
         this.sourceTrigger = sourceTrigger;
     }
 
@@ -50,7 +50,7 @@ public final class PipelineTriggerPropertiesResponse {
     	      this.sourceTrigger = defaults.sourceTrigger;
         }
 
-        public Builder setSourceTrigger(@Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
+        public Builder sourceTrigger(@Nullable PipelineSourceTriggerPropertiesResponse sourceTrigger) {
             this.sourceTrigger = sourceTrigger;
             return this;
         }

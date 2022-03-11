@@ -186,102 +186,102 @@ public final class ChangeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAdditions(@Nullable Input<List<ResourceRecordSetArgs>> additions) {
+        public Builder additions(@Nullable Input<List<ResourceRecordSetArgs>> additions) {
             this.additions = additions;
             return this;
         }
 
-        public Builder setAdditions(@Nullable List<ResourceRecordSetArgs> additions) {
+        public Builder additions(@Nullable List<ResourceRecordSetArgs> additions) {
             this.additions = Input.ofNullable(additions);
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setDeletions(@Nullable Input<List<ResourceRecordSetArgs>> deletions) {
+        public Builder deletions(@Nullable Input<List<ResourceRecordSetArgs>> deletions) {
             this.deletions = deletions;
             return this;
         }
 
-        public Builder setDeletions(@Nullable List<ResourceRecordSetArgs> deletions) {
+        public Builder deletions(@Nullable List<ResourceRecordSetArgs> deletions) {
             this.deletions = Input.ofNullable(deletions);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIsServing(@Nullable Input<Boolean> isServing) {
+        public Builder isServing(@Nullable Input<Boolean> isServing) {
             this.isServing = isServing;
             return this;
         }
 
-        public Builder setIsServing(@Nullable Boolean isServing) {
+        public Builder isServing(@Nullable Boolean isServing) {
             this.isServing = Input.ofNullable(isServing);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setManagedZone(Input<String> managedZone) {
+        public Builder managedZone(Input<String> managedZone) {
             this.managedZone = Objects.requireNonNull(managedZone);
             return this;
         }
 
-        public Builder setManagedZone(String managedZone) {
+        public Builder managedZone(String managedZone) {
             this.managedZone = Input.of(Objects.requireNonNull(managedZone));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<ChangeStatus> status) {
+        public Builder status(@Nullable Input<ChangeStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable ChangeStatus status) {
+        public Builder status(@Nullable ChangeStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

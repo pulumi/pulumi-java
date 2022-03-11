@@ -33,12 +33,12 @@ public final class GetLaunchPathsSummary {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"constraintSummaries","name","pathId","tags"})
+    @OutputCustomType.Constructor
     private GetLaunchPathsSummary(
-        List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
-        String name,
-        String pathId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("constraintSummaries") List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathId") String pathId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.constraintSummaries = constraintSummaries;
         this.name = name;
         this.pathId = pathId;
@@ -100,22 +100,22 @@ public final class GetLaunchPathsSummary {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setConstraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
+        public Builder constraintSummaries(List<GetLaunchPathsSummaryConstraintSummary> constraintSummaries) {
             this.constraintSummaries = Objects.requireNonNull(constraintSummaries);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathId(String pathId) {
+        public Builder pathId(String pathId) {
             this.pathId = Objects.requireNonNull(pathId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

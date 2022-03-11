@@ -19,12 +19,12 @@ public final class ConnectionOAuthParameters {
     private final ConnectionOAuthParametersHttpMethod httpMethod;
     private final @Nullable ConnectionHttpParameters oAuthHttpParameters;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientParameters","httpMethod","oAuthHttpParameters"})
+    @OutputCustomType.Constructor
     private ConnectionOAuthParameters(
-        String authorizationEndpoint,
-        ConnectionClientParameters clientParameters,
-        ConnectionOAuthParametersHttpMethod httpMethod,
-        @Nullable ConnectionHttpParameters oAuthHttpParameters) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientParameters") ConnectionClientParameters clientParameters,
+        @OutputCustomType.Parameter("httpMethod") ConnectionOAuthParametersHttpMethod httpMethod,
+        @OutputCustomType.Parameter("oAuthHttpParameters") @Nullable ConnectionHttpParameters oAuthHttpParameters) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientParameters = clientParameters;
         this.httpMethod = httpMethod;
@@ -70,22 +70,22 @@ public final class ConnectionOAuthParameters {
     	      this.oAuthHttpParameters = defaults.oAuthHttpParameters;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientParameters(ConnectionClientParameters clientParameters) {
+        public Builder clientParameters(ConnectionClientParameters clientParameters) {
             this.clientParameters = Objects.requireNonNull(clientParameters);
             return this;
         }
 
-        public Builder setHttpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
+        public Builder httpMethod(ConnectionOAuthParametersHttpMethod httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
+        public Builder oAuthHttpParameters(@Nullable ConnectionHttpParameters oAuthHttpParameters) {
             this.oAuthHttpParameters = oAuthHttpParameters;
             return this;
         }

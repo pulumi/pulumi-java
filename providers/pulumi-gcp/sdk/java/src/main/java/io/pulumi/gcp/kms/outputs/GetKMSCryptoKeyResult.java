@@ -38,18 +38,18 @@ public final class GetKMSCryptoKeyResult {
     private final Boolean skipInitialVersionCreation;
     private final List<GetKMSCryptoKeyVersionTemplate> versionTemplates;
 
-    @OutputCustomType.Constructor({"destroyScheduledDuration","id","importOnly","keyRing","labels","name","purpose","rotationPeriod","skipInitialVersionCreation","versionTemplates"})
+    @OutputCustomType.Constructor
     private GetKMSCryptoKeyResult(
-        String destroyScheduledDuration,
-        String id,
-        Boolean importOnly,
-        String keyRing,
-        Map<String,String> labels,
-        String name,
-        String purpose,
-        String rotationPeriod,
-        Boolean skipInitialVersionCreation,
-        List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
+        @OutputCustomType.Parameter("destroyScheduledDuration") String destroyScheduledDuration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("importOnly") Boolean importOnly,
+        @OutputCustomType.Parameter("keyRing") String keyRing,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("purpose") String purpose,
+        @OutputCustomType.Parameter("rotationPeriod") String rotationPeriod,
+        @OutputCustomType.Parameter("skipInitialVersionCreation") Boolean skipInitialVersionCreation,
+        @OutputCustomType.Parameter("versionTemplates") List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
         this.destroyScheduledDuration = destroyScheduledDuration;
         this.id = id;
         this.importOnly = importOnly;
@@ -145,52 +145,52 @@ public final class GetKMSCryptoKeyResult {
     	      this.versionTemplates = defaults.versionTemplates;
         }
 
-        public Builder setDestroyScheduledDuration(String destroyScheduledDuration) {
+        public Builder destroyScheduledDuration(String destroyScheduledDuration) {
             this.destroyScheduledDuration = Objects.requireNonNull(destroyScheduledDuration);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImportOnly(Boolean importOnly) {
+        public Builder importOnly(Boolean importOnly) {
             this.importOnly = Objects.requireNonNull(importOnly);
             return this;
         }
 
-        public Builder setKeyRing(String keyRing) {
+        public Builder keyRing(String keyRing) {
             this.keyRing = Objects.requireNonNull(keyRing);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPurpose(String purpose) {
+        public Builder purpose(String purpose) {
             this.purpose = Objects.requireNonNull(purpose);
             return this;
         }
 
-        public Builder setRotationPeriod(String rotationPeriod) {
+        public Builder rotationPeriod(String rotationPeriod) {
             this.rotationPeriod = Objects.requireNonNull(rotationPeriod);
             return this;
         }
 
-        public Builder setSkipInitialVersionCreation(Boolean skipInitialVersionCreation) {
+        public Builder skipInitialVersionCreation(Boolean skipInitialVersionCreation) {
             this.skipInitialVersionCreation = Objects.requireNonNull(skipInitialVersionCreation);
             return this;
         }
 
-        public Builder setVersionTemplates(List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
+        public Builder versionTemplates(List<GetKMSCryptoKeyVersionTemplate> versionTemplates) {
             this.versionTemplates = Objects.requireNonNull(versionTemplates);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.awsAccountId = defaults.awsAccountId;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }

@@ -26,11 +26,11 @@ public final class NotificationConfigResponse {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"eventTypes","payloadFormat","pubsubTopic"})
+    @OutputCustomType.Constructor
     private NotificationConfigResponse(
-        List<String> eventTypes,
-        String payloadFormat,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("eventTypes") List<String> eventTypes,
+        @OutputCustomType.Parameter("payloadFormat") String payloadFormat,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.eventTypes = eventTypes;
         this.payloadFormat = payloadFormat;
         this.pubsubTopic = pubsubTopic;
@@ -82,17 +82,17 @@ public final class NotificationConfigResponse {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setEventTypes(List<String> eventTypes) {
+        public Builder eventTypes(List<String> eventTypes) {
             this.eventTypes = Objects.requireNonNull(eventTypes);
             return this;
         }
 
-        public Builder setPayloadFormat(String payloadFormat) {
+        public Builder payloadFormat(String payloadFormat) {
             this.payloadFormat = Objects.requireNonNull(payloadFormat);
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

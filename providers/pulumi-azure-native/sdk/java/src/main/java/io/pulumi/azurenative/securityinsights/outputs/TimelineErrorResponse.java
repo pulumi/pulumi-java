@@ -27,11 +27,11 @@ public final class TimelineErrorResponse {
      */
     private final @Nullable String queryId;
 
-    @OutputCustomType.Constructor({"errorMessage","kind","queryId"})
+    @OutputCustomType.Constructor
     private TimelineErrorResponse(
-        String errorMessage,
-        String kind,
-        @Nullable String queryId) {
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId) {
         this.errorMessage = errorMessage;
         this.kind = kind;
         this.queryId = queryId;
@@ -83,17 +83,17 @@ public final class TimelineErrorResponse {
     	      this.queryId = defaults.queryId;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setQueryId(@Nullable String queryId) {
+        public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }

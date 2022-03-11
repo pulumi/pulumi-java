@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor({"customTag","field"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2QuasiIdentifierFieldResponse(
-        String customTag,
-        GooglePrivacyDlpV2FieldIdResponse field) {
+        @OutputCustomType.Parameter("customTag") String customTag,
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.customTag = customTag;
         this.field = field;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldResponse {
     	      this.field = defaults.field;
         }
 
-        public Builder setCustomTag(String customTag) {
+        public Builder customTag(String customTag) {
             this.customTag = Objects.requireNonNull(customTag);
             return this;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }

@@ -32,12 +32,12 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
      */
     private final @Nullable String objectKeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","encryptionOption","kmsKeyId","objectKeyPrefix"})
+    @OutputCustomType.Constructor
     private TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocationS3Configuration(
-        @Nullable String bucketName,
-        @Nullable String encryptionOption,
-        @Nullable String kmsKeyId,
-        @Nullable String objectKeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") @Nullable String bucketName,
+        @OutputCustomType.Parameter("encryptionOption") @Nullable String encryptionOption,
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("objectKeyPrefix") @Nullable String objectKeyPrefix) {
         this.bucketName = bucketName;
         this.encryptionOption = encryptionOption;
         this.kmsKeyId = kmsKeyId;
@@ -99,22 +99,22 @@ public final class TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLoc
     	      this.objectKeyPrefix = defaults.objectKeyPrefix;
         }
 
-        public Builder setBucketName(@Nullable String bucketName) {
+        public Builder bucketName(@Nullable String bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setEncryptionOption(@Nullable String encryptionOption) {
+        public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setObjectKeyPrefix(@Nullable String objectKeyPrefix) {
+        public Builder objectKeyPrefix(@Nullable String objectKeyPrefix) {
             this.objectKeyPrefix = objectKeyPrefix;
             return this;
         }

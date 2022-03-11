@@ -90,17 +90,17 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
     	      this.transformationErrorHandling = defaults.transformationErrorHandling;
         }
 
-        public Builder setInfoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
-        public Builder setRecordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
+        public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
             this.recordTransformations = Objects.requireNonNull(recordTransformations);
             return this;
         }
 
-        public Builder setTransformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
+        public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }

@@ -55,7 +55,7 @@ public final class AssessmentLinksResponse extends io.pulumi.resources.InvokeArg
     	      this.azurePortalUri = defaults.azurePortalUri;
         }
 
-        public Builder setAzurePortalUri(String azurePortalUri) {
+        public Builder azurePortalUri(String azurePortalUri) {
             this.azurePortalUri = Objects.requireNonNull(azurePortalUri);
             return this;
         }

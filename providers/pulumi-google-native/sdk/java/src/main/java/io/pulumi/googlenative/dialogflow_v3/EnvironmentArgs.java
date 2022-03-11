@@ -157,82 +157,82 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder setAgentId(Input<String> agentId) {
+        public Builder agentId(Input<String> agentId) {
             this.agentId = Objects.requireNonNull(agentId);
             return this;
         }
 
-        public Builder setAgentId(String agentId) {
+        public Builder agentId(String agentId) {
             this.agentId = Input.of(Objects.requireNonNull(agentId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setTestCasesConfig(@Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig) {
+        public Builder testCasesConfig(@Nullable Input<GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs> testCasesConfig) {
             this.testCasesConfig = testCasesConfig;
             return this;
         }
 
-        public Builder setTestCasesConfig(@Nullable GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs testCasesConfig) {
+        public Builder testCasesConfig(@Nullable GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigArgs testCasesConfig) {
             this.testCasesConfig = Input.ofNullable(testCasesConfig);
             return this;
         }
 
-        public Builder setVersionConfigs(Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
+        public Builder versionConfigs(Input<List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs>> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
 
-        public Builder setVersionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs> versionConfigs) {
+        public Builder versionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigArgs> versionConfigs) {
             this.versionConfigs = Input.of(Objects.requireNonNull(versionConfigs));
             return this;
         }

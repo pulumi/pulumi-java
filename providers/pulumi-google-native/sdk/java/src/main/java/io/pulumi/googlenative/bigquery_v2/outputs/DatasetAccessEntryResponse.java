@@ -18,10 +18,10 @@ public final class DatasetAccessEntryResponse {
     private final DatasetReferenceResponse dataset;
     private final List<String> targetTypes;
 
-    @OutputCustomType.Constructor({"dataset","targetTypes"})
+    @OutputCustomType.Constructor
     private DatasetAccessEntryResponse(
-        DatasetReferenceResponse dataset,
-        List<String> targetTypes) {
+        @OutputCustomType.Parameter("dataset") DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("targetTypes") List<String> targetTypes) {
         this.dataset = dataset;
         this.targetTypes = targetTypes;
     }
@@ -59,12 +59,12 @@ public final class DatasetAccessEntryResponse {
     	      this.targetTypes = defaults.targetTypes;
         }
 
-        public Builder setDataset(DatasetReferenceResponse dataset) {
+        public Builder dataset(DatasetReferenceResponse dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setTargetTypes(List<String> targetTypes) {
+        public Builder targetTypes(List<String> targetTypes) {
             this.targetTypes = Objects.requireNonNull(targetTypes);
             return this;
         }

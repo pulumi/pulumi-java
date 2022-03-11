@@ -16,13 +16,13 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
     private final String servicesSecondaryRangeName;
     private final Boolean useIpAliases;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName","useIpAliases"})
+    @OutputCustomType.Constructor
     private GetEnvironmentConfigNodeConfigIpAllocationPolicy(
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        Boolean useIpAliases) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
@@ -74,27 +74,27 @@ public final class GetEnvironmentConfigNodeConfigIpAllocationPolicy {
     	      this.useIpAliases = defaults.useIpAliases;
         }
 
-        public Builder setClusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
             return this;
         }
 
-        public Builder setUseIpAliases(Boolean useIpAliases) {
+        public Builder useIpAliases(Boolean useIpAliases) {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }

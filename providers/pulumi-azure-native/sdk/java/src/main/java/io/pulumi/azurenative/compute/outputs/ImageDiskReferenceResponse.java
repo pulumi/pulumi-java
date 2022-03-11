@@ -23,10 +23,10 @@ public final class ImageDiskReferenceResponse {
      */
     private final @Nullable Integer lun;
 
-    @OutputCustomType.Constructor({"id","lun"})
+    @OutputCustomType.Constructor
     private ImageDiskReferenceResponse(
-        String id,
-        @Nullable Integer lun) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lun") @Nullable Integer lun) {
         this.id = id;
         this.lun = lun;
     }
@@ -68,12 +68,12 @@ public final class ImageDiskReferenceResponse {
     	      this.lun = defaults.lun;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLun(@Nullable Integer lun) {
+        public Builder lun(@Nullable Integer lun) {
             this.lun = lun;
             return this;
         }

@@ -21,10 +21,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final String wrappedKey;
 
-    @OutputCustomType.Constructor({"cryptoKeyName","wrappedKey"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyKmsWrapped(
-        String cryptoKeyName,
-        String wrappedKey) {
+        @OutputCustomType.Parameter("cryptoKeyName") String cryptoKeyName,
+        @OutputCustomType.Parameter("wrappedKey") String wrappedKey) {
         this.cryptoKeyName = cryptoKeyName;
         this.wrappedKey = wrappedKey;
     }
@@ -67,12 +67,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.wrappedKey = defaults.wrappedKey;
         }
 
-        public Builder setCryptoKeyName(String cryptoKeyName) {
+        public Builder cryptoKeyName(String cryptoKeyName) {
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
 
-        public Builder setWrappedKey(String wrappedKey) {
+        public Builder wrappedKey(String wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }

@@ -32,11 +32,11 @@ public final class InquiryInfoResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"errorDetail","inquiryDetails","status"})
+    @OutputCustomType.Constructor
     private InquiryInfoResponse(
-        @Nullable ErrorDetailResponse errorDetail,
-        @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("errorDetail") @Nullable ErrorDetailResponse errorDetail,
+        @OutputCustomType.Parameter("inquiryDetails") @Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.errorDetail = errorDetail;
         this.inquiryDetails = inquiryDetails;
         this.status = status;
@@ -90,17 +90,17 @@ public final class InquiryInfoResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorDetail(@Nullable ErrorDetailResponse errorDetail) {
+        public Builder errorDetail(@Nullable ErrorDetailResponse errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setInquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
+        public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsResponse> inquiryDetails) {
             this.inquiryDetails = inquiryDetails;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

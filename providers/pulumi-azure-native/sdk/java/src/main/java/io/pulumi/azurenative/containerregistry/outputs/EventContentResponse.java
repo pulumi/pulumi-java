@@ -51,15 +51,15 @@ public final class EventContentResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor({"action","actor","id","request","source","target","timestamp"})
+    @OutputCustomType.Constructor
     private EventContentResponse(
-        @Nullable String action,
-        @Nullable ActorResponse actor,
-        @Nullable String id,
-        @Nullable RequestResponse request,
-        @Nullable SourceResponse source,
-        @Nullable TargetResponse target,
-        @Nullable String timestamp) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("actor") @Nullable ActorResponse actor,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("request") @Nullable RequestResponse request,
+        @OutputCustomType.Parameter("source") @Nullable SourceResponse source,
+        @OutputCustomType.Parameter("target") @Nullable TargetResponse target,
+        @OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.action = action;
         this.actor = actor;
         this.id = id;
@@ -151,37 +151,37 @@ public final class EventContentResponse {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setActor(@Nullable ActorResponse actor) {
+        public Builder actor(@Nullable ActorResponse actor) {
             this.actor = actor;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRequest(@Nullable RequestResponse request) {
+        public Builder request(@Nullable RequestResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setSource(@Nullable SourceResponse source) {
+        public Builder source(@Nullable SourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setTarget(@Nullable TargetResponse target) {
+        public Builder target(@Nullable TargetResponse target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable String timestamp) {
+        public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
         }

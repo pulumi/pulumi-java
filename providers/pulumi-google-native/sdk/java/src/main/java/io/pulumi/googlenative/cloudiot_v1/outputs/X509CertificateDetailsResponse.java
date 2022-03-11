@@ -40,14 +40,14 @@ public final class X509CertificateDetailsResponse {
      */
     private final String subject;
 
-    @OutputCustomType.Constructor({"expiryTime","issuer","publicKeyType","signatureAlgorithm","startTime","subject"})
+    @OutputCustomType.Constructor
     private X509CertificateDetailsResponse(
-        String expiryTime,
-        String issuer,
-        String publicKeyType,
-        String signatureAlgorithm,
-        String startTime,
-        String subject) {
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("publicKeyType") String publicKeyType,
+        @OutputCustomType.Parameter("signatureAlgorithm") String signatureAlgorithm,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("subject") String subject) {
         this.expiryTime = expiryTime;
         this.issuer = issuer;
         this.publicKeyType = publicKeyType;
@@ -129,32 +129,32 @@ public final class X509CertificateDetailsResponse {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setExpiryTime(String expiryTime) {
+        public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setPublicKeyType(String publicKeyType) {
+        public Builder publicKeyType(String publicKeyType) {
             this.publicKeyType = Objects.requireNonNull(publicKeyType);
             return this;
         }
 
-        public Builder setSignatureAlgorithm(String signatureAlgorithm) {
+        public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = Objects.requireNonNull(signatureAlgorithm);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }

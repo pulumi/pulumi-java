@@ -15,10 +15,10 @@ public final class CertificateAuthorityRevocationConfiguration {
     private final @Nullable CertificateAuthorityCrlConfiguration crlConfiguration;
     private final @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration;
 
-    @OutputCustomType.Constructor({"crlConfiguration","ocspConfiguration"})
+    @OutputCustomType.Constructor
     private CertificateAuthorityRevocationConfiguration(
-        @Nullable CertificateAuthorityCrlConfiguration crlConfiguration,
-        @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
+        @OutputCustomType.Parameter("crlConfiguration") @Nullable CertificateAuthorityCrlConfiguration crlConfiguration,
+        @OutputCustomType.Parameter("ocspConfiguration") @Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
         this.crlConfiguration = crlConfiguration;
         this.ocspConfiguration = ocspConfiguration;
     }
@@ -52,12 +52,12 @@ public final class CertificateAuthorityRevocationConfiguration {
     	      this.ocspConfiguration = defaults.ocspConfiguration;
         }
 
-        public Builder setCrlConfiguration(@Nullable CertificateAuthorityCrlConfiguration crlConfiguration) {
+        public Builder crlConfiguration(@Nullable CertificateAuthorityCrlConfiguration crlConfiguration) {
             this.crlConfiguration = crlConfiguration;
             return this;
         }
 
-        public Builder setOcspConfiguration(@Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
+        public Builder ocspConfiguration(@Nullable CertificateAuthorityOcspConfiguration ocspConfiguration) {
             this.ocspConfiguration = ocspConfiguration;
             return this;
         }

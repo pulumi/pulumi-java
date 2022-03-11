@@ -27,11 +27,11 @@ public final class AuthenticationResponse {
      */
     private final IapCredentialResponse iapCredential;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount","iapCredential"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        CustomAccountResponse customAccount,
-        GoogleAccountResponse googleAccount,
-        IapCredentialResponse iapCredential) {
+        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount,
+        @OutputCustomType.Parameter("iapCredential") IapCredentialResponse iapCredential) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
         this.iapCredential = iapCredential;
@@ -83,17 +83,17 @@ public final class AuthenticationResponse {
     	      this.iapCredential = defaults.iapCredential;
         }
 
-        public Builder setCustomAccount(CustomAccountResponse customAccount) {
+        public Builder customAccount(CustomAccountResponse customAccount) {
             this.customAccount = Objects.requireNonNull(customAccount);
             return this;
         }
 
-        public Builder setGoogleAccount(GoogleAccountResponse googleAccount) {
+        public Builder googleAccount(GoogleAccountResponse googleAccount) {
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
         }
 
-        public Builder setIapCredential(IapCredentialResponse iapCredential) {
+        public Builder iapCredential(IapCredentialResponse iapCredential) {
             this.iapCredential = Objects.requireNonNull(iapCredential);
             return this;
         }

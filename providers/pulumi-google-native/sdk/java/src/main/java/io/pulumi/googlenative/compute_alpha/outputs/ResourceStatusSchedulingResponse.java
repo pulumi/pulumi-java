@@ -15,8 +15,8 @@ public final class ResourceStatusSchedulingResponse {
      */
     private final Integer availabilityDomain;
 
-    @OutputCustomType.Constructor({"availabilityDomain"})
-    private ResourceStatusSchedulingResponse(Integer availabilityDomain) {
+    @OutputCustomType.Constructor
+    private ResourceStatusSchedulingResponse(@OutputCustomType.Parameter("availabilityDomain") Integer availabilityDomain) {
         this.availabilityDomain = availabilityDomain;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceStatusSchedulingResponse {
     	      this.availabilityDomain = defaults.availabilityDomain;
         }
 
-        public Builder setAvailabilityDomain(Integer availabilityDomain) {
+        public Builder availabilityDomain(Integer availabilityDomain) {
             this.availabilityDomain = Objects.requireNonNull(availabilityDomain);
             return this;
         }

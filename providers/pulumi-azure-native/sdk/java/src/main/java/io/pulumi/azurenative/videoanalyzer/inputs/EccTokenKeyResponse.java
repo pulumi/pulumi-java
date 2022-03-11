@@ -121,27 +121,27 @@ public final class EccTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
     	      this.y = defaults.y;
         }
 
-        public Builder setAlg(String alg) {
+        public Builder alg(String alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
-        public Builder setKid(String kid) {
+        public Builder kid(String kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setX(String x) {
+        public Builder x(String x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setY(String y) {
+        public Builder y(String y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }

@@ -67,18 +67,18 @@ public final class AKSVariantResponseResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"computeType","deploymentType","description","error","isDefault","kvTags","properties","state","trafficPercentile","type"})
+    @OutputCustomType.Constructor
     private AKSVariantResponseResponse(
-        String computeType,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        ServiceResponseBaseResponseError error,
-        @Nullable Boolean isDefault,
-        @Nullable Map<String,String> kvTags,
-        @Nullable Map<String,String> properties,
-        String state,
-        @Nullable Double trafficPercentile,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.computeType = computeType;
         this.deploymentType = deploymentType;
         this.description = description;
@@ -201,52 +201,52 @@ public final class AKSVariantResponseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setError(ServiceResponseBaseResponseError error) {
+        public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrafficPercentile(@Nullable Double trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

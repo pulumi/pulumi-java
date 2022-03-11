@@ -247,67 +247,67 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
     	      this.viaPartitionKey = defaults.viaPartitionKey;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCorrelationId(@Nullable String correlationId) {
+        public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = correlationId;
             return this;
         }
 
-        public Builder setForcePersistence(@Nullable Boolean forcePersistence) {
+        public Builder forcePersistence(@Nullable Boolean forcePersistence) {
             this.forcePersistence = forcePersistence;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setPartitionKey(@Nullable String partitionKey) {
+        public Builder partitionKey(@Nullable String partitionKey) {
             this.partitionKey = partitionKey;
             return this;
         }
 
-        public Builder setReplyTo(@Nullable String replyTo) {
+        public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = replyTo;
             return this;
         }
 
-        public Builder setReplyToSessionId(@Nullable String replyToSessionId) {
+        public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
 
-        public Builder setScheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
+        public Builder scheduledEnqueueTimeUtc(@Nullable String scheduledEnqueueTimeUtc) {
             this.scheduledEnqueueTimeUtc = scheduledEnqueueTimeUtc;
             return this;
         }
 
-        public Builder setSessionId(@Nullable String sessionId) {
+        public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
-        public Builder setTimeToLive(@Nullable String timeToLive) {
+        public Builder timeToLive(@Nullable String timeToLive) {
             this.timeToLive = timeToLive;
             return this;
         }
 
-        public Builder setTo(@Nullable String to) {
+        public Builder to(@Nullable String to) {
             this.to = to;
             return this;
         }
 
-        public Builder setViaPartitionKey(@Nullable String viaPartitionKey) {
+        public Builder viaPartitionKey(@Nullable String viaPartitionKey) {
             this.viaPartitionKey = viaPartitionKey;
             return this;
         }

@@ -27,11 +27,11 @@ public final class PipelineReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","referenceName","type"})
+    @OutputCustomType.Constructor
     private PipelineReferenceResponse(
-        @Nullable String name,
-        String referenceName,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("referenceName") String referenceName,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.referenceName = referenceName;
         this.type = type;
@@ -83,17 +83,17 @@ public final class PipelineReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setReferenceName(String referenceName) {
+        public Builder referenceName(String referenceName) {
             this.referenceName = Objects.requireNonNull(referenceName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

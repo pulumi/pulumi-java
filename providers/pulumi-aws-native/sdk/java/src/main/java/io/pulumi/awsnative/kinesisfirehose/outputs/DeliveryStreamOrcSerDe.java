@@ -26,18 +26,18 @@ public final class DeliveryStreamOrcSerDe {
     private final @Nullable Integer rowIndexStride;
     private final @Nullable Integer stripeSizeBytes;
 
-    @OutputCustomType.Constructor({"blockSizeBytes","bloomFilterColumns","bloomFilterFalsePositiveProbability","compression","dictionaryKeyThreshold","enablePadding","formatVersion","paddingTolerance","rowIndexStride","stripeSizeBytes"})
+    @OutputCustomType.Constructor
     private DeliveryStreamOrcSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable List<String> bloomFilterColumns,
-        @Nullable Double bloomFilterFalsePositiveProbability,
-        @Nullable String compression,
-        @Nullable Double dictionaryKeyThreshold,
-        @Nullable Boolean enablePadding,
-        @Nullable String formatVersion,
-        @Nullable Double paddingTolerance,
-        @Nullable Integer rowIndexStride,
-        @Nullable Integer stripeSizeBytes) {
+        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @OutputCustomType.Parameter("bloomFilterColumns") @Nullable List<String> bloomFilterColumns,
+        @OutputCustomType.Parameter("bloomFilterFalsePositiveProbability") @Nullable Double bloomFilterFalsePositiveProbability,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("dictionaryKeyThreshold") @Nullable Double dictionaryKeyThreshold,
+        @OutputCustomType.Parameter("enablePadding") @Nullable Boolean enablePadding,
+        @OutputCustomType.Parameter("formatVersion") @Nullable String formatVersion,
+        @OutputCustomType.Parameter("paddingTolerance") @Nullable Double paddingTolerance,
+        @OutputCustomType.Parameter("rowIndexStride") @Nullable Integer rowIndexStride,
+        @OutputCustomType.Parameter("stripeSizeBytes") @Nullable Integer stripeSizeBytes) {
         this.blockSizeBytes = blockSizeBytes;
         this.bloomFilterColumns = bloomFilterColumns;
         this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
@@ -119,52 +119,52 @@ public final class DeliveryStreamOrcSerDe {
     	      this.stripeSizeBytes = defaults.stripeSizeBytes;
         }
 
-        public Builder setBlockSizeBytes(@Nullable Integer blockSizeBytes) {
+        public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
 
-        public Builder setBloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
+        public Builder bloomFilterColumns(@Nullable List<String> bloomFilterColumns) {
             this.bloomFilterColumns = bloomFilterColumns;
             return this;
         }
 
-        public Builder setBloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
+        public Builder bloomFilterFalsePositiveProbability(@Nullable Double bloomFilterFalsePositiveProbability) {
             this.bloomFilterFalsePositiveProbability = bloomFilterFalsePositiveProbability;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setDictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
+        public Builder dictionaryKeyThreshold(@Nullable Double dictionaryKeyThreshold) {
             this.dictionaryKeyThreshold = dictionaryKeyThreshold;
             return this;
         }
 
-        public Builder setEnablePadding(@Nullable Boolean enablePadding) {
+        public Builder enablePadding(@Nullable Boolean enablePadding) {
             this.enablePadding = enablePadding;
             return this;
         }
 
-        public Builder setFormatVersion(@Nullable String formatVersion) {
+        public Builder formatVersion(@Nullable String formatVersion) {
             this.formatVersion = formatVersion;
             return this;
         }
 
-        public Builder setPaddingTolerance(@Nullable Double paddingTolerance) {
+        public Builder paddingTolerance(@Nullable Double paddingTolerance) {
             this.paddingTolerance = paddingTolerance;
             return this;
         }
 
-        public Builder setRowIndexStride(@Nullable Integer rowIndexStride) {
+        public Builder rowIndexStride(@Nullable Integer rowIndexStride) {
             this.rowIndexStride = rowIndexStride;
             return this;
         }
 
-        public Builder setStripeSizeBytes(@Nullable Integer stripeSizeBytes) {
+        public Builder stripeSizeBytes(@Nullable Integer stripeSizeBytes) {
             this.stripeSizeBytes = stripeSizeBytes;
             return this;
         }

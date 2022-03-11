@@ -156,72 +156,72 @@ public final class EdifactValidationOverrideArgs extends io.pulumi.resources.Res
     	      this.validateXSDTypes = defaults.validateXSDTypes;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Input<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setAllowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
+        public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             this.allowLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(allowLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder setEnforceCharacterSet(Input<Boolean> enforceCharacterSet) {
+        public Builder enforceCharacterSet(Input<Boolean> enforceCharacterSet) {
             this.enforceCharacterSet = Objects.requireNonNull(enforceCharacterSet);
             return this;
         }
 
-        public Builder setEnforceCharacterSet(Boolean enforceCharacterSet) {
+        public Builder enforceCharacterSet(Boolean enforceCharacterSet) {
             this.enforceCharacterSet = Input.of(Objects.requireNonNull(enforceCharacterSet));
             return this;
         }
 
-        public Builder setMessageId(Input<String> messageId) {
+        public Builder messageId(Input<String> messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(Input<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Objects.requireNonNull(trailingSeparatorPolicy);
             return this;
         }
 
-        public Builder setTrailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
+        public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             this.trailingSeparatorPolicy = Input.of(Objects.requireNonNull(trailingSeparatorPolicy));
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Input<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes);
             return this;
         }
 
-        public Builder setTrimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
+        public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             this.trimLeadingAndTrailingSpacesAndZeroes = Input.of(Objects.requireNonNull(trimLeadingAndTrailingSpacesAndZeroes));
             return this;
         }
 
-        public Builder setValidateEDITypes(Input<Boolean> validateEDITypes) {
+        public Builder validateEDITypes(Input<Boolean> validateEDITypes) {
             this.validateEDITypes = Objects.requireNonNull(validateEDITypes);
             return this;
         }
 
-        public Builder setValidateEDITypes(Boolean validateEDITypes) {
+        public Builder validateEDITypes(Boolean validateEDITypes) {
             this.validateEDITypes = Input.of(Objects.requireNonNull(validateEDITypes));
             return this;
         }
 
-        public Builder setValidateXSDTypes(Input<Boolean> validateXSDTypes) {
+        public Builder validateXSDTypes(Input<Boolean> validateXSDTypes) {
             this.validateXSDTypes = Objects.requireNonNull(validateXSDTypes);
             return this;
         }
 
-        public Builder setValidateXSDTypes(Boolean validateXSDTypes) {
+        public Builder validateXSDTypes(Boolean validateXSDTypes) {
             this.validateXSDTypes = Input.of(Objects.requireNonNull(validateXSDTypes));
             return this;
         }

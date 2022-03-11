@@ -57,17 +57,17 @@ public final class ReturnAddressResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor({"city","countryOrRegion","email","phone","postalCode","recipientName","stateOrProvince","streetAddress1","streetAddress2"})
+    @OutputCustomType.Constructor
     private ReturnAddressResponse(
-        String city,
-        String countryOrRegion,
-        String email,
-        String phone,
-        String postalCode,
-        String recipientName,
-        @Nullable String stateOrProvince,
-        String streetAddress1,
-        @Nullable String streetAddress2) {
+        @OutputCustomType.Parameter("city") String city,
+        @OutputCustomType.Parameter("countryOrRegion") String countryOrRegion,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("phone") String phone,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("recipientName") String recipientName,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.city = city;
         this.countryOrRegion = countryOrRegion;
         this.email = email;
@@ -179,47 +179,47 @@ public final class ReturnAddressResponse {
     	      this.streetAddress2 = defaults.streetAddress2;
         }
 
-        public Builder setCity(String city) {
+        public Builder city(String city) {
             this.city = Objects.requireNonNull(city);
             return this;
         }
 
-        public Builder setCountryOrRegion(String countryOrRegion) {
+        public Builder countryOrRegion(String countryOrRegion) {
             this.countryOrRegion = Objects.requireNonNull(countryOrRegion);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }
 
-        public Builder setPostalCode(String postalCode) {
+        public Builder postalCode(String postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
 
-        public Builder setRecipientName(String recipientName) {
+        public Builder recipientName(String recipientName) {
             this.recipientName = Objects.requireNonNull(recipientName);
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable String stateOrProvince) {
+        public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
-        public Builder setStreetAddress1(String streetAddress1) {
+        public Builder streetAddress1(String streetAddress1) {
             this.streetAddress1 = Objects.requireNonNull(streetAddress1);
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable String streetAddress2) {
+        public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }

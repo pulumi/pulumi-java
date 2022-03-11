@@ -15,8 +15,8 @@ public final class WorkspaceResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"provisioningState"})
-    private WorkspaceResponseProperties(String provisioningState) {
+    @OutputCustomType.Constructor
+    private WorkspaceResponseProperties(@OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.provisioningState = provisioningState;
     }
 
@@ -48,7 +48,7 @@ public final class WorkspaceResponseProperties {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

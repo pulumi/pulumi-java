@@ -80,20 +80,20 @@ public final class GetSecurityConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cloudName","etag","hierarchyIdentifier","id","kind","location","name","offerings","organizationalData","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetSecurityConnectorResult(
-        @Nullable String cloudName,
-        @Nullable String etag,
-        @Nullable String hierarchyIdentifier,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        @Nullable List<Object> offerings,
-        @Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("cloudName") @Nullable String cloudName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("hierarchyIdentifier") @Nullable String hierarchyIdentifier,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offerings") @Nullable List<Object> offerings,
+        @OutputCustomType.Parameter("organizationalData") @Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.cloudName = cloudName;
         this.etag = etag;
         this.hierarchyIdentifier = hierarchyIdentifier;
@@ -235,62 +235,62 @@ public final class GetSecurityConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCloudName(@Nullable String cloudName) {
+        public Builder cloudName(@Nullable String cloudName) {
             this.cloudName = cloudName;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setHierarchyIdentifier(@Nullable String hierarchyIdentifier) {
+        public Builder hierarchyIdentifier(@Nullable String hierarchyIdentifier) {
             this.hierarchyIdentifier = hierarchyIdentifier;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOfferings(@Nullable List<Object> offerings) {
+        public Builder offerings(@Nullable List<Object> offerings) {
             this.offerings = offerings;
             return this;
         }
 
-        public Builder setOrganizationalData(@Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData) {
+        public Builder organizationalData(@Nullable SecurityConnectorPropertiesResponseOrganizationalData organizationalData) {
             this.organizationalData = organizationalData;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

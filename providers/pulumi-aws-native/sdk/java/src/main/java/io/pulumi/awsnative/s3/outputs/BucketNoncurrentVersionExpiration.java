@@ -22,10 +22,10 @@ public final class BucketNoncurrentVersionExpiration {
      */
     private final Integer noncurrentDays;
 
-    @OutputCustomType.Constructor({"newerNoncurrentVersions","noncurrentDays"})
+    @OutputCustomType.Constructor
     private BucketNoncurrentVersionExpiration(
-        @Nullable Integer newerNoncurrentVersions,
-        Integer noncurrentDays) {
+        @OutputCustomType.Parameter("newerNoncurrentVersions") @Nullable Integer newerNoncurrentVersions,
+        @OutputCustomType.Parameter("noncurrentDays") Integer noncurrentDays) {
         this.newerNoncurrentVersions = newerNoncurrentVersions;
         this.noncurrentDays = noncurrentDays;
     }
@@ -67,12 +67,12 @@ public final class BucketNoncurrentVersionExpiration {
     	      this.noncurrentDays = defaults.noncurrentDays;
         }
 
-        public Builder setNewerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
+        public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
             this.newerNoncurrentVersions = newerNoncurrentVersions;
             return this;
         }
 
-        public Builder setNoncurrentDays(Integer noncurrentDays) {
+        public Builder noncurrentDays(Integer noncurrentDays) {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }

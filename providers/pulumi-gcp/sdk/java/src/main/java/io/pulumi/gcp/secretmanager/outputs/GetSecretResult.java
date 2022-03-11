@@ -32,19 +32,19 @@ public final class GetSecretResult {
     private final List<GetSecretTopic> topics;
     private final String ttl;
 
-    @OutputCustomType.Constructor({"createTime","expireTime","id","labels","name","project","replications","rotations","secretId","topics","ttl"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        String expireTime,
-        String id,
-        Map<String,String> labels,
-        String name,
-        @Nullable String project,
-        List<GetSecretReplication> replications,
-        List<GetSecretRotation> rotations,
-        String secretId,
-        List<GetSecretTopic> topics,
-        String ttl) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("replications") List<GetSecretReplication> replications,
+        @OutputCustomType.Parameter("rotations") List<GetSecretRotation> rotations,
+        @OutputCustomType.Parameter("secretId") String secretId,
+        @OutputCustomType.Parameter("topics") List<GetSecretTopic> topics,
+        @OutputCustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.expireTime = expireTime;
         this.id = id;
@@ -136,57 +136,57 @@ public final class GetSecretResult {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setReplications(List<GetSecretReplication> replications) {
+        public Builder replications(List<GetSecretReplication> replications) {
             this.replications = Objects.requireNonNull(replications);
             return this;
         }
 
-        public Builder setRotations(List<GetSecretRotation> rotations) {
+        public Builder rotations(List<GetSecretRotation> rotations) {
             this.rotations = Objects.requireNonNull(rotations);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setTopics(List<GetSecretTopic> topics) {
+        public Builder topics(List<GetSecretTopic> topics) {
             this.topics = Objects.requireNonNull(topics);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

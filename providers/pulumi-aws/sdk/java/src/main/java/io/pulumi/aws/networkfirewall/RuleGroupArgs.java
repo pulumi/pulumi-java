@@ -153,72 +153,72 @@ public final class RuleGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCapacity(Input<Integer> capacity) {
+        public Builder capacity(Input<Integer> capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }
 
-        public Builder setCapacity(Integer capacity) {
+        public Builder capacity(Integer capacity) {
             this.capacity = Input.of(Objects.requireNonNull(capacity));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRuleGroup(@Nullable Input<RuleGroupRuleGroupArgs> ruleGroup) {
+        public Builder ruleGroup(@Nullable Input<RuleGroupRuleGroupArgs> ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
 
-        public Builder setRuleGroup(@Nullable RuleGroupRuleGroupArgs ruleGroup) {
+        public Builder ruleGroup(@Nullable RuleGroupRuleGroupArgs ruleGroup) {
             this.ruleGroup = Input.ofNullable(ruleGroup);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<String> rules) {
+        public Builder rules(@Nullable Input<String> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable String rules) {
+        public Builder rules(@Nullable String rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

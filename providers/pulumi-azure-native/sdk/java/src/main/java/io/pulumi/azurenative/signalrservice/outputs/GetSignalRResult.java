@@ -122,27 +122,27 @@ public final class GetSignalRResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"cors","externalIP","features","hostName","hostNamePrefix","id","kind","location","name","networkACLs","privateEndpointConnections","provisioningState","publicPort","serverPort","sku","tags","type","upstream","version"})
+    @OutputCustomType.Constructor
     private GetSignalRResult(
-        @Nullable SignalRCorsSettingsResponse cors,
-        String externalIP,
-        @Nullable List<SignalRFeatureResponse> features,
-        String hostName,
-        String hostNamePrefix,
-        String id,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        @Nullable SignalRNetworkACLsResponse networkACLs,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        Integer publicPort,
-        Integer serverPort,
-        @Nullable ResourceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable ServerlessUpstreamSettingsResponse upstream,
-        String version) {
+        @OutputCustomType.Parameter("cors") @Nullable SignalRCorsSettingsResponse cors,
+        @OutputCustomType.Parameter("externalIP") String externalIP,
+        @OutputCustomType.Parameter("features") @Nullable List<SignalRFeatureResponse> features,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("hostNamePrefix") String hostNamePrefix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkACLs") @Nullable SignalRNetworkACLsResponse networkACLs,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicPort") Integer publicPort,
+        @OutputCustomType.Parameter("serverPort") Integer serverPort,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upstream") @Nullable ServerlessUpstreamSettingsResponse upstream,
+        @OutputCustomType.Parameter("version") String version) {
         this.cors = cors;
         this.externalIP = externalIP;
         this.features = features;
@@ -360,97 +360,97 @@ public final class GetSignalRResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCors(@Nullable SignalRCorsSettingsResponse cors) {
+        public Builder cors(@Nullable SignalRCorsSettingsResponse cors) {
             this.cors = cors;
             return this;
         }
 
-        public Builder setExternalIP(String externalIP) {
+        public Builder externalIP(String externalIP) {
             this.externalIP = Objects.requireNonNull(externalIP);
             return this;
         }
 
-        public Builder setFeatures(@Nullable List<SignalRFeatureResponse> features) {
+        public Builder features(@Nullable List<SignalRFeatureResponse> features) {
             this.features = features;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHostNamePrefix(String hostNamePrefix) {
+        public Builder hostNamePrefix(String hostNamePrefix) {
             this.hostNamePrefix = Objects.requireNonNull(hostNamePrefix);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkACLs(@Nullable SignalRNetworkACLsResponse networkACLs) {
+        public Builder networkACLs(@Nullable SignalRNetworkACLsResponse networkACLs) {
             this.networkACLs = networkACLs;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicPort(Integer publicPort) {
+        public Builder publicPort(Integer publicPort) {
             this.publicPort = Objects.requireNonNull(publicPort);
             return this;
         }
 
-        public Builder setServerPort(Integer serverPort) {
+        public Builder serverPort(Integer serverPort) {
             this.serverPort = Objects.requireNonNull(serverPort);
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceSkuResponse sku) {
+        public Builder sku(@Nullable ResourceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpstream(@Nullable ServerlessUpstreamSettingsResponse upstream) {
+        public Builder upstream(@Nullable ServerlessUpstreamSettingsResponse upstream) {
             this.upstream = upstream;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

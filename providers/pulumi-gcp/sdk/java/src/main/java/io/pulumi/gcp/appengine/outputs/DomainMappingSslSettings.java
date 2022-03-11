@@ -39,11 +39,11 @@ public final class DomainMappingSslSettings {
      */
     private final String sslManagementType;
 
-    @OutputCustomType.Constructor({"certificateId","pendingManagedCertificateId","sslManagementType"})
+    @OutputCustomType.Constructor
     private DomainMappingSslSettings(
-        @Nullable String certificateId,
-        @Nullable String pendingManagedCertificateId,
-        String sslManagementType) {
+        @OutputCustomType.Parameter("certificateId") @Nullable String certificateId,
+        @OutputCustomType.Parameter("pendingManagedCertificateId") @Nullable String pendingManagedCertificateId,
+        @OutputCustomType.Parameter("sslManagementType") String sslManagementType) {
         this.certificateId = certificateId;
         this.pendingManagedCertificateId = pendingManagedCertificateId;
         this.sslManagementType = sslManagementType;
@@ -107,17 +107,17 @@ public final class DomainMappingSslSettings {
     	      this.sslManagementType = defaults.sslManagementType;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setPendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
+        public Builder pendingManagedCertificateId(@Nullable String pendingManagedCertificateId) {
             this.pendingManagedCertificateId = pendingManagedCertificateId;
             return this;
         }
 
-        public Builder setSslManagementType(String sslManagementType) {
+        public Builder sslManagementType(String sslManagementType) {
             this.sslManagementType = Objects.requireNonNull(sslManagementType);
             return this;
         }

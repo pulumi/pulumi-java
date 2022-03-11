@@ -64,13 +64,13 @@ public final class SloWindowsBasedSli {
      */
     private final @Nullable String windowPeriod;
 
-    @OutputCustomType.Constructor({"goodBadMetricFilter","goodTotalRatioThreshold","metricMeanInRange","metricSumInRange","windowPeriod"})
+    @OutputCustomType.Constructor
     private SloWindowsBasedSli(
-        @Nullable String goodBadMetricFilter,
-        @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
-        @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
-        @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
-        @Nullable String windowPeriod) {
+        @OutputCustomType.Parameter("goodBadMetricFilter") @Nullable String goodBadMetricFilter,
+        @OutputCustomType.Parameter("goodTotalRatioThreshold") @Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold,
+        @OutputCustomType.Parameter("metricMeanInRange") @Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange,
+        @OutputCustomType.Parameter("metricSumInRange") @Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange,
+        @OutputCustomType.Parameter("windowPeriod") @Nullable String windowPeriod) {
         this.goodBadMetricFilter = goodBadMetricFilter;
         this.goodTotalRatioThreshold = goodTotalRatioThreshold;
         this.metricMeanInRange = metricMeanInRange;
@@ -166,27 +166,27 @@ public final class SloWindowsBasedSli {
     	      this.windowPeriod = defaults.windowPeriod;
         }
 
-        public Builder setGoodBadMetricFilter(@Nullable String goodBadMetricFilter) {
+        public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
 
-        public Builder setGoodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold) {
+        public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThreshold goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
 
-        public Builder setMetricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange) {
+        public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRange metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
 
-        public Builder setMetricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange) {
+        public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRange metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
 
-        public Builder setWindowPeriod(@Nullable String windowPeriod) {
+        public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
         }

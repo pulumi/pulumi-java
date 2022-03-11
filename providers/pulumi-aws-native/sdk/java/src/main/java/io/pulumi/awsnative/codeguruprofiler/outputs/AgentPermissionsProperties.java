@@ -16,8 +16,8 @@ public final class AgentPermissionsProperties {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor({"principals"})
-    private AgentPermissionsProperties(List<String> principals) {
+    @OutputCustomType.Constructor
+    private AgentPermissionsProperties(@OutputCustomType.Parameter("principals") List<String> principals) {
         this.principals = principals;
     }
 
@@ -49,7 +49,7 @@ public final class AgentPermissionsProperties {
     	      this.principals = defaults.principals;
         }
 
-        public Builder setPrincipals(List<String> principals) {
+        public Builder principals(List<String> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }

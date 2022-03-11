@@ -16,8 +16,8 @@ public final class WebAclLoggingConfigurationRedactedFields {
      */
     private final List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches;
 
-    @OutputCustomType.Constructor({"fieldToMatches"})
-    private WebAclLoggingConfigurationRedactedFields(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
+    @OutputCustomType.Constructor
+    private WebAclLoggingConfigurationRedactedFields(@OutputCustomType.Parameter("fieldToMatches") List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
         this.fieldToMatches = fieldToMatches;
     }
 
@@ -49,7 +49,7 @@ public final class WebAclLoggingConfigurationRedactedFields {
     	      this.fieldToMatches = defaults.fieldToMatches;
         }
 
-        public Builder setFieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
+        public Builder fieldToMatches(List<WebAclLoggingConfigurationRedactedFieldsFieldToMatch> fieldToMatches) {
             this.fieldToMatches = Objects.requireNonNull(fieldToMatches);
             return this;
         }

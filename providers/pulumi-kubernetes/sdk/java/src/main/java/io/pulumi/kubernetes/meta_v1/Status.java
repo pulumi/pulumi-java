@@ -182,8 +182,8 @@ public class Status extends io.pulumi.resources.CustomResource {
     private static StatusArgs makeArgs(@Nullable StatusArgs args) {
         var builder = args == null ? StatusArgs.builder() : StatusArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Status")
+            .apiVersion("v1")
+            .kind("Status")
             .build();
     }
 

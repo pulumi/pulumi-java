@@ -65,18 +65,18 @@ public final class DeploymentMethodSetting {
      */
     private final @Nullable Double throttlingRateLimit;
 
-    @OutputCustomType.Constructor({"cacheDataEncrypted","cacheTtlInSeconds","cachingEnabled","dataTraceEnabled","httpMethod","loggingLevel","metricsEnabled","resourcePath","throttlingBurstLimit","throttlingRateLimit"})
+    @OutputCustomType.Constructor
     private DeploymentMethodSetting(
-        @Nullable Boolean cacheDataEncrypted,
-        @Nullable Integer cacheTtlInSeconds,
-        @Nullable Boolean cachingEnabled,
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable String httpMethod,
-        @Nullable String loggingLevel,
-        @Nullable Boolean metricsEnabled,
-        @Nullable String resourcePath,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit) {
+        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @OutputCustomType.Parameter("resourcePath") @Nullable String resourcePath,
+        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit) {
         this.cacheDataEncrypted = cacheDataEncrypted;
         this.cacheTtlInSeconds = cacheTtlInSeconds;
         this.cachingEnabled = cachingEnabled;
@@ -198,52 +198,52 @@ public final class DeploymentMethodSetting {
     	      this.throttlingRateLimit = defaults.throttlingRateLimit;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Boolean cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Boolean metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
-        public Builder setResourcePath(@Nullable String resourcePath) {
+        public Builder resourcePath(@Nullable String resourcePath) {
             this.resourcePath = resourcePath;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }

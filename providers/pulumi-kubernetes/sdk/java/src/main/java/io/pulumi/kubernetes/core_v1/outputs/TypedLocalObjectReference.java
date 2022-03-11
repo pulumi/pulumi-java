@@ -27,11 +27,11 @@ public final class TypedLocalObjectReference {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name"})
+    @OutputCustomType.Constructor
     private TypedLocalObjectReference(
-        @Nullable String apiGroup,
-        String kind,
-        String name) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;
@@ -83,17 +83,17 @@ public final class TypedLocalObjectReference {
     	      this.name = defaults.name;
         }
 
-        public Builder setApiGroup(@Nullable String apiGroup) {
+        public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -13,10 +13,10 @@ public final class WebACLTextTransformation {
     private final Integer priority;
     private final WebACLTextTransformationType type;
 
-    @OutputCustomType.Constructor({"priority","type"})
+    @OutputCustomType.Constructor
     private WebACLTextTransformation(
-        Integer priority,
-        WebACLTextTransformationType type) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("type") WebACLTextTransformationType type) {
         this.priority = priority;
         this.type = type;
     }
@@ -50,12 +50,12 @@ public final class WebACLTextTransformation {
     	      this.type = defaults.type;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setType(WebACLTextTransformationType type) {
+        public Builder type(WebACLTextTransformationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

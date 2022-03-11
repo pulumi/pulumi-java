@@ -112,42 +112,42 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     	      this.template = defaults.template;
         }
 
-        public Builder setColumn(@Nullable Input<String> column) {
+        public Builder column(@Nullable Input<String> column) {
             this.column = column;
             return this;
         }
 
-        public Builder setColumn(@Nullable String column) {
+        public Builder column(@Nullable String column) {
             this.column = Input.ofNullable(column);
             return this;
         }
 
-        public Builder setFields(Input<List<TagFieldArgs>> fields) {
+        public Builder fields(Input<List<TagFieldArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<TagFieldArgs> fields) {
+        public Builder fields(List<TagFieldArgs> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setTemplate(Input<String> template) {
+        public Builder template(Input<String> template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTemplate(String template) {
+        public Builder template(String template) {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }

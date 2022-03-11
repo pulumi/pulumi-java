@@ -56,16 +56,16 @@ public final class PathMatcherResponse {
      */
     private final List<HttpRouteRuleResponse> routeRules;
 
-    @OutputCustomType.Constructor({"defaultRouteAction","defaultService","defaultUrlRedirect","description","headerAction","name","pathRules","routeRules"})
+    @OutputCustomType.Constructor
     private PathMatcherResponse(
-        HttpRouteActionResponse defaultRouteAction,
-        String defaultService,
-        HttpRedirectActionResponse defaultUrlRedirect,
-        String description,
-        HttpHeaderActionResponse headerAction,
-        String name,
-        List<PathRuleResponse> pathRules,
-        List<HttpRouteRuleResponse> routeRules) {
+        @OutputCustomType.Parameter("defaultRouteAction") HttpRouteActionResponse defaultRouteAction,
+        @OutputCustomType.Parameter("defaultService") String defaultService,
+        @OutputCustomType.Parameter("defaultUrlRedirect") HttpRedirectActionResponse defaultUrlRedirect,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRules") List<PathRuleResponse> pathRules,
+        @OutputCustomType.Parameter("routeRules") List<HttpRouteRuleResponse> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
@@ -167,42 +167,42 @@ public final class PathMatcherResponse {
     	      this.routeRules = defaults.routeRules;
         }
 
-        public Builder setDefaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
+        public Builder defaultRouteAction(HttpRouteActionResponse defaultRouteAction) {
             this.defaultRouteAction = Objects.requireNonNull(defaultRouteAction);
             return this;
         }
 
-        public Builder setDefaultService(String defaultService) {
+        public Builder defaultService(String defaultService) {
             this.defaultService = Objects.requireNonNull(defaultService);
             return this;
         }
 
-        public Builder setDefaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
+        public Builder defaultUrlRedirect(HttpRedirectActionResponse defaultUrlRedirect) {
             this.defaultUrlRedirect = Objects.requireNonNull(defaultUrlRedirect);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHeaderAction(HttpHeaderActionResponse headerAction) {
+        public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathRules(List<PathRuleResponse> pathRules) {
+        public Builder pathRules(List<PathRuleResponse> pathRules) {
             this.pathRules = Objects.requireNonNull(pathRules);
             return this;
         }
 
-        public Builder setRouteRules(List<HttpRouteRuleResponse> routeRules) {
+        public Builder routeRules(List<HttpRouteRuleResponse> routeRules) {
             this.routeRules = Objects.requireNonNull(routeRules);
             return this;
         }

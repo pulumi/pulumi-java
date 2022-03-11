@@ -74,12 +74,12 @@ public final class ConnectorMappingCompleteOperationResponse extends io.pulumi.r
     	      this.destinationFolder = defaults.destinationFolder;
         }
 
-        public Builder setCompletionOperationType(@Nullable String completionOperationType) {
+        public Builder completionOperationType(@Nullable String completionOperationType) {
             this.completionOperationType = completionOperationType;
             return this;
         }
 
-        public Builder setDestinationFolder(@Nullable String destinationFolder) {
+        public Builder destinationFolder(@Nullable String destinationFolder) {
             this.destinationFolder = destinationFolder;
             return this;
         }

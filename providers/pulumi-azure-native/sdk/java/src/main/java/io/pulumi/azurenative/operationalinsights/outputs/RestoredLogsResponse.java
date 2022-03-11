@@ -27,11 +27,11 @@ public final class RestoredLogsResponse {
      */
     private final @Nullable String startRestoreTime;
 
-    @OutputCustomType.Constructor({"endRestoreTime","sourceTable","startRestoreTime"})
+    @OutputCustomType.Constructor
     private RestoredLogsResponse(
-        @Nullable String endRestoreTime,
-        String sourceTable,
-        @Nullable String startRestoreTime) {
+        @OutputCustomType.Parameter("endRestoreTime") @Nullable String endRestoreTime,
+        @OutputCustomType.Parameter("sourceTable") String sourceTable,
+        @OutputCustomType.Parameter("startRestoreTime") @Nullable String startRestoreTime) {
         this.endRestoreTime = endRestoreTime;
         this.sourceTable = sourceTable;
         this.startRestoreTime = startRestoreTime;
@@ -83,17 +83,17 @@ public final class RestoredLogsResponse {
     	      this.startRestoreTime = defaults.startRestoreTime;
         }
 
-        public Builder setEndRestoreTime(@Nullable String endRestoreTime) {
+        public Builder endRestoreTime(@Nullable String endRestoreTime) {
             this.endRestoreTime = endRestoreTime;
             return this;
         }
 
-        public Builder setSourceTable(String sourceTable) {
+        public Builder sourceTable(String sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }
 
-        public Builder setStartRestoreTime(@Nullable String startRestoreTime) {
+        public Builder startRestoreTime(@Nullable String startRestoreTime) {
             this.startRestoreTime = startRestoreTime;
             return this;
         }

@@ -38,13 +38,13 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"groupId","privateLink","privateLinkLocation","requestMessage","status"})
+    @OutputCustomType.Constructor
     private SharedPrivateLinkResourcePropertiesResponse(
-        @Nullable String groupId,
-        @Nullable ResourceReferenceResponse privateLink,
-        @Nullable String privateLinkLocation,
-        @Nullable String requestMessage,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("privateLink") @Nullable ResourceReferenceResponse privateLink,
+        @OutputCustomType.Parameter("privateLinkLocation") @Nullable String privateLinkLocation,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.groupId = groupId;
         this.privateLink = privateLink;
         this.privateLinkLocation = privateLinkLocation;
@@ -116,27 +116,27 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setPrivateLink(@Nullable ResourceReferenceResponse privateLink) {
+        public Builder privateLink(@Nullable ResourceReferenceResponse privateLink) {
             this.privateLink = privateLink;
             return this;
         }
 
-        public Builder setPrivateLinkLocation(@Nullable String privateLinkLocation) {
+        public Builder privateLinkLocation(@Nullable String privateLinkLocation) {
             this.privateLinkLocation = privateLinkLocation;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

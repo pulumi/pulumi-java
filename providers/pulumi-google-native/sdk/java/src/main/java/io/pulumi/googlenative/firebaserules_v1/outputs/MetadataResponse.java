@@ -16,8 +16,8 @@ public final class MetadataResponse {
      */
     private final List<String> services;
 
-    @OutputCustomType.Constructor({"services"})
-    private MetadataResponse(List<String> services) {
+    @OutputCustomType.Constructor
+    private MetadataResponse(@OutputCustomType.Parameter("services") List<String> services) {
         this.services = services;
     }
 
@@ -49,7 +49,7 @@ public final class MetadataResponse {
     	      this.services = defaults.services;
         }
 
-        public Builder setServices(List<String> services) {
+        public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }

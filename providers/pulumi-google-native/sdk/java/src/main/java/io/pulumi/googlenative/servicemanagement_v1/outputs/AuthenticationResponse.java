@@ -22,10 +22,10 @@ public final class AuthenticationResponse {
      */
     private final List<AuthenticationRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"providers","rules"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        List<AuthProviderResponse> providers,
-        List<AuthenticationRuleResponse> rules) {
+        @OutputCustomType.Parameter("providers") List<AuthProviderResponse> providers,
+        @OutputCustomType.Parameter("rules") List<AuthenticationRuleResponse> rules) {
         this.providers = providers;
         this.rules = rules;
     }
@@ -67,12 +67,12 @@ public final class AuthenticationResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setProviders(List<AuthProviderResponse> providers) {
+        public Builder providers(List<AuthProviderResponse> providers) {
             this.providers = Objects.requireNonNull(providers);
             return this;
         }
 
-        public Builder setRules(List<AuthenticationRuleResponse> rules) {
+        public Builder rules(List<AuthenticationRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

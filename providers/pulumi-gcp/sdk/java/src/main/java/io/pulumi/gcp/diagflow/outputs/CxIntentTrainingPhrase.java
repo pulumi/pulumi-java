@@ -37,11 +37,11 @@ public final class CxIntentTrainingPhrase {
      */
     private final @Nullable Integer repeatCount;
 
-    @OutputCustomType.Constructor({"id","parts","repeatCount"})
+    @OutputCustomType.Constructor
     private CxIntentTrainingPhrase(
-        @Nullable String id,
-        List<CxIntentTrainingPhrasePart> parts,
-        @Nullable Integer repeatCount) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("parts") List<CxIntentTrainingPhrasePart> parts,
+        @OutputCustomType.Parameter("repeatCount") @Nullable Integer repeatCount) {
         this.id = id;
         this.parts = parts;
         this.repeatCount = repeatCount;
@@ -100,17 +100,17 @@ public final class CxIntentTrainingPhrase {
     	      this.repeatCount = defaults.repeatCount;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setParts(List<CxIntentTrainingPhrasePart> parts) {
+        public Builder parts(List<CxIntentTrainingPhrasePart> parts) {
             this.parts = Objects.requireNonNull(parts);
             return this;
         }
 
-        public Builder setRepeatCount(@Nullable Integer repeatCount) {
+        public Builder repeatCount(@Nullable Integer repeatCount) {
             this.repeatCount = repeatCount;
             return this;
         }

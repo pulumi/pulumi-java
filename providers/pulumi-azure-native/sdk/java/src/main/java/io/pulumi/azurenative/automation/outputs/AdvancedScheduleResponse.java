@@ -29,11 +29,11 @@ public final class AdvancedScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"monthDays","monthlyOccurrences","weekDays"})
+    @OutputCustomType.Constructor
     private AdvancedScheduleResponse(
-        @Nullable List<Integer> monthDays,
-        @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.monthDays = monthDays;
         this.monthlyOccurrences = monthlyOccurrences;
         this.weekDays = weekDays;
@@ -85,17 +85,17 @@ public final class AdvancedScheduleResponse {
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<AdvancedScheduleMonthlyOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

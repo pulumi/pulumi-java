@@ -24,10 +24,10 @@ public final class FirewallFirewallStatusSyncState {
      */
     private final @Nullable String availabilityZone;
 
-    @OutputCustomType.Constructor({"attachments","availabilityZone"})
+    @OutputCustomType.Constructor
     private FirewallFirewallStatusSyncState(
-        @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments,
-        @Nullable String availabilityZone) {
+        @OutputCustomType.Parameter("attachments") @Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments,
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone) {
         this.attachments = attachments;
         this.availabilityZone = availabilityZone;
     }
@@ -69,12 +69,12 @@ public final class FirewallFirewallStatusSyncState {
     	      this.availabilityZone = defaults.availabilityZone;
         }
 
-        public Builder setAttachments(@Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments) {
+        public Builder attachments(@Nullable List<FirewallFirewallStatusSyncStateAttachment> attachments) {
             this.attachments = attachments;
             return this;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }

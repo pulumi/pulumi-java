@@ -68,12 +68,12 @@ public final class GetVirtualNetworkGatewayConnectionArgs extends io.pulumi.reso
     	      this.virtualNetworkGatewayConnectionName = defaults.virtualNetworkGatewayConnectionName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVirtualNetworkGatewayConnectionName(String virtualNetworkGatewayConnectionName) {
+        public Builder virtualNetworkGatewayConnectionName(String virtualNetworkGatewayConnectionName) {
             this.virtualNetworkGatewayConnectionName = Objects.requireNonNull(virtualNetworkGatewayConnectionName);
             return this;
         }

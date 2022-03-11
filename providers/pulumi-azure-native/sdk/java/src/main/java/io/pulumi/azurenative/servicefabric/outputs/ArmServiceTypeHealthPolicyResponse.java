@@ -27,11 +27,11 @@ public final class ArmServiceTypeHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyServices;
 
-    @OutputCustomType.Constructor({"maxPercentUnhealthyPartitionsPerService","maxPercentUnhealthyReplicasPerPartition","maxPercentUnhealthyServices"})
+    @OutputCustomType.Constructor
     private ArmServiceTypeHealthPolicyResponse(
-        @Nullable Integer maxPercentUnhealthyPartitionsPerService,
-        @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
-        @Nullable Integer maxPercentUnhealthyServices) {
+        @OutputCustomType.Parameter("maxPercentUnhealthyPartitionsPerService") @Nullable Integer maxPercentUnhealthyPartitionsPerService,
+        @OutputCustomType.Parameter("maxPercentUnhealthyReplicasPerPartition") @Nullable Integer maxPercentUnhealthyReplicasPerPartition,
+        @OutputCustomType.Parameter("maxPercentUnhealthyServices") @Nullable Integer maxPercentUnhealthyServices) {
         this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
         this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
         this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
@@ -83,17 +83,17 @@ public final class ArmServiceTypeHealthPolicyResponse {
     	      this.maxPercentUnhealthyServices = defaults.maxPercentUnhealthyServices;
         }
 
-        public Builder setMaxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
+        public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
             this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
+        public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
             this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
+        public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
             this.maxPercentUnhealthyServices = maxPercentUnhealthyServices;
             return this;
         }

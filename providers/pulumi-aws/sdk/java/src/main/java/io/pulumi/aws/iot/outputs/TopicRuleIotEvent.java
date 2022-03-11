@@ -27,11 +27,11 @@ public final class TopicRuleIotEvent {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"inputName","messageId","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleIotEvent(
-        String inputName,
-        @Nullable String messageId,
-        String roleArn) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.inputName = inputName;
         this.messageId = messageId;
         this.roleArn = roleArn;
@@ -83,17 +83,17 @@ public final class TopicRuleIotEvent {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2betaAudienceResponse {
      */
     private final List<String> genders;
 
-    @OutputCustomType.Constructor({"ageGroups","genders"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaAudienceResponse(
-        List<String> ageGroups,
-        List<String> genders) {
+        @OutputCustomType.Parameter("ageGroups") List<String> ageGroups,
+        @OutputCustomType.Parameter("genders") List<String> genders) {
         this.ageGroups = ageGroups;
         this.genders = genders;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2betaAudienceResponse {
     	      this.genders = defaults.genders;
         }
 
-        public Builder setAgeGroups(List<String> ageGroups) {
+        public Builder ageGroups(List<String> ageGroups) {
             this.ageGroups = Objects.requireNonNull(ageGroups);
             return this;
         }
 
-        public Builder setGenders(List<String> genders) {
+        public Builder genders(List<String> genders) {
             this.genders = Objects.requireNonNull(genders);
             return this;
         }

@@ -17,8 +17,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
      */
     private final @Nullable String policy;
 
-    @OutputCustomType.Constructor({"policy"})
-    private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig(@Nullable String policy) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfig(@OutputCustomType.Parameter("policy") @Nullable String policy) {
         this.policy = policy;
     }
 
@@ -50,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }

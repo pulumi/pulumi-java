@@ -90,32 +90,32 @@ public final class ContentKeyPolicyRsaTokenKeyArgs extends io.pulumi.resources.R
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setExponent(Input<String> exponent) {
+        public Builder exponent(Input<String> exponent) {
             this.exponent = Objects.requireNonNull(exponent);
             return this;
         }
 
-        public Builder setExponent(String exponent) {
+        public Builder exponent(String exponent) {
             this.exponent = Input.of(Objects.requireNonNull(exponent));
             return this;
         }
 
-        public Builder setModulus(Input<String> modulus) {
+        public Builder modulus(Input<String> modulus) {
             this.modulus = Objects.requireNonNull(modulus);
             return this;
         }
 
-        public Builder setModulus(String modulus) {
+        public Builder modulus(String modulus) {
             this.modulus = Input.of(Objects.requireNonNull(modulus));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

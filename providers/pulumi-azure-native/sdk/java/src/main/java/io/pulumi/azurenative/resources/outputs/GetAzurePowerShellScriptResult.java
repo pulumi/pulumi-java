@@ -137,31 +137,31 @@ public final class GetAzurePowerShellScriptResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arguments","azPowerShellVersion","cleanupPreference","containerSettings","environmentVariables","forceUpdateTag","id","identity","kind","location","name","outputs","primaryScriptUri","provisioningState","retentionInterval","scriptContent","status","storageAccountSettings","supportingScriptUris","systemData","tags","timeout","type"})
+    @OutputCustomType.Constructor
     private GetAzurePowerShellScriptResult(
-        @Nullable String arguments,
-        String azPowerShellVersion,
-        @Nullable String cleanupPreference,
-        @Nullable ContainerConfigurationResponse containerSettings,
-        @Nullable List<EnvironmentVariableResponse> environmentVariables,
-        @Nullable String forceUpdateTag,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        String kind,
-        String location,
-        String name,
-        Map<String,Object> outputs,
-        @Nullable String primaryScriptUri,
-        String provisioningState,
-        String retentionInterval,
-        @Nullable String scriptContent,
-        ScriptStatusResponse status,
-        @Nullable StorageAccountConfigurationResponse storageAccountSettings,
-        @Nullable List<String> supportingScriptUris,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeout,
-        String type) {
+        @OutputCustomType.Parameter("arguments") @Nullable String arguments,
+        @OutputCustomType.Parameter("azPowerShellVersion") String azPowerShellVersion,
+        @OutputCustomType.Parameter("cleanupPreference") @Nullable String cleanupPreference,
+        @OutputCustomType.Parameter("containerSettings") @Nullable ContainerConfigurationResponse containerSettings,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<EnvironmentVariableResponse> environmentVariables,
+        @OutputCustomType.Parameter("forceUpdateTag") @Nullable String forceUpdateTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputs") Map<String,Object> outputs,
+        @OutputCustomType.Parameter("primaryScriptUri") @Nullable String primaryScriptUri,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retentionInterval") String retentionInterval,
+        @OutputCustomType.Parameter("scriptContent") @Nullable String scriptContent,
+        @OutputCustomType.Parameter("status") ScriptStatusResponse status,
+        @OutputCustomType.Parameter("storageAccountSettings") @Nullable StorageAccountConfigurationResponse storageAccountSettings,
+        @OutputCustomType.Parameter("supportingScriptUris") @Nullable List<String> supportingScriptUris,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.arguments = arguments;
         this.azPowerShellVersion = azPowerShellVersion;
         this.cleanupPreference = cleanupPreference;
@@ -414,117 +414,117 @@ public final class GetAzurePowerShellScriptResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArguments(@Nullable String arguments) {
+        public Builder arguments(@Nullable String arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setAzPowerShellVersion(String azPowerShellVersion) {
+        public Builder azPowerShellVersion(String azPowerShellVersion) {
             this.azPowerShellVersion = Objects.requireNonNull(azPowerShellVersion);
             return this;
         }
 
-        public Builder setCleanupPreference(@Nullable String cleanupPreference) {
+        public Builder cleanupPreference(@Nullable String cleanupPreference) {
             this.cleanupPreference = cleanupPreference;
             return this;
         }
 
-        public Builder setContainerSettings(@Nullable ContainerConfigurationResponse containerSettings) {
+        public Builder containerSettings(@Nullable ContainerConfigurationResponse containerSettings) {
             this.containerSettings = containerSettings;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableResponse> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setForceUpdateTag(@Nullable String forceUpdateTag) {
+        public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
             this.forceUpdateTag = forceUpdateTag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputs(Map<String,Object> outputs) {
+        public Builder outputs(Map<String,Object> outputs) {
             this.outputs = Objects.requireNonNull(outputs);
             return this;
         }
 
-        public Builder setPrimaryScriptUri(@Nullable String primaryScriptUri) {
+        public Builder primaryScriptUri(@Nullable String primaryScriptUri) {
             this.primaryScriptUri = primaryScriptUri;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRetentionInterval(String retentionInterval) {
+        public Builder retentionInterval(String retentionInterval) {
             this.retentionInterval = Objects.requireNonNull(retentionInterval);
             return this;
         }
 
-        public Builder setScriptContent(@Nullable String scriptContent) {
+        public Builder scriptContent(@Nullable String scriptContent) {
             this.scriptContent = scriptContent;
             return this;
         }
 
-        public Builder setStatus(ScriptStatusResponse status) {
+        public Builder status(ScriptStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStorageAccountSettings(@Nullable StorageAccountConfigurationResponse storageAccountSettings) {
+        public Builder storageAccountSettings(@Nullable StorageAccountConfigurationResponse storageAccountSettings) {
             this.storageAccountSettings = storageAccountSettings;
             return this;
         }
 
-        public Builder setSupportingScriptUris(@Nullable List<String> supportingScriptUris) {
+        public Builder supportingScriptUris(@Nullable List<String> supportingScriptUris) {
             this.supportingScriptUris = supportingScriptUris;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

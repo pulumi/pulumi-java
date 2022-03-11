@@ -17,11 +17,11 @@ public final class TaskDefinitionProxyConfiguration {
     private final @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"containerName","proxyConfigurationProperties","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionProxyConfiguration(
-        String containerName,
-        @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("proxyConfigurationProperties") @Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.containerName = containerName;
         this.proxyConfigurationProperties = proxyConfigurationProperties;
         this.type = type;
@@ -61,17 +61,17 @@ public final class TaskDefinitionProxyConfiguration {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setProxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties) {
+        public Builder proxyConfigurationProperties(@Nullable List<TaskDefinitionKeyValuePair> proxyConfigurationProperties) {
             this.proxyConfigurationProperties = proxyConfigurationProperties;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -104,42 +104,42 @@ public final class EfsLocationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setEc2Config(Input<EfsLocationEc2ConfigArgs> ec2Config) {
+        public Builder ec2Config(Input<EfsLocationEc2ConfigArgs> ec2Config) {
             this.ec2Config = Objects.requireNonNull(ec2Config);
             return this;
         }
 
-        public Builder setEc2Config(EfsLocationEc2ConfigArgs ec2Config) {
+        public Builder ec2Config(EfsLocationEc2ConfigArgs ec2Config) {
             this.ec2Config = Input.of(Objects.requireNonNull(ec2Config));
             return this;
         }
 
-        public Builder setEfsFileSystemArn(Input<String> efsFileSystemArn) {
+        public Builder efsFileSystemArn(Input<String> efsFileSystemArn) {
             this.efsFileSystemArn = Objects.requireNonNull(efsFileSystemArn);
             return this;
         }
 
-        public Builder setEfsFileSystemArn(String efsFileSystemArn) {
+        public Builder efsFileSystemArn(String efsFileSystemArn) {
             this.efsFileSystemArn = Input.of(Objects.requireNonNull(efsFileSystemArn));
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

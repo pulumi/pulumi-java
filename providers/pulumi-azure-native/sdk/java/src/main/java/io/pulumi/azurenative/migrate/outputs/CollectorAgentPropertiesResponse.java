@@ -17,12 +17,12 @@ public final class CollectorAgentPropertiesResponse {
     private final @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails;
     private final String version;
 
-    @OutputCustomType.Constructor({"id","lastHeartbeatUtc","spnDetails","version"})
+    @OutputCustomType.Constructor
     private CollectorAgentPropertiesResponse(
-        String id,
-        String lastHeartbeatUtc,
-        @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("spnDetails") @Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.lastHeartbeatUtc = lastHeartbeatUtc;
         this.spnDetails = spnDetails;
@@ -68,22 +68,22 @@ public final class CollectorAgentPropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHeartbeatUtc(String lastHeartbeatUtc) {
+        public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
 
-        public Builder setSpnDetails(@Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails) {
+        public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesResponse spnDetails) {
             this.spnDetails = spnDetails;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -13,11 +13,11 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
     private final String localSsd;
     private final String memory;
 
-    @OutputCustomType.Constructor({"cpus","localSsd","memory"})
+    @OutputCustomType.Constructor
     private NodeTemplateNodeTypeFlexibilityResponse(
-        String cpus,
-        String localSsd,
-        String memory) {
+        @OutputCustomType.Parameter("cpus") String cpus,
+        @OutputCustomType.Parameter("localSsd") String localSsd,
+        @OutputCustomType.Parameter("memory") String memory) {
         this.cpus = cpus;
         this.localSsd = localSsd;
         this.memory = memory;
@@ -57,17 +57,17 @@ public final class NodeTemplateNodeTypeFlexibilityResponse {
     	      this.memory = defaults.memory;
         }
 
-        public Builder setCpus(String cpus) {
+        public Builder cpus(String cpus) {
             this.cpus = Objects.requireNonNull(cpus);
             return this;
         }
 
-        public Builder setLocalSsd(String localSsd) {
+        public Builder localSsd(String localSsd) {
             this.localSsd = Objects.requireNonNull(localSsd);
             return this;
         }
 
-        public Builder setMemory(String memory) {
+        public Builder memory(String memory) {
             this.memory = Objects.requireNonNull(memory);
             return this;
         }

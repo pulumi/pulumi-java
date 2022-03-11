@@ -15,8 +15,8 @@ public final class BucketAbortIncompleteMultipartUpload {
      */
     private final Integer daysAfterInitiation;
 
-    @OutputCustomType.Constructor({"daysAfterInitiation"})
-    private BucketAbortIncompleteMultipartUpload(Integer daysAfterInitiation) {
+    @OutputCustomType.Constructor
+    private BucketAbortIncompleteMultipartUpload(@OutputCustomType.Parameter("daysAfterInitiation") Integer daysAfterInitiation) {
         this.daysAfterInitiation = daysAfterInitiation;
     }
 
@@ -48,7 +48,7 @@ public final class BucketAbortIncompleteMultipartUpload {
     	      this.daysAfterInitiation = defaults.daysAfterInitiation;
         }
 
-        public Builder setDaysAfterInitiation(Integer daysAfterInitiation) {
+        public Builder daysAfterInitiation(Integer daysAfterInitiation) {
             this.daysAfterInitiation = Objects.requireNonNull(daysAfterInitiation);
             return this;
         }

@@ -27,11 +27,11 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"partnerName","productName","secret"})
+    @OutputCustomType.Constructor
     private SecurityAssessmentMetadataPartnerDataResponse(
-        String partnerName,
-        @Nullable String productName,
-        String secret) {
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.productName = productName;
         this.secret = secret;
@@ -83,17 +83,17 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

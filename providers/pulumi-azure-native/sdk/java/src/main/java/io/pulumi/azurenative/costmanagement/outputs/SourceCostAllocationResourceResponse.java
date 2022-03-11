@@ -26,11 +26,11 @@ public final class SourceCostAllocationResourceResponse {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","resourceType","values"})
+    @OutputCustomType.Constructor
     private SourceCostAllocationResourceResponse(
-        String name,
-        String resourceType,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.resourceType = resourceType;
         this.values = values;
@@ -82,17 +82,17 @@ public final class SourceCostAllocationResourceResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

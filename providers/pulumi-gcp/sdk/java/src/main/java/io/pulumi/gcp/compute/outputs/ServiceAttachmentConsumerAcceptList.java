@@ -22,10 +22,10 @@ public final class ServiceAttachmentConsumerAcceptList {
      */
     private final String projectIdOrNum;
 
-    @OutputCustomType.Constructor({"connectionLimit","projectIdOrNum"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConsumerAcceptList(
-        Integer connectionLimit,
-        String projectIdOrNum) {
+        @OutputCustomType.Parameter("connectionLimit") Integer connectionLimit,
+        @OutputCustomType.Parameter("projectIdOrNum") String projectIdOrNum) {
         this.connectionLimit = connectionLimit;
         this.projectIdOrNum = projectIdOrNum;
     }
@@ -68,12 +68,12 @@ public final class ServiceAttachmentConsumerAcceptList {
     	      this.projectIdOrNum = defaults.projectIdOrNum;
         }
 
-        public Builder setConnectionLimit(Integer connectionLimit) {
+        public Builder connectionLimit(Integer connectionLimit) {
             this.connectionLimit = Objects.requireNonNull(connectionLimit);
             return this;
         }
 
-        public Builder setProjectIdOrNum(String projectIdOrNum) {
+        public Builder projectIdOrNum(String projectIdOrNum) {
             this.projectIdOrNum = Objects.requireNonNull(projectIdOrNum);
             return this;
         }

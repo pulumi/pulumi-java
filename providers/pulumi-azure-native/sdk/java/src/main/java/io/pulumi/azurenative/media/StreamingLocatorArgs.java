@@ -232,122 +232,122 @@ public final class StreamingLocatorArgs extends io.pulumi.resources.ResourceArgs
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAlternativeMediaId(@Nullable Input<String> alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable Input<String> alternativeMediaId) {
             this.alternativeMediaId = alternativeMediaId;
             return this;
         }
 
-        public Builder setAlternativeMediaId(@Nullable String alternativeMediaId) {
+        public Builder alternativeMediaId(@Nullable String alternativeMediaId) {
             this.alternativeMediaId = Input.ofNullable(alternativeMediaId);
             return this;
         }
 
-        public Builder setAssetName(Input<String> assetName) {
+        public Builder assetName(Input<String> assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Input.of(Objects.requireNonNull(assetName));
             return this;
         }
 
-        public Builder setContentKeys(@Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys) {
+        public Builder contentKeys(@Nullable Input<List<StreamingLocatorContentKeyArgs>> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }
 
-        public Builder setContentKeys(@Nullable List<StreamingLocatorContentKeyArgs> contentKeys) {
+        public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyArgs> contentKeys) {
             this.contentKeys = Input.ofNullable(contentKeys);
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable Input<String> defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable Input<String> defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(@Nullable String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Input.ofNullable(defaultContentKeyPolicyName);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<List<String>> filters) {
+        public Builder filters(@Nullable Input<List<String>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<String> filters) {
+        public Builder filters(@Nullable List<String> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setStreamingLocatorId(@Nullable Input<String> streamingLocatorId) {
+        public Builder streamingLocatorId(@Nullable Input<String> streamingLocatorId) {
             this.streamingLocatorId = streamingLocatorId;
             return this;
         }
 
-        public Builder setStreamingLocatorId(@Nullable String streamingLocatorId) {
+        public Builder streamingLocatorId(@Nullable String streamingLocatorId) {
             this.streamingLocatorId = Input.ofNullable(streamingLocatorId);
             return this;
         }
 
-        public Builder setStreamingLocatorName(@Nullable Input<String> streamingLocatorName) {
+        public Builder streamingLocatorName(@Nullable Input<String> streamingLocatorName) {
             this.streamingLocatorName = streamingLocatorName;
             return this;
         }
 
-        public Builder setStreamingLocatorName(@Nullable String streamingLocatorName) {
+        public Builder streamingLocatorName(@Nullable String streamingLocatorName) {
             this.streamingLocatorName = Input.ofNullable(streamingLocatorName);
             return this;
         }
 
-        public Builder setStreamingPolicyName(Input<String> streamingPolicyName) {
+        public Builder streamingPolicyName(Input<String> streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }
 
-        public Builder setStreamingPolicyName(String streamingPolicyName) {
+        public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Input.of(Objects.requireNonNull(streamingPolicyName));
             return this;
         }

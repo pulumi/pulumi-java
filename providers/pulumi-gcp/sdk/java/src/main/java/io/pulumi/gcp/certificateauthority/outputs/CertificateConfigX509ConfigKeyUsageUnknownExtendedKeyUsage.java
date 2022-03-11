@@ -16,8 +16,8 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
      */
     private final List<Integer> objectIdPaths;
 
-    @OutputCustomType.Constructor({"objectIdPaths"})
-    private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(List<Integer> objectIdPaths) {
+    @OutputCustomType.Constructor
+    private CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage(@OutputCustomType.Parameter("objectIdPaths") List<Integer> objectIdPaths) {
         this.objectIdPaths = objectIdPaths;
     }
 
@@ -49,7 +49,7 @@ public final class CertificateConfigX509ConfigKeyUsageUnknownExtendedKeyUsage {
     	      this.objectIdPaths = defaults.objectIdPaths;
         }
 
-        public Builder setObjectIdPaths(List<Integer> objectIdPaths) {
+        public Builder objectIdPaths(List<Integer> objectIdPaths) {
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }

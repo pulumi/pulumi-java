@@ -103,42 +103,42 @@ public final class ServerAzureADOnlyAuthenticationArgs extends io.pulumi.resourc
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setAuthenticationName(@Nullable Input<String> authenticationName) {
+        public Builder authenticationName(@Nullable Input<String> authenticationName) {
             this.authenticationName = authenticationName;
             return this;
         }
 
-        public Builder setAuthenticationName(@Nullable String authenticationName) {
+        public Builder authenticationName(@Nullable String authenticationName) {
             this.authenticationName = Input.ofNullable(authenticationName);
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Input<Boolean> azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Objects.requireNonNull(azureADOnlyAuthentication);
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = Input.of(Objects.requireNonNull(azureADOnlyAuthentication));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

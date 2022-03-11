@@ -90,22 +90,22 @@ public final class MethodIntegration {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"cacheKeyParameters","cacheNamespace","connectionId","connectionType","contentHandling","credentials","integrationHttpMethod","integrationResponses","passthroughBehavior","requestParameters","requestTemplates","timeoutInMillis","type","uri"})
+    @OutputCustomType.Constructor
     private MethodIntegration(
-        @Nullable List<String> cacheKeyParameters,
-        @Nullable String cacheNamespace,
-        @Nullable String connectionId,
-        @Nullable MethodIntegrationConnectionType connectionType,
-        @Nullable MethodIntegrationContentHandling contentHandling,
-        @Nullable String credentials,
-        @Nullable String integrationHttpMethod,
-        @Nullable List<MethodIntegrationResponse> integrationResponses,
-        @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
-        @Nullable Object requestParameters,
-        @Nullable Object requestTemplates,
-        @Nullable Integer timeoutInMillis,
-        MethodIntegrationType type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("cacheKeyParameters") @Nullable List<String> cacheKeyParameters,
+        @OutputCustomType.Parameter("cacheNamespace") @Nullable String cacheNamespace,
+        @OutputCustomType.Parameter("connectionId") @Nullable String connectionId,
+        @OutputCustomType.Parameter("connectionType") @Nullable MethodIntegrationConnectionType connectionType,
+        @OutputCustomType.Parameter("contentHandling") @Nullable MethodIntegrationContentHandling contentHandling,
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("integrationHttpMethod") @Nullable String integrationHttpMethod,
+        @OutputCustomType.Parameter("integrationResponses") @Nullable List<MethodIntegrationResponse> integrationResponses,
+        @OutputCustomType.Parameter("passthroughBehavior") @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior,
+        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @OutputCustomType.Parameter("requestTemplates") @Nullable Object requestTemplates,
+        @OutputCustomType.Parameter("timeoutInMillis") @Nullable Integer timeoutInMillis,
+        @OutputCustomType.Parameter("type") MethodIntegrationType type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.cacheKeyParameters = cacheKeyParameters;
         this.cacheNamespace = cacheNamespace;
         this.connectionId = connectionId;
@@ -267,72 +267,72 @@ public final class MethodIntegration {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
+        public Builder cacheKeyParameters(@Nullable List<String> cacheKeyParameters) {
             this.cacheKeyParameters = cacheKeyParameters;
             return this;
         }
 
-        public Builder setCacheNamespace(@Nullable String cacheNamespace) {
+        public Builder cacheNamespace(@Nullable String cacheNamespace) {
             this.cacheNamespace = cacheNamespace;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionType(@Nullable MethodIntegrationConnectionType connectionType) {
+        public Builder connectionType(@Nullable MethodIntegrationConnectionType connectionType) {
             this.connectionType = connectionType;
             return this;
         }
 
-        public Builder setContentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
+        public Builder contentHandling(@Nullable MethodIntegrationContentHandling contentHandling) {
             this.contentHandling = contentHandling;
             return this;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setIntegrationHttpMethod(@Nullable String integrationHttpMethod) {
+        public Builder integrationHttpMethod(@Nullable String integrationHttpMethod) {
             this.integrationHttpMethod = integrationHttpMethod;
             return this;
         }
 
-        public Builder setIntegrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
+        public Builder integrationResponses(@Nullable List<MethodIntegrationResponse> integrationResponses) {
             this.integrationResponses = integrationResponses;
             return this;
         }
 
-        public Builder setPassthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
+        public Builder passthroughBehavior(@Nullable MethodIntegrationPassthroughBehavior passthroughBehavior) {
             this.passthroughBehavior = passthroughBehavior;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Object requestParameters) {
+        public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestTemplates(@Nullable Object requestTemplates) {
+        public Builder requestTemplates(@Nullable Object requestTemplates) {
             this.requestTemplates = requestTemplates;
             return this;
         }
 
-        public Builder setTimeoutInMillis(@Nullable Integer timeoutInMillis) {
+        public Builder timeoutInMillis(@Nullable Integer timeoutInMillis) {
             this.timeoutInMillis = timeoutInMillis;
             return this;
         }
 
-        public Builder setType(MethodIntegrationType type) {
+        public Builder type(MethodIntegrationType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

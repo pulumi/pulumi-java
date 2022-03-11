@@ -29,11 +29,11 @@ public final class CronJobStatus {
      */
     private final @Nullable String lastSuccessfulTime;
 
-    @OutputCustomType.Constructor({"active","lastScheduleTime","lastSuccessfulTime"})
+    @OutputCustomType.Constructor
     private CronJobStatus(
-        @Nullable List<ObjectReference> active,
-        @Nullable String lastScheduleTime,
-        @Nullable String lastSuccessfulTime) {
+        @OutputCustomType.Parameter("active") @Nullable List<ObjectReference> active,
+        @OutputCustomType.Parameter("lastScheduleTime") @Nullable String lastScheduleTime,
+        @OutputCustomType.Parameter("lastSuccessfulTime") @Nullable String lastSuccessfulTime) {
         this.active = active;
         this.lastScheduleTime = lastScheduleTime;
         this.lastSuccessfulTime = lastSuccessfulTime;
@@ -85,17 +85,17 @@ public final class CronJobStatus {
     	      this.lastSuccessfulTime = defaults.lastSuccessfulTime;
         }
 
-        public Builder setActive(@Nullable List<ObjectReference> active) {
+        public Builder active(@Nullable List<ObjectReference> active) {
             this.active = active;
             return this;
         }
 
-        public Builder setLastScheduleTime(@Nullable String lastScheduleTime) {
+        public Builder lastScheduleTime(@Nullable String lastScheduleTime) {
             this.lastScheduleTime = lastScheduleTime;
             return this;
         }
 
-        public Builder setLastSuccessfulTime(@Nullable String lastSuccessfulTime) {
+        public Builder lastSuccessfulTime(@Nullable String lastSuccessfulTime) {
             this.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }

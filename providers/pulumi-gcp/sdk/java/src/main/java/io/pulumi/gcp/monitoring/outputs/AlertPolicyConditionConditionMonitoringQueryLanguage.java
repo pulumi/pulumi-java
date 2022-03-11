@@ -50,11 +50,11 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
      */
     private final @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger;
 
-    @OutputCustomType.Constructor({"duration","query","trigger"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionMonitoringQueryLanguage(
-        String duration,
-        String query,
-        @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
         this.duration = duration;
         this.query = query;
         this.trigger = trigger;
@@ -128,17 +128,17 @@ public final class AlertPolicyConditionConditionMonitoringQueryLanguage {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionMonitoringQueryLanguageTrigger trigger) {
             this.trigger = trigger;
             return this;
         }

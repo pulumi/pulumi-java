@@ -37,13 +37,13 @@ public final class ConfigVariableResponse {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"boolValue","intValue","key","secretValue","stringValue"})
+    @OutputCustomType.Constructor
     private ConfigVariableResponse(
-        Boolean boolValue,
-        String intValue,
-        String key,
-        SecretResponse secretValue,
-        String stringValue) {
+        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
+        @OutputCustomType.Parameter("intValue") String intValue,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("secretValue") SecretResponse secretValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.boolValue = boolValue;
         this.intValue = intValue;
         this.key = key;
@@ -115,27 +115,27 @@ public final class ConfigVariableResponse {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBoolValue(Boolean boolValue) {
+        public Builder boolValue(Boolean boolValue) {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
 
-        public Builder setIntValue(String intValue) {
+        public Builder intValue(String intValue) {
             this.intValue = Objects.requireNonNull(intValue);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setSecretValue(SecretResponse secretValue) {
+        public Builder secretValue(SecretResponse secretValue) {
             this.secretValue = Objects.requireNonNull(secretValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

@@ -91,17 +91,17 @@ public final class SecretAuthInfoResponse extends io.pulumi.resources.InvokeArgs
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAuthType(String authType) {
+        public Builder authType(String authType) {
             this.authType = Objects.requireNonNull(authType);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }

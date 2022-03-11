@@ -22,10 +22,10 @@ public final class FlowEndpointsConfigurationResponse {
      */
     private final @Nullable FlowEndpointsResponse workflow;
 
-    @OutputCustomType.Constructor({"connector","workflow"})
+    @OutputCustomType.Constructor
     private FlowEndpointsConfigurationResponse(
-        @Nullable FlowEndpointsResponse connector,
-        @Nullable FlowEndpointsResponse workflow) {
+        @OutputCustomType.Parameter("connector") @Nullable FlowEndpointsResponse connector,
+        @OutputCustomType.Parameter("workflow") @Nullable FlowEndpointsResponse workflow) {
         this.connector = connector;
         this.workflow = workflow;
     }
@@ -67,12 +67,12 @@ public final class FlowEndpointsConfigurationResponse {
     	      this.workflow = defaults.workflow;
         }
 
-        public Builder setConnector(@Nullable FlowEndpointsResponse connector) {
+        public Builder connector(@Nullable FlowEndpointsResponse connector) {
             this.connector = connector;
             return this;
         }
 
-        public Builder setWorkflow(@Nullable FlowEndpointsResponse workflow) {
+        public Builder workflow(@Nullable FlowEndpointsResponse workflow) {
             this.workflow = workflow;
             return this;
         }

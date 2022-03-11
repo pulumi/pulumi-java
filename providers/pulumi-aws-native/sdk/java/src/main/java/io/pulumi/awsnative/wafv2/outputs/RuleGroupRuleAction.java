@@ -35,12 +35,12 @@ public final class RuleGroupRuleAction {
      */
     private final @Nullable RuleGroupRuleActionCountProperties count;
 
-    @OutputCustomType.Constructor({"allow","block","captcha","count"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleAction(
-        @Nullable RuleGroupRuleActionAllowProperties allow,
-        @Nullable RuleGroupRuleActionBlockProperties block,
-        @Nullable RuleGroupRuleActionCaptchaProperties captcha,
-        @Nullable RuleGroupRuleActionCountProperties count) {
+        @OutputCustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllowProperties allow,
+        @OutputCustomType.Parameter("block") @Nullable RuleGroupRuleActionBlockProperties block,
+        @OutputCustomType.Parameter("captcha") @Nullable RuleGroupRuleActionCaptchaProperties captcha,
+        @OutputCustomType.Parameter("count") @Nullable RuleGroupRuleActionCountProperties count) {
         this.allow = allow;
         this.block = block;
         this.captcha = captcha;
@@ -102,22 +102,22 @@ public final class RuleGroupRuleAction {
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable RuleGroupRuleActionAllowProperties allow) {
+        public Builder allow(@Nullable RuleGroupRuleActionAllowProperties allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable RuleGroupRuleActionBlockProperties block) {
+        public Builder block(@Nullable RuleGroupRuleActionBlockProperties block) {
             this.block = block;
             return this;
         }
 
-        public Builder setCaptcha(@Nullable RuleGroupRuleActionCaptchaProperties captcha) {
+        public Builder captcha(@Nullable RuleGroupRuleActionCaptchaProperties captcha) {
             this.captcha = captcha;
             return this;
         }
 
-        public Builder setCount(@Nullable RuleGroupRuleActionCountProperties count) {
+        public Builder count(@Nullable RuleGroupRuleActionCountProperties count) {
             this.count = count;
             return this;
         }

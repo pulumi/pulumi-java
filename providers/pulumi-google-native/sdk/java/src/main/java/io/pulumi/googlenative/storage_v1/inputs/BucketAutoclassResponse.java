@@ -73,12 +73,12 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
     	      this.toggleTime = defaults.toggleTime;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setToggleTime(String toggleTime) {
+        public Builder toggleTime(String toggleTime) {
             this.toggleTime = Objects.requireNonNull(toggleTime);
             return this;
         }

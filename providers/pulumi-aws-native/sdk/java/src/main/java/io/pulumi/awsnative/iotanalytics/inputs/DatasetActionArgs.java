@@ -76,32 +76,32 @@ public final class DatasetActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryAction = defaults.queryAction;
         }
 
-        public Builder setActionName(Input<String> actionName) {
+        public Builder actionName(Input<String> actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }
 
-        public Builder setContainerAction(@Nullable Input<DatasetContainerActionArgs> containerAction) {
+        public Builder containerAction(@Nullable Input<DatasetContainerActionArgs> containerAction) {
             this.containerAction = containerAction;
             return this;
         }
 
-        public Builder setContainerAction(@Nullable DatasetContainerActionArgs containerAction) {
+        public Builder containerAction(@Nullable DatasetContainerActionArgs containerAction) {
             this.containerAction = Input.ofNullable(containerAction);
             return this;
         }
 
-        public Builder setQueryAction(@Nullable Input<DatasetQueryActionArgs> queryAction) {
+        public Builder queryAction(@Nullable Input<DatasetQueryActionArgs> queryAction) {
             this.queryAction = queryAction;
             return this;
         }
 
-        public Builder setQueryAction(@Nullable DatasetQueryActionArgs queryAction) {
+        public Builder queryAction(@Nullable DatasetQueryActionArgs queryAction) {
             this.queryAction = Input.ofNullable(queryAction);
             return this;
         }

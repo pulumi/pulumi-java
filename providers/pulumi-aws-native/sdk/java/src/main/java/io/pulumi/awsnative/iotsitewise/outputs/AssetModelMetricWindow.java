@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AssetModelMetricWindow {
     private final @Nullable AssetModelTumblingWindow tumbling;
 
-    @OutputCustomType.Constructor({"tumbling"})
-    private AssetModelMetricWindow(@Nullable AssetModelTumblingWindow tumbling) {
+    @OutputCustomType.Constructor
+    private AssetModelMetricWindow(@OutputCustomType.Parameter("tumbling") @Nullable AssetModelTumblingWindow tumbling) {
         this.tumbling = tumbling;
     }
 
@@ -42,7 +42,7 @@ public final class AssetModelMetricWindow {
     	      this.tumbling = defaults.tumbling;
         }
 
-        public Builder setTumbling(@Nullable AssetModelTumblingWindow tumbling) {
+        public Builder tumbling(@Nullable AssetModelTumblingWindow tumbling) {
             this.tumbling = tumbling;
             return this;
         }

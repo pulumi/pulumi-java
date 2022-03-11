@@ -26,11 +26,11 @@ public final class NodeManagementResponse {
      */
     private final AutoUpgradeOptionsResponse upgradeOptions;
 
-    @OutputCustomType.Constructor({"autoRepair","autoUpgrade","upgradeOptions"})
+    @OutputCustomType.Constructor
     private NodeManagementResponse(
-        Boolean autoRepair,
-        Boolean autoUpgrade,
-        AutoUpgradeOptionsResponse upgradeOptions) {
+        @OutputCustomType.Parameter("autoRepair") Boolean autoRepair,
+        @OutputCustomType.Parameter("autoUpgrade") Boolean autoUpgrade,
+        @OutputCustomType.Parameter("upgradeOptions") AutoUpgradeOptionsResponse upgradeOptions) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
         this.upgradeOptions = upgradeOptions;
@@ -82,17 +82,17 @@ public final class NodeManagementResponse {
     	      this.upgradeOptions = defaults.upgradeOptions;
         }
 
-        public Builder setAutoRepair(Boolean autoRepair) {
+        public Builder autoRepair(Boolean autoRepair) {
             this.autoRepair = Objects.requireNonNull(autoRepair);
             return this;
         }
 
-        public Builder setAutoUpgrade(Boolean autoUpgrade) {
+        public Builder autoUpgrade(Boolean autoUpgrade) {
             this.autoUpgrade = Objects.requireNonNull(autoUpgrade);
             return this;
         }
 
-        public Builder setUpgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
+        public Builder upgradeOptions(AutoUpgradeOptionsResponse upgradeOptions) {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }

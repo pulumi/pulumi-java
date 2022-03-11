@@ -66,18 +66,18 @@ public final class ServerEndpointCloudTieringStatusResponse {
      */
     private final CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus;
 
-    @OutputCustomType.Constructor({"cachePerformance","datePolicyStatus","filesNotTiering","health","healthLastUpdatedTimestamp","lastCloudTieringResult","lastSuccessTimestamp","lastUpdatedTimestamp","spaceSavings","volumeFreeSpacePolicyStatus"})
+    @OutputCustomType.Constructor
     private ServerEndpointCloudTieringStatusResponse(
-        CloudTieringCachePerformanceResponse cachePerformance,
-        CloudTieringDatePolicyStatusResponse datePolicyStatus,
-        CloudTieringFilesNotTieringResponse filesNotTiering,
-        String health,
-        String healthLastUpdatedTimestamp,
-        Integer lastCloudTieringResult,
-        String lastSuccessTimestamp,
-        String lastUpdatedTimestamp,
-        CloudTieringSpaceSavingsResponse spaceSavings,
-        CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
+        @OutputCustomType.Parameter("cachePerformance") CloudTieringCachePerformanceResponse cachePerformance,
+        @OutputCustomType.Parameter("datePolicyStatus") CloudTieringDatePolicyStatusResponse datePolicyStatus,
+        @OutputCustomType.Parameter("filesNotTiering") CloudTieringFilesNotTieringResponse filesNotTiering,
+        @OutputCustomType.Parameter("health") String health,
+        @OutputCustomType.Parameter("healthLastUpdatedTimestamp") String healthLastUpdatedTimestamp,
+        @OutputCustomType.Parameter("lastCloudTieringResult") Integer lastCloudTieringResult,
+        @OutputCustomType.Parameter("lastSuccessTimestamp") String lastSuccessTimestamp,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp,
+        @OutputCustomType.Parameter("spaceSavings") CloudTieringSpaceSavingsResponse spaceSavings,
+        @OutputCustomType.Parameter("volumeFreeSpacePolicyStatus") CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
         this.cachePerformance = cachePerformance;
         this.datePolicyStatus = datePolicyStatus;
         this.filesNotTiering = filesNotTiering;
@@ -199,52 +199,52 @@ public final class ServerEndpointCloudTieringStatusResponse {
     	      this.volumeFreeSpacePolicyStatus = defaults.volumeFreeSpacePolicyStatus;
         }
 
-        public Builder setCachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
+        public Builder cachePerformance(CloudTieringCachePerformanceResponse cachePerformance) {
             this.cachePerformance = Objects.requireNonNull(cachePerformance);
             return this;
         }
 
-        public Builder setDatePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
+        public Builder datePolicyStatus(CloudTieringDatePolicyStatusResponse datePolicyStatus) {
             this.datePolicyStatus = Objects.requireNonNull(datePolicyStatus);
             return this;
         }
 
-        public Builder setFilesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
+        public Builder filesNotTiering(CloudTieringFilesNotTieringResponse filesNotTiering) {
             this.filesNotTiering = Objects.requireNonNull(filesNotTiering);
             return this;
         }
 
-        public Builder setHealth(String health) {
+        public Builder health(String health) {
             this.health = Objects.requireNonNull(health);
             return this;
         }
 
-        public Builder setHealthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
+        public Builder healthLastUpdatedTimestamp(String healthLastUpdatedTimestamp) {
             this.healthLastUpdatedTimestamp = Objects.requireNonNull(healthLastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setLastCloudTieringResult(Integer lastCloudTieringResult) {
+        public Builder lastCloudTieringResult(Integer lastCloudTieringResult) {
             this.lastCloudTieringResult = Objects.requireNonNull(lastCloudTieringResult);
             return this;
         }
 
-        public Builder setLastSuccessTimestamp(String lastSuccessTimestamp) {
+        public Builder lastSuccessTimestamp(String lastSuccessTimestamp) {
             this.lastSuccessTimestamp = Objects.requireNonNull(lastSuccessTimestamp);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }
 
-        public Builder setSpaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
+        public Builder spaceSavings(CloudTieringSpaceSavingsResponse spaceSavings) {
             this.spaceSavings = Objects.requireNonNull(spaceSavings);
             return this;
         }
 
-        public Builder setVolumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
+        public Builder volumeFreeSpacePolicyStatus(CloudTieringVolumeFreeSpacePolicyStatusResponse volumeFreeSpacePolicyStatus) {
             this.volumeFreeSpacePolicyStatus = Objects.requireNonNull(volumeFreeSpacePolicyStatus);
             return this;
         }

@@ -92,32 +92,32 @@ public final class AgreementContentArgs extends io.pulumi.resources.ResourceArgs
     	      this.x12 = defaults.x12;
         }
 
-        public Builder setAS2(@Nullable Input<AS2AgreementContentArgs> aS2) {
+        public Builder aS2(@Nullable Input<AS2AgreementContentArgs> aS2) {
             this.aS2 = aS2;
             return this;
         }
 
-        public Builder setAS2(@Nullable AS2AgreementContentArgs aS2) {
+        public Builder aS2(@Nullable AS2AgreementContentArgs aS2) {
             this.aS2 = Input.ofNullable(aS2);
             return this;
         }
 
-        public Builder setEdifact(@Nullable Input<EdifactAgreementContentArgs> edifact) {
+        public Builder edifact(@Nullable Input<EdifactAgreementContentArgs> edifact) {
             this.edifact = edifact;
             return this;
         }
 
-        public Builder setEdifact(@Nullable EdifactAgreementContentArgs edifact) {
+        public Builder edifact(@Nullable EdifactAgreementContentArgs edifact) {
             this.edifact = Input.ofNullable(edifact);
             return this;
         }
 
-        public Builder setX12(@Nullable Input<X12AgreementContentArgs> x12) {
+        public Builder x12(@Nullable Input<X12AgreementContentArgs> x12) {
             this.x12 = x12;
             return this;
         }
 
-        public Builder setX12(@Nullable X12AgreementContentArgs x12) {
+        public Builder x12(@Nullable X12AgreementContentArgs x12) {
             this.x12 = Input.ofNullable(x12);
             return this;
         }

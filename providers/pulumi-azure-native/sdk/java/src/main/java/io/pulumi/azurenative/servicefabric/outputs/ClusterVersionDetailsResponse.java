@@ -27,11 +27,11 @@ public final class ClusterVersionDetailsResponse {
      */
     private final @Nullable String supportExpiryUtc;
 
-    @OutputCustomType.Constructor({"codeVersion","environment","supportExpiryUtc"})
+    @OutputCustomType.Constructor
     private ClusterVersionDetailsResponse(
-        @Nullable String codeVersion,
-        @Nullable String environment,
-        @Nullable String supportExpiryUtc) {
+        @OutputCustomType.Parameter("codeVersion") @Nullable String codeVersion,
+        @OutputCustomType.Parameter("environment") @Nullable String environment,
+        @OutputCustomType.Parameter("supportExpiryUtc") @Nullable String supportExpiryUtc) {
         this.codeVersion = codeVersion;
         this.environment = environment;
         this.supportExpiryUtc = supportExpiryUtc;
@@ -83,17 +83,17 @@ public final class ClusterVersionDetailsResponse {
     	      this.supportExpiryUtc = defaults.supportExpiryUtc;
         }
 
-        public Builder setCodeVersion(@Nullable String codeVersion) {
+        public Builder codeVersion(@Nullable String codeVersion) {
             this.codeVersion = codeVersion;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setSupportExpiryUtc(@Nullable String supportExpiryUtc) {
+        public Builder supportExpiryUtc(@Nullable String supportExpiryUtc) {
             this.supportExpiryUtc = supportExpiryUtc;
             return this;
         }

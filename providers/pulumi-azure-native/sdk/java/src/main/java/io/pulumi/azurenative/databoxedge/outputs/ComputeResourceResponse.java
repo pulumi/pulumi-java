@@ -21,10 +21,10 @@ public final class ComputeResourceResponse {
      */
     private final Integer processorCount;
 
-    @OutputCustomType.Constructor({"memoryInGB","processorCount"})
+    @OutputCustomType.Constructor
     private ComputeResourceResponse(
-        Double memoryInGB,
-        Integer processorCount) {
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB,
+        @OutputCustomType.Parameter("processorCount") Integer processorCount) {
         this.memoryInGB = memoryInGB;
         this.processorCount = processorCount;
     }
@@ -66,12 +66,12 @@ public final class ComputeResourceResponse {
     	      this.processorCount = defaults.processorCount;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
 
-        public Builder setProcessorCount(Integer processorCount) {
+        public Builder processorCount(Integer processorCount) {
             this.processorCount = Objects.requireNonNull(processorCount);
             return this;
         }

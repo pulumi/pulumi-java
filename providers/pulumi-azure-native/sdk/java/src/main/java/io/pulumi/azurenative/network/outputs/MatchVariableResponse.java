@@ -22,10 +22,10 @@ public final class MatchVariableResponse {
      */
     private final String variableName;
 
-    @OutputCustomType.Constructor({"selector","variableName"})
+    @OutputCustomType.Constructor
     private MatchVariableResponse(
-        @Nullable String selector,
-        String variableName) {
+        @OutputCustomType.Parameter("selector") @Nullable String selector,
+        @OutputCustomType.Parameter("variableName") String variableName) {
         this.selector = selector;
         this.variableName = variableName;
     }
@@ -67,12 +67,12 @@ public final class MatchVariableResponse {
     	      this.variableName = defaults.variableName;
         }
 
-        public Builder setSelector(@Nullable String selector) {
+        public Builder selector(@Nullable String selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setVariableName(String variableName) {
+        public Builder variableName(String variableName) {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }

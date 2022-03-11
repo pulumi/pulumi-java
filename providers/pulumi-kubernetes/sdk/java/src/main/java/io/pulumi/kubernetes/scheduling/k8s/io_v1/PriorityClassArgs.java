@@ -153,72 +153,72 @@ public final class PriorityClassArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalDefault(@Nullable Input<Boolean> globalDefault) {
+        public Builder globalDefault(@Nullable Input<Boolean> globalDefault) {
             this.globalDefault = globalDefault;
             return this;
         }
 
-        public Builder setGlobalDefault(@Nullable Boolean globalDefault) {
+        public Builder globalDefault(@Nullable Boolean globalDefault) {
             this.globalDefault = Input.ofNullable(globalDefault);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(@Nullable Input<ObjectMetaArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMetaArgs metadata) {
+        public Builder metadata(@Nullable ObjectMetaArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable Input<String> preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable Input<String> preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable String preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = Input.ofNullable(preemptionPolicy);
             return this;
         }
 
-        public Builder setValue(Input<Integer> value) {
+        public Builder value(Input<Integer> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

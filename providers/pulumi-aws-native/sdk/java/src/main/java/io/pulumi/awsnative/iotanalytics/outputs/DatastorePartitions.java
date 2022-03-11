@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DatastorePartitions {
     private final @Nullable List<DatastorePartition> partitions;
 
-    @OutputCustomType.Constructor({"partitions"})
-    private DatastorePartitions(@Nullable List<DatastorePartition> partitions) {
+    @OutputCustomType.Constructor
+    private DatastorePartitions(@OutputCustomType.Parameter("partitions") @Nullable List<DatastorePartition> partitions) {
         this.partitions = partitions;
     }
 
@@ -42,7 +42,7 @@ public final class DatastorePartitions {
     	      this.partitions = defaults.partitions;
         }
 
-        public Builder setPartitions(@Nullable List<DatastorePartition> partitions) {
+        public Builder partitions(@Nullable List<DatastorePartition> partitions) {
             this.partitions = partitions;
             return this;
         }

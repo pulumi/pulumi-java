@@ -21,10 +21,10 @@ public final class SqlServerDatabaseDetailsResponse {
      */
     private final String recoveryModel;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","recoveryModel"})
+    @OutputCustomType.Constructor
     private SqlServerDatabaseDetailsResponse(
-        Integer compatibilityLevel,
-        String recoveryModel) {
+        @OutputCustomType.Parameter("compatibilityLevel") Integer compatibilityLevel,
+        @OutputCustomType.Parameter("recoveryModel") String recoveryModel) {
         this.compatibilityLevel = compatibilityLevel;
         this.recoveryModel = recoveryModel;
     }
@@ -66,12 +66,12 @@ public final class SqlServerDatabaseDetailsResponse {
     	      this.recoveryModel = defaults.recoveryModel;
         }
 
-        public Builder setCompatibilityLevel(Integer compatibilityLevel) {
+        public Builder compatibilityLevel(Integer compatibilityLevel) {
             this.compatibilityLevel = Objects.requireNonNull(compatibilityLevel);
             return this;
         }
 
-        public Builder setRecoveryModel(String recoveryModel) {
+        public Builder recoveryModel(String recoveryModel) {
             this.recoveryModel = Objects.requireNonNull(recoveryModel);
             return this;
         }

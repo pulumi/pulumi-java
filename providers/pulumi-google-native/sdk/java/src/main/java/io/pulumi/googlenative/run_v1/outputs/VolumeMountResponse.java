@@ -31,12 +31,12 @@ public final class VolumeMountResponse {
      */
     private final String subPath;
 
-    @OutputCustomType.Constructor({"mountPath","name","readOnly","subPath"})
+    @OutputCustomType.Constructor
     private VolumeMountResponse(
-        String mountPath,
-        String name,
-        Boolean readOnly,
-        String subPath) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
+        @OutputCustomType.Parameter("subPath") String subPath) {
         this.mountPath = mountPath;
         this.name = name;
         this.readOnly = readOnly;
@@ -98,22 +98,22 @@ public final class VolumeMountResponse {
     	      this.subPath = defaults.subPath;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(Boolean readOnly) {
+        public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
 
-        public Builder setSubPath(String subPath) {
+        public Builder subPath(String subPath) {
             this.subPath = Objects.requireNonNull(subPath);
             return this;
         }

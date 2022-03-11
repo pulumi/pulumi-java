@@ -16,11 +16,11 @@ public final class InAppTemplateBodyConfig {
     private final @Nullable String body;
     private final @Nullable String textColor;
 
-    @OutputCustomType.Constructor({"alignment","body","textColor"})
+    @OutputCustomType.Constructor
     private InAppTemplateBodyConfig(
-        @Nullable InAppTemplateAlignment alignment,
-        @Nullable String body,
-        @Nullable String textColor) {
+        @OutputCustomType.Parameter("alignment") @Nullable InAppTemplateAlignment alignment,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("textColor") @Nullable String textColor) {
         this.alignment = alignment;
         this.body = body;
         this.textColor = textColor;
@@ -60,17 +60,17 @@ public final class InAppTemplateBodyConfig {
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setAlignment(@Nullable InAppTemplateAlignment alignment) {
+        public Builder alignment(@Nullable InAppTemplateAlignment alignment) {
             this.alignment = alignment;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

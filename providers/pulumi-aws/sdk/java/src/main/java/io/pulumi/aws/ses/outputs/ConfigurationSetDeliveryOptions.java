@@ -17,8 +17,8 @@ public final class ConfigurationSetDeliveryOptions {
      */
     private final @Nullable String tlsPolicy;
 
-    @OutputCustomType.Constructor({"tlsPolicy"})
-    private ConfigurationSetDeliveryOptions(@Nullable String tlsPolicy) {
+    @OutputCustomType.Constructor
+    private ConfigurationSetDeliveryOptions(@OutputCustomType.Parameter("tlsPolicy") @Nullable String tlsPolicy) {
         this.tlsPolicy = tlsPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationSetDeliveryOptions {
     	      this.tlsPolicy = defaults.tlsPolicy;
         }
 
-        public Builder setTlsPolicy(@Nullable String tlsPolicy) {
+        public Builder tlsPolicy(@Nullable String tlsPolicy) {
             this.tlsPolicy = tlsPolicy;
             return this;
         }

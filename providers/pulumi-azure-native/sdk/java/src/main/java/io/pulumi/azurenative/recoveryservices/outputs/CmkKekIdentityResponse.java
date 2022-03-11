@@ -23,10 +23,10 @@ public final class CmkKekIdentityResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"useSystemAssignedIdentity","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private CmkKekIdentityResponse(
-        @Nullable Boolean useSystemAssignedIdentity,
-        @Nullable String userAssignedIdentity) {
+        @OutputCustomType.Parameter("useSystemAssignedIdentity") @Nullable Boolean useSystemAssignedIdentity,
+        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.useSystemAssignedIdentity = useSystemAssignedIdentity;
         this.userAssignedIdentity = userAssignedIdentity;
     }
@@ -68,12 +68,12 @@ public final class CmkKekIdentityResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUseSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
+        public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
             this.useSystemAssignedIdentity = useSystemAssignedIdentity;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

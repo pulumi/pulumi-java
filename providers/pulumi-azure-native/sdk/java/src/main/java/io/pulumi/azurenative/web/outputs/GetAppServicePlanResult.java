@@ -154,35 +154,35 @@ public final class GetAppServicePlanResult {
      */
     private final @Nullable String workerTierName;
 
-    @OutputCustomType.Constructor({"freeOfferExpirationTime","geoRegion","hostingEnvironmentProfile","hyperV","id","isSpot","isXenon","kind","kubeEnvironmentProfile","location","maximumElasticWorkerCount","maximumNumberOfWorkers","name","numberOfSites","perSiteScaling","provisioningState","reserved","resourceGroup","sku","spotExpirationTime","status","subscription","tags","targetWorkerCount","targetWorkerSizeId","type","workerTierName"})
+    @OutputCustomType.Constructor
     private GetAppServicePlanResult(
-        @Nullable String freeOfferExpirationTime,
-        String geoRegion,
-        @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
-        @Nullable Boolean hyperV,
-        String id,
-        @Nullable Boolean isSpot,
-        @Nullable Boolean isXenon,
-        @Nullable String kind,
-        @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
-        String location,
-        @Nullable Integer maximumElasticWorkerCount,
-        Integer maximumNumberOfWorkers,
-        String name,
-        Integer numberOfSites,
-        @Nullable Boolean perSiteScaling,
-        String provisioningState,
-        @Nullable Boolean reserved,
-        String resourceGroup,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String spotExpirationTime,
-        String status,
-        String subscription,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer targetWorkerCount,
-        @Nullable Integer targetWorkerSizeId,
-        String type,
-        @Nullable String workerTierName) {
+        @OutputCustomType.Parameter("freeOfferExpirationTime") @Nullable String freeOfferExpirationTime,
+        @OutputCustomType.Parameter("geoRegion") String geoRegion,
+        @OutputCustomType.Parameter("hostingEnvironmentProfile") @Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile,
+        @OutputCustomType.Parameter("hyperV") @Nullable Boolean hyperV,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isSpot") @Nullable Boolean isSpot,
+        @OutputCustomType.Parameter("isXenon") @Nullable Boolean isXenon,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("kubeEnvironmentProfile") @Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maximumElasticWorkerCount") @Nullable Integer maximumElasticWorkerCount,
+        @OutputCustomType.Parameter("maximumNumberOfWorkers") Integer maximumNumberOfWorkers,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfSites") Integer numberOfSites,
+        @OutputCustomType.Parameter("perSiteScaling") @Nullable Boolean perSiteScaling,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("reserved") @Nullable Boolean reserved,
+        @OutputCustomType.Parameter("resourceGroup") String resourceGroup,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("spotExpirationTime") @Nullable String spotExpirationTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("subscription") String subscription,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetWorkerCount") @Nullable Integer targetWorkerCount,
+        @OutputCustomType.Parameter("targetWorkerSizeId") @Nullable Integer targetWorkerSizeId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workerTierName") @Nullable String workerTierName) {
         this.freeOfferExpirationTime = freeOfferExpirationTime;
         this.geoRegion = geoRegion;
         this.hostingEnvironmentProfile = hostingEnvironmentProfile;
@@ -475,137 +475,137 @@ public final class GetAppServicePlanResult {
     	      this.workerTierName = defaults.workerTierName;
         }
 
-        public Builder setFreeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
+        public Builder freeOfferExpirationTime(@Nullable String freeOfferExpirationTime) {
             this.freeOfferExpirationTime = freeOfferExpirationTime;
             return this;
         }
 
-        public Builder setGeoRegion(String geoRegion) {
+        public Builder geoRegion(String geoRegion) {
             this.geoRegion = Objects.requireNonNull(geoRegion);
             return this;
         }
 
-        public Builder setHostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
+        public Builder hostingEnvironmentProfile(@Nullable HostingEnvironmentProfileResponse hostingEnvironmentProfile) {
             this.hostingEnvironmentProfile = hostingEnvironmentProfile;
             return this;
         }
 
-        public Builder setHyperV(@Nullable Boolean hyperV) {
+        public Builder hyperV(@Nullable Boolean hyperV) {
             this.hyperV = hyperV;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsSpot(@Nullable Boolean isSpot) {
+        public Builder isSpot(@Nullable Boolean isSpot) {
             this.isSpot = isSpot;
             return this;
         }
 
-        public Builder setIsXenon(@Nullable Boolean isXenon) {
+        public Builder isXenon(@Nullable Boolean isXenon) {
             this.isXenon = isXenon;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKubeEnvironmentProfile(@Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile) {
+        public Builder kubeEnvironmentProfile(@Nullable KubeEnvironmentProfileResponse kubeEnvironmentProfile) {
             this.kubeEnvironmentProfile = kubeEnvironmentProfile;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
+        public Builder maximumElasticWorkerCount(@Nullable Integer maximumElasticWorkerCount) {
             this.maximumElasticWorkerCount = maximumElasticWorkerCount;
             return this;
         }
 
-        public Builder setMaximumNumberOfWorkers(Integer maximumNumberOfWorkers) {
+        public Builder maximumNumberOfWorkers(Integer maximumNumberOfWorkers) {
             this.maximumNumberOfWorkers = Objects.requireNonNull(maximumNumberOfWorkers);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfSites(Integer numberOfSites) {
+        public Builder numberOfSites(Integer numberOfSites) {
             this.numberOfSites = Objects.requireNonNull(numberOfSites);
             return this;
         }
 
-        public Builder setPerSiteScaling(@Nullable Boolean perSiteScaling) {
+        public Builder perSiteScaling(@Nullable Boolean perSiteScaling) {
             this.perSiteScaling = perSiteScaling;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReserved(@Nullable Boolean reserved) {
+        public Builder reserved(@Nullable Boolean reserved) {
             this.reserved = reserved;
             return this;
         }
 
-        public Builder setResourceGroup(String resourceGroup) {
+        public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionResponse sku) {
+        public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSpotExpirationTime(@Nullable String spotExpirationTime) {
+        public Builder spotExpirationTime(@Nullable String spotExpirationTime) {
             this.spotExpirationTime = spotExpirationTime;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetWorkerCount(@Nullable Integer targetWorkerCount) {
+        public Builder targetWorkerCount(@Nullable Integer targetWorkerCount) {
             this.targetWorkerCount = targetWorkerCount;
             return this;
         }
 
-        public Builder setTargetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
+        public Builder targetWorkerSizeId(@Nullable Integer targetWorkerSizeId) {
             this.targetWorkerSizeId = targetWorkerSizeId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkerTierName(@Nullable String workerTierName) {
+        public Builder workerTierName(@Nullable String workerTierName) {
             this.workerTierName = workerTierName;
             return this;
         }

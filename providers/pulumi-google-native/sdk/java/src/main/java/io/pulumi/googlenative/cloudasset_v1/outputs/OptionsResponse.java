@@ -40,14 +40,14 @@ public final class OptionsResponse {
      */
     private final Boolean outputResourceEdges;
 
-    @OutputCustomType.Constructor({"analyzeServiceAccountImpersonation","expandGroups","expandResources","expandRoles","outputGroupEdges","outputResourceEdges"})
+    @OutputCustomType.Constructor
     private OptionsResponse(
-        Boolean analyzeServiceAccountImpersonation,
-        Boolean expandGroups,
-        Boolean expandResources,
-        Boolean expandRoles,
-        Boolean outputGroupEdges,
-        Boolean outputResourceEdges) {
+        @OutputCustomType.Parameter("analyzeServiceAccountImpersonation") Boolean analyzeServiceAccountImpersonation,
+        @OutputCustomType.Parameter("expandGroups") Boolean expandGroups,
+        @OutputCustomType.Parameter("expandResources") Boolean expandResources,
+        @OutputCustomType.Parameter("expandRoles") Boolean expandRoles,
+        @OutputCustomType.Parameter("outputGroupEdges") Boolean outputGroupEdges,
+        @OutputCustomType.Parameter("outputResourceEdges") Boolean outputResourceEdges) {
         this.analyzeServiceAccountImpersonation = analyzeServiceAccountImpersonation;
         this.expandGroups = expandGroups;
         this.expandResources = expandResources;
@@ -129,32 +129,32 @@ public final class OptionsResponse {
     	      this.outputResourceEdges = defaults.outputResourceEdges;
         }
 
-        public Builder setAnalyzeServiceAccountImpersonation(Boolean analyzeServiceAccountImpersonation) {
+        public Builder analyzeServiceAccountImpersonation(Boolean analyzeServiceAccountImpersonation) {
             this.analyzeServiceAccountImpersonation = Objects.requireNonNull(analyzeServiceAccountImpersonation);
             return this;
         }
 
-        public Builder setExpandGroups(Boolean expandGroups) {
+        public Builder expandGroups(Boolean expandGroups) {
             this.expandGroups = Objects.requireNonNull(expandGroups);
             return this;
         }
 
-        public Builder setExpandResources(Boolean expandResources) {
+        public Builder expandResources(Boolean expandResources) {
             this.expandResources = Objects.requireNonNull(expandResources);
             return this;
         }
 
-        public Builder setExpandRoles(Boolean expandRoles) {
+        public Builder expandRoles(Boolean expandRoles) {
             this.expandRoles = Objects.requireNonNull(expandRoles);
             return this;
         }
 
-        public Builder setOutputGroupEdges(Boolean outputGroupEdges) {
+        public Builder outputGroupEdges(Boolean outputGroupEdges) {
             this.outputGroupEdges = Objects.requireNonNull(outputGroupEdges);
             return this;
         }
 
-        public Builder setOutputResourceEdges(Boolean outputResourceEdges) {
+        public Builder outputResourceEdges(Boolean outputResourceEdges) {
             this.outputResourceEdges = Objects.requireNonNull(outputResourceEdges);
             return this;
         }

@@ -20,10 +20,10 @@ public final class TokenRequestStatus {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"expirationTimestamp","token"})
+    @OutputCustomType.Constructor
     private TokenRequestStatus(
-        String expirationTimestamp,
-        String token) {
+        @OutputCustomType.Parameter("expirationTimestamp") String expirationTimestamp,
+        @OutputCustomType.Parameter("token") String token) {
         this.expirationTimestamp = expirationTimestamp;
         this.token = token;
     }
@@ -65,12 +65,12 @@ public final class TokenRequestStatus {
     	      this.token = defaults.token;
         }
 
-        public Builder setExpirationTimestamp(String expirationTimestamp) {
+        public Builder expirationTimestamp(String expirationTimestamp) {
             this.expirationTimestamp = Objects.requireNonNull(expirationTimestamp);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

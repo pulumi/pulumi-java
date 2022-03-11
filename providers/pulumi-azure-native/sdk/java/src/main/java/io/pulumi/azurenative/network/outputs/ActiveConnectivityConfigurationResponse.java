@@ -76,20 +76,20 @@ public final class ActiveConnectivityConfigurationResponse {
      */
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor({"appliesToGroups","commitTime","configurationGroups","connectivityTopology","deleteExistingPeering","description","displayName","hubs","id","isGlobal","provisioningState","region"})
+    @OutputCustomType.Constructor
     private ActiveConnectivityConfigurationResponse(
-        @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
-        @Nullable String commitTime,
-        @Nullable List<ConfigurationGroupResponse> configurationGroups,
-        String connectivityTopology,
-        @Nullable String deleteExistingPeering,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<HubResponse> hubs,
-        @Nullable String id,
-        @Nullable String isGlobal,
-        String provisioningState,
-        @Nullable String region) {
+        @OutputCustomType.Parameter("appliesToGroups") @Nullable List<ConnectivityGroupItemResponse> appliesToGroups,
+        @OutputCustomType.Parameter("commitTime") @Nullable String commitTime,
+        @OutputCustomType.Parameter("configurationGroups") @Nullable List<ConfigurationGroupResponse> configurationGroups,
+        @OutputCustomType.Parameter("connectivityTopology") String connectivityTopology,
+        @OutputCustomType.Parameter("deleteExistingPeering") @Nullable String deleteExistingPeering,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("hubs") @Nullable List<HubResponse> hubs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("isGlobal") @Nullable String isGlobal,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("region") @Nullable String region) {
         this.appliesToGroups = appliesToGroups;
         this.commitTime = commitTime;
         this.configurationGroups = configurationGroups;
@@ -231,62 +231,62 @@ public final class ActiveConnectivityConfigurationResponse {
     	      this.region = defaults.region;
         }
 
-        public Builder setAppliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
+        public Builder appliesToGroups(@Nullable List<ConnectivityGroupItemResponse> appliesToGroups) {
             this.appliesToGroups = appliesToGroups;
             return this;
         }
 
-        public Builder setCommitTime(@Nullable String commitTime) {
+        public Builder commitTime(@Nullable String commitTime) {
             this.commitTime = commitTime;
             return this;
         }
 
-        public Builder setConfigurationGroups(@Nullable List<ConfigurationGroupResponse> configurationGroups) {
+        public Builder configurationGroups(@Nullable List<ConfigurationGroupResponse> configurationGroups) {
             this.configurationGroups = configurationGroups;
             return this;
         }
 
-        public Builder setConnectivityTopology(String connectivityTopology) {
+        public Builder connectivityTopology(String connectivityTopology) {
             this.connectivityTopology = Objects.requireNonNull(connectivityTopology);
             return this;
         }
 
-        public Builder setDeleteExistingPeering(@Nullable String deleteExistingPeering) {
+        public Builder deleteExistingPeering(@Nullable String deleteExistingPeering) {
             this.deleteExistingPeering = deleteExistingPeering;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setHubs(@Nullable List<HubResponse> hubs) {
+        public Builder hubs(@Nullable List<HubResponse> hubs) {
             this.hubs = hubs;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIsGlobal(@Nullable String isGlobal) {
+        public Builder isGlobal(@Nullable String isGlobal) {
             this.isGlobal = isGlobal;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }

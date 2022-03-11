@@ -17,8 +17,8 @@ public final class LocationSMBMountOptions {
      */
     private final @Nullable LocationSMBMountOptionsVersion version;
 
-    @OutputCustomType.Constructor({"version"})
-    private LocationSMBMountOptions(@Nullable LocationSMBMountOptionsVersion version) {
+    @OutputCustomType.Constructor
+    private LocationSMBMountOptions(@OutputCustomType.Parameter("version") @Nullable LocationSMBMountOptionsVersion version) {
         this.version = version;
     }
 
@@ -50,7 +50,7 @@ public final class LocationSMBMountOptions {
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(@Nullable LocationSMBMountOptionsVersion version) {
+        public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
             this.version = version;
             return this;
         }

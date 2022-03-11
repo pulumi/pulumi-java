@@ -76,22 +76,22 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
     	      this.ledgerRoleName = defaults.ledgerRoleName;
         }
 
-        public Builder setCert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Input<String> cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = Input.ofNullable(cert);
             return this;
         }
 
-        public Builder setLedgerRoleName(@Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable Input<Either<String,LedgerRoleName>> ledgerRoleName) {
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
-        public Builder setLedgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
+        public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
             this.ledgerRoleName = Input.ofNullable(ledgerRoleName);
             return this;
         }

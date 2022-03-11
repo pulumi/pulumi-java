@@ -71,22 +71,22 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends io.pulumi.resource
     	      this.range = defaults.range;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setRange(Input<String> range) {
+        public Builder range(Input<String> range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setRange(String range) {
+        public Builder range(String range) {
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }

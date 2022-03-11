@@ -25,11 +25,11 @@ public final class RetentionTagResponse {
      */
     private final String tagName;
 
-    @OutputCustomType.Constructor({"eTag","id","tagName"})
+    @OutputCustomType.Constructor
     private RetentionTagResponse(
-        String eTag,
-        String id,
-        String tagName) {
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("tagName") String tagName) {
         this.eTag = eTag;
         this.id = id;
         this.tagName = tagName;
@@ -81,17 +81,17 @@ public final class RetentionTagResponse {
     	      this.tagName = defaults.tagName;
         }
 
-        public Builder setETag(String eTag) {
+        public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTagName(String tagName) {
+        public Builder tagName(String tagName) {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }

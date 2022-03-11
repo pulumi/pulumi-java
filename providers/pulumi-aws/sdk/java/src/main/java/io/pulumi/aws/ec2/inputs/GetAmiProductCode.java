@@ -60,12 +60,12 @@ public final class GetAmiProductCode extends io.pulumi.resources.InvokeArgs {
     	      this.productCodeType = defaults.productCodeType;
         }
 
-        public Builder setProductCodeId(String productCodeId) {
+        public Builder productCodeId(String productCodeId) {
             this.productCodeId = Objects.requireNonNull(productCodeId);
             return this;
         }
 
-        public Builder setProductCodeType(String productCodeType) {
+        public Builder productCodeType(String productCodeType) {
             this.productCodeType = Objects.requireNonNull(productCodeType);
             return this;
         }

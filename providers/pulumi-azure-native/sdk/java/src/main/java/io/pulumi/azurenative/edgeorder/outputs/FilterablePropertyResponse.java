@@ -21,10 +21,10 @@ public final class FilterablePropertyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"supportedValues","type"})
+    @OutputCustomType.Constructor
     private FilterablePropertyResponse(
-        List<String> supportedValues,
-        String type) {
+        @OutputCustomType.Parameter("supportedValues") List<String> supportedValues,
+        @OutputCustomType.Parameter("type") String type) {
         this.supportedValues = supportedValues;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class FilterablePropertyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSupportedValues(List<String> supportedValues) {
+        public Builder supportedValues(List<String> supportedValues) {
             this.supportedValues = Objects.requireNonNull(supportedValues);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

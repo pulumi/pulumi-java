@@ -17,8 +17,8 @@ public final class VirtualNetworkProfileResponse {
      */
     private final @Nullable String computeSubnetId;
 
-    @OutputCustomType.Constructor({"computeSubnetId"})
-    private VirtualNetworkProfileResponse(@Nullable String computeSubnetId) {
+    @OutputCustomType.Constructor
+    private VirtualNetworkProfileResponse(@OutputCustomType.Parameter("computeSubnetId") @Nullable String computeSubnetId) {
         this.computeSubnetId = computeSubnetId;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualNetworkProfileResponse {
     	      this.computeSubnetId = defaults.computeSubnetId;
         }
 
-        public Builder setComputeSubnetId(@Nullable String computeSubnetId) {
+        public Builder computeSubnetId(@Nullable String computeSubnetId) {
             this.computeSubnetId = computeSubnetId;
             return this;
         }

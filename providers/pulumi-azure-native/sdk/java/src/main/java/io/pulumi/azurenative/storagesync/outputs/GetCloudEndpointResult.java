@@ -72,20 +72,20 @@ public final class GetCloudEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureFileShareName","backupEnabled","friendlyName","id","lastOperationName","lastWorkflowId","name","partnershipId","provisioningState","storageAccountResourceId","storageAccountTenantId","type"})
+    @OutputCustomType.Constructor
     private GetCloudEndpointResult(
-        @Nullable String azureFileShareName,
-        String backupEnabled,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable String lastOperationName,
-        @Nullable String lastWorkflowId,
-        String name,
-        @Nullable String partnershipId,
-        @Nullable String provisioningState,
-        @Nullable String storageAccountResourceId,
-        @Nullable String storageAccountTenantId,
-        String type) {
+        @OutputCustomType.Parameter("azureFileShareName") @Nullable String azureFileShareName,
+        @OutputCustomType.Parameter("backupEnabled") String backupEnabled,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnershipId") @Nullable String partnershipId,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId,
+        @OutputCustomType.Parameter("storageAccountTenantId") @Nullable String storageAccountTenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureFileShareName = azureFileShareName;
         this.backupEnabled = backupEnabled;
         this.friendlyName = friendlyName;
@@ -227,62 +227,62 @@ public final class GetCloudEndpointResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAzureFileShareName(@Nullable String azureFileShareName) {
+        public Builder azureFileShareName(@Nullable String azureFileShareName) {
             this.azureFileShareName = azureFileShareName;
             return this;
         }
 
-        public Builder setBackupEnabled(String backupEnabled) {
+        public Builder backupEnabled(String backupEnabled) {
             this.backupEnabled = Objects.requireNonNull(backupEnabled);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastOperationName(@Nullable String lastOperationName) {
+        public Builder lastOperationName(@Nullable String lastOperationName) {
             this.lastOperationName = lastOperationName;
             return this;
         }
 
-        public Builder setLastWorkflowId(@Nullable String lastWorkflowId) {
+        public Builder lastWorkflowId(@Nullable String lastWorkflowId) {
             this.lastWorkflowId = lastWorkflowId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnershipId(@Nullable String partnershipId) {
+        public Builder partnershipId(@Nullable String partnershipId) {
             this.partnershipId = partnershipId;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
 
-        public Builder setStorageAccountTenantId(@Nullable String storageAccountTenantId) {
+        public Builder storageAccountTenantId(@Nullable String storageAccountTenantId) {
             this.storageAccountTenantId = storageAccountTenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

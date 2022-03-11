@@ -48,12 +48,12 @@ public final class DistributionOriginGroupFailoverCriteriaArgs extends io.pulumi
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setStatusCodes(Input<DistributionStatusCodesArgs> statusCodes) {
+        public Builder statusCodes(Input<DistributionStatusCodesArgs> statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
 
-        public Builder setStatusCodes(DistributionStatusCodesArgs statusCodes) {
+        public Builder statusCodes(DistributionStatusCodesArgs statusCodes) {
             this.statusCodes = Input.of(Objects.requireNonNull(statusCodes));
             return this;
         }

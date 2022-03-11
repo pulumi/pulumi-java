@@ -26,11 +26,11 @@ public final class ContainerServiceCredentialsResponse {
      */
     private final ServicePrincipalPropertiesResponse servicePrincipalConfiguration;
 
-    @OutputCustomType.Constructor({"acsKubeConfig","imagePullSecretName","servicePrincipalConfiguration"})
+    @OutputCustomType.Constructor
     private ContainerServiceCredentialsResponse(
-        String acsKubeConfig,
-        String imagePullSecretName,
-        ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
+        @OutputCustomType.Parameter("acsKubeConfig") String acsKubeConfig,
+        @OutputCustomType.Parameter("imagePullSecretName") String imagePullSecretName,
+        @OutputCustomType.Parameter("servicePrincipalConfiguration") ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
         this.acsKubeConfig = acsKubeConfig;
         this.imagePullSecretName = imagePullSecretName;
         this.servicePrincipalConfiguration = servicePrincipalConfiguration;
@@ -82,17 +82,17 @@ public final class ContainerServiceCredentialsResponse {
     	      this.servicePrincipalConfiguration = defaults.servicePrincipalConfiguration;
         }
 
-        public Builder setAcsKubeConfig(String acsKubeConfig) {
+        public Builder acsKubeConfig(String acsKubeConfig) {
             this.acsKubeConfig = Objects.requireNonNull(acsKubeConfig);
             return this;
         }
 
-        public Builder setImagePullSecretName(String imagePullSecretName) {
+        public Builder imagePullSecretName(String imagePullSecretName) {
             this.imagePullSecretName = Objects.requireNonNull(imagePullSecretName);
             return this;
         }
 
-        public Builder setServicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
+        public Builder servicePrincipalConfiguration(ServicePrincipalPropertiesResponse servicePrincipalConfiguration) {
             this.servicePrincipalConfiguration = Objects.requireNonNull(servicePrincipalConfiguration);
             return this;
         }

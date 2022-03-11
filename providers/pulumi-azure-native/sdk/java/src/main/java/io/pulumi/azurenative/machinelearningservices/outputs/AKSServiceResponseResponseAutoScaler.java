@@ -38,13 +38,13 @@ public final class AKSServiceResponseResponseAutoScaler {
      */
     private final @Nullable Integer targetUtilization;
 
-    @OutputCustomType.Constructor({"autoscaleEnabled","maxReplicas","minReplicas","refreshPeriodInSeconds","targetUtilization"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseAutoScaler(
-        @Nullable Boolean autoscaleEnabled,
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable Integer targetUtilization) {
+        @OutputCustomType.Parameter("autoscaleEnabled") @Nullable Boolean autoscaleEnabled,
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
+        @OutputCustomType.Parameter("targetUtilization") @Nullable Integer targetUtilization) {
         this.autoscaleEnabled = autoscaleEnabled;
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
@@ -116,27 +116,27 @@ public final class AKSServiceResponseResponseAutoScaler {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setAutoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
+        public Builder autoscaleEnabled(@Nullable Boolean autoscaleEnabled) {
             this.autoscaleEnabled = autoscaleEnabled;
             return this;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Integer targetUtilization) {
+        public Builder targetUtilization(@Nullable Integer targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }

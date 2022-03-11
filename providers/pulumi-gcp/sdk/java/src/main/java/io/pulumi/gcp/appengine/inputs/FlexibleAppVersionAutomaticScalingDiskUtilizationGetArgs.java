@@ -102,42 +102,42 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs exte
     	      this.targetWriteOpsPerSecond = defaults.targetWriteOpsPerSecond;
         }
 
-        public Builder setTargetReadBytesPerSecond(@Nullable Input<Integer> targetReadBytesPerSecond) {
+        public Builder targetReadBytesPerSecond(@Nullable Input<Integer> targetReadBytesPerSecond) {
             this.targetReadBytesPerSecond = targetReadBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetReadBytesPerSecond(@Nullable Integer targetReadBytesPerSecond) {
+        public Builder targetReadBytesPerSecond(@Nullable Integer targetReadBytesPerSecond) {
             this.targetReadBytesPerSecond = Input.ofNullable(targetReadBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetReadOpsPerSecond(@Nullable Input<Integer> targetReadOpsPerSecond) {
+        public Builder targetReadOpsPerSecond(@Nullable Input<Integer> targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = targetReadOpsPerSecond;
             return this;
         }
 
-        public Builder setTargetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
+        public Builder targetReadOpsPerSecond(@Nullable Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = Input.ofNullable(targetReadOpsPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteBytesPerSecond(@Nullable Input<Integer> targetWriteBytesPerSecond) {
+        public Builder targetWriteBytesPerSecond(@Nullable Input<Integer> targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
+        public Builder targetWriteBytesPerSecond(@Nullable Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = Input.ofNullable(targetWriteBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteOpsPerSecond(@Nullable Input<Integer> targetWriteOpsPerSecond) {
+        public Builder targetWriteOpsPerSecond(@Nullable Input<Integer> targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = targetWriteOpsPerSecond;
             return this;
         }
 
-        public Builder setTargetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
+        public Builder targetWriteOpsPerSecond(@Nullable Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = Input.ofNullable(targetWriteOpsPerSecond);
             return this;
         }

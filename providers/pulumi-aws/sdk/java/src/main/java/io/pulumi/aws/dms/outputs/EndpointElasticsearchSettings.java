@@ -33,12 +33,12 @@ public final class EndpointElasticsearchSettings {
      */
     private final String serviceAccessRoleArn;
 
-    @OutputCustomType.Constructor({"endpointUri","errorRetryDuration","fullLoadErrorPercentage","serviceAccessRoleArn"})
+    @OutputCustomType.Constructor
     private EndpointElasticsearchSettings(
-        String endpointUri,
-        @Nullable Integer errorRetryDuration,
-        @Nullable Integer fullLoadErrorPercentage,
-        String serviceAccessRoleArn) {
+        @OutputCustomType.Parameter("endpointUri") String endpointUri,
+        @OutputCustomType.Parameter("errorRetryDuration") @Nullable Integer errorRetryDuration,
+        @OutputCustomType.Parameter("fullLoadErrorPercentage") @Nullable Integer fullLoadErrorPercentage,
+        @OutputCustomType.Parameter("serviceAccessRoleArn") String serviceAccessRoleArn) {
         this.endpointUri = endpointUri;
         this.errorRetryDuration = errorRetryDuration;
         this.fullLoadErrorPercentage = fullLoadErrorPercentage;
@@ -100,22 +100,22 @@ public final class EndpointElasticsearchSettings {
     	      this.serviceAccessRoleArn = defaults.serviceAccessRoleArn;
         }
 
-        public Builder setEndpointUri(String endpointUri) {
+        public Builder endpointUri(String endpointUri) {
             this.endpointUri = Objects.requireNonNull(endpointUri);
             return this;
         }
 
-        public Builder setErrorRetryDuration(@Nullable Integer errorRetryDuration) {
+        public Builder errorRetryDuration(@Nullable Integer errorRetryDuration) {
             this.errorRetryDuration = errorRetryDuration;
             return this;
         }
 
-        public Builder setFullLoadErrorPercentage(@Nullable Integer fullLoadErrorPercentage) {
+        public Builder fullLoadErrorPercentage(@Nullable Integer fullLoadErrorPercentage) {
             this.fullLoadErrorPercentage = fullLoadErrorPercentage;
             return this;
         }
 
-        public Builder setServiceAccessRoleArn(String serviceAccessRoleArn) {
+        public Builder serviceAccessRoleArn(String serviceAccessRoleArn) {
             this.serviceAccessRoleArn = Objects.requireNonNull(serviceAccessRoleArn);
             return this;
         }

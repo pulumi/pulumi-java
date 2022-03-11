@@ -19,12 +19,12 @@ public final class AssetModelPropertyType {
     private final @Nullable AssetModelTransform transform;
     private final AssetModelTypeName typeName;
 
-    @OutputCustomType.Constructor({"attribute","metric","transform","typeName"})
+    @OutputCustomType.Constructor
     private AssetModelPropertyType(
-        @Nullable AssetModelAttribute attribute,
-        @Nullable AssetModelMetric metric,
-        @Nullable AssetModelTransform transform,
-        AssetModelTypeName typeName) {
+        @OutputCustomType.Parameter("attribute") @Nullable AssetModelAttribute attribute,
+        @OutputCustomType.Parameter("metric") @Nullable AssetModelMetric metric,
+        @OutputCustomType.Parameter("transform") @Nullable AssetModelTransform transform,
+        @OutputCustomType.Parameter("typeName") AssetModelTypeName typeName) {
         this.attribute = attribute;
         this.metric = metric;
         this.transform = transform;
@@ -70,22 +70,22 @@ public final class AssetModelPropertyType {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setAttribute(@Nullable AssetModelAttribute attribute) {
+        public Builder attribute(@Nullable AssetModelAttribute attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setMetric(@Nullable AssetModelMetric metric) {
+        public Builder metric(@Nullable AssetModelMetric metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setTransform(@Nullable AssetModelTransform transform) {
+        public Builder transform(@Nullable AssetModelTransform transform) {
             this.transform = transform;
             return this;
         }
 
-        public Builder setTypeName(AssetModelTypeName typeName) {
+        public Builder typeName(AssetModelTypeName typeName) {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }

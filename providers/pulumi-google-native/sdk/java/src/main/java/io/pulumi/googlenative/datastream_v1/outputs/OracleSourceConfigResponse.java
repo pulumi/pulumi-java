@@ -20,10 +20,10 @@ public final class OracleSourceConfigResponse {
      */
     private final OracleRdbmsResponse includeObjects;
 
-    @OutputCustomType.Constructor({"excludeObjects","includeObjects"})
+    @OutputCustomType.Constructor
     private OracleSourceConfigResponse(
-        OracleRdbmsResponse excludeObjects,
-        OracleRdbmsResponse includeObjects) {
+        @OutputCustomType.Parameter("excludeObjects") OracleRdbmsResponse excludeObjects,
+        @OutputCustomType.Parameter("includeObjects") OracleRdbmsResponse includeObjects) {
         this.excludeObjects = excludeObjects;
         this.includeObjects = includeObjects;
     }
@@ -65,12 +65,12 @@ public final class OracleSourceConfigResponse {
     	      this.includeObjects = defaults.includeObjects;
         }
 
-        public Builder setExcludeObjects(OracleRdbmsResponse excludeObjects) {
+        public Builder excludeObjects(OracleRdbmsResponse excludeObjects) {
             this.excludeObjects = Objects.requireNonNull(excludeObjects);
             return this;
         }
 
-        public Builder setIncludeObjects(OracleRdbmsResponse includeObjects) {
+        public Builder includeObjects(OracleRdbmsResponse includeObjects) {
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }

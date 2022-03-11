@@ -30,12 +30,12 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
      */
     private final String runtimeVersion;
 
-    @OutputCustomType.Constructor({"framework","modelPath","pythonVersion","runtimeVersion"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__BuiltInAlgorithmOutputResponse(
-        String framework,
-        String modelPath,
-        String pythonVersion,
-        String runtimeVersion) {
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("modelPath") String modelPath,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion) {
         this.framework = framework;
         this.modelPath = modelPath;
         this.pythonVersion = pythonVersion;
@@ -97,22 +97,22 @@ public final class GoogleCloudMlV1__BuiltInAlgorithmOutputResponse {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setFramework(String framework) {
+        public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
 
-        public Builder setModelPath(String modelPath) {
+        public Builder modelPath(String modelPath) {
             this.modelPath = Objects.requireNonNull(modelPath);
             return this;
         }
 
-        public Builder setPythonVersion(String pythonVersion) {
+        public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }

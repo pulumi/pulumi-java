@@ -21,10 +21,10 @@ public final class EnvironmentResponse {
      */
     private final IosDeviceResponse iosDevice;
 
-    @OutputCustomType.Constructor({"androidDevice","iosDevice"})
+    @OutputCustomType.Constructor
     private EnvironmentResponse(
-        AndroidDeviceResponse androidDevice,
-        IosDeviceResponse iosDevice) {
+        @OutputCustomType.Parameter("androidDevice") AndroidDeviceResponse androidDevice,
+        @OutputCustomType.Parameter("iosDevice") IosDeviceResponse iosDevice) {
         this.androidDevice = androidDevice;
         this.iosDevice = iosDevice;
     }
@@ -66,12 +66,12 @@ public final class EnvironmentResponse {
     	      this.iosDevice = defaults.iosDevice;
         }
 
-        public Builder setAndroidDevice(AndroidDeviceResponse androidDevice) {
+        public Builder androidDevice(AndroidDeviceResponse androidDevice) {
             this.androidDevice = Objects.requireNonNull(androidDevice);
             return this;
         }
 
-        public Builder setIosDevice(IosDeviceResponse iosDevice) {
+        public Builder iosDevice(IosDeviceResponse iosDevice) {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
         }

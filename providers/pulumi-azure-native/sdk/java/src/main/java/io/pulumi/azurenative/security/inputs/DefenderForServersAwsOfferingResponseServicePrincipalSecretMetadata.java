@@ -90,17 +90,17 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     	      this.parameterStoreRegion = defaults.parameterStoreRegion;
         }
 
-        public Builder setExpiryDate(@Nullable String expiryDate) {
+        public Builder expiryDate(@Nullable String expiryDate) {
             this.expiryDate = expiryDate;
             return this;
         }
 
-        public Builder setParameterNameInStore(@Nullable String parameterNameInStore) {
+        public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             this.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
-        public Builder setParameterStoreRegion(@Nullable String parameterStoreRegion) {
+        public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             this.parameterStoreRegion = parameterStoreRegion;
             return this;
         }

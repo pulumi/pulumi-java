@@ -54,7 +54,7 @@ public final class ThemeTypography extends io.pulumi.resources.InvokeArgs {
     	      this.fontFamilies = defaults.fontFamilies;
         }
 
-        public Builder setFontFamilies(@Nullable List<ThemeFont> fontFamilies) {
+        public Builder fontFamilies(@Nullable List<ThemeFont> fontFamilies) {
             this.fontFamilies = fontFamilies;
             return this;
         }

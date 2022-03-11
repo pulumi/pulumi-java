@@ -57,16 +57,16 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
      */
     private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
-    @OutputCustomType.Constructor({"detectionRules","dictionary","exclusionType","infoType","likelihood","regex","storedType","surrogateType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CustomInfoTypeResponse(
-        List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
-        GooglePrivacyDlpV2DictionaryResponse dictionary,
-        String exclusionType,
-        GooglePrivacyDlpV2InfoTypeResponse infoType,
-        String likelihood,
-        GooglePrivacyDlpV2RegexResponse regex,
-        GooglePrivacyDlpV2StoredTypeResponse storedType,
-        GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
+        @OutputCustomType.Parameter("detectionRules") List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules,
+        @OutputCustomType.Parameter("dictionary") GooglePrivacyDlpV2DictionaryResponse dictionary,
+        @OutputCustomType.Parameter("exclusionType") String exclusionType,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType,
+        @OutputCustomType.Parameter("likelihood") String likelihood,
+        @OutputCustomType.Parameter("regex") GooglePrivacyDlpV2RegexResponse regex,
+        @OutputCustomType.Parameter("storedType") GooglePrivacyDlpV2StoredTypeResponse storedType,
+        @OutputCustomType.Parameter("surrogateType") GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
         this.detectionRules = detectionRules;
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;
@@ -168,42 +168,42 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse {
     	      this.surrogateType = defaults.surrogateType;
         }
 
-        public Builder setDetectionRules(List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules) {
+        public Builder detectionRules(List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules) {
             this.detectionRules = Objects.requireNonNull(detectionRules);
             return this;
         }
 
-        public Builder setDictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
+        public Builder dictionary(GooglePrivacyDlpV2DictionaryResponse dictionary) {
             this.dictionary = Objects.requireNonNull(dictionary);
             return this;
         }
 
-        public Builder setExclusionType(String exclusionType) {
+        public Builder exclusionType(String exclusionType) {
             this.exclusionType = Objects.requireNonNull(exclusionType);
             return this;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
 
-        public Builder setLikelihood(String likelihood) {
+        public Builder likelihood(String likelihood) {
             this.likelihood = Objects.requireNonNull(likelihood);
             return this;
         }
 
-        public Builder setRegex(GooglePrivacyDlpV2RegexResponse regex) {
+        public Builder regex(GooglePrivacyDlpV2RegexResponse regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
 
-        public Builder setStoredType(GooglePrivacyDlpV2StoredTypeResponse storedType) {
+        public Builder storedType(GooglePrivacyDlpV2StoredTypeResponse storedType) {
             this.storedType = Objects.requireNonNull(storedType);
             return this;
         }
 
-        public Builder setSurrogateType(GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
+        public Builder surrogateType(GooglePrivacyDlpV2SurrogateTypeResponse surrogateType) {
             this.surrogateType = Objects.requireNonNull(surrogateType);
             return this;
         }

@@ -26,12 +26,12 @@ public final class GetDetectorResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"findingPublishingFrequency","id","serviceRoleArn","status"})
+    @OutputCustomType.Constructor
     private GetDetectorResult(
-        String findingPublishingFrequency,
-        String id,
-        String serviceRoleArn,
-        String status) {
+        @OutputCustomType.Parameter("findingPublishingFrequency") String findingPublishingFrequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serviceRoleArn") String serviceRoleArn,
+        @OutputCustomType.Parameter("status") String status) {
         this.findingPublishingFrequency = findingPublishingFrequency;
         this.id = id;
         this.serviceRoleArn = serviceRoleArn;
@@ -89,22 +89,22 @@ public final class GetDetectorResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setFindingPublishingFrequency(String findingPublishingFrequency) {
+        public Builder findingPublishingFrequency(String findingPublishingFrequency) {
             this.findingPublishingFrequency = Objects.requireNonNull(findingPublishingFrequency);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServiceRoleArn(String serviceRoleArn) {
+        public Builder serviceRoleArn(String serviceRoleArn) {
             this.serviceRoleArn = Objects.requireNonNull(serviceRoleArn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

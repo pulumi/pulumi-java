@@ -27,11 +27,11 @@ public final class RemediationConfigurationParameter {
      */
     private final @Nullable String staticValue;
 
-    @OutputCustomType.Constructor({"name","resourceValue","staticValue"})
+    @OutputCustomType.Constructor
     private RemediationConfigurationParameter(
-        String name,
-        @Nullable String resourceValue,
-        @Nullable String staticValue) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceValue") @Nullable String resourceValue,
+        @OutputCustomType.Parameter("staticValue") @Nullable String staticValue) {
         this.name = name;
         this.resourceValue = resourceValue;
         this.staticValue = staticValue;
@@ -83,17 +83,17 @@ public final class RemediationConfigurationParameter {
     	      this.staticValue = defaults.staticValue;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceValue(@Nullable String resourceValue) {
+        public Builder resourceValue(@Nullable String resourceValue) {
             this.resourceValue = resourceValue;
             return this;
         }
 
-        public Builder setStaticValue(@Nullable String staticValue) {
+        public Builder staticValue(@Nullable String staticValue) {
             this.staticValue = staticValue;
             return this;
         }

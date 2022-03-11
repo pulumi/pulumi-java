@@ -42,14 +42,14 @@ public final class RetryConfigResponse {
      */
     private final Boolean unlimitedAttempts;
 
-    @OutputCustomType.Constructor({"maxAttempts","maxBackoff","maxDoublings","maxRetryDuration","minBackoff","unlimitedAttempts"})
+    @OutputCustomType.Constructor
     private RetryConfigResponse(
-        Integer maxAttempts,
-        String maxBackoff,
-        Integer maxDoublings,
-        String maxRetryDuration,
-        String minBackoff,
-        Boolean unlimitedAttempts) {
+        @OutputCustomType.Parameter("maxAttempts") Integer maxAttempts,
+        @OutputCustomType.Parameter("maxBackoff") String maxBackoff,
+        @OutputCustomType.Parameter("maxDoublings") Integer maxDoublings,
+        @OutputCustomType.Parameter("maxRetryDuration") String maxRetryDuration,
+        @OutputCustomType.Parameter("minBackoff") String minBackoff,
+        @OutputCustomType.Parameter("unlimitedAttempts") Boolean unlimitedAttempts) {
         this.maxAttempts = maxAttempts;
         this.maxBackoff = maxBackoff;
         this.maxDoublings = maxDoublings;
@@ -131,32 +131,32 @@ public final class RetryConfigResponse {
     	      this.unlimitedAttempts = defaults.unlimitedAttempts;
         }
 
-        public Builder setMaxAttempts(Integer maxAttempts) {
+        public Builder maxAttempts(Integer maxAttempts) {
             this.maxAttempts = Objects.requireNonNull(maxAttempts);
             return this;
         }
 
-        public Builder setMaxBackoff(String maxBackoff) {
+        public Builder maxBackoff(String maxBackoff) {
             this.maxBackoff = Objects.requireNonNull(maxBackoff);
             return this;
         }
 
-        public Builder setMaxDoublings(Integer maxDoublings) {
+        public Builder maxDoublings(Integer maxDoublings) {
             this.maxDoublings = Objects.requireNonNull(maxDoublings);
             return this;
         }
 
-        public Builder setMaxRetryDuration(String maxRetryDuration) {
+        public Builder maxRetryDuration(String maxRetryDuration) {
             this.maxRetryDuration = Objects.requireNonNull(maxRetryDuration);
             return this;
         }
 
-        public Builder setMinBackoff(String minBackoff) {
+        public Builder minBackoff(String minBackoff) {
             this.minBackoff = Objects.requireNonNull(minBackoff);
             return this;
         }
 
-        public Builder setUnlimitedAttempts(Boolean unlimitedAttempts) {
+        public Builder unlimitedAttempts(Boolean unlimitedAttempts) {
             this.unlimitedAttempts = Objects.requireNonNull(unlimitedAttempts);
             return this;
         }

@@ -41,13 +41,13 @@ public final class GenericProtectionPolicyResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"backupManagementType","fabricName","protectedItemsCount","subProtectionPolicy","timeZone"})
+    @OutputCustomType.Constructor
     private GenericProtectionPolicyResponse(
-        String backupManagementType,
-        @Nullable String fabricName,
-        @Nullable Integer protectedItemsCount,
-        @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("backupManagementType") String backupManagementType,
+        @OutputCustomType.Parameter("fabricName") @Nullable String fabricName,
+        @OutputCustomType.Parameter("protectedItemsCount") @Nullable Integer protectedItemsCount,
+        @OutputCustomType.Parameter("subProtectionPolicy") @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.backupManagementType = backupManagementType;
         this.fabricName = fabricName;
         this.protectedItemsCount = protectedItemsCount;
@@ -120,27 +120,27 @@ public final class GenericProtectionPolicyResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setBackupManagementType(String backupManagementType) {
+        public Builder backupManagementType(String backupManagementType) {
             this.backupManagementType = Objects.requireNonNull(backupManagementType);
             return this;
         }
 
-        public Builder setFabricName(@Nullable String fabricName) {
+        public Builder fabricName(@Nullable String fabricName) {
             this.fabricName = fabricName;
             return this;
         }
 
-        public Builder setProtectedItemsCount(@Nullable Integer protectedItemsCount) {
+        public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             this.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
-        public Builder setSubProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
+        public Builder subProtectionPolicy(@Nullable List<SubProtectionPolicyResponse> subProtectionPolicy) {
             this.subProtectionPolicy = subProtectionPolicy;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

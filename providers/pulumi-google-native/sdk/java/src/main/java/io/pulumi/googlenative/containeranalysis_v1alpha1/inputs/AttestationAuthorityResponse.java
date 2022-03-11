@@ -51,7 +51,7 @@ public final class AttestationAuthorityResponse extends io.pulumi.resources.Invo
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(AttestationAuthorityHintResponse hint) {
+        public Builder hint(AttestationAuthorityHintResponse hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

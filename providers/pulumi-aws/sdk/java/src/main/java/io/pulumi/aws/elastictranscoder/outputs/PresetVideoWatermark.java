@@ -62,18 +62,18 @@ public final class PresetVideoWatermark {
      */
     private final @Nullable String verticalOffset;
 
-    @OutputCustomType.Constructor({"horizontalAlign","horizontalOffset","id","maxHeight","maxWidth","opacity","sizingPolicy","target","verticalAlign","verticalOffset"})
+    @OutputCustomType.Constructor
     private PresetVideoWatermark(
-        @Nullable String horizontalAlign,
-        @Nullable String horizontalOffset,
-        @Nullable String id,
-        @Nullable String maxHeight,
-        @Nullable String maxWidth,
-        @Nullable String opacity,
-        @Nullable String sizingPolicy,
-        @Nullable String target,
-        @Nullable String verticalAlign,
-        @Nullable String verticalOffset) {
+        @OutputCustomType.Parameter("horizontalAlign") @Nullable String horizontalAlign,
+        @OutputCustomType.Parameter("horizontalOffset") @Nullable String horizontalOffset,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @OutputCustomType.Parameter("opacity") @Nullable String opacity,
+        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy,
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("verticalAlign") @Nullable String verticalAlign,
+        @OutputCustomType.Parameter("verticalOffset") @Nullable String verticalOffset) {
         this.horizontalAlign = horizontalAlign;
         this.horizontalOffset = horizontalOffset;
         this.id = id;
@@ -195,52 +195,52 @@ public final class PresetVideoWatermark {
     	      this.verticalOffset = defaults.verticalOffset;
         }
 
-        public Builder setHorizontalAlign(@Nullable String horizontalAlign) {
+        public Builder horizontalAlign(@Nullable String horizontalAlign) {
             this.horizontalAlign = horizontalAlign;
             return this;
         }
 
-        public Builder setHorizontalOffset(@Nullable String horizontalOffset) {
+        public Builder horizontalOffset(@Nullable String horizontalOffset) {
             this.horizontalOffset = horizontalOffset;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setOpacity(@Nullable String opacity) {
+        public Builder opacity(@Nullable String opacity) {
             this.opacity = opacity;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setVerticalAlign(@Nullable String verticalAlign) {
+        public Builder verticalAlign(@Nullable String verticalAlign) {
             this.verticalAlign = verticalAlign;
             return this;
         }
 
-        public Builder setVerticalOffset(@Nullable String verticalOffset) {
+        public Builder verticalOffset(@Nullable String verticalOffset) {
             this.verticalOffset = verticalOffset;
             return this;
         }

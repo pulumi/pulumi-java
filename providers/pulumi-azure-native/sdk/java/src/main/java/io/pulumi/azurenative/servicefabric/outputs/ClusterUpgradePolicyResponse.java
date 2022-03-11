@@ -60,17 +60,17 @@ public final class ClusterUpgradePolicyResponse {
      */
     private final String upgradeTimeout;
 
-    @OutputCustomType.Constructor({"deltaHealthPolicy","forceRestart","healthCheckRetryTimeout","healthCheckStableDuration","healthCheckWaitDuration","healthPolicy","upgradeDomainTimeout","upgradeReplicaSetCheckTimeout","upgradeTimeout"})
+    @OutputCustomType.Constructor
     private ClusterUpgradePolicyResponse(
-        @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
-        @Nullable Boolean forceRestart,
-        String healthCheckRetryTimeout,
-        String healthCheckStableDuration,
-        String healthCheckWaitDuration,
-        ClusterHealthPolicyResponse healthPolicy,
-        String upgradeDomainTimeout,
-        String upgradeReplicaSetCheckTimeout,
-        String upgradeTimeout) {
+        @OutputCustomType.Parameter("deltaHealthPolicy") @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy,
+        @OutputCustomType.Parameter("forceRestart") @Nullable Boolean forceRestart,
+        @OutputCustomType.Parameter("healthCheckRetryTimeout") String healthCheckRetryTimeout,
+        @OutputCustomType.Parameter("healthCheckStableDuration") String healthCheckStableDuration,
+        @OutputCustomType.Parameter("healthCheckWaitDuration") String healthCheckWaitDuration,
+        @OutputCustomType.Parameter("healthPolicy") ClusterHealthPolicyResponse healthPolicy,
+        @OutputCustomType.Parameter("upgradeDomainTimeout") String upgradeDomainTimeout,
+        @OutputCustomType.Parameter("upgradeReplicaSetCheckTimeout") String upgradeReplicaSetCheckTimeout,
+        @OutputCustomType.Parameter("upgradeTimeout") String upgradeTimeout) {
         this.deltaHealthPolicy = deltaHealthPolicy;
         this.forceRestart = forceRestart;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;
@@ -182,47 +182,47 @@ public final class ClusterUpgradePolicyResponse {
     	      this.upgradeTimeout = defaults.upgradeTimeout;
         }
 
-        public Builder setDeltaHealthPolicy(@Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy) {
+        public Builder deltaHealthPolicy(@Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy) {
             this.deltaHealthPolicy = deltaHealthPolicy;
             return this;
         }
 
-        public Builder setForceRestart(@Nullable Boolean forceRestart) {
+        public Builder forceRestart(@Nullable Boolean forceRestart) {
             this.forceRestart = forceRestart;
             return this;
         }
 
-        public Builder setHealthCheckRetryTimeout(String healthCheckRetryTimeout) {
+        public Builder healthCheckRetryTimeout(String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = Objects.requireNonNull(healthCheckRetryTimeout);
             return this;
         }
 
-        public Builder setHealthCheckStableDuration(String healthCheckStableDuration) {
+        public Builder healthCheckStableDuration(String healthCheckStableDuration) {
             this.healthCheckStableDuration = Objects.requireNonNull(healthCheckStableDuration);
             return this;
         }
 
-        public Builder setHealthCheckWaitDuration(String healthCheckWaitDuration) {
+        public Builder healthCheckWaitDuration(String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = Objects.requireNonNull(healthCheckWaitDuration);
             return this;
         }
 
-        public Builder setHealthPolicy(ClusterHealthPolicyResponse healthPolicy) {
+        public Builder healthPolicy(ClusterHealthPolicyResponse healthPolicy) {
             this.healthPolicy = Objects.requireNonNull(healthPolicy);
             return this;
         }
 
-        public Builder setUpgradeDomainTimeout(String upgradeDomainTimeout) {
+        public Builder upgradeDomainTimeout(String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = Objects.requireNonNull(upgradeDomainTimeout);
             return this;
         }
 
-        public Builder setUpgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
+        public Builder upgradeReplicaSetCheckTimeout(String upgradeReplicaSetCheckTimeout) {
             this.upgradeReplicaSetCheckTimeout = Objects.requireNonNull(upgradeReplicaSetCheckTimeout);
             return this;
         }
 
-        public Builder setUpgradeTimeout(String upgradeTimeout) {
+        public Builder upgradeTimeout(String upgradeTimeout) {
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
         }

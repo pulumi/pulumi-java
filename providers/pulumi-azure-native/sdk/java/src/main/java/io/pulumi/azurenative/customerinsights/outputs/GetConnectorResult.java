@@ -86,22 +86,22 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"connectorId","connectorName","connectorProperties","connectorType","created","description","displayName","id","isInternal","lastModified","name","state","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        Integer connectorId,
-        @Nullable String connectorName,
-        Map<String,Object> connectorProperties,
-        String connectorType,
-        String created,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        @Nullable Boolean isInternal,
-        String lastModified,
-        String name,
-        String state,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("connectorId") Integer connectorId,
+        @OutputCustomType.Parameter("connectorName") @Nullable String connectorName,
+        @OutputCustomType.Parameter("connectorProperties") Map<String,Object> connectorProperties,
+        @OutputCustomType.Parameter("connectorType") String connectorType,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isInternal") @Nullable Boolean isInternal,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.connectorId = connectorId;
         this.connectorName = connectorName;
         this.connectorProperties = connectorProperties;
@@ -263,72 +263,72 @@ public final class GetConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConnectorId(Integer connectorId) {
+        public Builder connectorId(Integer connectorId) {
             this.connectorId = Objects.requireNonNull(connectorId);
             return this;
         }
 
-        public Builder setConnectorName(@Nullable String connectorName) {
+        public Builder connectorName(@Nullable String connectorName) {
             this.connectorName = connectorName;
             return this;
         }
 
-        public Builder setConnectorProperties(Map<String,Object> connectorProperties) {
+        public Builder connectorProperties(Map<String,Object> connectorProperties) {
             this.connectorProperties = Objects.requireNonNull(connectorProperties);
             return this;
         }
 
-        public Builder setConnectorType(String connectorType) {
+        public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsInternal(@Nullable Boolean isInternal) {
+        public Builder isInternal(@Nullable Boolean isInternal) {
             this.isInternal = isInternal;
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

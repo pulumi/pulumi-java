@@ -16,11 +16,11 @@ public final class CxVersionNluSetting {
     private final @Nullable String modelTrainingMode;
     private final @Nullable String modelType;
 
-    @OutputCustomType.Constructor({"classificationThreshold","modelTrainingMode","modelType"})
+    @OutputCustomType.Constructor
     private CxVersionNluSetting(
-        @Nullable Double classificationThreshold,
-        @Nullable String modelTrainingMode,
-        @Nullable String modelType) {
+        @OutputCustomType.Parameter("classificationThreshold") @Nullable Double classificationThreshold,
+        @OutputCustomType.Parameter("modelTrainingMode") @Nullable String modelTrainingMode,
+        @OutputCustomType.Parameter("modelType") @Nullable String modelType) {
         this.classificationThreshold = classificationThreshold;
         this.modelTrainingMode = modelTrainingMode;
         this.modelType = modelType;
@@ -60,17 +60,17 @@ public final class CxVersionNluSetting {
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setClassificationThreshold(@Nullable Double classificationThreshold) {
+        public Builder classificationThreshold(@Nullable Double classificationThreshold) {
             this.classificationThreshold = classificationThreshold;
             return this;
         }
 
-        public Builder setModelTrainingMode(@Nullable String modelTrainingMode) {
+        public Builder modelTrainingMode(@Nullable String modelTrainingMode) {
             this.modelTrainingMode = modelTrainingMode;
             return this;
         }
 
-        public Builder setModelType(@Nullable String modelType) {
+        public Builder modelType(@Nullable String modelType) {
             this.modelType = modelType;
             return this;
         }

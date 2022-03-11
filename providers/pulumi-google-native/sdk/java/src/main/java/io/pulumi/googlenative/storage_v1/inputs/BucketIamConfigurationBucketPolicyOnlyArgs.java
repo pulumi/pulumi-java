@@ -75,22 +75,22 @@ public final class BucketIamConfigurationBucketPolicyOnlyArgs extends io.pulumi.
     	      this.lockedTime = defaults.lockedTime;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setLockedTime(@Nullable Input<String> lockedTime) {
+        public Builder lockedTime(@Nullable Input<String> lockedTime) {
             this.lockedTime = lockedTime;
             return this;
         }
 
-        public Builder setLockedTime(@Nullable String lockedTime) {
+        public Builder lockedTime(@Nullable String lockedTime) {
             this.lockedTime = Input.ofNullable(lockedTime);
             return this;
         }

@@ -65,14 +65,14 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
      */
     private final Boolean stripQuery;
 
-    @OutputCustomType.Constructor({"hostRedirect","httpsRedirect","pathRedirect","prefixRedirect","redirectResponseCode","stripQuery"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherDefaultUrlRedirect(
-        @Nullable String hostRedirect,
-        @Nullable Boolean httpsRedirect,
-        @Nullable String pathRedirect,
-        @Nullable String prefixRedirect,
-        @Nullable String redirectResponseCode,
-        Boolean stripQuery) {
+        @OutputCustomType.Parameter("hostRedirect") @Nullable String hostRedirect,
+        @OutputCustomType.Parameter("httpsRedirect") @Nullable Boolean httpsRedirect,
+        @OutputCustomType.Parameter("pathRedirect") @Nullable String pathRedirect,
+        @OutputCustomType.Parameter("prefixRedirect") @Nullable String prefixRedirect,
+        @OutputCustomType.Parameter("redirectResponseCode") @Nullable String redirectResponseCode,
+        @OutputCustomType.Parameter("stripQuery") Boolean stripQuery) {
         this.hostRedirect = hostRedirect;
         this.httpsRedirect = httpsRedirect;
         this.pathRedirect = pathRedirect;
@@ -176,32 +176,32 @@ public final class RegionUrlMapPathMatcherDefaultUrlRedirect {
     	      this.stripQuery = defaults.stripQuery;
         }
 
-        public Builder setHostRedirect(@Nullable String hostRedirect) {
+        public Builder hostRedirect(@Nullable String hostRedirect) {
             this.hostRedirect = hostRedirect;
             return this;
         }
 
-        public Builder setHttpsRedirect(@Nullable Boolean httpsRedirect) {
+        public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
             this.httpsRedirect = httpsRedirect;
             return this;
         }
 
-        public Builder setPathRedirect(@Nullable String pathRedirect) {
+        public Builder pathRedirect(@Nullable String pathRedirect) {
             this.pathRedirect = pathRedirect;
             return this;
         }
 
-        public Builder setPrefixRedirect(@Nullable String prefixRedirect) {
+        public Builder prefixRedirect(@Nullable String prefixRedirect) {
             this.prefixRedirect = prefixRedirect;
             return this;
         }
 
-        public Builder setRedirectResponseCode(@Nullable String redirectResponseCode) {
+        public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
             this.redirectResponseCode = redirectResponseCode;
             return this;
         }
 
-        public Builder setStripQuery(Boolean stripQuery) {
+        public Builder stripQuery(Boolean stripQuery) {
             this.stripQuery = Objects.requireNonNull(stripQuery);
             return this;
         }

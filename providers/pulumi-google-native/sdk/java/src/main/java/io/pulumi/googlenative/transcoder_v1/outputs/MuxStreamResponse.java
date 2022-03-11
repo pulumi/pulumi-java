@@ -37,13 +37,13 @@ public final class MuxStreamResponse {
      */
     private final SegmentSettingsResponse segmentSettings;
 
-    @OutputCustomType.Constructor({"container","elementaryStreams","fileName","key","segmentSettings"})
+    @OutputCustomType.Constructor
     private MuxStreamResponse(
-        String container,
-        List<String> elementaryStreams,
-        String fileName,
-        String key,
-        SegmentSettingsResponse segmentSettings) {
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("elementaryStreams") List<String> elementaryStreams,
+        @OutputCustomType.Parameter("fileName") String fileName,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("segmentSettings") SegmentSettingsResponse segmentSettings) {
         this.container = container;
         this.elementaryStreams = elementaryStreams;
         this.fileName = fileName;
@@ -115,27 +115,27 @@ public final class MuxStreamResponse {
     	      this.segmentSettings = defaults.segmentSettings;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setElementaryStreams(List<String> elementaryStreams) {
+        public Builder elementaryStreams(List<String> elementaryStreams) {
             this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
             return this;
         }
 
-        public Builder setFileName(String fileName) {
+        public Builder fileName(String fileName) {
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setSegmentSettings(SegmentSettingsResponse segmentSettings) {
+        public Builder segmentSettings(SegmentSettingsResponse segmentSettings) {
             this.segmentSettings = Objects.requireNonNull(segmentSettings);
             return this;
         }

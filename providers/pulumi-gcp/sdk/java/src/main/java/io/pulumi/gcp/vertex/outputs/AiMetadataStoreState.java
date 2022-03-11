@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AiMetadataStoreState {
     private final @Nullable String diskUtilizationBytes;
 
-    @OutputCustomType.Constructor({"diskUtilizationBytes"})
-    private AiMetadataStoreState(@Nullable String diskUtilizationBytes) {
+    @OutputCustomType.Constructor
+    private AiMetadataStoreState(@OutputCustomType.Parameter("diskUtilizationBytes") @Nullable String diskUtilizationBytes) {
         this.diskUtilizationBytes = diskUtilizationBytes;
     }
 
@@ -42,7 +42,7 @@ public final class AiMetadataStoreState {
     	      this.diskUtilizationBytes = defaults.diskUtilizationBytes;
         }
 
-        public Builder setDiskUtilizationBytes(@Nullable String diskUtilizationBytes) {
+        public Builder diskUtilizationBytes(@Nullable String diskUtilizationBytes) {
             this.diskUtilizationBytes = diskUtilizationBytes;
             return this;
         }

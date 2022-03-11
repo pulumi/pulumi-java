@@ -28,11 +28,11 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
      */
     private final List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions;
 
-    @OutputCustomType.Constructor({"action","header","ruleOptions"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRule(
-        String action,
-        RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
-        List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("header") RuleGroupRuleGroupRulesSourceStatefulRuleHeader header,
+        @OutputCustomType.Parameter("ruleOptions") List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
         this.action = action;
         this.header = header;
         this.ruleOptions = ruleOptions;
@@ -84,17 +84,17 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRule {
     	      this.ruleOptions = defaults.ruleOptions;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setHeader(RuleGroupRuleGroupRulesSourceStatefulRuleHeader header) {
+        public Builder header(RuleGroupRuleGroupRulesSourceStatefulRuleHeader header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setRuleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
+        public Builder ruleOptions(List<RuleGroupRuleGroupRulesSourceStatefulRuleRuleOption> ruleOptions) {
             this.ruleOptions = Objects.requireNonNull(ruleOptions);
             return this;
         }

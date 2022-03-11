@@ -39,13 +39,13 @@ public final class TestBaseAccountSKUResponse {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"capabilities","locations","name","resourceType","tier"})
+    @OutputCustomType.Constructor
     private TestBaseAccountSKUResponse(
-        List<TestBaseAccountSKUCapabilityResponse> capabilities,
-        @Nullable List<String> locations,
-        String name,
-        @Nullable String resourceType,
-        String tier) {
+        @OutputCustomType.Parameter("capabilities") List<TestBaseAccountSKUCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.capabilities = capabilities;
         this.locations = locations;
         this.name = name;
@@ -117,27 +117,27 @@ public final class TestBaseAccountSKUResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
+        public Builder capabilities(List<TestBaseAccountSKUCapabilityResponse> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

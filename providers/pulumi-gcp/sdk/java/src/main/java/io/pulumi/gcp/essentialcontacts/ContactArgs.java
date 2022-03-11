@@ -102,42 +102,42 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setLanguageTag(Input<String> languageTag) {
+        public Builder languageTag(Input<String> languageTag) {
             this.languageTag = Objects.requireNonNull(languageTag);
             return this;
         }
 
-        public Builder setLanguageTag(String languageTag) {
+        public Builder languageTag(String languageTag) {
             this.languageTag = Input.of(Objects.requireNonNull(languageTag));
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(Input<List<String>> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(Input<List<String>> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Objects.requireNonNull(notificationCategorySubscriptions);
             return this;
         }
 
-        public Builder setNotificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
+        public Builder notificationCategorySubscriptions(List<String> notificationCategorySubscriptions) {
             this.notificationCategorySubscriptions = Input.of(Objects.requireNonNull(notificationCategorySubscriptions));
             return this;
         }
 
-        public Builder setParent(Input<String> parent) {
+        public Builder parent(Input<String> parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Input.of(Objects.requireNonNull(parent));
             return this;
         }

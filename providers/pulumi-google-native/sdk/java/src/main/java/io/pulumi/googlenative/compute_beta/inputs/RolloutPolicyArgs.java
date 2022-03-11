@@ -75,22 +75,22 @@ public final class RolloutPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.locationRolloutPolicies = defaults.locationRolloutPolicies;
         }
 
-        public Builder setDefaultRolloutTime(@Nullable Input<String> defaultRolloutTime) {
+        public Builder defaultRolloutTime(@Nullable Input<String> defaultRolloutTime) {
             this.defaultRolloutTime = defaultRolloutTime;
             return this;
         }
 
-        public Builder setDefaultRolloutTime(@Nullable String defaultRolloutTime) {
+        public Builder defaultRolloutTime(@Nullable String defaultRolloutTime) {
             this.defaultRolloutTime = Input.ofNullable(defaultRolloutTime);
             return this;
         }
 
-        public Builder setLocationRolloutPolicies(@Nullable Input<Map<String,String>> locationRolloutPolicies) {
+        public Builder locationRolloutPolicies(@Nullable Input<Map<String,String>> locationRolloutPolicies) {
             this.locationRolloutPolicies = locationRolloutPolicies;
             return this;
         }
 
-        public Builder setLocationRolloutPolicies(@Nullable Map<String,String> locationRolloutPolicies) {
+        public Builder locationRolloutPolicies(@Nullable Map<String,String> locationRolloutPolicies) {
             this.locationRolloutPolicies = Input.ofNullable(locationRolloutPolicies);
             return this;
         }

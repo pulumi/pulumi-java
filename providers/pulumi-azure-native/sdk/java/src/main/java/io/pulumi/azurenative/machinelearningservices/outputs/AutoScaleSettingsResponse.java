@@ -38,13 +38,13 @@ public final class AutoScaleSettingsResponse {
      */
     private final @Nullable Integer targetUtilizationPercentage;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","pollingInterval","scaleType","targetUtilizationPercentage"})
+    @OutputCustomType.Constructor
     private AutoScaleSettingsResponse(
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable String pollingInterval,
-        String scaleType,
-        @Nullable Integer targetUtilizationPercentage) {
+        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("pollingInterval") @Nullable String pollingInterval,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("targetUtilizationPercentage") @Nullable Integer targetUtilizationPercentage) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.pollingInterval = pollingInterval;
@@ -116,27 +116,27 @@ public final class AutoScaleSettingsResponse {
     	      this.targetUtilizationPercentage = defaults.targetUtilizationPercentage;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setPollingInterval(@Nullable String pollingInterval) {
+        public Builder pollingInterval(@Nullable String pollingInterval) {
             this.pollingInterval = pollingInterval;
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
-        public Builder setTargetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
+        public Builder targetUtilizationPercentage(@Nullable Integer targetUtilizationPercentage) {
             this.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }

@@ -29,11 +29,11 @@ public final class HDInsightResponseProperties {
      */
     private final @Nullable Integer sshPort;
 
-    @OutputCustomType.Constructor({"address","administratorAccount","sshPort"})
+    @OutputCustomType.Constructor
     private HDInsightResponseProperties(
-        @Nullable String address,
-        @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
-        @Nullable Integer sshPort) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("administratorAccount") @Nullable VirtualMachineSshCredentialsResponse administratorAccount,
+        @OutputCustomType.Parameter("sshPort") @Nullable Integer sshPort) {
         this.address = address;
         this.administratorAccount = administratorAccount;
         this.sshPort = sshPort;
@@ -85,17 +85,17 @@ public final class HDInsightResponseProperties {
     	      this.sshPort = defaults.sshPort;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAdministratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
+        public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsResponse administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
-        public Builder setSshPort(@Nullable Integer sshPort) {
+        public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = sshPort;
             return this;
         }

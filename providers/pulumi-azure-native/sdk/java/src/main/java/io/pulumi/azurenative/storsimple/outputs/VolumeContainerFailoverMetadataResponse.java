@@ -24,10 +24,10 @@ public final class VolumeContainerFailoverMetadataResponse {
      */
     private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
-    @OutputCustomType.Constructor({"volumeContainerId","volumes"})
+    @OutputCustomType.Constructor
     private VolumeContainerFailoverMetadataResponse(
-        @Nullable String volumeContainerId,
-        @Nullable List<VolumeFailoverMetadataResponse> volumes) {
+        @OutputCustomType.Parameter("volumeContainerId") @Nullable String volumeContainerId,
+        @OutputCustomType.Parameter("volumes") @Nullable List<VolumeFailoverMetadataResponse> volumes) {
         this.volumeContainerId = volumeContainerId;
         this.volumes = volumes;
     }
@@ -69,12 +69,12 @@ public final class VolumeContainerFailoverMetadataResponse {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setVolumeContainerId(@Nullable String volumeContainerId) {
+        public Builder volumeContainerId(@Nullable String volumeContainerId) {
             this.volumeContainerId = volumeContainerId;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
+        public Builder volumes(@Nullable List<VolumeFailoverMetadataResponse> volumes) {
             this.volumes = volumes;
             return this;
         }

@@ -25,11 +25,11 @@ public final class InstanceAddOn {
      */
     private final @Nullable InstanceAddOnStatus status;
 
-    @OutputCustomType.Constructor({"addOnType","autoSnapshotAddOnRequest","status"})
+    @OutputCustomType.Constructor
     private InstanceAddOn(
-        String addOnType,
-        @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
-        @Nullable InstanceAddOnStatus status) {
+        @OutputCustomType.Parameter("addOnType") String addOnType,
+        @OutputCustomType.Parameter("autoSnapshotAddOnRequest") @Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest,
+        @OutputCustomType.Parameter("status") @Nullable InstanceAddOnStatus status) {
         this.addOnType = addOnType;
         this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
         this.status = status;
@@ -77,17 +77,17 @@ public final class InstanceAddOn {
     	      this.status = defaults.status;
         }
 
-        public Builder setAddOnType(String addOnType) {
+        public Builder addOnType(String addOnType) {
             this.addOnType = Objects.requireNonNull(addOnType);
             return this;
         }
 
-        public Builder setAutoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest) {
+        public Builder autoSnapshotAddOnRequest(@Nullable InstanceAutoSnapshotAddOn autoSnapshotAddOnRequest) {
             this.autoSnapshotAddOnRequest = autoSnapshotAddOnRequest;
             return this;
         }
 
-        public Builder setStatus(@Nullable InstanceAddOnStatus status) {
+        public Builder status(@Nullable InstanceAddOnStatus status) {
             this.status = status;
             return this;
         }

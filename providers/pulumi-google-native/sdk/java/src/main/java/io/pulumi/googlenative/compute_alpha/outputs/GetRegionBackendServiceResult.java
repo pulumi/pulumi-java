@@ -204,46 +204,46 @@ public final class GetRegionBackendServiceResult {
      */
     private final Integer timeoutSec;
 
-    @OutputCustomType.Constructor({"affinityCookieTtlSec","backends","cdnPolicy","circuitBreakers","compressionMode","connectionDraining","connectionTrackingPolicy","consistentHash","creationTimestamp","customRequestHeaders","customResponseHeaders","description","edgeSecurityPolicy","enableCDN","failoverPolicy","fingerprint","healthChecks","iap","kind","loadBalancingScheme","localityLbPolicy","logConfig","maxStreamDuration","name","network","outlierDetection","portName","protocol","region","securityPolicy","securitySettings","selfLink","selfLinkWithId","serviceBindings","serviceLbPolicy","sessionAffinity","subsetting","timeoutSec"})
+    @OutputCustomType.Constructor
     private GetRegionBackendServiceResult(
-        Integer affinityCookieTtlSec,
-        List<BackendResponse> backends,
-        BackendServiceCdnPolicyResponse cdnPolicy,
-        CircuitBreakersResponse circuitBreakers,
-        String compressionMode,
-        ConnectionDrainingResponse connectionDraining,
-        BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy,
-        ConsistentHashLoadBalancerSettingsResponse consistentHash,
-        String creationTimestamp,
-        List<String> customRequestHeaders,
-        List<String> customResponseHeaders,
-        String description,
-        String edgeSecurityPolicy,
-        Boolean enableCDN,
-        BackendServiceFailoverPolicyResponse failoverPolicy,
-        String fingerprint,
-        List<String> healthChecks,
-        BackendServiceIAPResponse iap,
-        String kind,
-        String loadBalancingScheme,
-        String localityLbPolicy,
-        BackendServiceLogConfigResponse logConfig,
-        DurationResponse maxStreamDuration,
-        String name,
-        String network,
-        OutlierDetectionResponse outlierDetection,
-        String portName,
-        String protocol,
-        String region,
-        String securityPolicy,
-        SecuritySettingsResponse securitySettings,
-        String selfLink,
-        String selfLinkWithId,
-        List<String> serviceBindings,
-        String serviceLbPolicy,
-        String sessionAffinity,
-        SubsettingResponse subsetting,
-        Integer timeoutSec) {
+        @OutputCustomType.Parameter("affinityCookieTtlSec") Integer affinityCookieTtlSec,
+        @OutputCustomType.Parameter("backends") List<BackendResponse> backends,
+        @OutputCustomType.Parameter("cdnPolicy") BackendServiceCdnPolicyResponse cdnPolicy,
+        @OutputCustomType.Parameter("circuitBreakers") CircuitBreakersResponse circuitBreakers,
+        @OutputCustomType.Parameter("compressionMode") String compressionMode,
+        @OutputCustomType.Parameter("connectionDraining") ConnectionDrainingResponse connectionDraining,
+        @OutputCustomType.Parameter("connectionTrackingPolicy") BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy,
+        @OutputCustomType.Parameter("consistentHash") ConsistentHashLoadBalancerSettingsResponse consistentHash,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customRequestHeaders") List<String> customRequestHeaders,
+        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
+        @OutputCustomType.Parameter("enableCDN") Boolean enableCDN,
+        @OutputCustomType.Parameter("failoverPolicy") BackendServiceFailoverPolicyResponse failoverPolicy,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("healthChecks") List<String> healthChecks,
+        @OutputCustomType.Parameter("iap") BackendServiceIAPResponse iap,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @OutputCustomType.Parameter("localityLbPolicy") String localityLbPolicy,
+        @OutputCustomType.Parameter("logConfig") BackendServiceLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("maxStreamDuration") DurationResponse maxStreamDuration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("outlierDetection") OutlierDetectionResponse outlierDetection,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("securityPolicy") String securityPolicy,
+        @OutputCustomType.Parameter("securitySettings") SecuritySettingsResponse securitySettings,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("serviceBindings") List<String> serviceBindings,
+        @OutputCustomType.Parameter("serviceLbPolicy") String serviceLbPolicy,
+        @OutputCustomType.Parameter("sessionAffinity") String sessionAffinity,
+        @OutputCustomType.Parameter("subsetting") SubsettingResponse subsetting,
+        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec) {
         this.affinityCookieTtlSec = affinityCookieTtlSec;
         this.backends = backends;
         this.cdnPolicy = cdnPolicy;
@@ -633,192 +633,192 @@ public final class GetRegionBackendServiceResult {
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setAffinityCookieTtlSec(Integer affinityCookieTtlSec) {
+        public Builder affinityCookieTtlSec(Integer affinityCookieTtlSec) {
             this.affinityCookieTtlSec = Objects.requireNonNull(affinityCookieTtlSec);
             return this;
         }
 
-        public Builder setBackends(List<BackendResponse> backends) {
+        public Builder backends(List<BackendResponse> backends) {
             this.backends = Objects.requireNonNull(backends);
             return this;
         }
 
-        public Builder setCdnPolicy(BackendServiceCdnPolicyResponse cdnPolicy) {
+        public Builder cdnPolicy(BackendServiceCdnPolicyResponse cdnPolicy) {
             this.cdnPolicy = Objects.requireNonNull(cdnPolicy);
             return this;
         }
 
-        public Builder setCircuitBreakers(CircuitBreakersResponse circuitBreakers) {
+        public Builder circuitBreakers(CircuitBreakersResponse circuitBreakers) {
             this.circuitBreakers = Objects.requireNonNull(circuitBreakers);
             return this;
         }
 
-        public Builder setCompressionMode(String compressionMode) {
+        public Builder compressionMode(String compressionMode) {
             this.compressionMode = Objects.requireNonNull(compressionMode);
             return this;
         }
 
-        public Builder setConnectionDraining(ConnectionDrainingResponse connectionDraining) {
+        public Builder connectionDraining(ConnectionDrainingResponse connectionDraining) {
             this.connectionDraining = Objects.requireNonNull(connectionDraining);
             return this;
         }
 
-        public Builder setConnectionTrackingPolicy(BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy) {
+        public Builder connectionTrackingPolicy(BackendServiceConnectionTrackingPolicyResponse connectionTrackingPolicy) {
             this.connectionTrackingPolicy = Objects.requireNonNull(connectionTrackingPolicy);
             return this;
         }
 
-        public Builder setConsistentHash(ConsistentHashLoadBalancerSettingsResponse consistentHash) {
+        public Builder consistentHash(ConsistentHashLoadBalancerSettingsResponse consistentHash) {
             this.consistentHash = Objects.requireNonNull(consistentHash);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomRequestHeaders(List<String> customRequestHeaders) {
+        public Builder customRequestHeaders(List<String> customRequestHeaders) {
             this.customRequestHeaders = Objects.requireNonNull(customRequestHeaders);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEdgeSecurityPolicy(String edgeSecurityPolicy) {
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
             return this;
         }
 
-        public Builder setEnableCDN(Boolean enableCDN) {
+        public Builder enableCDN(Boolean enableCDN) {
             this.enableCDN = Objects.requireNonNull(enableCDN);
             return this;
         }
 
-        public Builder setFailoverPolicy(BackendServiceFailoverPolicyResponse failoverPolicy) {
+        public Builder failoverPolicy(BackendServiceFailoverPolicyResponse failoverPolicy) {
             this.failoverPolicy = Objects.requireNonNull(failoverPolicy);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setHealthChecks(List<String> healthChecks) {
+        public Builder healthChecks(List<String> healthChecks) {
             this.healthChecks = Objects.requireNonNull(healthChecks);
             return this;
         }
 
-        public Builder setIap(BackendServiceIAPResponse iap) {
+        public Builder iap(BackendServiceIAPResponse iap) {
             this.iap = Objects.requireNonNull(iap);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLoadBalancingScheme(String loadBalancingScheme) {
+        public Builder loadBalancingScheme(String loadBalancingScheme) {
             this.loadBalancingScheme = Objects.requireNonNull(loadBalancingScheme);
             return this;
         }
 
-        public Builder setLocalityLbPolicy(String localityLbPolicy) {
+        public Builder localityLbPolicy(String localityLbPolicy) {
             this.localityLbPolicy = Objects.requireNonNull(localityLbPolicy);
             return this;
         }
 
-        public Builder setLogConfig(BackendServiceLogConfigResponse logConfig) {
+        public Builder logConfig(BackendServiceLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setMaxStreamDuration(DurationResponse maxStreamDuration) {
+        public Builder maxStreamDuration(DurationResponse maxStreamDuration) {
             this.maxStreamDuration = Objects.requireNonNull(maxStreamDuration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setOutlierDetection(OutlierDetectionResponse outlierDetection) {
+        public Builder outlierDetection(OutlierDetectionResponse outlierDetection) {
             this.outlierDetection = Objects.requireNonNull(outlierDetection);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSecurityPolicy(String securityPolicy) {
+        public Builder securityPolicy(String securityPolicy) {
             this.securityPolicy = Objects.requireNonNull(securityPolicy);
             return this;
         }
 
-        public Builder setSecuritySettings(SecuritySettingsResponse securitySettings) {
+        public Builder securitySettings(SecuritySettingsResponse securitySettings) {
             this.securitySettings = Objects.requireNonNull(securitySettings);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setServiceBindings(List<String> serviceBindings) {
+        public Builder serviceBindings(List<String> serviceBindings) {
             this.serviceBindings = Objects.requireNonNull(serviceBindings);
             return this;
         }
 
-        public Builder setServiceLbPolicy(String serviceLbPolicy) {
+        public Builder serviceLbPolicy(String serviceLbPolicy) {
             this.serviceLbPolicy = Objects.requireNonNull(serviceLbPolicy);
             return this;
         }
 
-        public Builder setSessionAffinity(String sessionAffinity) {
+        public Builder sessionAffinity(String sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
 
-        public Builder setSubsetting(SubsettingResponse subsetting) {
+        public Builder subsetting(SubsettingResponse subsetting) {
             this.subsetting = Objects.requireNonNull(subsetting);
             return this;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }

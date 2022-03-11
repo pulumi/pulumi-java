@@ -17,8 +17,8 @@ public final class WorkteamNotificationConfiguration {
      */
     private final @Nullable String notificationTopicArn;
 
-    @OutputCustomType.Constructor({"notificationTopicArn"})
-    private WorkteamNotificationConfiguration(@Nullable String notificationTopicArn) {
+    @OutputCustomType.Constructor
+    private WorkteamNotificationConfiguration(@OutputCustomType.Parameter("notificationTopicArn") @Nullable String notificationTopicArn) {
         this.notificationTopicArn = notificationTopicArn;
     }
 
@@ -50,7 +50,7 @@ public final class WorkteamNotificationConfiguration {
     	      this.notificationTopicArn = defaults.notificationTopicArn;
         }
 
-        public Builder setNotificationTopicArn(@Nullable String notificationTopicArn) {
+        public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
             this.notificationTopicArn = notificationTopicArn;
             return this;
         }

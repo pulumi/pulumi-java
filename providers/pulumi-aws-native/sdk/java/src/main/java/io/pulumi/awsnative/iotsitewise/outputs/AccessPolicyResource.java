@@ -15,10 +15,10 @@ public final class AccessPolicyResource {
     private final @Nullable AccessPolicyPortal portal;
     private final @Nullable AccessPolicyProject project;
 
-    @OutputCustomType.Constructor({"portal","project"})
+    @OutputCustomType.Constructor
     private AccessPolicyResource(
-        @Nullable AccessPolicyPortal portal,
-        @Nullable AccessPolicyProject project) {
+        @OutputCustomType.Parameter("portal") @Nullable AccessPolicyPortal portal,
+        @OutputCustomType.Parameter("project") @Nullable AccessPolicyProject project) {
         this.portal = portal;
         this.project = project;
     }
@@ -52,12 +52,12 @@ public final class AccessPolicyResource {
     	      this.project = defaults.project;
         }
 
-        public Builder setPortal(@Nullable AccessPolicyPortal portal) {
+        public Builder portal(@Nullable AccessPolicyPortal portal) {
             this.portal = portal;
             return this;
         }
 
-        public Builder setProject(@Nullable AccessPolicyProject project) {
+        public Builder project(@Nullable AccessPolicyProject project) {
             this.project = project;
             return this;
         }

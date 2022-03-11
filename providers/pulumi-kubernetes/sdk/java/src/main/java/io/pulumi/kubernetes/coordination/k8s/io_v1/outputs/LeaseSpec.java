@@ -38,13 +38,13 @@ public final class LeaseSpec {
      */
     private final @Nullable String renewTime;
 
-    @OutputCustomType.Constructor({"acquireTime","holderIdentity","leaseDurationSeconds","leaseTransitions","renewTime"})
+    @OutputCustomType.Constructor
     private LeaseSpec(
-        @Nullable String acquireTime,
-        @Nullable String holderIdentity,
-        @Nullable Integer leaseDurationSeconds,
-        @Nullable Integer leaseTransitions,
-        @Nullable String renewTime) {
+        @OutputCustomType.Parameter("acquireTime") @Nullable String acquireTime,
+        @OutputCustomType.Parameter("holderIdentity") @Nullable String holderIdentity,
+        @OutputCustomType.Parameter("leaseDurationSeconds") @Nullable Integer leaseDurationSeconds,
+        @OutputCustomType.Parameter("leaseTransitions") @Nullable Integer leaseTransitions,
+        @OutputCustomType.Parameter("renewTime") @Nullable String renewTime) {
         this.acquireTime = acquireTime;
         this.holderIdentity = holderIdentity;
         this.leaseDurationSeconds = leaseDurationSeconds;
@@ -116,27 +116,27 @@ public final class LeaseSpec {
     	      this.renewTime = defaults.renewTime;
         }
 
-        public Builder setAcquireTime(@Nullable String acquireTime) {
+        public Builder acquireTime(@Nullable String acquireTime) {
             this.acquireTime = acquireTime;
             return this;
         }
 
-        public Builder setHolderIdentity(@Nullable String holderIdentity) {
+        public Builder holderIdentity(@Nullable String holderIdentity) {
             this.holderIdentity = holderIdentity;
             return this;
         }
 
-        public Builder setLeaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
+        public Builder leaseDurationSeconds(@Nullable Integer leaseDurationSeconds) {
             this.leaseDurationSeconds = leaseDurationSeconds;
             return this;
         }
 
-        public Builder setLeaseTransitions(@Nullable Integer leaseTransitions) {
+        public Builder leaseTransitions(@Nullable Integer leaseTransitions) {
             this.leaseTransitions = leaseTransitions;
             return this;
         }
 
-        public Builder setRenewTime(@Nullable String renewTime) {
+        public Builder renewTime(@Nullable String renewTime) {
             this.renewTime = renewTime;
             return this;
         }

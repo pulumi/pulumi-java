@@ -22,10 +22,10 @@ public final class ImageBuilderAccessEndpoint {
      */
     private final @Nullable String vpceId;
 
-    @OutputCustomType.Constructor({"endpointType","vpceId"})
+    @OutputCustomType.Constructor
     private ImageBuilderAccessEndpoint(
-        String endpointType,
-        @Nullable String vpceId) {
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("vpceId") @Nullable String vpceId) {
         this.endpointType = endpointType;
         this.vpceId = vpceId;
     }
@@ -67,12 +67,12 @@ public final class ImageBuilderAccessEndpoint {
     	      this.vpceId = defaults.vpceId;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setVpceId(@Nullable String vpceId) {
+        public Builder vpceId(@Nullable String vpceId) {
             this.vpceId = vpceId;
             return this;
         }

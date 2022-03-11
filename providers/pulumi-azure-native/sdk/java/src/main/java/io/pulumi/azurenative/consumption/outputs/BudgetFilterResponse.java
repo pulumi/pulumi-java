@@ -34,12 +34,12 @@ public final class BudgetFilterResponse {
      */
     private final @Nullable BudgetComparisonExpressionResponse tags;
 
-    @OutputCustomType.Constructor({"and","dimensions","not","tags"})
+    @OutputCustomType.Constructor
     private BudgetFilterResponse(
-        @Nullable List<BudgetFilterPropertiesResponse> and,
-        @Nullable BudgetComparisonExpressionResponse dimensions,
-        @Nullable BudgetFilterPropertiesResponse not,
-        @Nullable BudgetComparisonExpressionResponse tags) {
+        @OutputCustomType.Parameter("and") @Nullable List<BudgetFilterPropertiesResponse> and,
+        @OutputCustomType.Parameter("dimensions") @Nullable BudgetComparisonExpressionResponse dimensions,
+        @OutputCustomType.Parameter("not") @Nullable BudgetFilterPropertiesResponse not,
+        @OutputCustomType.Parameter("tags") @Nullable BudgetComparisonExpressionResponse tags) {
         this.and = and;
         this.dimensions = dimensions;
         this.not = not;
@@ -101,22 +101,22 @@ public final class BudgetFilterResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable List<BudgetFilterPropertiesResponse> and) {
+        public Builder and(@Nullable List<BudgetFilterPropertiesResponse> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setDimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
+        public Builder dimensions(@Nullable BudgetComparisonExpressionResponse dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setNot(@Nullable BudgetFilterPropertiesResponse not) {
+        public Builder not(@Nullable BudgetFilterPropertiesResponse not) {
             this.not = not;
             return this;
         }
 
-        public Builder setTags(@Nullable BudgetComparisonExpressionResponse tags) {
+        public Builder tags(@Nullable BudgetComparisonExpressionResponse tags) {
             this.tags = tags;
             return this;
         }

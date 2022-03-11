@@ -82,22 +82,22 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor({"affectedCpeUri","affectedPackage","affectedVersionEnd","affectedVersionStart","description","fixedCpeUri","fixedPackage","fixedVersion","isObsolete","packageType","severityName","source","sourceUpdateTime","vendor"})
+    @OutputCustomType.Constructor
     private DetailResponse(
-        String affectedCpeUri,
-        String affectedPackage,
-        VersionResponse affectedVersionEnd,
-        VersionResponse affectedVersionStart,
-        String description,
-        String fixedCpeUri,
-        String fixedPackage,
-        VersionResponse fixedVersion,
-        Boolean isObsolete,
-        String packageType,
-        String severityName,
-        String source,
-        String sourceUpdateTime,
-        String vendor) {
+        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
+        @OutputCustomType.Parameter("affectedVersionEnd") VersionResponse affectedVersionEnd,
+        @OutputCustomType.Parameter("affectedVersionStart") VersionResponse affectedVersionStart,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
+        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
+        @OutputCustomType.Parameter("vendor") String vendor) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersionEnd = affectedVersionEnd;
@@ -259,72 +259,72 @@ public final class DetailResponse {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setAffectedCpeUri(String affectedCpeUri) {
+        public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
-        public Builder setAffectedPackage(String affectedPackage) {
+        public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
-        public Builder setAffectedVersionEnd(VersionResponse affectedVersionEnd) {
+        public Builder affectedVersionEnd(VersionResponse affectedVersionEnd) {
             this.affectedVersionEnd = Objects.requireNonNull(affectedVersionEnd);
             return this;
         }
 
-        public Builder setAffectedVersionStart(VersionResponse affectedVersionStart) {
+        public Builder affectedVersionStart(VersionResponse affectedVersionStart) {
             this.affectedVersionStart = Objects.requireNonNull(affectedVersionStart);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFixedCpeUri(String fixedCpeUri) {
+        public Builder fixedCpeUri(String fixedCpeUri) {
             this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
             return this;
         }
 
-        public Builder setFixedPackage(String fixedPackage) {
+        public Builder fixedPackage(String fixedPackage) {
             this.fixedPackage = Objects.requireNonNull(fixedPackage);
             return this;
         }
 
-        public Builder setFixedVersion(VersionResponse fixedVersion) {
+        public Builder fixedVersion(VersionResponse fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
 
-        public Builder setIsObsolete(Boolean isObsolete) {
+        public Builder isObsolete(Boolean isObsolete) {
             this.isObsolete = Objects.requireNonNull(isObsolete);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSeverityName(String severityName) {
+        public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceUpdateTime(String sourceUpdateTime) {
+        public Builder sourceUpdateTime(String sourceUpdateTime) {
             this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime);
             return this;
         }
 
-        public Builder setVendor(String vendor) {
+        public Builder vendor(String vendor) {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }

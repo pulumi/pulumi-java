@@ -20,10 +20,10 @@ public final class JobStatusResponse {
      */
     private final String jobProgress;
 
-    @OutputCustomType.Constructor({"jobName","jobProgress"})
+    @OutputCustomType.Constructor
     private JobStatusResponse(
-        String jobName,
-        String jobProgress) {
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("jobProgress") String jobProgress) {
         this.jobName = jobName;
         this.jobProgress = jobProgress;
     }
@@ -65,12 +65,12 @@ public final class JobStatusResponse {
     	      this.jobProgress = defaults.jobProgress;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobProgress(String jobProgress) {
+        public Builder jobProgress(String jobProgress) {
             this.jobProgress = Objects.requireNonNull(jobProgress);
             return this;
         }

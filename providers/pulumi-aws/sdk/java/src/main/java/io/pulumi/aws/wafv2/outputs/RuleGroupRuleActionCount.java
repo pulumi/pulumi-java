@@ -17,8 +17,8 @@ public final class RuleGroupRuleActionCount {
      */
     private final @Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private RuleGroupRuleActionCount(@Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionCount(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -50,7 +50,7 @@ public final class RuleGroupRuleActionCount {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable RuleGroupRuleActionCountCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

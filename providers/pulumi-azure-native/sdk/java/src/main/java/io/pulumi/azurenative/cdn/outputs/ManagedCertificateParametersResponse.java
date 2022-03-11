@@ -16,8 +16,8 @@ public final class ManagedCertificateParametersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ManagedCertificateParametersResponse(String type) {
+    @OutputCustomType.Constructor
+    private ManagedCertificateParametersResponse(@OutputCustomType.Parameter("type") String type) {
         this.type = type;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedCertificateParametersResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

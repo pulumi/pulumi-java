@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      */
     private final Integer maxResults;
 
-    @OutputCustomType.Constructor({"confidenceThreshold","contextFilterSettings","dialogflowQuerySource","documentQuerySource","knowledgeBaseQuerySource","maxResults"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigResponse(
-        Double confidenceThreshold,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
-        GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
-        Integer maxResults) {
+        @OutputCustomType.Parameter("confidenceThreshold") Double confidenceThreshold,
+        @OutputCustomType.Parameter("contextFilterSettings") GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings,
+        @OutputCustomType.Parameter("dialogflowQuerySource") GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource,
+        @OutputCustomType.Parameter("documentQuerySource") GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource,
+        @OutputCustomType.Parameter("knowledgeBaseQuerySource") GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource,
+        @OutputCustomType.Parameter("maxResults") Integer maxResults) {
         this.confidenceThreshold = confidenceThreshold;
         this.contextFilterSettings = contextFilterSettings;
         this.dialogflowQuerySource = dialogflowQuerySource;
@@ -134,32 +134,32 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     	      this.maxResults = defaults.maxResults;
         }
 
-        public Builder setConfidenceThreshold(Double confidenceThreshold) {
+        public Builder confidenceThreshold(Double confidenceThreshold) {
             this.confidenceThreshold = Objects.requireNonNull(confidenceThreshold);
             return this;
         }
 
-        public Builder setContextFilterSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings) {
+        public Builder contextFilterSettings(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse contextFilterSettings) {
             this.contextFilterSettings = Objects.requireNonNull(contextFilterSettings);
             return this;
         }
 
-        public Builder setDialogflowQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource) {
+        public Builder dialogflowQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDialogflowQuerySourceResponse dialogflowQuerySource) {
             this.dialogflowQuerySource = Objects.requireNonNull(dialogflowQuerySource);
             return this;
         }
 
-        public Builder setDocumentQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource) {
+        public Builder documentQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse documentQuerySource) {
             this.documentQuerySource = Objects.requireNonNull(documentQuerySource);
             return this;
         }
 
-        public Builder setKnowledgeBaseQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource) {
+        public Builder knowledgeBaseQuerySource(GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse knowledgeBaseQuerySource) {
             this.knowledgeBaseQuerySource = Objects.requireNonNull(knowledgeBaseQuerySource);
             return this;
         }
 
-        public Builder setMaxResults(Integer maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = Objects.requireNonNull(maxResults);
             return this;
         }

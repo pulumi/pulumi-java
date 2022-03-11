@@ -29,11 +29,11 @@ public final class GetUserResult {
      */
     private final @Nullable List<UserTag> tags;
 
-    @OutputCustomType.Constructor({"arn","status","tags"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String arn,
-        @Nullable String status,
-        @Nullable List<UserTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable List<UserTag> tags) {
         this.arn = arn;
         this.status = status;
         this.tags = tags;
@@ -85,17 +85,17 @@ public final class GetUserResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UserTag> tags) {
+        public Builder tags(@Nullable List<UserTag> tags) {
             this.tags = tags;
             return this;
         }

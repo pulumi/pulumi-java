@@ -77,22 +77,22 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
     	      this.samplingType = defaults.samplingType;
         }
 
-        public Builder setPercentage(@Nullable Input<Double> percentage) {
+        public Builder percentage(@Nullable Input<Double> percentage) {
             this.percentage = percentage;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Double percentage) {
+        public Builder percentage(@Nullable Double percentage) {
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
 
-        public Builder setSamplingType(@Nullable Input<Either<String,SamplingType>> samplingType) {
+        public Builder samplingType(@Nullable Input<Either<String,SamplingType>> samplingType) {
             this.samplingType = samplingType;
             return this;
         }
 
-        public Builder setSamplingType(@Nullable Either<String,SamplingType> samplingType) {
+        public Builder samplingType(@Nullable Either<String,SamplingType> samplingType) {
             this.samplingType = Input.ofNullable(samplingType);
             return this;
         }

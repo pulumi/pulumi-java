@@ -74,22 +74,22 @@ public final class WeightedPodAffinityTermArgs extends io.pulumi.resources.Resou
     	      this.weight = defaults.weight;
         }
 
-        public Builder setPodAffinityTerm(Input<PodAffinityTermArgs> podAffinityTerm) {
+        public Builder podAffinityTerm(Input<PodAffinityTermArgs> podAffinityTerm) {
             this.podAffinityTerm = Objects.requireNonNull(podAffinityTerm);
             return this;
         }
 
-        public Builder setPodAffinityTerm(PodAffinityTermArgs podAffinityTerm) {
+        public Builder podAffinityTerm(PodAffinityTermArgs podAffinityTerm) {
             this.podAffinityTerm = Input.of(Objects.requireNonNull(podAffinityTerm));
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

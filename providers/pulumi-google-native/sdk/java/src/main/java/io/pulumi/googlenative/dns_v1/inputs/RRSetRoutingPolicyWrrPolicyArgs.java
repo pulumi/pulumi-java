@@ -68,22 +68,22 @@ public final class RRSetRoutingPolicyWrrPolicyArgs extends io.pulumi.resources.R
     	      this.kind = defaults.kind;
         }
 
-        public Builder setItems(@Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items) {
+        public Builder items(@Nullable Input<List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs>> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setItems(@Nullable List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs> items) {
+        public Builder items(@Nullable List<RRSetRoutingPolicyWrrPolicyWrrPolicyItemArgs> items) {
             this.items = Input.ofNullable(items);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

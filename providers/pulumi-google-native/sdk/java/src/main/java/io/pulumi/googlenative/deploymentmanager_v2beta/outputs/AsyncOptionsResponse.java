@@ -21,10 +21,10 @@ public final class AsyncOptionsResponse {
      */
     private final PollingOptionsResponse pollingOptions;
 
-    @OutputCustomType.Constructor({"methodMatch","pollingOptions"})
+    @OutputCustomType.Constructor
     private AsyncOptionsResponse(
-        String methodMatch,
-        PollingOptionsResponse pollingOptions) {
+        @OutputCustomType.Parameter("methodMatch") String methodMatch,
+        @OutputCustomType.Parameter("pollingOptions") PollingOptionsResponse pollingOptions) {
         this.methodMatch = methodMatch;
         this.pollingOptions = pollingOptions;
     }
@@ -66,12 +66,12 @@ public final class AsyncOptionsResponse {
     	      this.pollingOptions = defaults.pollingOptions;
         }
 
-        public Builder setMethodMatch(String methodMatch) {
+        public Builder methodMatch(String methodMatch) {
             this.methodMatch = Objects.requireNonNull(methodMatch);
             return this;
         }
 
-        public Builder setPollingOptions(PollingOptionsResponse pollingOptions) {
+        public Builder pollingOptions(PollingOptionsResponse pollingOptions) {
             this.pollingOptions = Objects.requireNonNull(pollingOptions);
             return this;
         }

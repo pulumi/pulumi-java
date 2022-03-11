@@ -15,8 +15,8 @@ public final class GlossaryInputConfigResponse {
      */
     private final GcsSourceResponse gcsSource;
 
-    @OutputCustomType.Constructor({"gcsSource"})
-    private GlossaryInputConfigResponse(GcsSourceResponse gcsSource) {
+    @OutputCustomType.Constructor
+    private GlossaryInputConfigResponse(@OutputCustomType.Parameter("gcsSource") GcsSourceResponse gcsSource) {
         this.gcsSource = gcsSource;
     }
 
@@ -48,7 +48,7 @@ public final class GlossaryInputConfigResponse {
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder setGcsSource(GcsSourceResponse gcsSource) {
+        public Builder gcsSource(GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }

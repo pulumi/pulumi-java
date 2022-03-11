@@ -77,22 +77,22 @@ public final class StoredProcedureParameterArgs extends io.pulumi.resources.Reso
     	      this.value = defaults.value;
         }
 
-        public Builder setType(@Nullable Input<Either<String,StoredProcedureParameterType>> type) {
+        public Builder type(@Nullable Input<Either<String,StoredProcedureParameterType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,StoredProcedureParameterType> type) {
+        public Builder type(@Nullable Either<String,StoredProcedureParameterType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<Object> value) {
+        public Builder value(@Nullable Input<Object> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = Input.ofNullable(value);
             return this;
         }

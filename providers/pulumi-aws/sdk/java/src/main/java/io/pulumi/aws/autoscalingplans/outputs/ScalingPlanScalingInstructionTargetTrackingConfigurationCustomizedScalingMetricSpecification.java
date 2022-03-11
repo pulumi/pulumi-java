@@ -38,13 +38,13 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"dimensions","metricName","namespace","statistic","unit"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification(
-        @Nullable Map<String,String> dimensions,
-        String metricName,
-        String namespace,
-        String statistic,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("dimensions") @Nullable Map<String,String> dimensions,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("statistic") String statistic,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.dimensions = dimensions;
         this.metricName = metricName;
         this.namespace = namespace;
@@ -116,27 +116,27 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationCusto
     	      this.unit = defaults.unit;
         }
 
-        public Builder setDimensions(@Nullable Map<String,String> dimensions) {
+        public Builder dimensions(@Nullable Map<String,String> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setStatistic(String statistic) {
+        public Builder statistic(String statistic) {
             this.statistic = Objects.requireNonNull(statistic);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

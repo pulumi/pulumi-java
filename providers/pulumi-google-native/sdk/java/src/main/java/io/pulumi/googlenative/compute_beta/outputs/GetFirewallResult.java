@@ -106,26 +106,26 @@ public final class GetFirewallResult {
      */
     private final List<String> targetTags;
 
-    @OutputCustomType.Constructor({"allowed","creationTimestamp","denied","description","destinationRanges","direction","disabled","kind","logConfig","name","network","priority","selfLink","sourceRanges","sourceServiceAccounts","sourceTags","targetServiceAccounts","targetTags"})
+    @OutputCustomType.Constructor
     private GetFirewallResult(
-        List<FirewallAllowedItemResponse> allowed,
-        String creationTimestamp,
-        List<FirewallDeniedItemResponse> denied,
-        String description,
-        List<String> destinationRanges,
-        String direction,
-        Boolean disabled,
-        String kind,
-        FirewallLogConfigResponse logConfig,
-        String name,
-        String network,
-        Integer priority,
-        String selfLink,
-        List<String> sourceRanges,
-        List<String> sourceServiceAccounts,
-        List<String> sourceTags,
-        List<String> targetServiceAccounts,
-        List<String> targetTags) {
+        @OutputCustomType.Parameter("allowed") List<FirewallAllowedItemResponse> allowed,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("denied") List<FirewallDeniedItemResponse> denied,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destinationRanges") List<String> destinationRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("logConfig") FirewallLogConfigResponse logConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("sourceRanges") List<String> sourceRanges,
+        @OutputCustomType.Parameter("sourceServiceAccounts") List<String> sourceServiceAccounts,
+        @OutputCustomType.Parameter("sourceTags") List<String> sourceTags,
+        @OutputCustomType.Parameter("targetServiceAccounts") List<String> targetServiceAccounts,
+        @OutputCustomType.Parameter("targetTags") List<String> targetTags) {
         this.allowed = allowed;
         this.creationTimestamp = creationTimestamp;
         this.denied = denied;
@@ -327,92 +327,92 @@ public final class GetFirewallResult {
     	      this.targetTags = defaults.targetTags;
         }
 
-        public Builder setAllowed(List<FirewallAllowedItemResponse> allowed) {
+        public Builder allowed(List<FirewallAllowedItemResponse> allowed) {
             this.allowed = Objects.requireNonNull(allowed);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDenied(List<FirewallDeniedItemResponse> denied) {
+        public Builder denied(List<FirewallDeniedItemResponse> denied) {
             this.denied = Objects.requireNonNull(denied);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestinationRanges(List<String> destinationRanges) {
+        public Builder destinationRanges(List<String> destinationRanges) {
             this.destinationRanges = Objects.requireNonNull(destinationRanges);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLogConfig(FirewallLogConfigResponse logConfig) {
+        public Builder logConfig(FirewallLogConfigResponse logConfig) {
             this.logConfig = Objects.requireNonNull(logConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSourceRanges(List<String> sourceRanges) {
+        public Builder sourceRanges(List<String> sourceRanges) {
             this.sourceRanges = Objects.requireNonNull(sourceRanges);
             return this;
         }
 
-        public Builder setSourceServiceAccounts(List<String> sourceServiceAccounts) {
+        public Builder sourceServiceAccounts(List<String> sourceServiceAccounts) {
             this.sourceServiceAccounts = Objects.requireNonNull(sourceServiceAccounts);
             return this;
         }
 
-        public Builder setSourceTags(List<String> sourceTags) {
+        public Builder sourceTags(List<String> sourceTags) {
             this.sourceTags = Objects.requireNonNull(sourceTags);
             return this;
         }
 
-        public Builder setTargetServiceAccounts(List<String> targetServiceAccounts) {
+        public Builder targetServiceAccounts(List<String> targetServiceAccounts) {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
 
-        public Builder setTargetTags(List<String> targetTags) {
+        public Builder targetTags(List<String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }

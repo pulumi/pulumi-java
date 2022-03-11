@@ -145,52 +145,52 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
     	      this.windowPeriod = defaults.windowPeriod;
         }
 
-        public Builder setGoodBadMetricFilter(@Nullable Input<String> goodBadMetricFilter) {
+        public Builder goodBadMetricFilter(@Nullable Input<String> goodBadMetricFilter) {
             this.goodBadMetricFilter = goodBadMetricFilter;
             return this;
         }
 
-        public Builder setGoodBadMetricFilter(@Nullable String goodBadMetricFilter) {
+        public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
             this.goodBadMetricFilter = Input.ofNullable(goodBadMetricFilter);
             return this;
         }
 
-        public Builder setGoodTotalRatioThreshold(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold) {
+        public Builder goodTotalRatioThreshold(@Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = goodTotalRatioThreshold;
             return this;
         }
 
-        public Builder setGoodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdGetArgs goodTotalRatioThreshold) {
+        public Builder goodTotalRatioThreshold(@Nullable SloWindowsBasedSliGoodTotalRatioThresholdGetArgs goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = Input.ofNullable(goodTotalRatioThreshold);
             return this;
         }
 
-        public Builder setMetricMeanInRange(@Nullable Input<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange) {
+        public Builder metricMeanInRange(@Nullable Input<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange) {
             this.metricMeanInRange = metricMeanInRange;
             return this;
         }
 
-        public Builder setMetricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRangeGetArgs metricMeanInRange) {
+        public Builder metricMeanInRange(@Nullable SloWindowsBasedSliMetricMeanInRangeGetArgs metricMeanInRange) {
             this.metricMeanInRange = Input.ofNullable(metricMeanInRange);
             return this;
         }
 
-        public Builder setMetricSumInRange(@Nullable Input<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange) {
+        public Builder metricSumInRange(@Nullable Input<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange) {
             this.metricSumInRange = metricSumInRange;
             return this;
         }
 
-        public Builder setMetricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRangeGetArgs metricSumInRange) {
+        public Builder metricSumInRange(@Nullable SloWindowsBasedSliMetricSumInRangeGetArgs metricSumInRange) {
             this.metricSumInRange = Input.ofNullable(metricSumInRange);
             return this;
         }
 
-        public Builder setWindowPeriod(@Nullable Input<String> windowPeriod) {
+        public Builder windowPeriod(@Nullable Input<String> windowPeriod) {
             this.windowPeriod = windowPeriod;
             return this;
         }
 
-        public Builder setWindowPeriod(@Nullable String windowPeriod) {
+        public Builder windowPeriod(@Nullable String windowPeriod) {
             this.windowPeriod = Input.ofNullable(windowPeriod);
             return this;
         }

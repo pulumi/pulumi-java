@@ -27,11 +27,11 @@ public final class CertificateConfigResponse {
      */
     private final SubjectConfigResponse subjectConfig;
 
-    @OutputCustomType.Constructor({"publicKey","reusableConfig","subjectConfig"})
+    @OutputCustomType.Constructor
     private CertificateConfigResponse(
-        PublicKeyResponse publicKey,
-        ReusableConfigWrapperResponse reusableConfig,
-        SubjectConfigResponse subjectConfig) {
+        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("reusableConfig") ReusableConfigWrapperResponse reusableConfig,
+        @OutputCustomType.Parameter("subjectConfig") SubjectConfigResponse subjectConfig) {
         this.publicKey = publicKey;
         this.reusableConfig = reusableConfig;
         this.subjectConfig = subjectConfig;
@@ -83,17 +83,17 @@ public final class CertificateConfigResponse {
     	      this.subjectConfig = defaults.subjectConfig;
         }
 
-        public Builder setPublicKey(PublicKeyResponse publicKey) {
+        public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setReusableConfig(ReusableConfigWrapperResponse reusableConfig) {
+        public Builder reusableConfig(ReusableConfigWrapperResponse reusableConfig) {
             this.reusableConfig = Objects.requireNonNull(reusableConfig);
             return this;
         }
 
-        public Builder setSubjectConfig(SubjectConfigResponse subjectConfig) {
+        public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }

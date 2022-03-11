@@ -23,10 +23,10 @@ public final class ListenerDefaultActionForwardTargetGroup {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"arn","weight"})
+    @OutputCustomType.Constructor
     private ListenerDefaultActionForwardTargetGroup(
-        String arn,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.arn = arn;
         this.weight = weight;
     }
@@ -68,12 +68,12 @@ public final class ListenerDefaultActionForwardTargetGroup {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

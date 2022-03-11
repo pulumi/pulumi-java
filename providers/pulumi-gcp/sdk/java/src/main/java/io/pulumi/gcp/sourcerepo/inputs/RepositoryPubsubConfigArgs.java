@@ -92,32 +92,32 @@ public final class RepositoryPubsubConfigArgs extends io.pulumi.resources.Resour
     	      this.topic = defaults.topic;
         }
 
-        public Builder setMessageFormat(Input<String> messageFormat) {
+        public Builder messageFormat(Input<String> messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
-        public Builder setMessageFormat(String messageFormat) {
+        public Builder messageFormat(String messageFormat) {
             this.messageFormat = Input.of(Objects.requireNonNull(messageFormat));
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable Input<String> serviceAccountEmail) {
             this.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
-        public Builder setServiceAccountEmail(@Nullable String serviceAccountEmail) {
+        public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
             this.serviceAccountEmail = Input.ofNullable(serviceAccountEmail);
             return this;
         }
 
-        public Builder setTopic(Input<String> topic) {
+        public Builder topic(Input<String> topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }

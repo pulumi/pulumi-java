@@ -171,92 +171,92 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable Input<String> cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable Input<String> cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = Input.ofNullable(cloudWatchLogGroupArn);
             return this;
         }
 
-        public Builder setDestinationLocationArn(Input<String> destinationLocationArn) {
+        public Builder destinationLocationArn(Input<String> destinationLocationArn) {
             this.destinationLocationArn = Objects.requireNonNull(destinationLocationArn);
             return this;
         }
 
-        public Builder setDestinationLocationArn(String destinationLocationArn) {
+        public Builder destinationLocationArn(String destinationLocationArn) {
             this.destinationLocationArn = Input.of(Objects.requireNonNull(destinationLocationArn));
             return this;
         }
 
-        public Builder setExcludes(@Nullable Input<List<TaskFilterRuleArgs>> excludes) {
+        public Builder excludes(@Nullable Input<List<TaskFilterRuleArgs>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<TaskFilterRuleArgs> excludes) {
+        public Builder excludes(@Nullable List<TaskFilterRuleArgs> excludes) {
             this.excludes = Input.ofNullable(excludes);
             return this;
         }
 
-        public Builder setIncludes(@Nullable Input<List<TaskFilterRuleArgs>> includes) {
+        public Builder includes(@Nullable Input<List<TaskFilterRuleArgs>> includes) {
             this.includes = includes;
             return this;
         }
 
-        public Builder setIncludes(@Nullable List<TaskFilterRuleArgs> includes) {
+        public Builder includes(@Nullable List<TaskFilterRuleArgs> includes) {
             this.includes = Input.ofNullable(includes);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable Input<TaskOptionsArgs> options) {
+        public Builder options(@Nullable Input<TaskOptionsArgs> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setOptions(@Nullable TaskOptionsArgs options) {
+        public Builder options(@Nullable TaskOptionsArgs options) {
             this.options = Input.ofNullable(options);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<TaskScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<TaskScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TaskScheduleArgs schedule) {
+        public Builder schedule(@Nullable TaskScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setSourceLocationArn(Input<String> sourceLocationArn) {
+        public Builder sourceLocationArn(Input<String> sourceLocationArn) {
             this.sourceLocationArn = Objects.requireNonNull(sourceLocationArn);
             return this;
         }
 
-        public Builder setSourceLocationArn(String sourceLocationArn) {
+        public Builder sourceLocationArn(String sourceLocationArn) {
             this.sourceLocationArn = Input.of(Objects.requireNonNull(sourceLocationArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TaskTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TaskTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TaskTagArgs> tags) {
+        public Builder tags(@Nullable List<TaskTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

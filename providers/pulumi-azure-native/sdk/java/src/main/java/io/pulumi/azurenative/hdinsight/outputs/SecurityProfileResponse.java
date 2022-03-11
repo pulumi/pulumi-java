@@ -58,17 +58,17 @@ public final class SecurityProfileResponse {
      */
     private final @Nullable String organizationalUnitDN;
 
-    @OutputCustomType.Constructor({"aaddsResourceId","clusterUsersGroupDNs","directoryType","domain","domainUserPassword","domainUsername","ldapsUrls","msiResourceId","organizationalUnitDN"})
+    @OutputCustomType.Constructor
     private SecurityProfileResponse(
-        @Nullable String aaddsResourceId,
-        @Nullable List<String> clusterUsersGroupDNs,
-        @Nullable String directoryType,
-        @Nullable String domain,
-        @Nullable String domainUserPassword,
-        @Nullable String domainUsername,
-        @Nullable List<String> ldapsUrls,
-        @Nullable String msiResourceId,
-        @Nullable String organizationalUnitDN) {
+        @OutputCustomType.Parameter("aaddsResourceId") @Nullable String aaddsResourceId,
+        @OutputCustomType.Parameter("clusterUsersGroupDNs") @Nullable List<String> clusterUsersGroupDNs,
+        @OutputCustomType.Parameter("directoryType") @Nullable String directoryType,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("domainUserPassword") @Nullable String domainUserPassword,
+        @OutputCustomType.Parameter("domainUsername") @Nullable String domainUsername,
+        @OutputCustomType.Parameter("ldapsUrls") @Nullable List<String> ldapsUrls,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("organizationalUnitDN") @Nullable String organizationalUnitDN) {
         this.aaddsResourceId = aaddsResourceId;
         this.clusterUsersGroupDNs = clusterUsersGroupDNs;
         this.directoryType = directoryType;
@@ -180,47 +180,47 @@ public final class SecurityProfileResponse {
     	      this.organizationalUnitDN = defaults.organizationalUnitDN;
         }
 
-        public Builder setAaddsResourceId(@Nullable String aaddsResourceId) {
+        public Builder aaddsResourceId(@Nullable String aaddsResourceId) {
             this.aaddsResourceId = aaddsResourceId;
             return this;
         }
 
-        public Builder setClusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
+        public Builder clusterUsersGroupDNs(@Nullable List<String> clusterUsersGroupDNs) {
             this.clusterUsersGroupDNs = clusterUsersGroupDNs;
             return this;
         }
 
-        public Builder setDirectoryType(@Nullable String directoryType) {
+        public Builder directoryType(@Nullable String directoryType) {
             this.directoryType = directoryType;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setDomainUserPassword(@Nullable String domainUserPassword) {
+        public Builder domainUserPassword(@Nullable String domainUserPassword) {
             this.domainUserPassword = domainUserPassword;
             return this;
         }
 
-        public Builder setDomainUsername(@Nullable String domainUsername) {
+        public Builder domainUsername(@Nullable String domainUsername) {
             this.domainUsername = domainUsername;
             return this;
         }
 
-        public Builder setLdapsUrls(@Nullable List<String> ldapsUrls) {
+        public Builder ldapsUrls(@Nullable List<String> ldapsUrls) {
             this.ldapsUrls = ldapsUrls;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setOrganizationalUnitDN(@Nullable String organizationalUnitDN) {
+        public Builder organizationalUnitDN(@Nullable String organizationalUnitDN) {
             this.organizationalUnitDN = organizationalUnitDN;
             return this;
         }

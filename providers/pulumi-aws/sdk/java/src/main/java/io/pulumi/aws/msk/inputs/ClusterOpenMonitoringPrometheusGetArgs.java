@@ -71,22 +71,22 @@ public final class ClusterOpenMonitoringPrometheusGetArgs extends io.pulumi.reso
     	      this.nodeExporter = defaults.nodeExporter;
         }
 
-        public Builder setJmxExporter(@Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter) {
+        public Builder jmxExporter(@Nullable Input<ClusterOpenMonitoringPrometheusJmxExporterGetArgs> jmxExporter) {
             this.jmxExporter = jmxExporter;
             return this;
         }
 
-        public Builder setJmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporterGetArgs jmxExporter) {
+        public Builder jmxExporter(@Nullable ClusterOpenMonitoringPrometheusJmxExporterGetArgs jmxExporter) {
             this.jmxExporter = Input.ofNullable(jmxExporter);
             return this;
         }
 
-        public Builder setNodeExporter(@Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
+        public Builder nodeExporter(@Nullable Input<ClusterOpenMonitoringPrometheusNodeExporterGetArgs> nodeExporter) {
             this.nodeExporter = nodeExporter;
             return this;
         }
 
-        public Builder setNodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporterGetArgs nodeExporter) {
+        public Builder nodeExporter(@Nullable ClusterOpenMonitoringPrometheusNodeExporterGetArgs nodeExporter) {
             this.nodeExporter = Input.ofNullable(nodeExporter);
             return this;
         }

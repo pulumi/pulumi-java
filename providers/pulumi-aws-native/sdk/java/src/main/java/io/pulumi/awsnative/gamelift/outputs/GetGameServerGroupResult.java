@@ -85,21 +85,21 @@ public final class GetGameServerGroupResult {
      */
     private final @Nullable List<String> vpcSubnets;
 
-    @OutputCustomType.Constructor({"autoScalingGroupArn","autoScalingPolicy","balancingStrategy","gameServerGroupArn","gameServerGroupName","gameServerProtectionPolicy","instanceDefinitions","launchTemplate","maxSize","minSize","roleArn","tags","vpcSubnets"})
+    @OutputCustomType.Constructor
     private GetGameServerGroupResult(
-        @Nullable String autoScalingGroupArn,
-        @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
-        @Nullable GameServerGroupBalancingStrategy balancingStrategy,
-        @Nullable String gameServerGroupArn,
-        @Nullable String gameServerGroupName,
-        @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
-        @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
-        @Nullable GameServerGroupLaunchTemplate launchTemplate,
-        @Nullable Double maxSize,
-        @Nullable Double minSize,
-        @Nullable String roleArn,
-        @Nullable List<GameServerGroupTag> tags,
-        @Nullable List<String> vpcSubnets) {
+        @OutputCustomType.Parameter("autoScalingGroupArn") @Nullable String autoScalingGroupArn,
+        @OutputCustomType.Parameter("autoScalingPolicy") @Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy,
+        @OutputCustomType.Parameter("balancingStrategy") @Nullable GameServerGroupBalancingStrategy balancingStrategy,
+        @OutputCustomType.Parameter("gameServerGroupArn") @Nullable String gameServerGroupArn,
+        @OutputCustomType.Parameter("gameServerGroupName") @Nullable String gameServerGroupName,
+        @OutputCustomType.Parameter("gameServerProtectionPolicy") @Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy,
+        @OutputCustomType.Parameter("instanceDefinitions") @Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions,
+        @OutputCustomType.Parameter("launchTemplate") @Nullable GameServerGroupLaunchTemplate launchTemplate,
+        @OutputCustomType.Parameter("maxSize") @Nullable Double maxSize,
+        @OutputCustomType.Parameter("minSize") @Nullable Double minSize,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<GameServerGroupTag> tags,
+        @OutputCustomType.Parameter("vpcSubnets") @Nullable List<String> vpcSubnets) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.autoScalingPolicy = autoScalingPolicy;
         this.balancingStrategy = balancingStrategy;
@@ -251,67 +251,67 @@ public final class GetGameServerGroupResult {
     	      this.vpcSubnets = defaults.vpcSubnets;
         }
 
-        public Builder setAutoScalingGroupArn(@Nullable String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(@Nullable String autoScalingGroupArn) {
             this.autoScalingGroupArn = autoScalingGroupArn;
             return this;
         }
 
-        public Builder setAutoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy) {
+        public Builder autoScalingPolicy(@Nullable GameServerGroupAutoScalingPolicy autoScalingPolicy) {
             this.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
 
-        public Builder setBalancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
+        public Builder balancingStrategy(@Nullable GameServerGroupBalancingStrategy balancingStrategy) {
             this.balancingStrategy = balancingStrategy;
             return this;
         }
 
-        public Builder setGameServerGroupArn(@Nullable String gameServerGroupArn) {
+        public Builder gameServerGroupArn(@Nullable String gameServerGroupArn) {
             this.gameServerGroupArn = gameServerGroupArn;
             return this;
         }
 
-        public Builder setGameServerGroupName(@Nullable String gameServerGroupName) {
+        public Builder gameServerGroupName(@Nullable String gameServerGroupName) {
             this.gameServerGroupName = gameServerGroupName;
             return this;
         }
 
-        public Builder setGameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
+        public Builder gameServerProtectionPolicy(@Nullable GameServerGroupGameServerProtectionPolicy gameServerProtectionPolicy) {
             this.gameServerProtectionPolicy = gameServerProtectionPolicy;
             return this;
         }
 
-        public Builder setInstanceDefinitions(@Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions) {
+        public Builder instanceDefinitions(@Nullable List<GameServerGroupInstanceDefinition> instanceDefinitions) {
             this.instanceDefinitions = instanceDefinitions;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable GameServerGroupLaunchTemplate launchTemplate) {
+        public Builder launchTemplate(@Nullable GameServerGroupLaunchTemplate launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Double maxSize) {
+        public Builder maxSize(@Nullable Double maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Double minSize) {
+        public Builder minSize(@Nullable Double minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GameServerGroupTag> tags) {
+        public Builder tags(@Nullable List<GameServerGroupTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcSubnets(@Nullable List<String> vpcSubnets) {
+        public Builder vpcSubnets(@Nullable List<String> vpcSubnets) {
             this.vpcSubnets = vpcSubnets;
             return this;
         }

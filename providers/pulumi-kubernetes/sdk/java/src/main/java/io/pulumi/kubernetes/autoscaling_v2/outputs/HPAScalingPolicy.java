@@ -26,11 +26,11 @@ public final class HPAScalingPolicy {
      */
     private final Integer value;
 
-    @OutputCustomType.Constructor({"periodSeconds","type","value"})
+    @OutputCustomType.Constructor
     private HPAScalingPolicy(
-        Integer periodSeconds,
-        String type,
-        Integer value) {
+        @OutputCustomType.Parameter("periodSeconds") Integer periodSeconds,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Integer value) {
         this.periodSeconds = periodSeconds;
         this.type = type;
         this.value = value;
@@ -82,17 +82,17 @@ public final class HPAScalingPolicy {
     	      this.value = defaults.value;
         }
 
-        public Builder setPeriodSeconds(Integer periodSeconds) {
+        public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Integer value) {
+        public Builder value(Integer value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

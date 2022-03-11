@@ -25,10 +25,10 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageText {
      */
     private final @Nullable List<String> texts;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","texts"})
+    @OutputCustomType.Constructor
     private CxFlowEventHandlerTriggerFulfillmentMessageText(
-        @Nullable Boolean allowPlaybackInterruption,
-        @Nullable List<String> texts) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") @Nullable Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("texts") @Nullable List<String> texts) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.texts = texts;
     }
@@ -71,12 +71,12 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageText {
     	      this.texts = defaults.texts;
         }
 
-        public Builder setAllowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(@Nullable Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = allowPlaybackInterruption;
             return this;
         }
 
-        public Builder setTexts(@Nullable List<String> texts) {
+        public Builder texts(@Nullable List<String> texts) {
             this.texts = texts;
             return this;
         }

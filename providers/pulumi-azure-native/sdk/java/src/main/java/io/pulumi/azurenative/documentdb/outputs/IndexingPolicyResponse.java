@@ -48,14 +48,14 @@ public final class IndexingPolicyResponse {
      */
     private final @Nullable List<SpatialSpecResponse> spatialIndexes;
 
-    @OutputCustomType.Constructor({"automatic","compositeIndexes","excludedPaths","includedPaths","indexingMode","spatialIndexes"})
+    @OutputCustomType.Constructor
     private IndexingPolicyResponse(
-        @Nullable Boolean automatic,
-        @Nullable List<List<CompositePathResponse>> compositeIndexes,
-        @Nullable List<ExcludedPathResponse> excludedPaths,
-        @Nullable List<IncludedPathResponse> includedPaths,
-        @Nullable String indexingMode,
-        @Nullable List<SpatialSpecResponse> spatialIndexes) {
+        @OutputCustomType.Parameter("automatic") @Nullable Boolean automatic,
+        @OutputCustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes,
+        @OutputCustomType.Parameter("excludedPaths") @Nullable List<ExcludedPathResponse> excludedPaths,
+        @OutputCustomType.Parameter("includedPaths") @Nullable List<IncludedPathResponse> includedPaths,
+        @OutputCustomType.Parameter("indexingMode") @Nullable String indexingMode,
+        @OutputCustomType.Parameter("spatialIndexes") @Nullable List<SpatialSpecResponse> spatialIndexes) {
         this.automatic = automatic;
         this.compositeIndexes = compositeIndexes;
         this.excludedPaths = excludedPaths;
@@ -137,32 +137,32 @@ public final class IndexingPolicyResponse {
     	      this.spatialIndexes = defaults.spatialIndexes;
         }
 
-        public Builder setAutomatic(@Nullable Boolean automatic) {
+        public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setCompositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+        public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
         }
 
-        public Builder setExcludedPaths(@Nullable List<ExcludedPathResponse> excludedPaths) {
+        public Builder excludedPaths(@Nullable List<ExcludedPathResponse> excludedPaths) {
             this.excludedPaths = excludedPaths;
             return this;
         }
 
-        public Builder setIncludedPaths(@Nullable List<IncludedPathResponse> includedPaths) {
+        public Builder includedPaths(@Nullable List<IncludedPathResponse> includedPaths) {
             this.includedPaths = includedPaths;
             return this;
         }
 
-        public Builder setIndexingMode(@Nullable String indexingMode) {
+        public Builder indexingMode(@Nullable String indexingMode) {
             this.indexingMode = indexingMode;
             return this;
         }
 
-        public Builder setSpatialIndexes(@Nullable List<SpatialSpecResponse> spatialIndexes) {
+        public Builder spatialIndexes(@Nullable List<SpatialSpecResponse> spatialIndexes) {
             this.spatialIndexes = spatialIndexes;
             return this;
         }

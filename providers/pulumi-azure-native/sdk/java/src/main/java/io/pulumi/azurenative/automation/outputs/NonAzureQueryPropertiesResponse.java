@@ -22,10 +22,10 @@ public final class NonAzureQueryPropertiesResponse {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"functionAlias","workspaceId"})
+    @OutputCustomType.Constructor
     private NonAzureQueryPropertiesResponse(
-        @Nullable String functionAlias,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("functionAlias") @Nullable String functionAlias,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.functionAlias = functionAlias;
         this.workspaceId = workspaceId;
     }
@@ -67,12 +67,12 @@ public final class NonAzureQueryPropertiesResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

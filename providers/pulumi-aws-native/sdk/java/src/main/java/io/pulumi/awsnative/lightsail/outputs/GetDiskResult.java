@@ -70,20 +70,20 @@ public final class GetDiskResult {
      */
     private final @Nullable List<DiskTag> tags;
 
-    @OutputCustomType.Constructor({"addOns","attachedTo","attachmentState","diskArn","iops","isAttached","location","path","resourceType","state","supportCode","tags"})
+    @OutputCustomType.Constructor
     private GetDiskResult(
-        @Nullable List<DiskAddOn> addOns,
-        @Nullable String attachedTo,
-        @Nullable String attachmentState,
-        @Nullable String diskArn,
-        @Nullable Integer iops,
-        @Nullable Boolean isAttached,
-        @Nullable DiskLocation location,
-        @Nullable String path,
-        @Nullable String resourceType,
-        @Nullable String state,
-        @Nullable String supportCode,
-        @Nullable List<DiskTag> tags) {
+        @OutputCustomType.Parameter("addOns") @Nullable List<DiskAddOn> addOns,
+        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @OutputCustomType.Parameter("diskArn") @Nullable String diskArn,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @OutputCustomType.Parameter("location") @Nullable DiskLocation location,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("supportCode") @Nullable String supportCode,
+        @OutputCustomType.Parameter("tags") @Nullable List<DiskTag> tags) {
         this.addOns = addOns;
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
@@ -217,62 +217,62 @@ public final class GetDiskResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddOns(@Nullable List<DiskAddOn> addOns) {
+        public Builder addOns(@Nullable List<DiskAddOn> addOns) {
             this.addOns = addOns;
             return this;
         }
 
-        public Builder setAttachedTo(@Nullable String attachedTo) {
+        public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
-        public Builder setAttachmentState(@Nullable String attachmentState) {
+        public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
 
-        public Builder setDiskArn(@Nullable String diskArn) {
+        public Builder diskArn(@Nullable String diskArn) {
             this.diskArn = diskArn;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setIsAttached(@Nullable Boolean isAttached) {
+        public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
 
-        public Builder setLocation(@Nullable DiskLocation location) {
+        public Builder location(@Nullable DiskLocation location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSupportCode(@Nullable String supportCode) {
+        public Builder supportCode(@Nullable String supportCode) {
             this.supportCode = supportCode;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DiskTag> tags) {
+        public Builder tags(@Nullable List<DiskTag> tags) {
             this.tags = tags;
             return this;
         }

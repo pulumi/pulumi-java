@@ -158,37 +158,37 @@ public final class SoftwareRecipeStepResponse extends io.pulumi.resources.Invoke
     	      this.scriptRun = defaults.scriptRun;
         }
 
-        public Builder setArchiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
+        public Builder archiveExtraction(SoftwareRecipeStepExtractArchiveResponse archiveExtraction) {
             this.archiveExtraction = Objects.requireNonNull(archiveExtraction);
             return this;
         }
 
-        public Builder setDpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
+        public Builder dpkgInstallation(SoftwareRecipeStepInstallDpkgResponse dpkgInstallation) {
             this.dpkgInstallation = Objects.requireNonNull(dpkgInstallation);
             return this;
         }
 
-        public Builder setFileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
+        public Builder fileCopy(SoftwareRecipeStepCopyFileResponse fileCopy) {
             this.fileCopy = Objects.requireNonNull(fileCopy);
             return this;
         }
 
-        public Builder setFileExec(SoftwareRecipeStepExecFileResponse fileExec) {
+        public Builder fileExec(SoftwareRecipeStepExecFileResponse fileExec) {
             this.fileExec = Objects.requireNonNull(fileExec);
             return this;
         }
 
-        public Builder setMsiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
+        public Builder msiInstallation(SoftwareRecipeStepInstallMsiResponse msiInstallation) {
             this.msiInstallation = Objects.requireNonNull(msiInstallation);
             return this;
         }
 
-        public Builder setRpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
+        public Builder rpmInstallation(SoftwareRecipeStepInstallRpmResponse rpmInstallation) {
             this.rpmInstallation = Objects.requireNonNull(rpmInstallation);
             return this;
         }
 
-        public Builder setScriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
+        public Builder scriptRun(SoftwareRecipeStepRunScriptResponse scriptRun) {
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
         }

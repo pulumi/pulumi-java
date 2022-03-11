@@ -26,11 +26,11 @@ public final class StackTraceElementResponse {
      */
     private final String step;
 
-    @OutputCustomType.Constructor({"position","routine","step"})
+    @OutputCustomType.Constructor
     private StackTraceElementResponse(
-        PositionResponse position,
-        String routine,
-        String step) {
+        @OutputCustomType.Parameter("position") PositionResponse position,
+        @OutputCustomType.Parameter("routine") String routine,
+        @OutputCustomType.Parameter("step") String step) {
         this.position = position;
         this.routine = routine;
         this.step = step;
@@ -82,17 +82,17 @@ public final class StackTraceElementResponse {
     	      this.step = defaults.step;
         }
 
-        public Builder setPosition(PositionResponse position) {
+        public Builder position(PositionResponse position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setRoutine(String routine) {
+        public Builder routine(String routine) {
             this.routine = Objects.requireNonNull(routine);
             return this;
         }
 
-        public Builder setStep(String step) {
+        public Builder step(String step) {
             this.step = Objects.requireNonNull(step);
             return this;
         }

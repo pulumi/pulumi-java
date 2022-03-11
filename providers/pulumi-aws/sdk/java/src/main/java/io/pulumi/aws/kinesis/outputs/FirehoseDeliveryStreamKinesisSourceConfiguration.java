@@ -20,10 +20,10 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"kinesisStreamArn","roleArn"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamKinesisSourceConfiguration(
-        String kinesisStreamArn,
-        String roleArn) {
+        @OutputCustomType.Parameter("kinesisStreamArn") String kinesisStreamArn,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.kinesisStreamArn = kinesisStreamArn;
         this.roleArn = roleArn;
     }
@@ -65,12 +65,12 @@ public final class FirehoseDeliveryStreamKinesisSourceConfiguration {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setKinesisStreamArn(String kinesisStreamArn) {
+        public Builder kinesisStreamArn(String kinesisStreamArn) {
             this.kinesisStreamArn = Objects.requireNonNull(kinesisStreamArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

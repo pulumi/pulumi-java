@@ -76,22 +76,22 @@ public final class GridLayoutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgets = defaults.widgets;
         }
 
-        public Builder setColumns(@Nullable Input<String> columns) {
+        public Builder columns(@Nullable Input<String> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setColumns(@Nullable String columns) {
+        public Builder columns(@Nullable String columns) {
             this.columns = Input.ofNullable(columns);
             return this;
         }
 
-        public Builder setWidgets(@Nullable Input<List<WidgetArgs>> widgets) {
+        public Builder widgets(@Nullable Input<List<WidgetArgs>> widgets) {
             this.widgets = widgets;
             return this;
         }
 
-        public Builder setWidgets(@Nullable List<WidgetArgs> widgets) {
+        public Builder widgets(@Nullable List<WidgetArgs> widgets) {
             this.widgets = Input.ofNullable(widgets);
             return this;
         }

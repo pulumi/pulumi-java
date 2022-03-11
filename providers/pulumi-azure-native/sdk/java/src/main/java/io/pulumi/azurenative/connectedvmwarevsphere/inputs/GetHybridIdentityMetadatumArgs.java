@@ -84,17 +84,17 @@ public final class GetHybridIdentityMetadatumArgs extends io.pulumi.resources.In
     	      this.virtualMachineName = defaults.virtualMachineName;
         }
 
-        public Builder setMetadataName(String metadataName) {
+        public Builder metadataName(String metadataName) {
             this.metadataName = Objects.requireNonNull(metadataName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVirtualMachineName(String virtualMachineName) {
+        public Builder virtualMachineName(String virtualMachineName) {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }

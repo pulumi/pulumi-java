@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAddonsConfigHorizontalPodAutoscaling {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private GetClusterAddonsConfigHorizontalPodAutoscaling(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private GetClusterAddonsConfigHorizontalPodAutoscaling(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterAddonsConfigHorizontalPodAutoscaling {
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }

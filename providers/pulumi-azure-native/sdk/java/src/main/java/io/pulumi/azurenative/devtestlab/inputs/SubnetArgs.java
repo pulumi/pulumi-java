@@ -92,32 +92,32 @@ public final class SubnetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAllowPublicIp(@Nullable Input<Either<String,UsagePermissionType>> allowPublicIp) {
+        public Builder allowPublicIp(@Nullable Input<Either<String,UsagePermissionType>> allowPublicIp) {
             this.allowPublicIp = allowPublicIp;
             return this;
         }
 
-        public Builder setAllowPublicIp(@Nullable Either<String,UsagePermissionType> allowPublicIp) {
+        public Builder allowPublicIp(@Nullable Either<String,UsagePermissionType> allowPublicIp) {
             this.allowPublicIp = Input.ofNullable(allowPublicIp);
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable Input<String> labSubnetName) {
+        public Builder labSubnetName(@Nullable Input<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = Input.ofNullable(labSubnetName);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }

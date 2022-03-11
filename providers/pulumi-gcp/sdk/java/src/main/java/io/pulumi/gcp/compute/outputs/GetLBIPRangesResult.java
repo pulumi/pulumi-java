@@ -26,11 +26,11 @@ public final class GetLBIPRangesResult {
      */
     private final List<String> networks;
 
-    @OutputCustomType.Constructor({"httpSslTcpInternals","id","networks"})
+    @OutputCustomType.Constructor
     private GetLBIPRangesResult(
-        List<String> httpSslTcpInternals,
-        String id,
-        List<String> networks) {
+        @OutputCustomType.Parameter("httpSslTcpInternals") List<String> httpSslTcpInternals,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networks") List<String> networks) {
         this.httpSslTcpInternals = httpSslTcpInternals;
         this.id = id;
         this.networks = networks;
@@ -82,17 +82,17 @@ public final class GetLBIPRangesResult {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setHttpSslTcpInternals(List<String> httpSslTcpInternals) {
+        public Builder httpSslTcpInternals(List<String> httpSslTcpInternals) {
             this.httpSslTcpInternals = Objects.requireNonNull(httpSslTcpInternals);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetworks(List<String> networks) {
+        public Builder networks(List<String> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

@@ -31,12 +31,12 @@ public final class ClusterShardNode {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"availabilityZone","createTime","endpoints","name"})
+    @OutputCustomType.Constructor
     private ClusterShardNode(
-        @Nullable String availabilityZone,
-        @Nullable String createTime,
-        @Nullable List<ClusterShardNodeEndpoint> endpoints,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<ClusterShardNodeEndpoint> endpoints,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.availabilityZone = availabilityZone;
         this.createTime = createTime;
         this.endpoints = endpoints;
@@ -95,22 +95,22 @@ public final class ClusterShardNode {
     	      this.name = defaults.name;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<ClusterShardNodeEndpoint> endpoints) {
+        public Builder endpoints(@Nullable List<ClusterShardNodeEndpoint> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

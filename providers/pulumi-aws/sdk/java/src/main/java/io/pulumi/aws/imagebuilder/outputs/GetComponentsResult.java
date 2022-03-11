@@ -31,13 +31,13 @@ public final class GetComponentsResult {
     private final List<String> names;
     private final @Nullable String owner;
 
-    @OutputCustomType.Constructor({"arns","filters","id","names","owner"})
+    @OutputCustomType.Constructor
     private GetComponentsResult(
-        List<String> arns,
-        @Nullable List<GetComponentsFilter> filters,
-        String id,
-        List<String> names,
-        @Nullable String owner) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetComponentsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("owner") @Nullable String owner) {
         this.arns = arns;
         this.filters = filters;
         this.id = id;
@@ -101,27 +101,27 @@ public final class GetComponentsResult {
     	      this.owner = defaults.owner;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetComponentsFilter> filters) {
+        public Builder filters(@Nullable List<GetComponentsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }

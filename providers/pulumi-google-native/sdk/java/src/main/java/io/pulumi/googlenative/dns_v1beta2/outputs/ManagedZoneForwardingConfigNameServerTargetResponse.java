@@ -26,12 +26,12 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
     private final String ipv6Address;
     private final String kind;
 
-    @OutputCustomType.Constructor({"forwardingPath","ipv4Address","ipv6Address","kind"})
+    @OutputCustomType.Constructor
     private ManagedZoneForwardingConfigNameServerTargetResponse(
-        String forwardingPath,
-        String ipv4Address,
-        String ipv6Address,
-        String kind) {
+        @OutputCustomType.Parameter("forwardingPath") String forwardingPath,
+        @OutputCustomType.Parameter("ipv4Address") String ipv4Address,
+        @OutputCustomType.Parameter("ipv6Address") String ipv6Address,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.forwardingPath = forwardingPath;
         this.ipv4Address = ipv4Address;
         this.ipv6Address = ipv6Address;
@@ -89,22 +89,22 @@ public final class ManagedZoneForwardingConfigNameServerTargetResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setForwardingPath(String forwardingPath) {
+        public Builder forwardingPath(String forwardingPath) {
             this.forwardingPath = Objects.requireNonNull(forwardingPath);
             return this;
         }
 
-        public Builder setIpv4Address(String ipv4Address) {
+        public Builder ipv4Address(String ipv4Address) {
             this.ipv4Address = Objects.requireNonNull(ipv4Address);
             return this;
         }
 
-        public Builder setIpv6Address(String ipv6Address) {
+        public Builder ipv6Address(String ipv6Address) {
             this.ipv6Address = Objects.requireNonNull(ipv6Address);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

@@ -25,11 +25,11 @@ public final class PlatformImagePurchasePlanResponse {
      */
     private final String planPublisher;
 
-    @OutputCustomType.Constructor({"planName","planProduct","planPublisher"})
+    @OutputCustomType.Constructor
     private PlatformImagePurchasePlanResponse(
-        String planName,
-        String planProduct,
-        String planPublisher) {
+        @OutputCustomType.Parameter("planName") String planName,
+        @OutputCustomType.Parameter("planProduct") String planProduct,
+        @OutputCustomType.Parameter("planPublisher") String planPublisher) {
         this.planName = planName;
         this.planProduct = planProduct;
         this.planPublisher = planPublisher;
@@ -81,17 +81,17 @@ public final class PlatformImagePurchasePlanResponse {
     	      this.planPublisher = defaults.planPublisher;
         }
 
-        public Builder setPlanName(String planName) {
+        public Builder planName(String planName) {
             this.planName = Objects.requireNonNull(planName);
             return this;
         }
 
-        public Builder setPlanProduct(String planProduct) {
+        public Builder planProduct(String planProduct) {
             this.planProduct = Objects.requireNonNull(planProduct);
             return this;
         }
 
-        public Builder setPlanPublisher(String planPublisher) {
+        public Builder planPublisher(String planPublisher) {
             this.planPublisher = Objects.requireNonNull(planPublisher);
             return this;
         }

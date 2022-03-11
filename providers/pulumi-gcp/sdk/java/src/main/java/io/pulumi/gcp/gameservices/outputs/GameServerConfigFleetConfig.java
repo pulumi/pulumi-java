@@ -28,10 +28,10 @@ public final class GameServerConfigFleetConfig {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"fleetSpec","name"})
+    @OutputCustomType.Constructor
     private GameServerConfigFleetConfig(
-        String fleetSpec,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }
@@ -79,12 +79,12 @@ public final class GameServerConfigFleetConfig {
     	      this.name = defaults.name;
         }
 
-        public Builder setFleetSpec(String fleetSpec) {
+        public Builder fleetSpec(String fleetSpec) {
             this.fleetSpec = Objects.requireNonNull(fleetSpec);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

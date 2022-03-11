@@ -17,8 +17,8 @@ public final class TransferConfigurationResponseTransferFilterDetails {
      */
     private final @Nullable TransferFilterDetailsResponse include;
 
-    @OutputCustomType.Constructor({"include"})
-    private TransferConfigurationResponseTransferFilterDetails(@Nullable TransferFilterDetailsResponse include) {
+    @OutputCustomType.Constructor
+    private TransferConfigurationResponseTransferFilterDetails(@OutputCustomType.Parameter("include") @Nullable TransferFilterDetailsResponse include) {
         this.include = include;
     }
 
@@ -50,7 +50,7 @@ public final class TransferConfigurationResponseTransferFilterDetails {
     	      this.include = defaults.include;
         }
 
-        public Builder setInclude(@Nullable TransferFilterDetailsResponse include) {
+        public Builder include(@Nullable TransferFilterDetailsResponse include) {
             this.include = include;
             return this;
         }

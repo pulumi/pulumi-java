@@ -34,12 +34,12 @@ public final class ScorecardResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"gaugeView","sparkChartView","thresholds","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private ScorecardResponse(
-        GaugeViewResponse gaugeView,
-        SparkChartViewResponse sparkChartView,
-        List<ThresholdResponse> thresholds,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("gaugeView") GaugeViewResponse gaugeView,
+        @OutputCustomType.Parameter("sparkChartView") SparkChartViewResponse sparkChartView,
+        @OutputCustomType.Parameter("thresholds") List<ThresholdResponse> thresholds,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.gaugeView = gaugeView;
         this.sparkChartView = sparkChartView;
         this.thresholds = thresholds;
@@ -101,22 +101,22 @@ public final class ScorecardResponse {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setGaugeView(GaugeViewResponse gaugeView) {
+        public Builder gaugeView(GaugeViewResponse gaugeView) {
             this.gaugeView = Objects.requireNonNull(gaugeView);
             return this;
         }
 
-        public Builder setSparkChartView(SparkChartViewResponse sparkChartView) {
+        public Builder sparkChartView(SparkChartViewResponse sparkChartView) {
             this.sparkChartView = Objects.requireNonNull(sparkChartView);
             return this;
         }
 
-        public Builder setThresholds(List<ThresholdResponse> thresholds) {
+        public Builder thresholds(List<ThresholdResponse> thresholds) {
             this.thresholds = Objects.requireNonNull(thresholds);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }

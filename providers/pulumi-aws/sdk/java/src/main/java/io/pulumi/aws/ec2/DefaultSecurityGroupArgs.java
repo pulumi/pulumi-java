@@ -119,52 +119,52 @@ public final class DefaultSecurityGroupArgs extends io.pulumi.resources.Resource
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setEgress(@Nullable Input<List<DefaultSecurityGroupEgressArgs>> egress) {
+        public Builder egress(@Nullable Input<List<DefaultSecurityGroupEgressArgs>> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setEgress(@Nullable List<DefaultSecurityGroupEgressArgs> egress) {
+        public Builder egress(@Nullable List<DefaultSecurityGroupEgressArgs> egress) {
             this.egress = Input.ofNullable(egress);
             return this;
         }
 
-        public Builder setIngress(@Nullable Input<List<DefaultSecurityGroupIngressArgs>> ingress) {
+        public Builder ingress(@Nullable Input<List<DefaultSecurityGroupIngressArgs>> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<DefaultSecurityGroupIngressArgs> ingress) {
+        public Builder ingress(@Nullable List<DefaultSecurityGroupIngressArgs> ingress) {
             this.ingress = Input.ofNullable(ingress);
             return this;
         }
 
-        public Builder setRevokeRulesOnDelete(@Nullable Input<Boolean> revokeRulesOnDelete) {
+        public Builder revokeRulesOnDelete(@Nullable Input<Boolean> revokeRulesOnDelete) {
             this.revokeRulesOnDelete = revokeRulesOnDelete;
             return this;
         }
 
-        public Builder setRevokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
+        public Builder revokeRulesOnDelete(@Nullable Boolean revokeRulesOnDelete) {
             this.revokeRulesOnDelete = Input.ofNullable(revokeRulesOnDelete);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

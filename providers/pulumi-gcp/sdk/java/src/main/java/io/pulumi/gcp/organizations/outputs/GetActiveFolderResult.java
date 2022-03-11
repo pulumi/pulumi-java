@@ -22,12 +22,12 @@ public final class GetActiveFolderResult {
     private final String name;
     private final String parent;
 
-    @OutputCustomType.Constructor({"displayName","id","name","parent"})
+    @OutputCustomType.Constructor
     private GetActiveFolderResult(
-        String displayName,
-        String id,
-        String name,
-        String parent) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;
@@ -81,22 +81,22 @@ public final class GetActiveFolderResult {
     	      this.parent = defaults.parent;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }

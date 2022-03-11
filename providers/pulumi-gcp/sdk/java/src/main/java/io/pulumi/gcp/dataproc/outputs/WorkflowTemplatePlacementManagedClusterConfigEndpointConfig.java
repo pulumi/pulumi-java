@@ -25,10 +25,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
      */
     private final @Nullable Map<String,String> httpPorts;
 
-    @OutputCustomType.Constructor({"enableHttpPortAccess","httpPorts"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigEndpointConfig(
-        @Nullable Boolean enableHttpPortAccess,
-        @Nullable Map<String,String> httpPorts) {
+        @OutputCustomType.Parameter("enableHttpPortAccess") @Nullable Boolean enableHttpPortAccess,
+        @OutputCustomType.Parameter("httpPorts") @Nullable Map<String,String> httpPorts) {
         this.enableHttpPortAccess = enableHttpPortAccess;
         this.httpPorts = httpPorts;
     }
@@ -71,12 +71,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfig {
     	      this.httpPorts = defaults.httpPorts;
         }
 
-        public Builder setEnableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
+        public Builder enableHttpPortAccess(@Nullable Boolean enableHttpPortAccess) {
             this.enableHttpPortAccess = enableHttpPortAccess;
             return this;
         }
 
-        public Builder setHttpPorts(@Nullable Map<String,String> httpPorts) {
+        public Builder httpPorts(@Nullable Map<String,String> httpPorts) {
             this.httpPorts = httpPorts;
             return this;
         }

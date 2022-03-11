@@ -38,13 +38,13 @@ public final class GetObjectIamPolicyResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"bindings","etag","kind","resourceId","version"})
+    @OutputCustomType.Constructor
     private GetObjectIamPolicyResult(
-        List<ObjectIamPolicyBindingsItemResponse> bindings,
-        String etag,
-        String kind,
-        String resourceId,
-        Integer version) {
+        @OutputCustomType.Parameter("bindings") List<ObjectIamPolicyBindingsItemResponse> bindings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.bindings = bindings;
         this.etag = etag;
         this.kind = kind;
@@ -116,27 +116,27 @@ public final class GetObjectIamPolicyResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setBindings(List<ObjectIamPolicyBindingsItemResponse> bindings) {
+        public Builder bindings(List<ObjectIamPolicyBindingsItemResponse> bindings) {
             this.bindings = Objects.requireNonNull(bindings);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

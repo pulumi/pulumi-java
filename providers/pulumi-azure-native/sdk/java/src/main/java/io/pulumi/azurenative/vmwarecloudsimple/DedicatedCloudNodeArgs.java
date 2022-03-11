@@ -217,112 +217,112 @@ public final class DedicatedCloudNodeArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAvailabilityZoneId(Input<String> availabilityZoneId) {
+        public Builder availabilityZoneId(Input<String> availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
 
-        public Builder setAvailabilityZoneId(String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Input.of(Objects.requireNonNull(availabilityZoneId));
             return this;
         }
 
-        public Builder setDedicatedCloudNodeName(@Nullable Input<String> dedicatedCloudNodeName) {
+        public Builder dedicatedCloudNodeName(@Nullable Input<String> dedicatedCloudNodeName) {
             this.dedicatedCloudNodeName = dedicatedCloudNodeName;
             return this;
         }
 
-        public Builder setDedicatedCloudNodeName(@Nullable String dedicatedCloudNodeName) {
+        public Builder dedicatedCloudNodeName(@Nullable String dedicatedCloudNodeName) {
             this.dedicatedCloudNodeName = Input.ofNullable(dedicatedCloudNodeName);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNodesCount(Input<Integer> nodesCount) {
+        public Builder nodesCount(Input<Integer> nodesCount) {
             this.nodesCount = Objects.requireNonNull(nodesCount);
             return this;
         }
 
-        public Builder setNodesCount(Integer nodesCount) {
+        public Builder nodesCount(Integer nodesCount) {
             this.nodesCount = Input.of(Objects.requireNonNull(nodesCount));
             return this;
         }
 
-        public Builder setPlacementGroupId(Input<String> placementGroupId) {
+        public Builder placementGroupId(Input<String> placementGroupId) {
             this.placementGroupId = Objects.requireNonNull(placementGroupId);
             return this;
         }
 
-        public Builder setPlacementGroupId(String placementGroupId) {
+        public Builder placementGroupId(String placementGroupId) {
             this.placementGroupId = Input.of(Objects.requireNonNull(placementGroupId));
             return this;
         }
 
-        public Builder setPurchaseId(Input<String> purchaseId) {
+        public Builder purchaseId(Input<String> purchaseId) {
             this.purchaseId = Objects.requireNonNull(purchaseId);
             return this;
         }
 
-        public Builder setPurchaseId(String purchaseId) {
+        public Builder purchaseId(String purchaseId) {
             this.purchaseId = Input.of(Objects.requireNonNull(purchaseId));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

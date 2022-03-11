@@ -52,16 +52,16 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"authenticationType","connectionString","endpointUri","entityPath","id","name","resourceGroup","subscriptionId"})
+    @OutputCustomType.Constructor
     private RoutingServiceBusQueueEndpointPropertiesResponse(
-        @Nullable String authenticationType,
-        @Nullable String connectionString,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String id,
-        String name,
-        @Nullable String resourceGroup,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.authenticationType = authenticationType;
         this.connectionString = connectionString;
         this.endpointUri = endpointUri;
@@ -163,42 +163,42 @@ public final class RoutingServiceBusQueueEndpointPropertiesResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEntityPath(@Nullable String entityPath) {
+        public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

@@ -30,12 +30,12 @@ public final class NetworkInterfaceResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"privateIpAddress","rdpAuthority","sshAuthority","username"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        String privateIpAddress,
-        String rdpAuthority,
-        String sshAuthority,
-        String username) {
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("rdpAuthority") String rdpAuthority,
+        @OutputCustomType.Parameter("sshAuthority") String sshAuthority,
+        @OutputCustomType.Parameter("username") String username) {
         this.privateIpAddress = privateIpAddress;
         this.rdpAuthority = rdpAuthority;
         this.sshAuthority = sshAuthority;
@@ -97,22 +97,22 @@ public final class NetworkInterfaceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setRdpAuthority(String rdpAuthority) {
+        public Builder rdpAuthority(String rdpAuthority) {
             this.rdpAuthority = Objects.requireNonNull(rdpAuthority);
             return this;
         }
 
-        public Builder setSshAuthority(String sshAuthority) {
+        public Builder sshAuthority(String sshAuthority) {
             this.sshAuthority = Objects.requireNonNull(sshAuthority);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

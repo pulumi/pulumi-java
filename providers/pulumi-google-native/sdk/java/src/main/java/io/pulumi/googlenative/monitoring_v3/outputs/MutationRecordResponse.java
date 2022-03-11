@@ -20,10 +20,10 @@ public final class MutationRecordResponse {
      */
     private final String mutatedBy;
 
-    @OutputCustomType.Constructor({"mutateTime","mutatedBy"})
+    @OutputCustomType.Constructor
     private MutationRecordResponse(
-        String mutateTime,
-        String mutatedBy) {
+        @OutputCustomType.Parameter("mutateTime") String mutateTime,
+        @OutputCustomType.Parameter("mutatedBy") String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }
@@ -65,12 +65,12 @@ public final class MutationRecordResponse {
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder setMutateTime(String mutateTime) {
+        public Builder mutateTime(String mutateTime) {
             this.mutateTime = Objects.requireNonNull(mutateTime);
             return this;
         }
 
-        public Builder setMutatedBy(String mutatedBy) {
+        public Builder mutatedBy(String mutatedBy) {
             this.mutatedBy = Objects.requireNonNull(mutatedBy);
             return this;
         }

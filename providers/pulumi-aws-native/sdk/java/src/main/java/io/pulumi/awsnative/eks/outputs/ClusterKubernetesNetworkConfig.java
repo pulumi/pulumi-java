@@ -28,11 +28,11 @@ public final class ClusterKubernetesNetworkConfig {
      */
     private final @Nullable String serviceIpv6Cidr;
 
-    @OutputCustomType.Constructor({"ipFamily","serviceIpv4Cidr","serviceIpv6Cidr"})
+    @OutputCustomType.Constructor
     private ClusterKubernetesNetworkConfig(
-        @Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily,
-        @Nullable String serviceIpv4Cidr,
-        @Nullable String serviceIpv6Cidr) {
+        @OutputCustomType.Parameter("ipFamily") @Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily,
+        @OutputCustomType.Parameter("serviceIpv4Cidr") @Nullable String serviceIpv4Cidr,
+        @OutputCustomType.Parameter("serviceIpv6Cidr") @Nullable String serviceIpv6Cidr) {
         this.ipFamily = ipFamily;
         this.serviceIpv4Cidr = serviceIpv4Cidr;
         this.serviceIpv6Cidr = serviceIpv6Cidr;
@@ -84,17 +84,17 @@ public final class ClusterKubernetesNetworkConfig {
     	      this.serviceIpv6Cidr = defaults.serviceIpv6Cidr;
         }
 
-        public Builder setIpFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
+        public Builder ipFamily(@Nullable ClusterKubernetesNetworkConfigIpFamily ipFamily) {
             this.ipFamily = ipFamily;
             return this;
         }
 
-        public Builder setServiceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
+        public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
             this.serviceIpv4Cidr = serviceIpv4Cidr;
             return this;
         }
 
-        public Builder setServiceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
+        public Builder serviceIpv6Cidr(@Nullable String serviceIpv6Cidr) {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }

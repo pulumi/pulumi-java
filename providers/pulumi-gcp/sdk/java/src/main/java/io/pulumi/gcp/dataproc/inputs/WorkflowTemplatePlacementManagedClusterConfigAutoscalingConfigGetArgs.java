@@ -53,12 +53,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }

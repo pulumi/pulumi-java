@@ -16,8 +16,8 @@ public final class ClusterLogging {
      */
     private final @Nullable ClusterLogging clusterLogging;
 
-    @OutputCustomType.Constructor({"clusterLogging"})
-    private ClusterLogging(@Nullable ClusterLogging clusterLogging) {
+    @OutputCustomType.Constructor
+    private ClusterLogging(@OutputCustomType.Parameter("clusterLogging") @Nullable ClusterLogging clusterLogging) {
         this.clusterLogging = clusterLogging;
     }
 
@@ -49,7 +49,7 @@ public final class ClusterLogging {
     	      this.clusterLogging = defaults.clusterLogging;
         }
 
-        public Builder setClusterLogging(@Nullable ClusterLogging clusterLogging) {
+        public Builder clusterLogging(@Nullable ClusterLogging clusterLogging) {
             this.clusterLogging = clusterLogging;
             return this;
         }

@@ -33,12 +33,12 @@ public final class InstanceRestoreToPointInTime {
      */
     private final @Nullable Boolean useLatestRestorableTime;
 
-    @OutputCustomType.Constructor({"restoreTime","sourceDbInstanceIdentifier","sourceDbiResourceId","useLatestRestorableTime"})
+    @OutputCustomType.Constructor
     private InstanceRestoreToPointInTime(
-        @Nullable String restoreTime,
-        @Nullable String sourceDbInstanceIdentifier,
-        @Nullable String sourceDbiResourceId,
-        @Nullable Boolean useLatestRestorableTime) {
+        @OutputCustomType.Parameter("restoreTime") @Nullable String restoreTime,
+        @OutputCustomType.Parameter("sourceDbInstanceIdentifier") @Nullable String sourceDbInstanceIdentifier,
+        @OutputCustomType.Parameter("sourceDbiResourceId") @Nullable String sourceDbiResourceId,
+        @OutputCustomType.Parameter("useLatestRestorableTime") @Nullable Boolean useLatestRestorableTime) {
         this.restoreTime = restoreTime;
         this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
         this.sourceDbiResourceId = sourceDbiResourceId;
@@ -100,22 +100,22 @@ public final class InstanceRestoreToPointInTime {
     	      this.useLatestRestorableTime = defaults.useLatestRestorableTime;
         }
 
-        public Builder setRestoreTime(@Nullable String restoreTime) {
+        public Builder restoreTime(@Nullable String restoreTime) {
             this.restoreTime = restoreTime;
             return this;
         }
 
-        public Builder setSourceDbInstanceIdentifier(@Nullable String sourceDbInstanceIdentifier) {
+        public Builder sourceDbInstanceIdentifier(@Nullable String sourceDbInstanceIdentifier) {
             this.sourceDbInstanceIdentifier = sourceDbInstanceIdentifier;
             return this;
         }
 
-        public Builder setSourceDbiResourceId(@Nullable String sourceDbiResourceId) {
+        public Builder sourceDbiResourceId(@Nullable String sourceDbiResourceId) {
             this.sourceDbiResourceId = sourceDbiResourceId;
             return this;
         }
 
-        public Builder setUseLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
+        public Builder useLatestRestorableTime(@Nullable Boolean useLatestRestorableTime) {
             this.useLatestRestorableTime = useLatestRestorableTime;
             return this;
         }

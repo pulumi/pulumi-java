@@ -39,13 +39,13 @@ public final class AutoScaleConfigurationResponse {
      */
     private final @Nullable Double targetUtilization;
 
-    @OutputCustomType.Constructor({"maxReplicas","minReplicas","refreshPeriodInSeconds","status","targetUtilization"})
+    @OutputCustomType.Constructor
     private AutoScaleConfigurationResponse(
-        @Nullable Integer maxReplicas,
-        @Nullable Integer minReplicas,
-        @Nullable Integer refreshPeriodInSeconds,
-        @Nullable String status,
-        @Nullable Double targetUtilization) {
+        @OutputCustomType.Parameter("maxReplicas") @Nullable Integer maxReplicas,
+        @OutputCustomType.Parameter("minReplicas") @Nullable Integer minReplicas,
+        @OutputCustomType.Parameter("refreshPeriodInSeconds") @Nullable Integer refreshPeriodInSeconds,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("targetUtilization") @Nullable Double targetUtilization) {
         this.maxReplicas = maxReplicas;
         this.minReplicas = minReplicas;
         this.refreshPeriodInSeconds = refreshPeriodInSeconds;
@@ -117,27 +117,27 @@ public final class AutoScaleConfigurationResponse {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setMaxReplicas(@Nullable Integer maxReplicas) {
+        public Builder maxReplicas(@Nullable Integer maxReplicas) {
             this.maxReplicas = maxReplicas;
             return this;
         }
 
-        public Builder setMinReplicas(@Nullable Integer minReplicas) {
+        public Builder minReplicas(@Nullable Integer minReplicas) {
             this.minReplicas = minReplicas;
             return this;
         }
 
-        public Builder setRefreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
+        public Builder refreshPeriodInSeconds(@Nullable Integer refreshPeriodInSeconds) {
             this.refreshPeriodInSeconds = refreshPeriodInSeconds;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTargetUtilization(@Nullable Double targetUtilization) {
+        public Builder targetUtilization(@Nullable Double targetUtilization) {
             this.targetUtilization = targetUtilization;
             return this;
         }

@@ -43,14 +43,14 @@ public final class UserPoolPasswordPolicy {
      */
     private final @Nullable Integer temporaryPasswordValidityDays;
 
-    @OutputCustomType.Constructor({"minimumLength","requireLowercase","requireNumbers","requireSymbols","requireUppercase","temporaryPasswordValidityDays"})
+    @OutputCustomType.Constructor
     private UserPoolPasswordPolicy(
-        @Nullable Integer minimumLength,
-        @Nullable Boolean requireLowercase,
-        @Nullable Boolean requireNumbers,
-        @Nullable Boolean requireSymbols,
-        @Nullable Boolean requireUppercase,
-        @Nullable Integer temporaryPasswordValidityDays) {
+        @OutputCustomType.Parameter("minimumLength") @Nullable Integer minimumLength,
+        @OutputCustomType.Parameter("requireLowercase") @Nullable Boolean requireLowercase,
+        @OutputCustomType.Parameter("requireNumbers") @Nullable Boolean requireNumbers,
+        @OutputCustomType.Parameter("requireSymbols") @Nullable Boolean requireSymbols,
+        @OutputCustomType.Parameter("requireUppercase") @Nullable Boolean requireUppercase,
+        @OutputCustomType.Parameter("temporaryPasswordValidityDays") @Nullable Integer temporaryPasswordValidityDays) {
         this.minimumLength = minimumLength;
         this.requireLowercase = requireLowercase;
         this.requireNumbers = requireNumbers;
@@ -132,32 +132,32 @@ public final class UserPoolPasswordPolicy {
     	      this.temporaryPasswordValidityDays = defaults.temporaryPasswordValidityDays;
         }
 
-        public Builder setMinimumLength(@Nullable Integer minimumLength) {
+        public Builder minimumLength(@Nullable Integer minimumLength) {
             this.minimumLength = minimumLength;
             return this;
         }
 
-        public Builder setRequireLowercase(@Nullable Boolean requireLowercase) {
+        public Builder requireLowercase(@Nullable Boolean requireLowercase) {
             this.requireLowercase = requireLowercase;
             return this;
         }
 
-        public Builder setRequireNumbers(@Nullable Boolean requireNumbers) {
+        public Builder requireNumbers(@Nullable Boolean requireNumbers) {
             this.requireNumbers = requireNumbers;
             return this;
         }
 
-        public Builder setRequireSymbols(@Nullable Boolean requireSymbols) {
+        public Builder requireSymbols(@Nullable Boolean requireSymbols) {
             this.requireSymbols = requireSymbols;
             return this;
         }
 
-        public Builder setRequireUppercase(@Nullable Boolean requireUppercase) {
+        public Builder requireUppercase(@Nullable Boolean requireUppercase) {
             this.requireUppercase = requireUppercase;
             return this;
         }
 
-        public Builder setTemporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
+        public Builder temporaryPasswordValidityDays(@Nullable Integer temporaryPasswordValidityDays) {
             this.temporaryPasswordValidityDays = temporaryPasswordValidityDays;
             return this;
         }

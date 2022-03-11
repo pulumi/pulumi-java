@@ -92,32 +92,32 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludes(@Nullable Input<List<String>> excludes) {
+        public Builder excludes(@Nullable Input<List<String>> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = Input.ofNullable(excludes);
             return this;
         }
 
-        public Builder setExclusivePackages(@Nullable Input<List<String>> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable Input<List<String>> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
 
-        public Builder setExclusivePackages(@Nullable List<String> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = Input.ofNullable(exclusivePackages);
             return this;
         }
 
-        public Builder setType(@Nullable Input<AptSettingsType> type) {
+        public Builder type(@Nullable Input<AptSettingsType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable AptSettingsType type) {
+        public Builder type(@Nullable AptSettingsType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

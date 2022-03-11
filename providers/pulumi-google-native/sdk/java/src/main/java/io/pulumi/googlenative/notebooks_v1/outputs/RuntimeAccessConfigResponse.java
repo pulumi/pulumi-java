@@ -25,11 +25,11 @@ public final class RuntimeAccessConfigResponse {
      */
     private final String runtimeOwner;
 
-    @OutputCustomType.Constructor({"accessType","proxyUri","runtimeOwner"})
+    @OutputCustomType.Constructor
     private RuntimeAccessConfigResponse(
-        String accessType,
-        String proxyUri,
-        String runtimeOwner) {
+        @OutputCustomType.Parameter("accessType") String accessType,
+        @OutputCustomType.Parameter("proxyUri") String proxyUri,
+        @OutputCustomType.Parameter("runtimeOwner") String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;
@@ -81,17 +81,17 @@ public final class RuntimeAccessConfigResponse {
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder setAccessType(String accessType) {
+        public Builder accessType(String accessType) {
             this.accessType = Objects.requireNonNull(accessType);
             return this;
         }
 
-        public Builder setProxyUri(String proxyUri) {
+        public Builder proxyUri(String proxyUri) {
             this.proxyUri = Objects.requireNonNull(proxyUri);
             return this;
         }
 
-        public Builder setRuntimeOwner(String runtimeOwner) {
+        public Builder runtimeOwner(String runtimeOwner) {
             this.runtimeOwner = Objects.requireNonNull(runtimeOwner);
             return this;
         }

@@ -23,10 +23,10 @@ public final class EndpointPropertiesResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private EndpointPropertiesResponse(
-        String name,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.port = port;
     }
@@ -68,12 +68,12 @@ public final class EndpointPropertiesResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

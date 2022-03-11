@@ -22,10 +22,10 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
      */
     private final String sasUrl;
 
-    @OutputCustomType.Constructor({"level","sasUrl"})
+    @OutputCustomType.Constructor
     private AzureTableStorageApplicationLogsConfigResponse(
-        @Nullable String level,
-        String sasUrl) {
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("sasUrl") String sasUrl) {
         this.level = level;
         this.sasUrl = sasUrl;
     }
@@ -67,12 +67,12 @@ public final class AzureTableStorageApplicationLogsConfigResponse {
     	      this.sasUrl = defaults.sasUrl;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setSasUrl(String sasUrl) {
+        public Builder sasUrl(String sasUrl) {
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
         }

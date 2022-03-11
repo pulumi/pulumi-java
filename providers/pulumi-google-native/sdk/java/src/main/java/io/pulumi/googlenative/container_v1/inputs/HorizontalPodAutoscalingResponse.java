@@ -55,7 +55,7 @@ public final class HorizontalPodAutoscalingResponse extends io.pulumi.resources.
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }

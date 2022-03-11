@@ -13,10 +13,10 @@ public final class WirelessDeviceAbpV11 {
     private final String devAddr;
     private final WirelessDeviceSessionKeysAbpV11 sessionKeys;
 
-    @OutputCustomType.Constructor({"devAddr","sessionKeys"})
+    @OutputCustomType.Constructor
     private WirelessDeviceAbpV11(
-        String devAddr,
-        WirelessDeviceSessionKeysAbpV11 sessionKeys) {
+        @OutputCustomType.Parameter("devAddr") String devAddr,
+        @OutputCustomType.Parameter("sessionKeys") WirelessDeviceSessionKeysAbpV11 sessionKeys) {
         this.devAddr = devAddr;
         this.sessionKeys = sessionKeys;
     }
@@ -50,12 +50,12 @@ public final class WirelessDeviceAbpV11 {
     	      this.sessionKeys = defaults.sessionKeys;
         }
 
-        public Builder setDevAddr(String devAddr) {
+        public Builder devAddr(String devAddr) {
             this.devAddr = Objects.requireNonNull(devAddr);
             return this;
         }
 
-        public Builder setSessionKeys(WirelessDeviceSessionKeysAbpV11 sessionKeys) {
+        public Builder sessionKeys(WirelessDeviceSessionKeysAbpV11 sessionKeys) {
             this.sessionKeys = Objects.requireNonNull(sessionKeys);
             return this;
         }

@@ -103,42 +103,42 @@ public final class SnapshotImportDiskContainerArgs extends io.pulumi.resources.R
     	      this.userBucket = defaults.userBucket;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }
 
-        public Builder setUserBucket(@Nullable Input<SnapshotImportDiskContainerUserBucketArgs> userBucket) {
+        public Builder userBucket(@Nullable Input<SnapshotImportDiskContainerUserBucketArgs> userBucket) {
             this.userBucket = userBucket;
             return this;
         }
 
-        public Builder setUserBucket(@Nullable SnapshotImportDiskContainerUserBucketArgs userBucket) {
+        public Builder userBucket(@Nullable SnapshotImportDiskContainerUserBucketArgs userBucket) {
             this.userBucket = Input.ofNullable(userBucket);
             return this;
         }

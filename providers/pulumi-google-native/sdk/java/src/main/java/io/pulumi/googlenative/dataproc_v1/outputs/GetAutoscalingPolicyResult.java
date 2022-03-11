@@ -34,13 +34,13 @@ public final class GetAutoscalingPolicyResult {
      */
     private final InstanceGroupAutoscalingPolicyConfigResponse workerConfig;
 
-    @OutputCustomType.Constructor({"basicAlgorithm","labels","name","secondaryWorkerConfig","workerConfig"})
+    @OutputCustomType.Constructor
     private GetAutoscalingPolicyResult(
-        BasicAutoscalingAlgorithmResponse basicAlgorithm,
-        Map<String,String> labels,
-        String name,
-        InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
-        InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
+        @OutputCustomType.Parameter("basicAlgorithm") BasicAutoscalingAlgorithmResponse basicAlgorithm,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secondaryWorkerConfig") InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig,
+        @OutputCustomType.Parameter("workerConfig") InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
         this.basicAlgorithm = basicAlgorithm;
         this.labels = labels;
         this.name = name;
@@ -108,27 +108,27 @@ public final class GetAutoscalingPolicyResult {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setBasicAlgorithm(BasicAutoscalingAlgorithmResponse basicAlgorithm) {
+        public Builder basicAlgorithm(BasicAutoscalingAlgorithmResponse basicAlgorithm) {
             this.basicAlgorithm = Objects.requireNonNull(basicAlgorithm);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig) {
+        public Builder secondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse secondaryWorkerConfig) {
             this.secondaryWorkerConfig = Objects.requireNonNull(secondaryWorkerConfig);
             return this;
         }
 
-        public Builder setWorkerConfig(InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
+        public Builder workerConfig(InstanceGroupAutoscalingPolicyConfigResponse workerConfig) {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }

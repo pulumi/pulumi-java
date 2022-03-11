@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupStatefulRuleOptions {
     private final @Nullable RuleGroupRuleOrder ruleOrder;
 
-    @OutputCustomType.Constructor({"ruleOrder"})
-    private RuleGroupStatefulRuleOptions(@Nullable RuleGroupRuleOrder ruleOrder) {
+    @OutputCustomType.Constructor
+    private RuleGroupStatefulRuleOptions(@OutputCustomType.Parameter("ruleOrder") @Nullable RuleGroupRuleOrder ruleOrder) {
         this.ruleOrder = ruleOrder;
     }
 
@@ -42,7 +42,7 @@ public final class RuleGroupStatefulRuleOptions {
     	      this.ruleOrder = defaults.ruleOrder;
         }
 
-        public Builder setRuleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
+        public Builder ruleOrder(@Nullable RuleGroupRuleOrder ruleOrder) {
             this.ruleOrder = ruleOrder;
             return this;
         }

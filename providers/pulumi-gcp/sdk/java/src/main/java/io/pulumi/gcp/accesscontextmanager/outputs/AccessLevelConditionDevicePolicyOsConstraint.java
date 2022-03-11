@@ -25,10 +25,10 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
      */
     private final String osType;
 
-    @OutputCustomType.Constructor({"minimumVersion","osType"})
+    @OutputCustomType.Constructor
     private AccessLevelConditionDevicePolicyOsConstraint(
-        @Nullable String minimumVersion,
-        String osType) {
+        @OutputCustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
+        @OutputCustomType.Parameter("osType") String osType) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
     }
@@ -73,12 +73,12 @@ public final class AccessLevelConditionDevicePolicyOsConstraint {
     	      this.osType = defaults.osType;
         }
 
-        public Builder setMinimumVersion(@Nullable String minimumVersion) {
+        public Builder minimumVersion(@Nullable String minimumVersion) {
             this.minimumVersion = minimumVersion;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }

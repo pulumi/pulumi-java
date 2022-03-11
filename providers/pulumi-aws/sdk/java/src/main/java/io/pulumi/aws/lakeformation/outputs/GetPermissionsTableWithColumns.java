@@ -44,14 +44,14 @@ public final class GetPermissionsTableWithColumns {
      */
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor({"catalogId","columnNames","databaseName","excludedColumnNames","name","wildcard"})
+    @OutputCustomType.Constructor
     private GetPermissionsTableWithColumns(
-        String catalogId,
-        @Nullable List<String> columnNames,
-        String databaseName,
-        @Nullable List<String> excludedColumnNames,
-        String name,
-        @Nullable Boolean wildcard) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("columnNames") @Nullable List<String> columnNames,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("excludedColumnNames") @Nullable List<String> excludedColumnNames,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.columnNames = columnNames;
         this.databaseName = databaseName;
@@ -133,32 +133,32 @@ public final class GetPermissionsTableWithColumns {
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setColumnNames(@Nullable List<String> columnNames) {
+        public Builder columnNames(@Nullable List<String> columnNames) {
             this.columnNames = columnNames;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setExcludedColumnNames(@Nullable List<String> excludedColumnNames) {
+        public Builder excludedColumnNames(@Nullable List<String> excludedColumnNames) {
             this.excludedColumnNames = excludedColumnNames;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
         }

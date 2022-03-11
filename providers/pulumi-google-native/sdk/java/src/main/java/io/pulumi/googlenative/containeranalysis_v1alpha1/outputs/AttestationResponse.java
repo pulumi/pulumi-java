@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class AttestationResponse {
     private final PgpSignedAttestationResponse pgpSignedAttestation;
 
-    @OutputCustomType.Constructor({"pgpSignedAttestation"})
-    private AttestationResponse(PgpSignedAttestationResponse pgpSignedAttestation) {
+    @OutputCustomType.Constructor
+    private AttestationResponse(@OutputCustomType.Parameter("pgpSignedAttestation") PgpSignedAttestationResponse pgpSignedAttestation) {
         this.pgpSignedAttestation = pgpSignedAttestation;
     }
 
@@ -40,7 +40,7 @@ public final class AttestationResponse {
     	      this.pgpSignedAttestation = defaults.pgpSignedAttestation;
         }
 
-        public Builder setPgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
+        public Builder pgpSignedAttestation(PgpSignedAttestationResponse pgpSignedAttestation) {
             this.pgpSignedAttestation = Objects.requireNonNull(pgpSignedAttestation);
             return this;
         }

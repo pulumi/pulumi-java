@@ -303,82 +303,82 @@ public final class AzureSqlSinkResponse extends io.pulumi.resources.InvokeArgs {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Object preCopyScript) {
+        public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
+        public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
 
-        public Builder setSqlWriterTableType(@Nullable Object sqlWriterTableType) {
+        public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
             this.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
-        public Builder setStoredProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
+        public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
 
-        public Builder setTableOption(@Nullable Object tableOption) {
+        public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable SqlUpsertSettingsResponse upsertSettings) {
+        public Builder upsertSettings(@Nullable SqlUpsertSettingsResponse upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }

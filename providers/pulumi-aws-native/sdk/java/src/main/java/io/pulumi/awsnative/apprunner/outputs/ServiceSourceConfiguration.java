@@ -23,12 +23,12 @@ public final class ServiceSourceConfiguration {
     private final @Nullable ServiceCodeRepository codeRepository;
     private final @Nullable ServiceImageRepository imageRepository;
 
-    @OutputCustomType.Constructor({"authenticationConfiguration","autoDeploymentsEnabled","codeRepository","imageRepository"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfiguration(
-        @Nullable ServiceAuthenticationConfiguration authenticationConfiguration,
-        @Nullable Boolean autoDeploymentsEnabled,
-        @Nullable ServiceCodeRepository codeRepository,
-        @Nullable ServiceImageRepository imageRepository) {
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable ServiceAuthenticationConfiguration authenticationConfiguration,
+        @OutputCustomType.Parameter("autoDeploymentsEnabled") @Nullable Boolean autoDeploymentsEnabled,
+        @OutputCustomType.Parameter("codeRepository") @Nullable ServiceCodeRepository codeRepository,
+        @OutputCustomType.Parameter("imageRepository") @Nullable ServiceImageRepository imageRepository) {
         this.authenticationConfiguration = authenticationConfiguration;
         this.autoDeploymentsEnabled = autoDeploymentsEnabled;
         this.codeRepository = codeRepository;
@@ -78,22 +78,22 @@ public final class ServiceSourceConfiguration {
     	      this.imageRepository = defaults.imageRepository;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable ServiceAuthenticationConfiguration authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable ServiceAuthenticationConfiguration authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setAutoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
+        public Builder autoDeploymentsEnabled(@Nullable Boolean autoDeploymentsEnabled) {
             this.autoDeploymentsEnabled = autoDeploymentsEnabled;
             return this;
         }
 
-        public Builder setCodeRepository(@Nullable ServiceCodeRepository codeRepository) {
+        public Builder codeRepository(@Nullable ServiceCodeRepository codeRepository) {
             this.codeRepository = codeRepository;
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ServiceImageRepository imageRepository) {
+        public Builder imageRepository(@Nullable ServiceImageRepository imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }

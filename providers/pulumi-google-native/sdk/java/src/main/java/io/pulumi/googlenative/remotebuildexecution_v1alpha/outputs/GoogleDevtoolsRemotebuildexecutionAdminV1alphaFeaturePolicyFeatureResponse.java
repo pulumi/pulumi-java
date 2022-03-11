@@ -21,10 +21,10 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
      */
     private final String policy;
 
-    @OutputCustomType.Constructor({"allowedValues","policy"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureResponse(
-        List<String> allowedValues,
-        String policy) {
+        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
+        @OutputCustomType.Parameter("policy") String policy) {
         this.allowedValues = allowedValues;
         this.policy = policy;
     }
@@ -66,12 +66,12 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFe
     	      this.policy = defaults.policy;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

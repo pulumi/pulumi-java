@@ -109,42 +109,42 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryType = defaults.queryType;
         }
 
-        public Builder setAuthorizedResources(@Nullable Input<List<String>> authorizedResources) {
+        public Builder authorizedResources(@Nullable Input<List<String>> authorizedResources) {
             this.authorizedResources = authorizedResources;
             return this;
         }
 
-        public Builder setAuthorizedResources(@Nullable List<String> authorizedResources) {
+        public Builder authorizedResources(@Nullable List<String> authorizedResources) {
             this.authorizedResources = Input.ofNullable(authorizedResources);
             return this;
         }
 
-        public Builder setDataSourceId(Input<String> dataSourceId) {
+        public Builder dataSourceId(Input<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Input.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setQueryType(@Nullable Input<Either<String,QueryType>> queryType) {
+        public Builder queryType(@Nullable Input<Either<String,QueryType>> queryType) {
             this.queryType = queryType;
             return this;
         }
 
-        public Builder setQueryType(@Nullable Either<String,QueryType> queryType) {
+        public Builder queryType(@Nullable Either<String,QueryType> queryType) {
             this.queryType = Input.ofNullable(queryType);
             return this;
         }

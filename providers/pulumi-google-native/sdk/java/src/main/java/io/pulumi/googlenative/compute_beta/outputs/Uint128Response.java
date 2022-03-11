@@ -12,10 +12,10 @@ public final class Uint128Response {
     private final String high;
     private final String low;
 
-    @OutputCustomType.Constructor({"high","low"})
+    @OutputCustomType.Constructor
     private Uint128Response(
-        String high,
-        String low) {
+        @OutputCustomType.Parameter("high") String high,
+        @OutputCustomType.Parameter("low") String low) {
         this.high = high;
         this.low = low;
     }
@@ -49,12 +49,12 @@ public final class Uint128Response {
     	      this.low = defaults.low;
         }
 
-        public Builder setHigh(String high) {
+        public Builder high(String high) {
             this.high = Objects.requireNonNull(high);
             return this;
         }
 
-        public Builder setLow(String low) {
+        public Builder low(String low) {
             this.low = Objects.requireNonNull(low);
             return this;
         }

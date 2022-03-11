@@ -20,10 +20,10 @@ public final class HttpsTriggerResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"securityLevel","url"})
+    @OutputCustomType.Constructor
     private HttpsTriggerResponse(
-        String securityLevel,
-        String url) {
+        @OutputCustomType.Parameter("securityLevel") String securityLevel,
+        @OutputCustomType.Parameter("url") String url) {
         this.securityLevel = securityLevel;
         this.url = url;
     }
@@ -65,12 +65,12 @@ public final class HttpsTriggerResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setSecurityLevel(String securityLevel) {
+        public Builder securityLevel(String securityLevel) {
             this.securityLevel = Objects.requireNonNull(securityLevel);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

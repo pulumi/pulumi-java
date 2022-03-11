@@ -20,10 +20,10 @@ public final class GetTriggerEventSubscriptionStatusResult {
      */
     private final String triggerName;
 
-    @OutputCustomType.Constructor({"status","triggerName"})
+    @OutputCustomType.Constructor
     private GetTriggerEventSubscriptionStatusResult(
-        String status,
-        String triggerName) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("triggerName") String triggerName) {
         this.status = status;
         this.triggerName = triggerName;
     }
@@ -65,12 +65,12 @@ public final class GetTriggerEventSubscriptionStatusResult {
     	      this.triggerName = defaults.triggerName;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTriggerName(String triggerName) {
+        public Builder triggerName(String triggerName) {
             this.triggerName = Objects.requireNonNull(triggerName);
             return this;
         }

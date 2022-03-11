@@ -28,11 +28,11 @@ public final class ManagementEventAggregationConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor({"operator","threshold","windowSize"})
+    @OutputCustomType.Constructor
     private ManagementEventAggregationConditionResponse(
-        @Nullable String operator,
-        @Nullable Double threshold,
-        @Nullable String windowSize) {
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("threshold") @Nullable Double threshold,
+        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.operator = operator;
         this.threshold = threshold;
         this.windowSize = windowSize;
@@ -84,17 +84,17 @@ public final class ManagementEventAggregationConditionResponse {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setThreshold(@Nullable Double threshold) {
+        public Builder threshold(@Nullable Double threshold) {
             this.threshold = threshold;
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
         }

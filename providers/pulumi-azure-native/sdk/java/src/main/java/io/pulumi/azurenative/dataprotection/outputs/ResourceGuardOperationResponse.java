@@ -20,10 +20,10 @@ public final class ResourceGuardOperationResponse {
      */
     private final String vaultCriticalOperation;
 
-    @OutputCustomType.Constructor({"requestResourceType","vaultCriticalOperation"})
+    @OutputCustomType.Constructor
     private ResourceGuardOperationResponse(
-        String requestResourceType,
-        String vaultCriticalOperation) {
+        @OutputCustomType.Parameter("requestResourceType") String requestResourceType,
+        @OutputCustomType.Parameter("vaultCriticalOperation") String vaultCriticalOperation) {
         this.requestResourceType = requestResourceType;
         this.vaultCriticalOperation = vaultCriticalOperation;
     }
@@ -65,12 +65,12 @@ public final class ResourceGuardOperationResponse {
     	      this.vaultCriticalOperation = defaults.vaultCriticalOperation;
         }
 
-        public Builder setRequestResourceType(String requestResourceType) {
+        public Builder requestResourceType(String requestResourceType) {
             this.requestResourceType = Objects.requireNonNull(requestResourceType);
             return this;
         }
 
-        public Builder setVaultCriticalOperation(String vaultCriticalOperation) {
+        public Builder vaultCriticalOperation(String vaultCriticalOperation) {
             this.vaultCriticalOperation = Objects.requireNonNull(vaultCriticalOperation);
             return this;
         }

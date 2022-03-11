@@ -26,11 +26,11 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
      */
     private final Integer index;
 
-    @OutputCustomType.Constructor({"description","displayName","index"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1AnnotationSpecResponse(
-        String description,
-        String displayName,
-        Integer index) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("index") Integer index) {
         this.description = description;
         this.displayName = displayName;
         this.index = index;
@@ -82,17 +82,17 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecResponse {
     	      this.index = defaults.index;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIndex(Integer index) {
+        public Builder index(Integer index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }

@@ -57,7 +57,7 @@ public final class AzureFirewallRCActionResponse extends io.pulumi.resources.Inv
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

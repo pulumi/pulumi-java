@@ -86,22 +86,22 @@ public final class GetRegistrationIamPolicyArgs extends io.pulumi.resources.Invo
     	      this.registrationId = defaults.registrationId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setOptionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
+        public Builder optionsRequestedPolicyVersion(@Nullable String optionsRequestedPolicyVersion) {
             this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegistrationId(String registrationId) {
+        public Builder registrationId(String registrationId) {
             this.registrationId = Objects.requireNonNull(registrationId);
             return this;
         }

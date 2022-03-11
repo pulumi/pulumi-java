@@ -17,8 +17,8 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
      */
     private final @Nullable String query;
 
-    @OutputCustomType.Constructor({"query"})
-    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@Nullable String query) {
+    @OutputCustomType.Constructor
+    private ActivityEntityQueriesPropertiesResponseQueryDefinitions(@OutputCustomType.Parameter("query") @Nullable String query) {
         this.query = query;
     }
 
@@ -50,7 +50,7 @@ public final class ActivityEntityQueriesPropertiesResponseQueryDefinitions {
     	      this.query = defaults.query;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }

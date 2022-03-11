@@ -111,42 +111,42 @@ public final class ApplicationJitAccessPolicyArgs extends io.pulumi.resources.Re
     	      this.maximumJitAccessDuration = defaults.maximumJitAccessDuration;
         }
 
-        public Builder setJitAccessEnabled(Input<Boolean> jitAccessEnabled) {
+        public Builder jitAccessEnabled(Input<Boolean> jitAccessEnabled) {
             this.jitAccessEnabled = Objects.requireNonNull(jitAccessEnabled);
             return this;
         }
 
-        public Builder setJitAccessEnabled(Boolean jitAccessEnabled) {
+        public Builder jitAccessEnabled(Boolean jitAccessEnabled) {
             this.jitAccessEnabled = Input.of(Objects.requireNonNull(jitAccessEnabled));
             return this;
         }
 
-        public Builder setJitApprovalMode(@Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode) {
+        public Builder jitApprovalMode(@Nullable Input<Either<String,JitApprovalMode>> jitApprovalMode) {
             this.jitApprovalMode = jitApprovalMode;
             return this;
         }
 
-        public Builder setJitApprovalMode(@Nullable Either<String,JitApprovalMode> jitApprovalMode) {
+        public Builder jitApprovalMode(@Nullable Either<String,JitApprovalMode> jitApprovalMode) {
             this.jitApprovalMode = Input.ofNullable(jitApprovalMode);
             return this;
         }
 
-        public Builder setJitApprovers(@Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers) {
+        public Builder jitApprovers(@Nullable Input<List<JitApproverDefinitionArgs>> jitApprovers) {
             this.jitApprovers = jitApprovers;
             return this;
         }
 
-        public Builder setJitApprovers(@Nullable List<JitApproverDefinitionArgs> jitApprovers) {
+        public Builder jitApprovers(@Nullable List<JitApproverDefinitionArgs> jitApprovers) {
             this.jitApprovers = Input.ofNullable(jitApprovers);
             return this;
         }
 
-        public Builder setMaximumJitAccessDuration(@Nullable Input<String> maximumJitAccessDuration) {
+        public Builder maximumJitAccessDuration(@Nullable Input<String> maximumJitAccessDuration) {
             this.maximumJitAccessDuration = maximumJitAccessDuration;
             return this;
         }
 
-        public Builder setMaximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
+        public Builder maximumJitAccessDuration(@Nullable String maximumJitAccessDuration) {
             this.maximumJitAccessDuration = Input.ofNullable(maximumJitAccessDuration);
             return this;
         }

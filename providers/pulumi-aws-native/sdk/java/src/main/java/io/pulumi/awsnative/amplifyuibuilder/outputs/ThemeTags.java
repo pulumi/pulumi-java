@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ThemeTags {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private ThemeTags() {
     }
 

@@ -53,12 +53,12 @@ public final class JwtArgs extends io.pulumi.resources.ResourceArgs {
     	      this.compactJwt = defaults.compactJwt;
         }
 
-        public Builder setCompactJwt(@Nullable Input<String> compactJwt) {
+        public Builder compactJwt(@Nullable Input<String> compactJwt) {
             this.compactJwt = compactJwt;
             return this;
         }
 
-        public Builder setCompactJwt(@Nullable String compactJwt) {
+        public Builder compactJwt(@Nullable String compactJwt) {
             this.compactJwt = Input.ofNullable(compactJwt);
             return this;
         }

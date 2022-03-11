@@ -17,11 +17,11 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
     private final String indexName;
     private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
-    @OutputCustomType.Constructor({"contributorInsightsSpecification","indexName","readProvisionedThroughputSettings"})
+    @OutputCustomType.Constructor
     private GlobalTableReplicaGlobalSecondaryIndexSpecification(
-        @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
-        String indexName,
-        @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        @OutputCustomType.Parameter("contributorInsightsSpecification") @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification,
+        @OutputCustomType.Parameter("indexName") String indexName,
+        @OutputCustomType.Parameter("readProvisionedThroughputSettings") @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
         this.contributorInsightsSpecification = contributorInsightsSpecification;
         this.indexName = indexName;
         this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
@@ -61,17 +61,17 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecification {
     	      this.readProvisionedThroughputSettings = defaults.readProvisionedThroughputSettings;
         }
 
-        public Builder setContributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
+        public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification) {
             this.contributorInsightsSpecification = contributorInsightsSpecification;
             return this;
         }
 
-        public Builder setIndexName(String indexName) {
+        public Builder indexName(String indexName) {
             this.indexName = Objects.requireNonNull(indexName);
             return this;
         }
 
-        public Builder setReadProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
+        public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings) {
             this.readProvisionedThroughputSettings = readProvisionedThroughputSettings;
             return this;
         }

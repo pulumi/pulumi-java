@@ -34,12 +34,12 @@ public final class AutoPatchingSettingsResponse {
      */
     private final @Nullable Integer maintenanceWindowStartingHour;
 
-    @OutputCustomType.Constructor({"dayOfWeek","enable","maintenanceWindowDuration","maintenanceWindowStartingHour"})
+    @OutputCustomType.Constructor
     private AutoPatchingSettingsResponse(
-        @Nullable String dayOfWeek,
-        @Nullable Boolean enable,
-        @Nullable Integer maintenanceWindowDuration,
-        @Nullable Integer maintenanceWindowStartingHour) {
+        @OutputCustomType.Parameter("dayOfWeek") @Nullable String dayOfWeek,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("maintenanceWindowDuration") @Nullable Integer maintenanceWindowDuration,
+        @OutputCustomType.Parameter("maintenanceWindowStartingHour") @Nullable Integer maintenanceWindowStartingHour) {
         this.dayOfWeek = dayOfWeek;
         this.enable = enable;
         this.maintenanceWindowDuration = maintenanceWindowDuration;
@@ -101,22 +101,22 @@ public final class AutoPatchingSettingsResponse {
     	      this.maintenanceWindowStartingHour = defaults.maintenanceWindowStartingHour;
         }
 
-        public Builder setDayOfWeek(@Nullable String dayOfWeek) {
+        public Builder dayOfWeek(@Nullable String dayOfWeek) {
             this.dayOfWeek = dayOfWeek;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setMaintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
+        public Builder maintenanceWindowDuration(@Nullable Integer maintenanceWindowDuration) {
             this.maintenanceWindowDuration = maintenanceWindowDuration;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
+        public Builder maintenanceWindowStartingHour(@Nullable Integer maintenanceWindowStartingHour) {
             this.maintenanceWindowStartingHour = maintenanceWindowStartingHour;
             return this;
         }

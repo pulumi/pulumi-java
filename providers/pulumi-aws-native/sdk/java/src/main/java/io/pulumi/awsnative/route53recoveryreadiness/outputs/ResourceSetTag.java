@@ -13,10 +13,10 @@ public final class ResourceSetTag {
     private final String key;
     private final List<String> value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ResourceSetTag(
-        String key,
-        List<String> value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") List<String> value) {
         this.key = key;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class ResourceSetTag {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

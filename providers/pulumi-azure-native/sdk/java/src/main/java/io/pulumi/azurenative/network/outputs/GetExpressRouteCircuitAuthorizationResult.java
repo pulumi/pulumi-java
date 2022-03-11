@@ -47,15 +47,15 @@ public final class GetExpressRouteCircuitAuthorizationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authorizationKey","authorizationUseStatus","etag","id","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetExpressRouteCircuitAuthorizationResult(
-        @Nullable String authorizationKey,
-        @Nullable String authorizationUseStatus,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("authorizationKey") @Nullable String authorizationKey,
+        @OutputCustomType.Parameter("authorizationUseStatus") @Nullable String authorizationUseStatus,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.authorizationKey = authorizationKey;
         this.authorizationUseStatus = authorizationUseStatus;
         this.etag = etag;
@@ -147,37 +147,37 @@ public final class GetExpressRouteCircuitAuthorizationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthorizationKey(@Nullable String authorizationKey) {
+        public Builder authorizationKey(@Nullable String authorizationKey) {
             this.authorizationKey = authorizationKey;
             return this;
         }
 
-        public Builder setAuthorizationUseStatus(@Nullable String authorizationUseStatus) {
+        public Builder authorizationUseStatus(@Nullable String authorizationUseStatus) {
             this.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

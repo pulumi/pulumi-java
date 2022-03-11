@@ -103,42 +103,42 @@ public final class VaultLockState extends io.pulumi.resources.ResourceArgs {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setCompleteLock(@Nullable Input<Boolean> completeLock) {
+        public Builder completeLock(@Nullable Input<Boolean> completeLock) {
             this.completeLock = completeLock;
             return this;
         }
 
-        public Builder setCompleteLock(@Nullable Boolean completeLock) {
+        public Builder completeLock(@Nullable Boolean completeLock) {
             this.completeLock = Input.ofNullable(completeLock);
             return this;
         }
 
-        public Builder setIgnoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Input<Boolean> ignoreDeletionError) {
             this.ignoreDeletionError = ignoreDeletionError;
             return this;
         }
 
-        public Builder setIgnoreDeletionError(@Nullable Boolean ignoreDeletionError) {
+        public Builder ignoreDeletionError(@Nullable Boolean ignoreDeletionError) {
             this.ignoreDeletionError = Input.ofNullable(ignoreDeletionError);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<String> policy) {
+        public Builder policy(@Nullable Input<String> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setVaultName(@Nullable Input<String> vaultName) {
+        public Builder vaultName(@Nullable Input<String> vaultName) {
             this.vaultName = vaultName;
             return this;
         }
 
-        public Builder setVaultName(@Nullable String vaultName) {
+        public Builder vaultName(@Nullable String vaultName) {
             this.vaultName = Input.ofNullable(vaultName);
             return this;
         }

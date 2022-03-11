@@ -124,27 +124,27 @@ public final class CommitmentPeriodResponse extends io.pulumi.resources.InvokeAr
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setEndDate(String endDate) {
+        public Builder endDate(String endDate) {
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
 
-        public Builder setQuota(CommitmentQuotaResponse quota) {
+        public Builder quota(CommitmentQuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

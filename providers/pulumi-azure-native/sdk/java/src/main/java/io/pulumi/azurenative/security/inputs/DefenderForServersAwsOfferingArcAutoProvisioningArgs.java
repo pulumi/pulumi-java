@@ -75,22 +75,22 @@ public final class DefenderForServersAwsOfferingArcAutoProvisioningArgs extends 
     	      this.servicePrincipalSecretMetadata = defaults.servicePrincipalSecretMetadata;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setServicePrincipalSecretMetadata(@Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
+        public Builder servicePrincipalSecretMetadata(@Nullable Input<DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs> servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = servicePrincipalSecretMetadata;
             return this;
         }
 
-        public Builder setServicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
+        public Builder servicePrincipalSecretMetadata(@Nullable DefenderForServersAwsOfferingServicePrincipalSecretMetadataArgs servicePrincipalSecretMetadata) {
             this.servicePrincipalSecretMetadata = Input.ofNullable(servicePrincipalSecretMetadata);
             return this;
         }

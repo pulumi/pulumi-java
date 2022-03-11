@@ -39,13 +39,13 @@ public final class DelimitedTextWriteSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileExtension","fileNamePrefix","maxRowsPerFile","quoteAllText","type"})
+    @OutputCustomType.Constructor
     private DelimitedTextWriteSettingsResponse(
-        Object fileExtension,
-        @Nullable Object fileNamePrefix,
-        @Nullable Object maxRowsPerFile,
-        @Nullable Object quoteAllText,
-        String type) {
+        @OutputCustomType.Parameter("fileExtension") Object fileExtension,
+        @OutputCustomType.Parameter("fileNamePrefix") @Nullable Object fileNamePrefix,
+        @OutputCustomType.Parameter("maxRowsPerFile") @Nullable Object maxRowsPerFile,
+        @OutputCustomType.Parameter("quoteAllText") @Nullable Object quoteAllText,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileExtension = fileExtension;
         this.fileNamePrefix = fileNamePrefix;
         this.maxRowsPerFile = maxRowsPerFile;
@@ -118,27 +118,27 @@ public final class DelimitedTextWriteSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileExtension(Object fileExtension) {
+        public Builder fileExtension(Object fileExtension) {
             this.fileExtension = Objects.requireNonNull(fileExtension);
             return this;
         }
 
-        public Builder setFileNamePrefix(@Nullable Object fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Object maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
-        public Builder setQuoteAllText(@Nullable Object quoteAllText) {
+        public Builder quoteAllText(@Nullable Object quoteAllText) {
             this.quoteAllText = quoteAllText;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

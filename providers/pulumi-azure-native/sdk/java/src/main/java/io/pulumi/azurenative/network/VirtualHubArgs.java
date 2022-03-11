@@ -349,192 +349,192 @@ public final class VirtualHubArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpnGateway = defaults.vpnGateway;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Input<Boolean> allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Input<Boolean> allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = Input.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
 
-        public Builder setAzureFirewall(@Nullable Input<SubResourceArgs> azureFirewall) {
+        public Builder azureFirewall(@Nullable Input<SubResourceArgs> azureFirewall) {
             this.azureFirewall = azureFirewall;
             return this;
         }
 
-        public Builder setAzureFirewall(@Nullable SubResourceArgs azureFirewall) {
+        public Builder azureFirewall(@Nullable SubResourceArgs azureFirewall) {
             this.azureFirewall = Input.ofNullable(azureFirewall);
             return this;
         }
 
-        public Builder setExpressRouteGateway(@Nullable Input<SubResourceArgs> expressRouteGateway) {
+        public Builder expressRouteGateway(@Nullable Input<SubResourceArgs> expressRouteGateway) {
             this.expressRouteGateway = expressRouteGateway;
             return this;
         }
 
-        public Builder setExpressRouteGateway(@Nullable SubResourceArgs expressRouteGateway) {
+        public Builder expressRouteGateway(@Nullable SubResourceArgs expressRouteGateway) {
             this.expressRouteGateway = Input.ofNullable(expressRouteGateway);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setP2SVpnGateway(@Nullable Input<SubResourceArgs> p2SVpnGateway) {
+        public Builder p2SVpnGateway(@Nullable Input<SubResourceArgs> p2SVpnGateway) {
             this.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
 
-        public Builder setP2SVpnGateway(@Nullable SubResourceArgs p2SVpnGateway) {
+        public Builder p2SVpnGateway(@Nullable SubResourceArgs p2SVpnGateway) {
             this.p2SVpnGateway = Input.ofNullable(p2SVpnGateway);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRouteTable(@Nullable Input<VirtualHubRouteTableArgs> routeTable) {
+        public Builder routeTable(@Nullable Input<VirtualHubRouteTableArgs> routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
-        public Builder setRouteTable(@Nullable VirtualHubRouteTableArgs routeTable) {
+        public Builder routeTable(@Nullable VirtualHubRouteTableArgs routeTable) {
             this.routeTable = Input.ofNullable(routeTable);
             return this;
         }
 
-        public Builder setSecurityPartnerProvider(@Nullable Input<SubResourceArgs> securityPartnerProvider) {
+        public Builder securityPartnerProvider(@Nullable Input<SubResourceArgs> securityPartnerProvider) {
             this.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
 
-        public Builder setSecurityPartnerProvider(@Nullable SubResourceArgs securityPartnerProvider) {
+        public Builder securityPartnerProvider(@Nullable SubResourceArgs securityPartnerProvider) {
             this.securityPartnerProvider = Input.ofNullable(securityPartnerProvider);
             return this;
         }
 
-        public Builder setSecurityProviderName(@Nullable Input<String> securityProviderName) {
+        public Builder securityProviderName(@Nullable Input<String> securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
 
-        public Builder setSecurityProviderName(@Nullable String securityProviderName) {
+        public Builder securityProviderName(@Nullable String securityProviderName) {
             this.securityProviderName = Input.ofNullable(securityProviderName);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<String> sku) {
+        public Builder sku(@Nullable Input<String> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualHubName(@Nullable Input<String> virtualHubName) {
+        public Builder virtualHubName(@Nullable Input<String> virtualHubName) {
             this.virtualHubName = virtualHubName;
             return this;
         }
 
-        public Builder setVirtualHubName(@Nullable String virtualHubName) {
+        public Builder virtualHubName(@Nullable String virtualHubName) {
             this.virtualHubName = Input.ofNullable(virtualHubName);
             return this;
         }
 
-        public Builder setVirtualHubRouteTableV2s(@Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
+        public Builder virtualHubRouteTableV2s(@Nullable Input<List<VirtualHubRouteTableV2Args>> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
 
-        public Builder setVirtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
+        public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Args> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = Input.ofNullable(virtualHubRouteTableV2s);
             return this;
         }
 
-        public Builder setVirtualRouterAsn(@Nullable Input<Double> virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Input<Double> virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
 
-        public Builder setVirtualRouterAsn(@Nullable Double virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = Input.ofNullable(virtualRouterAsn);
             return this;
         }
 
-        public Builder setVirtualRouterIps(@Nullable Input<List<String>> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable Input<List<String>> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
 
-        public Builder setVirtualRouterIps(@Nullable List<String> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = Input.ofNullable(virtualRouterIps);
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable Input<SubResourceArgs> virtualWan) {
+        public Builder virtualWan(@Nullable Input<SubResourceArgs> virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable SubResourceArgs virtualWan) {
+        public Builder virtualWan(@Nullable SubResourceArgs virtualWan) {
             this.virtualWan = Input.ofNullable(virtualWan);
             return this;
         }
 
-        public Builder setVpnGateway(@Nullable Input<SubResourceArgs> vpnGateway) {
+        public Builder vpnGateway(@Nullable Input<SubResourceArgs> vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }
 
-        public Builder setVpnGateway(@Nullable SubResourceArgs vpnGateway) {
+        public Builder vpnGateway(@Nullable SubResourceArgs vpnGateway) {
             this.vpnGateway = Input.ofNullable(vpnGateway);
             return this;
         }

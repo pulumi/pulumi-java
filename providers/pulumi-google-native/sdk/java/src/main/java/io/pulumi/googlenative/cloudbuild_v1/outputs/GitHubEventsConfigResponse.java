@@ -42,14 +42,14 @@ public final class GitHubEventsConfigResponse {
      */
     private final PushFilterResponse push;
 
-    @OutputCustomType.Constructor({"enterpriseConfigResourceName","installationId","name","owner","pullRequest","push"})
+    @OutputCustomType.Constructor
     private GitHubEventsConfigResponse(
-        String enterpriseConfigResourceName,
-        String installationId,
-        String name,
-        String owner,
-        PullRequestFilterResponse pullRequest,
-        PushFilterResponse push) {
+        @OutputCustomType.Parameter("enterpriseConfigResourceName") String enterpriseConfigResourceName,
+        @OutputCustomType.Parameter("installationId") String installationId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("pullRequest") PullRequestFilterResponse pullRequest,
+        @OutputCustomType.Parameter("push") PushFilterResponse push) {
         this.enterpriseConfigResourceName = enterpriseConfigResourceName;
         this.installationId = installationId;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GitHubEventsConfigResponse {
     	      this.push = defaults.push;
         }
 
-        public Builder setEnterpriseConfigResourceName(String enterpriseConfigResourceName) {
+        public Builder enterpriseConfigResourceName(String enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = Objects.requireNonNull(enterpriseConfigResourceName);
             return this;
         }
 
-        public Builder setInstallationId(String installationId) {
+        public Builder installationId(String installationId) {
             this.installationId = Objects.requireNonNull(installationId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setPullRequest(PullRequestFilterResponse pullRequest) {
+        public Builder pullRequest(PullRequestFilterResponse pullRequest) {
             this.pullRequest = Objects.requireNonNull(pullRequest);
             return this;
         }
 
-        public Builder setPush(PushFilterResponse push) {
+        public Builder push(PushFilterResponse push) {
             this.push = Objects.requireNonNull(push);
             return this;
         }

@@ -39,13 +39,13 @@ public final class CloudErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"additionalInfo","code","details","message","target"})
+    @OutputCustomType.Constructor
     private CloudErrorResponse(
-        List<AdditionalErrorInfoResponse> additionalInfo,
-        @Nullable String code,
-        List<CloudErrorResponse> details,
-        @Nullable String message,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("additionalInfo") List<AdditionalErrorInfoResponse> additionalInfo,
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") List<CloudErrorResponse> details,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.additionalInfo = additionalInfo;
         this.code = code;
         this.details = details;
@@ -117,27 +117,27 @@ public final class CloudErrorResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setAdditionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
+        public Builder additionalInfo(List<AdditionalErrorInfoResponse> additionalInfo) {
             this.additionalInfo = Objects.requireNonNull(additionalInfo);
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(List<CloudErrorResponse> details) {
+        public Builder details(List<CloudErrorResponse> details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

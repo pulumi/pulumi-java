@@ -91,32 +91,32 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
     	      this.requestMessage = defaults.requestMessage;
         }
 
-        public Builder setGroupIds(@Nullable Input<List<String>> groupIds) {
+        public Builder groupIds(@Nullable Input<List<String>> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = Input.ofNullable(groupIds);
             return this;
         }
 
-        public Builder setPrivateLinkServiceId(@Nullable Input<String> privateLinkServiceId) {
+        public Builder privateLinkServiceId(@Nullable Input<String> privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
-        public Builder setPrivateLinkServiceId(@Nullable String privateLinkServiceId) {
+        public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = Input.ofNullable(privateLinkServiceId);
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable Input<String> requestMessage) {
+        public Builder requestMessage(@Nullable Input<String> requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetServiceTemplate extends io.pulumi.resources.InvokeArgs {
     	      this.specs = defaults.specs;
         }
 
-        public Builder setMetadatas(List<GetServiceTemplateMetadata> metadatas) {
+        public Builder metadatas(List<GetServiceTemplateMetadata> metadatas) {
             this.metadatas = Objects.requireNonNull(metadatas);
             return this;
         }
 
-        public Builder setSpecs(List<GetServiceTemplateSpec> specs) {
+        public Builder specs(List<GetServiceTemplateSpec> specs) {
             this.specs = Objects.requireNonNull(specs);
             return this;
         }

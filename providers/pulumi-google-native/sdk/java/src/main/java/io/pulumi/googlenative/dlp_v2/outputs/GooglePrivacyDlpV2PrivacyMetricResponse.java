@@ -45,14 +45,14 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
      */
     private final GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig;
 
-    @OutputCustomType.Constructor({"categoricalStatsConfig","deltaPresenceEstimationConfig","kAnonymityConfig","kMapEstimationConfig","lDiversityConfig","numericalStatsConfig"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2PrivacyMetricResponse(
-        GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
-        GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
-        GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
-        GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
-        GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
-        GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
+        @OutputCustomType.Parameter("categoricalStatsConfig") GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig,
+        @OutputCustomType.Parameter("deltaPresenceEstimationConfig") GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig,
+        @OutputCustomType.Parameter("kAnonymityConfig") GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig,
+        @OutputCustomType.Parameter("kMapEstimationConfig") GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig,
+        @OutputCustomType.Parameter("lDiversityConfig") GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig,
+        @OutputCustomType.Parameter("numericalStatsConfig") GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
         this.categoricalStatsConfig = categoricalStatsConfig;
         this.deltaPresenceEstimationConfig = deltaPresenceEstimationConfig;
         this.kAnonymityConfig = kAnonymityConfig;
@@ -134,32 +134,32 @@ public final class GooglePrivacyDlpV2PrivacyMetricResponse {
     	      this.numericalStatsConfig = defaults.numericalStatsConfig;
         }
 
-        public Builder setCategoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
+        public Builder categoricalStatsConfig(GooglePrivacyDlpV2CategoricalStatsConfigResponse categoricalStatsConfig) {
             this.categoricalStatsConfig = Objects.requireNonNull(categoricalStatsConfig);
             return this;
         }
 
-        public Builder setDeltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
+        public Builder deltaPresenceEstimationConfig(GooglePrivacyDlpV2DeltaPresenceEstimationConfigResponse deltaPresenceEstimationConfig) {
             this.deltaPresenceEstimationConfig = Objects.requireNonNull(deltaPresenceEstimationConfig);
             return this;
         }
 
-        public Builder setKAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
+        public Builder kAnonymityConfig(GooglePrivacyDlpV2KAnonymityConfigResponse kAnonymityConfig) {
             this.kAnonymityConfig = Objects.requireNonNull(kAnonymityConfig);
             return this;
         }
 
-        public Builder setKMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
+        public Builder kMapEstimationConfig(GooglePrivacyDlpV2KMapEstimationConfigResponse kMapEstimationConfig) {
             this.kMapEstimationConfig = Objects.requireNonNull(kMapEstimationConfig);
             return this;
         }
 
-        public Builder setLDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
+        public Builder lDiversityConfig(GooglePrivacyDlpV2LDiversityConfigResponse lDiversityConfig) {
             this.lDiversityConfig = Objects.requireNonNull(lDiversityConfig);
             return this;
         }
 
-        public Builder setNumericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
+        public Builder numericalStatsConfig(GooglePrivacyDlpV2NumericalStatsConfigResponse numericalStatsConfig) {
             this.numericalStatsConfig = Objects.requireNonNull(numericalStatsConfig);
             return this;
         }

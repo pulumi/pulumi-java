@@ -14,10 +14,10 @@ public final class GetOriginRequestPolicyCookiesConfig {
     private final String cookieBehavior;
     private final List<GetOriginRequestPolicyCookiesConfigCookie> cookies;
 
-    @OutputCustomType.Constructor({"cookieBehavior","cookies"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyCookiesConfig(
-        String cookieBehavior,
-        List<GetOriginRequestPolicyCookiesConfigCookie> cookies) {
+        @OutputCustomType.Parameter("cookieBehavior") String cookieBehavior,
+        @OutputCustomType.Parameter("cookies") List<GetOriginRequestPolicyCookiesConfigCookie> cookies) {
         this.cookieBehavior = cookieBehavior;
         this.cookies = cookies;
     }
@@ -51,12 +51,12 @@ public final class GetOriginRequestPolicyCookiesConfig {
     	      this.cookies = defaults.cookies;
         }
 
-        public Builder setCookieBehavior(String cookieBehavior) {
+        public Builder cookieBehavior(String cookieBehavior) {
             this.cookieBehavior = Objects.requireNonNull(cookieBehavior);
             return this;
         }
 
-        public Builder setCookies(List<GetOriginRequestPolicyCookiesConfigCookie> cookies) {
+        public Builder cookies(List<GetOriginRequestPolicyCookiesConfigCookie> cookies) {
             this.cookies = Objects.requireNonNull(cookies);
             return this;
         }

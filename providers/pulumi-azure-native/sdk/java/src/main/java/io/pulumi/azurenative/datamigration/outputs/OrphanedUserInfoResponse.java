@@ -22,10 +22,10 @@ public final class OrphanedUserInfoResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"databaseName","name"})
+    @OutputCustomType.Constructor
     private OrphanedUserInfoResponse(
-        @Nullable String databaseName,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.databaseName = databaseName;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class OrphanedUserInfoResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

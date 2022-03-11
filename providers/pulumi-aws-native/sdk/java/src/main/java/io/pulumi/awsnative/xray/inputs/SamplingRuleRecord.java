@@ -83,17 +83,17 @@ public final class SamplingRuleRecord extends io.pulumi.resources.InvokeArgs {
     	      this.samplingRule = defaults.samplingRule;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setSamplingRule(@Nullable SamplingRule samplingRule) {
+        public Builder samplingRule(@Nullable SamplingRule samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }

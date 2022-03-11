@@ -70,18 +70,18 @@ public final class GatewayPropertiesResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"apiMetadataProperties","corsProperties","httpsOnly","instances","operatorProperties","provisioningState","$public","resourceRequests","ssoProperties","url"})
+    @OutputCustomType.Constructor
     private GatewayPropertiesResponse(
-        @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
-        @Nullable GatewayCorsPropertiesResponse corsProperties,
-        @Nullable Boolean httpsOnly,
-        List<GatewayInstanceResponse> instances,
-        GatewayOperatorPropertiesResponse operatorProperties,
-        String provisioningState,
-        @Nullable Boolean $public,
-        @Nullable GatewayResourceRequestsResponse resourceRequests,
-        @Nullable SsoPropertiesResponse ssoProperties,
-        String url) {
+        @OutputCustomType.Parameter("apiMetadataProperties") @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties,
+        @OutputCustomType.Parameter("corsProperties") @Nullable GatewayCorsPropertiesResponse corsProperties,
+        @OutputCustomType.Parameter("httpsOnly") @Nullable Boolean httpsOnly,
+        @OutputCustomType.Parameter("instances") List<GatewayInstanceResponse> instances,
+        @OutputCustomType.Parameter("operatorProperties") GatewayOperatorPropertiesResponse operatorProperties,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("public") @Nullable Boolean $public,
+        @OutputCustomType.Parameter("resourceRequests") @Nullable GatewayResourceRequestsResponse resourceRequests,
+        @OutputCustomType.Parameter("ssoProperties") @Nullable SsoPropertiesResponse ssoProperties,
+        @OutputCustomType.Parameter("url") String url) {
         this.apiMetadataProperties = apiMetadataProperties;
         this.corsProperties = corsProperties;
         this.httpsOnly = httpsOnly;
@@ -203,52 +203,52 @@ public final class GatewayPropertiesResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setApiMetadataProperties(@Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties) {
+        public Builder apiMetadataProperties(@Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties) {
             this.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
 
-        public Builder setCorsProperties(@Nullable GatewayCorsPropertiesResponse corsProperties) {
+        public Builder corsProperties(@Nullable GatewayCorsPropertiesResponse corsProperties) {
             this.corsProperties = corsProperties;
             return this;
         }
 
-        public Builder setHttpsOnly(@Nullable Boolean httpsOnly) {
+        public Builder httpsOnly(@Nullable Boolean httpsOnly) {
             this.httpsOnly = httpsOnly;
             return this;
         }
 
-        public Builder setInstances(List<GatewayInstanceResponse> instances) {
+        public Builder instances(List<GatewayInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setOperatorProperties(GatewayOperatorPropertiesResponse operatorProperties) {
+        public Builder operatorProperties(GatewayOperatorPropertiesResponse operatorProperties) {
             this.operatorProperties = Objects.requireNonNull(operatorProperties);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder set$public(@Nullable Boolean $public) {
+        public Builder $public(@Nullable Boolean $public) {
             this.$public = $public;
             return this;
         }
 
-        public Builder setResourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(@Nullable GatewayResourceRequestsResponse resourceRequests) {
             this.resourceRequests = resourceRequests;
             return this;
         }
 
-        public Builder setSsoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
+        public Builder ssoProperties(@Nullable SsoPropertiesResponse ssoProperties) {
             this.ssoProperties = ssoProperties;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

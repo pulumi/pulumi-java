@@ -32,12 +32,12 @@ public final class Pav2MeterDetailsResponse {
      */
     private final Double multiplier;
 
-    @OutputCustomType.Constructor({"billingType","chargingType","meterGuid","multiplier"})
+    @OutputCustomType.Constructor
     private Pav2MeterDetailsResponse(
-        String billingType,
-        String chargingType,
-        String meterGuid,
-        Double multiplier) {
+        @OutputCustomType.Parameter("billingType") String billingType,
+        @OutputCustomType.Parameter("chargingType") String chargingType,
+        @OutputCustomType.Parameter("meterGuid") String meterGuid,
+        @OutputCustomType.Parameter("multiplier") Double multiplier) {
         this.billingType = billingType;
         this.chargingType = chargingType;
         this.meterGuid = meterGuid;
@@ -100,22 +100,22 @@ public final class Pav2MeterDetailsResponse {
     	      this.multiplier = defaults.multiplier;
         }
 
-        public Builder setBillingType(String billingType) {
+        public Builder billingType(String billingType) {
             this.billingType = Objects.requireNonNull(billingType);
             return this;
         }
 
-        public Builder setChargingType(String chargingType) {
+        public Builder chargingType(String chargingType) {
             this.chargingType = Objects.requireNonNull(chargingType);
             return this;
         }
 
-        public Builder setMeterGuid(String meterGuid) {
+        public Builder meterGuid(String meterGuid) {
             this.meterGuid = Objects.requireNonNull(meterGuid);
             return this;
         }
 
-        public Builder setMultiplier(Double multiplier) {
+        public Builder multiplier(Double multiplier) {
             this.multiplier = Objects.requireNonNull(multiplier);
             return this;
         }

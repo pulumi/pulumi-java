@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class WebACLAndStatement {
     private final List<WebACLStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private WebACLAndStatement(List<WebACLStatement> statements) {
+    @OutputCustomType.Constructor
+    private WebACLAndStatement(@OutputCustomType.Parameter("statements") List<WebACLStatement> statements) {
         this.statements = statements;
     }
 
@@ -41,7 +41,7 @@ public final class WebACLAndStatement {
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<WebACLStatement> statements) {
+        public Builder statements(List<WebACLStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

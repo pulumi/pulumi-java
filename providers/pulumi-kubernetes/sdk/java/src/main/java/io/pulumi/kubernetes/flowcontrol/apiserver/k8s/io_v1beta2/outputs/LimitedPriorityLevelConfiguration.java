@@ -27,10 +27,10 @@ public final class LimitedPriorityLevelConfiguration {
      */
     private final @Nullable LimitResponse limitResponse;
 
-    @OutputCustomType.Constructor({"assuredConcurrencyShares","limitResponse"})
+    @OutputCustomType.Constructor
     private LimitedPriorityLevelConfiguration(
-        @Nullable Integer assuredConcurrencyShares,
-        @Nullable LimitResponse limitResponse) {
+        @OutputCustomType.Parameter("assuredConcurrencyShares") @Nullable Integer assuredConcurrencyShares,
+        @OutputCustomType.Parameter("limitResponse") @Nullable LimitResponse limitResponse) {
         this.assuredConcurrencyShares = assuredConcurrencyShares;
         this.limitResponse = limitResponse;
     }
@@ -76,12 +76,12 @@ public final class LimitedPriorityLevelConfiguration {
     	      this.limitResponse = defaults.limitResponse;
         }
 
-        public Builder setAssuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
+        public Builder assuredConcurrencyShares(@Nullable Integer assuredConcurrencyShares) {
             this.assuredConcurrencyShares = assuredConcurrencyShares;
             return this;
         }
 
-        public Builder setLimitResponse(@Nullable LimitResponse limitResponse) {
+        public Builder limitResponse(@Nullable LimitResponse limitResponse) {
             this.limitResponse = limitResponse;
             return this;
         }

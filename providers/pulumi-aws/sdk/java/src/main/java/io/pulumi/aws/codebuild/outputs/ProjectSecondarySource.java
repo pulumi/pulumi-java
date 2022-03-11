@@ -71,18 +71,18 @@ public final class ProjectSecondarySource {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auth","buildStatusConfig","buildspec","gitCloneDepth","gitSubmodulesConfig","insecureSsl","location","reportBuildStatus","sourceIdentifier","type"})
+    @OutputCustomType.Constructor
     private ProjectSecondarySource(
-        @Nullable ProjectSecondarySourceAuth auth,
-        @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
-        @Nullable String buildspec,
-        @Nullable Integer gitCloneDepth,
-        @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
-        @Nullable Boolean insecureSsl,
-        @Nullable String location,
-        @Nullable Boolean reportBuildStatus,
-        String sourceIdentifier,
-        String type) {
+        @OutputCustomType.Parameter("auth") @Nullable ProjectSecondarySourceAuth auth,
+        @OutputCustomType.Parameter("buildStatusConfig") @Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig,
+        @OutputCustomType.Parameter("buildspec") @Nullable String buildspec,
+        @OutputCustomType.Parameter("gitCloneDepth") @Nullable Integer gitCloneDepth,
+        @OutputCustomType.Parameter("gitSubmodulesConfig") @Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig,
+        @OutputCustomType.Parameter("insecureSsl") @Nullable Boolean insecureSsl,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("reportBuildStatus") @Nullable Boolean reportBuildStatus,
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier,
+        @OutputCustomType.Parameter("type") String type) {
         this.auth = auth;
         this.buildStatusConfig = buildStatusConfig;
         this.buildspec = buildspec;
@@ -208,52 +208,52 @@ public final class ProjectSecondarySource {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable ProjectSecondarySourceAuth auth) {
+        public Builder auth(@Nullable ProjectSecondarySourceAuth auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setBuildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig) {
+        public Builder buildStatusConfig(@Nullable ProjectSecondarySourceBuildStatusConfig buildStatusConfig) {
             this.buildStatusConfig = buildStatusConfig;
             return this;
         }
 
-        public Builder setBuildspec(@Nullable String buildspec) {
+        public Builder buildspec(@Nullable String buildspec) {
             this.buildspec = buildspec;
             return this;
         }
 
-        public Builder setGitCloneDepth(@Nullable Integer gitCloneDepth) {
+        public Builder gitCloneDepth(@Nullable Integer gitCloneDepth) {
             this.gitCloneDepth = gitCloneDepth;
             return this;
         }
 
-        public Builder setGitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig) {
+        public Builder gitSubmodulesConfig(@Nullable ProjectSecondarySourceGitSubmodulesConfig gitSubmodulesConfig) {
             this.gitSubmodulesConfig = gitSubmodulesConfig;
             return this;
         }
 
-        public Builder setInsecureSsl(@Nullable Boolean insecureSsl) {
+        public Builder insecureSsl(@Nullable Boolean insecureSsl) {
             this.insecureSsl = insecureSsl;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setReportBuildStatus(@Nullable Boolean reportBuildStatus) {
+        public Builder reportBuildStatus(@Nullable Boolean reportBuildStatus) {
             this.reportBuildStatus = reportBuildStatus;
             return this;
         }
 
-        public Builder setSourceIdentifier(String sourceIdentifier) {
+        public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

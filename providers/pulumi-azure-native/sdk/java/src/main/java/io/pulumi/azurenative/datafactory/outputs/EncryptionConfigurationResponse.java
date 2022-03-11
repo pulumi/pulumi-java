@@ -33,12 +33,12 @@ public final class EncryptionConfigurationResponse {
      */
     private final String vaultBaseUrl;
 
-    @OutputCustomType.Constructor({"identity","keyName","keyVersion","vaultBaseUrl"})
+    @OutputCustomType.Constructor
     private EncryptionConfigurationResponse(
-        @Nullable CMKIdentityDefinitionResponse identity,
-        String keyName,
-        @Nullable String keyVersion,
-        String vaultBaseUrl) {
+        @OutputCustomType.Parameter("identity") @Nullable CMKIdentityDefinitionResponse identity,
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("vaultBaseUrl") String vaultBaseUrl) {
         this.identity = identity;
         this.keyName = keyName;
         this.keyVersion = keyVersion;
@@ -100,22 +100,22 @@ public final class EncryptionConfigurationResponse {
     	      this.vaultBaseUrl = defaults.vaultBaseUrl;
         }
 
-        public Builder setIdentity(@Nullable CMKIdentityDefinitionResponse identity) {
+        public Builder identity(@Nullable CMKIdentityDefinitionResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setVaultBaseUrl(String vaultBaseUrl) {
+        public Builder vaultBaseUrl(String vaultBaseUrl) {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }

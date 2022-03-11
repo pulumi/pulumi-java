@@ -221,112 +221,112 @@ public final class DscpConfigurationArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDestinationIpRanges(@Nullable Input<List<QosIpRangeArgs>> destinationIpRanges) {
+        public Builder destinationIpRanges(@Nullable Input<List<QosIpRangeArgs>> destinationIpRanges) {
             this.destinationIpRanges = destinationIpRanges;
             return this;
         }
 
-        public Builder setDestinationIpRanges(@Nullable List<QosIpRangeArgs> destinationIpRanges) {
+        public Builder destinationIpRanges(@Nullable List<QosIpRangeArgs> destinationIpRanges) {
             this.destinationIpRanges = Input.ofNullable(destinationIpRanges);
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable Input<List<QosPortRangeArgs>> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable Input<List<QosPortRangeArgs>> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<QosPortRangeArgs> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<QosPortRangeArgs> destinationPortRanges) {
             this.destinationPortRanges = Input.ofNullable(destinationPortRanges);
             return this;
         }
 
-        public Builder setDscpConfigurationName(@Nullable Input<String> dscpConfigurationName) {
+        public Builder dscpConfigurationName(@Nullable Input<String> dscpConfigurationName) {
             this.dscpConfigurationName = dscpConfigurationName;
             return this;
         }
 
-        public Builder setDscpConfigurationName(@Nullable String dscpConfigurationName) {
+        public Builder dscpConfigurationName(@Nullable String dscpConfigurationName) {
             this.dscpConfigurationName = Input.ofNullable(dscpConfigurationName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMarkings(@Nullable Input<List<Integer>> markings) {
+        public Builder markings(@Nullable Input<List<Integer>> markings) {
             this.markings = markings;
             return this;
         }
 
-        public Builder setMarkings(@Nullable List<Integer> markings) {
+        public Builder markings(@Nullable List<Integer> markings) {
             this.markings = Input.ofNullable(markings);
             return this;
         }
 
-        public Builder setProtocol(@Nullable Input<Either<String,ProtocolType>> protocol) {
+        public Builder protocol(@Nullable Input<Either<String,ProtocolType>> protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setProtocol(@Nullable Either<String,ProtocolType> protocol) {
+        public Builder protocol(@Nullable Either<String,ProtocolType> protocol) {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceIpRanges(@Nullable Input<List<QosIpRangeArgs>> sourceIpRanges) {
+        public Builder sourceIpRanges(@Nullable Input<List<QosIpRangeArgs>> sourceIpRanges) {
             this.sourceIpRanges = sourceIpRanges;
             return this;
         }
 
-        public Builder setSourceIpRanges(@Nullable List<QosIpRangeArgs> sourceIpRanges) {
+        public Builder sourceIpRanges(@Nullable List<QosIpRangeArgs> sourceIpRanges) {
             this.sourceIpRanges = Input.ofNullable(sourceIpRanges);
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable Input<List<QosPortRangeArgs>> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable Input<List<QosPortRangeArgs>> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<QosPortRangeArgs> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<QosPortRangeArgs> sourcePortRanges) {
             this.sourcePortRanges = Input.ofNullable(sourcePortRanges);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

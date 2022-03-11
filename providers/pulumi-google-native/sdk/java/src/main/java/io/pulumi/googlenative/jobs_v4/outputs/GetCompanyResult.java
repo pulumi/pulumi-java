@@ -78,21 +78,21 @@ public final class GetCompanyResult {
      */
     private final String websiteUri;
 
-    @OutputCustomType.Constructor({"careerSiteUri","derivedInfo","displayName","eeoText","externalId","headquartersAddress","hiringAgency","imageUri","keywordSearchableJobCustomAttributes","name","size","suspended","websiteUri"})
+    @OutputCustomType.Constructor
     private GetCompanyResult(
-        String careerSiteUri,
-        CompanyDerivedInfoResponse derivedInfo,
-        String displayName,
-        String eeoText,
-        String externalId,
-        String headquartersAddress,
-        Boolean hiringAgency,
-        String imageUri,
-        List<String> keywordSearchableJobCustomAttributes,
-        String name,
-        String size,
-        Boolean suspended,
-        String websiteUri) {
+        @OutputCustomType.Parameter("careerSiteUri") String careerSiteUri,
+        @OutputCustomType.Parameter("derivedInfo") CompanyDerivedInfoResponse derivedInfo,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("eeoText") String eeoText,
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("headquartersAddress") String headquartersAddress,
+        @OutputCustomType.Parameter("hiringAgency") Boolean hiringAgency,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("keywordSearchableJobCustomAttributes") List<String> keywordSearchableJobCustomAttributes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("size") String size,
+        @OutputCustomType.Parameter("suspended") Boolean suspended,
+        @OutputCustomType.Parameter("websiteUri") String websiteUri) {
         this.careerSiteUri = careerSiteUri;
         this.derivedInfo = derivedInfo;
         this.displayName = displayName;
@@ -244,67 +244,67 @@ public final class GetCompanyResult {
     	      this.websiteUri = defaults.websiteUri;
         }
 
-        public Builder setCareerSiteUri(String careerSiteUri) {
+        public Builder careerSiteUri(String careerSiteUri) {
             this.careerSiteUri = Objects.requireNonNull(careerSiteUri);
             return this;
         }
 
-        public Builder setDerivedInfo(CompanyDerivedInfoResponse derivedInfo) {
+        public Builder derivedInfo(CompanyDerivedInfoResponse derivedInfo) {
             this.derivedInfo = Objects.requireNonNull(derivedInfo);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEeoText(String eeoText) {
+        public Builder eeoText(String eeoText) {
             this.eeoText = Objects.requireNonNull(eeoText);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setHeadquartersAddress(String headquartersAddress) {
+        public Builder headquartersAddress(String headquartersAddress) {
             this.headquartersAddress = Objects.requireNonNull(headquartersAddress);
             return this;
         }
 
-        public Builder setHiringAgency(Boolean hiringAgency) {
+        public Builder hiringAgency(Boolean hiringAgency) {
             this.hiringAgency = Objects.requireNonNull(hiringAgency);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setKeywordSearchableJobCustomAttributes(List<String> keywordSearchableJobCustomAttributes) {
+        public Builder keywordSearchableJobCustomAttributes(List<String> keywordSearchableJobCustomAttributes) {
             this.keywordSearchableJobCustomAttributes = Objects.requireNonNull(keywordSearchableJobCustomAttributes);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSize(String size) {
+        public Builder size(String size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSuspended(Boolean suspended) {
+        public Builder suspended(Boolean suspended) {
             this.suspended = Objects.requireNonNull(suspended);
             return this;
         }
 
-        public Builder setWebsiteUri(String websiteUri) {
+        public Builder websiteUri(String websiteUri) {
             this.websiteUri = Objects.requireNonNull(websiteUri);
             return this;
         }

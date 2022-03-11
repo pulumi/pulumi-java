@@ -42,14 +42,14 @@ public final class AccessReviewInstanceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endDateTime","id","name","startDateTime","status","type"})
+    @OutputCustomType.Constructor
     private AccessReviewInstanceResponse(
-        @Nullable String endDateTime,
-        String id,
-        String name,
-        @Nullable String startDateTime,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("endDateTime") @Nullable String endDateTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startDateTime") @Nullable String startDateTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.endDateTime = endDateTime;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class AccessReviewInstanceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndDateTime(@Nullable String endDateTime) {
+        public Builder endDateTime(@Nullable String endDateTime) {
             this.endDateTime = endDateTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartDateTime(@Nullable String startDateTime) {
+        public Builder startDateTime(@Nullable String startDateTime) {
             this.startDateTime = startDateTime;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

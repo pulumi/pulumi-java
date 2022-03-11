@@ -27,11 +27,11 @@ public final class ContactDetailResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"email","phone","role"})
+    @OutputCustomType.Constructor
     private ContactDetailResponse(
-        @Nullable String email,
-        @Nullable String phone,
-        @Nullable String role) {
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("role") @Nullable String role) {
         this.email = email;
         this.phone = phone;
         this.role = role;
@@ -83,17 +83,17 @@ public final class ContactDetailResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

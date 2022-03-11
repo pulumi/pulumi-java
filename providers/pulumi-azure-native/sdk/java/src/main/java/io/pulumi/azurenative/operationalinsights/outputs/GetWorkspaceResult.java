@@ -110,26 +110,26 @@ public final class GetWorkspaceResult {
      */
     private final @Nullable WorkspaceCappingResponse workspaceCapping;
 
-    @OutputCustomType.Constructor({"createdDate","customerId","eTag","features","forceCmkForQuery","id","location","modifiedDate","name","privateLinkScopedResources","provisioningState","publicNetworkAccessForIngestion","publicNetworkAccessForQuery","retentionInDays","sku","tags","type","workspaceCapping"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        String createdDate,
-        String customerId,
-        @Nullable String eTag,
-        @Nullable WorkspaceFeaturesResponse features,
-        @Nullable Boolean forceCmkForQuery,
-        String id,
-        String location,
-        String modifiedDate,
-        String name,
-        List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
-        @Nullable String provisioningState,
-        @Nullable String publicNetworkAccessForIngestion,
-        @Nullable String publicNetworkAccessForQuery,
-        @Nullable Integer retentionInDays,
-        @Nullable WorkspaceSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable WorkspaceCappingResponse workspaceCapping) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("customerId") String customerId,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("features") @Nullable WorkspaceFeaturesResponse features,
+        @OutputCustomType.Parameter("forceCmkForQuery") @Nullable Boolean forceCmkForQuery,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("modifiedDate") String modifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkScopedResources") List<PrivateLinkScopedResourceResponse> privateLinkScopedResources,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccessForIngestion") @Nullable String publicNetworkAccessForIngestion,
+        @OutputCustomType.Parameter("publicNetworkAccessForQuery") @Nullable String publicNetworkAccessForQuery,
+        @OutputCustomType.Parameter("retentionInDays") @Nullable Integer retentionInDays,
+        @OutputCustomType.Parameter("sku") @Nullable WorkspaceSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceCapping") @Nullable WorkspaceCappingResponse workspaceCapping) {
         this.createdDate = createdDate;
         this.customerId = customerId;
         this.eTag = eTag;
@@ -331,92 +331,92 @@ public final class GetWorkspaceResult {
     	      this.workspaceCapping = defaults.workspaceCapping;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setCustomerId(String customerId) {
+        public Builder customerId(String customerId) {
             this.customerId = Objects.requireNonNull(customerId);
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setFeatures(@Nullable WorkspaceFeaturesResponse features) {
+        public Builder features(@Nullable WorkspaceFeaturesResponse features) {
             this.features = features;
             return this;
         }
 
-        public Builder setForceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
+        public Builder forceCmkForQuery(@Nullable Boolean forceCmkForQuery) {
             this.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setModifiedDate(String modifiedDate) {
+        public Builder modifiedDate(String modifiedDate) {
             this.modifiedDate = Objects.requireNonNull(modifiedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
+        public Builder privateLinkScopedResources(List<PrivateLinkScopedResourceResponse> privateLinkScopedResources) {
             this.privateLinkScopedResources = Objects.requireNonNull(privateLinkScopedResources);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setPublicNetworkAccessForIngestion(@Nullable String publicNetworkAccessForIngestion) {
+        public Builder publicNetworkAccessForIngestion(@Nullable String publicNetworkAccessForIngestion) {
             this.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
 
-        public Builder setPublicNetworkAccessForQuery(@Nullable String publicNetworkAccessForQuery) {
+        public Builder publicNetworkAccessForQuery(@Nullable String publicNetworkAccessForQuery) {
             this.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }
 
-        public Builder setSku(@Nullable WorkspaceSkuResponse sku) {
+        public Builder sku(@Nullable WorkspaceSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceCapping(@Nullable WorkspaceCappingResponse workspaceCapping) {
+        public Builder workspaceCapping(@Nullable WorkspaceCappingResponse workspaceCapping) {
             this.workspaceCapping = workspaceCapping;
             return this;
         }

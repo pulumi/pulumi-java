@@ -13,10 +13,10 @@ public final class FilterResponse {
     private final CompositeFilterResponse compositeFilter;
     private final ValueFilterResponse valueFilter;
 
-    @OutputCustomType.Constructor({"compositeFilter","valueFilter"})
+    @OutputCustomType.Constructor
     private FilterResponse(
-        CompositeFilterResponse compositeFilter,
-        ValueFilterResponse valueFilter) {
+        @OutputCustomType.Parameter("compositeFilter") CompositeFilterResponse compositeFilter,
+        @OutputCustomType.Parameter("valueFilter") ValueFilterResponse valueFilter) {
         this.compositeFilter = compositeFilter;
         this.valueFilter = valueFilter;
     }
@@ -50,12 +50,12 @@ public final class FilterResponse {
     	      this.valueFilter = defaults.valueFilter;
         }
 
-        public Builder setCompositeFilter(CompositeFilterResponse compositeFilter) {
+        public Builder compositeFilter(CompositeFilterResponse compositeFilter) {
             this.compositeFilter = Objects.requireNonNull(compositeFilter);
             return this;
         }
 
-        public Builder setValueFilter(ValueFilterResponse valueFilter) {
+        public Builder valueFilter(ValueFilterResponse valueFilter) {
             this.valueFilter = Objects.requireNonNull(valueFilter);
             return this;
         }

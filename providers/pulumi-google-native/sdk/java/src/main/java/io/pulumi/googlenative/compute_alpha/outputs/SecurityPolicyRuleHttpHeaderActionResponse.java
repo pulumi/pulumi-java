@@ -16,8 +16,8 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
      */
     private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdds"})
-    private SecurityPolicyRuleHttpHeaderActionResponse(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyRuleHttpHeaderActionResponse(@OutputCustomType.Parameter("requestHeadersToAdds") List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
         this.requestHeadersToAdds = requestHeadersToAdds;
     }
 
@@ -49,7 +49,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse {
     	      this.requestHeadersToAdds = defaults.requestHeadersToAdds;
         }
 
-        public Builder setRequestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds) {
             this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
             return this;
         }

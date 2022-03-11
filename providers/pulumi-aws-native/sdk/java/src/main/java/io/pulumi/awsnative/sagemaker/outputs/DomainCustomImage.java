@@ -28,11 +28,11 @@ public final class DomainCustomImage {
      */
     private final @Nullable Integer imageVersionNumber;
 
-    @OutputCustomType.Constructor({"appImageConfigName","imageName","imageVersionNumber"})
+    @OutputCustomType.Constructor
     private DomainCustomImage(
-        String appImageConfigName,
-        String imageName,
-        @Nullable Integer imageVersionNumber) {
+        @OutputCustomType.Parameter("appImageConfigName") String appImageConfigName,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("imageVersionNumber") @Nullable Integer imageVersionNumber) {
         this.appImageConfigName = appImageConfigName;
         this.imageName = imageName;
         this.imageVersionNumber = imageVersionNumber;
@@ -84,17 +84,17 @@ public final class DomainCustomImage {
     	      this.imageVersionNumber = defaults.imageVersionNumber;
         }
 
-        public Builder setAppImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageVersionNumber(@Nullable Integer imageVersionNumber) {
+        public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }

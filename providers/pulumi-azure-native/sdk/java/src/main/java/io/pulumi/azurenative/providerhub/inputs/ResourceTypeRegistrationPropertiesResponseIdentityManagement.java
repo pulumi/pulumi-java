@@ -62,12 +62,12 @@ public final class ResourceTypeRegistrationPropertiesResponseIdentityManagement 
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -65,20 +65,20 @@ public final class GetAdaptiveApplicationControlResult {
     private final String type;
     private final @Nullable List<VmRecommendationResponse> vmRecommendations;
 
-    @OutputCustomType.Constructor({"configurationStatus","enforcementMode","id","issues","location","name","pathRecommendations","protectionMode","recommendationStatus","sourceSystem","type","vmRecommendations"})
+    @OutputCustomType.Constructor
     private GetAdaptiveApplicationControlResult(
-        String configurationStatus,
-        @Nullable String enforcementMode,
-        String id,
-        List<AdaptiveApplicationControlIssueSummaryResponse> issues,
-        String location,
-        String name,
-        @Nullable List<PathRecommendationResponse> pathRecommendations,
-        @Nullable ProtectionModeResponse protectionMode,
-        String recommendationStatus,
-        String sourceSystem,
-        String type,
-        @Nullable List<VmRecommendationResponse> vmRecommendations) {
+        @OutputCustomType.Parameter("configurationStatus") String configurationStatus,
+        @OutputCustomType.Parameter("enforcementMode") @Nullable String enforcementMode,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("issues") List<AdaptiveApplicationControlIssueSummaryResponse> issues,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pathRecommendations") @Nullable List<PathRecommendationResponse> pathRecommendations,
+        @OutputCustomType.Parameter("protectionMode") @Nullable ProtectionModeResponse protectionMode,
+        @OutputCustomType.Parameter("recommendationStatus") String recommendationStatus,
+        @OutputCustomType.Parameter("sourceSystem") String sourceSystem,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmRecommendations") @Nullable List<VmRecommendationResponse> vmRecommendations) {
         this.configurationStatus = configurationStatus;
         this.enforcementMode = enforcementMode;
         this.id = id;
@@ -208,62 +208,62 @@ public final class GetAdaptiveApplicationControlResult {
     	      this.vmRecommendations = defaults.vmRecommendations;
         }
 
-        public Builder setConfigurationStatus(String configurationStatus) {
+        public Builder configurationStatus(String configurationStatus) {
             this.configurationStatus = Objects.requireNonNull(configurationStatus);
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable String enforcementMode) {
+        public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIssues(List<AdaptiveApplicationControlIssueSummaryResponse> issues) {
+        public Builder issues(List<AdaptiveApplicationControlIssueSummaryResponse> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPathRecommendations(@Nullable List<PathRecommendationResponse> pathRecommendations) {
+        public Builder pathRecommendations(@Nullable List<PathRecommendationResponse> pathRecommendations) {
             this.pathRecommendations = pathRecommendations;
             return this;
         }
 
-        public Builder setProtectionMode(@Nullable ProtectionModeResponse protectionMode) {
+        public Builder protectionMode(@Nullable ProtectionModeResponse protectionMode) {
             this.protectionMode = protectionMode;
             return this;
         }
 
-        public Builder setRecommendationStatus(String recommendationStatus) {
+        public Builder recommendationStatus(String recommendationStatus) {
             this.recommendationStatus = Objects.requireNonNull(recommendationStatus);
             return this;
         }
 
-        public Builder setSourceSystem(String sourceSystem) {
+        public Builder sourceSystem(String sourceSystem) {
             this.sourceSystem = Objects.requireNonNull(sourceSystem);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmRecommendations(@Nullable List<VmRecommendationResponse> vmRecommendations) {
+        public Builder vmRecommendations(@Nullable List<VmRecommendationResponse> vmRecommendations) {
             this.vmRecommendations = vmRecommendations;
             return this;
         }

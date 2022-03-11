@@ -32,12 +32,12 @@ public final class LabDetailsResponse {
      */
     private final String usageQuota;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","usageQuota"})
+    @OutputCustomType.Constructor
     private LabDetailsResponse(
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String provisioningState,
-        String usageQuota) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("usageQuota") String usageQuota) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;
@@ -99,22 +99,22 @@ public final class LabDetailsResponse {
     	      this.usageQuota = defaults.usageQuota;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setUsageQuota(String usageQuota) {
+        public Builder usageQuota(String usageQuota) {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
         }

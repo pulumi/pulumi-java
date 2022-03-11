@@ -270,142 +270,142 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setClassification(@Nullable Input<Either<String,IncidentClassification>> classification) {
+        public Builder classification(@Nullable Input<Either<String,IncidentClassification>> classification) {
             this.classification = classification;
             return this;
         }
 
-        public Builder setClassification(@Nullable Either<String,IncidentClassification> classification) {
+        public Builder classification(@Nullable Either<String,IncidentClassification> classification) {
             this.classification = Input.ofNullable(classification);
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable Input<String> classificationComment) {
+        public Builder classificationComment(@Nullable Input<String> classificationComment) {
             this.classificationComment = classificationComment;
             return this;
         }
 
-        public Builder setClassificationComment(@Nullable String classificationComment) {
+        public Builder classificationComment(@Nullable String classificationComment) {
             this.classificationComment = Input.ofNullable(classificationComment);
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
+        public Builder classificationReason(@Nullable Input<Either<String,IncidentClassificationReason>> classificationReason) {
             this.classificationReason = classificationReason;
             return this;
         }
 
-        public Builder setClassificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
+        public Builder classificationReason(@Nullable Either<String,IncidentClassificationReason> classificationReason) {
             this.classificationReason = Input.ofNullable(classificationReason);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFirstActivityTimeUtc(@Nullable Input<String> firstActivityTimeUtc) {
+        public Builder firstActivityTimeUtc(@Nullable Input<String> firstActivityTimeUtc) {
             this.firstActivityTimeUtc = firstActivityTimeUtc;
             return this;
         }
 
-        public Builder setFirstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
+        public Builder firstActivityTimeUtc(@Nullable String firstActivityTimeUtc) {
             this.firstActivityTimeUtc = Input.ofNullable(firstActivityTimeUtc);
             return this;
         }
 
-        public Builder setIncidentId(@Nullable Input<String> incidentId) {
+        public Builder incidentId(@Nullable Input<String> incidentId) {
             this.incidentId = incidentId;
             return this;
         }
 
-        public Builder setIncidentId(@Nullable String incidentId) {
+        public Builder incidentId(@Nullable String incidentId) {
             this.incidentId = Input.ofNullable(incidentId);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<IncidentLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<IncidentLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<IncidentLabelArgs> labels) {
+        public Builder labels(@Nullable List<IncidentLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLastActivityTimeUtc(@Nullable Input<String> lastActivityTimeUtc) {
+        public Builder lastActivityTimeUtc(@Nullable Input<String> lastActivityTimeUtc) {
             this.lastActivityTimeUtc = lastActivityTimeUtc;
             return this;
         }
 
-        public Builder setLastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
+        public Builder lastActivityTimeUtc(@Nullable String lastActivityTimeUtc) {
             this.lastActivityTimeUtc = Input.ofNullable(lastActivityTimeUtc);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
+        public Builder owner(@Nullable Input<IncidentOwnerInfoArgs> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable IncidentOwnerInfoArgs owner) {
+        public Builder owner(@Nullable IncidentOwnerInfoArgs owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSeverity(Input<Either<String,IncidentSeverity>> severity) {
+        public Builder severity(Input<Either<String,IncidentSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Either<String,IncidentSeverity> severity) {
+        public Builder severity(Either<String,IncidentSeverity> severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setStatus(Input<Either<String,IncidentStatus>> status) {
+        public Builder status(Input<Either<String,IncidentStatus>> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(Either<String,IncidentStatus> status) {
+        public Builder status(Either<String,IncidentStatus> status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setTitle(Input<String> title) {
+        public Builder title(Input<String> title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

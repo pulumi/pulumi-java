@@ -234,122 +234,122 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setBudgetType(Input<String> budgetType) {
+        public Builder budgetType(Input<String> budgetType) {
             this.budgetType = Objects.requireNonNull(budgetType);
             return this;
         }
 
-        public Builder setBudgetType(String budgetType) {
+        public Builder budgetType(String budgetType) {
             this.budgetType = Input.of(Objects.requireNonNull(budgetType));
             return this;
         }
 
-        public Builder setCostFilters(@Nullable Input<Map<String,String>> costFilters) {
+        public Builder costFilters(@Nullable Input<Map<String,String>> costFilters) {
             this.costFilters = costFilters;
             return this;
         }
 
-        public Builder setCostFilters(@Nullable Map<String,String> costFilters) {
+        public Builder costFilters(@Nullable Map<String,String> costFilters) {
             this.costFilters = Input.ofNullable(costFilters);
             return this;
         }
 
-        public Builder setCostTypes(@Nullable Input<BudgetCostTypesArgs> costTypes) {
+        public Builder costTypes(@Nullable Input<BudgetCostTypesArgs> costTypes) {
             this.costTypes = costTypes;
             return this;
         }
 
-        public Builder setCostTypes(@Nullable BudgetCostTypesArgs costTypes) {
+        public Builder costTypes(@Nullable BudgetCostTypesArgs costTypes) {
             this.costTypes = Input.ofNullable(costTypes);
             return this;
         }
 
-        public Builder setLimitAmount(Input<String> limitAmount) {
+        public Builder limitAmount(Input<String> limitAmount) {
             this.limitAmount = Objects.requireNonNull(limitAmount);
             return this;
         }
 
-        public Builder setLimitAmount(String limitAmount) {
+        public Builder limitAmount(String limitAmount) {
             this.limitAmount = Input.of(Objects.requireNonNull(limitAmount));
             return this;
         }
 
-        public Builder setLimitUnit(Input<String> limitUnit) {
+        public Builder limitUnit(Input<String> limitUnit) {
             this.limitUnit = Objects.requireNonNull(limitUnit);
             return this;
         }
 
-        public Builder setLimitUnit(String limitUnit) {
+        public Builder limitUnit(String limitUnit) {
             this.limitUnit = Input.of(Objects.requireNonNull(limitUnit));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Input<List<BudgetNotificationArgs>> notifications) {
+        public Builder notifications(@Nullable Input<List<BudgetNotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setNotifications(@Nullable List<BudgetNotificationArgs> notifications) {
+        public Builder notifications(@Nullable List<BudgetNotificationArgs> notifications) {
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
 
-        public Builder setTimePeriodEnd(@Nullable Input<String> timePeriodEnd) {
+        public Builder timePeriodEnd(@Nullable Input<String> timePeriodEnd) {
             this.timePeriodEnd = timePeriodEnd;
             return this;
         }
 
-        public Builder setTimePeriodEnd(@Nullable String timePeriodEnd) {
+        public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
             this.timePeriodEnd = Input.ofNullable(timePeriodEnd);
             return this;
         }
 
-        public Builder setTimePeriodStart(@Nullable Input<String> timePeriodStart) {
+        public Builder timePeriodStart(@Nullable Input<String> timePeriodStart) {
             this.timePeriodStart = timePeriodStart;
             return this;
         }
 
-        public Builder setTimePeriodStart(@Nullable String timePeriodStart) {
+        public Builder timePeriodStart(@Nullable String timePeriodStart) {
             this.timePeriodStart = Input.ofNullable(timePeriodStart);
             return this;
         }
 
-        public Builder setTimeUnit(Input<String> timeUnit) {
+        public Builder timeUnit(Input<String> timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Input.of(Objects.requireNonNull(timeUnit));
             return this;
         }

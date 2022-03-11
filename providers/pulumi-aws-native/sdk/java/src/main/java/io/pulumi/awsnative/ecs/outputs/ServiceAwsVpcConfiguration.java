@@ -17,11 +17,11 @@ public final class ServiceAwsVpcConfiguration {
     private final @Nullable List<String> securityGroups;
     private final @Nullable List<String> subnets;
 
-    @OutputCustomType.Constructor({"assignPublicIp","securityGroups","subnets"})
+    @OutputCustomType.Constructor
     private ServiceAwsVpcConfiguration(
-        @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp,
-        @Nullable List<String> securityGroups,
-        @Nullable List<String> subnets) {
+        @OutputCustomType.Parameter("assignPublicIp") @Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("subnets") @Nullable List<String> subnets) {
         this.assignPublicIp = assignPublicIp;
         this.securityGroups = securityGroups;
         this.subnets = subnets;
@@ -61,17 +61,17 @@ public final class ServiceAwsVpcConfiguration {
     	      this.subnets = defaults.subnets;
         }
 
-        public Builder setAssignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
+        public Builder assignPublicIp(@Nullable ServiceAwsVpcConfigurationAssignPublicIp assignPublicIp) {
             this.assignPublicIp = assignPublicIp;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<String> subnets) {
+        public Builder subnets(@Nullable List<String> subnets) {
             this.subnets = subnets;
             return this;
         }

@@ -19,11 +19,11 @@ public final class SecurityConfigurationEncryptionConfiguration {
      */
     private final SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor({"cloudwatchEncryption","jobBookmarksEncryption","s3Encryption"})
+    @OutputCustomType.Constructor
     private SecurityConfigurationEncryptionConfiguration(
-        SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
-        SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
-        SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
+        @OutputCustomType.Parameter("cloudwatchEncryption") SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption,
+        @OutputCustomType.Parameter("jobBookmarksEncryption") SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption,
+        @OutputCustomType.Parameter("s3Encryption") SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
         this.cloudwatchEncryption = cloudwatchEncryption;
         this.jobBookmarksEncryption = jobBookmarksEncryption;
         this.s3Encryption = s3Encryption;
@@ -67,17 +67,17 @@ public final class SecurityConfigurationEncryptionConfiguration {
     	      this.s3Encryption = defaults.s3Encryption;
         }
 
-        public Builder setCloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption) {
+        public Builder cloudwatchEncryption(SecurityConfigurationEncryptionConfigurationCloudwatchEncryption cloudwatchEncryption) {
             this.cloudwatchEncryption = Objects.requireNonNull(cloudwatchEncryption);
             return this;
         }
 
-        public Builder setJobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption) {
+        public Builder jobBookmarksEncryption(SecurityConfigurationEncryptionConfigurationJobBookmarksEncryption jobBookmarksEncryption) {
             this.jobBookmarksEncryption = Objects.requireNonNull(jobBookmarksEncryption);
             return this;
         }
 
-        public Builder setS3Encryption(SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
+        public Builder s3Encryption(SecurityConfigurationEncryptionConfigurationS3Encryption s3Encryption) {
             this.s3Encryption = Objects.requireNonNull(s3Encryption);
             return this;
         }

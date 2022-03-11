@@ -63,18 +63,18 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"adxDatabaseName","adxEndpointUri","adxResourceId","adxTableName","connectionType","eventHubConsumerGroup","eventHubEndpointUri","eventHubEntityPath","eventHubNamespaceResourceId","provisioningState"})
+    @OutputCustomType.Constructor
     private AzureDataExplorerConnectionPropertiesResponse(
-        String adxDatabaseName,
-        String adxEndpointUri,
-        String adxResourceId,
-        @Nullable String adxTableName,
-        String connectionType,
-        @Nullable String eventHubConsumerGroup,
-        String eventHubEndpointUri,
-        String eventHubEntityPath,
-        String eventHubNamespaceResourceId,
-        String provisioningState) {
+        @OutputCustomType.Parameter("adxDatabaseName") String adxDatabaseName,
+        @OutputCustomType.Parameter("adxEndpointUri") String adxEndpointUri,
+        @OutputCustomType.Parameter("adxResourceId") String adxResourceId,
+        @OutputCustomType.Parameter("adxTableName") @Nullable String adxTableName,
+        @OutputCustomType.Parameter("connectionType") String connectionType,
+        @OutputCustomType.Parameter("eventHubConsumerGroup") @Nullable String eventHubConsumerGroup,
+        @OutputCustomType.Parameter("eventHubEndpointUri") String eventHubEndpointUri,
+        @OutputCustomType.Parameter("eventHubEntityPath") String eventHubEntityPath,
+        @OutputCustomType.Parameter("eventHubNamespaceResourceId") String eventHubNamespaceResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.adxDatabaseName = adxDatabaseName;
         this.adxEndpointUri = adxEndpointUri;
         this.adxResourceId = adxResourceId;
@@ -197,52 +197,52 @@ public final class AzureDataExplorerConnectionPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setAdxDatabaseName(String adxDatabaseName) {
+        public Builder adxDatabaseName(String adxDatabaseName) {
             this.adxDatabaseName = Objects.requireNonNull(adxDatabaseName);
             return this;
         }
 
-        public Builder setAdxEndpointUri(String adxEndpointUri) {
+        public Builder adxEndpointUri(String adxEndpointUri) {
             this.adxEndpointUri = Objects.requireNonNull(adxEndpointUri);
             return this;
         }
 
-        public Builder setAdxResourceId(String adxResourceId) {
+        public Builder adxResourceId(String adxResourceId) {
             this.adxResourceId = Objects.requireNonNull(adxResourceId);
             return this;
         }
 
-        public Builder setAdxTableName(@Nullable String adxTableName) {
+        public Builder adxTableName(@Nullable String adxTableName) {
             this.adxTableName = adxTableName;
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setEventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
+        public Builder eventHubConsumerGroup(@Nullable String eventHubConsumerGroup) {
             this.eventHubConsumerGroup = eventHubConsumerGroup;
             return this;
         }
 
-        public Builder setEventHubEndpointUri(String eventHubEndpointUri) {
+        public Builder eventHubEndpointUri(String eventHubEndpointUri) {
             this.eventHubEndpointUri = Objects.requireNonNull(eventHubEndpointUri);
             return this;
         }
 
-        public Builder setEventHubEntityPath(String eventHubEntityPath) {
+        public Builder eventHubEntityPath(String eventHubEntityPath) {
             this.eventHubEntityPath = Objects.requireNonNull(eventHubEntityPath);
             return this;
         }
 
-        public Builder setEventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
+        public Builder eventHubNamespaceResourceId(String eventHubNamespaceResourceId) {
             this.eventHubNamespaceResourceId = Objects.requireNonNull(eventHubNamespaceResourceId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

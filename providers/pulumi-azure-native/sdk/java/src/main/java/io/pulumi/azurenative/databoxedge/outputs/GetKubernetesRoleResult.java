@@ -69,19 +69,19 @@ public final class GetKubernetesRoleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"hostPlatform","hostPlatformType","id","kind","kubernetesClusterInfo","kubernetesRoleResources","name","provisioningState","roleStatus","systemData","type"})
+    @OutputCustomType.Constructor
     private GetKubernetesRoleResult(
-        String hostPlatform,
-        String hostPlatformType,
-        String id,
-        String kind,
-        KubernetesClusterInfoResponse kubernetesClusterInfo,
-        KubernetesRoleResourcesResponse kubernetesRoleResources,
-        String name,
-        String provisioningState,
-        String roleStatus,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("hostPlatform") String hostPlatform,
+        @OutputCustomType.Parameter("hostPlatformType") String hostPlatformType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kubernetesClusterInfo") KubernetesClusterInfoResponse kubernetesClusterInfo,
+        @OutputCustomType.Parameter("kubernetesRoleResources") KubernetesRoleResourcesResponse kubernetesRoleResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("roleStatus") String roleStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.hostPlatform = hostPlatform;
         this.hostPlatformType = hostPlatformType;
         this.id = id;
@@ -214,57 +214,57 @@ public final class GetKubernetesRoleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setHostPlatform(String hostPlatform) {
+        public Builder hostPlatform(String hostPlatform) {
             this.hostPlatform = Objects.requireNonNull(hostPlatform);
             return this;
         }
 
-        public Builder setHostPlatformType(String hostPlatformType) {
+        public Builder hostPlatformType(String hostPlatformType) {
             this.hostPlatformType = Objects.requireNonNull(hostPlatformType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKubernetesClusterInfo(KubernetesClusterInfoResponse kubernetesClusterInfo) {
+        public Builder kubernetesClusterInfo(KubernetesClusterInfoResponse kubernetesClusterInfo) {
             this.kubernetesClusterInfo = Objects.requireNonNull(kubernetesClusterInfo);
             return this;
         }
 
-        public Builder setKubernetesRoleResources(KubernetesRoleResourcesResponse kubernetesRoleResources) {
+        public Builder kubernetesRoleResources(KubernetesRoleResourcesResponse kubernetesRoleResources) {
             this.kubernetesRoleResources = Objects.requireNonNull(kubernetesRoleResources);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoleStatus(String roleStatus) {
+        public Builder roleStatus(String roleStatus) {
             this.roleStatus = Objects.requireNonNull(roleStatus);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

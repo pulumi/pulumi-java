@@ -107,22 +107,22 @@ public final class InstanceTemplateDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"autoDelete","boot","deviceName","diskEncryptionKey","diskName","diskSizeGb","diskType","$interface","labels","mode","resourcePolicies","source","sourceImage","type"})
+    @OutputCustomType.Constructor
     private InstanceTemplateDisk(
-        @Nullable Boolean autoDelete,
-        @Nullable Boolean boot,
-        @Nullable String deviceName,
-        @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
-        @Nullable String diskName,
-        @Nullable Integer diskSizeGb,
-        @Nullable String diskType,
-        @Nullable String $interface,
-        @Nullable Map<String,String> labels,
-        @Nullable String mode,
-        @Nullable String resourcePolicies,
-        @Nullable String source,
-        @Nullable String sourceImage,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
+        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("interface") @Nullable String $interface,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("resourcePolicies") @Nullable String resourcePolicies,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("sourceImage") @Nullable String sourceImage,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;
@@ -305,72 +305,72 @@ public final class InstanceTemplateDisk {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoDelete(@Nullable Boolean autoDelete) {
+        public Builder autoDelete(@Nullable Boolean autoDelete) {
             this.autoDelete = autoDelete;
             return this;
         }
 
-        public Builder setBoot(@Nullable Boolean boot) {
+        public Builder boot(@Nullable Boolean boot) {
             this.boot = boot;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDiskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey) {
+        public Builder diskEncryptionKey(@Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey) {
             this.diskEncryptionKey = diskEncryptionKey;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder set$interface(@Nullable String $interface) {
+        public Builder $interface(@Nullable String $interface) {
             this.$interface = $interface;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setResourcePolicies(@Nullable String resourcePolicies) {
+        public Builder resourcePolicies(@Nullable String resourcePolicies) {
             this.resourcePolicies = resourcePolicies;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSourceImage(@Nullable String sourceImage) {
+        public Builder sourceImage(@Nullable String sourceImage) {
             this.sourceImage = sourceImage;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

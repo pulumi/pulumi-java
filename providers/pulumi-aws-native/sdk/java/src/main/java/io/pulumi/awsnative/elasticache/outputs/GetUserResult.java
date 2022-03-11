@@ -22,10 +22,10 @@ public final class GetUserResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"arn","status"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable String arn,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.arn = arn;
         this.status = status;
     }
@@ -67,12 +67,12 @@ public final class GetUserResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

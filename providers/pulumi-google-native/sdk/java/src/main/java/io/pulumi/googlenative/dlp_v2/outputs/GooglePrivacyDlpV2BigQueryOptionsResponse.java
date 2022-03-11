@@ -45,15 +45,15 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse tableReference;
 
-    @OutputCustomType.Constructor({"excludedFields","identifyingFields","includedFields","rowsLimit","rowsLimitPercent","sampleMethod","tableReference"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2BigQueryOptionsResponse(
-        List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
-        List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
-        List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
-        String rowsLimit,
-        Integer rowsLimitPercent,
-        String sampleMethod,
-        GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
+        @OutputCustomType.Parameter("excludedFields") List<GooglePrivacyDlpV2FieldIdResponse> excludedFields,
+        @OutputCustomType.Parameter("identifyingFields") List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields,
+        @OutputCustomType.Parameter("includedFields") List<GooglePrivacyDlpV2FieldIdResponse> includedFields,
+        @OutputCustomType.Parameter("rowsLimit") String rowsLimit,
+        @OutputCustomType.Parameter("rowsLimitPercent") Integer rowsLimitPercent,
+        @OutputCustomType.Parameter("sampleMethod") String sampleMethod,
+        @OutputCustomType.Parameter("tableReference") GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
         this.excludedFields = excludedFields;
         this.identifyingFields = identifyingFields;
         this.includedFields = includedFields;
@@ -141,37 +141,37 @@ public final class GooglePrivacyDlpV2BigQueryOptionsResponse {
     	      this.tableReference = defaults.tableReference;
         }
 
-        public Builder setExcludedFields(List<GooglePrivacyDlpV2FieldIdResponse> excludedFields) {
+        public Builder excludedFields(List<GooglePrivacyDlpV2FieldIdResponse> excludedFields) {
             this.excludedFields = Objects.requireNonNull(excludedFields);
             return this;
         }
 
-        public Builder setIdentifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
+        public Builder identifyingFields(List<GooglePrivacyDlpV2FieldIdResponse> identifyingFields) {
             this.identifyingFields = Objects.requireNonNull(identifyingFields);
             return this;
         }
 
-        public Builder setIncludedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
+        public Builder includedFields(List<GooglePrivacyDlpV2FieldIdResponse> includedFields) {
             this.includedFields = Objects.requireNonNull(includedFields);
             return this;
         }
 
-        public Builder setRowsLimit(String rowsLimit) {
+        public Builder rowsLimit(String rowsLimit) {
             this.rowsLimit = Objects.requireNonNull(rowsLimit);
             return this;
         }
 
-        public Builder setRowsLimitPercent(Integer rowsLimitPercent) {
+        public Builder rowsLimitPercent(Integer rowsLimitPercent) {
             this.rowsLimitPercent = Objects.requireNonNull(rowsLimitPercent);
             return this;
         }
 
-        public Builder setSampleMethod(String sampleMethod) {
+        public Builder sampleMethod(String sampleMethod) {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
 
-        public Builder setTableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
+        public Builder tableReference(GooglePrivacyDlpV2BigQueryTableResponse tableReference) {
             this.tableReference = Objects.requireNonNull(tableReference);
             return this;
         }

@@ -20,14 +20,14 @@ public final class InAppTemplateDefaultButtonConfiguration {
     private final @Nullable String text;
     private final @Nullable String textColor;
 
-    @OutputCustomType.Constructor({"backgroundColor","borderRadius","buttonAction","link","text","textColor"})
+    @OutputCustomType.Constructor
     private InAppTemplateDefaultButtonConfiguration(
-        @Nullable String backgroundColor,
-        @Nullable Integer borderRadius,
-        @Nullable InAppTemplateButtonAction buttonAction,
-        @Nullable String link,
-        @Nullable String text,
-        @Nullable String textColor) {
+        @OutputCustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
+        @OutputCustomType.Parameter("borderRadius") @Nullable Integer borderRadius,
+        @OutputCustomType.Parameter("buttonAction") @Nullable InAppTemplateButtonAction buttonAction,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("text") @Nullable String text,
+        @OutputCustomType.Parameter("textColor") @Nullable String textColor) {
         this.backgroundColor = backgroundColor;
         this.borderRadius = borderRadius;
         this.buttonAction = buttonAction;
@@ -85,32 +85,32 @@ public final class InAppTemplateDefaultButtonConfiguration {
     	      this.textColor = defaults.textColor;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBorderRadius(@Nullable Integer borderRadius) {
+        public Builder borderRadius(@Nullable Integer borderRadius) {
             this.borderRadius = borderRadius;
             return this;
         }
 
-        public Builder setButtonAction(@Nullable InAppTemplateButtonAction buttonAction) {
+        public Builder buttonAction(@Nullable InAppTemplateButtonAction buttonAction) {
             this.buttonAction = buttonAction;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
 
-        public Builder setTextColor(@Nullable String textColor) {
+        public Builder textColor(@Nullable String textColor) {
             this.textColor = textColor;
             return this;
         }

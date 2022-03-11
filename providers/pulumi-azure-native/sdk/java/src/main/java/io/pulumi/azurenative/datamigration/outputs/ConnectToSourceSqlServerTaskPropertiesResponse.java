@@ -54,14 +54,14 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable ConnectToSourceSqlServerTaskInputResponse input,
-        List<Object> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable ConnectToSourceSqlServerTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<Object> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;
@@ -144,32 +144,32 @@ public final class ConnectToSourceSqlServerTaskPropertiesResponse {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setCommands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
+        public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable ConnectToSourceSqlServerTaskInputResponse input) {
+        public Builder input(@Nullable ConnectToSourceSqlServerTaskInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(List<Object> output) {
+        public Builder output(List<Object> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

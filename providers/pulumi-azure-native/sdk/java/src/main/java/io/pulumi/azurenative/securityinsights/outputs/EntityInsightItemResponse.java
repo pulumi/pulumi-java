@@ -35,12 +35,12 @@ public final class EntityInsightItemResponse {
      */
     private final @Nullable InsightsTableResultResponse tableQueryResults;
 
-    @OutputCustomType.Constructor({"chartQueryResults","queryId","queryTimeInterval","tableQueryResults"})
+    @OutputCustomType.Constructor
     private EntityInsightItemResponse(
-        @Nullable List<InsightsTableResultResponse> chartQueryResults,
-        @Nullable String queryId,
-        @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
-        @Nullable InsightsTableResultResponse tableQueryResults) {
+        @OutputCustomType.Parameter("chartQueryResults") @Nullable List<InsightsTableResultResponse> chartQueryResults,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
+        @OutputCustomType.Parameter("queryTimeInterval") @Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval,
+        @OutputCustomType.Parameter("tableQueryResults") @Nullable InsightsTableResultResponse tableQueryResults) {
         this.chartQueryResults = chartQueryResults;
         this.queryId = queryId;
         this.queryTimeInterval = queryTimeInterval;
@@ -102,22 +102,22 @@ public final class EntityInsightItemResponse {
     	      this.tableQueryResults = defaults.tableQueryResults;
         }
 
-        public Builder setChartQueryResults(@Nullable List<InsightsTableResultResponse> chartQueryResults) {
+        public Builder chartQueryResults(@Nullable List<InsightsTableResultResponse> chartQueryResults) {
             this.chartQueryResults = chartQueryResults;
             return this;
         }
 
-        public Builder setQueryId(@Nullable String queryId) {
+        public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }
 
-        public Builder setQueryTimeInterval(@Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval) {
+        public Builder queryTimeInterval(@Nullable EntityInsightItemResponseQueryTimeInterval queryTimeInterval) {
             this.queryTimeInterval = queryTimeInterval;
             return this;
         }
 
-        public Builder setTableQueryResults(@Nullable InsightsTableResultResponse tableQueryResults) {
+        public Builder tableQueryResults(@Nullable InsightsTableResultResponse tableQueryResults) {
             this.tableQueryResults = tableQueryResults;
             return this;
         }

@@ -15,8 +15,8 @@ public final class UserPoolSoftwareTokenMfaConfiguration {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"enabled"})
-    private UserPoolSoftwareTokenMfaConfiguration(Boolean enabled) {
+    @OutputCustomType.Constructor
+    private UserPoolSoftwareTokenMfaConfiguration(@OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 
@@ -48,7 +48,7 @@ public final class UserPoolSoftwareTokenMfaConfiguration {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

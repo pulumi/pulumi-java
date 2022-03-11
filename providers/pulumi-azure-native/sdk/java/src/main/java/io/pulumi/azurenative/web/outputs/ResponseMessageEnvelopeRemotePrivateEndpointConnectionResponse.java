@@ -81,20 +81,20 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"error","id","identity","location","name","plan","properties","sku","status","tags","type","zones"})
+    @OutputCustomType.Constructor
     private ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(
-        @Nullable ErrorEntityResponse error,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable String location,
-        @Nullable String name,
-        @Nullable ArmPlanResponse plan,
-        @Nullable RemotePrivateEndpointConnectionResponse properties,
-        @Nullable SkuDescriptionResponse sku,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("error") @Nullable ErrorEntityResponse error,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("plan") @Nullable ArmPlanResponse plan,
+        @OutputCustomType.Parameter("properties") @Nullable RemotePrivateEndpointConnectionResponse properties,
+        @OutputCustomType.Parameter("sku") @Nullable SkuDescriptionResponse sku,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.error = error;
         this.id = id;
         this.identity = identity;
@@ -238,62 +238,62 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
     	      this.zones = defaults.zones;
         }
 
-        public Builder setError(@Nullable ErrorEntityResponse error) {
+        public Builder error(@Nullable ErrorEntityResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPlan(@Nullable ArmPlanResponse plan) {
+        public Builder plan(@Nullable ArmPlanResponse plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setProperties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
+        public Builder properties(@Nullable RemotePrivateEndpointConnectionResponse properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuDescriptionResponse sku) {
+        public Builder sku(@Nullable SkuDescriptionResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

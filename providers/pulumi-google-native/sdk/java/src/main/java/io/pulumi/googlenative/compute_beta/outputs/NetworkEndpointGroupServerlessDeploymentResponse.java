@@ -30,12 +30,12 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"platform","resource","urlMask","version"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupServerlessDeploymentResponse(
-        String platform,
-        String resource,
-        String urlMask,
-        String version) {
+        @OutputCustomType.Parameter("platform") String platform,
+        @OutputCustomType.Parameter("resource") String resource,
+        @OutputCustomType.Parameter("urlMask") String urlMask,
+        @OutputCustomType.Parameter("version") String version) {
         this.platform = platform;
         this.resource = resource;
         this.urlMask = urlMask;
@@ -97,22 +97,22 @@ public final class NetworkEndpointGroupServerlessDeploymentResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setPlatform(String platform) {
+        public Builder platform(String platform) {
             this.platform = Objects.requireNonNull(platform);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setUrlMask(String urlMask) {
+        public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

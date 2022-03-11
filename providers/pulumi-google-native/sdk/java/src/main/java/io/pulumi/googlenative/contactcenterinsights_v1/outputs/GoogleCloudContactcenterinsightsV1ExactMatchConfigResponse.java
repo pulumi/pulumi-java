@@ -15,8 +15,8 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
      */
     private final Boolean caseSensitive;
 
-    @OutputCustomType.Constructor({"caseSensitive"})
-    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(Boolean caseSensitive) {
+    @OutputCustomType.Constructor
+    private GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(@OutputCustomType.Parameter("caseSensitive") Boolean caseSensitive) {
         this.caseSensitive = caseSensitive;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
     	      this.caseSensitive = defaults.caseSensitive;
         }
 
-        public Builder setCaseSensitive(Boolean caseSensitive) {
+        public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }

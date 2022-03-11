@@ -91,22 +91,22 @@ public final class CognitiveServicesAccountPropertiesResponse {
      */
     private final @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
-    @OutputCustomType.Constructor({"apiProperties","capabilities","customSubDomainName","dateCreated","encryption","endpoint","internalId","isMigrated","networkAcls","privateEndpointConnections","provisioningState","publicNetworkAccess","skuChangeInfo","userOwnedStorage"})
+    @OutputCustomType.Constructor
     private CognitiveServicesAccountPropertiesResponse(
-        @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties,
-        List<SkuCapabilityResponse> capabilities,
-        @Nullable String customSubDomainName,
-        String dateCreated,
-        @Nullable EncryptionResponse encryption,
-        String endpoint,
-        String internalId,
-        Boolean isMigrated,
-        @Nullable NetworkRuleSetResponse networkAcls,
-        @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
-        @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
+        @OutputCustomType.Parameter("apiProperties") @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties,
+        @OutputCustomType.Parameter("capabilities") List<SkuCapabilityResponse> capabilities,
+        @OutputCustomType.Parameter("customSubDomainName") @Nullable String customSubDomainName,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionResponse encryption,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("internalId") String internalId,
+        @OutputCustomType.Parameter("isMigrated") Boolean isMigrated,
+        @OutputCustomType.Parameter("networkAcls") @Nullable NetworkRuleSetResponse networkAcls,
+        @OutputCustomType.Parameter("privateEndpointConnections") @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("skuChangeInfo") CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo,
+        @OutputCustomType.Parameter("userOwnedStorage") @Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
         this.apiProperties = apiProperties;
         this.capabilities = capabilities;
         this.customSubDomainName = customSubDomainName;
@@ -268,72 +268,72 @@ public final class CognitiveServicesAccountPropertiesResponse {
     	      this.userOwnedStorage = defaults.userOwnedStorage;
         }
 
-        public Builder setApiProperties(@Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties) {
+        public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties) {
             this.apiProperties = apiProperties;
             return this;
         }
 
-        public Builder setCapabilities(List<SkuCapabilityResponse> capabilities) {
+        public Builder capabilities(List<SkuCapabilityResponse> capabilities) {
             this.capabilities = Objects.requireNonNull(capabilities);
             return this;
         }
 
-        public Builder setCustomSubDomainName(@Nullable String customSubDomainName) {
+        public Builder customSubDomainName(@Nullable String customSubDomainName) {
             this.customSubDomainName = customSubDomainName;
             return this;
         }
 
-        public Builder setDateCreated(String dateCreated) {
+        public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionResponse encryption) {
+        public Builder encryption(@Nullable EncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setInternalId(String internalId) {
+        public Builder internalId(String internalId) {
             this.internalId = Objects.requireNonNull(internalId);
             return this;
         }
 
-        public Builder setIsMigrated(Boolean isMigrated) {
+        public Builder isMigrated(Boolean isMigrated) {
             this.isMigrated = Objects.requireNonNull(isMigrated);
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
+        public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSkuChangeInfo(CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo) {
+        public Builder skuChangeInfo(CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo) {
             this.skuChangeInfo = Objects.requireNonNull(skuChangeInfo);
             return this;
         }
 
-        public Builder setUserOwnedStorage(@Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
+        public Builder userOwnedStorage(@Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
             this.userOwnedStorage = userOwnedStorage;
             return this;
         }

@@ -89,42 +89,42 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     	      this.url = defaults.url;
         }
 
-        public Builder setAuth(@Nullable Input<TopicRuleHttpAuthorizationArgs> auth) {
+        public Builder auth(@Nullable Input<TopicRuleHttpAuthorizationArgs> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setAuth(@Nullable TopicRuleHttpAuthorizationArgs auth) {
+        public Builder auth(@Nullable TopicRuleHttpAuthorizationArgs auth) {
             this.auth = Input.ofNullable(auth);
             return this;
         }
 
-        public Builder setConfirmationUrl(@Nullable Input<String> confirmationUrl) {
+        public Builder confirmationUrl(@Nullable Input<String> confirmationUrl) {
             this.confirmationUrl = confirmationUrl;
             return this;
         }
 
-        public Builder setConfirmationUrl(@Nullable String confirmationUrl) {
+        public Builder confirmationUrl(@Nullable String confirmationUrl) {
             this.confirmationUrl = Input.ofNullable(confirmationUrl);
             return this;
         }
 
-        public Builder setHeaders(@Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers) {
+        public Builder headers(@Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<TopicRuleHttpActionHeaderArgs> headers) {
+        public Builder headers(@Nullable List<TopicRuleHttpActionHeaderArgs> headers) {
             this.headers = Input.ofNullable(headers);
             return this;
         }
 
-        public Builder setUrl(Input<String> url) {
+        public Builder url(Input<String> url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }

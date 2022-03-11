@@ -52,15 +52,15 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
      */
     private final @Nullable Integer transactionLogRetentionDays;
 
-    @OutputCustomType.Constructor({"backupRetentionSettings","binaryLogEnabled","enabled","location","pointInTimeRecoveryEnabled","startTime","transactionLogRetentionDays"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsBackupConfiguration(
-        @Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings,
-        @Nullable Boolean binaryLogEnabled,
-        @Nullable Boolean enabled,
-        @Nullable String location,
-        @Nullable Boolean pointInTimeRecoveryEnabled,
-        @Nullable String startTime,
-        @Nullable Integer transactionLogRetentionDays) {
+        @OutputCustomType.Parameter("backupRetentionSettings") @Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings,
+        @OutputCustomType.Parameter("binaryLogEnabled") @Nullable Boolean binaryLogEnabled,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("pointInTimeRecoveryEnabled") @Nullable Boolean pointInTimeRecoveryEnabled,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("transactionLogRetentionDays") @Nullable Integer transactionLogRetentionDays) {
         this.backupRetentionSettings = backupRetentionSettings;
         this.binaryLogEnabled = binaryLogEnabled;
         this.enabled = enabled;
@@ -154,37 +154,37 @@ public final class DatabaseInstanceSettingsBackupConfiguration {
     	      this.transactionLogRetentionDays = defaults.transactionLogRetentionDays;
         }
 
-        public Builder setBackupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings) {
+        public Builder backupRetentionSettings(@Nullable DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettings backupRetentionSettings) {
             this.backupRetentionSettings = backupRetentionSettings;
             return this;
         }
 
-        public Builder setBinaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
+        public Builder binaryLogEnabled(@Nullable Boolean binaryLogEnabled) {
             this.binaryLogEnabled = binaryLogEnabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTransactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
+        public Builder transactionLogRetentionDays(@Nullable Integer transactionLogRetentionDays) {
             this.transactionLogRetentionDays = transactionLogRetentionDays;
             return this;
         }

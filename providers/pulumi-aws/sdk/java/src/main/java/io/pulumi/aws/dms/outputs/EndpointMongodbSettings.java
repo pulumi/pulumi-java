@@ -42,14 +42,14 @@ public final class EndpointMongodbSettings {
      */
     private final @Nullable String nestingLevel;
 
-    @OutputCustomType.Constructor({"authMechanism","authSource","authType","docsToInvestigate","extractDocId","nestingLevel"})
+    @OutputCustomType.Constructor
     private EndpointMongodbSettings(
-        @Nullable String authMechanism,
-        @Nullable String authSource,
-        @Nullable String authType,
-        @Nullable String docsToInvestigate,
-        @Nullable String extractDocId,
-        @Nullable String nestingLevel) {
+        @OutputCustomType.Parameter("authMechanism") @Nullable String authMechanism,
+        @OutputCustomType.Parameter("authSource") @Nullable String authSource,
+        @OutputCustomType.Parameter("authType") @Nullable String authType,
+        @OutputCustomType.Parameter("docsToInvestigate") @Nullable String docsToInvestigate,
+        @OutputCustomType.Parameter("extractDocId") @Nullable String extractDocId,
+        @OutputCustomType.Parameter("nestingLevel") @Nullable String nestingLevel) {
         this.authMechanism = authMechanism;
         this.authSource = authSource;
         this.authType = authType;
@@ -131,32 +131,32 @@ public final class EndpointMongodbSettings {
     	      this.nestingLevel = defaults.nestingLevel;
         }
 
-        public Builder setAuthMechanism(@Nullable String authMechanism) {
+        public Builder authMechanism(@Nullable String authMechanism) {
             this.authMechanism = authMechanism;
             return this;
         }
 
-        public Builder setAuthSource(@Nullable String authSource) {
+        public Builder authSource(@Nullable String authSource) {
             this.authSource = authSource;
             return this;
         }
 
-        public Builder setAuthType(@Nullable String authType) {
+        public Builder authType(@Nullable String authType) {
             this.authType = authType;
             return this;
         }
 
-        public Builder setDocsToInvestigate(@Nullable String docsToInvestigate) {
+        public Builder docsToInvestigate(@Nullable String docsToInvestigate) {
             this.docsToInvestigate = docsToInvestigate;
             return this;
         }
 
-        public Builder setExtractDocId(@Nullable String extractDocId) {
+        public Builder extractDocId(@Nullable String extractDocId) {
             this.extractDocId = extractDocId;
             return this;
         }
 
-        public Builder setNestingLevel(@Nullable String nestingLevel) {
+        public Builder nestingLevel(@Nullable String nestingLevel) {
             this.nestingLevel = nestingLevel;
             return this;
         }

@@ -32,12 +32,12 @@ public final class GetMonitorDefaultKeyResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"created","createdBy","key","name"})
+    @OutputCustomType.Constructor
     private GetMonitorDefaultKeyResult(
-        @Nullable String created,
-        @Nullable String createdBy,
-        String key,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable String createdBy,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.created = created;
         this.createdBy = createdBy;
         this.key = key;
@@ -99,22 +99,22 @@ public final class GetMonitorDefaultKeyResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable String createdBy) {
+        public Builder createdBy(@Nullable String createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

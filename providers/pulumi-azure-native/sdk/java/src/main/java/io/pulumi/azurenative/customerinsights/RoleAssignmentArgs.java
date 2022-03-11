@@ -363,202 +363,202 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.widgetTypes = defaults.widgetTypes;
         }
 
-        public Builder setAssignmentName(@Nullable Input<String> assignmentName) {
+        public Builder assignmentName(@Nullable Input<String> assignmentName) {
             this.assignmentName = assignmentName;
             return this;
         }
 
-        public Builder setAssignmentName(@Nullable String assignmentName) {
+        public Builder assignmentName(@Nullable String assignmentName) {
             this.assignmentName = Input.ofNullable(assignmentName);
             return this;
         }
 
-        public Builder setConflationPolicies(@Nullable Input<ResourceSetDescriptionArgs> conflationPolicies) {
+        public Builder conflationPolicies(@Nullable Input<ResourceSetDescriptionArgs> conflationPolicies) {
             this.conflationPolicies = conflationPolicies;
             return this;
         }
 
-        public Builder setConflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
+        public Builder conflationPolicies(@Nullable ResourceSetDescriptionArgs conflationPolicies) {
             this.conflationPolicies = Input.ofNullable(conflationPolicies);
             return this;
         }
 
-        public Builder setConnectors(@Nullable Input<ResourceSetDescriptionArgs> connectors) {
+        public Builder connectors(@Nullable Input<ResourceSetDescriptionArgs> connectors) {
             this.connectors = connectors;
             return this;
         }
 
-        public Builder setConnectors(@Nullable ResourceSetDescriptionArgs connectors) {
+        public Builder connectors(@Nullable ResourceSetDescriptionArgs connectors) {
             this.connectors = Input.ofNullable(connectors);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<Map<String,String>> description) {
+        public Builder description(@Nullable Input<Map<String,String>> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<Map<String,String>> displayName) {
+        public Builder displayName(@Nullable Input<Map<String,String>> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setHubName(Input<String> hubName) {
+        public Builder hubName(Input<String> hubName) {
             this.hubName = Objects.requireNonNull(hubName);
             return this;
         }
 
-        public Builder setHubName(String hubName) {
+        public Builder hubName(String hubName) {
             this.hubName = Input.of(Objects.requireNonNull(hubName));
             return this;
         }
 
-        public Builder setInteractions(@Nullable Input<ResourceSetDescriptionArgs> interactions) {
+        public Builder interactions(@Nullable Input<ResourceSetDescriptionArgs> interactions) {
             this.interactions = interactions;
             return this;
         }
 
-        public Builder setInteractions(@Nullable ResourceSetDescriptionArgs interactions) {
+        public Builder interactions(@Nullable ResourceSetDescriptionArgs interactions) {
             this.interactions = Input.ofNullable(interactions);
             return this;
         }
 
-        public Builder setKpis(@Nullable Input<ResourceSetDescriptionArgs> kpis) {
+        public Builder kpis(@Nullable Input<ResourceSetDescriptionArgs> kpis) {
             this.kpis = kpis;
             return this;
         }
 
-        public Builder setKpis(@Nullable ResourceSetDescriptionArgs kpis) {
+        public Builder kpis(@Nullable ResourceSetDescriptionArgs kpis) {
             this.kpis = Input.ofNullable(kpis);
             return this;
         }
 
-        public Builder setLinks(@Nullable Input<ResourceSetDescriptionArgs> links) {
+        public Builder links(@Nullable Input<ResourceSetDescriptionArgs> links) {
             this.links = links;
             return this;
         }
 
-        public Builder setLinks(@Nullable ResourceSetDescriptionArgs links) {
+        public Builder links(@Nullable ResourceSetDescriptionArgs links) {
             this.links = Input.ofNullable(links);
             return this;
         }
 
-        public Builder setPrincipals(Input<List<AssignmentPrincipalArgs>> principals) {
+        public Builder principals(Input<List<AssignmentPrincipalArgs>> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
 
-        public Builder setPrincipals(List<AssignmentPrincipalArgs> principals) {
+        public Builder principals(List<AssignmentPrincipalArgs> principals) {
             this.principals = Input.of(Objects.requireNonNull(principals));
             return this;
         }
 
-        public Builder setProfiles(@Nullable Input<ResourceSetDescriptionArgs> profiles) {
+        public Builder profiles(@Nullable Input<ResourceSetDescriptionArgs> profiles) {
             this.profiles = profiles;
             return this;
         }
 
-        public Builder setProfiles(@Nullable ResourceSetDescriptionArgs profiles) {
+        public Builder profiles(@Nullable ResourceSetDescriptionArgs profiles) {
             this.profiles = Input.ofNullable(profiles);
             return this;
         }
 
-        public Builder setRelationshipLinks(@Nullable Input<ResourceSetDescriptionArgs> relationshipLinks) {
+        public Builder relationshipLinks(@Nullable Input<ResourceSetDescriptionArgs> relationshipLinks) {
             this.relationshipLinks = relationshipLinks;
             return this;
         }
 
-        public Builder setRelationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
+        public Builder relationshipLinks(@Nullable ResourceSetDescriptionArgs relationshipLinks) {
             this.relationshipLinks = Input.ofNullable(relationshipLinks);
             return this;
         }
 
-        public Builder setRelationships(@Nullable Input<ResourceSetDescriptionArgs> relationships) {
+        public Builder relationships(@Nullable Input<ResourceSetDescriptionArgs> relationships) {
             this.relationships = relationships;
             return this;
         }
 
-        public Builder setRelationships(@Nullable ResourceSetDescriptionArgs relationships) {
+        public Builder relationships(@Nullable ResourceSetDescriptionArgs relationships) {
             this.relationships = Input.ofNullable(relationships);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRole(Input<RoleTypes> role) {
+        public Builder role(Input<RoleTypes> role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRole(RoleTypes role) {
+        public Builder role(RoleTypes role) {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
 
-        public Builder setRoleAssignments(@Nullable Input<ResourceSetDescriptionArgs> roleAssignments) {
+        public Builder roleAssignments(@Nullable Input<ResourceSetDescriptionArgs> roleAssignments) {
             this.roleAssignments = roleAssignments;
             return this;
         }
 
-        public Builder setRoleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
+        public Builder roleAssignments(@Nullable ResourceSetDescriptionArgs roleAssignments) {
             this.roleAssignments = Input.ofNullable(roleAssignments);
             return this;
         }
 
-        public Builder setSasPolicies(@Nullable Input<ResourceSetDescriptionArgs> sasPolicies) {
+        public Builder sasPolicies(@Nullable Input<ResourceSetDescriptionArgs> sasPolicies) {
             this.sasPolicies = sasPolicies;
             return this;
         }
 
-        public Builder setSasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
+        public Builder sasPolicies(@Nullable ResourceSetDescriptionArgs sasPolicies) {
             this.sasPolicies = Input.ofNullable(sasPolicies);
             return this;
         }
 
-        public Builder setSegments(@Nullable Input<ResourceSetDescriptionArgs> segments) {
+        public Builder segments(@Nullable Input<ResourceSetDescriptionArgs> segments) {
             this.segments = segments;
             return this;
         }
 
-        public Builder setSegments(@Nullable ResourceSetDescriptionArgs segments) {
+        public Builder segments(@Nullable ResourceSetDescriptionArgs segments) {
             this.segments = Input.ofNullable(segments);
             return this;
         }
 
-        public Builder setViews(@Nullable Input<ResourceSetDescriptionArgs> views) {
+        public Builder views(@Nullable Input<ResourceSetDescriptionArgs> views) {
             this.views = views;
             return this;
         }
 
-        public Builder setViews(@Nullable ResourceSetDescriptionArgs views) {
+        public Builder views(@Nullable ResourceSetDescriptionArgs views) {
             this.views = Input.ofNullable(views);
             return this;
         }
 
-        public Builder setWidgetTypes(@Nullable Input<ResourceSetDescriptionArgs> widgetTypes) {
+        public Builder widgetTypes(@Nullable Input<ResourceSetDescriptionArgs> widgetTypes) {
             this.widgetTypes = widgetTypes;
             return this;
         }
 
-        public Builder setWidgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
+        public Builder widgetTypes(@Nullable ResourceSetDescriptionArgs widgetTypes) {
             this.widgetTypes = Input.ofNullable(widgetTypes);
             return this;
         }

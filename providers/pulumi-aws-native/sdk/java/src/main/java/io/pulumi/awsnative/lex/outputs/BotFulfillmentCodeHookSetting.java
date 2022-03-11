@@ -17,11 +17,11 @@ public final class BotFulfillmentCodeHookSetting {
     private final @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification;
     private final @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification;
 
-    @OutputCustomType.Constructor({"enabled","fulfillmentUpdatesSpecification","postFulfillmentStatusSpecification"})
+    @OutputCustomType.Constructor
     private BotFulfillmentCodeHookSetting(
-        Boolean enabled,
-        @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
-        @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("fulfillmentUpdatesSpecification") @Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification,
+        @OutputCustomType.Parameter("postFulfillmentStatusSpecification") @Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
         this.enabled = enabled;
         this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
         this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
@@ -61,17 +61,17 @@ public final class BotFulfillmentCodeHookSetting {
     	      this.postFulfillmentStatusSpecification = defaults.postFulfillmentStatusSpecification;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setFulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
+        public Builder fulfillmentUpdatesSpecification(@Nullable BotFulfillmentUpdatesSpecification fulfillmentUpdatesSpecification) {
             this.fulfillmentUpdatesSpecification = fulfillmentUpdatesSpecification;
             return this;
         }
 
-        public Builder setPostFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
+        public Builder postFulfillmentStatusSpecification(@Nullable BotPostFulfillmentStatusSpecification postFulfillmentStatusSpecification) {
             this.postFulfillmentStatusSpecification = postFulfillmentStatusSpecification;
             return this;
         }

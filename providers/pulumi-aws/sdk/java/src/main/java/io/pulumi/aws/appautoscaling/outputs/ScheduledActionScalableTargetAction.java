@@ -22,10 +22,10 @@ public final class ScheduledActionScalableTargetAction {
      */
     private final @Nullable Integer minCapacity;
 
-    @OutputCustomType.Constructor({"maxCapacity","minCapacity"})
+    @OutputCustomType.Constructor
     private ScheduledActionScalableTargetAction(
-        @Nullable Integer maxCapacity,
-        @Nullable Integer minCapacity) {
+        @OutputCustomType.Parameter("maxCapacity") @Nullable Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") @Nullable Integer minCapacity) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
     }
@@ -67,12 +67,12 @@ public final class ScheduledActionScalableTargetAction {
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setMaxCapacity(@Nullable Integer maxCapacity) {
+        public Builder maxCapacity(@Nullable Integer maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Integer minCapacity) {
+        public Builder minCapacity(@Nullable Integer minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }

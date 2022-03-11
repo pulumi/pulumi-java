@@ -27,11 +27,11 @@ public final class PackageValidationResultResponse {
      */
     private final String validationName;
 
-    @OutputCustomType.Constructor({"errors","isValid","validationName"})
+    @OutputCustomType.Constructor
     private PackageValidationResultResponse(
-        List<String> errors,
-        Boolean isValid,
-        String validationName) {
+        @OutputCustomType.Parameter("errors") List<String> errors,
+        @OutputCustomType.Parameter("isValid") Boolean isValid,
+        @OutputCustomType.Parameter("validationName") String validationName) {
         this.errors = errors;
         this.isValid = isValid;
         this.validationName = validationName;
@@ -83,17 +83,17 @@ public final class PackageValidationResultResponse {
     	      this.validationName = defaults.validationName;
         }
 
-        public Builder setErrors(List<String> errors) {
+        public Builder errors(List<String> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setIsValid(Boolean isValid) {
+        public Builder isValid(Boolean isValid) {
             this.isValid = Objects.requireNonNull(isValid);
             return this;
         }
 
-        public Builder setValidationName(String validationName) {
+        public Builder validationName(String validationName) {
             this.validationName = Objects.requireNonNull(validationName);
             return this;
         }

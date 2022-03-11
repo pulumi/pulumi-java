@@ -77,17 +77,17 @@ public final class StateMachineLoggingConfiguration extends io.pulumi.resources.
     	      this.level = defaults.level;
         }
 
-        public Builder setDestinations(@Nullable List<StateMachineLogDestination> destinations) {
+        public Builder destinations(@Nullable List<StateMachineLogDestination> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Boolean includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
-        public Builder setLevel(@Nullable StateMachineLoggingConfigurationLevel level) {
+        public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
             this.level = level;
             return this;
         }

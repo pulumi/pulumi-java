@@ -27,11 +27,11 @@ public final class CodeRepositoryGitConfig {
      */
     private final @Nullable String secretArn;
 
-    @OutputCustomType.Constructor({"branch","repositoryUrl","secretArn"})
+    @OutputCustomType.Constructor
     private CodeRepositoryGitConfig(
-        @Nullable String branch,
-        String repositoryUrl,
-        @Nullable String secretArn) {
+        @OutputCustomType.Parameter("branch") @Nullable String branch,
+        @OutputCustomType.Parameter("repositoryUrl") String repositoryUrl,
+        @OutputCustomType.Parameter("secretArn") @Nullable String secretArn) {
         this.branch = branch;
         this.repositoryUrl = repositoryUrl;
         this.secretArn = secretArn;
@@ -83,17 +83,17 @@ public final class CodeRepositoryGitConfig {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setBranch(@Nullable String branch) {
+        public Builder branch(@Nullable String branch) {
             this.branch = branch;
             return this;
         }
 
-        public Builder setRepositoryUrl(String repositoryUrl) {
+        public Builder repositoryUrl(String repositoryUrl) {
             this.repositoryUrl = Objects.requireNonNull(repositoryUrl);
             return this;
         }
 
-        public Builder setSecretArn(@Nullable String secretArn) {
+        public Builder secretArn(@Nullable String secretArn) {
             this.secretArn = secretArn;
             return this;
         }

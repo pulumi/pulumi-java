@@ -28,11 +28,11 @@ public final class CsvSerializationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encoding","fieldDelimiter","type"})
+    @OutputCustomType.Constructor
     private CsvSerializationResponse(
-        @Nullable String encoding,
-        @Nullable String fieldDelimiter,
-        String type) {
+        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @OutputCustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.fieldDelimiter = fieldDelimiter;
         this.type = type;
@@ -85,17 +85,17 @@ public final class CsvSerializationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncoding(@Nullable String encoding) {
+        public Builder encoding(@Nullable String encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setFieldDelimiter(@Nullable String fieldDelimiter) {
+        public Builder fieldDelimiter(@Nullable String fieldDelimiter) {
             this.fieldDelimiter = fieldDelimiter;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

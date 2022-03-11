@@ -15,10 +15,10 @@ public final class ConfigUplinkSpectrumConfig {
     private final @Nullable ConfigFrequency centerFrequency;
     private final @Nullable ConfigPolarization polarization;
 
-    @OutputCustomType.Constructor({"centerFrequency","polarization"})
+    @OutputCustomType.Constructor
     private ConfigUplinkSpectrumConfig(
-        @Nullable ConfigFrequency centerFrequency,
-        @Nullable ConfigPolarization polarization) {
+        @OutputCustomType.Parameter("centerFrequency") @Nullable ConfigFrequency centerFrequency,
+        @OutputCustomType.Parameter("polarization") @Nullable ConfigPolarization polarization) {
         this.centerFrequency = centerFrequency;
         this.polarization = polarization;
     }
@@ -52,12 +52,12 @@ public final class ConfigUplinkSpectrumConfig {
     	      this.polarization = defaults.polarization;
         }
 
-        public Builder setCenterFrequency(@Nullable ConfigFrequency centerFrequency) {
+        public Builder centerFrequency(@Nullable ConfigFrequency centerFrequency) {
             this.centerFrequency = centerFrequency;
             return this;
         }
 
-        public Builder setPolarization(@Nullable ConfigPolarization polarization) {
+        public Builder polarization(@Nullable ConfigPolarization polarization) {
             this.polarization = polarization;
             return this;
         }

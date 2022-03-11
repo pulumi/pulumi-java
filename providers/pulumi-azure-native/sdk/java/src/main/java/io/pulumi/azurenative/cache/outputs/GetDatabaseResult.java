@@ -71,19 +71,19 @@ public final class GetDatabaseResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"clientProtocol","clusteringPolicy","evictionPolicy","id","modules","name","persistence","port","provisioningState","resourceState","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseResult(
-        @Nullable String clientProtocol,
-        @Nullable String clusteringPolicy,
-        @Nullable String evictionPolicy,
-        String id,
-        @Nullable List<ModuleResponse> modules,
-        String name,
-        @Nullable PersistenceResponse persistence,
-        @Nullable Integer port,
-        String provisioningState,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("clientProtocol") @Nullable String clientProtocol,
+        @OutputCustomType.Parameter("clusteringPolicy") @Nullable String clusteringPolicy,
+        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("modules") @Nullable List<ModuleResponse> modules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("persistence") @Nullable PersistenceResponse persistence,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.clientProtocol = clientProtocol;
         this.clusteringPolicy = clusteringPolicy;
         this.evictionPolicy = evictionPolicy;
@@ -215,57 +215,57 @@ public final class GetDatabaseResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setClientProtocol(@Nullable String clientProtocol) {
+        public Builder clientProtocol(@Nullable String clientProtocol) {
             this.clientProtocol = clientProtocol;
             return this;
         }
 
-        public Builder setClusteringPolicy(@Nullable String clusteringPolicy) {
+        public Builder clusteringPolicy(@Nullable String clusteringPolicy) {
             this.clusteringPolicy = clusteringPolicy;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable String evictionPolicy) {
+        public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setModules(@Nullable List<ModuleResponse> modules) {
+        public Builder modules(@Nullable List<ModuleResponse> modules) {
             this.modules = modules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPersistence(@Nullable PersistenceResponse persistence) {
+        public Builder persistence(@Nullable PersistenceResponse persistence) {
             this.persistence = persistence;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

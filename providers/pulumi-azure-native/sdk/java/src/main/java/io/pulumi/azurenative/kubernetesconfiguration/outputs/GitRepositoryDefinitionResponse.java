@@ -54,16 +54,16 @@ public final class GitRepositoryDefinitionResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"httpsCAFile","httpsUser","localAuthRef","repositoryRef","sshKnownHosts","syncIntervalInSeconds","timeoutInSeconds","url"})
+    @OutputCustomType.Constructor
     private GitRepositoryDefinitionResponse(
-        @Nullable String httpsCAFile,
-        @Nullable String httpsUser,
-        @Nullable String localAuthRef,
-        @Nullable RepositoryRefDefinitionResponse repositoryRef,
-        @Nullable String sshKnownHosts,
-        @Nullable Double syncIntervalInSeconds,
-        @Nullable Double timeoutInSeconds,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("httpsCAFile") @Nullable String httpsCAFile,
+        @OutputCustomType.Parameter("httpsUser") @Nullable String httpsUser,
+        @OutputCustomType.Parameter("localAuthRef") @Nullable String localAuthRef,
+        @OutputCustomType.Parameter("repositoryRef") @Nullable RepositoryRefDefinitionResponse repositoryRef,
+        @OutputCustomType.Parameter("sshKnownHosts") @Nullable String sshKnownHosts,
+        @OutputCustomType.Parameter("syncIntervalInSeconds") @Nullable Double syncIntervalInSeconds,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Double timeoutInSeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.httpsCAFile = httpsCAFile;
         this.httpsUser = httpsUser;
         this.localAuthRef = localAuthRef;
@@ -165,42 +165,42 @@ public final class GitRepositoryDefinitionResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setHttpsCAFile(@Nullable String httpsCAFile) {
+        public Builder httpsCAFile(@Nullable String httpsCAFile) {
             this.httpsCAFile = httpsCAFile;
             return this;
         }
 
-        public Builder setHttpsUser(@Nullable String httpsUser) {
+        public Builder httpsUser(@Nullable String httpsUser) {
             this.httpsUser = httpsUser;
             return this;
         }
 
-        public Builder setLocalAuthRef(@Nullable String localAuthRef) {
+        public Builder localAuthRef(@Nullable String localAuthRef) {
             this.localAuthRef = localAuthRef;
             return this;
         }
 
-        public Builder setRepositoryRef(@Nullable RepositoryRefDefinitionResponse repositoryRef) {
+        public Builder repositoryRef(@Nullable RepositoryRefDefinitionResponse repositoryRef) {
             this.repositoryRef = repositoryRef;
             return this;
         }
 
-        public Builder setSshKnownHosts(@Nullable String sshKnownHosts) {
+        public Builder sshKnownHosts(@Nullable String sshKnownHosts) {
             this.sshKnownHosts = sshKnownHosts;
             return this;
         }
 
-        public Builder setSyncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
+        public Builder syncIntervalInSeconds(@Nullable Double syncIntervalInSeconds) {
             this.syncIntervalInSeconds = syncIntervalInSeconds;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Double timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Double timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

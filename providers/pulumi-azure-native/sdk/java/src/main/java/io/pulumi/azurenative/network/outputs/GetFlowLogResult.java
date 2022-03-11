@@ -87,22 +87,22 @@ public final class GetFlowLogResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabled","etag","flowAnalyticsConfiguration","format","id","location","name","provisioningState","retentionPolicy","storageId","tags","targetResourceGuid","targetResourceId","type"})
+    @OutputCustomType.Constructor
     private GetFlowLogResult(
-        @Nullable Boolean enabled,
-        String etag,
-        @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
-        @Nullable FlowLogFormatParametersResponse format,
-        @Nullable String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable RetentionPolicyParametersResponse retentionPolicy,
-        String storageId,
-        @Nullable Map<String,String> tags,
-        String targetResourceGuid,
-        String targetResourceId,
-        String type) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("flowAnalyticsConfiguration") @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration,
+        @OutputCustomType.Parameter("format") @Nullable FlowLogFormatParametersResponse format,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyParametersResponse retentionPolicy,
+        @OutputCustomType.Parameter("storageId") String storageId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceGuid") String targetResourceGuid,
+        @OutputCustomType.Parameter("targetResourceId") String targetResourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabled = enabled;
         this.etag = etag;
         this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
@@ -264,72 +264,72 @@ public final class GetFlowLogResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration) {
+        public Builder flowAnalyticsConfiguration(@Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration) {
             this.flowAnalyticsConfiguration = flowAnalyticsConfiguration;
             return this;
         }
 
-        public Builder setFormat(@Nullable FlowLogFormatParametersResponse format) {
+        public Builder format(@Nullable FlowLogFormatParametersResponse format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyParametersResponse retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyParametersResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
 
-        public Builder setStorageId(String storageId) {
+        public Builder storageId(String storageId) {
             this.storageId = Objects.requireNonNull(storageId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceGuid(String targetResourceGuid) {
+        public Builder targetResourceGuid(String targetResourceGuid) {
             this.targetResourceGuid = Objects.requireNonNull(targetResourceGuid);
             return this;
         }
 
-        public Builder setTargetResourceId(String targetResourceId) {
+        public Builder targetResourceId(String targetResourceId) {
             this.targetResourceId = Objects.requireNonNull(targetResourceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

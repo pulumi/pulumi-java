@@ -71,22 +71,22 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutItem(@Nullable Input<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem) {
+        public Builder putItem(@Nullable Input<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem) {
             this.putItem = putItem;
             return this;
         }
 
-        public Builder setPutItem(@Nullable TopicRuleErrorActionDynamodbv2PutItemGetArgs putItem) {
+        public Builder putItem(@Nullable TopicRuleErrorActionDynamodbv2PutItemGetArgs putItem) {
             this.putItem = Input.ofNullable(putItem);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }

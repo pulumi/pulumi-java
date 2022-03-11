@@ -12,10 +12,10 @@ public final class CertificateOtherName {
     private final String typeId;
     private final String value;
 
-    @OutputCustomType.Constructor({"typeId","value"})
+    @OutputCustomType.Constructor
     private CertificateOtherName(
-        String typeId,
-        String value) {
+        @OutputCustomType.Parameter("typeId") String typeId,
+        @OutputCustomType.Parameter("value") String value) {
         this.typeId = typeId;
         this.value = value;
     }
@@ -49,12 +49,12 @@ public final class CertificateOtherName {
     	      this.value = defaults.value;
         }
 
-        public Builder setTypeId(String typeId) {
+        public Builder typeId(String typeId) {
             this.typeId = Objects.requireNonNull(typeId);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

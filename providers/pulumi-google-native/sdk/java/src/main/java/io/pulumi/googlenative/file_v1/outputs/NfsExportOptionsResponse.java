@@ -36,13 +36,13 @@ public final class NfsExportOptionsResponse {
      */
     private final String squashMode;
 
-    @OutputCustomType.Constructor({"accessMode","anonGid","anonUid","ipRanges","squashMode"})
+    @OutputCustomType.Constructor
     private NfsExportOptionsResponse(
-        String accessMode,
-        String anonGid,
-        String anonUid,
-        List<String> ipRanges,
-        String squashMode) {
+        @OutputCustomType.Parameter("accessMode") String accessMode,
+        @OutputCustomType.Parameter("anonGid") String anonGid,
+        @OutputCustomType.Parameter("anonUid") String anonUid,
+        @OutputCustomType.Parameter("ipRanges") List<String> ipRanges,
+        @OutputCustomType.Parameter("squashMode") String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;
@@ -114,27 +114,27 @@ public final class NfsExportOptionsResponse {
     	      this.squashMode = defaults.squashMode;
         }
 
-        public Builder setAccessMode(String accessMode) {
+        public Builder accessMode(String accessMode) {
             this.accessMode = Objects.requireNonNull(accessMode);
             return this;
         }
 
-        public Builder setAnonGid(String anonGid) {
+        public Builder anonGid(String anonGid) {
             this.anonGid = Objects.requireNonNull(anonGid);
             return this;
         }
 
-        public Builder setAnonUid(String anonUid) {
+        public Builder anonUid(String anonUid) {
             this.anonUid = Objects.requireNonNull(anonUid);
             return this;
         }
 
-        public Builder setIpRanges(List<String> ipRanges) {
+        public Builder ipRanges(List<String> ipRanges) {
             this.ipRanges = Objects.requireNonNull(ipRanges);
             return this;
         }
 
-        public Builder setSquashMode(String squashMode) {
+        public Builder squashMode(String squashMode) {
             this.squashMode = Objects.requireNonNull(squashMode);
             return this;
         }

@@ -124,27 +124,27 @@ public final class DelimitedTextWriteSettingsResponse extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setFileExtension(Object fileExtension) {
+        public Builder fileExtension(Object fileExtension) {
             this.fileExtension = Objects.requireNonNull(fileExtension);
             return this;
         }
 
-        public Builder setFileNamePrefix(@Nullable Object fileNamePrefix) {
+        public Builder fileNamePrefix(@Nullable Object fileNamePrefix) {
             this.fileNamePrefix = fileNamePrefix;
             return this;
         }
 
-        public Builder setMaxRowsPerFile(@Nullable Object maxRowsPerFile) {
+        public Builder maxRowsPerFile(@Nullable Object maxRowsPerFile) {
             this.maxRowsPerFile = maxRowsPerFile;
             return this;
         }
 
-        public Builder setQuoteAllText(@Nullable Object quoteAllText) {
+        public Builder quoteAllText(@Nullable Object quoteAllText) {
             this.quoteAllText = quoteAllText;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

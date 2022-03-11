@@ -172,82 +172,82 @@ public final class BlueprintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setBlueprintName(@Nullable Input<String> blueprintName) {
+        public Builder blueprintName(@Nullable Input<String> blueprintName) {
             this.blueprintName = blueprintName;
             return this;
         }
 
-        public Builder setBlueprintName(@Nullable String blueprintName) {
+        public Builder blueprintName(@Nullable String blueprintName) {
             this.blueprintName = Input.ofNullable(blueprintName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterDefinitionArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterDefinitionArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterDefinitionArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
+        public Builder resourceGroups(@Nullable Input<Map<String,ResourceGroupDefinitionArgs>> resourceGroups) {
             this.resourceGroups = resourceGroups;
             return this;
         }
 
-        public Builder setResourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
+        public Builder resourceGroups(@Nullable Map<String,ResourceGroupDefinitionArgs> resourceGroups) {
             this.resourceGroups = Input.ofNullable(resourceGroups);
             return this;
         }
 
-        public Builder setResourceScope(Input<String> resourceScope) {
+        public Builder resourceScope(Input<String> resourceScope) {
             this.resourceScope = Objects.requireNonNull(resourceScope);
             return this;
         }
 
-        public Builder setResourceScope(String resourceScope) {
+        public Builder resourceScope(String resourceScope) {
             this.resourceScope = Input.of(Objects.requireNonNull(resourceScope));
             return this;
         }
 
-        public Builder setTargetScope(Input<Either<String,BlueprintTargetScope>> targetScope) {
+        public Builder targetScope(Input<Either<String,BlueprintTargetScope>> targetScope) {
             this.targetScope = Objects.requireNonNull(targetScope);
             return this;
         }
 
-        public Builder setTargetScope(Either<String,BlueprintTargetScope> targetScope) {
+        public Builder targetScope(Either<String,BlueprintTargetScope> targetScope) {
             this.targetScope = Input.of(Objects.requireNonNull(targetScope));
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<Object> versions) {
+        public Builder versions(@Nullable Input<Object> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable Object versions) {
+        public Builder versions(@Nullable Object versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

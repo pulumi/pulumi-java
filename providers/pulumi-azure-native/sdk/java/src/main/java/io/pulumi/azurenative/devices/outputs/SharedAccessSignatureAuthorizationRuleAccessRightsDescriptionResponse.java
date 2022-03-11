@@ -32,12 +32,12 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
      */
     private final @Nullable String secondaryKey;
 
-    @OutputCustomType.Constructor({"keyName","primaryKey","rights","secondaryKey"})
+    @OutputCustomType.Constructor
     private SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(
-        String keyName,
-        @Nullable String primaryKey,
-        String rights,
-        @Nullable String secondaryKey) {
+        @OutputCustomType.Parameter("keyName") String keyName,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("rights") String rights,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey) {
         this.keyName = keyName;
         this.primaryKey = primaryKey;
         this.rights = rights;
@@ -99,22 +99,22 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setKeyName(String keyName) {
+        public Builder keyName(String keyName) {
             this.keyName = Objects.requireNonNull(keyName);
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setRights(String rights) {
+        public Builder rights(String rights) {
             this.rights = Objects.requireNonNull(rights);
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }

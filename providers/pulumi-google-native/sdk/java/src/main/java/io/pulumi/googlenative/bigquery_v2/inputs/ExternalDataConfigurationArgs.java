@@ -288,152 +288,152 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder setAutodetect(@Nullable Input<Boolean> autodetect) {
+        public Builder autodetect(@Nullable Input<Boolean> autodetect) {
             this.autodetect = autodetect;
             return this;
         }
 
-        public Builder setAutodetect(@Nullable Boolean autodetect) {
+        public Builder autodetect(@Nullable Boolean autodetect) {
             this.autodetect = Input.ofNullable(autodetect);
             return this;
         }
 
-        public Builder setAvroOptions(@Nullable Input<AvroOptionsArgs> avroOptions) {
+        public Builder avroOptions(@Nullable Input<AvroOptionsArgs> avroOptions) {
             this.avroOptions = avroOptions;
             return this;
         }
 
-        public Builder setAvroOptions(@Nullable AvroOptionsArgs avroOptions) {
+        public Builder avroOptions(@Nullable AvroOptionsArgs avroOptions) {
             this.avroOptions = Input.ofNullable(avroOptions);
             return this;
         }
 
-        public Builder setBigtableOptions(@Nullable Input<BigtableOptionsArgs> bigtableOptions) {
+        public Builder bigtableOptions(@Nullable Input<BigtableOptionsArgs> bigtableOptions) {
             this.bigtableOptions = bigtableOptions;
             return this;
         }
 
-        public Builder setBigtableOptions(@Nullable BigtableOptionsArgs bigtableOptions) {
+        public Builder bigtableOptions(@Nullable BigtableOptionsArgs bigtableOptions) {
             this.bigtableOptions = Input.ofNullable(bigtableOptions);
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setConnectionId(@Nullable Input<String> connectionId) {
+        public Builder connectionId(@Nullable Input<String> connectionId) {
             this.connectionId = connectionId;
             return this;
         }
 
-        public Builder setConnectionId(@Nullable String connectionId) {
+        public Builder connectionId(@Nullable String connectionId) {
             this.connectionId = Input.ofNullable(connectionId);
             return this;
         }
 
-        public Builder setCsvOptions(@Nullable Input<CsvOptionsArgs> csvOptions) {
+        public Builder csvOptions(@Nullable Input<CsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
 
-        public Builder setCsvOptions(@Nullable CsvOptionsArgs csvOptions) {
+        public Builder csvOptions(@Nullable CsvOptionsArgs csvOptions) {
             this.csvOptions = Input.ofNullable(csvOptions);
             return this;
         }
 
-        public Builder setDecimalTargetTypes(@Nullable Input<List<String>> decimalTargetTypes) {
+        public Builder decimalTargetTypes(@Nullable Input<List<String>> decimalTargetTypes) {
             this.decimalTargetTypes = decimalTargetTypes;
             return this;
         }
 
-        public Builder setDecimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
+        public Builder decimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
             this.decimalTargetTypes = Input.ofNullable(decimalTargetTypes);
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(@Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable Input<GoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(@Nullable GoogleSheetsOptionsArgs googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable GoogleSheetsOptionsArgs googleSheetsOptions) {
             this.googleSheetsOptions = Input.ofNullable(googleSheetsOptions);
             return this;
         }
 
-        public Builder setHivePartitioningOptions(@Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable Input<HivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
-        public Builder setHivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
             this.hivePartitioningOptions = Input.ofNullable(hivePartitioningOptions);
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Input.ofNullable(ignoreUnknownValues);
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Input<Integer> maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Input<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Integer maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Input.ofNullable(maxBadRecords);
             return this;
         }
 
-        public Builder setParquetOptions(@Nullable Input<ParquetOptionsArgs> parquetOptions) {
+        public Builder parquetOptions(@Nullable Input<ParquetOptionsArgs> parquetOptions) {
             this.parquetOptions = parquetOptions;
             return this;
         }
 
-        public Builder setParquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
+        public Builder parquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
             this.parquetOptions = Input.ofNullable(parquetOptions);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<TableSchemaArgs> schema) {
+        public Builder schema(@Nullable Input<TableSchemaArgs> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable TableSchemaArgs schema) {
+        public Builder schema(@Nullable TableSchemaArgs schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable Input<String> sourceFormat) {
+        public Builder sourceFormat(@Nullable Input<String> sourceFormat) {
             this.sourceFormat = sourceFormat;
             return this;
         }
 
-        public Builder setSourceFormat(@Nullable String sourceFormat) {
+        public Builder sourceFormat(@Nullable String sourceFormat) {
             this.sourceFormat = Input.ofNullable(sourceFormat);
             return this;
         }
 
-        public Builder setSourceUris(@Nullable Input<List<String>> sourceUris) {
+        public Builder sourceUris(@Nullable Input<List<String>> sourceUris) {
             this.sourceUris = sourceUris;
             return this;
         }
 
-        public Builder setSourceUris(@Nullable List<String> sourceUris) {
+        public Builder sourceUris(@Nullable List<String> sourceUris) {
             this.sourceUris = Input.ofNullable(sourceUris);
             return this;
         }

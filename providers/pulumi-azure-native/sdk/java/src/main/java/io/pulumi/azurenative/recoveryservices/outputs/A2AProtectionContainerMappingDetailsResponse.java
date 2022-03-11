@@ -38,13 +38,13 @@ public final class A2AProtectionContainerMappingDetailsResponse {
      */
     private final @Nullable String scheduleName;
 
-    @OutputCustomType.Constructor({"agentAutoUpdateStatus","automationAccountArmId","instanceType","jobScheduleName","scheduleName"})
+    @OutputCustomType.Constructor
     private A2AProtectionContainerMappingDetailsResponse(
-        @Nullable String agentAutoUpdateStatus,
-        @Nullable String automationAccountArmId,
-        String instanceType,
-        @Nullable String jobScheduleName,
-        @Nullable String scheduleName) {
+        @OutputCustomType.Parameter("agentAutoUpdateStatus") @Nullable String agentAutoUpdateStatus,
+        @OutputCustomType.Parameter("automationAccountArmId") @Nullable String automationAccountArmId,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("jobScheduleName") @Nullable String jobScheduleName,
+        @OutputCustomType.Parameter("scheduleName") @Nullable String scheduleName) {
         this.agentAutoUpdateStatus = agentAutoUpdateStatus;
         this.automationAccountArmId = automationAccountArmId;
         this.instanceType = instanceType;
@@ -117,27 +117,27 @@ public final class A2AProtectionContainerMappingDetailsResponse {
     	      this.scheduleName = defaults.scheduleName;
         }
 
-        public Builder setAgentAutoUpdateStatus(@Nullable String agentAutoUpdateStatus) {
+        public Builder agentAutoUpdateStatus(@Nullable String agentAutoUpdateStatus) {
             this.agentAutoUpdateStatus = agentAutoUpdateStatus;
             return this;
         }
 
-        public Builder setAutomationAccountArmId(@Nullable String automationAccountArmId) {
+        public Builder automationAccountArmId(@Nullable String automationAccountArmId) {
             this.automationAccountArmId = automationAccountArmId;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setJobScheduleName(@Nullable String jobScheduleName) {
+        public Builder jobScheduleName(@Nullable String jobScheduleName) {
             this.jobScheduleName = jobScheduleName;
             return this;
         }
 
-        public Builder setScheduleName(@Nullable String scheduleName) {
+        public Builder scheduleName(@Nullable String scheduleName) {
             this.scheduleName = scheduleName;
             return this;
         }

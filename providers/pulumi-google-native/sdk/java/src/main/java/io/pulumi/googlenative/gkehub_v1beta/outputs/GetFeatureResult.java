@@ -64,18 +64,18 @@ public final class GetFeatureResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","deleteTime","labels","membershipSpecs","membershipStates","name","resourceState","spec","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetFeatureResult(
-        String createTime,
-        String deleteTime,
-        Map<String,String> labels,
-        Map<String,String> membershipSpecs,
-        Map<String,String> membershipStates,
-        String name,
-        FeatureResourceStateResponse resourceState,
-        CommonFeatureSpecResponse spec,
-        CommonFeatureStateResponse state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("membershipSpecs") Map<String,String> membershipSpecs,
+        @OutputCustomType.Parameter("membershipStates") Map<String,String> membershipStates,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceState") FeatureResourceStateResponse resourceState,
+        @OutputCustomType.Parameter("spec") CommonFeatureSpecResponse spec,
+        @OutputCustomType.Parameter("state") CommonFeatureStateResponse state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.deleteTime = deleteTime;
         this.labels = labels;
@@ -197,52 +197,52 @@ public final class GetFeatureResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMembershipSpecs(Map<String,String> membershipSpecs) {
+        public Builder membershipSpecs(Map<String,String> membershipSpecs) {
             this.membershipSpecs = Objects.requireNonNull(membershipSpecs);
             return this;
         }
 
-        public Builder setMembershipStates(Map<String,String> membershipStates) {
+        public Builder membershipStates(Map<String,String> membershipStates) {
             this.membershipStates = Objects.requireNonNull(membershipStates);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceState(FeatureResourceStateResponse resourceState) {
+        public Builder resourceState(FeatureResourceStateResponse resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSpec(CommonFeatureSpecResponse spec) {
+        public Builder spec(CommonFeatureSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setState(CommonFeatureStateResponse state) {
+        public Builder state(CommonFeatureStateResponse state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

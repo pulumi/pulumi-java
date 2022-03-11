@@ -90,17 +90,17 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse extends io.pulum
     	      this.snapshotProperties = defaults.snapshotProperties;
         }
 
-        public Builder setRetentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
 
-        public Builder setSchedule(ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule) {
+        public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSnapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
+        public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }

@@ -17,8 +17,8 @@ public final class WindowsOsInfoResponse {
      */
     private final @Nullable String windowsOsState;
 
-    @OutputCustomType.Constructor({"windowsOsState"})
-    private WindowsOsInfoResponse(@Nullable String windowsOsState) {
+    @OutputCustomType.Constructor
+    private WindowsOsInfoResponse(@OutputCustomType.Parameter("windowsOsState") @Nullable String windowsOsState) {
         this.windowsOsState = windowsOsState;
     }
 
@@ -50,7 +50,7 @@ public final class WindowsOsInfoResponse {
     	      this.windowsOsState = defaults.windowsOsState;
         }
 
-        public Builder setWindowsOsState(@Nullable String windowsOsState) {
+        public Builder windowsOsState(@Nullable String windowsOsState) {
             this.windowsOsState = windowsOsState;
             return this;
         }

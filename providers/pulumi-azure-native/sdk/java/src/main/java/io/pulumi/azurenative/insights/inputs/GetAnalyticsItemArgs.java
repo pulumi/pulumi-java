@@ -118,27 +118,27 @@ public final class GetAnalyticsItemArgs extends io.pulumi.resources.InvokeArgs {
     	      this.scopePath = defaults.scopePath;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setScopePath(String scopePath) {
+        public Builder scopePath(String scopePath) {
             this.scopePath = Objects.requireNonNull(scopePath);
             return this;
         }

@@ -73,20 +73,20 @@ public final class GetAssetResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"alternateId","assetId","container","created","description","id","lastModified","name","storageAccountName","storageEncryptionFormat","systemData","type"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String alternateId,
-        String assetId,
-        @Nullable String container,
-        String created,
-        @Nullable String description,
-        String id,
-        String lastModified,
-        String name,
-        @Nullable String storageAccountName,
-        String storageEncryptionFormat,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("alternateId") @Nullable String alternateId,
+        @OutputCustomType.Parameter("assetId") String assetId,
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccountName") @Nullable String storageAccountName,
+        @OutputCustomType.Parameter("storageEncryptionFormat") String storageEncryptionFormat,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.alternateId = alternateId;
         this.assetId = assetId;
         this.container = container;
@@ -228,62 +228,62 @@ public final class GetAssetResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAlternateId(@Nullable String alternateId) {
+        public Builder alternateId(@Nullable String alternateId) {
             this.alternateId = alternateId;
             return this;
         }
 
-        public Builder setAssetId(String assetId) {
+        public Builder assetId(String assetId) {
             this.assetId = Objects.requireNonNull(assetId);
             return this;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = container;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable String storageAccountName) {
+        public Builder storageAccountName(@Nullable String storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageEncryptionFormat(String storageEncryptionFormat) {
+        public Builder storageEncryptionFormat(String storageEncryptionFormat) {
             this.storageEncryptionFormat = Objects.requireNonNull(storageEncryptionFormat);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

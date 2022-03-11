@@ -28,11 +28,11 @@ public final class AdditionalWorkspacesPropertiesResponse {
      */
     private final @Nullable String workspace;
 
-    @OutputCustomType.Constructor({"dataTypes","type","workspace"})
+    @OutputCustomType.Constructor
     private AdditionalWorkspacesPropertiesResponse(
-        @Nullable List<String> dataTypes,
-        @Nullable String type,
-        @Nullable String workspace) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable List<String> dataTypes,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("workspace") @Nullable String workspace) {
         this.dataTypes = dataTypes;
         this.type = type;
         this.workspace = workspace;
@@ -84,17 +84,17 @@ public final class AdditionalWorkspacesPropertiesResponse {
     	      this.workspace = defaults.workspace;
         }
 
-        public Builder setDataTypes(@Nullable List<String> dataTypes) {
+        public Builder dataTypes(@Nullable List<String> dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setWorkspace(@Nullable String workspace) {
+        public Builder workspace(@Nullable String workspace) {
             this.workspace = workspace;
             return this;
         }

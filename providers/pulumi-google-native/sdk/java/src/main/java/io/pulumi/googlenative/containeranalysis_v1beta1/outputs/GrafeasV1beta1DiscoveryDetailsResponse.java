@@ -15,8 +15,8 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
      */
     private final DiscoveredResponse discovered;
 
-    @OutputCustomType.Constructor({"discovered"})
-    private GrafeasV1beta1DiscoveryDetailsResponse(DiscoveredResponse discovered) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1DiscoveryDetailsResponse(@OutputCustomType.Parameter("discovered") DiscoveredResponse discovered) {
         this.discovered = discovered;
     }
 
@@ -48,7 +48,7 @@ public final class GrafeasV1beta1DiscoveryDetailsResponse {
     	      this.discovered = defaults.discovered;
         }
 
-        public Builder setDiscovered(DiscoveredResponse discovered) {
+        public Builder discovered(DiscoveredResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }

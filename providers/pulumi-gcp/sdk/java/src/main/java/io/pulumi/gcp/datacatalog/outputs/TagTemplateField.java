@@ -54,15 +54,15 @@ public final class TagTemplateField {
      */
     private final TagTemplateFieldType type;
 
-    @OutputCustomType.Constructor({"description","displayName","fieldId","isRequired","name","order","type"})
+    @OutputCustomType.Constructor
     private TagTemplateField(
-        @Nullable String description,
-        @Nullable String displayName,
-        String fieldId,
-        @Nullable Boolean isRequired,
-        @Nullable String name,
-        @Nullable Integer order,
-        TagTemplateFieldType type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("fieldId") String fieldId,
+        @OutputCustomType.Parameter("isRequired") @Nullable Boolean isRequired,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("type") TagTemplateFieldType type) {
         this.description = description;
         this.displayName = displayName;
         this.fieldId = fieldId;
@@ -158,37 +158,37 @@ public final class TagTemplateField {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setFieldId(String fieldId) {
+        public Builder fieldId(String fieldId) {
             this.fieldId = Objects.requireNonNull(fieldId);
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setType(TagTemplateFieldType type) {
+        public Builder type(TagTemplateFieldType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

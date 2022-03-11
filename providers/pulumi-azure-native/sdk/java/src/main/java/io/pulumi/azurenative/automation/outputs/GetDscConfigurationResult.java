@@ -97,24 +97,24 @@ public final class GetDscConfigurationResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","etag","id","jobCount","lastModifiedTime","location","logVerbose","name","nodeConfigurationCount","parameters","provisioningState","source","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetDscConfigurationResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable String etag,
-        String id,
-        @Nullable Integer jobCount,
-        @Nullable String lastModifiedTime,
-        @Nullable String location,
-        @Nullable Boolean logVerbose,
-        String name,
-        @Nullable Integer nodeConfigurationCount,
-        @Nullable Map<String,DscConfigurationParameterResponse> parameters,
-        @Nullable String provisioningState,
-        @Nullable ContentSourceResponse source,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobCount") @Nullable Integer jobCount,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("logVerbose") @Nullable Boolean logVerbose,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeConfigurationCount") @Nullable Integer nodeConfigurationCount,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,DscConfigurationParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("source") @Nullable ContentSourceResponse source,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.etag = etag;
@@ -296,82 +296,82 @@ public final class GetDscConfigurationResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJobCount(@Nullable Integer jobCount) {
+        public Builder jobCount(@Nullable Integer jobCount) {
             this.jobCount = jobCount;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLogVerbose(@Nullable Boolean logVerbose) {
+        public Builder logVerbose(@Nullable Boolean logVerbose) {
             this.logVerbose = logVerbose;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeConfigurationCount(@Nullable Integer nodeConfigurationCount) {
+        public Builder nodeConfigurationCount(@Nullable Integer nodeConfigurationCount) {
             this.nodeConfigurationCount = nodeConfigurationCount;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,DscConfigurationParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,DscConfigurationParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSource(@Nullable ContentSourceResponse source) {
+        public Builder source(@Nullable ContentSourceResponse source) {
             this.source = source;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

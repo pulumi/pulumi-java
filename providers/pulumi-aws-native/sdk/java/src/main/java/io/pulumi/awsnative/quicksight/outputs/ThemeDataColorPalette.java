@@ -29,11 +29,11 @@ public final class ThemeDataColorPalette {
      */
     private final @Nullable List<String> minMaxGradient;
 
-    @OutputCustomType.Constructor({"colors","emptyFillColor","minMaxGradient"})
+    @OutputCustomType.Constructor
     private ThemeDataColorPalette(
-        @Nullable List<String> colors,
-        @Nullable String emptyFillColor,
-        @Nullable List<String> minMaxGradient) {
+        @OutputCustomType.Parameter("colors") @Nullable List<String> colors,
+        @OutputCustomType.Parameter("emptyFillColor") @Nullable String emptyFillColor,
+        @OutputCustomType.Parameter("minMaxGradient") @Nullable List<String> minMaxGradient) {
         this.colors = colors;
         this.emptyFillColor = emptyFillColor;
         this.minMaxGradient = minMaxGradient;
@@ -86,17 +86,17 @@ public final class ThemeDataColorPalette {
     	      this.minMaxGradient = defaults.minMaxGradient;
         }
 
-        public Builder setColors(@Nullable List<String> colors) {
+        public Builder colors(@Nullable List<String> colors) {
             this.colors = colors;
             return this;
         }
 
-        public Builder setEmptyFillColor(@Nullable String emptyFillColor) {
+        public Builder emptyFillColor(@Nullable String emptyFillColor) {
             this.emptyFillColor = emptyFillColor;
             return this;
         }
 
-        public Builder setMinMaxGradient(@Nullable List<String> minMaxGradient) {
+        public Builder minMaxGradient(@Nullable List<String> minMaxGradient) {
             this.minMaxGradient = minMaxGradient;
             return this;
         }

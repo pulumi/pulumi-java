@@ -18,13 +18,13 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules;
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules;
 
-    @OutputCustomType.Constructor({"expirationTime","startTime","timeZone","vmStartSchedules","vmStopSchedules"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyInstanceSchedulePolicy(
-        String expirationTime,
-        String startTime,
-        String timeZone,
-        List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
-        List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("vmStartSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
+        @OutputCustomType.Parameter("vmStopSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
         this.timeZone = timeZone;
@@ -76,27 +76,27 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
     	      this.vmStopSchedules = defaults.vmStopSchedules;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setVmStartSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules) {
+        public Builder vmStartSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules) {
             this.vmStartSchedules = Objects.requireNonNull(vmStartSchedules);
             return this;
         }
 
-        public Builder setVmStopSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
+        public Builder vmStopSchedules(List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
             this.vmStopSchedules = Objects.requireNonNull(vmStopSchedules);
             return this;
         }

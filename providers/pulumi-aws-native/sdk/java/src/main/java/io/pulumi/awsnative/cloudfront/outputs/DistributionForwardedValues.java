@@ -19,12 +19,12 @@ public final class DistributionForwardedValues {
     private final Boolean queryString;
     private final @Nullable List<String> queryStringCacheKeys;
 
-    @OutputCustomType.Constructor({"cookies","headers","queryString","queryStringCacheKeys"})
+    @OutputCustomType.Constructor
     private DistributionForwardedValues(
-        @Nullable DistributionCookies cookies,
-        @Nullable List<String> headers,
-        Boolean queryString,
-        @Nullable List<String> queryStringCacheKeys) {
+        @OutputCustomType.Parameter("cookies") @Nullable DistributionCookies cookies,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("queryString") Boolean queryString,
+        @OutputCustomType.Parameter("queryStringCacheKeys") @Nullable List<String> queryStringCacheKeys) {
         this.cookies = cookies;
         this.headers = headers;
         this.queryString = queryString;
@@ -70,22 +70,22 @@ public final class DistributionForwardedValues {
     	      this.queryStringCacheKeys = defaults.queryStringCacheKeys;
         }
 
-        public Builder setCookies(@Nullable DistributionCookies cookies) {
+        public Builder cookies(@Nullable DistributionCookies cookies) {
             this.cookies = cookies;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryString(Boolean queryString) {
+        public Builder queryString(Boolean queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
-        public Builder setQueryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
+        public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }

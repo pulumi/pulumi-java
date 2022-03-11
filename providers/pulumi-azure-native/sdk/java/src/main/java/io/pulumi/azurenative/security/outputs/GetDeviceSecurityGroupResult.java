@@ -51,15 +51,15 @@ public final class GetDeviceSecurityGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowlistRules","denylistRules","id","name","thresholdRules","timeWindowRules","type"})
+    @OutputCustomType.Constructor
     private GetDeviceSecurityGroupResult(
-        @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
-        @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
-        String id,
-        String name,
-        @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
-        @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
-        String type) {
+        @OutputCustomType.Parameter("allowlistRules") @Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules,
+        @OutputCustomType.Parameter("denylistRules") @Nullable List<DenylistCustomAlertRuleResponse> denylistRules,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thresholdRules") @Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules,
+        @OutputCustomType.Parameter("timeWindowRules") @Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowlistRules = allowlistRules;
         this.denylistRules = denylistRules;
         this.id = id;
@@ -151,37 +151,37 @@ public final class GetDeviceSecurityGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowlistRules(@Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules) {
+        public Builder allowlistRules(@Nullable List<AllowlistCustomAlertRuleResponse> allowlistRules) {
             this.allowlistRules = allowlistRules;
             return this;
         }
 
-        public Builder setDenylistRules(@Nullable List<DenylistCustomAlertRuleResponse> denylistRules) {
+        public Builder denylistRules(@Nullable List<DenylistCustomAlertRuleResponse> denylistRules) {
             this.denylistRules = denylistRules;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setThresholdRules(@Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules) {
+        public Builder thresholdRules(@Nullable List<ThresholdCustomAlertRuleResponse> thresholdRules) {
             this.thresholdRules = thresholdRules;
             return this;
         }
 
-        public Builder setTimeWindowRules(@Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules) {
+        public Builder timeWindowRules(@Nullable List<TimeWindowCustomAlertRuleResponse> timeWindowRules) {
             this.timeWindowRules = timeWindowRules;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

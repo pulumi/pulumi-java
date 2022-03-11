@@ -17,8 +17,8 @@ public final class MoveCollectionPropertiesResponseErrors {
      */
     private final @Nullable MoveResourceErrorBodyResponse properties;
 
-    @OutputCustomType.Constructor({"properties"})
-    private MoveCollectionPropertiesResponseErrors(@Nullable MoveResourceErrorBodyResponse properties) {
+    @OutputCustomType.Constructor
+    private MoveCollectionPropertiesResponseErrors(@OutputCustomType.Parameter("properties") @Nullable MoveResourceErrorBodyResponse properties) {
         this.properties = properties;
     }
 
@@ -50,7 +50,7 @@ public final class MoveCollectionPropertiesResponseErrors {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable MoveResourceErrorBodyResponse properties) {
+        public Builder properties(@Nullable MoveResourceErrorBodyResponse properties) {
             this.properties = properties;
             return this;
         }

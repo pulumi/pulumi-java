@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse newValue;
 
-    @OutputCustomType.Constructor({"newValue"})
-    private GooglePrivacyDlpV2ReplaceValueConfigResponse(GooglePrivacyDlpV2ValueResponse newValue) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2ReplaceValueConfigResponse(@OutputCustomType.Parameter("newValue") GooglePrivacyDlpV2ValueResponse newValue) {
         this.newValue = newValue;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigResponse {
     	      this.newValue = defaults.newValue;
         }
 
-        public Builder setNewValue(GooglePrivacyDlpV2ValueResponse newValue) {
+        public Builder newValue(GooglePrivacyDlpV2ValueResponse newValue) {
             this.newValue = Objects.requireNonNull(newValue);
             return this;
         }

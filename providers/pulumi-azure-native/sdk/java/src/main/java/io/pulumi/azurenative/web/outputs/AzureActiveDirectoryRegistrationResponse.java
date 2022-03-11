@@ -51,14 +51,14 @@ public final class AzureActiveDirectoryRegistrationResponse {
      */
     private final @Nullable String openIdIssuer;
 
-    @OutputCustomType.Constructor({"clientId","clientSecretCertificateIssuer","clientSecretCertificateSubjectAlternativeName","clientSecretCertificateThumbprint","clientSecretSettingName","openIdIssuer"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryRegistrationResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecretCertificateIssuer,
-        @Nullable String clientSecretCertificateSubjectAlternativeName,
-        @Nullable String clientSecretCertificateThumbprint,
-        @Nullable String clientSecretSettingName,
-        @Nullable String openIdIssuer) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecretCertificateIssuer") @Nullable String clientSecretCertificateIssuer,
+        @OutputCustomType.Parameter("clientSecretCertificateSubjectAlternativeName") @Nullable String clientSecretCertificateSubjectAlternativeName,
+        @OutputCustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @OutputCustomType.Parameter("openIdIssuer") @Nullable String openIdIssuer) {
         this.clientId = clientId;
         this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
         this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
@@ -149,32 +149,32 @@ public final class AzureActiveDirectoryRegistrationResponse {
     	      this.openIdIssuer = defaults.openIdIssuer;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
+        public Builder clientSecretCertificateIssuer(@Nullable String clientSecretCertificateIssuer) {
             this.clientSecretCertificateIssuer = clientSecretCertificateIssuer;
             return this;
         }
 
-        public Builder setClientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
+        public Builder clientSecretCertificateSubjectAlternativeName(@Nullable String clientSecretCertificateSubjectAlternativeName) {
             this.clientSecretCertificateSubjectAlternativeName = clientSecretCertificateSubjectAlternativeName;
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
-        public Builder setOpenIdIssuer(@Nullable String openIdIssuer) {
+        public Builder openIdIssuer(@Nullable String openIdIssuer) {
             this.openIdIssuer = openIdIssuer;
             return this;
         }

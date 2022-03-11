@@ -20,10 +20,10 @@ public final class AzureClusterControlPlaneReplicaPlacement {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"azureAvailabilityZone","subnetId"})
+    @OutputCustomType.Constructor
     private AzureClusterControlPlaneReplicaPlacement(
-        String azureAvailabilityZone,
-        String subnetId) {
+        @OutputCustomType.Parameter("azureAvailabilityZone") String azureAvailabilityZone,
+        @OutputCustomType.Parameter("subnetId") String subnetId) {
         this.azureAvailabilityZone = azureAvailabilityZone;
         this.subnetId = subnetId;
     }
@@ -65,12 +65,12 @@ public final class AzureClusterControlPlaneReplicaPlacement {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAzureAvailabilityZone(String azureAvailabilityZone) {
+        public Builder azureAvailabilityZone(String azureAvailabilityZone) {
             this.azureAvailabilityZone = Objects.requireNonNull(azureAvailabilityZone);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

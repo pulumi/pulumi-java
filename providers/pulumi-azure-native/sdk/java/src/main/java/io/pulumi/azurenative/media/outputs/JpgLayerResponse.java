@@ -39,13 +39,13 @@ public final class JpgLayerResponse {
      */
     private final @Nullable String width;
 
-    @OutputCustomType.Constructor({"height","label","odataType","quality","width"})
+    @OutputCustomType.Constructor
     private JpgLayerResponse(
-        @Nullable String height,
-        @Nullable String label,
-        String odataType,
-        @Nullable Integer quality,
-        @Nullable String width) {
+        @OutputCustomType.Parameter("height") @Nullable String height,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("quality") @Nullable Integer quality,
+        @OutputCustomType.Parameter("width") @Nullable String width) {
         this.height = height;
         this.label = label;
         this.odataType = odataType;
@@ -118,27 +118,27 @@ public final class JpgLayerResponse {
     	      this.width = defaults.width;
         }
 
-        public Builder setHeight(@Nullable String height) {
+        public Builder height(@Nullable String height) {
             this.height = height;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setQuality(@Nullable Integer quality) {
+        public Builder quality(@Nullable Integer quality) {
             this.quality = quality;
             return this;
         }
 
-        public Builder setWidth(@Nullable String width) {
+        public Builder width(@Nullable String width) {
             this.width = width;
             return this;
         }

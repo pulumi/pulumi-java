@@ -40,13 +40,13 @@ public final class ManagedIntegrationRuntimeResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"computeProperties","description","ssisProperties","state","type"})
+    @OutputCustomType.Constructor
     private ManagedIntegrationRuntimeResponse(
-        @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("computeProperties") @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ssisProperties") @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.computeProperties = computeProperties;
         this.description = description;
         this.ssisProperties = ssisProperties;
@@ -119,27 +119,27 @@ public final class ManagedIntegrationRuntimeResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComputeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
+        public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesResponse computeProperties) {
             this.computeProperties = computeProperties;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSsisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
+        public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties) {
             this.ssisProperties = ssisProperties;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

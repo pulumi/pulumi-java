@@ -26,11 +26,11 @@ public final class BotFulfillmentStartResponseSpecification {
     private final Integer delayInSeconds;
     private final List<BotMessageGroup> messageGroups;
 
-    @OutputCustomType.Constructor({"allowInterrupt","delayInSeconds","messageGroups"})
+    @OutputCustomType.Constructor
     private BotFulfillmentStartResponseSpecification(
-        @Nullable Boolean allowInterrupt,
-        Integer delayInSeconds,
-        List<BotMessageGroup> messageGroups) {
+        @OutputCustomType.Parameter("allowInterrupt") @Nullable Boolean allowInterrupt,
+        @OutputCustomType.Parameter("delayInSeconds") Integer delayInSeconds,
+        @OutputCustomType.Parameter("messageGroups") List<BotMessageGroup> messageGroups) {
         this.allowInterrupt = allowInterrupt;
         this.delayInSeconds = delayInSeconds;
         this.messageGroups = messageGroups;
@@ -78,17 +78,17 @@ public final class BotFulfillmentStartResponseSpecification {
     	      this.messageGroups = defaults.messageGroups;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setDelayInSeconds(Integer delayInSeconds) {
+        public Builder delayInSeconds(Integer delayInSeconds) {
             this.delayInSeconds = Objects.requireNonNull(delayInSeconds);
             return this;
         }
 
-        public Builder setMessageGroups(List<BotMessageGroup> messageGroups) {
+        public Builder messageGroups(List<BotMessageGroup> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }

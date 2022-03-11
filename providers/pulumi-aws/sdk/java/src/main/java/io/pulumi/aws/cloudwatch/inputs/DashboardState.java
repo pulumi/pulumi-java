@@ -86,32 +86,32 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     	      this.dashboardName = defaults.dashboardName;
         }
 
-        public Builder setDashboardArn(@Nullable Input<String> dashboardArn) {
+        public Builder dashboardArn(@Nullable Input<String> dashboardArn) {
             this.dashboardArn = dashboardArn;
             return this;
         }
 
-        public Builder setDashboardArn(@Nullable String dashboardArn) {
+        public Builder dashboardArn(@Nullable String dashboardArn) {
             this.dashboardArn = Input.ofNullable(dashboardArn);
             return this;
         }
 
-        public Builder setDashboardBody(@Nullable Input<String> dashboardBody) {
+        public Builder dashboardBody(@Nullable Input<String> dashboardBody) {
             this.dashboardBody = dashboardBody;
             return this;
         }
 
-        public Builder setDashboardBody(@Nullable String dashboardBody) {
+        public Builder dashboardBody(@Nullable String dashboardBody) {
             this.dashboardBody = Input.ofNullable(dashboardBody);
             return this;
         }
 
-        public Builder setDashboardName(@Nullable Input<String> dashboardName) {
+        public Builder dashboardName(@Nullable Input<String> dashboardName) {
             this.dashboardName = dashboardName;
             return this;
         }
 
-        public Builder setDashboardName(@Nullable String dashboardName) {
+        public Builder dashboardName(@Nullable String dashboardName) {
             this.dashboardName = Input.ofNullable(dashboardName);
             return this;
         }

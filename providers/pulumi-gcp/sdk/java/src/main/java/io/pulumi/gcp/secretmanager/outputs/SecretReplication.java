@@ -24,10 +24,10 @@ public final class SecretReplication {
      */
     private final @Nullable SecretReplicationUserManaged userManaged;
 
-    @OutputCustomType.Constructor({"automatic","userManaged"})
+    @OutputCustomType.Constructor
     private SecretReplication(
-        @Nullable Boolean automatic,
-        @Nullable SecretReplicationUserManaged userManaged) {
+        @OutputCustomType.Parameter("automatic") @Nullable Boolean automatic,
+        @OutputCustomType.Parameter("userManaged") @Nullable SecretReplicationUserManaged userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }
@@ -70,12 +70,12 @@ public final class SecretReplication {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(@Nullable Boolean automatic) {
+        public Builder automatic(@Nullable Boolean automatic) {
             this.automatic = automatic;
             return this;
         }
 
-        public Builder setUserManaged(@Nullable SecretReplicationUserManaged userManaged) {
+        public Builder userManaged(@Nullable SecretReplicationUserManaged userManaged) {
             this.userManaged = userManaged;
             return this;
         }

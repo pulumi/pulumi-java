@@ -142,32 +142,32 @@ public final class GalleryImageVersionPublishingProfileResponse extends io.pulum
     	      this.targetRegions = defaults.targetRegions;
         }
 
-        public Builder setEndOfLifeDate(@Nullable String endOfLifeDate) {
+        public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             this.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Boolean excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
-        public Builder setPublishedDate(String publishedDate) {
+        public Builder publishedDate(String publishedDate) {
             this.publishedDate = Objects.requireNonNull(publishedDate);
             return this;
         }
 
-        public Builder setReplicaCount(@Nullable Integer replicaCount) {
+        public Builder replicaCount(@Nullable Integer replicaCount) {
             this.replicaCount = replicaCount;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setTargetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
+        public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
             this.targetRegions = targetRegions;
             return this;
         }

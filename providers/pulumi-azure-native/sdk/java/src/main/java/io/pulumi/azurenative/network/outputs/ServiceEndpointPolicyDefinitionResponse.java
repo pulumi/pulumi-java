@@ -48,15 +48,15 @@ public final class ServiceEndpointPolicyDefinitionResponse {
      */
     private final @Nullable List<String> serviceResources;
 
-    @OutputCustomType.Constructor({"description","etag","id","name","provisioningState","service","serviceResources"})
+    @OutputCustomType.Constructor
     private ServiceEndpointPolicyDefinitionResponse(
-        @Nullable String description,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable String service,
-        @Nullable List<String> serviceResources) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("serviceResources") @Nullable List<String> serviceResources) {
         this.description = description;
         this.etag = etag;
         this.id = id;
@@ -148,37 +148,37 @@ public final class ServiceEndpointPolicyDefinitionResponse {
     	      this.serviceResources = defaults.serviceResources;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setServiceResources(@Nullable List<String> serviceResources) {
+        public Builder serviceResources(@Nullable List<String> serviceResources) {
             this.serviceResources = serviceResources;
             return this;
         }

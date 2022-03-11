@@ -70,22 +70,22 @@ public final class BucketPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyDocument = defaults.policyDocument;
         }
 
-        public Builder setBucket(Input<String> bucket) {
+        public Builder bucket(Input<String> bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
 
-        public Builder setPolicyDocument(Input<Object> policyDocument) {
+        public Builder policyDocument(Input<Object> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
 
-        public Builder setPolicyDocument(Object policyDocument) {
+        public Builder policyDocument(Object policyDocument) {
             this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
             return this;
         }

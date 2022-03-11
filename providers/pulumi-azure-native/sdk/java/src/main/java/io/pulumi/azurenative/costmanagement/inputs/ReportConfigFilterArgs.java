@@ -139,62 +139,62 @@ public final class ReportConfigFilterArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAnd(@Nullable Input<List<ReportConfigFilterArgs>> and) {
+        public Builder and(@Nullable Input<List<ReportConfigFilterArgs>> and) {
             this.and = and;
             return this;
         }
 
-        public Builder setAnd(@Nullable List<ReportConfigFilterArgs> and) {
+        public Builder and(@Nullable List<ReportConfigFilterArgs> and) {
             this.and = Input.ofNullable(and);
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<ReportConfigComparisonExpressionArgs> dimensions) {
+        public Builder dimensions(@Nullable Input<ReportConfigComparisonExpressionArgs> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable ReportConfigComparisonExpressionArgs dimensions) {
+        public Builder dimensions(@Nullable ReportConfigComparisonExpressionArgs dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setOr(@Nullable Input<List<ReportConfigFilterArgs>> or) {
+        public Builder or(@Nullable Input<List<ReportConfigFilterArgs>> or) {
             this.or = or;
             return this;
         }
 
-        public Builder setOr(@Nullable List<ReportConfigFilterArgs> or) {
+        public Builder or(@Nullable List<ReportConfigFilterArgs> or) {
             this.or = Input.ofNullable(or);
             return this;
         }
 
-        public Builder setTagKey(@Nullable Input<ReportConfigComparisonExpressionArgs> tagKey) {
+        public Builder tagKey(@Nullable Input<ReportConfigComparisonExpressionArgs> tagKey) {
             this.tagKey = tagKey;
             return this;
         }
 
-        public Builder setTagKey(@Nullable ReportConfigComparisonExpressionArgs tagKey) {
+        public Builder tagKey(@Nullable ReportConfigComparisonExpressionArgs tagKey) {
             this.tagKey = Input.ofNullable(tagKey);
             return this;
         }
 
-        public Builder setTagValue(@Nullable Input<ReportConfigComparisonExpressionArgs> tagValue) {
+        public Builder tagValue(@Nullable Input<ReportConfigComparisonExpressionArgs> tagValue) {
             this.tagValue = tagValue;
             return this;
         }
 
-        public Builder setTagValue(@Nullable ReportConfigComparisonExpressionArgs tagValue) {
+        public Builder tagValue(@Nullable ReportConfigComparisonExpressionArgs tagValue) {
             this.tagValue = Input.ofNullable(tagValue);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<ReportConfigComparisonExpressionArgs> tags) {
+        public Builder tags(@Nullable Input<ReportConfigComparisonExpressionArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable ReportConfigComparisonExpressionArgs tags) {
+        public Builder tags(@Nullable ReportConfigComparisonExpressionArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -29,11 +29,11 @@ public final class SpotInstanceRequestNetworkInterface {
      */
     private final String networkInterfaceId;
 
-    @OutputCustomType.Constructor({"deleteOnTermination","deviceIndex","networkInterfaceId"})
+    @OutputCustomType.Constructor
     private SpotInstanceRequestNetworkInterface(
-        @Nullable Boolean deleteOnTermination,
-        Integer deviceIndex,
-        String networkInterfaceId) {
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("deviceIndex") Integer deviceIndex,
+        @OutputCustomType.Parameter("networkInterfaceId") String networkInterfaceId) {
         this.deleteOnTermination = deleteOnTermination;
         this.deviceIndex = deviceIndex;
         this.networkInterfaceId = networkInterfaceId;
@@ -85,17 +85,17 @@ public final class SpotInstanceRequestNetworkInterface {
     	      this.networkInterfaceId = defaults.networkInterfaceId;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDeviceIndex(Integer deviceIndex) {
+        public Builder deviceIndex(Integer deviceIndex) {
             this.deviceIndex = Objects.requireNonNull(deviceIndex);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }

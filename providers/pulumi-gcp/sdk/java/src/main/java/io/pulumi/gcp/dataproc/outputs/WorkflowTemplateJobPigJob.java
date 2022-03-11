@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPigJob {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"continueOnFailure","jarFileUris","loggingConfig","properties","queryFileUri","queryList","scriptVariables"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobPigJob(
-        @Nullable Boolean continueOnFailure,
-        @Nullable List<String> jarFileUris,
-        @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobPigJobQueryList queryList,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPigJobQueryList queryList,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
@@ -152,37 +152,37 @@ public final class WorkflowTemplateJobPigJob {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setContinueOnFailure(@Nullable Boolean continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobPigJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryList(@Nullable WorkflowTemplateJobPigJobQueryList queryList) {
+        public Builder queryList(@Nullable WorkflowTemplateJobPigJobQueryList queryList) {
             this.queryList = queryList;
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Map<String,String> scriptVariables) {
+        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }

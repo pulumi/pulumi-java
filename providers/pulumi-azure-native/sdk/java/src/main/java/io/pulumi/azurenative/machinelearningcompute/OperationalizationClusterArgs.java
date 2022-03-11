@@ -222,112 +222,112 @@ public final class OperationalizationClusterArgs extends io.pulumi.resources.Res
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppInsights(@Nullable Input<AppInsightsPropertiesArgs> appInsights) {
+        public Builder appInsights(@Nullable Input<AppInsightsPropertiesArgs> appInsights) {
             this.appInsights = appInsights;
             return this;
         }
 
-        public Builder setAppInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
+        public Builder appInsights(@Nullable AppInsightsPropertiesArgs appInsights) {
             this.appInsights = Input.ofNullable(appInsights);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setClusterType(Input<Either<String,ClusterType>> clusterType) {
+        public Builder clusterType(Input<Either<String,ClusterType>> clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
-        public Builder setClusterType(Either<String,ClusterType> clusterType) {
+        public Builder clusterType(Either<String,ClusterType> clusterType) {
             this.clusterType = Input.of(Objects.requireNonNull(clusterType));
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry) {
+        public Builder containerRegistry(@Nullable Input<ContainerRegistryPropertiesArgs> containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
+        public Builder containerRegistry(@Nullable ContainerRegistryPropertiesArgs containerRegistry) {
             this.containerRegistry = Input.ofNullable(containerRegistry);
             return this;
         }
 
-        public Builder setContainerService(@Nullable Input<AcsClusterPropertiesArgs> containerService) {
+        public Builder containerService(@Nullable Input<AcsClusterPropertiesArgs> containerService) {
             this.containerService = containerService;
             return this;
         }
 
-        public Builder setContainerService(@Nullable AcsClusterPropertiesArgs containerService) {
+        public Builder containerService(@Nullable AcsClusterPropertiesArgs containerService) {
             this.containerService = Input.ofNullable(containerService);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalServiceConfiguration(@Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
+        public Builder globalServiceConfiguration(@Nullable Input<GlobalServiceConfigurationArgs> globalServiceConfiguration) {
             this.globalServiceConfiguration = globalServiceConfiguration;
             return this;
         }
 
-        public Builder setGlobalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
+        public Builder globalServiceConfiguration(@Nullable GlobalServiceConfigurationArgs globalServiceConfiguration) {
             this.globalServiceConfiguration = Input.ofNullable(globalServiceConfiguration);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

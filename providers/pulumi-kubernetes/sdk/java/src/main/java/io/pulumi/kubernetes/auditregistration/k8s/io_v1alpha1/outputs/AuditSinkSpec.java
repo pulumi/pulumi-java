@@ -21,10 +21,10 @@ public final class AuditSinkSpec {
      */
     private final Webhook webhook;
 
-    @OutputCustomType.Constructor({"policy","webhook"})
+    @OutputCustomType.Constructor
     private AuditSinkSpec(
-        Policy policy,
-        Webhook webhook) {
+        @OutputCustomType.Parameter("policy") Policy policy,
+        @OutputCustomType.Parameter("webhook") Webhook webhook) {
         this.policy = policy;
         this.webhook = webhook;
     }
@@ -66,12 +66,12 @@ public final class AuditSinkSpec {
     	      this.webhook = defaults.webhook;
         }
 
-        public Builder setPolicy(Policy policy) {
+        public Builder policy(Policy policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setWebhook(Webhook webhook) {
+        public Builder webhook(Webhook webhook) {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }

@@ -36,13 +36,13 @@ public final class GetLaunchTemplateMetadataOption {
      */
     private final String instanceMetadataTags;
 
-    @OutputCustomType.Constructor({"httpEndpoint","httpProtocolIpv6","httpPutResponseHopLimit","httpTokens","instanceMetadataTags"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateMetadataOption(
-        String httpEndpoint,
-        String httpProtocolIpv6,
-        Integer httpPutResponseHopLimit,
-        String httpTokens,
-        String instanceMetadataTags) {
+        @OutputCustomType.Parameter("httpEndpoint") String httpEndpoint,
+        @OutputCustomType.Parameter("httpProtocolIpv6") String httpProtocolIpv6,
+        @OutputCustomType.Parameter("httpPutResponseHopLimit") Integer httpPutResponseHopLimit,
+        @OutputCustomType.Parameter("httpTokens") String httpTokens,
+        @OutputCustomType.Parameter("instanceMetadataTags") String instanceMetadataTags) {
         this.httpEndpoint = httpEndpoint;
         this.httpProtocolIpv6 = httpProtocolIpv6;
         this.httpPutResponseHopLimit = httpPutResponseHopLimit;
@@ -114,27 +114,27 @@ public final class GetLaunchTemplateMetadataOption {
     	      this.instanceMetadataTags = defaults.instanceMetadataTags;
         }
 
-        public Builder setHttpEndpoint(String httpEndpoint) {
+        public Builder httpEndpoint(String httpEndpoint) {
             this.httpEndpoint = Objects.requireNonNull(httpEndpoint);
             return this;
         }
 
-        public Builder setHttpProtocolIpv6(String httpProtocolIpv6) {
+        public Builder httpProtocolIpv6(String httpProtocolIpv6) {
             this.httpProtocolIpv6 = Objects.requireNonNull(httpProtocolIpv6);
             return this;
         }
 
-        public Builder setHttpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
+        public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.httpPutResponseHopLimit = Objects.requireNonNull(httpPutResponseHopLimit);
             return this;
         }
 
-        public Builder setHttpTokens(String httpTokens) {
+        public Builder httpTokens(String httpTokens) {
             this.httpTokens = Objects.requireNonNull(httpTokens);
             return this;
         }
 
-        public Builder setInstanceMetadataTags(String instanceMetadataTags) {
+        public Builder instanceMetadataTags(String instanceMetadataTags) {
             this.instanceMetadataTags = Objects.requireNonNull(instanceMetadataTags);
             return this;
         }

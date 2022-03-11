@@ -47,13 +47,13 @@ public final class Toleration {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"effect","key","operator","tolerationSeconds","value"})
+    @OutputCustomType.Constructor
     private Toleration(
-        @Nullable String effect,
-        @Nullable String key,
-        @Nullable String operator,
-        @Nullable Integer tolerationSeconds,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("effect") @Nullable String effect,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("tolerationSeconds") @Nullable Integer tolerationSeconds,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.operator = operator;
@@ -134,27 +134,27 @@ public final class Toleration {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setTolerationSeconds(@Nullable Integer tolerationSeconds) {
+        public Builder tolerationSeconds(@Nullable Integer tolerationSeconds) {
             this.tolerationSeconds = tolerationSeconds;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

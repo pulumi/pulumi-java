@@ -26,11 +26,11 @@ public final class InstanceGroupManagerVersionResponse {
      */
     private final FixedOrPercentResponse targetSize;
 
-    @OutputCustomType.Constructor({"instanceTemplate","name","targetSize"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerVersionResponse(
-        String instanceTemplate,
-        String name,
-        FixedOrPercentResponse targetSize) {
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetSize") FixedOrPercentResponse targetSize) {
         this.instanceTemplate = instanceTemplate;
         this.name = name;
         this.targetSize = targetSize;
@@ -82,17 +82,17 @@ public final class InstanceGroupManagerVersionResponse {
     	      this.targetSize = defaults.targetSize;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTargetSize(FixedOrPercentResponse targetSize) {
+        public Builder targetSize(FixedOrPercentResponse targetSize) {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }

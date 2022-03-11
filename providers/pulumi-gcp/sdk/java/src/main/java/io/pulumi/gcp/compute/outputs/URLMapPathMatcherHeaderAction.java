@@ -38,12 +38,12 @@ public final class URLMapPathMatcherHeaderAction {
      */
     private final @Nullable List<String> responseHeadersToRemoves;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdds","requestHeadersToRemoves","responseHeadersToAdds","responseHeadersToRemoves"})
+    @OutputCustomType.Constructor
     private URLMapPathMatcherHeaderAction(
-        @Nullable List<URLMapPathMatcherHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
-        @Nullable List<String> requestHeadersToRemoves,
-        @Nullable List<URLMapPathMatcherHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
-        @Nullable List<String> responseHeadersToRemoves) {
+        @OutputCustomType.Parameter("requestHeadersToAdds") @Nullable List<URLMapPathMatcherHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
+        @OutputCustomType.Parameter("requestHeadersToRemoves") @Nullable List<String> requestHeadersToRemoves,
+        @OutputCustomType.Parameter("responseHeadersToAdds") @Nullable List<URLMapPathMatcherHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
+        @OutputCustomType.Parameter("responseHeadersToRemoves") @Nullable List<String> responseHeadersToRemoves) {
         this.requestHeadersToAdds = requestHeadersToAdds;
         this.requestHeadersToRemoves = requestHeadersToRemoves;
         this.responseHeadersToAdds = responseHeadersToAdds;
@@ -109,22 +109,22 @@ public final class URLMapPathMatcherHeaderAction {
     	      this.responseHeadersToRemoves = defaults.responseHeadersToRemoves;
         }
 
-        public Builder setRequestHeadersToAdds(@Nullable List<URLMapPathMatcherHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
+        public Builder requestHeadersToAdds(@Nullable List<URLMapPathMatcherHeaderActionRequestHeadersToAdd> requestHeadersToAdds) {
             this.requestHeadersToAdds = requestHeadersToAdds;
             return this;
         }
 
-        public Builder setRequestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
+        public Builder requestHeadersToRemoves(@Nullable List<String> requestHeadersToRemoves) {
             this.requestHeadersToRemoves = requestHeadersToRemoves;
             return this;
         }
 
-        public Builder setResponseHeadersToAdds(@Nullable List<URLMapPathMatcherHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
+        public Builder responseHeadersToAdds(@Nullable List<URLMapPathMatcherHeaderActionResponseHeadersToAdd> responseHeadersToAdds) {
             this.responseHeadersToAdds = responseHeadersToAdds;
             return this;
         }
 
-        public Builder setResponseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
+        public Builder responseHeadersToRemoves(@Nullable List<String> responseHeadersToRemoves) {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }

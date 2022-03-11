@@ -203,102 +203,102 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookName = defaults.webhookName;
         }
 
-        public Builder setActions(Input<List<Either<String,WebhookAction>>> actions) {
+        public Builder actions(Input<List<Either<String,WebhookAction>>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<Either<String,WebhookAction>> actions) {
+        public Builder actions(List<Either<String,WebhookAction>> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable Input<Map<String,String>> customHeaders) {
+        public Builder customHeaders(@Nullable Input<Map<String,String>> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable Map<String,String> customHeaders) {
+        public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
             this.customHeaders = Input.ofNullable(customHeaders);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setRegistryName(Input<String> registryName) {
+        public Builder registryName(Input<String> registryName) {
             this.registryName = Objects.requireNonNull(registryName);
             return this;
         }
 
-        public Builder setRegistryName(String registryName) {
+        public Builder registryName(String registryName) {
             this.registryName = Input.of(Objects.requireNonNull(registryName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(@Nullable Input<String> scope) {
+        public Builder scope(@Nullable Input<String> scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = Input.ofNullable(scope);
             return this;
         }
 
-        public Builder setServiceUri(Input<String> serviceUri) {
+        public Builder serviceUri(Input<String> serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
 
-        public Builder setServiceUri(String serviceUri) {
+        public Builder serviceUri(String serviceUri) {
             this.serviceUri = Input.of(Objects.requireNonNull(serviceUri));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<Either<String,WebhookStatus>> status) {
+        public Builder status(@Nullable Input<Either<String,WebhookStatus>> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable Either<String,WebhookStatus> status) {
+        public Builder status(@Nullable Either<String,WebhookStatus> status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWebhookName(@Nullable Input<String> webhookName) {
+        public Builder webhookName(@Nullable Input<String> webhookName) {
             this.webhookName = webhookName;
             return this;
         }
 
-        public Builder setWebhookName(@Nullable String webhookName) {
+        public Builder webhookName(@Nullable String webhookName) {
             this.webhookName = Input.ofNullable(webhookName);
             return this;
         }

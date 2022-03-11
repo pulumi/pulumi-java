@@ -33,12 +33,12 @@ public final class TaskSetLoadBalancer {
      */
     private final @Nullable String targetGroupArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","loadBalancerName","targetGroupArn"})
+    @OutputCustomType.Constructor
     private TaskSetLoadBalancer(
-        String containerName,
-        @Nullable Integer containerPort,
-        @Nullable String loadBalancerName,
-        @Nullable String targetGroupArn) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("loadBalancerName") @Nullable String loadBalancerName,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.loadBalancerName = loadBalancerName;
@@ -100,22 +100,22 @@ public final class TaskSetLoadBalancer {
     	      this.targetGroupArn = defaults.targetGroupArn;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setLoadBalancerName(@Nullable String loadBalancerName) {
+        public Builder loadBalancerName(@Nullable String loadBalancerName) {
             this.loadBalancerName = loadBalancerName;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }

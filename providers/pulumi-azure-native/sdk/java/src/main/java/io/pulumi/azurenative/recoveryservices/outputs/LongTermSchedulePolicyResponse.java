@@ -16,8 +16,8 @@ public final class LongTermSchedulePolicyResponse {
      */
     private final String schedulePolicyType;
 
-    @OutputCustomType.Constructor({"schedulePolicyType"})
-    private LongTermSchedulePolicyResponse(String schedulePolicyType) {
+    @OutputCustomType.Constructor
+    private LongTermSchedulePolicyResponse(@OutputCustomType.Parameter("schedulePolicyType") String schedulePolicyType) {
         this.schedulePolicyType = schedulePolicyType;
     }
 
@@ -50,7 +50,7 @@ public final class LongTermSchedulePolicyResponse {
     	      this.schedulePolicyType = defaults.schedulePolicyType;
         }
 
-        public Builder setSchedulePolicyType(String schedulePolicyType) {
+        public Builder schedulePolicyType(String schedulePolicyType) {
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }

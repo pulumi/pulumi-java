@@ -29,11 +29,11 @@ public final class UpgradePolicyResponse {
      */
     private final @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy;
 
-    @OutputCustomType.Constructor({"automaticOSUpgradePolicy","mode","rollingUpgradePolicy"})
+    @OutputCustomType.Constructor
     private UpgradePolicyResponse(
-        @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
-        @Nullable String mode,
-        @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
+        @OutputCustomType.Parameter("automaticOSUpgradePolicy") @Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("rollingUpgradePolicy") @Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
         this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
         this.mode = mode;
         this.rollingUpgradePolicy = rollingUpgradePolicy;
@@ -85,17 +85,17 @@ public final class UpgradePolicyResponse {
     	      this.rollingUpgradePolicy = defaults.rollingUpgradePolicy;
         }
 
-        public Builder setAutomaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy) {
+        public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyResponse automaticOSUpgradePolicy) {
             this.automaticOSUpgradePolicy = automaticOSUpgradePolicy;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRollingUpgradePolicy(@Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
+        public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyResponse rollingUpgradePolicy) {
             this.rollingUpgradePolicy = rollingUpgradePolicy;
             return this;
         }

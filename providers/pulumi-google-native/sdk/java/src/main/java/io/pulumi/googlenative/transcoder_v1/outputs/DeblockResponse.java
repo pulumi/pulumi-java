@@ -21,10 +21,10 @@ public final class DeblockResponse {
      */
     private final Double strength;
 
-    @OutputCustomType.Constructor({"enabled","strength"})
+    @OutputCustomType.Constructor
     private DeblockResponse(
-        Boolean enabled,
-        Double strength) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("strength") Double strength) {
         this.enabled = enabled;
         this.strength = strength;
     }
@@ -66,12 +66,12 @@ public final class DeblockResponse {
     	      this.strength = defaults.strength;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setStrength(Double strength) {
+        public Builder strength(Double strength) {
             this.strength = Objects.requireNonNull(strength);
             return this;
         }

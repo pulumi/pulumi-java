@@ -24,10 +24,10 @@ public final class MetricRulesResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"filteringTags","subscriptionId"})
+    @OutputCustomType.Constructor
     private MetricRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.filteringTags = filteringTags;
         this.subscriptionId = subscriptionId;
     }
@@ -69,12 +69,12 @@ public final class MetricRulesResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

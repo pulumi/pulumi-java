@@ -75,22 +75,22 @@ public final class GoogleCloudRecommendationengineV1beta1FeatureMapArgs extends 
     	      this.numericalFeatures = defaults.numericalFeatures;
         }
 
-        public Builder setCategoricalFeatures(@Nullable Input<Map<String,String>> categoricalFeatures) {
+        public Builder categoricalFeatures(@Nullable Input<Map<String,String>> categoricalFeatures) {
             this.categoricalFeatures = categoricalFeatures;
             return this;
         }
 
-        public Builder setCategoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
+        public Builder categoricalFeatures(@Nullable Map<String,String> categoricalFeatures) {
             this.categoricalFeatures = Input.ofNullable(categoricalFeatures);
             return this;
         }
 
-        public Builder setNumericalFeatures(@Nullable Input<Map<String,String>> numericalFeatures) {
+        public Builder numericalFeatures(@Nullable Input<Map<String,String>> numericalFeatures) {
             this.numericalFeatures = numericalFeatures;
             return this;
         }
 
-        public Builder setNumericalFeatures(@Nullable Map<String,String> numericalFeatures) {
+        public Builder numericalFeatures(@Nullable Map<String,String> numericalFeatures) {
             this.numericalFeatures = Input.ofNullable(numericalFeatures);
             return this;
         }

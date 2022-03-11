@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComponentProperties {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private ComponentProperties() {
     }
 

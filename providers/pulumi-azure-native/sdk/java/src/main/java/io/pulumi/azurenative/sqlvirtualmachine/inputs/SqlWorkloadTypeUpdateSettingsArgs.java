@@ -59,12 +59,12 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
     	      this.sqlWorkloadType = defaults.sqlWorkloadType;
         }
 
-        public Builder setSqlWorkloadType(@Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType) {
+        public Builder sqlWorkloadType(@Nullable Input<Either<String,SqlWorkloadType>> sqlWorkloadType) {
             this.sqlWorkloadType = sqlWorkloadType;
             return this;
         }
 
-        public Builder setSqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
+        public Builder sqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
             this.sqlWorkloadType = Input.ofNullable(sqlWorkloadType);
             return this;
         }

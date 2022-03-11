@@ -90,17 +90,17 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
     	      this.gke = defaults.gke;
         }
 
-        public Builder setCloudFunction(String cloudFunction) {
+        public Builder cloudFunction(String cloudFunction) {
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(CloudRunResponse cloudRun) {
+        public Builder cloudRun(CloudRunResponse cloudRun) {
             this.cloudRun = Objects.requireNonNull(cloudRun);
             return this;
         }
 
-        public Builder setGke(GKEResponse gke) {
+        public Builder gke(GKEResponse gke) {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }

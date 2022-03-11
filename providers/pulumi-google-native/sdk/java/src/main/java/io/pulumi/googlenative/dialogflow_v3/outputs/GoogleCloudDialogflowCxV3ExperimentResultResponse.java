@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
      */
     private final List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics;
 
-    @OutputCustomType.Constructor({"lastUpdateTime","versionMetrics"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ExperimentResultResponse(
-        String lastUpdateTime,
-        List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
+        @OutputCustomType.Parameter("lastUpdateTime") String lastUpdateTime,
+        @OutputCustomType.Parameter("versionMetrics") List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
         this.lastUpdateTime = lastUpdateTime;
         this.versionMetrics = versionMetrics;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultResponse {
     	      this.versionMetrics = defaults.versionMetrics;
         }
 
-        public Builder setLastUpdateTime(String lastUpdateTime) {
+        public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = Objects.requireNonNull(lastUpdateTime);
             return this;
         }
 
-        public Builder setVersionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
+        public Builder versionMetrics(List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse> versionMetrics) {
             this.versionMetrics = Objects.requireNonNull(versionMetrics);
             return this;
         }

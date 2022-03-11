@@ -28,11 +28,11 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"offset","size","type"})
+    @OutputCustomType.Constructor
     private SelfDependencyTumblingWindowTriggerReferenceResponse(
-        String offset,
-        @Nullable String size,
-        String type) {
+        @OutputCustomType.Parameter("offset") String offset,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("type") String type) {
         this.offset = offset;
         this.size = size;
         this.type = type;
@@ -85,17 +85,17 @@ public final class SelfDependencyTumblingWindowTriggerReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setOffset(String offset) {
+        public Builder offset(String offset) {
             this.offset = Objects.requireNonNull(offset);
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

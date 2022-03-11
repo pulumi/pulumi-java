@@ -22,10 +22,10 @@ public final class BlobNfsTargetResponse {
      */
     private final @Nullable String usageModel;
 
-    @OutputCustomType.Constructor({"target","usageModel"})
+    @OutputCustomType.Constructor
     private BlobNfsTargetResponse(
-        @Nullable String target,
-        @Nullable String usageModel) {
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("usageModel") @Nullable String usageModel) {
         this.target = target;
         this.usageModel = usageModel;
     }
@@ -67,12 +67,12 @@ public final class BlobNfsTargetResponse {
     	      this.usageModel = defaults.usageModel;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setUsageModel(@Nullable String usageModel) {
+        public Builder usageModel(@Nullable String usageModel) {
             this.usageModel = usageModel;
             return this;
         }

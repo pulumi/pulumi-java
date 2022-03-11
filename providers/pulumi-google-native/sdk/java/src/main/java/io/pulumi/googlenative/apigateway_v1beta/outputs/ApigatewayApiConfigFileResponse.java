@@ -20,10 +20,10 @@ public final class ApigatewayApiConfigFileResponse {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"contents","path"})
+    @OutputCustomType.Constructor
     private ApigatewayApiConfigFileResponse(
-        String contents,
-        String path) {
+        @OutputCustomType.Parameter("contents") String contents,
+        @OutputCustomType.Parameter("path") String path) {
         this.contents = contents;
         this.path = path;
     }
@@ -65,12 +65,12 @@ public final class ApigatewayApiConfigFileResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setContents(String contents) {
+        public Builder contents(String contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

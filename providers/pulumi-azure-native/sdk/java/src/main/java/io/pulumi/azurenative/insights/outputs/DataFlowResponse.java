@@ -22,10 +22,10 @@ public final class DataFlowResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"destinations","streams"})
+    @OutputCustomType.Constructor
     private DataFlowResponse(
-        @Nullable List<String> destinations,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("destinations") @Nullable List<String> destinations,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.destinations = destinations;
         this.streams = streams;
     }
@@ -67,12 +67,12 @@ public final class DataFlowResponse {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setDestinations(@Nullable List<String> destinations) {
+        public Builder destinations(@Nullable List<String> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }

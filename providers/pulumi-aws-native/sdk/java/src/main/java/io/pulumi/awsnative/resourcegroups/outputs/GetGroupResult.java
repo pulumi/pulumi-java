@@ -30,14 +30,14 @@ public final class GetGroupResult {
     private final @Nullable List<String> resources;
     private final @Nullable List<GroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","configuration","description","resourceQuery","resources","tags"})
+    @OutputCustomType.Constructor
     private GetGroupResult(
-        @Nullable String arn,
-        @Nullable List<GroupConfigurationItem> configuration,
-        @Nullable String description,
-        @Nullable GroupResourceQuery resourceQuery,
-        @Nullable List<String> resources,
-        @Nullable List<GroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("configuration") @Nullable List<GroupConfigurationItem> configuration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("resourceQuery") @Nullable GroupResourceQuery resourceQuery,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("tags") @Nullable List<GroupTag> tags) {
         this.arn = arn;
         this.configuration = configuration;
         this.description = description;
@@ -103,32 +103,32 @@ public final class GetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable List<GroupConfigurationItem> configuration) {
+        public Builder configuration(@Nullable List<GroupConfigurationItem> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setResourceQuery(@Nullable GroupResourceQuery resourceQuery) {
+        public Builder resourceQuery(@Nullable GroupResourceQuery resourceQuery) {
             this.resourceQuery = resourceQuery;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GroupTag> tags) {
+        public Builder tags(@Nullable List<GroupTag> tags) {
             this.tags = tags;
             return this;
         }

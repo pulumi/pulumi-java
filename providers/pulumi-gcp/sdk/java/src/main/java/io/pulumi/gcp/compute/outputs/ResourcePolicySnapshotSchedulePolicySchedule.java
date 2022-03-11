@@ -32,11 +32,11 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
      */
     private final @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule;
 
-    @OutputCustomType.Constructor({"dailySchedule","hourlySchedule","weeklySchedule"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySchedule(
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
-        @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
+        @OutputCustomType.Parameter("dailySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule,
+        @OutputCustomType.Parameter("hourlySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule,
+        @OutputCustomType.Parameter("weeklySchedule") @Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
         this.dailySchedule = dailySchedule;
         this.hourlySchedule = hourlySchedule;
         this.weeklySchedule = weeklySchedule;
@@ -91,17 +91,17 @@ public final class ResourcePolicySnapshotSchedulePolicySchedule {
     	      this.weeklySchedule = defaults.weeklySchedule;
         }
 
-        public Builder setDailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule) {
+        public Builder dailySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule dailySchedule) {
             this.dailySchedule = dailySchedule;
             return this;
         }
 
-        public Builder setHourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule) {
+        public Builder hourlySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule hourlySchedule) {
             this.hourlySchedule = hourlySchedule;
             return this;
         }
 
-        public Builder setWeeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
+        public Builder weeklySchedule(@Nullable ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule weeklySchedule) {
             this.weeklySchedule = weeklySchedule;
             return this;
         }

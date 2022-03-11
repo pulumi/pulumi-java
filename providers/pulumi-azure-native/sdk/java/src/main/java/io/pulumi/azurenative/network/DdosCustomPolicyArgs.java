@@ -137,62 +137,62 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDdosCustomPolicyName(@Nullable Input<String> ddosCustomPolicyName) {
+        public Builder ddosCustomPolicyName(@Nullable Input<String> ddosCustomPolicyName) {
             this.ddosCustomPolicyName = ddosCustomPolicyName;
             return this;
         }
 
-        public Builder setDdosCustomPolicyName(@Nullable String ddosCustomPolicyName) {
+        public Builder ddosCustomPolicyName(@Nullable String ddosCustomPolicyName) {
             this.ddosCustomPolicyName = Input.ofNullable(ddosCustomPolicyName);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setProtocolCustomSettings(@Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
+        public Builder protocolCustomSettings(@Nullable Input<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
             this.protocolCustomSettings = protocolCustomSettings;
             return this;
         }
 
-        public Builder setProtocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatArgs> protocolCustomSettings) {
+        public Builder protocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatArgs> protocolCustomSettings) {
             this.protocolCustomSettings = Input.ofNullable(protocolCustomSettings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

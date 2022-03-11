@@ -44,14 +44,14 @@ public final class ApplicationComponentMonitoringSetting {
      */
     private final String tier;
 
-    @OutputCustomType.Constructor({"componentARN","componentConfigurationMode","componentName","customComponentConfiguration","defaultOverwriteComponentConfiguration","tier"})
+    @OutputCustomType.Constructor
     private ApplicationComponentMonitoringSetting(
-        @Nullable String componentARN,
-        ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
-        @Nullable String componentName,
-        @Nullable ApplicationComponentConfiguration customComponentConfiguration,
-        @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
-        String tier) {
+        @OutputCustomType.Parameter("componentARN") @Nullable String componentARN,
+        @OutputCustomType.Parameter("componentConfigurationMode") ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode,
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("customComponentConfiguration") @Nullable ApplicationComponentConfiguration customComponentConfiguration,
+        @OutputCustomType.Parameter("defaultOverwriteComponentConfiguration") @Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration,
+        @OutputCustomType.Parameter("tier") String tier) {
         this.componentARN = componentARN;
         this.componentConfigurationMode = componentConfigurationMode;
         this.componentName = componentName;
@@ -133,32 +133,32 @@ public final class ApplicationComponentMonitoringSetting {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setComponentARN(@Nullable String componentARN) {
+        public Builder componentARN(@Nullable String componentARN) {
             this.componentARN = componentARN;
             return this;
         }
 
-        public Builder setComponentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
+        public Builder componentConfigurationMode(ApplicationComponentMonitoringSettingComponentConfigurationMode componentConfigurationMode) {
             this.componentConfigurationMode = Objects.requireNonNull(componentConfigurationMode);
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setCustomComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
+        public Builder customComponentConfiguration(@Nullable ApplicationComponentConfiguration customComponentConfiguration) {
             this.customComponentConfiguration = customComponentConfiguration;
             return this;
         }
 
-        public Builder setDefaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
+        public Builder defaultOverwriteComponentConfiguration(@Nullable ApplicationComponentConfiguration defaultOverwriteComponentConfiguration) {
             this.defaultOverwriteComponentConfiguration = defaultOverwriteComponentConfiguration;
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

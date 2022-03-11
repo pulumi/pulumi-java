@@ -49,15 +49,15 @@ public final class ArtifactInstallPropertiesResponse {
      */
     private final @Nullable String vmExtensionStatusMessage;
 
-    @OutputCustomType.Constructor({"artifactId","artifactTitle","deploymentStatusMessage","installTime","parameters","status","vmExtensionStatusMessage"})
+    @OutputCustomType.Constructor
     private ArtifactInstallPropertiesResponse(
-        @Nullable String artifactId,
-        @Nullable String artifactTitle,
-        @Nullable String deploymentStatusMessage,
-        @Nullable String installTime,
-        @Nullable List<ArtifactParameterPropertiesResponse> parameters,
-        @Nullable String status,
-        @Nullable String vmExtensionStatusMessage) {
+        @OutputCustomType.Parameter("artifactId") @Nullable String artifactId,
+        @OutputCustomType.Parameter("artifactTitle") @Nullable String artifactTitle,
+        @OutputCustomType.Parameter("deploymentStatusMessage") @Nullable String deploymentStatusMessage,
+        @OutputCustomType.Parameter("installTime") @Nullable String installTime,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ArtifactParameterPropertiesResponse> parameters,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("vmExtensionStatusMessage") @Nullable String vmExtensionStatusMessage) {
         this.artifactId = artifactId;
         this.artifactTitle = artifactTitle;
         this.deploymentStatusMessage = deploymentStatusMessage;
@@ -149,37 +149,37 @@ public final class ArtifactInstallPropertiesResponse {
     	      this.vmExtensionStatusMessage = defaults.vmExtensionStatusMessage;
         }
 
-        public Builder setArtifactId(@Nullable String artifactId) {
+        public Builder artifactId(@Nullable String artifactId) {
             this.artifactId = artifactId;
             return this;
         }
 
-        public Builder setArtifactTitle(@Nullable String artifactTitle) {
+        public Builder artifactTitle(@Nullable String artifactTitle) {
             this.artifactTitle = artifactTitle;
             return this;
         }
 
-        public Builder setDeploymentStatusMessage(@Nullable String deploymentStatusMessage) {
+        public Builder deploymentStatusMessage(@Nullable String deploymentStatusMessage) {
             this.deploymentStatusMessage = deploymentStatusMessage;
             return this;
         }
 
-        public Builder setInstallTime(@Nullable String installTime) {
+        public Builder installTime(@Nullable String installTime) {
             this.installTime = installTime;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
+        public Builder parameters(@Nullable List<ArtifactParameterPropertiesResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setVmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
+        public Builder vmExtensionStatusMessage(@Nullable String vmExtensionStatusMessage) {
             this.vmExtensionStatusMessage = vmExtensionStatusMessage;
             return this;
         }

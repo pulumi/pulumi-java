@@ -18,8 +18,8 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private DestinationsSpecResponseAzureMonitorMetrics(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private DestinationsSpecResponseAzureMonitorMetrics(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 
@@ -52,7 +52,7 @@ public final class DestinationsSpecResponseAzureMonitorMetrics {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

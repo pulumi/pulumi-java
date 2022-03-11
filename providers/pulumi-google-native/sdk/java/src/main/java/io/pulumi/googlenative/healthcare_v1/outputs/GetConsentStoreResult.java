@@ -32,12 +32,12 @@ public final class GetConsentStoreResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"defaultConsentTtl","enableConsentCreateOnUpdate","labels","name"})
+    @OutputCustomType.Constructor
     private GetConsentStoreResult(
-        String defaultConsentTtl,
-        Boolean enableConsentCreateOnUpdate,
-        Map<String,String> labels,
-        String name) {
+        @OutputCustomType.Parameter("defaultConsentTtl") String defaultConsentTtl,
+        @OutputCustomType.Parameter("enableConsentCreateOnUpdate") Boolean enableConsentCreateOnUpdate,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name) {
         this.defaultConsentTtl = defaultConsentTtl;
         this.enableConsentCreateOnUpdate = enableConsentCreateOnUpdate;
         this.labels = labels;
@@ -99,22 +99,22 @@ public final class GetConsentStoreResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDefaultConsentTtl(String defaultConsentTtl) {
+        public Builder defaultConsentTtl(String defaultConsentTtl) {
             this.defaultConsentTtl = Objects.requireNonNull(defaultConsentTtl);
             return this;
         }
 
-        public Builder setEnableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
+        public Builder enableConsentCreateOnUpdate(Boolean enableConsentCreateOnUpdate) {
             this.enableConsentCreateOnUpdate = Objects.requireNonNull(enableConsentCreateOnUpdate);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

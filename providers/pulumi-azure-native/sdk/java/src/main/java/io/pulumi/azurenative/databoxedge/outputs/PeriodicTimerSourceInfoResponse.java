@@ -27,11 +27,11 @@ public final class PeriodicTimerSourceInfoResponse {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor({"schedule","startTime","topic"})
+    @OutputCustomType.Constructor
     private PeriodicTimerSourceInfoResponse(
-        String schedule,
-        String startTime,
-        @Nullable String topic) {
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("topic") @Nullable String topic) {
         this.schedule = schedule;
         this.startTime = startTime;
         this.topic = topic;
@@ -83,17 +83,17 @@ public final class PeriodicTimerSourceInfoResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
         }

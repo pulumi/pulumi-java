@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
      */
     private final String urlTypeHint;
 
-    @OutputCustomType.Constructor({"url","urlTypeHint"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse(
-        String url,
-        String urlTypeHint) {
+        @OutputCustomType.Parameter("url") String url,
+        @OutputCustomType.Parameter("urlTypeHint") String urlTypeHint) {
         this.url = url;
         this.urlTypeHint = urlTypeHint;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBr
     	      this.urlTypeHint = defaults.urlTypeHint;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }
 
-        public Builder setUrlTypeHint(String urlTypeHint) {
+        public Builder urlTypeHint(String urlTypeHint) {
             this.urlTypeHint = Objects.requireNonNull(urlTypeHint);
             return this;
         }

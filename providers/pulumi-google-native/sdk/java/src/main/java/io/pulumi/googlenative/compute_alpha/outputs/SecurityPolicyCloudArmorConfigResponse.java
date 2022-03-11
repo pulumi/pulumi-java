@@ -15,8 +15,8 @@ public final class SecurityPolicyCloudArmorConfigResponse {
      */
     private final Boolean enableMl;
 
-    @OutputCustomType.Constructor({"enableMl"})
-    private SecurityPolicyCloudArmorConfigResponse(Boolean enableMl) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyCloudArmorConfigResponse(@OutputCustomType.Parameter("enableMl") Boolean enableMl) {
         this.enableMl = enableMl;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityPolicyCloudArmorConfigResponse {
     	      this.enableMl = defaults.enableMl;
         }
 
-        public Builder setEnableMl(Boolean enableMl) {
+        public Builder enableMl(Boolean enableMl) {
             this.enableMl = Objects.requireNonNull(enableMl);
             return this;
         }

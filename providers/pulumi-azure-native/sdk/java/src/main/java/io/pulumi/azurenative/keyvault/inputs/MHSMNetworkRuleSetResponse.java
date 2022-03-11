@@ -109,22 +109,22 @@ public final class MHSMNetworkRuleSetResponse extends io.pulumi.resources.Invoke
     	      this.virtualNetworkRules = defaults.virtualNetworkRules;
         }
 
-        public Builder setBypass(@Nullable String bypass) {
+        public Builder bypass(@Nullable String bypass) {
             this.bypass = bypass;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable String defaultAction) {
+        public Builder defaultAction(@Nullable String defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setIpRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
+        public Builder ipRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
             this.ipRules = ipRules;
             return this;
         }
 
-        public Builder setVirtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
+        public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
             this.virtualNetworkRules = virtualNetworkRules;
             return this;
         }

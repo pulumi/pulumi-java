@@ -31,11 +31,11 @@ public final class MetastoreServiceHiveMetastoreConfig {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"configOverrides","kerberosConfig","version"})
+    @OutputCustomType.Constructor
     private MetastoreServiceHiveMetastoreConfig(
-        @Nullable Map<String,String> configOverrides,
-        @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
-        String version) {
+        @OutputCustomType.Parameter("configOverrides") @Nullable Map<String,String> configOverrides,
+        @OutputCustomType.Parameter("kerberosConfig") @Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig,
+        @OutputCustomType.Parameter("version") String version) {
         this.configOverrides = configOverrides;
         this.kerberosConfig = kerberosConfig;
         this.version = version;
@@ -89,17 +89,17 @@ public final class MetastoreServiceHiveMetastoreConfig {
     	      this.version = defaults.version;
         }
 
-        public Builder setConfigOverrides(@Nullable Map<String,String> configOverrides) {
+        public Builder configOverrides(@Nullable Map<String,String> configOverrides) {
             this.configOverrides = configOverrides;
             return this;
         }
 
-        public Builder setKerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig) {
+        public Builder kerberosConfig(@Nullable MetastoreServiceHiveMetastoreConfigKerberosConfig kerberosConfig) {
             this.kerberosConfig = kerberosConfig;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

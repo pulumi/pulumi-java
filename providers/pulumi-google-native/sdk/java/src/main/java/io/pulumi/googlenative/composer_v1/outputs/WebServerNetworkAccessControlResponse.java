@@ -16,8 +16,8 @@ public final class WebServerNetworkAccessControlResponse {
      */
     private final List<AllowedIpRangeResponse> allowedIpRanges;
 
-    @OutputCustomType.Constructor({"allowedIpRanges"})
-    private WebServerNetworkAccessControlResponse(List<AllowedIpRangeResponse> allowedIpRanges) {
+    @OutputCustomType.Constructor
+    private WebServerNetworkAccessControlResponse(@OutputCustomType.Parameter("allowedIpRanges") List<AllowedIpRangeResponse> allowedIpRanges) {
         this.allowedIpRanges = allowedIpRanges;
     }
 
@@ -49,7 +49,7 @@ public final class WebServerNetworkAccessControlResponse {
     	      this.allowedIpRanges = defaults.allowedIpRanges;
         }
 
-        public Builder setAllowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
+        public Builder allowedIpRanges(List<AllowedIpRangeResponse> allowedIpRanges) {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }

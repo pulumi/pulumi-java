@@ -61,18 +61,18 @@ public final class QuotaLimitResponse {
      */
     private final Map<String,String> values;
 
-    @OutputCustomType.Constructor({"defaultLimit","description","displayName","duration","freeTier","maxLimit","metric","name","unit","values"})
+    @OutputCustomType.Constructor
     private QuotaLimitResponse(
-        String defaultLimit,
-        String description,
-        String displayName,
-        String duration,
-        String freeTier,
-        String maxLimit,
-        String metric,
-        String name,
-        String unit,
-        Map<String,String> values) {
+        @OutputCustomType.Parameter("defaultLimit") String defaultLimit,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("freeTier") String freeTier,
+        @OutputCustomType.Parameter("maxLimit") String maxLimit,
+        @OutputCustomType.Parameter("metric") String metric,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("values") Map<String,String> values) {
         this.defaultLimit = defaultLimit;
         this.description = description;
         this.displayName = displayName;
@@ -194,52 +194,52 @@ public final class QuotaLimitResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setDefaultLimit(String defaultLimit) {
+        public Builder defaultLimit(String defaultLimit) {
             this.defaultLimit = Objects.requireNonNull(defaultLimit);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFreeTier(String freeTier) {
+        public Builder freeTier(String freeTier) {
             this.freeTier = Objects.requireNonNull(freeTier);
             return this;
         }
 
-        public Builder setMaxLimit(String maxLimit) {
+        public Builder maxLimit(String maxLimit) {
             this.maxLimit = Objects.requireNonNull(maxLimit);
             return this;
         }
 
-        public Builder setMetric(String metric) {
+        public Builder metric(String metric) {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValues(Map<String,String> values) {
+        public Builder values(Map<String,String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -19,14 +19,14 @@ public final class ArcConfigurationResponse {
     private final @Nullable String artifactsStorageType;
     private final @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration;
 
-    @OutputCustomType.Constructor({"artifactStorageAccessMode","artifactStorageClassName","artifactStorageMountPath","artifactStorageNodeName","artifactsStorageType","frontEndServiceConfiguration"})
+    @OutputCustomType.Constructor
     private ArcConfigurationResponse(
-        @Nullable String artifactStorageAccessMode,
-        @Nullable String artifactStorageClassName,
-        @Nullable String artifactStorageMountPath,
-        @Nullable String artifactStorageNodeName,
-        @Nullable String artifactsStorageType,
-        @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
+        @OutputCustomType.Parameter("artifactStorageAccessMode") @Nullable String artifactStorageAccessMode,
+        @OutputCustomType.Parameter("artifactStorageClassName") @Nullable String artifactStorageClassName,
+        @OutputCustomType.Parameter("artifactStorageMountPath") @Nullable String artifactStorageMountPath,
+        @OutputCustomType.Parameter("artifactStorageNodeName") @Nullable String artifactStorageNodeName,
+        @OutputCustomType.Parameter("artifactsStorageType") @Nullable String artifactsStorageType,
+        @OutputCustomType.Parameter("frontEndServiceConfiguration") @Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
         this.artifactStorageAccessMode = artifactStorageAccessMode;
         this.artifactStorageClassName = artifactStorageClassName;
         this.artifactStorageMountPath = artifactStorageMountPath;
@@ -84,32 +84,32 @@ public final class ArcConfigurationResponse {
     	      this.frontEndServiceConfiguration = defaults.frontEndServiceConfiguration;
         }
 
-        public Builder setArtifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
+        public Builder artifactStorageAccessMode(@Nullable String artifactStorageAccessMode) {
             this.artifactStorageAccessMode = artifactStorageAccessMode;
             return this;
         }
 
-        public Builder setArtifactStorageClassName(@Nullable String artifactStorageClassName) {
+        public Builder artifactStorageClassName(@Nullable String artifactStorageClassName) {
             this.artifactStorageClassName = artifactStorageClassName;
             return this;
         }
 
-        public Builder setArtifactStorageMountPath(@Nullable String artifactStorageMountPath) {
+        public Builder artifactStorageMountPath(@Nullable String artifactStorageMountPath) {
             this.artifactStorageMountPath = artifactStorageMountPath;
             return this;
         }
 
-        public Builder setArtifactStorageNodeName(@Nullable String artifactStorageNodeName) {
+        public Builder artifactStorageNodeName(@Nullable String artifactStorageNodeName) {
             this.artifactStorageNodeName = artifactStorageNodeName;
             return this;
         }
 
-        public Builder setArtifactsStorageType(@Nullable String artifactsStorageType) {
+        public Builder artifactsStorageType(@Nullable String artifactsStorageType) {
             this.artifactsStorageType = artifactsStorageType;
             return this;
         }
 
-        public Builder setFrontEndServiceConfiguration(@Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
+        public Builder frontEndServiceConfiguration(@Nullable FrontEndConfigurationResponse frontEndServiceConfiguration) {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }

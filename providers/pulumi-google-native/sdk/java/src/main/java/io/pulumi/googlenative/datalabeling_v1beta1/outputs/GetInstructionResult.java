@@ -52,16 +52,16 @@ public final class GetInstructionResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"blockingResources","createTime","dataType","description","displayName","name","pdfInstruction","updateTime"})
+    @OutputCustomType.Constructor
     private GetInstructionResult(
-        List<String> blockingResources,
-        String createTime,
-        String dataType,
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
-        String updateTime) {
+        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pdfInstruction") GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.blockingResources = blockingResources;
         this.createTime = createTime;
         this.dataType = dataType;
@@ -163,42 +163,42 @@ public final class GetInstructionResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setBlockingResources(List<String> blockingResources) {
+        public Builder blockingResources(List<String> blockingResources) {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDataType(String dataType) {
+        public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction) {
+        public Builder pdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstructionResponse pdfInstruction) {
             this.pdfInstruction = Objects.requireNonNull(pdfInstruction);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

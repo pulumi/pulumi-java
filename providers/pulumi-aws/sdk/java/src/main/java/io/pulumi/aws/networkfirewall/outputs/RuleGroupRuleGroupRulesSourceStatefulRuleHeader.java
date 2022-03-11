@@ -40,14 +40,14 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
      */
     private final String sourcePort;
 
-    @OutputCustomType.Constructor({"destination","destinationPort","direction","protocol","source","sourcePort"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSourceStatefulRuleHeader(
-        String destination,
-        String destinationPort,
-        String direction,
-        String protocol,
-        String source,
-        String sourcePort) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("destinationPort") String destinationPort,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourcePort") String sourcePort) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.direction = direction;
@@ -129,32 +129,32 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeader {
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestinationPort(String destinationPort) {
+        public Builder destinationPort(String destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourcePort(String sourcePort) {
+        public Builder sourcePort(String sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }

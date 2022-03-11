@@ -58,16 +58,16 @@ public final class GetTaskDefinitionResult {
      */
     private final @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update;
 
-    @OutputCustomType.Constructor({"arn","autoCreateTasks","id","loRaWANUpdateGatewayTaskEntry","name","tags","taskDefinitionType","update"})
+    @OutputCustomType.Constructor
     private GetTaskDefinitionResult(
-        @Nullable String arn,
-        @Nullable Boolean autoCreateTasks,
-        @Nullable String id,
-        @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry,
-        @Nullable String name,
-        @Nullable List<TaskDefinitionTag> tags,
-        @Nullable TaskDefinitionType taskDefinitionType,
-        @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoCreateTasks") @Nullable Boolean autoCreateTasks,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loRaWANUpdateGatewayTaskEntry") @Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<TaskDefinitionTag> tags,
+        @OutputCustomType.Parameter("taskDefinitionType") @Nullable TaskDefinitionType taskDefinitionType,
+        @OutputCustomType.Parameter("update") @Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
         this.arn = arn;
         this.autoCreateTasks = autoCreateTasks;
         this.id = id;
@@ -169,42 +169,42 @@ public final class GetTaskDefinitionResult {
     	      this.update = defaults.update;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAutoCreateTasks(@Nullable Boolean autoCreateTasks) {
+        public Builder autoCreateTasks(@Nullable Boolean autoCreateTasks) {
             this.autoCreateTasks = autoCreateTasks;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry) {
+        public Builder loRaWANUpdateGatewayTaskEntry(@Nullable TaskDefinitionLoRaWANUpdateGatewayTaskEntry loRaWANUpdateGatewayTaskEntry) {
             this.loRaWANUpdateGatewayTaskEntry = loRaWANUpdateGatewayTaskEntry;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TaskDefinitionTag> tags) {
+        public Builder tags(@Nullable List<TaskDefinitionTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
+        public Builder taskDefinitionType(@Nullable TaskDefinitionType taskDefinitionType) {
             this.taskDefinitionType = taskDefinitionType;
             return this;
         }
 
-        public Builder setUpdate(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
+        public Builder update(@Nullable TaskDefinitionUpdateWirelessGatewayTaskCreate update) {
             this.update = update;
             return this;
         }

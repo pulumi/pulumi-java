@@ -16,8 +16,8 @@ public final class WorkflowTemplateParameterValidationValues {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private WorkflowTemplateParameterValidationValues(List<String> values) {
+    @OutputCustomType.Constructor
+    private WorkflowTemplateParameterValidationValues(@OutputCustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 
@@ -49,7 +49,7 @@ public final class WorkflowTemplateParameterValidationValues {
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo;
 
-    @OutputCustomType.Constructor({"elbInfos","targetGroupInfos","targetGroupPairInfo"})
+    @OutputCustomType.Constructor
     private DeploymentGroupLoadBalancerInfo(
-        @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
-        @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
-        @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
+        @OutputCustomType.Parameter("elbInfos") @Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos,
+        @OutputCustomType.Parameter("targetGroupInfos") @Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos,
+        @OutputCustomType.Parameter("targetGroupPairInfo") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
         this.elbInfos = elbInfos;
         this.targetGroupInfos = targetGroupInfos;
         this.targetGroupPairInfo = targetGroupPairInfo;
@@ -86,17 +86,17 @@ public final class DeploymentGroupLoadBalancerInfo {
     	      this.targetGroupPairInfo = defaults.targetGroupPairInfo;
         }
 
-        public Builder setElbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos) {
+        public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfo> elbInfos) {
             this.elbInfos = elbInfos;
             return this;
         }
 
-        public Builder setTargetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos) {
+        public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfo> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
 
-        public Builder setTargetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
+        public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfo targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }

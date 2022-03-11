@@ -50,12 +50,12 @@ public final class FeatureStateGetArgs extends io.pulumi.resources.ResourceArgs 
     	      this.states = defaults.states;
         }
 
-        public Builder setStates(@Nullable Input<List<FeatureStateStateGetArgs>> states) {
+        public Builder states(@Nullable Input<List<FeatureStateStateGetArgs>> states) {
             this.states = states;
             return this;
         }
 
-        public Builder setStates(@Nullable List<FeatureStateStateGetArgs> states) {
+        public Builder states(@Nullable List<FeatureStateStateGetArgs> states) {
             this.states = Input.ofNullable(states);
             return this;
         }

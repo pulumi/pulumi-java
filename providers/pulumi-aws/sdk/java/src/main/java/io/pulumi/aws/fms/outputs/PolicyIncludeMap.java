@@ -22,10 +22,10 @@ public final class PolicyIncludeMap {
      */
     private final @Nullable List<String> orgunits;
 
-    @OutputCustomType.Constructor({"accounts","orgunits"})
+    @OutputCustomType.Constructor
     private PolicyIncludeMap(
-        @Nullable List<String> accounts,
-        @Nullable List<String> orgunits) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<String> accounts,
+        @OutputCustomType.Parameter("orgunits") @Nullable List<String> orgunits) {
         this.accounts = accounts;
         this.orgunits = orgunits;
     }
@@ -67,12 +67,12 @@ public final class PolicyIncludeMap {
     	      this.orgunits = defaults.orgunits;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setOrgunits(@Nullable List<String> orgunits) {
+        public Builder orgunits(@Nullable List<String> orgunits) {
             this.orgunits = orgunits;
             return this;
         }

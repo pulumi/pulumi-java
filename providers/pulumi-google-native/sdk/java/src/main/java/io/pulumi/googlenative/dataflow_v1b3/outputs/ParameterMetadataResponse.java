@@ -48,15 +48,15 @@ public final class ParameterMetadataResponse {
      */
     private final List<String> regexes;
 
-    @OutputCustomType.Constructor({"customMetadata","helpText","isOptional","label","name","paramType","regexes"})
+    @OutputCustomType.Constructor
     private ParameterMetadataResponse(
-        Map<String,String> customMetadata,
-        String helpText,
-        Boolean isOptional,
-        String label,
-        String name,
-        String paramType,
-        List<String> regexes) {
+        @OutputCustomType.Parameter("customMetadata") Map<String,String> customMetadata,
+        @OutputCustomType.Parameter("helpText") String helpText,
+        @OutputCustomType.Parameter("isOptional") Boolean isOptional,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("paramType") String paramType,
+        @OutputCustomType.Parameter("regexes") List<String> regexes) {
         this.customMetadata = customMetadata;
         this.helpText = helpText;
         this.isOptional = isOptional;
@@ -148,37 +148,37 @@ public final class ParameterMetadataResponse {
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder setCustomMetadata(Map<String,String> customMetadata) {
+        public Builder customMetadata(Map<String,String> customMetadata) {
             this.customMetadata = Objects.requireNonNull(customMetadata);
             return this;
         }
 
-        public Builder setHelpText(String helpText) {
+        public Builder helpText(String helpText) {
             this.helpText = Objects.requireNonNull(helpText);
             return this;
         }
 
-        public Builder setIsOptional(Boolean isOptional) {
+        public Builder isOptional(Boolean isOptional) {
             this.isOptional = Objects.requireNonNull(isOptional);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParamType(String paramType) {
+        public Builder paramType(String paramType) {
             this.paramType = Objects.requireNonNull(paramType);
             return this;
         }
 
-        public Builder setRegexes(List<String> regexes) {
+        public Builder regexes(List<String> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }

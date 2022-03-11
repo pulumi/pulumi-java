@@ -15,8 +15,8 @@ public final class FHIRDatastorePreloadDataConfig {
      */
     private final FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType;
 
-    @OutputCustomType.Constructor({"preloadDataType"})
-    private FHIRDatastorePreloadDataConfig(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
+    @OutputCustomType.Constructor
+    private FHIRDatastorePreloadDataConfig(@OutputCustomType.Parameter("preloadDataType") FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
         this.preloadDataType = preloadDataType;
     }
 
@@ -48,7 +48,7 @@ public final class FHIRDatastorePreloadDataConfig {
     	      this.preloadDataType = defaults.preloadDataType;
         }
 
-        public Builder setPreloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
+        public Builder preloadDataType(FHIRDatastorePreloadDataConfigPreloadDataType preloadDataType) {
             this.preloadDataType = Objects.requireNonNull(preloadDataType);
             return this;
         }

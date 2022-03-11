@@ -20,10 +20,10 @@ public final class TaskDefinitionInferenceAccelerator {
      */
     private final String deviceType;
 
-    @OutputCustomType.Constructor({"deviceName","deviceType"})
+    @OutputCustomType.Constructor
     private TaskDefinitionInferenceAccelerator(
-        String deviceName,
-        String deviceType) {
+        @OutputCustomType.Parameter("deviceName") String deviceName,
+        @OutputCustomType.Parameter("deviceType") String deviceType) {
         this.deviceName = deviceName;
         this.deviceType = deviceType;
     }
@@ -65,12 +65,12 @@ public final class TaskDefinitionInferenceAccelerator {
     	      this.deviceType = defaults.deviceType;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceType(String deviceType) {
+        public Builder deviceType(String deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }

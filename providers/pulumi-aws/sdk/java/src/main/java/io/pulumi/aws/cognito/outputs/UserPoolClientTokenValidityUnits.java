@@ -27,11 +27,11 @@ public final class UserPoolClientTokenValidityUnits {
      */
     private final @Nullable String refreshToken;
 
-    @OutputCustomType.Constructor({"accessToken","idToken","refreshToken"})
+    @OutputCustomType.Constructor
     private UserPoolClientTokenValidityUnits(
-        @Nullable String accessToken,
-        @Nullable String idToken,
-        @Nullable String refreshToken) {
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("idToken") @Nullable String idToken,
+        @OutputCustomType.Parameter("refreshToken") @Nullable String refreshToken) {
         this.accessToken = accessToken;
         this.idToken = idToken;
         this.refreshToken = refreshToken;
@@ -83,17 +83,17 @@ public final class UserPoolClientTokenValidityUnits {
     	      this.refreshToken = defaults.refreshToken;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setIdToken(@Nullable String idToken) {
+        public Builder idToken(@Nullable String idToken) {
             this.idToken = idToken;
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable String refreshToken) {
+        public Builder refreshToken(@Nullable String refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }

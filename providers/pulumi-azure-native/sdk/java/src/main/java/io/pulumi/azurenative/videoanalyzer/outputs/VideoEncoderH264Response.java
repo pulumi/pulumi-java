@@ -34,12 +34,12 @@ public final class VideoEncoderH264Response {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bitrateKbps","frameRate","scale","type"})
+    @OutputCustomType.Constructor
     private VideoEncoderH264Response(
-        @Nullable String bitrateKbps,
-        @Nullable String frameRate,
-        @Nullable VideoScaleResponse scale,
-        String type) {
+        @OutputCustomType.Parameter("bitrateKbps") @Nullable String bitrateKbps,
+        @OutputCustomType.Parameter("frameRate") @Nullable String frameRate,
+        @OutputCustomType.Parameter("scale") @Nullable VideoScaleResponse scale,
+        @OutputCustomType.Parameter("type") String type) {
         this.bitrateKbps = bitrateKbps;
         this.frameRate = frameRate;
         this.scale = scale;
@@ -102,22 +102,22 @@ public final class VideoEncoderH264Response {
     	      this.type = defaults.type;
         }
 
-        public Builder setBitrateKbps(@Nullable String bitrateKbps) {
+        public Builder bitrateKbps(@Nullable String bitrateKbps) {
             this.bitrateKbps = bitrateKbps;
             return this;
         }
 
-        public Builder setFrameRate(@Nullable String frameRate) {
+        public Builder frameRate(@Nullable String frameRate) {
             this.frameRate = frameRate;
             return this;
         }
 
-        public Builder setScale(@Nullable VideoScaleResponse scale) {
+        public Builder scale(@Nullable VideoScaleResponse scale) {
             this.scale = scale;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

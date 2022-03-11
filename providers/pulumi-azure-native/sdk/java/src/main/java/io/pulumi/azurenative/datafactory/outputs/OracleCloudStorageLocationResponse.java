@@ -39,13 +39,13 @@ public final class OracleCloudStorageLocationResponse {
      */
     private final @Nullable Object version;
 
-    @OutputCustomType.Constructor({"bucketName","fileName","folderPath","type","version"})
+    @OutputCustomType.Constructor
     private OracleCloudStorageLocationResponse(
-        @Nullable Object bucketName,
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type,
-        @Nullable Object version) {
+        @OutputCustomType.Parameter("bucketName") @Nullable Object bucketName,
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable Object version) {
         this.bucketName = bucketName;
         this.fileName = fileName;
         this.folderPath = folderPath;
@@ -118,27 +118,27 @@ public final class OracleCloudStorageLocationResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setBucketName(@Nullable Object bucketName) {
+        public Builder bucketName(@Nullable Object bucketName) {
             this.bucketName = bucketName;
             return this;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable Object version) {
+        public Builder version(@Nullable Object version) {
             this.version = version;
             return this;
         }

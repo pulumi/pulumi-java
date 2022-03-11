@@ -37,17 +37,17 @@ public final class GetResourcePolicyResult {
     private final String selfLink;
     private final List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies;
 
-    @OutputCustomType.Constructor({"description","groupPlacementPolicies","id","instanceSchedulePolicies","name","project","region","selfLink","snapshotSchedulePolicies"})
+    @OutputCustomType.Constructor
     private GetResourcePolicyResult(
-        String description,
-        List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
-        String id,
-        List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
-        String name,
-        @Nullable String project,
-        @Nullable String region,
-        String selfLink,
-        List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("groupPlacementPolicies") List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceSchedulePolicies") List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("snapshotSchedulePolicies") List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
         this.description = description;
         this.groupPlacementPolicies = groupPlacementPolicies;
         this.id = id;
@@ -135,47 +135,47 @@ public final class GetResourcePolicyResult {
     	      this.snapshotSchedulePolicies = defaults.snapshotSchedulePolicies;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setGroupPlacementPolicies(List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies) {
+        public Builder groupPlacementPolicies(List<GetResourcePolicyGroupPlacementPolicy> groupPlacementPolicies) {
             this.groupPlacementPolicies = Objects.requireNonNull(groupPlacementPolicies);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceSchedulePolicies(List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies) {
+        public Builder instanceSchedulePolicies(List<GetResourcePolicyInstanceSchedulePolicy> instanceSchedulePolicies) {
             this.instanceSchedulePolicies = Objects.requireNonNull(instanceSchedulePolicies);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSnapshotSchedulePolicies(List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
+        public Builder snapshotSchedulePolicies(List<GetResourcePolicySnapshotSchedulePolicy> snapshotSchedulePolicies) {
             this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
             return this;
         }

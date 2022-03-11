@@ -33,12 +33,12 @@ public final class HostVpcConfiguration {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnetIds","tlsCertificate","vpcId"})
+    @OutputCustomType.Constructor
     private HostVpcConfiguration(
-        List<String> securityGroupIds,
-        List<String> subnetIds,
-        @Nullable String tlsCertificate,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tlsCertificate") @Nullable String tlsCertificate,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
         this.tlsCertificate = tlsCertificate;
@@ -100,22 +100,22 @@ public final class HostVpcConfiguration {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTlsCertificate(@Nullable String tlsCertificate) {
+        public Builder tlsCertificate(@Nullable String tlsCertificate) {
             this.tlsCertificate = tlsCertificate;
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

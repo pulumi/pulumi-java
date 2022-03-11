@@ -37,13 +37,13 @@ public final class TemplateLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"contentVersion","id","queryString","relativePath","uri"})
+    @OutputCustomType.Constructor
     private TemplateLinkResponse(
-        @Nullable String contentVersion,
-        @Nullable String id,
-        @Nullable String queryString,
-        @Nullable String relativePath,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("contentVersion") @Nullable String contentVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("queryString") @Nullable String queryString,
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.contentVersion = contentVersion;
         this.id = id;
         this.queryString = queryString;
@@ -115,27 +115,27 @@ public final class TemplateLinkResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentVersion(@Nullable String contentVersion) {
+        public Builder contentVersion(@Nullable String contentVersion) {
             this.contentVersion = contentVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setQueryString(@Nullable String queryString) {
+        public Builder queryString(@Nullable String queryString) {
             this.queryString = queryString;
             return this;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

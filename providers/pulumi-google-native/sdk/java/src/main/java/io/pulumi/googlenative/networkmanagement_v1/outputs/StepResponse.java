@@ -121,27 +121,27 @@ public final class StepResponse {
      */
     private final VpnTunnelInfoResponse vpnTunnel;
 
-    @OutputCustomType.Constructor({"abort","causesDrop","cloudSqlInstance","deliver","description","drop","endpoint","firewall","forward","forwardingRule","gkeMaster","instance","loadBalancer","network","project","route","state","vpnGateway","vpnTunnel"})
+    @OutputCustomType.Constructor
     private StepResponse(
-        AbortInfoResponse abort,
-        Boolean causesDrop,
-        CloudSQLInstanceInfoResponse cloudSqlInstance,
-        DeliverInfoResponse deliver,
-        String description,
-        DropInfoResponse drop,
-        EndpointInfoResponse endpoint,
-        FirewallInfoResponse firewall,
-        ForwardInfoResponse forward,
-        ForwardingRuleInfoResponse forwardingRule,
-        GKEMasterInfoResponse gkeMaster,
-        InstanceInfoResponse instance,
-        LoadBalancerInfoResponse loadBalancer,
-        NetworkInfoResponse network,
-        String project,
-        RouteInfoResponse route,
-        String state,
-        VpnGatewayInfoResponse vpnGateway,
-        VpnTunnelInfoResponse vpnTunnel) {
+        @OutputCustomType.Parameter("abort") AbortInfoResponse abort,
+        @OutputCustomType.Parameter("causesDrop") Boolean causesDrop,
+        @OutputCustomType.Parameter("cloudSqlInstance") CloudSQLInstanceInfoResponse cloudSqlInstance,
+        @OutputCustomType.Parameter("deliver") DeliverInfoResponse deliver,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("drop") DropInfoResponse drop,
+        @OutputCustomType.Parameter("endpoint") EndpointInfoResponse endpoint,
+        @OutputCustomType.Parameter("firewall") FirewallInfoResponse firewall,
+        @OutputCustomType.Parameter("forward") ForwardInfoResponse forward,
+        @OutputCustomType.Parameter("forwardingRule") ForwardingRuleInfoResponse forwardingRule,
+        @OutputCustomType.Parameter("gkeMaster") GKEMasterInfoResponse gkeMaster,
+        @OutputCustomType.Parameter("instance") InstanceInfoResponse instance,
+        @OutputCustomType.Parameter("loadBalancer") LoadBalancerInfoResponse loadBalancer,
+        @OutputCustomType.Parameter("network") NetworkInfoResponse network,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("route") RouteInfoResponse route,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("vpnGateway") VpnGatewayInfoResponse vpnGateway,
+        @OutputCustomType.Parameter("vpnTunnel") VpnTunnelInfoResponse vpnTunnel) {
         this.abort = abort;
         this.causesDrop = causesDrop;
         this.cloudSqlInstance = cloudSqlInstance;
@@ -353,97 +353,97 @@ public final class StepResponse {
     	      this.vpnTunnel = defaults.vpnTunnel;
         }
 
-        public Builder setAbort(AbortInfoResponse abort) {
+        public Builder abort(AbortInfoResponse abort) {
             this.abort = Objects.requireNonNull(abort);
             return this;
         }
 
-        public Builder setCausesDrop(Boolean causesDrop) {
+        public Builder causesDrop(Boolean causesDrop) {
             this.causesDrop = Objects.requireNonNull(causesDrop);
             return this;
         }
 
-        public Builder setCloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
+        public Builder cloudSqlInstance(CloudSQLInstanceInfoResponse cloudSqlInstance) {
             this.cloudSqlInstance = Objects.requireNonNull(cloudSqlInstance);
             return this;
         }
 
-        public Builder setDeliver(DeliverInfoResponse deliver) {
+        public Builder deliver(DeliverInfoResponse deliver) {
             this.deliver = Objects.requireNonNull(deliver);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDrop(DropInfoResponse drop) {
+        public Builder drop(DropInfoResponse drop) {
             this.drop = Objects.requireNonNull(drop);
             return this;
         }
 
-        public Builder setEndpoint(EndpointInfoResponse endpoint) {
+        public Builder endpoint(EndpointInfoResponse endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setFirewall(FirewallInfoResponse firewall) {
+        public Builder firewall(FirewallInfoResponse firewall) {
             this.firewall = Objects.requireNonNull(firewall);
             return this;
         }
 
-        public Builder setForward(ForwardInfoResponse forward) {
+        public Builder forward(ForwardInfoResponse forward) {
             this.forward = Objects.requireNonNull(forward);
             return this;
         }
 
-        public Builder setForwardingRule(ForwardingRuleInfoResponse forwardingRule) {
+        public Builder forwardingRule(ForwardingRuleInfoResponse forwardingRule) {
             this.forwardingRule = Objects.requireNonNull(forwardingRule);
             return this;
         }
 
-        public Builder setGkeMaster(GKEMasterInfoResponse gkeMaster) {
+        public Builder gkeMaster(GKEMasterInfoResponse gkeMaster) {
             this.gkeMaster = Objects.requireNonNull(gkeMaster);
             return this;
         }
 
-        public Builder setInstance(InstanceInfoResponse instance) {
+        public Builder instance(InstanceInfoResponse instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setLoadBalancer(LoadBalancerInfoResponse loadBalancer) {
+        public Builder loadBalancer(LoadBalancerInfoResponse loadBalancer) {
             this.loadBalancer = Objects.requireNonNull(loadBalancer);
             return this;
         }
 
-        public Builder setNetwork(NetworkInfoResponse network) {
+        public Builder network(NetworkInfoResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRoute(RouteInfoResponse route) {
+        public Builder route(RouteInfoResponse route) {
             this.route = Objects.requireNonNull(route);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVpnGateway(VpnGatewayInfoResponse vpnGateway) {
+        public Builder vpnGateway(VpnGatewayInfoResponse vpnGateway) {
             this.vpnGateway = Objects.requireNonNull(vpnGateway);
             return this;
         }
 
-        public Builder setVpnTunnel(VpnTunnelInfoResponse vpnTunnel) {
+        public Builder vpnTunnel(VpnTunnelInfoResponse vpnTunnel) {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }

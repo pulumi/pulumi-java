@@ -21,10 +21,10 @@ public final class InstancePropertiesPatchResponse {
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"labels","metadata"})
+    @OutputCustomType.Constructor
     private InstancePropertiesPatchResponse(
-        Map<String,String> labels,
-        Map<String,String> metadata) {
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
         this.labels = labels;
         this.metadata = metadata;
     }
@@ -66,12 +66,12 @@ public final class InstancePropertiesPatchResponse {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }

@@ -26,11 +26,11 @@ public final class PacketMirroringFilterResponse {
      */
     private final List<String> ipProtocols;
 
-    @OutputCustomType.Constructor({"cidrRanges","direction","ipProtocols"})
+    @OutputCustomType.Constructor
     private PacketMirroringFilterResponse(
-        List<String> cidrRanges,
-        String direction,
-        List<String> ipProtocols) {
+        @OutputCustomType.Parameter("cidrRanges") List<String> cidrRanges,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("ipProtocols") List<String> ipProtocols) {
         this.cidrRanges = cidrRanges;
         this.direction = direction;
         this.ipProtocols = ipProtocols;
@@ -82,17 +82,17 @@ public final class PacketMirroringFilterResponse {
     	      this.ipProtocols = defaults.ipProtocols;
         }
 
-        public Builder setCidrRanges(List<String> cidrRanges) {
+        public Builder cidrRanges(List<String> cidrRanges) {
             this.cidrRanges = Objects.requireNonNull(cidrRanges);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setIpProtocols(List<String> ipProtocols) {
+        public Builder ipProtocols(List<String> ipProtocols) {
             this.ipProtocols = Objects.requireNonNull(ipProtocols);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GetFolderPolicyResult {
      */
     private final GoogleCloudOrgpolicyV2PolicySpecResponse spec;
 
-    @OutputCustomType.Constructor({"name","spec"})
+    @OutputCustomType.Constructor
     private GetFolderPolicyResult(
-        String name,
-        GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("spec") GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
         this.name = name;
         this.spec = spec;
     }
@@ -66,12 +66,12 @@ public final class GetFolderPolicyResult {
     	      this.spec = defaults.spec;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSpec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
+        public Builder spec(GoogleCloudOrgpolicyV2PolicySpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }

@@ -55,16 +55,16 @@ public final class GetClusterResult {
      */
     private final List<ClusterStatusResponse> statusHistory;
 
-    @OutputCustomType.Constructor({"clusterName","clusterUuid","config","labels","metrics","project","status","statusHistory"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String clusterName,
-        String clusterUuid,
-        ClusterConfigResponse config,
-        Map<String,String> labels,
-        ClusterMetricsResponse metrics,
-        String project,
-        ClusterStatusResponse status,
-        List<ClusterStatusResponse> statusHistory) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterUuid") String clusterUuid,
+        @OutputCustomType.Parameter("config") ClusterConfigResponse config,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("metrics") ClusterMetricsResponse metrics,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("status") ClusterStatusResponse status,
+        @OutputCustomType.Parameter("statusHistory") List<ClusterStatusResponse> statusHistory) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
         this.config = config;
@@ -166,42 +166,42 @@ public final class GetClusterResult {
     	      this.statusHistory = defaults.statusHistory;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterUuid(String clusterUuid) {
+        public Builder clusterUuid(String clusterUuid) {
             this.clusterUuid = Objects.requireNonNull(clusterUuid);
             return this;
         }
 
-        public Builder setConfig(ClusterConfigResponse config) {
+        public Builder config(ClusterConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMetrics(ClusterMetricsResponse metrics) {
+        public Builder metrics(ClusterMetricsResponse metrics) {
             this.metrics = Objects.requireNonNull(metrics);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setStatus(ClusterStatusResponse status) {
+        public Builder status(ClusterStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusHistory(List<ClusterStatusResponse> statusHistory) {
+        public Builder statusHistory(List<ClusterStatusResponse> statusHistory) {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }

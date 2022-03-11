@@ -40,13 +40,13 @@ public final class Namespace {
      */
     private final @Nullable NamespaceStatus status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private Namespace(
-        @Nullable String apiVersion,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable NamespaceSpec spec,
-        @Nullable NamespaceStatus status) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("spec") @Nullable NamespaceSpec spec,
+        @OutputCustomType.Parameter("status") @Nullable NamespaceStatus status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -118,27 +118,27 @@ public final class Namespace {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setSpec(@Nullable NamespaceSpec spec) {
+        public Builder spec(@Nullable NamespaceSpec spec) {
             this.spec = spec;
             return this;
         }
 
-        public Builder setStatus(@Nullable NamespaceStatus status) {
+        public Builder status(@Nullable NamespaceStatus status) {
             this.status = status;
             return this;
         }

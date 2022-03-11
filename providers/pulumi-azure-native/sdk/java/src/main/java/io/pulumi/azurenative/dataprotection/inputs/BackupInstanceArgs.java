@@ -121,52 +121,52 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.policyInfo = defaults.policyInfo;
         }
 
-        public Builder setDataSourceInfo(Input<DatasourceArgs> dataSourceInfo) {
+        public Builder dataSourceInfo(Input<DatasourceArgs> dataSourceInfo) {
             this.dataSourceInfo = Objects.requireNonNull(dataSourceInfo);
             return this;
         }
 
-        public Builder setDataSourceInfo(DatasourceArgs dataSourceInfo) {
+        public Builder dataSourceInfo(DatasourceArgs dataSourceInfo) {
             this.dataSourceInfo = Input.of(Objects.requireNonNull(dataSourceInfo));
             return this;
         }
 
-        public Builder setDataSourceSetInfo(@Nullable Input<DatasourceSetArgs> dataSourceSetInfo) {
+        public Builder dataSourceSetInfo(@Nullable Input<DatasourceSetArgs> dataSourceSetInfo) {
             this.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
 
-        public Builder setDataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
+        public Builder dataSourceSetInfo(@Nullable DatasourceSetArgs dataSourceSetInfo) {
             this.dataSourceSetInfo = Input.ofNullable(dataSourceSetInfo);
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable Input<String> friendlyName) {
+        public Builder friendlyName(@Nullable Input<String> friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = Input.ofNullable(friendlyName);
             return this;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setPolicyInfo(Input<PolicyInfoArgs> policyInfo) {
+        public Builder policyInfo(Input<PolicyInfoArgs> policyInfo) {
             this.policyInfo = Objects.requireNonNull(policyInfo);
             return this;
         }
 
-        public Builder setPolicyInfo(PolicyInfoArgs policyInfo) {
+        public Builder policyInfo(PolicyInfoArgs policyInfo) {
             this.policyInfo = Input.of(Objects.requireNonNull(policyInfo));
             return this;
         }

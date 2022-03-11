@@ -183,92 +183,92 @@ public final class ClusterEc2AttributesArgs extends io.pulumi.resources.Resource
     	      this.subnetIds = defaults.subnetIds;
         }
 
-        public Builder setAdditionalMasterSecurityGroups(@Nullable Input<String> additionalMasterSecurityGroups) {
+        public Builder additionalMasterSecurityGroups(@Nullable Input<String> additionalMasterSecurityGroups) {
             this.additionalMasterSecurityGroups = additionalMasterSecurityGroups;
             return this;
         }
 
-        public Builder setAdditionalMasterSecurityGroups(@Nullable String additionalMasterSecurityGroups) {
+        public Builder additionalMasterSecurityGroups(@Nullable String additionalMasterSecurityGroups) {
             this.additionalMasterSecurityGroups = Input.ofNullable(additionalMasterSecurityGroups);
             return this;
         }
 
-        public Builder setAdditionalSlaveSecurityGroups(@Nullable Input<String> additionalSlaveSecurityGroups) {
+        public Builder additionalSlaveSecurityGroups(@Nullable Input<String> additionalSlaveSecurityGroups) {
             this.additionalSlaveSecurityGroups = additionalSlaveSecurityGroups;
             return this;
         }
 
-        public Builder setAdditionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
+        public Builder additionalSlaveSecurityGroups(@Nullable String additionalSlaveSecurityGroups) {
             this.additionalSlaveSecurityGroups = Input.ofNullable(additionalSlaveSecurityGroups);
             return this;
         }
 
-        public Builder setEmrManagedMasterSecurityGroup(@Nullable Input<String> emrManagedMasterSecurityGroup) {
+        public Builder emrManagedMasterSecurityGroup(@Nullable Input<String> emrManagedMasterSecurityGroup) {
             this.emrManagedMasterSecurityGroup = emrManagedMasterSecurityGroup;
             return this;
         }
 
-        public Builder setEmrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
+        public Builder emrManagedMasterSecurityGroup(@Nullable String emrManagedMasterSecurityGroup) {
             this.emrManagedMasterSecurityGroup = Input.ofNullable(emrManagedMasterSecurityGroup);
             return this;
         }
 
-        public Builder setEmrManagedSlaveSecurityGroup(@Nullable Input<String> emrManagedSlaveSecurityGroup) {
+        public Builder emrManagedSlaveSecurityGroup(@Nullable Input<String> emrManagedSlaveSecurityGroup) {
             this.emrManagedSlaveSecurityGroup = emrManagedSlaveSecurityGroup;
             return this;
         }
 
-        public Builder setEmrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
+        public Builder emrManagedSlaveSecurityGroup(@Nullable String emrManagedSlaveSecurityGroup) {
             this.emrManagedSlaveSecurityGroup = Input.ofNullable(emrManagedSlaveSecurityGroup);
             return this;
         }
 
-        public Builder setInstanceProfile(Input<String> instanceProfile) {
+        public Builder instanceProfile(Input<String> instanceProfile) {
             this.instanceProfile = Objects.requireNonNull(instanceProfile);
             return this;
         }
 
-        public Builder setInstanceProfile(String instanceProfile) {
+        public Builder instanceProfile(String instanceProfile) {
             this.instanceProfile = Input.of(Objects.requireNonNull(instanceProfile));
             return this;
         }
 
-        public Builder setKeyName(@Nullable Input<String> keyName) {
+        public Builder keyName(@Nullable Input<String> keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = Input.ofNullable(keyName);
             return this;
         }
 
-        public Builder setServiceAccessSecurityGroup(@Nullable Input<String> serviceAccessSecurityGroup) {
+        public Builder serviceAccessSecurityGroup(@Nullable Input<String> serviceAccessSecurityGroup) {
             this.serviceAccessSecurityGroup = serviceAccessSecurityGroup;
             return this;
         }
 
-        public Builder setServiceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
+        public Builder serviceAccessSecurityGroup(@Nullable String serviceAccessSecurityGroup) {
             this.serviceAccessSecurityGroup = Input.ofNullable(serviceAccessSecurityGroup);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }

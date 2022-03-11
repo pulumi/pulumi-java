@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
      */
     private final GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
-    @OutputCustomType.Constructor({"livePersonConfig","salesforceLiveAgentConfig"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(
-        GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
-        GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
+        @OutputCustomType.Parameter("livePersonConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig,
+        @OutputCustomType.Parameter("salesforceLiveAgentConfig") GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
         this.livePersonConfig = livePersonConfig;
         this.salesforceLiveAgentConfig = salesforceLiveAgentConfig;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
     	      this.salesforceLiveAgentConfig = defaults.salesforceLiveAgentConfig;
         }
 
-        public Builder setLivePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
+        public Builder livePersonConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig) {
             this.livePersonConfig = Objects.requireNonNull(livePersonConfig);
             return this;
         }
 
-        public Builder setSalesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
+        public Builder salesforceLiveAgentConfig(GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig) {
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }

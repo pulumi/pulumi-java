@@ -23,10 +23,10 @@ public final class EdgeCacheServiceRouting {
      */
     private final List<EdgeCacheServiceRoutingPathMatcher> pathMatchers;
 
-    @OutputCustomType.Constructor({"hostRules","pathMatchers"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRouting(
-        List<EdgeCacheServiceRoutingHostRule> hostRules,
-        List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
+        @OutputCustomType.Parameter("hostRules") List<EdgeCacheServiceRoutingHostRule> hostRules,
+        @OutputCustomType.Parameter("pathMatchers") List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
         this.hostRules = hostRules;
         this.pathMatchers = pathMatchers;
     }
@@ -69,12 +69,12 @@ public final class EdgeCacheServiceRouting {
     	      this.pathMatchers = defaults.pathMatchers;
         }
 
-        public Builder setHostRules(List<EdgeCacheServiceRoutingHostRule> hostRules) {
+        public Builder hostRules(List<EdgeCacheServiceRoutingHostRule> hostRules) {
             this.hostRules = Objects.requireNonNull(hostRules);
             return this;
         }
 
-        public Builder setPathMatchers(List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
+        public Builder pathMatchers(List<EdgeCacheServiceRoutingPathMatcher> pathMatchers) {
             this.pathMatchers = Objects.requireNonNull(pathMatchers);
             return this;
         }

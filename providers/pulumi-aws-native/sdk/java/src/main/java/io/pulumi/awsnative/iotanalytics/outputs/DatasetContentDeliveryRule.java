@@ -15,10 +15,10 @@ public final class DatasetContentDeliveryRule {
     private final DatasetContentDeliveryRuleDestination destination;
     private final @Nullable String entryName;
 
-    @OutputCustomType.Constructor({"destination","entryName"})
+    @OutputCustomType.Constructor
     private DatasetContentDeliveryRule(
-        DatasetContentDeliveryRuleDestination destination,
-        @Nullable String entryName) {
+        @OutputCustomType.Parameter("destination") DatasetContentDeliveryRuleDestination destination,
+        @OutputCustomType.Parameter("entryName") @Nullable String entryName) {
         this.destination = destination;
         this.entryName = entryName;
     }
@@ -52,12 +52,12 @@ public final class DatasetContentDeliveryRule {
     	      this.entryName = defaults.entryName;
         }
 
-        public Builder setDestination(DatasetContentDeliveryRuleDestination destination) {
+        public Builder destination(DatasetContentDeliveryRuleDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setEntryName(@Nullable String entryName) {
+        public Builder entryName(@Nullable String entryName) {
             this.entryName = entryName;
             return this;
         }

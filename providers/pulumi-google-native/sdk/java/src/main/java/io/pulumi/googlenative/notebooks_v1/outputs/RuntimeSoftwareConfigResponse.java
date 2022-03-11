@@ -54,16 +54,16 @@ public final class RuntimeSoftwareConfigResponse {
      */
     private final String postStartupScript;
 
-    @OutputCustomType.Constructor({"customGpuDriverPath","enableHealthMonitoring","idleShutdown","idleShutdownTimeout","installGpuDriver","kernels","notebookUpgradeSchedule","postStartupScript"})
+    @OutputCustomType.Constructor
     private RuntimeSoftwareConfigResponse(
-        String customGpuDriverPath,
-        Boolean enableHealthMonitoring,
-        Boolean idleShutdown,
-        Integer idleShutdownTimeout,
-        Boolean installGpuDriver,
-        List<ContainerImageResponse> kernels,
-        String notebookUpgradeSchedule,
-        String postStartupScript) {
+        @OutputCustomType.Parameter("customGpuDriverPath") String customGpuDriverPath,
+        @OutputCustomType.Parameter("enableHealthMonitoring") Boolean enableHealthMonitoring,
+        @OutputCustomType.Parameter("idleShutdown") Boolean idleShutdown,
+        @OutputCustomType.Parameter("idleShutdownTimeout") Integer idleShutdownTimeout,
+        @OutputCustomType.Parameter("installGpuDriver") Boolean installGpuDriver,
+        @OutputCustomType.Parameter("kernels") List<ContainerImageResponse> kernels,
+        @OutputCustomType.Parameter("notebookUpgradeSchedule") String notebookUpgradeSchedule,
+        @OutputCustomType.Parameter("postStartupScript") String postStartupScript) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;
@@ -165,42 +165,42 @@ public final class RuntimeSoftwareConfigResponse {
     	      this.postStartupScript = defaults.postStartupScript;
         }
 
-        public Builder setCustomGpuDriverPath(String customGpuDriverPath) {
+        public Builder customGpuDriverPath(String customGpuDriverPath) {
             this.customGpuDriverPath = Objects.requireNonNull(customGpuDriverPath);
             return this;
         }
 
-        public Builder setEnableHealthMonitoring(Boolean enableHealthMonitoring) {
+        public Builder enableHealthMonitoring(Boolean enableHealthMonitoring) {
             this.enableHealthMonitoring = Objects.requireNonNull(enableHealthMonitoring);
             return this;
         }
 
-        public Builder setIdleShutdown(Boolean idleShutdown) {
+        public Builder idleShutdown(Boolean idleShutdown) {
             this.idleShutdown = Objects.requireNonNull(idleShutdown);
             return this;
         }
 
-        public Builder setIdleShutdownTimeout(Integer idleShutdownTimeout) {
+        public Builder idleShutdownTimeout(Integer idleShutdownTimeout) {
             this.idleShutdownTimeout = Objects.requireNonNull(idleShutdownTimeout);
             return this;
         }
 
-        public Builder setInstallGpuDriver(Boolean installGpuDriver) {
+        public Builder installGpuDriver(Boolean installGpuDriver) {
             this.installGpuDriver = Objects.requireNonNull(installGpuDriver);
             return this;
         }
 
-        public Builder setKernels(List<ContainerImageResponse> kernels) {
+        public Builder kernels(List<ContainerImageResponse> kernels) {
             this.kernels = Objects.requireNonNull(kernels);
             return this;
         }
 
-        public Builder setNotebookUpgradeSchedule(String notebookUpgradeSchedule) {
+        public Builder notebookUpgradeSchedule(String notebookUpgradeSchedule) {
             this.notebookUpgradeSchedule = Objects.requireNonNull(notebookUpgradeSchedule);
             return this;
         }
 
-        public Builder setPostStartupScript(String postStartupScript) {
+        public Builder postStartupScript(String postStartupScript) {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }

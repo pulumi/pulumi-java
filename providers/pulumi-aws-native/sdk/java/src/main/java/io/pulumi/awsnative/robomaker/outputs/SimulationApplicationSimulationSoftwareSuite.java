@@ -23,10 +23,10 @@ public final class SimulationApplicationSimulationSoftwareSuite {
      */
     private final @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private SimulationApplicationSimulationSoftwareSuite(
-        SimulationApplicationSimulationSoftwareSuiteName name,
-        @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
+        @OutputCustomType.Parameter("name") SimulationApplicationSimulationSoftwareSuiteName name,
+        @OutputCustomType.Parameter("version") @Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
         this.name = name;
         this.version = version;
     }
@@ -68,12 +68,12 @@ public final class SimulationApplicationSimulationSoftwareSuite {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(SimulationApplicationSimulationSoftwareSuiteName name) {
+        public Builder name(SimulationApplicationSimulationSoftwareSuiteName name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
+        public Builder version(@Nullable SimulationApplicationSimulationSoftwareSuiteVersion version) {
             this.version = version;
             return this;
         }

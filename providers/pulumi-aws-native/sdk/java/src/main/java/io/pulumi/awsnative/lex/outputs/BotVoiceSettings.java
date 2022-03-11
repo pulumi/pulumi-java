@@ -15,8 +15,8 @@ public final class BotVoiceSettings {
      */
     private final String voiceId;
 
-    @OutputCustomType.Constructor({"voiceId"})
-    private BotVoiceSettings(String voiceId) {
+    @OutputCustomType.Constructor
+    private BotVoiceSettings(@OutputCustomType.Parameter("voiceId") String voiceId) {
         this.voiceId = voiceId;
     }
 
@@ -48,7 +48,7 @@ public final class BotVoiceSettings {
     	      this.voiceId = defaults.voiceId;
         }
 
-        public Builder setVoiceId(String voiceId) {
+        public Builder voiceId(String voiceId) {
             this.voiceId = Objects.requireNonNull(voiceId);
             return this;
         }

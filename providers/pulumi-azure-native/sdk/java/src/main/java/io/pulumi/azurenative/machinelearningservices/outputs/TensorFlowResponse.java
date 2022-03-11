@@ -29,11 +29,11 @@ public final class TensorFlowResponse {
      */
     private final @Nullable Integer workerCount;
 
-    @OutputCustomType.Constructor({"distributionType","parameterServerCount","workerCount"})
+    @OutputCustomType.Constructor
     private TensorFlowResponse(
-        String distributionType,
-        @Nullable Integer parameterServerCount,
-        @Nullable Integer workerCount) {
+        @OutputCustomType.Parameter("distributionType") String distributionType,
+        @OutputCustomType.Parameter("parameterServerCount") @Nullable Integer parameterServerCount,
+        @OutputCustomType.Parameter("workerCount") @Nullable Integer workerCount) {
         this.distributionType = distributionType;
         this.parameterServerCount = parameterServerCount;
         this.workerCount = workerCount;
@@ -86,17 +86,17 @@ public final class TensorFlowResponse {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setDistributionType(String distributionType) {
+        public Builder distributionType(String distributionType) {
             this.distributionType = Objects.requireNonNull(distributionType);
             return this;
         }
 
-        public Builder setParameterServerCount(@Nullable Integer parameterServerCount) {
+        public Builder parameterServerCount(@Nullable Integer parameterServerCount) {
             this.parameterServerCount = parameterServerCount;
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable Integer workerCount) {
+        public Builder workerCount(@Nullable Integer workerCount) {
             this.workerCount = workerCount;
             return this;
         }

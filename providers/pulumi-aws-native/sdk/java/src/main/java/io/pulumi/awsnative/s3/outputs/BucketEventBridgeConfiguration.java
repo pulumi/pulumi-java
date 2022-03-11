@@ -15,8 +15,8 @@ public final class BucketEventBridgeConfiguration {
      */
     private final Boolean eventBridgeEnabled;
 
-    @OutputCustomType.Constructor({"eventBridgeEnabled"})
-    private BucketEventBridgeConfiguration(Boolean eventBridgeEnabled) {
+    @OutputCustomType.Constructor
+    private BucketEventBridgeConfiguration(@OutputCustomType.Parameter("eventBridgeEnabled") Boolean eventBridgeEnabled) {
         this.eventBridgeEnabled = eventBridgeEnabled;
     }
 
@@ -48,7 +48,7 @@ public final class BucketEventBridgeConfiguration {
     	      this.eventBridgeEnabled = defaults.eventBridgeEnabled;
         }
 
-        public Builder setEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
         }

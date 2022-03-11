@@ -137,62 +137,62 @@ public final class VoiceConnectorTerminationState extends io.pulumi.resources.Re
     	      this.voiceConnectorId = defaults.voiceConnectorId;
         }
 
-        public Builder setCallingRegions(@Nullable Input<List<String>> callingRegions) {
+        public Builder callingRegions(@Nullable Input<List<String>> callingRegions) {
             this.callingRegions = callingRegions;
             return this;
         }
 
-        public Builder setCallingRegions(@Nullable List<String> callingRegions) {
+        public Builder callingRegions(@Nullable List<String> callingRegions) {
             this.callingRegions = Input.ofNullable(callingRegions);
             return this;
         }
 
-        public Builder setCidrAllowLists(@Nullable Input<List<String>> cidrAllowLists) {
+        public Builder cidrAllowLists(@Nullable Input<List<String>> cidrAllowLists) {
             this.cidrAllowLists = cidrAllowLists;
             return this;
         }
 
-        public Builder setCidrAllowLists(@Nullable List<String> cidrAllowLists) {
+        public Builder cidrAllowLists(@Nullable List<String> cidrAllowLists) {
             this.cidrAllowLists = Input.ofNullable(cidrAllowLists);
             return this;
         }
 
-        public Builder setCpsLimit(@Nullable Input<Integer> cpsLimit) {
+        public Builder cpsLimit(@Nullable Input<Integer> cpsLimit) {
             this.cpsLimit = cpsLimit;
             return this;
         }
 
-        public Builder setCpsLimit(@Nullable Integer cpsLimit) {
+        public Builder cpsLimit(@Nullable Integer cpsLimit) {
             this.cpsLimit = Input.ofNullable(cpsLimit);
             return this;
         }
 
-        public Builder setDefaultPhoneNumber(@Nullable Input<String> defaultPhoneNumber) {
+        public Builder defaultPhoneNumber(@Nullable Input<String> defaultPhoneNumber) {
             this.defaultPhoneNumber = defaultPhoneNumber;
             return this;
         }
 
-        public Builder setDefaultPhoneNumber(@Nullable String defaultPhoneNumber) {
+        public Builder defaultPhoneNumber(@Nullable String defaultPhoneNumber) {
             this.defaultPhoneNumber = Input.ofNullable(defaultPhoneNumber);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable Input<String> voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable Input<String> voiceConnectorId) {
             this.voiceConnectorId = voiceConnectorId;
             return this;
         }
 
-        public Builder setVoiceConnectorId(@Nullable String voiceConnectorId) {
+        public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
             this.voiceConnectorId = Input.ofNullable(voiceConnectorId);
             return this;
         }

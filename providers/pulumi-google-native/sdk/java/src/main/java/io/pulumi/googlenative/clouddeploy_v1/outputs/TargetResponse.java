@@ -81,21 +81,21 @@ public final class TargetResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"annotations","anthosCluster","createTime","description","etag","executionConfigs","gke","labels","name","requireApproval","targetId","uid","updateTime"})
+    @OutputCustomType.Constructor
     private TargetResponse(
-        Map<String,String> annotations,
-        AnthosClusterResponse anthosCluster,
-        String createTime,
-        String description,
-        String etag,
-        List<ExecutionConfigResponse> executionConfigs,
-        GkeClusterResponse gke,
-        Map<String,String> labels,
-        String name,
-        Boolean requireApproval,
-        String targetId,
-        String uid,
-        String updateTime) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("anthosCluster") AnthosClusterResponse anthosCluster,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("executionConfigs") List<ExecutionConfigResponse> executionConfigs,
+        @OutputCustomType.Parameter("gke") GkeClusterResponse gke,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requireApproval") Boolean requireApproval,
+        @OutputCustomType.Parameter("targetId") String targetId,
+        @OutputCustomType.Parameter("uid") String uid,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.annotations = annotations;
         this.anthosCluster = anthosCluster;
         this.createTime = createTime;
@@ -247,67 +247,67 @@ public final class TargetResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setAnthosCluster(AnthosClusterResponse anthosCluster) {
+        public Builder anthosCluster(AnthosClusterResponse anthosCluster) {
             this.anthosCluster = Objects.requireNonNull(anthosCluster);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExecutionConfigs(List<ExecutionConfigResponse> executionConfigs) {
+        public Builder executionConfigs(List<ExecutionConfigResponse> executionConfigs) {
             this.executionConfigs = Objects.requireNonNull(executionConfigs);
             return this;
         }
 
-        public Builder setGke(GkeClusterResponse gke) {
+        public Builder gke(GkeClusterResponse gke) {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequireApproval(Boolean requireApproval) {
+        public Builder requireApproval(Boolean requireApproval) {
             this.requireApproval = Objects.requireNonNull(requireApproval);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

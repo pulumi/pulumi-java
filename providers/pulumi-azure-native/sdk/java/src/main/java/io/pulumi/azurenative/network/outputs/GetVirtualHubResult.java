@@ -139,32 +139,32 @@ public final class GetVirtualHubResult {
      */
     private final @Nullable SubResourceResponse vpnGateway;
 
-    @OutputCustomType.Constructor({"addressPrefix","allowBranchToBranchTraffic","azureFirewall","bgpConnections","etag","expressRouteGateway","id","ipConfigurations","location","name","p2SVpnGateway","provisioningState","routeTable","routingState","securityPartnerProvider","securityProviderName","sku","tags","type","virtualHubRouteTableV2s","virtualRouterAsn","virtualRouterIps","virtualWan","vpnGateway"})
+    @OutputCustomType.Constructor
     private GetVirtualHubResult(
-        @Nullable String addressPrefix,
-        @Nullable Boolean allowBranchToBranchTraffic,
-        @Nullable SubResourceResponse azureFirewall,
-        List<SubResourceResponse> bgpConnections,
-        String etag,
-        @Nullable SubResourceResponse expressRouteGateway,
-        @Nullable String id,
-        List<SubResourceResponse> ipConfigurations,
-        String location,
-        String name,
-        @Nullable SubResourceResponse p2SVpnGateway,
-        String provisioningState,
-        @Nullable VirtualHubRouteTableResponse routeTable,
-        String routingState,
-        @Nullable SubResourceResponse securityPartnerProvider,
-        @Nullable String securityProviderName,
-        @Nullable String sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s,
-        @Nullable Double virtualRouterAsn,
-        @Nullable List<String> virtualRouterIps,
-        @Nullable SubResourceResponse virtualWan,
-        @Nullable SubResourceResponse vpnGateway) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("allowBranchToBranchTraffic") @Nullable Boolean allowBranchToBranchTraffic,
+        @OutputCustomType.Parameter("azureFirewall") @Nullable SubResourceResponse azureFirewall,
+        @OutputCustomType.Parameter("bgpConnections") List<SubResourceResponse> bgpConnections,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expressRouteGateway") @Nullable SubResourceResponse expressRouteGateway,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") List<SubResourceResponse> ipConfigurations,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("p2SVpnGateway") @Nullable SubResourceResponse p2SVpnGateway,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routeTable") @Nullable VirtualHubRouteTableResponse routeTable,
+        @OutputCustomType.Parameter("routingState") String routingState,
+        @OutputCustomType.Parameter("securityPartnerProvider") @Nullable SubResourceResponse securityPartnerProvider,
+        @OutputCustomType.Parameter("securityProviderName") @Nullable String securityProviderName,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualHubRouteTableV2s") @Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s,
+        @OutputCustomType.Parameter("virtualRouterAsn") @Nullable Double virtualRouterAsn,
+        @OutputCustomType.Parameter("virtualRouterIps") @Nullable List<String> virtualRouterIps,
+        @OutputCustomType.Parameter("virtualWan") @Nullable SubResourceResponse virtualWan,
+        @OutputCustomType.Parameter("vpnGateway") @Nullable SubResourceResponse vpnGateway) {
         this.addressPrefix = addressPrefix;
         this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
         this.azureFirewall = azureFirewall;
@@ -426,122 +426,122 @@ public final class GetVirtualHubResult {
     	      this.vpnGateway = defaults.vpnGateway;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
-        public Builder setAzureFirewall(@Nullable SubResourceResponse azureFirewall) {
+        public Builder azureFirewall(@Nullable SubResourceResponse azureFirewall) {
             this.azureFirewall = azureFirewall;
             return this;
         }
 
-        public Builder setBgpConnections(List<SubResourceResponse> bgpConnections) {
+        public Builder bgpConnections(List<SubResourceResponse> bgpConnections) {
             this.bgpConnections = Objects.requireNonNull(bgpConnections);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpressRouteGateway(@Nullable SubResourceResponse expressRouteGateway) {
+        public Builder expressRouteGateway(@Nullable SubResourceResponse expressRouteGateway) {
             this.expressRouteGateway = expressRouteGateway;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(List<SubResourceResponse> ipConfigurations) {
+        public Builder ipConfigurations(List<SubResourceResponse> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setP2SVpnGateway(@Nullable SubResourceResponse p2SVpnGateway) {
+        public Builder p2SVpnGateway(@Nullable SubResourceResponse p2SVpnGateway) {
             this.p2SVpnGateway = p2SVpnGateway;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRouteTable(@Nullable VirtualHubRouteTableResponse routeTable) {
+        public Builder routeTable(@Nullable VirtualHubRouteTableResponse routeTable) {
             this.routeTable = routeTable;
             return this;
         }
 
-        public Builder setRoutingState(String routingState) {
+        public Builder routingState(String routingState) {
             this.routingState = Objects.requireNonNull(routingState);
             return this;
         }
 
-        public Builder setSecurityPartnerProvider(@Nullable SubResourceResponse securityPartnerProvider) {
+        public Builder securityPartnerProvider(@Nullable SubResourceResponse securityPartnerProvider) {
             this.securityPartnerProvider = securityPartnerProvider;
             return this;
         }
 
-        public Builder setSecurityProviderName(@Nullable String securityProviderName) {
+        public Builder securityProviderName(@Nullable String securityProviderName) {
             this.securityProviderName = securityProviderName;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s) {
+        public Builder virtualHubRouteTableV2s(@Nullable List<VirtualHubRouteTableV2Response> virtualHubRouteTableV2s) {
             this.virtualHubRouteTableV2s = virtualHubRouteTableV2s;
             return this;
         }
 
-        public Builder setVirtualRouterAsn(@Nullable Double virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
 
-        public Builder setVirtualRouterIps(@Nullable List<String> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
 
-        public Builder setVirtualWan(@Nullable SubResourceResponse virtualWan) {
+        public Builder virtualWan(@Nullable SubResourceResponse virtualWan) {
             this.virtualWan = virtualWan;
             return this;
         }
 
-        public Builder setVpnGateway(@Nullable SubResourceResponse vpnGateway) {
+        public Builder vpnGateway(@Nullable SubResourceResponse vpnGateway) {
             this.vpnGateway = vpnGateway;
             return this;
         }

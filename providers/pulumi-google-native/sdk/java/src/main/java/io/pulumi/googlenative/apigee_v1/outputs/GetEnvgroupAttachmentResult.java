@@ -25,11 +25,11 @@ public final class GetEnvgroupAttachmentResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"createdAt","environment","name"})
+    @OutputCustomType.Constructor
     private GetEnvgroupAttachmentResult(
-        String createdAt,
-        String environment,
-        String name) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("environment") String environment,
+        @OutputCustomType.Parameter("name") String name) {
         this.createdAt = createdAt;
         this.environment = environment;
         this.name = name;
@@ -81,17 +81,17 @@ public final class GetEnvgroupAttachmentResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setEnvironment(String environment) {
+        public Builder environment(String environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

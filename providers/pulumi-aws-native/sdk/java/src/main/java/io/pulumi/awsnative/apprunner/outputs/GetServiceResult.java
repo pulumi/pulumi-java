@@ -38,15 +38,15 @@ public final class GetServiceResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"healthCheckConfiguration","instanceConfiguration","serviceArn","serviceId","serviceUrl","sourceConfiguration","status"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
-        @Nullable ServiceInstanceConfiguration instanceConfiguration,
-        @Nullable String serviceArn,
-        @Nullable String serviceId,
-        @Nullable String serviceUrl,
-        @Nullable ServiceSourceConfiguration sourceConfiguration,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("healthCheckConfiguration") @Nullable ServiceHealthCheckConfiguration healthCheckConfiguration,
+        @OutputCustomType.Parameter("instanceConfiguration") @Nullable ServiceInstanceConfiguration instanceConfiguration,
+        @OutputCustomType.Parameter("serviceArn") @Nullable String serviceArn,
+        @OutputCustomType.Parameter("serviceId") @Nullable String serviceId,
+        @OutputCustomType.Parameter("serviceUrl") @Nullable String serviceUrl,
+        @OutputCustomType.Parameter("sourceConfiguration") @Nullable ServiceSourceConfiguration sourceConfiguration,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.healthCheckConfiguration = healthCheckConfiguration;
         this.instanceConfiguration = instanceConfiguration;
         this.serviceArn = serviceArn;
@@ -126,37 +126,37 @@ public final class GetServiceResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setHealthCheckConfiguration(@Nullable ServiceHealthCheckConfiguration healthCheckConfiguration) {
+        public Builder healthCheckConfiguration(@Nullable ServiceHealthCheckConfiguration healthCheckConfiguration) {
             this.healthCheckConfiguration = healthCheckConfiguration;
             return this;
         }
 
-        public Builder setInstanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
+        public Builder instanceConfiguration(@Nullable ServiceInstanceConfiguration instanceConfiguration) {
             this.instanceConfiguration = instanceConfiguration;
             return this;
         }
 
-        public Builder setServiceArn(@Nullable String serviceArn) {
+        public Builder serviceArn(@Nullable String serviceArn) {
             this.serviceArn = serviceArn;
             return this;
         }
 
-        public Builder setServiceId(@Nullable String serviceId) {
+        public Builder serviceId(@Nullable String serviceId) {
             this.serviceId = serviceId;
             return this;
         }
 
-        public Builder setServiceUrl(@Nullable String serviceUrl) {
+        public Builder serviceUrl(@Nullable String serviceUrl) {
             this.serviceUrl = serviceUrl;
             return this;
         }
 
-        public Builder setSourceConfiguration(@Nullable ServiceSourceConfiguration sourceConfiguration) {
+        public Builder sourceConfiguration(@Nullable ServiceSourceConfiguration sourceConfiguration) {
             this.sourceConfiguration = sourceConfiguration;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

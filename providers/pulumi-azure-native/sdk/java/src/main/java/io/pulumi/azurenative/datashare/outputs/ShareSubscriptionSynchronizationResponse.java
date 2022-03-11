@@ -46,15 +46,15 @@ public final class ShareSubscriptionSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor({"durationMs","endTime","message","startTime","status","synchronizationId","synchronizationMode"})
+    @OutputCustomType.Constructor
     private ShareSubscriptionSynchronizationResponse(
-        Integer durationMs,
-        String endTime,
-        String message,
-        String startTime,
-        String status,
-        String synchronizationId,
-        String synchronizationMode) {
+        @OutputCustomType.Parameter("durationMs") Integer durationMs,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("synchronizationId") String synchronizationId,
+        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.durationMs = durationMs;
         this.endTime = endTime;
         this.message = message;
@@ -146,37 +146,37 @@ public final class ShareSubscriptionSynchronizationResponse {
     	      this.synchronizationMode = defaults.synchronizationMode;
         }
 
-        public Builder setDurationMs(Integer durationMs) {
+        public Builder durationMs(Integer durationMs) {
             this.durationMs = Objects.requireNonNull(durationMs);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSynchronizationId(String synchronizationId) {
+        public Builder synchronizationId(String synchronizationId) {
             this.synchronizationId = Objects.requireNonNull(synchronizationId);
             return this;
         }
 
-        public Builder setSynchronizationMode(String synchronizationMode) {
+        public Builder synchronizationMode(String synchronizationMode) {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }

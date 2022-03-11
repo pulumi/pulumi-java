@@ -13,10 +13,10 @@ public final class FeatureGroupFeatureDefinition {
     private final String featureName;
     private final FeatureGroupFeatureDefinitionFeatureType featureType;
 
-    @OutputCustomType.Constructor({"featureName","featureType"})
+    @OutputCustomType.Constructor
     private FeatureGroupFeatureDefinition(
-        String featureName,
-        FeatureGroupFeatureDefinitionFeatureType featureType) {
+        @OutputCustomType.Parameter("featureName") String featureName,
+        @OutputCustomType.Parameter("featureType") FeatureGroupFeatureDefinitionFeatureType featureType) {
         this.featureName = featureName;
         this.featureType = featureType;
     }
@@ -50,12 +50,12 @@ public final class FeatureGroupFeatureDefinition {
     	      this.featureType = defaults.featureType;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setFeatureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
+        public Builder featureType(FeatureGroupFeatureDefinitionFeatureType featureType) {
             this.featureType = Objects.requireNonNull(featureType);
             return this;
         }

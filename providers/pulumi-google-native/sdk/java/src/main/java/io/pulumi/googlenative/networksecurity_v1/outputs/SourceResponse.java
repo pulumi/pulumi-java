@@ -21,10 +21,10 @@ public final class SourceResponse {
      */
     private final List<String> principals;
 
-    @OutputCustomType.Constructor({"ipBlocks","principals"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<String> ipBlocks,
-        List<String> principals) {
+        @OutputCustomType.Parameter("ipBlocks") List<String> ipBlocks,
+        @OutputCustomType.Parameter("principals") List<String> principals) {
         this.ipBlocks = ipBlocks;
         this.principals = principals;
     }
@@ -66,12 +66,12 @@ public final class SourceResponse {
     	      this.principals = defaults.principals;
         }
 
-        public Builder setIpBlocks(List<String> ipBlocks) {
+        public Builder ipBlocks(List<String> ipBlocks) {
             this.ipBlocks = Objects.requireNonNull(ipBlocks);
             return this;
         }
 
-        public Builder setPrincipals(List<String> principals) {
+        public Builder principals(List<String> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }

@@ -51,15 +51,15 @@ public final class GetEndpointAccessResult {
      */
     private final @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups;
 
-    @OutputCustomType.Constructor({"address","endpointCreateTime","endpointStatus","port","vpcEndpoint","vpcSecurityGroupIds","vpcSecurityGroups"})
+    @OutputCustomType.Constructor
     private GetEndpointAccessResult(
-        @Nullable String address,
-        @Nullable String endpointCreateTime,
-        @Nullable String endpointStatus,
-        @Nullable Integer port,
-        @Nullable VpcEndpointProperties vpcEndpoint,
-        @Nullable List<String> vpcSecurityGroupIds,
-        @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("endpointCreateTime") @Nullable String endpointCreateTime,
+        @OutputCustomType.Parameter("endpointStatus") @Nullable String endpointStatus,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("vpcEndpoint") @Nullable VpcEndpointProperties vpcEndpoint,
+        @OutputCustomType.Parameter("vpcSecurityGroupIds") @Nullable List<String> vpcSecurityGroupIds,
+        @OutputCustomType.Parameter("vpcSecurityGroups") @Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
         this.address = address;
         this.endpointCreateTime = endpointCreateTime;
         this.endpointStatus = endpointStatus;
@@ -151,37 +151,37 @@ public final class GetEndpointAccessResult {
     	      this.vpcSecurityGroups = defaults.vpcSecurityGroups;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setEndpointCreateTime(@Nullable String endpointCreateTime) {
+        public Builder endpointCreateTime(@Nullable String endpointCreateTime) {
             this.endpointCreateTime = endpointCreateTime;
             return this;
         }
 
-        public Builder setEndpointStatus(@Nullable String endpointStatus) {
+        public Builder endpointStatus(@Nullable String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setVpcEndpoint(@Nullable VpcEndpointProperties vpcEndpoint) {
+        public Builder vpcEndpoint(@Nullable VpcEndpointProperties vpcEndpoint) {
             this.vpcEndpoint = vpcEndpoint;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroups(@Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
+        public Builder vpcSecurityGroups(@Nullable List<EndpointAccessVpcSecurityGroup> vpcSecurityGroups) {
             this.vpcSecurityGroups = vpcSecurityGroups;
             return this;
         }

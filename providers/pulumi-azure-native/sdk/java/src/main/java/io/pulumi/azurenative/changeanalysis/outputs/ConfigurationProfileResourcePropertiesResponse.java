@@ -17,8 +17,8 @@ public final class ConfigurationProfileResourcePropertiesResponse {
      */
     private final @Nullable NotificationSettingsResponse notifications;
 
-    @OutputCustomType.Constructor({"notifications"})
-    private ConfigurationProfileResourcePropertiesResponse(@Nullable NotificationSettingsResponse notifications) {
+    @OutputCustomType.Constructor
+    private ConfigurationProfileResourcePropertiesResponse(@OutputCustomType.Parameter("notifications") @Nullable NotificationSettingsResponse notifications) {
         this.notifications = notifications;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationProfileResourcePropertiesResponse {
     	      this.notifications = defaults.notifications;
         }
 
-        public Builder setNotifications(@Nullable NotificationSettingsResponse notifications) {
+        public Builder notifications(@Nullable NotificationSettingsResponse notifications) {
             this.notifications = notifications;
             return this;
         }

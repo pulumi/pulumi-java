@@ -21,10 +21,10 @@ public final class MetricRangeResponse {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor({"range","timeSeries"})
+    @OutputCustomType.Constructor
     private MetricRangeResponse(
-        GoogleMonitoringV3RangeResponse range,
-        String timeSeries) {
+        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range,
+        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }
@@ -66,12 +66,12 @@ public final class MetricRangeResponse {
     	      this.timeSeries = defaults.timeSeries;
         }
 
-        public Builder setRange(GoogleMonitoringV3RangeResponse range) {
+        public Builder range(GoogleMonitoringV3RangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setTimeSeries(String timeSeries) {
+        public Builder timeSeries(String timeSeries) {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }

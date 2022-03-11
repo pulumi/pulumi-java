@@ -126,8 +126,8 @@ public class PersistentVolumeList extends io.pulumi.resources.CustomResource {
     private static PersistentVolumeListArgs makeArgs(PersistentVolumeListArgs args) {
         var builder = args == null ? PersistentVolumeListArgs.builder() : PersistentVolumeListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("PersistentVolumeList")
+            .apiVersion("v1")
+            .kind("PersistentVolumeList")
             .build();
     }
 

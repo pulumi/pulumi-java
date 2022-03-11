@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterNotificationConfig {
     private final List<GetClusterNotificationConfigPubsub> pubsubs;
 
-    @OutputCustomType.Constructor({"pubsubs"})
-    private GetClusterNotificationConfig(List<GetClusterNotificationConfigPubsub> pubsubs) {
+    @OutputCustomType.Constructor
+    private GetClusterNotificationConfig(@OutputCustomType.Parameter("pubsubs") List<GetClusterNotificationConfigPubsub> pubsubs) {
         this.pubsubs = pubsubs;
     }
 
@@ -41,7 +41,7 @@ public final class GetClusterNotificationConfig {
     	      this.pubsubs = defaults.pubsubs;
         }
 
-        public Builder setPubsubs(List<GetClusterNotificationConfigPubsub> pubsubs) {
+        public Builder pubsubs(List<GetClusterNotificationConfigPubsub> pubsubs) {
             this.pubsubs = Objects.requireNonNull(pubsubs);
             return this;
         }

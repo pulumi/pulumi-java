@@ -14,12 +14,12 @@ public final class GetServiceStatusCondition {
     private final String status;
     private final String type;
 
-    @OutputCustomType.Constructor({"message","reason","status","type"})
+    @OutputCustomType.Constructor
     private GetServiceStatusCondition(
-        String message,
-        String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.message = message;
         this.reason = reason;
         this.status = status;
@@ -65,22 +65,22 @@ public final class GetServiceStatusCondition {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

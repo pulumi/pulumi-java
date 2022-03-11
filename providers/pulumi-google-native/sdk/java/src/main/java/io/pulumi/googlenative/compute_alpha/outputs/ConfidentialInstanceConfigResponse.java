@@ -15,8 +15,8 @@ public final class ConfidentialInstanceConfigResponse {
      */
     private final Boolean enableConfidentialCompute;
 
-    @OutputCustomType.Constructor({"enableConfidentialCompute"})
-    private ConfidentialInstanceConfigResponse(Boolean enableConfidentialCompute) {
+    @OutputCustomType.Constructor
+    private ConfidentialInstanceConfigResponse(@OutputCustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 
@@ -48,7 +48,7 @@ public final class ConfidentialInstanceConfigResponse {
     	      this.enableConfidentialCompute = defaults.enableConfidentialCompute;
         }
 
-        public Builder setEnableConfidentialCompute(Boolean enableConfidentialCompute) {
+        public Builder enableConfidentialCompute(Boolean enableConfidentialCompute) {
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }

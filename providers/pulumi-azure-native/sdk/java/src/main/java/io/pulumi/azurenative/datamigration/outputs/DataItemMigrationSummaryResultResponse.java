@@ -56,17 +56,17 @@ public final class DataItemMigrationSummaryResultResponse {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"endedOn","errorPrefix","itemsCompletedCount","itemsCount","name","resultPrefix","startedOn","state","statusMessage"})
+    @OutputCustomType.Constructor
     private DataItemMigrationSummaryResultResponse(
-        String endedOn,
-        String errorPrefix,
-        Double itemsCompletedCount,
-        Double itemsCount,
-        String name,
-        String resultPrefix,
-        String startedOn,
-        String state,
-        String statusMessage) {
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("errorPrefix") String errorPrefix,
+        @OutputCustomType.Parameter("itemsCompletedCount") Double itemsCompletedCount,
+        @OutputCustomType.Parameter("itemsCount") Double itemsCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultPrefix") String resultPrefix,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.endedOn = endedOn;
         this.errorPrefix = errorPrefix;
         this.itemsCompletedCount = itemsCompletedCount;
@@ -178,47 +178,47 @@ public final class DataItemMigrationSummaryResultResponse {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setErrorPrefix(String errorPrefix) {
+        public Builder errorPrefix(String errorPrefix) {
             this.errorPrefix = Objects.requireNonNull(errorPrefix);
             return this;
         }
 
-        public Builder setItemsCompletedCount(Double itemsCompletedCount) {
+        public Builder itemsCompletedCount(Double itemsCompletedCount) {
             this.itemsCompletedCount = Objects.requireNonNull(itemsCompletedCount);
             return this;
         }
 
-        public Builder setItemsCount(Double itemsCount) {
+        public Builder itemsCount(Double itemsCount) {
             this.itemsCount = Objects.requireNonNull(itemsCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResultPrefix(String resultPrefix) {
+        public Builder resultPrefix(String resultPrefix) {
             this.resultPrefix = Objects.requireNonNull(resultPrefix);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }

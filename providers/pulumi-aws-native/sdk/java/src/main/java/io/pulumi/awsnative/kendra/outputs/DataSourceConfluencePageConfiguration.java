@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceConfluencePageConfiguration {
     private final @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings;
 
-    @OutputCustomType.Constructor({"pageFieldMappings"})
-    private DataSourceConfluencePageConfiguration(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
+    @OutputCustomType.Constructor
+    private DataSourceConfluencePageConfiguration(@OutputCustomType.Parameter("pageFieldMappings") @Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
         this.pageFieldMappings = pageFieldMappings;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceConfluencePageConfiguration {
     	      this.pageFieldMappings = defaults.pageFieldMappings;
         }
 
-        public Builder setPageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
+        public Builder pageFieldMappings(@Nullable List<DataSourceConfluencePageToIndexFieldMapping> pageFieldMappings) {
             this.pageFieldMappings = pageFieldMappings;
             return this;
         }

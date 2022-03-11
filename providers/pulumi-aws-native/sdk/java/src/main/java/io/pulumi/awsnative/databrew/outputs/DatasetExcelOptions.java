@@ -18,11 +18,11 @@ public final class DatasetExcelOptions {
     private final @Nullable List<Integer> sheetIndexes;
     private final @Nullable List<String> sheetNames;
 
-    @OutputCustomType.Constructor({"headerRow","sheetIndexes","sheetNames"})
+    @OutputCustomType.Constructor
     private DatasetExcelOptions(
-        @Nullable Boolean headerRow,
-        @Nullable List<Integer> sheetIndexes,
-        @Nullable List<String> sheetNames) {
+        @OutputCustomType.Parameter("headerRow") @Nullable Boolean headerRow,
+        @OutputCustomType.Parameter("sheetIndexes") @Nullable List<Integer> sheetIndexes,
+        @OutputCustomType.Parameter("sheetNames") @Nullable List<String> sheetNames) {
         this.headerRow = headerRow;
         this.sheetIndexes = sheetIndexes;
         this.sheetNames = sheetNames;
@@ -62,17 +62,17 @@ public final class DatasetExcelOptions {
     	      this.sheetNames = defaults.sheetNames;
         }
 
-        public Builder setHeaderRow(@Nullable Boolean headerRow) {
+        public Builder headerRow(@Nullable Boolean headerRow) {
             this.headerRow = headerRow;
             return this;
         }
 
-        public Builder setSheetIndexes(@Nullable List<Integer> sheetIndexes) {
+        public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
             this.sheetIndexes = sheetIndexes;
             return this;
         }
 
-        public Builder setSheetNames(@Nullable List<String> sheetNames) {
+        public Builder sheetNames(@Nullable List<String> sheetNames) {
             this.sheetNames = sheetNames;
             return this;
         }

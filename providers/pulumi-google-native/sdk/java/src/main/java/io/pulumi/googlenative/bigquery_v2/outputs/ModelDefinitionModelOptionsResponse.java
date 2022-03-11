@@ -14,11 +14,11 @@ public final class ModelDefinitionModelOptionsResponse {
     private final String lossType;
     private final String modelType;
 
-    @OutputCustomType.Constructor({"labels","lossType","modelType"})
+    @OutputCustomType.Constructor
     private ModelDefinitionModelOptionsResponse(
-        List<String> labels,
-        String lossType,
-        String modelType) {
+        @OutputCustomType.Parameter("labels") List<String> labels,
+        @OutputCustomType.Parameter("lossType") String lossType,
+        @OutputCustomType.Parameter("modelType") String modelType) {
         this.labels = labels;
         this.lossType = lossType;
         this.modelType = modelType;
@@ -58,17 +58,17 @@ public final class ModelDefinitionModelOptionsResponse {
     	      this.modelType = defaults.modelType;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLossType(String lossType) {
+        public Builder lossType(String lossType) {
             this.lossType = Objects.requireNonNull(lossType);
             return this;
         }
 
-        public Builder setModelType(String modelType) {
+        public Builder modelType(String modelType) {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }

@@ -20,10 +20,10 @@ public final class CloudBuildOptionsResponse {
      */
     private final String cloudBuildTimeout;
 
-    @OutputCustomType.Constructor({"appYamlPath","cloudBuildTimeout"})
+    @OutputCustomType.Constructor
     private CloudBuildOptionsResponse(
-        String appYamlPath,
-        String cloudBuildTimeout) {
+        @OutputCustomType.Parameter("appYamlPath") String appYamlPath,
+        @OutputCustomType.Parameter("cloudBuildTimeout") String cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }
@@ -65,12 +65,12 @@ public final class CloudBuildOptionsResponse {
     	      this.cloudBuildTimeout = defaults.cloudBuildTimeout;
         }
 
-        public Builder setAppYamlPath(String appYamlPath) {
+        public Builder appYamlPath(String appYamlPath) {
             this.appYamlPath = Objects.requireNonNull(appYamlPath);
             return this;
         }
 
-        public Builder setCloudBuildTimeout(String cloudBuildTimeout) {
+        public Builder cloudBuildTimeout(String cloudBuildTimeout) {
             this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
             return this;
         }

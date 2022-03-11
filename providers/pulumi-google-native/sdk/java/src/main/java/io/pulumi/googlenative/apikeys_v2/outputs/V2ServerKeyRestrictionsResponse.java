@@ -16,8 +16,8 @@ public final class V2ServerKeyRestrictionsResponse {
      */
     private final List<String> allowedIps;
 
-    @OutputCustomType.Constructor({"allowedIps"})
-    private V2ServerKeyRestrictionsResponse(List<String> allowedIps) {
+    @OutputCustomType.Constructor
+    private V2ServerKeyRestrictionsResponse(@OutputCustomType.Parameter("allowedIps") List<String> allowedIps) {
         this.allowedIps = allowedIps;
     }
 
@@ -49,7 +49,7 @@ public final class V2ServerKeyRestrictionsResponse {
     	      this.allowedIps = defaults.allowedIps;
         }
 
-        public Builder setAllowedIps(List<String> allowedIps) {
+        public Builder allowedIps(List<String> allowedIps) {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }

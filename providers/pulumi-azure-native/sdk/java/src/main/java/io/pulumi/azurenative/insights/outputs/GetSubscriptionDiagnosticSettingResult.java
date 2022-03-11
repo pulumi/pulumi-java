@@ -64,18 +64,18 @@ public final class GetSubscriptionDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","location","logs","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetSubscriptionDiagnosticSettingResult(
-        @Nullable String eventHubAuthorizationRuleId,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String location,
-        @Nullable List<SubscriptionLogSettingsResponse> logs,
-        String name,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        String type,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("logs") @Nullable List<SubscriptionLogSettingsResponse> logs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;
@@ -197,52 +197,52 @@ public final class GetSubscriptionDiagnosticSettingResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setEventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
+        public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<SubscriptionLogSettingsResponse> logs) {
+        public Builder logs(@Nullable List<SubscriptionLogSettingsResponse> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceBusRuleId(@Nullable String serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

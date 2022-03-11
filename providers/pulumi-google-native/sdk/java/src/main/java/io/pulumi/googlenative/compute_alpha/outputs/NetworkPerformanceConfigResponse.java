@@ -12,10 +12,10 @@ public final class NetworkPerformanceConfigResponse {
     private final String externalIpEgressBandwidthTier;
     private final String totalEgressBandwidthTier;
 
-    @OutputCustomType.Constructor({"externalIpEgressBandwidthTier","totalEgressBandwidthTier"})
+    @OutputCustomType.Constructor
     private NetworkPerformanceConfigResponse(
-        String externalIpEgressBandwidthTier,
-        String totalEgressBandwidthTier) {
+        @OutputCustomType.Parameter("externalIpEgressBandwidthTier") String externalIpEgressBandwidthTier,
+        @OutputCustomType.Parameter("totalEgressBandwidthTier") String totalEgressBandwidthTier) {
         this.externalIpEgressBandwidthTier = externalIpEgressBandwidthTier;
         this.totalEgressBandwidthTier = totalEgressBandwidthTier;
     }
@@ -49,12 +49,12 @@ public final class NetworkPerformanceConfigResponse {
     	      this.totalEgressBandwidthTier = defaults.totalEgressBandwidthTier;
         }
 
-        public Builder setExternalIpEgressBandwidthTier(String externalIpEgressBandwidthTier) {
+        public Builder externalIpEgressBandwidthTier(String externalIpEgressBandwidthTier) {
             this.externalIpEgressBandwidthTier = Objects.requireNonNull(externalIpEgressBandwidthTier);
             return this;
         }
 
-        public Builder setTotalEgressBandwidthTier(String totalEgressBandwidthTier) {
+        public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             this.totalEgressBandwidthTier = Objects.requireNonNull(totalEgressBandwidthTier);
             return this;
         }

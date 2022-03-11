@@ -27,11 +27,11 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
      */
     private final @Nullable List<String> solutions;
 
-    @OutputCustomType.Constructor({"categories","resourceTypes","solutions"})
+    @OutputCustomType.Constructor
     private LogAnalyticsQueryPackQueryPropertiesResponseRelated(
-        @Nullable List<String> categories,
-        @Nullable List<String> resourceTypes,
-        @Nullable List<String> solutions) {
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("resourceTypes") @Nullable List<String> resourceTypes,
+        @OutputCustomType.Parameter("solutions") @Nullable List<String> solutions) {
         this.categories = categories;
         this.resourceTypes = resourceTypes;
         this.solutions = solutions;
@@ -83,17 +83,17 @@ public final class LogAnalyticsQueryPackQueryPropertiesResponseRelated {
     	      this.solutions = defaults.solutions;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setResourceTypes(@Nullable List<String> resourceTypes) {
+        public Builder resourceTypes(@Nullable List<String> resourceTypes) {
             this.resourceTypes = resourceTypes;
             return this;
         }
 
-        public Builder setSolutions(@Nullable List<String> solutions) {
+        public Builder solutions(@Nullable List<String> solutions) {
             this.solutions = solutions;
             return this;
         }

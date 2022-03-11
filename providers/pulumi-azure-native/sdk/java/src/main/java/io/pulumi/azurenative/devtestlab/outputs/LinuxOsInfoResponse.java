@@ -17,8 +17,8 @@ public final class LinuxOsInfoResponse {
      */
     private final @Nullable String linuxOsState;
 
-    @OutputCustomType.Constructor({"linuxOsState"})
-    private LinuxOsInfoResponse(@Nullable String linuxOsState) {
+    @OutputCustomType.Constructor
+    private LinuxOsInfoResponse(@OutputCustomType.Parameter("linuxOsState") @Nullable String linuxOsState) {
         this.linuxOsState = linuxOsState;
     }
 
@@ -50,7 +50,7 @@ public final class LinuxOsInfoResponse {
     	      this.linuxOsState = defaults.linuxOsState;
         }
 
-        public Builder setLinuxOsState(@Nullable String linuxOsState) {
+        public Builder linuxOsState(@Nullable String linuxOsState) {
             this.linuxOsState = linuxOsState;
             return this;
         }

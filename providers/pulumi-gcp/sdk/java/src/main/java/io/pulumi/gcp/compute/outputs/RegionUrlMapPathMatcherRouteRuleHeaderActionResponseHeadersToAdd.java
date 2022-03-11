@@ -28,11 +28,11 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
      */
     private final Boolean replace;
 
-    @OutputCustomType.Constructor({"headerName","headerValue","replace"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd(
-        String headerName,
-        String headerValue,
-        Boolean replace) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue,
+        @OutputCustomType.Parameter("replace") Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;
@@ -86,17 +86,17 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersTo
     	      this.replace = defaults.replace;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }
 
-        public Builder setReplace(Boolean replace) {
+        public Builder replace(Boolean replace) {
             this.replace = Objects.requireNonNull(replace);
             return this;
         }

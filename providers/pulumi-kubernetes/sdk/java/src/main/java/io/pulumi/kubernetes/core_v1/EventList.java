@@ -126,8 +126,8 @@ public class EventList extends io.pulumi.resources.CustomResource {
     private static EventListArgs makeArgs(EventListArgs args) {
         var builder = args == null ? EventListArgs.builder() : EventListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("EventList")
+            .apiVersion("v1")
+            .kind("EventList")
             .build();
     }
 

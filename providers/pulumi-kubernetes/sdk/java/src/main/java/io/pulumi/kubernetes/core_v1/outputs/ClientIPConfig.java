@@ -17,8 +17,8 @@ public final class ClientIPConfig {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"timeoutSeconds"})
-    private ClientIPConfig(@Nullable Integer timeoutSeconds) {
+    @OutputCustomType.Constructor
+    private ClientIPConfig(@OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.timeoutSeconds = timeoutSeconds;
     }
 
@@ -50,7 +50,7 @@ public final class ClientIPConfig {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

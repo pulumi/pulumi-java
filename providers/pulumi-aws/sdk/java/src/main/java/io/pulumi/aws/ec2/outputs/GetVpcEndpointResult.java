@@ -87,27 +87,27 @@ public final class GetVpcEndpointResult {
     private final String vpcEndpointType;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","cidrBlocks","dnsEntries","filters","id","networkInterfaceIds","ownerId","policy","prefixListId","privateDnsEnabled","requesterManaged","routeTableIds","securityGroupIds","serviceName","state","subnetIds","tags","vpcEndpointType","vpcId"})
+    @OutputCustomType.Constructor
     private GetVpcEndpointResult(
-        String arn,
-        List<String> cidrBlocks,
-        List<GetVpcEndpointDnsEntry> dnsEntries,
-        @Nullable List<GetVpcEndpointFilter> filters,
-        String id,
-        List<String> networkInterfaceIds,
-        String ownerId,
-        String policy,
-        String prefixListId,
-        Boolean privateDnsEnabled,
-        Boolean requesterManaged,
-        List<String> routeTableIds,
-        List<String> securityGroupIds,
-        String serviceName,
-        String state,
-        List<String> subnetIds,
-        Map<String,String> tags,
-        String vpcEndpointType,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("dnsEntries") List<GetVpcEndpointDnsEntry> dnsEntries,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcEndpointFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("networkInterfaceIds") List<String> networkInterfaceIds,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("policy") String policy,
+        @OutputCustomType.Parameter("prefixListId") String prefixListId,
+        @OutputCustomType.Parameter("privateDnsEnabled") Boolean privateDnsEnabled,
+        @OutputCustomType.Parameter("requesterManaged") Boolean requesterManaged,
+        @OutputCustomType.Parameter("routeTableIds") List<String> routeTableIds,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("serviceName") String serviceName,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcEndpointType") String vpcEndpointType,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.cidrBlocks = cidrBlocks;
         this.dnsEntries = dnsEntries;
@@ -295,97 +295,97 @@ public final class GetVpcEndpointResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setDnsEntries(List<GetVpcEndpointDnsEntry> dnsEntries) {
+        public Builder dnsEntries(List<GetVpcEndpointDnsEntry> dnsEntries) {
             this.dnsEntries = Objects.requireNonNull(dnsEntries);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcEndpointFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcEndpointFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNetworkInterfaceIds(List<String> networkInterfaceIds) {
+        public Builder networkInterfaceIds(List<String> networkInterfaceIds) {
             this.networkInterfaceIds = Objects.requireNonNull(networkInterfaceIds);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }
 
-        public Builder setPrefixListId(String prefixListId) {
+        public Builder prefixListId(String prefixListId) {
             this.prefixListId = Objects.requireNonNull(prefixListId);
             return this;
         }
 
-        public Builder setPrivateDnsEnabled(Boolean privateDnsEnabled) {
+        public Builder privateDnsEnabled(Boolean privateDnsEnabled) {
             this.privateDnsEnabled = Objects.requireNonNull(privateDnsEnabled);
             return this;
         }
 
-        public Builder setRequesterManaged(Boolean requesterManaged) {
+        public Builder requesterManaged(Boolean requesterManaged) {
             this.requesterManaged = Objects.requireNonNull(requesterManaged);
             return this;
         }
 
-        public Builder setRouteTableIds(List<String> routeTableIds) {
+        public Builder routeTableIds(List<String> routeTableIds) {
             this.routeTableIds = Objects.requireNonNull(routeTableIds);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcEndpointType(String vpcEndpointType) {
+        public Builder vpcEndpointType(String vpcEndpointType) {
             this.vpcEndpointType = Objects.requireNonNull(vpcEndpointType);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

@@ -21,17 +21,17 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
     private final Double minRelProgress;
     private final Boolean warmStart;
 
-    @OutputCustomType.Constructor({"earlyStop","l1Reg","l2Reg","learnRate","learnRateStrategy","lineSearchInitLearnRate","maxIteration","minRelProgress","warmStart"})
+    @OutputCustomType.Constructor
     private BqmlTrainingRunTrainingOptionsResponse(
-        Boolean earlyStop,
-        Double l1Reg,
-        Double l2Reg,
-        Double learnRate,
-        String learnRateStrategy,
-        Double lineSearchInitLearnRate,
-        String maxIteration,
-        Double minRelProgress,
-        Boolean warmStart) {
+        @OutputCustomType.Parameter("earlyStop") Boolean earlyStop,
+        @OutputCustomType.Parameter("l1Reg") Double l1Reg,
+        @OutputCustomType.Parameter("l2Reg") Double l2Reg,
+        @OutputCustomType.Parameter("learnRate") Double learnRate,
+        @OutputCustomType.Parameter("learnRateStrategy") String learnRateStrategy,
+        @OutputCustomType.Parameter("lineSearchInitLearnRate") Double lineSearchInitLearnRate,
+        @OutputCustomType.Parameter("maxIteration") String maxIteration,
+        @OutputCustomType.Parameter("minRelProgress") Double minRelProgress,
+        @OutputCustomType.Parameter("warmStart") Boolean warmStart) {
         this.earlyStop = earlyStop;
         this.l1Reg = l1Reg;
         this.l2Reg = l2Reg;
@@ -107,47 +107,47 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
     	      this.warmStart = defaults.warmStart;
         }
 
-        public Builder setEarlyStop(Boolean earlyStop) {
+        public Builder earlyStop(Boolean earlyStop) {
             this.earlyStop = Objects.requireNonNull(earlyStop);
             return this;
         }
 
-        public Builder setL1Reg(Double l1Reg) {
+        public Builder l1Reg(Double l1Reg) {
             this.l1Reg = Objects.requireNonNull(l1Reg);
             return this;
         }
 
-        public Builder setL2Reg(Double l2Reg) {
+        public Builder l2Reg(Double l2Reg) {
             this.l2Reg = Objects.requireNonNull(l2Reg);
             return this;
         }
 
-        public Builder setLearnRate(Double learnRate) {
+        public Builder learnRate(Double learnRate) {
             this.learnRate = Objects.requireNonNull(learnRate);
             return this;
         }
 
-        public Builder setLearnRateStrategy(String learnRateStrategy) {
+        public Builder learnRateStrategy(String learnRateStrategy) {
             this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy);
             return this;
         }
 
-        public Builder setLineSearchInitLearnRate(Double lineSearchInitLearnRate) {
+        public Builder lineSearchInitLearnRate(Double lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate);
             return this;
         }
 
-        public Builder setMaxIteration(String maxIteration) {
+        public Builder maxIteration(String maxIteration) {
             this.maxIteration = Objects.requireNonNull(maxIteration);
             return this;
         }
 
-        public Builder setMinRelProgress(Double minRelProgress) {
+        public Builder minRelProgress(Double minRelProgress) {
             this.minRelProgress = Objects.requireNonNull(minRelProgress);
             return this;
         }
 
-        public Builder setWarmStart(Boolean warmStart) {
+        public Builder warmStart(Boolean warmStart) {
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
         }

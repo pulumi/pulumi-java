@@ -28,11 +28,11 @@ public final class GetRequestValidatorResult {
      */
     private final @Nullable Boolean validateRequestParameters;
 
-    @OutputCustomType.Constructor({"requestValidatorId","validateRequestBody","validateRequestParameters"})
+    @OutputCustomType.Constructor
     private GetRequestValidatorResult(
-        @Nullable String requestValidatorId,
-        @Nullable Boolean validateRequestBody,
-        @Nullable Boolean validateRequestParameters) {
+        @OutputCustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId,
+        @OutputCustomType.Parameter("validateRequestBody") @Nullable Boolean validateRequestBody,
+        @OutputCustomType.Parameter("validateRequestParameters") @Nullable Boolean validateRequestParameters) {
         this.requestValidatorId = requestValidatorId;
         this.validateRequestBody = validateRequestBody;
         this.validateRequestParameters = validateRequestParameters;
@@ -84,17 +84,17 @@ public final class GetRequestValidatorResult {
     	      this.validateRequestParameters = defaults.validateRequestParameters;
         }
 
-        public Builder setRequestValidatorId(@Nullable String requestValidatorId) {
+        public Builder requestValidatorId(@Nullable String requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
 
-        public Builder setValidateRequestBody(@Nullable Boolean validateRequestBody) {
+        public Builder validateRequestBody(@Nullable Boolean validateRequestBody) {
             this.validateRequestBody = validateRequestBody;
             return this;
         }
 
-        public Builder setValidateRequestParameters(@Nullable Boolean validateRequestParameters) {
+        public Builder validateRequestParameters(@Nullable Boolean validateRequestParameters) {
             this.validateRequestParameters = validateRequestParameters;
             return this;
         }

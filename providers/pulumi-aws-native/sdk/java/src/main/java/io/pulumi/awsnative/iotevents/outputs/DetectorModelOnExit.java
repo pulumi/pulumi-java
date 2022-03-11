@@ -17,8 +17,8 @@ public final class DetectorModelOnExit {
      */
     private final @Nullable List<DetectorModelEvent> events;
 
-    @OutputCustomType.Constructor({"events"})
-    private DetectorModelOnExit(@Nullable List<DetectorModelEvent> events) {
+    @OutputCustomType.Constructor
+    private DetectorModelOnExit(@OutputCustomType.Parameter("events") @Nullable List<DetectorModelEvent> events) {
         this.events = events;
     }
 
@@ -50,7 +50,7 @@ public final class DetectorModelOnExit {
     	      this.events = defaults.events;
         }
 
-        public Builder setEvents(@Nullable List<DetectorModelEvent> events) {
+        public Builder events(@Nullable List<DetectorModelEvent> events) {
             this.events = events;
             return this;
         }

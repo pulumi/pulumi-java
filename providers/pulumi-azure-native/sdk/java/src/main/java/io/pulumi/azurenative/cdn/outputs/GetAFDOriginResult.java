@@ -87,23 +87,23 @@ public final class GetAFDOriginResult {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"azureOrigin","deploymentStatus","enabledState","hostName","httpPort","httpsPort","id","name","originHostHeader","priority","provisioningState","sharedPrivateLinkResource","systemData","type","weight"})
+    @OutputCustomType.Constructor
     private GetAFDOriginResult(
-        @Nullable ResourceReferenceResponse azureOrigin,
-        String deploymentStatus,
-        @Nullable String enabledState,
-        String hostName,
-        @Nullable Integer httpPort,
-        @Nullable Integer httpsPort,
-        String id,
-        String name,
-        @Nullable String originHostHeader,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("azureOrigin") @Nullable ResourceReferenceResponse azureOrigin,
+        @OutputCustomType.Parameter("deploymentStatus") String deploymentStatus,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("httpPort") @Nullable Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") @Nullable Integer httpsPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originHostHeader") @Nullable String originHostHeader,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sharedPrivateLinkResource") @Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.azureOrigin = azureOrigin;
         this.deploymentStatus = deploymentStatus;
         this.enabledState = enabledState;
@@ -271,77 +271,77 @@ public final class GetAFDOriginResult {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setAzureOrigin(@Nullable ResourceReferenceResponse azureOrigin) {
+        public Builder azureOrigin(@Nullable ResourceReferenceResponse azureOrigin) {
             this.azureOrigin = azureOrigin;
             return this;
         }
 
-        public Builder setDeploymentStatus(String deploymentStatus) {
+        public Builder deploymentStatus(String deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setHttpPort(@Nullable Integer httpPort) {
+        public Builder httpPort(@Nullable Integer httpPort) {
             this.httpPort = httpPort;
             return this;
         }
 
-        public Builder setHttpsPort(@Nullable Integer httpsPort) {
+        public Builder httpsPort(@Nullable Integer httpsPort) {
             this.httpsPort = httpsPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginHostHeader(@Nullable String originHostHeader) {
+        public Builder originHostHeader(@Nullable String originHostHeader) {
             this.originHostHeader = originHostHeader;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource) {
+        public Builder sharedPrivateLinkResource(@Nullable SharedPrivateLinkResourcePropertiesResponse sharedPrivateLinkResource) {
             this.sharedPrivateLinkResource = sharedPrivateLinkResource;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

@@ -17,8 +17,8 @@ public final class KubernetesClusterPropertiesResponse {
      */
     private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
-    @OutputCustomType.Constructor({"servicePrincipal"})
-    private KubernetesClusterPropertiesResponse(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+    @OutputCustomType.Constructor
+    private KubernetesClusterPropertiesResponse(@OutputCustomType.Parameter("servicePrincipal") @Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
         this.servicePrincipal = servicePrincipal;
     }
 
@@ -50,7 +50,7 @@ public final class KubernetesClusterPropertiesResponse {
     	      this.servicePrincipal = defaults.servicePrincipal;
         }
 
-        public Builder setServicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
+        public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesResponse servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }

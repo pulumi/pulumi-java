@@ -15,11 +15,11 @@ public final class ResourceProviderCapabilitiesResponse {
     private final String quotaId;
     private final @Nullable List<String> requiredFeatures;
 
-    @OutputCustomType.Constructor({"effect","quotaId","requiredFeatures"})
+    @OutputCustomType.Constructor
     private ResourceProviderCapabilitiesResponse(
-        String effect,
-        String quotaId,
-        @Nullable List<String> requiredFeatures) {
+        @OutputCustomType.Parameter("effect") String effect,
+        @OutputCustomType.Parameter("quotaId") String quotaId,
+        @OutputCustomType.Parameter("requiredFeatures") @Nullable List<String> requiredFeatures) {
         this.effect = effect;
         this.quotaId = quotaId;
         this.requiredFeatures = requiredFeatures;
@@ -59,17 +59,17 @@ public final class ResourceProviderCapabilitiesResponse {
     	      this.requiredFeatures = defaults.requiredFeatures;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setQuotaId(String quotaId) {
+        public Builder quotaId(String quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
 
-        public Builder setRequiredFeatures(@Nullable List<String> requiredFeatures) {
+        public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
             this.requiredFeatures = requiredFeatures;
             return this;
         }

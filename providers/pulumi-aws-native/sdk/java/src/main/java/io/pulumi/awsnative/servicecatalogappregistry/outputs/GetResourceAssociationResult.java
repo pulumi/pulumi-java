@@ -31,14 +31,14 @@ public final class GetResourceAssociationResult {
      */
     private final @Nullable ResourceAssociationResourceType resourceType;
 
-    @OutputCustomType.Constructor({"application","applicationArn","id","resource","resourceArn","resourceType"})
+    @OutputCustomType.Constructor
     private GetResourceAssociationResult(
-        @Nullable String application,
-        @Nullable String applicationArn,
-        @Nullable String id,
-        @Nullable String resource,
-        @Nullable String resourceArn,
-        @Nullable ResourceAssociationResourceType resourceType) {
+        @OutputCustomType.Parameter("application") @Nullable String application,
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("resourceArn") @Nullable String resourceArn,
+        @OutputCustomType.Parameter("resourceType") @Nullable ResourceAssociationResourceType resourceType) {
         this.application = application;
         this.applicationArn = applicationArn;
         this.id = id;
@@ -108,32 +108,32 @@ public final class GetResourceAssociationResult {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setApplication(@Nullable String application) {
+        public Builder application(@Nullable String application) {
             this.application = application;
             return this;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setResourceArn(@Nullable String resourceArn) {
+        public Builder resourceArn(@Nullable String resourceArn) {
             this.resourceArn = resourceArn;
             return this;
         }
 
-        public Builder setResourceType(@Nullable ResourceAssociationResourceType resourceType) {
+        public Builder resourceType(@Nullable ResourceAssociationResourceType resourceType) {
             this.resourceType = resourceType;
             return this;
         }

@@ -21,10 +21,10 @@ public final class PipelineReadyConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"status","updateTime"})
+    @OutputCustomType.Constructor
     private PipelineReadyConditionResponse(
-        Boolean status,
-        String updateTime) {
+        @OutputCustomType.Parameter("status") Boolean status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.status = status;
         this.updateTime = updateTime;
     }
@@ -66,12 +66,12 @@ public final class PipelineReadyConditionResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setStatus(Boolean status) {
+        public Builder status(Boolean status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

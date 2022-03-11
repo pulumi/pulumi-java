@@ -17,13 +17,13 @@ public final class PipelineDeviceRegistryEnrich {
     private final String roleArn;
     private final String thingName;
 
-    @OutputCustomType.Constructor({"attribute","name","next","roleArn","thingName"})
+    @OutputCustomType.Constructor
     private PipelineDeviceRegistryEnrich(
-        String attribute,
-        String name,
-        @Nullable String next,
-        String roleArn,
-        String thingName) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("thingName") String thingName) {
         this.attribute = attribute;
         this.name = name;
         this.next = next;
@@ -75,27 +75,27 @@ public final class PipelineDeviceRegistryEnrich {
     	      this.thingName = defaults.thingName;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setThingName(String thingName) {
+        public Builder thingName(String thingName) {
             this.thingName = Objects.requireNonNull(thingName);
             return this;
         }

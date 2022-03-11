@@ -302,162 +302,162 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAuthor(@Nullable Input<MetadataAuthorArgs> author) {
+        public Builder author(@Nullable Input<MetadataAuthorArgs> author) {
             this.author = author;
             return this;
         }
 
-        public Builder setAuthor(@Nullable MetadataAuthorArgs author) {
+        public Builder author(@Nullable MetadataAuthorArgs author) {
             this.author = Input.ofNullable(author);
             return this;
         }
 
-        public Builder setCategories(@Nullable Input<MetadataCategoriesArgs> categories) {
+        public Builder categories(@Nullable Input<MetadataCategoriesArgs> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setCategories(@Nullable MetadataCategoriesArgs categories) {
+        public Builder categories(@Nullable MetadataCategoriesArgs categories) {
             this.categories = Input.ofNullable(categories);
             return this;
         }
 
-        public Builder setContentId(@Nullable Input<String> contentId) {
+        public Builder contentId(@Nullable Input<String> contentId) {
             this.contentId = contentId;
             return this;
         }
 
-        public Builder setContentId(@Nullable String contentId) {
+        public Builder contentId(@Nullable String contentId) {
             this.contentId = Input.ofNullable(contentId);
             return this;
         }
 
-        public Builder setDependencies(@Nullable Input<MetadataDependenciesArgs> dependencies) {
+        public Builder dependencies(@Nullable Input<MetadataDependenciesArgs> dependencies) {
             this.dependencies = dependencies;
             return this;
         }
 
-        public Builder setDependencies(@Nullable MetadataDependenciesArgs dependencies) {
+        public Builder dependencies(@Nullable MetadataDependenciesArgs dependencies) {
             this.dependencies = Input.ofNullable(dependencies);
             return this;
         }
 
-        public Builder setFirstPublishDate(@Nullable Input<String> firstPublishDate) {
+        public Builder firstPublishDate(@Nullable Input<String> firstPublishDate) {
             this.firstPublishDate = firstPublishDate;
             return this;
         }
 
-        public Builder setFirstPublishDate(@Nullable String firstPublishDate) {
+        public Builder firstPublishDate(@Nullable String firstPublishDate) {
             this.firstPublishDate = Input.ofNullable(firstPublishDate);
             return this;
         }
 
-        public Builder setKind(Input<Either<String,Kind>> kind) {
+        public Builder kind(Input<Either<String,Kind>> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(Either<String,Kind> kind) {
+        public Builder kind(Either<String,Kind> kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setLastPublishDate(@Nullable Input<String> lastPublishDate) {
+        public Builder lastPublishDate(@Nullable Input<String> lastPublishDate) {
             this.lastPublishDate = lastPublishDate;
             return this;
         }
 
-        public Builder setLastPublishDate(@Nullable String lastPublishDate) {
+        public Builder lastPublishDate(@Nullable String lastPublishDate) {
             this.lastPublishDate = Input.ofNullable(lastPublishDate);
             return this;
         }
 
-        public Builder setMetadataName(@Nullable Input<String> metadataName) {
+        public Builder metadataName(@Nullable Input<String> metadataName) {
             this.metadataName = metadataName;
             return this;
         }
 
-        public Builder setMetadataName(@Nullable String metadataName) {
+        public Builder metadataName(@Nullable String metadataName) {
             this.metadataName = Input.ofNullable(metadataName);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setParentId(Input<String> parentId) {
+        public Builder parentId(Input<String> parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Input.of(Objects.requireNonNull(parentId));
             return this;
         }
 
-        public Builder setProviders(@Nullable Input<List<String>> providers) {
+        public Builder providers(@Nullable Input<List<String>> providers) {
             this.providers = providers;
             return this;
         }
 
-        public Builder setProviders(@Nullable List<String> providers) {
+        public Builder providers(@Nullable List<String> providers) {
             this.providers = Input.ofNullable(providers);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSource(@Nullable Input<MetadataSourceArgs> source) {
+        public Builder source(@Nullable Input<MetadataSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable MetadataSourceArgs source) {
+        public Builder source(@Nullable MetadataSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setSupport(@Nullable Input<MetadataSupportArgs> support) {
+        public Builder support(@Nullable Input<MetadataSupportArgs> support) {
             this.support = support;
             return this;
         }
 
-        public Builder setSupport(@Nullable MetadataSupportArgs support) {
+        public Builder support(@Nullable MetadataSupportArgs support) {
             this.support = Input.ofNullable(support);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

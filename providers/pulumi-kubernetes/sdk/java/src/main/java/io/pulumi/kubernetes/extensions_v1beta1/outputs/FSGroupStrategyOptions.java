@@ -24,10 +24,10 @@ public final class FSGroupStrategyOptions {
      */
     private final @Nullable String rule;
 
-    @OutputCustomType.Constructor({"ranges","rule"})
+    @OutputCustomType.Constructor
     private FSGroupStrategyOptions(
-        @Nullable List<IDRange> ranges,
-        @Nullable String rule) {
+        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @OutputCustomType.Parameter("rule") @Nullable String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }
@@ -69,12 +69,12 @@ public final class FSGroupStrategyOptions {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRanges(@Nullable List<IDRange> ranges) {
+        public Builder ranges(@Nullable List<IDRange> ranges) {
             this.ranges = ranges;
             return this;
         }
 
-        public Builder setRule(@Nullable String rule) {
+        public Builder rule(@Nullable String rule) {
             this.rule = rule;
             return this;
         }

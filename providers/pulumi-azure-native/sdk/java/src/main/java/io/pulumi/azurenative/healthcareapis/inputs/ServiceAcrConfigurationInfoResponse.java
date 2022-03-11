@@ -58,7 +58,7 @@ public final class ServiceAcrConfigurationInfoResponse extends io.pulumi.resourc
     	      this.loginServers = defaults.loginServers;
         }
 
-        public Builder setLoginServers(@Nullable List<String> loginServers) {
+        public Builder loginServers(@Nullable List<String> loginServers) {
             this.loginServers = loginServers;
             return this;
         }

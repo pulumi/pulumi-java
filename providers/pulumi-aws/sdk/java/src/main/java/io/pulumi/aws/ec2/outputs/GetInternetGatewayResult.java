@@ -34,15 +34,15 @@ public final class GetInternetGatewayResult {
     private final String ownerId;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","attachments","filters","id","internetGatewayId","ownerId","tags"})
+    @OutputCustomType.Constructor
     private GetInternetGatewayResult(
-        String arn,
-        List<GetInternetGatewayAttachment> attachments,
-        @Nullable List<GetInternetGatewayFilter> filters,
-        String id,
-        String internetGatewayId,
-        String ownerId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attachments") List<GetInternetGatewayAttachment> attachments,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInternetGatewayFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internetGatewayId") String internetGatewayId,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attachments = attachments;
         this.filters = filters;
@@ -118,37 +118,37 @@ public final class GetInternetGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAttachments(List<GetInternetGatewayAttachment> attachments) {
+        public Builder attachments(List<GetInternetGatewayAttachment> attachments) {
             this.attachments = Objects.requireNonNull(attachments);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetInternetGatewayFilter> filters) {
+        public Builder filters(@Nullable List<GetInternetGatewayFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInternetGatewayId(String internetGatewayId) {
+        public Builder internetGatewayId(String internetGatewayId) {
             this.internetGatewayId = Objects.requireNonNull(internetGatewayId);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

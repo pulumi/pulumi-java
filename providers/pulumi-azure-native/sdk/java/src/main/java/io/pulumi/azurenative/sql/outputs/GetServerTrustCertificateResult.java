@@ -42,14 +42,14 @@ public final class GetServerTrustCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"certificateName","id","name","publicBlob","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetServerTrustCertificateResult(
-        String certificateName,
-        String id,
-        String name,
-        @Nullable String publicBlob,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("certificateName") String certificateName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("publicBlob") @Nullable String publicBlob,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.certificateName = certificateName;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetServerTrustCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPublicBlob(@Nullable String publicBlob) {
+        public Builder publicBlob(@Nullable String publicBlob) {
             this.publicBlob = publicBlob;
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

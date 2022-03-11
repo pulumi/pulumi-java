@@ -74,17 +74,17 @@ public final class GetViewArgs extends io.pulumi.resources.InvokeArgs {
     	      this.viewId = defaults.viewId;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setViewId(String viewId) {
+        public Builder viewId(String viewId) {
             this.viewId = Objects.requireNonNull(viewId);
             return this;
         }

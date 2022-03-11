@@ -60,12 +60,12 @@ public final class GetIngressRuleArgs extends io.pulumi.resources.InvokeArgs {
     	      this.ingressRuleId = defaults.ingressRuleId;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setIngressRuleId(String ingressRuleId) {
+        public Builder ingressRuleId(String ingressRuleId) {
             this.ingressRuleId = Objects.requireNonNull(ingressRuleId);
             return this;
         }

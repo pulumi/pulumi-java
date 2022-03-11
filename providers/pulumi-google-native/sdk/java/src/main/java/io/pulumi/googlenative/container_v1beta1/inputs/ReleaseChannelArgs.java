@@ -57,12 +57,12 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.channel = defaults.channel;
         }
 
-        public Builder setChannel(@Nullable Input<ReleaseChannelChannel> channel) {
+        public Builder channel(@Nullable Input<ReleaseChannelChannel> channel) {
             this.channel = channel;
             return this;
         }
 
-        public Builder setChannel(@Nullable ReleaseChannelChannel channel) {
+        public Builder channel(@Nullable ReleaseChannelChannel channel) {
             this.channel = Input.ofNullable(channel);
             return this;
         }

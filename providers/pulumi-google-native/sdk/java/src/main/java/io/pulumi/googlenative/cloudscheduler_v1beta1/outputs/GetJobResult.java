@@ -91,23 +91,23 @@ public final class GetJobResult {
      */
     private final String userUpdateTime;
 
-    @OutputCustomType.Constructor({"appEngineHttpTarget","attemptDeadline","description","httpTarget","lastAttemptTime","legacyAppEngineCron","name","pubsubTarget","retryConfig","schedule","scheduleTime","state","status","timeZone","userUpdateTime"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        AppEngineHttpTargetResponse appEngineHttpTarget,
-        String attemptDeadline,
-        String description,
-        HttpTargetResponse httpTarget,
-        String lastAttemptTime,
-        Boolean legacyAppEngineCron,
-        String name,
-        PubsubTargetResponse pubsubTarget,
-        RetryConfigResponse retryConfig,
-        String schedule,
-        String scheduleTime,
-        String state,
-        StatusResponse status,
-        String timeZone,
-        String userUpdateTime) {
+        @OutputCustomType.Parameter("appEngineHttpTarget") AppEngineHttpTargetResponse appEngineHttpTarget,
+        @OutputCustomType.Parameter("attemptDeadline") String attemptDeadline,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("httpTarget") HttpTargetResponse httpTarget,
+        @OutputCustomType.Parameter("lastAttemptTime") String lastAttemptTime,
+        @OutputCustomType.Parameter("legacyAppEngineCron") Boolean legacyAppEngineCron,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pubsubTarget") PubsubTargetResponse pubsubTarget,
+        @OutputCustomType.Parameter("retryConfig") RetryConfigResponse retryConfig,
+        @OutputCustomType.Parameter("schedule") String schedule,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") StatusResponse status,
+        @OutputCustomType.Parameter("timeZone") String timeZone,
+        @OutputCustomType.Parameter("userUpdateTime") String userUpdateTime) {
         this.appEngineHttpTarget = appEngineHttpTarget;
         this.attemptDeadline = attemptDeadline;
         this.description = description;
@@ -279,77 +279,77 @@ public final class GetJobResult {
     	      this.userUpdateTime = defaults.userUpdateTime;
         }
 
-        public Builder setAppEngineHttpTarget(AppEngineHttpTargetResponse appEngineHttpTarget) {
+        public Builder appEngineHttpTarget(AppEngineHttpTargetResponse appEngineHttpTarget) {
             this.appEngineHttpTarget = Objects.requireNonNull(appEngineHttpTarget);
             return this;
         }
 
-        public Builder setAttemptDeadline(String attemptDeadline) {
+        public Builder attemptDeadline(String attemptDeadline) {
             this.attemptDeadline = Objects.requireNonNull(attemptDeadline);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHttpTarget(HttpTargetResponse httpTarget) {
+        public Builder httpTarget(HttpTargetResponse httpTarget) {
             this.httpTarget = Objects.requireNonNull(httpTarget);
             return this;
         }
 
-        public Builder setLastAttemptTime(String lastAttemptTime) {
+        public Builder lastAttemptTime(String lastAttemptTime) {
             this.lastAttemptTime = Objects.requireNonNull(lastAttemptTime);
             return this;
         }
 
-        public Builder setLegacyAppEngineCron(Boolean legacyAppEngineCron) {
+        public Builder legacyAppEngineCron(Boolean legacyAppEngineCron) {
             this.legacyAppEngineCron = Objects.requireNonNull(legacyAppEngineCron);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPubsubTarget(PubsubTargetResponse pubsubTarget) {
+        public Builder pubsubTarget(PubsubTargetResponse pubsubTarget) {
             this.pubsubTarget = Objects.requireNonNull(pubsubTarget);
             return this;
         }
 
-        public Builder setRetryConfig(RetryConfigResponse retryConfig) {
+        public Builder retryConfig(RetryConfigResponse retryConfig) {
             this.retryConfig = Objects.requireNonNull(retryConfig);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(StatusResponse status) {
+        public Builder status(StatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
 
-        public Builder setUserUpdateTime(String userUpdateTime) {
+        public Builder userUpdateTime(String userUpdateTime) {
             this.userUpdateTime = Objects.requireNonNull(userUpdateTime);
             return this;
         }

@@ -70,17 +70,17 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
     	      this.user = defaults.user;
         }
 
-        public Builder setPolicyArn(@Nullable Input<String> policyArn) {
+        public Builder policyArn(@Nullable Input<String> policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
-        public Builder setPolicyArn(@Nullable String policyArn) {
+        public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = Input.ofNullable(policyArn);
             return this;
         }
 
-        public Builder setUser(@Nullable Input<String> user) {
+        public Builder user(@Nullable Input<String> user) {
             this.user = user;
             return this;
         }

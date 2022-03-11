@@ -59,15 +59,15 @@ public final class Endpoint {
      */
     private final @Nullable Map<String,String> topology;
 
-    @OutputCustomType.Constructor({"addresses","conditions","hints","hostname","nodeName","targetRef","topology"})
+    @OutputCustomType.Constructor
     private Endpoint(
-        List<String> addresses,
-        @Nullable EndpointConditions conditions,
-        @Nullable EndpointHints hints,
-        @Nullable String hostname,
-        @Nullable String nodeName,
-        @Nullable ObjectReference targetRef,
-        @Nullable Map<String,String> topology) {
+        @OutputCustomType.Parameter("addresses") List<String> addresses,
+        @OutputCustomType.Parameter("conditions") @Nullable EndpointConditions conditions,
+        @OutputCustomType.Parameter("hints") @Nullable EndpointHints hints,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("targetRef") @Nullable ObjectReference targetRef,
+        @OutputCustomType.Parameter("topology") @Nullable Map<String,String> topology) {
         this.addresses = addresses;
         this.conditions = conditions;
         this.hints = hints;
@@ -166,37 +166,37 @@ public final class Endpoint {
     	      this.topology = defaults.topology;
         }
 
-        public Builder setAddresses(List<String> addresses) {
+        public Builder addresses(List<String> addresses) {
             this.addresses = Objects.requireNonNull(addresses);
             return this;
         }
 
-        public Builder setConditions(@Nullable EndpointConditions conditions) {
+        public Builder conditions(@Nullable EndpointConditions conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setHints(@Nullable EndpointHints hints) {
+        public Builder hints(@Nullable EndpointHints hints) {
             this.hints = hints;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setTargetRef(@Nullable ObjectReference targetRef) {
+        public Builder targetRef(@Nullable ObjectReference targetRef) {
             this.targetRef = targetRef;
             return this;
         }
 
-        public Builder setTopology(@Nullable Map<String,String> topology) {
+        public Builder topology(@Nullable Map<String,String> topology) {
             this.topology = topology;
             return this;
         }

@@ -23,10 +23,10 @@ public final class ScaleSettingsResponse {
      */
     private final @Nullable FixedScaleSettingsResponse fixedScale;
 
-    @OutputCustomType.Constructor({"autoScale","fixedScale"})
+    @OutputCustomType.Constructor
     private ScaleSettingsResponse(
-        @Nullable AutoScaleSettingsResponse autoScale,
-        @Nullable FixedScaleSettingsResponse fixedScale) {
+        @OutputCustomType.Parameter("autoScale") @Nullable AutoScaleSettingsResponse autoScale,
+        @OutputCustomType.Parameter("fixedScale") @Nullable FixedScaleSettingsResponse fixedScale) {
         this.autoScale = autoScale;
         this.fixedScale = fixedScale;
     }
@@ -68,12 +68,12 @@ public final class ScaleSettingsResponse {
     	      this.fixedScale = defaults.fixedScale;
         }
 
-        public Builder setAutoScale(@Nullable AutoScaleSettingsResponse autoScale) {
+        public Builder autoScale(@Nullable AutoScaleSettingsResponse autoScale) {
             this.autoScale = autoScale;
             return this;
         }
 
-        public Builder setFixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
+        public Builder fixedScale(@Nullable FixedScaleSettingsResponse fixedScale) {
             this.fixedScale = fixedScale;
             return this;
         }

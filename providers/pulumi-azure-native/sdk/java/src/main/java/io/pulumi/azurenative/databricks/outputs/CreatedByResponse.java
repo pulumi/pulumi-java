@@ -25,11 +25,11 @@ public final class CreatedByResponse {
      */
     private final String puid;
 
-    @OutputCustomType.Constructor({"applicationId","oid","puid"})
+    @OutputCustomType.Constructor
     private CreatedByResponse(
-        String applicationId,
-        String oid,
-        String puid) {
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("oid") String oid,
+        @OutputCustomType.Parameter("puid") String puid) {
         this.applicationId = applicationId;
         this.oid = oid;
         this.puid = puid;
@@ -81,17 +81,17 @@ public final class CreatedByResponse {
     	      this.puid = defaults.puid;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setOid(String oid) {
+        public Builder oid(String oid) {
             this.oid = Objects.requireNonNull(oid);
             return this;
         }
 
-        public Builder setPuid(String puid) {
+        public Builder puid(String puid) {
             this.puid = Objects.requireNonNull(puid);
             return this;
         }

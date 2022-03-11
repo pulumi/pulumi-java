@@ -77,22 +77,22 @@ public final class TargetCopySettingArgs extends io.pulumi.resources.ResourceArg
     	      this.dataStore = defaults.dataStore;
         }
 
-        public Builder setCopyAfter(Input<Object> copyAfter) {
+        public Builder copyAfter(Input<Object> copyAfter) {
             this.copyAfter = Objects.requireNonNull(copyAfter);
             return this;
         }
 
-        public Builder setCopyAfter(Object copyAfter) {
+        public Builder copyAfter(Object copyAfter) {
             this.copyAfter = Input.of(Objects.requireNonNull(copyAfter));
             return this;
         }
 
-        public Builder setDataStore(Input<DataStoreInfoBaseArgs> dataStore) {
+        public Builder dataStore(Input<DataStoreInfoBaseArgs> dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
 
-        public Builder setDataStore(DataStoreInfoBaseArgs dataStore) {
+        public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
             this.dataStore = Input.of(Objects.requireNonNull(dataStore));
             return this;
         }

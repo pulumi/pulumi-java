@@ -52,16 +52,16 @@ public final class PresetThumbnails {
      */
     private final @Nullable String sizingPolicy;
 
-    @OutputCustomType.Constructor({"aspectRatio","format","interval","maxHeight","maxWidth","paddingPolicy","resolution","sizingPolicy"})
+    @OutputCustomType.Constructor
     private PresetThumbnails(
-        @Nullable String aspectRatio,
-        @Nullable String format,
-        @Nullable String interval,
-        @Nullable String maxHeight,
-        @Nullable String maxWidth,
-        @Nullable String paddingPolicy,
-        @Nullable String resolution,
-        @Nullable String sizingPolicy) {
+        @OutputCustomType.Parameter("aspectRatio") @Nullable String aspectRatio,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("maxHeight") @Nullable String maxHeight,
+        @OutputCustomType.Parameter("maxWidth") @Nullable String maxWidth,
+        @OutputCustomType.Parameter("paddingPolicy") @Nullable String paddingPolicy,
+        @OutputCustomType.Parameter("resolution") @Nullable String resolution,
+        @OutputCustomType.Parameter("sizingPolicy") @Nullable String sizingPolicy) {
         this.aspectRatio = aspectRatio;
         this.format = format;
         this.interval = interval;
@@ -163,42 +163,42 @@ public final class PresetThumbnails {
     	      this.sizingPolicy = defaults.sizingPolicy;
         }
 
-        public Builder setAspectRatio(@Nullable String aspectRatio) {
+        public Builder aspectRatio(@Nullable String aspectRatio) {
             this.aspectRatio = aspectRatio;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setMaxHeight(@Nullable String maxHeight) {
+        public Builder maxHeight(@Nullable String maxHeight) {
             this.maxHeight = maxHeight;
             return this;
         }
 
-        public Builder setMaxWidth(@Nullable String maxWidth) {
+        public Builder maxWidth(@Nullable String maxWidth) {
             this.maxWidth = maxWidth;
             return this;
         }
 
-        public Builder setPaddingPolicy(@Nullable String paddingPolicy) {
+        public Builder paddingPolicy(@Nullable String paddingPolicy) {
             this.paddingPolicy = paddingPolicy;
             return this;
         }
 
-        public Builder setResolution(@Nullable String resolution) {
+        public Builder resolution(@Nullable String resolution) {
             this.resolution = resolution;
             return this;
         }
 
-        public Builder setSizingPolicy(@Nullable String sizingPolicy) {
+        public Builder sizingPolicy(@Nullable String sizingPolicy) {
             this.sizingPolicy = sizingPolicy;
             return this;
         }

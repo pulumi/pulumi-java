@@ -29,10 +29,10 @@ public final class SeccompProfile {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"localhostProfile","type"})
+    @OutputCustomType.Constructor
     private SeccompProfile(
-        @Nullable String localhostProfile,
-        String type) {
+        @OutputCustomType.Parameter("localhostProfile") @Nullable String localhostProfile,
+        @OutputCustomType.Parameter("type") String type) {
         this.localhostProfile = localhostProfile;
         this.type = type;
     }
@@ -81,12 +81,12 @@ public final class SeccompProfile {
     	      this.type = defaults.type;
         }
 
-        public Builder setLocalhostProfile(@Nullable String localhostProfile) {
+        public Builder localhostProfile(@Nullable String localhostProfile) {
             this.localhostProfile = localhostProfile;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

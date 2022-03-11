@@ -55,17 +55,17 @@ public final class GetTargetInstanceResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","instance","kind","name","natPolicy","network","selfLink","zone"})
+    @OutputCustomType.Constructor
     private GetTargetInstanceResult(
-        String creationTimestamp,
-        String description,
-        String instance,
-        String kind,
-        String name,
-        String natPolicy,
-        String network,
-        String selfLink,
-        String zone) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natPolicy") String natPolicy,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.instance = instance;
@@ -177,47 +177,47 @@ public final class GetTargetInstanceResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatPolicy(String natPolicy) {
+        public Builder natPolicy(String natPolicy) {
             this.natPolicy = Objects.requireNonNull(natPolicy);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

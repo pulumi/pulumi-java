@@ -33,12 +33,12 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
      */
     private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
-    @OutputCustomType.Constructor({"description","labels","requiredFindingLabelKeys","tableOptions"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HybridOptionsResponse(
-        String description,
-        Map<String,String> labels,
-        List<String> requiredFindingLabelKeys,
-        GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("requiredFindingLabelKeys") List<String> requiredFindingLabelKeys,
+        @OutputCustomType.Parameter("tableOptions") GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
         this.description = description;
         this.labels = labels;
         this.requiredFindingLabelKeys = requiredFindingLabelKeys;
@@ -100,22 +100,22 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
     	      this.tableOptions = defaults.tableOptions;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setRequiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
+        public Builder requiredFindingLabelKeys(List<String> requiredFindingLabelKeys) {
             this.requiredFindingLabelKeys = Objects.requireNonNull(requiredFindingLabelKeys);
             return this;
         }
 
-        public Builder setTableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
+        public Builder tableOptions(GooglePrivacyDlpV2TableOptionsResponse tableOptions) {
             this.tableOptions = Objects.requireNonNull(tableOptions);
             return this;
         }

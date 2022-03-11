@@ -36,13 +36,13 @@ public final class FieldResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"maxOccurs","minOccurs","name","table","type"})
+    @OutputCustomType.Constructor
     private FieldResponse(
-        Integer maxOccurs,
-        Integer minOccurs,
-        String name,
-        String table,
-        String type) {
+        @OutputCustomType.Parameter("maxOccurs") Integer maxOccurs,
+        @OutputCustomType.Parameter("minOccurs") Integer minOccurs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("table") String table,
+        @OutputCustomType.Parameter("type") String type) {
         this.maxOccurs = maxOccurs;
         this.minOccurs = minOccurs;
         this.name = name;
@@ -114,27 +114,27 @@ public final class FieldResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setMaxOccurs(Integer maxOccurs) {
+        public Builder maxOccurs(Integer maxOccurs) {
             this.maxOccurs = Objects.requireNonNull(maxOccurs);
             return this;
         }
 
-        public Builder setMinOccurs(Integer minOccurs) {
+        public Builder minOccurs(Integer minOccurs) {
             this.minOccurs = Objects.requireNonNull(minOccurs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTable(String table) {
+        public Builder table(String table) {
             this.table = Objects.requireNonNull(table);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

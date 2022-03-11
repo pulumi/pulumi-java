@@ -23,8 +23,8 @@ public final class NoteAttestationAuthority {
      */
     private final NoteAttestationAuthorityHint hint;
 
-    @OutputCustomType.Constructor({"hint"})
-    private NoteAttestationAuthority(NoteAttestationAuthorityHint hint) {
+    @OutputCustomType.Constructor
+    private NoteAttestationAuthority(@OutputCustomType.Parameter("hint") NoteAttestationAuthorityHint hint) {
         this.hint = hint;
     }
 
@@ -64,7 +64,7 @@ public final class NoteAttestationAuthority {
     	      this.hint = defaults.hint;
         }
 
-        public Builder setHint(NoteAttestationAuthorityHint hint) {
+        public Builder hint(NoteAttestationAuthorityHint hint) {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }

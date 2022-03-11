@@ -14,11 +14,11 @@ public final class GetBrokerInstance {
     private final List<String> endpoints;
     private final String ipAddress;
 
-    @OutputCustomType.Constructor({"consoleUrl","endpoints","ipAddress"})
+    @OutputCustomType.Constructor
     private GetBrokerInstance(
-        String consoleUrl,
-        List<String> endpoints,
-        String ipAddress) {
+        @OutputCustomType.Parameter("consoleUrl") String consoleUrl,
+        @OutputCustomType.Parameter("endpoints") List<String> endpoints,
+        @OutputCustomType.Parameter("ipAddress") String ipAddress) {
         this.consoleUrl = consoleUrl;
         this.endpoints = endpoints;
         this.ipAddress = ipAddress;
@@ -58,17 +58,17 @@ public final class GetBrokerInstance {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setConsoleUrl(String consoleUrl) {
+        public Builder consoleUrl(String consoleUrl) {
             this.consoleUrl = Objects.requireNonNull(consoleUrl);
             return this;
         }
 
-        public Builder setEndpoints(List<String> endpoints) {
+        public Builder endpoints(List<String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setIpAddress(String ipAddress) {
+        public Builder ipAddress(String ipAddress) {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }

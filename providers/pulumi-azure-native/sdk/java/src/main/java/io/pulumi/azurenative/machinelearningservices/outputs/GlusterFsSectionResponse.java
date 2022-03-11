@@ -20,10 +20,10 @@ public final class GlusterFsSectionResponse {
      */
     private final String volumeName;
 
-    @OutputCustomType.Constructor({"serverAddress","volumeName"})
+    @OutputCustomType.Constructor
     private GlusterFsSectionResponse(
-        String serverAddress,
-        String volumeName) {
+        @OutputCustomType.Parameter("serverAddress") String serverAddress,
+        @OutputCustomType.Parameter("volumeName") String volumeName) {
         this.serverAddress = serverAddress;
         this.volumeName = volumeName;
     }
@@ -65,12 +65,12 @@ public final class GlusterFsSectionResponse {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setServerAddress(String serverAddress) {
+        public Builder serverAddress(String serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
-        public Builder setVolumeName(String volumeName) {
+        public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }

@@ -23,10 +23,10 @@ public final class RecordingConfigurationThumbnailConfiguration {
      */
     private final @Nullable Integer targetIntervalSeconds;
 
-    @OutputCustomType.Constructor({"recordingMode","targetIntervalSeconds"})
+    @OutputCustomType.Constructor
     private RecordingConfigurationThumbnailConfiguration(
-        RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode,
-        @Nullable Integer targetIntervalSeconds) {
+        @OutputCustomType.Parameter("recordingMode") RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode,
+        @OutputCustomType.Parameter("targetIntervalSeconds") @Nullable Integer targetIntervalSeconds) {
         this.recordingMode = recordingMode;
         this.targetIntervalSeconds = targetIntervalSeconds;
     }
@@ -68,12 +68,12 @@ public final class RecordingConfigurationThumbnailConfiguration {
     	      this.targetIntervalSeconds = defaults.targetIntervalSeconds;
         }
 
-        public Builder setRecordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
+        public Builder recordingMode(RecordingConfigurationThumbnailConfigurationRecordingMode recordingMode) {
             this.recordingMode = Objects.requireNonNull(recordingMode);
             return this;
         }
 
-        public Builder setTargetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
+        public Builder targetIntervalSeconds(@Nullable Integer targetIntervalSeconds) {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }

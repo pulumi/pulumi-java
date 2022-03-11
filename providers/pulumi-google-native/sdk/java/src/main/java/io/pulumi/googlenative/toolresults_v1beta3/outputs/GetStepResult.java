@@ -95,23 +95,23 @@ public final class GetStepResult {
      */
     private final ToolExecutionStepResponse toolExecutionStep;
 
-    @OutputCustomType.Constructor({"completionTime","creationTime","description","deviceUsageDuration","dimensionValue","hasImages","labels","multiStep","name","outcome","runDuration","state","stepId","testExecutionStep","toolExecutionStep"})
+    @OutputCustomType.Constructor
     private GetStepResult(
-        TimestampResponse completionTime,
-        TimestampResponse creationTime,
-        String description,
-        DurationResponse deviceUsageDuration,
-        List<StepDimensionValueEntryResponse> dimensionValue,
-        Boolean hasImages,
-        List<StepLabelsEntryResponse> labels,
-        MultiStepResponse multiStep,
-        String name,
-        OutcomeResponse outcome,
-        DurationResponse runDuration,
-        String state,
-        String stepId,
-        TestExecutionStepResponse testExecutionStep,
-        ToolExecutionStepResponse toolExecutionStep) {
+        @OutputCustomType.Parameter("completionTime") TimestampResponse completionTime,
+        @OutputCustomType.Parameter("creationTime") TimestampResponse creationTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("deviceUsageDuration") DurationResponse deviceUsageDuration,
+        @OutputCustomType.Parameter("dimensionValue") List<StepDimensionValueEntryResponse> dimensionValue,
+        @OutputCustomType.Parameter("hasImages") Boolean hasImages,
+        @OutputCustomType.Parameter("labels") List<StepLabelsEntryResponse> labels,
+        @OutputCustomType.Parameter("multiStep") MultiStepResponse multiStep,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outcome") OutcomeResponse outcome,
+        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stepId") String stepId,
+        @OutputCustomType.Parameter("testExecutionStep") TestExecutionStepResponse testExecutionStep,
+        @OutputCustomType.Parameter("toolExecutionStep") ToolExecutionStepResponse toolExecutionStep) {
         this.completionTime = completionTime;
         this.creationTime = creationTime;
         this.description = description;
@@ -283,77 +283,77 @@ public final class GetStepResult {
     	      this.toolExecutionStep = defaults.toolExecutionStep;
         }
 
-        public Builder setCompletionTime(TimestampResponse completionTime) {
+        public Builder completionTime(TimestampResponse completionTime) {
             this.completionTime = Objects.requireNonNull(completionTime);
             return this;
         }
 
-        public Builder setCreationTime(TimestampResponse creationTime) {
+        public Builder creationTime(TimestampResponse creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDeviceUsageDuration(DurationResponse deviceUsageDuration) {
+        public Builder deviceUsageDuration(DurationResponse deviceUsageDuration) {
             this.deviceUsageDuration = Objects.requireNonNull(deviceUsageDuration);
             return this;
         }
 
-        public Builder setDimensionValue(List<StepDimensionValueEntryResponse> dimensionValue) {
+        public Builder dimensionValue(List<StepDimensionValueEntryResponse> dimensionValue) {
             this.dimensionValue = Objects.requireNonNull(dimensionValue);
             return this;
         }
 
-        public Builder setHasImages(Boolean hasImages) {
+        public Builder hasImages(Boolean hasImages) {
             this.hasImages = Objects.requireNonNull(hasImages);
             return this;
         }
 
-        public Builder setLabels(List<StepLabelsEntryResponse> labels) {
+        public Builder labels(List<StepLabelsEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMultiStep(MultiStepResponse multiStep) {
+        public Builder multiStep(MultiStepResponse multiStep) {
             this.multiStep = Objects.requireNonNull(multiStep);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutcome(OutcomeResponse outcome) {
+        public Builder outcome(OutcomeResponse outcome) {
             this.outcome = Objects.requireNonNull(outcome);
             return this;
         }
 
-        public Builder setRunDuration(DurationResponse runDuration) {
+        public Builder runDuration(DurationResponse runDuration) {
             this.runDuration = Objects.requireNonNull(runDuration);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
-        public Builder setTestExecutionStep(TestExecutionStepResponse testExecutionStep) {
+        public Builder testExecutionStep(TestExecutionStepResponse testExecutionStep) {
             this.testExecutionStep = Objects.requireNonNull(testExecutionStep);
             return this;
         }
 
-        public Builder setToolExecutionStep(ToolExecutionStepResponse toolExecutionStep) {
+        public Builder toolExecutionStep(ToolExecutionStepResponse toolExecutionStep) {
             this.toolExecutionStep = Objects.requireNonNull(toolExecutionStep);
             return this;
         }

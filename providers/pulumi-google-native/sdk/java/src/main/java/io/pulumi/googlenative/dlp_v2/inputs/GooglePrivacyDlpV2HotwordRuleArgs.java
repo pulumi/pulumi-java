@@ -92,32 +92,32 @@ public final class GooglePrivacyDlpV2HotwordRuleArgs extends io.pulumi.resources
     	      this.proximity = defaults.proximity;
         }
 
-        public Builder setHotwordRegex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> hotwordRegex) {
+        public Builder hotwordRegex(@Nullable Input<GooglePrivacyDlpV2RegexArgs> hotwordRegex) {
             this.hotwordRegex = hotwordRegex;
             return this;
         }
 
-        public Builder setHotwordRegex(@Nullable GooglePrivacyDlpV2RegexArgs hotwordRegex) {
+        public Builder hotwordRegex(@Nullable GooglePrivacyDlpV2RegexArgs hotwordRegex) {
             this.hotwordRegex = Input.ofNullable(hotwordRegex);
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(@Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(@Nullable Input<GooglePrivacyDlpV2LikelihoodAdjustmentArgs> likelihoodAdjustment) {
             this.likelihoodAdjustment = likelihoodAdjustment;
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentArgs likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(@Nullable GooglePrivacyDlpV2LikelihoodAdjustmentArgs likelihoodAdjustment) {
             this.likelihoodAdjustment = Input.ofNullable(likelihoodAdjustment);
             return this;
         }
 
-        public Builder setProximity(@Nullable Input<GooglePrivacyDlpV2ProximityArgs> proximity) {
+        public Builder proximity(@Nullable Input<GooglePrivacyDlpV2ProximityArgs> proximity) {
             this.proximity = proximity;
             return this;
         }
 
-        public Builder setProximity(@Nullable GooglePrivacyDlpV2ProximityArgs proximity) {
+        public Builder proximity(@Nullable GooglePrivacyDlpV2ProximityArgs proximity) {
             this.proximity = Input.ofNullable(proximity);
             return this;
         }

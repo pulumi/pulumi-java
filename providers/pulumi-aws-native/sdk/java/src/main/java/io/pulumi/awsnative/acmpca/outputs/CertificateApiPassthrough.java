@@ -15,10 +15,10 @@ public final class CertificateApiPassthrough {
     private final @Nullable CertificateExtensions extensions;
     private final @Nullable CertificateSubject subject;
 
-    @OutputCustomType.Constructor({"extensions","subject"})
+    @OutputCustomType.Constructor
     private CertificateApiPassthrough(
-        @Nullable CertificateExtensions extensions,
-        @Nullable CertificateSubject subject) {
+        @OutputCustomType.Parameter("extensions") @Nullable CertificateExtensions extensions,
+        @OutputCustomType.Parameter("subject") @Nullable CertificateSubject subject) {
         this.extensions = extensions;
         this.subject = subject;
     }
@@ -52,12 +52,12 @@ public final class CertificateApiPassthrough {
     	      this.subject = defaults.subject;
         }
 
-        public Builder setExtensions(@Nullable CertificateExtensions extensions) {
+        public Builder extensions(@Nullable CertificateExtensions extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setSubject(@Nullable CertificateSubject subject) {
+        public Builder subject(@Nullable CertificateSubject subject) {
             this.subject = subject;
             return this;
         }

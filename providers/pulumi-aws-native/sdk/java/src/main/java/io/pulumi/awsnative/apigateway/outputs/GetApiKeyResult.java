@@ -46,14 +46,14 @@ public final class GetApiKeyResult {
      */
     private final @Nullable List<ApiKeyTag> tags;
 
-    @OutputCustomType.Constructor({"aPIKeyId","customerId","description","enabled","stageKeys","tags"})
+    @OutputCustomType.Constructor
     private GetApiKeyResult(
-        @Nullable String aPIKeyId,
-        @Nullable String customerId,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable List<ApiKeyStageKey> stageKeys,
-        @Nullable List<ApiKeyTag> tags) {
+        @OutputCustomType.Parameter("aPIKeyId") @Nullable String aPIKeyId,
+        @OutputCustomType.Parameter("customerId") @Nullable String customerId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("stageKeys") @Nullable List<ApiKeyStageKey> stageKeys,
+        @OutputCustomType.Parameter("tags") @Nullable List<ApiKeyTag> tags) {
         this.aPIKeyId = aPIKeyId;
         this.customerId = customerId;
         this.description = description;
@@ -135,32 +135,32 @@ public final class GetApiKeyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAPIKeyId(@Nullable String aPIKeyId) {
+        public Builder aPIKeyId(@Nullable String aPIKeyId) {
             this.aPIKeyId = aPIKeyId;
             return this;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setStageKeys(@Nullable List<ApiKeyStageKey> stageKeys) {
+        public Builder stageKeys(@Nullable List<ApiKeyStageKey> stageKeys) {
             this.stageKeys = stageKeys;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ApiKeyTag> tags) {
+        public Builder tags(@Nullable List<ApiKeyTag> tags) {
             this.tags = tags;
             return this;
         }

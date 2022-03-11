@@ -90,32 +90,32 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.systemId = defaults.systemId;
         }
 
-        public Builder setGid(@Nullable Input<String> gid) {
+        public Builder gid(@Nullable Input<String> gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = Input.ofNullable(gid);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSystemId(@Nullable Input<String> systemId) {
+        public Builder systemId(@Nullable Input<String> systemId) {
             this.systemId = systemId;
             return this;
         }
 
-        public Builder setSystemId(@Nullable String systemId) {
+        public Builder systemId(@Nullable String systemId) {
             this.systemId = Input.ofNullable(systemId);
             return this;
         }

@@ -108,42 +108,42 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder setEventLevels(Input<List<ApplicationEventLevel>> eventLevels) {
+        public Builder eventLevels(Input<List<ApplicationEventLevel>> eventLevels) {
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
 
-        public Builder setEventLevels(List<ApplicationEventLevel> eventLevels) {
+        public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             this.eventLevels = Input.of(Objects.requireNonNull(eventLevels));
             return this;
         }
 
-        public Builder setEventName(Input<String> eventName) {
+        public Builder eventName(Input<String> eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Input.of(Objects.requireNonNull(eventName));
             return this;
         }
 
-        public Builder setLogGroupName(Input<String> logGroupName) {
+        public Builder logGroupName(Input<String> logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Input.of(Objects.requireNonNull(logGroupName));
             return this;
         }
 
-        public Builder setPatternSet(@Nullable Input<String> patternSet) {
+        public Builder patternSet(@Nullable Input<String> patternSet) {
             this.patternSet = patternSet;
             return this;
         }
 
-        public Builder setPatternSet(@Nullable String patternSet) {
+        public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = Input.ofNullable(patternSet);
             return this;
         }

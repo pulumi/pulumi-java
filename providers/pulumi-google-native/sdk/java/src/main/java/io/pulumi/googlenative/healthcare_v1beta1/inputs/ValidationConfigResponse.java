@@ -122,27 +122,27 @@ public final class ValidationConfigResponse extends io.pulumi.resources.InvokeAr
     	      this.enabledImplementationGuides = defaults.enabledImplementationGuides;
         }
 
-        public Builder setDisableFhirpathValidation(Boolean disableFhirpathValidation) {
+        public Builder disableFhirpathValidation(Boolean disableFhirpathValidation) {
             this.disableFhirpathValidation = Objects.requireNonNull(disableFhirpathValidation);
             return this;
         }
 
-        public Builder setDisableProfileValidation(Boolean disableProfileValidation) {
+        public Builder disableProfileValidation(Boolean disableProfileValidation) {
             this.disableProfileValidation = Objects.requireNonNull(disableProfileValidation);
             return this;
         }
 
-        public Builder setDisableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
+        public Builder disableReferenceTypeValidation(Boolean disableReferenceTypeValidation) {
             this.disableReferenceTypeValidation = Objects.requireNonNull(disableReferenceTypeValidation);
             return this;
         }
 
-        public Builder setDisableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
+        public Builder disableRequiredFieldValidation(Boolean disableRequiredFieldValidation) {
             this.disableRequiredFieldValidation = Objects.requireNonNull(disableRequiredFieldValidation);
             return this;
         }
 
-        public Builder setEnabledImplementationGuides(List<String> enabledImplementationGuides) {
+        public Builder enabledImplementationGuides(List<String> enabledImplementationGuides) {
             this.enabledImplementationGuides = Objects.requireNonNull(enabledImplementationGuides);
             return this;
         }

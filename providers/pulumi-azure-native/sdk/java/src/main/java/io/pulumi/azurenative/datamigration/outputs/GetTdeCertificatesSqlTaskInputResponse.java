@@ -28,11 +28,11 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
      */
     private final List<SelectedCertificateInputResponse> selectedCertificates;
 
-    @OutputCustomType.Constructor({"backupFileShare","connectionInfo","selectedCertificates"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskInputResponse(
-        FileShareResponse backupFileShare,
-        SqlConnectionInfoResponse connectionInfo,
-        List<SelectedCertificateInputResponse> selectedCertificates) {
+        @OutputCustomType.Parameter("backupFileShare") FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
+        @OutputCustomType.Parameter("selectedCertificates") List<SelectedCertificateInputResponse> selectedCertificates) {
         this.backupFileShare = backupFileShare;
         this.connectionInfo = connectionInfo;
         this.selectedCertificates = selectedCertificates;
@@ -84,17 +84,17 @@ public final class GetTdeCertificatesSqlTaskInputResponse {
     	      this.selectedCertificates = defaults.selectedCertificates;
         }
 
-        public Builder setBackupFileShare(FileShareResponse backupFileShare) {
+        public Builder backupFileShare(FileShareResponse backupFileShare) {
             this.backupFileShare = Objects.requireNonNull(backupFileShare);
             return this;
         }
 
-        public Builder setConnectionInfo(SqlConnectionInfoResponse connectionInfo) {
+        public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
-        public Builder setSelectedCertificates(List<SelectedCertificateInputResponse> selectedCertificates) {
+        public Builder selectedCertificates(List<SelectedCertificateInputResponse> selectedCertificates) {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }

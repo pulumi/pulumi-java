@@ -27,11 +27,11 @@ public final class ImageRegistryCredentialResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","server","username"})
+    @OutputCustomType.Constructor
     private ImageRegistryCredentialResponse(
-        @Nullable String password,
-        String server,
-        String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("server") String server,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.server = server;
         this.username = username;
@@ -83,17 +83,17 @@ public final class ImageRegistryCredentialResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServer(String server) {
+        public Builder server(String server) {
             this.server = Objects.requireNonNull(server);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

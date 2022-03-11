@@ -26,11 +26,11 @@ public final class ClusterStep {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"actionOnFailure","hadoopJarStep","name"})
+    @OutputCustomType.Constructor
     private ClusterStep(
-        String actionOnFailure,
-        ClusterStepHadoopJarStep hadoopJarStep,
-        String name) {
+        @OutputCustomType.Parameter("actionOnFailure") String actionOnFailure,
+        @OutputCustomType.Parameter("hadoopJarStep") ClusterStepHadoopJarStep hadoopJarStep,
+        @OutputCustomType.Parameter("name") String name) {
         this.actionOnFailure = actionOnFailure;
         this.hadoopJarStep = hadoopJarStep;
         this.name = name;
@@ -82,17 +82,17 @@ public final class ClusterStep {
     	      this.name = defaults.name;
         }
 
-        public Builder setActionOnFailure(String actionOnFailure) {
+        public Builder actionOnFailure(String actionOnFailure) {
             this.actionOnFailure = Objects.requireNonNull(actionOnFailure);
             return this;
         }
 
-        public Builder setHadoopJarStep(ClusterStepHadoopJarStep hadoopJarStep) {
+        public Builder hadoopJarStep(ClusterStepHadoopJarStep hadoopJarStep) {
             this.hadoopJarStep = Objects.requireNonNull(hadoopJarStep);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

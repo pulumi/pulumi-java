@@ -42,14 +42,14 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
      */
     private final @Nullable String upgradeTimeout;
 
-    @OutputCustomType.Constructor({"failureAction","healthCheckRetryTimeout","healthCheckStableDuration","healthCheckWaitDuration","upgradeDomainTimeout","upgradeTimeout"})
+    @OutputCustomType.Constructor
     private ArmRollingUpgradeMonitoringPolicyResponse(
-        @Nullable String failureAction,
-        @Nullable String healthCheckRetryTimeout,
-        @Nullable String healthCheckStableDuration,
-        @Nullable String healthCheckWaitDuration,
-        @Nullable String upgradeDomainTimeout,
-        @Nullable String upgradeTimeout) {
+        @OutputCustomType.Parameter("failureAction") @Nullable String failureAction,
+        @OutputCustomType.Parameter("healthCheckRetryTimeout") @Nullable String healthCheckRetryTimeout,
+        @OutputCustomType.Parameter("healthCheckStableDuration") @Nullable String healthCheckStableDuration,
+        @OutputCustomType.Parameter("healthCheckWaitDuration") @Nullable String healthCheckWaitDuration,
+        @OutputCustomType.Parameter("upgradeDomainTimeout") @Nullable String upgradeDomainTimeout,
+        @OutputCustomType.Parameter("upgradeTimeout") @Nullable String upgradeTimeout) {
         this.failureAction = failureAction;
         this.healthCheckRetryTimeout = healthCheckRetryTimeout;
         this.healthCheckStableDuration = healthCheckStableDuration;
@@ -131,32 +131,32 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
     	      this.upgradeTimeout = defaults.upgradeTimeout;
         }
 
-        public Builder setFailureAction(@Nullable String failureAction) {
+        public Builder failureAction(@Nullable String failureAction) {
             this.failureAction = failureAction;
             return this;
         }
 
-        public Builder setHealthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
+        public Builder healthCheckRetryTimeout(@Nullable String healthCheckRetryTimeout) {
             this.healthCheckRetryTimeout = healthCheckRetryTimeout;
             return this;
         }
 
-        public Builder setHealthCheckStableDuration(@Nullable String healthCheckStableDuration) {
+        public Builder healthCheckStableDuration(@Nullable String healthCheckStableDuration) {
             this.healthCheckStableDuration = healthCheckStableDuration;
             return this;
         }
 
-        public Builder setHealthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
+        public Builder healthCheckWaitDuration(@Nullable String healthCheckWaitDuration) {
             this.healthCheckWaitDuration = healthCheckWaitDuration;
             return this;
         }
 
-        public Builder setUpgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
+        public Builder upgradeDomainTimeout(@Nullable String upgradeDomainTimeout) {
             this.upgradeDomainTimeout = upgradeDomainTimeout;
             return this;
         }
 
-        public Builder setUpgradeTimeout(@Nullable String upgradeTimeout) {
+        public Builder upgradeTimeout(@Nullable String upgradeTimeout) {
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }

@@ -82,23 +82,23 @@ public final class GetAssessmentMetadataInSubscriptionResult {
      */
     private final @Nullable String userImpact;
 
-    @OutputCustomType.Constructor({"assessmentType","categories","description","displayName","id","implementationEffort","name","partnerData","policyDefinitionId","preview","remediationDescription","severity","threats","type","userImpact"})
+    @OutputCustomType.Constructor
     private GetAssessmentMetadataInSubscriptionResult(
-        String assessmentType,
-        @Nullable List<String> categories,
-        @Nullable String description,
-        String displayName,
-        String id,
-        @Nullable String implementationEffort,
-        String name,
-        @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
-        String policyDefinitionId,
-        @Nullable Boolean preview,
-        @Nullable String remediationDescription,
-        String severity,
-        @Nullable List<String> threats,
-        String type,
-        @Nullable String userImpact) {
+        @OutputCustomType.Parameter("assessmentType") String assessmentType,
+        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("implementationEffort") @Nullable String implementationEffort,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerData") @Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData,
+        @OutputCustomType.Parameter("policyDefinitionId") String policyDefinitionId,
+        @OutputCustomType.Parameter("preview") @Nullable Boolean preview,
+        @OutputCustomType.Parameter("remediationDescription") @Nullable String remediationDescription,
+        @OutputCustomType.Parameter("severity") String severity,
+        @OutputCustomType.Parameter("threats") @Nullable List<String> threats,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userImpact") @Nullable String userImpact) {
         this.assessmentType = assessmentType;
         this.categories = categories;
         this.description = description;
@@ -262,77 +262,77 @@ public final class GetAssessmentMetadataInSubscriptionResult {
     	      this.userImpact = defaults.userImpact;
         }
 
-        public Builder setAssessmentType(String assessmentType) {
+        public Builder assessmentType(String assessmentType) {
             this.assessmentType = Objects.requireNonNull(assessmentType);
             return this;
         }
 
-        public Builder setCategories(@Nullable List<String> categories) {
+        public Builder categories(@Nullable List<String> categories) {
             this.categories = categories;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImplementationEffort(@Nullable String implementationEffort) {
+        public Builder implementationEffort(@Nullable String implementationEffort) {
             this.implementationEffort = implementationEffort;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerData(@Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData) {
+        public Builder partnerData(@Nullable SecurityAssessmentMetadataPartnerDataResponse partnerData) {
             this.partnerData = partnerData;
             return this;
         }
 
-        public Builder setPolicyDefinitionId(String policyDefinitionId) {
+        public Builder policyDefinitionId(String policyDefinitionId) {
             this.policyDefinitionId = Objects.requireNonNull(policyDefinitionId);
             return this;
         }
 
-        public Builder setPreview(@Nullable Boolean preview) {
+        public Builder preview(@Nullable Boolean preview) {
             this.preview = preview;
             return this;
         }
 
-        public Builder setRemediationDescription(@Nullable String remediationDescription) {
+        public Builder remediationDescription(@Nullable String remediationDescription) {
             this.remediationDescription = remediationDescription;
             return this;
         }
 
-        public Builder setSeverity(String severity) {
+        public Builder severity(String severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setThreats(@Nullable List<String> threats) {
+        public Builder threats(@Nullable List<String> threats) {
             this.threats = threats;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserImpact(@Nullable String userImpact) {
+        public Builder userImpact(@Nullable String userImpact) {
             this.userImpact = userImpact;
             return this;
         }

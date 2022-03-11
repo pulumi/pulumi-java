@@ -27,11 +27,11 @@ public final class PerformanceThresholdResponse {
      */
     private final Double threshold;
 
-    @OutputCustomType.Constructor({"basicSliPerformance","performance","threshold"})
+    @OutputCustomType.Constructor
     private PerformanceThresholdResponse(
-        BasicSliResponse basicSliPerformance,
-        RequestBasedSliResponse performance,
-        Double threshold) {
+        @OutputCustomType.Parameter("basicSliPerformance") BasicSliResponse basicSliPerformance,
+        @OutputCustomType.Parameter("performance") RequestBasedSliResponse performance,
+        @OutputCustomType.Parameter("threshold") Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;
@@ -83,17 +83,17 @@ public final class PerformanceThresholdResponse {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setBasicSliPerformance(BasicSliResponse basicSliPerformance) {
+        public Builder basicSliPerformance(BasicSliResponse basicSliPerformance) {
             this.basicSliPerformance = Objects.requireNonNull(basicSliPerformance);
             return this;
         }
 
-        public Builder setPerformance(RequestBasedSliResponse performance) {
+        public Builder performance(RequestBasedSliResponse performance) {
             this.performance = Objects.requireNonNull(performance);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }

@@ -73,20 +73,20 @@ public final class GetReservationResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"commitment","creationTimestamp","description","kind","name","satisfiesPzs","selfLink","shareSettings","specificReservation","specificReservationRequired","status","zone"})
+    @OutputCustomType.Constructor
     private GetReservationResult(
-        String commitment,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Boolean satisfiesPzs,
-        String selfLink,
-        ShareSettingsResponse shareSettings,
-        AllocationSpecificSKUReservationResponse specificReservation,
-        Boolean specificReservationRequired,
-        String status,
-        String zone) {
+        @OutputCustomType.Parameter("commitment") String commitment,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("shareSettings") ShareSettingsResponse shareSettings,
+        @OutputCustomType.Parameter("specificReservation") AllocationSpecificSKUReservationResponse specificReservation,
+        @OutputCustomType.Parameter("specificReservationRequired") Boolean specificReservationRequired,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.commitment = commitment;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -228,62 +228,62 @@ public final class GetReservationResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setCommitment(String commitment) {
+        public Builder commitment(String commitment) {
             this.commitment = Objects.requireNonNull(commitment);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setShareSettings(ShareSettingsResponse shareSettings) {
+        public Builder shareSettings(ShareSettingsResponse shareSettings) {
             this.shareSettings = Objects.requireNonNull(shareSettings);
             return this;
         }
 
-        public Builder setSpecificReservation(AllocationSpecificSKUReservationResponse specificReservation) {
+        public Builder specificReservation(AllocationSpecificSKUReservationResponse specificReservation) {
             this.specificReservation = Objects.requireNonNull(specificReservation);
             return this;
         }
 
-        public Builder setSpecificReservationRequired(Boolean specificReservationRequired) {
+        public Builder specificReservationRequired(Boolean specificReservationRequired) {
             this.specificReservationRequired = Objects.requireNonNull(specificReservationRequired);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

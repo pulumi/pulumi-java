@@ -22,10 +22,10 @@ public final class SecretsResponse {
      */
     private final List<SecretManagerSecretResponse> secretManager;
 
-    @OutputCustomType.Constructor({"inline","secretManager"})
+    @OutputCustomType.Constructor
     private SecretsResponse(
-        List<InlineSecretResponse> inline,
-        List<SecretManagerSecretResponse> secretManager) {
+        @OutputCustomType.Parameter("inline") List<InlineSecretResponse> inline,
+        @OutputCustomType.Parameter("secretManager") List<SecretManagerSecretResponse> secretManager) {
         this.inline = inline;
         this.secretManager = secretManager;
     }
@@ -67,12 +67,12 @@ public final class SecretsResponse {
     	      this.secretManager = defaults.secretManager;
         }
 
-        public Builder setInline(List<InlineSecretResponse> inline) {
+        public Builder inline(List<InlineSecretResponse> inline) {
             this.inline = Objects.requireNonNull(inline);
             return this;
         }
 
-        public Builder setSecretManager(List<SecretManagerSecretResponse> secretManager) {
+        public Builder secretManager(List<SecretManagerSecretResponse> secretManager) {
             this.secretManager = Objects.requireNonNull(secretManager);
             return this;
         }

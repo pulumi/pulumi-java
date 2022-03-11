@@ -53,7 +53,7 @@ public final class ResponsePlanAction extends io.pulumi.resources.InvokeArgs {
     	      this.ssmAutomation = defaults.ssmAutomation;
         }
 
-        public Builder setSsmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
+        public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
             this.ssmAutomation = ssmAutomation;
             return this;
         }

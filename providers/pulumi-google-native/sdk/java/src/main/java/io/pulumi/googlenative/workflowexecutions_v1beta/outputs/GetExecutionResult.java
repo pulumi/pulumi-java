@@ -56,17 +56,17 @@ public final class GetExecutionResult {
      */
     private final String workflowRevisionId;
 
-    @OutputCustomType.Constructor({"argument","callLogLevel","endTime","error","name","result","startTime","state","workflowRevisionId"})
+    @OutputCustomType.Constructor
     private GetExecutionResult(
-        String argument,
-        String callLogLevel,
-        String endTime,
-        ErrorResponse error,
-        String name,
-        String result,
-        String startTime,
-        String state,
-        String workflowRevisionId) {
+        @OutputCustomType.Parameter("argument") String argument,
+        @OutputCustomType.Parameter("callLogLevel") String callLogLevel,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("error") ErrorResponse error,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("result") String result,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("workflowRevisionId") String workflowRevisionId) {
         this.argument = argument;
         this.callLogLevel = callLogLevel;
         this.endTime = endTime;
@@ -178,47 +178,47 @@ public final class GetExecutionResult {
     	      this.workflowRevisionId = defaults.workflowRevisionId;
         }
 
-        public Builder setArgument(String argument) {
+        public Builder argument(String argument) {
             this.argument = Objects.requireNonNull(argument);
             return this;
         }
 
-        public Builder setCallLogLevel(String callLogLevel) {
+        public Builder callLogLevel(String callLogLevel) {
             this.callLogLevel = Objects.requireNonNull(callLogLevel);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setError(ErrorResponse error) {
+        public Builder error(ErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setWorkflowRevisionId(String workflowRevisionId) {
+        public Builder workflowRevisionId(String workflowRevisionId) {
             this.workflowRevisionId = Objects.requireNonNull(workflowRevisionId);
             return this;
         }

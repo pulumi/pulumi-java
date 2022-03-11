@@ -23,10 +23,10 @@ public final class SizeAvailabilityResponse {
      */
     private final @Nullable String sizeCategory;
 
-    @OutputCustomType.Constructor({"isAvailable","sizeCategory"})
+    @OutputCustomType.Constructor
     private SizeAvailabilityResponse(
-        @Nullable Boolean isAvailable,
-        @Nullable String sizeCategory) {
+        @OutputCustomType.Parameter("isAvailable") @Nullable Boolean isAvailable,
+        @OutputCustomType.Parameter("sizeCategory") @Nullable String sizeCategory) {
         this.isAvailable = isAvailable;
         this.sizeCategory = sizeCategory;
     }
@@ -68,12 +68,12 @@ public final class SizeAvailabilityResponse {
     	      this.sizeCategory = defaults.sizeCategory;
         }
 
-        public Builder setIsAvailable(@Nullable Boolean isAvailable) {
+        public Builder isAvailable(@Nullable Boolean isAvailable) {
             this.isAvailable = isAvailable;
             return this;
         }
 
-        public Builder setSizeCategory(@Nullable String sizeCategory) {
+        public Builder sizeCategory(@Nullable String sizeCategory) {
             this.sizeCategory = sizeCategory;
             return this;
         }

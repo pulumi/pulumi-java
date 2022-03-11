@@ -71,22 +71,22 @@ public final class PolicyExcludeMapGetArgs extends io.pulumi.resources.ResourceA
     	      this.orgunits = defaults.orgunits;
         }
 
-        public Builder setAccounts(@Nullable Input<List<String>> accounts) {
+        public Builder accounts(@Nullable Input<List<String>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Input.ofNullable(accounts);
             return this;
         }
 
-        public Builder setOrgunits(@Nullable Input<List<String>> orgunits) {
+        public Builder orgunits(@Nullable Input<List<String>> orgunits) {
             this.orgunits = orgunits;
             return this;
         }
 
-        public Builder setOrgunits(@Nullable List<String> orgunits) {
+        public Builder orgunits(@Nullable List<String> orgunits) {
             this.orgunits = Input.ofNullable(orgunits);
             return this;
         }

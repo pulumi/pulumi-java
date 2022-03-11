@@ -31,11 +31,11 @@ public final class ComponentSetupResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"componentName","licenseKey","type"})
+    @OutputCustomType.Constructor
     private ComponentSetupResponse(
-        String componentName,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey,
-        String type) {
+        @OutputCustomType.Parameter("componentName") String componentName,
+        @OutputCustomType.Parameter("licenseKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey,
+        @OutputCustomType.Parameter("type") String type) {
         this.componentName = componentName;
         this.licenseKey = licenseKey;
         this.type = type;
@@ -88,17 +88,17 @@ public final class ComponentSetupResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setComponentName(String componentName) {
+        public Builder componentName(String componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
-        public Builder setLicenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
+        public Builder licenseKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> licenseKey) {
             this.licenseKey = licenseKey;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

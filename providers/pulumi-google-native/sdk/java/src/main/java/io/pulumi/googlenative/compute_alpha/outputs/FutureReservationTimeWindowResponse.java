@@ -18,11 +18,11 @@ public final class FutureReservationTimeWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"duration","endTime","startTime"})
+    @OutputCustomType.Constructor
     private FutureReservationTimeWindowResponse(
-        DurationResponse duration,
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("duration") DurationResponse duration,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.duration = duration;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -66,17 +66,17 @@ public final class FutureReservationTimeWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDuration(DurationResponse duration) {
+        public Builder duration(DurationResponse duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

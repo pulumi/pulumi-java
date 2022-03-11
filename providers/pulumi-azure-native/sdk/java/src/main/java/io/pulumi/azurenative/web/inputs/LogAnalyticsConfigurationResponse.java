@@ -49,7 +49,7 @@ public final class LogAnalyticsConfigurationResponse extends io.pulumi.resources
     	      this.customerId = defaults.customerId;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }

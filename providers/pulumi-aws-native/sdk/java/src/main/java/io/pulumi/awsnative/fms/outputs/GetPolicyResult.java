@@ -31,21 +31,21 @@ public final class GetPolicyResult {
     private final @Nullable SecurityServicePolicyDataProperties securityServicePolicyData;
     private final @Nullable List<PolicyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","excludeMap","excludeResourceTags","id","includeMap","policyName","remediationEnabled","resourceTags","resourceType","resourceTypeList","resourcesCleanUp","securityServicePolicyData","tags"})
+    @OutputCustomType.Constructor
     private GetPolicyResult(
-        @Nullable String arn,
-        @Nullable PolicyIEMap excludeMap,
-        @Nullable Boolean excludeResourceTags,
-        @Nullable String id,
-        @Nullable PolicyIEMap includeMap,
-        @Nullable String policyName,
-        @Nullable Boolean remediationEnabled,
-        @Nullable List<PolicyResourceTag> resourceTags,
-        @Nullable String resourceType,
-        @Nullable List<String> resourceTypeList,
-        @Nullable Boolean resourcesCleanUp,
-        @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
-        @Nullable List<PolicyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("excludeMap") @Nullable PolicyIEMap excludeMap,
+        @OutputCustomType.Parameter("excludeResourceTags") @Nullable Boolean excludeResourceTags,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("includeMap") @Nullable PolicyIEMap includeMap,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("remediationEnabled") @Nullable Boolean remediationEnabled,
+        @OutputCustomType.Parameter("resourceTags") @Nullable List<PolicyResourceTag> resourceTags,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("resourceTypeList") @Nullable List<String> resourceTypeList,
+        @OutputCustomType.Parameter("resourcesCleanUp") @Nullable Boolean resourcesCleanUp,
+        @OutputCustomType.Parameter("securityServicePolicyData") @Nullable SecurityServicePolicyDataProperties securityServicePolicyData,
+        @OutputCustomType.Parameter("tags") @Nullable List<PolicyTag> tags) {
         this.arn = arn;
         this.excludeMap = excludeMap;
         this.excludeResourceTags = excludeResourceTags;
@@ -145,67 +145,67 @@ public final class GetPolicyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setExcludeMap(@Nullable PolicyIEMap excludeMap) {
+        public Builder excludeMap(@Nullable PolicyIEMap excludeMap) {
             this.excludeMap = excludeMap;
             return this;
         }
 
-        public Builder setExcludeResourceTags(@Nullable Boolean excludeResourceTags) {
+        public Builder excludeResourceTags(@Nullable Boolean excludeResourceTags) {
             this.excludeResourceTags = excludeResourceTags;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIncludeMap(@Nullable PolicyIEMap includeMap) {
+        public Builder includeMap(@Nullable PolicyIEMap includeMap) {
             this.includeMap = includeMap;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setRemediationEnabled(@Nullable Boolean remediationEnabled) {
+        public Builder remediationEnabled(@Nullable Boolean remediationEnabled) {
             this.remediationEnabled = remediationEnabled;
             return this;
         }
 
-        public Builder setResourceTags(@Nullable List<PolicyResourceTag> resourceTags) {
+        public Builder resourceTags(@Nullable List<PolicyResourceTag> resourceTags) {
             this.resourceTags = resourceTags;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceTypeList(@Nullable List<String> resourceTypeList) {
+        public Builder resourceTypeList(@Nullable List<String> resourceTypeList) {
             this.resourceTypeList = resourceTypeList;
             return this;
         }
 
-        public Builder setResourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
+        public Builder resourcesCleanUp(@Nullable Boolean resourcesCleanUp) {
             this.resourcesCleanUp = resourcesCleanUp;
             return this;
         }
 
-        public Builder setSecurityServicePolicyData(@Nullable SecurityServicePolicyDataProperties securityServicePolicyData) {
+        public Builder securityServicePolicyData(@Nullable SecurityServicePolicyDataProperties securityServicePolicyData) {
             this.securityServicePolicyData = securityServicePolicyData;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PolicyTag> tags) {
+        public Builder tags(@Nullable List<PolicyTag> tags) {
             this.tags = tags;
             return this;
         }

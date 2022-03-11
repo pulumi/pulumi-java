@@ -27,11 +27,11 @@ public final class DatadogInstallMethodResponse {
      */
     private final @Nullable String toolVersion;
 
-    @OutputCustomType.Constructor({"installerVersion","tool","toolVersion"})
+    @OutputCustomType.Constructor
     private DatadogInstallMethodResponse(
-        @Nullable String installerVersion,
-        @Nullable String tool,
-        @Nullable String toolVersion) {
+        @OutputCustomType.Parameter("installerVersion") @Nullable String installerVersion,
+        @OutputCustomType.Parameter("tool") @Nullable String tool,
+        @OutputCustomType.Parameter("toolVersion") @Nullable String toolVersion) {
         this.installerVersion = installerVersion;
         this.tool = tool;
         this.toolVersion = toolVersion;
@@ -83,17 +83,17 @@ public final class DatadogInstallMethodResponse {
     	      this.toolVersion = defaults.toolVersion;
         }
 
-        public Builder setInstallerVersion(@Nullable String installerVersion) {
+        public Builder installerVersion(@Nullable String installerVersion) {
             this.installerVersion = installerVersion;
             return this;
         }
 
-        public Builder setTool(@Nullable String tool) {
+        public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
         }
 
-        public Builder setToolVersion(@Nullable String toolVersion) {
+        public Builder toolVersion(@Nullable String toolVersion) {
             this.toolVersion = toolVersion;
             return this;
         }

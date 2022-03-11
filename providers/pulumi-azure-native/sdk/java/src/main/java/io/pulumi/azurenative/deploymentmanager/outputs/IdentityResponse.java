@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"identityIds","type"})
+    @OutputCustomType.Constructor
     private IdentityResponse(
-        List<String> identityIds,
-        String type) {
+        @OutputCustomType.Parameter("identityIds") List<String> identityIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.identityIds = identityIds;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class IdentityResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentityIds(List<String> identityIds) {
+        public Builder identityIds(List<String> identityIds) {
             this.identityIds = Objects.requireNonNull(identityIds);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

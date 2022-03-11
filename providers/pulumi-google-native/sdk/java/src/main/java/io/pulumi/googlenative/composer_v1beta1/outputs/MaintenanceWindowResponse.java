@@ -25,11 +25,11 @@ public final class MaintenanceWindowResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","recurrence","startTime"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowResponse(
-        String endTime,
-        String recurrence,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.recurrence = recurrence;
         this.startTime = startTime;
@@ -81,17 +81,17 @@ public final class MaintenanceWindowResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setRecurrence(String recurrence) {
+        public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

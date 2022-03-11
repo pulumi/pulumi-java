@@ -27,11 +27,11 @@ public final class JobStepActionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"source","type","value"})
+    @OutputCustomType.Constructor
     private JobStepActionResponse(
-        @Nullable String source,
-        @Nullable String type,
-        String value) {
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") String value) {
         this.source = source;
         this.type = type;
         this.value = value;
@@ -83,17 +83,17 @@ public final class JobStepActionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -24,10 +24,10 @@ public final class ListScheduleApplicableResult {
      */
     private final @Nullable List<ScheduleResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListScheduleApplicableResult(
-        @Nullable String nextLink,
-        @Nullable List<ScheduleResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ScheduleResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListScheduleApplicableResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<ScheduleResponse> value) {
+        public Builder value(@Nullable List<ScheduleResponse> value) {
             this.value = value;
             return this;
         }

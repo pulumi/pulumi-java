@@ -33,12 +33,12 @@ public final class ScriptActionResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"name","parameters","roles","uri"})
+    @OutputCustomType.Constructor
     private ScriptActionResponse(
-        String name,
-        @Nullable String parameters,
-        Object roles,
-        String uri) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters,
+        @OutputCustomType.Parameter("roles") Object roles,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.name = name;
         this.parameters = parameters;
         this.roles = roles;
@@ -100,22 +100,22 @@ public final class ScriptActionResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setRoles(Object roles) {
+        public Builder roles(Object roles) {
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

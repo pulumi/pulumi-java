@@ -76,22 +76,22 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.path = defaults.path;
         }
 
-        public Builder setContentType(@Nullable Input<Either<String,ContentType>> contentType) {
+        public Builder contentType(@Nullable Input<Either<String,ContentType>> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable Either<String,ContentType> contentType) {
+        public Builder contentType(@Nullable Either<String,ContentType> contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }

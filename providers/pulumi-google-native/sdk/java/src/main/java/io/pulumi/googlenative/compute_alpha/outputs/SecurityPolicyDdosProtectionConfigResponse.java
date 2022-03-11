@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SecurityPolicyDdosProtectionConfigResponse {
     private final String ddosProtection;
 
-    @OutputCustomType.Constructor({"ddosProtection"})
-    private SecurityPolicyDdosProtectionConfigResponse(String ddosProtection) {
+    @OutputCustomType.Constructor
+    private SecurityPolicyDdosProtectionConfigResponse(@OutputCustomType.Parameter("ddosProtection") String ddosProtection) {
         this.ddosProtection = ddosProtection;
     }
 
@@ -40,7 +40,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
     	      this.ddosProtection = defaults.ddosProtection;
         }
 
-        public Builder setDdosProtection(String ddosProtection) {
+        public Builder ddosProtection(String ddosProtection) {
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }

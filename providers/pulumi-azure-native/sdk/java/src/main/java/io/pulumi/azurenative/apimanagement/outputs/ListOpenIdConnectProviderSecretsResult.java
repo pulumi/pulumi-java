@@ -17,8 +17,8 @@ public final class ListOpenIdConnectProviderSecretsResult {
      */
     private final @Nullable String clientSecret;
 
-    @OutputCustomType.Constructor({"clientSecret"})
-    private ListOpenIdConnectProviderSecretsResult(@Nullable String clientSecret) {
+    @OutputCustomType.Constructor
+    private ListOpenIdConnectProviderSecretsResult(@OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret) {
         this.clientSecret = clientSecret;
     }
 
@@ -50,7 +50,7 @@ public final class ListOpenIdConnectProviderSecretsResult {
     	      this.clientSecret = defaults.clientSecret;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }

@@ -127,62 +127,62 @@ public final class TargetGrpcProxyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.validateForProxyless = defaults.validateForProxyless;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setUrlMap(@Nullable Input<String> urlMap) {
+        public Builder urlMap(@Nullable Input<String> urlMap) {
             this.urlMap = urlMap;
             return this;
         }
 
-        public Builder setUrlMap(@Nullable String urlMap) {
+        public Builder urlMap(@Nullable String urlMap) {
             this.urlMap = Input.ofNullable(urlMap);
             return this;
         }
 
-        public Builder setValidateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Input<Boolean> validateForProxyless) {
             this.validateForProxyless = validateForProxyless;
             return this;
         }
 
-        public Builder setValidateForProxyless(@Nullable Boolean validateForProxyless) {
+        public Builder validateForProxyless(@Nullable Boolean validateForProxyless) {
             this.validateForProxyless = Input.ofNullable(validateForProxyless);
             return this;
         }

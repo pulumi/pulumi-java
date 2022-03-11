@@ -76,22 +76,22 @@ public final class ImageAnnotationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.frameIndex = defaults.frameIndex;
         }
 
-        public Builder setBoundingPolys(@Nullable Input<List<BoundingPolyArgs>> boundingPolys) {
+        public Builder boundingPolys(@Nullable Input<List<BoundingPolyArgs>> boundingPolys) {
             this.boundingPolys = boundingPolys;
             return this;
         }
 
-        public Builder setBoundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
+        public Builder boundingPolys(@Nullable List<BoundingPolyArgs> boundingPolys) {
             this.boundingPolys = Input.ofNullable(boundingPolys);
             return this;
         }
 
-        public Builder setFrameIndex(@Nullable Input<Integer> frameIndex) {
+        public Builder frameIndex(@Nullable Input<Integer> frameIndex) {
             this.frameIndex = frameIndex;
             return this;
         }
 
-        public Builder setFrameIndex(@Nullable Integer frameIndex) {
+        public Builder frameIndex(@Nullable Integer frameIndex) {
             this.frameIndex = Input.ofNullable(frameIndex);
             return this;
         }

@@ -31,12 +31,12 @@ public final class AnimationFadeResponse {
      */
     private final NormalizedCoordinateResponse xy;
 
-    @OutputCustomType.Constructor({"endTimeOffset","fadeType","startTimeOffset","xy"})
+    @OutputCustomType.Constructor
     private AnimationFadeResponse(
-        String endTimeOffset,
-        String fadeType,
-        String startTimeOffset,
-        NormalizedCoordinateResponse xy) {
+        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @OutputCustomType.Parameter("fadeType") String fadeType,
+        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @OutputCustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
         this.endTimeOffset = endTimeOffset;
         this.fadeType = fadeType;
         this.startTimeOffset = startTimeOffset;
@@ -98,22 +98,22 @@ public final class AnimationFadeResponse {
     	      this.xy = defaults.xy;
         }
 
-        public Builder setEndTimeOffset(String endTimeOffset) {
+        public Builder endTimeOffset(String endTimeOffset) {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
 
-        public Builder setFadeType(String fadeType) {
+        public Builder fadeType(String fadeType) {
             this.fadeType = Objects.requireNonNull(fadeType);
             return this;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
 
-        public Builder setXy(NormalizedCoordinateResponse xy) {
+        public Builder xy(NormalizedCoordinateResponse xy) {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }

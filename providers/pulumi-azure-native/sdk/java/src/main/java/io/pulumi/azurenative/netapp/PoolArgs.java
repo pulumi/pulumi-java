@@ -171,82 +171,82 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPoolName(@Nullable Input<String> poolName) {
+        public Builder poolName(@Nullable Input<String> poolName) {
             this.poolName = poolName;
             return this;
         }
 
-        public Builder setPoolName(@Nullable String poolName) {
+        public Builder poolName(@Nullable String poolName) {
             this.poolName = Input.ofNullable(poolName);
             return this;
         }
 
-        public Builder setQosType(@Nullable Input<Either<String,QosType>> qosType) {
+        public Builder qosType(@Nullable Input<Either<String,QosType>> qosType) {
             this.qosType = qosType;
             return this;
         }
 
-        public Builder setQosType(@Nullable Either<String,QosType> qosType) {
+        public Builder qosType(@Nullable Either<String,QosType> qosType) {
             this.qosType = Input.ofNullable(qosType);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceLevel(Input<Either<String,ServiceLevel>> serviceLevel) {
+        public Builder serviceLevel(Input<Either<String,ServiceLevel>> serviceLevel) {
             this.serviceLevel = Objects.requireNonNull(serviceLevel);
             return this;
         }
 
-        public Builder setServiceLevel(Either<String,ServiceLevel> serviceLevel) {
+        public Builder serviceLevel(Either<String,ServiceLevel> serviceLevel) {
             this.serviceLevel = Input.of(Objects.requireNonNull(serviceLevel));
             return this;
         }
 
-        public Builder setSize(Input<Double> size) {
+        public Builder size(Input<Double> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

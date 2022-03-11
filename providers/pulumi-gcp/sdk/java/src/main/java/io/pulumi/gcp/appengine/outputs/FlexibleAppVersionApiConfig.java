@@ -42,13 +42,13 @@ public final class FlexibleAppVersionApiConfig {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"authFailAction","login","script","securityLevel","url"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionApiConfig(
-        @Nullable String authFailAction,
-        @Nullable String login,
-        String script,
-        @Nullable String securityLevel,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("script") String script,
+        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.script = script;
@@ -125,27 +125,27 @@ public final class FlexibleAppVersionApiConfig {
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthFailAction(@Nullable String authFailAction) {
+        public Builder authFailAction(@Nullable String authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable String securityLevel) {
+        public Builder securityLevel(@Nullable String securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

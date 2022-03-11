@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1EduDataResponse {
      */
     private final String website;
 
-    @OutputCustomType.Constructor({"instituteSize","instituteType","website"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1EduDataResponse(
-        String instituteSize,
-        String instituteType,
-        String website) {
+        @OutputCustomType.Parameter("instituteSize") String instituteSize,
+        @OutputCustomType.Parameter("instituteType") String instituteType,
+        @OutputCustomType.Parameter("website") String website) {
         this.instituteSize = instituteSize;
         this.instituteType = instituteType;
         this.website = website;
@@ -81,17 +81,17 @@ public final class GoogleCloudChannelV1EduDataResponse {
     	      this.website = defaults.website;
         }
 
-        public Builder setInstituteSize(String instituteSize) {
+        public Builder instituteSize(String instituteSize) {
             this.instituteSize = Objects.requireNonNull(instituteSize);
             return this;
         }
 
-        public Builder setInstituteType(String instituteType) {
+        public Builder instituteType(String instituteType) {
             this.instituteType = Objects.requireNonNull(instituteType);
             return this;
         }
 
-        public Builder setWebsite(String website) {
+        public Builder website(String website) {
             this.website = Objects.requireNonNull(website);
             return this;
         }

@@ -20,10 +20,10 @@ public final class AnyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"typeUrl","value"})
+    @OutputCustomType.Constructor
     private AnyResponse(
-        String typeUrl,
-        String value) {
+        @OutputCustomType.Parameter("typeUrl") String typeUrl,
+        @OutputCustomType.Parameter("value") String value) {
         this.typeUrl = typeUrl;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class AnyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setTypeUrl(String typeUrl) {
+        public Builder typeUrl(String typeUrl) {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -23,10 +23,10 @@ public final class WorkspaceEncryptionParameterResponse {
      */
     private final @Nullable EncryptionResponse value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private WorkspaceEncryptionParameterResponse(
-        String type,
-        @Nullable EncryptionResponse value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") @Nullable EncryptionResponse value) {
         this.type = type;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class WorkspaceEncryptionParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(@Nullable EncryptionResponse value) {
+        public Builder value(@Nullable EncryptionResponse value) {
             this.value = value;
             return this;
         }

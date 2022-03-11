@@ -28,11 +28,11 @@ public final class GetInputResult {
      */
     private final @Nullable List<InputTag> tags;
 
-    @OutputCustomType.Constructor({"inputDefinition","inputDescription","tags"})
+    @OutputCustomType.Constructor
     private GetInputResult(
-        @Nullable InputDefinition inputDefinition,
-        @Nullable String inputDescription,
-        @Nullable List<InputTag> tags) {
+        @OutputCustomType.Parameter("inputDefinition") @Nullable InputDefinition inputDefinition,
+        @OutputCustomType.Parameter("inputDescription") @Nullable String inputDescription,
+        @OutputCustomType.Parameter("tags") @Nullable List<InputTag> tags) {
         this.inputDefinition = inputDefinition;
         this.inputDescription = inputDescription;
         this.tags = tags;
@@ -82,17 +82,17 @@ public final class GetInputResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setInputDefinition(@Nullable InputDefinition inputDefinition) {
+        public Builder inputDefinition(@Nullable InputDefinition inputDefinition) {
             this.inputDefinition = inputDefinition;
             return this;
         }
 
-        public Builder setInputDescription(@Nullable String inputDescription) {
+        public Builder inputDescription(@Nullable String inputDescription) {
             this.inputDescription = inputDescription;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InputTag> tags) {
+        public Builder tags(@Nullable List<InputTag> tags) {
             this.tags = tags;
             return this;
         }

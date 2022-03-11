@@ -147,33 +147,33 @@ public final class GetRedisResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"accessKeys","enableNonSslPort","hostName","id","instances","linkedServers","location","minimumTlsVersion","name","port","privateEndpointConnections","provisioningState","publicNetworkAccess","redisConfiguration","redisVersion","replicasPerMaster","shardCount","sku","sslPort","staticIP","subnetId","tags","tenantSettings","type","zones"})
+    @OutputCustomType.Constructor
     private GetRedisResult(
-        RedisAccessKeysResponse accessKeys,
-        @Nullable Boolean enableNonSslPort,
-        String hostName,
-        String id,
-        List<RedisInstanceDetailsResponse> instances,
-        List<RedisLinkedServerResponse> linkedServers,
-        String location,
-        @Nullable String minimumTlsVersion,
-        String name,
-        Integer port,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
-        String redisVersion,
-        @Nullable Integer replicasPerMaster,
-        @Nullable Integer shardCount,
-        SkuResponse sku,
-        Integer sslPort,
-        @Nullable String staticIP,
-        @Nullable String subnetId,
-        @Nullable Map<String,String> tags,
-        @Nullable Map<String,String> tenantSettings,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("accessKeys") RedisAccessKeysResponse accessKeys,
+        @OutputCustomType.Parameter("enableNonSslPort") @Nullable Boolean enableNonSslPort,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<RedisInstanceDetailsResponse> instances,
+        @OutputCustomType.Parameter("linkedServers") List<RedisLinkedServerResponse> linkedServers,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("redisConfiguration") @Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration,
+        @OutputCustomType.Parameter("redisVersion") String redisVersion,
+        @OutputCustomType.Parameter("replicasPerMaster") @Nullable Integer replicasPerMaster,
+        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("sslPort") Integer sslPort,
+        @OutputCustomType.Parameter("staticIP") @Nullable String staticIP,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantSettings") @Nullable Map<String,String> tenantSettings,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.accessKeys = accessKeys;
         this.enableNonSslPort = enableNonSslPort;
         this.hostName = hostName;
@@ -445,127 +445,127 @@ public final class GetRedisResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAccessKeys(RedisAccessKeysResponse accessKeys) {
+        public Builder accessKeys(RedisAccessKeysResponse accessKeys) {
             this.accessKeys = Objects.requireNonNull(accessKeys);
             return this;
         }
 
-        public Builder setEnableNonSslPort(@Nullable Boolean enableNonSslPort) {
+        public Builder enableNonSslPort(@Nullable Boolean enableNonSslPort) {
             this.enableNonSslPort = enableNonSslPort;
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstances(List<RedisInstanceDetailsResponse> instances) {
+        public Builder instances(List<RedisInstanceDetailsResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setLinkedServers(List<RedisLinkedServerResponse> linkedServers) {
+        public Builder linkedServers(List<RedisLinkedServerResponse> linkedServers) {
             this.linkedServers = Objects.requireNonNull(linkedServers);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable String minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setRedisConfiguration(@Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration) {
+        public Builder redisConfiguration(@Nullable RedisCommonPropertiesResponseRedisConfiguration redisConfiguration) {
             this.redisConfiguration = redisConfiguration;
             return this;
         }
 
-        public Builder setRedisVersion(String redisVersion) {
+        public Builder redisVersion(String redisVersion) {
             this.redisVersion = Objects.requireNonNull(redisVersion);
             return this;
         }
 
-        public Builder setReplicasPerMaster(@Nullable Integer replicasPerMaster) {
+        public Builder replicasPerMaster(@Nullable Integer replicasPerMaster) {
             this.replicasPerMaster = replicasPerMaster;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSslPort(Integer sslPort) {
+        public Builder sslPort(Integer sslPort) {
             this.sslPort = Objects.requireNonNull(sslPort);
             return this;
         }
 
-        public Builder setStaticIP(@Nullable String staticIP) {
+        public Builder staticIP(@Nullable String staticIP) {
             this.staticIP = staticIP;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenantSettings(@Nullable Map<String,String> tenantSettings) {
+        public Builder tenantSettings(@Nullable Map<String,String> tenantSettings) {
             this.tenantSettings = tenantSettings;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

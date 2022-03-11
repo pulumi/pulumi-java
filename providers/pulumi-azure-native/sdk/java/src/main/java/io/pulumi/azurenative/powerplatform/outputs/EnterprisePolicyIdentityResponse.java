@@ -27,11 +27,11 @@ public final class EnterprisePolicyIdentityResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"systemAssignedIdentityPrincipalId","tenantId","type"})
+    @OutputCustomType.Constructor
     private EnterprisePolicyIdentityResponse(
-        String systemAssignedIdentityPrincipalId,
-        String tenantId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("systemAssignedIdentityPrincipalId") String systemAssignedIdentityPrincipalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.systemAssignedIdentityPrincipalId = systemAssignedIdentityPrincipalId;
         this.tenantId = tenantId;
         this.type = type;
@@ -83,17 +83,17 @@ public final class EnterprisePolicyIdentityResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setSystemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
+        public Builder systemAssignedIdentityPrincipalId(String systemAssignedIdentityPrincipalId) {
             this.systemAssignedIdentityPrincipalId = Objects.requireNonNull(systemAssignedIdentityPrincipalId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

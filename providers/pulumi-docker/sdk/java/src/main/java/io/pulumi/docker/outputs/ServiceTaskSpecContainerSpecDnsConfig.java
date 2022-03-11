@@ -15,11 +15,11 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
     private final @Nullable List<String> options;
     private final @Nullable List<String> searches;
 
-    @OutputCustomType.Constructor({"nameservers","options","searches"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecDnsConfig(
-        List<String> nameservers,
-        @Nullable List<String> options,
-        @Nullable List<String> searches) {
+        @OutputCustomType.Parameter("nameservers") List<String> nameservers,
+        @OutputCustomType.Parameter("options") @Nullable List<String> options,
+        @OutputCustomType.Parameter("searches") @Nullable List<String> searches) {
         this.nameservers = nameservers;
         this.options = options;
         this.searches = searches;
@@ -59,17 +59,17 @@ public final class ServiceTaskSpecContainerSpecDnsConfig {
     	      this.searches = defaults.searches;
         }
 
-        public Builder setNameservers(List<String> nameservers) {
+        public Builder nameservers(List<String> nameservers) {
             this.nameservers = Objects.requireNonNull(nameservers);
             return this;
         }
 
-        public Builder setOptions(@Nullable List<String> options) {
+        public Builder options(@Nullable List<String> options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSearches(@Nullable List<String> searches) {
+        public Builder searches(@Nullable List<String> searches) {
             this.searches = searches;
             return this;
         }

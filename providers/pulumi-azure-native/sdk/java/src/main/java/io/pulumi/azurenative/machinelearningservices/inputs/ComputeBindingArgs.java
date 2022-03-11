@@ -75,22 +75,22 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.nodeCount = defaults.nodeCount;
         }
 
-        public Builder setComputeId(@Nullable Input<String> computeId) {
+        public Builder computeId(@Nullable Input<String> computeId) {
             this.computeId = computeId;
             return this;
         }
 
-        public Builder setComputeId(@Nullable String computeId) {
+        public Builder computeId(@Nullable String computeId) {
             this.computeId = Input.ofNullable(computeId);
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Input<Integer> nodeCount) {
+        public Builder nodeCount(@Nullable Input<Integer> nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = Input.ofNullable(nodeCount);
             return this;
         }

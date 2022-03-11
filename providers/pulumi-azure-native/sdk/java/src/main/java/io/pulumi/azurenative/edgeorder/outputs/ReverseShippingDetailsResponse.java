@@ -35,13 +35,13 @@ public final class ReverseShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierDisplayName","carrierName","sasKeyForLabel","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private ReverseShippingDetailsResponse(
-        String carrierDisplayName,
-        String carrierName,
-        String sasKeyForLabel,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("sasKeyForLabel") String sasKeyForLabel,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.sasKeyForLabel = sasKeyForLabel;
@@ -113,27 +113,27 @@ public final class ReverseShippingDetailsResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierDisplayName(String carrierDisplayName) {
+        public Builder carrierDisplayName(String carrierDisplayName) {
             this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
             return this;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setSasKeyForLabel(String sasKeyForLabel) {
+        public Builder sasKeyForLabel(String sasKeyForLabel) {
             this.sasKeyForLabel = Objects.requireNonNull(sasKeyForLabel);
             return this;
         }
 
-        public Builder setTrackingId(String trackingId) {
+        public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

@@ -20,10 +20,10 @@ public final class HoursOfOperationConfigStartTime {
      */
     private final Integer minutes;
 
-    @OutputCustomType.Constructor({"hours","minutes"})
+    @OutputCustomType.Constructor
     private HoursOfOperationConfigStartTime(
-        Integer hours,
-        Integer minutes) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes) {
         this.hours = hours;
         this.minutes = minutes;
     }
@@ -65,12 +65,12 @@ public final class HoursOfOperationConfigStartTime {
     	      this.minutes = defaults.minutes;
         }
 
-        public Builder setHours(Integer hours) {
+        public Builder hours(Integer hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }

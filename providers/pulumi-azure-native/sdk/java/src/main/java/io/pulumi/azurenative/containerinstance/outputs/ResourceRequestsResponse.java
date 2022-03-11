@@ -28,11 +28,11 @@ public final class ResourceRequestsResponse {
      */
     private final Double memoryInGB;
 
-    @OutputCustomType.Constructor({"cpu","gpu","memoryInGB"})
+    @OutputCustomType.Constructor
     private ResourceRequestsResponse(
-        Double cpu,
-        @Nullable GpuResourceResponse gpu,
-        Double memoryInGB) {
+        @OutputCustomType.Parameter("cpu") Double cpu,
+        @OutputCustomType.Parameter("gpu") @Nullable GpuResourceResponse gpu,
+        @OutputCustomType.Parameter("memoryInGB") Double memoryInGB) {
         this.cpu = cpu;
         this.gpu = gpu;
         this.memoryInGB = memoryInGB;
@@ -84,17 +84,17 @@ public final class ResourceRequestsResponse {
     	      this.memoryInGB = defaults.memoryInGB;
         }
 
-        public Builder setCpu(Double cpu) {
+        public Builder cpu(Double cpu) {
             this.cpu = Objects.requireNonNull(cpu);
             return this;
         }
 
-        public Builder setGpu(@Nullable GpuResourceResponse gpu) {
+        public Builder gpu(@Nullable GpuResourceResponse gpu) {
             this.gpu = gpu;
             return this;
         }
 
-        public Builder setMemoryInGB(Double memoryInGB) {
+        public Builder memoryInGB(Double memoryInGB) {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }

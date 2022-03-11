@@ -14,10 +14,10 @@ public final class AlertPolicyCreationRecord {
     private final @Nullable String mutateTime;
     private final @Nullable String mutatedBy;
 
-    @OutputCustomType.Constructor({"mutateTime","mutatedBy"})
+    @OutputCustomType.Constructor
     private AlertPolicyCreationRecord(
-        @Nullable String mutateTime,
-        @Nullable String mutatedBy) {
+        @OutputCustomType.Parameter("mutateTime") @Nullable String mutateTime,
+        @OutputCustomType.Parameter("mutatedBy") @Nullable String mutatedBy) {
         this.mutateTime = mutateTime;
         this.mutatedBy = mutatedBy;
     }
@@ -51,12 +51,12 @@ public final class AlertPolicyCreationRecord {
     	      this.mutatedBy = defaults.mutatedBy;
         }
 
-        public Builder setMutateTime(@Nullable String mutateTime) {
+        public Builder mutateTime(@Nullable String mutateTime) {
             this.mutateTime = mutateTime;
             return this;
         }
 
-        public Builder setMutatedBy(@Nullable String mutatedBy) {
+        public Builder mutatedBy(@Nullable String mutatedBy) {
             this.mutatedBy = mutatedBy;
             return this;
         }

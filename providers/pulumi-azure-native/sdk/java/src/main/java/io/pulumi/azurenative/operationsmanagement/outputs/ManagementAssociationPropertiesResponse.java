@@ -15,8 +15,8 @@ public final class ManagementAssociationPropertiesResponse {
      */
     private final String applicationId;
 
-    @OutputCustomType.Constructor({"applicationId"})
-    private ManagementAssociationPropertiesResponse(String applicationId) {
+    @OutputCustomType.Constructor
+    private ManagementAssociationPropertiesResponse(@OutputCustomType.Parameter("applicationId") String applicationId) {
         this.applicationId = applicationId;
     }
 
@@ -48,7 +48,7 @@ public final class ManagementAssociationPropertiesResponse {
     	      this.applicationId = defaults.applicationId;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }

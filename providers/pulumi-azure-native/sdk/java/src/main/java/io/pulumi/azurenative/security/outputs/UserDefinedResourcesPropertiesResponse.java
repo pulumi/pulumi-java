@@ -21,10 +21,10 @@ public final class UserDefinedResourcesPropertiesResponse {
      */
     private final List<String> querySubscriptions;
 
-    @OutputCustomType.Constructor({"query","querySubscriptions"})
+    @OutputCustomType.Constructor
     private UserDefinedResourcesPropertiesResponse(
-        String query,
-        List<String> querySubscriptions) {
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("querySubscriptions") List<String> querySubscriptions) {
         this.query = query;
         this.querySubscriptions = querySubscriptions;
     }
@@ -66,12 +66,12 @@ public final class UserDefinedResourcesPropertiesResponse {
     	      this.querySubscriptions = defaults.querySubscriptions;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuerySubscriptions(List<String> querySubscriptions) {
+        public Builder querySubscriptions(List<String> querySubscriptions) {
             this.querySubscriptions = Objects.requireNonNull(querySubscriptions);
             return this;
         }

@@ -30,11 +30,11 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
      */
     private final @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute;
 
-    @OutputCustomType.Constructor({"prodTrafficRoute","targetGroups","testTrafficRoute"})
+    @OutputCustomType.Constructor
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfo(
-        DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
-        List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
-        @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
+        @OutputCustomType.Parameter("prodTrafficRoute") DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute,
+        @OutputCustomType.Parameter("targetGroups") List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups,
+        @OutputCustomType.Parameter("testTrafficRoute") @Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
         this.prodTrafficRoute = prodTrafficRoute;
         this.targetGroups = targetGroups;
         this.testTrafficRoute = testTrafficRoute;
@@ -86,17 +86,17 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfo {
     	      this.testTrafficRoute = defaults.testTrafficRoute;
         }
 
-        public Builder setProdTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute) {
+        public Builder prodTrafficRoute(DeploymentGroupLoadBalancerInfoTargetGroupPairInfoProdTrafficRoute prodTrafficRoute) {
             this.prodTrafficRoute = Objects.requireNonNull(prodTrafficRoute);
             return this;
         }
 
-        public Builder setTargetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups) {
+        public Builder targetGroups(List<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
 
-        public Builder setTestTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
+        public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRoute testTrafficRoute) {
             this.testTrafficRoute = testTrafficRoute;
             return this;
         }

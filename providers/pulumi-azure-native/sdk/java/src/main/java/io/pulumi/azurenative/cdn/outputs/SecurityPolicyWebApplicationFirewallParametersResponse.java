@@ -31,11 +31,11 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
      */
     private final @Nullable ResourceReferenceResponse wafPolicy;
 
-    @OutputCustomType.Constructor({"associations","type","wafPolicy"})
+    @OutputCustomType.Constructor
     private SecurityPolicyWebApplicationFirewallParametersResponse(
-        @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
-        String type,
-        @Nullable ResourceReferenceResponse wafPolicy) {
+        @OutputCustomType.Parameter("associations") @Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("wafPolicy") @Nullable ResourceReferenceResponse wafPolicy) {
         this.associations = associations;
         this.type = type;
         this.wafPolicy = wafPolicy;
@@ -88,17 +88,17 @@ public final class SecurityPolicyWebApplicationFirewallParametersResponse {
     	      this.wafPolicy = defaults.wafPolicy;
         }
 
-        public Builder setAssociations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
+        public Builder associations(@Nullable List<SecurityPolicyWebApplicationFirewallAssociationResponse> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
+        public Builder wafPolicy(@Nullable ResourceReferenceResponse wafPolicy) {
             this.wafPolicy = wafPolicy;
             return this;
         }

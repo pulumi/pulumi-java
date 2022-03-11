@@ -21,10 +21,10 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"ranges","type"})
+    @OutputCustomType.Constructor
     private VideoSequenceAbsoluteTimeMarkersResponse(
-        String ranges,
-        String type) {
+        @OutputCustomType.Parameter("ranges") String ranges,
+        @OutputCustomType.Parameter("type") String type) {
         this.ranges = ranges;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class VideoSequenceAbsoluteTimeMarkersResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setRanges(String ranges) {
+        public Builder ranges(String ranges) {
             this.ranges = Objects.requireNonNull(ranges);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

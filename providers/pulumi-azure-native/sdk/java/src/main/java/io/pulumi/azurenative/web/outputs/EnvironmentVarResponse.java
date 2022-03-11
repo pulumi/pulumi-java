@@ -27,11 +27,11 @@ public final class EnvironmentVarResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","secretRef","value"})
+    @OutputCustomType.Constructor
     private EnvironmentVarResponse(
-        @Nullable String name,
-        @Nullable String secretRef,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("secretRef") @Nullable String secretRef,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.secretRef = secretRef;
         this.value = value;
@@ -83,17 +83,17 @@ public final class EnvironmentVarResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable String secretRef) {
+        public Builder secretRef(@Nullable String secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

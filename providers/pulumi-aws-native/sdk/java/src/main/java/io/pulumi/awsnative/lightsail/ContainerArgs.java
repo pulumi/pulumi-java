@@ -156,72 +156,72 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContainerServiceDeployment(@Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment) {
+        public Builder containerServiceDeployment(@Nullable Input<ContainerServiceDeploymentArgs> containerServiceDeployment) {
             this.containerServiceDeployment = containerServiceDeployment;
             return this;
         }
 
-        public Builder setContainerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
+        public Builder containerServiceDeployment(@Nullable ContainerServiceDeploymentArgs containerServiceDeployment) {
             this.containerServiceDeployment = Input.ofNullable(containerServiceDeployment);
             return this;
         }
 
-        public Builder setIsDisabled(@Nullable Input<Boolean> isDisabled) {
+        public Builder isDisabled(@Nullable Input<Boolean> isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
 
-        public Builder setIsDisabled(@Nullable Boolean isDisabled) {
+        public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = Input.ofNullable(isDisabled);
             return this;
         }
 
-        public Builder setPower(Input<String> power) {
+        public Builder power(Input<String> power) {
             this.power = Objects.requireNonNull(power);
             return this;
         }
 
-        public Builder setPower(String power) {
+        public Builder power(String power) {
             this.power = Input.of(Objects.requireNonNull(power));
             return this;
         }
 
-        public Builder setPublicDomainNames(@Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
+        public Builder publicDomainNames(@Nullable Input<List<ContainerPublicDomainNameArgs>> publicDomainNames) {
             this.publicDomainNames = publicDomainNames;
             return this;
         }
 
-        public Builder setPublicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
+        public Builder publicDomainNames(@Nullable List<ContainerPublicDomainNameArgs> publicDomainNames) {
             this.publicDomainNames = Input.ofNullable(publicDomainNames);
             return this;
         }
 
-        public Builder setScale(Input<Integer> scale) {
+        public Builder scale(Input<Integer> scale) {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
 
-        public Builder setScale(Integer scale) {
+        public Builder scale(Integer scale) {
             this.scale = Input.of(Objects.requireNonNull(scale));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<ContainerTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<ContainerTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContainerTagArgs> tags) {
+        public Builder tags(@Nullable List<ContainerTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

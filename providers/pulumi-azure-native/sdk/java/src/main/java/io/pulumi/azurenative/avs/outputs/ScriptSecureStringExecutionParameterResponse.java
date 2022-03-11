@@ -28,11 +28,11 @@ public final class ScriptSecureStringExecutionParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","secureValue","type"})
+    @OutputCustomType.Constructor
     private ScriptSecureStringExecutionParameterResponse(
-        String name,
-        @Nullable String secureValue,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secureValue") @Nullable String secureValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.secureValue = secureValue;
         this.type = type;
@@ -85,17 +85,17 @@ public final class ScriptSecureStringExecutionParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecureValue(@Nullable String secureValue) {
+        public Builder secureValue(@Nullable String secureValue) {
             this.secureValue = secureValue;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

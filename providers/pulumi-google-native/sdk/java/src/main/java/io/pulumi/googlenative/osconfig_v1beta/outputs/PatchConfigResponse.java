@@ -62,17 +62,17 @@ public final class PatchConfigResponse {
      */
     private final ZypperSettingsResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","migInstancesAllowed","postStep","preStep","rebootConfig","windowsUpdate","yum","zypper"})
+    @OutputCustomType.Constructor
     private PatchConfigResponse(
-        AptSettingsResponse apt,
-        GooSettingsResponse goo,
-        Boolean migInstancesAllowed,
-        ExecStepResponse postStep,
-        ExecStepResponse preStep,
-        String rebootConfig,
-        WindowsUpdateSettingsResponse windowsUpdate,
-        YumSettingsResponse yum,
-        ZypperSettingsResponse zypper) {
+        @OutputCustomType.Parameter("apt") AptSettingsResponse apt,
+        @OutputCustomType.Parameter("goo") GooSettingsResponse goo,
+        @OutputCustomType.Parameter("migInstancesAllowed") Boolean migInstancesAllowed,
+        @OutputCustomType.Parameter("postStep") ExecStepResponse postStep,
+        @OutputCustomType.Parameter("preStep") ExecStepResponse preStep,
+        @OutputCustomType.Parameter("rebootConfig") String rebootConfig,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateSettingsResponse windowsUpdate,
+        @OutputCustomType.Parameter("yum") YumSettingsResponse yum,
+        @OutputCustomType.Parameter("zypper") ZypperSettingsResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.migInstancesAllowed = migInstancesAllowed;
@@ -184,47 +184,47 @@ public final class PatchConfigResponse {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(AptSettingsResponse apt) {
+        public Builder apt(AptSettingsResponse apt) {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
 
-        public Builder setGoo(GooSettingsResponse goo) {
+        public Builder goo(GooSettingsResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
 
-        public Builder setMigInstancesAllowed(Boolean migInstancesAllowed) {
+        public Builder migInstancesAllowed(Boolean migInstancesAllowed) {
             this.migInstancesAllowed = Objects.requireNonNull(migInstancesAllowed);
             return this;
         }
 
-        public Builder setPostStep(ExecStepResponse postStep) {
+        public Builder postStep(ExecStepResponse postStep) {
             this.postStep = Objects.requireNonNull(postStep);
             return this;
         }
 
-        public Builder setPreStep(ExecStepResponse preStep) {
+        public Builder preStep(ExecStepResponse preStep) {
             this.preStep = Objects.requireNonNull(preStep);
             return this;
         }
 
-        public Builder setRebootConfig(String rebootConfig) {
+        public Builder rebootConfig(String rebootConfig) {
             this.rebootConfig = Objects.requireNonNull(rebootConfig);
             return this;
         }
 
-        public Builder setWindowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
+        public Builder windowsUpdate(WindowsUpdateSettingsResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
 
-        public Builder setYum(YumSettingsResponse yum) {
+        public Builder yum(YumSettingsResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
 
-        public Builder setZypper(ZypperSettingsResponse zypper) {
+        public Builder zypper(ZypperSettingsResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }

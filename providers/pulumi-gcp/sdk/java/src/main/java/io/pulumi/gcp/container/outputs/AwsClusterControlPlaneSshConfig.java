@@ -15,8 +15,8 @@ public final class AwsClusterControlPlaneSshConfig {
      */
     private final String ec2KeyPair;
 
-    @OutputCustomType.Constructor({"ec2KeyPair"})
-    private AwsClusterControlPlaneSshConfig(String ec2KeyPair) {
+    @OutputCustomType.Constructor
+    private AwsClusterControlPlaneSshConfig(@OutputCustomType.Parameter("ec2KeyPair") String ec2KeyPair) {
         this.ec2KeyPair = ec2KeyPair;
     }
 
@@ -48,7 +48,7 @@ public final class AwsClusterControlPlaneSshConfig {
     	      this.ec2KeyPair = defaults.ec2KeyPair;
         }
 
-        public Builder setEc2KeyPair(String ec2KeyPair) {
+        public Builder ec2KeyPair(String ec2KeyPair) {
             this.ec2KeyPair = Objects.requireNonNull(ec2KeyPair);
             return this;
         }

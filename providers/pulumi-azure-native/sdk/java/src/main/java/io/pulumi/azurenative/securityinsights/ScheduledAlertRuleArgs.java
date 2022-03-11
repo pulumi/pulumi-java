@@ -318,172 +318,172 @@ public final class ScheduledAlertRuleArgs extends io.pulumi.resources.ResourceAr
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAlertRuleTemplateName(@Nullable Input<String> alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable Input<String> alertRuleTemplateName) {
             this.alertRuleTemplateName = alertRuleTemplateName;
             return this;
         }
 
-        public Builder setAlertRuleTemplateName(@Nullable String alertRuleTemplateName) {
+        public Builder alertRuleTemplateName(@Nullable String alertRuleTemplateName) {
             this.alertRuleTemplateName = Input.ofNullable(alertRuleTemplateName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }
 
-        public Builder setQueryFrequency(Input<String> queryFrequency) {
+        public Builder queryFrequency(Input<String> queryFrequency) {
             this.queryFrequency = Objects.requireNonNull(queryFrequency);
             return this;
         }
 
-        public Builder setQueryFrequency(String queryFrequency) {
+        public Builder queryFrequency(String queryFrequency) {
             this.queryFrequency = Input.of(Objects.requireNonNull(queryFrequency));
             return this;
         }
 
-        public Builder setQueryPeriod(Input<String> queryPeriod) {
+        public Builder queryPeriod(Input<String> queryPeriod) {
             this.queryPeriod = Objects.requireNonNull(queryPeriod);
             return this;
         }
 
-        public Builder setQueryPeriod(String queryPeriod) {
+        public Builder queryPeriod(String queryPeriod) {
             this.queryPeriod = Input.of(Objects.requireNonNull(queryPeriod));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setSeverity(Input<Either<String,AlertSeverity>> severity) {
+        public Builder severity(Input<Either<String,AlertSeverity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Either<String,AlertSeverity> severity) {
+        public Builder severity(Either<String,AlertSeverity> severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setSuppressionDuration(Input<String> suppressionDuration) {
+        public Builder suppressionDuration(Input<String> suppressionDuration) {
             this.suppressionDuration = Objects.requireNonNull(suppressionDuration);
             return this;
         }
 
-        public Builder setSuppressionDuration(String suppressionDuration) {
+        public Builder suppressionDuration(String suppressionDuration) {
             this.suppressionDuration = Input.of(Objects.requireNonNull(suppressionDuration));
             return this;
         }
 
-        public Builder setSuppressionEnabled(Input<Boolean> suppressionEnabled) {
+        public Builder suppressionEnabled(Input<Boolean> suppressionEnabled) {
             this.suppressionEnabled = Objects.requireNonNull(suppressionEnabled);
             return this;
         }
 
-        public Builder setSuppressionEnabled(Boolean suppressionEnabled) {
+        public Builder suppressionEnabled(Boolean suppressionEnabled) {
             this.suppressionEnabled = Input.of(Objects.requireNonNull(suppressionEnabled));
             return this;
         }
 
-        public Builder setTactics(@Nullable Input<List<Either<String,AttackTactic>>> tactics) {
+        public Builder tactics(@Nullable Input<List<Either<String,AttackTactic>>> tactics) {
             this.tactics = tactics;
             return this;
         }
 
-        public Builder setTactics(@Nullable List<Either<String,AttackTactic>> tactics) {
+        public Builder tactics(@Nullable List<Either<String,AttackTactic>> tactics) {
             this.tactics = Input.ofNullable(tactics);
             return this;
         }
 
-        public Builder setTriggerOperator(Input<TriggerOperator> triggerOperator) {
+        public Builder triggerOperator(Input<TriggerOperator> triggerOperator) {
             this.triggerOperator = Objects.requireNonNull(triggerOperator);
             return this;
         }
 
-        public Builder setTriggerOperator(TriggerOperator triggerOperator) {
+        public Builder triggerOperator(TriggerOperator triggerOperator) {
             this.triggerOperator = Input.of(Objects.requireNonNull(triggerOperator));
             return this;
         }
 
-        public Builder setTriggerThreshold(Input<Integer> triggerThreshold) {
+        public Builder triggerThreshold(Input<Integer> triggerThreshold) {
             this.triggerThreshold = Objects.requireNonNull(triggerThreshold);
             return this;
         }
 
-        public Builder setTriggerThreshold(Integer triggerThreshold) {
+        public Builder triggerThreshold(Integer triggerThreshold) {
             this.triggerThreshold = Input.of(Objects.requireNonNull(triggerThreshold));
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

@@ -203,102 +203,102 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setCert(@Nullable Input<String> cert) {
+        public Builder cert(@Nullable Input<String> cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = Input.ofNullable(cert);
             return this;
         }
 
-        public Builder setCertSerialNumber(@Nullable Input<String> certSerialNumber) {
+        public Builder certSerialNumber(@Nullable Input<String> certSerialNumber) {
             this.certSerialNumber = certSerialNumber;
             return this;
         }
 
-        public Builder setCertSerialNumber(@Nullable String certSerialNumber) {
+        public Builder certSerialNumber(@Nullable String certSerialNumber) {
             this.certSerialNumber = Input.ofNullable(certSerialNumber);
             return this;
         }
 
-        public Builder setCommonName(@Nullable Input<String> commonName) {
+        public Builder commonName(@Nullable Input<String> commonName) {
             this.commonName = commonName;
             return this;
         }
 
-        public Builder setCommonName(@Nullable String commonName) {
+        public Builder commonName(@Nullable String commonName) {
             this.commonName = Input.ofNullable(commonName);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setInstance(@Nullable Input<String> instance) {
+        public Builder instance(@Nullable Input<String> instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = Input.ofNullable(instance);
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable Input<String> privateKey) {
+        public Builder privateKey(@Nullable Input<String> privateKey) {
             this.privateKey = privateKey;
             return this;
         }
 
-        public Builder setPrivateKey(@Nullable String privateKey) {
+        public Builder privateKey(@Nullable String privateKey) {
             this.privateKey = Input.ofNullable(privateKey);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServerCaCert(@Nullable Input<String> serverCaCert) {
+        public Builder serverCaCert(@Nullable Input<String> serverCaCert) {
             this.serverCaCert = serverCaCert;
             return this;
         }
 
-        public Builder setServerCaCert(@Nullable String serverCaCert) {
+        public Builder serverCaCert(@Nullable String serverCaCert) {
             this.serverCaCert = Input.ofNullable(serverCaCert);
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable Input<String> sha1Fingerprint) {
             this.sha1Fingerprint = sha1Fingerprint;
             return this;
         }
 
-        public Builder setSha1Fingerprint(@Nullable String sha1Fingerprint) {
+        public Builder sha1Fingerprint(@Nullable String sha1Fingerprint) {
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }

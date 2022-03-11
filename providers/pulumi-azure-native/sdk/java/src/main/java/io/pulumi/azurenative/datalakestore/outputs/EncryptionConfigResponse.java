@@ -23,10 +23,10 @@ public final class EncryptionConfigResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"keyVaultMetaInfo","type"})
+    @OutputCustomType.Constructor
     private EncryptionConfigResponse(
-        @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
-        String type) {
+        @OutputCustomType.Parameter("keyVaultMetaInfo") @Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo,
+        @OutputCustomType.Parameter("type") String type) {
         this.keyVaultMetaInfo = keyVaultMetaInfo;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class EncryptionConfigResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setKeyVaultMetaInfo(@Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo) {
+        public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoResponse keyVaultMetaInfo) {
             this.keyVaultMetaInfo = keyVaultMetaInfo;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

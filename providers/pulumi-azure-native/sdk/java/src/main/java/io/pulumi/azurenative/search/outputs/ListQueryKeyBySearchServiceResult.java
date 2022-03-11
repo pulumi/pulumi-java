@@ -22,10 +22,10 @@ public final class ListQueryKeyBySearchServiceResult {
      */
     private final List<QueryKeyResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListQueryKeyBySearchServiceResult(
-        String nextLink,
-        List<QueryKeyResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") List<QueryKeyResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class ListQueryKeyBySearchServiceResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(List<QueryKeyResponse> value) {
+        public Builder value(List<QueryKeyResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -90,42 +90,42 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.size = defaults.size;
         }
 
-        public Builder setBrightness(@Nullable Input<ContainerBrightness> brightness) {
+        public Builder brightness(@Nullable Input<ContainerBrightness> brightness) {
             this.brightness = brightness;
             return this;
         }
 
-        public Builder setBrightness(@Nullable ContainerBrightness brightness) {
+        public Builder brightness(@Nullable ContainerBrightness brightness) {
             this.brightness = Input.ofNullable(brightness);
             return this;
         }
 
-        public Builder setColor(@Nullable Input<Either<ContainerColor,String>> color) {
+        public Builder color(@Nullable Input<Either<ContainerColor,String>> color) {
             this.color = color;
             return this;
         }
 
-        public Builder setColor(@Nullable Either<ContainerColor,String> color) {
+        public Builder color(@Nullable Either<ContainerColor,String> color) {
             this.color = Input.ofNullable(color);
             return this;
         }
 
-        public Builder setMaterial(@Nullable Input<String> material) {
+        public Builder material(@Nullable Input<String> material) {
             this.material = material;
             return this;
         }
 
-        public Builder setMaterial(@Nullable String material) {
+        public Builder material(@Nullable String material) {
             this.material = Input.ofNullable(material);
             return this;
         }
 
-        public Builder setSize(Input<ContainerSize> size) {
+        public Builder size(Input<ContainerSize> size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSize(ContainerSize size) {
+        public Builder size(ContainerSize size) {
             this.size = Input.of(Objects.requireNonNull(size));
             return this;
         }

@@ -22,10 +22,10 @@ public final class PatchDeploymentRolloutDisruptionBudget {
      */
     private final @Nullable Integer percentage;
 
-    @OutputCustomType.Constructor({"fixed","percentage"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRolloutDisruptionBudget(
-        @Nullable Integer fixed,
-        @Nullable Integer percentage) {
+        @OutputCustomType.Parameter("fixed") @Nullable Integer fixed,
+        @OutputCustomType.Parameter("percentage") @Nullable Integer percentage) {
         this.fixed = fixed;
         this.percentage = percentage;
     }
@@ -67,12 +67,12 @@ public final class PatchDeploymentRolloutDisruptionBudget {
     	      this.percentage = defaults.percentage;
         }
 
-        public Builder setFixed(@Nullable Integer fixed) {
+        public Builder fixed(@Nullable Integer fixed) {
             this.fixed = fixed;
             return this;
         }
 
-        public Builder setPercentage(@Nullable Integer percentage) {
+        public Builder percentage(@Nullable Integer percentage) {
             this.percentage = percentage;
             return this;
         }

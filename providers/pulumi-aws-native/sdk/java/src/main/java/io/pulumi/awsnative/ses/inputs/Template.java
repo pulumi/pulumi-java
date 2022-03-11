@@ -106,22 +106,22 @@ public final class Template extends io.pulumi.resources.InvokeArgs {
     	      this.textPart = defaults.textPart;
         }
 
-        public Builder setHtmlPart(@Nullable String htmlPart) {
+        public Builder htmlPart(@Nullable String htmlPart) {
             this.htmlPart = htmlPart;
             return this;
         }
 
-        public Builder setSubjectPart(String subjectPart) {
+        public Builder subjectPart(String subjectPart) {
             this.subjectPart = Objects.requireNonNull(subjectPart);
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTextPart(@Nullable String textPart) {
+        public Builder textPart(@Nullable String textPart) {
             this.textPart = textPart;
             return this;
         }

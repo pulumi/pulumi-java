@@ -38,13 +38,13 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","customerAdminGroupId","kind","secret","tenantId"})
+    @OutputCustomType.Constructor
     private OpenShiftManagedClusterAADIdentityProviderResponse(
-        @Nullable String clientId,
-        @Nullable String customerAdminGroupId,
-        String kind,
-        @Nullable String secret,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("customerAdminGroupId") @Nullable String customerAdminGroupId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("secret") @Nullable String secret,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.clientId = clientId;
         this.customerAdminGroupId = customerAdminGroupId;
         this.kind = kind;
@@ -117,27 +117,27 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setCustomerAdminGroupId(@Nullable String customerAdminGroupId) {
+        public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
             this.customerAdminGroupId = customerAdminGroupId;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

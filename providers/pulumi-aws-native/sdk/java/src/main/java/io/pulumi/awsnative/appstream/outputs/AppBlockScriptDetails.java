@@ -18,12 +18,12 @@ public final class AppBlockScriptDetails {
     private final AppBlockS3Location scriptS3Location;
     private final Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"executableParameters","executablePath","scriptS3Location","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private AppBlockScriptDetails(
-        @Nullable String executableParameters,
-        String executablePath,
-        AppBlockS3Location scriptS3Location,
-        Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("executableParameters") @Nullable String executableParameters,
+        @OutputCustomType.Parameter("executablePath") String executablePath,
+        @OutputCustomType.Parameter("scriptS3Location") AppBlockS3Location scriptS3Location,
+        @OutputCustomType.Parameter("timeoutInSeconds") Integer timeoutInSeconds) {
         this.executableParameters = executableParameters;
         this.executablePath = executablePath;
         this.scriptS3Location = scriptS3Location;
@@ -69,22 +69,22 @@ public final class AppBlockScriptDetails {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setExecutableParameters(@Nullable String executableParameters) {
+        public Builder executableParameters(@Nullable String executableParameters) {
             this.executableParameters = executableParameters;
             return this;
         }
 
-        public Builder setExecutablePath(String executablePath) {
+        public Builder executablePath(String executablePath) {
             this.executablePath = Objects.requireNonNull(executablePath);
             return this;
         }
 
-        public Builder setScriptS3Location(AppBlockS3Location scriptS3Location) {
+        public Builder scriptS3Location(AppBlockS3Location scriptS3Location) {
             this.scriptS3Location = Objects.requireNonNull(scriptS3Location);
             return this;
         }
 
-        public Builder setTimeoutInSeconds(Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(Integer timeoutInSeconds) {
             this.timeoutInSeconds = Objects.requireNonNull(timeoutInSeconds);
             return this;
         }

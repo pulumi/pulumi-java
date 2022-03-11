@@ -33,12 +33,12 @@ public final class GetInstanceBootDiskInitializeParam {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"image","labels","size","type"})
+    @OutputCustomType.Constructor
     private GetInstanceBootDiskInitializeParam(
-        String image,
-        Map<String,Object> labels,
-        Integer size,
-        String type) {
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("labels") Map<String,Object> labels,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") String type) {
         this.image = image;
         this.labels = labels;
         this.size = size;
@@ -100,22 +100,22 @@ public final class GetInstanceBootDiskInitializeParam {
     	      this.type = defaults.type;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setLabels(Map<String,Object> labels) {
+        public Builder labels(Map<String,Object> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

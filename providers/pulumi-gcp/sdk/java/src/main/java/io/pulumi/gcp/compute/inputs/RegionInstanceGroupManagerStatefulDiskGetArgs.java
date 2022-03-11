@@ -70,22 +70,22 @@ public final class RegionInstanceGroupManagerStatefulDiskGetArgs extends io.pulu
     	      this.deviceName = defaults.deviceName;
         }
 
-        public Builder setDeleteRule(@Nullable Input<String> deleteRule) {
+        public Builder deleteRule(@Nullable Input<String> deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
-        public Builder setDeleteRule(@Nullable String deleteRule) {
+        public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = Input.ofNullable(deleteRule);
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }

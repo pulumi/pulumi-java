@@ -142,62 +142,62 @@ public final class WorkflowTriggerRecurrenceArgs extends io.pulumi.resources.Res
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setFrequency(@Nullable Input<Either<String,RecurrenceFrequency>> frequency) {
+        public Builder frequency(@Nullable Input<Either<String,RecurrenceFrequency>> frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setFrequency(@Nullable Either<String,RecurrenceFrequency> frequency) {
+        public Builder frequency(@Nullable Either<String,RecurrenceFrequency> frequency) {
             this.frequency = Input.ofNullable(frequency);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<Integer> interval) {
+        public Builder interval(@Nullable Input<Integer> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<RecurrenceScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<RecurrenceScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable RecurrenceScheduleArgs schedule) {
+        public Builder schedule(@Nullable RecurrenceScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimeZone(@Nullable Input<String> timeZone) {
+        public Builder timeZone(@Nullable Input<String> timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }

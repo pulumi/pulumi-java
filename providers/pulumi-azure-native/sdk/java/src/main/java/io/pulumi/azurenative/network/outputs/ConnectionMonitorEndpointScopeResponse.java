@@ -22,10 +22,10 @@ public final class ConnectionMonitorEndpointScopeResponse {
      */
     private final @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
-    @OutputCustomType.Constructor({"exclude","include"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorEndpointScopeResponse(
-        @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude,
-        @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
+        @OutputCustomType.Parameter("exclude") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude,
+        @OutputCustomType.Parameter("include") @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
         this.exclude = exclude;
         this.include = include;
     }
@@ -67,12 +67,12 @@ public final class ConnectionMonitorEndpointScopeResponse {
     	      this.include = defaults.include;
         }
 
-        public Builder setExclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
+        public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
             this.exclude = exclude;
             return this;
         }
 
-        public Builder setInclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
+        public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
             this.include = include;
             return this;
         }

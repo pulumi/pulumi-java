@@ -63,18 +63,18 @@ public final class ServiceBusResponse {
      */
     private final @Nullable String secondaryConnectionString;
 
-    @OutputCustomType.Constructor({"authenticationType","createdTime","deadLetterSecret","deadLetterUri","endpointType","endpointUri","entityPath","primaryConnectionString","provisioningState","secondaryConnectionString"})
+    @OutputCustomType.Constructor
     private ServiceBusResponse(
-        @Nullable String authenticationType,
-        String createdTime,
-        @Nullable String deadLetterSecret,
-        @Nullable String deadLetterUri,
-        String endpointType,
-        @Nullable String endpointUri,
-        @Nullable String entityPath,
-        @Nullable String primaryConnectionString,
-        String provisioningState,
-        @Nullable String secondaryConnectionString) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable String authenticationType,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("deadLetterSecret") @Nullable String deadLetterSecret,
+        @OutputCustomType.Parameter("deadLetterUri") @Nullable String deadLetterUri,
+        @OutputCustomType.Parameter("endpointType") String endpointType,
+        @OutputCustomType.Parameter("endpointUri") @Nullable String endpointUri,
+        @OutputCustomType.Parameter("entityPath") @Nullable String entityPath,
+        @OutputCustomType.Parameter("primaryConnectionString") @Nullable String primaryConnectionString,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("secondaryConnectionString") @Nullable String secondaryConnectionString) {
         this.authenticationType = authenticationType;
         this.createdTime = createdTime;
         this.deadLetterSecret = deadLetterSecret;
@@ -197,52 +197,52 @@ public final class ServiceBusResponse {
     	      this.secondaryConnectionString = defaults.secondaryConnectionString;
         }
 
-        public Builder setAuthenticationType(@Nullable String authenticationType) {
+        public Builder authenticationType(@Nullable String authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable String deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable String deadLetterUri) {
+        public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointUri(@Nullable String endpointUri) {
+        public Builder endpointUri(@Nullable String endpointUri) {
             this.endpointUri = endpointUri;
             return this;
         }
 
-        public Builder setEntityPath(@Nullable String entityPath) {
+        public Builder entityPath(@Nullable String entityPath) {
             this.entityPath = entityPath;
             return this;
         }
 
-        public Builder setPrimaryConnectionString(@Nullable String primaryConnectionString) {
+        public Builder primaryConnectionString(@Nullable String primaryConnectionString) {
             this.primaryConnectionString = primaryConnectionString;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSecondaryConnectionString(@Nullable String secondaryConnectionString) {
+        public Builder secondaryConnectionString(@Nullable String secondaryConnectionString) {
             this.secondaryConnectionString = secondaryConnectionString;
             return this;
         }

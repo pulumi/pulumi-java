@@ -218,112 +218,112 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetGroup = defaults.targetGroup;
         }
 
-        public Builder setAction(Input<JobStepActionArgs> action) {
+        public Builder action(Input<JobStepActionArgs> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(JobStepActionArgs action) {
+        public Builder action(JobStepActionArgs action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setCredential(Input<String> credential) {
+        public Builder credential(Input<String> credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setCredential(String credential) {
+        public Builder credential(String credential) {
             this.credential = Input.of(Objects.requireNonNull(credential));
             return this;
         }
 
-        public Builder setExecutionOptions(@Nullable Input<JobStepExecutionOptionsArgs> executionOptions) {
+        public Builder executionOptions(@Nullable Input<JobStepExecutionOptionsArgs> executionOptions) {
             this.executionOptions = executionOptions;
             return this;
         }
 
-        public Builder setExecutionOptions(@Nullable JobStepExecutionOptionsArgs executionOptions) {
+        public Builder executionOptions(@Nullable JobStepExecutionOptionsArgs executionOptions) {
             this.executionOptions = Input.ofNullable(executionOptions);
             return this;
         }
 
-        public Builder setJobAgentName(Input<String> jobAgentName) {
+        public Builder jobAgentName(Input<String> jobAgentName) {
             this.jobAgentName = Objects.requireNonNull(jobAgentName);
             return this;
         }
 
-        public Builder setJobAgentName(String jobAgentName) {
+        public Builder jobAgentName(String jobAgentName) {
             this.jobAgentName = Input.of(Objects.requireNonNull(jobAgentName));
             return this;
         }
 
-        public Builder setJobName(Input<String> jobName) {
+        public Builder jobName(Input<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Input.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder setOutput(@Nullable Input<JobStepOutputArgs> output) {
+        public Builder output(@Nullable Input<JobStepOutputArgs> output) {
             this.output = output;
             return this;
         }
 
-        public Builder setOutput(@Nullable JobStepOutputArgs output) {
+        public Builder output(@Nullable JobStepOutputArgs output) {
             this.output = Input.ofNullable(output);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setStepId(@Nullable Input<Integer> stepId) {
+        public Builder stepId(@Nullable Input<Integer> stepId) {
             this.stepId = stepId;
             return this;
         }
 
-        public Builder setStepId(@Nullable Integer stepId) {
+        public Builder stepId(@Nullable Integer stepId) {
             this.stepId = Input.ofNullable(stepId);
             return this;
         }
 
-        public Builder setStepName(@Nullable Input<String> stepName) {
+        public Builder stepName(@Nullable Input<String> stepName) {
             this.stepName = stepName;
             return this;
         }
 
-        public Builder setStepName(@Nullable String stepName) {
+        public Builder stepName(@Nullable String stepName) {
             this.stepName = Input.ofNullable(stepName);
             return this;
         }
 
-        public Builder setTargetGroup(Input<String> targetGroup) {
+        public Builder targetGroup(Input<String> targetGroup) {
             this.targetGroup = Objects.requireNonNull(targetGroup);
             return this;
         }
 
-        public Builder setTargetGroup(String targetGroup) {
+        public Builder targetGroup(String targetGroup) {
             this.targetGroup = Input.of(Objects.requireNonNull(targetGroup));
             return this;
         }

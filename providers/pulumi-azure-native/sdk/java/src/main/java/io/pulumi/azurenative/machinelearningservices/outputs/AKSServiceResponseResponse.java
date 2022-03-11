@@ -172,37 +172,37 @@ public final class AKSServiceResponseResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"aadAuthEnabled","appInsightsEnabled","authEnabled","autoScaler","computeName","computeType","containerResourceRequirements","dataCollection","deploymentStatus","deploymentType","description","environmentImageRequest","error","isDefault","kvTags","livenessProbeRequirements","maxConcurrentRequestsPerContainer","maxQueueWaitMs","modelConfigMap","models","namespace","numReplicas","properties","scoringTimeoutMs","scoringUri","state","swaggerUri","trafficPercentile","type"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponse(
-        @Nullable Boolean aadAuthEnabled,
-        @Nullable Boolean appInsightsEnabled,
-        @Nullable Boolean authEnabled,
-        @Nullable AKSServiceResponseResponseAutoScaler autoScaler,
-        @Nullable String computeName,
-        String computeType,
-        @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
-        @Nullable AKSServiceResponseResponseDataCollection dataCollection,
-        AKSServiceResponseResponseDeploymentStatus deploymentStatus,
-        @Nullable String deploymentType,
-        @Nullable String description,
-        @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
-        ServiceResponseBaseResponseError error,
-        @Nullable Boolean isDefault,
-        @Nullable Map<String,String> kvTags,
-        @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements,
-        @Nullable Integer maxConcurrentRequestsPerContainer,
-        @Nullable Integer maxQueueWaitMs,
-        Map<String,Object> modelConfigMap,
-        @Nullable List<ModelResponse> models,
-        @Nullable String namespace,
-        @Nullable Integer numReplicas,
-        @Nullable Map<String,String> properties,
-        @Nullable Integer scoringTimeoutMs,
-        String scoringUri,
-        String state,
-        String swaggerUri,
-        @Nullable Double trafficPercentile,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("aadAuthEnabled") @Nullable Boolean aadAuthEnabled,
+        @OutputCustomType.Parameter("appInsightsEnabled") @Nullable Boolean appInsightsEnabled,
+        @OutputCustomType.Parameter("authEnabled") @Nullable Boolean authEnabled,
+        @OutputCustomType.Parameter("autoScaler") @Nullable AKSServiceResponseResponseAutoScaler autoScaler,
+        @OutputCustomType.Parameter("computeName") @Nullable String computeName,
+        @OutputCustomType.Parameter("computeType") String computeType,
+        @OutputCustomType.Parameter("containerResourceRequirements") @Nullable ContainerResourceRequirementsResponse containerResourceRequirements,
+        @OutputCustomType.Parameter("dataCollection") @Nullable AKSServiceResponseResponseDataCollection dataCollection,
+        @OutputCustomType.Parameter("deploymentStatus") AKSServiceResponseResponseDeploymentStatus deploymentStatus,
+        @OutputCustomType.Parameter("deploymentType") @Nullable String deploymentType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("environmentImageRequest") @Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest,
+        @OutputCustomType.Parameter("error") ServiceResponseBaseResponseError error,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("kvTags") @Nullable Map<String,String> kvTags,
+        @OutputCustomType.Parameter("livenessProbeRequirements") @Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements,
+        @OutputCustomType.Parameter("maxConcurrentRequestsPerContainer") @Nullable Integer maxConcurrentRequestsPerContainer,
+        @OutputCustomType.Parameter("maxQueueWaitMs") @Nullable Integer maxQueueWaitMs,
+        @OutputCustomType.Parameter("modelConfigMap") Map<String,Object> modelConfigMap,
+        @OutputCustomType.Parameter("models") @Nullable List<ModelResponse> models,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("numReplicas") @Nullable Integer numReplicas,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("scoringTimeoutMs") @Nullable Integer scoringTimeoutMs,
+        @OutputCustomType.Parameter("scoringUri") String scoringUri,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("swaggerUri") String swaggerUri,
+        @OutputCustomType.Parameter("trafficPercentile") @Nullable Double trafficPercentile,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.aadAuthEnabled = aadAuthEnabled;
         this.appInsightsEnabled = appInsightsEnabled;
         this.authEnabled = authEnabled;
@@ -515,147 +515,147 @@ public final class AKSServiceResponseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
+        public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
             this.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Boolean authEnabled) {
+        public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
-        public Builder setAutoScaler(@Nullable AKSServiceResponseResponseAutoScaler autoScaler) {
+        public Builder autoScaler(@Nullable AKSServiceResponseResponseAutoScaler autoScaler) {
             this.autoScaler = autoScaler;
             return this;
         }
 
-        public Builder setComputeName(@Nullable String computeName) {
+        public Builder computeName(@Nullable String computeName) {
             this.computeName = computeName;
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsResponse containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setDataCollection(@Nullable AKSServiceResponseResponseDataCollection dataCollection) {
+        public Builder dataCollection(@Nullable AKSServiceResponseResponseDataCollection dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
 
-        public Builder setDeploymentStatus(AKSServiceResponseResponseDeploymentStatus deploymentStatus) {
+        public Builder deploymentStatus(AKSServiceResponseResponseDeploymentStatus deploymentStatus) {
             this.deploymentStatus = Objects.requireNonNull(deploymentStatus);
             return this;
         }
 
-        public Builder setDeploymentType(@Nullable String deploymentType) {
+        public Builder deploymentType(@Nullable String deploymentType) {
             this.deploymentType = deploymentType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable AKSServiceResponseResponseEnvironmentImageRequest environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
-        public Builder setError(ServiceResponseBaseResponseError error) {
+        public Builder error(ServiceResponseBaseResponseError error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setLivenessProbeRequirements(@Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements) {
+        public Builder livenessProbeRequirements(@Nullable AKSServiceResponseResponseLivenessProbeRequirements livenessProbeRequirements) {
             this.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
 
-        public Builder setMaxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
+        public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
 
-        public Builder setMaxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
+        public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
             this.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
 
-        public Builder setModelConfigMap(Map<String,Object> modelConfigMap) {
+        public Builder modelConfigMap(Map<String,Object> modelConfigMap) {
             this.modelConfigMap = Objects.requireNonNull(modelConfigMap);
             return this;
         }
 
-        public Builder setModels(@Nullable List<ModelResponse> models) {
+        public Builder models(@Nullable List<ModelResponse> models) {
             this.models = models;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNumReplicas(@Nullable Integer numReplicas) {
+        public Builder numReplicas(@Nullable Integer numReplicas) {
             this.numReplicas = numReplicas;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setScoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
+        public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
             this.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
 
-        public Builder setScoringUri(String scoringUri) {
+        public Builder scoringUri(String scoringUri) {
             this.scoringUri = Objects.requireNonNull(scoringUri);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSwaggerUri(String swaggerUri) {
+        public Builder swaggerUri(String swaggerUri) {
             this.swaggerUri = Objects.requireNonNull(swaggerUri);
             return this;
         }
 
-        public Builder setTrafficPercentile(@Nullable Double trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

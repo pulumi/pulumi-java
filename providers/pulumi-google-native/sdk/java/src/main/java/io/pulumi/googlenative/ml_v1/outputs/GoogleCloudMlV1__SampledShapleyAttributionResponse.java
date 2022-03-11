@@ -15,8 +15,8 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
      */
     private final Integer numPaths;
 
-    @OutputCustomType.Constructor({"numPaths"})
-    private GoogleCloudMlV1__SampledShapleyAttributionResponse(Integer numPaths) {
+    @OutputCustomType.Constructor
+    private GoogleCloudMlV1__SampledShapleyAttributionResponse(@OutputCustomType.Parameter("numPaths") Integer numPaths) {
         this.numPaths = numPaths;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__SampledShapleyAttributionResponse {
     	      this.numPaths = defaults.numPaths;
         }
 
-        public Builder setNumPaths(Integer numPaths) {
+        public Builder numPaths(Integer numPaths) {
             this.numPaths = Objects.requireNonNull(numPaths);
             return this;
         }

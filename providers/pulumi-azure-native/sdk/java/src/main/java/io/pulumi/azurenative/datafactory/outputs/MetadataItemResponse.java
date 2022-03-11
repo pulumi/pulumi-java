@@ -22,10 +22,10 @@ public final class MetadataItemResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private MetadataItemResponse(
-        @Nullable Object name,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("name") @Nullable Object name,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.name = name;
         this.value = value;
     }
@@ -67,12 +67,12 @@ public final class MetadataItemResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(@Nullable Object name) {
+        public Builder name(@Nullable Object name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

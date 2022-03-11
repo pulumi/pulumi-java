@@ -21,10 +21,10 @@ public final class ResourceRequirementsResponse {
      */
     private final Map<String,String> requests;
 
-    @OutputCustomType.Constructor({"limits","requests"})
+    @OutputCustomType.Constructor
     private ResourceRequirementsResponse(
-        Map<String,String> limits,
-        Map<String,String> requests) {
+        @OutputCustomType.Parameter("limits") Map<String,String> limits,
+        @OutputCustomType.Parameter("requests") Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }
@@ -66,12 +66,12 @@ public final class ResourceRequirementsResponse {
     	      this.requests = defaults.requests;
         }
 
-        public Builder setLimits(Map<String,String> limits) {
+        public Builder limits(Map<String,String> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
-        public Builder setRequests(Map<String,String> requests) {
+        public Builder requests(Map<String,String> requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }

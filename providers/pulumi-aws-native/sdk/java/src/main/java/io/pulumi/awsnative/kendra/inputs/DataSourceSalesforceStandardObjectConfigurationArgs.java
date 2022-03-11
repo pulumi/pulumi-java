@@ -89,42 +89,42 @@ public final class DataSourceSalesforceStandardObjectConfigurationArgs extends i
     	      this.name = defaults.name;
         }
 
-        public Builder setDocumentDataFieldName(Input<String> documentDataFieldName) {
+        public Builder documentDataFieldName(Input<String> documentDataFieldName) {
             this.documentDataFieldName = Objects.requireNonNull(documentDataFieldName);
             return this;
         }
 
-        public Builder setDocumentDataFieldName(String documentDataFieldName) {
+        public Builder documentDataFieldName(String documentDataFieldName) {
             this.documentDataFieldName = Input.of(Objects.requireNonNull(documentDataFieldName));
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable Input<String> documentTitleFieldName) {
             this.documentTitleFieldName = documentTitleFieldName;
             return this;
         }
 
-        public Builder setDocumentTitleFieldName(@Nullable String documentTitleFieldName) {
+        public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
             this.documentTitleFieldName = Input.ofNullable(documentTitleFieldName);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setName(Input<DataSourceSalesforceStandardObjectName> name) {
+        public Builder name(Input<DataSourceSalesforceStandardObjectName> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(DataSourceSalesforceStandardObjectName name) {
+        public Builder name(DataSourceSalesforceStandardObjectName name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

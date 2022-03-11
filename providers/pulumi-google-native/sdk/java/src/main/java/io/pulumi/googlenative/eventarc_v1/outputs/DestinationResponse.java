@@ -27,11 +27,11 @@ public final class DestinationResponse {
      */
     private final GKEResponse gke;
 
-    @OutputCustomType.Constructor({"cloudFunction","cloudRun","gke"})
+    @OutputCustomType.Constructor
     private DestinationResponse(
-        String cloudFunction,
-        CloudRunResponse cloudRun,
-        GKEResponse gke) {
+        @OutputCustomType.Parameter("cloudFunction") String cloudFunction,
+        @OutputCustomType.Parameter("cloudRun") CloudRunResponse cloudRun,
+        @OutputCustomType.Parameter("gke") GKEResponse gke) {
         this.cloudFunction = cloudFunction;
         this.cloudRun = cloudRun;
         this.gke = gke;
@@ -83,17 +83,17 @@ public final class DestinationResponse {
     	      this.gke = defaults.gke;
         }
 
-        public Builder setCloudFunction(String cloudFunction) {
+        public Builder cloudFunction(String cloudFunction) {
             this.cloudFunction = Objects.requireNonNull(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(CloudRunResponse cloudRun) {
+        public Builder cloudRun(CloudRunResponse cloudRun) {
             this.cloudRun = Objects.requireNonNull(cloudRun);
             return this;
         }
 
-        public Builder setGke(GKEResponse gke) {
+        public Builder gke(GKEResponse gke) {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }

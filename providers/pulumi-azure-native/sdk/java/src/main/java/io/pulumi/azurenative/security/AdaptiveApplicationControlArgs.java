@@ -130,62 +130,62 @@ public final class AdaptiveApplicationControlArgs extends io.pulumi.resources.Re
     	      this.vmRecommendations = defaults.vmRecommendations;
         }
 
-        public Builder setAscLocation(Input<String> ascLocation) {
+        public Builder ascLocation(Input<String> ascLocation) {
             this.ascLocation = Objects.requireNonNull(ascLocation);
             return this;
         }
 
-        public Builder setAscLocation(String ascLocation) {
+        public Builder ascLocation(String ascLocation) {
             this.ascLocation = Input.of(Objects.requireNonNull(ascLocation));
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable Input<String> enforcementMode) {
+        public Builder enforcementMode(@Nullable Input<String> enforcementMode) {
             this.enforcementMode = enforcementMode;
             return this;
         }
 
-        public Builder setEnforcementMode(@Nullable String enforcementMode) {
+        public Builder enforcementMode(@Nullable String enforcementMode) {
             this.enforcementMode = Input.ofNullable(enforcementMode);
             return this;
         }
 
-        public Builder setGroupName(@Nullable Input<String> groupName) {
+        public Builder groupName(@Nullable Input<String> groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
 
-        public Builder setPathRecommendations(@Nullable Input<List<PathRecommendationArgs>> pathRecommendations) {
+        public Builder pathRecommendations(@Nullable Input<List<PathRecommendationArgs>> pathRecommendations) {
             this.pathRecommendations = pathRecommendations;
             return this;
         }
 
-        public Builder setPathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
+        public Builder pathRecommendations(@Nullable List<PathRecommendationArgs> pathRecommendations) {
             this.pathRecommendations = Input.ofNullable(pathRecommendations);
             return this;
         }
 
-        public Builder setProtectionMode(@Nullable Input<ProtectionModeArgs> protectionMode) {
+        public Builder protectionMode(@Nullable Input<ProtectionModeArgs> protectionMode) {
             this.protectionMode = protectionMode;
             return this;
         }
 
-        public Builder setProtectionMode(@Nullable ProtectionModeArgs protectionMode) {
+        public Builder protectionMode(@Nullable ProtectionModeArgs protectionMode) {
             this.protectionMode = Input.ofNullable(protectionMode);
             return this;
         }
 
-        public Builder setVmRecommendations(@Nullable Input<List<VmRecommendationArgs>> vmRecommendations) {
+        public Builder vmRecommendations(@Nullable Input<List<VmRecommendationArgs>> vmRecommendations) {
             this.vmRecommendations = vmRecommendations;
             return this;
         }
 
-        public Builder setVmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
+        public Builder vmRecommendations(@Nullable List<VmRecommendationArgs> vmRecommendations) {
             this.vmRecommendations = Input.ofNullable(vmRecommendations);
             return this;
         }

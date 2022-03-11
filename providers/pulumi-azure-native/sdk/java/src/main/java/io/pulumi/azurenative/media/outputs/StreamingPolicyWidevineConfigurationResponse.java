@@ -17,8 +17,8 @@ public final class StreamingPolicyWidevineConfigurationResponse {
      */
     private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
-    @OutputCustomType.Constructor({"customLicenseAcquisitionUrlTemplate"})
-    private StreamingPolicyWidevineConfigurationResponse(@Nullable String customLicenseAcquisitionUrlTemplate) {
+    @OutputCustomType.Constructor
+    private StreamingPolicyWidevineConfigurationResponse(@OutputCustomType.Parameter("customLicenseAcquisitionUrlTemplate") @Nullable String customLicenseAcquisitionUrlTemplate) {
         this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
     }
 
@@ -50,7 +50,7 @@ public final class StreamingPolicyWidevineConfigurationResponse {
     	      this.customLicenseAcquisitionUrlTemplate = defaults.customLicenseAcquisitionUrlTemplate;
         }
 
-        public Builder setCustomLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
+        public Builder customLicenseAcquisitionUrlTemplate(@Nullable String customLicenseAcquisitionUrlTemplate) {
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }

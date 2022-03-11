@@ -121,52 +121,52 @@ public final class EdifactProcessingSettingsArgs extends io.pulumi.resources.Res
     	      this.useDotAsDecimalSeparator = defaults.useDotAsDecimalSeparator;
         }
 
-        public Builder setCreateEmptyXmlTagsForTrailingSeparators(Input<Boolean> createEmptyXmlTagsForTrailingSeparators) {
+        public Builder createEmptyXmlTagsForTrailingSeparators(Input<Boolean> createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators);
             return this;
         }
 
-        public Builder setCreateEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
+        public Builder createEmptyXmlTagsForTrailingSeparators(Boolean createEmptyXmlTagsForTrailingSeparators) {
             this.createEmptyXmlTagsForTrailingSeparators = Input.of(Objects.requireNonNull(createEmptyXmlTagsForTrailingSeparators));
             return this;
         }
 
-        public Builder setMaskSecurityInfo(Input<Boolean> maskSecurityInfo) {
+        public Builder maskSecurityInfo(Input<Boolean> maskSecurityInfo) {
             this.maskSecurityInfo = Objects.requireNonNull(maskSecurityInfo);
             return this;
         }
 
-        public Builder setMaskSecurityInfo(Boolean maskSecurityInfo) {
+        public Builder maskSecurityInfo(Boolean maskSecurityInfo) {
             this.maskSecurityInfo = Input.of(Objects.requireNonNull(maskSecurityInfo));
             return this;
         }
 
-        public Builder setPreserveInterchange(Input<Boolean> preserveInterchange) {
+        public Builder preserveInterchange(Input<Boolean> preserveInterchange) {
             this.preserveInterchange = Objects.requireNonNull(preserveInterchange);
             return this;
         }
 
-        public Builder setPreserveInterchange(Boolean preserveInterchange) {
+        public Builder preserveInterchange(Boolean preserveInterchange) {
             this.preserveInterchange = Input.of(Objects.requireNonNull(preserveInterchange));
             return this;
         }
 
-        public Builder setSuspendInterchangeOnError(Input<Boolean> suspendInterchangeOnError) {
+        public Builder suspendInterchangeOnError(Input<Boolean> suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Objects.requireNonNull(suspendInterchangeOnError);
             return this;
         }
 
-        public Builder setSuspendInterchangeOnError(Boolean suspendInterchangeOnError) {
+        public Builder suspendInterchangeOnError(Boolean suspendInterchangeOnError) {
             this.suspendInterchangeOnError = Input.of(Objects.requireNonNull(suspendInterchangeOnError));
             return this;
         }
 
-        public Builder setUseDotAsDecimalSeparator(Input<Boolean> useDotAsDecimalSeparator) {
+        public Builder useDotAsDecimalSeparator(Input<Boolean> useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
 
-        public Builder setUseDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
+        public Builder useDotAsDecimalSeparator(Boolean useDotAsDecimalSeparator) {
             this.useDotAsDecimalSeparator = Input.of(Objects.requireNonNull(useDotAsDecimalSeparator));
             return this;
         }

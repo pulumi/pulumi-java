@@ -20,10 +20,10 @@ public final class GetNetworkAclResult {
      */
     private final @Nullable List<NetworkAclTag> tags;
 
-    @OutputCustomType.Constructor({"id","tags"})
+    @OutputCustomType.Constructor
     private GetNetworkAclResult(
-        @Nullable String id,
-        @Nullable List<NetworkAclTag> tags) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<NetworkAclTag> tags) {
         this.id = id;
         this.tags = tags;
     }
@@ -61,12 +61,12 @@ public final class GetNetworkAclResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkAclTag> tags) {
+        public Builder tags(@Nullable List<NetworkAclTag> tags) {
             this.tags = tags;
             return this;
         }

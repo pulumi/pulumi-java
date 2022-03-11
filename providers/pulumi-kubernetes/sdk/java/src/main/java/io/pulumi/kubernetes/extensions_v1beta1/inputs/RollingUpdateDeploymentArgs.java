@@ -76,22 +76,22 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxSurge(@Nullable Input<Either<Integer,String>> maxSurge) {
+        public Builder maxSurge(@Nullable Input<Either<Integer,String>> maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }
 
-        public Builder setMaxSurge(@Nullable Either<Integer,String> maxSurge) {
+        public Builder maxSurge(@Nullable Either<Integer,String> maxSurge) {
             this.maxSurge = Input.ofNullable(maxSurge);
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }

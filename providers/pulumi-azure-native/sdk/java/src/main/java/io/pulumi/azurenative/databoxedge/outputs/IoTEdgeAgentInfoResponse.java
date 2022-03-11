@@ -28,11 +28,11 @@ public final class IoTEdgeAgentInfoResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"imageName","imageRepository","tag"})
+    @OutputCustomType.Constructor
     private IoTEdgeAgentInfoResponse(
-        String imageName,
-        @Nullable ImageRepositoryCredentialResponse imageRepository,
-        String tag) {
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("imageRepository") @Nullable ImageRepositoryCredentialResponse imageRepository,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.imageName = imageName;
         this.imageRepository = imageRepository;
         this.tag = tag;
@@ -84,17 +84,17 @@ public final class IoTEdgeAgentInfoResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
+        public Builder imageRepository(@Nullable ImageRepositoryCredentialResponse imageRepository) {
             this.imageRepository = imageRepository;
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

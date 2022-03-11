@@ -76,22 +76,22 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
     	      this.isCompressionEnabled = defaults.isCompressionEnabled;
         }
 
-        public Builder setContentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable Input<List<String>> contentTypesToCompress) {
             this.contentTypesToCompress = contentTypesToCompress;
             return this;
         }
 
-        public Builder setContentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
+        public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
             this.contentTypesToCompress = Input.ofNullable(contentTypesToCompress);
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Input<Boolean> isCompressionEnabled) {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
 
-        public Builder setIsCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
+        public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
             this.isCompressionEnabled = Input.ofNullable(isCompressionEnabled);
             return this;
         }

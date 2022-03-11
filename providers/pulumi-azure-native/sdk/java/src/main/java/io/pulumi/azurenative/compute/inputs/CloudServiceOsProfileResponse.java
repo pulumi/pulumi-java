@@ -58,7 +58,7 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setSecrets(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
+        public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupResponse> secrets) {
             this.secrets = secrets;
             return this;
         }

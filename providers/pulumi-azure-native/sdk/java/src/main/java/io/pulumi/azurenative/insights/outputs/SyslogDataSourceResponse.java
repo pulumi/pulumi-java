@@ -35,12 +35,12 @@ public final class SyslogDataSourceResponse {
      */
     private final @Nullable List<String> streams;
 
-    @OutputCustomType.Constructor({"facilityNames","logLevels","name","streams"})
+    @OutputCustomType.Constructor
     private SyslogDataSourceResponse(
-        @Nullable List<String> facilityNames,
-        @Nullable List<String> logLevels,
-        @Nullable String name,
-        @Nullable List<String> streams) {
+        @OutputCustomType.Parameter("facilityNames") @Nullable List<String> facilityNames,
+        @OutputCustomType.Parameter("logLevels") @Nullable List<String> logLevels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("streams") @Nullable List<String> streams) {
         this.facilityNames = facilityNames;
         this.logLevels = logLevels;
         this.name = name;
@@ -104,22 +104,22 @@ public final class SyslogDataSourceResponse {
     	      this.streams = defaults.streams;
         }
 
-        public Builder setFacilityNames(@Nullable List<String> facilityNames) {
+        public Builder facilityNames(@Nullable List<String> facilityNames) {
             this.facilityNames = facilityNames;
             return this;
         }
 
-        public Builder setLogLevels(@Nullable List<String> logLevels) {
+        public Builder logLevels(@Nullable List<String> logLevels) {
             this.logLevels = logLevels;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStreams(@Nullable List<String> streams) {
+        public Builder streams(@Nullable List<String> streams) {
             this.streams = streams;
             return this;
         }

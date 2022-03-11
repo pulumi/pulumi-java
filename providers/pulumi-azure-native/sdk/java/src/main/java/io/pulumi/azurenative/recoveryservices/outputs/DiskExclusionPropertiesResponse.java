@@ -24,10 +24,10 @@ public final class DiskExclusionPropertiesResponse {
      */
     private final @Nullable Boolean isInclusionList;
 
-    @OutputCustomType.Constructor({"diskLunList","isInclusionList"})
+    @OutputCustomType.Constructor
     private DiskExclusionPropertiesResponse(
-        @Nullable List<Integer> diskLunList,
-        @Nullable Boolean isInclusionList) {
+        @OutputCustomType.Parameter("diskLunList") @Nullable List<Integer> diskLunList,
+        @OutputCustomType.Parameter("isInclusionList") @Nullable Boolean isInclusionList) {
         this.diskLunList = diskLunList;
         this.isInclusionList = isInclusionList;
     }
@@ -69,12 +69,12 @@ public final class DiskExclusionPropertiesResponse {
     	      this.isInclusionList = defaults.isInclusionList;
         }
 
-        public Builder setDiskLunList(@Nullable List<Integer> diskLunList) {
+        public Builder diskLunList(@Nullable List<Integer> diskLunList) {
             this.diskLunList = diskLunList;
             return this;
         }
 
-        public Builder setIsInclusionList(@Nullable Boolean isInclusionList) {
+        public Builder isInclusionList(@Nullable Boolean isInclusionList) {
             this.isInclusionList = isInclusionList;
             return this;
         }

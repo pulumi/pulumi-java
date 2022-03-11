@@ -21,10 +21,10 @@ public final class DeadLetterPolicyResponse {
      */
     private final Integer maxDeliveryAttempts;
 
-    @OutputCustomType.Constructor({"deadLetterTopic","maxDeliveryAttempts"})
+    @OutputCustomType.Constructor
     private DeadLetterPolicyResponse(
-        String deadLetterTopic,
-        Integer maxDeliveryAttempts) {
+        @OutputCustomType.Parameter("deadLetterTopic") String deadLetterTopic,
+        @OutputCustomType.Parameter("maxDeliveryAttempts") Integer maxDeliveryAttempts) {
         this.deadLetterTopic = deadLetterTopic;
         this.maxDeliveryAttempts = maxDeliveryAttempts;
     }
@@ -66,12 +66,12 @@ public final class DeadLetterPolicyResponse {
     	      this.maxDeliveryAttempts = defaults.maxDeliveryAttempts;
         }
 
-        public Builder setDeadLetterTopic(String deadLetterTopic) {
+        public Builder deadLetterTopic(String deadLetterTopic) {
             this.deadLetterTopic = Objects.requireNonNull(deadLetterTopic);
             return this;
         }
 
-        public Builder setMaxDeliveryAttempts(Integer maxDeliveryAttempts) {
+        public Builder maxDeliveryAttempts(Integer maxDeliveryAttempts) {
             this.maxDeliveryAttempts = Objects.requireNonNull(maxDeliveryAttempts);
             return this;
         }

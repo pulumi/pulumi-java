@@ -17,8 +17,8 @@ public final class ClusterClientAuthenticationTls {
      */
     private final @Nullable List<String> certificateAuthorityArns;
 
-    @OutputCustomType.Constructor({"certificateAuthorityArns"})
-    private ClusterClientAuthenticationTls(@Nullable List<String> certificateAuthorityArns) {
+    @OutputCustomType.Constructor
+    private ClusterClientAuthenticationTls(@OutputCustomType.Parameter("certificateAuthorityArns") @Nullable List<String> certificateAuthorityArns) {
         this.certificateAuthorityArns = certificateAuthorityArns;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterClientAuthenticationTls {
     	      this.certificateAuthorityArns = defaults.certificateAuthorityArns;
         }
 
-        public Builder setCertificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
+        public Builder certificateAuthorityArns(@Nullable List<String> certificateAuthorityArns) {
             this.certificateAuthorityArns = certificateAuthorityArns;
             return this;
         }

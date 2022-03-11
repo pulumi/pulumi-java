@@ -23,10 +23,10 @@ public final class DayResponse {
      */
     private final @Nullable Boolean isLast;
 
-    @OutputCustomType.Constructor({"date","isLast"})
+    @OutputCustomType.Constructor
     private DayResponse(
-        @Nullable Integer date,
-        @Nullable Boolean isLast) {
+        @OutputCustomType.Parameter("date") @Nullable Integer date,
+        @OutputCustomType.Parameter("isLast") @Nullable Boolean isLast) {
         this.date = date;
         this.isLast = isLast;
     }
@@ -68,12 +68,12 @@ public final class DayResponse {
     	      this.isLast = defaults.isLast;
         }
 
-        public Builder setDate(@Nullable Integer date) {
+        public Builder date(@Nullable Integer date) {
             this.date = date;
             return this;
         }
 
-        public Builder setIsLast(@Nullable Boolean isLast) {
+        public Builder isLast(@Nullable Boolean isLast) {
             this.isLast = isLast;
             return this;
         }

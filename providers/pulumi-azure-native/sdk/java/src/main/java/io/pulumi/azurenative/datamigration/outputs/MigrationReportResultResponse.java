@@ -20,10 +20,10 @@ public final class MigrationReportResultResponse {
      */
     private final String reportUrl;
 
-    @OutputCustomType.Constructor({"id","reportUrl"})
+    @OutputCustomType.Constructor
     private MigrationReportResultResponse(
-        String id,
-        String reportUrl) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("reportUrl") String reportUrl) {
         this.id = id;
         this.reportUrl = reportUrl;
     }
@@ -65,12 +65,12 @@ public final class MigrationReportResultResponse {
     	      this.reportUrl = defaults.reportUrl;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setReportUrl(String reportUrl) {
+        public Builder reportUrl(String reportUrl) {
             this.reportUrl = Objects.requireNonNull(reportUrl);
             return this;
         }

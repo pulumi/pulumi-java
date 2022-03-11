@@ -20,10 +20,10 @@ public final class DatastoreIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"namespace","project"})
+    @OutputCustomType.Constructor
     private DatastoreIODetailsResponse(
-        String namespace,
-        String project) {
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("project") String project) {
         this.namespace = namespace;
         this.project = project;
     }
@@ -65,12 +65,12 @@ public final class DatastoreIODetailsResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

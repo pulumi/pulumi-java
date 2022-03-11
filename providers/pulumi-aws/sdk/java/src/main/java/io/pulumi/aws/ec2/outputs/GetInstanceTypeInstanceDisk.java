@@ -14,11 +14,11 @@ public final class GetInstanceTypeInstanceDisk {
     private final Integer size;
     private final String type;
 
-    @OutputCustomType.Constructor({"count","size","type"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeInstanceDisk(
-        Integer count,
-        Integer size,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.size = size;
         this.type = type;
@@ -58,17 +58,17 @@ public final class GetInstanceTypeInstanceDisk {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

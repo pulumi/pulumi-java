@@ -26,13 +26,13 @@ public final class GetSnapshotIdsResult {
     private final @Nullable List<String> owners;
     private final @Nullable List<String> restorableByUserIds;
 
-    @OutputCustomType.Constructor({"filters","id","ids","owners","restorableByUserIds"})
+    @OutputCustomType.Constructor
     private GetSnapshotIdsResult(
-        @Nullable List<GetSnapshotIdsFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
+        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;
@@ -92,27 +92,27 @@ public final class GetSnapshotIdsResult {
     	      this.restorableByUserIds = defaults.restorableByUserIds;
         }
 
-        public Builder setFilters(@Nullable List<GetSnapshotIdsFilter> filters) {
+        public Builder filters(@Nullable List<GetSnapshotIdsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setOwners(@Nullable List<String> owners) {
+        public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
 
-        public Builder setRestorableByUserIds(@Nullable List<String> restorableByUserIds) {
+        public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }

@@ -17,8 +17,8 @@ public final class DiskAutoSnapshotAddOn {
      */
     private final @Nullable String snapshotTimeOfDay;
 
-    @OutputCustomType.Constructor({"snapshotTimeOfDay"})
-    private DiskAutoSnapshotAddOn(@Nullable String snapshotTimeOfDay) {
+    @OutputCustomType.Constructor
+    private DiskAutoSnapshotAddOn(@OutputCustomType.Parameter("snapshotTimeOfDay") @Nullable String snapshotTimeOfDay) {
         this.snapshotTimeOfDay = snapshotTimeOfDay;
     }
 
@@ -50,7 +50,7 @@ public final class DiskAutoSnapshotAddOn {
     	      this.snapshotTimeOfDay = defaults.snapshotTimeOfDay;
         }
 
-        public Builder setSnapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
+        public Builder snapshotTimeOfDay(@Nullable String snapshotTimeOfDay) {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }

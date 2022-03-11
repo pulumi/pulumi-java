@@ -45,14 +45,14 @@ public final class ClusterMasterInstanceGroup {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"bidPrice","ebsConfigs","id","instanceCount","instanceType","name"})
+    @OutputCustomType.Constructor
     private ClusterMasterInstanceGroup(
-        @Nullable String bidPrice,
-        @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
-        @Nullable String id,
-        @Nullable Integer instanceCount,
-        String instanceType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("bidPrice") @Nullable String bidPrice,
+        @OutputCustomType.Parameter("ebsConfigs") @Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.bidPrice = bidPrice;
         this.ebsConfigs = ebsConfigs;
         this.id = id;
@@ -134,32 +134,32 @@ public final class ClusterMasterInstanceGroup {
     	      this.name = defaults.name;
         }
 
-        public Builder setBidPrice(@Nullable String bidPrice) {
+        public Builder bidPrice(@Nullable String bidPrice) {
             this.bidPrice = bidPrice;
             return this;
         }
 
-        public Builder setEbsConfigs(@Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs) {
+        public Builder ebsConfigs(@Nullable List<ClusterMasterInstanceGroupEbsConfig> ebsConfigs) {
             this.ebsConfigs = ebsConfigs;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

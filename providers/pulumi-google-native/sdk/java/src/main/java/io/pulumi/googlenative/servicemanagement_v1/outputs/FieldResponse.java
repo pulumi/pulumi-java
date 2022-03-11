@@ -64,18 +64,18 @@ public final class FieldResponse {
      */
     private final String typeUrl;
 
-    @OutputCustomType.Constructor({"cardinality","defaultValue","jsonName","kind","name","number","oneofIndex","options","packed","typeUrl"})
+    @OutputCustomType.Constructor
     private FieldResponse(
-        String cardinality,
-        String defaultValue,
-        String jsonName,
-        String kind,
-        String name,
-        Integer number,
-        Integer oneofIndex,
-        List<OptionResponse> options,
-        Boolean packed,
-        String typeUrl) {
+        @OutputCustomType.Parameter("cardinality") String cardinality,
+        @OutputCustomType.Parameter("defaultValue") String defaultValue,
+        @OutputCustomType.Parameter("jsonName") String jsonName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("number") Integer number,
+        @OutputCustomType.Parameter("oneofIndex") Integer oneofIndex,
+        @OutputCustomType.Parameter("options") List<OptionResponse> options,
+        @OutputCustomType.Parameter("packed") Boolean packed,
+        @OutputCustomType.Parameter("typeUrl") String typeUrl) {
         this.cardinality = cardinality;
         this.defaultValue = defaultValue;
         this.jsonName = jsonName;
@@ -197,52 +197,52 @@ public final class FieldResponse {
     	      this.typeUrl = defaults.typeUrl;
         }
 
-        public Builder setCardinality(String cardinality) {
+        public Builder cardinality(String cardinality) {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
 
-        public Builder setDefaultValue(String defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             this.defaultValue = Objects.requireNonNull(defaultValue);
             return this;
         }
 
-        public Builder setJsonName(String jsonName) {
+        public Builder jsonName(String jsonName) {
             this.jsonName = Objects.requireNonNull(jsonName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumber(Integer number) {
+        public Builder number(Integer number) {
             this.number = Objects.requireNonNull(number);
             return this;
         }
 
-        public Builder setOneofIndex(Integer oneofIndex) {
+        public Builder oneofIndex(Integer oneofIndex) {
             this.oneofIndex = Objects.requireNonNull(oneofIndex);
             return this;
         }
 
-        public Builder setOptions(List<OptionResponse> options) {
+        public Builder options(List<OptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setPacked(Boolean packed) {
+        public Builder packed(Boolean packed) {
             this.packed = Objects.requireNonNull(packed);
             return this;
         }
 
-        public Builder setTypeUrl(String typeUrl) {
+        public Builder typeUrl(String typeUrl) {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }

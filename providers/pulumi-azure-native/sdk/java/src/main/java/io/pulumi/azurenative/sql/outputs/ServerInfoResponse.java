@@ -15,8 +15,8 @@ public final class ServerInfoResponse {
      */
     private final String serverId;
 
-    @OutputCustomType.Constructor({"serverId"})
-    private ServerInfoResponse(String serverId) {
+    @OutputCustomType.Constructor
+    private ServerInfoResponse(@OutputCustomType.Parameter("serverId") String serverId) {
         this.serverId = serverId;
     }
 
@@ -48,7 +48,7 @@ public final class ServerInfoResponse {
     	      this.serverId = defaults.serverId;
         }
 
-        public Builder setServerId(String serverId) {
+        public Builder serverId(String serverId) {
             this.serverId = Objects.requireNonNull(serverId);
             return this;
         }

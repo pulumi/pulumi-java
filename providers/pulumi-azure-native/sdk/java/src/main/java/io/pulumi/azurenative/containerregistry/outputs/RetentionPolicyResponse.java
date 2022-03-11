@@ -28,11 +28,11 @@ public final class RetentionPolicyResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"days","lastUpdatedTime","status"})
+    @OutputCustomType.Constructor
     private RetentionPolicyResponse(
-        @Nullable Integer days,
-        String lastUpdatedTime,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("days") @Nullable Integer days,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.days = days;
         this.lastUpdatedTime = lastUpdatedTime;
         this.status = status;
@@ -84,17 +84,17 @@ public final class RetentionPolicyResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -32,12 +32,12 @@ public final class AddRemoveReplicaScalingMechanismResponse {
      */
     private final Integer scaleIncrement;
 
-    @OutputCustomType.Constructor({"kind","maxCount","minCount","scaleIncrement"})
+    @OutputCustomType.Constructor
     private AddRemoveReplicaScalingMechanismResponse(
-        String kind,
-        Integer maxCount,
-        Integer minCount,
-        Integer scaleIncrement) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("maxCount") Integer maxCount,
+        @OutputCustomType.Parameter("minCount") Integer minCount,
+        @OutputCustomType.Parameter("scaleIncrement") Integer scaleIncrement) {
         this.kind = kind;
         this.maxCount = maxCount;
         this.minCount = minCount;
@@ -100,22 +100,22 @@ public final class AddRemoveReplicaScalingMechanismResponse {
     	      this.scaleIncrement = defaults.scaleIncrement;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMaxCount(Integer maxCount) {
+        public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
-        public Builder setMinCount(Integer minCount) {
+        public Builder minCount(Integer minCount) {
             this.minCount = Objects.requireNonNull(minCount);
             return this;
         }
 
-        public Builder setScaleIncrement(Integer scaleIncrement) {
+        public Builder scaleIncrement(Integer scaleIncrement) {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }

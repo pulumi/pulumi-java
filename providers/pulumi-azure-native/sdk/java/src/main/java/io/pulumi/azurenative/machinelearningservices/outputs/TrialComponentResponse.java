@@ -60,16 +60,16 @@ public final class TrialComponentResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"codeId","command","distribution","environmentId","environmentVariables","inputDataBindings","outputDataBindings","timeout"})
+    @OutputCustomType.Constructor
     private TrialComponentResponse(
-        @Nullable String codeId,
-        String command,
-        @Nullable Object distribution,
-        @Nullable String environmentId,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
-        @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("codeId") @Nullable String codeId,
+        @OutputCustomType.Parameter("command") String command,
+        @OutputCustomType.Parameter("distribution") @Nullable Object distribution,
+        @OutputCustomType.Parameter("environmentId") @Nullable String environmentId,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("inputDataBindings") @Nullable Map<String,InputDataBindingResponse> inputDataBindings,
+        @OutputCustomType.Parameter("outputDataBindings") @Nullable Map<String,OutputDataBindingResponse> outputDataBindings,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.codeId = codeId;
         this.command = command;
         this.distribution = distribution;
@@ -172,42 +172,42 @@ public final class TrialComponentResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCodeId(@Nullable String codeId) {
+        public Builder codeId(@Nullable String codeId) {
             this.codeId = codeId;
             return this;
         }
 
-        public Builder setCommand(String command) {
+        public Builder command(String command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setDistribution(@Nullable Object distribution) {
+        public Builder distribution(@Nullable Object distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setEnvironmentId(@Nullable String environmentId) {
+        public Builder environmentId(@Nullable String environmentId) {
             this.environmentId = environmentId;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setInputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
+        public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             this.inputDataBindings = inputDataBindings;
             return this;
         }
 
-        public Builder setOutputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
+        public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             this.outputDataBindings = outputDataBindings;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

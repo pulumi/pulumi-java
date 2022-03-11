@@ -45,14 +45,14 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"encryptionConfiguration","endpointsConfiguration","integrationServiceEnvironmentId","networkConfiguration","provisioningState","state"})
+    @OutputCustomType.Constructor
     private IntegrationServiceEnvironmentPropertiesResponse(
-        @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
-        @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        @Nullable String integrationServiceEnvironmentId,
-        @Nullable NetworkConfigurationResponse networkConfiguration,
-        @Nullable String provisioningState,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration,
+        @OutputCustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
+        @OutputCustomType.Parameter("integrationServiceEnvironmentId") @Nullable String integrationServiceEnvironmentId,
+        @OutputCustomType.Parameter("networkConfiguration") @Nullable NetworkConfigurationResponse networkConfiguration,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.endpointsConfiguration = endpointsConfiguration;
         this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
@@ -134,32 +134,32 @@ public final class IntegrationServiceEnvironmentPropertiesResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable IntegrationServiceEnvironmenEncryptionConfigurationResponse encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
+        public Builder integrationServiceEnvironmentId(@Nullable String integrationServiceEnvironmentId) {
             this.integrationServiceEnvironmentId = integrationServiceEnvironmentId;
             return this;
         }
 
-        public Builder setNetworkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
+        public Builder networkConfiguration(@Nullable NetworkConfigurationResponse networkConfiguration) {
             this.networkConfiguration = networkConfiguration;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

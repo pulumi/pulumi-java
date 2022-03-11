@@ -25,10 +25,10 @@ public final class DataSetIngestionWaitPolicy {
      */
     private final @Nullable Boolean waitForSpiceIngestion;
 
-    @OutputCustomType.Constructor({"ingestionWaitTimeInHours","waitForSpiceIngestion"})
+    @OutputCustomType.Constructor
     private DataSetIngestionWaitPolicy(
-        @Nullable Double ingestionWaitTimeInHours,
-        @Nullable Boolean waitForSpiceIngestion) {
+        @OutputCustomType.Parameter("ingestionWaitTimeInHours") @Nullable Double ingestionWaitTimeInHours,
+        @OutputCustomType.Parameter("waitForSpiceIngestion") @Nullable Boolean waitForSpiceIngestion) {
         this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
         this.waitForSpiceIngestion = waitForSpiceIngestion;
     }
@@ -72,12 +72,12 @@ public final class DataSetIngestionWaitPolicy {
     	      this.waitForSpiceIngestion = defaults.waitForSpiceIngestion;
         }
 
-        public Builder setIngestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
+        public Builder ingestionWaitTimeInHours(@Nullable Double ingestionWaitTimeInHours) {
             this.ingestionWaitTimeInHours = ingestionWaitTimeInHours;
             return this;
         }
 
-        public Builder setWaitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
+        public Builder waitForSpiceIngestion(@Nullable Boolean waitForSpiceIngestion) {
             this.waitForSpiceIngestion = waitForSpiceIngestion;
             return this;
         }

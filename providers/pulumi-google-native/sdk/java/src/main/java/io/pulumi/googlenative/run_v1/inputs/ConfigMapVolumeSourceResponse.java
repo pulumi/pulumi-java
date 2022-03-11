@@ -108,22 +108,22 @@ public final class ConfigMapVolumeSourceResponse extends io.pulumi.resources.Inv
     	      this.optional = defaults.optional;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<KeyToPathResponse> items) {
+        public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

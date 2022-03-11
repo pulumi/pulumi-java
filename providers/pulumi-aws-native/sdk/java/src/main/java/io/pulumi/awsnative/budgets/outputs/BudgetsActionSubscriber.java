@@ -13,10 +13,10 @@ public final class BudgetsActionSubscriber {
     private final String address;
     private final BudgetsActionSubscriberType type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private BudgetsActionSubscriber(
-        String address,
-        BudgetsActionSubscriberType type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("type") BudgetsActionSubscriberType type) {
         this.address = address;
         this.type = type;
     }
@@ -50,12 +50,12 @@ public final class BudgetsActionSubscriber {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setType(BudgetsActionSubscriberType type) {
+        public Builder type(BudgetsActionSubscriberType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

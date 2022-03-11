@@ -30,12 +30,12 @@ public final class InputMappingResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"fieldName","location","methodMatch","value"})
+    @OutputCustomType.Constructor
     private InputMappingResponse(
-        String fieldName,
-        String location,
-        String methodMatch,
-        String value) {
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("methodMatch") String methodMatch,
+        @OutputCustomType.Parameter("value") String value) {
         this.fieldName = fieldName;
         this.location = location;
         this.methodMatch = methodMatch;
@@ -97,22 +97,22 @@ public final class InputMappingResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMethodMatch(String methodMatch) {
+        public Builder methodMatch(String methodMatch) {
             this.methodMatch = Objects.requireNonNull(methodMatch);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

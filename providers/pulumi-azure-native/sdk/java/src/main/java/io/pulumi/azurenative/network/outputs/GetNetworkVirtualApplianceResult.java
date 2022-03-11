@@ -109,26 +109,26 @@ public final class GetNetworkVirtualApplianceResult {
      */
     private final @Nullable SubResourceResponse virtualHub;
 
-    @OutputCustomType.Constructor({"addressPrefix","bootStrapConfigurationBlobs","cloudInitConfiguration","cloudInitConfigurationBlobs","etag","id","identity","inboundSecurityRules","location","name","nvaSku","provisioningState","tags","type","virtualApplianceAsn","virtualApplianceNics","virtualApplianceSites","virtualHub"})
+    @OutputCustomType.Constructor
     private GetNetworkVirtualApplianceResult(
-        String addressPrefix,
-        @Nullable List<String> bootStrapConfigurationBlobs,
-        @Nullable String cloudInitConfiguration,
-        @Nullable List<String> cloudInitConfigurationBlobs,
-        String etag,
-        @Nullable String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        List<SubResourceResponse> inboundSecurityRules,
-        @Nullable String location,
-        String name,
-        @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Double virtualApplianceAsn,
-        List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
-        List<SubResourceResponse> virtualApplianceSites,
-        @Nullable SubResourceResponse virtualHub) {
+        @OutputCustomType.Parameter("addressPrefix") String addressPrefix,
+        @OutputCustomType.Parameter("bootStrapConfigurationBlobs") @Nullable List<String> bootStrapConfigurationBlobs,
+        @OutputCustomType.Parameter("cloudInitConfiguration") @Nullable String cloudInitConfiguration,
+        @OutputCustomType.Parameter("cloudInitConfigurationBlobs") @Nullable List<String> cloudInitConfigurationBlobs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("inboundSecurityRules") List<SubResourceResponse> inboundSecurityRules,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nvaSku") @Nullable VirtualApplianceSkuPropertiesResponse nvaSku,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualApplianceAsn") @Nullable Double virtualApplianceAsn,
+        @OutputCustomType.Parameter("virtualApplianceNics") List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics,
+        @OutputCustomType.Parameter("virtualApplianceSites") List<SubResourceResponse> virtualApplianceSites,
+        @OutputCustomType.Parameter("virtualHub") @Nullable SubResourceResponse virtualHub) {
         this.addressPrefix = addressPrefix;
         this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
         this.cloudInitConfiguration = cloudInitConfiguration;
@@ -330,92 +330,92 @@ public final class GetNetworkVirtualApplianceResult {
     	      this.virtualHub = defaults.virtualHub;
         }
 
-        public Builder setAddressPrefix(String addressPrefix) {
+        public Builder addressPrefix(String addressPrefix) {
             this.addressPrefix = Objects.requireNonNull(addressPrefix);
             return this;
         }
 
-        public Builder setBootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
+        public Builder bootStrapConfigurationBlobs(@Nullable List<String> bootStrapConfigurationBlobs) {
             this.bootStrapConfigurationBlobs = bootStrapConfigurationBlobs;
             return this;
         }
 
-        public Builder setCloudInitConfiguration(@Nullable String cloudInitConfiguration) {
+        public Builder cloudInitConfiguration(@Nullable String cloudInitConfiguration) {
             this.cloudInitConfiguration = cloudInitConfiguration;
             return this;
         }
 
-        public Builder setCloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
+        public Builder cloudInitConfigurationBlobs(@Nullable List<String> cloudInitConfigurationBlobs) {
             this.cloudInitConfigurationBlobs = cloudInitConfigurationBlobs;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInboundSecurityRules(List<SubResourceResponse> inboundSecurityRules) {
+        public Builder inboundSecurityRules(List<SubResourceResponse> inboundSecurityRules) {
             this.inboundSecurityRules = Objects.requireNonNull(inboundSecurityRules);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNvaSku(@Nullable VirtualApplianceSkuPropertiesResponse nvaSku) {
+        public Builder nvaSku(@Nullable VirtualApplianceSkuPropertiesResponse nvaSku) {
             this.nvaSku = nvaSku;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
+        public Builder virtualApplianceAsn(@Nullable Double virtualApplianceAsn) {
             this.virtualApplianceAsn = virtualApplianceAsn;
             return this;
         }
 
-        public Builder setVirtualApplianceNics(List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics) {
+        public Builder virtualApplianceNics(List<VirtualApplianceNicPropertiesResponse> virtualApplianceNics) {
             this.virtualApplianceNics = Objects.requireNonNull(virtualApplianceNics);
             return this;
         }
 
-        public Builder setVirtualApplianceSites(List<SubResourceResponse> virtualApplianceSites) {
+        public Builder virtualApplianceSites(List<SubResourceResponse> virtualApplianceSites) {
             this.virtualApplianceSites = Objects.requireNonNull(virtualApplianceSites);
             return this;
         }
 
-        public Builder setVirtualHub(@Nullable SubResourceResponse virtualHub) {
+        public Builder virtualHub(@Nullable SubResourceResponse virtualHub) {
             this.virtualHub = virtualHub;
             return this;
         }

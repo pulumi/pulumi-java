@@ -50,12 +50,12 @@ public final class ClusterClusterConfigSoftwareConfig {
     private final @Nullable Map<String,String> overrideProperties;
     private final @Nullable Map<String,Object> properties;
 
-    @OutputCustomType.Constructor({"imageVersion","optionalComponents","overrideProperties","properties"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigSoftwareConfig(
-        @Nullable String imageVersion,
-        @Nullable List<String> optionalComponents,
-        @Nullable Map<String,String> overrideProperties,
-        @Nullable Map<String,Object> properties) {
+        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @OutputCustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
+        @OutputCustomType.Parameter("overrideProperties") @Nullable Map<String,String> overrideProperties,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,Object> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.overrideProperties = overrideProperties;
@@ -132,22 +132,22 @@ public final class ClusterClusterConfigSoftwareConfig {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setImageVersion(@Nullable String imageVersion) {
+        public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
-        public Builder setOptionalComponents(@Nullable List<String> optionalComponents) {
+        public Builder optionalComponents(@Nullable List<String> optionalComponents) {
             this.optionalComponents = optionalComponents;
             return this;
         }
 
-        public Builder setOverrideProperties(@Nullable Map<String,String> overrideProperties) {
+        public Builder overrideProperties(@Nullable Map<String,String> overrideProperties) {
             this.overrideProperties = overrideProperties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,Object> properties) {
+        public Builder properties(@Nullable Map<String,Object> properties) {
             this.properties = properties;
             return this;
         }

@@ -102,25 +102,25 @@ public final class Event {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"action","apiVersion","count","eventTime","firstTimestamp","involvedObject","kind","lastTimestamp","message","metadata","reason","related","reportingComponent","reportingInstance","series","source","type"})
+    @OutputCustomType.Constructor
     private Event(
-        @Nullable String action,
-        @Nullable String apiVersion,
-        @Nullable Integer count,
-        @Nullable String eventTime,
-        @Nullable String firstTimestamp,
-        ObjectReference involvedObject,
-        @Nullable String kind,
-        @Nullable String lastTimestamp,
-        @Nullable String message,
-        ObjectMeta metadata,
-        @Nullable String reason,
-        @Nullable ObjectReference related,
-        @Nullable String reportingComponent,
-        @Nullable String reportingInstance,
-        @Nullable EventSeries series,
-        @Nullable EventSource source,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
+        @OutputCustomType.Parameter("firstTimestamp") @Nullable String firstTimestamp,
+        @OutputCustomType.Parameter("involvedObject") ObjectReference involvedObject,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastTimestamp") @Nullable String lastTimestamp,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("metadata") ObjectMeta metadata,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("related") @Nullable ObjectReference related,
+        @OutputCustomType.Parameter("reportingComponent") @Nullable String reportingComponent,
+        @OutputCustomType.Parameter("reportingInstance") @Nullable String reportingInstance,
+        @OutputCustomType.Parameter("series") @Nullable EventSeries series,
+        @OutputCustomType.Parameter("source") @Nullable EventSource source,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.action = action;
         this.apiVersion = apiVersion;
         this.count = count;
@@ -312,87 +312,87 @@ public final class Event {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setFirstTimestamp(@Nullable String firstTimestamp) {
+        public Builder firstTimestamp(@Nullable String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
 
-        public Builder setInvolvedObject(ObjectReference involvedObject) {
+        public Builder involvedObject(ObjectReference involvedObject) {
             this.involvedObject = Objects.requireNonNull(involvedObject);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastTimestamp(@Nullable String lastTimestamp) {
+        public Builder lastTimestamp(@Nullable String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMetadata(ObjectMeta metadata) {
+        public Builder metadata(ObjectMeta metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setRelated(@Nullable ObjectReference related) {
+        public Builder related(@Nullable ObjectReference related) {
             this.related = related;
             return this;
         }
 
-        public Builder setReportingComponent(@Nullable String reportingComponent) {
+        public Builder reportingComponent(@Nullable String reportingComponent) {
             this.reportingComponent = reportingComponent;
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable String reportingInstance) {
+        public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
 
-        public Builder setSeries(@Nullable EventSeries series) {
+        public Builder series(@Nullable EventSeries series) {
             this.series = series;
             return this;
         }
 
-        public Builder setSource(@Nullable EventSource source) {
+        public Builder source(@Nullable EventSource source) {
             this.source = source;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

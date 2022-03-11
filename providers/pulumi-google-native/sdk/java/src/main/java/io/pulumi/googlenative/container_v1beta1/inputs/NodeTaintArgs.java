@@ -91,32 +91,32 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(@Nullable Input<NodeTaintEffect> effect) {
+        public Builder effect(@Nullable Input<NodeTaintEffect> effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setEffect(@Nullable NodeTaintEffect effect) {
+        public Builder effect(@Nullable NodeTaintEffect effect) {
             this.effect = Input.ofNullable(effect);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setValue(@Nullable Input<String> value) {
+        public Builder value(@Nullable Input<String> value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = Input.ofNullable(value);
             return this;
         }

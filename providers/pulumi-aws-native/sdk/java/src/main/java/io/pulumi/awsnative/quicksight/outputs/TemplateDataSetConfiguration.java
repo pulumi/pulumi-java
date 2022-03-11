@@ -26,11 +26,11 @@ public final class TemplateDataSetConfiguration {
      */
     private final @Nullable String placeholder;
 
-    @OutputCustomType.Constructor({"columnGroupSchemaList","dataSetSchema","placeholder"})
+    @OutputCustomType.Constructor
     private TemplateDataSetConfiguration(
-        @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
-        @Nullable TemplateDataSetSchema dataSetSchema,
-        @Nullable String placeholder) {
+        @OutputCustomType.Parameter("columnGroupSchemaList") @Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList,
+        @OutputCustomType.Parameter("dataSetSchema") @Nullable TemplateDataSetSchema dataSetSchema,
+        @OutputCustomType.Parameter("placeholder") @Nullable String placeholder) {
         this.columnGroupSchemaList = columnGroupSchemaList;
         this.dataSetSchema = dataSetSchema;
         this.placeholder = placeholder;
@@ -78,17 +78,17 @@ public final class TemplateDataSetConfiguration {
     	      this.placeholder = defaults.placeholder;
         }
 
-        public Builder setColumnGroupSchemaList(@Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList) {
+        public Builder columnGroupSchemaList(@Nullable List<TemplateColumnGroupSchema> columnGroupSchemaList) {
             this.columnGroupSchemaList = columnGroupSchemaList;
             return this;
         }
 
-        public Builder setDataSetSchema(@Nullable TemplateDataSetSchema dataSetSchema) {
+        public Builder dataSetSchema(@Nullable TemplateDataSetSchema dataSetSchema) {
             this.dataSetSchema = dataSetSchema;
             return this;
         }
 
-        public Builder setPlaceholder(@Nullable String placeholder) {
+        public Builder placeholder(@Nullable String placeholder) {
             this.placeholder = placeholder;
             return this;
         }

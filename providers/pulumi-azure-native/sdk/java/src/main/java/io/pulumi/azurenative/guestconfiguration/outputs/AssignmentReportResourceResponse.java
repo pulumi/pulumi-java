@@ -34,12 +34,12 @@ public final class AssignmentReportResourceResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"complianceStatus","properties","reasons","resourceId"})
+    @OutputCustomType.Constructor
     private AssignmentReportResourceResponse(
-        String complianceStatus,
-        Object properties,
-        @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
-        String resourceId) {
+        @OutputCustomType.Parameter("complianceStatus") String complianceStatus,
+        @OutputCustomType.Parameter("properties") Object properties,
+        @OutputCustomType.Parameter("reasons") @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.complianceStatus = complianceStatus;
         this.properties = properties;
         this.reasons = reasons;
@@ -101,22 +101,22 @@ public final class AssignmentReportResourceResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setComplianceStatus(String complianceStatus) {
+        public Builder complianceStatus(String complianceStatus) {
             this.complianceStatus = Objects.requireNonNull(complianceStatus);
             return this;
         }
 
-        public Builder setProperties(Object properties) {
+        public Builder properties(Object properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setReasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
+        public Builder reasons(@Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons) {
             this.reasons = reasons;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

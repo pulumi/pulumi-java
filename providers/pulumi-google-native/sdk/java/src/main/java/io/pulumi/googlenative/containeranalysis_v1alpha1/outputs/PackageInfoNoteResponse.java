@@ -99,25 +99,25 @@ public final class PackageInfoNoteResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"analyzed","attribution","checksum","copyright","detailedDescription","downloadLocation","externalRefs","filesLicenseInfo","homePage","licenseDeclared","originator","packageType","summaryDescription","supplier","title","verificationCode","version"})
+    @OutputCustomType.Constructor
     private PackageInfoNoteResponse(
-        Boolean analyzed,
-        String attribution,
-        String checksum,
-        String copyright,
-        String detailedDescription,
-        String downloadLocation,
-        List<ExternalRefResponse> externalRefs,
-        List<String> filesLicenseInfo,
-        String homePage,
-        LicenseResponse licenseDeclared,
-        String originator,
-        String packageType,
-        String summaryDescription,
-        String supplier,
-        String title,
-        String verificationCode,
-        String version) {
+        @OutputCustomType.Parameter("analyzed") Boolean analyzed,
+        @OutputCustomType.Parameter("attribution") String attribution,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("copyright") String copyright,
+        @OutputCustomType.Parameter("detailedDescription") String detailedDescription,
+        @OutputCustomType.Parameter("downloadLocation") String downloadLocation,
+        @OutputCustomType.Parameter("externalRefs") List<ExternalRefResponse> externalRefs,
+        @OutputCustomType.Parameter("filesLicenseInfo") List<String> filesLicenseInfo,
+        @OutputCustomType.Parameter("homePage") String homePage,
+        @OutputCustomType.Parameter("licenseDeclared") LicenseResponse licenseDeclared,
+        @OutputCustomType.Parameter("originator") String originator,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("summaryDescription") String summaryDescription,
+        @OutputCustomType.Parameter("supplier") String supplier,
+        @OutputCustomType.Parameter("title") String title,
+        @OutputCustomType.Parameter("verificationCode") String verificationCode,
+        @OutputCustomType.Parameter("version") String version) {
         this.analyzed = analyzed;
         this.attribution = attribution;
         this.checksum = checksum;
@@ -309,87 +309,87 @@ public final class PackageInfoNoteResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAnalyzed(Boolean analyzed) {
+        public Builder analyzed(Boolean analyzed) {
             this.analyzed = Objects.requireNonNull(analyzed);
             return this;
         }
 
-        public Builder setAttribution(String attribution) {
+        public Builder attribution(String attribution) {
             this.attribution = Objects.requireNonNull(attribution);
             return this;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setCopyright(String copyright) {
+        public Builder copyright(String copyright) {
             this.copyright = Objects.requireNonNull(copyright);
             return this;
         }
 
-        public Builder setDetailedDescription(String detailedDescription) {
+        public Builder detailedDescription(String detailedDescription) {
             this.detailedDescription = Objects.requireNonNull(detailedDescription);
             return this;
         }
 
-        public Builder setDownloadLocation(String downloadLocation) {
+        public Builder downloadLocation(String downloadLocation) {
             this.downloadLocation = Objects.requireNonNull(downloadLocation);
             return this;
         }
 
-        public Builder setExternalRefs(List<ExternalRefResponse> externalRefs) {
+        public Builder externalRefs(List<ExternalRefResponse> externalRefs) {
             this.externalRefs = Objects.requireNonNull(externalRefs);
             return this;
         }
 
-        public Builder setFilesLicenseInfo(List<String> filesLicenseInfo) {
+        public Builder filesLicenseInfo(List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Objects.requireNonNull(filesLicenseInfo);
             return this;
         }
 
-        public Builder setHomePage(String homePage) {
+        public Builder homePage(String homePage) {
             this.homePage = Objects.requireNonNull(homePage);
             return this;
         }
 
-        public Builder setLicenseDeclared(LicenseResponse licenseDeclared) {
+        public Builder licenseDeclared(LicenseResponse licenseDeclared) {
             this.licenseDeclared = Objects.requireNonNull(licenseDeclared);
             return this;
         }
 
-        public Builder setOriginator(String originator) {
+        public Builder originator(String originator) {
             this.originator = Objects.requireNonNull(originator);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSummaryDescription(String summaryDescription) {
+        public Builder summaryDescription(String summaryDescription) {
             this.summaryDescription = Objects.requireNonNull(summaryDescription);
             return this;
         }
 
-        public Builder setSupplier(String supplier) {
+        public Builder supplier(String supplier) {
             this.supplier = Objects.requireNonNull(supplier);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }
 
-        public Builder setVerificationCode(String verificationCode) {
+        public Builder verificationCode(String verificationCode) {
             this.verificationCode = Objects.requireNonNull(verificationCode);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -86,32 +86,32 @@ public final class InsightFiltersFindingProviderFieldsCriticalityGetArgs extends
     	      this.lte = defaults.lte;
         }
 
-        public Builder setEq(@Nullable Input<String> eq) {
+        public Builder eq(@Nullable Input<String> eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setEq(@Nullable String eq) {
+        public Builder eq(@Nullable String eq) {
             this.eq = Input.ofNullable(eq);
             return this;
         }
 
-        public Builder setGte(@Nullable Input<String> gte) {
+        public Builder gte(@Nullable Input<String> gte) {
             this.gte = gte;
             return this;
         }
 
-        public Builder setGte(@Nullable String gte) {
+        public Builder gte(@Nullable String gte) {
             this.gte = Input.ofNullable(gte);
             return this;
         }
 
-        public Builder setLte(@Nullable Input<String> lte) {
+        public Builder lte(@Nullable Input<String> lte) {
             this.lte = lte;
             return this;
         }
 
-        public Builder setLte(@Nullable String lte) {
+        public Builder lte(@Nullable String lte) {
             this.lte = Input.ofNullable(lte);
             return this;
         }

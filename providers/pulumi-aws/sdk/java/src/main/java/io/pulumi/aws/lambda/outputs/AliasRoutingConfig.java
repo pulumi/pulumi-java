@@ -18,8 +18,8 @@ public final class AliasRoutingConfig {
      */
     private final @Nullable Map<String,Double> additionalVersionWeights;
 
-    @OutputCustomType.Constructor({"additionalVersionWeights"})
-    private AliasRoutingConfig(@Nullable Map<String,Double> additionalVersionWeights) {
+    @OutputCustomType.Constructor
+    private AliasRoutingConfig(@OutputCustomType.Parameter("additionalVersionWeights") @Nullable Map<String,Double> additionalVersionWeights) {
         this.additionalVersionWeights = additionalVersionWeights;
     }
 
@@ -51,7 +51,7 @@ public final class AliasRoutingConfig {
     	      this.additionalVersionWeights = defaults.additionalVersionWeights;
         }
 
-        public Builder setAdditionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
+        public Builder additionalVersionWeights(@Nullable Map<String,Double> additionalVersionWeights) {
             this.additionalVersionWeights = additionalVersionWeights;
             return this;
         }

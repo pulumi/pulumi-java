@@ -14,10 +14,10 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
     private final @Nullable String target;
     private final String type;
 
-    @OutputCustomType.Constructor({"target","type"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions(
-        @Nullable String target,
-        String type) {
+        @OutputCustomType.Parameter("target") @Nullable String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.target = target;
         this.type = type;
     }
@@ -51,12 +51,12 @@ public final class SecurityPolicyRuleRateLimitOptionsExceedRedirectOptions {
     	      this.type = defaults.type;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

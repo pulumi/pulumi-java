@@ -27,11 +27,11 @@ public final class ApplicationSslConfiguration {
      */
     private final String privateKey;
 
-    @OutputCustomType.Constructor({"certificate","chain","privateKey"})
+    @OutputCustomType.Constructor
     private ApplicationSslConfiguration(
-        String certificate,
-        @Nullable String chain,
-        String privateKey) {
+        @OutputCustomType.Parameter("certificate") String certificate,
+        @OutputCustomType.Parameter("chain") @Nullable String chain,
+        @OutputCustomType.Parameter("privateKey") String privateKey) {
         this.certificate = certificate;
         this.chain = chain;
         this.privateKey = privateKey;
@@ -83,17 +83,17 @@ public final class ApplicationSslConfiguration {
     	      this.privateKey = defaults.privateKey;
         }
 
-        public Builder setCertificate(String certificate) {
+        public Builder certificate(String certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setChain(@Nullable String chain) {
+        public Builder chain(@Nullable String chain) {
             this.chain = chain;
             return this;
         }
 
-        public Builder setPrivateKey(String privateKey) {
+        public Builder privateKey(String privateKey) {
             this.privateKey = Objects.requireNonNull(privateKey);
             return this;
         }

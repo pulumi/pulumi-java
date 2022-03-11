@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListMediaServiceEdgePoliciesResult {
     private final @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy;
 
-    @OutputCustomType.Constructor({"usageDataCollectionPolicy"})
-    private ListMediaServiceEdgePoliciesResult(@Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
+    @OutputCustomType.Constructor
+    private ListMediaServiceEdgePoliciesResult(@OutputCustomType.Parameter("usageDataCollectionPolicy") @Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
         this.usageDataCollectionPolicy = usageDataCollectionPolicy;
     }
 
@@ -42,7 +42,7 @@ public final class ListMediaServiceEdgePoliciesResult {
     	      this.usageDataCollectionPolicy = defaults.usageDataCollectionPolicy;
         }
 
-        public Builder setUsageDataCollectionPolicy(@Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
+        public Builder usageDataCollectionPolicy(@Nullable EdgeUsageDataCollectionPolicyResponse usageDataCollectionPolicy) {
             this.usageDataCollectionPolicy = usageDataCollectionPolicy;
             return this;
         }

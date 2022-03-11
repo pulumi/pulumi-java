@@ -15,8 +15,8 @@ public final class ScheduledActionTargetActionResumeCluster {
      */
     private final String clusterIdentifier;
 
-    @OutputCustomType.Constructor({"clusterIdentifier"})
-    private ScheduledActionTargetActionResumeCluster(String clusterIdentifier) {
+    @OutputCustomType.Constructor
+    private ScheduledActionTargetActionResumeCluster(@OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier) {
         this.clusterIdentifier = clusterIdentifier;
     }
 
@@ -48,7 +48,7 @@ public final class ScheduledActionTargetActionResumeCluster {
     	      this.clusterIdentifier = defaults.clusterIdentifier;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }

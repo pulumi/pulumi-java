@@ -51,15 +51,15 @@ public final class GetHybridRunbookWorkerGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credential","groupType","hybridRunbookWorkers","id","name","systemData","type"})
+    @OutputCustomType.Constructor
     private GetHybridRunbookWorkerGroupResult(
-        @Nullable RunAsCredentialAssociationPropertyResponse credential,
-        @Nullable String groupType,
-        @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
-        @Nullable String id,
-        @Nullable String name,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("credential") @Nullable RunAsCredentialAssociationPropertyResponse credential,
+        @OutputCustomType.Parameter("groupType") @Nullable String groupType,
+        @OutputCustomType.Parameter("hybridRunbookWorkers") @Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.credential = credential;
         this.groupType = groupType;
         this.hybridRunbookWorkers = hybridRunbookWorkers;
@@ -151,37 +151,37 @@ public final class GetHybridRunbookWorkerGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(@Nullable RunAsCredentialAssociationPropertyResponse credential) {
+        public Builder credential(@Nullable RunAsCredentialAssociationPropertyResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setGroupType(@Nullable String groupType) {
+        public Builder groupType(@Nullable String groupType) {
             this.groupType = groupType;
             return this;
         }
 
-        public Builder setHybridRunbookWorkers(@Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers) {
+        public Builder hybridRunbookWorkers(@Nullable List<HybridRunbookWorkerLegacyResponse> hybridRunbookWorkers) {
             this.hybridRunbookWorkers = hybridRunbookWorkers;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -22,14 +22,14 @@ public final class GetServiceActionResult {
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"acceptLanguage","definition","definitionType","description","id","name"})
+    @OutputCustomType.Constructor
     private GetServiceActionResult(
-        @Nullable ServiceActionAcceptLanguage acceptLanguage,
-        @Nullable List<ServiceActionDefinitionParameter> definition,
-        @Nullable ServiceActionDefinitionType definitionType,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable ServiceActionAcceptLanguage acceptLanguage,
+        @OutputCustomType.Parameter("definition") @Nullable List<ServiceActionDefinitionParameter> definition,
+        @OutputCustomType.Parameter("definitionType") @Nullable ServiceActionDefinitionType definitionType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.acceptLanguage = acceptLanguage;
         this.definition = definition;
         this.definitionType = definitionType;
@@ -87,32 +87,32 @@ public final class GetServiceActionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAcceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
+        public Builder acceptLanguage(@Nullable ServiceActionAcceptLanguage acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setDefinition(@Nullable List<ServiceActionDefinitionParameter> definition) {
+        public Builder definition(@Nullable List<ServiceActionDefinitionParameter> definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setDefinitionType(@Nullable ServiceActionDefinitionType definitionType) {
+        public Builder definitionType(@Nullable ServiceActionDefinitionType definitionType) {
             this.definitionType = definitionType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

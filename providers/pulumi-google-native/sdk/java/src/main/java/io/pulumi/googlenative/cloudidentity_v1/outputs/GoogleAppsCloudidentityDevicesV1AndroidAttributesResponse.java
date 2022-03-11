@@ -31,12 +31,12 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
      */
     private final Boolean supportsWorkProfile;
 
-    @OutputCustomType.Constructor({"enabledUnknownSources","ownerProfileAccount","ownershipPrivilege","supportsWorkProfile"})
+    @OutputCustomType.Constructor
     private GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(
-        Boolean enabledUnknownSources,
-        Boolean ownerProfileAccount,
-        String ownershipPrivilege,
-        Boolean supportsWorkProfile) {
+        @OutputCustomType.Parameter("enabledUnknownSources") Boolean enabledUnknownSources,
+        @OutputCustomType.Parameter("ownerProfileAccount") Boolean ownerProfileAccount,
+        @OutputCustomType.Parameter("ownershipPrivilege") String ownershipPrivilege,
+        @OutputCustomType.Parameter("supportsWorkProfile") Boolean supportsWorkProfile) {
         this.enabledUnknownSources = enabledUnknownSources;
         this.ownerProfileAccount = ownerProfileAccount;
         this.ownershipPrivilege = ownershipPrivilege;
@@ -98,22 +98,22 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
     	      this.supportsWorkProfile = defaults.supportsWorkProfile;
         }
 
-        public Builder setEnabledUnknownSources(Boolean enabledUnknownSources) {
+        public Builder enabledUnknownSources(Boolean enabledUnknownSources) {
             this.enabledUnknownSources = Objects.requireNonNull(enabledUnknownSources);
             return this;
         }
 
-        public Builder setOwnerProfileAccount(Boolean ownerProfileAccount) {
+        public Builder ownerProfileAccount(Boolean ownerProfileAccount) {
             this.ownerProfileAccount = Objects.requireNonNull(ownerProfileAccount);
             return this;
         }
 
-        public Builder setOwnershipPrivilege(String ownershipPrivilege) {
+        public Builder ownershipPrivilege(String ownershipPrivilege) {
             this.ownershipPrivilege = Objects.requireNonNull(ownershipPrivilege);
             return this;
         }
 
-        public Builder setSupportsWorkProfile(Boolean supportsWorkProfile) {
+        public Builder supportsWorkProfile(Boolean supportsWorkProfile) {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }

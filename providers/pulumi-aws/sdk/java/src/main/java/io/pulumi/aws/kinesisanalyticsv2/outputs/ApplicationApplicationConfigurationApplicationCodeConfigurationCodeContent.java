@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
      */
     private final @Nullable String textContent;
 
-    @OutputCustomType.Constructor({"s3ContentLocation","textContent"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContent(
-        @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation,
-        @Nullable String textContent) {
+        @OutputCustomType.Parameter("s3ContentLocation") @Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation,
+        @OutputCustomType.Parameter("textContent") @Nullable String textContent) {
         this.s3ContentLocation = s3ContentLocation;
         this.textContent = textContent;
     }
@@ -68,12 +68,12 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     	      this.textContent = defaults.textContent;
         }
 
-        public Builder setS3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation) {
+        public Builder s3ContentLocation(@Nullable ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocation s3ContentLocation) {
             this.s3ContentLocation = s3ContentLocation;
             return this;
         }
 
-        public Builder setTextContent(@Nullable String textContent) {
+        public Builder textContent(@Nullable String textContent) {
             this.textContent = textContent;
             return this;
         }

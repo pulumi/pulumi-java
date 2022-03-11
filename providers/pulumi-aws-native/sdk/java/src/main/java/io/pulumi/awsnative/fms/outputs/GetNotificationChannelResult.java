@@ -14,10 +14,10 @@ public final class GetNotificationChannelResult {
     private final @Nullable String snsRoleName;
     private final @Nullable String snsTopicArn;
 
-    @OutputCustomType.Constructor({"snsRoleName","snsTopicArn"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        @Nullable String snsRoleName,
-        @Nullable String snsTopicArn) {
+        @OutputCustomType.Parameter("snsRoleName") @Nullable String snsRoleName,
+        @OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
         this.snsRoleName = snsRoleName;
         this.snsTopicArn = snsTopicArn;
     }
@@ -51,12 +51,12 @@ public final class GetNotificationChannelResult {
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setSnsRoleName(@Nullable String snsRoleName) {
+        public Builder snsRoleName(@Nullable String snsRoleName) {
             this.snsRoleName = snsRoleName;
             return this;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }

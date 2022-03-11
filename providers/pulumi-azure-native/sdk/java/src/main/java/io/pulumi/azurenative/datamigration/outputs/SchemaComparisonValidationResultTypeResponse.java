@@ -25,11 +25,11 @@ public final class SchemaComparisonValidationResultTypeResponse {
      */
     private final String updateAction;
 
-    @OutputCustomType.Constructor({"objectName","objectType","updateAction"})
+    @OutputCustomType.Constructor
     private SchemaComparisonValidationResultTypeResponse(
-        String objectName,
-        String objectType,
-        String updateAction) {
+        @OutputCustomType.Parameter("objectName") String objectName,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("updateAction") String updateAction) {
         this.objectName = objectName;
         this.objectType = objectType;
         this.updateAction = updateAction;
@@ -81,17 +81,17 @@ public final class SchemaComparisonValidationResultTypeResponse {
     	      this.updateAction = defaults.updateAction;
         }
 
-        public Builder setObjectName(String objectName) {
+        public Builder objectName(String objectName) {
             this.objectName = Objects.requireNonNull(objectName);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setUpdateAction(String updateAction) {
+        public Builder updateAction(String updateAction) {
             this.updateAction = Objects.requireNonNull(updateAction);
             return this;
         }

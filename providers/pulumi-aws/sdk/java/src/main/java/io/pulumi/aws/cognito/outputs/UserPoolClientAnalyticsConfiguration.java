@@ -38,13 +38,13 @@ public final class UserPoolClientAnalyticsConfiguration {
      */
     private final @Nullable Boolean userDataShared;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationId","externalId","roleArn","userDataShared"})
+    @OutputCustomType.Constructor
     private UserPoolClientAnalyticsConfiguration(
-        @Nullable String applicationArn,
-        @Nullable String applicationId,
-        @Nullable String externalId,
-        @Nullable String roleArn,
-        @Nullable Boolean userDataShared) {
+        @OutputCustomType.Parameter("applicationArn") @Nullable String applicationArn,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("userDataShared") @Nullable Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;
@@ -116,27 +116,27 @@ public final class UserPoolClientAnalyticsConfiguration {
     	      this.userDataShared = defaults.userDataShared;
         }
 
-        public Builder setApplicationArn(@Nullable String applicationArn) {
+        public Builder applicationArn(@Nullable String applicationArn) {
             this.applicationArn = applicationArn;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setUserDataShared(@Nullable Boolean userDataShared) {
+        public Builder userDataShared(@Nullable Boolean userDataShared) {
             this.userDataShared = userDataShared;
             return this;
         }

@@ -70,22 +70,22 @@ public final class ProductSubscriptionState extends io.pulumi.resources.Resource
     	      this.productArn = defaults.productArn;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setProductArn(@Nullable Input<String> productArn) {
+        public Builder productArn(@Nullable Input<String> productArn) {
             this.productArn = productArn;
             return this;
         }
 
-        public Builder setProductArn(@Nullable String productArn) {
+        public Builder productArn(@Nullable String productArn) {
             this.productArn = Input.ofNullable(productArn);
             return this;
         }

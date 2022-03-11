@@ -27,10 +27,10 @@ public final class StatefulSetUpdateStrategy {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"rollingUpdate","type"})
+    @OutputCustomType.Constructor
     private StatefulSetUpdateStrategy(
-        @Nullable RollingUpdateStatefulSetStrategy rollingUpdate,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("rollingUpdate") @Nullable RollingUpdateStatefulSetStrategy rollingUpdate,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.rollingUpdate = rollingUpdate;
         this.type = type;
     }
@@ -76,12 +76,12 @@ public final class StatefulSetUpdateStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setRollingUpdate(@Nullable RollingUpdateStatefulSetStrategy rollingUpdate) {
+        public Builder rollingUpdate(@Nullable RollingUpdateStatefulSetStrategy rollingUpdate) {
             this.rollingUpdate = rollingUpdate;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -15,11 +15,11 @@ public final class ServiceAuth {
     private final String serverAddress;
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","serverAddress","username"})
+    @OutputCustomType.Constructor
     private ServiceAuth(
-        @Nullable String password,
-        String serverAddress,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("serverAddress") String serverAddress,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.serverAddress = serverAddress;
         this.username = username;
@@ -59,17 +59,17 @@ public final class ServiceAuth {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServerAddress(String serverAddress) {
+        public Builder serverAddress(String serverAddress) {
             this.serverAddress = Objects.requireNonNull(serverAddress);
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

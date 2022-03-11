@@ -67,22 +67,22 @@ public final class ClusterNodePool {
     private final @Nullable ClusterNodePoolUpgradeSettings upgradeSettings;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"autoscaling","initialNodeCount","instanceGroupUrls","managedInstanceGroupUrls","management","maxPodsPerNode","name","namePrefix","networkConfig","nodeConfig","nodeCount","nodeLocations","upgradeSettings","version"})
+    @OutputCustomType.Constructor
     private ClusterNodePool(
-        @Nullable ClusterNodePoolAutoscaling autoscaling,
-        @Nullable Integer initialNodeCount,
-        @Nullable List<String> instanceGroupUrls,
-        @Nullable List<String> managedInstanceGroupUrls,
-        @Nullable ClusterNodePoolManagement management,
-        @Nullable Integer maxPodsPerNode,
-        @Nullable String name,
-        @Nullable String namePrefix,
-        @Nullable ClusterNodePoolNetworkConfig networkConfig,
-        @Nullable ClusterNodePoolNodeConfig nodeConfig,
-        @Nullable Integer nodeCount,
-        @Nullable List<String> nodeLocations,
-        @Nullable ClusterNodePoolUpgradeSettings upgradeSettings,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("autoscaling") @Nullable ClusterNodePoolAutoscaling autoscaling,
+        @OutputCustomType.Parameter("initialNodeCount") @Nullable Integer initialNodeCount,
+        @OutputCustomType.Parameter("instanceGroupUrls") @Nullable List<String> instanceGroupUrls,
+        @OutputCustomType.Parameter("managedInstanceGroupUrls") @Nullable List<String> managedInstanceGroupUrls,
+        @OutputCustomType.Parameter("management") @Nullable ClusterNodePoolManagement management,
+        @OutputCustomType.Parameter("maxPodsPerNode") @Nullable Integer maxPodsPerNode,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namePrefix") @Nullable String namePrefix,
+        @OutputCustomType.Parameter("networkConfig") @Nullable ClusterNodePoolNetworkConfig networkConfig,
+        @OutputCustomType.Parameter("nodeConfig") @Nullable ClusterNodePoolNodeConfig nodeConfig,
+        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @OutputCustomType.Parameter("nodeLocations") @Nullable List<String> nodeLocations,
+        @OutputCustomType.Parameter("upgradeSettings") @Nullable ClusterNodePoolUpgradeSettings upgradeSettings,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.autoscaling = autoscaling;
         this.initialNodeCount = initialNodeCount;
         this.instanceGroupUrls = instanceGroupUrls;
@@ -222,72 +222,72 @@ public final class ClusterNodePool {
     	      this.version = defaults.version;
         }
 
-        public Builder setAutoscaling(@Nullable ClusterNodePoolAutoscaling autoscaling) {
+        public Builder autoscaling(@Nullable ClusterNodePoolAutoscaling autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setInitialNodeCount(@Nullable Integer initialNodeCount) {
+        public Builder initialNodeCount(@Nullable Integer initialNodeCount) {
             this.initialNodeCount = initialNodeCount;
             return this;
         }
 
-        public Builder setInstanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
+        public Builder instanceGroupUrls(@Nullable List<String> instanceGroupUrls) {
             this.instanceGroupUrls = instanceGroupUrls;
             return this;
         }
 
-        public Builder setManagedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
+        public Builder managedInstanceGroupUrls(@Nullable List<String> managedInstanceGroupUrls) {
             this.managedInstanceGroupUrls = managedInstanceGroupUrls;
             return this;
         }
 
-        public Builder setManagement(@Nullable ClusterNodePoolManagement management) {
+        public Builder management(@Nullable ClusterNodePoolManagement management) {
             this.management = management;
             return this;
         }
 
-        public Builder setMaxPodsPerNode(@Nullable Integer maxPodsPerNode) {
+        public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
             this.maxPodsPerNode = maxPodsPerNode;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNetworkConfig(@Nullable ClusterNodePoolNetworkConfig networkConfig) {
+        public Builder networkConfig(@Nullable ClusterNodePoolNetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
             return this;
         }
 
-        public Builder setNodeConfig(@Nullable ClusterNodePoolNodeConfig nodeConfig) {
+        public Builder nodeConfig(@Nullable ClusterNodePoolNodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
             return this;
         }
 
-        public Builder setNodeCount(@Nullable Integer nodeCount) {
+        public Builder nodeCount(@Nullable Integer nodeCount) {
             this.nodeCount = nodeCount;
             return this;
         }
 
-        public Builder setNodeLocations(@Nullable List<String> nodeLocations) {
+        public Builder nodeLocations(@Nullable List<String> nodeLocations) {
             this.nodeLocations = nodeLocations;
             return this;
         }
 
-        public Builder setUpgradeSettings(@Nullable ClusterNodePoolUpgradeSettings upgradeSettings) {
+        public Builder upgradeSettings(@Nullable ClusterNodePoolUpgradeSettings upgradeSettings) {
             this.upgradeSettings = upgradeSettings;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

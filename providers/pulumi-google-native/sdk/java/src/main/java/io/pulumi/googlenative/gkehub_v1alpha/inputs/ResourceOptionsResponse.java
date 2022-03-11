@@ -89,17 +89,17 @@ public final class ResourceOptionsResponse extends io.pulumi.resources.InvokeArg
     	      this.v1beta1Crd = defaults.v1beta1Crd;
         }
 
-        public Builder setConnectVersion(String connectVersion) {
+        public Builder connectVersion(String connectVersion) {
             this.connectVersion = Objects.requireNonNull(connectVersion);
             return this;
         }
 
-        public Builder setK8sVersion(String k8sVersion) {
+        public Builder k8sVersion(String k8sVersion) {
             this.k8sVersion = Objects.requireNonNull(k8sVersion);
             return this;
         }
 
-        public Builder setV1beta1Crd(Boolean v1beta1Crd) {
+        public Builder v1beta1Crd(Boolean v1beta1Crd) {
             this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
             return this;
         }

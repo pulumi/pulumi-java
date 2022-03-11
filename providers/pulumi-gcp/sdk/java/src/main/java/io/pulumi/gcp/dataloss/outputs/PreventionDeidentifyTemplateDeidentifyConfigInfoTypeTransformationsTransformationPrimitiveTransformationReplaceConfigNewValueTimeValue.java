@@ -32,12 +32,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Integer seconds;
 
-    @OutputCustomType.Constructor({"hours","minutes","nanos","seconds"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue(
-        @Nullable Integer hours,
-        @Nullable Integer minutes,
-        @Nullable Integer nanos,
-        @Nullable Integer seconds) {
+        @OutputCustomType.Parameter("hours") @Nullable Integer hours,
+        @OutputCustomType.Parameter("minutes") @Nullable Integer minutes,
+        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
+        @OutputCustomType.Parameter("seconds") @Nullable Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.nanos = nanos;
@@ -99,22 +99,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setHours(@Nullable Integer hours) {
+        public Builder hours(@Nullable Integer hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setMinutes(@Nullable Integer minutes) {
+        public Builder minutes(@Nullable Integer minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setNanos(@Nullable Integer nanos) {
+        public Builder nanos(@Nullable Integer nanos) {
             this.nanos = nanos;
             return this;
         }
 
-        public Builder setSeconds(@Nullable Integer seconds) {
+        public Builder seconds(@Nullable Integer seconds) {
             this.seconds = seconds;
             return this;
         }

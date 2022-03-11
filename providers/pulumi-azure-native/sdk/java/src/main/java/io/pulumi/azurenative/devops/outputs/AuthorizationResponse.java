@@ -22,10 +22,10 @@ public final class AuthorizationResponse {
      */
     private final @Nullable Map<String,String> parameters;
 
-    @OutputCustomType.Constructor({"authorizationType","parameters"})
+    @OutputCustomType.Constructor
     private AuthorizationResponse(
-        String authorizationType,
-        @Nullable Map<String,String> parameters) {
+        @OutputCustomType.Parameter("authorizationType") String authorizationType,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters) {
         this.authorizationType = authorizationType;
         this.parameters = parameters;
     }
@@ -67,12 +67,12 @@ public final class AuthorizationResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }

@@ -637,342 +637,342 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
     	      this.warmPool = defaults.warmPool;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable Input<List<String>> availabilityZones) {
+        public Builder availabilityZones(@Nullable Input<List<String>> availabilityZones) {
             this.availabilityZones = availabilityZones;
             return this;
         }
 
-        public Builder setAvailabilityZones(@Nullable List<String> availabilityZones) {
+        public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             this.availabilityZones = Input.ofNullable(availabilityZones);
             return this;
         }
 
-        public Builder setCapacityRebalance(@Nullable Input<Boolean> capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Input<Boolean> capacityRebalance) {
             this.capacityRebalance = capacityRebalance;
             return this;
         }
 
-        public Builder setCapacityRebalance(@Nullable Boolean capacityRebalance) {
+        public Builder capacityRebalance(@Nullable Boolean capacityRebalance) {
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }
 
-        public Builder setDefaultCooldown(@Nullable Input<Integer> defaultCooldown) {
+        public Builder defaultCooldown(@Nullable Input<Integer> defaultCooldown) {
             this.defaultCooldown = defaultCooldown;
             return this;
         }
 
-        public Builder setDefaultCooldown(@Nullable Integer defaultCooldown) {
+        public Builder defaultCooldown(@Nullable Integer defaultCooldown) {
             this.defaultCooldown = Input.ofNullable(defaultCooldown);
             return this;
         }
 
-        public Builder setDesiredCapacity(@Nullable Input<Integer> desiredCapacity) {
+        public Builder desiredCapacity(@Nullable Input<Integer> desiredCapacity) {
             this.desiredCapacity = desiredCapacity;
             return this;
         }
 
-        public Builder setDesiredCapacity(@Nullable Integer desiredCapacity) {
+        public Builder desiredCapacity(@Nullable Integer desiredCapacity) {
             this.desiredCapacity = Input.ofNullable(desiredCapacity);
             return this;
         }
 
-        public Builder setEnabledMetrics(@Nullable Input<List<String>> enabledMetrics) {
+        public Builder enabledMetrics(@Nullable Input<List<String>> enabledMetrics) {
             this.enabledMetrics = enabledMetrics;
             return this;
         }
 
-        public Builder setEnabledMetrics(@Nullable List<String> enabledMetrics) {
+        public Builder enabledMetrics(@Nullable List<String> enabledMetrics) {
             this.enabledMetrics = Input.ofNullable(enabledMetrics);
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Input<Boolean> forceDelete) {
+        public Builder forceDelete(@Nullable Input<Boolean> forceDelete) {
             this.forceDelete = forceDelete;
             return this;
         }
 
-        public Builder setForceDelete(@Nullable Boolean forceDelete) {
+        public Builder forceDelete(@Nullable Boolean forceDelete) {
             this.forceDelete = Input.ofNullable(forceDelete);
             return this;
         }
 
-        public Builder setForceDeleteWarmPool(@Nullable Input<Boolean> forceDeleteWarmPool) {
+        public Builder forceDeleteWarmPool(@Nullable Input<Boolean> forceDeleteWarmPool) {
             this.forceDeleteWarmPool = forceDeleteWarmPool;
             return this;
         }
 
-        public Builder setForceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
+        public Builder forceDeleteWarmPool(@Nullable Boolean forceDeleteWarmPool) {
             this.forceDeleteWarmPool = Input.ofNullable(forceDeleteWarmPool);
             return this;
         }
 
-        public Builder setHealthCheckGracePeriod(@Nullable Input<Integer> healthCheckGracePeriod) {
+        public Builder healthCheckGracePeriod(@Nullable Input<Integer> healthCheckGracePeriod) {
             this.healthCheckGracePeriod = healthCheckGracePeriod;
             return this;
         }
 
-        public Builder setHealthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
+        public Builder healthCheckGracePeriod(@Nullable Integer healthCheckGracePeriod) {
             this.healthCheckGracePeriod = Input.ofNullable(healthCheckGracePeriod);
             return this;
         }
 
-        public Builder setHealthCheckType(@Nullable Input<String> healthCheckType) {
+        public Builder healthCheckType(@Nullable Input<String> healthCheckType) {
             this.healthCheckType = healthCheckType;
             return this;
         }
 
-        public Builder setHealthCheckType(@Nullable String healthCheckType) {
+        public Builder healthCheckType(@Nullable String healthCheckType) {
             this.healthCheckType = Input.ofNullable(healthCheckType);
             return this;
         }
 
-        public Builder setInitialLifecycleHooks(@Nullable Input<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(@Nullable Input<List<GroupInitialLifecycleHookGetArgs>> initialLifecycleHooks) {
             this.initialLifecycleHooks = initialLifecycleHooks;
             return this;
         }
 
-        public Builder setInitialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
+        public Builder initialLifecycleHooks(@Nullable List<GroupInitialLifecycleHookGetArgs> initialLifecycleHooks) {
             this.initialLifecycleHooks = Input.ofNullable(initialLifecycleHooks);
             return this;
         }
 
-        public Builder setInstanceRefresh(@Nullable Input<GroupInstanceRefreshGetArgs> instanceRefresh) {
+        public Builder instanceRefresh(@Nullable Input<GroupInstanceRefreshGetArgs> instanceRefresh) {
             this.instanceRefresh = instanceRefresh;
             return this;
         }
 
-        public Builder setInstanceRefresh(@Nullable GroupInstanceRefreshGetArgs instanceRefresh) {
+        public Builder instanceRefresh(@Nullable GroupInstanceRefreshGetArgs instanceRefresh) {
             this.instanceRefresh = Input.ofNullable(instanceRefresh);
             return this;
         }
 
-        public Builder setLaunchConfiguration(@Nullable Input<String> launchConfiguration) {
+        public Builder launchConfiguration(@Nullable Input<String> launchConfiguration) {
             this.launchConfiguration = launchConfiguration;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable Input<GroupLaunchTemplateGetArgs> launchTemplate) {
+        public Builder launchTemplate(@Nullable Input<GroupLaunchTemplateGetArgs> launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable GroupLaunchTemplateGetArgs launchTemplate) {
+        public Builder launchTemplate(@Nullable GroupLaunchTemplateGetArgs launchTemplate) {
             this.launchTemplate = Input.ofNullable(launchTemplate);
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable Input<List<String>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Input<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable List<String> loadBalancers) {
+        public Builder loadBalancers(@Nullable List<String> loadBalancers) {
             this.loadBalancers = Input.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder setMaxInstanceLifetime(@Nullable Input<Integer> maxInstanceLifetime) {
+        public Builder maxInstanceLifetime(@Nullable Input<Integer> maxInstanceLifetime) {
             this.maxInstanceLifetime = maxInstanceLifetime;
             return this;
         }
 
-        public Builder setMaxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
+        public Builder maxInstanceLifetime(@Nullable Integer maxInstanceLifetime) {
             this.maxInstanceLifetime = Input.ofNullable(maxInstanceLifetime);
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Input<Integer> maxSize) {
+        public Builder maxSize(@Nullable Input<Integer> maxSize) {
             this.maxSize = maxSize;
             return this;
         }
 
-        public Builder setMaxSize(@Nullable Integer maxSize) {
+        public Builder maxSize(@Nullable Integer maxSize) {
             this.maxSize = Input.ofNullable(maxSize);
             return this;
         }
 
-        public Builder setMetricsGranularity(@Nullable Input<Either<String,MetricsGranularity>> metricsGranularity) {
+        public Builder metricsGranularity(@Nullable Input<Either<String,MetricsGranularity>> metricsGranularity) {
             this.metricsGranularity = metricsGranularity;
             return this;
         }
 
-        public Builder setMetricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
+        public Builder metricsGranularity(@Nullable Either<String,MetricsGranularity> metricsGranularity) {
             this.metricsGranularity = Input.ofNullable(metricsGranularity);
             return this;
         }
 
-        public Builder setMinElbCapacity(@Nullable Input<Integer> minElbCapacity) {
+        public Builder minElbCapacity(@Nullable Input<Integer> minElbCapacity) {
             this.minElbCapacity = minElbCapacity;
             return this;
         }
 
-        public Builder setMinElbCapacity(@Nullable Integer minElbCapacity) {
+        public Builder minElbCapacity(@Nullable Integer minElbCapacity) {
             this.minElbCapacity = Input.ofNullable(minElbCapacity);
             return this;
         }
 
-        public Builder setMinSize(@Nullable Input<Integer> minSize) {
+        public Builder minSize(@Nullable Input<Integer> minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = Input.ofNullable(minSize);
             return this;
         }
 
-        public Builder setMixedInstancesPolicy(@Nullable Input<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
+        public Builder mixedInstancesPolicy(@Nullable Input<GroupMixedInstancesPolicyGetArgs> mixedInstancesPolicy) {
             this.mixedInstancesPolicy = mixedInstancesPolicy;
             return this;
         }
 
-        public Builder setMixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
+        public Builder mixedInstancesPolicy(@Nullable GroupMixedInstancesPolicyGetArgs mixedInstancesPolicy) {
             this.mixedInstancesPolicy = Input.ofNullable(mixedInstancesPolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setPlacementGroup(@Nullable Input<String> placementGroup) {
+        public Builder placementGroup(@Nullable Input<String> placementGroup) {
             this.placementGroup = placementGroup;
             return this;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Input<Boolean> protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Input<Boolean> protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = Input.ofNullable(protectFromScaleIn);
             return this;
         }
 
-        public Builder setServiceLinkedRoleArn(@Nullable Input<String> serviceLinkedRoleArn) {
+        public Builder serviceLinkedRoleArn(@Nullable Input<String> serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = serviceLinkedRoleArn;
             return this;
         }
 
-        public Builder setServiceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
+        public Builder serviceLinkedRoleArn(@Nullable String serviceLinkedRoleArn) {
             this.serviceLinkedRoleArn = Input.ofNullable(serviceLinkedRoleArn);
             return this;
         }
 
-        public Builder setSuspendedProcesses(@Nullable Input<List<String>> suspendedProcesses) {
+        public Builder suspendedProcesses(@Nullable Input<List<String>> suspendedProcesses) {
             this.suspendedProcesses = suspendedProcesses;
             return this;
         }
 
-        public Builder setSuspendedProcesses(@Nullable List<String> suspendedProcesses) {
+        public Builder suspendedProcesses(@Nullable List<String> suspendedProcesses) {
             this.suspendedProcesses = Input.ofNullable(suspendedProcesses);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<GroupTagGetArgs>> tags) {
+        public Builder tags(@Nullable Input<List<GroupTagGetArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GroupTagGetArgs> tags) {
+        public Builder tags(@Nullable List<GroupTagGetArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsCollection(@Nullable Input<List<Map<String,String>>> tagsCollection) {
+        public Builder tagsCollection(@Nullable Input<List<Map<String,String>>> tagsCollection) {
             this.tagsCollection = tagsCollection;
             return this;
         }
 
-        public Builder setTagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
+        public Builder tagsCollection(@Nullable List<Map<String,String>> tagsCollection) {
             this.tagsCollection = Input.ofNullable(tagsCollection);
             return this;
         }
 
-        public Builder setTargetGroupArns(@Nullable Input<List<String>> targetGroupArns) {
+        public Builder targetGroupArns(@Nullable Input<List<String>> targetGroupArns) {
             this.targetGroupArns = targetGroupArns;
             return this;
         }
 
-        public Builder setTargetGroupArns(@Nullable List<String> targetGroupArns) {
+        public Builder targetGroupArns(@Nullable List<String> targetGroupArns) {
             this.targetGroupArns = Input.ofNullable(targetGroupArns);
             return this;
         }
 
-        public Builder setTerminationPolicies(@Nullable Input<List<String>> terminationPolicies) {
+        public Builder terminationPolicies(@Nullable Input<List<String>> terminationPolicies) {
             this.terminationPolicies = terminationPolicies;
             return this;
         }
 
-        public Builder setTerminationPolicies(@Nullable List<String> terminationPolicies) {
+        public Builder terminationPolicies(@Nullable List<String> terminationPolicies) {
             this.terminationPolicies = Input.ofNullable(terminationPolicies);
             return this;
         }
 
-        public Builder setVpcZoneIdentifiers(@Nullable Input<List<String>> vpcZoneIdentifiers) {
+        public Builder vpcZoneIdentifiers(@Nullable Input<List<String>> vpcZoneIdentifiers) {
             this.vpcZoneIdentifiers = vpcZoneIdentifiers;
             return this;
         }
 
-        public Builder setVpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
+        public Builder vpcZoneIdentifiers(@Nullable List<String> vpcZoneIdentifiers) {
             this.vpcZoneIdentifiers = Input.ofNullable(vpcZoneIdentifiers);
             return this;
         }
 
-        public Builder setWaitForCapacityTimeout(@Nullable Input<String> waitForCapacityTimeout) {
+        public Builder waitForCapacityTimeout(@Nullable Input<String> waitForCapacityTimeout) {
             this.waitForCapacityTimeout = waitForCapacityTimeout;
             return this;
         }
 
-        public Builder setWaitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
+        public Builder waitForCapacityTimeout(@Nullable String waitForCapacityTimeout) {
             this.waitForCapacityTimeout = Input.ofNullable(waitForCapacityTimeout);
             return this;
         }
 
-        public Builder setWaitForElbCapacity(@Nullable Input<Integer> waitForElbCapacity) {
+        public Builder waitForElbCapacity(@Nullable Input<Integer> waitForElbCapacity) {
             this.waitForElbCapacity = waitForElbCapacity;
             return this;
         }
 
-        public Builder setWaitForElbCapacity(@Nullable Integer waitForElbCapacity) {
+        public Builder waitForElbCapacity(@Nullable Integer waitForElbCapacity) {
             this.waitForElbCapacity = Input.ofNullable(waitForElbCapacity);
             return this;
         }
 
-        public Builder setWarmPool(@Nullable Input<GroupWarmPoolGetArgs> warmPool) {
+        public Builder warmPool(@Nullable Input<GroupWarmPoolGetArgs> warmPool) {
             this.warmPool = warmPool;
             return this;
         }
 
-        public Builder setWarmPool(@Nullable GroupWarmPoolGetArgs warmPool) {
+        public Builder warmPool(@Nullable GroupWarmPoolGetArgs warmPool) {
             this.warmPool = Input.ofNullable(warmPool);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class WebACLAllowAction {
     private final @Nullable WebACLCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebACLAllowAction(@Nullable WebACLCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebACLAllowAction(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebACLCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -42,7 +42,7 @@ public final class WebACLAllowAction {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebACLCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

@@ -204,52 +204,52 @@ public final class AS2ValidationSettingsResponse extends io.pulumi.resources.Inv
     	      this.signingAlgorithm = defaults.signingAlgorithm;
         }
 
-        public Builder setCheckCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
+        public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
             this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
             return this;
         }
 
-        public Builder setCheckCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
+        public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
             return this;
         }
 
-        public Builder setCheckDuplicateMessage(Boolean checkDuplicateMessage) {
+        public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
             return this;
         }
 
-        public Builder setCompressMessage(Boolean compressMessage) {
+        public Builder compressMessage(Boolean compressMessage) {
             this.compressMessage = Objects.requireNonNull(compressMessage);
             return this;
         }
 
-        public Builder setEncryptMessage(Boolean encryptMessage) {
+        public Builder encryptMessage(Boolean encryptMessage) {
             this.encryptMessage = Objects.requireNonNull(encryptMessage);
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setInterchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
+        public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
             return this;
         }
 
-        public Builder setOverrideMessageProperties(Boolean overrideMessageProperties) {
+        public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
             return this;
         }
 
-        public Builder setSignMessage(Boolean signMessage) {
+        public Builder signMessage(Boolean signMessage) {
             this.signMessage = Objects.requireNonNull(signMessage);
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable String signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable String signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }

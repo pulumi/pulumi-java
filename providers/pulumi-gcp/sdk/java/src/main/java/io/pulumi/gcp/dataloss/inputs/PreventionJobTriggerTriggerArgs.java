@@ -54,12 +54,12 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(@Nullable Input<PreventionJobTriggerTriggerScheduleArgs> schedule) {
+        public Builder schedule(@Nullable Input<PreventionJobTriggerTriggerScheduleArgs> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable PreventionJobTriggerTriggerScheduleArgs schedule) {
+        public Builder schedule(@Nullable PreventionJobTriggerTriggerScheduleArgs schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }

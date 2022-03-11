@@ -59,19 +59,19 @@ public final class GetRouteTableResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"arn","associations","filters","gatewayId","id","ownerId","routeTableId","routes","subnetId","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetRouteTableResult(
-        String arn,
-        List<GetRouteTableAssociation> associations,
-        @Nullable List<GetRouteTableFilter> filters,
-        String gatewayId,
-        String id,
-        String ownerId,
-        String routeTableId,
-        List<GetRouteTableRoute> routes,
-        String subnetId,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("associations") List<GetRouteTableAssociation> associations,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetRouteTableFilter> filters,
+        @OutputCustomType.Parameter("gatewayId") String gatewayId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("routeTableId") String routeTableId,
+        @OutputCustomType.Parameter("routes") List<GetRouteTableRoute> routes,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.arn = arn;
         this.associations = associations;
         this.filters = filters;
@@ -191,57 +191,57 @@ public final class GetRouteTableResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAssociations(List<GetRouteTableAssociation> associations) {
+        public Builder associations(List<GetRouteTableAssociation> associations) {
             this.associations = Objects.requireNonNull(associations);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetRouteTableFilter> filters) {
+        public Builder filters(@Nullable List<GetRouteTableFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setGatewayId(String gatewayId) {
+        public Builder gatewayId(String gatewayId) {
             this.gatewayId = Objects.requireNonNull(gatewayId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setRouteTableId(String routeTableId) {
+        public Builder routeTableId(String routeTableId) {
             this.routeTableId = Objects.requireNonNull(routeTableId);
             return this;
         }
 
-        public Builder setRoutes(List<GetRouteTableRoute> routes) {
+        public Builder routes(List<GetRouteTableRoute> routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

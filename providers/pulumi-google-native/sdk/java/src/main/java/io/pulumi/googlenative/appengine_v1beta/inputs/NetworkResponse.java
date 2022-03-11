@@ -138,32 +138,32 @@ public final class NetworkResponse extends io.pulumi.resources.InvokeArgs {
     	      this.subnetworkName = defaults.subnetworkName;
         }
 
-        public Builder setForwardedPorts(List<String> forwardedPorts) {
+        public Builder forwardedPorts(List<String> forwardedPorts) {
             this.forwardedPorts = Objects.requireNonNull(forwardedPorts);
             return this;
         }
 
-        public Builder setInstanceIpMode(String instanceIpMode) {
+        public Builder instanceIpMode(String instanceIpMode) {
             this.instanceIpMode = Objects.requireNonNull(instanceIpMode);
             return this;
         }
 
-        public Builder setInstanceTag(String instanceTag) {
+        public Builder instanceTag(String instanceTag) {
             this.instanceTag = Objects.requireNonNull(instanceTag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSessionAffinity(Boolean sessionAffinity) {
+        public Builder sessionAffinity(Boolean sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
 
-        public Builder setSubnetworkName(String subnetworkName) {
+        public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }

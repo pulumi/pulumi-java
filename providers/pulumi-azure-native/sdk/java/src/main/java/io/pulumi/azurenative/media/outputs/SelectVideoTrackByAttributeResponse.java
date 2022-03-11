@@ -33,12 +33,12 @@ public final class SelectVideoTrackByAttributeResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"attribute","filter","filterValue","odataType"})
+    @OutputCustomType.Constructor
     private SelectVideoTrackByAttributeResponse(
-        String attribute,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterValue") @Nullable String filterValue,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.attribute = attribute;
         this.filter = filter;
         this.filterValue = filterValue;
@@ -101,22 +101,22 @@ public final class SelectVideoTrackByAttributeResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilterValue(@Nullable String filterValue) {
+        public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = filterValue;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
      */
     private final GooglePrivacyDlpV2WordListResponse wordList;
 
-    @OutputCustomType.Constructor({"cloudStoragePath","wordList"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DictionaryResponse(
-        GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
-        GooglePrivacyDlpV2WordListResponse wordList) {
+        @OutputCustomType.Parameter("cloudStoragePath") GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath,
+        @OutputCustomType.Parameter("wordList") GooglePrivacyDlpV2WordListResponse wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2DictionaryResponse {
     	      this.wordList = defaults.wordList;
         }
 
-        public Builder setCloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
+        public Builder cloudStoragePath(GooglePrivacyDlpV2CloudStoragePathResponse cloudStoragePath) {
             this.cloudStoragePath = Objects.requireNonNull(cloudStoragePath);
             return this;
         }
 
-        public Builder setWordList(GooglePrivacyDlpV2WordListResponse wordList) {
+        public Builder wordList(GooglePrivacyDlpV2WordListResponse wordList) {
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }

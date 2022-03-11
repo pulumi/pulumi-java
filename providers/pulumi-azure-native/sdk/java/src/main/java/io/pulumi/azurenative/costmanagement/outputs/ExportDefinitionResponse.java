@@ -34,12 +34,12 @@ public final class ExportDefinitionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataSet","timePeriod","timeframe","type"})
+    @OutputCustomType.Constructor
     private ExportDefinitionResponse(
-        @Nullable ExportDatasetResponse dataSet,
-        @Nullable ExportTimePeriodResponse timePeriod,
-        String timeframe,
-        String type) {
+        @OutputCustomType.Parameter("dataSet") @Nullable ExportDatasetResponse dataSet,
+        @OutputCustomType.Parameter("timePeriod") @Nullable ExportTimePeriodResponse timePeriod,
+        @OutputCustomType.Parameter("timeframe") String timeframe,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataSet = dataSet;
         this.timePeriod = timePeriod;
         this.timeframe = timeframe;
@@ -101,22 +101,22 @@ public final class ExportDefinitionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataSet(@Nullable ExportDatasetResponse dataSet) {
+        public Builder dataSet(@Nullable ExportDatasetResponse dataSet) {
             this.dataSet = dataSet;
             return this;
         }
 
-        public Builder setTimePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
+        public Builder timePeriod(@Nullable ExportTimePeriodResponse timePeriod) {
             this.timePeriod = timePeriod;
             return this;
         }
 
-        public Builder setTimeframe(String timeframe) {
+        public Builder timeframe(String timeframe) {
             this.timeframe = Objects.requireNonNull(timeframe);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

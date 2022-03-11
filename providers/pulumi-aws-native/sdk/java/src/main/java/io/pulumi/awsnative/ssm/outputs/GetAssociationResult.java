@@ -69,25 +69,25 @@ public final class GetAssociationResult {
     private final @Nullable List<AssociationTarget> targets;
     private final @Nullable Integer waitForSuccessTimeoutSeconds;
 
-    @OutputCustomType.Constructor({"applyOnlyAtCronInterval","associationId","associationName","automationTargetParameterName","calendarNames","complianceSeverity","documentVersion","instanceId","maxConcurrency","maxErrors","name","outputLocation","parameters","scheduleExpression","syncCompliance","targets","waitForSuccessTimeoutSeconds"})
+    @OutputCustomType.Constructor
     private GetAssociationResult(
-        @Nullable Boolean applyOnlyAtCronInterval,
-        @Nullable String associationId,
-        @Nullable String associationName,
-        @Nullable String automationTargetParameterName,
-        @Nullable List<String> calendarNames,
-        @Nullable AssociationComplianceSeverity complianceSeverity,
-        @Nullable String documentVersion,
-        @Nullable String instanceId,
-        @Nullable String maxConcurrency,
-        @Nullable String maxErrors,
-        @Nullable String name,
-        @Nullable AssociationInstanceAssociationOutputLocation outputLocation,
-        @Nullable Object parameters,
-        @Nullable String scheduleExpression,
-        @Nullable AssociationSyncCompliance syncCompliance,
-        @Nullable List<AssociationTarget> targets,
-        @Nullable Integer waitForSuccessTimeoutSeconds) {
+        @OutputCustomType.Parameter("applyOnlyAtCronInterval") @Nullable Boolean applyOnlyAtCronInterval,
+        @OutputCustomType.Parameter("associationId") @Nullable String associationId,
+        @OutputCustomType.Parameter("associationName") @Nullable String associationName,
+        @OutputCustomType.Parameter("automationTargetParameterName") @Nullable String automationTargetParameterName,
+        @OutputCustomType.Parameter("calendarNames") @Nullable List<String> calendarNames,
+        @OutputCustomType.Parameter("complianceSeverity") @Nullable AssociationComplianceSeverity complianceSeverity,
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("instanceId") @Nullable String instanceId,
+        @OutputCustomType.Parameter("maxConcurrency") @Nullable String maxConcurrency,
+        @OutputCustomType.Parameter("maxErrors") @Nullable String maxErrors,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("outputLocation") @Nullable AssociationInstanceAssociationOutputLocation outputLocation,
+        @OutputCustomType.Parameter("parameters") @Nullable Object parameters,
+        @OutputCustomType.Parameter("scheduleExpression") @Nullable String scheduleExpression,
+        @OutputCustomType.Parameter("syncCompliance") @Nullable AssociationSyncCompliance syncCompliance,
+        @OutputCustomType.Parameter("targets") @Nullable List<AssociationTarget> targets,
+        @OutputCustomType.Parameter("waitForSuccessTimeoutSeconds") @Nullable Integer waitForSuccessTimeoutSeconds) {
         this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
         this.associationId = associationId;
         this.associationName = associationName;
@@ -243,87 +243,87 @@ public final class GetAssociationResult {
     	      this.waitForSuccessTimeoutSeconds = defaults.waitForSuccessTimeoutSeconds;
         }
 
-        public Builder setApplyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
+        public Builder applyOnlyAtCronInterval(@Nullable Boolean applyOnlyAtCronInterval) {
             this.applyOnlyAtCronInterval = applyOnlyAtCronInterval;
             return this;
         }
 
-        public Builder setAssociationId(@Nullable String associationId) {
+        public Builder associationId(@Nullable String associationId) {
             this.associationId = associationId;
             return this;
         }
 
-        public Builder setAssociationName(@Nullable String associationName) {
+        public Builder associationName(@Nullable String associationName) {
             this.associationName = associationName;
             return this;
         }
 
-        public Builder setAutomationTargetParameterName(@Nullable String automationTargetParameterName) {
+        public Builder automationTargetParameterName(@Nullable String automationTargetParameterName) {
             this.automationTargetParameterName = automationTargetParameterName;
             return this;
         }
 
-        public Builder setCalendarNames(@Nullable List<String> calendarNames) {
+        public Builder calendarNames(@Nullable List<String> calendarNames) {
             this.calendarNames = calendarNames;
             return this;
         }
 
-        public Builder setComplianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
+        public Builder complianceSeverity(@Nullable AssociationComplianceSeverity complianceSeverity) {
             this.complianceSeverity = complianceSeverity;
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setMaxConcurrency(@Nullable String maxConcurrency) {
+        public Builder maxConcurrency(@Nullable String maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
 
-        public Builder setMaxErrors(@Nullable String maxErrors) {
+        public Builder maxErrors(@Nullable String maxErrors) {
             this.maxErrors = maxErrors;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable AssociationInstanceAssociationOutputLocation outputLocation) {
+        public Builder outputLocation(@Nullable AssociationInstanceAssociationOutputLocation outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setParameters(@Nullable Object parameters) {
+        public Builder parameters(@Nullable Object parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setSyncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
+        public Builder syncCompliance(@Nullable AssociationSyncCompliance syncCompliance) {
             this.syncCompliance = syncCompliance;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<AssociationTarget> targets) {
+        public Builder targets(@Nullable List<AssociationTarget> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setWaitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
+        public Builder waitForSuccessTimeoutSeconds(@Nullable Integer waitForSuccessTimeoutSeconds) {
             this.waitForSuccessTimeoutSeconds = waitForSuccessTimeoutSeconds;
             return this;
         }

@@ -15,8 +15,8 @@ public final class MachinePropertiesResponseOsProfile {
      */
     private final String computerName;
 
-    @OutputCustomType.Constructor({"computerName"})
-    private MachinePropertiesResponseOsProfile(String computerName) {
+    @OutputCustomType.Constructor
+    private MachinePropertiesResponseOsProfile(@OutputCustomType.Parameter("computerName") String computerName) {
         this.computerName = computerName;
     }
 
@@ -48,7 +48,7 @@ public final class MachinePropertiesResponseOsProfile {
     	      this.computerName = defaults.computerName;
         }
 
-        public Builder setComputerName(String computerName) {
+        public Builder computerName(String computerName) {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }

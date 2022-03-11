@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetInstanceCreditSpecification {
     private final String cpuCredits;
 
-    @OutputCustomType.Constructor({"cpuCredits"})
-    private GetInstanceCreditSpecification(String cpuCredits) {
+    @OutputCustomType.Constructor
+    private GetInstanceCreditSpecification(@OutputCustomType.Parameter("cpuCredits") String cpuCredits) {
         this.cpuCredits = cpuCredits;
     }
 
@@ -40,7 +40,7 @@ public final class GetInstanceCreditSpecification {
     	      this.cpuCredits = defaults.cpuCredits;
         }
 
-        public Builder setCpuCredits(String cpuCredits) {
+        public Builder cpuCredits(String cpuCredits) {
             this.cpuCredits = Objects.requireNonNull(cpuCredits);
             return this;
         }

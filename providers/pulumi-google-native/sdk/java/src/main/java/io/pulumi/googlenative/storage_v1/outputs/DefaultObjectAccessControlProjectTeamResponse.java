@@ -20,10 +20,10 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
      */
     private final String team;
 
-    @OutputCustomType.Constructor({"projectNumber","team"})
+    @OutputCustomType.Constructor
     private DefaultObjectAccessControlProjectTeamResponse(
-        String projectNumber,
-        String team) {
+        @OutputCustomType.Parameter("projectNumber") String projectNumber,
+        @OutputCustomType.Parameter("team") String team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }
@@ -65,12 +65,12 @@ public final class DefaultObjectAccessControlProjectTeamResponse {
     	      this.team = defaults.team;
         }
 
-        public Builder setProjectNumber(String projectNumber) {
+        public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
 
-        public Builder setTeam(String team) {
+        public Builder team(String team) {
             this.team = Objects.requireNonNull(team);
             return this;
         }

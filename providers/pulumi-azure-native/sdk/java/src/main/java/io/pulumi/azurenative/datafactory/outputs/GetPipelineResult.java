@@ -123,21 +123,21 @@ public final class GetPipelineResult {
      */
     private final @Nullable Map<String,VariableSpecificationResponse> variables;
 
-    @OutputCustomType.Constructor({"activities","annotations","concurrency","description","etag","folder","id","name","parameters","policy","runDimensions","type","variables"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        @Nullable List<Object> activities,
-        @Nullable List<Object> annotations,
-        @Nullable Integer concurrency,
-        @Nullable String description,
-        String etag,
-        @Nullable PipelineResponseFolder folder,
-        String id,
-        String name,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable PipelinePolicyResponse policy,
-        @Nullable Map<String,Object> runDimensions,
-        String type,
-        @Nullable Map<String,VariableSpecificationResponse> variables) {
+        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("concurrency") @Nullable Integer concurrency,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("folder") @Nullable PipelineResponseFolder folder,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("policy") @Nullable PipelinePolicyResponse policy,
+        @OutputCustomType.Parameter("runDimensions") @Nullable Map<String,Object> runDimensions,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("variables") @Nullable Map<String,VariableSpecificationResponse> variables) {
         this.activities = activities;
         this.annotations = annotations;
         this.concurrency = concurrency;
@@ -289,67 +289,67 @@ public final class GetPipelineResult {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setActivities(@Nullable List<Object> activities) {
+        public Builder activities(@Nullable List<Object> activities) {
             this.activities = activities;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setConcurrency(@Nullable Integer concurrency) {
+        public Builder concurrency(@Nullable Integer concurrency) {
             this.concurrency = concurrency;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFolder(@Nullable PipelineResponseFolder folder) {
+        public Builder folder(@Nullable PipelineResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPolicy(@Nullable PipelinePolicyResponse policy) {
+        public Builder policy(@Nullable PipelinePolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setRunDimensions(@Nullable Map<String,Object> runDimensions) {
+        public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
             this.runDimensions = runDimensions;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVariables(@Nullable Map<String,VariableSpecificationResponse> variables) {
+        public Builder variables(@Nullable Map<String,VariableSpecificationResponse> variables) {
             this.variables = variables;
             return this;
         }

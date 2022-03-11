@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private GooglePrivacyDlpV2TransientCryptoKeyResponse(String name) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2TransientCryptoKeyResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

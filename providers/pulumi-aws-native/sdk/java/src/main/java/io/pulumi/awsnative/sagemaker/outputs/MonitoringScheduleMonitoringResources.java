@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MonitoringScheduleMonitoringResources {
     private final MonitoringScheduleClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private MonitoringScheduleMonitoringResources(MonitoringScheduleClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private MonitoringScheduleMonitoringResources(@OutputCustomType.Parameter("clusterConfig") MonitoringScheduleClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 
@@ -40,7 +40,7 @@ public final class MonitoringScheduleMonitoringResources {
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(MonitoringScheduleClusterConfig clusterConfig) {
+        public Builder clusterConfig(MonitoringScheduleClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }

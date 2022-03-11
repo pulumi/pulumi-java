@@ -37,13 +37,13 @@ public final class GetPrivateLinkScopedResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","linkedResourceId","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private GetPrivateLinkScopedResourceResult(
-        String id,
-        @Nullable String linkedResourceId,
-        String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("linkedResourceId") @Nullable String linkedResourceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.linkedResourceId = linkedResourceId;
         this.name = name;
@@ -115,27 +115,27 @@ public final class GetPrivateLinkScopedResourceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLinkedResourceId(@Nullable String linkedResourceId) {
+        public Builder linkedResourceId(@Nullable String linkedResourceId) {
             this.linkedResourceId = linkedResourceId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

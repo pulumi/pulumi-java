@@ -34,12 +34,12 @@ public final class PrivateLinkServiceConnectionResponse {
      */
     private final @Nullable String requestMessage;
 
-    @OutputCustomType.Constructor({"groupIds","privateLinkServiceConnectionState","privateLinkServiceId","requestMessage"})
+    @OutputCustomType.Constructor
     private PrivateLinkServiceConnectionResponse(
-        @Nullable List<String> groupIds,
-        @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
-        @Nullable String privateLinkServiceId,
-        @Nullable String requestMessage) {
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("privateLinkServiceId") @Nullable String privateLinkServiceId,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage) {
         this.groupIds = groupIds;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
         this.privateLinkServiceId = privateLinkServiceId;
@@ -101,22 +101,22 @@ public final class PrivateLinkServiceConnectionResponse {
     	      this.requestMessage = defaults.requestMessage;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setPrivateLinkServiceId(@Nullable String privateLinkServiceId) {
+        public Builder privateLinkServiceId(@Nullable String privateLinkServiceId) {
             this.privateLinkServiceId = privateLinkServiceId;
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }

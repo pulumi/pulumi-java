@@ -39,13 +39,13 @@ public final class CommitmentPeriodResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"count","endDate","quota","startDate","tier"})
+    @OutputCustomType.Constructor
     private CommitmentPeriodResponse(
-        @Nullable Integer count,
-        String endDate,
-        CommitmentQuotaResponse quota,
-        String startDate,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("endDate") String endDate,
+        @OutputCustomType.Parameter("quota") CommitmentQuotaResponse quota,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.count = count;
         this.endDate = endDate;
         this.quota = quota;
@@ -117,27 +117,27 @@ public final class CommitmentPeriodResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setEndDate(String endDate) {
+        public Builder endDate(String endDate) {
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
 
-        public Builder setQuota(CommitmentQuotaResponse quota) {
+        public Builder quota(CommitmentQuotaResponse quota) {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

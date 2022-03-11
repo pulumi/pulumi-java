@@ -38,13 +38,13 @@ public final class SecretPropertiesResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"attributes","contentType","secretUri","secretUriWithVersion","value"})
+    @OutputCustomType.Constructor
     private SecretPropertiesResponse(
-        @Nullable SecretAttributesResponse attributes,
-        @Nullable String contentType,
-        String secretUri,
-        String secretUriWithVersion,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("attributes") @Nullable SecretAttributesResponse attributes,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("secretUri") String secretUri,
+        @OutputCustomType.Parameter("secretUriWithVersion") String secretUriWithVersion,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.attributes = attributes;
         this.contentType = contentType;
         this.secretUri = secretUri;
@@ -116,27 +116,27 @@ public final class SecretPropertiesResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setAttributes(@Nullable SecretAttributesResponse attributes) {
+        public Builder attributes(@Nullable SecretAttributesResponse attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setSecretUri(String secretUri) {
+        public Builder secretUri(String secretUri) {
             this.secretUri = Objects.requireNonNull(secretUri);
             return this;
         }
 
-        public Builder setSecretUriWithVersion(String secretUriWithVersion) {
+        public Builder secretUriWithVersion(String secretUriWithVersion) {
             this.secretUriWithVersion = Objects.requireNonNull(secretUriWithVersion);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

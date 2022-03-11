@@ -25,11 +25,11 @@ public final class AccessPointCreationInfo {
      */
     private final String permissions;
 
-    @OutputCustomType.Constructor({"ownerGid","ownerUid","permissions"})
+    @OutputCustomType.Constructor
     private AccessPointCreationInfo(
-        String ownerGid,
-        String ownerUid,
-        String permissions) {
+        @OutputCustomType.Parameter("ownerGid") String ownerGid,
+        @OutputCustomType.Parameter("ownerUid") String ownerUid,
+        @OutputCustomType.Parameter("permissions") String permissions) {
         this.ownerGid = ownerGid;
         this.ownerUid = ownerUid;
         this.permissions = permissions;
@@ -81,17 +81,17 @@ public final class AccessPointCreationInfo {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setOwnerGid(String ownerGid) {
+        public Builder ownerGid(String ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
-        public Builder setOwnerUid(String ownerUid) {
+        public Builder ownerUid(String ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }

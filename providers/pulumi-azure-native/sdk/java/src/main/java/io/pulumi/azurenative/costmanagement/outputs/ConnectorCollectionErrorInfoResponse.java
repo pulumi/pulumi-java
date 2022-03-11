@@ -30,12 +30,12 @@ public final class ConnectorCollectionErrorInfoResponse {
      */
     private final String errorStartTime;
 
-    @OutputCustomType.Constructor({"errorCode","errorInnerMessage","errorMessage","errorStartTime"})
+    @OutputCustomType.Constructor
     private ConnectorCollectionErrorInfoResponse(
-        String errorCode,
-        String errorInnerMessage,
-        String errorMessage,
-        String errorStartTime) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorInnerMessage") String errorInnerMessage,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("errorStartTime") String errorStartTime) {
         this.errorCode = errorCode;
         this.errorInnerMessage = errorInnerMessage;
         this.errorMessage = errorMessage;
@@ -97,22 +97,22 @@ public final class ConnectorCollectionErrorInfoResponse {
     	      this.errorStartTime = defaults.errorStartTime;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorInnerMessage(String errorInnerMessage) {
+        public Builder errorInnerMessage(String errorInnerMessage) {
             this.errorInnerMessage = Objects.requireNonNull(errorInnerMessage);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setErrorStartTime(String errorStartTime) {
+        public Builder errorStartTime(String errorStartTime) {
             this.errorStartTime = Objects.requireNonNull(errorStartTime);
             return this;
         }

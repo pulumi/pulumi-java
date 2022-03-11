@@ -34,12 +34,12 @@ public final class ContainerHttpGetResponse {
      */
     private final @Nullable String scheme;
 
-    @OutputCustomType.Constructor({"httpHeaders","path","port","scheme"})
+    @OutputCustomType.Constructor
     private ContainerHttpGetResponse(
-        @Nullable HttpHeadersResponse httpHeaders,
-        @Nullable String path,
-        Integer port,
-        @Nullable String scheme) {
+        @OutputCustomType.Parameter("httpHeaders") @Nullable HttpHeadersResponse httpHeaders,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("scheme") @Nullable String scheme) {
         this.httpHeaders = httpHeaders;
         this.path = path;
         this.port = port;
@@ -101,22 +101,22 @@ public final class ContainerHttpGetResponse {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHttpHeaders(@Nullable HttpHeadersResponse httpHeaders) {
+        public Builder httpHeaders(@Nullable HttpHeadersResponse httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = scheme;
             return this;
         }

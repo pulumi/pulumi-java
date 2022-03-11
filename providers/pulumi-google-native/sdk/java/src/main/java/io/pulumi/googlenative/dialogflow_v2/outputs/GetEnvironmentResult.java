@@ -47,15 +47,15 @@ public final class GetEnvironmentResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"agentVersion","description","fulfillment","name","state","textToSpeechSettings","updateTime"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String agentVersion,
-        String description,
-        GoogleCloudDialogflowV2FulfillmentResponse fulfillment,
-        String name,
-        String state,
-        GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings,
-        String updateTime) {
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fulfillment") GoogleCloudDialogflowV2FulfillmentResponse fulfillment,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("textToSpeechSettings") GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.agentVersion = agentVersion;
         this.description = description;
         this.fulfillment = fulfillment;
@@ -147,37 +147,37 @@ public final class GetEnvironmentResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAgentVersion(String agentVersion) {
+        public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFulfillment(GoogleCloudDialogflowV2FulfillmentResponse fulfillment) {
+        public Builder fulfillment(GoogleCloudDialogflowV2FulfillmentResponse fulfillment) {
             this.fulfillment = Objects.requireNonNull(fulfillment);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTextToSpeechSettings(GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings) {
+        public Builder textToSpeechSettings(GoogleCloudDialogflowV2TextToSpeechSettingsResponse textToSpeechSettings) {
             this.textToSpeechSettings = Objects.requireNonNull(textToSpeechSettings);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

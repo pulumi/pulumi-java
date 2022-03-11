@@ -51,15 +51,15 @@ public final class ImageTemplateSharedImageDistributorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactTags","excludeFromLatest","galleryImageId","replicationRegions","runOutputName","storageAccountType","type"})
+    @OutputCustomType.Constructor
     private ImageTemplateSharedImageDistributorResponse(
-        @Nullable Map<String,String> artifactTags,
-        @Nullable Boolean excludeFromLatest,
-        String galleryImageId,
-        List<String> replicationRegions,
-        String runOutputName,
-        @Nullable String storageAccountType,
-        String type) {
+        @OutputCustomType.Parameter("artifactTags") @Nullable Map<String,String> artifactTags,
+        @OutputCustomType.Parameter("excludeFromLatest") @Nullable Boolean excludeFromLatest,
+        @OutputCustomType.Parameter("galleryImageId") String galleryImageId,
+        @OutputCustomType.Parameter("replicationRegions") List<String> replicationRegions,
+        @OutputCustomType.Parameter("runOutputName") String runOutputName,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactTags = artifactTags;
         this.excludeFromLatest = excludeFromLatest;
         this.galleryImageId = galleryImageId;
@@ -152,37 +152,37 @@ public final class ImageTemplateSharedImageDistributorResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactTags(@Nullable Map<String,String> artifactTags) {
+        public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
             this.artifactTags = artifactTags;
             return this;
         }
 
-        public Builder setExcludeFromLatest(@Nullable Boolean excludeFromLatest) {
+        public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             this.excludeFromLatest = excludeFromLatest;
             return this;
         }
 
-        public Builder setGalleryImageId(String galleryImageId) {
+        public Builder galleryImageId(String galleryImageId) {
             this.galleryImageId = Objects.requireNonNull(galleryImageId);
             return this;
         }
 
-        public Builder setReplicationRegions(List<String> replicationRegions) {
+        public Builder replicationRegions(List<String> replicationRegions) {
             this.replicationRegions = Objects.requireNonNull(replicationRegions);
             return this;
         }
 
-        public Builder setRunOutputName(String runOutputName) {
+        public Builder runOutputName(String runOutputName) {
             this.runOutputName = Objects.requireNonNull(runOutputName);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

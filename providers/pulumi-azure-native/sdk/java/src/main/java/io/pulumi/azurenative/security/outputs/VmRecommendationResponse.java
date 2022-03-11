@@ -32,12 +32,12 @@ public final class VmRecommendationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"configurationStatus","enforcementSupport","recommendationAction","resourceId"})
+    @OutputCustomType.Constructor
     private VmRecommendationResponse(
-        @Nullable String configurationStatus,
-        @Nullable String enforcementSupport,
-        @Nullable String recommendationAction,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("configurationStatus") @Nullable String configurationStatus,
+        @OutputCustomType.Parameter("enforcementSupport") @Nullable String enforcementSupport,
+        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.configurationStatus = configurationStatus;
         this.enforcementSupport = enforcementSupport;
         this.recommendationAction = recommendationAction;
@@ -99,22 +99,22 @@ public final class VmRecommendationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setConfigurationStatus(@Nullable String configurationStatus) {
+        public Builder configurationStatus(@Nullable String configurationStatus) {
             this.configurationStatus = configurationStatus;
             return this;
         }
 
-        public Builder setEnforcementSupport(@Nullable String enforcementSupport) {
+        public Builder enforcementSupport(@Nullable String enforcementSupport) {
             this.enforcementSupport = enforcementSupport;
             return this;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

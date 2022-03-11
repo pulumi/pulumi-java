@@ -63,18 +63,18 @@ public final class FirewallPolicyRuleMatcherResponse {
      */
     private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
-    @OutputCustomType.Constructor({"destAddressGroups","destFqdns","destIpRanges","destRegionCodes","layer4Configs","srcAddressGroups","srcFqdns","srcIpRanges","srcRegionCodes","srcSecureTags"})
+    @OutputCustomType.Constructor
     private FirewallPolicyRuleMatcherResponse(
-        List<String> destAddressGroups,
-        List<String> destFqdns,
-        List<String> destIpRanges,
-        List<String> destRegionCodes,
-        List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
-        List<String> srcAddressGroups,
-        List<String> srcFqdns,
-        List<String> srcIpRanges,
-        List<String> srcRegionCodes,
-        List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+        @OutputCustomType.Parameter("destAddressGroups") List<String> destAddressGroups,
+        @OutputCustomType.Parameter("destFqdns") List<String> destFqdns,
+        @OutputCustomType.Parameter("destIpRanges") List<String> destIpRanges,
+        @OutputCustomType.Parameter("destRegionCodes") List<String> destRegionCodes,
+        @OutputCustomType.Parameter("layer4Configs") List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs,
+        @OutputCustomType.Parameter("srcAddressGroups") List<String> srcAddressGroups,
+        @OutputCustomType.Parameter("srcFqdns") List<String> srcFqdns,
+        @OutputCustomType.Parameter("srcIpRanges") List<String> srcIpRanges,
+        @OutputCustomType.Parameter("srcRegionCodes") List<String> srcRegionCodes,
+        @OutputCustomType.Parameter("srcSecureTags") List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
         this.destAddressGroups = destAddressGroups;
         this.destFqdns = destFqdns;
         this.destIpRanges = destIpRanges;
@@ -196,52 +196,52 @@ public final class FirewallPolicyRuleMatcherResponse {
     	      this.srcSecureTags = defaults.srcSecureTags;
         }
 
-        public Builder setDestAddressGroups(List<String> destAddressGroups) {
+        public Builder destAddressGroups(List<String> destAddressGroups) {
             this.destAddressGroups = Objects.requireNonNull(destAddressGroups);
             return this;
         }
 
-        public Builder setDestFqdns(List<String> destFqdns) {
+        public Builder destFqdns(List<String> destFqdns) {
             this.destFqdns = Objects.requireNonNull(destFqdns);
             return this;
         }
 
-        public Builder setDestIpRanges(List<String> destIpRanges) {
+        public Builder destIpRanges(List<String> destIpRanges) {
             this.destIpRanges = Objects.requireNonNull(destIpRanges);
             return this;
         }
 
-        public Builder setDestRegionCodes(List<String> destRegionCodes) {
+        public Builder destRegionCodes(List<String> destRegionCodes) {
             this.destRegionCodes = Objects.requireNonNull(destRegionCodes);
             return this;
         }
 
-        public Builder setLayer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
+        public Builder layer4Configs(List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcAddressGroups(List<String> srcAddressGroups) {
+        public Builder srcAddressGroups(List<String> srcAddressGroups) {
             this.srcAddressGroups = Objects.requireNonNull(srcAddressGroups);
             return this;
         }
 
-        public Builder setSrcFqdns(List<String> srcFqdns) {
+        public Builder srcFqdns(List<String> srcFqdns) {
             this.srcFqdns = Objects.requireNonNull(srcFqdns);
             return this;
         }
 
-        public Builder setSrcIpRanges(List<String> srcIpRanges) {
+        public Builder srcIpRanges(List<String> srcIpRanges) {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
 
-        public Builder setSrcRegionCodes(List<String> srcRegionCodes) {
+        public Builder srcRegionCodes(List<String> srcRegionCodes) {
             this.srcRegionCodes = Objects.requireNonNull(srcRegionCodes);
             return this;
         }
 
-        public Builder setSrcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
+        public Builder srcSecureTags(List<FirewallPolicyRuleSecureTagResponse> srcSecureTags) {
             this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
             return this;
         }

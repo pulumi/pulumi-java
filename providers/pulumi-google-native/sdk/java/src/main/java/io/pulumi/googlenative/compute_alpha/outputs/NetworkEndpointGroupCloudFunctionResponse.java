@@ -20,10 +20,10 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
      */
     private final String urlMask;
 
-    @OutputCustomType.Constructor({"function","urlMask"})
+    @OutputCustomType.Constructor
     private NetworkEndpointGroupCloudFunctionResponse(
-        String function,
-        String urlMask) {
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("urlMask") String urlMask) {
         this.function = function;
         this.urlMask = urlMask;
     }
@@ -65,12 +65,12 @@ public final class NetworkEndpointGroupCloudFunctionResponse {
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setUrlMask(String urlMask) {
+        public Builder urlMask(String urlMask) {
             this.urlMask = Objects.requireNonNull(urlMask);
             return this;
         }

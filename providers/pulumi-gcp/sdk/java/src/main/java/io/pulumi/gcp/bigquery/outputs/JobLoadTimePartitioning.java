@@ -30,11 +30,11 @@ public final class JobLoadTimePartitioning {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationMs","field","type"})
+    @OutputCustomType.Constructor
     private JobLoadTimePartitioning(
-        @Nullable String expirationMs,
-        @Nullable String field,
-        String type) {
+        @OutputCustomType.Parameter("expirationMs") @Nullable String expirationMs,
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.type = type;
@@ -89,17 +89,17 @@ public final class JobLoadTimePartitioning {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(@Nullable String expirationMs) {
+        public Builder expirationMs(@Nullable String expirationMs) {
             this.expirationMs = expirationMs;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

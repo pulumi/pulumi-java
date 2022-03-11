@@ -25,11 +25,11 @@ public final class GetEmailIdentityResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arn","email","id"})
+    @OutputCustomType.Constructor
     private GetEmailIdentityResult(
-        String arn,
-        String email,
-        String id) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id) {
         this.arn = arn;
         this.email = email;
         this.id = id;
@@ -81,17 +81,17 @@ public final class GetEmailIdentityResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

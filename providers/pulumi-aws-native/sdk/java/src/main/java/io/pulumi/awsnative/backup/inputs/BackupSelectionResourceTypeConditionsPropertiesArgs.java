@@ -87,42 +87,42 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends i
     	      this.stringNotLike = defaults.stringNotLike;
         }
 
-        public Builder setStringEquals(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringEquals) {
+        public Builder stringEquals(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringEquals) {
             this.stringEquals = stringEquals;
             return this;
         }
 
-        public Builder setStringEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringEquals) {
+        public Builder stringEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringEquals) {
             this.stringEquals = Input.ofNullable(stringEquals);
             return this;
         }
 
-        public Builder setStringLike(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringLike) {
+        public Builder stringLike(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringLike) {
             this.stringLike = stringLike;
             return this;
         }
 
-        public Builder setStringLike(@Nullable List<BackupSelectionConditionParameterArgs> stringLike) {
+        public Builder stringLike(@Nullable List<BackupSelectionConditionParameterArgs> stringLike) {
             this.stringLike = Input.ofNullable(stringLike);
             return this;
         }
 
-        public Builder setStringNotEquals(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotEquals) {
+        public Builder stringNotEquals(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotEquals) {
             this.stringNotEquals = stringNotEquals;
             return this;
         }
 
-        public Builder setStringNotEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringNotEquals) {
+        public Builder stringNotEquals(@Nullable List<BackupSelectionConditionParameterArgs> stringNotEquals) {
             this.stringNotEquals = Input.ofNullable(stringNotEquals);
             return this;
         }
 
-        public Builder setStringNotLike(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotLike) {
+        public Builder stringNotLike(@Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotLike) {
             this.stringNotLike = stringNotLike;
             return this;
         }
 
-        public Builder setStringNotLike(@Nullable List<BackupSelectionConditionParameterArgs> stringNotLike) {
+        public Builder stringNotLike(@Nullable List<BackupSelectionConditionParameterArgs> stringNotLike) {
             this.stringNotLike = Input.ofNullable(stringNotLike);
             return this;
         }

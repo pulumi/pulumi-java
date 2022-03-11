@@ -41,13 +41,13 @@ public final class UserProfileUserSettings {
      */
     private final @Nullable UserProfileSharingSettings sharingSettings;
 
-    @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings"})
+    @OutputCustomType.Constructor
     private UserProfileUserSettings(
-        @Nullable String executionRole,
-        @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable UserProfileSharingSettings sharingSettings) {
+        @OutputCustomType.Parameter("executionRole") @Nullable String executionRole,
+        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings,
+        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("sharingSettings") @Nullable UserProfileSharingSettings sharingSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -119,27 +119,27 @@ public final class UserProfileUserSettings {
     	      this.sharingSettings = defaults.sharingSettings;
         }
 
-        public Builder setExecutionRole(@Nullable String executionRole) {
+        public Builder executionRole(@Nullable String executionRole) {
             this.executionRole = executionRole;
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable UserProfileJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable UserProfileKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
+        public Builder sharingSettings(@Nullable UserProfileSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }

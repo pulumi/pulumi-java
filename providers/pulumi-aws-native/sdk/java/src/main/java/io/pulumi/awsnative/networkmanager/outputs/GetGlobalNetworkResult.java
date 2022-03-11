@@ -34,12 +34,12 @@ public final class GetGlobalNetworkResult {
      */
     private final @Nullable List<GlobalNetworkTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","id","tags"})
+    @OutputCustomType.Constructor
     private GetGlobalNetworkResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable List<GlobalNetworkTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<GlobalNetworkTag> tags) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -101,22 +101,22 @@ public final class GetGlobalNetworkResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GlobalNetworkTag> tags) {
+        public Builder tags(@Nullable List<GlobalNetworkTag> tags) {
             this.tags = tags;
             return this;
         }

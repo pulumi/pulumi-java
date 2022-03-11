@@ -153,72 +153,72 @@ public final class SqlResourceSqlRoleDefinitionArgs extends io.pulumi.resources.
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(Input<String> accountName) {
+        public Builder accountName(Input<String> accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Input.of(Objects.requireNonNull(accountName));
             return this;
         }
 
-        public Builder setAssignableScopes(@Nullable Input<List<String>> assignableScopes) {
+        public Builder assignableScopes(@Nullable Input<List<String>> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
 
-        public Builder setAssignableScopes(@Nullable List<String> assignableScopes) {
+        public Builder assignableScopes(@Nullable List<String> assignableScopes) {
             this.assignableScopes = Input.ofNullable(assignableScopes);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<PermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<PermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<PermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<PermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable Input<String> roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable Input<String> roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = Input.ofNullable(roleDefinitionId);
             return this;
         }
 
-        public Builder setRoleName(@Nullable Input<String> roleName) {
+        public Builder roleName(@Nullable Input<String> roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = Input.ofNullable(roleName);
             return this;
         }
 
-        public Builder setType(@Nullable Input<RoleDefinitionType> type) {
+        public Builder type(@Nullable Input<RoleDefinitionType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable RoleDefinitionType type) {
+        public Builder type(@Nullable RoleDefinitionType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

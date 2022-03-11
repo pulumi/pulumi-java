@@ -17,8 +17,8 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
      */
     private final @Nullable List<String> filterValues;
 
-    @OutputCustomType.Constructor({"filterValues"})
-    private ListFirewallPolicyIdpsSignaturesFilterValueResult(@Nullable List<String> filterValues) {
+    @OutputCustomType.Constructor
+    private ListFirewallPolicyIdpsSignaturesFilterValueResult(@OutputCustomType.Parameter("filterValues") @Nullable List<String> filterValues) {
         this.filterValues = filterValues;
     }
 
@@ -50,7 +50,7 @@ public final class ListFirewallPolicyIdpsSignaturesFilterValueResult {
     	      this.filterValues = defaults.filterValues;
         }
 
-        public Builder setFilterValues(@Nullable List<String> filterValues) {
+        public Builder filterValues(@Nullable List<String> filterValues) {
             this.filterValues = filterValues;
             return this;
         }

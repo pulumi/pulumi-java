@@ -16,8 +16,8 @@ public final class RegexValidationResponse {
      */
     private final List<String> regexes;
 
-    @OutputCustomType.Constructor({"regexes"})
-    private RegexValidationResponse(List<String> regexes) {
+    @OutputCustomType.Constructor
+    private RegexValidationResponse(@OutputCustomType.Parameter("regexes") List<String> regexes) {
         this.regexes = regexes;
     }
 
@@ -49,7 +49,7 @@ public final class RegexValidationResponse {
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder setRegexes(List<String> regexes) {
+        public Builder regexes(List<String> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }

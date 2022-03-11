@@ -24,10 +24,10 @@ public final class SecretRotation {
      */
     private final @Nullable String rotationPeriod;
 
-    @OutputCustomType.Constructor({"nextRotationTime","rotationPeriod"})
+    @OutputCustomType.Constructor
     private SecretRotation(
-        @Nullable String nextRotationTime,
-        @Nullable String rotationPeriod) {
+        @OutputCustomType.Parameter("nextRotationTime") @Nullable String nextRotationTime,
+        @OutputCustomType.Parameter("rotationPeriod") @Nullable String rotationPeriod) {
         this.nextRotationTime = nextRotationTime;
         this.rotationPeriod = rotationPeriod;
     }
@@ -71,12 +71,12 @@ public final class SecretRotation {
     	      this.rotationPeriod = defaults.rotationPeriod;
         }
 
-        public Builder setNextRotationTime(@Nullable String nextRotationTime) {
+        public Builder nextRotationTime(@Nullable String nextRotationTime) {
             this.nextRotationTime = nextRotationTime;
             return this;
         }
 
-        public Builder setRotationPeriod(@Nullable String rotationPeriod) {
+        public Builder rotationPeriod(@Nullable String rotationPeriod) {
             this.rotationPeriod = rotationPeriod;
             return this;
         }

@@ -15,8 +15,8 @@ public final class GrafeasV1beta1PackageDetailsResponse {
      */
     private final InstallationResponse installation;
 
-    @OutputCustomType.Constructor({"installation"})
-    private GrafeasV1beta1PackageDetailsResponse(InstallationResponse installation) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1PackageDetailsResponse(@OutputCustomType.Parameter("installation") InstallationResponse installation) {
         this.installation = installation;
     }
 
@@ -48,7 +48,7 @@ public final class GrafeasV1beta1PackageDetailsResponse {
     	      this.installation = defaults.installation;
         }
 
-        public Builder setInstallation(InstallationResponse installation) {
+        public Builder installation(InstallationResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }

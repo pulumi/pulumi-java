@@ -39,13 +39,13 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
      */
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
-    @OutputCustomType.Constructor({"id","migrationId","resultType","status","summaryResults"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputValidationResultResponse(
-        String id,
-        String migrationId,
-        String resultType,
-        String status,
-        @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationId") String migrationId,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("summaryResults") @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
         this.id = id;
         this.migrationId = migrationId;
         this.resultType = resultType;
@@ -118,27 +118,27 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     	      this.summaryResults = defaults.summaryResults;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMigrationId(String migrationId) {
+        public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSummaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
+        public Builder summaryResults(@Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults) {
             this.summaryResults = summaryResults;
             return this;
         }

@@ -28,11 +28,11 @@ public final class UsagePlanQuotaSettings {
      */
     private final String period;
 
-    @OutputCustomType.Constructor({"limit","offset","period"})
+    @OutputCustomType.Constructor
     private UsagePlanQuotaSettings(
-        Integer limit,
-        @Nullable Integer offset,
-        String period) {
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("offset") @Nullable Integer offset,
+        @OutputCustomType.Parameter("period") String period) {
         this.limit = limit;
         this.offset = offset;
         this.period = period;
@@ -84,17 +84,17 @@ public final class UsagePlanQuotaSettings {
     	      this.period = defaults.period;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setOffset(@Nullable Integer offset) {
+        public Builder offset(@Nullable Integer offset) {
             this.offset = offset;
             return this;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }

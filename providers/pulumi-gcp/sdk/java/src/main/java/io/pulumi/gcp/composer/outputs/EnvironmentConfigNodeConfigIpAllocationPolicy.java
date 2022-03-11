@@ -18,13 +18,13 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
     private final @Nullable String servicesSecondaryRangeName;
     private final @Nullable Boolean useIpAliases;
 
-    @OutputCustomType.Constructor({"clusterIpv4CidrBlock","clusterSecondaryRangeName","servicesIpv4CidrBlock","servicesSecondaryRangeName","useIpAliases"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigNodeConfigIpAllocationPolicy(
-        @Nullable String clusterIpv4CidrBlock,
-        @Nullable String clusterSecondaryRangeName,
-        @Nullable String servicesIpv4CidrBlock,
-        @Nullable String servicesSecondaryRangeName,
-        @Nullable Boolean useIpAliases) {
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") @Nullable String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") @Nullable String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") @Nullable String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") @Nullable String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("useIpAliases") @Nullable Boolean useIpAliases) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
@@ -76,27 +76,27 @@ public final class EnvironmentConfigNodeConfigIpAllocationPolicy {
     	      this.useIpAliases = defaults.useIpAliases;
         }
 
-        public Builder setClusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(@Nullable String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(@Nullable String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = clusterSecondaryRangeName;
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(@Nullable String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(@Nullable String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
 
-        public Builder setUseIpAliases(@Nullable Boolean useIpAliases) {
+        public Builder useIpAliases(@Nullable Boolean useIpAliases) {
             this.useIpAliases = useIpAliases;
             return this;
         }

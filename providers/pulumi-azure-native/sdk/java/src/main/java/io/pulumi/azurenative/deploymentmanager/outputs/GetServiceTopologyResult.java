@@ -43,14 +43,14 @@ public final class GetServiceTopologyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"artifactSourceId","id","location","name","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceTopologyResult(
-        @Nullable String artifactSourceId,
-        String id,
-        String location,
-        String name,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("artifactSourceId") @Nullable String artifactSourceId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.artifactSourceId = artifactSourceId;
         this.id = id;
         this.location = location;
@@ -132,32 +132,32 @@ public final class GetServiceTopologyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArtifactSourceId(@Nullable String artifactSourceId) {
+        public Builder artifactSourceId(@Nullable String artifactSourceId) {
             this.artifactSourceId = artifactSourceId;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

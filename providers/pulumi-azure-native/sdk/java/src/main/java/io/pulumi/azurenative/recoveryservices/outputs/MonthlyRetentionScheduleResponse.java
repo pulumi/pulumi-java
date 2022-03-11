@@ -41,13 +41,13 @@ public final class MonthlyRetentionScheduleResponse {
      */
     private final @Nullable List<String> retentionTimes;
 
-    @OutputCustomType.Constructor({"retentionDuration","retentionScheduleDaily","retentionScheduleFormatType","retentionScheduleWeekly","retentionTimes"})
+    @OutputCustomType.Constructor
     private MonthlyRetentionScheduleResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
-        @Nullable String retentionScheduleFormatType,
-        @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
-        @Nullable List<String> retentionTimes) {
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionScheduleDaily") @Nullable DailyRetentionFormatResponse retentionScheduleDaily,
+        @OutputCustomType.Parameter("retentionScheduleFormatType") @Nullable String retentionScheduleFormatType,
+        @OutputCustomType.Parameter("retentionScheduleWeekly") @Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly,
+        @OutputCustomType.Parameter("retentionTimes") @Nullable List<String> retentionTimes) {
         this.retentionDuration = retentionDuration;
         this.retentionScheduleDaily = retentionScheduleDaily;
         this.retentionScheduleFormatType = retentionScheduleFormatType;
@@ -119,27 +119,27 @@ public final class MonthlyRetentionScheduleResponse {
     	      this.retentionTimes = defaults.retentionTimes;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
+        public Builder retentionScheduleDaily(@Nullable DailyRetentionFormatResponse retentionScheduleDaily) {
             this.retentionScheduleDaily = retentionScheduleDaily;
             return this;
         }
 
-        public Builder setRetentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
+        public Builder retentionScheduleFormatType(@Nullable String retentionScheduleFormatType) {
             this.retentionScheduleFormatType = retentionScheduleFormatType;
             return this;
         }
 
-        public Builder setRetentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
+        public Builder retentionScheduleWeekly(@Nullable WeeklyRetentionFormatResponse retentionScheduleWeekly) {
             this.retentionScheduleWeekly = retentionScheduleWeekly;
             return this;
         }
 
-        public Builder setRetentionTimes(@Nullable List<String> retentionTimes) {
+        public Builder retentionTimes(@Nullable List<String> retentionTimes) {
             this.retentionTimes = retentionTimes;
             return this;
         }

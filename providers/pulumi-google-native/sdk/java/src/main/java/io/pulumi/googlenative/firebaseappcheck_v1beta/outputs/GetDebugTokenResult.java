@@ -25,11 +25,11 @@ public final class GetDebugTokenResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"displayName","name","token"})
+    @OutputCustomType.Constructor
     private GetDebugTokenResult(
-        String displayName,
-        String name,
-        String token) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("token") String token) {
         this.displayName = displayName;
         this.name = name;
         this.token = token;
@@ -81,17 +81,17 @@ public final class GetDebugTokenResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

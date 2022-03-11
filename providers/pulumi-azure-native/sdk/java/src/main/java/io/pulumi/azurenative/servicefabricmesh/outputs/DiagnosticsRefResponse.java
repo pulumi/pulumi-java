@@ -24,10 +24,10 @@ public final class DiagnosticsRefResponse {
      */
     private final @Nullable List<String> sinkRefs;
 
-    @OutputCustomType.Constructor({"enabled","sinkRefs"})
+    @OutputCustomType.Constructor
     private DiagnosticsRefResponse(
-        @Nullable Boolean enabled,
-        @Nullable List<String> sinkRefs) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("sinkRefs") @Nullable List<String> sinkRefs) {
         this.enabled = enabled;
         this.sinkRefs = sinkRefs;
     }
@@ -69,12 +69,12 @@ public final class DiagnosticsRefResponse {
     	      this.sinkRefs = defaults.sinkRefs;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setSinkRefs(@Nullable List<String> sinkRefs) {
+        public Builder sinkRefs(@Nullable List<String> sinkRefs) {
             this.sinkRefs = sinkRefs;
             return this;
         }

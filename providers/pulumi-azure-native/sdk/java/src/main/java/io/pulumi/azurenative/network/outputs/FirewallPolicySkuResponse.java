@@ -17,8 +17,8 @@ public final class FirewallPolicySkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"tier"})
-    private FirewallPolicySkuResponse(@Nullable String tier) {
+    @OutputCustomType.Constructor
+    private FirewallPolicySkuResponse(@OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.tier = tier;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallPolicySkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

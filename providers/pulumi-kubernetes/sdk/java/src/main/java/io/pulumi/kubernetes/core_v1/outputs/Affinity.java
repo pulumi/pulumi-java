@@ -29,11 +29,11 @@ public final class Affinity {
      */
     private final @Nullable PodAntiAffinity podAntiAffinity;
 
-    @OutputCustomType.Constructor({"nodeAffinity","podAffinity","podAntiAffinity"})
+    @OutputCustomType.Constructor
     private Affinity(
-        @Nullable NodeAffinity nodeAffinity,
-        @Nullable PodAffinity podAffinity,
-        @Nullable PodAntiAffinity podAntiAffinity) {
+        @OutputCustomType.Parameter("nodeAffinity") @Nullable NodeAffinity nodeAffinity,
+        @OutputCustomType.Parameter("podAffinity") @Nullable PodAffinity podAffinity,
+        @OutputCustomType.Parameter("podAntiAffinity") @Nullable PodAntiAffinity podAntiAffinity) {
         this.nodeAffinity = nodeAffinity;
         this.podAffinity = podAffinity;
         this.podAntiAffinity = podAntiAffinity;
@@ -85,17 +85,17 @@ public final class Affinity {
     	      this.podAntiAffinity = defaults.podAntiAffinity;
         }
 
-        public Builder setNodeAffinity(@Nullable NodeAffinity nodeAffinity) {
+        public Builder nodeAffinity(@Nullable NodeAffinity nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
 
-        public Builder setPodAffinity(@Nullable PodAffinity podAffinity) {
+        public Builder podAffinity(@Nullable PodAffinity podAffinity) {
             this.podAffinity = podAffinity;
             return this;
         }
 
-        public Builder setPodAntiAffinity(@Nullable PodAntiAffinity podAntiAffinity) {
+        public Builder podAntiAffinity(@Nullable PodAntiAffinity podAntiAffinity) {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }

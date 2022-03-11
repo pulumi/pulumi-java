@@ -91,32 +91,32 @@ public final class GitRepoSourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setRef(@Nullable Input<String> ref) {
+        public Builder ref(@Nullable Input<String> ref) {
             this.ref = ref;
             return this;
         }
 
-        public Builder setRef(@Nullable String ref) {
+        public Builder ref(@Nullable String ref) {
             this.ref = Input.ofNullable(ref);
             return this;
         }
 
-        public Builder setRepoType(@Nullable Input<GitRepoSourceRepoType> repoType) {
+        public Builder repoType(@Nullable Input<GitRepoSourceRepoType> repoType) {
             this.repoType = repoType;
             return this;
         }
 
-        public Builder setRepoType(@Nullable GitRepoSourceRepoType repoType) {
+        public Builder repoType(@Nullable GitRepoSourceRepoType repoType) {
             this.repoType = Input.ofNullable(repoType);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

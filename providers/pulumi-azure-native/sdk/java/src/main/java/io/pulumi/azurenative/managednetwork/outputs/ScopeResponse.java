@@ -32,12 +32,12 @@ public final class ScopeResponse {
      */
     private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
-    @OutputCustomType.Constructor({"managementGroups","subnets","subscriptions","virtualNetworks"})
+    @OutputCustomType.Constructor
     private ScopeResponse(
-        @Nullable List<ResourceIdResponse> managementGroups,
-        @Nullable List<ResourceIdResponse> subnets,
-        @Nullable List<ResourceIdResponse> subscriptions,
-        @Nullable List<ResourceIdResponse> virtualNetworks) {
+        @OutputCustomType.Parameter("managementGroups") @Nullable List<ResourceIdResponse> managementGroups,
+        @OutputCustomType.Parameter("subnets") @Nullable List<ResourceIdResponse> subnets,
+        @OutputCustomType.Parameter("subscriptions") @Nullable List<ResourceIdResponse> subscriptions,
+        @OutputCustomType.Parameter("virtualNetworks") @Nullable List<ResourceIdResponse> virtualNetworks) {
         this.managementGroups = managementGroups;
         this.subnets = subnets;
         this.subscriptions = subscriptions;
@@ -99,22 +99,22 @@ public final class ScopeResponse {
     	      this.virtualNetworks = defaults.virtualNetworks;
         }
 
-        public Builder setManagementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
+        public Builder managementGroups(@Nullable List<ResourceIdResponse> managementGroups) {
             this.managementGroups = managementGroups;
             return this;
         }
 
-        public Builder setSubnets(@Nullable List<ResourceIdResponse> subnets) {
+        public Builder subnets(@Nullable List<ResourceIdResponse> subnets) {
             this.subnets = subnets;
             return this;
         }
 
-        public Builder setSubscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
+        public Builder subscriptions(@Nullable List<ResourceIdResponse> subscriptions) {
             this.subscriptions = subscriptions;
             return this;
         }
 
-        public Builder setVirtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
+        public Builder virtualNetworks(@Nullable List<ResourceIdResponse> virtualNetworks) {
             this.virtualNetworks = virtualNetworks;
             return this;
         }

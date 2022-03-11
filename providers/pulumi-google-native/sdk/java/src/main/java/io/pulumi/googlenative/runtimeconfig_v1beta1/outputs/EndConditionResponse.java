@@ -15,8 +15,8 @@ public final class EndConditionResponse {
      */
     private final CardinalityResponse cardinality;
 
-    @OutputCustomType.Constructor({"cardinality"})
-    private EndConditionResponse(CardinalityResponse cardinality) {
+    @OutputCustomType.Constructor
+    private EndConditionResponse(@OutputCustomType.Parameter("cardinality") CardinalityResponse cardinality) {
         this.cardinality = cardinality;
     }
 
@@ -48,7 +48,7 @@ public final class EndConditionResponse {
     	      this.cardinality = defaults.cardinality;
         }
 
-        public Builder setCardinality(CardinalityResponse cardinality) {
+        public Builder cardinality(CardinalityResponse cardinality) {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }

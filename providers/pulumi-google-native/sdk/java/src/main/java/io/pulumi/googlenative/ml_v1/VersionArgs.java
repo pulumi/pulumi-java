@@ -376,212 +376,212 @@ public final class VersionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setAcceleratorConfig(@Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setAcceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable GoogleCloudMlV1__AcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder setAutoScaling(@Nullable Input<GoogleCloudMlV1__AutoScalingArgs> autoScaling) {
+        public Builder autoScaling(@Nullable Input<GoogleCloudMlV1__AutoScalingArgs> autoScaling) {
             this.autoScaling = autoScaling;
             return this;
         }
 
-        public Builder setAutoScaling(@Nullable GoogleCloudMlV1__AutoScalingArgs autoScaling) {
+        public Builder autoScaling(@Nullable GoogleCloudMlV1__AutoScalingArgs autoScaling) {
             this.autoScaling = Input.ofNullable(autoScaling);
             return this;
         }
 
-        public Builder setContainer(@Nullable Input<GoogleCloudMlV1__ContainerSpecArgs> container) {
+        public Builder container(@Nullable Input<GoogleCloudMlV1__ContainerSpecArgs> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable GoogleCloudMlV1__ContainerSpecArgs container) {
+        public Builder container(@Nullable GoogleCloudMlV1__ContainerSpecArgs container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setDeploymentUri(@Nullable Input<String> deploymentUri) {
+        public Builder deploymentUri(@Nullable Input<String> deploymentUri) {
             this.deploymentUri = deploymentUri;
             return this;
         }
 
-        public Builder setDeploymentUri(@Nullable String deploymentUri) {
+        public Builder deploymentUri(@Nullable String deploymentUri) {
             this.deploymentUri = Input.ofNullable(deploymentUri);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setExplanationConfig(@Nullable Input<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig) {
+        public Builder explanationConfig(@Nullable Input<GoogleCloudMlV1__ExplanationConfigArgs> explanationConfig) {
             this.explanationConfig = explanationConfig;
             return this;
         }
 
-        public Builder setExplanationConfig(@Nullable GoogleCloudMlV1__ExplanationConfigArgs explanationConfig) {
+        public Builder explanationConfig(@Nullable GoogleCloudMlV1__ExplanationConfigArgs explanationConfig) {
             this.explanationConfig = Input.ofNullable(explanationConfig);
             return this;
         }
 
-        public Builder setFramework(@Nullable Input<VersionFramework> framework) {
+        public Builder framework(@Nullable Input<VersionFramework> framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setFramework(@Nullable VersionFramework framework) {
+        public Builder framework(@Nullable VersionFramework framework) {
             this.framework = Input.ofNullable(framework);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setManualScaling(@Nullable Input<GoogleCloudMlV1__ManualScalingArgs> manualScaling) {
+        public Builder manualScaling(@Nullable Input<GoogleCloudMlV1__ManualScalingArgs> manualScaling) {
             this.manualScaling = manualScaling;
             return this;
         }
 
-        public Builder setManualScaling(@Nullable GoogleCloudMlV1__ManualScalingArgs manualScaling) {
+        public Builder manualScaling(@Nullable GoogleCloudMlV1__ManualScalingArgs manualScaling) {
             this.manualScaling = Input.ofNullable(manualScaling);
             return this;
         }
 
-        public Builder setModelId(Input<String> modelId) {
+        public Builder modelId(Input<String> modelId) {
             this.modelId = Objects.requireNonNull(modelId);
             return this;
         }
 
-        public Builder setModelId(String modelId) {
+        public Builder modelId(String modelId) {
             this.modelId = Input.of(Objects.requireNonNull(modelId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPackageUris(@Nullable Input<List<String>> packageUris) {
+        public Builder packageUris(@Nullable Input<List<String>> packageUris) {
             this.packageUris = packageUris;
             return this;
         }
 
-        public Builder setPackageUris(@Nullable List<String> packageUris) {
+        public Builder packageUris(@Nullable List<String> packageUris) {
             this.packageUris = Input.ofNullable(packageUris);
             return this;
         }
 
-        public Builder setPredictionClass(@Nullable Input<String> predictionClass) {
+        public Builder predictionClass(@Nullable Input<String> predictionClass) {
             this.predictionClass = predictionClass;
             return this;
         }
 
-        public Builder setPredictionClass(@Nullable String predictionClass) {
+        public Builder predictionClass(@Nullable String predictionClass) {
             this.predictionClass = Input.ofNullable(predictionClass);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPythonVersion(Input<String> pythonVersion) {
+        public Builder pythonVersion(Input<String> pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
 
-        public Builder setPythonVersion(String pythonVersion) {
+        public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Input.of(Objects.requireNonNull(pythonVersion));
             return this;
         }
 
-        public Builder setRequestLoggingConfig(@Nullable Input<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig) {
+        public Builder requestLoggingConfig(@Nullable Input<GoogleCloudMlV1__RequestLoggingConfigArgs> requestLoggingConfig) {
             this.requestLoggingConfig = requestLoggingConfig;
             return this;
         }
 
-        public Builder setRequestLoggingConfig(@Nullable GoogleCloudMlV1__RequestLoggingConfigArgs requestLoggingConfig) {
+        public Builder requestLoggingConfig(@Nullable GoogleCloudMlV1__RequestLoggingConfigArgs requestLoggingConfig) {
             this.requestLoggingConfig = Input.ofNullable(requestLoggingConfig);
             return this;
         }
 
-        public Builder setRoutes(@Nullable Input<GoogleCloudMlV1__RouteMapArgs> routes) {
+        public Builder routes(@Nullable Input<GoogleCloudMlV1__RouteMapArgs> routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setRoutes(@Nullable GoogleCloudMlV1__RouteMapArgs routes) {
+        public Builder routes(@Nullable GoogleCloudMlV1__RouteMapArgs routes) {
             this.routes = Input.ofNullable(routes);
             return this;
         }
 
-        public Builder setRuntimeVersion(Input<String> runtimeVersion) {
+        public Builder runtimeVersion(Input<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Input.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }

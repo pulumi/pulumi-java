@@ -16,8 +16,8 @@ public final class AmlTokenResponse {
      */
     private final String identityType;
 
-    @OutputCustomType.Constructor({"identityType"})
-    private AmlTokenResponse(String identityType) {
+    @OutputCustomType.Constructor
+    private AmlTokenResponse(@OutputCustomType.Parameter("identityType") String identityType) {
         this.identityType = identityType;
     }
 
@@ -50,7 +50,7 @@ public final class AmlTokenResponse {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }

@@ -52,12 +52,12 @@ public final class ModelExplainabilityJobDefinitionMonitoringResourcesArgs exten
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
+        public Builder clusterConfig(Input<ModelExplainabilityJobDefinitionClusterConfigArgs> clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }
 
-        public Builder setClusterConfig(ModelExplainabilityJobDefinitionClusterConfigArgs clusterConfig) {
+        public Builder clusterConfig(ModelExplainabilityJobDefinitionClusterConfigArgs clusterConfig) {
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }

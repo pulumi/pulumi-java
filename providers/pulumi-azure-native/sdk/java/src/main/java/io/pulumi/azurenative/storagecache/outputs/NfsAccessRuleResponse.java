@@ -53,16 +53,16 @@ public final class NfsAccessRuleResponse {
      */
     private final @Nullable Boolean suid;
 
-    @OutputCustomType.Constructor({"access","anonymousGID","anonymousUID","filter","rootSquash","scope","submountAccess","suid"})
+    @OutputCustomType.Constructor
     private NfsAccessRuleResponse(
-        String access,
-        @Nullable String anonymousGID,
-        @Nullable String anonymousUID,
-        @Nullable String filter,
-        @Nullable Boolean rootSquash,
-        String scope,
-        @Nullable Boolean submountAccess,
-        @Nullable Boolean suid) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("anonymousGID") @Nullable String anonymousGID,
+        @OutputCustomType.Parameter("anonymousUID") @Nullable String anonymousUID,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("rootSquash") @Nullable Boolean rootSquash,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("submountAccess") @Nullable Boolean submountAccess,
+        @OutputCustomType.Parameter("suid") @Nullable Boolean suid) {
         this.access = access;
         this.anonymousGID = anonymousGID;
         this.anonymousUID = anonymousUID;
@@ -164,42 +164,42 @@ public final class NfsAccessRuleResponse {
     	      this.suid = defaults.suid;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setAnonymousGID(@Nullable String anonymousGID) {
+        public Builder anonymousGID(@Nullable String anonymousGID) {
             this.anonymousGID = anonymousGID;
             return this;
         }
 
-        public Builder setAnonymousUID(@Nullable String anonymousUID) {
+        public Builder anonymousUID(@Nullable String anonymousUID) {
             this.anonymousUID = anonymousUID;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setRootSquash(@Nullable Boolean rootSquash) {
+        public Builder rootSquash(@Nullable Boolean rootSquash) {
             this.rootSquash = rootSquash;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setSubmountAccess(@Nullable Boolean submountAccess) {
+        public Builder submountAccess(@Nullable Boolean submountAccess) {
             this.submountAccess = submountAccess;
             return this;
         }
 
-        public Builder setSuid(@Nullable Boolean suid) {
+        public Builder suid(@Nullable Boolean suid) {
             this.suid = suid;
             return this;
         }

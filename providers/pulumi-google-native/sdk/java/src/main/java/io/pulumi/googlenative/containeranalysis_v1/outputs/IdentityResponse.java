@@ -21,10 +21,10 @@ public final class IdentityResponse {
      */
     private final String updateId;
 
-    @OutputCustomType.Constructor({"revision","updateId"})
+    @OutputCustomType.Constructor
     private IdentityResponse(
-        Integer revision,
-        String updateId) {
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("updateId") String updateId) {
         this.revision = revision;
         this.updateId = updateId;
     }
@@ -66,12 +66,12 @@ public final class IdentityResponse {
     	      this.updateId = defaults.updateId;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setUpdateId(String updateId) {
+        public Builder updateId(String updateId) {
             this.updateId = Objects.requireNonNull(updateId);
             return this;
         }

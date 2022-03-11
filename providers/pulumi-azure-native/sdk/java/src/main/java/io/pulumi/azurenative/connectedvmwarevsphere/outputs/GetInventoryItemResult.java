@@ -63,18 +63,18 @@ public final class GetInventoryItemResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","inventoryType","kind","managedResourceId","moName","moRefId","name","provisioningState","systemData","type"})
+    @OutputCustomType.Constructor
     private GetInventoryItemResult(
-        String id,
-        String inventoryType,
-        @Nullable String kind,
-        @Nullable String managedResourceId,
-        @Nullable String moName,
-        @Nullable String moRefId,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inventoryType") String inventoryType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("managedResourceId") @Nullable String managedResourceId,
+        @OutputCustomType.Parameter("moName") @Nullable String moName,
+        @OutputCustomType.Parameter("moRefId") @Nullable String moRefId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.inventoryType = inventoryType;
         this.kind = kind;
@@ -196,52 +196,52 @@ public final class GetInventoryItemResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInventoryType(String inventoryType) {
+        public Builder inventoryType(String inventoryType) {
             this.inventoryType = Objects.requireNonNull(inventoryType);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setManagedResourceId(@Nullable String managedResourceId) {
+        public Builder managedResourceId(@Nullable String managedResourceId) {
             this.managedResourceId = managedResourceId;
             return this;
         }
 
-        public Builder setMoName(@Nullable String moName) {
+        public Builder moName(@Nullable String moName) {
             this.moName = moName;
             return this;
         }
 
-        public Builder setMoRefId(@Nullable String moRefId) {
+        public Builder moRefId(@Nullable String moRefId) {
             this.moRefId = moRefId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

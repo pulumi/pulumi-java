@@ -22,10 +22,10 @@ public final class OriginGroupOverrideActionResponse {
      */
     private final OriginGroupOverrideActionParametersResponse parameters;
 
-    @OutputCustomType.Constructor({"name","parameters"})
+    @OutputCustomType.Constructor
     private OriginGroupOverrideActionResponse(
-        String name,
-        OriginGroupOverrideActionParametersResponse parameters) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") OriginGroupOverrideActionParametersResponse parameters) {
         this.name = name;
         this.parameters = parameters;
     }
@@ -68,12 +68,12 @@ public final class OriginGroupOverrideActionResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(OriginGroupOverrideActionParametersResponse parameters) {
+        public Builder parameters(OriginGroupOverrideActionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

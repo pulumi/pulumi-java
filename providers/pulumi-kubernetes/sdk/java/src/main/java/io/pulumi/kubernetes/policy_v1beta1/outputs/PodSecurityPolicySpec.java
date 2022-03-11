@@ -148,32 +148,32 @@ public final class PodSecurityPolicySpec {
      */
     private final @Nullable List<String> volumes;
 
-    @OutputCustomType.Constructor({"allowPrivilegeEscalation","allowedCSIDrivers","allowedCapabilities","allowedFlexVolumes","allowedHostPaths","allowedProcMountTypes","allowedUnsafeSysctls","defaultAddCapabilities","defaultAllowPrivilegeEscalation","forbiddenSysctls","fsGroup","hostIPC","hostNetwork","hostPID","hostPorts","privileged","readOnlyRootFilesystem","requiredDropCapabilities","runAsGroup","runAsUser","runtimeClass","seLinux","supplementalGroups","volumes"})
+    @OutputCustomType.Constructor
     private PodSecurityPolicySpec(
-        @Nullable Boolean allowPrivilegeEscalation,
-        @Nullable List<AllowedCSIDriver> allowedCSIDrivers,
-        @Nullable List<String> allowedCapabilities,
-        @Nullable List<AllowedFlexVolume> allowedFlexVolumes,
-        @Nullable List<AllowedHostPath> allowedHostPaths,
-        @Nullable List<String> allowedProcMountTypes,
-        @Nullable List<String> allowedUnsafeSysctls,
-        @Nullable List<String> defaultAddCapabilities,
-        @Nullable Boolean defaultAllowPrivilegeEscalation,
-        @Nullable List<String> forbiddenSysctls,
-        FSGroupStrategyOptions fsGroup,
-        @Nullable Boolean hostIPC,
-        @Nullable Boolean hostNetwork,
-        @Nullable Boolean hostPID,
-        @Nullable List<HostPortRange> hostPorts,
-        @Nullable Boolean privileged,
-        @Nullable Boolean readOnlyRootFilesystem,
-        @Nullable List<String> requiredDropCapabilities,
-        @Nullable RunAsGroupStrategyOptions runAsGroup,
-        RunAsUserStrategyOptions runAsUser,
-        @Nullable RuntimeClassStrategyOptions runtimeClass,
-        SELinuxStrategyOptions seLinux,
-        SupplementalGroupsStrategyOptions supplementalGroups,
-        @Nullable List<String> volumes) {
+        @OutputCustomType.Parameter("allowPrivilegeEscalation") @Nullable Boolean allowPrivilegeEscalation,
+        @OutputCustomType.Parameter("allowedCSIDrivers") @Nullable List<AllowedCSIDriver> allowedCSIDrivers,
+        @OutputCustomType.Parameter("allowedCapabilities") @Nullable List<String> allowedCapabilities,
+        @OutputCustomType.Parameter("allowedFlexVolumes") @Nullable List<AllowedFlexVolume> allowedFlexVolumes,
+        @OutputCustomType.Parameter("allowedHostPaths") @Nullable List<AllowedHostPath> allowedHostPaths,
+        @OutputCustomType.Parameter("allowedProcMountTypes") @Nullable List<String> allowedProcMountTypes,
+        @OutputCustomType.Parameter("allowedUnsafeSysctls") @Nullable List<String> allowedUnsafeSysctls,
+        @OutputCustomType.Parameter("defaultAddCapabilities") @Nullable List<String> defaultAddCapabilities,
+        @OutputCustomType.Parameter("defaultAllowPrivilegeEscalation") @Nullable Boolean defaultAllowPrivilegeEscalation,
+        @OutputCustomType.Parameter("forbiddenSysctls") @Nullable List<String> forbiddenSysctls,
+        @OutputCustomType.Parameter("fsGroup") FSGroupStrategyOptions fsGroup,
+        @OutputCustomType.Parameter("hostIPC") @Nullable Boolean hostIPC,
+        @OutputCustomType.Parameter("hostNetwork") @Nullable Boolean hostNetwork,
+        @OutputCustomType.Parameter("hostPID") @Nullable Boolean hostPID,
+        @OutputCustomType.Parameter("hostPorts") @Nullable List<HostPortRange> hostPorts,
+        @OutputCustomType.Parameter("privileged") @Nullable Boolean privileged,
+        @OutputCustomType.Parameter("readOnlyRootFilesystem") @Nullable Boolean readOnlyRootFilesystem,
+        @OutputCustomType.Parameter("requiredDropCapabilities") @Nullable List<String> requiredDropCapabilities,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable RunAsGroupStrategyOptions runAsGroup,
+        @OutputCustomType.Parameter("runAsUser") RunAsUserStrategyOptions runAsUser,
+        @OutputCustomType.Parameter("runtimeClass") @Nullable RuntimeClassStrategyOptions runtimeClass,
+        @OutputCustomType.Parameter("seLinux") SELinuxStrategyOptions seLinux,
+        @OutputCustomType.Parameter("supplementalGroups") SupplementalGroupsStrategyOptions supplementalGroups,
+        @OutputCustomType.Parameter("volumes") @Nullable List<String> volumes) {
         this.allowPrivilegeEscalation = allowPrivilegeEscalation;
         this.allowedCSIDrivers = allowedCSIDrivers;
         this.allowedCapabilities = allowedCapabilities;
@@ -439,122 +439,122 @@ public final class PodSecurityPolicySpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setAllowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
+        public Builder allowPrivilegeEscalation(@Nullable Boolean allowPrivilegeEscalation) {
             this.allowPrivilegeEscalation = allowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setAllowedCSIDrivers(@Nullable List<AllowedCSIDriver> allowedCSIDrivers) {
+        public Builder allowedCSIDrivers(@Nullable List<AllowedCSIDriver> allowedCSIDrivers) {
             this.allowedCSIDrivers = allowedCSIDrivers;
             return this;
         }
 
-        public Builder setAllowedCapabilities(@Nullable List<String> allowedCapabilities) {
+        public Builder allowedCapabilities(@Nullable List<String> allowedCapabilities) {
             this.allowedCapabilities = allowedCapabilities;
             return this;
         }
 
-        public Builder setAllowedFlexVolumes(@Nullable List<AllowedFlexVolume> allowedFlexVolumes) {
+        public Builder allowedFlexVolumes(@Nullable List<AllowedFlexVolume> allowedFlexVolumes) {
             this.allowedFlexVolumes = allowedFlexVolumes;
             return this;
         }
 
-        public Builder setAllowedHostPaths(@Nullable List<AllowedHostPath> allowedHostPaths) {
+        public Builder allowedHostPaths(@Nullable List<AllowedHostPath> allowedHostPaths) {
             this.allowedHostPaths = allowedHostPaths;
             return this;
         }
 
-        public Builder setAllowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
+        public Builder allowedProcMountTypes(@Nullable List<String> allowedProcMountTypes) {
             this.allowedProcMountTypes = allowedProcMountTypes;
             return this;
         }
 
-        public Builder setAllowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
+        public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
             this.allowedUnsafeSysctls = allowedUnsafeSysctls;
             return this;
         }
 
-        public Builder setDefaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
+        public Builder defaultAddCapabilities(@Nullable List<String> defaultAddCapabilities) {
             this.defaultAddCapabilities = defaultAddCapabilities;
             return this;
         }
 
-        public Builder setDefaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
+        public Builder defaultAllowPrivilegeEscalation(@Nullable Boolean defaultAllowPrivilegeEscalation) {
             this.defaultAllowPrivilegeEscalation = defaultAllowPrivilegeEscalation;
             return this;
         }
 
-        public Builder setForbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
+        public Builder forbiddenSysctls(@Nullable List<String> forbiddenSysctls) {
             this.forbiddenSysctls = forbiddenSysctls;
             return this;
         }
 
-        public Builder setFsGroup(FSGroupStrategyOptions fsGroup) {
+        public Builder fsGroup(FSGroupStrategyOptions fsGroup) {
             this.fsGroup = Objects.requireNonNull(fsGroup);
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Boolean hostIPC) {
+        public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Boolean hostNetwork) {
+        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
-        public Builder setHostPID(@Nullable Boolean hostPID) {
+        public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
-        public Builder setHostPorts(@Nullable List<HostPortRange> hostPorts) {
+        public Builder hostPorts(@Nullable List<HostPortRange> hostPorts) {
             this.hostPorts = hostPorts;
             return this;
         }
 
-        public Builder setPrivileged(@Nullable Boolean privileged) {
+        public Builder privileged(@Nullable Boolean privileged) {
             this.privileged = privileged;
             return this;
         }
 
-        public Builder setReadOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
+        public Builder readOnlyRootFilesystem(@Nullable Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
 
-        public Builder setRequiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
+        public Builder requiredDropCapabilities(@Nullable List<String> requiredDropCapabilities) {
             this.requiredDropCapabilities = requiredDropCapabilities;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable RunAsGroupStrategyOptions runAsGroup) {
+        public Builder runAsGroup(@Nullable RunAsGroupStrategyOptions runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsUser(RunAsUserStrategyOptions runAsUser) {
+        public Builder runAsUser(RunAsUserStrategyOptions runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
 
-        public Builder setRuntimeClass(@Nullable RuntimeClassStrategyOptions runtimeClass) {
+        public Builder runtimeClass(@Nullable RuntimeClassStrategyOptions runtimeClass) {
             this.runtimeClass = runtimeClass;
             return this;
         }
 
-        public Builder setSeLinux(SELinuxStrategyOptions seLinux) {
+        public Builder seLinux(SELinuxStrategyOptions seLinux) {
             this.seLinux = Objects.requireNonNull(seLinux);
             return this;
         }
 
-        public Builder setSupplementalGroups(SupplementalGroupsStrategyOptions supplementalGroups) {
+        public Builder supplementalGroups(SupplementalGroupsStrategyOptions supplementalGroups) {
             this.supplementalGroups = Objects.requireNonNull(supplementalGroups);
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<String> volumes) {
+        public Builder volumes(@Nullable List<String> volumes) {
             this.volumes = volumes;
             return this;
         }

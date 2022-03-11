@@ -189,102 +189,102 @@ public final class StudioComponentArgs extends io.pulumi.resources.ResourceArgs 
     	      this.type = defaults.type;
         }
 
-        public Builder setConfiguration(@Nullable Input<StudioComponentConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<StudioComponentConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable StudioComponentConfigurationArgs configuration) {
+        public Builder configuration(@Nullable StudioComponentConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEc2SecurityGroupIds(@Nullable Input<List<String>> ec2SecurityGroupIds) {
+        public Builder ec2SecurityGroupIds(@Nullable Input<List<String>> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = ec2SecurityGroupIds;
             return this;
         }
 
-        public Builder setEc2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
+        public Builder ec2SecurityGroupIds(@Nullable List<String> ec2SecurityGroupIds) {
             this.ec2SecurityGroupIds = Input.ofNullable(ec2SecurityGroupIds);
             return this;
         }
 
-        public Builder setInitializationScripts(@Nullable Input<List<StudioComponentInitializationScriptArgs>> initializationScripts) {
+        public Builder initializationScripts(@Nullable Input<List<StudioComponentInitializationScriptArgs>> initializationScripts) {
             this.initializationScripts = initializationScripts;
             return this;
         }
 
-        public Builder setInitializationScripts(@Nullable List<StudioComponentInitializationScriptArgs> initializationScripts) {
+        public Builder initializationScripts(@Nullable List<StudioComponentInitializationScriptArgs> initializationScripts) {
             this.initializationScripts = Input.ofNullable(initializationScripts);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable Input<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
+        public Builder scriptParameters(@Nullable Input<List<StudioComponentScriptParameterKeyValueArgs>> scriptParameters) {
             this.scriptParameters = scriptParameters;
             return this;
         }
 
-        public Builder setScriptParameters(@Nullable List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
+        public Builder scriptParameters(@Nullable List<StudioComponentScriptParameterKeyValueArgs> scriptParameters) {
             this.scriptParameters = Input.ofNullable(scriptParameters);
             return this;
         }
 
-        public Builder setStudioId(Input<String> studioId) {
+        public Builder studioId(Input<String> studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Input.of(Objects.requireNonNull(studioId));
             return this;
         }
 
-        public Builder setSubtype(@Nullable Input<StudioComponentSubtype> subtype) {
+        public Builder subtype(@Nullable Input<StudioComponentSubtype> subtype) {
             this.subtype = subtype;
             return this;
         }
 
-        public Builder setSubtype(@Nullable StudioComponentSubtype subtype) {
+        public Builder subtype(@Nullable StudioComponentSubtype subtype) {
             this.subtype = Input.ofNullable(subtype);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<StudioComponentTagsArgs> tags) {
+        public Builder tags(@Nullable Input<StudioComponentTagsArgs> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable StudioComponentTagsArgs tags) {
+        public Builder tags(@Nullable StudioComponentTagsArgs tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(Input<StudioComponentType> type) {
+        public Builder type(Input<StudioComponentType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(StudioComponentType type) {
+        public Builder type(StudioComponentType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -122,27 +122,27 @@ public final class PasswordValidationPolicyResponse extends io.pulumi.resources.
     	      this.reuseInterval = defaults.reuseInterval;
         }
 
-        public Builder setComplexity(String complexity) {
+        public Builder complexity(String complexity) {
             this.complexity = Objects.requireNonNull(complexity);
             return this;
         }
 
-        public Builder setDisallowUsernameSubstring(Boolean disallowUsernameSubstring) {
+        public Builder disallowUsernameSubstring(Boolean disallowUsernameSubstring) {
             this.disallowUsernameSubstring = Objects.requireNonNull(disallowUsernameSubstring);
             return this;
         }
 
-        public Builder setMinLength(Integer minLength) {
+        public Builder minLength(Integer minLength) {
             this.minLength = Objects.requireNonNull(minLength);
             return this;
         }
 
-        public Builder setPasswordChangeInterval(String passwordChangeInterval) {
+        public Builder passwordChangeInterval(String passwordChangeInterval) {
             this.passwordChangeInterval = Objects.requireNonNull(passwordChangeInterval);
             return this;
         }
 
-        public Builder setReuseInterval(Integer reuseInterval) {
+        public Builder reuseInterval(Integer reuseInterval) {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }

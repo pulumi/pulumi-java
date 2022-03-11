@@ -23,10 +23,10 @@ public final class DeploymentTargetImport {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"content","name"})
+    @OutputCustomType.Constructor
     private DeploymentTargetImport(
-        @Nullable String content,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.content = content;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class DeploymentTargetImport {
     	      this.name = defaults.name;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

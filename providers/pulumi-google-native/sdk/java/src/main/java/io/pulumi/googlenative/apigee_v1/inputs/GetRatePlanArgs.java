@@ -72,17 +72,17 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
     	      this.rateplanId = defaults.rateplanId;
         }
 
-        public Builder setApiproductId(String apiproductId) {
+        public Builder apiproductId(String apiproductId) {
             this.apiproductId = Objects.requireNonNull(apiproductId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setRateplanId(String rateplanId) {
+        public Builder rateplanId(String rateplanId) {
             this.rateplanId = Objects.requireNonNull(rateplanId);
             return this;
         }

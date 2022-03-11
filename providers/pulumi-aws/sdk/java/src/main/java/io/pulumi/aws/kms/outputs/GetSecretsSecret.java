@@ -33,12 +33,12 @@ public final class GetSecretsSecret {
      */
     private final String payload;
 
-    @OutputCustomType.Constructor({"context","grantTokens","name","payload"})
+    @OutputCustomType.Constructor
     private GetSecretsSecret(
-        @Nullable Map<String,String> context,
-        @Nullable List<String> grantTokens,
-        String name,
-        String payload) {
+        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("payload") String payload) {
         this.context = context;
         this.grantTokens = grantTokens;
         this.name = name;
@@ -100,22 +100,22 @@ public final class GetSecretsSecret {
     	      this.payload = defaults.payload;
         }
 
-        public Builder setContext(@Nullable Map<String,String> context) {
+        public Builder context(@Nullable Map<String,String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setGrantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }

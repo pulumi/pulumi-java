@@ -126,72 +126,72 @@ public final class DataSourceOneDriveConfigurationArgs extends io.pulumi.resourc
     	      this.tenantDomain = defaults.tenantDomain;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Input<Boolean> disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Input<Boolean> disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Boolean disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = Input.ofNullable(disableLocalGroups);
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable Input<List<String>> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = Input.ofNullable(exclusionPatterns);
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
+        public Builder fieldMappings(@Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable Input<List<String>> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = Input.ofNullable(inclusionPatterns);
             return this;
         }
 
-        public Builder setOneDriveUsers(Input<DataSourceOneDriveUsersArgs> oneDriveUsers) {
+        public Builder oneDriveUsers(Input<DataSourceOneDriveUsersArgs> oneDriveUsers) {
             this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
             return this;
         }
 
-        public Builder setOneDriveUsers(DataSourceOneDriveUsersArgs oneDriveUsers) {
+        public Builder oneDriveUsers(DataSourceOneDriveUsersArgs oneDriveUsers) {
             this.oneDriveUsers = Input.of(Objects.requireNonNull(oneDriveUsers));
             return this;
         }
 
-        public Builder setSecretArn(Input<String> secretArn) {
+        public Builder secretArn(Input<String> secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
 
-        public Builder setTenantDomain(Input<String> tenantDomain) {
+        public Builder tenantDomain(Input<String> tenantDomain) {
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
         }
 
-        public Builder setTenantDomain(String tenantDomain) {
+        public Builder tenantDomain(String tenantDomain) {
             this.tenantDomain = Input.of(Objects.requireNonNull(tenantDomain));
             return this;
         }

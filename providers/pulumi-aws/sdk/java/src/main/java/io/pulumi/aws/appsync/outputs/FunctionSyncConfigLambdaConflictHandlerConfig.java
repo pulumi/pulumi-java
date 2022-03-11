@@ -17,8 +17,8 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfig {
      */
     private final @Nullable String lambdaConflictHandlerArn;
 
-    @OutputCustomType.Constructor({"lambdaConflictHandlerArn"})
-    private FunctionSyncConfigLambdaConflictHandlerConfig(@Nullable String lambdaConflictHandlerArn) {
+    @OutputCustomType.Constructor
+    private FunctionSyncConfigLambdaConflictHandlerConfig(@OutputCustomType.Parameter("lambdaConflictHandlerArn") @Nullable String lambdaConflictHandlerArn) {
         this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
     }
 
@@ -50,7 +50,7 @@ public final class FunctionSyncConfigLambdaConflictHandlerConfig {
     	      this.lambdaConflictHandlerArn = defaults.lambdaConflictHandlerArn;
         }
 
-        public Builder setLambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
+        public Builder lambdaConflictHandlerArn(@Nullable String lambdaConflictHandlerArn) {
             this.lambdaConflictHandlerArn = lambdaConflictHandlerArn;
             return this;
         }

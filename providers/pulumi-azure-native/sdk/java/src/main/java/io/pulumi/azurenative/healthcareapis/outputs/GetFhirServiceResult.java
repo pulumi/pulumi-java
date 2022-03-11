@@ -96,23 +96,23 @@ public final class GetFhirServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessPolicies","acrConfiguration","authenticationConfiguration","corsConfiguration","etag","exportConfiguration","id","identity","kind","location","name","provisioningState","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetFhirServiceResult(
-        @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
-        @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
-        @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
-        @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
-        @Nullable String etag,
-        @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
-        String id,
-        @Nullable ServiceManagedIdentityResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accessPolicies") @Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies,
+        @OutputCustomType.Parameter("acrConfiguration") @Nullable FhirServiceAcrConfigurationResponse acrConfiguration,
+        @OutputCustomType.Parameter("authenticationConfiguration") @Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration,
+        @OutputCustomType.Parameter("corsConfiguration") @Nullable FhirServiceCorsConfigurationResponse corsConfiguration,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("exportConfiguration") @Nullable FhirServiceExportConfigurationResponse exportConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ServiceManagedIdentityResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessPolicies = accessPolicies;
         this.acrConfiguration = acrConfiguration;
         this.authenticationConfiguration = authenticationConfiguration;
@@ -284,77 +284,77 @@ public final class GetFhirServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessPolicies(@Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies) {
+        public Builder accessPolicies(@Nullable List<FhirServiceAccessPolicyEntryResponse> accessPolicies) {
             this.accessPolicies = accessPolicies;
             return this;
         }
 
-        public Builder setAcrConfiguration(@Nullable FhirServiceAcrConfigurationResponse acrConfiguration) {
+        public Builder acrConfiguration(@Nullable FhirServiceAcrConfigurationResponse acrConfiguration) {
             this.acrConfiguration = acrConfiguration;
             return this;
         }
 
-        public Builder setAuthenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration) {
+        public Builder authenticationConfiguration(@Nullable FhirServiceAuthenticationConfigurationResponse authenticationConfiguration) {
             this.authenticationConfiguration = authenticationConfiguration;
             return this;
         }
 
-        public Builder setCorsConfiguration(@Nullable FhirServiceCorsConfigurationResponse corsConfiguration) {
+        public Builder corsConfiguration(@Nullable FhirServiceCorsConfigurationResponse corsConfiguration) {
             this.corsConfiguration = corsConfiguration;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setExportConfiguration(@Nullable FhirServiceExportConfigurationResponse exportConfiguration) {
+        public Builder exportConfiguration(@Nullable FhirServiceExportConfigurationResponse exportConfiguration) {
             this.exportConfiguration = exportConfiguration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ServiceManagedIdentityResponseIdentity identity) {
+        public Builder identity(@Nullable ServiceManagedIdentityResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

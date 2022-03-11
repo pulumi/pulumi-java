@@ -28,10 +28,10 @@ public final class IntentFollowUpPromptRejectionStatement {
      */
     private final @Nullable String responseCard;
 
-    @OutputCustomType.Constructor({"messages","responseCard"})
+    @OutputCustomType.Constructor
     private IntentFollowUpPromptRejectionStatement(
-        List<IntentFollowUpPromptRejectionStatementMessage> messages,
-        @Nullable String responseCard) {
+        @OutputCustomType.Parameter("messages") List<IntentFollowUpPromptRejectionStatementMessage> messages,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard) {
         this.messages = messages;
         this.responseCard = responseCard;
     }
@@ -77,12 +77,12 @@ public final class IntentFollowUpPromptRejectionStatement {
     	      this.responseCard = defaults.responseCard;
         }
 
-        public Builder setMessages(List<IntentFollowUpPromptRejectionStatementMessage> messages) {
+        public Builder messages(List<IntentFollowUpPromptRejectionStatementMessage> messages) {
             this.messages = Objects.requireNonNull(messages);
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }

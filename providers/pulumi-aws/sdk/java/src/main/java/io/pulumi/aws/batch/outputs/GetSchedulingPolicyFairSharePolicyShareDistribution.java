@@ -21,10 +21,10 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
      */
     private final Double weightFactor;
 
-    @OutputCustomType.Constructor({"shareIdentifier","weightFactor"})
+    @OutputCustomType.Constructor
     private GetSchedulingPolicyFairSharePolicyShareDistribution(
-        String shareIdentifier,
-        Double weightFactor) {
+        @OutputCustomType.Parameter("shareIdentifier") String shareIdentifier,
+        @OutputCustomType.Parameter("weightFactor") Double weightFactor) {
         this.shareIdentifier = shareIdentifier;
         this.weightFactor = weightFactor;
     }
@@ -66,12 +66,12 @@ public final class GetSchedulingPolicyFairSharePolicyShareDistribution {
     	      this.weightFactor = defaults.weightFactor;
         }
 
-        public Builder setShareIdentifier(String shareIdentifier) {
+        public Builder shareIdentifier(String shareIdentifier) {
             this.shareIdentifier = Objects.requireNonNull(shareIdentifier);
             return this;
         }
 
-        public Builder setWeightFactor(Double weightFactor) {
+        public Builder weightFactor(Double weightFactor) {
             this.weightFactor = Objects.requireNonNull(weightFactor);
             return this;
         }

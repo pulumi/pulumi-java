@@ -22,16 +22,16 @@ public final class GetThemeResult {
     private final @Nullable List<ThemeValues> overrides;
     private final @Nullable List<ThemeValues> values;
 
-    @OutputCustomType.Constructor({"appId","createdAt","environmentName","id","modifiedAt","name","overrides","values"})
+    @OutputCustomType.Constructor
     private GetThemeResult(
-        @Nullable String appId,
-        @Nullable String createdAt,
-        @Nullable String environmentName,
-        @Nullable String id,
-        @Nullable String modifiedAt,
-        @Nullable String name,
-        @Nullable List<ThemeValues> overrides,
-        @Nullable List<ThemeValues> values) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("environmentName") @Nullable String environmentName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("modifiedAt") @Nullable String modifiedAt,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("overrides") @Nullable List<ThemeValues> overrides,
+        @OutputCustomType.Parameter("values") @Nullable List<ThemeValues> values) {
         this.appId = appId;
         this.createdAt = createdAt;
         this.environmentName = environmentName;
@@ -101,42 +101,42 @@ public final class GetThemeResult {
     	      this.values = defaults.values;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setEnvironmentName(@Nullable String environmentName) {
+        public Builder environmentName(@Nullable String environmentName) {
             this.environmentName = environmentName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setModifiedAt(@Nullable String modifiedAt) {
+        public Builder modifiedAt(@Nullable String modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOverrides(@Nullable List<ThemeValues> overrides) {
+        public Builder overrides(@Nullable List<ThemeValues> overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setValues(@Nullable List<ThemeValues> values) {
+        public Builder values(@Nullable List<ThemeValues> values) {
             this.values = values;
             return this;
         }

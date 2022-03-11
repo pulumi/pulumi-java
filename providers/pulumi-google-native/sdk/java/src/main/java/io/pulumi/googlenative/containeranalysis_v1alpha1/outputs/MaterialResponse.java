@@ -21,10 +21,10 @@ public final class MaterialResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"digest","uri"})
+    @OutputCustomType.Constructor
     private MaterialResponse(
-        Map<String,String> digest,
-        String uri) {
+        @OutputCustomType.Parameter("digest") Map<String,String> digest,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.digest = digest;
         this.uri = uri;
     }
@@ -66,12 +66,12 @@ public final class MaterialResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDigest(Map<String,String> digest) {
+        public Builder digest(Map<String,String> digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

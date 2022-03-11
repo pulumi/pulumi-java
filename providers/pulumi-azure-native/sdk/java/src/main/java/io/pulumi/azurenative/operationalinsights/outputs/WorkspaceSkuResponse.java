@@ -28,11 +28,11 @@ public final class WorkspaceSkuResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"capacityReservationLevel","lastSkuUpdate","name"})
+    @OutputCustomType.Constructor
     private WorkspaceSkuResponse(
-        @Nullable Integer capacityReservationLevel,
-        String lastSkuUpdate,
-        String name) {
+        @OutputCustomType.Parameter("capacityReservationLevel") @Nullable Integer capacityReservationLevel,
+        @OutputCustomType.Parameter("lastSkuUpdate") String lastSkuUpdate,
+        @OutputCustomType.Parameter("name") String name) {
         this.capacityReservationLevel = capacityReservationLevel;
         this.lastSkuUpdate = lastSkuUpdate;
         this.name = name;
@@ -84,17 +84,17 @@ public final class WorkspaceSkuResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCapacityReservationLevel(@Nullable Integer capacityReservationLevel) {
+        public Builder capacityReservationLevel(@Nullable Integer capacityReservationLevel) {
             this.capacityReservationLevel = capacityReservationLevel;
             return this;
         }
 
-        public Builder setLastSkuUpdate(String lastSkuUpdate) {
+        public Builder lastSkuUpdate(String lastSkuUpdate) {
             this.lastSkuUpdate = Objects.requireNonNull(lastSkuUpdate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

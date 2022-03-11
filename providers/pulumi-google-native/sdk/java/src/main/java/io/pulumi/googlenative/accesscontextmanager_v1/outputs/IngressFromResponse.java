@@ -27,11 +27,11 @@ public final class IngressFromResponse {
      */
     private final List<IngressSourceResponse> sources;
 
-    @OutputCustomType.Constructor({"identities","identityType","sources"})
+    @OutputCustomType.Constructor
     private IngressFromResponse(
-        List<String> identities,
-        String identityType,
-        List<IngressSourceResponse> sources) {
+        @OutputCustomType.Parameter("identities") List<String> identities,
+        @OutputCustomType.Parameter("identityType") String identityType,
+        @OutputCustomType.Parameter("sources") List<IngressSourceResponse> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;
@@ -83,17 +83,17 @@ public final class IngressFromResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setIdentities(List<String> identities) {
+        public Builder identities(List<String> identities) {
             this.identities = Objects.requireNonNull(identities);
             return this;
         }
 
-        public Builder setIdentityType(String identityType) {
+        public Builder identityType(String identityType) {
             this.identityType = Objects.requireNonNull(identityType);
             return this;
         }
 
-        public Builder setSources(List<IngressSourceResponse> sources) {
+        public Builder sources(List<IngressSourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }

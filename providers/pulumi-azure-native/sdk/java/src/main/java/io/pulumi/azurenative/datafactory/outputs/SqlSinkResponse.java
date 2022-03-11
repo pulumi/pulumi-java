@@ -97,24 +97,24 @@ public final class SqlSinkResponse {
      */
     private final @Nullable Object writeBehavior;
 
-    @OutputCustomType.Constructor({"disableMetricsCollection","maxConcurrentConnections","preCopyScript","sinkRetryCount","sinkRetryWait","sqlWriterStoredProcedureName","sqlWriterTableType","sqlWriterUseTableLock","storedProcedureParameters","storedProcedureTableTypeParameterName","tableOption","type","upsertSettings","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private SqlSinkResponse(
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object preCopyScript,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        @Nullable Object sqlWriterStoredProcedureName,
-        @Nullable Object sqlWriterTableType,
-        @Nullable Object sqlWriterUseTableLock,
-        @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
-        @Nullable Object storedProcedureTableTypeParameterName,
-        @Nullable Object tableOption,
-        String type,
-        @Nullable SqlUpsertSettingsResponse upsertSettings,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        @Nullable Object writeBehavior) {
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("preCopyScript") @Nullable Object preCopyScript,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("sqlWriterStoredProcedureName") @Nullable Object sqlWriterStoredProcedureName,
+        @OutputCustomType.Parameter("sqlWriterTableType") @Nullable Object sqlWriterTableType,
+        @OutputCustomType.Parameter("sqlWriterUseTableLock") @Nullable Object sqlWriterUseTableLock,
+        @OutputCustomType.Parameter("storedProcedureParameters") @Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters,
+        @OutputCustomType.Parameter("storedProcedureTableTypeParameterName") @Nullable Object storedProcedureTableTypeParameterName,
+        @OutputCustomType.Parameter("tableOption") @Nullable Object tableOption,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("upsertSettings") @Nullable SqlUpsertSettingsResponse upsertSettings,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") @Nullable Object writeBehavior) {
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
         this.preCopyScript = preCopyScript;
@@ -297,82 +297,82 @@ public final class SqlSinkResponse {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPreCopyScript(@Nullable Object preCopyScript) {
+        public Builder preCopyScript(@Nullable Object preCopyScript) {
             this.preCopyScript = preCopyScript;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setSqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
+        public Builder sqlWriterStoredProcedureName(@Nullable Object sqlWriterStoredProcedureName) {
             this.sqlWriterStoredProcedureName = sqlWriterStoredProcedureName;
             return this;
         }
 
-        public Builder setSqlWriterTableType(@Nullable Object sqlWriterTableType) {
+        public Builder sqlWriterTableType(@Nullable Object sqlWriterTableType) {
             this.sqlWriterTableType = sqlWriterTableType;
             return this;
         }
 
-        public Builder setSqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
+        public Builder sqlWriterUseTableLock(@Nullable Object sqlWriterUseTableLock) {
             this.sqlWriterUseTableLock = sqlWriterUseTableLock;
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
-        public Builder setStoredProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
+        public Builder storedProcedureTableTypeParameterName(@Nullable Object storedProcedureTableTypeParameterName) {
             this.storedProcedureTableTypeParameterName = storedProcedureTableTypeParameterName;
             return this;
         }
 
-        public Builder setTableOption(@Nullable Object tableOption) {
+        public Builder tableOption(@Nullable Object tableOption) {
             this.tableOption = tableOption;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpsertSettings(@Nullable SqlUpsertSettingsResponse upsertSettings) {
+        public Builder upsertSettings(@Nullable SqlUpsertSettingsResponse upsertSettings) {
             this.upsertSettings = upsertSettings;
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBehavior(@Nullable Object writeBehavior) {
+        public Builder writeBehavior(@Nullable Object writeBehavior) {
             this.writeBehavior = writeBehavior;
             return this;
         }

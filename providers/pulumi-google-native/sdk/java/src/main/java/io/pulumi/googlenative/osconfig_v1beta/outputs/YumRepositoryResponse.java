@@ -26,11 +26,11 @@ public final class YumRepositoryResponse {
      */
     private final List<String> gpgKeys;
 
-    @OutputCustomType.Constructor({"baseUrl","displayName","gpgKeys"})
+    @OutputCustomType.Constructor
     private YumRepositoryResponse(
-        String baseUrl,
-        String displayName,
-        List<String> gpgKeys) {
+        @OutputCustomType.Parameter("baseUrl") String baseUrl,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("gpgKeys") List<String> gpgKeys) {
         this.baseUrl = baseUrl;
         this.displayName = displayName;
         this.gpgKeys = gpgKeys;
@@ -82,17 +82,17 @@ public final class YumRepositoryResponse {
     	      this.gpgKeys = defaults.gpgKeys;
         }
 
-        public Builder setBaseUrl(String baseUrl) {
+        public Builder baseUrl(String baseUrl) {
             this.baseUrl = Objects.requireNonNull(baseUrl);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGpgKeys(List<String> gpgKeys) {
+        public Builder gpgKeys(List<String> gpgKeys) {
             this.gpgKeys = Objects.requireNonNull(gpgKeys);
             return this;
         }

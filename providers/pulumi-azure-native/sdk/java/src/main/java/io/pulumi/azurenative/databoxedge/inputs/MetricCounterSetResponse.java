@@ -56,7 +56,7 @@ public final class MetricCounterSetResponse extends io.pulumi.resources.InvokeAr
     	      this.counters = defaults.counters;
         }
 
-        public Builder setCounters(List<MetricCounterResponse> counters) {
+        public Builder counters(List<MetricCounterResponse> counters) {
             this.counters = Objects.requireNonNull(counters);
             return this;
         }

@@ -103,22 +103,22 @@ public final class GetContactFlowModuleArgs extends io.pulumi.resources.InvokeAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContactFlowModuleId(@Nullable String contactFlowModuleId) {
+        public Builder contactFlowModuleId(@Nullable String contactFlowModuleId) {
             this.contactFlowModuleId = contactFlowModuleId;
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

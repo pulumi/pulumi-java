@@ -87,32 +87,32 @@ public final class TaskSetCapacityProviderStrategyArgs extends io.pulumi.resourc
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Input<Integer> base) {
+        public Builder base(@Nullable Input<Integer> base) {
             this.base = base;
             return this;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = Input.ofNullable(base);
             return this;
         }
 
-        public Builder setCapacityProvider(Input<String> capacityProvider) {
+        public Builder capacityProvider(Input<String> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
-        public Builder setCapacityProvider(String capacityProvider) {
+        public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Input.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
 
-        public Builder setWeight(Input<Integer> weight) {
+        public Builder weight(Input<Integer> weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Input.of(Objects.requireNonNull(weight));
             return this;
         }

@@ -22,15 +22,15 @@ public final class GetNetworkResult {
     private final Map<String,Object> options;
     private final String scope;
 
-    @OutputCustomType.Constructor({"driver","id","internal","ipamConfigs","name","options","scope"})
+    @OutputCustomType.Constructor
     private GetNetworkResult(
-        String driver,
-        String id,
-        Boolean internal,
-        List<GetNetworkIpamConfig> ipamConfigs,
-        String name,
-        Map<String,Object> options,
-        String scope) {
+        @OutputCustomType.Parameter("driver") String driver,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internal") Boolean internal,
+        @OutputCustomType.Parameter("ipamConfigs") List<GetNetworkIpamConfig> ipamConfigs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") Map<String,Object> options,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.driver = driver;
         this.id = id;
         this.internal = internal;
@@ -94,37 +94,37 @@ public final class GetNetworkResult {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInternal(Boolean internal) {
+        public Builder internal(Boolean internal) {
             this.internal = Objects.requireNonNull(internal);
             return this;
         }
 
-        public Builder setIpamConfigs(List<GetNetworkIpamConfig> ipamConfigs) {
+        public Builder ipamConfigs(List<GetNetworkIpamConfig> ipamConfigs) {
             this.ipamConfigs = Objects.requireNonNull(ipamConfigs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(Map<String,Object> options) {
+        public Builder options(Map<String,Object> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

@@ -24,11 +24,11 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
     private final String networkTier;
     private final String publicPtrDomainName;
 
-    @OutputCustomType.Constructor({"natIp","networkTier","publicPtrDomainName"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateNetworkInterfaceAccessConfig(
-        String natIp,
-        String networkTier,
-        String publicPtrDomainName) {
+        @OutputCustomType.Parameter("natIp") String natIp,
+        @OutputCustomType.Parameter("networkTier") String networkTier,
+        @OutputCustomType.Parameter("publicPtrDomainName") String publicPtrDomainName) {
         this.natIp = natIp;
         this.networkTier = networkTier;
         this.publicPtrDomainName = publicPtrDomainName;
@@ -79,17 +79,17 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig {
     	      this.publicPtrDomainName = defaults.publicPtrDomainName;
         }
 
-        public Builder setNatIp(String natIp) {
+        public Builder natIp(String natIp) {
             this.natIp = Objects.requireNonNull(natIp);
             return this;
         }
 
-        public Builder setNetworkTier(String networkTier) {
+        public Builder networkTier(String networkTier) {
             this.networkTier = Objects.requireNonNull(networkTier);
             return this;
         }
 
-        public Builder setPublicPtrDomainName(String publicPtrDomainName) {
+        public Builder publicPtrDomainName(String publicPtrDomainName) {
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }

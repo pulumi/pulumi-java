@@ -166,37 +166,37 @@ public final class GetManagedInstanceResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor({"administratorLogin","administrators","collation","dnsZone","fullyQualifiedDomainName","id","identity","instancePoolId","keyId","licenseType","location","maintenanceConfigurationId","minimalTlsVersion","name","primaryUserAssignedIdentityId","privateEndpointConnections","provisioningState","proxyOverride","publicDataEndpointEnabled","sku","state","storageAccountType","storageSizeInGB","subnetId","tags","timezoneId","type","vCores","zoneRedundant"})
+    @OutputCustomType.Constructor
     private GetManagedInstanceResult(
-        @Nullable String administratorLogin,
-        @Nullable ManagedInstanceExternalAdministratorResponse administrators,
-        @Nullable String collation,
-        String dnsZone,
-        String fullyQualifiedDomainName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String instancePoolId,
-        @Nullable String keyId,
-        @Nullable String licenseType,
-        String location,
-        @Nullable String maintenanceConfigurationId,
-        @Nullable String minimalTlsVersion,
-        String name,
-        @Nullable String primaryUserAssignedIdentityId,
-        List<ManagedInstancePecPropertyResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String proxyOverride,
-        @Nullable Boolean publicDataEndpointEnabled,
-        @Nullable SkuResponse sku,
-        String state,
-        @Nullable String storageAccountType,
-        @Nullable Integer storageSizeInGB,
-        @Nullable String subnetId,
-        @Nullable Map<String,String> tags,
-        @Nullable String timezoneId,
-        String type,
-        @Nullable Integer vCores,
-        @Nullable Boolean zoneRedundant) {
+        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @OutputCustomType.Parameter("administrators") @Nullable ManagedInstanceExternalAdministratorResponse administrators,
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("dnsZone") String dnsZone,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("instancePoolId") @Nullable String instancePoolId,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ManagedInstancePecPropertyResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("proxyOverride") @Nullable String proxyOverride,
+        @OutputCustomType.Parameter("publicDataEndpointEnabled") @Nullable Boolean publicDataEndpointEnabled,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType,
+        @OutputCustomType.Parameter("storageSizeInGB") @Nullable Integer storageSizeInGB,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timezoneId") @Nullable String timezoneId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vCores") @Nullable Integer vCores,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
         this.collation = collation;
@@ -509,147 +509,147 @@ public final class GetManagedInstanceResult {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setAdministrators(@Nullable ManagedInstanceExternalAdministratorResponse administrators) {
+        public Builder administrators(@Nullable ManagedInstanceExternalAdministratorResponse administrators) {
             this.administrators = administrators;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setDnsZone(String dnsZone) {
+        public Builder dnsZone(String dnsZone) {
             this.dnsZone = Objects.requireNonNull(dnsZone);
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInstancePoolId(@Nullable String instancePoolId) {
+        public Builder instancePoolId(@Nullable String instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ManagedInstancePecPropertyResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ManagedInstancePecPropertyResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProxyOverride(@Nullable String proxyOverride) {
+        public Builder proxyOverride(@Nullable String proxyOverride) {
             this.proxyOverride = proxyOverride;
             return this;
         }
 
-        public Builder setPublicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
+        public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageSizeInGB(@Nullable Integer storageSizeInGB) {
+        public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
             this.storageSizeInGB = storageSizeInGB;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimezoneId(@Nullable String timezoneId) {
+        public Builder timezoneId(@Nullable String timezoneId) {
             this.timezoneId = timezoneId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVCores(@Nullable Integer vCores) {
+        public Builder vCores(@Nullable Integer vCores) {
             this.vCores = vCores;
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }

@@ -53,16 +53,16 @@ public final class SparkJobResponse {
      */
     private final Map<String,String> properties;
 
-    @OutputCustomType.Constructor({"archiveUris","args","fileUris","jarFileUris","loggingConfig","mainClass","mainJarFileUri","properties"})
+    @OutputCustomType.Constructor
     private SparkJobResponse(
-        List<String> archiveUris,
-        List<String> args,
-        List<String> fileUris,
-        List<String> jarFileUris,
-        LoggingConfigResponse loggingConfig,
-        String mainClass,
-        String mainJarFileUri,
-        Map<String,String> properties) {
+        @OutputCustomType.Parameter("archiveUris") List<String> archiveUris,
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("fileUris") List<String> fileUris,
+        @OutputCustomType.Parameter("jarFileUris") List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") LoggingConfigResponse loggingConfig,
+        @OutputCustomType.Parameter("mainClass") String mainClass,
+        @OutputCustomType.Parameter("mainJarFileUri") String mainJarFileUri,
+        @OutputCustomType.Parameter("properties") Map<String,String> properties) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;
@@ -164,42 +164,42 @@ public final class SparkJobResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setArchiveUris(List<String> archiveUris) {
+        public Builder archiveUris(List<String> archiveUris) {
             this.archiveUris = Objects.requireNonNull(archiveUris);
             return this;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setFileUris(List<String> fileUris) {
+        public Builder fileUris(List<String> fileUris) {
             this.fileUris = Objects.requireNonNull(fileUris);
             return this;
         }
 
-        public Builder setJarFileUris(List<String> jarFileUris) {
+        public Builder jarFileUris(List<String> jarFileUris) {
             this.jarFileUris = Objects.requireNonNull(jarFileUris);
             return this;
         }
 
-        public Builder setLoggingConfig(LoggingConfigResponse loggingConfig) {
+        public Builder loggingConfig(LoggingConfigResponse loggingConfig) {
             this.loggingConfig = Objects.requireNonNull(loggingConfig);
             return this;
         }
 
-        public Builder setMainClass(String mainClass) {
+        public Builder mainClass(String mainClass) {
             this.mainClass = Objects.requireNonNull(mainClass);
             return this;
         }
 
-        public Builder setMainJarFileUri(String mainJarFileUri) {
+        public Builder mainJarFileUri(String mainJarFileUri) {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
 
-        public Builder setProperties(Map<String,String> properties) {
+        public Builder properties(Map<String,String> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

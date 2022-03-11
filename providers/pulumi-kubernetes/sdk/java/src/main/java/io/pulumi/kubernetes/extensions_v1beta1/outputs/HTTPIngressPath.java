@@ -38,11 +38,11 @@ public final class HTTPIngressPath {
      */
     private final @Nullable String pathType;
 
-    @OutputCustomType.Constructor({"backend","path","pathType"})
+    @OutputCustomType.Constructor
     private HTTPIngressPath(
-        IngressBackend backend,
-        @Nullable String path,
-        @Nullable String pathType) {
+        @OutputCustomType.Parameter("backend") IngressBackend backend,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("pathType") @Nullable String pathType) {
         this.backend = backend;
         this.path = path;
         this.pathType = pathType;
@@ -104,17 +104,17 @@ public final class HTTPIngressPath {
     	      this.pathType = defaults.pathType;
         }
 
-        public Builder setBackend(IngressBackend backend) {
+        public Builder backend(IngressBackend backend) {
             this.backend = Objects.requireNonNull(backend);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPathType(@Nullable String pathType) {
+        public Builder pathType(@Nullable String pathType) {
             this.pathType = pathType;
             return this;
         }

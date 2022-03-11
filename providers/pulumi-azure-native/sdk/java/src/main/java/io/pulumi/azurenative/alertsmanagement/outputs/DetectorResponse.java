@@ -45,14 +45,14 @@ public final class DetectorResponse {
      */
     private final @Nullable List<String> supportedResourceTypes;
 
-    @OutputCustomType.Constructor({"description","id","imagePaths","name","parameters","supportedResourceTypes"})
+    @OutputCustomType.Constructor
     private DetectorResponse(
-        @Nullable String description,
-        String id,
-        @Nullable List<String> imagePaths,
-        @Nullable String name,
-        @Nullable Map<String,Object> parameters,
-        @Nullable List<String> supportedResourceTypes) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imagePaths") @Nullable List<String> imagePaths,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,Object> parameters,
+        @OutputCustomType.Parameter("supportedResourceTypes") @Nullable List<String> supportedResourceTypes) {
         this.description = description;
         this.id = id;
         this.imagePaths = imagePaths;
@@ -134,32 +134,32 @@ public final class DetectorResponse {
     	      this.supportedResourceTypes = defaults.supportedResourceTypes;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImagePaths(@Nullable List<String> imagePaths) {
+        public Builder imagePaths(@Nullable List<String> imagePaths) {
             this.imagePaths = imagePaths;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,Object> parameters) {
+        public Builder parameters(@Nullable Map<String,Object> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSupportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
+        public Builder supportedResourceTypes(@Nullable List<String> supportedResourceTypes) {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }

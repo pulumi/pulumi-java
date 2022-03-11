@@ -29,11 +29,11 @@ public final class LoadBalancerIngress {
      */
     private final @Nullable List<PortStatus> ports;
 
-    @OutputCustomType.Constructor({"hostname","ip","ports"})
+    @OutputCustomType.Constructor
     private LoadBalancerIngress(
-        @Nullable String hostname,
-        @Nullable String ip,
-        @Nullable List<PortStatus> ports) {
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("ports") @Nullable List<PortStatus> ports) {
         this.hostname = hostname;
         this.ip = ip;
         this.ports = ports;
@@ -85,17 +85,17 @@ public final class LoadBalancerIngress {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<PortStatus> ports) {
+        public Builder ports(@Nullable List<PortStatus> ports) {
             this.ports = ports;
             return this;
         }

@@ -29,11 +29,11 @@ public final class ContainerState {
      */
     private final @Nullable ContainerStateWaiting waiting;
 
-    @OutputCustomType.Constructor({"running","terminated","waiting"})
+    @OutputCustomType.Constructor
     private ContainerState(
-        @Nullable ContainerStateRunning running,
-        @Nullable ContainerStateTerminated terminated,
-        @Nullable ContainerStateWaiting waiting) {
+        @OutputCustomType.Parameter("running") @Nullable ContainerStateRunning running,
+        @OutputCustomType.Parameter("terminated") @Nullable ContainerStateTerminated terminated,
+        @OutputCustomType.Parameter("waiting") @Nullable ContainerStateWaiting waiting) {
         this.running = running;
         this.terminated = terminated;
         this.waiting = waiting;
@@ -85,17 +85,17 @@ public final class ContainerState {
     	      this.waiting = defaults.waiting;
         }
 
-        public Builder setRunning(@Nullable ContainerStateRunning running) {
+        public Builder running(@Nullable ContainerStateRunning running) {
             this.running = running;
             return this;
         }
 
-        public Builder setTerminated(@Nullable ContainerStateTerminated terminated) {
+        public Builder terminated(@Nullable ContainerStateTerminated terminated) {
             this.terminated = terminated;
             return this;
         }
 
-        public Builder setWaiting(@Nullable ContainerStateWaiting waiting) {
+        public Builder waiting(@Nullable ContainerStateWaiting waiting) {
             this.waiting = waiting;
             return this;
         }

@@ -176,92 +176,92 @@ public final class UserDefinedFunctionState extends io.pulumi.resources.Resource
     	      this.resourceUris = defaults.resourceUris;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCatalogId(@Nullable Input<String> catalogId) {
+        public Builder catalogId(@Nullable Input<String> catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = Input.ofNullable(catalogId);
             return this;
         }
 
-        public Builder setClassName(@Nullable Input<String> className) {
+        public Builder className(@Nullable Input<String> className) {
             this.className = className;
             return this;
         }
 
-        public Builder setClassName(@Nullable String className) {
+        public Builder className(@Nullable String className) {
             this.className = Input.ofNullable(className);
             return this;
         }
 
-        public Builder setCreateTime(@Nullable Input<String> createTime) {
+        public Builder createTime(@Nullable Input<String> createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = Input.ofNullable(createTime);
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable Input<String> databaseName) {
+        public Builder databaseName(@Nullable Input<String> databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = Input.ofNullable(databaseName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerName(@Nullable Input<String> ownerName) {
+        public Builder ownerName(@Nullable Input<String> ownerName) {
             this.ownerName = ownerName;
             return this;
         }
 
-        public Builder setOwnerName(@Nullable String ownerName) {
+        public Builder ownerName(@Nullable String ownerName) {
             this.ownerName = Input.ofNullable(ownerName);
             return this;
         }
 
-        public Builder setOwnerType(@Nullable Input<String> ownerType) {
+        public Builder ownerType(@Nullable Input<String> ownerType) {
             this.ownerType = ownerType;
             return this;
         }
 
-        public Builder setOwnerType(@Nullable String ownerType) {
+        public Builder ownerType(@Nullable String ownerType) {
             this.ownerType = Input.ofNullable(ownerType);
             return this;
         }
 
-        public Builder setResourceUris(@Nullable Input<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
+        public Builder resourceUris(@Nullable Input<List<UserDefinedFunctionResourceUriGetArgs>> resourceUris) {
             this.resourceUris = resourceUris;
             return this;
         }
 
-        public Builder setResourceUris(@Nullable List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
+        public Builder resourceUris(@Nullable List<UserDefinedFunctionResourceUriGetArgs> resourceUris) {
             this.resourceUris = Input.ofNullable(resourceUris);
             return this;
         }

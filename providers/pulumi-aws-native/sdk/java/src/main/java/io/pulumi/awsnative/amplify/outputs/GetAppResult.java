@@ -31,22 +31,22 @@ public final class GetAppResult {
     private final @Nullable String repository;
     private final @Nullable List<AppTag> tags;
 
-    @OutputCustomType.Constructor({"appId","appName","arn","buildSpec","customHeaders","customRules","defaultDomain","description","enableBranchAutoDeletion","environmentVariables","iAMServiceRole","name","repository","tags"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        @Nullable String appId,
-        @Nullable String appName,
-        @Nullable String arn,
-        @Nullable String buildSpec,
-        @Nullable String customHeaders,
-        @Nullable List<AppCustomRule> customRules,
-        @Nullable String defaultDomain,
-        @Nullable String description,
-        @Nullable Boolean enableBranchAutoDeletion,
-        @Nullable List<AppEnvironmentVariable> environmentVariables,
-        @Nullable String iAMServiceRole,
-        @Nullable String name,
-        @Nullable String repository,
-        @Nullable List<AppTag> tags) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appName") @Nullable String appName,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("customHeaders") @Nullable String customHeaders,
+        @OutputCustomType.Parameter("customRules") @Nullable List<AppCustomRule> customRules,
+        @OutputCustomType.Parameter("defaultDomain") @Nullable String defaultDomain,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableBranchAutoDeletion") @Nullable Boolean enableBranchAutoDeletion,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable List<AppEnvironmentVariable> environmentVariables,
+        @OutputCustomType.Parameter("iAMServiceRole") @Nullable String iAMServiceRole,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tags") @Nullable List<AppTag> tags) {
         this.appId = appId;
         this.appName = appName;
         this.arn = arn;
@@ -152,72 +152,72 @@ public final class GetAppResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppName(@Nullable String appName) {
+        public Builder appName(@Nullable String appName) {
             this.appName = appName;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setCustomHeaders(@Nullable String customHeaders) {
+        public Builder customHeaders(@Nullable String customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setCustomRules(@Nullable List<AppCustomRule> customRules) {
+        public Builder customRules(@Nullable List<AppCustomRule> customRules) {
             this.customRules = customRules;
             return this;
         }
 
-        public Builder setDefaultDomain(@Nullable String defaultDomain) {
+        public Builder defaultDomain(@Nullable String defaultDomain) {
             this.defaultDomain = defaultDomain;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
+        public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
             this.enableBranchAutoDeletion = enableBranchAutoDeletion;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<AppEnvironmentVariable> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setIAMServiceRole(@Nullable String iAMServiceRole) {
+        public Builder iAMServiceRole(@Nullable String iAMServiceRole) {
             this.iAMServiceRole = iAMServiceRole;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppTag> tags) {
+        public Builder tags(@Nullable List<AppTag> tags) {
             this.tags = tags;
             return this;
         }

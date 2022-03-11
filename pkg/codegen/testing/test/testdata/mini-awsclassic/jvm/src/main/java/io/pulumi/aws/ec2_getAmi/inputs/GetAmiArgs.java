@@ -72,12 +72,12 @@ public final class GetAmiArgs extends io.pulumi.resources.InvokeArgs {
     	      this.owners = defaults.owners;
         }
 
-        public Builder setExecutableUsers(@Nullable List<String> executableUsers) {
+        public Builder executableUsers(@Nullable List<String> executableUsers) {
             this.executableUsers = executableUsers;
             return this;
         }
 
-        public Builder setOwners(List<String> owners) {
+        public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }

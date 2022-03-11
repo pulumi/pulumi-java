@@ -23,10 +23,10 @@ public final class BrokerConfiguration {
      */
     private final @Nullable Integer revision;
 
-    @OutputCustomType.Constructor({"id","revision"})
+    @OutputCustomType.Constructor
     private BrokerConfiguration(
-        @Nullable String id,
-        @Nullable Integer revision) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("revision") @Nullable Integer revision) {
         this.id = id;
         this.revision = revision;
     }
@@ -68,12 +68,12 @@ public final class BrokerConfiguration {
     	      this.revision = defaults.revision;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRevision(@Nullable Integer revision) {
+        public Builder revision(@Nullable Integer revision) {
             this.revision = revision;
             return this;
         }

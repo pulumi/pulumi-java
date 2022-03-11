@@ -30,11 +30,11 @@ public final class LabelCategoryResponse {
      */
     private final @Nullable String displayName;
 
-    @OutputCustomType.Constructor({"allowMultiSelect","classes","displayName"})
+    @OutputCustomType.Constructor
     private LabelCategoryResponse(
-        @Nullable Boolean allowMultiSelect,
-        Map<String,LabelClassResponse> classes,
-        @Nullable String displayName) {
+        @OutputCustomType.Parameter("allowMultiSelect") @Nullable Boolean allowMultiSelect,
+        @OutputCustomType.Parameter("classes") Map<String,LabelClassResponse> classes,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName) {
         this.allowMultiSelect = allowMultiSelect;
         this.classes = classes;
         this.displayName = displayName;
@@ -86,17 +86,17 @@ public final class LabelCategoryResponse {
     	      this.displayName = defaults.displayName;
         }
 
-        public Builder setAllowMultiSelect(@Nullable Boolean allowMultiSelect) {
+        public Builder allowMultiSelect(@Nullable Boolean allowMultiSelect) {
             this.allowMultiSelect = allowMultiSelect;
             return this;
         }
 
-        public Builder setClasses(Map<String,LabelClassResponse> classes) {
+        public Builder classes(Map<String,LabelClassResponse> classes) {
             this.classes = Objects.requireNonNull(classes);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }

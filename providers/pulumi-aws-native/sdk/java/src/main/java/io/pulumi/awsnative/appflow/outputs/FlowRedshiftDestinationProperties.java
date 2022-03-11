@@ -17,12 +17,12 @@ public final class FlowRedshiftDestinationProperties {
     private final String intermediateBucketName;
     private final String object;
 
-    @OutputCustomType.Constructor({"bucketPrefix","errorHandlingConfig","intermediateBucketName","object"})
+    @OutputCustomType.Constructor
     private FlowRedshiftDestinationProperties(
-        @Nullable String bucketPrefix,
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        String intermediateBucketName,
-        String object) {
+        @OutputCustomType.Parameter("bucketPrefix") @Nullable String bucketPrefix,
+        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @OutputCustomType.Parameter("intermediateBucketName") String intermediateBucketName,
+        @OutputCustomType.Parameter("object") String object) {
         this.bucketPrefix = bucketPrefix;
         this.errorHandlingConfig = errorHandlingConfig;
         this.intermediateBucketName = intermediateBucketName;
@@ -68,22 +68,22 @@ public final class FlowRedshiftDestinationProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setBucketPrefix(@Nullable String bucketPrefix) {
+        public Builder bucketPrefix(@Nullable String bucketPrefix) {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setIntermediateBucketName(String intermediateBucketName) {
+        public Builder intermediateBucketName(String intermediateBucketName) {
             this.intermediateBucketName = Objects.requireNonNull(intermediateBucketName);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

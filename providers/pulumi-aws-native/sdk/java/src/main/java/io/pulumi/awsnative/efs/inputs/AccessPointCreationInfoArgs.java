@@ -85,32 +85,32 @@ public final class AccessPointCreationInfoArgs extends io.pulumi.resources.Resou
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setOwnerGid(Input<String> ownerGid) {
+        public Builder ownerGid(Input<String> ownerGid) {
             this.ownerGid = Objects.requireNonNull(ownerGid);
             return this;
         }
 
-        public Builder setOwnerGid(String ownerGid) {
+        public Builder ownerGid(String ownerGid) {
             this.ownerGid = Input.of(Objects.requireNonNull(ownerGid));
             return this;
         }
 
-        public Builder setOwnerUid(Input<String> ownerUid) {
+        public Builder ownerUid(Input<String> ownerUid) {
             this.ownerUid = Objects.requireNonNull(ownerUid);
             return this;
         }
 
-        public Builder setOwnerUid(String ownerUid) {
+        public Builder ownerUid(String ownerUid) {
             this.ownerUid = Input.of(Objects.requireNonNull(ownerUid));
             return this;
         }
 
-        public Builder setPermissions(Input<String> permissions) {
+        public Builder permissions(Input<String> permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Input.of(Objects.requireNonNull(permissions));
             return this;
         }

@@ -20,10 +20,10 @@ public final class RecommendedActionErrorInfoResponse {
      */
     private final String isRetryable;
 
-    @OutputCustomType.Constructor({"errorCode","isRetryable"})
+    @OutputCustomType.Constructor
     private RecommendedActionErrorInfoResponse(
-        String errorCode,
-        String isRetryable) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("isRetryable") String isRetryable) {
         this.errorCode = errorCode;
         this.isRetryable = isRetryable;
     }
@@ -65,12 +65,12 @@ public final class RecommendedActionErrorInfoResponse {
     	      this.isRetryable = defaults.isRetryable;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setIsRetryable(String isRetryable) {
+        public Builder isRetryable(String isRetryable) {
             this.isRetryable = Objects.requireNonNull(isRetryable);
             return this;
         }

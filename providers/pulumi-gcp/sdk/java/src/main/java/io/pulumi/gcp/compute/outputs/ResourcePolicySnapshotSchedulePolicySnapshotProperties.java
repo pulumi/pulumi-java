@@ -30,11 +30,11 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
      */
     private final @Nullable String storageLocations;
 
-    @OutputCustomType.Constructor({"guestFlush","labels","storageLocations"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicySnapshotProperties(
-        @Nullable Boolean guestFlush,
-        @Nullable Map<String,String> labels,
-        @Nullable String storageLocations) {
+        @OutputCustomType.Parameter("guestFlush") @Nullable Boolean guestFlush,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("storageLocations") @Nullable String storageLocations) {
         this.guestFlush = guestFlush;
         this.labels = labels;
         this.storageLocations = storageLocations;
@@ -87,17 +87,17 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotProperties {
     	      this.storageLocations = defaults.storageLocations;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setStorageLocations(@Nullable String storageLocations) {
+        public Builder storageLocations(@Nullable String storageLocations) {
             this.storageLocations = storageLocations;
             return this;
         }

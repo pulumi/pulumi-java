@@ -182,92 +182,92 @@ public final class DelegatedAdministratorState extends io.pulumi.resources.Resou
     	      this.status = defaults.status;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDelegationEnabledDate(@Nullable Input<String> delegationEnabledDate) {
+        public Builder delegationEnabledDate(@Nullable Input<String> delegationEnabledDate) {
             this.delegationEnabledDate = delegationEnabledDate;
             return this;
         }
 
-        public Builder setDelegationEnabledDate(@Nullable String delegationEnabledDate) {
+        public Builder delegationEnabledDate(@Nullable String delegationEnabledDate) {
             this.delegationEnabledDate = Input.ofNullable(delegationEnabledDate);
             return this;
         }
 
-        public Builder setEmail(@Nullable Input<String> email) {
+        public Builder email(@Nullable Input<String> email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = Input.ofNullable(email);
             return this;
         }
 
-        public Builder setJoinedMethod(@Nullable Input<String> joinedMethod) {
+        public Builder joinedMethod(@Nullable Input<String> joinedMethod) {
             this.joinedMethod = joinedMethod;
             return this;
         }
 
-        public Builder setJoinedMethod(@Nullable String joinedMethod) {
+        public Builder joinedMethod(@Nullable String joinedMethod) {
             this.joinedMethod = Input.ofNullable(joinedMethod);
             return this;
         }
 
-        public Builder setJoinedTimestamp(@Nullable Input<String> joinedTimestamp) {
+        public Builder joinedTimestamp(@Nullable Input<String> joinedTimestamp) {
             this.joinedTimestamp = joinedTimestamp;
             return this;
         }
 
-        public Builder setJoinedTimestamp(@Nullable String joinedTimestamp) {
+        public Builder joinedTimestamp(@Nullable String joinedTimestamp) {
             this.joinedTimestamp = Input.ofNullable(joinedTimestamp);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable Input<String> servicePrincipal) {
+        public Builder servicePrincipal(@Nullable Input<String> servicePrincipal) {
             this.servicePrincipal = servicePrincipal;
             return this;
         }
 
-        public Builder setServicePrincipal(@Nullable String servicePrincipal) {
+        public Builder servicePrincipal(@Nullable String servicePrincipal) {
             this.servicePrincipal = Input.ofNullable(servicePrincipal);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

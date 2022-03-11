@@ -47,15 +47,15 @@ public final class AddressResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"addressLine1","addressLine2","addressLine3","city","country","postalCode","state"})
+    @OutputCustomType.Constructor
     private AddressResponse(
-        @Nullable String addressLine1,
-        @Nullable String addressLine2,
-        @Nullable String addressLine3,
-        @Nullable String city,
-        String country,
-        @Nullable String postalCode,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("addressLine1") @Nullable String addressLine1,
+        @OutputCustomType.Parameter("addressLine2") @Nullable String addressLine2,
+        @OutputCustomType.Parameter("addressLine3") @Nullable String addressLine3,
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("country") String country,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.addressLine1 = addressLine1;
         this.addressLine2 = addressLine2;
         this.addressLine3 = addressLine3;
@@ -147,37 +147,37 @@ public final class AddressResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAddressLine1(@Nullable String addressLine1) {
+        public Builder addressLine1(@Nullable String addressLine1) {
             this.addressLine1 = addressLine1;
             return this;
         }
 
-        public Builder setAddressLine2(@Nullable String addressLine2) {
+        public Builder addressLine2(@Nullable String addressLine2) {
             this.addressLine2 = addressLine2;
             return this;
         }
 
-        public Builder setAddressLine3(@Nullable String addressLine3) {
+        public Builder addressLine3(@Nullable String addressLine3) {
             this.addressLine3 = addressLine3;
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCountry(String country) {
+        public Builder country(String country) {
             this.country = Objects.requireNonNull(country);
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

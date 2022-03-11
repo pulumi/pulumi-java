@@ -53,12 +53,12 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(Input<Map<String,String>> tags) {
+        public Builder tags(Input<Map<String,String>> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Input.of(Objects.requireNonNull(tags));
             return this;
         }

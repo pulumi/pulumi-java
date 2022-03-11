@@ -155,72 +155,72 @@ public final class VideoAnalyzerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountName(@Nullable Input<String> accountName) {
+        public Builder accountName(@Nullable Input<String> accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = Input.ofNullable(accountName);
             return this;
         }
 
-        public Builder setEncryption(Input<AccountEncryptionArgs> encryption) {
+        public Builder encryption(Input<AccountEncryptionArgs> encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setEncryption(AccountEncryptionArgs encryption) {
+        public Builder encryption(AccountEncryptionArgs encryption) {
             this.encryption = Input.of(Objects.requireNonNull(encryption));
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<VideoAnalyzerIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<VideoAnalyzerIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable VideoAnalyzerIdentityArgs identity) {
+        public Builder identity(@Nullable VideoAnalyzerIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStorageAccounts(Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(Input<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = Objects.requireNonNull(storageAccounts);
             return this;
         }
 
-        public Builder setStorageAccounts(List<StorageAccountArgs> storageAccounts) {
+        public Builder storageAccounts(List<StorageAccountArgs> storageAccounts) {
             this.storageAccounts = Input.of(Objects.requireNonNull(storageAccounts));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -41,13 +41,13 @@ public final class VolumeResponse {
      */
     private final @Nullable Map<String,String> secret;
 
-    @OutputCustomType.Constructor({"azureFile","emptyDir","gitRepo","name","secret"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        @Nullable AzureFileVolumeResponse azureFile,
-        @Nullable Object emptyDir,
-        @Nullable GitRepoVolumeResponse gitRepo,
-        String name,
-        @Nullable Map<String,String> secret) {
+        @OutputCustomType.Parameter("azureFile") @Nullable AzureFileVolumeResponse azureFile,
+        @OutputCustomType.Parameter("emptyDir") @Nullable Object emptyDir,
+        @OutputCustomType.Parameter("gitRepo") @Nullable GitRepoVolumeResponse gitRepo,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("secret") @Nullable Map<String,String> secret) {
         this.azureFile = azureFile;
         this.emptyDir = emptyDir;
         this.gitRepo = gitRepo;
@@ -119,27 +119,27 @@ public final class VolumeResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setAzureFile(@Nullable AzureFileVolumeResponse azureFile) {
+        public Builder azureFile(@Nullable AzureFileVolumeResponse azureFile) {
             this.azureFile = azureFile;
             return this;
         }
 
-        public Builder setEmptyDir(@Nullable Object emptyDir) {
+        public Builder emptyDir(@Nullable Object emptyDir) {
             this.emptyDir = emptyDir;
             return this;
         }
 
-        public Builder setGitRepo(@Nullable GitRepoVolumeResponse gitRepo) {
+        public Builder gitRepo(@Nullable GitRepoVolumeResponse gitRepo) {
             this.gitRepo = gitRepo;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSecret(@Nullable Map<String,String> secret) {
+        public Builder secret(@Nullable Map<String,String> secret) {
             this.secret = secret;
             return this;
         }

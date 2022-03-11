@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"title"})
-    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(String title) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse(@OutputCustomType.Parameter("title") String title) {
         this.title = title;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSuggestionResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

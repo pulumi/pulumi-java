@@ -17,8 +17,8 @@ public final class LiteTopicReservationConfig {
      */
     private final @Nullable String throughputReservation;
 
-    @OutputCustomType.Constructor({"throughputReservation"})
-    private LiteTopicReservationConfig(@Nullable String throughputReservation) {
+    @OutputCustomType.Constructor
+    private LiteTopicReservationConfig(@OutputCustomType.Parameter("throughputReservation") @Nullable String throughputReservation) {
         this.throughputReservation = throughputReservation;
     }
 
@@ -50,7 +50,7 @@ public final class LiteTopicReservationConfig {
     	      this.throughputReservation = defaults.throughputReservation;
         }
 
-        public Builder setThroughputReservation(@Nullable String throughputReservation) {
+        public Builder throughputReservation(@Nullable String throughputReservation) {
             this.throughputReservation = throughputReservation;
             return this;
         }

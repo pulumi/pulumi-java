@@ -253,132 +253,132 @@ public final class JobDefinitionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.userConfirmation = defaults.userConfirmation;
         }
 
-        public Builder setCustomerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
+        public Builder customerSecrets(@Nullable Input<List<CustomerSecretArgs>> customerSecrets) {
             this.customerSecrets = customerSecrets;
             return this;
         }
 
-        public Builder setCustomerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
+        public Builder customerSecrets(@Nullable List<CustomerSecretArgs> customerSecrets) {
             this.customerSecrets = Input.ofNullable(customerSecrets);
             return this;
         }
 
-        public Builder setDataManagerName(Input<String> dataManagerName) {
+        public Builder dataManagerName(Input<String> dataManagerName) {
             this.dataManagerName = Objects.requireNonNull(dataManagerName);
             return this;
         }
 
-        public Builder setDataManagerName(String dataManagerName) {
+        public Builder dataManagerName(String dataManagerName) {
             this.dataManagerName = Input.of(Objects.requireNonNull(dataManagerName));
             return this;
         }
 
-        public Builder setDataServiceInput(@Nullable Input<Object> dataServiceInput) {
+        public Builder dataServiceInput(@Nullable Input<Object> dataServiceInput) {
             this.dataServiceInput = dataServiceInput;
             return this;
         }
 
-        public Builder setDataServiceInput(@Nullable Object dataServiceInput) {
+        public Builder dataServiceInput(@Nullable Object dataServiceInput) {
             this.dataServiceInput = Input.ofNullable(dataServiceInput);
             return this;
         }
 
-        public Builder setDataServiceName(Input<String> dataServiceName) {
+        public Builder dataServiceName(Input<String> dataServiceName) {
             this.dataServiceName = Objects.requireNonNull(dataServiceName);
             return this;
         }
 
-        public Builder setDataServiceName(String dataServiceName) {
+        public Builder dataServiceName(String dataServiceName) {
             this.dataServiceName = Input.of(Objects.requireNonNull(dataServiceName));
             return this;
         }
 
-        public Builder setDataSinkId(Input<String> dataSinkId) {
+        public Builder dataSinkId(Input<String> dataSinkId) {
             this.dataSinkId = Objects.requireNonNull(dataSinkId);
             return this;
         }
 
-        public Builder setDataSinkId(String dataSinkId) {
+        public Builder dataSinkId(String dataSinkId) {
             this.dataSinkId = Input.of(Objects.requireNonNull(dataSinkId));
             return this;
         }
 
-        public Builder setDataSourceId(Input<String> dataSourceId) {
+        public Builder dataSourceId(Input<String> dataSourceId) {
             this.dataSourceId = Objects.requireNonNull(dataSourceId);
             return this;
         }
 
-        public Builder setDataSourceId(String dataSourceId) {
+        public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = Input.of(Objects.requireNonNull(dataSourceId));
             return this;
         }
 
-        public Builder setJobDefinitionName(@Nullable Input<String> jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable Input<String> jobDefinitionName) {
             this.jobDefinitionName = jobDefinitionName;
             return this;
         }
 
-        public Builder setJobDefinitionName(@Nullable String jobDefinitionName) {
+        public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
             this.jobDefinitionName = Input.ofNullable(jobDefinitionName);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunLocation(@Nullable Input<RunLocation> runLocation) {
+        public Builder runLocation(@Nullable Input<RunLocation> runLocation) {
             this.runLocation = runLocation;
             return this;
         }
 
-        public Builder setRunLocation(@Nullable RunLocation runLocation) {
+        public Builder runLocation(@Nullable RunLocation runLocation) {
             this.runLocation = Input.ofNullable(runLocation);
             return this;
         }
 
-        public Builder setSchedules(@Nullable Input<List<ScheduleArgs>> schedules) {
+        public Builder schedules(@Nullable Input<List<ScheduleArgs>> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<ScheduleArgs> schedules) {
+        public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
             this.schedules = Input.ofNullable(schedules);
             return this;
         }
 
-        public Builder setState(Input<State> state) {
+        public Builder state(Input<State> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(State state) {
+        public Builder state(State state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setUserConfirmation(@Nullable Input<UserConfirmation> userConfirmation) {
+        public Builder userConfirmation(@Nullable Input<UserConfirmation> userConfirmation) {
             this.userConfirmation = userConfirmation;
             return this;
         }
 
-        public Builder setUserConfirmation(@Nullable UserConfirmation userConfirmation) {
+        public Builder userConfirmation(@Nullable UserConfirmation userConfirmation) {
             this.userConfirmation = Input.ofNullable(userConfirmation);
             return this;
         }

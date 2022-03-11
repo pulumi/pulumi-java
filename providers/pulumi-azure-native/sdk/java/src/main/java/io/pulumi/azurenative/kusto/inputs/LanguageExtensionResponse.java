@@ -57,7 +57,7 @@ public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeA
     	      this.languageExtensionName = defaults.languageExtensionName;
         }
 
-        public Builder setLanguageExtensionName(@Nullable String languageExtensionName) {
+        public Builder languageExtensionName(@Nullable String languageExtensionName) {
             this.languageExtensionName = languageExtensionName;
             return this;
         }

@@ -53,16 +53,16 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
      */
     private final @Nullable Boolean supportsEmailNotifications;
 
-    @OutputCustomType.Constructor({"description","displayName","helpUrl","isEnabledByDefault","isHidden","isInPreview","name","supportsEmailNotifications"})
+    @OutputCustomType.Constructor
     private ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String helpUrl,
-        @Nullable Boolean isEnabledByDefault,
-        @Nullable Boolean isHidden,
-        @Nullable Boolean isInPreview,
-        @Nullable String name,
-        @Nullable Boolean supportsEmailNotifications) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("helpUrl") @Nullable String helpUrl,
+        @OutputCustomType.Parameter("isEnabledByDefault") @Nullable Boolean isEnabledByDefault,
+        @OutputCustomType.Parameter("isHidden") @Nullable Boolean isHidden,
+        @OutputCustomType.Parameter("isInPreview") @Nullable Boolean isInPreview,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("supportsEmailNotifications") @Nullable Boolean supportsEmailNotifications) {
         this.description = description;
         this.displayName = displayName;
         this.helpUrl = helpUrl;
@@ -164,42 +164,42 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
     	      this.supportsEmailNotifications = defaults.supportsEmailNotifications;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setHelpUrl(@Nullable String helpUrl) {
+        public Builder helpUrl(@Nullable String helpUrl) {
             this.helpUrl = helpUrl;
             return this;
         }
 
-        public Builder setIsEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
+        public Builder isEnabledByDefault(@Nullable Boolean isEnabledByDefault) {
             this.isEnabledByDefault = isEnabledByDefault;
             return this;
         }
 
-        public Builder setIsHidden(@Nullable Boolean isHidden) {
+        public Builder isHidden(@Nullable Boolean isHidden) {
             this.isHidden = isHidden;
             return this;
         }
 
-        public Builder setIsInPreview(@Nullable Boolean isInPreview) {
+        public Builder isInPreview(@Nullable Boolean isInPreview) {
             this.isInPreview = isInPreview;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSupportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
+        public Builder supportsEmailNotifications(@Nullable Boolean supportsEmailNotifications) {
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }

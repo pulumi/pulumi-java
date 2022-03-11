@@ -74,12 +74,12 @@ public final class PrivilegeResponseResource extends io.pulumi.resources.InvokeA
     	      this.db = defaults.db;
         }
 
-        public Builder setCollection(@Nullable String collection) {
+        public Builder collection(@Nullable String collection) {
             this.collection = collection;
             return this;
         }
 
-        public Builder setDb(@Nullable String db) {
+        public Builder db(@Nullable String db) {
             this.db = db;
             return this;
         }

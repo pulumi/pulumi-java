@@ -49,14 +49,14 @@ public final class CxFlowTransitionRoute {
      */
     private final @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment;
 
-    @OutputCustomType.Constructor({"condition","intent","name","targetFlow","targetPage","triggerFulfillment"})
+    @OutputCustomType.Constructor
     private CxFlowTransitionRoute(
-        @Nullable String condition,
-        @Nullable String intent,
-        @Nullable String name,
-        @Nullable String targetFlow,
-        @Nullable String targetPage,
-        @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("intent") @Nullable String intent,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("targetFlow") @Nullable String targetFlow,
+        @OutputCustomType.Parameter("targetPage") @Nullable String targetPage,
+        @OutputCustomType.Parameter("triggerFulfillment") @Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
         this.condition = condition;
         this.intent = intent;
         this.name = name;
@@ -144,32 +144,32 @@ public final class CxFlowTransitionRoute {
     	      this.triggerFulfillment = defaults.triggerFulfillment;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setIntent(@Nullable String intent) {
+        public Builder intent(@Nullable String intent) {
             this.intent = intent;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTargetFlow(@Nullable String targetFlow) {
+        public Builder targetFlow(@Nullable String targetFlow) {
             this.targetFlow = targetFlow;
             return this;
         }
 
-        public Builder setTargetPage(@Nullable String targetPage) {
+        public Builder targetPage(@Nullable String targetPage) {
             this.targetPage = targetPage;
             return this;
         }
 
-        public Builder setTriggerFulfillment(@Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
+        public Builder triggerFulfillment(@Nullable CxFlowTransitionRouteTriggerFulfillment triggerFulfillment) {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }

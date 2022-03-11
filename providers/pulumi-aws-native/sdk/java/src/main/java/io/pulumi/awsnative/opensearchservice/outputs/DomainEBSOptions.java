@@ -18,12 +18,12 @@ public final class DomainEBSOptions {
     private final @Nullable Integer volumeSize;
     private final @Nullable String volumeType;
 
-    @OutputCustomType.Constructor({"eBSEnabled","iops","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private DomainEBSOptions(
-        @Nullable Boolean eBSEnabled,
-        @Nullable Integer iops,
-        @Nullable Integer volumeSize,
-        @Nullable String volumeType) {
+        @OutputCustomType.Parameter("eBSEnabled") @Nullable Boolean eBSEnabled,
+        @OutputCustomType.Parameter("iops") @Nullable Integer iops,
+        @OutputCustomType.Parameter("volumeSize") @Nullable Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") @Nullable String volumeType) {
         this.eBSEnabled = eBSEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;
@@ -69,22 +69,22 @@ public final class DomainEBSOptions {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setEBSEnabled(@Nullable Boolean eBSEnabled) {
+        public Builder eBSEnabled(@Nullable Boolean eBSEnabled) {
             this.eBSEnabled = eBSEnabled;
             return this;
         }
 
-        public Builder setIops(@Nullable Integer iops) {
+        public Builder iops(@Nullable Integer iops) {
             this.iops = iops;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeType(@Nullable String volumeType) {
+        public Builder volumeType(@Nullable String volumeType) {
             this.volumeType = volumeType;
             return this;
         }

@@ -14,10 +14,10 @@ public final class ServiceEndpoint {
     private final @Nullable String address;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"address","name"})
+    @OutputCustomType.Constructor
     private ServiceEndpoint(
-        @Nullable String address,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.address = address;
         this.name = name;
     }
@@ -51,12 +51,12 @@ public final class ServiceEndpoint {
     	      this.name = defaults.name;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

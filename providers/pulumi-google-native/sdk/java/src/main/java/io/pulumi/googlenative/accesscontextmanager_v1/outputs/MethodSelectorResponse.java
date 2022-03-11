@@ -20,10 +20,10 @@ public final class MethodSelectorResponse {
      */
     private final String permission;
 
-    @OutputCustomType.Constructor({"method","permission"})
+    @OutputCustomType.Constructor
     private MethodSelectorResponse(
-        String method,
-        String permission) {
+        @OutputCustomType.Parameter("method") String method,
+        @OutputCustomType.Parameter("permission") String permission) {
         this.method = method;
         this.permission = permission;
     }
@@ -65,12 +65,12 @@ public final class MethodSelectorResponse {
     	      this.permission = defaults.permission;
         }
 
-        public Builder setMethod(String method) {
+        public Builder method(String method) {
             this.method = Objects.requireNonNull(method);
             return this;
         }
 
-        public Builder setPermission(String permission) {
+        public Builder permission(String permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }

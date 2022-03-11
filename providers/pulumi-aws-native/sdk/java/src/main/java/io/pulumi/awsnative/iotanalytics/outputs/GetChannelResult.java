@@ -20,12 +20,12 @@ public final class GetChannelResult {
     private final @Nullable ChannelRetentionPeriod retentionPeriod;
     private final @Nullable List<ChannelTag> tags;
 
-    @OutputCustomType.Constructor({"channelStorage","id","retentionPeriod","tags"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable ChannelStorage channelStorage,
-        @Nullable String id,
-        @Nullable ChannelRetentionPeriod retentionPeriod,
-        @Nullable List<ChannelTag> tags) {
+        @OutputCustomType.Parameter("channelStorage") @Nullable ChannelStorage channelStorage,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable ChannelRetentionPeriod retentionPeriod,
+        @OutputCustomType.Parameter("tags") @Nullable List<ChannelTag> tags) {
         this.channelStorage = channelStorage;
         this.id = id;
         this.retentionPeriod = retentionPeriod;
@@ -71,22 +71,22 @@ public final class GetChannelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setChannelStorage(@Nullable ChannelStorage channelStorage) {
+        public Builder channelStorage(@Nullable ChannelStorage channelStorage) {
             this.channelStorage = channelStorage;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable ChannelRetentionPeriod retentionPeriod) {
+        public Builder retentionPeriod(@Nullable ChannelRetentionPeriod retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ChannelTag> tags) {
+        public Builder tags(@Nullable List<ChannelTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -30,12 +30,12 @@ public final class StageSourceResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"name","originalTransformOrCollection","sizeBytes","userName"})
+    @OutputCustomType.Constructor
     private StageSourceResponse(
-        String name,
-        String originalTransformOrCollection,
-        String sizeBytes,
-        String userName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("originalTransformOrCollection") String originalTransformOrCollection,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.name = name;
         this.originalTransformOrCollection = originalTransformOrCollection;
         this.sizeBytes = sizeBytes;
@@ -97,22 +97,22 @@ public final class StageSourceResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOriginalTransformOrCollection(String originalTransformOrCollection) {
+        public Builder originalTransformOrCollection(String originalTransformOrCollection) {
             this.originalTransformOrCollection = Objects.requireNonNull(originalTransformOrCollection);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

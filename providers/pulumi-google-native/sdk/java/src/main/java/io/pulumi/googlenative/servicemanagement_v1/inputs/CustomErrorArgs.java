@@ -76,22 +76,22 @@ public final class CustomErrorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.types = defaults.types;
         }
 
-        public Builder setRules(@Nullable Input<List<CustomErrorRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<CustomErrorRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<CustomErrorRuleArgs> rules) {
+        public Builder rules(@Nullable List<CustomErrorRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setTypes(@Nullable Input<List<String>> types) {
+        public Builder types(@Nullable Input<List<String>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<String> types) {
+        public Builder types(@Nullable List<String> types) {
             this.types = Input.ofNullable(types);
             return this;
         }

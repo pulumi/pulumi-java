@@ -15,8 +15,8 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
      */
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"override"})
-    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(Boolean override) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicySecurityHeadersConfigContentTypeOption(@OutputCustomType.Parameter("override") Boolean override) {
         this.override = override;
     }
 
@@ -48,7 +48,7 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigContentTypeOptio
     	      this.override = defaults.override;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

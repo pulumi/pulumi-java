@@ -91,17 +91,17 @@ public final class EncryptionServiceResponse extends io.pulumi.resources.InvokeA
     	      this.lastEnabledTime = defaults.lastEnabledTime;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setLastEnabledTime(String lastEnabledTime) {
+        public Builder lastEnabledTime(String lastEnabledTime) {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }

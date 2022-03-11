@@ -110,42 +110,42 @@ public final class GooglePrivacyDlpV2FieldTransformationArgs extends io.pulumi.r
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setCondition(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
+        public Builder condition(@Nullable Input<GooglePrivacyDlpV2RecordConditionArgs> condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setCondition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
+        public Builder condition(@Nullable GooglePrivacyDlpV2RecordConditionArgs condition) {
             this.condition = Input.ofNullable(condition);
             return this;
         }
 
-        public Builder setFields(Input<List<GooglePrivacyDlpV2FieldIdArgs>> fields) {
+        public Builder fields(Input<List<GooglePrivacyDlpV2FieldIdArgs>> fields) {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
 
-        public Builder setFields(List<GooglePrivacyDlpV2FieldIdArgs> fields) {
+        public Builder fields(List<GooglePrivacyDlpV2FieldIdArgs> fields) {
             this.fields = Input.of(Objects.requireNonNull(fields));
             return this;
         }
 
-        public Builder setInfoTypeTransformations(@Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
+        public Builder infoTypeTransformations(@Nullable Input<GooglePrivacyDlpV2InfoTypeTransformationsArgs> infoTypeTransformations) {
             this.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
-        public Builder setInfoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
+        public Builder infoTypeTransformations(@Nullable GooglePrivacyDlpV2InfoTypeTransformationsArgs infoTypeTransformations) {
             this.infoTypeTransformations = Input.ofNullable(infoTypeTransformations);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(@Nullable Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
+        public Builder primitiveTransformation(@Nullable Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation) {
             this.primitiveTransformation = primitiveTransformation;
             return this;
         }
 
-        public Builder setPrimitiveTransformation(@Nullable GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
+        public Builder primitiveTransformation(@Nullable GooglePrivacyDlpV2PrimitiveTransformationArgs primitiveTransformation) {
             this.primitiveTransformation = Input.ofNullable(primitiveTransformation);
             return this;
         }

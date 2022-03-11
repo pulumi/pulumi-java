@@ -17,10 +17,10 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     private final Boolean enableLogging;
     private final String kind;
 
-    @OutputCustomType.Constructor({"enableLogging","kind"})
+    @OutputCustomType.Constructor
     private ManagedZoneCloudLoggingConfigResponse(
-        Boolean enableLogging,
-        String kind) {
+        @OutputCustomType.Parameter("enableLogging") Boolean enableLogging,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.enableLogging = enableLogging;
         this.kind = kind;
     }
@@ -58,12 +58,12 @@ public final class ManagedZoneCloudLoggingConfigResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setEnableLogging(Boolean enableLogging) {
+        public Builder enableLogging(Boolean enableLogging) {
             this.enableLogging = Objects.requireNonNull(enableLogging);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

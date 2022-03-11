@@ -23,12 +23,12 @@ public final class GetNodeTypesResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor({"id","names","project","zone"})
+    @OutputCustomType.Constructor
     private GetNodeTypesResult(
-        String id,
-        List<String> names,
-        String project,
-        String zone) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.id = id;
         this.names = names;
         this.project = project;
@@ -82,22 +82,22 @@ public final class GetNodeTypesResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

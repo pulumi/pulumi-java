@@ -32,12 +32,12 @@ public final class GetImageResult {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"arn","containerRecipeArn","imageId","name"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable String arn,
-        @Nullable String containerRecipeArn,
-        @Nullable String imageId,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.imageId = imageId;
@@ -99,22 +99,22 @@ public final class GetImageResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setContainerRecipeArn(@Nullable String containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

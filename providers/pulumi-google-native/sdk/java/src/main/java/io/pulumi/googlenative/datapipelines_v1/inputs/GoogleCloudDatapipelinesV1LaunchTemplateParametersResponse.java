@@ -123,27 +123,27 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse ex
     	      this.update = defaults.update;
         }
 
-        public Builder setEnvironment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
+        public Builder environment(GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setParameters(Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setTransformNameMapping(Map<String,String> transformNameMapping) {
+        public Builder transformNameMapping(Map<String,String> transformNameMapping) {
             this.transformNameMapping = Objects.requireNonNull(transformNameMapping);
             return this;
         }
 
-        public Builder setUpdate(Boolean update) {
+        public Builder update(Boolean update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }

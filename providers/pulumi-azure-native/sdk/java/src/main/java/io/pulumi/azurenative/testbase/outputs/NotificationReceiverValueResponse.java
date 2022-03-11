@@ -29,11 +29,11 @@ public final class NotificationReceiverValueResponse {
      */
     private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
-    @OutputCustomType.Constructor({"distributionGroupListReceiverValue","subscriptionReceiverValue","userObjectReceiverValue"})
+    @OutputCustomType.Constructor
     private NotificationReceiverValueResponse(
-        @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
-        @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
-        @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
+        @OutputCustomType.Parameter("distributionGroupListReceiverValue") @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue,
+        @OutputCustomType.Parameter("subscriptionReceiverValue") @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue,
+        @OutputCustomType.Parameter("userObjectReceiverValue") @Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
         this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
         this.subscriptionReceiverValue = subscriptionReceiverValue;
         this.userObjectReceiverValue = userObjectReceiverValue;
@@ -85,17 +85,17 @@ public final class NotificationReceiverValueResponse {
     	      this.userObjectReceiverValue = defaults.userObjectReceiverValue;
         }
 
-        public Builder setDistributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
+        public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue) {
             this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
 
-        public Builder setSubscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
+        public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue) {
             this.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
 
-        public Builder setUserObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
+        public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueResponse userObjectReceiverValue) {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }

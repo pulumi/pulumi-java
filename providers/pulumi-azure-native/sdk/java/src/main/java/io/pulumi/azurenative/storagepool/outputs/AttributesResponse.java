@@ -20,10 +20,10 @@ public final class AttributesResponse {
      */
     private final Boolean prodModeWriteProtect;
 
-    @OutputCustomType.Constructor({"authentication","prodModeWriteProtect"})
+    @OutputCustomType.Constructor
     private AttributesResponse(
-        Boolean authentication,
-        Boolean prodModeWriteProtect) {
+        @OutputCustomType.Parameter("authentication") Boolean authentication,
+        @OutputCustomType.Parameter("prodModeWriteProtect") Boolean prodModeWriteProtect) {
         this.authentication = authentication;
         this.prodModeWriteProtect = prodModeWriteProtect;
     }
@@ -65,12 +65,12 @@ public final class AttributesResponse {
     	      this.prodModeWriteProtect = defaults.prodModeWriteProtect;
         }
 
-        public Builder setAuthentication(Boolean authentication) {
+        public Builder authentication(Boolean authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setProdModeWriteProtect(Boolean prodModeWriteProtect) {
+        public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }

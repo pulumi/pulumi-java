@@ -31,12 +31,12 @@ public final class MoveCollectionPropertiesResponse {
      */
     private final String targetRegion;
 
-    @OutputCustomType.Constructor({"errors","provisioningState","sourceRegion","targetRegion"})
+    @OutputCustomType.Constructor
     private MoveCollectionPropertiesResponse(
-        MoveCollectionPropertiesResponseErrors errors,
-        String provisioningState,
-        String sourceRegion,
-        String targetRegion) {
+        @OutputCustomType.Parameter("errors") MoveCollectionPropertiesResponseErrors errors,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceRegion") String sourceRegion,
+        @OutputCustomType.Parameter("targetRegion") String targetRegion) {
         this.errors = errors;
         this.provisioningState = provisioningState;
         this.sourceRegion = sourceRegion;
@@ -98,22 +98,22 @@ public final class MoveCollectionPropertiesResponse {
     	      this.targetRegion = defaults.targetRegion;
         }
 
-        public Builder setErrors(MoveCollectionPropertiesResponseErrors errors) {
+        public Builder errors(MoveCollectionPropertiesResponseErrors errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceRegion(String sourceRegion) {
+        public Builder sourceRegion(String sourceRegion) {
             this.sourceRegion = Objects.requireNonNull(sourceRegion);
             return this;
         }
 
-        public Builder setTargetRegion(String targetRegion) {
+        public Builder targetRegion(String targetRegion) {
             this.targetRegion = Objects.requireNonNull(targetRegion);
             return this;
         }

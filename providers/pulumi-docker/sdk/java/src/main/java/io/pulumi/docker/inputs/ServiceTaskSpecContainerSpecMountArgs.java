@@ -126,72 +126,72 @@ public final class ServiceTaskSpecContainerSpecMountArgs extends io.pulumi.resou
     	      this.volumeOptions = defaults.volumeOptions;
         }
 
-        public Builder setBindOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsArgs> bindOptions) {
+        public Builder bindOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountBindOptionsArgs> bindOptions) {
             this.bindOptions = bindOptions;
             return this;
         }
 
-        public Builder setBindOptions(@Nullable ServiceTaskSpecContainerSpecMountBindOptionsArgs bindOptions) {
+        public Builder bindOptions(@Nullable ServiceTaskSpecContainerSpecMountBindOptionsArgs bindOptions) {
             this.bindOptions = Input.ofNullable(bindOptions);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<String> source) {
+        public Builder source(@Nullable Input<String> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setTarget(Input<String> target) {
+        public Builder target(Input<String> target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
 
-        public Builder setTmpfsOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> tmpfsOptions) {
+        public Builder tmpfsOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs> tmpfsOptions) {
             this.tmpfsOptions = tmpfsOptions;
             return this;
         }
 
-        public Builder setTmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs tmpfsOptions) {
+        public Builder tmpfsOptions(@Nullable ServiceTaskSpecContainerSpecMountTmpfsOptionsArgs tmpfsOptions) {
             this.tmpfsOptions = Input.ofNullable(tmpfsOptions);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setVolumeOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> volumeOptions) {
+        public Builder volumeOptions(@Nullable Input<ServiceTaskSpecContainerSpecMountVolumeOptionsArgs> volumeOptions) {
             this.volumeOptions = volumeOptions;
             return this;
         }
 
-        public Builder setVolumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptionsArgs volumeOptions) {
+        public Builder volumeOptions(@Nullable ServiceTaskSpecContainerSpecMountVolumeOptionsArgs volumeOptions) {
             this.volumeOptions = Input.ofNullable(volumeOptions);
             return this;
         }

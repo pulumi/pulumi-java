@@ -12,10 +12,10 @@ public final class GetBucketWebsite {
     private final String mainPageSuffix;
     private final String notFoundPage;
 
-    @OutputCustomType.Constructor({"mainPageSuffix","notFoundPage"})
+    @OutputCustomType.Constructor
     private GetBucketWebsite(
-        String mainPageSuffix,
-        String notFoundPage) {
+        @OutputCustomType.Parameter("mainPageSuffix") String mainPageSuffix,
+        @OutputCustomType.Parameter("notFoundPage") String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }
@@ -49,12 +49,12 @@ public final class GetBucketWebsite {
     	      this.notFoundPage = defaults.notFoundPage;
         }
 
-        public Builder setMainPageSuffix(String mainPageSuffix) {
+        public Builder mainPageSuffix(String mainPageSuffix) {
             this.mainPageSuffix = Objects.requireNonNull(mainPageSuffix);
             return this;
         }
 
-        public Builder setNotFoundPage(String notFoundPage) {
+        public Builder notFoundPage(String notFoundPage) {
             this.notFoundPage = Objects.requireNonNull(notFoundPage);
             return this;
         }

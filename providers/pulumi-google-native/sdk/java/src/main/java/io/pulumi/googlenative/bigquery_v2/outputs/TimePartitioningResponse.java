@@ -27,12 +27,12 @@ public final class TimePartitioningResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationMs","field","requirePartitionFilter","type"})
+    @OutputCustomType.Constructor
     private TimePartitioningResponse(
-        String expirationMs,
-        String field,
-        Boolean requirePartitionFilter,
-        String type) {
+        @OutputCustomType.Parameter("expirationMs") String expirationMs,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("requirePartitionFilter") Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationMs = expirationMs;
         this.field = field;
         this.requirePartitionFilter = requirePartitionFilter;
@@ -90,22 +90,22 @@ public final class TimePartitioningResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationMs(String expirationMs) {
+        public Builder expirationMs(String expirationMs) {
             this.expirationMs = Objects.requireNonNull(expirationMs);
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setRequirePartitionFilter(Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(Boolean requirePartitionFilter) {
             this.requirePartitionFilter = Objects.requireNonNull(requirePartitionFilter);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -49,15 +49,15 @@ public final class SsisVariableResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"dataType","description","id","name","sensitive","sensitiveValue","value"})
+    @OutputCustomType.Constructor
     private SsisVariableResponse(
-        @Nullable String dataType,
-        @Nullable String description,
-        @Nullable Double id,
-        @Nullable String name,
-        @Nullable Boolean sensitive,
-        @Nullable String sensitiveValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable Double id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sensitive") @Nullable Boolean sensitive,
+        @OutputCustomType.Parameter("sensitiveValue") @Nullable String sensitiveValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.dataType = dataType;
         this.description = description;
         this.id = id;
@@ -149,37 +149,37 @@ public final class SsisVariableResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable Double id) {
+        public Builder id(@Nullable Double id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSensitive(@Nullable Boolean sensitive) {
+        public Builder sensitive(@Nullable Boolean sensitive) {
             this.sensitive = sensitive;
             return this;
         }
 
-        public Builder setSensitiveValue(@Nullable String sensitiveValue) {
+        public Builder sensitiveValue(@Nullable String sensitiveValue) {
             this.sensitiveValue = sensitiveValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

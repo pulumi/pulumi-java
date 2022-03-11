@@ -15,8 +15,8 @@ public final class DicomStoreStreamConfigBigqueryDestination {
      */
     private final String tableUri;
 
-    @OutputCustomType.Constructor({"tableUri"})
-    private DicomStoreStreamConfigBigqueryDestination(String tableUri) {
+    @OutputCustomType.Constructor
+    private DicomStoreStreamConfigBigqueryDestination(@OutputCustomType.Parameter("tableUri") String tableUri) {
         this.tableUri = tableUri;
     }
 
@@ -48,7 +48,7 @@ public final class DicomStoreStreamConfigBigqueryDestination {
     	      this.tableUri = defaults.tableUri;
         }
 
-        public Builder setTableUri(String tableUri) {
+        public Builder tableUri(String tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }

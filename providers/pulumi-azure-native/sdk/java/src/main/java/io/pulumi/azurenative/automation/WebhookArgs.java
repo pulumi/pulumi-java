@@ -201,102 +201,102 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     	      this.webhookName = defaults.webhookName;
         }
 
-        public Builder setAutomationAccountName(Input<String> automationAccountName) {
+        public Builder automationAccountName(Input<String> automationAccountName) {
             this.automationAccountName = Objects.requireNonNull(automationAccountName);
             return this;
         }
 
-        public Builder setAutomationAccountName(String automationAccountName) {
+        public Builder automationAccountName(String automationAccountName) {
             this.automationAccountName = Input.of(Objects.requireNonNull(automationAccountName));
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable Input<String> expiryTime) {
+        public Builder expiryTime(@Nullable Input<String> expiryTime) {
             this.expiryTime = expiryTime;
             return this;
         }
 
-        public Builder setExpiryTime(@Nullable String expiryTime) {
+        public Builder expiryTime(@Nullable String expiryTime) {
             this.expiryTime = Input.ofNullable(expiryTime);
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Input<Boolean> isEnabled) {
+        public Builder isEnabled(@Nullable Input<Boolean> isEnabled) {
             this.isEnabled = isEnabled;
             return this;
         }
 
-        public Builder setIsEnabled(@Nullable Boolean isEnabled) {
+        public Builder isEnabled(@Nullable Boolean isEnabled) {
             this.isEnabled = Input.ofNullable(isEnabled);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRunOn(@Nullable Input<String> runOn) {
+        public Builder runOn(@Nullable Input<String> runOn) {
             this.runOn = runOn;
             return this;
         }
 
-        public Builder setRunOn(@Nullable String runOn) {
+        public Builder runOn(@Nullable String runOn) {
             this.runOn = Input.ofNullable(runOn);
             return this;
         }
 
-        public Builder setRunbook(@Nullable Input<RunbookAssociationPropertyArgs> runbook) {
+        public Builder runbook(@Nullable Input<RunbookAssociationPropertyArgs> runbook) {
             this.runbook = runbook;
             return this;
         }
 
-        public Builder setRunbook(@Nullable RunbookAssociationPropertyArgs runbook) {
+        public Builder runbook(@Nullable RunbookAssociationPropertyArgs runbook) {
             this.runbook = Input.ofNullable(runbook);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }
 
-        public Builder setWebhookName(@Nullable Input<String> webhookName) {
+        public Builder webhookName(@Nullable Input<String> webhookName) {
             this.webhookName = webhookName;
             return this;
         }
 
-        public Builder setWebhookName(@Nullable String webhookName) {
+        public Builder webhookName(@Nullable String webhookName) {
             this.webhookName = Input.ofNullable(webhookName);
             return this;
         }

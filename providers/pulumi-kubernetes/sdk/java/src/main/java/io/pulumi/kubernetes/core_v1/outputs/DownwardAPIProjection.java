@@ -17,8 +17,8 @@ public final class DownwardAPIProjection {
      */
     private final @Nullable List<DownwardAPIVolumeFile> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private DownwardAPIProjection(@Nullable List<DownwardAPIVolumeFile> items) {
+    @OutputCustomType.Constructor
+    private DownwardAPIProjection(@OutputCustomType.Parameter("items") @Nullable List<DownwardAPIVolumeFile> items) {
         this.items = items;
     }
 
@@ -50,7 +50,7 @@ public final class DownwardAPIProjection {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable List<DownwardAPIVolumeFile> items) {
+        public Builder items(@Nullable List<DownwardAPIVolumeFile> items) {
             this.items = items;
             return this;
         }

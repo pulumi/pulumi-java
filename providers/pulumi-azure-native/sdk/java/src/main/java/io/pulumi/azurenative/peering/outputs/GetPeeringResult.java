@@ -71,19 +71,19 @@ public final class GetPeeringResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"direct","exchange","id","kind","location","name","peeringLocation","provisioningState","sku","tags","type"})
+    @OutputCustomType.Constructor
     private GetPeeringResult(
-        @Nullable PeeringPropertiesDirectResponse direct,
-        @Nullable PeeringPropertiesExchangeResponse exchange,
-        String id,
-        String kind,
-        String location,
-        String name,
-        @Nullable String peeringLocation,
-        String provisioningState,
-        PeeringSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("direct") @Nullable PeeringPropertiesDirectResponse direct,
+        @OutputCustomType.Parameter("exchange") @Nullable PeeringPropertiesExchangeResponse exchange,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeringLocation") @Nullable String peeringLocation,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") PeeringSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.direct = direct;
         this.exchange = exchange;
         this.id = id;
@@ -215,57 +215,57 @@ public final class GetPeeringResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDirect(@Nullable PeeringPropertiesDirectResponse direct) {
+        public Builder direct(@Nullable PeeringPropertiesDirectResponse direct) {
             this.direct = direct;
             return this;
         }
 
-        public Builder setExchange(@Nullable PeeringPropertiesExchangeResponse exchange) {
+        public Builder exchange(@Nullable PeeringPropertiesExchangeResponse exchange) {
             this.exchange = exchange;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeringLocation(@Nullable String peeringLocation) {
+        public Builder peeringLocation(@Nullable String peeringLocation) {
             this.peeringLocation = peeringLocation;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(PeeringSkuResponse sku) {
+        public Builder sku(PeeringSkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

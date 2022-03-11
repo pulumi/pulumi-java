@@ -14,10 +14,10 @@ public final class ContainerCapabilities {
     private final @Nullable List<String> adds;
     private final @Nullable List<String> drops;
 
-    @OutputCustomType.Constructor({"adds","drops"})
+    @OutputCustomType.Constructor
     private ContainerCapabilities(
-        @Nullable List<String> adds,
-        @Nullable List<String> drops) {
+        @OutputCustomType.Parameter("adds") @Nullable List<String> adds,
+        @OutputCustomType.Parameter("drops") @Nullable List<String> drops) {
         this.adds = adds;
         this.drops = drops;
     }
@@ -51,12 +51,12 @@ public final class ContainerCapabilities {
     	      this.drops = defaults.drops;
         }
 
-        public Builder setAdds(@Nullable List<String> adds) {
+        public Builder adds(@Nullable List<String> adds) {
             this.adds = adds;
             return this;
         }
 
-        public Builder setDrops(@Nullable List<String> drops) {
+        public Builder drops(@Nullable List<String> drops) {
             this.drops = drops;
             return this;
         }

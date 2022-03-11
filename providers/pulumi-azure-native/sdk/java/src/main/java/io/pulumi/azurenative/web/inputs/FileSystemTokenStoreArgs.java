@@ -57,12 +57,12 @@ public final class FileSystemTokenStoreArgs extends io.pulumi.resources.Resource
     	      this.directory = defaults.directory;
         }
 
-        public Builder setDirectory(@Nullable Input<String> directory) {
+        public Builder directory(@Nullable Input<String> directory) {
             this.directory = directory;
             return this;
         }
 
-        public Builder setDirectory(@Nullable String directory) {
+        public Builder directory(@Nullable String directory) {
             this.directory = Input.ofNullable(directory);
             return this;
         }

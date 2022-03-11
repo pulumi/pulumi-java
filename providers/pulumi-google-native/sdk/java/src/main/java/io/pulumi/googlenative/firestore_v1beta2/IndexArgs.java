@@ -109,52 +109,52 @@ public final class IndexArgs extends io.pulumi.resources.ResourceArgs {
     	      this.queryScope = defaults.queryScope;
         }
 
-        public Builder setCollectionGroupId(Input<String> collectionGroupId) {
+        public Builder collectionGroupId(Input<String> collectionGroupId) {
             this.collectionGroupId = Objects.requireNonNull(collectionGroupId);
             return this;
         }
 
-        public Builder setCollectionGroupId(String collectionGroupId) {
+        public Builder collectionGroupId(String collectionGroupId) {
             this.collectionGroupId = Input.of(Objects.requireNonNull(collectionGroupId));
             return this;
         }
 
-        public Builder setDatabaseId(Input<String> databaseId) {
+        public Builder databaseId(Input<String> databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Input.of(Objects.requireNonNull(databaseId));
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
+        public Builder fields(@Nullable Input<List<GoogleFirestoreAdminV1beta2IndexFieldArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<GoogleFirestoreAdminV1beta2IndexFieldArgs> fields) {
+        public Builder fields(@Nullable List<GoogleFirestoreAdminV1beta2IndexFieldArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setQueryScope(@Nullable Input<IndexQueryScope> queryScope) {
+        public Builder queryScope(@Nullable Input<IndexQueryScope> queryScope) {
             this.queryScope = queryScope;
             return this;
         }
 
-        public Builder setQueryScope(@Nullable IndexQueryScope queryScope) {
+        public Builder queryScope(@Nullable IndexQueryScope queryScope) {
             this.queryScope = Input.ofNullable(queryScope);
             return this;
         }

@@ -28,11 +28,11 @@ public final class ProjectCache {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"location","modes","type"})
+    @OutputCustomType.Constructor
     private ProjectCache(
-        @Nullable String location,
-        @Nullable List<String> modes,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("modes") @Nullable List<String> modes,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.location = location;
         this.modes = modes;
         this.type = type;
@@ -84,17 +84,17 @@ public final class ProjectCache {
     	      this.type = defaults.type;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setModes(@Nullable List<String> modes) {
+        public Builder modes(@Nullable List<String> modes) {
             this.modes = modes;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

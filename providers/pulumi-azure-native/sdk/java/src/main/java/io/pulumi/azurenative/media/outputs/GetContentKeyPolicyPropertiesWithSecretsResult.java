@@ -39,13 +39,13 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
      */
     private final String policyId;
 
-    @OutputCustomType.Constructor({"created","description","lastModified","options","policyId"})
+    @OutputCustomType.Constructor
     private GetContentKeyPolicyPropertiesWithSecretsResult(
-        String created,
-        @Nullable String description,
-        String lastModified,
-        List<ContentKeyPolicyOptionResponse> options,
-        String policyId) {
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("options") List<ContentKeyPolicyOptionResponse> options,
+        @OutputCustomType.Parameter("policyId") String policyId) {
         this.created = created;
         this.description = description;
         this.lastModified = lastModified;
@@ -117,27 +117,27 @@ public final class GetContentKeyPolicyPropertiesWithSecretsResult {
     	      this.policyId = defaults.policyId;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setOptions(List<ContentKeyPolicyOptionResponse> options) {
+        public Builder options(List<ContentKeyPolicyOptionResponse> options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }

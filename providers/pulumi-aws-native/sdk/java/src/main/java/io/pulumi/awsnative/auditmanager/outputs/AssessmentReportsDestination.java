@@ -15,10 +15,10 @@ public final class AssessmentReportsDestination {
     private final @Nullable String destination;
     private final @Nullable AssessmentReportDestinationType destinationType;
 
-    @OutputCustomType.Constructor({"destination","destinationType"})
+    @OutputCustomType.Constructor
     private AssessmentReportsDestination(
-        @Nullable String destination,
-        @Nullable AssessmentReportDestinationType destinationType) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("destinationType") @Nullable AssessmentReportDestinationType destinationType) {
         this.destination = destination;
         this.destinationType = destinationType;
     }
@@ -52,12 +52,12 @@ public final class AssessmentReportsDestination {
     	      this.destinationType = defaults.destinationType;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestinationType(@Nullable AssessmentReportDestinationType destinationType) {
+        public Builder destinationType(@Nullable AssessmentReportDestinationType destinationType) {
             this.destinationType = destinationType;
             return this;
         }

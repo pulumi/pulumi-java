@@ -158,72 +158,72 @@ public final class BlobStreamInputDataSourceArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setContainer(@Nullable Input<String> container) {
+        public Builder container(@Nullable Input<String> container) {
             this.container = container;
             return this;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = Input.ofNullable(container);
             return this;
         }
 
-        public Builder setDateFormat(@Nullable Input<String> dateFormat) {
+        public Builder dateFormat(@Nullable Input<String> dateFormat) {
             this.dateFormat = dateFormat;
             return this;
         }
 
-        public Builder setDateFormat(@Nullable String dateFormat) {
+        public Builder dateFormat(@Nullable String dateFormat) {
             this.dateFormat = Input.ofNullable(dateFormat);
             return this;
         }
 
-        public Builder setPathPattern(@Nullable Input<String> pathPattern) {
+        public Builder pathPattern(@Nullable Input<String> pathPattern) {
             this.pathPattern = pathPattern;
             return this;
         }
 
-        public Builder setPathPattern(@Nullable String pathPattern) {
+        public Builder pathPattern(@Nullable String pathPattern) {
             this.pathPattern = Input.ofNullable(pathPattern);
             return this;
         }
 
-        public Builder setSourcePartitionCount(@Nullable Input<Integer> sourcePartitionCount) {
+        public Builder sourcePartitionCount(@Nullable Input<Integer> sourcePartitionCount) {
             this.sourcePartitionCount = sourcePartitionCount;
             return this;
         }
 
-        public Builder setSourcePartitionCount(@Nullable Integer sourcePartitionCount) {
+        public Builder sourcePartitionCount(@Nullable Integer sourcePartitionCount) {
             this.sourcePartitionCount = Input.ofNullable(sourcePartitionCount);
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
+        public Builder storageAccounts(@Nullable Input<List<StorageAccountArgs>> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
+        public Builder storageAccounts(@Nullable List<StorageAccountArgs> storageAccounts) {
             this.storageAccounts = Input.ofNullable(storageAccounts);
             return this;
         }
 
-        public Builder setTimeFormat(@Nullable Input<String> timeFormat) {
+        public Builder timeFormat(@Nullable Input<String> timeFormat) {
             this.timeFormat = timeFormat;
             return this;
         }
 
-        public Builder setTimeFormat(@Nullable String timeFormat) {
+        public Builder timeFormat(@Nullable String timeFormat) {
             this.timeFormat = Input.ofNullable(timeFormat);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

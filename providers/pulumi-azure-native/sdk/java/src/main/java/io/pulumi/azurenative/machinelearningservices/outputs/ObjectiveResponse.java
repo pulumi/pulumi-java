@@ -20,10 +20,10 @@ public final class ObjectiveResponse {
      */
     private final String primaryMetric;
 
-    @OutputCustomType.Constructor({"goal","primaryMetric"})
+    @OutputCustomType.Constructor
     private ObjectiveResponse(
-        String goal,
-        String primaryMetric) {
+        @OutputCustomType.Parameter("goal") String goal,
+        @OutputCustomType.Parameter("primaryMetric") String primaryMetric) {
         this.goal = goal;
         this.primaryMetric = primaryMetric;
     }
@@ -65,12 +65,12 @@ public final class ObjectiveResponse {
     	      this.primaryMetric = defaults.primaryMetric;
         }
 
-        public Builder setGoal(String goal) {
+        public Builder goal(String goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setPrimaryMetric(String primaryMetric) {
+        public Builder primaryMetric(String primaryMetric) {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }

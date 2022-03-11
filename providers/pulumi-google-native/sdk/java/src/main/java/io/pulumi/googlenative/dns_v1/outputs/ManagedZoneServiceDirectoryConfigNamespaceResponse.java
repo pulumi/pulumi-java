@@ -21,11 +21,11 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
      */
     private final String namespaceUrl;
 
-    @OutputCustomType.Constructor({"deletionTime","kind","namespaceUrl"})
+    @OutputCustomType.Constructor
     private ManagedZoneServiceDirectoryConfigNamespaceResponse(
-        String deletionTime,
-        String kind,
-        String namespaceUrl) {
+        @OutputCustomType.Parameter("deletionTime") String deletionTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("namespaceUrl") String namespaceUrl) {
         this.deletionTime = deletionTime;
         this.kind = kind;
         this.namespaceUrl = namespaceUrl;
@@ -73,17 +73,17 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceResponse {
     	      this.namespaceUrl = defaults.namespaceUrl;
         }
 
-        public Builder setDeletionTime(String deletionTime) {
+        public Builder deletionTime(String deletionTime) {
             this.deletionTime = Objects.requireNonNull(deletionTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNamespaceUrl(String namespaceUrl) {
+        public Builder namespaceUrl(String namespaceUrl) {
             this.namespaceUrl = Objects.requireNonNull(namespaceUrl);
             return this;
         }

@@ -123,52 +123,52 @@ public final class AzureBackupRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setBackupParameters(@Nullable Input<AzureBackupParamsArgs> backupParameters) {
+        public Builder backupParameters(@Nullable Input<AzureBackupParamsArgs> backupParameters) {
             this.backupParameters = backupParameters;
             return this;
         }
 
-        public Builder setBackupParameters(@Nullable AzureBackupParamsArgs backupParameters) {
+        public Builder backupParameters(@Nullable AzureBackupParamsArgs backupParameters) {
             this.backupParameters = Input.ofNullable(backupParameters);
             return this;
         }
 
-        public Builder setDataStore(Input<DataStoreInfoBaseArgs> dataStore) {
+        public Builder dataStore(Input<DataStoreInfoBaseArgs> dataStore) {
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
 
-        public Builder setDataStore(DataStoreInfoBaseArgs dataStore) {
+        public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
             this.dataStore = Input.of(Objects.requireNonNull(dataStore));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
 
-        public Builder setTrigger(Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
+        public Builder trigger(Input<Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs>> trigger) {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
 
-        public Builder setTrigger(Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs> trigger) {
+        public Builder trigger(Either<AdhocBasedTriggerContextArgs,ScheduleBasedTriggerContextArgs> trigger) {
             this.trigger = Input.of(Objects.requireNonNull(trigger));
             return this;
         }

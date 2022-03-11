@@ -53,12 +53,12 @@ public final class PartnerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.partnerId = defaults.partnerId;
         }
 
-        public Builder setPartnerId(@Nullable Input<String> partnerId) {
+        public Builder partnerId(@Nullable Input<String> partnerId) {
             this.partnerId = partnerId;
             return this;
         }
 
-        public Builder setPartnerId(@Nullable String partnerId) {
+        public Builder partnerId(@Nullable String partnerId) {
             this.partnerId = Input.ofNullable(partnerId);
             return this;
         }

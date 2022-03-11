@@ -56,14 +56,14 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
      */
     private final @Nullable List<String> includedQueryParameters;
 
-    @OutputCustomType.Constructor({"excludeHost","excludeQueryString","excludedQueryParameters","includeProtocol","includedHeaderNames","includedQueryParameters"})
+    @OutputCustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPolicyCacheKeyPolicy(
-        @Nullable Boolean excludeHost,
-        @Nullable Boolean excludeQueryString,
-        @Nullable List<String> excludedQueryParameters,
-        @Nullable Boolean includeProtocol,
-        @Nullable List<String> includedHeaderNames,
-        @Nullable List<String> includedQueryParameters) {
+        @OutputCustomType.Parameter("excludeHost") @Nullable Boolean excludeHost,
+        @OutputCustomType.Parameter("excludeQueryString") @Nullable Boolean excludeQueryString,
+        @OutputCustomType.Parameter("excludedQueryParameters") @Nullable List<String> excludedQueryParameters,
+        @OutputCustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @OutputCustomType.Parameter("includedHeaderNames") @Nullable List<String> includedHeaderNames,
+        @OutputCustomType.Parameter("includedQueryParameters") @Nullable List<String> includedQueryParameters) {
         this.excludeHost = excludeHost;
         this.excludeQueryString = excludeQueryString;
         this.excludedQueryParameters = excludedQueryParameters;
@@ -157,32 +157,32 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCdnPoli
     	      this.includedQueryParameters = defaults.includedQueryParameters;
         }
 
-        public Builder setExcludeHost(@Nullable Boolean excludeHost) {
+        public Builder excludeHost(@Nullable Boolean excludeHost) {
             this.excludeHost = excludeHost;
             return this;
         }
 
-        public Builder setExcludeQueryString(@Nullable Boolean excludeQueryString) {
+        public Builder excludeQueryString(@Nullable Boolean excludeQueryString) {
             this.excludeQueryString = excludeQueryString;
             return this;
         }
 
-        public Builder setExcludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
+        public Builder excludedQueryParameters(@Nullable List<String> excludedQueryParameters) {
             this.excludedQueryParameters = excludedQueryParameters;
             return this;
         }
 
-        public Builder setIncludeProtocol(@Nullable Boolean includeProtocol) {
+        public Builder includeProtocol(@Nullable Boolean includeProtocol) {
             this.includeProtocol = includeProtocol;
             return this;
         }
 
-        public Builder setIncludedHeaderNames(@Nullable List<String> includedHeaderNames) {
+        public Builder includedHeaderNames(@Nullable List<String> includedHeaderNames) {
             this.includedHeaderNames = includedHeaderNames;
             return this;
         }
 
-        public Builder setIncludedQueryParameters(@Nullable List<String> includedQueryParameters) {
+        public Builder includedQueryParameters(@Nullable List<String> includedQueryParameters) {
             this.includedQueryParameters = includedQueryParameters;
             return this;
         }

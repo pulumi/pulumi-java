@@ -64,18 +64,18 @@ public final class GetWorkloadNetworkDnsZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","dnsServerIps","dnsServices","domain","id","name","provisioningState","revision","sourceIp","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkDnsZoneResult(
-        @Nullable String displayName,
-        @Nullable List<String> dnsServerIps,
-        @Nullable Double dnsServices,
-        @Nullable List<String> domain,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        @Nullable String sourceIp,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("dnsServerIps") @Nullable List<String> dnsServerIps,
+        @OutputCustomType.Parameter("dnsServices") @Nullable Double dnsServices,
+        @OutputCustomType.Parameter("domain") @Nullable List<String> domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("sourceIp") @Nullable String sourceIp,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.dnsServerIps = dnsServerIps;
         this.dnsServices = dnsServices;
@@ -197,52 +197,52 @@ public final class GetWorkloadNetworkDnsZoneResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDnsServerIps(@Nullable List<String> dnsServerIps) {
+        public Builder dnsServerIps(@Nullable List<String> dnsServerIps) {
             this.dnsServerIps = dnsServerIps;
             return this;
         }
 
-        public Builder setDnsServices(@Nullable Double dnsServices) {
+        public Builder dnsServices(@Nullable Double dnsServices) {
             this.dnsServices = dnsServices;
             return this;
         }
 
-        public Builder setDomain(@Nullable List<String> domain) {
+        public Builder domain(@Nullable List<String> domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setSourceIp(@Nullable String sourceIp) {
+        public Builder sourceIp(@Nullable String sourceIp) {
             this.sourceIp = sourceIp;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

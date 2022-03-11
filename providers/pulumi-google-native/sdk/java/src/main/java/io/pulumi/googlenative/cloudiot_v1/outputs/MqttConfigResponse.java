@@ -15,8 +15,8 @@ public final class MqttConfigResponse {
      */
     private final String mqttEnabledState;
 
-    @OutputCustomType.Constructor({"mqttEnabledState"})
-    private MqttConfigResponse(String mqttEnabledState) {
+    @OutputCustomType.Constructor
+    private MqttConfigResponse(@OutputCustomType.Parameter("mqttEnabledState") String mqttEnabledState) {
         this.mqttEnabledState = mqttEnabledState;
     }
 
@@ -48,7 +48,7 @@ public final class MqttConfigResponse {
     	      this.mqttEnabledState = defaults.mqttEnabledState;
         }
 
-        public Builder setMqttEnabledState(String mqttEnabledState) {
+        public Builder mqttEnabledState(String mqttEnabledState) {
             this.mqttEnabledState = Objects.requireNonNull(mqttEnabledState);
             return this;
         }

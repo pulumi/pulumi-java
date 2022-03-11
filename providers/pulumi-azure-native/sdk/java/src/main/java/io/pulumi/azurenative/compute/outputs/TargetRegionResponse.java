@@ -34,12 +34,12 @@ public final class TargetRegionResponse {
      */
     private final @Nullable String storageAccountType;
 
-    @OutputCustomType.Constructor({"encryption","name","regionalReplicaCount","storageAccountType"})
+    @OutputCustomType.Constructor
     private TargetRegionResponse(
-        @Nullable EncryptionImagesResponse encryption,
-        String name,
-        @Nullable Integer regionalReplicaCount,
-        @Nullable String storageAccountType) {
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionImagesResponse encryption,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("regionalReplicaCount") @Nullable Integer regionalReplicaCount,
+        @OutputCustomType.Parameter("storageAccountType") @Nullable String storageAccountType) {
         this.encryption = encryption;
         this.name = name;
         this.regionalReplicaCount = regionalReplicaCount;
@@ -101,22 +101,22 @@ public final class TargetRegionResponse {
     	      this.storageAccountType = defaults.storageAccountType;
         }
 
-        public Builder setEncryption(@Nullable EncryptionImagesResponse encryption) {
+        public Builder encryption(@Nullable EncryptionImagesResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegionalReplicaCount(@Nullable Integer regionalReplicaCount) {
+        public Builder regionalReplicaCount(@Nullable Integer regionalReplicaCount) {
             this.regionalReplicaCount = regionalReplicaCount;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable String storageAccountType) {
+        public Builder storageAccountType(@Nullable String storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }

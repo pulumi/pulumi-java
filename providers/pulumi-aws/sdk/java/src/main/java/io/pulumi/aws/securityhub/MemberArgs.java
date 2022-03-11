@@ -87,32 +87,32 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     	      this.invite = defaults.invite;
         }
 
-        public Builder setAccountId(Input<String> accountId) {
+        public Builder accountId(Input<String> accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Input.of(Objects.requireNonNull(accountId));
             return this;
         }
 
-        public Builder setEmail(Input<String> email) {
+        public Builder email(Input<String> email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Input.of(Objects.requireNonNull(email));
             return this;
         }
 
-        public Builder setInvite(@Nullable Input<Boolean> invite) {
+        public Builder invite(@Nullable Input<Boolean> invite) {
             this.invite = invite;
             return this;
         }
 
-        public Builder setInvite(@Nullable Boolean invite) {
+        public Builder invite(@Nullable Boolean invite) {
             this.invite = Input.ofNullable(invite);
             return this;
         }

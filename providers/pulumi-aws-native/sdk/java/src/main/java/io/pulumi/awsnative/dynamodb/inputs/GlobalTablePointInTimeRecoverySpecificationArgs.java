@@ -49,12 +49,12 @@ public final class GlobalTablePointInTimeRecoverySpecificationArgs extends io.pu
     	      this.pointInTimeRecoveryEnabled = defaults.pointInTimeRecoveryEnabled;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Input<Boolean> pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = pointInTimeRecoveryEnabled;
             return this;
         }
 
-        public Builder setPointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
+        public Builder pointInTimeRecoveryEnabled(@Nullable Boolean pointInTimeRecoveryEnabled) {
             this.pointInTimeRecoveryEnabled = Input.ofNullable(pointInTimeRecoveryEnabled);
             return this;
         }

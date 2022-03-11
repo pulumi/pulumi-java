@@ -339,242 +339,242 @@ public final class NodePoolNodeConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.workloadMetadataConfig = defaults.workloadMetadataConfig;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable Input<String> bootDiskKmsKey) {
             this.bootDiskKmsKey = bootDiskKmsKey;
             return this;
         }
 
-        public Builder setBootDiskKmsKey(@Nullable String bootDiskKmsKey) {
+        public Builder bootDiskKmsKey(@Nullable String bootDiskKmsKey) {
             this.bootDiskKmsKey = Input.ofNullable(bootDiskKmsKey);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<Integer> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<Integer> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Integer diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<String> diskType) {
+        public Builder diskType(@Nullable Input<String> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setEphemeralStorageConfig(@Nullable Input<NodePoolNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(@Nullable Input<NodePoolNodeConfigEphemeralStorageConfigGetArgs> ephemeralStorageConfig) {
             this.ephemeralStorageConfig = ephemeralStorageConfig;
             return this;
         }
 
-        public Builder setEphemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfigGetArgs ephemeralStorageConfig) {
+        public Builder ephemeralStorageConfig(@Nullable NodePoolNodeConfigEphemeralStorageConfigGetArgs ephemeralStorageConfig) {
             this.ephemeralStorageConfig = Input.ofNullable(ephemeralStorageConfig);
             return this;
         }
 
-        public Builder setGcfsConfig(@Nullable Input<NodePoolNodeConfigGcfsConfigGetArgs> gcfsConfig) {
+        public Builder gcfsConfig(@Nullable Input<NodePoolNodeConfigGcfsConfigGetArgs> gcfsConfig) {
             this.gcfsConfig = gcfsConfig;
             return this;
         }
 
-        public Builder setGcfsConfig(@Nullable NodePoolNodeConfigGcfsConfigGetArgs gcfsConfig) {
+        public Builder gcfsConfig(@Nullable NodePoolNodeConfigGcfsConfigGetArgs gcfsConfig) {
             this.gcfsConfig = Input.ofNullable(gcfsConfig);
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable Input<List<NodePoolNodeConfigGuestAcceleratorGetArgs>> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable Input<List<NodePoolNodeConfigGuestAcceleratorGetArgs>> guestAccelerators) {
             this.guestAccelerators = guestAccelerators;
             return this;
         }
 
-        public Builder setGuestAccelerators(@Nullable List<NodePoolNodeConfigGuestAcceleratorGetArgs> guestAccelerators) {
+        public Builder guestAccelerators(@Nullable List<NodePoolNodeConfigGuestAcceleratorGetArgs> guestAccelerators) {
             this.guestAccelerators = Input.ofNullable(guestAccelerators);
             return this;
         }
 
-        public Builder setImageType(@Nullable Input<String> imageType) {
+        public Builder imageType(@Nullable Input<String> imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = Input.ofNullable(imageType);
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable Input<NodePoolNodeConfigKubeletConfigGetArgs> kubeletConfig) {
+        public Builder kubeletConfig(@Nullable Input<NodePoolNodeConfigKubeletConfigGetArgs> kubeletConfig) {
             this.kubeletConfig = kubeletConfig;
             return this;
         }
 
-        public Builder setKubeletConfig(@Nullable NodePoolNodeConfigKubeletConfigGetArgs kubeletConfig) {
+        public Builder kubeletConfig(@Nullable NodePoolNodeConfigKubeletConfigGetArgs kubeletConfig) {
             this.kubeletConfig = Input.ofNullable(kubeletConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLinuxNodeConfig(@Nullable Input<NodePoolNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig) {
+        public Builder linuxNodeConfig(@Nullable Input<NodePoolNodeConfigLinuxNodeConfigGetArgs> linuxNodeConfig) {
             this.linuxNodeConfig = linuxNodeConfig;
             return this;
         }
 
-        public Builder setLinuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfigGetArgs linuxNodeConfig) {
+        public Builder linuxNodeConfig(@Nullable NodePoolNodeConfigLinuxNodeConfigGetArgs linuxNodeConfig) {
             this.linuxNodeConfig = Input.ofNullable(linuxNodeConfig);
             return this;
         }
 
-        public Builder setLocalSsdCount(@Nullable Input<Integer> localSsdCount) {
+        public Builder localSsdCount(@Nullable Input<Integer> localSsdCount) {
             this.localSsdCount = localSsdCount;
             return this;
         }
 
-        public Builder setLocalSsdCount(@Nullable Integer localSsdCount) {
+        public Builder localSsdCount(@Nullable Integer localSsdCount) {
             this.localSsdCount = Input.ofNullable(localSsdCount);
             return this;
         }
 
-        public Builder setMachineType(@Nullable Input<String> machineType) {
+        public Builder machineType(@Nullable Input<String> machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = Input.ofNullable(machineType);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<Map<String,String>> metadata) {
+        public Builder metadata(@Nullable Input<Map<String,String>> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable Input<String> minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable Input<String> minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = Input.ofNullable(minCpuPlatform);
             return this;
         }
 
-        public Builder setNodeGroup(@Nullable Input<String> nodeGroup) {
+        public Builder nodeGroup(@Nullable Input<String> nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
 
-        public Builder setNodeGroup(@Nullable String nodeGroup) {
+        public Builder nodeGroup(@Nullable String nodeGroup) {
             this.nodeGroup = Input.ofNullable(nodeGroup);
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable Input<List<String>> oauthScopes) {
+        public Builder oauthScopes(@Nullable Input<List<String>> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = Input.ofNullable(oauthScopes);
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Input<Boolean> preemptible) {
+        public Builder preemptible(@Nullable Input<Boolean> preemptible) {
             this.preemptible = preemptible;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = Input.ofNullable(preemptible);
             return this;
         }
 
-        public Builder setSandboxConfig(@Nullable Input<NodePoolNodeConfigSandboxConfigGetArgs> sandboxConfig) {
+        public Builder sandboxConfig(@Nullable Input<NodePoolNodeConfigSandboxConfigGetArgs> sandboxConfig) {
             this.sandboxConfig = sandboxConfig;
             return this;
         }
 
-        public Builder setSandboxConfig(@Nullable NodePoolNodeConfigSandboxConfigGetArgs sandboxConfig) {
+        public Builder sandboxConfig(@Nullable NodePoolNodeConfigSandboxConfigGetArgs sandboxConfig) {
             this.sandboxConfig = Input.ofNullable(sandboxConfig);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable Input<NodePoolNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable Input<NodePoolNodeConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
             this.shieldedInstanceConfig = shieldedInstanceConfig;
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(@Nullable NodePoolNodeConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Input.ofNullable(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSpot(@Nullable Input<Boolean> spot) {
+        public Builder spot(@Nullable Input<Boolean> spot) {
             this.spot = spot;
             return this;
         }
 
-        public Builder setSpot(@Nullable Boolean spot) {
+        public Builder spot(@Nullable Boolean spot) {
             this.spot = Input.ofNullable(spot);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTaints(@Nullable Input<List<NodePoolNodeConfigTaintGetArgs>> taints) {
+        public Builder taints(@Nullable Input<List<NodePoolNodeConfigTaintGetArgs>> taints) {
             this.taints = taints;
             return this;
         }
 
-        public Builder setTaints(@Nullable List<NodePoolNodeConfigTaintGetArgs> taints) {
+        public Builder taints(@Nullable List<NodePoolNodeConfigTaintGetArgs> taints) {
             this.taints = Input.ofNullable(taints);
             return this;
         }
 
-        public Builder setWorkloadMetadataConfig(@Nullable Input<NodePoolNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(@Nullable Input<NodePoolNodeConfigWorkloadMetadataConfigGetArgs> workloadMetadataConfig) {
             this.workloadMetadataConfig = workloadMetadataConfig;
             return this;
         }
 
-        public Builder setWorkloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfigGetArgs workloadMetadataConfig) {
+        public Builder workloadMetadataConfig(@Nullable NodePoolNodeConfigWorkloadMetadataConfigGetArgs workloadMetadataConfig) {
             this.workloadMetadataConfig = Input.ofNullable(workloadMetadataConfig);
             return this;
         }

@@ -32,12 +32,12 @@ public final class SslConfigurationResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"cert","cname","key","status"})
+    @OutputCustomType.Constructor
     private SslConfigurationResponse(
-        @Nullable String cert,
-        @Nullable String cname,
-        @Nullable String key,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("cert") @Nullable String cert,
+        @OutputCustomType.Parameter("cname") @Nullable String cname,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.cert = cert;
         this.cname = cname;
         this.key = key;
@@ -99,22 +99,22 @@ public final class SslConfigurationResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCert(@Nullable String cert) {
+        public Builder cert(@Nullable String cert) {
             this.cert = cert;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

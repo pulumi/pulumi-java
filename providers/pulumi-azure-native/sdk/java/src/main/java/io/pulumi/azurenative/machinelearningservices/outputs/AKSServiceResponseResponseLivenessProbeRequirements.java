@@ -37,13 +37,13 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
      */
     private final @Nullable Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"failureThreshold","initialDelaySeconds","periodSeconds","successThreshold","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private AKSServiceResponseResponseLivenessProbeRequirements(
-        @Nullable Integer failureThreshold,
-        @Nullable Integer initialDelaySeconds,
-        @Nullable Integer periodSeconds,
-        @Nullable Integer successThreshold,
-        @Nullable Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("initialDelaySeconds") @Nullable Integer initialDelaySeconds,
+        @OutputCustomType.Parameter("periodSeconds") @Nullable Integer periodSeconds,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds) {
         this.failureThreshold = failureThreshold;
         this.initialDelaySeconds = initialDelaySeconds;
         this.periodSeconds = periodSeconds;
@@ -115,27 +115,27 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setInitialDelaySeconds(@Nullable Integer initialDelaySeconds) {
+        public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
 
-        public Builder setPeriodSeconds(@Nullable Integer periodSeconds) {
+        public Builder periodSeconds(@Nullable Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }

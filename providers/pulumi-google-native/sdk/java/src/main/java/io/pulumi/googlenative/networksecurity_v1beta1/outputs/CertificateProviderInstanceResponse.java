@@ -15,8 +15,8 @@ public final class CertificateProviderInstanceResponse {
      */
     private final String pluginInstance;
 
-    @OutputCustomType.Constructor({"pluginInstance"})
-    private CertificateProviderInstanceResponse(String pluginInstance) {
+    @OutputCustomType.Constructor
+    private CertificateProviderInstanceResponse(@OutputCustomType.Parameter("pluginInstance") String pluginInstance) {
         this.pluginInstance = pluginInstance;
     }
 
@@ -48,7 +48,7 @@ public final class CertificateProviderInstanceResponse {
     	      this.pluginInstance = defaults.pluginInstance;
         }
 
-        public Builder setPluginInstance(String pluginInstance) {
+        public Builder pluginInstance(String pluginInstance) {
             this.pluginInstance = Objects.requireNonNull(pluginInstance);
             return this;
         }

@@ -64,18 +64,18 @@ public final class ConnectionSettingPropertiesResponse {
      */
     private final String settingId;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","id","name","parameters","provisioningState","scopes","serviceProviderDisplayName","serviceProviderId","settingId"})
+    @OutputCustomType.Constructor
     private ConnectionSettingPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ConnectionSettingParameterResponse> parameters,
-        @Nullable String provisioningState,
-        @Nullable String scopes,
-        @Nullable String serviceProviderDisplayName,
-        @Nullable String serviceProviderId,
-        String settingId) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ConnectionSettingParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("scopes") @Nullable String scopes,
+        @OutputCustomType.Parameter("serviceProviderDisplayName") @Nullable String serviceProviderDisplayName,
+        @OutputCustomType.Parameter("serviceProviderId") @Nullable String serviceProviderId,
+        @OutputCustomType.Parameter("settingId") String settingId) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.id = id;
@@ -197,52 +197,52 @@ public final class ConnectionSettingPropertiesResponse {
     	      this.settingId = defaults.settingId;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ConnectionSettingParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<ConnectionSettingParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setScopes(@Nullable String scopes) {
+        public Builder scopes(@Nullable String scopes) {
             this.scopes = scopes;
             return this;
         }
 
-        public Builder setServiceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
+        public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
             this.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
 
-        public Builder setServiceProviderId(@Nullable String serviceProviderId) {
+        public Builder serviceProviderId(@Nullable String serviceProviderId) {
             this.serviceProviderId = serviceProviderId;
             return this;
         }
 
-        public Builder setSettingId(String settingId) {
+        public Builder settingId(String settingId) {
             this.settingId = Objects.requireNonNull(settingId);
             return this;
         }

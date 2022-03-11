@@ -39,13 +39,13 @@ public final class ProviderResponse {
      */
     private final List<ProviderResourceTypeResponse> resourceTypes;
 
-    @OutputCustomType.Constructor({"id","namespace","registrationPolicy","registrationState","resourceTypes"})
+    @OutputCustomType.Constructor
     private ProviderResponse(
-        String id,
-        @Nullable String namespace,
-        String registrationPolicy,
-        String registrationState,
-        List<ProviderResourceTypeResponse> resourceTypes) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("registrationPolicy") String registrationPolicy,
+        @OutputCustomType.Parameter("registrationState") String registrationState,
+        @OutputCustomType.Parameter("resourceTypes") List<ProviderResourceTypeResponse> resourceTypes) {
         this.id = id;
         this.namespace = namespace;
         this.registrationPolicy = registrationPolicy;
@@ -117,27 +117,27 @@ public final class ProviderResponse {
     	      this.resourceTypes = defaults.resourceTypes;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setRegistrationPolicy(String registrationPolicy) {
+        public Builder registrationPolicy(String registrationPolicy) {
             this.registrationPolicy = Objects.requireNonNull(registrationPolicy);
             return this;
         }
 
-        public Builder setRegistrationState(String registrationState) {
+        public Builder registrationState(String registrationState) {
             this.registrationState = Objects.requireNonNull(registrationState);
             return this;
         }
 
-        public Builder setResourceTypes(List<ProviderResourceTypeResponse> resourceTypes) {
+        public Builder resourceTypes(List<ProviderResourceTypeResponse> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }

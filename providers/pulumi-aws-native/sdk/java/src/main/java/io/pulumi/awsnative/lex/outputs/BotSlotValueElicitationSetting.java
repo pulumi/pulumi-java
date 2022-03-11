@@ -42,13 +42,13 @@ public final class BotSlotValueElicitationSetting {
      */
     private final @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification;
 
-    @OutputCustomType.Constructor({"defaultValueSpecification","promptSpecification","sampleUtterances","slotConstraint","waitAndContinueSpecification"})
+    @OutputCustomType.Constructor
     private BotSlotValueElicitationSetting(
-        @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
-        @Nullable BotPromptSpecification promptSpecification,
-        @Nullable List<BotSampleUtterance> sampleUtterances,
-        BotSlotConstraint slotConstraint,
-        @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
+        @OutputCustomType.Parameter("defaultValueSpecification") @Nullable BotSlotDefaultValueSpecification defaultValueSpecification,
+        @OutputCustomType.Parameter("promptSpecification") @Nullable BotPromptSpecification promptSpecification,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<BotSampleUtterance> sampleUtterances,
+        @OutputCustomType.Parameter("slotConstraint") BotSlotConstraint slotConstraint,
+        @OutputCustomType.Parameter("waitAndContinueSpecification") @Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
         this.defaultValueSpecification = defaultValueSpecification;
         this.promptSpecification = promptSpecification;
         this.sampleUtterances = sampleUtterances;
@@ -120,27 +120,27 @@ public final class BotSlotValueElicitationSetting {
     	      this.waitAndContinueSpecification = defaults.waitAndContinueSpecification;
         }
 
-        public Builder setDefaultValueSpecification(@Nullable BotSlotDefaultValueSpecification defaultValueSpecification) {
+        public Builder defaultValueSpecification(@Nullable BotSlotDefaultValueSpecification defaultValueSpecification) {
             this.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
 
-        public Builder setPromptSpecification(@Nullable BotPromptSpecification promptSpecification) {
+        public Builder promptSpecification(@Nullable BotPromptSpecification promptSpecification) {
             this.promptSpecification = promptSpecification;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<BotSampleUtterance> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSlotConstraint(BotSlotConstraint slotConstraint) {
+        public Builder slotConstraint(BotSlotConstraint slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
 
-        public Builder setWaitAndContinueSpecification(@Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
+        public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecification waitAndContinueSpecification) {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }

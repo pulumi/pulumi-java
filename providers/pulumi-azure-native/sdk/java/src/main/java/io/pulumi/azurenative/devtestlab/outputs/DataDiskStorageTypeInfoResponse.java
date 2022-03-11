@@ -22,10 +22,10 @@ public final class DataDiskStorageTypeInfoResponse {
      */
     private final @Nullable String storageType;
 
-    @OutputCustomType.Constructor({"lun","storageType"})
+    @OutputCustomType.Constructor
     private DataDiskStorageTypeInfoResponse(
-        @Nullable String lun,
-        @Nullable String storageType) {
+        @OutputCustomType.Parameter("lun") @Nullable String lun,
+        @OutputCustomType.Parameter("storageType") @Nullable String storageType) {
         this.lun = lun;
         this.storageType = storageType;
     }
@@ -67,12 +67,12 @@ public final class DataDiskStorageTypeInfoResponse {
     	      this.storageType = defaults.storageType;
         }
 
-        public Builder setLun(@Nullable String lun) {
+        public Builder lun(@Nullable String lun) {
             this.lun = lun;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = storageType;
             return this;
         }

@@ -33,12 +33,12 @@ public final class ReceiptRuleLambdaAction {
      */
     private final @Nullable String topicArn;
 
-    @OutputCustomType.Constructor({"functionArn","invocationType","position","topicArn"})
+    @OutputCustomType.Constructor
     private ReceiptRuleLambdaAction(
-        String functionArn,
-        @Nullable String invocationType,
-        Integer position,
-        @Nullable String topicArn) {
+        @OutputCustomType.Parameter("functionArn") String functionArn,
+        @OutputCustomType.Parameter("invocationType") @Nullable String invocationType,
+        @OutputCustomType.Parameter("position") Integer position,
+        @OutputCustomType.Parameter("topicArn") @Nullable String topicArn) {
         this.functionArn = functionArn;
         this.invocationType = invocationType;
         this.position = position;
@@ -100,22 +100,22 @@ public final class ReceiptRuleLambdaAction {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setFunctionArn(String functionArn) {
+        public Builder functionArn(String functionArn) {
             this.functionArn = Objects.requireNonNull(functionArn);
             return this;
         }
 
-        public Builder setInvocationType(@Nullable String invocationType) {
+        public Builder invocationType(@Nullable String invocationType) {
             this.invocationType = invocationType;
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = topicArn;
             return this;
         }

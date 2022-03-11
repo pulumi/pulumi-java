@@ -42,14 +42,14 @@ public final class DiagnosticsStorageAccountConfigResponse {
      */
     private final String tableEndpoint;
 
-    @OutputCustomType.Constructor({"blobEndpoint","protectedAccountKeyName","protectedAccountKeyName2","queueEndpoint","storageAccountName","tableEndpoint"})
+    @OutputCustomType.Constructor
     private DiagnosticsStorageAccountConfigResponse(
-        String blobEndpoint,
-        String protectedAccountKeyName,
-        @Nullable String protectedAccountKeyName2,
-        String queueEndpoint,
-        String storageAccountName,
-        String tableEndpoint) {
+        @OutputCustomType.Parameter("blobEndpoint") String blobEndpoint,
+        @OutputCustomType.Parameter("protectedAccountKeyName") String protectedAccountKeyName,
+        @OutputCustomType.Parameter("protectedAccountKeyName2") @Nullable String protectedAccountKeyName2,
+        @OutputCustomType.Parameter("queueEndpoint") String queueEndpoint,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("tableEndpoint") String tableEndpoint) {
         this.blobEndpoint = blobEndpoint;
         this.protectedAccountKeyName = protectedAccountKeyName;
         this.protectedAccountKeyName2 = protectedAccountKeyName2;
@@ -131,32 +131,32 @@ public final class DiagnosticsStorageAccountConfigResponse {
     	      this.tableEndpoint = defaults.tableEndpoint;
         }
 
-        public Builder setBlobEndpoint(String blobEndpoint) {
+        public Builder blobEndpoint(String blobEndpoint) {
             this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
             return this;
         }
 
-        public Builder setProtectedAccountKeyName(String protectedAccountKeyName) {
+        public Builder protectedAccountKeyName(String protectedAccountKeyName) {
             this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName);
             return this;
         }
 
-        public Builder setProtectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
+        public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
             this.protectedAccountKeyName2 = protectedAccountKeyName2;
             return this;
         }
 
-        public Builder setQueueEndpoint(String queueEndpoint) {
+        public Builder queueEndpoint(String queueEndpoint) {
             this.queueEndpoint = Objects.requireNonNull(queueEndpoint);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setTableEndpoint(String tableEndpoint) {
+        public Builder tableEndpoint(String tableEndpoint) {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
         }

@@ -75,20 +75,20 @@ public final class GetApiDiagnosticResult {
      */
     private final @Nullable String verbosity;
 
-    @OutputCustomType.Constructor({"alwaysLog","backend","frontend","httpCorrelationProtocol","id","logClientIp","loggerId","name","operationNameFormat","sampling","type","verbosity"})
+    @OutputCustomType.Constructor
     private GetApiDiagnosticResult(
-        @Nullable String alwaysLog,
-        @Nullable PipelineDiagnosticSettingsResponse backend,
-        @Nullable PipelineDiagnosticSettingsResponse frontend,
-        @Nullable String httpCorrelationProtocol,
-        String id,
-        @Nullable Boolean logClientIp,
-        String loggerId,
-        String name,
-        @Nullable String operationNameFormat,
-        @Nullable SamplingSettingsResponse sampling,
-        String type,
-        @Nullable String verbosity) {
+        @OutputCustomType.Parameter("alwaysLog") @Nullable String alwaysLog,
+        @OutputCustomType.Parameter("backend") @Nullable PipelineDiagnosticSettingsResponse backend,
+        @OutputCustomType.Parameter("frontend") @Nullable PipelineDiagnosticSettingsResponse frontend,
+        @OutputCustomType.Parameter("httpCorrelationProtocol") @Nullable String httpCorrelationProtocol,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logClientIp") @Nullable Boolean logClientIp,
+        @OutputCustomType.Parameter("loggerId") String loggerId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationNameFormat") @Nullable String operationNameFormat,
+        @OutputCustomType.Parameter("sampling") @Nullable SamplingSettingsResponse sampling,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("verbosity") @Nullable String verbosity) {
         this.alwaysLog = alwaysLog;
         this.backend = backend;
         this.frontend = frontend;
@@ -230,62 +230,62 @@ public final class GetApiDiagnosticResult {
     	      this.verbosity = defaults.verbosity;
         }
 
-        public Builder setAlwaysLog(@Nullable String alwaysLog) {
+        public Builder alwaysLog(@Nullable String alwaysLog) {
             this.alwaysLog = alwaysLog;
             return this;
         }
 
-        public Builder setBackend(@Nullable PipelineDiagnosticSettingsResponse backend) {
+        public Builder backend(@Nullable PipelineDiagnosticSettingsResponse backend) {
             this.backend = backend;
             return this;
         }
 
-        public Builder setFrontend(@Nullable PipelineDiagnosticSettingsResponse frontend) {
+        public Builder frontend(@Nullable PipelineDiagnosticSettingsResponse frontend) {
             this.frontend = frontend;
             return this;
         }
 
-        public Builder setHttpCorrelationProtocol(@Nullable String httpCorrelationProtocol) {
+        public Builder httpCorrelationProtocol(@Nullable String httpCorrelationProtocol) {
             this.httpCorrelationProtocol = httpCorrelationProtocol;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogClientIp(@Nullable Boolean logClientIp) {
+        public Builder logClientIp(@Nullable Boolean logClientIp) {
             this.logClientIp = logClientIp;
             return this;
         }
 
-        public Builder setLoggerId(String loggerId) {
+        public Builder loggerId(String loggerId) {
             this.loggerId = Objects.requireNonNull(loggerId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationNameFormat(@Nullable String operationNameFormat) {
+        public Builder operationNameFormat(@Nullable String operationNameFormat) {
             this.operationNameFormat = operationNameFormat;
             return this;
         }
 
-        public Builder setSampling(@Nullable SamplingSettingsResponse sampling) {
+        public Builder sampling(@Nullable SamplingSettingsResponse sampling) {
             this.sampling = sampling;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVerbosity(@Nullable String verbosity) {
+        public Builder verbosity(@Nullable String verbosity) {
             this.verbosity = verbosity;
             return this;
         }

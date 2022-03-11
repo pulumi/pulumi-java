@@ -95,12 +95,12 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
     	      this.enableAdvancedFilteringOnArrays = defaults.enableAdvancedFilteringOnArrays;
         }
 
-        public Builder setAdvancedFilters(@Nullable List<Object> advancedFilters) {
+        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = advancedFilters;
             return this;
         }
 
-        public Builder setEnableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
+        public Builder enableAdvancedFilteringOnArrays(@Nullable Boolean enableAdvancedFilteringOnArrays) {
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }

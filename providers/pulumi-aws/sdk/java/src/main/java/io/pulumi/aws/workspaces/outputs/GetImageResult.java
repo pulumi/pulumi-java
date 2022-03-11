@@ -37,15 +37,15 @@ public final class GetImageResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"description","id","imageId","name","operatingSystemType","requiredTenancy","state"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        String description,
-        String id,
-        String imageId,
-        String name,
-        String operatingSystemType,
-        String requiredTenancy,
-        String state) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imageId") String imageId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operatingSystemType") String operatingSystemType,
+        @OutputCustomType.Parameter("requiredTenancy") String requiredTenancy,
+        @OutputCustomType.Parameter("state") String state) {
         this.description = description;
         this.id = id;
         this.imageId = imageId;
@@ -129,37 +129,37 @@ public final class GetImageResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImageId(String imageId) {
+        public Builder imageId(String imageId) {
             this.imageId = Objects.requireNonNull(imageId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperatingSystemType(String operatingSystemType) {
+        public Builder operatingSystemType(String operatingSystemType) {
             this.operatingSystemType = Objects.requireNonNull(operatingSystemType);
             return this;
         }
 
-        public Builder setRequiredTenancy(String requiredTenancy) {
+        public Builder requiredTenancy(String requiredTenancy) {
             this.requiredTenancy = Objects.requireNonNull(requiredTenancy);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

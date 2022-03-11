@@ -19,16 +19,16 @@ public final class GetLaunchTemplatePlacement {
     private final String spreadDomain;
     private final String tenancy;
 
-    @OutputCustomType.Constructor({"affinity","availabilityZone","groupName","hostId","hostResourceGroupArn","partitionNumber","spreadDomain","tenancy"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplatePlacement(
-        String affinity,
-        String availabilityZone,
-        String groupName,
-        String hostId,
-        String hostResourceGroupArn,
-        Integer partitionNumber,
-        String spreadDomain,
-        String tenancy) {
+        @OutputCustomType.Parameter("affinity") String affinity,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("groupName") String groupName,
+        @OutputCustomType.Parameter("hostId") String hostId,
+        @OutputCustomType.Parameter("hostResourceGroupArn") String hostResourceGroupArn,
+        @OutputCustomType.Parameter("partitionNumber") Integer partitionNumber,
+        @OutputCustomType.Parameter("spreadDomain") String spreadDomain,
+        @OutputCustomType.Parameter("tenancy") String tenancy) {
         this.affinity = affinity;
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
@@ -98,42 +98,42 @@ public final class GetLaunchTemplatePlacement {
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAffinity(String affinity) {
+        public Builder affinity(String affinity) {
             this.affinity = Objects.requireNonNull(affinity);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setGroupName(String groupName) {
+        public Builder groupName(String groupName) {
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
 
-        public Builder setHostId(String hostId) {
+        public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
 
-        public Builder setHostResourceGroupArn(String hostResourceGroupArn) {
+        public Builder hostResourceGroupArn(String hostResourceGroupArn) {
             this.hostResourceGroupArn = Objects.requireNonNull(hostResourceGroupArn);
             return this;
         }
 
-        public Builder setPartitionNumber(Integer partitionNumber) {
+        public Builder partitionNumber(Integer partitionNumber) {
             this.partitionNumber = Objects.requireNonNull(partitionNumber);
             return this;
         }
 
-        public Builder setSpreadDomain(String spreadDomain) {
+        public Builder spreadDomain(String spreadDomain) {
             this.spreadDomain = Objects.requireNonNull(spreadDomain);
             return this;
         }
 
-        public Builder setTenancy(String tenancy) {
+        public Builder tenancy(String tenancy) {
             this.tenancy = Objects.requireNonNull(tenancy);
             return this;
         }

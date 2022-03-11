@@ -39,13 +39,13 @@ public final class AndroidTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor({"androidAppInfo","androidInstrumentationTest","androidRoboTest","androidTestLoop","testTimeout"})
+    @OutputCustomType.Constructor
     private AndroidTestResponse(
-        AndroidAppInfoResponse androidAppInfo,
-        AndroidInstrumentationTestResponse androidInstrumentationTest,
-        AndroidRoboTestResponse androidRoboTest,
-        AndroidTestLoopResponse androidTestLoop,
-        DurationResponse testTimeout) {
+        @OutputCustomType.Parameter("androidAppInfo") AndroidAppInfoResponse androidAppInfo,
+        @OutputCustomType.Parameter("androidInstrumentationTest") AndroidInstrumentationTestResponse androidInstrumentationTest,
+        @OutputCustomType.Parameter("androidRoboTest") AndroidRoboTestResponse androidRoboTest,
+        @OutputCustomType.Parameter("androidTestLoop") AndroidTestLoopResponse androidTestLoop,
+        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.androidAppInfo = androidAppInfo;
         this.androidInstrumentationTest = androidInstrumentationTest;
         this.androidRoboTest = androidRoboTest;
@@ -117,27 +117,27 @@ public final class AndroidTestResponse {
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setAndroidAppInfo(AndroidAppInfoResponse androidAppInfo) {
+        public Builder androidAppInfo(AndroidAppInfoResponse androidAppInfo) {
             this.androidAppInfo = Objects.requireNonNull(androidAppInfo);
             return this;
         }
 
-        public Builder setAndroidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
+        public Builder androidInstrumentationTest(AndroidInstrumentationTestResponse androidInstrumentationTest) {
             this.androidInstrumentationTest = Objects.requireNonNull(androidInstrumentationTest);
             return this;
         }
 
-        public Builder setAndroidRoboTest(AndroidRoboTestResponse androidRoboTest) {
+        public Builder androidRoboTest(AndroidRoboTestResponse androidRoboTest) {
             this.androidRoboTest = Objects.requireNonNull(androidRoboTest);
             return this;
         }
 
-        public Builder setAndroidTestLoop(AndroidTestLoopResponse androidTestLoop) {
+        public Builder androidTestLoop(AndroidTestLoopResponse androidTestLoop) {
             this.androidTestLoop = Objects.requireNonNull(androidTestLoop);
             return this;
         }
 
-        public Builder setTestTimeout(DurationResponse testTimeout) {
+        public Builder testTimeout(DurationResponse testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }

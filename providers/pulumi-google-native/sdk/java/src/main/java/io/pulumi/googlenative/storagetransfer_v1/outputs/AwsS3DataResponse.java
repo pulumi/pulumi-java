@@ -31,12 +31,12 @@ public final class AwsS3DataResponse {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"awsAccessKey","bucketName","path","roleArn"})
+    @OutputCustomType.Constructor
     private AwsS3DataResponse(
-        AwsAccessKeyResponse awsAccessKey,
-        String bucketName,
-        String path,
-        String roleArn) {
+        @OutputCustomType.Parameter("awsAccessKey") AwsAccessKeyResponse awsAccessKey,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.path = path;
@@ -98,22 +98,22 @@ public final class AwsS3DataResponse {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(AwsAccessKeyResponse awsAccessKey) {
+        public Builder awsAccessKey(AwsAccessKeyResponse awsAccessKey) {
             this.awsAccessKey = Objects.requireNonNull(awsAccessKey);
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

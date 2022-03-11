@@ -73,20 +73,20 @@ public final class DetailResponse {
      */
     private final String vendor;
 
-    @OutputCustomType.Constructor({"cpeUri","description","fixedLocation","isObsolete","maxAffectedVersion","minAffectedVersion","$package","packageType","severityName","source","sourceUpdateTime","vendor"})
+    @OutputCustomType.Constructor
     private DetailResponse(
-        String cpeUri,
-        String description,
-        VulnerabilityLocationResponse fixedLocation,
-        Boolean isObsolete,
-        VersionResponse maxAffectedVersion,
-        VersionResponse minAffectedVersion,
-        String $package,
-        String packageType,
-        String severityName,
-        String source,
-        String sourceUpdateTime,
-        String vendor) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fixedLocation") VulnerabilityLocationResponse fixedLocation,
+        @OutputCustomType.Parameter("isObsolete") Boolean isObsolete,
+        @OutputCustomType.Parameter("maxAffectedVersion") VersionResponse maxAffectedVersion,
+        @OutputCustomType.Parameter("minAffectedVersion") VersionResponse minAffectedVersion,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("packageType") String packageType,
+        @OutputCustomType.Parameter("severityName") String severityName,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourceUpdateTime") String sourceUpdateTime,
+        @OutputCustomType.Parameter("vendor") String vendor) {
         this.cpeUri = cpeUri;
         this.description = description;
         this.fixedLocation = fixedLocation;
@@ -228,62 +228,62 @@ public final class DetailResponse {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFixedLocation(VulnerabilityLocationResponse fixedLocation) {
+        public Builder fixedLocation(VulnerabilityLocationResponse fixedLocation) {
             this.fixedLocation = Objects.requireNonNull(fixedLocation);
             return this;
         }
 
-        public Builder setIsObsolete(Boolean isObsolete) {
+        public Builder isObsolete(Boolean isObsolete) {
             this.isObsolete = Objects.requireNonNull(isObsolete);
             return this;
         }
 
-        public Builder setMaxAffectedVersion(VersionResponse maxAffectedVersion) {
+        public Builder maxAffectedVersion(VersionResponse maxAffectedVersion) {
             this.maxAffectedVersion = Objects.requireNonNull(maxAffectedVersion);
             return this;
         }
 
-        public Builder setMinAffectedVersion(VersionResponse minAffectedVersion) {
+        public Builder minAffectedVersion(VersionResponse minAffectedVersion) {
             this.minAffectedVersion = Objects.requireNonNull(minAffectedVersion);
             return this;
         }
 
-        public Builder set$package(String $package) {
+        public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setSeverityName(String severityName) {
+        public Builder severityName(String severityName) {
             this.severityName = Objects.requireNonNull(severityName);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourceUpdateTime(String sourceUpdateTime) {
+        public Builder sourceUpdateTime(String sourceUpdateTime) {
             this.sourceUpdateTime = Objects.requireNonNull(sourceUpdateTime);
             return this;
         }
 
-        public Builder setVendor(String vendor) {
+        public Builder vendor(String vendor) {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }

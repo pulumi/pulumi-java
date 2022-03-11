@@ -69,22 +69,22 @@ public final class TagOptionResourceAssociationArgs extends io.pulumi.resources.
     	      this.tagOptionId = defaults.tagOptionId;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setTagOptionId(Input<String> tagOptionId) {
+        public Builder tagOptionId(Input<String> tagOptionId) {
             this.tagOptionId = Objects.requireNonNull(tagOptionId);
             return this;
         }
 
-        public Builder setTagOptionId(String tagOptionId) {
+        public Builder tagOptionId(String tagOptionId) {
             this.tagOptionId = Input.of(Objects.requireNonNull(tagOptionId));
             return this;
         }

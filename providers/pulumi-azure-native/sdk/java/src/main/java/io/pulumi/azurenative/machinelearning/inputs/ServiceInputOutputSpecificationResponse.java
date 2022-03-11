@@ -108,22 +108,22 @@ public final class ServiceInputOutputSpecificationResponse extends io.pulumi.res
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setProperties(Map<String,TableSpecificationResponse> properties) {
+        public Builder properties(Map<String,TableSpecificationResponse> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

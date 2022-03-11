@@ -22,10 +22,10 @@ public final class AppRegistrationResponse {
      */
     private final @Nullable String appSecretSettingName;
 
-    @OutputCustomType.Constructor({"appId","appSecretSettingName"})
+    @OutputCustomType.Constructor
     private AppRegistrationResponse(
-        @Nullable String appId,
-        @Nullable String appSecretSettingName) {
+        @OutputCustomType.Parameter("appId") @Nullable String appId,
+        @OutputCustomType.Parameter("appSecretSettingName") @Nullable String appSecretSettingName) {
         this.appId = appId;
         this.appSecretSettingName = appSecretSettingName;
     }
@@ -67,12 +67,12 @@ public final class AppRegistrationResponse {
     	      this.appSecretSettingName = defaults.appSecretSettingName;
         }
 
-        public Builder setAppId(@Nullable String appId) {
+        public Builder appId(@Nullable String appId) {
             this.appId = appId;
             return this;
         }
 
-        public Builder setAppSecretSettingName(@Nullable String appSecretSettingName) {
+        public Builder appSecretSettingName(@Nullable String appSecretSettingName) {
             this.appSecretSettingName = appSecretSettingName;
             return this;
         }

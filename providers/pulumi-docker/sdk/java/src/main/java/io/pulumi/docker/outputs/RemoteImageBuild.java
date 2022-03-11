@@ -24,17 +24,17 @@ public final class RemoteImageBuild {
     private final @Nullable List<String> tags;
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"buildArg","dockerfile","forceRemove","label","noCache","path","remove","tags","target"})
+    @OutputCustomType.Constructor
     private RemoteImageBuild(
-        @Nullable Map<String,String> buildArg,
-        @Nullable String dockerfile,
-        @Nullable Boolean forceRemove,
-        @Nullable Map<String,String> label,
-        @Nullable Boolean noCache,
-        String path,
-        @Nullable Boolean remove,
-        @Nullable List<String> tags,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("buildArg") @Nullable Map<String,String> buildArg,
+        @OutputCustomType.Parameter("dockerfile") @Nullable String dockerfile,
+        @OutputCustomType.Parameter("forceRemove") @Nullable Boolean forceRemove,
+        @OutputCustomType.Parameter("label") @Nullable Map<String,String> label,
+        @OutputCustomType.Parameter("noCache") @Nullable Boolean noCache,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("remove") @Nullable Boolean remove,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.buildArg = buildArg;
         this.dockerfile = dockerfile;
         this.forceRemove = forceRemove;
@@ -110,47 +110,47 @@ public final class RemoteImageBuild {
     	      this.target = defaults.target;
         }
 
-        public Builder setBuildArg(@Nullable Map<String,String> buildArg) {
+        public Builder buildArg(@Nullable Map<String,String> buildArg) {
             this.buildArg = buildArg;
             return this;
         }
 
-        public Builder setDockerfile(@Nullable String dockerfile) {
+        public Builder dockerfile(@Nullable String dockerfile) {
             this.dockerfile = dockerfile;
             return this;
         }
 
-        public Builder setForceRemove(@Nullable Boolean forceRemove) {
+        public Builder forceRemove(@Nullable Boolean forceRemove) {
             this.forceRemove = forceRemove;
             return this;
         }
 
-        public Builder setLabel(@Nullable Map<String,String> label) {
+        public Builder label(@Nullable Map<String,String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setNoCache(@Nullable Boolean noCache) {
+        public Builder noCache(@Nullable Boolean noCache) {
             this.noCache = noCache;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRemove(@Nullable Boolean remove) {
+        public Builder remove(@Nullable Boolean remove) {
             this.remove = remove;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

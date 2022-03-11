@@ -25,11 +25,11 @@ public final class StorageAccountCredentialsResponse {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","resourceId","secondaryKey"})
+    @OutputCustomType.Constructor
     private StorageAccountCredentialsResponse(
-        String primaryKey,
-        String resourceId,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.resourceId = resourceId;
         this.secondaryKey = secondaryKey;
@@ -81,17 +81,17 @@ public final class StorageAccountCredentialsResponse {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }

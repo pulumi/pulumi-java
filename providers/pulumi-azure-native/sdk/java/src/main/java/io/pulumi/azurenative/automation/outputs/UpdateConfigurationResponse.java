@@ -51,15 +51,15 @@ public final class UpdateConfigurationResponse {
      */
     private final @Nullable WindowsPropertiesResponse windows;
 
-    @OutputCustomType.Constructor({"azureVirtualMachines","duration","linux","nonAzureComputerNames","operatingSystem","targets","windows"})
+    @OutputCustomType.Constructor
     private UpdateConfigurationResponse(
-        @Nullable List<String> azureVirtualMachines,
-        @Nullable String duration,
-        @Nullable LinuxPropertiesResponse linux,
-        @Nullable List<String> nonAzureComputerNames,
-        String operatingSystem,
-        @Nullable TargetPropertiesResponse targets,
-        @Nullable WindowsPropertiesResponse windows) {
+        @OutputCustomType.Parameter("azureVirtualMachines") @Nullable List<String> azureVirtualMachines,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("linux") @Nullable LinuxPropertiesResponse linux,
+        @OutputCustomType.Parameter("nonAzureComputerNames") @Nullable List<String> nonAzureComputerNames,
+        @OutputCustomType.Parameter("operatingSystem") String operatingSystem,
+        @OutputCustomType.Parameter("targets") @Nullable TargetPropertiesResponse targets,
+        @OutputCustomType.Parameter("windows") @Nullable WindowsPropertiesResponse windows) {
         this.azureVirtualMachines = azureVirtualMachines;
         this.duration = duration;
         this.linux = linux;
@@ -151,37 +151,37 @@ public final class UpdateConfigurationResponse {
     	      this.windows = defaults.windows;
         }
 
-        public Builder setAzureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
+        public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setLinux(@Nullable LinuxPropertiesResponse linux) {
+        public Builder linux(@Nullable LinuxPropertiesResponse linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setNonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
+        public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
 
-        public Builder setOperatingSystem(String operatingSystem) {
+        public Builder operatingSystem(String operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setTargets(@Nullable TargetPropertiesResponse targets) {
+        public Builder targets(@Nullable TargetPropertiesResponse targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setWindows(@Nullable WindowsPropertiesResponse windows) {
+        public Builder windows(@Nullable WindowsPropertiesResponse windows) {
             this.windows = windows;
             return this;
         }

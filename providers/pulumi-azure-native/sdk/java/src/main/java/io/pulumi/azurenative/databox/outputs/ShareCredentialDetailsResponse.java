@@ -36,13 +36,13 @@ public final class ShareCredentialDetailsResponse {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"password","shareName","shareType","supportedAccessProtocols","userName"})
+    @OutputCustomType.Constructor
     private ShareCredentialDetailsResponse(
-        String password,
-        String shareName,
-        String shareType,
-        List<String> supportedAccessProtocols,
-        String userName) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("shareName") String shareName,
+        @OutputCustomType.Parameter("shareType") String shareType,
+        @OutputCustomType.Parameter("supportedAccessProtocols") List<String> supportedAccessProtocols,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.password = password;
         this.shareName = shareName;
         this.shareType = shareType;
@@ -114,27 +114,27 @@ public final class ShareCredentialDetailsResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setShareName(String shareName) {
+        public Builder shareName(String shareName) {
             this.shareName = Objects.requireNonNull(shareName);
             return this;
         }
 
-        public Builder setShareType(String shareType) {
+        public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }
 
-        public Builder setSupportedAccessProtocols(List<String> supportedAccessProtocols) {
+        public Builder supportedAccessProtocols(List<String> supportedAccessProtocols) {
             this.supportedAccessProtocols = Objects.requireNonNull(supportedAccessProtocols);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

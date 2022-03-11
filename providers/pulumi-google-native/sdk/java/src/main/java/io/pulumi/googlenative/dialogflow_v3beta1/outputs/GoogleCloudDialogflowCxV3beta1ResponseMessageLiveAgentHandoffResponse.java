@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
      */
     private final Map<String,String> metadata;
 
-    @OutputCustomType.Constructor({"metadata"})
-    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(Map<String,String> metadata) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffResponse(@OutputCustomType.Parameter("metadata") Map<String,String> metadata) {
         this.metadata = metadata;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoff
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }

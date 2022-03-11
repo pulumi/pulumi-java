@@ -47,15 +47,15 @@ public final class GetResponseHeadersPolicyCorsConfig {
     private final Integer accessControlMaxAgeSec;
     private final Boolean originOverride;
 
-    @OutputCustomType.Constructor({"accessControlAllowCredentials","accessControlAllowHeaders","accessControlAllowMethods","accessControlAllowOrigins","accessControlExposeHeaders","accessControlMaxAgeSec","originOverride"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicyCorsConfig(
-        Boolean accessControlAllowCredentials,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins,
-        List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
-        Integer accessControlMaxAgeSec,
-        Boolean originOverride) {
+        @OutputCustomType.Parameter("accessControlAllowCredentials") Boolean accessControlAllowCredentials,
+        @OutputCustomType.Parameter("accessControlAllowHeaders") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders,
+        @OutputCustomType.Parameter("accessControlAllowMethods") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods,
+        @OutputCustomType.Parameter("accessControlAllowOrigins") List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins,
+        @OutputCustomType.Parameter("accessControlExposeHeaders") List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders,
+        @OutputCustomType.Parameter("accessControlMaxAgeSec") Integer accessControlMaxAgeSec,
+        @OutputCustomType.Parameter("originOverride") Boolean originOverride) {
         this.accessControlAllowCredentials = accessControlAllowCredentials;
         this.accessControlAllowHeaders = accessControlAllowHeaders;
         this.accessControlAllowMethods = accessControlAllowMethods;
@@ -143,37 +143,37 @@ public final class GetResponseHeadersPolicyCorsConfig {
     	      this.originOverride = defaults.originOverride;
         }
 
-        public Builder setAccessControlAllowCredentials(Boolean accessControlAllowCredentials) {
+        public Builder accessControlAllowCredentials(Boolean accessControlAllowCredentials) {
             this.accessControlAllowCredentials = Objects.requireNonNull(accessControlAllowCredentials);
             return this;
         }
 
-        public Builder setAccessControlAllowHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders) {
+        public Builder accessControlAllowHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowHeader> accessControlAllowHeaders) {
             this.accessControlAllowHeaders = Objects.requireNonNull(accessControlAllowHeaders);
             return this;
         }
 
-        public Builder setAccessControlAllowMethods(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods) {
+        public Builder accessControlAllowMethods(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowMethod> accessControlAllowMethods) {
             this.accessControlAllowMethods = Objects.requireNonNull(accessControlAllowMethods);
             return this;
         }
 
-        public Builder setAccessControlAllowOrigins(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins) {
+        public Builder accessControlAllowOrigins(List<GetResponseHeadersPolicyCorsConfigAccessControlAllowOrigin> accessControlAllowOrigins) {
             this.accessControlAllowOrigins = Objects.requireNonNull(accessControlAllowOrigins);
             return this;
         }
 
-        public Builder setAccessControlExposeHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders) {
+        public Builder accessControlExposeHeaders(List<GetResponseHeadersPolicyCorsConfigAccessControlExposeHeader> accessControlExposeHeaders) {
             this.accessControlExposeHeaders = Objects.requireNonNull(accessControlExposeHeaders);
             return this;
         }
 
-        public Builder setAccessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
+        public Builder accessControlMaxAgeSec(Integer accessControlMaxAgeSec) {
             this.accessControlMaxAgeSec = Objects.requireNonNull(accessControlMaxAgeSec);
             return this;
         }
 
-        public Builder setOriginOverride(Boolean originOverride) {
+        public Builder originOverride(Boolean originOverride) {
             this.originOverride = Objects.requireNonNull(originOverride);
             return this;
         }

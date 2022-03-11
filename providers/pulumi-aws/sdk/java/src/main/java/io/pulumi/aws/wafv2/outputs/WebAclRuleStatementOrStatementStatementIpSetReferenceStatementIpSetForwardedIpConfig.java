@@ -25,11 +25,11 @@ public final class WebAclRuleStatementOrStatementStatementIpSetReferenceStatemen
      */
     private final String position;
 
-    @OutputCustomType.Constructor({"fallbackBehavior","headerName","position"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementOrStatementStatementIpSetReferenceStatementIpSetForwardedIpConfig(
-        String fallbackBehavior,
-        String headerName,
-        String position) {
+        @OutputCustomType.Parameter("fallbackBehavior") String fallbackBehavior,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("position") String position) {
         this.fallbackBehavior = fallbackBehavior;
         this.headerName = headerName;
         this.position = position;
@@ -81,17 +81,17 @@ public final class WebAclRuleStatementOrStatementStatementIpSetReferenceStatemen
     	      this.position = defaults.position;
         }
 
-        public Builder setFallbackBehavior(String fallbackBehavior) {
+        public Builder fallbackBehavior(String fallbackBehavior) {
             this.fallbackBehavior = Objects.requireNonNull(fallbackBehavior);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setPosition(String position) {
+        public Builder position(String position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }

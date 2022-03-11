@@ -21,10 +21,10 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"placeIds","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaFulfillmentInfoResponse(
-        List<String> placeIds,
-        String type) {
+        @OutputCustomType.Parameter("placeIds") List<String> placeIds,
+        @OutputCustomType.Parameter("type") String type) {
         this.placeIds = placeIds;
         this.type = type;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudRetailV2betaFulfillmentInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPlaceIds(List<String> placeIds) {
+        public Builder placeIds(List<String> placeIds) {
             this.placeIds = Objects.requireNonNull(placeIds);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

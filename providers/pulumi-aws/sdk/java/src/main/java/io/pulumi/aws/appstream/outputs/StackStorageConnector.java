@@ -28,11 +28,11 @@ public final class StackStorageConnector {
      */
     private final @Nullable String resourceIdentifier;
 
-    @OutputCustomType.Constructor({"connectorType","domains","resourceIdentifier"})
+    @OutputCustomType.Constructor
     private StackStorageConnector(
-        String connectorType,
-        @Nullable List<String> domains,
-        @Nullable String resourceIdentifier) {
+        @OutputCustomType.Parameter("connectorType") String connectorType,
+        @OutputCustomType.Parameter("domains") @Nullable List<String> domains,
+        @OutputCustomType.Parameter("resourceIdentifier") @Nullable String resourceIdentifier) {
         this.connectorType = connectorType;
         this.domains = domains;
         this.resourceIdentifier = resourceIdentifier;
@@ -84,17 +84,17 @@ public final class StackStorageConnector {
     	      this.resourceIdentifier = defaults.resourceIdentifier;
         }
 
-        public Builder setConnectorType(String connectorType) {
+        public Builder connectorType(String connectorType) {
             this.connectorType = Objects.requireNonNull(connectorType);
             return this;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setResourceIdentifier(@Nullable String resourceIdentifier) {
+        public Builder resourceIdentifier(@Nullable String resourceIdentifier) {
             this.resourceIdentifier = resourceIdentifier;
             return this;
         }

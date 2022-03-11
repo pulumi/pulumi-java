@@ -17,10 +17,10 @@ public final class DSSEAttestationOccurrenceResponse {
     private final EnvelopeResponse envelope;
     private final InTotoStatementResponse statement;
 
-    @OutputCustomType.Constructor({"envelope","statement"})
+    @OutputCustomType.Constructor
     private DSSEAttestationOccurrenceResponse(
-        EnvelopeResponse envelope,
-        InTotoStatementResponse statement) {
+        @OutputCustomType.Parameter("envelope") EnvelopeResponse envelope,
+        @OutputCustomType.Parameter("statement") InTotoStatementResponse statement) {
         this.envelope = envelope;
         this.statement = statement;
     }
@@ -58,12 +58,12 @@ public final class DSSEAttestationOccurrenceResponse {
     	      this.statement = defaults.statement;
         }
 
-        public Builder setEnvelope(EnvelopeResponse envelope) {
+        public Builder envelope(EnvelopeResponse envelope) {
             this.envelope = Objects.requireNonNull(envelope);
             return this;
         }
 
-        public Builder setStatement(InTotoStatementResponse statement) {
+        public Builder statement(InTotoStatementResponse statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }

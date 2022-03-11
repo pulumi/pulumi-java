@@ -77,22 +77,22 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.values = defaults.values;
         }
 
-        public Builder setScopeType(@Nullable Input<Either<String,ScopeType>> scopeType) {
+        public Builder scopeType(@Nullable Input<Either<String,ScopeType>> scopeType) {
             this.scopeType = scopeType;
             return this;
         }
 
-        public Builder setScopeType(@Nullable Either<String,ScopeType> scopeType) {
+        public Builder scopeType(@Nullable Either<String,ScopeType> scopeType) {
             this.scopeType = Input.ofNullable(scopeType);
             return this;
         }
 
-        public Builder setValues(@Nullable Input<List<String>> values) {
+        public Builder values(@Nullable Input<List<String>> values) {
             this.values = values;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = Input.ofNullable(values);
             return this;
         }

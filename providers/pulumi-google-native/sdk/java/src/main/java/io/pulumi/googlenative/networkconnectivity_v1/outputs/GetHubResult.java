@@ -53,16 +53,16 @@ public final class GetHubResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","labels","name","routingVpcs","state","uniqueId","updateTime"})
+    @OutputCustomType.Constructor
     private GetHubResult(
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        String name,
-        List<RoutingVPCResponse> routingVpcs,
-        String state,
-        String uniqueId,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("routingVpcs") List<RoutingVPCResponse> routingVpcs,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("uniqueId") String uniqueId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.labels = labels;
@@ -164,42 +164,42 @@ public final class GetHubResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoutingVpcs(List<RoutingVPCResponse> routingVpcs) {
+        public Builder routingVpcs(List<RoutingVPCResponse> routingVpcs) {
             this.routingVpcs = Objects.requireNonNull(routingVpcs);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUniqueId(String uniqueId) {
+        public Builder uniqueId(String uniqueId) {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

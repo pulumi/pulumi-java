@@ -14,10 +14,10 @@ public final class ServiceTaskSpecResourcesReservationGenericResources {
     private final @Nullable List<String> discreteResourcesSpecs;
     private final @Nullable List<String> namedResourcesSpecs;
 
-    @OutputCustomType.Constructor({"discreteResourcesSpecs","namedResourcesSpecs"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecResourcesReservationGenericResources(
-        @Nullable List<String> discreteResourcesSpecs,
-        @Nullable List<String> namedResourcesSpecs) {
+        @OutputCustomType.Parameter("discreteResourcesSpecs") @Nullable List<String> discreteResourcesSpecs,
+        @OutputCustomType.Parameter("namedResourcesSpecs") @Nullable List<String> namedResourcesSpecs) {
         this.discreteResourcesSpecs = discreteResourcesSpecs;
         this.namedResourcesSpecs = namedResourcesSpecs;
     }
@@ -51,12 +51,12 @@ public final class ServiceTaskSpecResourcesReservationGenericResources {
     	      this.namedResourcesSpecs = defaults.namedResourcesSpecs;
         }
 
-        public Builder setDiscreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
+        public Builder discreteResourcesSpecs(@Nullable List<String> discreteResourcesSpecs) {
             this.discreteResourcesSpecs = discreteResourcesSpecs;
             return this;
         }
 
-        public Builder setNamedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
+        public Builder namedResourcesSpecs(@Nullable List<String> namedResourcesSpecs) {
             this.namedResourcesSpecs = namedResourcesSpecs;
             return this;
         }

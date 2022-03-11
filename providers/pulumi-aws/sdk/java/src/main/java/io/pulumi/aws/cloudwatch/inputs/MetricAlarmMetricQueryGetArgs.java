@@ -136,62 +136,62 @@ public final class MetricAlarmMetricQueryGetArgs extends io.pulumi.resources.Res
     	      this.returnData = defaults.returnData;
         }
 
-        public Builder setAccountId(@Nullable Input<String> accountId) {
+        public Builder accountId(@Nullable Input<String> accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = Input.ofNullable(accountId);
             return this;
         }
 
-        public Builder setExpression(@Nullable Input<String> expression) {
+        public Builder expression(@Nullable Input<String> expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = Input.ofNullable(expression);
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setMetric(@Nullable Input<MetricAlarmMetricQueryMetricGetArgs> metric) {
+        public Builder metric(@Nullable Input<MetricAlarmMetricQueryMetricGetArgs> metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setMetric(@Nullable MetricAlarmMetricQueryMetricGetArgs metric) {
+        public Builder metric(@Nullable MetricAlarmMetricQueryMetricGetArgs metric) {
             this.metric = Input.ofNullable(metric);
             return this;
         }
 
-        public Builder setReturnData(@Nullable Input<Boolean> returnData) {
+        public Builder returnData(@Nullable Input<Boolean> returnData) {
             this.returnData = returnData;
             return this;
         }
 
-        public Builder setReturnData(@Nullable Boolean returnData) {
+        public Builder returnData(@Nullable Boolean returnData) {
             this.returnData = Input.ofNullable(returnData);
             return this;
         }

@@ -24,10 +24,10 @@ public final class AnalyticsApplicationInputsSchemaRecordFormat {
      */
     private final @Nullable String recordFormatType;
 
-    @OutputCustomType.Constructor({"mappingParameters","recordFormatType"})
+    @OutputCustomType.Constructor
     private AnalyticsApplicationInputsSchemaRecordFormat(
-        @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters,
-        @Nullable String recordFormatType) {
+        @OutputCustomType.Parameter("mappingParameters") @Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters,
+        @OutputCustomType.Parameter("recordFormatType") @Nullable String recordFormatType) {
         this.mappingParameters = mappingParameters;
         this.recordFormatType = recordFormatType;
     }
@@ -70,12 +70,12 @@ public final class AnalyticsApplicationInputsSchemaRecordFormat {
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setMappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters) {
+        public Builder mappingParameters(@Nullable AnalyticsApplicationInputsSchemaRecordFormatMappingParameters mappingParameters) {
             this.mappingParameters = mappingParameters;
             return this;
         }
 
-        public Builder setRecordFormatType(@Nullable String recordFormatType) {
+        public Builder recordFormatType(@Nullable String recordFormatType) {
             this.recordFormatType = recordFormatType;
             return this;
         }

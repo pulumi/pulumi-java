@@ -35,12 +35,12 @@ public final class ParameterDefinitionsValueResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"allowedValues","defaultValue","metadata","type"})
+    @OutputCustomType.Constructor
     private ParameterDefinitionsValueResponse(
-        @Nullable List<Object> allowedValues,
-        @Nullable Object defaultValue,
-        @Nullable ParameterDefinitionsValueResponseMetadata metadata,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("allowedValues") @Nullable List<Object> allowedValues,
+        @OutputCustomType.Parameter("defaultValue") @Nullable Object defaultValue,
+        @OutputCustomType.Parameter("metadata") @Nullable ParameterDefinitionsValueResponseMetadata metadata,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.allowedValues = allowedValues;
         this.defaultValue = defaultValue;
         this.metadata = metadata;
@@ -102,22 +102,22 @@ public final class ParameterDefinitionsValueResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowedValues(@Nullable List<Object> allowedValues) {
+        public Builder allowedValues(@Nullable List<Object> allowedValues) {
             this.allowedValues = allowedValues;
             return this;
         }
 
-        public Builder setDefaultValue(@Nullable Object defaultValue) {
+        public Builder defaultValue(@Nullable Object defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
+        public Builder metadata(@Nullable ParameterDefinitionsValueResponseMetadata metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

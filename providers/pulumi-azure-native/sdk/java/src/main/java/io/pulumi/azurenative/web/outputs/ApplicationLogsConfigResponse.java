@@ -29,11 +29,11 @@ public final class ApplicationLogsConfigResponse {
      */
     private final @Nullable FileSystemApplicationLogsConfigResponse fileSystem;
 
-    @OutputCustomType.Constructor({"azureBlobStorage","azureTableStorage","fileSystem"})
+    @OutputCustomType.Constructor
     private ApplicationLogsConfigResponse(
-        @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage,
-        @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage,
-        @Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
+        @OutputCustomType.Parameter("azureBlobStorage") @Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage,
+        @OutputCustomType.Parameter("azureTableStorage") @Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage,
+        @OutputCustomType.Parameter("fileSystem") @Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
         this.azureBlobStorage = azureBlobStorage;
         this.azureTableStorage = azureTableStorage;
         this.fileSystem = fileSystem;
@@ -85,17 +85,17 @@ public final class ApplicationLogsConfigResponse {
     	      this.fileSystem = defaults.fileSystem;
         }
 
-        public Builder setAzureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
+        public Builder azureBlobStorage(@Nullable AzureBlobStorageApplicationLogsConfigResponse azureBlobStorage) {
             this.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
-        public Builder setAzureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
+        public Builder azureTableStorage(@Nullable AzureTableStorageApplicationLogsConfigResponse azureTableStorage) {
             this.azureTableStorage = azureTableStorage;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
+        public Builder fileSystem(@Nullable FileSystemApplicationLogsConfigResponse fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }

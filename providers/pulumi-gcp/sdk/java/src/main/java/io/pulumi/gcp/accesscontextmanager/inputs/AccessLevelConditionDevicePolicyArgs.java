@@ -144,62 +144,62 @@ public final class AccessLevelConditionDevicePolicyArgs extends io.pulumi.resour
     	      this.requireScreenLock = defaults.requireScreenLock;
         }
 
-        public Builder setAllowedDeviceManagementLevels(@Nullable Input<List<String>> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable Input<List<String>> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = allowedDeviceManagementLevels;
             return this;
         }
 
-        public Builder setAllowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
+        public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
             this.allowedDeviceManagementLevels = Input.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(@Nullable Input<List<String>> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable Input<List<String>> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = allowedEncryptionStatuses;
             return this;
         }
 
-        public Builder setAllowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
+        public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
             this.allowedEncryptionStatuses = Input.ofNullable(allowedEncryptionStatuses);
             return this;
         }
 
-        public Builder setOsConstraints(@Nullable Input<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints) {
+        public Builder osConstraints(@Nullable Input<List<AccessLevelConditionDevicePolicyOsConstraintArgs>> osConstraints) {
             this.osConstraints = osConstraints;
             return this;
         }
 
-        public Builder setOsConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraintArgs> osConstraints) {
+        public Builder osConstraints(@Nullable List<AccessLevelConditionDevicePolicyOsConstraintArgs> osConstraints) {
             this.osConstraints = Input.ofNullable(osConstraints);
             return this;
         }
 
-        public Builder setRequireAdminApproval(@Nullable Input<Boolean> requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Input<Boolean> requireAdminApproval) {
             this.requireAdminApproval = requireAdminApproval;
             return this;
         }
 
-        public Builder setRequireAdminApproval(@Nullable Boolean requireAdminApproval) {
+        public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
             this.requireAdminApproval = Input.ofNullable(requireAdminApproval);
             return this;
         }
 
-        public Builder setRequireCorpOwned(@Nullable Input<Boolean> requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Input<Boolean> requireCorpOwned) {
             this.requireCorpOwned = requireCorpOwned;
             return this;
         }
 
-        public Builder setRequireCorpOwned(@Nullable Boolean requireCorpOwned) {
+        public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
             this.requireCorpOwned = Input.ofNullable(requireCorpOwned);
             return this;
         }
 
-        public Builder setRequireScreenLock(@Nullable Input<Boolean> requireScreenLock) {
+        public Builder requireScreenLock(@Nullable Input<Boolean> requireScreenLock) {
             this.requireScreenLock = requireScreenLock;
             return this;
         }
 
-        public Builder setRequireScreenLock(@Nullable Boolean requireScreenLock) {
+        public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
             this.requireScreenLock = Input.ofNullable(requireScreenLock);
             return this;
         }

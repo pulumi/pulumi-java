@@ -25,11 +25,11 @@ public final class StackSetStackInstances {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor({"deploymentTargets","parameterOverrides","regions"})
+    @OutputCustomType.Constructor
     private StackSetStackInstances(
-        StackSetDeploymentTargets deploymentTargets,
-        @Nullable List<StackSetParameter> parameterOverrides,
-        List<String> regions) {
+        @OutputCustomType.Parameter("deploymentTargets") StackSetDeploymentTargets deploymentTargets,
+        @OutputCustomType.Parameter("parameterOverrides") @Nullable List<StackSetParameter> parameterOverrides,
+        @OutputCustomType.Parameter("regions") List<String> regions) {
         this.deploymentTargets = deploymentTargets;
         this.parameterOverrides = parameterOverrides;
         this.regions = regions;
@@ -77,17 +77,17 @@ public final class StackSetStackInstances {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDeploymentTargets(StackSetDeploymentTargets deploymentTargets) {
+        public Builder deploymentTargets(StackSetDeploymentTargets deploymentTargets) {
             this.deploymentTargets = Objects.requireNonNull(deploymentTargets);
             return this;
         }
 
-        public Builder setParameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
+        public Builder parameterOverrides(@Nullable List<StackSetParameter> parameterOverrides) {
             this.parameterOverrides = parameterOverrides;
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }

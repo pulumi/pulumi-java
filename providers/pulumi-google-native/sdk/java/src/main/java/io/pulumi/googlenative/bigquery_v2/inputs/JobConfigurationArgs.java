@@ -156,72 +156,72 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
     	      this.query = defaults.query;
         }
 
-        public Builder setCopy(@Nullable Input<JobConfigurationTableCopyArgs> copy) {
+        public Builder copy(@Nullable Input<JobConfigurationTableCopyArgs> copy) {
             this.copy = copy;
             return this;
         }
 
-        public Builder setCopy(@Nullable JobConfigurationTableCopyArgs copy) {
+        public Builder copy(@Nullable JobConfigurationTableCopyArgs copy) {
             this.copy = Input.ofNullable(copy);
             return this;
         }
 
-        public Builder setDryRun(@Nullable Input<Boolean> dryRun) {
+        public Builder dryRun(@Nullable Input<Boolean> dryRun) {
             this.dryRun = dryRun;
             return this;
         }
 
-        public Builder setDryRun(@Nullable Boolean dryRun) {
+        public Builder dryRun(@Nullable Boolean dryRun) {
             this.dryRun = Input.ofNullable(dryRun);
             return this;
         }
 
-        public Builder setExtract(@Nullable Input<JobConfigurationExtractArgs> extract) {
+        public Builder extract(@Nullable Input<JobConfigurationExtractArgs> extract) {
             this.extract = extract;
             return this;
         }
 
-        public Builder setExtract(@Nullable JobConfigurationExtractArgs extract) {
+        public Builder extract(@Nullable JobConfigurationExtractArgs extract) {
             this.extract = Input.ofNullable(extract);
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable Input<String> jobTimeoutMs) {
             this.jobTimeoutMs = jobTimeoutMs;
             return this;
         }
 
-        public Builder setJobTimeoutMs(@Nullable String jobTimeoutMs) {
+        public Builder jobTimeoutMs(@Nullable String jobTimeoutMs) {
             this.jobTimeoutMs = Input.ofNullable(jobTimeoutMs);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLoad(@Nullable Input<JobConfigurationLoadArgs> load) {
+        public Builder load(@Nullable Input<JobConfigurationLoadArgs> load) {
             this.load = load;
             return this;
         }
 
-        public Builder setLoad(@Nullable JobConfigurationLoadArgs load) {
+        public Builder load(@Nullable JobConfigurationLoadArgs load) {
             this.load = Input.ofNullable(load);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<JobConfigurationQueryArgs> query) {
+        public Builder query(@Nullable Input<JobConfigurationQueryArgs> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable JobConfigurationQueryArgs query) {
+        public Builder query(@Nullable JobConfigurationQueryArgs query) {
             this.query = Input.ofNullable(query);
             return this;
         }

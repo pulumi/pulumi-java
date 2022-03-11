@@ -116,27 +116,27 @@ public final class GetBackupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setBackupName(String backupName) {
+        public Builder backupName(String backupName) {
             this.backupName = Objects.requireNonNull(backupName);
             return this;
         }
 
-        public Builder setPoolName(String poolName) {
+        public Builder poolName(String poolName) {
             this.poolName = Objects.requireNonNull(poolName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVolumeName(String volumeName) {
+        public Builder volumeName(String volumeName) {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }

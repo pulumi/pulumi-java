@@ -204,102 +204,102 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vpcSubnetIds = defaults.vpcSubnetIds;
         }
 
-        public Builder setAuth(Input<List<DBProxyAuthFormatArgs>> auth) {
+        public Builder auth(Input<List<DBProxyAuthFormatArgs>> auth) {
             this.auth = Objects.requireNonNull(auth);
             return this;
         }
 
-        public Builder setAuth(List<DBProxyAuthFormatArgs> auth) {
+        public Builder auth(List<DBProxyAuthFormatArgs> auth) {
             this.auth = Input.of(Objects.requireNonNull(auth));
             return this;
         }
 
-        public Builder setDBProxyName(@Nullable Input<String> dBProxyName) {
+        public Builder dBProxyName(@Nullable Input<String> dBProxyName) {
             this.dBProxyName = dBProxyName;
             return this;
         }
 
-        public Builder setDBProxyName(@Nullable String dBProxyName) {
+        public Builder dBProxyName(@Nullable String dBProxyName) {
             this.dBProxyName = Input.ofNullable(dBProxyName);
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Input<Boolean> debugLogging) {
+        public Builder debugLogging(@Nullable Input<Boolean> debugLogging) {
             this.debugLogging = debugLogging;
             return this;
         }
 
-        public Builder setDebugLogging(@Nullable Boolean debugLogging) {
+        public Builder debugLogging(@Nullable Boolean debugLogging) {
             this.debugLogging = Input.ofNullable(debugLogging);
             return this;
         }
 
-        public Builder setEngineFamily(Input<DBProxyEngineFamily> engineFamily) {
+        public Builder engineFamily(Input<DBProxyEngineFamily> engineFamily) {
             this.engineFamily = Objects.requireNonNull(engineFamily);
             return this;
         }
 
-        public Builder setEngineFamily(DBProxyEngineFamily engineFamily) {
+        public Builder engineFamily(DBProxyEngineFamily engineFamily) {
             this.engineFamily = Input.of(Objects.requireNonNull(engineFamily));
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Input<Integer> idleClientTimeout) {
             this.idleClientTimeout = idleClientTimeout;
             return this;
         }
 
-        public Builder setIdleClientTimeout(@Nullable Integer idleClientTimeout) {
+        public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
             this.idleClientTimeout = Input.ofNullable(idleClientTimeout);
             return this;
         }
 
-        public Builder setRequireTLS(@Nullable Input<Boolean> requireTLS) {
+        public Builder requireTLS(@Nullable Input<Boolean> requireTLS) {
             this.requireTLS = requireTLS;
             return this;
         }
 
-        public Builder setRequireTLS(@Nullable Boolean requireTLS) {
+        public Builder requireTLS(@Nullable Boolean requireTLS) {
             this.requireTLS = Input.ofNullable(requireTLS);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DBProxyTagFormatArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DBProxyTagFormatArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DBProxyTagFormatArgs> tags) {
+        public Builder tags(@Nullable List<DBProxyTagFormatArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable Input<List<String>> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
 
-        public Builder setVpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
+        public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
             this.vpcSecurityGroupIds = Input.ofNullable(vpcSecurityGroupIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(Input<List<String>> vpcSubnetIds) {
+        public Builder vpcSubnetIds(Input<List<String>> vpcSubnetIds) {
             this.vpcSubnetIds = Objects.requireNonNull(vpcSubnetIds);
             return this;
         }
 
-        public Builder setVpcSubnetIds(List<String> vpcSubnetIds) {
+        public Builder vpcSubnetIds(List<String> vpcSubnetIds) {
             this.vpcSubnetIds = Input.of(Objects.requireNonNull(vpcSubnetIds));
             return this;
         }

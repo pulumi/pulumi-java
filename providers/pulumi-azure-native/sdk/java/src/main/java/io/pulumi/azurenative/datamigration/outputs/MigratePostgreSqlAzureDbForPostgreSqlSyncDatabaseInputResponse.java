@@ -38,13 +38,13 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
      */
     private final @Nullable Map<String,String> targetSetting;
 
-    @OutputCustomType.Constructor({"migrationSetting","name","sourceSetting","targetDatabaseName","targetSetting"})
+    @OutputCustomType.Constructor
     private MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputResponse(
-        @Nullable Map<String,String> migrationSetting,
-        @Nullable String name,
-        @Nullable Map<String,String> sourceSetting,
-        @Nullable String targetDatabaseName,
-        @Nullable Map<String,String> targetSetting) {
+        @OutputCustomType.Parameter("migrationSetting") @Nullable Map<String,String> migrationSetting,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sourceSetting") @Nullable Map<String,String> sourceSetting,
+        @OutputCustomType.Parameter("targetDatabaseName") @Nullable String targetDatabaseName,
+        @OutputCustomType.Parameter("targetSetting") @Nullable Map<String,String> targetSetting) {
         this.migrationSetting = migrationSetting;
         this.name = name;
         this.sourceSetting = sourceSetting;
@@ -116,27 +116,27 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncDatabaseInputRespons
     	      this.targetSetting = defaults.targetSetting;
         }
 
-        public Builder setMigrationSetting(@Nullable Map<String,String> migrationSetting) {
+        public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             this.migrationSetting = migrationSetting;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceSetting(@Nullable Map<String,String> sourceSetting) {
+        public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             this.sourceSetting = sourceSetting;
             return this;
         }
 
-        public Builder setTargetDatabaseName(@Nullable String targetDatabaseName) {
+        public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
-        public Builder setTargetSetting(@Nullable Map<String,String> targetSetting) {
+        public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             this.targetSetting = targetSetting;
             return this;
         }

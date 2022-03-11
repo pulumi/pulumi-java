@@ -21,10 +21,10 @@ public final class ServerPrivateEndpointConnectionResponse {
      */
     private final ServerPrivateEndpointConnectionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"id","properties"})
+    @OutputCustomType.Constructor
     private ServerPrivateEndpointConnectionResponse(
-        String id,
-        ServerPrivateEndpointConnectionPropertiesResponse properties) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("properties") ServerPrivateEndpointConnectionPropertiesResponse properties) {
         this.id = id;
         this.properties = properties;
     }
@@ -66,12 +66,12 @@ public final class ServerPrivateEndpointConnectionResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProperties(ServerPrivateEndpointConnectionPropertiesResponse properties) {
+        public Builder properties(ServerPrivateEndpointConnectionPropertiesResponse properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }

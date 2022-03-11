@@ -53,16 +53,16 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
      */
     private final String resultType;
 
-    @OutputCustomType.Constructor({"id","isEnabled","jobCategory","jobOwner","lastExecutedOn","migrationEligibility","name","resultType"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(
-        String id,
-        Boolean isEnabled,
-        String jobCategory,
-        String jobOwner,
-        String lastExecutedOn,
-        MigrationEligibilityInfoResponse migrationEligibility,
-        String name,
-        String resultType) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("jobCategory") String jobCategory,
+        @OutputCustomType.Parameter("jobOwner") String jobOwner,
+        @OutputCustomType.Parameter("lastExecutedOn") String lastExecutedOn,
+        @OutputCustomType.Parameter("migrationEligibility") MigrationEligibilityInfoResponse migrationEligibility,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultType") String resultType) {
         this.id = id;
         this.isEnabled = isEnabled;
         this.jobCategory = jobCategory;
@@ -165,42 +165,42 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse {
     	      this.resultType = defaults.resultType;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setJobCategory(String jobCategory) {
+        public Builder jobCategory(String jobCategory) {
             this.jobCategory = Objects.requireNonNull(jobCategory);
             return this;
         }
 
-        public Builder setJobOwner(String jobOwner) {
+        public Builder jobOwner(String jobOwner) {
             this.jobOwner = Objects.requireNonNull(jobOwner);
             return this;
         }
 
-        public Builder setLastExecutedOn(String lastExecutedOn) {
+        public Builder lastExecutedOn(String lastExecutedOn) {
             this.lastExecutedOn = Objects.requireNonNull(lastExecutedOn);
             return this;
         }
 
-        public Builder setMigrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
+        public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
             this.migrationEligibility = Objects.requireNonNull(migrationEligibility);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }

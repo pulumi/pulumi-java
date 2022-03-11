@@ -28,11 +28,11 @@ public final class ListWebAppHostKeysResult {
      */
     private final @Nullable Map<String,String> systemKeys;
 
-    @OutputCustomType.Constructor({"functionKeys","masterKey","systemKeys"})
+    @OutputCustomType.Constructor
     private ListWebAppHostKeysResult(
-        @Nullable Map<String,String> functionKeys,
-        @Nullable String masterKey,
-        @Nullable Map<String,String> systemKeys) {
+        @OutputCustomType.Parameter("functionKeys") @Nullable Map<String,String> functionKeys,
+        @OutputCustomType.Parameter("masterKey") @Nullable String masterKey,
+        @OutputCustomType.Parameter("systemKeys") @Nullable Map<String,String> systemKeys) {
         this.functionKeys = functionKeys;
         this.masterKey = masterKey;
         this.systemKeys = systemKeys;
@@ -84,17 +84,17 @@ public final class ListWebAppHostKeysResult {
     	      this.systemKeys = defaults.systemKeys;
         }
 
-        public Builder setFunctionKeys(@Nullable Map<String,String> functionKeys) {
+        public Builder functionKeys(@Nullable Map<String,String> functionKeys) {
             this.functionKeys = functionKeys;
             return this;
         }
 
-        public Builder setMasterKey(@Nullable String masterKey) {
+        public Builder masterKey(@Nullable String masterKey) {
             this.masterKey = masterKey;
             return this;
         }
 
-        public Builder setSystemKeys(@Nullable Map<String,String> systemKeys) {
+        public Builder systemKeys(@Nullable Map<String,String> systemKeys) {
             this.systemKeys = systemKeys;
             return this;
         }

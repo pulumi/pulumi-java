@@ -80,21 +80,21 @@ public final class GetRegionAutoscalerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoscalingPolicy","creationTimestamp","description","kind","name","recommendedSize","region","scalingScheduleStatus","selfLink","status","statusDetails","target","zone"})
+    @OutputCustomType.Constructor
     private GetRegionAutoscalerResult(
-        AutoscalingPolicyResponse autoscalingPolicy,
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Integer recommendedSize,
-        String region,
-        Map<String,String> scalingScheduleStatus,
-        String selfLink,
-        String status,
-        List<AutoscalerStatusDetailsResponse> statusDetails,
-        String target,
-        String zone) {
+        @OutputCustomType.Parameter("autoscalingPolicy") AutoscalingPolicyResponse autoscalingPolicy,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("recommendedSize") Integer recommendedSize,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("scalingScheduleStatus") Map<String,String> scalingScheduleStatus,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusDetails") List<AutoscalerStatusDetailsResponse> statusDetails,
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoscalingPolicy = autoscalingPolicy;
         this.creationTimestamp = creationTimestamp;
         this.description = description;
@@ -246,67 +246,67 @@ public final class GetRegionAutoscalerResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoscalingPolicy(AutoscalingPolicyResponse autoscalingPolicy) {
+        public Builder autoscalingPolicy(AutoscalingPolicyResponse autoscalingPolicy) {
             this.autoscalingPolicy = Objects.requireNonNull(autoscalingPolicy);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRecommendedSize(Integer recommendedSize) {
+        public Builder recommendedSize(Integer recommendedSize) {
             this.recommendedSize = Objects.requireNonNull(recommendedSize);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setScalingScheduleStatus(Map<String,String> scalingScheduleStatus) {
+        public Builder scalingScheduleStatus(Map<String,String> scalingScheduleStatus) {
             this.scalingScheduleStatus = Objects.requireNonNull(scalingScheduleStatus);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusDetails(List<AutoscalerStatusDetailsResponse> statusDetails) {
+        public Builder statusDetails(List<AutoscalerStatusDetailsResponse> statusDetails) {
             this.statusDetails = Objects.requireNonNull(statusDetails);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

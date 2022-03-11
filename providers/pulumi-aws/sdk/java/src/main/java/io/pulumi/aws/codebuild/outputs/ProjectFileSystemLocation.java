@@ -37,13 +37,13 @@ public final class ProjectFileSystemLocation {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"identifier","location","mountOptions","mountPoint","type"})
+    @OutputCustomType.Constructor
     private ProjectFileSystemLocation(
-        @Nullable String identifier,
-        @Nullable String location,
-        @Nullable String mountOptions,
-        @Nullable String mountPoint,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("identifier") @Nullable String identifier,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("mountPoint") @Nullable String mountPoint,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.identifier = identifier;
         this.location = location;
         this.mountOptions = mountOptions;
@@ -115,27 +115,27 @@ public final class ProjectFileSystemLocation {
     	      this.type = defaults.type;
         }
 
-        public Builder setIdentifier(@Nullable String identifier) {
+        public Builder identifier(@Nullable String identifier) {
             this.identifier = identifier;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setMountPoint(@Nullable String mountPoint) {
+        public Builder mountPoint(@Nullable String mountPoint) {
             this.mountPoint = mountPoint;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

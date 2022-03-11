@@ -22,11 +22,11 @@ public final class GetResourceTagsResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"id","resourceId","tags"})
+    @OutputCustomType.Constructor
     private GetResourceTagsResult(
-        String id,
-        String resourceId,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.id = id;
         this.resourceId = resourceId;
         this.tags = tags;
@@ -74,17 +74,17 @@ public final class GetResourceTagsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

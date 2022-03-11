@@ -85,32 +85,32 @@ public final class LocalGatewayRouteArgs extends io.pulumi.resources.ResourceArg
     	      this.localGatewayVirtualInterfaceGroupId = defaults.localGatewayVirtualInterfaceGroupId;
         }
 
-        public Builder setDestinationCidrBlock(Input<String> destinationCidrBlock) {
+        public Builder destinationCidrBlock(Input<String> destinationCidrBlock) {
             this.destinationCidrBlock = Objects.requireNonNull(destinationCidrBlock);
             return this;
         }
 
-        public Builder setDestinationCidrBlock(String destinationCidrBlock) {
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.destinationCidrBlock = Input.of(Objects.requireNonNull(destinationCidrBlock));
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(Input<String> localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(Input<String> localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
 
-        public Builder setLocalGatewayRouteTableId(String localGatewayRouteTableId) {
+        public Builder localGatewayRouteTableId(String localGatewayRouteTableId) {
             this.localGatewayRouteTableId = Input.of(Objects.requireNonNull(localGatewayRouteTableId));
             return this;
         }
 
-        public Builder setLocalGatewayVirtualInterfaceGroupId(Input<String> localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(Input<String> localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Objects.requireNonNull(localGatewayVirtualInterfaceGroupId);
             return this;
         }
 
-        public Builder setLocalGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
+        public Builder localGatewayVirtualInterfaceGroupId(String localGatewayVirtualInterfaceGroupId) {
             this.localGatewayVirtualInterfaceGroupId = Input.of(Objects.requireNonNull(localGatewayVirtualInterfaceGroupId));
             return this;
         }

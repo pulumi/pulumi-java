@@ -149,72 +149,72 @@ public final class GuestDiagnosticsSettingArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDataSources(@Nullable Input<List<DataSourceArgs>> dataSources) {
+        public Builder dataSources(@Nullable Input<List<DataSourceArgs>> dataSources) {
             this.dataSources = dataSources;
             return this;
         }
 
-        public Builder setDataSources(@Nullable List<DataSourceArgs> dataSources) {
+        public Builder dataSources(@Nullable List<DataSourceArgs> dataSources) {
             this.dataSources = Input.ofNullable(dataSources);
             return this;
         }
 
-        public Builder setDiagnosticSettingsName(@Nullable Input<String> diagnosticSettingsName) {
+        public Builder diagnosticSettingsName(@Nullable Input<String> diagnosticSettingsName) {
             this.diagnosticSettingsName = diagnosticSettingsName;
             return this;
         }
 
-        public Builder setDiagnosticSettingsName(@Nullable String diagnosticSettingsName) {
+        public Builder diagnosticSettingsName(@Nullable String diagnosticSettingsName) {
             this.diagnosticSettingsName = Input.ofNullable(diagnosticSettingsName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setOsType(@Nullable Input<String> osType) {
+        public Builder osType(@Nullable Input<String> osType) {
             this.osType = osType;
             return this;
         }
 
-        public Builder setOsType(@Nullable String osType) {
+        public Builder osType(@Nullable String osType) {
             this.osType = Input.ofNullable(osType);
             return this;
         }
 
-        public Builder setProxySetting(@Nullable Input<String> proxySetting) {
+        public Builder proxySetting(@Nullable Input<String> proxySetting) {
             this.proxySetting = proxySetting;
             return this;
         }
 
-        public Builder setProxySetting(@Nullable String proxySetting) {
+        public Builder proxySetting(@Nullable String proxySetting) {
             this.proxySetting = Input.ofNullable(proxySetting);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

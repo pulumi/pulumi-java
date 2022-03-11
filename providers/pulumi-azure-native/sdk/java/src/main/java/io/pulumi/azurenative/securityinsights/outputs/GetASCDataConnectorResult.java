@@ -49,15 +49,15 @@ public final class GetASCDataConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataTypes","etag","id","kind","name","subscriptionId","type"})
+    @OutputCustomType.Constructor
     private GetASCDataConnectorResult(
-        @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
-        @Nullable String etag,
-        String id,
-        String kind,
-        String name,
-        @Nullable String subscriptionId,
-        String type) {
+        @OutputCustomType.Parameter("dataTypes") @Nullable AlertsDataTypeOfDataConnectorResponse dataTypes,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataTypes = dataTypes;
         this.etag = etag;
         this.id = id;
@@ -150,37 +150,37 @@ public final class GetASCDataConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataTypes(@Nullable AlertsDataTypeOfDataConnectorResponse dataTypes) {
+        public Builder dataTypes(@Nullable AlertsDataTypeOfDataConnectorResponse dataTypes) {
             this.dataTypes = dataTypes;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -15,8 +15,8 @@ public final class TopicRuleErrorActionDynamodbv2PutItem {
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"tableName"})
-    private TopicRuleErrorActionDynamodbv2PutItem(String tableName) {
+    @OutputCustomType.Constructor
+    private TopicRuleErrorActionDynamodbv2PutItem(@OutputCustomType.Parameter("tableName") String tableName) {
         this.tableName = tableName;
     }
 
@@ -48,7 +48,7 @@ public final class TopicRuleErrorActionDynamodbv2PutItem {
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

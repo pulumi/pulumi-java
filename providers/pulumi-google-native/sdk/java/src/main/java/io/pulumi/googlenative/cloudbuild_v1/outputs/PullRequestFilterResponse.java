@@ -26,11 +26,11 @@ public final class PullRequestFilterResponse {
      */
     private final Boolean invertRegex;
 
-    @OutputCustomType.Constructor({"branch","commentControl","invertRegex"})
+    @OutputCustomType.Constructor
     private PullRequestFilterResponse(
-        String branch,
-        String commentControl,
-        Boolean invertRegex) {
+        @OutputCustomType.Parameter("branch") String branch,
+        @OutputCustomType.Parameter("commentControl") String commentControl,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex) {
         this.branch = branch;
         this.commentControl = commentControl;
         this.invertRegex = invertRegex;
@@ -82,17 +82,17 @@ public final class PullRequestFilterResponse {
     	      this.invertRegex = defaults.invertRegex;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setCommentControl(String commentControl) {
+        public Builder commentControl(String commentControl) {
             this.commentControl = Objects.requireNonNull(commentControl);
             return this;
         }
 
-        public Builder setInvertRegex(Boolean invertRegex) {
+        public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }

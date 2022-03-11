@@ -29,11 +29,11 @@ public final class ManagedClusterAddonProfileResponse {
      */
     private final ManagedClusterAddonProfileResponseIdentity identity;
 
-    @OutputCustomType.Constructor({"config","enabled","identity"})
+    @OutputCustomType.Constructor
     private ManagedClusterAddonProfileResponse(
-        @Nullable Map<String,String> config,
-        Boolean enabled,
-        ManagedClusterAddonProfileResponseIdentity identity) {
+        @OutputCustomType.Parameter("config") @Nullable Map<String,String> config,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("identity") ManagedClusterAddonProfileResponseIdentity identity) {
         this.config = config;
         this.enabled = enabled;
         this.identity = identity;
@@ -85,17 +85,17 @@ public final class ManagedClusterAddonProfileResponse {
     	      this.identity = defaults.identity;
         }
 
-        public Builder setConfig(@Nullable Map<String,String> config) {
+        public Builder config(@Nullable Map<String,String> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setIdentity(ManagedClusterAddonProfileResponseIdentity identity) {
+        public Builder identity(ManagedClusterAddonProfileResponseIdentity identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }

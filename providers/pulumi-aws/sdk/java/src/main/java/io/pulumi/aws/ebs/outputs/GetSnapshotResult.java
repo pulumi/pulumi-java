@@ -97,28 +97,28 @@ public final class GetSnapshotResult {
      */
     private final Integer volumeSize;
 
-    @OutputCustomType.Constructor({"arn","dataEncryptionKeyId","description","encrypted","filters","id","kmsKeyId","mostRecent","outpostArn","ownerAlias","ownerId","owners","restorableByUserIds","snapshotId","snapshotIds","state","storageTier","tags","volumeId","volumeSize"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String arn,
-        String dataEncryptionKeyId,
-        String description,
-        Boolean encrypted,
-        @Nullable List<GetSnapshotFilter> filters,
-        String id,
-        String kmsKeyId,
-        @Nullable Boolean mostRecent,
-        String outpostArn,
-        String ownerAlias,
-        String ownerId,
-        @Nullable List<String> owners,
-        @Nullable List<String> restorableByUserIds,
-        String snapshotId,
-        @Nullable List<String> snapshotIds,
-        String state,
-        String storageTier,
-        Map<String,String> tags,
-        String volumeId,
-        Integer volumeSize) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dataEncryptionKeyId") String dataEncryptionKeyId,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("encrypted") Boolean encrypted,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSnapshotFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("outpostArn") String outpostArn,
+        @OutputCustomType.Parameter("ownerAlias") String ownerAlias,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("owners") @Nullable List<String> owners,
+        @OutputCustomType.Parameter("restorableByUserIds") @Nullable List<String> restorableByUserIds,
+        @OutputCustomType.Parameter("snapshotId") String snapshotId,
+        @OutputCustomType.Parameter("snapshotIds") @Nullable List<String> snapshotIds,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageTier") String storageTier,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("volumeId") String volumeId,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize) {
         this.arn = arn;
         this.dataEncryptionKeyId = dataEncryptionKeyId;
         this.description = description;
@@ -320,102 +320,102 @@ public final class GetSnapshotResult {
     	      this.volumeSize = defaults.volumeSize;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDataEncryptionKeyId(String dataEncryptionKeyId) {
+        public Builder dataEncryptionKeyId(String dataEncryptionKeyId) {
             this.dataEncryptionKeyId = Objects.requireNonNull(dataEncryptionKeyId);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEncrypted(Boolean encrypted) {
+        public Builder encrypted(Boolean encrypted) {
             this.encrypted = Objects.requireNonNull(encrypted);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetSnapshotFilter> filters) {
+        public Builder filters(@Nullable List<GetSnapshotFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setOutpostArn(String outpostArn) {
+        public Builder outpostArn(String outpostArn) {
             this.outpostArn = Objects.requireNonNull(outpostArn);
             return this;
         }
 
-        public Builder setOwnerAlias(String ownerAlias) {
+        public Builder ownerAlias(String ownerAlias) {
             this.ownerAlias = Objects.requireNonNull(ownerAlias);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setOwners(@Nullable List<String> owners) {
+        public Builder owners(@Nullable List<String> owners) {
             this.owners = owners;
             return this;
         }
 
-        public Builder setRestorableByUserIds(@Nullable List<String> restorableByUserIds) {
+        public Builder restorableByUserIds(@Nullable List<String> restorableByUserIds) {
             this.restorableByUserIds = restorableByUserIds;
             return this;
         }
 
-        public Builder setSnapshotId(String snapshotId) {
+        public Builder snapshotId(String snapshotId) {
             this.snapshotId = Objects.requireNonNull(snapshotId);
             return this;
         }
 
-        public Builder setSnapshotIds(@Nullable List<String> snapshotIds) {
+        public Builder snapshotIds(@Nullable List<String> snapshotIds) {
             this.snapshotIds = snapshotIds;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageTier(String storageTier) {
+        public Builder storageTier(String storageTier) {
             this.storageTier = Objects.requireNonNull(storageTier);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVolumeId(String volumeId) {
+        public Builder volumeId(String volumeId) {
             this.volumeId = Objects.requireNonNull(volumeId);
             return this;
         }
 
-        public Builder setVolumeSize(Integer volumeSize) {
+        public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }

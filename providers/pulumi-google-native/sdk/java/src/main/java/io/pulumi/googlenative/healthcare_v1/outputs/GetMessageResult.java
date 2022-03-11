@@ -65,18 +65,18 @@ public final class GetMessageResult {
      */
     private final String sendTime;
 
-    @OutputCustomType.Constructor({"createTime","data","labels","messageType","name","parsedData","patientIds","schematizedData","sendFacility","sendTime"})
+    @OutputCustomType.Constructor
     private GetMessageResult(
-        String createTime,
-        String data,
-        Map<String,String> labels,
-        String messageType,
-        String name,
-        ParsedDataResponse parsedData,
-        List<PatientIdResponse> patientIds,
-        SchematizedDataResponse schematizedData,
-        String sendFacility,
-        String sendTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("data") String data,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("messageType") String messageType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parsedData") ParsedDataResponse parsedData,
+        @OutputCustomType.Parameter("patientIds") List<PatientIdResponse> patientIds,
+        @OutputCustomType.Parameter("schematizedData") SchematizedDataResponse schematizedData,
+        @OutputCustomType.Parameter("sendFacility") String sendFacility,
+        @OutputCustomType.Parameter("sendTime") String sendTime) {
         this.createTime = createTime;
         this.data = data;
         this.labels = labels;
@@ -198,52 +198,52 @@ public final class GetMessageResult {
     	      this.sendTime = defaults.sendTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setData(String data) {
+        public Builder data(String data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMessageType(String messageType) {
+        public Builder messageType(String messageType) {
             this.messageType = Objects.requireNonNull(messageType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParsedData(ParsedDataResponse parsedData) {
+        public Builder parsedData(ParsedDataResponse parsedData) {
             this.parsedData = Objects.requireNonNull(parsedData);
             return this;
         }
 
-        public Builder setPatientIds(List<PatientIdResponse> patientIds) {
+        public Builder patientIds(List<PatientIdResponse> patientIds) {
             this.patientIds = Objects.requireNonNull(patientIds);
             return this;
         }
 
-        public Builder setSchematizedData(SchematizedDataResponse schematizedData) {
+        public Builder schematizedData(SchematizedDataResponse schematizedData) {
             this.schematizedData = Objects.requireNonNull(schematizedData);
             return this;
         }
 
-        public Builder setSendFacility(String sendFacility) {
+        public Builder sendFacility(String sendFacility) {
             this.sendFacility = Objects.requireNonNull(sendFacility);
             return this;
         }
 
-        public Builder setSendTime(String sendTime) {
+        public Builder sendTime(String sendTime) {
             this.sendTime = Objects.requireNonNull(sendTime);
             return this;
         }

@@ -90,18 +90,18 @@ public final class ClusterAddonsConfig {
      */
     private final @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig;
 
-    @OutputCustomType.Constructor({"cloudrunConfig","configConnectorConfig","dnsCacheConfig","gcePersistentDiskCsiDriverConfig","gcpFilestoreCsiDriverConfig","horizontalPodAutoscaling","httpLoadBalancing","istioConfig","kalmConfig","networkPolicyConfig"})
+    @OutputCustomType.Constructor
     private ClusterAddonsConfig(
-        @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
-        @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
-        @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
-        @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
-        @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
-        @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
-        @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
-        @Nullable ClusterAddonsConfigIstioConfig istioConfig,
-        @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
-        @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
+        @OutputCustomType.Parameter("cloudrunConfig") @Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig,
+        @OutputCustomType.Parameter("configConnectorConfig") @Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig,
+        @OutputCustomType.Parameter("dnsCacheConfig") @Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig,
+        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") @Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig,
+        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") @Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig,
+        @OutputCustomType.Parameter("horizontalPodAutoscaling") @Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling,
+        @OutputCustomType.Parameter("httpLoadBalancing") @Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing,
+        @OutputCustomType.Parameter("istioConfig") @Nullable ClusterAddonsConfigIstioConfig istioConfig,
+        @OutputCustomType.Parameter("kalmConfig") @Nullable ClusterAddonsConfigKalmConfig kalmConfig,
+        @OutputCustomType.Parameter("networkPolicyConfig") @Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
         this.cloudrunConfig = cloudrunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;
@@ -242,52 +242,52 @@ public final class ClusterAddonsConfig {
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder setCloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig) {
+        public Builder cloudrunConfig(@Nullable ClusterAddonsConfigCloudrunConfig cloudrunConfig) {
             this.cloudrunConfig = cloudrunConfig;
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable ClusterAddonsConfigConfigConnectorConfig configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable ClusterAddonsConfigDnsCacheConfig dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable ClusterAddonsConfigGcePersistentDiskCsiDriverConfig gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable ClusterAddonsConfigGcpFilestoreCsiDriverConfig gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable ClusterAddonsConfigHorizontalPodAutoscaling horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable ClusterAddonsConfigHttpLoadBalancing httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
-        public Builder setIstioConfig(@Nullable ClusterAddonsConfigIstioConfig istioConfig) {
+        public Builder istioConfig(@Nullable ClusterAddonsConfigIstioConfig istioConfig) {
             this.istioConfig = istioConfig;
             return this;
         }
 
-        public Builder setKalmConfig(@Nullable ClusterAddonsConfigKalmConfig kalmConfig) {
+        public Builder kalmConfig(@Nullable ClusterAddonsConfigKalmConfig kalmConfig) {
             this.kalmConfig = kalmConfig;
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable ClusterAddonsConfigNetworkPolicyConfig networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }

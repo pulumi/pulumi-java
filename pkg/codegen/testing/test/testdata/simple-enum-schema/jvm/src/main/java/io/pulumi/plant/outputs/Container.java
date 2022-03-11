@@ -18,12 +18,12 @@ public final class Container {
     private final @Nullable String material;
     private final ContainerSize size;
 
-    @OutputCustomType.Constructor({"brightness","color","material","size"})
+    @OutputCustomType.Constructor
     private Container(
-        @Nullable ContainerBrightness brightness,
-        @Nullable String color,
-        @Nullable String material,
-        ContainerSize size) {
+        @OutputCustomType.Parameter("brightness") @Nullable ContainerBrightness brightness,
+        @OutputCustomType.Parameter("color") @Nullable String color,
+        @OutputCustomType.Parameter("material") @Nullable String material,
+        @OutputCustomType.Parameter("size") ContainerSize size) {
         this.brightness = brightness;
         this.color = color;
         this.material = material;
@@ -69,22 +69,22 @@ public final class Container {
     	      this.size = defaults.size;
         }
 
-        public Builder setBrightness(@Nullable ContainerBrightness brightness) {
+        public Builder brightness(@Nullable ContainerBrightness brightness) {
             this.brightness = brightness;
             return this;
         }
 
-        public Builder setColor(@Nullable String color) {
+        public Builder color(@Nullable String color) {
             this.color = color;
             return this;
         }
 
-        public Builder setMaterial(@Nullable String material) {
+        public Builder material(@Nullable String material) {
             this.material = material;
             return this;
         }
 
-        public Builder setSize(ContainerSize size) {
+        public Builder size(ContainerSize size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

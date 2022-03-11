@@ -16,8 +16,8 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExports {
      */
     private final List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations;
 
-    @OutputCustomType.Constructor({"clientConfigurations"})
-    private OpenZfsFileSystemRootVolumeConfigurationNfsExports(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
+    @OutputCustomType.Constructor
+    private OpenZfsFileSystemRootVolumeConfigurationNfsExports(@OutputCustomType.Parameter("clientConfigurations") List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
         this.clientConfigurations = clientConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationNfsExports {
     	      this.clientConfigurations = defaults.clientConfigurations;
         }
 
-        public Builder setClientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
+        public Builder clientConfigurations(List<OpenZfsFileSystemRootVolumeConfigurationNfsExportsClientConfiguration> clientConfigurations) {
             this.clientConfigurations = Objects.requireNonNull(clientConfigurations);
             return this;
         }

@@ -21,10 +21,10 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
      */
     private final String intervalUnit;
 
-    @OutputCustomType.Constructor({"interval","intervalUnit"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprecateRule(
-        Integer interval,
-        String intervalUnit) {
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("intervalUnit") String intervalUnit) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
     }
@@ -66,12 +66,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRuleDeprec
     	      this.intervalUnit = defaults.intervalUnit;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setIntervalUnit(String intervalUnit) {
+        public Builder intervalUnit(String intervalUnit) {
             this.intervalUnit = Objects.requireNonNull(intervalUnit);
             return this;
         }

@@ -28,11 +28,11 @@ public final class PatchSettingsResponse {
      */
     private final @Nullable String patchMode;
 
-    @OutputCustomType.Constructor({"assessmentMode","enableHotpatching","patchMode"})
+    @OutputCustomType.Constructor
     private PatchSettingsResponse(
-        @Nullable String assessmentMode,
-        @Nullable Boolean enableHotpatching,
-        @Nullable String patchMode) {
+        @OutputCustomType.Parameter("assessmentMode") @Nullable String assessmentMode,
+        @OutputCustomType.Parameter("enableHotpatching") @Nullable Boolean enableHotpatching,
+        @OutputCustomType.Parameter("patchMode") @Nullable String patchMode) {
         this.assessmentMode = assessmentMode;
         this.enableHotpatching = enableHotpatching;
         this.patchMode = patchMode;
@@ -84,17 +84,17 @@ public final class PatchSettingsResponse {
     	      this.patchMode = defaults.patchMode;
         }
 
-        public Builder setAssessmentMode(@Nullable String assessmentMode) {
+        public Builder assessmentMode(@Nullable String assessmentMode) {
             this.assessmentMode = assessmentMode;
             return this;
         }
 
-        public Builder setEnableHotpatching(@Nullable Boolean enableHotpatching) {
+        public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
             this.enableHotpatching = enableHotpatching;
             return this;
         }
 
-        public Builder setPatchMode(@Nullable String patchMode) {
+        public Builder patchMode(@Nullable String patchMode) {
             this.patchMode = patchMode;
             return this;
         }

@@ -20,10 +20,10 @@ public final class ImageInformationResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor({"imageType","imageUrl"})
+    @OutputCustomType.Constructor
     private ImageInformationResponse(
-        String imageType,
-        String imageUrl) {
+        @OutputCustomType.Parameter("imageType") String imageType,
+        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
         this.imageType = imageType;
         this.imageUrl = imageUrl;
     }
@@ -65,12 +65,12 @@ public final class ImageInformationResponse {
     	      this.imageUrl = defaults.imageUrl;
         }
 
-        public Builder setImageType(String imageType) {
+        public Builder imageType(String imageType) {
             this.imageType = Objects.requireNonNull(imageType);
             return this;
         }
 
-        public Builder setImageUrl(String imageUrl) {
+        public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }

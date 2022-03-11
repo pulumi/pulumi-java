@@ -15,8 +15,8 @@ public final class ResourceResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"uri"})
-    private ResourceResponse(String uri) {
+    @OutputCustomType.Constructor
+    private ResourceResponse(@OutputCustomType.Parameter("uri") String uri) {
         this.uri = uri;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

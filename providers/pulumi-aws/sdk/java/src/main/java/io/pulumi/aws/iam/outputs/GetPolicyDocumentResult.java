@@ -31,17 +31,17 @@ public final class GetPolicyDocumentResult {
     private final @Nullable List<GetPolicyDocumentStatement> statements;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","json","overrideJson","overridePolicyDocuments","policyId","sourceJson","sourcePolicyDocuments","statements","version"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentResult(
-        String id,
-        String json,
-        @Nullable String overrideJson,
-        @Nullable List<String> overridePolicyDocuments,
-        @Nullable String policyId,
-        @Nullable String sourceJson,
-        @Nullable List<String> sourcePolicyDocuments,
-        @Nullable List<GetPolicyDocumentStatement> statements,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("json") String json,
+        @OutputCustomType.Parameter("overrideJson") @Nullable String overrideJson,
+        @OutputCustomType.Parameter("overridePolicyDocuments") @Nullable List<String> overridePolicyDocuments,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("sourceJson") @Nullable String sourceJson,
+        @OutputCustomType.Parameter("sourcePolicyDocuments") @Nullable List<String> sourcePolicyDocuments,
+        @OutputCustomType.Parameter("statements") @Nullable List<GetPolicyDocumentStatement> statements,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.json = json;
         this.overrideJson = overrideJson;
@@ -125,47 +125,47 @@ public final class GetPolicyDocumentResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJson(String json) {
+        public Builder json(String json) {
             this.json = Objects.requireNonNull(json);
             return this;
         }
 
-        public Builder setOverrideJson(@Nullable String overrideJson) {
+        public Builder overrideJson(@Nullable String overrideJson) {
             this.overrideJson = overrideJson;
             return this;
         }
 
-        public Builder setOverridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
+        public Builder overridePolicyDocuments(@Nullable List<String> overridePolicyDocuments) {
             this.overridePolicyDocuments = overridePolicyDocuments;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setSourceJson(@Nullable String sourceJson) {
+        public Builder sourceJson(@Nullable String sourceJson) {
             this.sourceJson = sourceJson;
             return this;
         }
 
-        public Builder setSourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
+        public Builder sourcePolicyDocuments(@Nullable List<String> sourcePolicyDocuments) {
             this.sourcePolicyDocuments = sourcePolicyDocuments;
             return this;
         }
 
-        public Builder setStatements(@Nullable List<GetPolicyDocumentStatement> statements) {
+        public Builder statements(@Nullable List<GetPolicyDocumentStatement> statements) {
             this.statements = statements;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

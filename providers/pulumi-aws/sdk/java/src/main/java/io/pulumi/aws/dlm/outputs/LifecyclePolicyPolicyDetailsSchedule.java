@@ -48,14 +48,14 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
      */
     private final @Nullable Map<String,String> tagsToAdd;
 
-    @OutputCustomType.Constructor({"copyTags","createRule","crossRegionCopyRules","name","retainRule","tagsToAdd"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsSchedule(
-        @Nullable Boolean copyTags,
-        LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
-        @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
-        String name,
-        LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
-        @Nullable Map<String,String> tagsToAdd) {
+        @OutputCustomType.Parameter("copyTags") @Nullable Boolean copyTags,
+        @OutputCustomType.Parameter("createRule") LifecyclePolicyPolicyDetailsScheduleCreateRule createRule,
+        @OutputCustomType.Parameter("crossRegionCopyRules") @Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("retainRule") LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule,
+        @OutputCustomType.Parameter("tagsToAdd") @Nullable Map<String,String> tagsToAdd) {
         this.copyTags = copyTags;
         this.createRule = createRule;
         this.crossRegionCopyRules = crossRegionCopyRules;
@@ -137,32 +137,32 @@ public final class LifecyclePolicyPolicyDetailsSchedule {
     	      this.tagsToAdd = defaults.tagsToAdd;
         }
 
-        public Builder setCopyTags(@Nullable Boolean copyTags) {
+        public Builder copyTags(@Nullable Boolean copyTags) {
             this.copyTags = copyTags;
             return this;
         }
 
-        public Builder setCreateRule(LifecyclePolicyPolicyDetailsScheduleCreateRule createRule) {
+        public Builder createRule(LifecyclePolicyPolicyDetailsScheduleCreateRule createRule) {
             this.createRule = Objects.requireNonNull(createRule);
             return this;
         }
 
-        public Builder setCrossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules) {
+        public Builder crossRegionCopyRules(@Nullable List<LifecyclePolicyPolicyDetailsScheduleCrossRegionCopyRule> crossRegionCopyRules) {
             this.crossRegionCopyRules = crossRegionCopyRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRetainRule(LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule) {
+        public Builder retainRule(LifecyclePolicyPolicyDetailsScheduleRetainRule retainRule) {
             this.retainRule = Objects.requireNonNull(retainRule);
             return this;
         }
 
-        public Builder setTagsToAdd(@Nullable Map<String,String> tagsToAdd) {
+        public Builder tagsToAdd(@Nullable Map<String,String> tagsToAdd) {
             this.tagsToAdd = tagsToAdd;
             return this;
         }

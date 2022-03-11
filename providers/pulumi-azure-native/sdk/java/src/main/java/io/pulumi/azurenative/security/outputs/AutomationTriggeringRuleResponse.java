@@ -32,12 +32,12 @@ public final class AutomationTriggeringRuleResponse {
      */
     private final @Nullable String propertyType;
 
-    @OutputCustomType.Constructor({"expectedValue","operator","propertyJPath","propertyType"})
+    @OutputCustomType.Constructor
     private AutomationTriggeringRuleResponse(
-        @Nullable String expectedValue,
-        @Nullable String operator,
-        @Nullable String propertyJPath,
-        @Nullable String propertyType) {
+        @OutputCustomType.Parameter("expectedValue") @Nullable String expectedValue,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("propertyJPath") @Nullable String propertyJPath,
+        @OutputCustomType.Parameter("propertyType") @Nullable String propertyType) {
         this.expectedValue = expectedValue;
         this.operator = operator;
         this.propertyJPath = propertyJPath;
@@ -99,22 +99,22 @@ public final class AutomationTriggeringRuleResponse {
     	      this.propertyType = defaults.propertyType;
         }
 
-        public Builder setExpectedValue(@Nullable String expectedValue) {
+        public Builder expectedValue(@Nullable String expectedValue) {
             this.expectedValue = expectedValue;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setPropertyJPath(@Nullable String propertyJPath) {
+        public Builder propertyJPath(@Nullable String propertyJPath) {
             this.propertyJPath = propertyJPath;
             return this;
         }
 
-        public Builder setPropertyType(@Nullable String propertyType) {
+        public Builder propertyType(@Nullable String propertyType) {
             this.propertyType = propertyType;
             return this;
         }

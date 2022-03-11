@@ -44,14 +44,14 @@ public final class GetProjectResult {
      */
     private final @Nullable List<ProjectTag> tags;
 
-    @OutputCustomType.Constructor({"assetIds","projectArn","projectDescription","projectId","projectName","tags"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable List<String> assetIds,
-        @Nullable String projectArn,
-        @Nullable String projectDescription,
-        @Nullable String projectId,
-        @Nullable String projectName,
-        @Nullable List<ProjectTag> tags) {
+        @OutputCustomType.Parameter("assetIds") @Nullable List<String> assetIds,
+        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
+        @OutputCustomType.Parameter("projectDescription") @Nullable String projectDescription,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("projectName") @Nullable String projectName,
+        @OutputCustomType.Parameter("tags") @Nullable List<ProjectTag> tags) {
         this.assetIds = assetIds;
         this.projectArn = projectArn;
         this.projectDescription = projectDescription;
@@ -133,32 +133,32 @@ public final class GetProjectResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetIds(@Nullable List<String> assetIds) {
+        public Builder assetIds(@Nullable List<String> assetIds) {
             this.assetIds = assetIds;
             return this;
         }
 
-        public Builder setProjectArn(@Nullable String projectArn) {
+        public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
-        public Builder setProjectDescription(@Nullable String projectDescription) {
+        public Builder projectDescription(@Nullable String projectDescription) {
             this.projectDescription = projectDescription;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectName(@Nullable String projectName) {
+        public Builder projectName(@Nullable String projectName) {
             this.projectName = projectName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ProjectTag> tags) {
+        public Builder tags(@Nullable List<ProjectTag> tags) {
             this.tags = tags;
             return this;
         }

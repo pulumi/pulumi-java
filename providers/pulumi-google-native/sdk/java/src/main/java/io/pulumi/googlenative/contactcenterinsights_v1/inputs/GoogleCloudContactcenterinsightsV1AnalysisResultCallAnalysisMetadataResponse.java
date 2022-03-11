@@ -141,32 +141,32 @@ public final class GoogleCloudContactcenterinsightsV1AnalysisResultCallAnalysisM
     	      this.sentiments = defaults.sentiments;
         }
 
-        public Builder setAnnotations(List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations) {
+        public Builder annotations(List<GoogleCloudContactcenterinsightsV1CallAnnotationResponse> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setEntities(Map<String,String> entities) {
+        public Builder entities(Map<String,String> entities) {
             this.entities = Objects.requireNonNull(entities);
             return this;
         }
 
-        public Builder setIntents(Map<String,String> intents) {
+        public Builder intents(Map<String,String> intents) {
             this.intents = Objects.requireNonNull(intents);
             return this;
         }
 
-        public Builder setIssueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult) {
+        public Builder issueModelResult(GoogleCloudContactcenterinsightsV1IssueModelResultResponse issueModelResult) {
             this.issueModelResult = Objects.requireNonNull(issueModelResult);
             return this;
         }
 
-        public Builder setPhraseMatchers(Map<String,String> phraseMatchers) {
+        public Builder phraseMatchers(Map<String,String> phraseMatchers) {
             this.phraseMatchers = Objects.requireNonNull(phraseMatchers);
             return this;
         }
 
-        public Builder setSentiments(List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
+        public Builder sentiments(List<GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse> sentiments) {
             this.sentiments = Objects.requireNonNull(sentiments);
             return this;
         }

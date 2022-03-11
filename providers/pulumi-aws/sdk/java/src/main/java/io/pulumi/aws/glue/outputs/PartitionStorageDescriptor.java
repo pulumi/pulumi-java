@@ -80,20 +80,20 @@ public final class PartitionStorageDescriptor {
      */
     private final @Nullable Boolean storedAsSubDirectories;
 
-    @OutputCustomType.Constructor({"bucketColumns","columns","compressed","inputFormat","location","numberOfBuckets","outputFormat","parameters","serDeInfo","skewedInfo","sortColumns","storedAsSubDirectories"})
+    @OutputCustomType.Constructor
     private PartitionStorageDescriptor(
-        @Nullable List<String> bucketColumns,
-        @Nullable List<PartitionStorageDescriptorColumn> columns,
-        @Nullable Boolean compressed,
-        @Nullable String inputFormat,
-        @Nullable String location,
-        @Nullable Integer numberOfBuckets,
-        @Nullable String outputFormat,
-        @Nullable Map<String,String> parameters,
-        @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
-        @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
-        @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
-        @Nullable Boolean storedAsSubDirectories) {
+        @OutputCustomType.Parameter("bucketColumns") @Nullable List<String> bucketColumns,
+        @OutputCustomType.Parameter("columns") @Nullable List<PartitionStorageDescriptorColumn> columns,
+        @OutputCustomType.Parameter("compressed") @Nullable Boolean compressed,
+        @OutputCustomType.Parameter("inputFormat") @Nullable String inputFormat,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("numberOfBuckets") @Nullable Integer numberOfBuckets,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,String> parameters,
+        @OutputCustomType.Parameter("serDeInfo") @Nullable PartitionStorageDescriptorSerDeInfo serDeInfo,
+        @OutputCustomType.Parameter("skewedInfo") @Nullable PartitionStorageDescriptorSkewedInfo skewedInfo,
+        @OutputCustomType.Parameter("sortColumns") @Nullable List<PartitionStorageDescriptorSortColumn> sortColumns,
+        @OutputCustomType.Parameter("storedAsSubDirectories") @Nullable Boolean storedAsSubDirectories) {
         this.bucketColumns = bucketColumns;
         this.columns = columns;
         this.compressed = compressed;
@@ -235,62 +235,62 @@ public final class PartitionStorageDescriptor {
     	      this.storedAsSubDirectories = defaults.storedAsSubDirectories;
         }
 
-        public Builder setBucketColumns(@Nullable List<String> bucketColumns) {
+        public Builder bucketColumns(@Nullable List<String> bucketColumns) {
             this.bucketColumns = bucketColumns;
             return this;
         }
 
-        public Builder setColumns(@Nullable List<PartitionStorageDescriptorColumn> columns) {
+        public Builder columns(@Nullable List<PartitionStorageDescriptorColumn> columns) {
             this.columns = columns;
             return this;
         }
 
-        public Builder setCompressed(@Nullable Boolean compressed) {
+        public Builder compressed(@Nullable Boolean compressed) {
             this.compressed = compressed;
             return this;
         }
 
-        public Builder setInputFormat(@Nullable String inputFormat) {
+        public Builder inputFormat(@Nullable String inputFormat) {
             this.inputFormat = inputFormat;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setNumberOfBuckets(@Nullable Integer numberOfBuckets) {
+        public Builder numberOfBuckets(@Nullable Integer numberOfBuckets) {
             this.numberOfBuckets = numberOfBuckets;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setSerDeInfo(@Nullable PartitionStorageDescriptorSerDeInfo serDeInfo) {
+        public Builder serDeInfo(@Nullable PartitionStorageDescriptorSerDeInfo serDeInfo) {
             this.serDeInfo = serDeInfo;
             return this;
         }
 
-        public Builder setSkewedInfo(@Nullable PartitionStorageDescriptorSkewedInfo skewedInfo) {
+        public Builder skewedInfo(@Nullable PartitionStorageDescriptorSkewedInfo skewedInfo) {
             this.skewedInfo = skewedInfo;
             return this;
         }
 
-        public Builder setSortColumns(@Nullable List<PartitionStorageDescriptorSortColumn> sortColumns) {
+        public Builder sortColumns(@Nullable List<PartitionStorageDescriptorSortColumn> sortColumns) {
             this.sortColumns = sortColumns;
             return this;
         }
 
-        public Builder setStoredAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
+        public Builder storedAsSubDirectories(@Nullable Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;
             return this;
         }

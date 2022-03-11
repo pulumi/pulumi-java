@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataQualityJobDefinitionDataQualityJobInput {
     private final DataQualityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor({"endpointInput"})
-    private DataQualityJobDefinitionDataQualityJobInput(DataQualityJobDefinitionEndpointInput endpointInput) {
+    @OutputCustomType.Constructor
+    private DataQualityJobDefinitionDataQualityJobInput(@OutputCustomType.Parameter("endpointInput") DataQualityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 
@@ -40,7 +40,7 @@ public final class DataQualityJobDefinitionDataQualityJobInput {
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(DataQualityJobDefinitionEndpointInput endpointInput) {
+        public Builder endpointInput(DataQualityJobDefinitionEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }

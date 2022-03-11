@@ -52,18 +52,18 @@ public final class DetectorEventType {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","entityTypes","eventVariables","inline","labels","lastUpdatedTime","name","tags"})
+    @OutputCustomType.Constructor
     private DetectorEventType(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable List<DetectorEntityType> entityTypes,
-        @Nullable List<DetectorEventVariable> eventVariables,
-        @Nullable Boolean inline,
-        @Nullable List<DetectorLabel> labels,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DetectorTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("entityTypes") @Nullable List<DetectorEntityType> entityTypes,
+        @OutputCustomType.Parameter("eventVariables") @Nullable List<DetectorEventVariable> eventVariables,
+        @OutputCustomType.Parameter("inline") @Nullable Boolean inline,
+        @OutputCustomType.Parameter("labels") @Nullable List<DetectorLabel> labels,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -169,52 +169,52 @@ public final class DetectorEventType {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEntityTypes(@Nullable List<DetectorEntityType> entityTypes) {
+        public Builder entityTypes(@Nullable List<DetectorEntityType> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
 
-        public Builder setEventVariables(@Nullable List<DetectorEventVariable> eventVariables) {
+        public Builder eventVariables(@Nullable List<DetectorEventVariable> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
 
-        public Builder setInline(@Nullable Boolean inline) {
+        public Builder inline(@Nullable Boolean inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<DetectorLabel> labels) {
+        public Builder labels(@Nullable List<DetectorLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTag> tags) {
+        public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }

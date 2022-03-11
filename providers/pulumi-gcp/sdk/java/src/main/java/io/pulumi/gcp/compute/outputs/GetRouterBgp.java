@@ -17,12 +17,12 @@ public final class GetRouterBgp {
     private final List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges;
     private final Integer asn;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn"})
+    @OutputCustomType.Constructor
     private GetRouterBgp(
-        String advertiseMode,
-        List<String> advertisedGroups,
-        List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
-        Integer asn) {
+        @OutputCustomType.Parameter("advertiseMode") String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @OutputCustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
@@ -68,22 +68,22 @@ public final class GetRouterBgp {
     	      this.asn = defaults.asn;
         }
 
-        public Builder setAdvertiseMode(String advertiseMode) {
+        public Builder advertiseMode(String advertiseMode) {
             this.advertiseMode = Objects.requireNonNull(advertiseMode);
             return this;
         }
 
-        public Builder setAdvertisedGroups(List<String> advertisedGroups) {
+        public Builder advertisedGroups(List<String> advertisedGroups) {
             this.advertisedGroups = Objects.requireNonNull(advertisedGroups);
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges) {
+        public Builder advertisedIpRanges(List<GetRouterBgpAdvertisedIpRange> advertisedIpRanges) {
             this.advertisedIpRanges = Objects.requireNonNull(advertisedIpRanges);
             return this;
         }
 
-        public Builder setAsn(Integer asn) {
+        public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }

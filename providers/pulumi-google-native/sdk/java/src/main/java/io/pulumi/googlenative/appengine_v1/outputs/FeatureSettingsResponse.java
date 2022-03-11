@@ -20,10 +20,10 @@ public final class FeatureSettingsResponse {
      */
     private final Boolean useContainerOptimizedOs;
 
-    @OutputCustomType.Constructor({"splitHealthChecks","useContainerOptimizedOs"})
+    @OutputCustomType.Constructor
     private FeatureSettingsResponse(
-        Boolean splitHealthChecks,
-        Boolean useContainerOptimizedOs) {
+        @OutputCustomType.Parameter("splitHealthChecks") Boolean splitHealthChecks,
+        @OutputCustomType.Parameter("useContainerOptimizedOs") Boolean useContainerOptimizedOs) {
         this.splitHealthChecks = splitHealthChecks;
         this.useContainerOptimizedOs = useContainerOptimizedOs;
     }
@@ -65,12 +65,12 @@ public final class FeatureSettingsResponse {
     	      this.useContainerOptimizedOs = defaults.useContainerOptimizedOs;
         }
 
-        public Builder setSplitHealthChecks(Boolean splitHealthChecks) {
+        public Builder splitHealthChecks(Boolean splitHealthChecks) {
             this.splitHealthChecks = Objects.requireNonNull(splitHealthChecks);
             return this;
         }
 
-        public Builder setUseContainerOptimizedOs(Boolean useContainerOptimizedOs) {
+        public Builder useContainerOptimizedOs(Boolean useContainerOptimizedOs) {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }

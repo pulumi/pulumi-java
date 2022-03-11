@@ -76,20 +76,20 @@ public final class GetCapacityReservationResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"id","instanceView","location","name","provisioningState","provisioningTime","reservationId","sku","tags","type","virtualMachinesAssociated","zones"})
+    @OutputCustomType.Constructor
     private GetCapacityReservationResult(
-        String id,
-        CapacityReservationInstanceViewResponse instanceView,
-        String location,
-        String name,
-        String provisioningState,
-        String provisioningTime,
-        String reservationId,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") CapacityReservationInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("provisioningTime") String provisioningTime,
+        @OutputCustomType.Parameter("reservationId") String reservationId,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachinesAssociated") List<SubResourceReadOnlyResponse> virtualMachinesAssociated,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.id = id;
         this.instanceView = instanceView;
         this.location = location;
@@ -231,62 +231,62 @@ public final class GetCapacityReservationResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(CapacityReservationInstanceViewResponse instanceView) {
+        public Builder instanceView(CapacityReservationInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProvisioningTime(String provisioningTime) {
+        public Builder provisioningTime(String provisioningTime) {
             this.provisioningTime = Objects.requireNonNull(provisioningTime);
             return this;
         }
 
-        public Builder setReservationId(String reservationId) {
+        public Builder reservationId(String reservationId) {
             this.reservationId = Objects.requireNonNull(reservationId);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
+        public Builder virtualMachinesAssociated(List<SubResourceReadOnlyResponse> virtualMachinesAssociated) {
             this.virtualMachinesAssociated = Objects.requireNonNull(virtualMachinesAssociated);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

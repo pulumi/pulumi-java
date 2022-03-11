@@ -16,8 +16,8 @@ public final class ListIngestionSettingConnectionStringsResult {
      */
     private final List<IngestionConnectionStringResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListIngestionSettingConnectionStringsResult(List<IngestionConnectionStringResponse> value) {
+    @OutputCustomType.Constructor
+    private ListIngestionSettingConnectionStringsResult(@OutputCustomType.Parameter("value") List<IngestionConnectionStringResponse> value) {
         this.value = value;
     }
 
@@ -49,7 +49,7 @@ public final class ListIngestionSettingConnectionStringsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(List<IngestionConnectionStringResponse> value) {
+        public Builder value(List<IngestionConnectionStringResponse> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

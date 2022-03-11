@@ -163,8 +163,8 @@ public class Job extends io.pulumi.resources.CustomResource {
     private static JobArgs makeArgs(@Nullable JobArgs args) {
         var builder = args == null ? JobArgs.builder() : JobArgs.builder(args);
         return builder
-            .setApiVersion("batch/v1")
-            .setKind("Job")
+            .apiVersion("batch/v1")
+            .kind("Job")
             .build();
     }
 

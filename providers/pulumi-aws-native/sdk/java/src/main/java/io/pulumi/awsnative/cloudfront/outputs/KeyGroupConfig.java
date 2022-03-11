@@ -16,11 +16,11 @@ public final class KeyGroupConfig {
     private final List<String> items;
     private final String name;
 
-    @OutputCustomType.Constructor({"comment","items","name"})
+    @OutputCustomType.Constructor
     private KeyGroupConfig(
-        @Nullable String comment,
-        List<String> items,
-        String name) {
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("items") List<String> items,
+        @OutputCustomType.Parameter("name") String name) {
         this.comment = comment;
         this.items = items;
         this.name = name;
@@ -60,17 +60,17 @@ public final class KeyGroupConfig {
     	      this.name = defaults.name;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

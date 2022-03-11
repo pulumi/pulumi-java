@@ -94,32 +94,32 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     	      this.notificationEmails = defaults.notificationEmails;
         }
 
-        public Builder setEnrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
+        public Builder enrolledServices(Input<List<AccessApprovalSettingsEnrolledServiceArgs>> enrolledServices) {
             this.enrolledServices = Objects.requireNonNull(enrolledServices);
             return this;
         }
 
-        public Builder setEnrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
+        public Builder enrolledServices(List<AccessApprovalSettingsEnrolledServiceArgs> enrolledServices) {
             this.enrolledServices = Input.of(Objects.requireNonNull(enrolledServices));
             return this;
         }
 
-        public Builder setFolderId(Input<String> folderId) {
+        public Builder folderId(Input<String> folderId) {
             this.folderId = Objects.requireNonNull(folderId);
             return this;
         }
 
-        public Builder setFolderId(String folderId) {
+        public Builder folderId(String folderId) {
             this.folderId = Input.of(Objects.requireNonNull(folderId));
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable Input<List<String>> notificationEmails) {
+        public Builder notificationEmails(@Nullable Input<List<String>> notificationEmails) {
             this.notificationEmails = notificationEmails;
             return this;
         }
 
-        public Builder setNotificationEmails(@Nullable List<String> notificationEmails) {
+        public Builder notificationEmails(@Nullable List<String> notificationEmails) {
             this.notificationEmails = Input.ofNullable(notificationEmails);
             return this;
         }

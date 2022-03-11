@@ -150,47 +150,47 @@ public final class BqmlTrainingRunTrainingOptionsResponse extends io.pulumi.reso
     	      this.warmStart = defaults.warmStart;
         }
 
-        public Builder setEarlyStop(Boolean earlyStop) {
+        public Builder earlyStop(Boolean earlyStop) {
             this.earlyStop = Objects.requireNonNull(earlyStop);
             return this;
         }
 
-        public Builder setL1Reg(Double l1Reg) {
+        public Builder l1Reg(Double l1Reg) {
             this.l1Reg = Objects.requireNonNull(l1Reg);
             return this;
         }
 
-        public Builder setL2Reg(Double l2Reg) {
+        public Builder l2Reg(Double l2Reg) {
             this.l2Reg = Objects.requireNonNull(l2Reg);
             return this;
         }
 
-        public Builder setLearnRate(Double learnRate) {
+        public Builder learnRate(Double learnRate) {
             this.learnRate = Objects.requireNonNull(learnRate);
             return this;
         }
 
-        public Builder setLearnRateStrategy(String learnRateStrategy) {
+        public Builder learnRateStrategy(String learnRateStrategy) {
             this.learnRateStrategy = Objects.requireNonNull(learnRateStrategy);
             return this;
         }
 
-        public Builder setLineSearchInitLearnRate(Double lineSearchInitLearnRate) {
+        public Builder lineSearchInitLearnRate(Double lineSearchInitLearnRate) {
             this.lineSearchInitLearnRate = Objects.requireNonNull(lineSearchInitLearnRate);
             return this;
         }
 
-        public Builder setMaxIteration(String maxIteration) {
+        public Builder maxIteration(String maxIteration) {
             this.maxIteration = Objects.requireNonNull(maxIteration);
             return this;
         }
 
-        public Builder setMinRelProgress(Double minRelProgress) {
+        public Builder minRelProgress(Double minRelProgress) {
             this.minRelProgress = Objects.requireNonNull(minRelProgress);
             return this;
         }
 
-        public Builder setWarmStart(Boolean warmStart) {
+        public Builder warmStart(Boolean warmStart) {
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
         }

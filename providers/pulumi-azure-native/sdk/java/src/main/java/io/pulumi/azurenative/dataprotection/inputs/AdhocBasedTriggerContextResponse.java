@@ -74,12 +74,12 @@ public final class AdhocBasedTriggerContextResponse extends io.pulumi.resources.
     	      this.taggingCriteria = defaults.taggingCriteria;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setTaggingCriteria(AdhocBasedTaggingCriteriaResponse taggingCriteria) {
+        public Builder taggingCriteria(AdhocBasedTaggingCriteriaResponse taggingCriteria) {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }

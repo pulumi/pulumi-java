@@ -64,22 +64,22 @@ public final class DataSourceWebCrawlerSeedUrlConfigurationArgs extends io.pulum
     	      this.webCrawlerMode = defaults.webCrawlerMode;
         }
 
-        public Builder setSeedUrls(Input<List<String>> seedUrls) {
+        public Builder seedUrls(Input<List<String>> seedUrls) {
             this.seedUrls = Objects.requireNonNull(seedUrls);
             return this;
         }
 
-        public Builder setSeedUrls(List<String> seedUrls) {
+        public Builder seedUrls(List<String> seedUrls) {
             this.seedUrls = Input.of(Objects.requireNonNull(seedUrls));
             return this;
         }
 
-        public Builder setWebCrawlerMode(@Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
+        public Builder webCrawlerMode(@Nullable Input<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> webCrawlerMode) {
             this.webCrawlerMode = webCrawlerMode;
             return this;
         }
 
-        public Builder setWebCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
+        public Builder webCrawlerMode(@Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode) {
             this.webCrawlerMode = Input.ofNullable(webCrawlerMode);
             return this;
         }

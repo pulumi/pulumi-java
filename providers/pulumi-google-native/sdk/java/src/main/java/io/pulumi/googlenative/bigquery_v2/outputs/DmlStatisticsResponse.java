@@ -25,11 +25,11 @@ public final class DmlStatisticsResponse {
      */
     private final String updatedRowCount;
 
-    @OutputCustomType.Constructor({"deletedRowCount","insertedRowCount","updatedRowCount"})
+    @OutputCustomType.Constructor
     private DmlStatisticsResponse(
-        String deletedRowCount,
-        String insertedRowCount,
-        String updatedRowCount) {
+        @OutputCustomType.Parameter("deletedRowCount") String deletedRowCount,
+        @OutputCustomType.Parameter("insertedRowCount") String insertedRowCount,
+        @OutputCustomType.Parameter("updatedRowCount") String updatedRowCount) {
         this.deletedRowCount = deletedRowCount;
         this.insertedRowCount = insertedRowCount;
         this.updatedRowCount = updatedRowCount;
@@ -81,17 +81,17 @@ public final class DmlStatisticsResponse {
     	      this.updatedRowCount = defaults.updatedRowCount;
         }
 
-        public Builder setDeletedRowCount(String deletedRowCount) {
+        public Builder deletedRowCount(String deletedRowCount) {
             this.deletedRowCount = Objects.requireNonNull(deletedRowCount);
             return this;
         }
 
-        public Builder setInsertedRowCount(String insertedRowCount) {
+        public Builder insertedRowCount(String insertedRowCount) {
             this.insertedRowCount = Objects.requireNonNull(insertedRowCount);
             return this;
         }
 
-        public Builder setUpdatedRowCount(String updatedRowCount) {
+        public Builder updatedRowCount(String updatedRowCount) {
             this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
             return this;
         }

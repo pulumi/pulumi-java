@@ -42,13 +42,13 @@ public final class DeepCreatedOriginGroupResponse {
      */
     private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
-    @OutputCustomType.Constructor({"healthProbeSettings","name","origins","responseBasedOriginErrorDetectionSettings","trafficRestorationTimeToHealedOrNewEndpointsInMinutes"})
+    @OutputCustomType.Constructor
     private DeepCreatedOriginGroupResponse(
-        @Nullable HealthProbeParametersResponse healthProbeSettings,
-        String name,
-        List<ResourceReferenceResponse> origins,
-        @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
-        @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable HealthProbeParametersResponse healthProbeSettings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("origins") List<ResourceReferenceResponse> origins,
+        @OutputCustomType.Parameter("responseBasedOriginErrorDetectionSettings") @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings,
+        @OutputCustomType.Parameter("trafficRestorationTimeToHealedOrNewEndpointsInMinutes") @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
         this.healthProbeSettings = healthProbeSettings;
         this.name = name;
         this.origins = origins;
@@ -120,27 +120,27 @@ public final class DeepCreatedOriginGroupResponse {
     	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
         }
 
-        public Builder setHealthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable HealthProbeParametersResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrigins(List<ResourceReferenceResponse> origins) {
+        public Builder origins(List<ResourceReferenceResponse> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
-        public Builder setResponseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
+        public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }

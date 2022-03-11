@@ -153,72 +153,72 @@ public final class ConfigurationProfileArgs extends io.pulumi.resources.Resource
     	      this.validators = defaults.validators;
         }
 
-        public Builder setApplicationId(Input<String> applicationId) {
+        public Builder applicationId(Input<String> applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Input.of(Objects.requireNonNull(applicationId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLocationUri(Input<String> locationUri) {
+        public Builder locationUri(Input<String> locationUri) {
             this.locationUri = Objects.requireNonNull(locationUri);
             return this;
         }
 
-        public Builder setLocationUri(String locationUri) {
+        public Builder locationUri(String locationUri) {
             this.locationUri = Input.of(Objects.requireNonNull(locationUri));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRetrievalRoleArn(@Nullable Input<String> retrievalRoleArn) {
+        public Builder retrievalRoleArn(@Nullable Input<String> retrievalRoleArn) {
             this.retrievalRoleArn = retrievalRoleArn;
             return this;
         }
 
-        public Builder setRetrievalRoleArn(@Nullable String retrievalRoleArn) {
+        public Builder retrievalRoleArn(@Nullable String retrievalRoleArn) {
             this.retrievalRoleArn = Input.ofNullable(retrievalRoleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setValidators(@Nullable Input<List<ConfigurationProfileValidatorArgs>> validators) {
+        public Builder validators(@Nullable Input<List<ConfigurationProfileValidatorArgs>> validators) {
             this.validators = validators;
             return this;
         }
 
-        public Builder setValidators(@Nullable List<ConfigurationProfileValidatorArgs> validators) {
+        public Builder validators(@Nullable List<ConfigurationProfileValidatorArgs> validators) {
             this.validators = Input.ofNullable(validators);
             return this;
         }

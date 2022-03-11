@@ -23,10 +23,10 @@ public final class ListIotDpsResourceKeysResult {
      */
     private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListIotDpsResourceKeysResult(
-        String nextLink,
-        @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class ListIotDpsResourceKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
+        public Builder value(@Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> value) {
             this.value = value;
             return this;
         }

@@ -53,16 +53,16 @@ public final class ProbeResponse {
      */
     private final Integer timeoutSeconds;
 
-    @OutputCustomType.Constructor({"exec","failureThreshold","httpGet","initialDelaySeconds","periodSeconds","successThreshold","tcpSocket","timeoutSeconds"})
+    @OutputCustomType.Constructor
     private ProbeResponse(
-        ExecActionResponse exec,
-        Integer failureThreshold,
-        HTTPGetActionResponse httpGet,
-        Integer initialDelaySeconds,
-        Integer periodSeconds,
-        Integer successThreshold,
-        TCPSocketActionResponse tcpSocket,
-        Integer timeoutSeconds) {
+        @OutputCustomType.Parameter("exec") ExecActionResponse exec,
+        @OutputCustomType.Parameter("failureThreshold") Integer failureThreshold,
+        @OutputCustomType.Parameter("httpGet") HTTPGetActionResponse httpGet,
+        @OutputCustomType.Parameter("initialDelaySeconds") Integer initialDelaySeconds,
+        @OutputCustomType.Parameter("periodSeconds") Integer periodSeconds,
+        @OutputCustomType.Parameter("successThreshold") Integer successThreshold,
+        @OutputCustomType.Parameter("tcpSocket") TCPSocketActionResponse tcpSocket,
+        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds) {
         this.exec = exec;
         this.failureThreshold = failureThreshold;
         this.httpGet = httpGet;
@@ -164,42 +164,42 @@ public final class ProbeResponse {
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setExec(ExecActionResponse exec) {
+        public Builder exec(ExecActionResponse exec) {
             this.exec = Objects.requireNonNull(exec);
             return this;
         }
 
-        public Builder setFailureThreshold(Integer failureThreshold) {
+        public Builder failureThreshold(Integer failureThreshold) {
             this.failureThreshold = Objects.requireNonNull(failureThreshold);
             return this;
         }
 
-        public Builder setHttpGet(HTTPGetActionResponse httpGet) {
+        public Builder httpGet(HTTPGetActionResponse httpGet) {
             this.httpGet = Objects.requireNonNull(httpGet);
             return this;
         }
 
-        public Builder setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public Builder initialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = Objects.requireNonNull(initialDelaySeconds);
             return this;
         }
 
-        public Builder setPeriodSeconds(Integer periodSeconds) {
+        public Builder periodSeconds(Integer periodSeconds) {
             this.periodSeconds = Objects.requireNonNull(periodSeconds);
             return this;
         }
 
-        public Builder setSuccessThreshold(Integer successThreshold) {
+        public Builder successThreshold(Integer successThreshold) {
             this.successThreshold = Objects.requireNonNull(successThreshold);
             return this;
         }
 
-        public Builder setTcpSocket(TCPSocketActionResponse tcpSocket) {
+        public Builder tcpSocket(TCPSocketActionResponse tcpSocket) {
             this.tcpSocket = Objects.requireNonNull(tcpSocket);
             return this;
         }
 
-        public Builder setTimeoutSeconds(Integer timeoutSeconds) {
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }

@@ -72,12 +72,12 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
     	      this.hardwareType = defaults.hardwareType;
         }
 
-        public Builder setHanaInstanceSize(String hanaInstanceSize) {
+        public Builder hanaInstanceSize(String hanaInstanceSize) {
             this.hanaInstanceSize = Objects.requireNonNull(hanaInstanceSize);
             return this;
         }
 
-        public Builder setHardwareType(String hardwareType) {
+        public Builder hardwareType(String hardwareType) {
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }

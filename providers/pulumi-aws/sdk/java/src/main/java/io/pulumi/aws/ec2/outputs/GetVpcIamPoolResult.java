@@ -93,28 +93,28 @@ public final class GetVpcIamPoolResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"addressFamily","allocationDefaultNetmaskLength","allocationMaxNetmaskLength","allocationMinNetmaskLength","allocationResourceTags","arn","autoImport","awsService","description","filters","id","ipamPoolId","ipamScopeId","ipamScopeType","locale","poolDepth","publiclyAdvertisable","sourceIpamPoolId","state","tags"})
+    @OutputCustomType.Constructor
     private GetVpcIamPoolResult(
-        String addressFamily,
-        Integer allocationDefaultNetmaskLength,
-        Integer allocationMaxNetmaskLength,
-        Integer allocationMinNetmaskLength,
-        Map<String,String> allocationResourceTags,
-        String arn,
-        Boolean autoImport,
-        String awsService,
-        String description,
-        @Nullable List<GetVpcIamPoolFilter> filters,
-        @Nullable String id,
-        @Nullable String ipamPoolId,
-        String ipamScopeId,
-        String ipamScopeType,
-        String locale,
-        Integer poolDepth,
-        Boolean publiclyAdvertisable,
-        String sourceIpamPoolId,
-        String state,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("addressFamily") String addressFamily,
+        @OutputCustomType.Parameter("allocationDefaultNetmaskLength") Integer allocationDefaultNetmaskLength,
+        @OutputCustomType.Parameter("allocationMaxNetmaskLength") Integer allocationMaxNetmaskLength,
+        @OutputCustomType.Parameter("allocationMinNetmaskLength") Integer allocationMinNetmaskLength,
+        @OutputCustomType.Parameter("allocationResourceTags") Map<String,String> allocationResourceTags,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("autoImport") Boolean autoImport,
+        @OutputCustomType.Parameter("awsService") String awsService,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcIamPoolFilter> filters,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipamPoolId") @Nullable String ipamPoolId,
+        @OutputCustomType.Parameter("ipamScopeId") String ipamScopeId,
+        @OutputCustomType.Parameter("ipamScopeType") String ipamScopeType,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("poolDepth") Integer poolDepth,
+        @OutputCustomType.Parameter("publiclyAdvertisable") Boolean publiclyAdvertisable,
+        @OutputCustomType.Parameter("sourceIpamPoolId") String sourceIpamPoolId,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.addressFamily = addressFamily;
         this.allocationDefaultNetmaskLength = allocationDefaultNetmaskLength;
         this.allocationMaxNetmaskLength = allocationMaxNetmaskLength;
@@ -312,102 +312,102 @@ public final class GetVpcIamPoolResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddressFamily(String addressFamily) {
+        public Builder addressFamily(String addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setAllocationDefaultNetmaskLength(Integer allocationDefaultNetmaskLength) {
+        public Builder allocationDefaultNetmaskLength(Integer allocationDefaultNetmaskLength) {
             this.allocationDefaultNetmaskLength = Objects.requireNonNull(allocationDefaultNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationMaxNetmaskLength(Integer allocationMaxNetmaskLength) {
+        public Builder allocationMaxNetmaskLength(Integer allocationMaxNetmaskLength) {
             this.allocationMaxNetmaskLength = Objects.requireNonNull(allocationMaxNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationMinNetmaskLength(Integer allocationMinNetmaskLength) {
+        public Builder allocationMinNetmaskLength(Integer allocationMinNetmaskLength) {
             this.allocationMinNetmaskLength = Objects.requireNonNull(allocationMinNetmaskLength);
             return this;
         }
 
-        public Builder setAllocationResourceTags(Map<String,String> allocationResourceTags) {
+        public Builder allocationResourceTags(Map<String,String> allocationResourceTags) {
             this.allocationResourceTags = Objects.requireNonNull(allocationResourceTags);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAutoImport(Boolean autoImport) {
+        public Builder autoImport(Boolean autoImport) {
             this.autoImport = Objects.requireNonNull(autoImport);
             return this;
         }
 
-        public Builder setAwsService(String awsService) {
+        public Builder awsService(String awsService) {
             this.awsService = Objects.requireNonNull(awsService);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcIamPoolFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcIamPoolFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpamPoolId(@Nullable String ipamPoolId) {
+        public Builder ipamPoolId(@Nullable String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
             return this;
         }
 
-        public Builder setIpamScopeId(String ipamScopeId) {
+        public Builder ipamScopeId(String ipamScopeId) {
             this.ipamScopeId = Objects.requireNonNull(ipamScopeId);
             return this;
         }
 
-        public Builder setIpamScopeType(String ipamScopeType) {
+        public Builder ipamScopeType(String ipamScopeType) {
             this.ipamScopeType = Objects.requireNonNull(ipamScopeType);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setPoolDepth(Integer poolDepth) {
+        public Builder poolDepth(Integer poolDepth) {
             this.poolDepth = Objects.requireNonNull(poolDepth);
             return this;
         }
 
-        public Builder setPubliclyAdvertisable(Boolean publiclyAdvertisable) {
+        public Builder publiclyAdvertisable(Boolean publiclyAdvertisable) {
             this.publiclyAdvertisable = Objects.requireNonNull(publiclyAdvertisable);
             return this;
         }
 
-        public Builder setSourceIpamPoolId(String sourceIpamPoolId) {
+        public Builder sourceIpamPoolId(String sourceIpamPoolId) {
             this.sourceIpamPoolId = Objects.requireNonNull(sourceIpamPoolId);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

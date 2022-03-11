@@ -41,23 +41,23 @@ public final class RouterStatusBestRoute {
     private final String selfLink;
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"description","destRange","name","network","nextHopGateway","nextHopIlb","nextHopInstance","nextHopInstanceZone","nextHopIp","nextHopNetwork","nextHopVpnTunnel","priority","project","selfLink","tags"})
+    @OutputCustomType.Constructor
     private RouterStatusBestRoute(
-        String description,
-        String destRange,
-        String name,
-        String network,
-        String nextHopGateway,
-        String nextHopIlb,
-        String nextHopInstance,
-        String nextHopInstanceZone,
-        String nextHopIp,
-        String nextHopNetwork,
-        String nextHopVpnTunnel,
-        Integer priority,
-        String project,
-        String selfLink,
-        List<String> tags) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("destRange") String destRange,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @OutputCustomType.Parameter("nextHopInstanceZone") String nextHopInstanceZone,
+        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
+        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.description = description;
         this.destRange = destRange;
         this.name = name;
@@ -183,77 +183,77 @@ public final class RouterStatusBestRoute {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDestRange(String destRange) {
+        public Builder destRange(String destRange) {
             this.destRange = Objects.requireNonNull(destRange);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNextHopGateway(String nextHopGateway) {
+        public Builder nextHopGateway(String nextHopGateway) {
             this.nextHopGateway = Objects.requireNonNull(nextHopGateway);
             return this;
         }
 
-        public Builder setNextHopIlb(String nextHopIlb) {
+        public Builder nextHopIlb(String nextHopIlb) {
             this.nextHopIlb = Objects.requireNonNull(nextHopIlb);
             return this;
         }
 
-        public Builder setNextHopInstance(String nextHopInstance) {
+        public Builder nextHopInstance(String nextHopInstance) {
             this.nextHopInstance = Objects.requireNonNull(nextHopInstance);
             return this;
         }
 
-        public Builder setNextHopInstanceZone(String nextHopInstanceZone) {
+        public Builder nextHopInstanceZone(String nextHopInstanceZone) {
             this.nextHopInstanceZone = Objects.requireNonNull(nextHopInstanceZone);
             return this;
         }
 
-        public Builder setNextHopIp(String nextHopIp) {
+        public Builder nextHopIp(String nextHopIp) {
             this.nextHopIp = Objects.requireNonNull(nextHopIp);
             return this;
         }
 
-        public Builder setNextHopNetwork(String nextHopNetwork) {
+        public Builder nextHopNetwork(String nextHopNetwork) {
             this.nextHopNetwork = Objects.requireNonNull(nextHopNetwork);
             return this;
         }
 
-        public Builder setNextHopVpnTunnel(String nextHopVpnTunnel) {
+        public Builder nextHopVpnTunnel(String nextHopVpnTunnel) {
             this.nextHopVpnTunnel = Objects.requireNonNull(nextHopVpnTunnel);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

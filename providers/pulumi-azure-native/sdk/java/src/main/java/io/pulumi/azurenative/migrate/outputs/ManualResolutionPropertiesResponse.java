@@ -17,8 +17,8 @@ public final class ManualResolutionPropertiesResponse {
      */
     private final @Nullable String targetId;
 
-    @OutputCustomType.Constructor({"targetId"})
-    private ManualResolutionPropertiesResponse(@Nullable String targetId) {
+    @OutputCustomType.Constructor
+    private ManualResolutionPropertiesResponse(@OutputCustomType.Parameter("targetId") @Nullable String targetId) {
         this.targetId = targetId;
     }
 
@@ -50,7 +50,7 @@ public final class ManualResolutionPropertiesResponse {
     	      this.targetId = defaults.targetId;
         }
 
-        public Builder setTargetId(@Nullable String targetId) {
+        public Builder targetId(@Nullable String targetId) {
             this.targetId = targetId;
             return this;
         }

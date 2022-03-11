@@ -115,42 +115,42 @@ public final class AlertRuleAnyOfOrLeafConditionArgs extends io.pulumi.resources
     	      this.field = defaults.field;
         }
 
-        public Builder setAnyOf(@Nullable Input<List<AlertRuleLeafConditionArgs>> anyOf) {
+        public Builder anyOf(@Nullable Input<List<AlertRuleLeafConditionArgs>> anyOf) {
             this.anyOf = anyOf;
             return this;
         }
 
-        public Builder setAnyOf(@Nullable List<AlertRuleLeafConditionArgs> anyOf) {
+        public Builder anyOf(@Nullable List<AlertRuleLeafConditionArgs> anyOf) {
             this.anyOf = Input.ofNullable(anyOf);
             return this;
         }
 
-        public Builder setContainsAny(@Nullable Input<List<String>> containsAny) {
+        public Builder containsAny(@Nullable Input<List<String>> containsAny) {
             this.containsAny = containsAny;
             return this;
         }
 
-        public Builder setContainsAny(@Nullable List<String> containsAny) {
+        public Builder containsAny(@Nullable List<String> containsAny) {
             this.containsAny = Input.ofNullable(containsAny);
             return this;
         }
 
-        public Builder setEquals(@Nullable Input<String> equals) {
+        public Builder equals(@Nullable Input<String> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setEquals(@Nullable String equals) {
+        public Builder equals(@Nullable String equals) {
             this.equals = Input.ofNullable(equals);
             return this;
         }
 
-        public Builder setField(@Nullable Input<String> field) {
+        public Builder field(@Nullable Input<String> field) {
             this.field = field;
             return this;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = Input.ofNullable(field);
             return this;
         }

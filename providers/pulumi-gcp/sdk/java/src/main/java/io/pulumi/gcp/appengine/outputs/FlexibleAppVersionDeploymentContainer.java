@@ -16,8 +16,8 @@ public final class FlexibleAppVersionDeploymentContainer {
      */
     private final String image;
 
-    @OutputCustomType.Constructor({"image"})
-    private FlexibleAppVersionDeploymentContainer(String image) {
+    @OutputCustomType.Constructor
+    private FlexibleAppVersionDeploymentContainer(@OutputCustomType.Parameter("image") String image) {
         this.image = image;
     }
 
@@ -50,7 +50,7 @@ public final class FlexibleAppVersionDeploymentContainer {
     	      this.image = defaults.image;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }

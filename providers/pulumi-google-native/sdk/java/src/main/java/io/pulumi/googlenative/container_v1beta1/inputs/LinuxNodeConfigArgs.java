@@ -58,12 +58,12 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder setSysctls(@Nullable Input<Map<String,String>> sysctls) {
+        public Builder sysctls(@Nullable Input<Map<String,String>> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
-        public Builder setSysctls(@Nullable Map<String,String> sysctls) {
+        public Builder sysctls(@Nullable Map<String,String> sysctls) {
             this.sysctls = Input.ofNullable(sysctls);
             return this;
         }

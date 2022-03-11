@@ -57,18 +57,18 @@ public final class GetComputeEnvironmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","computeEnvironmentName","ecsClusterArn","id","serviceRole","state","status","statusReason","tags","type"})
+    @OutputCustomType.Constructor
     private GetComputeEnvironmentResult(
-        String arn,
-        String computeEnvironmentName,
-        String ecsClusterArn,
-        String id,
-        String serviceRole,
-        String state,
-        String status,
-        String statusReason,
-        Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("computeEnvironmentName") String computeEnvironmentName,
+        @OutputCustomType.Parameter("ecsClusterArn") String ecsClusterArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusReason") String statusReason,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.computeEnvironmentName = computeEnvironmentName;
         this.ecsClusterArn = ecsClusterArn;
@@ -186,52 +186,52 @@ public final class GetComputeEnvironmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setComputeEnvironmentName(String computeEnvironmentName) {
+        public Builder computeEnvironmentName(String computeEnvironmentName) {
             this.computeEnvironmentName = Objects.requireNonNull(computeEnvironmentName);
             return this;
         }
 
-        public Builder setEcsClusterArn(String ecsClusterArn) {
+        public Builder ecsClusterArn(String ecsClusterArn) {
             this.ecsClusterArn = Objects.requireNonNull(ecsClusterArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusReason(String statusReason) {
+        public Builder statusReason(String statusReason) {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -136,72 +136,72 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerPoolId = defaults.workerPoolId;
         }
 
-        public Builder setAnnotations(@Nullable Input<Map<String,String>> annotations) {
+        public Builder annotations(@Nullable Input<Map<String,String>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPrivatePoolV1Config(@Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
+        public Builder privatePoolV1Config(@Nullable Input<PrivatePoolV1ConfigArgs> privatePoolV1Config) {
             this.privatePoolV1Config = privatePoolV1Config;
             return this;
         }
 
-        public Builder setPrivatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
+        public Builder privatePoolV1Config(@Nullable PrivatePoolV1ConfigArgs privatePoolV1Config) {
             this.privatePoolV1Config = Input.ofNullable(privatePoolV1Config);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable Input<String> validateOnly) {
+        public Builder validateOnly(@Nullable Input<String> validateOnly) {
             this.validateOnly = validateOnly;
             return this;
         }
 
-        public Builder setValidateOnly(@Nullable String validateOnly) {
+        public Builder validateOnly(@Nullable String validateOnly) {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
 
-        public Builder setWorkerPoolId(Input<String> workerPoolId) {
+        public Builder workerPoolId(Input<String> workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }
 
-        public Builder setWorkerPoolId(String workerPoolId) {
+        public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Input.of(Objects.requireNonNull(workerPoolId));
             return this;
         }

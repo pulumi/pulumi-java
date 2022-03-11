@@ -25,11 +25,11 @@ public final class AzureActiveDirectoryAppResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"appKey","applicationId","tenantId"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryAppResponse(
-        String appKey,
-        String applicationId,
-        String tenantId) {
+        @OutputCustomType.Parameter("appKey") String appKey,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.appKey = appKey;
         this.applicationId = applicationId;
         this.tenantId = tenantId;
@@ -81,17 +81,17 @@ public final class AzureActiveDirectoryAppResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

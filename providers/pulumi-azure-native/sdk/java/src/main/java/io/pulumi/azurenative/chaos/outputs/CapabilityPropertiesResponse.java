@@ -35,13 +35,13 @@ public final class CapabilityPropertiesResponse {
      */
     private final String urn;
 
-    @OutputCustomType.Constructor({"description","parametersSchema","publisher","targetType","urn"})
+    @OutputCustomType.Constructor
     private CapabilityPropertiesResponse(
-        String description,
-        String parametersSchema,
-        String publisher,
-        String targetType,
-        String urn) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("parametersSchema") String parametersSchema,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("urn") String urn) {
         this.description = description;
         this.parametersSchema = parametersSchema;
         this.publisher = publisher;
@@ -113,27 +113,27 @@ public final class CapabilityPropertiesResponse {
     	      this.urn = defaults.urn;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setParametersSchema(String parametersSchema) {
+        public Builder parametersSchema(String parametersSchema) {
             this.parametersSchema = Objects.requireNonNull(parametersSchema);
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
-        public Builder setUrn(String urn) {
+        public Builder urn(String urn) {
             this.urn = Objects.requireNonNull(urn);
             return this;
         }

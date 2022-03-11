@@ -32,12 +32,12 @@ public final class GetDomainEbsOption {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"ebsEnabled","iops","volumeSize","volumeType"})
+    @OutputCustomType.Constructor
     private GetDomainEbsOption(
-        Boolean ebsEnabled,
-        Integer iops,
-        Integer volumeSize,
-        String volumeType) {
+        @OutputCustomType.Parameter("ebsEnabled") Boolean ebsEnabled,
+        @OutputCustomType.Parameter("iops") Integer iops,
+        @OutputCustomType.Parameter("volumeSize") Integer volumeSize,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.ebsEnabled = ebsEnabled;
         this.iops = iops;
         this.volumeSize = volumeSize;
@@ -99,22 +99,22 @@ public final class GetDomainEbsOption {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setEbsEnabled(Boolean ebsEnabled) {
+        public Builder ebsEnabled(Boolean ebsEnabled) {
             this.ebsEnabled = Objects.requireNonNull(ebsEnabled);
             return this;
         }
 
-        public Builder setIops(Integer iops) {
+        public Builder iops(Integer iops) {
             this.iops = Objects.requireNonNull(iops);
             return this;
         }
 
-        public Builder setVolumeSize(Integer volumeSize) {
+        public Builder volumeSize(Integer volumeSize) {
             this.volumeSize = Objects.requireNonNull(volumeSize);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

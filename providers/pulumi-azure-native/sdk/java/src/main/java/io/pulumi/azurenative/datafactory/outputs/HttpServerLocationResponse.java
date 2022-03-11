@@ -34,12 +34,12 @@ public final class HttpServerLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","folderPath","relativeUrl","type"})
+    @OutputCustomType.Constructor
     private HttpServerLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        @Nullable Object relativeUrl,
-        String type) {
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("relativeUrl") @Nullable Object relativeUrl,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.relativeUrl = relativeUrl;
@@ -102,22 +102,22 @@ public final class HttpServerLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setRelativeUrl(@Nullable Object relativeUrl) {
+        public Builder relativeUrl(@Nullable Object relativeUrl) {
             this.relativeUrl = relativeUrl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

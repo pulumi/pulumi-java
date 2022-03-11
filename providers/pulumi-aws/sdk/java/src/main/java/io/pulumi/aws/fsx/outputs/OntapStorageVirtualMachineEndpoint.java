@@ -35,12 +35,12 @@ public final class OntapStorageVirtualMachineEndpoint {
      */
     private final @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs;
 
-    @OutputCustomType.Constructor({"iscses","managements","nfs","smbs"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineEndpoint(
-        @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
-        @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
-        @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
-        @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
+        @OutputCustomType.Parameter("iscses") @Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses,
+        @OutputCustomType.Parameter("managements") @Nullable List<OntapStorageVirtualMachineEndpointManagement> managements,
+        @OutputCustomType.Parameter("nfs") @Nullable List<OntapStorageVirtualMachineEndpointNf> nfs,
+        @OutputCustomType.Parameter("smbs") @Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
         this.iscses = iscses;
         this.managements = managements;
         this.nfs = nfs;
@@ -102,22 +102,22 @@ public final class OntapStorageVirtualMachineEndpoint {
     	      this.smbs = defaults.smbs;
         }
 
-        public Builder setIscses(@Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses) {
+        public Builder iscses(@Nullable List<OntapStorageVirtualMachineEndpointIscse> iscses) {
             this.iscses = iscses;
             return this;
         }
 
-        public Builder setManagements(@Nullable List<OntapStorageVirtualMachineEndpointManagement> managements) {
+        public Builder managements(@Nullable List<OntapStorageVirtualMachineEndpointManagement> managements) {
             this.managements = managements;
             return this;
         }
 
-        public Builder setNfs(@Nullable List<OntapStorageVirtualMachineEndpointNf> nfs) {
+        public Builder nfs(@Nullable List<OntapStorageVirtualMachineEndpointNf> nfs) {
             this.nfs = nfs;
             return this;
         }
 
-        public Builder setSmbs(@Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
+        public Builder smbs(@Nullable List<OntapStorageVirtualMachineEndpointSmb> smbs) {
             this.smbs = smbs;
             return this;
         }

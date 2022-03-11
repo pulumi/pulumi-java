@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SubsettingResponse {
     private final String policy;
 
-    @OutputCustomType.Constructor({"policy"})
-    private SubsettingResponse(String policy) {
+    @OutputCustomType.Constructor
+    private SubsettingResponse(@OutputCustomType.Parameter("policy") String policy) {
         this.policy = policy;
     }
 
@@ -40,7 +40,7 @@ public final class SubsettingResponse {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

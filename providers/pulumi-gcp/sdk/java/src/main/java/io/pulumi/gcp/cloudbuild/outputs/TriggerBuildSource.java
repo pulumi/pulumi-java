@@ -25,10 +25,10 @@ public final class TriggerBuildSource {
      */
     private final @Nullable TriggerBuildSourceStorageSource storageSource;
 
-    @OutputCustomType.Constructor({"repoSource","storageSource"})
+    @OutputCustomType.Constructor
     private TriggerBuildSource(
-        @Nullable TriggerBuildSourceRepoSource repoSource,
-        @Nullable TriggerBuildSourceStorageSource storageSource) {
+        @OutputCustomType.Parameter("repoSource") @Nullable TriggerBuildSourceRepoSource repoSource,
+        @OutputCustomType.Parameter("storageSource") @Nullable TriggerBuildSourceStorageSource storageSource) {
         this.repoSource = repoSource;
         this.storageSource = storageSource;
     }
@@ -72,12 +72,12 @@ public final class TriggerBuildSource {
     	      this.storageSource = defaults.storageSource;
         }
 
-        public Builder setRepoSource(@Nullable TriggerBuildSourceRepoSource repoSource) {
+        public Builder repoSource(@Nullable TriggerBuildSourceRepoSource repoSource) {
             this.repoSource = repoSource;
             return this;
         }
 
-        public Builder setStorageSource(@Nullable TriggerBuildSourceStorageSource storageSource) {
+        public Builder storageSource(@Nullable TriggerBuildSourceStorageSource storageSource) {
             this.storageSource = storageSource;
             return this;
         }

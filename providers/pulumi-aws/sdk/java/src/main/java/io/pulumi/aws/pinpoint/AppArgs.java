@@ -138,62 +138,62 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCampaignHook(@Nullable Input<AppCampaignHookArgs> campaignHook) {
+        public Builder campaignHook(@Nullable Input<AppCampaignHookArgs> campaignHook) {
             this.campaignHook = campaignHook;
             return this;
         }
 
-        public Builder setCampaignHook(@Nullable AppCampaignHookArgs campaignHook) {
+        public Builder campaignHook(@Nullable AppCampaignHookArgs campaignHook) {
             this.campaignHook = Input.ofNullable(campaignHook);
             return this;
         }
 
-        public Builder setLimits(@Nullable Input<AppLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<AppLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable AppLimitsArgs limits) {
+        public Builder limits(@Nullable AppLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable Input<String> namePrefix) {
+        public Builder namePrefix(@Nullable Input<String> namePrefix) {
             this.namePrefix = namePrefix;
             return this;
         }
 
-        public Builder setNamePrefix(@Nullable String namePrefix) {
+        public Builder namePrefix(@Nullable String namePrefix) {
             this.namePrefix = Input.ofNullable(namePrefix);
             return this;
         }
 
-        public Builder setQuietTime(@Nullable Input<AppQuietTimeArgs> quietTime) {
+        public Builder quietTime(@Nullable Input<AppQuietTimeArgs> quietTime) {
             this.quietTime = quietTime;
             return this;
         }
 
-        public Builder setQuietTime(@Nullable AppQuietTimeArgs quietTime) {
+        public Builder quietTime(@Nullable AppQuietTimeArgs quietTime) {
             this.quietTime = Input.ofNullable(quietTime);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

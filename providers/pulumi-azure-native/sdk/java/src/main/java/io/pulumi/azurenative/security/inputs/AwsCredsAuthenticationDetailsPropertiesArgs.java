@@ -90,32 +90,32 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
     	      this.awsSecretAccessKey = defaults.awsSecretAccessKey;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setAwsAccessKeyId(Input<String> awsAccessKeyId) {
+        public Builder awsAccessKeyId(Input<String> awsAccessKeyId) {
             this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
             return this;
         }
 
-        public Builder setAwsAccessKeyId(String awsAccessKeyId) {
+        public Builder awsAccessKeyId(String awsAccessKeyId) {
             this.awsAccessKeyId = Input.of(Objects.requireNonNull(awsAccessKeyId));
             return this;
         }
 
-        public Builder setAwsSecretAccessKey(Input<String> awsSecretAccessKey) {
+        public Builder awsSecretAccessKey(Input<String> awsSecretAccessKey) {
             this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
             return this;
         }
 
-        public Builder setAwsSecretAccessKey(String awsSecretAccessKey) {
+        public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             this.awsSecretAccessKey = Input.of(Objects.requireNonNull(awsSecretAccessKey));
             return this;
         }

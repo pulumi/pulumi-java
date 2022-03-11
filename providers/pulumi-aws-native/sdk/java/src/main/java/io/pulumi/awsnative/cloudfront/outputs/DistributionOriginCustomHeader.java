@@ -12,10 +12,10 @@ public final class DistributionOriginCustomHeader {
     private final String headerName;
     private final String headerValue;
 
-    @OutputCustomType.Constructor({"headerName","headerValue"})
+    @OutputCustomType.Constructor
     private DistributionOriginCustomHeader(
-        String headerName,
-        String headerValue) {
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("headerValue") String headerValue) {
         this.headerName = headerName;
         this.headerValue = headerValue;
     }
@@ -49,12 +49,12 @@ public final class DistributionOriginCustomHeader {
     	      this.headerValue = defaults.headerValue;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(String headerValue) {
+        public Builder headerValue(String headerValue) {
             this.headerValue = Objects.requireNonNull(headerValue);
             return this;
         }

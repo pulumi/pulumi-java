@@ -19,12 +19,12 @@ public final class GetDataflowEndpointGroupResult {
     private final @Nullable String id;
     private final @Nullable List<DataflowEndpointGroupTag> tags;
 
-    @OutputCustomType.Constructor({"arn","endpointDetails","id","tags"})
+    @OutputCustomType.Constructor
     private GetDataflowEndpointGroupResult(
-        @Nullable String arn,
-        @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
-        @Nullable String id,
-        @Nullable List<DataflowEndpointGroupTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("endpointDetails") @Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataflowEndpointGroupTag> tags) {
         this.arn = arn;
         this.endpointDetails = endpointDetails;
         this.id = id;
@@ -70,22 +70,22 @@ public final class GetDataflowEndpointGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEndpointDetails(@Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails) {
+        public Builder endpointDetails(@Nullable List<DataflowEndpointGroupEndpointDetails> endpointDetails) {
             this.endpointDetails = endpointDetails;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataflowEndpointGroupTag> tags) {
+        public Builder tags(@Nullable List<DataflowEndpointGroupTag> tags) {
             this.tags = tags;
             return this;
         }

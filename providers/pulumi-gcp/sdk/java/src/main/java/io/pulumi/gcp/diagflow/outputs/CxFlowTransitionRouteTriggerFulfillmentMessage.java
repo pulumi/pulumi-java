@@ -17,8 +17,8 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
      */
     private final @Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor({"text"})
-    private CxFlowTransitionRouteTriggerFulfillmentMessage(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
+    @OutputCustomType.Constructor
+    private CxFlowTransitionRouteTriggerFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
         this.text = text;
     }
 
@@ -50,7 +50,7 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
+        public Builder text(@Nullable CxFlowTransitionRouteTriggerFulfillmentMessageText text) {
             this.text = text;
             return this;
         }

@@ -219,46 +219,46 @@ public final class GetVersionResult {
      */
     private final VpcAccessConnectorResponse vpcAccessConnector;
 
-    @OutputCustomType.Constructor({"apiConfig","appEngineApis","automaticScaling","basicScaling","betaSettings","buildEnvVariables","createTime","createdBy","defaultExpiration","deployment","diskUsageBytes","endpointsApiService","entrypoint","env","envVariables","errorHandlers","handlers","healthCheck","inboundServices","instanceClass","libraries","livenessCheck","manualScaling","name","network","nobuildFilesRegex","readinessCheck","resources","runtime","runtimeApiVersion","runtimeChannel","runtimeMainExecutablePath","serviceAccount","servingStatus","threadsafe","versionUrl","vm","vpcAccessConnector"})
+    @OutputCustomType.Constructor
     private GetVersionResult(
-        ApiConfigHandlerResponse apiConfig,
-        Boolean appEngineApis,
-        AutomaticScalingResponse automaticScaling,
-        BasicScalingResponse basicScaling,
-        Map<String,String> betaSettings,
-        Map<String,String> buildEnvVariables,
-        String createTime,
-        String createdBy,
-        String defaultExpiration,
-        DeploymentResponse deployment,
-        String diskUsageBytes,
-        EndpointsApiServiceResponse endpointsApiService,
-        EntrypointResponse entrypoint,
-        String env,
-        Map<String,String> envVariables,
-        List<ErrorHandlerResponse> errorHandlers,
-        List<UrlMapResponse> handlers,
-        HealthCheckResponse healthCheck,
-        List<String> inboundServices,
-        String instanceClass,
-        List<LibraryResponse> libraries,
-        LivenessCheckResponse livenessCheck,
-        ManualScalingResponse manualScaling,
-        String name,
-        NetworkResponse network,
-        String nobuildFilesRegex,
-        ReadinessCheckResponse readinessCheck,
-        ResourcesResponse resources,
-        String runtime,
-        String runtimeApiVersion,
-        String runtimeChannel,
-        String runtimeMainExecutablePath,
-        String serviceAccount,
-        String servingStatus,
-        Boolean threadsafe,
-        String versionUrl,
-        Boolean vm,
-        VpcAccessConnectorResponse vpcAccessConnector) {
+        @OutputCustomType.Parameter("apiConfig") ApiConfigHandlerResponse apiConfig,
+        @OutputCustomType.Parameter("appEngineApis") Boolean appEngineApis,
+        @OutputCustomType.Parameter("automaticScaling") AutomaticScalingResponse automaticScaling,
+        @OutputCustomType.Parameter("basicScaling") BasicScalingResponse basicScaling,
+        @OutputCustomType.Parameter("betaSettings") Map<String,String> betaSettings,
+        @OutputCustomType.Parameter("buildEnvVariables") Map<String,String> buildEnvVariables,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("defaultExpiration") String defaultExpiration,
+        @OutputCustomType.Parameter("deployment") DeploymentResponse deployment,
+        @OutputCustomType.Parameter("diskUsageBytes") String diskUsageBytes,
+        @OutputCustomType.Parameter("endpointsApiService") EndpointsApiServiceResponse endpointsApiService,
+        @OutputCustomType.Parameter("entrypoint") EntrypointResponse entrypoint,
+        @OutputCustomType.Parameter("env") String env,
+        @OutputCustomType.Parameter("envVariables") Map<String,String> envVariables,
+        @OutputCustomType.Parameter("errorHandlers") List<ErrorHandlerResponse> errorHandlers,
+        @OutputCustomType.Parameter("handlers") List<UrlMapResponse> handlers,
+        @OutputCustomType.Parameter("healthCheck") HealthCheckResponse healthCheck,
+        @OutputCustomType.Parameter("inboundServices") List<String> inboundServices,
+        @OutputCustomType.Parameter("instanceClass") String instanceClass,
+        @OutputCustomType.Parameter("libraries") List<LibraryResponse> libraries,
+        @OutputCustomType.Parameter("livenessCheck") LivenessCheckResponse livenessCheck,
+        @OutputCustomType.Parameter("manualScaling") ManualScalingResponse manualScaling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("network") NetworkResponse network,
+        @OutputCustomType.Parameter("nobuildFilesRegex") String nobuildFilesRegex,
+        @OutputCustomType.Parameter("readinessCheck") ReadinessCheckResponse readinessCheck,
+        @OutputCustomType.Parameter("resources") ResourcesResponse resources,
+        @OutputCustomType.Parameter("runtime") String runtime,
+        @OutputCustomType.Parameter("runtimeApiVersion") String runtimeApiVersion,
+        @OutputCustomType.Parameter("runtimeChannel") String runtimeChannel,
+        @OutputCustomType.Parameter("runtimeMainExecutablePath") String runtimeMainExecutablePath,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("servingStatus") String servingStatus,
+        @OutputCustomType.Parameter("threadsafe") Boolean threadsafe,
+        @OutputCustomType.Parameter("versionUrl") String versionUrl,
+        @OutputCustomType.Parameter("vm") Boolean vm,
+        @OutputCustomType.Parameter("vpcAccessConnector") VpcAccessConnectorResponse vpcAccessConnector) {
         this.apiConfig = apiConfig;
         this.appEngineApis = appEngineApis;
         this.automaticScaling = automaticScaling;
@@ -660,192 +660,192 @@ public final class GetVersionResult {
     	      this.vpcAccessConnector = defaults.vpcAccessConnector;
         }
 
-        public Builder setApiConfig(ApiConfigHandlerResponse apiConfig) {
+        public Builder apiConfig(ApiConfigHandlerResponse apiConfig) {
             this.apiConfig = Objects.requireNonNull(apiConfig);
             return this;
         }
 
-        public Builder setAppEngineApis(Boolean appEngineApis) {
+        public Builder appEngineApis(Boolean appEngineApis) {
             this.appEngineApis = Objects.requireNonNull(appEngineApis);
             return this;
         }
 
-        public Builder setAutomaticScaling(AutomaticScalingResponse automaticScaling) {
+        public Builder automaticScaling(AutomaticScalingResponse automaticScaling) {
             this.automaticScaling = Objects.requireNonNull(automaticScaling);
             return this;
         }
 
-        public Builder setBasicScaling(BasicScalingResponse basicScaling) {
+        public Builder basicScaling(BasicScalingResponse basicScaling) {
             this.basicScaling = Objects.requireNonNull(basicScaling);
             return this;
         }
 
-        public Builder setBetaSettings(Map<String,String> betaSettings) {
+        public Builder betaSettings(Map<String,String> betaSettings) {
             this.betaSettings = Objects.requireNonNull(betaSettings);
             return this;
         }
 
-        public Builder setBuildEnvVariables(Map<String,String> buildEnvVariables) {
+        public Builder buildEnvVariables(Map<String,String> buildEnvVariables) {
             this.buildEnvVariables = Objects.requireNonNull(buildEnvVariables);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setDefaultExpiration(String defaultExpiration) {
+        public Builder defaultExpiration(String defaultExpiration) {
             this.defaultExpiration = Objects.requireNonNull(defaultExpiration);
             return this;
         }
 
-        public Builder setDeployment(DeploymentResponse deployment) {
+        public Builder deployment(DeploymentResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder setDiskUsageBytes(String diskUsageBytes) {
+        public Builder diskUsageBytes(String diskUsageBytes) {
             this.diskUsageBytes = Objects.requireNonNull(diskUsageBytes);
             return this;
         }
 
-        public Builder setEndpointsApiService(EndpointsApiServiceResponse endpointsApiService) {
+        public Builder endpointsApiService(EndpointsApiServiceResponse endpointsApiService) {
             this.endpointsApiService = Objects.requireNonNull(endpointsApiService);
             return this;
         }
 
-        public Builder setEntrypoint(EntrypointResponse entrypoint) {
+        public Builder entrypoint(EntrypointResponse entrypoint) {
             this.entrypoint = Objects.requireNonNull(entrypoint);
             return this;
         }
 
-        public Builder setEnv(String env) {
+        public Builder env(String env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setEnvVariables(Map<String,String> envVariables) {
+        public Builder envVariables(Map<String,String> envVariables) {
             this.envVariables = Objects.requireNonNull(envVariables);
             return this;
         }
 
-        public Builder setErrorHandlers(List<ErrorHandlerResponse> errorHandlers) {
+        public Builder errorHandlers(List<ErrorHandlerResponse> errorHandlers) {
             this.errorHandlers = Objects.requireNonNull(errorHandlers);
             return this;
         }
 
-        public Builder setHandlers(List<UrlMapResponse> handlers) {
+        public Builder handlers(List<UrlMapResponse> handlers) {
             this.handlers = Objects.requireNonNull(handlers);
             return this;
         }
 
-        public Builder setHealthCheck(HealthCheckResponse healthCheck) {
+        public Builder healthCheck(HealthCheckResponse healthCheck) {
             this.healthCheck = Objects.requireNonNull(healthCheck);
             return this;
         }
 
-        public Builder setInboundServices(List<String> inboundServices) {
+        public Builder inboundServices(List<String> inboundServices) {
             this.inboundServices = Objects.requireNonNull(inboundServices);
             return this;
         }
 
-        public Builder setInstanceClass(String instanceClass) {
+        public Builder instanceClass(String instanceClass) {
             this.instanceClass = Objects.requireNonNull(instanceClass);
             return this;
         }
 
-        public Builder setLibraries(List<LibraryResponse> libraries) {
+        public Builder libraries(List<LibraryResponse> libraries) {
             this.libraries = Objects.requireNonNull(libraries);
             return this;
         }
 
-        public Builder setLivenessCheck(LivenessCheckResponse livenessCheck) {
+        public Builder livenessCheck(LivenessCheckResponse livenessCheck) {
             this.livenessCheck = Objects.requireNonNull(livenessCheck);
             return this;
         }
 
-        public Builder setManualScaling(ManualScalingResponse manualScaling) {
+        public Builder manualScaling(ManualScalingResponse manualScaling) {
             this.manualScaling = Objects.requireNonNull(manualScaling);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetwork(NetworkResponse network) {
+        public Builder network(NetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNobuildFilesRegex(String nobuildFilesRegex) {
+        public Builder nobuildFilesRegex(String nobuildFilesRegex) {
             this.nobuildFilesRegex = Objects.requireNonNull(nobuildFilesRegex);
             return this;
         }
 
-        public Builder setReadinessCheck(ReadinessCheckResponse readinessCheck) {
+        public Builder readinessCheck(ReadinessCheckResponse readinessCheck) {
             this.readinessCheck = Objects.requireNonNull(readinessCheck);
             return this;
         }
 
-        public Builder setResources(ResourcesResponse resources) {
+        public Builder resources(ResourcesResponse resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setRuntimeApiVersion(String runtimeApiVersion) {
+        public Builder runtimeApiVersion(String runtimeApiVersion) {
             this.runtimeApiVersion = Objects.requireNonNull(runtimeApiVersion);
             return this;
         }
 
-        public Builder setRuntimeChannel(String runtimeChannel) {
+        public Builder runtimeChannel(String runtimeChannel) {
             this.runtimeChannel = Objects.requireNonNull(runtimeChannel);
             return this;
         }
 
-        public Builder setRuntimeMainExecutablePath(String runtimeMainExecutablePath) {
+        public Builder runtimeMainExecutablePath(String runtimeMainExecutablePath) {
             this.runtimeMainExecutablePath = Objects.requireNonNull(runtimeMainExecutablePath);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServingStatus(String servingStatus) {
+        public Builder servingStatus(String servingStatus) {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }
 
-        public Builder setThreadsafe(Boolean threadsafe) {
+        public Builder threadsafe(Boolean threadsafe) {
             this.threadsafe = Objects.requireNonNull(threadsafe);
             return this;
         }
 
-        public Builder setVersionUrl(String versionUrl) {
+        public Builder versionUrl(String versionUrl) {
             this.versionUrl = Objects.requireNonNull(versionUrl);
             return this;
         }
 
-        public Builder setVm(Boolean vm) {
+        public Builder vm(Boolean vm) {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
 
-        public Builder setVpcAccessConnector(VpcAccessConnectorResponse vpcAccessConnector) {
+        public Builder vpcAccessConnector(VpcAccessConnectorResponse vpcAccessConnector) {
             this.vpcAccessConnector = Objects.requireNonNull(vpcAccessConnector);
             return this;
         }

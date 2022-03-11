@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class BucketOwnershipControls {
     private final List<BucketOwnershipControlsRule> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private BucketOwnershipControls(List<BucketOwnershipControlsRule> rules) {
+    @OutputCustomType.Constructor
+    private BucketOwnershipControls(@OutputCustomType.Parameter("rules") List<BucketOwnershipControlsRule> rules) {
         this.rules = rules;
     }
 
@@ -41,7 +41,7 @@ public final class BucketOwnershipControls {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(List<BucketOwnershipControlsRule> rules) {
+        public Builder rules(List<BucketOwnershipControlsRule> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

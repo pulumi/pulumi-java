@@ -26,11 +26,11 @@ public final class WeekDayOfMonthResponse {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor({"dayOfWeek","dayOffset","weekOrdinal"})
+    @OutputCustomType.Constructor
     private WeekDayOfMonthResponse(
-        String dayOfWeek,
-        Integer dayOffset,
-        Integer weekOrdinal) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("dayOffset") Integer dayOffset,
+        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.dayOffset = dayOffset;
         this.weekOrdinal = weekOrdinal;
@@ -82,17 +82,17 @@ public final class WeekDayOfMonthResponse {
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setDayOffset(Integer dayOffset) {
+        public Builder dayOffset(Integer dayOffset) {
             this.dayOffset = Objects.requireNonNull(dayOffset);
             return this;
         }
 
-        public Builder setWeekOrdinal(Integer weekOrdinal) {
+        public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }

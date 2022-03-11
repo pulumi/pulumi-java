@@ -17,8 +17,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final @Nullable String inputStartingPosition;
 
-    @OutputCustomType.Constructor({"inputStartingPosition"})
-    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration(@Nullable String inputStartingPosition) {
+    @OutputCustomType.Constructor
+    private ApplicationApplicationConfigurationSqlApplicationConfigurationInputInputStartingPositionConfiguration(@OutputCustomType.Parameter("inputStartingPosition") @Nullable String inputStartingPosition) {
         this.inputStartingPosition = inputStartingPosition;
     }
 
@@ -50,7 +50,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.inputStartingPosition = defaults.inputStartingPosition;
         }
 
-        public Builder setInputStartingPosition(@Nullable String inputStartingPosition) {
+        public Builder inputStartingPosition(@Nullable String inputStartingPosition) {
             this.inputStartingPosition = inputStartingPosition;
             return this;
         }

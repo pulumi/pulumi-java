@@ -22,14 +22,14 @@ public final class IntegrationFlowDefinition {
     private final List<IntegrationTask> tasks;
     private final IntegrationTriggerConfig triggerConfig;
 
-    @OutputCustomType.Constructor({"description","flowName","kmsArn","sourceFlowConfig","tasks","triggerConfig"})
+    @OutputCustomType.Constructor
     private IntegrationFlowDefinition(
-        @Nullable String description,
-        String flowName,
-        String kmsArn,
-        IntegrationSourceFlowConfig sourceFlowConfig,
-        List<IntegrationTask> tasks,
-        IntegrationTriggerConfig triggerConfig) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowName") String flowName,
+        @OutputCustomType.Parameter("kmsArn") String kmsArn,
+        @OutputCustomType.Parameter("sourceFlowConfig") IntegrationSourceFlowConfig sourceFlowConfig,
+        @OutputCustomType.Parameter("tasks") List<IntegrationTask> tasks,
+        @OutputCustomType.Parameter("triggerConfig") IntegrationTriggerConfig triggerConfig) {
         this.description = description;
         this.flowName = flowName;
         this.kmsArn = kmsArn;
@@ -87,32 +87,32 @@ public final class IntegrationFlowDefinition {
     	      this.triggerConfig = defaults.triggerConfig;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFlowName(String flowName) {
+        public Builder flowName(String flowName) {
             this.flowName = Objects.requireNonNull(flowName);
             return this;
         }
 
-        public Builder setKmsArn(String kmsArn) {
+        public Builder kmsArn(String kmsArn) {
             this.kmsArn = Objects.requireNonNull(kmsArn);
             return this;
         }
 
-        public Builder setSourceFlowConfig(IntegrationSourceFlowConfig sourceFlowConfig) {
+        public Builder sourceFlowConfig(IntegrationSourceFlowConfig sourceFlowConfig) {
             this.sourceFlowConfig = Objects.requireNonNull(sourceFlowConfig);
             return this;
         }
 
-        public Builder setTasks(List<IntegrationTask> tasks) {
+        public Builder tasks(List<IntegrationTask> tasks) {
             this.tasks = Objects.requireNonNull(tasks);
             return this;
         }
 
-        public Builder setTriggerConfig(IntegrationTriggerConfig triggerConfig) {
+        public Builder triggerConfig(IntegrationTriggerConfig triggerConfig) {
             this.triggerConfig = Objects.requireNonNull(triggerConfig);
             return this;
         }

@@ -74,17 +74,17 @@ public final class GetInstantSnapshotArgs extends io.pulumi.resources.InvokeArgs
     	      this.zone = defaults.zone;
         }
 
-        public Builder setInstantSnapshot(String instantSnapshot) {
+        public Builder instantSnapshot(String instantSnapshot) {
             this.instantSnapshot = Objects.requireNonNull(instantSnapshot);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

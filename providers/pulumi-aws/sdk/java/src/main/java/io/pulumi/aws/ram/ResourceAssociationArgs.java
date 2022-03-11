@@ -69,22 +69,22 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceShareArn = defaults.resourceShareArn;
         }
 
-        public Builder setResourceArn(Input<String> resourceArn) {
+        public Builder resourceArn(Input<String> resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Input.of(Objects.requireNonNull(resourceArn));
             return this;
         }
 
-        public Builder setResourceShareArn(Input<String> resourceShareArn) {
+        public Builder resourceShareArn(Input<String> resourceShareArn) {
             this.resourceShareArn = Objects.requireNonNull(resourceShareArn);
             return this;
         }
 
-        public Builder setResourceShareArn(String resourceShareArn) {
+        public Builder resourceShareArn(String resourceShareArn) {
             this.resourceShareArn = Input.of(Objects.requireNonNull(resourceShareArn));
             return this;
         }

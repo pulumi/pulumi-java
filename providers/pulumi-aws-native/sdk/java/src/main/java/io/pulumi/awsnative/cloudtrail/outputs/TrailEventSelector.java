@@ -32,12 +32,12 @@ public final class TrailEventSelector {
      */
     private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 
-    @OutputCustomType.Constructor({"dataResources","excludeManagementEventSources","includeManagementEvents","readWriteType"})
+    @OutputCustomType.Constructor
     private TrailEventSelector(
-        @Nullable List<TrailDataResource> dataResources,
-        @Nullable List<String> excludeManagementEventSources,
-        @Nullable Boolean includeManagementEvents,
-        @Nullable TrailEventSelectorReadWriteType readWriteType) {
+        @OutputCustomType.Parameter("dataResources") @Nullable List<TrailDataResource> dataResources,
+        @OutputCustomType.Parameter("excludeManagementEventSources") @Nullable List<String> excludeManagementEventSources,
+        @OutputCustomType.Parameter("includeManagementEvents") @Nullable Boolean includeManagementEvents,
+        @OutputCustomType.Parameter("readWriteType") @Nullable TrailEventSelectorReadWriteType readWriteType) {
         this.dataResources = dataResources;
         this.excludeManagementEventSources = excludeManagementEventSources;
         this.includeManagementEvents = includeManagementEvents;
@@ -95,22 +95,22 @@ public final class TrailEventSelector {
     	      this.readWriteType = defaults.readWriteType;
         }
 
-        public Builder setDataResources(@Nullable List<TrailDataResource> dataResources) {
+        public Builder dataResources(@Nullable List<TrailDataResource> dataResources) {
             this.dataResources = dataResources;
             return this;
         }
 
-        public Builder setExcludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
+        public Builder excludeManagementEventSources(@Nullable List<String> excludeManagementEventSources) {
             this.excludeManagementEventSources = excludeManagementEventSources;
             return this;
         }
 
-        public Builder setIncludeManagementEvents(@Nullable Boolean includeManagementEvents) {
+        public Builder includeManagementEvents(@Nullable Boolean includeManagementEvents) {
             this.includeManagementEvents = includeManagementEvents;
             return this;
         }
 
-        public Builder setReadWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
+        public Builder readWriteType(@Nullable TrailEventSelectorReadWriteType readWriteType) {
             this.readWriteType = readWriteType;
             return this;
         }

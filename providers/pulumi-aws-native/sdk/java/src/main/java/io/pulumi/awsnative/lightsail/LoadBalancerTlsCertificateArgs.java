@@ -120,52 +120,52 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
     	      this.loadBalancerName = defaults.loadBalancerName;
         }
 
-        public Builder setCertificateAlternativeNames(@Nullable Input<List<String>> certificateAlternativeNames) {
+        public Builder certificateAlternativeNames(@Nullable Input<List<String>> certificateAlternativeNames) {
             this.certificateAlternativeNames = certificateAlternativeNames;
             return this;
         }
 
-        public Builder setCertificateAlternativeNames(@Nullable List<String> certificateAlternativeNames) {
+        public Builder certificateAlternativeNames(@Nullable List<String> certificateAlternativeNames) {
             this.certificateAlternativeNames = Input.ofNullable(certificateAlternativeNames);
             return this;
         }
 
-        public Builder setCertificateDomainName(Input<String> certificateDomainName) {
+        public Builder certificateDomainName(Input<String> certificateDomainName) {
             this.certificateDomainName = Objects.requireNonNull(certificateDomainName);
             return this;
         }
 
-        public Builder setCertificateDomainName(String certificateDomainName) {
+        public Builder certificateDomainName(String certificateDomainName) {
             this.certificateDomainName = Input.of(Objects.requireNonNull(certificateDomainName));
             return this;
         }
 
-        public Builder setCertificateName(Input<String> certificateName) {
+        public Builder certificateName(Input<String> certificateName) {
             this.certificateName = Objects.requireNonNull(certificateName);
             return this;
         }
 
-        public Builder setCertificateName(String certificateName) {
+        public Builder certificateName(String certificateName) {
             this.certificateName = Input.of(Objects.requireNonNull(certificateName));
             return this;
         }
 
-        public Builder setIsAttached(@Nullable Input<Boolean> isAttached) {
+        public Builder isAttached(@Nullable Input<Boolean> isAttached) {
             this.isAttached = isAttached;
             return this;
         }
 
-        public Builder setIsAttached(@Nullable Boolean isAttached) {
+        public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = Input.ofNullable(isAttached);
             return this;
         }
 
-        public Builder setLoadBalancerName(Input<String> loadBalancerName) {
+        public Builder loadBalancerName(Input<String> loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
-        public Builder setLoadBalancerName(String loadBalancerName) {
+        public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Input.of(Objects.requireNonNull(loadBalancerName));
             return this;
         }

@@ -36,12 +36,12 @@ public final class ClusterShard {
      */
     private final @Nullable String slots;
 
-    @OutputCustomType.Constructor({"name","nodes","numNodes","slots"})
+    @OutputCustomType.Constructor
     private ClusterShard(
-        @Nullable String name,
-        @Nullable List<ClusterShardNode> nodes,
-        @Nullable Integer numNodes,
-        @Nullable String slots) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nodes") @Nullable List<ClusterShardNode> nodes,
+        @OutputCustomType.Parameter("numNodes") @Nullable Integer numNodes,
+        @OutputCustomType.Parameter("slots") @Nullable String slots) {
         this.name = name;
         this.nodes = nodes;
         this.numNodes = numNodes;
@@ -104,22 +104,22 @@ public final class ClusterShard {
     	      this.slots = defaults.slots;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNodes(@Nullable List<ClusterShardNode> nodes) {
+        public Builder nodes(@Nullable List<ClusterShardNode> nodes) {
             this.nodes = nodes;
             return this;
         }
 
-        public Builder setNumNodes(@Nullable Integer numNodes) {
+        public Builder numNodes(@Nullable Integer numNodes) {
             this.numNodes = numNodes;
             return this;
         }
 
-        public Builder setSlots(@Nullable String slots) {
+        public Builder slots(@Nullable String slots) {
             this.slots = slots;
             return this;
         }

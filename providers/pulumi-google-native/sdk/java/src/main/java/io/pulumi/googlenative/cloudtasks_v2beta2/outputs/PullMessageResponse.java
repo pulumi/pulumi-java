@@ -20,10 +20,10 @@ public final class PullMessageResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"payload","tag"})
+    @OutputCustomType.Constructor
     private PullMessageResponse(
-        String payload,
-        String tag) {
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.payload = payload;
         this.tag = tag;
     }
@@ -65,12 +65,12 @@ public final class PullMessageResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

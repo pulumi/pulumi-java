@@ -22,10 +22,10 @@ public final class EnvironmentMonitor {
      */
     private final @Nullable String alarmRoleArn;
 
-    @OutputCustomType.Constructor({"alarmArn","alarmRoleArn"})
+    @OutputCustomType.Constructor
     private EnvironmentMonitor(
-        String alarmArn,
-        @Nullable String alarmRoleArn) {
+        @OutputCustomType.Parameter("alarmArn") String alarmArn,
+        @OutputCustomType.Parameter("alarmRoleArn") @Nullable String alarmRoleArn) {
         this.alarmArn = alarmArn;
         this.alarmRoleArn = alarmRoleArn;
     }
@@ -67,12 +67,12 @@ public final class EnvironmentMonitor {
     	      this.alarmRoleArn = defaults.alarmRoleArn;
         }
 
-        public Builder setAlarmArn(String alarmArn) {
+        public Builder alarmArn(String alarmArn) {
             this.alarmArn = Objects.requireNonNull(alarmArn);
             return this;
         }
 
-        public Builder setAlarmRoleArn(@Nullable String alarmRoleArn) {
+        public Builder alarmRoleArn(@Nullable String alarmRoleArn) {
             this.alarmRoleArn = alarmRoleArn;
             return this;
         }

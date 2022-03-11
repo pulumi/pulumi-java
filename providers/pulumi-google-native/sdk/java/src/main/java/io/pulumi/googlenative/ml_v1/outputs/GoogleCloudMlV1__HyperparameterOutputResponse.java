@@ -65,18 +65,18 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
      */
     private final Map<String,String> webAccessUris;
 
-    @OutputCustomType.Constructor({"allMetrics","builtInAlgorithmOutput","endTime","finalMetric","hyperparameters","isTrialStoppedEarly","startTime","state","trialId","webAccessUris"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__HyperparameterOutputResponse(
-        List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
-        GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
-        String endTime,
-        GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
-        Map<String,String> hyperparameters,
-        Boolean isTrialStoppedEarly,
-        String startTime,
-        String state,
-        String trialId,
-        Map<String,String> webAccessUris) {
+        @OutputCustomType.Parameter("allMetrics") List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics,
+        @OutputCustomType.Parameter("builtInAlgorithmOutput") GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("finalMetric") GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric,
+        @OutputCustomType.Parameter("hyperparameters") Map<String,String> hyperparameters,
+        @OutputCustomType.Parameter("isTrialStoppedEarly") Boolean isTrialStoppedEarly,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trialId") String trialId,
+        @OutputCustomType.Parameter("webAccessUris") Map<String,String> webAccessUris) {
         this.allMetrics = allMetrics;
         this.builtInAlgorithmOutput = builtInAlgorithmOutput;
         this.endTime = endTime;
@@ -198,52 +198,52 @@ public final class GoogleCloudMlV1__HyperparameterOutputResponse {
     	      this.webAccessUris = defaults.webAccessUris;
         }
 
-        public Builder setAllMetrics(List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics) {
+        public Builder allMetrics(List<GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse> allMetrics) {
             this.allMetrics = Objects.requireNonNull(allMetrics);
             return this;
         }
 
-        public Builder setBuiltInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
+        public Builder builtInAlgorithmOutput(GoogleCloudMlV1__BuiltInAlgorithmOutputResponse builtInAlgorithmOutput) {
             this.builtInAlgorithmOutput = Objects.requireNonNull(builtInAlgorithmOutput);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setFinalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric) {
+        public Builder finalMetric(GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse finalMetric) {
             this.finalMetric = Objects.requireNonNull(finalMetric);
             return this;
         }
 
-        public Builder setHyperparameters(Map<String,String> hyperparameters) {
+        public Builder hyperparameters(Map<String,String> hyperparameters) {
             this.hyperparameters = Objects.requireNonNull(hyperparameters);
             return this;
         }
 
-        public Builder setIsTrialStoppedEarly(Boolean isTrialStoppedEarly) {
+        public Builder isTrialStoppedEarly(Boolean isTrialStoppedEarly) {
             this.isTrialStoppedEarly = Objects.requireNonNull(isTrialStoppedEarly);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrialId(String trialId) {
+        public Builder trialId(String trialId) {
             this.trialId = Objects.requireNonNull(trialId);
             return this;
         }
 
-        public Builder setWebAccessUris(Map<String,String> webAccessUris) {
+        public Builder webAccessUris(Map<String,String> webAccessUris) {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }

@@ -70,22 +70,22 @@ public final class CxIntentTrainingPhrasePartGetArgs extends io.pulumi.resources
     	      this.text = defaults.text;
         }
 
-        public Builder setParameterId(@Nullable Input<String> parameterId) {
+        public Builder parameterId(@Nullable Input<String> parameterId) {
             this.parameterId = parameterId;
             return this;
         }
 
-        public Builder setParameterId(@Nullable String parameterId) {
+        public Builder parameterId(@Nullable String parameterId) {
             this.parameterId = Input.ofNullable(parameterId);
             return this;
         }
 
-        public Builder setText(Input<String> text) {
+        public Builder text(Input<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Input.of(Objects.requireNonNull(text));
             return this;
         }

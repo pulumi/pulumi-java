@@ -20,10 +20,10 @@ public final class DockerExecutorResponse {
      */
     private final String imageName;
 
-    @OutputCustomType.Constructor({"cmd","imageName"})
+    @OutputCustomType.Constructor
     private DockerExecutorResponse(
-        String cmd,
-        String imageName) {
+        @OutputCustomType.Parameter("cmd") String cmd,
+        @OutputCustomType.Parameter("imageName") String imageName) {
         this.cmd = cmd;
         this.imageName = imageName;
     }
@@ -65,12 +65,12 @@ public final class DockerExecutorResponse {
     	      this.imageName = defaults.imageName;
         }
 
-        public Builder setCmd(String cmd) {
+        public Builder cmd(String cmd) {
             this.cmd = Objects.requireNonNull(cmd);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }

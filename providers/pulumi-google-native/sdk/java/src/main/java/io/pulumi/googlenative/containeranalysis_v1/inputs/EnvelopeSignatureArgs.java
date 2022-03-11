@@ -62,22 +62,22 @@ public final class EnvelopeSignatureArgs extends io.pulumi.resources.ResourceArg
     	      this.sig = defaults.sig;
         }
 
-        public Builder setKeyid(@Nullable Input<String> keyid) {
+        public Builder keyid(@Nullable Input<String> keyid) {
             this.keyid = keyid;
             return this;
         }
 
-        public Builder setKeyid(@Nullable String keyid) {
+        public Builder keyid(@Nullable String keyid) {
             this.keyid = Input.ofNullable(keyid);
             return this;
         }
 
-        public Builder setSig(@Nullable Input<String> sig) {
+        public Builder sig(@Nullable Input<String> sig) {
             this.sig = sig;
             return this;
         }
 
-        public Builder setSig(@Nullable String sig) {
+        public Builder sig(@Nullable String sig) {
             this.sig = Input.ofNullable(sig);
             return this;
         }

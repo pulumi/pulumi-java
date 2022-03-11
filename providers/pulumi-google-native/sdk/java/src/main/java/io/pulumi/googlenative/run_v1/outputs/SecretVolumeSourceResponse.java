@@ -34,12 +34,12 @@ public final class SecretVolumeSourceResponse {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"defaultMode","items","optional","secretName"})
+    @OutputCustomType.Constructor
     private SecretVolumeSourceResponse(
-        Integer defaultMode,
-        List<KeyToPathResponse> items,
-        Boolean optional,
-        String secretName) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<KeyToPathResponse> items,
+        @OutputCustomType.Parameter("optional") Boolean optional,
+        @OutputCustomType.Parameter("secretName") String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.optional = optional;
@@ -101,22 +101,22 @@ public final class SecretVolumeSourceResponse {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<KeyToPathResponse> items) {
+        public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

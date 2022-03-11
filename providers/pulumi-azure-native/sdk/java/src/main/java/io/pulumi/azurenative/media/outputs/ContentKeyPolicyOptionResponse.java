@@ -41,12 +41,12 @@ public final class ContentKeyPolicyOptionResponse {
      */
     private final Object restriction;
 
-    @OutputCustomType.Constructor({"configuration","name","policyOptionId","restriction"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyOptionResponse(
-        Object configuration,
-        @Nullable String name,
-        String policyOptionId,
-        Object restriction) {
+        @OutputCustomType.Parameter("configuration") Object configuration,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policyOptionId") String policyOptionId,
+        @OutputCustomType.Parameter("restriction") Object restriction) {
         this.configuration = configuration;
         this.name = name;
         this.policyOptionId = policyOptionId;
@@ -108,22 +108,22 @@ public final class ContentKeyPolicyOptionResponse {
     	      this.restriction = defaults.restriction;
         }
 
-        public Builder setConfiguration(Object configuration) {
+        public Builder configuration(Object configuration) {
             this.configuration = Objects.requireNonNull(configuration);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicyOptionId(String policyOptionId) {
+        public Builder policyOptionId(String policyOptionId) {
             this.policyOptionId = Objects.requireNonNull(policyOptionId);
             return this;
         }
 
-        public Builder setRestriction(Object restriction) {
+        public Builder restriction(Object restriction) {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }

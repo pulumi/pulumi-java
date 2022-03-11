@@ -23,12 +23,12 @@ public final class GetTensorflowVersionsResult {
     private final List<String> versions;
     private final String zone;
 
-    @OutputCustomType.Constructor({"id","project","versions","zone"})
+    @OutputCustomType.Constructor
     private GetTensorflowVersionsResult(
-        String id,
-        String project,
-        List<String> versions,
-        String zone) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("versions") List<String> versions,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.id = id;
         this.project = project;
         this.versions = versions;
@@ -82,22 +82,22 @@ public final class GetTensorflowVersionsResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setVersions(List<String> versions) {
+        public Builder versions(List<String> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

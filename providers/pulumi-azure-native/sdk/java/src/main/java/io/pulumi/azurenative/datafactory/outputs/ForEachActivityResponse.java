@@ -102,17 +102,17 @@ public final class ForEachActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"activities","batchCount","dependsOn","description","isSequential","items","name","type","userProperties"})
+    @OutputCustomType.Constructor
     private ForEachActivityResponse(
-        List<Object> activities,
-        @Nullable Integer batchCount,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Boolean isSequential,
-        ExpressionResponse items,
-        String name,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("activities") List<Object> activities,
+        @OutputCustomType.Parameter("batchCount") @Nullable Integer batchCount,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isSequential") @Nullable Boolean isSequential,
+        @OutputCustomType.Parameter("items") ExpressionResponse items,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.activities = activities;
         this.batchCount = batchCount;
         this.dependsOn = dependsOn;
@@ -225,47 +225,47 @@ public final class ForEachActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setActivities(List<Object> activities) {
+        public Builder activities(List<Object> activities) {
             this.activities = Objects.requireNonNull(activities);
             return this;
         }
 
-        public Builder setBatchCount(@Nullable Integer batchCount) {
+        public Builder batchCount(@Nullable Integer batchCount) {
             this.batchCount = batchCount;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsSequential(@Nullable Boolean isSequential) {
+        public Builder isSequential(@Nullable Boolean isSequential) {
             this.isSequential = isSequential;
             return this;
         }
 
-        public Builder setItems(ExpressionResponse items) {
+        public Builder items(ExpressionResponse items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

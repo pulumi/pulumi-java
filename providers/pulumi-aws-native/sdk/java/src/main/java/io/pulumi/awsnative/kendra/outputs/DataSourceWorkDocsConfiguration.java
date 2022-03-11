@@ -21,14 +21,14 @@ public final class DataSourceWorkDocsConfiguration {
     private final String organizationId;
     private final @Nullable Boolean useChangeLog;
 
-    @OutputCustomType.Constructor({"crawlComments","exclusionPatterns","fieldMappings","inclusionPatterns","organizationId","useChangeLog"})
+    @OutputCustomType.Constructor
     private DataSourceWorkDocsConfiguration(
-        @Nullable Boolean crawlComments,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        String organizationId,
-        @Nullable Boolean useChangeLog) {
+        @OutputCustomType.Parameter("crawlComments") @Nullable Boolean crawlComments,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("organizationId") String organizationId,
+        @OutputCustomType.Parameter("useChangeLog") @Nullable Boolean useChangeLog) {
         this.crawlComments = crawlComments;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
@@ -86,32 +86,32 @@ public final class DataSourceWorkDocsConfiguration {
     	      this.useChangeLog = defaults.useChangeLog;
         }
 
-        public Builder setCrawlComments(@Nullable Boolean crawlComments) {
+        public Builder crawlComments(@Nullable Boolean crawlComments) {
             this.crawlComments = crawlComments;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setUseChangeLog(@Nullable Boolean useChangeLog) {
+        public Builder useChangeLog(@Nullable Boolean useChangeLog) {
             this.useChangeLog = useChangeLog;
             return this;
         }

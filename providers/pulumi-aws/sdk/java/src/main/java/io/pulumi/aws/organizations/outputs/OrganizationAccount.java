@@ -37,13 +37,13 @@ public final class OrganizationAccount {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"arn","email","id","name","status"})
+    @OutputCustomType.Constructor
     private OrganizationAccount(
-        @Nullable String arn,
-        @Nullable String email,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("email") @Nullable String email,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.arn = arn;
         this.email = email;
         this.id = id;
@@ -115,27 +115,27 @@ public final class OrganizationAccount {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setEmail(@Nullable String email) {
+        public Builder email(@Nullable String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

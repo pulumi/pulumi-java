@@ -82,21 +82,21 @@ public final class ManagedHsmPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"createMode","enablePurgeProtection","enableSoftDelete","hsmUri","initialAdminObjectIds","networkAcls","privateEndpointConnections","provisioningState","publicNetworkAccess","scheduledPurgeDate","softDeleteRetentionInDays","statusMessage","tenantId"})
+    @OutputCustomType.Constructor
     private ManagedHsmPropertiesResponse(
-        @Nullable String createMode,
-        @Nullable Boolean enablePurgeProtection,
-        @Nullable Boolean enableSoftDelete,
-        String hsmUri,
-        @Nullable List<String> initialAdminObjectIds,
-        @Nullable MHSMNetworkRuleSetResponse networkAcls,
-        List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        String scheduledPurgeDate,
-        @Nullable Integer softDeleteRetentionInDays,
-        String statusMessage,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("createMode") @Nullable String createMode,
+        @OutputCustomType.Parameter("enablePurgeProtection") @Nullable Boolean enablePurgeProtection,
+        @OutputCustomType.Parameter("enableSoftDelete") @Nullable Boolean enableSoftDelete,
+        @OutputCustomType.Parameter("hsmUri") String hsmUri,
+        @OutputCustomType.Parameter("initialAdminObjectIds") @Nullable List<String> initialAdminObjectIds,
+        @OutputCustomType.Parameter("networkAcls") @Nullable MHSMNetworkRuleSetResponse networkAcls,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("scheduledPurgeDate") String scheduledPurgeDate,
+        @OutputCustomType.Parameter("softDeleteRetentionInDays") @Nullable Integer softDeleteRetentionInDays,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.createMode = createMode;
         this.enablePurgeProtection = enablePurgeProtection;
         this.enableSoftDelete = enableSoftDelete;
@@ -248,67 +248,67 @@ public final class ManagedHsmPropertiesResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setCreateMode(@Nullable String createMode) {
+        public Builder createMode(@Nullable String createMode) {
             this.createMode = createMode;
             return this;
         }
 
-        public Builder setEnablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
+        public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
             this.enablePurgeProtection = enablePurgeProtection;
             return this;
         }
 
-        public Builder setEnableSoftDelete(@Nullable Boolean enableSoftDelete) {
+        public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
             this.enableSoftDelete = enableSoftDelete;
             return this;
         }
 
-        public Builder setHsmUri(String hsmUri) {
+        public Builder hsmUri(String hsmUri) {
             this.hsmUri = Objects.requireNonNull(hsmUri);
             return this;
         }
 
-        public Builder setInitialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
+        public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
             this.initialAdminObjectIds = initialAdminObjectIds;
             return this;
         }
 
-        public Builder setNetworkAcls(@Nullable MHSMNetworkRuleSetResponse networkAcls) {
+        public Builder networkAcls(@Nullable MHSMNetworkRuleSetResponse networkAcls) {
             this.networkAcls = networkAcls;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<MHSMPrivateEndpointConnectionItemResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setScheduledPurgeDate(String scheduledPurgeDate) {
+        public Builder scheduledPurgeDate(String scheduledPurgeDate) {
             this.scheduledPurgeDate = Objects.requireNonNull(scheduledPurgeDate);
             return this;
         }
 
-        public Builder setSoftDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
+        public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
             this.softDeleteRetentionInDays = softDeleteRetentionInDays;
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

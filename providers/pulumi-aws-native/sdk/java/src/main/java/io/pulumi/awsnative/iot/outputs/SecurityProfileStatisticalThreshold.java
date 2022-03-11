@@ -17,8 +17,8 @@ public final class SecurityProfileStatisticalThreshold {
      */
     private final @Nullable SecurityProfileStatisticalThresholdStatistic statistic;
 
-    @OutputCustomType.Constructor({"statistic"})
-    private SecurityProfileStatisticalThreshold(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
+    @OutputCustomType.Constructor
+    private SecurityProfileStatisticalThreshold(@OutputCustomType.Parameter("statistic") @Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
         this.statistic = statistic;
     }
 
@@ -50,7 +50,7 @@ public final class SecurityProfileStatisticalThreshold {
     	      this.statistic = defaults.statistic;
         }
 
-        public Builder setStatistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
+        public Builder statistic(@Nullable SecurityProfileStatisticalThresholdStatistic statistic) {
             this.statistic = statistic;
             return this;
         }

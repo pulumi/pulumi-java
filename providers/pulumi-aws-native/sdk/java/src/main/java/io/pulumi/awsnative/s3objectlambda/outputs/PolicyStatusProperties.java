@@ -17,8 +17,8 @@ public final class PolicyStatusProperties {
      */
     private final @Nullable Boolean isPublic;
 
-    @OutputCustomType.Constructor({"isPublic"})
-    private PolicyStatusProperties(@Nullable Boolean isPublic) {
+    @OutputCustomType.Constructor
+    private PolicyStatusProperties(@OutputCustomType.Parameter("isPublic") @Nullable Boolean isPublic) {
         this.isPublic = isPublic;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyStatusProperties {
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder setIsPublic(@Nullable Boolean isPublic) {
+        public Builder isPublic(@Nullable Boolean isPublic) {
             this.isPublic = isPublic;
             return this;
         }

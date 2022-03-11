@@ -24,10 +24,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
      */
     private final PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId;
 
-    @OutputCustomType.Constructor({"kind","partitionId"})
+    @OutputCustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(
-        PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
-        PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
+        @OutputCustomType.Parameter("kind") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind,
+        @OutputCustomType.Parameter("partitionId") PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
         this.kind = kind;
         this.partitionId = partitionId;
     }
@@ -72,12 +72,12 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
     	      this.partitionId = defaults.partitionId;
         }
 
-        public Builder setKind(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind) {
+        public Builder kind(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPartitionId(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
+        public Builder partitionId(PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId partitionId) {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }

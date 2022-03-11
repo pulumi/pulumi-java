@@ -43,19 +43,19 @@ public final class DetectorRule {
      */
     private final @Nullable List<DetectorTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","description","detectorId","expression","language","lastUpdatedTime","outcomes","ruleId","ruleVersion","tags"})
+    @OutputCustomType.Constructor
     private DetectorRule(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String detectorId,
-        @Nullable String expression,
-        @Nullable DetectorRuleLanguage language,
-        @Nullable String lastUpdatedTime,
-        @Nullable List<DetectorOutcome> outcomes,
-        @Nullable String ruleId,
-        @Nullable String ruleVersion,
-        @Nullable List<DetectorTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("detectorId") @Nullable String detectorId,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("language") @Nullable DetectorRuleLanguage language,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("outcomes") @Nullable List<DetectorOutcome> outcomes,
+        @OutputCustomType.Parameter("ruleId") @Nullable String ruleId,
+        @OutputCustomType.Parameter("ruleVersion") @Nullable String ruleVersion,
+        @OutputCustomType.Parameter("tags") @Nullable List<DetectorTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.description = description;
@@ -159,57 +159,57 @@ public final class DetectorRule {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDetectorId(@Nullable String detectorId) {
+        public Builder detectorId(@Nullable String detectorId) {
             this.detectorId = detectorId;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setLanguage(@Nullable DetectorRuleLanguage language) {
+        public Builder language(@Nullable DetectorRuleLanguage language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setOutcomes(@Nullable List<DetectorOutcome> outcomes) {
+        public Builder outcomes(@Nullable List<DetectorOutcome> outcomes) {
             this.outcomes = outcomes;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleVersion(@Nullable String ruleVersion) {
+        public Builder ruleVersion(@Nullable String ruleVersion) {
             this.ruleVersion = ruleVersion;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTag> tags) {
+        public Builder tags(@Nullable List<DetectorTag> tags) {
             this.tags = tags;
             return this;
         }

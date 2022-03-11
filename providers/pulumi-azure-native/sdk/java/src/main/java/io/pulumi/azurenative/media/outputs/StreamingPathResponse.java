@@ -27,11 +27,11 @@ public final class StreamingPathResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor({"encryptionScheme","paths","streamingProtocol"})
+    @OutputCustomType.Constructor
     private StreamingPathResponse(
-        String encryptionScheme,
-        @Nullable List<String> paths,
-        String streamingProtocol) {
+        @OutputCustomType.Parameter("encryptionScheme") String encryptionScheme,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.encryptionScheme = encryptionScheme;
         this.paths = paths;
         this.streamingProtocol = streamingProtocol;
@@ -83,17 +83,17 @@ public final class StreamingPathResponse {
     	      this.streamingProtocol = defaults.streamingProtocol;
         }
 
-        public Builder setEncryptionScheme(String encryptionScheme) {
+        public Builder encryptionScheme(String encryptionScheme) {
             this.encryptionScheme = Objects.requireNonNull(encryptionScheme);
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setStreamingProtocol(String streamingProtocol) {
+        public Builder streamingProtocol(String streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }

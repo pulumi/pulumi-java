@@ -28,11 +28,11 @@ public final class SqlStorageUpdateSettingsResponse {
      */
     private final @Nullable Integer startingDeviceId;
 
-    @OutputCustomType.Constructor({"diskConfigurationType","diskCount","startingDeviceId"})
+    @OutputCustomType.Constructor
     private SqlStorageUpdateSettingsResponse(
-        @Nullable String diskConfigurationType,
-        @Nullable Integer diskCount,
-        @Nullable Integer startingDeviceId) {
+        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @OutputCustomType.Parameter("diskCount") @Nullable Integer diskCount,
+        @OutputCustomType.Parameter("startingDeviceId") @Nullable Integer startingDeviceId) {
         this.diskConfigurationType = diskConfigurationType;
         this.diskCount = diskCount;
         this.startingDeviceId = startingDeviceId;
@@ -84,17 +84,17 @@ public final class SqlStorageUpdateSettingsResponse {
     	      this.startingDeviceId = defaults.startingDeviceId;
         }
 
-        public Builder setDiskConfigurationType(@Nullable String diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
-        public Builder setDiskCount(@Nullable Integer diskCount) {
+        public Builder diskCount(@Nullable Integer diskCount) {
             this.diskCount = diskCount;
             return this;
         }
 
-        public Builder setStartingDeviceId(@Nullable Integer startingDeviceId) {
+        public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
             this.startingDeviceId = startingDeviceId;
             return this;
         }

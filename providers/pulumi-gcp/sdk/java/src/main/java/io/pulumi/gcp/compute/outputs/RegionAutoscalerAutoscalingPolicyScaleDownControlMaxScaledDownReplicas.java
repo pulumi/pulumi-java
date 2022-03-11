@@ -24,10 +24,10 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDow
      */
     private final @Nullable Integer percent;
 
-    @OutputCustomType.Constructor({"fixed","percent"})
+    @OutputCustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas(
-        @Nullable Integer fixed,
-        @Nullable Integer percent) {
+        @OutputCustomType.Parameter("fixed") @Nullable Integer fixed,
+        @OutputCustomType.Parameter("percent") @Nullable Integer percent) {
         this.fixed = fixed;
         this.percent = percent;
     }
@@ -71,12 +71,12 @@ public final class RegionAutoscalerAutoscalingPolicyScaleDownControlMaxScaledDow
     	      this.percent = defaults.percent;
         }
 
-        public Builder setFixed(@Nullable Integer fixed) {
+        public Builder fixed(@Nullable Integer fixed) {
             this.fixed = fixed;
             return this;
         }
 
-        public Builder setPercent(@Nullable Integer percent) {
+        public Builder percent(@Nullable Integer percent) {
             this.percent = percent;
             return this;
         }

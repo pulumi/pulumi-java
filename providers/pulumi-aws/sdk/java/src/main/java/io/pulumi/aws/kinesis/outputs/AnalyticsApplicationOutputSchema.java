@@ -15,8 +15,8 @@ public final class AnalyticsApplicationOutputSchema {
      */
     private final String recordFormatType;
 
-    @OutputCustomType.Constructor({"recordFormatType"})
-    private AnalyticsApplicationOutputSchema(String recordFormatType) {
+    @OutputCustomType.Constructor
+    private AnalyticsApplicationOutputSchema(@OutputCustomType.Parameter("recordFormatType") String recordFormatType) {
         this.recordFormatType = recordFormatType;
     }
 
@@ -48,7 +48,7 @@ public final class AnalyticsApplicationOutputSchema {
     	      this.recordFormatType = defaults.recordFormatType;
         }
 
-        public Builder setRecordFormatType(String recordFormatType) {
+        public Builder recordFormatType(String recordFormatType) {
             this.recordFormatType = Objects.requireNonNull(recordFormatType);
             return this;
         }

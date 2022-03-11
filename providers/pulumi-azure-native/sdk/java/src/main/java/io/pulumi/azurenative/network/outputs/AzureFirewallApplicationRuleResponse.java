@@ -49,15 +49,15 @@ public final class AzureFirewallApplicationRuleResponse {
      */
     private final @Nullable List<String> targetFqdns;
 
-    @OutputCustomType.Constructor({"description","fqdnTags","name","protocols","sourceAddresses","sourceIpGroups","targetFqdns"})
+    @OutputCustomType.Constructor
     private AzureFirewallApplicationRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> fqdnTags,
-        @Nullable String name,
-        @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups,
-        @Nullable List<String> targetFqdns) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("fqdnTags") @Nullable List<String> fqdnTags,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocols") @Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups,
+        @OutputCustomType.Parameter("targetFqdns") @Nullable List<String> targetFqdns) {
         this.description = description;
         this.fqdnTags = fqdnTags;
         this.name = name;
@@ -149,37 +149,37 @@ public final class AzureFirewallApplicationRuleResponse {
     	      this.targetFqdns = defaults.targetFqdns;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFqdnTags(@Nullable List<String> fqdnTags) {
+        public Builder fqdnTags(@Nullable List<String> fqdnTags) {
             this.fqdnTags = fqdnTags;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols) {
+        public Builder protocols(@Nullable List<AzureFirewallApplicationRuleProtocolResponse> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
 
-        public Builder setTargetFqdns(@Nullable List<String> targetFqdns) {
+        public Builder targetFqdns(@Nullable List<String> targetFqdns) {
             this.targetFqdns = targetFqdns;
             return this;
         }

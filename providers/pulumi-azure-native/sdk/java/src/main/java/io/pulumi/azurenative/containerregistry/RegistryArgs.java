@@ -188,92 +188,92 @@ public final class RegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAdminUserEnabled(@Nullable Input<Boolean> adminUserEnabled) {
+        public Builder adminUserEnabled(@Nullable Input<Boolean> adminUserEnabled) {
             this.adminUserEnabled = adminUserEnabled;
             return this;
         }
 
-        public Builder setAdminUserEnabled(@Nullable Boolean adminUserEnabled) {
+        public Builder adminUserEnabled(@Nullable Boolean adminUserEnabled) {
             this.adminUserEnabled = Input.ofNullable(adminUserEnabled);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
+        public Builder networkRuleSet(@Nullable Input<NetworkRuleSetArgs> networkRuleSet) {
             this.networkRuleSet = networkRuleSet;
             return this;
         }
 
-        public Builder setNetworkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
+        public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
             this.networkRuleSet = Input.ofNullable(networkRuleSet);
             return this;
         }
 
-        public Builder setPolicies(@Nullable Input<PoliciesArgs> policies) {
+        public Builder policies(@Nullable Input<PoliciesArgs> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setPolicies(@Nullable PoliciesArgs policies) {
+        public Builder policies(@Nullable PoliciesArgs policies) {
             this.policies = Input.ofNullable(policies);
             return this;
         }
 
-        public Builder setRegistryName(@Nullable Input<String> registryName) {
+        public Builder registryName(@Nullable Input<String> registryName) {
             this.registryName = registryName;
             return this;
         }
 
-        public Builder setRegistryName(@Nullable String registryName) {
+        public Builder registryName(@Nullable String registryName) {
             this.registryName = Input.ofNullable(registryName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSku(Input<SkuArgs> sku) {
+        public Builder sku(Input<SkuArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(SkuArgs sku) {
+        public Builder sku(SkuArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
+        public Builder storageAccount(@Nullable Input<StorageAccountPropertiesArgs> storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountPropertiesArgs storageAccount) {
             this.storageAccount = Input.ofNullable(storageAccount);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

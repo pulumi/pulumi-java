@@ -255,67 +255,67 @@ public final class SqlSourceResponse extends io.pulumi.resources.InvokeArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalColumns(@Nullable Object additionalColumns) {
+        public Builder additionalColumns(@Nullable Object additionalColumns) {
             this.additionalColumns = additionalColumns;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setIsolationLevel(@Nullable Object isolationLevel) {
+        public Builder isolationLevel(@Nullable Object isolationLevel) {
             this.isolationLevel = isolationLevel;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setPartitionOption(@Nullable Object partitionOption) {
+        public Builder partitionOption(@Nullable Object partitionOption) {
             this.partitionOption = partitionOption;
             return this;
         }
 
-        public Builder setPartitionSettings(@Nullable SqlPartitionSettingsResponse partitionSettings) {
+        public Builder partitionSettings(@Nullable SqlPartitionSettingsResponse partitionSettings) {
             this.partitionSettings = partitionSettings;
             return this;
         }
 
-        public Builder setQueryTimeout(@Nullable Object queryTimeout) {
+        public Builder queryTimeout(@Nullable Object queryTimeout) {
             this.queryTimeout = queryTimeout;
             return this;
         }
 
-        public Builder setSourceRetryCount(@Nullable Object sourceRetryCount) {
+        public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
             this.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
-        public Builder setSourceRetryWait(@Nullable Object sourceRetryWait) {
+        public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
             this.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
-        public Builder setSqlReaderQuery(@Nullable Object sqlReaderQuery) {
+        public Builder sqlReaderQuery(@Nullable Object sqlReaderQuery) {
             this.sqlReaderQuery = sqlReaderQuery;
             return this;
         }
 
-        public Builder setSqlReaderStoredProcedureName(@Nullable Object sqlReaderStoredProcedureName) {
+        public Builder sqlReaderStoredProcedureName(@Nullable Object sqlReaderStoredProcedureName) {
             this.sqlReaderStoredProcedureName = sqlReaderStoredProcedureName;
             return this;
         }
 
-        public Builder setStoredProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
+        public Builder storedProcedureParameters(@Nullable Map<String,StoredProcedureParameterResponse> storedProcedureParameters) {
             this.storedProcedureParameters = storedProcedureParameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

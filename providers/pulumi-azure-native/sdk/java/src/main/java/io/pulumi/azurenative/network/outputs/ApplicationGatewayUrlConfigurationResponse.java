@@ -28,11 +28,11 @@ public final class ApplicationGatewayUrlConfigurationResponse {
      */
     private final @Nullable Boolean reroute;
 
-    @OutputCustomType.Constructor({"modifiedPath","modifiedQueryString","reroute"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayUrlConfigurationResponse(
-        @Nullable String modifiedPath,
-        @Nullable String modifiedQueryString,
-        @Nullable Boolean reroute) {
+        @OutputCustomType.Parameter("modifiedPath") @Nullable String modifiedPath,
+        @OutputCustomType.Parameter("modifiedQueryString") @Nullable String modifiedQueryString,
+        @OutputCustomType.Parameter("reroute") @Nullable Boolean reroute) {
         this.modifiedPath = modifiedPath;
         this.modifiedQueryString = modifiedQueryString;
         this.reroute = reroute;
@@ -84,17 +84,17 @@ public final class ApplicationGatewayUrlConfigurationResponse {
     	      this.reroute = defaults.reroute;
         }
 
-        public Builder setModifiedPath(@Nullable String modifiedPath) {
+        public Builder modifiedPath(@Nullable String modifiedPath) {
             this.modifiedPath = modifiedPath;
             return this;
         }
 
-        public Builder setModifiedQueryString(@Nullable String modifiedQueryString) {
+        public Builder modifiedQueryString(@Nullable String modifiedQueryString) {
             this.modifiedQueryString = modifiedQueryString;
             return this;
         }
 
-        public Builder setReroute(@Nullable Boolean reroute) {
+        public Builder reroute(@Nullable Boolean reroute) {
             this.reroute = reroute;
             return this;
         }

@@ -48,15 +48,15 @@ public final class GetServiceLevelObjectiveResult {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor({"calendarPeriod","displayName","goal","name","rollingPeriod","serviceLevelIndicator","userLabels"})
+    @OutputCustomType.Constructor
     private GetServiceLevelObjectiveResult(
-        String calendarPeriod,
-        String displayName,
-        Double goal,
-        String name,
-        String rollingPeriod,
-        ServiceLevelIndicatorResponse serviceLevelIndicator,
-        Map<String,String> userLabels) {
+        @OutputCustomType.Parameter("calendarPeriod") String calendarPeriod,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("goal") Double goal,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rollingPeriod") String rollingPeriod,
+        @OutputCustomType.Parameter("serviceLevelIndicator") ServiceLevelIndicatorResponse serviceLevelIndicator,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.calendarPeriod = calendarPeriod;
         this.displayName = displayName;
         this.goal = goal;
@@ -148,37 +148,37 @@ public final class GetServiceLevelObjectiveResult {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setCalendarPeriod(String calendarPeriod) {
+        public Builder calendarPeriod(String calendarPeriod) {
             this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setGoal(Double goal) {
+        public Builder goal(Double goal) {
             this.goal = Objects.requireNonNull(goal);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRollingPeriod(String rollingPeriod) {
+        public Builder rollingPeriod(String rollingPeriod) {
             this.rollingPeriod = Objects.requireNonNull(rollingPeriod);
             return this;
         }
 
-        public Builder setServiceLevelIndicator(ServiceLevelIndicatorResponse serviceLevelIndicator) {
+        public Builder serviceLevelIndicator(ServiceLevelIndicatorResponse serviceLevelIndicator) {
             this.serviceLevelIndicator = Objects.requireNonNull(serviceLevelIndicator);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }

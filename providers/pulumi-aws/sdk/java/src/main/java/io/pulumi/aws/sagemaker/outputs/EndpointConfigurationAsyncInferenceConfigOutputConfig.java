@@ -28,11 +28,11 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
      */
     private final String s3OutputPath;
 
-    @OutputCustomType.Constructor({"kmsKeyId","notificationConfig","s3OutputPath"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfig(
-        @Nullable String kmsKeyId,
-        @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
-        String s3OutputPath) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("notificationConfig") @Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig,
+        @OutputCustomType.Parameter("s3OutputPath") String s3OutputPath) {
         this.kmsKeyId = kmsKeyId;
         this.notificationConfig = notificationConfig;
         this.s3OutputPath = s3OutputPath;
@@ -84,17 +84,17 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfig {
     	      this.s3OutputPath = defaults.s3OutputPath;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setNotificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig) {
+        public Builder notificationConfig(@Nullable EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig notificationConfig) {
             this.notificationConfig = notificationConfig;
             return this;
         }
 
-        public Builder setS3OutputPath(String s3OutputPath) {
+        public Builder s3OutputPath(String s3OutputPath) {
             this.s3OutputPath = Objects.requireNonNull(s3OutputPath);
             return this;
         }

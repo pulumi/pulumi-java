@@ -32,12 +32,12 @@ public final class CacheConfigurationResponse {
      */
     private final @Nullable String queryParameters;
 
-    @OutputCustomType.Constructor({"cacheDuration","dynamicCompression","queryParameterStripDirective","queryParameters"})
+    @OutputCustomType.Constructor
     private CacheConfigurationResponse(
-        @Nullable String cacheDuration,
-        @Nullable String dynamicCompression,
-        @Nullable String queryParameterStripDirective,
-        @Nullable String queryParameters) {
+        @OutputCustomType.Parameter("cacheDuration") @Nullable String cacheDuration,
+        @OutputCustomType.Parameter("dynamicCompression") @Nullable String dynamicCompression,
+        @OutputCustomType.Parameter("queryParameterStripDirective") @Nullable String queryParameterStripDirective,
+        @OutputCustomType.Parameter("queryParameters") @Nullable String queryParameters) {
         this.cacheDuration = cacheDuration;
         this.dynamicCompression = dynamicCompression;
         this.queryParameterStripDirective = queryParameterStripDirective;
@@ -99,22 +99,22 @@ public final class CacheConfigurationResponse {
     	      this.queryParameters = defaults.queryParameters;
         }
 
-        public Builder setCacheDuration(@Nullable String cacheDuration) {
+        public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = cacheDuration;
             return this;
         }
 
-        public Builder setDynamicCompression(@Nullable String dynamicCompression) {
+        public Builder dynamicCompression(@Nullable String dynamicCompression) {
             this.dynamicCompression = dynamicCompression;
             return this;
         }
 
-        public Builder setQueryParameterStripDirective(@Nullable String queryParameterStripDirective) {
+        public Builder queryParameterStripDirective(@Nullable String queryParameterStripDirective) {
             this.queryParameterStripDirective = queryParameterStripDirective;
             return this;
         }
 
-        public Builder setQueryParameters(@Nullable String queryParameters) {
+        public Builder queryParameters(@Nullable String queryParameters) {
             this.queryParameters = queryParameters;
             return this;
         }

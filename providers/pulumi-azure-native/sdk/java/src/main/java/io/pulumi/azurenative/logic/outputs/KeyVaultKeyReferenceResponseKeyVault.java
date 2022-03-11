@@ -27,11 +27,11 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","type"})
+    @OutputCustomType.Constructor
     private KeyVaultKeyReferenceResponseKeyVault(
-        @Nullable String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -83,17 +83,17 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

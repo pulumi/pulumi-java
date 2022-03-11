@@ -63,15 +63,15 @@ public final class ClusterPrivateClusterConfig {
      */
     private final @Nullable String publicEndpoint;
 
-    @OutputCustomType.Constructor({"enablePrivateEndpoint","enablePrivateNodes","masterGlobalAccessConfig","masterIpv4CidrBlock","peeringName","privateEndpoint","publicEndpoint"})
+    @OutputCustomType.Constructor
     private ClusterPrivateClusterConfig(
-        Boolean enablePrivateEndpoint,
-        @Nullable Boolean enablePrivateNodes,
-        @Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig,
-        @Nullable String masterIpv4CidrBlock,
-        @Nullable String peeringName,
-        @Nullable String privateEndpoint,
-        @Nullable String publicEndpoint) {
+        @OutputCustomType.Parameter("enablePrivateEndpoint") Boolean enablePrivateEndpoint,
+        @OutputCustomType.Parameter("enablePrivateNodes") @Nullable Boolean enablePrivateNodes,
+        @OutputCustomType.Parameter("masterGlobalAccessConfig") @Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig,
+        @OutputCustomType.Parameter("masterIpv4CidrBlock") @Nullable String masterIpv4CidrBlock,
+        @OutputCustomType.Parameter("peeringName") @Nullable String peeringName,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable String privateEndpoint,
+        @OutputCustomType.Parameter("publicEndpoint") @Nullable String publicEndpoint) {
         this.enablePrivateEndpoint = enablePrivateEndpoint;
         this.enablePrivateNodes = enablePrivateNodes;
         this.masterGlobalAccessConfig = masterGlobalAccessConfig;
@@ -177,37 +177,37 @@ public final class ClusterPrivateClusterConfig {
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setEnablePrivateEndpoint(Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Objects.requireNonNull(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable ClusterPrivateClusterConfigMasterGlobalAccessConfig masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setPeeringName(@Nullable String peeringName) {
+        public Builder peeringName(@Nullable String peeringName) {
             this.peeringName = peeringName;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable String privateEndpoint) {
+        public Builder privateEndpoint(@Nullable String privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable String publicEndpoint) {
+        public Builder publicEndpoint(@Nullable String publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }

@@ -104,42 +104,42 @@ public final class UserLoginProfileArgs extends io.pulumi.resources.ResourceArgs
     	      this.user = defaults.user;
         }
 
-        public Builder setPasswordLength(@Nullable Input<Integer> passwordLength) {
+        public Builder passwordLength(@Nullable Input<Integer> passwordLength) {
             this.passwordLength = passwordLength;
             return this;
         }
 
-        public Builder setPasswordLength(@Nullable Integer passwordLength) {
+        public Builder passwordLength(@Nullable Integer passwordLength) {
             this.passwordLength = Input.ofNullable(passwordLength);
             return this;
         }
 
-        public Builder setPasswordResetRequired(@Nullable Input<Boolean> passwordResetRequired) {
+        public Builder passwordResetRequired(@Nullable Input<Boolean> passwordResetRequired) {
             this.passwordResetRequired = passwordResetRequired;
             return this;
         }
 
-        public Builder setPasswordResetRequired(@Nullable Boolean passwordResetRequired) {
+        public Builder passwordResetRequired(@Nullable Boolean passwordResetRequired) {
             this.passwordResetRequired = Input.ofNullable(passwordResetRequired);
             return this;
         }
 
-        public Builder setPgpKey(Input<String> pgpKey) {
+        public Builder pgpKey(Input<String> pgpKey) {
             this.pgpKey = Objects.requireNonNull(pgpKey);
             return this;
         }
 
-        public Builder setPgpKey(String pgpKey) {
+        public Builder pgpKey(String pgpKey) {
             this.pgpKey = Input.of(Objects.requireNonNull(pgpKey));
             return this;
         }
 
-        public Builder setUser(Input<String> user) {
+        public Builder user(Input<String> user) {
             this.user = Objects.requireNonNull(user);
             return this;
         }
 
-        public Builder setUser(String user) {
+        public Builder user(String user) {
             this.user = Input.of(Objects.requireNonNull(user));
             return this;
         }

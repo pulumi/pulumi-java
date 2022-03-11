@@ -15,8 +15,8 @@ public final class SasTokenInformationResponse {
      */
     private final String accessToken;
 
-    @OutputCustomType.Constructor({"accessToken"})
-    private SasTokenInformationResponse(String accessToken) {
+    @OutputCustomType.Constructor
+    private SasTokenInformationResponse(@OutputCustomType.Parameter("accessToken") String accessToken) {
         this.accessToken = accessToken;
     }
 
@@ -48,7 +48,7 @@ public final class SasTokenInformationResponse {
     	      this.accessToken = defaults.accessToken;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }

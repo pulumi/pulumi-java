@@ -14,10 +14,10 @@ public final class JobPlacement {
     private final String clusterName;
     private final @Nullable String clusterUuid;
 
-    @OutputCustomType.Constructor({"clusterName","clusterUuid"})
+    @OutputCustomType.Constructor
     private JobPlacement(
-        String clusterName,
-        @Nullable String clusterUuid) {
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("clusterUuid") @Nullable String clusterUuid) {
         this.clusterName = clusterName;
         this.clusterUuid = clusterUuid;
     }
@@ -51,12 +51,12 @@ public final class JobPlacement {
     	      this.clusterUuid = defaults.clusterUuid;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterUuid(@Nullable String clusterUuid) {
+        public Builder clusterUuid(@Nullable String clusterUuid) {
             this.clusterUuid = clusterUuid;
             return this;
         }

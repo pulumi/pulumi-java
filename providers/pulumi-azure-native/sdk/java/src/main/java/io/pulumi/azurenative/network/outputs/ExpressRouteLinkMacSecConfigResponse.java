@@ -32,12 +32,12 @@ public final class ExpressRouteLinkMacSecConfigResponse {
      */
     private final @Nullable String sciState;
 
-    @OutputCustomType.Constructor({"cakSecretIdentifier","cipher","cknSecretIdentifier","sciState"})
+    @OutputCustomType.Constructor
     private ExpressRouteLinkMacSecConfigResponse(
-        @Nullable String cakSecretIdentifier,
-        @Nullable String cipher,
-        @Nullable String cknSecretIdentifier,
-        @Nullable String sciState) {
+        @OutputCustomType.Parameter("cakSecretIdentifier") @Nullable String cakSecretIdentifier,
+        @OutputCustomType.Parameter("cipher") @Nullable String cipher,
+        @OutputCustomType.Parameter("cknSecretIdentifier") @Nullable String cknSecretIdentifier,
+        @OutputCustomType.Parameter("sciState") @Nullable String sciState) {
         this.cakSecretIdentifier = cakSecretIdentifier;
         this.cipher = cipher;
         this.cknSecretIdentifier = cknSecretIdentifier;
@@ -99,22 +99,22 @@ public final class ExpressRouteLinkMacSecConfigResponse {
     	      this.sciState = defaults.sciState;
         }
 
-        public Builder setCakSecretIdentifier(@Nullable String cakSecretIdentifier) {
+        public Builder cakSecretIdentifier(@Nullable String cakSecretIdentifier) {
             this.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
 
-        public Builder setCipher(@Nullable String cipher) {
+        public Builder cipher(@Nullable String cipher) {
             this.cipher = cipher;
             return this;
         }
 
-        public Builder setCknSecretIdentifier(@Nullable String cknSecretIdentifier) {
+        public Builder cknSecretIdentifier(@Nullable String cknSecretIdentifier) {
             this.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
 
-        public Builder setSciState(@Nullable String sciState) {
+        public Builder sciState(@Nullable String sciState) {
             this.sciState = sciState;
             return this;
         }

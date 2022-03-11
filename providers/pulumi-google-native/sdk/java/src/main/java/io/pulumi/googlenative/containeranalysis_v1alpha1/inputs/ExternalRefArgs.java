@@ -107,42 +107,42 @@ public final class ExternalRefArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategory(@Nullable Input<ExternalRefCategory> category) {
+        public Builder category(@Nullable Input<ExternalRefCategory> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable ExternalRefCategory category) {
+        public Builder category(@Nullable ExternalRefCategory category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setLocator(@Nullable Input<String> locator) {
+        public Builder locator(@Nullable Input<String> locator) {
             this.locator = locator;
             return this;
         }
 
-        public Builder setLocator(@Nullable String locator) {
+        public Builder locator(@Nullable String locator) {
             this.locator = Input.ofNullable(locator);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

@@ -16,8 +16,8 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
      */
     private final List<String> ignoreTerms;
 
-    @OutputCustomType.Constructor({"ignoreTerms"})
-    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse(List<String> ignoreTerms) {
+    @OutputCustomType.Constructor
+    private GoogleCloudRetailV2alphaRuleIgnoreActionResponse(@OutputCustomType.Parameter("ignoreTerms") List<String> ignoreTerms) {
         this.ignoreTerms = ignoreTerms;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2alphaRuleIgnoreActionResponse {
     	      this.ignoreTerms = defaults.ignoreTerms;
         }
 
-        public Builder setIgnoreTerms(List<String> ignoreTerms) {
+        public Builder ignoreTerms(List<String> ignoreTerms) {
             this.ignoreTerms = Objects.requireNonNull(ignoreTerms);
             return this;
         }

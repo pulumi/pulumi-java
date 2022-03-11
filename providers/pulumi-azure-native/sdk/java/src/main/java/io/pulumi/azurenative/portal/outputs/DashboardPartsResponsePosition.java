@@ -39,13 +39,13 @@ public final class DashboardPartsResponsePosition {
      */
     private final Integer y;
 
-    @OutputCustomType.Constructor({"colSpan","metadata","rowSpan","x","y"})
+    @OutputCustomType.Constructor
     private DashboardPartsResponsePosition(
-        Integer colSpan,
-        @Nullable Map<String,Object> metadata,
-        Integer rowSpan,
-        Integer x,
-        Integer y) {
+        @OutputCustomType.Parameter("colSpan") Integer colSpan,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,Object> metadata,
+        @OutputCustomType.Parameter("rowSpan") Integer rowSpan,
+        @OutputCustomType.Parameter("x") Integer x,
+        @OutputCustomType.Parameter("y") Integer y) {
         this.colSpan = colSpan;
         this.metadata = metadata;
         this.rowSpan = rowSpan;
@@ -117,27 +117,27 @@ public final class DashboardPartsResponsePosition {
     	      this.y = defaults.y;
         }
 
-        public Builder setColSpan(Integer colSpan) {
+        public Builder colSpan(Integer colSpan) {
             this.colSpan = Objects.requireNonNull(colSpan);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,Object> metadata) {
+        public Builder metadata(@Nullable Map<String,Object> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setRowSpan(Integer rowSpan) {
+        public Builder rowSpan(Integer rowSpan) {
             this.rowSpan = Objects.requireNonNull(rowSpan);
             return this;
         }
 
-        public Builder setX(Integer x) {
+        public Builder x(Integer x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setY(Integer y) {
+        public Builder y(Integer y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }

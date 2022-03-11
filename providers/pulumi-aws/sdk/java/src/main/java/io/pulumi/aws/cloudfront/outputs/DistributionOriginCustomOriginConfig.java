@@ -47,14 +47,14 @@ public final class DistributionOriginCustomOriginConfig {
      */
     private final List<String> originSslProtocols;
 
-    @OutputCustomType.Constructor({"httpPort","httpsPort","originKeepaliveTimeout","originProtocolPolicy","originReadTimeout","originSslProtocols"})
+    @OutputCustomType.Constructor
     private DistributionOriginCustomOriginConfig(
-        Integer httpPort,
-        Integer httpsPort,
-        @Nullable Integer originKeepaliveTimeout,
-        String originProtocolPolicy,
-        @Nullable Integer originReadTimeout,
-        List<String> originSslProtocols) {
+        @OutputCustomType.Parameter("httpPort") Integer httpPort,
+        @OutputCustomType.Parameter("httpsPort") Integer httpsPort,
+        @OutputCustomType.Parameter("originKeepaliveTimeout") @Nullable Integer originKeepaliveTimeout,
+        @OutputCustomType.Parameter("originProtocolPolicy") String originProtocolPolicy,
+        @OutputCustomType.Parameter("originReadTimeout") @Nullable Integer originReadTimeout,
+        @OutputCustomType.Parameter("originSslProtocols") List<String> originSslProtocols) {
         this.httpPort = httpPort;
         this.httpsPort = httpsPort;
         this.originKeepaliveTimeout = originKeepaliveTimeout;
@@ -139,32 +139,32 @@ public final class DistributionOriginCustomOriginConfig {
     	      this.originSslProtocols = defaults.originSslProtocols;
         }
 
-        public Builder setHttpPort(Integer httpPort) {
+        public Builder httpPort(Integer httpPort) {
             this.httpPort = Objects.requireNonNull(httpPort);
             return this;
         }
 
-        public Builder setHttpsPort(Integer httpsPort) {
+        public Builder httpsPort(Integer httpsPort) {
             this.httpsPort = Objects.requireNonNull(httpsPort);
             return this;
         }
 
-        public Builder setOriginKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
+        public Builder originKeepaliveTimeout(@Nullable Integer originKeepaliveTimeout) {
             this.originKeepaliveTimeout = originKeepaliveTimeout;
             return this;
         }
 
-        public Builder setOriginProtocolPolicy(String originProtocolPolicy) {
+        public Builder originProtocolPolicy(String originProtocolPolicy) {
             this.originProtocolPolicy = Objects.requireNonNull(originProtocolPolicy);
             return this;
         }
 
-        public Builder setOriginReadTimeout(@Nullable Integer originReadTimeout) {
+        public Builder originReadTimeout(@Nullable Integer originReadTimeout) {
             this.originReadTimeout = originReadTimeout;
             return this;
         }
 
-        public Builder setOriginSslProtocols(List<String> originSslProtocols) {
+        public Builder originSslProtocols(List<String> originSslProtocols) {
             this.originSslProtocols = Objects.requireNonNull(originSslProtocols);
             return this;
         }

@@ -90,17 +90,17 @@ public final class UpcomingMaintenanceResponse extends io.pulumi.resources.Invok
     	      this.type = defaults.type;
         }
 
-        public Builder setCanReschedule(Boolean canReschedule) {
+        public Builder canReschedule(Boolean canReschedule) {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
 
-        public Builder setStartTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
+        public Builder startTimeWindow(UpcomingMaintenanceTimeWindowResponse startTimeWindow) {
             this.startTimeWindow = Objects.requireNonNull(startTimeWindow);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

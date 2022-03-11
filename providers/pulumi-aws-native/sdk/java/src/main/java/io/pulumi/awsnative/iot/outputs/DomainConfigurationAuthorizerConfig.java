@@ -15,10 +15,10 @@ public final class DomainConfigurationAuthorizerConfig {
     private final @Nullable Boolean allowAuthorizerOverride;
     private final @Nullable String defaultAuthorizerName;
 
-    @OutputCustomType.Constructor({"allowAuthorizerOverride","defaultAuthorizerName"})
+    @OutputCustomType.Constructor
     private DomainConfigurationAuthorizerConfig(
-        @Nullable Boolean allowAuthorizerOverride,
-        @Nullable String defaultAuthorizerName) {
+        @OutputCustomType.Parameter("allowAuthorizerOverride") @Nullable Boolean allowAuthorizerOverride,
+        @OutputCustomType.Parameter("defaultAuthorizerName") @Nullable String defaultAuthorizerName) {
         this.allowAuthorizerOverride = allowAuthorizerOverride;
         this.defaultAuthorizerName = defaultAuthorizerName;
     }
@@ -52,12 +52,12 @@ public final class DomainConfigurationAuthorizerConfig {
     	      this.defaultAuthorizerName = defaults.defaultAuthorizerName;
         }
 
-        public Builder setAllowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
+        public Builder allowAuthorizerOverride(@Nullable Boolean allowAuthorizerOverride) {
             this.allowAuthorizerOverride = allowAuthorizerOverride;
             return this;
         }
 
-        public Builder setDefaultAuthorizerName(@Nullable String defaultAuthorizerName) {
+        public Builder defaultAuthorizerName(@Nullable String defaultAuthorizerName) {
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }

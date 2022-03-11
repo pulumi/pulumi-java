@@ -43,15 +43,15 @@ public final class UrlRedirectActionParametersResponse {
      */
     private final String redirectType;
 
-    @OutputCustomType.Constructor({"customFragment","customHostname","customPath","customQueryString","destinationProtocol","odataType","redirectType"})
+    @OutputCustomType.Constructor
     private UrlRedirectActionParametersResponse(
-        @Nullable String customFragment,
-        @Nullable String customHostname,
-        @Nullable String customPath,
-        @Nullable String customQueryString,
-        @Nullable String destinationProtocol,
-        String odataType,
-        String redirectType) {
+        @OutputCustomType.Parameter("customFragment") @Nullable String customFragment,
+        @OutputCustomType.Parameter("customHostname") @Nullable String customHostname,
+        @OutputCustomType.Parameter("customPath") @Nullable String customPath,
+        @OutputCustomType.Parameter("customQueryString") @Nullable String customQueryString,
+        @OutputCustomType.Parameter("destinationProtocol") @Nullable String destinationProtocol,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("redirectType") String redirectType) {
         this.customFragment = customFragment;
         this.customHostname = customHostname;
         this.customPath = customPath;
@@ -139,37 +139,37 @@ public final class UrlRedirectActionParametersResponse {
     	      this.redirectType = defaults.redirectType;
         }
 
-        public Builder setCustomFragment(@Nullable String customFragment) {
+        public Builder customFragment(@Nullable String customFragment) {
             this.customFragment = customFragment;
             return this;
         }
 
-        public Builder setCustomHostname(@Nullable String customHostname) {
+        public Builder customHostname(@Nullable String customHostname) {
             this.customHostname = customHostname;
             return this;
         }
 
-        public Builder setCustomPath(@Nullable String customPath) {
+        public Builder customPath(@Nullable String customPath) {
             this.customPath = customPath;
             return this;
         }
 
-        public Builder setCustomQueryString(@Nullable String customQueryString) {
+        public Builder customQueryString(@Nullable String customQueryString) {
             this.customQueryString = customQueryString;
             return this;
         }
 
-        public Builder setDestinationProtocol(@Nullable String destinationProtocol) {
+        public Builder destinationProtocol(@Nullable String destinationProtocol) {
             this.destinationProtocol = destinationProtocol;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setRedirectType(String redirectType) {
+        public Builder redirectType(String redirectType) {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }

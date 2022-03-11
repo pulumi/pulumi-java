@@ -62,12 +62,12 @@ public final class GetTypeProviderArgs extends io.pulumi.resources.InvokeArgs {
     	      this.typeProvider = defaults.typeProvider;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setTypeProvider(String typeProvider) {
+        public Builder typeProvider(String typeProvider) {
             this.typeProvider = Objects.requireNonNull(typeProvider);
             return this;
         }

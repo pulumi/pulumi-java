@@ -35,13 +35,13 @@ public final class MountPointMapResponse {
      */
     private final String shareId;
 
-    @OutputCustomType.Constructor({"mountPoint","mountType","roleId","roleType","shareId"})
+    @OutputCustomType.Constructor
     private MountPointMapResponse(
-        String mountPoint,
-        String mountType,
-        String roleId,
-        String roleType,
-        String shareId) {
+        @OutputCustomType.Parameter("mountPoint") String mountPoint,
+        @OutputCustomType.Parameter("mountType") String mountType,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("roleType") String roleType,
+        @OutputCustomType.Parameter("shareId") String shareId) {
         this.mountPoint = mountPoint;
         this.mountType = mountType;
         this.roleId = roleId;
@@ -113,27 +113,27 @@ public final class MountPointMapResponse {
     	      this.shareId = defaults.shareId;
         }
 
-        public Builder setMountPoint(String mountPoint) {
+        public Builder mountPoint(String mountPoint) {
             this.mountPoint = Objects.requireNonNull(mountPoint);
             return this;
         }
 
-        public Builder setMountType(String mountType) {
+        public Builder mountType(String mountType) {
             this.mountType = Objects.requireNonNull(mountType);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setRoleType(String roleType) {
+        public Builder roleType(String roleType) {
             this.roleType = Objects.requireNonNull(roleType);
             return this;
         }
 
-        public Builder setShareId(String shareId) {
+        public Builder shareId(String shareId) {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }

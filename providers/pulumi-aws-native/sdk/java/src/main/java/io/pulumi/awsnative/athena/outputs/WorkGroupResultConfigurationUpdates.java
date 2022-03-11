@@ -18,12 +18,12 @@ public final class WorkGroupResultConfigurationUpdates {
     private final @Nullable Boolean removeEncryptionConfiguration;
     private final @Nullable Boolean removeOutputLocation;
 
-    @OutputCustomType.Constructor({"encryptionConfiguration","outputLocation","removeEncryptionConfiguration","removeOutputLocation"})
+    @OutputCustomType.Constructor
     private WorkGroupResultConfigurationUpdates(
-        @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
-        @Nullable String outputLocation,
-        @Nullable Boolean removeEncryptionConfiguration,
-        @Nullable Boolean removeOutputLocation) {
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable WorkGroupEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation,
+        @OutputCustomType.Parameter("removeEncryptionConfiguration") @Nullable Boolean removeEncryptionConfiguration,
+        @OutputCustomType.Parameter("removeOutputLocation") @Nullable Boolean removeOutputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
         this.removeEncryptionConfiguration = removeEncryptionConfiguration;
@@ -69,22 +69,22 @@ public final class WorkGroupResultConfigurationUpdates {
     	      this.removeOutputLocation = defaults.removeOutputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }
 
-        public Builder setRemoveEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
+        public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
             this.removeEncryptionConfiguration = removeEncryptionConfiguration;
             return this;
         }
 
-        public Builder setRemoveOutputLocation(@Nullable Boolean removeOutputLocation) {
+        public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
             this.removeOutputLocation = removeOutputLocation;
             return this;
         }

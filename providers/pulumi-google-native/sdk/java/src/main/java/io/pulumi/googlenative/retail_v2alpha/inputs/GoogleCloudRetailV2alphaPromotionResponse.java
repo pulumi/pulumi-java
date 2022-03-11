@@ -55,7 +55,7 @@ public final class GoogleCloudRetailV2alphaPromotionResponse extends io.pulumi.r
     	      this.promotionId = defaults.promotionId;
         }
 
-        public Builder setPromotionId(String promotionId) {
+        public Builder promotionId(String promotionId) {
             this.promotionId = Objects.requireNonNull(promotionId);
             return this;
         }

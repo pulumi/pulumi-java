@@ -50,16 +50,16 @@ public final class RouterInterfaceResponse {
      */
     private final String subnetwork;
 
-    @OutputCustomType.Constructor({"ipRange","linkedInterconnectAttachment","linkedVpnTunnel","managementType","name","privateIpAddress","redundantInterface","subnetwork"})
+    @OutputCustomType.Constructor
     private RouterInterfaceResponse(
-        String ipRange,
-        String linkedInterconnectAttachment,
-        String linkedVpnTunnel,
-        String managementType,
-        String name,
-        String privateIpAddress,
-        String redundantInterface,
-        String subnetwork) {
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("linkedInterconnectAttachment") String linkedInterconnectAttachment,
+        @OutputCustomType.Parameter("linkedVpnTunnel") String linkedVpnTunnel,
+        @OutputCustomType.Parameter("managementType") String managementType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("redundantInterface") String redundantInterface,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork) {
         this.ipRange = ipRange;
         this.linkedInterconnectAttachment = linkedInterconnectAttachment;
         this.linkedVpnTunnel = linkedVpnTunnel;
@@ -161,42 +161,42 @@ public final class RouterInterfaceResponse {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setLinkedInterconnectAttachment(String linkedInterconnectAttachment) {
+        public Builder linkedInterconnectAttachment(String linkedInterconnectAttachment) {
             this.linkedInterconnectAttachment = Objects.requireNonNull(linkedInterconnectAttachment);
             return this;
         }
 
-        public Builder setLinkedVpnTunnel(String linkedVpnTunnel) {
+        public Builder linkedVpnTunnel(String linkedVpnTunnel) {
             this.linkedVpnTunnel = Objects.requireNonNull(linkedVpnTunnel);
             return this;
         }
 
-        public Builder setManagementType(String managementType) {
+        public Builder managementType(String managementType) {
             this.managementType = Objects.requireNonNull(managementType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setRedundantInterface(String redundantInterface) {
+        public Builder redundantInterface(String redundantInterface) {
             this.redundantInterface = Objects.requireNonNull(redundantInterface);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }

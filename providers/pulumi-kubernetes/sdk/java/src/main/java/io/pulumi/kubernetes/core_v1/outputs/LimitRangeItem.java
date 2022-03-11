@@ -47,14 +47,14 @@ public final class LimitRangeItem {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"$default","defaultRequest","max","maxLimitRequestRatio","min","type"})
+    @OutputCustomType.Constructor
     private LimitRangeItem(
-        @Nullable Map<String,String> $default,
-        @Nullable Map<String,String> defaultRequest,
-        @Nullable Map<String,String> max,
-        @Nullable Map<String,String> maxLimitRequestRatio,
-        @Nullable Map<String,String> min,
-        String type) {
+        @OutputCustomType.Parameter("default") @Nullable Map<String,String> $default,
+        @OutputCustomType.Parameter("defaultRequest") @Nullable Map<String,String> defaultRequest,
+        @OutputCustomType.Parameter("max") @Nullable Map<String,String> max,
+        @OutputCustomType.Parameter("maxLimitRequestRatio") @Nullable Map<String,String> maxLimitRequestRatio,
+        @OutputCustomType.Parameter("min") @Nullable Map<String,String> min,
+        @OutputCustomType.Parameter("type") String type) {
         this.$default = $default;
         this.defaultRequest = defaultRequest;
         this.max = max;
@@ -141,32 +141,32 @@ public final class LimitRangeItem {
     	      this.type = defaults.type;
         }
 
-        public Builder set$default(@Nullable Map<String,String> $default) {
+        public Builder $default(@Nullable Map<String,String> $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setDefaultRequest(@Nullable Map<String,String> defaultRequest) {
+        public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
             this.defaultRequest = defaultRequest;
             return this;
         }
 
-        public Builder setMax(@Nullable Map<String,String> max) {
+        public Builder max(@Nullable Map<String,String> max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMaxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
+        public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
             this.maxLimitRequestRatio = maxLimitRequestRatio;
             return this;
         }
 
-        public Builder setMin(@Nullable Map<String,String> min) {
+        public Builder min(@Nullable Map<String,String> min) {
             this.min = min;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

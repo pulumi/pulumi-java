@@ -120,27 +120,27 @@ public final class GetTaskResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentConfiguration","agentPoolName","creationDate","credentials","id","identity","isSystemTask","location","logTemplate","name","platform","provisioningState","status","step","systemData","tags","timeout","trigger","type"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        @Nullable AgentPropertiesResponse agentConfiguration,
-        @Nullable String agentPoolName,
-        String creationDate,
-        @Nullable CredentialsResponse credentials,
-        String id,
-        @Nullable IdentityPropertiesResponse identity,
-        @Nullable Boolean isSystemTask,
-        String location,
-        @Nullable String logTemplate,
-        String name,
-        @Nullable PlatformPropertiesResponse platform,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Object step,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        @Nullable Integer timeout,
-        @Nullable TriggerPropertiesResponse trigger,
-        String type) {
+        @OutputCustomType.Parameter("agentConfiguration") @Nullable AgentPropertiesResponse agentConfiguration,
+        @OutputCustomType.Parameter("agentPoolName") @Nullable String agentPoolName,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("credentials") @Nullable CredentialsResponse credentials,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityPropertiesResponse identity,
+        @OutputCustomType.Parameter("isSystemTask") @Nullable Boolean isSystemTask,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("logTemplate") @Nullable String logTemplate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platform") @Nullable PlatformPropertiesResponse platform,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("step") @Nullable Object step,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout,
+        @OutputCustomType.Parameter("trigger") @Nullable TriggerPropertiesResponse trigger,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentConfiguration = agentConfiguration;
         this.agentPoolName = agentPoolName;
         this.creationDate = creationDate;
@@ -352,97 +352,97 @@ public final class GetTaskResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
+        public Builder agentConfiguration(@Nullable AgentPropertiesResponse agentConfiguration) {
             this.agentConfiguration = agentConfiguration;
             return this;
         }
 
-        public Builder setAgentPoolName(@Nullable String agentPoolName) {
+        public Builder agentPoolName(@Nullable String agentPoolName) {
             this.agentPoolName = agentPoolName;
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setCredentials(@Nullable CredentialsResponse credentials) {
+        public Builder credentials(@Nullable CredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityPropertiesResponse identity) {
+        public Builder identity(@Nullable IdentityPropertiesResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIsSystemTask(@Nullable Boolean isSystemTask) {
+        public Builder isSystemTask(@Nullable Boolean isSystemTask) {
             this.isSystemTask = isSystemTask;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLogTemplate(@Nullable String logTemplate) {
+        public Builder logTemplate(@Nullable String logTemplate) {
             this.logTemplate = logTemplate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlatform(@Nullable PlatformPropertiesResponse platform) {
+        public Builder platform(@Nullable PlatformPropertiesResponse platform) {
             this.platform = platform;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStep(@Nullable Object step) {
+        public Builder step(@Nullable Object step) {
             this.step = step;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTrigger(@Nullable TriggerPropertiesResponse trigger) {
+        public Builder trigger(@Nullable TriggerPropertiesResponse trigger) {
             this.trigger = trigger;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

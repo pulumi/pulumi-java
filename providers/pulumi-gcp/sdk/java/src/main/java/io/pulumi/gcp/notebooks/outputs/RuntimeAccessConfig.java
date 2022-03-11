@@ -31,11 +31,11 @@ public final class RuntimeAccessConfig {
      */
     private final @Nullable String runtimeOwner;
 
-    @OutputCustomType.Constructor({"accessType","proxyUri","runtimeOwner"})
+    @OutputCustomType.Constructor
     private RuntimeAccessConfig(
-        @Nullable String accessType,
-        @Nullable String proxyUri,
-        @Nullable String runtimeOwner) {
+        @OutputCustomType.Parameter("accessType") @Nullable String accessType,
+        @OutputCustomType.Parameter("proxyUri") @Nullable String proxyUri,
+        @OutputCustomType.Parameter("runtimeOwner") @Nullable String runtimeOwner) {
         this.accessType = accessType;
         this.proxyUri = proxyUri;
         this.runtimeOwner = runtimeOwner;
@@ -91,17 +91,17 @@ public final class RuntimeAccessConfig {
     	      this.runtimeOwner = defaults.runtimeOwner;
         }
 
-        public Builder setAccessType(@Nullable String accessType) {
+        public Builder accessType(@Nullable String accessType) {
             this.accessType = accessType;
             return this;
         }
 
-        public Builder setProxyUri(@Nullable String proxyUri) {
+        public Builder proxyUri(@Nullable String proxyUri) {
             this.proxyUri = proxyUri;
             return this;
         }
 
-        public Builder setRuntimeOwner(@Nullable String runtimeOwner) {
+        public Builder runtimeOwner(@Nullable String runtimeOwner) {
             this.runtimeOwner = runtimeOwner;
             return this;
         }

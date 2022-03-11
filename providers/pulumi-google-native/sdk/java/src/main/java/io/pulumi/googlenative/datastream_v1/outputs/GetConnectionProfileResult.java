@@ -72,19 +72,19 @@ public final class GetConnectionProfileResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","forwardSshConnectivity","gcsProfile","labels","mysqlProfile","name","oracleProfile","privateConnectivity","staticServiceIpConnectivity","updateTime"})
+    @OutputCustomType.Constructor
     private GetConnectionProfileResult(
-        String createTime,
-        String displayName,
-        ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
-        GcsProfileResponse gcsProfile,
-        Map<String,String> labels,
-        MysqlProfileResponse mysqlProfile,
-        String name,
-        OracleProfileResponse oracleProfile,
-        PrivateConnectivityResponse privateConnectivity,
-        StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("forwardSshConnectivity") ForwardSshTunnelConnectivityResponse forwardSshConnectivity,
+        @OutputCustomType.Parameter("gcsProfile") GcsProfileResponse gcsProfile,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mysqlProfile") MysqlProfileResponse mysqlProfile,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("oracleProfile") OracleProfileResponse oracleProfile,
+        @OutputCustomType.Parameter("privateConnectivity") PrivateConnectivityResponse privateConnectivity,
+        @OutputCustomType.Parameter("staticServiceIpConnectivity") StaticServiceIpConnectivityResponse staticServiceIpConnectivity,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.forwardSshConnectivity = forwardSshConnectivity;
@@ -216,57 +216,57 @@ public final class GetConnectionProfileResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setForwardSshConnectivity(ForwardSshTunnelConnectivityResponse forwardSshConnectivity) {
+        public Builder forwardSshConnectivity(ForwardSshTunnelConnectivityResponse forwardSshConnectivity) {
             this.forwardSshConnectivity = Objects.requireNonNull(forwardSshConnectivity);
             return this;
         }
 
-        public Builder setGcsProfile(GcsProfileResponse gcsProfile) {
+        public Builder gcsProfile(GcsProfileResponse gcsProfile) {
             this.gcsProfile = Objects.requireNonNull(gcsProfile);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMysqlProfile(MysqlProfileResponse mysqlProfile) {
+        public Builder mysqlProfile(MysqlProfileResponse mysqlProfile) {
             this.mysqlProfile = Objects.requireNonNull(mysqlProfile);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOracleProfile(OracleProfileResponse oracleProfile) {
+        public Builder oracleProfile(OracleProfileResponse oracleProfile) {
             this.oracleProfile = Objects.requireNonNull(oracleProfile);
             return this;
         }
 
-        public Builder setPrivateConnectivity(PrivateConnectivityResponse privateConnectivity) {
+        public Builder privateConnectivity(PrivateConnectivityResponse privateConnectivity) {
             this.privateConnectivity = Objects.requireNonNull(privateConnectivity);
             return this;
         }
 
-        public Builder setStaticServiceIpConnectivity(StaticServiceIpConnectivityResponse staticServiceIpConnectivity) {
+        public Builder staticServiceIpConnectivity(StaticServiceIpConnectivityResponse staticServiceIpConnectivity) {
             this.staticServiceIpConnectivity = Objects.requireNonNull(staticServiceIpConnectivity);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

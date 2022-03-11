@@ -34,12 +34,12 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
      */
     private final SqlConnectionInfoResponse sourceConnectionInfo;
 
-    @OutputCustomType.Constructor({"checkPermissionsGroup","collectAgentJobs","collectLogins","sourceConnectionInfo"})
+    @OutputCustomType.Constructor
     private ConnectToSourceSqlServerTaskInputResponse(
-        @Nullable String checkPermissionsGroup,
-        @Nullable Boolean collectAgentJobs,
-        @Nullable Boolean collectLogins,
-        SqlConnectionInfoResponse sourceConnectionInfo) {
+        @OutputCustomType.Parameter("checkPermissionsGroup") @Nullable String checkPermissionsGroup,
+        @OutputCustomType.Parameter("collectAgentJobs") @Nullable Boolean collectAgentJobs,
+        @OutputCustomType.Parameter("collectLogins") @Nullable Boolean collectLogins,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo) {
         this.checkPermissionsGroup = checkPermissionsGroup;
         this.collectAgentJobs = collectAgentJobs;
         this.collectLogins = collectLogins;
@@ -101,22 +101,22 @@ public final class ConnectToSourceSqlServerTaskInputResponse {
     	      this.sourceConnectionInfo = defaults.sourceConnectionInfo;
         }
 
-        public Builder setCheckPermissionsGroup(@Nullable String checkPermissionsGroup) {
+        public Builder checkPermissionsGroup(@Nullable String checkPermissionsGroup) {
             this.checkPermissionsGroup = checkPermissionsGroup;
             return this;
         }
 
-        public Builder setCollectAgentJobs(@Nullable Boolean collectAgentJobs) {
+        public Builder collectAgentJobs(@Nullable Boolean collectAgentJobs) {
             this.collectAgentJobs = collectAgentJobs;
             return this;
         }
 
-        public Builder setCollectLogins(@Nullable Boolean collectLogins) {
+        public Builder collectLogins(@Nullable Boolean collectLogins) {
             this.collectLogins = collectLogins;
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }

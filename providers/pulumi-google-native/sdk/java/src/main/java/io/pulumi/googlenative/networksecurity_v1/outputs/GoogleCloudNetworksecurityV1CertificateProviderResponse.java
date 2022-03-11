@@ -21,10 +21,10 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
      */
     private final GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint;
 
-    @OutputCustomType.Constructor({"certificateProviderInstance","grpcEndpoint"})
+    @OutputCustomType.Constructor
     private GoogleCloudNetworksecurityV1CertificateProviderResponse(
-        CertificateProviderInstanceResponse certificateProviderInstance,
-        GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
+        @OutputCustomType.Parameter("certificateProviderInstance") CertificateProviderInstanceResponse certificateProviderInstance,
+        @OutputCustomType.Parameter("grpcEndpoint") GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
         this.certificateProviderInstance = certificateProviderInstance;
         this.grpcEndpoint = grpcEndpoint;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderResponse {
     	      this.grpcEndpoint = defaults.grpcEndpoint;
         }
 
-        public Builder setCertificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
+        public Builder certificateProviderInstance(CertificateProviderInstanceResponse certificateProviderInstance) {
             this.certificateProviderInstance = Objects.requireNonNull(certificateProviderInstance);
             return this;
         }
 
-        public Builder setGrpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
+        public Builder grpcEndpoint(GoogleCloudNetworksecurityV1GrpcEndpointResponse grpcEndpoint) {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }

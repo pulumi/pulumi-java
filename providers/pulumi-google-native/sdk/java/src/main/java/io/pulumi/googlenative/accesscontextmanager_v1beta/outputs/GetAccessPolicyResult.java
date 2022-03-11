@@ -25,11 +25,11 @@ public final class GetAccessPolicyResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"name","parent","title"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        String name,
-        String parent,
-        String title) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("title") String title) {
         this.name = name;
         this.parent = parent;
         this.title = title;
@@ -81,17 +81,17 @@ public final class GetAccessPolicyResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

@@ -39,13 +39,13 @@ public final class DomainMappingStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"conditions","mappedRouteName","observedGeneration","resourceRecords","url"})
+    @OutputCustomType.Constructor
     private DomainMappingStatusResponse(
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String mappedRouteName,
-        Integer observedGeneration,
-        List<ResourceRecordResponse> resourceRecords,
-        String url) {
+        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @OutputCustomType.Parameter("mappedRouteName") String mappedRouteName,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @OutputCustomType.Parameter("url") String url) {
         this.conditions = conditions;
         this.mappedRouteName = mappedRouteName;
         this.observedGeneration = observedGeneration;
@@ -117,27 +117,27 @@ public final class DomainMappingStatusResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setConditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setMappedRouteName(String mappedRouteName) {
+        public Builder mappedRouteName(String mappedRouteName) {
             this.mappedRouteName = Objects.requireNonNull(mappedRouteName);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setResourceRecords(List<ResourceRecordResponse> resourceRecords) {
+        public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

@@ -23,10 +23,10 @@ public final class SkuResponse {
      */
     private final @Nullable ResourceReferenceResponse plan;
 
-    @OutputCustomType.Constructor({"name","plan"})
+    @OutputCustomType.Constructor
     private SkuResponse(
-        String name,
-        @Nullable ResourceReferenceResponse plan) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceReferenceResponse plan) {
         this.name = name;
         this.plan = plan;
     }
@@ -68,12 +68,12 @@ public final class SkuResponse {
     	      this.plan = defaults.plan;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceReferenceResponse plan) {
+        public Builder plan(@Nullable ResourceReferenceResponse plan) {
             this.plan = plan;
             return this;
         }

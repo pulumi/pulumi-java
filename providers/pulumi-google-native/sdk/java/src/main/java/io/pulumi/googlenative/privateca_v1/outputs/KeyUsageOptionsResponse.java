@@ -55,17 +55,17 @@ public final class KeyUsageOptionsResponse {
      */
     private final Boolean keyEncipherment;
 
-    @OutputCustomType.Constructor({"certSign","contentCommitment","crlSign","dataEncipherment","decipherOnly","digitalSignature","encipherOnly","keyAgreement","keyEncipherment"})
+    @OutputCustomType.Constructor
     private KeyUsageOptionsResponse(
-        Boolean certSign,
-        Boolean contentCommitment,
-        Boolean crlSign,
-        Boolean dataEncipherment,
-        Boolean decipherOnly,
-        Boolean digitalSignature,
-        Boolean encipherOnly,
-        Boolean keyAgreement,
-        Boolean keyEncipherment) {
+        @OutputCustomType.Parameter("certSign") Boolean certSign,
+        @OutputCustomType.Parameter("contentCommitment") Boolean contentCommitment,
+        @OutputCustomType.Parameter("crlSign") Boolean crlSign,
+        @OutputCustomType.Parameter("dataEncipherment") Boolean dataEncipherment,
+        @OutputCustomType.Parameter("decipherOnly") Boolean decipherOnly,
+        @OutputCustomType.Parameter("digitalSignature") Boolean digitalSignature,
+        @OutputCustomType.Parameter("encipherOnly") Boolean encipherOnly,
+        @OutputCustomType.Parameter("keyAgreement") Boolean keyAgreement,
+        @OutputCustomType.Parameter("keyEncipherment") Boolean keyEncipherment) {
         this.certSign = certSign;
         this.contentCommitment = contentCommitment;
         this.crlSign = crlSign;
@@ -177,47 +177,47 @@ public final class KeyUsageOptionsResponse {
     	      this.keyEncipherment = defaults.keyEncipherment;
         }
 
-        public Builder setCertSign(Boolean certSign) {
+        public Builder certSign(Boolean certSign) {
             this.certSign = Objects.requireNonNull(certSign);
             return this;
         }
 
-        public Builder setContentCommitment(Boolean contentCommitment) {
+        public Builder contentCommitment(Boolean contentCommitment) {
             this.contentCommitment = Objects.requireNonNull(contentCommitment);
             return this;
         }
 
-        public Builder setCrlSign(Boolean crlSign) {
+        public Builder crlSign(Boolean crlSign) {
             this.crlSign = Objects.requireNonNull(crlSign);
             return this;
         }
 
-        public Builder setDataEncipherment(Boolean dataEncipherment) {
+        public Builder dataEncipherment(Boolean dataEncipherment) {
             this.dataEncipherment = Objects.requireNonNull(dataEncipherment);
             return this;
         }
 
-        public Builder setDecipherOnly(Boolean decipherOnly) {
+        public Builder decipherOnly(Boolean decipherOnly) {
             this.decipherOnly = Objects.requireNonNull(decipherOnly);
             return this;
         }
 
-        public Builder setDigitalSignature(Boolean digitalSignature) {
+        public Builder digitalSignature(Boolean digitalSignature) {
             this.digitalSignature = Objects.requireNonNull(digitalSignature);
             return this;
         }
 
-        public Builder setEncipherOnly(Boolean encipherOnly) {
+        public Builder encipherOnly(Boolean encipherOnly) {
             this.encipherOnly = Objects.requireNonNull(encipherOnly);
             return this;
         }
 
-        public Builder setKeyAgreement(Boolean keyAgreement) {
+        public Builder keyAgreement(Boolean keyAgreement) {
             this.keyAgreement = Objects.requireNonNull(keyAgreement);
             return this;
         }
 
-        public Builder setKeyEncipherment(Boolean keyEncipherment) {
+        public Builder keyEncipherment(Boolean keyEncipherment) {
             this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
             return this;
         }

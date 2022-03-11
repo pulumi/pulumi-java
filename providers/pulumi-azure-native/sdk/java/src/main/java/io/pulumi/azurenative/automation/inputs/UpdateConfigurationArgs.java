@@ -159,72 +159,72 @@ public final class UpdateConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.windows = defaults.windows;
         }
 
-        public Builder setAzureVirtualMachines(@Nullable Input<List<String>> azureVirtualMachines) {
+        public Builder azureVirtualMachines(@Nullable Input<List<String>> azureVirtualMachines) {
             this.azureVirtualMachines = azureVirtualMachines;
             return this;
         }
 
-        public Builder setAzureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
+        public Builder azureVirtualMachines(@Nullable List<String> azureVirtualMachines) {
             this.azureVirtualMachines = Input.ofNullable(azureVirtualMachines);
             return this;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setLinux(@Nullable Input<LinuxPropertiesArgs> linux) {
+        public Builder linux(@Nullable Input<LinuxPropertiesArgs> linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setLinux(@Nullable LinuxPropertiesArgs linux) {
+        public Builder linux(@Nullable LinuxPropertiesArgs linux) {
             this.linux = Input.ofNullable(linux);
             return this;
         }
 
-        public Builder setNonAzureComputerNames(@Nullable Input<List<String>> nonAzureComputerNames) {
+        public Builder nonAzureComputerNames(@Nullable Input<List<String>> nonAzureComputerNames) {
             this.nonAzureComputerNames = nonAzureComputerNames;
             return this;
         }
 
-        public Builder setNonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
+        public Builder nonAzureComputerNames(@Nullable List<String> nonAzureComputerNames) {
             this.nonAzureComputerNames = Input.ofNullable(nonAzureComputerNames);
             return this;
         }
 
-        public Builder setOperatingSystem(Input<OperatingSystemType> operatingSystem) {
+        public Builder operatingSystem(Input<OperatingSystemType> operatingSystem) {
             this.operatingSystem = Objects.requireNonNull(operatingSystem);
             return this;
         }
 
-        public Builder setOperatingSystem(OperatingSystemType operatingSystem) {
+        public Builder operatingSystem(OperatingSystemType operatingSystem) {
             this.operatingSystem = Input.of(Objects.requireNonNull(operatingSystem));
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<TargetPropertiesArgs> targets) {
+        public Builder targets(@Nullable Input<TargetPropertiesArgs> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable TargetPropertiesArgs targets) {
+        public Builder targets(@Nullable TargetPropertiesArgs targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }
 
-        public Builder setWindows(@Nullable Input<WindowsPropertiesArgs> windows) {
+        public Builder windows(@Nullable Input<WindowsPropertiesArgs> windows) {
             this.windows = windows;
             return this;
         }
 
-        public Builder setWindows(@Nullable WindowsPropertiesArgs windows) {
+        public Builder windows(@Nullable WindowsPropertiesArgs windows) {
             this.windows = Input.ofNullable(windows);
             return this;
         }

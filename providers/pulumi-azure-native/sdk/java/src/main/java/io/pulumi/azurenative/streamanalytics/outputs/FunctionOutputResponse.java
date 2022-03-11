@@ -17,8 +17,8 @@ public final class FunctionOutputResponse {
      */
     private final @Nullable String dataType;
 
-    @OutputCustomType.Constructor({"dataType"})
-    private FunctionOutputResponse(@Nullable String dataType) {
+    @OutputCustomType.Constructor
+    private FunctionOutputResponse(@OutputCustomType.Parameter("dataType") @Nullable String dataType) {
         this.dataType = dataType;
     }
 
@@ -50,7 +50,7 @@ public final class FunctionOutputResponse {
     	      this.dataType = defaults.dataType;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }

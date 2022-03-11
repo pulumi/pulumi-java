@@ -44,14 +44,14 @@ public final class DeploymentSettingsResponse {
      */
     private final @Nullable String runtimeVersion;
 
-    @OutputCustomType.Constructor({"cpu","environmentVariables","jvmOptions","memoryInGB","netCoreMainEntryPath","runtimeVersion"})
+    @OutputCustomType.Constructor
     private DeploymentSettingsResponse(
-        @Nullable Integer cpu,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String jvmOptions,
-        @Nullable Integer memoryInGB,
-        @Nullable String netCoreMainEntryPath,
-        @Nullable String runtimeVersion) {
+        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("jvmOptions") @Nullable String jvmOptions,
+        @OutputCustomType.Parameter("memoryInGB") @Nullable Integer memoryInGB,
+        @OutputCustomType.Parameter("netCoreMainEntryPath") @Nullable String netCoreMainEntryPath,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion) {
         this.cpu = cpu;
         this.environmentVariables = environmentVariables;
         this.jvmOptions = jvmOptions;
@@ -133,32 +133,32 @@ public final class DeploymentSettingsResponse {
     	      this.runtimeVersion = defaults.runtimeVersion;
         }
 
-        public Builder setCpu(@Nullable Integer cpu) {
+        public Builder cpu(@Nullable Integer cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setJvmOptions(@Nullable String jvmOptions) {
+        public Builder jvmOptions(@Nullable String jvmOptions) {
             this.jvmOptions = jvmOptions;
             return this;
         }
 
-        public Builder setMemoryInGB(@Nullable Integer memoryInGB) {
+        public Builder memoryInGB(@Nullable Integer memoryInGB) {
             this.memoryInGB = memoryInGB;
             return this;
         }
 
-        public Builder setNetCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
+        public Builder netCoreMainEntryPath(@Nullable String netCoreMainEntryPath) {
             this.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }

@@ -27,13 +27,13 @@ public final class GetWebAclResult {
     private final String name;
     private final String scope;
 
-    @OutputCustomType.Constructor({"arn","description","id","name","scope"})
+    @OutputCustomType.Constructor
     private GetWebAclResult(
-        String arn,
-        String description,
-        String id,
-        String name,
-        String scope) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -97,27 +97,27 @@ public final class GetWebAclResult {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

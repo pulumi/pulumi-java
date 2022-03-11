@@ -14,10 +14,10 @@ public final class EtwProviderConfigurationResponse {
     private final List<EtwEventConfigurationResponse> events;
     private final String id;
 
-    @OutputCustomType.Constructor({"events","id"})
+    @OutputCustomType.Constructor
     private EtwProviderConfigurationResponse(
-        List<EtwEventConfigurationResponse> events,
-        String id) {
+        @OutputCustomType.Parameter("events") List<EtwEventConfigurationResponse> events,
+        @OutputCustomType.Parameter("id") String id) {
         this.events = events;
         this.id = id;
     }
@@ -51,12 +51,12 @@ public final class EtwProviderConfigurationResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setEvents(List<EtwEventConfigurationResponse> events) {
+        public Builder events(List<EtwEventConfigurationResponse> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

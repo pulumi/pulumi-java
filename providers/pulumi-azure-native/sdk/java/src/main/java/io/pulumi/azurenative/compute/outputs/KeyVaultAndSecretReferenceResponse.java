@@ -21,10 +21,10 @@ public final class KeyVaultAndSecretReferenceResponse {
      */
     private final SourceVaultResponse sourceVault;
 
-    @OutputCustomType.Constructor({"secretUrl","sourceVault"})
+    @OutputCustomType.Constructor
     private KeyVaultAndSecretReferenceResponse(
-        String secretUrl,
-        SourceVaultResponse sourceVault) {
+        @OutputCustomType.Parameter("secretUrl") String secretUrl,
+        @OutputCustomType.Parameter("sourceVault") SourceVaultResponse sourceVault) {
         this.secretUrl = secretUrl;
         this.sourceVault = sourceVault;
     }
@@ -66,12 +66,12 @@ public final class KeyVaultAndSecretReferenceResponse {
     	      this.sourceVault = defaults.sourceVault;
         }
 
-        public Builder setSecretUrl(String secretUrl) {
+        public Builder secretUrl(String secretUrl) {
             this.secretUrl = Objects.requireNonNull(secretUrl);
             return this;
         }
 
-        public Builder setSourceVault(SourceVaultResponse sourceVault) {
+        public Builder sourceVault(SourceVaultResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }

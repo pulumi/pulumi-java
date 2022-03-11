@@ -21,10 +21,10 @@ public final class GpuResourceResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor({"count","sku"})
+    @OutputCustomType.Constructor
     private GpuResourceResponse(
-        Integer count,
-        String sku) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("sku") String sku) {
         this.count = count;
         this.sku = sku;
     }
@@ -66,12 +66,12 @@ public final class GpuResourceResponse {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }

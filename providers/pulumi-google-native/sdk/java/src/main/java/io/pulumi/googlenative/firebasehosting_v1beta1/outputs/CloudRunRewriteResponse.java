@@ -20,10 +20,10 @@ public final class CloudRunRewriteResponse {
      */
     private final String serviceId;
 
-    @OutputCustomType.Constructor({"region","serviceId"})
+    @OutputCustomType.Constructor
     private CloudRunRewriteResponse(
-        String region,
-        String serviceId) {
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("serviceId") String serviceId) {
         this.region = region;
         this.serviceId = serviceId;
     }
@@ -65,12 +65,12 @@ public final class CloudRunRewriteResponse {
     	      this.serviceId = defaults.serviceId;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setServiceId(String serviceId) {
+        public Builder serviceId(String serviceId) {
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }

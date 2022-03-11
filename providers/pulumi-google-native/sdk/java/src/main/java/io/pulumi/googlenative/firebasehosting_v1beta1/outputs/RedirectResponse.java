@@ -31,12 +31,12 @@ public final class RedirectResponse {
      */
     private final Integer statusCode;
 
-    @OutputCustomType.Constructor({"glob","location","regex","statusCode"})
+    @OutputCustomType.Constructor
     private RedirectResponse(
-        String glob,
-        String location,
-        String regex,
-        Integer statusCode) {
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("regex") String regex,
+        @OutputCustomType.Parameter("statusCode") Integer statusCode) {
         this.glob = glob;
         this.location = location;
         this.regex = regex;
@@ -98,22 +98,22 @@ public final class RedirectResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setGlob(String glob) {
+        public Builder glob(String glob) {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setRegex(String regex) {
+        public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
 
-        public Builder setStatusCode(Integer statusCode) {
+        public Builder statusCode(Integer statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

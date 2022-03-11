@@ -52,19 +52,19 @@ public final class GetNetworkEndpointGroupResult {
     private final String subnetwork;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"defaultPort","description","id","name","network","networkEndpointType","project","selfLink","size","subnetwork","zone"})
+    @OutputCustomType.Constructor
     private GetNetworkEndpointGroupResult(
-        Integer defaultPort,
-        String description,
-        String id,
-        @Nullable String name,
-        String network,
-        String networkEndpointType,
-        @Nullable String project,
-        @Nullable String selfLink,
-        Integer size,
-        String subnetwork,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
+        @OutputCustomType.Parameter("size") Integer size,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.defaultPort = defaultPort;
         this.description = description;
         this.id = id;
@@ -180,57 +180,57 @@ public final class GetNetworkEndpointGroupResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDefaultPort(Integer defaultPort) {
+        public Builder defaultPort(Integer defaultPort) {
             this.defaultPort = Objects.requireNonNull(defaultPort);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetworkEndpointType(String networkEndpointType) {
+        public Builder networkEndpointType(String networkEndpointType) {
             this.networkEndpointType = Objects.requireNonNull(networkEndpointType);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

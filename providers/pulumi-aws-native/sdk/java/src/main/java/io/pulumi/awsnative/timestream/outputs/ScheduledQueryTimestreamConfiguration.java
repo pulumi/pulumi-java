@@ -23,15 +23,15 @@ public final class ScheduledQueryTimestreamConfiguration {
     private final String tableName;
     private final String timeColumn;
 
-    @OutputCustomType.Constructor({"databaseName","dimensionMappings","measureNameColumn","mixedMeasureMappings","multiMeasureMappings","tableName","timeColumn"})
+    @OutputCustomType.Constructor
     private ScheduledQueryTimestreamConfiguration(
-        String databaseName,
-        List<ScheduledQueryDimensionMapping> dimensionMappings,
-        @Nullable String measureNameColumn,
-        @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
-        @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
-        String tableName,
-        String timeColumn) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("dimensionMappings") List<ScheduledQueryDimensionMapping> dimensionMappings,
+        @OutputCustomType.Parameter("measureNameColumn") @Nullable String measureNameColumn,
+        @OutputCustomType.Parameter("mixedMeasureMappings") @Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings,
+        @OutputCustomType.Parameter("multiMeasureMappings") @Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("timeColumn") String timeColumn) {
         this.databaseName = databaseName;
         this.dimensionMappings = dimensionMappings;
         this.measureNameColumn = measureNameColumn;
@@ -95,37 +95,37 @@ public final class ScheduledQueryTimestreamConfiguration {
     	      this.timeColumn = defaults.timeColumn;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDimensionMappings(List<ScheduledQueryDimensionMapping> dimensionMappings) {
+        public Builder dimensionMappings(List<ScheduledQueryDimensionMapping> dimensionMappings) {
             this.dimensionMappings = Objects.requireNonNull(dimensionMappings);
             return this;
         }
 
-        public Builder setMeasureNameColumn(@Nullable String measureNameColumn) {
+        public Builder measureNameColumn(@Nullable String measureNameColumn) {
             this.measureNameColumn = measureNameColumn;
             return this;
         }
 
-        public Builder setMixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings) {
+        public Builder mixedMeasureMappings(@Nullable List<ScheduledQueryMixedMeasureMapping> mixedMeasureMappings) {
             this.mixedMeasureMappings = mixedMeasureMappings;
             return this;
         }
 
-        public Builder setMultiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings) {
+        public Builder multiMeasureMappings(@Nullable ScheduledQueryMultiMeasureMappings multiMeasureMappings) {
             this.multiMeasureMappings = multiMeasureMappings;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTimeColumn(String timeColumn) {
+        public Builder timeColumn(String timeColumn) {
             this.timeColumn = Objects.requireNonNull(timeColumn);
             return this;
         }

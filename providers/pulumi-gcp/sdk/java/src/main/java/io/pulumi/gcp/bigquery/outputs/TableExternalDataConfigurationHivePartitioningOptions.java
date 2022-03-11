@@ -44,11 +44,11 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
      */
     private final @Nullable String sourceUriPrefix;
 
-    @OutputCustomType.Constructor({"mode","requirePartitionFilter","sourceUriPrefix"})
+    @OutputCustomType.Constructor
     private TableExternalDataConfigurationHivePartitioningOptions(
-        @Nullable String mode,
-        @Nullable Boolean requirePartitionFilter,
-        @Nullable String sourceUriPrefix) {
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("requirePartitionFilter") @Nullable Boolean requirePartitionFilter,
+        @OutputCustomType.Parameter("sourceUriPrefix") @Nullable String sourceUriPrefix) {
         this.mode = mode;
         this.requirePartitionFilter = requirePartitionFilter;
         this.sourceUriPrefix = sourceUriPrefix;
@@ -116,17 +116,17 @@ public final class TableExternalDataConfigurationHivePartitioningOptions {
     	      this.sourceUriPrefix = defaults.sourceUriPrefix;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRequirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
+        public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
             this.requirePartitionFilter = requirePartitionFilter;
             return this;
         }
 
-        public Builder setSourceUriPrefix(@Nullable String sourceUriPrefix) {
+        public Builder sourceUriPrefix(@Nullable String sourceUriPrefix) {
             this.sourceUriPrefix = sourceUriPrefix;
             return this;
         }

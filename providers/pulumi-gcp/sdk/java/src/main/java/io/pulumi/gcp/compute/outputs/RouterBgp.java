@@ -50,12 +50,12 @@ public final class RouterBgp {
      */
     private final Integer asn;
 
-    @OutputCustomType.Constructor({"advertiseMode","advertisedGroups","advertisedIpRanges","asn"})
+    @OutputCustomType.Constructor
     private RouterBgp(
-        @Nullable String advertiseMode,
-        @Nullable List<String> advertisedGroups,
-        @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
-        Integer asn) {
+        @OutputCustomType.Parameter("advertiseMode") @Nullable String advertiseMode,
+        @OutputCustomType.Parameter("advertisedGroups") @Nullable List<String> advertisedGroups,
+        @OutputCustomType.Parameter("advertisedIpRanges") @Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges,
+        @OutputCustomType.Parameter("asn") Integer asn) {
         this.advertiseMode = advertiseMode;
         this.advertisedGroups = advertisedGroups;
         this.advertisedIpRanges = advertisedIpRanges;
@@ -132,22 +132,22 @@ public final class RouterBgp {
     	      this.asn = defaults.asn;
         }
 
-        public Builder setAdvertiseMode(@Nullable String advertiseMode) {
+        public Builder advertiseMode(@Nullable String advertiseMode) {
             this.advertiseMode = advertiseMode;
             return this;
         }
 
-        public Builder setAdvertisedGroups(@Nullable List<String> advertisedGroups) {
+        public Builder advertisedGroups(@Nullable List<String> advertisedGroups) {
             this.advertisedGroups = advertisedGroups;
             return this;
         }
 
-        public Builder setAdvertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges) {
+        public Builder advertisedIpRanges(@Nullable List<RouterBgpAdvertisedIpRange> advertisedIpRanges) {
             this.advertisedIpRanges = advertisedIpRanges;
             return this;
         }
 
-        public Builder setAsn(Integer asn) {
+        public Builder asn(Integer asn) {
             this.asn = Objects.requireNonNull(asn);
             return this;
         }

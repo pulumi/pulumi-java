@@ -51,16 +51,16 @@ public final class GetMigrationConfigResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","migrationState","name","pendingReplicationOperationsCount","postMigrationName","provisioningState","targetNamespace","type"})
+    @OutputCustomType.Constructor
     private GetMigrationConfigResult(
-        String id,
-        String migrationState,
-        String name,
-        Double pendingReplicationOperationsCount,
-        String postMigrationName,
-        String provisioningState,
-        String targetNamespace,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationState") String migrationState,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pendingReplicationOperationsCount") Double pendingReplicationOperationsCount,
+        @OutputCustomType.Parameter("postMigrationName") String postMigrationName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("targetNamespace") String targetNamespace,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.migrationState = migrationState;
         this.name = name;
@@ -162,42 +162,42 @@ public final class GetMigrationConfigResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMigrationState(String migrationState) {
+        public Builder migrationState(String migrationState) {
             this.migrationState = Objects.requireNonNull(migrationState);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
+        public Builder pendingReplicationOperationsCount(Double pendingReplicationOperationsCount) {
             this.pendingReplicationOperationsCount = Objects.requireNonNull(pendingReplicationOperationsCount);
             return this;
         }
 
-        public Builder setPostMigrationName(String postMigrationName) {
+        public Builder postMigrationName(String postMigrationName) {
             this.postMigrationName = Objects.requireNonNull(postMigrationName);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTargetNamespace(String targetNamespace) {
+        public Builder targetNamespace(String targetNamespace) {
             this.targetNamespace = Objects.requireNonNull(targetNamespace);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

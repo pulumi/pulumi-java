@@ -40,17 +40,17 @@ public final class GetCertificateResult {
     private final Map<String,String> tags;
     private final @Nullable List<String> types;
 
-    @OutputCustomType.Constructor({"arn","domain","id","keyTypes","mostRecent","status","statuses","tags","types"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String arn,
-        String domain,
-        String id,
-        @Nullable List<String> keyTypes,
-        @Nullable Boolean mostRecent,
-        String status,
-        @Nullable List<String> statuses,
-        Map<String,String> tags,
-        @Nullable List<String> types) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyTypes") @Nullable List<String> keyTypes,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statuses") @Nullable List<String> statuses,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("types") @Nullable List<String> types) {
         this.arn = arn;
         this.domain = domain;
         this.id = id;
@@ -142,47 +142,47 @@ public final class GetCertificateResult {
     	      this.types = defaults.types;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyTypes(@Nullable List<String> keyTypes) {
+        public Builder keyTypes(@Nullable List<String> keyTypes) {
             this.keyTypes = keyTypes;
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<String> statuses) {
+        public Builder statuses(@Nullable List<String> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTypes(@Nullable List<String> types) {
+        public Builder types(@Nullable List<String> types) {
             this.types = types;
             return this;
         }

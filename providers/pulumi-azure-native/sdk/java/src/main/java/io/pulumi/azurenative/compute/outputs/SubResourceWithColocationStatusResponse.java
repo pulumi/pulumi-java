@@ -23,10 +23,10 @@ public final class SubResourceWithColocationStatusResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"colocationStatus","id"})
+    @OutputCustomType.Constructor
     private SubResourceWithColocationStatusResponse(
-        @Nullable InstanceViewStatusResponse colocationStatus,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("colocationStatus") @Nullable InstanceViewStatusResponse colocationStatus,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.colocationStatus = colocationStatus;
         this.id = id;
     }
@@ -68,12 +68,12 @@ public final class SubResourceWithColocationStatusResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setColocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
+        public Builder colocationStatus(@Nullable InstanceViewStatusResponse colocationStatus) {
             this.colocationStatus = colocationStatus;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

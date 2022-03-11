@@ -36,13 +36,13 @@ public final class CustomMetricResponse {
      */
     private final Double targetUtilization;
 
-    @OutputCustomType.Constructor({"filter","metricName","singleInstanceAssignment","targetType","targetUtilization"})
+    @OutputCustomType.Constructor
     private CustomMetricResponse(
-        String filter,
-        String metricName,
-        Double singleInstanceAssignment,
-        String targetType,
-        Double targetUtilization) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("singleInstanceAssignment") Double singleInstanceAssignment,
+        @OutputCustomType.Parameter("targetType") String targetType,
+        @OutputCustomType.Parameter("targetUtilization") Double targetUtilization) {
         this.filter = filter;
         this.metricName = metricName;
         this.singleInstanceAssignment = singleInstanceAssignment;
@@ -114,27 +114,27 @@ public final class CustomMetricResponse {
     	      this.targetUtilization = defaults.targetUtilization;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSingleInstanceAssignment(Double singleInstanceAssignment) {
+        public Builder singleInstanceAssignment(Double singleInstanceAssignment) {
             this.singleInstanceAssignment = Objects.requireNonNull(singleInstanceAssignment);
             return this;
         }
 
-        public Builder setTargetType(String targetType) {
+        public Builder targetType(String targetType) {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
 
-        public Builder setTargetUtilization(Double targetUtilization) {
+        public Builder targetUtilization(Double targetUtilization) {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }

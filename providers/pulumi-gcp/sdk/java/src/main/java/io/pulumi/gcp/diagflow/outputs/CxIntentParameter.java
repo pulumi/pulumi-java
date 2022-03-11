@@ -35,12 +35,12 @@ public final class CxIntentParameter {
      */
     private final @Nullable Boolean redact;
 
-    @OutputCustomType.Constructor({"entityType","id","isList","redact"})
+    @OutputCustomType.Constructor
     private CxIntentParameter(
-        String entityType,
-        String id,
-        @Nullable Boolean isList,
-        @Nullable Boolean redact) {
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
+        @OutputCustomType.Parameter("redact") @Nullable Boolean redact) {
         this.entityType = entityType;
         this.id = id;
         this.isList = isList;
@@ -104,22 +104,22 @@ public final class CxIntentParameter {
     	      this.redact = defaults.redact;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsList(@Nullable Boolean isList) {
+        public Builder isList(@Nullable Boolean isList) {
             this.isList = isList;
             return this;
         }
 
-        public Builder setRedact(@Nullable Boolean redact) {
+        public Builder redact(@Nullable Boolean redact) {
             this.redact = redact;
             return this;
         }

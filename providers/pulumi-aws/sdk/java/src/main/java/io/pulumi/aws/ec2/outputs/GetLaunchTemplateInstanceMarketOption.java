@@ -14,10 +14,10 @@ public final class GetLaunchTemplateInstanceMarketOption {
     private final String marketType;
     private final List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions;
 
-    @OutputCustomType.Constructor({"marketType","spotOptions"})
+    @OutputCustomType.Constructor
     private GetLaunchTemplateInstanceMarketOption(
-        String marketType,
-        List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
+        @OutputCustomType.Parameter("marketType") String marketType,
+        @OutputCustomType.Parameter("spotOptions") List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
         this.marketType = marketType;
         this.spotOptions = spotOptions;
     }
@@ -51,12 +51,12 @@ public final class GetLaunchTemplateInstanceMarketOption {
     	      this.spotOptions = defaults.spotOptions;
         }
 
-        public Builder setMarketType(String marketType) {
+        public Builder marketType(String marketType) {
             this.marketType = Objects.requireNonNull(marketType);
             return this;
         }
 
-        public Builder setSpotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
+        public Builder spotOptions(List<GetLaunchTemplateInstanceMarketOptionSpotOption> spotOptions) {
             this.spotOptions = Objects.requireNonNull(spotOptions);
             return this;
         }

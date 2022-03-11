@@ -16,8 +16,8 @@ public final class NodeSelector {
      */
     private final List<NodeSelectorTerm> nodeSelectorTerms;
 
-    @OutputCustomType.Constructor({"nodeSelectorTerms"})
-    private NodeSelector(List<NodeSelectorTerm> nodeSelectorTerms) {
+    @OutputCustomType.Constructor
+    private NodeSelector(@OutputCustomType.Parameter("nodeSelectorTerms") List<NodeSelectorTerm> nodeSelectorTerms) {
         this.nodeSelectorTerms = nodeSelectorTerms;
     }
 
@@ -49,7 +49,7 @@ public final class NodeSelector {
     	      this.nodeSelectorTerms = defaults.nodeSelectorTerms;
         }
 
-        public Builder setNodeSelectorTerms(List<NodeSelectorTerm> nodeSelectorTerms) {
+        public Builder nodeSelectorTerms(List<NodeSelectorTerm> nodeSelectorTerms) {
             this.nodeSelectorTerms = Objects.requireNonNull(nodeSelectorTerms);
             return this;
         }

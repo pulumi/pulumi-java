@@ -16,11 +16,11 @@ public final class GetResponseHeadersPolicyResult {
     private final @Nullable String lastModifiedTime;
     private final @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","responseHeadersPolicyConfig"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicyResult(
-        @Nullable String id,
-        @Nullable String lastModifiedTime,
-        @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("responseHeadersPolicyConfig") @Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
@@ -60,17 +60,17 @@ public final class GetResponseHeadersPolicyResult {
     	      this.responseHeadersPolicyConfig = defaults.responseHeadersPolicyConfig;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setResponseHeadersPolicyConfig(@Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
+        public Builder responseHeadersPolicyConfig(@Nullable ResponseHeadersPolicyConfig responseHeadersPolicyConfig) {
             this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
         }

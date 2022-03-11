@@ -20,10 +20,10 @@ public final class KpiExtractResponse {
      */
     private final String extractName;
 
-    @OutputCustomType.Constructor({"expression","extractName"})
+    @OutputCustomType.Constructor
     private KpiExtractResponse(
-        String expression,
-        String extractName) {
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("extractName") String extractName) {
         this.expression = expression;
         this.extractName = extractName;
     }
@@ -65,12 +65,12 @@ public final class KpiExtractResponse {
     	      this.extractName = defaults.extractName;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExtractName(String extractName) {
+        public Builder extractName(String extractName) {
             this.extractName = Objects.requireNonNull(extractName);
             return this;
         }

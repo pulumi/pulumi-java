@@ -17,8 +17,8 @@ public final class ListAccountChannelTypesResult {
      */
     private final @Nullable List<ChannelTypeDescriptionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListAccountChannelTypesResult(@Nullable List<ChannelTypeDescriptionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListAccountChannelTypesResult(@OutputCustomType.Parameter("value") @Nullable List<ChannelTypeDescriptionResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListAccountChannelTypesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<ChannelTypeDescriptionResponse> value) {
+        public Builder value(@Nullable List<ChannelTypeDescriptionResponse> value) {
             this.value = value;
             return this;
         }

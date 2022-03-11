@@ -22,10 +22,10 @@ public final class ReservationShareSettingsProjectMap {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"id","projectId"})
+    @OutputCustomType.Constructor
     private ReservationShareSettingsProjectMap(
-        String id,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.id = id;
         this.projectId = projectId;
     }
@@ -67,12 +67,12 @@ public final class ReservationShareSettingsProjectMap {
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }

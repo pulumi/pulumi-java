@@ -24,10 +24,10 @@ public final class ListWebhookEventsResult {
      */
     private final @Nullable List<EventResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListWebhookEventsResult(
-        @Nullable String nextLink,
-        @Nullable List<EventResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<EventResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListWebhookEventsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<EventResponse> value) {
+        public Builder value(@Nullable List<EventResponse> value) {
             this.value = value;
             return this;
         }

@@ -124,27 +124,27 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
     	      this.scenarios = defaults.scenarios;
         }
 
-        public Builder setAppApk(FileReferenceResponse appApk) {
+        public Builder appApk(FileReferenceResponse appApk) {
             this.appApk = Objects.requireNonNull(appApk);
             return this;
         }
 
-        public Builder setAppBundle(AppBundleResponse appBundle) {
+        public Builder appBundle(AppBundleResponse appBundle) {
             this.appBundle = Objects.requireNonNull(appBundle);
             return this;
         }
 
-        public Builder setAppPackageId(String appPackageId) {
+        public Builder appPackageId(String appPackageId) {
             this.appPackageId = Objects.requireNonNull(appPackageId);
             return this;
         }
 
-        public Builder setScenarioLabels(List<String> scenarioLabels) {
+        public Builder scenarioLabels(List<String> scenarioLabels) {
             this.scenarioLabels = Objects.requireNonNull(scenarioLabels);
             return this;
         }
 
-        public Builder setScenarios(List<Integer> scenarios) {
+        public Builder scenarios(List<Integer> scenarios) {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }

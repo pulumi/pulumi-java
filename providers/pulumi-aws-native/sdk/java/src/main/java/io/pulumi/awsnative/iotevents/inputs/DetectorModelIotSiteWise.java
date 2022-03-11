@@ -119,27 +119,27 @@ public final class DetectorModelIotSiteWise extends io.pulumi.resources.InvokeAr
     	      this.propertyValue = defaults.propertyValue;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setEntryId(@Nullable String entryId) {
+        public Builder entryId(@Nullable String entryId) {
             this.entryId = entryId;
             return this;
         }
 
-        public Builder setPropertyAlias(@Nullable String propertyAlias) {
+        public Builder propertyAlias(@Nullable String propertyAlias) {
             this.propertyAlias = propertyAlias;
             return this;
         }
 
-        public Builder setPropertyId(@Nullable String propertyId) {
+        public Builder propertyId(@Nullable String propertyId) {
             this.propertyId = propertyId;
             return this;
         }
 
-        public Builder setPropertyValue(DetectorModelAssetPropertyValue propertyValue) {
+        public Builder propertyValue(DetectorModelAssetPropertyValue propertyValue) {
             this.propertyValue = Objects.requireNonNull(propertyValue);
             return this;
         }

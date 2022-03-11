@@ -15,8 +15,8 @@ public final class ResourceIdentityResponse {
      */
     private final String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"userAssignedIdentity"})
-    private ResourceIdentityResponse(String userAssignedIdentity) {
+    @OutputCustomType.Constructor
+    private ResourceIdentityResponse(@OutputCustomType.Parameter("userAssignedIdentity") String userAssignedIdentity) {
         this.userAssignedIdentity = userAssignedIdentity;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceIdentityResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setUserAssignedIdentity(String userAssignedIdentity) {
+        public Builder userAssignedIdentity(String userAssignedIdentity) {
             this.userAssignedIdentity = Objects.requireNonNull(userAssignedIdentity);
             return this;
         }

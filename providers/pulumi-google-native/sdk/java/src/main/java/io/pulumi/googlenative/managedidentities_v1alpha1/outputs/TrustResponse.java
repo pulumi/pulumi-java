@@ -67,19 +67,19 @@ public final class TrustResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","lastKnownTrustConnectedHeartbeatTime","selectiveAuthentication","state","stateDescription","targetDnsIpAddresses","targetDomainName","trustDirection","trustHandshakeSecret","trustType","updateTime"})
+    @OutputCustomType.Constructor
     private TrustResponse(
-        String createTime,
-        String lastKnownTrustConnectedHeartbeatTime,
-        Boolean selectiveAuthentication,
-        String state,
-        String stateDescription,
-        List<String> targetDnsIpAddresses,
-        String targetDomainName,
-        String trustDirection,
-        String trustHandshakeSecret,
-        String trustType,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("lastKnownTrustConnectedHeartbeatTime") String lastKnownTrustConnectedHeartbeatTime,
+        @OutputCustomType.Parameter("selectiveAuthentication") Boolean selectiveAuthentication,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("stateDescription") String stateDescription,
+        @OutputCustomType.Parameter("targetDnsIpAddresses") List<String> targetDnsIpAddresses,
+        @OutputCustomType.Parameter("targetDomainName") String targetDomainName,
+        @OutputCustomType.Parameter("trustDirection") String trustDirection,
+        @OutputCustomType.Parameter("trustHandshakeSecret") String trustHandshakeSecret,
+        @OutputCustomType.Parameter("trustType") String trustType,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.lastKnownTrustConnectedHeartbeatTime = lastKnownTrustConnectedHeartbeatTime;
         this.selectiveAuthentication = selectiveAuthentication;
@@ -211,57 +211,57 @@ public final class TrustResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setLastKnownTrustConnectedHeartbeatTime(String lastKnownTrustConnectedHeartbeatTime) {
+        public Builder lastKnownTrustConnectedHeartbeatTime(String lastKnownTrustConnectedHeartbeatTime) {
             this.lastKnownTrustConnectedHeartbeatTime = Objects.requireNonNull(lastKnownTrustConnectedHeartbeatTime);
             return this;
         }
 
-        public Builder setSelectiveAuthentication(Boolean selectiveAuthentication) {
+        public Builder selectiveAuthentication(Boolean selectiveAuthentication) {
             this.selectiveAuthentication = Objects.requireNonNull(selectiveAuthentication);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateDescription(String stateDescription) {
+        public Builder stateDescription(String stateDescription) {
             this.stateDescription = Objects.requireNonNull(stateDescription);
             return this;
         }
 
-        public Builder setTargetDnsIpAddresses(List<String> targetDnsIpAddresses) {
+        public Builder targetDnsIpAddresses(List<String> targetDnsIpAddresses) {
             this.targetDnsIpAddresses = Objects.requireNonNull(targetDnsIpAddresses);
             return this;
         }
 
-        public Builder setTargetDomainName(String targetDomainName) {
+        public Builder targetDomainName(String targetDomainName) {
             this.targetDomainName = Objects.requireNonNull(targetDomainName);
             return this;
         }
 
-        public Builder setTrustDirection(String trustDirection) {
+        public Builder trustDirection(String trustDirection) {
             this.trustDirection = Objects.requireNonNull(trustDirection);
             return this;
         }
 
-        public Builder setTrustHandshakeSecret(String trustHandshakeSecret) {
+        public Builder trustHandshakeSecret(String trustHandshakeSecret) {
             this.trustHandshakeSecret = Objects.requireNonNull(trustHandshakeSecret);
             return this;
         }
 
-        public Builder setTrustType(String trustType) {
+        public Builder trustType(String trustType) {
             this.trustType = Objects.requireNonNull(trustType);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

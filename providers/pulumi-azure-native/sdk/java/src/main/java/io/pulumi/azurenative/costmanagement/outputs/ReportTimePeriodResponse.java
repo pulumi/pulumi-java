@@ -20,10 +20,10 @@ public final class ReportTimePeriodResponse {
      */
     private final String to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private ReportTimePeriodResponse(
-        String from,
-        String to) {
+        @OutputCustomType.Parameter("from") String from,
+        @OutputCustomType.Parameter("to") String to) {
         this.from = from;
         this.to = to;
     }
@@ -65,12 +65,12 @@ public final class ReportTimePeriodResponse {
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setTo(String to) {
+        public Builder to(String to) {
             this.to = Objects.requireNonNull(to);
             return this;
         }

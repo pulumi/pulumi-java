@@ -26,11 +26,11 @@ public final class VolumeResponse {
      */
     private final String volumeType;
 
-    @OutputCustomType.Constructor({"name","sizeGb","volumeType"})
+    @OutputCustomType.Constructor
     private VolumeResponse(
-        String name,
-        Double sizeGb,
-        String volumeType) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeGb") Double sizeGb,
+        @OutputCustomType.Parameter("volumeType") String volumeType) {
         this.name = name;
         this.sizeGb = sizeGb;
         this.volumeType = volumeType;
@@ -82,17 +82,17 @@ public final class VolumeResponse {
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSizeGb(Double sizeGb) {
+        public Builder sizeGb(Double sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }

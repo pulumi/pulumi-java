@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
      */
     private final Boolean onlyEndUser;
 
-    @OutputCustomType.Constructor({"noSmalltalk","onlyEndUser"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTriggerSettingsResponse(
-        Boolean noSmalltalk,
-        Boolean onlyEndUser) {
+        @OutputCustomType.Parameter("noSmalltalk") Boolean noSmalltalk,
+        @OutputCustomType.Parameter("onlyEndUser") Boolean onlyEndUser) {
         this.noSmalltalk = noSmalltalk;
         this.onlyEndUser = onlyEndUser;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionTri
     	      this.onlyEndUser = defaults.onlyEndUser;
         }
 
-        public Builder setNoSmalltalk(Boolean noSmalltalk) {
+        public Builder noSmalltalk(Boolean noSmalltalk) {
             this.noSmalltalk = Objects.requireNonNull(noSmalltalk);
             return this;
         }
 
-        public Builder setOnlyEndUser(Boolean onlyEndUser) {
+        public Builder onlyEndUser(Boolean onlyEndUser) {
             this.onlyEndUser = Objects.requireNonNull(onlyEndUser);
             return this;
         }

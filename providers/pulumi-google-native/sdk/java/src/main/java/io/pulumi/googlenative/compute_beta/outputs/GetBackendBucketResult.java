@@ -68,19 +68,19 @@ public final class GetBackendBucketResult {
      */
     private final String selfLink;
 
-    @OutputCustomType.Constructor({"bucketName","cdnPolicy","compressionMode","creationTimestamp","customResponseHeaders","description","edgeSecurityPolicy","enableCdn","kind","name","selfLink"})
+    @OutputCustomType.Constructor
     private GetBackendBucketResult(
-        String bucketName,
-        BackendBucketCdnPolicyResponse cdnPolicy,
-        String compressionMode,
-        String creationTimestamp,
-        List<String> customResponseHeaders,
-        String description,
-        String edgeSecurityPolicy,
-        Boolean enableCdn,
-        String kind,
-        String name,
-        String selfLink) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("cdnPolicy") BackendBucketCdnPolicyResponse cdnPolicy,
+        @OutputCustomType.Parameter("compressionMode") String compressionMode,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("edgeSecurityPolicy") String edgeSecurityPolicy,
+        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("selfLink") String selfLink) {
         this.bucketName = bucketName;
         this.cdnPolicy = cdnPolicy;
         this.compressionMode = compressionMode;
@@ -212,57 +212,57 @@ public final class GetBackendBucketResult {
     	      this.selfLink = defaults.selfLink;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setCdnPolicy(BackendBucketCdnPolicyResponse cdnPolicy) {
+        public Builder cdnPolicy(BackendBucketCdnPolicyResponse cdnPolicy) {
             this.cdnPolicy = Objects.requireNonNull(cdnPolicy);
             return this;
         }
 
-        public Builder setCompressionMode(String compressionMode) {
+        public Builder compressionMode(String compressionMode) {
             this.compressionMode = Objects.requireNonNull(compressionMode);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomResponseHeaders(List<String> customResponseHeaders) {
+        public Builder customResponseHeaders(List<String> customResponseHeaders) {
             this.customResponseHeaders = Objects.requireNonNull(customResponseHeaders);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEdgeSecurityPolicy(String edgeSecurityPolicy) {
+        public Builder edgeSecurityPolicy(String edgeSecurityPolicy) {
             this.edgeSecurityPolicy = Objects.requireNonNull(edgeSecurityPolicy);
             return this;
         }
 
-        public Builder setEnableCdn(Boolean enableCdn) {
+        public Builder enableCdn(Boolean enableCdn) {
             this.enableCdn = Objects.requireNonNull(enableCdn);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }

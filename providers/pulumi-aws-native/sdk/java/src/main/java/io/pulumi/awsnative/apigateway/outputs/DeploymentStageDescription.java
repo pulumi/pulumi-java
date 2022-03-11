@@ -116,27 +116,27 @@ public final class DeploymentStageDescription {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor({"accessLogSetting","cacheClusterEnabled","cacheClusterSize","cacheDataEncrypted","cacheTtlInSeconds","cachingEnabled","canarySetting","clientCertificateId","dataTraceEnabled","description","documentationVersion","loggingLevel","methodSettings","metricsEnabled","tags","throttlingBurstLimit","throttlingRateLimit","tracingEnabled","variables"})
+    @OutputCustomType.Constructor
     private DeploymentStageDescription(
-        @Nullable DeploymentAccessLogSetting accessLogSetting,
-        @Nullable Boolean cacheClusterEnabled,
-        @Nullable String cacheClusterSize,
-        @Nullable Boolean cacheDataEncrypted,
-        @Nullable Integer cacheTtlInSeconds,
-        @Nullable Boolean cachingEnabled,
-        @Nullable DeploymentCanarySetting canarySetting,
-        @Nullable String clientCertificateId,
-        @Nullable Boolean dataTraceEnabled,
-        @Nullable String description,
-        @Nullable String documentationVersion,
-        @Nullable String loggingLevel,
-        @Nullable List<DeploymentMethodSetting> methodSettings,
-        @Nullable Boolean metricsEnabled,
-        @Nullable List<DeploymentTag> tags,
-        @Nullable Integer throttlingBurstLimit,
-        @Nullable Double throttlingRateLimit,
-        @Nullable Boolean tracingEnabled,
-        @Nullable Object variables) {
+        @OutputCustomType.Parameter("accessLogSetting") @Nullable DeploymentAccessLogSetting accessLogSetting,
+        @OutputCustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
+        @OutputCustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
+        @OutputCustomType.Parameter("cacheDataEncrypted") @Nullable Boolean cacheDataEncrypted,
+        @OutputCustomType.Parameter("cacheTtlInSeconds") @Nullable Integer cacheTtlInSeconds,
+        @OutputCustomType.Parameter("cachingEnabled") @Nullable Boolean cachingEnabled,
+        @OutputCustomType.Parameter("canarySetting") @Nullable DeploymentCanarySetting canarySetting,
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("dataTraceEnabled") @Nullable Boolean dataTraceEnabled,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
+        @OutputCustomType.Parameter("loggingLevel") @Nullable String loggingLevel,
+        @OutputCustomType.Parameter("methodSettings") @Nullable List<DeploymentMethodSetting> methodSettings,
+        @OutputCustomType.Parameter("metricsEnabled") @Nullable Boolean metricsEnabled,
+        @OutputCustomType.Parameter("tags") @Nullable List<DeploymentTag> tags,
+        @OutputCustomType.Parameter("throttlingBurstLimit") @Nullable Integer throttlingBurstLimit,
+        @OutputCustomType.Parameter("throttlingRateLimit") @Nullable Double throttlingRateLimit,
+        @OutputCustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
+        @OutputCustomType.Parameter("variables") @Nullable Object variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;
@@ -348,97 +348,97 @@ public final class DeploymentStageDescription {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setAccessLogSetting(@Nullable DeploymentAccessLogSetting accessLogSetting) {
+        public Builder accessLogSetting(@Nullable DeploymentAccessLogSetting accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
+        public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
             this.cacheDataEncrypted = cacheDataEncrypted;
             return this;
         }
 
-        public Builder setCacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
+        public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
             this.cacheTtlInSeconds = cacheTtlInSeconds;
             return this;
         }
 
-        public Builder setCachingEnabled(@Nullable Boolean cachingEnabled) {
+        public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
             this.cachingEnabled = cachingEnabled;
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable DeploymentCanarySetting canarySetting) {
+        public Builder canarySetting(@Nullable DeploymentCanarySetting canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setDataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
+        public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
             this.dataTraceEnabled = dataTraceEnabled;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setLoggingLevel(@Nullable String loggingLevel) {
+        public Builder loggingLevel(@Nullable String loggingLevel) {
             this.loggingLevel = loggingLevel;
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable List<DeploymentMethodSetting> methodSettings) {
+        public Builder methodSettings(@Nullable List<DeploymentMethodSetting> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
-        public Builder setMetricsEnabled(@Nullable Boolean metricsEnabled) {
+        public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
             this.metricsEnabled = metricsEnabled;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DeploymentTag> tags) {
+        public Builder tags(@Nullable List<DeploymentTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThrottlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
+        public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
             this.throttlingBurstLimit = throttlingBurstLimit;
             return this;
         }
 
-        public Builder setThrottlingRateLimit(@Nullable Double throttlingRateLimit) {
+        public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
             this.throttlingRateLimit = throttlingRateLimit;
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Boolean tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
         }

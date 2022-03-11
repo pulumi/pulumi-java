@@ -41,12 +41,12 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      */
     private final @Nullable String serviceAccount;
 
-    @OutputCustomType.Constructor({"imageType","minCpuPlatform","oauthScopes","serviceAccount"})
+    @OutputCustomType.Constructor
     private ClusterClusterAutoscalingAutoProvisioningDefaults(
-        @Nullable String imageType,
-        @Nullable String minCpuPlatform,
-        @Nullable List<String> oauthScopes,
-        @Nullable String serviceAccount) {
+        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;
@@ -116,22 +116,22 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
     	      this.serviceAccount = defaults.serviceAccount;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setOauthScopes(@Nullable List<String> oauthScopes) {
+        public Builder oauthScopes(@Nullable List<String> oauthScopes) {
             this.oauthScopes = oauthScopes;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }

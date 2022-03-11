@@ -24,10 +24,10 @@ public final class NodeGroupResource {
      */
     private final @Nullable String remoteAccessSecurityGroupId;
 
-    @OutputCustomType.Constructor({"autoscalingGroups","remoteAccessSecurityGroupId"})
+    @OutputCustomType.Constructor
     private NodeGroupResource(
-        @Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups,
-        @Nullable String remoteAccessSecurityGroupId) {
+        @OutputCustomType.Parameter("autoscalingGroups") @Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups,
+        @OutputCustomType.Parameter("remoteAccessSecurityGroupId") @Nullable String remoteAccessSecurityGroupId) {
         this.autoscalingGroups = autoscalingGroups;
         this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
     }
@@ -69,12 +69,12 @@ public final class NodeGroupResource {
     	      this.remoteAccessSecurityGroupId = defaults.remoteAccessSecurityGroupId;
         }
 
-        public Builder setAutoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable List<NodeGroupResourceAutoscalingGroup> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
-        public Builder setRemoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
+        public Builder remoteAccessSecurityGroupId(@Nullable String remoteAccessSecurityGroupId) {
             this.remoteAccessSecurityGroupId = remoteAccessSecurityGroupId;
             return this;
         }

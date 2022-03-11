@@ -29,10 +29,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Parameter;
 import java.util.*;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toSet;
 
 /**
  * Part of deserialization, @see {@link Deserializer}
@@ -281,41 +281,28 @@ public class Converter {
             var constructor = targetType.getAnnotatedConstructor(OutputCustomType.Constructor.class);
             var constructorAnnotation = Optional.ofNullable(
                     constructor.getAnnotation(OutputCustomType.Constructor.class)
-            ).orElseThrow(() -> new IllegalStateException("Expected a constructor annotation.")); // validated before
+            ).orElseThrow(() -> new IllegalStateException(String.format(
+                    "Expected a single constructor annotated with '@%s'.", OutputCustomType.Constructor.class.getSimpleName()
+            ))); // validated before
 
             //noinspection unchecked
             var argumentsMap = (Map<String, Object>) tryEnsureType(context, value, TypeShape.of(Map.class));
             var constructorParameters = constructor.getParameters();
             var arguments = new Object[constructorParameters.length];
 
-            // Validate that the constructor is annotated properly before doing anything else
-            if (constructorParameters.length != constructorAnnotation.value().length) {
-                throw new IllegalArgumentException(String.format(
-                        "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                "and the number of constructor parameters matching the annotated parameter names. " +
-                                "Constructor '%s' has '%d' parameters, and '%d' names(s) in the annotation.",
-                        targetType.getTypeName(),
-                        OutputCustomType.class.getTypeName(),
-                        OutputCustomType.Constructor.class.getTypeName(),
-                        constructor,
-                        constructorParameters.length,
-                        constructorAnnotation.value().length
-                ));
-            }
-
             // Validate that we can decode the argument we've received
-            var expectedParameterNames =
-                    Arrays.stream(constructorAnnotation.value())
-                            .map(x -> fixupMangledName(x))
-                            .collect(Collectors.toSet());
+            var expectedParameterNames = Arrays.stream(constructorParameters)
+                    .map(p -> Optional.ofNullable(p.getAnnotation(OutputCustomType.Parameter.class)))
+                    .filter(Optional::isPresent)
+                    .map(p -> p.get().value())
+                    .collect(toSet());
             for (var argumentName : argumentsMap.keySet()) {
                 if (!expectedParameterNames.contains(argumentName)) {
-                    System.out.printf("can't deserialize: '%s'\n", argumentName);
-                    throw new IllegalStateException(String.format(
+                    throw new IllegalArgumentException(String.format(
                             "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
                                     "and the parameter names in the annotation matching the parameters being deserialized. " +
                                     "Constructor '%s' expects parameter names of: '%s', " +
-                                    "but can't deserialize: '%s'",
+                                    "but does not expect: '%s'. Unable to deserialize.",
                             targetType.getTypeName(),
                             OutputCustomType.class.getTypeName(),
                             OutputCustomType.Constructor.class.getTypeName(),
@@ -327,15 +314,33 @@ public class Converter {
             }
             for (int i = 0, n = constructorParameters.length; i < n; i++) {
                 var parameter = constructorParameters[i];
-                var parameterName = fixupMangledName(constructorAnnotation.value()[i]); // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
+                // we cannot use parameter.getName(), because it will be just e.g. 'arg0'
+                var parameterName = Optional.ofNullable(
+                        parameter.getAnnotation(OutputCustomType.Parameter.class)
+                ).map(OutputCustomType.Parameter::value);
+
+                if (parameterName.isEmpty()) {
+                    throw new IllegalArgumentException(String.format(
+                            "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
+                                    "and the parameter names in the parameter annotation matching the parameters being deserialized. " +
+                                    "Constructor '%s' parameter nr %d (starting from 0) lacks @%s annotation, " +
+                                    "but it is required to deserialize.",
+                            targetType.getTypeName(),
+                            OutputCustomType.class.getTypeName(),
+                            OutputCustomType.Constructor.class.getTypeName(),
+                            constructor,
+                            i,
+                            OutputCustomType.Parameter.class.getSimpleName()
+                    ));
+                }
 
                 // Note: tryGetValue may not find a value here.
                 // That can happen for things like unknown values.
                 // That's ok. We'll set the argument as null.
-                var argValue = Maps.tryGetValue(argumentsMap, parameterName);
+                var argValue = Maps.tryGetValue(argumentsMap, parameterName.get());
                 if (argValue.isPresent()) {
                     arguments[i] = tryConvertObjectInner(
-                            String.format("%s(%s)", targetType.getTypeName(), parameterName),
+                            String.format("%s(%s)", targetType.getTypeName(), parameterName.get()),
                             argValue,
                             TypeShape.extract(parameter)
                     );
@@ -344,14 +349,14 @@ public class Converter {
                     if (!parameter.isAnnotationPresent(Nullable.class)) {
                         log.debug(String.format(
                                 "Expected type '%s' (annotated with '%s') to provide a constructor annotated with '%s', " +
-                                        "and the parameter names in the annotation matching the parameters being deserialized. " +
+                                        "and the parameter names in the parameter annotation matching the parameters being deserialized. " +
                                         "Constructor '%s' parameter named '%s' (nr %d starting from 0) lacks @%s annotation, " +
                                         "so the value is required, but there is no value to deserialize.",
                                 targetType.getTypeName(),
                                 OutputCustomType.class.getTypeName(),
                                 OutputCustomType.Constructor.class.getTypeName(),
                                 constructor,
-                                parameterName,
+                                parameterName.get(),
                                 i,
                                 Nullable.class.getTypeName()
                         ));
@@ -373,15 +378,6 @@ public class Converter {
                     "Unexpected target type '%s' when deserializing '%s'", targetType.getTypeName(), context
             ));
         }
-    }
-
-    // TODO[pulumi/pulumi-java#218] once the issue with mangled names
-    // is fixed systematically, remove this function.
-    private String fixupMangledName(String name) {
-        if (name != null && name.startsWith("$")) {
-            return name.substring(1);
-        }
-        return name;
     }
 
     private JsonElement tryConvertJsonElement(String context, Object value) {

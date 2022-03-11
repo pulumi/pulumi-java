@@ -20,10 +20,10 @@ public final class SDKInfoResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"language","version"})
+    @OutputCustomType.Constructor
     private SDKInfoResponse(
-        String language,
-        String version) {
+        @OutputCustomType.Parameter("language") String language,
+        @OutputCustomType.Parameter("version") String version) {
         this.language = language;
         this.version = version;
     }
@@ -65,12 +65,12 @@ public final class SDKInfoResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setLanguage(String language) {
+        public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

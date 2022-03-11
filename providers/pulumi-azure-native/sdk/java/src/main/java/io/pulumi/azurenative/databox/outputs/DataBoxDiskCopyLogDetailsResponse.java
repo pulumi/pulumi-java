@@ -31,12 +31,12 @@ public final class DataBoxDiskCopyLogDetailsResponse {
      */
     private final String verboseLogLink;
 
-    @OutputCustomType.Constructor({"copyLogDetailsType","diskSerialNumber","errorLogLink","verboseLogLink"})
+    @OutputCustomType.Constructor
     private DataBoxDiskCopyLogDetailsResponse(
-        String copyLogDetailsType,
-        String diskSerialNumber,
-        String errorLogLink,
-        String verboseLogLink) {
+        @OutputCustomType.Parameter("copyLogDetailsType") String copyLogDetailsType,
+        @OutputCustomType.Parameter("diskSerialNumber") String diskSerialNumber,
+        @OutputCustomType.Parameter("errorLogLink") String errorLogLink,
+        @OutputCustomType.Parameter("verboseLogLink") String verboseLogLink) {
         this.copyLogDetailsType = copyLogDetailsType;
         this.diskSerialNumber = diskSerialNumber;
         this.errorLogLink = errorLogLink;
@@ -99,22 +99,22 @@ public final class DataBoxDiskCopyLogDetailsResponse {
     	      this.verboseLogLink = defaults.verboseLogLink;
         }
 
-        public Builder setCopyLogDetailsType(String copyLogDetailsType) {
+        public Builder copyLogDetailsType(String copyLogDetailsType) {
             this.copyLogDetailsType = Objects.requireNonNull(copyLogDetailsType);
             return this;
         }
 
-        public Builder setDiskSerialNumber(String diskSerialNumber) {
+        public Builder diskSerialNumber(String diskSerialNumber) {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }
 
-        public Builder setErrorLogLink(String errorLogLink) {
+        public Builder errorLogLink(String errorLogLink) {
             this.errorLogLink = Objects.requireNonNull(errorLogLink);
             return this;
         }
 
-        public Builder setVerboseLogLink(String verboseLogLink) {
+        public Builder verboseLogLink(String verboseLogLink) {
             this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
             return this;
         }

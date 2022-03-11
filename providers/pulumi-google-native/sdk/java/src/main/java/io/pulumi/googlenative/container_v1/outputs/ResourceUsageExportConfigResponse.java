@@ -27,11 +27,11 @@ public final class ResourceUsageExportConfigResponse {
      */
     private final Boolean enableNetworkEgressMetering;
 
-    @OutputCustomType.Constructor({"bigqueryDestination","consumptionMeteringConfig","enableNetworkEgressMetering"})
+    @OutputCustomType.Constructor
     private ResourceUsageExportConfigResponse(
-        BigQueryDestinationResponse bigqueryDestination,
-        ConsumptionMeteringConfigResponse consumptionMeteringConfig,
-        Boolean enableNetworkEgressMetering) {
+        @OutputCustomType.Parameter("bigqueryDestination") BigQueryDestinationResponse bigqueryDestination,
+        @OutputCustomType.Parameter("consumptionMeteringConfig") ConsumptionMeteringConfigResponse consumptionMeteringConfig,
+        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering) {
         this.bigqueryDestination = bigqueryDestination;
         this.consumptionMeteringConfig = consumptionMeteringConfig;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
@@ -83,17 +83,17 @@ public final class ResourceUsageExportConfigResponse {
     	      this.enableNetworkEgressMetering = defaults.enableNetworkEgressMetering;
         }
 
-        public Builder setBigqueryDestination(BigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(BigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }
 
-        public Builder setConsumptionMeteringConfig(ConsumptionMeteringConfigResponse consumptionMeteringConfig) {
+        public Builder consumptionMeteringConfig(ConsumptionMeteringConfigResponse consumptionMeteringConfig) {
             this.consumptionMeteringConfig = Objects.requireNonNull(consumptionMeteringConfig);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }

@@ -30,12 +30,12 @@ public final class GetRegionResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"description","endpoint","id","name"})
+    @OutputCustomType.Constructor
     private GetRegionResult(
-        String description,
-        String endpoint,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.description = description;
         this.endpoint = endpoint;
         this.id = id;
@@ -97,22 +97,22 @@ public final class GetRegionResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

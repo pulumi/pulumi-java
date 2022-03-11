@@ -20,10 +20,10 @@ public final class GetPermissionsDatabase {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"catalogId","name"})
+    @OutputCustomType.Constructor
     private GetPermissionsDatabase(
-        String catalogId,
-        String name) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("name") String name) {
         this.catalogId = catalogId;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class GetPermissionsDatabase {
     	      this.name = defaults.name;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

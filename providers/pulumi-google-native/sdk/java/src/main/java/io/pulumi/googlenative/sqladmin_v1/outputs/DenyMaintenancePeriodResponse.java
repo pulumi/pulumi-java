@@ -25,11 +25,11 @@ public final class DenyMaintenancePeriodResponse {
      */
     private final String time;
 
-    @OutputCustomType.Constructor({"endDate","startDate","time"})
+    @OutputCustomType.Constructor
     private DenyMaintenancePeriodResponse(
-        String endDate,
-        String startDate,
-        String time) {
+        @OutputCustomType.Parameter("endDate") String endDate,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("time") String time) {
         this.endDate = endDate;
         this.startDate = startDate;
         this.time = time;
@@ -81,17 +81,17 @@ public final class DenyMaintenancePeriodResponse {
     	      this.time = defaults.time;
         }
 
-        public Builder setEndDate(String endDate) {
+        public Builder endDate(String endDate) {
             this.endDate = Objects.requireNonNull(endDate);
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
-        public Builder setTime(String time) {
+        public Builder time(String time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

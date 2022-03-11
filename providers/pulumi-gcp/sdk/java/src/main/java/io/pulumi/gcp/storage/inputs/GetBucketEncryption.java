@@ -47,7 +47,7 @@ public final class GetBucketEncryption extends io.pulumi.resources.InvokeArgs {
     	      this.defaultKmsKeyName = defaults.defaultKmsKeyName;
         }
 
-        public Builder setDefaultKmsKeyName(String defaultKmsKeyName) {
+        public Builder defaultKmsKeyName(String defaultKmsKeyName) {
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }

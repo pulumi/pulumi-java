@@ -38,13 +38,13 @@ public final class StorageConfigurationSettingsResponse {
      */
     private final @Nullable String storageWorkloadType;
 
-    @OutputCustomType.Constructor({"diskConfigurationType","sqlDataSettings","sqlLogSettings","sqlTempDbSettings","storageWorkloadType"})
+    @OutputCustomType.Constructor
     private StorageConfigurationSettingsResponse(
-        @Nullable String diskConfigurationType,
-        @Nullable SQLStorageSettingsResponse sqlDataSettings,
-        @Nullable SQLStorageSettingsResponse sqlLogSettings,
-        @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
-        @Nullable String storageWorkloadType) {
+        @OutputCustomType.Parameter("diskConfigurationType") @Nullable String diskConfigurationType,
+        @OutputCustomType.Parameter("sqlDataSettings") @Nullable SQLStorageSettingsResponse sqlDataSettings,
+        @OutputCustomType.Parameter("sqlLogSettings") @Nullable SQLStorageSettingsResponse sqlLogSettings,
+        @OutputCustomType.Parameter("sqlTempDbSettings") @Nullable SQLStorageSettingsResponse sqlTempDbSettings,
+        @OutputCustomType.Parameter("storageWorkloadType") @Nullable String storageWorkloadType) {
         this.diskConfigurationType = diskConfigurationType;
         this.sqlDataSettings = sqlDataSettings;
         this.sqlLogSettings = sqlLogSettings;
@@ -116,27 +116,27 @@ public final class StorageConfigurationSettingsResponse {
     	      this.storageWorkloadType = defaults.storageWorkloadType;
         }
 
-        public Builder setDiskConfigurationType(@Nullable String diskConfigurationType) {
+        public Builder diskConfigurationType(@Nullable String diskConfigurationType) {
             this.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
-        public Builder setSqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
+        public Builder sqlDataSettings(@Nullable SQLStorageSettingsResponse sqlDataSettings) {
             this.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
-        public Builder setSqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
+        public Builder sqlLogSettings(@Nullable SQLStorageSettingsResponse sqlLogSettings) {
             this.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
-        public Builder setSqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
+        public Builder sqlTempDbSettings(@Nullable SQLStorageSettingsResponse sqlTempDbSettings) {
             this.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
-        public Builder setStorageWorkloadType(@Nullable String storageWorkloadType) {
+        public Builder storageWorkloadType(@Nullable String storageWorkloadType) {
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }

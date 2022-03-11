@@ -25,11 +25,11 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"day","duration","startTime"})
+    @OutputCustomType.Constructor
     private ResourcePolicyWeeklyCycleDayOfWeekResponse(
-        String day,
-        String duration,
-        String startTime) {
+        @OutputCustomType.Parameter("day") String day,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.day = day;
         this.duration = duration;
         this.startTime = startTime;
@@ -81,17 +81,17 @@ public final class ResourcePolicyWeeklyCycleDayOfWeekResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDay(String day) {
+        public Builder day(String day) {
             this.day = Objects.requireNonNull(day);
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

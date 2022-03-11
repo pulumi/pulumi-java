@@ -16,8 +16,8 @@ public final class OperationErrorResponse {
      */
     private final List<OperationErrorErrorsItemResponse> errors;
 
-    @OutputCustomType.Constructor({"errors"})
-    private OperationErrorResponse(List<OperationErrorErrorsItemResponse> errors) {
+    @OutputCustomType.Constructor
+    private OperationErrorResponse(@OutputCustomType.Parameter("errors") List<OperationErrorErrorsItemResponse> errors) {
         this.errors = errors;
     }
 
@@ -49,7 +49,7 @@ public final class OperationErrorResponse {
     	      this.errors = defaults.errors;
         }
 
-        public Builder setErrors(List<OperationErrorErrorsItemResponse> errors) {
+        public Builder errors(List<OperationErrorErrorsItemResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }

@@ -23,10 +23,10 @@ public final class WorkflowTemplatePlacementClusterSelector {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"clusterLabels","zone"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementClusterSelector(
-        Map<String,String> clusterLabels,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("clusterLabels") Map<String,String> clusterLabels,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.clusterLabels = clusterLabels;
         this.zone = zone;
     }
@@ -68,12 +68,12 @@ public final class WorkflowTemplatePlacementClusterSelector {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setClusterLabels(Map<String,String> clusterLabels) {
+        public Builder clusterLabels(Map<String,String> clusterLabels) {
             this.clusterLabels = Objects.requireNonNull(clusterLabels);
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

@@ -33,12 +33,12 @@ public final class SubjectAccessReviewStatus {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"allowed","denied","evaluationError","reason"})
+    @OutputCustomType.Constructor
     private SubjectAccessReviewStatus(
-        Boolean allowed,
-        @Nullable Boolean denied,
-        @Nullable String evaluationError,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("allowed") Boolean allowed,
+        @OutputCustomType.Parameter("denied") @Nullable Boolean denied,
+        @OutputCustomType.Parameter("evaluationError") @Nullable String evaluationError,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.allowed = allowed;
         this.denied = denied;
         this.evaluationError = evaluationError;
@@ -100,22 +100,22 @@ public final class SubjectAccessReviewStatus {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setAllowed(Boolean allowed) {
+        public Builder allowed(Boolean allowed) {
             this.allowed = Objects.requireNonNull(allowed);
             return this;
         }
 
-        public Builder setDenied(@Nullable Boolean denied) {
+        public Builder denied(@Nullable Boolean denied) {
             this.denied = denied;
             return this;
         }
 
-        public Builder setEvaluationError(@Nullable String evaluationError) {
+        public Builder evaluationError(@Nullable String evaluationError) {
             this.evaluationError = evaluationError;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }

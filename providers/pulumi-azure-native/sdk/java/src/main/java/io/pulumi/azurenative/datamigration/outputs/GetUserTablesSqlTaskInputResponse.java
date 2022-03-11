@@ -22,10 +22,10 @@ public final class GetUserTablesSqlTaskInputResponse {
      */
     private final List<String> selectedDatabases;
 
-    @OutputCustomType.Constructor({"connectionInfo","selectedDatabases"})
+    @OutputCustomType.Constructor
     private GetUserTablesSqlTaskInputResponse(
-        SqlConnectionInfoResponse connectionInfo,
-        List<String> selectedDatabases) {
+        @OutputCustomType.Parameter("connectionInfo") SqlConnectionInfoResponse connectionInfo,
+        @OutputCustomType.Parameter("selectedDatabases") List<String> selectedDatabases) {
         this.connectionInfo = connectionInfo;
         this.selectedDatabases = selectedDatabases;
     }
@@ -67,12 +67,12 @@ public final class GetUserTablesSqlTaskInputResponse {
     	      this.selectedDatabases = defaults.selectedDatabases;
         }
 
-        public Builder setConnectionInfo(SqlConnectionInfoResponse connectionInfo) {
+        public Builder connectionInfo(SqlConnectionInfoResponse connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
-        public Builder setSelectedDatabases(List<String> selectedDatabases) {
+        public Builder selectedDatabases(List<String> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }

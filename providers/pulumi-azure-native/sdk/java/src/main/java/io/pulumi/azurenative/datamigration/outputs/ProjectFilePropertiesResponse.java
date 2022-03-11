@@ -38,13 +38,13 @@ public final class ProjectFilePropertiesResponse {
      */
     private final Double size;
 
-    @OutputCustomType.Constructor({"extension","filePath","lastModified","mediaType","size"})
+    @OutputCustomType.Constructor
     private ProjectFilePropertiesResponse(
-        @Nullable String extension,
-        @Nullable String filePath,
-        String lastModified,
-        @Nullable String mediaType,
-        Double size) {
+        @OutputCustomType.Parameter("extension") @Nullable String extension,
+        @OutputCustomType.Parameter("filePath") @Nullable String filePath,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
+        @OutputCustomType.Parameter("size") Double size) {
         this.extension = extension;
         this.filePath = filePath;
         this.lastModified = lastModified;
@@ -116,27 +116,27 @@ public final class ProjectFilePropertiesResponse {
     	      this.size = defaults.size;
         }
 
-        public Builder setExtension(@Nullable String extension) {
+        public Builder extension(@Nullable String extension) {
             this.extension = extension;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setMediaType(@Nullable String mediaType) {
+        public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setSize(Double size) {
+        public Builder size(Double size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

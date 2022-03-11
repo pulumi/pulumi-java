@@ -103,42 +103,42 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     	      this.service = defaults.service;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setPeering(@Nullable Input<String> peering) {
+        public Builder peering(@Nullable Input<String> peering) {
             this.peering = peering;
             return this;
         }
 
-        public Builder setPeering(@Nullable String peering) {
+        public Builder peering(@Nullable String peering) {
             this.peering = Input.ofNullable(peering);
             return this;
         }
 
-        public Builder setReservedPeeringRanges(@Nullable Input<List<String>> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(@Nullable Input<List<String>> reservedPeeringRanges) {
             this.reservedPeeringRanges = reservedPeeringRanges;
             return this;
         }
 
-        public Builder setReservedPeeringRanges(@Nullable List<String> reservedPeeringRanges) {
+        public Builder reservedPeeringRanges(@Nullable List<String> reservedPeeringRanges) {
             this.reservedPeeringRanges = Input.ofNullable(reservedPeeringRanges);
             return this;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }

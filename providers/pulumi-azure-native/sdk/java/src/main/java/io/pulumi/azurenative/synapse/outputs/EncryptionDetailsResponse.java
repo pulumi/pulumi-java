@@ -23,10 +23,10 @@ public final class EncryptionDetailsResponse {
      */
     private final Boolean doubleEncryptionEnabled;
 
-    @OutputCustomType.Constructor({"cmk","doubleEncryptionEnabled"})
+    @OutputCustomType.Constructor
     private EncryptionDetailsResponse(
-        @Nullable CustomerManagedKeyDetailsResponse cmk,
-        Boolean doubleEncryptionEnabled) {
+        @OutputCustomType.Parameter("cmk") @Nullable CustomerManagedKeyDetailsResponse cmk,
+        @OutputCustomType.Parameter("doubleEncryptionEnabled") Boolean doubleEncryptionEnabled) {
         this.cmk = cmk;
         this.doubleEncryptionEnabled = doubleEncryptionEnabled;
     }
@@ -68,12 +68,12 @@ public final class EncryptionDetailsResponse {
     	      this.doubleEncryptionEnabled = defaults.doubleEncryptionEnabled;
         }
 
-        public Builder setCmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
+        public Builder cmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
             this.cmk = cmk;
             return this;
         }
 
-        public Builder setDoubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
+        public Builder doubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
             this.doubleEncryptionEnabled = Objects.requireNonNull(doubleEncryptionEnabled);
             return this;
         }

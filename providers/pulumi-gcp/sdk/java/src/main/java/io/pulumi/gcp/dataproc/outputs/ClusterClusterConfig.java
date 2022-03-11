@@ -121,23 +121,23 @@ public final class ClusterClusterConfig {
      */
     private final @Nullable ClusterClusterConfigWorkerConfig workerConfig;
 
-    @OutputCustomType.Constructor({"autoscalingConfig","bucket","encryptionConfig","endpointConfig","gceClusterConfig","initializationActions","lifecycleConfig","masterConfig","metastoreConfig","preemptibleWorkerConfig","securityConfig","softwareConfig","stagingBucket","tempBucket","workerConfig"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfig(
-        @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
-        @Nullable String bucket,
-        @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
-        @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
-        @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
-        @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
-        @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
-        @Nullable ClusterClusterConfigMasterConfig masterConfig,
-        @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
-        @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
-        @Nullable ClusterClusterConfigSecurityConfig securityConfig,
-        @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
-        @Nullable String stagingBucket,
-        @Nullable String tempBucket,
-        @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
+        @OutputCustomType.Parameter("autoscalingConfig") @Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig,
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("encryptionConfig") @Nullable ClusterClusterConfigEncryptionConfig encryptionConfig,
+        @OutputCustomType.Parameter("endpointConfig") @Nullable ClusterClusterConfigEndpointConfig endpointConfig,
+        @OutputCustomType.Parameter("gceClusterConfig") @Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig,
+        @OutputCustomType.Parameter("initializationActions") @Nullable List<ClusterClusterConfigInitializationAction> initializationActions,
+        @OutputCustomType.Parameter("lifecycleConfig") @Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig,
+        @OutputCustomType.Parameter("masterConfig") @Nullable ClusterClusterConfigMasterConfig masterConfig,
+        @OutputCustomType.Parameter("metastoreConfig") @Nullable ClusterClusterConfigMetastoreConfig metastoreConfig,
+        @OutputCustomType.Parameter("preemptibleWorkerConfig") @Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig,
+        @OutputCustomType.Parameter("securityConfig") @Nullable ClusterClusterConfigSecurityConfig securityConfig,
+        @OutputCustomType.Parameter("softwareConfig") @Nullable ClusterClusterConfigSoftwareConfig softwareConfig,
+        @OutputCustomType.Parameter("stagingBucket") @Nullable String stagingBucket,
+        @OutputCustomType.Parameter("tempBucket") @Nullable String tempBucket,
+        @OutputCustomType.Parameter("workerConfig") @Nullable ClusterClusterConfigWorkerConfig workerConfig) {
         this.autoscalingConfig = autoscalingConfig;
         this.bucket = bucket;
         this.encryptionConfig = encryptionConfig;
@@ -330,77 +330,77 @@ public final class ClusterClusterConfig {
     	      this.workerConfig = defaults.workerConfig;
         }
 
-        public Builder setAutoscalingConfig(@Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig) {
+        public Builder autoscalingConfig(@Nullable ClusterClusterConfigAutoscalingConfig autoscalingConfig) {
             this.autoscalingConfig = autoscalingConfig;
             return this;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setEncryptionConfig(@Nullable ClusterClusterConfigEncryptionConfig encryptionConfig) {
+        public Builder encryptionConfig(@Nullable ClusterClusterConfigEncryptionConfig encryptionConfig) {
             this.encryptionConfig = encryptionConfig;
             return this;
         }
 
-        public Builder setEndpointConfig(@Nullable ClusterClusterConfigEndpointConfig endpointConfig) {
+        public Builder endpointConfig(@Nullable ClusterClusterConfigEndpointConfig endpointConfig) {
             this.endpointConfig = endpointConfig;
             return this;
         }
 
-        public Builder setGceClusterConfig(@Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig) {
+        public Builder gceClusterConfig(@Nullable ClusterClusterConfigGceClusterConfig gceClusterConfig) {
             this.gceClusterConfig = gceClusterConfig;
             return this;
         }
 
-        public Builder setInitializationActions(@Nullable List<ClusterClusterConfigInitializationAction> initializationActions) {
+        public Builder initializationActions(@Nullable List<ClusterClusterConfigInitializationAction> initializationActions) {
             this.initializationActions = initializationActions;
             return this;
         }
 
-        public Builder setLifecycleConfig(@Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig) {
+        public Builder lifecycleConfig(@Nullable ClusterClusterConfigLifecycleConfig lifecycleConfig) {
             this.lifecycleConfig = lifecycleConfig;
             return this;
         }
 
-        public Builder setMasterConfig(@Nullable ClusterClusterConfigMasterConfig masterConfig) {
+        public Builder masterConfig(@Nullable ClusterClusterConfigMasterConfig masterConfig) {
             this.masterConfig = masterConfig;
             return this;
         }
 
-        public Builder setMetastoreConfig(@Nullable ClusterClusterConfigMetastoreConfig metastoreConfig) {
+        public Builder metastoreConfig(@Nullable ClusterClusterConfigMetastoreConfig metastoreConfig) {
             this.metastoreConfig = metastoreConfig;
             return this;
         }
 
-        public Builder setPreemptibleWorkerConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig) {
+        public Builder preemptibleWorkerConfig(@Nullable ClusterClusterConfigPreemptibleWorkerConfig preemptibleWorkerConfig) {
             this.preemptibleWorkerConfig = preemptibleWorkerConfig;
             return this;
         }
 
-        public Builder setSecurityConfig(@Nullable ClusterClusterConfigSecurityConfig securityConfig) {
+        public Builder securityConfig(@Nullable ClusterClusterConfigSecurityConfig securityConfig) {
             this.securityConfig = securityConfig;
             return this;
         }
 
-        public Builder setSoftwareConfig(@Nullable ClusterClusterConfigSoftwareConfig softwareConfig) {
+        public Builder softwareConfig(@Nullable ClusterClusterConfigSoftwareConfig softwareConfig) {
             this.softwareConfig = softwareConfig;
             return this;
         }
 
-        public Builder setStagingBucket(@Nullable String stagingBucket) {
+        public Builder stagingBucket(@Nullable String stagingBucket) {
             this.stagingBucket = stagingBucket;
             return this;
         }
 
-        public Builder setTempBucket(@Nullable String tempBucket) {
+        public Builder tempBucket(@Nullable String tempBucket) {
             this.tempBucket = tempBucket;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable ClusterClusterConfigWorkerConfig workerConfig) {
+        public Builder workerConfig(@Nullable ClusterClusterConfigWorkerConfig workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }

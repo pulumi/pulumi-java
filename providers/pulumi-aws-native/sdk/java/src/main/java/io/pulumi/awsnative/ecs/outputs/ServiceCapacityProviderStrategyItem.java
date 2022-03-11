@@ -16,11 +16,11 @@ public final class ServiceCapacityProviderStrategyItem {
     private final @Nullable String capacityProvider;
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private ServiceCapacityProviderStrategyItem(
-        @Nullable Integer base,
-        @Nullable String capacityProvider,
-        @Nullable Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") @Nullable String capacityProvider,
+        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;
@@ -60,17 +60,17 @@ public final class ServiceCapacityProviderStrategyItem {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = base;
             return this;
         }
 
-        public Builder setCapacityProvider(@Nullable String capacityProvider) {
+        public Builder capacityProvider(@Nullable String capacityProvider) {
             this.capacityProvider = capacityProvider;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = weight;
             return this;
         }

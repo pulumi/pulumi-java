@@ -42,14 +42,14 @@ public final class TopicRuleErrorActionCloudwatchMetric {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"metricName","metricNamespace","metricTimestamp","metricUnit","metricValue","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionCloudwatchMetric(
-        String metricName,
-        String metricNamespace,
-        @Nullable String metricTimestamp,
-        String metricUnit,
-        String metricValue,
-        String roleArn) {
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("metricNamespace") String metricNamespace,
+        @OutputCustomType.Parameter("metricTimestamp") @Nullable String metricTimestamp,
+        @OutputCustomType.Parameter("metricUnit") String metricUnit,
+        @OutputCustomType.Parameter("metricValue") String metricValue,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.metricName = metricName;
         this.metricNamespace = metricNamespace;
         this.metricTimestamp = metricTimestamp;
@@ -131,32 +131,32 @@ public final class TopicRuleErrorActionCloudwatchMetric {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setMetricNamespace(String metricNamespace) {
+        public Builder metricNamespace(String metricNamespace) {
             this.metricNamespace = Objects.requireNonNull(metricNamespace);
             return this;
         }
 
-        public Builder setMetricTimestamp(@Nullable String metricTimestamp) {
+        public Builder metricTimestamp(@Nullable String metricTimestamp) {
             this.metricTimestamp = metricTimestamp;
             return this;
         }
 
-        public Builder setMetricUnit(String metricUnit) {
+        public Builder metricUnit(String metricUnit) {
             this.metricUnit = Objects.requireNonNull(metricUnit);
             return this;
         }
 
-        public Builder setMetricValue(String metricValue) {
+        public Builder metricValue(String metricValue) {
             this.metricValue = Objects.requireNonNull(metricValue);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -69,19 +69,19 @@ public final class ListProductDetailsResult {
      */
     private final Boolean vmScaleSetEnabled;
 
-    @OutputCustomType.Constructor({"computeRole","dataDiskImages","galleryPackageBlobSasUri","isSystemExtension","osDiskImage","productKind","supportMultipleExtensions","uri","version","vmOsType","vmScaleSetEnabled"})
+    @OutputCustomType.Constructor
     private ListProductDetailsResult(
-        String computeRole,
-        List<DataDiskImageResponse> dataDiskImages,
-        String galleryPackageBlobSasUri,
-        Boolean isSystemExtension,
-        OsDiskImageResponse osDiskImage,
-        String productKind,
-        Boolean supportMultipleExtensions,
-        String uri,
-        String version,
-        String vmOsType,
-        Boolean vmScaleSetEnabled) {
+        @OutputCustomType.Parameter("computeRole") String computeRole,
+        @OutputCustomType.Parameter("dataDiskImages") List<DataDiskImageResponse> dataDiskImages,
+        @OutputCustomType.Parameter("galleryPackageBlobSasUri") String galleryPackageBlobSasUri,
+        @OutputCustomType.Parameter("isSystemExtension") Boolean isSystemExtension,
+        @OutputCustomType.Parameter("osDiskImage") OsDiskImageResponse osDiskImage,
+        @OutputCustomType.Parameter("productKind") String productKind,
+        @OutputCustomType.Parameter("supportMultipleExtensions") Boolean supportMultipleExtensions,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("vmOsType") String vmOsType,
+        @OutputCustomType.Parameter("vmScaleSetEnabled") Boolean vmScaleSetEnabled) {
         this.computeRole = computeRole;
         this.dataDiskImages = dataDiskImages;
         this.galleryPackageBlobSasUri = galleryPackageBlobSasUri;
@@ -213,57 +213,57 @@ public final class ListProductDetailsResult {
     	      this.vmScaleSetEnabled = defaults.vmScaleSetEnabled;
         }
 
-        public Builder setComputeRole(String computeRole) {
+        public Builder computeRole(String computeRole) {
             this.computeRole = Objects.requireNonNull(computeRole);
             return this;
         }
 
-        public Builder setDataDiskImages(List<DataDiskImageResponse> dataDiskImages) {
+        public Builder dataDiskImages(List<DataDiskImageResponse> dataDiskImages) {
             this.dataDiskImages = Objects.requireNonNull(dataDiskImages);
             return this;
         }
 
-        public Builder setGalleryPackageBlobSasUri(String galleryPackageBlobSasUri) {
+        public Builder galleryPackageBlobSasUri(String galleryPackageBlobSasUri) {
             this.galleryPackageBlobSasUri = Objects.requireNonNull(galleryPackageBlobSasUri);
             return this;
         }
 
-        public Builder setIsSystemExtension(Boolean isSystemExtension) {
+        public Builder isSystemExtension(Boolean isSystemExtension) {
             this.isSystemExtension = Objects.requireNonNull(isSystemExtension);
             return this;
         }
 
-        public Builder setOsDiskImage(OsDiskImageResponse osDiskImage) {
+        public Builder osDiskImage(OsDiskImageResponse osDiskImage) {
             this.osDiskImage = Objects.requireNonNull(osDiskImage);
             return this;
         }
 
-        public Builder setProductKind(String productKind) {
+        public Builder productKind(String productKind) {
             this.productKind = Objects.requireNonNull(productKind);
             return this;
         }
 
-        public Builder setSupportMultipleExtensions(Boolean supportMultipleExtensions) {
+        public Builder supportMultipleExtensions(Boolean supportMultipleExtensions) {
             this.supportMultipleExtensions = Objects.requireNonNull(supportMultipleExtensions);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVmOsType(String vmOsType) {
+        public Builder vmOsType(String vmOsType) {
             this.vmOsType = Objects.requireNonNull(vmOsType);
             return this;
         }
 
-        public Builder setVmScaleSetEnabled(Boolean vmScaleSetEnabled) {
+        public Builder vmScaleSetEnabled(Boolean vmScaleSetEnabled) {
             this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
             return this;
         }

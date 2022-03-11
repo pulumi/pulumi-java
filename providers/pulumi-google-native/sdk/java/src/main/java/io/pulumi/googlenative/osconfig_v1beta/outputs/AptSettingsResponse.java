@@ -26,11 +26,11 @@ public final class AptSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"excludes","exclusivePackages","type"})
+    @OutputCustomType.Constructor
     private AptSettingsResponse(
-        List<String> excludes,
-        List<String> exclusivePackages,
-        String type) {
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePackages") List<String> exclusivePackages,
+        @OutputCustomType.Parameter("type") String type) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.type = type;
@@ -82,17 +82,17 @@ public final class AptSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setExcludes(List<String> excludes) {
+        public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
 
-        public Builder setExclusivePackages(List<String> exclusivePackages) {
+        public Builder exclusivePackages(List<String> exclusivePackages) {
             this.exclusivePackages = Objects.requireNonNull(exclusivePackages);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

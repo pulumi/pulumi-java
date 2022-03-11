@@ -76,22 +76,22 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(Input<DeploymentTargetConfigArgs> config) {
+        public Builder config(Input<DeploymentTargetConfigArgs> config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setConfig(DeploymentTargetConfigArgs config) {
+        public Builder config(DeploymentTargetConfigArgs config) {
             this.config = Input.of(Objects.requireNonNull(config));
             return this;
         }
 
-        public Builder setImports(@Nullable Input<List<DeploymentTargetImportArgs>> imports) {
+        public Builder imports(@Nullable Input<List<DeploymentTargetImportArgs>> imports) {
             this.imports = imports;
             return this;
         }
 
-        public Builder setImports(@Nullable List<DeploymentTargetImportArgs> imports) {
+        public Builder imports(@Nullable List<DeploymentTargetImportArgs> imports) {
             this.imports = Input.ofNullable(imports);
             return this;
         }

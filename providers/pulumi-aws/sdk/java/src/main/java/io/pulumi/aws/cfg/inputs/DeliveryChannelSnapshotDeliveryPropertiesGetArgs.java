@@ -53,12 +53,12 @@ public final class DeliveryChannelSnapshotDeliveryPropertiesGetArgs extends io.p
     	      this.deliveryFrequency = defaults.deliveryFrequency;
         }
 
-        public Builder setDeliveryFrequency(@Nullable Input<String> deliveryFrequency) {
+        public Builder deliveryFrequency(@Nullable Input<String> deliveryFrequency) {
             this.deliveryFrequency = deliveryFrequency;
             return this;
         }
 
-        public Builder setDeliveryFrequency(@Nullable String deliveryFrequency) {
+        public Builder deliveryFrequency(@Nullable String deliveryFrequency) {
             this.deliveryFrequency = Input.ofNullable(deliveryFrequency);
             return this;
         }

@@ -22,10 +22,10 @@ public final class LaunchProfileStreamingSessionStorageRoot {
      */
     private final @Nullable String windows;
 
-    @OutputCustomType.Constructor({"linux","windows"})
+    @OutputCustomType.Constructor
     private LaunchProfileStreamingSessionStorageRoot(
-        @Nullable String linux,
-        @Nullable String windows) {
+        @OutputCustomType.Parameter("linux") @Nullable String linux,
+        @OutputCustomType.Parameter("windows") @Nullable String windows) {
         this.linux = linux;
         this.windows = windows;
     }
@@ -67,12 +67,12 @@ public final class LaunchProfileStreamingSessionStorageRoot {
     	      this.windows = defaults.windows;
         }
 
-        public Builder setLinux(@Nullable String linux) {
+        public Builder linux(@Nullable String linux) {
             this.linux = linux;
             return this;
         }
 
-        public Builder setWindows(@Nullable String windows) {
+        public Builder windows(@Nullable String windows) {
             this.windows = windows;
             return this;
         }

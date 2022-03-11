@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
      */
     private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
-    @OutputCustomType.Constructor({"infoTypeTransformations","recordTransformations","transformationErrorHandling"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DeidentifyConfigResponse(
-        GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
-        GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
-        GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
+        @OutputCustomType.Parameter("infoTypeTransformations") GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations,
+        @OutputCustomType.Parameter("recordTransformations") GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations,
+        @OutputCustomType.Parameter("transformationErrorHandling") GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
         this.infoTypeTransformations = infoTypeTransformations;
         this.recordTransformations = recordTransformations;
         this.transformationErrorHandling = transformationErrorHandling;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
     	      this.transformationErrorHandling = defaults.transformationErrorHandling;
         }
 
-        public Builder setInfoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
+        public Builder infoTypeTransformations(GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }
 
-        public Builder setRecordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
+        public Builder recordTransformations(GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations) {
             this.recordTransformations = Objects.requireNonNull(recordTransformations);
             return this;
         }
 
-        public Builder setTransformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
+        public Builder transformationErrorHandling(GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling) {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }

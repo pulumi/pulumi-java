@@ -28,11 +28,11 @@ public final class BucketTopicConfiguration {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"event","filter","topic"})
+    @OutputCustomType.Constructor
     private BucketTopicConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String topic) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.event = event;
         this.filter = filter;
         this.topic = topic;
@@ -84,17 +84,17 @@ public final class BucketTopicConfiguration {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilter filter) {
+        public Builder filter(@Nullable BucketNotificationFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

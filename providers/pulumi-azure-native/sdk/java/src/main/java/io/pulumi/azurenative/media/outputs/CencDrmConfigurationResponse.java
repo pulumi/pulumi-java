@@ -23,10 +23,10 @@ public final class CencDrmConfigurationResponse {
      */
     private final @Nullable StreamingPolicyWidevineConfigurationResponse widevine;
 
-    @OutputCustomType.Constructor({"playReady","widevine"})
+    @OutputCustomType.Constructor
     private CencDrmConfigurationResponse(
-        @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
-        @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        @OutputCustomType.Parameter("playReady") @Nullable StreamingPolicyPlayReadyConfigurationResponse playReady,
+        @OutputCustomType.Parameter("widevine") @Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
         this.playReady = playReady;
         this.widevine = widevine;
     }
@@ -68,12 +68,12 @@ public final class CencDrmConfigurationResponse {
     	      this.widevine = defaults.widevine;
         }
 
-        public Builder setPlayReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
+        public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationResponse playReady) {
             this.playReady = playReady;
             return this;
         }
 
-        public Builder setWidevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
+        public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationResponse widevine) {
             this.widevine = widevine;
             return this;
         }

@@ -109,42 +109,42 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable Input<RuleGroupRuleActionAllowPropertiesArgs> allow) {
+        public Builder allow(@Nullable Input<RuleGroupRuleActionAllowPropertiesArgs> allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setAllow(@Nullable RuleGroupRuleActionAllowPropertiesArgs allow) {
+        public Builder allow(@Nullable RuleGroupRuleActionAllowPropertiesArgs allow) {
             this.allow = Input.ofNullable(allow);
             return this;
         }
 
-        public Builder setBlock(@Nullable Input<RuleGroupRuleActionBlockPropertiesArgs> block) {
+        public Builder block(@Nullable Input<RuleGroupRuleActionBlockPropertiesArgs> block) {
             this.block = block;
             return this;
         }
 
-        public Builder setBlock(@Nullable RuleGroupRuleActionBlockPropertiesArgs block) {
+        public Builder block(@Nullable RuleGroupRuleActionBlockPropertiesArgs block) {
             this.block = Input.ofNullable(block);
             return this;
         }
 
-        public Builder setCaptcha(@Nullable Input<RuleGroupRuleActionCaptchaPropertiesArgs> captcha) {
+        public Builder captcha(@Nullable Input<RuleGroupRuleActionCaptchaPropertiesArgs> captcha) {
             this.captcha = captcha;
             return this;
         }
 
-        public Builder setCaptcha(@Nullable RuleGroupRuleActionCaptchaPropertiesArgs captcha) {
+        public Builder captcha(@Nullable RuleGroupRuleActionCaptchaPropertiesArgs captcha) {
             this.captcha = Input.ofNullable(captcha);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<RuleGroupRuleActionCountPropertiesArgs> count) {
+        public Builder count(@Nullable Input<RuleGroupRuleActionCountPropertiesArgs> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable RuleGroupRuleActionCountPropertiesArgs count) {
+        public Builder count(@Nullable RuleGroupRuleActionCountPropertiesArgs count) {
             this.count = Input.ofNullable(count);
             return this;
         }

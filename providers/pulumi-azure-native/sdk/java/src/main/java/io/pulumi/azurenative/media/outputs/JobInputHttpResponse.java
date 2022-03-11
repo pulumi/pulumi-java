@@ -56,15 +56,15 @@ public final class JobInputHttpResponse {
      */
     private final @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start;
 
-    @OutputCustomType.Constructor({"baseUri","end","files","inputDefinitions","label","odataType","start"})
+    @OutputCustomType.Constructor
     private JobInputHttpResponse(
-        @Nullable String baseUri,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
-        @Nullable List<String> files,
-        @Nullable List<Object> inputDefinitions,
-        @Nullable String label,
-        String odataType,
-        @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        @OutputCustomType.Parameter("baseUri") @Nullable String baseUri,
+        @OutputCustomType.Parameter("end") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end,
+        @OutputCustomType.Parameter("files") @Nullable List<String> files,
+        @OutputCustomType.Parameter("inputDefinitions") @Nullable List<Object> inputDefinitions,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("start") @Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
         this.baseUri = baseUri;
         this.end = end;
         this.files = files;
@@ -157,37 +157,37 @@ public final class JobInputHttpResponse {
     	      this.start = defaults.start;
         }
 
-        public Builder setBaseUri(@Nullable String baseUri) {
+        public Builder baseUri(@Nullable String baseUri) {
             this.baseUri = baseUri;
             return this;
         }
 
-        public Builder setEnd(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
+        public Builder end(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> end) {
             this.end = end;
             return this;
         }
 
-        public Builder setFiles(@Nullable List<String> files) {
+        public Builder files(@Nullable List<String> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setInputDefinitions(@Nullable List<Object> inputDefinitions) {
+        public Builder inputDefinitions(@Nullable List<Object> inputDefinitions) {
             this.inputDefinitions = inputDefinitions;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setStart(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
+        public Builder start(@Nullable Either<AbsoluteClipTimeResponse,UtcClipTimeResponse> start) {
             this.start = start;
             return this;
         }

@@ -27,11 +27,11 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String keyVaultArmId;
 
-    @OutputCustomType.Constructor({"identityClientId","keyIdentifier","keyVaultArmId"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @Nullable String identityClientId,
-        String keyIdentifier,
-        String keyVaultArmId) {
+        @OutputCustomType.Parameter("identityClientId") @Nullable String identityClientId,
+        @OutputCustomType.Parameter("keyIdentifier") String keyIdentifier,
+        @OutputCustomType.Parameter("keyVaultArmId") String keyVaultArmId) {
         this.identityClientId = identityClientId;
         this.keyIdentifier = keyIdentifier;
         this.keyVaultArmId = keyVaultArmId;
@@ -83,17 +83,17 @@ public final class KeyVaultPropertiesResponse {
     	      this.keyVaultArmId = defaults.keyVaultArmId;
         }
 
-        public Builder setIdentityClientId(@Nullable String identityClientId) {
+        public Builder identityClientId(@Nullable String identityClientId) {
             this.identityClientId = identityClientId;
             return this;
         }
 
-        public Builder setKeyIdentifier(String keyIdentifier) {
+        public Builder keyIdentifier(String keyIdentifier) {
             this.keyIdentifier = Objects.requireNonNull(keyIdentifier);
             return this;
         }
 
-        public Builder setKeyVaultArmId(String keyVaultArmId) {
+        public Builder keyVaultArmId(String keyVaultArmId) {
             this.keyVaultArmId = Objects.requireNonNull(keyVaultArmId);
             return this;
         }

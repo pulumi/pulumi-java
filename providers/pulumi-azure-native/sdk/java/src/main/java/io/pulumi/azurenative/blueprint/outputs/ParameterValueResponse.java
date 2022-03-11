@@ -23,10 +23,10 @@ public final class ParameterValueResponse {
      */
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"reference","value"})
+    @OutputCustomType.Constructor
     private ParameterValueResponse(
-        @Nullable SecretValueReferenceResponse reference,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("reference") @Nullable SecretValueReferenceResponse reference,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.reference = reference;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class ParameterValueResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setReference(@Nullable SecretValueReferenceResponse reference) {
+        public Builder reference(@Nullable SecretValueReferenceResponse reference) {
             this.reference = reference;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

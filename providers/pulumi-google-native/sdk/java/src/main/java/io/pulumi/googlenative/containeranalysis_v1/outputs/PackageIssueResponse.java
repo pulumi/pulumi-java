@@ -57,17 +57,17 @@ public final class PackageIssueResponse {
      */
     private final String packageType;
 
-    @OutputCustomType.Constructor({"affectedCpeUri","affectedPackage","affectedVersion","effectiveSeverity","fixAvailable","fixedCpeUri","fixedPackage","fixedVersion","packageType"})
+    @OutputCustomType.Constructor
     private PackageIssueResponse(
-        String affectedCpeUri,
-        String affectedPackage,
-        VersionResponse affectedVersion,
-        String effectiveSeverity,
-        Boolean fixAvailable,
-        String fixedCpeUri,
-        String fixedPackage,
-        VersionResponse fixedVersion,
-        String packageType) {
+        @OutputCustomType.Parameter("affectedCpeUri") String affectedCpeUri,
+        @OutputCustomType.Parameter("affectedPackage") String affectedPackage,
+        @OutputCustomType.Parameter("affectedVersion") VersionResponse affectedVersion,
+        @OutputCustomType.Parameter("effectiveSeverity") String effectiveSeverity,
+        @OutputCustomType.Parameter("fixAvailable") Boolean fixAvailable,
+        @OutputCustomType.Parameter("fixedCpeUri") String fixedCpeUri,
+        @OutputCustomType.Parameter("fixedPackage") String fixedPackage,
+        @OutputCustomType.Parameter("fixedVersion") VersionResponse fixedVersion,
+        @OutputCustomType.Parameter("packageType") String packageType) {
         this.affectedCpeUri = affectedCpeUri;
         this.affectedPackage = affectedPackage;
         this.affectedVersion = affectedVersion;
@@ -179,47 +179,47 @@ public final class PackageIssueResponse {
     	      this.packageType = defaults.packageType;
         }
 
-        public Builder setAffectedCpeUri(String affectedCpeUri) {
+        public Builder affectedCpeUri(String affectedCpeUri) {
             this.affectedCpeUri = Objects.requireNonNull(affectedCpeUri);
             return this;
         }
 
-        public Builder setAffectedPackage(String affectedPackage) {
+        public Builder affectedPackage(String affectedPackage) {
             this.affectedPackage = Objects.requireNonNull(affectedPackage);
             return this;
         }
 
-        public Builder setAffectedVersion(VersionResponse affectedVersion) {
+        public Builder affectedVersion(VersionResponse affectedVersion) {
             this.affectedVersion = Objects.requireNonNull(affectedVersion);
             return this;
         }
 
-        public Builder setEffectiveSeverity(String effectiveSeverity) {
+        public Builder effectiveSeverity(String effectiveSeverity) {
             this.effectiveSeverity = Objects.requireNonNull(effectiveSeverity);
             return this;
         }
 
-        public Builder setFixAvailable(Boolean fixAvailable) {
+        public Builder fixAvailable(Boolean fixAvailable) {
             this.fixAvailable = Objects.requireNonNull(fixAvailable);
             return this;
         }
 
-        public Builder setFixedCpeUri(String fixedCpeUri) {
+        public Builder fixedCpeUri(String fixedCpeUri) {
             this.fixedCpeUri = Objects.requireNonNull(fixedCpeUri);
             return this;
         }
 
-        public Builder setFixedPackage(String fixedPackage) {
+        public Builder fixedPackage(String fixedPackage) {
             this.fixedPackage = Objects.requireNonNull(fixedPackage);
             return this;
         }
 
-        public Builder setFixedVersion(VersionResponse fixedVersion) {
+        public Builder fixedVersion(VersionResponse fixedVersion) {
             this.fixedVersion = Objects.requireNonNull(fixedVersion);
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }

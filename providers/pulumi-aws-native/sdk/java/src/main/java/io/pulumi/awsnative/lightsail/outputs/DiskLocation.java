@@ -22,10 +22,10 @@ public final class DiskLocation {
      */
     private final @Nullable String regionName;
 
-    @OutputCustomType.Constructor({"availabilityZone","regionName"})
+    @OutputCustomType.Constructor
     private DiskLocation(
-        @Nullable String availabilityZone,
-        @Nullable String regionName) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("regionName") @Nullable String regionName) {
         this.availabilityZone = availabilityZone;
         this.regionName = regionName;
     }
@@ -67,12 +67,12 @@ public final class DiskLocation {
     	      this.regionName = defaults.regionName;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setRegionName(@Nullable String regionName) {
+        public Builder regionName(@Nullable String regionName) {
             this.regionName = regionName;
             return this;
         }

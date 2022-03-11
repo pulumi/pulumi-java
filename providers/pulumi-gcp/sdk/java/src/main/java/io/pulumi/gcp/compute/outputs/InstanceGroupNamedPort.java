@@ -21,10 +21,10 @@ public final class InstanceGroupNamedPort {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private InstanceGroupNamedPort(
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.name = name;
         this.port = port;
     }
@@ -66,12 +66,12 @@ public final class InstanceGroupNamedPort {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

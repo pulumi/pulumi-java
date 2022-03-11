@@ -27,11 +27,11 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
      */
     private final @Nullable String smsMessage;
 
-    @OutputCustomType.Constructor({"emailMessage","emailSubject","smsMessage"})
+    @OutputCustomType.Constructor
     private UserPoolAdminCreateUserConfigInviteMessageTemplate(
-        @Nullable String emailMessage,
-        @Nullable String emailSubject,
-        @Nullable String smsMessage) {
+        @OutputCustomType.Parameter("emailMessage") @Nullable String emailMessage,
+        @OutputCustomType.Parameter("emailSubject") @Nullable String emailSubject,
+        @OutputCustomType.Parameter("smsMessage") @Nullable String smsMessage) {
         this.emailMessage = emailMessage;
         this.emailSubject = emailSubject;
         this.smsMessage = smsMessage;
@@ -83,17 +83,17 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplate {
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder setEmailMessage(@Nullable String emailMessage) {
+        public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable String smsMessage) {
+        public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }

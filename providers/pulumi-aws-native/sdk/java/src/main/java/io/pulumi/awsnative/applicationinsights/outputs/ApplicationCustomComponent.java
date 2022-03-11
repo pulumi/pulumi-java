@@ -21,10 +21,10 @@ public final class ApplicationCustomComponent {
      */
     private final List<String> resourceList;
 
-    @OutputCustomType.Constructor({"componentName","resourceList"})
+    @OutputCustomType.Constructor
     private ApplicationCustomComponent(
-        String componentName,
-        List<String> resourceList) {
+        @OutputCustomType.Parameter("componentName") String componentName,
+        @OutputCustomType.Parameter("resourceList") List<String> resourceList) {
         this.componentName = componentName;
         this.resourceList = resourceList;
     }
@@ -66,12 +66,12 @@ public final class ApplicationCustomComponent {
     	      this.resourceList = defaults.resourceList;
         }
 
-        public Builder setComponentName(String componentName) {
+        public Builder componentName(String componentName) {
             this.componentName = Objects.requireNonNull(componentName);
             return this;
         }
 
-        public Builder setResourceList(List<String> resourceList) {
+        public Builder resourceList(List<String> resourceList) {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }

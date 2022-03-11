@@ -16,8 +16,8 @@ public final class ApiConfigOpenapiDocument {
      */
     private final ApiConfigOpenapiDocumentDocument document;
 
-    @OutputCustomType.Constructor({"document"})
-    private ApiConfigOpenapiDocument(ApiConfigOpenapiDocumentDocument document) {
+    @OutputCustomType.Constructor
+    private ApiConfigOpenapiDocument(@OutputCustomType.Parameter("document") ApiConfigOpenapiDocumentDocument document) {
         this.document = document;
     }
 
@@ -50,7 +50,7 @@ public final class ApiConfigOpenapiDocument {
     	      this.document = defaults.document;
         }
 
-        public Builder setDocument(ApiConfigOpenapiDocumentDocument document) {
+        public Builder document(ApiConfigOpenapiDocumentDocument document) {
             this.document = Objects.requireNonNull(document);
             return this;
         }

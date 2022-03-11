@@ -41,14 +41,14 @@ public final class GetLienResult {
      */
     private final List<String> restrictions;
 
-    @OutputCustomType.Constructor({"createTime","name","origin","parent","reason","restrictions"})
+    @OutputCustomType.Constructor
     private GetLienResult(
-        String createTime,
-        String name,
-        String origin,
-        String parent,
-        String reason,
-        List<String> restrictions) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("parent") String parent,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("restrictions") List<String> restrictions) {
         this.createTime = createTime;
         this.name = name;
         this.origin = origin;
@@ -130,32 +130,32 @@ public final class GetLienResult {
     	      this.restrictions = defaults.restrictions;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOrigin(String origin) {
+        public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setParent(String parent) {
+        public Builder parent(String parent) {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setRestrictions(List<String> restrictions) {
+        public Builder restrictions(List<String> restrictions) {
             this.restrictions = Objects.requireNonNull(restrictions);
             return this;
         }

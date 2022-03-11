@@ -103,42 +103,42 @@ public final class VpcIpv6CidrBlockAssociationState extends io.pulumi.resources.
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable Input<String> ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = Input.ofNullable(ipv6CidrBlock);
             return this;
         }
 
-        public Builder setIpv6IpamPoolId(@Nullable Input<String> ipv6IpamPoolId) {
+        public Builder ipv6IpamPoolId(@Nullable Input<String> ipv6IpamPoolId) {
             this.ipv6IpamPoolId = ipv6IpamPoolId;
             return this;
         }
 
-        public Builder setIpv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
+        public Builder ipv6IpamPoolId(@Nullable String ipv6IpamPoolId) {
             this.ipv6IpamPoolId = Input.ofNullable(ipv6IpamPoolId);
             return this;
         }
 
-        public Builder setIpv6NetmaskLength(@Nullable Input<Integer> ipv6NetmaskLength) {
+        public Builder ipv6NetmaskLength(@Nullable Input<Integer> ipv6NetmaskLength) {
             this.ipv6NetmaskLength = ipv6NetmaskLength;
             return this;
         }
 
-        public Builder setIpv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
+        public Builder ipv6NetmaskLength(@Nullable Integer ipv6NetmaskLength) {
             this.ipv6NetmaskLength = Input.ofNullable(ipv6NetmaskLength);
             return this;
         }
 
-        public Builder setVpcId(@Nullable Input<String> vpcId) {
+        public Builder vpcId(@Nullable Input<String> vpcId) {
             this.vpcId = vpcId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }

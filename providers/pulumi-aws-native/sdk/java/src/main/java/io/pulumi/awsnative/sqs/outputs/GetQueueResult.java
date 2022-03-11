@@ -92,23 +92,23 @@ public final class GetQueueResult {
      */
     private final @Nullable Integer visibilityTimeout;
 
-    @OutputCustomType.Constructor({"arn","contentBasedDeduplication","deduplicationScope","delaySeconds","fifoThroughputLimit","kmsDataKeyReusePeriodSeconds","kmsMasterKeyId","maximumMessageSize","messageRetentionPeriod","queueUrl","receiveMessageWaitTimeSeconds","redriveAllowPolicy","redrivePolicy","tags","visibilityTimeout"})
+    @OutputCustomType.Constructor
     private GetQueueResult(
-        @Nullable String arn,
-        @Nullable Boolean contentBasedDeduplication,
-        @Nullable String deduplicationScope,
-        @Nullable Integer delaySeconds,
-        @Nullable String fifoThroughputLimit,
-        @Nullable Integer kmsDataKeyReusePeriodSeconds,
-        @Nullable String kmsMasterKeyId,
-        @Nullable Integer maximumMessageSize,
-        @Nullable Integer messageRetentionPeriod,
-        @Nullable String queueUrl,
-        @Nullable Integer receiveMessageWaitTimeSeconds,
-        @Nullable Object redriveAllowPolicy,
-        @Nullable Object redrivePolicy,
-        @Nullable List<QueueTag> tags,
-        @Nullable Integer visibilityTimeout) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("contentBasedDeduplication") @Nullable Boolean contentBasedDeduplication,
+        @OutputCustomType.Parameter("deduplicationScope") @Nullable String deduplicationScope,
+        @OutputCustomType.Parameter("delaySeconds") @Nullable Integer delaySeconds,
+        @OutputCustomType.Parameter("fifoThroughputLimit") @Nullable String fifoThroughputLimit,
+        @OutputCustomType.Parameter("kmsDataKeyReusePeriodSeconds") @Nullable Integer kmsDataKeyReusePeriodSeconds,
+        @OutputCustomType.Parameter("kmsMasterKeyId") @Nullable String kmsMasterKeyId,
+        @OutputCustomType.Parameter("maximumMessageSize") @Nullable Integer maximumMessageSize,
+        @OutputCustomType.Parameter("messageRetentionPeriod") @Nullable Integer messageRetentionPeriod,
+        @OutputCustomType.Parameter("queueUrl") @Nullable String queueUrl,
+        @OutputCustomType.Parameter("receiveMessageWaitTimeSeconds") @Nullable Integer receiveMessageWaitTimeSeconds,
+        @OutputCustomType.Parameter("redriveAllowPolicy") @Nullable Object redriveAllowPolicy,
+        @OutputCustomType.Parameter("redrivePolicy") @Nullable Object redrivePolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<QueueTag> tags,
+        @OutputCustomType.Parameter("visibilityTimeout") @Nullable Integer visibilityTimeout) {
         this.arn = arn;
         this.contentBasedDeduplication = contentBasedDeduplication;
         this.deduplicationScope = deduplicationScope;
@@ -280,77 +280,77 @@ public final class GetQueueResult {
     	      this.visibilityTimeout = defaults.visibilityTimeout;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setContentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
+        public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
             this.contentBasedDeduplication = contentBasedDeduplication;
             return this;
         }
 
-        public Builder setDeduplicationScope(@Nullable String deduplicationScope) {
+        public Builder deduplicationScope(@Nullable String deduplicationScope) {
             this.deduplicationScope = deduplicationScope;
             return this;
         }
 
-        public Builder setDelaySeconds(@Nullable Integer delaySeconds) {
+        public Builder delaySeconds(@Nullable Integer delaySeconds) {
             this.delaySeconds = delaySeconds;
             return this;
         }
 
-        public Builder setFifoThroughputLimit(@Nullable String fifoThroughputLimit) {
+        public Builder fifoThroughputLimit(@Nullable String fifoThroughputLimit) {
             this.fifoThroughputLimit = fifoThroughputLimit;
             return this;
         }
 
-        public Builder setKmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
+        public Builder kmsDataKeyReusePeriodSeconds(@Nullable Integer kmsDataKeyReusePeriodSeconds) {
             this.kmsDataKeyReusePeriodSeconds = kmsDataKeyReusePeriodSeconds;
             return this;
         }
 
-        public Builder setKmsMasterKeyId(@Nullable String kmsMasterKeyId) {
+        public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
             this.kmsMasterKeyId = kmsMasterKeyId;
             return this;
         }
 
-        public Builder setMaximumMessageSize(@Nullable Integer maximumMessageSize) {
+        public Builder maximumMessageSize(@Nullable Integer maximumMessageSize) {
             this.maximumMessageSize = maximumMessageSize;
             return this;
         }
 
-        public Builder setMessageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
+        public Builder messageRetentionPeriod(@Nullable Integer messageRetentionPeriod) {
             this.messageRetentionPeriod = messageRetentionPeriod;
             return this;
         }
 
-        public Builder setQueueUrl(@Nullable String queueUrl) {
+        public Builder queueUrl(@Nullable String queueUrl) {
             this.queueUrl = queueUrl;
             return this;
         }
 
-        public Builder setReceiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
+        public Builder receiveMessageWaitTimeSeconds(@Nullable Integer receiveMessageWaitTimeSeconds) {
             this.receiveMessageWaitTimeSeconds = receiveMessageWaitTimeSeconds;
             return this;
         }
 
-        public Builder setRedriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
+        public Builder redriveAllowPolicy(@Nullable Object redriveAllowPolicy) {
             this.redriveAllowPolicy = redriveAllowPolicy;
             return this;
         }
 
-        public Builder setRedrivePolicy(@Nullable Object redrivePolicy) {
+        public Builder redrivePolicy(@Nullable Object redrivePolicy) {
             this.redrivePolicy = redrivePolicy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<QueueTag> tags) {
+        public Builder tags(@Nullable List<QueueTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVisibilityTimeout(@Nullable Integer visibilityTimeout) {
+        public Builder visibilityTimeout(@Nullable Integer visibilityTimeout) {
             this.visibilityTimeout = visibilityTimeout;
             return this;
         }

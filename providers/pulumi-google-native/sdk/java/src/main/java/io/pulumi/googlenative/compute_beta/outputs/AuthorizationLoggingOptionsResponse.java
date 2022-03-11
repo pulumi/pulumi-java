@@ -15,8 +15,8 @@ public final class AuthorizationLoggingOptionsResponse {
      */
     private final String permissionType;
 
-    @OutputCustomType.Constructor({"permissionType"})
-    private AuthorizationLoggingOptionsResponse(String permissionType) {
+    @OutputCustomType.Constructor
+    private AuthorizationLoggingOptionsResponse(@OutputCustomType.Parameter("permissionType") String permissionType) {
         this.permissionType = permissionType;
     }
 
@@ -48,7 +48,7 @@ public final class AuthorizationLoggingOptionsResponse {
     	      this.permissionType = defaults.permissionType;
         }
 
-        public Builder setPermissionType(String permissionType) {
+        public Builder permissionType(String permissionType) {
             this.permissionType = Objects.requireNonNull(permissionType);
             return this;
         }

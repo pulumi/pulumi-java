@@ -178,82 +178,82 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
     	      this.testFrequencySec = defaults.testFrequencySec;
         }
 
-        public Builder setHttpConfiguration(@Nullable Input<ConnectionMonitorHttpConfigurationArgs> httpConfiguration) {
+        public Builder httpConfiguration(@Nullable Input<ConnectionMonitorHttpConfigurationArgs> httpConfiguration) {
             this.httpConfiguration = httpConfiguration;
             return this;
         }
 
-        public Builder setHttpConfiguration(@Nullable ConnectionMonitorHttpConfigurationArgs httpConfiguration) {
+        public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationArgs httpConfiguration) {
             this.httpConfiguration = Input.ofNullable(httpConfiguration);
             return this;
         }
 
-        public Builder setIcmpConfiguration(@Nullable Input<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration) {
+        public Builder icmpConfiguration(@Nullable Input<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration) {
             this.icmpConfiguration = icmpConfiguration;
             return this;
         }
 
-        public Builder setIcmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationArgs icmpConfiguration) {
+        public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationArgs icmpConfiguration) {
             this.icmpConfiguration = Input.ofNullable(icmpConfiguration);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPreferredIPVersion(@Nullable Input<Either<String,PreferredIPVersion>> preferredIPVersion) {
+        public Builder preferredIPVersion(@Nullable Input<Either<String,PreferredIPVersion>> preferredIPVersion) {
             this.preferredIPVersion = preferredIPVersion;
             return this;
         }
 
-        public Builder setPreferredIPVersion(@Nullable Either<String,PreferredIPVersion> preferredIPVersion) {
+        public Builder preferredIPVersion(@Nullable Either<String,PreferredIPVersion> preferredIPVersion) {
             this.preferredIPVersion = Input.ofNullable(preferredIPVersion);
             return this;
         }
 
-        public Builder setProtocol(Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol) {
+        public Builder protocol(Input<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProtocol(Either<String,ConnectionMonitorTestConfigurationProtocol> protocol) {
+        public Builder protocol(Either<String,ConnectionMonitorTestConfigurationProtocol> protocol) {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Input<ConnectionMonitorSuccessThresholdArgs> successThreshold) {
+        public Builder successThreshold(@Nullable Input<ConnectionMonitorSuccessThresholdArgs> successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable ConnectionMonitorSuccessThresholdArgs successThreshold) {
+        public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdArgs successThreshold) {
             this.successThreshold = Input.ofNullable(successThreshold);
             return this;
         }
 
-        public Builder setTcpConfiguration(@Nullable Input<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration) {
+        public Builder tcpConfiguration(@Nullable Input<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration) {
             this.tcpConfiguration = tcpConfiguration;
             return this;
         }
 
-        public Builder setTcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationArgs tcpConfiguration) {
+        public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationArgs tcpConfiguration) {
             this.tcpConfiguration = Input.ofNullable(tcpConfiguration);
             return this;
         }
 
-        public Builder setTestFrequencySec(@Nullable Input<Integer> testFrequencySec) {
+        public Builder testFrequencySec(@Nullable Input<Integer> testFrequencySec) {
             this.testFrequencySec = testFrequencySec;
             return this;
         }
 
-        public Builder setTestFrequencySec(@Nullable Integer testFrequencySec) {
+        public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
             this.testFrequencySec = Input.ofNullable(testFrequencySec);
             return this;
         }

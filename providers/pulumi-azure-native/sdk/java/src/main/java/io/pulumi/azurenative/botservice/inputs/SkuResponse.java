@@ -72,12 +72,12 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }

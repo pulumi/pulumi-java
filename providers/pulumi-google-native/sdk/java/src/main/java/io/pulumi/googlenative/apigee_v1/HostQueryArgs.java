@@ -230,122 +230,122 @@ public final class HostQueryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timeRange = defaults.timeRange;
         }
 
-        public Builder setCsvDelimiter(@Nullable Input<String> csvDelimiter) {
+        public Builder csvDelimiter(@Nullable Input<String> csvDelimiter) {
             this.csvDelimiter = csvDelimiter;
             return this;
         }
 
-        public Builder setCsvDelimiter(@Nullable String csvDelimiter) {
+        public Builder csvDelimiter(@Nullable String csvDelimiter) {
             this.csvDelimiter = Input.ofNullable(csvDelimiter);
             return this;
         }
 
-        public Builder setDimensions(@Nullable Input<List<String>> dimensions) {
+        public Builder dimensions(@Nullable Input<List<String>> dimensions) {
             this.dimensions = dimensions;
             return this;
         }
 
-        public Builder setDimensions(@Nullable List<String> dimensions) {
+        public Builder dimensions(@Nullable List<String> dimensions) {
             this.dimensions = Input.ofNullable(dimensions);
             return this;
         }
 
-        public Builder setEnvgroupHostname(@Nullable Input<String> envgroupHostname) {
+        public Builder envgroupHostname(@Nullable Input<String> envgroupHostname) {
             this.envgroupHostname = envgroupHostname;
             return this;
         }
 
-        public Builder setEnvgroupHostname(@Nullable String envgroupHostname) {
+        public Builder envgroupHostname(@Nullable String envgroupHostname) {
             this.envgroupHostname = Input.ofNullable(envgroupHostname);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<String> filter) {
+        public Builder filter(@Nullable Input<String> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setGroupByTimeUnit(@Nullable Input<String> groupByTimeUnit) {
+        public Builder groupByTimeUnit(@Nullable Input<String> groupByTimeUnit) {
             this.groupByTimeUnit = groupByTimeUnit;
             return this;
         }
 
-        public Builder setGroupByTimeUnit(@Nullable String groupByTimeUnit) {
+        public Builder groupByTimeUnit(@Nullable String groupByTimeUnit) {
             this.groupByTimeUnit = Input.ofNullable(groupByTimeUnit);
             return this;
         }
 
-        public Builder setLimit(@Nullable Input<Integer> limit) {
+        public Builder limit(@Nullable Input<Integer> limit) {
             this.limit = limit;
             return this;
         }
 
-        public Builder setLimit(@Nullable Integer limit) {
+        public Builder limit(@Nullable Integer limit) {
             this.limit = Input.ofNullable(limit);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<GoogleCloudApigeeV1QueryMetricArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
+        public Builder metrics(@Nullable List<GoogleCloudApigeeV1QueryMetricArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrganizationId(Input<String> organizationId) {
+        public Builder organizationId(Input<String> organizationId) {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
 
-        public Builder setOrganizationId(String organizationId) {
+        public Builder organizationId(String organizationId) {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder setReportDefinitionId(@Nullable Input<String> reportDefinitionId) {
+        public Builder reportDefinitionId(@Nullable Input<String> reportDefinitionId) {
             this.reportDefinitionId = reportDefinitionId;
             return this;
         }
 
-        public Builder setReportDefinitionId(@Nullable String reportDefinitionId) {
+        public Builder reportDefinitionId(@Nullable String reportDefinitionId) {
             this.reportDefinitionId = Input.ofNullable(reportDefinitionId);
             return this;
         }
 
-        public Builder setTimeRange(Input<Object> timeRange) {
+        public Builder timeRange(Input<Object> timeRange) {
             this.timeRange = Objects.requireNonNull(timeRange);
             return this;
         }
 
-        public Builder setTimeRange(Object timeRange) {
+        public Builder timeRange(Object timeRange) {
             this.timeRange = Input.of(Objects.requireNonNull(timeRange));
             return this;
         }

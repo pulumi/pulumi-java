@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class SpotFleetGroupIdentifier {
     private final String groupId;
 
-    @OutputCustomType.Constructor({"groupId"})
-    private SpotFleetGroupIdentifier(String groupId) {
+    @OutputCustomType.Constructor
+    private SpotFleetGroupIdentifier(@OutputCustomType.Parameter("groupId") String groupId) {
         this.groupId = groupId;
     }
 
@@ -40,7 +40,7 @@ public final class SpotFleetGroupIdentifier {
     	      this.groupId = defaults.groupId;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }

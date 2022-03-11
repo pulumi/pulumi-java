@@ -25,11 +25,11 @@ public final class TimeSeriesRatioResponse {
      */
     private final String totalServiceFilter;
 
-    @OutputCustomType.Constructor({"badServiceFilter","goodServiceFilter","totalServiceFilter"})
+    @OutputCustomType.Constructor
     private TimeSeriesRatioResponse(
-        String badServiceFilter,
-        String goodServiceFilter,
-        String totalServiceFilter) {
+        @OutputCustomType.Parameter("badServiceFilter") String badServiceFilter,
+        @OutputCustomType.Parameter("goodServiceFilter") String goodServiceFilter,
+        @OutputCustomType.Parameter("totalServiceFilter") String totalServiceFilter) {
         this.badServiceFilter = badServiceFilter;
         this.goodServiceFilter = goodServiceFilter;
         this.totalServiceFilter = totalServiceFilter;
@@ -81,17 +81,17 @@ public final class TimeSeriesRatioResponse {
     	      this.totalServiceFilter = defaults.totalServiceFilter;
         }
 
-        public Builder setBadServiceFilter(String badServiceFilter) {
+        public Builder badServiceFilter(String badServiceFilter) {
             this.badServiceFilter = Objects.requireNonNull(badServiceFilter);
             return this;
         }
 
-        public Builder setGoodServiceFilter(String goodServiceFilter) {
+        public Builder goodServiceFilter(String goodServiceFilter) {
             this.goodServiceFilter = Objects.requireNonNull(goodServiceFilter);
             return this;
         }
 
-        public Builder setTotalServiceFilter(String totalServiceFilter) {
+        public Builder totalServiceFilter(String totalServiceFilter) {
             this.totalServiceFilter = Objects.requireNonNull(totalServiceFilter);
             return this;
         }

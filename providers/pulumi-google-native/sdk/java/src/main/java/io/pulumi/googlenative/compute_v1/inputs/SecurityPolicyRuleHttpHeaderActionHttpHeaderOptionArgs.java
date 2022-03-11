@@ -70,22 +70,22 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     	      this.headerValue = defaults.headerValue;
         }
 
-        public Builder setHeaderName(@Nullable Input<String> headerName) {
+        public Builder headerName(@Nullable Input<String> headerName) {
             this.headerName = headerName;
             return this;
         }
 
-        public Builder setHeaderName(@Nullable String headerName) {
+        public Builder headerName(@Nullable String headerName) {
             this.headerName = Input.ofNullable(headerName);
             return this;
         }
 
-        public Builder setHeaderValue(@Nullable Input<String> headerValue) {
+        public Builder headerValue(@Nullable Input<String> headerValue) {
             this.headerValue = headerValue;
             return this;
         }
 
-        public Builder setHeaderValue(@Nullable String headerValue) {
+        public Builder headerValue(@Nullable String headerValue) {
             this.headerValue = Input.ofNullable(headerValue);
             return this;
         }

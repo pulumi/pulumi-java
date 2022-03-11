@@ -22,10 +22,10 @@ public final class BotAssociationLexBot {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"lexRegion","name"})
+    @OutputCustomType.Constructor
     private BotAssociationLexBot(
-        @Nullable String lexRegion,
-        String name) {
+        @OutputCustomType.Parameter("lexRegion") @Nullable String lexRegion,
+        @OutputCustomType.Parameter("name") String name) {
         this.lexRegion = lexRegion;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class BotAssociationLexBot {
     	      this.name = defaults.name;
         }
 
-        public Builder setLexRegion(@Nullable String lexRegion) {
+        public Builder lexRegion(@Nullable String lexRegion) {
             this.lexRegion = lexRegion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

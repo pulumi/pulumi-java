@@ -184,38 +184,38 @@ public final class GetInstanceTemplateResult {
      */
     private final String tagsFingerprint;
 
-    @OutputCustomType.Constructor({"advancedMachineFeatures","canIpForward","confidentialInstanceConfigs","description","disks","enableDisplay","filter","guestAccelerators","id","instanceDescription","labels","machineType","metadata","metadataFingerprint","metadataStartupScript","minCpuPlatform","mostRecent","name","namePrefix","networkInterfaces","networkPerformanceConfigs","project","region","reservationAffinities","schedulings","selfLink","serviceAccounts","shieldedInstanceConfigs","tags","tagsFingerprint"})
+    @OutputCustomType.Constructor
     private GetInstanceTemplateResult(
-        List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures,
-        Boolean canIpForward,
-        List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs,
-        String description,
-        List<GetInstanceTemplateDisk> disks,
-        Boolean enableDisplay,
-        @Nullable String filter,
-        List<GetInstanceTemplateGuestAccelerator> guestAccelerators,
-        String id,
-        String instanceDescription,
-        Map<String,String> labels,
-        String machineType,
-        Map<String,Object> metadata,
-        String metadataFingerprint,
-        String metadataStartupScript,
-        String minCpuPlatform,
-        @Nullable Boolean mostRecent,
-        @Nullable String name,
-        String namePrefix,
-        List<GetInstanceTemplateNetworkInterface> networkInterfaces,
-        List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs,
-        String project,
-        String region,
-        List<GetInstanceTemplateReservationAffinity> reservationAffinities,
-        List<GetInstanceTemplateScheduling> schedulings,
-        String selfLink,
-        List<GetInstanceTemplateServiceAccount> serviceAccounts,
-        List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs,
-        List<String> tags,
-        String tagsFingerprint) {
+        @OutputCustomType.Parameter("advancedMachineFeatures") List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures,
+        @OutputCustomType.Parameter("canIpForward") Boolean canIpForward,
+        @OutputCustomType.Parameter("confidentialInstanceConfigs") List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<GetInstanceTemplateDisk> disks,
+        @OutputCustomType.Parameter("enableDisplay") Boolean enableDisplay,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("guestAccelerators") List<GetInstanceTemplateGuestAccelerator> guestAccelerators,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceDescription") String instanceDescription,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,Object> metadata,
+        @OutputCustomType.Parameter("metadataFingerprint") String metadataFingerprint,
+        @OutputCustomType.Parameter("metadataStartupScript") String metadataStartupScript,
+        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @OutputCustomType.Parameter("mostRecent") @Nullable Boolean mostRecent,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namePrefix") String namePrefix,
+        @OutputCustomType.Parameter("networkInterfaces") List<GetInstanceTemplateNetworkInterface> networkInterfaces,
+        @OutputCustomType.Parameter("networkPerformanceConfigs") List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("reservationAffinities") List<GetInstanceTemplateReservationAffinity> reservationAffinities,
+        @OutputCustomType.Parameter("schedulings") List<GetInstanceTemplateScheduling> schedulings,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceAccounts") List<GetInstanceTemplateServiceAccount> serviceAccounts,
+        @OutputCustomType.Parameter("shieldedInstanceConfigs") List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("tagsFingerprint") String tagsFingerprint) {
         this.advancedMachineFeatures = advancedMachineFeatures;
         this.canIpForward = canIpForward;
         this.confidentialInstanceConfigs = confidentialInstanceConfigs;
@@ -545,152 +545,152 @@ public final class GetInstanceTemplateResult {
     	      this.tagsFingerprint = defaults.tagsFingerprint;
         }
 
-        public Builder setAdvancedMachineFeatures(List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures) {
+        public Builder advancedMachineFeatures(List<GetInstanceTemplateAdvancedMachineFeature> advancedMachineFeatures) {
             this.advancedMachineFeatures = Objects.requireNonNull(advancedMachineFeatures);
             return this;
         }
 
-        public Builder setCanIpForward(Boolean canIpForward) {
+        public Builder canIpForward(Boolean canIpForward) {
             this.canIpForward = Objects.requireNonNull(canIpForward);
             return this;
         }
 
-        public Builder setConfidentialInstanceConfigs(List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs) {
+        public Builder confidentialInstanceConfigs(List<GetInstanceTemplateConfidentialInstanceConfig> confidentialInstanceConfigs) {
             this.confidentialInstanceConfigs = Objects.requireNonNull(confidentialInstanceConfigs);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisks(List<GetInstanceTemplateDisk> disks) {
+        public Builder disks(List<GetInstanceTemplateDisk> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setEnableDisplay(Boolean enableDisplay) {
+        public Builder enableDisplay(Boolean enableDisplay) {
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setGuestAccelerators(List<GetInstanceTemplateGuestAccelerator> guestAccelerators) {
+        public Builder guestAccelerators(List<GetInstanceTemplateGuestAccelerator> guestAccelerators) {
             this.guestAccelerators = Objects.requireNonNull(guestAccelerators);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceDescription(String instanceDescription) {
+        public Builder instanceDescription(String instanceDescription) {
             this.instanceDescription = Objects.requireNonNull(instanceDescription);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,Object> metadata) {
+        public Builder metadata(Map<String,Object> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadataFingerprint(String metadataFingerprint) {
+        public Builder metadataFingerprint(String metadataFingerprint) {
             this.metadataFingerprint = Objects.requireNonNull(metadataFingerprint);
             return this;
         }
 
-        public Builder setMetadataStartupScript(String metadataStartupScript) {
+        public Builder metadataStartupScript(String metadataStartupScript) {
             this.metadataStartupScript = Objects.requireNonNull(metadataStartupScript);
             return this;
         }
 
-        public Builder setMinCpuPlatform(String minCpuPlatform) {
+        public Builder minCpuPlatform(String minCpuPlatform) {
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
 
-        public Builder setMostRecent(@Nullable Boolean mostRecent) {
+        public Builder mostRecent(@Nullable Boolean mostRecent) {
             this.mostRecent = mostRecent;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamePrefix(String namePrefix) {
+        public Builder namePrefix(String namePrefix) {
             this.namePrefix = Objects.requireNonNull(namePrefix);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<GetInstanceTemplateNetworkInterface> networkInterfaces) {
+        public Builder networkInterfaces(List<GetInstanceTemplateNetworkInterface> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setNetworkPerformanceConfigs(List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs) {
+        public Builder networkPerformanceConfigs(List<GetInstanceTemplateNetworkPerformanceConfig> networkPerformanceConfigs) {
             this.networkPerformanceConfigs = Objects.requireNonNull(networkPerformanceConfigs);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReservationAffinities(List<GetInstanceTemplateReservationAffinity> reservationAffinities) {
+        public Builder reservationAffinities(List<GetInstanceTemplateReservationAffinity> reservationAffinities) {
             this.reservationAffinities = Objects.requireNonNull(reservationAffinities);
             return this;
         }
 
-        public Builder setSchedulings(List<GetInstanceTemplateScheduling> schedulings) {
+        public Builder schedulings(List<GetInstanceTemplateScheduling> schedulings) {
             this.schedulings = Objects.requireNonNull(schedulings);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServiceAccounts(List<GetInstanceTemplateServiceAccount> serviceAccounts) {
+        public Builder serviceAccounts(List<GetInstanceTemplateServiceAccount> serviceAccounts) {
             this.serviceAccounts = Objects.requireNonNull(serviceAccounts);
             return this;
         }
 
-        public Builder setShieldedInstanceConfigs(List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs) {
+        public Builder shieldedInstanceConfigs(List<GetInstanceTemplateShieldedInstanceConfig> shieldedInstanceConfigs) {
             this.shieldedInstanceConfigs = Objects.requireNonNull(shieldedInstanceConfigs);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTagsFingerprint(String tagsFingerprint) {
+        public Builder tagsFingerprint(String tagsFingerprint) {
             this.tagsFingerprint = Objects.requireNonNull(tagsFingerprint);
             return this;
         }

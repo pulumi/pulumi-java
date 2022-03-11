@@ -20,10 +20,10 @@ public final class InstanceNetworking {
      */
     private final List<InstancePort> ports;
 
-    @OutputCustomType.Constructor({"monthlyTransfer","ports"})
+    @OutputCustomType.Constructor
     private InstanceNetworking(
-        @Nullable InstanceMonthlyTransfer monthlyTransfer,
-        List<InstancePort> ports) {
+        @OutputCustomType.Parameter("monthlyTransfer") @Nullable InstanceMonthlyTransfer monthlyTransfer,
+        @OutputCustomType.Parameter("ports") List<InstancePort> ports) {
         this.monthlyTransfer = monthlyTransfer;
         this.ports = ports;
     }
@@ -61,12 +61,12 @@ public final class InstanceNetworking {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setMonthlyTransfer(@Nullable InstanceMonthlyTransfer monthlyTransfer) {
+        public Builder monthlyTransfer(@Nullable InstanceMonthlyTransfer monthlyTransfer) {
             this.monthlyTransfer = monthlyTransfer;
             return this;
         }
 
-        public Builder setPorts(List<InstancePort> ports) {
+        public Builder ports(List<InstancePort> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

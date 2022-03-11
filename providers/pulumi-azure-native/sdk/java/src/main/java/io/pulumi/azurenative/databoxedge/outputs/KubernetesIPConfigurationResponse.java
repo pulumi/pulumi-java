@@ -22,10 +22,10 @@ public final class KubernetesIPConfigurationResponse {
      */
     private final String port;
 
-    @OutputCustomType.Constructor({"ipAddress","port"})
+    @OutputCustomType.Constructor
     private KubernetesIPConfigurationResponse(
-        @Nullable String ipAddress,
-        String port) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("port") String port) {
         this.ipAddress = ipAddress;
         this.port = port;
     }
@@ -67,12 +67,12 @@ public final class KubernetesIPConfigurationResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setPort(String port) {
+        public Builder port(String port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

@@ -38,13 +38,13 @@ public final class StepGroupResponse {
      */
     private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
-    @OutputCustomType.Constructor({"dependsOnStepGroups","deploymentTargetId","name","postDeploymentSteps","preDeploymentSteps"})
+    @OutputCustomType.Constructor
     private StepGroupResponse(
-        @Nullable List<String> dependsOnStepGroups,
-        String deploymentTargetId,
-        String name,
-        @Nullable List<PrePostStepResponse> postDeploymentSteps,
-        @Nullable List<PrePostStepResponse> preDeploymentSteps) {
+        @OutputCustomType.Parameter("dependsOnStepGroups") @Nullable List<String> dependsOnStepGroups,
+        @OutputCustomType.Parameter("deploymentTargetId") String deploymentTargetId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("postDeploymentSteps") @Nullable List<PrePostStepResponse> postDeploymentSteps,
+        @OutputCustomType.Parameter("preDeploymentSteps") @Nullable List<PrePostStepResponse> preDeploymentSteps) {
         this.dependsOnStepGroups = dependsOnStepGroups;
         this.deploymentTargetId = deploymentTargetId;
         this.name = name;
@@ -116,27 +116,27 @@ public final class StepGroupResponse {
     	      this.preDeploymentSteps = defaults.preDeploymentSteps;
         }
 
-        public Builder setDependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
+        public Builder dependsOnStepGroups(@Nullable List<String> dependsOnStepGroups) {
             this.dependsOnStepGroups = dependsOnStepGroups;
             return this;
         }
 
-        public Builder setDeploymentTargetId(String deploymentTargetId) {
+        public Builder deploymentTargetId(String deploymentTargetId) {
             this.deploymentTargetId = Objects.requireNonNull(deploymentTargetId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPostDeploymentSteps(@Nullable List<PrePostStepResponse> postDeploymentSteps) {
+        public Builder postDeploymentSteps(@Nullable List<PrePostStepResponse> postDeploymentSteps) {
             this.postDeploymentSteps = postDeploymentSteps;
             return this;
         }
 
-        public Builder setPreDeploymentSteps(@Nullable List<PrePostStepResponse> preDeploymentSteps) {
+        public Builder preDeploymentSteps(@Nullable List<PrePostStepResponse> preDeploymentSteps) {
             this.preDeploymentSteps = preDeploymentSteps;
             return this;
         }

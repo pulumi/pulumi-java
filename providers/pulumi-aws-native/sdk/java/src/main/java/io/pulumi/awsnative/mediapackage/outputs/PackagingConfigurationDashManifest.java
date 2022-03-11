@@ -33,13 +33,13 @@ public final class PackagingConfigurationDashManifest {
     private final @Nullable PackagingConfigurationDashManifestProfile profile;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"manifestLayout","manifestName","minBufferTimeSeconds","profile","streamSelection"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationDashManifest(
-        @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
-        @Nullable String manifestName,
-        @Nullable Integer minBufferTimeSeconds,
-        @Nullable PackagingConfigurationDashManifestProfile profile,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("manifestLayout") @Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("minBufferTimeSeconds") @Nullable Integer minBufferTimeSeconds,
+        @OutputCustomType.Parameter("profile") @Nullable PackagingConfigurationDashManifestProfile profile,
+        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.manifestLayout = manifestLayout;
         this.manifestName = manifestName;
         this.minBufferTimeSeconds = minBufferTimeSeconds;
@@ -103,27 +103,27 @@ public final class PackagingConfigurationDashManifest {
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setManifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
+        public Builder manifestLayout(@Nullable PackagingConfigurationDashManifestManifestLayout manifestLayout) {
             this.manifestLayout = manifestLayout;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setMinBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
+        public Builder minBufferTimeSeconds(@Nullable Integer minBufferTimeSeconds) {
             this.minBufferTimeSeconds = minBufferTimeSeconds;
             return this;
         }
 
-        public Builder setProfile(@Nullable PackagingConfigurationDashManifestProfile profile) {
+        public Builder profile(@Nullable PackagingConfigurationDashManifestProfile profile) {
             this.profile = profile;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

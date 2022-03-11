@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1IntegrationConfigResponse extends io.pulum
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

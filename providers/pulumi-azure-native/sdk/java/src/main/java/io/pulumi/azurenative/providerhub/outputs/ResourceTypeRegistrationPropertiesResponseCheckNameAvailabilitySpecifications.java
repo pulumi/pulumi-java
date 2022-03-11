@@ -16,10 +16,10 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     private final @Nullable Boolean enableDefaultValidation;
     private final @Nullable List<String> resourceTypesWithCustomValidation;
 
-    @OutputCustomType.Constructor({"enableDefaultValidation","resourceTypesWithCustomValidation"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseCheckNameAvailabilitySpecifications(
-        @Nullable Boolean enableDefaultValidation,
-        @Nullable List<String> resourceTypesWithCustomValidation) {
+        @OutputCustomType.Parameter("enableDefaultValidation") @Nullable Boolean enableDefaultValidation,
+        @OutputCustomType.Parameter("resourceTypesWithCustomValidation") @Nullable List<String> resourceTypesWithCustomValidation) {
         this.enableDefaultValidation = enableDefaultValidation;
         this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
     }
@@ -53,12 +53,12 @@ public final class ResourceTypeRegistrationPropertiesResponseCheckNameAvailabili
     	      this.resourceTypesWithCustomValidation = defaults.resourceTypesWithCustomValidation;
         }
 
-        public Builder setEnableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
+        public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
             this.enableDefaultValidation = enableDefaultValidation;
             return this;
         }
 
-        public Builder setResourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
+        public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
             this.resourceTypesWithCustomValidation = resourceTypesWithCustomValidation;
             return this;
         }

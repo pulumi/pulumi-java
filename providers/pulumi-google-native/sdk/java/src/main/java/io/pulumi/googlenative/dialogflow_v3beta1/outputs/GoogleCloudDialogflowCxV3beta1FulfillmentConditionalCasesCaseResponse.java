@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      */
     private final String condition;
 
-    @OutputCustomType.Constructor({"caseContent","condition"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseResponse(
-        List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
-        String condition) {
+        @OutputCustomType.Parameter("caseContent") List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent,
+        @OutputCustomType.Parameter("condition") String condition) {
         this.caseContent = caseContent;
         this.condition = condition;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCaseContent(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
+        public Builder caseContent(List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse> caseContent) {
             this.caseContent = Objects.requireNonNull(caseContent);
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

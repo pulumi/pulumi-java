@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class FirewallPolicyPublishMetricAction {
     private final List<FirewallPolicyDimension> dimensions;
 
-    @OutputCustomType.Constructor({"dimensions"})
-    private FirewallPolicyPublishMetricAction(List<FirewallPolicyDimension> dimensions) {
+    @OutputCustomType.Constructor
+    private FirewallPolicyPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<FirewallPolicyDimension> dimensions) {
         this.dimensions = dimensions;
     }
 
@@ -41,7 +41,7 @@ public final class FirewallPolicyPublishMetricAction {
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<FirewallPolicyDimension> dimensions) {
+        public Builder dimensions(List<FirewallPolicyDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

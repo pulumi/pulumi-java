@@ -28,11 +28,11 @@ public final class DataPathAssetReferenceResponse {
      */
     private final String referenceType;
 
-    @OutputCustomType.Constructor({"datastoreId","path","referenceType"})
+    @OutputCustomType.Constructor
     private DataPathAssetReferenceResponse(
-        @Nullable String datastoreId,
-        @Nullable String path,
-        String referenceType) {
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("referenceType") String referenceType) {
         this.datastoreId = datastoreId;
         this.path = path;
         this.referenceType = referenceType;
@@ -85,17 +85,17 @@ public final class DataPathAssetReferenceResponse {
     	      this.referenceType = defaults.referenceType;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setReferenceType(String referenceType) {
+        public Builder referenceType(String referenceType) {
             this.referenceType = Objects.requireNonNull(referenceType);
             return this;
         }

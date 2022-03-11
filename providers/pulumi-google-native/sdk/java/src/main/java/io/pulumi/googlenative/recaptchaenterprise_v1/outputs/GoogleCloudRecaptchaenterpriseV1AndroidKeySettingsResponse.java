@@ -22,10 +22,10 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
      */
     private final List<String> allowedPackageNames;
 
-    @OutputCustomType.Constructor({"allowAllPackageNames","allowedPackageNames"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse(
-        Boolean allowAllPackageNames,
-        List<String> allowedPackageNames) {
+        @OutputCustomType.Parameter("allowAllPackageNames") Boolean allowAllPackageNames,
+        @OutputCustomType.Parameter("allowedPackageNames") List<String> allowedPackageNames) {
         this.allowAllPackageNames = allowAllPackageNames;
         this.allowedPackageNames = allowedPackageNames;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse {
     	      this.allowedPackageNames = defaults.allowedPackageNames;
         }
 
-        public Builder setAllowAllPackageNames(Boolean allowAllPackageNames) {
+        public Builder allowAllPackageNames(Boolean allowAllPackageNames) {
             this.allowAllPackageNames = Objects.requireNonNull(allowAllPackageNames);
             return this;
         }
 
-        public Builder setAllowedPackageNames(List<String> allowedPackageNames) {
+        public Builder allowedPackageNames(List<String> allowedPackageNames) {
             this.allowedPackageNames = Objects.requireNonNull(allowedPackageNames);
             return this;
         }

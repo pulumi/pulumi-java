@@ -193,38 +193,38 @@ public final class PersistentVolumeSpec {
      */
     private final @Nullable VsphereVirtualDiskVolumeSource vsphereVolume;
 
-    @OutputCustomType.Constructor({"accessModes","awsElasticBlockStore","azureDisk","azureFile","capacity","cephfs","cinder","claimRef","csi","fc","flexVolume","flocker","gcePersistentDisk","glusterfs","hostPath","iscsi","local","mountOptions","nfs","nodeAffinity","persistentVolumeReclaimPolicy","photonPersistentDisk","portworxVolume","quobyte","rbd","scaleIO","storageClassName","storageos","volumeMode","vsphereVolume"})
+    @OutputCustomType.Constructor
     private PersistentVolumeSpec(
-        @Nullable List<String> accessModes,
-        @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
-        @Nullable AzureDiskVolumeSource azureDisk,
-        @Nullable AzureFilePersistentVolumeSource azureFile,
-        @Nullable Map<String,String> capacity,
-        @Nullable CephFSPersistentVolumeSource cephfs,
-        @Nullable CinderPersistentVolumeSource cinder,
-        @Nullable ObjectReference claimRef,
-        @Nullable CSIPersistentVolumeSource csi,
-        @Nullable FCVolumeSource fc,
-        @Nullable FlexPersistentVolumeSource flexVolume,
-        @Nullable FlockerVolumeSource flocker,
-        @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
-        @Nullable GlusterfsPersistentVolumeSource glusterfs,
-        @Nullable HostPathVolumeSource hostPath,
-        @Nullable ISCSIPersistentVolumeSource iscsi,
-        @Nullable LocalVolumeSource local,
-        @Nullable List<String> mountOptions,
-        @Nullable NFSVolumeSource nfs,
-        @Nullable VolumeNodeAffinity nodeAffinity,
-        @Nullable String persistentVolumeReclaimPolicy,
-        @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
-        @Nullable PortworxVolumeSource portworxVolume,
-        @Nullable QuobyteVolumeSource quobyte,
-        @Nullable RBDPersistentVolumeSource rbd,
-        @Nullable ScaleIOPersistentVolumeSource scaleIO,
-        @Nullable String storageClassName,
-        @Nullable StorageOSPersistentVolumeSource storageos,
-        @Nullable String volumeMode,
-        @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
+        @OutputCustomType.Parameter("accessModes") @Nullable List<String> accessModes,
+        @OutputCustomType.Parameter("awsElasticBlockStore") @Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore,
+        @OutputCustomType.Parameter("azureDisk") @Nullable AzureDiskVolumeSource azureDisk,
+        @OutputCustomType.Parameter("azureFile") @Nullable AzureFilePersistentVolumeSource azureFile,
+        @OutputCustomType.Parameter("capacity") @Nullable Map<String,String> capacity,
+        @OutputCustomType.Parameter("cephfs") @Nullable CephFSPersistentVolumeSource cephfs,
+        @OutputCustomType.Parameter("cinder") @Nullable CinderPersistentVolumeSource cinder,
+        @OutputCustomType.Parameter("claimRef") @Nullable ObjectReference claimRef,
+        @OutputCustomType.Parameter("csi") @Nullable CSIPersistentVolumeSource csi,
+        @OutputCustomType.Parameter("fc") @Nullable FCVolumeSource fc,
+        @OutputCustomType.Parameter("flexVolume") @Nullable FlexPersistentVolumeSource flexVolume,
+        @OutputCustomType.Parameter("flocker") @Nullable FlockerVolumeSource flocker,
+        @OutputCustomType.Parameter("gcePersistentDisk") @Nullable GCEPersistentDiskVolumeSource gcePersistentDisk,
+        @OutputCustomType.Parameter("glusterfs") @Nullable GlusterfsPersistentVolumeSource glusterfs,
+        @OutputCustomType.Parameter("hostPath") @Nullable HostPathVolumeSource hostPath,
+        @OutputCustomType.Parameter("iscsi") @Nullable ISCSIPersistentVolumeSource iscsi,
+        @OutputCustomType.Parameter("local") @Nullable LocalVolumeSource local,
+        @OutputCustomType.Parameter("mountOptions") @Nullable List<String> mountOptions,
+        @OutputCustomType.Parameter("nfs") @Nullable NFSVolumeSource nfs,
+        @OutputCustomType.Parameter("nodeAffinity") @Nullable VolumeNodeAffinity nodeAffinity,
+        @OutputCustomType.Parameter("persistentVolumeReclaimPolicy") @Nullable String persistentVolumeReclaimPolicy,
+        @OutputCustomType.Parameter("photonPersistentDisk") @Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk,
+        @OutputCustomType.Parameter("portworxVolume") @Nullable PortworxVolumeSource portworxVolume,
+        @OutputCustomType.Parameter("quobyte") @Nullable QuobyteVolumeSource quobyte,
+        @OutputCustomType.Parameter("rbd") @Nullable RBDPersistentVolumeSource rbd,
+        @OutputCustomType.Parameter("scaleIO") @Nullable ScaleIOPersistentVolumeSource scaleIO,
+        @OutputCustomType.Parameter("storageClassName") @Nullable String storageClassName,
+        @OutputCustomType.Parameter("storageos") @Nullable StorageOSPersistentVolumeSource storageos,
+        @OutputCustomType.Parameter("volumeMode") @Nullable String volumeMode,
+        @OutputCustomType.Parameter("vsphereVolume") @Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
         this.accessModes = accessModes;
         this.awsElasticBlockStore = awsElasticBlockStore;
         this.azureDisk = azureDisk;
@@ -551,152 +551,152 @@ public final class PersistentVolumeSpec {
     	      this.vsphereVolume = defaults.vsphereVolume;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setAwsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore) {
+        public Builder awsElasticBlockStore(@Nullable AWSElasticBlockStoreVolumeSource awsElasticBlockStore) {
             this.awsElasticBlockStore = awsElasticBlockStore;
             return this;
         }
 
-        public Builder setAzureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
+        public Builder azureDisk(@Nullable AzureDiskVolumeSource azureDisk) {
             this.azureDisk = azureDisk;
             return this;
         }
 
-        public Builder setAzureFile(@Nullable AzureFilePersistentVolumeSource azureFile) {
+        public Builder azureFile(@Nullable AzureFilePersistentVolumeSource azureFile) {
             this.azureFile = azureFile;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Map<String,String> capacity) {
+        public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCephfs(@Nullable CephFSPersistentVolumeSource cephfs) {
+        public Builder cephfs(@Nullable CephFSPersistentVolumeSource cephfs) {
             this.cephfs = cephfs;
             return this;
         }
 
-        public Builder setCinder(@Nullable CinderPersistentVolumeSource cinder) {
+        public Builder cinder(@Nullable CinderPersistentVolumeSource cinder) {
             this.cinder = cinder;
             return this;
         }
 
-        public Builder setClaimRef(@Nullable ObjectReference claimRef) {
+        public Builder claimRef(@Nullable ObjectReference claimRef) {
             this.claimRef = claimRef;
             return this;
         }
 
-        public Builder setCsi(@Nullable CSIPersistentVolumeSource csi) {
+        public Builder csi(@Nullable CSIPersistentVolumeSource csi) {
             this.csi = csi;
             return this;
         }
 
-        public Builder setFc(@Nullable FCVolumeSource fc) {
+        public Builder fc(@Nullable FCVolumeSource fc) {
             this.fc = fc;
             return this;
         }
 
-        public Builder setFlexVolume(@Nullable FlexPersistentVolumeSource flexVolume) {
+        public Builder flexVolume(@Nullable FlexPersistentVolumeSource flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
 
-        public Builder setFlocker(@Nullable FlockerVolumeSource flocker) {
+        public Builder flocker(@Nullable FlockerVolumeSource flocker) {
             this.flocker = flocker;
             return this;
         }
 
-        public Builder setGcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
+        public Builder gcePersistentDisk(@Nullable GCEPersistentDiskVolumeSource gcePersistentDisk) {
             this.gcePersistentDisk = gcePersistentDisk;
             return this;
         }
 
-        public Builder setGlusterfs(@Nullable GlusterfsPersistentVolumeSource glusterfs) {
+        public Builder glusterfs(@Nullable GlusterfsPersistentVolumeSource glusterfs) {
             this.glusterfs = glusterfs;
             return this;
         }
 
-        public Builder setHostPath(@Nullable HostPathVolumeSource hostPath) {
+        public Builder hostPath(@Nullable HostPathVolumeSource hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setIscsi(@Nullable ISCSIPersistentVolumeSource iscsi) {
+        public Builder iscsi(@Nullable ISCSIPersistentVolumeSource iscsi) {
             this.iscsi = iscsi;
             return this;
         }
 
-        public Builder setLocal(@Nullable LocalVolumeSource local) {
+        public Builder local(@Nullable LocalVolumeSource local) {
             this.local = local;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable List<String> mountOptions) {
+        public Builder mountOptions(@Nullable List<String> mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setNfs(@Nullable NFSVolumeSource nfs) {
+        public Builder nfs(@Nullable NFSVolumeSource nfs) {
             this.nfs = nfs;
             return this;
         }
 
-        public Builder setNodeAffinity(@Nullable VolumeNodeAffinity nodeAffinity) {
+        public Builder nodeAffinity(@Nullable VolumeNodeAffinity nodeAffinity) {
             this.nodeAffinity = nodeAffinity;
             return this;
         }
 
-        public Builder setPersistentVolumeReclaimPolicy(@Nullable String persistentVolumeReclaimPolicy) {
+        public Builder persistentVolumeReclaimPolicy(@Nullable String persistentVolumeReclaimPolicy) {
             this.persistentVolumeReclaimPolicy = persistentVolumeReclaimPolicy;
             return this;
         }
 
-        public Builder setPhotonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
+        public Builder photonPersistentDisk(@Nullable PhotonPersistentDiskVolumeSource photonPersistentDisk) {
             this.photonPersistentDisk = photonPersistentDisk;
             return this;
         }
 
-        public Builder setPortworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
+        public Builder portworxVolume(@Nullable PortworxVolumeSource portworxVolume) {
             this.portworxVolume = portworxVolume;
             return this;
         }
 
-        public Builder setQuobyte(@Nullable QuobyteVolumeSource quobyte) {
+        public Builder quobyte(@Nullable QuobyteVolumeSource quobyte) {
             this.quobyte = quobyte;
             return this;
         }
 
-        public Builder setRbd(@Nullable RBDPersistentVolumeSource rbd) {
+        public Builder rbd(@Nullable RBDPersistentVolumeSource rbd) {
             this.rbd = rbd;
             return this;
         }
 
-        public Builder setScaleIO(@Nullable ScaleIOPersistentVolumeSource scaleIO) {
+        public Builder scaleIO(@Nullable ScaleIOPersistentVolumeSource scaleIO) {
             this.scaleIO = scaleIO;
             return this;
         }
 
-        public Builder setStorageClassName(@Nullable String storageClassName) {
+        public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
 
-        public Builder setStorageos(@Nullable StorageOSPersistentVolumeSource storageos) {
+        public Builder storageos(@Nullable StorageOSPersistentVolumeSource storageos) {
             this.storageos = storageos;
             return this;
         }
 
-        public Builder setVolumeMode(@Nullable String volumeMode) {
+        public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
 
-        public Builder setVsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
+        public Builder vsphereVolume(@Nullable VsphereVirtualDiskVolumeSource vsphereVolume) {
             this.vsphereVolume = vsphereVolume;
             return this;
         }

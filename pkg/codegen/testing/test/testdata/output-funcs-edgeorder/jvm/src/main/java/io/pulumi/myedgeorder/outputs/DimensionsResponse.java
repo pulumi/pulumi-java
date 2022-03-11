@@ -46,15 +46,15 @@ public final class DimensionsResponse {
      */
     private final Double width;
 
-    @OutputCustomType.Constructor({"depth","height","length","lengthHeightUnit","weight","weightUnit","width"})
+    @OutputCustomType.Constructor
     private DimensionsResponse(
-        Double depth,
-        Double height,
-        Double length,
-        String lengthHeightUnit,
-        Double weight,
-        String weightUnit,
-        Double width) {
+        @OutputCustomType.Parameter("depth") Double depth,
+        @OutputCustomType.Parameter("height") Double height,
+        @OutputCustomType.Parameter("length") Double length,
+        @OutputCustomType.Parameter("lengthHeightUnit") String lengthHeightUnit,
+        @OutputCustomType.Parameter("weight") Double weight,
+        @OutputCustomType.Parameter("weightUnit") String weightUnit,
+        @OutputCustomType.Parameter("width") Double width) {
         this.depth = depth;
         this.height = height;
         this.length = length;
@@ -146,37 +146,37 @@ public final class DimensionsResponse {
     	      this.width = defaults.width;
         }
 
-        public Builder setDepth(Double depth) {
+        public Builder depth(Double depth) {
             this.depth = Objects.requireNonNull(depth);
             return this;
         }
 
-        public Builder setHeight(Double height) {
+        public Builder height(Double height) {
             this.height = Objects.requireNonNull(height);
             return this;
         }
 
-        public Builder setLength(Double length) {
+        public Builder length(Double length) {
             this.length = Objects.requireNonNull(length);
             return this;
         }
 
-        public Builder setLengthHeightUnit(String lengthHeightUnit) {
+        public Builder lengthHeightUnit(String lengthHeightUnit) {
             this.lengthHeightUnit = Objects.requireNonNull(lengthHeightUnit);
             return this;
         }
 
-        public Builder setWeight(Double weight) {
+        public Builder weight(Double weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
 
-        public Builder setWeightUnit(String weightUnit) {
+        public Builder weightUnit(String weightUnit) {
             this.weightUnit = Objects.requireNonNull(weightUnit);
             return this;
         }
 
-        public Builder setWidth(Double width) {
+        public Builder width(Double width) {
             this.width = Objects.requireNonNull(width);
             return this;
         }

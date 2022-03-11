@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ThemeTileStyle {
     private final @Nullable ThemeBorderStyle border;
 
-    @OutputCustomType.Constructor({"border"})
-    private ThemeTileStyle(@Nullable ThemeBorderStyle border) {
+    @OutputCustomType.Constructor
+    private ThemeTileStyle(@OutputCustomType.Parameter("border") @Nullable ThemeBorderStyle border) {
         this.border = border;
     }
 
@@ -42,7 +42,7 @@ public final class ThemeTileStyle {
     	      this.border = defaults.border;
         }
 
-        public Builder setBorder(@Nullable ThemeBorderStyle border) {
+        public Builder border(@Nullable ThemeBorderStyle border) {
             this.border = border;
             return this;
         }

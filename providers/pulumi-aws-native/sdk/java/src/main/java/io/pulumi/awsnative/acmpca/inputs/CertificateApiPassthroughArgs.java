@@ -67,22 +67,22 @@ public final class CertificateApiPassthroughArgs extends io.pulumi.resources.Res
     	      this.subject = defaults.subject;
         }
 
-        public Builder setExtensions(@Nullable Input<CertificateExtensionsArgs> extensions) {
+        public Builder extensions(@Nullable Input<CertificateExtensionsArgs> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setExtensions(@Nullable CertificateExtensionsArgs extensions) {
+        public Builder extensions(@Nullable CertificateExtensionsArgs extensions) {
             this.extensions = Input.ofNullable(extensions);
             return this;
         }
 
-        public Builder setSubject(@Nullable Input<CertificateSubjectArgs> subject) {
+        public Builder subject(@Nullable Input<CertificateSubjectArgs> subject) {
             this.subject = subject;
             return this;
         }
 
-        public Builder setSubject(@Nullable CertificateSubjectArgs subject) {
+        public Builder subject(@Nullable CertificateSubjectArgs subject) {
             this.subject = Input.ofNullable(subject);
             return this;
         }

@@ -108,42 +108,42 @@ public final class IosXcTestArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xctestrun = defaults.xctestrun;
         }
 
-        public Builder setTestSpecialEntitlements(@Nullable Input<Boolean> testSpecialEntitlements) {
+        public Builder testSpecialEntitlements(@Nullable Input<Boolean> testSpecialEntitlements) {
             this.testSpecialEntitlements = testSpecialEntitlements;
             return this;
         }
 
-        public Builder setTestSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
+        public Builder testSpecialEntitlements(@Nullable Boolean testSpecialEntitlements) {
             this.testSpecialEntitlements = Input.ofNullable(testSpecialEntitlements);
             return this;
         }
 
-        public Builder setTestsZip(Input<FileReferenceArgs> testsZip) {
+        public Builder testsZip(Input<FileReferenceArgs> testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
 
-        public Builder setTestsZip(FileReferenceArgs testsZip) {
+        public Builder testsZip(FileReferenceArgs testsZip) {
             this.testsZip = Input.of(Objects.requireNonNull(testsZip));
             return this;
         }
 
-        public Builder setXcodeVersion(@Nullable Input<String> xcodeVersion) {
+        public Builder xcodeVersion(@Nullable Input<String> xcodeVersion) {
             this.xcodeVersion = xcodeVersion;
             return this;
         }
 
-        public Builder setXcodeVersion(@Nullable String xcodeVersion) {
+        public Builder xcodeVersion(@Nullable String xcodeVersion) {
             this.xcodeVersion = Input.ofNullable(xcodeVersion);
             return this;
         }
 
-        public Builder setXctestrun(@Nullable Input<FileReferenceArgs> xctestrun) {
+        public Builder xctestrun(@Nullable Input<FileReferenceArgs> xctestrun) {
             this.xctestrun = xctestrun;
             return this;
         }
 
-        public Builder setXctestrun(@Nullable FileReferenceArgs xctestrun) {
+        public Builder xctestrun(@Nullable FileReferenceArgs xctestrun) {
             this.xctestrun = Input.ofNullable(xctestrun);
             return this;
         }

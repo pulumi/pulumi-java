@@ -13,11 +13,11 @@ public final class GetRepositoryPubsubConfig {
     private final String serviceAccountEmail;
     private final String topic;
 
-    @OutputCustomType.Constructor({"messageFormat","serviceAccountEmail","topic"})
+    @OutputCustomType.Constructor
     private GetRepositoryPubsubConfig(
-        String messageFormat,
-        String serviceAccountEmail,
-        String topic) {
+        @OutputCustomType.Parameter("messageFormat") String messageFormat,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.serviceAccountEmail = serviceAccountEmail;
         this.topic = topic;
@@ -57,17 +57,17 @@ public final class GetRepositoryPubsubConfig {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setMessageFormat(String messageFormat) {
+        public Builder messageFormat(String messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

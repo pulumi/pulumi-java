@@ -58,17 +58,17 @@ public final class AzureFirewallNetworkRuleResponse {
      */
     private final @Nullable List<String> sourceIpGroups;
 
-    @OutputCustomType.Constructor({"description","destinationAddresses","destinationFqdns","destinationIpGroups","destinationPorts","name","protocols","sourceAddresses","sourceIpGroups"})
+    @OutputCustomType.Constructor
     private AzureFirewallNetworkRuleResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationAddresses,
-        @Nullable List<String> destinationFqdns,
-        @Nullable List<String> destinationIpGroups,
-        @Nullable List<String> destinationPorts,
-        @Nullable String name,
-        @Nullable List<String> protocols,
-        @Nullable List<String> sourceAddresses,
-        @Nullable List<String> sourceIpGroups) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddresses") @Nullable List<String> destinationAddresses,
+        @OutputCustomType.Parameter("destinationFqdns") @Nullable List<String> destinationFqdns,
+        @OutputCustomType.Parameter("destinationIpGroups") @Nullable List<String> destinationIpGroups,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocols") @Nullable List<String> protocols,
+        @OutputCustomType.Parameter("sourceAddresses") @Nullable List<String> sourceAddresses,
+        @OutputCustomType.Parameter("sourceIpGroups") @Nullable List<String> sourceIpGroups) {
         this.description = description;
         this.destinationAddresses = destinationAddresses;
         this.destinationFqdns = destinationFqdns;
@@ -180,47 +180,47 @@ public final class AzureFirewallNetworkRuleResponse {
     	      this.sourceIpGroups = defaults.sourceIpGroups;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddresses(@Nullable List<String> destinationAddresses) {
+        public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
             this.destinationAddresses = destinationAddresses;
             return this;
         }
 
-        public Builder setDestinationFqdns(@Nullable List<String> destinationFqdns) {
+        public Builder destinationFqdns(@Nullable List<String> destinationFqdns) {
             this.destinationFqdns = destinationFqdns;
             return this;
         }
 
-        public Builder setDestinationIpGroups(@Nullable List<String> destinationIpGroups) {
+        public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
             this.destinationIpGroups = destinationIpGroups;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocols(@Nullable List<String> protocols) {
+        public Builder protocols(@Nullable List<String> protocols) {
             this.protocols = protocols;
             return this;
         }
 
-        public Builder setSourceAddresses(@Nullable List<String> sourceAddresses) {
+        public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
             this.sourceAddresses = sourceAddresses;
             return this;
         }
 
-        public Builder setSourceIpGroups(@Nullable List<String> sourceIpGroups) {
+        public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }

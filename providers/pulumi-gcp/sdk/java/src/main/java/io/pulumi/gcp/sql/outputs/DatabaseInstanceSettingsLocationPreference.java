@@ -24,10 +24,10 @@ public final class DatabaseInstanceSettingsLocationPreference {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"followGaeApplication","zone"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsLocationPreference(
-        @Nullable String followGaeApplication,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("followGaeApplication") @Nullable String followGaeApplication,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }
@@ -71,12 +71,12 @@ public final class DatabaseInstanceSettingsLocationPreference {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(@Nullable String followGaeApplication) {
+        public Builder followGaeApplication(@Nullable String followGaeApplication) {
             this.followGaeApplication = followGaeApplication;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

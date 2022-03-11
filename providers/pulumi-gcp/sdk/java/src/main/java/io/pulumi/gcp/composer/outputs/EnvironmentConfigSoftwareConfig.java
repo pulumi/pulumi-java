@@ -20,14 +20,14 @@ public final class EnvironmentConfigSoftwareConfig {
     private final @Nullable String pythonVersion;
     private final @Nullable Integer schedulerCount;
 
-    @OutputCustomType.Constructor({"airflowConfigOverrides","envVariables","imageVersion","pypiPackages","pythonVersion","schedulerCount"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigSoftwareConfig(
-        @Nullable Map<String,String> airflowConfigOverrides,
-        @Nullable Map<String,String> envVariables,
-        @Nullable String imageVersion,
-        @Nullable Map<String,String> pypiPackages,
-        @Nullable String pythonVersion,
-        @Nullable Integer schedulerCount) {
+        @OutputCustomType.Parameter("airflowConfigOverrides") @Nullable Map<String,String> airflowConfigOverrides,
+        @OutputCustomType.Parameter("envVariables") @Nullable Map<String,String> envVariables,
+        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @OutputCustomType.Parameter("pypiPackages") @Nullable Map<String,String> pypiPackages,
+        @OutputCustomType.Parameter("pythonVersion") @Nullable String pythonVersion,
+        @OutputCustomType.Parameter("schedulerCount") @Nullable Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;
@@ -85,32 +85,32 @@ public final class EnvironmentConfigSoftwareConfig {
     	      this.schedulerCount = defaults.schedulerCount;
         }
 
-        public Builder setAirflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
+        public Builder airflowConfigOverrides(@Nullable Map<String,String> airflowConfigOverrides) {
             this.airflowConfigOverrides = airflowConfigOverrides;
             return this;
         }
 
-        public Builder setEnvVariables(@Nullable Map<String,String> envVariables) {
+        public Builder envVariables(@Nullable Map<String,String> envVariables) {
             this.envVariables = envVariables;
             return this;
         }
 
-        public Builder setImageVersion(@Nullable String imageVersion) {
+        public Builder imageVersion(@Nullable String imageVersion) {
             this.imageVersion = imageVersion;
             return this;
         }
 
-        public Builder setPypiPackages(@Nullable Map<String,String> pypiPackages) {
+        public Builder pypiPackages(@Nullable Map<String,String> pypiPackages) {
             this.pypiPackages = pypiPackages;
             return this;
         }
 
-        public Builder setPythonVersion(@Nullable String pythonVersion) {
+        public Builder pythonVersion(@Nullable String pythonVersion) {
             this.pythonVersion = pythonVersion;
             return this;
         }
 
-        public Builder setSchedulerCount(@Nullable Integer schedulerCount) {
+        public Builder schedulerCount(@Nullable Integer schedulerCount) {
             this.schedulerCount = schedulerCount;
             return this;
         }

@@ -34,12 +34,12 @@ public final class ConfigMapVolumeSourceResponse {
      */
     private final Boolean optional;
 
-    @OutputCustomType.Constructor({"defaultMode","items","name","optional"})
+    @OutputCustomType.Constructor
     private ConfigMapVolumeSourceResponse(
-        Integer defaultMode,
-        List<KeyToPathResponse> items,
-        String name,
-        Boolean optional) {
+        @OutputCustomType.Parameter("defaultMode") Integer defaultMode,
+        @OutputCustomType.Parameter("items") List<KeyToPathResponse> items,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("optional") Boolean optional) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.name = name;
@@ -101,22 +101,22 @@ public final class ConfigMapVolumeSourceResponse {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setDefaultMode(Integer defaultMode) {
+        public Builder defaultMode(Integer defaultMode) {
             this.defaultMode = Objects.requireNonNull(defaultMode);
             return this;
         }
 
-        public Builder setItems(List<KeyToPathResponse> items) {
+        public Builder items(List<KeyToPathResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptional(Boolean optional) {
+        public Builder optional(Boolean optional) {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }

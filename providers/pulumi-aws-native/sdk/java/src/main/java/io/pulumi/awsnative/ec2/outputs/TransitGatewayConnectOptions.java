@@ -17,8 +17,8 @@ public final class TransitGatewayConnectOptions {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"protocol"})
-    private TransitGatewayConnectOptions(@Nullable String protocol) {
+    @OutputCustomType.Constructor
+    private TransitGatewayConnectOptions(@OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.protocol = protocol;
     }
 
@@ -50,7 +50,7 @@ public final class TransitGatewayConnectOptions {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

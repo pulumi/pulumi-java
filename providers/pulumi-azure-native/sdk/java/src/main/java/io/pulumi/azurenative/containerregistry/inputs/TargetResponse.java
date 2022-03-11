@@ -187,47 +187,47 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setLength(@Nullable Double length) {
+        public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
 
-        public Builder setMediaType(@Nullable String mediaType) {
+        public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setSize(@Nullable Double size) {
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

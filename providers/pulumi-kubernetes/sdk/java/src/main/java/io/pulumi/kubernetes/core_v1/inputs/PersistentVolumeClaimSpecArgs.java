@@ -179,82 +179,82 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setAccessModes(@Nullable Input<List<String>> accessModes) {
+        public Builder accessModes(@Nullable Input<List<String>> accessModes) {
             this.accessModes = accessModes;
             return this;
         }
 
-        public Builder setAccessModes(@Nullable List<String> accessModes) {
+        public Builder accessModes(@Nullable List<String> accessModes) {
             this.accessModes = Input.ofNullable(accessModes);
             return this;
         }
 
-        public Builder setDataSource(@Nullable Input<TypedLocalObjectReferenceArgs> dataSource) {
+        public Builder dataSource(@Nullable Input<TypedLocalObjectReferenceArgs> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setDataSource(@Nullable TypedLocalObjectReferenceArgs dataSource) {
+        public Builder dataSource(@Nullable TypedLocalObjectReferenceArgs dataSource) {
             this.dataSource = Input.ofNullable(dataSource);
             return this;
         }
 
-        public Builder setDataSourceRef(@Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef) {
+        public Builder dataSourceRef(@Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef) {
             this.dataSourceRef = dataSourceRef;
             return this;
         }
 
-        public Builder setDataSourceRef(@Nullable TypedLocalObjectReferenceArgs dataSourceRef) {
+        public Builder dataSourceRef(@Nullable TypedLocalObjectReferenceArgs dataSourceRef) {
             this.dataSourceRef = Input.ofNullable(dataSourceRef);
             return this;
         }
 
-        public Builder setResources(@Nullable Input<ResourceRequirementsArgs> resources) {
+        public Builder resources(@Nullable Input<ResourceRequirementsArgs> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setResources(@Nullable ResourceRequirementsArgs resources) {
+        public Builder resources(@Nullable ResourceRequirementsArgs resources) {
             this.resources = Input.ofNullable(resources);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }
 
-        public Builder setStorageClassName(@Nullable Input<String> storageClassName) {
+        public Builder storageClassName(@Nullable Input<String> storageClassName) {
             this.storageClassName = storageClassName;
             return this;
         }
 
-        public Builder setStorageClassName(@Nullable String storageClassName) {
+        public Builder storageClassName(@Nullable String storageClassName) {
             this.storageClassName = Input.ofNullable(storageClassName);
             return this;
         }
 
-        public Builder setVolumeMode(@Nullable Input<String> volumeMode) {
+        public Builder volumeMode(@Nullable Input<String> volumeMode) {
             this.volumeMode = volumeMode;
             return this;
         }
 
-        public Builder setVolumeMode(@Nullable String volumeMode) {
+        public Builder volumeMode(@Nullable String volumeMode) {
             this.volumeMode = Input.ofNullable(volumeMode);
             return this;
         }
 
-        public Builder setVolumeName(@Nullable Input<String> volumeName) {
+        public Builder volumeName(@Nullable Input<String> volumeName) {
             this.volumeName = volumeName;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }

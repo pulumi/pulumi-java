@@ -15,8 +15,8 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPath {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"path"})
-    private PreventionStoredInfoTypeLargeCustomDictionaryOutputPath(String path) {
+    @OutputCustomType.Constructor
+    private PreventionStoredInfoTypeLargeCustomDictionaryOutputPath(@OutputCustomType.Parameter("path") String path) {
         this.path = path;
     }
 
@@ -48,7 +48,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPath {
     	      this.path = defaults.path;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

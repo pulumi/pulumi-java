@@ -63,18 +63,18 @@ public final class VirtualDiskResponse {
      */
     private final @Nullable Integer unitNumber;
 
-    @OutputCustomType.Constructor({"controllerKey","deviceKey","deviceName","diskMode","diskObjectId","diskSizeGB","diskType","label","name","unitNumber"})
+    @OutputCustomType.Constructor
     private VirtualDiskResponse(
-        @Nullable Integer controllerKey,
-        @Nullable Integer deviceKey,
-        @Nullable String deviceName,
-        @Nullable String diskMode,
-        String diskObjectId,
-        @Nullable Integer diskSizeGB,
-        @Nullable String diskType,
-        String label,
-        @Nullable String name,
-        @Nullable Integer unitNumber) {
+        @OutputCustomType.Parameter("controllerKey") @Nullable Integer controllerKey,
+        @OutputCustomType.Parameter("deviceKey") @Nullable Integer deviceKey,
+        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
+        @OutputCustomType.Parameter("diskMode") @Nullable String diskMode,
+        @OutputCustomType.Parameter("diskObjectId") String diskObjectId,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("unitNumber") @Nullable Integer unitNumber) {
         this.controllerKey = controllerKey;
         this.deviceKey = deviceKey;
         this.deviceName = deviceName;
@@ -196,52 +196,52 @@ public final class VirtualDiskResponse {
     	      this.unitNumber = defaults.unitNumber;
         }
 
-        public Builder setControllerKey(@Nullable Integer controllerKey) {
+        public Builder controllerKey(@Nullable Integer controllerKey) {
             this.controllerKey = controllerKey;
             return this;
         }
 
-        public Builder setDeviceKey(@Nullable Integer deviceKey) {
+        public Builder deviceKey(@Nullable Integer deviceKey) {
             this.deviceKey = deviceKey;
             return this;
         }
 
-        public Builder setDeviceName(@Nullable String deviceName) {
+        public Builder deviceName(@Nullable String deviceName) {
             this.deviceName = deviceName;
             return this;
         }
 
-        public Builder setDiskMode(@Nullable String diskMode) {
+        public Builder diskMode(@Nullable String diskMode) {
             this.diskMode = diskMode;
             return this;
         }
 
-        public Builder setDiskObjectId(String diskObjectId) {
+        public Builder diskObjectId(String diskObjectId) {
             this.diskObjectId = Objects.requireNonNull(diskObjectId);
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setDiskType(@Nullable String diskType) {
+        public Builder diskType(@Nullable String diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setUnitNumber(@Nullable Integer unitNumber) {
+        public Builder unitNumber(@Nullable Integer unitNumber) {
             this.unitNumber = unitNumber;
             return this;
         }

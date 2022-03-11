@@ -54,7 +54,7 @@ public final class ResponsePlanChatChannel extends io.pulumi.resources.InvokeArg
     	      this.chatbotSns = defaults.chatbotSns;
         }
 
-        public Builder setChatbotSns(@Nullable List<String> chatbotSns) {
+        public Builder chatbotSns(@Nullable List<String> chatbotSns) {
             this.chatbotSns = chatbotSns;
             return this;
         }

@@ -42,14 +42,14 @@ public final class AllowedSubjectAltNamesResponse {
      */
     private final List<String> allowedUris;
 
-    @OutputCustomType.Constructor({"allowCustomSans","allowGlobbingDnsWildcards","allowedDnsNames","allowedEmailAddresses","allowedIps","allowedUris"})
+    @OutputCustomType.Constructor
     private AllowedSubjectAltNamesResponse(
-        Boolean allowCustomSans,
-        Boolean allowGlobbingDnsWildcards,
-        List<String> allowedDnsNames,
-        List<String> allowedEmailAddresses,
-        List<String> allowedIps,
-        List<String> allowedUris) {
+        @OutputCustomType.Parameter("allowCustomSans") Boolean allowCustomSans,
+        @OutputCustomType.Parameter("allowGlobbingDnsWildcards") Boolean allowGlobbingDnsWildcards,
+        @OutputCustomType.Parameter("allowedDnsNames") List<String> allowedDnsNames,
+        @OutputCustomType.Parameter("allowedEmailAddresses") List<String> allowedEmailAddresses,
+        @OutputCustomType.Parameter("allowedIps") List<String> allowedIps,
+        @OutputCustomType.Parameter("allowedUris") List<String> allowedUris) {
         this.allowCustomSans = allowCustomSans;
         this.allowGlobbingDnsWildcards = allowGlobbingDnsWildcards;
         this.allowedDnsNames = allowedDnsNames;
@@ -131,32 +131,32 @@ public final class AllowedSubjectAltNamesResponse {
     	      this.allowedUris = defaults.allowedUris;
         }
 
-        public Builder setAllowCustomSans(Boolean allowCustomSans) {
+        public Builder allowCustomSans(Boolean allowCustomSans) {
             this.allowCustomSans = Objects.requireNonNull(allowCustomSans);
             return this;
         }
 
-        public Builder setAllowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
+        public Builder allowGlobbingDnsWildcards(Boolean allowGlobbingDnsWildcards) {
             this.allowGlobbingDnsWildcards = Objects.requireNonNull(allowGlobbingDnsWildcards);
             return this;
         }
 
-        public Builder setAllowedDnsNames(List<String> allowedDnsNames) {
+        public Builder allowedDnsNames(List<String> allowedDnsNames) {
             this.allowedDnsNames = Objects.requireNonNull(allowedDnsNames);
             return this;
         }
 
-        public Builder setAllowedEmailAddresses(List<String> allowedEmailAddresses) {
+        public Builder allowedEmailAddresses(List<String> allowedEmailAddresses) {
             this.allowedEmailAddresses = Objects.requireNonNull(allowedEmailAddresses);
             return this;
         }
 
-        public Builder setAllowedIps(List<String> allowedIps) {
+        public Builder allowedIps(List<String> allowedIps) {
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
 
-        public Builder setAllowedUris(List<String> allowedUris) {
+        public Builder allowedUris(List<String> allowedUris) {
             this.allowedUris = Objects.requireNonNull(allowedUris);
             return this;
         }

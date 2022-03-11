@@ -64,18 +64,18 @@ public final class GetDlpJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createTime","endTime","errors","inspectDetails","jobTriggerName","name","riskDetails","startTime","state","type"})
+    @OutputCustomType.Constructor
     private GetDlpJobResult(
-        String createTime,
-        String endTime,
-        List<GooglePrivacyDlpV2ErrorResponse> errors,
-        GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
-        String jobTriggerName,
-        String name,
-        GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
-        String startTime,
-        String state,
-        String type) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("errors") List<GooglePrivacyDlpV2ErrorResponse> errors,
+        @OutputCustomType.Parameter("inspectDetails") GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails,
+        @OutputCustomType.Parameter("jobTriggerName") String jobTriggerName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("riskDetails") GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type) {
         this.createTime = createTime;
         this.endTime = endTime;
         this.errors = errors;
@@ -197,52 +197,52 @@ public final class GetDlpJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setErrors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
+        public Builder errors(List<GooglePrivacyDlpV2ErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInspectDetails(GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails) {
+        public Builder inspectDetails(GooglePrivacyDlpV2InspectDataSourceDetailsResponse inspectDetails) {
             this.inspectDetails = Objects.requireNonNull(inspectDetails);
             return this;
         }
 
-        public Builder setJobTriggerName(String jobTriggerName) {
+        public Builder jobTriggerName(String jobTriggerName) {
             this.jobTriggerName = Objects.requireNonNull(jobTriggerName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRiskDetails(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails) {
+        public Builder riskDetails(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetailsResponse riskDetails) {
             this.riskDetails = Objects.requireNonNull(riskDetails);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

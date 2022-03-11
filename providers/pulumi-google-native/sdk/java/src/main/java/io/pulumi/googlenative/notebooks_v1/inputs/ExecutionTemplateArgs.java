@@ -255,132 +255,132 @@ public final class ExecutionTemplateArgs extends io.pulumi.resources.ResourceArg
     	      this.vertexAiParameters = defaults.vertexAiParameters;
         }
 
-        public Builder setAcceleratorConfig(@Nullable Input<SchedulerAcceleratorConfigArgs> acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable Input<SchedulerAcceleratorConfigArgs> acceleratorConfig) {
             this.acceleratorConfig = acceleratorConfig;
             return this;
         }
 
-        public Builder setAcceleratorConfig(@Nullable SchedulerAcceleratorConfigArgs acceleratorConfig) {
+        public Builder acceleratorConfig(@Nullable SchedulerAcceleratorConfigArgs acceleratorConfig) {
             this.acceleratorConfig = Input.ofNullable(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerImageUri(@Nullable Input<String> containerImageUri) {
+        public Builder containerImageUri(@Nullable Input<String> containerImageUri) {
             this.containerImageUri = containerImageUri;
             return this;
         }
 
-        public Builder setContainerImageUri(@Nullable String containerImageUri) {
+        public Builder containerImageUri(@Nullable String containerImageUri) {
             this.containerImageUri = Input.ofNullable(containerImageUri);
             return this;
         }
 
-        public Builder setDataprocParameters(@Nullable Input<DataprocParametersArgs> dataprocParameters) {
+        public Builder dataprocParameters(@Nullable Input<DataprocParametersArgs> dataprocParameters) {
             this.dataprocParameters = dataprocParameters;
             return this;
         }
 
-        public Builder setDataprocParameters(@Nullable DataprocParametersArgs dataprocParameters) {
+        public Builder dataprocParameters(@Nullable DataprocParametersArgs dataprocParameters) {
             this.dataprocParameters = Input.ofNullable(dataprocParameters);
             return this;
         }
 
-        public Builder setInputNotebookFile(@Nullable Input<String> inputNotebookFile) {
+        public Builder inputNotebookFile(@Nullable Input<String> inputNotebookFile) {
             this.inputNotebookFile = inputNotebookFile;
             return this;
         }
 
-        public Builder setInputNotebookFile(@Nullable String inputNotebookFile) {
+        public Builder inputNotebookFile(@Nullable String inputNotebookFile) {
             this.inputNotebookFile = Input.ofNullable(inputNotebookFile);
             return this;
         }
 
-        public Builder setJobType(@Nullable Input<ExecutionTemplateJobType> jobType) {
+        public Builder jobType(@Nullable Input<ExecutionTemplateJobType> jobType) {
             this.jobType = jobType;
             return this;
         }
 
-        public Builder setJobType(@Nullable ExecutionTemplateJobType jobType) {
+        public Builder jobType(@Nullable ExecutionTemplateJobType jobType) {
             this.jobType = Input.ofNullable(jobType);
             return this;
         }
 
-        public Builder setKernelSpec(@Nullable Input<String> kernelSpec) {
+        public Builder kernelSpec(@Nullable Input<String> kernelSpec) {
             this.kernelSpec = kernelSpec;
             return this;
         }
 
-        public Builder setKernelSpec(@Nullable String kernelSpec) {
+        public Builder kernelSpec(@Nullable String kernelSpec) {
             this.kernelSpec = Input.ofNullable(kernelSpec);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMasterType(@Nullable Input<String> masterType) {
+        public Builder masterType(@Nullable Input<String> masterType) {
             this.masterType = masterType;
             return this;
         }
 
-        public Builder setMasterType(@Nullable String masterType) {
+        public Builder masterType(@Nullable String masterType) {
             this.masterType = Input.ofNullable(masterType);
             return this;
         }
 
-        public Builder setOutputNotebookFolder(@Nullable Input<String> outputNotebookFolder) {
+        public Builder outputNotebookFolder(@Nullable Input<String> outputNotebookFolder) {
             this.outputNotebookFolder = outputNotebookFolder;
             return this;
         }
 
-        public Builder setOutputNotebookFolder(@Nullable String outputNotebookFolder) {
+        public Builder outputNotebookFolder(@Nullable String outputNotebookFolder) {
             this.outputNotebookFolder = Input.ofNullable(outputNotebookFolder);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<String> parameters) {
+        public Builder parameters(@Nullable Input<String> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setParamsYamlFile(@Nullable Input<String> paramsYamlFile) {
+        public Builder paramsYamlFile(@Nullable Input<String> paramsYamlFile) {
             this.paramsYamlFile = paramsYamlFile;
             return this;
         }
 
-        public Builder setParamsYamlFile(@Nullable String paramsYamlFile) {
+        public Builder paramsYamlFile(@Nullable String paramsYamlFile) {
             this.paramsYamlFile = Input.ofNullable(paramsYamlFile);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setVertexAiParameters(@Nullable Input<VertexAIParametersArgs> vertexAiParameters) {
+        public Builder vertexAiParameters(@Nullable Input<VertexAIParametersArgs> vertexAiParameters) {
             this.vertexAiParameters = vertexAiParameters;
             return this;
         }
 
-        public Builder setVertexAiParameters(@Nullable VertexAIParametersArgs vertexAiParameters) {
+        public Builder vertexAiParameters(@Nullable VertexAIParametersArgs vertexAiParameters) {
             this.vertexAiParameters = Input.ofNullable(vertexAiParameters);
             return this;
         }

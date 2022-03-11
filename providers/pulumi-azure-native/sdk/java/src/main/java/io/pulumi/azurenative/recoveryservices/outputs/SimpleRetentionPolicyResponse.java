@@ -24,10 +24,10 @@ public final class SimpleRetentionPolicyResponse {
      */
     private final String retentionPolicyType;
 
-    @OutputCustomType.Constructor({"retentionDuration","retentionPolicyType"})
+    @OutputCustomType.Constructor
     private SimpleRetentionPolicyResponse(
-        @Nullable RetentionDurationResponse retentionDuration,
-        String retentionPolicyType) {
+        @OutputCustomType.Parameter("retentionDuration") @Nullable RetentionDurationResponse retentionDuration,
+        @OutputCustomType.Parameter("retentionPolicyType") String retentionPolicyType) {
         this.retentionDuration = retentionDuration;
         this.retentionPolicyType = retentionPolicyType;
     }
@@ -70,12 +70,12 @@ public final class SimpleRetentionPolicyResponse {
     	      this.retentionPolicyType = defaults.retentionPolicyType;
         }
 
-        public Builder setRetentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
+        public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             this.retentionDuration = retentionDuration;
             return this;
         }
 
-        public Builder setRetentionPolicyType(String retentionPolicyType) {
+        public Builder retentionPolicyType(String retentionPolicyType) {
             this.retentionPolicyType = Objects.requireNonNull(retentionPolicyType);
             return this;
         }

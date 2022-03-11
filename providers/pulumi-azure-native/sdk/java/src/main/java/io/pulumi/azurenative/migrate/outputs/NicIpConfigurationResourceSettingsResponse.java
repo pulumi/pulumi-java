@@ -58,16 +58,16 @@ public final class NicIpConfigurationResourceSettingsResponse {
      */
     private final @Nullable SubnetReferenceResponse subnet;
 
-    @OutputCustomType.Constructor({"loadBalancerBackendAddressPools","loadBalancerNatRules","name","primary","privateIpAddress","privateIpAllocationMethod","publicIp","subnet"})
+    @OutputCustomType.Constructor
     private NicIpConfigurationResourceSettingsResponse(
-        @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools,
-        @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules,
-        @Nullable String name,
-        @Nullable Boolean primary,
-        @Nullable String privateIpAddress,
-        @Nullable String privateIpAllocationMethod,
-        @Nullable PublicIpReferenceResponse publicIp,
-        @Nullable SubnetReferenceResponse subnet) {
+        @OutputCustomType.Parameter("loadBalancerBackendAddressPools") @Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools,
+        @OutputCustomType.Parameter("loadBalancerNatRules") @Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("primary") @Nullable Boolean primary,
+        @OutputCustomType.Parameter("privateIpAddress") @Nullable String privateIpAddress,
+        @OutputCustomType.Parameter("privateIpAllocationMethod") @Nullable String privateIpAllocationMethod,
+        @OutputCustomType.Parameter("publicIp") @Nullable PublicIpReferenceResponse publicIp,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetReferenceResponse subnet) {
         this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
         this.loadBalancerNatRules = loadBalancerNatRules;
         this.name = name;
@@ -169,42 +169,42 @@ public final class NicIpConfigurationResourceSettingsResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<LoadBalancerBackendAddressPoolReferenceResponse> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules) {
+        public Builder loadBalancerNatRules(@Nullable List<LoadBalancerNatRuleReferenceResponse> loadBalancerNatRules) {
             this.loadBalancerNatRules = loadBalancerNatRules;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrivateIpAddress(@Nullable String privateIpAddress) {
+        public Builder privateIpAddress(@Nullable String privateIpAddress) {
             this.privateIpAddress = privateIpAddress;
             return this;
         }
 
-        public Builder setPrivateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
+        public Builder privateIpAllocationMethod(@Nullable String privateIpAllocationMethod) {
             this.privateIpAllocationMethod = privateIpAllocationMethod;
             return this;
         }
 
-        public Builder setPublicIp(@Nullable PublicIpReferenceResponse publicIp) {
+        public Builder publicIp(@Nullable PublicIpReferenceResponse publicIp) {
             this.publicIp = publicIp;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetReferenceResponse subnet) {
+        public Builder subnet(@Nullable SubnetReferenceResponse subnet) {
             this.subnet = subnet;
             return this;
         }

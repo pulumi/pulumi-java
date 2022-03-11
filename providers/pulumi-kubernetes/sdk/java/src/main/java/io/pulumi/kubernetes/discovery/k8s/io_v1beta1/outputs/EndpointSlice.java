@@ -46,14 +46,14 @@ public final class EndpointSlice {
      */
     private final @Nullable List<EndpointPort> ports;
 
-    @OutputCustomType.Constructor({"addressType","apiVersion","endpoints","kind","metadata","ports"})
+    @OutputCustomType.Constructor
     private EndpointSlice(
-        String addressType,
-        @Nullable String apiVersion,
-        List<Endpoint> endpoints,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable List<EndpointPort> ports) {
+        @OutputCustomType.Parameter("addressType") String addressType,
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("endpoints") List<Endpoint> endpoints,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("ports") @Nullable List<EndpointPort> ports) {
         this.addressType = addressType;
         this.apiVersion = apiVersion;
         this.endpoints = endpoints;
@@ -135,32 +135,32 @@ public final class EndpointSlice {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setAddressType(String addressType) {
+        public Builder addressType(String addressType) {
             this.addressType = Objects.requireNonNull(addressType);
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setEndpoints(List<Endpoint> endpoints) {
+        public Builder endpoints(List<Endpoint> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<EndpointPort> ports) {
+        public Builder ports(@Nullable List<EndpointPort> ports) {
             this.ports = ports;
             return this;
         }

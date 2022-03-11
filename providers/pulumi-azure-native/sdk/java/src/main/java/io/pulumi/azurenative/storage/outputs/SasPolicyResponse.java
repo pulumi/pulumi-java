@@ -20,10 +20,10 @@ public final class SasPolicyResponse {
      */
     private final String sasExpirationPeriod;
 
-    @OutputCustomType.Constructor({"expirationAction","sasExpirationPeriod"})
+    @OutputCustomType.Constructor
     private SasPolicyResponse(
-        String expirationAction,
-        String sasExpirationPeriod) {
+        @OutputCustomType.Parameter("expirationAction") String expirationAction,
+        @OutputCustomType.Parameter("sasExpirationPeriod") String sasExpirationPeriod) {
         this.expirationAction = expirationAction;
         this.sasExpirationPeriod = sasExpirationPeriod;
     }
@@ -65,12 +65,12 @@ public final class SasPolicyResponse {
     	      this.sasExpirationPeriod = defaults.sasExpirationPeriod;
         }
 
-        public Builder setExpirationAction(String expirationAction) {
+        public Builder expirationAction(String expirationAction) {
             this.expirationAction = Objects.requireNonNull(expirationAction);
             return this;
         }
 
-        public Builder setSasExpirationPeriod(String sasExpirationPeriod) {
+        public Builder sasExpirationPeriod(String sasExpirationPeriod) {
             this.sasExpirationPeriod = Objects.requireNonNull(sasExpirationPeriod);
             return this;
         }

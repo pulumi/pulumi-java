@@ -21,10 +21,10 @@ public final class CustomErrorRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"isErrorType","selector"})
+    @OutputCustomType.Constructor
     private CustomErrorRuleResponse(
-        Boolean isErrorType,
-        String selector) {
+        @OutputCustomType.Parameter("isErrorType") Boolean isErrorType,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.isErrorType = isErrorType;
         this.selector = selector;
     }
@@ -66,12 +66,12 @@ public final class CustomErrorRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setIsErrorType(Boolean isErrorType) {
+        public Builder isErrorType(Boolean isErrorType) {
             this.isErrorType = Objects.requireNonNull(isErrorType);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

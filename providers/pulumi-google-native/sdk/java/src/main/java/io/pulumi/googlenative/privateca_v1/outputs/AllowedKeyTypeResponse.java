@@ -21,10 +21,10 @@ public final class AllowedKeyTypeResponse {
      */
     private final RsaKeyTypeResponse rsa;
 
-    @OutputCustomType.Constructor({"ellipticCurve","rsa"})
+    @OutputCustomType.Constructor
     private AllowedKeyTypeResponse(
-        EcKeyTypeResponse ellipticCurve,
-        RsaKeyTypeResponse rsa) {
+        @OutputCustomType.Parameter("ellipticCurve") EcKeyTypeResponse ellipticCurve,
+        @OutputCustomType.Parameter("rsa") RsaKeyTypeResponse rsa) {
         this.ellipticCurve = ellipticCurve;
         this.rsa = rsa;
     }
@@ -66,12 +66,12 @@ public final class AllowedKeyTypeResponse {
     	      this.rsa = defaults.rsa;
         }
 
-        public Builder setEllipticCurve(EcKeyTypeResponse ellipticCurve) {
+        public Builder ellipticCurve(EcKeyTypeResponse ellipticCurve) {
             this.ellipticCurve = Objects.requireNonNull(ellipticCurve);
             return this;
         }
 
-        public Builder setRsa(RsaKeyTypeResponse rsa) {
+        public Builder rsa(RsaKeyTypeResponse rsa) {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
         }

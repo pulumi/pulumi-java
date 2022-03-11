@@ -43,16 +43,16 @@ public final class GetIpRangesResult {
     private final Integer syncToken;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"cidrBlocks","createDate","id","ipv6CidrBlocks","regions","services","syncToken","url"})
+    @OutputCustomType.Constructor
     private GetIpRangesResult(
-        List<String> cidrBlocks,
-        String createDate,
-        String id,
-        List<String> ipv6CidrBlocks,
-        @Nullable List<String> regions,
-        List<String> services,
-        Integer syncToken,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("cidrBlocks") List<String> cidrBlocks,
+        @OutputCustomType.Parameter("createDate") String createDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipv6CidrBlocks") List<String> ipv6CidrBlocks,
+        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
+        @OutputCustomType.Parameter("services") List<String> services,
+        @OutputCustomType.Parameter("syncToken") Integer syncToken,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.cidrBlocks = cidrBlocks;
         this.createDate = createDate;
         this.id = id;
@@ -143,42 +143,42 @@ public final class GetIpRangesResult {
     	      this.url = defaults.url;
         }
 
-        public Builder setCidrBlocks(List<String> cidrBlocks) {
+        public Builder cidrBlocks(List<String> cidrBlocks) {
             this.cidrBlocks = Objects.requireNonNull(cidrBlocks);
             return this;
         }
 
-        public Builder setCreateDate(String createDate) {
+        public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpv6CidrBlocks(List<String> ipv6CidrBlocks) {
+        public Builder ipv6CidrBlocks(List<String> ipv6CidrBlocks) {
             this.ipv6CidrBlocks = Objects.requireNonNull(ipv6CidrBlocks);
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setServices(List<String> services) {
+        public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
 
-        public Builder setSyncToken(Integer syncToken) {
+        public Builder syncToken(Integer syncToken) {
             this.syncToken = Objects.requireNonNull(syncToken);
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

@@ -227,122 +227,122 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setAddressType(@Nullable Input<GlobalAddressAddressType> addressType) {
+        public Builder addressType(@Nullable Input<GlobalAddressAddressType> addressType) {
             this.addressType = addressType;
             return this;
         }
 
-        public Builder setAddressType(@Nullable GlobalAddressAddressType addressType) {
+        public Builder addressType(@Nullable GlobalAddressAddressType addressType) {
             this.addressType = Input.ofNullable(addressType);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setIpVersion(@Nullable Input<GlobalAddressIpVersion> ipVersion) {
+        public Builder ipVersion(@Nullable Input<GlobalAddressIpVersion> ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
-        public Builder setIpVersion(@Nullable GlobalAddressIpVersion ipVersion) {
+        public Builder ipVersion(@Nullable GlobalAddressIpVersion ipVersion) {
             this.ipVersion = Input.ofNullable(ipVersion);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable Input<GlobalAddressNetworkTier> networkTier) {
+        public Builder networkTier(@Nullable Input<GlobalAddressNetworkTier> networkTier) {
             this.networkTier = networkTier;
             return this;
         }
 
-        public Builder setNetworkTier(@Nullable GlobalAddressNetworkTier networkTier) {
+        public Builder networkTier(@Nullable GlobalAddressNetworkTier networkTier) {
             this.networkTier = Input.ofNullable(networkTier);
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Input<Integer> prefixLength) {
+        public Builder prefixLength(@Nullable Input<Integer> prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = Input.ofNullable(prefixLength);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPurpose(@Nullable Input<GlobalAddressPurpose> purpose) {
+        public Builder purpose(@Nullable Input<GlobalAddressPurpose> purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setPurpose(@Nullable GlobalAddressPurpose purpose) {
+        public Builder purpose(@Nullable GlobalAddressPurpose purpose) {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable Input<String> subnetwork) {
+        public Builder subnetwork(@Nullable Input<String> subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }

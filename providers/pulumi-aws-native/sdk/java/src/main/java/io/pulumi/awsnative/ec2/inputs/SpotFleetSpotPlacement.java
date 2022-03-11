@@ -75,17 +75,17 @@ public final class SpotFleetSpotPlacement extends io.pulumi.resources.InvokeArgs
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setTenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
             this.tenancy = tenancy;
             return this;
         }

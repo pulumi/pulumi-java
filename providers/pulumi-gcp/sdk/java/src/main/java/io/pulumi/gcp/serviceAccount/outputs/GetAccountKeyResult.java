@@ -26,14 +26,14 @@ public final class GetAccountKeyResult {
     private final String publicKey;
     private final @Nullable String publicKeyType;
 
-    @OutputCustomType.Constructor({"id","keyAlgorithm","name","project","publicKey","publicKeyType"})
+    @OutputCustomType.Constructor
     private GetAccountKeyResult(
-        String id,
-        String keyAlgorithm,
-        String name,
-        @Nullable String project,
-        String publicKey,
-        @Nullable String publicKeyType) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("publicKeyType") @Nullable String publicKeyType) {
         this.id = id;
         this.keyAlgorithm = keyAlgorithm;
         this.name = name;
@@ -99,32 +99,32 @@ public final class GetAccountKeyResult {
     	      this.publicKeyType = defaults.publicKeyType;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyAlgorithm(String keyAlgorithm) {
+        public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setPublicKeyType(@Nullable String publicKeyType) {
+        public Builder publicKeyType(@Nullable String publicKeyType) {
             this.publicKeyType = publicKeyType;
             return this;
         }

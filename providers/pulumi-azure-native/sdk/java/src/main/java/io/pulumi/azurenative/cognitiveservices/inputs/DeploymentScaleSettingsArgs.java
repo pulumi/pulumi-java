@@ -77,22 +77,22 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
     	      this.scaleType = defaults.scaleType;
         }
 
-        public Builder setCapacity(@Nullable Input<Integer> capacity) {
+        public Builder capacity(@Nullable Input<Integer> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setScaleType(@Nullable Input<Either<String,DeploymentScaleType>> scaleType) {
+        public Builder scaleType(@Nullable Input<Either<String,DeploymentScaleType>> scaleType) {
             this.scaleType = scaleType;
             return this;
         }
 
-        public Builder setScaleType(@Nullable Either<String,DeploymentScaleType> scaleType) {
+        public Builder scaleType(@Nullable Either<String,DeploymentScaleType> scaleType) {
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }

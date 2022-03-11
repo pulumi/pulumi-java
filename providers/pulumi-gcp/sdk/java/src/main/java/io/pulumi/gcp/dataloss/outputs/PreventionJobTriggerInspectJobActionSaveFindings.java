@@ -16,8 +16,8 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
      */
     private final PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig;
 
-    @OutputCustomType.Constructor({"outputConfig"})
-    private PreventionJobTriggerInspectJobActionSaveFindings(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
+    @OutputCustomType.Constructor
+    private PreventionJobTriggerInspectJobActionSaveFindings(@OutputCustomType.Parameter("outputConfig") PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
         this.outputConfig = outputConfig;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindings {
     	      this.outputConfig = defaults.outputConfig;
         }
 
-        public Builder setOutputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
+        public Builder outputConfig(PreventionJobTriggerInspectJobActionSaveFindingsOutputConfig outputConfig) {
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }

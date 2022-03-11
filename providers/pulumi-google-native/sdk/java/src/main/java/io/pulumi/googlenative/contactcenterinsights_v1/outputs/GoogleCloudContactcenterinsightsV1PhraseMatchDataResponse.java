@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
      */
     private final String phraseMatcher;
 
-    @OutputCustomType.Constructor({"displayName","phraseMatcher"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse(
-        String displayName,
-        String phraseMatcher) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("phraseMatcher") String phraseMatcher) {
         this.displayName = displayName;
         this.phraseMatcher = phraseMatcher;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchDataResponse {
     	      this.phraseMatcher = defaults.phraseMatcher;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setPhraseMatcher(String phraseMatcher) {
+        public Builder phraseMatcher(String phraseMatcher) {
             this.phraseMatcher = Objects.requireNonNull(phraseMatcher);
             return this;
         }

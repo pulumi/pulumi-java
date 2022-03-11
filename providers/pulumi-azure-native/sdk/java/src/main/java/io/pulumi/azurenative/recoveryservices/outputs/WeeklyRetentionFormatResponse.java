@@ -22,10 +22,10 @@ public final class WeeklyRetentionFormatResponse {
      */
     private final @Nullable List<String> weeksOfTheMonth;
 
-    @OutputCustomType.Constructor({"daysOfTheWeek","weeksOfTheMonth"})
+    @OutputCustomType.Constructor
     private WeeklyRetentionFormatResponse(
-        @Nullable List<String> daysOfTheWeek,
-        @Nullable List<String> weeksOfTheMonth) {
+        @OutputCustomType.Parameter("daysOfTheWeek") @Nullable List<String> daysOfTheWeek,
+        @OutputCustomType.Parameter("weeksOfTheMonth") @Nullable List<String> weeksOfTheMonth) {
         this.daysOfTheWeek = daysOfTheWeek;
         this.weeksOfTheMonth = weeksOfTheMonth;
     }
@@ -67,12 +67,12 @@ public final class WeeklyRetentionFormatResponse {
     	      this.weeksOfTheMonth = defaults.weeksOfTheMonth;
         }
 
-        public Builder setDaysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
+        public Builder daysOfTheWeek(@Nullable List<String> daysOfTheWeek) {
             this.daysOfTheWeek = daysOfTheWeek;
             return this;
         }
 
-        public Builder setWeeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
+        public Builder weeksOfTheMonth(@Nullable List<String> weeksOfTheMonth) {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }

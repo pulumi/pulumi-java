@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class VirtualClusterContainerInfo {
     private final VirtualClusterEksInfo eksInfo;
 
-    @OutputCustomType.Constructor({"eksInfo"})
-    private VirtualClusterContainerInfo(VirtualClusterEksInfo eksInfo) {
+    @OutputCustomType.Constructor
+    private VirtualClusterContainerInfo(@OutputCustomType.Parameter("eksInfo") VirtualClusterEksInfo eksInfo) {
         this.eksInfo = eksInfo;
     }
 
@@ -40,7 +40,7 @@ public final class VirtualClusterContainerInfo {
     	      this.eksInfo = defaults.eksInfo;
         }
 
-        public Builder setEksInfo(VirtualClusterEksInfo eksInfo) {
+        public Builder eksInfo(VirtualClusterEksInfo eksInfo) {
             this.eksInfo = Objects.requireNonNull(eksInfo);
             return this;
         }

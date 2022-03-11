@@ -29,10 +29,10 @@ public final class EntityTypeEntity {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"synonyms","value"})
+    @OutputCustomType.Constructor
     private EntityTypeEntity(
-        List<String> synonyms,
-        String value) {
+        @OutputCustomType.Parameter("synonyms") List<String> synonyms,
+        @OutputCustomType.Parameter("value") String value) {
         this.synonyms = synonyms;
         this.value = value;
     }
@@ -82,12 +82,12 @@ public final class EntityTypeEntity {
     	      this.value = defaults.value;
         }
 
-        public Builder setSynonyms(List<String> synonyms) {
+        public Builder synonyms(List<String> synonyms) {
             this.synonyms = Objects.requireNonNull(synonyms);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

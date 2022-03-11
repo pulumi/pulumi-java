@@ -29,11 +29,11 @@ public final class FeatureGroupOfflineStoreConfig {
      */
     private final FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig;
 
-    @OutputCustomType.Constructor({"dataCatalogConfig","disableGlueTableCreation","s3StorageConfig"})
+    @OutputCustomType.Constructor
     private FeatureGroupOfflineStoreConfig(
-        @Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig,
-        @Nullable Boolean disableGlueTableCreation,
-        FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
+        @OutputCustomType.Parameter("dataCatalogConfig") @Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig,
+        @OutputCustomType.Parameter("disableGlueTableCreation") @Nullable Boolean disableGlueTableCreation,
+        @OutputCustomType.Parameter("s3StorageConfig") FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
         this.dataCatalogConfig = dataCatalogConfig;
         this.disableGlueTableCreation = disableGlueTableCreation;
         this.s3StorageConfig = s3StorageConfig;
@@ -85,17 +85,17 @@ public final class FeatureGroupOfflineStoreConfig {
     	      this.s3StorageConfig = defaults.s3StorageConfig;
         }
 
-        public Builder setDataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig) {
+        public Builder dataCatalogConfig(@Nullable FeatureGroupOfflineStoreConfigDataCatalogConfig dataCatalogConfig) {
             this.dataCatalogConfig = dataCatalogConfig;
             return this;
         }
 
-        public Builder setDisableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
+        public Builder disableGlueTableCreation(@Nullable Boolean disableGlueTableCreation) {
             this.disableGlueTableCreation = disableGlueTableCreation;
             return this;
         }
 
-        public Builder setS3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
+        public Builder s3StorageConfig(FeatureGroupOfflineStoreConfigS3StorageConfig s3StorageConfig) {
             this.s3StorageConfig = Objects.requireNonNull(s3StorageConfig);
             return this;
         }

@@ -45,29 +45,29 @@ public final class GetDatabaseInstanceResult {
     private final String serviceAccountEmailAddress;
     private final List<GetDatabaseInstanceSetting> settings;
 
-    @OutputCustomType.Constructor({"clones","connectionName","databaseVersion","deletionProtection","encryptionKeyName","firstIpAddress","id","ipAddresses","masterInstanceName","name","privateIpAddress","project","publicIpAddress","region","replicaConfigurations","restoreBackupContexts","rootPassword","selfLink","serverCaCerts","serviceAccountEmailAddress","settings"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceResult(
-        List<GetDatabaseInstanceClone> clones,
-        String connectionName,
-        String databaseVersion,
-        Boolean deletionProtection,
-        String encryptionKeyName,
-        String firstIpAddress,
-        String id,
-        List<GetDatabaseInstanceIpAddress> ipAddresses,
-        String masterInstanceName,
-        String name,
-        String privateIpAddress,
-        @Nullable String project,
-        String publicIpAddress,
-        String region,
-        List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
-        List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
-        String rootPassword,
-        String selfLink,
-        List<GetDatabaseInstanceServerCaCert> serverCaCerts,
-        String serviceAccountEmailAddress,
-        List<GetDatabaseInstanceSetting> settings) {
+        @OutputCustomType.Parameter("clones") List<GetDatabaseInstanceClone> clones,
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
+        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @OutputCustomType.Parameter("firstIpAddress") String firstIpAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddresses") List<GetDatabaseInstanceIpAddress> ipAddresses,
+        @OutputCustomType.Parameter("masterInstanceName") String masterInstanceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("replicaConfigurations") List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
+        @OutputCustomType.Parameter("restoreBackupContexts") List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
+        @OutputCustomType.Parameter("rootPassword") String rootPassword,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverCaCerts") List<GetDatabaseInstanceServerCaCert> serverCaCerts,
+        @OutputCustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
+        @OutputCustomType.Parameter("settings") List<GetDatabaseInstanceSetting> settings) {
         this.clones = clones;
         this.connectionName = connectionName;
         this.databaseVersion = databaseVersion;
@@ -219,107 +219,107 @@ public final class GetDatabaseInstanceResult {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setClones(List<GetDatabaseInstanceClone> clones) {
+        public Builder clones(List<GetDatabaseInstanceClone> clones) {
             this.clones = Objects.requireNonNull(clones);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setDatabaseVersion(String databaseVersion) {
+        public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
-        public Builder setDeletionProtection(Boolean deletionProtection) {
+        public Builder deletionProtection(Boolean deletionProtection) {
             this.deletionProtection = Objects.requireNonNull(deletionProtection);
             return this;
         }
 
-        public Builder setEncryptionKeyName(String encryptionKeyName) {
+        public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
 
-        public Builder setFirstIpAddress(String firstIpAddress) {
+        public Builder firstIpAddress(String firstIpAddress) {
             this.firstIpAddress = Objects.requireNonNull(firstIpAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddresses(List<GetDatabaseInstanceIpAddress> ipAddresses) {
+        public Builder ipAddresses(List<GetDatabaseInstanceIpAddress> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setMasterInstanceName(String masterInstanceName) {
+        public Builder masterInstanceName(String masterInstanceName) {
             this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReplicaConfigurations(List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations) {
+        public Builder replicaConfigurations(List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations) {
             this.replicaConfigurations = Objects.requireNonNull(replicaConfigurations);
             return this;
         }
 
-        public Builder setRestoreBackupContexts(List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts) {
+        public Builder restoreBackupContexts(List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts) {
             this.restoreBackupContexts = Objects.requireNonNull(restoreBackupContexts);
             return this;
         }
 
-        public Builder setRootPassword(String rootPassword) {
+        public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServerCaCerts(List<GetDatabaseInstanceServerCaCert> serverCaCerts) {
+        public Builder serverCaCerts(List<GetDatabaseInstanceServerCaCert> serverCaCerts) {
             this.serverCaCerts = Objects.requireNonNull(serverCaCerts);
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(String serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder setSettings(List<GetDatabaseInstanceSetting> settings) {
+        public Builder settings(List<GetDatabaseInstanceSetting> settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }

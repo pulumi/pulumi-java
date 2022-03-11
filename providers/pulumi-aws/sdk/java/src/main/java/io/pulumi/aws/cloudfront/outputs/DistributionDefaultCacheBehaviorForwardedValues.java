@@ -41,12 +41,12 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
      */
     private final @Nullable List<String> queryStringCacheKeys;
 
-    @OutputCustomType.Constructor({"cookies","headers","queryString","queryStringCacheKeys"})
+    @OutputCustomType.Constructor
     private DistributionDefaultCacheBehaviorForwardedValues(
-        DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
-        @Nullable List<String> headers,
-        Boolean queryString,
-        @Nullable List<String> queryStringCacheKeys) {
+        @OutputCustomType.Parameter("cookies") DistributionDefaultCacheBehaviorForwardedValuesCookies cookies,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("queryString") Boolean queryString,
+        @OutputCustomType.Parameter("queryStringCacheKeys") @Nullable List<String> queryStringCacheKeys) {
         this.cookies = cookies;
         this.headers = headers;
         this.queryString = queryString;
@@ -115,22 +115,22 @@ public final class DistributionDefaultCacheBehaviorForwardedValues {
     	      this.queryStringCacheKeys = defaults.queryStringCacheKeys;
         }
 
-        public Builder setCookies(DistributionDefaultCacheBehaviorForwardedValuesCookies cookies) {
+        public Builder cookies(DistributionDefaultCacheBehaviorForwardedValuesCookies cookies) {
             this.cookies = Objects.requireNonNull(cookies);
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setQueryString(Boolean queryString) {
+        public Builder queryString(Boolean queryString) {
             this.queryString = Objects.requireNonNull(queryString);
             return this;
         }
 
-        public Builder setQueryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
+        public Builder queryStringCacheKeys(@Nullable List<String> queryStringCacheKeys) {
             this.queryStringCacheKeys = queryStringCacheKeys;
             return this;
         }

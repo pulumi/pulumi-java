@@ -90,17 +90,17 @@ public final class ImageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAlpha(Double alpha) {
+        public Builder alpha(Double alpha) {
             this.alpha = Objects.requireNonNull(alpha);
             return this;
         }
 
-        public Builder setResolution(NormalizedCoordinateResponse resolution) {
+        public Builder resolution(NormalizedCoordinateResponse resolution) {
             this.resolution = Objects.requireNonNull(resolution);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

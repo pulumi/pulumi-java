@@ -57,12 +57,12 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     	      this.functionAlias = defaults.functionAlias;
         }
 
-        public Builder setFunctionAlias(@Nullable Input<String> functionAlias) {
+        public Builder functionAlias(@Nullable Input<String> functionAlias) {
             this.functionAlias = functionAlias;
             return this;
         }
 
-        public Builder setFunctionAlias(@Nullable String functionAlias) {
+        public Builder functionAlias(@Nullable String functionAlias) {
             this.functionAlias = Input.ofNullable(functionAlias);
             return this;
         }

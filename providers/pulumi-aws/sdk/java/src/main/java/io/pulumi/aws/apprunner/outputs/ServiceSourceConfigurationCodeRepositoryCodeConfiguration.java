@@ -23,10 +23,10 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
      */
     private final String configurationSource;
 
-    @OutputCustomType.Constructor({"codeConfigurationValues","configurationSource"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfiguration(
-        @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
-        String configurationSource) {
+        @OutputCustomType.Parameter("codeConfigurationValues") @Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues,
+        @OutputCustomType.Parameter("configurationSource") String configurationSource) {
         this.codeConfigurationValues = codeConfigurationValues;
         this.configurationSource = configurationSource;
     }
@@ -68,12 +68,12 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfiguration {
     	      this.configurationSource = defaults.configurationSource;
         }
 
-        public Builder setCodeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues) {
+        public Builder codeConfigurationValues(@Nullable ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues codeConfigurationValues) {
             this.codeConfigurationValues = codeConfigurationValues;
             return this;
         }
 
-        public Builder setConfigurationSource(String configurationSource) {
+        public Builder configurationSource(String configurationSource) {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }

@@ -15,8 +15,8 @@ public final class RowLevelSecurityStatisticsResponse {
      */
     private final Boolean rowLevelSecurityApplied;
 
-    @OutputCustomType.Constructor({"rowLevelSecurityApplied"})
-    private RowLevelSecurityStatisticsResponse(Boolean rowLevelSecurityApplied) {
+    @OutputCustomType.Constructor
+    private RowLevelSecurityStatisticsResponse(@OutputCustomType.Parameter("rowLevelSecurityApplied") Boolean rowLevelSecurityApplied) {
         this.rowLevelSecurityApplied = rowLevelSecurityApplied;
     }
 
@@ -48,7 +48,7 @@ public final class RowLevelSecurityStatisticsResponse {
     	      this.rowLevelSecurityApplied = defaults.rowLevelSecurityApplied;
         }
 
-        public Builder setRowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
+        public Builder rowLevelSecurityApplied(Boolean rowLevelSecurityApplied) {
             this.rowLevelSecurityApplied = Objects.requireNonNull(rowLevelSecurityApplied);
             return this;
         }

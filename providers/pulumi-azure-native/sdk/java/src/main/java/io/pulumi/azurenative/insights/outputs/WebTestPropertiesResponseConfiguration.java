@@ -17,8 +17,8 @@ public final class WebTestPropertiesResponseConfiguration {
      */
     private final @Nullable String webTest;
 
-    @OutputCustomType.Constructor({"webTest"})
-    private WebTestPropertiesResponseConfiguration(@Nullable String webTest) {
+    @OutputCustomType.Constructor
+    private WebTestPropertiesResponseConfiguration(@OutputCustomType.Parameter("webTest") @Nullable String webTest) {
         this.webTest = webTest;
     }
 
@@ -50,7 +50,7 @@ public final class WebTestPropertiesResponseConfiguration {
     	      this.webTest = defaults.webTest;
         }
 
-        public Builder setWebTest(@Nullable String webTest) {
+        public Builder webTest(@Nullable String webTest) {
             this.webTest = webTest;
             return this;
         }

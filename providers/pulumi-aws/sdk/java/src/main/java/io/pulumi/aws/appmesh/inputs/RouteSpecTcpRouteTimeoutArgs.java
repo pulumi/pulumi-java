@@ -53,12 +53,12 @@ public final class RouteSpecTcpRouteTimeoutArgs extends io.pulumi.resources.Reso
     	      this.idle = defaults.idle;
         }
 
-        public Builder setIdle(@Nullable Input<RouteSpecTcpRouteTimeoutIdleArgs> idle) {
+        public Builder idle(@Nullable Input<RouteSpecTcpRouteTimeoutIdleArgs> idle) {
             this.idle = idle;
             return this;
         }
 
-        public Builder setIdle(@Nullable RouteSpecTcpRouteTimeoutIdleArgs idle) {
+        public Builder idle(@Nullable RouteSpecTcpRouteTimeoutIdleArgs idle) {
             this.idle = Input.ofNullable(idle);
             return this;
         }

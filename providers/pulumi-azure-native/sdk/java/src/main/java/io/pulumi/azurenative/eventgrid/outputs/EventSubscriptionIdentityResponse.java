@@ -22,10 +22,10 @@ public final class EventSubscriptionIdentityResponse {
      */
     private final @Nullable String userAssignedIdentity;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentity"})
+    @OutputCustomType.Constructor
     private EventSubscriptionIdentityResponse(
-        @Nullable String type,
-        @Nullable String userAssignedIdentity) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentity") @Nullable String userAssignedIdentity) {
         this.type = type;
         this.userAssignedIdentity = userAssignedIdentity;
     }
@@ -67,12 +67,12 @@ public final class EventSubscriptionIdentityResponse {
     	      this.userAssignedIdentity = defaults.userAssignedIdentity;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssignedIdentity(@Nullable String userAssignedIdentity) {
+        public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }

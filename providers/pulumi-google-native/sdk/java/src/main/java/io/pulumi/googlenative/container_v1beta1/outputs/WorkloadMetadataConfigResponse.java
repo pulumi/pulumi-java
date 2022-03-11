@@ -20,10 +20,10 @@ public final class WorkloadMetadataConfigResponse {
      */
     private final String nodeMetadata;
 
-    @OutputCustomType.Constructor({"mode","nodeMetadata"})
+    @OutputCustomType.Constructor
     private WorkloadMetadataConfigResponse(
-        String mode,
-        String nodeMetadata) {
+        @OutputCustomType.Parameter("mode") String mode,
+        @OutputCustomType.Parameter("nodeMetadata") String nodeMetadata) {
         this.mode = mode;
         this.nodeMetadata = nodeMetadata;
     }
@@ -65,12 +65,12 @@ public final class WorkloadMetadataConfigResponse {
     	      this.nodeMetadata = defaults.nodeMetadata;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setNodeMetadata(String nodeMetadata) {
+        public Builder nodeMetadata(String nodeMetadata) {
             this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
             return this;
         }

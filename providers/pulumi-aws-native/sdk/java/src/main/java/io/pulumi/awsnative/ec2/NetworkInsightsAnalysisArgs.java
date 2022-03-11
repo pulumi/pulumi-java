@@ -76,32 +76,32 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilterInArns(@Nullable Input<List<String>> filterInArns) {
+        public Builder filterInArns(@Nullable Input<List<String>> filterInArns) {
             this.filterInArns = filterInArns;
             return this;
         }
 
-        public Builder setFilterInArns(@Nullable List<String> filterInArns) {
+        public Builder filterInArns(@Nullable List<String> filterInArns) {
             this.filterInArns = Input.ofNullable(filterInArns);
             return this;
         }
 
-        public Builder setNetworkInsightsPathId(Input<String> networkInsightsPathId) {
+        public Builder networkInsightsPathId(Input<String> networkInsightsPathId) {
             this.networkInsightsPathId = Objects.requireNonNull(networkInsightsPathId);
             return this;
         }
 
-        public Builder setNetworkInsightsPathId(String networkInsightsPathId) {
+        public Builder networkInsightsPathId(String networkInsightsPathId) {
             this.networkInsightsPathId = Input.of(Objects.requireNonNull(networkInsightsPathId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<NetworkInsightsAnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
+        public Builder tags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

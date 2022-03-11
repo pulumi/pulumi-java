@@ -24,10 +24,10 @@ public final class TableServerSideEncryption {
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private TableServerSideEncryption(
-        Boolean enabled,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.enabled = enabled;
         this.kmsKeyArn = kmsKeyArn;
     }
@@ -70,12 +70,12 @@ public final class TableServerSideEncryption {
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

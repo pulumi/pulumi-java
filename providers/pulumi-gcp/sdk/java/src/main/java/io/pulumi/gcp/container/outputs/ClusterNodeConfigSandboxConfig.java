@@ -16,8 +16,8 @@ public final class ClusterNodeConfigSandboxConfig {
      */
     private final String sandboxType;
 
-    @OutputCustomType.Constructor({"sandboxType"})
-    private ClusterNodeConfigSandboxConfig(String sandboxType) {
+    @OutputCustomType.Constructor
+    private ClusterNodeConfigSandboxConfig(@OutputCustomType.Parameter("sandboxType") String sandboxType) {
         this.sandboxType = sandboxType;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterNodeConfigSandboxConfig {
     	      this.sandboxType = defaults.sandboxType;
         }
 
-        public Builder setSandboxType(String sandboxType) {
+        public Builder sandboxType(String sandboxType) {
             this.sandboxType = Objects.requireNonNull(sandboxType);
             return this;
         }

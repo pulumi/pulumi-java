@@ -57,7 +57,7 @@ public final class AgentPoolUpgradeSettingsResponse extends io.pulumi.resources.
     	      this.maxSurge = defaults.maxSurge;
         }
 
-        public Builder setMaxSurge(@Nullable String maxSurge) {
+        public Builder maxSurge(@Nullable String maxSurge) {
             this.maxSurge = maxSurge;
             return this;
         }

@@ -241,122 +241,122 @@ public final class WorkflowTemplateJobArgs extends io.pulumi.resources.ResourceA
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setHadoopJob(@Nullable Input<WorkflowTemplateJobHadoopJobArgs> hadoopJob) {
+        public Builder hadoopJob(@Nullable Input<WorkflowTemplateJobHadoopJobArgs> hadoopJob) {
             this.hadoopJob = hadoopJob;
             return this;
         }
 
-        public Builder setHadoopJob(@Nullable WorkflowTemplateJobHadoopJobArgs hadoopJob) {
+        public Builder hadoopJob(@Nullable WorkflowTemplateJobHadoopJobArgs hadoopJob) {
             this.hadoopJob = Input.ofNullable(hadoopJob);
             return this;
         }
 
-        public Builder setHiveJob(@Nullable Input<WorkflowTemplateJobHiveJobArgs> hiveJob) {
+        public Builder hiveJob(@Nullable Input<WorkflowTemplateJobHiveJobArgs> hiveJob) {
             this.hiveJob = hiveJob;
             return this;
         }
 
-        public Builder setHiveJob(@Nullable WorkflowTemplateJobHiveJobArgs hiveJob) {
+        public Builder hiveJob(@Nullable WorkflowTemplateJobHiveJobArgs hiveJob) {
             this.hiveJob = Input.ofNullable(hiveJob);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPigJob(@Nullable Input<WorkflowTemplateJobPigJobArgs> pigJob) {
+        public Builder pigJob(@Nullable Input<WorkflowTemplateJobPigJobArgs> pigJob) {
             this.pigJob = pigJob;
             return this;
         }
 
-        public Builder setPigJob(@Nullable WorkflowTemplateJobPigJobArgs pigJob) {
+        public Builder pigJob(@Nullable WorkflowTemplateJobPigJobArgs pigJob) {
             this.pigJob = Input.ofNullable(pigJob);
             return this;
         }
 
-        public Builder setPrerequisiteStepIds(@Nullable Input<List<String>> prerequisiteStepIds) {
+        public Builder prerequisiteStepIds(@Nullable Input<List<String>> prerequisiteStepIds) {
             this.prerequisiteStepIds = prerequisiteStepIds;
             return this;
         }
 
-        public Builder setPrerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
+        public Builder prerequisiteStepIds(@Nullable List<String> prerequisiteStepIds) {
             this.prerequisiteStepIds = Input.ofNullable(prerequisiteStepIds);
             return this;
         }
 
-        public Builder setPrestoJob(@Nullable Input<WorkflowTemplateJobPrestoJobArgs> prestoJob) {
+        public Builder prestoJob(@Nullable Input<WorkflowTemplateJobPrestoJobArgs> prestoJob) {
             this.prestoJob = prestoJob;
             return this;
         }
 
-        public Builder setPrestoJob(@Nullable WorkflowTemplateJobPrestoJobArgs prestoJob) {
+        public Builder prestoJob(@Nullable WorkflowTemplateJobPrestoJobArgs prestoJob) {
             this.prestoJob = Input.ofNullable(prestoJob);
             return this;
         }
 
-        public Builder setPysparkJob(@Nullable Input<WorkflowTemplateJobPysparkJobArgs> pysparkJob) {
+        public Builder pysparkJob(@Nullable Input<WorkflowTemplateJobPysparkJobArgs> pysparkJob) {
             this.pysparkJob = pysparkJob;
             return this;
         }
 
-        public Builder setPysparkJob(@Nullable WorkflowTemplateJobPysparkJobArgs pysparkJob) {
+        public Builder pysparkJob(@Nullable WorkflowTemplateJobPysparkJobArgs pysparkJob) {
             this.pysparkJob = Input.ofNullable(pysparkJob);
             return this;
         }
 
-        public Builder setScheduling(@Nullable Input<WorkflowTemplateJobSchedulingArgs> scheduling) {
+        public Builder scheduling(@Nullable Input<WorkflowTemplateJobSchedulingArgs> scheduling) {
             this.scheduling = scheduling;
             return this;
         }
 
-        public Builder setScheduling(@Nullable WorkflowTemplateJobSchedulingArgs scheduling) {
+        public Builder scheduling(@Nullable WorkflowTemplateJobSchedulingArgs scheduling) {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
 
-        public Builder setSparkJob(@Nullable Input<WorkflowTemplateJobSparkJobArgs> sparkJob) {
+        public Builder sparkJob(@Nullable Input<WorkflowTemplateJobSparkJobArgs> sparkJob) {
             this.sparkJob = sparkJob;
             return this;
         }
 
-        public Builder setSparkJob(@Nullable WorkflowTemplateJobSparkJobArgs sparkJob) {
+        public Builder sparkJob(@Nullable WorkflowTemplateJobSparkJobArgs sparkJob) {
             this.sparkJob = Input.ofNullable(sparkJob);
             return this;
         }
 
-        public Builder setSparkRJob(@Nullable Input<WorkflowTemplateJobSparkRJobArgs> sparkRJob) {
+        public Builder sparkRJob(@Nullable Input<WorkflowTemplateJobSparkRJobArgs> sparkRJob) {
             this.sparkRJob = sparkRJob;
             return this;
         }
 
-        public Builder setSparkRJob(@Nullable WorkflowTemplateJobSparkRJobArgs sparkRJob) {
+        public Builder sparkRJob(@Nullable WorkflowTemplateJobSparkRJobArgs sparkRJob) {
             this.sparkRJob = Input.ofNullable(sparkRJob);
             return this;
         }
 
-        public Builder setSparkSqlJob(@Nullable Input<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob) {
+        public Builder sparkSqlJob(@Nullable Input<WorkflowTemplateJobSparkSqlJobArgs> sparkSqlJob) {
             this.sparkSqlJob = sparkSqlJob;
             return this;
         }
 
-        public Builder setSparkSqlJob(@Nullable WorkflowTemplateJobSparkSqlJobArgs sparkSqlJob) {
+        public Builder sparkSqlJob(@Nullable WorkflowTemplateJobSparkSqlJobArgs sparkSqlJob) {
             this.sparkSqlJob = Input.ofNullable(sparkSqlJob);
             return this;
         }
 
-        public Builder setStepId(Input<String> stepId) {
+        public Builder stepId(Input<String> stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }

@@ -136,30 +136,30 @@ public final class GetNoteResult {
      */
     private final VulnerabilityTypeResponse vulnerabilityType;
 
-    @OutputCustomType.Constructor({"attestationAuthority","baseImage","buildType","compliance","createTime","deployable","discovery","dsseAttestation","expirationTime","kind","longDescription","name","$package","relatedUrl","sbom","shortDescription","spdxFile","spdxPackage","spdxRelationship","updateTime","upgrade","vulnerabilityType"})
+    @OutputCustomType.Constructor
     private GetNoteResult(
-        AttestationAuthorityResponse attestationAuthority,
-        BasisResponse baseImage,
-        BuildTypeResponse buildType,
-        ComplianceNoteResponse compliance,
-        String createTime,
-        DeployableResponse deployable,
-        DiscoveryResponse discovery,
-        DSSEAttestationNoteResponse dsseAttestation,
-        String expirationTime,
-        String kind,
-        String longDescription,
-        String name,
-        PackageResponse $package,
-        List<RelatedUrlResponse> relatedUrl,
-        DocumentNoteResponse sbom,
-        String shortDescription,
-        FileNoteResponse spdxFile,
-        PackageInfoNoteResponse spdxPackage,
-        RelationshipNoteResponse spdxRelationship,
-        String updateTime,
-        UpgradeNoteResponse upgrade,
-        VulnerabilityTypeResponse vulnerabilityType) {
+        @OutputCustomType.Parameter("attestationAuthority") AttestationAuthorityResponse attestationAuthority,
+        @OutputCustomType.Parameter("baseImage") BasisResponse baseImage,
+        @OutputCustomType.Parameter("buildType") BuildTypeResponse buildType,
+        @OutputCustomType.Parameter("compliance") ComplianceNoteResponse compliance,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployable") DeployableResponse deployable,
+        @OutputCustomType.Parameter("discovery") DiscoveryResponse discovery,
+        @OutputCustomType.Parameter("dsseAttestation") DSSEAttestationNoteResponse dsseAttestation,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("package") PackageResponse $package,
+        @OutputCustomType.Parameter("relatedUrl") List<RelatedUrlResponse> relatedUrl,
+        @OutputCustomType.Parameter("sbom") DocumentNoteResponse sbom,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription,
+        @OutputCustomType.Parameter("spdxFile") FileNoteResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoNoteResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipNoteResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("upgrade") UpgradeNoteResponse upgrade,
+        @OutputCustomType.Parameter("vulnerabilityType") VulnerabilityTypeResponse vulnerabilityType) {
         this.attestationAuthority = attestationAuthority;
         this.baseImage = baseImage;
         this.buildType = buildType;
@@ -401,112 +401,112 @@ public final class GetNoteResult {
     	      this.vulnerabilityType = defaults.vulnerabilityType;
         }
 
-        public Builder setAttestationAuthority(AttestationAuthorityResponse attestationAuthority) {
+        public Builder attestationAuthority(AttestationAuthorityResponse attestationAuthority) {
             this.attestationAuthority = Objects.requireNonNull(attestationAuthority);
             return this;
         }
 
-        public Builder setBaseImage(BasisResponse baseImage) {
+        public Builder baseImage(BasisResponse baseImage) {
             this.baseImage = Objects.requireNonNull(baseImage);
             return this;
         }
 
-        public Builder setBuildType(BuildTypeResponse buildType) {
+        public Builder buildType(BuildTypeResponse buildType) {
             this.buildType = Objects.requireNonNull(buildType);
             return this;
         }
 
-        public Builder setCompliance(ComplianceNoteResponse compliance) {
+        public Builder compliance(ComplianceNoteResponse compliance) {
             this.compliance = Objects.requireNonNull(compliance);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployable(DeployableResponse deployable) {
+        public Builder deployable(DeployableResponse deployable) {
             this.deployable = Objects.requireNonNull(deployable);
             return this;
         }
 
-        public Builder setDiscovery(DiscoveryResponse discovery) {
+        public Builder discovery(DiscoveryResponse discovery) {
             this.discovery = Objects.requireNonNull(discovery);
             return this;
         }
 
-        public Builder setDsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
+        public Builder dsseAttestation(DSSEAttestationNoteResponse dsseAttestation) {
             this.dsseAttestation = Objects.requireNonNull(dsseAttestation);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLongDescription(String longDescription) {
+        public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder set$package(PackageResponse $package) {
+        public Builder $package(PackageResponse $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setRelatedUrl(List<RelatedUrlResponse> relatedUrl) {
+        public Builder relatedUrl(List<RelatedUrlResponse> relatedUrl) {
             this.relatedUrl = Objects.requireNonNull(relatedUrl);
             return this;
         }
 
-        public Builder setSbom(DocumentNoteResponse sbom) {
+        public Builder sbom(DocumentNoteResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
 
-        public Builder setShortDescription(String shortDescription) {
+        public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
 
-        public Builder setSpdxFile(FileNoteResponse spdxFile) {
+        public Builder spdxFile(FileNoteResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(PackageInfoNoteResponse spdxPackage) {
+        public Builder spdxPackage(PackageInfoNoteResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(RelationshipNoteResponse spdxRelationship) {
+        public Builder spdxRelationship(RelationshipNoteResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUpgrade(UpgradeNoteResponse upgrade) {
+        public Builder upgrade(UpgradeNoteResponse upgrade) {
             this.upgrade = Objects.requireNonNull(upgrade);
             return this;
         }
 
-        public Builder setVulnerabilityType(VulnerabilityTypeResponse vulnerabilityType) {
+        public Builder vulnerabilityType(VulnerabilityTypeResponse vulnerabilityType) {
             this.vulnerabilityType = Objects.requireNonNull(vulnerabilityType);
             return this;
         }

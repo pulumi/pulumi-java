@@ -47,15 +47,15 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"categoricalValues","discreteValues","maxValue","minValue","parameterName","scaleType","type"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__ParameterSpecResponse(
-        List<String> categoricalValues,
-        List<Double> discreteValues,
-        Double maxValue,
-        Double minValue,
-        String parameterName,
-        String scaleType,
-        String type) {
+        @OutputCustomType.Parameter("categoricalValues") List<String> categoricalValues,
+        @OutputCustomType.Parameter("discreteValues") List<Double> discreteValues,
+        @OutputCustomType.Parameter("maxValue") Double maxValue,
+        @OutputCustomType.Parameter("minValue") Double minValue,
+        @OutputCustomType.Parameter("parameterName") String parameterName,
+        @OutputCustomType.Parameter("scaleType") String scaleType,
+        @OutputCustomType.Parameter("type") String type) {
         this.categoricalValues = categoricalValues;
         this.discreteValues = discreteValues;
         this.maxValue = maxValue;
@@ -147,37 +147,37 @@ public final class GoogleCloudMlV1__ParameterSpecResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCategoricalValues(List<String> categoricalValues) {
+        public Builder categoricalValues(List<String> categoricalValues) {
             this.categoricalValues = Objects.requireNonNull(categoricalValues);
             return this;
         }
 
-        public Builder setDiscreteValues(List<Double> discreteValues) {
+        public Builder discreteValues(List<Double> discreteValues) {
             this.discreteValues = Objects.requireNonNull(discreteValues);
             return this;
         }
 
-        public Builder setMaxValue(Double maxValue) {
+        public Builder maxValue(Double maxValue) {
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
 
-        public Builder setMinValue(Double minValue) {
+        public Builder minValue(Double minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setScaleType(String scaleType) {
+        public Builder scaleType(String scaleType) {
             this.scaleType = Objects.requireNonNull(scaleType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

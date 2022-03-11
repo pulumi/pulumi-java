@@ -106,25 +106,25 @@ public final class GoogleBigQueryLinkedServiceResponse {
      */
     private final @Nullable Object useSystemTrustStore;
 
-    @OutputCustomType.Constructor({"additionalProjects","annotations","authenticationType","clientId","clientSecret","connectVia","description","email","encryptedCredential","keyFilePath","parameters","project","refreshToken","requestGoogleDriveScope","trustedCertPath","type","useSystemTrustStore"})
+    @OutputCustomType.Constructor
     private GoogleBigQueryLinkedServiceResponse(
-        @Nullable Object additionalProjects,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable Object clientId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object email,
-        @Nullable Object encryptedCredential,
-        @Nullable Object keyFilePath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        Object project,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
-        @Nullable Object requestGoogleDriveScope,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useSystemTrustStore) {
+        @OutputCustomType.Parameter("additionalProjects") @Nullable Object additionalProjects,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("clientId") @Nullable Object clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("email") @Nullable Object email,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("keyFilePath") @Nullable Object keyFilePath,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("project") Object project,
+        @OutputCustomType.Parameter("refreshToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken,
+        @OutputCustomType.Parameter("requestGoogleDriveScope") @Nullable Object requestGoogleDriveScope,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore) {
         this.additionalProjects = additionalProjects;
         this.annotations = annotations;
         this.authenticationType = authenticationType;
@@ -317,87 +317,87 @@ public final class GoogleBigQueryLinkedServiceResponse {
     	      this.useSystemTrustStore = defaults.useSystemTrustStore;
         }
 
-        public Builder setAdditionalProjects(@Nullable Object additionalProjects) {
+        public Builder additionalProjects(@Nullable Object additionalProjects) {
             this.additionalProjects = additionalProjects;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
+        public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEmail(@Nullable Object email) {
+        public Builder email(@Nullable Object email) {
             this.email = email;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setKeyFilePath(@Nullable Object keyFilePath) {
+        public Builder keyFilePath(@Nullable Object keyFilePath) {
             this.keyFilePath = keyFilePath;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProject(Object project) {
+        public Builder project(Object project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRefreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
+        public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             this.refreshToken = refreshToken;
             return this;
         }
 
-        public Builder setRequestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
+        public Builder requestGoogleDriveScope(@Nullable Object requestGoogleDriveScope) {
             this.requestGoogleDriveScope = requestGoogleDriveScope;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }

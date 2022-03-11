@@ -68,12 +68,12 @@ public final class GetVendorSkusArgs extends io.pulumi.resources.InvokeArgs {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setSkuName(String skuName) {
+        public Builder skuName(String skuName) {
             this.skuName = Objects.requireNonNull(skuName);
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }

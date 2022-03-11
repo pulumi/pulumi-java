@@ -22,12 +22,12 @@ public final class GetOIDCProviderResult {
     private final @Nullable List<OIDCProviderTag> tags;
     private final @Nullable List<String> thumbprintList;
 
-    @OutputCustomType.Constructor({"arn","clientIdList","tags","thumbprintList"})
+    @OutputCustomType.Constructor
     private GetOIDCProviderResult(
-        @Nullable String arn,
-        @Nullable List<String> clientIdList,
-        @Nullable List<OIDCProviderTag> tags,
-        @Nullable List<String> thumbprintList) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("clientIdList") @Nullable List<String> clientIdList,
+        @OutputCustomType.Parameter("tags") @Nullable List<OIDCProviderTag> tags,
+        @OutputCustomType.Parameter("thumbprintList") @Nullable List<String> thumbprintList) {
         this.arn = arn;
         this.clientIdList = clientIdList;
         this.tags = tags;
@@ -77,22 +77,22 @@ public final class GetOIDCProviderResult {
     	      this.thumbprintList = defaults.thumbprintList;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setClientIdList(@Nullable List<String> clientIdList) {
+        public Builder clientIdList(@Nullable List<String> clientIdList) {
             this.clientIdList = clientIdList;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OIDCProviderTag> tags) {
+        public Builder tags(@Nullable List<OIDCProviderTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setThumbprintList(@Nullable List<String> thumbprintList) {
+        public Builder thumbprintList(@Nullable List<String> thumbprintList) {
             this.thumbprintList = thumbprintList;
             return this;
         }

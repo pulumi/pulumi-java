@@ -30,12 +30,12 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"accessKeyId","datakey","secretAccessKey","userId"})
+    @OutputCustomType.Constructor
     private ConnectorProfileInforNexusConnectorProfileCredentials(
-        String accessKeyId,
-        String datakey,
-        String secretAccessKey,
-        String userId) {
+        @OutputCustomType.Parameter("accessKeyId") String accessKeyId,
+        @OutputCustomType.Parameter("datakey") String datakey,
+        @OutputCustomType.Parameter("secretAccessKey") String secretAccessKey,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.accessKeyId = accessKeyId;
         this.datakey = datakey;
         this.secretAccessKey = secretAccessKey;
@@ -97,22 +97,22 @@ public final class ConnectorProfileInforNexusConnectorProfileCredentials {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setAccessKeyId(String accessKeyId) {
+        public Builder accessKeyId(String accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
-        public Builder setDatakey(String datakey) {
+        public Builder datakey(String datakey) {
             this.datakey = Objects.requireNonNull(datakey);
             return this;
         }
 
-        public Builder setSecretAccessKey(String secretAccessKey) {
+        public Builder secretAccessKey(String secretAccessKey) {
             this.secretAccessKey = Objects.requireNonNull(secretAccessKey);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

@@ -13,10 +13,10 @@ public final class RuleGroupLabelMatchStatement {
     private final String key;
     private final RuleGroupLabelMatchScope scope;
 
-    @OutputCustomType.Constructor({"key","scope"})
+    @OutputCustomType.Constructor
     private RuleGroupLabelMatchStatement(
-        String key,
-        RuleGroupLabelMatchScope scope) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("scope") RuleGroupLabelMatchScope scope) {
         this.key = key;
         this.scope = scope;
     }
@@ -50,12 +50,12 @@ public final class RuleGroupLabelMatchStatement {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setScope(RuleGroupLabelMatchScope scope) {
+        public Builder scope(RuleGroupLabelMatchScope scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

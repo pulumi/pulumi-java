@@ -48,15 +48,15 @@ public final class ContainerStateTerminated {
      */
     private final @Nullable String startedAt;
 
-    @OutputCustomType.Constructor({"containerID","exitCode","finishedAt","message","reason","signal","startedAt"})
+    @OutputCustomType.Constructor
     private ContainerStateTerminated(
-        @Nullable String containerID,
-        Integer exitCode,
-        @Nullable String finishedAt,
-        @Nullable String message,
-        @Nullable String reason,
-        @Nullable Integer signal,
-        @Nullable String startedAt) {
+        @OutputCustomType.Parameter("containerID") @Nullable String containerID,
+        @OutputCustomType.Parameter("exitCode") Integer exitCode,
+        @OutputCustomType.Parameter("finishedAt") @Nullable String finishedAt,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("signal") @Nullable Integer signal,
+        @OutputCustomType.Parameter("startedAt") @Nullable String startedAt) {
         this.containerID = containerID;
         this.exitCode = exitCode;
         this.finishedAt = finishedAt;
@@ -148,37 +148,37 @@ public final class ContainerStateTerminated {
     	      this.startedAt = defaults.startedAt;
         }
 
-        public Builder setContainerID(@Nullable String containerID) {
+        public Builder containerID(@Nullable String containerID) {
             this.containerID = containerID;
             return this;
         }
 
-        public Builder setExitCode(Integer exitCode) {
+        public Builder exitCode(Integer exitCode) {
             this.exitCode = Objects.requireNonNull(exitCode);
             return this;
         }
 
-        public Builder setFinishedAt(@Nullable String finishedAt) {
+        public Builder finishedAt(@Nullable String finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setSignal(@Nullable Integer signal) {
+        public Builder signal(@Nullable Integer signal) {
             this.signal = signal;
             return this;
         }
 
-        public Builder setStartedAt(@Nullable String startedAt) {
+        public Builder startedAt(@Nullable String startedAt) {
             this.startedAt = startedAt;
             return this;
         }

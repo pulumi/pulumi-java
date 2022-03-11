@@ -21,10 +21,10 @@ public final class GetClustersResult {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"id","names"})
+    @OutputCustomType.Constructor
     private GetClustersResult(
-        String id,
-        List<String> names) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.id = id;
         this.names = names;
     }
@@ -66,12 +66,12 @@ public final class GetClustersResult {
     	      this.names = defaults.names;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

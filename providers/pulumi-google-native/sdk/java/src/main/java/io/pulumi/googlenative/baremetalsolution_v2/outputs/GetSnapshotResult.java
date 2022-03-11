@@ -35,13 +35,13 @@ public final class GetSnapshotResult {
      */
     private final String storageVolume;
 
-    @OutputCustomType.Constructor({"createTime","description","name","sizeBytes","storageVolume"})
+    @OutputCustomType.Constructor
     private GetSnapshotResult(
-        String createTime,
-        String description,
-        String name,
-        String sizeBytes,
-        String storageVolume) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes,
+        @OutputCustomType.Parameter("storageVolume") String storageVolume) {
         this.createTime = createTime;
         this.description = description;
         this.name = name;
@@ -113,27 +113,27 @@ public final class GetSnapshotResult {
     	      this.storageVolume = defaults.storageVolume;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }
 
-        public Builder setStorageVolume(String storageVolume) {
+        public Builder storageVolume(String storageVolume) {
             this.storageVolume = Objects.requireNonNull(storageVolume);
             return this;
         }

@@ -23,10 +23,10 @@ public final class ClusterEncryptionInfo {
      */
     private final @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit;
 
-    @OutputCustomType.Constructor({"encryptionAtRestKmsKeyArn","encryptionInTransit"})
+    @OutputCustomType.Constructor
     private ClusterEncryptionInfo(
-        @Nullable String encryptionAtRestKmsKeyArn,
-        @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
+        @OutputCustomType.Parameter("encryptionAtRestKmsKeyArn") @Nullable String encryptionAtRestKmsKeyArn,
+        @OutputCustomType.Parameter("encryptionInTransit") @Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
         this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
         this.encryptionInTransit = encryptionInTransit;
     }
@@ -68,12 +68,12 @@ public final class ClusterEncryptionInfo {
     	      this.encryptionInTransit = defaults.encryptionInTransit;
         }
 
-        public Builder setEncryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
+        public Builder encryptionAtRestKmsKeyArn(@Nullable String encryptionAtRestKmsKeyArn) {
             this.encryptionAtRestKmsKeyArn = encryptionAtRestKmsKeyArn;
             return this;
         }
 
-        public Builder setEncryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
+        public Builder encryptionInTransit(@Nullable ClusterEncryptionInfoEncryptionInTransit encryptionInTransit) {
             this.encryptionInTransit = encryptionInTransit;
             return this;
         }

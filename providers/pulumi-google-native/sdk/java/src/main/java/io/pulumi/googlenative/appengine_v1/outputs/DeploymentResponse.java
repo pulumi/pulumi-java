@@ -34,12 +34,12 @@ public final class DeploymentResponse {
      */
     private final ZipInfoResponse zip;
 
-    @OutputCustomType.Constructor({"cloudBuildOptions","container","files","zip"})
+    @OutputCustomType.Constructor
     private DeploymentResponse(
-        CloudBuildOptionsResponse cloudBuildOptions,
-        ContainerInfoResponse container,
-        Map<String,String> files,
-        ZipInfoResponse zip) {
+        @OutputCustomType.Parameter("cloudBuildOptions") CloudBuildOptionsResponse cloudBuildOptions,
+        @OutputCustomType.Parameter("container") ContainerInfoResponse container,
+        @OutputCustomType.Parameter("files") Map<String,String> files,
+        @OutputCustomType.Parameter("zip") ZipInfoResponse zip) {
         this.cloudBuildOptions = cloudBuildOptions;
         this.container = container;
         this.files = files;
@@ -101,22 +101,22 @@ public final class DeploymentResponse {
     	      this.zip = defaults.zip;
         }
 
-        public Builder setCloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
+        public Builder cloudBuildOptions(CloudBuildOptionsResponse cloudBuildOptions) {
             this.cloudBuildOptions = Objects.requireNonNull(cloudBuildOptions);
             return this;
         }
 
-        public Builder setContainer(ContainerInfoResponse container) {
+        public Builder container(ContainerInfoResponse container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setFiles(Map<String,String> files) {
+        public Builder files(Map<String,String> files) {
             this.files = Objects.requireNonNull(files);
             return this;
         }
 
-        public Builder setZip(ZipInfoResponse zip) {
+        public Builder zip(ZipInfoResponse zip) {
             this.zip = Objects.requireNonNull(zip);
             return this;
         }

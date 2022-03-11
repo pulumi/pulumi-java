@@ -23,15 +23,15 @@ public final class GetTableGlobalSecondaryIndex {
     private final Integer readCapacity;
     private final Integer writeCapacity;
 
-    @OutputCustomType.Constructor({"hashKey","name","nonKeyAttributes","projectionType","rangeKey","readCapacity","writeCapacity"})
+    @OutputCustomType.Constructor
     private GetTableGlobalSecondaryIndex(
-        String hashKey,
-        String name,
-        List<String> nonKeyAttributes,
-        String projectionType,
-        String rangeKey,
-        Integer readCapacity,
-        Integer writeCapacity) {
+        @OutputCustomType.Parameter("hashKey") String hashKey,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nonKeyAttributes") List<String> nonKeyAttributes,
+        @OutputCustomType.Parameter("projectionType") String projectionType,
+        @OutputCustomType.Parameter("rangeKey") String rangeKey,
+        @OutputCustomType.Parameter("readCapacity") Integer readCapacity,
+        @OutputCustomType.Parameter("writeCapacity") Integer writeCapacity) {
         this.hashKey = hashKey;
         this.name = name;
         this.nonKeyAttributes = nonKeyAttributes;
@@ -99,37 +99,37 @@ public final class GetTableGlobalSecondaryIndex {
     	      this.writeCapacity = defaults.writeCapacity;
         }
 
-        public Builder setHashKey(String hashKey) {
+        public Builder hashKey(String hashKey) {
             this.hashKey = Objects.requireNonNull(hashKey);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNonKeyAttributes(List<String> nonKeyAttributes) {
+        public Builder nonKeyAttributes(List<String> nonKeyAttributes) {
             this.nonKeyAttributes = Objects.requireNonNull(nonKeyAttributes);
             return this;
         }
 
-        public Builder setProjectionType(String projectionType) {
+        public Builder projectionType(String projectionType) {
             this.projectionType = Objects.requireNonNull(projectionType);
             return this;
         }
 
-        public Builder setRangeKey(String rangeKey) {
+        public Builder rangeKey(String rangeKey) {
             this.rangeKey = Objects.requireNonNull(rangeKey);
             return this;
         }
 
-        public Builder setReadCapacity(Integer readCapacity) {
+        public Builder readCapacity(Integer readCapacity) {
             this.readCapacity = Objects.requireNonNull(readCapacity);
             return this;
         }
 
-        public Builder setWriteCapacity(Integer writeCapacity) {
+        public Builder writeCapacity(Integer writeCapacity) {
             this.writeCapacity = Objects.requireNonNull(writeCapacity);
             return this;
         }

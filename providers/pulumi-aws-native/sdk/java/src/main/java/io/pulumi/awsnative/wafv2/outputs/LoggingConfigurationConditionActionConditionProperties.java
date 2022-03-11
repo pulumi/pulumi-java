@@ -15,8 +15,8 @@ public final class LoggingConfigurationConditionActionConditionProperties {
      */
     private final LoggingConfigurationConditionActionConditionPropertiesAction action;
 
-    @OutputCustomType.Constructor({"action"})
-    private LoggingConfigurationConditionActionConditionProperties(LoggingConfigurationConditionActionConditionPropertiesAction action) {
+    @OutputCustomType.Constructor
+    private LoggingConfigurationConditionActionConditionProperties(@OutputCustomType.Parameter("action") LoggingConfigurationConditionActionConditionPropertiesAction action) {
         this.action = action;
     }
 
@@ -48,7 +48,7 @@ public final class LoggingConfigurationConditionActionConditionProperties {
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(LoggingConfigurationConditionActionConditionPropertiesAction action) {
+        public Builder action(LoggingConfigurationConditionActionConditionPropertiesAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

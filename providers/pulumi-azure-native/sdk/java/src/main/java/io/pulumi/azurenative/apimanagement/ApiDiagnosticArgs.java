@@ -254,132 +254,132 @@ public final class ApiDiagnosticArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verbosity = defaults.verbosity;
         }
 
-        public Builder setAlwaysLog(@Nullable Input<Either<String,AlwaysLog>> alwaysLog) {
+        public Builder alwaysLog(@Nullable Input<Either<String,AlwaysLog>> alwaysLog) {
             this.alwaysLog = alwaysLog;
             return this;
         }
 
-        public Builder setAlwaysLog(@Nullable Either<String,AlwaysLog> alwaysLog) {
+        public Builder alwaysLog(@Nullable Either<String,AlwaysLog> alwaysLog) {
             this.alwaysLog = Input.ofNullable(alwaysLog);
             return this;
         }
 
-        public Builder setApiId(Input<String> apiId) {
+        public Builder apiId(Input<String> apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Input.of(Objects.requireNonNull(apiId));
             return this;
         }
 
-        public Builder setBackend(@Nullable Input<PipelineDiagnosticSettingsArgs> backend) {
+        public Builder backend(@Nullable Input<PipelineDiagnosticSettingsArgs> backend) {
             this.backend = backend;
             return this;
         }
 
-        public Builder setBackend(@Nullable PipelineDiagnosticSettingsArgs backend) {
+        public Builder backend(@Nullable PipelineDiagnosticSettingsArgs backend) {
             this.backend = Input.ofNullable(backend);
             return this;
         }
 
-        public Builder setDiagnosticId(@Nullable Input<String> diagnosticId) {
+        public Builder diagnosticId(@Nullable Input<String> diagnosticId) {
             this.diagnosticId = diagnosticId;
             return this;
         }
 
-        public Builder setDiagnosticId(@Nullable String diagnosticId) {
+        public Builder diagnosticId(@Nullable String diagnosticId) {
             this.diagnosticId = Input.ofNullable(diagnosticId);
             return this;
         }
 
-        public Builder setFrontend(@Nullable Input<PipelineDiagnosticSettingsArgs> frontend) {
+        public Builder frontend(@Nullable Input<PipelineDiagnosticSettingsArgs> frontend) {
             this.frontend = frontend;
             return this;
         }
 
-        public Builder setFrontend(@Nullable PipelineDiagnosticSettingsArgs frontend) {
+        public Builder frontend(@Nullable PipelineDiagnosticSettingsArgs frontend) {
             this.frontend = Input.ofNullable(frontend);
             return this;
         }
 
-        public Builder setHttpCorrelationProtocol(@Nullable Input<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol) {
+        public Builder httpCorrelationProtocol(@Nullable Input<Either<String,HttpCorrelationProtocol>> httpCorrelationProtocol) {
             this.httpCorrelationProtocol = httpCorrelationProtocol;
             return this;
         }
 
-        public Builder setHttpCorrelationProtocol(@Nullable Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
+        public Builder httpCorrelationProtocol(@Nullable Either<String,HttpCorrelationProtocol> httpCorrelationProtocol) {
             this.httpCorrelationProtocol = Input.ofNullable(httpCorrelationProtocol);
             return this;
         }
 
-        public Builder setLogClientIp(@Nullable Input<Boolean> logClientIp) {
+        public Builder logClientIp(@Nullable Input<Boolean> logClientIp) {
             this.logClientIp = logClientIp;
             return this;
         }
 
-        public Builder setLogClientIp(@Nullable Boolean logClientIp) {
+        public Builder logClientIp(@Nullable Boolean logClientIp) {
             this.logClientIp = Input.ofNullable(logClientIp);
             return this;
         }
 
-        public Builder setLoggerId(Input<String> loggerId) {
+        public Builder loggerId(Input<String> loggerId) {
             this.loggerId = Objects.requireNonNull(loggerId);
             return this;
         }
 
-        public Builder setLoggerId(String loggerId) {
+        public Builder loggerId(String loggerId) {
             this.loggerId = Input.of(Objects.requireNonNull(loggerId));
             return this;
         }
 
-        public Builder setOperationNameFormat(@Nullable Input<Either<String,OperationNameFormat>> operationNameFormat) {
+        public Builder operationNameFormat(@Nullable Input<Either<String,OperationNameFormat>> operationNameFormat) {
             this.operationNameFormat = operationNameFormat;
             return this;
         }
 
-        public Builder setOperationNameFormat(@Nullable Either<String,OperationNameFormat> operationNameFormat) {
+        public Builder operationNameFormat(@Nullable Either<String,OperationNameFormat> operationNameFormat) {
             this.operationNameFormat = Input.ofNullable(operationNameFormat);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSampling(@Nullable Input<SamplingSettingsArgs> sampling) {
+        public Builder sampling(@Nullable Input<SamplingSettingsArgs> sampling) {
             this.sampling = sampling;
             return this;
         }
 
-        public Builder setSampling(@Nullable SamplingSettingsArgs sampling) {
+        public Builder sampling(@Nullable SamplingSettingsArgs sampling) {
             this.sampling = Input.ofNullable(sampling);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setVerbosity(@Nullable Input<Either<String,Verbosity>> verbosity) {
+        public Builder verbosity(@Nullable Input<Either<String,Verbosity>> verbosity) {
             this.verbosity = verbosity;
             return this;
         }
 
-        public Builder setVerbosity(@Nullable Either<String,Verbosity> verbosity) {
+        public Builder verbosity(@Nullable Either<String,Verbosity> verbosity) {
             this.verbosity = Input.ofNullable(verbosity);
             return this;
         }

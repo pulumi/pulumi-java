@@ -28,11 +28,11 @@ public final class GetDomainMappingResult {
      */
     private final SslSettingsResponse sslSettings;
 
-    @OutputCustomType.Constructor({"name","resourceRecords","sslSettings"})
+    @OutputCustomType.Constructor
     private GetDomainMappingResult(
-        String name,
-        List<ResourceRecordResponse> resourceRecords,
-        SslSettingsResponse sslSettings) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceRecords") List<ResourceRecordResponse> resourceRecords,
+        @OutputCustomType.Parameter("sslSettings") SslSettingsResponse sslSettings) {
         this.name = name;
         this.resourceRecords = resourceRecords;
         this.sslSettings = sslSettings;
@@ -84,17 +84,17 @@ public final class GetDomainMappingResult {
     	      this.sslSettings = defaults.sslSettings;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceRecords(List<ResourceRecordResponse> resourceRecords) {
+        public Builder resourceRecords(List<ResourceRecordResponse> resourceRecords) {
             this.resourceRecords = Objects.requireNonNull(resourceRecords);
             return this;
         }
 
-        public Builder setSslSettings(SslSettingsResponse sslSettings) {
+        public Builder sslSettings(SslSettingsResponse sslSettings) {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
         }

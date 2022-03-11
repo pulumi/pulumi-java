@@ -8,7 +8,7 @@ import java.util.Objects;
 
 @OutputCustomType
 public final class ComponentTags {
-    @OutputCustomType.Constructor({})
+    @OutputCustomType.Constructor
     private ComponentTags() {
     }
 

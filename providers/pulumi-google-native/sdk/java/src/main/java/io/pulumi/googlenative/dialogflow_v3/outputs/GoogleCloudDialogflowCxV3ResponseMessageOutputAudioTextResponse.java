@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"allowPlaybackInterruption","ssml","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextResponse(
-        Boolean allowPlaybackInterruption,
-        String ssml,
-        String text) {
+        @OutputCustomType.Parameter("allowPlaybackInterruption") Boolean allowPlaybackInterruption,
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("text") String text) {
         this.allowPlaybackInterruption = allowPlaybackInterruption;
         this.ssml = ssml;
         this.text = text;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageOutputAudioTextRespon
     	      this.text = defaults.text;
         }
 
-        public Builder setAllowPlaybackInterruption(Boolean allowPlaybackInterruption) {
+        public Builder allowPlaybackInterruption(Boolean allowPlaybackInterruption) {
             this.allowPlaybackInterruption = Objects.requireNonNull(allowPlaybackInterruption);
             return this;
         }
 
-        public Builder setSsml(String ssml) {
+        public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

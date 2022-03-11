@@ -36,13 +36,13 @@ public final class OSPolicyResourceFileResourceResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"content","file","path","permissions","state"})
+    @OutputCustomType.Constructor
     private OSPolicyResourceFileResourceResponse(
-        String content,
-        OSPolicyResourceFileResponse file,
-        String path,
-        String permissions,
-        String state) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("file") OSPolicyResourceFileResponse file,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("state") String state) {
         this.content = content;
         this.file = file;
         this.path = path;
@@ -114,27 +114,27 @@ public final class OSPolicyResourceFileResourceResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFile(OSPolicyResourceFileResponse file) {
+        public Builder file(OSPolicyResourceFileResponse file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

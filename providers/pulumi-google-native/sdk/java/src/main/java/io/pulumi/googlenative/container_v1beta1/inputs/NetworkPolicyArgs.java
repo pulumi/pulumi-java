@@ -75,22 +75,22 @@ public final class NetworkPolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setProvider(@Nullable Input<NetworkPolicyProvider> provider) {
+        public Builder provider(@Nullable Input<NetworkPolicyProvider> provider) {
             this.provider = provider;
             return this;
         }
 
-        public Builder setProvider(@Nullable NetworkPolicyProvider provider) {
+        public Builder provider(@Nullable NetworkPolicyProvider provider) {
             this.provider = Input.ofNullable(provider);
             return this;
         }

@@ -37,13 +37,13 @@ public final class SAPSystemIDResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"gid","memoryAllocation","sid","uid","username"})
+    @OutputCustomType.Constructor
     private SAPSystemIDResponse(
-        @Nullable String gid,
-        String memoryAllocation,
-        @Nullable String sid,
-        @Nullable String uid,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("gid") @Nullable String gid,
+        @OutputCustomType.Parameter("memoryAllocation") String memoryAllocation,
+        @OutputCustomType.Parameter("sid") @Nullable String sid,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.gid = gid;
         this.memoryAllocation = memoryAllocation;
         this.sid = sid;
@@ -115,27 +115,27 @@ public final class SAPSystemIDResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setMemoryAllocation(String memoryAllocation) {
+        public Builder memoryAllocation(String memoryAllocation) {
             this.memoryAllocation = Objects.requireNonNull(memoryAllocation);
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

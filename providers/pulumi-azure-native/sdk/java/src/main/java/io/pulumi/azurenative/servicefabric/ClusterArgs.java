@@ -428,232 +428,232 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vmImage = defaults.vmImage;
         }
 
-        public Builder setAddOnFeatures(@Nullable Input<List<String>> addOnFeatures) {
+        public Builder addOnFeatures(@Nullable Input<List<String>> addOnFeatures) {
             this.addOnFeatures = addOnFeatures;
             return this;
         }
 
-        public Builder setAddOnFeatures(@Nullable List<String> addOnFeatures) {
+        public Builder addOnFeatures(@Nullable List<String> addOnFeatures) {
             this.addOnFeatures = Input.ofNullable(addOnFeatures);
             return this;
         }
 
-        public Builder setApplicationTypeVersionsCleanupPolicy(@Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
+        public Builder applicationTypeVersionsCleanupPolicy(@Nullable Input<ApplicationTypeVersionsCleanupPolicyArgs> applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = applicationTypeVersionsCleanupPolicy;
             return this;
         }
 
-        public Builder setApplicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
+        public Builder applicationTypeVersionsCleanupPolicy(@Nullable ApplicationTypeVersionsCleanupPolicyArgs applicationTypeVersionsCleanupPolicy) {
             this.applicationTypeVersionsCleanupPolicy = Input.ofNullable(applicationTypeVersionsCleanupPolicy);
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable Input<AzureActiveDirectoryArgs> azureActiveDirectory) {
             this.azureActiveDirectory = azureActiveDirectory;
             return this;
         }
 
-        public Builder setAzureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
+        public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
             this.azureActiveDirectory = Input.ofNullable(azureActiveDirectory);
             return this;
         }
 
-        public Builder setCertificate(@Nullable Input<CertificateDescriptionArgs> certificate) {
+        public Builder certificate(@Nullable Input<CertificateDescriptionArgs> certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setCertificate(@Nullable CertificateDescriptionArgs certificate) {
+        public Builder certificate(@Nullable CertificateDescriptionArgs certificate) {
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
 
-        public Builder setCertificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames) {
+        public Builder certificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> certificateCommonNames) {
             this.certificateCommonNames = certificateCommonNames;
             return this;
         }
 
-        public Builder setCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
+        public Builder certificateCommonNames(@Nullable ServerCertificateCommonNamesArgs certificateCommonNames) {
             this.certificateCommonNames = Input.ofNullable(certificateCommonNames);
             return this;
         }
 
-        public Builder setClientCertificateCommonNames(@Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
+        public Builder clientCertificateCommonNames(@Nullable Input<List<ClientCertificateCommonNameArgs>> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = clientCertificateCommonNames;
             return this;
         }
 
-        public Builder setClientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
+        public Builder clientCertificateCommonNames(@Nullable List<ClientCertificateCommonNameArgs> clientCertificateCommonNames) {
             this.clientCertificateCommonNames = Input.ofNullable(clientCertificateCommonNames);
             return this;
         }
 
-        public Builder setClientCertificateThumbprints(@Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
+        public Builder clientCertificateThumbprints(@Nullable Input<List<ClientCertificateThumbprintArgs>> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = clientCertificateThumbprints;
             return this;
         }
 
-        public Builder setClientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
+        public Builder clientCertificateThumbprints(@Nullable List<ClientCertificateThumbprintArgs> clientCertificateThumbprints) {
             this.clientCertificateThumbprints = Input.ofNullable(clientCertificateThumbprints);
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable Input<String> clusterCodeVersion) {
             this.clusterCodeVersion = clusterCodeVersion;
             return this;
         }
 
-        public Builder setClusterCodeVersion(@Nullable String clusterCodeVersion) {
+        public Builder clusterCodeVersion(@Nullable String clusterCodeVersion) {
             this.clusterCodeVersion = Input.ofNullable(clusterCodeVersion);
             return this;
         }
 
-        public Builder setClusterName(@Nullable Input<String> clusterName) {
+        public Builder clusterName(@Nullable Input<String> clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = Input.ofNullable(clusterName);
             return this;
         }
 
-        public Builder setDiagnosticsStorageAccountConfig(@Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
+        public Builder diagnosticsStorageAccountConfig(@Nullable Input<DiagnosticsStorageAccountConfigArgs> diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = diagnosticsStorageAccountConfig;
             return this;
         }
 
-        public Builder setDiagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
+        public Builder diagnosticsStorageAccountConfig(@Nullable DiagnosticsStorageAccountConfigArgs diagnosticsStorageAccountConfig) {
             this.diagnosticsStorageAccountConfig = Input.ofNullable(diagnosticsStorageAccountConfig);
             return this;
         }
 
-        public Builder setEventStoreServiceEnabled(@Nullable Input<Boolean> eventStoreServiceEnabled) {
+        public Builder eventStoreServiceEnabled(@Nullable Input<Boolean> eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = eventStoreServiceEnabled;
             return this;
         }
 
-        public Builder setEventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
+        public Builder eventStoreServiceEnabled(@Nullable Boolean eventStoreServiceEnabled) {
             this.eventStoreServiceEnabled = Input.ofNullable(eventStoreServiceEnabled);
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
+        public Builder fabricSettings(@Nullable Input<List<SettingsSectionDescriptionArgs>> fabricSettings) {
             this.fabricSettings = fabricSettings;
             return this;
         }
 
-        public Builder setFabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
+        public Builder fabricSettings(@Nullable List<SettingsSectionDescriptionArgs> fabricSettings) {
             this.fabricSettings = Input.ofNullable(fabricSettings);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagementEndpoint(Input<String> managementEndpoint) {
+        public Builder managementEndpoint(Input<String> managementEndpoint) {
             this.managementEndpoint = Objects.requireNonNull(managementEndpoint);
             return this;
         }
 
-        public Builder setManagementEndpoint(String managementEndpoint) {
+        public Builder managementEndpoint(String managementEndpoint) {
             this.managementEndpoint = Input.of(Objects.requireNonNull(managementEndpoint));
             return this;
         }
 
-        public Builder setNodeTypes(Input<List<NodeTypeDescriptionArgs>> nodeTypes) {
+        public Builder nodeTypes(Input<List<NodeTypeDescriptionArgs>> nodeTypes) {
             this.nodeTypes = Objects.requireNonNull(nodeTypes);
             return this;
         }
 
-        public Builder setNodeTypes(List<NodeTypeDescriptionArgs> nodeTypes) {
+        public Builder nodeTypes(List<NodeTypeDescriptionArgs> nodeTypes) {
             this.nodeTypes = Input.of(Objects.requireNonNull(nodeTypes));
             return this;
         }
 
-        public Builder setReliabilityLevel(@Nullable Input<String> reliabilityLevel) {
+        public Builder reliabilityLevel(@Nullable Input<String> reliabilityLevel) {
             this.reliabilityLevel = reliabilityLevel;
             return this;
         }
 
-        public Builder setReliabilityLevel(@Nullable String reliabilityLevel) {
+        public Builder reliabilityLevel(@Nullable String reliabilityLevel) {
             this.reliabilityLevel = Input.ofNullable(reliabilityLevel);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setReverseProxyCertificate(@Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate) {
+        public Builder reverseProxyCertificate(@Nullable Input<CertificateDescriptionArgs> reverseProxyCertificate) {
             this.reverseProxyCertificate = reverseProxyCertificate;
             return this;
         }
 
-        public Builder setReverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
+        public Builder reverseProxyCertificate(@Nullable CertificateDescriptionArgs reverseProxyCertificate) {
             this.reverseProxyCertificate = Input.ofNullable(reverseProxyCertificate);
             return this;
         }
 
-        public Builder setReverseProxyCertificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
+        public Builder reverseProxyCertificateCommonNames(@Nullable Input<ServerCertificateCommonNamesArgs> reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = reverseProxyCertificateCommonNames;
             return this;
         }
 
-        public Builder setReverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
+        public Builder reverseProxyCertificateCommonNames(@Nullable ServerCertificateCommonNamesArgs reverseProxyCertificateCommonNames) {
             this.reverseProxyCertificateCommonNames = Input.ofNullable(reverseProxyCertificateCommonNames);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUpgradeDescription(@Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription) {
+        public Builder upgradeDescription(@Nullable Input<ClusterUpgradePolicyArgs> upgradeDescription) {
             this.upgradeDescription = upgradeDescription;
             return this;
         }
 
-        public Builder setUpgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
+        public Builder upgradeDescription(@Nullable ClusterUpgradePolicyArgs upgradeDescription) {
             this.upgradeDescription = Input.ofNullable(upgradeDescription);
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable Input<String> upgradeMode) {
+        public Builder upgradeMode(@Nullable Input<String> upgradeMode) {
             this.upgradeMode = upgradeMode;
             return this;
         }
 
-        public Builder setUpgradeMode(@Nullable String upgradeMode) {
+        public Builder upgradeMode(@Nullable String upgradeMode) {
             this.upgradeMode = Input.ofNullable(upgradeMode);
             return this;
         }
 
-        public Builder setVmImage(@Nullable Input<String> vmImage) {
+        public Builder vmImage(@Nullable Input<String> vmImage) {
             this.vmImage = vmImage;
             return this;
         }
 
-        public Builder setVmImage(@Nullable String vmImage) {
+        public Builder vmImage(@Nullable String vmImage) {
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }

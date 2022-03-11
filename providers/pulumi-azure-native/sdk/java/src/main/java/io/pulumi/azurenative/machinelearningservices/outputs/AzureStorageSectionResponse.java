@@ -86,23 +86,23 @@ public final class AzureStorageSectionResponse {
      */
     private final @Nullable String subscriptionId;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","areWorkspaceManagedIdentitiesAllowed","blobCacheTimeout","clientCredentials","containerName","credential","credentialType","endpoint","isSas","protocol","resourceGroup","sasToken","serviceDataAccessAuthIdentity","subscriptionId"})
+    @OutputCustomType.Constructor
     private AzureStorageSectionResponse(
-        @Nullable String accountKey,
-        @Nullable String accountName,
-        @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
-        @Nullable Integer blobCacheTimeout,
-        @Nullable ClientCredentialsResponse clientCredentials,
-        @Nullable String containerName,
-        @Nullable String credential,
-        @Nullable String credentialType,
-        @Nullable String endpoint,
-        @Nullable Boolean isSas,
-        @Nullable String protocol,
-        @Nullable String resourceGroup,
-        @Nullable String sasToken,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId) {
+        @OutputCustomType.Parameter("accountKey") @Nullable String accountKey,
+        @OutputCustomType.Parameter("accountName") @Nullable String accountName,
+        @OutputCustomType.Parameter("areWorkspaceManagedIdentitiesAllowed") @Nullable Boolean areWorkspaceManagedIdentitiesAllowed,
+        @OutputCustomType.Parameter("blobCacheTimeout") @Nullable Integer blobCacheTimeout,
+        @OutputCustomType.Parameter("clientCredentials") @Nullable ClientCredentialsResponse clientCredentials,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("credential") @Nullable String credential,
+        @OutputCustomType.Parameter("credentialType") @Nullable String credentialType,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("isSas") @Nullable Boolean isSas,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("sasToken") @Nullable String sasToken,
+        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
@@ -270,77 +270,77 @@ public final class AzureStorageSectionResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setAccountKey(@Nullable String accountKey) {
+        public Builder accountKey(@Nullable String accountKey) {
             this.accountKey = accountKey;
             return this;
         }
 
-        public Builder setAccountName(@Nullable String accountName) {
+        public Builder accountName(@Nullable String accountName) {
             this.accountName = accountName;
             return this;
         }
 
-        public Builder setAreWorkspaceManagedIdentitiesAllowed(@Nullable Boolean areWorkspaceManagedIdentitiesAllowed) {
+        public Builder areWorkspaceManagedIdentitiesAllowed(@Nullable Boolean areWorkspaceManagedIdentitiesAllowed) {
             this.areWorkspaceManagedIdentitiesAllowed = areWorkspaceManagedIdentitiesAllowed;
             return this;
         }
 
-        public Builder setBlobCacheTimeout(@Nullable Integer blobCacheTimeout) {
+        public Builder blobCacheTimeout(@Nullable Integer blobCacheTimeout) {
             this.blobCacheTimeout = blobCacheTimeout;
             return this;
         }
 
-        public Builder setClientCredentials(@Nullable ClientCredentialsResponse clientCredentials) {
+        public Builder clientCredentials(@Nullable ClientCredentialsResponse clientCredentials) {
             this.clientCredentials = clientCredentials;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setCredential(@Nullable String credential) {
+        public Builder credential(@Nullable String credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setCredentialType(@Nullable String credentialType) {
+        public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIsSas(@Nullable Boolean isSas) {
+        public Builder isSas(@Nullable Boolean isSas) {
             this.isSas = isSas;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setSasToken(@Nullable String sasToken) {
+        public Builder sasToken(@Nullable String sasToken) {
             this.sasToken = sasToken;
             return this;
         }
 
-        public Builder setServiceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
+        public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }

@@ -21,10 +21,10 @@ public final class CaOptionsResponse {
      */
     private final Integer maxIssuerPathLength;
 
-    @OutputCustomType.Constructor({"isCa","maxIssuerPathLength"})
+    @OutputCustomType.Constructor
     private CaOptionsResponse(
-        Boolean isCa,
-        Integer maxIssuerPathLength) {
+        @OutputCustomType.Parameter("isCa") Boolean isCa,
+        @OutputCustomType.Parameter("maxIssuerPathLength") Integer maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }
@@ -66,12 +66,12 @@ public final class CaOptionsResponse {
     	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
         }
 
-        public Builder setIsCa(Boolean isCa) {
+        public Builder isCa(Boolean isCa) {
             this.isCa = Objects.requireNonNull(isCa);
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
             return this;
         }

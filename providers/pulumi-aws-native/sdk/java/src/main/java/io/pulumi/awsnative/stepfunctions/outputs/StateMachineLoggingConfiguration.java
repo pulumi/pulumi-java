@@ -18,11 +18,11 @@ public final class StateMachineLoggingConfiguration {
     private final @Nullable Boolean includeExecutionData;
     private final @Nullable StateMachineLoggingConfigurationLevel level;
 
-    @OutputCustomType.Constructor({"destinations","includeExecutionData","level"})
+    @OutputCustomType.Constructor
     private StateMachineLoggingConfiguration(
-        @Nullable List<StateMachineLogDestination> destinations,
-        @Nullable Boolean includeExecutionData,
-        @Nullable StateMachineLoggingConfigurationLevel level) {
+        @OutputCustomType.Parameter("destinations") @Nullable List<StateMachineLogDestination> destinations,
+        @OutputCustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
+        @OutputCustomType.Parameter("level") @Nullable StateMachineLoggingConfigurationLevel level) {
         this.destinations = destinations;
         this.includeExecutionData = includeExecutionData;
         this.level = level;
@@ -62,17 +62,17 @@ public final class StateMachineLoggingConfiguration {
     	      this.level = defaults.level;
         }
 
-        public Builder setDestinations(@Nullable List<StateMachineLogDestination> destinations) {
+        public Builder destinations(@Nullable List<StateMachineLogDestination> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Boolean includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
-        public Builder setLevel(@Nullable StateMachineLoggingConfigurationLevel level) {
+        public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
             this.level = level;
             return this;
         }

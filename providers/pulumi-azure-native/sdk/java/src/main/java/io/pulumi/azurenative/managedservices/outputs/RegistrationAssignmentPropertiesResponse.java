@@ -26,11 +26,11 @@ public final class RegistrationAssignmentPropertiesResponse {
      */
     private final String registrationDefinitionId;
 
-    @OutputCustomType.Constructor({"provisioningState","registrationDefinition","registrationDefinitionId"})
+    @OutputCustomType.Constructor
     private RegistrationAssignmentPropertiesResponse(
-        String provisioningState,
-        RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
-        String registrationDefinitionId) {
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationDefinition") RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition,
+        @OutputCustomType.Parameter("registrationDefinitionId") String registrationDefinitionId) {
         this.provisioningState = provisioningState;
         this.registrationDefinition = registrationDefinition;
         this.registrationDefinitionId = registrationDefinitionId;
@@ -82,17 +82,17 @@ public final class RegistrationAssignmentPropertiesResponse {
     	      this.registrationDefinitionId = defaults.registrationDefinitionId;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegistrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition) {
+        public Builder registrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition) {
             this.registrationDefinition = Objects.requireNonNull(registrationDefinition);
             return this;
         }
 
-        public Builder setRegistrationDefinitionId(String registrationDefinitionId) {
+        public Builder registrationDefinitionId(String registrationDefinitionId) {
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }

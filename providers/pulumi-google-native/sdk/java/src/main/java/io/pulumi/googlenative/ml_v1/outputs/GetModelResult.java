@@ -54,16 +54,16 @@ public final class GetModelResult {
      */
     private final List<String> regions;
 
-    @OutputCustomType.Constructor({"defaultVersion","description","etag","labels","name","onlinePredictionConsoleLogging","onlinePredictionLogging","regions"})
+    @OutputCustomType.Constructor
     private GetModelResult(
-        GoogleCloudMlV1__VersionResponse defaultVersion,
-        String description,
-        String etag,
-        Map<String,String> labels,
-        String name,
-        Boolean onlinePredictionConsoleLogging,
-        Boolean onlinePredictionLogging,
-        List<String> regions) {
+        @OutputCustomType.Parameter("defaultVersion") GoogleCloudMlV1__VersionResponse defaultVersion,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("onlinePredictionConsoleLogging") Boolean onlinePredictionConsoleLogging,
+        @OutputCustomType.Parameter("onlinePredictionLogging") Boolean onlinePredictionLogging,
+        @OutputCustomType.Parameter("regions") List<String> regions) {
         this.defaultVersion = defaultVersion;
         this.description = description;
         this.etag = etag;
@@ -165,42 +165,42 @@ public final class GetModelResult {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setDefaultVersion(GoogleCloudMlV1__VersionResponse defaultVersion) {
+        public Builder defaultVersion(GoogleCloudMlV1__VersionResponse defaultVersion) {
             this.defaultVersion = Objects.requireNonNull(defaultVersion);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOnlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
+        public Builder onlinePredictionConsoleLogging(Boolean onlinePredictionConsoleLogging) {
             this.onlinePredictionConsoleLogging = Objects.requireNonNull(onlinePredictionConsoleLogging);
             return this;
         }
 
-        public Builder setOnlinePredictionLogging(Boolean onlinePredictionLogging) {
+        public Builder onlinePredictionLogging(Boolean onlinePredictionLogging) {
             this.onlinePredictionLogging = Objects.requireNonNull(onlinePredictionLogging);
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }

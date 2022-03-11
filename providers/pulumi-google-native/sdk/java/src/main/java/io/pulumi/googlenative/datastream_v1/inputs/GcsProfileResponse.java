@@ -72,12 +72,12 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
     	      this.rootPath = defaults.rootPath;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setRootPath(String rootPath) {
+        public Builder rootPath(String rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }

@@ -69,19 +69,19 @@ public final class GetEnvironmentResult {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"armTemplateDisplayName","createdByUser","deploymentProperties","id","location","name","provisioningState","resourceGroupId","tags","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        @Nullable String armTemplateDisplayName,
-        String createdByUser,
-        @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String resourceGroupId,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("armTemplateDisplayName") @Nullable String armTemplateDisplayName,
+        @OutputCustomType.Parameter("createdByUser") String createdByUser,
+        @OutputCustomType.Parameter("deploymentProperties") @Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.armTemplateDisplayName = armTemplateDisplayName;
         this.createdByUser = createdByUser;
         this.deploymentProperties = deploymentProperties;
@@ -213,57 +213,57 @@ public final class GetEnvironmentResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setArmTemplateDisplayName(@Nullable String armTemplateDisplayName) {
+        public Builder armTemplateDisplayName(@Nullable String armTemplateDisplayName) {
             this.armTemplateDisplayName = armTemplateDisplayName;
             return this;
         }
 
-        public Builder setCreatedByUser(String createdByUser) {
+        public Builder createdByUser(String createdByUser) {
             this.createdByUser = Objects.requireNonNull(createdByUser);
             return this;
         }
 
-        public Builder setDeploymentProperties(@Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties) {
+        public Builder deploymentProperties(@Nullable EnvironmentDeploymentPropertiesResponse deploymentProperties) {
             this.deploymentProperties = deploymentProperties;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroupId(String resourceGroupId) {
+        public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

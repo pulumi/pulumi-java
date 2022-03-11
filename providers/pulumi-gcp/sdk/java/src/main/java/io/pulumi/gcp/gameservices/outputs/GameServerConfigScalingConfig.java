@@ -40,12 +40,12 @@ public final class GameServerConfigScalingConfig {
      */
     private final @Nullable List<GameServerConfigScalingConfigSelector> selectors;
 
-    @OutputCustomType.Constructor({"fleetAutoscalerSpec","name","schedules","selectors"})
+    @OutputCustomType.Constructor
     private GameServerConfigScalingConfig(
-        String fleetAutoscalerSpec,
-        String name,
-        @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
-        @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
+        @OutputCustomType.Parameter("fleetAutoscalerSpec") String fleetAutoscalerSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schedules") @Nullable List<GameServerConfigScalingConfigSchedule> schedules,
+        @OutputCustomType.Parameter("selectors") @Nullable List<GameServerConfigScalingConfigSelector> selectors) {
         this.fleetAutoscalerSpec = fleetAutoscalerSpec;
         this.name = name;
         this.schedules = schedules;
@@ -113,22 +113,22 @@ public final class GameServerConfigScalingConfig {
     	      this.selectors = defaults.selectors;
         }
 
-        public Builder setFleetAutoscalerSpec(String fleetAutoscalerSpec) {
+        public Builder fleetAutoscalerSpec(String fleetAutoscalerSpec) {
             this.fleetAutoscalerSpec = Objects.requireNonNull(fleetAutoscalerSpec);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<GameServerConfigScalingConfigSchedule> schedules) {
+        public Builder schedules(@Nullable List<GameServerConfigScalingConfigSchedule> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSelectors(@Nullable List<GameServerConfigScalingConfigSelector> selectors) {
+        public Builder selectors(@Nullable List<GameServerConfigScalingConfigSelector> selectors) {
             this.selectors = selectors;
             return this;
         }

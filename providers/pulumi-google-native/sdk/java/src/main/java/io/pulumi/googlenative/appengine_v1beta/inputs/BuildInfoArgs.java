@@ -57,12 +57,12 @@ public final class BuildInfoArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cloudBuildId = defaults.cloudBuildId;
         }
 
-        public Builder setCloudBuildId(@Nullable Input<String> cloudBuildId) {
+        public Builder cloudBuildId(@Nullable Input<String> cloudBuildId) {
             this.cloudBuildId = cloudBuildId;
             return this;
         }
 
-        public Builder setCloudBuildId(@Nullable String cloudBuildId) {
+        public Builder cloudBuildId(@Nullable String cloudBuildId) {
             this.cloudBuildId = Input.ofNullable(cloudBuildId);
             return this;
         }

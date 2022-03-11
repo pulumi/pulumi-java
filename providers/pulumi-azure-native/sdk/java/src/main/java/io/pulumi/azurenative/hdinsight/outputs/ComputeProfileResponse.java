@@ -17,8 +17,8 @@ public final class ComputeProfileResponse {
      */
     private final @Nullable List<RoleResponse> roles;
 
-    @OutputCustomType.Constructor({"roles"})
-    private ComputeProfileResponse(@Nullable List<RoleResponse> roles) {
+    @OutputCustomType.Constructor
+    private ComputeProfileResponse(@OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles) {
         this.roles = roles;
     }
 
@@ -50,7 +50,7 @@ public final class ComputeProfileResponse {
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }

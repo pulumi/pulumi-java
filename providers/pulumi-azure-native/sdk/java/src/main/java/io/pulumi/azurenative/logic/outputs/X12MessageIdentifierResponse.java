@@ -15,8 +15,8 @@ public final class X12MessageIdentifierResponse {
      */
     private final String messageId;
 
-    @OutputCustomType.Constructor({"messageId"})
-    private X12MessageIdentifierResponse(String messageId) {
+    @OutputCustomType.Constructor
+    private X12MessageIdentifierResponse(@OutputCustomType.Parameter("messageId") String messageId) {
         this.messageId = messageId;
     }
 
@@ -48,7 +48,7 @@ public final class X12MessageIdentifierResponse {
     	      this.messageId = defaults.messageId;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }

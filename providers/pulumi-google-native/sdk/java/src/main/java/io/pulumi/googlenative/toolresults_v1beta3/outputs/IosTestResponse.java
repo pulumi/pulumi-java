@@ -39,13 +39,13 @@ public final class IosTestResponse {
      */
     private final DurationResponse testTimeout;
 
-    @OutputCustomType.Constructor({"iosAppInfo","iosRoboTest","iosTestLoop","iosXcTest","testTimeout"})
+    @OutputCustomType.Constructor
     private IosTestResponse(
-        IosAppInfoResponse iosAppInfo,
-        IosRoboTestResponse iosRoboTest,
-        IosTestLoopResponse iosTestLoop,
-        IosXcTestResponse iosXcTest,
-        DurationResponse testTimeout) {
+        @OutputCustomType.Parameter("iosAppInfo") IosAppInfoResponse iosAppInfo,
+        @OutputCustomType.Parameter("iosRoboTest") IosRoboTestResponse iosRoboTest,
+        @OutputCustomType.Parameter("iosTestLoop") IosTestLoopResponse iosTestLoop,
+        @OutputCustomType.Parameter("iosXcTest") IosXcTestResponse iosXcTest,
+        @OutputCustomType.Parameter("testTimeout") DurationResponse testTimeout) {
         this.iosAppInfo = iosAppInfo;
         this.iosRoboTest = iosRoboTest;
         this.iosTestLoop = iosTestLoop;
@@ -117,27 +117,27 @@ public final class IosTestResponse {
     	      this.testTimeout = defaults.testTimeout;
         }
 
-        public Builder setIosAppInfo(IosAppInfoResponse iosAppInfo) {
+        public Builder iosAppInfo(IosAppInfoResponse iosAppInfo) {
             this.iosAppInfo = Objects.requireNonNull(iosAppInfo);
             return this;
         }
 
-        public Builder setIosRoboTest(IosRoboTestResponse iosRoboTest) {
+        public Builder iosRoboTest(IosRoboTestResponse iosRoboTest) {
             this.iosRoboTest = Objects.requireNonNull(iosRoboTest);
             return this;
         }
 
-        public Builder setIosTestLoop(IosTestLoopResponse iosTestLoop) {
+        public Builder iosTestLoop(IosTestLoopResponse iosTestLoop) {
             this.iosTestLoop = Objects.requireNonNull(iosTestLoop);
             return this;
         }
 
-        public Builder setIosXcTest(IosXcTestResponse iosXcTest) {
+        public Builder iosXcTest(IosXcTestResponse iosXcTest) {
             this.iosXcTest = Objects.requireNonNull(iosXcTest);
             return this;
         }
 
-        public Builder setTestTimeout(DurationResponse testTimeout) {
+        public Builder testTimeout(DurationResponse testTimeout) {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }

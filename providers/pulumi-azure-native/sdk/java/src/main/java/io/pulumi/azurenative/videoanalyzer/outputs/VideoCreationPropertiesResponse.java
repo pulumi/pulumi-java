@@ -32,12 +32,12 @@ public final class VideoCreationPropertiesResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"description","retentionPeriod","segmentLength","title"})
+    @OutputCustomType.Constructor
     private VideoCreationPropertiesResponse(
-        @Nullable String description,
-        @Nullable String retentionPeriod,
-        @Nullable String segmentLength,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("retentionPeriod") @Nullable String retentionPeriod,
+        @OutputCustomType.Parameter("segmentLength") @Nullable String segmentLength,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.description = description;
         this.retentionPeriod = retentionPeriod;
         this.segmentLength = segmentLength;
@@ -99,22 +99,22 @@ public final class VideoCreationPropertiesResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRetentionPeriod(@Nullable String retentionPeriod) {
+        public Builder retentionPeriod(@Nullable String retentionPeriod) {
             this.retentionPeriod = retentionPeriod;
             return this;
         }
 
-        public Builder setSegmentLength(@Nullable String segmentLength) {
+        public Builder segmentLength(@Nullable String segmentLength) {
             this.segmentLength = segmentLength;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

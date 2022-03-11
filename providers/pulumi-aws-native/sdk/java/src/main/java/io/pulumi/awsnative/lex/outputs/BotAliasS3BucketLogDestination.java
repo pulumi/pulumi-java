@@ -27,11 +27,11 @@ public final class BotAliasS3BucketLogDestination {
      */
     private final String s3BucketArn;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","logPrefix","s3BucketArn"})
+    @OutputCustomType.Constructor
     private BotAliasS3BucketLogDestination(
-        @Nullable String kmsKeyArn,
-        String logPrefix,
-        String s3BucketArn) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("logPrefix") String logPrefix,
+        @OutputCustomType.Parameter("s3BucketArn") String s3BucketArn) {
         this.kmsKeyArn = kmsKeyArn;
         this.logPrefix = logPrefix;
         this.s3BucketArn = s3BucketArn;
@@ -83,17 +83,17 @@ public final class BotAliasS3BucketLogDestination {
     	      this.s3BucketArn = defaults.s3BucketArn;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setLogPrefix(String logPrefix) {
+        public Builder logPrefix(String logPrefix) {
             this.logPrefix = Objects.requireNonNull(logPrefix);
             return this;
         }
 
-        public Builder setS3BucketArn(String s3BucketArn) {
+        public Builder s3BucketArn(String s3BucketArn) {
             this.s3BucketArn = Objects.requireNonNull(s3BucketArn);
             return this;
         }

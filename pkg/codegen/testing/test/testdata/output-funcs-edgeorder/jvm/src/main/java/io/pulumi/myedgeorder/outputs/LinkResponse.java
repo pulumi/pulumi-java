@@ -20,10 +20,10 @@ public final class LinkResponse {
      */
     private final String linkUrl;
 
-    @OutputCustomType.Constructor({"linkType","linkUrl"})
+    @OutputCustomType.Constructor
     private LinkResponse(
-        String linkType,
-        String linkUrl) {
+        @OutputCustomType.Parameter("linkType") String linkType,
+        @OutputCustomType.Parameter("linkUrl") String linkUrl) {
         this.linkType = linkType;
         this.linkUrl = linkUrl;
     }
@@ -65,12 +65,12 @@ public final class LinkResponse {
     	      this.linkUrl = defaults.linkUrl;
         }
 
-        public Builder setLinkType(String linkType) {
+        public Builder linkType(String linkType) {
             this.linkType = Objects.requireNonNull(linkType);
             return this;
         }
 
-        public Builder setLinkUrl(String linkUrl) {
+        public Builder linkUrl(String linkUrl) {
             this.linkUrl = Objects.requireNonNull(linkUrl);
             return this;
         }

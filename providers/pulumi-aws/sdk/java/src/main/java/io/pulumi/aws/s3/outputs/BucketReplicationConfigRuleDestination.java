@@ -51,15 +51,15 @@ public final class BucketReplicationConfigRuleDestination {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"accessControlTranslation","account","bucket","encryptionConfiguration","metrics","replicationTime","storageClass"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleDestination(
-        @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
-        @Nullable String account,
-        String bucket,
-        @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
-        @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
-        @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("accessControlTranslation") @Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation,
+        @OutputCustomType.Parameter("account") @Nullable String account,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("metrics") @Nullable BucketReplicationConfigRuleDestinationMetrics metrics,
+        @OutputCustomType.Parameter("replicationTime") @Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.accessControlTranslation = accessControlTranslation;
         this.account = account;
         this.bucket = bucket;
@@ -151,37 +151,37 @@ public final class BucketReplicationConfigRuleDestination {
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setAccessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation) {
+        public Builder accessControlTranslation(@Nullable BucketReplicationConfigRuleDestinationAccessControlTranslation accessControlTranslation) {
             this.accessControlTranslation = accessControlTranslation;
             return this;
         }
 
-        public Builder setAccount(@Nullable String account) {
+        public Builder account(@Nullable String account) {
             this.account = account;
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable BucketReplicationConfigRuleDestinationEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setMetrics(@Nullable BucketReplicationConfigRuleDestinationMetrics metrics) {
+        public Builder metrics(@Nullable BucketReplicationConfigRuleDestinationMetrics metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setReplicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime) {
+        public Builder replicationTime(@Nullable BucketReplicationConfigRuleDestinationReplicationTime replicationTime) {
             this.replicationTime = replicationTime;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
         }

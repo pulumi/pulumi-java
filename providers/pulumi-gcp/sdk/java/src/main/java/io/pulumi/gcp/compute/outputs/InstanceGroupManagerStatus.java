@@ -30,11 +30,11 @@ public final class InstanceGroupManagerStatus {
      */
     private final @Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets;
 
-    @OutputCustomType.Constructor({"isStable","statefuls","versionTargets"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatus(
-        @Nullable Boolean isStable,
-        @Nullable List<InstanceGroupManagerStatusStateful> statefuls,
-        @Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets) {
+        @OutputCustomType.Parameter("isStable") @Nullable Boolean isStable,
+        @OutputCustomType.Parameter("statefuls") @Nullable List<InstanceGroupManagerStatusStateful> statefuls,
+        @OutputCustomType.Parameter("versionTargets") @Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets) {
         this.isStable = isStable;
         this.statefuls = statefuls;
         this.versionTargets = versionTargets;
@@ -86,17 +86,17 @@ public final class InstanceGroupManagerStatus {
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder setIsStable(@Nullable Boolean isStable) {
+        public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = isStable;
             return this;
         }
 
-        public Builder setStatefuls(@Nullable List<InstanceGroupManagerStatusStateful> statefuls) {
+        public Builder statefuls(@Nullable List<InstanceGroupManagerStatusStateful> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets) {
+        public Builder versionTargets(@Nullable List<InstanceGroupManagerStatusVersionTarget> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }

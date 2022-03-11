@@ -46,15 +46,15 @@ public final class GetLocationSMBResult {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"agentArns","domain","locationArn","locationUri","mountOptions","tags","user"})
+    @OutputCustomType.Constructor
     private GetLocationSMBResult(
-        @Nullable List<String> agentArns,
-        @Nullable String domain,
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable LocationSMBMountOptions mountOptions,
-        @Nullable List<LocationSMBTag> tags,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("mountOptions") @Nullable LocationSMBMountOptions mountOptions,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationSMBTag> tags,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.agentArns = agentArns;
         this.domain = domain;
         this.locationArn = locationArn;
@@ -142,37 +142,37 @@ public final class GetLocationSMBResult {
     	      this.user = defaults.user;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setMountOptions(@Nullable LocationSMBMountOptions mountOptions) {
+        public Builder mountOptions(@Nullable LocationSMBMountOptions mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationSMBTag> tags) {
+        public Builder tags(@Nullable List<LocationSMBTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

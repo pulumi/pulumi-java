@@ -25,10 +25,10 @@ public final class ClusterAddonsConfigCloudrunConfig {
      */
     private final @Nullable String loadBalancerType;
 
-    @OutputCustomType.Constructor({"disabled","loadBalancerType"})
+    @OutputCustomType.Constructor
     private ClusterAddonsConfigCloudrunConfig(
-        Boolean disabled,
-        @Nullable String loadBalancerType) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("loadBalancerType") @Nullable String loadBalancerType) {
         this.disabled = disabled;
         this.loadBalancerType = loadBalancerType;
     }
@@ -72,12 +72,12 @@ public final class ClusterAddonsConfigCloudrunConfig {
     	      this.loadBalancerType = defaults.loadBalancerType;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setLoadBalancerType(@Nullable String loadBalancerType) {
+        public Builder loadBalancerType(@Nullable String loadBalancerType) {
             this.loadBalancerType = loadBalancerType;
             return this;
         }

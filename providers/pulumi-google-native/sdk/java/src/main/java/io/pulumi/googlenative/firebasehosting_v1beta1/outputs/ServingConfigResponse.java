@@ -51,15 +51,15 @@ public final class ServingConfigResponse {
      */
     private final String trailingSlashBehavior;
 
-    @OutputCustomType.Constructor({"appAssociation","cleanUrls","headers","i18n","redirects","rewrites","trailingSlashBehavior"})
+    @OutputCustomType.Constructor
     private ServingConfigResponse(
-        String appAssociation,
-        Boolean cleanUrls,
-        List<HeaderResponse> headers,
-        I18nConfigResponse i18n,
-        List<RedirectResponse> redirects,
-        List<RewriteResponse> rewrites,
-        String trailingSlashBehavior) {
+        @OutputCustomType.Parameter("appAssociation") String appAssociation,
+        @OutputCustomType.Parameter("cleanUrls") Boolean cleanUrls,
+        @OutputCustomType.Parameter("headers") List<HeaderResponse> headers,
+        @OutputCustomType.Parameter("i18n") I18nConfigResponse i18n,
+        @OutputCustomType.Parameter("redirects") List<RedirectResponse> redirects,
+        @OutputCustomType.Parameter("rewrites") List<RewriteResponse> rewrites,
+        @OutputCustomType.Parameter("trailingSlashBehavior") String trailingSlashBehavior) {
         this.appAssociation = appAssociation;
         this.cleanUrls = cleanUrls;
         this.headers = headers;
@@ -151,37 +151,37 @@ public final class ServingConfigResponse {
     	      this.trailingSlashBehavior = defaults.trailingSlashBehavior;
         }
 
-        public Builder setAppAssociation(String appAssociation) {
+        public Builder appAssociation(String appAssociation) {
             this.appAssociation = Objects.requireNonNull(appAssociation);
             return this;
         }
 
-        public Builder setCleanUrls(Boolean cleanUrls) {
+        public Builder cleanUrls(Boolean cleanUrls) {
             this.cleanUrls = Objects.requireNonNull(cleanUrls);
             return this;
         }
 
-        public Builder setHeaders(List<HeaderResponse> headers) {
+        public Builder headers(List<HeaderResponse> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setI18n(I18nConfigResponse i18n) {
+        public Builder i18n(I18nConfigResponse i18n) {
             this.i18n = Objects.requireNonNull(i18n);
             return this;
         }
 
-        public Builder setRedirects(List<RedirectResponse> redirects) {
+        public Builder redirects(List<RedirectResponse> redirects) {
             this.redirects = Objects.requireNonNull(redirects);
             return this;
         }
 
-        public Builder setRewrites(List<RewriteResponse> rewrites) {
+        public Builder rewrites(List<RewriteResponse> rewrites) {
             this.rewrites = Objects.requireNonNull(rewrites);
             return this;
         }
 
-        public Builder setTrailingSlashBehavior(String trailingSlashBehavior) {
+        public Builder trailingSlashBehavior(String trailingSlashBehavior) {
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
         }

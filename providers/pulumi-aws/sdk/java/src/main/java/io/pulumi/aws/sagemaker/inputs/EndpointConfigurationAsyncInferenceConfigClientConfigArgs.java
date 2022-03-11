@@ -53,12 +53,12 @@ public final class EndpointConfigurationAsyncInferenceConfigClientConfigArgs ext
     	      this.maxConcurrentInvocationsPerInstance = defaults.maxConcurrentInvocationsPerInstance;
         }
 
-        public Builder setMaxConcurrentInvocationsPerInstance(@Nullable Input<Integer> maxConcurrentInvocationsPerInstance) {
+        public Builder maxConcurrentInvocationsPerInstance(@Nullable Input<Integer> maxConcurrentInvocationsPerInstance) {
             this.maxConcurrentInvocationsPerInstance = maxConcurrentInvocationsPerInstance;
             return this;
         }
 
-        public Builder setMaxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
+        public Builder maxConcurrentInvocationsPerInstance(@Nullable Integer maxConcurrentInvocationsPerInstance) {
             this.maxConcurrentInvocationsPerInstance = Input.ofNullable(maxConcurrentInvocationsPerInstance);
             return this;
         }

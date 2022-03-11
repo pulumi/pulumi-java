@@ -39,13 +39,13 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
      */
     private final @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","rewriteRules"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleSetResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rewriteRules") @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -117,27 +117,27 @@ public final class ApplicationGatewayRewriteRuleSetResponse {
     	      this.rewriteRules = defaults.rewriteRules;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRewriteRules(@Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
+        public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
             this.rewriteRules = rewriteRules;
             return this;
         }

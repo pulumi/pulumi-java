@@ -42,15 +42,15 @@ public final class GetCassandraResourceCassandraTableResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetCassandraResourceCassandraTableResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable CassandraTableGetPropertiesResponseOptions options,
-        @Nullable CassandraTableGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable CassandraTableGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable CassandraTableGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;
@@ -134,37 +134,37 @@ public final class GetCassandraResourceCassandraTableResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable CassandraTableGetPropertiesResponseOptions options) {
+        public Builder options(@Nullable CassandraTableGetPropertiesResponseOptions options) {
             this.options = options;
             return this;
         }
 
-        public Builder setResource(@Nullable CassandraTableGetPropertiesResponseResource resource) {
+        public Builder resource(@Nullable CassandraTableGetPropertiesResponseResource resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

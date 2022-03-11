@@ -12,10 +12,10 @@ public final class GlobalTableAttributeDefinition {
     private final String attributeName;
     private final String attributeType;
 
-    @OutputCustomType.Constructor({"attributeName","attributeType"})
+    @OutputCustomType.Constructor
     private GlobalTableAttributeDefinition(
-        String attributeName,
-        String attributeType) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("attributeType") String attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }
@@ -49,12 +49,12 @@ public final class GlobalTableAttributeDefinition {
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setAttributeType(String attributeType) {
+        public Builder attributeType(String attributeType) {
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
         }

@@ -55,16 +55,16 @@ public final class GetIntegrationAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","integrationServiceEnvironment","location","name","sku","state","tags","type"})
+    @OutputCustomType.Constructor
     private GetIntegrationAccountResult(
-        String id,
-        @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @Nullable String location,
-        String name,
-        @Nullable IntegrationAccountSkuResponse sku,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable IntegrationAccountSkuResponse sku,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.integrationServiceEnvironment = integrationServiceEnvironment;
         this.location = location;
@@ -166,42 +166,42 @@ public final class GetIntegrationAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(@Nullable IntegrationAccountSkuResponse sku) {
+        public Builder sku(@Nullable IntegrationAccountSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

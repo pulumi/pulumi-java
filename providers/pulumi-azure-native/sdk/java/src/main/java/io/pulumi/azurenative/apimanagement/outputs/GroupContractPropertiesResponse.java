@@ -38,13 +38,13 @@ public final class GroupContractPropertiesResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"builtIn","description","displayName","externalId","type"})
+    @OutputCustomType.Constructor
     private GroupContractPropertiesResponse(
-        Boolean builtIn,
-        @Nullable String description,
-        String displayName,
-        @Nullable String externalId,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("builtIn") Boolean builtIn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalId") @Nullable String externalId,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.builtIn = builtIn;
         this.description = description;
         this.displayName = displayName;
@@ -116,27 +116,27 @@ public final class GroupContractPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBuiltIn(Boolean builtIn) {
+        public Builder builtIn(Boolean builtIn) {
             this.builtIn = Objects.requireNonNull(builtIn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExternalId(@Nullable String externalId) {
+        public Builder externalId(@Nullable String externalId) {
             this.externalId = externalId;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -33,12 +33,12 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
      */
     private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
-    @OutputCustomType.Constructor({"all","exclusionLabels","inclusionLabels","inventories"})
+    @OutputCustomType.Constructor
     private OSPolicyAssignmentInstanceFilterResponse(
-        Boolean all,
-        List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
-        List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
-        List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
+        @OutputCustomType.Parameter("all") Boolean all,
+        @OutputCustomType.Parameter("exclusionLabels") List<OSPolicyAssignmentLabelSetResponse> exclusionLabels,
+        @OutputCustomType.Parameter("inclusionLabels") List<OSPolicyAssignmentLabelSetResponse> inclusionLabels,
+        @OutputCustomType.Parameter("inventories") List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;
@@ -100,22 +100,22 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
     	      this.inventories = defaults.inventories;
         }
 
-        public Builder setAll(Boolean all) {
+        public Builder all(Boolean all) {
             this.all = Objects.requireNonNull(all);
             return this;
         }
 
-        public Builder setExclusionLabels(List<OSPolicyAssignmentLabelSetResponse> exclusionLabels) {
+        public Builder exclusionLabels(List<OSPolicyAssignmentLabelSetResponse> exclusionLabels) {
             this.exclusionLabels = Objects.requireNonNull(exclusionLabels);
             return this;
         }
 
-        public Builder setInclusionLabels(List<OSPolicyAssignmentLabelSetResponse> inclusionLabels) {
+        public Builder inclusionLabels(List<OSPolicyAssignmentLabelSetResponse> inclusionLabels) {
             this.inclusionLabels = Objects.requireNonNull(inclusionLabels);
             return this;
         }
 
-        public Builder setInventories(List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
+        public Builder inventories(List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories) {
             this.inventories = Objects.requireNonNull(inventories);
             return this;
         }

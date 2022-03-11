@@ -30,11 +30,11 @@ public final class RegionInstanceGroupManagerStatus {
      */
     private final @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets;
 
-    @OutputCustomType.Constructor({"isStable","statefuls","versionTargets"})
+    @OutputCustomType.Constructor
     private RegionInstanceGroupManagerStatus(
-        @Nullable Boolean isStable,
-        @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
-        @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
+        @OutputCustomType.Parameter("isStable") @Nullable Boolean isStable,
+        @OutputCustomType.Parameter("statefuls") @Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls,
+        @OutputCustomType.Parameter("versionTargets") @Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
         this.isStable = isStable;
         this.statefuls = statefuls;
         this.versionTargets = versionTargets;
@@ -86,17 +86,17 @@ public final class RegionInstanceGroupManagerStatus {
     	      this.versionTargets = defaults.versionTargets;
         }
 
-        public Builder setIsStable(@Nullable Boolean isStable) {
+        public Builder isStable(@Nullable Boolean isStable) {
             this.isStable = isStable;
             return this;
         }
 
-        public Builder setStatefuls(@Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls) {
+        public Builder statefuls(@Nullable List<RegionInstanceGroupManagerStatusStateful> statefuls) {
             this.statefuls = statefuls;
             return this;
         }
 
-        public Builder setVersionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
+        public Builder versionTargets(@Nullable List<RegionInstanceGroupManagerStatusVersionTarget> versionTargets) {
             this.versionTargets = versionTargets;
             return this;
         }

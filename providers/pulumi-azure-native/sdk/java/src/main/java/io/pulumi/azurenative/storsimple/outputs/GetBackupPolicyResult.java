@@ -69,19 +69,19 @@ public final class GetBackupPolicyResult {
      */
     private final List<String> volumeIds;
 
-    @OutputCustomType.Constructor({"backupPolicyCreationType","id","kind","lastBackupTime","name","nextBackupTime","scheduledBackupStatus","schedulesCount","ssmHostName","type","volumeIds"})
+    @OutputCustomType.Constructor
     private GetBackupPolicyResult(
-        String backupPolicyCreationType,
-        String id,
-        @Nullable String kind,
-        String lastBackupTime,
-        String name,
-        String nextBackupTime,
-        String scheduledBackupStatus,
-        Double schedulesCount,
-        String ssmHostName,
-        String type,
-        List<String> volumeIds) {
+        @OutputCustomType.Parameter("backupPolicyCreationType") String backupPolicyCreationType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("lastBackupTime") String lastBackupTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextBackupTime") String nextBackupTime,
+        @OutputCustomType.Parameter("scheduledBackupStatus") String scheduledBackupStatus,
+        @OutputCustomType.Parameter("schedulesCount") Double schedulesCount,
+        @OutputCustomType.Parameter("ssmHostName") String ssmHostName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("volumeIds") List<String> volumeIds) {
         this.backupPolicyCreationType = backupPolicyCreationType;
         this.id = id;
         this.kind = kind;
@@ -213,57 +213,57 @@ public final class GetBackupPolicyResult {
     	      this.volumeIds = defaults.volumeIds;
         }
 
-        public Builder setBackupPolicyCreationType(String backupPolicyCreationType) {
+        public Builder backupPolicyCreationType(String backupPolicyCreationType) {
             this.backupPolicyCreationType = Objects.requireNonNull(backupPolicyCreationType);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLastBackupTime(String lastBackupTime) {
+        public Builder lastBackupTime(String lastBackupTime) {
             this.lastBackupTime = Objects.requireNonNull(lastBackupTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextBackupTime(String nextBackupTime) {
+        public Builder nextBackupTime(String nextBackupTime) {
             this.nextBackupTime = Objects.requireNonNull(nextBackupTime);
             return this;
         }
 
-        public Builder setScheduledBackupStatus(String scheduledBackupStatus) {
+        public Builder scheduledBackupStatus(String scheduledBackupStatus) {
             this.scheduledBackupStatus = Objects.requireNonNull(scheduledBackupStatus);
             return this;
         }
 
-        public Builder setSchedulesCount(Double schedulesCount) {
+        public Builder schedulesCount(Double schedulesCount) {
             this.schedulesCount = Objects.requireNonNull(schedulesCount);
             return this;
         }
 
-        public Builder setSsmHostName(String ssmHostName) {
+        public Builder ssmHostName(String ssmHostName) {
             this.ssmHostName = Objects.requireNonNull(ssmHostName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVolumeIds(List<String> volumeIds) {
+        public Builder volumeIds(List<String> volumeIds) {
             this.volumeIds = Objects.requireNonNull(volumeIds);
             return this;
         }

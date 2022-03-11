@@ -27,11 +27,11 @@ public final class NodeGroupTaint {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"effect","key","value"})
+    @OutputCustomType.Constructor
     private NodeGroupTaint(
-        String effect,
-        String key,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("effect") String effect,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;
@@ -83,17 +83,17 @@ public final class NodeGroupTaint {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

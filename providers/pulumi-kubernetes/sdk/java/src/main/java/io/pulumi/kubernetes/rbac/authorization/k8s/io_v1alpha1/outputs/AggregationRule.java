@@ -17,8 +17,8 @@ public final class AggregationRule {
      */
     private final @Nullable List<LabelSelector> clusterRoleSelectors;
 
-    @OutputCustomType.Constructor({"clusterRoleSelectors"})
-    private AggregationRule(@Nullable List<LabelSelector> clusterRoleSelectors) {
+    @OutputCustomType.Constructor
+    private AggregationRule(@OutputCustomType.Parameter("clusterRoleSelectors") @Nullable List<LabelSelector> clusterRoleSelectors) {
         this.clusterRoleSelectors = clusterRoleSelectors;
     }
 
@@ -50,7 +50,7 @@ public final class AggregationRule {
     	      this.clusterRoleSelectors = defaults.clusterRoleSelectors;
         }
 
-        public Builder setClusterRoleSelectors(@Nullable List<LabelSelector> clusterRoleSelectors) {
+        public Builder clusterRoleSelectors(@Nullable List<LabelSelector> clusterRoleSelectors) {
             this.clusterRoleSelectors = clusterRoleSelectors;
             return this;
         }

@@ -24,11 +24,11 @@ public final class PartitionIndexPartitionIndex {
      */
     private final @Nullable List<String> keys;
 
-    @OutputCustomType.Constructor({"indexName","indexStatus","keys"})
+    @OutputCustomType.Constructor
     private PartitionIndexPartitionIndex(
-        @Nullable String indexName,
-        @Nullable String indexStatus,
-        @Nullable List<String> keys) {
+        @OutputCustomType.Parameter("indexName") @Nullable String indexName,
+        @OutputCustomType.Parameter("indexStatus") @Nullable String indexStatus,
+        @OutputCustomType.Parameter("keys") @Nullable List<String> keys) {
         this.indexName = indexName;
         this.indexStatus = indexStatus;
         this.keys = keys;
@@ -76,17 +76,17 @@ public final class PartitionIndexPartitionIndex {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setIndexName(@Nullable String indexName) {
+        public Builder indexName(@Nullable String indexName) {
             this.indexName = indexName;
             return this;
         }
 
-        public Builder setIndexStatus(@Nullable String indexStatus) {
+        public Builder indexStatus(@Nullable String indexStatus) {
             this.indexStatus = indexStatus;
             return this;
         }
 
-        public Builder setKeys(@Nullable List<String> keys) {
+        public Builder keys(@Nullable List<String> keys) {
             this.keys = keys;
             return this;
         }

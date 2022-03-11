@@ -23,10 +23,10 @@ public final class AttributesItemProperties {
      */
     private final @Nullable DatasetAttributesItemPropertiesAttributeType attributeType;
 
-    @OutputCustomType.Constructor({"attributeName","attributeType"})
+    @OutputCustomType.Constructor
     private AttributesItemProperties(
-        @Nullable String attributeName,
-        @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        @OutputCustomType.Parameter("attributeName") @Nullable String attributeName,
+        @OutputCustomType.Parameter("attributeType") @Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
         this.attributeName = attributeName;
         this.attributeType = attributeType;
     }
@@ -68,12 +68,12 @@ public final class AttributesItemProperties {
     	      this.attributeType = defaults.attributeType;
         }
 
-        public Builder setAttributeName(@Nullable String attributeName) {
+        public Builder attributeName(@Nullable String attributeName) {
             this.attributeName = attributeName;
             return this;
         }
 
-        public Builder setAttributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
+        public Builder attributeType(@Nullable DatasetAttributesItemPropertiesAttributeType attributeType) {
             this.attributeType = attributeType;
             return this;
         }

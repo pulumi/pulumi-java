@@ -22,10 +22,10 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
      */
     private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
-    @OutputCustomType.Constructor({"issueModel","issues"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueModelResultResponse(
-        String issueModel,
-        List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
+        @OutputCustomType.Parameter("issueModel") String issueModel,
+        @OutputCustomType.Parameter("issues") List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
         this.issueModel = issueModel;
         this.issues = issues;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse {
     	      this.issues = defaults.issues;
         }
 
-        public Builder setIssueModel(String issueModel) {
+        public Builder issueModel(String issueModel) {
             this.issueModel = Objects.requireNonNull(issueModel);
             return this;
         }
 
-        public Builder setIssues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
+        public Builder issues(List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues) {
             this.issues = Objects.requireNonNull(issues);
             return this;
         }

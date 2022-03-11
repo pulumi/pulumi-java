@@ -15,8 +15,8 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
      */
     private final Boolean canReschedule;
 
-    @OutputCustomType.Constructor({"canReschedule"})
-    private ResourceStatusUpcomingMaintenanceResponse(Boolean canReschedule) {
+    @OutputCustomType.Constructor
+    private ResourceStatusUpcomingMaintenanceResponse(@OutputCustomType.Parameter("canReschedule") Boolean canReschedule) {
         this.canReschedule = canReschedule;
     }
 
@@ -48,7 +48,7 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
     	      this.canReschedule = defaults.canReschedule;
         }
 
-        public Builder setCanReschedule(Boolean canReschedule) {
+        public Builder canReschedule(Boolean canReschedule) {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }

@@ -27,11 +27,11 @@ public final class FileSystemSizeInByte {
      */
     private final @Nullable Integer valueInStandard;
 
-    @OutputCustomType.Constructor({"value","valueInIa","valueInStandard"})
+    @OutputCustomType.Constructor
     private FileSystemSizeInByte(
-        @Nullable Integer value,
-        @Nullable Integer valueInIa,
-        @Nullable Integer valueInStandard) {
+        @OutputCustomType.Parameter("value") @Nullable Integer value,
+        @OutputCustomType.Parameter("valueInIa") @Nullable Integer valueInIa,
+        @OutputCustomType.Parameter("valueInStandard") @Nullable Integer valueInStandard) {
         this.value = value;
         this.valueInIa = valueInIa;
         this.valueInStandard = valueInStandard;
@@ -83,17 +83,17 @@ public final class FileSystemSizeInByte {
     	      this.valueInStandard = defaults.valueInStandard;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }
 
-        public Builder setValueInIa(@Nullable Integer valueInIa) {
+        public Builder valueInIa(@Nullable Integer valueInIa) {
             this.valueInIa = valueInIa;
             return this;
         }
 
-        public Builder setValueInStandard(@Nullable Integer valueInStandard) {
+        public Builder valueInStandard(@Nullable Integer valueInStandard) {
             this.valueInStandard = valueInStandard;
             return this;
         }

@@ -54,15 +54,15 @@ public final class ApplicationConfigurationDetails {
      */
     private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
-    @OutputCustomType.Constructor({"alarmMetrics","alarms","hAClusterPrometheusExporter","hANAPrometheusExporter","jMXPrometheusExporter","logs","windowsEvents"})
+    @OutputCustomType.Constructor
     private ApplicationConfigurationDetails(
-        @Nullable List<ApplicationAlarmMetric> alarmMetrics,
-        @Nullable List<ApplicationAlarm> alarms,
-        @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
-        @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
-        @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
-        @Nullable List<ApplicationLog> logs,
-        @Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        @OutputCustomType.Parameter("alarmMetrics") @Nullable List<ApplicationAlarmMetric> alarmMetrics,
+        @OutputCustomType.Parameter("alarms") @Nullable List<ApplicationAlarm> alarms,
+        @OutputCustomType.Parameter("hAClusterPrometheusExporter") @Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter,
+        @OutputCustomType.Parameter("hANAPrometheusExporter") @Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter,
+        @OutputCustomType.Parameter("jMXPrometheusExporter") @Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter,
+        @OutputCustomType.Parameter("logs") @Nullable List<ApplicationLog> logs,
+        @OutputCustomType.Parameter("windowsEvents") @Nullable List<ApplicationWindowsEvent> windowsEvents) {
         this.alarmMetrics = alarmMetrics;
         this.alarms = alarms;
         this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;
@@ -154,37 +154,37 @@ public final class ApplicationConfigurationDetails {
     	      this.windowsEvents = defaults.windowsEvents;
         }
 
-        public Builder setAlarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
+        public Builder alarmMetrics(@Nullable List<ApplicationAlarmMetric> alarmMetrics) {
             this.alarmMetrics = alarmMetrics;
             return this;
         }
 
-        public Builder setAlarms(@Nullable List<ApplicationAlarm> alarms) {
+        public Builder alarms(@Nullable List<ApplicationAlarm> alarms) {
             this.alarms = alarms;
             return this;
         }
 
-        public Builder setHAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
+        public Builder hAClusterPrometheusExporter(@Nullable ApplicationHAClusterPrometheusExporter hAClusterPrometheusExporter) {
             this.hAClusterPrometheusExporter = hAClusterPrometheusExporter;
             return this;
         }
 
-        public Builder setHANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
+        public Builder hANAPrometheusExporter(@Nullable ApplicationHANAPrometheusExporter hANAPrometheusExporter) {
             this.hANAPrometheusExporter = hANAPrometheusExporter;
             return this;
         }
 
-        public Builder setJMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
+        public Builder jMXPrometheusExporter(@Nullable ApplicationJMXPrometheusExporter jMXPrometheusExporter) {
             this.jMXPrometheusExporter = jMXPrometheusExporter;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<ApplicationLog> logs) {
+        public Builder logs(@Nullable List<ApplicationLog> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setWindowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
+        public Builder windowsEvents(@Nullable List<ApplicationWindowsEvent> windowsEvents) {
             this.windowsEvents = windowsEvents;
             return this;
         }

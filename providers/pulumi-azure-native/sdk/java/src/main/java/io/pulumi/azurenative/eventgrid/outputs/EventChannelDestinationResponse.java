@@ -29,11 +29,11 @@ public final class EventChannelDestinationResponse {
      */
     private final @Nullable String resourceGroup;
 
-    @OutputCustomType.Constructor({"azureSubscriptionId","partnerTopicName","resourceGroup"})
+    @OutputCustomType.Constructor
     private EventChannelDestinationResponse(
-        @Nullable String azureSubscriptionId,
-        @Nullable String partnerTopicName,
-        @Nullable String resourceGroup) {
+        @OutputCustomType.Parameter("azureSubscriptionId") @Nullable String azureSubscriptionId,
+        @OutputCustomType.Parameter("partnerTopicName") @Nullable String partnerTopicName,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup) {
         this.azureSubscriptionId = azureSubscriptionId;
         this.partnerTopicName = partnerTopicName;
         this.resourceGroup = resourceGroup;
@@ -87,17 +87,17 @@ public final class EventChannelDestinationResponse {
     	      this.resourceGroup = defaults.resourceGroup;
         }
 
-        public Builder setAzureSubscriptionId(@Nullable String azureSubscriptionId) {
+        public Builder azureSubscriptionId(@Nullable String azureSubscriptionId) {
             this.azureSubscriptionId = azureSubscriptionId;
             return this;
         }
 
-        public Builder setPartnerTopicName(@Nullable String partnerTopicName) {
+        public Builder partnerTopicName(@Nullable String partnerTopicName) {
             this.partnerTopicName = partnerTopicName;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }

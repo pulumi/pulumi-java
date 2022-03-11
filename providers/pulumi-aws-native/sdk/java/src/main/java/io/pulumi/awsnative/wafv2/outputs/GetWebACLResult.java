@@ -35,19 +35,19 @@ public final class GetWebACLResult {
     private final @Nullable List<WebACLTag> tags;
     private final @Nullable WebACLVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"arn","capacity","captchaConfig","customResponseBodies","defaultAction","description","id","labelNamespace","rules","tags","visibilityConfig"})
+    @OutputCustomType.Constructor
     private GetWebACLResult(
-        @Nullable String arn,
-        @Nullable Integer capacity,
-        @Nullable WebACLCaptchaConfig captchaConfig,
-        @Nullable WebACLCustomResponseBodies customResponseBodies,
-        @Nullable WebACLDefaultAction defaultAction,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String labelNamespace,
-        @Nullable List<WebACLRule> rules,
-        @Nullable List<WebACLTag> tags,
-        @Nullable WebACLVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable WebACLCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("customResponseBodies") @Nullable WebACLCustomResponseBodies customResponseBodies,
+        @OutputCustomType.Parameter("defaultAction") @Nullable WebACLDefaultAction defaultAction,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("labelNamespace") @Nullable String labelNamespace,
+        @OutputCustomType.Parameter("rules") @Nullable List<WebACLRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<WebACLTag> tags,
+        @OutputCustomType.Parameter("visibilityConfig") @Nullable WebACLVisibilityConfig visibilityConfig) {
         this.arn = arn;
         this.capacity = capacity;
         this.captchaConfig = captchaConfig;
@@ -139,57 +139,57 @@ public final class GetWebACLResult {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
+        public Builder captchaConfig(@Nullable WebACLCaptchaConfig captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setCustomResponseBodies(@Nullable WebACLCustomResponseBodies customResponseBodies) {
+        public Builder customResponseBodies(@Nullable WebACLCustomResponseBodies customResponseBodies) {
             this.customResponseBodies = customResponseBodies;
             return this;
         }
 
-        public Builder setDefaultAction(@Nullable WebACLDefaultAction defaultAction) {
+        public Builder defaultAction(@Nullable WebACLDefaultAction defaultAction) {
             this.defaultAction = defaultAction;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLabelNamespace(@Nullable String labelNamespace) {
+        public Builder labelNamespace(@Nullable String labelNamespace) {
             this.labelNamespace = labelNamespace;
             return this;
         }
 
-        public Builder setRules(@Nullable List<WebACLRule> rules) {
+        public Builder rules(@Nullable List<WebACLRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WebACLTag> tags) {
+        public Builder tags(@Nullable List<WebACLTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVisibilityConfig(@Nullable WebACLVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(@Nullable WebACLVisibilityConfig visibilityConfig) {
             this.visibilityConfig = visibilityConfig;
             return this;
         }

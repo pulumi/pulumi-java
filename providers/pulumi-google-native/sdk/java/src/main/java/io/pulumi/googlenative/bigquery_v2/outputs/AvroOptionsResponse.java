@@ -15,8 +15,8 @@ public final class AvroOptionsResponse {
      */
     private final Boolean useAvroLogicalTypes;
 
-    @OutputCustomType.Constructor({"useAvroLogicalTypes"})
-    private AvroOptionsResponse(Boolean useAvroLogicalTypes) {
+    @OutputCustomType.Constructor
+    private AvroOptionsResponse(@OutputCustomType.Parameter("useAvroLogicalTypes") Boolean useAvroLogicalTypes) {
         this.useAvroLogicalTypes = useAvroLogicalTypes;
     }
 
@@ -48,7 +48,7 @@ public final class AvroOptionsResponse {
     	      this.useAvroLogicalTypes = defaults.useAvroLogicalTypes;
         }
 
-        public Builder setUseAvroLogicalTypes(Boolean useAvroLogicalTypes) {
+        public Builder useAvroLogicalTypes(Boolean useAvroLogicalTypes) {
             this.useAvroLogicalTypes = Objects.requireNonNull(useAvroLogicalTypes);
             return this;
         }

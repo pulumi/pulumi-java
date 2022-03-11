@@ -141,62 +141,62 @@ public final class SubnetOverrideArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualNetworkPoolName = defaults.virtualNetworkPoolName;
         }
 
-        public Builder setLabSubnetName(@Nullable Input<String> labSubnetName) {
+        public Builder labSubnetName(@Nullable Input<String> labSubnetName) {
             this.labSubnetName = labSubnetName;
             return this;
         }
 
-        public Builder setLabSubnetName(@Nullable String labSubnetName) {
+        public Builder labSubnetName(@Nullable String labSubnetName) {
             this.labSubnetName = Input.ofNullable(labSubnetName);
             return this;
         }
 
-        public Builder setResourceId(@Nullable Input<String> resourceId) {
+        public Builder resourceId(@Nullable Input<String> resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable Input<SubnetSharedPublicIpAddressConfigurationArgs> sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = sharedPublicIpAddressConfiguration;
             return this;
         }
 
-        public Builder setSharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
+        public Builder sharedPublicIpAddressConfiguration(@Nullable SubnetSharedPublicIpAddressConfigurationArgs sharedPublicIpAddressConfiguration) {
             this.sharedPublicIpAddressConfiguration = Input.ofNullable(sharedPublicIpAddressConfiguration);
             return this;
         }
 
-        public Builder setUseInVmCreationPermission(@Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission) {
+        public Builder useInVmCreationPermission(@Nullable Input<Either<String,UsagePermissionType>> useInVmCreationPermission) {
             this.useInVmCreationPermission = useInVmCreationPermission;
             return this;
         }
 
-        public Builder setUseInVmCreationPermission(@Nullable Either<String,UsagePermissionType> useInVmCreationPermission) {
+        public Builder useInVmCreationPermission(@Nullable Either<String,UsagePermissionType> useInVmCreationPermission) {
             this.useInVmCreationPermission = Input.ofNullable(useInVmCreationPermission);
             return this;
         }
 
-        public Builder setUsePublicIpAddressPermission(@Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
+        public Builder usePublicIpAddressPermission(@Nullable Input<Either<String,UsagePermissionType>> usePublicIpAddressPermission) {
             this.usePublicIpAddressPermission = usePublicIpAddressPermission;
             return this;
         }
 
-        public Builder setUsePublicIpAddressPermission(@Nullable Either<String,UsagePermissionType> usePublicIpAddressPermission) {
+        public Builder usePublicIpAddressPermission(@Nullable Either<String,UsagePermissionType> usePublicIpAddressPermission) {
             this.usePublicIpAddressPermission = Input.ofNullable(usePublicIpAddressPermission);
             return this;
         }
 
-        public Builder setVirtualNetworkPoolName(@Nullable Input<String> virtualNetworkPoolName) {
+        public Builder virtualNetworkPoolName(@Nullable Input<String> virtualNetworkPoolName) {
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
 
-        public Builder setVirtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
+        public Builder virtualNetworkPoolName(@Nullable String virtualNetworkPoolName) {
             this.virtualNetworkPoolName = Input.ofNullable(virtualNetworkPoolName);
             return this;
         }

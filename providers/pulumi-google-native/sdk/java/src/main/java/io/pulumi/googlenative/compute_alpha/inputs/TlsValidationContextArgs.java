@@ -92,32 +92,32 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
     	      this.validationSource = defaults.validationSource;
         }
 
-        public Builder setCertificatePath(@Nullable Input<String> certificatePath) {
+        public Builder certificatePath(@Nullable Input<String> certificatePath) {
             this.certificatePath = certificatePath;
             return this;
         }
 
-        public Builder setCertificatePath(@Nullable String certificatePath) {
+        public Builder certificatePath(@Nullable String certificatePath) {
             this.certificatePath = Input.ofNullable(certificatePath);
             return this;
         }
 
-        public Builder setSdsConfig(@Nullable Input<SdsConfigArgs> sdsConfig) {
+        public Builder sdsConfig(@Nullable Input<SdsConfigArgs> sdsConfig) {
             this.sdsConfig = sdsConfig;
             return this;
         }
 
-        public Builder setSdsConfig(@Nullable SdsConfigArgs sdsConfig) {
+        public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
             this.sdsConfig = Input.ofNullable(sdsConfig);
             return this;
         }
 
-        public Builder setValidationSource(@Nullable Input<TlsValidationContextValidationSource> validationSource) {
+        public Builder validationSource(@Nullable Input<TlsValidationContextValidationSource> validationSource) {
             this.validationSource = validationSource;
             return this;
         }
 
-        public Builder setValidationSource(@Nullable TlsValidationContextValidationSource validationSource) {
+        public Builder validationSource(@Nullable TlsValidationContextValidationSource validationSource) {
             this.validationSource = Input.ofNullable(validationSource);
             return this;
         }

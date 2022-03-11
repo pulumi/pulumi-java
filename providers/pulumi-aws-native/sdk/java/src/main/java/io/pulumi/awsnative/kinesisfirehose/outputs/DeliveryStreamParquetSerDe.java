@@ -20,14 +20,14 @@ public final class DeliveryStreamParquetSerDe {
     private final @Nullable Integer pageSizeBytes;
     private final @Nullable String writerVersion;
 
-    @OutputCustomType.Constructor({"blockSizeBytes","compression","enableDictionaryCompression","maxPaddingBytes","pageSizeBytes","writerVersion"})
+    @OutputCustomType.Constructor
     private DeliveryStreamParquetSerDe(
-        @Nullable Integer blockSizeBytes,
-        @Nullable String compression,
-        @Nullable Boolean enableDictionaryCompression,
-        @Nullable Integer maxPaddingBytes,
-        @Nullable Integer pageSizeBytes,
-        @Nullable String writerVersion) {
+        @OutputCustomType.Parameter("blockSizeBytes") @Nullable Integer blockSizeBytes,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("enableDictionaryCompression") @Nullable Boolean enableDictionaryCompression,
+        @OutputCustomType.Parameter("maxPaddingBytes") @Nullable Integer maxPaddingBytes,
+        @OutputCustomType.Parameter("pageSizeBytes") @Nullable Integer pageSizeBytes,
+        @OutputCustomType.Parameter("writerVersion") @Nullable String writerVersion) {
         this.blockSizeBytes = blockSizeBytes;
         this.compression = compression;
         this.enableDictionaryCompression = enableDictionaryCompression;
@@ -85,32 +85,32 @@ public final class DeliveryStreamParquetSerDe {
     	      this.writerVersion = defaults.writerVersion;
         }
 
-        public Builder setBlockSizeBytes(@Nullable Integer blockSizeBytes) {
+        public Builder blockSizeBytes(@Nullable Integer blockSizeBytes) {
             this.blockSizeBytes = blockSizeBytes;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setEnableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
+        public Builder enableDictionaryCompression(@Nullable Boolean enableDictionaryCompression) {
             this.enableDictionaryCompression = enableDictionaryCompression;
             return this;
         }
 
-        public Builder setMaxPaddingBytes(@Nullable Integer maxPaddingBytes) {
+        public Builder maxPaddingBytes(@Nullable Integer maxPaddingBytes) {
             this.maxPaddingBytes = maxPaddingBytes;
             return this;
         }
 
-        public Builder setPageSizeBytes(@Nullable Integer pageSizeBytes) {
+        public Builder pageSizeBytes(@Nullable Integer pageSizeBytes) {
             this.pageSizeBytes = pageSizeBytes;
             return this;
         }
 
-        public Builder setWriterVersion(@Nullable String writerVersion) {
+        public Builder writerVersion(@Nullable String writerVersion) {
             this.writerVersion = writerVersion;
             return this;
         }

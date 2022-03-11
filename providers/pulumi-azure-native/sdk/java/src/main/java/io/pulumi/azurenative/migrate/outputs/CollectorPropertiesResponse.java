@@ -29,12 +29,12 @@ public final class CollectorPropertiesResponse {
      */
     private final String updatedTimestamp;
 
-    @OutputCustomType.Constructor({"agentProperties","createdTimestamp","discoverySiteId","updatedTimestamp"})
+    @OutputCustomType.Constructor
     private CollectorPropertiesResponse(
-        @Nullable CollectorAgentPropertiesResponse agentProperties,
-        String createdTimestamp,
-        @Nullable String discoverySiteId,
-        String updatedTimestamp) {
+        @OutputCustomType.Parameter("agentProperties") @Nullable CollectorAgentPropertiesResponse agentProperties,
+        @OutputCustomType.Parameter("createdTimestamp") String createdTimestamp,
+        @OutputCustomType.Parameter("discoverySiteId") @Nullable String discoverySiteId,
+        @OutputCustomType.Parameter("updatedTimestamp") String updatedTimestamp) {
         this.agentProperties = agentProperties;
         this.createdTimestamp = createdTimestamp;
         this.discoverySiteId = discoverySiteId;
@@ -92,22 +92,22 @@ public final class CollectorPropertiesResponse {
     	      this.updatedTimestamp = defaults.updatedTimestamp;
         }
 
-        public Builder setAgentProperties(@Nullable CollectorAgentPropertiesResponse agentProperties) {
+        public Builder agentProperties(@Nullable CollectorAgentPropertiesResponse agentProperties) {
             this.agentProperties = agentProperties;
             return this;
         }
 
-        public Builder setCreatedTimestamp(String createdTimestamp) {
+        public Builder createdTimestamp(String createdTimestamp) {
             this.createdTimestamp = Objects.requireNonNull(createdTimestamp);
             return this;
         }
 
-        public Builder setDiscoverySiteId(@Nullable String discoverySiteId) {
+        public Builder discoverySiteId(@Nullable String discoverySiteId) {
             this.discoverySiteId = discoverySiteId;
             return this;
         }
 
-        public Builder setUpdatedTimestamp(String updatedTimestamp) {
+        public Builder updatedTimestamp(String updatedTimestamp) {
             this.updatedTimestamp = Objects.requireNonNull(updatedTimestamp);
             return this;
         }

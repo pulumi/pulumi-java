@@ -28,11 +28,11 @@ public final class ResourceMetricSource {
      */
     private final @Nullable String targetAverageValue;
 
-    @OutputCustomType.Constructor({"name","targetAverageUtilization","targetAverageValue"})
+    @OutputCustomType.Constructor
     private ResourceMetricSource(
-        String name,
-        @Nullable Integer targetAverageUtilization,
-        @Nullable String targetAverageValue) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("targetAverageUtilization") @Nullable Integer targetAverageUtilization,
+        @OutputCustomType.Parameter("targetAverageValue") @Nullable String targetAverageValue) {
         this.name = name;
         this.targetAverageUtilization = targetAverageUtilization;
         this.targetAverageValue = targetAverageValue;
@@ -84,17 +84,17 @@ public final class ResourceMetricSource {
     	      this.targetAverageValue = defaults.targetAverageValue;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTargetAverageUtilization(@Nullable Integer targetAverageUtilization) {
+        public Builder targetAverageUtilization(@Nullable Integer targetAverageUtilization) {
             this.targetAverageUtilization = targetAverageUtilization;
             return this;
         }
 
-        public Builder setTargetAverageValue(@Nullable String targetAverageValue) {
+        public Builder targetAverageValue(@Nullable String targetAverageValue) {
             this.targetAverageValue = targetAverageValue;
             return this;
         }

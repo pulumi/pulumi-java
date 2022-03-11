@@ -55,7 +55,7 @@ public final class WeeklyScheduleResponse extends io.pulumi.resources.InvokeArgs
     	      this.dayOfWeek = defaults.dayOfWeek;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }

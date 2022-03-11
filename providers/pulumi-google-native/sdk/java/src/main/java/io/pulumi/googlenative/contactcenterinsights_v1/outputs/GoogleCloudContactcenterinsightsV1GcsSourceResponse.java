@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
      */
     private final String transcriptUri;
 
-    @OutputCustomType.Constructor({"audioUri","transcriptUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1GcsSourceResponse(
-        String audioUri,
-        String transcriptUri) {
+        @OutputCustomType.Parameter("audioUri") String audioUri,
+        @OutputCustomType.Parameter("transcriptUri") String transcriptUri) {
         this.audioUri = audioUri;
         this.transcriptUri = transcriptUri;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse {
     	      this.transcriptUri = defaults.transcriptUri;
         }
 
-        public Builder setAudioUri(String audioUri) {
+        public Builder audioUri(String audioUri) {
             this.audioUri = Objects.requireNonNull(audioUri);
             return this;
         }
 
-        public Builder setTranscriptUri(String transcriptUri) {
+        public Builder transcriptUri(String transcriptUri) {
             this.transcriptUri = Objects.requireNonNull(transcriptUri);
             return this;
         }

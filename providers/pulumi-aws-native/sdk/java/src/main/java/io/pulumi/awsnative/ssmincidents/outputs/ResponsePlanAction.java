@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponsePlanAction {
     private final @Nullable ResponsePlanSsmAutomation ssmAutomation;
 
-    @OutputCustomType.Constructor({"ssmAutomation"})
-    private ResponsePlanAction(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
+    @OutputCustomType.Constructor
+    private ResponsePlanAction(@OutputCustomType.Parameter("ssmAutomation") @Nullable ResponsePlanSsmAutomation ssmAutomation) {
         this.ssmAutomation = ssmAutomation;
     }
 
@@ -42,7 +42,7 @@ public final class ResponsePlanAction {
     	      this.ssmAutomation = defaults.ssmAutomation;
         }
 
-        public Builder setSsmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
+        public Builder ssmAutomation(@Nullable ResponsePlanSsmAutomation ssmAutomation) {
             this.ssmAutomation = ssmAutomation;
             return this;
         }

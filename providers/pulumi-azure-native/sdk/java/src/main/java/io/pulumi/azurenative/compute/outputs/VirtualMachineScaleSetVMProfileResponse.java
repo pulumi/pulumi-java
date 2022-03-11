@@ -80,20 +80,20 @@ public final class VirtualMachineScaleSetVMProfileResponse {
      */
     private final @Nullable String userData;
 
-    @OutputCustomType.Constructor({"billingProfile","diagnosticsProfile","evictionPolicy","extensionProfile","licenseType","networkProfile","osProfile","priority","scheduledEventsProfile","securityProfile","storageProfile","userData"})
+    @OutputCustomType.Constructor
     private VirtualMachineScaleSetVMProfileResponse(
-        @Nullable BillingProfileResponse billingProfile,
-        @Nullable DiagnosticsProfileResponse diagnosticsProfile,
-        @Nullable String evictionPolicy,
-        @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
-        @Nullable String licenseType,
-        @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
-        @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
-        @Nullable String priority,
-        @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
-        @Nullable SecurityProfileResponse securityProfile,
-        @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
-        @Nullable String userData) {
+        @OutputCustomType.Parameter("billingProfile") @Nullable BillingProfileResponse billingProfile,
+        @OutputCustomType.Parameter("diagnosticsProfile") @Nullable DiagnosticsProfileResponse diagnosticsProfile,
+        @OutputCustomType.Parameter("evictionPolicy") @Nullable String evictionPolicy,
+        @OutputCustomType.Parameter("extensionProfile") @Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("networkProfile") @Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("osProfile") @Nullable VirtualMachineScaleSetOSProfileResponse osProfile,
+        @OutputCustomType.Parameter("priority") @Nullable String priority,
+        @OutputCustomType.Parameter("scheduledEventsProfile") @Nullable ScheduledEventsProfileResponse scheduledEventsProfile,
+        @OutputCustomType.Parameter("securityProfile") @Nullable SecurityProfileResponse securityProfile,
+        @OutputCustomType.Parameter("storageProfile") @Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("userData") @Nullable String userData) {
         this.billingProfile = billingProfile;
         this.diagnosticsProfile = diagnosticsProfile;
         this.evictionPolicy = evictionPolicy;
@@ -235,62 +235,62 @@ public final class VirtualMachineScaleSetVMProfileResponse {
     	      this.userData = defaults.userData;
         }
 
-        public Builder setBillingProfile(@Nullable BillingProfileResponse billingProfile) {
+        public Builder billingProfile(@Nullable BillingProfileResponse billingProfile) {
             this.billingProfile = billingProfile;
             return this;
         }
 
-        public Builder setDiagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
+        public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             this.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
-        public Builder setEvictionPolicy(@Nullable String evictionPolicy) {
+        public Builder evictionPolicy(@Nullable String evictionPolicy) {
             this.evictionPolicy = evictionPolicy;
             return this;
         }
 
-        public Builder setExtensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile) {
+        public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileResponse extensionProfile) {
             this.extensionProfile = extensionProfile;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setOsProfile(@Nullable VirtualMachineScaleSetOSProfileResponse osProfile) {
+        public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileResponse osProfile) {
             this.osProfile = osProfile;
             return this;
         }
 
-        public Builder setPriority(@Nullable String priority) {
+        public Builder priority(@Nullable String priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setScheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
+        public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileResponse scheduledEventsProfile) {
             this.scheduledEventsProfile = scheduledEventsProfile;
             return this;
         }
 
-        public Builder setSecurityProfile(@Nullable SecurityProfileResponse securityProfile) {
+        public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             this.securityProfile = securityProfile;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setUserData(@Nullable String userData) {
+        public Builder userData(@Nullable String userData) {
             this.userData = userData;
             return this;
         }

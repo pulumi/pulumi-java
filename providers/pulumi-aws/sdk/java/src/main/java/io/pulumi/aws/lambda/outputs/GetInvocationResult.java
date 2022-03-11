@@ -25,13 +25,13 @@ public final class GetInvocationResult {
      */
     private final String result;
 
-    @OutputCustomType.Constructor({"functionName","id","input","qualifier","result"})
+    @OutputCustomType.Constructor
     private GetInvocationResult(
-        String functionName,
-        String id,
-        String input,
-        @Nullable String qualifier,
-        String result) {
+        @OutputCustomType.Parameter("functionName") String functionName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("input") String input,
+        @OutputCustomType.Parameter("qualifier") @Nullable String qualifier,
+        @OutputCustomType.Parameter("result") String result) {
         this.functionName = functionName;
         this.id = id;
         this.input = input;
@@ -91,27 +91,27 @@ public final class GetInvocationResult {
     	      this.result = defaults.result;
         }
 
-        public Builder setFunctionName(String functionName) {
+        public Builder functionName(String functionName) {
             this.functionName = Objects.requireNonNull(functionName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInput(String input) {
+        public Builder input(String input) {
             this.input = Objects.requireNonNull(input);
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setResult(String result) {
+        public Builder result(String result) {
             this.result = Objects.requireNonNull(result);
             return this;
         }

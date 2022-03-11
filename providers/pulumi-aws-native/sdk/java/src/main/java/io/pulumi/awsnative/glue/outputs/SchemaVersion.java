@@ -23,10 +23,10 @@ public final class SchemaVersion {
      */
     private final @Nullable Integer versionNumber;
 
-    @OutputCustomType.Constructor({"isLatest","versionNumber"})
+    @OutputCustomType.Constructor
     private SchemaVersion(
-        @Nullable Boolean isLatest,
-        @Nullable Integer versionNumber) {
+        @OutputCustomType.Parameter("isLatest") @Nullable Boolean isLatest,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Integer versionNumber) {
         this.isLatest = isLatest;
         this.versionNumber = versionNumber;
     }
@@ -68,12 +68,12 @@ public final class SchemaVersion {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setIsLatest(@Nullable Boolean isLatest) {
+        public Builder isLatest(@Nullable Boolean isLatest) {
             this.isLatest = isLatest;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Integer versionNumber) {
+        public Builder versionNumber(@Nullable Integer versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

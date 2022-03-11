@@ -71,20 +71,20 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor({"batchSize","dataFormat","inputPaths","maxWorkerCount","modelName","outputDataFormat","outputPath","region","runtimeVersion","signatureName","uri","versionName"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__PredictionInputResponse(
-        String batchSize,
-        String dataFormat,
-        List<String> inputPaths,
-        String maxWorkerCount,
-        String modelName,
-        String outputDataFormat,
-        String outputPath,
-        String region,
-        String runtimeVersion,
-        String signatureName,
-        String uri,
-        String versionName) {
+        @OutputCustomType.Parameter("batchSize") String batchSize,
+        @OutputCustomType.Parameter("dataFormat") String dataFormat,
+        @OutputCustomType.Parameter("inputPaths") List<String> inputPaths,
+        @OutputCustomType.Parameter("maxWorkerCount") String maxWorkerCount,
+        @OutputCustomType.Parameter("modelName") String modelName,
+        @OutputCustomType.Parameter("outputDataFormat") String outputDataFormat,
+        @OutputCustomType.Parameter("outputPath") String outputPath,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("signatureName") String signatureName,
+        @OutputCustomType.Parameter("uri") String uri,
+        @OutputCustomType.Parameter("versionName") String versionName) {
         this.batchSize = batchSize;
         this.dataFormat = dataFormat;
         this.inputPaths = inputPaths;
@@ -226,62 +226,62 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
     	      this.versionName = defaults.versionName;
         }
 
-        public Builder setBatchSize(String batchSize) {
+        public Builder batchSize(String batchSize) {
             this.batchSize = Objects.requireNonNull(batchSize);
             return this;
         }
 
-        public Builder setDataFormat(String dataFormat) {
+        public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setInputPaths(List<String> inputPaths) {
+        public Builder inputPaths(List<String> inputPaths) {
             this.inputPaths = Objects.requireNonNull(inputPaths);
             return this;
         }
 
-        public Builder setMaxWorkerCount(String maxWorkerCount) {
+        public Builder maxWorkerCount(String maxWorkerCount) {
             this.maxWorkerCount = Objects.requireNonNull(maxWorkerCount);
             return this;
         }
 
-        public Builder setModelName(String modelName) {
+        public Builder modelName(String modelName) {
             this.modelName = Objects.requireNonNull(modelName);
             return this;
         }
 
-        public Builder setOutputDataFormat(String outputDataFormat) {
+        public Builder outputDataFormat(String outputDataFormat) {
             this.outputDataFormat = Objects.requireNonNull(outputDataFormat);
             return this;
         }
 
-        public Builder setOutputPath(String outputPath) {
+        public Builder outputPath(String outputPath) {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setSignatureName(String signatureName) {
+        public Builder signatureName(String signatureName) {
             this.signatureName = Objects.requireNonNull(signatureName);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
 
-        public Builder setVersionName(String versionName) {
+        public Builder versionName(String versionName) {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }

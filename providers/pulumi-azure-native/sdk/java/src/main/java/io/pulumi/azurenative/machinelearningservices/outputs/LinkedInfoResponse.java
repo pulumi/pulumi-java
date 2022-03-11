@@ -27,11 +27,11 @@ public final class LinkedInfoResponse {
      */
     private final @Nullable String origin;
 
-    @OutputCustomType.Constructor({"linkedId","linkedResourceName","origin"})
+    @OutputCustomType.Constructor
     private LinkedInfoResponse(
-        @Nullable String linkedId,
-        @Nullable String linkedResourceName,
-        @Nullable String origin) {
+        @OutputCustomType.Parameter("linkedId") @Nullable String linkedId,
+        @OutputCustomType.Parameter("linkedResourceName") @Nullable String linkedResourceName,
+        @OutputCustomType.Parameter("origin") @Nullable String origin) {
         this.linkedId = linkedId;
         this.linkedResourceName = linkedResourceName;
         this.origin = origin;
@@ -83,17 +83,17 @@ public final class LinkedInfoResponse {
     	      this.origin = defaults.origin;
         }
 
-        public Builder setLinkedId(@Nullable String linkedId) {
+        public Builder linkedId(@Nullable String linkedId) {
             this.linkedId = linkedId;
             return this;
         }
 
-        public Builder setLinkedResourceName(@Nullable String linkedResourceName) {
+        public Builder linkedResourceName(@Nullable String linkedResourceName) {
             this.linkedResourceName = linkedResourceName;
             return this;
         }
 
-        public Builder setOrigin(@Nullable String origin) {
+        public Builder origin(@Nullable String origin) {
             this.origin = origin;
             return this;
         }

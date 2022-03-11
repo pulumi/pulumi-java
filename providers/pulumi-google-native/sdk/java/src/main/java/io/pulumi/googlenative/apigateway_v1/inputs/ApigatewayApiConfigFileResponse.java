@@ -72,12 +72,12 @@ public final class ApigatewayApiConfigFileResponse extends io.pulumi.resources.I
     	      this.path = defaults.path;
         }
 
-        public Builder setContents(String contents) {
+        public Builder contents(String contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

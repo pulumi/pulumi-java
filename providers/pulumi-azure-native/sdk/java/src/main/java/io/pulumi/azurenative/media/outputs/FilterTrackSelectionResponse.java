@@ -16,8 +16,8 @@ public final class FilterTrackSelectionResponse {
      */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
 
-    @OutputCustomType.Constructor({"trackSelections"})
-    private FilterTrackSelectionResponse(List<FilterTrackPropertyConditionResponse> trackSelections) {
+    @OutputCustomType.Constructor
+    private FilterTrackSelectionResponse(@OutputCustomType.Parameter("trackSelections") List<FilterTrackPropertyConditionResponse> trackSelections) {
         this.trackSelections = trackSelections;
     }
 
@@ -49,7 +49,7 @@ public final class FilterTrackSelectionResponse {
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder setTrackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
+        public Builder trackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
             this.trackSelections = Objects.requireNonNull(trackSelections);
             return this;
         }

@@ -46,11 +46,11 @@ public final class ServiceTemplateSpecVolumeSecret {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"defaultMode","items","secretName"})
+    @OutputCustomType.Constructor
     private ServiceTemplateSpecVolumeSecret(
-        @Nullable Integer defaultMode,
-        @Nullable List<ServiceTemplateSpecVolumeSecretItem> items,
-        String secretName) {
+        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @OutputCustomType.Parameter("items") @Nullable List<ServiceTemplateSpecVolumeSecretItem> items,
+        @OutputCustomType.Parameter("secretName") String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.secretName = secretName;
@@ -118,17 +118,17 @@ public final class ServiceTemplateSpecVolumeSecret {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<ServiceTemplateSpecVolumeSecretItem> items) {
+        public Builder items(@Nullable List<ServiceTemplateSpecVolumeSecretItem> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

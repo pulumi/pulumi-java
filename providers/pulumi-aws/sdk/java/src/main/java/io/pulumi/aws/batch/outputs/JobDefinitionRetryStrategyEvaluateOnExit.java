@@ -32,12 +32,12 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
      */
     private final @Nullable String onStatusReason;
 
-    @OutputCustomType.Constructor({"action","onExitCode","onReason","onStatusReason"})
+    @OutputCustomType.Constructor
     private JobDefinitionRetryStrategyEvaluateOnExit(
-        String action,
-        @Nullable String onExitCode,
-        @Nullable String onReason,
-        @Nullable String onStatusReason) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("onExitCode") @Nullable String onExitCode,
+        @OutputCustomType.Parameter("onReason") @Nullable String onReason,
+        @OutputCustomType.Parameter("onStatusReason") @Nullable String onStatusReason) {
         this.action = action;
         this.onExitCode = onExitCode;
         this.onReason = onReason;
@@ -99,22 +99,22 @@ public final class JobDefinitionRetryStrategyEvaluateOnExit {
     	      this.onStatusReason = defaults.onStatusReason;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setOnExitCode(@Nullable String onExitCode) {
+        public Builder onExitCode(@Nullable String onExitCode) {
             this.onExitCode = onExitCode;
             return this;
         }
 
-        public Builder setOnReason(@Nullable String onReason) {
+        public Builder onReason(@Nullable String onReason) {
             this.onReason = onReason;
             return this;
         }
 
-        public Builder setOnStatusReason(@Nullable String onStatusReason) {
+        public Builder onStatusReason(@Nullable String onStatusReason) {
             this.onStatusReason = onStatusReason;
             return this;
         }

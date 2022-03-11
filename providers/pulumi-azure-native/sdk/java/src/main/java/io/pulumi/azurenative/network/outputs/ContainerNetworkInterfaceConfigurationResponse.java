@@ -50,15 +50,15 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"containerNetworkInterfaces","etag","id","ipConfigurations","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ContainerNetworkInterfaceConfigurationResponse(
-        @Nullable List<SubResourceResponse> containerNetworkInterfaces,
-        String etag,
-        @Nullable String id,
-        @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("containerNetworkInterfaces") @Nullable List<SubResourceResponse> containerNetworkInterfaces,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<IPConfigurationProfileResponse> ipConfigurations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.containerNetworkInterfaces = containerNetworkInterfaces;
         this.etag = etag;
         this.id = id;
@@ -150,37 +150,37 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setContainerNetworkInterfaces(@Nullable List<SubResourceResponse> containerNetworkInterfaces) {
+        public Builder containerNetworkInterfaces(@Nullable List<SubResourceResponse> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<IPConfigurationProfileResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<IPConfigurationProfileResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

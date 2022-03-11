@@ -15,10 +15,10 @@ public final class CertificatePolicyInformation {
     private final String certPolicyId;
     private final @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers;
 
-    @OutputCustomType.Constructor({"certPolicyId","policyQualifiers"})
+    @OutputCustomType.Constructor
     private CertificatePolicyInformation(
-        String certPolicyId,
-        @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
+        @OutputCustomType.Parameter("certPolicyId") String certPolicyId,
+        @OutputCustomType.Parameter("policyQualifiers") @Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
         this.certPolicyId = certPolicyId;
         this.policyQualifiers = policyQualifiers;
     }
@@ -52,12 +52,12 @@ public final class CertificatePolicyInformation {
     	      this.policyQualifiers = defaults.policyQualifiers;
         }
 
-        public Builder setCertPolicyId(String certPolicyId) {
+        public Builder certPolicyId(String certPolicyId) {
             this.certPolicyId = Objects.requireNonNull(certPolicyId);
             return this;
         }
 
-        public Builder setPolicyQualifiers(@Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
+        public Builder policyQualifiers(@Nullable List<CertificatePolicyQualifierInfo> policyQualifiers) {
             this.policyQualifiers = policyQualifiers;
             return this;
         }

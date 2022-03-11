@@ -56,16 +56,16 @@ public final class AdditionalLocationResponse {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"disableGateway","gatewayRegionalUrl","location","privateIPAddresses","publicIPAddresses","sku","virtualNetworkConfiguration","zones"})
+    @OutputCustomType.Constructor
     private AdditionalLocationResponse(
-        @Nullable Boolean disableGateway,
-        String gatewayRegionalUrl,
-        String location,
-        List<String> privateIPAddresses,
-        List<String> publicIPAddresses,
-        ApiManagementServiceSkuPropertiesResponse sku,
-        @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("disableGateway") @Nullable Boolean disableGateway,
+        @OutputCustomType.Parameter("gatewayRegionalUrl") String gatewayRegionalUrl,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("privateIPAddresses") List<String> privateIPAddresses,
+        @OutputCustomType.Parameter("publicIPAddresses") List<String> publicIPAddresses,
+        @OutputCustomType.Parameter("sku") ApiManagementServiceSkuPropertiesResponse sku,
+        @OutputCustomType.Parameter("virtualNetworkConfiguration") @Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.disableGateway = disableGateway;
         this.gatewayRegionalUrl = gatewayRegionalUrl;
         this.location = location;
@@ -167,42 +167,42 @@ public final class AdditionalLocationResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDisableGateway(@Nullable Boolean disableGateway) {
+        public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
-        public Builder setGatewayRegionalUrl(String gatewayRegionalUrl) {
+        public Builder gatewayRegionalUrl(String gatewayRegionalUrl) {
             this.gatewayRegionalUrl = Objects.requireNonNull(gatewayRegionalUrl);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPrivateIPAddresses(List<String> privateIPAddresses) {
+        public Builder privateIPAddresses(List<String> privateIPAddresses) {
             this.privateIPAddresses = Objects.requireNonNull(privateIPAddresses);
             return this;
         }
 
-        public Builder setPublicIPAddresses(List<String> publicIPAddresses) {
+        public Builder publicIPAddresses(List<String> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
 
-        public Builder setSku(ApiManagementServiceSkuPropertiesResponse sku) {
+        public Builder sku(ApiManagementServiceSkuPropertiesResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationResponse virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

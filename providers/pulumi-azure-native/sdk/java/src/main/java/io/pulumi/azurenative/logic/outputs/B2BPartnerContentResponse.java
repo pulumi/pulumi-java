@@ -17,8 +17,8 @@ public final class B2BPartnerContentResponse {
      */
     private final @Nullable List<BusinessIdentityResponse> businessIdentities;
 
-    @OutputCustomType.Constructor({"businessIdentities"})
-    private B2BPartnerContentResponse(@Nullable List<BusinessIdentityResponse> businessIdentities) {
+    @OutputCustomType.Constructor
+    private B2BPartnerContentResponse(@OutputCustomType.Parameter("businessIdentities") @Nullable List<BusinessIdentityResponse> businessIdentities) {
         this.businessIdentities = businessIdentities;
     }
 
@@ -50,7 +50,7 @@ public final class B2BPartnerContentResponse {
     	      this.businessIdentities = defaults.businessIdentities;
         }
 
-        public Builder setBusinessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
+        public Builder businessIdentities(@Nullable List<BusinessIdentityResponse> businessIdentities) {
             this.businessIdentities = businessIdentities;
             return this;
         }

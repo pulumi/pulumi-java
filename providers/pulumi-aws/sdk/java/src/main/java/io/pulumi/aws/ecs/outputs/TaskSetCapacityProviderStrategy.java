@@ -28,11 +28,11 @@ public final class TaskSetCapacityProviderStrategy {
      */
     private final Integer weight;
 
-    @OutputCustomType.Constructor({"base","capacityProvider","weight"})
+    @OutputCustomType.Constructor
     private TaskSetCapacityProviderStrategy(
-        @Nullable Integer base,
-        String capacityProvider,
-        Integer weight) {
+        @OutputCustomType.Parameter("base") @Nullable Integer base,
+        @OutputCustomType.Parameter("capacityProvider") String capacityProvider,
+        @OutputCustomType.Parameter("weight") Integer weight) {
         this.base = base;
         this.capacityProvider = capacityProvider;
         this.weight = weight;
@@ -84,17 +84,17 @@ public final class TaskSetCapacityProviderStrategy {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = base;
             return this;
         }
 
-        public Builder setCapacityProvider(String capacityProvider) {
+        public Builder capacityProvider(String capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
-        public Builder setWeight(Integer weight) {
+        public Builder weight(Integer weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

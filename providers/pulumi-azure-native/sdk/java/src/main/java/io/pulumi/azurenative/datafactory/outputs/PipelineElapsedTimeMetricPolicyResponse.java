@@ -17,8 +17,8 @@ public final class PipelineElapsedTimeMetricPolicyResponse {
      */
     private final @Nullable Object duration;
 
-    @OutputCustomType.Constructor({"duration"})
-    private PipelineElapsedTimeMetricPolicyResponse(@Nullable Object duration) {
+    @OutputCustomType.Constructor
+    private PipelineElapsedTimeMetricPolicyResponse(@OutputCustomType.Parameter("duration") @Nullable Object duration) {
         this.duration = duration;
     }
 
@@ -50,7 +50,7 @@ public final class PipelineElapsedTimeMetricPolicyResponse {
     	      this.duration = defaults.duration;
         }
 
-        public Builder setDuration(@Nullable Object duration) {
+        public Builder duration(@Nullable Object duration) {
             this.duration = duration;
             return this;
         }

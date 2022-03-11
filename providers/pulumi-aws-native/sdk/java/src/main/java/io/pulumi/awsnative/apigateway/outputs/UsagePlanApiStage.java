@@ -28,11 +28,11 @@ public final class UsagePlanApiStage {
      */
     private final @Nullable Object throttle;
 
-    @OutputCustomType.Constructor({"apiId","stage","throttle"})
+    @OutputCustomType.Constructor
     private UsagePlanApiStage(
-        @Nullable String apiId,
-        @Nullable String stage,
-        @Nullable Object throttle) {
+        @OutputCustomType.Parameter("apiId") @Nullable String apiId,
+        @OutputCustomType.Parameter("stage") @Nullable String stage,
+        @OutputCustomType.Parameter("throttle") @Nullable Object throttle) {
         this.apiId = apiId;
         this.stage = stage;
         this.throttle = throttle;
@@ -84,17 +84,17 @@ public final class UsagePlanApiStage {
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder setApiId(@Nullable String apiId) {
+        public Builder apiId(@Nullable String apiId) {
             this.apiId = apiId;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }
 
-        public Builder setThrottle(@Nullable Object throttle) {
+        public Builder throttle(@Nullable Object throttle) {
             this.throttle = throttle;
             return this;
         }

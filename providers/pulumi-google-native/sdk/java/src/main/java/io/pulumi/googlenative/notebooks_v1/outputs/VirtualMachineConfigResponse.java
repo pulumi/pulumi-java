@@ -93,23 +93,23 @@ public final class VirtualMachineConfigResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImages","dataDisk","encryptionConfig","guestAttributes","internalIpOnly","labels","machineType","metadata","network","nicType","shieldedInstanceConfig","subnet","tags","zone"})
+    @OutputCustomType.Constructor
     private VirtualMachineConfigResponse(
-        RuntimeAcceleratorConfigResponse acceleratorConfig,
-        List<ContainerImageResponse> containerImages,
-        LocalDiskResponse dataDisk,
-        EncryptionConfigResponse encryptionConfig,
-        Map<String,String> guestAttributes,
-        Boolean internalIpOnly,
-        Map<String,String> labels,
-        String machineType,
-        Map<String,String> metadata,
-        String network,
-        String nicType,
-        RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
-        String subnet,
-        List<String> tags,
-        String zone) {
+        @OutputCustomType.Parameter("acceleratorConfig") RuntimeAcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("containerImages") List<ContainerImageResponse> containerImages,
+        @OutputCustomType.Parameter("dataDisk") LocalDiskResponse dataDisk,
+        @OutputCustomType.Parameter("encryptionConfig") EncryptionConfigResponse encryptionConfig,
+        @OutputCustomType.Parameter("guestAttributes") Map<String,String> guestAttributes,
+        @OutputCustomType.Parameter("internalIpOnly") Boolean internalIpOnly,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("shieldedInstanceConfig") RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig,
+        @OutputCustomType.Parameter("subnet") String subnet,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImages = containerImages;
         this.dataDisk = dataDisk;
@@ -281,77 +281,77 @@ public final class VirtualMachineConfigResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAcceleratorConfig(RuntimeAcceleratorConfigResponse acceleratorConfig) {
+        public Builder acceleratorConfig(RuntimeAcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerImages(List<ContainerImageResponse> containerImages) {
+        public Builder containerImages(List<ContainerImageResponse> containerImages) {
             this.containerImages = Objects.requireNonNull(containerImages);
             return this;
         }
 
-        public Builder setDataDisk(LocalDiskResponse dataDisk) {
+        public Builder dataDisk(LocalDiskResponse dataDisk) {
             this.dataDisk = Objects.requireNonNull(dataDisk);
             return this;
         }
 
-        public Builder setEncryptionConfig(EncryptionConfigResponse encryptionConfig) {
+        public Builder encryptionConfig(EncryptionConfigResponse encryptionConfig) {
             this.encryptionConfig = Objects.requireNonNull(encryptionConfig);
             return this;
         }
 
-        public Builder setGuestAttributes(Map<String,String> guestAttributes) {
+        public Builder guestAttributes(Map<String,String> guestAttributes) {
             this.guestAttributes = Objects.requireNonNull(guestAttributes);
             return this;
         }
 
-        public Builder setInternalIpOnly(Boolean internalIpOnly) {
+        public Builder internalIpOnly(Boolean internalIpOnly) {
             this.internalIpOnly = Objects.requireNonNull(internalIpOnly);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNicType(String nicType) {
+        public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
-        public Builder setShieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
+        public Builder shieldedInstanceConfig(RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig) {
             this.shieldedInstanceConfig = Objects.requireNonNull(shieldedInstanceConfig);
             return this;
         }
 
-        public Builder setSubnet(String subnet) {
+        public Builder subnet(String subnet) {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

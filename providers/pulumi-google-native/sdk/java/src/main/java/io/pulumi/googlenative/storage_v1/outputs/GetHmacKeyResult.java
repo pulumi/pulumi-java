@@ -55,17 +55,17 @@ public final class GetHmacKeyResult {
      */
     private final String updated;
 
-    @OutputCustomType.Constructor({"accessId","etag","kind","project","selfLink","serviceAccountEmail","state","timeCreated","updated"})
+    @OutputCustomType.Constructor
     private GetHmacKeyResult(
-        String accessId,
-        String etag,
-        String kind,
-        String project,
-        String selfLink,
-        String serviceAccountEmail,
-        String state,
-        String timeCreated,
-        String updated) {
+        @OutputCustomType.Parameter("accessId") String accessId,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serviceAccountEmail") String serviceAccountEmail,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("updated") String updated) {
         this.accessId = accessId;
         this.etag = etag;
         this.kind = kind;
@@ -177,47 +177,47 @@ public final class GetHmacKeyResult {
     	      this.updated = defaults.updated;
         }
 
-        public Builder setAccessId(String accessId) {
+        public Builder accessId(String accessId) {
             this.accessId = Objects.requireNonNull(accessId);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServiceAccountEmail(String serviceAccountEmail) {
+        public Builder serviceAccountEmail(String serviceAccountEmail) {
             this.serviceAccountEmail = Objects.requireNonNull(serviceAccountEmail);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
 
-        public Builder setUpdated(String updated) {
+        public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }

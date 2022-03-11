@@ -29,11 +29,11 @@ public final class CatalogTableStorageDescriptorSchemaReference {
      */
     private final Integer schemaVersionNumber;
 
-    @OutputCustomType.Constructor({"schemaId","schemaVersionId","schemaVersionNumber"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSchemaReference(
-        @Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId,
-        @Nullable String schemaVersionId,
-        Integer schemaVersionNumber) {
+        @OutputCustomType.Parameter("schemaId") @Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId,
+        @OutputCustomType.Parameter("schemaVersionId") @Nullable String schemaVersionId,
+        @OutputCustomType.Parameter("schemaVersionNumber") Integer schemaVersionNumber) {
         this.schemaId = schemaId;
         this.schemaVersionId = schemaVersionId;
         this.schemaVersionNumber = schemaVersionNumber;
@@ -85,17 +85,17 @@ public final class CatalogTableStorageDescriptorSchemaReference {
     	      this.schemaVersionNumber = defaults.schemaVersionNumber;
         }
 
-        public Builder setSchemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId) {
+        public Builder schemaId(@Nullable CatalogTableStorageDescriptorSchemaReferenceSchemaId schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setSchemaVersionId(@Nullable String schemaVersionId) {
+        public Builder schemaVersionId(@Nullable String schemaVersionId) {
             this.schemaVersionId = schemaVersionId;
             return this;
         }
 
-        public Builder setSchemaVersionNumber(Integer schemaVersionNumber) {
+        public Builder schemaVersionNumber(Integer schemaVersionNumber) {
             this.schemaVersionNumber = Objects.requireNonNull(schemaVersionNumber);
             return this;
         }

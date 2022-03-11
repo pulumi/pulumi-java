@@ -15,8 +15,8 @@ public final class GrafeasV1beta1ImageDetailsResponse {
      */
     private final DerivedResponse derivedImage;
 
-    @OutputCustomType.Constructor({"derivedImage"})
-    private GrafeasV1beta1ImageDetailsResponse(DerivedResponse derivedImage) {
+    @OutputCustomType.Constructor
+    private GrafeasV1beta1ImageDetailsResponse(@OutputCustomType.Parameter("derivedImage") DerivedResponse derivedImage) {
         this.derivedImage = derivedImage;
     }
 
@@ -48,7 +48,7 @@ public final class GrafeasV1beta1ImageDetailsResponse {
     	      this.derivedImage = defaults.derivedImage;
         }
 
-        public Builder setDerivedImage(DerivedResponse derivedImage) {
+        public Builder derivedImage(DerivedResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }

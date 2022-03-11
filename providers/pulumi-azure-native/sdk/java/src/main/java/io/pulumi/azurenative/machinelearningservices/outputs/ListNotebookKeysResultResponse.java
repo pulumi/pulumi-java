@@ -12,10 +12,10 @@ public final class ListNotebookKeysResultResponse {
     private final String primaryAccessKey;
     private final String secondaryAccessKey;
 
-    @OutputCustomType.Constructor({"primaryAccessKey","secondaryAccessKey"})
+    @OutputCustomType.Constructor
     private ListNotebookKeysResultResponse(
-        String primaryAccessKey,
-        String secondaryAccessKey) {
+        @OutputCustomType.Parameter("primaryAccessKey") String primaryAccessKey,
+        @OutputCustomType.Parameter("secondaryAccessKey") String secondaryAccessKey) {
         this.primaryAccessKey = primaryAccessKey;
         this.secondaryAccessKey = secondaryAccessKey;
     }
@@ -49,12 +49,12 @@ public final class ListNotebookKeysResultResponse {
     	      this.secondaryAccessKey = defaults.secondaryAccessKey;
         }
 
-        public Builder setPrimaryAccessKey(String primaryAccessKey) {
+        public Builder primaryAccessKey(String primaryAccessKey) {
             this.primaryAccessKey = Objects.requireNonNull(primaryAccessKey);
             return this;
         }
 
-        public Builder setSecondaryAccessKey(String secondaryAccessKey) {
+        public Builder secondaryAccessKey(String secondaryAccessKey) {
             this.secondaryAccessKey = Objects.requireNonNull(secondaryAccessKey);
             return this;
         }

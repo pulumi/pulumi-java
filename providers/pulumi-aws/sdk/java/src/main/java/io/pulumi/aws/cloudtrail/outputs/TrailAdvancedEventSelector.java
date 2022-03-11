@@ -24,10 +24,10 @@ public final class TrailAdvancedEventSelector {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"fieldSelectors","name"})
+    @OutputCustomType.Constructor
     private TrailAdvancedEventSelector(
-        List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("fieldSelectors") List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.fieldSelectors = fieldSelectors;
         this.name = name;
     }
@@ -69,12 +69,12 @@ public final class TrailAdvancedEventSelector {
     	      this.name = defaults.name;
         }
 
-        public Builder setFieldSelectors(List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors) {
+        public Builder fieldSelectors(List<TrailAdvancedEventSelectorFieldSelector> fieldSelectors) {
             this.fieldSelectors = Objects.requireNonNull(fieldSelectors);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

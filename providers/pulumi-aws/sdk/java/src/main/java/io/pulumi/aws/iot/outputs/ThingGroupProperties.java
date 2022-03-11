@@ -23,10 +23,10 @@ public final class ThingGroupProperties {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"attributePayload","description"})
+    @OutputCustomType.Constructor
     private ThingGroupProperties(
-        @Nullable ThingGroupPropertiesAttributePayload attributePayload,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("attributePayload") @Nullable ThingGroupPropertiesAttributePayload attributePayload,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.attributePayload = attributePayload;
         this.description = description;
     }
@@ -68,12 +68,12 @@ public final class ThingGroupProperties {
     	      this.description = defaults.description;
         }
 
-        public Builder setAttributePayload(@Nullable ThingGroupPropertiesAttributePayload attributePayload) {
+        public Builder attributePayload(@Nullable ThingGroupPropertiesAttributePayload attributePayload) {
             this.attributePayload = attributePayload;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

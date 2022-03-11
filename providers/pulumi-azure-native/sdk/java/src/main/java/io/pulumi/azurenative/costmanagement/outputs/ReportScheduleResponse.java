@@ -28,11 +28,11 @@ public final class ReportScheduleResponse {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"recurrence","recurrencePeriod","status"})
+    @OutputCustomType.Constructor
     private ReportScheduleResponse(
-        String recurrence,
-        @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("recurrence") String recurrence,
+        @OutputCustomType.Parameter("recurrencePeriod") @Nullable ReportRecurrencePeriodResponse recurrencePeriod,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.recurrence = recurrence;
         this.recurrencePeriod = recurrencePeriod;
         this.status = status;
@@ -84,17 +84,17 @@ public final class ReportScheduleResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setRecurrence(String recurrence) {
+        public Builder recurrence(String recurrence) {
             this.recurrence = Objects.requireNonNull(recurrence);
             return this;
         }
 
-        public Builder setRecurrencePeriod(@Nullable ReportRecurrencePeriodResponse recurrencePeriod) {
+        public Builder recurrencePeriod(@Nullable ReportRecurrencePeriodResponse recurrencePeriod) {
             this.recurrencePeriod = recurrencePeriod;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

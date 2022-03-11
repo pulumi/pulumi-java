@@ -187,92 +187,92 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setAdditionalInstanceConfiguration(@Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration) {
+        public Builder additionalInstanceConfiguration(@Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration) {
             this.additionalInstanceConfiguration = additionalInstanceConfiguration;
             return this;
         }
 
-        public Builder setAdditionalInstanceConfiguration(@Nullable ImageRecipeAdditionalInstanceConfigurationArgs additionalInstanceConfiguration) {
+        public Builder additionalInstanceConfiguration(@Nullable ImageRecipeAdditionalInstanceConfigurationArgs additionalInstanceConfiguration) {
             this.additionalInstanceConfiguration = Input.ofNullable(additionalInstanceConfiguration);
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings) {
             this.blockDeviceMappings = blockDeviceMappings;
             return this;
         }
 
-        public Builder setBlockDeviceMappings(@Nullable List<ImageRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
+        public Builder blockDeviceMappings(@Nullable List<ImageRecipeInstanceBlockDeviceMappingArgs> blockDeviceMappings) {
             this.blockDeviceMappings = Input.ofNullable(blockDeviceMappings);
             return this;
         }
 
-        public Builder setComponents(Input<List<ImageRecipeComponentConfigurationArgs>> components) {
+        public Builder components(Input<List<ImageRecipeComponentConfigurationArgs>> components) {
             this.components = Objects.requireNonNull(components);
             return this;
         }
 
-        public Builder setComponents(List<ImageRecipeComponentConfigurationArgs> components) {
+        public Builder components(List<ImageRecipeComponentConfigurationArgs> components) {
             this.components = Input.of(Objects.requireNonNull(components));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentImage(Input<String> parentImage) {
+        public Builder parentImage(Input<String> parentImage) {
             this.parentImage = Objects.requireNonNull(parentImage);
             return this;
         }
 
-        public Builder setParentImage(String parentImage) {
+        public Builder parentImage(String parentImage) {
             this.parentImage = Input.of(Objects.requireNonNull(parentImage));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable Input<String> workingDirectory) {
+        public Builder workingDirectory(@Nullable Input<String> workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }

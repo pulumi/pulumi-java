@@ -30,13 +30,13 @@ public final class GetUsersResult {
     private final List<String> names;
     private final @Nullable String pathPrefix;
 
-    @OutputCustomType.Constructor({"arns","id","nameRegex","names","pathPrefix"})
+    @OutputCustomType.Constructor
     private GetUsersResult(
-        List<String> arns,
-        String id,
-        @Nullable String nameRegex,
-        List<String> names,
-        @Nullable String pathPrefix) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("nameRegex") @Nullable String nameRegex,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix) {
         this.arns = arns;
         this.id = id;
         this.nameRegex = nameRegex;
@@ -100,27 +100,27 @@ public final class GetUsersResult {
     	      this.pathPrefix = defaults.pathPrefix;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNameRegex(@Nullable String nameRegex) {
+        public Builder nameRegex(@Nullable String nameRegex) {
             this.nameRegex = nameRegex;
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }

@@ -21,10 +21,10 @@ public final class CallCredentialsResponse {
      */
     private final MetadataCredentialsFromPluginResponse fromPlugin;
 
-    @OutputCustomType.Constructor({"callCredentialType","fromPlugin"})
+    @OutputCustomType.Constructor
     private CallCredentialsResponse(
-        String callCredentialType,
-        MetadataCredentialsFromPluginResponse fromPlugin) {
+        @OutputCustomType.Parameter("callCredentialType") String callCredentialType,
+        @OutputCustomType.Parameter("fromPlugin") MetadataCredentialsFromPluginResponse fromPlugin) {
         this.callCredentialType = callCredentialType;
         this.fromPlugin = fromPlugin;
     }
@@ -66,12 +66,12 @@ public final class CallCredentialsResponse {
     	      this.fromPlugin = defaults.fromPlugin;
         }
 
-        public Builder setCallCredentialType(String callCredentialType) {
+        public Builder callCredentialType(String callCredentialType) {
             this.callCredentialType = Objects.requireNonNull(callCredentialType);
             return this;
         }
 
-        public Builder setFromPlugin(MetadataCredentialsFromPluginResponse fromPlugin) {
+        public Builder fromPlugin(MetadataCredentialsFromPluginResponse fromPlugin) {
             this.fromPlugin = Objects.requireNonNull(fromPlugin);
             return this;
         }

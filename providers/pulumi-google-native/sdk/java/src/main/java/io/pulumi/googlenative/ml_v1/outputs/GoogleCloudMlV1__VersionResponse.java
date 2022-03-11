@@ -150,34 +150,34 @@ public final class GoogleCloudMlV1__VersionResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","autoScaling","container","createTime","deploymentUri","description","errorMessage","etag","explanationConfig","framework","isDefault","labels","lastMigrationModelId","lastMigrationTime","lastUseTime","machineType","manualScaling","name","packageUris","predictionClass","pythonVersion","requestLoggingConfig","routes","runtimeVersion","serviceAccount","state"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__VersionResponse(
-        GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
-        GoogleCloudMlV1__AutoScalingResponse autoScaling,
-        GoogleCloudMlV1__ContainerSpecResponse container,
-        String createTime,
-        String deploymentUri,
-        String description,
-        String errorMessage,
-        String etag,
-        GoogleCloudMlV1__ExplanationConfigResponse explanationConfig,
-        String framework,
-        Boolean isDefault,
-        Map<String,String> labels,
-        String lastMigrationModelId,
-        String lastMigrationTime,
-        String lastUseTime,
-        String machineType,
-        GoogleCloudMlV1__ManualScalingResponse manualScaling,
-        String name,
-        List<String> packageUris,
-        String predictionClass,
-        String pythonVersion,
-        GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig,
-        GoogleCloudMlV1__RouteMapResponse routes,
-        String runtimeVersion,
-        String serviceAccount,
-        String state) {
+        @OutputCustomType.Parameter("acceleratorConfig") GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("autoScaling") GoogleCloudMlV1__AutoScalingResponse autoScaling,
+        @OutputCustomType.Parameter("container") GoogleCloudMlV1__ContainerSpecResponse container,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deploymentUri") String deploymentUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("explanationConfig") GoogleCloudMlV1__ExplanationConfigResponse explanationConfig,
+        @OutputCustomType.Parameter("framework") String framework,
+        @OutputCustomType.Parameter("isDefault") Boolean isDefault,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lastMigrationModelId") String lastMigrationModelId,
+        @OutputCustomType.Parameter("lastMigrationTime") String lastMigrationTime,
+        @OutputCustomType.Parameter("lastUseTime") String lastUseTime,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("manualScaling") GoogleCloudMlV1__ManualScalingResponse manualScaling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageUris") List<String> packageUris,
+        @OutputCustomType.Parameter("predictionClass") String predictionClass,
+        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
+        @OutputCustomType.Parameter("requestLoggingConfig") GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig,
+        @OutputCustomType.Parameter("routes") GoogleCloudMlV1__RouteMapResponse routes,
+        @OutputCustomType.Parameter("runtimeVersion") String runtimeVersion,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("state") String state) {
         this.acceleratorConfig = acceleratorConfig;
         this.autoScaling = autoScaling;
         this.container = container;
@@ -459,132 +459,132 @@ public final class GoogleCloudMlV1__VersionResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAcceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
+        public Builder acceleratorConfig(GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
 
-        public Builder setAutoScaling(GoogleCloudMlV1__AutoScalingResponse autoScaling) {
+        public Builder autoScaling(GoogleCloudMlV1__AutoScalingResponse autoScaling) {
             this.autoScaling = Objects.requireNonNull(autoScaling);
             return this;
         }
 
-        public Builder setContainer(GoogleCloudMlV1__ContainerSpecResponse container) {
+        public Builder container(GoogleCloudMlV1__ContainerSpecResponse container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeploymentUri(String deploymentUri) {
+        public Builder deploymentUri(String deploymentUri) {
             this.deploymentUri = Objects.requireNonNull(deploymentUri);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExplanationConfig(GoogleCloudMlV1__ExplanationConfigResponse explanationConfig) {
+        public Builder explanationConfig(GoogleCloudMlV1__ExplanationConfigResponse explanationConfig) {
             this.explanationConfig = Objects.requireNonNull(explanationConfig);
             return this;
         }
 
-        public Builder setFramework(String framework) {
+        public Builder framework(String framework) {
             this.framework = Objects.requireNonNull(framework);
             return this;
         }
 
-        public Builder setIsDefault(Boolean isDefault) {
+        public Builder isDefault(Boolean isDefault) {
             this.isDefault = Objects.requireNonNull(isDefault);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLastMigrationModelId(String lastMigrationModelId) {
+        public Builder lastMigrationModelId(String lastMigrationModelId) {
             this.lastMigrationModelId = Objects.requireNonNull(lastMigrationModelId);
             return this;
         }
 
-        public Builder setLastMigrationTime(String lastMigrationTime) {
+        public Builder lastMigrationTime(String lastMigrationTime) {
             this.lastMigrationTime = Objects.requireNonNull(lastMigrationTime);
             return this;
         }
 
-        public Builder setLastUseTime(String lastUseTime) {
+        public Builder lastUseTime(String lastUseTime) {
             this.lastUseTime = Objects.requireNonNull(lastUseTime);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setManualScaling(GoogleCloudMlV1__ManualScalingResponse manualScaling) {
+        public Builder manualScaling(GoogleCloudMlV1__ManualScalingResponse manualScaling) {
             this.manualScaling = Objects.requireNonNull(manualScaling);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageUris(List<String> packageUris) {
+        public Builder packageUris(List<String> packageUris) {
             this.packageUris = Objects.requireNonNull(packageUris);
             return this;
         }
 
-        public Builder setPredictionClass(String predictionClass) {
+        public Builder predictionClass(String predictionClass) {
             this.predictionClass = Objects.requireNonNull(predictionClass);
             return this;
         }
 
-        public Builder setPythonVersion(String pythonVersion) {
+        public Builder pythonVersion(String pythonVersion) {
             this.pythonVersion = Objects.requireNonNull(pythonVersion);
             return this;
         }
 
-        public Builder setRequestLoggingConfig(GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig) {
+        public Builder requestLoggingConfig(GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig) {
             this.requestLoggingConfig = Objects.requireNonNull(requestLoggingConfig);
             return this;
         }
 
-        public Builder setRoutes(GoogleCloudMlV1__RouteMapResponse routes) {
+        public Builder routes(GoogleCloudMlV1__RouteMapResponse routes) {
             this.routes = Objects.requireNonNull(routes);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

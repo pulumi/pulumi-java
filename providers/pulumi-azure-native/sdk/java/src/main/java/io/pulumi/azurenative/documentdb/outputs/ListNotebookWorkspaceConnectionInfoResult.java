@@ -20,10 +20,10 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
      */
     private final String notebookServerEndpoint;
 
-    @OutputCustomType.Constructor({"authToken","notebookServerEndpoint"})
+    @OutputCustomType.Constructor
     private ListNotebookWorkspaceConnectionInfoResult(
-        String authToken,
-        String notebookServerEndpoint) {
+        @OutputCustomType.Parameter("authToken") String authToken,
+        @OutputCustomType.Parameter("notebookServerEndpoint") String notebookServerEndpoint) {
         this.authToken = authToken;
         this.notebookServerEndpoint = notebookServerEndpoint;
     }
@@ -65,12 +65,12 @@ public final class ListNotebookWorkspaceConnectionInfoResult {
     	      this.notebookServerEndpoint = defaults.notebookServerEndpoint;
         }
 
-        public Builder setAuthToken(String authToken) {
+        public Builder authToken(String authToken) {
             this.authToken = Objects.requireNonNull(authToken);
             return this;
         }
 
-        public Builder setNotebookServerEndpoint(String notebookServerEndpoint) {
+        public Builder notebookServerEndpoint(String notebookServerEndpoint) {
             this.notebookServerEndpoint = Objects.requireNonNull(notebookServerEndpoint);
             return this;
         }

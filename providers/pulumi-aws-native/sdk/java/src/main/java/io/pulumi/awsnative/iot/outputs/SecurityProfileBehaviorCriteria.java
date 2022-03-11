@@ -39,15 +39,15 @@ public final class SecurityProfileBehaviorCriteria {
     private final @Nullable SecurityProfileStatisticalThreshold statisticalThreshold;
     private final @Nullable SecurityProfileMetricValue value;
 
-    @OutputCustomType.Constructor({"comparisonOperator","consecutiveDatapointsToAlarm","consecutiveDatapointsToClear","durationSeconds","mlDetectionConfig","statisticalThreshold","value"})
+    @OutputCustomType.Constructor
     private SecurityProfileBehaviorCriteria(
-        @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
-        @Nullable Integer consecutiveDatapointsToAlarm,
-        @Nullable Integer consecutiveDatapointsToClear,
-        @Nullable Integer durationSeconds,
-        @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
-        @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
-        @Nullable SecurityProfileMetricValue value) {
+        @OutputCustomType.Parameter("comparisonOperator") @Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator,
+        @OutputCustomType.Parameter("consecutiveDatapointsToAlarm") @Nullable Integer consecutiveDatapointsToAlarm,
+        @OutputCustomType.Parameter("consecutiveDatapointsToClear") @Nullable Integer consecutiveDatapointsToClear,
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @OutputCustomType.Parameter("mlDetectionConfig") @Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig,
+        @OutputCustomType.Parameter("statisticalThreshold") @Nullable SecurityProfileStatisticalThreshold statisticalThreshold,
+        @OutputCustomType.Parameter("value") @Nullable SecurityProfileMetricValue value) {
         this.comparisonOperator = comparisonOperator;
         this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
         this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
@@ -127,37 +127,37 @@ public final class SecurityProfileBehaviorCriteria {
     	      this.value = defaults.value;
         }
 
-        public Builder setComparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
+        public Builder comparisonOperator(@Nullable SecurityProfileBehaviorCriteriaComparisonOperator comparisonOperator) {
             this.comparisonOperator = comparisonOperator;
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
+        public Builder consecutiveDatapointsToAlarm(@Nullable Integer consecutiveDatapointsToAlarm) {
             this.consecutiveDatapointsToAlarm = consecutiveDatapointsToAlarm;
             return this;
         }
 
-        public Builder setConsecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
+        public Builder consecutiveDatapointsToClear(@Nullable Integer consecutiveDatapointsToClear) {
             this.consecutiveDatapointsToClear = consecutiveDatapointsToClear;
             return this;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setMlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig) {
+        public Builder mlDetectionConfig(@Nullable SecurityProfileMachineLearningDetectionConfig mlDetectionConfig) {
             this.mlDetectionConfig = mlDetectionConfig;
             return this;
         }
 
-        public Builder setStatisticalThreshold(@Nullable SecurityProfileStatisticalThreshold statisticalThreshold) {
+        public Builder statisticalThreshold(@Nullable SecurityProfileStatisticalThreshold statisticalThreshold) {
             this.statisticalThreshold = statisticalThreshold;
             return this;
         }
 
-        public Builder setValue(@Nullable SecurityProfileMetricValue value) {
+        public Builder value(@Nullable SecurityProfileMetricValue value) {
             this.value = value;
             return this;
         }

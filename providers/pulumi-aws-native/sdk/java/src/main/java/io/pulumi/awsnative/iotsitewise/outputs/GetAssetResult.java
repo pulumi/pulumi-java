@@ -43,15 +43,15 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor({"assetArn","assetHierarchies","assetId","assetModelId","assetName","assetProperties","tags"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String assetArn,
-        @Nullable List<AssetHierarchy> assetHierarchies,
-        @Nullable String assetId,
-        @Nullable String assetModelId,
-        @Nullable String assetName,
-        @Nullable List<AssetProperty> assetProperties,
-        @Nullable List<AssetTag> tags) {
+        @OutputCustomType.Parameter("assetArn") @Nullable String assetArn,
+        @OutputCustomType.Parameter("assetHierarchies") @Nullable List<AssetHierarchy> assetHierarchies,
+        @OutputCustomType.Parameter("assetId") @Nullable String assetId,
+        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @OutputCustomType.Parameter("assetName") @Nullable String assetName,
+        @OutputCustomType.Parameter("assetProperties") @Nullable List<AssetProperty> assetProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.assetArn = assetArn;
         this.assetHierarchies = assetHierarchies;
         this.assetId = assetId;
@@ -135,37 +135,37 @@ public final class GetAssetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetArn(@Nullable String assetArn) {
+        public Builder assetArn(@Nullable String assetArn) {
             this.assetArn = assetArn;
             return this;
         }
 
-        public Builder setAssetHierarchies(@Nullable List<AssetHierarchy> assetHierarchies) {
+        public Builder assetHierarchies(@Nullable List<AssetHierarchy> assetHierarchies) {
             this.assetHierarchies = assetHierarchies;
             return this;
         }
 
-        public Builder setAssetId(@Nullable String assetId) {
+        public Builder assetId(@Nullable String assetId) {
             this.assetId = assetId;
             return this;
         }
 
-        public Builder setAssetModelId(@Nullable String assetModelId) {
+        public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
 
-        public Builder setAssetName(@Nullable String assetName) {
+        public Builder assetName(@Nullable String assetName) {
             this.assetName = assetName;
             return this;
         }
 
-        public Builder setAssetProperties(@Nullable List<AssetProperty> assetProperties) {
+        public Builder assetProperties(@Nullable List<AssetProperty> assetProperties) {
             this.assetProperties = assetProperties;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetTag> tags) {
+        public Builder tags(@Nullable List<AssetTag> tags) {
             this.tags = tags;
             return this;
         }

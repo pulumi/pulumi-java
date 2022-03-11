@@ -22,10 +22,10 @@ public final class GetAppResourceUploadUrlResult {
      */
     private final @Nullable String uploadUrl;
 
-    @OutputCustomType.Constructor({"relativePath","uploadUrl"})
+    @OutputCustomType.Constructor
     private GetAppResourceUploadUrlResult(
-        @Nullable String relativePath,
-        @Nullable String uploadUrl) {
+        @OutputCustomType.Parameter("relativePath") @Nullable String relativePath,
+        @OutputCustomType.Parameter("uploadUrl") @Nullable String uploadUrl) {
         this.relativePath = relativePath;
         this.uploadUrl = uploadUrl;
     }
@@ -67,12 +67,12 @@ public final class GetAppResourceUploadUrlResult {
     	      this.uploadUrl = defaults.uploadUrl;
         }
 
-        public Builder setRelativePath(@Nullable String relativePath) {
+        public Builder relativePath(@Nullable String relativePath) {
             this.relativePath = relativePath;
             return this;
         }
 
-        public Builder setUploadUrl(@Nullable String uploadUrl) {
+        public Builder uploadUrl(@Nullable String uploadUrl) {
             this.uploadUrl = uploadUrl;
             return this;
         }

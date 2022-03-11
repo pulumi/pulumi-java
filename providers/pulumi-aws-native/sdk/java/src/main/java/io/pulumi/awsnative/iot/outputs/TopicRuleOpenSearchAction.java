@@ -15,13 +15,13 @@ public final class TopicRuleOpenSearchAction {
     private final String roleArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","id","index","roleArn","type"})
+    @OutputCustomType.Constructor
     private TopicRuleOpenSearchAction(
-        String endpoint,
-        String id,
-        String index,
-        String roleArn,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") String endpoint,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("index") String index,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.id = id;
         this.index = index;
@@ -73,27 +73,27 @@ public final class TopicRuleOpenSearchAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpoint(String endpoint) {
+        public Builder endpoint(String endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIndex(String index) {
+        public Builder index(String index) {
             this.index = Objects.requireNonNull(index);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

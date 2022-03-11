@@ -54,16 +54,16 @@ public final class GetWorkloadNetworkDhcpResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dhcpType","displayName","id","name","provisioningState","revision","segments","type"})
+    @OutputCustomType.Constructor
     private GetWorkloadNetworkDhcpResult(
-        String dhcpType,
-        @Nullable String displayName,
-        String id,
-        String name,
-        String provisioningState,
-        @Nullable Double revision,
-        List<String> segments,
-        String type) {
+        @OutputCustomType.Parameter("dhcpType") String dhcpType,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("revision") @Nullable Double revision,
+        @OutputCustomType.Parameter("segments") List<String> segments,
+        @OutputCustomType.Parameter("type") String type) {
         this.dhcpType = dhcpType;
         this.displayName = displayName;
         this.id = id;
@@ -165,42 +165,42 @@ public final class GetWorkloadNetworkDhcpResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDhcpType(String dhcpType) {
+        public Builder dhcpType(String dhcpType) {
             this.dhcpType = Objects.requireNonNull(dhcpType);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRevision(@Nullable Double revision) {
+        public Builder revision(@Nullable Double revision) {
             this.revision = revision;
             return this;
         }
 
-        public Builder setSegments(List<String> segments) {
+        public Builder segments(List<String> segments) {
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

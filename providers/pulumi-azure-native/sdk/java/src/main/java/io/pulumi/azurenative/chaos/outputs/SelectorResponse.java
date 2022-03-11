@@ -27,11 +27,11 @@ public final class SelectorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","targets","type"})
+    @OutputCustomType.Constructor
     private SelectorResponse(
-        String id,
-        List<TargetReferenceResponse> targets,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("targets") List<TargetReferenceResponse> targets,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.targets = targets;
         this.type = type;
@@ -83,17 +83,17 @@ public final class SelectorResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setTargets(List<TargetReferenceResponse> targets) {
+        public Builder targets(List<TargetReferenceResponse> targets) {
             this.targets = Objects.requireNonNull(targets);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

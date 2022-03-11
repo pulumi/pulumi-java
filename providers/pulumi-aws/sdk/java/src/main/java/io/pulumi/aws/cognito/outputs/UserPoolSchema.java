@@ -50,15 +50,15 @@ public final class UserPoolSchema {
      */
     private final @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints;
 
-    @OutputCustomType.Constructor({"attributeDataType","developerOnlyAttribute","mutable","name","numberAttributeConstraints","required","stringAttributeConstraints"})
+    @OutputCustomType.Constructor
     private UserPoolSchema(
-        String attributeDataType,
-        @Nullable Boolean developerOnlyAttribute,
-        @Nullable Boolean mutable,
-        String name,
-        @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
-        @Nullable Boolean required,
-        @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
+        @OutputCustomType.Parameter("attributeDataType") String attributeDataType,
+        @OutputCustomType.Parameter("developerOnlyAttribute") @Nullable Boolean developerOnlyAttribute,
+        @OutputCustomType.Parameter("mutable") @Nullable Boolean mutable,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberAttributeConstraints") @Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints,
+        @OutputCustomType.Parameter("required") @Nullable Boolean required,
+        @OutputCustomType.Parameter("stringAttributeConstraints") @Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
         this.attributeDataType = attributeDataType;
         this.developerOnlyAttribute = developerOnlyAttribute;
         this.mutable = mutable;
@@ -150,37 +150,37 @@ public final class UserPoolSchema {
     	      this.stringAttributeConstraints = defaults.stringAttributeConstraints;
         }
 
-        public Builder setAttributeDataType(String attributeDataType) {
+        public Builder attributeDataType(String attributeDataType) {
             this.attributeDataType = Objects.requireNonNull(attributeDataType);
             return this;
         }
 
-        public Builder setDeveloperOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
+        public Builder developerOnlyAttribute(@Nullable Boolean developerOnlyAttribute) {
             this.developerOnlyAttribute = developerOnlyAttribute;
             return this;
         }
 
-        public Builder setMutable(@Nullable Boolean mutable) {
+        public Builder mutable(@Nullable Boolean mutable) {
             this.mutable = mutable;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints) {
+        public Builder numberAttributeConstraints(@Nullable UserPoolSchemaNumberAttributeConstraints numberAttributeConstraints) {
             this.numberAttributeConstraints = numberAttributeConstraints;
             return this;
         }
 
-        public Builder setRequired(@Nullable Boolean required) {
+        public Builder required(@Nullable Boolean required) {
             this.required = required;
             return this;
         }
 
-        public Builder setStringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
+        public Builder stringAttributeConstraints(@Nullable UserPoolSchemaStringAttributeConstraints stringAttributeConstraints) {
             this.stringAttributeConstraints = stringAttributeConstraints;
             return this;
         }

@@ -40,13 +40,13 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"contentHash","contentSize","contentVersion","metadata","uri"})
+    @OutputCustomType.Constructor
     private ContentLinkResponse(
-        ContentHashResponse contentHash,
-        Double contentSize,
-        String contentVersion,
-        Object metadata,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("contentHash") ContentHashResponse contentHash,
+        @OutputCustomType.Parameter("contentSize") Double contentSize,
+        @OutputCustomType.Parameter("contentVersion") String contentVersion,
+        @OutputCustomType.Parameter("metadata") Object metadata,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.contentHash = contentHash;
         this.contentSize = contentSize;
         this.contentVersion = contentVersion;
@@ -118,27 +118,27 @@ public final class ContentLinkResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setContentHash(ContentHashResponse contentHash) {
+        public Builder contentHash(ContentHashResponse contentHash) {
             this.contentHash = Objects.requireNonNull(contentHash);
             return this;
         }
 
-        public Builder setContentSize(Double contentSize) {
+        public Builder contentSize(Double contentSize) {
             this.contentSize = Objects.requireNonNull(contentSize);
             return this;
         }
 
-        public Builder setContentVersion(String contentVersion) {
+        public Builder contentVersion(String contentVersion) {
             this.contentVersion = Objects.requireNonNull(contentVersion);
             return this;
         }
 
-        public Builder setMetadata(Object metadata) {
+        public Builder metadata(Object metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

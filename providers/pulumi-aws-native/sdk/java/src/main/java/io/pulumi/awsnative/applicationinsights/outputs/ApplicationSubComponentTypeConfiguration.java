@@ -21,10 +21,10 @@ public final class ApplicationSubComponentTypeConfiguration {
      */
     private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
-    @OutputCustomType.Constructor({"subComponentConfigurationDetails","subComponentType"})
+    @OutputCustomType.Constructor
     private ApplicationSubComponentTypeConfiguration(
-        ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
-        ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
+        @OutputCustomType.Parameter("subComponentConfigurationDetails") ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails,
+        @OutputCustomType.Parameter("subComponentType") ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
         this.subComponentConfigurationDetails = subComponentConfigurationDetails;
         this.subComponentType = subComponentType;
     }
@@ -66,12 +66,12 @@ public final class ApplicationSubComponentTypeConfiguration {
     	      this.subComponentType = defaults.subComponentType;
         }
 
-        public Builder setSubComponentConfigurationDetails(ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails) {
+        public Builder subComponentConfigurationDetails(ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails) {
             this.subComponentConfigurationDetails = Objects.requireNonNull(subComponentConfigurationDetails);
             return this;
         }
 
-        public Builder setSubComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
+        public Builder subComponentType(ApplicationSubComponentTypeConfigurationSubComponentType subComponentType) {
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }

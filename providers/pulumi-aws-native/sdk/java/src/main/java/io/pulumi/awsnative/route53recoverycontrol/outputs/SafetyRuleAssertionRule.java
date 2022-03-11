@@ -22,10 +22,10 @@ public final class SafetyRuleAssertionRule {
      */
     private final Integer waitPeriodMs;
 
-    @OutputCustomType.Constructor({"assertedControls","waitPeriodMs"})
+    @OutputCustomType.Constructor
     private SafetyRuleAssertionRule(
-        List<String> assertedControls,
-        Integer waitPeriodMs) {
+        @OutputCustomType.Parameter("assertedControls") List<String> assertedControls,
+        @OutputCustomType.Parameter("waitPeriodMs") Integer waitPeriodMs) {
         this.assertedControls = assertedControls;
         this.waitPeriodMs = waitPeriodMs;
     }
@@ -67,12 +67,12 @@ public final class SafetyRuleAssertionRule {
     	      this.waitPeriodMs = defaults.waitPeriodMs;
         }
 
-        public Builder setAssertedControls(List<String> assertedControls) {
+        public Builder assertedControls(List<String> assertedControls) {
             this.assertedControls = Objects.requireNonNull(assertedControls);
             return this;
         }
 
-        public Builder setWaitPeriodMs(Integer waitPeriodMs) {
+        public Builder waitPeriodMs(Integer waitPeriodMs) {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }

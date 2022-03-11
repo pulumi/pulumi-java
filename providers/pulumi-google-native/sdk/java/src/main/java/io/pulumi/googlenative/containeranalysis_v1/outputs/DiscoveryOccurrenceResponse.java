@@ -36,13 +36,13 @@ public final class DiscoveryOccurrenceResponse {
      */
     private final String lastScanTime;
 
-    @OutputCustomType.Constructor({"analysisStatus","analysisStatusError","continuousAnalysis","cpe","lastScanTime"})
+    @OutputCustomType.Constructor
     private DiscoveryOccurrenceResponse(
-        String analysisStatus,
-        StatusResponse analysisStatusError,
-        String continuousAnalysis,
-        String cpe,
-        String lastScanTime) {
+        @OutputCustomType.Parameter("analysisStatus") String analysisStatus,
+        @OutputCustomType.Parameter("analysisStatusError") StatusResponse analysisStatusError,
+        @OutputCustomType.Parameter("continuousAnalysis") String continuousAnalysis,
+        @OutputCustomType.Parameter("cpe") String cpe,
+        @OutputCustomType.Parameter("lastScanTime") String lastScanTime) {
         this.analysisStatus = analysisStatus;
         this.analysisStatusError = analysisStatusError;
         this.continuousAnalysis = continuousAnalysis;
@@ -114,27 +114,27 @@ public final class DiscoveryOccurrenceResponse {
     	      this.lastScanTime = defaults.lastScanTime;
         }
 
-        public Builder setAnalysisStatus(String analysisStatus) {
+        public Builder analysisStatus(String analysisStatus) {
             this.analysisStatus = Objects.requireNonNull(analysisStatus);
             return this;
         }
 
-        public Builder setAnalysisStatusError(StatusResponse analysisStatusError) {
+        public Builder analysisStatusError(StatusResponse analysisStatusError) {
             this.analysisStatusError = Objects.requireNonNull(analysisStatusError);
             return this;
         }
 
-        public Builder setContinuousAnalysis(String continuousAnalysis) {
+        public Builder continuousAnalysis(String continuousAnalysis) {
             this.continuousAnalysis = Objects.requireNonNull(continuousAnalysis);
             return this;
         }
 
-        public Builder setCpe(String cpe) {
+        public Builder cpe(String cpe) {
             this.cpe = Objects.requireNonNull(cpe);
             return this;
         }
 
-        public Builder setLastScanTime(String lastScanTime) {
+        public Builder lastScanTime(String lastScanTime) {
             this.lastScanTime = Objects.requireNonNull(lastScanTime);
             return this;
         }

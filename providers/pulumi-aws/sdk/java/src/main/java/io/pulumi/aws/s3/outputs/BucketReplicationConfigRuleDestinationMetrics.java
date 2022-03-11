@@ -23,10 +23,10 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"eventThreshold","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationConfigRuleDestinationMetrics(
-        @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
-        String status) {
+        @OutputCustomType.Parameter("eventThreshold") @Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold,
+        @OutputCustomType.Parameter("status") String status) {
         this.eventThreshold = eventThreshold;
         this.status = status;
     }
@@ -68,12 +68,12 @@ public final class BucketReplicationConfigRuleDestinationMetrics {
     	      this.status = defaults.status;
         }
 
-        public Builder setEventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold) {
+        public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThreshold eventThreshold) {
             this.eventThreshold = eventThreshold;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

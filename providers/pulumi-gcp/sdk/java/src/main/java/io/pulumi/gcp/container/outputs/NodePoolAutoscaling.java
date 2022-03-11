@@ -21,10 +21,10 @@ public final class NodePoolAutoscaling {
      */
     private final Integer minNodeCount;
 
-    @OutputCustomType.Constructor({"maxNodeCount","minNodeCount"})
+    @OutputCustomType.Constructor
     private NodePoolAutoscaling(
-        Integer maxNodeCount,
-        Integer minNodeCount) {
+        @OutputCustomType.Parameter("maxNodeCount") Integer maxNodeCount,
+        @OutputCustomType.Parameter("minNodeCount") Integer minNodeCount) {
         this.maxNodeCount = maxNodeCount;
         this.minNodeCount = minNodeCount;
     }
@@ -67,12 +67,12 @@ public final class NodePoolAutoscaling {
     	      this.minNodeCount = defaults.minNodeCount;
         }
 
-        public Builder setMaxNodeCount(Integer maxNodeCount) {
+        public Builder maxNodeCount(Integer maxNodeCount) {
             this.maxNodeCount = Objects.requireNonNull(maxNodeCount);
             return this;
         }
 
-        public Builder setMinNodeCount(Integer minNodeCount) {
+        public Builder minNodeCount(Integer minNodeCount) {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }

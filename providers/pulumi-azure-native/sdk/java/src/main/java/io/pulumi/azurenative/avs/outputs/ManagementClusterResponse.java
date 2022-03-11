@@ -32,12 +32,12 @@ public final class ManagementClusterResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"clusterId","clusterSize","hosts","provisioningState"})
+    @OutputCustomType.Constructor
     private ManagementClusterResponse(
-        Integer clusterId,
-        Integer clusterSize,
-        List<String> hosts,
-        String provisioningState) {
+        @OutputCustomType.Parameter("clusterId") Integer clusterId,
+        @OutputCustomType.Parameter("clusterSize") Integer clusterSize,
+        @OutputCustomType.Parameter("hosts") List<String> hosts,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.clusterId = clusterId;
         this.clusterSize = clusterSize;
         this.hosts = hosts;
@@ -99,22 +99,22 @@ public final class ManagementClusterResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setClusterId(Integer clusterId) {
+        public Builder clusterId(Integer clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterSize(Integer clusterSize) {
+        public Builder clusterSize(Integer clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
-        public Builder setHosts(List<String> hosts) {
+        public Builder hosts(List<String> hosts) {
             this.hosts = Objects.requireNonNull(hosts);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

@@ -73,22 +73,22 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
     	      this.sendAgreement = defaults.sendAgreement;
         }
 
-        public Builder setReceiveAgreement(Input<X12OneWayAgreementArgs> receiveAgreement) {
+        public Builder receiveAgreement(Input<X12OneWayAgreementArgs> receiveAgreement) {
             this.receiveAgreement = Objects.requireNonNull(receiveAgreement);
             return this;
         }
 
-        public Builder setReceiveAgreement(X12OneWayAgreementArgs receiveAgreement) {
+        public Builder receiveAgreement(X12OneWayAgreementArgs receiveAgreement) {
             this.receiveAgreement = Input.of(Objects.requireNonNull(receiveAgreement));
             return this;
         }
 
-        public Builder setSendAgreement(Input<X12OneWayAgreementArgs> sendAgreement) {
+        public Builder sendAgreement(Input<X12OneWayAgreementArgs> sendAgreement) {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
 
-        public Builder setSendAgreement(X12OneWayAgreementArgs sendAgreement) {
+        public Builder sendAgreement(X12OneWayAgreementArgs sendAgreement) {
             this.sendAgreement = Input.of(Objects.requireNonNull(sendAgreement));
             return this;
         }

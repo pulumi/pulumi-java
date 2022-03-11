@@ -27,11 +27,11 @@ public final class ManagementPolicySnapShotResponse {
      */
     private final @Nullable DateAfterCreationResponse tierToCool;
 
-    @OutputCustomType.Constructor({"delete","tierToArchive","tierToCool"})
+    @OutputCustomType.Constructor
     private ManagementPolicySnapShotResponse(
-        @Nullable DateAfterCreationResponse delete,
-        @Nullable DateAfterCreationResponse tierToArchive,
-        @Nullable DateAfterCreationResponse tierToCool) {
+        @OutputCustomType.Parameter("delete") @Nullable DateAfterCreationResponse delete,
+        @OutputCustomType.Parameter("tierToArchive") @Nullable DateAfterCreationResponse tierToArchive,
+        @OutputCustomType.Parameter("tierToCool") @Nullable DateAfterCreationResponse tierToCool) {
         this.delete = delete;
         this.tierToArchive = tierToArchive;
         this.tierToCool = tierToCool;
@@ -83,17 +83,17 @@ public final class ManagementPolicySnapShotResponse {
     	      this.tierToCool = defaults.tierToCool;
         }
 
-        public Builder setDelete(@Nullable DateAfterCreationResponse delete) {
+        public Builder delete(@Nullable DateAfterCreationResponse delete) {
             this.delete = delete;
             return this;
         }
 
-        public Builder setTierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
+        public Builder tierToArchive(@Nullable DateAfterCreationResponse tierToArchive) {
             this.tierToArchive = tierToArchive;
             return this;
         }
 
-        public Builder setTierToCool(@Nullable DateAfterCreationResponse tierToCool) {
+        public Builder tierToCool(@Nullable DateAfterCreationResponse tierToCool) {
             this.tierToCool = tierToCool;
             return this;
         }

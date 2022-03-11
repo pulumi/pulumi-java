@@ -43,14 +43,14 @@ public final class OwnerReference {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"apiVersion","blockOwnerDeletion","controller","kind","name","uid"})
+    @OutputCustomType.Constructor
     private OwnerReference(
-        String apiVersion,
-        @Nullable Boolean blockOwnerDeletion,
-        @Nullable Boolean controller,
-        String kind,
-        String name,
-        String uid) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("blockOwnerDeletion") @Nullable Boolean blockOwnerDeletion,
+        @OutputCustomType.Parameter("controller") @Nullable Boolean controller,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.apiVersion = apiVersion;
         this.blockOwnerDeletion = blockOwnerDeletion;
         this.controller = controller;
@@ -132,32 +132,32 @@ public final class OwnerReference {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setBlockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
+        public Builder blockOwnerDeletion(@Nullable Boolean blockOwnerDeletion) {
             this.blockOwnerDeletion = blockOwnerDeletion;
             return this;
         }
 
-        public Builder setController(@Nullable Boolean controller) {
+        public Builder controller(@Nullable Boolean controller) {
             this.controller = controller;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

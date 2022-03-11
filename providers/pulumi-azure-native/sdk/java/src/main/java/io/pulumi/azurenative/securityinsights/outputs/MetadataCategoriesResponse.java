@@ -22,10 +22,10 @@ public final class MetadataCategoriesResponse {
      */
     private final @Nullable List<String> verticals;
 
-    @OutputCustomType.Constructor({"domains","verticals"})
+    @OutputCustomType.Constructor
     private MetadataCategoriesResponse(
-        @Nullable List<String> domains,
-        @Nullable List<String> verticals) {
+        @OutputCustomType.Parameter("domains") @Nullable List<String> domains,
+        @OutputCustomType.Parameter("verticals") @Nullable List<String> verticals) {
         this.domains = domains;
         this.verticals = verticals;
     }
@@ -67,12 +67,12 @@ public final class MetadataCategoriesResponse {
     	      this.verticals = defaults.verticals;
         }
 
-        public Builder setDomains(@Nullable List<String> domains) {
+        public Builder domains(@Nullable List<String> domains) {
             this.domains = domains;
             return this;
         }
 
-        public Builder setVerticals(@Nullable List<String> verticals) {
+        public Builder verticals(@Nullable List<String> verticals) {
             this.verticals = verticals;
             return this;
         }

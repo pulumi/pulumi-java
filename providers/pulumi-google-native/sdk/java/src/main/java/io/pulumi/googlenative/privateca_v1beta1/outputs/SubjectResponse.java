@@ -45,15 +45,15 @@ public final class SubjectResponse {
      */
     private final String streetAddress;
 
-    @OutputCustomType.Constructor({"countryCode","locality","organization","organizationalUnit","postalCode","province","streetAddress"})
+    @OutputCustomType.Constructor
     private SubjectResponse(
-        String countryCode,
-        String locality,
-        String organization,
-        String organizationalUnit,
-        String postalCode,
-        String province,
-        String streetAddress) {
+        @OutputCustomType.Parameter("countryCode") String countryCode,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("organizationalUnit") String organizationalUnit,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("province") String province,
+        @OutputCustomType.Parameter("streetAddress") String streetAddress) {
         this.countryCode = countryCode;
         this.locality = locality;
         this.organization = organization;
@@ -145,37 +145,37 @@ public final class SubjectResponse {
     	      this.streetAddress = defaults.streetAddress;
         }
 
-        public Builder setCountryCode(String countryCode) {
+        public Builder countryCode(String countryCode) {
             this.countryCode = Objects.requireNonNull(countryCode);
             return this;
         }
 
-        public Builder setLocality(String locality) {
+        public Builder locality(String locality) {
             this.locality = Objects.requireNonNull(locality);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setOrganizationalUnit(String organizationalUnit) {
+        public Builder organizationalUnit(String organizationalUnit) {
             this.organizationalUnit = Objects.requireNonNull(organizationalUnit);
             return this;
         }
 
-        public Builder setPostalCode(String postalCode) {
+        public Builder postalCode(String postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
 
-        public Builder setProvince(String province) {
+        public Builder province(String province) {
             this.province = Objects.requireNonNull(province);
             return this;
         }
 
-        public Builder setStreetAddress(String streetAddress) {
+        public Builder streetAddress(String streetAddress) {
             this.streetAddress = Objects.requireNonNull(streetAddress);
             return this;
         }

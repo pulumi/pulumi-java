@@ -43,14 +43,14 @@ public final class ContainerHealthCheckConfig {
      */
     private final @Nullable Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor({"healthyThreshold","intervalSeconds","path","successCodes","timeoutSeconds","unhealthyThreshold"})
+    @OutputCustomType.Constructor
     private ContainerHealthCheckConfig(
-        @Nullable Integer healthyThreshold,
-        @Nullable Integer intervalSeconds,
-        @Nullable String path,
-        @Nullable String successCodes,
-        @Nullable Integer timeoutSeconds,
-        @Nullable Integer unhealthyThreshold) {
+        @OutputCustomType.Parameter("healthyThreshold") @Nullable Integer healthyThreshold,
+        @OutputCustomType.Parameter("intervalSeconds") @Nullable Integer intervalSeconds,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("successCodes") @Nullable String successCodes,
+        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
+        @OutputCustomType.Parameter("unhealthyThreshold") @Nullable Integer unhealthyThreshold) {
         this.healthyThreshold = healthyThreshold;
         this.intervalSeconds = intervalSeconds;
         this.path = path;
@@ -132,32 +132,32 @@ public final class ContainerHealthCheckConfig {
     	      this.unhealthyThreshold = defaults.unhealthyThreshold;
         }
 
-        public Builder setHealthyThreshold(@Nullable Integer healthyThreshold) {
+        public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
             this.healthyThreshold = healthyThreshold;
             return this;
         }
 
-        public Builder setIntervalSeconds(@Nullable Integer intervalSeconds) {
+        public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
             this.intervalSeconds = intervalSeconds;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setSuccessCodes(@Nullable String successCodes) {
+        public Builder successCodes(@Nullable String successCodes) {
             this.successCodes = successCodes;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setUnhealthyThreshold(@Nullable Integer unhealthyThreshold) {
+        public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }

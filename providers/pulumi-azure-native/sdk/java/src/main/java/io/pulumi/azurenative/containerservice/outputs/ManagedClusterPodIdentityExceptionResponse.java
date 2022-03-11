@@ -26,11 +26,11 @@ public final class ManagedClusterPodIdentityExceptionResponse {
      */
     private final Map<String,String> podLabels;
 
-    @OutputCustomType.Constructor({"name","namespace","podLabels"})
+    @OutputCustomType.Constructor
     private ManagedClusterPodIdentityExceptionResponse(
-        String name,
-        String namespace,
-        Map<String,String> podLabels) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("podLabels") Map<String,String> podLabels) {
         this.name = name;
         this.namespace = namespace;
         this.podLabels = podLabels;
@@ -82,17 +82,17 @@ public final class ManagedClusterPodIdentityExceptionResponse {
     	      this.podLabels = defaults.podLabels;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setPodLabels(Map<String,String> podLabels) {
+        public Builder podLabels(Map<String,String> podLabels) {
             this.podLabels = Objects.requireNonNull(podLabels);
             return this;
         }

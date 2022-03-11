@@ -24,10 +24,10 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
      */
     private final List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs;
 
-    @OutputCustomType.Constructor({"kmsKeyId","monitoringOutputs"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionMonitoringOutputConfig(
-        @Nullable String kmsKeyId,
-        List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
+        @OutputCustomType.Parameter("kmsKeyId") @Nullable String kmsKeyId,
+        @OutputCustomType.Parameter("monitoringOutputs") List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
         this.kmsKeyId = kmsKeyId;
         this.monitoringOutputs = monitoringOutputs;
     }
@@ -69,12 +69,12 @@ public final class ModelBiasJobDefinitionMonitoringOutputConfig {
     	      this.monitoringOutputs = defaults.monitoringOutputs;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setMonitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
+        public Builder monitoringOutputs(List<ModelBiasJobDefinitionMonitoringOutput> monitoringOutputs) {
             this.monitoringOutputs = Objects.requireNonNull(monitoringOutputs);
             return this;
         }

@@ -28,11 +28,11 @@ public final class PodsMetricStatus {
      */
     private final @Nullable LabelSelector selector;
 
-    @OutputCustomType.Constructor({"currentAverageValue","metricName","selector"})
+    @OutputCustomType.Constructor
     private PodsMetricStatus(
-        String currentAverageValue,
-        String metricName,
-        @Nullable LabelSelector selector) {
+        @OutputCustomType.Parameter("currentAverageValue") String currentAverageValue,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector) {
         this.currentAverageValue = currentAverageValue;
         this.metricName = metricName;
         this.selector = selector;
@@ -84,17 +84,17 @@ public final class PodsMetricStatus {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setCurrentAverageValue(String currentAverageValue) {
+        public Builder currentAverageValue(String currentAverageValue) {
             this.currentAverageValue = Objects.requireNonNull(currentAverageValue);
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }

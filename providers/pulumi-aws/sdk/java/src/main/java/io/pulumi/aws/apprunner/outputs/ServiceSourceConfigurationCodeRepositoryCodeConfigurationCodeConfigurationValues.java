@@ -38,13 +38,13 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"buildCommand","port","runtime","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationCodeRepositoryCodeConfigurationCodeConfigurationValues(
-        @Nullable String buildCommand,
-        @Nullable String port,
-        String runtime,
-        @Nullable Map<String,String> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("buildCommand") @Nullable String buildCommand,
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtime") String runtime,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.buildCommand = buildCommand;
         this.port = port;
         this.runtime = runtime;
@@ -116,27 +116,27 @@ public final class ServiceSourceConfigurationCodeRepositoryCodeConfigurationCode
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setBuildCommand(@Nullable String buildCommand) {
+        public Builder buildCommand(@Nullable String buildCommand) {
             this.buildCommand = buildCommand;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRuntime(String runtime) {
+        public Builder runtime(String runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
         }

@@ -34,12 +34,12 @@ public final class DatabaseProjectSummaryResponse {
      */
     private final @Nullable String refreshSummaryState;
 
-    @OutputCustomType.Constructor({"extendedSummary","instanceType","lastSummaryRefreshedTime","refreshSummaryState"})
+    @OutputCustomType.Constructor
     private DatabaseProjectSummaryResponse(
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable String refreshSummaryState) {
+        @OutputCustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState) {
         this.extendedSummary = extendedSummary;
         this.instanceType = instanceType;
         this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
@@ -102,22 +102,22 @@ public final class DatabaseProjectSummaryResponse {
     	      this.refreshSummaryState = defaults.refreshSummaryState;
         }
 
-        public Builder setExtendedSummary(@Nullable Map<String,String> extendedSummary) {
+        public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
             this.extendedSummary = extendedSummary;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
+        public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
-        public Builder setRefreshSummaryState(@Nullable String refreshSummaryState) {
+        public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             this.refreshSummaryState = refreshSummaryState;
             return this;
         }

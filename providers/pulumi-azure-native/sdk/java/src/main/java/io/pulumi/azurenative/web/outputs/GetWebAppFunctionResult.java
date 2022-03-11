@@ -100,25 +100,25 @@ public final class GetWebAppFunctionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"config","configHref","files","functionAppId","href","id","invokeUrlTemplate","isDisabled","kind","language","name","scriptHref","scriptRootPathHref","secretsFileHref","testData","testDataHref","type"})
+    @OutputCustomType.Constructor
     private GetWebAppFunctionResult(
-        @Nullable Object config,
-        @Nullable String configHref,
-        @Nullable Map<String,String> files,
-        @Nullable String functionAppId,
-        @Nullable String href,
-        String id,
-        @Nullable String invokeUrlTemplate,
-        @Nullable Boolean isDisabled,
-        @Nullable String kind,
-        @Nullable String language,
-        String name,
-        @Nullable String scriptHref,
-        @Nullable String scriptRootPathHref,
-        @Nullable String secretsFileHref,
-        @Nullable String testData,
-        @Nullable String testDataHref,
-        String type) {
+        @OutputCustomType.Parameter("config") @Nullable Object config,
+        @OutputCustomType.Parameter("configHref") @Nullable String configHref,
+        @OutputCustomType.Parameter("files") @Nullable Map<String,String> files,
+        @OutputCustomType.Parameter("functionAppId") @Nullable String functionAppId,
+        @OutputCustomType.Parameter("href") @Nullable String href,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("invokeUrlTemplate") @Nullable String invokeUrlTemplate,
+        @OutputCustomType.Parameter("isDisabled") @Nullable Boolean isDisabled,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("language") @Nullable String language,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scriptHref") @Nullable String scriptHref,
+        @OutputCustomType.Parameter("scriptRootPathHref") @Nullable String scriptRootPathHref,
+        @OutputCustomType.Parameter("secretsFileHref") @Nullable String secretsFileHref,
+        @OutputCustomType.Parameter("testData") @Nullable String testData,
+        @OutputCustomType.Parameter("testDataHref") @Nullable String testDataHref,
+        @OutputCustomType.Parameter("type") String type) {
         this.config = config;
         this.configHref = configHref;
         this.files = files;
@@ -310,87 +310,87 @@ public final class GetWebAppFunctionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setConfig(@Nullable Object config) {
+        public Builder config(@Nullable Object config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfigHref(@Nullable String configHref) {
+        public Builder configHref(@Nullable String configHref) {
             this.configHref = configHref;
             return this;
         }
 
-        public Builder setFiles(@Nullable Map<String,String> files) {
+        public Builder files(@Nullable Map<String,String> files) {
             this.files = files;
             return this;
         }
 
-        public Builder setFunctionAppId(@Nullable String functionAppId) {
+        public Builder functionAppId(@Nullable String functionAppId) {
             this.functionAppId = functionAppId;
             return this;
         }
 
-        public Builder setHref(@Nullable String href) {
+        public Builder href(@Nullable String href) {
             this.href = href;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInvokeUrlTemplate(@Nullable String invokeUrlTemplate) {
+        public Builder invokeUrlTemplate(@Nullable String invokeUrlTemplate) {
             this.invokeUrlTemplate = invokeUrlTemplate;
             return this;
         }
 
-        public Builder setIsDisabled(@Nullable Boolean isDisabled) {
+        public Builder isDisabled(@Nullable Boolean isDisabled) {
             this.isDisabled = isDisabled;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLanguage(@Nullable String language) {
+        public Builder language(@Nullable String language) {
             this.language = language;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScriptHref(@Nullable String scriptHref) {
+        public Builder scriptHref(@Nullable String scriptHref) {
             this.scriptHref = scriptHref;
             return this;
         }
 
-        public Builder setScriptRootPathHref(@Nullable String scriptRootPathHref) {
+        public Builder scriptRootPathHref(@Nullable String scriptRootPathHref) {
             this.scriptRootPathHref = scriptRootPathHref;
             return this;
         }
 
-        public Builder setSecretsFileHref(@Nullable String secretsFileHref) {
+        public Builder secretsFileHref(@Nullable String secretsFileHref) {
             this.secretsFileHref = secretsFileHref;
             return this;
         }
 
-        public Builder setTestData(@Nullable String testData) {
+        public Builder testData(@Nullable String testData) {
             this.testData = testData;
             return this;
         }
 
-        public Builder setTestDataHref(@Nullable String testDataHref) {
+        public Builder testDataHref(@Nullable String testDataHref) {
             this.testDataHref = testDataHref;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

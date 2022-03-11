@@ -49,15 +49,15 @@ public final class GetGlossaryResult {
      */
     private final String submitTime;
 
-    @OutputCustomType.Constructor({"endTime","entryCount","inputConfig","languageCodesSet","languagePair","name","submitTime"})
+    @OutputCustomType.Constructor
     private GetGlossaryResult(
-        String endTime,
-        Integer entryCount,
-        GlossaryInputConfigResponse inputConfig,
-        LanguageCodesSetResponse languageCodesSet,
-        LanguageCodePairResponse languagePair,
-        String name,
-        String submitTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("entryCount") Integer entryCount,
+        @OutputCustomType.Parameter("inputConfig") GlossaryInputConfigResponse inputConfig,
+        @OutputCustomType.Parameter("languageCodesSet") LanguageCodesSetResponse languageCodesSet,
+        @OutputCustomType.Parameter("languagePair") LanguageCodePairResponse languagePair,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("submitTime") String submitTime) {
         this.endTime = endTime;
         this.entryCount = entryCount;
         this.inputConfig = inputConfig;
@@ -149,37 +149,37 @@ public final class GetGlossaryResult {
     	      this.submitTime = defaults.submitTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEntryCount(Integer entryCount) {
+        public Builder entryCount(Integer entryCount) {
             this.entryCount = Objects.requireNonNull(entryCount);
             return this;
         }
 
-        public Builder setInputConfig(GlossaryInputConfigResponse inputConfig) {
+        public Builder inputConfig(GlossaryInputConfigResponse inputConfig) {
             this.inputConfig = Objects.requireNonNull(inputConfig);
             return this;
         }
 
-        public Builder setLanguageCodesSet(LanguageCodesSetResponse languageCodesSet) {
+        public Builder languageCodesSet(LanguageCodesSetResponse languageCodesSet) {
             this.languageCodesSet = Objects.requireNonNull(languageCodesSet);
             return this;
         }
 
-        public Builder setLanguagePair(LanguageCodePairResponse languagePair) {
+        public Builder languagePair(LanguageCodePairResponse languagePair) {
             this.languagePair = Objects.requireNonNull(languagePair);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubmitTime(String submitTime) {
+        public Builder submitTime(String submitTime) {
             this.submitTime = Objects.requireNonNull(submitTime);
             return this;
         }

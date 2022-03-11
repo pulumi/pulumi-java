@@ -15,10 +15,10 @@ public final class ComponentVariant {
     private final @Nullable ComponentOverrides overrides;
     private final @Nullable ComponentVariantValues variantValues;
 
-    @OutputCustomType.Constructor({"overrides","variantValues"})
+    @OutputCustomType.Constructor
     private ComponentVariant(
-        @Nullable ComponentOverrides overrides,
-        @Nullable ComponentVariantValues variantValues) {
+        @OutputCustomType.Parameter("overrides") @Nullable ComponentOverrides overrides,
+        @OutputCustomType.Parameter("variantValues") @Nullable ComponentVariantValues variantValues) {
         this.overrides = overrides;
         this.variantValues = variantValues;
     }
@@ -52,12 +52,12 @@ public final class ComponentVariant {
     	      this.variantValues = defaults.variantValues;
         }
 
-        public Builder setOverrides(@Nullable ComponentOverrides overrides) {
+        public Builder overrides(@Nullable ComponentOverrides overrides) {
             this.overrides = overrides;
             return this;
         }
 
-        public Builder setVariantValues(@Nullable ComponentVariantValues variantValues) {
+        public Builder variantValues(@Nullable ComponentVariantValues variantValues) {
             this.variantValues = variantValues;
             return this;
         }

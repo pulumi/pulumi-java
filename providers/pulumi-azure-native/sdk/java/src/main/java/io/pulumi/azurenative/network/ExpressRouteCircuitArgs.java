@@ -337,182 +337,182 @@ public final class ExpressRouteCircuitArgs extends io.pulumi.resources.ResourceA
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAllowClassicOperations(@Nullable Input<Boolean> allowClassicOperations) {
+        public Builder allowClassicOperations(@Nullable Input<Boolean> allowClassicOperations) {
             this.allowClassicOperations = allowClassicOperations;
             return this;
         }
 
-        public Builder setAllowClassicOperations(@Nullable Boolean allowClassicOperations) {
+        public Builder allowClassicOperations(@Nullable Boolean allowClassicOperations) {
             this.allowClassicOperations = Input.ofNullable(allowClassicOperations);
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
+        public Builder authorizations(@Nullable Input<List<ExpressRouteCircuitAuthorizationArgs>> authorizations) {
             this.authorizations = authorizations;
             return this;
         }
 
-        public Builder setAuthorizations(@Nullable List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
+        public Builder authorizations(@Nullable List<ExpressRouteCircuitAuthorizationArgs> authorizations) {
             this.authorizations = Input.ofNullable(authorizations);
             return this;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Input<Double> bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Input<Double> bandwidthInGbps) {
             this.bandwidthInGbps = bandwidthInGbps;
             return this;
         }
 
-        public Builder setBandwidthInGbps(@Nullable Double bandwidthInGbps) {
+        public Builder bandwidthInGbps(@Nullable Double bandwidthInGbps) {
             this.bandwidthInGbps = Input.ofNullable(bandwidthInGbps);
             return this;
         }
 
-        public Builder setCircuitName(@Nullable Input<String> circuitName) {
+        public Builder circuitName(@Nullable Input<String> circuitName) {
             this.circuitName = circuitName;
             return this;
         }
 
-        public Builder setCircuitName(@Nullable String circuitName) {
+        public Builder circuitName(@Nullable String circuitName) {
             this.circuitName = Input.ofNullable(circuitName);
             return this;
         }
 
-        public Builder setCircuitProvisioningState(@Nullable Input<String> circuitProvisioningState) {
+        public Builder circuitProvisioningState(@Nullable Input<String> circuitProvisioningState) {
             this.circuitProvisioningState = circuitProvisioningState;
             return this;
         }
 
-        public Builder setCircuitProvisioningState(@Nullable String circuitProvisioningState) {
+        public Builder circuitProvisioningState(@Nullable String circuitProvisioningState) {
             this.circuitProvisioningState = Input.ofNullable(circuitProvisioningState);
             return this;
         }
 
-        public Builder setExpressRoutePort(@Nullable Input<SubResourceArgs> expressRoutePort) {
+        public Builder expressRoutePort(@Nullable Input<SubResourceArgs> expressRoutePort) {
             this.expressRoutePort = expressRoutePort;
             return this;
         }
 
-        public Builder setExpressRoutePort(@Nullable SubResourceArgs expressRoutePort) {
+        public Builder expressRoutePort(@Nullable SubResourceArgs expressRoutePort) {
             this.expressRoutePort = Input.ofNullable(expressRoutePort);
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable Input<String> gatewayManagerEtag) {
             this.gatewayManagerEtag = gatewayManagerEtag;
             return this;
         }
 
-        public Builder setGatewayManagerEtag(@Nullable String gatewayManagerEtag) {
+        public Builder gatewayManagerEtag(@Nullable String gatewayManagerEtag) {
             this.gatewayManagerEtag = Input.ofNullable(gatewayManagerEtag);
             return this;
         }
 
-        public Builder setGlobalReachEnabled(@Nullable Input<Boolean> globalReachEnabled) {
+        public Builder globalReachEnabled(@Nullable Input<Boolean> globalReachEnabled) {
             this.globalReachEnabled = globalReachEnabled;
             return this;
         }
 
-        public Builder setGlobalReachEnabled(@Nullable Boolean globalReachEnabled) {
+        public Builder globalReachEnabled(@Nullable Boolean globalReachEnabled) {
             this.globalReachEnabled = Input.ofNullable(globalReachEnabled);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPeerings(@Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings) {
+        public Builder peerings(@Nullable Input<List<ExpressRouteCircuitPeeringArgs>> peerings) {
             this.peerings = peerings;
             return this;
         }
 
-        public Builder setPeerings(@Nullable List<ExpressRouteCircuitPeeringArgs> peerings) {
+        public Builder peerings(@Nullable List<ExpressRouteCircuitPeeringArgs> peerings) {
             this.peerings = Input.ofNullable(peerings);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceKey(@Nullable Input<String> serviceKey) {
+        public Builder serviceKey(@Nullable Input<String> serviceKey) {
             this.serviceKey = serviceKey;
             return this;
         }
 
-        public Builder setServiceKey(@Nullable String serviceKey) {
+        public Builder serviceKey(@Nullable String serviceKey) {
             this.serviceKey = Input.ofNullable(serviceKey);
             return this;
         }
 
-        public Builder setServiceProviderNotes(@Nullable Input<String> serviceProviderNotes) {
+        public Builder serviceProviderNotes(@Nullable Input<String> serviceProviderNotes) {
             this.serviceProviderNotes = serviceProviderNotes;
             return this;
         }
 
-        public Builder setServiceProviderNotes(@Nullable String serviceProviderNotes) {
+        public Builder serviceProviderNotes(@Nullable String serviceProviderNotes) {
             this.serviceProviderNotes = Input.ofNullable(serviceProviderNotes);
             return this;
         }
 
-        public Builder setServiceProviderProperties(@Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
+        public Builder serviceProviderProperties(@Nullable Input<ExpressRouteCircuitServiceProviderPropertiesArgs> serviceProviderProperties) {
             this.serviceProviderProperties = serviceProviderProperties;
             return this;
         }
 
-        public Builder setServiceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
+        public Builder serviceProviderProperties(@Nullable ExpressRouteCircuitServiceProviderPropertiesArgs serviceProviderProperties) {
             this.serviceProviderProperties = Input.ofNullable(serviceProviderProperties);
             return this;
         }
 
-        public Builder setServiceProviderProvisioningState(@Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
+        public Builder serviceProviderProvisioningState(@Nullable Input<Either<String,ServiceProviderProvisioningState>> serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = serviceProviderProvisioningState;
             return this;
         }
 
-        public Builder setServiceProviderProvisioningState(@Nullable Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
+        public Builder serviceProviderProvisioningState(@Nullable Either<String,ServiceProviderProvisioningState> serviceProviderProvisioningState) {
             this.serviceProviderProvisioningState = Input.ofNullable(serviceProviderProvisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<ExpressRouteCircuitSkuArgs> sku) {
+        public Builder sku(@Nullable Input<ExpressRouteCircuitSkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable ExpressRouteCircuitSkuArgs sku) {
+        public Builder sku(@Nullable ExpressRouteCircuitSkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

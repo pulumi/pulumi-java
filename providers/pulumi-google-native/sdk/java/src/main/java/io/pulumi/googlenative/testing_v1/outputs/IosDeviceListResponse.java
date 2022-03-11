@@ -16,8 +16,8 @@ public final class IosDeviceListResponse {
      */
     private final List<IosDeviceResponse> iosDevices;
 
-    @OutputCustomType.Constructor({"iosDevices"})
-    private IosDeviceListResponse(List<IosDeviceResponse> iosDevices) {
+    @OutputCustomType.Constructor
+    private IosDeviceListResponse(@OutputCustomType.Parameter("iosDevices") List<IosDeviceResponse> iosDevices) {
         this.iosDevices = iosDevices;
     }
 
@@ -49,7 +49,7 @@ public final class IosDeviceListResponse {
     	      this.iosDevices = defaults.iosDevices;
         }
 
-        public Builder setIosDevices(List<IosDeviceResponse> iosDevices) {
+        public Builder iosDevices(List<IosDeviceResponse> iosDevices) {
             this.iosDevices = Objects.requireNonNull(iosDevices);
             return this;
         }

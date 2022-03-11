@@ -236,152 +236,152 @@ public final class FlowConnectorOperatorArgs extends io.pulumi.resources.Resourc
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setAmplitude(@Nullable Input<FlowAmplitudeConnectorOperator> amplitude) {
+        public Builder amplitude(@Nullable Input<FlowAmplitudeConnectorOperator> amplitude) {
             this.amplitude = amplitude;
             return this;
         }
 
-        public Builder setAmplitude(@Nullable FlowAmplitudeConnectorOperator amplitude) {
+        public Builder amplitude(@Nullable FlowAmplitudeConnectorOperator amplitude) {
             this.amplitude = Input.ofNullable(amplitude);
             return this;
         }
 
-        public Builder setDatadog(@Nullable Input<FlowDatadogConnectorOperator> datadog) {
+        public Builder datadog(@Nullable Input<FlowDatadogConnectorOperator> datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDatadog(@Nullable FlowDatadogConnectorOperator datadog) {
+        public Builder datadog(@Nullable FlowDatadogConnectorOperator datadog) {
             this.datadog = Input.ofNullable(datadog);
             return this;
         }
 
-        public Builder setDynatrace(@Nullable Input<FlowDynatraceConnectorOperator> dynatrace) {
+        public Builder dynatrace(@Nullable Input<FlowDynatraceConnectorOperator> dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable FlowDynatraceConnectorOperator dynatrace) {
+        public Builder dynatrace(@Nullable FlowDynatraceConnectorOperator dynatrace) {
             this.dynatrace = Input.ofNullable(dynatrace);
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable Input<FlowGoogleAnalyticsConnectorOperator> googleAnalytics) {
+        public Builder googleAnalytics(@Nullable Input<FlowGoogleAnalyticsConnectorOperator> googleAnalytics) {
             this.googleAnalytics = googleAnalytics;
             return this;
         }
 
-        public Builder setGoogleAnalytics(@Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
+        public Builder googleAnalytics(@Nullable FlowGoogleAnalyticsConnectorOperator googleAnalytics) {
             this.googleAnalytics = Input.ofNullable(googleAnalytics);
             return this;
         }
 
-        public Builder setInforNexus(@Nullable Input<FlowInforNexusConnectorOperator> inforNexus) {
+        public Builder inforNexus(@Nullable Input<FlowInforNexusConnectorOperator> inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable FlowInforNexusConnectorOperator inforNexus) {
+        public Builder inforNexus(@Nullable FlowInforNexusConnectorOperator inforNexus) {
             this.inforNexus = Input.ofNullable(inforNexus);
             return this;
         }
 
-        public Builder setMarketo(@Nullable Input<FlowMarketoConnectorOperator> marketo) {
+        public Builder marketo(@Nullable Input<FlowMarketoConnectorOperator> marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setMarketo(@Nullable FlowMarketoConnectorOperator marketo) {
+        public Builder marketo(@Nullable FlowMarketoConnectorOperator marketo) {
             this.marketo = Input.ofNullable(marketo);
             return this;
         }
 
-        public Builder setS3(@Nullable Input<FlowS3ConnectorOperator> s3) {
+        public Builder s3(@Nullable Input<FlowS3ConnectorOperator> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3(@Nullable FlowS3ConnectorOperator s3) {
+        public Builder s3(@Nullable FlowS3ConnectorOperator s3) {
             this.s3 = Input.ofNullable(s3);
             return this;
         }
 
-        public Builder setSAPOData(@Nullable Input<FlowSAPODataConnectorOperator> sAPOData) {
+        public Builder sAPOData(@Nullable Input<FlowSAPODataConnectorOperator> sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable FlowSAPODataConnectorOperator sAPOData) {
+        public Builder sAPOData(@Nullable FlowSAPODataConnectorOperator sAPOData) {
             this.sAPOData = Input.ofNullable(sAPOData);
             return this;
         }
 
-        public Builder setSalesforce(@Nullable Input<FlowSalesforceConnectorOperator> salesforce) {
+        public Builder salesforce(@Nullable Input<FlowSalesforceConnectorOperator> salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable FlowSalesforceConnectorOperator salesforce) {
+        public Builder salesforce(@Nullable FlowSalesforceConnectorOperator salesforce) {
             this.salesforce = Input.ofNullable(salesforce);
             return this;
         }
 
-        public Builder setServiceNow(@Nullable Input<FlowServiceNowConnectorOperator> serviceNow) {
+        public Builder serviceNow(@Nullable Input<FlowServiceNowConnectorOperator> serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable FlowServiceNowConnectorOperator serviceNow) {
+        public Builder serviceNow(@Nullable FlowServiceNowConnectorOperator serviceNow) {
             this.serviceNow = Input.ofNullable(serviceNow);
             return this;
         }
 
-        public Builder setSingular(@Nullable Input<FlowSingularConnectorOperator> singular) {
+        public Builder singular(@Nullable Input<FlowSingularConnectorOperator> singular) {
             this.singular = singular;
             return this;
         }
 
-        public Builder setSingular(@Nullable FlowSingularConnectorOperator singular) {
+        public Builder singular(@Nullable FlowSingularConnectorOperator singular) {
             this.singular = Input.ofNullable(singular);
             return this;
         }
 
-        public Builder setSlack(@Nullable Input<FlowSlackConnectorOperator> slack) {
+        public Builder slack(@Nullable Input<FlowSlackConnectorOperator> slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSlack(@Nullable FlowSlackConnectorOperator slack) {
+        public Builder slack(@Nullable FlowSlackConnectorOperator slack) {
             this.slack = Input.ofNullable(slack);
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable Input<FlowTrendmicroConnectorOperator> trendmicro) {
+        public Builder trendmicro(@Nullable Input<FlowTrendmicroConnectorOperator> trendmicro) {
             this.trendmicro = trendmicro;
             return this;
         }
 
-        public Builder setTrendmicro(@Nullable FlowTrendmicroConnectorOperator trendmicro) {
+        public Builder trendmicro(@Nullable FlowTrendmicroConnectorOperator trendmicro) {
             this.trendmicro = Input.ofNullable(trendmicro);
             return this;
         }
 
-        public Builder setVeeva(@Nullable Input<FlowVeevaConnectorOperator> veeva) {
+        public Builder veeva(@Nullable Input<FlowVeevaConnectorOperator> veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setVeeva(@Nullable FlowVeevaConnectorOperator veeva) {
+        public Builder veeva(@Nullable FlowVeevaConnectorOperator veeva) {
             this.veeva = Input.ofNullable(veeva);
             return this;
         }
 
-        public Builder setZendesk(@Nullable Input<FlowZendeskConnectorOperator> zendesk) {
+        public Builder zendesk(@Nullable Input<FlowZendeskConnectorOperator> zendesk) {
             this.zendesk = zendesk;
             return this;
         }
 
-        public Builder setZendesk(@Nullable FlowZendeskConnectorOperator zendesk) {
+        public Builder zendesk(@Nullable FlowZendeskConnectorOperator zendesk) {
             this.zendesk = Input.ofNullable(zendesk);
             return this;
         }

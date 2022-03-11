@@ -26,11 +26,11 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
      */
     private final String writeDisposition;
 
-    @OutputCustomType.Constructor({"force","tableUri","writeDisposition"})
+    @OutputCustomType.Constructor
     private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse(
-        Boolean force,
-        String tableUri,
-        String writeDisposition) {
+        @OutputCustomType.Parameter("force") Boolean force,
+        @OutputCustomType.Parameter("tableUri") String tableUri,
+        @OutputCustomType.Parameter("writeDisposition") String writeDisposition) {
         this.force = force;
         this.tableUri = tableUri;
         this.writeDisposition = writeDisposition;
@@ -82,17 +82,17 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse 
     	      this.writeDisposition = defaults.writeDisposition;
         }
 
-        public Builder setForce(Boolean force) {
+        public Builder force(Boolean force) {
             this.force = Objects.requireNonNull(force);
             return this;
         }
 
-        public Builder setTableUri(String tableUri) {
+        public Builder tableUri(String tableUri) {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
 
-        public Builder setWriteDisposition(String writeDisposition) {
+        public Builder writeDisposition(String writeDisposition) {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }

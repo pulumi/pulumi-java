@@ -41,13 +41,13 @@ public final class BucketIntelligentTieringConfiguration {
      */
     private final List<BucketTiering> tierings;
 
-    @OutputCustomType.Constructor({"id","prefix","status","tagFilters","tierings"})
+    @OutputCustomType.Constructor
     private BucketIntelligentTieringConfiguration(
-        String id,
-        @Nullable String prefix,
-        BucketIntelligentTieringConfigurationStatus status,
-        @Nullable List<BucketTagFilter> tagFilters,
-        List<BucketTiering> tierings) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("status") BucketIntelligentTieringConfigurationStatus status,
+        @OutputCustomType.Parameter("tagFilters") @Nullable List<BucketTagFilter> tagFilters,
+        @OutputCustomType.Parameter("tierings") List<BucketTiering> tierings) {
         this.id = id;
         this.prefix = prefix;
         this.status = status;
@@ -119,27 +119,27 @@ public final class BucketIntelligentTieringConfiguration {
     	      this.tierings = defaults.tierings;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStatus(BucketIntelligentTieringConfigurationStatus status) {
+        public Builder status(BucketIntelligentTieringConfigurationStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTagFilters(@Nullable List<BucketTagFilter> tagFilters) {
+        public Builder tagFilters(@Nullable List<BucketTagFilter> tagFilters) {
             this.tagFilters = tagFilters;
             return this;
         }
 
-        public Builder setTierings(List<BucketTiering> tierings) {
+        public Builder tierings(List<BucketTiering> tierings) {
             this.tierings = Objects.requireNonNull(tierings);
             return this;
         }

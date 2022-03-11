@@ -15,10 +15,10 @@ public final class GroupTagFilter {
     private final @Nullable String key;
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"key","values"})
+    @OutputCustomType.Constructor
     private GroupTagFilter(
-        @Nullable String key,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.values = values;
     }
@@ -52,12 +52,12 @@ public final class GroupTagFilter {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

@@ -19,8 +19,8 @@ public final class EventHandlerSettingsResponse {
      */
     private final @Nullable Map<String,List<EventHandlerTemplateResponse>> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private EventHandlerSettingsResponse(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
+    @OutputCustomType.Constructor
+    private EventHandlerSettingsResponse(@OutputCustomType.Parameter("items") @Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
         this.items = items;
     }
 
@@ -52,7 +52,7 @@ public final class EventHandlerSettingsResponse {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
+        public Builder items(@Nullable Map<String,List<EventHandlerTemplateResponse>> items) {
             this.items = items;
             return this;
         }

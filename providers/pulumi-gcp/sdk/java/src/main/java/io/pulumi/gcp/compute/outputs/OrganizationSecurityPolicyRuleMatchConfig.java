@@ -31,11 +31,11 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
      */
     private final @Nullable List<String> srcIpRanges;
 
-    @OutputCustomType.Constructor({"destIpRanges","layer4Configs","srcIpRanges"})
+    @OutputCustomType.Constructor
     private OrganizationSecurityPolicyRuleMatchConfig(
-        @Nullable List<String> destIpRanges,
-        List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs,
-        @Nullable List<String> srcIpRanges) {
+        @OutputCustomType.Parameter("destIpRanges") @Nullable List<String> destIpRanges,
+        @OutputCustomType.Parameter("layer4Configs") List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs,
+        @OutputCustomType.Parameter("srcIpRanges") @Nullable List<String> srcIpRanges) {
         this.destIpRanges = destIpRanges;
         this.layer4Configs = layer4Configs;
         this.srcIpRanges = srcIpRanges;
@@ -90,17 +90,17 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
     	      this.srcIpRanges = defaults.srcIpRanges;
         }
 
-        public Builder setDestIpRanges(@Nullable List<String> destIpRanges) {
+        public Builder destIpRanges(@Nullable List<String> destIpRanges) {
             this.destIpRanges = destIpRanges;
             return this;
         }
 
-        public Builder setLayer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs) {
+        public Builder layer4Configs(List<OrganizationSecurityPolicyRuleMatchConfigLayer4Config> layer4Configs) {
             this.layer4Configs = Objects.requireNonNull(layer4Configs);
             return this;
         }
 
-        public Builder setSrcIpRanges(@Nullable List<String> srcIpRanges) {
+        public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
             this.srcIpRanges = srcIpRanges;
             return this;
         }

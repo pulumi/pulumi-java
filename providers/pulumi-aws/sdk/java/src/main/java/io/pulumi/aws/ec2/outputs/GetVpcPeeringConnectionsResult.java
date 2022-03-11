@@ -26,12 +26,12 @@ public final class GetVpcPeeringConnectionsResult {
     private final List<String> ids;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags"})
+    @OutputCustomType.Constructor
     private GetVpcPeeringConnectionsResult(
-        @Nullable List<GetVpcPeeringConnectionsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetVpcPeeringConnectionsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;
@@ -85,22 +85,22 @@ public final class GetVpcPeeringConnectionsResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setFilters(@Nullable List<GetVpcPeeringConnectionsFilter> filters) {
+        public Builder filters(@Nullable List<GetVpcPeeringConnectionsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

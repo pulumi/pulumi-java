@@ -75,22 +75,22 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setDisruptionBudget(@Nullable Input<FixedOrPercentArgs> disruptionBudget) {
+        public Builder disruptionBudget(@Nullable Input<FixedOrPercentArgs> disruptionBudget) {
             this.disruptionBudget = disruptionBudget;
             return this;
         }
 
-        public Builder setDisruptionBudget(@Nullable FixedOrPercentArgs disruptionBudget) {
+        public Builder disruptionBudget(@Nullable FixedOrPercentArgs disruptionBudget) {
             this.disruptionBudget = Input.ofNullable(disruptionBudget);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<PatchRolloutMode> mode) {
+        public Builder mode(@Nullable Input<PatchRolloutMode> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable PatchRolloutMode mode) {
+        public Builder mode(@Nullable PatchRolloutMode mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

@@ -135,62 +135,62 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
     	      this.resourceName = defaults.resourceName;
         }
 
-        public Builder setFabricName(Input<String> fabricName) {
+        public Builder fabricName(Input<String> fabricName) {
             this.fabricName = Objects.requireNonNull(fabricName);
             return this;
         }
 
-        public Builder setFabricName(String fabricName) {
+        public Builder fabricName(String fabricName) {
             this.fabricName = Input.of(Objects.requireNonNull(fabricName));
             return this;
         }
 
-        public Builder setMigrationItemName(@Nullable Input<String> migrationItemName) {
+        public Builder migrationItemName(@Nullable Input<String> migrationItemName) {
             this.migrationItemName = migrationItemName;
             return this;
         }
 
-        public Builder setMigrationItemName(@Nullable String migrationItemName) {
+        public Builder migrationItemName(@Nullable String migrationItemName) {
             this.migrationItemName = Input.ofNullable(migrationItemName);
             return this;
         }
 
-        public Builder setProperties(Input<EnableMigrationInputPropertiesArgs> properties) {
+        public Builder properties(Input<EnableMigrationInputPropertiesArgs> properties) {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
 
-        public Builder setProperties(EnableMigrationInputPropertiesArgs properties) {
+        public Builder properties(EnableMigrationInputPropertiesArgs properties) {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
 
-        public Builder setProtectionContainerName(Input<String> protectionContainerName) {
+        public Builder protectionContainerName(Input<String> protectionContainerName) {
             this.protectionContainerName = Objects.requireNonNull(protectionContainerName);
             return this;
         }
 
-        public Builder setProtectionContainerName(String protectionContainerName) {
+        public Builder protectionContainerName(String protectionContainerName) {
             this.protectionContainerName = Input.of(Objects.requireNonNull(protectionContainerName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }

@@ -40,13 +40,13 @@ public final class BucketLifecycleConfigurationRule {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUpload","expiration","filter","id","status"})
+    @OutputCustomType.Constructor
     private BucketLifecycleConfigurationRule(
-        @Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable BucketLifecycleConfigurationRuleExpiration expiration,
-        @Nullable BucketLifecycleConfigurationRuleFilter filter,
-        String id,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @OutputCustomType.Parameter("expiration") @Nullable BucketLifecycleConfigurationRuleExpiration expiration,
+        @OutputCustomType.Parameter("filter") @Nullable BucketLifecycleConfigurationRuleFilter filter,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expiration = expiration;
         this.filter = filter;
@@ -118,27 +118,27 @@ public final class BucketLifecycleConfigurationRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketLifecycleConfigurationRuleAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setExpiration(@Nullable BucketLifecycleConfigurationRuleExpiration expiration) {
+        public Builder expiration(@Nullable BucketLifecycleConfigurationRuleExpiration expiration) {
             this.expiration = expiration;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketLifecycleConfigurationRuleFilter filter) {
+        public Builder filter(@Nullable BucketLifecycleConfigurationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

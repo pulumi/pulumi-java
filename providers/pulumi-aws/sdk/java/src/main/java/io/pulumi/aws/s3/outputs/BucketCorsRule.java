@@ -39,13 +39,13 @@ public final class BucketCorsRule {
      */
     private final @Nullable Integer maxAgeSeconds;
 
-    @OutputCustomType.Constructor({"allowedHeaders","allowedMethods","allowedOrigins","exposeHeaders","maxAgeSeconds"})
+    @OutputCustomType.Constructor
     private BucketCorsRule(
-        @Nullable List<String> allowedHeaders,
-        List<String> allowedMethods,
-        List<String> allowedOrigins,
-        @Nullable List<String> exposeHeaders,
-        @Nullable Integer maxAgeSeconds) {
+        @OutputCustomType.Parameter("allowedHeaders") @Nullable List<String> allowedHeaders,
+        @OutputCustomType.Parameter("allowedMethods") List<String> allowedMethods,
+        @OutputCustomType.Parameter("allowedOrigins") List<String> allowedOrigins,
+        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds) {
         this.allowedHeaders = allowedHeaders;
         this.allowedMethods = allowedMethods;
         this.allowedOrigins = allowedOrigins;
@@ -117,27 +117,27 @@ public final class BucketCorsRule {
     	      this.maxAgeSeconds = defaults.maxAgeSeconds;
         }
 
-        public Builder setAllowedHeaders(@Nullable List<String> allowedHeaders) {
+        public Builder allowedHeaders(@Nullable List<String> allowedHeaders) {
             this.allowedHeaders = allowedHeaders;
             return this;
         }
 
-        public Builder setAllowedMethods(List<String> allowedMethods) {
+        public Builder allowedMethods(List<String> allowedMethods) {
             this.allowedMethods = Objects.requireNonNull(allowedMethods);
             return this;
         }
 
-        public Builder setAllowedOrigins(List<String> allowedOrigins) {
+        public Builder allowedOrigins(List<String> allowedOrigins) {
             this.allowedOrigins = Objects.requireNonNull(allowedOrigins);
             return this;
         }
 
-        public Builder setExposeHeaders(@Nullable List<String> exposeHeaders) {
+        public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }

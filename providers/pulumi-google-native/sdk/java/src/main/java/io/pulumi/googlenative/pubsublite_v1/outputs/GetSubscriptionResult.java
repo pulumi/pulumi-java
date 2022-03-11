@@ -26,11 +26,11 @@ public final class GetSubscriptionResult {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"deliveryConfig","name","topic"})
+    @OutputCustomType.Constructor
     private GetSubscriptionResult(
-        DeliveryConfigResponse deliveryConfig,
-        String name,
-        String topic) {
+        @OutputCustomType.Parameter("deliveryConfig") DeliveryConfigResponse deliveryConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.deliveryConfig = deliveryConfig;
         this.name = name;
         this.topic = topic;
@@ -82,17 +82,17 @@ public final class GetSubscriptionResult {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setDeliveryConfig(DeliveryConfigResponse deliveryConfig) {
+        public Builder deliveryConfig(DeliveryConfigResponse deliveryConfig) {
             this.deliveryConfig = Objects.requireNonNull(deliveryConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

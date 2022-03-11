@@ -22,10 +22,10 @@ public final class ContainerStateWaiting {
      */
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor({"message","reason"})
+    @OutputCustomType.Constructor
     private ContainerStateWaiting(
-        @Nullable String message,
-        @Nullable String reason) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("reason") @Nullable String reason) {
         this.message = message;
         this.reason = reason;
     }
@@ -67,12 +67,12 @@ public final class ContainerStateWaiting {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }

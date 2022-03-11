@@ -156,72 +156,72 @@ public final class TransferJobTransferSpecGetArgs extends io.pulumi.resources.Re
     	      this.transferOptions = defaults.transferOptions;
         }
 
-        public Builder setAwsS3DataSource(@Nullable Input<TransferJobTransferSpecAwsS3DataSourceGetArgs> awsS3DataSource) {
+        public Builder awsS3DataSource(@Nullable Input<TransferJobTransferSpecAwsS3DataSourceGetArgs> awsS3DataSource) {
             this.awsS3DataSource = awsS3DataSource;
             return this;
         }
 
-        public Builder setAwsS3DataSource(@Nullable TransferJobTransferSpecAwsS3DataSourceGetArgs awsS3DataSource) {
+        public Builder awsS3DataSource(@Nullable TransferJobTransferSpecAwsS3DataSourceGetArgs awsS3DataSource) {
             this.awsS3DataSource = Input.ofNullable(awsS3DataSource);
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(@Nullable Input<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(@Nullable Input<TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs> azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = azureBlobStorageDataSource;
             return this;
         }
 
-        public Builder setAzureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs azureBlobStorageDataSource) {
+        public Builder azureBlobStorageDataSource(@Nullable TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs azureBlobStorageDataSource) {
             this.azureBlobStorageDataSource = Input.ofNullable(azureBlobStorageDataSource);
             return this;
         }
 
-        public Builder setGcsDataSink(@Nullable Input<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink) {
+        public Builder gcsDataSink(@Nullable Input<TransferJobTransferSpecGcsDataSinkGetArgs> gcsDataSink) {
             this.gcsDataSink = gcsDataSink;
             return this;
         }
 
-        public Builder setGcsDataSink(@Nullable TransferJobTransferSpecGcsDataSinkGetArgs gcsDataSink) {
+        public Builder gcsDataSink(@Nullable TransferJobTransferSpecGcsDataSinkGetArgs gcsDataSink) {
             this.gcsDataSink = Input.ofNullable(gcsDataSink);
             return this;
         }
 
-        public Builder setGcsDataSource(@Nullable Input<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource) {
+        public Builder gcsDataSource(@Nullable Input<TransferJobTransferSpecGcsDataSourceGetArgs> gcsDataSource) {
             this.gcsDataSource = gcsDataSource;
             return this;
         }
 
-        public Builder setGcsDataSource(@Nullable TransferJobTransferSpecGcsDataSourceGetArgs gcsDataSource) {
+        public Builder gcsDataSource(@Nullable TransferJobTransferSpecGcsDataSourceGetArgs gcsDataSource) {
             this.gcsDataSource = Input.ofNullable(gcsDataSource);
             return this;
         }
 
-        public Builder setHttpDataSource(@Nullable Input<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource) {
+        public Builder httpDataSource(@Nullable Input<TransferJobTransferSpecHttpDataSourceGetArgs> httpDataSource) {
             this.httpDataSource = httpDataSource;
             return this;
         }
 
-        public Builder setHttpDataSource(@Nullable TransferJobTransferSpecHttpDataSourceGetArgs httpDataSource) {
+        public Builder httpDataSource(@Nullable TransferJobTransferSpecHttpDataSourceGetArgs httpDataSource) {
             this.httpDataSource = Input.ofNullable(httpDataSource);
             return this;
         }
 
-        public Builder setObjectConditions(@Nullable Input<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions) {
+        public Builder objectConditions(@Nullable Input<TransferJobTransferSpecObjectConditionsGetArgs> objectConditions) {
             this.objectConditions = objectConditions;
             return this;
         }
 
-        public Builder setObjectConditions(@Nullable TransferJobTransferSpecObjectConditionsGetArgs objectConditions) {
+        public Builder objectConditions(@Nullable TransferJobTransferSpecObjectConditionsGetArgs objectConditions) {
             this.objectConditions = Input.ofNullable(objectConditions);
             return this;
         }
 
-        public Builder setTransferOptions(@Nullable Input<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions) {
+        public Builder transferOptions(@Nullable Input<TransferJobTransferSpecTransferOptionsGetArgs> transferOptions) {
             this.transferOptions = transferOptions;
             return this;
         }
 
-        public Builder setTransferOptions(@Nullable TransferJobTransferSpecTransferOptionsGetArgs transferOptions) {
+        public Builder transferOptions(@Nullable TransferJobTransferSpecTransferOptionsGetArgs transferOptions) {
             this.transferOptions = Input.ofNullable(transferOptions);
             return this;
         }

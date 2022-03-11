@@ -20,10 +20,10 @@ public final class SortOptionsResponse {
      */
     private final String sortOrder;
 
-    @OutputCustomType.Constructor({"operatorName","sortOrder"})
+    @OutputCustomType.Constructor
     private SortOptionsResponse(
-        String operatorName,
-        String sortOrder) {
+        @OutputCustomType.Parameter("operatorName") String operatorName,
+        @OutputCustomType.Parameter("sortOrder") String sortOrder) {
         this.operatorName = operatorName;
         this.sortOrder = sortOrder;
     }
@@ -65,12 +65,12 @@ public final class SortOptionsResponse {
     	      this.sortOrder = defaults.sortOrder;
         }
 
-        public Builder setOperatorName(String operatorName) {
+        public Builder operatorName(String operatorName) {
             this.operatorName = Objects.requireNonNull(operatorName);
             return this;
         }
 
-        public Builder setSortOrder(String sortOrder) {
+        public Builder sortOrder(String sortOrder) {
             this.sortOrder = Objects.requireNonNull(sortOrder);
             return this;
         }

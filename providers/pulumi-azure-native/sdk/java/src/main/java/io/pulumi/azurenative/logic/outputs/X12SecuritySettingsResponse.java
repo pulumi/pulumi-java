@@ -32,12 +32,12 @@ public final class X12SecuritySettingsResponse {
      */
     private final String securityQualifier;
 
-    @OutputCustomType.Constructor({"authorizationQualifier","authorizationValue","passwordValue","securityQualifier"})
+    @OutputCustomType.Constructor
     private X12SecuritySettingsResponse(
-        String authorizationQualifier,
-        @Nullable String authorizationValue,
-        @Nullable String passwordValue,
-        String securityQualifier) {
+        @OutputCustomType.Parameter("authorizationQualifier") String authorizationQualifier,
+        @OutputCustomType.Parameter("authorizationValue") @Nullable String authorizationValue,
+        @OutputCustomType.Parameter("passwordValue") @Nullable String passwordValue,
+        @OutputCustomType.Parameter("securityQualifier") String securityQualifier) {
         this.authorizationQualifier = authorizationQualifier;
         this.authorizationValue = authorizationValue;
         this.passwordValue = passwordValue;
@@ -99,22 +99,22 @@ public final class X12SecuritySettingsResponse {
     	      this.securityQualifier = defaults.securityQualifier;
         }
 
-        public Builder setAuthorizationQualifier(String authorizationQualifier) {
+        public Builder authorizationQualifier(String authorizationQualifier) {
             this.authorizationQualifier = Objects.requireNonNull(authorizationQualifier);
             return this;
         }
 
-        public Builder setAuthorizationValue(@Nullable String authorizationValue) {
+        public Builder authorizationValue(@Nullable String authorizationValue) {
             this.authorizationValue = authorizationValue;
             return this;
         }
 
-        public Builder setPasswordValue(@Nullable String passwordValue) {
+        public Builder passwordValue(@Nullable String passwordValue) {
             this.passwordValue = passwordValue;
             return this;
         }
 
-        public Builder setSecurityQualifier(String securityQualifier) {
+        public Builder securityQualifier(String securityQualifier) {
             this.securityQualifier = Objects.requireNonNull(securityQualifier);
             return this;
         }

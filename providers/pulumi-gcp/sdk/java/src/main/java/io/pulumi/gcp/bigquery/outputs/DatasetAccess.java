@@ -54,14 +54,14 @@ public final class DatasetAccess {
      */
     private final @Nullable DatasetAccessView view;
 
-    @OutputCustomType.Constructor({"domain","groupByEmail","role","specialGroup","userByEmail","view"})
+    @OutputCustomType.Constructor
     private DatasetAccess(
-        @Nullable String domain,
-        @Nullable String groupByEmail,
-        @Nullable String role,
-        @Nullable String specialGroup,
-        @Nullable String userByEmail,
-        @Nullable DatasetAccessView view) {
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("groupByEmail") @Nullable String groupByEmail,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("specialGroup") @Nullable String specialGroup,
+        @OutputCustomType.Parameter("userByEmail") @Nullable String userByEmail,
+        @OutputCustomType.Parameter("view") @Nullable DatasetAccessView view) {
         this.domain = domain;
         this.groupByEmail = groupByEmail;
         this.role = role;
@@ -154,32 +154,32 @@ public final class DatasetAccess {
     	      this.view = defaults.view;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setGroupByEmail(@Nullable String groupByEmail) {
+        public Builder groupByEmail(@Nullable String groupByEmail) {
             this.groupByEmail = groupByEmail;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setSpecialGroup(@Nullable String specialGroup) {
+        public Builder specialGroup(@Nullable String specialGroup) {
             this.specialGroup = specialGroup;
             return this;
         }
 
-        public Builder setUserByEmail(@Nullable String userByEmail) {
+        public Builder userByEmail(@Nullable String userByEmail) {
             this.userByEmail = userByEmail;
             return this;
         }
 
-        public Builder setView(@Nullable DatasetAccessView view) {
+        public Builder view(@Nullable DatasetAccessView view) {
             this.view = view;
             return this;
         }

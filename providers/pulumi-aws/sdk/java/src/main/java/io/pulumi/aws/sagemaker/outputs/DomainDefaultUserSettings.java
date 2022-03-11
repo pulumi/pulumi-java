@@ -47,14 +47,14 @@ public final class DomainDefaultUserSettings {
      */
     private final @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings;
 
-    @OutputCustomType.Constructor({"executionRole","jupyterServerAppSettings","kernelGatewayAppSettings","securityGroups","sharingSettings","tensorBoardAppSettings"})
+    @OutputCustomType.Constructor
     private DomainDefaultUserSettings(
-        String executionRole,
-        @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
-        @Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
-        @Nullable List<String> securityGroups,
-        @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings,
-        @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
+        @OutputCustomType.Parameter("executionRole") String executionRole,
+        @OutputCustomType.Parameter("jupyterServerAppSettings") @Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings,
+        @OutputCustomType.Parameter("kernelGatewayAppSettings") @Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups,
+        @OutputCustomType.Parameter("sharingSettings") @Nullable DomainDefaultUserSettingsSharingSettings sharingSettings,
+        @OutputCustomType.Parameter("tensorBoardAppSettings") @Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
         this.executionRole = executionRole;
         this.jupyterServerAppSettings = jupyterServerAppSettings;
         this.kernelGatewayAppSettings = kernelGatewayAppSettings;
@@ -136,32 +136,32 @@ public final class DomainDefaultUserSettings {
     	      this.tensorBoardAppSettings = defaults.tensorBoardAppSettings;
         }
 
-        public Builder setExecutionRole(String executionRole) {
+        public Builder executionRole(String executionRole) {
             this.executionRole = Objects.requireNonNull(executionRole);
             return this;
         }
 
-        public Builder setJupyterServerAppSettings(@Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings) {
+        public Builder jupyterServerAppSettings(@Nullable DomainDefaultUserSettingsJupyterServerAppSettings jupyterServerAppSettings) {
             this.jupyterServerAppSettings = jupyterServerAppSettings;
             return this;
         }
 
-        public Builder setKernelGatewayAppSettings(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings) {
+        public Builder kernelGatewayAppSettings(@Nullable DomainDefaultUserSettingsKernelGatewayAppSettings kernelGatewayAppSettings) {
             this.kernelGatewayAppSettings = kernelGatewayAppSettings;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSharingSettings(@Nullable DomainDefaultUserSettingsSharingSettings sharingSettings) {
+        public Builder sharingSettings(@Nullable DomainDefaultUserSettingsSharingSettings sharingSettings) {
             this.sharingSettings = sharingSettings;
             return this;
         }
 
-        public Builder setTensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
+        public Builder tensorBoardAppSettings(@Nullable DomainDefaultUserSettingsTensorBoardAppSettings tensorBoardAppSettings) {
             this.tensorBoardAppSettings = tensorBoardAppSettings;
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetDashboardArgs extends io.pulumi.resources.InvokeArgs {
     	      this.dashboardId = defaults.dashboardId;
         }
 
-        public Builder setDashboardId(String dashboardId) {
+        public Builder dashboardId(String dashboardId) {
             this.dashboardId = Objects.requireNonNull(dashboardId);
             return this;
         }

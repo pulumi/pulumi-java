@@ -42,13 +42,13 @@ public final class GetConnectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticationDetails","hybridComputeSettings","id","name","type"})
+    @OutputCustomType.Constructor
     private GetConnectorResult(
-        @Nullable Object authenticationDetails,
-        @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("authenticationDetails") @Nullable Object authenticationDetails,
+        @OutputCustomType.Parameter("hybridComputeSettings") @Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticationDetails = authenticationDetails;
         this.hybridComputeSettings = hybridComputeSettings;
         this.id = id;
@@ -120,27 +120,27 @@ public final class GetConnectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticationDetails(@Nullable Object authenticationDetails) {
+        public Builder authenticationDetails(@Nullable Object authenticationDetails) {
             this.authenticationDetails = authenticationDetails;
             return this;
         }
 
-        public Builder setHybridComputeSettings(@Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings) {
+        public Builder hybridComputeSettings(@Nullable HybridComputeSettingsPropertiesResponse hybridComputeSettings) {
             this.hybridComputeSettings = hybridComputeSettings;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -34,12 +34,12 @@ public final class OsProfileResponse {
      */
     private final @Nullable LinuxConfigurationResponse linuxConfiguration;
 
-    @OutputCustomType.Constructor({"adminUsername","customData","customDataRequired","linuxConfiguration"})
+    @OutputCustomType.Constructor
     private OsProfileResponse(
-        @Nullable String adminUsername,
-        @Nullable String customData,
-        @Nullable Boolean customDataRequired,
-        @Nullable LinuxConfigurationResponse linuxConfiguration) {
+        @OutputCustomType.Parameter("adminUsername") @Nullable String adminUsername,
+        @OutputCustomType.Parameter("customData") @Nullable String customData,
+        @OutputCustomType.Parameter("customDataRequired") @Nullable Boolean customDataRequired,
+        @OutputCustomType.Parameter("linuxConfiguration") @Nullable LinuxConfigurationResponse linuxConfiguration) {
         this.adminUsername = adminUsername;
         this.customData = customData;
         this.customDataRequired = customDataRequired;
@@ -101,22 +101,22 @@ public final class OsProfileResponse {
     	      this.linuxConfiguration = defaults.linuxConfiguration;
         }
 
-        public Builder setAdminUsername(@Nullable String adminUsername) {
+        public Builder adminUsername(@Nullable String adminUsername) {
             this.adminUsername = adminUsername;
             return this;
         }
 
-        public Builder setCustomData(@Nullable String customData) {
+        public Builder customData(@Nullable String customData) {
             this.customData = customData;
             return this;
         }
 
-        public Builder setCustomDataRequired(@Nullable Boolean customDataRequired) {
+        public Builder customDataRequired(@Nullable Boolean customDataRequired) {
             this.customDataRequired = customDataRequired;
             return this;
         }
 
-        public Builder setLinuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
+        public Builder linuxConfiguration(@Nullable LinuxConfigurationResponse linuxConfiguration) {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }

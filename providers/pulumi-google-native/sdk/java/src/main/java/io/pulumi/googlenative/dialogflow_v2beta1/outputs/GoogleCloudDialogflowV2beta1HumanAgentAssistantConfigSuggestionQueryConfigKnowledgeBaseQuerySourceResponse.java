@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
      */
     private final List<String> knowledgeBases;
 
-    @OutputCustomType.Constructor({"knowledgeBases"})
-    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(List<String> knowledgeBases) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionQueryConfigKnowledgeBaseQuerySourceResponse(@OutputCustomType.Parameter("knowledgeBases") List<String> knowledgeBases) {
         this.knowledgeBases = knowledgeBases;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.knowledgeBases = defaults.knowledgeBases;
         }
 
-        public Builder setKnowledgeBases(List<String> knowledgeBases) {
+        public Builder knowledgeBases(List<String> knowledgeBases) {
             this.knowledgeBases = Objects.requireNonNull(knowledgeBases);
             return this;
         }

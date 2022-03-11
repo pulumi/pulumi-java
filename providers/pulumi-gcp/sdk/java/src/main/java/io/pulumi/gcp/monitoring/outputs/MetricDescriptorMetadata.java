@@ -22,10 +22,10 @@ public final class MetricDescriptorMetadata {
      */
     private final @Nullable String samplePeriod;
 
-    @OutputCustomType.Constructor({"ingestDelay","samplePeriod"})
+    @OutputCustomType.Constructor
     private MetricDescriptorMetadata(
-        @Nullable String ingestDelay,
-        @Nullable String samplePeriod) {
+        @OutputCustomType.Parameter("ingestDelay") @Nullable String ingestDelay,
+        @OutputCustomType.Parameter("samplePeriod") @Nullable String samplePeriod) {
         this.ingestDelay = ingestDelay;
         this.samplePeriod = samplePeriod;
     }
@@ -67,12 +67,12 @@ public final class MetricDescriptorMetadata {
     	      this.samplePeriod = defaults.samplePeriod;
         }
 
-        public Builder setIngestDelay(@Nullable String ingestDelay) {
+        public Builder ingestDelay(@Nullable String ingestDelay) {
             this.ingestDelay = ingestDelay;
             return this;
         }
 
-        public Builder setSamplePeriod(@Nullable String samplePeriod) {
+        public Builder samplePeriod(@Nullable String samplePeriod) {
             this.samplePeriod = samplePeriod;
             return this;
         }

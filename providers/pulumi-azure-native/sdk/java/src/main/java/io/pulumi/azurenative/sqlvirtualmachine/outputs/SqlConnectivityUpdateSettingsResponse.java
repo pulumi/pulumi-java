@@ -23,10 +23,10 @@ public final class SqlConnectivityUpdateSettingsResponse {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"connectivityType","port"})
+    @OutputCustomType.Constructor
     private SqlConnectivityUpdateSettingsResponse(
-        @Nullable String connectivityType,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("connectivityType") @Nullable String connectivityType,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.connectivityType = connectivityType;
         this.port = port;
     }
@@ -68,12 +68,12 @@ public final class SqlConnectivityUpdateSettingsResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setConnectivityType(@Nullable String connectivityType) {
+        public Builder connectivityType(@Nullable String connectivityType) {
             this.connectivityType = connectivityType;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

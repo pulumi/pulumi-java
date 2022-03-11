@@ -108,42 +108,42 @@ public final class GameServerConfigScalingConfigScheduleGetArgs extends io.pulum
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCronJobDuration(@Nullable Input<String> cronJobDuration) {
+        public Builder cronJobDuration(@Nullable Input<String> cronJobDuration) {
             this.cronJobDuration = cronJobDuration;
             return this;
         }
 
-        public Builder setCronJobDuration(@Nullable String cronJobDuration) {
+        public Builder cronJobDuration(@Nullable String cronJobDuration) {
             this.cronJobDuration = Input.ofNullable(cronJobDuration);
             return this;
         }
 
-        public Builder setCronSpec(@Nullable Input<String> cronSpec) {
+        public Builder cronSpec(@Nullable Input<String> cronSpec) {
             this.cronSpec = cronSpec;
             return this;
         }
 
-        public Builder setCronSpec(@Nullable String cronSpec) {
+        public Builder cronSpec(@Nullable String cronSpec) {
             this.cronSpec = Input.ofNullable(cronSpec);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }

@@ -91,22 +91,22 @@ public final class CustomActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"autoUserSpecification","command","dependsOn","description","extendedProperties","folderPath","linkedServiceName","name","policy","referenceObjects","resourceLinkedService","retentionTimeInDays","type","userProperties"})
+    @OutputCustomType.Constructor
     private CustomActivityResponse(
-        @Nullable Object autoUserSpecification,
-        Object command,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable Map<String,Object> extendedProperties,
-        @Nullable Object folderPath,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable CustomActivityReferenceObjectResponse referenceObjects,
-        @Nullable LinkedServiceReferenceResponse resourceLinkedService,
-        @Nullable Object retentionTimeInDays,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("autoUserSpecification") @Nullable Object autoUserSpecification,
+        @OutputCustomType.Parameter("command") Object command,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable Map<String,Object> extendedProperties,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("referenceObjects") @Nullable CustomActivityReferenceObjectResponse referenceObjects,
+        @OutputCustomType.Parameter("resourceLinkedService") @Nullable LinkedServiceReferenceResponse resourceLinkedService,
+        @OutputCustomType.Parameter("retentionTimeInDays") @Nullable Object retentionTimeInDays,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.autoUserSpecification = autoUserSpecification;
         this.command = command;
         this.dependsOn = dependsOn;
@@ -269,72 +269,72 @@ public final class CustomActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setAutoUserSpecification(@Nullable Object autoUserSpecification) {
+        public Builder autoUserSpecification(@Nullable Object autoUserSpecification) {
             this.autoUserSpecification = autoUserSpecification;
             return this;
         }
 
-        public Builder setCommand(Object command) {
+        public Builder command(Object command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Map<String,Object> extendedProperties) {
+        public Builder extendedProperties(@Nullable Map<String,Object> extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setReferenceObjects(@Nullable CustomActivityReferenceObjectResponse referenceObjects) {
+        public Builder referenceObjects(@Nullable CustomActivityReferenceObjectResponse referenceObjects) {
             this.referenceObjects = referenceObjects;
             return this;
         }
 
-        public Builder setResourceLinkedService(@Nullable LinkedServiceReferenceResponse resourceLinkedService) {
+        public Builder resourceLinkedService(@Nullable LinkedServiceReferenceResponse resourceLinkedService) {
             this.resourceLinkedService = resourceLinkedService;
             return this;
         }
 
-        public Builder setRetentionTimeInDays(@Nullable Object retentionTimeInDays) {
+        public Builder retentionTimeInDays(@Nullable Object retentionTimeInDays) {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

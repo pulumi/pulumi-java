@@ -55,7 +55,7 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
     	      this.sasUri = defaults.sasUri;
         }
 
-        public Builder setSasUri(String sasUri) {
+        public Builder sasUri(String sasUri) {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }

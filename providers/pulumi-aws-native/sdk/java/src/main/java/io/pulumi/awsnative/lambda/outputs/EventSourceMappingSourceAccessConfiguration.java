@@ -23,10 +23,10 @@ public final class EventSourceMappingSourceAccessConfiguration {
      */
     private final @Nullable String uRI;
 
-    @OutputCustomType.Constructor({"type","uRI"})
+    @OutputCustomType.Constructor
     private EventSourceMappingSourceAccessConfiguration(
-        @Nullable EventSourceMappingSourceAccessConfigurationType type,
-        @Nullable String uRI) {
+        @OutputCustomType.Parameter("type") @Nullable EventSourceMappingSourceAccessConfigurationType type,
+        @OutputCustomType.Parameter("uRI") @Nullable String uRI) {
         this.type = type;
         this.uRI = uRI;
     }
@@ -68,12 +68,12 @@ public final class EventSourceMappingSourceAccessConfiguration {
     	      this.uRI = defaults.uRI;
         }
 
-        public Builder setType(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
+        public Builder type(@Nullable EventSourceMappingSourceAccessConfigurationType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setURI(@Nullable String uRI) {
+        public Builder uRI(@Nullable String uRI) {
             this.uRI = uRI;
             return this;
         }

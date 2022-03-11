@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse(String value) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseResponse(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1EntityTypeExcludedPhraseRespons
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

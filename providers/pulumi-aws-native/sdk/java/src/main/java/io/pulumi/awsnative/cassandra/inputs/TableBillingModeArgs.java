@@ -63,22 +63,22 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     	      this.provisionedThroughput = defaults.provisionedThroughput;
         }
 
-        public Builder setMode(Input<TableMode> mode) {
+        public Builder mode(Input<TableMode> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(TableMode mode) {
+        public Builder mode(TableMode mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setProvisionedThroughput(@Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput) {
+        public Builder provisionedThroughput(@Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput) {
             this.provisionedThroughput = provisionedThroughput;
             return this;
         }
 
-        public Builder setProvisionedThroughput(@Nullable TableProvisionedThroughputArgs provisionedThroughput) {
+        public Builder provisionedThroughput(@Nullable TableProvisionedThroughputArgs provisionedThroughput) {
             this.provisionedThroughput = Input.ofNullable(provisionedThroughput);
             return this;
         }

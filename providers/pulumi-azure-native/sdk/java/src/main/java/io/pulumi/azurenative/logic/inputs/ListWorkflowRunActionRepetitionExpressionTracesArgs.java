@@ -116,27 +116,27 @@ public final class ListWorkflowRunActionRepetitionExpressionTracesArgs extends i
     	      this.workflowName = defaults.workflowName;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setRepetitionName(String repetitionName) {
+        public Builder repetitionName(String repetitionName) {
             this.repetitionName = Objects.requireNonNull(repetitionName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRunName(String runName) {
+        public Builder runName(String runName) {
             this.runName = Objects.requireNonNull(runName);
             return this;
         }
 
-        public Builder setWorkflowName(String workflowName) {
+        public Builder workflowName(String workflowName) {
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }

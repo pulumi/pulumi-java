@@ -56,17 +56,17 @@ public final class CertificateAttributesResponse {
      */
     private final String validityStartTime;
 
-    @OutputCustomType.Constructor({"certificateTemplate","fingerprint","issuer","serialNumber","subject","thumbprint","validationState","validityExpirationTime","validityStartTime"})
+    @OutputCustomType.Constructor
     private CertificateAttributesResponse(
-        CertificateTemplateResponse certificateTemplate,
-        String fingerprint,
-        String issuer,
-        String serialNumber,
-        String subject,
-        String thumbprint,
-        String validationState,
-        String validityExpirationTime,
-        String validityStartTime) {
+        @OutputCustomType.Parameter("certificateTemplate") CertificateTemplateResponse certificateTemplate,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber,
+        @OutputCustomType.Parameter("subject") String subject,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("validationState") String validationState,
+        @OutputCustomType.Parameter("validityExpirationTime") String validityExpirationTime,
+        @OutputCustomType.Parameter("validityStartTime") String validityStartTime) {
         this.certificateTemplate = certificateTemplate;
         this.fingerprint = fingerprint;
         this.issuer = issuer;
@@ -178,47 +178,47 @@ public final class CertificateAttributesResponse {
     	      this.validityStartTime = defaults.validityStartTime;
         }
 
-        public Builder setCertificateTemplate(CertificateTemplateResponse certificateTemplate) {
+        public Builder certificateTemplate(CertificateTemplateResponse certificateTemplate) {
             this.certificateTemplate = Objects.requireNonNull(certificateTemplate);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
 
-        public Builder setSubject(String subject) {
+        public Builder subject(String subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setValidationState(String validationState) {
+        public Builder validationState(String validationState) {
             this.validationState = Objects.requireNonNull(validationState);
             return this;
         }
 
-        public Builder setValidityExpirationTime(String validityExpirationTime) {
+        public Builder validityExpirationTime(String validityExpirationTime) {
             this.validityExpirationTime = Objects.requireNonNull(validityExpirationTime);
             return this;
         }
 
-        public Builder setValidityStartTime(String validityStartTime) {
+        public Builder validityStartTime(String validityStartTime) {
             this.validityStartTime = Objects.requireNonNull(validityStartTime);
             return this;
         }

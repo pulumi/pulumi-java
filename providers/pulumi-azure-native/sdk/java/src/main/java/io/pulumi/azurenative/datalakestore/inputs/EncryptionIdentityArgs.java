@@ -56,12 +56,12 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     	      this.type = defaults.type;
         }
 
-        public Builder setType(Input<EncryptionIdentityType> type) {
+        public Builder type(Input<EncryptionIdentityType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(EncryptionIdentityType type) {
+        public Builder type(EncryptionIdentityType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

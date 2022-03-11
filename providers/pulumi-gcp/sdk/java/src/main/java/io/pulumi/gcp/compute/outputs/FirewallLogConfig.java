@@ -16,8 +16,8 @@ public final class FirewallLogConfig {
      */
     private final String metadata;
 
-    @OutputCustomType.Constructor({"metadata"})
-    private FirewallLogConfig(String metadata) {
+    @OutputCustomType.Constructor
+    private FirewallLogConfig(@OutputCustomType.Parameter("metadata") String metadata) {
         this.metadata = metadata;
     }
 
@@ -50,7 +50,7 @@ public final class FirewallLogConfig {
     	      this.metadata = defaults.metadata;
         }
 
-        public Builder setMetadata(String metadata) {
+        public Builder metadata(String metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }

@@ -16,12 +16,12 @@ public final class BudgetsActionIamActionDefinition {
     private final @Nullable List<String> roles;
     private final @Nullable List<String> users;
 
-    @OutputCustomType.Constructor({"groups","policyArn","roles","users"})
+    @OutputCustomType.Constructor
     private BudgetsActionIamActionDefinition(
-        @Nullable List<String> groups,
-        String policyArn,
-        @Nullable List<String> roles,
-        @Nullable List<String> users) {
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("policyArn") String policyArn,
+        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
+        @OutputCustomType.Parameter("users") @Nullable List<String> users) {
         this.groups = groups;
         this.policyArn = policyArn;
         this.roles = roles;
@@ -67,22 +67,22 @@ public final class BudgetsActionIamActionDefinition {
     	      this.users = defaults.users;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setPolicyArn(String policyArn) {
+        public Builder policyArn(String policyArn) {
             this.policyArn = Objects.requireNonNull(policyArn);
             return this;
         }
 
-        public Builder setRoles(@Nullable List<String> roles) {
+        public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<String> users) {
+        public Builder users(@Nullable List<String> users) {
             this.users = users;
             return this;
         }

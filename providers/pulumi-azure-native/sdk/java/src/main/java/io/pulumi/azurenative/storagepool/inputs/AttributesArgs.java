@@ -73,22 +73,22 @@ public final class AttributesArgs extends io.pulumi.resources.ResourceArgs {
     	      this.prodModeWriteProtect = defaults.prodModeWriteProtect;
         }
 
-        public Builder setAuthentication(Input<Boolean> authentication) {
+        public Builder authentication(Input<Boolean> authentication) {
             this.authentication = Objects.requireNonNull(authentication);
             return this;
         }
 
-        public Builder setAuthentication(Boolean authentication) {
+        public Builder authentication(Boolean authentication) {
             this.authentication = Input.of(Objects.requireNonNull(authentication));
             return this;
         }
 
-        public Builder setProdModeWriteProtect(Input<Boolean> prodModeWriteProtect) {
+        public Builder prodModeWriteProtect(Input<Boolean> prodModeWriteProtect) {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
 
-        public Builder setProdModeWriteProtect(Boolean prodModeWriteProtect) {
+        public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             this.prodModeWriteProtect = Input.of(Objects.requireNonNull(prodModeWriteProtect));
             return this;
         }

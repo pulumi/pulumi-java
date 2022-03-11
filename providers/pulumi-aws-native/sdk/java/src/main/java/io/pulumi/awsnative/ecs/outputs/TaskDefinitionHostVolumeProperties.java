@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class TaskDefinitionHostVolumeProperties {
     private final @Nullable String sourcePath;
 
-    @OutputCustomType.Constructor({"sourcePath"})
-    private TaskDefinitionHostVolumeProperties(@Nullable String sourcePath) {
+    @OutputCustomType.Constructor
+    private TaskDefinitionHostVolumeProperties(@OutputCustomType.Parameter("sourcePath") @Nullable String sourcePath) {
         this.sourcePath = sourcePath;
     }
 
@@ -42,7 +42,7 @@ public final class TaskDefinitionHostVolumeProperties {
     	      this.sourcePath = defaults.sourcePath;
         }
 
-        public Builder setSourcePath(@Nullable String sourcePath) {
+        public Builder sourcePath(@Nullable String sourcePath) {
             this.sourcePath = sourcePath;
             return this;
         }

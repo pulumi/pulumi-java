@@ -25,11 +25,11 @@ public final class SdkVersionResponse {
      */
     private final String versionDisplayName;
 
-    @OutputCustomType.Constructor({"sdkSupportStatus","version","versionDisplayName"})
+    @OutputCustomType.Constructor
     private SdkVersionResponse(
-        String sdkSupportStatus,
-        String version,
-        String versionDisplayName) {
+        @OutputCustomType.Parameter("sdkSupportStatus") String sdkSupportStatus,
+        @OutputCustomType.Parameter("version") String version,
+        @OutputCustomType.Parameter("versionDisplayName") String versionDisplayName) {
         this.sdkSupportStatus = sdkSupportStatus;
         this.version = version;
         this.versionDisplayName = versionDisplayName;
@@ -81,17 +81,17 @@ public final class SdkVersionResponse {
     	      this.versionDisplayName = defaults.versionDisplayName;
         }
 
-        public Builder setSdkSupportStatus(String sdkSupportStatus) {
+        public Builder sdkSupportStatus(String sdkSupportStatus) {
             this.sdkSupportStatus = Objects.requireNonNull(sdkSupportStatus);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersionDisplayName(String versionDisplayName) {
+        public Builder versionDisplayName(String versionDisplayName) {
             this.versionDisplayName = Objects.requireNonNull(versionDisplayName);
             return this;
         }

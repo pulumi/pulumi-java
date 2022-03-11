@@ -183,47 +183,47 @@ public final class ApiConnectionDefinitionResponseProperties extends io.pulumi.r
     	      this.testLinks = defaults.testLinks;
         }
 
-        public Builder setApi(@Nullable ApiReferenceResponse api) {
+        public Builder api(@Nullable ApiReferenceResponse api) {
             this.api = api;
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCustomParameterValues(@Nullable Map<String,String> customParameterValues) {
+        public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
             this.customParameterValues = customParameterValues;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setNonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
+        public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
             this.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Map<String,String> parameterValues) {
+        public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ConnectionStatusDefinitionResponse> statuses) {
+        public Builder statuses(@Nullable List<ConnectionStatusDefinitionResponse> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setTestLinks(@Nullable List<ApiConnectionTestLinkResponse> testLinks) {
+        public Builder testLinks(@Nullable List<ApiConnectionTestLinkResponse> testLinks) {
             this.testLinks = testLinks;
             return this;
         }

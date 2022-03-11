@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions {
     private final @Nullable String optInHeaders;
 
-    @OutputCustomType.Constructor({"optInHeaders"})
-    private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(@Nullable String optInHeaders) {
+    @OutputCustomType.Constructor
+    private ResourceTypeRegistrationPropertiesResponseRequestHeaderOptions(@OutputCustomType.Parameter("optInHeaders") @Nullable String optInHeaders) {
         this.optInHeaders = optInHeaders;
     }
 
@@ -42,7 +42,7 @@ public final class ResourceTypeRegistrationPropertiesResponseRequestHeaderOption
     	      this.optInHeaders = defaults.optInHeaders;
         }
 
-        public Builder setOptInHeaders(@Nullable String optInHeaders) {
+        public Builder optInHeaders(@Nullable String optInHeaders) {
             this.optInHeaders = optInHeaders;
             return this;
         }

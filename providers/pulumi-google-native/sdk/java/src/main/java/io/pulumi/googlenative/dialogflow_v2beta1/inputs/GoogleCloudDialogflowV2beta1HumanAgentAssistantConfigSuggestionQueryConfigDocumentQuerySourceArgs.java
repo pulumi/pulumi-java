@@ -57,12 +57,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
     	      this.documents = defaults.documents;
         }
 
-        public Builder setDocuments(Input<List<String>> documents) {
+        public Builder documents(Input<List<String>> documents) {
             this.documents = Objects.requireNonNull(documents);
             return this;
         }
 
-        public Builder setDocuments(List<String> documents) {
+        public Builder documents(List<String> documents) {
             this.documents = Input.of(Objects.requireNonNull(documents));
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
     	      this.peerAsnName = defaults.peerAsnName;
         }
 
-        public Builder setPeerAsnName(String peerAsnName) {
+        public Builder peerAsnName(String peerAsnName) {
             this.peerAsnName = Objects.requireNonNull(peerAsnName);
             return this;
         }

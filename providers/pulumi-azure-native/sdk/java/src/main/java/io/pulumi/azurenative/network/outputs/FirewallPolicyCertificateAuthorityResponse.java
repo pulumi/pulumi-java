@@ -22,10 +22,10 @@ public final class FirewallPolicyCertificateAuthorityResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"keyVaultSecretId","name"})
+    @OutputCustomType.Constructor
     private FirewallPolicyCertificateAuthorityResponse(
-        @Nullable String keyVaultSecretId,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("keyVaultSecretId") @Nullable String keyVaultSecretId,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.keyVaultSecretId = keyVaultSecretId;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class FirewallPolicyCertificateAuthorityResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setKeyVaultSecretId(@Nullable String keyVaultSecretId) {
+        public Builder keyVaultSecretId(@Nullable String keyVaultSecretId) {
             this.keyVaultSecretId = keyVaultSecretId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

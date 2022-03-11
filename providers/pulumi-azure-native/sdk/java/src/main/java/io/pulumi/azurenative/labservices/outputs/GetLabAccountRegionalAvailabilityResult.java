@@ -17,8 +17,8 @@ public final class GetLabAccountRegionalAvailabilityResult {
      */
     private final @Nullable List<RegionalAvailabilityResponse> regionalAvailability;
 
-    @OutputCustomType.Constructor({"regionalAvailability"})
-    private GetLabAccountRegionalAvailabilityResult(@Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
+    @OutputCustomType.Constructor
+    private GetLabAccountRegionalAvailabilityResult(@OutputCustomType.Parameter("regionalAvailability") @Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
         this.regionalAvailability = regionalAvailability;
     }
 
@@ -50,7 +50,7 @@ public final class GetLabAccountRegionalAvailabilityResult {
     	      this.regionalAvailability = defaults.regionalAvailability;
         }
 
-        public Builder setRegionalAvailability(@Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
+        public Builder regionalAvailability(@Nullable List<RegionalAvailabilityResponse> regionalAvailability) {
             this.regionalAvailability = regionalAvailability;
             return this;
         }

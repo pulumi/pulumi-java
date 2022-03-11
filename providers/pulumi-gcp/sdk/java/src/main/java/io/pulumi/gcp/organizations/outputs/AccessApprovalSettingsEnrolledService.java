@@ -34,10 +34,10 @@ public final class AccessApprovalSettingsEnrolledService {
      */
     private final @Nullable String enrollmentLevel;
 
-    @OutputCustomType.Constructor({"cloudProduct","enrollmentLevel"})
+    @OutputCustomType.Constructor
     private AccessApprovalSettingsEnrolledService(
-        String cloudProduct,
-        @Nullable String enrollmentLevel) {
+        @OutputCustomType.Parameter("cloudProduct") String cloudProduct,
+        @OutputCustomType.Parameter("enrollmentLevel") @Nullable String enrollmentLevel) {
         this.cloudProduct = cloudProduct;
         this.enrollmentLevel = enrollmentLevel;
     }
@@ -91,12 +91,12 @@ public final class AccessApprovalSettingsEnrolledService {
     	      this.enrollmentLevel = defaults.enrollmentLevel;
         }
 
-        public Builder setCloudProduct(String cloudProduct) {
+        public Builder cloudProduct(String cloudProduct) {
             this.cloudProduct = Objects.requireNonNull(cloudProduct);
             return this;
         }
 
-        public Builder setEnrollmentLevel(@Nullable String enrollmentLevel) {
+        public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }

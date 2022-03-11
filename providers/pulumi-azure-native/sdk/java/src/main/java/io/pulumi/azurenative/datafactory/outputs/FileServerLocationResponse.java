@@ -29,11 +29,11 @@ public final class FileServerLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"fileName","folderPath","type"})
+    @OutputCustomType.Constructor
     private FileServerLocationResponse(
-        @Nullable Object fileName,
-        @Nullable Object folderPath,
-        String type) {
+        @OutputCustomType.Parameter("fileName") @Nullable Object fileName,
+        @OutputCustomType.Parameter("folderPath") @Nullable Object folderPath,
+        @OutputCustomType.Parameter("type") String type) {
         this.fileName = fileName;
         this.folderPath = folderPath;
         this.type = type;
@@ -86,17 +86,17 @@ public final class FileServerLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setFileName(@Nullable Object fileName) {
+        public Builder fileName(@Nullable Object fileName) {
             this.fileName = fileName;
             return this;
         }
 
-        public Builder setFolderPath(@Nullable Object folderPath) {
+        public Builder folderPath(@Nullable Object folderPath) {
             this.folderPath = folderPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

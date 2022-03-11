@@ -74,20 +74,20 @@ public final class CacheUsernameDownloadSettingsResponse {
      */
     private final @Nullable String usernameSource;
 
-    @OutputCustomType.Constructor({"autoDownloadCertificate","caCertificateURI","credentials","encryptLdapConnection","extendedGroups","groupFileURI","ldapBaseDN","ldapServer","requireValidCertificate","userFileURI","usernameDownloaded","usernameSource"})
+    @OutputCustomType.Constructor
     private CacheUsernameDownloadSettingsResponse(
-        @Nullable Boolean autoDownloadCertificate,
-        @Nullable String caCertificateURI,
-        @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
-        @Nullable Boolean encryptLdapConnection,
-        @Nullable Boolean extendedGroups,
-        @Nullable String groupFileURI,
-        @Nullable String ldapBaseDN,
-        @Nullable String ldapServer,
-        @Nullable Boolean requireValidCertificate,
-        @Nullable String userFileURI,
-        String usernameDownloaded,
-        @Nullable String usernameSource) {
+        @OutputCustomType.Parameter("autoDownloadCertificate") @Nullable Boolean autoDownloadCertificate,
+        @OutputCustomType.Parameter("caCertificateURI") @Nullable String caCertificateURI,
+        @OutputCustomType.Parameter("credentials") @Nullable CacheUsernameDownloadSettingsResponseCredentials credentials,
+        @OutputCustomType.Parameter("encryptLdapConnection") @Nullable Boolean encryptLdapConnection,
+        @OutputCustomType.Parameter("extendedGroups") @Nullable Boolean extendedGroups,
+        @OutputCustomType.Parameter("groupFileURI") @Nullable String groupFileURI,
+        @OutputCustomType.Parameter("ldapBaseDN") @Nullable String ldapBaseDN,
+        @OutputCustomType.Parameter("ldapServer") @Nullable String ldapServer,
+        @OutputCustomType.Parameter("requireValidCertificate") @Nullable Boolean requireValidCertificate,
+        @OutputCustomType.Parameter("userFileURI") @Nullable String userFileURI,
+        @OutputCustomType.Parameter("usernameDownloaded") String usernameDownloaded,
+        @OutputCustomType.Parameter("usernameSource") @Nullable String usernameSource) {
         this.autoDownloadCertificate = autoDownloadCertificate;
         this.caCertificateURI = caCertificateURI;
         this.credentials = credentials;
@@ -229,62 +229,62 @@ public final class CacheUsernameDownloadSettingsResponse {
     	      this.usernameSource = defaults.usernameSource;
         }
 
-        public Builder setAutoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
+        public Builder autoDownloadCertificate(@Nullable Boolean autoDownloadCertificate) {
             this.autoDownloadCertificate = autoDownloadCertificate;
             return this;
         }
 
-        public Builder setCaCertificateURI(@Nullable String caCertificateURI) {
+        public Builder caCertificateURI(@Nullable String caCertificateURI) {
             this.caCertificateURI = caCertificateURI;
             return this;
         }
 
-        public Builder setCredentials(@Nullable CacheUsernameDownloadSettingsResponseCredentials credentials) {
+        public Builder credentials(@Nullable CacheUsernameDownloadSettingsResponseCredentials credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setEncryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
+        public Builder encryptLdapConnection(@Nullable Boolean encryptLdapConnection) {
             this.encryptLdapConnection = encryptLdapConnection;
             return this;
         }
 
-        public Builder setExtendedGroups(@Nullable Boolean extendedGroups) {
+        public Builder extendedGroups(@Nullable Boolean extendedGroups) {
             this.extendedGroups = extendedGroups;
             return this;
         }
 
-        public Builder setGroupFileURI(@Nullable String groupFileURI) {
+        public Builder groupFileURI(@Nullable String groupFileURI) {
             this.groupFileURI = groupFileURI;
             return this;
         }
 
-        public Builder setLdapBaseDN(@Nullable String ldapBaseDN) {
+        public Builder ldapBaseDN(@Nullable String ldapBaseDN) {
             this.ldapBaseDN = ldapBaseDN;
             return this;
         }
 
-        public Builder setLdapServer(@Nullable String ldapServer) {
+        public Builder ldapServer(@Nullable String ldapServer) {
             this.ldapServer = ldapServer;
             return this;
         }
 
-        public Builder setRequireValidCertificate(@Nullable Boolean requireValidCertificate) {
+        public Builder requireValidCertificate(@Nullable Boolean requireValidCertificate) {
             this.requireValidCertificate = requireValidCertificate;
             return this;
         }
 
-        public Builder setUserFileURI(@Nullable String userFileURI) {
+        public Builder userFileURI(@Nullable String userFileURI) {
             this.userFileURI = userFileURI;
             return this;
         }
 
-        public Builder setUsernameDownloaded(String usernameDownloaded) {
+        public Builder usernameDownloaded(String usernameDownloaded) {
             this.usernameDownloaded = Objects.requireNonNull(usernameDownloaded);
             return this;
         }
 
-        public Builder setUsernameSource(@Nullable String usernameSource) {
+        public Builder usernameSource(@Nullable String usernameSource) {
             this.usernameSource = usernameSource;
             return this;
         }

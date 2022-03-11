@@ -34,12 +34,12 @@ public final class GetPackagingGroupResult {
      */
     private final @Nullable PackagingGroupLogConfiguration egressAccessLogs;
 
-    @OutputCustomType.Constructor({"arn","authorization","domainName","egressAccessLogs"})
+    @OutputCustomType.Constructor
     private GetPackagingGroupResult(
-        @Nullable String arn,
-        @Nullable PackagingGroupAuthorization authorization,
-        @Nullable String domainName,
-        @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorization") @Nullable PackagingGroupAuthorization authorization,
+        @OutputCustomType.Parameter("domainName") @Nullable String domainName,
+        @OutputCustomType.Parameter("egressAccessLogs") @Nullable PackagingGroupLogConfiguration egressAccessLogs) {
         this.arn = arn;
         this.authorization = authorization;
         this.domainName = domainName;
@@ -101,22 +101,22 @@ public final class GetPackagingGroupResult {
     	      this.egressAccessLogs = defaults.egressAccessLogs;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable PackagingGroupAuthorization authorization) {
+        public Builder authorization(@Nullable PackagingGroupAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable PackagingGroupLogConfiguration egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable PackagingGroupLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }

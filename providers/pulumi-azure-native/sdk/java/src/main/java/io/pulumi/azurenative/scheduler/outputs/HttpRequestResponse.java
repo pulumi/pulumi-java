@@ -42,13 +42,13 @@ public final class HttpRequestResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"authentication","body","headers","method","uri"})
+    @OutputCustomType.Constructor
     private HttpRequestResponse(
-        @Nullable Object authentication,
-        @Nullable String body,
-        @Nullable Map<String,String> headers,
-        @Nullable String method,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("authentication") @Nullable Object authentication,
+        @OutputCustomType.Parameter("body") @Nullable String body,
+        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @OutputCustomType.Parameter("method") @Nullable String method,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.authentication = authentication;
         this.body = body;
         this.headers = headers;
@@ -120,27 +120,27 @@ public final class HttpRequestResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAuthentication(@Nullable Object authentication) {
+        public Builder authentication(@Nullable Object authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setBody(@Nullable String body) {
+        public Builder body(@Nullable String body) {
             this.body = body;
             return this;
         }
 
-        public Builder setHeaders(@Nullable Map<String,String> headers) {
+        public Builder headers(@Nullable Map<String,String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMethod(@Nullable String method) {
+        public Builder method(@Nullable String method) {
             this.method = method;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

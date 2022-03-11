@@ -29,11 +29,11 @@ public final class RouteSpecHttpRouteMatchHeader {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"invert","match","name"})
+    @OutputCustomType.Constructor
     private RouteSpecHttpRouteMatchHeader(
-        @Nullable Boolean invert,
-        @Nullable RouteSpecHttpRouteMatchHeaderMatch match,
-        String name) {
+        @OutputCustomType.Parameter("invert") @Nullable Boolean invert,
+        @OutputCustomType.Parameter("match") @Nullable RouteSpecHttpRouteMatchHeaderMatch match,
+        @OutputCustomType.Parameter("name") String name) {
         this.invert = invert;
         this.match = match;
         this.name = name;
@@ -85,17 +85,17 @@ public final class RouteSpecHttpRouteMatchHeader {
     	      this.name = defaults.name;
         }
 
-        public Builder setInvert(@Nullable Boolean invert) {
+        public Builder invert(@Nullable Boolean invert) {
             this.invert = invert;
             return this;
         }
 
-        public Builder setMatch(@Nullable RouteSpecHttpRouteMatchHeaderMatch match) {
+        public Builder match(@Nullable RouteSpecHttpRouteMatchHeaderMatch match) {
             this.match = match;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

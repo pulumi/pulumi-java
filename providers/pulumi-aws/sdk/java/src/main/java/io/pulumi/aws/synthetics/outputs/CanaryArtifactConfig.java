@@ -17,8 +17,8 @@ public final class CanaryArtifactConfig {
      */
     private final @Nullable CanaryArtifactConfigS3Encryption s3Encryption;
 
-    @OutputCustomType.Constructor({"s3Encryption"})
-    private CanaryArtifactConfig(@Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
+    @OutputCustomType.Constructor
+    private CanaryArtifactConfig(@OutputCustomType.Parameter("s3Encryption") @Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
         this.s3Encryption = s3Encryption;
     }
 
@@ -50,7 +50,7 @@ public final class CanaryArtifactConfig {
     	      this.s3Encryption = defaults.s3Encryption;
         }
 
-        public Builder setS3Encryption(@Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
+        public Builder s3Encryption(@Nullable CanaryArtifactConfigS3Encryption s3Encryption) {
             this.s3Encryption = s3Encryption;
             return this;
         }

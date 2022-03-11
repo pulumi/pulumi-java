@@ -23,10 +23,10 @@ public final class CanaryVisualReference {
      */
     private final @Nullable List<CanaryBaseScreenshot> baseScreenshots;
 
-    @OutputCustomType.Constructor({"baseCanaryRunId","baseScreenshots"})
+    @OutputCustomType.Constructor
     private CanaryVisualReference(
-        String baseCanaryRunId,
-        @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
+        @OutputCustomType.Parameter("baseCanaryRunId") String baseCanaryRunId,
+        @OutputCustomType.Parameter("baseScreenshots") @Nullable List<CanaryBaseScreenshot> baseScreenshots) {
         this.baseCanaryRunId = baseCanaryRunId;
         this.baseScreenshots = baseScreenshots;
     }
@@ -68,12 +68,12 @@ public final class CanaryVisualReference {
     	      this.baseScreenshots = defaults.baseScreenshots;
         }
 
-        public Builder setBaseCanaryRunId(String baseCanaryRunId) {
+        public Builder baseCanaryRunId(String baseCanaryRunId) {
             this.baseCanaryRunId = Objects.requireNonNull(baseCanaryRunId);
             return this;
         }
 
-        public Builder setBaseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
+        public Builder baseScreenshots(@Nullable List<CanaryBaseScreenshot> baseScreenshots) {
             this.baseScreenshots = baseScreenshots;
             return this;
         }

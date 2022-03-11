@@ -35,12 +35,12 @@ public final class ProjectBuildBatchConfig {
      */
     private final @Nullable Integer timeoutInMins;
 
-    @OutputCustomType.Constructor({"combineArtifacts","restrictions","serviceRole","timeoutInMins"})
+    @OutputCustomType.Constructor
     private ProjectBuildBatchConfig(
-        @Nullable Boolean combineArtifacts,
-        @Nullable ProjectBuildBatchConfigRestrictions restrictions,
-        String serviceRole,
-        @Nullable Integer timeoutInMins) {
+        @OutputCustomType.Parameter("combineArtifacts") @Nullable Boolean combineArtifacts,
+        @OutputCustomType.Parameter("restrictions") @Nullable ProjectBuildBatchConfigRestrictions restrictions,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole,
+        @OutputCustomType.Parameter("timeoutInMins") @Nullable Integer timeoutInMins) {
         this.combineArtifacts = combineArtifacts;
         this.restrictions = restrictions;
         this.serviceRole = serviceRole;
@@ -102,22 +102,22 @@ public final class ProjectBuildBatchConfig {
     	      this.timeoutInMins = defaults.timeoutInMins;
         }
 
-        public Builder setCombineArtifacts(@Nullable Boolean combineArtifacts) {
+        public Builder combineArtifacts(@Nullable Boolean combineArtifacts) {
             this.combineArtifacts = combineArtifacts;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable ProjectBuildBatchConfigRestrictions restrictions) {
+        public Builder restrictions(@Nullable ProjectBuildBatchConfigRestrictions restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }
 
-        public Builder setTimeoutInMins(@Nullable Integer timeoutInMins) {
+        public Builder timeoutInMins(@Nullable Integer timeoutInMins) {
             this.timeoutInMins = timeoutInMins;
             return this;
         }

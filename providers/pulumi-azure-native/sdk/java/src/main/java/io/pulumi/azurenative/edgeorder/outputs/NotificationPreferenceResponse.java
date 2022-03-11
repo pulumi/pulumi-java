@@ -21,10 +21,10 @@ public final class NotificationPreferenceResponse {
      */
     private final String stageName;
 
-    @OutputCustomType.Constructor({"sendNotification","stageName"})
+    @OutputCustomType.Constructor
     private NotificationPreferenceResponse(
-        Boolean sendNotification,
-        String stageName) {
+        @OutputCustomType.Parameter("sendNotification") Boolean sendNotification,
+        @OutputCustomType.Parameter("stageName") String stageName) {
         this.sendNotification = sendNotification;
         this.stageName = stageName;
     }
@@ -66,12 +66,12 @@ public final class NotificationPreferenceResponse {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setSendNotification(Boolean sendNotification) {
+        public Builder sendNotification(Boolean sendNotification) {
             this.sendNotification = Objects.requireNonNull(sendNotification);
             return this;
         }
 
-        public Builder setStageName(String stageName) {
+        public Builder stageName(String stageName) {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }

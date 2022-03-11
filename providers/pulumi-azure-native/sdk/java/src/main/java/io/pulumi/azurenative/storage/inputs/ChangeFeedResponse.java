@@ -75,12 +75,12 @@ public final class ChangeFeedResponse extends io.pulumi.resources.InvokeArgs {
     	      this.retentionInDays = defaults.retentionInDays;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setRetentionInDays(@Nullable Integer retentionInDays) {
+        public Builder retentionInDays(@Nullable Integer retentionInDays) {
             this.retentionInDays = retentionInDays;
             return this;
         }

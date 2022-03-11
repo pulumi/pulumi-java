@@ -46,15 +46,15 @@ public final class GetServiceBindingResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","endpointFilter","labels","name","service","updateTime"})
+    @OutputCustomType.Constructor
     private GetServiceBindingResult(
-        String createTime,
-        String description,
-        String endpointFilter,
-        Map<String,String> labels,
-        String name,
-        String service,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endpointFilter") String endpointFilter,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.endpointFilter = endpointFilter;
@@ -146,37 +146,37 @@ public final class GetServiceBindingResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndpointFilter(String endpointFilter) {
+        public Builder endpointFilter(String endpointFilter) {
             this.endpointFilter = Objects.requireNonNull(endpointFilter);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

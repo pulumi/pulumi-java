@@ -44,14 +44,14 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
      */
     private final GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata;
 
-    @OutputCustomType.Constructor({"annotationType","bigquerySource","classificationMetadata","dataType","gcsSource","textMetadata"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1InputConfigResponse(
-        String annotationType,
-        GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
-        GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
-        String dataType,
-        GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
-        GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
+        @OutputCustomType.Parameter("annotationType") String annotationType,
+        @OutputCustomType.Parameter("bigquerySource") GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource,
+        @OutputCustomType.Parameter("classificationMetadata") GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata,
+        @OutputCustomType.Parameter("dataType") String dataType,
+        @OutputCustomType.Parameter("gcsSource") GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource,
+        @OutputCustomType.Parameter("textMetadata") GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
         this.annotationType = annotationType;
         this.bigquerySource = bigquerySource;
         this.classificationMetadata = classificationMetadata;
@@ -133,32 +133,32 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
     	      this.textMetadata = defaults.textMetadata;
         }
 
-        public Builder setAnnotationType(String annotationType) {
+        public Builder annotationType(String annotationType) {
             this.annotationType = Objects.requireNonNull(annotationType);
             return this;
         }
 
-        public Builder setBigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource) {
+        public Builder bigquerySource(GoogleCloudDatalabelingV1beta1BigQuerySourceResponse bigquerySource) {
             this.bigquerySource = Objects.requireNonNull(bigquerySource);
             return this;
         }
 
-        public Builder setClassificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata) {
+        public Builder classificationMetadata(GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse classificationMetadata) {
             this.classificationMetadata = Objects.requireNonNull(classificationMetadata);
             return this;
         }
 
-        public Builder setDataType(String dataType) {
+        public Builder dataType(String dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setGcsSource(GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource) {
+        public Builder gcsSource(GoogleCloudDatalabelingV1beta1GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }
 
-        public Builder setTextMetadata(GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
+        public Builder textMetadata(GoogleCloudDatalabelingV1beta1TextMetadataResponse textMetadata) {
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
         }

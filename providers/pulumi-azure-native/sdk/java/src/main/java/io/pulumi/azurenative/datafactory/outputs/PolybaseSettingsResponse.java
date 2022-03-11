@@ -33,12 +33,12 @@ public final class PolybaseSettingsResponse {
      */
     private final @Nullable Object useTypeDefault;
 
-    @OutputCustomType.Constructor({"rejectSampleValue","rejectType","rejectValue","useTypeDefault"})
+    @OutputCustomType.Constructor
     private PolybaseSettingsResponse(
-        @Nullable Object rejectSampleValue,
-        @Nullable String rejectType,
-        @Nullable Object rejectValue,
-        @Nullable Object useTypeDefault) {
+        @OutputCustomType.Parameter("rejectSampleValue") @Nullable Object rejectSampleValue,
+        @OutputCustomType.Parameter("rejectType") @Nullable String rejectType,
+        @OutputCustomType.Parameter("rejectValue") @Nullable Object rejectValue,
+        @OutputCustomType.Parameter("useTypeDefault") @Nullable Object useTypeDefault) {
         this.rejectSampleValue = rejectSampleValue;
         this.rejectType = rejectType;
         this.rejectValue = rejectValue;
@@ -100,22 +100,22 @@ public final class PolybaseSettingsResponse {
     	      this.useTypeDefault = defaults.useTypeDefault;
         }
 
-        public Builder setRejectSampleValue(@Nullable Object rejectSampleValue) {
+        public Builder rejectSampleValue(@Nullable Object rejectSampleValue) {
             this.rejectSampleValue = rejectSampleValue;
             return this;
         }
 
-        public Builder setRejectType(@Nullable String rejectType) {
+        public Builder rejectType(@Nullable String rejectType) {
             this.rejectType = rejectType;
             return this;
         }
 
-        public Builder setRejectValue(@Nullable Object rejectValue) {
+        public Builder rejectValue(@Nullable Object rejectValue) {
             this.rejectValue = rejectValue;
             return this;
         }
 
-        public Builder setUseTypeDefault(@Nullable Object useTypeDefault) {
+        public Builder useTypeDefault(@Nullable Object useTypeDefault) {
             this.useTypeDefault = useTypeDefault;
             return this;
         }

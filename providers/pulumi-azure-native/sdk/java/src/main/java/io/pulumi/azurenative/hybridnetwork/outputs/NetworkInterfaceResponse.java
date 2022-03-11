@@ -34,12 +34,12 @@ public final class NetworkInterfaceResponse {
      */
     private final @Nullable String vmSwitchType;
 
-    @OutputCustomType.Constructor({"ipConfigurations","macAddress","networkInterfaceName","vmSwitchType"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResponse(
-        @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
-        @Nullable String macAddress,
-        @Nullable String networkInterfaceName,
-        @Nullable String vmSwitchType) {
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations,
+        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
+        @OutputCustomType.Parameter("networkInterfaceName") @Nullable String networkInterfaceName,
+        @OutputCustomType.Parameter("vmSwitchType") @Nullable String vmSwitchType) {
         this.ipConfigurations = ipConfigurations;
         this.macAddress = macAddress;
         this.networkInterfaceName = networkInterfaceName;
@@ -101,22 +101,22 @@ public final class NetworkInterfaceResponse {
     	      this.vmSwitchType = defaults.vmSwitchType;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NetworkInterfaceIPConfigurationResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setNetworkInterfaceName(@Nullable String networkInterfaceName) {
+        public Builder networkInterfaceName(@Nullable String networkInterfaceName) {
             this.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
-        public Builder setVmSwitchType(@Nullable String vmSwitchType) {
+        public Builder vmSwitchType(@Nullable String vmSwitchType) {
             this.vmSwitchType = vmSwitchType;
             return this;
         }

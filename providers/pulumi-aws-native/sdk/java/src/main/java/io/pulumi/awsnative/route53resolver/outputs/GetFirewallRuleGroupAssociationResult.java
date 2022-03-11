@@ -77,20 +77,20 @@ public final class GetFirewallRuleGroupAssociationResult {
      */
     private final @Nullable List<FirewallRuleGroupAssociationTag> tags;
 
-    @OutputCustomType.Constructor({"arn","creationTime","creatorRequestId","id","managedOwnerName","modificationTime","mutationProtection","name","priority","status","statusMessage","tags"})
+    @OutputCustomType.Constructor
     private GetFirewallRuleGroupAssociationResult(
-        @Nullable String arn,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable String id,
-        @Nullable String managedOwnerName,
-        @Nullable String modificationTime,
-        @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable FirewallRuleGroupAssociationStatus status,
-        @Nullable String statusMessage,
-        @Nullable List<FirewallRuleGroupAssociationTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("managedOwnerName") @Nullable String managedOwnerName,
+        @OutputCustomType.Parameter("modificationTime") @Nullable String modificationTime,
+        @OutputCustomType.Parameter("mutationProtection") @Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("status") @Nullable FirewallRuleGroupAssociationStatus status,
+        @OutputCustomType.Parameter("statusMessage") @Nullable String statusMessage,
+        @OutputCustomType.Parameter("tags") @Nullable List<FirewallRuleGroupAssociationTag> tags) {
         this.arn = arn;
         this.creationTime = creationTime;
         this.creatorRequestId = creatorRequestId;
@@ -232,62 +232,62 @@ public final class GetFirewallRuleGroupAssociationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreatorRequestId(@Nullable String creatorRequestId) {
+        public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setManagedOwnerName(@Nullable String managedOwnerName) {
+        public Builder managedOwnerName(@Nullable String managedOwnerName) {
             this.managedOwnerName = managedOwnerName;
             return this;
         }
 
-        public Builder setModificationTime(@Nullable String modificationTime) {
+        public Builder modificationTime(@Nullable String modificationTime) {
             this.modificationTime = modificationTime;
             return this;
         }
 
-        public Builder setMutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
+        public Builder mutationProtection(@Nullable FirewallRuleGroupAssociationMutationProtection mutationProtection) {
             this.mutationProtection = mutationProtection;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setStatus(@Nullable FirewallRuleGroupAssociationStatus status) {
+        public Builder status(@Nullable FirewallRuleGroupAssociationStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatusMessage(@Nullable String statusMessage) {
+        public Builder statusMessage(@Nullable String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FirewallRuleGroupAssociationTag> tags) {
+        public Builder tags(@Nullable List<FirewallRuleGroupAssociationTag> tags) {
             this.tags = tags;
             return this;
         }

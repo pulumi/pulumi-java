@@ -89,22 +89,22 @@ public final class GetFactoryResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"createTime","eTag","encryption","globalParameters","id","identity","location","name","provisioningState","publicNetworkAccess","repoConfiguration","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetFactoryResult(
-        String createTime,
-        String eTag,
-        @Nullable EncryptionConfigurationResponse encryption,
-        @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
-        String id,
-        @Nullable FactoryIdentityResponse identity,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("eTag") String eTag,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionConfigurationResponse encryption,
+        @OutputCustomType.Parameter("globalParameters") @Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable FactoryIdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("repoConfiguration") @Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.eTag = eTag;
         this.encryption = encryption;
@@ -266,72 +266,72 @@ public final class GetFactoryResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setETag(String eTag) {
+        public Builder eTag(String eTag) {
             this.eTag = Objects.requireNonNull(eTag);
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionConfigurationResponse encryption) {
+        public Builder encryption(@Nullable EncryptionConfigurationResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setGlobalParameters(@Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters) {
+        public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationResponse> globalParameters) {
             this.globalParameters = globalParameters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable FactoryIdentityResponse identity) {
+        public Builder identity(@Nullable FactoryIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setRepoConfiguration(@Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration) {
+        public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationResponse,FactoryVSTSConfigurationResponse> repoConfiguration) {
             this.repoConfiguration = repoConfiguration;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

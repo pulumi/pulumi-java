@@ -56,12 +56,12 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
     	      this.daysAfterCreationGreaterThan = defaults.daysAfterCreationGreaterThan;
         }
 
-        public Builder setDaysAfterCreationGreaterThan(Input<Double> daysAfterCreationGreaterThan) {
+        public Builder daysAfterCreationGreaterThan(Input<Double> daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Objects.requireNonNull(daysAfterCreationGreaterThan);
             return this;
         }
 
-        public Builder setDaysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
+        public Builder daysAfterCreationGreaterThan(Double daysAfterCreationGreaterThan) {
             this.daysAfterCreationGreaterThan = Input.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
             return this;
         }

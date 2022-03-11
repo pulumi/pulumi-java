@@ -19,12 +19,12 @@ public final class StudioComponentConfiguration {
     private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
     private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
-    @OutputCustomType.Constructor({"activeDirectoryConfiguration","computeFarmConfiguration","licenseServiceConfiguration","sharedFileSystemConfiguration"})
+    @OutputCustomType.Constructor
     private StudioComponentConfiguration(
-        @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
-        @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
-        @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
-        @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
+        @OutputCustomType.Parameter("activeDirectoryConfiguration") @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration,
+        @OutputCustomType.Parameter("computeFarmConfiguration") @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration,
+        @OutputCustomType.Parameter("licenseServiceConfiguration") @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration,
+        @OutputCustomType.Parameter("sharedFileSystemConfiguration") @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
         this.activeDirectoryConfiguration = activeDirectoryConfiguration;
         this.computeFarmConfiguration = computeFarmConfiguration;
         this.licenseServiceConfiguration = licenseServiceConfiguration;
@@ -70,22 +70,22 @@ public final class StudioComponentConfiguration {
     	      this.sharedFileSystemConfiguration = defaults.sharedFileSystemConfiguration;
         }
 
-        public Builder setActiveDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration) {
+        public Builder activeDirectoryConfiguration(@Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration) {
             this.activeDirectoryConfiguration = activeDirectoryConfiguration;
             return this;
         }
 
-        public Builder setComputeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
+        public Builder computeFarmConfiguration(@Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration) {
             this.computeFarmConfiguration = computeFarmConfiguration;
             return this;
         }
 
-        public Builder setLicenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
+        public Builder licenseServiceConfiguration(@Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration) {
             this.licenseServiceConfiguration = licenseServiceConfiguration;
             return this;
         }
 
-        public Builder setSharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
+        public Builder sharedFileSystemConfiguration(@Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration) {
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }

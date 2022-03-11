@@ -54,16 +54,16 @@ public final class GetServerTlsPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"allowOpen","createTime","description","labels","mtlsPolicy","name","serverCertificate","updateTime"})
+    @OutputCustomType.Constructor
     private GetServerTlsPolicyResult(
-        Boolean allowOpen,
-        String createTime,
-        String description,
-        Map<String,String> labels,
-        MTLSPolicyResponse mtlsPolicy,
-        String name,
-        GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate,
-        String updateTime) {
+        @OutputCustomType.Parameter("allowOpen") Boolean allowOpen,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mtlsPolicy") MTLSPolicyResponse mtlsPolicy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverCertificate") GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.allowOpen = allowOpen;
         this.createTime = createTime;
         this.description = description;
@@ -165,42 +165,42 @@ public final class GetServerTlsPolicyResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAllowOpen(Boolean allowOpen) {
+        public Builder allowOpen(Boolean allowOpen) {
             this.allowOpen = Objects.requireNonNull(allowOpen);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMtlsPolicy(MTLSPolicyResponse mtlsPolicy) {
+        public Builder mtlsPolicy(MTLSPolicyResponse mtlsPolicy) {
             this.mtlsPolicy = Objects.requireNonNull(mtlsPolicy);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServerCertificate(GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate) {
+        public Builder serverCertificate(GoogleCloudNetworksecurityV1beta1CertificateProviderResponse serverCertificate) {
             this.serverCertificate = Objects.requireNonNull(serverCertificate);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -78,16 +78,16 @@ public final class ServiceTemplateMetadata {
      */
     private final @Nullable String uid;
 
-    @OutputCustomType.Constructor({"annotations","generation","labels","name","namespace","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private ServiceTemplateMetadata(
-        @Nullable Map<String,String> annotations,
-        @Nullable Integer generation,
-        @Nullable Map<String,String> labels,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String resourceVersion,
-        @Nullable String selfLink,
-        @Nullable String uid) {
+        @OutputCustomType.Parameter("annotations") @Nullable Map<String,String> annotations,
+        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
+        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resourceVersion") @Nullable String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
+        @OutputCustomType.Parameter("uid") @Nullable String uid) {
         this.annotations = annotations;
         this.generation = generation;
         this.labels = labels;
@@ -213,42 +213,42 @@ public final class ServiceTemplateMetadata {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(@Nullable Map<String,String> annotations) {
+        public Builder annotations(@Nullable Map<String,String> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setSelfLink(@Nullable String selfLink) {
+        public Builder selfLink(@Nullable String selfLink) {
             this.selfLink = selfLink;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }

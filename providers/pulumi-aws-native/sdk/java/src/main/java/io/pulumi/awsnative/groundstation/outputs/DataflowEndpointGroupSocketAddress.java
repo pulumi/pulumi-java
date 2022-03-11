@@ -15,10 +15,10 @@ public final class DataflowEndpointGroupSocketAddress {
     private final @Nullable String name;
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","port"})
+    @OutputCustomType.Constructor
     private DataflowEndpointGroupSocketAddress(
-        @Nullable String name,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.port = port;
     }
@@ -52,12 +52,12 @@ public final class DataflowEndpointGroupSocketAddress {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

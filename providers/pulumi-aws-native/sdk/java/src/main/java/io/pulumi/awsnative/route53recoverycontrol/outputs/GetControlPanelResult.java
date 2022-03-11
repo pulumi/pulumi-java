@@ -40,13 +40,13 @@ public final class GetControlPanelResult {
      */
     private final @Nullable ControlPanelStatus status;
 
-    @OutputCustomType.Constructor({"controlPanelArn","defaultControlPanel","name","routingControlCount","status"})
+    @OutputCustomType.Constructor
     private GetControlPanelResult(
-        @Nullable String controlPanelArn,
-        @Nullable Boolean defaultControlPanel,
-        @Nullable String name,
-        @Nullable Integer routingControlCount,
-        @Nullable ControlPanelStatus status) {
+        @OutputCustomType.Parameter("controlPanelArn") @Nullable String controlPanelArn,
+        @OutputCustomType.Parameter("defaultControlPanel") @Nullable Boolean defaultControlPanel,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("routingControlCount") @Nullable Integer routingControlCount,
+        @OutputCustomType.Parameter("status") @Nullable ControlPanelStatus status) {
         this.controlPanelArn = controlPanelArn;
         this.defaultControlPanel = defaultControlPanel;
         this.name = name;
@@ -118,27 +118,27 @@ public final class GetControlPanelResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setControlPanelArn(@Nullable String controlPanelArn) {
+        public Builder controlPanelArn(@Nullable String controlPanelArn) {
             this.controlPanelArn = controlPanelArn;
             return this;
         }
 
-        public Builder setDefaultControlPanel(@Nullable Boolean defaultControlPanel) {
+        public Builder defaultControlPanel(@Nullable Boolean defaultControlPanel) {
             this.defaultControlPanel = defaultControlPanel;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoutingControlCount(@Nullable Integer routingControlCount) {
+        public Builder routingControlCount(@Nullable Integer routingControlCount) {
             this.routingControlCount = routingControlCount;
             return this;
         }
 
-        public Builder setStatus(@Nullable ControlPanelStatus status) {
+        public Builder status(@Nullable ControlPanelStatus status) {
             this.status = status;
             return this;
         }

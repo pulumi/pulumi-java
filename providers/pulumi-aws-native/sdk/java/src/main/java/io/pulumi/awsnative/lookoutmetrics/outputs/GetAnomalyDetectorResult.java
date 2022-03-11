@@ -36,13 +36,13 @@ public final class GetAnomalyDetectorResult {
      */
     private final @Nullable List<AnomalyDetectorMetricSet> metricSetList;
 
-    @OutputCustomType.Constructor({"anomalyDetectorConfig","anomalyDetectorDescription","arn","kmsKeyArn","metricSetList"})
+    @OutputCustomType.Constructor
     private GetAnomalyDetectorResult(
-        @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
-        @Nullable String anomalyDetectorDescription,
-        @Nullable String arn,
-        @Nullable String kmsKeyArn,
-        @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
+        @OutputCustomType.Parameter("anomalyDetectorConfig") @Nullable AnomalyDetectorConfig anomalyDetectorConfig,
+        @OutputCustomType.Parameter("anomalyDetectorDescription") @Nullable String anomalyDetectorDescription,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("metricSetList") @Nullable List<AnomalyDetectorMetricSet> metricSetList) {
         this.anomalyDetectorConfig = anomalyDetectorConfig;
         this.anomalyDetectorDescription = anomalyDetectorDescription;
         this.arn = arn;
@@ -110,27 +110,27 @@ public final class GetAnomalyDetectorResult {
     	      this.metricSetList = defaults.metricSetList;
         }
 
-        public Builder setAnomalyDetectorConfig(@Nullable AnomalyDetectorConfig anomalyDetectorConfig) {
+        public Builder anomalyDetectorConfig(@Nullable AnomalyDetectorConfig anomalyDetectorConfig) {
             this.anomalyDetectorConfig = anomalyDetectorConfig;
             return this;
         }
 
-        public Builder setAnomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
+        public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
             this.anomalyDetectorDescription = anomalyDetectorDescription;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setMetricSetList(@Nullable List<AnomalyDetectorMetricSet> metricSetList) {
+        public Builder metricSetList(@Nullable List<AnomalyDetectorMetricSet> metricSetList) {
             this.metricSetList = metricSetList;
             return this;
         }

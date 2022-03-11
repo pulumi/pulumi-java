@@ -161,82 +161,82 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setInlinePolicy(@Nullable Input<Object> inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Input<Object> inlinePolicy) {
             this.inlinePolicy = inlinePolicy;
             return this;
         }
 
-        public Builder setInlinePolicy(@Nullable Object inlinePolicy) {
+        public Builder inlinePolicy(@Nullable Object inlinePolicy) {
             this.inlinePolicy = Input.ofNullable(inlinePolicy);
             return this;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setManagedPolicies(@Nullable Input<List<String>> managedPolicies) {
+        public Builder managedPolicies(@Nullable Input<List<String>> managedPolicies) {
             this.managedPolicies = managedPolicies;
             return this;
         }
 
-        public Builder setManagedPolicies(@Nullable List<String> managedPolicies) {
+        public Builder managedPolicies(@Nullable List<String> managedPolicies) {
             this.managedPolicies = Input.ofNullable(managedPolicies);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRelayStateType(@Nullable Input<String> relayStateType) {
+        public Builder relayStateType(@Nullable Input<String> relayStateType) {
             this.relayStateType = relayStateType;
             return this;
         }
 
-        public Builder setRelayStateType(@Nullable String relayStateType) {
+        public Builder relayStateType(@Nullable String relayStateType) {
             this.relayStateType = Input.ofNullable(relayStateType);
             return this;
         }
 
-        public Builder setSessionDuration(@Nullable Input<String> sessionDuration) {
+        public Builder sessionDuration(@Nullable Input<String> sessionDuration) {
             this.sessionDuration = sessionDuration;
             return this;
         }
 
-        public Builder setSessionDuration(@Nullable String sessionDuration) {
+        public Builder sessionDuration(@Nullable String sessionDuration) {
             this.sessionDuration = Input.ofNullable(sessionDuration);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<PermissionSetTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<PermissionSetTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PermissionSetTagArgs> tags) {
+        public Builder tags(@Nullable List<PermissionSetTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

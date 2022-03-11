@@ -36,13 +36,13 @@ public final class ClusterPropertiesResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"capacityAllocated","capacityAssigned","clusterId","createdDate","provisioningState"})
+    @OutputCustomType.Constructor
     private ClusterPropertiesResponse(
-        Integer capacityAllocated,
-        Integer capacityAssigned,
-        String clusterId,
-        String createdDate,
-        String provisioningState) {
+        @OutputCustomType.Parameter("capacityAllocated") Integer capacityAllocated,
+        @OutputCustomType.Parameter("capacityAssigned") Integer capacityAssigned,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.capacityAllocated = capacityAllocated;
         this.capacityAssigned = capacityAssigned;
         this.clusterId = clusterId;
@@ -114,27 +114,27 @@ public final class ClusterPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setCapacityAllocated(Integer capacityAllocated) {
+        public Builder capacityAllocated(Integer capacityAllocated) {
             this.capacityAllocated = Objects.requireNonNull(capacityAllocated);
             return this;
         }
 
-        public Builder setCapacityAssigned(Integer capacityAssigned) {
+        public Builder capacityAssigned(Integer capacityAssigned) {
             this.capacityAssigned = Objects.requireNonNull(capacityAssigned);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

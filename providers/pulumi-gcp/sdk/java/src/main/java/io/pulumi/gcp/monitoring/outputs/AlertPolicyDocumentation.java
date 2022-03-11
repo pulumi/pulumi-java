@@ -26,10 +26,10 @@ public final class AlertPolicyDocumentation {
      */
     private final @Nullable String mimeType;
 
-    @OutputCustomType.Constructor({"content","mimeType"})
+    @OutputCustomType.Constructor
     private AlertPolicyDocumentation(
-        @Nullable String content,
-        @Nullable String mimeType) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("mimeType") @Nullable String mimeType) {
         this.content = content;
         this.mimeType = mimeType;
     }
@@ -75,12 +75,12 @@ public final class AlertPolicyDocumentation {
     	      this.mimeType = defaults.mimeType;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = mimeType;
             return this;
         }

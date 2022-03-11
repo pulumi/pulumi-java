@@ -52,16 +52,16 @@ public final class GetApiVersionSetResult {
      */
     private final String versioningScheme;
 
-    @OutputCustomType.Constructor({"description","displayName","id","name","type","versionHeaderName","versionQueryName","versioningScheme"})
+    @OutputCustomType.Constructor
     private GetApiVersionSetResult(
-        @Nullable String description,
-        String displayName,
-        String id,
-        String name,
-        String type,
-        @Nullable String versionHeaderName,
-        @Nullable String versionQueryName,
-        String versioningScheme) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("versionHeaderName") @Nullable String versionHeaderName,
+        @OutputCustomType.Parameter("versionQueryName") @Nullable String versionQueryName,
+        @OutputCustomType.Parameter("versioningScheme") String versioningScheme) {
         this.description = description;
         this.displayName = displayName;
         this.id = id;
@@ -163,42 +163,42 @@ public final class GetApiVersionSetResult {
     	      this.versioningScheme = defaults.versioningScheme;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersionHeaderName(@Nullable String versionHeaderName) {
+        public Builder versionHeaderName(@Nullable String versionHeaderName) {
             this.versionHeaderName = versionHeaderName;
             return this;
         }
 
-        public Builder setVersionQueryName(@Nullable String versionQueryName) {
+        public Builder versionQueryName(@Nullable String versionQueryName) {
             this.versionQueryName = versionQueryName;
             return this;
         }
 
-        public Builder setVersioningScheme(String versioningScheme) {
+        public Builder versioningScheme(String versioningScheme) {
             this.versioningScheme = Objects.requireNonNull(versioningScheme);
             return this;
         }

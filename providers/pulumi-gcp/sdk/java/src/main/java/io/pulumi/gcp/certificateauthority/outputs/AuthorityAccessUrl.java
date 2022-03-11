@@ -15,10 +15,10 @@ public final class AuthorityAccessUrl {
     private final @Nullable String caCertificateAccessUrl;
     private final @Nullable List<String> crlAccessUrls;
 
-    @OutputCustomType.Constructor({"caCertificateAccessUrl","crlAccessUrls"})
+    @OutputCustomType.Constructor
     private AuthorityAccessUrl(
-        @Nullable String caCertificateAccessUrl,
-        @Nullable List<String> crlAccessUrls) {
+        @OutputCustomType.Parameter("caCertificateAccessUrl") @Nullable String caCertificateAccessUrl,
+        @OutputCustomType.Parameter("crlAccessUrls") @Nullable List<String> crlAccessUrls) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrls = crlAccessUrls;
     }
@@ -52,12 +52,12 @@ public final class AuthorityAccessUrl {
     	      this.crlAccessUrls = defaults.crlAccessUrls;
         }
 
-        public Builder setCaCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
+        public Builder caCertificateAccessUrl(@Nullable String caCertificateAccessUrl) {
             this.caCertificateAccessUrl = caCertificateAccessUrl;
             return this;
         }
 
-        public Builder setCrlAccessUrls(@Nullable List<String> crlAccessUrls) {
+        public Builder crlAccessUrls(@Nullable List<String> crlAccessUrls) {
             this.crlAccessUrls = crlAccessUrls;
             return this;
         }

@@ -47,15 +47,15 @@ public final class GetServerKeyResult {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"creationDate","id","kind","name","serverKeyType","type","uri"})
+    @OutputCustomType.Constructor
     private GetServerKeyResult(
-        String creationDate,
-        String id,
-        String kind,
-        String name,
-        String serverKeyType,
-        String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serverKeyType") String serverKeyType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;
@@ -147,37 +147,37 @@ public final class GetServerKeyResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServerKeyType(String serverKeyType) {
+        public Builder serverKeyType(String serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

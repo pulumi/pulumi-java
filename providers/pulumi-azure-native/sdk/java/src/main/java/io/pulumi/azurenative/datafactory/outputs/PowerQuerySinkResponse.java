@@ -50,15 +50,15 @@ public final class PowerQuerySinkResponse {
      */
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name","schemaLinkedService","script"})
+    @OutputCustomType.Constructor
     private PowerQuerySinkResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name,
-        @Nullable LinkedServiceReferenceResponse schemaLinkedService,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("schemaLinkedService") @Nullable LinkedServiceReferenceResponse schemaLinkedService,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;
@@ -150,37 +150,37 @@ public final class PowerQuerySinkResponse {
     	      this.script = defaults.script;
         }
 
-        public Builder setDataset(@Nullable DatasetReferenceResponse dataset) {
+        public Builder dataset(@Nullable DatasetReferenceResponse dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFlowlet(@Nullable DataFlowReferenceResponse flowlet) {
+        public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
 
-        public Builder setLinkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
+        public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSchemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
+        public Builder schemaLinkedService(@Nullable LinkedServiceReferenceResponse schemaLinkedService) {
             this.schemaLinkedService = schemaLinkedService;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

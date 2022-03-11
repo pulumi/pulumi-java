@@ -15,10 +15,10 @@ public final class ServicePlacementStrategy {
     private final @Nullable String field;
     private final ServicePlacementStrategyType type;
 
-    @OutputCustomType.Constructor({"field","type"})
+    @OutputCustomType.Constructor
     private ServicePlacementStrategy(
-        @Nullable String field,
-        ServicePlacementStrategyType type) {
+        @OutputCustomType.Parameter("field") @Nullable String field,
+        @OutputCustomType.Parameter("type") ServicePlacementStrategyType type) {
         this.field = field;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class ServicePlacementStrategy {
     	      this.type = defaults.type;
         }
 
-        public Builder setField(@Nullable String field) {
+        public Builder field(@Nullable String field) {
             this.field = field;
             return this;
         }
 
-        public Builder setType(ServicePlacementStrategyType type) {
+        public Builder type(ServicePlacementStrategyType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

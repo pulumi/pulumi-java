@@ -93,32 +93,32 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
     	      this.ruleId = defaults.ruleId;
         }
 
-        public Builder setAction(@Nullable Input<Either<String,ActionType>> action) {
+        public Builder action(@Nullable Input<Either<String,ActionType>> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable Either<String,ActionType> action) {
+        public Builder action(@Nullable Either<String,ActionType> action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Input<Either<String,ManagedRuleEnabledState>> enabledState) {
+        public Builder enabledState(@Nullable Input<Either<String,ManagedRuleEnabledState>> enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
+        public Builder enabledState(@Nullable Either<String,ManagedRuleEnabledState> enabledState) {
             this.enabledState = Input.ofNullable(enabledState);
             return this;
         }
 
-        public Builder setRuleId(Input<String> ruleId) {
+        public Builder ruleId(Input<String> ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Input.of(Objects.requireNonNull(ruleId));
             return this;
         }

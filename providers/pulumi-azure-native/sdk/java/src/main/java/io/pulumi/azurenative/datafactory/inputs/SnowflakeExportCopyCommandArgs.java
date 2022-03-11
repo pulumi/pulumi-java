@@ -93,32 +93,32 @@ public final class SnowflakeExportCopyCommandArgs extends io.pulumi.resources.Re
     	      this.type = defaults.type;
         }
 
-        public Builder setAdditionalCopyOptions(@Nullable Input<Map<String,Object>> additionalCopyOptions) {
+        public Builder additionalCopyOptions(@Nullable Input<Map<String,Object>> additionalCopyOptions) {
             this.additionalCopyOptions = additionalCopyOptions;
             return this;
         }
 
-        public Builder setAdditionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
+        public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
             this.additionalCopyOptions = Input.ofNullable(additionalCopyOptions);
             return this;
         }
 
-        public Builder setAdditionalFormatOptions(@Nullable Input<Map<String,Object>> additionalFormatOptions) {
+        public Builder additionalFormatOptions(@Nullable Input<Map<String,Object>> additionalFormatOptions) {
             this.additionalFormatOptions = additionalFormatOptions;
             return this;
         }
 
-        public Builder setAdditionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
+        public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
             this.additionalFormatOptions = Input.ofNullable(additionalFormatOptions);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

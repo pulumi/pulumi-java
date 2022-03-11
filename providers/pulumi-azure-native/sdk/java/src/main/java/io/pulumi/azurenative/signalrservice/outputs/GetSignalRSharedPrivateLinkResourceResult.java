@@ -58,17 +58,17 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"groupId","id","name","privateLinkResourceId","provisioningState","requestMessage","status","systemData","type"})
+    @OutputCustomType.Constructor
     private GetSignalRSharedPrivateLinkResourceResult(
-        String groupId,
-        String id,
-        String name,
-        String privateLinkResourceId,
-        String provisioningState,
-        @Nullable String requestMessage,
-        String status,
-        SystemDataResponse systemData,
-        String type) {
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateLinkResourceId") String privateLinkResourceId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("requestMessage") @Nullable String requestMessage,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type) {
         this.groupId = groupId;
         this.id = id;
         this.name = name;
@@ -180,47 +180,47 @@ public final class GetSignalRSharedPrivateLinkResourceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateLinkResourceId(String privateLinkResourceId) {
+        public Builder privateLinkResourceId(String privateLinkResourceId) {
             this.privateLinkResourceId = Objects.requireNonNull(privateLinkResourceId);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRequestMessage(@Nullable String requestMessage) {
+        public Builder requestMessage(@Nullable String requestMessage) {
             this.requestMessage = requestMessage;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

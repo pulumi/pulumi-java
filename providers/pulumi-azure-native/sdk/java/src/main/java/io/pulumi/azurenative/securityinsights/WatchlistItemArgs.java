@@ -265,142 +265,142 @@ public final class WatchlistItemArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setCreated(@Nullable Input<String> created) {
+        public Builder created(@Nullable Input<String> created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = Input.ofNullable(created);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable Input<WatchlistUserInfoArgs> createdBy) {
+        public Builder createdBy(@Nullable Input<WatchlistUserInfoArgs> createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable WatchlistUserInfoArgs createdBy) {
+        public Builder createdBy(@Nullable WatchlistUserInfoArgs createdBy) {
             this.createdBy = Input.ofNullable(createdBy);
             return this;
         }
 
-        public Builder setEntityMapping(@Nullable Input<Object> entityMapping) {
+        public Builder entityMapping(@Nullable Input<Object> entityMapping) {
             this.entityMapping = entityMapping;
             return this;
         }
 
-        public Builder setEntityMapping(@Nullable Object entityMapping) {
+        public Builder entityMapping(@Nullable Object entityMapping) {
             this.entityMapping = Input.ofNullable(entityMapping);
             return this;
         }
 
-        public Builder setIsDeleted(@Nullable Input<Boolean> isDeleted) {
+        public Builder isDeleted(@Nullable Input<Boolean> isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
 
-        public Builder setIsDeleted(@Nullable Boolean isDeleted) {
+        public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = Input.ofNullable(isDeleted);
             return this;
         }
 
-        public Builder setItemsKeyValue(Input<Object> itemsKeyValue) {
+        public Builder itemsKeyValue(Input<Object> itemsKeyValue) {
             this.itemsKeyValue = Objects.requireNonNull(itemsKeyValue);
             return this;
         }
 
-        public Builder setItemsKeyValue(Object itemsKeyValue) {
+        public Builder itemsKeyValue(Object itemsKeyValue) {
             this.itemsKeyValue = Input.of(Objects.requireNonNull(itemsKeyValue));
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(Input<String> operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Objects.requireNonNull(operationalInsightsResourceProvider);
             return this;
         }
 
-        public Builder setOperationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
+        public Builder operationalInsightsResourceProvider(String operationalInsightsResourceProvider) {
             this.operationalInsightsResourceProvider = Input.of(Objects.requireNonNull(operationalInsightsResourceProvider));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTenantId(@Nullable Input<String> tenantId) {
+        public Builder tenantId(@Nullable Input<String> tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
 
-        public Builder setUpdated(@Nullable Input<String> updated) {
+        public Builder updated(@Nullable Input<String> updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = Input.ofNullable(updated);
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable Input<WatchlistUserInfoArgs> updatedBy) {
+        public Builder updatedBy(@Nullable Input<WatchlistUserInfoArgs> updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
+        public Builder updatedBy(@Nullable WatchlistUserInfoArgs updatedBy) {
             this.updatedBy = Input.ofNullable(updatedBy);
             return this;
         }
 
-        public Builder setWatchlistAlias(Input<String> watchlistAlias) {
+        public Builder watchlistAlias(Input<String> watchlistAlias) {
             this.watchlistAlias = Objects.requireNonNull(watchlistAlias);
             return this;
         }
 
-        public Builder setWatchlistAlias(String watchlistAlias) {
+        public Builder watchlistAlias(String watchlistAlias) {
             this.watchlistAlias = Input.of(Objects.requireNonNull(watchlistAlias));
             return this;
         }
 
-        public Builder setWatchlistItemId(@Nullable Input<String> watchlistItemId) {
+        public Builder watchlistItemId(@Nullable Input<String> watchlistItemId) {
             this.watchlistItemId = watchlistItemId;
             return this;
         }
 
-        public Builder setWatchlistItemId(@Nullable String watchlistItemId) {
+        public Builder watchlistItemId(@Nullable String watchlistItemId) {
             this.watchlistItemId = Input.ofNullable(watchlistItemId);
             return this;
         }
 
-        public Builder setWatchlistItemType(@Nullable Input<String> watchlistItemType) {
+        public Builder watchlistItemType(@Nullable Input<String> watchlistItemType) {
             this.watchlistItemType = watchlistItemType;
             return this;
         }
 
-        public Builder setWatchlistItemType(@Nullable String watchlistItemType) {
+        public Builder watchlistItemType(@Nullable String watchlistItemType) {
             this.watchlistItemType = Input.ofNullable(watchlistItemType);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

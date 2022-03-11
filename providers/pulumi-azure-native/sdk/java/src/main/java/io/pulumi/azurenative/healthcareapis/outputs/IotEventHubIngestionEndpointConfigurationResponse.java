@@ -27,11 +27,11 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
      */
     private final @Nullable String fullyQualifiedEventHubNamespace;
 
-    @OutputCustomType.Constructor({"consumerGroup","eventHubName","fullyQualifiedEventHubNamespace"})
+    @OutputCustomType.Constructor
     private IotEventHubIngestionEndpointConfigurationResponse(
-        @Nullable String consumerGroup,
-        @Nullable String eventHubName,
-        @Nullable String fullyQualifiedEventHubNamespace) {
+        @OutputCustomType.Parameter("consumerGroup") @Nullable String consumerGroup,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("fullyQualifiedEventHubNamespace") @Nullable String fullyQualifiedEventHubNamespace) {
         this.consumerGroup = consumerGroup;
         this.eventHubName = eventHubName;
         this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
@@ -83,17 +83,17 @@ public final class IotEventHubIngestionEndpointConfigurationResponse {
     	      this.fullyQualifiedEventHubNamespace = defaults.fullyQualifiedEventHubNamespace;
         }
 
-        public Builder setConsumerGroup(@Nullable String consumerGroup) {
+        public Builder consumerGroup(@Nullable String consumerGroup) {
             this.consumerGroup = consumerGroup;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setFullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
+        public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
             this.fullyQualifiedEventHubNamespace = fullyQualifiedEventHubNamespace;
             return this;
         }

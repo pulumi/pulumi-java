@@ -93,22 +93,22 @@ public final class AccessPointObjectLambdaConfiguration extends io.pulumi.resour
     	      this.transformationConfigurations = defaults.transformationConfigurations;
         }
 
-        public Builder setAllowedFeatures(@Nullable List<String> allowedFeatures) {
+        public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
             this.allowedFeatures = allowedFeatures;
             return this;
         }
 
-        public Builder setCloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
+        public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
             this.cloudWatchMetricsEnabled = cloudWatchMetricsEnabled;
             return this;
         }
 
-        public Builder setSupportingAccessPoint(String supportingAccessPoint) {
+        public Builder supportingAccessPoint(String supportingAccessPoint) {
             this.supportingAccessPoint = Objects.requireNonNull(supportingAccessPoint);
             return this;
         }
 
-        public Builder setTransformationConfigurations(List<AccessPointTransformationConfiguration> transformationConfigurations) {
+        public Builder transformationConfigurations(List<AccessPointTransformationConfiguration> transformationConfigurations) {
             this.transformationConfigurations = Objects.requireNonNull(transformationConfigurations);
             return this;
         }

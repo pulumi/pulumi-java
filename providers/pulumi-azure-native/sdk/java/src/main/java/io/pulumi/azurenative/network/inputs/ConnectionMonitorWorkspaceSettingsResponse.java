@@ -57,7 +57,7 @@ public final class ConnectionMonitorWorkspaceSettingsResponse extends io.pulumi.
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setWorkspaceResourceId(@Nullable String workspaceResourceId) {
+        public Builder workspaceResourceId(@Nullable String workspaceResourceId) {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }

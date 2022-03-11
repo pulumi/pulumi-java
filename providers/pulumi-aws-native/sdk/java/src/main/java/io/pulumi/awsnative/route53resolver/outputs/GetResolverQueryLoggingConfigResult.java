@@ -55,16 +55,16 @@ public final class GetResolverQueryLoggingConfigResult {
      */
     private final @Nullable ResolverQueryLoggingConfigStatus status;
 
-    @OutputCustomType.Constructor({"arn","associationCount","creationTime","creatorRequestId","id","ownerId","shareStatus","status"})
+    @OutputCustomType.Constructor
     private GetResolverQueryLoggingConfigResult(
-        @Nullable String arn,
-        @Nullable Integer associationCount,
-        @Nullable String creationTime,
-        @Nullable String creatorRequestId,
-        @Nullable String id,
-        @Nullable String ownerId,
-        @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
-        @Nullable ResolverQueryLoggingConfigStatus status) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("associationCount") @Nullable Integer associationCount,
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("creatorRequestId") @Nullable String creatorRequestId,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId,
+        @OutputCustomType.Parameter("shareStatus") @Nullable ResolverQueryLoggingConfigShareStatus shareStatus,
+        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigStatus status) {
         this.arn = arn;
         this.associationCount = associationCount;
         this.creationTime = creationTime;
@@ -166,42 +166,42 @@ public final class GetResolverQueryLoggingConfigResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssociationCount(@Nullable Integer associationCount) {
+        public Builder associationCount(@Nullable Integer associationCount) {
             this.associationCount = associationCount;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreatorRequestId(@Nullable String creatorRequestId) {
+        public Builder creatorRequestId(@Nullable String creatorRequestId) {
             this.creatorRequestId = creatorRequestId;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }
 
-        public Builder setShareStatus(@Nullable ResolverQueryLoggingConfigShareStatus shareStatus) {
+        public Builder shareStatus(@Nullable ResolverQueryLoggingConfigShareStatus shareStatus) {
             this.shareStatus = shareStatus;
             return this;
         }
 
-        public Builder setStatus(@Nullable ResolverQueryLoggingConfigStatus status) {
+        public Builder status(@Nullable ResolverQueryLoggingConfigStatus status) {
             this.status = status;
             return this;
         }

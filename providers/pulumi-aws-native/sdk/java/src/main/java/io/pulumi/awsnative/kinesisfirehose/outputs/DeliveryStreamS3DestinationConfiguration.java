@@ -24,16 +24,16 @@ public final class DeliveryStreamS3DestinationConfiguration {
     private final @Nullable String prefix;
     private final String roleARN;
 
-    @OutputCustomType.Constructor({"bucketARN","bufferingHints","cloudWatchLoggingOptions","compressionFormat","encryptionConfiguration","errorOutputPrefix","prefix","roleARN"})
+    @OutputCustomType.Constructor
     private DeliveryStreamS3DestinationConfiguration(
-        String bucketARN,
-        @Nullable DeliveryStreamBufferingHints bufferingHints,
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
-        @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
-        @Nullable String errorOutputPrefix,
-        @Nullable String prefix,
-        String roleARN) {
+        @OutputCustomType.Parameter("bucketARN") String bucketARN,
+        @OutputCustomType.Parameter("bufferingHints") @Nullable DeliveryStreamBufferingHints bufferingHints,
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat,
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("roleARN") String roleARN) {
         this.bucketARN = bucketARN;
         this.bufferingHints = bufferingHints;
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
@@ -103,42 +103,42 @@ public final class DeliveryStreamS3DestinationConfiguration {
     	      this.roleARN = defaults.roleARN;
         }
 
-        public Builder setBucketARN(String bucketARN) {
+        public Builder bucketARN(String bucketARN) {
             this.bucketARN = Objects.requireNonNull(bucketARN);
             return this;
         }
 
-        public Builder setBufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
+        public Builder bufferingHints(@Nullable DeliveryStreamBufferingHints bufferingHints) {
             this.bufferingHints = bufferingHints;
             return this;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
+        public Builder compressionFormat(@Nullable DeliveryStreamS3DestinationConfigurationCompressionFormat compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }

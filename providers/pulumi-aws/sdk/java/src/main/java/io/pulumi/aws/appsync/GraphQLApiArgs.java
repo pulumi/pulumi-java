@@ -206,102 +206,102 @@ public final class GraphQLApiArgs extends io.pulumi.resources.ResourceArgs {
     	      this.xrayEnabled = defaults.xrayEnabled;
         }
 
-        public Builder setAdditionalAuthenticationProviders(@Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders) {
+        public Builder additionalAuthenticationProviders(@Nullable Input<List<GraphQLApiAdditionalAuthenticationProviderArgs>> additionalAuthenticationProviders) {
             this.additionalAuthenticationProviders = additionalAuthenticationProviders;
             return this;
         }
 
-        public Builder setAdditionalAuthenticationProviders(@Nullable List<GraphQLApiAdditionalAuthenticationProviderArgs> additionalAuthenticationProviders) {
+        public Builder additionalAuthenticationProviders(@Nullable List<GraphQLApiAdditionalAuthenticationProviderArgs> additionalAuthenticationProviders) {
             this.additionalAuthenticationProviders = Input.ofNullable(additionalAuthenticationProviders);
             return this;
         }
 
-        public Builder setAuthenticationType(Input<String> authenticationType) {
+        public Builder authenticationType(Input<String> authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Input.of(Objects.requireNonNull(authenticationType));
             return this;
         }
 
-        public Builder setLambdaAuthorizerConfig(@Nullable Input<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable Input<GraphQLApiLambdaAuthorizerConfigArgs> lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = lambdaAuthorizerConfig;
             return this;
         }
 
-        public Builder setLambdaAuthorizerConfig(@Nullable GraphQLApiLambdaAuthorizerConfigArgs lambdaAuthorizerConfig) {
+        public Builder lambdaAuthorizerConfig(@Nullable GraphQLApiLambdaAuthorizerConfigArgs lambdaAuthorizerConfig) {
             this.lambdaAuthorizerConfig = Input.ofNullable(lambdaAuthorizerConfig);
             return this;
         }
 
-        public Builder setLogConfig(@Nullable Input<GraphQLApiLogConfigArgs> logConfig) {
+        public Builder logConfig(@Nullable Input<GraphQLApiLogConfigArgs> logConfig) {
             this.logConfig = logConfig;
             return this;
         }
 
-        public Builder setLogConfig(@Nullable GraphQLApiLogConfigArgs logConfig) {
+        public Builder logConfig(@Nullable GraphQLApiLogConfigArgs logConfig) {
             this.logConfig = Input.ofNullable(logConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOpenidConnectConfig(@Nullable Input<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable Input<GraphQLApiOpenidConnectConfigArgs> openidConnectConfig) {
             this.openidConnectConfig = openidConnectConfig;
             return this;
         }
 
-        public Builder setOpenidConnectConfig(@Nullable GraphQLApiOpenidConnectConfigArgs openidConnectConfig) {
+        public Builder openidConnectConfig(@Nullable GraphQLApiOpenidConnectConfigArgs openidConnectConfig) {
             this.openidConnectConfig = Input.ofNullable(openidConnectConfig);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUserPoolConfig(@Nullable Input<GraphQLApiUserPoolConfigArgs> userPoolConfig) {
+        public Builder userPoolConfig(@Nullable Input<GraphQLApiUserPoolConfigArgs> userPoolConfig) {
             this.userPoolConfig = userPoolConfig;
             return this;
         }
 
-        public Builder setUserPoolConfig(@Nullable GraphQLApiUserPoolConfigArgs userPoolConfig) {
+        public Builder userPoolConfig(@Nullable GraphQLApiUserPoolConfigArgs userPoolConfig) {
             this.userPoolConfig = Input.ofNullable(userPoolConfig);
             return this;
         }
 
-        public Builder setXrayEnabled(@Nullable Input<Boolean> xrayEnabled) {
+        public Builder xrayEnabled(@Nullable Input<Boolean> xrayEnabled) {
             this.xrayEnabled = xrayEnabled;
             return this;
         }
 
-        public Builder setXrayEnabled(@Nullable Boolean xrayEnabled) {
+        public Builder xrayEnabled(@Nullable Boolean xrayEnabled) {
             this.xrayEnabled = Input.ofNullable(xrayEnabled);
             return this;
         }

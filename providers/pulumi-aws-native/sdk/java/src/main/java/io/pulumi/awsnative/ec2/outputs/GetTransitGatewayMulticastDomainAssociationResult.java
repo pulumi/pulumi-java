@@ -27,11 +27,11 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"resourceId","resourceType","state"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayMulticastDomainAssociationResult(
-        @Nullable String resourceId,
-        @Nullable String resourceType,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.resourceId = resourceId;
         this.resourceType = resourceType;
         this.state = state;
@@ -83,17 +83,17 @@ public final class GetTransitGatewayMulticastDomainAssociationResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -18,14 +18,14 @@ public final class RuleGroupHeader {
     private final String source;
     private final String sourcePort;
 
-    @OutputCustomType.Constructor({"destination","destinationPort","direction","protocol","source","sourcePort"})
+    @OutputCustomType.Constructor
     private RuleGroupHeader(
-        String destination,
-        String destinationPort,
-        RuleGroupHeaderDirection direction,
-        RuleGroupHeaderProtocol protocol,
-        String source,
-        String sourcePort) {
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("destinationPort") String destinationPort,
+        @OutputCustomType.Parameter("direction") RuleGroupHeaderDirection direction,
+        @OutputCustomType.Parameter("protocol") RuleGroupHeaderProtocol protocol,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("sourcePort") String sourcePort) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.direction = direction;
@@ -83,32 +83,32 @@ public final class RuleGroupHeader {
     	      this.sourcePort = defaults.sourcePort;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestinationPort(String destinationPort) {
+        public Builder destinationPort(String destinationPort) {
             this.destinationPort = Objects.requireNonNull(destinationPort);
             return this;
         }
 
-        public Builder setDirection(RuleGroupHeaderDirection direction) {
+        public Builder direction(RuleGroupHeaderDirection direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setProtocol(RuleGroupHeaderProtocol protocol) {
+        public Builder protocol(RuleGroupHeaderProtocol protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSourcePort(String sourcePort) {
+        public Builder sourcePort(String sourcePort) {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }

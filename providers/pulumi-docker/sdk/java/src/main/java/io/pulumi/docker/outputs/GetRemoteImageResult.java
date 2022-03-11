@@ -17,11 +17,11 @@ public final class GetRemoteImageResult {
     private final String name;
     private final String repoDigest;
 
-    @OutputCustomType.Constructor({"id","name","repoDigest"})
+    @OutputCustomType.Constructor
     private GetRemoteImageResult(
-        String id,
-        String name,
-        String repoDigest) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("repoDigest") String repoDigest) {
         this.id = id;
         this.name = name;
         this.repoDigest = repoDigest;
@@ -65,17 +65,17 @@ public final class GetRemoteImageResult {
     	      this.repoDigest = defaults.repoDigest;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRepoDigest(String repoDigest) {
+        public Builder repoDigest(String repoDigest) {
             this.repoDigest = Objects.requireNonNull(repoDigest);
             return this;
         }

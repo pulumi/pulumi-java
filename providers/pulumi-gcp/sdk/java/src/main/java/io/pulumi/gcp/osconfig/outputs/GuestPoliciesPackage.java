@@ -42,11 +42,11 @@ public final class GuestPoliciesPackage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"desiredState","manager","name"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackage(
-        @Nullable String desiredState,
-        @Nullable String manager,
-        String name) {
+        @OutputCustomType.Parameter("desiredState") @Nullable String desiredState,
+        @OutputCustomType.Parameter("manager") @Nullable String manager,
+        @OutputCustomType.Parameter("name") String name) {
         this.desiredState = desiredState;
         this.manager = manager;
         this.name = name;
@@ -113,17 +113,17 @@ public final class GuestPoliciesPackage {
     	      this.name = defaults.name;
         }
 
-        public Builder setDesiredState(@Nullable String desiredState) {
+        public Builder desiredState(@Nullable String desiredState) {
             this.desiredState = desiredState;
             return this;
         }
 
-        public Builder setManager(@Nullable String manager) {
+        public Builder manager(@Nullable String manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

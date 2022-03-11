@@ -19,11 +19,11 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     private final String path;
     private final List<GetBackendServiceConsistentHashHttpCookyTtl> ttls;
 
-    @OutputCustomType.Constructor({"name","path","ttls"})
+    @OutputCustomType.Constructor
     private GetBackendServiceConsistentHashHttpCooky(
-        String name,
-        String path,
-        List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("ttls") List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
         this.name = name;
         this.path = path;
         this.ttls = ttls;
@@ -67,17 +67,17 @@ public final class GetBackendServiceConsistentHashHttpCooky {
     	      this.ttls = defaults.ttls;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTtls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
+        public Builder ttls(List<GetBackendServiceConsistentHashHttpCookyTtl> ttls) {
             this.ttls = Objects.requireNonNull(ttls);
             return this;
         }

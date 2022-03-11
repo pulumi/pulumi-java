@@ -18,12 +18,12 @@ public final class NetworkIpamConfig {
     private final @Nullable String ipRange;
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor({"auxAddress","gateway","ipRange","subnet"})
+    @OutputCustomType.Constructor
     private NetworkIpamConfig(
-        @Nullable Map<String,Object> auxAddress,
-        @Nullable String gateway,
-        @Nullable String ipRange,
-        @Nullable String subnet) {
+        @OutputCustomType.Parameter("auxAddress") @Nullable Map<String,Object> auxAddress,
+        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
+        @OutputCustomType.Parameter("ipRange") @Nullable String ipRange,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
         this.auxAddress = auxAddress;
         this.gateway = gateway;
         this.ipRange = ipRange;
@@ -69,22 +69,22 @@ public final class NetworkIpamConfig {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setAuxAddress(@Nullable Map<String,Object> auxAddress) {
+        public Builder auxAddress(@Nullable Map<String,Object> auxAddress) {
             this.auxAddress = auxAddress;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpRange(@Nullable String ipRange) {
+        public Builder ipRange(@Nullable String ipRange) {
             this.ipRange = ipRange;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }

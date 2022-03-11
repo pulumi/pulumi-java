@@ -84,17 +84,17 @@ public final class GetRosettaNetProcessConfigurationArgs extends io.pulumi.resou
     	      this.rosettaNetProcessConfigurationName = defaults.rosettaNetProcessConfigurationName;
         }
 
-        public Builder setIntegrationAccountName(String integrationAccountName) {
+        public Builder integrationAccountName(String integrationAccountName) {
             this.integrationAccountName = Objects.requireNonNull(integrationAccountName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setRosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
+        public Builder rosettaNetProcessConfigurationName(String rosettaNetProcessConfigurationName) {
             this.rosettaNetProcessConfigurationName = Objects.requireNonNull(rosettaNetProcessConfigurationName);
             return this;
         }

@@ -248,132 +248,132 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoResolveBestVoicesEnabled(@Nullable Input<Boolean> autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(@Nullable Input<Boolean> autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = autoResolveBestVoicesEnabled;
             return this;
         }
 
-        public Builder setAutoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
+        public Builder autoResolveBestVoicesEnabled(@Nullable Boolean autoResolveBestVoicesEnabled) {
             this.autoResolveBestVoicesEnabled = Input.ofNullable(autoResolveBestVoicesEnabled);
             return this;
         }
 
-        public Builder setContactFlowLogsEnabled(@Nullable Input<Boolean> contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(@Nullable Input<Boolean> contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = contactFlowLogsEnabled;
             return this;
         }
 
-        public Builder setContactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
+        public Builder contactFlowLogsEnabled(@Nullable Boolean contactFlowLogsEnabled) {
             this.contactFlowLogsEnabled = Input.ofNullable(contactFlowLogsEnabled);
             return this;
         }
 
-        public Builder setContactLensEnabled(@Nullable Input<Boolean> contactLensEnabled) {
+        public Builder contactLensEnabled(@Nullable Input<Boolean> contactLensEnabled) {
             this.contactLensEnabled = contactLensEnabled;
             return this;
         }
 
-        public Builder setContactLensEnabled(@Nullable Boolean contactLensEnabled) {
+        public Builder contactLensEnabled(@Nullable Boolean contactLensEnabled) {
             this.contactLensEnabled = Input.ofNullable(contactLensEnabled);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable Input<String> directoryId) {
+        public Builder directoryId(@Nullable Input<String> directoryId) {
             this.directoryId = directoryId;
             return this;
         }
 
-        public Builder setDirectoryId(@Nullable String directoryId) {
+        public Builder directoryId(@Nullable String directoryId) {
             this.directoryId = Input.ofNullable(directoryId);
             return this;
         }
 
-        public Builder setEarlyMediaEnabled(@Nullable Input<Boolean> earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(@Nullable Input<Boolean> earlyMediaEnabled) {
             this.earlyMediaEnabled = earlyMediaEnabled;
             return this;
         }
 
-        public Builder setEarlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
+        public Builder earlyMediaEnabled(@Nullable Boolean earlyMediaEnabled) {
             this.earlyMediaEnabled = Input.ofNullable(earlyMediaEnabled);
             return this;
         }
 
-        public Builder setIdentityManagementType(@Nullable Input<String> identityManagementType) {
+        public Builder identityManagementType(@Nullable Input<String> identityManagementType) {
             this.identityManagementType = identityManagementType;
             return this;
         }
 
-        public Builder setIdentityManagementType(@Nullable String identityManagementType) {
+        public Builder identityManagementType(@Nullable String identityManagementType) {
             this.identityManagementType = Input.ofNullable(identityManagementType);
             return this;
         }
 
-        public Builder setInboundCallsEnabled(@Nullable Input<Boolean> inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(@Nullable Input<Boolean> inboundCallsEnabled) {
             this.inboundCallsEnabled = inboundCallsEnabled;
             return this;
         }
 
-        public Builder setInboundCallsEnabled(@Nullable Boolean inboundCallsEnabled) {
+        public Builder inboundCallsEnabled(@Nullable Boolean inboundCallsEnabled) {
             this.inboundCallsEnabled = Input.ofNullable(inboundCallsEnabled);
             return this;
         }
 
-        public Builder setInstanceAlias(@Nullable Input<String> instanceAlias) {
+        public Builder instanceAlias(@Nullable Input<String> instanceAlias) {
             this.instanceAlias = instanceAlias;
             return this;
         }
 
-        public Builder setInstanceAlias(@Nullable String instanceAlias) {
+        public Builder instanceAlias(@Nullable String instanceAlias) {
             this.instanceAlias = Input.ofNullable(instanceAlias);
             return this;
         }
 
-        public Builder setOutboundCallsEnabled(@Nullable Input<Boolean> outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(@Nullable Input<Boolean> outboundCallsEnabled) {
             this.outboundCallsEnabled = outboundCallsEnabled;
             return this;
         }
 
-        public Builder setOutboundCallsEnabled(@Nullable Boolean outboundCallsEnabled) {
+        public Builder outboundCallsEnabled(@Nullable Boolean outboundCallsEnabled) {
             this.outboundCallsEnabled = Input.ofNullable(outboundCallsEnabled);
             return this;
         }
 
-        public Builder setServiceRole(@Nullable Input<String> serviceRole) {
+        public Builder serviceRole(@Nullable Input<String> serviceRole) {
             this.serviceRole = serviceRole;
             return this;
         }
 
-        public Builder setServiceRole(@Nullable String serviceRole) {
+        public Builder serviceRole(@Nullable String serviceRole) {
             this.serviceRole = Input.ofNullable(serviceRole);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

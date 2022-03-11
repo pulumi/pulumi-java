@@ -42,14 +42,14 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
      */
     private final List<String> grantedPermissions;
 
-    @OutputCustomType.Constructor({"accountId","authenticationProvisioningState","authenticationType","awsAccessKeyId","awsSecretAccessKey","grantedPermissions"})
+    @OutputCustomType.Constructor
     private AwsCredsAuthenticationDetailsPropertiesResponse(
-        String accountId,
-        String authenticationProvisioningState,
-        String authenticationType,
-        String awsAccessKeyId,
-        String awsSecretAccessKey,
-        List<String> grantedPermissions) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("authenticationProvisioningState") String authenticationProvisioningState,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("awsAccessKeyId") String awsAccessKeyId,
+        @OutputCustomType.Parameter("awsSecretAccessKey") String awsSecretAccessKey,
+        @OutputCustomType.Parameter("grantedPermissions") List<String> grantedPermissions) {
         this.accountId = accountId;
         this.authenticationProvisioningState = authenticationProvisioningState;
         this.authenticationType = authenticationType;
@@ -132,32 +132,32 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
     	      this.grantedPermissions = defaults.grantedPermissions;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setAuthenticationProvisioningState(String authenticationProvisioningState) {
+        public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             this.authenticationProvisioningState = Objects.requireNonNull(authenticationProvisioningState);
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setAwsAccessKeyId(String awsAccessKeyId) {
+        public Builder awsAccessKeyId(String awsAccessKeyId) {
             this.awsAccessKeyId = Objects.requireNonNull(awsAccessKeyId);
             return this;
         }
 
-        public Builder setAwsSecretAccessKey(String awsSecretAccessKey) {
+        public Builder awsSecretAccessKey(String awsSecretAccessKey) {
             this.awsSecretAccessKey = Objects.requireNonNull(awsSecretAccessKey);
             return this;
         }
 
-        public Builder setGrantedPermissions(List<String> grantedPermissions) {
+        public Builder grantedPermissions(List<String> grantedPermissions) {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }

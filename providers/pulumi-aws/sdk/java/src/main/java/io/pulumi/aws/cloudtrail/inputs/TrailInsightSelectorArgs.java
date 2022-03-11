@@ -52,12 +52,12 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
     	      this.insightType = defaults.insightType;
         }
 
-        public Builder setInsightType(Input<String> insightType) {
+        public Builder insightType(Input<String> insightType) {
             this.insightType = Objects.requireNonNull(insightType);
             return this;
         }
 
-        public Builder setInsightType(String insightType) {
+        public Builder insightType(String insightType) {
             this.insightType = Input.of(Objects.requireNonNull(insightType));
             return this;
         }

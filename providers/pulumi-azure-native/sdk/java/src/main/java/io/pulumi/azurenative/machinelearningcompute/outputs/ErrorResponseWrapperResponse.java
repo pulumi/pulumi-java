@@ -17,8 +17,8 @@ public final class ErrorResponseWrapperResponse {
      */
     private final @Nullable ErrorResponseResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private ErrorResponseWrapperResponse(@Nullable ErrorResponseResponse error) {
+    @OutputCustomType.Constructor
+    private ErrorResponseWrapperResponse(@OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error) {
         this.error = error;
     }
 
@@ -50,7 +50,7 @@ public final class ErrorResponseWrapperResponse {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(@Nullable ErrorResponseResponse error) {
+        public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }

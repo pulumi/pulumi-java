@@ -39,13 +39,13 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
      */
     private final @Nullable ResolverQueryLoggingConfigAssociationStatus status;
 
-    @OutputCustomType.Constructor({"creationTime","error","errorMessage","id","status"})
+    @OutputCustomType.Constructor
     private GetResolverQueryLoggingConfigAssociationResult(
-        @Nullable String creationTime,
-        @Nullable ResolverQueryLoggingConfigAssociationError error,
-        @Nullable String errorMessage,
-        @Nullable String id,
-        @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("error") @Nullable ResolverQueryLoggingConfigAssociationError error,
+        @OutputCustomType.Parameter("errorMessage") @Nullable String errorMessage,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("status") @Nullable ResolverQueryLoggingConfigAssociationStatus status) {
         this.creationTime = creationTime;
         this.error = error;
         this.errorMessage = errorMessage;
@@ -117,27 +117,27 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setError(@Nullable ResolverQueryLoggingConfigAssociationError error) {
+        public Builder error(@Nullable ResolverQueryLoggingConfigAssociationError error) {
             this.error = error;
             return this;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setStatus(@Nullable ResolverQueryLoggingConfigAssociationStatus status) {
+        public Builder status(@Nullable ResolverQueryLoggingConfigAssociationStatus status) {
             this.status = status;
             return this;
         }

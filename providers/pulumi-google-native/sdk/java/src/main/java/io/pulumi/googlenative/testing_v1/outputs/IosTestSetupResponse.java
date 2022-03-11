@@ -33,12 +33,12 @@ public final class IosTestSetupResponse {
      */
     private final List<IosDeviceFileResponse> pushFiles;
 
-    @OutputCustomType.Constructor({"additionalIpas","networkProfile","pullDirectories","pushFiles"})
+    @OutputCustomType.Constructor
     private IosTestSetupResponse(
-        List<FileReferenceResponse> additionalIpas,
-        String networkProfile,
-        List<IosDeviceFileResponse> pullDirectories,
-        List<IosDeviceFileResponse> pushFiles) {
+        @OutputCustomType.Parameter("additionalIpas") List<FileReferenceResponse> additionalIpas,
+        @OutputCustomType.Parameter("networkProfile") String networkProfile,
+        @OutputCustomType.Parameter("pullDirectories") List<IosDeviceFileResponse> pullDirectories,
+        @OutputCustomType.Parameter("pushFiles") List<IosDeviceFileResponse> pushFiles) {
         this.additionalIpas = additionalIpas;
         this.networkProfile = networkProfile;
         this.pullDirectories = pullDirectories;
@@ -100,22 +100,22 @@ public final class IosTestSetupResponse {
     	      this.pushFiles = defaults.pushFiles;
         }
 
-        public Builder setAdditionalIpas(List<FileReferenceResponse> additionalIpas) {
+        public Builder additionalIpas(List<FileReferenceResponse> additionalIpas) {
             this.additionalIpas = Objects.requireNonNull(additionalIpas);
             return this;
         }
 
-        public Builder setNetworkProfile(String networkProfile) {
+        public Builder networkProfile(String networkProfile) {
             this.networkProfile = Objects.requireNonNull(networkProfile);
             return this;
         }
 
-        public Builder setPullDirectories(List<IosDeviceFileResponse> pullDirectories) {
+        public Builder pullDirectories(List<IosDeviceFileResponse> pullDirectories) {
             this.pullDirectories = Objects.requireNonNull(pullDirectories);
             return this;
         }
 
-        public Builder setPushFiles(List<IosDeviceFileResponse> pushFiles) {
+        public Builder pushFiles(List<IosDeviceFileResponse> pushFiles) {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }

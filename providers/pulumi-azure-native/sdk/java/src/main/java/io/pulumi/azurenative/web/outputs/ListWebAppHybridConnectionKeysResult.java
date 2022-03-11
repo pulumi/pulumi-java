@@ -42,14 +42,14 @@ public final class ListWebAppHybridConnectionKeysResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","kind","name","sendKeyName","sendKeyValue","type"})
+    @OutputCustomType.Constructor
     private ListWebAppHybridConnectionKeysResult(
-        String id,
-        @Nullable String kind,
-        String name,
-        String sendKeyName,
-        String sendKeyValue,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sendKeyName") String sendKeyName,
+        @OutputCustomType.Parameter("sendKeyValue") String sendKeyValue,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.kind = kind;
         this.name = name;
@@ -131,32 +131,32 @@ public final class ListWebAppHybridConnectionKeysResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSendKeyName(String sendKeyName) {
+        public Builder sendKeyName(String sendKeyName) {
             this.sendKeyName = Objects.requireNonNull(sendKeyName);
             return this;
         }
 
-        public Builder setSendKeyValue(String sendKeyValue) {
+        public Builder sendKeyValue(String sendKeyValue) {
             this.sendKeyValue = Objects.requireNonNull(sendKeyValue);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

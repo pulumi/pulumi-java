@@ -38,13 +38,13 @@ public final class OAuthAuthenticationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"audience","clientId","secret","tenant","type"})
+    @OutputCustomType.Constructor
     private OAuthAuthenticationResponse(
-        @Nullable String audience,
-        @Nullable String clientId,
-        @Nullable String secret,
-        @Nullable String tenant,
-        String type) {
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("secret") @Nullable String secret,
+        @OutputCustomType.Parameter("tenant") @Nullable String tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.audience = audience;
         this.clientId = clientId;
         this.secret = secret;
@@ -117,27 +117,27 @@ public final class OAuthAuthenticationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setSecret(@Nullable String secret) {
+        public Builder secret(@Nullable String secret) {
             this.secret = secret;
             return this;
         }
 
-        public Builder setTenant(@Nullable String tenant) {
+        public Builder tenant(@Nullable String tenant) {
             this.tenant = tenant;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

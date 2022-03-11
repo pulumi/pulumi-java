@@ -92,32 +92,32 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(@Nullable Input<AliasContextArgs> aliasContext) {
+        public Builder aliasContext(@Nullable Input<AliasContextArgs> aliasContext) {
             this.aliasContext = aliasContext;
             return this;
         }
 
-        public Builder setAliasContext(@Nullable AliasContextArgs aliasContext) {
+        public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
             this.aliasContext = Input.ofNullable(aliasContext);
             return this;
         }
 
-        public Builder setRepoId(@Nullable Input<RepoIdArgs> repoId) {
+        public Builder repoId(@Nullable Input<RepoIdArgs> repoId) {
             this.repoId = repoId;
             return this;
         }
 
-        public Builder setRepoId(@Nullable RepoIdArgs repoId) {
+        public Builder repoId(@Nullable RepoIdArgs repoId) {
             this.repoId = Input.ofNullable(repoId);
             return this;
         }
 
-        public Builder setRevisionId(@Nullable Input<String> revisionId) {
+        public Builder revisionId(@Nullable Input<String> revisionId) {
             this.revisionId = revisionId;
             return this;
         }
 
-        public Builder setRevisionId(@Nullable String revisionId) {
+        public Builder revisionId(@Nullable String revisionId) {
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }

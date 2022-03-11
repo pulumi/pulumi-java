@@ -16,8 +16,8 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatement {
      */
     private final List<RuleGroupRuleStatementAndStatementStatementOrStatementStatement> statements;
 
-    @OutputCustomType.Constructor({"statements"})
-    private RuleGroupRuleStatementAndStatementStatementOrStatement(List<RuleGroupRuleStatementAndStatementStatementOrStatementStatement> statements) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleStatementAndStatementStatementOrStatement(@OutputCustomType.Parameter("statements") List<RuleGroupRuleStatementAndStatementStatementOrStatementStatement> statements) {
         this.statements = statements;
     }
 
@@ -49,7 +49,7 @@ public final class RuleGroupRuleStatementAndStatementStatementOrStatement {
     	      this.statements = defaults.statements;
         }
 
-        public Builder setStatements(List<RuleGroupRuleStatementAndStatementStatementOrStatementStatement> statements) {
+        public Builder statements(List<RuleGroupRuleStatementAndStatementStatementOrStatementStatement> statements) {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }

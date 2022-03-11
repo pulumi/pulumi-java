@@ -26,11 +26,11 @@ public final class AllocationSpecificSKUReservationResponse {
      */
     private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
-    @OutputCustomType.Constructor({"count","inUseCount","instanceProperties"})
+    @OutputCustomType.Constructor
     private AllocationSpecificSKUReservationResponse(
-        String count,
-        String inUseCount,
-        AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("inUseCount") String inUseCount,
+        @OutputCustomType.Parameter("instanceProperties") AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
         this.count = count;
         this.inUseCount = inUseCount;
         this.instanceProperties = instanceProperties;
@@ -82,17 +82,17 @@ public final class AllocationSpecificSKUReservationResponse {
     	      this.instanceProperties = defaults.instanceProperties;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setInUseCount(String inUseCount) {
+        public Builder inUseCount(String inUseCount) {
             this.inUseCount = Objects.requireNonNull(inUseCount);
             return this;
         }
 
-        public Builder setInstanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
+        public Builder instanceProperties(AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties) {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }

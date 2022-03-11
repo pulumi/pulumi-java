@@ -34,12 +34,12 @@ public final class FlowOutputEncryption {
      */
     private final String secretArn;
 
-    @OutputCustomType.Constructor({"algorithm","keyType","roleArn","secretArn"})
+    @OutputCustomType.Constructor
     private FlowOutputEncryption(
-        @Nullable FlowOutputEncryptionAlgorithm algorithm,
-        @Nullable FlowOutputEncryptionKeyType keyType,
-        String roleArn,
-        String secretArn) {
+        @OutputCustomType.Parameter("algorithm") @Nullable FlowOutputEncryptionAlgorithm algorithm,
+        @OutputCustomType.Parameter("keyType") @Nullable FlowOutputEncryptionKeyType keyType,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("secretArn") String secretArn) {
         this.algorithm = algorithm;
         this.keyType = keyType;
         this.roleArn = roleArn;
@@ -101,22 +101,22 @@ public final class FlowOutputEncryption {
     	      this.secretArn = defaults.secretArn;
         }
 
-        public Builder setAlgorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
+        public Builder algorithm(@Nullable FlowOutputEncryptionAlgorithm algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setKeyType(@Nullable FlowOutputEncryptionKeyType keyType) {
+        public Builder keyType(@Nullable FlowOutputEncryptionKeyType keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }

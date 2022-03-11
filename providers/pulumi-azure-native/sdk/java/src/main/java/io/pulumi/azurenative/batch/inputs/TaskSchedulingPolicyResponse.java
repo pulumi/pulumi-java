@@ -47,7 +47,7 @@ public final class TaskSchedulingPolicyResponse extends io.pulumi.resources.Invo
     	      this.nodeFillType = defaults.nodeFillType;
         }
 
-        public Builder setNodeFillType(String nodeFillType) {
+        public Builder nodeFillType(String nodeFillType) {
             this.nodeFillType = Objects.requireNonNull(nodeFillType);
             return this;
         }

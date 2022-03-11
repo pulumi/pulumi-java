@@ -17,12 +17,12 @@ public final class PipelineLambda {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"batchSize","lambdaName","name","next"})
+    @OutputCustomType.Constructor
     private PipelineLambda(
-        Integer batchSize,
-        String lambdaName,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("batchSize") Integer batchSize,
+        @OutputCustomType.Parameter("lambdaName") String lambdaName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.batchSize = batchSize;
         this.lambdaName = lambdaName;
         this.name = name;
@@ -68,22 +68,22 @@ public final class PipelineLambda {
     	      this.next = defaults.next;
         }
 
-        public Builder setBatchSize(Integer batchSize) {
+        public Builder batchSize(Integer batchSize) {
             this.batchSize = Objects.requireNonNull(batchSize);
             return this;
         }
 
-        public Builder setLambdaName(String lambdaName) {
+        public Builder lambdaName(String lambdaName) {
             this.lambdaName = Objects.requireNonNull(lambdaName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

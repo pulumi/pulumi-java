@@ -25,11 +25,11 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"name","siteId","updateTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1ApiCategoryDataResponse(
-        String name,
-        String siteId,
-        String updateTime) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("siteId") String siteId,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.name = name;
         this.siteId = siteId;
         this.updateTime = updateTime;
@@ -81,17 +81,17 @@ public final class GoogleCloudApigeeV1ApiCategoryDataResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -34,12 +34,12 @@ public final class BucketCor {
      */
     private final @Nullable List<String> responseHeaders;
 
-    @OutputCustomType.Constructor({"maxAgeSeconds","methods","origins","responseHeaders"})
+    @OutputCustomType.Constructor
     private BucketCor(
-        @Nullable Integer maxAgeSeconds,
-        @Nullable List<String> methods,
-        @Nullable List<String> origins,
-        @Nullable List<String> responseHeaders) {
+        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("origins") @Nullable List<String> origins,
+        @OutputCustomType.Parameter("responseHeaders") @Nullable List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;
@@ -101,22 +101,22 @@ public final class BucketCor {
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setMaxAgeSeconds(@Nullable Integer maxAgeSeconds) {
+        public Builder maxAgeSeconds(@Nullable Integer maxAgeSeconds) {
             this.maxAgeSeconds = maxAgeSeconds;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<String> origins) {
+        public Builder origins(@Nullable List<String> origins) {
             this.origins = origins;
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<String> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<String> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }

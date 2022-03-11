@@ -36,12 +36,12 @@ public final class ConfigurationServicePropertiesResponse {
      */
     private final @Nullable ConfigurationServiceSettingsResponse settings;
 
-    @OutputCustomType.Constructor({"instances","provisioningState","resourceRequests","settings"})
+    @OutputCustomType.Constructor
     private ConfigurationServicePropertiesResponse(
-        List<ConfigurationServiceInstanceResponse> instances,
-        String provisioningState,
-        ConfigurationServiceResourceRequestsResponse resourceRequests,
-        @Nullable ConfigurationServiceSettingsResponse settings) {
+        @OutputCustomType.Parameter("instances") List<ConfigurationServiceInstanceResponse> instances,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceRequests") ConfigurationServiceResourceRequestsResponse resourceRequests,
+        @OutputCustomType.Parameter("settings") @Nullable ConfigurationServiceSettingsResponse settings) {
         this.instances = instances;
         this.provisioningState = provisioningState;
         this.resourceRequests = resourceRequests;
@@ -103,22 +103,22 @@ public final class ConfigurationServicePropertiesResponse {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setInstances(List<ConfigurationServiceInstanceResponse> instances) {
+        public Builder instances(List<ConfigurationServiceInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceRequests(ConfigurationServiceResourceRequestsResponse resourceRequests) {
+        public Builder resourceRequests(ConfigurationServiceResourceRequestsResponse resourceRequests) {
             this.resourceRequests = Objects.requireNonNull(resourceRequests);
             return this;
         }
 
-        public Builder setSettings(@Nullable ConfigurationServiceSettingsResponse settings) {
+        public Builder settings(@Nullable ConfigurationServiceSettingsResponse settings) {
             this.settings = settings;
             return this;
         }

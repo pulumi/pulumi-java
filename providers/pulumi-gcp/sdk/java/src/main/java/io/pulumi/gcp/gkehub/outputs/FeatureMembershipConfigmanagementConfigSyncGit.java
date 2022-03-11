@@ -48,16 +48,16 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
      */
     private final @Nullable String syncWaitSecs;
 
-    @OutputCustomType.Constructor({"gcpServiceAccountEmail","httpsProxy","policyDir","secretType","syncBranch","syncRepo","syncRev","syncWaitSecs"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementConfigSyncGit(
-        @Nullable String gcpServiceAccountEmail,
-        @Nullable String httpsProxy,
-        @Nullable String policyDir,
-        @Nullable String secretType,
-        @Nullable String syncBranch,
-        @Nullable String syncRepo,
-        @Nullable String syncRev,
-        @Nullable String syncWaitSecs) {
+        @OutputCustomType.Parameter("gcpServiceAccountEmail") @Nullable String gcpServiceAccountEmail,
+        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @OutputCustomType.Parameter("policyDir") @Nullable String policyDir,
+        @OutputCustomType.Parameter("secretType") @Nullable String secretType,
+        @OutputCustomType.Parameter("syncBranch") @Nullable String syncBranch,
+        @OutputCustomType.Parameter("syncRepo") @Nullable String syncRepo,
+        @OutputCustomType.Parameter("syncRev") @Nullable String syncRev,
+        @OutputCustomType.Parameter("syncWaitSecs") @Nullable String syncWaitSecs) {
         this.gcpServiceAccountEmail = gcpServiceAccountEmail;
         this.httpsProxy = httpsProxy;
         this.policyDir = policyDir;
@@ -155,42 +155,42 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
     	      this.syncWaitSecs = defaults.syncWaitSecs;
         }
 
-        public Builder setGcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
+        public Builder gcpServiceAccountEmail(@Nullable String gcpServiceAccountEmail) {
             this.gcpServiceAccountEmail = gcpServiceAccountEmail;
             return this;
         }
 
-        public Builder setHttpsProxy(@Nullable String httpsProxy) {
+        public Builder httpsProxy(@Nullable String httpsProxy) {
             this.httpsProxy = httpsProxy;
             return this;
         }
 
-        public Builder setPolicyDir(@Nullable String policyDir) {
+        public Builder policyDir(@Nullable String policyDir) {
             this.policyDir = policyDir;
             return this;
         }
 
-        public Builder setSecretType(@Nullable String secretType) {
+        public Builder secretType(@Nullable String secretType) {
             this.secretType = secretType;
             return this;
         }
 
-        public Builder setSyncBranch(@Nullable String syncBranch) {
+        public Builder syncBranch(@Nullable String syncBranch) {
             this.syncBranch = syncBranch;
             return this;
         }
 
-        public Builder setSyncRepo(@Nullable String syncRepo) {
+        public Builder syncRepo(@Nullable String syncRepo) {
             this.syncRepo = syncRepo;
             return this;
         }
 
-        public Builder setSyncRev(@Nullable String syncRev) {
+        public Builder syncRev(@Nullable String syncRev) {
             this.syncRev = syncRev;
             return this;
         }
 
-        public Builder setSyncWaitSecs(@Nullable String syncWaitSecs) {
+        public Builder syncWaitSecs(@Nullable String syncWaitSecs) {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }

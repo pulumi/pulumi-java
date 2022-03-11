@@ -27,11 +27,11 @@ public final class BotS3Location {
      */
     private final @Nullable String s3ObjectVersion;
 
-    @OutputCustomType.Constructor({"s3Bucket","s3ObjectKey","s3ObjectVersion"})
+    @OutputCustomType.Constructor
     private BotS3Location(
-        String s3Bucket,
-        String s3ObjectKey,
-        @Nullable String s3ObjectVersion) {
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3ObjectKey") String s3ObjectKey,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion) {
         this.s3Bucket = s3Bucket;
         this.s3ObjectKey = s3ObjectKey;
         this.s3ObjectVersion = s3ObjectVersion;
@@ -83,17 +83,17 @@ public final class BotS3Location {
     	      this.s3ObjectVersion = defaults.s3ObjectVersion;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3ObjectKey(String s3ObjectKey) {
+        public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable String s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }

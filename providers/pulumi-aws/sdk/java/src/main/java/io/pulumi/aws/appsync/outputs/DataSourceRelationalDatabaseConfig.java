@@ -23,10 +23,10 @@ public final class DataSourceRelationalDatabaseConfig {
      */
     private final @Nullable String sourceType;
 
-    @OutputCustomType.Constructor({"httpEndpointConfig","sourceType"})
+    @OutputCustomType.Constructor
     private DataSourceRelationalDatabaseConfig(
-        @Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig,
-        @Nullable String sourceType) {
+        @OutputCustomType.Parameter("httpEndpointConfig") @Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig,
+        @OutputCustomType.Parameter("sourceType") @Nullable String sourceType) {
         this.httpEndpointConfig = httpEndpointConfig;
         this.sourceType = sourceType;
     }
@@ -68,12 +68,12 @@ public final class DataSourceRelationalDatabaseConfig {
     	      this.sourceType = defaults.sourceType;
         }
 
-        public Builder setHttpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig) {
+        public Builder httpEndpointConfig(@Nullable DataSourceRelationalDatabaseConfigHttpEndpointConfig httpEndpointConfig) {
             this.httpEndpointConfig = httpEndpointConfig;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = sourceType;
             return this;
         }

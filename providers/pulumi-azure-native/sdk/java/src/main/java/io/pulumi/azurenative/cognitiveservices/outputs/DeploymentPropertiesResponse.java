@@ -29,11 +29,11 @@ public final class DeploymentPropertiesResponse {
      */
     private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
 
-    @OutputCustomType.Constructor({"model","provisioningState","scaleSettings"})
+    @OutputCustomType.Constructor
     private DeploymentPropertiesResponse(
-        @Nullable DeploymentModelResponse model,
-        String provisioningState,
-        @Nullable DeploymentScaleSettingsResponse scaleSettings) {
+        @OutputCustomType.Parameter("model") @Nullable DeploymentModelResponse model,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scaleSettings") @Nullable DeploymentScaleSettingsResponse scaleSettings) {
         this.model = model;
         this.provisioningState = provisioningState;
         this.scaleSettings = scaleSettings;
@@ -85,17 +85,17 @@ public final class DeploymentPropertiesResponse {
     	      this.scaleSettings = defaults.scaleSettings;
         }
 
-        public Builder setModel(@Nullable DeploymentModelResponse model) {
+        public Builder model(@Nullable DeploymentModelResponse model) {
             this.model = model;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScaleSettings(@Nullable DeploymentScaleSettingsResponse scaleSettings) {
+        public Builder scaleSettings(@Nullable DeploymentScaleSettingsResponse scaleSettings) {
             this.scaleSettings = scaleSettings;
             return this;
         }

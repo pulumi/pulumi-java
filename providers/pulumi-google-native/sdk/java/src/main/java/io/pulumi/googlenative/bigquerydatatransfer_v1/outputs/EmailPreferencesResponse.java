@@ -15,8 +15,8 @@ public final class EmailPreferencesResponse {
      */
     private final Boolean enableFailureEmail;
 
-    @OutputCustomType.Constructor({"enableFailureEmail"})
-    private EmailPreferencesResponse(Boolean enableFailureEmail) {
+    @OutputCustomType.Constructor
+    private EmailPreferencesResponse(@OutputCustomType.Parameter("enableFailureEmail") Boolean enableFailureEmail) {
         this.enableFailureEmail = enableFailureEmail;
     }
 
@@ -48,7 +48,7 @@ public final class EmailPreferencesResponse {
     	      this.enableFailureEmail = defaults.enableFailureEmail;
         }
 
-        public Builder setEnableFailureEmail(Boolean enableFailureEmail) {
+        public Builder enableFailureEmail(Boolean enableFailureEmail) {
             this.enableFailureEmail = Objects.requireNonNull(enableFailureEmail);
             return this;
         }

@@ -12,10 +12,10 @@ public final class TableProvisionedThroughput {
     private final Integer readCapacityUnits;
     private final Integer writeCapacityUnits;
 
-    @OutputCustomType.Constructor({"readCapacityUnits","writeCapacityUnits"})
+    @OutputCustomType.Constructor
     private TableProvisionedThroughput(
-        Integer readCapacityUnits,
-        Integer writeCapacityUnits) {
+        @OutputCustomType.Parameter("readCapacityUnits") Integer readCapacityUnits,
+        @OutputCustomType.Parameter("writeCapacityUnits") Integer writeCapacityUnits) {
         this.readCapacityUnits = readCapacityUnits;
         this.writeCapacityUnits = writeCapacityUnits;
     }
@@ -49,12 +49,12 @@ public final class TableProvisionedThroughput {
     	      this.writeCapacityUnits = defaults.writeCapacityUnits;
         }
 
-        public Builder setReadCapacityUnits(Integer readCapacityUnits) {
+        public Builder readCapacityUnits(Integer readCapacityUnits) {
             this.readCapacityUnits = Objects.requireNonNull(readCapacityUnits);
             return this;
         }
 
-        public Builder setWriteCapacityUnits(Integer writeCapacityUnits) {
+        public Builder writeCapacityUnits(Integer writeCapacityUnits) {
             this.writeCapacityUnits = Objects.requireNonNull(writeCapacityUnits);
             return this;
         }

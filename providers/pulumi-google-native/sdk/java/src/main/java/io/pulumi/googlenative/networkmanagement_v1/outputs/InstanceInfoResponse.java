@@ -51,16 +51,16 @@ public final class InstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","externalIp","$interface","internalIp","networkTags","networkUri","serviceAccount","uri"})
+    @OutputCustomType.Constructor
     private InstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String $interface,
-        String internalIp,
-        List<String> networkTags,
-        String networkUri,
-        String serviceAccount,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("interface") String $interface,
+        @OutputCustomType.Parameter("internalIp") String internalIp,
+        @OutputCustomType.Parameter("networkTags") List<String> networkTags,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.$interface = $interface;
@@ -162,42 +162,42 @@ public final class InstanceInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExternalIp(String externalIp) {
+        public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
 
-        public Builder setInternalIp(String internalIp) {
+        public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
 
-        public Builder setNetworkTags(List<String> networkTags) {
+        public Builder networkTags(List<String> networkTags) {
             this.networkTags = Objects.requireNonNull(networkTags);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

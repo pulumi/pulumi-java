@@ -19,13 +19,13 @@ public final class SkuLocationInfoResponse {
     private final @Nullable List<SkuZoneDetailResponse> zoneDetails;
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"extendedLocations","location","type","zoneDetails","zones"})
+    @OutputCustomType.Constructor
     private SkuLocationInfoResponse(
-        @Nullable List<String> extendedLocations,
-        String location,
-        @Nullable String type,
-        @Nullable List<SkuZoneDetailResponse> zoneDetails,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("extendedLocations") @Nullable List<String> extendedLocations,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("zoneDetails") @Nullable List<SkuZoneDetailResponse> zoneDetails,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.extendedLocations = extendedLocations;
         this.location = location;
         this.type = type;
@@ -77,27 +77,27 @@ public final class SkuLocationInfoResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setExtendedLocations(@Nullable List<String> extendedLocations) {
+        public Builder extendedLocations(@Nullable List<String> extendedLocations) {
             this.extendedLocations = extendedLocations;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setZoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
+        public Builder zoneDetails(@Nullable List<SkuZoneDetailResponse> zoneDetails) {
             this.zoneDetails = zoneDetails;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

@@ -147,62 +147,62 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     	      this.templateDisplayname = defaults.templateDisplayname;
         }
 
-        public Builder setColumn(@Nullable Input<String> column) {
+        public Builder column(@Nullable Input<String> column) {
             this.column = column;
             return this;
         }
 
-        public Builder setColumn(@Nullable String column) {
+        public Builder column(@Nullable String column) {
             this.column = Input.ofNullable(column);
             return this;
         }
 
-        public Builder setFields(@Nullable Input<List<TagFieldGetArgs>> fields) {
+        public Builder fields(@Nullable Input<List<TagFieldGetArgs>> fields) {
             this.fields = fields;
             return this;
         }
 
-        public Builder setFields(@Nullable List<TagFieldGetArgs> fields) {
+        public Builder fields(@Nullable List<TagFieldGetArgs> fields) {
             this.fields = Input.ofNullable(fields);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<String> template) {
+        public Builder template(@Nullable Input<String> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable String template) {
+        public Builder template(@Nullable String template) {
             this.template = Input.ofNullable(template);
             return this;
         }
 
-        public Builder setTemplateDisplayname(@Nullable Input<String> templateDisplayname) {
+        public Builder templateDisplayname(@Nullable Input<String> templateDisplayname) {
             this.templateDisplayname = templateDisplayname;
             return this;
         }
 
-        public Builder setTemplateDisplayname(@Nullable String templateDisplayname) {
+        public Builder templateDisplayname(@Nullable String templateDisplayname) {
             this.templateDisplayname = Input.ofNullable(templateDisplayname);
             return this;
         }

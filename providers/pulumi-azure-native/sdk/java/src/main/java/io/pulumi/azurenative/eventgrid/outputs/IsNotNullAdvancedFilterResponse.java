@@ -23,10 +23,10 @@ public final class IsNotNullAdvancedFilterResponse {
      */
     private final String operatorType;
 
-    @OutputCustomType.Constructor({"key","operatorType"})
+    @OutputCustomType.Constructor
     private IsNotNullAdvancedFilterResponse(
-        @Nullable String key,
-        String operatorType) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("operatorType") String operatorType) {
         this.key = key;
         this.operatorType = operatorType;
     }
@@ -69,12 +69,12 @@ public final class IsNotNullAdvancedFilterResponse {
     	      this.operatorType = defaults.operatorType;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setOperatorType(String operatorType) {
+        public Builder operatorType(String operatorType) {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }

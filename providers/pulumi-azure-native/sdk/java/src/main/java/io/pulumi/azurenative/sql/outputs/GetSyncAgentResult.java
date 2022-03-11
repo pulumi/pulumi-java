@@ -58,17 +58,17 @@ public final class GetSyncAgentResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"expiryTime","id","isUpToDate","lastAliveTime","name","state","syncDatabaseId","type","version"})
+    @OutputCustomType.Constructor
     private GetSyncAgentResult(
-        String expiryTime,
-        String id,
-        Boolean isUpToDate,
-        String lastAliveTime,
-        String name,
-        String state,
-        @Nullable String syncDatabaseId,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isUpToDate") Boolean isUpToDate,
+        @OutputCustomType.Parameter("lastAliveTime") String lastAliveTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("syncDatabaseId") @Nullable String syncDatabaseId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.expiryTime = expiryTime;
         this.id = id;
         this.isUpToDate = isUpToDate;
@@ -180,47 +180,47 @@ public final class GetSyncAgentResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setExpiryTime(String expiryTime) {
+        public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsUpToDate(Boolean isUpToDate) {
+        public Builder isUpToDate(Boolean isUpToDate) {
             this.isUpToDate = Objects.requireNonNull(isUpToDate);
             return this;
         }
 
-        public Builder setLastAliveTime(String lastAliveTime) {
+        public Builder lastAliveTime(String lastAliveTime) {
             this.lastAliveTime = Objects.requireNonNull(lastAliveTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSyncDatabaseId(@Nullable String syncDatabaseId) {
+        public Builder syncDatabaseId(@Nullable String syncDatabaseId) {
             this.syncDatabaseId = syncDatabaseId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

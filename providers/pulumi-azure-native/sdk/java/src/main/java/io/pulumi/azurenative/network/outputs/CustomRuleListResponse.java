@@ -17,8 +17,8 @@ public final class CustomRuleListResponse {
      */
     private final @Nullable List<CustomRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"rules"})
-    private CustomRuleListResponse(@Nullable List<CustomRuleResponse> rules) {
+    @OutputCustomType.Constructor
+    private CustomRuleListResponse(@OutputCustomType.Parameter("rules") @Nullable List<CustomRuleResponse> rules) {
         this.rules = rules;
     }
 
@@ -50,7 +50,7 @@ public final class CustomRuleListResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<CustomRuleResponse> rules) {
+        public Builder rules(@Nullable List<CustomRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

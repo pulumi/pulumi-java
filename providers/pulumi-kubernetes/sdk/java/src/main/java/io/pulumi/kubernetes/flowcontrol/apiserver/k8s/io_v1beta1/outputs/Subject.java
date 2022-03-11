@@ -35,12 +35,12 @@ public final class Subject {
      */
     private final @Nullable UserSubject user;
 
-    @OutputCustomType.Constructor({"group","kind","serviceAccount","user"})
+    @OutputCustomType.Constructor
     private Subject(
-        @Nullable GroupSubject group,
-        String kind,
-        @Nullable ServiceAccountSubject serviceAccount,
-        @Nullable UserSubject user) {
+        @OutputCustomType.Parameter("group") @Nullable GroupSubject group,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable ServiceAccountSubject serviceAccount,
+        @OutputCustomType.Parameter("user") @Nullable UserSubject user) {
         this.group = group;
         this.kind = kind;
         this.serviceAccount = serviceAccount;
@@ -102,22 +102,22 @@ public final class Subject {
     	      this.user = defaults.user;
         }
 
-        public Builder setGroup(@Nullable GroupSubject group) {
+        public Builder group(@Nullable GroupSubject group) {
             this.group = group;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable ServiceAccountSubject serviceAccount) {
+        public Builder serviceAccount(@Nullable ServiceAccountSubject serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setUser(@Nullable UserSubject user) {
+        public Builder user(@Nullable UserSubject user) {
             this.user = user;
             return this;
         }

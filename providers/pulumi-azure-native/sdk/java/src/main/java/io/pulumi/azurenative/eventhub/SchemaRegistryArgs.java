@@ -130,62 +130,62 @@ public final class SchemaRegistryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.schemaType = defaults.schemaType;
         }
 
-        public Builder setGroupProperties(@Nullable Input<Map<String,String>> groupProperties) {
+        public Builder groupProperties(@Nullable Input<Map<String,String>> groupProperties) {
             this.groupProperties = groupProperties;
             return this;
         }
 
-        public Builder setGroupProperties(@Nullable Map<String,String> groupProperties) {
+        public Builder groupProperties(@Nullable Map<String,String> groupProperties) {
             this.groupProperties = Input.ofNullable(groupProperties);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSchemaCompatibility(@Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility) {
+        public Builder schemaCompatibility(@Nullable Input<Either<String,SchemaCompatibility>> schemaCompatibility) {
             this.schemaCompatibility = schemaCompatibility;
             return this;
         }
 
-        public Builder setSchemaCompatibility(@Nullable Either<String,SchemaCompatibility> schemaCompatibility) {
+        public Builder schemaCompatibility(@Nullable Either<String,SchemaCompatibility> schemaCompatibility) {
             this.schemaCompatibility = Input.ofNullable(schemaCompatibility);
             return this;
         }
 
-        public Builder setSchemaGroupName(@Nullable Input<String> schemaGroupName) {
+        public Builder schemaGroupName(@Nullable Input<String> schemaGroupName) {
             this.schemaGroupName = schemaGroupName;
             return this;
         }
 
-        public Builder setSchemaGroupName(@Nullable String schemaGroupName) {
+        public Builder schemaGroupName(@Nullable String schemaGroupName) {
             this.schemaGroupName = Input.ofNullable(schemaGroupName);
             return this;
         }
 
-        public Builder setSchemaType(@Nullable Input<Either<String,SchemaType>> schemaType) {
+        public Builder schemaType(@Nullable Input<Either<String,SchemaType>> schemaType) {
             this.schemaType = schemaType;
             return this;
         }
 
-        public Builder setSchemaType(@Nullable Either<String,SchemaType> schemaType) {
+        public Builder schemaType(@Nullable Either<String,SchemaType> schemaType) {
             this.schemaType = Input.ofNullable(schemaType);
             return this;
         }

@@ -74,20 +74,20 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
      */
     private final @Nullable Integer replicationPort;
 
-    @OutputCustomType.Constructor({"allowedAuthenticationType","applicationConsistentSnapshotFrequencyInHours","compression","initialReplicationMethod","instanceType","offlineReplicationExportPath","offlineReplicationImportPath","onlineReplicationStartTime","recoveryPoints","replicaDeletionOption","replicationFrequencyInSeconds","replicationPort"})
+    @OutputCustomType.Constructor
     private HyperVReplicaBluePolicyDetailsResponse(
-        @Nullable Integer allowedAuthenticationType,
-        @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
-        @Nullable String compression,
-        @Nullable String initialReplicationMethod,
-        String instanceType,
-        @Nullable String offlineReplicationExportPath,
-        @Nullable String offlineReplicationImportPath,
-        @Nullable String onlineReplicationStartTime,
-        @Nullable Integer recoveryPoints,
-        @Nullable String replicaDeletionOption,
-        @Nullable Integer replicationFrequencyInSeconds,
-        @Nullable Integer replicationPort) {
+        @OutputCustomType.Parameter("allowedAuthenticationType") @Nullable Integer allowedAuthenticationType,
+        @OutputCustomType.Parameter("applicationConsistentSnapshotFrequencyInHours") @Nullable Integer applicationConsistentSnapshotFrequencyInHours,
+        @OutputCustomType.Parameter("compression") @Nullable String compression,
+        @OutputCustomType.Parameter("initialReplicationMethod") @Nullable String initialReplicationMethod,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("offlineReplicationExportPath") @Nullable String offlineReplicationExportPath,
+        @OutputCustomType.Parameter("offlineReplicationImportPath") @Nullable String offlineReplicationImportPath,
+        @OutputCustomType.Parameter("onlineReplicationStartTime") @Nullable String onlineReplicationStartTime,
+        @OutputCustomType.Parameter("recoveryPoints") @Nullable Integer recoveryPoints,
+        @OutputCustomType.Parameter("replicaDeletionOption") @Nullable String replicaDeletionOption,
+        @OutputCustomType.Parameter("replicationFrequencyInSeconds") @Nullable Integer replicationFrequencyInSeconds,
+        @OutputCustomType.Parameter("replicationPort") @Nullable Integer replicationPort) {
         this.allowedAuthenticationType = allowedAuthenticationType;
         this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
         this.compression = compression;
@@ -230,62 +230,62 @@ public final class HyperVReplicaBluePolicyDetailsResponse {
     	      this.replicationPort = defaults.replicationPort;
         }
 
-        public Builder setAllowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
+        public Builder allowedAuthenticationType(@Nullable Integer allowedAuthenticationType) {
             this.allowedAuthenticationType = allowedAuthenticationType;
             return this;
         }
 
-        public Builder setApplicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
+        public Builder applicationConsistentSnapshotFrequencyInHours(@Nullable Integer applicationConsistentSnapshotFrequencyInHours) {
             this.applicationConsistentSnapshotFrequencyInHours = applicationConsistentSnapshotFrequencyInHours;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setInitialReplicationMethod(@Nullable String initialReplicationMethod) {
+        public Builder initialReplicationMethod(@Nullable String initialReplicationMethod) {
             this.initialReplicationMethod = initialReplicationMethod;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setOfflineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
+        public Builder offlineReplicationExportPath(@Nullable String offlineReplicationExportPath) {
             this.offlineReplicationExportPath = offlineReplicationExportPath;
             return this;
         }
 
-        public Builder setOfflineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
+        public Builder offlineReplicationImportPath(@Nullable String offlineReplicationImportPath) {
             this.offlineReplicationImportPath = offlineReplicationImportPath;
             return this;
         }
 
-        public Builder setOnlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
+        public Builder onlineReplicationStartTime(@Nullable String onlineReplicationStartTime) {
             this.onlineReplicationStartTime = onlineReplicationStartTime;
             return this;
         }
 
-        public Builder setRecoveryPoints(@Nullable Integer recoveryPoints) {
+        public Builder recoveryPoints(@Nullable Integer recoveryPoints) {
             this.recoveryPoints = recoveryPoints;
             return this;
         }
 
-        public Builder setReplicaDeletionOption(@Nullable String replicaDeletionOption) {
+        public Builder replicaDeletionOption(@Nullable String replicaDeletionOption) {
             this.replicaDeletionOption = replicaDeletionOption;
             return this;
         }
 
-        public Builder setReplicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
+        public Builder replicationFrequencyInSeconds(@Nullable Integer replicationFrequencyInSeconds) {
             this.replicationFrequencyInSeconds = replicationFrequencyInSeconds;
             return this;
         }
 
-        public Builder setReplicationPort(@Nullable Integer replicationPort) {
+        public Builder replicationPort(@Nullable Integer replicationPort) {
             this.replicationPort = replicationPort;
             return this;
         }

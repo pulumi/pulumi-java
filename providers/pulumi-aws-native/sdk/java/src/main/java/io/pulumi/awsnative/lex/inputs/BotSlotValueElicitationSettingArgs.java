@@ -127,52 +127,52 @@ public final class BotSlotValueElicitationSettingArgs extends io.pulumi.resource
     	      this.waitAndContinueSpecification = defaults.waitAndContinueSpecification;
         }
 
-        public Builder setDefaultValueSpecification(@Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
+        public Builder defaultValueSpecification(@Nullable Input<BotSlotDefaultValueSpecificationArgs> defaultValueSpecification) {
             this.defaultValueSpecification = defaultValueSpecification;
             return this;
         }
 
-        public Builder setDefaultValueSpecification(@Nullable BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
+        public Builder defaultValueSpecification(@Nullable BotSlotDefaultValueSpecificationArgs defaultValueSpecification) {
             this.defaultValueSpecification = Input.ofNullable(defaultValueSpecification);
             return this;
         }
 
-        public Builder setPromptSpecification(@Nullable Input<BotPromptSpecificationArgs> promptSpecification) {
+        public Builder promptSpecification(@Nullable Input<BotPromptSpecificationArgs> promptSpecification) {
             this.promptSpecification = promptSpecification;
             return this;
         }
 
-        public Builder setPromptSpecification(@Nullable BotPromptSpecificationArgs promptSpecification) {
+        public Builder promptSpecification(@Nullable BotPromptSpecificationArgs promptSpecification) {
             this.promptSpecification = Input.ofNullable(promptSpecification);
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable Input<List<BotSampleUtteranceArgs>> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<BotSampleUtteranceArgs> sampleUtterances) {
             this.sampleUtterances = Input.ofNullable(sampleUtterances);
             return this;
         }
 
-        public Builder setSlotConstraint(Input<BotSlotConstraint> slotConstraint) {
+        public Builder slotConstraint(Input<BotSlotConstraint> slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
 
-        public Builder setSlotConstraint(BotSlotConstraint slotConstraint) {
+        public Builder slotConstraint(BotSlotConstraint slotConstraint) {
             this.slotConstraint = Input.of(Objects.requireNonNull(slotConstraint));
             return this;
         }
 
-        public Builder setWaitAndContinueSpecification(@Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
+        public Builder waitAndContinueSpecification(@Nullable Input<BotWaitAndContinueSpecificationArgs> waitAndContinueSpecification) {
             this.waitAndContinueSpecification = waitAndContinueSpecification;
             return this;
         }
 
-        public Builder setWaitAndContinueSpecification(@Nullable BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
+        public Builder waitAndContinueSpecification(@Nullable BotWaitAndContinueSpecificationArgs waitAndContinueSpecification) {
             this.waitAndContinueSpecification = Input.ofNullable(waitAndContinueSpecification);
             return this;
         }

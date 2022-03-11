@@ -20,10 +20,10 @@ public final class SourceResponse {
      */
     private final String predefinedSource;
 
-    @OutputCustomType.Constructor({"name","predefinedSource"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        String name,
-        String predefinedSource) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("predefinedSource") String predefinedSource) {
         this.name = name;
         this.predefinedSource = predefinedSource;
     }
@@ -65,12 +65,12 @@ public final class SourceResponse {
     	      this.predefinedSource = defaults.predefinedSource;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPredefinedSource(String predefinedSource) {
+        public Builder predefinedSource(String predefinedSource) {
             this.predefinedSource = Objects.requireNonNull(predefinedSource);
             return this;
         }

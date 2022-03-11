@@ -15,8 +15,8 @@ public final class AwsClusterControlPlaneConfigEncryption {
      */
     private final String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"kmsKeyArn"})
-    private AwsClusterControlPlaneConfigEncryption(String kmsKeyArn) {
+    @OutputCustomType.Constructor
+    private AwsClusterControlPlaneConfigEncryption(@OutputCustomType.Parameter("kmsKeyArn") String kmsKeyArn) {
         this.kmsKeyArn = kmsKeyArn;
     }
 
@@ -48,7 +48,7 @@ public final class AwsClusterControlPlaneConfigEncryption {
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setKmsKeyArn(String kmsKeyArn) {
+        public Builder kmsKeyArn(String kmsKeyArn) {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }

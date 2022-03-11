@@ -26,10 +26,10 @@ public final class TriggerBuildArtifactsObjectsTiming {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor({"endTime","startTime"})
+    @OutputCustomType.Constructor
     private TriggerBuildArtifactsObjectsTiming(
-        @Nullable String endTime,
-        @Nullable String startTime) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }
@@ -75,12 +75,12 @@ public final class TriggerBuildArtifactsObjectsTiming {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

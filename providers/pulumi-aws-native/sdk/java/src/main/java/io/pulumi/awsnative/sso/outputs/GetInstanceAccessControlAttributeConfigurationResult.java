@@ -20,10 +20,10 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
      */
     private final @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration;
 
-    @OutputCustomType.Constructor({"accessControlAttributes","instanceAccessControlAttributeConfiguration"})
+    @OutputCustomType.Constructor
     private GetInstanceAccessControlAttributeConfigurationResult(
-        @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
-        @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
+        @OutputCustomType.Parameter("accessControlAttributes") @Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes,
+        @OutputCustomType.Parameter("instanceAccessControlAttributeConfiguration") @Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
         this.accessControlAttributes = accessControlAttributes;
         this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
     }
@@ -61,12 +61,12 @@ public final class GetInstanceAccessControlAttributeConfigurationResult {
     	      this.instanceAccessControlAttributeConfiguration = defaults.instanceAccessControlAttributeConfiguration;
         }
 
-        public Builder setAccessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
+        public Builder accessControlAttributes(@Nullable List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
             this.accessControlAttributes = accessControlAttributes;
             return this;
         }
 
-        public Builder setInstanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
+        public Builder instanceAccessControlAttributeConfiguration(@Nullable InstanceAccessControlAttributeConfigurationProperties instanceAccessControlAttributeConfiguration) {
             this.instanceAccessControlAttributeConfiguration = instanceAccessControlAttributeConfiguration;
             return this;
         }

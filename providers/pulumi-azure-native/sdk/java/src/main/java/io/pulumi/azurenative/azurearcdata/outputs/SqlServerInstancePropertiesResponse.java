@@ -83,23 +83,23 @@ public final class SqlServerInstancePropertiesResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"collation","containerResourceId","createTime","currentVersion","edition","instanceName","licenseType","patchLevel","productId","provisioningState","status","tcpDynamicPorts","tcpStaticPorts","vCore","version"})
+    @OutputCustomType.Constructor
     private SqlServerInstancePropertiesResponse(
-        @Nullable String collation,
-        String containerResourceId,
-        String createTime,
-        @Nullable String currentVersion,
-        @Nullable String edition,
-        @Nullable String instanceName,
-        @Nullable String licenseType,
-        @Nullable String patchLevel,
-        @Nullable String productId,
-        String provisioningState,
-        String status,
-        @Nullable String tcpDynamicPorts,
-        @Nullable String tcpStaticPorts,
-        @Nullable String vCore,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("collation") @Nullable String collation,
+        @OutputCustomType.Parameter("containerResourceId") String containerResourceId,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @OutputCustomType.Parameter("edition") @Nullable String edition,
+        @OutputCustomType.Parameter("instanceName") @Nullable String instanceName,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("patchLevel") @Nullable String patchLevel,
+        @OutputCustomType.Parameter("productId") @Nullable String productId,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tcpDynamicPorts") @Nullable String tcpDynamicPorts,
+        @OutputCustomType.Parameter("tcpStaticPorts") @Nullable String tcpStaticPorts,
+        @OutputCustomType.Parameter("vCore") @Nullable String vCore,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.collation = collation;
         this.containerResourceId = containerResourceId;
         this.createTime = createTime;
@@ -267,77 +267,77 @@ public final class SqlServerInstancePropertiesResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setContainerResourceId(String containerResourceId) {
+        public Builder containerResourceId(String containerResourceId) {
             this.containerResourceId = Objects.requireNonNull(containerResourceId);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setEdition(@Nullable String edition) {
+        public Builder edition(@Nullable String edition) {
             this.edition = edition;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setPatchLevel(@Nullable String patchLevel) {
+        public Builder patchLevel(@Nullable String patchLevel) {
             this.patchLevel = patchLevel;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTcpDynamicPorts(@Nullable String tcpDynamicPorts) {
+        public Builder tcpDynamicPorts(@Nullable String tcpDynamicPorts) {
             this.tcpDynamicPorts = tcpDynamicPorts;
             return this;
         }
 
-        public Builder setTcpStaticPorts(@Nullable String tcpStaticPorts) {
+        public Builder tcpStaticPorts(@Nullable String tcpStaticPorts) {
             this.tcpStaticPorts = tcpStaticPorts;
             return this;
         }
 
-        public Builder setVCore(@Nullable String vCore) {
+        public Builder vCore(@Nullable String vCore) {
             this.vCore = vCore;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

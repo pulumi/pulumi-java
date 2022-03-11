@@ -27,14 +27,14 @@ public final class RulesetRule {
     private final @Nullable List<RulesetSubstitutionValue> substitutionMap;
     private final @Nullable RulesetThreshold threshold;
 
-    @OutputCustomType.Constructor({"checkExpression","columnSelectors","disabled","name","substitutionMap","threshold"})
+    @OutputCustomType.Constructor
     private RulesetRule(
-        String checkExpression,
-        @Nullable List<RulesetColumnSelector> columnSelectors,
-        @Nullable Boolean disabled,
-        String name,
-        @Nullable List<RulesetSubstitutionValue> substitutionMap,
-        @Nullable RulesetThreshold threshold) {
+        @OutputCustomType.Parameter("checkExpression") String checkExpression,
+        @OutputCustomType.Parameter("columnSelectors") @Nullable List<RulesetColumnSelector> columnSelectors,
+        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("substitutionMap") @Nullable List<RulesetSubstitutionValue> substitutionMap,
+        @OutputCustomType.Parameter("threshold") @Nullable RulesetThreshold threshold) {
         this.checkExpression = checkExpression;
         this.columnSelectors = columnSelectors;
         this.disabled = disabled;
@@ -96,32 +96,32 @@ public final class RulesetRule {
     	      this.threshold = defaults.threshold;
         }
 
-        public Builder setCheckExpression(String checkExpression) {
+        public Builder checkExpression(String checkExpression) {
             this.checkExpression = Objects.requireNonNull(checkExpression);
             return this;
         }
 
-        public Builder setColumnSelectors(@Nullable List<RulesetColumnSelector> columnSelectors) {
+        public Builder columnSelectors(@Nullable List<RulesetColumnSelector> columnSelectors) {
             this.columnSelectors = columnSelectors;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubstitutionMap(@Nullable List<RulesetSubstitutionValue> substitutionMap) {
+        public Builder substitutionMap(@Nullable List<RulesetSubstitutionValue> substitutionMap) {
             this.substitutionMap = substitutionMap;
             return this;
         }
 
-        public Builder setThreshold(@Nullable RulesetThreshold threshold) {
+        public Builder threshold(@Nullable RulesetThreshold threshold) {
             this.threshold = threshold;
             return this;
         }

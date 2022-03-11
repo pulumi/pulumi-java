@@ -22,10 +22,10 @@ public final class WorkspaceKeyDetailsResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"keyVaultUrl","name"})
+    @OutputCustomType.Constructor
     private WorkspaceKeyDetailsResponse(
-        @Nullable String keyVaultUrl,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("keyVaultUrl") @Nullable String keyVaultUrl,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.keyVaultUrl = keyVaultUrl;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class WorkspaceKeyDetailsResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setKeyVaultUrl(@Nullable String keyVaultUrl) {
+        public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
             this.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

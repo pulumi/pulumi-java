@@ -291,152 +291,152 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
     	      this.usePeerVerification = defaults.usePeerVerification;
         }
 
-        public Builder setAccessKeyId(Input<Object> accessKeyId) {
+        public Builder accessKeyId(Input<Object> accessKeyId) {
             this.accessKeyId = Objects.requireNonNull(accessKeyId);
             return this;
         }
 
-        public Builder setAccessKeyId(Object accessKeyId) {
+        public Builder accessKeyId(Object accessKeyId) {
             this.accessKeyId = Input.of(Objects.requireNonNull(accessKeyId));
             return this;
         }
 
-        public Builder setAnnotations(@Nullable Input<List<Object>> annotations) {
+        public Builder annotations(@Nullable Input<List<Object>> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = Input.ofNullable(annotations);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
+        public Builder connectVia(@Nullable Input<IntegrationRuntimeReferenceArgs> connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
             this.connectVia = Input.ofNullable(connectVia);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Input<Object> encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Input<Object> encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = Input.ofNullable(encryptedCredential);
             return this;
         }
 
-        public Builder setEndpoint(Input<Object> endpoint) {
+        public Builder endpoint(Input<Object> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setEndpoint(Object endpoint) {
+        public Builder endpoint(Object endpoint) {
             this.endpoint = Input.of(Objects.requireNonNull(endpoint));
             return this;
         }
 
-        public Builder setMarketplaceID(Input<Object> marketplaceID) {
+        public Builder marketplaceID(Input<Object> marketplaceID) {
             this.marketplaceID = Objects.requireNonNull(marketplaceID);
             return this;
         }
 
-        public Builder setMarketplaceID(Object marketplaceID) {
+        public Builder marketplaceID(Object marketplaceID) {
             this.marketplaceID = Input.of(Objects.requireNonNull(marketplaceID));
             return this;
         }
 
-        public Builder setMwsAuthToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken) {
+        public Builder mwsAuthToken(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken) {
             this.mwsAuthToken = mwsAuthToken;
             return this;
         }
 
-        public Builder setMwsAuthToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> mwsAuthToken) {
+        public Builder mwsAuthToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> mwsAuthToken) {
             this.mwsAuthToken = Input.ofNullable(mwsAuthToken);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,ParameterSpecificationArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setSecretKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey) {
+        public Builder secretKey(@Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey) {
             this.secretKey = secretKey;
             return this;
         }
 
-        public Builder setSecretKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretKey) {
+        public Builder secretKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> secretKey) {
             this.secretKey = Input.ofNullable(secretKey);
             return this;
         }
 
-        public Builder setSellerID(Input<Object> sellerID) {
+        public Builder sellerID(Input<Object> sellerID) {
             this.sellerID = Objects.requireNonNull(sellerID);
             return this;
         }
 
-        public Builder setSellerID(Object sellerID) {
+        public Builder sellerID(Object sellerID) {
             this.sellerID = Input.of(Objects.requireNonNull(sellerID));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Input<Object> useEncryptedEndpoints) {
             this.useEncryptedEndpoints = useEncryptedEndpoints;
             return this;
         }
 
-        public Builder setUseEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
+        public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
             this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
             return this;
         }
 
-        public Builder setUseHostVerification(@Nullable Input<Object> useHostVerification) {
+        public Builder useHostVerification(@Nullable Input<Object> useHostVerification) {
             this.useHostVerification = useHostVerification;
             return this;
         }
 
-        public Builder setUseHostVerification(@Nullable Object useHostVerification) {
+        public Builder useHostVerification(@Nullable Object useHostVerification) {
             this.useHostVerification = Input.ofNullable(useHostVerification);
             return this;
         }
 
-        public Builder setUsePeerVerification(@Nullable Input<Object> usePeerVerification) {
+        public Builder usePeerVerification(@Nullable Input<Object> usePeerVerification) {
             this.usePeerVerification = usePeerVerification;
             return this;
         }
 
-        public Builder setUsePeerVerification(@Nullable Object usePeerVerification) {
+        public Builder usePeerVerification(@Nullable Object usePeerVerification) {
             this.usePeerVerification = Input.ofNullable(usePeerVerification);
             return this;
         }

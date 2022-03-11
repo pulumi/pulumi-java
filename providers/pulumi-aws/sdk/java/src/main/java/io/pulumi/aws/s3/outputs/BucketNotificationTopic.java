@@ -38,13 +38,13 @@ public final class BucketNotificationTopic {
      */
     private final String topicArn;
 
-    @OutputCustomType.Constructor({"events","filterPrefix","filterSuffix","id","topicArn"})
+    @OutputCustomType.Constructor
     private BucketNotificationTopic(
-        List<String> events,
-        @Nullable String filterPrefix,
-        @Nullable String filterSuffix,
-        @Nullable String id,
-        String topicArn) {
+        @OutputCustomType.Parameter("events") List<String> events,
+        @OutputCustomType.Parameter("filterPrefix") @Nullable String filterPrefix,
+        @OutputCustomType.Parameter("filterSuffix") @Nullable String filterSuffix,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("topicArn") String topicArn) {
         this.events = events;
         this.filterPrefix = filterPrefix;
         this.filterSuffix = filterSuffix;
@@ -116,27 +116,27 @@ public final class BucketNotificationTopic {
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setEvents(List<String> events) {
+        public Builder events(List<String> events) {
             this.events = Objects.requireNonNull(events);
             return this;
         }
 
-        public Builder setFilterPrefix(@Nullable String filterPrefix) {
+        public Builder filterPrefix(@Nullable String filterPrefix) {
             this.filterPrefix = filterPrefix;
             return this;
         }
 
-        public Builder setFilterSuffix(@Nullable String filterSuffix) {
+        public Builder filterSuffix(@Nullable String filterSuffix) {
             this.filterSuffix = filterSuffix;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTopicArn(String topicArn) {
+        public Builder topicArn(String topicArn) {
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }

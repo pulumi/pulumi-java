@@ -135,62 +135,62 @@ public final class EventTargetRedshiftTargetGetArgs extends io.pulumi.resources.
     	      this.withEvent = defaults.withEvent;
         }
 
-        public Builder setDatabase(Input<String> database) {
+        public Builder database(Input<String> database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Input.of(Objects.requireNonNull(database));
             return this;
         }
 
-        public Builder setDbUser(@Nullable Input<String> dbUser) {
+        public Builder dbUser(@Nullable Input<String> dbUser) {
             this.dbUser = dbUser;
             return this;
         }
 
-        public Builder setDbUser(@Nullable String dbUser) {
+        public Builder dbUser(@Nullable String dbUser) {
             this.dbUser = Input.ofNullable(dbUser);
             return this;
         }
 
-        public Builder setSecretsManagerArn(@Nullable Input<String> secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable Input<String> secretsManagerArn) {
             this.secretsManagerArn = secretsManagerArn;
             return this;
         }
 
-        public Builder setSecretsManagerArn(@Nullable String secretsManagerArn) {
+        public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
             this.secretsManagerArn = Input.ofNullable(secretsManagerArn);
             return this;
         }
 
-        public Builder setSql(@Nullable Input<String> sql) {
+        public Builder sql(@Nullable Input<String> sql) {
             this.sql = sql;
             return this;
         }
 
-        public Builder setSql(@Nullable String sql) {
+        public Builder sql(@Nullable String sql) {
             this.sql = Input.ofNullable(sql);
             return this;
         }
 
-        public Builder setStatementName(@Nullable Input<String> statementName) {
+        public Builder statementName(@Nullable Input<String> statementName) {
             this.statementName = statementName;
             return this;
         }
 
-        public Builder setStatementName(@Nullable String statementName) {
+        public Builder statementName(@Nullable String statementName) {
             this.statementName = Input.ofNullable(statementName);
             return this;
         }
 
-        public Builder setWithEvent(@Nullable Input<Boolean> withEvent) {
+        public Builder withEvent(@Nullable Input<Boolean> withEvent) {
             this.withEvent = withEvent;
             return this;
         }
 
-        public Builder setWithEvent(@Nullable Boolean withEvent) {
+        public Builder withEvent(@Nullable Boolean withEvent) {
             this.withEvent = Input.ofNullable(withEvent);
             return this;
         }

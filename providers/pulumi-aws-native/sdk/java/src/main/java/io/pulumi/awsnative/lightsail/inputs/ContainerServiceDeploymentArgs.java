@@ -76,22 +76,22 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     	      this.publicEndpoint = defaults.publicEndpoint;
         }
 
-        public Builder setContainers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ContainerArgs> containers) {
+        public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable Input<ContainerPublicEndpointArgs> publicEndpoint) {
+        public Builder publicEndpoint(@Nullable Input<ContainerPublicEndpointArgs> publicEndpoint) {
             this.publicEndpoint = publicEndpoint;
             return this;
         }
 
-        public Builder setPublicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
+        public Builder publicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
             this.publicEndpoint = Input.ofNullable(publicEndpoint);
             return this;
         }

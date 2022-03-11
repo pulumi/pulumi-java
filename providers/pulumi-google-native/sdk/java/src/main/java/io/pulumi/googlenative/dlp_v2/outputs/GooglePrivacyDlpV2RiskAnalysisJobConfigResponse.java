@@ -28,11 +28,11 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
      */
     private final GooglePrivacyDlpV2BigQueryTableResponse sourceTable;
 
-    @OutputCustomType.Constructor({"actions","privacyMetric","sourceTable"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2RiskAnalysisJobConfigResponse(
-        List<GooglePrivacyDlpV2ActionResponse> actions,
-        GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
-        GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
+        @OutputCustomType.Parameter("actions") List<GooglePrivacyDlpV2ActionResponse> actions,
+        @OutputCustomType.Parameter("privacyMetric") GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric,
+        @OutputCustomType.Parameter("sourceTable") GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
         this.actions = actions;
         this.privacyMetric = privacyMetric;
         this.sourceTable = sourceTable;
@@ -84,17 +84,17 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigResponse {
     	      this.sourceTable = defaults.sourceTable;
         }
 
-        public Builder setActions(List<GooglePrivacyDlpV2ActionResponse> actions) {
+        public Builder actions(List<GooglePrivacyDlpV2ActionResponse> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setPrivacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric) {
+        public Builder privacyMetric(GooglePrivacyDlpV2PrivacyMetricResponse privacyMetric) {
             this.privacyMetric = Objects.requireNonNull(privacyMetric);
             return this;
         }
 
-        public Builder setSourceTable(GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
+        public Builder sourceTable(GooglePrivacyDlpV2BigQueryTableResponse sourceTable) {
             this.sourceTable = Objects.requireNonNull(sourceTable);
             return this;
         }

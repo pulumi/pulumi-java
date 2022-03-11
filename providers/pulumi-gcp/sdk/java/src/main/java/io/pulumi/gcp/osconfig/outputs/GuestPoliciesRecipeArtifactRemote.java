@@ -24,10 +24,10 @@ public final class GuestPoliciesRecipeArtifactRemote {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"checkSum","uri"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeArtifactRemote(
-        @Nullable String checkSum,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("checkSum") @Nullable String checkSum,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.checkSum = checkSum;
         this.uri = uri;
     }
@@ -71,12 +71,12 @@ public final class GuestPoliciesRecipeArtifactRemote {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setCheckSum(@Nullable String checkSum) {
+        public Builder checkSum(@Nullable String checkSum) {
             this.checkSum = checkSum;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

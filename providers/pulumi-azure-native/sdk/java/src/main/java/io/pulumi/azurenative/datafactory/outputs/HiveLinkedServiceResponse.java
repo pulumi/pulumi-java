@@ -131,30 +131,30 @@ public final class HiveLinkedServiceResponse {
      */
     private final @Nullable Object zooKeeperNameSpace;
 
-    @OutputCustomType.Constructor({"allowHostNameCNMismatch","allowSelfSignedServerCert","annotations","authenticationType","connectVia","description","enableSsl","encryptedCredential","host","httpPath","parameters","password","port","serverType","serviceDiscoveryMode","thriftTransportProtocol","trustedCertPath","type","useNativeQuery","useSystemTrustStore","username","zooKeeperNameSpace"})
+    @OutputCustomType.Constructor
     private HiveLinkedServiceResponse(
-        @Nullable Object allowHostNameCNMismatch,
-        @Nullable Object allowSelfSignedServerCert,
-        @Nullable List<Object> annotations,
-        String authenticationType,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object enableSsl,
-        @Nullable Object encryptedCredential,
-        Object host,
-        @Nullable Object httpPath,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Object port,
-        @Nullable String serverType,
-        @Nullable Object serviceDiscoveryMode,
-        @Nullable String thriftTransportProtocol,
-        @Nullable Object trustedCertPath,
-        String type,
-        @Nullable Object useNativeQuery,
-        @Nullable Object useSystemTrustStore,
-        @Nullable Object username,
-        @Nullable Object zooKeeperNameSpace) {
+        @OutputCustomType.Parameter("allowHostNameCNMismatch") @Nullable Object allowHostNameCNMismatch,
+        @OutputCustomType.Parameter("allowSelfSignedServerCert") @Nullable Object allowSelfSignedServerCert,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("authenticationType") String authenticationType,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enableSsl") @Nullable Object enableSsl,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("host") Object host,
+        @OutputCustomType.Parameter("httpPath") @Nullable Object httpPath,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("port") @Nullable Object port,
+        @OutputCustomType.Parameter("serverType") @Nullable String serverType,
+        @OutputCustomType.Parameter("serviceDiscoveryMode") @Nullable Object serviceDiscoveryMode,
+        @OutputCustomType.Parameter("thriftTransportProtocol") @Nullable String thriftTransportProtocol,
+        @OutputCustomType.Parameter("trustedCertPath") @Nullable Object trustedCertPath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useNativeQuery") @Nullable Object useNativeQuery,
+        @OutputCustomType.Parameter("useSystemTrustStore") @Nullable Object useSystemTrustStore,
+        @OutputCustomType.Parameter("username") @Nullable Object username,
+        @OutputCustomType.Parameter("zooKeeperNameSpace") @Nullable Object zooKeeperNameSpace) {
         this.allowHostNameCNMismatch = allowHostNameCNMismatch;
         this.allowSelfSignedServerCert = allowSelfSignedServerCert;
         this.annotations = annotations;
@@ -397,112 +397,112 @@ public final class HiveLinkedServiceResponse {
     	      this.zooKeeperNameSpace = defaults.zooKeeperNameSpace;
         }
 
-        public Builder setAllowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
+        public Builder allowHostNameCNMismatch(@Nullable Object allowHostNameCNMismatch) {
             this.allowHostNameCNMismatch = allowHostNameCNMismatch;
             return this;
         }
 
-        public Builder setAllowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
+        public Builder allowSelfSignedServerCert(@Nullable Object allowSelfSignedServerCert) {
             this.allowSelfSignedServerCert = allowSelfSignedServerCert;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setAuthenticationType(String authenticationType) {
+        public Builder authenticationType(String authenticationType) {
             this.authenticationType = Objects.requireNonNull(authenticationType);
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Object enableSsl) {
+        public Builder enableSsl(@Nullable Object enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setHost(Object host) {
+        public Builder host(Object host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setHttpPath(@Nullable Object httpPath) {
+        public Builder httpPath(@Nullable Object httpPath) {
             this.httpPath = httpPath;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPort(@Nullable Object port) {
+        public Builder port(@Nullable Object port) {
             this.port = port;
             return this;
         }
 
-        public Builder setServerType(@Nullable String serverType) {
+        public Builder serverType(@Nullable String serverType) {
             this.serverType = serverType;
             return this;
         }
 
-        public Builder setServiceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
+        public Builder serviceDiscoveryMode(@Nullable Object serviceDiscoveryMode) {
             this.serviceDiscoveryMode = serviceDiscoveryMode;
             return this;
         }
 
-        public Builder setThriftTransportProtocol(@Nullable String thriftTransportProtocol) {
+        public Builder thriftTransportProtocol(@Nullable String thriftTransportProtocol) {
             this.thriftTransportProtocol = thriftTransportProtocol;
             return this;
         }
 
-        public Builder setTrustedCertPath(@Nullable Object trustedCertPath) {
+        public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             this.trustedCertPath = trustedCertPath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseNativeQuery(@Nullable Object useNativeQuery) {
+        public Builder useNativeQuery(@Nullable Object useNativeQuery) {
             this.useNativeQuery = useNativeQuery;
             return this;
         }
 
-        public Builder setUseSystemTrustStore(@Nullable Object useSystemTrustStore) {
+        public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             this.useSystemTrustStore = useSystemTrustStore;
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
         }
 
-        public Builder setZooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
+        public Builder zooKeeperNameSpace(@Nullable Object zooKeeperNameSpace) {
             this.zooKeeperNameSpace = zooKeeperNameSpace;
             return this;
         }

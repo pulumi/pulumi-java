@@ -268,142 +268,142 @@ public final class CanaryArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visualReference = defaults.visualReference;
         }
 
-        public Builder setArtifactConfig(@Nullable Input<CanaryArtifactConfigArgs> artifactConfig) {
+        public Builder artifactConfig(@Nullable Input<CanaryArtifactConfigArgs> artifactConfig) {
             this.artifactConfig = artifactConfig;
             return this;
         }
 
-        public Builder setArtifactConfig(@Nullable CanaryArtifactConfigArgs artifactConfig) {
+        public Builder artifactConfig(@Nullable CanaryArtifactConfigArgs artifactConfig) {
             this.artifactConfig = Input.ofNullable(artifactConfig);
             return this;
         }
 
-        public Builder setArtifactS3Location(Input<String> artifactS3Location) {
+        public Builder artifactS3Location(Input<String> artifactS3Location) {
             this.artifactS3Location = Objects.requireNonNull(artifactS3Location);
             return this;
         }
 
-        public Builder setArtifactS3Location(String artifactS3Location) {
+        public Builder artifactS3Location(String artifactS3Location) {
             this.artifactS3Location = Input.of(Objects.requireNonNull(artifactS3Location));
             return this;
         }
 
-        public Builder setCode(Input<CanaryCodeArgs> code) {
+        public Builder code(Input<CanaryCodeArgs> code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setCode(CanaryCodeArgs code) {
+        public Builder code(CanaryCodeArgs code) {
             this.code = Input.of(Objects.requireNonNull(code));
             return this;
         }
 
-        public Builder setExecutionRoleArn(Input<String> executionRoleArn) {
+        public Builder executionRoleArn(Input<String> executionRoleArn) {
             this.executionRoleArn = Objects.requireNonNull(executionRoleArn);
             return this;
         }
 
-        public Builder setExecutionRoleArn(String executionRoleArn) {
+        public Builder executionRoleArn(String executionRoleArn) {
             this.executionRoleArn = Input.of(Objects.requireNonNull(executionRoleArn));
             return this;
         }
 
-        public Builder setFailureRetentionPeriod(@Nullable Input<Integer> failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Input<Integer> failureRetentionPeriod) {
             this.failureRetentionPeriod = failureRetentionPeriod;
             return this;
         }
 
-        public Builder setFailureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
+        public Builder failureRetentionPeriod(@Nullable Integer failureRetentionPeriod) {
             this.failureRetentionPeriod = Input.ofNullable(failureRetentionPeriod);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRunConfig(@Nullable Input<CanaryRunConfigArgs> runConfig) {
+        public Builder runConfig(@Nullable Input<CanaryRunConfigArgs> runConfig) {
             this.runConfig = runConfig;
             return this;
         }
 
-        public Builder setRunConfig(@Nullable CanaryRunConfigArgs runConfig) {
+        public Builder runConfig(@Nullable CanaryRunConfigArgs runConfig) {
             this.runConfig = Input.ofNullable(runConfig);
             return this;
         }
 
-        public Builder setRuntimeVersion(Input<String> runtimeVersion) {
+        public Builder runtimeVersion(Input<String> runtimeVersion) {
             this.runtimeVersion = Objects.requireNonNull(runtimeVersion);
             return this;
         }
 
-        public Builder setRuntimeVersion(String runtimeVersion) {
+        public Builder runtimeVersion(String runtimeVersion) {
             this.runtimeVersion = Input.of(Objects.requireNonNull(runtimeVersion));
             return this;
         }
 
-        public Builder setSchedule(Input<CanaryScheduleArgs> schedule) {
+        public Builder schedule(Input<CanaryScheduleArgs> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(CanaryScheduleArgs schedule) {
+        public Builder schedule(CanaryScheduleArgs schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setStartCanaryAfterCreation(Input<Boolean> startCanaryAfterCreation) {
+        public Builder startCanaryAfterCreation(Input<Boolean> startCanaryAfterCreation) {
             this.startCanaryAfterCreation = Objects.requireNonNull(startCanaryAfterCreation);
             return this;
         }
 
-        public Builder setStartCanaryAfterCreation(Boolean startCanaryAfterCreation) {
+        public Builder startCanaryAfterCreation(Boolean startCanaryAfterCreation) {
             this.startCanaryAfterCreation = Input.of(Objects.requireNonNull(startCanaryAfterCreation));
             return this;
         }
 
-        public Builder setSuccessRetentionPeriod(@Nullable Input<Integer> successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Input<Integer> successRetentionPeriod) {
             this.successRetentionPeriod = successRetentionPeriod;
             return this;
         }
 
-        public Builder setSuccessRetentionPeriod(@Nullable Integer successRetentionPeriod) {
+        public Builder successRetentionPeriod(@Nullable Integer successRetentionPeriod) {
             this.successRetentionPeriod = Input.ofNullable(successRetentionPeriod);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<CanaryTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<CanaryTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CanaryTagArgs> tags) {
+        public Builder tags(@Nullable List<CanaryTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVPCConfig(@Nullable Input<CanaryVPCConfigArgs> vPCConfig) {
+        public Builder vPCConfig(@Nullable Input<CanaryVPCConfigArgs> vPCConfig) {
             this.vPCConfig = vPCConfig;
             return this;
         }
 
-        public Builder setVPCConfig(@Nullable CanaryVPCConfigArgs vPCConfig) {
+        public Builder vPCConfig(@Nullable CanaryVPCConfigArgs vPCConfig) {
             this.vPCConfig = Input.ofNullable(vPCConfig);
             return this;
         }
 
-        public Builder setVisualReference(@Nullable Input<CanaryVisualReferenceArgs> visualReference) {
+        public Builder visualReference(@Nullable Input<CanaryVisualReferenceArgs> visualReference) {
             this.visualReference = visualReference;
             return this;
         }
 
-        public Builder setVisualReference(@Nullable CanaryVisualReferenceArgs visualReference) {
+        public Builder visualReference(@Nullable CanaryVisualReferenceArgs visualReference) {
             this.visualReference = Input.ofNullable(visualReference);
             return this;
         }

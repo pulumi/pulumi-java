@@ -22,10 +22,10 @@ public final class TraceResponse {
      */
     private final List<StepResponse> steps;
 
-    @OutputCustomType.Constructor({"endpointInfo","steps"})
+    @OutputCustomType.Constructor
     private TraceResponse(
-        EndpointInfoResponse endpointInfo,
-        List<StepResponse> steps) {
+        @OutputCustomType.Parameter("endpointInfo") EndpointInfoResponse endpointInfo,
+        @OutputCustomType.Parameter("steps") List<StepResponse> steps) {
         this.endpointInfo = endpointInfo;
         this.steps = steps;
     }
@@ -67,12 +67,12 @@ public final class TraceResponse {
     	      this.steps = defaults.steps;
         }
 
-        public Builder setEndpointInfo(EndpointInfoResponse endpointInfo) {
+        public Builder endpointInfo(EndpointInfoResponse endpointInfo) {
             this.endpointInfo = Objects.requireNonNull(endpointInfo);
             return this;
         }
 
-        public Builder setSteps(List<StepResponse> steps) {
+        public Builder steps(List<StepResponse> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }

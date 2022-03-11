@@ -16,10 +16,10 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
     private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
     private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
-    @OutputCustomType.Constructor({"commonAttributes","contentEncoding"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointRequestConfiguration(
-        @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
-        @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        @OutputCustomType.Parameter("commonAttributes") @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes,
+        @OutputCustomType.Parameter("contentEncoding") @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
         this.commonAttributes = commonAttributes;
         this.contentEncoding = contentEncoding;
     }
@@ -53,12 +53,12 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration {
     	      this.contentEncoding = defaults.contentEncoding;
         }
 
-        public Builder setCommonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes) {
+        public Builder commonAttributes(@Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes) {
             this.commonAttributes = commonAttributes;
             return this;
         }
 
-        public Builder setContentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
+        public Builder contentEncoding(@Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding) {
             this.contentEncoding = contentEncoding;
             return this;
         }

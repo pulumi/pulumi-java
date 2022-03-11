@@ -74,22 +74,22 @@ public final class OracleSourceConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.rejectlist = defaults.rejectlist;
         }
 
-        public Builder setAllowlist(@Nullable Input<OracleRdbmsArgs> allowlist) {
+        public Builder allowlist(@Nullable Input<OracleRdbmsArgs> allowlist) {
             this.allowlist = allowlist;
             return this;
         }
 
-        public Builder setAllowlist(@Nullable OracleRdbmsArgs allowlist) {
+        public Builder allowlist(@Nullable OracleRdbmsArgs allowlist) {
             this.allowlist = Input.ofNullable(allowlist);
             return this;
         }
 
-        public Builder setRejectlist(@Nullable Input<OracleRdbmsArgs> rejectlist) {
+        public Builder rejectlist(@Nullable Input<OracleRdbmsArgs> rejectlist) {
             this.rejectlist = rejectlist;
             return this;
         }
 
-        public Builder setRejectlist(@Nullable OracleRdbmsArgs rejectlist) {
+        public Builder rejectlist(@Nullable OracleRdbmsArgs rejectlist) {
             this.rejectlist = Input.ofNullable(rejectlist);
             return this;
         }

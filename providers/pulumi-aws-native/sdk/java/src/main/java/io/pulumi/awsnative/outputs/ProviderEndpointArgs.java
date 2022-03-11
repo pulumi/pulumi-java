@@ -807,167 +807,167 @@ public final class ProviderEndpointArgs {
      */
     private final @Nullable Input<String> xray;
 
-    @OutputCustomType.Constructor({"accessanalyzer","acm","acmpca","amplify","appconfig","applicationautoscaling","applicationinsights","appmesh","apprunner","appstream","appsync","athena","auditmanager","autoscaling","backup","batch","budgets","chime","cloud9","cloudformation","cloudfront","cloudhsm","cloudsearch","cloudtrail","cloudwatch","cloudwatchevents","cloudwatchlogs","codeartifact","codebuild","codecommit","codedeploy","codepipeline","codestarconnections","cognitoidentity","configservice","connect","cur","dataexchange","datapipeline","datasync","dax","detective","devicefarm","directconnect","dlm","dms","docdb","ds","dynamodb","ec2","ecr","ecrpublic","ecs","efs","eks","elasticache","elasticbeanstalk","elastictranscoder","elb","elbv2","emr","emrcontainers","es","firehose","fms","forecast","fsx","gamelift","glacier","globalaccelerator","glue","greengrass","guardduty","iam","identitystore","imagebuilder","inspector","iot","iotanalytics","iotevents","kafka","kinesis","kinesisanalytics","kinesisanalyticsv2","kinesisvideo","kms","lakeformation","lambda","lexmodels","licensemanager","lightsail","location","macie","macie2","managedblockchain","marketplacecatalog","mediaconnect","mediaconvert","medialive","mediapackage","mediastore","mediastoredata","memorydb","mq","mwaa","neptune","networkfirewall","networkmanager","opsworks","organizations","outposts","personalize","pinpoint","pricing","qldb","quicksight","ram","rds","redshift","resourcegroups","resourcegroupstaggingapi","route53","route53domains","route53recoverycontrolconfig","route53recoveryreadiness","route53resolver","s3","s3control","s3outposts","sagemaker","schemas","sdb","secretsmanager","securityhub","serverlessrepo","servicecatalog","servicediscovery","servicequotas","ses","shield","signer","sns","sqs","ssm","ssoadmin","stepfunctions","storagegateway","sts","swf","synthetics","timestreamwrite","transfer","waf","wafregional","wafv2","worklink","workmail","workspaces","xray"})
+    @OutputCustomType.Constructor
     private ProviderEndpointArgs(
-        @Nullable Input<String> accessanalyzer,
-        @Nullable Input<String> acm,
-        @Nullable Input<String> acmpca,
-        @Nullable Input<String> amplify,
-        @Nullable Input<String> appconfig,
-        @Nullable Input<String> applicationautoscaling,
-        @Nullable Input<String> applicationinsights,
-        @Nullable Input<String> appmesh,
-        @Nullable Input<String> apprunner,
-        @Nullable Input<String> appstream,
-        @Nullable Input<String> appsync,
-        @Nullable Input<String> athena,
-        @Nullable Input<String> auditmanager,
-        @Nullable Input<String> autoscaling,
-        @Nullable Input<String> backup,
-        @Nullable Input<String> batch,
-        @Nullable Input<String> budgets,
-        @Nullable Input<String> chime,
-        @Nullable Input<String> cloud9,
-        @Nullable Input<String> cloudformation,
-        @Nullable Input<String> cloudfront,
-        @Nullable Input<String> cloudhsm,
-        @Nullable Input<String> cloudsearch,
-        @Nullable Input<String> cloudtrail,
-        @Nullable Input<String> cloudwatch,
-        @Nullable Input<String> cloudwatchevents,
-        @Nullable Input<String> cloudwatchlogs,
-        @Nullable Input<String> codeartifact,
-        @Nullable Input<String> codebuild,
-        @Nullable Input<String> codecommit,
-        @Nullable Input<String> codedeploy,
-        @Nullable Input<String> codepipeline,
-        @Nullable Input<String> codestarconnections,
-        @Nullable Input<String> cognitoidentity,
-        @Nullable Input<String> configservice,
-        @Nullable Input<String> connect,
-        @Nullable Input<String> cur,
-        @Nullable Input<String> dataexchange,
-        @Nullable Input<String> datapipeline,
-        @Nullable Input<String> datasync,
-        @Nullable Input<String> dax,
-        @Nullable Input<String> detective,
-        @Nullable Input<String> devicefarm,
-        @Nullable Input<String> directconnect,
-        @Nullable Input<String> dlm,
-        @Nullable Input<String> dms,
-        @Nullable Input<String> docdb,
-        @Nullable Input<String> ds,
-        @Nullable Input<String> dynamodb,
-        @Nullable Input<String> ec2,
-        @Nullable Input<String> ecr,
-        @Nullable Input<String> ecrpublic,
-        @Nullable Input<String> ecs,
-        @Nullable Input<String> efs,
-        @Nullable Input<String> eks,
-        @Nullable Input<String> elasticache,
-        @Nullable Input<String> elasticbeanstalk,
-        @Nullable Input<String> elastictranscoder,
-        @Nullable Input<String> elb,
-        @Nullable Input<String> elbv2,
-        @Nullable Input<String> emr,
-        @Nullable Input<String> emrcontainers,
-        @Nullable Input<String> es,
-        @Nullable Input<String> firehose,
-        @Nullable Input<String> fms,
-        @Nullable Input<String> forecast,
-        @Nullable Input<String> fsx,
-        @Nullable Input<String> gamelift,
-        @Nullable Input<String> glacier,
-        @Nullable Input<String> globalaccelerator,
-        @Nullable Input<String> glue,
-        @Nullable Input<String> greengrass,
-        @Nullable Input<String> guardduty,
-        @Nullable Input<String> iam,
-        @Nullable Input<String> identitystore,
-        @Nullable Input<String> imagebuilder,
-        @Nullable Input<String> inspector,
-        @Nullable Input<String> iot,
-        @Nullable Input<String> iotanalytics,
-        @Nullable Input<String> iotevents,
-        @Nullable Input<String> kafka,
-        @Nullable Input<String> kinesis,
-        @Nullable Input<String> kinesisanalytics,
-        @Nullable Input<String> kinesisanalyticsv2,
-        @Nullable Input<String> kinesisvideo,
-        @Nullable Input<String> kms,
-        @Nullable Input<String> lakeformation,
-        @Nullable Input<String> lambda,
-        @Nullable Input<String> lexmodels,
-        @Nullable Input<String> licensemanager,
-        @Nullable Input<String> lightsail,
-        @Nullable Input<String> location,
-        @Nullable Input<String> macie,
-        @Nullable Input<String> macie2,
-        @Nullable Input<String> managedblockchain,
-        @Nullable Input<String> marketplacecatalog,
-        @Nullable Input<String> mediaconnect,
-        @Nullable Input<String> mediaconvert,
-        @Nullable Input<String> medialive,
-        @Nullable Input<String> mediapackage,
-        @Nullable Input<String> mediastore,
-        @Nullable Input<String> mediastoredata,
-        @Nullable Input<String> memorydb,
-        @Nullable Input<String> mq,
-        @Nullable Input<String> mwaa,
-        @Nullable Input<String> neptune,
-        @Nullable Input<String> networkfirewall,
-        @Nullable Input<String> networkmanager,
-        @Nullable Input<String> opsworks,
-        @Nullable Input<String> organizations,
-        @Nullable Input<String> outposts,
-        @Nullable Input<String> personalize,
-        @Nullable Input<String> pinpoint,
-        @Nullable Input<String> pricing,
-        @Nullable Input<String> qldb,
-        @Nullable Input<String> quicksight,
-        @Nullable Input<String> ram,
-        @Nullable Input<String> rds,
-        @Nullable Input<String> redshift,
-        @Nullable Input<String> resourcegroups,
-        @Nullable Input<String> resourcegroupstaggingapi,
-        @Nullable Input<String> route53,
-        @Nullable Input<String> route53domains,
-        @Nullable Input<String> route53recoverycontrolconfig,
-        @Nullable Input<String> route53recoveryreadiness,
-        @Nullable Input<String> route53resolver,
-        @Nullable Input<String> s3,
-        @Nullable Input<String> s3control,
-        @Nullable Input<String> s3outposts,
-        @Nullable Input<String> sagemaker,
-        @Nullable Input<String> schemas,
-        @Nullable Input<String> sdb,
-        @Nullable Input<String> secretsmanager,
-        @Nullable Input<String> securityhub,
-        @Nullable Input<String> serverlessrepo,
-        @Nullable Input<String> servicecatalog,
-        @Nullable Input<String> servicediscovery,
-        @Nullable Input<String> servicequotas,
-        @Nullable Input<String> ses,
-        @Nullable Input<String> shield,
-        @Nullable Input<String> signer,
-        @Nullable Input<String> sns,
-        @Nullable Input<String> sqs,
-        @Nullable Input<String> ssm,
-        @Nullable Input<String> ssoadmin,
-        @Nullable Input<String> stepfunctions,
-        @Nullable Input<String> storagegateway,
-        @Nullable Input<String> sts,
-        @Nullable Input<String> swf,
-        @Nullable Input<String> synthetics,
-        @Nullable Input<String> timestreamwrite,
-        @Nullable Input<String> transfer,
-        @Nullable Input<String> waf,
-        @Nullable Input<String> wafregional,
-        @Nullable Input<String> wafv2,
-        @Nullable Input<String> worklink,
-        @Nullable Input<String> workmail,
-        @Nullable Input<String> workspaces,
-        @Nullable Input<String> xray) {
+        @OutputCustomType.Parameter("accessanalyzer") @Nullable Input<String> accessanalyzer,
+        @OutputCustomType.Parameter("acm") @Nullable Input<String> acm,
+        @OutputCustomType.Parameter("acmpca") @Nullable Input<String> acmpca,
+        @OutputCustomType.Parameter("amplify") @Nullable Input<String> amplify,
+        @OutputCustomType.Parameter("appconfig") @Nullable Input<String> appconfig,
+        @OutputCustomType.Parameter("applicationautoscaling") @Nullable Input<String> applicationautoscaling,
+        @OutputCustomType.Parameter("applicationinsights") @Nullable Input<String> applicationinsights,
+        @OutputCustomType.Parameter("appmesh") @Nullable Input<String> appmesh,
+        @OutputCustomType.Parameter("apprunner") @Nullable Input<String> apprunner,
+        @OutputCustomType.Parameter("appstream") @Nullable Input<String> appstream,
+        @OutputCustomType.Parameter("appsync") @Nullable Input<String> appsync,
+        @OutputCustomType.Parameter("athena") @Nullable Input<String> athena,
+        @OutputCustomType.Parameter("auditmanager") @Nullable Input<String> auditmanager,
+        @OutputCustomType.Parameter("autoscaling") @Nullable Input<String> autoscaling,
+        @OutputCustomType.Parameter("backup") @Nullable Input<String> backup,
+        @OutputCustomType.Parameter("batch") @Nullable Input<String> batch,
+        @OutputCustomType.Parameter("budgets") @Nullable Input<String> budgets,
+        @OutputCustomType.Parameter("chime") @Nullable Input<String> chime,
+        @OutputCustomType.Parameter("cloud9") @Nullable Input<String> cloud9,
+        @OutputCustomType.Parameter("cloudformation") @Nullable Input<String> cloudformation,
+        @OutputCustomType.Parameter("cloudfront") @Nullable Input<String> cloudfront,
+        @OutputCustomType.Parameter("cloudhsm") @Nullable Input<String> cloudhsm,
+        @OutputCustomType.Parameter("cloudsearch") @Nullable Input<String> cloudsearch,
+        @OutputCustomType.Parameter("cloudtrail") @Nullable Input<String> cloudtrail,
+        @OutputCustomType.Parameter("cloudwatch") @Nullable Input<String> cloudwatch,
+        @OutputCustomType.Parameter("cloudwatchevents") @Nullable Input<String> cloudwatchevents,
+        @OutputCustomType.Parameter("cloudwatchlogs") @Nullable Input<String> cloudwatchlogs,
+        @OutputCustomType.Parameter("codeartifact") @Nullable Input<String> codeartifact,
+        @OutputCustomType.Parameter("codebuild") @Nullable Input<String> codebuild,
+        @OutputCustomType.Parameter("codecommit") @Nullable Input<String> codecommit,
+        @OutputCustomType.Parameter("codedeploy") @Nullable Input<String> codedeploy,
+        @OutputCustomType.Parameter("codepipeline") @Nullable Input<String> codepipeline,
+        @OutputCustomType.Parameter("codestarconnections") @Nullable Input<String> codestarconnections,
+        @OutputCustomType.Parameter("cognitoidentity") @Nullable Input<String> cognitoidentity,
+        @OutputCustomType.Parameter("configservice") @Nullable Input<String> configservice,
+        @OutputCustomType.Parameter("connect") @Nullable Input<String> connect,
+        @OutputCustomType.Parameter("cur") @Nullable Input<String> cur,
+        @OutputCustomType.Parameter("dataexchange") @Nullable Input<String> dataexchange,
+        @OutputCustomType.Parameter("datapipeline") @Nullable Input<String> datapipeline,
+        @OutputCustomType.Parameter("datasync") @Nullable Input<String> datasync,
+        @OutputCustomType.Parameter("dax") @Nullable Input<String> dax,
+        @OutputCustomType.Parameter("detective") @Nullable Input<String> detective,
+        @OutputCustomType.Parameter("devicefarm") @Nullable Input<String> devicefarm,
+        @OutputCustomType.Parameter("directconnect") @Nullable Input<String> directconnect,
+        @OutputCustomType.Parameter("dlm") @Nullable Input<String> dlm,
+        @OutputCustomType.Parameter("dms") @Nullable Input<String> dms,
+        @OutputCustomType.Parameter("docdb") @Nullable Input<String> docdb,
+        @OutputCustomType.Parameter("ds") @Nullable Input<String> ds,
+        @OutputCustomType.Parameter("dynamodb") @Nullable Input<String> dynamodb,
+        @OutputCustomType.Parameter("ec2") @Nullable Input<String> ec2,
+        @OutputCustomType.Parameter("ecr") @Nullable Input<String> ecr,
+        @OutputCustomType.Parameter("ecrpublic") @Nullable Input<String> ecrpublic,
+        @OutputCustomType.Parameter("ecs") @Nullable Input<String> ecs,
+        @OutputCustomType.Parameter("efs") @Nullable Input<String> efs,
+        @OutputCustomType.Parameter("eks") @Nullable Input<String> eks,
+        @OutputCustomType.Parameter("elasticache") @Nullable Input<String> elasticache,
+        @OutputCustomType.Parameter("elasticbeanstalk") @Nullable Input<String> elasticbeanstalk,
+        @OutputCustomType.Parameter("elastictranscoder") @Nullable Input<String> elastictranscoder,
+        @OutputCustomType.Parameter("elb") @Nullable Input<String> elb,
+        @OutputCustomType.Parameter("elbv2") @Nullable Input<String> elbv2,
+        @OutputCustomType.Parameter("emr") @Nullable Input<String> emr,
+        @OutputCustomType.Parameter("emrcontainers") @Nullable Input<String> emrcontainers,
+        @OutputCustomType.Parameter("es") @Nullable Input<String> es,
+        @OutputCustomType.Parameter("firehose") @Nullable Input<String> firehose,
+        @OutputCustomType.Parameter("fms") @Nullable Input<String> fms,
+        @OutputCustomType.Parameter("forecast") @Nullable Input<String> forecast,
+        @OutputCustomType.Parameter("fsx") @Nullable Input<String> fsx,
+        @OutputCustomType.Parameter("gamelift") @Nullable Input<String> gamelift,
+        @OutputCustomType.Parameter("glacier") @Nullable Input<String> glacier,
+        @OutputCustomType.Parameter("globalaccelerator") @Nullable Input<String> globalaccelerator,
+        @OutputCustomType.Parameter("glue") @Nullable Input<String> glue,
+        @OutputCustomType.Parameter("greengrass") @Nullable Input<String> greengrass,
+        @OutputCustomType.Parameter("guardduty") @Nullable Input<String> guardduty,
+        @OutputCustomType.Parameter("iam") @Nullable Input<String> iam,
+        @OutputCustomType.Parameter("identitystore") @Nullable Input<String> identitystore,
+        @OutputCustomType.Parameter("imagebuilder") @Nullable Input<String> imagebuilder,
+        @OutputCustomType.Parameter("inspector") @Nullable Input<String> inspector,
+        @OutputCustomType.Parameter("iot") @Nullable Input<String> iot,
+        @OutputCustomType.Parameter("iotanalytics") @Nullable Input<String> iotanalytics,
+        @OutputCustomType.Parameter("iotevents") @Nullable Input<String> iotevents,
+        @OutputCustomType.Parameter("kafka") @Nullable Input<String> kafka,
+        @OutputCustomType.Parameter("kinesis") @Nullable Input<String> kinesis,
+        @OutputCustomType.Parameter("kinesisanalytics") @Nullable Input<String> kinesisanalytics,
+        @OutputCustomType.Parameter("kinesisanalyticsv2") @Nullable Input<String> kinesisanalyticsv2,
+        @OutputCustomType.Parameter("kinesisvideo") @Nullable Input<String> kinesisvideo,
+        @OutputCustomType.Parameter("kms") @Nullable Input<String> kms,
+        @OutputCustomType.Parameter("lakeformation") @Nullable Input<String> lakeformation,
+        @OutputCustomType.Parameter("lambda") @Nullable Input<String> lambda,
+        @OutputCustomType.Parameter("lexmodels") @Nullable Input<String> lexmodels,
+        @OutputCustomType.Parameter("licensemanager") @Nullable Input<String> licensemanager,
+        @OutputCustomType.Parameter("lightsail") @Nullable Input<String> lightsail,
+        @OutputCustomType.Parameter("location") @Nullable Input<String> location,
+        @OutputCustomType.Parameter("macie") @Nullable Input<String> macie,
+        @OutputCustomType.Parameter("macie2") @Nullable Input<String> macie2,
+        @OutputCustomType.Parameter("managedblockchain") @Nullable Input<String> managedblockchain,
+        @OutputCustomType.Parameter("marketplacecatalog") @Nullable Input<String> marketplacecatalog,
+        @OutputCustomType.Parameter("mediaconnect") @Nullable Input<String> mediaconnect,
+        @OutputCustomType.Parameter("mediaconvert") @Nullable Input<String> mediaconvert,
+        @OutputCustomType.Parameter("medialive") @Nullable Input<String> medialive,
+        @OutputCustomType.Parameter("mediapackage") @Nullable Input<String> mediapackage,
+        @OutputCustomType.Parameter("mediastore") @Nullable Input<String> mediastore,
+        @OutputCustomType.Parameter("mediastoredata") @Nullable Input<String> mediastoredata,
+        @OutputCustomType.Parameter("memorydb") @Nullable Input<String> memorydb,
+        @OutputCustomType.Parameter("mq") @Nullable Input<String> mq,
+        @OutputCustomType.Parameter("mwaa") @Nullable Input<String> mwaa,
+        @OutputCustomType.Parameter("neptune") @Nullable Input<String> neptune,
+        @OutputCustomType.Parameter("networkfirewall") @Nullable Input<String> networkfirewall,
+        @OutputCustomType.Parameter("networkmanager") @Nullable Input<String> networkmanager,
+        @OutputCustomType.Parameter("opsworks") @Nullable Input<String> opsworks,
+        @OutputCustomType.Parameter("organizations") @Nullable Input<String> organizations,
+        @OutputCustomType.Parameter("outposts") @Nullable Input<String> outposts,
+        @OutputCustomType.Parameter("personalize") @Nullable Input<String> personalize,
+        @OutputCustomType.Parameter("pinpoint") @Nullable Input<String> pinpoint,
+        @OutputCustomType.Parameter("pricing") @Nullable Input<String> pricing,
+        @OutputCustomType.Parameter("qldb") @Nullable Input<String> qldb,
+        @OutputCustomType.Parameter("quicksight") @Nullable Input<String> quicksight,
+        @OutputCustomType.Parameter("ram") @Nullable Input<String> ram,
+        @OutputCustomType.Parameter("rds") @Nullable Input<String> rds,
+        @OutputCustomType.Parameter("redshift") @Nullable Input<String> redshift,
+        @OutputCustomType.Parameter("resourcegroups") @Nullable Input<String> resourcegroups,
+        @OutputCustomType.Parameter("resourcegroupstaggingapi") @Nullable Input<String> resourcegroupstaggingapi,
+        @OutputCustomType.Parameter("route53") @Nullable Input<String> route53,
+        @OutputCustomType.Parameter("route53domains") @Nullable Input<String> route53domains,
+        @OutputCustomType.Parameter("route53recoverycontrolconfig") @Nullable Input<String> route53recoverycontrolconfig,
+        @OutputCustomType.Parameter("route53recoveryreadiness") @Nullable Input<String> route53recoveryreadiness,
+        @OutputCustomType.Parameter("route53resolver") @Nullable Input<String> route53resolver,
+        @OutputCustomType.Parameter("s3") @Nullable Input<String> s3,
+        @OutputCustomType.Parameter("s3control") @Nullable Input<String> s3control,
+        @OutputCustomType.Parameter("s3outposts") @Nullable Input<String> s3outposts,
+        @OutputCustomType.Parameter("sagemaker") @Nullable Input<String> sagemaker,
+        @OutputCustomType.Parameter("schemas") @Nullable Input<String> schemas,
+        @OutputCustomType.Parameter("sdb") @Nullable Input<String> sdb,
+        @OutputCustomType.Parameter("secretsmanager") @Nullable Input<String> secretsmanager,
+        @OutputCustomType.Parameter("securityhub") @Nullable Input<String> securityhub,
+        @OutputCustomType.Parameter("serverlessrepo") @Nullable Input<String> serverlessrepo,
+        @OutputCustomType.Parameter("servicecatalog") @Nullable Input<String> servicecatalog,
+        @OutputCustomType.Parameter("servicediscovery") @Nullable Input<String> servicediscovery,
+        @OutputCustomType.Parameter("servicequotas") @Nullable Input<String> servicequotas,
+        @OutputCustomType.Parameter("ses") @Nullable Input<String> ses,
+        @OutputCustomType.Parameter("shield") @Nullable Input<String> shield,
+        @OutputCustomType.Parameter("signer") @Nullable Input<String> signer,
+        @OutputCustomType.Parameter("sns") @Nullable Input<String> sns,
+        @OutputCustomType.Parameter("sqs") @Nullable Input<String> sqs,
+        @OutputCustomType.Parameter("ssm") @Nullable Input<String> ssm,
+        @OutputCustomType.Parameter("ssoadmin") @Nullable Input<String> ssoadmin,
+        @OutputCustomType.Parameter("stepfunctions") @Nullable Input<String> stepfunctions,
+        @OutputCustomType.Parameter("storagegateway") @Nullable Input<String> storagegateway,
+        @OutputCustomType.Parameter("sts") @Nullable Input<String> sts,
+        @OutputCustomType.Parameter("swf") @Nullable Input<String> swf,
+        @OutputCustomType.Parameter("synthetics") @Nullable Input<String> synthetics,
+        @OutputCustomType.Parameter("timestreamwrite") @Nullable Input<String> timestreamwrite,
+        @OutputCustomType.Parameter("transfer") @Nullable Input<String> transfer,
+        @OutputCustomType.Parameter("waf") @Nullable Input<String> waf,
+        @OutputCustomType.Parameter("wafregional") @Nullable Input<String> wafregional,
+        @OutputCustomType.Parameter("wafv2") @Nullable Input<String> wafv2,
+        @OutputCustomType.Parameter("worklink") @Nullable Input<String> worklink,
+        @OutputCustomType.Parameter("workmail") @Nullable Input<String> workmail,
+        @OutputCustomType.Parameter("workspaces") @Nullable Input<String> workspaces,
+        @OutputCustomType.Parameter("xray") @Nullable Input<String> xray) {
         this.accessanalyzer = accessanalyzer;
         this.acm = acm;
         this.acmpca = acmpca;
@@ -2579,797 +2579,797 @@ public final class ProviderEndpointArgs {
     	      this.xray = defaults.xray;
         }
 
-        public Builder setAccessanalyzer(@Nullable Input<String> accessanalyzer) {
+        public Builder accessanalyzer(@Nullable Input<String> accessanalyzer) {
             this.accessanalyzer = accessanalyzer;
             return this;
         }
 
-        public Builder setAcm(@Nullable Input<String> acm) {
+        public Builder acm(@Nullable Input<String> acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcmpca(@Nullable Input<String> acmpca) {
+        public Builder acmpca(@Nullable Input<String> acmpca) {
             this.acmpca = acmpca;
             return this;
         }
 
-        public Builder setAmplify(@Nullable Input<String> amplify) {
+        public Builder amplify(@Nullable Input<String> amplify) {
             this.amplify = amplify;
             return this;
         }
 
-        public Builder setAppconfig(@Nullable Input<String> appconfig) {
+        public Builder appconfig(@Nullable Input<String> appconfig) {
             this.appconfig = appconfig;
             return this;
         }
 
-        public Builder setApplicationautoscaling(@Nullable Input<String> applicationautoscaling) {
+        public Builder applicationautoscaling(@Nullable Input<String> applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
 
-        public Builder setApplicationinsights(@Nullable Input<String> applicationinsights) {
+        public Builder applicationinsights(@Nullable Input<String> applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
 
-        public Builder setAppmesh(@Nullable Input<String> appmesh) {
+        public Builder appmesh(@Nullable Input<String> appmesh) {
             this.appmesh = appmesh;
             return this;
         }
 
-        public Builder setApprunner(@Nullable Input<String> apprunner) {
+        public Builder apprunner(@Nullable Input<String> apprunner) {
             this.apprunner = apprunner;
             return this;
         }
 
-        public Builder setAppstream(@Nullable Input<String> appstream) {
+        public Builder appstream(@Nullable Input<String> appstream) {
             this.appstream = appstream;
             return this;
         }
 
-        public Builder setAppsync(@Nullable Input<String> appsync) {
+        public Builder appsync(@Nullable Input<String> appsync) {
             this.appsync = appsync;
             return this;
         }
 
-        public Builder setAthena(@Nullable Input<String> athena) {
+        public Builder athena(@Nullable Input<String> athena) {
             this.athena = athena;
             return this;
         }
 
-        public Builder setAuditmanager(@Nullable Input<String> auditmanager) {
+        public Builder auditmanager(@Nullable Input<String> auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable Input<String> autoscaling) {
+        public Builder autoscaling(@Nullable Input<String> autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setBackup(@Nullable Input<String> backup) {
+        public Builder backup(@Nullable Input<String> backup) {
             this.backup = backup;
             return this;
         }
 
-        public Builder setBatch(@Nullable Input<String> batch) {
+        public Builder batch(@Nullable Input<String> batch) {
             this.batch = batch;
             return this;
         }
 
-        public Builder setBudgets(@Nullable Input<String> budgets) {
+        public Builder budgets(@Nullable Input<String> budgets) {
             this.budgets = budgets;
             return this;
         }
 
-        public Builder setChime(@Nullable Input<String> chime) {
+        public Builder chime(@Nullable Input<String> chime) {
             this.chime = chime;
             return this;
         }
 
-        public Builder setCloud9(@Nullable Input<String> cloud9) {
+        public Builder cloud9(@Nullable Input<String> cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
 
-        public Builder setCloudformation(@Nullable Input<String> cloudformation) {
+        public Builder cloudformation(@Nullable Input<String> cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
 
-        public Builder setCloudfront(@Nullable Input<String> cloudfront) {
+        public Builder cloudfront(@Nullable Input<String> cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
 
-        public Builder setCloudhsm(@Nullable Input<String> cloudhsm) {
+        public Builder cloudhsm(@Nullable Input<String> cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
 
-        public Builder setCloudsearch(@Nullable Input<String> cloudsearch) {
+        public Builder cloudsearch(@Nullable Input<String> cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
 
-        public Builder setCloudtrail(@Nullable Input<String> cloudtrail) {
+        public Builder cloudtrail(@Nullable Input<String> cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
 
-        public Builder setCloudwatch(@Nullable Input<String> cloudwatch) {
+        public Builder cloudwatch(@Nullable Input<String> cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
 
-        public Builder setCloudwatchevents(@Nullable Input<String> cloudwatchevents) {
+        public Builder cloudwatchevents(@Nullable Input<String> cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
 
-        public Builder setCloudwatchlogs(@Nullable Input<String> cloudwatchlogs) {
+        public Builder cloudwatchlogs(@Nullable Input<String> cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
 
-        public Builder setCodeartifact(@Nullable Input<String> codeartifact) {
+        public Builder codeartifact(@Nullable Input<String> codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
 
-        public Builder setCodebuild(@Nullable Input<String> codebuild) {
+        public Builder codebuild(@Nullable Input<String> codebuild) {
             this.codebuild = codebuild;
             return this;
         }
 
-        public Builder setCodecommit(@Nullable Input<String> codecommit) {
+        public Builder codecommit(@Nullable Input<String> codecommit) {
             this.codecommit = codecommit;
             return this;
         }
 
-        public Builder setCodedeploy(@Nullable Input<String> codedeploy) {
+        public Builder codedeploy(@Nullable Input<String> codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
 
-        public Builder setCodepipeline(@Nullable Input<String> codepipeline) {
+        public Builder codepipeline(@Nullable Input<String> codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
 
-        public Builder setCodestarconnections(@Nullable Input<String> codestarconnections) {
+        public Builder codestarconnections(@Nullable Input<String> codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
 
-        public Builder setCognitoidentity(@Nullable Input<String> cognitoidentity) {
+        public Builder cognitoidentity(@Nullable Input<String> cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
 
-        public Builder setConfigservice(@Nullable Input<String> configservice) {
+        public Builder configservice(@Nullable Input<String> configservice) {
             this.configservice = configservice;
             return this;
         }
 
-        public Builder setConnect(@Nullable Input<String> connect) {
+        public Builder connect(@Nullable Input<String> connect) {
             this.connect = connect;
             return this;
         }
 
-        public Builder setCur(@Nullable Input<String> cur) {
+        public Builder cur(@Nullable Input<String> cur) {
             this.cur = cur;
             return this;
         }
 
-        public Builder setDataexchange(@Nullable Input<String> dataexchange) {
+        public Builder dataexchange(@Nullable Input<String> dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
 
-        public Builder setDatapipeline(@Nullable Input<String> datapipeline) {
+        public Builder datapipeline(@Nullable Input<String> datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
 
-        public Builder setDatasync(@Nullable Input<String> datasync) {
+        public Builder datasync(@Nullable Input<String> datasync) {
             this.datasync = datasync;
             return this;
         }
 
-        public Builder setDax(@Nullable Input<String> dax) {
+        public Builder dax(@Nullable Input<String> dax) {
             this.dax = dax;
             return this;
         }
 
-        public Builder setDetective(@Nullable Input<String> detective) {
+        public Builder detective(@Nullable Input<String> detective) {
             this.detective = detective;
             return this;
         }
 
-        public Builder setDevicefarm(@Nullable Input<String> devicefarm) {
+        public Builder devicefarm(@Nullable Input<String> devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
 
-        public Builder setDirectconnect(@Nullable Input<String> directconnect) {
+        public Builder directconnect(@Nullable Input<String> directconnect) {
             this.directconnect = directconnect;
             return this;
         }
 
-        public Builder setDlm(@Nullable Input<String> dlm) {
+        public Builder dlm(@Nullable Input<String> dlm) {
             this.dlm = dlm;
             return this;
         }
 
-        public Builder setDms(@Nullable Input<String> dms) {
+        public Builder dms(@Nullable Input<String> dms) {
             this.dms = dms;
             return this;
         }
 
-        public Builder setDocdb(@Nullable Input<String> docdb) {
+        public Builder docdb(@Nullable Input<String> docdb) {
             this.docdb = docdb;
             return this;
         }
 
-        public Builder setDs(@Nullable Input<String> ds) {
+        public Builder ds(@Nullable Input<String> ds) {
             this.ds = ds;
             return this;
         }
 
-        public Builder setDynamodb(@Nullable Input<String> dynamodb) {
+        public Builder dynamodb(@Nullable Input<String> dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder setEc2(@Nullable Input<String> ec2) {
+        public Builder ec2(@Nullable Input<String> ec2) {
             this.ec2 = ec2;
             return this;
         }
 
-        public Builder setEcr(@Nullable Input<String> ecr) {
+        public Builder ecr(@Nullable Input<String> ecr) {
             this.ecr = ecr;
             return this;
         }
 
-        public Builder setEcrpublic(@Nullable Input<String> ecrpublic) {
+        public Builder ecrpublic(@Nullable Input<String> ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
 
-        public Builder setEcs(@Nullable Input<String> ecs) {
+        public Builder ecs(@Nullable Input<String> ecs) {
             this.ecs = ecs;
             return this;
         }
 
-        public Builder setEfs(@Nullable Input<String> efs) {
+        public Builder efs(@Nullable Input<String> efs) {
             this.efs = efs;
             return this;
         }
 
-        public Builder setEks(@Nullable Input<String> eks) {
+        public Builder eks(@Nullable Input<String> eks) {
             this.eks = eks;
             return this;
         }
 
-        public Builder setElasticache(@Nullable Input<String> elasticache) {
+        public Builder elasticache(@Nullable Input<String> elasticache) {
             this.elasticache = elasticache;
             return this;
         }
 
-        public Builder setElasticbeanstalk(@Nullable Input<String> elasticbeanstalk) {
+        public Builder elasticbeanstalk(@Nullable Input<String> elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
 
-        public Builder setElastictranscoder(@Nullable Input<String> elastictranscoder) {
+        public Builder elastictranscoder(@Nullable Input<String> elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
 
-        public Builder setElb(@Nullable Input<String> elb) {
+        public Builder elb(@Nullable Input<String> elb) {
             this.elb = elb;
             return this;
         }
 
-        public Builder setElbv2(@Nullable Input<String> elbv2) {
+        public Builder elbv2(@Nullable Input<String> elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
 
-        public Builder setEmr(@Nullable Input<String> emr) {
+        public Builder emr(@Nullable Input<String> emr) {
             this.emr = emr;
             return this;
         }
 
-        public Builder setEmrcontainers(@Nullable Input<String> emrcontainers) {
+        public Builder emrcontainers(@Nullable Input<String> emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
 
-        public Builder setEs(@Nullable Input<String> es) {
+        public Builder es(@Nullable Input<String> es) {
             this.es = es;
             return this;
         }
 
-        public Builder setFirehose(@Nullable Input<String> firehose) {
+        public Builder firehose(@Nullable Input<String> firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setFms(@Nullable Input<String> fms) {
+        public Builder fms(@Nullable Input<String> fms) {
             this.fms = fms;
             return this;
         }
 
-        public Builder setForecast(@Nullable Input<String> forecast) {
+        public Builder forecast(@Nullable Input<String> forecast) {
             this.forecast = forecast;
             return this;
         }
 
-        public Builder setFsx(@Nullable Input<String> fsx) {
+        public Builder fsx(@Nullable Input<String> fsx) {
             this.fsx = fsx;
             return this;
         }
 
-        public Builder setGamelift(@Nullable Input<String> gamelift) {
+        public Builder gamelift(@Nullable Input<String> gamelift) {
             this.gamelift = gamelift;
             return this;
         }
 
-        public Builder setGlacier(@Nullable Input<String> glacier) {
+        public Builder glacier(@Nullable Input<String> glacier) {
             this.glacier = glacier;
             return this;
         }
 
-        public Builder setGlobalaccelerator(@Nullable Input<String> globalaccelerator) {
+        public Builder globalaccelerator(@Nullable Input<String> globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
 
-        public Builder setGlue(@Nullable Input<String> glue) {
+        public Builder glue(@Nullable Input<String> glue) {
             this.glue = glue;
             return this;
         }
 
-        public Builder setGreengrass(@Nullable Input<String> greengrass) {
+        public Builder greengrass(@Nullable Input<String> greengrass) {
             this.greengrass = greengrass;
             return this;
         }
 
-        public Builder setGuardduty(@Nullable Input<String> guardduty) {
+        public Builder guardduty(@Nullable Input<String> guardduty) {
             this.guardduty = guardduty;
             return this;
         }
 
-        public Builder setIam(@Nullable Input<String> iam) {
+        public Builder iam(@Nullable Input<String> iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setIdentitystore(@Nullable Input<String> identitystore) {
+        public Builder identitystore(@Nullable Input<String> identitystore) {
             this.identitystore = identitystore;
             return this;
         }
 
-        public Builder setImagebuilder(@Nullable Input<String> imagebuilder) {
+        public Builder imagebuilder(@Nullable Input<String> imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
 
-        public Builder setInspector(@Nullable Input<String> inspector) {
+        public Builder inspector(@Nullable Input<String> inspector) {
             this.inspector = inspector;
             return this;
         }
 
-        public Builder setIot(@Nullable Input<String> iot) {
+        public Builder iot(@Nullable Input<String> iot) {
             this.iot = iot;
             return this;
         }
 
-        public Builder setIotanalytics(@Nullable Input<String> iotanalytics) {
+        public Builder iotanalytics(@Nullable Input<String> iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
 
-        public Builder setIotevents(@Nullable Input<String> iotevents) {
+        public Builder iotevents(@Nullable Input<String> iotevents) {
             this.iotevents = iotevents;
             return this;
         }
 
-        public Builder setKafka(@Nullable Input<String> kafka) {
+        public Builder kafka(@Nullable Input<String> kafka) {
             this.kafka = kafka;
             return this;
         }
 
-        public Builder setKinesis(@Nullable Input<String> kinesis) {
+        public Builder kinesis(@Nullable Input<String> kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder setKinesisanalytics(@Nullable Input<String> kinesisanalytics) {
+        public Builder kinesisanalytics(@Nullable Input<String> kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
 
-        public Builder setKinesisanalyticsv2(@Nullable Input<String> kinesisanalyticsv2) {
+        public Builder kinesisanalyticsv2(@Nullable Input<String> kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
 
-        public Builder setKinesisvideo(@Nullable Input<String> kinesisvideo) {
+        public Builder kinesisvideo(@Nullable Input<String> kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
 
-        public Builder setKms(@Nullable Input<String> kms) {
+        public Builder kms(@Nullable Input<String> kms) {
             this.kms = kms;
             return this;
         }
 
-        public Builder setLakeformation(@Nullable Input<String> lakeformation) {
+        public Builder lakeformation(@Nullable Input<String> lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
 
-        public Builder setLambda(@Nullable Input<String> lambda) {
+        public Builder lambda(@Nullable Input<String> lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setLexmodels(@Nullable Input<String> lexmodels) {
+        public Builder lexmodels(@Nullable Input<String> lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
 
-        public Builder setLicensemanager(@Nullable Input<String> licensemanager) {
+        public Builder licensemanager(@Nullable Input<String> licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
 
-        public Builder setLightsail(@Nullable Input<String> lightsail) {
+        public Builder lightsail(@Nullable Input<String> lightsail) {
             this.lightsail = lightsail;
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMacie(@Nullable Input<String> macie) {
+        public Builder macie(@Nullable Input<String> macie) {
             this.macie = macie;
             return this;
         }
 
-        public Builder setMacie2(@Nullable Input<String> macie2) {
+        public Builder macie2(@Nullable Input<String> macie2) {
             this.macie2 = macie2;
             return this;
         }
 
-        public Builder setManagedblockchain(@Nullable Input<String> managedblockchain) {
+        public Builder managedblockchain(@Nullable Input<String> managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
 
-        public Builder setMarketplacecatalog(@Nullable Input<String> marketplacecatalog) {
+        public Builder marketplacecatalog(@Nullable Input<String> marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
 
-        public Builder setMediaconnect(@Nullable Input<String> mediaconnect) {
+        public Builder mediaconnect(@Nullable Input<String> mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
 
-        public Builder setMediaconvert(@Nullable Input<String> mediaconvert) {
+        public Builder mediaconvert(@Nullable Input<String> mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
 
-        public Builder setMedialive(@Nullable Input<String> medialive) {
+        public Builder medialive(@Nullable Input<String> medialive) {
             this.medialive = medialive;
             return this;
         }
 
-        public Builder setMediapackage(@Nullable Input<String> mediapackage) {
+        public Builder mediapackage(@Nullable Input<String> mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
 
-        public Builder setMediastore(@Nullable Input<String> mediastore) {
+        public Builder mediastore(@Nullable Input<String> mediastore) {
             this.mediastore = mediastore;
             return this;
         }
 
-        public Builder setMediastoredata(@Nullable Input<String> mediastoredata) {
+        public Builder mediastoredata(@Nullable Input<String> mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
 
-        public Builder setMemorydb(@Nullable Input<String> memorydb) {
+        public Builder memorydb(@Nullable Input<String> memorydb) {
             this.memorydb = memorydb;
             return this;
         }
 
-        public Builder setMq(@Nullable Input<String> mq) {
+        public Builder mq(@Nullable Input<String> mq) {
             this.mq = mq;
             return this;
         }
 
-        public Builder setMwaa(@Nullable Input<String> mwaa) {
+        public Builder mwaa(@Nullable Input<String> mwaa) {
             this.mwaa = mwaa;
             return this;
         }
 
-        public Builder setNeptune(@Nullable Input<String> neptune) {
+        public Builder neptune(@Nullable Input<String> neptune) {
             this.neptune = neptune;
             return this;
         }
 
-        public Builder setNetworkfirewall(@Nullable Input<String> networkfirewall) {
+        public Builder networkfirewall(@Nullable Input<String> networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
 
-        public Builder setNetworkmanager(@Nullable Input<String> networkmanager) {
+        public Builder networkmanager(@Nullable Input<String> networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
 
-        public Builder setOpsworks(@Nullable Input<String> opsworks) {
+        public Builder opsworks(@Nullable Input<String> opsworks) {
             this.opsworks = opsworks;
             return this;
         }
 
-        public Builder setOrganizations(@Nullable Input<String> organizations) {
+        public Builder organizations(@Nullable Input<String> organizations) {
             this.organizations = organizations;
             return this;
         }
 
-        public Builder setOutposts(@Nullable Input<String> outposts) {
+        public Builder outposts(@Nullable Input<String> outposts) {
             this.outposts = outposts;
             return this;
         }
 
-        public Builder setPersonalize(@Nullable Input<String> personalize) {
+        public Builder personalize(@Nullable Input<String> personalize) {
             this.personalize = personalize;
             return this;
         }
 
-        public Builder setPinpoint(@Nullable Input<String> pinpoint) {
+        public Builder pinpoint(@Nullable Input<String> pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
 
-        public Builder setPricing(@Nullable Input<String> pricing) {
+        public Builder pricing(@Nullable Input<String> pricing) {
             this.pricing = pricing;
             return this;
         }
 
-        public Builder setQldb(@Nullable Input<String> qldb) {
+        public Builder qldb(@Nullable Input<String> qldb) {
             this.qldb = qldb;
             return this;
         }
 
-        public Builder setQuicksight(@Nullable Input<String> quicksight) {
+        public Builder quicksight(@Nullable Input<String> quicksight) {
             this.quicksight = quicksight;
             return this;
         }
 
-        public Builder setRam(@Nullable Input<String> ram) {
+        public Builder ram(@Nullable Input<String> ram) {
             this.ram = ram;
             return this;
         }
 
-        public Builder setRds(@Nullable Input<String> rds) {
+        public Builder rds(@Nullable Input<String> rds) {
             this.rds = rds;
             return this;
         }
 
-        public Builder setRedshift(@Nullable Input<String> redshift) {
+        public Builder redshift(@Nullable Input<String> redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setResourcegroups(@Nullable Input<String> resourcegroups) {
+        public Builder resourcegroups(@Nullable Input<String> resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
 
-        public Builder setResourcegroupstaggingapi(@Nullable Input<String> resourcegroupstaggingapi) {
+        public Builder resourcegroupstaggingapi(@Nullable Input<String> resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
 
-        public Builder setRoute53(@Nullable Input<String> route53) {
+        public Builder route53(@Nullable Input<String> route53) {
             this.route53 = route53;
             return this;
         }
 
-        public Builder setRoute53domains(@Nullable Input<String> route53domains) {
+        public Builder route53domains(@Nullable Input<String> route53domains) {
             this.route53domains = route53domains;
             return this;
         }
 
-        public Builder setRoute53recoverycontrolconfig(@Nullable Input<String> route53recoverycontrolconfig) {
+        public Builder route53recoverycontrolconfig(@Nullable Input<String> route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
 
-        public Builder setRoute53recoveryreadiness(@Nullable Input<String> route53recoveryreadiness) {
+        public Builder route53recoveryreadiness(@Nullable Input<String> route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
 
-        public Builder setRoute53resolver(@Nullable Input<String> route53resolver) {
+        public Builder route53resolver(@Nullable Input<String> route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
 
-        public Builder setS3(@Nullable Input<String> s3) {
+        public Builder s3(@Nullable Input<String> s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3control(@Nullable Input<String> s3control) {
+        public Builder s3control(@Nullable Input<String> s3control) {
             this.s3control = s3control;
             return this;
         }
 
-        public Builder setS3outposts(@Nullable Input<String> s3outposts) {
+        public Builder s3outposts(@Nullable Input<String> s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
 
-        public Builder setSagemaker(@Nullable Input<String> sagemaker) {
+        public Builder sagemaker(@Nullable Input<String> sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
 
-        public Builder setSchemas(@Nullable Input<String> schemas) {
+        public Builder schemas(@Nullable Input<String> schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder setSdb(@Nullable Input<String> sdb) {
+        public Builder sdb(@Nullable Input<String> sdb) {
             this.sdb = sdb;
             return this;
         }
 
-        public Builder setSecretsmanager(@Nullable Input<String> secretsmanager) {
+        public Builder secretsmanager(@Nullable Input<String> secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
 
-        public Builder setSecurityhub(@Nullable Input<String> securityhub) {
+        public Builder securityhub(@Nullable Input<String> securityhub) {
             this.securityhub = securityhub;
             return this;
         }
 
-        public Builder setServerlessrepo(@Nullable Input<String> serverlessrepo) {
+        public Builder serverlessrepo(@Nullable Input<String> serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
 
-        public Builder setServicecatalog(@Nullable Input<String> servicecatalog) {
+        public Builder servicecatalog(@Nullable Input<String> servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
 
-        public Builder setServicediscovery(@Nullable Input<String> servicediscovery) {
+        public Builder servicediscovery(@Nullable Input<String> servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
 
-        public Builder setServicequotas(@Nullable Input<String> servicequotas) {
+        public Builder servicequotas(@Nullable Input<String> servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
 
-        public Builder setSes(@Nullable Input<String> ses) {
+        public Builder ses(@Nullable Input<String> ses) {
             this.ses = ses;
             return this;
         }
 
-        public Builder setShield(@Nullable Input<String> shield) {
+        public Builder shield(@Nullable Input<String> shield) {
             this.shield = shield;
             return this;
         }
 
-        public Builder setSigner(@Nullable Input<String> signer) {
+        public Builder signer(@Nullable Input<String> signer) {
             this.signer = signer;
             return this;
         }
 
-        public Builder setSns(@Nullable Input<String> sns) {
+        public Builder sns(@Nullable Input<String> sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable Input<String> sqs) {
+        public Builder sqs(@Nullable Input<String> sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder setSsm(@Nullable Input<String> ssm) {
+        public Builder ssm(@Nullable Input<String> ssm) {
             this.ssm = ssm;
             return this;
         }
 
-        public Builder setSsoadmin(@Nullable Input<String> ssoadmin) {
+        public Builder ssoadmin(@Nullable Input<String> ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
 
-        public Builder setStepfunctions(@Nullable Input<String> stepfunctions) {
+        public Builder stepfunctions(@Nullable Input<String> stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
 
-        public Builder setStoragegateway(@Nullable Input<String> storagegateway) {
+        public Builder storagegateway(@Nullable Input<String> storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
 
-        public Builder setSts(@Nullable Input<String> sts) {
+        public Builder sts(@Nullable Input<String> sts) {
             this.sts = sts;
             return this;
         }
 
-        public Builder setSwf(@Nullable Input<String> swf) {
+        public Builder swf(@Nullable Input<String> swf) {
             this.swf = swf;
             return this;
         }
 
-        public Builder setSynthetics(@Nullable Input<String> synthetics) {
+        public Builder synthetics(@Nullable Input<String> synthetics) {
             this.synthetics = synthetics;
             return this;
         }
 
-        public Builder setTimestreamwrite(@Nullable Input<String> timestreamwrite) {
+        public Builder timestreamwrite(@Nullable Input<String> timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
 
-        public Builder setTransfer(@Nullable Input<String> transfer) {
+        public Builder transfer(@Nullable Input<String> transfer) {
             this.transfer = transfer;
             return this;
         }
 
-        public Builder setWaf(@Nullable Input<String> waf) {
+        public Builder waf(@Nullable Input<String> waf) {
             this.waf = waf;
             return this;
         }
 
-        public Builder setWafregional(@Nullable Input<String> wafregional) {
+        public Builder wafregional(@Nullable Input<String> wafregional) {
             this.wafregional = wafregional;
             return this;
         }
 
-        public Builder setWafv2(@Nullable Input<String> wafv2) {
+        public Builder wafv2(@Nullable Input<String> wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
 
-        public Builder setWorklink(@Nullable Input<String> worklink) {
+        public Builder worklink(@Nullable Input<String> worklink) {
             this.worklink = worklink;
             return this;
         }
 
-        public Builder setWorkmail(@Nullable Input<String> workmail) {
+        public Builder workmail(@Nullable Input<String> workmail) {
             this.workmail = workmail;
             return this;
         }
 
-        public Builder setWorkspaces(@Nullable Input<String> workspaces) {
+        public Builder workspaces(@Nullable Input<String> workspaces) {
             this.workspaces = workspaces;
             return this;
         }
 
-        public Builder setXray(@Nullable Input<String> xray) {
+        public Builder xray(@Nullable Input<String> xray) {
             this.xray = xray;
             return this;
         }

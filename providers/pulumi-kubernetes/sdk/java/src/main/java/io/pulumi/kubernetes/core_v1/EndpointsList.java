@@ -126,8 +126,8 @@ public class EndpointsList extends io.pulumi.resources.CustomResource {
     private static EndpointsListArgs makeArgs(EndpointsListArgs args) {
         var builder = args == null ? EndpointsListArgs.builder() : EndpointsListArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("EndpointsList")
+            .apiVersion("v1")
+            .kind("EndpointsList")
             .build();
     }
 

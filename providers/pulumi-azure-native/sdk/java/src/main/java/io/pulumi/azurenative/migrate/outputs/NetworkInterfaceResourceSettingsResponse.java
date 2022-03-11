@@ -36,12 +36,12 @@ public final class NetworkInterfaceResourceSettingsResponse {
      */
     private final String targetResourceName;
 
-    @OutputCustomType.Constructor({"enableAcceleratedNetworking","ipConfigurations","resourceType","targetResourceName"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceResourceSettingsResponse(
-        @Nullable Boolean enableAcceleratedNetworking,
-        @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
-        String resourceType,
-        String targetResourceName) {
+        @OutputCustomType.Parameter("enableAcceleratedNetworking") @Nullable Boolean enableAcceleratedNetworking,
+        @OutputCustomType.Parameter("ipConfigurations") @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName) {
         this.enableAcceleratedNetworking = enableAcceleratedNetworking;
         this.ipConfigurations = ipConfigurations;
         this.resourceType = resourceType;
@@ -104,22 +104,22 @@ public final class NetworkInterfaceResourceSettingsResponse {
     	      this.targetResourceName = defaults.targetResourceName;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }

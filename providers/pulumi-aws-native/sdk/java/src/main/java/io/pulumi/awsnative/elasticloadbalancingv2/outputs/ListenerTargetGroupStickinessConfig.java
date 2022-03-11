@@ -15,10 +15,10 @@ public final class ListenerTargetGroupStickinessConfig {
     private final @Nullable Integer durationSeconds;
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"durationSeconds","enabled"})
+    @OutputCustomType.Constructor
     private ListenerTargetGroupStickinessConfig(
-        @Nullable Integer durationSeconds,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("durationSeconds") @Nullable Integer durationSeconds,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.durationSeconds = durationSeconds;
         this.enabled = enabled;
     }
@@ -52,12 +52,12 @@ public final class ListenerTargetGroupStickinessConfig {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDurationSeconds(@Nullable Integer durationSeconds) {
+        public Builder durationSeconds(@Nullable Integer durationSeconds) {
             this.durationSeconds = durationSeconds;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

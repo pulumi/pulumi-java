@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLoggingAccessLog {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLogFile file;
 
-    @OutputCustomType.Constructor({"file"})
-    private VirtualGatewaySpecLoggingAccessLog(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecLoggingAccessLog(@OutputCustomType.Parameter("file") @Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
         this.file = file;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecLoggingAccessLog {
     	      this.file = defaults.file;
         }
 
-        public Builder setFile(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
+        public Builder file(@Nullable VirtualGatewaySpecLoggingAccessLogFile file) {
             this.file = file;
             return this;
         }

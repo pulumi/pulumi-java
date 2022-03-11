@@ -64,18 +64,18 @@ public final class GetAppResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"applicationId","displayName","id","location","name","sku","subdomain","tags","template","type"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        String applicationId,
-        @Nullable String displayName,
-        String id,
-        String location,
-        String name,
-        AppSkuInfoResponse sku,
-        @Nullable String subdomain,
-        @Nullable Map<String,String> tags,
-        @Nullable String template,
-        String type) {
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") AppSkuInfoResponse sku,
+        @OutputCustomType.Parameter("subdomain") @Nullable String subdomain,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("template") @Nullable String template,
+        @OutputCustomType.Parameter("type") String type) {
         this.applicationId = applicationId;
         this.displayName = displayName;
         this.id = id;
@@ -197,52 +197,52 @@ public final class GetAppResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(AppSkuInfoResponse sku) {
+        public Builder sku(AppSkuInfoResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTemplate(@Nullable String template) {
+        public Builder template(@Nullable String template) {
             this.template = template;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

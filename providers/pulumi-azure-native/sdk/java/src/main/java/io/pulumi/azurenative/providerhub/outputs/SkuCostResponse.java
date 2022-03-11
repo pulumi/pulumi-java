@@ -16,11 +16,11 @@ public final class SkuCostResponse {
     private final String meterId;
     private final @Nullable Integer quantity;
 
-    @OutputCustomType.Constructor({"extendedUnit","meterId","quantity"})
+    @OutputCustomType.Constructor
     private SkuCostResponse(
-        @Nullable String extendedUnit,
-        String meterId,
-        @Nullable Integer quantity) {
+        @OutputCustomType.Parameter("extendedUnit") @Nullable String extendedUnit,
+        @OutputCustomType.Parameter("meterId") String meterId,
+        @OutputCustomType.Parameter("quantity") @Nullable Integer quantity) {
         this.extendedUnit = extendedUnit;
         this.meterId = meterId;
         this.quantity = quantity;
@@ -60,17 +60,17 @@ public final class SkuCostResponse {
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setExtendedUnit(@Nullable String extendedUnit) {
+        public Builder extendedUnit(@Nullable String extendedUnit) {
             this.extendedUnit = extendedUnit;
             return this;
         }
 
-        public Builder setMeterId(String meterId) {
+        public Builder meterId(String meterId) {
             this.meterId = Objects.requireNonNull(meterId);
             return this;
         }
 
-        public Builder setQuantity(@Nullable Integer quantity) {
+        public Builder quantity(@Nullable Integer quantity) {
             this.quantity = quantity;
             return this;
         }

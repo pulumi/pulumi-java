@@ -53,16 +53,16 @@ public final class GetPrivateConnectionResult {
      */
     private final VpcPeeringConfigResponse vpcPeeringConfig;
 
-    @OutputCustomType.Constructor({"createTime","displayName","error","labels","name","state","updateTime","vpcPeeringConfig"})
+    @OutputCustomType.Constructor
     private GetPrivateConnectionResult(
-        String createTime,
-        String displayName,
-        ErrorResponse error,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String updateTime,
-        VpcPeeringConfigResponse vpcPeeringConfig) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("error") ErrorResponse error,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vpcPeeringConfig") VpcPeeringConfigResponse vpcPeeringConfig) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.error = error;
@@ -164,42 +164,42 @@ public final class GetPrivateConnectionResult {
     	      this.vpcPeeringConfig = defaults.vpcPeeringConfig;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setError(ErrorResponse error) {
+        public Builder error(ErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVpcPeeringConfig(VpcPeeringConfigResponse vpcPeeringConfig) {
+        public Builder vpcPeeringConfig(VpcPeeringConfigResponse vpcPeeringConfig) {
             this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
             return this;
         }

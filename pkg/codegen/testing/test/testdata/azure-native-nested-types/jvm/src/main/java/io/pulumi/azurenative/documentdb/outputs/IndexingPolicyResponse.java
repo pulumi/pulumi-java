@@ -17,8 +17,8 @@ public final class IndexingPolicyResponse {
      */
     private final @Nullable List<List<CompositePathResponse>> compositeIndexes;
 
-    @OutputCustomType.Constructor({"compositeIndexes"})
-    private IndexingPolicyResponse(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+    @OutputCustomType.Constructor
+    private IndexingPolicyResponse(@OutputCustomType.Parameter("compositeIndexes") @Nullable List<List<CompositePathResponse>> compositeIndexes) {
         this.compositeIndexes = compositeIndexes;
     }
 
@@ -50,7 +50,7 @@ public final class IndexingPolicyResponse {
     	      this.compositeIndexes = defaults.compositeIndexes;
         }
 
-        public Builder setCompositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
+        public Builder compositeIndexes(@Nullable List<List<CompositePathResponse>> compositeIndexes) {
             this.compositeIndexes = compositeIndexes;
             return this;
         }

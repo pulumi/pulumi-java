@@ -47,14 +47,14 @@ public final class ThresholdRuleConditionResponse {
      */
     private final @Nullable String windowSize;
 
-    @OutputCustomType.Constructor({"dataSource","odataType","operator","threshold","timeAggregation","windowSize"})
+    @OutputCustomType.Constructor
     private ThresholdRuleConditionResponse(
-        @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
-        String odataType,
-        String operator,
-        Double threshold,
-        @Nullable String timeAggregation,
-        @Nullable String windowSize) {
+        @OutputCustomType.Parameter("dataSource") @Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("threshold") Double threshold,
+        @OutputCustomType.Parameter("timeAggregation") @Nullable String timeAggregation,
+        @OutputCustomType.Parameter("windowSize") @Nullable String windowSize) {
         this.dataSource = dataSource;
         this.odataType = odataType;
         this.operator = operator;
@@ -137,32 +137,32 @@ public final class ThresholdRuleConditionResponse {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setDataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
+        public Builder dataSource(@Nullable Either<RuleManagementEventDataSourceResponse,RuleMetricDataSourceResponse> dataSource) {
             this.dataSource = dataSource;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setThreshold(Double threshold) {
+        public Builder threshold(Double threshold) {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
 
-        public Builder setTimeAggregation(@Nullable String timeAggregation) {
+        public Builder timeAggregation(@Nullable String timeAggregation) {
             this.timeAggregation = timeAggregation;
             return this;
         }
 
-        public Builder setWindowSize(@Nullable String windowSize) {
+        public Builder windowSize(@Nullable String windowSize) {
             this.windowSize = windowSize;
             return this;
         }

@@ -46,15 +46,15 @@ public final class CsvOptionsResponse {
      */
     private final String skipLeadingRows;
 
-    @OutputCustomType.Constructor({"allowJaggedRows","allowQuotedNewlines","encoding","fieldDelimiter","nullMarker","quote","skipLeadingRows"})
+    @OutputCustomType.Constructor
     private CsvOptionsResponse(
-        Boolean allowJaggedRows,
-        Boolean allowQuotedNewlines,
-        String encoding,
-        String fieldDelimiter,
-        String nullMarker,
-        String quote,
-        String skipLeadingRows) {
+        @OutputCustomType.Parameter("allowJaggedRows") Boolean allowJaggedRows,
+        @OutputCustomType.Parameter("allowQuotedNewlines") Boolean allowQuotedNewlines,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fieldDelimiter") String fieldDelimiter,
+        @OutputCustomType.Parameter("nullMarker") String nullMarker,
+        @OutputCustomType.Parameter("quote") String quote,
+        @OutputCustomType.Parameter("skipLeadingRows") String skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;
@@ -146,37 +146,37 @@ public final class CsvOptionsResponse {
     	      this.skipLeadingRows = defaults.skipLeadingRows;
         }
 
-        public Builder setAllowJaggedRows(Boolean allowJaggedRows) {
+        public Builder allowJaggedRows(Boolean allowJaggedRows) {
             this.allowJaggedRows = Objects.requireNonNull(allowJaggedRows);
             return this;
         }
 
-        public Builder setAllowQuotedNewlines(Boolean allowQuotedNewlines) {
+        public Builder allowQuotedNewlines(Boolean allowQuotedNewlines) {
             this.allowQuotedNewlines = Objects.requireNonNull(allowQuotedNewlines);
             return this;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFieldDelimiter(String fieldDelimiter) {
+        public Builder fieldDelimiter(String fieldDelimiter) {
             this.fieldDelimiter = Objects.requireNonNull(fieldDelimiter);
             return this;
         }
 
-        public Builder setNullMarker(String nullMarker) {
+        public Builder nullMarker(String nullMarker) {
             this.nullMarker = Objects.requireNonNull(nullMarker);
             return this;
         }
 
-        public Builder setQuote(String quote) {
+        public Builder quote(String quote) {
             this.quote = Objects.requireNonNull(quote);
             return this;
         }
 
-        public Builder setSkipLeadingRows(String skipLeadingRows) {
+        public Builder skipLeadingRows(String skipLeadingRows) {
             this.skipLeadingRows = Objects.requireNonNull(skipLeadingRows);
             return this;
         }

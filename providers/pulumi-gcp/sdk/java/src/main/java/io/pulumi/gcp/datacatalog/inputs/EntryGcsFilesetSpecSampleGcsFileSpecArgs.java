@@ -73,22 +73,22 @@ public final class EntryGcsFilesetSpecSampleGcsFileSpecArgs extends io.pulumi.re
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setFilePath(@Nullable Input<String> filePath) {
+        public Builder filePath(@Nullable Input<String> filePath) {
             this.filePath = filePath;
             return this;
         }
 
-        public Builder setFilePath(@Nullable String filePath) {
+        public Builder filePath(@Nullable String filePath) {
             this.filePath = Input.ofNullable(filePath);
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Input<Integer> sizeBytes) {
+        public Builder sizeBytes(@Nullable Input<Integer> sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = Input.ofNullable(sizeBytes);
             return this;
         }

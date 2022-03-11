@@ -27,11 +27,11 @@ public final class VirtualApplianceSkuPropertiesResponse {
      */
     private final @Nullable String vendor;
 
-    @OutputCustomType.Constructor({"bundledScaleUnit","marketPlaceVersion","vendor"})
+    @OutputCustomType.Constructor
     private VirtualApplianceSkuPropertiesResponse(
-        @Nullable String bundledScaleUnit,
-        @Nullable String marketPlaceVersion,
-        @Nullable String vendor) {
+        @OutputCustomType.Parameter("bundledScaleUnit") @Nullable String bundledScaleUnit,
+        @OutputCustomType.Parameter("marketPlaceVersion") @Nullable String marketPlaceVersion,
+        @OutputCustomType.Parameter("vendor") @Nullable String vendor) {
         this.bundledScaleUnit = bundledScaleUnit;
         this.marketPlaceVersion = marketPlaceVersion;
         this.vendor = vendor;
@@ -83,17 +83,17 @@ public final class VirtualApplianceSkuPropertiesResponse {
     	      this.vendor = defaults.vendor;
         }
 
-        public Builder setBundledScaleUnit(@Nullable String bundledScaleUnit) {
+        public Builder bundledScaleUnit(@Nullable String bundledScaleUnit) {
             this.bundledScaleUnit = bundledScaleUnit;
             return this;
         }
 
-        public Builder setMarketPlaceVersion(@Nullable String marketPlaceVersion) {
+        public Builder marketPlaceVersion(@Nullable String marketPlaceVersion) {
             this.marketPlaceVersion = marketPlaceVersion;
             return this;
         }
 
-        public Builder setVendor(@Nullable String vendor) {
+        public Builder vendor(@Nullable String vendor) {
             this.vendor = vendor;
             return this;
         }

@@ -24,11 +24,11 @@ public final class ModelExplainabilityJobDefinitionNetworkConfig {
     private final @Nullable Boolean enableNetworkIsolation;
     private final @Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig;
 
-    @OutputCustomType.Constructor({"enableInterContainerTrafficEncryption","enableNetworkIsolation","vpcConfig"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionNetworkConfig(
-        @Nullable Boolean enableInterContainerTrafficEncryption,
-        @Nullable Boolean enableNetworkIsolation,
-        @Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
+        @OutputCustomType.Parameter("enableInterContainerTrafficEncryption") @Nullable Boolean enableInterContainerTrafficEncryption,
+        @OutputCustomType.Parameter("enableNetworkIsolation") @Nullable Boolean enableNetworkIsolation,
+        @OutputCustomType.Parameter("vpcConfig") @Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
         this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
         this.enableNetworkIsolation = enableNetworkIsolation;
         this.vpcConfig = vpcConfig;
@@ -76,17 +76,17 @@ public final class ModelExplainabilityJobDefinitionNetworkConfig {
     	      this.vpcConfig = defaults.vpcConfig;
         }
 
-        public Builder setEnableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
+        public Builder enableInterContainerTrafficEncryption(@Nullable Boolean enableInterContainerTrafficEncryption) {
             this.enableInterContainerTrafficEncryption = enableInterContainerTrafficEncryption;
             return this;
         }
 
-        public Builder setEnableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
+        public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
             this.enableNetworkIsolation = enableNetworkIsolation;
             return this;
         }
 
-        public Builder setVpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
+        public Builder vpcConfig(@Nullable ModelExplainabilityJobDefinitionVpcConfig vpcConfig) {
             this.vpcConfig = vpcConfig;
             return this;
         }

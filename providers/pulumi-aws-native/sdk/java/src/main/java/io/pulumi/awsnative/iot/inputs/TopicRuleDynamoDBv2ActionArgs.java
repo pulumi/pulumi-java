@@ -63,22 +63,22 @@ public final class TopicRuleDynamoDBv2ActionArgs extends io.pulumi.resources.Res
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutItem(@Nullable Input<TopicRulePutItemInputArgs> putItem) {
+        public Builder putItem(@Nullable Input<TopicRulePutItemInputArgs> putItem) {
             this.putItem = putItem;
             return this;
         }
 
-        public Builder setPutItem(@Nullable TopicRulePutItemInputArgs putItem) {
+        public Builder putItem(@Nullable TopicRulePutItemInputArgs putItem) {
             this.putItem = Input.ofNullable(putItem);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }

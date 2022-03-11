@@ -42,15 +42,15 @@ public final class GetGremlinResourceGremlinGraphResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","location","name","options","resource","tags","type"})
+    @OutputCustomType.Constructor
     private GetGremlinResourceGremlinGraphResult(
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable GremlinGraphGetPropertiesResponseOptions options,
-        @Nullable GremlinGraphGetPropertiesResponseResource resource,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("options") @Nullable GremlinGraphGetPropertiesResponseOptions options,
+        @OutputCustomType.Parameter("resource") @Nullable GremlinGraphGetPropertiesResponseResource resource,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.location = location;
         this.name = name;
@@ -134,37 +134,37 @@ public final class GetGremlinResourceGremlinGraphResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOptions(@Nullable GremlinGraphGetPropertiesResponseOptions options) {
+        public Builder options(@Nullable GremlinGraphGetPropertiesResponseOptions options) {
             this.options = options;
             return this;
         }
 
-        public Builder setResource(@Nullable GremlinGraphGetPropertiesResponseResource resource) {
+        public Builder resource(@Nullable GremlinGraphGetPropertiesResponseResource resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

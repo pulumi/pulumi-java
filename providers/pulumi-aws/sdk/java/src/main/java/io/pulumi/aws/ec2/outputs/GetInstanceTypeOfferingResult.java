@@ -27,13 +27,13 @@ public final class GetInstanceTypeOfferingResult {
     private final @Nullable String locationType;
     private final @Nullable List<String> preferredInstanceTypes;
 
-    @OutputCustomType.Constructor({"filters","id","instanceType","locationType","preferredInstanceTypes"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeOfferingResult(
-        @Nullable List<GetInstanceTypeOfferingFilter> filters,
-        String id,
-        String instanceType,
-        @Nullable String locationType,
-        @Nullable List<String> preferredInstanceTypes) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstanceTypeOfferingFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("locationType") @Nullable String locationType,
+        @OutputCustomType.Parameter("preferredInstanceTypes") @Nullable List<String> preferredInstanceTypes) {
         this.filters = filters;
         this.id = id;
         this.instanceType = instanceType;
@@ -93,27 +93,27 @@ public final class GetInstanceTypeOfferingResult {
     	      this.preferredInstanceTypes = defaults.preferredInstanceTypes;
         }
 
-        public Builder setFilters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
+        public Builder filters(@Nullable List<GetInstanceTypeOfferingFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLocationType(@Nullable String locationType) {
+        public Builder locationType(@Nullable String locationType) {
             this.locationType = locationType;
             return this;
         }
 
-        public Builder setPreferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
+        public Builder preferredInstanceTypes(@Nullable List<String> preferredInstanceTypes) {
             this.preferredInstanceTypes = preferredInstanceTypes;
             return this;
         }

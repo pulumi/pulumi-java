@@ -17,8 +17,8 @@ public final class RuleManagementEventClaimsDataSourceResponse {
      */
     private final @Nullable String emailAddress;
 
-    @OutputCustomType.Constructor({"emailAddress"})
-    private RuleManagementEventClaimsDataSourceResponse(@Nullable String emailAddress) {
+    @OutputCustomType.Constructor
+    private RuleManagementEventClaimsDataSourceResponse(@OutputCustomType.Parameter("emailAddress") @Nullable String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
@@ -50,7 +50,7 @@ public final class RuleManagementEventClaimsDataSourceResponse {
     	      this.emailAddress = defaults.emailAddress;
         }
 
-        public Builder setEmailAddress(@Nullable String emailAddress) {
+        public Builder emailAddress(@Nullable String emailAddress) {
             this.emailAddress = emailAddress;
             return this;
         }

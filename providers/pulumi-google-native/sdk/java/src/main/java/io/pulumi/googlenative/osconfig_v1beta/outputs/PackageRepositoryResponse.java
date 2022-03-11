@@ -33,12 +33,12 @@ public final class PackageRepositoryResponse {
      */
     private final ZypperRepositoryResponse zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private PackageRepositoryResponse(
-        AptRepositoryResponse apt,
-        GooRepositoryResponse goo,
-        YumRepositoryResponse yum,
-        ZypperRepositoryResponse zypper) {
+        @OutputCustomType.Parameter("apt") AptRepositoryResponse apt,
+        @OutputCustomType.Parameter("goo") GooRepositoryResponse goo,
+        @OutputCustomType.Parameter("yum") YumRepositoryResponse yum,
+        @OutputCustomType.Parameter("zypper") ZypperRepositoryResponse zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -100,22 +100,22 @@ public final class PackageRepositoryResponse {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(AptRepositoryResponse apt) {
+        public Builder apt(AptRepositoryResponse apt) {
             this.apt = Objects.requireNonNull(apt);
             return this;
         }
 
-        public Builder setGoo(GooRepositoryResponse goo) {
+        public Builder goo(GooRepositoryResponse goo) {
             this.goo = Objects.requireNonNull(goo);
             return this;
         }
 
-        public Builder setYum(YumRepositoryResponse yum) {
+        public Builder yum(YumRepositoryResponse yum) {
             this.yum = Objects.requireNonNull(yum);
             return this;
         }
 
-        public Builder setZypper(ZypperRepositoryResponse zypper) {
+        public Builder zypper(ZypperRepositoryResponse zypper) {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }

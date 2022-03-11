@@ -21,10 +21,10 @@ public final class ServiceAccountResponse {
      */
     private final List<String> scopes;
 
-    @OutputCustomType.Constructor({"email","scopes"})
+    @OutputCustomType.Constructor
     private ServiceAccountResponse(
-        String email,
-        List<String> scopes) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("scopes") List<String> scopes) {
         this.email = email;
         this.scopes = scopes;
     }
@@ -66,12 +66,12 @@ public final class ServiceAccountResponse {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }

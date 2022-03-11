@@ -17,8 +17,8 @@ public final class CustomProfileResponse {
      */
     private final @Nullable String metadataConfigurationPath;
 
-    @OutputCustomType.Constructor({"metadataConfigurationPath"})
-    private CustomProfileResponse(@Nullable String metadataConfigurationPath) {
+    @OutputCustomType.Constructor
+    private CustomProfileResponse(@OutputCustomType.Parameter("metadataConfigurationPath") @Nullable String metadataConfigurationPath) {
         this.metadataConfigurationPath = metadataConfigurationPath;
     }
 
@@ -50,7 +50,7 @@ public final class CustomProfileResponse {
     	      this.metadataConfigurationPath = defaults.metadataConfigurationPath;
         }
 
-        public Builder setMetadataConfigurationPath(@Nullable String metadataConfigurationPath) {
+        public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
             this.metadataConfigurationPath = metadataConfigurationPath;
             return this;
         }

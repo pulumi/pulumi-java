@@ -18,12 +18,12 @@ public final class ServiceApi {
     private final @Nullable String syntax;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"methods","name","syntax","version"})
+    @OutputCustomType.Constructor
     private ServiceApi(
-        @Nullable List<ServiceApiMethod> methods,
-        @Nullable String name,
-        @Nullable String syntax,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("methods") @Nullable List<ServiceApiMethod> methods,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("syntax") @Nullable String syntax,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.methods = methods;
         this.name = name;
         this.syntax = syntax;
@@ -69,22 +69,22 @@ public final class ServiceApi {
     	      this.version = defaults.version;
         }
 
-        public Builder setMethods(@Nullable List<ServiceApiMethod> methods) {
+        public Builder methods(@Nullable List<ServiceApiMethod> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

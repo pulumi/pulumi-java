@@ -25,12 +25,12 @@ public final class GetProjectServiceAccountResult {
     private final String project;
     private final @Nullable String userProject;
 
-    @OutputCustomType.Constructor({"emailAddress","id","project","userProject"})
+    @OutputCustomType.Constructor
     private GetProjectServiceAccountResult(
-        String emailAddress,
-        String id,
-        String project,
-        @Nullable String userProject) {
+        @OutputCustomType.Parameter("emailAddress") String emailAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("userProject") @Nullable String userProject) {
         this.emailAddress = emailAddress;
         this.id = id;
         this.project = project;
@@ -85,22 +85,22 @@ public final class GetProjectServiceAccountResult {
     	      this.userProject = defaults.userProject;
         }
 
-        public Builder setEmailAddress(String emailAddress) {
+        public Builder emailAddress(String emailAddress) {
             this.emailAddress = Objects.requireNonNull(emailAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setUserProject(@Nullable String userProject) {
+        public Builder userProject(@Nullable String userProject) {
             this.userProject = userProject;
             return this;
         }

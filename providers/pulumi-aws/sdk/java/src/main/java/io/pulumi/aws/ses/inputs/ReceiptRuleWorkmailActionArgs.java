@@ -87,32 +87,32 @@ public final class ReceiptRuleWorkmailActionArgs extends io.pulumi.resources.Res
     	      this.topicArn = defaults.topicArn;
         }
 
-        public Builder setOrganizationArn(Input<String> organizationArn) {
+        public Builder organizationArn(Input<String> organizationArn) {
             this.organizationArn = Objects.requireNonNull(organizationArn);
             return this;
         }
 
-        public Builder setOrganizationArn(String organizationArn) {
+        public Builder organizationArn(String organizationArn) {
             this.organizationArn = Input.of(Objects.requireNonNull(organizationArn));
             return this;
         }
 
-        public Builder setPosition(Input<Integer> position) {
+        public Builder position(Input<Integer> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(Integer position) {
+        public Builder position(Integer position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }
 
-        public Builder setTopicArn(@Nullable Input<String> topicArn) {
+        public Builder topicArn(@Nullable Input<String> topicArn) {
             this.topicArn = topicArn;
             return this;
         }
 
-        public Builder setTopicArn(@Nullable String topicArn) {
+        public Builder topicArn(@Nullable String topicArn) {
             this.topicArn = Input.ofNullable(topicArn);
             return this;
         }

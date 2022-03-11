@@ -90,17 +90,17 @@ public final class O365BreakOutCategoryPoliciesResponse extends io.pulumi.resour
     	      this.optimize = defaults.optimize;
         }
 
-        public Builder setAllow(@Nullable Boolean allow) {
+        public Builder allow(@Nullable Boolean allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder set$default(@Nullable Boolean $default) {
+        public Builder $default(@Nullable Boolean $default) {
             this.$default = $default;
             return this;
         }
 
-        public Builder setOptimize(@Nullable Boolean optimize) {
+        public Builder optimize(@Nullable Boolean optimize) {
             this.optimize = optimize;
             return this;
         }

@@ -15,8 +15,8 @@ public final class BlobInventoryPolicyDefinitionResponse {
      */
     private final BlobInventoryPolicyFilterResponse filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private BlobInventoryPolicyDefinitionResponse(BlobInventoryPolicyFilterResponse filters) {
+    @OutputCustomType.Constructor
+    private BlobInventoryPolicyDefinitionResponse(@OutputCustomType.Parameter("filters") BlobInventoryPolicyFilterResponse filters) {
         this.filters = filters;
     }
 
@@ -48,7 +48,7 @@ public final class BlobInventoryPolicyDefinitionResponse {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(BlobInventoryPolicyFilterResponse filters) {
+        public Builder filters(BlobInventoryPolicyFilterResponse filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }

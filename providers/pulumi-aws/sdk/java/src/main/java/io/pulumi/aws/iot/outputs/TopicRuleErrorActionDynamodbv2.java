@@ -23,10 +23,10 @@ public final class TopicRuleErrorActionDynamodbv2 {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"putItem","roleArn"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionDynamodbv2(
-        @Nullable TopicRuleErrorActionDynamodbv2PutItem putItem,
-        String roleArn) {
+        @OutputCustomType.Parameter("putItem") @Nullable TopicRuleErrorActionDynamodbv2PutItem putItem,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.putItem = putItem;
         this.roleArn = roleArn;
     }
@@ -68,12 +68,12 @@ public final class TopicRuleErrorActionDynamodbv2 {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setPutItem(@Nullable TopicRuleErrorActionDynamodbv2PutItem putItem) {
+        public Builder putItem(@Nullable TopicRuleErrorActionDynamodbv2PutItem putItem) {
             this.putItem = putItem;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

@@ -28,11 +28,11 @@ public final class AssignmentLockSettingsResponse {
      */
     private final @Nullable String mode;
 
-    @OutputCustomType.Constructor({"excludedActions","excludedPrincipals","mode"})
+    @OutputCustomType.Constructor
     private AssignmentLockSettingsResponse(
-        @Nullable List<String> excludedActions,
-        @Nullable List<String> excludedPrincipals,
-        @Nullable String mode) {
+        @OutputCustomType.Parameter("excludedActions") @Nullable List<String> excludedActions,
+        @OutputCustomType.Parameter("excludedPrincipals") @Nullable List<String> excludedPrincipals,
+        @OutputCustomType.Parameter("mode") @Nullable String mode) {
         this.excludedActions = excludedActions;
         this.excludedPrincipals = excludedPrincipals;
         this.mode = mode;
@@ -84,17 +84,17 @@ public final class AssignmentLockSettingsResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setExcludedActions(@Nullable List<String> excludedActions) {
+        public Builder excludedActions(@Nullable List<String> excludedActions) {
             this.excludedActions = excludedActions;
             return this;
         }
 
-        public Builder setExcludedPrincipals(@Nullable List<String> excludedPrincipals) {
+        public Builder excludedPrincipals(@Nullable List<String> excludedPrincipals) {
             this.excludedPrincipals = excludedPrincipals;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }

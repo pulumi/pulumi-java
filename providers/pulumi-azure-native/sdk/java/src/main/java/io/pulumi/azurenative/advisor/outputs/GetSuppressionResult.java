@@ -42,14 +42,14 @@ public final class GetSuppressionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"expirationTimeStamp","id","name","suppressionId","ttl","type"})
+    @OutputCustomType.Constructor
     private GetSuppressionResult(
-        String expirationTimeStamp,
-        String id,
-        String name,
-        @Nullable String suppressionId,
-        @Nullable String ttl,
-        String type) {
+        @OutputCustomType.Parameter("expirationTimeStamp") String expirationTimeStamp,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("suppressionId") @Nullable String suppressionId,
+        @OutputCustomType.Parameter("ttl") @Nullable String ttl,
+        @OutputCustomType.Parameter("type") String type) {
         this.expirationTimeStamp = expirationTimeStamp;
         this.id = id;
         this.name = name;
@@ -131,32 +131,32 @@ public final class GetSuppressionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpirationTimeStamp(String expirationTimeStamp) {
+        public Builder expirationTimeStamp(String expirationTimeStamp) {
             this.expirationTimeStamp = Objects.requireNonNull(expirationTimeStamp);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSuppressionId(@Nullable String suppressionId) {
+        public Builder suppressionId(@Nullable String suppressionId) {
             this.suppressionId = suppressionId;
             return this;
         }
 
-        public Builder setTtl(@Nullable String ttl) {
+        public Builder ttl(@Nullable String ttl) {
             this.ttl = ttl;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

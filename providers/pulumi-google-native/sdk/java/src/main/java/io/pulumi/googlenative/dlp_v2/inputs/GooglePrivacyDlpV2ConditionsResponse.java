@@ -56,7 +56,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
     	      this.conditions = defaults.conditions;
         }
 
-        public Builder setConditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
+        public Builder conditions(List<GooglePrivacyDlpV2ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }

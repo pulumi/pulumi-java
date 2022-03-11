@@ -22,15 +22,15 @@ public final class IntegrationScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timezone;
 
-    @OutputCustomType.Constructor({"dataPullMode","firstExecutionFrom","scheduleEndTime","scheduleExpression","scheduleOffset","scheduleStartTime","timezone"})
+    @OutputCustomType.Constructor
     private IntegrationScheduledTriggerProperties(
-        @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @Nullable Double firstExecutionFrom,
-        @Nullable Double scheduleEndTime,
-        String scheduleExpression,
-        @Nullable Integer scheduleOffset,
-        @Nullable Double scheduleStartTime,
-        @Nullable String timezone) {
+        @OutputCustomType.Parameter("dataPullMode") @Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @OutputCustomType.Parameter("firstExecutionFrom") @Nullable Double firstExecutionFrom,
+        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @OutputCustomType.Parameter("scheduleOffset") @Nullable Integer scheduleOffset,
+        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @OutputCustomType.Parameter("timezone") @Nullable String timezone) {
         this.dataPullMode = dataPullMode;
         this.firstExecutionFrom = firstExecutionFrom;
         this.scheduleEndTime = scheduleEndTime;
@@ -94,37 +94,37 @@ public final class IntegrationScheduledTriggerProperties {
     	      this.timezone = defaults.timezone;
         }
 
-        public Builder setDataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable IntegrationScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setFirstExecutionFrom(@Nullable Double firstExecutionFrom) {
+        public Builder firstExecutionFrom(@Nullable Double firstExecutionFrom) {
             this.firstExecutionFrom = firstExecutionFrom;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Integer scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Integer scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setTimezone(@Nullable String timezone) {
+        public Builder timezone(@Nullable String timezone) {
             this.timezone = timezone;
             return this;
         }

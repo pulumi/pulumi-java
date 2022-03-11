@@ -19,8 +19,8 @@ public final class SubscriptionExpirationPolicy {
      */
     private final String ttl;
 
-    @OutputCustomType.Constructor({"ttl"})
-    private SubscriptionExpirationPolicy(String ttl) {
+    @OutputCustomType.Constructor
+    private SubscriptionExpirationPolicy(@OutputCustomType.Parameter("ttl") String ttl) {
         this.ttl = ttl;
     }
 
@@ -56,7 +56,7 @@ public final class SubscriptionExpirationPolicy {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

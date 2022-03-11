@@ -506,282 +506,282 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setAdministratorLogin(@Nullable Input<String> administratorLogin) {
+        public Builder administratorLogin(@Nullable Input<String> administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = Input.ofNullable(administratorLogin);
             return this;
         }
 
-        public Builder setAdministratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable Input<String> administratorLoginPassword) {
             this.administratorLoginPassword = administratorLoginPassword;
             return this;
         }
 
-        public Builder setAdministratorLoginPassword(@Nullable String administratorLoginPassword) {
+        public Builder administratorLoginPassword(@Nullable String administratorLoginPassword) {
             this.administratorLoginPassword = Input.ofNullable(administratorLoginPassword);
             return this;
         }
 
-        public Builder setAdministrators(@Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators) {
+        public Builder administrators(@Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators) {
             this.administrators = administrators;
             return this;
         }
 
-        public Builder setAdministrators(@Nullable ManagedInstanceExternalAdministratorArgs administrators) {
+        public Builder administrators(@Nullable ManagedInstanceExternalAdministratorArgs administrators) {
             this.administrators = Input.ofNullable(administrators);
             return this;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setDnsZonePartner(@Nullable Input<String> dnsZonePartner) {
+        public Builder dnsZonePartner(@Nullable Input<String> dnsZonePartner) {
             this.dnsZonePartner = dnsZonePartner;
             return this;
         }
 
-        public Builder setDnsZonePartner(@Nullable String dnsZonePartner) {
+        public Builder dnsZonePartner(@Nullable String dnsZonePartner) {
             this.dnsZonePartner = Input.ofNullable(dnsZonePartner);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ResourceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ResourceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityArgs identity) {
+        public Builder identity(@Nullable ResourceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setInstancePoolId(@Nullable Input<String> instancePoolId) {
+        public Builder instancePoolId(@Nullable Input<String> instancePoolId) {
             this.instancePoolId = instancePoolId;
             return this;
         }
 
-        public Builder setInstancePoolId(@Nullable String instancePoolId) {
+        public Builder instancePoolId(@Nullable String instancePoolId) {
             this.instancePoolId = Input.ofNullable(instancePoolId);
             return this;
         }
 
-        public Builder setKeyId(@Nullable Input<String> keyId) {
+        public Builder keyId(@Nullable Input<String> keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType) {
+        public Builder licenseType(@Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable Either<String,ManagedInstanceLicenseType> licenseType) {
+        public Builder licenseType(@Nullable Either<String,ManagedInstanceLicenseType> licenseType) {
             this.licenseType = Input.ofNullable(licenseType);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable Input<String> maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = Input.ofNullable(maintenanceConfigurationId);
             return this;
         }
 
-        public Builder setManagedInstanceCreateMode(@Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
+        public Builder managedInstanceCreateMode(@Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode) {
             this.managedInstanceCreateMode = managedInstanceCreateMode;
             return this;
         }
 
-        public Builder setManagedInstanceCreateMode(@Nullable Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
+        public Builder managedInstanceCreateMode(@Nullable Either<String,ManagedServerCreateMode> managedInstanceCreateMode) {
             this.managedInstanceCreateMode = Input.ofNullable(managedInstanceCreateMode);
             return this;
         }
 
-        public Builder setManagedInstanceName(@Nullable Input<String> managedInstanceName) {
+        public Builder managedInstanceName(@Nullable Input<String> managedInstanceName) {
             this.managedInstanceName = managedInstanceName;
             return this;
         }
 
-        public Builder setManagedInstanceName(@Nullable String managedInstanceName) {
+        public Builder managedInstanceName(@Nullable String managedInstanceName) {
             this.managedInstanceName = Input.ofNullable(managedInstanceName);
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable Input<String> minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = Input.ofNullable(minimalTlsVersion);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable Input<String> primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = Input.ofNullable(primaryUserAssignedIdentityId);
             return this;
         }
 
-        public Builder setProxyOverride(@Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
+        public Builder proxyOverride(@Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride) {
             this.proxyOverride = proxyOverride;
             return this;
         }
 
-        public Builder setProxyOverride(@Nullable Either<String,ManagedInstanceProxyOverride> proxyOverride) {
+        public Builder proxyOverride(@Nullable Either<String,ManagedInstanceProxyOverride> proxyOverride) {
             this.proxyOverride = Input.ofNullable(proxyOverride);
             return this;
         }
 
-        public Builder setPublicDataEndpointEnabled(@Nullable Input<Boolean> publicDataEndpointEnabled) {
+        public Builder publicDataEndpointEnabled(@Nullable Input<Boolean> publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = publicDataEndpointEnabled;
             return this;
         }
 
-        public Builder setPublicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
+        public Builder publicDataEndpointEnabled(@Nullable Boolean publicDataEndpointEnabled) {
             this.publicDataEndpointEnabled = Input.ofNullable(publicDataEndpointEnabled);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable Input<String> restorePointInTime) {
+        public Builder restorePointInTime(@Nullable Input<String> restorePointInTime) {
             this.restorePointInTime = restorePointInTime;
             return this;
         }
 
-        public Builder setRestorePointInTime(@Nullable String restorePointInTime) {
+        public Builder restorePointInTime(@Nullable String restorePointInTime) {
             this.restorePointInTime = Input.ofNullable(restorePointInTime);
             return this;
         }
 
-        public Builder setSku(@Nullable Input<SkuArgs> sku) {
+        public Builder sku(@Nullable Input<SkuArgs> sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuArgs sku) {
+        public Builder sku(@Nullable SkuArgs sku) {
             this.sku = Input.ofNullable(sku);
             return this;
         }
 
-        public Builder setSourceManagedInstanceId(@Nullable Input<String> sourceManagedInstanceId) {
+        public Builder sourceManagedInstanceId(@Nullable Input<String> sourceManagedInstanceId) {
             this.sourceManagedInstanceId = sourceManagedInstanceId;
             return this;
         }
 
-        public Builder setSourceManagedInstanceId(@Nullable String sourceManagedInstanceId) {
+        public Builder sourceManagedInstanceId(@Nullable String sourceManagedInstanceId) {
             this.sourceManagedInstanceId = Input.ofNullable(sourceManagedInstanceId);
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
+        public Builder storageAccountType(@Nullable Input<Either<String,StorageAccountType>> storageAccountType) {
             this.storageAccountType = storageAccountType;
             return this;
         }
 
-        public Builder setStorageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
+        public Builder storageAccountType(@Nullable Either<String,StorageAccountType> storageAccountType) {
             this.storageAccountType = Input.ofNullable(storageAccountType);
             return this;
         }
 
-        public Builder setStorageSizeInGB(@Nullable Input<Integer> storageSizeInGB) {
+        public Builder storageSizeInGB(@Nullable Input<Integer> storageSizeInGB) {
             this.storageSizeInGB = storageSizeInGB;
             return this;
         }
 
-        public Builder setStorageSizeInGB(@Nullable Integer storageSizeInGB) {
+        public Builder storageSizeInGB(@Nullable Integer storageSizeInGB) {
             this.storageSizeInGB = Input.ofNullable(storageSizeInGB);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTimezoneId(@Nullable Input<String> timezoneId) {
+        public Builder timezoneId(@Nullable Input<String> timezoneId) {
             this.timezoneId = timezoneId;
             return this;
         }
 
-        public Builder setTimezoneId(@Nullable String timezoneId) {
+        public Builder timezoneId(@Nullable String timezoneId) {
             this.timezoneId = Input.ofNullable(timezoneId);
             return this;
         }
 
-        public Builder setVCores(@Nullable Input<Integer> vCores) {
+        public Builder vCores(@Nullable Input<Integer> vCores) {
             this.vCores = vCores;
             return this;
         }
 
-        public Builder setVCores(@Nullable Integer vCores) {
+        public Builder vCores(@Nullable Integer vCores) {
             this.vCores = Input.ofNullable(vCores);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Input<Boolean> zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }

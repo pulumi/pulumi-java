@@ -15,8 +15,8 @@ public final class StandardAppVersionEntrypoint {
      */
     private final String shell;
 
-    @OutputCustomType.Constructor({"shell"})
-    private StandardAppVersionEntrypoint(String shell) {
+    @OutputCustomType.Constructor
+    private StandardAppVersionEntrypoint(@OutputCustomType.Parameter("shell") String shell) {
         this.shell = shell;
     }
 
@@ -48,7 +48,7 @@ public final class StandardAppVersionEntrypoint {
     	      this.shell = defaults.shell;
         }
 
-        public Builder setShell(String shell) {
+        public Builder shell(String shell) {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }

@@ -136,62 +136,62 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDefaultAssociationRouteTable(@Nullable Input<Boolean> defaultAssociationRouteTable) {
+        public Builder defaultAssociationRouteTable(@Nullable Input<Boolean> defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = defaultAssociationRouteTable;
             return this;
         }
 
-        public Builder setDefaultAssociationRouteTable(@Nullable Boolean defaultAssociationRouteTable) {
+        public Builder defaultAssociationRouteTable(@Nullable Boolean defaultAssociationRouteTable) {
             this.defaultAssociationRouteTable = Input.ofNullable(defaultAssociationRouteTable);
             return this;
         }
 
-        public Builder setDefaultPropagationRouteTable(@Nullable Input<Boolean> defaultPropagationRouteTable) {
+        public Builder defaultPropagationRouteTable(@Nullable Input<Boolean> defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = defaultPropagationRouteTable;
             return this;
         }
 
-        public Builder setDefaultPropagationRouteTable(@Nullable Boolean defaultPropagationRouteTable) {
+        public Builder defaultPropagationRouteTable(@Nullable Boolean defaultPropagationRouteTable) {
             this.defaultPropagationRouteTable = Input.ofNullable(defaultPropagationRouteTable);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable Input<String> transitGatewayId) {
+        public Builder transitGatewayId(@Nullable Input<String> transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = Input.ofNullable(transitGatewayId);
             return this;
         }

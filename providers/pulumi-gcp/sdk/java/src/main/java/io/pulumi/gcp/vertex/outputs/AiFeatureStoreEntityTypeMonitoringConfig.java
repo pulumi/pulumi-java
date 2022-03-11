@@ -18,8 +18,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
      */
     private final @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis;
 
-    @OutputCustomType.Constructor({"snapshotAnalysis"})
-    private AiFeatureStoreEntityTypeMonitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
+    @OutputCustomType.Constructor
+    private AiFeatureStoreEntityTypeMonitoringConfig(@OutputCustomType.Parameter("snapshotAnalysis") @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
         this.snapshotAnalysis = snapshotAnalysis;
     }
 
@@ -52,7 +52,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
     	      this.snapshotAnalysis = defaults.snapshotAnalysis;
         }
 
-        public Builder setSnapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
+        public Builder snapshotAnalysis(@Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
             this.snapshotAnalysis = snapshotAnalysis;
             return this;
         }

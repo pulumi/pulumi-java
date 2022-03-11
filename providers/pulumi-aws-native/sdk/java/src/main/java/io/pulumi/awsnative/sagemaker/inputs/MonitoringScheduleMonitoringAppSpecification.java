@@ -123,27 +123,27 @@ public final class MonitoringScheduleMonitoringAppSpecification extends io.pulum
     	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
         }
 
-        public Builder setContainerArguments(@Nullable List<String> containerArguments) {
+        public Builder containerArguments(@Nullable List<String> containerArguments) {
             this.containerArguments = containerArguments;
             return this;
         }
 
-        public Builder setContainerEntrypoint(@Nullable List<String> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setPostAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
-        public Builder setRecordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }

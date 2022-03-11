@@ -19,13 +19,13 @@ public final class ScheduledActionResizeClusterMessage {
     private final @Nullable String nodeType;
     private final @Nullable Integer numberOfNodes;
 
-    @OutputCustomType.Constructor({"classic","clusterIdentifier","clusterType","nodeType","numberOfNodes"})
+    @OutputCustomType.Constructor
     private ScheduledActionResizeClusterMessage(
-        @Nullable Boolean classic,
-        String clusterIdentifier,
-        @Nullable String clusterType,
-        @Nullable String nodeType,
-        @Nullable Integer numberOfNodes) {
+        @OutputCustomType.Parameter("classic") @Nullable Boolean classic,
+        @OutputCustomType.Parameter("clusterIdentifier") String clusterIdentifier,
+        @OutputCustomType.Parameter("clusterType") @Nullable String clusterType,
+        @OutputCustomType.Parameter("nodeType") @Nullable String nodeType,
+        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes) {
         this.classic = classic;
         this.clusterIdentifier = clusterIdentifier;
         this.clusterType = clusterType;
@@ -77,27 +77,27 @@ public final class ScheduledActionResizeClusterMessage {
     	      this.numberOfNodes = defaults.numberOfNodes;
         }
 
-        public Builder setClassic(@Nullable Boolean classic) {
+        public Builder classic(@Nullable Boolean classic) {
             this.classic = classic;
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterType(@Nullable String clusterType) {
+        public Builder clusterType(@Nullable String clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setNodeType(@Nullable String nodeType) {
+        public Builder nodeType(@Nullable String nodeType) {
             this.nodeType = nodeType;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }

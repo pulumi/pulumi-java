@@ -16,11 +16,11 @@ public final class ConnectorProfileOAuthProperties {
     private final @Nullable List<String> oAuthScopes;
     private final @Nullable String tokenUrl;
 
-    @OutputCustomType.Constructor({"authCodeUrl","oAuthScopes","tokenUrl"})
+    @OutputCustomType.Constructor
     private ConnectorProfileOAuthProperties(
-        @Nullable String authCodeUrl,
-        @Nullable List<String> oAuthScopes,
-        @Nullable String tokenUrl) {
+        @OutputCustomType.Parameter("authCodeUrl") @Nullable String authCodeUrl,
+        @OutputCustomType.Parameter("oAuthScopes") @Nullable List<String> oAuthScopes,
+        @OutputCustomType.Parameter("tokenUrl") @Nullable String tokenUrl) {
         this.authCodeUrl = authCodeUrl;
         this.oAuthScopes = oAuthScopes;
         this.tokenUrl = tokenUrl;
@@ -60,17 +60,17 @@ public final class ConnectorProfileOAuthProperties {
     	      this.tokenUrl = defaults.tokenUrl;
         }
 
-        public Builder setAuthCodeUrl(@Nullable String authCodeUrl) {
+        public Builder authCodeUrl(@Nullable String authCodeUrl) {
             this.authCodeUrl = authCodeUrl;
             return this;
         }
 
-        public Builder setOAuthScopes(@Nullable List<String> oAuthScopes) {
+        public Builder oAuthScopes(@Nullable List<String> oAuthScopes) {
             this.oAuthScopes = oAuthScopes;
             return this;
         }
 
-        public Builder setTokenUrl(@Nullable String tokenUrl) {
+        public Builder tokenUrl(@Nullable String tokenUrl) {
             this.tokenUrl = tokenUrl;
             return this;
         }

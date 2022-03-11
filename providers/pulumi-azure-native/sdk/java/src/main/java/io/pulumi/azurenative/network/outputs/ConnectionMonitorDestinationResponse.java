@@ -28,11 +28,11 @@ public final class ConnectionMonitorDestinationResponse {
      */
     private final @Nullable String resourceId;
 
-    @OutputCustomType.Constructor({"address","port","resourceId"})
+    @OutputCustomType.Constructor
     private ConnectionMonitorDestinationResponse(
-        @Nullable String address,
-        @Nullable Integer port,
-        @Nullable String resourceId) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId) {
         this.address = address;
         this.port = port;
         this.resourceId = resourceId;
@@ -84,17 +84,17 @@ public final class ConnectionMonitorDestinationResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

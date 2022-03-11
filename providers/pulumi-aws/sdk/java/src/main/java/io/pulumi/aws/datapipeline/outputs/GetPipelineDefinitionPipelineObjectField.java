@@ -25,11 +25,11 @@ public final class GetPipelineDefinitionPipelineObjectField {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"key","refValue","stringValue"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionPipelineObjectField(
-        String key,
-        String refValue,
-        String stringValue) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("refValue") String refValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.key = key;
         this.refValue = refValue;
         this.stringValue = stringValue;
@@ -81,17 +81,17 @@ public final class GetPipelineDefinitionPipelineObjectField {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setRefValue(String refValue) {
+        public Builder refValue(String refValue) {
             this.refValue = Objects.requireNonNull(refValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

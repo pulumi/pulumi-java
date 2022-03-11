@@ -52,12 +52,12 @@ public final class FunctionEventInvokeConfigDestinationConfigOnSuccessGetArgs ex
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }

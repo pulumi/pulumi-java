@@ -37,13 +37,13 @@ public final class VpnClientRootCertificateResponse {
      */
     private final String publicCertData;
 
-    @OutputCustomType.Constructor({"etag","id","name","provisioningState","publicCertData"})
+    @OutputCustomType.Constructor
     private VpnClientRootCertificateResponse(
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        String publicCertData) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicCertData") String publicCertData) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -115,27 +115,27 @@ public final class VpnClientRootCertificateResponse {
     	      this.publicCertData = defaults.publicCertData;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicCertData(String publicCertData) {
+        public Builder publicCertData(String publicCertData) {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }

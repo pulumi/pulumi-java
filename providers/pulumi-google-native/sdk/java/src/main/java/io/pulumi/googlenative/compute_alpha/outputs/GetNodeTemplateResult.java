@@ -88,24 +88,24 @@ public final class GetNodeTemplateResult {
      */
     private final String statusMessage;
 
-    @OutputCustomType.Constructor({"accelerators","cpuOvercommitType","creationTimestamp","description","disks","kind","name","nodeAffinityLabels","nodeType","nodeTypeFlexibility","region","selfLink","selfLinkWithId","serverBinding","status","statusMessage"})
+    @OutputCustomType.Constructor
     private GetNodeTemplateResult(
-        List<AcceleratorConfigResponse> accelerators,
-        String cpuOvercommitType,
-        String creationTimestamp,
-        String description,
-        List<LocalDiskResponse> disks,
-        String kind,
-        String name,
-        Map<String,String> nodeAffinityLabels,
-        String nodeType,
-        NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
-        String region,
-        String selfLink,
-        String selfLinkWithId,
-        ServerBindingResponse serverBinding,
-        String status,
-        String statusMessage) {
+        @OutputCustomType.Parameter("accelerators") List<AcceleratorConfigResponse> accelerators,
+        @OutputCustomType.Parameter("cpuOvercommitType") String cpuOvercommitType,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disks") List<LocalDiskResponse> disks,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodeAffinityLabels") Map<String,String> nodeAffinityLabels,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("nodeTypeFlexibility") NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("selfLinkWithId") String selfLinkWithId,
+        @OutputCustomType.Parameter("serverBinding") ServerBindingResponse serverBinding,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage) {
         this.accelerators = accelerators;
         this.cpuOvercommitType = cpuOvercommitType;
         this.creationTimestamp = creationTimestamp;
@@ -279,82 +279,82 @@ public final class GetNodeTemplateResult {
     	      this.statusMessage = defaults.statusMessage;
         }
 
-        public Builder setAccelerators(List<AcceleratorConfigResponse> accelerators) {
+        public Builder accelerators(List<AcceleratorConfigResponse> accelerators) {
             this.accelerators = Objects.requireNonNull(accelerators);
             return this;
         }
 
-        public Builder setCpuOvercommitType(String cpuOvercommitType) {
+        public Builder cpuOvercommitType(String cpuOvercommitType) {
             this.cpuOvercommitType = Objects.requireNonNull(cpuOvercommitType);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisks(List<LocalDiskResponse> disks) {
+        public Builder disks(List<LocalDiskResponse> disks) {
             this.disks = Objects.requireNonNull(disks);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodeAffinityLabels(Map<String,String> nodeAffinityLabels) {
+        public Builder nodeAffinityLabels(Map<String,String> nodeAffinityLabels) {
             this.nodeAffinityLabels = Objects.requireNonNull(nodeAffinityLabels);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setNodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility) {
+        public Builder nodeTypeFlexibility(NodeTemplateNodeTypeFlexibilityResponse nodeTypeFlexibility) {
             this.nodeTypeFlexibility = Objects.requireNonNull(nodeTypeFlexibility);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSelfLinkWithId(String selfLinkWithId) {
+        public Builder selfLinkWithId(String selfLinkWithId) {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
 
-        public Builder setServerBinding(ServerBindingResponse serverBinding) {
+        public Builder serverBinding(ServerBindingResponse serverBinding) {
             this.serverBinding = Objects.requireNonNull(serverBinding);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }

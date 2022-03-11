@@ -21,10 +21,10 @@ public final class LoggingResponse {
      */
     private final List<LoggingDestinationResponse> producerDestinations;
 
-    @OutputCustomType.Constructor({"consumerDestinations","producerDestinations"})
+    @OutputCustomType.Constructor
     private LoggingResponse(
-        List<LoggingDestinationResponse> consumerDestinations,
-        List<LoggingDestinationResponse> producerDestinations) {
+        @OutputCustomType.Parameter("consumerDestinations") List<LoggingDestinationResponse> consumerDestinations,
+        @OutputCustomType.Parameter("producerDestinations") List<LoggingDestinationResponse> producerDestinations) {
         this.consumerDestinations = consumerDestinations;
         this.producerDestinations = producerDestinations;
     }
@@ -66,12 +66,12 @@ public final class LoggingResponse {
     	      this.producerDestinations = defaults.producerDestinations;
         }
 
-        public Builder setConsumerDestinations(List<LoggingDestinationResponse> consumerDestinations) {
+        public Builder consumerDestinations(List<LoggingDestinationResponse> consumerDestinations) {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
 
-        public Builder setProducerDestinations(List<LoggingDestinationResponse> producerDestinations) {
+        public Builder producerDestinations(List<LoggingDestinationResponse> producerDestinations) {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }

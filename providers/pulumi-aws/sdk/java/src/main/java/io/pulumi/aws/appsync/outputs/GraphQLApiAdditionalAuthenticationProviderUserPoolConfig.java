@@ -27,11 +27,11 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
      */
     private final String userPoolId;
 
-    @OutputCustomType.Constructor({"appIdClientRegex","awsRegion","userPoolId"})
+    @OutputCustomType.Constructor
     private GraphQLApiAdditionalAuthenticationProviderUserPoolConfig(
-        @Nullable String appIdClientRegex,
-        @Nullable String awsRegion,
-        String userPoolId) {
+        @OutputCustomType.Parameter("appIdClientRegex") @Nullable String appIdClientRegex,
+        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @OutputCustomType.Parameter("userPoolId") String userPoolId) {
         this.appIdClientRegex = appIdClientRegex;
         this.awsRegion = awsRegion;
         this.userPoolId = userPoolId;
@@ -83,17 +83,17 @@ public final class GraphQLApiAdditionalAuthenticationProviderUserPoolConfig {
     	      this.userPoolId = defaults.userPoolId;
         }
 
-        public Builder setAppIdClientRegex(@Nullable String appIdClientRegex) {
+        public Builder appIdClientRegex(@Nullable String appIdClientRegex) {
             this.appIdClientRegex = appIdClientRegex;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setUserPoolId(String userPoolId) {
+        public Builder userPoolId(String userPoolId) {
             this.userPoolId = Objects.requireNonNull(userPoolId);
             return this;
         }

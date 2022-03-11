@@ -35,13 +35,13 @@ public final class TagPropertyResponse {
      */
     private final String upn;
 
-    @OutputCustomType.Constructor({"objectIdentifier","tag","tenantId","timestamp","upn"})
+    @OutputCustomType.Constructor
     private TagPropertyResponse(
-        String objectIdentifier,
-        String tag,
-        String tenantId,
-        String timestamp,
-        String upn) {
+        @OutputCustomType.Parameter("objectIdentifier") String objectIdentifier,
+        @OutputCustomType.Parameter("tag") String tag,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("timestamp") String timestamp,
+        @OutputCustomType.Parameter("upn") String upn) {
         this.objectIdentifier = objectIdentifier;
         this.tag = tag;
         this.tenantId = tenantId;
@@ -113,27 +113,27 @@ public final class TagPropertyResponse {
     	      this.upn = defaults.upn;
         }
 
-        public Builder setObjectIdentifier(String objectIdentifier) {
+        public Builder objectIdentifier(String objectIdentifier) {
             this.objectIdentifier = Objects.requireNonNull(objectIdentifier);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
 
-        public Builder setUpn(String upn) {
+        public Builder upn(String upn) {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }

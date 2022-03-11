@@ -70,22 +70,22 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setDaysInCycle(Input<Integer> daysInCycle) {
+        public Builder daysInCycle(Input<Integer> daysInCycle) {
             this.daysInCycle = Objects.requireNonNull(daysInCycle);
             return this;
         }
 
-        public Builder setDaysInCycle(Integer daysInCycle) {
+        public Builder daysInCycle(Integer daysInCycle) {
             this.daysInCycle = Input.of(Objects.requireNonNull(daysInCycle));
             return this;
         }
 
-        public Builder setStartTime(Input<String> startTime) {
+        public Builder startTime(Input<String> startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }

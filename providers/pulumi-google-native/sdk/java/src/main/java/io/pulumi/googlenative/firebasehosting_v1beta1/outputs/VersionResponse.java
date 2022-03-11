@@ -73,20 +73,20 @@ public final class VersionResponse {
      */
     private final String versionBytes;
 
-    @OutputCustomType.Constructor({"config","createTime","createUser","deleteTime","deleteUser","fileCount","finalizeTime","finalizeUser","labels","name","status","versionBytes"})
+    @OutputCustomType.Constructor
     private VersionResponse(
-        ServingConfigResponse config,
-        String createTime,
-        ActingUserResponse createUser,
-        String deleteTime,
-        ActingUserResponse deleteUser,
-        String fileCount,
-        String finalizeTime,
-        ActingUserResponse finalizeUser,
-        Map<String,String> labels,
-        String name,
-        String status,
-        String versionBytes) {
+        @OutputCustomType.Parameter("config") ServingConfigResponse config,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("createUser") ActingUserResponse createUser,
+        @OutputCustomType.Parameter("deleteTime") String deleteTime,
+        @OutputCustomType.Parameter("deleteUser") ActingUserResponse deleteUser,
+        @OutputCustomType.Parameter("fileCount") String fileCount,
+        @OutputCustomType.Parameter("finalizeTime") String finalizeTime,
+        @OutputCustomType.Parameter("finalizeUser") ActingUserResponse finalizeUser,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("versionBytes") String versionBytes) {
         this.config = config;
         this.createTime = createTime;
         this.createUser = createUser;
@@ -228,62 +228,62 @@ public final class VersionResponse {
     	      this.versionBytes = defaults.versionBytes;
         }
 
-        public Builder setConfig(ServingConfigResponse config) {
+        public Builder config(ServingConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreateUser(ActingUserResponse createUser) {
+        public Builder createUser(ActingUserResponse createUser) {
             this.createUser = Objects.requireNonNull(createUser);
             return this;
         }
 
-        public Builder setDeleteTime(String deleteTime) {
+        public Builder deleteTime(String deleteTime) {
             this.deleteTime = Objects.requireNonNull(deleteTime);
             return this;
         }
 
-        public Builder setDeleteUser(ActingUserResponse deleteUser) {
+        public Builder deleteUser(ActingUserResponse deleteUser) {
             this.deleteUser = Objects.requireNonNull(deleteUser);
             return this;
         }
 
-        public Builder setFileCount(String fileCount) {
+        public Builder fileCount(String fileCount) {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
 
-        public Builder setFinalizeTime(String finalizeTime) {
+        public Builder finalizeTime(String finalizeTime) {
             this.finalizeTime = Objects.requireNonNull(finalizeTime);
             return this;
         }
 
-        public Builder setFinalizeUser(ActingUserResponse finalizeUser) {
+        public Builder finalizeUser(ActingUserResponse finalizeUser) {
             this.finalizeUser = Objects.requireNonNull(finalizeUser);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVersionBytes(String versionBytes) {
+        public Builder versionBytes(String versionBytes) {
             this.versionBytes = Objects.requireNonNull(versionBytes);
             return this;
         }

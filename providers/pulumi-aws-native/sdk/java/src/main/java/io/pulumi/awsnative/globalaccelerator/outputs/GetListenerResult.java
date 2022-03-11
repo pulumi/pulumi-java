@@ -32,12 +32,12 @@ public final class GetListenerResult {
      */
     private final @Nullable ListenerProtocol protocol;
 
-    @OutputCustomType.Constructor({"clientAffinity","listenerArn","portRanges","protocol"})
+    @OutputCustomType.Constructor
     private GetListenerResult(
-        @Nullable ListenerClientAffinity clientAffinity,
-        @Nullable String listenerArn,
-        @Nullable List<ListenerPortRange> portRanges,
-        @Nullable ListenerProtocol protocol) {
+        @OutputCustomType.Parameter("clientAffinity") @Nullable ListenerClientAffinity clientAffinity,
+        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @OutputCustomType.Parameter("portRanges") @Nullable List<ListenerPortRange> portRanges,
+        @OutputCustomType.Parameter("protocol") @Nullable ListenerProtocol protocol) {
         this.clientAffinity = clientAffinity;
         this.listenerArn = listenerArn;
         this.portRanges = portRanges;
@@ -95,22 +95,22 @@ public final class GetListenerResult {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setClientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
+        public Builder clientAffinity(@Nullable ListenerClientAffinity clientAffinity) {
             this.clientAffinity = clientAffinity;
             return this;
         }
 
-        public Builder setListenerArn(@Nullable String listenerArn) {
+        public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
-        public Builder setPortRanges(@Nullable List<ListenerPortRange> portRanges) {
+        public Builder portRanges(@Nullable List<ListenerPortRange> portRanges) {
             this.portRanges = portRanges;
             return this;
         }
 
-        public Builder setProtocol(@Nullable ListenerProtocol protocol) {
+        public Builder protocol(@Nullable ListenerProtocol protocol) {
             this.protocol = protocol;
             return this;
         }

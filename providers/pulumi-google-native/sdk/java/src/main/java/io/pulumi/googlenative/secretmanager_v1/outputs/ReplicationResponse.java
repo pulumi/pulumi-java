@@ -21,10 +21,10 @@ public final class ReplicationResponse {
      */
     private final UserManagedResponse userManaged;
 
-    @OutputCustomType.Constructor({"automatic","userManaged"})
+    @OutputCustomType.Constructor
     private ReplicationResponse(
-        AutomaticResponse automatic,
-        UserManagedResponse userManaged) {
+        @OutputCustomType.Parameter("automatic") AutomaticResponse automatic,
+        @OutputCustomType.Parameter("userManaged") UserManagedResponse userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }
@@ -66,12 +66,12 @@ public final class ReplicationResponse {
     	      this.userManaged = defaults.userManaged;
         }
 
-        public Builder setAutomatic(AutomaticResponse automatic) {
+        public Builder automatic(AutomaticResponse automatic) {
             this.automatic = Objects.requireNonNull(automatic);
             return this;
         }
 
-        public Builder setUserManaged(UserManagedResponse userManaged) {
+        public Builder userManaged(UserManagedResponse userManaged) {
             this.userManaged = Objects.requireNonNull(userManaged);
             return this;
         }

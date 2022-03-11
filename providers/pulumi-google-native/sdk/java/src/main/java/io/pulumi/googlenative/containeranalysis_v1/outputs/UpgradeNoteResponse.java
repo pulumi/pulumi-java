@@ -34,12 +34,12 @@ public final class UpgradeNoteResponse {
      */
     private final WindowsUpdateResponse windowsUpdate;
 
-    @OutputCustomType.Constructor({"distributions","$package","version","windowsUpdate"})
+    @OutputCustomType.Constructor
     private UpgradeNoteResponse(
-        List<UpgradeDistributionResponse> distributions,
-        String $package,
-        VersionResponse version,
-        WindowsUpdateResponse windowsUpdate) {
+        @OutputCustomType.Parameter("distributions") List<UpgradeDistributionResponse> distributions,
+        @OutputCustomType.Parameter("package") String $package,
+        @OutputCustomType.Parameter("version") VersionResponse version,
+        @OutputCustomType.Parameter("windowsUpdate") WindowsUpdateResponse windowsUpdate) {
         this.distributions = distributions;
         this.$package = $package;
         this.version = version;
@@ -101,22 +101,22 @@ public final class UpgradeNoteResponse {
     	      this.windowsUpdate = defaults.windowsUpdate;
         }
 
-        public Builder setDistributions(List<UpgradeDistributionResponse> distributions) {
+        public Builder distributions(List<UpgradeDistributionResponse> distributions) {
             this.distributions = Objects.requireNonNull(distributions);
             return this;
         }
 
-        public Builder set$package(String $package) {
+        public Builder $package(String $package) {
             this.$package = Objects.requireNonNull($package);
             return this;
         }
 
-        public Builder setVersion(VersionResponse version) {
+        public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setWindowsUpdate(WindowsUpdateResponse windowsUpdate) {
+        public Builder windowsUpdate(WindowsUpdateResponse windowsUpdate) {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }

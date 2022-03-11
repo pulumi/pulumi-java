@@ -107,42 +107,42 @@ public final class ConnectorMappingStructureArgs extends io.pulumi.resources.Res
     	      this.propertyName = defaults.propertyName;
         }
 
-        public Builder setColumnName(Input<String> columnName) {
+        public Builder columnName(Input<String> columnName) {
             this.columnName = Objects.requireNonNull(columnName);
             return this;
         }
 
-        public Builder setColumnName(String columnName) {
+        public Builder columnName(String columnName) {
             this.columnName = Input.of(Objects.requireNonNull(columnName));
             return this;
         }
 
-        public Builder setCustomFormatSpecifier(@Nullable Input<String> customFormatSpecifier) {
+        public Builder customFormatSpecifier(@Nullable Input<String> customFormatSpecifier) {
             this.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
 
-        public Builder setCustomFormatSpecifier(@Nullable String customFormatSpecifier) {
+        public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
             this.customFormatSpecifier = Input.ofNullable(customFormatSpecifier);
             return this;
         }
 
-        public Builder setIsEncrypted(@Nullable Input<Boolean> isEncrypted) {
+        public Builder isEncrypted(@Nullable Input<Boolean> isEncrypted) {
             this.isEncrypted = isEncrypted;
             return this;
         }
 
-        public Builder setIsEncrypted(@Nullable Boolean isEncrypted) {
+        public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             this.isEncrypted = Input.ofNullable(isEncrypted);
             return this;
         }
 
-        public Builder setPropertyName(Input<String> propertyName) {
+        public Builder propertyName(Input<String> propertyName) {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
 
-        public Builder setPropertyName(String propertyName) {
+        public Builder propertyName(String propertyName) {
             this.propertyName = Input.of(Objects.requireNonNull(propertyName));
             return this;
         }

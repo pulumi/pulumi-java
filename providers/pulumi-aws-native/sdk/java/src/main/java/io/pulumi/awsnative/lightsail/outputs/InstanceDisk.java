@@ -49,15 +49,15 @@ public final class InstanceDisk {
      */
     private final @Nullable String sizeInGb;
 
-    @OutputCustomType.Constructor({"attachedTo","attachmentState","diskName","iOPS","isSystemDisk","path","sizeInGb"})
+    @OutputCustomType.Constructor
     private InstanceDisk(
-        @Nullable String attachedTo,
-        @Nullable String attachmentState,
-        String diskName,
-        @Nullable Integer iOPS,
-        @Nullable Boolean isSystemDisk,
-        String path,
-        @Nullable String sizeInGb) {
+        @OutputCustomType.Parameter("attachedTo") @Nullable String attachedTo,
+        @OutputCustomType.Parameter("attachmentState") @Nullable String attachmentState,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("iOPS") @Nullable Integer iOPS,
+        @OutputCustomType.Parameter("isSystemDisk") @Nullable Boolean isSystemDisk,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("sizeInGb") @Nullable String sizeInGb) {
         this.attachedTo = attachedTo;
         this.attachmentState = attachmentState;
         this.diskName = diskName;
@@ -149,37 +149,37 @@ public final class InstanceDisk {
     	      this.sizeInGb = defaults.sizeInGb;
         }
 
-        public Builder setAttachedTo(@Nullable String attachedTo) {
+        public Builder attachedTo(@Nullable String attachedTo) {
             this.attachedTo = attachedTo;
             return this;
         }
 
-        public Builder setAttachmentState(@Nullable String attachmentState) {
+        public Builder attachmentState(@Nullable String attachmentState) {
             this.attachmentState = attachmentState;
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setIOPS(@Nullable Integer iOPS) {
+        public Builder iOPS(@Nullable Integer iOPS) {
             this.iOPS = iOPS;
             return this;
         }
 
-        public Builder setIsSystemDisk(@Nullable Boolean isSystemDisk) {
+        public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
             this.isSystemDisk = isSystemDisk;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSizeInGb(@Nullable String sizeInGb) {
+        public Builder sizeInGb(@Nullable String sizeInGb) {
             this.sizeInGb = sizeInGb;
             return this;
         }

@@ -23,10 +23,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
      */
     private final @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
-    @OutputCustomType.Constructor({"name","provider"})
+    @OutputCustomType.Constructor
     private OpenShiftManagedClusterIdentityProviderResponse(
-        @Nullable String name,
-        @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provider") @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
         this.name = name;
         this.provider = provider;
     }
@@ -68,12 +68,12 @@ public final class OpenShiftManagedClusterIdentityProviderResponse {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
+        public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
             this.provider = provider;
             return this;
         }

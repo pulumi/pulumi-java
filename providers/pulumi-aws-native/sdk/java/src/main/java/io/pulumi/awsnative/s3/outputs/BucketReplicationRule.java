@@ -38,16 +38,16 @@ public final class BucketReplicationRule {
      */
     private final BucketReplicationRuleStatus status;
 
-    @OutputCustomType.Constructor({"deleteMarkerReplication","destination","filter","id","prefix","priority","sourceSelectionCriteria","status"})
+    @OutputCustomType.Constructor
     private BucketReplicationRule(
-        @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
-        BucketReplicationDestination destination,
-        @Nullable BucketReplicationRuleFilter filter,
-        @Nullable String id,
-        @Nullable String prefix,
-        @Nullable Integer priority,
-        @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
-        BucketReplicationRuleStatus status) {
+        @OutputCustomType.Parameter("deleteMarkerReplication") @Nullable BucketDeleteMarkerReplication deleteMarkerReplication,
+        @OutputCustomType.Parameter("destination") BucketReplicationDestination destination,
+        @OutputCustomType.Parameter("filter") @Nullable BucketReplicationRuleFilter filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("sourceSelectionCriteria") @Nullable BucketSourceSelectionCriteria sourceSelectionCriteria,
+        @OutputCustomType.Parameter("status") BucketReplicationRuleStatus status) {
         this.deleteMarkerReplication = deleteMarkerReplication;
         this.destination = destination;
         this.filter = filter;
@@ -129,42 +129,42 @@ public final class BucketReplicationRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setDeleteMarkerReplication(@Nullable BucketDeleteMarkerReplication deleteMarkerReplication) {
+        public Builder deleteMarkerReplication(@Nullable BucketDeleteMarkerReplication deleteMarkerReplication) {
             this.deleteMarkerReplication = deleteMarkerReplication;
             return this;
         }
 
-        public Builder setDestination(BucketReplicationDestination destination) {
+        public Builder destination(BucketReplicationDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketReplicationRuleFilter filter) {
+        public Builder filter(@Nullable BucketReplicationRuleFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setSourceSelectionCriteria(@Nullable BucketSourceSelectionCriteria sourceSelectionCriteria) {
+        public Builder sourceSelectionCriteria(@Nullable BucketSourceSelectionCriteria sourceSelectionCriteria) {
             this.sourceSelectionCriteria = sourceSelectionCriteria;
             return this;
         }
 
-        public Builder setStatus(BucketReplicationRuleStatus status) {
+        public Builder status(BucketReplicationRuleStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

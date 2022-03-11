@@ -20,10 +20,10 @@ public final class GetClientOpenIdUserInfoResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"email","id"})
+    @OutputCustomType.Constructor
     private GetClientOpenIdUserInfoResult(
-        String email,
-        String id) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("id") String id) {
         this.email = email;
         this.id = id;
     }
@@ -65,12 +65,12 @@ public final class GetClientOpenIdUserInfoResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

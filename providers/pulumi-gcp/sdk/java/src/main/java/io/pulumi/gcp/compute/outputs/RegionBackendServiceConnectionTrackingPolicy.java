@@ -51,11 +51,11 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      */
     private final @Nullable String trackingMode;
 
-    @OutputCustomType.Constructor({"connectionPersistenceOnUnhealthyBackends","idleTimeoutSec","trackingMode"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceConnectionTrackingPolicy(
-        @Nullable String connectionPersistenceOnUnhealthyBackends,
-        @Nullable Integer idleTimeoutSec,
-        @Nullable String trackingMode) {
+        @OutputCustomType.Parameter("connectionPersistenceOnUnhealthyBackends") @Nullable String connectionPersistenceOnUnhealthyBackends,
+        @OutputCustomType.Parameter("idleTimeoutSec") @Nullable Integer idleTimeoutSec,
+        @OutputCustomType.Parameter("trackingMode") @Nullable String trackingMode) {
         this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
         this.idleTimeoutSec = idleTimeoutSec;
         this.trackingMode = trackingMode;
@@ -130,17 +130,17 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
     	      this.trackingMode = defaults.trackingMode;
         }
 
-        public Builder setConnectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
+        public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
             this.connectionPersistenceOnUnhealthyBackends = connectionPersistenceOnUnhealthyBackends;
             return this;
         }
 
-        public Builder setIdleTimeoutSec(@Nullable Integer idleTimeoutSec) {
+        public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
             this.idleTimeoutSec = idleTimeoutSec;
             return this;
         }
 
-        public Builder setTrackingMode(@Nullable String trackingMode) {
+        public Builder trackingMode(@Nullable String trackingMode) {
             this.trackingMode = trackingMode;
             return this;
         }

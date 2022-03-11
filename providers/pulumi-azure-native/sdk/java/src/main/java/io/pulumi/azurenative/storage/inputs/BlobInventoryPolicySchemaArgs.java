@@ -110,42 +110,42 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(Input<String> destination) {
+        public Builder destination(Input<String> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setRules(Input<List<BlobInventoryPolicyRuleArgs>> rules) {
+        public Builder rules(Input<List<BlobInventoryPolicyRuleArgs>> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
 
-        public Builder setRules(List<BlobInventoryPolicyRuleArgs> rules) {
+        public Builder rules(List<BlobInventoryPolicyRuleArgs> rules) {
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
 
-        public Builder setType(Input<Either<String,InventoryRuleType>> type) {
+        public Builder type(Input<Either<String,InventoryRuleType>> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(Either<String,InventoryRuleType> type) {
+        public Builder type(Either<String,InventoryRuleType> type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

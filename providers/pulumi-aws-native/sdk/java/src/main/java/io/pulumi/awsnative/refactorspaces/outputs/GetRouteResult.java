@@ -22,12 +22,12 @@ public final class GetRouteResult {
      */
     private final @Nullable List<RouteTag> tags;
 
-    @OutputCustomType.Constructor({"arn","pathResourceToId","routeIdentifier","tags"})
+    @OutputCustomType.Constructor
     private GetRouteResult(
-        @Nullable String arn,
-        @Nullable String pathResourceToId,
-        @Nullable String routeIdentifier,
-        @Nullable List<RouteTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("pathResourceToId") @Nullable String pathResourceToId,
+        @OutputCustomType.Parameter("routeIdentifier") @Nullable String routeIdentifier,
+        @OutputCustomType.Parameter("tags") @Nullable List<RouteTag> tags) {
         this.arn = arn;
         this.pathResourceToId = pathResourceToId;
         this.routeIdentifier = routeIdentifier;
@@ -77,22 +77,22 @@ public final class GetRouteResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setPathResourceToId(@Nullable String pathResourceToId) {
+        public Builder pathResourceToId(@Nullable String pathResourceToId) {
             this.pathResourceToId = pathResourceToId;
             return this;
         }
 
-        public Builder setRouteIdentifier(@Nullable String routeIdentifier) {
+        public Builder routeIdentifier(@Nullable String routeIdentifier) {
             this.routeIdentifier = routeIdentifier;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RouteTag> tags) {
+        public Builder tags(@Nullable List<RouteTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -573,242 +573,242 @@ public final class CopyActivityArgs extends io.pulumi.resources.ResourceArgs {
     	      this.validateDataConsistency = defaults.validateDataConsistency;
         }
 
-        public Builder setDataIntegrationUnits(@Nullable Input<Object> dataIntegrationUnits) {
+        public Builder dataIntegrationUnits(@Nullable Input<Object> dataIntegrationUnits) {
             this.dataIntegrationUnits = dataIntegrationUnits;
             return this;
         }
 
-        public Builder setDataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
+        public Builder dataIntegrationUnits(@Nullable Object dataIntegrationUnits) {
             this.dataIntegrationUnits = Input.ofNullable(dataIntegrationUnits);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnableSkipIncompatibleRow(@Nullable Input<Object> enableSkipIncompatibleRow) {
+        public Builder enableSkipIncompatibleRow(@Nullable Input<Object> enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = enableSkipIncompatibleRow;
             return this;
         }
 
-        public Builder setEnableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
+        public Builder enableSkipIncompatibleRow(@Nullable Object enableSkipIncompatibleRow) {
             this.enableSkipIncompatibleRow = Input.ofNullable(enableSkipIncompatibleRow);
             return this;
         }
 
-        public Builder setEnableStaging(@Nullable Input<Object> enableStaging) {
+        public Builder enableStaging(@Nullable Input<Object> enableStaging) {
             this.enableStaging = enableStaging;
             return this;
         }
 
-        public Builder setEnableStaging(@Nullable Object enableStaging) {
+        public Builder enableStaging(@Nullable Object enableStaging) {
             this.enableStaging = Input.ofNullable(enableStaging);
             return this;
         }
 
-        public Builder setInputs(@Nullable Input<List<DatasetReferenceArgs>> inputs) {
+        public Builder inputs(@Nullable Input<List<DatasetReferenceArgs>> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setInputs(@Nullable List<DatasetReferenceArgs> inputs) {
+        public Builder inputs(@Nullable List<DatasetReferenceArgs> inputs) {
             this.inputs = Input.ofNullable(inputs);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setLogSettings(@Nullable Input<LogSettingsArgs> logSettings) {
+        public Builder logSettings(@Nullable Input<LogSettingsArgs> logSettings) {
             this.logSettings = logSettings;
             return this;
         }
 
-        public Builder setLogSettings(@Nullable LogSettingsArgs logSettings) {
+        public Builder logSettings(@Nullable LogSettingsArgs logSettings) {
             this.logSettings = Input.ofNullable(logSettings);
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
+        public Builder logStorageSettings(@Nullable Input<LogStorageSettingsArgs> logStorageSettings) {
             this.logStorageSettings = logStorageSettings;
             return this;
         }
 
-        public Builder setLogStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
+        public Builder logStorageSettings(@Nullable LogStorageSettingsArgs logStorageSettings) {
             this.logStorageSettings = Input.ofNullable(logStorageSettings);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOutputs(@Nullable Input<List<DatasetReferenceArgs>> outputs) {
+        public Builder outputs(@Nullable Input<List<DatasetReferenceArgs>> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<DatasetReferenceArgs> outputs) {
+        public Builder outputs(@Nullable List<DatasetReferenceArgs> outputs) {
             this.outputs = Input.ofNullable(outputs);
             return this;
         }
 
-        public Builder setParallelCopies(@Nullable Input<Object> parallelCopies) {
+        public Builder parallelCopies(@Nullable Input<Object> parallelCopies) {
             this.parallelCopies = parallelCopies;
             return this;
         }
 
-        public Builder setParallelCopies(@Nullable Object parallelCopies) {
+        public Builder parallelCopies(@Nullable Object parallelCopies) {
             this.parallelCopies = Input.ofNullable(parallelCopies);
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setPreserve(@Nullable Input<List<Object>> preserve) {
+        public Builder preserve(@Nullable Input<List<Object>> preserve) {
             this.preserve = preserve;
             return this;
         }
 
-        public Builder setPreserve(@Nullable List<Object> preserve) {
+        public Builder preserve(@Nullable List<Object> preserve) {
             this.preserve = Input.ofNullable(preserve);
             return this;
         }
 
-        public Builder setPreserveRules(@Nullable Input<List<Object>> preserveRules) {
+        public Builder preserveRules(@Nullable Input<List<Object>> preserveRules) {
             this.preserveRules = preserveRules;
             return this;
         }
 
-        public Builder setPreserveRules(@Nullable List<Object> preserveRules) {
+        public Builder preserveRules(@Nullable List<Object> preserveRules) {
             this.preserveRules = Input.ofNullable(preserveRules);
             return this;
         }
 
-        public Builder setRedirectIncompatibleRowSettings(@Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings) {
+        public Builder redirectIncompatibleRowSettings(@Nullable Input<RedirectIncompatibleRowSettingsArgs> redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = redirectIncompatibleRowSettings;
             return this;
         }
 
-        public Builder setRedirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsArgs redirectIncompatibleRowSettings) {
+        public Builder redirectIncompatibleRowSettings(@Nullable RedirectIncompatibleRowSettingsArgs redirectIncompatibleRowSettings) {
             this.redirectIncompatibleRowSettings = Input.ofNullable(redirectIncompatibleRowSettings);
             return this;
         }
 
-        public Builder setSink(Input<Object> sink) {
+        public Builder sink(Input<Object> sink) {
             this.sink = Objects.requireNonNull(sink);
             return this;
         }
 
-        public Builder setSink(Object sink) {
+        public Builder sink(Object sink) {
             this.sink = Input.of(Objects.requireNonNull(sink));
             return this;
         }
 
-        public Builder setSkipErrorFile(@Nullable Input<SkipErrorFileArgs> skipErrorFile) {
+        public Builder skipErrorFile(@Nullable Input<SkipErrorFileArgs> skipErrorFile) {
             this.skipErrorFile = skipErrorFile;
             return this;
         }
 
-        public Builder setSkipErrorFile(@Nullable SkipErrorFileArgs skipErrorFile) {
+        public Builder skipErrorFile(@Nullable SkipErrorFileArgs skipErrorFile) {
             this.skipErrorFile = Input.ofNullable(skipErrorFile);
             return this;
         }
 
-        public Builder setSource(Input<Object> source) {
+        public Builder source(Input<Object> source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setSource(Object source) {
+        public Builder source(Object source) {
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
 
-        public Builder setStagingSettings(@Nullable Input<StagingSettingsArgs> stagingSettings) {
+        public Builder stagingSettings(@Nullable Input<StagingSettingsArgs> stagingSettings) {
             this.stagingSettings = stagingSettings;
             return this;
         }
 
-        public Builder setStagingSettings(@Nullable StagingSettingsArgs stagingSettings) {
+        public Builder stagingSettings(@Nullable StagingSettingsArgs stagingSettings) {
             this.stagingSettings = Input.ofNullable(stagingSettings);
             return this;
         }
 
-        public Builder setTranslator(@Nullable Input<Object> translator) {
+        public Builder translator(@Nullable Input<Object> translator) {
             this.translator = translator;
             return this;
         }
 
-        public Builder setTranslator(@Nullable Object translator) {
+        public Builder translator(@Nullable Object translator) {
             this.translator = Input.ofNullable(translator);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
 
-        public Builder setValidateDataConsistency(@Nullable Input<Object> validateDataConsistency) {
+        public Builder validateDataConsistency(@Nullable Input<Object> validateDataConsistency) {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
 
-        public Builder setValidateDataConsistency(@Nullable Object validateDataConsistency) {
+        public Builder validateDataConsistency(@Nullable Object validateDataConsistency) {
             this.validateDataConsistency = Input.ofNullable(validateDataConsistency);
             return this;
         }

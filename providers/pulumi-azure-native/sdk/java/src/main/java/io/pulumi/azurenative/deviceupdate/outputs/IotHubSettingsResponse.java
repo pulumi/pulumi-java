@@ -27,11 +27,11 @@ public final class IotHubSettingsResponse {
      */
     private final String resourceId;
 
-    @OutputCustomType.Constructor({"eventHubConnectionString","ioTHubConnectionString","resourceId"})
+    @OutputCustomType.Constructor
     private IotHubSettingsResponse(
-        @Nullable String eventHubConnectionString,
-        @Nullable String ioTHubConnectionString,
-        String resourceId) {
+        @OutputCustomType.Parameter("eventHubConnectionString") @Nullable String eventHubConnectionString,
+        @OutputCustomType.Parameter("ioTHubConnectionString") @Nullable String ioTHubConnectionString,
+        @OutputCustomType.Parameter("resourceId") String resourceId) {
         this.eventHubConnectionString = eventHubConnectionString;
         this.ioTHubConnectionString = ioTHubConnectionString;
         this.resourceId = resourceId;
@@ -83,17 +83,17 @@ public final class IotHubSettingsResponse {
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setEventHubConnectionString(@Nullable String eventHubConnectionString) {
+        public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             this.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
-        public Builder setIoTHubConnectionString(@Nullable String ioTHubConnectionString) {
+        public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
             this.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

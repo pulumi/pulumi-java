@@ -42,14 +42,14 @@ public final class ConnectorMappingFormatResponse {
      */
     private final @Nullable String quoteEscapeCharacter;
 
-    @OutputCustomType.Constructor({"acceptLanguage","arraySeparator","columnDelimiter","formatType","quoteCharacter","quoteEscapeCharacter"})
+    @OutputCustomType.Constructor
     private ConnectorMappingFormatResponse(
-        @Nullable String acceptLanguage,
-        @Nullable String arraySeparator,
-        @Nullable String columnDelimiter,
-        String formatType,
-        @Nullable String quoteCharacter,
-        @Nullable String quoteEscapeCharacter) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("arraySeparator") @Nullable String arraySeparator,
+        @OutputCustomType.Parameter("columnDelimiter") @Nullable String columnDelimiter,
+        @OutputCustomType.Parameter("formatType") String formatType,
+        @OutputCustomType.Parameter("quoteCharacter") @Nullable String quoteCharacter,
+        @OutputCustomType.Parameter("quoteEscapeCharacter") @Nullable String quoteEscapeCharacter) {
         this.acceptLanguage = acceptLanguage;
         this.arraySeparator = arraySeparator;
         this.columnDelimiter = columnDelimiter;
@@ -131,32 +131,32 @@ public final class ConnectorMappingFormatResponse {
     	      this.quoteEscapeCharacter = defaults.quoteEscapeCharacter;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setArraySeparator(@Nullable String arraySeparator) {
+        public Builder arraySeparator(@Nullable String arraySeparator) {
             this.arraySeparator = arraySeparator;
             return this;
         }
 
-        public Builder setColumnDelimiter(@Nullable String columnDelimiter) {
+        public Builder columnDelimiter(@Nullable String columnDelimiter) {
             this.columnDelimiter = columnDelimiter;
             return this;
         }
 
-        public Builder setFormatType(String formatType) {
+        public Builder formatType(String formatType) {
             this.formatType = Objects.requireNonNull(formatType);
             return this;
         }
 
-        public Builder setQuoteCharacter(@Nullable String quoteCharacter) {
+        public Builder quoteCharacter(@Nullable String quoteCharacter) {
             this.quoteCharacter = quoteCharacter;
             return this;
         }
 
-        public Builder setQuoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
+        public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
             this.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;
         }

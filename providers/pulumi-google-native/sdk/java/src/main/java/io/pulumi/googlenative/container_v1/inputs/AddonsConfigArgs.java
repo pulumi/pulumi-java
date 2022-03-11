@@ -194,92 +194,92 @@ public final class AddonsConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder setCloudRunConfig(@Nullable Input<CloudRunConfigArgs> cloudRunConfig) {
+        public Builder cloudRunConfig(@Nullable Input<CloudRunConfigArgs> cloudRunConfig) {
             this.cloudRunConfig = cloudRunConfig;
             return this;
         }
 
-        public Builder setCloudRunConfig(@Nullable CloudRunConfigArgs cloudRunConfig) {
+        public Builder cloudRunConfig(@Nullable CloudRunConfigArgs cloudRunConfig) {
             this.cloudRunConfig = Input.ofNullable(cloudRunConfig);
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable Input<ConfigConnectorConfigArgs> configConnectorConfig) {
             this.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
-        public Builder setConfigConnectorConfig(@Nullable ConfigConnectorConfigArgs configConnectorConfig) {
+        public Builder configConnectorConfig(@Nullable ConfigConnectorConfigArgs configConnectorConfig) {
             this.configConnectorConfig = Input.ofNullable(configConnectorConfig);
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable Input<DnsCacheConfigArgs> dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable Input<DnsCacheConfigArgs> dnsCacheConfig) {
             this.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
-        public Builder setDnsCacheConfig(@Nullable DnsCacheConfigArgs dnsCacheConfig) {
+        public Builder dnsCacheConfig(@Nullable DnsCacheConfigArgs dnsCacheConfig) {
             this.dnsCacheConfig = Input.ofNullable(dnsCacheConfig);
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable Input<GcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(@Nullable GcePersistentDiskCsiDriverConfigArgs gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(@Nullable GcePersistentDiskCsiDriverConfigArgs gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = Input.ofNullable(gcePersistentDiskCsiDriverConfig);
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable Input<GcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(@Nullable GcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(@Nullable GcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = Input.ofNullable(gcpFilestoreCsiDriverConfig);
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable Input<HorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(@Nullable HorizontalPodAutoscalingArgs horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(@Nullable HorizontalPodAutoscalingArgs horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = Input.ofNullable(horizontalPodAutoscaling);
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable Input<HttpLoadBalancingArgs> httpLoadBalancing) {
             this.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
-        public Builder setHttpLoadBalancing(@Nullable HttpLoadBalancingArgs httpLoadBalancing) {
+        public Builder httpLoadBalancing(@Nullable HttpLoadBalancingArgs httpLoadBalancing) {
             this.httpLoadBalancing = Input.ofNullable(httpLoadBalancing);
             return this;
         }
 
-        public Builder setKubernetesDashboard(@Nullable Input<KubernetesDashboardArgs> kubernetesDashboard) {
+        public Builder kubernetesDashboard(@Nullable Input<KubernetesDashboardArgs> kubernetesDashboard) {
             this.kubernetesDashboard = kubernetesDashboard;
             return this;
         }
 
-        public Builder setKubernetesDashboard(@Nullable KubernetesDashboardArgs kubernetesDashboard) {
+        public Builder kubernetesDashboard(@Nullable KubernetesDashboardArgs kubernetesDashboard) {
             this.kubernetesDashboard = Input.ofNullable(kubernetesDashboard);
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable Input<NetworkPolicyConfigArgs> networkPolicyConfig) {
             this.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(@Nullable NetworkPolicyConfigArgs networkPolicyConfig) {
+        public Builder networkPolicyConfig(@Nullable NetworkPolicyConfigArgs networkPolicyConfig) {
             this.networkPolicyConfig = Input.ofNullable(networkPolicyConfig);
             return this;
         }

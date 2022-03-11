@@ -123,52 +123,52 @@ public final class JobStepExecutionOptionsArgs extends io.pulumi.resources.Resou
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setInitialRetryIntervalSeconds(@Nullable Input<Integer> initialRetryIntervalSeconds) {
+        public Builder initialRetryIntervalSeconds(@Nullable Input<Integer> initialRetryIntervalSeconds) {
             this.initialRetryIntervalSeconds = initialRetryIntervalSeconds;
             return this;
         }
 
-        public Builder setInitialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
+        public Builder initialRetryIntervalSeconds(@Nullable Integer initialRetryIntervalSeconds) {
             this.initialRetryIntervalSeconds = Input.ofNullable(initialRetryIntervalSeconds);
             return this;
         }
 
-        public Builder setMaximumRetryIntervalSeconds(@Nullable Input<Integer> maximumRetryIntervalSeconds) {
+        public Builder maximumRetryIntervalSeconds(@Nullable Input<Integer> maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = maximumRetryIntervalSeconds;
             return this;
         }
 
-        public Builder setMaximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
+        public Builder maximumRetryIntervalSeconds(@Nullable Integer maximumRetryIntervalSeconds) {
             this.maximumRetryIntervalSeconds = Input.ofNullable(maximumRetryIntervalSeconds);
             return this;
         }
 
-        public Builder setRetryAttempts(@Nullable Input<Integer> retryAttempts) {
+        public Builder retryAttempts(@Nullable Input<Integer> retryAttempts) {
             this.retryAttempts = retryAttempts;
             return this;
         }
 
-        public Builder setRetryAttempts(@Nullable Integer retryAttempts) {
+        public Builder retryAttempts(@Nullable Integer retryAttempts) {
             this.retryAttempts = Input.ofNullable(retryAttempts);
             return this;
         }
 
-        public Builder setRetryIntervalBackoffMultiplier(@Nullable Input<Double> retryIntervalBackoffMultiplier) {
+        public Builder retryIntervalBackoffMultiplier(@Nullable Input<Double> retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = retryIntervalBackoffMultiplier;
             return this;
         }
 
-        public Builder setRetryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
+        public Builder retryIntervalBackoffMultiplier(@Nullable Double retryIntervalBackoffMultiplier) {
             this.retryIntervalBackoffMultiplier = Input.ofNullable(retryIntervalBackoffMultiplier);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }

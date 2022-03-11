@@ -74,12 +74,12 @@ public final class DeliveryRuleRequestHeaderConditionResponse extends io.pulumi.
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(RequestHeaderMatchConditionParametersResponse parameters) {
+        public Builder parameters(RequestHeaderMatchConditionParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

@@ -50,12 +50,12 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(@Nullable Input<List<String>> types) {
+        public Builder types(@Nullable Input<List<String>> types) {
             this.types = types;
             return this;
         }
 
-        public Builder setTypes(@Nullable List<String> types) {
+        public Builder types(@Nullable List<String> types) {
             this.types = Input.ofNullable(types);
             return this;
         }

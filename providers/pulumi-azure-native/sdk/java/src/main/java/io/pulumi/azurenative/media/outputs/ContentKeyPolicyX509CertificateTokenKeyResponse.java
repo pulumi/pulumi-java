@@ -21,10 +21,10 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
      */
     private final String rawBody;
 
-    @OutputCustomType.Constructor({"odataType","rawBody"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyX509CertificateTokenKeyResponse(
-        String odataType,
-        String rawBody) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("rawBody") String rawBody) {
         this.odataType = odataType;
         this.rawBody = rawBody;
     }
@@ -67,12 +67,12 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
     	      this.rawBody = defaults.rawBody;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setRawBody(String rawBody) {
+        public Builder rawBody(String rawBody) {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }

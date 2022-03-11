@@ -19,12 +19,12 @@ public final class RuleGroupRateBasedStatement {
     private final Integer limit;
     private final @Nullable RuleGroupStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor({"aggregateKeyType","forwardedIPConfig","limit","scopeDownStatement"})
+    @OutputCustomType.Constructor
     private RuleGroupRateBasedStatement(
-        RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
-        @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
-        Integer limit,
-        @Nullable RuleGroupStatement scopeDownStatement) {
+        @OutputCustomType.Parameter("aggregateKeyType") RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig,
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable RuleGroupStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;
@@ -70,22 +70,22 @@ public final class RuleGroupRateBasedStatement {
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(RuleGroupRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable RuleGroupForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable RuleGroupStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable RuleGroupStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }

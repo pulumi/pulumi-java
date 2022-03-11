@@ -22,10 +22,10 @@ public final class GetIAMPolicyAuditConfig {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"auditLogConfigs","service"})
+    @OutputCustomType.Constructor
     private GetIAMPolicyAuditConfig(
-        List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
-        String service) {
+        @OutputCustomType.Parameter("auditLogConfigs") List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs,
+        @OutputCustomType.Parameter("service") String service) {
         this.auditLogConfigs = auditLogConfigs;
         this.service = service;
     }
@@ -67,12 +67,12 @@ public final class GetIAMPolicyAuditConfig {
     	      this.service = defaults.service;
         }
 
-        public Builder setAuditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
+        public Builder auditLogConfigs(List<GetIAMPolicyAuditConfigAuditLogConfig> auditLogConfigs) {
             this.auditLogConfigs = Objects.requireNonNull(auditLogConfigs);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

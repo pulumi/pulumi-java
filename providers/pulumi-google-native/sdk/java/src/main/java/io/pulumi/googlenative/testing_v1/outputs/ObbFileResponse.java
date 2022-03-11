@@ -21,10 +21,10 @@ public final class ObbFileResponse {
      */
     private final String obbFileName;
 
-    @OutputCustomType.Constructor({"obb","obbFileName"})
+    @OutputCustomType.Constructor
     private ObbFileResponse(
-        FileReferenceResponse obb,
-        String obbFileName) {
+        @OutputCustomType.Parameter("obb") FileReferenceResponse obb,
+        @OutputCustomType.Parameter("obbFileName") String obbFileName) {
         this.obb = obb;
         this.obbFileName = obbFileName;
     }
@@ -66,12 +66,12 @@ public final class ObbFileResponse {
     	      this.obbFileName = defaults.obbFileName;
         }
 
-        public Builder setObb(FileReferenceResponse obb) {
+        public Builder obb(FileReferenceResponse obb) {
             this.obb = Objects.requireNonNull(obb);
             return this;
         }
 
-        public Builder setObbFileName(String obbFileName) {
+        public Builder obbFileName(String obbFileName) {
             this.obbFileName = Objects.requireNonNull(obbFileName);
             return this;
         }

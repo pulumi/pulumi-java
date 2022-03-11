@@ -22,10 +22,10 @@ public final class OAuth2AuthenticationSettingsContractResponse {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"authorizationServerId","scope"})
+    @OutputCustomType.Constructor
     private OAuth2AuthenticationSettingsContractResponse(
-        @Nullable String authorizationServerId,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("authorizationServerId") @Nullable String authorizationServerId,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.authorizationServerId = authorizationServerId;
         this.scope = scope;
     }
@@ -67,12 +67,12 @@ public final class OAuth2AuthenticationSettingsContractResponse {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setAuthorizationServerId(@Nullable String authorizationServerId) {
+        public Builder authorizationServerId(@Nullable String authorizationServerId) {
             this.authorizationServerId = authorizationServerId;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

@@ -75,22 +75,22 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.peripheralsConfig = defaults.peripheralsConfig;
         }
 
-        public Builder setExecutionConfig(@Nullable Input<ExecutionConfigArgs> executionConfig) {
+        public Builder executionConfig(@Nullable Input<ExecutionConfigArgs> executionConfig) {
             this.executionConfig = executionConfig;
             return this;
         }
 
-        public Builder setExecutionConfig(@Nullable ExecutionConfigArgs executionConfig) {
+        public Builder executionConfig(@Nullable ExecutionConfigArgs executionConfig) {
             this.executionConfig = Input.ofNullable(executionConfig);
             return this;
         }
 
-        public Builder setPeripheralsConfig(@Nullable Input<PeripheralsConfigArgs> peripheralsConfig) {
+        public Builder peripheralsConfig(@Nullable Input<PeripheralsConfigArgs> peripheralsConfig) {
             this.peripheralsConfig = peripheralsConfig;
             return this;
         }
 
-        public Builder setPeripheralsConfig(@Nullable PeripheralsConfigArgs peripheralsConfig) {
+        public Builder peripheralsConfig(@Nullable PeripheralsConfigArgs peripheralsConfig) {
             this.peripheralsConfig = Input.ofNullable(peripheralsConfig);
             return this;
         }

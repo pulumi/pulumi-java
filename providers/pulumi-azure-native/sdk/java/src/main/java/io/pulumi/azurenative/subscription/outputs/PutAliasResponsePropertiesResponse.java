@@ -22,10 +22,10 @@ public final class PutAliasResponsePropertiesResponse {
      */
     private final String subscriptionId;
 
-    @OutputCustomType.Constructor({"provisioningState","subscriptionId"})
+    @OutputCustomType.Constructor
     private PutAliasResponsePropertiesResponse(
-        @Nullable String provisioningState,
-        String subscriptionId) {
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId) {
         this.provisioningState = provisioningState;
         this.subscriptionId = subscriptionId;
     }
@@ -67,12 +67,12 @@ public final class PutAliasResponsePropertiesResponse {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

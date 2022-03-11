@@ -76,20 +76,20 @@ public final class BackendBucketCdnPolicyResponse {
      */
     private final List<String> signedUrlKeyNames;
 
-    @OutputCustomType.Constructor({"bypassCacheOnRequestHeaders","cacheKeyPolicy","cacheMode","clientTtl","defaultTtl","maxTtl","negativeCaching","negativeCachingPolicy","requestCoalescing","serveWhileStale","signedUrlCacheMaxAgeSec","signedUrlKeyNames"})
+    @OutputCustomType.Constructor
     private BackendBucketCdnPolicyResponse(
-        List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
-        BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy,
-        String cacheMode,
-        Integer clientTtl,
-        Integer defaultTtl,
-        Integer maxTtl,
-        Boolean negativeCaching,
-        List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
-        Boolean requestCoalescing,
-        Integer serveWhileStale,
-        String signedUrlCacheMaxAgeSec,
-        List<String> signedUrlKeyNames) {
+        @OutputCustomType.Parameter("bypassCacheOnRequestHeaders") List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders,
+        @OutputCustomType.Parameter("cacheKeyPolicy") BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy,
+        @OutputCustomType.Parameter("cacheMode") String cacheMode,
+        @OutputCustomType.Parameter("clientTtl") Integer clientTtl,
+        @OutputCustomType.Parameter("defaultTtl") Integer defaultTtl,
+        @OutputCustomType.Parameter("maxTtl") Integer maxTtl,
+        @OutputCustomType.Parameter("negativeCaching") Boolean negativeCaching,
+        @OutputCustomType.Parameter("negativeCachingPolicy") List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy,
+        @OutputCustomType.Parameter("requestCoalescing") Boolean requestCoalescing,
+        @OutputCustomType.Parameter("serveWhileStale") Integer serveWhileStale,
+        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") String signedUrlCacheMaxAgeSec,
+        @OutputCustomType.Parameter("signedUrlKeyNames") List<String> signedUrlKeyNames) {
         this.bypassCacheOnRequestHeaders = bypassCacheOnRequestHeaders;
         this.cacheKeyPolicy = cacheKeyPolicy;
         this.cacheMode = cacheMode;
@@ -231,62 +231,62 @@ public final class BackendBucketCdnPolicyResponse {
     	      this.signedUrlKeyNames = defaults.signedUrlKeyNames;
         }
 
-        public Builder setBypassCacheOnRequestHeaders(List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders) {
+        public Builder bypassCacheOnRequestHeaders(List<BackendBucketCdnPolicyBypassCacheOnRequestHeaderResponse> bypassCacheOnRequestHeaders) {
             this.bypassCacheOnRequestHeaders = Objects.requireNonNull(bypassCacheOnRequestHeaders);
             return this;
         }
 
-        public Builder setCacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy) {
+        public Builder cacheKeyPolicy(BackendBucketCdnPolicyCacheKeyPolicyResponse cacheKeyPolicy) {
             this.cacheKeyPolicy = Objects.requireNonNull(cacheKeyPolicy);
             return this;
         }
 
-        public Builder setCacheMode(String cacheMode) {
+        public Builder cacheMode(String cacheMode) {
             this.cacheMode = Objects.requireNonNull(cacheMode);
             return this;
         }
 
-        public Builder setClientTtl(Integer clientTtl) {
+        public Builder clientTtl(Integer clientTtl) {
             this.clientTtl = Objects.requireNonNull(clientTtl);
             return this;
         }
 
-        public Builder setDefaultTtl(Integer defaultTtl) {
+        public Builder defaultTtl(Integer defaultTtl) {
             this.defaultTtl = Objects.requireNonNull(defaultTtl);
             return this;
         }
 
-        public Builder setMaxTtl(Integer maxTtl) {
+        public Builder maxTtl(Integer maxTtl) {
             this.maxTtl = Objects.requireNonNull(maxTtl);
             return this;
         }
 
-        public Builder setNegativeCaching(Boolean negativeCaching) {
+        public Builder negativeCaching(Boolean negativeCaching) {
             this.negativeCaching = Objects.requireNonNull(negativeCaching);
             return this;
         }
 
-        public Builder setNegativeCachingPolicy(List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy) {
+        public Builder negativeCachingPolicy(List<BackendBucketCdnPolicyNegativeCachingPolicyResponse> negativeCachingPolicy) {
             this.negativeCachingPolicy = Objects.requireNonNull(negativeCachingPolicy);
             return this;
         }
 
-        public Builder setRequestCoalescing(Boolean requestCoalescing) {
+        public Builder requestCoalescing(Boolean requestCoalescing) {
             this.requestCoalescing = Objects.requireNonNull(requestCoalescing);
             return this;
         }
 
-        public Builder setServeWhileStale(Integer serveWhileStale) {
+        public Builder serveWhileStale(Integer serveWhileStale) {
             this.serveWhileStale = Objects.requireNonNull(serveWhileStale);
             return this;
         }
 
-        public Builder setSignedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
+        public Builder signedUrlCacheMaxAgeSec(String signedUrlCacheMaxAgeSec) {
             this.signedUrlCacheMaxAgeSec = Objects.requireNonNull(signedUrlCacheMaxAgeSec);
             return this;
         }
 
-        public Builder setSignedUrlKeyNames(List<String> signedUrlKeyNames) {
+        public Builder signedUrlKeyNames(List<String> signedUrlKeyNames) {
             this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
             return this;
         }

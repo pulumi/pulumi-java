@@ -73,12 +73,12 @@ public final class EnvironmentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.iosDevice = defaults.iosDevice;
         }
 
-        public Builder setAndroidDevice(AndroidDeviceResponse androidDevice) {
+        public Builder androidDevice(AndroidDeviceResponse androidDevice) {
             this.androidDevice = Objects.requireNonNull(androidDevice);
             return this;
         }
 
-        public Builder setIosDevice(IosDeviceResponse iosDevice) {
+        public Builder iosDevice(IosDeviceResponse iosDevice) {
             this.iosDevice = Objects.requireNonNull(iosDevice);
             return this;
         }

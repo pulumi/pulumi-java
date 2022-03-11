@@ -44,14 +44,14 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor({"commonAlphabet","context","cryptoKey","customAlphabet","radix","surrogateInfoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(
-        String commonAlphabet,
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        String customAlphabet,
-        Integer radix,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @OutputCustomType.Parameter("commonAlphabet") String commonAlphabet,
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("customAlphabet") String customAlphabet,
+        @OutputCustomType.Parameter("radix") Integer radix,
+        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.commonAlphabet = commonAlphabet;
         this.context = context;
         this.cryptoKey = cryptoKey;
@@ -133,32 +133,32 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse {
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setCommonAlphabet(String commonAlphabet) {
+        public Builder commonAlphabet(String commonAlphabet) {
             this.commonAlphabet = Objects.requireNonNull(commonAlphabet);
             return this;
         }
 
-        public Builder setContext(GooglePrivacyDlpV2FieldIdResponse context) {
+        public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setCustomAlphabet(String customAlphabet) {
+        public Builder customAlphabet(String customAlphabet) {
             this.customAlphabet = Objects.requireNonNull(customAlphabet);
             return this;
         }
 
-        public Builder setRadix(Integer radix) {
+        public Builder radix(Integer radix) {
             this.radix = Objects.requireNonNull(radix);
             return this;
         }
 
-        public Builder setSurrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }

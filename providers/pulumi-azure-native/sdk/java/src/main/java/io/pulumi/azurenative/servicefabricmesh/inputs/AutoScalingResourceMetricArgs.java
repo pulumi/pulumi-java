@@ -76,22 +76,22 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
     	      this.name = defaults.name;
         }
 
-        public Builder setKind(Input<String> kind) {
+        public Builder kind(Input<String> kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Input.of(Objects.requireNonNull(kind));
             return this;
         }
 
-        public Builder setName(Input<Either<String,AutoScalingResourceMetricName>> name) {
+        public Builder name(Input<Either<String,AutoScalingResourceMetricName>> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(Either<String,AutoScalingResourceMetricName> name) {
+        public Builder name(Either<String,AutoScalingResourceMetricName> name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }

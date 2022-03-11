@@ -41,12 +41,12 @@ public final class TopologySpreadConstraint {
      */
     private final String whenUnsatisfiable;
 
-    @OutputCustomType.Constructor({"labelSelector","maxSkew","topologyKey","whenUnsatisfiable"})
+    @OutputCustomType.Constructor
     private TopologySpreadConstraint(
-        @Nullable LabelSelector labelSelector,
-        Integer maxSkew,
-        String topologyKey,
-        String whenUnsatisfiable) {
+        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @OutputCustomType.Parameter("maxSkew") Integer maxSkew,
+        @OutputCustomType.Parameter("topologyKey") String topologyKey,
+        @OutputCustomType.Parameter("whenUnsatisfiable") String whenUnsatisfiable) {
         this.labelSelector = labelSelector;
         this.maxSkew = maxSkew;
         this.topologyKey = topologyKey;
@@ -115,22 +115,22 @@ public final class TopologySpreadConstraint {
     	      this.whenUnsatisfiable = defaults.whenUnsatisfiable;
         }
 
-        public Builder setLabelSelector(@Nullable LabelSelector labelSelector) {
+        public Builder labelSelector(@Nullable LabelSelector labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
-        public Builder setMaxSkew(Integer maxSkew) {
+        public Builder maxSkew(Integer maxSkew) {
             this.maxSkew = Objects.requireNonNull(maxSkew);
             return this;
         }
 
-        public Builder setTopologyKey(String topologyKey) {
+        public Builder topologyKey(String topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }
 
-        public Builder setWhenUnsatisfiable(String whenUnsatisfiable) {
+        public Builder whenUnsatisfiable(String whenUnsatisfiable) {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }

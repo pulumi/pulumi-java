@@ -48,15 +48,15 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse {
      */
     private final Boolean singleUtterance;
 
-    @OutputCustomType.Constructor({"audioEncoding","enableWordInfo","model","modelVariant","phraseHints","sampleRateHertz","singleUtterance"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3InputAudioConfigResponse(
-        String audioEncoding,
-        Boolean enableWordInfo,
-        String model,
-        String modelVariant,
-        List<String> phraseHints,
-        Integer sampleRateHertz,
-        Boolean singleUtterance) {
+        @OutputCustomType.Parameter("audioEncoding") String audioEncoding,
+        @OutputCustomType.Parameter("enableWordInfo") Boolean enableWordInfo,
+        @OutputCustomType.Parameter("model") String model,
+        @OutputCustomType.Parameter("modelVariant") String modelVariant,
+        @OutputCustomType.Parameter("phraseHints") List<String> phraseHints,
+        @OutputCustomType.Parameter("sampleRateHertz") Integer sampleRateHertz,
+        @OutputCustomType.Parameter("singleUtterance") Boolean singleUtterance) {
         this.audioEncoding = audioEncoding;
         this.enableWordInfo = enableWordInfo;
         this.model = model;
@@ -148,37 +148,37 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigResponse {
     	      this.singleUtterance = defaults.singleUtterance;
         }
 
-        public Builder setAudioEncoding(String audioEncoding) {
+        public Builder audioEncoding(String audioEncoding) {
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
 
-        public Builder setEnableWordInfo(Boolean enableWordInfo) {
+        public Builder enableWordInfo(Boolean enableWordInfo) {
             this.enableWordInfo = Objects.requireNonNull(enableWordInfo);
             return this;
         }
 
-        public Builder setModel(String model) {
+        public Builder model(String model) {
             this.model = Objects.requireNonNull(model);
             return this;
         }
 
-        public Builder setModelVariant(String modelVariant) {
+        public Builder modelVariant(String modelVariant) {
             this.modelVariant = Objects.requireNonNull(modelVariant);
             return this;
         }
 
-        public Builder setPhraseHints(List<String> phraseHints) {
+        public Builder phraseHints(List<String> phraseHints) {
             this.phraseHints = Objects.requireNonNull(phraseHints);
             return this;
         }
 
-        public Builder setSampleRateHertz(Integer sampleRateHertz) {
+        public Builder sampleRateHertz(Integer sampleRateHertz) {
             this.sampleRateHertz = Objects.requireNonNull(sampleRateHertz);
             return this;
         }
 
-        public Builder setSingleUtterance(Boolean singleUtterance) {
+        public Builder singleUtterance(Boolean singleUtterance) {
             this.singleUtterance = Objects.requireNonNull(singleUtterance);
             return this;
         }

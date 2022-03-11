@@ -21,10 +21,10 @@ public final class RecipeAction {
     private final String operation;
     private final @Nullable Either<RecipeParameters,RecipeParameterMap> parameters;
 
-    @OutputCustomType.Constructor({"operation","parameters"})
+    @OutputCustomType.Constructor
     private RecipeAction(
-        String operation,
-        @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("parameters") @Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
         this.operation = operation;
         this.parameters = parameters;
     }
@@ -62,12 +62,12 @@ public final class RecipeAction {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setParameters(@Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
+        public Builder parameters(@Nullable Either<RecipeParameters,RecipeParameterMap> parameters) {
             this.parameters = parameters;
             return this;
         }

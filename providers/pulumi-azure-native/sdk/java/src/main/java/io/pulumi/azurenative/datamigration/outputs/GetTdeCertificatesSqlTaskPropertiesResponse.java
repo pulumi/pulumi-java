@@ -50,14 +50,14 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
      */
     private final String taskType;
 
-    @OutputCustomType.Constructor({"commands","errors","input","output","state","taskType"})
+    @OutputCustomType.Constructor
     private GetTdeCertificatesSqlTaskPropertiesResponse(
-        List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
-        List<ODataErrorResponse> errors,
-        @Nullable GetTdeCertificatesSqlTaskInputResponse input,
-        List<GetTdeCertificatesSqlTaskOutputResponse> output,
-        String state,
-        String taskType) {
+        @OutputCustomType.Parameter("commands") List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands,
+        @OutputCustomType.Parameter("errors") List<ODataErrorResponse> errors,
+        @OutputCustomType.Parameter("input") @Nullable GetTdeCertificatesSqlTaskInputResponse input,
+        @OutputCustomType.Parameter("output") List<GetTdeCertificatesSqlTaskOutputResponse> output,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("taskType") String taskType) {
         this.commands = commands;
         this.errors = errors;
         this.input = input;
@@ -140,32 +140,32 @@ public final class GetTdeCertificatesSqlTaskPropertiesResponse {
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setCommands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
+        public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable GetTdeCertificatesSqlTaskInputResponse input) {
+        public Builder input(@Nullable GetTdeCertificatesSqlTaskInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(List<GetTdeCertificatesSqlTaskOutputResponse> output) {
+        public Builder output(List<GetTdeCertificatesSqlTaskOutputResponse> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

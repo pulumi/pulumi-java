@@ -58,17 +58,17 @@ public final class StorageAccountResponse {
      */
     private final @Nullable String saskey;
 
-    @OutputCustomType.Constructor({"container","fileSystem","fileshare","isDefault","key","msiResourceId","name","resourceId","saskey"})
+    @OutputCustomType.Constructor
     private StorageAccountResponse(
-        @Nullable String container,
-        @Nullable String fileSystem,
-        @Nullable String fileshare,
-        @Nullable Boolean isDefault,
-        @Nullable String key,
-        @Nullable String msiResourceId,
-        @Nullable String name,
-        @Nullable String resourceId,
-        @Nullable String saskey) {
+        @OutputCustomType.Parameter("container") @Nullable String container,
+        @OutputCustomType.Parameter("fileSystem") @Nullable String fileSystem,
+        @OutputCustomType.Parameter("fileshare") @Nullable String fileshare,
+        @OutputCustomType.Parameter("isDefault") @Nullable Boolean isDefault,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("msiResourceId") @Nullable String msiResourceId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("saskey") @Nullable String saskey) {
         this.container = container;
         this.fileSystem = fileSystem;
         this.fileshare = fileshare;
@@ -180,47 +180,47 @@ public final class StorageAccountResponse {
     	      this.saskey = defaults.saskey;
         }
 
-        public Builder setContainer(@Nullable String container) {
+        public Builder container(@Nullable String container) {
             this.container = container;
             return this;
         }
 
-        public Builder setFileSystem(@Nullable String fileSystem) {
+        public Builder fileSystem(@Nullable String fileSystem) {
             this.fileSystem = fileSystem;
             return this;
         }
 
-        public Builder setFileshare(@Nullable String fileshare) {
+        public Builder fileshare(@Nullable String fileshare) {
             this.fileshare = fileshare;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setMsiResourceId(@Nullable String msiResourceId) {
+        public Builder msiResourceId(@Nullable String msiResourceId) {
             this.msiResourceId = msiResourceId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setSaskey(@Nullable String saskey) {
+        public Builder saskey(@Nullable String saskey) {
             this.saskey = saskey;
             return this;
         }

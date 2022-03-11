@@ -24,11 +24,11 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
      */
     private final List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks;
 
-    @OutputCustomType.Constructor({"gkeClusters","kind","networks"})
+    @OutputCustomType.Constructor
     private ManagedZonePrivateVisibilityConfigResponse(
-        List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
-        String kind,
-        List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        @OutputCustomType.Parameter("gkeClusters") List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
         this.gkeClusters = gkeClusters;
         this.kind = kind;
         this.networks = networks;
@@ -76,17 +76,17 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setGkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters) {
+        public Builder gkeClusters(List<ManagedZonePrivateVisibilityConfigGKEClusterResponse> gkeClusters) {
             this.gkeClusters = Objects.requireNonNull(gkeClusters);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setNetworks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
+        public Builder networks(List<ManagedZonePrivateVisibilityConfigNetworkResponse> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

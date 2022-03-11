@@ -29,11 +29,11 @@ public final class GetHookTypeConfigResult {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor({"configuration","configurationArn","typeName"})
+    @OutputCustomType.Constructor
     private GetHookTypeConfigResult(
-        @Nullable String configuration,
-        @Nullable String configurationArn,
-        @Nullable String typeName) {
+        @OutputCustomType.Parameter("configuration") @Nullable String configuration,
+        @OutputCustomType.Parameter("configurationArn") @Nullable String configurationArn,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
         this.configuration = configuration;
         this.configurationArn = configurationArn;
         this.typeName = typeName;
@@ -87,17 +87,17 @@ public final class GetHookTypeConfigResult {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setConfiguration(@Nullable String configuration) {
+        public Builder configuration(@Nullable String configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfigurationArn(@Nullable String configurationArn) {
+        public Builder configurationArn(@Nullable String configurationArn) {
             this.configurationArn = configurationArn;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }

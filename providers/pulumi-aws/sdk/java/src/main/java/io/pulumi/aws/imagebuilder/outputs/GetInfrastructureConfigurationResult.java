@@ -86,24 +86,24 @@ public final class GetInfrastructureConfigurationResult {
      */
     private final Boolean terminateInstanceOnFailure;
 
-    @OutputCustomType.Constructor({"arn","dateCreated","dateUpdated","description","id","instanceProfileName","instanceTypes","keyPair","loggings","name","resourceTags","securityGroupIds","snsTopicArn","subnetId","tags","terminateInstanceOnFailure"})
+    @OutputCustomType.Constructor
     private GetInfrastructureConfigurationResult(
-        String arn,
-        String dateCreated,
-        String dateUpdated,
-        String description,
-        String id,
-        String instanceProfileName,
-        List<String> instanceTypes,
-        String keyPair,
-        List<GetInfrastructureConfigurationLogging> loggings,
-        String name,
-        Map<String,String> resourceTags,
-        List<String> securityGroupIds,
-        String snsTopicArn,
-        String subnetId,
-        Map<String,String> tags,
-        Boolean terminateInstanceOnFailure) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("dateCreated") String dateCreated,
+        @OutputCustomType.Parameter("dateUpdated") String dateUpdated,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceProfileName") String instanceProfileName,
+        @OutputCustomType.Parameter("instanceTypes") List<String> instanceTypes,
+        @OutputCustomType.Parameter("keyPair") String keyPair,
+        @OutputCustomType.Parameter("loggings") List<GetInfrastructureConfigurationLogging> loggings,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceTags") Map<String,String> resourceTags,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("snsTopicArn") String snsTopicArn,
+        @OutputCustomType.Parameter("subnetId") String subnetId,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("terminateInstanceOnFailure") Boolean terminateInstanceOnFailure) {
         this.arn = arn;
         this.dateCreated = dateCreated;
         this.dateUpdated = dateUpdated;
@@ -277,82 +277,82 @@ public final class GetInfrastructureConfigurationResult {
     	      this.terminateInstanceOnFailure = defaults.terminateInstanceOnFailure;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDateCreated(String dateCreated) {
+        public Builder dateCreated(String dateCreated) {
             this.dateCreated = Objects.requireNonNull(dateCreated);
             return this;
         }
 
-        public Builder setDateUpdated(String dateUpdated) {
+        public Builder dateUpdated(String dateUpdated) {
             this.dateUpdated = Objects.requireNonNull(dateUpdated);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceProfileName(String instanceProfileName) {
+        public Builder instanceProfileName(String instanceProfileName) {
             this.instanceProfileName = Objects.requireNonNull(instanceProfileName);
             return this;
         }
 
-        public Builder setInstanceTypes(List<String> instanceTypes) {
+        public Builder instanceTypes(List<String> instanceTypes) {
             this.instanceTypes = Objects.requireNonNull(instanceTypes);
             return this;
         }
 
-        public Builder setKeyPair(String keyPair) {
+        public Builder keyPair(String keyPair) {
             this.keyPair = Objects.requireNonNull(keyPair);
             return this;
         }
 
-        public Builder setLoggings(List<GetInfrastructureConfigurationLogging> loggings) {
+        public Builder loggings(List<GetInfrastructureConfigurationLogging> loggings) {
             this.loggings = Objects.requireNonNull(loggings);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceTags(Map<String,String> resourceTags) {
+        public Builder resourceTags(Map<String,String> resourceTags) {
             this.resourceTags = Objects.requireNonNull(resourceTags);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSnsTopicArn(String snsTopicArn) {
+        public Builder snsTopicArn(String snsTopicArn) {
             this.snsTopicArn = Objects.requireNonNull(snsTopicArn);
             return this;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTerminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
+        public Builder terminateInstanceOnFailure(Boolean terminateInstanceOnFailure) {
             this.terminateInstanceOnFailure = Objects.requireNonNull(terminateInstanceOnFailure);
             return this;
         }

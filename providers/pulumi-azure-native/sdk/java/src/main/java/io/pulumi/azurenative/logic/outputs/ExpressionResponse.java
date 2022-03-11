@@ -31,12 +31,12 @@ public final class ExpressionResponse {
     private final @Nullable String text;
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"error","subexpressions","text","value"})
+    @OutputCustomType.Constructor
     private ExpressionResponse(
-        @Nullable AzureResourceErrorInfoResponse error,
-        @Nullable List<ExpressionResponse> subexpressions,
-        @Nullable String text,
-        @Nullable Object value) {
+        @OutputCustomType.Parameter("error") @Nullable AzureResourceErrorInfoResponse error,
+        @OutputCustomType.Parameter("subexpressions") @Nullable List<ExpressionResponse> subexpressions,
+        @OutputCustomType.Parameter("text") @Nullable String text,
+        @OutputCustomType.Parameter("value") @Nullable Object value) {
         this.error = error;
         this.subexpressions = subexpressions;
         this.text = text;
@@ -94,22 +94,22 @@ public final class ExpressionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setError(@Nullable AzureResourceErrorInfoResponse error) {
+        public Builder error(@Nullable AzureResourceErrorInfoResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setSubexpressions(@Nullable List<ExpressionResponse> subexpressions) {
+        public Builder subexpressions(@Nullable List<ExpressionResponse> subexpressions) {
             this.subexpressions = subexpressions;
             return this;
         }
 
-        public Builder setText(@Nullable String text) {
+        public Builder text(@Nullable String text) {
             this.text = text;
             return this;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

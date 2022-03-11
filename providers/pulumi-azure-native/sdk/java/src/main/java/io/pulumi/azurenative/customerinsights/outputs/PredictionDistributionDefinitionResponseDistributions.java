@@ -38,13 +38,13 @@ public final class PredictionDistributionDefinitionResponseDistributions {
      */
     private final @Nullable Integer scoreThreshold;
 
-    @OutputCustomType.Constructor({"negatives","negativesAboveThreshold","positives","positivesAboveThreshold","scoreThreshold"})
+    @OutputCustomType.Constructor
     private PredictionDistributionDefinitionResponseDistributions(
-        @Nullable Double negatives,
-        @Nullable Double negativesAboveThreshold,
-        @Nullable Double positives,
-        @Nullable Double positivesAboveThreshold,
-        @Nullable Integer scoreThreshold) {
+        @OutputCustomType.Parameter("negatives") @Nullable Double negatives,
+        @OutputCustomType.Parameter("negativesAboveThreshold") @Nullable Double negativesAboveThreshold,
+        @OutputCustomType.Parameter("positives") @Nullable Double positives,
+        @OutputCustomType.Parameter("positivesAboveThreshold") @Nullable Double positivesAboveThreshold,
+        @OutputCustomType.Parameter("scoreThreshold") @Nullable Integer scoreThreshold) {
         this.negatives = negatives;
         this.negativesAboveThreshold = negativesAboveThreshold;
         this.positives = positives;
@@ -116,27 +116,27 @@ public final class PredictionDistributionDefinitionResponseDistributions {
     	      this.scoreThreshold = defaults.scoreThreshold;
         }
 
-        public Builder setNegatives(@Nullable Double negatives) {
+        public Builder negatives(@Nullable Double negatives) {
             this.negatives = negatives;
             return this;
         }
 
-        public Builder setNegativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
+        public Builder negativesAboveThreshold(@Nullable Double negativesAboveThreshold) {
             this.negativesAboveThreshold = negativesAboveThreshold;
             return this;
         }
 
-        public Builder setPositives(@Nullable Double positives) {
+        public Builder positives(@Nullable Double positives) {
             this.positives = positives;
             return this;
         }
 
-        public Builder setPositivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
+        public Builder positivesAboveThreshold(@Nullable Double positivesAboveThreshold) {
             this.positivesAboveThreshold = positivesAboveThreshold;
             return this;
         }
 
-        public Builder setScoreThreshold(@Nullable Integer scoreThreshold) {
+        public Builder scoreThreshold(@Nullable Integer scoreThreshold) {
             this.scoreThreshold = scoreThreshold;
             return this;
         }

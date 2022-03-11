@@ -29,11 +29,11 @@ public final class VolumeBackupsResponse {
      */
     private final @Nullable String volumeName;
 
-    @OutputCustomType.Constructor({"backupsCount","policyEnabled","volumeName"})
+    @OutputCustomType.Constructor
     private VolumeBackupsResponse(
-        @Nullable Integer backupsCount,
-        @Nullable Boolean policyEnabled,
-        @Nullable String volumeName) {
+        @OutputCustomType.Parameter("backupsCount") @Nullable Integer backupsCount,
+        @OutputCustomType.Parameter("policyEnabled") @Nullable Boolean policyEnabled,
+        @OutputCustomType.Parameter("volumeName") @Nullable String volumeName) {
         this.backupsCount = backupsCount;
         this.policyEnabled = policyEnabled;
         this.volumeName = volumeName;
@@ -85,17 +85,17 @@ public final class VolumeBackupsResponse {
     	      this.volumeName = defaults.volumeName;
         }
 
-        public Builder setBackupsCount(@Nullable Integer backupsCount) {
+        public Builder backupsCount(@Nullable Integer backupsCount) {
             this.backupsCount = backupsCount;
             return this;
         }
 
-        public Builder setPolicyEnabled(@Nullable Boolean policyEnabled) {
+        public Builder policyEnabled(@Nullable Boolean policyEnabled) {
             this.policyEnabled = policyEnabled;
             return this;
         }
 
-        public Builder setVolumeName(@Nullable String volumeName) {
+        public Builder volumeName(@Nullable String volumeName) {
             this.volumeName = volumeName;
             return this;
         }

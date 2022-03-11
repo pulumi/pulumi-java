@@ -20,10 +20,10 @@ public final class KeyVersionSpecResponse {
      */
     private final String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor({"algorithm","cloudKmsKeyVersion"})
+    @OutputCustomType.Constructor
     private KeyVersionSpecResponse(
-        String algorithm,
-        String cloudKmsKeyVersion) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("cloudKmsKeyVersion") String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }
@@ -65,12 +65,12 @@ public final class KeyVersionSpecResponse {
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(String cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = Objects.requireNonNull(cloudKmsKeyVersion);
             return this;
         }

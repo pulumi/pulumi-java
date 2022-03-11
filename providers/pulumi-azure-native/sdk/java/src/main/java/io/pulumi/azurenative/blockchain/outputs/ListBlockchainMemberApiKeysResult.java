@@ -17,8 +17,8 @@ public final class ListBlockchainMemberApiKeysResult {
      */
     private final @Nullable List<ApiKeyResponse> keys;
 
-    @OutputCustomType.Constructor({"keys"})
-    private ListBlockchainMemberApiKeysResult(@Nullable List<ApiKeyResponse> keys) {
+    @OutputCustomType.Constructor
+    private ListBlockchainMemberApiKeysResult(@OutputCustomType.Parameter("keys") @Nullable List<ApiKeyResponse> keys) {
         this.keys = keys;
     }
 
@@ -50,7 +50,7 @@ public final class ListBlockchainMemberApiKeysResult {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeys(@Nullable List<ApiKeyResponse> keys) {
+        public Builder keys(@Nullable List<ApiKeyResponse> keys) {
             this.keys = keys;
             return this;
         }

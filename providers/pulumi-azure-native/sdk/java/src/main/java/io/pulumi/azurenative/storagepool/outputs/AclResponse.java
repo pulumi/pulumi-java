@@ -31,12 +31,12 @@ public final class AclResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"initiatorIqn","mappedLuns","password","username"})
+    @OutputCustomType.Constructor
     private AclResponse(
-        String initiatorIqn,
-        List<String> mappedLuns,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("initiatorIqn") String initiatorIqn,
+        @OutputCustomType.Parameter("mappedLuns") List<String> mappedLuns,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.initiatorIqn = initiatorIqn;
         this.mappedLuns = mappedLuns;
         this.password = password;
@@ -98,22 +98,22 @@ public final class AclResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setInitiatorIqn(String initiatorIqn) {
+        public Builder initiatorIqn(String initiatorIqn) {
             this.initiatorIqn = Objects.requireNonNull(initiatorIqn);
             return this;
         }
 
-        public Builder setMappedLuns(List<String> mappedLuns) {
+        public Builder mappedLuns(List<String> mappedLuns) {
             this.mappedLuns = Objects.requireNonNull(mappedLuns);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

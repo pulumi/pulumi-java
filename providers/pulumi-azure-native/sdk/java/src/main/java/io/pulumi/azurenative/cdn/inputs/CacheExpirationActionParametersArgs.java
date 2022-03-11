@@ -105,42 +105,42 @@ public final class CacheExpirationActionParametersArgs extends io.pulumi.resourc
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setCacheBehavior(Input<Either<String,CacheBehavior>> cacheBehavior) {
+        public Builder cacheBehavior(Input<Either<String,CacheBehavior>> cacheBehavior) {
             this.cacheBehavior = Objects.requireNonNull(cacheBehavior);
             return this;
         }
 
-        public Builder setCacheBehavior(Either<String,CacheBehavior> cacheBehavior) {
+        public Builder cacheBehavior(Either<String,CacheBehavior> cacheBehavior) {
             this.cacheBehavior = Input.of(Objects.requireNonNull(cacheBehavior));
             return this;
         }
 
-        public Builder setCacheDuration(@Nullable Input<String> cacheDuration) {
+        public Builder cacheDuration(@Nullable Input<String> cacheDuration) {
             this.cacheDuration = cacheDuration;
             return this;
         }
 
-        public Builder setCacheDuration(@Nullable String cacheDuration) {
+        public Builder cacheDuration(@Nullable String cacheDuration) {
             this.cacheDuration = Input.ofNullable(cacheDuration);
             return this;
         }
 
-        public Builder setCacheType(Input<Either<String,CacheType>> cacheType) {
+        public Builder cacheType(Input<Either<String,CacheType>> cacheType) {
             this.cacheType = Objects.requireNonNull(cacheType);
             return this;
         }
 
-        public Builder setCacheType(Either<String,CacheType> cacheType) {
+        public Builder cacheType(Either<String,CacheType> cacheType) {
             this.cacheType = Input.of(Objects.requireNonNull(cacheType));
             return this;
         }
 
-        public Builder setOdataType(Input<String> odataType) {
+        public Builder odataType(Input<String> odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }

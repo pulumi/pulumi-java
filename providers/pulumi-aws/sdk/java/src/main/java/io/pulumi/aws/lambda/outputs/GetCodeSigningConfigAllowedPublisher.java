@@ -16,8 +16,8 @@ public final class GetCodeSigningConfigAllowedPublisher {
      */
     private final List<String> signingProfileVersionArns;
 
-    @OutputCustomType.Constructor({"signingProfileVersionArns"})
-    private GetCodeSigningConfigAllowedPublisher(List<String> signingProfileVersionArns) {
+    @OutputCustomType.Constructor
+    private GetCodeSigningConfigAllowedPublisher(@OutputCustomType.Parameter("signingProfileVersionArns") List<String> signingProfileVersionArns) {
         this.signingProfileVersionArns = signingProfileVersionArns;
     }
 
@@ -49,7 +49,7 @@ public final class GetCodeSigningConfigAllowedPublisher {
     	      this.signingProfileVersionArns = defaults.signingProfileVersionArns;
         }
 
-        public Builder setSigningProfileVersionArns(List<String> signingProfileVersionArns) {
+        public Builder signingProfileVersionArns(List<String> signingProfileVersionArns) {
             this.signingProfileVersionArns = Objects.requireNonNull(signingProfileVersionArns);
             return this;
         }

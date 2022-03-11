@@ -18,13 +18,13 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
     private final @Nullable Integer minCount;
     private final @Nullable Double storageGb;
 
-    @OutputCustomType.Constructor({"cpu","maxCount","memoryGb","minCount","storageGb"})
+    @OutputCustomType.Constructor
     private EnvironmentConfigWorkloadsConfigWorker(
-        @Nullable Double cpu,
-        @Nullable Integer maxCount,
-        @Nullable Double memoryGb,
-        @Nullable Integer minCount,
-        @Nullable Double storageGb) {
+        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
+        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @OutputCustomType.Parameter("minCount") @Nullable Integer minCount,
+        @OutputCustomType.Parameter("storageGb") @Nullable Double storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;
@@ -76,27 +76,27 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
     	      this.storageGb = defaults.storageGb;
         }
 
-        public Builder setCpu(@Nullable Double cpu) {
+        public Builder cpu(@Nullable Double cpu) {
             this.cpu = cpu;
             return this;
         }
 
-        public Builder setMaxCount(@Nullable Integer maxCount) {
+        public Builder maxCount(@Nullable Integer maxCount) {
             this.maxCount = maxCount;
             return this;
         }
 
-        public Builder setMemoryGb(@Nullable Double memoryGb) {
+        public Builder memoryGb(@Nullable Double memoryGb) {
             this.memoryGb = memoryGb;
             return this;
         }
 
-        public Builder setMinCount(@Nullable Integer minCount) {
+        public Builder minCount(@Nullable Integer minCount) {
             this.minCount = minCount;
             return this;
         }
 
-        public Builder setStorageGb(@Nullable Double storageGb) {
+        public Builder storageGb(@Nullable Double storageGb) {
             this.storageGb = storageGb;
             return this;
         }

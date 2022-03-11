@@ -17,8 +17,8 @@ public final class IntegrationTlsConfig {
      */
     private final @Nullable Boolean insecureSkipVerification;
 
-    @OutputCustomType.Constructor({"insecureSkipVerification"})
-    private IntegrationTlsConfig(@Nullable Boolean insecureSkipVerification) {
+    @OutputCustomType.Constructor
+    private IntegrationTlsConfig(@OutputCustomType.Parameter("insecureSkipVerification") @Nullable Boolean insecureSkipVerification) {
         this.insecureSkipVerification = insecureSkipVerification;
     }
 
@@ -50,7 +50,7 @@ public final class IntegrationTlsConfig {
     	      this.insecureSkipVerification = defaults.insecureSkipVerification;
         }
 
-        public Builder setInsecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
+        public Builder insecureSkipVerification(@Nullable Boolean insecureSkipVerification) {
             this.insecureSkipVerification = insecureSkipVerification;
             return this;
         }

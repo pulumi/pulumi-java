@@ -13,10 +13,10 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
     private final ModelBiasJobDefinitionEndpointInput endpointInput;
     private final ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input;
 
-    @OutputCustomType.Constructor({"endpointInput","groundTruthS3Input"})
+    @OutputCustomType.Constructor
     private ModelBiasJobDefinitionModelBiasJobInput(
-        ModelBiasJobDefinitionEndpointInput endpointInput,
-        ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        @OutputCustomType.Parameter("endpointInput") ModelBiasJobDefinitionEndpointInput endpointInput,
+        @OutputCustomType.Parameter("groundTruthS3Input") ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
         this.endpointInput = endpointInput;
         this.groundTruthS3Input = groundTruthS3Input;
     }
@@ -50,12 +50,12 @@ public final class ModelBiasJobDefinitionModelBiasJobInput {
     	      this.groundTruthS3Input = defaults.groundTruthS3Input;
         }
 
-        public Builder setEndpointInput(ModelBiasJobDefinitionEndpointInput endpointInput) {
+        public Builder endpointInput(ModelBiasJobDefinitionEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }
 
-        public Builder setGroundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
+        public Builder groundTruthS3Input(ModelBiasJobDefinitionMonitoringGroundTruthS3Input groundTruthS3Input) {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
         }

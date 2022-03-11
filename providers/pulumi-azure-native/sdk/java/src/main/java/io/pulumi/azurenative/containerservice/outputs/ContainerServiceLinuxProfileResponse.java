@@ -21,10 +21,10 @@ public final class ContainerServiceLinuxProfileResponse {
      */
     private final ContainerServiceSshConfigurationResponse ssh;
 
-    @OutputCustomType.Constructor({"adminUsername","ssh"})
+    @OutputCustomType.Constructor
     private ContainerServiceLinuxProfileResponse(
-        String adminUsername,
-        ContainerServiceSshConfigurationResponse ssh) {
+        @OutputCustomType.Parameter("adminUsername") String adminUsername,
+        @OutputCustomType.Parameter("ssh") ContainerServiceSshConfigurationResponse ssh) {
         this.adminUsername = adminUsername;
         this.ssh = ssh;
     }
@@ -66,12 +66,12 @@ public final class ContainerServiceLinuxProfileResponse {
     	      this.ssh = defaults.ssh;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setSsh(ContainerServiceSshConfigurationResponse ssh) {
+        public Builder ssh(ContainerServiceSshConfigurationResponse ssh) {
             this.ssh = Objects.requireNonNull(ssh);
             return this;
         }

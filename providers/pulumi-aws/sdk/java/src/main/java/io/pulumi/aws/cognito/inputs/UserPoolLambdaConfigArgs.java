@@ -248,132 +248,132 @@ public final class UserPoolLambdaConfigArgs extends io.pulumi.resources.Resource
     	      this.verifyAuthChallengeResponse = defaults.verifyAuthChallengeResponse;
         }
 
-        public Builder setCreateAuthChallenge(@Nullable Input<String> createAuthChallenge) {
+        public Builder createAuthChallenge(@Nullable Input<String> createAuthChallenge) {
             this.createAuthChallenge = createAuthChallenge;
             return this;
         }
 
-        public Builder setCreateAuthChallenge(@Nullable String createAuthChallenge) {
+        public Builder createAuthChallenge(@Nullable String createAuthChallenge) {
             this.createAuthChallenge = Input.ofNullable(createAuthChallenge);
             return this;
         }
 
-        public Builder setCustomEmailSender(@Nullable Input<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender) {
+        public Builder customEmailSender(@Nullable Input<UserPoolLambdaConfigCustomEmailSenderArgs> customEmailSender) {
             this.customEmailSender = customEmailSender;
             return this;
         }
 
-        public Builder setCustomEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSenderArgs customEmailSender) {
+        public Builder customEmailSender(@Nullable UserPoolLambdaConfigCustomEmailSenderArgs customEmailSender) {
             this.customEmailSender = Input.ofNullable(customEmailSender);
             return this;
         }
 
-        public Builder setCustomMessage(@Nullable Input<String> customMessage) {
+        public Builder customMessage(@Nullable Input<String> customMessage) {
             this.customMessage = customMessage;
             return this;
         }
 
-        public Builder setCustomMessage(@Nullable String customMessage) {
+        public Builder customMessage(@Nullable String customMessage) {
             this.customMessage = Input.ofNullable(customMessage);
             return this;
         }
 
-        public Builder setCustomSmsSender(@Nullable Input<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender) {
+        public Builder customSmsSender(@Nullable Input<UserPoolLambdaConfigCustomSmsSenderArgs> customSmsSender) {
             this.customSmsSender = customSmsSender;
             return this;
         }
 
-        public Builder setCustomSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSenderArgs customSmsSender) {
+        public Builder customSmsSender(@Nullable UserPoolLambdaConfigCustomSmsSenderArgs customSmsSender) {
             this.customSmsSender = Input.ofNullable(customSmsSender);
             return this;
         }
 
-        public Builder setDefineAuthChallenge(@Nullable Input<String> defineAuthChallenge) {
+        public Builder defineAuthChallenge(@Nullable Input<String> defineAuthChallenge) {
             this.defineAuthChallenge = defineAuthChallenge;
             return this;
         }
 
-        public Builder setDefineAuthChallenge(@Nullable String defineAuthChallenge) {
+        public Builder defineAuthChallenge(@Nullable String defineAuthChallenge) {
             this.defineAuthChallenge = Input.ofNullable(defineAuthChallenge);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPostAuthentication(@Nullable Input<String> postAuthentication) {
+        public Builder postAuthentication(@Nullable Input<String> postAuthentication) {
             this.postAuthentication = postAuthentication;
             return this;
         }
 
-        public Builder setPostAuthentication(@Nullable String postAuthentication) {
+        public Builder postAuthentication(@Nullable String postAuthentication) {
             this.postAuthentication = Input.ofNullable(postAuthentication);
             return this;
         }
 
-        public Builder setPostConfirmation(@Nullable Input<String> postConfirmation) {
+        public Builder postConfirmation(@Nullable Input<String> postConfirmation) {
             this.postConfirmation = postConfirmation;
             return this;
         }
 
-        public Builder setPostConfirmation(@Nullable String postConfirmation) {
+        public Builder postConfirmation(@Nullable String postConfirmation) {
             this.postConfirmation = Input.ofNullable(postConfirmation);
             return this;
         }
 
-        public Builder setPreAuthentication(@Nullable Input<String> preAuthentication) {
+        public Builder preAuthentication(@Nullable Input<String> preAuthentication) {
             this.preAuthentication = preAuthentication;
             return this;
         }
 
-        public Builder setPreAuthentication(@Nullable String preAuthentication) {
+        public Builder preAuthentication(@Nullable String preAuthentication) {
             this.preAuthentication = Input.ofNullable(preAuthentication);
             return this;
         }
 
-        public Builder setPreSignUp(@Nullable Input<String> preSignUp) {
+        public Builder preSignUp(@Nullable Input<String> preSignUp) {
             this.preSignUp = preSignUp;
             return this;
         }
 
-        public Builder setPreSignUp(@Nullable String preSignUp) {
+        public Builder preSignUp(@Nullable String preSignUp) {
             this.preSignUp = Input.ofNullable(preSignUp);
             return this;
         }
 
-        public Builder setPreTokenGeneration(@Nullable Input<String> preTokenGeneration) {
+        public Builder preTokenGeneration(@Nullable Input<String> preTokenGeneration) {
             this.preTokenGeneration = preTokenGeneration;
             return this;
         }
 
-        public Builder setPreTokenGeneration(@Nullable String preTokenGeneration) {
+        public Builder preTokenGeneration(@Nullable String preTokenGeneration) {
             this.preTokenGeneration = Input.ofNullable(preTokenGeneration);
             return this;
         }
 
-        public Builder setUserMigration(@Nullable Input<String> userMigration) {
+        public Builder userMigration(@Nullable Input<String> userMigration) {
             this.userMigration = userMigration;
             return this;
         }
 
-        public Builder setUserMigration(@Nullable String userMigration) {
+        public Builder userMigration(@Nullable String userMigration) {
             this.userMigration = Input.ofNullable(userMigration);
             return this;
         }
 
-        public Builder setVerifyAuthChallengeResponse(@Nullable Input<String> verifyAuthChallengeResponse) {
+        public Builder verifyAuthChallengeResponse(@Nullable Input<String> verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = verifyAuthChallengeResponse;
             return this;
         }
 
-        public Builder setVerifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
+        public Builder verifyAuthChallengeResponse(@Nullable String verifyAuthChallengeResponse) {
             this.verifyAuthChallengeResponse = Input.ofNullable(verifyAuthChallengeResponse);
             return this;
         }

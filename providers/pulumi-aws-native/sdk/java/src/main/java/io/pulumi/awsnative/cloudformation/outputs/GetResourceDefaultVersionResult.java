@@ -34,12 +34,12 @@ public final class GetResourceDefaultVersionResult {
      */
     private final @Nullable String versionId;
 
-    @OutputCustomType.Constructor({"arn","typeName","typeVersionArn","versionId"})
+    @OutputCustomType.Constructor
     private GetResourceDefaultVersionResult(
-        @Nullable String arn,
-        @Nullable String typeName,
-        @Nullable String typeVersionArn,
-        @Nullable String versionId) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName,
+        @OutputCustomType.Parameter("typeVersionArn") @Nullable String typeVersionArn,
+        @OutputCustomType.Parameter("versionId") @Nullable String versionId) {
         this.arn = arn;
         this.typeName = typeName;
         this.typeVersionArn = typeVersionArn;
@@ -103,22 +103,22 @@ public final class GetResourceDefaultVersionResult {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeVersionArn(@Nullable String typeVersionArn) {
+        public Builder typeVersionArn(@Nullable String typeVersionArn) {
             this.typeVersionArn = typeVersionArn;
             return this;
         }
 
-        public Builder setVersionId(@Nullable String versionId) {
+        public Builder versionId(@Nullable String versionId) {
             this.versionId = versionId;
             return this;
         }

@@ -25,11 +25,11 @@ public final class AssignmentOsTypeResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor({"osArchitecture","osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private AssignmentOsTypeResponse(
-        String osArchitecture,
-        String osShortName,
-        String osVersion) {
+        @OutputCustomType.Parameter("osArchitecture") String osArchitecture,
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") String osVersion) {
         this.osArchitecture = osArchitecture;
         this.osShortName = osShortName;
         this.osVersion = osVersion;
@@ -81,17 +81,17 @@ public final class AssignmentOsTypeResponse {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsArchitecture(String osArchitecture) {
+        public Builder osArchitecture(String osArchitecture) {
             this.osArchitecture = Objects.requireNonNull(osArchitecture);
             return this;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }

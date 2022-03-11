@@ -284,152 +284,152 @@ public final class WorkspaceCustomParametersArgs extends io.pulumi.resources.Res
     	      this.vnetAddressPrefix = defaults.vnetAddressPrefix;
         }
 
-        public Builder setAmlWorkspaceId(@Nullable Input<WorkspaceCustomStringParameterArgs> amlWorkspaceId) {
+        public Builder amlWorkspaceId(@Nullable Input<WorkspaceCustomStringParameterArgs> amlWorkspaceId) {
             this.amlWorkspaceId = amlWorkspaceId;
             return this;
         }
 
-        public Builder setAmlWorkspaceId(@Nullable WorkspaceCustomStringParameterArgs amlWorkspaceId) {
+        public Builder amlWorkspaceId(@Nullable WorkspaceCustomStringParameterArgs amlWorkspaceId) {
             this.amlWorkspaceId = Input.ofNullable(amlWorkspaceId);
             return this;
         }
 
-        public Builder setCustomPrivateSubnetName(@Nullable Input<WorkspaceCustomStringParameterArgs> customPrivateSubnetName) {
+        public Builder customPrivateSubnetName(@Nullable Input<WorkspaceCustomStringParameterArgs> customPrivateSubnetName) {
             this.customPrivateSubnetName = customPrivateSubnetName;
             return this;
         }
 
-        public Builder setCustomPrivateSubnetName(@Nullable WorkspaceCustomStringParameterArgs customPrivateSubnetName) {
+        public Builder customPrivateSubnetName(@Nullable WorkspaceCustomStringParameterArgs customPrivateSubnetName) {
             this.customPrivateSubnetName = Input.ofNullable(customPrivateSubnetName);
             return this;
         }
 
-        public Builder setCustomPublicSubnetName(@Nullable Input<WorkspaceCustomStringParameterArgs> customPublicSubnetName) {
+        public Builder customPublicSubnetName(@Nullable Input<WorkspaceCustomStringParameterArgs> customPublicSubnetName) {
             this.customPublicSubnetName = customPublicSubnetName;
             return this;
         }
 
-        public Builder setCustomPublicSubnetName(@Nullable WorkspaceCustomStringParameterArgs customPublicSubnetName) {
+        public Builder customPublicSubnetName(@Nullable WorkspaceCustomStringParameterArgs customPublicSubnetName) {
             this.customPublicSubnetName = Input.ofNullable(customPublicSubnetName);
             return this;
         }
 
-        public Builder setCustomVirtualNetworkId(@Nullable Input<WorkspaceCustomStringParameterArgs> customVirtualNetworkId) {
+        public Builder customVirtualNetworkId(@Nullable Input<WorkspaceCustomStringParameterArgs> customVirtualNetworkId) {
             this.customVirtualNetworkId = customVirtualNetworkId;
             return this;
         }
 
-        public Builder setCustomVirtualNetworkId(@Nullable WorkspaceCustomStringParameterArgs customVirtualNetworkId) {
+        public Builder customVirtualNetworkId(@Nullable WorkspaceCustomStringParameterArgs customVirtualNetworkId) {
             this.customVirtualNetworkId = Input.ofNullable(customVirtualNetworkId);
             return this;
         }
 
-        public Builder setEnableNoPublicIp(@Nullable Input<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp) {
+        public Builder enableNoPublicIp(@Nullable Input<WorkspaceCustomBooleanParameterArgs> enableNoPublicIp) {
             this.enableNoPublicIp = enableNoPublicIp;
             return this;
         }
 
-        public Builder setEnableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterArgs enableNoPublicIp) {
+        public Builder enableNoPublicIp(@Nullable WorkspaceCustomBooleanParameterArgs enableNoPublicIp) {
             this.enableNoPublicIp = Input.ofNullable(enableNoPublicIp);
             return this;
         }
 
-        public Builder setEncryption(@Nullable Input<WorkspaceEncryptionParameterArgs> encryption) {
+        public Builder encryption(@Nullable Input<WorkspaceEncryptionParameterArgs> encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setEncryption(@Nullable WorkspaceEncryptionParameterArgs encryption) {
+        public Builder encryption(@Nullable WorkspaceEncryptionParameterArgs encryption) {
             this.encryption = Input.ofNullable(encryption);
             return this;
         }
 
-        public Builder setLoadBalancerBackendPoolName(@Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName) {
+        public Builder loadBalancerBackendPoolName(@Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerBackendPoolName) {
             this.loadBalancerBackendPoolName = loadBalancerBackendPoolName;
             return this;
         }
 
-        public Builder setLoadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterArgs loadBalancerBackendPoolName) {
+        public Builder loadBalancerBackendPoolName(@Nullable WorkspaceCustomStringParameterArgs loadBalancerBackendPoolName) {
             this.loadBalancerBackendPoolName = Input.ofNullable(loadBalancerBackendPoolName);
             return this;
         }
 
-        public Builder setLoadBalancerId(@Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerId) {
+        public Builder loadBalancerId(@Nullable Input<WorkspaceCustomStringParameterArgs> loadBalancerId) {
             this.loadBalancerId = loadBalancerId;
             return this;
         }
 
-        public Builder setLoadBalancerId(@Nullable WorkspaceCustomStringParameterArgs loadBalancerId) {
+        public Builder loadBalancerId(@Nullable WorkspaceCustomStringParameterArgs loadBalancerId) {
             this.loadBalancerId = Input.ofNullable(loadBalancerId);
             return this;
         }
 
-        public Builder setNatGatewayName(@Nullable Input<WorkspaceCustomStringParameterArgs> natGatewayName) {
+        public Builder natGatewayName(@Nullable Input<WorkspaceCustomStringParameterArgs> natGatewayName) {
             this.natGatewayName = natGatewayName;
             return this;
         }
 
-        public Builder setNatGatewayName(@Nullable WorkspaceCustomStringParameterArgs natGatewayName) {
+        public Builder natGatewayName(@Nullable WorkspaceCustomStringParameterArgs natGatewayName) {
             this.natGatewayName = Input.ofNullable(natGatewayName);
             return this;
         }
 
-        public Builder setPrepareEncryption(@Nullable Input<WorkspaceCustomBooleanParameterArgs> prepareEncryption) {
+        public Builder prepareEncryption(@Nullable Input<WorkspaceCustomBooleanParameterArgs> prepareEncryption) {
             this.prepareEncryption = prepareEncryption;
             return this;
         }
 
-        public Builder setPrepareEncryption(@Nullable WorkspaceCustomBooleanParameterArgs prepareEncryption) {
+        public Builder prepareEncryption(@Nullable WorkspaceCustomBooleanParameterArgs prepareEncryption) {
             this.prepareEncryption = Input.ofNullable(prepareEncryption);
             return this;
         }
 
-        public Builder setPublicIpName(@Nullable Input<WorkspaceCustomStringParameterArgs> publicIpName) {
+        public Builder publicIpName(@Nullable Input<WorkspaceCustomStringParameterArgs> publicIpName) {
             this.publicIpName = publicIpName;
             return this;
         }
 
-        public Builder setPublicIpName(@Nullable WorkspaceCustomStringParameterArgs publicIpName) {
+        public Builder publicIpName(@Nullable WorkspaceCustomStringParameterArgs publicIpName) {
             this.publicIpName = Input.ofNullable(publicIpName);
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable Input<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable Input<WorkspaceCustomBooleanParameterArgs> requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = requireInfrastructureEncryption;
             return this;
         }
 
-        public Builder setRequireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterArgs requireInfrastructureEncryption) {
+        public Builder requireInfrastructureEncryption(@Nullable WorkspaceCustomBooleanParameterArgs requireInfrastructureEncryption) {
             this.requireInfrastructureEncryption = Input.ofNullable(requireInfrastructureEncryption);
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountName) {
+        public Builder storageAccountName(@Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountName) {
             this.storageAccountName = storageAccountName;
             return this;
         }
 
-        public Builder setStorageAccountName(@Nullable WorkspaceCustomStringParameterArgs storageAccountName) {
+        public Builder storageAccountName(@Nullable WorkspaceCustomStringParameterArgs storageAccountName) {
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
 
-        public Builder setStorageAccountSkuName(@Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountSkuName) {
+        public Builder storageAccountSkuName(@Nullable Input<WorkspaceCustomStringParameterArgs> storageAccountSkuName) {
             this.storageAccountSkuName = storageAccountSkuName;
             return this;
         }
 
-        public Builder setStorageAccountSkuName(@Nullable WorkspaceCustomStringParameterArgs storageAccountSkuName) {
+        public Builder storageAccountSkuName(@Nullable WorkspaceCustomStringParameterArgs storageAccountSkuName) {
             this.storageAccountSkuName = Input.ofNullable(storageAccountSkuName);
             return this;
         }
 
-        public Builder setVnetAddressPrefix(@Nullable Input<WorkspaceCustomStringParameterArgs> vnetAddressPrefix) {
+        public Builder vnetAddressPrefix(@Nullable Input<WorkspaceCustomStringParameterArgs> vnetAddressPrefix) {
             this.vnetAddressPrefix = vnetAddressPrefix;
             return this;
         }
 
-        public Builder setVnetAddressPrefix(@Nullable WorkspaceCustomStringParameterArgs vnetAddressPrefix) {
+        public Builder vnetAddressPrefix(@Nullable WorkspaceCustomStringParameterArgs vnetAddressPrefix) {
             this.vnetAddressPrefix = Input.ofNullable(vnetAddressPrefix);
             return this;
         }

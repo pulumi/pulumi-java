@@ -21,10 +21,10 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse {
      */
     private final String lockedTime;
 
-    @OutputCustomType.Constructor({"enabled","lockedTime"})
+    @OutputCustomType.Constructor
     private BucketIamConfigurationUniformBucketLevelAccessResponse(
-        Boolean enabled,
-        String lockedTime) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("lockedTime") String lockedTime) {
         this.enabled = enabled;
         this.lockedTime = lockedTime;
     }
@@ -66,12 +66,12 @@ public final class BucketIamConfigurationUniformBucketLevelAccessResponse {
     	      this.lockedTime = defaults.lockedTime;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLockedTime(String lockedTime) {
+        public Builder lockedTime(String lockedTime) {
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }

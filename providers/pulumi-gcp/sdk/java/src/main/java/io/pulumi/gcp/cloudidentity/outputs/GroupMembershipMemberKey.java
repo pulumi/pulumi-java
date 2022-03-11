@@ -32,10 +32,10 @@ public final class GroupMembershipMemberKey {
      */
     private final @Nullable String namespace;
 
-    @OutputCustomType.Constructor({"id","namespace"})
+    @OutputCustomType.Constructor
     private GroupMembershipMemberKey(
-        String id,
-        @Nullable String namespace) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace) {
         this.id = id;
         this.namespace = namespace;
     }
@@ -87,12 +87,12 @@ public final class GroupMembershipMemberKey {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }

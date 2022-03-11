@@ -20,10 +20,10 @@ public final class QueryKeyResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"key","name"})
+    @OutputCustomType.Constructor
     private QueryKeyResponse(
-        String key,
-        String name) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") String name) {
         this.key = key;
         this.name = name;
     }
@@ -65,12 +65,12 @@ public final class QueryKeyResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

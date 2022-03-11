@@ -41,14 +41,14 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"hostServiceUri","identityCertThumbprint","isIdentityCertExprired","publicKey","serviceToken","version"})
+    @OutputCustomType.Constructor
     private GetIntegrationRuntimeConnectionInfoResult(
-        String hostServiceUri,
-        String identityCertThumbprint,
-        Boolean isIdentityCertExprired,
-        String publicKey,
-        String serviceToken,
-        String version) {
+        @OutputCustomType.Parameter("hostServiceUri") String hostServiceUri,
+        @OutputCustomType.Parameter("identityCertThumbprint") String identityCertThumbprint,
+        @OutputCustomType.Parameter("isIdentityCertExprired") Boolean isIdentityCertExprired,
+        @OutputCustomType.Parameter("publicKey") String publicKey,
+        @OutputCustomType.Parameter("serviceToken") String serviceToken,
+        @OutputCustomType.Parameter("version") String version) {
         this.hostServiceUri = hostServiceUri;
         this.identityCertThumbprint = identityCertThumbprint;
         this.isIdentityCertExprired = isIdentityCertExprired;
@@ -130,32 +130,32 @@ public final class GetIntegrationRuntimeConnectionInfoResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setHostServiceUri(String hostServiceUri) {
+        public Builder hostServiceUri(String hostServiceUri) {
             this.hostServiceUri = Objects.requireNonNull(hostServiceUri);
             return this;
         }
 
-        public Builder setIdentityCertThumbprint(String identityCertThumbprint) {
+        public Builder identityCertThumbprint(String identityCertThumbprint) {
             this.identityCertThumbprint = Objects.requireNonNull(identityCertThumbprint);
             return this;
         }
 
-        public Builder setIsIdentityCertExprired(Boolean isIdentityCertExprired) {
+        public Builder isIdentityCertExprired(Boolean isIdentityCertExprired) {
             this.isIdentityCertExprired = Objects.requireNonNull(isIdentityCertExprired);
             return this;
         }
 
-        public Builder setPublicKey(String publicKey) {
+        public Builder publicKey(String publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setServiceToken(String serviceToken) {
+        public Builder serviceToken(String serviceToken) {
             this.serviceToken = Objects.requireNonNull(serviceToken);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

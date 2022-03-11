@@ -110,42 +110,42 @@ public final class TargetCostAllocationResourceArgs extends io.pulumi.resources.
     	      this.values = defaults.values;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicyType(Input<Either<String,CostAllocationPolicyType>> policyType) {
+        public Builder policyType(Input<Either<String,CostAllocationPolicyType>> policyType) {
             this.policyType = Objects.requireNonNull(policyType);
             return this;
         }
 
-        public Builder setPolicyType(Either<String,CostAllocationPolicyType> policyType) {
+        public Builder policyType(Either<String,CostAllocationPolicyType> policyType) {
             this.policyType = Input.of(Objects.requireNonNull(policyType));
             return this;
         }
 
-        public Builder setResourceType(Input<Either<String,CostAllocationResourceType>> resourceType) {
+        public Builder resourceType(Input<Either<String,CostAllocationResourceType>> resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setResourceType(Either<String,CostAllocationResourceType> resourceType) {
+        public Builder resourceType(Either<String,CostAllocationResourceType> resourceType) {
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
 
-        public Builder setValues(Input<List<CostAllocationProportionArgs>> values) {
+        public Builder values(Input<List<CostAllocationProportionArgs>> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }
 
-        public Builder setValues(List<CostAllocationProportionArgs> values) {
+        public Builder values(List<CostAllocationProportionArgs> values) {
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }

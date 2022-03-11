@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
      */
     private final String finishDigit;
 
-    @OutputCustomType.Constructor({"digits","finishDigit"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3DtmfInputResponse(
-        String digits,
-        String finishDigit) {
+        @OutputCustomType.Parameter("digits") String digits,
+        @OutputCustomType.Parameter("finishDigit") String finishDigit) {
         this.digits = digits;
         this.finishDigit = finishDigit;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
     	      this.finishDigit = defaults.finishDigit;
         }
 
-        public Builder setDigits(String digits) {
+        public Builder digits(String digits) {
             this.digits = Objects.requireNonNull(digits);
             return this;
         }
 
-        public Builder setFinishDigit(String finishDigit) {
+        public Builder finishDigit(String finishDigit) {
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
         }

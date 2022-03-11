@@ -36,14 +36,14 @@ public final class KeyVaultSigningKeyParametersResponse {
      */
     private final String vaultName;
 
-    @OutputCustomType.Constructor({"odataType","resourceGroupName","secretName","secretVersion","subscriptionId","vaultName"})
+    @OutputCustomType.Constructor
     private KeyVaultSigningKeyParametersResponse(
-        String odataType,
-        String resourceGroupName,
-        String secretName,
-        String secretVersion,
-        String subscriptionId,
-        String vaultName) {
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("resourceGroupName") String resourceGroupName,
+        @OutputCustomType.Parameter("secretName") String secretName,
+        @OutputCustomType.Parameter("secretVersion") String secretVersion,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("vaultName") String vaultName) {
         this.odataType = odataType;
         this.resourceGroupName = resourceGroupName;
         this.secretName = secretName;
@@ -121,32 +121,32 @@ public final class KeyVaultSigningKeyParametersResponse {
     	      this.vaultName = defaults.vaultName;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
 
-        public Builder setSecretVersion(String secretVersion) {
+        public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setVaultName(String vaultName) {
+        public Builder vaultName(String vaultName) {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }

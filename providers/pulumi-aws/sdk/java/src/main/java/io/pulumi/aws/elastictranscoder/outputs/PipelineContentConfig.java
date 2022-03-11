@@ -22,10 +22,10 @@ public final class PipelineContentConfig {
      */
     private final @Nullable String storageClass;
 
-    @OutputCustomType.Constructor({"bucket","storageClass"})
+    @OutputCustomType.Constructor
     private PipelineContentConfig(
-        @Nullable String bucket,
-        @Nullable String storageClass) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("storageClass") @Nullable String storageClass) {
         this.bucket = bucket;
         this.storageClass = storageClass;
     }
@@ -67,12 +67,12 @@ public final class PipelineContentConfig {
     	      this.storageClass = defaults.storageClass;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setStorageClass(@Nullable String storageClass) {
+        public Builder storageClass(@Nullable String storageClass) {
             this.storageClass = storageClass;
             return this;
         }

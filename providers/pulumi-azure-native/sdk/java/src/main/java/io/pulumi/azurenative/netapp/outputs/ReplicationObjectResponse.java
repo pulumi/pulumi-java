@@ -37,13 +37,13 @@ public final class ReplicationObjectResponse {
      */
     private final String replicationSchedule;
 
-    @OutputCustomType.Constructor({"endpointType","remoteVolumeRegion","remoteVolumeResourceId","replicationId","replicationSchedule"})
+    @OutputCustomType.Constructor
     private ReplicationObjectResponse(
-        @Nullable String endpointType,
-        @Nullable String remoteVolumeRegion,
-        String remoteVolumeResourceId,
-        @Nullable String replicationId,
-        String replicationSchedule) {
+        @OutputCustomType.Parameter("endpointType") @Nullable String endpointType,
+        @OutputCustomType.Parameter("remoteVolumeRegion") @Nullable String remoteVolumeRegion,
+        @OutputCustomType.Parameter("remoteVolumeResourceId") String remoteVolumeResourceId,
+        @OutputCustomType.Parameter("replicationId") @Nullable String replicationId,
+        @OutputCustomType.Parameter("replicationSchedule") String replicationSchedule) {
         this.endpointType = endpointType;
         this.remoteVolumeRegion = remoteVolumeRegion;
         this.remoteVolumeResourceId = remoteVolumeResourceId;
@@ -115,27 +115,27 @@ public final class ReplicationObjectResponse {
     	      this.replicationSchedule = defaults.replicationSchedule;
         }
 
-        public Builder setEndpointType(@Nullable String endpointType) {
+        public Builder endpointType(@Nullable String endpointType) {
             this.endpointType = endpointType;
             return this;
         }
 
-        public Builder setRemoteVolumeRegion(@Nullable String remoteVolumeRegion) {
+        public Builder remoteVolumeRegion(@Nullable String remoteVolumeRegion) {
             this.remoteVolumeRegion = remoteVolumeRegion;
             return this;
         }
 
-        public Builder setRemoteVolumeResourceId(String remoteVolumeResourceId) {
+        public Builder remoteVolumeResourceId(String remoteVolumeResourceId) {
             this.remoteVolumeResourceId = Objects.requireNonNull(remoteVolumeResourceId);
             return this;
         }
 
-        public Builder setReplicationId(@Nullable String replicationId) {
+        public Builder replicationId(@Nullable String replicationId) {
             this.replicationId = replicationId;
             return this;
         }
 
-        public Builder setReplicationSchedule(String replicationSchedule) {
+        public Builder replicationSchedule(String replicationSchedule) {
             this.replicationSchedule = Objects.requireNonNull(replicationSchedule);
             return this;
         }

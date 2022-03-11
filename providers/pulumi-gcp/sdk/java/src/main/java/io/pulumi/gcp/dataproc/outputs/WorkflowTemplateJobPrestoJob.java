@@ -52,15 +52,15 @@ public final class WorkflowTemplateJobPrestoJob {
      */
     private final @Nullable WorkflowTemplateJobPrestoJobQueryList queryList;
 
-    @OutputCustomType.Constructor({"clientTags","continueOnFailure","loggingConfig","outputFormat","properties","queryFileUri","queryList"})
+    @OutputCustomType.Constructor
     private WorkflowTemplateJobPrestoJob(
-        @Nullable List<String> clientTags,
-        @Nullable Boolean continueOnFailure,
-        @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
-        @Nullable String outputFormat,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
+        @OutputCustomType.Parameter("clientTags") @Nullable List<String> clientTags,
+        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryList") @Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
         this.clientTags = clientTags;
         this.continueOnFailure = continueOnFailure;
         this.loggingConfig = loggingConfig;
@@ -152,37 +152,37 @@ public final class WorkflowTemplateJobPrestoJob {
     	      this.queryList = defaults.queryList;
         }
 
-        public Builder setClientTags(@Nullable List<String> clientTags) {
+        public Builder clientTags(@Nullable List<String> clientTags) {
             this.clientTags = clientTags;
             return this;
         }
 
-        public Builder setContinueOnFailure(@Nullable Boolean continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryList(@Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
+        public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryList queryList) {
             this.queryList = queryList;
             return this;
         }

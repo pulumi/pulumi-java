@@ -39,13 +39,13 @@ public final class PolicySettingsResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"fileUploadLimitInMb","maxRequestBodySizeInKb","mode","requestBodyCheck","state"})
+    @OutputCustomType.Constructor
     private PolicySettingsResponse(
-        @Nullable Integer fileUploadLimitInMb,
-        @Nullable Integer maxRequestBodySizeInKb,
-        @Nullable String mode,
-        @Nullable Boolean requestBodyCheck,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("fileUploadLimitInMb") @Nullable Integer fileUploadLimitInMb,
+        @OutputCustomType.Parameter("maxRequestBodySizeInKb") @Nullable Integer maxRequestBodySizeInKb,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("requestBodyCheck") @Nullable Boolean requestBodyCheck,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.fileUploadLimitInMb = fileUploadLimitInMb;
         this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
         this.mode = mode;
@@ -117,27 +117,27 @@ public final class PolicySettingsResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setFileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
+        public Builder fileUploadLimitInMb(@Nullable Integer fileUploadLimitInMb) {
             this.fileUploadLimitInMb = fileUploadLimitInMb;
             return this;
         }
 
-        public Builder setMaxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
+        public Builder maxRequestBodySizeInKb(@Nullable Integer maxRequestBodySizeInKb) {
             this.maxRequestBodySizeInKb = maxRequestBodySizeInKb;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setRequestBodyCheck(@Nullable Boolean requestBodyCheck) {
+        public Builder requestBodyCheck(@Nullable Boolean requestBodyCheck) {
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

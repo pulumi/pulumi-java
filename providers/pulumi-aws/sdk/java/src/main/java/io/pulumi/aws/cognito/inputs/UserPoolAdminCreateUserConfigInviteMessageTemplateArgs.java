@@ -86,32 +86,32 @@ public final class UserPoolAdminCreateUserConfigInviteMessageTemplateArgs extend
     	      this.smsMessage = defaults.smsMessage;
         }
 
-        public Builder setEmailMessage(@Nullable Input<String> emailMessage) {
+        public Builder emailMessage(@Nullable Input<String> emailMessage) {
             this.emailMessage = emailMessage;
             return this;
         }
 
-        public Builder setEmailMessage(@Nullable String emailMessage) {
+        public Builder emailMessage(@Nullable String emailMessage) {
             this.emailMessage = Input.ofNullable(emailMessage);
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable Input<String> emailSubject) {
+        public Builder emailSubject(@Nullable Input<String> emailSubject) {
             this.emailSubject = emailSubject;
             return this;
         }
 
-        public Builder setEmailSubject(@Nullable String emailSubject) {
+        public Builder emailSubject(@Nullable String emailSubject) {
             this.emailSubject = Input.ofNullable(emailSubject);
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable Input<String> smsMessage) {
+        public Builder smsMessage(@Nullable Input<String> smsMessage) {
             this.smsMessage = smsMessage;
             return this;
         }
 
-        public Builder setSmsMessage(@Nullable String smsMessage) {
+        public Builder smsMessage(@Nullable String smsMessage) {
             this.smsMessage = Input.ofNullable(smsMessage);
             return this;
         }

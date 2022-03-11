@@ -51,7 +51,7 @@ public final class InstantSnapshotResourceStatusResponse extends io.pulumi.resou
     	      this.storageSizeBytes = defaults.storageSizeBytes;
         }
 
-        public Builder setStorageSizeBytes(String storageSizeBytes) {
+        public Builder storageSizeBytes(String storageSizeBytes) {
             this.storageSizeBytes = Objects.requireNonNull(storageSizeBytes);
             return this;
         }

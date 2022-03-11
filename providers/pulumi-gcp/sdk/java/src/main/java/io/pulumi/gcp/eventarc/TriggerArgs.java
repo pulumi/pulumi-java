@@ -171,82 +171,82 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.transports = defaults.transports;
         }
 
-        public Builder setDestination(Input<TriggerDestinationArgs> destination) {
+        public Builder destination(Input<TriggerDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(TriggerDestinationArgs destination) {
+        public Builder destination(TriggerDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(Input<String> location) {
+        public Builder location(Input<String> location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
 
-        public Builder setMatchingCriterias(Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
+        public Builder matchingCriterias(Input<List<TriggerMatchingCriteriaArgs>> matchingCriterias) {
             this.matchingCriterias = Objects.requireNonNull(matchingCriterias);
             return this;
         }
 
-        public Builder setMatchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
+        public Builder matchingCriterias(List<TriggerMatchingCriteriaArgs> matchingCriterias) {
             this.matchingCriterias = Input.of(Objects.requireNonNull(matchingCriterias));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setTransports(@Nullable Input<List<TriggerTransportArgs>> transports) {
+        public Builder transports(@Nullable Input<List<TriggerTransportArgs>> transports) {
             this.transports = transports;
             return this;
         }
 
-        public Builder setTransports(@Nullable List<TriggerTransportArgs> transports) {
+        public Builder transports(@Nullable List<TriggerTransportArgs> transports) {
             this.transports = Input.ofNullable(transports);
             return this;
         }

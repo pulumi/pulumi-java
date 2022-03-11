@@ -27,20 +27,20 @@ public final class ListenerRuleAuthenticateOidcConfig {
     private final @Nullable Boolean useExistingClientSecret;
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor({"authenticationRequestExtraParams","authorizationEndpoint","clientId","clientSecret","issuer","onUnauthenticatedRequest","scope","sessionCookieName","sessionTimeout","tokenEndpoint","useExistingClientSecret","userInfoEndpoint"})
+    @OutputCustomType.Constructor
     private ListenerRuleAuthenticateOidcConfig(
-        @Nullable Object authenticationRequestExtraParams,
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        @Nullable String onUnauthenticatedRequest,
-        @Nullable String scope,
-        @Nullable String sessionCookieName,
-        @Nullable Integer sessionTimeout,
-        String tokenEndpoint,
-        @Nullable Boolean useExistingClientSecret,
-        String userInfoEndpoint) {
+        @OutputCustomType.Parameter("authenticationRequestExtraParams") @Nullable Object authenticationRequestExtraParams,
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("onUnauthenticatedRequest") @Nullable String onUnauthenticatedRequest,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("sessionCookieName") @Nullable String sessionCookieName,
+        @OutputCustomType.Parameter("sessionTimeout") @Nullable Integer sessionTimeout,
+        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @OutputCustomType.Parameter("useExistingClientSecret") @Nullable Boolean useExistingClientSecret,
+        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authenticationRequestExtraParams = authenticationRequestExtraParams;
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;
@@ -134,62 +134,62 @@ public final class ListenerRuleAuthenticateOidcConfig {
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder setAuthenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
+        public Builder authenticationRequestExtraParams(@Nullable Object authenticationRequestExtraParams) {
             this.authenticationRequestExtraParams = authenticationRequestExtraParams;
             return this;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setOnUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
+        public Builder onUnauthenticatedRequest(@Nullable String onUnauthenticatedRequest) {
             this.onUnauthenticatedRequest = onUnauthenticatedRequest;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setSessionCookieName(@Nullable String sessionCookieName) {
+        public Builder sessionCookieName(@Nullable String sessionCookieName) {
             this.sessionCookieName = sessionCookieName;
             return this;
         }
 
-        public Builder setSessionTimeout(@Nullable Integer sessionTimeout) {
+        public Builder sessionTimeout(@Nullable Integer sessionTimeout) {
             this.sessionTimeout = sessionTimeout;
             return this;
         }
 
-        public Builder setTokenEndpoint(String tokenEndpoint) {
+        public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
-        public Builder setUseExistingClientSecret(@Nullable Boolean useExistingClientSecret) {
+        public Builder useExistingClientSecret(@Nullable Boolean useExistingClientSecret) {
             this.useExistingClientSecret = useExistingClientSecret;
             return this;
         }
 
-        public Builder setUserInfoEndpoint(String userInfoEndpoint) {
+        public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }

@@ -61,17 +61,17 @@ public final class FirehoseDeliveryStreamS3Configuration {
      */
     private final String roleArn;
 
-    @OutputCustomType.Constructor({"bucketArn","bufferInterval","bufferSize","cloudwatchLoggingOptions","compressionFormat","errorOutputPrefix","kmsKeyArn","prefix","roleArn"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamS3Configuration(
-        String bucketArn,
-        @Nullable Integer bufferInterval,
-        @Nullable Integer bufferSize,
-        @Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
-        @Nullable String compressionFormat,
-        @Nullable String errorOutputPrefix,
-        @Nullable String kmsKeyArn,
-        @Nullable String prefix,
-        String roleArn) {
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("bufferInterval") @Nullable Integer bufferInterval,
+        @OutputCustomType.Parameter("bufferSize") @Nullable Integer bufferSize,
+        @OutputCustomType.Parameter("cloudwatchLoggingOptions") @Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions,
+        @OutputCustomType.Parameter("compressionFormat") @Nullable String compressionFormat,
+        @OutputCustomType.Parameter("errorOutputPrefix") @Nullable String errorOutputPrefix,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("roleArn") String roleArn) {
         this.bucketArn = bucketArn;
         this.bufferInterval = bufferInterval;
         this.bufferSize = bufferSize;
@@ -185,47 +185,47 @@ public final class FirehoseDeliveryStreamS3Configuration {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setBufferInterval(@Nullable Integer bufferInterval) {
+        public Builder bufferInterval(@Nullable Integer bufferInterval) {
             this.bufferInterval = bufferInterval;
             return this;
         }
 
-        public Builder setBufferSize(@Nullable Integer bufferSize) {
+        public Builder bufferSize(@Nullable Integer bufferSize) {
             this.bufferSize = bufferSize;
             return this;
         }
 
-        public Builder setCloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
+        public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamS3ConfigurationCloudwatchLoggingOptions cloudwatchLoggingOptions) {
             this.cloudwatchLoggingOptions = cloudwatchLoggingOptions;
             return this;
         }
 
-        public Builder setCompressionFormat(@Nullable String compressionFormat) {
+        public Builder compressionFormat(@Nullable String compressionFormat) {
             this.compressionFormat = compressionFormat;
             return this;
         }
 
-        public Builder setErrorOutputPrefix(@Nullable String errorOutputPrefix) {
+        public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
             this.errorOutputPrefix = errorOutputPrefix;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }

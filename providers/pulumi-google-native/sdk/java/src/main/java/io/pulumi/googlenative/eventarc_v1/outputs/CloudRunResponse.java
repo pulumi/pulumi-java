@@ -25,11 +25,11 @@ public final class CloudRunResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"path","region","service"})
+    @OutputCustomType.Constructor
     private CloudRunResponse(
-        String path,
-        String region,
-        String service) {
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("service") String service) {
         this.path = path;
         this.region = region;
         this.service = service;
@@ -81,17 +81,17 @@ public final class CloudRunResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

@@ -24,10 +24,10 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor({"code","ttl"})
+    @OutputCustomType.Constructor
     private BackendServiceCdnPolicyNegativeCachingPolicy(
-        @Nullable Integer code,
-        @Nullable Integer ttl) {
+        @OutputCustomType.Parameter("code") @Nullable Integer code,
+        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }
@@ -71,12 +71,12 @@ public final class BackendServiceCdnPolicyNegativeCachingPolicy {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = code;
             return this;
         }
 
-        public Builder setTtl(@Nullable Integer ttl) {
+        public Builder ttl(@Nullable Integer ttl) {
             this.ttl = ttl;
             return this;
         }

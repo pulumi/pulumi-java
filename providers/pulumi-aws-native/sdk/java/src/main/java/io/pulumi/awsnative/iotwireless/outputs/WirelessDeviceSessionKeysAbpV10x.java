@@ -12,10 +12,10 @@ public final class WirelessDeviceSessionKeysAbpV10x {
     private final String appSKey;
     private final String nwkSKey;
 
-    @OutputCustomType.Constructor({"appSKey","nwkSKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceSessionKeysAbpV10x(
-        String appSKey,
-        String nwkSKey) {
+        @OutputCustomType.Parameter("appSKey") String appSKey,
+        @OutputCustomType.Parameter("nwkSKey") String nwkSKey) {
         this.appSKey = appSKey;
         this.nwkSKey = nwkSKey;
     }
@@ -49,12 +49,12 @@ public final class WirelessDeviceSessionKeysAbpV10x {
     	      this.nwkSKey = defaults.nwkSKey;
         }
 
-        public Builder setAppSKey(String appSKey) {
+        public Builder appSKey(String appSKey) {
             this.appSKey = Objects.requireNonNull(appSKey);
             return this;
         }
 
-        public Builder setNwkSKey(String nwkSKey) {
+        public Builder nwkSKey(String nwkSKey) {
             this.nwkSKey = Objects.requireNonNull(nwkSKey);
             return this;
         }

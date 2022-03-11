@@ -142,20 +142,20 @@ public final class GetDatabaseBlobAuditingPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"auditActionsAndGroups","id","isAzureMonitorTargetEnabled","isStorageSecondaryKeyInUse","kind","name","queueDelayMs","retentionDays","state","storageAccountSubscriptionId","storageEndpoint","type"})
+    @OutputCustomType.Constructor
     private GetDatabaseBlobAuditingPolicyResult(
-        @Nullable List<String> auditActionsAndGroups,
-        String id,
-        @Nullable Boolean isAzureMonitorTargetEnabled,
-        @Nullable Boolean isStorageSecondaryKeyInUse,
-        String kind,
-        String name,
-        @Nullable Integer queueDelayMs,
-        @Nullable Integer retentionDays,
-        String state,
-        @Nullable String storageAccountSubscriptionId,
-        @Nullable String storageEndpoint,
-        String type) {
+        @OutputCustomType.Parameter("auditActionsAndGroups") @Nullable List<String> auditActionsAndGroups,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAzureMonitorTargetEnabled") @Nullable Boolean isAzureMonitorTargetEnabled,
+        @OutputCustomType.Parameter("isStorageSecondaryKeyInUse") @Nullable Boolean isStorageSecondaryKeyInUse,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queueDelayMs") @Nullable Integer queueDelayMs,
+        @OutputCustomType.Parameter("retentionDays") @Nullable Integer retentionDays,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("storageAccountSubscriptionId") @Nullable String storageAccountSubscriptionId,
+        @OutputCustomType.Parameter("storageEndpoint") @Nullable String storageEndpoint,
+        @OutputCustomType.Parameter("type") String type) {
         this.auditActionsAndGroups = auditActionsAndGroups;
         this.id = id;
         this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
@@ -364,62 +364,62 @@ public final class GetDatabaseBlobAuditingPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
+        public Builder auditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
             this.auditActionsAndGroups = auditActionsAndGroups;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
+        public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
             this.isAzureMonitorTargetEnabled = isAzureMonitorTargetEnabled;
             return this;
         }
 
-        public Builder setIsStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
+        public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
             this.isStorageSecondaryKeyInUse = isStorageSecondaryKeyInUse;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueueDelayMs(@Nullable Integer queueDelayMs) {
+        public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
             this.queueDelayMs = queueDelayMs;
             return this;
         }
 
-        public Builder setRetentionDays(@Nullable Integer retentionDays) {
+        public Builder retentionDays(@Nullable Integer retentionDays) {
             this.retentionDays = retentionDays;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStorageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
+        public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
             this.storageAccountSubscriptionId = storageAccountSubscriptionId;
             return this;
         }
 
-        public Builder setStorageEndpoint(@Nullable String storageEndpoint) {
+        public Builder storageEndpoint(@Nullable String storageEndpoint) {
             this.storageEndpoint = storageEndpoint;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

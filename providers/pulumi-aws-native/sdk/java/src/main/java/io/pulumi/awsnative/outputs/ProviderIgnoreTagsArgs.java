@@ -23,10 +23,10 @@ public final class ProviderIgnoreTagsArgs {
      */
     private final @Nullable Input<List<String>> keys;
 
-    @OutputCustomType.Constructor({"keyPrefixes","keys"})
+    @OutputCustomType.Constructor
     private ProviderIgnoreTagsArgs(
-        @Nullable Input<List<String>> keyPrefixes,
-        @Nullable Input<List<String>> keys) {
+        @OutputCustomType.Parameter("keyPrefixes") @Nullable Input<List<String>> keyPrefixes,
+        @OutputCustomType.Parameter("keys") @Nullable Input<List<String>> keys) {
         this.keyPrefixes = keyPrefixes;
         this.keys = keys;
     }
@@ -68,12 +68,12 @@ public final class ProviderIgnoreTagsArgs {
     	      this.keys = defaults.keys;
         }
 
-        public Builder setKeyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
+        public Builder keyPrefixes(@Nullable Input<List<String>> keyPrefixes) {
             this.keyPrefixes = keyPrefixes;
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<List<String>> keys) {
+        public Builder keys(@Nullable Input<List<String>> keys) {
             this.keys = keys;
             return this;
         }

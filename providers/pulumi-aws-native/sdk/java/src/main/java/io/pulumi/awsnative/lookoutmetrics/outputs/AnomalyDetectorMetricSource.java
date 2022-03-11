@@ -21,13 +21,13 @@ public final class AnomalyDetectorMetricSource {
     private final @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig;
     private final @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig;
 
-    @OutputCustomType.Constructor({"appFlowConfig","cloudwatchConfig","rDSSourceConfig","redshiftSourceConfig","s3SourceConfig"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorMetricSource(
-        @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
-        @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
-        @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
-        @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
-        @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
+        @OutputCustomType.Parameter("appFlowConfig") @Nullable AnomalyDetectorAppFlowConfig appFlowConfig,
+        @OutputCustomType.Parameter("cloudwatchConfig") @Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig,
+        @OutputCustomType.Parameter("rDSSourceConfig") @Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig,
+        @OutputCustomType.Parameter("redshiftSourceConfig") @Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig,
+        @OutputCustomType.Parameter("s3SourceConfig") @Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
         this.appFlowConfig = appFlowConfig;
         this.cloudwatchConfig = cloudwatchConfig;
         this.rDSSourceConfig = rDSSourceConfig;
@@ -79,27 +79,27 @@ public final class AnomalyDetectorMetricSource {
     	      this.s3SourceConfig = defaults.s3SourceConfig;
         }
 
-        public Builder setAppFlowConfig(@Nullable AnomalyDetectorAppFlowConfig appFlowConfig) {
+        public Builder appFlowConfig(@Nullable AnomalyDetectorAppFlowConfig appFlowConfig) {
             this.appFlowConfig = appFlowConfig;
             return this;
         }
 
-        public Builder setCloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig) {
+        public Builder cloudwatchConfig(@Nullable AnomalyDetectorCloudwatchConfig cloudwatchConfig) {
             this.cloudwatchConfig = cloudwatchConfig;
             return this;
         }
 
-        public Builder setRDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig) {
+        public Builder rDSSourceConfig(@Nullable AnomalyDetectorRDSSourceConfig rDSSourceConfig) {
             this.rDSSourceConfig = rDSSourceConfig;
             return this;
         }
 
-        public Builder setRedshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig) {
+        public Builder redshiftSourceConfig(@Nullable AnomalyDetectorRedshiftSourceConfig redshiftSourceConfig) {
             this.redshiftSourceConfig = redshiftSourceConfig;
             return this;
         }
 
-        public Builder setS3SourceConfig(@Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
+        public Builder s3SourceConfig(@Nullable AnomalyDetectorS3SourceConfig s3SourceConfig) {
             this.s3SourceConfig = s3SourceConfig;
             return this;
         }

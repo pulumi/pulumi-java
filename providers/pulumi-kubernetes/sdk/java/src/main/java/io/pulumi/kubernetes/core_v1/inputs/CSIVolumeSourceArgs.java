@@ -125,52 +125,52 @@ public final class CSIVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
     	      this.volumeAttributes = defaults.volumeAttributes;
         }
 
-        public Builder setDriver(Input<String> driver) {
+        public Builder driver(Input<String> driver) {
             this.driver = Objects.requireNonNull(driver);
             return this;
         }
 
-        public Builder setDriver(String driver) {
+        public Builder driver(String driver) {
             this.driver = Input.of(Objects.requireNonNull(driver));
             return this;
         }
 
-        public Builder setFsType(@Nullable Input<String> fsType) {
+        public Builder fsType(@Nullable Input<String> fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = Input.ofNullable(fsType);
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable Input<LocalObjectReferenceArgs> nodePublishSecretRef) {
             this.nodePublishSecretRef = nodePublishSecretRef;
             return this;
         }
 
-        public Builder setNodePublishSecretRef(@Nullable LocalObjectReferenceArgs nodePublishSecretRef) {
+        public Builder nodePublishSecretRef(@Nullable LocalObjectReferenceArgs nodePublishSecretRef) {
             this.nodePublishSecretRef = Input.ofNullable(nodePublishSecretRef);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Input<Map<String,String>> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Input<Map<String,String>> volumeAttributes) {
             this.volumeAttributes = volumeAttributes;
             return this;
         }
 
-        public Builder setVolumeAttributes(@Nullable Map<String,String> volumeAttributes) {
+        public Builder volumeAttributes(@Nullable Map<String,String> volumeAttributes) {
             this.volumeAttributes = Input.ofNullable(volumeAttributes);
             return this;
         }

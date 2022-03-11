@@ -27,11 +27,11 @@ public final class HeaderActionResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"headerActionType","headerName","value"})
+    @OutputCustomType.Constructor
     private HeaderActionResponse(
-        String headerActionType,
-        String headerName,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("headerActionType") String headerActionType,
+        @OutputCustomType.Parameter("headerName") String headerName,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.headerActionType = headerActionType;
         this.headerName = headerName;
         this.value = value;
@@ -83,17 +83,17 @@ public final class HeaderActionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setHeaderActionType(String headerActionType) {
+        public Builder headerActionType(String headerActionType) {
             this.headerActionType = Objects.requireNonNull(headerActionType);
             return this;
         }
 
-        public Builder setHeaderName(String headerName) {
+        public Builder headerName(String headerName) {
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

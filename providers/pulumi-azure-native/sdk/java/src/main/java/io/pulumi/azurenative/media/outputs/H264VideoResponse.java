@@ -56,16 +56,16 @@ public final class H264VideoResponse {
      */
     private final @Nullable String syncMode;
 
-    @OutputCustomType.Constructor({"complexity","keyFrameInterval","label","layers","odataType","sceneChangeDetection","stretchMode","syncMode"})
+    @OutputCustomType.Constructor
     private H264VideoResponse(
-        @Nullable String complexity,
-        @Nullable String keyFrameInterval,
-        @Nullable String label,
-        @Nullable List<H264LayerResponse> layers,
-        String odataType,
-        @Nullable Boolean sceneChangeDetection,
-        @Nullable String stretchMode,
-        @Nullable String syncMode) {
+        @OutputCustomType.Parameter("complexity") @Nullable String complexity,
+        @OutputCustomType.Parameter("keyFrameInterval") @Nullable String keyFrameInterval,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("layers") @Nullable List<H264LayerResponse> layers,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("sceneChangeDetection") @Nullable Boolean sceneChangeDetection,
+        @OutputCustomType.Parameter("stretchMode") @Nullable String stretchMode,
+        @OutputCustomType.Parameter("syncMode") @Nullable String syncMode) {
         this.complexity = complexity;
         this.keyFrameInterval = keyFrameInterval;
         this.label = label;
@@ -168,42 +168,42 @@ public final class H264VideoResponse {
     	      this.syncMode = defaults.syncMode;
         }
 
-        public Builder setComplexity(@Nullable String complexity) {
+        public Builder complexity(@Nullable String complexity) {
             this.complexity = complexity;
             return this;
         }
 
-        public Builder setKeyFrameInterval(@Nullable String keyFrameInterval) {
+        public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             this.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLayers(@Nullable List<H264LayerResponse> layers) {
+        public Builder layers(@Nullable List<H264LayerResponse> layers) {
             this.layers = layers;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setSceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
+        public Builder sceneChangeDetection(@Nullable Boolean sceneChangeDetection) {
             this.sceneChangeDetection = sceneChangeDetection;
             return this;
         }
 
-        public Builder setStretchMode(@Nullable String stretchMode) {
+        public Builder stretchMode(@Nullable String stretchMode) {
             this.stretchMode = stretchMode;
             return this;
         }
 
-        public Builder setSyncMode(@Nullable String syncMode) {
+        public Builder syncMode(@Nullable String syncMode) {
             this.syncMode = syncMode;
             return this;
         }

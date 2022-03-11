@@ -24,12 +24,12 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
      */
     private final Double weight;
 
-    @OutputCustomType.Constructor({"kind","rrdatas","signatureRrdatas","weight"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse(
-        String kind,
-        List<String> rrdatas,
-        List<String> signatureRrdatas,
-        Double weight) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("rrdatas") List<String> rrdatas,
+        @OutputCustomType.Parameter("signatureRrdatas") List<String> signatureRrdatas,
+        @OutputCustomType.Parameter("weight") Double weight) {
         this.kind = kind;
         this.rrdatas = rrdatas;
         this.signatureRrdatas = signatureRrdatas;
@@ -83,22 +83,22 @@ public final class RRSetRoutingPolicyWrrPolicyWrrPolicyItemResponse {
     	      this.weight = defaults.weight;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setRrdatas(List<String> rrdatas) {
+        public Builder rrdatas(List<String> rrdatas) {
             this.rrdatas = Objects.requireNonNull(rrdatas);
             return this;
         }
 
-        public Builder setSignatureRrdatas(List<String> signatureRrdatas) {
+        public Builder signatureRrdatas(List<String> signatureRrdatas) {
             this.signatureRrdatas = Objects.requireNonNull(signatureRrdatas);
             return this;
         }
 
-        public Builder setWeight(Double weight) {
+        public Builder weight(Double weight) {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }

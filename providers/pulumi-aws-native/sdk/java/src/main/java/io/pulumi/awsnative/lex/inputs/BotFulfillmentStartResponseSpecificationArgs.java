@@ -89,32 +89,32 @@ public final class BotFulfillmentStartResponseSpecificationArgs extends io.pulum
     	      this.messageGroups = defaults.messageGroups;
         }
 
-        public Builder setAllowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Input<Boolean> allowInterrupt) {
             this.allowInterrupt = allowInterrupt;
             return this;
         }
 
-        public Builder setAllowInterrupt(@Nullable Boolean allowInterrupt) {
+        public Builder allowInterrupt(@Nullable Boolean allowInterrupt) {
             this.allowInterrupt = Input.ofNullable(allowInterrupt);
             return this;
         }
 
-        public Builder setDelayInSeconds(Input<Integer> delayInSeconds) {
+        public Builder delayInSeconds(Input<Integer> delayInSeconds) {
             this.delayInSeconds = Objects.requireNonNull(delayInSeconds);
             return this;
         }
 
-        public Builder setDelayInSeconds(Integer delayInSeconds) {
+        public Builder delayInSeconds(Integer delayInSeconds) {
             this.delayInSeconds = Input.of(Objects.requireNonNull(delayInSeconds));
             return this;
         }
 
-        public Builder setMessageGroups(Input<List<BotMessageGroupArgs>> messageGroups) {
+        public Builder messageGroups(Input<List<BotMessageGroupArgs>> messageGroups) {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
 
-        public Builder setMessageGroups(List<BotMessageGroupArgs> messageGroups) {
+        public Builder messageGroups(List<BotMessageGroupArgs> messageGroups) {
             this.messageGroups = Input.of(Objects.requireNonNull(messageGroups));
             return this;
         }

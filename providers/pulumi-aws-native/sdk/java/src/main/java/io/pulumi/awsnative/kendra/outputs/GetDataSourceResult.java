@@ -28,17 +28,17 @@ public final class GetDataSourceResult {
      */
     private final @Nullable List<DataSourceTag> tags;
 
-    @OutputCustomType.Constructor({"arn","dataSourceConfiguration","description","id","indexId","name","roleArn","schedule","tags"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        @Nullable String arn,
-        @Nullable DataSourceConfiguration dataSourceConfiguration,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String indexId,
-        @Nullable String name,
-        @Nullable String roleArn,
-        @Nullable String schedule,
-        @Nullable List<DataSourceTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("dataSourceConfiguration") @Nullable DataSourceConfiguration dataSourceConfiguration,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("indexId") @Nullable String indexId,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("schedule") @Nullable String schedule,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags) {
         this.arn = arn;
         this.dataSourceConfiguration = dataSourceConfiguration;
         this.description = description;
@@ -118,47 +118,47 @@ public final class GetDataSourceResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDataSourceConfiguration(@Nullable DataSourceConfiguration dataSourceConfiguration) {
+        public Builder dataSourceConfiguration(@Nullable DataSourceConfiguration dataSourceConfiguration) {
             this.dataSourceConfiguration = dataSourceConfiguration;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIndexId(@Nullable String indexId) {
+        public Builder indexId(@Nullable String indexId) {
             this.indexId = indexId;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSourceTag> tags) {
+        public Builder tags(@Nullable List<DataSourceTag> tags) {
             this.tags = tags;
             return this;
         }

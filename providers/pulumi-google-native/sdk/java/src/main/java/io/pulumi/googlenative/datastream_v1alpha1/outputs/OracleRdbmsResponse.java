@@ -16,8 +16,8 @@ public final class OracleRdbmsResponse {
      */
     private final List<OracleSchemaResponse> oracleSchemas;
 
-    @OutputCustomType.Constructor({"oracleSchemas"})
-    private OracleRdbmsResponse(List<OracleSchemaResponse> oracleSchemas) {
+    @OutputCustomType.Constructor
+    private OracleRdbmsResponse(@OutputCustomType.Parameter("oracleSchemas") List<OracleSchemaResponse> oracleSchemas) {
         this.oracleSchemas = oracleSchemas;
     }
 
@@ -49,7 +49,7 @@ public final class OracleRdbmsResponse {
     	      this.oracleSchemas = defaults.oracleSchemas;
         }
 
-        public Builder setOracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
+        public Builder oracleSchemas(List<OracleSchemaResponse> oracleSchemas) {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }

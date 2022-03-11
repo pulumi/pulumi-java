@@ -15,8 +15,8 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
      */
     private final String action;
 
-    @OutputCustomType.Constructor({"action"})
-    private WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition(String action) {
+    @OutputCustomType.Constructor
+    private WebAclLoggingConfigurationLoggingFilterFilterConditionActionCondition(@OutputCustomType.Parameter("action") String action) {
         this.action = action;
     }
 
@@ -48,7 +48,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }

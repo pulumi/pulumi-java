@@ -38,13 +38,13 @@ public final class CostAllocationRulePropertiesResponse {
      */
     private final String updatedDate;
 
-    @OutputCustomType.Constructor({"createdDate","description","details","status","updatedDate"})
+    @OutputCustomType.Constructor
     private CostAllocationRulePropertiesResponse(
-        String createdDate,
-        @Nullable String description,
-        CostAllocationRuleDetailsResponse details,
-        String status,
-        String updatedDate) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("details") CostAllocationRuleDetailsResponse details,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("updatedDate") String updatedDate) {
         this.createdDate = createdDate;
         this.description = description;
         this.details = details;
@@ -116,27 +116,27 @@ public final class CostAllocationRulePropertiesResponse {
     	      this.updatedDate = defaults.updatedDate;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDetails(CostAllocationRuleDetailsResponse details) {
+        public Builder details(CostAllocationRuleDetailsResponse details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpdatedDate(String updatedDate) {
+        public Builder updatedDate(String updatedDate) {
             this.updatedDate = Objects.requireNonNull(updatedDate);
             return this;
         }

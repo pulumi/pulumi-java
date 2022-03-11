@@ -27,17 +27,17 @@ public final class DataSourceSalesforceConfiguration {
     private final @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration;
     private final @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations;
 
-    @OutputCustomType.Constructor({"chatterFeedConfiguration","crawlAttachments","excludeAttachmentFilePatterns","includeAttachmentFilePatterns","knowledgeArticleConfiguration","secretArn","serverUrl","standardObjectAttachmentConfiguration","standardObjectConfigurations"})
+    @OutputCustomType.Constructor
     private DataSourceSalesforceConfiguration(
-        @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
-        @Nullable Boolean crawlAttachments,
-        @Nullable List<String> excludeAttachmentFilePatterns,
-        @Nullable List<String> includeAttachmentFilePatterns,
-        @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        String serverUrl,
-        @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
-        @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
+        @OutputCustomType.Parameter("chatterFeedConfiguration") @Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration,
+        @OutputCustomType.Parameter("crawlAttachments") @Nullable Boolean crawlAttachments,
+        @OutputCustomType.Parameter("excludeAttachmentFilePatterns") @Nullable List<String> excludeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("includeAttachmentFilePatterns") @Nullable List<String> includeAttachmentFilePatterns,
+        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("serverUrl") String serverUrl,
+        @OutputCustomType.Parameter("standardObjectAttachmentConfiguration") @Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration,
+        @OutputCustomType.Parameter("standardObjectConfigurations") @Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
         this.chatterFeedConfiguration = chatterFeedConfiguration;
         this.crawlAttachments = crawlAttachments;
         this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
@@ -113,47 +113,47 @@ public final class DataSourceSalesforceConfiguration {
     	      this.standardObjectConfigurations = defaults.standardObjectConfigurations;
         }
 
-        public Builder setChatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration) {
+        public Builder chatterFeedConfiguration(@Nullable DataSourceSalesforceChatterFeedConfiguration chatterFeedConfiguration) {
             this.chatterFeedConfiguration = chatterFeedConfiguration;
             return this;
         }
 
-        public Builder setCrawlAttachments(@Nullable Boolean crawlAttachments) {
+        public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
 
-        public Builder setExcludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
+        public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
             this.excludeAttachmentFilePatterns = excludeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setIncludeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
+        public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
             this.includeAttachmentFilePatterns = includeAttachmentFilePatterns;
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable DataSourceSalesforceKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setServerUrl(String serverUrl) {
+        public Builder serverUrl(String serverUrl) {
             this.serverUrl = Objects.requireNonNull(serverUrl);
             return this;
         }
 
-        public Builder setStandardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
+        public Builder standardObjectAttachmentConfiguration(@Nullable DataSourceSalesforceStandardObjectAttachmentConfiguration standardObjectAttachmentConfiguration) {
             this.standardObjectAttachmentConfiguration = standardObjectAttachmentConfiguration;
             return this;
         }
 
-        public Builder setStandardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
+        public Builder standardObjectConfigurations(@Nullable List<DataSourceSalesforceStandardObjectConfiguration> standardObjectConfigurations) {
             this.standardObjectConfigurations = standardObjectConfigurations;
             return this;
         }

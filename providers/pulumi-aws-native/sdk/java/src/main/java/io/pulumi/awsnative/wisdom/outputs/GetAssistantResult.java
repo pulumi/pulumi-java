@@ -14,10 +14,10 @@ public final class GetAssistantResult {
     private final @Nullable String assistantArn;
     private final @Nullable String assistantId;
 
-    @OutputCustomType.Constructor({"assistantArn","assistantId"})
+    @OutputCustomType.Constructor
     private GetAssistantResult(
-        @Nullable String assistantArn,
-        @Nullable String assistantId) {
+        @OutputCustomType.Parameter("assistantArn") @Nullable String assistantArn,
+        @OutputCustomType.Parameter("assistantId") @Nullable String assistantId) {
         this.assistantArn = assistantArn;
         this.assistantId = assistantId;
     }
@@ -51,12 +51,12 @@ public final class GetAssistantResult {
     	      this.assistantId = defaults.assistantId;
         }
 
-        public Builder setAssistantArn(@Nullable String assistantArn) {
+        public Builder assistantArn(@Nullable String assistantArn) {
             this.assistantArn = assistantArn;
             return this;
         }
 
-        public Builder setAssistantId(@Nullable String assistantId) {
+        public Builder assistantId(@Nullable String assistantId) {
             this.assistantId = assistantId;
             return this;
         }

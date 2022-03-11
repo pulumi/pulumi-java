@@ -16,8 +16,8 @@ public final class ResourcePolicyWeeklyCycleResponse {
      */
     private final List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks;
 
-    @OutputCustomType.Constructor({"dayOfWeeks"})
-    private ResourcePolicyWeeklyCycleResponse(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyWeeklyCycleResponse(@OutputCustomType.Parameter("dayOfWeeks") List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
     }
 
@@ -49,7 +49,7 @@ public final class ResourcePolicyWeeklyCycleResponse {
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder setDayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
+        public Builder dayOfWeeks(List<ResourcePolicyWeeklyCycleDayOfWeekResponse> dayOfWeeks) {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }

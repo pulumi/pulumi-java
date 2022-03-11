@@ -108,24 +108,24 @@ public final class DataBoxJobDetailsResponse {
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
 
-    @OutputCustomType.Constructor({"chainOfCustodySasKey","contactDetails","copyLogDetails","copyProgress","dataExportDetails","dataImportDetails","deliveryPackage","devicePassword","expectedDataSizeInTeraBytes","jobDetailsType","jobStages","keyEncryptionKey","preferences","returnPackage","reverseShipmentLabelSasKey","shippingAddress"})
+    @OutputCustomType.Constructor
     private DataBoxJobDetailsResponse(
-        String chainOfCustodySasKey,
-        ContactDetailsResponse contactDetails,
-        List<Object> copyLogDetails,
-        List<CopyProgressResponse> copyProgress,
-        @Nullable List<DataExportDetailsResponse> dataExportDetails,
-        @Nullable List<DataImportDetailsResponse> dataImportDetails,
-        PackageShippingDetailsResponse deliveryPackage,
-        @Nullable String devicePassword,
-        @Nullable Integer expectedDataSizeInTeraBytes,
-        String jobDetailsType,
-        List<JobStagesResponse> jobStages,
-        @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
-        @Nullable PreferencesResponse preferences,
-        PackageShippingDetailsResponse returnPackage,
-        String reverseShipmentLabelSasKey,
-        @Nullable ShippingAddressResponse shippingAddress) {
+        @OutputCustomType.Parameter("chainOfCustodySasKey") String chainOfCustodySasKey,
+        @OutputCustomType.Parameter("contactDetails") ContactDetailsResponse contactDetails,
+        @OutputCustomType.Parameter("copyLogDetails") List<Object> copyLogDetails,
+        @OutputCustomType.Parameter("copyProgress") List<CopyProgressResponse> copyProgress,
+        @OutputCustomType.Parameter("dataExportDetails") @Nullable List<DataExportDetailsResponse> dataExportDetails,
+        @OutputCustomType.Parameter("dataImportDetails") @Nullable List<DataImportDetailsResponse> dataImportDetails,
+        @OutputCustomType.Parameter("deliveryPackage") PackageShippingDetailsResponse deliveryPackage,
+        @OutputCustomType.Parameter("devicePassword") @Nullable String devicePassword,
+        @OutputCustomType.Parameter("expectedDataSizeInTeraBytes") @Nullable Integer expectedDataSizeInTeraBytes,
+        @OutputCustomType.Parameter("jobDetailsType") String jobDetailsType,
+        @OutputCustomType.Parameter("jobStages") List<JobStagesResponse> jobStages,
+        @OutputCustomType.Parameter("keyEncryptionKey") @Nullable KeyEncryptionKeyResponse keyEncryptionKey,
+        @OutputCustomType.Parameter("preferences") @Nullable PreferencesResponse preferences,
+        @OutputCustomType.Parameter("returnPackage") PackageShippingDetailsResponse returnPackage,
+        @OutputCustomType.Parameter("reverseShipmentLabelSasKey") String reverseShipmentLabelSasKey,
+        @OutputCustomType.Parameter("shippingAddress") @Nullable ShippingAddressResponse shippingAddress) {
         this.chainOfCustodySasKey = chainOfCustodySasKey;
         this.contactDetails = contactDetails;
         this.copyLogDetails = copyLogDetails;
@@ -308,82 +308,82 @@ public final class DataBoxJobDetailsResponse {
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder setChainOfCustodySasKey(String chainOfCustodySasKey) {
+        public Builder chainOfCustodySasKey(String chainOfCustodySasKey) {
             this.chainOfCustodySasKey = Objects.requireNonNull(chainOfCustodySasKey);
             return this;
         }
 
-        public Builder setContactDetails(ContactDetailsResponse contactDetails) {
+        public Builder contactDetails(ContactDetailsResponse contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
-        public Builder setCopyLogDetails(List<Object> copyLogDetails) {
+        public Builder copyLogDetails(List<Object> copyLogDetails) {
             this.copyLogDetails = Objects.requireNonNull(copyLogDetails);
             return this;
         }
 
-        public Builder setCopyProgress(List<CopyProgressResponse> copyProgress) {
+        public Builder copyProgress(List<CopyProgressResponse> copyProgress) {
             this.copyProgress = Objects.requireNonNull(copyProgress);
             return this;
         }
 
-        public Builder setDataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
+        public Builder dataExportDetails(@Nullable List<DataExportDetailsResponse> dataExportDetails) {
             this.dataExportDetails = dataExportDetails;
             return this;
         }
 
-        public Builder setDataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
+        public Builder dataImportDetails(@Nullable List<DataImportDetailsResponse> dataImportDetails) {
             this.dataImportDetails = dataImportDetails;
             return this;
         }
 
-        public Builder setDeliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
+        public Builder deliveryPackage(PackageShippingDetailsResponse deliveryPackage) {
             this.deliveryPackage = Objects.requireNonNull(deliveryPackage);
             return this;
         }
 
-        public Builder setDevicePassword(@Nullable String devicePassword) {
+        public Builder devicePassword(@Nullable String devicePassword) {
             this.devicePassword = devicePassword;
             return this;
         }
 
-        public Builder setExpectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
+        public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
-        public Builder setJobDetailsType(String jobDetailsType) {
+        public Builder jobDetailsType(String jobDetailsType) {
             this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
             return this;
         }
 
-        public Builder setJobStages(List<JobStagesResponse> jobStages) {
+        public Builder jobStages(List<JobStagesResponse> jobStages) {
             this.jobStages = Objects.requireNonNull(jobStages);
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyResponse keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
-        public Builder setPreferences(@Nullable PreferencesResponse preferences) {
+        public Builder preferences(@Nullable PreferencesResponse preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setReturnPackage(PackageShippingDetailsResponse returnPackage) {
+        public Builder returnPackage(PackageShippingDetailsResponse returnPackage) {
             this.returnPackage = Objects.requireNonNull(returnPackage);
             return this;
         }
 
-        public Builder setReverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
+        public Builder reverseShipmentLabelSasKey(String reverseShipmentLabelSasKey) {
             this.reverseShipmentLabelSasKey = Objects.requireNonNull(reverseShipmentLabelSasKey);
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
+        public Builder shippingAddress(@Nullable ShippingAddressResponse shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }

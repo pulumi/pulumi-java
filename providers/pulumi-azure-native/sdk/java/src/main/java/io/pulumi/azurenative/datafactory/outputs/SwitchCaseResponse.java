@@ -62,10 +62,10 @@ public final class SwitchCaseResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"activities","value"})
+    @OutputCustomType.Constructor
     private SwitchCaseResponse(
-        @Nullable List<Object> activities,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("activities") @Nullable List<Object> activities,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.activities = activities;
         this.value = value;
     }
@@ -107,12 +107,12 @@ public final class SwitchCaseResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setActivities(@Nullable List<Object> activities) {
+        public Builder activities(@Nullable List<Object> activities) {
             this.activities = activities;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

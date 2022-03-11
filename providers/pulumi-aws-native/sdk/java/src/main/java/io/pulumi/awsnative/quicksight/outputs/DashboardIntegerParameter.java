@@ -22,10 +22,10 @@ public final class DashboardIntegerParameter {
      */
     private final List<Double> values;
 
-    @OutputCustomType.Constructor({"name","values"})
+    @OutputCustomType.Constructor
     private DashboardIntegerParameter(
-        String name,
-        List<Double> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("values") List<Double> values) {
         this.name = name;
         this.values = values;
     }
@@ -67,12 +67,12 @@ public final class DashboardIntegerParameter {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValues(List<Double> values) {
+        public Builder values(List<Double> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

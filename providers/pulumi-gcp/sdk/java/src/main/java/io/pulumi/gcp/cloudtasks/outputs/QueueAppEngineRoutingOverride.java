@@ -36,12 +36,12 @@ public final class QueueAppEngineRoutingOverride {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"host","instance","service","version"})
+    @OutputCustomType.Constructor
     private QueueAppEngineRoutingOverride(
-        @Nullable String host,
-        @Nullable String instance,
-        @Nullable String service,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;
@@ -107,22 +107,22 @@ public final class QueueAppEngineRoutingOverride {
     	      this.version = defaults.version;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

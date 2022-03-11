@@ -33,11 +33,11 @@ public final class TriggerBuildArtifactsObjects {
      */
     private final @Nullable List<TriggerBuildArtifactsObjectsTiming> timings;
 
-    @OutputCustomType.Constructor({"location","paths","timings"})
+    @OutputCustomType.Constructor
     private TriggerBuildArtifactsObjects(
-        @Nullable String location,
-        @Nullable List<String> paths,
-        @Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("timings") @Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
         this.location = location;
         this.paths = paths;
         this.timings = timings;
@@ -93,17 +93,17 @@ public final class TriggerBuildArtifactsObjects {
     	      this.timings = defaults.timings;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setTimings(@Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
+        public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
             this.timings = timings;
             return this;
         }

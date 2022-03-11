@@ -37,13 +37,13 @@ public final class WindowsBasedSliResponse {
      */
     private final String windowPeriod;
 
-    @OutputCustomType.Constructor({"goodBadMetricFilter","goodTotalRatioThreshold","metricMeanInRange","metricSumInRange","windowPeriod"})
+    @OutputCustomType.Constructor
     private WindowsBasedSliResponse(
-        String goodBadMetricFilter,
-        PerformanceThresholdResponse goodTotalRatioThreshold,
-        MetricRangeResponse metricMeanInRange,
-        MetricRangeResponse metricSumInRange,
-        String windowPeriod) {
+        @OutputCustomType.Parameter("goodBadMetricFilter") String goodBadMetricFilter,
+        @OutputCustomType.Parameter("goodTotalRatioThreshold") PerformanceThresholdResponse goodTotalRatioThreshold,
+        @OutputCustomType.Parameter("metricMeanInRange") MetricRangeResponse metricMeanInRange,
+        @OutputCustomType.Parameter("metricSumInRange") MetricRangeResponse metricSumInRange,
+        @OutputCustomType.Parameter("windowPeriod") String windowPeriod) {
         this.goodBadMetricFilter = goodBadMetricFilter;
         this.goodTotalRatioThreshold = goodTotalRatioThreshold;
         this.metricMeanInRange = metricMeanInRange;
@@ -115,27 +115,27 @@ public final class WindowsBasedSliResponse {
     	      this.windowPeriod = defaults.windowPeriod;
         }
 
-        public Builder setGoodBadMetricFilter(String goodBadMetricFilter) {
+        public Builder goodBadMetricFilter(String goodBadMetricFilter) {
             this.goodBadMetricFilter = Objects.requireNonNull(goodBadMetricFilter);
             return this;
         }
 
-        public Builder setGoodTotalRatioThreshold(PerformanceThresholdResponse goodTotalRatioThreshold) {
+        public Builder goodTotalRatioThreshold(PerformanceThresholdResponse goodTotalRatioThreshold) {
             this.goodTotalRatioThreshold = Objects.requireNonNull(goodTotalRatioThreshold);
             return this;
         }
 
-        public Builder setMetricMeanInRange(MetricRangeResponse metricMeanInRange) {
+        public Builder metricMeanInRange(MetricRangeResponse metricMeanInRange) {
             this.metricMeanInRange = Objects.requireNonNull(metricMeanInRange);
             return this;
         }
 
-        public Builder setMetricSumInRange(MetricRangeResponse metricSumInRange) {
+        public Builder metricSumInRange(MetricRangeResponse metricSumInRange) {
             this.metricSumInRange = Objects.requireNonNull(metricSumInRange);
             return this;
         }
 
-        public Builder setWindowPeriod(String windowPeriod) {
+        public Builder windowPeriod(String windowPeriod) {
             this.windowPeriod = Objects.requireNonNull(windowPeriod);
             return this;
         }

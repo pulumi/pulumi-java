@@ -68,18 +68,18 @@ public final class GetServiceResult {
      */
     private final Map<String,String> userLabels;
 
-    @OutputCustomType.Constructor({"appEngine","cloudEndpoints","clusterIstio","custom","displayName","istioCanonicalService","meshIstio","name","telemetry","userLabels"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        AppEngineResponse appEngine,
-        CloudEndpointsResponse cloudEndpoints,
-        ClusterIstioResponse clusterIstio,
-        CustomResponse custom,
-        String displayName,
-        IstioCanonicalServiceResponse istioCanonicalService,
-        MeshIstioResponse meshIstio,
-        String name,
-        TelemetryResponse telemetry,
-        Map<String,String> userLabels) {
+        @OutputCustomType.Parameter("appEngine") AppEngineResponse appEngine,
+        @OutputCustomType.Parameter("cloudEndpoints") CloudEndpointsResponse cloudEndpoints,
+        @OutputCustomType.Parameter("clusterIstio") ClusterIstioResponse clusterIstio,
+        @OutputCustomType.Parameter("custom") CustomResponse custom,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("istioCanonicalService") IstioCanonicalServiceResponse istioCanonicalService,
+        @OutputCustomType.Parameter("meshIstio") MeshIstioResponse meshIstio,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("telemetry") TelemetryResponse telemetry,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels) {
         this.appEngine = appEngine;
         this.cloudEndpoints = cloudEndpoints;
         this.clusterIstio = clusterIstio;
@@ -201,52 +201,52 @@ public final class GetServiceResult {
     	      this.userLabels = defaults.userLabels;
         }
 
-        public Builder setAppEngine(AppEngineResponse appEngine) {
+        public Builder appEngine(AppEngineResponse appEngine) {
             this.appEngine = Objects.requireNonNull(appEngine);
             return this;
         }
 
-        public Builder setCloudEndpoints(CloudEndpointsResponse cloudEndpoints) {
+        public Builder cloudEndpoints(CloudEndpointsResponse cloudEndpoints) {
             this.cloudEndpoints = Objects.requireNonNull(cloudEndpoints);
             return this;
         }
 
-        public Builder setClusterIstio(ClusterIstioResponse clusterIstio) {
+        public Builder clusterIstio(ClusterIstioResponse clusterIstio) {
             this.clusterIstio = Objects.requireNonNull(clusterIstio);
             return this;
         }
 
-        public Builder setCustom(CustomResponse custom) {
+        public Builder custom(CustomResponse custom) {
             this.custom = Objects.requireNonNull(custom);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIstioCanonicalService(IstioCanonicalServiceResponse istioCanonicalService) {
+        public Builder istioCanonicalService(IstioCanonicalServiceResponse istioCanonicalService) {
             this.istioCanonicalService = Objects.requireNonNull(istioCanonicalService);
             return this;
         }
 
-        public Builder setMeshIstio(MeshIstioResponse meshIstio) {
+        public Builder meshIstio(MeshIstioResponse meshIstio) {
             this.meshIstio = Objects.requireNonNull(meshIstio);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTelemetry(TelemetryResponse telemetry) {
+        public Builder telemetry(TelemetryResponse telemetry) {
             this.telemetry = Objects.requireNonNull(telemetry);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }

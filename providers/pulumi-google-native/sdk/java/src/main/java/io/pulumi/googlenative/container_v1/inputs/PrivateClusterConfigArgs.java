@@ -108,42 +108,42 @@ public final class PrivateClusterConfigArgs extends io.pulumi.resources.Resource
     	      this.masterIpv4CidrBlock = defaults.masterIpv4CidrBlock;
         }
 
-        public Builder setEnablePrivateEndpoint(@Nullable Input<Boolean> enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(@Nullable Input<Boolean> enablePrivateEndpoint) {
             this.enablePrivateEndpoint = enablePrivateEndpoint;
             return this;
         }
 
-        public Builder setEnablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
+        public Builder enablePrivateEndpoint(@Nullable Boolean enablePrivateEndpoint) {
             this.enablePrivateEndpoint = Input.ofNullable(enablePrivateEndpoint);
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Input<Boolean> enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Input<Boolean> enablePrivateNodes) {
             this.enablePrivateNodes = enablePrivateNodes;
             return this;
         }
 
-        public Builder setEnablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
+        public Builder enablePrivateNodes(@Nullable Boolean enablePrivateNodes) {
             this.enablePrivateNodes = Input.ofNullable(enablePrivateNodes);
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable Input<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable Input<PrivateClusterMasterGlobalAccessConfigArgs> masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = masterGlobalAccessConfig;
             return this;
         }
 
-        public Builder setMasterGlobalAccessConfig(@Nullable PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
+        public Builder masterGlobalAccessConfig(@Nullable PrivateClusterMasterGlobalAccessConfigArgs masterGlobalAccessConfig) {
             this.masterGlobalAccessConfig = Input.ofNullable(masterGlobalAccessConfig);
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable Input<String> masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable Input<String> masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = masterIpv4CidrBlock;
             return this;
         }
 
-        public Builder setMasterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
+        public Builder masterIpv4CidrBlock(@Nullable String masterIpv4CidrBlock) {
             this.masterIpv4CidrBlock = Input.ofNullable(masterIpv4CidrBlock);
             return this;
         }

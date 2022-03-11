@@ -74,17 +74,17 @@ public final class GetRegionNetworkEndpointGroupArgs extends io.pulumi.resources
     	      this.region = defaults.region;
         }
 
-        public Builder setNetworkEndpointGroup(String networkEndpointGroup) {
+        public Builder networkEndpointGroup(String networkEndpointGroup) {
             this.networkEndpointGroup = Objects.requireNonNull(networkEndpointGroup);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

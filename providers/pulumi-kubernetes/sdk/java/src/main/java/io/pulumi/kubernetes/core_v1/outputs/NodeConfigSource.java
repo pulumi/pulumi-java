@@ -17,8 +17,8 @@ public final class NodeConfigSource {
      */
     private final @Nullable ConfigMapNodeConfigSource configMap;
 
-    @OutputCustomType.Constructor({"configMap"})
-    private NodeConfigSource(@Nullable ConfigMapNodeConfigSource configMap) {
+    @OutputCustomType.Constructor
+    private NodeConfigSource(@OutputCustomType.Parameter("configMap") @Nullable ConfigMapNodeConfigSource configMap) {
         this.configMap = configMap;
     }
 
@@ -50,7 +50,7 @@ public final class NodeConfigSource {
     	      this.configMap = defaults.configMap;
         }
 
-        public Builder setConfigMap(@Nullable ConfigMapNodeConfigSource configMap) {
+        public Builder configMap(@Nullable ConfigMapNodeConfigSource configMap) {
             this.configMap = configMap;
             return this;
         }

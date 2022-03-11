@@ -127,52 +127,52 @@ public final class DeepCreatedOriginGroupArgs extends io.pulumi.resources.Resour
     	      this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = defaults.trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
         }
 
-        public Builder setHealthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable Input<HealthProbeParametersArgs> healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable HealthProbeParametersArgs healthProbeSettings) {
             this.healthProbeSettings = Input.ofNullable(healthProbeSettings);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setOrigins(Input<List<ResourceReferenceArgs>> origins) {
+        public Builder origins(Input<List<ResourceReferenceArgs>> origins) {
             this.origins = Objects.requireNonNull(origins);
             return this;
         }
 
-        public Builder setOrigins(List<ResourceReferenceArgs> origins) {
+        public Builder origins(List<ResourceReferenceArgs> origins) {
             this.origins = Input.of(Objects.requireNonNull(origins));
             return this;
         }
 
-        public Builder setResponseBasedOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
+        public Builder responseBasedOriginErrorDetectionSettings(@Nullable Input<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = responseBasedOriginErrorDetectionSettings;
             return this;
         }
 
-        public Builder setResponseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
+        public Builder responseBasedOriginErrorDetectionSettings(@Nullable ResponseBasedOriginErrorDetectionParametersArgs responseBasedOriginErrorDetectionSettings) {
             this.responseBasedOriginErrorDetectionSettings = Input.ofNullable(responseBasedOriginErrorDetectionSettings);
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Input<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
-        public Builder setTrafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
+        public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = Input.ofNullable(trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
             return this;
         }

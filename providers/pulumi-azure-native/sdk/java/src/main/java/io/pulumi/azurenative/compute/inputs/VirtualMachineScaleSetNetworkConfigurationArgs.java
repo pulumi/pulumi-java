@@ -209,102 +209,102 @@ public final class VirtualMachineScaleSetNetworkConfigurationArgs extends io.pul
     	      this.primary = defaults.primary;
         }
 
-        public Builder setDeleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
+        public Builder deleteOption(@Nullable Input<Either<String,DeleteOptions>> deleteOption) {
             this.deleteOption = deleteOption;
             return this;
         }
 
-        public Builder setDeleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
+        public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
             this.deleteOption = Input.ofNullable(deleteOption);
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings) {
+        public Builder dnsSettings(@Nullable Input<VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs> dnsSettings) {
             this.dnsSettings = dnsSettings;
             return this;
         }
 
-        public Builder setDnsSettings(@Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs dnsSettings) {
+        public Builder dnsSettings(@Nullable VirtualMachineScaleSetNetworkConfigurationDnsSettingsArgs dnsSettings) {
             this.dnsSettings = Input.ofNullable(dnsSettings);
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Input<Boolean> enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
-        public Builder setEnableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
+        public Builder enableAcceleratedNetworking(@Nullable Boolean enableAcceleratedNetworking) {
             this.enableAcceleratedNetworking = Input.ofNullable(enableAcceleratedNetworking);
             return this;
         }
 
-        public Builder setEnableFpga(@Nullable Input<Boolean> enableFpga) {
+        public Builder enableFpga(@Nullable Input<Boolean> enableFpga) {
             this.enableFpga = enableFpga;
             return this;
         }
 
-        public Builder setEnableFpga(@Nullable Boolean enableFpga) {
+        public Builder enableFpga(@Nullable Boolean enableFpga) {
             this.enableFpga = Input.ofNullable(enableFpga);
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Input<Boolean> enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Input<Boolean> enableIPForwarding) {
             this.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
-        public Builder setEnableIPForwarding(@Nullable Boolean enableIPForwarding) {
+        public Builder enableIPForwarding(@Nullable Boolean enableIPForwarding) {
             this.enableIPForwarding = Input.ofNullable(enableIPForwarding);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(Input<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations) {
+        public Builder ipConfigurations(Input<List<VirtualMachineScaleSetIPConfigurationArgs>> ipConfigurations) {
             this.ipConfigurations = Objects.requireNonNull(ipConfigurations);
             return this;
         }
 
-        public Builder setIpConfigurations(List<VirtualMachineScaleSetIPConfigurationArgs> ipConfigurations) {
+        public Builder ipConfigurations(List<VirtualMachineScaleSetIPConfigurationArgs> ipConfigurations) {
             this.ipConfigurations = Input.of(Objects.requireNonNull(ipConfigurations));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable Input<SubResourceArgs> networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable Input<SubResourceArgs> networkSecurityGroup) {
             this.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
-        public Builder setNetworkSecurityGroup(@Nullable SubResourceArgs networkSecurityGroup) {
+        public Builder networkSecurityGroup(@Nullable SubResourceArgs networkSecurityGroup) {
             this.networkSecurityGroup = Input.ofNullable(networkSecurityGroup);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }

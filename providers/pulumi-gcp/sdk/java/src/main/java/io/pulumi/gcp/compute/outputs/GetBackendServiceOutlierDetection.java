@@ -24,19 +24,19 @@ public final class GetBackendServiceOutlierDetection {
     private final Integer successRateRequestVolume;
     private final Integer successRateStdevFactor;
 
-    @OutputCustomType.Constructor({"baseEjectionTimes","consecutiveErrors","consecutiveGatewayFailure","enforcingConsecutiveErrors","enforcingConsecutiveGatewayFailure","enforcingSuccessRate","intervals","maxEjectionPercent","successRateMinimumHosts","successRateRequestVolume","successRateStdevFactor"})
+    @OutputCustomType.Constructor
     private GetBackendServiceOutlierDetection(
-        List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
-        Integer consecutiveErrors,
-        Integer consecutiveGatewayFailure,
-        Integer enforcingConsecutiveErrors,
-        Integer enforcingConsecutiveGatewayFailure,
-        Integer enforcingSuccessRate,
-        List<GetBackendServiceOutlierDetectionInterval> intervals,
-        Integer maxEjectionPercent,
-        Integer successRateMinimumHosts,
-        Integer successRateRequestVolume,
-        Integer successRateStdevFactor) {
+        @OutputCustomType.Parameter("baseEjectionTimes") List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes,
+        @OutputCustomType.Parameter("consecutiveErrors") Integer consecutiveErrors,
+        @OutputCustomType.Parameter("consecutiveGatewayFailure") Integer consecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingConsecutiveErrors") Integer enforcingConsecutiveErrors,
+        @OutputCustomType.Parameter("enforcingConsecutiveGatewayFailure") Integer enforcingConsecutiveGatewayFailure,
+        @OutputCustomType.Parameter("enforcingSuccessRate") Integer enforcingSuccessRate,
+        @OutputCustomType.Parameter("intervals") List<GetBackendServiceOutlierDetectionInterval> intervals,
+        @OutputCustomType.Parameter("maxEjectionPercent") Integer maxEjectionPercent,
+        @OutputCustomType.Parameter("successRateMinimumHosts") Integer successRateMinimumHosts,
+        @OutputCustomType.Parameter("successRateRequestVolume") Integer successRateRequestVolume,
+        @OutputCustomType.Parameter("successRateStdevFactor") Integer successRateStdevFactor) {
         this.baseEjectionTimes = baseEjectionTimes;
         this.consecutiveErrors = consecutiveErrors;
         this.consecutiveGatewayFailure = consecutiveGatewayFailure;
@@ -124,57 +124,57 @@ public final class GetBackendServiceOutlierDetection {
     	      this.successRateStdevFactor = defaults.successRateStdevFactor;
         }
 
-        public Builder setBaseEjectionTimes(List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes) {
+        public Builder baseEjectionTimes(List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes) {
             this.baseEjectionTimes = Objects.requireNonNull(baseEjectionTimes);
             return this;
         }
 
-        public Builder setConsecutiveErrors(Integer consecutiveErrors) {
+        public Builder consecutiveErrors(Integer consecutiveErrors) {
             this.consecutiveErrors = Objects.requireNonNull(consecutiveErrors);
             return this;
         }
 
-        public Builder setConsecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
+        public Builder consecutiveGatewayFailure(Integer consecutiveGatewayFailure) {
             this.consecutiveGatewayFailure = Objects.requireNonNull(consecutiveGatewayFailure);
             return this;
         }
 
-        public Builder setEnforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
+        public Builder enforcingConsecutiveErrors(Integer enforcingConsecutiveErrors) {
             this.enforcingConsecutiveErrors = Objects.requireNonNull(enforcingConsecutiveErrors);
             return this;
         }
 
-        public Builder setEnforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
+        public Builder enforcingConsecutiveGatewayFailure(Integer enforcingConsecutiveGatewayFailure) {
             this.enforcingConsecutiveGatewayFailure = Objects.requireNonNull(enforcingConsecutiveGatewayFailure);
             return this;
         }
 
-        public Builder setEnforcingSuccessRate(Integer enforcingSuccessRate) {
+        public Builder enforcingSuccessRate(Integer enforcingSuccessRate) {
             this.enforcingSuccessRate = Objects.requireNonNull(enforcingSuccessRate);
             return this;
         }
 
-        public Builder setIntervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
+        public Builder intervals(List<GetBackendServiceOutlierDetectionInterval> intervals) {
             this.intervals = Objects.requireNonNull(intervals);
             return this;
         }
 
-        public Builder setMaxEjectionPercent(Integer maxEjectionPercent) {
+        public Builder maxEjectionPercent(Integer maxEjectionPercent) {
             this.maxEjectionPercent = Objects.requireNonNull(maxEjectionPercent);
             return this;
         }
 
-        public Builder setSuccessRateMinimumHosts(Integer successRateMinimumHosts) {
+        public Builder successRateMinimumHosts(Integer successRateMinimumHosts) {
             this.successRateMinimumHosts = Objects.requireNonNull(successRateMinimumHosts);
             return this;
         }
 
-        public Builder setSuccessRateRequestVolume(Integer successRateRequestVolume) {
+        public Builder successRateRequestVolume(Integer successRateRequestVolume) {
             this.successRateRequestVolume = Objects.requireNonNull(successRateRequestVolume);
             return this;
         }
 
-        public Builder setSuccessRateStdevFactor(Integer successRateStdevFactor) {
+        public Builder successRateStdevFactor(Integer successRateStdevFactor) {
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
         }

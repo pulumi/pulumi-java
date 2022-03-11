@@ -77,22 +77,22 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
     	      this.mode = defaults.mode;
         }
 
-        public Builder setConfiguration(@Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
+        public Builder configuration(@Nullable FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setMode(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
+        public Builder mode(@Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setMode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
+        public Builder mode(@Nullable Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
             this.mode = Input.ofNullable(mode);
             return this;
         }

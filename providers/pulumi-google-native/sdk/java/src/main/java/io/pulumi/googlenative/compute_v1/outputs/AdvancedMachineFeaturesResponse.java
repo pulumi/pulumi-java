@@ -26,11 +26,11 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","threadsPerCore"})
+    @OutputCustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        Boolean enableNestedVirtualization,
-        Boolean enableUefiNetworking,
-        Integer threadsPerCore) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.threadsPerCore = threadsPerCore;
@@ -82,17 +82,17 @@ public final class AdvancedMachineFeaturesResponse {
     	      this.threadsPerCore = defaults.threadsPerCore;
         }
 
-        public Builder setEnableNestedVirtualization(Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
 
-        public Builder setEnableUefiNetworking(Boolean enableUefiNetworking) {
+        public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
             return this;
         }
 
-        public Builder setThreadsPerCore(Integer threadsPerCore) {
+        public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }

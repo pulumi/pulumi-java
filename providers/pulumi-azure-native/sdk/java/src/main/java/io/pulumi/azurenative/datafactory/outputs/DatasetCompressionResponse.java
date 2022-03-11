@@ -22,10 +22,10 @@ public final class DatasetCompressionResponse {
      */
     private final Object type;
 
-    @OutputCustomType.Constructor({"level","type"})
+    @OutputCustomType.Constructor
     private DatasetCompressionResponse(
-        @Nullable Object level,
-        Object type) {
+        @OutputCustomType.Parameter("level") @Nullable Object level,
+        @OutputCustomType.Parameter("type") Object type) {
         this.level = level;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class DatasetCompressionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setLevel(@Nullable Object level) {
+        public Builder level(@Nullable Object level) {
             this.level = level;
             return this;
         }
 
-        public Builder setType(Object type) {
+        public Builder type(Object type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

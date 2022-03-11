@@ -19,13 +19,13 @@ public final class ServiceTaskSpecContainerSpecHealthcheck {
     private final List<String> tests;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"interval","retries","startPeriod","tests","timeout"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecHealthcheck(
-        @Nullable String interval,
-        @Nullable Integer retries,
-        @Nullable String startPeriod,
-        List<String> tests,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("interval") @Nullable String interval,
+        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
+        @OutputCustomType.Parameter("startPeriod") @Nullable String startPeriod,
+        @OutputCustomType.Parameter("tests") List<String> tests,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.interval = interval;
         this.retries = retries;
         this.startPeriod = startPeriod;
@@ -77,27 +77,27 @@ public final class ServiceTaskSpecContainerSpecHealthcheck {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setRetries(@Nullable Integer retries) {
+        public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable String startPeriod) {
+        public Builder startPeriod(@Nullable String startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
-        public Builder setTests(List<String> tests) {
+        public Builder tests(List<String> tests) {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

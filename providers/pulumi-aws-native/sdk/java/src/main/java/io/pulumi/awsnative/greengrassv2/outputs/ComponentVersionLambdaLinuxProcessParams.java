@@ -15,10 +15,10 @@ public final class ComponentVersionLambdaLinuxProcessParams {
     private final @Nullable ComponentVersionLambdaContainerParams containerParams;
     private final @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode;
 
-    @OutputCustomType.Constructor({"containerParams","isolationMode"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaLinuxProcessParams(
-        @Nullable ComponentVersionLambdaContainerParams containerParams,
-        @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
+        @OutputCustomType.Parameter("containerParams") @Nullable ComponentVersionLambdaContainerParams containerParams,
+        @OutputCustomType.Parameter("isolationMode") @Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
         this.containerParams = containerParams;
         this.isolationMode = isolationMode;
     }
@@ -52,12 +52,12 @@ public final class ComponentVersionLambdaLinuxProcessParams {
     	      this.isolationMode = defaults.isolationMode;
         }
 
-        public Builder setContainerParams(@Nullable ComponentVersionLambdaContainerParams containerParams) {
+        public Builder containerParams(@Nullable ComponentVersionLambdaContainerParams containerParams) {
             this.containerParams = containerParams;
             return this;
         }
 
-        public Builder setIsolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
+        public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
             this.isolationMode = isolationMode;
             return this;
         }

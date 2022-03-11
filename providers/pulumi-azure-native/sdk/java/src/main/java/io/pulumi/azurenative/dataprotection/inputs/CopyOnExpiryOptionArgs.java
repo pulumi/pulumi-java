@@ -57,12 +57,12 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setObjectType(Input<String> objectType) {
+        public Builder objectType(Input<String> objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }

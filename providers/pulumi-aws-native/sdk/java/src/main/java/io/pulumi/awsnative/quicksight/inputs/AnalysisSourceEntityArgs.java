@@ -53,12 +53,12 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     	      this.sourceTemplate = defaults.sourceTemplate;
         }
 
-        public Builder setSourceTemplate(@Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate) {
+        public Builder sourceTemplate(@Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate) {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
 
-        public Builder setSourceTemplate(@Nullable AnalysisSourceTemplateArgs sourceTemplate) {
+        public Builder sourceTemplate(@Nullable AnalysisSourceTemplateArgs sourceTemplate) {
             this.sourceTemplate = Input.ofNullable(sourceTemplate);
             return this;
         }

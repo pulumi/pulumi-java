@@ -23,10 +23,10 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
      */
     private final @Nullable String userDataOverride;
 
-    @OutputCustomType.Constructor({"systemsManagerAgent","userDataOverride"})
+    @OutputCustomType.Constructor
     private ImageRecipeAdditionalInstanceConfiguration(
-        @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent,
-        @Nullable String userDataOverride) {
+        @OutputCustomType.Parameter("systemsManagerAgent") @Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent,
+        @OutputCustomType.Parameter("userDataOverride") @Nullable String userDataOverride) {
         this.systemsManagerAgent = systemsManagerAgent;
         this.userDataOverride = userDataOverride;
     }
@@ -68,12 +68,12 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
     	      this.userDataOverride = defaults.userDataOverride;
         }
 
-        public Builder setSystemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
+        public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgent systemsManagerAgent) {
             this.systemsManagerAgent = systemsManagerAgent;
             return this;
         }
 
-        public Builder setUserDataOverride(@Nullable String userDataOverride) {
+        public Builder userDataOverride(@Nullable String userDataOverride) {
             this.userDataOverride = userDataOverride;
             return this;
         }

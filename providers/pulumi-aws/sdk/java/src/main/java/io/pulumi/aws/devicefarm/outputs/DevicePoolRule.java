@@ -27,11 +27,11 @@ public final class DevicePoolRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"attribute","operator","value"})
+    @OutputCustomType.Constructor
     private DevicePoolRule(
-        @Nullable String attribute,
-        @Nullable String operator,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("attribute") @Nullable String attribute,
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.attribute = attribute;
         this.operator = operator;
         this.value = value;
@@ -83,17 +83,17 @@ public final class DevicePoolRule {
     	      this.value = defaults.value;
         }
 
-        public Builder setAttribute(@Nullable String attribute) {
+        public Builder attribute(@Nullable String attribute) {
             this.attribute = attribute;
             return this;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

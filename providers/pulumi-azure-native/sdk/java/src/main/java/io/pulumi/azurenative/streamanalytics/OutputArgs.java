@@ -147,62 +147,62 @@ public final class OutputArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serialization = defaults.serialization;
         }
 
-        public Builder setDatasource(@Nullable Input<Object> datasource) {
+        public Builder datasource(@Nullable Input<Object> datasource) {
             this.datasource = datasource;
             return this;
         }
 
-        public Builder setDatasource(@Nullable Object datasource) {
+        public Builder datasource(@Nullable Object datasource) {
             this.datasource = Input.ofNullable(datasource);
             return this;
         }
 
-        public Builder setJobName(Input<String> jobName) {
+        public Builder jobName(Input<String> jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Input.of(Objects.requireNonNull(jobName));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOutputName(@Nullable Input<String> outputName) {
+        public Builder outputName(@Nullable Input<String> outputName) {
             this.outputName = outputName;
             return this;
         }
 
-        public Builder setOutputName(@Nullable String outputName) {
+        public Builder outputName(@Nullable String outputName) {
             this.outputName = Input.ofNullable(outputName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSerialization(@Nullable Input<Object> serialization) {
+        public Builder serialization(@Nullable Input<Object> serialization) {
             this.serialization = serialization;
             return this;
         }
 
-        public Builder setSerialization(@Nullable Object serialization) {
+        public Builder serialization(@Nullable Object serialization) {
             this.serialization = Input.ofNullable(serialization);
             return this;
         }

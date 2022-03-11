@@ -33,12 +33,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","media","suggestions","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse(
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
-        List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("media") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media,
+        @OutputCustomType.Parameter("suggestions") List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.media = media;
         this.suggestions = suggestions;
@@ -100,22 +100,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRespon
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setMedia(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
+        public Builder media(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMediaResponse media) {
             this.media = Objects.requireNonNull(media);
             return this;
         }
 
-        public Builder setSuggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
+        public Builder suggestions(List<GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestionResponse> suggestions) {
             this.suggestions = Objects.requireNonNull(suggestions);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

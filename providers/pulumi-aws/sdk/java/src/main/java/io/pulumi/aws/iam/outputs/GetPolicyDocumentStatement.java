@@ -61,17 +61,17 @@ public final class GetPolicyDocumentStatement {
      */
     private final @Nullable String sid;
 
-    @OutputCustomType.Constructor({"actions","conditions","effect","notActions","notPrincipals","notResources","principals","resources","sid"})
+    @OutputCustomType.Constructor
     private GetPolicyDocumentStatement(
-        @Nullable List<String> actions,
-        @Nullable List<GetPolicyDocumentStatementCondition> conditions,
-        @Nullable String effect,
-        @Nullable List<String> notActions,
-        @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals,
-        @Nullable List<String> notResources,
-        @Nullable List<GetPolicyDocumentStatementPrincipal> principals,
-        @Nullable List<String> resources,
-        @Nullable String sid) {
+        @OutputCustomType.Parameter("actions") @Nullable List<String> actions,
+        @OutputCustomType.Parameter("conditions") @Nullable List<GetPolicyDocumentStatementCondition> conditions,
+        @OutputCustomType.Parameter("effect") @Nullable String effect,
+        @OutputCustomType.Parameter("notActions") @Nullable List<String> notActions,
+        @OutputCustomType.Parameter("notPrincipals") @Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals,
+        @OutputCustomType.Parameter("notResources") @Nullable List<String> notResources,
+        @OutputCustomType.Parameter("principals") @Nullable List<GetPolicyDocumentStatementPrincipal> principals,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("sid") @Nullable String sid) {
         this.actions = actions;
         this.conditions = conditions;
         this.effect = effect;
@@ -183,47 +183,47 @@ public final class GetPolicyDocumentStatement {
     	      this.sid = defaults.sid;
         }
 
-        public Builder setActions(@Nullable List<String> actions) {
+        public Builder actions(@Nullable List<String> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<GetPolicyDocumentStatementCondition> conditions) {
+        public Builder conditions(@Nullable List<GetPolicyDocumentStatementCondition> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setEffect(@Nullable String effect) {
+        public Builder effect(@Nullable String effect) {
             this.effect = effect;
             return this;
         }
 
-        public Builder setNotActions(@Nullable List<String> notActions) {
+        public Builder notActions(@Nullable List<String> notActions) {
             this.notActions = notActions;
             return this;
         }
 
-        public Builder setNotPrincipals(@Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals) {
+        public Builder notPrincipals(@Nullable List<GetPolicyDocumentStatementNotPrincipal> notPrincipals) {
             this.notPrincipals = notPrincipals;
             return this;
         }
 
-        public Builder setNotResources(@Nullable List<String> notResources) {
+        public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = notResources;
             return this;
         }
 
-        public Builder setPrincipals(@Nullable List<GetPolicyDocumentStatementPrincipal> principals) {
+        public Builder principals(@Nullable List<GetPolicyDocumentStatementPrincipal> principals) {
             this.principals = principals;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }

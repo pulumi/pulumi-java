@@ -50,15 +50,15 @@ public final class RateLimitRuleResponse {
      */
     private final Integer rateLimitThreshold;
 
-    @OutputCustomType.Constructor({"action","enabledState","matchConditions","name","priority","rateLimitDurationInMinutes","rateLimitThreshold"})
+    @OutputCustomType.Constructor
     private RateLimitRuleResponse(
-        String action,
-        @Nullable String enabledState,
-        List<MatchConditionResponse> matchConditions,
-        String name,
-        Integer priority,
-        Integer rateLimitDurationInMinutes,
-        Integer rateLimitThreshold) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("rateLimitDurationInMinutes") Integer rateLimitDurationInMinutes,
+        @OutputCustomType.Parameter("rateLimitThreshold") Integer rateLimitThreshold) {
         this.action = action;
         this.enabledState = enabledState;
         this.matchConditions = matchConditions;
@@ -150,37 +150,37 @@ public final class RateLimitRuleResponse {
     	      this.rateLimitThreshold = defaults.rateLimitThreshold;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setMatchConditions(List<MatchConditionResponse> matchConditions) {
+        public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
+        public Builder rateLimitDurationInMinutes(Integer rateLimitDurationInMinutes) {
             this.rateLimitDurationInMinutes = Objects.requireNonNull(rateLimitDurationInMinutes);
             return this;
         }
 
-        public Builder setRateLimitThreshold(Integer rateLimitThreshold) {
+        public Builder rateLimitThreshold(Integer rateLimitThreshold) {
             this.rateLimitThreshold = Objects.requireNonNull(rateLimitThreshold);
             return this;
         }

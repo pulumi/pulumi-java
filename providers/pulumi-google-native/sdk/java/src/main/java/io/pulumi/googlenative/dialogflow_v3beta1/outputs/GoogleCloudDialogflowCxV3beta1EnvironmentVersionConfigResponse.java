@@ -15,8 +15,8 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"version"})
-    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(String version) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse(@OutputCustomType.Parameter("version") String version) {
         this.version = version;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigRespons
     	      this.version = defaults.version;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

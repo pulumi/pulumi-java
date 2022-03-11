@@ -24,10 +24,10 @@ public final class GetEntityInsightsResult {
      */
     private final @Nullable List<EntityInsightItemResponse> value;
 
-    @OutputCustomType.Constructor({"metaData","value"})
+    @OutputCustomType.Constructor
     private GetEntityInsightsResult(
-        @Nullable GetInsightsResultsMetadataResponse metaData,
-        @Nullable List<EntityInsightItemResponse> value) {
+        @OutputCustomType.Parameter("metaData") @Nullable GetInsightsResultsMetadataResponse metaData,
+        @OutputCustomType.Parameter("value") @Nullable List<EntityInsightItemResponse> value) {
         this.metaData = metaData;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class GetEntityInsightsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetaData(@Nullable GetInsightsResultsMetadataResponse metaData) {
+        public Builder metaData(@Nullable GetInsightsResultsMetadataResponse metaData) {
             this.metaData = metaData;
             return this;
         }
 
-        public Builder setValue(@Nullable List<EntityInsightItemResponse> value) {
+        public Builder value(@Nullable List<EntityInsightItemResponse> value) {
             this.value = value;
             return this;
         }

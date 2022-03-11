@@ -93,22 +93,22 @@ public final class ExecuteDataFlowActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"compute","continueOnError","dataFlow","dependsOn","description","integrationRuntime","linkedServiceName","name","policy","runConcurrently","staging","traceLevel","type","userProperties"})
+    @OutputCustomType.Constructor
     private ExecuteDataFlowActivityResponse(
-        @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
-        @Nullable Object continueOnError,
-        DataFlowReferenceResponse dataFlow,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable Object runConcurrently,
-        @Nullable DataFlowStagingInfoResponse staging,
-        @Nullable Object traceLevel,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("compute") @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute,
+        @OutputCustomType.Parameter("continueOnError") @Nullable Object continueOnError,
+        @OutputCustomType.Parameter("dataFlow") DataFlowReferenceResponse dataFlow,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("integrationRuntime") @Nullable IntegrationRuntimeReferenceResponse integrationRuntime,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("runConcurrently") @Nullable Object runConcurrently,
+        @OutputCustomType.Parameter("staging") @Nullable DataFlowStagingInfoResponse staging,
+        @OutputCustomType.Parameter("traceLevel") @Nullable Object traceLevel,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.compute = compute;
         this.continueOnError = continueOnError;
         this.dataFlow = dataFlow;
@@ -271,72 +271,72 @@ public final class ExecuteDataFlowActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setCompute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
+        public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
             this.compute = compute;
             return this;
         }
 
-        public Builder setContinueOnError(@Nullable Object continueOnError) {
+        public Builder continueOnError(@Nullable Object continueOnError) {
             this.continueOnError = continueOnError;
             return this;
         }
 
-        public Builder setDataFlow(DataFlowReferenceResponse dataFlow) {
+        public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
             this.dataFlow = Objects.requireNonNull(dataFlow);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIntegrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
+        public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
             this.integrationRuntime = integrationRuntime;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setRunConcurrently(@Nullable Object runConcurrently) {
+        public Builder runConcurrently(@Nullable Object runConcurrently) {
             this.runConcurrently = runConcurrently;
             return this;
         }
 
-        public Builder setStaging(@Nullable DataFlowStagingInfoResponse staging) {
+        public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
             this.staging = staging;
             return this;
         }
 
-        public Builder setTraceLevel(@Nullable Object traceLevel) {
+        public Builder traceLevel(@Nullable Object traceLevel) {
             this.traceLevel = traceLevel;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

@@ -37,13 +37,13 @@ public final class IosXcTestResponse {
      */
     private final FileReferenceResponse xctestrun;
 
-    @OutputCustomType.Constructor({"appBundleId","testSpecialEntitlements","testsZip","xcodeVersion","xctestrun"})
+    @OutputCustomType.Constructor
     private IosXcTestResponse(
-        String appBundleId,
-        Boolean testSpecialEntitlements,
-        FileReferenceResponse testsZip,
-        String xcodeVersion,
-        FileReferenceResponse xctestrun) {
+        @OutputCustomType.Parameter("appBundleId") String appBundleId,
+        @OutputCustomType.Parameter("testSpecialEntitlements") Boolean testSpecialEntitlements,
+        @OutputCustomType.Parameter("testsZip") FileReferenceResponse testsZip,
+        @OutputCustomType.Parameter("xcodeVersion") String xcodeVersion,
+        @OutputCustomType.Parameter("xctestrun") FileReferenceResponse xctestrun) {
         this.appBundleId = appBundleId;
         this.testSpecialEntitlements = testSpecialEntitlements;
         this.testsZip = testsZip;
@@ -115,27 +115,27 @@ public final class IosXcTestResponse {
     	      this.xctestrun = defaults.xctestrun;
         }
 
-        public Builder setAppBundleId(String appBundleId) {
+        public Builder appBundleId(String appBundleId) {
             this.appBundleId = Objects.requireNonNull(appBundleId);
             return this;
         }
 
-        public Builder setTestSpecialEntitlements(Boolean testSpecialEntitlements) {
+        public Builder testSpecialEntitlements(Boolean testSpecialEntitlements) {
             this.testSpecialEntitlements = Objects.requireNonNull(testSpecialEntitlements);
             return this;
         }
 
-        public Builder setTestsZip(FileReferenceResponse testsZip) {
+        public Builder testsZip(FileReferenceResponse testsZip) {
             this.testsZip = Objects.requireNonNull(testsZip);
             return this;
         }
 
-        public Builder setXcodeVersion(String xcodeVersion) {
+        public Builder xcodeVersion(String xcodeVersion) {
             this.xcodeVersion = Objects.requireNonNull(xcodeVersion);
             return this;
         }
 
-        public Builder setXctestrun(FileReferenceResponse xctestrun) {
+        public Builder xctestrun(FileReferenceResponse xctestrun) {
             this.xctestrun = Objects.requireNonNull(xctestrun);
             return this;
         }

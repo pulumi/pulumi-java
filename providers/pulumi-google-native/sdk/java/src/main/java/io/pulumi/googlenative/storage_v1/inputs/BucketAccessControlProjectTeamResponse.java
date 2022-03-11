@@ -72,12 +72,12 @@ public final class BucketAccessControlProjectTeamResponse extends io.pulumi.reso
     	      this.team = defaults.team;
         }
 
-        public Builder setProjectNumber(String projectNumber) {
+        public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
 
-        public Builder setTeam(String team) {
+        public Builder team(String team) {
             this.team = Objects.requireNonNull(team);
             return this;
         }

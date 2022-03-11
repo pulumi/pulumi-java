@@ -20,10 +20,10 @@ public final class GetPackageDownloadURLResult {
      */
     private final String expirationTime;
 
-    @OutputCustomType.Constructor({"downloadUrl","expirationTime"})
+    @OutputCustomType.Constructor
     private GetPackageDownloadURLResult(
-        String downloadUrl,
-        String expirationTime) {
+        @OutputCustomType.Parameter("downloadUrl") String downloadUrl,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime) {
         this.downloadUrl = downloadUrl;
         this.expirationTime = expirationTime;
     }
@@ -65,12 +65,12 @@ public final class GetPackageDownloadURLResult {
     	      this.expirationTime = defaults.expirationTime;
         }
 
-        public Builder setDownloadUrl(String downloadUrl) {
+        public Builder downloadUrl(String downloadUrl) {
             this.downloadUrl = Objects.requireNonNull(downloadUrl);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }

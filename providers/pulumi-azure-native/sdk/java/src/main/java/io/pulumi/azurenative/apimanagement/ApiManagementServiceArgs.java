@@ -370,202 +370,202 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
     	      this.zones = defaults.zones;
         }
 
-        public Builder setAdditionalLocations(@Nullable Input<List<AdditionalLocationArgs>> additionalLocations) {
+        public Builder additionalLocations(@Nullable Input<List<AdditionalLocationArgs>> additionalLocations) {
             this.additionalLocations = additionalLocations;
             return this;
         }
 
-        public Builder setAdditionalLocations(@Nullable List<AdditionalLocationArgs> additionalLocations) {
+        public Builder additionalLocations(@Nullable List<AdditionalLocationArgs> additionalLocations) {
             this.additionalLocations = Input.ofNullable(additionalLocations);
             return this;
         }
 
-        public Builder setApiVersionConstraint(@Nullable Input<ApiVersionConstraintArgs> apiVersionConstraint) {
+        public Builder apiVersionConstraint(@Nullable Input<ApiVersionConstraintArgs> apiVersionConstraint) {
             this.apiVersionConstraint = apiVersionConstraint;
             return this;
         }
 
-        public Builder setApiVersionConstraint(@Nullable ApiVersionConstraintArgs apiVersionConstraint) {
+        public Builder apiVersionConstraint(@Nullable ApiVersionConstraintArgs apiVersionConstraint) {
             this.apiVersionConstraint = Input.ofNullable(apiVersionConstraint);
             return this;
         }
 
-        public Builder setCertificates(@Nullable Input<List<CertificateConfigurationArgs>> certificates) {
+        public Builder certificates(@Nullable Input<List<CertificateConfigurationArgs>> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<CertificateConfigurationArgs> certificates) {
+        public Builder certificates(@Nullable List<CertificateConfigurationArgs> certificates) {
             this.certificates = Input.ofNullable(certificates);
             return this;
         }
 
-        public Builder setCustomProperties(@Nullable Input<Map<String,String>> customProperties) {
+        public Builder customProperties(@Nullable Input<Map<String,String>> customProperties) {
             this.customProperties = customProperties;
             return this;
         }
 
-        public Builder setCustomProperties(@Nullable Map<String,String> customProperties) {
+        public Builder customProperties(@Nullable Map<String,String> customProperties) {
             this.customProperties = Input.ofNullable(customProperties);
             return this;
         }
 
-        public Builder setDisableGateway(@Nullable Input<Boolean> disableGateway) {
+        public Builder disableGateway(@Nullable Input<Boolean> disableGateway) {
             this.disableGateway = disableGateway;
             return this;
         }
 
-        public Builder setDisableGateway(@Nullable Boolean disableGateway) {
+        public Builder disableGateway(@Nullable Boolean disableGateway) {
             this.disableGateway = Input.ofNullable(disableGateway);
             return this;
         }
 
-        public Builder setEnableClientCertificate(@Nullable Input<Boolean> enableClientCertificate) {
+        public Builder enableClientCertificate(@Nullable Input<Boolean> enableClientCertificate) {
             this.enableClientCertificate = enableClientCertificate;
             return this;
         }
 
-        public Builder setEnableClientCertificate(@Nullable Boolean enableClientCertificate) {
+        public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
             this.enableClientCertificate = Input.ofNullable(enableClientCertificate);
             return this;
         }
 
-        public Builder setHostnameConfigurations(@Nullable Input<List<HostnameConfigurationArgs>> hostnameConfigurations) {
+        public Builder hostnameConfigurations(@Nullable Input<List<HostnameConfigurationArgs>> hostnameConfigurations) {
             this.hostnameConfigurations = hostnameConfigurations;
             return this;
         }
 
-        public Builder setHostnameConfigurations(@Nullable List<HostnameConfigurationArgs> hostnameConfigurations) {
+        public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationArgs> hostnameConfigurations) {
             this.hostnameConfigurations = Input.ofNullable(hostnameConfigurations);
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ApiManagementServiceIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ApiManagementServiceIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ApiManagementServiceIdentityArgs identity) {
+        public Builder identity(@Nullable ApiManagementServiceIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable Input<String> notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable Input<String> notificationSenderEmail) {
             this.notificationSenderEmail = notificationSenderEmail;
             return this;
         }
 
-        public Builder setNotificationSenderEmail(@Nullable String notificationSenderEmail) {
+        public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
             this.notificationSenderEmail = Input.ofNullable(notificationSenderEmail);
             return this;
         }
 
-        public Builder setPublisherEmail(Input<String> publisherEmail) {
+        public Builder publisherEmail(Input<String> publisherEmail) {
             this.publisherEmail = Objects.requireNonNull(publisherEmail);
             return this;
         }
 
-        public Builder setPublisherEmail(String publisherEmail) {
+        public Builder publisherEmail(String publisherEmail) {
             this.publisherEmail = Input.of(Objects.requireNonNull(publisherEmail));
             return this;
         }
 
-        public Builder setPublisherName(Input<String> publisherName) {
+        public Builder publisherName(Input<String> publisherName) {
             this.publisherName = Objects.requireNonNull(publisherName);
             return this;
         }
 
-        public Builder setPublisherName(String publisherName) {
+        public Builder publisherName(String publisherName) {
             this.publisherName = Input.of(Objects.requireNonNull(publisherName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRestore(@Nullable Input<Boolean> restore) {
+        public Builder restore(@Nullable Input<Boolean> restore) {
             this.restore = restore;
             return this;
         }
 
-        public Builder setRestore(@Nullable Boolean restore) {
+        public Builder restore(@Nullable Boolean restore) {
             this.restore = Input.ofNullable(restore);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setSku(Input<ApiManagementServiceSkuPropertiesArgs> sku) {
+        public Builder sku(Input<ApiManagementServiceSkuPropertiesArgs> sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSku(ApiManagementServiceSkuPropertiesArgs sku) {
+        public Builder sku(ApiManagementServiceSkuPropertiesArgs sku) {
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable Input<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = virtualNetworkConfiguration;
             return this;
         }
 
-        public Builder setVirtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
+        public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
             this.virtualNetworkConfiguration = Input.ofNullable(virtualNetworkConfiguration);
             return this;
         }
 
-        public Builder setVirtualNetworkType(@Nullable Input<Either<String,VirtualNetworkType>> virtualNetworkType) {
+        public Builder virtualNetworkType(@Nullable Input<Either<String,VirtualNetworkType>> virtualNetworkType) {
             this.virtualNetworkType = virtualNetworkType;
             return this;
         }
 
-        public Builder setVirtualNetworkType(@Nullable Either<String,VirtualNetworkType> virtualNetworkType) {
+        public Builder virtualNetworkType(@Nullable Either<String,VirtualNetworkType> virtualNetworkType) {
             this.virtualNetworkType = Input.ofNullable(virtualNetworkType);
             return this;
         }
 
-        public Builder setZones(@Nullable Input<List<String>> zones) {
+        public Builder zones(@Nullable Input<List<String>> zones) {
             this.zones = zones;
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = Input.ofNullable(zones);
             return this;
         }

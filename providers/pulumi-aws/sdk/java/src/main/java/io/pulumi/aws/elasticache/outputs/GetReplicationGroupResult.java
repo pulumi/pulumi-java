@@ -89,24 +89,24 @@ public final class GetReplicationGroupResult {
      */
     private final String snapshotWindow;
 
-    @OutputCustomType.Constructor({"arn","authTokenEnabled","automaticFailoverEnabled","configurationEndpointAddress","id","memberClusters","multiAzEnabled","nodeType","numberCacheClusters","port","primaryEndpointAddress","readerEndpointAddress","replicationGroupDescription","replicationGroupId","snapshotRetentionLimit","snapshotWindow"})
+    @OutputCustomType.Constructor
     private GetReplicationGroupResult(
-        String arn,
-        Boolean authTokenEnabled,
-        Boolean automaticFailoverEnabled,
-        String configurationEndpointAddress,
-        String id,
-        List<String> memberClusters,
-        Boolean multiAzEnabled,
-        String nodeType,
-        Integer numberCacheClusters,
-        Integer port,
-        String primaryEndpointAddress,
-        String readerEndpointAddress,
-        String replicationGroupDescription,
-        String replicationGroupId,
-        Integer snapshotRetentionLimit,
-        String snapshotWindow) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("authTokenEnabled") Boolean authTokenEnabled,
+        @OutputCustomType.Parameter("automaticFailoverEnabled") Boolean automaticFailoverEnabled,
+        @OutputCustomType.Parameter("configurationEndpointAddress") String configurationEndpointAddress,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("memberClusters") List<String> memberClusters,
+        @OutputCustomType.Parameter("multiAzEnabled") Boolean multiAzEnabled,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("numberCacheClusters") Integer numberCacheClusters,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("primaryEndpointAddress") String primaryEndpointAddress,
+        @OutputCustomType.Parameter("readerEndpointAddress") String readerEndpointAddress,
+        @OutputCustomType.Parameter("replicationGroupDescription") String replicationGroupDescription,
+        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow) {
         this.arn = arn;
         this.authTokenEnabled = authTokenEnabled;
         this.automaticFailoverEnabled = automaticFailoverEnabled;
@@ -284,82 +284,82 @@ public final class GetReplicationGroupResult {
     	      this.snapshotWindow = defaults.snapshotWindow;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAuthTokenEnabled(Boolean authTokenEnabled) {
+        public Builder authTokenEnabled(Boolean authTokenEnabled) {
             this.authTokenEnabled = Objects.requireNonNull(authTokenEnabled);
             return this;
         }
 
-        public Builder setAutomaticFailoverEnabled(Boolean automaticFailoverEnabled) {
+        public Builder automaticFailoverEnabled(Boolean automaticFailoverEnabled) {
             this.automaticFailoverEnabled = Objects.requireNonNull(automaticFailoverEnabled);
             return this;
         }
 
-        public Builder setConfigurationEndpointAddress(String configurationEndpointAddress) {
+        public Builder configurationEndpointAddress(String configurationEndpointAddress) {
             this.configurationEndpointAddress = Objects.requireNonNull(configurationEndpointAddress);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMemberClusters(List<String> memberClusters) {
+        public Builder memberClusters(List<String> memberClusters) {
             this.memberClusters = Objects.requireNonNull(memberClusters);
             return this;
         }
 
-        public Builder setMultiAzEnabled(Boolean multiAzEnabled) {
+        public Builder multiAzEnabled(Boolean multiAzEnabled) {
             this.multiAzEnabled = Objects.requireNonNull(multiAzEnabled);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setNumberCacheClusters(Integer numberCacheClusters) {
+        public Builder numberCacheClusters(Integer numberCacheClusters) {
             this.numberCacheClusters = Objects.requireNonNull(numberCacheClusters);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPrimaryEndpointAddress(String primaryEndpointAddress) {
+        public Builder primaryEndpointAddress(String primaryEndpointAddress) {
             this.primaryEndpointAddress = Objects.requireNonNull(primaryEndpointAddress);
             return this;
         }
 
-        public Builder setReaderEndpointAddress(String readerEndpointAddress) {
+        public Builder readerEndpointAddress(String readerEndpointAddress) {
             this.readerEndpointAddress = Objects.requireNonNull(readerEndpointAddress);
             return this;
         }
 
-        public Builder setReplicationGroupDescription(String replicationGroupDescription) {
+        public Builder replicationGroupDescription(String replicationGroupDescription) {
             this.replicationGroupDescription = Objects.requireNonNull(replicationGroupDescription);
             return this;
         }
 
-        public Builder setReplicationGroupId(String replicationGroupId) {
+        public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
         }
 
-        public Builder setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder setSnapshotWindow(String snapshotWindow) {
+        public Builder snapshotWindow(String snapshotWindow) {
             this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
             return this;
         }

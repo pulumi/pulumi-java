@@ -92,32 +92,32 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
     	      this.selectedCertificates = defaults.selectedCertificates;
         }
 
-        public Builder setBackupFileShare(Input<FileShareArgs> backupFileShare) {
+        public Builder backupFileShare(Input<FileShareArgs> backupFileShare) {
             this.backupFileShare = Objects.requireNonNull(backupFileShare);
             return this;
         }
 
-        public Builder setBackupFileShare(FileShareArgs backupFileShare) {
+        public Builder backupFileShare(FileShareArgs backupFileShare) {
             this.backupFileShare = Input.of(Objects.requireNonNull(backupFileShare));
             return this;
         }
 
-        public Builder setConnectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
+        public Builder connectionInfo(Input<SqlConnectionInfoArgs> connectionInfo) {
             this.connectionInfo = Objects.requireNonNull(connectionInfo);
             return this;
         }
 
-        public Builder setConnectionInfo(SqlConnectionInfoArgs connectionInfo) {
+        public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
             this.connectionInfo = Input.of(Objects.requireNonNull(connectionInfo));
             return this;
         }
 
-        public Builder setSelectedCertificates(Input<List<SelectedCertificateInputArgs>> selectedCertificates) {
+        public Builder selectedCertificates(Input<List<SelectedCertificateInputArgs>> selectedCertificates) {
             this.selectedCertificates = Objects.requireNonNull(selectedCertificates);
             return this;
         }
 
-        public Builder setSelectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
+        public Builder selectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
             this.selectedCertificates = Input.of(Objects.requireNonNull(selectedCertificates));
             return this;
         }

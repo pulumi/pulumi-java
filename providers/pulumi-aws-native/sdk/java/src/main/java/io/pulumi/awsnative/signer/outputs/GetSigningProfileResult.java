@@ -39,13 +39,13 @@ public final class GetSigningProfileResult {
      */
     private final @Nullable List<SigningProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","profileName","profileVersion","profileVersionArn","tags"})
+    @OutputCustomType.Constructor
     private GetSigningProfileResult(
-        @Nullable String arn,
-        @Nullable String profileName,
-        @Nullable String profileVersion,
-        @Nullable String profileVersionArn,
-        @Nullable List<SigningProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
+        @OutputCustomType.Parameter("profileVersion") @Nullable String profileVersion,
+        @OutputCustomType.Parameter("profileVersionArn") @Nullable String profileVersionArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<SigningProfileTag> tags) {
         this.arn = arn;
         this.profileName = profileName;
         this.profileVersion = profileVersion;
@@ -117,27 +117,27 @@ public final class GetSigningProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfileVersion(@Nullable String profileVersion) {
+        public Builder profileVersion(@Nullable String profileVersion) {
             this.profileVersion = profileVersion;
             return this;
         }
 
-        public Builder setProfileVersionArn(@Nullable String profileVersionArn) {
+        public Builder profileVersionArn(@Nullable String profileVersionArn) {
             this.profileVersionArn = profileVersionArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SigningProfileTag> tags) {
+        public Builder tags(@Nullable List<SigningProfileTag> tags) {
             this.tags = tags;
             return this;
         }

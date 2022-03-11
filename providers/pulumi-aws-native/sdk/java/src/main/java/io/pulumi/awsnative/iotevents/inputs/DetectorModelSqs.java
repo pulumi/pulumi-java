@@ -84,17 +84,17 @@ public final class DetectorModelSqs extends io.pulumi.resources.InvokeArgs {
     	      this.useBase64 = defaults.useBase64;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }
 
-        public Builder setQueueUrl(String queueUrl) {
+        public Builder queueUrl(String queueUrl) {
             this.queueUrl = Objects.requireNonNull(queueUrl);
             return this;
         }
 
-        public Builder setUseBase64(@Nullable Boolean useBase64) {
+        public Builder useBase64(@Nullable Boolean useBase64) {
             this.useBase64 = useBase64;
             return this;
         }

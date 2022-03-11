@@ -45,12 +45,12 @@ public final class InstanceMaintenancePolicy {
      */
     private final @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
-    @OutputCustomType.Constructor({"createTime","description","updateTime","weeklyMaintenanceWindows"})
+    @OutputCustomType.Constructor
     private InstanceMaintenancePolicy(
-        @Nullable String createTime,
-        @Nullable String description,
-        @Nullable String updateTime,
-        @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
+        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime,
+        @OutputCustomType.Parameter("weeklyMaintenanceWindows") @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;
@@ -123,22 +123,22 @@ public final class InstanceMaintenancePolicy {
     	      this.weeklyMaintenanceWindows = defaults.weeklyMaintenanceWindows;
         }
 
-        public Builder setCreateTime(@Nullable String createTime) {
+        public Builder createTime(@Nullable String createTime) {
             this.createTime = createTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setUpdateTime(@Nullable String updateTime) {
+        public Builder updateTime(@Nullable String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
+        public Builder weeklyMaintenanceWindows(@Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
             this.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }

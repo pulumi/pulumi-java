@@ -29,11 +29,11 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
      */
     private final @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
-    @OutputCustomType.Constructor({"exclusions","ruleGroupName","rules"})
+    @OutputCustomType.Constructor
     private FrontDoorManagedRuleGroupOverrideResponse(
-        @Nullable List<ManagedRuleExclusionResponse> exclusions,
-        String ruleGroupName,
-        @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
+        @OutputCustomType.Parameter("exclusions") @Nullable List<ManagedRuleExclusionResponse> exclusions,
+        @OutputCustomType.Parameter("ruleGroupName") String ruleGroupName,
+        @OutputCustomType.Parameter("rules") @Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
         this.exclusions = exclusions;
         this.ruleGroupName = ruleGroupName;
         this.rules = rules;
@@ -85,17 +85,17 @@ public final class FrontDoorManagedRuleGroupOverrideResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setExclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
+        public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             this.exclusions = exclusions;
             return this;
         }
 
-        public Builder setRuleGroupName(String ruleGroupName) {
+        public Builder ruleGroupName(String ruleGroupName) {
             this.ruleGroupName = Objects.requireNonNull(ruleGroupName);
             return this;
         }
 
-        public Builder setRules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
+        public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
             this.rules = rules;
             return this;
         }

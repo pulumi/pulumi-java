@@ -33,12 +33,12 @@ public final class ReferenceVmResponse {
      */
     private final VmStateDetailsResponse vmStateDetails;
 
-    @OutputCustomType.Constructor({"password","userName","vmResourceId","vmStateDetails"})
+    @OutputCustomType.Constructor
     private ReferenceVmResponse(
-        @Nullable String password,
-        String userName,
-        String vmResourceId,
-        VmStateDetailsResponse vmStateDetails) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("userName") String userName,
+        @OutputCustomType.Parameter("vmResourceId") String vmResourceId,
+        @OutputCustomType.Parameter("vmStateDetails") VmStateDetailsResponse vmStateDetails) {
         this.password = password;
         this.userName = userName;
         this.vmResourceId = vmResourceId;
@@ -100,22 +100,22 @@ public final class ReferenceVmResponse {
     	      this.vmStateDetails = defaults.vmStateDetails;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
 
-        public Builder setVmResourceId(String vmResourceId) {
+        public Builder vmResourceId(String vmResourceId) {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
 
-        public Builder setVmStateDetails(VmStateDetailsResponse vmStateDetails) {
+        public Builder vmStateDetails(VmStateDetailsResponse vmStateDetails) {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }

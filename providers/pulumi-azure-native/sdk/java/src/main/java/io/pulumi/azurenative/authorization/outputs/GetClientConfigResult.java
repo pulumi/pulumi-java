@@ -30,12 +30,12 @@ public final class GetClientConfigResult {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"clientId","objectId","subscriptionId","tenantId"})
+    @OutputCustomType.Constructor
     private GetClientConfigResult(
-        String clientId,
-        String objectId,
-        String subscriptionId,
-        String tenantId) {
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("subscriptionId") String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.clientId = clientId;
         this.objectId = objectId;
         this.subscriptionId = subscriptionId;
@@ -97,22 +97,22 @@ public final class GetClientConfigResult {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

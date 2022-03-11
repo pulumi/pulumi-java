@@ -137,52 +137,52 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
     	      this.minBackoff = defaults.minBackoff;
         }
 
-        public Builder setMaxAttempts(@Nullable Input<Integer> maxAttempts) {
+        public Builder maxAttempts(@Nullable Input<Integer> maxAttempts) {
             this.maxAttempts = maxAttempts;
             return this;
         }
 
-        public Builder setMaxAttempts(@Nullable Integer maxAttempts) {
+        public Builder maxAttempts(@Nullable Integer maxAttempts) {
             this.maxAttempts = Input.ofNullable(maxAttempts);
             return this;
         }
 
-        public Builder setMaxBackoff(@Nullable Input<String> maxBackoff) {
+        public Builder maxBackoff(@Nullable Input<String> maxBackoff) {
             this.maxBackoff = maxBackoff;
             return this;
         }
 
-        public Builder setMaxBackoff(@Nullable String maxBackoff) {
+        public Builder maxBackoff(@Nullable String maxBackoff) {
             this.maxBackoff = Input.ofNullable(maxBackoff);
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Input<Integer> maxDoublings) {
+        public Builder maxDoublings(@Nullable Input<Integer> maxDoublings) {
             this.maxDoublings = maxDoublings;
             return this;
         }
 
-        public Builder setMaxDoublings(@Nullable Integer maxDoublings) {
+        public Builder maxDoublings(@Nullable Integer maxDoublings) {
             this.maxDoublings = Input.ofNullable(maxDoublings);
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable Input<String> maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable Input<String> maxRetryDuration) {
             this.maxRetryDuration = maxRetryDuration;
             return this;
         }
 
-        public Builder setMaxRetryDuration(@Nullable String maxRetryDuration) {
+        public Builder maxRetryDuration(@Nullable String maxRetryDuration) {
             this.maxRetryDuration = Input.ofNullable(maxRetryDuration);
             return this;
         }
 
-        public Builder setMinBackoff(@Nullable Input<String> minBackoff) {
+        public Builder minBackoff(@Nullable Input<String> minBackoff) {
             this.minBackoff = minBackoff;
             return this;
         }
 
-        public Builder setMinBackoff(@Nullable String minBackoff) {
+        public Builder minBackoff(@Nullable String minBackoff) {
             this.minBackoff = Input.ofNullable(minBackoff);
             return this;
         }

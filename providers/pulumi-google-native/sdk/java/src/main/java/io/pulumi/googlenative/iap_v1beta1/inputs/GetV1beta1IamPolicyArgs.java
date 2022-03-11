@@ -47,7 +47,7 @@ public final class GetV1beta1IamPolicyArgs extends io.pulumi.resources.InvokeArg
     	      this.v1beta1Id = defaults.v1beta1Id;
         }
 
-        public Builder setV1beta1Id(String v1beta1Id) {
+        public Builder v1beta1Id(String v1beta1Id) {
             this.v1beta1Id = Objects.requireNonNull(v1beta1Id);
             return this;
         }

@@ -22,10 +22,10 @@ public final class DistributionPolicyResponse {
      */
     private final List<DistributionPolicyZoneConfigurationResponse> zones;
 
-    @OutputCustomType.Constructor({"targetShape","zones"})
+    @OutputCustomType.Constructor
     private DistributionPolicyResponse(
-        String targetShape,
-        List<DistributionPolicyZoneConfigurationResponse> zones) {
+        @OutputCustomType.Parameter("targetShape") String targetShape,
+        @OutputCustomType.Parameter("zones") List<DistributionPolicyZoneConfigurationResponse> zones) {
         this.targetShape = targetShape;
         this.zones = zones;
     }
@@ -67,12 +67,12 @@ public final class DistributionPolicyResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setTargetShape(String targetShape) {
+        public Builder targetShape(String targetShape) {
             this.targetShape = Objects.requireNonNull(targetShape);
             return this;
         }
 
-        public Builder setZones(List<DistributionPolicyZoneConfigurationResponse> zones) {
+        public Builder zones(List<DistributionPolicyZoneConfigurationResponse> zones) {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }

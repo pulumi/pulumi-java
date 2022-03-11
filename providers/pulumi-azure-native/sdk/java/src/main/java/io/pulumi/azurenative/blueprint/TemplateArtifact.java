@@ -211,7 +211,7 @@ public class TemplateArtifact extends io.pulumi.resources.CustomResource {
     private static TemplateArtifactArgs makeArgs(TemplateArtifactArgs args) {
         var builder = args == null ? TemplateArtifactArgs.builder() : TemplateArtifactArgs.builder(args);
         return builder
-            .setKind("template")
+            .kind("template")
             .build();
     }
 

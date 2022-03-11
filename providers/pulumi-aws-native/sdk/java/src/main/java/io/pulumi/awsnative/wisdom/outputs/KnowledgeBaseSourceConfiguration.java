@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class KnowledgeBaseSourceConfiguration {
     private final @Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations;
 
-    @OutputCustomType.Constructor({"appIntegrations"})
-    private KnowledgeBaseSourceConfiguration(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
+    @OutputCustomType.Constructor
+    private KnowledgeBaseSourceConfiguration(@OutputCustomType.Parameter("appIntegrations") @Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
         this.appIntegrations = appIntegrations;
     }
 
@@ -42,7 +42,7 @@ public final class KnowledgeBaseSourceConfiguration {
     	      this.appIntegrations = defaults.appIntegrations;
         }
 
-        public Builder setAppIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
+        public Builder appIntegrations(@Nullable KnowledgeBaseAppIntegrationsConfiguration appIntegrations) {
             this.appIntegrations = appIntegrations;
             return this;
         }

@@ -93,32 +93,32 @@ public final class PodDisruptionBudgetSpecArgs extends io.pulumi.resources.Resou
     	      this.selector = defaults.selector;
         }
 
-        public Builder setMaxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }
 
-        public Builder setMinAvailable(@Nullable Input<Either<Integer,String>> minAvailable) {
+        public Builder minAvailable(@Nullable Input<Either<Integer,String>> minAvailable) {
             this.minAvailable = minAvailable;
             return this;
         }
 
-        public Builder setMinAvailable(@Nullable Either<Integer,String> minAvailable) {
+        public Builder minAvailable(@Nullable Either<Integer,String> minAvailable) {
             this.minAvailable = Input.ofNullable(minAvailable);
             return this;
         }
 
-        public Builder setSelector(@Nullable Input<LabelSelectorArgs> selector) {
+        public Builder selector(@Nullable Input<LabelSelectorArgs> selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelectorArgs selector) {
+        public Builder selector(@Nullable LabelSelectorArgs selector) {
             this.selector = Input.ofNullable(selector);
             return this;
         }

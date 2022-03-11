@@ -20,10 +20,10 @@ public final class GetCollectionResult {
      */
     private final @Nullable List<CollectionTag> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetCollectionResult(
-        @Nullable String arn,
-        @Nullable List<CollectionTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<CollectionTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }
@@ -61,12 +61,12 @@ public final class GetCollectionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<CollectionTag> tags) {
+        public Builder tags(@Nullable List<CollectionTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -15,8 +15,8 @@ public final class ConfigFileResponse {
      */
     private final String content;
 
-    @OutputCustomType.Constructor({"content"})
-    private ConfigFileResponse(String content) {
+    @OutputCustomType.Constructor
+    private ConfigFileResponse(@OutputCustomType.Parameter("content") String content) {
         this.content = content;
     }
 
@@ -48,7 +48,7 @@ public final class ConfigFileResponse {
     	      this.content = defaults.content;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }

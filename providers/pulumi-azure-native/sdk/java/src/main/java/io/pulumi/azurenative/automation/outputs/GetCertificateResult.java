@@ -58,17 +58,17 @@ public final class GetCertificateResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","description","expiryTime","id","isExportable","lastModifiedTime","name","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetCertificateResult(
-        String creationTime,
-        @Nullable String description,
-        String expiryTime,
-        String id,
-        Boolean isExportable,
-        String lastModifiedTime,
-        String name,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("expiryTime") String expiryTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isExportable") Boolean isExportable,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.description = description;
         this.expiryTime = expiryTime;
@@ -180,47 +180,47 @@ public final class GetCertificateResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setExpiryTime(String expiryTime) {
+        public Builder expiryTime(String expiryTime) {
             this.expiryTime = Objects.requireNonNull(expiryTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsExportable(Boolean isExportable) {
+        public Builder isExportable(Boolean isExportable) {
             this.isExportable = Objects.requireNonNull(isExportable);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

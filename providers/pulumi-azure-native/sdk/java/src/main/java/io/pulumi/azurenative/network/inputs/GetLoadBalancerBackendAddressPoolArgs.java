@@ -84,17 +84,17 @@ public final class GetLoadBalancerBackendAddressPoolArgs extends io.pulumi.resou
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setBackendAddressPoolName(String backendAddressPoolName) {
+        public Builder backendAddressPoolName(String backendAddressPoolName) {
             this.backendAddressPoolName = Objects.requireNonNull(backendAddressPoolName);
             return this;
         }
 
-        public Builder setLoadBalancerName(String loadBalancerName) {
+        public Builder loadBalancerName(String loadBalancerName) {
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

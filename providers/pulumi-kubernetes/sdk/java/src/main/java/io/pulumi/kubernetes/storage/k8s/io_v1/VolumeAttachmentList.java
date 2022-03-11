@@ -126,8 +126,8 @@ public class VolumeAttachmentList extends io.pulumi.resources.CustomResource {
     private static VolumeAttachmentListArgs makeArgs(VolumeAttachmentListArgs args) {
         var builder = args == null ? VolumeAttachmentListArgs.builder() : VolumeAttachmentListArgs.builder(args);
         return builder
-            .setApiVersion("storage.k8s.io/v1")
-            .setKind("VolumeAttachmentList")
+            .apiVersion("storage.k8s.io/v1")
+            .kind("VolumeAttachmentList")
             .build();
     }
 

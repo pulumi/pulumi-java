@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class InstanceAccessControlAttributeConfigurationProperties {
     private final List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes;
 
-    @OutputCustomType.Constructor({"accessControlAttributes"})
-    private InstanceAccessControlAttributeConfigurationProperties(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
+    @OutputCustomType.Constructor
+    private InstanceAccessControlAttributeConfigurationProperties(@OutputCustomType.Parameter("accessControlAttributes") List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
         this.accessControlAttributes = accessControlAttributes;
     }
 
@@ -41,7 +41,7 @@ public final class InstanceAccessControlAttributeConfigurationProperties {
     	      this.accessControlAttributes = defaults.accessControlAttributes;
         }
 
-        public Builder setAccessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
+        public Builder accessControlAttributes(List<InstanceAccessControlAttributeConfigurationAccessControlAttribute> accessControlAttributes) {
             this.accessControlAttributes = Objects.requireNonNull(accessControlAttributes);
             return this;
         }

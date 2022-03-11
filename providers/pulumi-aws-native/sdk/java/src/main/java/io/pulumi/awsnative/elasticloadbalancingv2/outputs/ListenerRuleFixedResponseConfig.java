@@ -15,11 +15,11 @@ public final class ListenerRuleFixedResponseConfig {
     private final @Nullable String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentType","messageBody","statusCode"})
+    @OutputCustomType.Constructor
     private ListenerRuleFixedResponseConfig(
-        @Nullable String contentType,
-        @Nullable String messageBody,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("messageBody") @Nullable String messageBody,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;
@@ -59,17 +59,17 @@ public final class ListenerRuleFixedResponseConfig {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setMessageBody(@Nullable String messageBody) {
+        public Builder messageBody(@Nullable String messageBody) {
             this.messageBody = messageBody;
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

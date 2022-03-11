@@ -29,11 +29,11 @@ public final class ImageUpdateTriggerResponse {
      */
     private final @Nullable String timestamp;
 
-    @OutputCustomType.Constructor({"id","images","timestamp"})
+    @OutputCustomType.Constructor
     private ImageUpdateTriggerResponse(
-        @Nullable String id,
-        @Nullable List<ImageDescriptorResponse> images,
-        @Nullable String timestamp) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("images") @Nullable List<ImageDescriptorResponse> images,
+        @OutputCustomType.Parameter("timestamp") @Nullable String timestamp) {
         this.id = id;
         this.images = images;
         this.timestamp = timestamp;
@@ -85,17 +85,17 @@ public final class ImageUpdateTriggerResponse {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setImages(@Nullable List<ImageDescriptorResponse> images) {
+        public Builder images(@Nullable List<ImageDescriptorResponse> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setTimestamp(@Nullable String timestamp) {
+        public Builder timestamp(@Nullable String timestamp) {
             this.timestamp = timestamp;
             return this;
         }

@@ -189,92 +189,92 @@ public final class GatewayAssociationState extends io.pulumi.resources.ResourceA
     	      this.vpnGatewayId = defaults.vpnGatewayId;
         }
 
-        public Builder setAllowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable Input<List<String>> allowedPrefixes) {
             this.allowedPrefixes = allowedPrefixes;
             return this;
         }
 
-        public Builder setAllowedPrefixes(@Nullable List<String> allowedPrefixes) {
+        public Builder allowedPrefixes(@Nullable List<String> allowedPrefixes) {
             this.allowedPrefixes = Input.ofNullable(allowedPrefixes);
             return this;
         }
 
-        public Builder setAssociatedGatewayId(@Nullable Input<String> associatedGatewayId) {
+        public Builder associatedGatewayId(@Nullable Input<String> associatedGatewayId) {
             this.associatedGatewayId = associatedGatewayId;
             return this;
         }
 
-        public Builder setAssociatedGatewayId(@Nullable String associatedGatewayId) {
+        public Builder associatedGatewayId(@Nullable String associatedGatewayId) {
             this.associatedGatewayId = Input.ofNullable(associatedGatewayId);
             return this;
         }
 
-        public Builder setAssociatedGatewayOwnerAccountId(@Nullable Input<String> associatedGatewayOwnerAccountId) {
+        public Builder associatedGatewayOwnerAccountId(@Nullable Input<String> associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = associatedGatewayOwnerAccountId;
             return this;
         }
 
-        public Builder setAssociatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
+        public Builder associatedGatewayOwnerAccountId(@Nullable String associatedGatewayOwnerAccountId) {
             this.associatedGatewayOwnerAccountId = Input.ofNullable(associatedGatewayOwnerAccountId);
             return this;
         }
 
-        public Builder setAssociatedGatewayType(@Nullable Input<String> associatedGatewayType) {
+        public Builder associatedGatewayType(@Nullable Input<String> associatedGatewayType) {
             this.associatedGatewayType = associatedGatewayType;
             return this;
         }
 
-        public Builder setAssociatedGatewayType(@Nullable String associatedGatewayType) {
+        public Builder associatedGatewayType(@Nullable String associatedGatewayType) {
             this.associatedGatewayType = Input.ofNullable(associatedGatewayType);
             return this;
         }
 
-        public Builder setDxGatewayAssociationId(@Nullable Input<String> dxGatewayAssociationId) {
+        public Builder dxGatewayAssociationId(@Nullable Input<String> dxGatewayAssociationId) {
             this.dxGatewayAssociationId = dxGatewayAssociationId;
             return this;
         }
 
-        public Builder setDxGatewayAssociationId(@Nullable String dxGatewayAssociationId) {
+        public Builder dxGatewayAssociationId(@Nullable String dxGatewayAssociationId) {
             this.dxGatewayAssociationId = Input.ofNullable(dxGatewayAssociationId);
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable Input<String> dxGatewayId) {
+        public Builder dxGatewayId(@Nullable Input<String> dxGatewayId) {
             this.dxGatewayId = dxGatewayId;
             return this;
         }
 
-        public Builder setDxGatewayId(@Nullable String dxGatewayId) {
+        public Builder dxGatewayId(@Nullable String dxGatewayId) {
             this.dxGatewayId = Input.ofNullable(dxGatewayId);
             return this;
         }
 
-        public Builder setDxGatewayOwnerAccountId(@Nullable Input<String> dxGatewayOwnerAccountId) {
+        public Builder dxGatewayOwnerAccountId(@Nullable Input<String> dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = dxGatewayOwnerAccountId;
             return this;
         }
 
-        public Builder setDxGatewayOwnerAccountId(@Nullable String dxGatewayOwnerAccountId) {
+        public Builder dxGatewayOwnerAccountId(@Nullable String dxGatewayOwnerAccountId) {
             this.dxGatewayOwnerAccountId = Input.ofNullable(dxGatewayOwnerAccountId);
             return this;
         }
 
-        public Builder setProposalId(@Nullable Input<String> proposalId) {
+        public Builder proposalId(@Nullable Input<String> proposalId) {
             this.proposalId = proposalId;
             return this;
         }
 
-        public Builder setProposalId(@Nullable String proposalId) {
+        public Builder proposalId(@Nullable String proposalId) {
             this.proposalId = Input.ofNullable(proposalId);
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable Input<String> vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable Input<String> vpnGatewayId) {
             this.vpnGatewayId = vpnGatewayId;
             return this;
         }
 
-        public Builder setVpnGatewayId(@Nullable String vpnGatewayId) {
+        public Builder vpnGatewayId(@Nullable String vpnGatewayId) {
             this.vpnGatewayId = Input.ofNullable(vpnGatewayId);
             return this;
         }

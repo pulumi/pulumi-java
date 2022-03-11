@@ -18,11 +18,11 @@ public final class GetTopicRuleResult {
     private final @Nullable List<TopicRuleTag> tags;
     private final @Nullable TopicRulePayload topicRulePayload;
 
-    @OutputCustomType.Constructor({"arn","tags","topicRulePayload"})
+    @OutputCustomType.Constructor
     private GetTopicRuleResult(
-        @Nullable String arn,
-        @Nullable List<TopicRuleTag> tags,
-        @Nullable TopicRulePayload topicRulePayload) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<TopicRuleTag> tags,
+        @OutputCustomType.Parameter("topicRulePayload") @Nullable TopicRulePayload topicRulePayload) {
         this.arn = arn;
         this.tags = tags;
         this.topicRulePayload = topicRulePayload;
@@ -62,17 +62,17 @@ public final class GetTopicRuleResult {
     	      this.topicRulePayload = defaults.topicRulePayload;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TopicRuleTag> tags) {
+        public Builder tags(@Nullable List<TopicRuleTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTopicRulePayload(@Nullable TopicRulePayload topicRulePayload) {
+        public Builder topicRulePayload(@Nullable TopicRulePayload topicRulePayload) {
             this.topicRulePayload = topicRulePayload;
             return this;
         }

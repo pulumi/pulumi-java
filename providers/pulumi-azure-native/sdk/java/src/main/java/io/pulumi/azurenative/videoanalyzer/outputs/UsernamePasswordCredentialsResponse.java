@@ -26,11 +26,11 @@ public final class UsernamePasswordCredentialsResponse {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"password","type","username"})
+    @OutputCustomType.Constructor
     private UsernamePasswordCredentialsResponse(
-        String password,
-        String type,
-        String username) {
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") String username) {
         this.password = password;
         this.type = type;
         this.username = username;
@@ -83,17 +83,17 @@ public final class UsernamePasswordCredentialsResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

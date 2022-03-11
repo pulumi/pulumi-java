@@ -15,10 +15,10 @@ public final class DataSourceWebCrawlerUrls {
     private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
     private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
 
-    @OutputCustomType.Constructor({"seedUrlConfiguration","siteMapsConfiguration"})
+    @OutputCustomType.Constructor
     private DataSourceWebCrawlerUrls(
-        @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
-        @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
+        @OutputCustomType.Parameter("seedUrlConfiguration") @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration,
+        @OutputCustomType.Parameter("siteMapsConfiguration") @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
         this.seedUrlConfiguration = seedUrlConfiguration;
         this.siteMapsConfiguration = siteMapsConfiguration;
     }
@@ -52,12 +52,12 @@ public final class DataSourceWebCrawlerUrls {
     	      this.siteMapsConfiguration = defaults.siteMapsConfiguration;
         }
 
-        public Builder setSeedUrlConfiguration(@Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration) {
+        public Builder seedUrlConfiguration(@Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration) {
             this.seedUrlConfiguration = seedUrlConfiguration;
             return this;
         }
 
-        public Builder setSiteMapsConfiguration(@Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
+        public Builder siteMapsConfiguration(@Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration) {
             this.siteMapsConfiguration = siteMapsConfiguration;
             return this;
         }

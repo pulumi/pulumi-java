@@ -58,17 +58,17 @@ public final class HealthProbeSettingsModelResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"enabledState","healthProbeMethod","id","intervalInSeconds","name","path","protocol","resourceState","type"})
+    @OutputCustomType.Constructor
     private HealthProbeSettingsModelResponse(
-        @Nullable String enabledState,
-        @Nullable String healthProbeMethod,
-        @Nullable String id,
-        @Nullable Integer intervalInSeconds,
-        @Nullable String name,
-        @Nullable String path,
-        @Nullable String protocol,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("healthProbeMethod") @Nullable String healthProbeMethod,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.enabledState = enabledState;
         this.healthProbeMethod = healthProbeMethod;
         this.id = id;
@@ -180,47 +180,47 @@ public final class HealthProbeSettingsModelResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setHealthProbeMethod(@Nullable String healthProbeMethod) {
+        public Builder healthProbeMethod(@Nullable String healthProbeMethod) {
             this.healthProbeMethod = healthProbeMethod;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

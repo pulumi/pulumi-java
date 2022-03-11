@@ -42,14 +42,14 @@ public final class RewriteResponse {
      */
     private final CloudRunRewriteResponse run;
 
-    @OutputCustomType.Constructor({"dynamicLinks","function","glob","path","regex","run"})
+    @OutputCustomType.Constructor
     private RewriteResponse(
-        Boolean dynamicLinks,
-        String function,
-        String glob,
-        String path,
-        String regex,
-        CloudRunRewriteResponse run) {
+        @OutputCustomType.Parameter("dynamicLinks") Boolean dynamicLinks,
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("glob") String glob,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("regex") String regex,
+        @OutputCustomType.Parameter("run") CloudRunRewriteResponse run) {
         this.dynamicLinks = dynamicLinks;
         this.function = function;
         this.glob = glob;
@@ -131,32 +131,32 @@ public final class RewriteResponse {
     	      this.run = defaults.run;
         }
 
-        public Builder setDynamicLinks(Boolean dynamicLinks) {
+        public Builder dynamicLinks(Boolean dynamicLinks) {
             this.dynamicLinks = Objects.requireNonNull(dynamicLinks);
             return this;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setGlob(String glob) {
+        public Builder glob(String glob) {
             this.glob = Objects.requireNonNull(glob);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRegex(String regex) {
+        public Builder regex(String regex) {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
 
-        public Builder setRun(CloudRunRewriteResponse run) {
+        public Builder run(CloudRunRewriteResponse run) {
             this.run = Objects.requireNonNull(run);
             return this;
         }

@@ -84,17 +84,17 @@ public final class GetAccessControlRecordArgs extends io.pulumi.resources.Invoke
     	      this.resourceGroupName = defaults.resourceGroupName;
         }
 
-        public Builder setAccessControlRecordName(String accessControlRecordName) {
+        public Builder accessControlRecordName(String accessControlRecordName) {
             this.accessControlRecordName = Objects.requireNonNull(accessControlRecordName);
             return this;
         }
 
-        public Builder setManagerName(String managerName) {
+        public Builder managerName(String managerName) {
             this.managerName = Objects.requireNonNull(managerName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }

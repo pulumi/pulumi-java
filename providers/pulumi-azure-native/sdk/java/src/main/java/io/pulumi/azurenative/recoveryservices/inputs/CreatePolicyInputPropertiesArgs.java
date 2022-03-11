@@ -65,12 +65,12 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
     	      this.providerSpecificInput = defaults.providerSpecificInput;
         }
 
-        public Builder setProviderSpecificInput(@Nullable Input<Object> providerSpecificInput) {
+        public Builder providerSpecificInput(@Nullable Input<Object> providerSpecificInput) {
             this.providerSpecificInput = providerSpecificInput;
             return this;
         }
 
-        public Builder setProviderSpecificInput(@Nullable Object providerSpecificInput) {
+        public Builder providerSpecificInput(@Nullable Object providerSpecificInput) {
             this.providerSpecificInput = Input.ofNullable(providerSpecificInput);
             return this;
         }

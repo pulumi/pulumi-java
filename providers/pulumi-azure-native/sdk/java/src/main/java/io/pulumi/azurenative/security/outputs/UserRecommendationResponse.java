@@ -22,10 +22,10 @@ public final class UserRecommendationResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"recommendationAction","username"})
+    @OutputCustomType.Constructor
     private UserRecommendationResponse(
-        @Nullable String recommendationAction,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("recommendationAction") @Nullable String recommendationAction,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.recommendationAction = recommendationAction;
         this.username = username;
     }
@@ -67,12 +67,12 @@ public final class UserRecommendationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setRecommendationAction(@Nullable String recommendationAction) {
+        public Builder recommendationAction(@Nullable String recommendationAction) {
             this.recommendationAction = recommendationAction;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

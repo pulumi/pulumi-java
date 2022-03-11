@@ -25,11 +25,11 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
      */
     private final String skuId;
 
-    @OutputCustomType.Constructor({"productId","provisioningId","skuId"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1ProvisionedServiceResponse(
-        String productId,
-        String provisioningId,
-        String skuId) {
+        @OutputCustomType.Parameter("productId") String productId,
+        @OutputCustomType.Parameter("provisioningId") String provisioningId,
+        @OutputCustomType.Parameter("skuId") String skuId) {
         this.productId = productId;
         this.provisioningId = provisioningId;
         this.skuId = skuId;
@@ -81,17 +81,17 @@ public final class GoogleCloudChannelV1ProvisionedServiceResponse {
     	      this.skuId = defaults.skuId;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder productId(String productId) {
             this.productId = Objects.requireNonNull(productId);
             return this;
         }
 
-        public Builder setProvisioningId(String provisioningId) {
+        public Builder provisioningId(String provisioningId) {
             this.provisioningId = Objects.requireNonNull(provisioningId);
             return this;
         }
 
-        public Builder setSkuId(String skuId) {
+        public Builder skuId(String skuId) {
             this.skuId = Objects.requireNonNull(skuId);
             return this;
         }

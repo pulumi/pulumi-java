@@ -27,11 +27,11 @@ public final class SourceConfigResponse {
      */
     private final String sourceConnectionProfile;
 
-    @OutputCustomType.Constructor({"mysqlSourceConfig","oracleSourceConfig","sourceConnectionProfile"})
+    @OutputCustomType.Constructor
     private SourceConfigResponse(
-        MysqlSourceConfigResponse mysqlSourceConfig,
-        OracleSourceConfigResponse oracleSourceConfig,
-        String sourceConnectionProfile) {
+        @OutputCustomType.Parameter("mysqlSourceConfig") MysqlSourceConfigResponse mysqlSourceConfig,
+        @OutputCustomType.Parameter("oracleSourceConfig") OracleSourceConfigResponse oracleSourceConfig,
+        @OutputCustomType.Parameter("sourceConnectionProfile") String sourceConnectionProfile) {
         this.mysqlSourceConfig = mysqlSourceConfig;
         this.oracleSourceConfig = oracleSourceConfig;
         this.sourceConnectionProfile = sourceConnectionProfile;
@@ -83,17 +83,17 @@ public final class SourceConfigResponse {
     	      this.sourceConnectionProfile = defaults.sourceConnectionProfile;
         }
 
-        public Builder setMysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
+        public Builder mysqlSourceConfig(MysqlSourceConfigResponse mysqlSourceConfig) {
             this.mysqlSourceConfig = Objects.requireNonNull(mysqlSourceConfig);
             return this;
         }
 
-        public Builder setOracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
+        public Builder oracleSourceConfig(OracleSourceConfigResponse oracleSourceConfig) {
             this.oracleSourceConfig = Objects.requireNonNull(oracleSourceConfig);
             return this;
         }
 
-        public Builder setSourceConnectionProfile(String sourceConnectionProfile) {
+        public Builder sourceConnectionProfile(String sourceConnectionProfile) {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }

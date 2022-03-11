@@ -68,19 +68,19 @@ public final class EdifactFramingSettingsResponse {
      */
     private final @Nullable String serviceCodeListDirectoryVersion;
 
-    @OutputCustomType.Constructor({"characterEncoding","characterSet","componentSeparator","dataElementSeparator","decimalPointIndicator","protocolVersion","releaseIndicator","repetitionSeparator","segmentTerminator","segmentTerminatorSuffix","serviceCodeListDirectoryVersion"})
+    @OutputCustomType.Constructor
     private EdifactFramingSettingsResponse(
-        @Nullable String characterEncoding,
-        String characterSet,
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        String decimalPointIndicator,
-        Integer protocolVersion,
-        Integer releaseIndicator,
-        Integer repetitionSeparator,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String serviceCodeListDirectoryVersion) {
+        @OutputCustomType.Parameter("characterEncoding") @Nullable String characterEncoding,
+        @OutputCustomType.Parameter("characterSet") String characterSet,
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("decimalPointIndicator") String decimalPointIndicator,
+        @OutputCustomType.Parameter("protocolVersion") Integer protocolVersion,
+        @OutputCustomType.Parameter("releaseIndicator") Integer releaseIndicator,
+        @OutputCustomType.Parameter("repetitionSeparator") Integer repetitionSeparator,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @OutputCustomType.Parameter("serviceCodeListDirectoryVersion") @Nullable String serviceCodeListDirectoryVersion) {
         this.characterEncoding = characterEncoding;
         this.characterSet = characterSet;
         this.componentSeparator = componentSeparator;
@@ -212,57 +212,57 @@ public final class EdifactFramingSettingsResponse {
     	      this.serviceCodeListDirectoryVersion = defaults.serviceCodeListDirectoryVersion;
         }
 
-        public Builder setCharacterEncoding(@Nullable String characterEncoding) {
+        public Builder characterEncoding(@Nullable String characterEncoding) {
             this.characterEncoding = characterEncoding;
             return this;
         }
 
-        public Builder setCharacterSet(String characterSet) {
+        public Builder characterSet(String characterSet) {
             this.characterSet = Objects.requireNonNull(characterSet);
             return this;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setDecimalPointIndicator(String decimalPointIndicator) {
+        public Builder decimalPointIndicator(String decimalPointIndicator) {
             this.decimalPointIndicator = Objects.requireNonNull(decimalPointIndicator);
             return this;
         }
 
-        public Builder setProtocolVersion(Integer protocolVersion) {
+        public Builder protocolVersion(Integer protocolVersion) {
             this.protocolVersion = Objects.requireNonNull(protocolVersion);
             return this;
         }
 
-        public Builder setReleaseIndicator(Integer releaseIndicator) {
+        public Builder releaseIndicator(Integer releaseIndicator) {
             this.releaseIndicator = Objects.requireNonNull(releaseIndicator);
             return this;
         }
 
-        public Builder setRepetitionSeparator(Integer repetitionSeparator) {
+        public Builder repetitionSeparator(Integer repetitionSeparator) {
             this.repetitionSeparator = Objects.requireNonNull(repetitionSeparator);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setServiceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
+        public Builder serviceCodeListDirectoryVersion(@Nullable String serviceCodeListDirectoryVersion) {
             this.serviceCodeListDirectoryVersion = serviceCodeListDirectoryVersion;
             return this;
         }

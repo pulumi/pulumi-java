@@ -42,14 +42,14 @@ public final class GetDomainResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"domainName","domainRedirect","provisioning","site","status","updateTime"})
+    @OutputCustomType.Constructor
     private GetDomainResult(
-        String domainName,
-        DomainRedirectResponse domainRedirect,
-        DomainProvisioningResponse provisioning,
-        String site,
-        String status,
-        String updateTime) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("domainRedirect") DomainRedirectResponse domainRedirect,
+        @OutputCustomType.Parameter("provisioning") DomainProvisioningResponse provisioning,
+        @OutputCustomType.Parameter("site") String site,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.domainName = domainName;
         this.domainRedirect = domainRedirect;
         this.provisioning = provisioning;
@@ -131,32 +131,32 @@ public final class GetDomainResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setDomainRedirect(DomainRedirectResponse domainRedirect) {
+        public Builder domainRedirect(DomainRedirectResponse domainRedirect) {
             this.domainRedirect = Objects.requireNonNull(domainRedirect);
             return this;
         }
 
-        public Builder setProvisioning(DomainProvisioningResponse provisioning) {
+        public Builder provisioning(DomainProvisioningResponse provisioning) {
             this.provisioning = Objects.requireNonNull(provisioning);
             return this;
         }
 
-        public Builder setSite(String site) {
+        public Builder site(String site) {
             this.site = Objects.requireNonNull(site);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

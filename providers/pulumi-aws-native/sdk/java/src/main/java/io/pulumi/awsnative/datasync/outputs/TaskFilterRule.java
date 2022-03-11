@@ -23,10 +23,10 @@ public final class TaskFilterRule {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"filterType","value"})
+    @OutputCustomType.Constructor
     private TaskFilterRule(
-        @Nullable TaskFilterRuleFilterType filterType,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("filterType") @Nullable TaskFilterRuleFilterType filterType,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.filterType = filterType;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class TaskFilterRule {
     	      this.value = defaults.value;
         }
 
-        public Builder setFilterType(@Nullable TaskFilterRuleFilterType filterType) {
+        public Builder filterType(@Nullable TaskFilterRuleFilterType filterType) {
             this.filterType = filterType;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

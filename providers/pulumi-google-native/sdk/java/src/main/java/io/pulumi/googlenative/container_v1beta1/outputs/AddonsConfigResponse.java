@@ -81,20 +81,20 @@ public final class AddonsConfigResponse {
      */
     private final NetworkPolicyConfigResponse networkPolicyConfig;
 
-    @OutputCustomType.Constructor({"cloudRunConfig","configConnectorConfig","dnsCacheConfig","gcePersistentDiskCsiDriverConfig","gcpFilestoreCsiDriverConfig","gkeBackupAgentConfig","horizontalPodAutoscaling","httpLoadBalancing","istioConfig","kalmConfig","kubernetesDashboard","networkPolicyConfig"})
+    @OutputCustomType.Constructor
     private AddonsConfigResponse(
-        CloudRunConfigResponse cloudRunConfig,
-        ConfigConnectorConfigResponse configConnectorConfig,
-        DnsCacheConfigResponse dnsCacheConfig,
-        GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
-        GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
-        GkeBackupAgentConfigResponse gkeBackupAgentConfig,
-        HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
-        HttpLoadBalancingResponse httpLoadBalancing,
-        IstioConfigResponse istioConfig,
-        KalmConfigResponse kalmConfig,
-        KubernetesDashboardResponse kubernetesDashboard,
-        NetworkPolicyConfigResponse networkPolicyConfig) {
+        @OutputCustomType.Parameter("cloudRunConfig") CloudRunConfigResponse cloudRunConfig,
+        @OutputCustomType.Parameter("configConnectorConfig") ConfigConnectorConfigResponse configConnectorConfig,
+        @OutputCustomType.Parameter("dnsCacheConfig") DnsCacheConfigResponse dnsCacheConfig,
+        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfig") GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig,
+        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfig") GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig,
+        @OutputCustomType.Parameter("gkeBackupAgentConfig") GkeBackupAgentConfigResponse gkeBackupAgentConfig,
+        @OutputCustomType.Parameter("horizontalPodAutoscaling") HorizontalPodAutoscalingResponse horizontalPodAutoscaling,
+        @OutputCustomType.Parameter("httpLoadBalancing") HttpLoadBalancingResponse httpLoadBalancing,
+        @OutputCustomType.Parameter("istioConfig") IstioConfigResponse istioConfig,
+        @OutputCustomType.Parameter("kalmConfig") KalmConfigResponse kalmConfig,
+        @OutputCustomType.Parameter("kubernetesDashboard") KubernetesDashboardResponse kubernetesDashboard,
+        @OutputCustomType.Parameter("networkPolicyConfig") NetworkPolicyConfigResponse networkPolicyConfig) {
         this.cloudRunConfig = cloudRunConfig;
         this.configConnectorConfig = configConnectorConfig;
         this.dnsCacheConfig = dnsCacheConfig;
@@ -236,62 +236,62 @@ public final class AddonsConfigResponse {
     	      this.networkPolicyConfig = defaults.networkPolicyConfig;
         }
 
-        public Builder setCloudRunConfig(CloudRunConfigResponse cloudRunConfig) {
+        public Builder cloudRunConfig(CloudRunConfigResponse cloudRunConfig) {
             this.cloudRunConfig = Objects.requireNonNull(cloudRunConfig);
             return this;
         }
 
-        public Builder setConfigConnectorConfig(ConfigConnectorConfigResponse configConnectorConfig) {
+        public Builder configConnectorConfig(ConfigConnectorConfigResponse configConnectorConfig) {
             this.configConnectorConfig = Objects.requireNonNull(configConnectorConfig);
             return this;
         }
 
-        public Builder setDnsCacheConfig(DnsCacheConfigResponse dnsCacheConfig) {
+        public Builder dnsCacheConfig(DnsCacheConfigResponse dnsCacheConfig) {
             this.dnsCacheConfig = Objects.requireNonNull(dnsCacheConfig);
             return this;
         }
 
-        public Builder setGcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig) {
+        public Builder gcePersistentDiskCsiDriverConfig(GcePersistentDiskCsiDriverConfigResponse gcePersistentDiskCsiDriverConfig) {
             this.gcePersistentDiskCsiDriverConfig = Objects.requireNonNull(gcePersistentDiskCsiDriverConfig);
             return this;
         }
 
-        public Builder setGcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig) {
+        public Builder gcpFilestoreCsiDriverConfig(GcpFilestoreCsiDriverConfigResponse gcpFilestoreCsiDriverConfig) {
             this.gcpFilestoreCsiDriverConfig = Objects.requireNonNull(gcpFilestoreCsiDriverConfig);
             return this;
         }
 
-        public Builder setGkeBackupAgentConfig(GkeBackupAgentConfigResponse gkeBackupAgentConfig) {
+        public Builder gkeBackupAgentConfig(GkeBackupAgentConfigResponse gkeBackupAgentConfig) {
             this.gkeBackupAgentConfig = Objects.requireNonNull(gkeBackupAgentConfig);
             return this;
         }
 
-        public Builder setHorizontalPodAutoscaling(HorizontalPodAutoscalingResponse horizontalPodAutoscaling) {
+        public Builder horizontalPodAutoscaling(HorizontalPodAutoscalingResponse horizontalPodAutoscaling) {
             this.horizontalPodAutoscaling = Objects.requireNonNull(horizontalPodAutoscaling);
             return this;
         }
 
-        public Builder setHttpLoadBalancing(HttpLoadBalancingResponse httpLoadBalancing) {
+        public Builder httpLoadBalancing(HttpLoadBalancingResponse httpLoadBalancing) {
             this.httpLoadBalancing = Objects.requireNonNull(httpLoadBalancing);
             return this;
         }
 
-        public Builder setIstioConfig(IstioConfigResponse istioConfig) {
+        public Builder istioConfig(IstioConfigResponse istioConfig) {
             this.istioConfig = Objects.requireNonNull(istioConfig);
             return this;
         }
 
-        public Builder setKalmConfig(KalmConfigResponse kalmConfig) {
+        public Builder kalmConfig(KalmConfigResponse kalmConfig) {
             this.kalmConfig = Objects.requireNonNull(kalmConfig);
             return this;
         }
 
-        public Builder setKubernetesDashboard(KubernetesDashboardResponse kubernetesDashboard) {
+        public Builder kubernetesDashboard(KubernetesDashboardResponse kubernetesDashboard) {
             this.kubernetesDashboard = Objects.requireNonNull(kubernetesDashboard);
             return this;
         }
 
-        public Builder setNetworkPolicyConfig(NetworkPolicyConfigResponse networkPolicyConfig) {
+        public Builder networkPolicyConfig(NetworkPolicyConfigResponse networkPolicyConfig) {
             this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
             return this;
         }

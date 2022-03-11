@@ -23,10 +23,10 @@ public final class KubernetesRoleStorageResponse {
      */
     private final List<KubernetesRoleStorageClassInfoResponse> storageClasses;
 
-    @OutputCustomType.Constructor({"endpoints","storageClasses"})
+    @OutputCustomType.Constructor
     private KubernetesRoleStorageResponse(
-        @Nullable List<MountPointMapResponse> endpoints,
-        List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
+        @OutputCustomType.Parameter("endpoints") @Nullable List<MountPointMapResponse> endpoints,
+        @OutputCustomType.Parameter("storageClasses") List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
         this.endpoints = endpoints;
         this.storageClasses = storageClasses;
     }
@@ -68,12 +68,12 @@ public final class KubernetesRoleStorageResponse {
     	      this.storageClasses = defaults.storageClasses;
         }
 
-        public Builder setEndpoints(@Nullable List<MountPointMapResponse> endpoints) {
+        public Builder endpoints(@Nullable List<MountPointMapResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setStorageClasses(List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
+        public Builder storageClasses(List<KubernetesRoleStorageClassInfoResponse> storageClasses) {
             this.storageClasses = Objects.requireNonNull(storageClasses);
             return this;
         }

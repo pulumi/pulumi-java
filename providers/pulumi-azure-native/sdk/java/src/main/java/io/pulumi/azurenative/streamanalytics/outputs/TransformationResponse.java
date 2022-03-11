@@ -43,14 +43,14 @@ public final class TransformationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","name","query","streamingUnits","type"})
+    @OutputCustomType.Constructor
     private TransformationResponse(
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable String query,
-        @Nullable Integer streamingUnits,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("query") @Nullable String query,
+        @OutputCustomType.Parameter("streamingUnits") @Nullable Integer streamingUnits,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.name = name;
@@ -132,32 +132,32 @@ public final class TransformationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = query;
             return this;
         }
 
-        public Builder setStreamingUnits(@Nullable Integer streamingUnits) {
+        public Builder streamingUnits(@Nullable Integer streamingUnits) {
             this.streamingUnits = streamingUnits;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

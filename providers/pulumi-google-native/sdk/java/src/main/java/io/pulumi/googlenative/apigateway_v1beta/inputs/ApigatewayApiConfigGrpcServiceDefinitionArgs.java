@@ -75,22 +75,22 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
     	      this.source = defaults.source;
         }
 
-        public Builder setFileDescriptorSet(@Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet) {
+        public Builder fileDescriptorSet(@Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet) {
             this.fileDescriptorSet = fileDescriptorSet;
             return this;
         }
 
-        public Builder setFileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
+        public Builder fileDescriptorSet(@Nullable ApigatewayApiConfigFileArgs fileDescriptorSet) {
             this.fileDescriptorSet = Input.ofNullable(fileDescriptorSet);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<List<ApigatewayApiConfigFileArgs>> source) {
+        public Builder source(@Nullable Input<List<ApigatewayApiConfigFileArgs>> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable List<ApigatewayApiConfigFileArgs> source) {
+        public Builder source(@Nullable List<ApigatewayApiConfigFileArgs> source) {
             this.source = Input.ofNullable(source);
             return this;
         }

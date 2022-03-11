@@ -61,18 +61,18 @@ public final class GetKeyResult {
      */
     private final String validBeforeTime;
 
-    @OutputCustomType.Constructor({"disabled","keyAlgorithm","keyOrigin","keyType","name","privateKeyData","privateKeyType","publicKeyData","validAfterTime","validBeforeTime"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        Boolean disabled,
-        String keyAlgorithm,
-        String keyOrigin,
-        String keyType,
-        String name,
-        String privateKeyData,
-        String privateKeyType,
-        String publicKeyData,
-        String validAfterTime,
-        String validBeforeTime) {
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @OutputCustomType.Parameter("keyOrigin") String keyOrigin,
+        @OutputCustomType.Parameter("keyType") String keyType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateKeyData") String privateKeyData,
+        @OutputCustomType.Parameter("privateKeyType") String privateKeyType,
+        @OutputCustomType.Parameter("publicKeyData") String publicKeyData,
+        @OutputCustomType.Parameter("validAfterTime") String validAfterTime,
+        @OutputCustomType.Parameter("validBeforeTime") String validBeforeTime) {
         this.disabled = disabled;
         this.keyAlgorithm = keyAlgorithm;
         this.keyOrigin = keyOrigin;
@@ -194,52 +194,52 @@ public final class GetKeyResult {
     	      this.validBeforeTime = defaults.validBeforeTime;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setKeyAlgorithm(String keyAlgorithm) {
+        public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
-        public Builder setKeyOrigin(String keyOrigin) {
+        public Builder keyOrigin(String keyOrigin) {
             this.keyOrigin = Objects.requireNonNull(keyOrigin);
             return this;
         }
 
-        public Builder setKeyType(String keyType) {
+        public Builder keyType(String keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateKeyData(String privateKeyData) {
+        public Builder privateKeyData(String privateKeyData) {
             this.privateKeyData = Objects.requireNonNull(privateKeyData);
             return this;
         }
 
-        public Builder setPrivateKeyType(String privateKeyType) {
+        public Builder privateKeyType(String privateKeyType) {
             this.privateKeyType = Objects.requireNonNull(privateKeyType);
             return this;
         }
 
-        public Builder setPublicKeyData(String publicKeyData) {
+        public Builder publicKeyData(String publicKeyData) {
             this.publicKeyData = Objects.requireNonNull(publicKeyData);
             return this;
         }
 
-        public Builder setValidAfterTime(String validAfterTime) {
+        public Builder validAfterTime(String validAfterTime) {
             this.validAfterTime = Objects.requireNonNull(validAfterTime);
             return this;
         }
 
-        public Builder setValidBeforeTime(String validBeforeTime) {
+        public Builder validBeforeTime(String validBeforeTime) {
             this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
             return this;
         }

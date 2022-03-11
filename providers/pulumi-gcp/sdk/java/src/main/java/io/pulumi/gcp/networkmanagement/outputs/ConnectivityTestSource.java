@@ -54,14 +54,14 @@ public final class ConnectivityTestSource {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor({"instance","ipAddress","network","networkType","port","projectId"})
+    @OutputCustomType.Constructor
     private ConnectivityTestSource(
-        @Nullable String instance,
-        @Nullable String ipAddress,
-        @Nullable String network,
-        @Nullable String networkType,
-        @Nullable Integer port,
-        @Nullable String projectId) {
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("network") @Nullable String network,
+        @OutputCustomType.Parameter("networkType") @Nullable String networkType,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
         this.instance = instance;
         this.ipAddress = ipAddress;
         this.network = network;
@@ -154,32 +154,32 @@ public final class ConnectivityTestSource {
     	      this.projectId = defaults.projectId;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetworkType(@Nullable String networkType) {
+        public Builder networkType(@Nullable String networkType) {
             this.networkType = networkType;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }

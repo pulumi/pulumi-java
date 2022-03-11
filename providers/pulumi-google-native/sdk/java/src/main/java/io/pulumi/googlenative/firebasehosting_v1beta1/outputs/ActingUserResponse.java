@@ -20,10 +20,10 @@ public final class ActingUserResponse {
      */
     private final String imageUrl;
 
-    @OutputCustomType.Constructor({"email","imageUrl"})
+    @OutputCustomType.Constructor
     private ActingUserResponse(
-        String email,
-        String imageUrl) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("imageUrl") String imageUrl) {
         this.email = email;
         this.imageUrl = imageUrl;
     }
@@ -65,12 +65,12 @@ public final class ActingUserResponse {
     	      this.imageUrl = defaults.imageUrl;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setImageUrl(String imageUrl) {
+        public Builder imageUrl(String imageUrl) {
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }

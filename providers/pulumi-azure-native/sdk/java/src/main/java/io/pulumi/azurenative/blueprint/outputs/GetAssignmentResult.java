@@ -88,22 +88,22 @@ public final class GetAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"blueprintId","description","displayName","id","identity","location","locks","name","parameters","provisioningState","resourceGroups","scope","status","type"})
+    @OutputCustomType.Constructor
     private GetAssignmentResult(
-        @Nullable String blueprintId,
-        @Nullable String description,
-        @Nullable String displayName,
-        String id,
-        ManagedServiceIdentityResponse identity,
-        String location,
-        @Nullable AssignmentLockSettingsResponse locks,
-        String name,
-        Map<String,ParameterValueResponse> parameters,
-        String provisioningState,
-        Map<String,ResourceGroupValueResponse> resourceGroups,
-        @Nullable String scope,
-        AssignmentStatusResponse status,
-        String type) {
+        @OutputCustomType.Parameter("blueprintId") @Nullable String blueprintId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locks") @Nullable AssignmentLockSettingsResponse locks,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") Map<String,ParameterValueResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceGroups") Map<String,ResourceGroupValueResponse> resourceGroups,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("status") AssignmentStatusResponse status,
+        @OutputCustomType.Parameter("type") String type) {
         this.blueprintId = blueprintId;
         this.description = description;
         this.displayName = displayName;
@@ -265,72 +265,72 @@ public final class GetAssignmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBlueprintId(@Nullable String blueprintId) {
+        public Builder blueprintId(@Nullable String blueprintId) {
             this.blueprintId = blueprintId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(ManagedServiceIdentityResponse identity) {
+        public Builder identity(ManagedServiceIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocks(@Nullable AssignmentLockSettingsResponse locks) {
+        public Builder locks(@Nullable AssignmentLockSettingsResponse locks) {
             this.locks = locks;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(Map<String,ParameterValueResponse> parameters) {
+        public Builder parameters(Map<String,ParameterValueResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceGroups(Map<String,ResourceGroupValueResponse> resourceGroups) {
+        public Builder resourceGroups(Map<String,ResourceGroupValueResponse> resourceGroups) {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setStatus(AssignmentStatusResponse status) {
+        public Builder status(AssignmentStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

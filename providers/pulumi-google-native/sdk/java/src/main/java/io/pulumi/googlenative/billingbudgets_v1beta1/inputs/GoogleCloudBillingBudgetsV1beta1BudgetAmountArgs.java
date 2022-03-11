@@ -75,22 +75,22 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
     	      this.specifiedAmount = defaults.specifiedAmount;
         }
 
-        public Builder setLastPeriodAmount(@Nullable Input<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable Input<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount) {
             this.lastPeriodAmount = lastPeriodAmount;
             return this;
         }
 
-        public Builder setLastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs lastPeriodAmount) {
+        public Builder lastPeriodAmount(@Nullable GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs lastPeriodAmount) {
             this.lastPeriodAmount = Input.ofNullable(lastPeriodAmount);
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
+        public Builder specifiedAmount(@Nullable Input<GoogleTypeMoneyArgs> specifiedAmount) {
             this.specifiedAmount = specifiedAmount;
             return this;
         }
 
-        public Builder setSpecifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
+        public Builder specifiedAmount(@Nullable GoogleTypeMoneyArgs specifiedAmount) {
             this.specifiedAmount = Input.ofNullable(specifiedAmount);
             return this;
         }

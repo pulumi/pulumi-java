@@ -15,8 +15,8 @@ public final class SecurityConfigResponse {
      */
     private final KerberosConfigResponse kerberosConfig;
 
-    @OutputCustomType.Constructor({"kerberosConfig"})
-    private SecurityConfigResponse(KerberosConfigResponse kerberosConfig) {
+    @OutputCustomType.Constructor
+    private SecurityConfigResponse(@OutputCustomType.Parameter("kerberosConfig") KerberosConfigResponse kerberosConfig) {
         this.kerberosConfig = kerberosConfig;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityConfigResponse {
     	      this.kerberosConfig = defaults.kerberosConfig;
         }
 
-        public Builder setKerberosConfig(KerberosConfigResponse kerberosConfig) {
+        public Builder kerberosConfig(KerberosConfigResponse kerberosConfig) {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }

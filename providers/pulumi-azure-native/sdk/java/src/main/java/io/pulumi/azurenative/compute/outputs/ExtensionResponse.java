@@ -23,10 +23,10 @@ public final class ExtensionResponse {
      */
     private final @Nullable CloudServiceExtensionPropertiesResponse properties;
 
-    @OutputCustomType.Constructor({"name","properties"})
+    @OutputCustomType.Constructor
     private ExtensionResponse(
-        @Nullable String name,
-        @Nullable CloudServiceExtensionPropertiesResponse properties) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") @Nullable CloudServiceExtensionPropertiesResponse properties) {
         this.name = name;
         this.properties = properties;
     }
@@ -68,12 +68,12 @@ public final class ExtensionResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProperties(@Nullable CloudServiceExtensionPropertiesResponse properties) {
+        public Builder properties(@Nullable CloudServiceExtensionPropertiesResponse properties) {
             this.properties = properties;
             return this;
         }

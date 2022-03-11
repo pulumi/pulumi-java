@@ -15,10 +15,10 @@ public final class AssessmentRole {
     private final @Nullable String roleArn;
     private final @Nullable AssessmentRoleType roleType;
 
-    @OutputCustomType.Constructor({"roleArn","roleType"})
+    @OutputCustomType.Constructor
     private AssessmentRole(
-        @Nullable String roleArn,
-        @Nullable AssessmentRoleType roleType) {
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("roleType") @Nullable AssessmentRoleType roleType) {
         this.roleArn = roleArn;
         this.roleType = roleType;
     }
@@ -52,12 +52,12 @@ public final class AssessmentRole {
     	      this.roleType = defaults.roleType;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleType(@Nullable AssessmentRoleType roleType) {
+        public Builder roleType(@Nullable AssessmentRoleType roleType) {
             this.roleType = roleType;
             return this;
         }

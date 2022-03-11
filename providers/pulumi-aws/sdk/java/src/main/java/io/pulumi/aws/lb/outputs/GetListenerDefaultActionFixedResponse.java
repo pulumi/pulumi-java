@@ -13,11 +13,11 @@ public final class GetListenerDefaultActionFixedResponse {
     private final String messageBody;
     private final String statusCode;
 
-    @OutputCustomType.Constructor({"contentType","messageBody","statusCode"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionFixedResponse(
-        String contentType,
-        String messageBody,
-        String statusCode) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("messageBody") String messageBody,
+        @OutputCustomType.Parameter("statusCode") String statusCode) {
         this.contentType = contentType;
         this.messageBody = messageBody;
         this.statusCode = statusCode;
@@ -57,17 +57,17 @@ public final class GetListenerDefaultActionFixedResponse {
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setMessageBody(String messageBody) {
+        public Builder messageBody(String messageBody) {
             this.messageBody = Objects.requireNonNull(messageBody);
             return this;
         }
 
-        public Builder setStatusCode(String statusCode) {
+        public Builder statusCode(String statusCode) {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }

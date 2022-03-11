@@ -24,10 +24,10 @@ public final class GameServerClusterConnectionInfo {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor({"gkeClusterReference","namespace"})
+    @OutputCustomType.Constructor
     private GameServerClusterConnectionInfo(
-        GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference,
-        String namespace) {
+        @OutputCustomType.Parameter("gkeClusterReference") GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.gkeClusterReference = gkeClusterReference;
         this.namespace = namespace;
     }
@@ -72,12 +72,12 @@ public final class GameServerClusterConnectionInfo {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setGkeClusterReference(GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference) {
+        public Builder gkeClusterReference(GameServerClusterConnectionInfoGkeClusterReference gkeClusterReference) {
             this.gkeClusterReference = Objects.requireNonNull(gkeClusterReference);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

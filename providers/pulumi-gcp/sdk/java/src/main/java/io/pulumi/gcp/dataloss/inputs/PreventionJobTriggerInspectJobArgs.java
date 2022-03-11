@@ -90,32 +90,32 @@ public final class PreventionJobTriggerInspectJobArgs extends io.pulumi.resource
     	      this.storageConfig = defaults.storageConfig;
         }
 
-        public Builder setActions(Input<List<PreventionJobTriggerInspectJobActionArgs>> actions) {
+        public Builder actions(Input<List<PreventionJobTriggerInspectJobActionArgs>> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setActions(List<PreventionJobTriggerInspectJobActionArgs> actions) {
+        public Builder actions(List<PreventionJobTriggerInspectJobActionArgs> actions) {
             this.actions = Input.of(Objects.requireNonNull(actions));
             return this;
         }
 
-        public Builder setInspectTemplateName(Input<String> inspectTemplateName) {
+        public Builder inspectTemplateName(Input<String> inspectTemplateName) {
             this.inspectTemplateName = Objects.requireNonNull(inspectTemplateName);
             return this;
         }
 
-        public Builder setInspectTemplateName(String inspectTemplateName) {
+        public Builder inspectTemplateName(String inspectTemplateName) {
             this.inspectTemplateName = Input.of(Objects.requireNonNull(inspectTemplateName));
             return this;
         }
 
-        public Builder setStorageConfig(Input<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig) {
+        public Builder storageConfig(Input<PreventionJobTriggerInspectJobStorageConfigArgs> storageConfig) {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
 
-        public Builder setStorageConfig(PreventionJobTriggerInspectJobStorageConfigArgs storageConfig) {
+        public Builder storageConfig(PreventionJobTriggerInspectJobStorageConfigArgs storageConfig) {
             this.storageConfig = Input.of(Objects.requireNonNull(storageConfig));
             return this;
         }

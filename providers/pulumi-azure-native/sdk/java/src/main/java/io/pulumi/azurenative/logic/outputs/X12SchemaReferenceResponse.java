@@ -32,12 +32,12 @@ public final class X12SchemaReferenceResponse {
      */
     private final @Nullable String senderApplicationId;
 
-    @OutputCustomType.Constructor({"messageId","schemaName","schemaVersion","senderApplicationId"})
+    @OutputCustomType.Constructor
     private X12SchemaReferenceResponse(
-        String messageId,
-        String schemaName,
-        String schemaVersion,
-        @Nullable String senderApplicationId) {
+        @OutputCustomType.Parameter("messageId") String messageId,
+        @OutputCustomType.Parameter("schemaName") String schemaName,
+        @OutputCustomType.Parameter("schemaVersion") String schemaVersion,
+        @OutputCustomType.Parameter("senderApplicationId") @Nullable String senderApplicationId) {
         this.messageId = messageId;
         this.schemaName = schemaName;
         this.schemaVersion = schemaVersion;
@@ -99,22 +99,22 @@ public final class X12SchemaReferenceResponse {
     	      this.senderApplicationId = defaults.senderApplicationId;
         }
 
-        public Builder setMessageId(String messageId) {
+        public Builder messageId(String messageId) {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
 
-        public Builder setSchemaName(String schemaName) {
+        public Builder schemaName(String schemaName) {
             this.schemaName = Objects.requireNonNull(schemaName);
             return this;
         }
 
-        public Builder setSchemaVersion(String schemaVersion) {
+        public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
 
-        public Builder setSenderApplicationId(@Nullable String senderApplicationId) {
+        public Builder senderApplicationId(@Nullable String senderApplicationId) {
             this.senderApplicationId = senderApplicationId;
             return this;
         }

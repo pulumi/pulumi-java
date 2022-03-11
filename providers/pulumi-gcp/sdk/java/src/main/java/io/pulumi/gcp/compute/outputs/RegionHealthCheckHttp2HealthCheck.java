@@ -69,15 +69,15 @@ public final class RegionHealthCheckHttp2HealthCheck {
      */
     private final @Nullable String response;
 
-    @OutputCustomType.Constructor({"host","port","portName","portSpecification","proxyHeader","requestPath","response"})
+    @OutputCustomType.Constructor
     private RegionHealthCheckHttp2HealthCheck(
-        @Nullable String host,
-        @Nullable Integer port,
-        @Nullable String portName,
-        @Nullable String portSpecification,
-        @Nullable String proxyHeader,
-        @Nullable String requestPath,
-        @Nullable String response) {
+        @OutputCustomType.Parameter("host") @Nullable String host,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("portName") @Nullable String portName,
+        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") @Nullable String proxyHeader,
+        @OutputCustomType.Parameter("requestPath") @Nullable String requestPath,
+        @OutputCustomType.Parameter("response") @Nullable String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;
@@ -190,37 +190,37 @@ public final class RegionHealthCheckHttp2HealthCheck {
     	      this.response = defaults.response;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPortName(@Nullable String portName) {
+        public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable String portSpecification) {
+        public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }
 
-        public Builder setProxyHeader(@Nullable String proxyHeader) {
+        public Builder proxyHeader(@Nullable String proxyHeader) {
             this.proxyHeader = proxyHeader;
             return this;
         }
 
-        public Builder setRequestPath(@Nullable String requestPath) {
+        public Builder requestPath(@Nullable String requestPath) {
             this.requestPath = requestPath;
             return this;
         }
 
-        public Builder setResponse(@Nullable String response) {
+        public Builder response(@Nullable String response) {
             this.response = response;
             return this;
         }

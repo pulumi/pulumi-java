@@ -15,8 +15,8 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig {
      */
     private final String phoneNumber;
 
-    @OutputCustomType.Constructor({"phoneNumber"})
-    private GetQuickConnectQuickConnectConfigPhoneConfig(String phoneNumber) {
+    @OutputCustomType.Constructor
+    private GetQuickConnectQuickConnectConfigPhoneConfig(@OutputCustomType.Parameter("phoneNumber") String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -48,7 +48,7 @@ public final class GetQuickConnectQuickConnectConfigPhoneConfig {
     	      this.phoneNumber = defaults.phoneNumber;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }

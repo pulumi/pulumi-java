@@ -57,16 +57,16 @@ public final class EnvironmentImageResponseResponseEnvironment {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"docker","environmentVariables","inferencingStackVersion","name","python","r","spark","version"})
+    @OutputCustomType.Constructor
     private EnvironmentImageResponseResponseEnvironment(
-        @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String inferencingStackVersion,
-        @Nullable String name,
-        @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
-        @Nullable ModelEnvironmentDefinitionResponseResponseR r,
-        @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("docker") @Nullable ModelEnvironmentDefinitionResponseResponseDocker docker,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("inferencingStackVersion") @Nullable String inferencingStackVersion,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("python") @Nullable ModelEnvironmentDefinitionResponseResponsePython python,
+        @OutputCustomType.Parameter("r") @Nullable ModelEnvironmentDefinitionResponseResponseR r,
+        @OutputCustomType.Parameter("spark") @Nullable ModelEnvironmentDefinitionResponseResponseSpark spark,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.docker = docker;
         this.environmentVariables = environmentVariables;
         this.inferencingStackVersion = inferencingStackVersion;
@@ -168,42 +168,42 @@ public final class EnvironmentImageResponseResponseEnvironment {
     	      this.version = defaults.version;
         }
 
-        public Builder setDocker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
+        public Builder docker(@Nullable ModelEnvironmentDefinitionResponseResponseDocker docker) {
             this.docker = docker;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setInferencingStackVersion(@Nullable String inferencingStackVersion) {
+        public Builder inferencingStackVersion(@Nullable String inferencingStackVersion) {
             this.inferencingStackVersion = inferencingStackVersion;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPython(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
+        public Builder python(@Nullable ModelEnvironmentDefinitionResponseResponsePython python) {
             this.python = python;
             return this;
         }
 
-        public Builder setR(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
+        public Builder r(@Nullable ModelEnvironmentDefinitionResponseResponseR r) {
             this.r = r;
             return this;
         }
 
-        public Builder setSpark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
+        public Builder spark(@Nullable ModelEnvironmentDefinitionResponseResponseSpark spark) {
             this.spark = spark;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

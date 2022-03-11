@@ -27,16 +27,16 @@ public final class FlowDestinationConnectorProperties {
     private final @Nullable FlowUpsolverDestinationProperties upsolver;
     private final @Nullable FlowZendeskDestinationProperties zendesk;
 
-    @OutputCustomType.Constructor({"eventBridge","lookoutMetrics","redshift","s3","salesforce","snowflake","upsolver","zendesk"})
+    @OutputCustomType.Constructor
     private FlowDestinationConnectorProperties(
-        @Nullable FlowEventBridgeDestinationProperties eventBridge,
-        @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
-        @Nullable FlowRedshiftDestinationProperties redshift,
-        @Nullable FlowS3DestinationProperties s3,
-        @Nullable FlowSalesforceDestinationProperties salesforce,
-        @Nullable FlowSnowflakeDestinationProperties snowflake,
-        @Nullable FlowUpsolverDestinationProperties upsolver,
-        @Nullable FlowZendeskDestinationProperties zendesk) {
+        @OutputCustomType.Parameter("eventBridge") @Nullable FlowEventBridgeDestinationProperties eventBridge,
+        @OutputCustomType.Parameter("lookoutMetrics") @Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics,
+        @OutputCustomType.Parameter("redshift") @Nullable FlowRedshiftDestinationProperties redshift,
+        @OutputCustomType.Parameter("s3") @Nullable FlowS3DestinationProperties s3,
+        @OutputCustomType.Parameter("salesforce") @Nullable FlowSalesforceDestinationProperties salesforce,
+        @OutputCustomType.Parameter("snowflake") @Nullable FlowSnowflakeDestinationProperties snowflake,
+        @OutputCustomType.Parameter("upsolver") @Nullable FlowUpsolverDestinationProperties upsolver,
+        @OutputCustomType.Parameter("zendesk") @Nullable FlowZendeskDestinationProperties zendesk) {
         this.eventBridge = eventBridge;
         this.lookoutMetrics = lookoutMetrics;
         this.redshift = redshift;
@@ -106,42 +106,42 @@ public final class FlowDestinationConnectorProperties {
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setEventBridge(@Nullable FlowEventBridgeDestinationProperties eventBridge) {
+        public Builder eventBridge(@Nullable FlowEventBridgeDestinationProperties eventBridge) {
             this.eventBridge = eventBridge;
             return this;
         }
 
-        public Builder setLookoutMetrics(@Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics) {
+        public Builder lookoutMetrics(@Nullable FlowLookoutMetricsDestinationProperties lookoutMetrics) {
             this.lookoutMetrics = lookoutMetrics;
             return this;
         }
 
-        public Builder setRedshift(@Nullable FlowRedshiftDestinationProperties redshift) {
+        public Builder redshift(@Nullable FlowRedshiftDestinationProperties redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setS3(@Nullable FlowS3DestinationProperties s3) {
+        public Builder s3(@Nullable FlowS3DestinationProperties s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable FlowSalesforceDestinationProperties salesforce) {
+        public Builder salesforce(@Nullable FlowSalesforceDestinationProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable FlowSnowflakeDestinationProperties snowflake) {
+        public Builder snowflake(@Nullable FlowSnowflakeDestinationProperties snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setUpsolver(@Nullable FlowUpsolverDestinationProperties upsolver) {
+        public Builder upsolver(@Nullable FlowUpsolverDestinationProperties upsolver) {
             this.upsolver = upsolver;
             return this;
         }
 
-        public Builder setZendesk(@Nullable FlowZendeskDestinationProperties zendesk) {
+        public Builder zendesk(@Nullable FlowZendeskDestinationProperties zendesk) {
             this.zendesk = zendesk;
             return this;
         }

@@ -25,16 +25,16 @@ public final class GetListenerDefaultAction {
     private final String targetGroupArn;
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognitos","authenticateOidcs","fixedResponses","forwards","order","redirects","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultAction(
-        List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
-        List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
-        List<GetListenerDefaultActionFixedResponse> fixedResponses,
-        List<GetListenerDefaultActionForward> forwards,
-        Integer order,
-        List<GetListenerDefaultActionRedirect> redirects,
-        String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognitos") List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos,
+        @OutputCustomType.Parameter("authenticateOidcs") List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs,
+        @OutputCustomType.Parameter("fixedResponses") List<GetListenerDefaultActionFixedResponse> fixedResponses,
+        @OutputCustomType.Parameter("forwards") List<GetListenerDefaultActionForward> forwards,
+        @OutputCustomType.Parameter("order") Integer order,
+        @OutputCustomType.Parameter("redirects") List<GetListenerDefaultActionRedirect> redirects,
+        @OutputCustomType.Parameter("targetGroupArn") String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognitos = authenticateCognitos;
         this.authenticateOidcs = authenticateOidcs;
         this.fixedResponses = fixedResponses;
@@ -104,42 +104,42 @@ public final class GetListenerDefaultAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognitos(List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos) {
+        public Builder authenticateCognitos(List<GetListenerDefaultActionAuthenticateCognito> authenticateCognitos) {
             this.authenticateCognitos = Objects.requireNonNull(authenticateCognitos);
             return this;
         }
 
-        public Builder setAuthenticateOidcs(List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs) {
+        public Builder authenticateOidcs(List<GetListenerDefaultActionAuthenticateOidc> authenticateOidcs) {
             this.authenticateOidcs = Objects.requireNonNull(authenticateOidcs);
             return this;
         }
 
-        public Builder setFixedResponses(List<GetListenerDefaultActionFixedResponse> fixedResponses) {
+        public Builder fixedResponses(List<GetListenerDefaultActionFixedResponse> fixedResponses) {
             this.fixedResponses = Objects.requireNonNull(fixedResponses);
             return this;
         }
 
-        public Builder setForwards(List<GetListenerDefaultActionForward> forwards) {
+        public Builder forwards(List<GetListenerDefaultActionForward> forwards) {
             this.forwards = Objects.requireNonNull(forwards);
             return this;
         }
 
-        public Builder setOrder(Integer order) {
+        public Builder order(Integer order) {
             this.order = Objects.requireNonNull(order);
             return this;
         }
 
-        public Builder setRedirects(List<GetListenerDefaultActionRedirect> redirects) {
+        public Builder redirects(List<GetListenerDefaultActionRedirect> redirects) {
             this.redirects = Objects.requireNonNull(redirects);
             return this;
         }
 
-        public Builder setTargetGroupArn(String targetGroupArn) {
+        public Builder targetGroupArn(String targetGroupArn) {
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -90,17 +90,17 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
     	      this.hasCredential = defaults.hasCredential;
         }
 
-        public Builder setCloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
+        public Builder cloudSql(GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql) {
             this.cloudSql = Objects.requireNonNull(cloudSql);
             return this;
         }
 
-        public Builder setConnectionType(String connectionType) {
+        public Builder connectionType(String connectionType) {
             this.connectionType = Objects.requireNonNull(connectionType);
             return this;
         }
 
-        public Builder setHasCredential(Boolean hasCredential) {
+        public Builder hasCredential(Boolean hasCredential) {
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
         }

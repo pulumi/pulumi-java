@@ -16,8 +16,8 @@ public final class StandardSqlTableTypeResponse {
      */
     private final List<StandardSqlFieldResponse> columns;
 
-    @OutputCustomType.Constructor({"columns"})
-    private StandardSqlTableTypeResponse(List<StandardSqlFieldResponse> columns) {
+    @OutputCustomType.Constructor
+    private StandardSqlTableTypeResponse(@OutputCustomType.Parameter("columns") List<StandardSqlFieldResponse> columns) {
         this.columns = columns;
     }
 
@@ -49,7 +49,7 @@ public final class StandardSqlTableTypeResponse {
     	      this.columns = defaults.columns;
         }
 
-        public Builder setColumns(List<StandardSqlFieldResponse> columns) {
+        public Builder columns(List<StandardSqlFieldResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }

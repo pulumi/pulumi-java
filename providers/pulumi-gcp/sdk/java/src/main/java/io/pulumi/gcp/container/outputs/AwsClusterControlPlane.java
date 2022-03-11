@@ -86,21 +86,21 @@ public final class AwsClusterControlPlane {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"awsServicesAuthentication","configEncryption","databaseEncryption","iamInstanceProfile","instanceType","mainVolume","proxyConfig","rootVolume","securityGroupIds","sshConfig","subnetIds","tags","version"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlane(
-        AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
-        AwsClusterControlPlaneConfigEncryption configEncryption,
-        AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
-        String iamInstanceProfile,
-        @Nullable String instanceType,
-        @Nullable AwsClusterControlPlaneMainVolume mainVolume,
-        @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
-        @Nullable AwsClusterControlPlaneRootVolume rootVolume,
-        @Nullable List<String> securityGroupIds,
-        @Nullable AwsClusterControlPlaneSshConfig sshConfig,
-        List<String> subnetIds,
-        @Nullable Map<String,String> tags,
-        String version) {
+        @OutputCustomType.Parameter("awsServicesAuthentication") AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication,
+        @OutputCustomType.Parameter("configEncryption") AwsClusterControlPlaneConfigEncryption configEncryption,
+        @OutputCustomType.Parameter("databaseEncryption") AwsClusterControlPlaneDatabaseEncryption databaseEncryption,
+        @OutputCustomType.Parameter("iamInstanceProfile") String iamInstanceProfile,
+        @OutputCustomType.Parameter("instanceType") @Nullable String instanceType,
+        @OutputCustomType.Parameter("mainVolume") @Nullable AwsClusterControlPlaneMainVolume mainVolume,
+        @OutputCustomType.Parameter("proxyConfig") @Nullable AwsClusterControlPlaneProxyConfig proxyConfig,
+        @OutputCustomType.Parameter("rootVolume") @Nullable AwsClusterControlPlaneRootVolume rootVolume,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("sshConfig") @Nullable AwsClusterControlPlaneSshConfig sshConfig,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("version") String version) {
         this.awsServicesAuthentication = awsServicesAuthentication;
         this.configEncryption = configEncryption;
         this.databaseEncryption = databaseEncryption;
@@ -252,67 +252,67 @@ public final class AwsClusterControlPlane {
     	      this.version = defaults.version;
         }
 
-        public Builder setAwsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication) {
+        public Builder awsServicesAuthentication(AwsClusterControlPlaneAwsServicesAuthentication awsServicesAuthentication) {
             this.awsServicesAuthentication = Objects.requireNonNull(awsServicesAuthentication);
             return this;
         }
 
-        public Builder setConfigEncryption(AwsClusterControlPlaneConfigEncryption configEncryption) {
+        public Builder configEncryption(AwsClusterControlPlaneConfigEncryption configEncryption) {
             this.configEncryption = Objects.requireNonNull(configEncryption);
             return this;
         }
 
-        public Builder setDatabaseEncryption(AwsClusterControlPlaneDatabaseEncryption databaseEncryption) {
+        public Builder databaseEncryption(AwsClusterControlPlaneDatabaseEncryption databaseEncryption) {
             this.databaseEncryption = Objects.requireNonNull(databaseEncryption);
             return this;
         }
 
-        public Builder setIamInstanceProfile(String iamInstanceProfile) {
+        public Builder iamInstanceProfile(String iamInstanceProfile) {
             this.iamInstanceProfile = Objects.requireNonNull(iamInstanceProfile);
             return this;
         }
 
-        public Builder setInstanceType(@Nullable String instanceType) {
+        public Builder instanceType(@Nullable String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setMainVolume(@Nullable AwsClusterControlPlaneMainVolume mainVolume) {
+        public Builder mainVolume(@Nullable AwsClusterControlPlaneMainVolume mainVolume) {
             this.mainVolume = mainVolume;
             return this;
         }
 
-        public Builder setProxyConfig(@Nullable AwsClusterControlPlaneProxyConfig proxyConfig) {
+        public Builder proxyConfig(@Nullable AwsClusterControlPlaneProxyConfig proxyConfig) {
             this.proxyConfig = proxyConfig;
             return this;
         }
 
-        public Builder setRootVolume(@Nullable AwsClusterControlPlaneRootVolume rootVolume) {
+        public Builder rootVolume(@Nullable AwsClusterControlPlaneRootVolume rootVolume) {
             this.rootVolume = rootVolume;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSshConfig(@Nullable AwsClusterControlPlaneSshConfig sshConfig) {
+        public Builder sshConfig(@Nullable AwsClusterControlPlaneSshConfig sshConfig) {
             this.sshConfig = sshConfig;
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

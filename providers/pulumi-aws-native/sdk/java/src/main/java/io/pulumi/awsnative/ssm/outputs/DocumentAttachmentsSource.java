@@ -29,11 +29,11 @@ public final class DocumentAttachmentsSource {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"key","name","values"})
+    @OutputCustomType.Constructor
     private DocumentAttachmentsSource(
-        @Nullable DocumentAttachmentsSourceKey key,
-        @Nullable String name,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("key") @Nullable DocumentAttachmentsSourceKey key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.key = key;
         this.name = name;
         this.values = values;
@@ -85,17 +85,17 @@ public final class DocumentAttachmentsSource {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(@Nullable DocumentAttachmentsSourceKey key) {
+        public Builder key(@Nullable DocumentAttachmentsSourceKey key) {
             this.key = key;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

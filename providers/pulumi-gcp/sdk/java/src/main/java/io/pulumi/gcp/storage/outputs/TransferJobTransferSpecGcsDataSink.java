@@ -22,10 +22,10 @@ public final class TransferJobTransferSpecGcsDataSink {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"bucketName","path"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecGcsDataSink(
-        String bucketName,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.bucketName = bucketName;
         this.path = path;
     }
@@ -67,12 +67,12 @@ public final class TransferJobTransferSpecGcsDataSink {
     	      this.path = defaults.path;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

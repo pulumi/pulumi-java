@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecBackendDefaults {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy;
 
-    @OutputCustomType.Constructor({"clientPolicy"})
-    private VirtualGatewaySpecBackendDefaults(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecBackendDefaults(@OutputCustomType.Parameter("clientPolicy") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
         this.clientPolicy = clientPolicy;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecBackendDefaults {
     	      this.clientPolicy = defaults.clientPolicy;
         }
 
-        public Builder setClientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
+        public Builder clientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicy clientPolicy) {
             this.clientPolicy = clientPolicy;
             return this;
         }

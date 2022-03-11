@@ -23,10 +23,10 @@ public final class MonitoringTagRulesPropertiesResponse {
      */
     private final @Nullable String provisioningState;
 
-    @OutputCustomType.Constructor({"logRules","provisioningState"})
+    @OutputCustomType.Constructor
     private MonitoringTagRulesPropertiesResponse(
-        @Nullable LogRulesResponse logRules,
-        @Nullable String provisioningState) {
+        @OutputCustomType.Parameter("logRules") @Nullable LogRulesResponse logRules,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState) {
         this.logRules = logRules;
         this.provisioningState = provisioningState;
     }
@@ -68,12 +68,12 @@ public final class MonitoringTagRulesPropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setLogRules(@Nullable LogRulesResponse logRules) {
+        public Builder logRules(@Nullable LogRulesResponse logRules) {
             this.logRules = logRules;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }

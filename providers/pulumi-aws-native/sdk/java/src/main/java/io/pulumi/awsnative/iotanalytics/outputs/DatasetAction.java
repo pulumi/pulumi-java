@@ -17,11 +17,11 @@ public final class DatasetAction {
     private final @Nullable DatasetContainerAction containerAction;
     private final @Nullable DatasetQueryAction queryAction;
 
-    @OutputCustomType.Constructor({"actionName","containerAction","queryAction"})
+    @OutputCustomType.Constructor
     private DatasetAction(
-        String actionName,
-        @Nullable DatasetContainerAction containerAction,
-        @Nullable DatasetQueryAction queryAction) {
+        @OutputCustomType.Parameter("actionName") String actionName,
+        @OutputCustomType.Parameter("containerAction") @Nullable DatasetContainerAction containerAction,
+        @OutputCustomType.Parameter("queryAction") @Nullable DatasetQueryAction queryAction) {
         this.actionName = actionName;
         this.containerAction = containerAction;
         this.queryAction = queryAction;
@@ -61,17 +61,17 @@ public final class DatasetAction {
     	      this.queryAction = defaults.queryAction;
         }
 
-        public Builder setActionName(String actionName) {
+        public Builder actionName(String actionName) {
             this.actionName = Objects.requireNonNull(actionName);
             return this;
         }
 
-        public Builder setContainerAction(@Nullable DatasetContainerAction containerAction) {
+        public Builder containerAction(@Nullable DatasetContainerAction containerAction) {
             this.containerAction = containerAction;
             return this;
         }
 
-        public Builder setQueryAction(@Nullable DatasetQueryAction queryAction) {
+        public Builder queryAction(@Nullable DatasetQueryAction queryAction) {
             this.queryAction = queryAction;
             return this;
         }

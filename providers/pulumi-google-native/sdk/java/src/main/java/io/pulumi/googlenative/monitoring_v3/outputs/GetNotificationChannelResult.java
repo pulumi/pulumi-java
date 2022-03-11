@@ -64,18 +64,18 @@ public final class GetNotificationChannelResult {
      */
     private final String verificationStatus;
 
-    @OutputCustomType.Constructor({"creationRecord","description","displayName","enabled","labels","mutationRecords","name","type","userLabels","verificationStatus"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        MutationRecordResponse creationRecord,
-        String description,
-        String displayName,
-        Boolean enabled,
-        Map<String,String> labels,
-        List<MutationRecordResponse> mutationRecords,
-        String name,
-        String type,
-        Map<String,String> userLabels,
-        String verificationStatus) {
+        @OutputCustomType.Parameter("creationRecord") MutationRecordResponse creationRecord,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mutationRecords") List<MutationRecordResponse> mutationRecords,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("verificationStatus") String verificationStatus) {
         this.creationRecord = creationRecord;
         this.description = description;
         this.displayName = displayName;
@@ -197,52 +197,52 @@ public final class GetNotificationChannelResult {
     	      this.verificationStatus = defaults.verificationStatus;
         }
 
-        public Builder setCreationRecord(MutationRecordResponse creationRecord) {
+        public Builder creationRecord(MutationRecordResponse creationRecord) {
             this.creationRecord = Objects.requireNonNull(creationRecord);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMutationRecords(List<MutationRecordResponse> mutationRecords) {
+        public Builder mutationRecords(List<MutationRecordResponse> mutationRecords) {
             this.mutationRecords = Objects.requireNonNull(mutationRecords);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
 
-        public Builder setVerificationStatus(String verificationStatus) {
+        public Builder verificationStatus(String verificationStatus) {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
         }

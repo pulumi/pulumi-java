@@ -50,15 +50,15 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"databaseName","id","name","privileges","roleName","roles","type"})
+    @OutputCustomType.Constructor
     private GetMongoDBResourceMongoRoleDefinitionResult(
-        @Nullable String databaseName,
-        String id,
-        String name,
-        @Nullable List<PrivilegeResponse> privileges,
-        @Nullable String roleName,
-        @Nullable List<RoleResponse> roles,
-        String type) {
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privileges") @Nullable List<PrivilegeResponse> privileges,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roles") @Nullable List<RoleResponse> roles,
+        @OutputCustomType.Parameter("type") String type) {
         this.databaseName = databaseName;
         this.id = id;
         this.name = name;
@@ -150,37 +150,37 @@ public final class GetMongoDBResourceMongoRoleDefinitionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivileges(@Nullable List<PrivilegeResponse> privileges) {
+        public Builder privileges(@Nullable List<PrivilegeResponse> privileges) {
             this.privileges = privileges;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

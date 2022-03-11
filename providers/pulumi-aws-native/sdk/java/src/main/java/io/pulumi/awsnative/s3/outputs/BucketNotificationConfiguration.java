@@ -20,12 +20,12 @@ public final class BucketNotificationConfiguration {
     private final @Nullable List<BucketQueueConfiguration> queueConfigurations;
     private final @Nullable List<BucketTopicConfiguration> topicConfigurations;
 
-    @OutputCustomType.Constructor({"eventBridgeConfiguration","lambdaConfigurations","queueConfigurations","topicConfigurations"})
+    @OutputCustomType.Constructor
     private BucketNotificationConfiguration(
-        @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
-        @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
-        @Nullable List<BucketQueueConfiguration> queueConfigurations,
-        @Nullable List<BucketTopicConfiguration> topicConfigurations) {
+        @OutputCustomType.Parameter("eventBridgeConfiguration") @Nullable BucketEventBridgeConfiguration eventBridgeConfiguration,
+        @OutputCustomType.Parameter("lambdaConfigurations") @Nullable List<BucketLambdaConfiguration> lambdaConfigurations,
+        @OutputCustomType.Parameter("queueConfigurations") @Nullable List<BucketQueueConfiguration> queueConfigurations,
+        @OutputCustomType.Parameter("topicConfigurations") @Nullable List<BucketTopicConfiguration> topicConfigurations) {
         this.eventBridgeConfiguration = eventBridgeConfiguration;
         this.lambdaConfigurations = lambdaConfigurations;
         this.queueConfigurations = queueConfigurations;
@@ -71,22 +71,22 @@ public final class BucketNotificationConfiguration {
     	      this.topicConfigurations = defaults.topicConfigurations;
         }
 
-        public Builder setEventBridgeConfiguration(@Nullable BucketEventBridgeConfiguration eventBridgeConfiguration) {
+        public Builder eventBridgeConfiguration(@Nullable BucketEventBridgeConfiguration eventBridgeConfiguration) {
             this.eventBridgeConfiguration = eventBridgeConfiguration;
             return this;
         }
 
-        public Builder setLambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
+        public Builder lambdaConfigurations(@Nullable List<BucketLambdaConfiguration> lambdaConfigurations) {
             this.lambdaConfigurations = lambdaConfigurations;
             return this;
         }
 
-        public Builder setQueueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
+        public Builder queueConfigurations(@Nullable List<BucketQueueConfiguration> queueConfigurations) {
             this.queueConfigurations = queueConfigurations;
             return this;
         }
 
-        public Builder setTopicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
+        public Builder topicConfigurations(@Nullable List<BucketTopicConfiguration> topicConfigurations) {
             this.topicConfigurations = topicConfigurations;
             return this;
         }

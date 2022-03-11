@@ -27,11 +27,11 @@ public final class WindowsFileSystemAuditLogConfiguration {
      */
     private final @Nullable String fileShareAccessAuditLogLevel;
 
-    @OutputCustomType.Constructor({"auditLogDestination","fileAccessAuditLogLevel","fileShareAccessAuditLogLevel"})
+    @OutputCustomType.Constructor
     private WindowsFileSystemAuditLogConfiguration(
-        @Nullable String auditLogDestination,
-        @Nullable String fileAccessAuditLogLevel,
-        @Nullable String fileShareAccessAuditLogLevel) {
+        @OutputCustomType.Parameter("auditLogDestination") @Nullable String auditLogDestination,
+        @OutputCustomType.Parameter("fileAccessAuditLogLevel") @Nullable String fileAccessAuditLogLevel,
+        @OutputCustomType.Parameter("fileShareAccessAuditLogLevel") @Nullable String fileShareAccessAuditLogLevel) {
         this.auditLogDestination = auditLogDestination;
         this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
         this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
@@ -83,17 +83,17 @@ public final class WindowsFileSystemAuditLogConfiguration {
     	      this.fileShareAccessAuditLogLevel = defaults.fileShareAccessAuditLogLevel;
         }
 
-        public Builder setAuditLogDestination(@Nullable String auditLogDestination) {
+        public Builder auditLogDestination(@Nullable String auditLogDestination) {
             this.auditLogDestination = auditLogDestination;
             return this;
         }
 
-        public Builder setFileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
+        public Builder fileAccessAuditLogLevel(@Nullable String fileAccessAuditLogLevel) {
             this.fileAccessAuditLogLevel = fileAccessAuditLogLevel;
             return this;
         }
 
-        public Builder setFileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
+        public Builder fileShareAccessAuditLogLevel(@Nullable String fileShareAccessAuditLogLevel) {
             this.fileShareAccessAuditLogLevel = fileShareAccessAuditLogLevel;
             return this;
         }

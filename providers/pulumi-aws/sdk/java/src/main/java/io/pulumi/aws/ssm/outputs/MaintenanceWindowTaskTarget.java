@@ -17,10 +17,10 @@ public final class MaintenanceWindowTaskTarget {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","values"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTarget(
-        String key,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.values = values;
     }
@@ -58,12 +58,12 @@ public final class MaintenanceWindowTaskTarget {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

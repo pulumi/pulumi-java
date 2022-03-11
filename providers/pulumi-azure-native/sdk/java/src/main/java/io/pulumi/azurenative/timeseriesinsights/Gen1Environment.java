@@ -282,7 +282,7 @@ public class Gen1Environment extends io.pulumi.resources.CustomResource {
     private static Gen1EnvironmentArgs makeArgs(Gen1EnvironmentArgs args) {
         var builder = args == null ? Gen1EnvironmentArgs.builder() : Gen1EnvironmentArgs.builder(args);
         return builder
-            .setKind("Gen1")
+            .kind("Gen1")
             .build();
     }
 

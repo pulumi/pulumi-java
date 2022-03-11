@@ -106,42 +106,42 @@ public final class PipelineDefinitionState extends io.pulumi.resources.ResourceA
     	      this.pipelineObjects = defaults.pipelineObjects;
         }
 
-        public Builder setParameterObjects(@Nullable Input<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects) {
+        public Builder parameterObjects(@Nullable Input<List<PipelineDefinitionParameterObjectGetArgs>> parameterObjects) {
             this.parameterObjects = parameterObjects;
             return this;
         }
 
-        public Builder setParameterObjects(@Nullable List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
+        public Builder parameterObjects(@Nullable List<PipelineDefinitionParameterObjectGetArgs> parameterObjects) {
             this.parameterObjects = Input.ofNullable(parameterObjects);
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Input<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
+        public Builder parameterValues(@Nullable Input<List<PipelineDefinitionParameterValueGetArgs>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
+        public Builder parameterValues(@Nullable List<PipelineDefinitionParameterValueGetArgs> parameterValues) {
             this.parameterValues = Input.ofNullable(parameterValues);
             return this;
         }
 
-        public Builder setPipelineId(@Nullable Input<String> pipelineId) {
+        public Builder pipelineId(@Nullable Input<String> pipelineId) {
             this.pipelineId = pipelineId;
             return this;
         }
 
-        public Builder setPipelineId(@Nullable String pipelineId) {
+        public Builder pipelineId(@Nullable String pipelineId) {
             this.pipelineId = Input.ofNullable(pipelineId);
             return this;
         }
 
-        public Builder setPipelineObjects(@Nullable Input<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
+        public Builder pipelineObjects(@Nullable Input<List<PipelineDefinitionPipelineObjectGetArgs>> pipelineObjects) {
             this.pipelineObjects = pipelineObjects;
             return this;
         }
 
-        public Builder setPipelineObjects(@Nullable List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
+        public Builder pipelineObjects(@Nullable List<PipelineDefinitionPipelineObjectGetArgs> pipelineObjects) {
             this.pipelineObjects = Input.ofNullable(pipelineObjects);
             return this;
         }

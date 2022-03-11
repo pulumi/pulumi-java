@@ -139,62 +139,62 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setCaptureContentTypeHeader(@Nullable Input<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader) {
+        public Builder captureContentTypeHeader(@Nullable Input<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader) {
             this.captureContentTypeHeader = captureContentTypeHeader;
             return this;
         }
 
-        public Builder setCaptureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
+        public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
             this.captureContentTypeHeader = Input.ofNullable(captureContentTypeHeader);
             return this;
         }
 
-        public Builder setCaptureOptions(Input<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions) {
+        public Builder captureOptions(Input<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions) {
             this.captureOptions = Objects.requireNonNull(captureOptions);
             return this;
         }
 
-        public Builder setCaptureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs> captureOptions) {
+        public Builder captureOptions(List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs> captureOptions) {
             this.captureOptions = Input.of(Objects.requireNonNull(captureOptions));
             return this;
         }
 
-        public Builder setDestinationS3Uri(Input<String> destinationS3Uri) {
+        public Builder destinationS3Uri(Input<String> destinationS3Uri) {
             this.destinationS3Uri = Objects.requireNonNull(destinationS3Uri);
             return this;
         }
 
-        public Builder setDestinationS3Uri(String destinationS3Uri) {
+        public Builder destinationS3Uri(String destinationS3Uri) {
             this.destinationS3Uri = Input.of(Objects.requireNonNull(destinationS3Uri));
             return this;
         }
 
-        public Builder setEnableCapture(@Nullable Input<Boolean> enableCapture) {
+        public Builder enableCapture(@Nullable Input<Boolean> enableCapture) {
             this.enableCapture = enableCapture;
             return this;
         }
 
-        public Builder setEnableCapture(@Nullable Boolean enableCapture) {
+        public Builder enableCapture(@Nullable Boolean enableCapture) {
             this.enableCapture = Input.ofNullable(enableCapture);
             return this;
         }
 
-        public Builder setInitialSamplingPercentage(Input<Integer> initialSamplingPercentage) {
+        public Builder initialSamplingPercentage(Input<Integer> initialSamplingPercentage) {
             this.initialSamplingPercentage = Objects.requireNonNull(initialSamplingPercentage);
             return this;
         }
 
-        public Builder setInitialSamplingPercentage(Integer initialSamplingPercentage) {
+        public Builder initialSamplingPercentage(Integer initialSamplingPercentage) {
             this.initialSamplingPercentage = Input.of(Objects.requireNonNull(initialSamplingPercentage));
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }

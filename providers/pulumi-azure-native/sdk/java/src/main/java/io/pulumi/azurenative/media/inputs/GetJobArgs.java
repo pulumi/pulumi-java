@@ -100,22 +100,22 @@ public final class GetJobArgs extends io.pulumi.resources.InvokeArgs {
     	      this.transformName = defaults.transformName;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setTransformName(String transformName) {
+        public Builder transformName(String transformName) {
             this.transformName = Objects.requireNonNull(transformName);
             return this;
         }

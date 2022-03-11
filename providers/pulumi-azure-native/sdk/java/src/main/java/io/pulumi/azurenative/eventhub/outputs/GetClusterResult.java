@@ -64,18 +64,18 @@ public final class GetClusterResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"createdAt","id","location","metricId","name","sku","status","tags","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String createdAt,
-        String id,
-        @Nullable String location,
-        String metricId,
-        String name,
-        @Nullable ClusterSkuResponse sku,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("metricId") String metricId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sku") @Nullable ClusterSkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.createdAt = createdAt;
         this.id = id;
         this.location = location;
@@ -197,52 +197,52 @@ public final class GetClusterResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMetricId(String metricId) {
+        public Builder metricId(String metricId) {
             this.metricId = Objects.requireNonNull(metricId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSku(@Nullable ClusterSkuResponse sku) {
+        public Builder sku(@Nullable ClusterSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

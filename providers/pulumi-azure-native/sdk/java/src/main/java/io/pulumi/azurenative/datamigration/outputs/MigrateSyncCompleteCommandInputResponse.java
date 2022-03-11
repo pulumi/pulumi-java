@@ -22,10 +22,10 @@ public final class MigrateSyncCompleteCommandInputResponse {
      */
     private final String databaseName;
 
-    @OutputCustomType.Constructor({"commitTimeStamp","databaseName"})
+    @OutputCustomType.Constructor
     private MigrateSyncCompleteCommandInputResponse(
-        @Nullable String commitTimeStamp,
-        String databaseName) {
+        @OutputCustomType.Parameter("commitTimeStamp") @Nullable String commitTimeStamp,
+        @OutputCustomType.Parameter("databaseName") String databaseName) {
         this.commitTimeStamp = commitTimeStamp;
         this.databaseName = databaseName;
     }
@@ -67,12 +67,12 @@ public final class MigrateSyncCompleteCommandInputResponse {
     	      this.databaseName = defaults.databaseName;
         }
 
-        public Builder setCommitTimeStamp(@Nullable String commitTimeStamp) {
+        public Builder commitTimeStamp(@Nullable String commitTimeStamp) {
             this.commitTimeStamp = commitTimeStamp;
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }

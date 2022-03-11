@@ -40,13 +40,13 @@ public final class ServiceCorsConfigurationInfoResponse {
      */
     private final @Nullable List<String> origins;
 
-    @OutputCustomType.Constructor({"allowCredentials","headers","maxAge","methods","origins"})
+    @OutputCustomType.Constructor
     private ServiceCorsConfigurationInfoResponse(
-        @Nullable Boolean allowCredentials,
-        @Nullable List<String> headers,
-        @Nullable Double maxAge,
-        @Nullable List<String> methods,
-        @Nullable List<String> origins) {
+        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers,
+        @OutputCustomType.Parameter("maxAge") @Nullable Double maxAge,
+        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
+        @OutputCustomType.Parameter("origins") @Nullable List<String> origins) {
         this.allowCredentials = allowCredentials;
         this.headers = headers;
         this.maxAge = maxAge;
@@ -118,27 +118,27 @@ public final class ServiceCorsConfigurationInfoResponse {
     	      this.origins = defaults.origins;
         }
 
-        public Builder setAllowCredentials(@Nullable Boolean allowCredentials) {
+        public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Double maxAge) {
+        public Builder maxAge(@Nullable Double maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<String> origins) {
+        public Builder origins(@Nullable List<String> origins) {
             this.origins = origins;
             return this;
         }

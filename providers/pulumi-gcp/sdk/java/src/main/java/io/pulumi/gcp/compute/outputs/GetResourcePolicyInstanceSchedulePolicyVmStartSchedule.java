@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule {
     private final String schedule;
 
-    @OutputCustomType.Constructor({"schedule"})
-    private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(String schedule) {
+    @OutputCustomType.Constructor
+    private GetResourcePolicyInstanceSchedulePolicyVmStartSchedule(@OutputCustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 
@@ -40,7 +40,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

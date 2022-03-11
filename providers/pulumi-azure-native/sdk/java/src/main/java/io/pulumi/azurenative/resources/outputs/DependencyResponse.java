@@ -34,12 +34,12 @@ public final class DependencyResponse {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"dependsOn","id","resourceName","resourceType"})
+    @OutputCustomType.Constructor
     private DependencyResponse(
-        @Nullable List<BasicDependencyResponse> dependsOn,
-        @Nullable String id,
-        @Nullable String resourceName,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<BasicDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.dependsOn = dependsOn;
         this.id = id;
         this.resourceName = resourceName;
@@ -101,22 +101,22 @@ public final class DependencyResponse {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setDependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<BasicDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }

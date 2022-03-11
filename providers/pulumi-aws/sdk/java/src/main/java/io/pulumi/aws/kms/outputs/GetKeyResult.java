@@ -36,26 +36,26 @@ public final class GetKeyResult {
     private final String origin;
     private final String validTo;
 
-    @OutputCustomType.Constructor({"arn","awsAccountId","creationDate","customerMasterKeySpec","deletionDate","description","enabled","expirationModel","grantTokens","id","keyId","keyManager","keyState","keyUsage","multiRegion","multiRegionConfigurations","origin","validTo"})
+    @OutputCustomType.Constructor
     private GetKeyResult(
-        String arn,
-        String awsAccountId,
-        String creationDate,
-        String customerMasterKeySpec,
-        String deletionDate,
-        String description,
-        Boolean enabled,
-        String expirationModel,
-        @Nullable List<String> grantTokens,
-        String id,
-        String keyId,
-        String keyManager,
-        String keyState,
-        String keyUsage,
-        Boolean multiRegion,
-        List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
-        String origin,
-        String validTo) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("awsAccountId") String awsAccountId,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("customerMasterKeySpec") String customerMasterKeySpec,
+        @OutputCustomType.Parameter("deletionDate") String deletionDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expirationModel") String expirationModel,
+        @OutputCustomType.Parameter("grantTokens") @Nullable List<String> grantTokens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("keyManager") String keyManager,
+        @OutputCustomType.Parameter("keyState") String keyState,
+        @OutputCustomType.Parameter("keyUsage") String keyUsage,
+        @OutputCustomType.Parameter("multiRegion") Boolean multiRegion,
+        @OutputCustomType.Parameter("multiRegionConfigurations") List<GetKeyMultiRegionConfiguration> multiRegionConfigurations,
+        @OutputCustomType.Parameter("origin") String origin,
+        @OutputCustomType.Parameter("validTo") String validTo) {
         this.arn = arn;
         this.awsAccountId = awsAccountId;
         this.creationDate = creationDate;
@@ -189,92 +189,92 @@ public final class GetKeyResult {
     	      this.validTo = defaults.validTo;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setCustomerMasterKeySpec(String customerMasterKeySpec) {
+        public Builder customerMasterKeySpec(String customerMasterKeySpec) {
             this.customerMasterKeySpec = Objects.requireNonNull(customerMasterKeySpec);
             return this;
         }
 
-        public Builder setDeletionDate(String deletionDate) {
+        public Builder deletionDate(String deletionDate) {
             this.deletionDate = Objects.requireNonNull(deletionDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpirationModel(String expirationModel) {
+        public Builder expirationModel(String expirationModel) {
             this.expirationModel = Objects.requireNonNull(expirationModel);
             return this;
         }
 
-        public Builder setGrantTokens(@Nullable List<String> grantTokens) {
+        public Builder grantTokens(@Nullable List<String> grantTokens) {
             this.grantTokens = grantTokens;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyManager(String keyManager) {
+        public Builder keyManager(String keyManager) {
             this.keyManager = Objects.requireNonNull(keyManager);
             return this;
         }
 
-        public Builder setKeyState(String keyState) {
+        public Builder keyState(String keyState) {
             this.keyState = Objects.requireNonNull(keyState);
             return this;
         }
 
-        public Builder setKeyUsage(String keyUsage) {
+        public Builder keyUsage(String keyUsage) {
             this.keyUsage = Objects.requireNonNull(keyUsage);
             return this;
         }
 
-        public Builder setMultiRegion(Boolean multiRegion) {
+        public Builder multiRegion(Boolean multiRegion) {
             this.multiRegion = Objects.requireNonNull(multiRegion);
             return this;
         }
 
-        public Builder setMultiRegionConfigurations(List<GetKeyMultiRegionConfiguration> multiRegionConfigurations) {
+        public Builder multiRegionConfigurations(List<GetKeyMultiRegionConfiguration> multiRegionConfigurations) {
             this.multiRegionConfigurations = Objects.requireNonNull(multiRegionConfigurations);
             return this;
         }
 
-        public Builder setOrigin(String origin) {
+        public Builder origin(String origin) {
             this.origin = Objects.requireNonNull(origin);
             return this;
         }
 
-        public Builder setValidTo(String validTo) {
+        public Builder validTo(String validTo) {
             this.validTo = Objects.requireNonNull(validTo);
             return this;
         }

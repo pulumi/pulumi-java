@@ -74,18 +74,18 @@ public final class NsgSecurityRuleResponse {
      */
     private final @Nullable String sourcePortRange;
 
-    @OutputCustomType.Constructor({"access","description","destinationAddressPrefix","destinationPortRange","direction","name","priority","protocol","sourceAddressPrefix","sourcePortRange"})
+    @OutputCustomType.Constructor
     private NsgSecurityRuleResponse(
-        @Nullable String access,
-        @Nullable String description,
-        @Nullable String destinationAddressPrefix,
-        @Nullable String destinationPortRange,
-        @Nullable String direction,
-        @Nullable String name,
-        @Nullable Integer priority,
-        @Nullable String protocol,
-        @Nullable String sourceAddressPrefix,
-        @Nullable String sourcePortRange) {
+        @OutputCustomType.Parameter("access") @Nullable String access,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationAddressPrefix") @Nullable String destinationAddressPrefix,
+        @OutputCustomType.Parameter("destinationPortRange") @Nullable String destinationPortRange,
+        @OutputCustomType.Parameter("direction") @Nullable String direction,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sourceAddressPrefix") @Nullable String sourceAddressPrefix,
+        @OutputCustomType.Parameter("sourcePortRange") @Nullable String sourcePortRange) {
         this.access = access;
         this.description = description;
         this.destinationAddressPrefix = destinationAddressPrefix;
@@ -218,52 +218,52 @@ public final class NsgSecurityRuleResponse {
     	      this.sourcePortRange = defaults.sourcePortRange;
         }
 
-        public Builder setAccess(@Nullable String access) {
+        public Builder access(@Nullable String access) {
             this.access = access;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationAddressPrefix(@Nullable String destinationAddressPrefix) {
+        public Builder destinationAddressPrefix(@Nullable String destinationAddressPrefix) {
             this.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
-        public Builder setDestinationPortRange(@Nullable String destinationPortRange) {
+        public Builder destinationPortRange(@Nullable String destinationPortRange) {
             this.destinationPortRange = destinationPortRange;
             return this;
         }
 
-        public Builder setDirection(@Nullable String direction) {
+        public Builder direction(@Nullable String direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSourceAddressPrefix(@Nullable String sourceAddressPrefix) {
+        public Builder sourceAddressPrefix(@Nullable String sourceAddressPrefix) {
             this.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
-        public Builder setSourcePortRange(@Nullable String sourcePortRange) {
+        public Builder sourcePortRange(@Nullable String sourcePortRange) {
             this.sourcePortRange = sourcePortRange;
             return this;
         }

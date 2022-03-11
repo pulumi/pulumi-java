@@ -52,16 +52,16 @@ public final class JobStepOutputResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"credential","databaseName","resourceGroupName","schemaName","serverName","subscriptionId","tableName","type"})
+    @OutputCustomType.Constructor
     private JobStepOutputResponse(
-        String credential,
-        String databaseName,
-        @Nullable String resourceGroupName,
-        @Nullable String schemaName,
-        String serverName,
-        @Nullable String subscriptionId,
-        String tableName,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("credential") String credential,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable String resourceGroupName,
+        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName,
+        @OutputCustomType.Parameter("serverName") String serverName,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.credential = credential;
         this.databaseName = databaseName;
         this.resourceGroupName = resourceGroupName;
@@ -163,42 +163,42 @@ public final class JobStepOutputResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(String credential) {
+        public Builder credential(String credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable String resourceGroupName) {
+        public Builder resourceGroupName(@Nullable String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = schemaName;
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

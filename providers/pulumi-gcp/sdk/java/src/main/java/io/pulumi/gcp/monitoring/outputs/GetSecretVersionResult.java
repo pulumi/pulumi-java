@@ -24,17 +24,17 @@ public final class GetSecretVersionResult {
     private final String secretData;
     private final String version;
 
-    @OutputCustomType.Constructor({"createTime","destroyTime","enabled","id","name","project","secret","secretData","version"})
+    @OutputCustomType.Constructor
     private GetSecretVersionResult(
-        String createTime,
-        String destroyTime,
-        Boolean enabled,
-        String id,
-        String name,
-        String project,
-        String secret,
-        String secretData,
-        String version) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("destroyTime") String destroyTime,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("secretData") String secretData,
+        @OutputCustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.destroyTime = destroyTime;
         this.enabled = enabled;
@@ -114,47 +114,47 @@ public final class GetSecretVersionResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDestroyTime(String destroyTime) {
+        public Builder destroyTime(String destroyTime) {
             this.destroyTime = Objects.requireNonNull(destroyTime);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setSecretData(String secretData) {
+        public Builder secretData(String secretData) {
             this.secretData = Objects.requireNonNull(secretData);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

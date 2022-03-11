@@ -51,15 +51,15 @@ public final class GetLocationObjectStorageResult {
      */
     private final @Nullable List<LocationObjectStorageTag> tags;
 
-    @OutputCustomType.Constructor({"accessKey","agentArns","locationArn","locationUri","serverPort","serverProtocol","tags"})
+    @OutputCustomType.Constructor
     private GetLocationObjectStorageResult(
-        @Nullable String accessKey,
-        @Nullable List<String> agentArns,
-        @Nullable String locationArn,
-        @Nullable String locationUri,
-        @Nullable Integer serverPort,
-        @Nullable LocationObjectStorageServerProtocol serverProtocol,
-        @Nullable List<LocationObjectStorageTag> tags) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("agentArns") @Nullable List<String> agentArns,
+        @OutputCustomType.Parameter("locationArn") @Nullable String locationArn,
+        @OutputCustomType.Parameter("locationUri") @Nullable String locationUri,
+        @OutputCustomType.Parameter("serverPort") @Nullable Integer serverPort,
+        @OutputCustomType.Parameter("serverProtocol") @Nullable LocationObjectStorageServerProtocol serverProtocol,
+        @OutputCustomType.Parameter("tags") @Nullable List<LocationObjectStorageTag> tags) {
         this.accessKey = accessKey;
         this.agentArns = agentArns;
         this.locationArn = locationArn;
@@ -151,37 +151,37 @@ public final class GetLocationObjectStorageResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setLocationArn(@Nullable String locationArn) {
+        public Builder locationArn(@Nullable String locationArn) {
             this.locationArn = locationArn;
             return this;
         }
 
-        public Builder setLocationUri(@Nullable String locationUri) {
+        public Builder locationUri(@Nullable String locationUri) {
             this.locationUri = locationUri;
             return this;
         }
 
-        public Builder setServerPort(@Nullable Integer serverPort) {
+        public Builder serverPort(@Nullable Integer serverPort) {
             this.serverPort = serverPort;
             return this;
         }
 
-        public Builder setServerProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
+        public Builder serverProtocol(@Nullable LocationObjectStorageServerProtocol serverProtocol) {
             this.serverProtocol = serverProtocol;
             return this;
         }
 
-        public Builder setTags(@Nullable List<LocationObjectStorageTag> tags) {
+        public Builder tags(@Nullable List<LocationObjectStorageTag> tags) {
             this.tags = tags;
             return this;
         }

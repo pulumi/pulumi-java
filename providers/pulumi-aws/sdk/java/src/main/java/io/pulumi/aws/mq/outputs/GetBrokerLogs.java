@@ -12,10 +12,10 @@ public final class GetBrokerLogs {
     private final Boolean audit;
     private final Boolean general;
 
-    @OutputCustomType.Constructor({"audit","general"})
+    @OutputCustomType.Constructor
     private GetBrokerLogs(
-        Boolean audit,
-        Boolean general) {
+        @OutputCustomType.Parameter("audit") Boolean audit,
+        @OutputCustomType.Parameter("general") Boolean general) {
         this.audit = audit;
         this.general = general;
     }
@@ -49,12 +49,12 @@ public final class GetBrokerLogs {
     	      this.general = defaults.general;
         }
 
-        public Builder setAudit(Boolean audit) {
+        public Builder audit(Boolean audit) {
             this.audit = Objects.requireNonNull(audit);
             return this;
         }
 
-        public Builder setGeneral(Boolean general) {
+        public Builder general(Boolean general) {
             this.general = Objects.requireNonNull(general);
             return this;
         }

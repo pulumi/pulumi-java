@@ -28,12 +28,12 @@ public final class GetConfigurationAggregatorResult {
      */
     private final @Nullable List<ConfigurationAggregatorTag> tags;
 
-    @OutputCustomType.Constructor({"accountAggregationSources","configurationAggregatorArn","organizationAggregationSource","tags"})
+    @OutputCustomType.Constructor
     private GetConfigurationAggregatorResult(
-        @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
-        @Nullable String configurationAggregatorArn,
-        @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
-        @Nullable List<ConfigurationAggregatorTag> tags) {
+        @OutputCustomType.Parameter("accountAggregationSources") @Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources,
+        @OutputCustomType.Parameter("configurationAggregatorArn") @Nullable String configurationAggregatorArn,
+        @OutputCustomType.Parameter("organizationAggregationSource") @Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource,
+        @OutputCustomType.Parameter("tags") @Nullable List<ConfigurationAggregatorTag> tags) {
         this.accountAggregationSources = accountAggregationSources;
         this.configurationAggregatorArn = configurationAggregatorArn;
         this.organizationAggregationSource = organizationAggregationSource;
@@ -87,22 +87,22 @@ public final class GetConfigurationAggregatorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccountAggregationSources(@Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources) {
+        public Builder accountAggregationSources(@Nullable List<ConfigurationAggregatorAccountAggregationSource> accountAggregationSources) {
             this.accountAggregationSources = accountAggregationSources;
             return this;
         }
 
-        public Builder setConfigurationAggregatorArn(@Nullable String configurationAggregatorArn) {
+        public Builder configurationAggregatorArn(@Nullable String configurationAggregatorArn) {
             this.configurationAggregatorArn = configurationAggregatorArn;
             return this;
         }
 
-        public Builder setOrganizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource) {
+        public Builder organizationAggregationSource(@Nullable ConfigurationAggregatorOrganizationAggregationSource organizationAggregationSource) {
             this.organizationAggregationSource = organizationAggregationSource;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ConfigurationAggregatorTag> tags) {
+        public Builder tags(@Nullable List<ConfigurationAggregatorTag> tags) {
             this.tags = tags;
             return this;
         }

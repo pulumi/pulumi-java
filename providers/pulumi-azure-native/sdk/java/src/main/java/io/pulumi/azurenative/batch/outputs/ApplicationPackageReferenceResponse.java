@@ -18,10 +18,10 @@ public final class ApplicationPackageReferenceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","version"})
+    @OutputCustomType.Constructor
     private ApplicationPackageReferenceResponse(
-        String id,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.version = version;
     }
@@ -59,12 +59,12 @@ public final class ApplicationPackageReferenceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

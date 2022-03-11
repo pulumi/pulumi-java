@@ -75,22 +75,22 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setSampleRate(@Nullable Input<Double> sampleRate) {
+        public Builder sampleRate(@Nullable Input<Double> sampleRate) {
             this.sampleRate = sampleRate;
             return this;
         }
 
-        public Builder setSampleRate(@Nullable Double sampleRate) {
+        public Builder sampleRate(@Nullable Double sampleRate) {
             this.sampleRate = Input.ofNullable(sampleRate);
             return this;
         }

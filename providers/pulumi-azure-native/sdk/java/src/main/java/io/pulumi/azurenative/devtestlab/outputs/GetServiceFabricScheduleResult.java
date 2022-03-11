@@ -97,24 +97,24 @@ public final class GetServiceFabricScheduleResult {
      */
     private final @Nullable WeekDetailsResponse weeklyRecurrence;
 
-    @OutputCustomType.Constructor({"createdDate","dailyRecurrence","hourlyRecurrence","id","location","name","notificationSettings","provisioningState","status","tags","targetResourceId","taskType","timeZoneId","type","uniqueIdentifier","weeklyRecurrence"})
+    @OutputCustomType.Constructor
     private GetServiceFabricScheduleResult(
-        String createdDate,
-        @Nullable DayDetailsResponse dailyRecurrence,
-        @Nullable HourDetailsResponse hourlyRecurrence,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable NotificationSettingsResponse notificationSettings,
-        String provisioningState,
-        @Nullable String status,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceId,
-        @Nullable String taskType,
-        @Nullable String timeZoneId,
-        String type,
-        String uniqueIdentifier,
-        @Nullable WeekDetailsResponse weeklyRecurrence) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("dailyRecurrence") @Nullable DayDetailsResponse dailyRecurrence,
+        @OutputCustomType.Parameter("hourlyRecurrence") @Nullable HourDetailsResponse hourlyRecurrence,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationSettings") @Nullable NotificationSettingsResponse notificationSettings,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceId") @Nullable String targetResourceId,
+        @OutputCustomType.Parameter("taskType") @Nullable String taskType,
+        @OutputCustomType.Parameter("timeZoneId") @Nullable String timeZoneId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("weeklyRecurrence") @Nullable WeekDetailsResponse weeklyRecurrence) {
         this.createdDate = createdDate;
         this.dailyRecurrence = dailyRecurrence;
         this.hourlyRecurrence = hourlyRecurrence;
@@ -296,82 +296,82 @@ public final class GetServiceFabricScheduleResult {
     	      this.weeklyRecurrence = defaults.weeklyRecurrence;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
+        public Builder dailyRecurrence(@Nullable DayDetailsResponse dailyRecurrence) {
             this.dailyRecurrence = dailyRecurrence;
             return this;
         }
 
-        public Builder setHourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
+        public Builder hourlyRecurrence(@Nullable HourDetailsResponse hourlyRecurrence) {
             this.hourlyRecurrence = hourlyRecurrence;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
+        public Builder notificationSettings(@Nullable NotificationSettingsResponse notificationSettings) {
             this.notificationSettings = notificationSettings;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceId(@Nullable String targetResourceId) {
+        public Builder targetResourceId(@Nullable String targetResourceId) {
             this.targetResourceId = targetResourceId;
             return this;
         }
 
-        public Builder setTaskType(@Nullable String taskType) {
+        public Builder taskType(@Nullable String taskType) {
             this.taskType = taskType;
             return this;
         }
 
-        public Builder setTimeZoneId(@Nullable String timeZoneId) {
+        public Builder timeZoneId(@Nullable String timeZoneId) {
             this.timeZoneId = timeZoneId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setWeeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
+        public Builder weeklyRecurrence(@Nullable WeekDetailsResponse weeklyRecurrence) {
             this.weeklyRecurrence = weeklyRecurrence;
             return this;
         }

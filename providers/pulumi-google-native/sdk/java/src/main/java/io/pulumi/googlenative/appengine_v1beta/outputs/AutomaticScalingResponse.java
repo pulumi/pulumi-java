@@ -88,22 +88,22 @@ public final class AutomaticScalingResponse {
      */
     private final StandardSchedulerSettingsResponse standardSchedulerSettings;
 
-    @OutputCustomType.Constructor({"coolDownPeriod","cpuUtilization","customMetrics","diskUtilization","maxConcurrentRequests","maxIdleInstances","maxPendingLatency","maxTotalInstances","minIdleInstances","minPendingLatency","minTotalInstances","networkUtilization","requestUtilization","standardSchedulerSettings"})
+    @OutputCustomType.Constructor
     private AutomaticScalingResponse(
-        String coolDownPeriod,
-        CpuUtilizationResponse cpuUtilization,
-        List<CustomMetricResponse> customMetrics,
-        DiskUtilizationResponse diskUtilization,
-        Integer maxConcurrentRequests,
-        Integer maxIdleInstances,
-        String maxPendingLatency,
-        Integer maxTotalInstances,
-        Integer minIdleInstances,
-        String minPendingLatency,
-        Integer minTotalInstances,
-        NetworkUtilizationResponse networkUtilization,
-        RequestUtilizationResponse requestUtilization,
-        StandardSchedulerSettingsResponse standardSchedulerSettings) {
+        @OutputCustomType.Parameter("coolDownPeriod") String coolDownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") CpuUtilizationResponse cpuUtilization,
+        @OutputCustomType.Parameter("customMetrics") List<CustomMetricResponse> customMetrics,
+        @OutputCustomType.Parameter("diskUtilization") DiskUtilizationResponse diskUtilization,
+        @OutputCustomType.Parameter("maxConcurrentRequests") Integer maxConcurrentRequests,
+        @OutputCustomType.Parameter("maxIdleInstances") Integer maxIdleInstances,
+        @OutputCustomType.Parameter("maxPendingLatency") String maxPendingLatency,
+        @OutputCustomType.Parameter("maxTotalInstances") Integer maxTotalInstances,
+        @OutputCustomType.Parameter("minIdleInstances") Integer minIdleInstances,
+        @OutputCustomType.Parameter("minPendingLatency") String minPendingLatency,
+        @OutputCustomType.Parameter("minTotalInstances") Integer minTotalInstances,
+        @OutputCustomType.Parameter("networkUtilization") NetworkUtilizationResponse networkUtilization,
+        @OutputCustomType.Parameter("requestUtilization") RequestUtilizationResponse requestUtilization,
+        @OutputCustomType.Parameter("standardSchedulerSettings") StandardSchedulerSettingsResponse standardSchedulerSettings) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.customMetrics = customMetrics;
@@ -265,72 +265,72 @@ public final class AutomaticScalingResponse {
     	      this.standardSchedulerSettings = defaults.standardSchedulerSettings;
         }
 
-        public Builder setCoolDownPeriod(String coolDownPeriod) {
+        public Builder coolDownPeriod(String coolDownPeriod) {
             this.coolDownPeriod = Objects.requireNonNull(coolDownPeriod);
             return this;
         }
 
-        public Builder setCpuUtilization(CpuUtilizationResponse cpuUtilization) {
+        public Builder cpuUtilization(CpuUtilizationResponse cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setCustomMetrics(List<CustomMetricResponse> customMetrics) {
+        public Builder customMetrics(List<CustomMetricResponse> customMetrics) {
             this.customMetrics = Objects.requireNonNull(customMetrics);
             return this;
         }
 
-        public Builder setDiskUtilization(DiskUtilizationResponse diskUtilization) {
+        public Builder diskUtilization(DiskUtilizationResponse diskUtilization) {
             this.diskUtilization = Objects.requireNonNull(diskUtilization);
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = Objects.requireNonNull(maxConcurrentRequests);
             return this;
         }
 
-        public Builder setMaxIdleInstances(Integer maxIdleInstances) {
+        public Builder maxIdleInstances(Integer maxIdleInstances) {
             this.maxIdleInstances = Objects.requireNonNull(maxIdleInstances);
             return this;
         }
 
-        public Builder setMaxPendingLatency(String maxPendingLatency) {
+        public Builder maxPendingLatency(String maxPendingLatency) {
             this.maxPendingLatency = Objects.requireNonNull(maxPendingLatency);
             return this;
         }
 
-        public Builder setMaxTotalInstances(Integer maxTotalInstances) {
+        public Builder maxTotalInstances(Integer maxTotalInstances) {
             this.maxTotalInstances = Objects.requireNonNull(maxTotalInstances);
             return this;
         }
 
-        public Builder setMinIdleInstances(Integer minIdleInstances) {
+        public Builder minIdleInstances(Integer minIdleInstances) {
             this.minIdleInstances = Objects.requireNonNull(minIdleInstances);
             return this;
         }
 
-        public Builder setMinPendingLatency(String minPendingLatency) {
+        public Builder minPendingLatency(String minPendingLatency) {
             this.minPendingLatency = Objects.requireNonNull(minPendingLatency);
             return this;
         }
 
-        public Builder setMinTotalInstances(Integer minTotalInstances) {
+        public Builder minTotalInstances(Integer minTotalInstances) {
             this.minTotalInstances = Objects.requireNonNull(minTotalInstances);
             return this;
         }
 
-        public Builder setNetworkUtilization(NetworkUtilizationResponse networkUtilization) {
+        public Builder networkUtilization(NetworkUtilizationResponse networkUtilization) {
             this.networkUtilization = Objects.requireNonNull(networkUtilization);
             return this;
         }
 
-        public Builder setRequestUtilization(RequestUtilizationResponse requestUtilization) {
+        public Builder requestUtilization(RequestUtilizationResponse requestUtilization) {
             this.requestUtilization = Objects.requireNonNull(requestUtilization);
             return this;
         }
 
-        public Builder setStandardSchedulerSettings(StandardSchedulerSettingsResponse standardSchedulerSettings) {
+        public Builder standardSchedulerSettings(StandardSchedulerSettingsResponse standardSchedulerSettings) {
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
         }

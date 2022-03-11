@@ -30,12 +30,12 @@ public final class DiskUtilizationResponse {
      */
     private final Integer targetWriteOpsPerSecond;
 
-    @OutputCustomType.Constructor({"targetReadBytesPerSecond","targetReadOpsPerSecond","targetWriteBytesPerSecond","targetWriteOpsPerSecond"})
+    @OutputCustomType.Constructor
     private DiskUtilizationResponse(
-        Integer targetReadBytesPerSecond,
-        Integer targetReadOpsPerSecond,
-        Integer targetWriteBytesPerSecond,
-        Integer targetWriteOpsPerSecond) {
+        @OutputCustomType.Parameter("targetReadBytesPerSecond") Integer targetReadBytesPerSecond,
+        @OutputCustomType.Parameter("targetReadOpsPerSecond") Integer targetReadOpsPerSecond,
+        @OutputCustomType.Parameter("targetWriteBytesPerSecond") Integer targetWriteBytesPerSecond,
+        @OutputCustomType.Parameter("targetWriteOpsPerSecond") Integer targetWriteOpsPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;
@@ -97,22 +97,22 @@ public final class DiskUtilizationResponse {
     	      this.targetWriteOpsPerSecond = defaults.targetWriteOpsPerSecond;
         }
 
-        public Builder setTargetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
+        public Builder targetReadBytesPerSecond(Integer targetReadBytesPerSecond) {
             this.targetReadBytesPerSecond = Objects.requireNonNull(targetReadBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
+        public Builder targetReadOpsPerSecond(Integer targetReadOpsPerSecond) {
             this.targetReadOpsPerSecond = Objects.requireNonNull(targetReadOpsPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
+        public Builder targetWriteBytesPerSecond(Integer targetWriteBytesPerSecond) {
             this.targetWriteBytesPerSecond = Objects.requireNonNull(targetWriteBytesPerSecond);
             return this;
         }
 
-        public Builder setTargetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
+        public Builder targetWriteOpsPerSecond(Integer targetWriteOpsPerSecond) {
             this.targetWriteOpsPerSecond = Objects.requireNonNull(targetWriteOpsPerSecond);
             return this;
         }

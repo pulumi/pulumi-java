@@ -73,19 +73,19 @@ public final class GetSearchApplicationResult {
      */
     private final List<SourceConfigResponse> sourceConfig;
 
-    @OutputCustomType.Constructor({"dataSourceRestrictions","defaultFacetOptions","defaultSortOptions","displayName","enableAuditLog","name","operationIds","queryInterpretationConfig","returnResultThumbnailUrls","scoringConfig","sourceConfig"})
+    @OutputCustomType.Constructor
     private GetSearchApplicationResult(
-        List<DataSourceRestrictionResponse> dataSourceRestrictions,
-        List<FacetOptionsResponse> defaultFacetOptions,
-        SortOptionsResponse defaultSortOptions,
-        String displayName,
-        Boolean enableAuditLog,
-        String name,
-        List<String> operationIds,
-        QueryInterpretationConfigResponse queryInterpretationConfig,
-        Boolean returnResultThumbnailUrls,
-        ScoringConfigResponse scoringConfig,
-        List<SourceConfigResponse> sourceConfig) {
+        @OutputCustomType.Parameter("dataSourceRestrictions") List<DataSourceRestrictionResponse> dataSourceRestrictions,
+        @OutputCustomType.Parameter("defaultFacetOptions") List<FacetOptionsResponse> defaultFacetOptions,
+        @OutputCustomType.Parameter("defaultSortOptions") SortOptionsResponse defaultSortOptions,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableAuditLog") Boolean enableAuditLog,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
+        @OutputCustomType.Parameter("queryInterpretationConfig") QueryInterpretationConfigResponse queryInterpretationConfig,
+        @OutputCustomType.Parameter("returnResultThumbnailUrls") Boolean returnResultThumbnailUrls,
+        @OutputCustomType.Parameter("scoringConfig") ScoringConfigResponse scoringConfig,
+        @OutputCustomType.Parameter("sourceConfig") List<SourceConfigResponse> sourceConfig) {
         this.dataSourceRestrictions = dataSourceRestrictions;
         this.defaultFacetOptions = defaultFacetOptions;
         this.defaultSortOptions = defaultSortOptions;
@@ -217,57 +217,57 @@ public final class GetSearchApplicationResult {
     	      this.sourceConfig = defaults.sourceConfig;
         }
 
-        public Builder setDataSourceRestrictions(List<DataSourceRestrictionResponse> dataSourceRestrictions) {
+        public Builder dataSourceRestrictions(List<DataSourceRestrictionResponse> dataSourceRestrictions) {
             this.dataSourceRestrictions = Objects.requireNonNull(dataSourceRestrictions);
             return this;
         }
 
-        public Builder setDefaultFacetOptions(List<FacetOptionsResponse> defaultFacetOptions) {
+        public Builder defaultFacetOptions(List<FacetOptionsResponse> defaultFacetOptions) {
             this.defaultFacetOptions = Objects.requireNonNull(defaultFacetOptions);
             return this;
         }
 
-        public Builder setDefaultSortOptions(SortOptionsResponse defaultSortOptions) {
+        public Builder defaultSortOptions(SortOptionsResponse defaultSortOptions) {
             this.defaultSortOptions = Objects.requireNonNull(defaultSortOptions);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableAuditLog(Boolean enableAuditLog) {
+        public Builder enableAuditLog(Boolean enableAuditLog) {
             this.enableAuditLog = Objects.requireNonNull(enableAuditLog);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationIds(List<String> operationIds) {
+        public Builder operationIds(List<String> operationIds) {
             this.operationIds = Objects.requireNonNull(operationIds);
             return this;
         }
 
-        public Builder setQueryInterpretationConfig(QueryInterpretationConfigResponse queryInterpretationConfig) {
+        public Builder queryInterpretationConfig(QueryInterpretationConfigResponse queryInterpretationConfig) {
             this.queryInterpretationConfig = Objects.requireNonNull(queryInterpretationConfig);
             return this;
         }
 
-        public Builder setReturnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
+        public Builder returnResultThumbnailUrls(Boolean returnResultThumbnailUrls) {
             this.returnResultThumbnailUrls = Objects.requireNonNull(returnResultThumbnailUrls);
             return this;
         }
 
-        public Builder setScoringConfig(ScoringConfigResponse scoringConfig) {
+        public Builder scoringConfig(ScoringConfigResponse scoringConfig) {
             this.scoringConfig = Objects.requireNonNull(scoringConfig);
             return this;
         }
 
-        public Builder setSourceConfig(List<SourceConfigResponse> sourceConfig) {
+        public Builder sourceConfig(List<SourceConfigResponse> sourceConfig) {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }

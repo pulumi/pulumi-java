@@ -54,16 +54,16 @@ public final class GetTestCaseResult {
      */
     private final GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig;
 
-    @OutputCustomType.Constructor({"creationTime","displayName","lastTestResult","name","notes","tags","testCaseConversationTurns","testConfig"})
+    @OutputCustomType.Constructor
     private GetTestCaseResult(
-        String creationTime,
-        String displayName,
-        GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult,
-        String name,
-        String notes,
-        List<String> tags,
-        List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns,
-        GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("lastTestResult") GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") String notes,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("testCaseConversationTurns") List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns,
+        @OutputCustomType.Parameter("testConfig") GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
         this.creationTime = creationTime;
         this.displayName = displayName;
         this.lastTestResult = lastTestResult;
@@ -165,42 +165,42 @@ public final class GetTestCaseResult {
     	      this.testConfig = defaults.testConfig;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setLastTestResult(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult) {
+        public Builder lastTestResult(GoogleCloudDialogflowCxV3beta1TestCaseResultResponse lastTestResult) {
             this.lastTestResult = Objects.requireNonNull(lastTestResult);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(String notes) {
+        public Builder notes(String notes) {
             this.notes = Objects.requireNonNull(notes);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTestCaseConversationTurns(List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns) {
+        public Builder testCaseConversationTurns(List<GoogleCloudDialogflowCxV3beta1ConversationTurnResponse> testCaseConversationTurns) {
             this.testCaseConversationTurns = Objects.requireNonNull(testCaseConversationTurns);
             return this;
         }
 
-        public Builder setTestConfig(GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
+        public Builder testConfig(GoogleCloudDialogflowCxV3beta1TestConfigResponse testConfig) {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
         }

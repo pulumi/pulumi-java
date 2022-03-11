@@ -27,11 +27,11 @@ public final class ManagedRuleOverrideResponse {
      */
     private final String ruleId;
 
-    @OutputCustomType.Constructor({"action","enabledState","ruleId"})
+    @OutputCustomType.Constructor
     private ManagedRuleOverrideResponse(
-        @Nullable String action,
-        @Nullable String enabledState,
-        String ruleId) {
+        @OutputCustomType.Parameter("action") @Nullable String action,
+        @OutputCustomType.Parameter("enabledState") @Nullable String enabledState,
+        @OutputCustomType.Parameter("ruleId") String ruleId) {
         this.action = action;
         this.enabledState = enabledState;
         this.ruleId = ruleId;
@@ -83,17 +83,17 @@ public final class ManagedRuleOverrideResponse {
     	      this.ruleId = defaults.ruleId;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = action;
             return this;
         }
 
-        public Builder setEnabledState(@Nullable String enabledState) {
+        public Builder enabledState(@Nullable String enabledState) {
             this.enabledState = enabledState;
             return this;
         }
 
-        public Builder setRuleId(String ruleId) {
+        public Builder ruleId(String ruleId) {
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }

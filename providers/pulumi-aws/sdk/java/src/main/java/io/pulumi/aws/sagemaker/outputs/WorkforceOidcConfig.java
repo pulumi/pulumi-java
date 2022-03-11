@@ -50,16 +50,16 @@ public final class WorkforceOidcConfig {
      */
     private final String userInfoEndpoint;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","clientId","clientSecret","issuer","jwksUri","logoutEndpoint","tokenEndpoint","userInfoEndpoint"})
+    @OutputCustomType.Constructor
     private WorkforceOidcConfig(
-        String authorizationEndpoint,
-        String clientId,
-        String clientSecret,
-        String issuer,
-        String jwksUri,
-        String logoutEndpoint,
-        String tokenEndpoint,
-        String userInfoEndpoint) {
+        @OutputCustomType.Parameter("authorizationEndpoint") String authorizationEndpoint,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("clientSecret") String clientSecret,
+        @OutputCustomType.Parameter("issuer") String issuer,
+        @OutputCustomType.Parameter("jwksUri") String jwksUri,
+        @OutputCustomType.Parameter("logoutEndpoint") String logoutEndpoint,
+        @OutputCustomType.Parameter("tokenEndpoint") String tokenEndpoint,
+        @OutputCustomType.Parameter("userInfoEndpoint") String userInfoEndpoint) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -161,42 +161,42 @@ public final class WorkforceOidcConfig {
     	      this.userInfoEndpoint = defaults.userInfoEndpoint;
         }
 
-        public Builder setAuthorizationEndpoint(String authorizationEndpoint) {
+        public Builder authorizationEndpoint(String authorizationEndpoint) {
             this.authorizationEndpoint = Objects.requireNonNull(authorizationEndpoint);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setClientSecret(String clientSecret) {
+        public Builder clientSecret(String clientSecret) {
             this.clientSecret = Objects.requireNonNull(clientSecret);
             return this;
         }
 
-        public Builder setIssuer(String issuer) {
+        public Builder issuer(String issuer) {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
 
-        public Builder setJwksUri(String jwksUri) {
+        public Builder jwksUri(String jwksUri) {
             this.jwksUri = Objects.requireNonNull(jwksUri);
             return this;
         }
 
-        public Builder setLogoutEndpoint(String logoutEndpoint) {
+        public Builder logoutEndpoint(String logoutEndpoint) {
             this.logoutEndpoint = Objects.requireNonNull(logoutEndpoint);
             return this;
         }
 
-        public Builder setTokenEndpoint(String tokenEndpoint) {
+        public Builder tokenEndpoint(String tokenEndpoint) {
             this.tokenEndpoint = Objects.requireNonNull(tokenEndpoint);
             return this;
         }
 
-        public Builder setUserInfoEndpoint(String userInfoEndpoint) {
+        public Builder userInfoEndpoint(String userInfoEndpoint) {
             this.userInfoEndpoint = Objects.requireNonNull(userInfoEndpoint);
             return this;
         }

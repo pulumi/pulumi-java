@@ -45,14 +45,14 @@ public final class WebApplicationFirewallCustomRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"action","etag","matchConditions","name","priority","ruleType"})
+    @OutputCustomType.Constructor
     private WebApplicationFirewallCustomRuleResponse(
-        String action,
-        String etag,
-        List<MatchConditionResponse> matchConditions,
-        @Nullable String name,
-        Integer priority,
-        String ruleType) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("matchConditions") List<MatchConditionResponse> matchConditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.action = action;
         this.etag = etag;
         this.matchConditions = matchConditions;
@@ -134,32 +134,32 @@ public final class WebApplicationFirewallCustomRuleResponse {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setMatchConditions(List<MatchConditionResponse> matchConditions) {
+        public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             this.matchConditions = Objects.requireNonNull(matchConditions);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }

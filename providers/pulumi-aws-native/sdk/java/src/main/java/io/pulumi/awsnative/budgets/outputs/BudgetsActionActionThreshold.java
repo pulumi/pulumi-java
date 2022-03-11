@@ -13,10 +13,10 @@ public final class BudgetsActionActionThreshold {
     private final BudgetsActionActionThresholdType type;
     private final Double value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private BudgetsActionActionThreshold(
-        BudgetsActionActionThresholdType type,
-        Double value) {
+        @OutputCustomType.Parameter("type") BudgetsActionActionThresholdType type,
+        @OutputCustomType.Parameter("value") Double value) {
         this.type = type;
         this.value = value;
     }
@@ -50,12 +50,12 @@ public final class BudgetsActionActionThreshold {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(BudgetsActionActionThresholdType type) {
+        public Builder type(BudgetsActionActionThresholdType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Double value) {
+        public Builder value(Double value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

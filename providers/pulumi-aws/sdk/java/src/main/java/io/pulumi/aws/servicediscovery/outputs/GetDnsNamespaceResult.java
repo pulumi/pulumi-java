@@ -32,14 +32,14 @@ public final class GetDnsNamespaceResult {
     private final String name;
     private final String type;
 
-    @OutputCustomType.Constructor({"arn","description","hostedZone","id","name","type"})
+    @OutputCustomType.Constructor
     private GetDnsNamespaceResult(
-        String arn,
-        String description,
-        String hostedZone,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("hostedZone") String hostedZone,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.arn = arn;
         this.description = description;
         this.hostedZone = hostedZone;
@@ -113,32 +113,32 @@ public final class GetDnsNamespaceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHostedZone(String hostedZone) {
+        public Builder hostedZone(String hostedZone) {
             this.hostedZone = Objects.requireNonNull(hostedZone);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

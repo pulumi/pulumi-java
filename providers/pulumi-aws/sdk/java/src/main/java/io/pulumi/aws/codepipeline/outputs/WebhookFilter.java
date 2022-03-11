@@ -20,10 +20,10 @@ public final class WebhookFilter {
      */
     private final String matchEquals;
 
-    @OutputCustomType.Constructor({"jsonPath","matchEquals"})
+    @OutputCustomType.Constructor
     private WebhookFilter(
-        String jsonPath,
-        String matchEquals) {
+        @OutputCustomType.Parameter("jsonPath") String jsonPath,
+        @OutputCustomType.Parameter("matchEquals") String matchEquals) {
         this.jsonPath = jsonPath;
         this.matchEquals = matchEquals;
     }
@@ -65,12 +65,12 @@ public final class WebhookFilter {
     	      this.matchEquals = defaults.matchEquals;
         }
 
-        public Builder setJsonPath(String jsonPath) {
+        public Builder jsonPath(String jsonPath) {
             this.jsonPath = Objects.requireNonNull(jsonPath);
             return this;
         }
 
-        public Builder setMatchEquals(String matchEquals) {
+        public Builder matchEquals(String matchEquals) {
             this.matchEquals = Objects.requireNonNull(matchEquals);
             return this;
         }

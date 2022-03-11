@@ -43,14 +43,14 @@ public final class VolumeMount {
      */
     private final @Nullable String subPathExpr;
 
-    @OutputCustomType.Constructor({"mountPath","mountPropagation","name","readOnly","subPath","subPathExpr"})
+    @OutputCustomType.Constructor
     private VolumeMount(
-        String mountPath,
-        @Nullable String mountPropagation,
-        String name,
-        @Nullable Boolean readOnly,
-        @Nullable String subPath,
-        @Nullable String subPathExpr) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("mountPropagation") @Nullable String mountPropagation,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("subPath") @Nullable String subPath,
+        @OutputCustomType.Parameter("subPathExpr") @Nullable String subPathExpr) {
         this.mountPath = mountPath;
         this.mountPropagation = mountPropagation;
         this.name = name;
@@ -132,32 +132,32 @@ public final class VolumeMount {
     	      this.subPathExpr = defaults.subPathExpr;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setMountPropagation(@Nullable String mountPropagation) {
+        public Builder mountPropagation(@Nullable String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSubPath(@Nullable String subPath) {
+        public Builder subPath(@Nullable String subPath) {
             this.subPath = subPath;
             return this;
         }
 
-        public Builder setSubPathExpr(@Nullable String subPathExpr) {
+        public Builder subPathExpr(@Nullable String subPathExpr) {
             this.subPathExpr = subPathExpr;
             return this;
         }

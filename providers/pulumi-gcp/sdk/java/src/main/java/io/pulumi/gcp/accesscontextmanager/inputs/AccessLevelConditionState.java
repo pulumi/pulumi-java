@@ -179,72 +179,72 @@ public final class AccessLevelConditionState extends io.pulumi.resources.Resourc
     	      this.requiredAccessLevels = defaults.requiredAccessLevels;
         }
 
-        public Builder setAccessLevel(@Nullable Input<String> accessLevel) {
+        public Builder accessLevel(@Nullable Input<String> accessLevel) {
             this.accessLevel = accessLevel;
             return this;
         }
 
-        public Builder setAccessLevel(@Nullable String accessLevel) {
+        public Builder accessLevel(@Nullable String accessLevel) {
             this.accessLevel = Input.ofNullable(accessLevel);
             return this;
         }
 
-        public Builder setDevicePolicy(@Nullable Input<AccessLevelConditionDevicePolicyGetArgs> devicePolicy) {
+        public Builder devicePolicy(@Nullable Input<AccessLevelConditionDevicePolicyGetArgs> devicePolicy) {
             this.devicePolicy = devicePolicy;
             return this;
         }
 
-        public Builder setDevicePolicy(@Nullable AccessLevelConditionDevicePolicyGetArgs devicePolicy) {
+        public Builder devicePolicy(@Nullable AccessLevelConditionDevicePolicyGetArgs devicePolicy) {
             this.devicePolicy = Input.ofNullable(devicePolicy);
             return this;
         }
 
-        public Builder setIpSubnetworks(@Nullable Input<List<String>> ipSubnetworks) {
+        public Builder ipSubnetworks(@Nullable Input<List<String>> ipSubnetworks) {
             this.ipSubnetworks = ipSubnetworks;
             return this;
         }
 
-        public Builder setIpSubnetworks(@Nullable List<String> ipSubnetworks) {
+        public Builder ipSubnetworks(@Nullable List<String> ipSubnetworks) {
             this.ipSubnetworks = Input.ofNullable(ipSubnetworks);
             return this;
         }
 
-        public Builder setMembers(@Nullable Input<List<String>> members) {
+        public Builder members(@Nullable Input<List<String>> members) {
             this.members = members;
             return this;
         }
 
-        public Builder setMembers(@Nullable List<String> members) {
+        public Builder members(@Nullable List<String> members) {
             this.members = Input.ofNullable(members);
             return this;
         }
 
-        public Builder setNegate(@Nullable Input<Boolean> negate) {
+        public Builder negate(@Nullable Input<Boolean> negate) {
             this.negate = negate;
             return this;
         }
 
-        public Builder setNegate(@Nullable Boolean negate) {
+        public Builder negate(@Nullable Boolean negate) {
             this.negate = Input.ofNullable(negate);
             return this;
         }
 
-        public Builder setRegions(@Nullable Input<List<String>> regions) {
+        public Builder regions(@Nullable Input<List<String>> regions) {
             this.regions = regions;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<String> regions) {
+        public Builder regions(@Nullable List<String> regions) {
             this.regions = Input.ofNullable(regions);
             return this;
         }
 
-        public Builder setRequiredAccessLevels(@Nullable Input<List<String>> requiredAccessLevels) {
+        public Builder requiredAccessLevels(@Nullable Input<List<String>> requiredAccessLevels) {
             this.requiredAccessLevels = requiredAccessLevels;
             return this;
         }
 
-        public Builder setRequiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
+        public Builder requiredAccessLevels(@Nullable List<String> requiredAccessLevels) {
             this.requiredAccessLevels = Input.ofNullable(requiredAccessLevels);
             return this;
         }

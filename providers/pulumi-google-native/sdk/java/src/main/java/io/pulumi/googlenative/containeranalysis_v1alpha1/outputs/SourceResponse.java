@@ -45,14 +45,14 @@ public final class SourceResponse {
      */
     private final StorageSourceResponse storageSource;
 
-    @OutputCustomType.Constructor({"additionalContexts","artifactStorageSource","context","fileHashes","repoSource","storageSource"})
+    @OutputCustomType.Constructor
     private SourceResponse(
-        List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
-        StorageSourceResponse artifactStorageSource,
-        GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
-        Map<String,String> fileHashes,
-        RepoSourceResponse repoSource,
-        StorageSourceResponse storageSource) {
+        @OutputCustomType.Parameter("additionalContexts") List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts,
+        @OutputCustomType.Parameter("artifactStorageSource") StorageSourceResponse artifactStorageSource,
+        @OutputCustomType.Parameter("context") GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context,
+        @OutputCustomType.Parameter("fileHashes") Map<String,String> fileHashes,
+        @OutputCustomType.Parameter("repoSource") RepoSourceResponse repoSource,
+        @OutputCustomType.Parameter("storageSource") StorageSourceResponse storageSource) {
         this.additionalContexts = additionalContexts;
         this.artifactStorageSource = artifactStorageSource;
         this.context = context;
@@ -134,32 +134,32 @@ public final class SourceResponse {
     	      this.storageSource = defaults.storageSource;
         }
 
-        public Builder setAdditionalContexts(List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts) {
+        public Builder additionalContexts(List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts) {
             this.additionalContexts = Objects.requireNonNull(additionalContexts);
             return this;
         }
 
-        public Builder setArtifactStorageSource(StorageSourceResponse artifactStorageSource) {
+        public Builder artifactStorageSource(StorageSourceResponse artifactStorageSource) {
             this.artifactStorageSource = Objects.requireNonNull(artifactStorageSource);
             return this;
         }
 
-        public Builder setContext(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context) {
+        public Builder context(GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setFileHashes(Map<String,String> fileHashes) {
+        public Builder fileHashes(Map<String,String> fileHashes) {
             this.fileHashes = Objects.requireNonNull(fileHashes);
             return this;
         }
 
-        public Builder setRepoSource(RepoSourceResponse repoSource) {
+        public Builder repoSource(RepoSourceResponse repoSource) {
             this.repoSource = Objects.requireNonNull(repoSource);
             return this;
         }
 
-        public Builder setStorageSource(StorageSourceResponse storageSource) {
+        public Builder storageSource(StorageSourceResponse storageSource) {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }

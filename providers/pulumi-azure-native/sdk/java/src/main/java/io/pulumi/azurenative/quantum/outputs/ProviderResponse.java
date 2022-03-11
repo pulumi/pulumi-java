@@ -42,14 +42,14 @@ public final class ProviderResponse {
      */
     private final @Nullable String resourceUsageId;
 
-    @OutputCustomType.Constructor({"applicationName","instanceUri","providerId","providerSku","provisioningState","resourceUsageId"})
+    @OutputCustomType.Constructor
     private ProviderResponse(
-        @Nullable String applicationName,
-        @Nullable String instanceUri,
-        @Nullable String providerId,
-        @Nullable String providerSku,
-        @Nullable String provisioningState,
-        @Nullable String resourceUsageId) {
+        @OutputCustomType.Parameter("applicationName") @Nullable String applicationName,
+        @OutputCustomType.Parameter("instanceUri") @Nullable String instanceUri,
+        @OutputCustomType.Parameter("providerId") @Nullable String providerId,
+        @OutputCustomType.Parameter("providerSku") @Nullable String providerSku,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceUsageId") @Nullable String resourceUsageId) {
         this.applicationName = applicationName;
         this.instanceUri = instanceUri;
         this.providerId = providerId;
@@ -131,32 +131,32 @@ public final class ProviderResponse {
     	      this.resourceUsageId = defaults.resourceUsageId;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setInstanceUri(@Nullable String instanceUri) {
+        public Builder instanceUri(@Nullable String instanceUri) {
             this.instanceUri = instanceUri;
             return this;
         }
 
-        public Builder setProviderId(@Nullable String providerId) {
+        public Builder providerId(@Nullable String providerId) {
             this.providerId = providerId;
             return this;
         }
 
-        public Builder setProviderSku(@Nullable String providerSku) {
+        public Builder providerSku(@Nullable String providerSku) {
             this.providerSku = providerSku;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setResourceUsageId(@Nullable String resourceUsageId) {
+        public Builder resourceUsageId(@Nullable String resourceUsageId) {
             this.resourceUsageId = resourceUsageId;
             return this;
         }

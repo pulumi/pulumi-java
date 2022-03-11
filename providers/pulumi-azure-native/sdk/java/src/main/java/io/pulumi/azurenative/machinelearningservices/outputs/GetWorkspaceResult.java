@@ -164,36 +164,36 @@ public final class GetWorkspaceResult {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"allowPublicAccessWhenBehindVnet","applicationInsights","containerRegistry","description","discoveryUrl","encryption","friendlyName","hbiWorkspace","id","identity","imageBuildCompute","keyVault","location","name","notebookInfo","primaryUserAssignedIdentity","privateEndpointConnections","privateLinkCount","provisioningState","serviceManagedResourcesSettings","serviceProvisionedResourceGroup","sharedPrivateLinkResources","sku","storageAccount","systemData","tags","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetWorkspaceResult(
-        @Nullable Boolean allowPublicAccessWhenBehindVnet,
-        @Nullable String applicationInsights,
-        @Nullable String containerRegistry,
-        @Nullable String description,
-        @Nullable String discoveryUrl,
-        @Nullable EncryptionPropertyResponse encryption,
-        @Nullable String friendlyName,
-        @Nullable Boolean hbiWorkspace,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String imageBuildCompute,
-        @Nullable String keyVault,
-        @Nullable String location,
-        String name,
-        NotebookResourceInfoResponse notebookInfo,
-        @Nullable String primaryUserAssignedIdentity,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        Integer privateLinkCount,
-        String provisioningState,
-        @Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings,
-        String serviceProvisionedResourceGroup,
-        @Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
-        @Nullable SkuResponse sku,
-        @Nullable String storageAccount,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String workspaceId) {
+        @OutputCustomType.Parameter("allowPublicAccessWhenBehindVnet") @Nullable Boolean allowPublicAccessWhenBehindVnet,
+        @OutputCustomType.Parameter("applicationInsights") @Nullable String applicationInsights,
+        @OutputCustomType.Parameter("containerRegistry") @Nullable String containerRegistry,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("discoveryUrl") @Nullable String discoveryUrl,
+        @OutputCustomType.Parameter("encryption") @Nullable EncryptionPropertyResponse encryption,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("hbiWorkspace") @Nullable Boolean hbiWorkspace,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("imageBuildCompute") @Nullable String imageBuildCompute,
+        @OutputCustomType.Parameter("keyVault") @Nullable String keyVault,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notebookInfo") NotebookResourceInfoResponse notebookInfo,
+        @OutputCustomType.Parameter("primaryUserAssignedIdentity") @Nullable String primaryUserAssignedIdentity,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("privateLinkCount") Integer privateLinkCount,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceManagedResourcesSettings") @Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings,
+        @OutputCustomType.Parameter("serviceProvisionedResourceGroup") String serviceProvisionedResourceGroup,
+        @OutputCustomType.Parameter("sharedPrivateLinkResources") @Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("storageAccount") @Nullable String storageAccount,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
         this.applicationInsights = applicationInsights;
         this.containerRegistry = containerRegistry;
@@ -495,142 +495,142 @@ public final class GetWorkspaceResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setAllowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
+        public Builder allowPublicAccessWhenBehindVnet(@Nullable Boolean allowPublicAccessWhenBehindVnet) {
             this.allowPublicAccessWhenBehindVnet = allowPublicAccessWhenBehindVnet;
             return this;
         }
 
-        public Builder setApplicationInsights(@Nullable String applicationInsights) {
+        public Builder applicationInsights(@Nullable String applicationInsights) {
             this.applicationInsights = applicationInsights;
             return this;
         }
 
-        public Builder setContainerRegistry(@Nullable String containerRegistry) {
+        public Builder containerRegistry(@Nullable String containerRegistry) {
             this.containerRegistry = containerRegistry;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiscoveryUrl(@Nullable String discoveryUrl) {
+        public Builder discoveryUrl(@Nullable String discoveryUrl) {
             this.discoveryUrl = discoveryUrl;
             return this;
         }
 
-        public Builder setEncryption(@Nullable EncryptionPropertyResponse encryption) {
+        public Builder encryption(@Nullable EncryptionPropertyResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHbiWorkspace(@Nullable Boolean hbiWorkspace) {
+        public Builder hbiWorkspace(@Nullable Boolean hbiWorkspace) {
             this.hbiWorkspace = hbiWorkspace;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setImageBuildCompute(@Nullable String imageBuildCompute) {
+        public Builder imageBuildCompute(@Nullable String imageBuildCompute) {
             this.imageBuildCompute = imageBuildCompute;
             return this;
         }
 
-        public Builder setKeyVault(@Nullable String keyVault) {
+        public Builder keyVault(@Nullable String keyVault) {
             this.keyVault = keyVault;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotebookInfo(NotebookResourceInfoResponse notebookInfo) {
+        public Builder notebookInfo(NotebookResourceInfoResponse notebookInfo) {
             this.notebookInfo = Objects.requireNonNull(notebookInfo);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
+        public Builder primaryUserAssignedIdentity(@Nullable String primaryUserAssignedIdentity) {
             this.primaryUserAssignedIdentity = primaryUserAssignedIdentity;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPrivateLinkCount(Integer privateLinkCount) {
+        public Builder privateLinkCount(Integer privateLinkCount) {
             this.privateLinkCount = Objects.requireNonNull(privateLinkCount);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings) {
+        public Builder serviceManagedResourcesSettings(@Nullable ServiceManagedResourcesSettingsResponse serviceManagedResourcesSettings) {
             this.serviceManagedResourcesSettings = serviceManagedResourcesSettings;
             return this;
         }
 
-        public Builder setServiceProvisionedResourceGroup(String serviceProvisionedResourceGroup) {
+        public Builder serviceProvisionedResourceGroup(String serviceProvisionedResourceGroup) {
             this.serviceProvisionedResourceGroup = Objects.requireNonNull(serviceProvisionedResourceGroup);
             return this;
         }
 
-        public Builder setSharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
+        public Builder sharedPrivateLinkResources(@Nullable List<SharedPrivateLinkResourceResponse> sharedPrivateLinkResources) {
             this.sharedPrivateLinkResources = sharedPrivateLinkResources;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable String storageAccount) {
+        public Builder storageAccount(@Nullable String storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

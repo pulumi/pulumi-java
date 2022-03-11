@@ -23,10 +23,10 @@ public final class Webhook {
      */
     private final @Nullable WebhookThrottleConfig throttle;
 
-    @OutputCustomType.Constructor({"clientConfig","throttle"})
+    @OutputCustomType.Constructor
     private Webhook(
-        WebhookClientConfig clientConfig,
-        @Nullable WebhookThrottleConfig throttle) {
+        @OutputCustomType.Parameter("clientConfig") WebhookClientConfig clientConfig,
+        @OutputCustomType.Parameter("throttle") @Nullable WebhookThrottleConfig throttle) {
         this.clientConfig = clientConfig;
         this.throttle = throttle;
     }
@@ -68,12 +68,12 @@ public final class Webhook {
     	      this.throttle = defaults.throttle;
         }
 
-        public Builder setClientConfig(WebhookClientConfig clientConfig) {
+        public Builder clientConfig(WebhookClientConfig clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
-        public Builder setThrottle(@Nullable WebhookThrottleConfig throttle) {
+        public Builder throttle(@Nullable WebhookThrottleConfig throttle) {
             this.throttle = throttle;
             return this;
         }

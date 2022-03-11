@@ -15,8 +15,8 @@ public final class ActivationPropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"status"})
-    private ActivationPropertiesResponse(String status) {
+    @OutputCustomType.Constructor
+    private ActivationPropertiesResponse(@OutputCustomType.Parameter("status") String status) {
         this.status = status;
     }
 
@@ -48,7 +48,7 @@ public final class ActivationPropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

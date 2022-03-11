@@ -20,10 +20,10 @@ public final class SnapshotImportDiskContainerUserBucket {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor({"s3Bucket","s3Key"})
+    @OutputCustomType.Constructor
     private SnapshotImportDiskContainerUserBucket(
-        String s3Bucket,
-        String s3Key) {
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") String s3Key) {
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
     }
@@ -65,12 +65,12 @@ public final class SnapshotImportDiskContainerUserBucket {
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3Key(String s3Key) {
+        public Builder s3Key(String s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }

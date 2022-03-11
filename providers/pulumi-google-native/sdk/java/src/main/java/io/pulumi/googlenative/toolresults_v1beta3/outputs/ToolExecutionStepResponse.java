@@ -15,8 +15,8 @@ public final class ToolExecutionStepResponse {
      */
     private final ToolExecutionResponse toolExecution;
 
-    @OutputCustomType.Constructor({"toolExecution"})
-    private ToolExecutionStepResponse(ToolExecutionResponse toolExecution) {
+    @OutputCustomType.Constructor
+    private ToolExecutionStepResponse(@OutputCustomType.Parameter("toolExecution") ToolExecutionResponse toolExecution) {
         this.toolExecution = toolExecution;
     }
 
@@ -48,7 +48,7 @@ public final class ToolExecutionStepResponse {
     	      this.toolExecution = defaults.toolExecution;
         }
 
-        public Builder setToolExecution(ToolExecutionResponse toolExecution) {
+        public Builder toolExecution(ToolExecutionResponse toolExecution) {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }

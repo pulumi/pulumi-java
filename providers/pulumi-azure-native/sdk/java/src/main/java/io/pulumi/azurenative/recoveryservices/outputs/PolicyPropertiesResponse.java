@@ -34,10 +34,10 @@ public final class PolicyPropertiesResponse {
      */
     private final @Nullable Object providerSpecificDetails;
 
-    @OutputCustomType.Constructor({"friendlyName","providerSpecificDetails"})
+    @OutputCustomType.Constructor
     private PolicyPropertiesResponse(
-        @Nullable String friendlyName,
-        @Nullable Object providerSpecificDetails) {
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails) {
         this.friendlyName = friendlyName;
         this.providerSpecificDetails = providerSpecificDetails;
     }
@@ -79,12 +79,12 @@ public final class PolicyPropertiesResponse {
     	      this.providerSpecificDetails = defaults.providerSpecificDetails;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable Object providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }

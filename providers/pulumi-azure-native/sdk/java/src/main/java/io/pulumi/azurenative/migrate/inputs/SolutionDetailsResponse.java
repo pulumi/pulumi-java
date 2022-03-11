@@ -92,17 +92,17 @@ public final class SolutionDetailsResponse extends io.pulumi.resources.InvokeArg
     	      this.groupCount = defaults.groupCount;
         }
 
-        public Builder setAssessmentCount(@Nullable Integer assessmentCount) {
+        public Builder assessmentCount(@Nullable Integer assessmentCount) {
             this.assessmentCount = assessmentCount;
             return this;
         }
 
-        public Builder setExtendedDetails(@Nullable Map<String,String> extendedDetails) {
+        public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             this.extendedDetails = extendedDetails;
             return this;
         }
 
-        public Builder setGroupCount(@Nullable Integer groupCount) {
+        public Builder groupCount(@Nullable Integer groupCount) {
             this.groupCount = groupCount;
             return this;
         }

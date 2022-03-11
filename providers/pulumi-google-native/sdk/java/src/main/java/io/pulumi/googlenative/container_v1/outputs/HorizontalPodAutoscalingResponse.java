@@ -15,8 +15,8 @@ public final class HorizontalPodAutoscalingResponse {
      */
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor({"disabled"})
-    private HorizontalPodAutoscalingResponse(Boolean disabled) {
+    @OutputCustomType.Constructor
+    private HorizontalPodAutoscalingResponse(@OutputCustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 
@@ -48,7 +48,7 @@ public final class HorizontalPodAutoscalingResponse {
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }

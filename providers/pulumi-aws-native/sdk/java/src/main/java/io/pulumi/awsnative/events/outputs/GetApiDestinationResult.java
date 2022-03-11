@@ -32,14 +32,14 @@ public final class GetApiDestinationResult {
     private final @Nullable String invocationEndpoint;
     private final @Nullable Integer invocationRateLimitPerSecond;
 
-    @OutputCustomType.Constructor({"arn","connectionArn","description","httpMethod","invocationEndpoint","invocationRateLimitPerSecond"})
+    @OutputCustomType.Constructor
     private GetApiDestinationResult(
-        @Nullable String arn,
-        @Nullable String connectionArn,
-        @Nullable String description,
-        @Nullable ApiDestinationHttpMethod httpMethod,
-        @Nullable String invocationEndpoint,
-        @Nullable Integer invocationRateLimitPerSecond) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("connectionArn") @Nullable String connectionArn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("httpMethod") @Nullable ApiDestinationHttpMethod httpMethod,
+        @OutputCustomType.Parameter("invocationEndpoint") @Nullable String invocationEndpoint,
+        @OutputCustomType.Parameter("invocationRateLimitPerSecond") @Nullable Integer invocationRateLimitPerSecond) {
         this.arn = arn;
         this.connectionArn = connectionArn;
         this.description = description;
@@ -109,32 +109,32 @@ public final class GetApiDestinationResult {
     	      this.invocationRateLimitPerSecond = defaults.invocationRateLimitPerSecond;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setConnectionArn(@Nullable String connectionArn) {
+        public Builder connectionArn(@Nullable String connectionArn) {
             this.connectionArn = connectionArn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable ApiDestinationHttpMethod httpMethod) {
+        public Builder httpMethod(@Nullable ApiDestinationHttpMethod httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setInvocationEndpoint(@Nullable String invocationEndpoint) {
+        public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
             this.invocationEndpoint = invocationEndpoint;
             return this;
         }
 
-        public Builder setInvocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
+        public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }

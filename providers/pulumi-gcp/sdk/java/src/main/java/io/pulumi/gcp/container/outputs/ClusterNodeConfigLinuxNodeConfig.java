@@ -18,8 +18,8 @@ public final class ClusterNodeConfigLinuxNodeConfig {
      */
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor({"sysctls"})
-    private ClusterNodeConfigLinuxNodeConfig(Map<String,String> sysctls) {
+    @OutputCustomType.Constructor
+    private ClusterNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 
@@ -53,7 +53,7 @@ public final class ClusterNodeConfigLinuxNodeConfig {
     	      this.sysctls = defaults.sysctls;
         }
 
-        public Builder setSysctls(Map<String,String> sysctls) {
+        public Builder sysctls(Map<String,String> sysctls) {
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }

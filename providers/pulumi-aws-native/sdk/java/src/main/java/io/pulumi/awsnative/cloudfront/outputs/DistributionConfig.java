@@ -43,27 +43,27 @@ public final class DistributionConfig {
     private final @Nullable DistributionViewerCertificate viewerCertificate;
     private final @Nullable String webACLId;
 
-    @OutputCustomType.Constructor({"aliases","cNAMEs","cacheBehaviors","comment","customErrorResponses","customOrigin","defaultCacheBehavior","defaultRootObject","enabled","httpVersion","iPV6Enabled","logging","originGroups","origins","priceClass","restrictions","s3Origin","viewerCertificate","webACLId"})
+    @OutputCustomType.Constructor
     private DistributionConfig(
-        @Nullable List<String> aliases,
-        @Nullable List<String> cNAMEs,
-        @Nullable List<DistributionCacheBehavior> cacheBehaviors,
-        @Nullable String comment,
-        @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
-        @Nullable DistributionLegacyCustomOrigin customOrigin,
-        @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
-        @Nullable String defaultRootObject,
-        Boolean enabled,
-        @Nullable String httpVersion,
-        @Nullable Boolean iPV6Enabled,
-        @Nullable DistributionLogging logging,
-        @Nullable DistributionOriginGroups originGroups,
-        @Nullable List<DistributionOrigin> origins,
-        @Nullable String priceClass,
-        @Nullable DistributionRestrictions restrictions,
-        @Nullable DistributionLegacyS3Origin s3Origin,
-        @Nullable DistributionViewerCertificate viewerCertificate,
-        @Nullable String webACLId) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<String> aliases,
+        @OutputCustomType.Parameter("cNAMEs") @Nullable List<String> cNAMEs,
+        @OutputCustomType.Parameter("cacheBehaviors") @Nullable List<DistributionCacheBehavior> cacheBehaviors,
+        @OutputCustomType.Parameter("comment") @Nullable String comment,
+        @OutputCustomType.Parameter("customErrorResponses") @Nullable List<DistributionCustomErrorResponse> customErrorResponses,
+        @OutputCustomType.Parameter("customOrigin") @Nullable DistributionLegacyCustomOrigin customOrigin,
+        @OutputCustomType.Parameter("defaultCacheBehavior") @Nullable DistributionDefaultCacheBehavior defaultCacheBehavior,
+        @OutputCustomType.Parameter("defaultRootObject") @Nullable String defaultRootObject,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("httpVersion") @Nullable String httpVersion,
+        @OutputCustomType.Parameter("iPV6Enabled") @Nullable Boolean iPV6Enabled,
+        @OutputCustomType.Parameter("logging") @Nullable DistributionLogging logging,
+        @OutputCustomType.Parameter("originGroups") @Nullable DistributionOriginGroups originGroups,
+        @OutputCustomType.Parameter("origins") @Nullable List<DistributionOrigin> origins,
+        @OutputCustomType.Parameter("priceClass") @Nullable String priceClass,
+        @OutputCustomType.Parameter("restrictions") @Nullable DistributionRestrictions restrictions,
+        @OutputCustomType.Parameter("s3Origin") @Nullable DistributionLegacyS3Origin s3Origin,
+        @OutputCustomType.Parameter("viewerCertificate") @Nullable DistributionViewerCertificate viewerCertificate,
+        @OutputCustomType.Parameter("webACLId") @Nullable String webACLId) {
         this.aliases = aliases;
         this.cNAMEs = cNAMEs;
         this.cacheBehaviors = cacheBehaviors;
@@ -199,97 +199,97 @@ public final class DistributionConfig {
     	      this.webACLId = defaults.webACLId;
         }
 
-        public Builder setAliases(@Nullable List<String> aliases) {
+        public Builder aliases(@Nullable List<String> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setCNAMEs(@Nullable List<String> cNAMEs) {
+        public Builder cNAMEs(@Nullable List<String> cNAMEs) {
             this.cNAMEs = cNAMEs;
             return this;
         }
 
-        public Builder setCacheBehaviors(@Nullable List<DistributionCacheBehavior> cacheBehaviors) {
+        public Builder cacheBehaviors(@Nullable List<DistributionCacheBehavior> cacheBehaviors) {
             this.cacheBehaviors = cacheBehaviors;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setCustomErrorResponses(@Nullable List<DistributionCustomErrorResponse> customErrorResponses) {
+        public Builder customErrorResponses(@Nullable List<DistributionCustomErrorResponse> customErrorResponses) {
             this.customErrorResponses = customErrorResponses;
             return this;
         }
 
-        public Builder setCustomOrigin(@Nullable DistributionLegacyCustomOrigin customOrigin) {
+        public Builder customOrigin(@Nullable DistributionLegacyCustomOrigin customOrigin) {
             this.customOrigin = customOrigin;
             return this;
         }
 
-        public Builder setDefaultCacheBehavior(@Nullable DistributionDefaultCacheBehavior defaultCacheBehavior) {
+        public Builder defaultCacheBehavior(@Nullable DistributionDefaultCacheBehavior defaultCacheBehavior) {
             this.defaultCacheBehavior = defaultCacheBehavior;
             return this;
         }
 
-        public Builder setDefaultRootObject(@Nullable String defaultRootObject) {
+        public Builder defaultRootObject(@Nullable String defaultRootObject) {
             this.defaultRootObject = defaultRootObject;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setHttpVersion(@Nullable String httpVersion) {
+        public Builder httpVersion(@Nullable String httpVersion) {
             this.httpVersion = httpVersion;
             return this;
         }
 
-        public Builder setIPV6Enabled(@Nullable Boolean iPV6Enabled) {
+        public Builder iPV6Enabled(@Nullable Boolean iPV6Enabled) {
             this.iPV6Enabled = iPV6Enabled;
             return this;
         }
 
-        public Builder setLogging(@Nullable DistributionLogging logging) {
+        public Builder logging(@Nullable DistributionLogging logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setOriginGroups(@Nullable DistributionOriginGroups originGroups) {
+        public Builder originGroups(@Nullable DistributionOriginGroups originGroups) {
             this.originGroups = originGroups;
             return this;
         }
 
-        public Builder setOrigins(@Nullable List<DistributionOrigin> origins) {
+        public Builder origins(@Nullable List<DistributionOrigin> origins) {
             this.origins = origins;
             return this;
         }
 
-        public Builder setPriceClass(@Nullable String priceClass) {
+        public Builder priceClass(@Nullable String priceClass) {
             this.priceClass = priceClass;
             return this;
         }
 
-        public Builder setRestrictions(@Nullable DistributionRestrictions restrictions) {
+        public Builder restrictions(@Nullable DistributionRestrictions restrictions) {
             this.restrictions = restrictions;
             return this;
         }
 
-        public Builder setS3Origin(@Nullable DistributionLegacyS3Origin s3Origin) {
+        public Builder s3Origin(@Nullable DistributionLegacyS3Origin s3Origin) {
             this.s3Origin = s3Origin;
             return this;
         }
 
-        public Builder setViewerCertificate(@Nullable DistributionViewerCertificate viewerCertificate) {
+        public Builder viewerCertificate(@Nullable DistributionViewerCertificate viewerCertificate) {
             this.viewerCertificate = viewerCertificate;
             return this;
         }
 
-        public Builder setWebACLId(@Nullable String webACLId) {
+        public Builder webACLId(@Nullable String webACLId) {
             this.webACLId = webACLId;
             return this;
         }

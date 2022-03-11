@@ -20,10 +20,10 @@ public final class SecurityAssessmentPartnerDataResponse {
      */
     private final String secret;
 
-    @OutputCustomType.Constructor({"partnerName","secret"})
+    @OutputCustomType.Constructor
     private SecurityAssessmentPartnerDataResponse(
-        String partnerName,
-        String secret) {
+        @OutputCustomType.Parameter("partnerName") String partnerName,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.partnerName = partnerName;
         this.secret = secret;
     }
@@ -65,12 +65,12 @@ public final class SecurityAssessmentPartnerDataResponse {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setPartnerName(String partnerName) {
+        public Builder partnerName(String partnerName) {
             this.partnerName = Objects.requireNonNull(partnerName);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

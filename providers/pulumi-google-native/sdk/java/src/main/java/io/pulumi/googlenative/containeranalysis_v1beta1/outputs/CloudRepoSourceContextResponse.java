@@ -27,11 +27,11 @@ public final class CloudRepoSourceContextResponse {
      */
     private final String revisionId;
 
-    @OutputCustomType.Constructor({"aliasContext","repoId","revisionId"})
+    @OutputCustomType.Constructor
     private CloudRepoSourceContextResponse(
-        AliasContextResponse aliasContext,
-        RepoIdResponse repoId,
-        String revisionId) {
+        @OutputCustomType.Parameter("aliasContext") AliasContextResponse aliasContext,
+        @OutputCustomType.Parameter("repoId") RepoIdResponse repoId,
+        @OutputCustomType.Parameter("revisionId") String revisionId) {
         this.aliasContext = aliasContext;
         this.repoId = repoId;
         this.revisionId = revisionId;
@@ -83,17 +83,17 @@ public final class CloudRepoSourceContextResponse {
     	      this.revisionId = defaults.revisionId;
         }
 
-        public Builder setAliasContext(AliasContextResponse aliasContext) {
+        public Builder aliasContext(AliasContextResponse aliasContext) {
             this.aliasContext = Objects.requireNonNull(aliasContext);
             return this;
         }
 
-        public Builder setRepoId(RepoIdResponse repoId) {
+        public Builder repoId(RepoIdResponse repoId) {
             this.repoId = Objects.requireNonNull(repoId);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }

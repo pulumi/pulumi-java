@@ -26,11 +26,11 @@ public final class IosDeviceFileResponse {
      */
     private final String devicePath;
 
-    @OutputCustomType.Constructor({"bundleId","content","devicePath"})
+    @OutputCustomType.Constructor
     private IosDeviceFileResponse(
-        String bundleId,
-        FileReferenceResponse content,
-        String devicePath) {
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("content") FileReferenceResponse content,
+        @OutputCustomType.Parameter("devicePath") String devicePath) {
         this.bundleId = bundleId;
         this.content = content;
         this.devicePath = devicePath;
@@ -82,17 +82,17 @@ public final class IosDeviceFileResponse {
     	      this.devicePath = defaults.devicePath;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setContent(FileReferenceResponse content) {
+        public Builder content(FileReferenceResponse content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setDevicePath(String devicePath) {
+        public Builder devicePath(String devicePath) {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }

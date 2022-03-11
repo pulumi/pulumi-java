@@ -22,10 +22,10 @@ public final class PipelineDiagnosticSettingsResponse {
      */
     private final @Nullable HttpMessageDiagnosticResponse response;
 
-    @OutputCustomType.Constructor({"request","response"})
+    @OutputCustomType.Constructor
     private PipelineDiagnosticSettingsResponse(
-        @Nullable HttpMessageDiagnosticResponse request,
-        @Nullable HttpMessageDiagnosticResponse response) {
+        @OutputCustomType.Parameter("request") @Nullable HttpMessageDiagnosticResponse request,
+        @OutputCustomType.Parameter("response") @Nullable HttpMessageDiagnosticResponse response) {
         this.request = request;
         this.response = response;
     }
@@ -67,12 +67,12 @@ public final class PipelineDiagnosticSettingsResponse {
     	      this.response = defaults.response;
         }
 
-        public Builder setRequest(@Nullable HttpMessageDiagnosticResponse request) {
+        public Builder request(@Nullable HttpMessageDiagnosticResponse request) {
             this.request = request;
             return this;
         }
 
-        public Builder setResponse(@Nullable HttpMessageDiagnosticResponse response) {
+        public Builder response(@Nullable HttpMessageDiagnosticResponse response) {
             this.response = response;
             return this;
         }

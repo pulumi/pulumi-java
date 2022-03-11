@@ -107,26 +107,26 @@ public final class GetServerResult {
      */
     private final String workspaceFeature;
 
-    @OutputCustomType.Constructor({"administratorLogin","administrators","fullyQualifiedDomainName","id","identity","keyId","kind","location","minimalTlsVersion","name","primaryUserAssignedIdentityId","privateEndpointConnections","publicNetworkAccess","state","tags","type","version","workspaceFeature"})
+    @OutputCustomType.Constructor
     private GetServerResult(
-        @Nullable String administratorLogin,
-        @Nullable ServerExternalAdministratorResponse administrators,
-        String fullyQualifiedDomainName,
-        String id,
-        @Nullable ResourceIdentityResponse identity,
-        @Nullable String keyId,
-        String kind,
-        String location,
-        @Nullable String minimalTlsVersion,
-        String name,
-        @Nullable String primaryUserAssignedIdentityId,
-        List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
-        @Nullable String publicNetworkAccess,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable String version,
-        String workspaceFeature) {
+        @OutputCustomType.Parameter("administratorLogin") @Nullable String administratorLogin,
+        @OutputCustomType.Parameter("administrators") @Nullable ServerExternalAdministratorResponse administrators,
+        @OutputCustomType.Parameter("fullyQualifiedDomainName") String fullyQualifiedDomainName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceIdentityResponse identity,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("minimalTlsVersion") @Nullable String minimalTlsVersion,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("primaryUserAssignedIdentityId") @Nullable String primaryUserAssignedIdentityId,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("workspaceFeature") String workspaceFeature) {
         this.administratorLogin = administratorLogin;
         this.administrators = administrators;
         this.fullyQualifiedDomainName = fullyQualifiedDomainName;
@@ -328,92 +328,92 @@ public final class GetServerResult {
     	      this.workspaceFeature = defaults.workspaceFeature;
         }
 
-        public Builder setAdministratorLogin(@Nullable String administratorLogin) {
+        public Builder administratorLogin(@Nullable String administratorLogin) {
             this.administratorLogin = administratorLogin;
             return this;
         }
 
-        public Builder setAdministrators(@Nullable ServerExternalAdministratorResponse administrators) {
+        public Builder administrators(@Nullable ServerExternalAdministratorResponse administrators) {
             this.administrators = administrators;
             return this;
         }
 
-        public Builder setFullyQualifiedDomainName(String fullyQualifiedDomainName) {
+        public Builder fullyQualifiedDomainName(String fullyQualifiedDomainName) {
             this.fullyQualifiedDomainName = Objects.requireNonNull(fullyQualifiedDomainName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceIdentityResponse identity) {
+        public Builder identity(@Nullable ResourceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMinimalTlsVersion(@Nullable String minimalTlsVersion) {
+        public Builder minimalTlsVersion(@Nullable String minimalTlsVersion) {
             this.minimalTlsVersion = minimalTlsVersion;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrimaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
+        public Builder primaryUserAssignedIdentityId(@Nullable String primaryUserAssignedIdentityId) {
             this.primaryUserAssignedIdentityId = primaryUserAssignedIdentityId;
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<ServerPrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setWorkspaceFeature(String workspaceFeature) {
+        public Builder workspaceFeature(String workspaceFeature) {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
         }

@@ -125,52 +125,52 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     	      this.url = defaults.url;
         }
 
-        public Builder setAuthFailAction(@Nullable Input<ApiConfigHandlerAuthFailAction> authFailAction) {
+        public Builder authFailAction(@Nullable Input<ApiConfigHandlerAuthFailAction> authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setAuthFailAction(@Nullable ApiConfigHandlerAuthFailAction authFailAction) {
+        public Builder authFailAction(@Nullable ApiConfigHandlerAuthFailAction authFailAction) {
             this.authFailAction = Input.ofNullable(authFailAction);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<ApiConfigHandlerLogin> login) {
+        public Builder login(@Nullable Input<ApiConfigHandlerLogin> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable ApiConfigHandlerLogin login) {
+        public Builder login(@Nullable ApiConfigHandlerLogin login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<String> script) {
+        public Builder script(@Nullable Input<String> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable Input<ApiConfigHandlerSecurityLevel> securityLevel) {
+        public Builder securityLevel(@Nullable Input<ApiConfigHandlerSecurityLevel> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable ApiConfigHandlerSecurityLevel securityLevel) {
+        public Builder securityLevel(@Nullable ApiConfigHandlerSecurityLevel securityLevel) {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }
 
-        public Builder setUrl(@Nullable Input<String> url) {
+        public Builder url(@Nullable Input<String> url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = Input.ofNullable(url);
             return this;
         }

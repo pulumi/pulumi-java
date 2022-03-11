@@ -68,12 +68,12 @@ public final class GetSystemTopicArgs extends io.pulumi.resources.InvokeArgs {
     	      this.systemTopicName = defaults.systemTopicName;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSystemTopicName(String systemTopicName) {
+        public Builder systemTopicName(String systemTopicName) {
             this.systemTopicName = Objects.requireNonNull(systemTopicName);
             return this;
         }

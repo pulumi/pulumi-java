@@ -84,17 +84,17 @@ public final class GetSchemaRegistryArgs extends io.pulumi.resources.InvokeArgs 
     	      this.schemaGroupName = defaults.schemaGroupName;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSchemaGroupName(String schemaGroupName) {
+        public Builder schemaGroupName(String schemaGroupName) {
             this.schemaGroupName = Objects.requireNonNull(schemaGroupName);
             return this;
         }

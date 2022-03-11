@@ -29,11 +29,11 @@ public final class LogSettingsResponse {
      */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
 
-    @OutputCustomType.Constructor({"category","enabled","retentionPolicy"})
+    @OutputCustomType.Constructor
     private LogSettingsResponse(
-        @Nullable String category,
-        Boolean enabled,
-        @Nullable RetentionPolicyResponse retentionPolicy) {
+        @OutputCustomType.Parameter("category") @Nullable String category,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("retentionPolicy") @Nullable RetentionPolicyResponse retentionPolicy) {
         this.category = category;
         this.enabled = enabled;
         this.retentionPolicy = retentionPolicy;
@@ -85,17 +85,17 @@ public final class LogSettingsResponse {
     	      this.retentionPolicy = defaults.retentionPolicy;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = category;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setRetentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = retentionPolicy;
             return this;
         }

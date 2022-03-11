@@ -27,13 +27,13 @@ public final class GetSubnetIdsResult {
     private final Map<String,String> tags;
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"filters","id","ids","tags","vpcId"})
+    @OutputCustomType.Constructor
     private GetSubnetIdsResult(
-        @Nullable List<GetSubnetIdsFilter> filters,
-        String id,
-        List<String> ids,
-        Map<String,String> tags,
-        String vpcId) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetSubnetIdsFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;
@@ -93,27 +93,27 @@ public final class GetSubnetIdsResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setFilters(@Nullable List<GetSubnetIdsFilter> filters) {
+        public Builder filters(@Nullable List<GetSubnetIdsFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

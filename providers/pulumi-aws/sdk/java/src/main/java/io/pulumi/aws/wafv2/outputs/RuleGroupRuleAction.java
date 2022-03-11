@@ -29,11 +29,11 @@ public final class RuleGroupRuleAction {
      */
     private final @Nullable RuleGroupRuleActionCount count;
 
-    @OutputCustomType.Constructor({"allow","block","count"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleAction(
-        @Nullable RuleGroupRuleActionAllow allow,
-        @Nullable RuleGroupRuleActionBlock block,
-        @Nullable RuleGroupRuleActionCount count) {
+        @OutputCustomType.Parameter("allow") @Nullable RuleGroupRuleActionAllow allow,
+        @OutputCustomType.Parameter("block") @Nullable RuleGroupRuleActionBlock block,
+        @OutputCustomType.Parameter("count") @Nullable RuleGroupRuleActionCount count) {
         this.allow = allow;
         this.block = block;
         this.count = count;
@@ -85,17 +85,17 @@ public final class RuleGroupRuleAction {
     	      this.count = defaults.count;
         }
 
-        public Builder setAllow(@Nullable RuleGroupRuleActionAllow allow) {
+        public Builder allow(@Nullable RuleGroupRuleActionAllow allow) {
             this.allow = allow;
             return this;
         }
 
-        public Builder setBlock(@Nullable RuleGroupRuleActionBlock block) {
+        public Builder block(@Nullable RuleGroupRuleActionBlock block) {
             this.block = block;
             return this;
         }
 
-        public Builder setCount(@Nullable RuleGroupRuleActionCount count) {
+        public Builder count(@Nullable RuleGroupRuleActionCount count) {
             this.count = count;
             return this;
         }

@@ -88,32 +88,32 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
     	      this.vpcProperties = defaults.vpcProperties;
         }
 
-        public Builder setHttpUrlProperties(@Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties) {
+        public Builder httpUrlProperties(@Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties) {
             this.httpUrlProperties = httpUrlProperties;
             return this;
         }
 
-        public Builder setHttpUrlProperties(@Nullable TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
+        public Builder httpUrlProperties(@Nullable TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
             this.httpUrlProperties = Input.ofNullable(httpUrlProperties);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<TopicRuleDestinationStatus> status) {
+        public Builder status(@Nullable Input<TopicRuleDestinationStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable TopicRuleDestinationStatus status) {
+        public Builder status(@Nullable TopicRuleDestinationStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }
 
-        public Builder setVpcProperties(@Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
+        public Builder vpcProperties(@Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
             this.vpcProperties = vpcProperties;
             return this;
         }
 
-        public Builder setVpcProperties(@Nullable TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
+        public Builder vpcProperties(@Nullable TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
             this.vpcProperties = Input.ofNullable(vpcProperties);
             return this;
         }

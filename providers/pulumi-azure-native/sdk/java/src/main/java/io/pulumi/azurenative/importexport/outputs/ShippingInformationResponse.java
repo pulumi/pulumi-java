@@ -57,17 +57,17 @@ public final class ShippingInformationResponse {
      */
     private final @Nullable String streetAddress2;
 
-    @OutputCustomType.Constructor({"additionalInformation","city","countryOrRegion","phone","postalCode","recipientName","stateOrProvince","streetAddress1","streetAddress2"})
+    @OutputCustomType.Constructor
     private ShippingInformationResponse(
-        String additionalInformation,
-        @Nullable String city,
-        @Nullable String countryOrRegion,
-        @Nullable String phone,
-        @Nullable String postalCode,
-        @Nullable String recipientName,
-        @Nullable String stateOrProvince,
-        @Nullable String streetAddress1,
-        @Nullable String streetAddress2) {
+        @OutputCustomType.Parameter("additionalInformation") String additionalInformation,
+        @OutputCustomType.Parameter("city") @Nullable String city,
+        @OutputCustomType.Parameter("countryOrRegion") @Nullable String countryOrRegion,
+        @OutputCustomType.Parameter("phone") @Nullable String phone,
+        @OutputCustomType.Parameter("postalCode") @Nullable String postalCode,
+        @OutputCustomType.Parameter("recipientName") @Nullable String recipientName,
+        @OutputCustomType.Parameter("stateOrProvince") @Nullable String stateOrProvince,
+        @OutputCustomType.Parameter("streetAddress1") @Nullable String streetAddress1,
+        @OutputCustomType.Parameter("streetAddress2") @Nullable String streetAddress2) {
         this.additionalInformation = additionalInformation;
         this.city = city;
         this.countryOrRegion = countryOrRegion;
@@ -179,47 +179,47 @@ public final class ShippingInformationResponse {
     	      this.streetAddress2 = defaults.streetAddress2;
         }
 
-        public Builder setAdditionalInformation(String additionalInformation) {
+        public Builder additionalInformation(String additionalInformation) {
             this.additionalInformation = Objects.requireNonNull(additionalInformation);
             return this;
         }
 
-        public Builder setCity(@Nullable String city) {
+        public Builder city(@Nullable String city) {
             this.city = city;
             return this;
         }
 
-        public Builder setCountryOrRegion(@Nullable String countryOrRegion) {
+        public Builder countryOrRegion(@Nullable String countryOrRegion) {
             this.countryOrRegion = countryOrRegion;
             return this;
         }
 
-        public Builder setPhone(@Nullable String phone) {
+        public Builder phone(@Nullable String phone) {
             this.phone = phone;
             return this;
         }
 
-        public Builder setPostalCode(@Nullable String postalCode) {
+        public Builder postalCode(@Nullable String postalCode) {
             this.postalCode = postalCode;
             return this;
         }
 
-        public Builder setRecipientName(@Nullable String recipientName) {
+        public Builder recipientName(@Nullable String recipientName) {
             this.recipientName = recipientName;
             return this;
         }
 
-        public Builder setStateOrProvince(@Nullable String stateOrProvince) {
+        public Builder stateOrProvince(@Nullable String stateOrProvince) {
             this.stateOrProvince = stateOrProvince;
             return this;
         }
 
-        public Builder setStreetAddress1(@Nullable String streetAddress1) {
+        public Builder streetAddress1(@Nullable String streetAddress1) {
             this.streetAddress1 = streetAddress1;
             return this;
         }
 
-        public Builder setStreetAddress2(@Nullable String streetAddress2) {
+        public Builder streetAddress2(@Nullable String streetAddress2) {
             this.streetAddress2 = streetAddress2;
             return this;
         }

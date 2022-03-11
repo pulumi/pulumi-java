@@ -51,17 +51,17 @@ public final class GetBucketResult {
      */
     private final String websiteEndpoint;
 
-    @OutputCustomType.Constructor({"arn","bucket","bucketDomainName","bucketRegionalDomainName","hostedZoneId","id","region","websiteDomain","websiteEndpoint"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        String arn,
-        String bucket,
-        String bucketDomainName,
-        String bucketRegionalDomainName,
-        String hostedZoneId,
-        String id,
-        String region,
-        String websiteDomain,
-        String websiteEndpoint) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("bucketDomainName") String bucketDomainName,
+        @OutputCustomType.Parameter("bucketRegionalDomainName") String bucketRegionalDomainName,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("websiteDomain") String websiteDomain,
+        @OutputCustomType.Parameter("websiteEndpoint") String websiteEndpoint) {
         this.arn = arn;
         this.bucket = bucket;
         this.bucketDomainName = bucketDomainName;
@@ -169,47 +169,47 @@ public final class GetBucketResult {
     	      this.websiteEndpoint = defaults.websiteEndpoint;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setBucketDomainName(String bucketDomainName) {
+        public Builder bucketDomainName(String bucketDomainName) {
             this.bucketDomainName = Objects.requireNonNull(bucketDomainName);
             return this;
         }
 
-        public Builder setBucketRegionalDomainName(String bucketRegionalDomainName) {
+        public Builder bucketRegionalDomainName(String bucketRegionalDomainName) {
             this.bucketRegionalDomainName = Objects.requireNonNull(bucketRegionalDomainName);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setWebsiteDomain(String websiteDomain) {
+        public Builder websiteDomain(String websiteDomain) {
             this.websiteDomain = Objects.requireNonNull(websiteDomain);
             return this;
         }
 
-        public Builder setWebsiteEndpoint(String websiteEndpoint) {
+        public Builder websiteEndpoint(String websiteEndpoint) {
             this.websiteEndpoint = Objects.requireNonNull(websiteEndpoint);
             return this;
         }

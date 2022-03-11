@@ -25,11 +25,11 @@ public final class PermissionScopeResponse {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"permissions","resourceName","service"})
+    @OutputCustomType.Constructor
     private PermissionScopeResponse(
-        String permissions,
-        String resourceName,
-        String service) {
+        @OutputCustomType.Parameter("permissions") String permissions,
+        @OutputCustomType.Parameter("resourceName") String resourceName,
+        @OutputCustomType.Parameter("service") String service) {
         this.permissions = permissions;
         this.resourceName = resourceName;
         this.service = service;
@@ -81,17 +81,17 @@ public final class PermissionScopeResponse {
     	      this.service = defaults.service;
         }
 
-        public Builder setPermissions(String permissions) {
+        public Builder permissions(String permissions) {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

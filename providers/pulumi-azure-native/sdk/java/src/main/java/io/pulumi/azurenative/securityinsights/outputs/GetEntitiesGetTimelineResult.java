@@ -27,10 +27,10 @@ public final class GetEntitiesGetTimelineResult {
      */
     private final @Nullable List<Object> value;
 
-    @OutputCustomType.Constructor({"metaData","value"})
+    @OutputCustomType.Constructor
     private GetEntitiesGetTimelineResult(
-        @Nullable TimelineResultsMetadataResponse metaData,
-        @Nullable List<Object> value) {
+        @OutputCustomType.Parameter("metaData") @Nullable TimelineResultsMetadataResponse metaData,
+        @OutputCustomType.Parameter("value") @Nullable List<Object> value) {
         this.metaData = metaData;
         this.value = value;
     }
@@ -72,12 +72,12 @@ public final class GetEntitiesGetTimelineResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setMetaData(@Nullable TimelineResultsMetadataResponse metaData) {
+        public Builder metaData(@Nullable TimelineResultsMetadataResponse metaData) {
             this.metaData = metaData;
             return this;
         }
 
-        public Builder setValue(@Nullable List<Object> value) {
+        public Builder value(@Nullable List<Object> value) {
             this.value = value;
             return this;
         }

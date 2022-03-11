@@ -15,8 +15,8 @@ public final class InventorySchedule {
      */
     private final String frequency;
 
-    @OutputCustomType.Constructor({"frequency"})
-    private InventorySchedule(String frequency) {
+    @OutputCustomType.Constructor
+    private InventorySchedule(@OutputCustomType.Parameter("frequency") String frequency) {
         this.frequency = frequency;
     }
 
@@ -48,7 +48,7 @@ public final class InventorySchedule {
     	      this.frequency = defaults.frequency;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }

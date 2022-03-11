@@ -15,10 +15,10 @@ public final class ServicePlacementConstraint {
     private final @Nullable String expression;
     private final ServicePlacementConstraintType type;
 
-    @OutputCustomType.Constructor({"expression","type"})
+    @OutputCustomType.Constructor
     private ServicePlacementConstraint(
-        @Nullable String expression,
-        ServicePlacementConstraintType type) {
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("type") ServicePlacementConstraintType type) {
         this.expression = expression;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class ServicePlacementConstraint {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setType(ServicePlacementConstraintType type) {
+        public Builder type(ServicePlacementConstraintType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

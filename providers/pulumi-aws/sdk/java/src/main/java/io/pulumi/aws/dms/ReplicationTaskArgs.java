@@ -199,102 +199,102 @@ public final class ReplicationTaskArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetEndpointArn = defaults.targetEndpointArn;
         }
 
-        public Builder setCdcStartPosition(@Nullable Input<String> cdcStartPosition) {
+        public Builder cdcStartPosition(@Nullable Input<String> cdcStartPosition) {
             this.cdcStartPosition = cdcStartPosition;
             return this;
         }
 
-        public Builder setCdcStartPosition(@Nullable String cdcStartPosition) {
+        public Builder cdcStartPosition(@Nullable String cdcStartPosition) {
             this.cdcStartPosition = Input.ofNullable(cdcStartPosition);
             return this;
         }
 
-        public Builder setCdcStartTime(@Nullable Input<String> cdcStartTime) {
+        public Builder cdcStartTime(@Nullable Input<String> cdcStartTime) {
             this.cdcStartTime = cdcStartTime;
             return this;
         }
 
-        public Builder setCdcStartTime(@Nullable String cdcStartTime) {
+        public Builder cdcStartTime(@Nullable String cdcStartTime) {
             this.cdcStartTime = Input.ofNullable(cdcStartTime);
             return this;
         }
 
-        public Builder setMigrationType(Input<String> migrationType) {
+        public Builder migrationType(Input<String> migrationType) {
             this.migrationType = Objects.requireNonNull(migrationType);
             return this;
         }
 
-        public Builder setMigrationType(String migrationType) {
+        public Builder migrationType(String migrationType) {
             this.migrationType = Input.of(Objects.requireNonNull(migrationType));
             return this;
         }
 
-        public Builder setReplicationInstanceArn(Input<String> replicationInstanceArn) {
+        public Builder replicationInstanceArn(Input<String> replicationInstanceArn) {
             this.replicationInstanceArn = Objects.requireNonNull(replicationInstanceArn);
             return this;
         }
 
-        public Builder setReplicationInstanceArn(String replicationInstanceArn) {
+        public Builder replicationInstanceArn(String replicationInstanceArn) {
             this.replicationInstanceArn = Input.of(Objects.requireNonNull(replicationInstanceArn));
             return this;
         }
 
-        public Builder setReplicationTaskId(Input<String> replicationTaskId) {
+        public Builder replicationTaskId(Input<String> replicationTaskId) {
             this.replicationTaskId = Objects.requireNonNull(replicationTaskId);
             return this;
         }
 
-        public Builder setReplicationTaskId(String replicationTaskId) {
+        public Builder replicationTaskId(String replicationTaskId) {
             this.replicationTaskId = Input.of(Objects.requireNonNull(replicationTaskId));
             return this;
         }
 
-        public Builder setReplicationTaskSettings(@Nullable Input<String> replicationTaskSettings) {
+        public Builder replicationTaskSettings(@Nullable Input<String> replicationTaskSettings) {
             this.replicationTaskSettings = replicationTaskSettings;
             return this;
         }
 
-        public Builder setReplicationTaskSettings(@Nullable String replicationTaskSettings) {
+        public Builder replicationTaskSettings(@Nullable String replicationTaskSettings) {
             this.replicationTaskSettings = Input.ofNullable(replicationTaskSettings);
             return this;
         }
 
-        public Builder setSourceEndpointArn(Input<String> sourceEndpointArn) {
+        public Builder sourceEndpointArn(Input<String> sourceEndpointArn) {
             this.sourceEndpointArn = Objects.requireNonNull(sourceEndpointArn);
             return this;
         }
 
-        public Builder setSourceEndpointArn(String sourceEndpointArn) {
+        public Builder sourceEndpointArn(String sourceEndpointArn) {
             this.sourceEndpointArn = Input.of(Objects.requireNonNull(sourceEndpointArn));
             return this;
         }
 
-        public Builder setTableMappings(Input<String> tableMappings) {
+        public Builder tableMappings(Input<String> tableMappings) {
             this.tableMappings = Objects.requireNonNull(tableMappings);
             return this;
         }
 
-        public Builder setTableMappings(String tableMappings) {
+        public Builder tableMappings(String tableMappings) {
             this.tableMappings = Input.of(Objects.requireNonNull(tableMappings));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetEndpointArn(Input<String> targetEndpointArn) {
+        public Builder targetEndpointArn(Input<String> targetEndpointArn) {
             this.targetEndpointArn = Objects.requireNonNull(targetEndpointArn);
             return this;
         }
 
-        public Builder setTargetEndpointArn(String targetEndpointArn) {
+        public Builder targetEndpointArn(String targetEndpointArn) {
             this.targetEndpointArn = Input.of(Objects.requireNonNull(targetEndpointArn));
             return this;
         }

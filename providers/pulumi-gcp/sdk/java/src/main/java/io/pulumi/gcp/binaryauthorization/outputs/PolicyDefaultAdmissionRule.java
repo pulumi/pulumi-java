@@ -36,11 +36,11 @@ public final class PolicyDefaultAdmissionRule {
      */
     private final @Nullable List<String> requireAttestationsBies;
 
-    @OutputCustomType.Constructor({"enforcementMode","evaluationMode","requireAttestationsBies"})
+    @OutputCustomType.Constructor
     private PolicyDefaultAdmissionRule(
-        String enforcementMode,
-        String evaluationMode,
-        @Nullable List<String> requireAttestationsBies) {
+        @OutputCustomType.Parameter("enforcementMode") String enforcementMode,
+        @OutputCustomType.Parameter("evaluationMode") String evaluationMode,
+        @OutputCustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
         this.enforcementMode = enforcementMode;
         this.evaluationMode = evaluationMode;
         this.requireAttestationsBies = requireAttestationsBies;
@@ -101,17 +101,17 @@ public final class PolicyDefaultAdmissionRule {
     	      this.requireAttestationsBies = defaults.requireAttestationsBies;
         }
 
-        public Builder setEnforcementMode(String enforcementMode) {
+        public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
 
-        public Builder setEvaluationMode(String evaluationMode) {
+        public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
 
-        public Builder setRequireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
+        public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }

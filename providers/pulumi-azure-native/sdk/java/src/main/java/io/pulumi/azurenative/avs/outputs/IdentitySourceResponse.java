@@ -62,18 +62,18 @@ public final class IdentitySourceResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"alias","baseGroupDN","baseUserDN","domain","name","password","primaryServer","secondaryServer","ssl","username"})
+    @OutputCustomType.Constructor
     private IdentitySourceResponse(
-        @Nullable String alias,
-        @Nullable String baseGroupDN,
-        @Nullable String baseUserDN,
-        @Nullable String domain,
-        @Nullable String name,
-        @Nullable String password,
-        @Nullable String primaryServer,
-        @Nullable String secondaryServer,
-        @Nullable String ssl,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("alias") @Nullable String alias,
+        @OutputCustomType.Parameter("baseGroupDN") @Nullable String baseGroupDN,
+        @OutputCustomType.Parameter("baseUserDN") @Nullable String baseUserDN,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("primaryServer") @Nullable String primaryServer,
+        @OutputCustomType.Parameter("secondaryServer") @Nullable String secondaryServer,
+        @OutputCustomType.Parameter("ssl") @Nullable String ssl,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.alias = alias;
         this.baseGroupDN = baseGroupDN;
         this.baseUserDN = baseUserDN;
@@ -195,52 +195,52 @@ public final class IdentitySourceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setBaseGroupDN(@Nullable String baseGroupDN) {
+        public Builder baseGroupDN(@Nullable String baseGroupDN) {
             this.baseGroupDN = baseGroupDN;
             return this;
         }
 
-        public Builder setBaseUserDN(@Nullable String baseUserDN) {
+        public Builder baseUserDN(@Nullable String baseUserDN) {
             this.baseUserDN = baseUserDN;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPrimaryServer(@Nullable String primaryServer) {
+        public Builder primaryServer(@Nullable String primaryServer) {
             this.primaryServer = primaryServer;
             return this;
         }
 
-        public Builder setSecondaryServer(@Nullable String secondaryServer) {
+        public Builder secondaryServer(@Nullable String secondaryServer) {
             this.secondaryServer = secondaryServer;
             return this;
         }
 
-        public Builder setSsl(@Nullable String ssl) {
+        public Builder ssl(@Nullable String ssl) {
             this.ssl = ssl;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

@@ -50,15 +50,15 @@ public final class APIServiceSpec {
      */
     private final Integer versionPriority;
 
-    @OutputCustomType.Constructor({"caBundle","group","groupPriorityMinimum","insecureSkipTLSVerify","service","version","versionPriority"})
+    @OutputCustomType.Constructor
     private APIServiceSpec(
-        @Nullable String caBundle,
-        @Nullable String group,
-        Integer groupPriorityMinimum,
-        @Nullable Boolean insecureSkipTLSVerify,
-        @Nullable ServiceReference service,
-        @Nullable String version,
-        Integer versionPriority) {
+        @OutputCustomType.Parameter("caBundle") @Nullable String caBundle,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("groupPriorityMinimum") Integer groupPriorityMinimum,
+        @OutputCustomType.Parameter("insecureSkipTLSVerify") @Nullable Boolean insecureSkipTLSVerify,
+        @OutputCustomType.Parameter("service") @Nullable ServiceReference service,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("versionPriority") Integer versionPriority) {
         this.caBundle = caBundle;
         this.group = group;
         this.groupPriorityMinimum = groupPriorityMinimum;
@@ -150,37 +150,37 @@ public final class APIServiceSpec {
     	      this.versionPriority = defaults.versionPriority;
         }
 
-        public Builder setCaBundle(@Nullable String caBundle) {
+        public Builder caBundle(@Nullable String caBundle) {
             this.caBundle = caBundle;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setGroupPriorityMinimum(Integer groupPriorityMinimum) {
+        public Builder groupPriorityMinimum(Integer groupPriorityMinimum) {
             this.groupPriorityMinimum = Objects.requireNonNull(groupPriorityMinimum);
             return this;
         }
 
-        public Builder setInsecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
+        public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
             this.insecureSkipTLSVerify = insecureSkipTLSVerify;
             return this;
         }
 
-        public Builder setService(@Nullable ServiceReference service) {
+        public Builder service(@Nullable ServiceReference service) {
             this.service = service;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersionPriority(Integer versionPriority) {
+        public Builder versionPriority(Integer versionPriority) {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }

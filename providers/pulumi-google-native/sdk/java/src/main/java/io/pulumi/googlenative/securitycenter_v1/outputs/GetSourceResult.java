@@ -30,12 +30,12 @@ public final class GetSourceResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"canonicalName","description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetSourceResult(
-        String canonicalName,
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("canonicalName") String canonicalName,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.canonicalName = canonicalName;
         this.description = description;
         this.displayName = displayName;
@@ -97,22 +97,22 @@ public final class GetSourceResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setCanonicalName(String canonicalName) {
+        public Builder canonicalName(String canonicalName) {
             this.canonicalName = Objects.requireNonNull(canonicalName);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

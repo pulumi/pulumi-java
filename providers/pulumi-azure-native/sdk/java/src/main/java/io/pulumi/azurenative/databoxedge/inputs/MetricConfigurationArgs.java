@@ -108,42 +108,42 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setCounterSets(Input<List<MetricCounterSetArgs>> counterSets) {
+        public Builder counterSets(Input<List<MetricCounterSetArgs>> counterSets) {
             this.counterSets = Objects.requireNonNull(counterSets);
             return this;
         }
 
-        public Builder setCounterSets(List<MetricCounterSetArgs> counterSets) {
+        public Builder counterSets(List<MetricCounterSetArgs> counterSets) {
             this.counterSets = Input.of(Objects.requireNonNull(counterSets));
             return this;
         }
 
-        public Builder setMdmAccount(@Nullable Input<String> mdmAccount) {
+        public Builder mdmAccount(@Nullable Input<String> mdmAccount) {
             this.mdmAccount = mdmAccount;
             return this;
         }
 
-        public Builder setMdmAccount(@Nullable String mdmAccount) {
+        public Builder mdmAccount(@Nullable String mdmAccount) {
             this.mdmAccount = Input.ofNullable(mdmAccount);
             return this;
         }
 
-        public Builder setMetricNameSpace(@Nullable Input<String> metricNameSpace) {
+        public Builder metricNameSpace(@Nullable Input<String> metricNameSpace) {
             this.metricNameSpace = metricNameSpace;
             return this;
         }
 
-        public Builder setMetricNameSpace(@Nullable String metricNameSpace) {
+        public Builder metricNameSpace(@Nullable String metricNameSpace) {
             this.metricNameSpace = Input.ofNullable(metricNameSpace);
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }

@@ -27,11 +27,11 @@ public final class UserAccountCredentialsResponse {
      */
     private final @Nullable String adminUserSshPublicKey;
 
-    @OutputCustomType.Constructor({"adminUserName","adminUserPassword","adminUserSshPublicKey"})
+    @OutputCustomType.Constructor
     private UserAccountCredentialsResponse(
-        String adminUserName,
-        @Nullable String adminUserPassword,
-        @Nullable String adminUserSshPublicKey) {
+        @OutputCustomType.Parameter("adminUserName") String adminUserName,
+        @OutputCustomType.Parameter("adminUserPassword") @Nullable String adminUserPassword,
+        @OutputCustomType.Parameter("adminUserSshPublicKey") @Nullable String adminUserSshPublicKey) {
         this.adminUserName = adminUserName;
         this.adminUserPassword = adminUserPassword;
         this.adminUserSshPublicKey = adminUserSshPublicKey;
@@ -83,17 +83,17 @@ public final class UserAccountCredentialsResponse {
     	      this.adminUserSshPublicKey = defaults.adminUserSshPublicKey;
         }
 
-        public Builder setAdminUserName(String adminUserName) {
+        public Builder adminUserName(String adminUserName) {
             this.adminUserName = Objects.requireNonNull(adminUserName);
             return this;
         }
 
-        public Builder setAdminUserPassword(@Nullable String adminUserPassword) {
+        public Builder adminUserPassword(@Nullable String adminUserPassword) {
             this.adminUserPassword = adminUserPassword;
             return this;
         }
 
-        public Builder setAdminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
+        public Builder adminUserSshPublicKey(@Nullable String adminUserSshPublicKey) {
             this.adminUserSshPublicKey = adminUserSshPublicKey;
             return this;
         }

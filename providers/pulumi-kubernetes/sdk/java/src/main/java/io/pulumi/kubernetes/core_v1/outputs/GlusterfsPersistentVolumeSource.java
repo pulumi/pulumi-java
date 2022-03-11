@@ -33,12 +33,12 @@ public final class GlusterfsPersistentVolumeSource {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"endpoints","endpointsNamespace","path","readOnly"})
+    @OutputCustomType.Constructor
     private GlusterfsPersistentVolumeSource(
-        String endpoints,
-        @Nullable String endpointsNamespace,
-        String path,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("endpoints") String endpoints,
+        @OutputCustomType.Parameter("endpointsNamespace") @Nullable String endpointsNamespace,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.endpoints = endpoints;
         this.endpointsNamespace = endpointsNamespace;
         this.path = path;
@@ -100,22 +100,22 @@ public final class GlusterfsPersistentVolumeSource {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setEndpoints(String endpoints) {
+        public Builder endpoints(String endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setEndpointsNamespace(@Nullable String endpointsNamespace) {
+        public Builder endpointsNamespace(@Nullable String endpointsNamespace) {
             this.endpointsNamespace = endpointsNamespace;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

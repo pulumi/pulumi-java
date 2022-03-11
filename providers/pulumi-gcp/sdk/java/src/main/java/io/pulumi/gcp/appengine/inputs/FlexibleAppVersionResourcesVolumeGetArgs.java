@@ -86,32 +86,32 @@ public final class FlexibleAppVersionResourcesVolumeGetArgs extends io.pulumi.re
     	      this.volumeType = defaults.volumeType;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setSizeGb(Input<Integer> sizeGb) {
+        public Builder sizeGb(Input<Integer> sizeGb) {
             this.sizeGb = Objects.requireNonNull(sizeGb);
             return this;
         }
 
-        public Builder setSizeGb(Integer sizeGb) {
+        public Builder sizeGb(Integer sizeGb) {
             this.sizeGb = Input.of(Objects.requireNonNull(sizeGb));
             return this;
         }
 
-        public Builder setVolumeType(Input<String> volumeType) {
+        public Builder volumeType(Input<String> volumeType) {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
 
-        public Builder setVolumeType(String volumeType) {
+        public Builder volumeType(String volumeType) {
             this.volumeType = Input.of(Objects.requireNonNull(volumeType));
             return this;
         }

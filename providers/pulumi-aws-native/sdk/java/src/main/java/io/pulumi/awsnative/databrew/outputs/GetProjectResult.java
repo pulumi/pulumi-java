@@ -33,12 +33,12 @@ public final class GetProjectResult {
      */
     private final @Nullable ProjectSample sample;
 
-    @OutputCustomType.Constructor({"datasetName","recipeName","roleArn","sample"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String datasetName,
-        @Nullable String recipeName,
-        @Nullable String roleArn,
-        @Nullable ProjectSample sample) {
+        @OutputCustomType.Parameter("datasetName") @Nullable String datasetName,
+        @OutputCustomType.Parameter("recipeName") @Nullable String recipeName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("sample") @Nullable ProjectSample sample) {
         this.datasetName = datasetName;
         this.recipeName = recipeName;
         this.roleArn = roleArn;
@@ -100,22 +100,22 @@ public final class GetProjectResult {
     	      this.sample = defaults.sample;
         }
 
-        public Builder setDatasetName(@Nullable String datasetName) {
+        public Builder datasetName(@Nullable String datasetName) {
             this.datasetName = datasetName;
             return this;
         }
 
-        public Builder setRecipeName(@Nullable String recipeName) {
+        public Builder recipeName(@Nullable String recipeName) {
             this.recipeName = recipeName;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setSample(@Nullable ProjectSample sample) {
+        public Builder sample(@Nullable ProjectSample sample) {
             this.sample = sample;
             return this;
         }

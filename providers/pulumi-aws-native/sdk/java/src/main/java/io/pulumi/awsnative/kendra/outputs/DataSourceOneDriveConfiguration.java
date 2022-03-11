@@ -23,15 +23,15 @@ public final class DataSourceOneDriveConfiguration {
     private final String secretArn;
     private final String tenantDomain;
 
-    @OutputCustomType.Constructor({"disableLocalGroups","exclusionPatterns","fieldMappings","inclusionPatterns","oneDriveUsers","secretArn","tenantDomain"})
+    @OutputCustomType.Constructor
     private DataSourceOneDriveConfiguration(
-        @Nullable Boolean disableLocalGroups,
-        @Nullable List<String> exclusionPatterns,
-        @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
-        @Nullable List<String> inclusionPatterns,
-        DataSourceOneDriveUsers oneDriveUsers,
-        String secretArn,
-        String tenantDomain) {
+        @OutputCustomType.Parameter("disableLocalGroups") @Nullable Boolean disableLocalGroups,
+        @OutputCustomType.Parameter("exclusionPatterns") @Nullable List<String> exclusionPatterns,
+        @OutputCustomType.Parameter("fieldMappings") @Nullable List<DataSourceToIndexFieldMapping> fieldMappings,
+        @OutputCustomType.Parameter("inclusionPatterns") @Nullable List<String> inclusionPatterns,
+        @OutputCustomType.Parameter("oneDriveUsers") DataSourceOneDriveUsers oneDriveUsers,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("tenantDomain") String tenantDomain) {
         this.disableLocalGroups = disableLocalGroups;
         this.exclusionPatterns = exclusionPatterns;
         this.fieldMappings = fieldMappings;
@@ -95,37 +95,37 @@ public final class DataSourceOneDriveConfiguration {
     	      this.tenantDomain = defaults.tenantDomain;
         }
 
-        public Builder setDisableLocalGroups(@Nullable Boolean disableLocalGroups) {
+        public Builder disableLocalGroups(@Nullable Boolean disableLocalGroups) {
             this.disableLocalGroups = disableLocalGroups;
             return this;
         }
 
-        public Builder setExclusionPatterns(@Nullable List<String> exclusionPatterns) {
+        public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
             this.exclusionPatterns = exclusionPatterns;
             return this;
         }
 
-        public Builder setFieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
+        public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMapping> fieldMappings) {
             this.fieldMappings = fieldMappings;
             return this;
         }
 
-        public Builder setInclusionPatterns(@Nullable List<String> inclusionPatterns) {
+        public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
             this.inclusionPatterns = inclusionPatterns;
             return this;
         }
 
-        public Builder setOneDriveUsers(DataSourceOneDriveUsers oneDriveUsers) {
+        public Builder oneDriveUsers(DataSourceOneDriveUsers oneDriveUsers) {
             this.oneDriveUsers = Objects.requireNonNull(oneDriveUsers);
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setTenantDomain(String tenantDomain) {
+        public Builder tenantDomain(String tenantDomain) {
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
         }

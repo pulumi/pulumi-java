@@ -28,11 +28,11 @@ public final class GraphQLApiLambdaAuthorizerConfig {
      */
     private final @Nullable String identityValidationExpression;
 
-    @OutputCustomType.Constructor({"authorizerResultTtlInSeconds","authorizerUri","identityValidationExpression"})
+    @OutputCustomType.Constructor
     private GraphQLApiLambdaAuthorizerConfig(
-        @Nullable Integer authorizerResultTtlInSeconds,
-        String authorizerUri,
-        @Nullable String identityValidationExpression) {
+        @OutputCustomType.Parameter("authorizerResultTtlInSeconds") @Nullable Integer authorizerResultTtlInSeconds,
+        @OutputCustomType.Parameter("authorizerUri") String authorizerUri,
+        @OutputCustomType.Parameter("identityValidationExpression") @Nullable String identityValidationExpression) {
         this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
         this.authorizerUri = authorizerUri;
         this.identityValidationExpression = identityValidationExpression;
@@ -84,17 +84,17 @@ public final class GraphQLApiLambdaAuthorizerConfig {
     	      this.identityValidationExpression = defaults.identityValidationExpression;
         }
 
-        public Builder setAuthorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
+        public Builder authorizerResultTtlInSeconds(@Nullable Integer authorizerResultTtlInSeconds) {
             this.authorizerResultTtlInSeconds = authorizerResultTtlInSeconds;
             return this;
         }
 
-        public Builder setAuthorizerUri(String authorizerUri) {
+        public Builder authorizerUri(String authorizerUri) {
             this.authorizerUri = Objects.requireNonNull(authorizerUri);
             return this;
         }
 
-        public Builder setIdentityValidationExpression(@Nullable String identityValidationExpression) {
+        public Builder identityValidationExpression(@Nullable String identityValidationExpression) {
             this.identityValidationExpression = identityValidationExpression;
             return this;
         }

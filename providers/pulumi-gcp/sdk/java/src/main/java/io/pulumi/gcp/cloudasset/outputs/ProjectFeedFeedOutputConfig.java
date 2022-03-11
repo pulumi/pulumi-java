@@ -16,8 +16,8 @@ public final class ProjectFeedFeedOutputConfig {
      */
     private final ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination;
 
-    @OutputCustomType.Constructor({"pubsubDestination"})
-    private ProjectFeedFeedOutputConfig(ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+    @OutputCustomType.Constructor
+    private ProjectFeedFeedOutputConfig(@OutputCustomType.Parameter("pubsubDestination") ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 
@@ -50,7 +50,7 @@ public final class ProjectFeedFeedOutputConfig {
     	      this.pubsubDestination = defaults.pubsubDestination;
         }
 
-        public Builder setPubsubDestination(ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+        public Builder pubsubDestination(ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }

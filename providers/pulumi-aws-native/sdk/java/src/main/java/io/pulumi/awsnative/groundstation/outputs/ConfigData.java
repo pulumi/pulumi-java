@@ -25,15 +25,15 @@ public final class ConfigData {
     private final @Nullable ConfigTrackingConfig trackingConfig;
     private final @Nullable ConfigUplinkEchoConfig uplinkEchoConfig;
 
-    @OutputCustomType.Constructor({"antennaDownlinkConfig","antennaDownlinkDemodDecodeConfig","antennaUplinkConfig","dataflowEndpointConfig","s3RecordingConfig","trackingConfig","uplinkEchoConfig"})
+    @OutputCustomType.Constructor
     private ConfigData(
-        @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
-        @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
-        @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
-        @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
-        @Nullable ConfigS3RecordingConfig s3RecordingConfig,
-        @Nullable ConfigTrackingConfig trackingConfig,
-        @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
+        @OutputCustomType.Parameter("antennaDownlinkConfig") @Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig,
+        @OutputCustomType.Parameter("antennaDownlinkDemodDecodeConfig") @Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig,
+        @OutputCustomType.Parameter("antennaUplinkConfig") @Nullable ConfigAntennaUplinkConfig antennaUplinkConfig,
+        @OutputCustomType.Parameter("dataflowEndpointConfig") @Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig,
+        @OutputCustomType.Parameter("s3RecordingConfig") @Nullable ConfigS3RecordingConfig s3RecordingConfig,
+        @OutputCustomType.Parameter("trackingConfig") @Nullable ConfigTrackingConfig trackingConfig,
+        @OutputCustomType.Parameter("uplinkEchoConfig") @Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
         this.antennaDownlinkConfig = antennaDownlinkConfig;
         this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
         this.antennaUplinkConfig = antennaUplinkConfig;
@@ -97,37 +97,37 @@ public final class ConfigData {
     	      this.uplinkEchoConfig = defaults.uplinkEchoConfig;
         }
 
-        public Builder setAntennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig) {
+        public Builder antennaDownlinkConfig(@Nullable ConfigAntennaDownlinkConfig antennaDownlinkConfig) {
             this.antennaDownlinkConfig = antennaDownlinkConfig;
             return this;
         }
 
-        public Builder setAntennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig) {
+        public Builder antennaDownlinkDemodDecodeConfig(@Nullable ConfigAntennaDownlinkDemodDecodeConfig antennaDownlinkDemodDecodeConfig) {
             this.antennaDownlinkDemodDecodeConfig = antennaDownlinkDemodDecodeConfig;
             return this;
         }
 
-        public Builder setAntennaUplinkConfig(@Nullable ConfigAntennaUplinkConfig antennaUplinkConfig) {
+        public Builder antennaUplinkConfig(@Nullable ConfigAntennaUplinkConfig antennaUplinkConfig) {
             this.antennaUplinkConfig = antennaUplinkConfig;
             return this;
         }
 
-        public Builder setDataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig) {
+        public Builder dataflowEndpointConfig(@Nullable ConfigDataflowEndpointConfig dataflowEndpointConfig) {
             this.dataflowEndpointConfig = dataflowEndpointConfig;
             return this;
         }
 
-        public Builder setS3RecordingConfig(@Nullable ConfigS3RecordingConfig s3RecordingConfig) {
+        public Builder s3RecordingConfig(@Nullable ConfigS3RecordingConfig s3RecordingConfig) {
             this.s3RecordingConfig = s3RecordingConfig;
             return this;
         }
 
-        public Builder setTrackingConfig(@Nullable ConfigTrackingConfig trackingConfig) {
+        public Builder trackingConfig(@Nullable ConfigTrackingConfig trackingConfig) {
             this.trackingConfig = trackingConfig;
             return this;
         }
 
-        public Builder setUplinkEchoConfig(@Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
+        public Builder uplinkEchoConfig(@Nullable ConfigUplinkEchoConfig uplinkEchoConfig) {
             this.uplinkEchoConfig = uplinkEchoConfig;
             return this;
         }

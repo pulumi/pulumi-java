@@ -80,20 +80,20 @@ public final class GetProjectResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"creationTime","databasesInfo","id","location","name","provisioningState","sourceConnectionInfo","sourcePlatform","tags","targetConnectionInfo","targetPlatform","type"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        String creationTime,
-        @Nullable List<DatabaseInfoResponse> databasesInfo,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Object sourceConnectionInfo,
-        String sourcePlatform,
-        @Nullable Map<String,String> tags,
-        @Nullable Object targetConnectionInfo,
-        String targetPlatform,
-        String type) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("databasesInfo") @Nullable List<DatabaseInfoResponse> databasesInfo,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceConnectionInfo") @Nullable Object sourceConnectionInfo,
+        @OutputCustomType.Parameter("sourcePlatform") String sourcePlatform,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetConnectionInfo") @Nullable Object targetConnectionInfo,
+        @OutputCustomType.Parameter("targetPlatform") String targetPlatform,
+        @OutputCustomType.Parameter("type") String type) {
         this.creationTime = creationTime;
         this.databasesInfo = databasesInfo;
         this.id = id;
@@ -235,62 +235,62 @@ public final class GetProjectResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setDatabasesInfo(@Nullable List<DatabaseInfoResponse> databasesInfo) {
+        public Builder databasesInfo(@Nullable List<DatabaseInfoResponse> databasesInfo) {
             this.databasesInfo = databasesInfo;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(@Nullable Object sourceConnectionInfo) {
             this.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
-        public Builder setSourcePlatform(String sourcePlatform) {
+        public Builder sourcePlatform(String sourcePlatform) {
             this.sourcePlatform = Objects.requireNonNull(sourcePlatform);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetConnectionInfo(@Nullable Object targetConnectionInfo) {
+        public Builder targetConnectionInfo(@Nullable Object targetConnectionInfo) {
             this.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
-        public Builder setTargetPlatform(String targetPlatform) {
+        public Builder targetPlatform(String targetPlatform) {
             this.targetPlatform = Objects.requireNonNull(targetPlatform);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

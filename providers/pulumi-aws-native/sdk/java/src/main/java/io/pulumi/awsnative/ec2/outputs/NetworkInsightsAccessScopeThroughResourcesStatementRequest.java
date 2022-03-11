@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
     private final @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement;
 
-    @OutputCustomType.Constructor({"resourceStatement"})
-    private NetworkInsightsAccessScopeThroughResourcesStatementRequest(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+    @OutputCustomType.Constructor
+    private NetworkInsightsAccessScopeThroughResourcesStatementRequest(@OutputCustomType.Parameter("resourceStatement") @Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
         this.resourceStatement = resourceStatement;
     }
 
@@ -42,7 +42,7 @@ public final class NetworkInsightsAccessScopeThroughResourcesStatementRequest {
     	      this.resourceStatement = defaults.resourceStatement;
         }
 
-        public Builder setResourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
+        public Builder resourceStatement(@Nullable NetworkInsightsAccessScopeResourceStatementRequest resourceStatement) {
             this.resourceStatement = resourceStatement;
             return this;
         }

@@ -977,9 +977,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	paramNamesStringBuilder.WriteString("}")
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w,
-		"    @%s.Constructor(%s)\n",
-		ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
 	// Generate empty constructor, not that the instance created
 	// with this constructor may not be valid if there are 'required' fields.
 	if len(props) > 0 {
@@ -1165,22 +1163,8 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		fprintf(w, "\n")
 	}
 
-	// Generate the constructor parameter names - used as a workaround for Java reflection issues
-	var paramNamesStringBuilder strings.Builder
-	paramNamesStringBuilder.WriteString("{")
-	for i, prop := range props {
-		if i > 0 {
-			paramNamesStringBuilder.WriteString(",")
-		}
-		paramName := names.Ident(prop.Name)
-		paramNamesStringBuilder.WriteString("\"" + paramName.String() + "\"")
-	}
-	paramNamesStringBuilder.WriteString("}")
-
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w,
-		"    @%s.Constructor(%s)\n",
-		ctx.ref(names.OutputCustomType), paramNamesStringBuilder.String())
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
 	fprintf(w, "    private %s(", pt.name)
 
 	// Generate the constructor parameters.
@@ -1207,7 +1191,8 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			terminator = ",\n"
 		}
 
-		paramDef := fmt.Sprintf("%s %s%s",
+		paramDef := fmt.Sprintf("%s %s %s%s",
+			fmt.Sprintf("@%s.Parameter(\"%s\")", ctx.ref(names.OutputCustomType), prop.Name),
 			paramType.ToCode(ctx.imports), paramName, terminator)
 		if len(props) > 1 {
 			paramDef = fmt.Sprintf("        %s", paramDef)

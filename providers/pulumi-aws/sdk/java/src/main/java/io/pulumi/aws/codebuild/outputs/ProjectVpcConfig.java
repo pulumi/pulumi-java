@@ -26,11 +26,11 @@ public final class ProjectVpcConfig {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"securityGroupIds","subnets","vpcId"})
+    @OutputCustomType.Constructor
     private ProjectVpcConfig(
-        List<String> securityGroupIds,
-        List<String> subnets,
-        String vpcId) {
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.securityGroupIds = securityGroupIds;
         this.subnets = subnets;
         this.vpcId = vpcId;
@@ -82,17 +82,17 @@ public final class ProjectVpcConfig {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

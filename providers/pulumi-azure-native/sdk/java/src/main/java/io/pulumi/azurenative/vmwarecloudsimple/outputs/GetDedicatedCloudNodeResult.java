@@ -110,27 +110,27 @@ public final class GetDedicatedCloudNodeResult {
      */
     private final String vmwareClusterName;
 
-    @OutputCustomType.Constructor({"availabilityZoneId","availabilityZoneName","cloudRackName","created","id","location","name","nodesCount","placementGroupId","placementGroupName","privateCloudId","privateCloudName","provisioningState","purchaseId","sku","status","tags","type","vmwareClusterName"})
+    @OutputCustomType.Constructor
     private GetDedicatedCloudNodeResult(
-        String availabilityZoneId,
-        String availabilityZoneName,
-        String cloudRackName,
-        String created,
-        String id,
-        String location,
-        String name,
-        Integer nodesCount,
-        String placementGroupId,
-        String placementGroupName,
-        String privateCloudId,
-        String privateCloudName,
-        String provisioningState,
-        String purchaseId,
-        @Nullable SkuResponse sku,
-        String status,
-        @Nullable Map<String,String> tags,
-        String type,
-        String vmwareClusterName) {
+        @OutputCustomType.Parameter("availabilityZoneId") String availabilityZoneId,
+        @OutputCustomType.Parameter("availabilityZoneName") String availabilityZoneName,
+        @OutputCustomType.Parameter("cloudRackName") String cloudRackName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nodesCount") Integer nodesCount,
+        @OutputCustomType.Parameter("placementGroupId") String placementGroupId,
+        @OutputCustomType.Parameter("placementGroupName") String placementGroupName,
+        @OutputCustomType.Parameter("privateCloudId") String privateCloudId,
+        @OutputCustomType.Parameter("privateCloudName") String privateCloudName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("purchaseId") String purchaseId,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vmwareClusterName") String vmwareClusterName) {
         this.availabilityZoneId = availabilityZoneId;
         this.availabilityZoneName = availabilityZoneName;
         this.cloudRackName = cloudRackName;
@@ -342,97 +342,97 @@ public final class GetDedicatedCloudNodeResult {
     	      this.vmwareClusterName = defaults.vmwareClusterName;
         }
 
-        public Builder setAvailabilityZoneId(String availabilityZoneId) {
+        public Builder availabilityZoneId(String availabilityZoneId) {
             this.availabilityZoneId = Objects.requireNonNull(availabilityZoneId);
             return this;
         }
 
-        public Builder setAvailabilityZoneName(String availabilityZoneName) {
+        public Builder availabilityZoneName(String availabilityZoneName) {
             this.availabilityZoneName = Objects.requireNonNull(availabilityZoneName);
             return this;
         }
 
-        public Builder setCloudRackName(String cloudRackName) {
+        public Builder cloudRackName(String cloudRackName) {
             this.cloudRackName = Objects.requireNonNull(cloudRackName);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNodesCount(Integer nodesCount) {
+        public Builder nodesCount(Integer nodesCount) {
             this.nodesCount = Objects.requireNonNull(nodesCount);
             return this;
         }
 
-        public Builder setPlacementGroupId(String placementGroupId) {
+        public Builder placementGroupId(String placementGroupId) {
             this.placementGroupId = Objects.requireNonNull(placementGroupId);
             return this;
         }
 
-        public Builder setPlacementGroupName(String placementGroupName) {
+        public Builder placementGroupName(String placementGroupName) {
             this.placementGroupName = Objects.requireNonNull(placementGroupName);
             return this;
         }
 
-        public Builder setPrivateCloudId(String privateCloudId) {
+        public Builder privateCloudId(String privateCloudId) {
             this.privateCloudId = Objects.requireNonNull(privateCloudId);
             return this;
         }
 
-        public Builder setPrivateCloudName(String privateCloudName) {
+        public Builder privateCloudName(String privateCloudName) {
             this.privateCloudName = Objects.requireNonNull(privateCloudName);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPurchaseId(String purchaseId) {
+        public Builder purchaseId(String purchaseId) {
             this.purchaseId = Objects.requireNonNull(purchaseId);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVmwareClusterName(String vmwareClusterName) {
+        public Builder vmwareClusterName(String vmwareClusterName) {
             this.vmwareClusterName = Objects.requireNonNull(vmwareClusterName);
             return this;
         }

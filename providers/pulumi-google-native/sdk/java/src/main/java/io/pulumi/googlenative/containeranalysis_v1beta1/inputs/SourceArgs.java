@@ -109,42 +109,42 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.fileHashes = defaults.fileHashes;
         }
 
-        public Builder setAdditionalContexts(@Nullable Input<List<SourceContextArgs>> additionalContexts) {
+        public Builder additionalContexts(@Nullable Input<List<SourceContextArgs>> additionalContexts) {
             this.additionalContexts = additionalContexts;
             return this;
         }
 
-        public Builder setAdditionalContexts(@Nullable List<SourceContextArgs> additionalContexts) {
+        public Builder additionalContexts(@Nullable List<SourceContextArgs> additionalContexts) {
             this.additionalContexts = Input.ofNullable(additionalContexts);
             return this;
         }
 
-        public Builder setArtifactStorageSourceUri(@Nullable Input<String> artifactStorageSourceUri) {
+        public Builder artifactStorageSourceUri(@Nullable Input<String> artifactStorageSourceUri) {
             this.artifactStorageSourceUri = artifactStorageSourceUri;
             return this;
         }
 
-        public Builder setArtifactStorageSourceUri(@Nullable String artifactStorageSourceUri) {
+        public Builder artifactStorageSourceUri(@Nullable String artifactStorageSourceUri) {
             this.artifactStorageSourceUri = Input.ofNullable(artifactStorageSourceUri);
             return this;
         }
 
-        public Builder setContext(@Nullable Input<SourceContextArgs> context) {
+        public Builder context(@Nullable Input<SourceContextArgs> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setContext(@Nullable SourceContextArgs context) {
+        public Builder context(@Nullable SourceContextArgs context) {
             this.context = Input.ofNullable(context);
             return this;
         }
 
-        public Builder setFileHashes(@Nullable Input<Map<String,String>> fileHashes) {
+        public Builder fileHashes(@Nullable Input<Map<String,String>> fileHashes) {
             this.fileHashes = fileHashes;
             return this;
         }
 
-        public Builder setFileHashes(@Nullable Map<String,String> fileHashes) {
+        public Builder fileHashes(@Nullable Map<String,String> fileHashes) {
             this.fileHashes = Input.ofNullable(fileHashes);
             return this;
         }

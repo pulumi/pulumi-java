@@ -16,11 +16,11 @@ public final class RegistryListCredentialsResultResponse {
     private final @Nullable List<PasswordResponse> passwords;
     private final String username;
 
-    @OutputCustomType.Constructor({"location","passwords","username"})
+    @OutputCustomType.Constructor
     private RegistryListCredentialsResultResponse(
-        String location,
-        @Nullable List<PasswordResponse> passwords,
-        String username) {
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("passwords") @Nullable List<PasswordResponse> passwords,
+        @OutputCustomType.Parameter("username") String username) {
         this.location = location;
         this.passwords = passwords;
         this.username = username;
@@ -60,17 +60,17 @@ public final class RegistryListCredentialsResultResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPasswords(@Nullable List<PasswordResponse> passwords) {
+        public Builder passwords(@Nullable List<PasswordResponse> passwords) {
             this.passwords = passwords;
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

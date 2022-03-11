@@ -23,10 +23,10 @@ public final class TriggerTransportPubsub {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor({"subscription","topic"})
+    @OutputCustomType.Constructor
     private TriggerTransportPubsub(
-        @Nullable String subscription,
-        @Nullable String topic) {
+        @OutputCustomType.Parameter("subscription") @Nullable String subscription,
+        @OutputCustomType.Parameter("topic") @Nullable String topic) {
         this.subscription = subscription;
         this.topic = topic;
     }
@@ -69,12 +69,12 @@ public final class TriggerTransportPubsub {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSubscription(@Nullable String subscription) {
+        public Builder subscription(@Nullable String subscription) {
             this.subscription = subscription;
             return this;
         }
 
-        public Builder setTopic(@Nullable String topic) {
+        public Builder topic(@Nullable String topic) {
             this.topic = topic;
             return this;
         }

@@ -27,14 +27,14 @@ public final class GetAccountAccessTokenResult {
     private final List<String> scopes;
     private final String targetServiceAccount;
 
-    @OutputCustomType.Constructor({"accessToken","delegates","id","lifetime","scopes","targetServiceAccount"})
+    @OutputCustomType.Constructor
     private GetAccountAccessTokenResult(
-        String accessToken,
-        @Nullable List<String> delegates,
-        String id,
-        @Nullable String lifetime,
-        List<String> scopes,
-        String targetServiceAccount) {
+        @OutputCustomType.Parameter("accessToken") String accessToken,
+        @OutputCustomType.Parameter("delegates") @Nullable List<String> delegates,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("targetServiceAccount") String targetServiceAccount) {
         this.accessToken = accessToken;
         this.delegates = delegates;
         this.id = id;
@@ -100,32 +100,32 @@ public final class GetAccountAccessTokenResult {
     	      this.targetServiceAccount = defaults.targetServiceAccount;
         }
 
-        public Builder setAccessToken(String accessToken) {
+        public Builder accessToken(String accessToken) {
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
 
-        public Builder setDelegates(@Nullable List<String> delegates) {
+        public Builder delegates(@Nullable List<String> delegates) {
             this.delegates = delegates;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setTargetServiceAccount(String targetServiceAccount) {
+        public Builder targetServiceAccount(String targetServiceAccount) {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
         }

@@ -217,112 +217,112 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(@Nullable Input<String> category) {
+        public Builder category(@Nullable Input<String> category) {
             this.category = category;
             return this;
         }
 
-        public Builder setCategory(@Nullable String category) {
+        public Builder category(@Nullable String category) {
             this.category = Input.ofNullable(category);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<String> config) {
+        public Builder config(@Nullable Input<String> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setFavoriteId(@Nullable Input<String> favoriteId) {
+        public Builder favoriteId(@Nullable Input<String> favoriteId) {
             this.favoriteId = favoriteId;
             return this;
         }
 
-        public Builder setFavoriteId(@Nullable String favoriteId) {
+        public Builder favoriteId(@Nullable String favoriteId) {
             this.favoriteId = Input.ofNullable(favoriteId);
             return this;
         }
 
-        public Builder setFavoriteType(@Nullable Input<FavoriteType> favoriteType) {
+        public Builder favoriteType(@Nullable Input<FavoriteType> favoriteType) {
             this.favoriteType = favoriteType;
             return this;
         }
 
-        public Builder setFavoriteType(@Nullable FavoriteType favoriteType) {
+        public Builder favoriteType(@Nullable FavoriteType favoriteType) {
             this.favoriteType = Input.ofNullable(favoriteType);
             return this;
         }
 
-        public Builder setIsGeneratedFromTemplate(@Nullable Input<Boolean> isGeneratedFromTemplate) {
+        public Builder isGeneratedFromTemplate(@Nullable Input<Boolean> isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = isGeneratedFromTemplate;
             return this;
         }
 
-        public Builder setIsGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
+        public Builder isGeneratedFromTemplate(@Nullable Boolean isGeneratedFromTemplate) {
             this.isGeneratedFromTemplate = Input.ofNullable(isGeneratedFromTemplate);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(Input<String> resourceName) {
+        public Builder resourceName(Input<String> resourceName) {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
 
-        public Builder setResourceName(String resourceName) {
+        public Builder resourceName(String resourceName) {
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
 
-        public Builder setSourceType(@Nullable Input<String> sourceType) {
+        public Builder sourceType(@Nullable Input<String> sourceType) {
             this.sourceType = sourceType;
             return this;
         }
 
-        public Builder setSourceType(@Nullable String sourceType) {
+        public Builder sourceType(@Nullable String sourceType) {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<String>> tags) {
+        public Builder tags(@Nullable Input<List<String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

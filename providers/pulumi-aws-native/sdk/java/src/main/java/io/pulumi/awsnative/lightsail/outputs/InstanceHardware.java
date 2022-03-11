@@ -29,11 +29,11 @@ public final class InstanceHardware {
      */
     private final @Nullable Integer ramSizeInGb;
 
-    @OutputCustomType.Constructor({"cpuCount","disks","ramSizeInGb"})
+    @OutputCustomType.Constructor
     private InstanceHardware(
-        @Nullable Integer cpuCount,
-        @Nullable List<InstanceDisk> disks,
-        @Nullable Integer ramSizeInGb) {
+        @OutputCustomType.Parameter("cpuCount") @Nullable Integer cpuCount,
+        @OutputCustomType.Parameter("disks") @Nullable List<InstanceDisk> disks,
+        @OutputCustomType.Parameter("ramSizeInGb") @Nullable Integer ramSizeInGb) {
         this.cpuCount = cpuCount;
         this.disks = disks;
         this.ramSizeInGb = ramSizeInGb;
@@ -85,17 +85,17 @@ public final class InstanceHardware {
     	      this.ramSizeInGb = defaults.ramSizeInGb;
         }
 
-        public Builder setCpuCount(@Nullable Integer cpuCount) {
+        public Builder cpuCount(@Nullable Integer cpuCount) {
             this.cpuCount = cpuCount;
             return this;
         }
 
-        public Builder setDisks(@Nullable List<InstanceDisk> disks) {
+        public Builder disks(@Nullable List<InstanceDisk> disks) {
             this.disks = disks;
             return this;
         }
 
-        public Builder setRamSizeInGb(@Nullable Integer ramSizeInGb) {
+        public Builder ramSizeInGb(@Nullable Integer ramSizeInGb) {
             this.ramSizeInGb = ramSizeInGb;
             return this;
         }

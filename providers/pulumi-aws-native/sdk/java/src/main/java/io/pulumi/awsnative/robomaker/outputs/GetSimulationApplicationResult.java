@@ -50,16 +50,16 @@ public final class GetSimulationApplicationResult {
     private final @Nullable List<SimulationApplicationSourceConfig> sources;
     private final @Nullable SimulationApplicationTags tags;
 
-    @OutputCustomType.Constructor({"arn","currentRevisionId","environment","renderingEngine","robotSoftwareSuite","simulationSoftwareSuite","sources","tags"})
+    @OutputCustomType.Constructor
     private GetSimulationApplicationResult(
-        @Nullable String arn,
-        @Nullable String currentRevisionId,
-        @Nullable String environment,
-        @Nullable SimulationApplicationRenderingEngine renderingEngine,
-        @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
-        @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
-        @Nullable List<SimulationApplicationSourceConfig> sources,
-        @Nullable SimulationApplicationTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("currentRevisionId") @Nullable String currentRevisionId,
+        @OutputCustomType.Parameter("environment") @Nullable String environment,
+        @OutputCustomType.Parameter("renderingEngine") @Nullable SimulationApplicationRenderingEngine renderingEngine,
+        @OutputCustomType.Parameter("robotSoftwareSuite") @Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite,
+        @OutputCustomType.Parameter("simulationSoftwareSuite") @Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite,
+        @OutputCustomType.Parameter("sources") @Nullable List<SimulationApplicationSourceConfig> sources,
+        @OutputCustomType.Parameter("tags") @Nullable SimulationApplicationTags tags) {
         this.arn = arn;
         this.currentRevisionId = currentRevisionId;
         this.environment = environment;
@@ -153,42 +153,42 @@ public final class GetSimulationApplicationResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCurrentRevisionId(@Nullable String currentRevisionId) {
+        public Builder currentRevisionId(@Nullable String currentRevisionId) {
             this.currentRevisionId = currentRevisionId;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setRenderingEngine(@Nullable SimulationApplicationRenderingEngine renderingEngine) {
+        public Builder renderingEngine(@Nullable SimulationApplicationRenderingEngine renderingEngine) {
             this.renderingEngine = renderingEngine;
             return this;
         }
 
-        public Builder setRobotSoftwareSuite(@Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite) {
+        public Builder robotSoftwareSuite(@Nullable SimulationApplicationRobotSoftwareSuite robotSoftwareSuite) {
             this.robotSoftwareSuite = robotSoftwareSuite;
             return this;
         }
 
-        public Builder setSimulationSoftwareSuite(@Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite) {
+        public Builder simulationSoftwareSuite(@Nullable SimulationApplicationSimulationSoftwareSuite simulationSoftwareSuite) {
             this.simulationSoftwareSuite = simulationSoftwareSuite;
             return this;
         }
 
-        public Builder setSources(@Nullable List<SimulationApplicationSourceConfig> sources) {
+        public Builder sources(@Nullable List<SimulationApplicationSourceConfig> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTags(@Nullable SimulationApplicationTags tags) {
+        public Builder tags(@Nullable SimulationApplicationTags tags) {
             this.tags = tags;
             return this;
         }

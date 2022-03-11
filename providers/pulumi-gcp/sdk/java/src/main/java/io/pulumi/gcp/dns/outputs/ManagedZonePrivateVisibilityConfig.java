@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ManagedZonePrivateVisibilityConfig {
     private final List<ManagedZonePrivateVisibilityConfigNetwork> networks;
 
-    @OutputCustomType.Constructor({"networks"})
-    private ManagedZonePrivateVisibilityConfig(List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
+    @OutputCustomType.Constructor
+    private ManagedZonePrivateVisibilityConfig(@OutputCustomType.Parameter("networks") List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
         this.networks = networks;
     }
 
@@ -41,7 +41,7 @@ public final class ManagedZonePrivateVisibilityConfig {
     	      this.networks = defaults.networks;
         }
 
-        public Builder setNetworks(List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
+        public Builder networks(List<ManagedZonePrivateVisibilityConfigNetwork> networks) {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }

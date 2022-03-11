@@ -15,10 +15,10 @@ public final class BucketObjectLockConfiguration {
     private final @Nullable String objectLockEnabled;
     private final @Nullable BucketObjectLockRule rule;
 
-    @OutputCustomType.Constructor({"objectLockEnabled","rule"})
+    @OutputCustomType.Constructor
     private BucketObjectLockConfiguration(
-        @Nullable String objectLockEnabled,
-        @Nullable BucketObjectLockRule rule) {
+        @OutputCustomType.Parameter("objectLockEnabled") @Nullable String objectLockEnabled,
+        @OutputCustomType.Parameter("rule") @Nullable BucketObjectLockRule rule) {
         this.objectLockEnabled = objectLockEnabled;
         this.rule = rule;
     }
@@ -52,12 +52,12 @@ public final class BucketObjectLockConfiguration {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setObjectLockEnabled(@Nullable String objectLockEnabled) {
+        public Builder objectLockEnabled(@Nullable String objectLockEnabled) {
             this.objectLockEnabled = objectLockEnabled;
             return this;
         }
 
-        public Builder setRule(@Nullable BucketObjectLockRule rule) {
+        public Builder rule(@Nullable BucketObjectLockRule rule) {
             this.rule = rule;
             return this;
         }

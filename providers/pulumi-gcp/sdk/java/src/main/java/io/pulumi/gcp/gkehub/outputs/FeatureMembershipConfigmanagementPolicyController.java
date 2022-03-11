@@ -44,14 +44,14 @@ public final class FeatureMembershipConfigmanagementPolicyController {
      */
     private final @Nullable Boolean templateLibraryInstalled;
 
-    @OutputCustomType.Constructor({"auditIntervalSeconds","enabled","exemptableNamespaces","logDeniesEnabled","referentialRulesEnabled","templateLibraryInstalled"})
+    @OutputCustomType.Constructor
     private FeatureMembershipConfigmanagementPolicyController(
-        @Nullable String auditIntervalSeconds,
-        @Nullable Boolean enabled,
-        @Nullable List<String> exemptableNamespaces,
-        @Nullable Boolean logDeniesEnabled,
-        @Nullable Boolean referentialRulesEnabled,
-        @Nullable Boolean templateLibraryInstalled) {
+        @OutputCustomType.Parameter("auditIntervalSeconds") @Nullable String auditIntervalSeconds,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("exemptableNamespaces") @Nullable List<String> exemptableNamespaces,
+        @OutputCustomType.Parameter("logDeniesEnabled") @Nullable Boolean logDeniesEnabled,
+        @OutputCustomType.Parameter("referentialRulesEnabled") @Nullable Boolean referentialRulesEnabled,
+        @OutputCustomType.Parameter("templateLibraryInstalled") @Nullable Boolean templateLibraryInstalled) {
         this.auditIntervalSeconds = auditIntervalSeconds;
         this.enabled = enabled;
         this.exemptableNamespaces = exemptableNamespaces;
@@ -133,32 +133,32 @@ public final class FeatureMembershipConfigmanagementPolicyController {
     	      this.templateLibraryInstalled = defaults.templateLibraryInstalled;
         }
 
-        public Builder setAuditIntervalSeconds(@Nullable String auditIntervalSeconds) {
+        public Builder auditIntervalSeconds(@Nullable String auditIntervalSeconds) {
             this.auditIntervalSeconds = auditIntervalSeconds;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
+        public Builder exemptableNamespaces(@Nullable List<String> exemptableNamespaces) {
             this.exemptableNamespaces = exemptableNamespaces;
             return this;
         }
 
-        public Builder setLogDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
+        public Builder logDeniesEnabled(@Nullable Boolean logDeniesEnabled) {
             this.logDeniesEnabled = logDeniesEnabled;
             return this;
         }
 
-        public Builder setReferentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
+        public Builder referentialRulesEnabled(@Nullable Boolean referentialRulesEnabled) {
             this.referentialRulesEnabled = referentialRulesEnabled;
             return this;
         }
 
-        public Builder setTemplateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
+        public Builder templateLibraryInstalled(@Nullable Boolean templateLibraryInstalled) {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }

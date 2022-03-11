@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
     private final ModelExplainabilityJobDefinitionEndpointInput endpointInput;
 
-    @OutputCustomType.Constructor({"endpointInput"})
-    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
+    @OutputCustomType.Constructor
+    private ModelExplainabilityJobDefinitionModelExplainabilityJobInput(@OutputCustomType.Parameter("endpointInput") ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
         this.endpointInput = endpointInput;
     }
 
@@ -40,7 +40,7 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityJobInput {
     	      this.endpointInput = defaults.endpointInput;
         }
 
-        public Builder setEndpointInput(ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
+        public Builder endpointInput(ModelExplainabilityJobDefinitionEndpointInput endpointInput) {
             this.endpointInput = Objects.requireNonNull(endpointInput);
             return this;
         }

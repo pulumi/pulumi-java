@@ -23,10 +23,10 @@ public final class TerminateNotificationProfileResponse {
      */
     private final @Nullable String notBeforeTimeout;
 
-    @OutputCustomType.Constructor({"enable","notBeforeTimeout"})
+    @OutputCustomType.Constructor
     private TerminateNotificationProfileResponse(
-        @Nullable Boolean enable,
-        @Nullable String notBeforeTimeout) {
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("notBeforeTimeout") @Nullable String notBeforeTimeout) {
         this.enable = enable;
         this.notBeforeTimeout = notBeforeTimeout;
     }
@@ -68,12 +68,12 @@ public final class TerminateNotificationProfileResponse {
     	      this.notBeforeTimeout = defaults.notBeforeTimeout;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setNotBeforeTimeout(@Nullable String notBeforeTimeout) {
+        public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
             this.notBeforeTimeout = notBeforeTimeout;
             return this;
         }

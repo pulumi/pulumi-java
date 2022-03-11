@@ -30,11 +30,11 @@ public final class AutoscaleNotificationResponse {
      */
     private final @Nullable List<WebhookNotificationResponse> webhooks;
 
-    @OutputCustomType.Constructor({"email","operation","webhooks"})
+    @OutputCustomType.Constructor
     private AutoscaleNotificationResponse(
-        @Nullable EmailNotificationResponse email,
-        String operation,
-        @Nullable List<WebhookNotificationResponse> webhooks) {
+        @OutputCustomType.Parameter("email") @Nullable EmailNotificationResponse email,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("webhooks") @Nullable List<WebhookNotificationResponse> webhooks) {
         this.email = email;
         this.operation = operation;
         this.webhooks = webhooks;
@@ -86,17 +86,17 @@ public final class AutoscaleNotificationResponse {
     	      this.webhooks = defaults.webhooks;
         }
 
-        public Builder setEmail(@Nullable EmailNotificationResponse email) {
+        public Builder email(@Nullable EmailNotificationResponse email) {
             this.email = email;
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setWebhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
+        public Builder webhooks(@Nullable List<WebhookNotificationResponse> webhooks) {
             this.webhooks = webhooks;
             return this;
         }

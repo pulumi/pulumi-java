@@ -35,12 +35,12 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepository(
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum,
-        @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
+        @OutputCustomType.Parameter("apt") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt,
+        @OutputCustomType.Parameter("goo") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo,
+        @OutputCustomType.Parameter("yum") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum,
+        @OutputCustomType.Parameter("zypper") @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -102,22 +102,22 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepository {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt) {
+        public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryApt apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setGoo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo) {
+        public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setYum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum) {
+        public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYum yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setZypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
+        public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper zypper) {
             this.zypper = zypper;
             return this;
         }

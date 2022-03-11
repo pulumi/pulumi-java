@@ -42,15 +42,15 @@ public final class GetApplicationResult {
      */
     private final String templateUrl;
 
-    @OutputCustomType.Constructor({"applicationId","id","name","requiredCapabilities","semanticVersion","sourceCodeUrl","templateUrl"})
+    @OutputCustomType.Constructor
     private GetApplicationResult(
-        String applicationId,
-        String id,
-        String name,
-        List<String> requiredCapabilities,
-        String semanticVersion,
-        String sourceCodeUrl,
-        String templateUrl) {
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiredCapabilities") List<String> requiredCapabilities,
+        @OutputCustomType.Parameter("semanticVersion") String semanticVersion,
+        @OutputCustomType.Parameter("sourceCodeUrl") String sourceCodeUrl,
+        @OutputCustomType.Parameter("templateUrl") String templateUrl) {
         this.applicationId = applicationId;
         this.id = id;
         this.name = name;
@@ -138,37 +138,37 @@ public final class GetApplicationResult {
     	      this.templateUrl = defaults.templateUrl;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequiredCapabilities(List<String> requiredCapabilities) {
+        public Builder requiredCapabilities(List<String> requiredCapabilities) {
             this.requiredCapabilities = Objects.requireNonNull(requiredCapabilities);
             return this;
         }
 
-        public Builder setSemanticVersion(String semanticVersion) {
+        public Builder semanticVersion(String semanticVersion) {
             this.semanticVersion = Objects.requireNonNull(semanticVersion);
             return this;
         }
 
-        public Builder setSourceCodeUrl(String sourceCodeUrl) {
+        public Builder sourceCodeUrl(String sourceCodeUrl) {
             this.sourceCodeUrl = Objects.requireNonNull(sourceCodeUrl);
             return this;
         }
 
-        public Builder setTemplateUrl(String templateUrl) {
+        public Builder templateUrl(String templateUrl) {
             this.templateUrl = Objects.requireNonNull(templateUrl);
             return this;
         }

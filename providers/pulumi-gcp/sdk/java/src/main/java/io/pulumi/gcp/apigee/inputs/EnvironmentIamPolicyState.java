@@ -99,42 +99,42 @@ public final class EnvironmentIamPolicyState extends io.pulumi.resources.Resourc
     	      this.policyData = defaults.policyData;
         }
 
-        public Builder setEnvId(@Nullable Input<String> envId) {
+        public Builder envId(@Nullable Input<String> envId) {
             this.envId = envId;
             return this;
         }
 
-        public Builder setEnvId(@Nullable String envId) {
+        public Builder envId(@Nullable String envId) {
             this.envId = Input.ofNullable(envId);
             return this;
         }
 
-        public Builder setEtag(@Nullable Input<String> etag) {
+        public Builder etag(@Nullable Input<String> etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = Input.ofNullable(etag);
             return this;
         }
 
-        public Builder setOrgId(@Nullable Input<String> orgId) {
+        public Builder orgId(@Nullable Input<String> orgId) {
             this.orgId = orgId;
             return this;
         }
 
-        public Builder setOrgId(@Nullable String orgId) {
+        public Builder orgId(@Nullable String orgId) {
             this.orgId = Input.ofNullable(orgId);
             return this;
         }
 
-        public Builder setPolicyData(@Nullable Input<String> policyData) {
+        public Builder policyData(@Nullable Input<String> policyData) {
             this.policyData = policyData;
             return this;
         }
 
-        public Builder setPolicyData(@Nullable String policyData) {
+        public Builder policyData(@Nullable String policyData) {
             this.policyData = Input.ofNullable(policyData);
             return this;
         }

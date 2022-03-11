@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor({"accessibilityText","imageUri"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageImageResponse(
-        String accessibilityText,
-        String imageUri) {
+        @OutputCustomType.Parameter("accessibilityText") String accessibilityText,
+        @OutputCustomType.Parameter("imageUri") String imageUri) {
         this.accessibilityText = accessibilityText;
         this.imageUri = imageUri;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageResponse {
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder setAccessibilityText(String accessibilityText) {
+        public Builder accessibilityText(String accessibilityText) {
             this.accessibilityText = Objects.requireNonNull(accessibilityText);
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }

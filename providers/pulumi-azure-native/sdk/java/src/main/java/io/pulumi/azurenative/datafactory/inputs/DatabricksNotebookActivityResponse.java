@@ -210,52 +210,52 @@ public final class DatabricksNotebookActivityResponse extends io.pulumi.resource
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setBaseParameters(@Nullable Map<String,Object> baseParameters) {
+        public Builder baseParameters(@Nullable Map<String,Object> baseParameters) {
             this.baseParameters = baseParameters;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLibraries(@Nullable List<Map<String,Object>> libraries) {
+        public Builder libraries(@Nullable List<Map<String,Object>> libraries) {
             this.libraries = libraries;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotebookPath(Object notebookPath) {
+        public Builder notebookPath(Object notebookPath) {
             this.notebookPath = Objects.requireNonNull(notebookPath);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

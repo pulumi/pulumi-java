@@ -425,117 +425,117 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
     	      this.title = defaults.title;
         }
 
-        public Builder setAssets(@Nullable Map<String,AssetItemResponse> assets) {
+        public Builder assets(@Nullable Map<String,AssetItemResponse> assets) {
             this.assets = assets;
             return this;
         }
 
-        public Builder setCommitmentPlan(@Nullable CommitmentPlanResponse commitmentPlan) {
+        public Builder commitmentPlan(@Nullable CommitmentPlanResponse commitmentPlan) {
             this.commitmentPlan = commitmentPlan;
             return this;
         }
 
-        public Builder setCreatedOn(String createdOn) {
+        public Builder createdOn(String createdOn) {
             this.createdOn = Objects.requireNonNull(createdOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDiagnostics(@Nullable DiagnosticsConfigurationResponse diagnostics) {
+        public Builder diagnostics(@Nullable DiagnosticsConfigurationResponse diagnostics) {
             this.diagnostics = diagnostics;
             return this;
         }
 
-        public Builder setExampleRequest(@Nullable ExampleRequestResponse exampleRequest) {
+        public Builder exampleRequest(@Nullable ExampleRequestResponse exampleRequest) {
             this.exampleRequest = exampleRequest;
             return this;
         }
 
-        public Builder setExposeSampleData(@Nullable Boolean exposeSampleData) {
+        public Builder exposeSampleData(@Nullable Boolean exposeSampleData) {
             this.exposeSampleData = exposeSampleData;
             return this;
         }
 
-        public Builder setInput(@Nullable ServiceInputOutputSpecificationResponse input) {
+        public Builder input(@Nullable ServiceInputOutputSpecificationResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setKeys(@Nullable WebServiceKeysResponse keys) {
+        public Builder keys(@Nullable WebServiceKeysResponse keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setMachineLearningWorkspace(@Nullable MachineLearningWorkspaceResponse machineLearningWorkspace) {
+        public Builder machineLearningWorkspace(@Nullable MachineLearningWorkspaceResponse machineLearningWorkspace) {
             this.machineLearningWorkspace = machineLearningWorkspace;
             return this;
         }
 
-        public Builder setModifiedOn(String modifiedOn) {
+        public Builder modifiedOn(String modifiedOn) {
             this.modifiedOn = Objects.requireNonNull(modifiedOn);
             return this;
         }
 
-        public Builder setOutput(@Nullable ServiceInputOutputSpecificationResponse output) {
+        public Builder output(@Nullable ServiceInputOutputSpecificationResponse output) {
             this.output = output;
             return this;
         }
 
-        public Builder set$package(@Nullable GraphPackageResponse $package) {
+        public Builder $package(@Nullable GraphPackageResponse $package) {
             this.$package = $package;
             return this;
         }
 
-        public Builder setPackageType(String packageType) {
+        public Builder packageType(String packageType) {
             this.packageType = Objects.requireNonNull(packageType);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPayloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
+        public Builder payloadsInBlobStorage(@Nullable Boolean payloadsInBlobStorage) {
             this.payloadsInBlobStorage = payloadsInBlobStorage;
             return this;
         }
 
-        public Builder setPayloadsLocation(@Nullable BlobLocationResponse payloadsLocation) {
+        public Builder payloadsLocation(@Nullable BlobLocationResponse payloadsLocation) {
             this.payloadsLocation = payloadsLocation;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setRealtimeConfiguration(@Nullable RealtimeConfigurationResponse realtimeConfiguration) {
+        public Builder realtimeConfiguration(@Nullable RealtimeConfigurationResponse realtimeConfiguration) {
             this.realtimeConfiguration = realtimeConfiguration;
             return this;
         }
 
-        public Builder setStorageAccount(@Nullable StorageAccountResponse storageAccount) {
+        public Builder storageAccount(@Nullable StorageAccountResponse storageAccount) {
             this.storageAccount = storageAccount;
             return this;
         }
 
-        public Builder setSwaggerLocation(String swaggerLocation) {
+        public Builder swaggerLocation(String swaggerLocation) {
             this.swaggerLocation = Objects.requireNonNull(swaggerLocation);
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

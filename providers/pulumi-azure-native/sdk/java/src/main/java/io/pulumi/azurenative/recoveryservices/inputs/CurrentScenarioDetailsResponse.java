@@ -90,17 +90,17 @@ public final class CurrentScenarioDetailsResponse extends io.pulumi.resources.In
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setJobId(@Nullable String jobId) {
+        public Builder jobId(@Nullable String jobId) {
             this.jobId = jobId;
             return this;
         }
 
-        public Builder setScenarioName(@Nullable String scenarioName) {
+        public Builder scenarioName(@Nullable String scenarioName) {
             this.scenarioName = scenarioName;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }

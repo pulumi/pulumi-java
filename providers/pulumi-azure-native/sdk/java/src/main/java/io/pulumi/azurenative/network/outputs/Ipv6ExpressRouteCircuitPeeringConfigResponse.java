@@ -39,13 +39,13 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"microsoftPeeringConfig","primaryPeerAddressPrefix","routeFilter","secondaryPeerAddressPrefix","state"})
+    @OutputCustomType.Constructor
     private Ipv6ExpressRouteCircuitPeeringConfigResponse(
-        @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
-        @Nullable String primaryPeerAddressPrefix,
-        @Nullable SubResourceResponse routeFilter,
-        @Nullable String secondaryPeerAddressPrefix,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("microsoftPeeringConfig") @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig,
+        @OutputCustomType.Parameter("primaryPeerAddressPrefix") @Nullable String primaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("routeFilter") @Nullable SubResourceResponse routeFilter,
+        @OutputCustomType.Parameter("secondaryPeerAddressPrefix") @Nullable String secondaryPeerAddressPrefix,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.microsoftPeeringConfig = microsoftPeeringConfig;
         this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
         this.routeFilter = routeFilter;
@@ -117,27 +117,27 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setMicrosoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
+        public Builder microsoftPeeringConfig(@Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig) {
             this.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
-        public Builder setPrimaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
+        public Builder primaryPeerAddressPrefix(@Nullable String primaryPeerAddressPrefix) {
             this.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setRouteFilter(@Nullable SubResourceResponse routeFilter) {
+        public Builder routeFilter(@Nullable SubResourceResponse routeFilter) {
             this.routeFilter = routeFilter;
             return this;
         }
 
-        public Builder setSecondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
+        public Builder secondaryPeerAddressPrefix(@Nullable String secondaryPeerAddressPrefix) {
             this.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

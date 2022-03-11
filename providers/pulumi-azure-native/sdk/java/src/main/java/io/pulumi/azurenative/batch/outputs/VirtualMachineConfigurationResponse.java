@@ -64,17 +64,17 @@ public final class VirtualMachineConfigurationResponse {
      */
     private final @Nullable WindowsConfigurationResponse windowsConfiguration;
 
-    @OutputCustomType.Constructor({"containerConfiguration","dataDisks","diskEncryptionConfiguration","extensions","imageReference","licenseType","nodeAgentSkuId","nodePlacementConfiguration","windowsConfiguration"})
+    @OutputCustomType.Constructor
     private VirtualMachineConfigurationResponse(
-        @Nullable ContainerConfigurationResponse containerConfiguration,
-        @Nullable List<DataDiskResponse> dataDisks,
-        @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        @Nullable List<VMExtensionResponse> extensions,
-        ImageReferenceResponse imageReference,
-        @Nullable String licenseType,
-        String nodeAgentSkuId,
-        @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
-        @Nullable WindowsConfigurationResponse windowsConfiguration) {
+        @OutputCustomType.Parameter("containerConfiguration") @Nullable ContainerConfigurationResponse containerConfiguration,
+        @OutputCustomType.Parameter("dataDisks") @Nullable List<DataDiskResponse> dataDisks,
+        @OutputCustomType.Parameter("diskEncryptionConfiguration") @Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @OutputCustomType.Parameter("extensions") @Nullable List<VMExtensionResponse> extensions,
+        @OutputCustomType.Parameter("imageReference") ImageReferenceResponse imageReference,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("nodeAgentSkuId") String nodeAgentSkuId,
+        @OutputCustomType.Parameter("nodePlacementConfiguration") @Nullable NodePlacementConfigurationResponse nodePlacementConfiguration,
+        @OutputCustomType.Parameter("windowsConfiguration") @Nullable WindowsConfigurationResponse windowsConfiguration) {
         this.containerConfiguration = containerConfiguration;
         this.dataDisks = dataDisks;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
@@ -185,47 +185,47 @@ public final class VirtualMachineConfigurationResponse {
     	      this.windowsConfiguration = defaults.windowsConfiguration;
         }
 
-        public Builder setContainerConfiguration(@Nullable ContainerConfigurationResponse containerConfiguration) {
+        public Builder containerConfiguration(@Nullable ContainerConfigurationResponse containerConfiguration) {
             this.containerConfiguration = containerConfiguration;
             return this;
         }
 
-        public Builder setDataDisks(@Nullable List<DataDiskResponse> dataDisks) {
+        public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             this.dataDisks = dataDisks;
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(@Nullable DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = diskEncryptionConfiguration;
             return this;
         }
 
-        public Builder setExtensions(@Nullable List<VMExtensionResponse> extensions) {
+        public Builder extensions(@Nullable List<VMExtensionResponse> extensions) {
             this.extensions = extensions;
             return this;
         }
 
-        public Builder setImageReference(ImageReferenceResponse imageReference) {
+        public Builder imageReference(ImageReferenceResponse imageReference) {
             this.imageReference = Objects.requireNonNull(imageReference);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setNodeAgentSkuId(String nodeAgentSkuId) {
+        public Builder nodeAgentSkuId(String nodeAgentSkuId) {
             this.nodeAgentSkuId = Objects.requireNonNull(nodeAgentSkuId);
             return this;
         }
 
-        public Builder setNodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
+        public Builder nodePlacementConfiguration(@Nullable NodePlacementConfigurationResponse nodePlacementConfiguration) {
             this.nodePlacementConfiguration = nodePlacementConfiguration;
             return this;
         }
 
-        public Builder setWindowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
+        public Builder windowsConfiguration(@Nullable WindowsConfigurationResponse windowsConfiguration) {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }

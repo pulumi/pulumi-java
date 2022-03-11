@@ -51,15 +51,15 @@ public final class HttpRouteRuleResponse {
      */
     private final HttpRedirectActionResponse urlRedirect;
 
-    @OutputCustomType.Constructor({"description","headerAction","matchRules","priority","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private HttpRouteRuleResponse(
-        String description,
-        HttpHeaderActionResponse headerAction,
-        List<HttpRouteRuleMatchResponse> matchRules,
-        Integer priority,
-        HttpRouteActionResponse routeAction,
-        String service,
-        HttpRedirectActionResponse urlRedirect) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("headerAction") HttpHeaderActionResponse headerAction,
+        @OutputCustomType.Parameter("matchRules") List<HttpRouteRuleMatchResponse> matchRules,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("routeAction") HttpRouteActionResponse routeAction,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("urlRedirect") HttpRedirectActionResponse urlRedirect) {
         this.description = description;
         this.headerAction = headerAction;
         this.matchRules = matchRules;
@@ -151,37 +151,37 @@ public final class HttpRouteRuleResponse {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setHeaderAction(HttpHeaderActionResponse headerAction) {
+        public Builder headerAction(HttpHeaderActionResponse headerAction) {
             this.headerAction = Objects.requireNonNull(headerAction);
             return this;
         }
 
-        public Builder setMatchRules(List<HttpRouteRuleMatchResponse> matchRules) {
+        public Builder matchRules(List<HttpRouteRuleMatchResponse> matchRules) {
             this.matchRules = Objects.requireNonNull(matchRules);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRouteAction(HttpRouteActionResponse routeAction) {
+        public Builder routeAction(HttpRouteActionResponse routeAction) {
             this.routeAction = Objects.requireNonNull(routeAction);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setUrlRedirect(HttpRedirectActionResponse urlRedirect) {
+        public Builder urlRedirect(HttpRedirectActionResponse urlRedirect) {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }

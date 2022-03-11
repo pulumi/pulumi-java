@@ -36,12 +36,12 @@ public final class RtspSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"endpoint","name","transport","type"})
+    @OutputCustomType.Constructor
     private RtspSourceResponse(
-        Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
-        String name,
-        @Nullable String transport,
-        String type) {
+        @OutputCustomType.Parameter("endpoint") Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("transport") @Nullable String transport,
+        @OutputCustomType.Parameter("type") String type) {
         this.endpoint = endpoint;
         this.name = name;
         this.transport = transport;
@@ -104,22 +104,22 @@ public final class RtspSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEndpoint(Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint) {
+        public Builder endpoint(Either<TlsEndpointResponse,UnsecuredEndpointResponse> endpoint) {
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTransport(@Nullable String transport) {
+        public Builder transport(@Nullable String transport) {
             this.transport = transport;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

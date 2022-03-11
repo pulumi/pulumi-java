@@ -22,10 +22,10 @@ public final class RoleInlinePolicy {
      */
     private final @Nullable String policy;
 
-    @OutputCustomType.Constructor({"name","policy"})
+    @OutputCustomType.Constructor
     private RoleInlinePolicy(
-        @Nullable String name,
-        @Nullable String policy) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("policy") @Nullable String policy) {
         this.name = name;
         this.policy = policy;
     }
@@ -67,12 +67,12 @@ public final class RoleInlinePolicy {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }

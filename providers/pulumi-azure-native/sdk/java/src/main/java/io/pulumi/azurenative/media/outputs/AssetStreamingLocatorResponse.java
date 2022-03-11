@@ -50,16 +50,16 @@ public final class AssetStreamingLocatorResponse {
      */
     private final String streamingPolicyName;
 
-    @OutputCustomType.Constructor({"assetName","created","defaultContentKeyPolicyName","endTime","name","startTime","streamingLocatorId","streamingPolicyName"})
+    @OutputCustomType.Constructor
     private AssetStreamingLocatorResponse(
-        String assetName,
-        String created,
-        String defaultContentKeyPolicyName,
-        String endTime,
-        String name,
-        String startTime,
-        String streamingLocatorId,
-        String streamingPolicyName) {
+        @OutputCustomType.Parameter("assetName") String assetName,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("defaultContentKeyPolicyName") String defaultContentKeyPolicyName,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("streamingLocatorId") String streamingLocatorId,
+        @OutputCustomType.Parameter("streamingPolicyName") String streamingPolicyName) {
         this.assetName = assetName;
         this.created = created;
         this.defaultContentKeyPolicyName = defaultContentKeyPolicyName;
@@ -161,42 +161,42 @@ public final class AssetStreamingLocatorResponse {
     	      this.streamingPolicyName = defaults.streamingPolicyName;
         }
 
-        public Builder setAssetName(String assetName) {
+        public Builder assetName(String assetName) {
             this.assetName = Objects.requireNonNull(assetName);
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setDefaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
+        public Builder defaultContentKeyPolicyName(String defaultContentKeyPolicyName) {
             this.defaultContentKeyPolicyName = Objects.requireNonNull(defaultContentKeyPolicyName);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStreamingLocatorId(String streamingLocatorId) {
+        public Builder streamingLocatorId(String streamingLocatorId) {
             this.streamingLocatorId = Objects.requireNonNull(streamingLocatorId);
             return this;
         }
 
-        public Builder setStreamingPolicyName(String streamingPolicyName) {
+        public Builder streamingPolicyName(String streamingPolicyName) {
             this.streamingPolicyName = Objects.requireNonNull(streamingPolicyName);
             return this;
         }

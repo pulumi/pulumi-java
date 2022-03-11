@@ -71,22 +71,22 @@ public final class HostedPublicVirtualInterfaceAccepterArgs extends io.pulumi.re
     	      this.virtualInterfaceId = defaults.virtualInterfaceId;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualInterfaceId(Input<String> virtualInterfaceId) {
+        public Builder virtualInterfaceId(Input<String> virtualInterfaceId) {
             this.virtualInterfaceId = Objects.requireNonNull(virtualInterfaceId);
             return this;
         }
 
-        public Builder setVirtualInterfaceId(String virtualInterfaceId) {
+        public Builder virtualInterfaceId(String virtualInterfaceId) {
             this.virtualInterfaceId = Input.of(Objects.requireNonNull(virtualInterfaceId));
             return this;
         }

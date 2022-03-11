@@ -156,72 +156,72 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workGroupConfigurationUpdates = defaults.workGroupConfigurationUpdates;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRecursiveDeleteOption(@Nullable Input<Boolean> recursiveDeleteOption) {
+        public Builder recursiveDeleteOption(@Nullable Input<Boolean> recursiveDeleteOption) {
             this.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
 
-        public Builder setRecursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
+        public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
             this.recursiveDeleteOption = Input.ofNullable(recursiveDeleteOption);
             return this;
         }
 
-        public Builder setState(@Nullable Input<WorkGroupState> state) {
+        public Builder state(@Nullable Input<WorkGroupState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable WorkGroupState state) {
+        public Builder state(@Nullable WorkGroupState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<WorkGroupTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<WorkGroupTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkGroupTagArgs> tags) {
+        public Builder tags(@Nullable List<WorkGroupTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setWorkGroupConfiguration(@Nullable Input<WorkGroupConfigurationArgs> workGroupConfiguration) {
+        public Builder workGroupConfiguration(@Nullable Input<WorkGroupConfigurationArgs> workGroupConfiguration) {
             this.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
 
-        public Builder setWorkGroupConfiguration(@Nullable WorkGroupConfigurationArgs workGroupConfiguration) {
+        public Builder workGroupConfiguration(@Nullable WorkGroupConfigurationArgs workGroupConfiguration) {
             this.workGroupConfiguration = Input.ofNullable(workGroupConfiguration);
             return this;
         }
 
-        public Builder setWorkGroupConfigurationUpdates(@Nullable Input<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
+        public Builder workGroupConfigurationUpdates(@Nullable Input<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }
 
-        public Builder setWorkGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
+        public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdatesArgs workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = Input.ofNullable(workGroupConfigurationUpdates);
             return this;
         }

@@ -56,13 +56,13 @@ public final class EventSubscriptionFilterResponse {
      */
     private final @Nullable String subjectEndsWith;
 
-    @OutputCustomType.Constructor({"advancedFilters","includedEventTypes","isSubjectCaseSensitive","subjectBeginsWith","subjectEndsWith"})
+    @OutputCustomType.Constructor
     private EventSubscriptionFilterResponse(
-        @Nullable List<Object> advancedFilters,
-        @Nullable List<String> includedEventTypes,
-        @Nullable Boolean isSubjectCaseSensitive,
-        @Nullable String subjectBeginsWith,
-        @Nullable String subjectEndsWith) {
+        @OutputCustomType.Parameter("advancedFilters") @Nullable List<Object> advancedFilters,
+        @OutputCustomType.Parameter("includedEventTypes") @Nullable List<String> includedEventTypes,
+        @OutputCustomType.Parameter("isSubjectCaseSensitive") @Nullable Boolean isSubjectCaseSensitive,
+        @OutputCustomType.Parameter("subjectBeginsWith") @Nullable String subjectBeginsWith,
+        @OutputCustomType.Parameter("subjectEndsWith") @Nullable String subjectEndsWith) {
         this.advancedFilters = advancedFilters;
         this.includedEventTypes = includedEventTypes;
         this.isSubjectCaseSensitive = isSubjectCaseSensitive;
@@ -138,27 +138,27 @@ public final class EventSubscriptionFilterResponse {
     	      this.subjectEndsWith = defaults.subjectEndsWith;
         }
 
-        public Builder setAdvancedFilters(@Nullable List<Object> advancedFilters) {
+        public Builder advancedFilters(@Nullable List<Object> advancedFilters) {
             this.advancedFilters = advancedFilters;
             return this;
         }
 
-        public Builder setIncludedEventTypes(@Nullable List<String> includedEventTypes) {
+        public Builder includedEventTypes(@Nullable List<String> includedEventTypes) {
             this.includedEventTypes = includedEventTypes;
             return this;
         }
 
-        public Builder setIsSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
+        public Builder isSubjectCaseSensitive(@Nullable Boolean isSubjectCaseSensitive) {
             this.isSubjectCaseSensitive = isSubjectCaseSensitive;
             return this;
         }
 
-        public Builder setSubjectBeginsWith(@Nullable String subjectBeginsWith) {
+        public Builder subjectBeginsWith(@Nullable String subjectBeginsWith) {
             this.subjectBeginsWith = subjectBeginsWith;
             return this;
         }
 
-        public Builder setSubjectEndsWith(@Nullable String subjectEndsWith) {
+        public Builder subjectEndsWith(@Nullable String subjectEndsWith) {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }

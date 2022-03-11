@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetRegionResult {
     private final String region;
 
-    @OutputCustomType.Constructor({"region"})
-    private GetRegionResult(String region) {
+    @OutputCustomType.Constructor
+    private GetRegionResult(@OutputCustomType.Parameter("region") String region) {
         this.region = region;
     }
 
@@ -40,7 +40,7 @@ public final class GetRegionResult {
     	      this.region = defaults.region;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

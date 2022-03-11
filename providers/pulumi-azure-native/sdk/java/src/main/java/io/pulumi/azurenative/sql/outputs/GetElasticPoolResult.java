@@ -89,22 +89,22 @@ public final class GetElasticPoolResult {
      */
     private final @Nullable Boolean zoneRedundant;
 
-    @OutputCustomType.Constructor({"creationDate","id","kind","licenseType","location","maintenanceConfigurationId","maxSizeBytes","name","perDatabaseSettings","sku","state","tags","type","zoneRedundant"})
+    @OutputCustomType.Constructor
     private GetElasticPoolResult(
-        String creationDate,
-        String id,
-        String kind,
-        @Nullable String licenseType,
-        String location,
-        @Nullable String maintenanceConfigurationId,
-        @Nullable Double maxSizeBytes,
-        String name,
-        @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
-        @Nullable SkuResponse sku,
-        String state,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable Boolean zoneRedundant) {
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maintenanceConfigurationId") @Nullable String maintenanceConfigurationId,
+        @OutputCustomType.Parameter("maxSizeBytes") @Nullable Double maxSizeBytes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("perDatabaseSettings") @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable Boolean zoneRedundant) {
         this.creationDate = creationDate;
         this.id = id;
         this.kind = kind;
@@ -268,72 +268,72 @@ public final class GetElasticPoolResult {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
+        public Builder maintenanceConfigurationId(@Nullable String maintenanceConfigurationId) {
             this.maintenanceConfigurationId = maintenanceConfigurationId;
             return this;
         }
 
-        public Builder setMaxSizeBytes(@Nullable Double maxSizeBytes) {
+        public Builder maxSizeBytes(@Nullable Double maxSizeBytes) {
             this.maxSizeBytes = maxSizeBytes;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPerDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings) {
+        public Builder perDatabaseSettings(@Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings) {
             this.perDatabaseSettings = perDatabaseSettings;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable Boolean zoneRedundant) {
+        public Builder zoneRedundant(@Nullable Boolean zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }

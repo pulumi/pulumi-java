@@ -307,82 +307,82 @@ public final class SapOpenHubLinkedServiceResponse extends io.pulumi.resources.I
     	      this.userName = defaults.userName;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setClientId(@Nullable Object clientId) {
+        public Builder clientId(@Nullable Object clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setLanguage(@Nullable Object language) {
+        public Builder language(@Nullable Object language) {
             this.language = language;
             return this;
         }
 
-        public Builder setLogonGroup(@Nullable Object logonGroup) {
+        public Builder logonGroup(@Nullable Object logonGroup) {
             this.logonGroup = logonGroup;
             return this;
         }
 
-        public Builder setMessageServer(@Nullable Object messageServer) {
+        public Builder messageServer(@Nullable Object messageServer) {
             this.messageServer = messageServer;
             return this;
         }
 
-        public Builder setMessageServerService(@Nullable Object messageServerService) {
+        public Builder messageServerService(@Nullable Object messageServerService) {
             this.messageServerService = messageServerService;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setServer(@Nullable Object server) {
+        public Builder server(@Nullable Object server) {
             this.server = server;
             return this;
         }
 
-        public Builder setSystemId(@Nullable Object systemId) {
+        public Builder systemId(@Nullable Object systemId) {
             this.systemId = systemId;
             return this;
         }
 
-        public Builder setSystemNumber(@Nullable Object systemNumber) {
+        public Builder systemNumber(@Nullable Object systemNumber) {
             this.systemNumber = systemNumber;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(@Nullable Object userName) {
+        public Builder userName(@Nullable Object userName) {
             this.userName = userName;
             return this;
         }

@@ -27,11 +27,11 @@ public final class ClusterDnsConfig {
      */
     private final @Nullable String clusterDnsScope;
 
-    @OutputCustomType.Constructor({"clusterDns","clusterDnsDomain","clusterDnsScope"})
+    @OutputCustomType.Constructor
     private ClusterDnsConfig(
-        @Nullable String clusterDns,
-        @Nullable String clusterDnsDomain,
-        @Nullable String clusterDnsScope) {
+        @OutputCustomType.Parameter("clusterDns") @Nullable String clusterDns,
+        @OutputCustomType.Parameter("clusterDnsDomain") @Nullable String clusterDnsDomain,
+        @OutputCustomType.Parameter("clusterDnsScope") @Nullable String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;
@@ -83,17 +83,17 @@ public final class ClusterDnsConfig {
     	      this.clusterDnsScope = defaults.clusterDnsScope;
         }
 
-        public Builder setClusterDns(@Nullable String clusterDns) {
+        public Builder clusterDns(@Nullable String clusterDns) {
             this.clusterDns = clusterDns;
             return this;
         }
 
-        public Builder setClusterDnsDomain(@Nullable String clusterDnsDomain) {
+        public Builder clusterDnsDomain(@Nullable String clusterDnsDomain) {
             this.clusterDnsDomain = clusterDnsDomain;
             return this;
         }
 
-        public Builder setClusterDnsScope(@Nullable String clusterDnsScope) {
+        public Builder clusterDnsScope(@Nullable String clusterDnsScope) {
             this.clusterDnsScope = clusterDnsScope;
             return this;
         }

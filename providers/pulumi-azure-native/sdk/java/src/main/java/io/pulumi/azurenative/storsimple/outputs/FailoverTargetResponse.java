@@ -70,19 +70,19 @@ public final class FailoverTargetResponse {
      */
     private final @Nullable Integer volumesCount;
 
-    @OutputCustomType.Constructor({"availableLocalStorageInBytes","availableTieredStorageInBytes","dataContainersCount","deviceId","deviceLocation","deviceSoftwareVersion","deviceStatus","eligibilityResult","friendlyDeviceSoftwareVersion","modelDescription","volumesCount"})
+    @OutputCustomType.Constructor
     private FailoverTargetResponse(
-        @Nullable Double availableLocalStorageInBytes,
-        @Nullable Double availableTieredStorageInBytes,
-        @Nullable Integer dataContainersCount,
-        @Nullable String deviceId,
-        @Nullable String deviceLocation,
-        @Nullable String deviceSoftwareVersion,
-        @Nullable String deviceStatus,
-        @Nullable TargetEligibilityResultResponse eligibilityResult,
-        @Nullable String friendlyDeviceSoftwareVersion,
-        @Nullable String modelDescription,
-        @Nullable Integer volumesCount) {
+        @OutputCustomType.Parameter("availableLocalStorageInBytes") @Nullable Double availableLocalStorageInBytes,
+        @OutputCustomType.Parameter("availableTieredStorageInBytes") @Nullable Double availableTieredStorageInBytes,
+        @OutputCustomType.Parameter("dataContainersCount") @Nullable Integer dataContainersCount,
+        @OutputCustomType.Parameter("deviceId") @Nullable String deviceId,
+        @OutputCustomType.Parameter("deviceLocation") @Nullable String deviceLocation,
+        @OutputCustomType.Parameter("deviceSoftwareVersion") @Nullable String deviceSoftwareVersion,
+        @OutputCustomType.Parameter("deviceStatus") @Nullable String deviceStatus,
+        @OutputCustomType.Parameter("eligibilityResult") @Nullable TargetEligibilityResultResponse eligibilityResult,
+        @OutputCustomType.Parameter("friendlyDeviceSoftwareVersion") @Nullable String friendlyDeviceSoftwareVersion,
+        @OutputCustomType.Parameter("modelDescription") @Nullable String modelDescription,
+        @OutputCustomType.Parameter("volumesCount") @Nullable Integer volumesCount) {
         this.availableLocalStorageInBytes = availableLocalStorageInBytes;
         this.availableTieredStorageInBytes = availableTieredStorageInBytes;
         this.dataContainersCount = dataContainersCount;
@@ -214,57 +214,57 @@ public final class FailoverTargetResponse {
     	      this.volumesCount = defaults.volumesCount;
         }
 
-        public Builder setAvailableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
+        public Builder availableLocalStorageInBytes(@Nullable Double availableLocalStorageInBytes) {
             this.availableLocalStorageInBytes = availableLocalStorageInBytes;
             return this;
         }
 
-        public Builder setAvailableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
+        public Builder availableTieredStorageInBytes(@Nullable Double availableTieredStorageInBytes) {
             this.availableTieredStorageInBytes = availableTieredStorageInBytes;
             return this;
         }
 
-        public Builder setDataContainersCount(@Nullable Integer dataContainersCount) {
+        public Builder dataContainersCount(@Nullable Integer dataContainersCount) {
             this.dataContainersCount = dataContainersCount;
             return this;
         }
 
-        public Builder setDeviceId(@Nullable String deviceId) {
+        public Builder deviceId(@Nullable String deviceId) {
             this.deviceId = deviceId;
             return this;
         }
 
-        public Builder setDeviceLocation(@Nullable String deviceLocation) {
+        public Builder deviceLocation(@Nullable String deviceLocation) {
             this.deviceLocation = deviceLocation;
             return this;
         }
 
-        public Builder setDeviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
+        public Builder deviceSoftwareVersion(@Nullable String deviceSoftwareVersion) {
             this.deviceSoftwareVersion = deviceSoftwareVersion;
             return this;
         }
 
-        public Builder setDeviceStatus(@Nullable String deviceStatus) {
+        public Builder deviceStatus(@Nullable String deviceStatus) {
             this.deviceStatus = deviceStatus;
             return this;
         }
 
-        public Builder setEligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
+        public Builder eligibilityResult(@Nullable TargetEligibilityResultResponse eligibilityResult) {
             this.eligibilityResult = eligibilityResult;
             return this;
         }
 
-        public Builder setFriendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
+        public Builder friendlyDeviceSoftwareVersion(@Nullable String friendlyDeviceSoftwareVersion) {
             this.friendlyDeviceSoftwareVersion = friendlyDeviceSoftwareVersion;
             return this;
         }
 
-        public Builder setModelDescription(@Nullable String modelDescription) {
+        public Builder modelDescription(@Nullable String modelDescription) {
             this.modelDescription = modelDescription;
             return this;
         }
 
-        public Builder setVolumesCount(@Nullable Integer volumesCount) {
+        public Builder volumesCount(@Nullable Integer volumesCount) {
             this.volumesCount = volumesCount;
             return this;
         }

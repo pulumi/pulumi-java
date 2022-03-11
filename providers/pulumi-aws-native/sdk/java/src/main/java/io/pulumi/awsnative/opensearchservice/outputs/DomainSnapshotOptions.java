@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DomainSnapshotOptions {
     private final @Nullable Integer automatedSnapshotStartHour;
 
-    @OutputCustomType.Constructor({"automatedSnapshotStartHour"})
-    private DomainSnapshotOptions(@Nullable Integer automatedSnapshotStartHour) {
+    @OutputCustomType.Constructor
+    private DomainSnapshotOptions(@OutputCustomType.Parameter("automatedSnapshotStartHour") @Nullable Integer automatedSnapshotStartHour) {
         this.automatedSnapshotStartHour = automatedSnapshotStartHour;
     }
 
@@ -42,7 +42,7 @@ public final class DomainSnapshotOptions {
     	      this.automatedSnapshotStartHour = defaults.automatedSnapshotStartHour;
         }
 
-        public Builder setAutomatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
+        public Builder automatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
             this.automatedSnapshotStartHour = automatedSnapshotStartHour;
             return this;
         }

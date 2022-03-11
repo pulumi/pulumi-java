@@ -51,7 +51,7 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.versionId = defaults.versionId;
         }
 
-        public Builder setVersionId(String versionId) {
+        public Builder versionId(String versionId) {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }

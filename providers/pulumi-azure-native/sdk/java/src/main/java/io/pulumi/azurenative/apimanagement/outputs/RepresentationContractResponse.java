@@ -39,13 +39,13 @@ public final class RepresentationContractResponse {
      */
     private final @Nullable String typeName;
 
-    @OutputCustomType.Constructor({"contentType","formParameters","sample","schemaId","typeName"})
+    @OutputCustomType.Constructor
     private RepresentationContractResponse(
-        String contentType,
-        @Nullable List<ParameterContractResponse> formParameters,
-        @Nullable String sample,
-        @Nullable String schemaId,
-        @Nullable String typeName) {
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("formParameters") @Nullable List<ParameterContractResponse> formParameters,
+        @OutputCustomType.Parameter("sample") @Nullable String sample,
+        @OutputCustomType.Parameter("schemaId") @Nullable String schemaId,
+        @OutputCustomType.Parameter("typeName") @Nullable String typeName) {
         this.contentType = contentType;
         this.formParameters = formParameters;
         this.sample = sample;
@@ -117,27 +117,27 @@ public final class RepresentationContractResponse {
     	      this.typeName = defaults.typeName;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFormParameters(@Nullable List<ParameterContractResponse> formParameters) {
+        public Builder formParameters(@Nullable List<ParameterContractResponse> formParameters) {
             this.formParameters = formParameters;
             return this;
         }
 
-        public Builder setSample(@Nullable String sample) {
+        public Builder sample(@Nullable String sample) {
             this.sample = sample;
             return this;
         }
 
-        public Builder setSchemaId(@Nullable String schemaId) {
+        public Builder schemaId(@Nullable String schemaId) {
             this.schemaId = schemaId;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = typeName;
             return this;
         }

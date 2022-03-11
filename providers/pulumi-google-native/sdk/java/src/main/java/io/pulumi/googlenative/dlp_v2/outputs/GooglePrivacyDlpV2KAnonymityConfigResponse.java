@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
      */
     private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
-    @OutputCustomType.Constructor({"entityId","quasiIds"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KAnonymityConfigResponse(
-        GooglePrivacyDlpV2EntityIdResponse entityId,
-        List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        @OutputCustomType.Parameter("entityId") GooglePrivacyDlpV2EntityIdResponse entityId,
+        @OutputCustomType.Parameter("quasiIds") List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
         this.entityId = entityId;
         this.quasiIds = quasiIds;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2KAnonymityConfigResponse {
     	      this.quasiIds = defaults.quasiIds;
         }
 
-        public Builder setEntityId(GooglePrivacyDlpV2EntityIdResponse entityId) {
+        public Builder entityId(GooglePrivacyDlpV2EntityIdResponse entityId) {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
 
-        public Builder setQuasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
+        public Builder quasiIds(List<GooglePrivacyDlpV2FieldIdResponse> quasiIds) {
             this.quasiIds = Objects.requireNonNull(quasiIds);
             return this;
         }

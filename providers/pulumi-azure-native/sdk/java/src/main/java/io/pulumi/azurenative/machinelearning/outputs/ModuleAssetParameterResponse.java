@@ -29,11 +29,11 @@ public final class ModuleAssetParameterResponse {
      */
     private final @Nullable String parameterType;
 
-    @OutputCustomType.Constructor({"modeValuesInfo","name","parameterType"})
+    @OutputCustomType.Constructor
     private ModuleAssetParameterResponse(
-        @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo,
-        @Nullable String name,
-        @Nullable String parameterType) {
+        @OutputCustomType.Parameter("modeValuesInfo") @Nullable Map<String,ModeValueInfoResponse> modeValuesInfo,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("parameterType") @Nullable String parameterType) {
         this.modeValuesInfo = modeValuesInfo;
         this.name = name;
         this.parameterType = parameterType;
@@ -85,17 +85,17 @@ public final class ModuleAssetParameterResponse {
     	      this.parameterType = defaults.parameterType;
         }
 
-        public Builder setModeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
+        public Builder modeValuesInfo(@Nullable Map<String,ModeValueInfoResponse> modeValuesInfo) {
             this.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setParameterType(@Nullable String parameterType) {
+        public Builder parameterType(@Nullable String parameterType) {
             this.parameterType = parameterType;
             return this;
         }

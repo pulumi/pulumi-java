@@ -72,20 +72,20 @@ public final class DisplayDataResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"boolValue","durationValue","floatValue","int64Value","javaClassValue","key","label","namespace","shortStrValue","strValue","timestampValue","url"})
+    @OutputCustomType.Constructor
     private DisplayDataResponse(
-        Boolean boolValue,
-        String durationValue,
-        Double floatValue,
-        String int64Value,
-        String javaClassValue,
-        String key,
-        String label,
-        String namespace,
-        String shortStrValue,
-        String strValue,
-        String timestampValue,
-        String url) {
+        @OutputCustomType.Parameter("boolValue") Boolean boolValue,
+        @OutputCustomType.Parameter("durationValue") String durationValue,
+        @OutputCustomType.Parameter("floatValue") Double floatValue,
+        @OutputCustomType.Parameter("int64Value") String int64Value,
+        @OutputCustomType.Parameter("javaClassValue") String javaClassValue,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("label") String label,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("shortStrValue") String shortStrValue,
+        @OutputCustomType.Parameter("strValue") String strValue,
+        @OutputCustomType.Parameter("timestampValue") String timestampValue,
+        @OutputCustomType.Parameter("url") String url) {
         this.boolValue = boolValue;
         this.durationValue = durationValue;
         this.floatValue = floatValue;
@@ -227,62 +227,62 @@ public final class DisplayDataResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setBoolValue(Boolean boolValue) {
+        public Builder boolValue(Boolean boolValue) {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
 
-        public Builder setDurationValue(String durationValue) {
+        public Builder durationValue(String durationValue) {
             this.durationValue = Objects.requireNonNull(durationValue);
             return this;
         }
 
-        public Builder setFloatValue(Double floatValue) {
+        public Builder floatValue(Double floatValue) {
             this.floatValue = Objects.requireNonNull(floatValue);
             return this;
         }
 
-        public Builder setInt64Value(String int64Value) {
+        public Builder int64Value(String int64Value) {
             this.int64Value = Objects.requireNonNull(int64Value);
             return this;
         }
 
-        public Builder setJavaClassValue(String javaClassValue) {
+        public Builder javaClassValue(String javaClassValue) {
             this.javaClassValue = Objects.requireNonNull(javaClassValue);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setLabel(String label) {
+        public Builder label(String label) {
             this.label = Objects.requireNonNull(label);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setShortStrValue(String shortStrValue) {
+        public Builder shortStrValue(String shortStrValue) {
             this.shortStrValue = Objects.requireNonNull(shortStrValue);
             return this;
         }
 
-        public Builder setStrValue(String strValue) {
+        public Builder strValue(String strValue) {
             this.strValue = Objects.requireNonNull(strValue);
             return this;
         }
 
-        public Builder setTimestampValue(String timestampValue) {
+        public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

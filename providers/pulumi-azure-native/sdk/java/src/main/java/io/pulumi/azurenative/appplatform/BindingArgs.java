@@ -119,52 +119,52 @@ public final class BindingArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setAppName(Input<String> appName) {
+        public Builder appName(Input<String> appName) {
             this.appName = Objects.requireNonNull(appName);
             return this;
         }
 
-        public Builder setAppName(String appName) {
+        public Builder appName(String appName) {
             this.appName = Input.of(Objects.requireNonNull(appName));
             return this;
         }
 
-        public Builder setBindingName(@Nullable Input<String> bindingName) {
+        public Builder bindingName(@Nullable Input<String> bindingName) {
             this.bindingName = bindingName;
             return this;
         }
 
-        public Builder setBindingName(@Nullable String bindingName) {
+        public Builder bindingName(@Nullable String bindingName) {
             this.bindingName = Input.ofNullable(bindingName);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<BindingResourcePropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<BindingResourcePropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable BindingResourcePropertiesArgs properties) {
+        public Builder properties(@Nullable BindingResourcePropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

@@ -22,10 +22,10 @@ public final class EventSource {
      */
     private final @Nullable String host;
 
-    @OutputCustomType.Constructor({"component","host"})
+    @OutputCustomType.Constructor
     private EventSource(
-        @Nullable String component,
-        @Nullable String host) {
+        @OutputCustomType.Parameter("component") @Nullable String component,
+        @OutputCustomType.Parameter("host") @Nullable String host) {
         this.component = component;
         this.host = host;
     }
@@ -67,12 +67,12 @@ public final class EventSource {
     	      this.host = defaults.host;
         }
 
-        public Builder setComponent(@Nullable String component) {
+        public Builder component(@Nullable String component) {
             this.component = component;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = host;
             return this;
         }

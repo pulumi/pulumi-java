@@ -20,10 +20,10 @@ public final class GcsProfileResponse {
      */
     private final String rootPath;
 
-    @OutputCustomType.Constructor({"bucket","rootPath"})
+    @OutputCustomType.Constructor
     private GcsProfileResponse(
-        String bucket,
-        String rootPath) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("rootPath") String rootPath) {
         this.bucket = bucket;
         this.rootPath = rootPath;
     }
@@ -65,12 +65,12 @@ public final class GcsProfileResponse {
     	      this.rootPath = defaults.rootPath;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setRootPath(String rootPath) {
+        public Builder rootPath(String rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }

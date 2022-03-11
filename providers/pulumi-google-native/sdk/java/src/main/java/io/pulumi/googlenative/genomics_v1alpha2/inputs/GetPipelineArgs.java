@@ -47,7 +47,7 @@ public final class GetPipelineArgs extends io.pulumi.resources.InvokeArgs {
     	      this.pipelineId = defaults.pipelineId;
         }
 
-        public Builder setPipelineId(String pipelineId) {
+        public Builder pipelineId(String pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }

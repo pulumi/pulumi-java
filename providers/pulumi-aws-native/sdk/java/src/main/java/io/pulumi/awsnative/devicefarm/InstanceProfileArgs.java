@@ -113,62 +113,62 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setExcludeAppPackagesFromCleanup(@Nullable Input<List<String>> excludeAppPackagesFromCleanup) {
+        public Builder excludeAppPackagesFromCleanup(@Nullable Input<List<String>> excludeAppPackagesFromCleanup) {
             this.excludeAppPackagesFromCleanup = excludeAppPackagesFromCleanup;
             return this;
         }
 
-        public Builder setExcludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
+        public Builder excludeAppPackagesFromCleanup(@Nullable List<String> excludeAppPackagesFromCleanup) {
             this.excludeAppPackagesFromCleanup = Input.ofNullable(excludeAppPackagesFromCleanup);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPackageCleanup(@Nullable Input<Boolean> packageCleanup) {
+        public Builder packageCleanup(@Nullable Input<Boolean> packageCleanup) {
             this.packageCleanup = packageCleanup;
             return this;
         }
 
-        public Builder setPackageCleanup(@Nullable Boolean packageCleanup) {
+        public Builder packageCleanup(@Nullable Boolean packageCleanup) {
             this.packageCleanup = Input.ofNullable(packageCleanup);
             return this;
         }
 
-        public Builder setRebootAfterUse(@Nullable Input<Boolean> rebootAfterUse) {
+        public Builder rebootAfterUse(@Nullable Input<Boolean> rebootAfterUse) {
             this.rebootAfterUse = rebootAfterUse;
             return this;
         }
 
-        public Builder setRebootAfterUse(@Nullable Boolean rebootAfterUse) {
+        public Builder rebootAfterUse(@Nullable Boolean rebootAfterUse) {
             this.rebootAfterUse = Input.ofNullable(rebootAfterUse);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<InstanceProfileTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<InstanceProfileTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<InstanceProfileTagArgs> tags) {
+        public Builder tags(@Nullable List<InstanceProfileTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

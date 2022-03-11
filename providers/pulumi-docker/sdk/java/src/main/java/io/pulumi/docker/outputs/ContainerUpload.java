@@ -19,14 +19,14 @@ public final class ContainerUpload {
     private final @Nullable String source;
     private final @Nullable String sourceHash;
 
-    @OutputCustomType.Constructor({"content","contentBase64","executable","file","source","sourceHash"})
+    @OutputCustomType.Constructor
     private ContainerUpload(
-        @Nullable String content,
-        @Nullable String contentBase64,
-        @Nullable Boolean executable,
-        String file,
-        @Nullable String source,
-        @Nullable String sourceHash) {
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("contentBase64") @Nullable String contentBase64,
+        @OutputCustomType.Parameter("executable") @Nullable Boolean executable,
+        @OutputCustomType.Parameter("file") String file,
+        @OutputCustomType.Parameter("source") @Nullable String source,
+        @OutputCustomType.Parameter("sourceHash") @Nullable String sourceHash) {
         this.content = content;
         this.contentBase64 = contentBase64;
         this.executable = executable;
@@ -84,32 +84,32 @@ public final class ContainerUpload {
     	      this.sourceHash = defaults.sourceHash;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContentBase64(@Nullable String contentBase64) {
+        public Builder contentBase64(@Nullable String contentBase64) {
             this.contentBase64 = contentBase64;
             return this;
         }
 
-        public Builder setExecutable(@Nullable Boolean executable) {
+        public Builder executable(@Nullable Boolean executable) {
             this.executable = executable;
             return this;
         }
 
-        public Builder setFile(String file) {
+        public Builder file(String file) {
             this.file = Objects.requireNonNull(file);
             return this;
         }
 
-        public Builder setSource(@Nullable String source) {
+        public Builder source(@Nullable String source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSourceHash(@Nullable String sourceHash) {
+        public Builder sourceHash(@Nullable String sourceHash) {
             this.sourceHash = sourceHash;
             return this;
         }

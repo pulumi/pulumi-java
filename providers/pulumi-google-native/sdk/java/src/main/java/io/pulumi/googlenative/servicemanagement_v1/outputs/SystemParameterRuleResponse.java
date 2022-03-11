@@ -22,10 +22,10 @@ public final class SystemParameterRuleResponse {
      */
     private final String selector;
 
-    @OutputCustomType.Constructor({"parameters","selector"})
+    @OutputCustomType.Constructor
     private SystemParameterRuleResponse(
-        List<SystemParameterResponse> parameters,
-        String selector) {
+        @OutputCustomType.Parameter("parameters") List<SystemParameterResponse> parameters,
+        @OutputCustomType.Parameter("selector") String selector) {
         this.parameters = parameters;
         this.selector = selector;
     }
@@ -67,12 +67,12 @@ public final class SystemParameterRuleResponse {
     	      this.selector = defaults.selector;
         }
 
-        public Builder setParameters(List<SystemParameterResponse> parameters) {
+        public Builder parameters(List<SystemParameterResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSelector(String selector) {
+        public Builder selector(String selector) {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }

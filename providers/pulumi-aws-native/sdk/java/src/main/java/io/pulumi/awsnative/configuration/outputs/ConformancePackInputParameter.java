@@ -12,10 +12,10 @@ public final class ConformancePackInputParameter {
     private final String parameterName;
     private final String parameterValue;
 
-    @OutputCustomType.Constructor({"parameterName","parameterValue"})
+    @OutputCustomType.Constructor
     private ConformancePackInputParameter(
-        String parameterName,
-        String parameterValue) {
+        @OutputCustomType.Parameter("parameterName") String parameterName,
+        @OutputCustomType.Parameter("parameterValue") String parameterValue) {
         this.parameterName = parameterName;
         this.parameterValue = parameterValue;
     }
@@ -49,12 +49,12 @@ public final class ConformancePackInputParameter {
     	      this.parameterValue = defaults.parameterValue;
         }
 
-        public Builder setParameterName(String parameterName) {
+        public Builder parameterName(String parameterName) {
             this.parameterName = Objects.requireNonNull(parameterName);
             return this;
         }
 
-        public Builder setParameterValue(String parameterValue) {
+        public Builder parameterValue(String parameterValue) {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }

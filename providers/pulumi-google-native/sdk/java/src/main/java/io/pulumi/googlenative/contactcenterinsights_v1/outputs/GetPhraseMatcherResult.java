@@ -68,19 +68,19 @@ public final class GetPhraseMatcherResult {
      */
     private final String versionTag;
 
-    @OutputCustomType.Constructor({"activationUpdateTime","active","displayName","name","phraseMatchRuleGroups","revisionCreateTime","revisionId","roleMatch","type","updateTime","versionTag"})
+    @OutputCustomType.Constructor
     private GetPhraseMatcherResult(
-        String activationUpdateTime,
-        Boolean active,
-        String displayName,
-        String name,
-        List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
-        String revisionCreateTime,
-        String revisionId,
-        String roleMatch,
-        String type,
-        String updateTime,
-        String versionTag) {
+        @OutputCustomType.Parameter("activationUpdateTime") String activationUpdateTime,
+        @OutputCustomType.Parameter("active") Boolean active,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("phraseMatchRuleGroups") List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups,
+        @OutputCustomType.Parameter("revisionCreateTime") String revisionCreateTime,
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("roleMatch") String roleMatch,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("versionTag") String versionTag) {
         this.activationUpdateTime = activationUpdateTime;
         this.active = active;
         this.displayName = displayName;
@@ -212,57 +212,57 @@ public final class GetPhraseMatcherResult {
     	      this.versionTag = defaults.versionTag;
         }
 
-        public Builder setActivationUpdateTime(String activationUpdateTime) {
+        public Builder activationUpdateTime(String activationUpdateTime) {
             this.activationUpdateTime = Objects.requireNonNull(activationUpdateTime);
             return this;
         }
 
-        public Builder setActive(Boolean active) {
+        public Builder active(Boolean active) {
             this.active = Objects.requireNonNull(active);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPhraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups) {
+        public Builder phraseMatchRuleGroups(List<GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse> phraseMatchRuleGroups) {
             this.phraseMatchRuleGroups = Objects.requireNonNull(phraseMatchRuleGroups);
             return this;
         }
 
-        public Builder setRevisionCreateTime(String revisionCreateTime) {
+        public Builder revisionCreateTime(String revisionCreateTime) {
             this.revisionCreateTime = Objects.requireNonNull(revisionCreateTime);
             return this;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setRoleMatch(String roleMatch) {
+        public Builder roleMatch(String roleMatch) {
             this.roleMatch = Objects.requireNonNull(roleMatch);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersionTag(String versionTag) {
+        public Builder versionTag(String versionTag) {
             this.versionTag = Objects.requireNonNull(versionTag);
             return this;
         }

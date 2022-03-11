@@ -20,10 +20,10 @@ public final class DataSourceManifestFileLocation {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private DataSourceManifestFileLocation(
-        String bucket,
-        String key) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key) {
         this.bucket = bucket;
         this.key = key;
     }
@@ -65,12 +65,12 @@ public final class DataSourceManifestFileLocation {
     	      this.key = defaults.key;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

@@ -64,12 +64,12 @@ public final class GetStreamingImageArgs extends io.pulumi.resources.InvokeArgs 
     	      this.studioId = defaults.studioId;
         }
 
-        public Builder setStreamingImageId(String streamingImageId) {
+        public Builder streamingImageId(String streamingImageId) {
             this.streamingImageId = Objects.requireNonNull(streamingImageId);
             return this;
         }
 
-        public Builder setStudioId(String studioId) {
+        public Builder studioId(String studioId) {
             this.studioId = Objects.requireNonNull(studioId);
             return this;
         }

@@ -38,13 +38,13 @@ public final class SelectAudioTrackByAttributeResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"attribute","channelMapping","filter","filterValue","odataType"})
+    @OutputCustomType.Constructor
     private SelectAudioTrackByAttributeResponse(
-        String attribute,
-        @Nullable String channelMapping,
-        String filter,
-        @Nullable String filterValue,
-        String odataType) {
+        @OutputCustomType.Parameter("attribute") String attribute,
+        @OutputCustomType.Parameter("channelMapping") @Nullable String channelMapping,
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterValue") @Nullable String filterValue,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.attribute = attribute;
         this.channelMapping = channelMapping;
         this.filter = filter;
@@ -117,27 +117,27 @@ public final class SelectAudioTrackByAttributeResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAttribute(String attribute) {
+        public Builder attribute(String attribute) {
             this.attribute = Objects.requireNonNull(attribute);
             return this;
         }
 
-        public Builder setChannelMapping(@Nullable String channelMapping) {
+        public Builder channelMapping(@Nullable String channelMapping) {
             this.channelMapping = channelMapping;
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilterValue(@Nullable String filterValue) {
+        public Builder filterValue(@Nullable String filterValue) {
             this.filterValue = filterValue;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

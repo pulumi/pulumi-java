@@ -22,10 +22,10 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetricSpecification(
-        String predefinedMetricType,
-        @Nullable String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedMetricType") String predefinedMetricType,
+        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedMetricType = predefinedMetricType;
         this.resourceLabel = resourceLabel;
     }
@@ -67,12 +67,12 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationPredefinedMetri
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder setPredefinedMetricType(String predefinedMetricType) {
+        public Builder predefinedMetricType(String predefinedMetricType) {
             this.predefinedMetricType = Objects.requireNonNull(predefinedMetricType);
             return this;
         }
 
-        public Builder setResourceLabel(@Nullable String resourceLabel) {
+        public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }

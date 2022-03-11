@@ -31,12 +31,12 @@ public final class ContactResponse {
      */
     private final PostalAddressResponse postalAddress;
 
-    @OutputCustomType.Constructor({"email","faxNumber","phoneNumber","postalAddress"})
+    @OutputCustomType.Constructor
     private ContactResponse(
-        String email,
-        String faxNumber,
-        String phoneNumber,
-        PostalAddressResponse postalAddress) {
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("faxNumber") String faxNumber,
+        @OutputCustomType.Parameter("phoneNumber") String phoneNumber,
+        @OutputCustomType.Parameter("postalAddress") PostalAddressResponse postalAddress) {
         this.email = email;
         this.faxNumber = faxNumber;
         this.phoneNumber = phoneNumber;
@@ -98,22 +98,22 @@ public final class ContactResponse {
     	      this.postalAddress = defaults.postalAddress;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setFaxNumber(String faxNumber) {
+        public Builder faxNumber(String faxNumber) {
             this.faxNumber = Objects.requireNonNull(faxNumber);
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
+        public Builder phoneNumber(String phoneNumber) {
             this.phoneNumber = Objects.requireNonNull(phoneNumber);
             return this;
         }
 
-        public Builder setPostalAddress(PostalAddressResponse postalAddress) {
+        public Builder postalAddress(PostalAddressResponse postalAddress) {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }

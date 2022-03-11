@@ -106,42 +106,42 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setMessageTtlSeconds(@Nullable Input<Integer> messageTtlSeconds) {
+        public Builder messageTtlSeconds(@Nullable Input<Integer> messageTtlSeconds) {
             this.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
 
-        public Builder setMessageTtlSeconds(@Nullable Integer messageTtlSeconds) {
+        public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
             this.messageTtlSeconds = Input.ofNullable(messageTtlSeconds);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<SignalingChannelTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<SignalingChannelTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SignalingChannelTagArgs> tags) {
+        public Builder tags(@Nullable List<SignalingChannelTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<SignalingChannelType> type) {
+        public Builder type(@Nullable Input<SignalingChannelType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable SignalingChannelType type) {
+        public Builder type(@Nullable SignalingChannelType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

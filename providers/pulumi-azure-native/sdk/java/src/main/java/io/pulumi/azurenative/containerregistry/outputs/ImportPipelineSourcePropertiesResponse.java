@@ -29,11 +29,11 @@ public final class ImportPipelineSourcePropertiesResponse {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor({"keyVaultUri","type","uri"})
+    @OutputCustomType.Constructor
     private ImportPipelineSourcePropertiesResponse(
-        String keyVaultUri,
-        @Nullable String type,
-        @Nullable String uri) {
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("uri") @Nullable String uri) {
         this.keyVaultUri = keyVaultUri;
         this.type = type;
         this.uri = uri;
@@ -87,17 +87,17 @@ public final class ImportPipelineSourcePropertiesResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }

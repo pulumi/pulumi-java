@@ -12,10 +12,10 @@ public final class TaskDefinitionSecret {
     private final String name;
     private final String valueFrom;
 
-    @OutputCustomType.Constructor({"name","valueFrom"})
+    @OutputCustomType.Constructor
     private TaskDefinitionSecret(
-        String name,
-        String valueFrom) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("valueFrom") String valueFrom) {
         this.name = name;
         this.valueFrom = valueFrom;
     }
@@ -49,12 +49,12 @@ public final class TaskDefinitionSecret {
     	      this.valueFrom = defaults.valueFrom;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValueFrom(String valueFrom) {
+        public Builder valueFrom(String valueFrom) {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }

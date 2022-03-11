@@ -36,12 +36,12 @@ public final class SecretVolumeSource {
      */
     private final @Nullable String secretName;
 
-    @OutputCustomType.Constructor({"defaultMode","items","optional","secretName"})
+    @OutputCustomType.Constructor
     private SecretVolumeSource(
-        @Nullable Integer defaultMode,
-        @Nullable List<KeyToPath> items,
-        @Nullable Boolean optional,
-        @Nullable String secretName) {
+        @OutputCustomType.Parameter("defaultMode") @Nullable Integer defaultMode,
+        @OutputCustomType.Parameter("items") @Nullable List<KeyToPath> items,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional,
+        @OutputCustomType.Parameter("secretName") @Nullable String secretName) {
         this.defaultMode = defaultMode;
         this.items = items;
         this.optional = optional;
@@ -103,22 +103,22 @@ public final class SecretVolumeSource {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setDefaultMode(@Nullable Integer defaultMode) {
+        public Builder defaultMode(@Nullable Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
 
-        public Builder setItems(@Nullable List<KeyToPath> items) {
+        public Builder items(@Nullable List<KeyToPath> items) {
             this.items = items;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }
 
-        public Builder setSecretName(@Nullable String secretName) {
+        public Builder secretName(@Nullable String secretName) {
             this.secretName = secretName;
             return this;
         }

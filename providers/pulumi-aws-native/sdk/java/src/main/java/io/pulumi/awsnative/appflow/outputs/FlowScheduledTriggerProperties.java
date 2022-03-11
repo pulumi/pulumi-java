@@ -20,14 +20,14 @@ public final class FlowScheduledTriggerProperties {
     private final @Nullable Double scheduleStartTime;
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"dataPullMode","scheduleEndTime","scheduleExpression","scheduleOffset","scheduleStartTime","timeZone"})
+    @OutputCustomType.Constructor
     private FlowScheduledTriggerProperties(
-        @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
-        @Nullable Double scheduleEndTime,
-        String scheduleExpression,
-        @Nullable Double scheduleOffset,
-        @Nullable Double scheduleStartTime,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("dataPullMode") @Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode,
+        @OutputCustomType.Parameter("scheduleEndTime") @Nullable Double scheduleEndTime,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression,
+        @OutputCustomType.Parameter("scheduleOffset") @Nullable Double scheduleOffset,
+        @OutputCustomType.Parameter("scheduleStartTime") @Nullable Double scheduleStartTime,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.dataPullMode = dataPullMode;
         this.scheduleEndTime = scheduleEndTime;
         this.scheduleExpression = scheduleExpression;
@@ -85,32 +85,32 @@ public final class FlowScheduledTriggerProperties {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
+        public Builder dataPullMode(@Nullable FlowScheduledTriggerPropertiesDataPullMode dataPullMode) {
             this.dataPullMode = dataPullMode;
             return this;
         }
 
-        public Builder setScheduleEndTime(@Nullable Double scheduleEndTime) {
+        public Builder scheduleEndTime(@Nullable Double scheduleEndTime) {
             this.scheduleEndTime = scheduleEndTime;
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
 
-        public Builder setScheduleOffset(@Nullable Double scheduleOffset) {
+        public Builder scheduleOffset(@Nullable Double scheduleOffset) {
             this.scheduleOffset = scheduleOffset;
             return this;
         }
 
-        public Builder setScheduleStartTime(@Nullable Double scheduleStartTime) {
+        public Builder scheduleStartTime(@Nullable Double scheduleStartTime) {
             this.scheduleStartTime = scheduleStartTime;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

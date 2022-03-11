@@ -27,11 +27,11 @@ public final class AnimationResponse {
      */
     private final AnimationStaticResponse animationStatic;
 
-    @OutputCustomType.Constructor({"animationEnd","animationFade","animationStatic"})
+    @OutputCustomType.Constructor
     private AnimationResponse(
-        AnimationEndResponse animationEnd,
-        AnimationFadeResponse animationFade,
-        AnimationStaticResponse animationStatic) {
+        @OutputCustomType.Parameter("animationEnd") AnimationEndResponse animationEnd,
+        @OutputCustomType.Parameter("animationFade") AnimationFadeResponse animationFade,
+        @OutputCustomType.Parameter("animationStatic") AnimationStaticResponse animationStatic) {
         this.animationEnd = animationEnd;
         this.animationFade = animationFade;
         this.animationStatic = animationStatic;
@@ -83,17 +83,17 @@ public final class AnimationResponse {
     	      this.animationStatic = defaults.animationStatic;
         }
 
-        public Builder setAnimationEnd(AnimationEndResponse animationEnd) {
+        public Builder animationEnd(AnimationEndResponse animationEnd) {
             this.animationEnd = Objects.requireNonNull(animationEnd);
             return this;
         }
 
-        public Builder setAnimationFade(AnimationFadeResponse animationFade) {
+        public Builder animationFade(AnimationFadeResponse animationFade) {
             this.animationFade = Objects.requireNonNull(animationFade);
             return this;
         }
 
-        public Builder setAnimationStatic(AnimationStaticResponse animationStatic) {
+        public Builder animationStatic(AnimationStaticResponse animationStatic) {
             this.animationStatic = Objects.requireNonNull(animationStatic);
             return this;
         }

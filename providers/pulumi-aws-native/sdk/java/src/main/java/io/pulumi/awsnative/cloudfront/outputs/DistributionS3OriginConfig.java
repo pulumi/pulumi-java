@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DistributionS3OriginConfig {
     private final @Nullable String originAccessIdentity;
 
-    @OutputCustomType.Constructor({"originAccessIdentity"})
-    private DistributionS3OriginConfig(@Nullable String originAccessIdentity) {
+    @OutputCustomType.Constructor
+    private DistributionS3OriginConfig(@OutputCustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
         this.originAccessIdentity = originAccessIdentity;
     }
 
@@ -42,7 +42,7 @@ public final class DistributionS3OriginConfig {
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }

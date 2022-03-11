@@ -17,12 +17,12 @@ public final class LoggingRuleResponse {
     private final String direction;
     private final @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths;
 
-    @OutputCustomType.Constructor({"action","detailLevel","direction","hiddenPropertyPaths"})
+    @OutputCustomType.Constructor
     private LoggingRuleResponse(
-        String action,
-        String detailLevel,
-        String direction,
-        @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("detailLevel") String detailLevel,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("hiddenPropertyPaths") @Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
         this.action = action;
         this.detailLevel = detailLevel;
         this.direction = direction;
@@ -68,22 +68,22 @@ public final class LoggingRuleResponse {
     	      this.hiddenPropertyPaths = defaults.hiddenPropertyPaths;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setDetailLevel(String detailLevel) {
+        public Builder detailLevel(String detailLevel) {
             this.detailLevel = Objects.requireNonNull(detailLevel);
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setHiddenPropertyPaths(@Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
+        public Builder hiddenPropertyPaths(@Nullable LoggingRuleResponseHiddenPropertyPaths hiddenPropertyPaths) {
             this.hiddenPropertyPaths = hiddenPropertyPaths;
             return this;
         }

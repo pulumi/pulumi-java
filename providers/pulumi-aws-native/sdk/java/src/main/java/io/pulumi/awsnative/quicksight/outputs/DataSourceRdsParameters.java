@@ -20,10 +20,10 @@ public final class DataSourceRdsParameters {
      */
     private final String instanceId;
 
-    @OutputCustomType.Constructor({"database","instanceId"})
+    @OutputCustomType.Constructor
     private DataSourceRdsParameters(
-        String database,
-        String instanceId) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId) {
         this.database = database;
         this.instanceId = instanceId;
     }
@@ -65,12 +65,12 @@ public final class DataSourceRdsParameters {
     	      this.instanceId = defaults.instanceId;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }

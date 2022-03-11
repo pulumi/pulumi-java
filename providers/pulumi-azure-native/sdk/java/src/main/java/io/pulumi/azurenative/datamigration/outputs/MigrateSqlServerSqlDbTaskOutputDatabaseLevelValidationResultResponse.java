@@ -69,19 +69,19 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      */
     private final String targetDatabaseName;
 
-    @OutputCustomType.Constructor({"dataIntegrityValidationResult","endedOn","id","migrationId","queryAnalysisValidationResult","resultType","schemaValidationResult","sourceDatabaseName","startedOn","status","targetDatabaseName"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(
-        DataIntegrityValidationResultResponse dataIntegrityValidationResult,
-        String endedOn,
-        String id,
-        String migrationId,
-        QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
-        String resultType,
-        SchemaComparisonValidationResultResponse schemaValidationResult,
-        String sourceDatabaseName,
-        String startedOn,
-        String status,
-        String targetDatabaseName) {
+        @OutputCustomType.Parameter("dataIntegrityValidationResult") DataIntegrityValidationResultResponse dataIntegrityValidationResult,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("migrationId") String migrationId,
+        @OutputCustomType.Parameter("queryAnalysisValidationResult") QueryAnalysisValidationResultResponse queryAnalysisValidationResult,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("schemaValidationResult") SchemaComparisonValidationResultResponse schemaValidationResult,
+        @OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("targetDatabaseName") String targetDatabaseName) {
         this.dataIntegrityValidationResult = dataIntegrityValidationResult;
         this.endedOn = endedOn;
         this.id = id;
@@ -214,57 +214,57 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
     	      this.targetDatabaseName = defaults.targetDatabaseName;
         }
 
-        public Builder setDataIntegrityValidationResult(DataIntegrityValidationResultResponse dataIntegrityValidationResult) {
+        public Builder dataIntegrityValidationResult(DataIntegrityValidationResultResponse dataIntegrityValidationResult) {
             this.dataIntegrityValidationResult = Objects.requireNonNull(dataIntegrityValidationResult);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMigrationId(String migrationId) {
+        public Builder migrationId(String migrationId) {
             this.migrationId = Objects.requireNonNull(migrationId);
             return this;
         }
 
-        public Builder setQueryAnalysisValidationResult(QueryAnalysisValidationResultResponse queryAnalysisValidationResult) {
+        public Builder queryAnalysisValidationResult(QueryAnalysisValidationResultResponse queryAnalysisValidationResult) {
             this.queryAnalysisValidationResult = Objects.requireNonNull(queryAnalysisValidationResult);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSchemaValidationResult(SchemaComparisonValidationResultResponse schemaValidationResult) {
+        public Builder schemaValidationResult(SchemaComparisonValidationResultResponse schemaValidationResult) {
             this.schemaValidationResult = Objects.requireNonNull(schemaValidationResult);
             return this;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetDatabaseName(String targetDatabaseName) {
+        public Builder targetDatabaseName(String targetDatabaseName) {
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }

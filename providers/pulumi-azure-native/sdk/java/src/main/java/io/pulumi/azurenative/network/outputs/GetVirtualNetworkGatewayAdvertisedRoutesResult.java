@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
      */
     private final @Nullable List<GatewayRouteResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetVirtualNetworkGatewayAdvertisedRoutesResult(@Nullable List<GatewayRouteResponse> value) {
+    @OutputCustomType.Constructor
+    private GetVirtualNetworkGatewayAdvertisedRoutesResult(@OutputCustomType.Parameter("value") @Nullable List<GatewayRouteResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class GetVirtualNetworkGatewayAdvertisedRoutesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<GatewayRouteResponse> value) {
+        public Builder value(@Nullable List<GatewayRouteResponse> value) {
             this.value = value;
             return this;
         }

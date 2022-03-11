@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FlowS3InputFormatConfig {
     private final @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType;
 
-    @OutputCustomType.Constructor({"s3InputFileType"})
-    private FlowS3InputFormatConfig(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
+    @OutputCustomType.Constructor
+    private FlowS3InputFormatConfig(@OutputCustomType.Parameter("s3InputFileType") @Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
         this.s3InputFileType = s3InputFileType;
     }
 
@@ -42,7 +42,7 @@ public final class FlowS3InputFormatConfig {
     	      this.s3InputFileType = defaults.s3InputFileType;
         }
 
-        public Builder setS3InputFileType(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
+        public Builder s3InputFileType(@Nullable FlowS3InputFormatConfigS3InputFileType s3InputFileType) {
             this.s3InputFileType = s3InputFileType;
             return this;
         }

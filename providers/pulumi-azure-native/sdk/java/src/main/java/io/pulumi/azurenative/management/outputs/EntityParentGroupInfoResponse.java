@@ -17,8 +17,8 @@ public final class EntityParentGroupInfoResponse {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private EntityParentGroupInfoResponse(@Nullable String id) {
+    @OutputCustomType.Constructor
+    private EntityParentGroupInfoResponse(@OutputCustomType.Parameter("id") @Nullable String id) {
         this.id = id;
     }
 
@@ -50,7 +50,7 @@ public final class EntityParentGroupInfoResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

@@ -16,8 +16,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
      */
     private final PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations;
 
-    @OutputCustomType.Constructor({"infoTypeTransformations"})
-    private PreventionDeidentifyTemplateDeidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
+    @OutputCustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfig(@OutputCustomType.Parameter("infoTypeTransformations") PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
         this.infoTypeTransformations = infoTypeTransformations;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfig {
     	      this.infoTypeTransformations = defaults.infoTypeTransformations;
         }
 
-        public Builder setInfoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
+        public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations infoTypeTransformations) {
             this.infoTypeTransformations = Objects.requireNonNull(infoTypeTransformations);
             return this;
         }

@@ -27,11 +27,11 @@ public final class TargetsPresentConditionResponse {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"missingTargets","status","updateTime"})
+    @OutputCustomType.Constructor
     private TargetsPresentConditionResponse(
-        List<String> missingTargets,
-        Boolean status,
-        String updateTime) {
+        @OutputCustomType.Parameter("missingTargets") List<String> missingTargets,
+        @OutputCustomType.Parameter("status") Boolean status,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.missingTargets = missingTargets;
         this.status = status;
         this.updateTime = updateTime;
@@ -83,17 +83,17 @@ public final class TargetsPresentConditionResponse {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setMissingTargets(List<String> missingTargets) {
+        public Builder missingTargets(List<String> missingTargets) {
             this.missingTargets = Objects.requireNonNull(missingTargets);
             return this;
         }
 
-        public Builder setStatus(Boolean status) {
+        public Builder status(Boolean status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -232,122 +232,122 @@ public final class ReportDefinitionState extends io.pulumi.resources.ResourceArg
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setAdditionalArtifacts(@Nullable Input<List<String>> additionalArtifacts) {
+        public Builder additionalArtifacts(@Nullable Input<List<String>> additionalArtifacts) {
             this.additionalArtifacts = additionalArtifacts;
             return this;
         }
 
-        public Builder setAdditionalArtifacts(@Nullable List<String> additionalArtifacts) {
+        public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
             this.additionalArtifacts = Input.ofNullable(additionalArtifacts);
             return this;
         }
 
-        public Builder setAdditionalSchemaElements(@Nullable Input<List<String>> additionalSchemaElements) {
+        public Builder additionalSchemaElements(@Nullable Input<List<String>> additionalSchemaElements) {
             this.additionalSchemaElements = additionalSchemaElements;
             return this;
         }
 
-        public Builder setAdditionalSchemaElements(@Nullable List<String> additionalSchemaElements) {
+        public Builder additionalSchemaElements(@Nullable List<String> additionalSchemaElements) {
             this.additionalSchemaElements = Input.ofNullable(additionalSchemaElements);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setRefreshClosedReports(@Nullable Input<Boolean> refreshClosedReports) {
+        public Builder refreshClosedReports(@Nullable Input<Boolean> refreshClosedReports) {
             this.refreshClosedReports = refreshClosedReports;
             return this;
         }
 
-        public Builder setRefreshClosedReports(@Nullable Boolean refreshClosedReports) {
+        public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
             this.refreshClosedReports = Input.ofNullable(refreshClosedReports);
             return this;
         }
 
-        public Builder setReportName(@Nullable Input<String> reportName) {
+        public Builder reportName(@Nullable Input<String> reportName) {
             this.reportName = reportName;
             return this;
         }
 
-        public Builder setReportName(@Nullable String reportName) {
+        public Builder reportName(@Nullable String reportName) {
             this.reportName = Input.ofNullable(reportName);
             return this;
         }
 
-        public Builder setReportVersioning(@Nullable Input<String> reportVersioning) {
+        public Builder reportVersioning(@Nullable Input<String> reportVersioning) {
             this.reportVersioning = reportVersioning;
             return this;
         }
 
-        public Builder setReportVersioning(@Nullable String reportVersioning) {
+        public Builder reportVersioning(@Nullable String reportVersioning) {
             this.reportVersioning = Input.ofNullable(reportVersioning);
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable Input<String> s3Bucket) {
+        public Builder s3Bucket(@Nullable Input<String> s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = Input.ofNullable(s3Bucket);
             return this;
         }
 
-        public Builder setS3Prefix(@Nullable Input<String> s3Prefix) {
+        public Builder s3Prefix(@Nullable Input<String> s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }
 
-        public Builder setS3Prefix(@Nullable String s3Prefix) {
+        public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = Input.ofNullable(s3Prefix);
             return this;
         }
 
-        public Builder setS3Region(@Nullable Input<String> s3Region) {
+        public Builder s3Region(@Nullable Input<String> s3Region) {
             this.s3Region = s3Region;
             return this;
         }
 
-        public Builder setS3Region(@Nullable String s3Region) {
+        public Builder s3Region(@Nullable String s3Region) {
             this.s3Region = Input.ofNullable(s3Region);
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable Input<String> timeUnit) {
+        public Builder timeUnit(@Nullable Input<String> timeUnit) {
             this.timeUnit = timeUnit;
             return this;
         }
 
-        public Builder setTimeUnit(@Nullable String timeUnit) {
+        public Builder timeUnit(@Nullable String timeUnit) {
             this.timeUnit = Input.ofNullable(timeUnit);
             return this;
         }

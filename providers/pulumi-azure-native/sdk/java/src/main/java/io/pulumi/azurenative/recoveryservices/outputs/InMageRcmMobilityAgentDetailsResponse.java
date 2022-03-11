@@ -56,17 +56,17 @@ public final class InMageRcmMobilityAgentDetailsResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"agentVersionExpiryDate","driverVersion","driverVersionExpiryDate","isUpgradeable","lastHeartbeatUtc","latestUpgradableVersionWithoutReboot","latestVersion","reasonsBlockingUpgrade","version"})
+    @OutputCustomType.Constructor
     private InMageRcmMobilityAgentDetailsResponse(
-        String agentVersionExpiryDate,
-        String driverVersion,
-        String driverVersionExpiryDate,
-        String isUpgradeable,
-        String lastHeartbeatUtc,
-        String latestUpgradableVersionWithoutReboot,
-        String latestVersion,
-        List<String> reasonsBlockingUpgrade,
-        String version) {
+        @OutputCustomType.Parameter("agentVersionExpiryDate") String agentVersionExpiryDate,
+        @OutputCustomType.Parameter("driverVersion") String driverVersion,
+        @OutputCustomType.Parameter("driverVersionExpiryDate") String driverVersionExpiryDate,
+        @OutputCustomType.Parameter("isUpgradeable") String isUpgradeable,
+        @OutputCustomType.Parameter("lastHeartbeatUtc") String lastHeartbeatUtc,
+        @OutputCustomType.Parameter("latestUpgradableVersionWithoutReboot") String latestUpgradableVersionWithoutReboot,
+        @OutputCustomType.Parameter("latestVersion") String latestVersion,
+        @OutputCustomType.Parameter("reasonsBlockingUpgrade") List<String> reasonsBlockingUpgrade,
+        @OutputCustomType.Parameter("version") String version) {
         this.agentVersionExpiryDate = agentVersionExpiryDate;
         this.driverVersion = driverVersion;
         this.driverVersionExpiryDate = driverVersionExpiryDate;
@@ -178,47 +178,47 @@ public final class InMageRcmMobilityAgentDetailsResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setAgentVersionExpiryDate(String agentVersionExpiryDate) {
+        public Builder agentVersionExpiryDate(String agentVersionExpiryDate) {
             this.agentVersionExpiryDate = Objects.requireNonNull(agentVersionExpiryDate);
             return this;
         }
 
-        public Builder setDriverVersion(String driverVersion) {
+        public Builder driverVersion(String driverVersion) {
             this.driverVersion = Objects.requireNonNull(driverVersion);
             return this;
         }
 
-        public Builder setDriverVersionExpiryDate(String driverVersionExpiryDate) {
+        public Builder driverVersionExpiryDate(String driverVersionExpiryDate) {
             this.driverVersionExpiryDate = Objects.requireNonNull(driverVersionExpiryDate);
             return this;
         }
 
-        public Builder setIsUpgradeable(String isUpgradeable) {
+        public Builder isUpgradeable(String isUpgradeable) {
             this.isUpgradeable = Objects.requireNonNull(isUpgradeable);
             return this;
         }
 
-        public Builder setLastHeartbeatUtc(String lastHeartbeatUtc) {
+        public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             this.lastHeartbeatUtc = Objects.requireNonNull(lastHeartbeatUtc);
             return this;
         }
 
-        public Builder setLatestUpgradableVersionWithoutReboot(String latestUpgradableVersionWithoutReboot) {
+        public Builder latestUpgradableVersionWithoutReboot(String latestUpgradableVersionWithoutReboot) {
             this.latestUpgradableVersionWithoutReboot = Objects.requireNonNull(latestUpgradableVersionWithoutReboot);
             return this;
         }
 
-        public Builder setLatestVersion(String latestVersion) {
+        public Builder latestVersion(String latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
 
-        public Builder setReasonsBlockingUpgrade(List<String> reasonsBlockingUpgrade) {
+        public Builder reasonsBlockingUpgrade(List<String> reasonsBlockingUpgrade) {
             this.reasonsBlockingUpgrade = Objects.requireNonNull(reasonsBlockingUpgrade);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

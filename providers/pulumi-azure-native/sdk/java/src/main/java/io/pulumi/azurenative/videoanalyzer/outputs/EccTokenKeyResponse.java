@@ -36,13 +36,13 @@ public final class EccTokenKeyResponse {
      */
     private final String y;
 
-    @OutputCustomType.Constructor({"alg","kid","type","x","y"})
+    @OutputCustomType.Constructor
     private EccTokenKeyResponse(
-        String alg,
-        String kid,
-        String type,
-        String x,
-        String y) {
+        @OutputCustomType.Parameter("alg") String alg,
+        @OutputCustomType.Parameter("kid") String kid,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("x") String x,
+        @OutputCustomType.Parameter("y") String y) {
         this.alg = alg;
         this.kid = kid;
         this.type = type;
@@ -115,27 +115,27 @@ public final class EccTokenKeyResponse {
     	      this.y = defaults.y;
         }
 
-        public Builder setAlg(String alg) {
+        public Builder alg(String alg) {
             this.alg = Objects.requireNonNull(alg);
             return this;
         }
 
-        public Builder setKid(String kid) {
+        public Builder kid(String kid) {
             this.kid = Objects.requireNonNull(kid);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setX(String x) {
+        public Builder x(String x) {
             this.x = Objects.requireNonNull(x);
             return this;
         }
 
-        public Builder setY(String y) {
+        public Builder y(String y) {
             this.y = Objects.requireNonNull(y);
             return this;
         }

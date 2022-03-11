@@ -15,8 +15,8 @@ public final class PolicyStatusProperties {
      */
     private final MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic;
 
-    @OutputCustomType.Constructor({"isPublic"})
-    private PolicyStatusProperties(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
+    @OutputCustomType.Constructor
+    private PolicyStatusProperties(@OutputCustomType.Parameter("isPublic") MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
         this.isPublic = isPublic;
     }
 
@@ -48,7 +48,7 @@ public final class PolicyStatusProperties {
     	      this.isPublic = defaults.isPublic;
         }
 
-        public Builder setIsPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
+        public Builder isPublic(MultiRegionAccessPointPolicyPolicyStatusPropertiesIsPublic isPublic) {
             this.isPublic = Objects.requireNonNull(isPublic);
             return this;
         }

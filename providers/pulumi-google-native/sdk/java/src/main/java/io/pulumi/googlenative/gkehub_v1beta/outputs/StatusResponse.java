@@ -20,10 +20,10 @@ public final class StatusResponse {
      */
     private final String description;
 
-    @OutputCustomType.Constructor({"code","description"})
+    @OutputCustomType.Constructor
     private StatusResponse(
-        String code,
-        String description) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") String description) {
         this.code = code;
         this.description = description;
     }
@@ -65,12 +65,12 @@ public final class StatusResponse {
     	      this.description = defaults.description;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

@@ -14,11 +14,11 @@ public final class GetAcceleratorAttribute {
     private final String flowLogsS3Bucket;
     private final String flowLogsS3Prefix;
 
-    @OutputCustomType.Constructor({"flowLogsEnabled","flowLogsS3Bucket","flowLogsS3Prefix"})
+    @OutputCustomType.Constructor
     private GetAcceleratorAttribute(
-        Boolean flowLogsEnabled,
-        String flowLogsS3Bucket,
-        String flowLogsS3Prefix) {
+        @OutputCustomType.Parameter("flowLogsEnabled") Boolean flowLogsEnabled,
+        @OutputCustomType.Parameter("flowLogsS3Bucket") String flowLogsS3Bucket,
+        @OutputCustomType.Parameter("flowLogsS3Prefix") String flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;
@@ -58,17 +58,17 @@ public final class GetAcceleratorAttribute {
     	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
         }
 
-        public Builder setFlowLogsEnabled(Boolean flowLogsEnabled) {
+        public Builder flowLogsEnabled(Boolean flowLogsEnabled) {
             this.flowLogsEnabled = Objects.requireNonNull(flowLogsEnabled);
             return this;
         }
 
-        public Builder setFlowLogsS3Bucket(String flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = Objects.requireNonNull(flowLogsS3Bucket);
             return this;
         }
 
-        public Builder setFlowLogsS3Prefix(String flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = Objects.requireNonNull(flowLogsS3Prefix);
             return this;
         }

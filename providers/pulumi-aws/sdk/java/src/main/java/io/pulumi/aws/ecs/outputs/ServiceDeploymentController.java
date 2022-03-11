@@ -17,8 +17,8 @@ public final class ServiceDeploymentController {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"type"})
-    private ServiceDeploymentController(@Nullable String type) {
+    @OutputCustomType.Constructor
+    private ServiceDeploymentController(@OutputCustomType.Parameter("type") @Nullable String type) {
         this.type = type;
     }
 
@@ -50,7 +50,7 @@ public final class ServiceDeploymentController {
     	      this.type = defaults.type;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

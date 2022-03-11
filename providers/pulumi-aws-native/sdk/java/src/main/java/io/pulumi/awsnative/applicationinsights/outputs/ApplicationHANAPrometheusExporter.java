@@ -41,13 +41,13 @@ public final class ApplicationHANAPrometheusExporter {
      */
     private final @Nullable String prometheusPort;
 
-    @OutputCustomType.Constructor({"agreeToInstallHANADBClient","hANAPort","hANASID","hANASecretName","prometheusPort"})
+    @OutputCustomType.Constructor
     private ApplicationHANAPrometheusExporter(
-        Boolean agreeToInstallHANADBClient,
-        String hANAPort,
-        String hANASID,
-        String hANASecretName,
-        @Nullable String prometheusPort) {
+        @OutputCustomType.Parameter("agreeToInstallHANADBClient") Boolean agreeToInstallHANADBClient,
+        @OutputCustomType.Parameter("hANAPort") String hANAPort,
+        @OutputCustomType.Parameter("hANASID") String hANASID,
+        @OutputCustomType.Parameter("hANASecretName") String hANASecretName,
+        @OutputCustomType.Parameter("prometheusPort") @Nullable String prometheusPort) {
         this.agreeToInstallHANADBClient = agreeToInstallHANADBClient;
         this.hANAPort = hANAPort;
         this.hANASID = hANASID;
@@ -122,27 +122,27 @@ public final class ApplicationHANAPrometheusExporter {
     	      this.prometheusPort = defaults.prometheusPort;
         }
 
-        public Builder setAgreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
+        public Builder agreeToInstallHANADBClient(Boolean agreeToInstallHANADBClient) {
             this.agreeToInstallHANADBClient = Objects.requireNonNull(agreeToInstallHANADBClient);
             return this;
         }
 
-        public Builder setHANAPort(String hANAPort) {
+        public Builder hANAPort(String hANAPort) {
             this.hANAPort = Objects.requireNonNull(hANAPort);
             return this;
         }
 
-        public Builder setHANASID(String hANASID) {
+        public Builder hANASID(String hANASID) {
             this.hANASID = Objects.requireNonNull(hANASID);
             return this;
         }
 
-        public Builder setHANASecretName(String hANASecretName) {
+        public Builder hANASecretName(String hANASecretName) {
             this.hANASecretName = Objects.requireNonNull(hANASecretName);
             return this;
         }
 
-        public Builder setPrometheusPort(@Nullable String prometheusPort) {
+        public Builder prometheusPort(@Nullable String prometheusPort) {
             this.prometheusPort = prometheusPort;
             return this;
         }

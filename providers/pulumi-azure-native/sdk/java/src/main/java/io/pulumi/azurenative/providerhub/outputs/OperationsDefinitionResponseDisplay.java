@@ -14,12 +14,12 @@ public final class OperationsDefinitionResponseDisplay {
     private final String provider;
     private final String resource;
 
-    @OutputCustomType.Constructor({"description","operation","provider","resource"})
+    @OutputCustomType.Constructor
     private OperationsDefinitionResponseDisplay(
-        String description,
-        String operation,
-        String provider,
-        String resource) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("operation") String operation,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.description = description;
         this.operation = operation;
         this.provider = provider;
@@ -65,22 +65,22 @@ public final class OperationsDefinitionResponseDisplay {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setOperation(String operation) {
+        public Builder operation(String operation) {
             this.operation = Objects.requireNonNull(operation);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

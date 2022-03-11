@@ -35,13 +35,13 @@ public final class GetAndroidAppResult {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"appId","displayName","name","packageName","project"})
+    @OutputCustomType.Constructor
     private GetAndroidAppResult(
-        String appId,
-        String displayName,
-        String name,
-        String packageName,
-        String project) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageName") String packageName,
+        @OutputCustomType.Parameter("project") String project) {
         this.appId = appId;
         this.displayName = displayName;
         this.name = name;
@@ -113,27 +113,27 @@ public final class GetAndroidAppResult {
     	      this.project = defaults.project;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

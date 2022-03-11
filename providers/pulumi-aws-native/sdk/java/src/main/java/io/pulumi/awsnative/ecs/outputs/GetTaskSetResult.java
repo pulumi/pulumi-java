@@ -23,10 +23,10 @@ public final class GetTaskSetResult {
      */
     private final @Nullable TaskSetScale scale;
 
-    @OutputCustomType.Constructor({"id","scale"})
+    @OutputCustomType.Constructor
     private GetTaskSetResult(
-        @Nullable String id,
-        @Nullable TaskSetScale scale) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("scale") @Nullable TaskSetScale scale) {
         this.id = id;
         this.scale = scale;
     }
@@ -68,12 +68,12 @@ public final class GetTaskSetResult {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setScale(@Nullable TaskSetScale scale) {
+        public Builder scale(@Nullable TaskSetScale scale) {
             this.scale = scale;
             return this;
         }

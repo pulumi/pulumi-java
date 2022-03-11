@@ -17,10 +17,10 @@ public final class GetAmiFilter {
     private final String name;
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"name","values"})
+    @OutputCustomType.Constructor
     private GetAmiFilter(
-        String name,
-        List<String> values) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.name = name;
         this.values = values;
     }
@@ -58,12 +58,12 @@ public final class GetAmiFilter {
     	      this.values = defaults.values;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

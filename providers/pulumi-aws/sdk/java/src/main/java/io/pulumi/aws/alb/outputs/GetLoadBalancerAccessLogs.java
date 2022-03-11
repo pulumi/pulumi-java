@@ -14,11 +14,11 @@ public final class GetLoadBalancerAccessLogs {
     private final Boolean enabled;
     private final String prefix;
 
-    @OutputCustomType.Constructor({"bucket","enabled","prefix"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerAccessLogs(
-        String bucket,
-        Boolean enabled,
-        String prefix) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("prefix") String prefix) {
         this.bucket = bucket;
         this.enabled = enabled;
         this.prefix = prefix;
@@ -58,17 +58,17 @@ public final class GetLoadBalancerAccessLogs {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }

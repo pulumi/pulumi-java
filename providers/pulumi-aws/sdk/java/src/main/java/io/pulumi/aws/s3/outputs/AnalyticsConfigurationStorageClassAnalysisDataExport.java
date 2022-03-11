@@ -23,10 +23,10 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
      */
     private final @Nullable String outputSchemaVersion;
 
-    @OutputCustomType.Constructor({"destination","outputSchemaVersion"})
+    @OutputCustomType.Constructor
     private AnalyticsConfigurationStorageClassAnalysisDataExport(
-        AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
-        @Nullable String outputSchemaVersion) {
+        @OutputCustomType.Parameter("destination") AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination,
+        @OutputCustomType.Parameter("outputSchemaVersion") @Nullable String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }
@@ -68,12 +68,12 @@ public final class AnalyticsConfigurationStorageClassAnalysisDataExport {
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder setDestination(AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination) {
+        public Builder destination(AnalyticsConfigurationStorageClassAnalysisDataExportDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOutputSchemaVersion(@Nullable String outputSchemaVersion) {
+        public Builder outputSchemaVersion(@Nullable String outputSchemaVersion) {
             this.outputSchemaVersion = outputSchemaVersion;
             return this;
         }

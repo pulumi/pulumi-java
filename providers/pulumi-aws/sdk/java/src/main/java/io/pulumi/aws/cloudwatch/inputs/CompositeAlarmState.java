@@ -201,102 +201,102 @@ public final class CompositeAlarmState extends io.pulumi.resources.ResourceArgs 
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setActionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Input<Boolean> actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
-        public Builder setActionsEnabled(@Nullable Boolean actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = Input.ofNullable(actionsEnabled);
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable Input<List<String>> alarmActions) {
+        public Builder alarmActions(@Nullable Input<List<String>> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable List<String> alarmActions) {
+        public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = Input.ofNullable(alarmActions);
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable Input<String> alarmDescription) {
+        public Builder alarmDescription(@Nullable Input<String> alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable String alarmDescription) {
+        public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = Input.ofNullable(alarmDescription);
             return this;
         }
 
-        public Builder setAlarmName(@Nullable Input<String> alarmName) {
+        public Builder alarmName(@Nullable Input<String> alarmName) {
             this.alarmName = alarmName;
             return this;
         }
 
-        public Builder setAlarmName(@Nullable String alarmName) {
+        public Builder alarmName(@Nullable String alarmName) {
             this.alarmName = Input.ofNullable(alarmName);
             return this;
         }
 
-        public Builder setAlarmRule(@Nullable Input<String> alarmRule) {
+        public Builder alarmRule(@Nullable Input<String> alarmRule) {
             this.alarmRule = alarmRule;
             return this;
         }
 
-        public Builder setAlarmRule(@Nullable String alarmRule) {
+        public Builder alarmRule(@Nullable String alarmRule) {
             this.alarmRule = Input.ofNullable(alarmRule);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable Input<List<String>> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable List<String> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = Input.ofNullable(insufficientDataActions);
             return this;
         }
 
-        public Builder setOkActions(@Nullable Input<List<String>> okActions) {
+        public Builder okActions(@Nullable Input<List<String>> okActions) {
             this.okActions = okActions;
             return this;
         }
 
-        public Builder setOkActions(@Nullable List<String> okActions) {
+        public Builder okActions(@Nullable List<String> okActions) {
             this.okActions = Input.ofNullable(okActions);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

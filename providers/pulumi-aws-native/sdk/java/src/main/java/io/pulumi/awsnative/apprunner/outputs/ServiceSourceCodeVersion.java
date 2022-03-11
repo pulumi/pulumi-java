@@ -21,10 +21,10 @@ public final class ServiceSourceCodeVersion {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private ServiceSourceCodeVersion(
-        ServiceSourceCodeVersionType type,
-        String value) {
+        @OutputCustomType.Parameter("type") ServiceSourceCodeVersionType type,
+        @OutputCustomType.Parameter("value") String value) {
         this.type = type;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class ServiceSourceCodeVersion {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(ServiceSourceCodeVersionType type) {
+        public Builder type(ServiceSourceCodeVersionType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -15,10 +15,10 @@ public final class DeliveryStreamSerializer {
     private final @Nullable DeliveryStreamOrcSerDe orcSerDe;
     private final @Nullable DeliveryStreamParquetSerDe parquetSerDe;
 
-    @OutputCustomType.Constructor({"orcSerDe","parquetSerDe"})
+    @OutputCustomType.Constructor
     private DeliveryStreamSerializer(
-        @Nullable DeliveryStreamOrcSerDe orcSerDe,
-        @Nullable DeliveryStreamParquetSerDe parquetSerDe) {
+        @OutputCustomType.Parameter("orcSerDe") @Nullable DeliveryStreamOrcSerDe orcSerDe,
+        @OutputCustomType.Parameter("parquetSerDe") @Nullable DeliveryStreamParquetSerDe parquetSerDe) {
         this.orcSerDe = orcSerDe;
         this.parquetSerDe = parquetSerDe;
     }
@@ -52,12 +52,12 @@ public final class DeliveryStreamSerializer {
     	      this.parquetSerDe = defaults.parquetSerDe;
         }
 
-        public Builder setOrcSerDe(@Nullable DeliveryStreamOrcSerDe orcSerDe) {
+        public Builder orcSerDe(@Nullable DeliveryStreamOrcSerDe orcSerDe) {
             this.orcSerDe = orcSerDe;
             return this;
         }
 
-        public Builder setParquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
+        public Builder parquetSerDe(@Nullable DeliveryStreamParquetSerDe parquetSerDe) {
             this.parquetSerDe = parquetSerDe;
             return this;
         }

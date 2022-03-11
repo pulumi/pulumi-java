@@ -22,10 +22,10 @@ public final class TargetConfigurationResponse {
      */
     private final List<ImportFileResponse> imports;
 
-    @OutputCustomType.Constructor({"config","imports"})
+    @OutputCustomType.Constructor
     private TargetConfigurationResponse(
-        ConfigFileResponse config,
-        List<ImportFileResponse> imports) {
+        @OutputCustomType.Parameter("config") ConfigFileResponse config,
+        @OutputCustomType.Parameter("imports") List<ImportFileResponse> imports) {
         this.config = config;
         this.imports = imports;
     }
@@ -67,12 +67,12 @@ public final class TargetConfigurationResponse {
     	      this.imports = defaults.imports;
         }
 
-        public Builder setConfig(ConfigFileResponse config) {
+        public Builder config(ConfigFileResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setImports(List<ImportFileResponse> imports) {
+        public Builder imports(List<ImportFileResponse> imports) {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }

@@ -16,10 +16,10 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     private final @Nullable List<String> preflightOptions;
     private final @Nullable Boolean preflightSupported;
 
-    @OutputCustomType.Constructor({"preflightOptions","preflightSupported"})
+    @OutputCustomType.Constructor
     private ResourceTypeRegistrationPropertiesResponseTemplateDeploymentOptions(
-        @Nullable List<String> preflightOptions,
-        @Nullable Boolean preflightSupported) {
+        @OutputCustomType.Parameter("preflightOptions") @Nullable List<String> preflightOptions,
+        @OutputCustomType.Parameter("preflightSupported") @Nullable Boolean preflightSupported) {
         this.preflightOptions = preflightOptions;
         this.preflightSupported = preflightSupported;
     }
@@ -53,12 +53,12 @@ public final class ResourceTypeRegistrationPropertiesResponseTemplateDeploymentO
     	      this.preflightSupported = defaults.preflightSupported;
         }
 
-        public Builder setPreflightOptions(@Nullable List<String> preflightOptions) {
+        public Builder preflightOptions(@Nullable List<String> preflightOptions) {
             this.preflightOptions = preflightOptions;
             return this;
         }
 
-        public Builder setPreflightSupported(@Nullable Boolean preflightSupported) {
+        public Builder preflightSupported(@Nullable Boolean preflightSupported) {
             this.preflightSupported = preflightSupported;
             return this;
         }

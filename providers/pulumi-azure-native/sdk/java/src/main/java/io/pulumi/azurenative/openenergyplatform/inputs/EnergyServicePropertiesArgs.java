@@ -64,22 +64,22 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     	      this.dataPartitionNames = defaults.dataPartitionNames;
         }
 
-        public Builder setAuthAppId(@Nullable Input<String> authAppId) {
+        public Builder authAppId(@Nullable Input<String> authAppId) {
             this.authAppId = authAppId;
             return this;
         }
 
-        public Builder setAuthAppId(@Nullable String authAppId) {
+        public Builder authAppId(@Nullable String authAppId) {
             this.authAppId = Input.ofNullable(authAppId);
             return this;
         }
 
-        public Builder setDataPartitionNames(@Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames) {
+        public Builder dataPartitionNames(@Nullable Input<List<DataPartitionNamesArgs>> dataPartitionNames) {
             this.dataPartitionNames = dataPartitionNames;
             return this;
         }
 
-        public Builder setDataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
+        public Builder dataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
             this.dataPartitionNames = Input.ofNullable(dataPartitionNames);
             return this;
         }

@@ -28,11 +28,11 @@ public final class BucketLambdaConfiguration {
      */
     private final String function;
 
-    @OutputCustomType.Constructor({"event","filter","function"})
+    @OutputCustomType.Constructor
     private BucketLambdaConfiguration(
-        String event,
-        @Nullable BucketNotificationFilter filter,
-        String function) {
+        @OutputCustomType.Parameter("event") String event,
+        @OutputCustomType.Parameter("filter") @Nullable BucketNotificationFilter filter,
+        @OutputCustomType.Parameter("function") String function) {
         this.event = event;
         this.filter = filter;
         this.function = function;
@@ -84,17 +84,17 @@ public final class BucketLambdaConfiguration {
     	      this.function = defaults.function;
         }
 
-        public Builder setEvent(String event) {
+        public Builder event(String event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketNotificationFilter filter) {
+        public Builder filter(@Nullable BucketNotificationFilter filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }

@@ -72,22 +72,22 @@ public final class InstanceNetworkConfigArgs extends io.pulumi.resources.Resourc
     	      this.network = defaults.network;
         }
 
-        public Builder setIpAllocation(Input<String> ipAllocation) {
+        public Builder ipAllocation(Input<String> ipAllocation) {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
 
-        public Builder setIpAllocation(String ipAllocation) {
+        public Builder ipAllocation(String ipAllocation) {
             this.ipAllocation = Input.of(Objects.requireNonNull(ipAllocation));
             return this;
         }
 
-        public Builder setNetwork(Input<String> network) {
+        public Builder network(Input<String> network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Input.of(Objects.requireNonNull(network));
             return this;
         }

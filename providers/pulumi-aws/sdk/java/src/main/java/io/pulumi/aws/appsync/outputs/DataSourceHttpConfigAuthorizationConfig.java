@@ -23,10 +23,10 @@ public final class DataSourceHttpConfigAuthorizationConfig {
      */
     private final @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig;
 
-    @OutputCustomType.Constructor({"authorizationType","awsIamConfig"})
+    @OutputCustomType.Constructor
     private DataSourceHttpConfigAuthorizationConfig(
-        @Nullable String authorizationType,
-        @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
+        @OutputCustomType.Parameter("authorizationType") @Nullable String authorizationType,
+        @OutputCustomType.Parameter("awsIamConfig") @Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
         this.authorizationType = authorizationType;
         this.awsIamConfig = awsIamConfig;
     }
@@ -68,12 +68,12 @@ public final class DataSourceHttpConfigAuthorizationConfig {
     	      this.awsIamConfig = defaults.awsIamConfig;
         }
 
-        public Builder setAuthorizationType(@Nullable String authorizationType) {
+        public Builder authorizationType(@Nullable String authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAwsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
+        public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfig awsIamConfig) {
             this.awsIamConfig = awsIamConfig;
             return this;
         }

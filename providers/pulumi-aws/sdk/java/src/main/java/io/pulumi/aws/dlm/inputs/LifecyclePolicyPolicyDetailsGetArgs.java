@@ -88,32 +88,32 @@ public final class LifecyclePolicyPolicyDetailsGetArgs extends io.pulumi.resourc
     	      this.targetTags = defaults.targetTags;
         }
 
-        public Builder setResourceTypes(Input<List<String>> resourceTypes) {
+        public Builder resourceTypes(Input<List<String>> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
 
-        public Builder setResourceTypes(List<String> resourceTypes) {
+        public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Input.of(Objects.requireNonNull(resourceTypes));
             return this;
         }
 
-        public Builder setSchedules(Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
+        public Builder schedules(Input<List<LifecyclePolicyPolicyDetailsScheduleGetArgs>> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setSchedules(List<LifecyclePolicyPolicyDetailsScheduleGetArgs> schedules) {
+        public Builder schedules(List<LifecyclePolicyPolicyDetailsScheduleGetArgs> schedules) {
             this.schedules = Input.of(Objects.requireNonNull(schedules));
             return this;
         }
 
-        public Builder setTargetTags(Input<Map<String,String>> targetTags) {
+        public Builder targetTags(Input<Map<String,String>> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
 
-        public Builder setTargetTags(Map<String,String> targetTags) {
+        public Builder targetTags(Map<String,String> targetTags) {
             this.targetTags = Input.of(Objects.requireNonNull(targetTags));
             return this;
         }

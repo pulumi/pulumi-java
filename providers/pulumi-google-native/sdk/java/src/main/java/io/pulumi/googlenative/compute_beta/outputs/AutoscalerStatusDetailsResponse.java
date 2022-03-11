@@ -20,10 +20,10 @@ public final class AutoscalerStatusDetailsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private AutoscalerStatusDetailsResponse(
-        String message,
-        String type) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("type") String type) {
         this.message = message;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class AutoscalerStatusDetailsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

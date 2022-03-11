@@ -15,8 +15,8 @@ public final class DataSourceAmazonElasticsearchParameters {
      */
     private final String domain;
 
-    @OutputCustomType.Constructor({"domain"})
-    private DataSourceAmazonElasticsearchParameters(String domain) {
+    @OutputCustomType.Constructor
+    private DataSourceAmazonElasticsearchParameters(@OutputCustomType.Parameter("domain") String domain) {
         this.domain = domain;
     }
 
@@ -48,7 +48,7 @@ public final class DataSourceAmazonElasticsearchParameters {
     	      this.domain = defaults.domain;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }

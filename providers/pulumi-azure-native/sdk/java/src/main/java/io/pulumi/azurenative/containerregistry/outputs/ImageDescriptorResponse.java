@@ -32,12 +32,12 @@ public final class ImageDescriptorResponse {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor({"digest","registry","repository","tag"})
+    @OutputCustomType.Constructor
     private ImageDescriptorResponse(
-        @Nullable String digest,
-        @Nullable String registry,
-        @Nullable String repository,
-        @Nullable String tag) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("registry") @Nullable String registry,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tag") @Nullable String tag) {
         this.digest = digest;
         this.registry = registry;
         this.repository = repository;
@@ -99,22 +99,22 @@ public final class ImageDescriptorResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }

@@ -31,12 +31,12 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
      */
     private final String reportUri;
 
-    @OutputCustomType.Constructor({"modeBlock","override","protection","reportUri"})
+    @OutputCustomType.Constructor
     private GetResponseHeadersPolicySecurityHeadersConfigXssProtection(
-        Boolean modeBlock,
-        Boolean override,
-        Boolean protection,
-        String reportUri) {
+        @OutputCustomType.Parameter("modeBlock") Boolean modeBlock,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("protection") Boolean protection,
+        @OutputCustomType.Parameter("reportUri") String reportUri) {
         this.modeBlock = modeBlock;
         this.override = override;
         this.protection = protection;
@@ -98,22 +98,22 @@ public final class GetResponseHeadersPolicySecurityHeadersConfigXssProtection {
     	      this.reportUri = defaults.reportUri;
         }
 
-        public Builder setModeBlock(Boolean modeBlock) {
+        public Builder modeBlock(Boolean modeBlock) {
             this.modeBlock = Objects.requireNonNull(modeBlock);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setProtection(Boolean protection) {
+        public Builder protection(Boolean protection) {
             this.protection = Objects.requireNonNull(protection);
             return this;
         }
 
-        public Builder setReportUri(String reportUri) {
+        public Builder reportUri(String reportUri) {
             this.reportUri = Objects.requireNonNull(reportUri);
             return this;
         }

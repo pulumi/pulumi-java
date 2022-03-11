@@ -69,19 +69,19 @@ public final class GetServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"adminDomainName","billingDomainName","etag","id","location","name","notes","quantity","startDate","tags","type"})
+    @OutputCustomType.Constructor
     private GetServiceResult(
-        @Nullable String adminDomainName,
-        @Nullable String billingDomainName,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String notes,
-        @Nullable Double quantity,
-        String startDate,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("adminDomainName") @Nullable String adminDomainName,
+        @OutputCustomType.Parameter("billingDomainName") @Nullable String billingDomainName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("quantity") @Nullable Double quantity,
+        @OutputCustomType.Parameter("startDate") String startDate,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.adminDomainName = adminDomainName;
         this.billingDomainName = billingDomainName;
         this.etag = etag;
@@ -213,57 +213,57 @@ public final class GetServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAdminDomainName(@Nullable String adminDomainName) {
+        public Builder adminDomainName(@Nullable String adminDomainName) {
             this.adminDomainName = adminDomainName;
             return this;
         }
 
-        public Builder setBillingDomainName(@Nullable String billingDomainName) {
+        public Builder billingDomainName(@Nullable String billingDomainName) {
             this.billingDomainName = billingDomainName;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setQuantity(@Nullable Double quantity) {
+        public Builder quantity(@Nullable Double quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public Builder setStartDate(String startDate) {
+        public Builder startDate(String startDate) {
             this.startDate = Objects.requireNonNull(startDate);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -114,62 +114,62 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.templateName = defaults.templateName;
         }
 
-        public Builder setContent(@Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content) {
+        public Builder content(@Nullable Input<List<InAppTemplateInAppMessageContentArgs>> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
+        public Builder content(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setCustomConfig(@Nullable Input<Object> customConfig) {
+        public Builder customConfig(@Nullable Input<Object> customConfig) {
             this.customConfig = customConfig;
             return this;
         }
 
-        public Builder setCustomConfig(@Nullable Object customConfig) {
+        public Builder customConfig(@Nullable Object customConfig) {
             this.customConfig = Input.ofNullable(customConfig);
             return this;
         }
 
-        public Builder setLayout(@Nullable Input<InAppTemplateLayout> layout) {
+        public Builder layout(@Nullable Input<InAppTemplateLayout> layout) {
             this.layout = layout;
             return this;
         }
 
-        public Builder setLayout(@Nullable InAppTemplateLayout layout) {
+        public Builder layout(@Nullable InAppTemplateLayout layout) {
             this.layout = Input.ofNullable(layout);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Object> tags) {
+        public Builder tags(@Nullable Input<Object> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateDescription(@Nullable Input<String> templateDescription) {
+        public Builder templateDescription(@Nullable Input<String> templateDescription) {
             this.templateDescription = templateDescription;
             return this;
         }
 
-        public Builder setTemplateDescription(@Nullable String templateDescription) {
+        public Builder templateDescription(@Nullable String templateDescription) {
             this.templateDescription = Input.ofNullable(templateDescription);
             return this;
         }
 
-        public Builder setTemplateName(Input<String> templateName) {
+        public Builder templateName(Input<String> templateName) {
             this.templateName = Objects.requireNonNull(templateName);
             return this;
         }
 
-        public Builder setTemplateName(String templateName) {
+        public Builder templateName(String templateName) {
             this.templateName = Input.of(Objects.requireNonNull(templateName));
             return this;
         }

@@ -45,15 +45,15 @@ public final class GetIosAppResult {
      */
     private final String teamId;
 
-    @OutputCustomType.Constructor({"appId","appStoreId","bundleId","displayName","name","project","teamId"})
+    @OutputCustomType.Constructor
     private GetIosAppResult(
-        String appId,
-        String appStoreId,
-        String bundleId,
-        String displayName,
-        String name,
-        String project,
-        String teamId) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appStoreId") String appStoreId,
+        @OutputCustomType.Parameter("bundleId") String bundleId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("teamId") String teamId) {
         this.appId = appId;
         this.appStoreId = appStoreId;
         this.bundleId = bundleId;
@@ -145,37 +145,37 @@ public final class GetIosAppResult {
     	      this.teamId = defaults.teamId;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppStoreId(String appStoreId) {
+        public Builder appStoreId(String appStoreId) {
             this.appStoreId = Objects.requireNonNull(appStoreId);
             return this;
         }
 
-        public Builder setBundleId(String bundleId) {
+        public Builder bundleId(String bundleId) {
             this.bundleId = Objects.requireNonNull(bundleId);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setTeamId(String teamId) {
+        public Builder teamId(String teamId) {
             this.teamId = Objects.requireNonNull(teamId);
             return this;
         }

@@ -16,8 +16,8 @@ public final class LoadBalancerConfigurationPropertiesResponse {
      */
     private final List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations;
 
-    @OutputCustomType.Constructor({"frontendIPConfigurations"})
-    private LoadBalancerConfigurationPropertiesResponse(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
+    @OutputCustomType.Constructor
+    private LoadBalancerConfigurationPropertiesResponse(@OutputCustomType.Parameter("frontendIPConfigurations") List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
         this.frontendIPConfigurations = frontendIPConfigurations;
     }
 
@@ -49,7 +49,7 @@ public final class LoadBalancerConfigurationPropertiesResponse {
     	      this.frontendIPConfigurations = defaults.frontendIPConfigurations;
         }
 
-        public Builder setFrontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
+        public Builder frontendIPConfigurations(List<LoadBalancerFrontendIPConfigurationResponse> frontendIPConfigurations) {
             this.frontendIPConfigurations = Objects.requireNonNull(frontendIPConfigurations);
             return this;
         }

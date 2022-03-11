@@ -21,10 +21,10 @@ public final class AbsoluteDeleteOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"duration","objectType"})
+    @OutputCustomType.Constructor
     private AbsoluteDeleteOptionResponse(
-        String duration,
-        String objectType) {
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.duration = duration;
         this.objectType = objectType;
     }
@@ -67,12 +67,12 @@ public final class AbsoluteDeleteOptionResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

@@ -25,11 +25,11 @@ public final class RuleGroupCustomResponseBody {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"content","contentType","key"})
+    @OutputCustomType.Constructor
     private RuleGroupCustomResponseBody(
-        String content,
-        String contentType,
-        String key) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("key") String key) {
         this.content = content;
         this.contentType = contentType;
         this.key = key;
@@ -81,17 +81,17 @@ public final class RuleGroupCustomResponseBody {
     	      this.key = defaults.key;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

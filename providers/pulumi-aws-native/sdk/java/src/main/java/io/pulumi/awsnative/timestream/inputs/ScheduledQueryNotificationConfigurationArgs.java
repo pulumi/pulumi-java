@@ -52,12 +52,12 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     	      this.snsConfiguration = defaults.snsConfiguration;
         }
 
-        public Builder setSnsConfiguration(Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
+        public Builder snsConfiguration(Input<ScheduledQuerySnsConfigurationArgs> snsConfiguration) {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }
 
-        public Builder setSnsConfiguration(ScheduledQuerySnsConfigurationArgs snsConfiguration) {
+        public Builder snsConfiguration(ScheduledQuerySnsConfigurationArgs snsConfiguration) {
             this.snsConfiguration = Input.of(Objects.requireNonNull(snsConfiguration));
             return this;
         }

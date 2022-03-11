@@ -137,62 +137,62 @@ public final class ApiCorsConfigurationArgs extends io.pulumi.resources.Resource
     	      this.maxAge = defaults.maxAge;
         }
 
-        public Builder setAllowCredentials(@Nullable Input<Boolean> allowCredentials) {
+        public Builder allowCredentials(@Nullable Input<Boolean> allowCredentials) {
             this.allowCredentials = allowCredentials;
             return this;
         }
 
-        public Builder setAllowCredentials(@Nullable Boolean allowCredentials) {
+        public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             this.allowCredentials = Input.ofNullable(allowCredentials);
             return this;
         }
 
-        public Builder setAllowHeaders(@Nullable Input<List<String>> allowHeaders) {
+        public Builder allowHeaders(@Nullable Input<List<String>> allowHeaders) {
             this.allowHeaders = allowHeaders;
             return this;
         }
 
-        public Builder setAllowHeaders(@Nullable List<String> allowHeaders) {
+        public Builder allowHeaders(@Nullable List<String> allowHeaders) {
             this.allowHeaders = Input.ofNullable(allowHeaders);
             return this;
         }
 
-        public Builder setAllowMethods(@Nullable Input<List<String>> allowMethods) {
+        public Builder allowMethods(@Nullable Input<List<String>> allowMethods) {
             this.allowMethods = allowMethods;
             return this;
         }
 
-        public Builder setAllowMethods(@Nullable List<String> allowMethods) {
+        public Builder allowMethods(@Nullable List<String> allowMethods) {
             this.allowMethods = Input.ofNullable(allowMethods);
             return this;
         }
 
-        public Builder setAllowOrigins(@Nullable Input<List<String>> allowOrigins) {
+        public Builder allowOrigins(@Nullable Input<List<String>> allowOrigins) {
             this.allowOrigins = allowOrigins;
             return this;
         }
 
-        public Builder setAllowOrigins(@Nullable List<String> allowOrigins) {
+        public Builder allowOrigins(@Nullable List<String> allowOrigins) {
             this.allowOrigins = Input.ofNullable(allowOrigins);
             return this;
         }
 
-        public Builder setExposeHeaders(@Nullable Input<List<String>> exposeHeaders) {
+        public Builder exposeHeaders(@Nullable Input<List<String>> exposeHeaders) {
             this.exposeHeaders = exposeHeaders;
             return this;
         }
 
-        public Builder setExposeHeaders(@Nullable List<String> exposeHeaders) {
+        public Builder exposeHeaders(@Nullable List<String> exposeHeaders) {
             this.exposeHeaders = Input.ofNullable(exposeHeaders);
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Input<Integer> maxAge) {
+        public Builder maxAge(@Nullable Input<Integer> maxAge) {
             this.maxAge = maxAge;
             return this;
         }
 
-        public Builder setMaxAge(@Nullable Integer maxAge) {
+        public Builder maxAge(@Nullable Integer maxAge) {
             this.maxAge = Input.ofNullable(maxAge);
             return this;
         }

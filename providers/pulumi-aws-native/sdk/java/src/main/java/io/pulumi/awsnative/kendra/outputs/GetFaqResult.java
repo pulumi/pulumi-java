@@ -21,11 +21,11 @@ public final class GetFaqResult {
      */
     private final @Nullable List<FaqTag> tags;
 
-    @OutputCustomType.Constructor({"arn","id","tags"})
+    @OutputCustomType.Constructor
     private GetFaqResult(
-        @Nullable String arn,
-        @Nullable String id,
-        @Nullable List<FaqTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<FaqTag> tags) {
         this.arn = arn;
         this.id = id;
         this.tags = tags;
@@ -69,17 +69,17 @@ public final class GetFaqResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FaqTag> tags) {
+        public Builder tags(@Nullable List<FaqTag> tags) {
             this.tags = tags;
             return this;
         }

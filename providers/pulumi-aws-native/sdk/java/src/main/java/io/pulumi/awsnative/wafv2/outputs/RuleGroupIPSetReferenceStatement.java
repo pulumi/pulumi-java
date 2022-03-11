@@ -15,10 +15,10 @@ public final class RuleGroupIPSetReferenceStatement {
     private final String arn;
     private final @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig;
 
-    @OutputCustomType.Constructor({"arn","iPSetForwardedIPConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupIPSetReferenceStatement(
-        String arn,
-        @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("iPSetForwardedIPConfig") @Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
         this.arn = arn;
         this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
     }
@@ -52,12 +52,12 @@ public final class RuleGroupIPSetReferenceStatement {
     	      this.iPSetForwardedIPConfig = defaults.iPSetForwardedIPConfig;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setIPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
+        public Builder iPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfiguration iPSetForwardedIPConfig) {
             this.iPSetForwardedIPConfig = iPSetForwardedIPConfig;
             return this;
         }

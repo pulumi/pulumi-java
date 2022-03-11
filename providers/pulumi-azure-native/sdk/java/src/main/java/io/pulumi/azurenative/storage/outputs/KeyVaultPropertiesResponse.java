@@ -37,13 +37,13 @@ public final class KeyVaultPropertiesResponse {
      */
     private final String lastKeyRotationTimestamp;
 
-    @OutputCustomType.Constructor({"currentVersionedKeyIdentifier","keyName","keyVaultUri","keyVersion","lastKeyRotationTimestamp"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        String currentVersionedKeyIdentifier,
-        @Nullable String keyName,
-        @Nullable String keyVaultUri,
-        @Nullable String keyVersion,
-        String lastKeyRotationTimestamp) {
+        @OutputCustomType.Parameter("currentVersionedKeyIdentifier") String currentVersionedKeyIdentifier,
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVaultUri") @Nullable String keyVaultUri,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("lastKeyRotationTimestamp") String lastKeyRotationTimestamp) {
         this.currentVersionedKeyIdentifier = currentVersionedKeyIdentifier;
         this.keyName = keyName;
         this.keyVaultUri = keyVaultUri;
@@ -115,27 +115,27 @@ public final class KeyVaultPropertiesResponse {
     	      this.lastKeyRotationTimestamp = defaults.lastKeyRotationTimestamp;
         }
 
-        public Builder setCurrentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
+        public Builder currentVersionedKeyIdentifier(String currentVersionedKeyIdentifier) {
             this.currentVersionedKeyIdentifier = Objects.requireNonNull(currentVersionedKeyIdentifier);
             return this;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVaultUri(@Nullable String keyVaultUri) {
+        public Builder keyVaultUri(@Nullable String keyVaultUri) {
             this.keyVaultUri = keyVaultUri;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setLastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
+        public Builder lastKeyRotationTimestamp(String lastKeyRotationTimestamp) {
             this.lastKeyRotationTimestamp = Objects.requireNonNull(lastKeyRotationTimestamp);
             return this;
         }

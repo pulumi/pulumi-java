@@ -15,8 +15,8 @@ public final class ReplicationConfigurationReplicationConfiguration {
      */
     private final ReplicationConfigurationReplicationConfigurationRule rule;
 
-    @OutputCustomType.Constructor({"rule"})
-    private ReplicationConfigurationReplicationConfiguration(ReplicationConfigurationReplicationConfigurationRule rule) {
+    @OutputCustomType.Constructor
+    private ReplicationConfigurationReplicationConfiguration(@OutputCustomType.Parameter("rule") ReplicationConfigurationReplicationConfigurationRule rule) {
         this.rule = rule;
     }
 
@@ -48,7 +48,7 @@ public final class ReplicationConfigurationReplicationConfiguration {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRule(ReplicationConfigurationReplicationConfigurationRule rule) {
+        public Builder rule(ReplicationConfigurationReplicationConfigurationRule rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

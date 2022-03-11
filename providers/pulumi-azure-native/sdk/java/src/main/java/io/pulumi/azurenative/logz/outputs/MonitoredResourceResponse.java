@@ -44,14 +44,14 @@ public final class MonitoredResourceResponse {
      */
     private final SystemDataResponse systemData;
 
-    @OutputCustomType.Constructor({"id","reasonForLogsStatus","reasonForMetricsStatus","sendingLogs","sendingMetrics","systemData"})
+    @OutputCustomType.Constructor
     private MonitoredResourceResponse(
-        @Nullable String id,
-        @Nullable String reasonForLogsStatus,
-        @Nullable String reasonForMetricsStatus,
-        @Nullable Boolean sendingLogs,
-        @Nullable Boolean sendingMetrics,
-        SystemDataResponse systemData) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("reasonForLogsStatus") @Nullable String reasonForLogsStatus,
+        @OutputCustomType.Parameter("reasonForMetricsStatus") @Nullable String reasonForMetricsStatus,
+        @OutputCustomType.Parameter("sendingLogs") @Nullable Boolean sendingLogs,
+        @OutputCustomType.Parameter("sendingMetrics") @Nullable Boolean sendingMetrics,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData) {
         this.id = id;
         this.reasonForLogsStatus = reasonForLogsStatus;
         this.reasonForMetricsStatus = reasonForMetricsStatus;
@@ -133,32 +133,32 @@ public final class MonitoredResourceResponse {
     	      this.systemData = defaults.systemData;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setReasonForLogsStatus(@Nullable String reasonForLogsStatus) {
+        public Builder reasonForLogsStatus(@Nullable String reasonForLogsStatus) {
             this.reasonForLogsStatus = reasonForLogsStatus;
             return this;
         }
 
-        public Builder setReasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
+        public Builder reasonForMetricsStatus(@Nullable String reasonForMetricsStatus) {
             this.reasonForMetricsStatus = reasonForMetricsStatus;
             return this;
         }
 
-        public Builder setSendingLogs(@Nullable Boolean sendingLogs) {
+        public Builder sendingLogs(@Nullable Boolean sendingLogs) {
             this.sendingLogs = sendingLogs;
             return this;
         }
 
-        public Builder setSendingMetrics(@Nullable Boolean sendingMetrics) {
+        public Builder sendingMetrics(@Nullable Boolean sendingMetrics) {
             this.sendingMetrics = sendingMetrics;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }

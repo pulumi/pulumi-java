@@ -18,8 +18,8 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
      */
     private final @Nullable String x509Certificate;
 
-    @OutputCustomType.Constructor({"x509Certificate"})
-    private TenantInboundSamlConfigIdpConfigIdpCertificate(@Nullable String x509Certificate) {
+    @OutputCustomType.Constructor
+    private TenantInboundSamlConfigIdpConfigIdpCertificate(@OutputCustomType.Parameter("x509Certificate") @Nullable String x509Certificate) {
         this.x509Certificate = x509Certificate;
     }
 
@@ -52,7 +52,7 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
     	      this.x509Certificate = defaults.x509Certificate;
         }
 
-        public Builder setX509Certificate(@Nullable String x509Certificate) {
+        public Builder x509Certificate(@Nullable String x509Certificate) {
             this.x509Certificate = x509Certificate;
             return this;
         }

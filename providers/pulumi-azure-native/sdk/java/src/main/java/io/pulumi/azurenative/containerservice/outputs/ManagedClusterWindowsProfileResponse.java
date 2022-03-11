@@ -33,12 +33,12 @@ public final class ManagedClusterWindowsProfileResponse {
      */
     private final @Nullable String licenseType;
 
-    @OutputCustomType.Constructor({"adminPassword","adminUsername","enableCSIProxy","licenseType"})
+    @OutputCustomType.Constructor
     private ManagedClusterWindowsProfileResponse(
-        @Nullable String adminPassword,
-        String adminUsername,
-        @Nullable Boolean enableCSIProxy,
-        @Nullable String licenseType) {
+        @OutputCustomType.Parameter("adminPassword") @Nullable String adminPassword,
+        @OutputCustomType.Parameter("adminUsername") String adminUsername,
+        @OutputCustomType.Parameter("enableCSIProxy") @Nullable Boolean enableCSIProxy,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType) {
         this.adminPassword = adminPassword;
         this.adminUsername = adminUsername;
         this.enableCSIProxy = enableCSIProxy;
@@ -100,22 +100,22 @@ public final class ManagedClusterWindowsProfileResponse {
     	      this.licenseType = defaults.licenseType;
         }
 
-        public Builder setAdminPassword(@Nullable String adminPassword) {
+        public Builder adminPassword(@Nullable String adminPassword) {
             this.adminPassword = adminPassword;
             return this;
         }
 
-        public Builder setAdminUsername(String adminUsername) {
+        public Builder adminUsername(String adminUsername) {
             this.adminUsername = Objects.requireNonNull(adminUsername);
             return this;
         }
 
-        public Builder setEnableCSIProxy(@Nullable Boolean enableCSIProxy) {
+        public Builder enableCSIProxy(@Nullable Boolean enableCSIProxy) {
             this.enableCSIProxy = enableCSIProxy;
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }

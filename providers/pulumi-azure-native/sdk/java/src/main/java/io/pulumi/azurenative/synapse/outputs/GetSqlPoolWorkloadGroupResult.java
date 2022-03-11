@@ -59,17 +59,17 @@ public final class GetSqlPoolWorkloadGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","importance","maxResourcePercent","maxResourcePercentPerRequest","minResourcePercent","minResourcePercentPerRequest","name","queryExecutionTimeout","type"})
+    @OutputCustomType.Constructor
     private GetSqlPoolWorkloadGroupResult(
-        String id,
-        @Nullable String importance,
-        Integer maxResourcePercent,
-        @Nullable Double maxResourcePercentPerRequest,
-        Integer minResourcePercent,
-        Double minResourcePercentPerRequest,
-        String name,
-        @Nullable Integer queryExecutionTimeout,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("importance") @Nullable String importance,
+        @OutputCustomType.Parameter("maxResourcePercent") Integer maxResourcePercent,
+        @OutputCustomType.Parameter("maxResourcePercentPerRequest") @Nullable Double maxResourcePercentPerRequest,
+        @OutputCustomType.Parameter("minResourcePercent") Integer minResourcePercent,
+        @OutputCustomType.Parameter("minResourcePercentPerRequest") Double minResourcePercentPerRequest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("queryExecutionTimeout") @Nullable Integer queryExecutionTimeout,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.importance = importance;
         this.maxResourcePercent = maxResourcePercent;
@@ -181,47 +181,47 @@ public final class GetSqlPoolWorkloadGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImportance(@Nullable String importance) {
+        public Builder importance(@Nullable String importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setMaxResourcePercent(Integer maxResourcePercent) {
+        public Builder maxResourcePercent(Integer maxResourcePercent) {
             this.maxResourcePercent = Objects.requireNonNull(maxResourcePercent);
             return this;
         }
 
-        public Builder setMaxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
+        public Builder maxResourcePercentPerRequest(@Nullable Double maxResourcePercentPerRequest) {
             this.maxResourcePercentPerRequest = maxResourcePercentPerRequest;
             return this;
         }
 
-        public Builder setMinResourcePercent(Integer minResourcePercent) {
+        public Builder minResourcePercent(Integer minResourcePercent) {
             this.minResourcePercent = Objects.requireNonNull(minResourcePercent);
             return this;
         }
 
-        public Builder setMinResourcePercentPerRequest(Double minResourcePercentPerRequest) {
+        public Builder minResourcePercentPerRequest(Double minResourcePercentPerRequest) {
             this.minResourcePercentPerRequest = Objects.requireNonNull(minResourcePercentPerRequest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setQueryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
+        public Builder queryExecutionTimeout(@Nullable Integer queryExecutionTimeout) {
             this.queryExecutionTimeout = queryExecutionTimeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

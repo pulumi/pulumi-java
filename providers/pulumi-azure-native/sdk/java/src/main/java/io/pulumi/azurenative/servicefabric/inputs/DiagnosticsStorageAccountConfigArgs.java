@@ -138,62 +138,62 @@ public final class DiagnosticsStorageAccountConfigArgs extends io.pulumi.resourc
     	      this.tableEndpoint = defaults.tableEndpoint;
         }
 
-        public Builder setBlobEndpoint(Input<String> blobEndpoint) {
+        public Builder blobEndpoint(Input<String> blobEndpoint) {
             this.blobEndpoint = Objects.requireNonNull(blobEndpoint);
             return this;
         }
 
-        public Builder setBlobEndpoint(String blobEndpoint) {
+        public Builder blobEndpoint(String blobEndpoint) {
             this.blobEndpoint = Input.of(Objects.requireNonNull(blobEndpoint));
             return this;
         }
 
-        public Builder setProtectedAccountKeyName(Input<String> protectedAccountKeyName) {
+        public Builder protectedAccountKeyName(Input<String> protectedAccountKeyName) {
             this.protectedAccountKeyName = Objects.requireNonNull(protectedAccountKeyName);
             return this;
         }
 
-        public Builder setProtectedAccountKeyName(String protectedAccountKeyName) {
+        public Builder protectedAccountKeyName(String protectedAccountKeyName) {
             this.protectedAccountKeyName = Input.of(Objects.requireNonNull(protectedAccountKeyName));
             return this;
         }
 
-        public Builder setProtectedAccountKeyName2(@Nullable Input<String> protectedAccountKeyName2) {
+        public Builder protectedAccountKeyName2(@Nullable Input<String> protectedAccountKeyName2) {
             this.protectedAccountKeyName2 = protectedAccountKeyName2;
             return this;
         }
 
-        public Builder setProtectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
+        public Builder protectedAccountKeyName2(@Nullable String protectedAccountKeyName2) {
             this.protectedAccountKeyName2 = Input.ofNullable(protectedAccountKeyName2);
             return this;
         }
 
-        public Builder setQueueEndpoint(Input<String> queueEndpoint) {
+        public Builder queueEndpoint(Input<String> queueEndpoint) {
             this.queueEndpoint = Objects.requireNonNull(queueEndpoint);
             return this;
         }
 
-        public Builder setQueueEndpoint(String queueEndpoint) {
+        public Builder queueEndpoint(String queueEndpoint) {
             this.queueEndpoint = Input.of(Objects.requireNonNull(queueEndpoint));
             return this;
         }
 
-        public Builder setStorageAccountName(Input<String> storageAccountName) {
+        public Builder storageAccountName(Input<String> storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Input.of(Objects.requireNonNull(storageAccountName));
             return this;
         }
 
-        public Builder setTableEndpoint(Input<String> tableEndpoint) {
+        public Builder tableEndpoint(Input<String> tableEndpoint) {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
         }
 
-        public Builder setTableEndpoint(String tableEndpoint) {
+        public Builder tableEndpoint(String tableEndpoint) {
             this.tableEndpoint = Input.of(Objects.requireNonNull(tableEndpoint));
             return this;
         }

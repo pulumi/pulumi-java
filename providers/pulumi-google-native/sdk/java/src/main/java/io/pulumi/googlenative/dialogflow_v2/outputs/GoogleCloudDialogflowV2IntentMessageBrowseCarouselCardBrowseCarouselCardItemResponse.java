@@ -37,13 +37,13 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","footer","image","openUriAction","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse(
-        String description,
-        String footer,
-        GoogleCloudDialogflowV2IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("footer") String footer,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("openUriAction") GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.footer = footer;
         this.image = image;
@@ -115,27 +115,27 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseC
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFooter(String footer) {
+        public Builder footer(String footer) {
             this.footer = Objects.requireNonNull(footer);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setOpenUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction) {
+        public Builder openUriAction(GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlActionResponse openUriAction) {
             this.openUriAction = Objects.requireNonNull(openUriAction);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

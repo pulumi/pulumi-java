@@ -31,12 +31,12 @@ public final class CloudSqlConnectionProfileResponse {
      */
     private final CloudSqlSettingsResponse settings;
 
-    @OutputCustomType.Constructor({"cloudSqlId","privateIp","publicIp","settings"})
+    @OutputCustomType.Constructor
     private CloudSqlConnectionProfileResponse(
-        String cloudSqlId,
-        String privateIp,
-        String publicIp,
-        CloudSqlSettingsResponse settings) {
+        @OutputCustomType.Parameter("cloudSqlId") String cloudSqlId,
+        @OutputCustomType.Parameter("privateIp") String privateIp,
+        @OutputCustomType.Parameter("publicIp") String publicIp,
+        @OutputCustomType.Parameter("settings") CloudSqlSettingsResponse settings) {
         this.cloudSqlId = cloudSqlId;
         this.privateIp = privateIp;
         this.publicIp = publicIp;
@@ -98,22 +98,22 @@ public final class CloudSqlConnectionProfileResponse {
     	      this.settings = defaults.settings;
         }
 
-        public Builder setCloudSqlId(String cloudSqlId) {
+        public Builder cloudSqlId(String cloudSqlId) {
             this.cloudSqlId = Objects.requireNonNull(cloudSqlId);
             return this;
         }
 
-        public Builder setPrivateIp(String privateIp) {
+        public Builder privateIp(String privateIp) {
             this.privateIp = Objects.requireNonNull(privateIp);
             return this;
         }
 
-        public Builder setPublicIp(String publicIp) {
+        public Builder publicIp(String publicIp) {
             this.publicIp = Objects.requireNonNull(publicIp);
             return this;
         }
 
-        public Builder setSettings(CloudSqlSettingsResponse settings) {
+        public Builder settings(CloudSqlSettingsResponse settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }

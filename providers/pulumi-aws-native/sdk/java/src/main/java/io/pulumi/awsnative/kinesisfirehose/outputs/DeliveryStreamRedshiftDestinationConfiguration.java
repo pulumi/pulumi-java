@@ -29,19 +29,19 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
     private final DeliveryStreamS3DestinationConfiguration s3Configuration;
     private final String username;
 
-    @OutputCustomType.Constructor({"cloudWatchLoggingOptions","clusterJDBCURL","copyCommand","password","processingConfiguration","retryOptions","roleARN","s3BackupConfiguration","s3BackupMode","s3Configuration","username"})
+    @OutputCustomType.Constructor
     private DeliveryStreamRedshiftDestinationConfiguration(
-        @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
-        String clusterJDBCURL,
-        DeliveryStreamCopyCommand copyCommand,
-        String password,
-        @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
-        @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
-        String roleARN,
-        @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
-        @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
-        DeliveryStreamS3DestinationConfiguration s3Configuration,
-        String username) {
+        @OutputCustomType.Parameter("cloudWatchLoggingOptions") @Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions,
+        @OutputCustomType.Parameter("clusterJDBCURL") String clusterJDBCURL,
+        @OutputCustomType.Parameter("copyCommand") DeliveryStreamCopyCommand copyCommand,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("processingConfiguration") @Nullable DeliveryStreamProcessingConfiguration processingConfiguration,
+        @OutputCustomType.Parameter("retryOptions") @Nullable DeliveryStreamRedshiftRetryOptions retryOptions,
+        @OutputCustomType.Parameter("roleARN") String roleARN,
+        @OutputCustomType.Parameter("s3BackupConfiguration") @Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration,
+        @OutputCustomType.Parameter("s3BackupMode") @Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode,
+        @OutputCustomType.Parameter("s3Configuration") DeliveryStreamS3DestinationConfiguration s3Configuration,
+        @OutputCustomType.Parameter("username") String username) {
         this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
         this.clusterJDBCURL = clusterJDBCURL;
         this.copyCommand = copyCommand;
@@ -129,57 +129,57 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
     	      this.username = defaults.username;
         }
 
-        public Builder setCloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
+        public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptions cloudWatchLoggingOptions) {
             this.cloudWatchLoggingOptions = cloudWatchLoggingOptions;
             return this;
         }
 
-        public Builder setClusterJDBCURL(String clusterJDBCURL) {
+        public Builder clusterJDBCURL(String clusterJDBCURL) {
             this.clusterJDBCURL = Objects.requireNonNull(clusterJDBCURL);
             return this;
         }
 
-        public Builder setCopyCommand(DeliveryStreamCopyCommand copyCommand) {
+        public Builder copyCommand(DeliveryStreamCopyCommand copyCommand) {
             this.copyCommand = Objects.requireNonNull(copyCommand);
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setProcessingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
+        public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfiguration processingConfiguration) {
             this.processingConfiguration = processingConfiguration;
             return this;
         }
 
-        public Builder setRetryOptions(@Nullable DeliveryStreamRedshiftRetryOptions retryOptions) {
+        public Builder retryOptions(@Nullable DeliveryStreamRedshiftRetryOptions retryOptions) {
             this.retryOptions = retryOptions;
             return this;
         }
 
-        public Builder setRoleARN(String roleARN) {
+        public Builder roleARN(String roleARN) {
             this.roleARN = Objects.requireNonNull(roleARN);
             return this;
         }
 
-        public Builder setS3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
+        public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfiguration s3BackupConfiguration) {
             this.s3BackupConfiguration = s3BackupConfiguration;
             return this;
         }
 
-        public Builder setS3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
+        public Builder s3BackupMode(@Nullable DeliveryStreamRedshiftDestinationConfigurationS3BackupMode s3BackupMode) {
             this.s3BackupMode = s3BackupMode;
             return this;
         }
 
-        public Builder setS3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
+        public Builder s3Configuration(DeliveryStreamS3DestinationConfiguration s3Configuration) {
             this.s3Configuration = Objects.requireNonNull(s3Configuration);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

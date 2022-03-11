@@ -34,11 +34,11 @@ public final class MetricBucketOptions {
      */
     private final @Nullable MetricBucketOptionsLinearBuckets linearBuckets;
 
-    @OutputCustomType.Constructor({"explicitBuckets","exponentialBuckets","linearBuckets"})
+    @OutputCustomType.Constructor
     private MetricBucketOptions(
-        @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
-        @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
-        @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
+        @OutputCustomType.Parameter("explicitBuckets") @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
+        @OutputCustomType.Parameter("exponentialBuckets") @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
+        @OutputCustomType.Parameter("linearBuckets") @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
         this.explicitBuckets = explicitBuckets;
         this.exponentialBuckets = exponentialBuckets;
         this.linearBuckets = linearBuckets;
@@ -95,17 +95,17 @@ public final class MetricBucketOptions {
     	      this.linearBuckets = defaults.linearBuckets;
         }
 
-        public Builder setExplicitBuckets(@Nullable MetricBucketOptionsExplicitBuckets explicitBuckets) {
+        public Builder explicitBuckets(@Nullable MetricBucketOptionsExplicitBuckets explicitBuckets) {
             this.explicitBuckets = explicitBuckets;
             return this;
         }
 
-        public Builder setExponentialBuckets(@Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets) {
+        public Builder exponentialBuckets(@Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets) {
             this.exponentialBuckets = exponentialBuckets;
             return this;
         }
 
-        public Builder setLinearBuckets(@Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
+        public Builder linearBuckets(@Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
             this.linearBuckets = linearBuckets;
             return this;
         }

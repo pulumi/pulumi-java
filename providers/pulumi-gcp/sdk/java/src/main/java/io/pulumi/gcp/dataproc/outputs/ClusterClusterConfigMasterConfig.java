@@ -54,15 +54,15 @@ public final class ClusterClusterConfigMasterConfig {
      */
     private final @Nullable Integer numInstances;
 
-    @OutputCustomType.Constructor({"accelerators","diskConfig","imageUri","instanceNames","machineType","minCpuPlatform","numInstances"})
+    @OutputCustomType.Constructor
     private ClusterClusterConfigMasterConfig(
-        @Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators,
-        @Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig,
-        @Nullable String imageUri,
-        @Nullable List<String> instanceNames,
-        @Nullable String machineType,
-        @Nullable String minCpuPlatform,
-        @Nullable Integer numInstances) {
+        @OutputCustomType.Parameter("accelerators") @Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators,
+        @OutputCustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig,
+        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
+        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
+        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;
@@ -157,37 +157,37 @@ public final class ClusterClusterConfigMasterConfig {
     	      this.numInstances = defaults.numInstances;
         }
 
-        public Builder setAccelerators(@Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators) {
+        public Builder accelerators(@Nullable List<ClusterClusterConfigMasterConfigAccelerator> accelerators) {
             this.accelerators = accelerators;
             return this;
         }
 
-        public Builder setDiskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig) {
+        public Builder diskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfig diskConfig) {
             this.diskConfig = diskConfig;
             return this;
         }
 
-        public Builder setImageUri(@Nullable String imageUri) {
+        public Builder imageUri(@Nullable String imageUri) {
             this.imageUri = imageUri;
             return this;
         }
 
-        public Builder setInstanceNames(@Nullable List<String> instanceNames) {
+        public Builder instanceNames(@Nullable List<String> instanceNames) {
             this.instanceNames = instanceNames;
             return this;
         }
 
-        public Builder setMachineType(@Nullable String machineType) {
+        public Builder machineType(@Nullable String machineType) {
             this.machineType = machineType;
             return this;
         }
 
-        public Builder setMinCpuPlatform(@Nullable String minCpuPlatform) {
+        public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
-        public Builder setNumInstances(@Nullable Integer numInstances) {
+        public Builder numInstances(@Nullable Integer numInstances) {
             this.numInstances = numInstances;
             return this;
         }

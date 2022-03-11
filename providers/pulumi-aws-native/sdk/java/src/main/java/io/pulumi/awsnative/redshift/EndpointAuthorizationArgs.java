@@ -104,42 +104,42 @@ public final class EndpointAuthorizationArgs extends io.pulumi.resources.Resourc
     	      this.vpcIds = defaults.vpcIds;
         }
 
-        public Builder setAccount(Input<String> account) {
+        public Builder account(Input<String> account) {
             this.account = Objects.requireNonNull(account);
             return this;
         }
 
-        public Builder setAccount(String account) {
+        public Builder account(String account) {
             this.account = Input.of(Objects.requireNonNull(account));
             return this;
         }
 
-        public Builder setClusterIdentifier(Input<String> clusterIdentifier) {
+        public Builder clusterIdentifier(Input<String> clusterIdentifier) {
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
 
-        public Builder setClusterIdentifier(String clusterIdentifier) {
+        public Builder clusterIdentifier(String clusterIdentifier) {
             this.clusterIdentifier = Input.of(Objects.requireNonNull(clusterIdentifier));
             return this;
         }
 
-        public Builder setForce(@Nullable Input<Boolean> force) {
+        public Builder force(@Nullable Input<Boolean> force) {
             this.force = force;
             return this;
         }
 
-        public Builder setForce(@Nullable Boolean force) {
+        public Builder force(@Nullable Boolean force) {
             this.force = Input.ofNullable(force);
             return this;
         }
 
-        public Builder setVpcIds(@Nullable Input<List<String>> vpcIds) {
+        public Builder vpcIds(@Nullable Input<List<String>> vpcIds) {
             this.vpcIds = vpcIds;
             return this;
         }
 
-        public Builder setVpcIds(@Nullable List<String> vpcIds) {
+        public Builder vpcIds(@Nullable List<String> vpcIds) {
             this.vpcIds = Input.ofNullable(vpcIds);
             return this;
         }

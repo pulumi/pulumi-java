@@ -41,12 +41,12 @@ public final class EventHandlerTemplateResponse {
      */
     private final @Nullable String userEventPattern;
 
-    @OutputCustomType.Constructor({"auth","systemEventPattern","urlTemplate","userEventPattern"})
+    @OutputCustomType.Constructor
     private EventHandlerTemplateResponse(
-        @Nullable UpstreamAuthSettingsResponse auth,
-        @Nullable String systemEventPattern,
-        String urlTemplate,
-        @Nullable String userEventPattern) {
+        @OutputCustomType.Parameter("auth") @Nullable UpstreamAuthSettingsResponse auth,
+        @OutputCustomType.Parameter("systemEventPattern") @Nullable String systemEventPattern,
+        @OutputCustomType.Parameter("urlTemplate") String urlTemplate,
+        @OutputCustomType.Parameter("userEventPattern") @Nullable String userEventPattern) {
         this.auth = auth;
         this.systemEventPattern = systemEventPattern;
         this.urlTemplate = urlTemplate;
@@ -116,22 +116,22 @@ public final class EventHandlerTemplateResponse {
     	      this.userEventPattern = defaults.userEventPattern;
         }
 
-        public Builder setAuth(@Nullable UpstreamAuthSettingsResponse auth) {
+        public Builder auth(@Nullable UpstreamAuthSettingsResponse auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setSystemEventPattern(@Nullable String systemEventPattern) {
+        public Builder systemEventPattern(@Nullable String systemEventPattern) {
             this.systemEventPattern = systemEventPattern;
             return this;
         }
 
-        public Builder setUrlTemplate(String urlTemplate) {
+        public Builder urlTemplate(String urlTemplate) {
             this.urlTemplate = Objects.requireNonNull(urlTemplate);
             return this;
         }
 
-        public Builder setUserEventPattern(@Nullable String userEventPattern) {
+        public Builder userEventPattern(@Nullable String userEventPattern) {
             this.userEventPattern = userEventPattern;
             return this;
         }

@@ -48,17 +48,17 @@ public final class GetAccessPointResult {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"accessPointId","arn","fileSystemArn","fileSystemId","id","ownerId","posixUsers","rootDirectories","tags"})
+    @OutputCustomType.Constructor
     private GetAccessPointResult(
-        String accessPointId,
-        String arn,
-        String fileSystemArn,
-        String fileSystemId,
-        String id,
-        String ownerId,
-        List<GetAccessPointPosixUser> posixUsers,
-        List<GetAccessPointRootDirectory> rootDirectories,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("accessPointId") String accessPointId,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("fileSystemArn") String fileSystemArn,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ownerId") String ownerId,
+        @OutputCustomType.Parameter("posixUsers") List<GetAccessPointPosixUser> posixUsers,
+        @OutputCustomType.Parameter("rootDirectories") List<GetAccessPointRootDirectory> rootDirectories,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.accessPointId = accessPointId;
         this.arn = arn;
         this.fileSystemArn = fileSystemArn;
@@ -158,47 +158,47 @@ public final class GetAccessPointResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAccessPointId(String accessPointId) {
+        public Builder accessPointId(String accessPointId) {
             this.accessPointId = Objects.requireNonNull(accessPointId);
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setFileSystemArn(String fileSystemArn) {
+        public Builder fileSystemArn(String fileSystemArn) {
             this.fileSystemArn = Objects.requireNonNull(fileSystemArn);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setOwnerId(String ownerId) {
+        public Builder ownerId(String ownerId) {
             this.ownerId = Objects.requireNonNull(ownerId);
             return this;
         }
 
-        public Builder setPosixUsers(List<GetAccessPointPosixUser> posixUsers) {
+        public Builder posixUsers(List<GetAccessPointPosixUser> posixUsers) {
             this.posixUsers = Objects.requireNonNull(posixUsers);
             return this;
         }
 
-        public Builder setRootDirectories(List<GetAccessPointRootDirectory> rootDirectories) {
+        public Builder rootDirectories(List<GetAccessPointRootDirectory> rootDirectories) {
             this.rootDirectories = Objects.requireNonNull(rootDirectories);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

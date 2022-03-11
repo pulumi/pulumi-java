@@ -78,22 +78,22 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
     	      this.state = defaults.state;
         }
 
-        public Builder setNodes(Input<List<EnterpriseChannelNodeArgs>> nodes) {
+        public Builder nodes(Input<List<EnterpriseChannelNodeArgs>> nodes) {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
 
-        public Builder setNodes(List<EnterpriseChannelNodeArgs> nodes) {
+        public Builder nodes(List<EnterpriseChannelNodeArgs> nodes) {
             this.nodes = Input.of(Objects.requireNonNull(nodes));
             return this;
         }
 
-        public Builder setState(@Nullable Input<Either<String,EnterpriseChannelState>> state) {
+        public Builder state(@Nullable Input<Either<String,EnterpriseChannelState>> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable Either<String,EnterpriseChannelState> state) {
+        public Builder state(@Nullable Either<String,EnterpriseChannelState> state) {
             this.state = Input.ofNullable(state);
             return this;
         }

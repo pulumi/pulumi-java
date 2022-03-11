@@ -19,13 +19,13 @@ public final class FeatureVariationObject {
     private final @Nullable String stringValue;
     private final @Nullable String variationName;
 
-    @OutputCustomType.Constructor({"booleanValue","doubleValue","longValue","stringValue","variationName"})
+    @OutputCustomType.Constructor
     private FeatureVariationObject(
-        @Nullable Boolean booleanValue,
-        @Nullable Double doubleValue,
-        @Nullable Double longValue,
-        @Nullable String stringValue,
-        @Nullable String variationName) {
+        @OutputCustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
+        @OutputCustomType.Parameter("doubleValue") @Nullable Double doubleValue,
+        @OutputCustomType.Parameter("longValue") @Nullable Double longValue,
+        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
+        @OutputCustomType.Parameter("variationName") @Nullable String variationName) {
         this.booleanValue = booleanValue;
         this.doubleValue = doubleValue;
         this.longValue = longValue;
@@ -77,27 +77,27 @@ public final class FeatureVariationObject {
     	      this.variationName = defaults.variationName;
         }
 
-        public Builder setBooleanValue(@Nullable Boolean booleanValue) {
+        public Builder booleanValue(@Nullable Boolean booleanValue) {
             this.booleanValue = booleanValue;
             return this;
         }
 
-        public Builder setDoubleValue(@Nullable Double doubleValue) {
+        public Builder doubleValue(@Nullable Double doubleValue) {
             this.doubleValue = doubleValue;
             return this;
         }
 
-        public Builder setLongValue(@Nullable Double longValue) {
+        public Builder longValue(@Nullable Double longValue) {
             this.longValue = longValue;
             return this;
         }
 
-        public Builder setStringValue(@Nullable String stringValue) {
+        public Builder stringValue(@Nullable String stringValue) {
             this.stringValue = stringValue;
             return this;
         }
 
-        public Builder setVariationName(@Nullable String variationName) {
+        public Builder variationName(@Nullable String variationName) {
             this.variationName = variationName;
             return this;
         }

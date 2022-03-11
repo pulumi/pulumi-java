@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
      */
     private final String text;
 
-    @OutputCustomType.Constructor({"ssml","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse(
-        String ssml,
-        String text) {
+        @OutputCustomType.Parameter("ssml") String ssml,
+        @OutputCustomType.Parameter("text") String text) {
         this.ssml = ssml;
         this.text = text;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     	      this.text = defaults.text;
         }
 
-        public Builder setSsml(String ssml) {
+        public Builder ssml(String ssml) {
             this.ssml = Objects.requireNonNull(ssml);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

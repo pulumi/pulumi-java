@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse {
      */
     private final Map<String,String> parameters;
 
-    @OutputCustomType.Constructor({"lifespanCount","name","parameters"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1ContextResponse(
-        Integer lifespanCount,
-        String name,
-        Map<String,String> parameters) {
+        @OutputCustomType.Parameter("lifespanCount") Integer lifespanCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters) {
         this.lifespanCount = lifespanCount;
         this.name = name;
         this.parameters = parameters;
@@ -83,17 +83,17 @@ public final class GoogleCloudDialogflowV2beta1ContextResponse {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setLifespanCount(Integer lifespanCount) {
+        public Builder lifespanCount(Integer lifespanCount) {
             this.lifespanCount = Objects.requireNonNull(lifespanCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }

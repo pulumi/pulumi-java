@@ -29,12 +29,12 @@ public final class TaskContainerSettingsResponse {
     private final @Nullable ContainerRegistryResponse registry;
     private final @Nullable String workingDirectory;
 
-    @OutputCustomType.Constructor({"containerRunOptions","imageName","registry","workingDirectory"})
+    @OutputCustomType.Constructor
     private TaskContainerSettingsResponse(
-        @Nullable String containerRunOptions,
-        String imageName,
-        @Nullable ContainerRegistryResponse registry,
-        @Nullable String workingDirectory) {
+        @OutputCustomType.Parameter("containerRunOptions") @Nullable String containerRunOptions,
+        @OutputCustomType.Parameter("imageName") String imageName,
+        @OutputCustomType.Parameter("registry") @Nullable ContainerRegistryResponse registry,
+        @OutputCustomType.Parameter("workingDirectory") @Nullable String workingDirectory) {
         this.containerRunOptions = containerRunOptions;
         this.imageName = imageName;
         this.registry = registry;
@@ -92,22 +92,22 @@ public final class TaskContainerSettingsResponse {
     	      this.workingDirectory = defaults.workingDirectory;
         }
 
-        public Builder setContainerRunOptions(@Nullable String containerRunOptions) {
+        public Builder containerRunOptions(@Nullable String containerRunOptions) {
             this.containerRunOptions = containerRunOptions;
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setRegistry(@Nullable ContainerRegistryResponse registry) {
+        public Builder registry(@Nullable ContainerRegistryResponse registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setWorkingDirectory(@Nullable String workingDirectory) {
+        public Builder workingDirectory(@Nullable String workingDirectory) {
             this.workingDirectory = workingDirectory;
             return this;
         }

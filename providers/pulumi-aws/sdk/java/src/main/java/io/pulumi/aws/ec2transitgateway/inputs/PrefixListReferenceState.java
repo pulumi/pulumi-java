@@ -115,52 +115,52 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
     	      this.transitGatewayRouteTableId = defaults.transitGatewayRouteTableId;
         }
 
-        public Builder setBlackhole(@Nullable Input<Boolean> blackhole) {
+        public Builder blackhole(@Nullable Input<Boolean> blackhole) {
             this.blackhole = blackhole;
             return this;
         }
 
-        public Builder setBlackhole(@Nullable Boolean blackhole) {
+        public Builder blackhole(@Nullable Boolean blackhole) {
             this.blackhole = Input.ofNullable(blackhole);
             return this;
         }
 
-        public Builder setPrefixListId(@Nullable Input<String> prefixListId) {
+        public Builder prefixListId(@Nullable Input<String> prefixListId) {
             this.prefixListId = prefixListId;
             return this;
         }
 
-        public Builder setPrefixListId(@Nullable String prefixListId) {
+        public Builder prefixListId(@Nullable String prefixListId) {
             this.prefixListId = Input.ofNullable(prefixListId);
             return this;
         }
 
-        public Builder setPrefixListOwnerId(@Nullable Input<String> prefixListOwnerId) {
+        public Builder prefixListOwnerId(@Nullable Input<String> prefixListOwnerId) {
             this.prefixListOwnerId = prefixListOwnerId;
             return this;
         }
 
-        public Builder setPrefixListOwnerId(@Nullable String prefixListOwnerId) {
+        public Builder prefixListOwnerId(@Nullable String prefixListOwnerId) {
             this.prefixListOwnerId = Input.ofNullable(prefixListOwnerId);
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable Input<String> transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = Input.ofNullable(transitGatewayAttachmentId);
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(@Nullable Input<String> transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(@Nullable Input<String> transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = transitGatewayRouteTableId;
             return this;
         }
 
-        public Builder setTransitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
+        public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
             this.transitGatewayRouteTableId = Input.ofNullable(transitGatewayRouteTableId);
             return this;
         }

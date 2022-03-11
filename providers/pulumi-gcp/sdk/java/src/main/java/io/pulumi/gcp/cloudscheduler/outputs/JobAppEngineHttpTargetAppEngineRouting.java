@@ -30,11 +30,11 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"instance","service","version"})
+    @OutputCustomType.Constructor
     private JobAppEngineHttpTargetAppEngineRouting(
-        @Nullable String instance,
-        @Nullable String service,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.instance = instance;
         this.service = service;
         this.version = version;
@@ -89,17 +89,17 @@ public final class JobAppEngineHttpTargetAppEngineRouting {
     	      this.version = defaults.version;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

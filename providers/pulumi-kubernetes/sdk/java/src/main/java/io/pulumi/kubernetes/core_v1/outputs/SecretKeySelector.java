@@ -28,11 +28,11 @@ public final class SecretKeySelector {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor({"key","name","optional"})
+    @OutputCustomType.Constructor
     private SecretKeySelector(
-        String key,
-        @Nullable String name,
-        @Nullable Boolean optional) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
         this.key = key;
         this.name = name;
         this.optional = optional;
@@ -84,17 +84,17 @@ public final class SecretKeySelector {
     	      this.optional = defaults.optional;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptional(@Nullable Boolean optional) {
+        public Builder optional(@Nullable Boolean optional) {
             this.optional = optional;
             return this;
         }

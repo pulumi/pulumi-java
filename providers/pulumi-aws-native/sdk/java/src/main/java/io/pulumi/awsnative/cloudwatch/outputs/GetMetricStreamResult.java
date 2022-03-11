@@ -59,17 +59,17 @@ public final class GetMetricStreamResult {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"arn","creationDate","excludeFilters","firehoseArn","includeFilters","lastUpdateDate","outputFormat","roleArn","state"})
+    @OutputCustomType.Constructor
     private GetMetricStreamResult(
-        @Nullable String arn,
-        @Nullable String creationDate,
-        @Nullable List<MetricStreamFilter> excludeFilters,
-        @Nullable String firehoseArn,
-        @Nullable List<MetricStreamFilter> includeFilters,
-        @Nullable String lastUpdateDate,
-        @Nullable String outputFormat,
-        @Nullable String roleArn,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("creationDate") @Nullable String creationDate,
+        @OutputCustomType.Parameter("excludeFilters") @Nullable List<MetricStreamFilter> excludeFilters,
+        @OutputCustomType.Parameter("firehoseArn") @Nullable String firehoseArn,
+        @OutputCustomType.Parameter("includeFilters") @Nullable List<MetricStreamFilter> includeFilters,
+        @OutputCustomType.Parameter("lastUpdateDate") @Nullable String lastUpdateDate,
+        @OutputCustomType.Parameter("outputFormat") @Nullable String outputFormat,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.excludeFilters = excludeFilters;
@@ -181,47 +181,47 @@ public final class GetMetricStreamResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreationDate(@Nullable String creationDate) {
+        public Builder creationDate(@Nullable String creationDate) {
             this.creationDate = creationDate;
             return this;
         }
 
-        public Builder setExcludeFilters(@Nullable List<MetricStreamFilter> excludeFilters) {
+        public Builder excludeFilters(@Nullable List<MetricStreamFilter> excludeFilters) {
             this.excludeFilters = excludeFilters;
             return this;
         }
 
-        public Builder setFirehoseArn(@Nullable String firehoseArn) {
+        public Builder firehoseArn(@Nullable String firehoseArn) {
             this.firehoseArn = firehoseArn;
             return this;
         }
 
-        public Builder setIncludeFilters(@Nullable List<MetricStreamFilter> includeFilters) {
+        public Builder includeFilters(@Nullable List<MetricStreamFilter> includeFilters) {
             this.includeFilters = includeFilters;
             return this;
         }
 
-        public Builder setLastUpdateDate(@Nullable String lastUpdateDate) {
+        public Builder lastUpdateDate(@Nullable String lastUpdateDate) {
             this.lastUpdateDate = lastUpdateDate;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

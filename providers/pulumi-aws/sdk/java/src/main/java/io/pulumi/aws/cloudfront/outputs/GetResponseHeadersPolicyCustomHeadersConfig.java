@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetResponseHeadersPolicyCustomHeadersConfig {
     private final List<GetResponseHeadersPolicyCustomHeadersConfigItem> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private GetResponseHeadersPolicyCustomHeadersConfig(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
+    @OutputCustomType.Constructor
+    private GetResponseHeadersPolicyCustomHeadersConfig(@OutputCustomType.Parameter("items") List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
         this.items = items;
     }
 
@@ -41,7 +41,7 @@ public final class GetResponseHeadersPolicyCustomHeadersConfig {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
+        public Builder items(List<GetResponseHeadersPolicyCustomHeadersConfigItem> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

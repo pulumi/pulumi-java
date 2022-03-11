@@ -40,12 +40,12 @@ public final class FlexibleAppVersionEndpointsApiService {
      */
     private final @Nullable String rolloutStrategy;
 
-    @OutputCustomType.Constructor({"configId","disableTraceSampling","name","rolloutStrategy"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionEndpointsApiService(
-        @Nullable String configId,
-        @Nullable Boolean disableTraceSampling,
-        String name,
-        @Nullable String rolloutStrategy) {
+        @OutputCustomType.Parameter("configId") @Nullable String configId,
+        @OutputCustomType.Parameter("disableTraceSampling") @Nullable Boolean disableTraceSampling,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rolloutStrategy") @Nullable String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;
@@ -114,22 +114,22 @@ public final class FlexibleAppVersionEndpointsApiService {
     	      this.rolloutStrategy = defaults.rolloutStrategy;
         }
 
-        public Builder setConfigId(@Nullable String configId) {
+        public Builder configId(@Nullable String configId) {
             this.configId = configId;
             return this;
         }
 
-        public Builder setDisableTraceSampling(@Nullable Boolean disableTraceSampling) {
+        public Builder disableTraceSampling(@Nullable Boolean disableTraceSampling) {
             this.disableTraceSampling = disableTraceSampling;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRolloutStrategy(@Nullable String rolloutStrategy) {
+        public Builder rolloutStrategy(@Nullable String rolloutStrategy) {
             this.rolloutStrategy = rolloutStrategy;
             return this;
         }

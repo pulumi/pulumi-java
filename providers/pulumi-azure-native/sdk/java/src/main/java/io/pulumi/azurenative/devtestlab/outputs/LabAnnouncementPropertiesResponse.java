@@ -48,15 +48,15 @@ public final class LabAnnouncementPropertiesResponse {
      */
     private final String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"enabled","expirationDate","expired","markdown","provisioningState","title","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private LabAnnouncementPropertiesResponse(
-        @Nullable String enabled,
-        @Nullable String expirationDate,
-        @Nullable Boolean expired,
-        @Nullable String markdown,
-        String provisioningState,
-        @Nullable String title,
-        String uniqueIdentifier) {
+        @OutputCustomType.Parameter("enabled") @Nullable String enabled,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expired") @Nullable Boolean expired,
+        @OutputCustomType.Parameter("markdown") @Nullable String markdown,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("title") @Nullable String title,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier) {
         this.enabled = enabled;
         this.expirationDate = expirationDate;
         this.expired = expired;
@@ -148,37 +148,37 @@ public final class LabAnnouncementPropertiesResponse {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setEnabled(@Nullable String enabled) {
+        public Builder enabled(@Nullable String enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpired(@Nullable Boolean expired) {
+        public Builder expired(@Nullable Boolean expired) {
             this.expired = expired;
             return this;
         }
 
-        public Builder setMarkdown(@Nullable String markdown) {
+        public Builder markdown(@Nullable String markdown) {
             this.markdown = markdown;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }

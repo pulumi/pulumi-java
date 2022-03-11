@@ -91,32 +91,32 @@ public final class OriginEndpointStreamSelectionArgs extends io.pulumi.resources
     	      this.streamOrder = defaults.streamOrder;
         }
 
-        public Builder setMaxVideoBitsPerSecond(@Nullable Input<Integer> maxVideoBitsPerSecond) {
+        public Builder maxVideoBitsPerSecond(@Nullable Input<Integer> maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = maxVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setMaxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
+        public Builder maxVideoBitsPerSecond(@Nullable Integer maxVideoBitsPerSecond) {
             this.maxVideoBitsPerSecond = Input.ofNullable(maxVideoBitsPerSecond);
             return this;
         }
 
-        public Builder setMinVideoBitsPerSecond(@Nullable Input<Integer> minVideoBitsPerSecond) {
+        public Builder minVideoBitsPerSecond(@Nullable Input<Integer> minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = minVideoBitsPerSecond;
             return this;
         }
 
-        public Builder setMinVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
+        public Builder minVideoBitsPerSecond(@Nullable Integer minVideoBitsPerSecond) {
             this.minVideoBitsPerSecond = Input.ofNullable(minVideoBitsPerSecond);
             return this;
         }
 
-        public Builder setStreamOrder(@Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
+        public Builder streamOrder(@Nullable Input<OriginEndpointStreamSelectionStreamOrder> streamOrder) {
             this.streamOrder = streamOrder;
             return this;
         }
 
-        public Builder setStreamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
+        public Builder streamOrder(@Nullable OriginEndpointStreamSelectionStreamOrder streamOrder) {
             this.streamOrder = Input.ofNullable(streamOrder);
             return this;
         }

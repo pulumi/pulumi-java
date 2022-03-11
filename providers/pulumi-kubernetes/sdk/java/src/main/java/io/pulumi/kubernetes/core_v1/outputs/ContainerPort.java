@@ -43,13 +43,13 @@ public final class ContainerPort {
      */
     private final @Nullable String protocol;
 
-    @OutputCustomType.Constructor({"containerPort","hostIP","hostPort","name","protocol"})
+    @OutputCustomType.Constructor
     private ContainerPort(
-        Integer containerPort,
-        @Nullable String hostIP,
-        @Nullable Integer hostPort,
-        @Nullable String name,
-        @Nullable String protocol) {
+        @OutputCustomType.Parameter("containerPort") Integer containerPort,
+        @OutputCustomType.Parameter("hostIP") @Nullable String hostIP,
+        @OutputCustomType.Parameter("hostPort") @Nullable Integer hostPort,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol) {
         this.containerPort = containerPort;
         this.hostIP = hostIP;
         this.hostPort = hostPort;
@@ -126,27 +126,27 @@ public final class ContainerPort {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setContainerPort(Integer containerPort) {
+        public Builder containerPort(Integer containerPort) {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
 
-        public Builder setHostIP(@Nullable String hostIP) {
+        public Builder hostIP(@Nullable String hostIP) {
             this.hostIP = hostIP;
             return this;
         }
 
-        public Builder setHostPort(@Nullable Integer hostPort) {
+        public Builder hostPort(@Nullable Integer hostPort) {
             this.hostPort = hostPort;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }

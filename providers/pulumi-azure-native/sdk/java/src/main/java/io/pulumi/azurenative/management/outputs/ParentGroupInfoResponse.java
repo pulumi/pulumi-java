@@ -27,11 +27,11 @@ public final class ParentGroupInfoResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"displayName","id","name"})
+    @OutputCustomType.Constructor
     private ParentGroupInfoResponse(
-        @Nullable String displayName,
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.displayName = displayName;
         this.id = id;
         this.name = name;
@@ -83,17 +83,17 @@ public final class ParentGroupInfoResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

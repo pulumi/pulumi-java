@@ -108,42 +108,42 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setCreationParameters(Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters) {
+        public Builder creationParameters(Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters) {
             this.creationParameters = Objects.requireNonNull(creationParameters);
             return this;
         }
 
-        public Builder setCreationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs creationParameters) {
+        public Builder creationParameters(ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs creationParameters) {
             this.creationParameters = Input.of(Objects.requireNonNull(creationParameters));
             return this;
         }
 
-        public Builder setDestinationPath(Input<String> destinationPath) {
+        public Builder destinationPath(Input<String> destinationPath) {
             this.destinationPath = Objects.requireNonNull(destinationPath);
             return this;
         }
 
-        public Builder setDestinationPath(String destinationPath) {
+        public Builder destinationPath(String destinationPath) {
             this.destinationPath = Input.of(Objects.requireNonNull(destinationPath));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }

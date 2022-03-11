@@ -31,12 +31,12 @@ public final class DsRecordResponse {
      */
     private final Integer keyTag;
 
-    @OutputCustomType.Constructor({"algorithm","digest","digestType","keyTag"})
+    @OutputCustomType.Constructor
     private DsRecordResponse(
-        String algorithm,
-        String digest,
-        String digestType,
-        Integer keyTag) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("digest") String digest,
+        @OutputCustomType.Parameter("digestType") String digestType,
+        @OutputCustomType.Parameter("keyTag") Integer keyTag) {
         this.algorithm = algorithm;
         this.digest = digest;
         this.digestType = digestType;
@@ -98,22 +98,22 @@ public final class DsRecordResponse {
     	      this.keyTag = defaults.keyTag;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setDigest(String digest) {
+        public Builder digest(String digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setDigestType(String digestType) {
+        public Builder digestType(String digestType) {
             this.digestType = Objects.requireNonNull(digestType);
             return this;
         }
 
-        public Builder setKeyTag(Integer keyTag) {
+        public Builder keyTag(Integer keyTag) {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }

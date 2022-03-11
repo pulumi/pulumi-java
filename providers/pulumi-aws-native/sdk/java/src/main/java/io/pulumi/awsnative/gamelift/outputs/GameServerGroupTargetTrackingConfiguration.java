@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GameServerGroupTargetTrackingConfiguration {
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"targetValue"})
-    private GameServerGroupTargetTrackingConfiguration(Double targetValue) {
+    @OutputCustomType.Constructor
+    private GameServerGroupTargetTrackingConfiguration(@OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.targetValue = targetValue;
     }
 
@@ -40,7 +40,7 @@ public final class GameServerGroupTargetTrackingConfiguration {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

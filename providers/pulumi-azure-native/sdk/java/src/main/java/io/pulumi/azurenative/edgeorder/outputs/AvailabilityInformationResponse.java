@@ -25,11 +25,11 @@ public final class AvailabilityInformationResponse {
      */
     private final String disabledReasonMessage;
 
-    @OutputCustomType.Constructor({"availabilityStage","disabledReason","disabledReasonMessage"})
+    @OutputCustomType.Constructor
     private AvailabilityInformationResponse(
-        String availabilityStage,
-        String disabledReason,
-        String disabledReasonMessage) {
+        @OutputCustomType.Parameter("availabilityStage") String availabilityStage,
+        @OutputCustomType.Parameter("disabledReason") String disabledReason,
+        @OutputCustomType.Parameter("disabledReasonMessage") String disabledReasonMessage) {
         this.availabilityStage = availabilityStage;
         this.disabledReason = disabledReason;
         this.disabledReasonMessage = disabledReasonMessage;
@@ -81,17 +81,17 @@ public final class AvailabilityInformationResponse {
     	      this.disabledReasonMessage = defaults.disabledReasonMessage;
         }
 
-        public Builder setAvailabilityStage(String availabilityStage) {
+        public Builder availabilityStage(String availabilityStage) {
             this.availabilityStage = Objects.requireNonNull(availabilityStage);
             return this;
         }
 
-        public Builder setDisabledReason(String disabledReason) {
+        public Builder disabledReason(String disabledReason) {
             this.disabledReason = Objects.requireNonNull(disabledReason);
             return this;
         }
 
-        public Builder setDisabledReasonMessage(String disabledReasonMessage) {
+        public Builder disabledReasonMessage(String disabledReasonMessage) {
             this.disabledReasonMessage = Objects.requireNonNull(disabledReasonMessage);
             return this;
         }

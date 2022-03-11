@@ -18,10 +18,10 @@ public final class GetPipelineDefinitionParameterObject {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"attributes","id"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionParameterObject(
-        List<GetPipelineDefinitionParameterObjectAttribute> attributes,
-        String id) {
+        @OutputCustomType.Parameter("attributes") List<GetPipelineDefinitionParameterObjectAttribute> attributes,
+        @OutputCustomType.Parameter("id") String id) {
         this.attributes = attributes;
         this.id = id;
     }
@@ -59,12 +59,12 @@ public final class GetPipelineDefinitionParameterObject {
     	      this.id = defaults.id;
         }
 
-        public Builder setAttributes(List<GetPipelineDefinitionParameterObjectAttribute> attributes) {
+        public Builder attributes(List<GetPipelineDefinitionParameterObjectAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

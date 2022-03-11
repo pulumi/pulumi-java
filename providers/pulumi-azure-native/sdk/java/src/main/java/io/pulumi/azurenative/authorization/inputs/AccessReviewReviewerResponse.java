@@ -74,12 +74,12 @@ public final class AccessReviewReviewerResponse extends io.pulumi.resources.Invo
     	      this.principalType = defaults.principalType;
         }
 
-        public Builder setPrincipalId(@Nullable String principalId) {
+        public Builder principalId(@Nullable String principalId) {
             this.principalId = principalId;
             return this;
         }
 
-        public Builder setPrincipalType(String principalType) {
+        public Builder principalType(String principalType) {
             this.principalType = Objects.requireNonNull(principalType);
             return this;
         }

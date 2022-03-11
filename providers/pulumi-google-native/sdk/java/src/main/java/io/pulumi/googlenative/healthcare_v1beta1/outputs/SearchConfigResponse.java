@@ -16,8 +16,8 @@ public final class SearchConfigResponse {
      */
     private final List<SearchParameterResponse> searchParameters;
 
-    @OutputCustomType.Constructor({"searchParameters"})
-    private SearchConfigResponse(List<SearchParameterResponse> searchParameters) {
+    @OutputCustomType.Constructor
+    private SearchConfigResponse(@OutputCustomType.Parameter("searchParameters") List<SearchParameterResponse> searchParameters) {
         this.searchParameters = searchParameters;
     }
 
@@ -49,7 +49,7 @@ public final class SearchConfigResponse {
     	      this.searchParameters = defaults.searchParameters;
         }
 
-        public Builder setSearchParameters(List<SearchParameterResponse> searchParameters) {
+        public Builder searchParameters(List<SearchParameterResponse> searchParameters) {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }

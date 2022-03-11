@@ -26,18 +26,18 @@ public final class GetWebAppConfigResult {
     private final String storageBucket;
     private final String webAppId;
 
-    @OutputCustomType.Constructor({"apiKey","authDomain","databaseUrl","id","locationId","measurementId","messagingSenderId","project","storageBucket","webAppId"})
+    @OutputCustomType.Constructor
     private GetWebAppConfigResult(
-        String apiKey,
-        String authDomain,
-        String databaseUrl,
-        String id,
-        String locationId,
-        String measurementId,
-        String messagingSenderId,
-        @Nullable String project,
-        String storageBucket,
-        String webAppId) {
+        @OutputCustomType.Parameter("apiKey") String apiKey,
+        @OutputCustomType.Parameter("authDomain") String authDomain,
+        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("locationId") String locationId,
+        @OutputCustomType.Parameter("measurementId") String measurementId,
+        @OutputCustomType.Parameter("messagingSenderId") String messagingSenderId,
+        @OutputCustomType.Parameter("project") @Nullable String project,
+        @OutputCustomType.Parameter("storageBucket") String storageBucket,
+        @OutputCustomType.Parameter("webAppId") String webAppId) {
         this.apiKey = apiKey;
         this.authDomain = authDomain;
         this.databaseUrl = databaseUrl;
@@ -123,52 +123,52 @@ public final class GetWebAppConfigResult {
     	      this.webAppId = defaults.webAppId;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setAuthDomain(String authDomain) {
+        public Builder authDomain(String authDomain) {
             this.authDomain = Objects.requireNonNull(authDomain);
             return this;
         }
 
-        public Builder setDatabaseUrl(String databaseUrl) {
+        public Builder databaseUrl(String databaseUrl) {
             this.databaseUrl = Objects.requireNonNull(databaseUrl);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocationId(String locationId) {
+        public Builder locationId(String locationId) {
             this.locationId = Objects.requireNonNull(locationId);
             return this;
         }
 
-        public Builder setMeasurementId(String measurementId) {
+        public Builder measurementId(String measurementId) {
             this.measurementId = Objects.requireNonNull(measurementId);
             return this;
         }
 
-        public Builder setMessagingSenderId(String messagingSenderId) {
+        public Builder messagingSenderId(String messagingSenderId) {
             this.messagingSenderId = Objects.requireNonNull(messagingSenderId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setStorageBucket(String storageBucket) {
+        public Builder storageBucket(String storageBucket) {
             this.storageBucket = Objects.requireNonNull(storageBucket);
             return this;
         }
 
-        public Builder setWebAppId(String webAppId) {
+        public Builder webAppId(String webAppId) {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
         }

@@ -159,72 +159,72 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setIssuancePolicy(@Nullable Input<CaPoolIssuancePolicyGetArgs> issuancePolicy) {
+        public Builder issuancePolicy(@Nullable Input<CaPoolIssuancePolicyGetArgs> issuancePolicy) {
             this.issuancePolicy = issuancePolicy;
             return this;
         }
 
-        public Builder setIssuancePolicy(@Nullable CaPoolIssuancePolicyGetArgs issuancePolicy) {
+        public Builder issuancePolicy(@Nullable CaPoolIssuancePolicyGetArgs issuancePolicy) {
             this.issuancePolicy = Input.ofNullable(issuancePolicy);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPublishingOptions(@Nullable Input<CaPoolPublishingOptionsGetArgs> publishingOptions) {
+        public Builder publishingOptions(@Nullable Input<CaPoolPublishingOptionsGetArgs> publishingOptions) {
             this.publishingOptions = publishingOptions;
             return this;
         }
 
-        public Builder setPublishingOptions(@Nullable CaPoolPublishingOptionsGetArgs publishingOptions) {
+        public Builder publishingOptions(@Nullable CaPoolPublishingOptionsGetArgs publishingOptions) {
             this.publishingOptions = Input.ofNullable(publishingOptions);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }

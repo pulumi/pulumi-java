@@ -81,20 +81,20 @@ public final class LabelingJobPropertiesResponse {
      */
     private final @Nullable Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"createdTimeUtc","datasetConfiguration","jobInstructions","labelCategories","labelingJobMediaProperties","mlAssistConfiguration","progressMetrics","projectId","properties","status","statusMessages","tags"})
+    @OutputCustomType.Constructor
     private LabelingJobPropertiesResponse(
-        String createdTimeUtc,
-        LabelingDatasetConfigurationResponse datasetConfiguration,
-        LabelingJobInstructionsResponse jobInstructions,
-        Map<String,LabelCategoryResponse> labelCategories,
-        LabelingJobImagePropertiesResponse labelingJobMediaProperties,
-        @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
-        ProgressMetricsResponse progressMetrics,
-        String projectId,
-        @Nullable Map<String,String> properties,
-        String status,
-        List<StatusMessageResponse> statusMessages,
-        @Nullable Map<String,String> tags) {
+        @OutputCustomType.Parameter("createdTimeUtc") String createdTimeUtc,
+        @OutputCustomType.Parameter("datasetConfiguration") LabelingDatasetConfigurationResponse datasetConfiguration,
+        @OutputCustomType.Parameter("jobInstructions") LabelingJobInstructionsResponse jobInstructions,
+        @OutputCustomType.Parameter("labelCategories") Map<String,LabelCategoryResponse> labelCategories,
+        @OutputCustomType.Parameter("labelingJobMediaProperties") LabelingJobImagePropertiesResponse labelingJobMediaProperties,
+        @OutputCustomType.Parameter("mlAssistConfiguration") @Nullable MLAssistConfigurationResponse mlAssistConfiguration,
+        @OutputCustomType.Parameter("progressMetrics") ProgressMetricsResponse progressMetrics,
+        @OutputCustomType.Parameter("projectId") String projectId,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessages") List<StatusMessageResponse> statusMessages,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags) {
         this.createdTimeUtc = createdTimeUtc;
         this.datasetConfiguration = datasetConfiguration;
         this.jobInstructions = jobInstructions;
@@ -236,62 +236,62 @@ public final class LabelingJobPropertiesResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCreatedTimeUtc(String createdTimeUtc) {
+        public Builder createdTimeUtc(String createdTimeUtc) {
             this.createdTimeUtc = Objects.requireNonNull(createdTimeUtc);
             return this;
         }
 
-        public Builder setDatasetConfiguration(LabelingDatasetConfigurationResponse datasetConfiguration) {
+        public Builder datasetConfiguration(LabelingDatasetConfigurationResponse datasetConfiguration) {
             this.datasetConfiguration = Objects.requireNonNull(datasetConfiguration);
             return this;
         }
 
-        public Builder setJobInstructions(LabelingJobInstructionsResponse jobInstructions) {
+        public Builder jobInstructions(LabelingJobInstructionsResponse jobInstructions) {
             this.jobInstructions = Objects.requireNonNull(jobInstructions);
             return this;
         }
 
-        public Builder setLabelCategories(Map<String,LabelCategoryResponse> labelCategories) {
+        public Builder labelCategories(Map<String,LabelCategoryResponse> labelCategories) {
             this.labelCategories = Objects.requireNonNull(labelCategories);
             return this;
         }
 
-        public Builder setLabelingJobMediaProperties(LabelingJobImagePropertiesResponse labelingJobMediaProperties) {
+        public Builder labelingJobMediaProperties(LabelingJobImagePropertiesResponse labelingJobMediaProperties) {
             this.labelingJobMediaProperties = Objects.requireNonNull(labelingJobMediaProperties);
             return this;
         }
 
-        public Builder setMlAssistConfiguration(@Nullable MLAssistConfigurationResponse mlAssistConfiguration) {
+        public Builder mlAssistConfiguration(@Nullable MLAssistConfigurationResponse mlAssistConfiguration) {
             this.mlAssistConfiguration = mlAssistConfiguration;
             return this;
         }
 
-        public Builder setProgressMetrics(ProgressMetricsResponse progressMetrics) {
+        public Builder progressMetrics(ProgressMetricsResponse progressMetrics) {
             this.progressMetrics = Objects.requireNonNull(progressMetrics);
             return this;
         }
 
-        public Builder setProjectId(String projectId) {
+        public Builder projectId(String projectId) {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessages(List<StatusMessageResponse> statusMessages) {
+        public Builder statusMessages(List<StatusMessageResponse> statusMessages) {
             this.statusMessages = Objects.requireNonNull(statusMessages);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }

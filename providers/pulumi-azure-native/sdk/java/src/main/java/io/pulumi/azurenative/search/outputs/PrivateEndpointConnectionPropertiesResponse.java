@@ -23,10 +23,10 @@ public final class PrivateEndpointConnectionPropertiesResponse {
      */
     private final @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState;
 
-    @OutputCustomType.Constructor({"privateEndpoint","privateLinkServiceConnectionState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionPropertiesResponse(
-        @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
     }
@@ -68,12 +68,12 @@ public final class PrivateEndpointConnectionPropertiesResponse {
     	      this.privateLinkServiceConnectionState = defaults.privateLinkServiceConnectionState;
         }
 
-        public Builder setPrivateEndpoint(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
+        public Builder privateEndpoint(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }

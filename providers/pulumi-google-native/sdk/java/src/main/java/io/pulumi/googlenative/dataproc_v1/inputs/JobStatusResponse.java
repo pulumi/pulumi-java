@@ -104,22 +104,22 @@ public final class JobStatusResponse extends io.pulumi.resources.InvokeArgs {
     	      this.substate = defaults.substate;
         }
 
-        public Builder setDetails(String details) {
+        public Builder details(String details) {
             this.details = Objects.requireNonNull(details);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setStateStartTime(String stateStartTime) {
+        public Builder stateStartTime(String stateStartTime) {
             this.stateStartTime = Objects.requireNonNull(stateStartTime);
             return this;
         }
 
-        public Builder setSubstate(String substate) {
+        public Builder substate(String substate) {
             this.substate = Objects.requireNonNull(substate);
             return this;
         }

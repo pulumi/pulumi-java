@@ -60,17 +60,17 @@ public final class GetSecretResult {
      */
     private final String ttl;
 
-    @OutputCustomType.Constructor({"createTime","etag","expireTime","labels","name","replication","rotation","topics","ttl"})
+    @OutputCustomType.Constructor
     private GetSecretResult(
-        String createTime,
-        String etag,
-        String expireTime,
-        Map<String,String> labels,
-        String name,
-        ReplicationResponse replication,
-        RotationResponse rotation,
-        List<TopicResponse> topics,
-        String ttl) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("expireTime") String expireTime,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("replication") ReplicationResponse replication,
+        @OutputCustomType.Parameter("rotation") RotationResponse rotation,
+        @OutputCustomType.Parameter("topics") List<TopicResponse> topics,
+        @OutputCustomType.Parameter("ttl") String ttl) {
         this.createTime = createTime;
         this.etag = etag;
         this.expireTime = expireTime;
@@ -182,47 +182,47 @@ public final class GetSecretResult {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExpireTime(String expireTime) {
+        public Builder expireTime(String expireTime) {
             this.expireTime = Objects.requireNonNull(expireTime);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReplication(ReplicationResponse replication) {
+        public Builder replication(ReplicationResponse replication) {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
 
-        public Builder setRotation(RotationResponse rotation) {
+        public Builder rotation(RotationResponse rotation) {
             this.rotation = Objects.requireNonNull(rotation);
             return this;
         }
 
-        public Builder setTopics(List<TopicResponse> topics) {
+        public Builder topics(List<TopicResponse> topics) {
             this.topics = Objects.requireNonNull(topics);
             return this;
         }
 
-        public Builder setTtl(String ttl) {
+        public Builder ttl(String ttl) {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }

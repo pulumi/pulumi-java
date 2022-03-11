@@ -25,11 +25,11 @@ public final class NetworkInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","matchedIpRange","uri"})
+    @OutputCustomType.Constructor
     private NetworkInfoResponse(
-        String displayName,
-        String matchedIpRange,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("matchedIpRange") String matchedIpRange,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.matchedIpRange = matchedIpRange;
         this.uri = uri;
@@ -81,17 +81,17 @@ public final class NetworkInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setMatchedIpRange(String matchedIpRange) {
+        public Builder matchedIpRange(String matchedIpRange) {
             this.matchedIpRange = Objects.requireNonNull(matchedIpRange);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

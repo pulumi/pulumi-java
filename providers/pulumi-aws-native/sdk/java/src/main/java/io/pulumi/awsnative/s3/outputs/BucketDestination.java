@@ -33,12 +33,12 @@ public final class BucketDestination {
      */
     private final @Nullable String prefix;
 
-    @OutputCustomType.Constructor({"bucketAccountId","bucketArn","format","prefix"})
+    @OutputCustomType.Constructor
     private BucketDestination(
-        @Nullable String bucketAccountId,
-        String bucketArn,
-        BucketDestinationFormat format,
-        @Nullable String prefix) {
+        @OutputCustomType.Parameter("bucketAccountId") @Nullable String bucketAccountId,
+        @OutputCustomType.Parameter("bucketArn") String bucketArn,
+        @OutputCustomType.Parameter("format") BucketDestinationFormat format,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix) {
         this.bucketAccountId = bucketAccountId;
         this.bucketArn = bucketArn;
         this.format = format;
@@ -100,22 +100,22 @@ public final class BucketDestination {
     	      this.prefix = defaults.prefix;
         }
 
-        public Builder setBucketAccountId(@Nullable String bucketAccountId) {
+        public Builder bucketAccountId(@Nullable String bucketAccountId) {
             this.bucketAccountId = bucketAccountId;
             return this;
         }
 
-        public Builder setBucketArn(String bucketArn) {
+        public Builder bucketArn(String bucketArn) {
             this.bucketArn = Objects.requireNonNull(bucketArn);
             return this;
         }
 
-        public Builder setFormat(BucketDestinationFormat format) {
+        public Builder format(BucketDestinationFormat format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }

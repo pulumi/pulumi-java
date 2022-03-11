@@ -186,92 +186,92 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualRouterName = defaults.virtualRouterName;
         }
 
-        public Builder setHostedGateway(@Nullable Input<SubResourceArgs> hostedGateway) {
+        public Builder hostedGateway(@Nullable Input<SubResourceArgs> hostedGateway) {
             this.hostedGateway = hostedGateway;
             return this;
         }
 
-        public Builder setHostedGateway(@Nullable SubResourceArgs hostedGateway) {
+        public Builder hostedGateway(@Nullable SubResourceArgs hostedGateway) {
             this.hostedGateway = Input.ofNullable(hostedGateway);
             return this;
         }
 
-        public Builder setHostedSubnet(@Nullable Input<SubResourceArgs> hostedSubnet) {
+        public Builder hostedSubnet(@Nullable Input<SubResourceArgs> hostedSubnet) {
             this.hostedSubnet = hostedSubnet;
             return this;
         }
 
-        public Builder setHostedSubnet(@Nullable SubResourceArgs hostedSubnet) {
+        public Builder hostedSubnet(@Nullable SubResourceArgs hostedSubnet) {
             this.hostedSubnet = Input.ofNullable(hostedSubnet);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVirtualRouterAsn(@Nullable Input<Double> virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Input<Double> virtualRouterAsn) {
             this.virtualRouterAsn = virtualRouterAsn;
             return this;
         }
 
-        public Builder setVirtualRouterAsn(@Nullable Double virtualRouterAsn) {
+        public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
             this.virtualRouterAsn = Input.ofNullable(virtualRouterAsn);
             return this;
         }
 
-        public Builder setVirtualRouterIps(@Nullable Input<List<String>> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable Input<List<String>> virtualRouterIps) {
             this.virtualRouterIps = virtualRouterIps;
             return this;
         }
 
-        public Builder setVirtualRouterIps(@Nullable List<String> virtualRouterIps) {
+        public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
             this.virtualRouterIps = Input.ofNullable(virtualRouterIps);
             return this;
         }
 
-        public Builder setVirtualRouterName(@Nullable Input<String> virtualRouterName) {
+        public Builder virtualRouterName(@Nullable Input<String> virtualRouterName) {
             this.virtualRouterName = virtualRouterName;
             return this;
         }
 
-        public Builder setVirtualRouterName(@Nullable String virtualRouterName) {
+        public Builder virtualRouterName(@Nullable String virtualRouterName) {
             this.virtualRouterName = Input.ofNullable(virtualRouterName);
             return this;
         }

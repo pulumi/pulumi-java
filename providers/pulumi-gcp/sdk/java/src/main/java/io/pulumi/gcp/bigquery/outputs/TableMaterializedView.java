@@ -31,11 +31,11 @@ public final class TableMaterializedView {
      */
     private final @Nullable Integer refreshIntervalMs;
 
-    @OutputCustomType.Constructor({"enableRefresh","query","refreshIntervalMs"})
+    @OutputCustomType.Constructor
     private TableMaterializedView(
-        @Nullable Boolean enableRefresh,
-        String query,
-        @Nullable Integer refreshIntervalMs) {
+        @OutputCustomType.Parameter("enableRefresh") @Nullable Boolean enableRefresh,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("refreshIntervalMs") @Nullable Integer refreshIntervalMs) {
         this.enableRefresh = enableRefresh;
         this.query = query;
         this.refreshIntervalMs = refreshIntervalMs;
@@ -89,17 +89,17 @@ public final class TableMaterializedView {
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
 
-        public Builder setEnableRefresh(@Nullable Boolean enableRefresh) {
+        public Builder enableRefresh(@Nullable Boolean enableRefresh) {
             this.enableRefresh = enableRefresh;
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setRefreshIntervalMs(@Nullable Integer refreshIntervalMs) {
+        public Builder refreshIntervalMs(@Nullable Integer refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }

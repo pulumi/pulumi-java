@@ -15,10 +15,10 @@ public final class ThemeSheetStyle {
     private final @Nullable ThemeTileStyle tile;
     private final @Nullable ThemeTileLayoutStyle tileLayout;
 
-    @OutputCustomType.Constructor({"tile","tileLayout"})
+    @OutputCustomType.Constructor
     private ThemeSheetStyle(
-        @Nullable ThemeTileStyle tile,
-        @Nullable ThemeTileLayoutStyle tileLayout) {
+        @OutputCustomType.Parameter("tile") @Nullable ThemeTileStyle tile,
+        @OutputCustomType.Parameter("tileLayout") @Nullable ThemeTileLayoutStyle tileLayout) {
         this.tile = tile;
         this.tileLayout = tileLayout;
     }
@@ -52,12 +52,12 @@ public final class ThemeSheetStyle {
     	      this.tileLayout = defaults.tileLayout;
         }
 
-        public Builder setTile(@Nullable ThemeTileStyle tile) {
+        public Builder tile(@Nullable ThemeTileStyle tile) {
             this.tile = tile;
             return this;
         }
 
-        public Builder setTileLayout(@Nullable ThemeTileLayoutStyle tileLayout) {
+        public Builder tileLayout(@Nullable ThemeTileLayoutStyle tileLayout) {
             this.tileLayout = tileLayout;
             return this;
         }

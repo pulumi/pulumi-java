@@ -86,22 +86,22 @@ public final class GetMSIXPackageResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"displayName","id","imagePath","isActive","isRegularRegistration","lastUpdated","name","packageApplications","packageDependencies","packageFamilyName","packageName","packageRelativePath","type","version"})
+    @OutputCustomType.Constructor
     private GetMSIXPackageResult(
-        @Nullable String displayName,
-        String id,
-        @Nullable String imagePath,
-        @Nullable Boolean isActive,
-        @Nullable Boolean isRegularRegistration,
-        @Nullable String lastUpdated,
-        String name,
-        @Nullable List<MsixPackageApplicationsResponse> packageApplications,
-        @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
-        @Nullable String packageFamilyName,
-        @Nullable String packageName,
-        @Nullable String packageRelativePath,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("imagePath") @Nullable String imagePath,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("isRegularRegistration") @Nullable Boolean isRegularRegistration,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageApplications") @Nullable List<MsixPackageApplicationsResponse> packageApplications,
+        @OutputCustomType.Parameter("packageDependencies") @Nullable List<MsixPackageDependenciesResponse> packageDependencies,
+        @OutputCustomType.Parameter("packageFamilyName") @Nullable String packageFamilyName,
+        @OutputCustomType.Parameter("packageName") @Nullable String packageName,
+        @OutputCustomType.Parameter("packageRelativePath") @Nullable String packageRelativePath,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.displayName = displayName;
         this.id = id;
         this.imagePath = imagePath;
@@ -263,72 +263,72 @@ public final class GetMSIXPackageResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImagePath(@Nullable String imagePath) {
+        public Builder imagePath(@Nullable String imagePath) {
             this.imagePath = imagePath;
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setIsRegularRegistration(@Nullable Boolean isRegularRegistration) {
+        public Builder isRegularRegistration(@Nullable Boolean isRegularRegistration) {
             this.isRegularRegistration = isRegularRegistration;
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable String lastUpdated) {
+        public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageApplications(@Nullable List<MsixPackageApplicationsResponse> packageApplications) {
+        public Builder packageApplications(@Nullable List<MsixPackageApplicationsResponse> packageApplications) {
             this.packageApplications = packageApplications;
             return this;
         }
 
-        public Builder setPackageDependencies(@Nullable List<MsixPackageDependenciesResponse> packageDependencies) {
+        public Builder packageDependencies(@Nullable List<MsixPackageDependenciesResponse> packageDependencies) {
             this.packageDependencies = packageDependencies;
             return this;
         }
 
-        public Builder setPackageFamilyName(@Nullable String packageFamilyName) {
+        public Builder packageFamilyName(@Nullable String packageFamilyName) {
             this.packageFamilyName = packageFamilyName;
             return this;
         }
 
-        public Builder setPackageName(@Nullable String packageName) {
+        public Builder packageName(@Nullable String packageName) {
             this.packageName = packageName;
             return this;
         }
 
-        public Builder setPackageRelativePath(@Nullable String packageRelativePath) {
+        public Builder packageRelativePath(@Nullable String packageRelativePath) {
             this.packageRelativePath = packageRelativePath;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

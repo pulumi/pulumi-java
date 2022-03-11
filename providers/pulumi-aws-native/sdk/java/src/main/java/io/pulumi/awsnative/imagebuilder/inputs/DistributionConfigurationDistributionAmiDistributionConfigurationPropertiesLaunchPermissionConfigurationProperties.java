@@ -107,22 +107,22 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setOrganizationArns(@Nullable List<String> organizationArns) {
+        public Builder organizationArns(@Nullable List<String> organizationArns) {
             this.organizationArns = organizationArns;
             return this;
         }
 
-        public Builder setOrganizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
+        public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
 
-        public Builder setUserGroups(@Nullable List<String> userGroups) {
+        public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }

@@ -27,11 +27,11 @@ public final class TypePropertiesMappingResponse {
      */
     private final String targetPropertyName;
 
-    @OutputCustomType.Constructor({"linkType","sourcePropertyName","targetPropertyName"})
+    @OutputCustomType.Constructor
     private TypePropertiesMappingResponse(
-        @Nullable String linkType,
-        String sourcePropertyName,
-        String targetPropertyName) {
+        @OutputCustomType.Parameter("linkType") @Nullable String linkType,
+        @OutputCustomType.Parameter("sourcePropertyName") String sourcePropertyName,
+        @OutputCustomType.Parameter("targetPropertyName") String targetPropertyName) {
         this.linkType = linkType;
         this.sourcePropertyName = sourcePropertyName;
         this.targetPropertyName = targetPropertyName;
@@ -83,17 +83,17 @@ public final class TypePropertiesMappingResponse {
     	      this.targetPropertyName = defaults.targetPropertyName;
         }
 
-        public Builder setLinkType(@Nullable String linkType) {
+        public Builder linkType(@Nullable String linkType) {
             this.linkType = linkType;
             return this;
         }
 
-        public Builder setSourcePropertyName(String sourcePropertyName) {
+        public Builder sourcePropertyName(String sourcePropertyName) {
             this.sourcePropertyName = Objects.requireNonNull(sourcePropertyName);
             return this;
         }
 
-        public Builder setTargetPropertyName(String targetPropertyName) {
+        public Builder targetPropertyName(String targetPropertyName) {
             this.targetPropertyName = Objects.requireNonNull(targetPropertyName);
             return this;
         }

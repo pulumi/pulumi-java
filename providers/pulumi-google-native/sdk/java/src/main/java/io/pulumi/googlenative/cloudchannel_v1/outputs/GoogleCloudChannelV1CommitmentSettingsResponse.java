@@ -26,11 +26,11 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","renewalSettings","startTime"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1CommitmentSettingsResponse(
-        String endTime,
-        GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("renewalSettings") GoogleCloudChannelV1RenewalSettingsResponse renewalSettings,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.renewalSettings = renewalSettings;
         this.startTime = startTime;
@@ -82,17 +82,17 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setRenewalSettings(GoogleCloudChannelV1RenewalSettingsResponse renewalSettings) {
+        public Builder renewalSettings(GoogleCloudChannelV1RenewalSettingsResponse renewalSettings) {
             this.renewalSettings = Objects.requireNonNull(renewalSettings);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

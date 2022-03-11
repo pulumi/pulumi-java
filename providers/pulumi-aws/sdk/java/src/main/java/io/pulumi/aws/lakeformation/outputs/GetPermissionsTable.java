@@ -33,12 +33,12 @@ public final class GetPermissionsTable {
      */
     private final @Nullable Boolean wildcard;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","name","wildcard"})
+    @OutputCustomType.Constructor
     private GetPermissionsTable(
-        String catalogId,
-        String databaseName,
-        String name,
-        @Nullable Boolean wildcard) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("wildcard") @Nullable Boolean wildcard) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.name = name;
@@ -100,22 +100,22 @@ public final class GetPermissionsTable {
     	      this.wildcard = defaults.wildcard;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setWildcard(@Nullable Boolean wildcard) {
+        public Builder wildcard(@Nullable Boolean wildcard) {
             this.wildcard = wildcard;
             return this;
         }

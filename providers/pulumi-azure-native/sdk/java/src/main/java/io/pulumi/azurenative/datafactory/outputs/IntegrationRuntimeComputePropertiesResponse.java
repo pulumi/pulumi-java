@@ -45,14 +45,14 @@ public final class IntegrationRuntimeComputePropertiesResponse {
      */
     private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
-    @OutputCustomType.Constructor({"dataFlowProperties","location","maxParallelExecutionsPerNode","nodeSize","numberOfNodes","vNetProperties"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeComputePropertiesResponse(
-        @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
-        @Nullable String location,
-        @Nullable Integer maxParallelExecutionsPerNode,
-        @Nullable String nodeSize,
-        @Nullable Integer numberOfNodes,
-        @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
+        @OutputCustomType.Parameter("dataFlowProperties") @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxParallelExecutionsPerNode") @Nullable Integer maxParallelExecutionsPerNode,
+        @OutputCustomType.Parameter("nodeSize") @Nullable String nodeSize,
+        @OutputCustomType.Parameter("numberOfNodes") @Nullable Integer numberOfNodes,
+        @OutputCustomType.Parameter("vNetProperties") @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
         this.dataFlowProperties = dataFlowProperties;
         this.location = location;
         this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
@@ -134,32 +134,32 @@ public final class IntegrationRuntimeComputePropertiesResponse {
     	      this.vNetProperties = defaults.vNetProperties;
         }
 
-        public Builder setDataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties) {
+        public Builder dataFlowProperties(@Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties) {
             this.dataFlowProperties = dataFlowProperties;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMaxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
+        public Builder maxParallelExecutionsPerNode(@Nullable Integer maxParallelExecutionsPerNode) {
             this.maxParallelExecutionsPerNode = maxParallelExecutionsPerNode;
             return this;
         }
 
-        public Builder setNodeSize(@Nullable String nodeSize) {
+        public Builder nodeSize(@Nullable String nodeSize) {
             this.nodeSize = nodeSize;
             return this;
         }
 
-        public Builder setNumberOfNodes(@Nullable Integer numberOfNodes) {
+        public Builder numberOfNodes(@Nullable Integer numberOfNodes) {
             this.numberOfNodes = numberOfNodes;
             return this;
         }
 
-        public Builder setVNetProperties(@Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
+        public Builder vNetProperties(@Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties) {
             this.vNetProperties = vNetProperties;
             return this;
         }

@@ -50,15 +50,15 @@ public final class ServiceStatusResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"address","conditions","latestCreatedRevisionName","latestReadyRevisionName","observedGeneration","traffic","url"})
+    @OutputCustomType.Constructor
     private ServiceStatusResponse(
-        AddressableResponse address,
-        List<GoogleCloudRunV1ConditionResponse> conditions,
-        String latestCreatedRevisionName,
-        String latestReadyRevisionName,
-        Integer observedGeneration,
-        List<TrafficTargetResponse> traffic,
-        String url) {
+        @OutputCustomType.Parameter("address") AddressableResponse address,
+        @OutputCustomType.Parameter("conditions") List<GoogleCloudRunV1ConditionResponse> conditions,
+        @OutputCustomType.Parameter("latestCreatedRevisionName") String latestCreatedRevisionName,
+        @OutputCustomType.Parameter("latestReadyRevisionName") String latestReadyRevisionName,
+        @OutputCustomType.Parameter("observedGeneration") Integer observedGeneration,
+        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic,
+        @OutputCustomType.Parameter("url") String url) {
         this.address = address;
         this.conditions = conditions;
         this.latestCreatedRevisionName = latestCreatedRevisionName;
@@ -150,37 +150,37 @@ public final class ServiceStatusResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAddress(AddressableResponse address) {
+        public Builder address(AddressableResponse address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setConditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
+        public Builder conditions(List<GoogleCloudRunV1ConditionResponse> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setLatestCreatedRevisionName(String latestCreatedRevisionName) {
+        public Builder latestCreatedRevisionName(String latestCreatedRevisionName) {
             this.latestCreatedRevisionName = Objects.requireNonNull(latestCreatedRevisionName);
             return this;
         }
 
-        public Builder setLatestReadyRevisionName(String latestReadyRevisionName) {
+        public Builder latestReadyRevisionName(String latestReadyRevisionName) {
             this.latestReadyRevisionName = Objects.requireNonNull(latestReadyRevisionName);
             return this;
         }
 
-        public Builder setObservedGeneration(Integer observedGeneration) {
+        public Builder observedGeneration(Integer observedGeneration) {
             this.observedGeneration = Objects.requireNonNull(observedGeneration);
             return this;
         }
 
-        public Builder setTraffic(List<TrafficTargetResponse> traffic) {
+        public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

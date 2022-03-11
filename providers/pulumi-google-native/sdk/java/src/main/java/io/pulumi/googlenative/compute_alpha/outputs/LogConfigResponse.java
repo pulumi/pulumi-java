@@ -27,11 +27,11 @@ public final class LogConfigResponse {
      */
     private final LogConfigDataAccessOptionsResponse dataAccess;
 
-    @OutputCustomType.Constructor({"cloudAudit","counter","dataAccess"})
+    @OutputCustomType.Constructor
     private LogConfigResponse(
-        LogConfigCloudAuditOptionsResponse cloudAudit,
-        LogConfigCounterOptionsResponse counter,
-        LogConfigDataAccessOptionsResponse dataAccess) {
+        @OutputCustomType.Parameter("cloudAudit") LogConfigCloudAuditOptionsResponse cloudAudit,
+        @OutputCustomType.Parameter("counter") LogConfigCounterOptionsResponse counter,
+        @OutputCustomType.Parameter("dataAccess") LogConfigDataAccessOptionsResponse dataAccess) {
         this.cloudAudit = cloudAudit;
         this.counter = counter;
         this.dataAccess = dataAccess;
@@ -83,17 +83,17 @@ public final class LogConfigResponse {
     	      this.dataAccess = defaults.dataAccess;
         }
 
-        public Builder setCloudAudit(LogConfigCloudAuditOptionsResponse cloudAudit) {
+        public Builder cloudAudit(LogConfigCloudAuditOptionsResponse cloudAudit) {
             this.cloudAudit = Objects.requireNonNull(cloudAudit);
             return this;
         }
 
-        public Builder setCounter(LogConfigCounterOptionsResponse counter) {
+        public Builder counter(LogConfigCounterOptionsResponse counter) {
             this.counter = Objects.requireNonNull(counter);
             return this;
         }
 
-        public Builder setDataAccess(LogConfigDataAccessOptionsResponse dataAccess) {
+        public Builder dataAccess(LogConfigDataAccessOptionsResponse dataAccess) {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
         }

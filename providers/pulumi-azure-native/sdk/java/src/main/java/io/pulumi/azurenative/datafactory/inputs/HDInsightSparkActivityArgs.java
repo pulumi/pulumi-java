@@ -292,152 +292,152 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setArguments(@Nullable Input<List<Object>> arguments) {
+        public Builder arguments(@Nullable Input<List<Object>> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setArguments(@Nullable List<Object> arguments) {
+        public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = Input.ofNullable(arguments);
             return this;
         }
 
-        public Builder setClassName(@Nullable Input<String> className) {
+        public Builder className(@Nullable Input<String> className) {
             this.className = className;
             return this;
         }
 
-        public Builder setClassName(@Nullable String className) {
+        public Builder className(@Nullable String className) {
             this.className = Input.ofNullable(className);
             return this;
         }
 
-        public Builder setDependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
+        public Builder dependsOn(@Nullable Input<List<ActivityDependencyArgs>> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
             this.dependsOn = Input.ofNullable(dependsOn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEntryFilePath(Input<Object> entryFilePath) {
+        public Builder entryFilePath(Input<Object> entryFilePath) {
             this.entryFilePath = Objects.requireNonNull(entryFilePath);
             return this;
         }
 
-        public Builder setEntryFilePath(Object entryFilePath) {
+        public Builder entryFilePath(Object entryFilePath) {
             this.entryFilePath = Input.of(Objects.requireNonNull(entryFilePath));
             return this;
         }
 
-        public Builder setGetDebugInfo(@Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
+        public Builder getDebugInfo(@Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
-        public Builder setGetDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
+        public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
             this.getDebugInfo = Input.ofNullable(getDebugInfo);
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
+        public Builder linkedServiceName(@Nullable Input<LinkedServiceReferenceArgs> linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
             this.linkedServiceName = Input.ofNullable(linkedServiceName);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setPolicy(@Nullable Input<ActivityPolicyArgs> policy) {
+        public Builder policy(@Nullable Input<ActivityPolicyArgs> policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyArgs policy) {
+        public Builder policy(@Nullable ActivityPolicyArgs policy) {
             this.policy = Input.ofNullable(policy);
             return this;
         }
 
-        public Builder setProxyUser(@Nullable Input<Object> proxyUser) {
+        public Builder proxyUser(@Nullable Input<Object> proxyUser) {
             this.proxyUser = proxyUser;
             return this;
         }
 
-        public Builder setProxyUser(@Nullable Object proxyUser) {
+        public Builder proxyUser(@Nullable Object proxyUser) {
             this.proxyUser = Input.ofNullable(proxyUser);
             return this;
         }
 
-        public Builder setRootPath(Input<Object> rootPath) {
+        public Builder rootPath(Input<Object> rootPath) {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }
 
-        public Builder setRootPath(Object rootPath) {
+        public Builder rootPath(Object rootPath) {
             this.rootPath = Input.of(Objects.requireNonNull(rootPath));
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable Input<Map<String,Object>> sparkConfig) {
+        public Builder sparkConfig(@Nullable Input<Map<String,Object>> sparkConfig) {
             this.sparkConfig = sparkConfig;
             return this;
         }
 
-        public Builder setSparkConfig(@Nullable Map<String,Object> sparkConfig) {
+        public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
             this.sparkConfig = Input.ofNullable(sparkConfig);
             return this;
         }
 
-        public Builder setSparkJobLinkedService(@Nullable Input<LinkedServiceReferenceArgs> sparkJobLinkedService) {
+        public Builder sparkJobLinkedService(@Nullable Input<LinkedServiceReferenceArgs> sparkJobLinkedService) {
             this.sparkJobLinkedService = sparkJobLinkedService;
             return this;
         }
 
-        public Builder setSparkJobLinkedService(@Nullable LinkedServiceReferenceArgs sparkJobLinkedService) {
+        public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceArgs sparkJobLinkedService) {
             this.sparkJobLinkedService = Input.ofNullable(sparkJobLinkedService);
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setUserProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
+        public Builder userProperties(@Nullable Input<List<UserPropertyArgs>> userProperties) {
             this.userProperties = userProperties;
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyArgs> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }

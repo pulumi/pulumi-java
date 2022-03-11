@@ -92,17 +92,17 @@ public final class CustomerSubscriptionDetails extends io.pulumi.resources.Invok
     	      this.registeredFeatures = defaults.registeredFeatures;
         }
 
-        public Builder setLocationPlacementId(@Nullable String locationPlacementId) {
+        public Builder locationPlacementId(@Nullable String locationPlacementId) {
             this.locationPlacementId = locationPlacementId;
             return this;
         }
 
-        public Builder setQuotaId(String quotaId) {
+        public Builder quotaId(String quotaId) {
             this.quotaId = Objects.requireNonNull(quotaId);
             return this;
         }
 
-        public Builder setRegisteredFeatures(@Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures) {
+        public Builder registeredFeatures(@Nullable List<CustomerSubscriptionRegisteredFeatures> registeredFeatures) {
             this.registeredFeatures = registeredFeatures;
             return this;
         }

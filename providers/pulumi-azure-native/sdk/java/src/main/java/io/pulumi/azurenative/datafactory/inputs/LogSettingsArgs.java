@@ -92,32 +92,32 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.logLocationSettings = defaults.logLocationSettings;
         }
 
-        public Builder setCopyActivityLogSettings(@Nullable Input<CopyActivityLogSettingsArgs> copyActivityLogSettings) {
+        public Builder copyActivityLogSettings(@Nullable Input<CopyActivityLogSettingsArgs> copyActivityLogSettings) {
             this.copyActivityLogSettings = copyActivityLogSettings;
             return this;
         }
 
-        public Builder setCopyActivityLogSettings(@Nullable CopyActivityLogSettingsArgs copyActivityLogSettings) {
+        public Builder copyActivityLogSettings(@Nullable CopyActivityLogSettingsArgs copyActivityLogSettings) {
             this.copyActivityLogSettings = Input.ofNullable(copyActivityLogSettings);
             return this;
         }
 
-        public Builder setEnableCopyActivityLog(@Nullable Input<Object> enableCopyActivityLog) {
+        public Builder enableCopyActivityLog(@Nullable Input<Object> enableCopyActivityLog) {
             this.enableCopyActivityLog = enableCopyActivityLog;
             return this;
         }
 
-        public Builder setEnableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
+        public Builder enableCopyActivityLog(@Nullable Object enableCopyActivityLog) {
             this.enableCopyActivityLog = Input.ofNullable(enableCopyActivityLog);
             return this;
         }
 
-        public Builder setLogLocationSettings(Input<LogLocationSettingsArgs> logLocationSettings) {
+        public Builder logLocationSettings(Input<LogLocationSettingsArgs> logLocationSettings) {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
 
-        public Builder setLogLocationSettings(LogLocationSettingsArgs logLocationSettings) {
+        public Builder logLocationSettings(LogLocationSettingsArgs logLocationSettings) {
             this.logLocationSettings = Input.of(Objects.requireNonNull(logLocationSettings));
             return this;
         }

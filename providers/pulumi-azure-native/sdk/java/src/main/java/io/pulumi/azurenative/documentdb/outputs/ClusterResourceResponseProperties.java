@@ -82,21 +82,21 @@ public final class ClusterResourceResponseProperties {
      */
     private final List<SeedNodeResponse> seedNodes;
 
-    @OutputCustomType.Constructor({"authenticationMethod","cassandraVersion","clientCertificates","clusterNameOverride","delegatedManagementSubnetId","externalGossipCertificates","externalSeedNodes","gossipCertificates","hoursBetweenBackups","prometheusEndpoint","provisioningState","repairEnabled","seedNodes"})
+    @OutputCustomType.Constructor
     private ClusterResourceResponseProperties(
-        @Nullable String authenticationMethod,
-        @Nullable String cassandraVersion,
-        @Nullable List<CertificateResponse> clientCertificates,
-        @Nullable String clusterNameOverride,
-        @Nullable String delegatedManagementSubnetId,
-        @Nullable List<CertificateResponse> externalGossipCertificates,
-        @Nullable List<SeedNodeResponse> externalSeedNodes,
-        List<CertificateResponse> gossipCertificates,
-        @Nullable Integer hoursBetweenBackups,
-        @Nullable SeedNodeResponse prometheusEndpoint,
-        @Nullable String provisioningState,
-        @Nullable Boolean repairEnabled,
-        List<SeedNodeResponse> seedNodes) {
+        @OutputCustomType.Parameter("authenticationMethod") @Nullable String authenticationMethod,
+        @OutputCustomType.Parameter("cassandraVersion") @Nullable String cassandraVersion,
+        @OutputCustomType.Parameter("clientCertificates") @Nullable List<CertificateResponse> clientCertificates,
+        @OutputCustomType.Parameter("clusterNameOverride") @Nullable String clusterNameOverride,
+        @OutputCustomType.Parameter("delegatedManagementSubnetId") @Nullable String delegatedManagementSubnetId,
+        @OutputCustomType.Parameter("externalGossipCertificates") @Nullable List<CertificateResponse> externalGossipCertificates,
+        @OutputCustomType.Parameter("externalSeedNodes") @Nullable List<SeedNodeResponse> externalSeedNodes,
+        @OutputCustomType.Parameter("gossipCertificates") List<CertificateResponse> gossipCertificates,
+        @OutputCustomType.Parameter("hoursBetweenBackups") @Nullable Integer hoursBetweenBackups,
+        @OutputCustomType.Parameter("prometheusEndpoint") @Nullable SeedNodeResponse prometheusEndpoint,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("repairEnabled") @Nullable Boolean repairEnabled,
+        @OutputCustomType.Parameter("seedNodes") List<SeedNodeResponse> seedNodes) {
         this.authenticationMethod = authenticationMethod;
         this.cassandraVersion = cassandraVersion;
         this.clientCertificates = clientCertificates;
@@ -248,67 +248,67 @@ public final class ClusterResourceResponseProperties {
     	      this.seedNodes = defaults.seedNodes;
         }
 
-        public Builder setAuthenticationMethod(@Nullable String authenticationMethod) {
+        public Builder authenticationMethod(@Nullable String authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
             return this;
         }
 
-        public Builder setCassandraVersion(@Nullable String cassandraVersion) {
+        public Builder cassandraVersion(@Nullable String cassandraVersion) {
             this.cassandraVersion = cassandraVersion;
             return this;
         }
 
-        public Builder setClientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
+        public Builder clientCertificates(@Nullable List<CertificateResponse> clientCertificates) {
             this.clientCertificates = clientCertificates;
             return this;
         }
 
-        public Builder setClusterNameOverride(@Nullable String clusterNameOverride) {
+        public Builder clusterNameOverride(@Nullable String clusterNameOverride) {
             this.clusterNameOverride = clusterNameOverride;
             return this;
         }
 
-        public Builder setDelegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
+        public Builder delegatedManagementSubnetId(@Nullable String delegatedManagementSubnetId) {
             this.delegatedManagementSubnetId = delegatedManagementSubnetId;
             return this;
         }
 
-        public Builder setExternalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
+        public Builder externalGossipCertificates(@Nullable List<CertificateResponse> externalGossipCertificates) {
             this.externalGossipCertificates = externalGossipCertificates;
             return this;
         }
 
-        public Builder setExternalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
+        public Builder externalSeedNodes(@Nullable List<SeedNodeResponse> externalSeedNodes) {
             this.externalSeedNodes = externalSeedNodes;
             return this;
         }
 
-        public Builder setGossipCertificates(List<CertificateResponse> gossipCertificates) {
+        public Builder gossipCertificates(List<CertificateResponse> gossipCertificates) {
             this.gossipCertificates = Objects.requireNonNull(gossipCertificates);
             return this;
         }
 
-        public Builder setHoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
+        public Builder hoursBetweenBackups(@Nullable Integer hoursBetweenBackups) {
             this.hoursBetweenBackups = hoursBetweenBackups;
             return this;
         }
 
-        public Builder setPrometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
+        public Builder prometheusEndpoint(@Nullable SeedNodeResponse prometheusEndpoint) {
             this.prometheusEndpoint = prometheusEndpoint;
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setRepairEnabled(@Nullable Boolean repairEnabled) {
+        public Builder repairEnabled(@Nullable Boolean repairEnabled) {
             this.repairEnabled = repairEnabled;
             return this;
         }
 
-        public Builder setSeedNodes(List<SeedNodeResponse> seedNodes) {
+        public Builder seedNodes(List<SeedNodeResponse> seedNodes) {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }

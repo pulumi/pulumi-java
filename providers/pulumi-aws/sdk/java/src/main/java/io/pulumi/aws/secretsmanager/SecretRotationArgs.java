@@ -100,42 +100,42 @@ public final class SecretRotationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setRotationLambdaArn(Input<String> rotationLambdaArn) {
+        public Builder rotationLambdaArn(Input<String> rotationLambdaArn) {
             this.rotationLambdaArn = Objects.requireNonNull(rotationLambdaArn);
             return this;
         }
 
-        public Builder setRotationLambdaArn(String rotationLambdaArn) {
+        public Builder rotationLambdaArn(String rotationLambdaArn) {
             this.rotationLambdaArn = Input.of(Objects.requireNonNull(rotationLambdaArn));
             return this;
         }
 
-        public Builder setRotationRules(Input<SecretRotationRotationRulesArgs> rotationRules) {
+        public Builder rotationRules(Input<SecretRotationRotationRulesArgs> rotationRules) {
             this.rotationRules = Objects.requireNonNull(rotationRules);
             return this;
         }
 
-        public Builder setRotationRules(SecretRotationRotationRulesArgs rotationRules) {
+        public Builder rotationRules(SecretRotationRotationRulesArgs rotationRules) {
             this.rotationRules = Input.of(Objects.requireNonNull(rotationRules));
             return this;
         }
 
-        public Builder setSecretId(Input<String> secretId) {
+        public Builder secretId(Input<String> secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Input.of(Objects.requireNonNull(secretId));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

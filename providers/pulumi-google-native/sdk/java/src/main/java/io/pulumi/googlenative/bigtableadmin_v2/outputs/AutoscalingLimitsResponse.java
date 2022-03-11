@@ -20,10 +20,10 @@ public final class AutoscalingLimitsResponse {
      */
     private final Integer minServeNodes;
 
-    @OutputCustomType.Constructor({"maxServeNodes","minServeNodes"})
+    @OutputCustomType.Constructor
     private AutoscalingLimitsResponse(
-        Integer maxServeNodes,
-        Integer minServeNodes) {
+        @OutputCustomType.Parameter("maxServeNodes") Integer maxServeNodes,
+        @OutputCustomType.Parameter("minServeNodes") Integer minServeNodes) {
         this.maxServeNodes = maxServeNodes;
         this.minServeNodes = minServeNodes;
     }
@@ -65,12 +65,12 @@ public final class AutoscalingLimitsResponse {
     	      this.minServeNodes = defaults.minServeNodes;
         }
 
-        public Builder setMaxServeNodes(Integer maxServeNodes) {
+        public Builder maxServeNodes(Integer maxServeNodes) {
             this.maxServeNodes = Objects.requireNonNull(maxServeNodes);
             return this;
         }
 
-        public Builder setMinServeNodes(Integer minServeNodes) {
+        public Builder minServeNodes(Integer minServeNodes) {
             this.minServeNodes = Objects.requireNonNull(minServeNodes);
             return this;
         }

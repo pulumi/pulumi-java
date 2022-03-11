@@ -35,12 +35,12 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
      */
     private final String vendorName;
 
-    @OutputCustomType.Constructor({"excludedRules","name","scopeDownStatement","vendorName"})
+    @OutputCustomType.Constructor
     private WebAclRuleStatementManagedRuleGroupStatement(
-        @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
-        String name,
-        @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
-        String vendorName) {
+        @OutputCustomType.Parameter("excludedRules") @Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement,
+        @OutputCustomType.Parameter("vendorName") String vendorName) {
         this.excludedRules = excludedRules;
         this.name = name;
         this.scopeDownStatement = scopeDownStatement;
@@ -102,22 +102,22 @@ public final class WebAclRuleStatementManagedRuleGroupStatement {
     	      this.vendorName = defaults.vendorName;
         }
 
-        public Builder setExcludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules) {
+        public Builder excludedRules(@Nullable List<WebAclRuleStatementManagedRuleGroupStatementExcludedRule> excludedRules) {
             this.excludedRules = excludedRules;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementScopeDownStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }
 
-        public Builder setVendorName(String vendorName) {
+        public Builder vendorName(String vendorName) {
             this.vendorName = Objects.requireNonNull(vendorName);
             return this;
         }

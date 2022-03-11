@@ -32,12 +32,12 @@ public final class ScriptReferenceResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"scriptArguments","scriptData","scriptSource","timeout"})
+    @OutputCustomType.Constructor
     private ScriptReferenceResponse(
-        @Nullable String scriptArguments,
-        @Nullable String scriptData,
-        @Nullable String scriptSource,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("scriptArguments") @Nullable String scriptArguments,
+        @OutputCustomType.Parameter("scriptData") @Nullable String scriptData,
+        @OutputCustomType.Parameter("scriptSource") @Nullable String scriptSource,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.scriptArguments = scriptArguments;
         this.scriptData = scriptData;
         this.scriptSource = scriptSource;
@@ -99,22 +99,22 @@ public final class ScriptReferenceResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setScriptArguments(@Nullable String scriptArguments) {
+        public Builder scriptArguments(@Nullable String scriptArguments) {
             this.scriptArguments = scriptArguments;
             return this;
         }
 
-        public Builder setScriptData(@Nullable String scriptData) {
+        public Builder scriptData(@Nullable String scriptData) {
             this.scriptData = scriptData;
             return this;
         }
 
-        public Builder setScriptSource(@Nullable String scriptSource) {
+        public Builder scriptSource(@Nullable String scriptSource) {
             this.scriptSource = scriptSource;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

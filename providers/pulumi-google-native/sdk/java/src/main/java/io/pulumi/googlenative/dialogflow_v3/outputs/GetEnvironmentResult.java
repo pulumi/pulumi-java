@@ -43,14 +43,14 @@ public final class GetEnvironmentResult {
      */
     private final List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs;
 
-    @OutputCustomType.Constructor({"description","displayName","name","testCasesConfig","updateTime","versionConfigs"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String description,
-        String displayName,
-        String name,
-        GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig,
-        String updateTime,
-        List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("testCasesConfig") GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("versionConfigs") List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs) {
         this.description = description;
         this.displayName = displayName;
         this.name = name;
@@ -132,32 +132,32 @@ public final class GetEnvironmentResult {
     	      this.versionConfigs = defaults.versionConfigs;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTestCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig) {
+        public Builder testCasesConfig(GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse testCasesConfig) {
             this.testCasesConfig = Objects.requireNonNull(testCasesConfig);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVersionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs) {
+        public Builder versionConfigs(List<GoogleCloudDialogflowCxV3EnvironmentVersionConfigResponse> versionConfigs) {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }

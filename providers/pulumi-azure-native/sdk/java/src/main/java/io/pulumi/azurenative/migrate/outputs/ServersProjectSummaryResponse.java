@@ -60,17 +60,17 @@ public final class ServersProjectSummaryResponse {
      */
     private final @Nullable Integer testMigratedCount;
 
-    @OutputCustomType.Constructor({"assessedCount","discoveredCount","extendedSummary","instanceType","lastSummaryRefreshedTime","migratedCount","refreshSummaryState","replicatingCount","testMigratedCount"})
+    @OutputCustomType.Constructor
     private ServersProjectSummaryResponse(
-        @Nullable Integer assessedCount,
-        @Nullable Integer discoveredCount,
-        @Nullable Map<String,String> extendedSummary,
-        String instanceType,
-        @Nullable String lastSummaryRefreshedTime,
-        @Nullable Integer migratedCount,
-        @Nullable String refreshSummaryState,
-        @Nullable Integer replicatingCount,
-        @Nullable Integer testMigratedCount) {
+        @OutputCustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
+        @OutputCustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
+        @OutputCustomType.Parameter("extendedSummary") @Nullable Map<String,String> extendedSummary,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("lastSummaryRefreshedTime") @Nullable String lastSummaryRefreshedTime,
+        @OutputCustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
+        @OutputCustomType.Parameter("refreshSummaryState") @Nullable String refreshSummaryState,
+        @OutputCustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
+        @OutputCustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.extendedSummary = extendedSummary;
@@ -183,47 +183,47 @@ public final class ServersProjectSummaryResponse {
     	      this.testMigratedCount = defaults.testMigratedCount;
         }
 
-        public Builder setAssessedCount(@Nullable Integer assessedCount) {
+        public Builder assessedCount(@Nullable Integer assessedCount) {
             this.assessedCount = assessedCount;
             return this;
         }
 
-        public Builder setDiscoveredCount(@Nullable Integer discoveredCount) {
+        public Builder discoveredCount(@Nullable Integer discoveredCount) {
             this.discoveredCount = discoveredCount;
             return this;
         }
 
-        public Builder setExtendedSummary(@Nullable Map<String,String> extendedSummary) {
+        public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
             this.extendedSummary = extendedSummary;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
+        public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             this.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
-        public Builder setMigratedCount(@Nullable Integer migratedCount) {
+        public Builder migratedCount(@Nullable Integer migratedCount) {
             this.migratedCount = migratedCount;
             return this;
         }
 
-        public Builder setRefreshSummaryState(@Nullable String refreshSummaryState) {
+        public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             this.refreshSummaryState = refreshSummaryState;
             return this;
         }
 
-        public Builder setReplicatingCount(@Nullable Integer replicatingCount) {
+        public Builder replicatingCount(@Nullable Integer replicatingCount) {
             this.replicatingCount = replicatingCount;
             return this;
         }
 
-        public Builder setTestMigratedCount(@Nullable Integer testMigratedCount) {
+        public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
             this.testMigratedCount = testMigratedCount;
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ImportValueResult {
     private final @Nullable Object value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ImportValueResult(@Nullable Object value) {
+    @OutputCustomType.Constructor
+    private ImportValueResult(@OutputCustomType.Parameter("value") @Nullable Object value) {
         this.value = value;
     }
 
@@ -42,7 +42,7 @@ public final class ImportValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable Object value) {
+        public Builder value(@Nullable Object value) {
             this.value = value;
             return this;
         }

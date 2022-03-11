@@ -26,11 +26,11 @@ public final class AwsClusterNetworking {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"podAddressCidrBlocks","serviceAddressCidrBlocks","vpcId"})
+    @OutputCustomType.Constructor
     private AwsClusterNetworking(
-        List<String> podAddressCidrBlocks,
-        List<String> serviceAddressCidrBlocks,
-        String vpcId) {
+        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.vpcId = vpcId;
@@ -82,17 +82,17 @@ public final class AwsClusterNetworking {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setPodAddressCidrBlocks(List<String> podAddressCidrBlocks) {
+        public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             this.podAddressCidrBlocks = Objects.requireNonNull(podAddressCidrBlocks);
             return this;
         }
 
-        public Builder setServiceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
+        public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             this.serviceAddressCidrBlocks = Objects.requireNonNull(serviceAddressCidrBlocks);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

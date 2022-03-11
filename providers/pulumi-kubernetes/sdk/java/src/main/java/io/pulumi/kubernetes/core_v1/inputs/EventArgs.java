@@ -319,172 +319,172 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAction(@Nullable Input<String> action) {
+        public Builder action(@Nullable Input<String> action) {
             this.action = action;
             return this;
         }
 
-        public Builder setAction(@Nullable String action) {
+        public Builder action(@Nullable String action) {
             this.action = Input.ofNullable(action);
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Input<String> apiVersion) {
+        public Builder apiVersion(@Nullable Input<String> apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = Input.ofNullable(apiVersion);
             return this;
         }
 
-        public Builder setCount(@Nullable Input<Integer> count) {
+        public Builder count(@Nullable Input<Integer> count) {
             this.count = count;
             return this;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = Input.ofNullable(count);
             return this;
         }
 
-        public Builder setEventTime(@Nullable Input<String> eventTime) {
+        public Builder eventTime(@Nullable Input<String> eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = Input.ofNullable(eventTime);
             return this;
         }
 
-        public Builder setFirstTimestamp(@Nullable Input<String> firstTimestamp) {
+        public Builder firstTimestamp(@Nullable Input<String> firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
 
-        public Builder setFirstTimestamp(@Nullable String firstTimestamp) {
+        public Builder firstTimestamp(@Nullable String firstTimestamp) {
             this.firstTimestamp = Input.ofNullable(firstTimestamp);
             return this;
         }
 
-        public Builder setInvolvedObject(Input<ObjectReferenceArgs> involvedObject) {
+        public Builder involvedObject(Input<ObjectReferenceArgs> involvedObject) {
             this.involvedObject = Objects.requireNonNull(involvedObject);
             return this;
         }
 
-        public Builder setInvolvedObject(ObjectReferenceArgs involvedObject) {
+        public Builder involvedObject(ObjectReferenceArgs involvedObject) {
             this.involvedObject = Input.of(Objects.requireNonNull(involvedObject));
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLastTimestamp(@Nullable Input<String> lastTimestamp) {
+        public Builder lastTimestamp(@Nullable Input<String> lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
 
-        public Builder setLastTimestamp(@Nullable String lastTimestamp) {
+        public Builder lastTimestamp(@Nullable String lastTimestamp) {
             this.lastTimestamp = Input.ofNullable(lastTimestamp);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setMetadata(Input<ObjectMetaArgs> metadata) {
+        public Builder metadata(Input<ObjectMetaArgs> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMetadata(ObjectMetaArgs metadata) {
+        public Builder metadata(ObjectMetaArgs metadata) {
             this.metadata = Input.of(Objects.requireNonNull(metadata));
             return this;
         }
 
-        public Builder setReason(@Nullable Input<String> reason) {
+        public Builder reason(@Nullable Input<String> reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = Input.ofNullable(reason);
             return this;
         }
 
-        public Builder setRelated(@Nullable Input<ObjectReferenceArgs> related) {
+        public Builder related(@Nullable Input<ObjectReferenceArgs> related) {
             this.related = related;
             return this;
         }
 
-        public Builder setRelated(@Nullable ObjectReferenceArgs related) {
+        public Builder related(@Nullable ObjectReferenceArgs related) {
             this.related = Input.ofNullable(related);
             return this;
         }
 
-        public Builder setReportingComponent(@Nullable Input<String> reportingComponent) {
+        public Builder reportingComponent(@Nullable Input<String> reportingComponent) {
             this.reportingComponent = reportingComponent;
             return this;
         }
 
-        public Builder setReportingComponent(@Nullable String reportingComponent) {
+        public Builder reportingComponent(@Nullable String reportingComponent) {
             this.reportingComponent = Input.ofNullable(reportingComponent);
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable Input<String> reportingInstance) {
+        public Builder reportingInstance(@Nullable Input<String> reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
 
-        public Builder setReportingInstance(@Nullable String reportingInstance) {
+        public Builder reportingInstance(@Nullable String reportingInstance) {
             this.reportingInstance = Input.ofNullable(reportingInstance);
             return this;
         }
 
-        public Builder setSeries(@Nullable Input<EventSeriesArgs> series) {
+        public Builder series(@Nullable Input<EventSeriesArgs> series) {
             this.series = series;
             return this;
         }
 
-        public Builder setSeries(@Nullable EventSeriesArgs series) {
+        public Builder series(@Nullable EventSeriesArgs series) {
             this.series = Input.ofNullable(series);
             return this;
         }
 
-        public Builder setSource(@Nullable Input<EventSourceArgs> source) {
+        public Builder source(@Nullable Input<EventSourceArgs> source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSource(@Nullable EventSourceArgs source) {
+        public Builder source(@Nullable EventSourceArgs source) {
             this.source = Input.ofNullable(source);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

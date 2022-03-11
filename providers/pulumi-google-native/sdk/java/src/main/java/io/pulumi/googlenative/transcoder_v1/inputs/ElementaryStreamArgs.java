@@ -109,42 +109,42 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
     	      this.videoStream = defaults.videoStream;
         }
 
-        public Builder setAudioStream(@Nullable Input<AudioStreamArgs> audioStream) {
+        public Builder audioStream(@Nullable Input<AudioStreamArgs> audioStream) {
             this.audioStream = audioStream;
             return this;
         }
 
-        public Builder setAudioStream(@Nullable AudioStreamArgs audioStream) {
+        public Builder audioStream(@Nullable AudioStreamArgs audioStream) {
             this.audioStream = Input.ofNullable(audioStream);
             return this;
         }
 
-        public Builder setKey(@Nullable Input<String> key) {
+        public Builder key(@Nullable Input<String> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = Input.ofNullable(key);
             return this;
         }
 
-        public Builder setTextStream(@Nullable Input<TextStreamArgs> textStream) {
+        public Builder textStream(@Nullable Input<TextStreamArgs> textStream) {
             this.textStream = textStream;
             return this;
         }
 
-        public Builder setTextStream(@Nullable TextStreamArgs textStream) {
+        public Builder textStream(@Nullable TextStreamArgs textStream) {
             this.textStream = Input.ofNullable(textStream);
             return this;
         }
 
-        public Builder setVideoStream(@Nullable Input<VideoStreamArgs> videoStream) {
+        public Builder videoStream(@Nullable Input<VideoStreamArgs> videoStream) {
             this.videoStream = videoStream;
             return this;
         }
 
-        public Builder setVideoStream(@Nullable VideoStreamArgs videoStream) {
+        public Builder videoStream(@Nullable VideoStreamArgs videoStream) {
             this.videoStream = Input.ofNullable(videoStream);
             return this;
         }

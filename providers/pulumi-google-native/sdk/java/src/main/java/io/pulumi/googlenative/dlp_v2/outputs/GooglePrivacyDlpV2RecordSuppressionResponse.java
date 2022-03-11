@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
      */
     private final GooglePrivacyDlpV2RecordConditionResponse condition;
 
-    @OutputCustomType.Constructor({"condition"})
-    private GooglePrivacyDlpV2RecordSuppressionResponse(GooglePrivacyDlpV2RecordConditionResponse condition) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2RecordSuppressionResponse(@OutputCustomType.Parameter("condition") GooglePrivacyDlpV2RecordConditionResponse condition) {
         this.condition = condition;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2RecordSuppressionResponse {
     	      this.condition = defaults.condition;
         }
 
-        public Builder setCondition(GooglePrivacyDlpV2RecordConditionResponse condition) {
+        public Builder condition(GooglePrivacyDlpV2RecordConditionResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }

@@ -16,10 +16,10 @@ public final class GetOrganizationRootPolicyType {
     private final String status;
     private final String type;
 
-    @OutputCustomType.Constructor({"status","type"})
+    @OutputCustomType.Constructor
     private GetOrganizationRootPolicyType(
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.status = status;
         this.type = type;
     }
@@ -57,12 +57,12 @@ public final class GetOrganizationRootPolicyType {
     	      this.type = defaults.type;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

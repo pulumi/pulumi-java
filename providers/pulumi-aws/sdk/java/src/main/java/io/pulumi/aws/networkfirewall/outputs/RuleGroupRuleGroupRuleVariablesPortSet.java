@@ -21,10 +21,10 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
      */
     private final RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet;
 
-    @OutputCustomType.Constructor({"key","portSet"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRuleVariablesPortSet(
-        String key,
-        RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("portSet") RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
         this.key = key;
         this.portSet = portSet;
     }
@@ -66,12 +66,12 @@ public final class RuleGroupRuleGroupRuleVariablesPortSet {
     	      this.portSet = defaults.portSet;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setPortSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
+        public Builder portSet(RuleGroupRuleGroupRuleVariablesPortSetPortSet portSet) {
             this.portSet = Objects.requireNonNull(portSet);
             return this;
         }

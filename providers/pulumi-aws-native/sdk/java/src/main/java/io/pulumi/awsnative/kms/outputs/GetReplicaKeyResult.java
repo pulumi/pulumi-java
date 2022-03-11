@@ -38,14 +38,14 @@ public final class GetReplicaKeyResult {
      */
     private final @Nullable List<ReplicaKeyTag> tags;
 
-    @OutputCustomType.Constructor({"arn","description","enabled","keyId","keyPolicy","tags"})
+    @OutputCustomType.Constructor
     private GetReplicaKeyResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable Boolean enabled,
-        @Nullable String keyId,
-        @Nullable Object keyPolicy,
-        @Nullable List<ReplicaKeyTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyId") @Nullable String keyId,
+        @OutputCustomType.Parameter("keyPolicy") @Nullable Object keyPolicy,
+        @OutputCustomType.Parameter("tags") @Nullable List<ReplicaKeyTag> tags) {
         this.arn = arn;
         this.description = description;
         this.enabled = enabled;
@@ -119,32 +119,32 @@ public final class GetReplicaKeyResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setKeyId(@Nullable String keyId) {
+        public Builder keyId(@Nullable String keyId) {
             this.keyId = keyId;
             return this;
         }
 
-        public Builder setKeyPolicy(@Nullable Object keyPolicy) {
+        public Builder keyPolicy(@Nullable Object keyPolicy) {
             this.keyPolicy = keyPolicy;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ReplicaKeyTag> tags) {
+        public Builder tags(@Nullable List<ReplicaKeyTag> tags) {
             this.tags = tags;
             return this;
         }

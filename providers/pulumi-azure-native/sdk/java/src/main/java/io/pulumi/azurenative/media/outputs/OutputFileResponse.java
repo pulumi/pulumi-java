@@ -16,8 +16,8 @@ public final class OutputFileResponse {
      */
     private final List<String> labels;
 
-    @OutputCustomType.Constructor({"labels"})
-    private OutputFileResponse(List<String> labels) {
+    @OutputCustomType.Constructor
+    private OutputFileResponse(@OutputCustomType.Parameter("labels") List<String> labels) {
         this.labels = labels;
     }
 
@@ -49,7 +49,7 @@ public final class OutputFileResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setLabels(List<String> labels) {
+        public Builder labels(List<String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

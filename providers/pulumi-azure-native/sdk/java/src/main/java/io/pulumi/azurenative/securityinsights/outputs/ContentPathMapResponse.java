@@ -22,10 +22,10 @@ public final class ContentPathMapResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"contentType","path"})
+    @OutputCustomType.Constructor
     private ContentPathMapResponse(
-        @Nullable String contentType,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.contentType = contentType;
         this.path = path;
     }
@@ -67,12 +67,12 @@ public final class ContentPathMapResponse {
     	      this.path = defaults.path;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

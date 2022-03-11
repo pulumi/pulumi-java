@@ -44,14 +44,14 @@ public final class MetricAlarmMetricQuery {
      */
     private final @Nullable Boolean returnData;
 
-    @OutputCustomType.Constructor({"accountId","expression","id","label","metric","returnData"})
+    @OutputCustomType.Constructor
     private MetricAlarmMetricQuery(
-        @Nullable String accountId,
-        @Nullable String expression,
-        String id,
-        @Nullable String label,
-        @Nullable MetricAlarmMetricQueryMetric metric,
-        @Nullable Boolean returnData) {
+        @OutputCustomType.Parameter("accountId") @Nullable String accountId,
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("label") @Nullable String label,
+        @OutputCustomType.Parameter("metric") @Nullable MetricAlarmMetricQueryMetric metric,
+        @OutputCustomType.Parameter("returnData") @Nullable Boolean returnData) {
         this.accountId = accountId;
         this.expression = expression;
         this.id = id;
@@ -133,32 +133,32 @@ public final class MetricAlarmMetricQuery {
     	      this.returnData = defaults.returnData;
         }
 
-        public Builder setAccountId(@Nullable String accountId) {
+        public Builder accountId(@Nullable String accountId) {
             this.accountId = accountId;
             return this;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = label;
             return this;
         }
 
-        public Builder setMetric(@Nullable MetricAlarmMetricQueryMetric metric) {
+        public Builder metric(@Nullable MetricAlarmMetricQueryMetric metric) {
             this.metric = metric;
             return this;
         }
 
-        public Builder setReturnData(@Nullable Boolean returnData) {
+        public Builder returnData(@Nullable Boolean returnData) {
             this.returnData = returnData;
             return this;
         }

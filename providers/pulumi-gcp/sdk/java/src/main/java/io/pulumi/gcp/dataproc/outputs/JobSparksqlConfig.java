@@ -43,14 +43,14 @@ public final class JobSparksqlConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor({"jarFileUris","loggingConfig","properties","queryFileUri","queryLists","scriptVariables"})
+    @OutputCustomType.Constructor
     private JobSparksqlConfig(
-        @Nullable List<String> jarFileUris,
-        @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
-        @Nullable Map<String,String> properties,
-        @Nullable String queryFileUri,
-        @Nullable List<String> queryLists,
-        @Nullable Map<String,String> scriptVariables) {
+        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @OutputCustomType.Parameter("loggingConfig") @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;
@@ -130,32 +130,32 @@ public final class JobSparksqlConfig {
     	      this.scriptVariables = defaults.scriptVariables;
         }
 
-        public Builder setJarFileUris(@Nullable List<String> jarFileUris) {
+        public Builder jarFileUris(@Nullable List<String> jarFileUris) {
             this.jarFileUris = jarFileUris;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable JobSparksqlConfigLoggingConfig loggingConfig) {
+        public Builder loggingConfig(@Nullable JobSparksqlConfigLoggingConfig loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryLists(@Nullable List<String> queryLists) {
+        public Builder queryLists(@Nullable List<String> queryLists) {
             this.queryLists = queryLists;
             return this;
         }
 
-        public Builder setScriptVariables(@Nullable Map<String,String> scriptVariables) {
+        public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
             this.scriptVariables = scriptVariables;
             return this;
         }

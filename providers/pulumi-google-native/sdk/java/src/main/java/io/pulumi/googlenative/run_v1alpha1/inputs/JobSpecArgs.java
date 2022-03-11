@@ -140,62 +140,62 @@ public final class JobSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ttlSecondsAfterFinished = defaults.ttlSecondsAfterFinished;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Input<String> activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Input<String> activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
             this.activeDeadlineSeconds = Input.ofNullable(activeDeadlineSeconds);
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Input<Integer> backoffLimit) {
+        public Builder backoffLimit(@Nullable Input<Integer> backoffLimit) {
             this.backoffLimit = backoffLimit;
             return this;
         }
 
-        public Builder setBackoffLimit(@Nullable Integer backoffLimit) {
+        public Builder backoffLimit(@Nullable Integer backoffLimit) {
             this.backoffLimit = Input.ofNullable(backoffLimit);
             return this;
         }
 
-        public Builder setCompletions(@Nullable Input<Integer> completions) {
+        public Builder completions(@Nullable Input<Integer> completions) {
             this.completions = completions;
             return this;
         }
 
-        public Builder setCompletions(@Nullable Integer completions) {
+        public Builder completions(@Nullable Integer completions) {
             this.completions = Input.ofNullable(completions);
             return this;
         }
 
-        public Builder setParallelism(@Nullable Input<Integer> parallelism) {
+        public Builder parallelism(@Nullable Input<Integer> parallelism) {
             this.parallelism = parallelism;
             return this;
         }
 
-        public Builder setParallelism(@Nullable Integer parallelism) {
+        public Builder parallelism(@Nullable Integer parallelism) {
             this.parallelism = Input.ofNullable(parallelism);
             return this;
         }
 
-        public Builder setTemplate(@Nullable Input<InstanceTemplateSpecArgs> template) {
+        public Builder template(@Nullable Input<InstanceTemplateSpecArgs> template) {
             this.template = template;
             return this;
         }
 
-        public Builder setTemplate(@Nullable InstanceTemplateSpecArgs template) {
+        public Builder template(@Nullable InstanceTemplateSpecArgs template) {
             this.template = Input.ofNullable(template);
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Input<Integer> ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Input<Integer> ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
 
-        public Builder setTtlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
+        public Builder ttlSecondsAfterFinished(@Nullable Integer ttlSecondsAfterFinished) {
             this.ttlSecondsAfterFinished = Input.ofNullable(ttlSecondsAfterFinished);
             return this;
         }

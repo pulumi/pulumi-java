@@ -187,92 +187,92 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tcp = defaults.tcp;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDestinationNetwork(Input<NetworkRefArgs> destinationNetwork) {
+        public Builder destinationNetwork(Input<NetworkRefArgs> destinationNetwork) {
             this.destinationNetwork = Objects.requireNonNull(destinationNetwork);
             return this;
         }
 
-        public Builder setDestinationNetwork(NetworkRefArgs destinationNetwork) {
+        public Builder destinationNetwork(NetworkRefArgs destinationNetwork) {
             this.destinationNetwork = Input.of(Objects.requireNonNull(destinationNetwork));
             return this;
         }
 
-        public Builder setGatewayResourceName(@Nullable Input<String> gatewayResourceName) {
+        public Builder gatewayResourceName(@Nullable Input<String> gatewayResourceName) {
             this.gatewayResourceName = gatewayResourceName;
             return this;
         }
 
-        public Builder setGatewayResourceName(@Nullable String gatewayResourceName) {
+        public Builder gatewayResourceName(@Nullable String gatewayResourceName) {
             this.gatewayResourceName = Input.ofNullable(gatewayResourceName);
             return this;
         }
 
-        public Builder setHttp(@Nullable Input<List<HttpConfigArgs>> http) {
+        public Builder http(@Nullable Input<List<HttpConfigArgs>> http) {
             this.http = http;
             return this;
         }
 
-        public Builder setHttp(@Nullable List<HttpConfigArgs> http) {
+        public Builder http(@Nullable List<HttpConfigArgs> http) {
             this.http = Input.ofNullable(http);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSourceNetwork(Input<NetworkRefArgs> sourceNetwork) {
+        public Builder sourceNetwork(Input<NetworkRefArgs> sourceNetwork) {
             this.sourceNetwork = Objects.requireNonNull(sourceNetwork);
             return this;
         }
 
-        public Builder setSourceNetwork(NetworkRefArgs sourceNetwork) {
+        public Builder sourceNetwork(NetworkRefArgs sourceNetwork) {
             this.sourceNetwork = Input.of(Objects.requireNonNull(sourceNetwork));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTcp(@Nullable Input<List<TcpConfigArgs>> tcp) {
+        public Builder tcp(@Nullable Input<List<TcpConfigArgs>> tcp) {
             this.tcp = tcp;
             return this;
         }
 
-        public Builder setTcp(@Nullable List<TcpConfigArgs> tcp) {
+        public Builder tcp(@Nullable List<TcpConfigArgs> tcp) {
             this.tcp = Input.ofNullable(tcp);
             return this;
         }

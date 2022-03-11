@@ -42,14 +42,14 @@ public final class SiteSpnPropertiesResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"aadAuthority","applicationId","audience","objectId","rawCertData","tenantId"})
+    @OutputCustomType.Constructor
     private SiteSpnPropertiesResponse(
-        @Nullable String aadAuthority,
-        @Nullable String applicationId,
-        @Nullable String audience,
-        @Nullable String objectId,
-        @Nullable String rawCertData,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("aadAuthority") @Nullable String aadAuthority,
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("audience") @Nullable String audience,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("rawCertData") @Nullable String rawCertData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.aadAuthority = aadAuthority;
         this.applicationId = applicationId;
         this.audience = audience;
@@ -131,32 +131,32 @@ public final class SiteSpnPropertiesResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAadAuthority(@Nullable String aadAuthority) {
+        public Builder aadAuthority(@Nullable String aadAuthority) {
             this.aadAuthority = aadAuthority;
             return this;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setAudience(@Nullable String audience) {
+        public Builder audience(@Nullable String audience) {
             this.audience = audience;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setRawCertData(@Nullable String rawCertData) {
+        public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

@@ -98,22 +98,22 @@ public final class ValidationRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setRule(Input<String> rule) {
+        public Builder rule(Input<String> rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Input.of(Objects.requireNonNull(rule));
             return this;
         }

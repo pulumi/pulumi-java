@@ -36,13 +36,13 @@ public final class AdvancedMachineFeaturesResponse {
      */
     private final Integer visibleCoreCount;
 
-    @OutputCustomType.Constructor({"enableNestedVirtualization","enableUefiNetworking","numaNodeCount","threadsPerCore","visibleCoreCount"})
+    @OutputCustomType.Constructor
     private AdvancedMachineFeaturesResponse(
-        Boolean enableNestedVirtualization,
-        Boolean enableUefiNetworking,
-        Integer numaNodeCount,
-        Integer threadsPerCore,
-        Integer visibleCoreCount) {
+        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @OutputCustomType.Parameter("enableUefiNetworking") Boolean enableUefiNetworking,
+        @OutputCustomType.Parameter("numaNodeCount") Integer numaNodeCount,
+        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore,
+        @OutputCustomType.Parameter("visibleCoreCount") Integer visibleCoreCount) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.enableUefiNetworking = enableUefiNetworking;
         this.numaNodeCount = numaNodeCount;
@@ -114,27 +114,27 @@ public final class AdvancedMachineFeaturesResponse {
     	      this.visibleCoreCount = defaults.visibleCoreCount;
         }
 
-        public Builder setEnableNestedVirtualization(Boolean enableNestedVirtualization) {
+        public Builder enableNestedVirtualization(Boolean enableNestedVirtualization) {
             this.enableNestedVirtualization = Objects.requireNonNull(enableNestedVirtualization);
             return this;
         }
 
-        public Builder setEnableUefiNetworking(Boolean enableUefiNetworking) {
+        public Builder enableUefiNetworking(Boolean enableUefiNetworking) {
             this.enableUefiNetworking = Objects.requireNonNull(enableUefiNetworking);
             return this;
         }
 
-        public Builder setNumaNodeCount(Integer numaNodeCount) {
+        public Builder numaNodeCount(Integer numaNodeCount) {
             this.numaNodeCount = Objects.requireNonNull(numaNodeCount);
             return this;
         }
 
-        public Builder setThreadsPerCore(Integer threadsPerCore) {
+        public Builder threadsPerCore(Integer threadsPerCore) {
             this.threadsPerCore = Objects.requireNonNull(threadsPerCore);
             return this;
         }
 
-        public Builder setVisibleCoreCount(Integer visibleCoreCount) {
+        public Builder visibleCoreCount(Integer visibleCoreCount) {
             this.visibleCoreCount = Objects.requireNonNull(visibleCoreCount);
             return this;
         }

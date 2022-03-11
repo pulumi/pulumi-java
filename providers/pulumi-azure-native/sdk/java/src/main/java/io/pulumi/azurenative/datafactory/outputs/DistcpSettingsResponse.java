@@ -27,11 +27,11 @@ public final class DistcpSettingsResponse {
      */
     private final Object tempScriptPath;
 
-    @OutputCustomType.Constructor({"distcpOptions","resourceManagerEndpoint","tempScriptPath"})
+    @OutputCustomType.Constructor
     private DistcpSettingsResponse(
-        @Nullable Object distcpOptions,
-        Object resourceManagerEndpoint,
-        Object tempScriptPath) {
+        @OutputCustomType.Parameter("distcpOptions") @Nullable Object distcpOptions,
+        @OutputCustomType.Parameter("resourceManagerEndpoint") Object resourceManagerEndpoint,
+        @OutputCustomType.Parameter("tempScriptPath") Object tempScriptPath) {
         this.distcpOptions = distcpOptions;
         this.resourceManagerEndpoint = resourceManagerEndpoint;
         this.tempScriptPath = tempScriptPath;
@@ -83,17 +83,17 @@ public final class DistcpSettingsResponse {
     	      this.tempScriptPath = defaults.tempScriptPath;
         }
 
-        public Builder setDistcpOptions(@Nullable Object distcpOptions) {
+        public Builder distcpOptions(@Nullable Object distcpOptions) {
             this.distcpOptions = distcpOptions;
             return this;
         }
 
-        public Builder setResourceManagerEndpoint(Object resourceManagerEndpoint) {
+        public Builder resourceManagerEndpoint(Object resourceManagerEndpoint) {
             this.resourceManagerEndpoint = Objects.requireNonNull(resourceManagerEndpoint);
             return this;
         }
 
-        public Builder setTempScriptPath(Object tempScriptPath) {
+        public Builder tempScriptPath(Object tempScriptPath) {
             this.tempScriptPath = Objects.requireNonNull(tempScriptPath);
             return this;
         }

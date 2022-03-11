@@ -27,11 +27,11 @@ public final class APIServerProfileResponse {
      */
     private final @Nullable String visibility;
 
-    @OutputCustomType.Constructor({"ip","url","visibility"})
+    @OutputCustomType.Constructor
     private APIServerProfileResponse(
-        @Nullable String ip,
-        @Nullable String url,
-        @Nullable String visibility) {
+        @OutputCustomType.Parameter("ip") @Nullable String ip,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("visibility") @Nullable String visibility) {
         this.ip = ip;
         this.url = url;
         this.visibility = visibility;
@@ -83,17 +83,17 @@ public final class APIServerProfileResponse {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setIp(@Nullable String ip) {
+        public Builder ip(@Nullable String ip) {
             this.ip = ip;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = visibility;
             return this;
         }

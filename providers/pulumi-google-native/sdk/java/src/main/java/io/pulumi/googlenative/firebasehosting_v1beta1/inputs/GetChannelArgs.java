@@ -74,17 +74,17 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.siteId = defaults.siteId;
         }
 
-        public Builder setChannelId(String channelId) {
+        public Builder channelId(String channelId) {
             this.channelId = Objects.requireNonNull(channelId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSiteId(String siteId) {
+        public Builder siteId(String siteId) {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }

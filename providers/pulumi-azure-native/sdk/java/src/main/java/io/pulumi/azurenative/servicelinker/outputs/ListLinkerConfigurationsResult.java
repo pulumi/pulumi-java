@@ -17,8 +17,8 @@ public final class ListLinkerConfigurationsResult {
      */
     private final @Nullable List<SourceConfigurationResponse> configurations;
 
-    @OutputCustomType.Constructor({"configurations"})
-    private ListLinkerConfigurationsResult(@Nullable List<SourceConfigurationResponse> configurations) {
+    @OutputCustomType.Constructor
+    private ListLinkerConfigurationsResult(@OutputCustomType.Parameter("configurations") @Nullable List<SourceConfigurationResponse> configurations) {
         this.configurations = configurations;
     }
 
@@ -50,7 +50,7 @@ public final class ListLinkerConfigurationsResult {
     	      this.configurations = defaults.configurations;
         }
 
-        public Builder setConfigurations(@Nullable List<SourceConfigurationResponse> configurations) {
+        public Builder configurations(@Nullable List<SourceConfigurationResponse> configurations) {
             this.configurations = configurations;
             return this;
         }

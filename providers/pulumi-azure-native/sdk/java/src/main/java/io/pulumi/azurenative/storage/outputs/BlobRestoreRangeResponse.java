@@ -20,10 +20,10 @@ public final class BlobRestoreRangeResponse {
      */
     private final String startRange;
 
-    @OutputCustomType.Constructor({"endRange","startRange"})
+    @OutputCustomType.Constructor
     private BlobRestoreRangeResponse(
-        String endRange,
-        String startRange) {
+        @OutputCustomType.Parameter("endRange") String endRange,
+        @OutputCustomType.Parameter("startRange") String startRange) {
         this.endRange = endRange;
         this.startRange = startRange;
     }
@@ -65,12 +65,12 @@ public final class BlobRestoreRangeResponse {
     	      this.startRange = defaults.startRange;
         }
 
-        public Builder setEndRange(String endRange) {
+        public Builder endRange(String endRange) {
             this.endRange = Objects.requireNonNull(endRange);
             return this;
         }
 
-        public Builder setStartRange(String startRange) {
+        public Builder startRange(String startRange) {
             this.startRange = Objects.requireNonNull(startRange);
             return this;
         }

@@ -84,32 +84,32 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     	      this.glueConnectionName = defaults.glueConnectionName;
         }
 
-        public Builder setDatabaseOptions(Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
+        public Builder databaseOptions(Input<JobDatabaseTableOutputOptionsArgs> databaseOptions) {
             this.databaseOptions = Objects.requireNonNull(databaseOptions);
             return this;
         }
 
-        public Builder setDatabaseOptions(JobDatabaseTableOutputOptionsArgs databaseOptions) {
+        public Builder databaseOptions(JobDatabaseTableOutputOptionsArgs databaseOptions) {
             this.databaseOptions = Input.of(Objects.requireNonNull(databaseOptions));
             return this;
         }
 
-        public Builder setDatabaseOutputMode(@Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
+        public Builder databaseOutputMode(@Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode) {
             this.databaseOutputMode = databaseOutputMode;
             return this;
         }
 
-        public Builder setDatabaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
+        public Builder databaseOutputMode(@Nullable JobDatabaseOutputDatabaseOutputMode databaseOutputMode) {
             this.databaseOutputMode = Input.ofNullable(databaseOutputMode);
             return this;
         }
 
-        public Builder setGlueConnectionName(Input<String> glueConnectionName) {
+        public Builder glueConnectionName(Input<String> glueConnectionName) {
             this.glueConnectionName = Objects.requireNonNull(glueConnectionName);
             return this;
         }
 
-        public Builder setGlueConnectionName(String glueConnectionName) {
+        public Builder glueConnectionName(String glueConnectionName) {
             this.glueConnectionName = Input.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }

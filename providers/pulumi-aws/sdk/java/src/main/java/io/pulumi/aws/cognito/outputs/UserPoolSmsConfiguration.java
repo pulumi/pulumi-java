@@ -20,10 +20,10 @@ public final class UserPoolSmsConfiguration {
      */
     private final String snsCallerArn;
 
-    @OutputCustomType.Constructor({"externalId","snsCallerArn"})
+    @OutputCustomType.Constructor
     private UserPoolSmsConfiguration(
-        String externalId,
-        String snsCallerArn) {
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("snsCallerArn") String snsCallerArn) {
         this.externalId = externalId;
         this.snsCallerArn = snsCallerArn;
     }
@@ -65,12 +65,12 @@ public final class UserPoolSmsConfiguration {
     	      this.snsCallerArn = defaults.snsCallerArn;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setSnsCallerArn(String snsCallerArn) {
+        public Builder snsCallerArn(String snsCallerArn) {
             this.snsCallerArn = Objects.requireNonNull(snsCallerArn);
             return this;
         }

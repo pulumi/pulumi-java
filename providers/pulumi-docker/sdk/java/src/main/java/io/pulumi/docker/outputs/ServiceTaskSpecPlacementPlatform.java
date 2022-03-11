@@ -12,10 +12,10 @@ public final class ServiceTaskSpecPlacementPlatform {
     private final String architecture;
     private final String os;
 
-    @OutputCustomType.Constructor({"architecture","os"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecPlacementPlatform(
-        String architecture,
-        String os) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("os") String os) {
         this.architecture = architecture;
         this.os = os;
     }
@@ -49,12 +49,12 @@ public final class ServiceTaskSpecPlacementPlatform {
     	      this.os = defaults.os;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setOs(String os) {
+        public Builder os(String os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }

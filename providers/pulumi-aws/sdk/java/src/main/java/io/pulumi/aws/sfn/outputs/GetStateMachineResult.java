@@ -41,15 +41,15 @@ public final class GetStateMachineResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"arn","creationDate","definition","id","name","roleArn","status"})
+    @OutputCustomType.Constructor
     private GetStateMachineResult(
-        String arn,
-        String creationDate,
-        String definition,
-        String id,
-        String name,
-        String roleArn,
-        String status) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("status") String status) {
         this.arn = arn;
         this.creationDate = creationDate;
         this.definition = definition;
@@ -137,37 +137,37 @@ public final class GetStateMachineResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setDefinition(String definition) {
+        public Builder definition(String definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

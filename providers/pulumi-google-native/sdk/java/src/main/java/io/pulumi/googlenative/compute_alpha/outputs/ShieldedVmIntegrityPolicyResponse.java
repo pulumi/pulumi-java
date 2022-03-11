@@ -15,8 +15,8 @@ public final class ShieldedVmIntegrityPolicyResponse {
      */
     private final Boolean updateAutoLearnPolicy;
 
-    @OutputCustomType.Constructor({"updateAutoLearnPolicy"})
-    private ShieldedVmIntegrityPolicyResponse(Boolean updateAutoLearnPolicy) {
+    @OutputCustomType.Constructor
+    private ShieldedVmIntegrityPolicyResponse(@OutputCustomType.Parameter("updateAutoLearnPolicy") Boolean updateAutoLearnPolicy) {
         this.updateAutoLearnPolicy = updateAutoLearnPolicy;
     }
 
@@ -48,7 +48,7 @@ public final class ShieldedVmIntegrityPolicyResponse {
     	      this.updateAutoLearnPolicy = defaults.updateAutoLearnPolicy;
         }
 
-        public Builder setUpdateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
+        public Builder updateAutoLearnPolicy(Boolean updateAutoLearnPolicy) {
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }

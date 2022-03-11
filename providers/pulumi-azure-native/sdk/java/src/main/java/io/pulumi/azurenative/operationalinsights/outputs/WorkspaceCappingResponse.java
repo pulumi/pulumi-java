@@ -28,11 +28,11 @@ public final class WorkspaceCappingResponse {
      */
     private final String quotaNextResetTime;
 
-    @OutputCustomType.Constructor({"dailyQuotaGb","dataIngestionStatus","quotaNextResetTime"})
+    @OutputCustomType.Constructor
     private WorkspaceCappingResponse(
-        @Nullable Double dailyQuotaGb,
-        String dataIngestionStatus,
-        String quotaNextResetTime) {
+        @OutputCustomType.Parameter("dailyQuotaGb") @Nullable Double dailyQuotaGb,
+        @OutputCustomType.Parameter("dataIngestionStatus") String dataIngestionStatus,
+        @OutputCustomType.Parameter("quotaNextResetTime") String quotaNextResetTime) {
         this.dailyQuotaGb = dailyQuotaGb;
         this.dataIngestionStatus = dataIngestionStatus;
         this.quotaNextResetTime = quotaNextResetTime;
@@ -84,17 +84,17 @@ public final class WorkspaceCappingResponse {
     	      this.quotaNextResetTime = defaults.quotaNextResetTime;
         }
 
-        public Builder setDailyQuotaGb(@Nullable Double dailyQuotaGb) {
+        public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
             this.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
-        public Builder setDataIngestionStatus(String dataIngestionStatus) {
+        public Builder dataIngestionStatus(String dataIngestionStatus) {
             this.dataIngestionStatus = Objects.requireNonNull(dataIngestionStatus);
             return this;
         }
 
-        public Builder setQuotaNextResetTime(String quotaNextResetTime) {
+        public Builder quotaNextResetTime(String quotaNextResetTime) {
             this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
             return this;
         }

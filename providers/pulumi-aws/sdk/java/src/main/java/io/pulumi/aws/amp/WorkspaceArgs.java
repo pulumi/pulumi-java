@@ -53,12 +53,12 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.alias = defaults.alias;
         }
 
-        public Builder setAlias(@Nullable Input<String> alias) {
+        public Builder alias(@Nullable Input<String> alias) {
             this.alias = alias;
             return this;
         }
 
-        public Builder setAlias(@Nullable String alias) {
+        public Builder alias(@Nullable String alias) {
             this.alias = Input.ofNullable(alias);
             return this;
         }

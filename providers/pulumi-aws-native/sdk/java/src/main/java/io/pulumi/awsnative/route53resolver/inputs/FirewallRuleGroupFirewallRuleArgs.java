@@ -158,72 +158,72 @@ public final class FirewallRuleGroupFirewallRuleArgs extends io.pulumi.resources
     	      this.priority = defaults.priority;
         }
 
-        public Builder setAction(Input<FirewallRuleGroupFirewallRuleAction> action) {
+        public Builder action(Input<FirewallRuleGroupFirewallRuleAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(FirewallRuleGroupFirewallRuleAction action) {
+        public Builder action(FirewallRuleGroupFirewallRuleAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
 
-        public Builder setBlockOverrideDnsType(@Nullable Input<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable Input<FirewallRuleGroupFirewallRuleBlockOverrideDnsType> blockOverrideDnsType) {
             this.blockOverrideDnsType = blockOverrideDnsType;
             return this;
         }
 
-        public Builder setBlockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
+        public Builder blockOverrideDnsType(@Nullable FirewallRuleGroupFirewallRuleBlockOverrideDnsType blockOverrideDnsType) {
             this.blockOverrideDnsType = Input.ofNullable(blockOverrideDnsType);
             return this;
         }
 
-        public Builder setBlockOverrideDomain(@Nullable Input<String> blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable Input<String> blockOverrideDomain) {
             this.blockOverrideDomain = blockOverrideDomain;
             return this;
         }
 
-        public Builder setBlockOverrideDomain(@Nullable String blockOverrideDomain) {
+        public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
             this.blockOverrideDomain = Input.ofNullable(blockOverrideDomain);
             return this;
         }
 
-        public Builder setBlockOverrideTtl(@Nullable Input<Integer> blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Input<Integer> blockOverrideTtl) {
             this.blockOverrideTtl = blockOverrideTtl;
             return this;
         }
 
-        public Builder setBlockOverrideTtl(@Nullable Integer blockOverrideTtl) {
+        public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
             this.blockOverrideTtl = Input.ofNullable(blockOverrideTtl);
             return this;
         }
 
-        public Builder setBlockResponse(@Nullable Input<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse) {
+        public Builder blockResponse(@Nullable Input<FirewallRuleGroupFirewallRuleBlockResponse> blockResponse) {
             this.blockResponse = blockResponse;
             return this;
         }
 
-        public Builder setBlockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
+        public Builder blockResponse(@Nullable FirewallRuleGroupFirewallRuleBlockResponse blockResponse) {
             this.blockResponse = Input.ofNullable(blockResponse);
             return this;
         }
 
-        public Builder setFirewallDomainListId(Input<String> firewallDomainListId) {
+        public Builder firewallDomainListId(Input<String> firewallDomainListId) {
             this.firewallDomainListId = Objects.requireNonNull(firewallDomainListId);
             return this;
         }
 
-        public Builder setFirewallDomainListId(String firewallDomainListId) {
+        public Builder firewallDomainListId(String firewallDomainListId) {
             this.firewallDomainListId = Input.of(Objects.requireNonNull(firewallDomainListId));
             return this;
         }
 
-        public Builder setPriority(Input<Integer> priority) {
+        public Builder priority(Input<Integer> priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Input.of(Objects.requireNonNull(priority));
             return this;
         }

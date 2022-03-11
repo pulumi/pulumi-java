@@ -40,13 +40,13 @@ public final class Container {
      */
     private final @Nullable List<ContainerPortInfo> ports;
 
-    @OutputCustomType.Constructor({"command","containerName","environment","image","ports"})
+    @OutputCustomType.Constructor
     private Container(
-        @Nullable List<String> command,
-        @Nullable String containerName,
-        @Nullable List<ContainerEnvironmentVariable> environment,
-        @Nullable String image,
-        @Nullable List<ContainerPortInfo> ports) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("environment") @Nullable List<ContainerEnvironmentVariable> environment,
+        @OutputCustomType.Parameter("image") @Nullable String image,
+        @OutputCustomType.Parameter("ports") @Nullable List<ContainerPortInfo> ports) {
         this.command = command;
         this.containerName = containerName;
         this.environment = environment;
@@ -118,27 +118,27 @@ public final class Container {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable List<ContainerEnvironmentVariable> environment) {
+        public Builder environment(@Nullable List<ContainerEnvironmentVariable> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setImage(@Nullable String image) {
+        public Builder image(@Nullable String image) {
             this.image = image;
             return this;
         }
 
-        public Builder setPorts(@Nullable List<ContainerPortInfo> ports) {
+        public Builder ports(@Nullable List<ContainerPortInfo> ports) {
             this.ports = ports;
             return this;
         }

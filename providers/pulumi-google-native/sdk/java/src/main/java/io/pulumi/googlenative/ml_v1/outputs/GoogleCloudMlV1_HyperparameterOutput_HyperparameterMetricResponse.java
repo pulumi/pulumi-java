@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
      */
     private final String trainingStep;
 
-    @OutputCustomType.Constructor({"objectiveValue","trainingStep"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResponse(
-        Double objectiveValue,
-        String trainingStep) {
+        @OutputCustomType.Parameter("objectiveValue") Double objectiveValue,
+        @OutputCustomType.Parameter("trainingStep") String trainingStep) {
         this.objectiveValue = objectiveValue;
         this.trainingStep = trainingStep;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricResp
     	      this.trainingStep = defaults.trainingStep;
         }
 
-        public Builder setObjectiveValue(Double objectiveValue) {
+        public Builder objectiveValue(Double objectiveValue) {
             this.objectiveValue = Objects.requireNonNull(objectiveValue);
             return this;
         }
 
-        public Builder setTrainingStep(String trainingStep) {
+        public Builder trainingStep(String trainingStep) {
             this.trainingStep = Objects.requireNonNull(trainingStep);
             return this;
         }

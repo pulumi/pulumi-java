@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"quickReplies","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse(
-        List<String> quickReplies,
-        String title) {
+        @OutputCustomType.Parameter("quickReplies") List<String> quickReplies,
+        @OutputCustomType.Parameter("title") String title) {
         this.quickReplies = quickReplies;
         this.title = title;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse
     	      this.title = defaults.title;
         }
 
-        public Builder setQuickReplies(List<String> quickReplies) {
+        public Builder quickReplies(List<String> quickReplies) {
             this.quickReplies = Objects.requireNonNull(quickReplies);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

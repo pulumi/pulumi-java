@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BotVersionLocaleDetails {
     private final String sourceBotVersion;
 
-    @OutputCustomType.Constructor({"sourceBotVersion"})
-    private BotVersionLocaleDetails(String sourceBotVersion) {
+    @OutputCustomType.Constructor
+    private BotVersionLocaleDetails(@OutputCustomType.Parameter("sourceBotVersion") String sourceBotVersion) {
         this.sourceBotVersion = sourceBotVersion;
     }
 
@@ -40,7 +40,7 @@ public final class BotVersionLocaleDetails {
     	      this.sourceBotVersion = defaults.sourceBotVersion;
         }
 
-        public Builder setSourceBotVersion(String sourceBotVersion) {
+        public Builder sourceBotVersion(String sourceBotVersion) {
             this.sourceBotVersion = Objects.requireNonNull(sourceBotVersion);
             return this;
         }

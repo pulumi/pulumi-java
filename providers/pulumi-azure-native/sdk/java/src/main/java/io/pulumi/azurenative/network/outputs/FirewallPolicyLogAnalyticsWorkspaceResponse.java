@@ -23,10 +23,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
      */
     private final @Nullable SubResourceResponse workspaceId;
 
-    @OutputCustomType.Constructor({"region","workspaceId"})
+    @OutputCustomType.Constructor
     private FirewallPolicyLogAnalyticsWorkspaceResponse(
-        @Nullable String region,
-        @Nullable SubResourceResponse workspaceId) {
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("workspaceId") @Nullable SubResourceResponse workspaceId) {
         this.region = region;
         this.workspaceId = workspaceId;
     }
@@ -68,12 +68,12 @@ public final class FirewallPolicyLogAnalyticsWorkspaceResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable SubResourceResponse workspaceId) {
+        public Builder workspaceId(@Nullable SubResourceResponse workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

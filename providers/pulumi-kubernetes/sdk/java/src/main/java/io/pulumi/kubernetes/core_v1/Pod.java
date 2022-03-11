@@ -158,8 +158,8 @@ public class Pod extends io.pulumi.resources.CustomResource {
     private static PodArgs makeArgs(@Nullable PodArgs args) {
         var builder = args == null ? PodArgs.builder() : PodArgs.builder(args);
         return builder
-            .setApiVersion("v1")
-            .setKind("Pod")
+            .apiVersion("v1")
+            .kind("Pod")
             .build();
     }
 

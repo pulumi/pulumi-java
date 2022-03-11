@@ -57,12 +57,12 @@ public final class LimitRangeSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.limits = defaults.limits;
         }
 
-        public Builder setLimits(Input<List<LimitRangeItemArgs>> limits) {
+        public Builder limits(Input<List<LimitRangeItemArgs>> limits) {
             this.limits = Objects.requireNonNull(limits);
             return this;
         }
 
-        public Builder setLimits(List<LimitRangeItemArgs> limits) {
+        public Builder limits(List<LimitRangeItemArgs> limits) {
             this.limits = Input.of(Objects.requireNonNull(limits));
             return this;
         }

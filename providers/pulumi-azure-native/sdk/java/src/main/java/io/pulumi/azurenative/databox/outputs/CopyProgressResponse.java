@@ -88,23 +88,23 @@ public final class CopyProgressResponse {
      */
     private final String transferType;
 
-    @OutputCustomType.Constructor({"accountId","bytesProcessed","dataAccountType","directoriesErroredOut","filesErroredOut","filesProcessed","invalidDirectoriesProcessed","invalidFileBytesUploaded","invalidFilesProcessed","isEnumerationInProgress","renamedContainerCount","storageAccountName","totalBytesToProcess","totalFilesToProcess","transferType"})
+    @OutputCustomType.Constructor
     private CopyProgressResponse(
-        String accountId,
-        Double bytesProcessed,
-        String dataAccountType,
-        Double directoriesErroredOut,
-        Double filesErroredOut,
-        Double filesProcessed,
-        Double invalidDirectoriesProcessed,
-        Double invalidFileBytesUploaded,
-        Double invalidFilesProcessed,
-        Boolean isEnumerationInProgress,
-        Double renamedContainerCount,
-        String storageAccountName,
-        Double totalBytesToProcess,
-        Double totalFilesToProcess,
-        String transferType) {
+        @OutputCustomType.Parameter("accountId") String accountId,
+        @OutputCustomType.Parameter("bytesProcessed") Double bytesProcessed,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("directoriesErroredOut") Double directoriesErroredOut,
+        @OutputCustomType.Parameter("filesErroredOut") Double filesErroredOut,
+        @OutputCustomType.Parameter("filesProcessed") Double filesProcessed,
+        @OutputCustomType.Parameter("invalidDirectoriesProcessed") Double invalidDirectoriesProcessed,
+        @OutputCustomType.Parameter("invalidFileBytesUploaded") Double invalidFileBytesUploaded,
+        @OutputCustomType.Parameter("invalidFilesProcessed") Double invalidFilesProcessed,
+        @OutputCustomType.Parameter("isEnumerationInProgress") Boolean isEnumerationInProgress,
+        @OutputCustomType.Parameter("renamedContainerCount") Double renamedContainerCount,
+        @OutputCustomType.Parameter("storageAccountName") String storageAccountName,
+        @OutputCustomType.Parameter("totalBytesToProcess") Double totalBytesToProcess,
+        @OutputCustomType.Parameter("totalFilesToProcess") Double totalFilesToProcess,
+        @OutputCustomType.Parameter("transferType") String transferType) {
         this.accountId = accountId;
         this.bytesProcessed = bytesProcessed;
         this.dataAccountType = dataAccountType;
@@ -277,77 +277,77 @@ public final class CopyProgressResponse {
     	      this.transferType = defaults.transferType;
         }
 
-        public Builder setAccountId(String accountId) {
+        public Builder accountId(String accountId) {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
 
-        public Builder setBytesProcessed(Double bytesProcessed) {
+        public Builder bytesProcessed(Double bytesProcessed) {
             this.bytesProcessed = Objects.requireNonNull(bytesProcessed);
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setDirectoriesErroredOut(Double directoriesErroredOut) {
+        public Builder directoriesErroredOut(Double directoriesErroredOut) {
             this.directoriesErroredOut = Objects.requireNonNull(directoriesErroredOut);
             return this;
         }
 
-        public Builder setFilesErroredOut(Double filesErroredOut) {
+        public Builder filesErroredOut(Double filesErroredOut) {
             this.filesErroredOut = Objects.requireNonNull(filesErroredOut);
             return this;
         }
 
-        public Builder setFilesProcessed(Double filesProcessed) {
+        public Builder filesProcessed(Double filesProcessed) {
             this.filesProcessed = Objects.requireNonNull(filesProcessed);
             return this;
         }
 
-        public Builder setInvalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
+        public Builder invalidDirectoriesProcessed(Double invalidDirectoriesProcessed) {
             this.invalidDirectoriesProcessed = Objects.requireNonNull(invalidDirectoriesProcessed);
             return this;
         }
 
-        public Builder setInvalidFileBytesUploaded(Double invalidFileBytesUploaded) {
+        public Builder invalidFileBytesUploaded(Double invalidFileBytesUploaded) {
             this.invalidFileBytesUploaded = Objects.requireNonNull(invalidFileBytesUploaded);
             return this;
         }
 
-        public Builder setInvalidFilesProcessed(Double invalidFilesProcessed) {
+        public Builder invalidFilesProcessed(Double invalidFilesProcessed) {
             this.invalidFilesProcessed = Objects.requireNonNull(invalidFilesProcessed);
             return this;
         }
 
-        public Builder setIsEnumerationInProgress(Boolean isEnumerationInProgress) {
+        public Builder isEnumerationInProgress(Boolean isEnumerationInProgress) {
             this.isEnumerationInProgress = Objects.requireNonNull(isEnumerationInProgress);
             return this;
         }
 
-        public Builder setRenamedContainerCount(Double renamedContainerCount) {
+        public Builder renamedContainerCount(Double renamedContainerCount) {
             this.renamedContainerCount = Objects.requireNonNull(renamedContainerCount);
             return this;
         }
 
-        public Builder setStorageAccountName(String storageAccountName) {
+        public Builder storageAccountName(String storageAccountName) {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
 
-        public Builder setTotalBytesToProcess(Double totalBytesToProcess) {
+        public Builder totalBytesToProcess(Double totalBytesToProcess) {
             this.totalBytesToProcess = Objects.requireNonNull(totalBytesToProcess);
             return this;
         }
 
-        public Builder setTotalFilesToProcess(Double totalFilesToProcess) {
+        public Builder totalFilesToProcess(Double totalFilesToProcess) {
             this.totalFilesToProcess = Objects.requireNonNull(totalFilesToProcess);
             return this;
         }
 
-        public Builder setTransferType(String transferType) {
+        public Builder transferType(String transferType) {
             this.transferType = Objects.requireNonNull(transferType);
             return this;
         }

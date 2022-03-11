@@ -111,42 +111,42 @@ public final class OrderItemDetailsArgs extends io.pulumi.resources.ResourceArgs
     	      this.productDetails = defaults.productDetails;
         }
 
-        public Builder setNotificationEmailList(@Nullable Input<List<String>> notificationEmailList) {
+        public Builder notificationEmailList(@Nullable Input<List<String>> notificationEmailList) {
             this.notificationEmailList = notificationEmailList;
             return this;
         }
 
-        public Builder setNotificationEmailList(@Nullable List<String> notificationEmailList) {
+        public Builder notificationEmailList(@Nullable List<String> notificationEmailList) {
             this.notificationEmailList = Input.ofNullable(notificationEmailList);
             return this;
         }
 
-        public Builder setOrderItemType(Input<Either<String,OrderItemType>> orderItemType) {
+        public Builder orderItemType(Input<Either<String,OrderItemType>> orderItemType) {
             this.orderItemType = Objects.requireNonNull(orderItemType);
             return this;
         }
 
-        public Builder setOrderItemType(Either<String,OrderItemType> orderItemType) {
+        public Builder orderItemType(Either<String,OrderItemType> orderItemType) {
             this.orderItemType = Input.of(Objects.requireNonNull(orderItemType));
             return this;
         }
 
-        public Builder setPreferences(@Nullable Input<PreferencesArgs> preferences) {
+        public Builder preferences(@Nullable Input<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setPreferences(@Nullable PreferencesArgs preferences) {
+        public Builder preferences(@Nullable PreferencesArgs preferences) {
             this.preferences = Input.ofNullable(preferences);
             return this;
         }
 
-        public Builder setProductDetails(Input<ProductDetailsArgs> productDetails) {
+        public Builder productDetails(Input<ProductDetailsArgs> productDetails) {
             this.productDetails = Objects.requireNonNull(productDetails);
             return this;
         }
 
-        public Builder setProductDetails(ProductDetailsArgs productDetails) {
+        public Builder productDetails(ProductDetailsArgs productDetails) {
             this.productDetails = Input.of(Objects.requireNonNull(productDetails));
             return this;
         }

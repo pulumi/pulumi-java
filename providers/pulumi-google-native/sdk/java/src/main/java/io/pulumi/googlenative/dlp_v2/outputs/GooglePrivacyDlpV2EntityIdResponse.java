@@ -15,8 +15,8 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse field;
 
-    @OutputCustomType.Constructor({"field"})
-    private GooglePrivacyDlpV2EntityIdResponse(GooglePrivacyDlpV2FieldIdResponse field) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2EntityIdResponse(@OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field) {
         this.field = field;
     }
 
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2EntityIdResponse {
     	      this.field = defaults.field;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }

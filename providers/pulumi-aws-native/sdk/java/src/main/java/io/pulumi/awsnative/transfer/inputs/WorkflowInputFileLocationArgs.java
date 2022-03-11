@@ -53,12 +53,12 @@ public final class WorkflowInputFileLocationArgs extends io.pulumi.resources.Res
     	      this.s3FileLocation = defaults.s3FileLocation;
         }
 
-        public Builder setS3FileLocation(@Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation) {
+        public Builder s3FileLocation(@Nullable Input<WorkflowS3InputFileLocationArgs> s3FileLocation) {
             this.s3FileLocation = s3FileLocation;
             return this;
         }
 
-        public Builder setS3FileLocation(@Nullable WorkflowS3InputFileLocationArgs s3FileLocation) {
+        public Builder s3FileLocation(@Nullable WorkflowS3InputFileLocationArgs s3FileLocation) {
             this.s3FileLocation = Input.ofNullable(s3FileLocation);
             return this;
         }

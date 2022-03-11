@@ -184,92 +184,92 @@ public final class VirtualWanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.virtualWANName = defaults.virtualWANName;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Input<Boolean> allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Input<Boolean> allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = allowBranchToBranchTraffic;
             return this;
         }
 
-        public Builder setAllowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
+        public Builder allowBranchToBranchTraffic(@Nullable Boolean allowBranchToBranchTraffic) {
             this.allowBranchToBranchTraffic = Input.ofNullable(allowBranchToBranchTraffic);
             return this;
         }
 
-        public Builder setAllowVnetToVnetTraffic(@Nullable Input<Boolean> allowVnetToVnetTraffic) {
+        public Builder allowVnetToVnetTraffic(@Nullable Input<Boolean> allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = allowVnetToVnetTraffic;
             return this;
         }
 
-        public Builder setAllowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
+        public Builder allowVnetToVnetTraffic(@Nullable Boolean allowVnetToVnetTraffic) {
             this.allowVnetToVnetTraffic = Input.ofNullable(allowVnetToVnetTraffic);
             return this;
         }
 
-        public Builder setDisableVpnEncryption(@Nullable Input<Boolean> disableVpnEncryption) {
+        public Builder disableVpnEncryption(@Nullable Input<Boolean> disableVpnEncryption) {
             this.disableVpnEncryption = disableVpnEncryption;
             return this;
         }
 
-        public Builder setDisableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
+        public Builder disableVpnEncryption(@Nullable Boolean disableVpnEncryption) {
             this.disableVpnEncryption = Input.ofNullable(disableVpnEncryption);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVirtualWANName(@Nullable Input<String> virtualWANName) {
+        public Builder virtualWANName(@Nullable Input<String> virtualWANName) {
             this.virtualWANName = virtualWANName;
             return this;
         }
 
-        public Builder setVirtualWANName(@Nullable String virtualWANName) {
+        public Builder virtualWANName(@Nullable String virtualWANName) {
             this.virtualWANName = Input.ofNullable(virtualWANName);
             return this;
         }

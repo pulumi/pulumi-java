@@ -24,10 +24,10 @@ public final class DeviceCredential {
      */
     private final DeviceCredentialPublicKey publicKey;
 
-    @OutputCustomType.Constructor({"expirationTime","publicKey"})
+    @OutputCustomType.Constructor
     private DeviceCredential(
-        @Nullable String expirationTime,
-        DeviceCredentialPublicKey publicKey) {
+        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @OutputCustomType.Parameter("publicKey") DeviceCredentialPublicKey publicKey) {
         this.expirationTime = expirationTime;
         this.publicKey = publicKey;
     }
@@ -70,12 +70,12 @@ public final class DeviceCredential {
     	      this.publicKey = defaults.publicKey;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setPublicKey(DeviceCredentialPublicKey publicKey) {
+        public Builder publicKey(DeviceCredentialPublicKey publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }

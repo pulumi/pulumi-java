@@ -15,10 +15,10 @@ public final class JobDatabaseTableOutputOptions {
     private final String tableName;
     private final @Nullable JobS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"tableName","tempDirectory"})
+    @OutputCustomType.Constructor
     private JobDatabaseTableOutputOptions(
-        String tableName,
-        @Nullable JobS3Location tempDirectory) {
+        @OutputCustomType.Parameter("tableName") String tableName,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable JobS3Location tempDirectory) {
         this.tableName = tableName;
         this.tempDirectory = tempDirectory;
     }
@@ -52,12 +52,12 @@ public final class JobDatabaseTableOutputOptions {
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable JobS3Location tempDirectory) {
+        public Builder tempDirectory(@Nullable JobS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }

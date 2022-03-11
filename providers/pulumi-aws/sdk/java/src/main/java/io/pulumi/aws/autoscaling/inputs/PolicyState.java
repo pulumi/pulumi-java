@@ -254,132 +254,132 @@ public final class PolicyState extends io.pulumi.resources.ResourceArgs {
     	      this.targetTrackingConfiguration = defaults.targetTrackingConfiguration;
         }
 
-        public Builder setAdjustmentType(@Nullable Input<String> adjustmentType) {
+        public Builder adjustmentType(@Nullable Input<String> adjustmentType) {
             this.adjustmentType = adjustmentType;
             return this;
         }
 
-        public Builder setAdjustmentType(@Nullable String adjustmentType) {
+        public Builder adjustmentType(@Nullable String adjustmentType) {
             this.adjustmentType = Input.ofNullable(adjustmentType);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoscalingGroupName(@Nullable Input<String> autoscalingGroupName) {
+        public Builder autoscalingGroupName(@Nullable Input<String> autoscalingGroupName) {
             this.autoscalingGroupName = autoscalingGroupName;
             return this;
         }
 
-        public Builder setAutoscalingGroupName(@Nullable String autoscalingGroupName) {
+        public Builder autoscalingGroupName(@Nullable String autoscalingGroupName) {
             this.autoscalingGroupName = Input.ofNullable(autoscalingGroupName);
             return this;
         }
 
-        public Builder setCooldown(@Nullable Input<Integer> cooldown) {
+        public Builder cooldown(@Nullable Input<Integer> cooldown) {
             this.cooldown = cooldown;
             return this;
         }
 
-        public Builder setCooldown(@Nullable Integer cooldown) {
+        public Builder cooldown(@Nullable Integer cooldown) {
             this.cooldown = Input.ofNullable(cooldown);
             return this;
         }
 
-        public Builder setEstimatedInstanceWarmup(@Nullable Input<Integer> estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Input<Integer> estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
-        public Builder setEstimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = Input.ofNullable(estimatedInstanceWarmup);
             return this;
         }
 
-        public Builder setMetricAggregationType(@Nullable Input<String> metricAggregationType) {
+        public Builder metricAggregationType(@Nullable Input<String> metricAggregationType) {
             this.metricAggregationType = metricAggregationType;
             return this;
         }
 
-        public Builder setMetricAggregationType(@Nullable String metricAggregationType) {
+        public Builder metricAggregationType(@Nullable String metricAggregationType) {
             this.metricAggregationType = Input.ofNullable(metricAggregationType);
             return this;
         }
 
-        public Builder setMinAdjustmentMagnitude(@Nullable Input<Integer> minAdjustmentMagnitude) {
+        public Builder minAdjustmentMagnitude(@Nullable Input<Integer> minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = minAdjustmentMagnitude;
             return this;
         }
 
-        public Builder setMinAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
+        public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
             this.minAdjustmentMagnitude = Input.ofNullable(minAdjustmentMagnitude);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPolicyType(@Nullable Input<String> policyType) {
+        public Builder policyType(@Nullable Input<String> policyType) {
             this.policyType = policyType;
             return this;
         }
 
-        public Builder setPolicyType(@Nullable String policyType) {
+        public Builder policyType(@Nullable String policyType) {
             this.policyType = Input.ofNullable(policyType);
             return this;
         }
 
-        public Builder setPredictiveScalingConfiguration(@Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
+        public Builder predictiveScalingConfiguration(@Nullable Input<PolicyPredictiveScalingConfigurationGetArgs> predictiveScalingConfiguration) {
             this.predictiveScalingConfiguration = predictiveScalingConfiguration;
             return this;
         }
 
-        public Builder setPredictiveScalingConfiguration(@Nullable PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
+        public Builder predictiveScalingConfiguration(@Nullable PolicyPredictiveScalingConfigurationGetArgs predictiveScalingConfiguration) {
             this.predictiveScalingConfiguration = Input.ofNullable(predictiveScalingConfiguration);
             return this;
         }
 
-        public Builder setScalingAdjustment(@Nullable Input<Integer> scalingAdjustment) {
+        public Builder scalingAdjustment(@Nullable Input<Integer> scalingAdjustment) {
             this.scalingAdjustment = scalingAdjustment;
             return this;
         }
 
-        public Builder setScalingAdjustment(@Nullable Integer scalingAdjustment) {
+        public Builder scalingAdjustment(@Nullable Integer scalingAdjustment) {
             this.scalingAdjustment = Input.ofNullable(scalingAdjustment);
             return this;
         }
 
-        public Builder setStepAdjustments(@Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
+        public Builder stepAdjustments(@Nullable Input<List<PolicyStepAdjustmentGetArgs>> stepAdjustments) {
             this.stepAdjustments = stepAdjustments;
             return this;
         }
 
-        public Builder setStepAdjustments(@Nullable List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
+        public Builder stepAdjustments(@Nullable List<PolicyStepAdjustmentGetArgs> stepAdjustments) {
             this.stepAdjustments = Input.ofNullable(stepAdjustments);
             return this;
         }
 
-        public Builder setTargetTrackingConfiguration(@Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(@Nullable Input<PolicyTargetTrackingConfigurationGetArgs> targetTrackingConfiguration) {
             this.targetTrackingConfiguration = targetTrackingConfiguration;
             return this;
         }
 
-        public Builder setTargetTrackingConfiguration(@Nullable PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
+        public Builder targetTrackingConfiguration(@Nullable PolicyTargetTrackingConfigurationGetArgs targetTrackingConfiguration) {
             this.targetTrackingConfiguration = Input.ofNullable(targetTrackingConfiguration);
             return this;
         }

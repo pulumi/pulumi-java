@@ -57,12 +57,12 @@ public final class EcKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     	      this.signatureAlgorithm = defaults.signatureAlgorithm;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable Input<EcKeyTypeSignatureAlgorithm> signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
-        public Builder setSignatureAlgorithm(@Nullable EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
+        public Builder signatureAlgorithm(@Nullable EcKeyTypeSignatureAlgorithm signatureAlgorithm) {
             this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
             return this;
         }

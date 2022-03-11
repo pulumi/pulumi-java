@@ -15,8 +15,8 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
      */
     private final String s3Uri;
 
-    @OutputCustomType.Constructor({"s3Uri"})
-    private ModelBiasJobDefinitionMonitoringGroundTruthS3Input(String s3Uri) {
+    @OutputCustomType.Constructor
+    private ModelBiasJobDefinitionMonitoringGroundTruthS3Input(@OutputCustomType.Parameter("s3Uri") String s3Uri) {
         this.s3Uri = s3Uri;
     }
 
@@ -48,7 +48,7 @@ public final class ModelBiasJobDefinitionMonitoringGroundTruthS3Input {
     	      this.s3Uri = defaults.s3Uri;
         }
 
-        public Builder setS3Uri(String s3Uri) {
+        public Builder s3Uri(String s3Uri) {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }

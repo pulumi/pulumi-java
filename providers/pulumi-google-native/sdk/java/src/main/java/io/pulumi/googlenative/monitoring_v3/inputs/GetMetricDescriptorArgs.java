@@ -62,12 +62,12 @@ public final class GetMetricDescriptorArgs extends io.pulumi.resources.InvokeArg
     	      this.project = defaults.project;
         }
 
-        public Builder setMetricDescriptorId(String metricDescriptorId) {
+        public Builder metricDescriptorId(String metricDescriptorId) {
             this.metricDescriptorId = Objects.requireNonNull(metricDescriptorId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }

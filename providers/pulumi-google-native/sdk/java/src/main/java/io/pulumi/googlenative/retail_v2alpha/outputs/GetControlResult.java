@@ -43,14 +43,14 @@ public final class GetControlResult {
      */
     private final List<String> solutionTypes;
 
-    @OutputCustomType.Constructor({"associatedServingConfigIds","displayName","facetSpec","name","rule","solutionTypes"})
+    @OutputCustomType.Constructor
     private GetControlResult(
-        List<String> associatedServingConfigIds,
-        String displayName,
-        GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec,
-        String name,
-        GoogleCloudRetailV2alphaRuleResponse rule,
-        List<String> solutionTypes) {
+        @OutputCustomType.Parameter("associatedServingConfigIds") List<String> associatedServingConfigIds,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("facetSpec") GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rule") GoogleCloudRetailV2alphaRuleResponse rule,
+        @OutputCustomType.Parameter("solutionTypes") List<String> solutionTypes) {
         this.associatedServingConfigIds = associatedServingConfigIds;
         this.displayName = displayName;
         this.facetSpec = facetSpec;
@@ -132,32 +132,32 @@ public final class GetControlResult {
     	      this.solutionTypes = defaults.solutionTypes;
         }
 
-        public Builder setAssociatedServingConfigIds(List<String> associatedServingConfigIds) {
+        public Builder associatedServingConfigIds(List<String> associatedServingConfigIds) {
             this.associatedServingConfigIds = Objects.requireNonNull(associatedServingConfigIds);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFacetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec) {
+        public Builder facetSpec(GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse facetSpec) {
             this.facetSpec = Objects.requireNonNull(facetSpec);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRule(GoogleCloudRetailV2alphaRuleResponse rule) {
+        public Builder rule(GoogleCloudRetailV2alphaRuleResponse rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
 
-        public Builder setSolutionTypes(List<String> solutionTypes) {
+        public Builder solutionTypes(List<String> solutionTypes) {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }

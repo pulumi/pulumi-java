@@ -37,13 +37,13 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
      */
     private final String valueFrequencyUpperBound;
 
-    @OutputCustomType.Constructor({"bucketSize","bucketValueCount","bucketValues","valueFrequencyLowerBound","valueFrequencyUpperBound"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(
-        String bucketSize,
-        String bucketValueCount,
-        List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues,
-        String valueFrequencyLowerBound,
-        String valueFrequencyUpperBound) {
+        @OutputCustomType.Parameter("bucketSize") String bucketSize,
+        @OutputCustomType.Parameter("bucketValueCount") String bucketValueCount,
+        @OutputCustomType.Parameter("bucketValues") List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues,
+        @OutputCustomType.Parameter("valueFrequencyLowerBound") String valueFrequencyLowerBound,
+        @OutputCustomType.Parameter("valueFrequencyUpperBound") String valueFrequencyUpperBound) {
         this.bucketSize = bucketSize;
         this.bucketValueCount = bucketValueCount;
         this.bucketValues = bucketValues;
@@ -115,27 +115,27 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
     	      this.valueFrequencyUpperBound = defaults.valueFrequencyUpperBound;
         }
 
-        public Builder setBucketSize(String bucketSize) {
+        public Builder bucketSize(String bucketSize) {
             this.bucketSize = Objects.requireNonNull(bucketSize);
             return this;
         }
 
-        public Builder setBucketValueCount(String bucketValueCount) {
+        public Builder bucketValueCount(String bucketValueCount) {
             this.bucketValueCount = Objects.requireNonNull(bucketValueCount);
             return this;
         }
 
-        public Builder setBucketValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues) {
+        public Builder bucketValues(List<GooglePrivacyDlpV2ValueFrequencyResponse> bucketValues) {
             this.bucketValues = Objects.requireNonNull(bucketValues);
             return this;
         }
 
-        public Builder setValueFrequencyLowerBound(String valueFrequencyLowerBound) {
+        public Builder valueFrequencyLowerBound(String valueFrequencyLowerBound) {
             this.valueFrequencyLowerBound = Objects.requireNonNull(valueFrequencyLowerBound);
             return this;
         }
 
-        public Builder setValueFrequencyUpperBound(String valueFrequencyUpperBound) {
+        public Builder valueFrequencyUpperBound(String valueFrequencyUpperBound) {
             this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
             return this;
         }

@@ -26,11 +26,11 @@ public final class AttestorPublicKeyResponse {
      */
     private final PkixPublicKeyResponse pkixPublicKey;
 
-    @OutputCustomType.Constructor({"asciiArmoredPgpPublicKey","comment","pkixPublicKey"})
+    @OutputCustomType.Constructor
     private AttestorPublicKeyResponse(
-        String asciiArmoredPgpPublicKey,
-        String comment,
-        PkixPublicKeyResponse pkixPublicKey) {
+        @OutputCustomType.Parameter("asciiArmoredPgpPublicKey") String asciiArmoredPgpPublicKey,
+        @OutputCustomType.Parameter("comment") String comment,
+        @OutputCustomType.Parameter("pkixPublicKey") PkixPublicKeyResponse pkixPublicKey) {
         this.asciiArmoredPgpPublicKey = asciiArmoredPgpPublicKey;
         this.comment = comment;
         this.pkixPublicKey = pkixPublicKey;
@@ -82,17 +82,17 @@ public final class AttestorPublicKeyResponse {
     	      this.pkixPublicKey = defaults.pkixPublicKey;
         }
 
-        public Builder setAsciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
+        public Builder asciiArmoredPgpPublicKey(String asciiArmoredPgpPublicKey) {
             this.asciiArmoredPgpPublicKey = Objects.requireNonNull(asciiArmoredPgpPublicKey);
             return this;
         }
 
-        public Builder setComment(String comment) {
+        public Builder comment(String comment) {
             this.comment = Objects.requireNonNull(comment);
             return this;
         }
 
-        public Builder setPkixPublicKey(PkixPublicKeyResponse pkixPublicKey) {
+        public Builder pkixPublicKey(PkixPublicKeyResponse pkixPublicKey) {
             this.pkixPublicKey = Objects.requireNonNull(pkixPublicKey);
             return this;
         }

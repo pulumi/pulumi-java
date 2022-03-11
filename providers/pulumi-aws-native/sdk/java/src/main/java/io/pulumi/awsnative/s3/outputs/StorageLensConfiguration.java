@@ -33,16 +33,16 @@ public final class StorageLensConfiguration {
      */
     private final @Nullable String storageLensArn;
 
-    @OutputCustomType.Constructor({"accountLevel","awsOrg","dataExport","exclude","id","include","isEnabled","storageLensArn"})
+    @OutputCustomType.Constructor
     private StorageLensConfiguration(
-        StorageLensAccountLevel accountLevel,
-        @Nullable StorageLensAwsOrg awsOrg,
-        @Nullable StorageLensDataExport dataExport,
-        @Nullable StorageLensBucketsAndRegions exclude,
-        String id,
-        @Nullable StorageLensBucketsAndRegions include,
-        Boolean isEnabled,
-        @Nullable String storageLensArn) {
+        @OutputCustomType.Parameter("accountLevel") StorageLensAccountLevel accountLevel,
+        @OutputCustomType.Parameter("awsOrg") @Nullable StorageLensAwsOrg awsOrg,
+        @OutputCustomType.Parameter("dataExport") @Nullable StorageLensDataExport dataExport,
+        @OutputCustomType.Parameter("exclude") @Nullable StorageLensBucketsAndRegions exclude,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("include") @Nullable StorageLensBucketsAndRegions include,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("storageLensArn") @Nullable String storageLensArn) {
         this.accountLevel = accountLevel;
         this.awsOrg = awsOrg;
         this.dataExport = dataExport;
@@ -120,42 +120,42 @@ public final class StorageLensConfiguration {
     	      this.storageLensArn = defaults.storageLensArn;
         }
 
-        public Builder setAccountLevel(StorageLensAccountLevel accountLevel) {
+        public Builder accountLevel(StorageLensAccountLevel accountLevel) {
             this.accountLevel = Objects.requireNonNull(accountLevel);
             return this;
         }
 
-        public Builder setAwsOrg(@Nullable StorageLensAwsOrg awsOrg) {
+        public Builder awsOrg(@Nullable StorageLensAwsOrg awsOrg) {
             this.awsOrg = awsOrg;
             return this;
         }
 
-        public Builder setDataExport(@Nullable StorageLensDataExport dataExport) {
+        public Builder dataExport(@Nullable StorageLensDataExport dataExport) {
             this.dataExport = dataExport;
             return this;
         }
 
-        public Builder setExclude(@Nullable StorageLensBucketsAndRegions exclude) {
+        public Builder exclude(@Nullable StorageLensBucketsAndRegions exclude) {
             this.exclude = exclude;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInclude(@Nullable StorageLensBucketsAndRegions include) {
+        public Builder include(@Nullable StorageLensBucketsAndRegions include) {
             this.include = include;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setStorageLensArn(@Nullable String storageLensArn) {
+        public Builder storageLensArn(@Nullable String storageLensArn) {
             this.storageLensArn = storageLensArn;
             return this;
         }

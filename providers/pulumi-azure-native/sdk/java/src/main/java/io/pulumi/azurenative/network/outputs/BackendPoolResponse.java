@@ -50,15 +50,15 @@ public final class BackendPoolResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backends","healthProbeSettings","id","loadBalancingSettings","name","resourceState","type"})
+    @OutputCustomType.Constructor
     private BackendPoolResponse(
-        @Nullable List<BackendResponse> backends,
-        @Nullable SubResourceResponse healthProbeSettings,
-        @Nullable String id,
-        @Nullable SubResourceResponse loadBalancingSettings,
-        @Nullable String name,
-        String resourceState,
-        String type) {
+        @OutputCustomType.Parameter("backends") @Nullable List<BackendResponse> backends,
+        @OutputCustomType.Parameter("healthProbeSettings") @Nullable SubResourceResponse healthProbeSettings,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("loadBalancingSettings") @Nullable SubResourceResponse loadBalancingSettings,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("type") String type) {
         this.backends = backends;
         this.healthProbeSettings = healthProbeSettings;
         this.id = id;
@@ -150,37 +150,37 @@ public final class BackendPoolResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackends(@Nullable List<BackendResponse> backends) {
+        public Builder backends(@Nullable List<BackendResponse> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setHealthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
+        public Builder healthProbeSettings(@Nullable SubResourceResponse healthProbeSettings) {
             this.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLoadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
+        public Builder loadBalancingSettings(@Nullable SubResourceResponse loadBalancingSettings) {
             this.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

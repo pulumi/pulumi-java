@@ -58,12 +58,12 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
     	      this.secrets = defaults.secrets;
         }
 
-        public Builder setSecrets(@Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets) {
+        public Builder secrets(@Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
+        public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }

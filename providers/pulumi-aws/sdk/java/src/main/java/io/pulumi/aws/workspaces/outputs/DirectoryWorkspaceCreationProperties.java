@@ -38,13 +38,13 @@ public final class DirectoryWorkspaceCreationProperties {
      */
     private final @Nullable Boolean userEnabledAsLocalAdministrator;
 
-    @OutputCustomType.Constructor({"customSecurityGroupId","defaultOu","enableInternetAccess","enableMaintenanceMode","userEnabledAsLocalAdministrator"})
+    @OutputCustomType.Constructor
     private DirectoryWorkspaceCreationProperties(
-        @Nullable String customSecurityGroupId,
-        @Nullable String defaultOu,
-        @Nullable Boolean enableInternetAccess,
-        @Nullable Boolean enableMaintenanceMode,
-        @Nullable Boolean userEnabledAsLocalAdministrator) {
+        @OutputCustomType.Parameter("customSecurityGroupId") @Nullable String customSecurityGroupId,
+        @OutputCustomType.Parameter("defaultOu") @Nullable String defaultOu,
+        @OutputCustomType.Parameter("enableInternetAccess") @Nullable Boolean enableInternetAccess,
+        @OutputCustomType.Parameter("enableMaintenanceMode") @Nullable Boolean enableMaintenanceMode,
+        @OutputCustomType.Parameter("userEnabledAsLocalAdministrator") @Nullable Boolean userEnabledAsLocalAdministrator) {
         this.customSecurityGroupId = customSecurityGroupId;
         this.defaultOu = defaultOu;
         this.enableInternetAccess = enableInternetAccess;
@@ -116,27 +116,27 @@ public final class DirectoryWorkspaceCreationProperties {
     	      this.userEnabledAsLocalAdministrator = defaults.userEnabledAsLocalAdministrator;
         }
 
-        public Builder setCustomSecurityGroupId(@Nullable String customSecurityGroupId) {
+        public Builder customSecurityGroupId(@Nullable String customSecurityGroupId) {
             this.customSecurityGroupId = customSecurityGroupId;
             return this;
         }
 
-        public Builder setDefaultOu(@Nullable String defaultOu) {
+        public Builder defaultOu(@Nullable String defaultOu) {
             this.defaultOu = defaultOu;
             return this;
         }
 
-        public Builder setEnableInternetAccess(@Nullable Boolean enableInternetAccess) {
+        public Builder enableInternetAccess(@Nullable Boolean enableInternetAccess) {
             this.enableInternetAccess = enableInternetAccess;
             return this;
         }
 
-        public Builder setEnableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
+        public Builder enableMaintenanceMode(@Nullable Boolean enableMaintenanceMode) {
             this.enableMaintenanceMode = enableMaintenanceMode;
             return this;
         }
 
-        public Builder setUserEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
+        public Builder userEnabledAsLocalAdministrator(@Nullable Boolean userEnabledAsLocalAdministrator) {
             this.userEnabledAsLocalAdministrator = userEnabledAsLocalAdministrator;
             return this;
         }

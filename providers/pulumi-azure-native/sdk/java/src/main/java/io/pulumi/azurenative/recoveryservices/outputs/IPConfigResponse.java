@@ -28,11 +28,11 @@ public final class IPConfigResponse {
      */
     private final @Nullable String staticIPAddress;
 
-    @OutputCustomType.Constructor({"lBBackendAddressPoolIds","publicIpAddressId","staticIPAddress"})
+    @OutputCustomType.Constructor
     private IPConfigResponse(
-        @Nullable List<String> lBBackendAddressPoolIds,
-        @Nullable String publicIpAddressId,
-        @Nullable String staticIPAddress) {
+        @OutputCustomType.Parameter("lBBackendAddressPoolIds") @Nullable List<String> lBBackendAddressPoolIds,
+        @OutputCustomType.Parameter("publicIpAddressId") @Nullable String publicIpAddressId,
+        @OutputCustomType.Parameter("staticIPAddress") @Nullable String staticIPAddress) {
         this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
         this.publicIpAddressId = publicIpAddressId;
         this.staticIPAddress = staticIPAddress;
@@ -84,17 +84,17 @@ public final class IPConfigResponse {
     	      this.staticIPAddress = defaults.staticIPAddress;
         }
 
-        public Builder setLBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
+        public Builder lBBackendAddressPoolIds(@Nullable List<String> lBBackendAddressPoolIds) {
             this.lBBackendAddressPoolIds = lBBackendAddressPoolIds;
             return this;
         }
 
-        public Builder setPublicIpAddressId(@Nullable String publicIpAddressId) {
+        public Builder publicIpAddressId(@Nullable String publicIpAddressId) {
             this.publicIpAddressId = publicIpAddressId;
             return this;
         }
 
-        public Builder setStaticIPAddress(@Nullable String staticIPAddress) {
+        public Builder staticIPAddress(@Nullable String staticIPAddress) {
             this.staticIPAddress = staticIPAddress;
             return this;
         }

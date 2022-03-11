@@ -90,32 +90,32 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.idleDeleteTtl = defaults.idleDeleteTtl;
         }
 
-        public Builder setAutoDeleteTime(@Nullable Input<String> autoDeleteTime) {
+        public Builder autoDeleteTime(@Nullable Input<String> autoDeleteTime) {
             this.autoDeleteTime = autoDeleteTime;
             return this;
         }
 
-        public Builder setAutoDeleteTime(@Nullable String autoDeleteTime) {
+        public Builder autoDeleteTime(@Nullable String autoDeleteTime) {
             this.autoDeleteTime = Input.ofNullable(autoDeleteTime);
             return this;
         }
 
-        public Builder setAutoDeleteTtl(@Nullable Input<String> autoDeleteTtl) {
+        public Builder autoDeleteTtl(@Nullable Input<String> autoDeleteTtl) {
             this.autoDeleteTtl = autoDeleteTtl;
             return this;
         }
 
-        public Builder setAutoDeleteTtl(@Nullable String autoDeleteTtl) {
+        public Builder autoDeleteTtl(@Nullable String autoDeleteTtl) {
             this.autoDeleteTtl = Input.ofNullable(autoDeleteTtl);
             return this;
         }
 
-        public Builder setIdleDeleteTtl(@Nullable Input<String> idleDeleteTtl) {
+        public Builder idleDeleteTtl(@Nullable Input<String> idleDeleteTtl) {
             this.idleDeleteTtl = idleDeleteTtl;
             return this;
         }
 
-        public Builder setIdleDeleteTtl(@Nullable String idleDeleteTtl) {
+        public Builder idleDeleteTtl(@Nullable String idleDeleteTtl) {
             this.idleDeleteTtl = Input.ofNullable(idleDeleteTtl);
             return this;
         }

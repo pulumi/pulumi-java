@@ -36,12 +36,12 @@ public final class GetSignalingChannelResult {
      */
     private final @Nullable SignalingChannelType type;
 
-    @OutputCustomType.Constructor({"arn","messageTtlSeconds","tags","type"})
+    @OutputCustomType.Constructor
     private GetSignalingChannelResult(
-        @Nullable String arn,
-        @Nullable Integer messageTtlSeconds,
-        @Nullable List<SignalingChannelTag> tags,
-        @Nullable SignalingChannelType type) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("messageTtlSeconds") @Nullable Integer messageTtlSeconds,
+        @OutputCustomType.Parameter("tags") @Nullable List<SignalingChannelTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable SignalingChannelType type) {
         this.arn = arn;
         this.messageTtlSeconds = messageTtlSeconds;
         this.tags = tags;
@@ -103,22 +103,22 @@ public final class GetSignalingChannelResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setMessageTtlSeconds(@Nullable Integer messageTtlSeconds) {
+        public Builder messageTtlSeconds(@Nullable Integer messageTtlSeconds) {
             this.messageTtlSeconds = messageTtlSeconds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SignalingChannelTag> tags) {
+        public Builder tags(@Nullable List<SignalingChannelTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable SignalingChannelType type) {
+        public Builder type(@Nullable SignalingChannelType type) {
             this.type = type;
             return this;
         }

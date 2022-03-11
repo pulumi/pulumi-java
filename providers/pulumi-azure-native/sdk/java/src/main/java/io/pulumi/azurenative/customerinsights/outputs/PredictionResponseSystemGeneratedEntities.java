@@ -28,11 +28,11 @@ public final class PredictionResponseSystemGeneratedEntities {
      */
     private final @Nullable List<String> generatedLinks;
 
-    @OutputCustomType.Constructor({"generatedInteractionTypes","generatedKpis","generatedLinks"})
+    @OutputCustomType.Constructor
     private PredictionResponseSystemGeneratedEntities(
-        @Nullable List<String> generatedInteractionTypes,
-        @Nullable Map<String,String> generatedKpis,
-        @Nullable List<String> generatedLinks) {
+        @OutputCustomType.Parameter("generatedInteractionTypes") @Nullable List<String> generatedInteractionTypes,
+        @OutputCustomType.Parameter("generatedKpis") @Nullable Map<String,String> generatedKpis,
+        @OutputCustomType.Parameter("generatedLinks") @Nullable List<String> generatedLinks) {
         this.generatedInteractionTypes = generatedInteractionTypes;
         this.generatedKpis = generatedKpis;
         this.generatedLinks = generatedLinks;
@@ -84,17 +84,17 @@ public final class PredictionResponseSystemGeneratedEntities {
     	      this.generatedLinks = defaults.generatedLinks;
         }
 
-        public Builder setGeneratedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
+        public Builder generatedInteractionTypes(@Nullable List<String> generatedInteractionTypes) {
             this.generatedInteractionTypes = generatedInteractionTypes;
             return this;
         }
 
-        public Builder setGeneratedKpis(@Nullable Map<String,String> generatedKpis) {
+        public Builder generatedKpis(@Nullable Map<String,String> generatedKpis) {
             this.generatedKpis = generatedKpis;
             return this;
         }
 
-        public Builder setGeneratedLinks(@Nullable List<String> generatedLinks) {
+        public Builder generatedLinks(@Nullable List<String> generatedLinks) {
             this.generatedLinks = generatedLinks;
             return this;
         }

@@ -21,10 +21,10 @@ public final class Oauth2JwtBearerResponse {
      */
     private final JwtClaimsResponse jwtClaims;
 
-    @OutputCustomType.Constructor({"clientKey","jwtClaims"})
+    @OutputCustomType.Constructor
     private Oauth2JwtBearerResponse(
-        SecretResponse clientKey,
-        JwtClaimsResponse jwtClaims) {
+        @OutputCustomType.Parameter("clientKey") SecretResponse clientKey,
+        @OutputCustomType.Parameter("jwtClaims") JwtClaimsResponse jwtClaims) {
         this.clientKey = clientKey;
         this.jwtClaims = jwtClaims;
     }
@@ -66,12 +66,12 @@ public final class Oauth2JwtBearerResponse {
     	      this.jwtClaims = defaults.jwtClaims;
         }
 
-        public Builder setClientKey(SecretResponse clientKey) {
+        public Builder clientKey(SecretResponse clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setJwtClaims(JwtClaimsResponse jwtClaims) {
+        public Builder jwtClaims(JwtClaimsResponse jwtClaims) {
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
         }

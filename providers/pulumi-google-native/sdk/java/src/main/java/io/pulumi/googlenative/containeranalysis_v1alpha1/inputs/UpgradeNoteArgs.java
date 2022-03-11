@@ -93,32 +93,32 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setDistributions(@Nullable Input<List<UpgradeDistributionArgs>> distributions) {
+        public Builder distributions(@Nullable Input<List<UpgradeDistributionArgs>> distributions) {
             this.distributions = distributions;
             return this;
         }
 
-        public Builder setDistributions(@Nullable List<UpgradeDistributionArgs> distributions) {
+        public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
             this.distributions = Input.ofNullable(distributions);
             return this;
         }
 
-        public Builder set$package(@Nullable Input<String> $package) {
+        public Builder $package(@Nullable Input<String> $package) {
             this.$package = $package;
             return this;
         }
 
-        public Builder set$package(@Nullable String $package) {
+        public Builder $package(@Nullable String $package) {
             this.$package = Input.ofNullable($package);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<VersionArgs> version) {
+        public Builder version(@Nullable Input<VersionArgs> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable VersionArgs version) {
+        public Builder version(@Nullable VersionArgs version) {
             this.version = Input.ofNullable(version);
             return this;
         }

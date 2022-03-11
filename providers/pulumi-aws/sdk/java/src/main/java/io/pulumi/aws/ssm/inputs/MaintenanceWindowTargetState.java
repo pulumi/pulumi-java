@@ -137,62 +137,62 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
     	      this.windowId = defaults.windowId;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerInformation(@Nullable Input<String> ownerInformation) {
+        public Builder ownerInformation(@Nullable Input<String> ownerInformation) {
             this.ownerInformation = ownerInformation;
             return this;
         }
 
-        public Builder setOwnerInformation(@Nullable String ownerInformation) {
+        public Builder ownerInformation(@Nullable String ownerInformation) {
             this.ownerInformation = Input.ofNullable(ownerInformation);
             return this;
         }
 
-        public Builder setResourceType(@Nullable Input<String> resourceType) {
+        public Builder resourceType(@Nullable Input<String> resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
 
-        public Builder setTargets(@Nullable Input<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
+        public Builder targets(@Nullable Input<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
             this.targets = targets;
             return this;
         }
 
-        public Builder setTargets(@Nullable List<MaintenanceWindowTargetTargetGetArgs> targets) {
+        public Builder targets(@Nullable List<MaintenanceWindowTargetTargetGetArgs> targets) {
             this.targets = Input.ofNullable(targets);
             return this;
         }
 
-        public Builder setWindowId(@Nullable Input<String> windowId) {
+        public Builder windowId(@Nullable Input<String> windowId) {
             this.windowId = windowId;
             return this;
         }
 
-        public Builder setWindowId(@Nullable String windowId) {
+        public Builder windowId(@Nullable String windowId) {
             this.windowId = Input.ofNullable(windowId);
             return this;
         }

@@ -17,8 +17,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
      */
     private final String backendService;
 
-    @OutputCustomType.Constructor({"backendService"})
-    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(String backendService) {
+    @OutputCustomType.Constructor
+    private RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolicy(@OutputCustomType.Parameter("backendService") String backendService) {
         this.backendService = backendService;
     }
 
@@ -52,7 +52,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRequestMirrorPolic
     	      this.backendService = defaults.backendService;
         }
 
-        public Builder setBackendService(String backendService) {
+        public Builder backendService(String backendService) {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }

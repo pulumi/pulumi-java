@@ -33,12 +33,12 @@ public final class InstanceGroupManagerStatusResponse {
      */
     private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
-    @OutputCustomType.Constructor({"autoscaler","isStable","stateful","versionTarget"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatusResponse(
-        String autoscaler,
-        Boolean isStable,
-        InstanceGroupManagerStatusStatefulResponse stateful,
-        InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
+        @OutputCustomType.Parameter("autoscaler") String autoscaler,
+        @OutputCustomType.Parameter("isStable") Boolean isStable,
+        @OutputCustomType.Parameter("stateful") InstanceGroupManagerStatusStatefulResponse stateful,
+        @OutputCustomType.Parameter("versionTarget") InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
         this.autoscaler = autoscaler;
         this.isStable = isStable;
         this.stateful = stateful;
@@ -100,22 +100,22 @@ public final class InstanceGroupManagerStatusResponse {
     	      this.versionTarget = defaults.versionTarget;
         }
 
-        public Builder setAutoscaler(String autoscaler) {
+        public Builder autoscaler(String autoscaler) {
             this.autoscaler = Objects.requireNonNull(autoscaler);
             return this;
         }
 
-        public Builder setIsStable(Boolean isStable) {
+        public Builder isStable(Boolean isStable) {
             this.isStable = Objects.requireNonNull(isStable);
             return this;
         }
 
-        public Builder setStateful(InstanceGroupManagerStatusStatefulResponse stateful) {
+        public Builder stateful(InstanceGroupManagerStatusStatefulResponse stateful) {
             this.stateful = Objects.requireNonNull(stateful);
             return this;
         }
 
-        public Builder setVersionTarget(InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
+        public Builder versionTarget(InstanceGroupManagerStatusVersionTargetResponse versionTarget) {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }

@@ -29,11 +29,11 @@ public final class PrivateDnsZoneConfigResponse {
      */
     private final List<RecordSetResponse> recordSets;
 
-    @OutputCustomType.Constructor({"name","privateDnsZoneId","recordSets"})
+    @OutputCustomType.Constructor
     private PrivateDnsZoneConfigResponse(
-        @Nullable String name,
-        @Nullable String privateDnsZoneId,
-        List<RecordSetResponse> recordSets) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("privateDnsZoneId") @Nullable String privateDnsZoneId,
+        @OutputCustomType.Parameter("recordSets") List<RecordSetResponse> recordSets) {
         this.name = name;
         this.privateDnsZoneId = privateDnsZoneId;
         this.recordSets = recordSets;
@@ -85,17 +85,17 @@ public final class PrivateDnsZoneConfigResponse {
     	      this.recordSets = defaults.recordSets;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPrivateDnsZoneId(@Nullable String privateDnsZoneId) {
+        public Builder privateDnsZoneId(@Nullable String privateDnsZoneId) {
             this.privateDnsZoneId = privateDnsZoneId;
             return this;
         }
 
-        public Builder setRecordSets(List<RecordSetResponse> recordSets) {
+        public Builder recordSets(List<RecordSetResponse> recordSets) {
             this.recordSets = Objects.requireNonNull(recordSets);
             return this;
         }

@@ -65,22 +65,22 @@ public final class CertificateEdiPartyNameArgs extends io.pulumi.resources.Resou
     	      this.partyName = defaults.partyName;
         }
 
-        public Builder setNameAssigner(Input<String> nameAssigner) {
+        public Builder nameAssigner(Input<String> nameAssigner) {
             this.nameAssigner = Objects.requireNonNull(nameAssigner);
             return this;
         }
 
-        public Builder setNameAssigner(String nameAssigner) {
+        public Builder nameAssigner(String nameAssigner) {
             this.nameAssigner = Input.of(Objects.requireNonNull(nameAssigner));
             return this;
         }
 
-        public Builder setPartyName(Input<String> partyName) {
+        public Builder partyName(Input<String> partyName) {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }
 
-        public Builder setPartyName(String partyName) {
+        public Builder partyName(String partyName) {
             this.partyName = Input.of(Objects.requireNonNull(partyName));
             return this;
         }

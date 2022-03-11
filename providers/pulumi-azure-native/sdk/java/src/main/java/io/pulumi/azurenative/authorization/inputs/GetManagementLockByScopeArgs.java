@@ -68,12 +68,12 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
     	      this.scope = defaults.scope;
         }
 
-        public Builder setLockName(String lockName) {
+        public Builder lockName(String lockName) {
             this.lockName = Objects.requireNonNull(lockName);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }

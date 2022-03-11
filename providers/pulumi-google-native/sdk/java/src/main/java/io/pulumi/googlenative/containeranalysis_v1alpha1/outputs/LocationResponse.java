@@ -26,11 +26,11 @@ public final class LocationResponse {
      */
     private final VersionResponse version;
 
-    @OutputCustomType.Constructor({"cpeUri","path","version"})
+    @OutputCustomType.Constructor
     private LocationResponse(
-        String cpeUri,
-        String path,
-        VersionResponse version) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("version") VersionResponse version) {
         this.cpeUri = cpeUri;
         this.path = path;
         this.version = version;
@@ -82,17 +82,17 @@ public final class LocationResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setVersion(VersionResponse version) {
+        public Builder version(VersionResponse version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

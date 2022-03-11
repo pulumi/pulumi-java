@@ -42,14 +42,14 @@ public final class DescriptionResponse {
      */
     private final String shortDescription;
 
-    @OutputCustomType.Constructor({"attributes","descriptionType","keywords","links","longDescription","shortDescription"})
+    @OutputCustomType.Constructor
     private DescriptionResponse(
-        List<String> attributes,
-        String descriptionType,
-        List<String> keywords,
-        List<LinkResponse> links,
-        String longDescription,
-        String shortDescription) {
+        @OutputCustomType.Parameter("attributes") List<String> attributes,
+        @OutputCustomType.Parameter("descriptionType") String descriptionType,
+        @OutputCustomType.Parameter("keywords") List<String> keywords,
+        @OutputCustomType.Parameter("links") List<LinkResponse> links,
+        @OutputCustomType.Parameter("longDescription") String longDescription,
+        @OutputCustomType.Parameter("shortDescription") String shortDescription) {
         this.attributes = attributes;
         this.descriptionType = descriptionType;
         this.keywords = keywords;
@@ -131,32 +131,32 @@ public final class DescriptionResponse {
     	      this.shortDescription = defaults.shortDescription;
         }
 
-        public Builder setAttributes(List<String> attributes) {
+        public Builder attributes(List<String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setDescriptionType(String descriptionType) {
+        public Builder descriptionType(String descriptionType) {
             this.descriptionType = Objects.requireNonNull(descriptionType);
             return this;
         }
 
-        public Builder setKeywords(List<String> keywords) {
+        public Builder keywords(List<String> keywords) {
             this.keywords = Objects.requireNonNull(keywords);
             return this;
         }
 
-        public Builder setLinks(List<LinkResponse> links) {
+        public Builder links(List<LinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setLongDescription(String longDescription) {
+        public Builder longDescription(String longDescription) {
             this.longDescription = Objects.requireNonNull(longDescription);
             return this;
         }
 
-        public Builder setShortDescription(String shortDescription) {
+        public Builder shortDescription(String shortDescription) {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }

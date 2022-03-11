@@ -20,10 +20,10 @@ public final class TextResponse {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"content","format"})
+    @OutputCustomType.Constructor
     private TextResponse(
-        String content,
-        String format) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("format") String format) {
         this.content = content;
         this.format = format;
     }
@@ -65,12 +65,12 @@ public final class TextResponse {
     	      this.format = defaults.format;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }

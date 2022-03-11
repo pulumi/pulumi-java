@@ -46,15 +46,15 @@ public final class GetUserResult {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"arn","id","path","permissionsBoundary","tags","userId","userName"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        String arn,
-        String id,
-        String path,
-        String permissionsBoundary,
-        Map<String,String> tags,
-        String userId,
-        String userName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("permissionsBoundary") String permissionsBoundary,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.id = id;
         this.path = path;
@@ -146,37 +146,37 @@ public final class GetUserResult {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPermissionsBoundary(String permissionsBoundary) {
+        public Builder permissionsBoundary(String permissionsBoundary) {
             this.permissionsBoundary = Objects.requireNonNull(permissionsBoundary);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

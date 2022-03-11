@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetOrganizationPolicyBooleanPolicy {
     private final Boolean enforced;
 
-    @OutputCustomType.Constructor({"enforced"})
-    private GetOrganizationPolicyBooleanPolicy(Boolean enforced) {
+    @OutputCustomType.Constructor
+    private GetOrganizationPolicyBooleanPolicy(@OutputCustomType.Parameter("enforced") Boolean enforced) {
         this.enforced = enforced;
     }
 
@@ -40,7 +40,7 @@ public final class GetOrganizationPolicyBooleanPolicy {
     	      this.enforced = defaults.enforced;
         }
 
-        public Builder setEnforced(Boolean enforced) {
+        public Builder enforced(Boolean enforced) {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }

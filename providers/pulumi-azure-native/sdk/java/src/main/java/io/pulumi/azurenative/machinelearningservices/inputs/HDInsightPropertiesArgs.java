@@ -88,32 +88,32 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
     	      this.sshPort = defaults.sshPort;
         }
 
-        public Builder setAddress(@Nullable Input<String> address) {
+        public Builder address(@Nullable Input<String> address) {
             this.address = address;
             return this;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = Input.ofNullable(address);
             return this;
         }
 
-        public Builder setAdministratorAccount(@Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount) {
+        public Builder administratorAccount(@Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount) {
             this.administratorAccount = administratorAccount;
             return this;
         }
 
-        public Builder setAdministratorAccount(@Nullable VirtualMachineSshCredentialsArgs administratorAccount) {
+        public Builder administratorAccount(@Nullable VirtualMachineSshCredentialsArgs administratorAccount) {
             this.administratorAccount = Input.ofNullable(administratorAccount);
             return this;
         }
 
-        public Builder setSshPort(@Nullable Input<Integer> sshPort) {
+        public Builder sshPort(@Nullable Input<Integer> sshPort) {
             this.sshPort = sshPort;
             return this;
         }
 
-        public Builder setSshPort(@Nullable Integer sshPort) {
+        public Builder sshPort(@Nullable Integer sshPort) {
             this.sshPort = Input.ofNullable(sshPort);
             return this;
         }

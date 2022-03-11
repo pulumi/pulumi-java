@@ -54,7 +54,7 @@ public final class DedicatedHostGroupInstanceViewResponse extends io.pulumi.reso
     	      this.hosts = defaults.hosts;
         }
 
-        public Builder setHosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
+        public Builder hosts(@Nullable List<DedicatedHostInstanceViewWithNameResponse> hosts) {
             this.hosts = hosts;
             return this;
         }

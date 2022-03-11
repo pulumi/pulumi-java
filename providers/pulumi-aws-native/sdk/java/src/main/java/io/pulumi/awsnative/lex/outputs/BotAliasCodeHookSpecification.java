@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BotAliasCodeHookSpecification {
     private final BotAliasLambdaCodeHook lambdaCodeHook;
 
-    @OutputCustomType.Constructor({"lambdaCodeHook"})
-    private BotAliasCodeHookSpecification(BotAliasLambdaCodeHook lambdaCodeHook) {
+    @OutputCustomType.Constructor
+    private BotAliasCodeHookSpecification(@OutputCustomType.Parameter("lambdaCodeHook") BotAliasLambdaCodeHook lambdaCodeHook) {
         this.lambdaCodeHook = lambdaCodeHook;
     }
 
@@ -40,7 +40,7 @@ public final class BotAliasCodeHookSpecification {
     	      this.lambdaCodeHook = defaults.lambdaCodeHook;
         }
 
-        public Builder setLambdaCodeHook(BotAliasLambdaCodeHook lambdaCodeHook) {
+        public Builder lambdaCodeHook(BotAliasLambdaCodeHook lambdaCodeHook) {
             this.lambdaCodeHook = Objects.requireNonNull(lambdaCodeHook);
             return this;
         }

@@ -20,10 +20,10 @@ public final class AllowedIpRangeResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"description","value"})
+    @OutputCustomType.Constructor
     private AllowedIpRangeResponse(
-        String description,
-        String value) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("value") String value) {
         this.description = description;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class AllowedIpRangeResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

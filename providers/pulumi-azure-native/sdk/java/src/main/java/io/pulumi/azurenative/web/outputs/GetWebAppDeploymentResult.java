@@ -79,21 +79,21 @@ public final class GetWebAppDeploymentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"active","author","authorEmail","deployer","details","endTime","id","kind","message","name","startTime","status","type"})
+    @OutputCustomType.Constructor
     private GetWebAppDeploymentResult(
-        @Nullable Boolean active,
-        @Nullable String author,
-        @Nullable String authorEmail,
-        @Nullable String deployer,
-        @Nullable String details,
-        @Nullable String endTime,
-        String id,
-        @Nullable String kind,
-        @Nullable String message,
-        String name,
-        @Nullable String startTime,
-        @Nullable Integer status,
-        String type) {
+        @OutputCustomType.Parameter("active") @Nullable Boolean active,
+        @OutputCustomType.Parameter("author") @Nullable String author,
+        @OutputCustomType.Parameter("authorEmail") @Nullable String authorEmail,
+        @OutputCustomType.Parameter("deployer") @Nullable String deployer,
+        @OutputCustomType.Parameter("details") @Nullable String details,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable Integer status,
+        @OutputCustomType.Parameter("type") String type) {
         this.active = active;
         this.author = author;
         this.authorEmail = authorEmail;
@@ -245,67 +245,67 @@ public final class GetWebAppDeploymentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
         }
 
-        public Builder setAuthor(@Nullable String author) {
+        public Builder author(@Nullable String author) {
             this.author = author;
             return this;
         }
 
-        public Builder setAuthorEmail(@Nullable String authorEmail) {
+        public Builder authorEmail(@Nullable String authorEmail) {
             this.authorEmail = authorEmail;
             return this;
         }
 
-        public Builder setDeployer(@Nullable String deployer) {
+        public Builder deployer(@Nullable String deployer) {
             this.deployer = deployer;
             return this;
         }
 
-        public Builder setDetails(@Nullable String details) {
+        public Builder details(@Nullable String details) {
             this.details = details;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable Integer status) {
+        public Builder status(@Nullable Integer status) {
             this.status = status;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -55,7 +55,7 @@ public final class DataSetColumnGroup extends io.pulumi.resources.InvokeArgs {
     	      this.geoSpatialColumnGroup = defaults.geoSpatialColumnGroup;
         }
 
-        public Builder setGeoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
+        public Builder geoSpatialColumnGroup(@Nullable DataSetGeoSpatialColumnGroup geoSpatialColumnGroup) {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }

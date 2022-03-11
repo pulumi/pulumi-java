@@ -122,52 +122,52 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setCopyStepDetails(@Nullable Input<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails) {
+        public Builder copyStepDetails(@Nullable Input<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails) {
             this.copyStepDetails = copyStepDetails;
             return this;
         }
 
-        public Builder setCopyStepDetails(@Nullable WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
+        public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
             this.copyStepDetails = Input.ofNullable(copyStepDetails);
             return this;
         }
 
-        public Builder setCustomStepDetails(@Nullable Input<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
+        public Builder customStepDetails(@Nullable Input<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
             this.customStepDetails = customStepDetails;
             return this;
         }
 
-        public Builder setCustomStepDetails(@Nullable WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
+        public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
             this.customStepDetails = Input.ofNullable(customStepDetails);
             return this;
         }
 
-        public Builder setDeleteStepDetails(@Nullable Input<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
+        public Builder deleteStepDetails(@Nullable Input<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
             this.deleteStepDetails = deleteStepDetails;
             return this;
         }
 
-        public Builder setDeleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
+        public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
             this.deleteStepDetails = Input.ofNullable(deleteStepDetails);
             return this;
         }
 
-        public Builder setTagStepDetails(@Nullable Input<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
+        public Builder tagStepDetails(@Nullable Input<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
             this.tagStepDetails = tagStepDetails;
             return this;
         }
 
-        public Builder setTagStepDetails(@Nullable WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
+        public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
             this.tagStepDetails = Input.ofNullable(tagStepDetails);
             return this;
         }
 
-        public Builder setType(@Nullable Input<WorkflowStepType> type) {
+        public Builder type(@Nullable Input<WorkflowStepType> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable WorkflowStepType type) {
+        public Builder type(@Nullable WorkflowStepType type) {
             this.type = Input.ofNullable(type);
             return this;
         }

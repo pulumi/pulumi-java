@@ -22,10 +22,10 @@ public final class StageAccessLogSetting {
      */
     private final @Nullable String format;
 
-    @OutputCustomType.Constructor({"destinationArn","format"})
+    @OutputCustomType.Constructor
     private StageAccessLogSetting(
-        @Nullable String destinationArn,
-        @Nullable String format) {
+        @OutputCustomType.Parameter("destinationArn") @Nullable String destinationArn,
+        @OutputCustomType.Parameter("format") @Nullable String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }
@@ -67,12 +67,12 @@ public final class StageAccessLogSetting {
     	      this.format = defaults.format;
         }
 
-        public Builder setDestinationArn(@Nullable String destinationArn) {
+        public Builder destinationArn(@Nullable String destinationArn) {
             this.destinationArn = destinationArn;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }

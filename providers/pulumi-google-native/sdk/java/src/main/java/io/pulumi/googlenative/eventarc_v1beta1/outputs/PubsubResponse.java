@@ -20,10 +20,10 @@ public final class PubsubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"subscription","topic"})
+    @OutputCustomType.Constructor
     private PubsubResponse(
-        String subscription,
-        String topic) {
+        @OutputCustomType.Parameter("subscription") String subscription,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.subscription = subscription;
         this.topic = topic;
     }
@@ -65,12 +65,12 @@ public final class PubsubResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setSubscription(String subscription) {
+        public Builder subscription(String subscription) {
             this.subscription = Objects.requireNonNull(subscription);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

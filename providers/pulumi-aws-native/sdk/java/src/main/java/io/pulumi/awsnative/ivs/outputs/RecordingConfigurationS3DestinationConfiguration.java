@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RecordingConfigurationS3DestinationConfiguration {
     private final String bucketName;
 
-    @OutputCustomType.Constructor({"bucketName"})
-    private RecordingConfigurationS3DestinationConfiguration(String bucketName) {
+    @OutputCustomType.Constructor
+    private RecordingConfigurationS3DestinationConfiguration(@OutputCustomType.Parameter("bucketName") String bucketName) {
         this.bucketName = bucketName;
     }
 
@@ -40,7 +40,7 @@ public final class RecordingConfigurationS3DestinationConfiguration {
     	      this.bucketName = defaults.bucketName;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }

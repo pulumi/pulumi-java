@@ -34,12 +34,12 @@ public final class VmwareCbtPolicyDetailsResponse {
      */
     private final @Nullable Integer recoveryPointHistoryInMinutes;
 
-    @OutputCustomType.Constructor({"appConsistentFrequencyInMinutes","crashConsistentFrequencyInMinutes","instanceType","recoveryPointHistoryInMinutes"})
+    @OutputCustomType.Constructor
     private VmwareCbtPolicyDetailsResponse(
-        @Nullable Integer appConsistentFrequencyInMinutes,
-        @Nullable Integer crashConsistentFrequencyInMinutes,
-        String instanceType,
-        @Nullable Integer recoveryPointHistoryInMinutes) {
+        @OutputCustomType.Parameter("appConsistentFrequencyInMinutes") @Nullable Integer appConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("crashConsistentFrequencyInMinutes") @Nullable Integer crashConsistentFrequencyInMinutes,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("recoveryPointHistoryInMinutes") @Nullable Integer recoveryPointHistoryInMinutes) {
         this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
         this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
         this.instanceType = instanceType;
@@ -102,22 +102,22 @@ public final class VmwareCbtPolicyDetailsResponse {
     	      this.recoveryPointHistoryInMinutes = defaults.recoveryPointHistoryInMinutes;
         }
 
-        public Builder setAppConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
+        public Builder appConsistentFrequencyInMinutes(@Nullable Integer appConsistentFrequencyInMinutes) {
             this.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setCrashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
+        public Builder crashConsistentFrequencyInMinutes(@Nullable Integer crashConsistentFrequencyInMinutes) {
             this.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setRecoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
+        public Builder recoveryPointHistoryInMinutes(@Nullable Integer recoveryPointHistoryInMinutes) {
             this.recoveryPointHistoryInMinutes = recoveryPointHistoryInMinutes;
             return this;
         }

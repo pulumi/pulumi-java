@@ -137,62 +137,62 @@ public final class EncryptionProtectorArgs extends io.pulumi.resources.ResourceA
     	      this.serverName = defaults.serverName;
         }
 
-        public Builder setAutoRotationEnabled(@Nullable Input<Boolean> autoRotationEnabled) {
+        public Builder autoRotationEnabled(@Nullable Input<Boolean> autoRotationEnabled) {
             this.autoRotationEnabled = autoRotationEnabled;
             return this;
         }
 
-        public Builder setAutoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
+        public Builder autoRotationEnabled(@Nullable Boolean autoRotationEnabled) {
             this.autoRotationEnabled = Input.ofNullable(autoRotationEnabled);
             return this;
         }
 
-        public Builder setEncryptionProtectorName(@Nullable Input<String> encryptionProtectorName) {
+        public Builder encryptionProtectorName(@Nullable Input<String> encryptionProtectorName) {
             this.encryptionProtectorName = encryptionProtectorName;
             return this;
         }
 
-        public Builder setEncryptionProtectorName(@Nullable String encryptionProtectorName) {
+        public Builder encryptionProtectorName(@Nullable String encryptionProtectorName) {
             this.encryptionProtectorName = Input.ofNullable(encryptionProtectorName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerKeyName(@Nullable Input<String> serverKeyName) {
+        public Builder serverKeyName(@Nullable Input<String> serverKeyName) {
             this.serverKeyName = serverKeyName;
             return this;
         }
 
-        public Builder setServerKeyName(@Nullable String serverKeyName) {
+        public Builder serverKeyName(@Nullable String serverKeyName) {
             this.serverKeyName = Input.ofNullable(serverKeyName);
             return this;
         }
 
-        public Builder setServerKeyType(Input<Either<String,ServerKeyType>> serverKeyType) {
+        public Builder serverKeyType(Input<Either<String,ServerKeyType>> serverKeyType) {
             this.serverKeyType = Objects.requireNonNull(serverKeyType);
             return this;
         }
 
-        public Builder setServerKeyType(Either<String,ServerKeyType> serverKeyType) {
+        public Builder serverKeyType(Either<String,ServerKeyType> serverKeyType) {
             this.serverKeyType = Input.of(Objects.requireNonNull(serverKeyType));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }

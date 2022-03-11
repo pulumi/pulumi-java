@@ -17,8 +17,8 @@ public final class TrafficAnalyticsPropertiesResponse {
      */
     private final @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration;
 
-    @OutputCustomType.Constructor({"networkWatcherFlowAnalyticsConfiguration"})
-    private TrafficAnalyticsPropertiesResponse(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
+    @OutputCustomType.Constructor
+    private TrafficAnalyticsPropertiesResponse(@OutputCustomType.Parameter("networkWatcherFlowAnalyticsConfiguration") @Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
         this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
     }
 
@@ -50,7 +50,7 @@ public final class TrafficAnalyticsPropertiesResponse {
     	      this.networkWatcherFlowAnalyticsConfiguration = defaults.networkWatcherFlowAnalyticsConfiguration;
         }
 
-        public Builder setNetworkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
+        public Builder networkWatcherFlowAnalyticsConfiguration(@Nullable TrafficAnalyticsConfigurationPropertiesResponse networkWatcherFlowAnalyticsConfiguration) {
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }

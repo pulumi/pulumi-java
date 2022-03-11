@@ -123,27 +123,27 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRe
     	      this.text = defaults.text;
         }
 
-        public Builder setDial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial) {
+        public Builder dial(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDialResponse dial) {
             this.dial = Objects.requireNonNull(dial);
             return this;
         }
 
-        public Builder setOpenUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl) {
+        public Builder openUrl(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUriResponse openUrl) {
             this.openUrl = Objects.requireNonNull(openUrl);
             return this;
         }
 
-        public Builder setPostbackData(String postbackData) {
+        public Builder postbackData(String postbackData) {
             this.postbackData = Objects.requireNonNull(postbackData);
             return this;
         }
 
-        public Builder setShareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation) {
+        public Builder shareLocation(GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocationResponse shareLocation) {
             this.shareLocation = Objects.requireNonNull(shareLocation);
             return this;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

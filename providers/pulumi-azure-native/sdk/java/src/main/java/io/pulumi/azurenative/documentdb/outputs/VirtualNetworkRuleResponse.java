@@ -23,10 +23,10 @@ public final class VirtualNetworkRuleResponse {
      */
     private final @Nullable Boolean ignoreMissingVNetServiceEndpoint;
 
-    @OutputCustomType.Constructor({"id","ignoreMissingVNetServiceEndpoint"})
+    @OutputCustomType.Constructor
     private VirtualNetworkRuleResponse(
-        @Nullable String id,
-        @Nullable Boolean ignoreMissingVNetServiceEndpoint) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ignoreMissingVNetServiceEndpoint") @Nullable Boolean ignoreMissingVNetServiceEndpoint) {
         this.id = id;
         this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
     }
@@ -68,12 +68,12 @@ public final class VirtualNetworkRuleResponse {
     	      this.ignoreMissingVNetServiceEndpoint = defaults.ignoreMissingVNetServiceEndpoint;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIgnoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
+        public Builder ignoreMissingVNetServiceEndpoint(@Nullable Boolean ignoreMissingVNetServiceEndpoint) {
             this.ignoreMissingVNetServiceEndpoint = ignoreMissingVNetServiceEndpoint;
             return this;
         }

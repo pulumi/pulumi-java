@@ -265,7 +265,7 @@ public class EventHubDataConnection extends io.pulumi.resources.CustomResource {
     private static EventHubDataConnectionArgs makeArgs(EventHubDataConnectionArgs args) {
         var builder = args == null ? EventHubDataConnectionArgs.builder() : EventHubDataConnectionArgs.builder(args);
         return builder
-            .setKind("EventHub")
+            .kind("EventHub")
             .build();
     }
 

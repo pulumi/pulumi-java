@@ -43,14 +43,14 @@ public final class SqlDatabaseGetPropertiesResponseResource {
      */
     private final @Nullable String users;
 
-    @OutputCustomType.Constructor({"colls","etag","id","rid","ts","users"})
+    @OutputCustomType.Constructor
     private SqlDatabaseGetPropertiesResponseResource(
-        @Nullable String colls,
-        String etag,
-        String id,
-        String rid,
-        Double ts,
-        @Nullable String users) {
+        @OutputCustomType.Parameter("colls") @Nullable String colls,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("rid") String rid,
+        @OutputCustomType.Parameter("ts") Double ts,
+        @OutputCustomType.Parameter("users") @Nullable String users) {
         this.colls = colls;
         this.etag = etag;
         this.id = id;
@@ -132,32 +132,32 @@ public final class SqlDatabaseGetPropertiesResponseResource {
     	      this.users = defaults.users;
         }
 
-        public Builder setColls(@Nullable String colls) {
+        public Builder colls(@Nullable String colls) {
             this.colls = colls;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setRid(String rid) {
+        public Builder rid(String rid) {
             this.rid = Objects.requireNonNull(rid);
             return this;
         }
 
-        public Builder setTs(Double ts) {
+        public Builder ts(Double ts) {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
 
-        public Builder setUsers(@Nullable String users) {
+        public Builder users(@Nullable String users) {
             this.users = users;
             return this;
         }

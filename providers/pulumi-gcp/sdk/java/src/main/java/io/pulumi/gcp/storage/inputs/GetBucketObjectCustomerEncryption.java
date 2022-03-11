@@ -60,12 +60,12 @@ public final class GetBucketObjectCustomerEncryption extends io.pulumi.resources
     	      this.encryptionKey = defaults.encryptionKey;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setEncryptionKey(String encryptionKey) {
+        public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }

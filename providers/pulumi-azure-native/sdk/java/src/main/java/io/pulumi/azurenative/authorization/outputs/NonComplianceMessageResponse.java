@@ -22,10 +22,10 @@ public final class NonComplianceMessageResponse {
      */
     private final @Nullable String policyDefinitionReferenceId;
 
-    @OutputCustomType.Constructor({"message","policyDefinitionReferenceId"})
+    @OutputCustomType.Constructor
     private NonComplianceMessageResponse(
-        String message,
-        @Nullable String policyDefinitionReferenceId) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("policyDefinitionReferenceId") @Nullable String policyDefinitionReferenceId) {
         this.message = message;
         this.policyDefinitionReferenceId = policyDefinitionReferenceId;
     }
@@ -67,12 +67,12 @@ public final class NonComplianceMessageResponse {
     	      this.policyDefinitionReferenceId = defaults.policyDefinitionReferenceId;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setPolicyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
+        public Builder policyDefinitionReferenceId(@Nullable String policyDefinitionReferenceId) {
             this.policyDefinitionReferenceId = policyDefinitionReferenceId;
             return this;
         }

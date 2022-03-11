@@ -87,32 +87,32 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
     	      this.refreshIntervalMs = defaults.refreshIntervalMs;
         }
 
-        public Builder setEnableRefresh(@Nullable Input<Boolean> enableRefresh) {
+        public Builder enableRefresh(@Nullable Input<Boolean> enableRefresh) {
             this.enableRefresh = enableRefresh;
             return this;
         }
 
-        public Builder setEnableRefresh(@Nullable Boolean enableRefresh) {
+        public Builder enableRefresh(@Nullable Boolean enableRefresh) {
             this.enableRefresh = Input.ofNullable(enableRefresh);
             return this;
         }
 
-        public Builder setQuery(@Nullable Input<String> query) {
+        public Builder query(@Nullable Input<String> query) {
             this.query = query;
             return this;
         }
 
-        public Builder setQuery(@Nullable String query) {
+        public Builder query(@Nullable String query) {
             this.query = Input.ofNullable(query);
             return this;
         }
 
-        public Builder setRefreshIntervalMs(@Nullable Input<String> refreshIntervalMs) {
+        public Builder refreshIntervalMs(@Nullable Input<String> refreshIntervalMs) {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
 
-        public Builder setRefreshIntervalMs(@Nullable String refreshIntervalMs) {
+        public Builder refreshIntervalMs(@Nullable String refreshIntervalMs) {
             this.refreshIntervalMs = Input.ofNullable(refreshIntervalMs);
             return this;
         }

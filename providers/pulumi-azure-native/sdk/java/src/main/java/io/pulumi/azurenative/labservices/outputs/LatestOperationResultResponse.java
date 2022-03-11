@@ -40,14 +40,14 @@ public final class LatestOperationResultResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"errorCode","errorMessage","httpMethod","operationUrl","requestUri","status"})
+    @OutputCustomType.Constructor
     private LatestOperationResultResponse(
-        String errorCode,
-        String errorMessage,
-        String httpMethod,
-        String operationUrl,
-        String requestUri,
-        String status) {
+        @OutputCustomType.Parameter("errorCode") String errorCode,
+        @OutputCustomType.Parameter("errorMessage") String errorMessage,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("operationUrl") String operationUrl,
+        @OutputCustomType.Parameter("requestUri") String requestUri,
+        @OutputCustomType.Parameter("status") String status) {
         this.errorCode = errorCode;
         this.errorMessage = errorMessage;
         this.httpMethod = httpMethod;
@@ -129,32 +129,32 @@ public final class LatestOperationResultResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setErrorCode(String errorCode) {
+        public Builder errorCode(String errorCode) {
             this.errorCode = Objects.requireNonNull(errorCode);
             return this;
         }
 
-        public Builder setErrorMessage(String errorMessage) {
+        public Builder errorMessage(String errorMessage) {
             this.errorMessage = Objects.requireNonNull(errorMessage);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setOperationUrl(String operationUrl) {
+        public Builder operationUrl(String operationUrl) {
             this.operationUrl = Objects.requireNonNull(operationUrl);
             return this;
         }
 
-        public Builder setRequestUri(String requestUri) {
+        public Builder requestUri(String requestUri) {
             this.requestUri = Objects.requireNonNull(requestUri);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

@@ -17,8 +17,8 @@ public final class ListDelegationSettingSecretsResult {
      */
     private final @Nullable String validationKey;
 
-    @OutputCustomType.Constructor({"validationKey"})
-    private ListDelegationSettingSecretsResult(@Nullable String validationKey) {
+    @OutputCustomType.Constructor
+    private ListDelegationSettingSecretsResult(@OutputCustomType.Parameter("validationKey") @Nullable String validationKey) {
         this.validationKey = validationKey;
     }
 
@@ -50,7 +50,7 @@ public final class ListDelegationSettingSecretsResult {
     	      this.validationKey = defaults.validationKey;
         }
 
-        public Builder setValidationKey(@Nullable String validationKey) {
+        public Builder validationKey(@Nullable String validationKey) {
             this.validationKey = validationKey;
             return this;
         }

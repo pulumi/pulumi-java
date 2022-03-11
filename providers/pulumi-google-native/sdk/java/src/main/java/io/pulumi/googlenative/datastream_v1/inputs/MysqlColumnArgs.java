@@ -156,72 +156,72 @@ public final class MysqlColumnArgs extends io.pulumi.resources.ResourceArgs {
     	      this.primaryKey = defaults.primaryKey;
         }
 
-        public Builder setCollation(@Nullable Input<String> collation) {
+        public Builder collation(@Nullable Input<String> collation) {
             this.collation = collation;
             return this;
         }
 
-        public Builder setCollation(@Nullable String collation) {
+        public Builder collation(@Nullable String collation) {
             this.collation = Input.ofNullable(collation);
             return this;
         }
 
-        public Builder setColumn(@Nullable Input<String> column) {
+        public Builder column(@Nullable Input<String> column) {
             this.column = column;
             return this;
         }
 
-        public Builder setColumn(@Nullable String column) {
+        public Builder column(@Nullable String column) {
             this.column = Input.ofNullable(column);
             return this;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setLength(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Input<Integer> length) {
             this.length = length;
             return this;
         }
 
-        public Builder setLength(@Nullable Integer length) {
+        public Builder length(@Nullable Integer length) {
             this.length = Input.ofNullable(length);
             return this;
         }
 
-        public Builder setNullable(@Nullable Input<Boolean> nullable) {
+        public Builder nullable(@Nullable Input<Boolean> nullable) {
             this.nullable = nullable;
             return this;
         }
 
-        public Builder setNullable(@Nullable Boolean nullable) {
+        public Builder nullable(@Nullable Boolean nullable) {
             this.nullable = Input.ofNullable(nullable);
             return this;
         }
 
-        public Builder setOrdinalPosition(@Nullable Input<Integer> ordinalPosition) {
+        public Builder ordinalPosition(@Nullable Input<Integer> ordinalPosition) {
             this.ordinalPosition = ordinalPosition;
             return this;
         }
 
-        public Builder setOrdinalPosition(@Nullable Integer ordinalPosition) {
+        public Builder ordinalPosition(@Nullable Integer ordinalPosition) {
             this.ordinalPosition = Input.ofNullable(ordinalPosition);
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Input<Boolean> primaryKey) {
+        public Builder primaryKey(@Nullable Input<Boolean> primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable Boolean primaryKey) {
+        public Builder primaryKey(@Nullable Boolean primaryKey) {
             this.primaryKey = Input.ofNullable(primaryKey);
             return this;
         }

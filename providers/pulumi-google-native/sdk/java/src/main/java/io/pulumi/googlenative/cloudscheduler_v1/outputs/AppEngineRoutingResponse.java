@@ -30,12 +30,12 @@ public final class AppEngineRoutingResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"host","instance","service","version"})
+    @OutputCustomType.Constructor
     private AppEngineRoutingResponse(
-        String host,
-        String instance,
-        String service,
-        String version) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("service") String service,
+        @OutputCustomType.Parameter("version") String version) {
         this.host = host;
         this.instance = instance;
         this.service = service;
@@ -97,22 +97,22 @@ public final class AppEngineRoutingResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -26,11 +26,11 @@ public final class WindowsUpdateSettingsResponse {
      */
     private final List<String> exclusivePatches;
 
-    @OutputCustomType.Constructor({"classifications","excludes","exclusivePatches"})
+    @OutputCustomType.Constructor
     private WindowsUpdateSettingsResponse(
-        List<String> classifications,
-        List<String> excludes,
-        List<String> exclusivePatches) {
+        @OutputCustomType.Parameter("classifications") List<String> classifications,
+        @OutputCustomType.Parameter("excludes") List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePatches") List<String> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;
@@ -82,17 +82,17 @@ public final class WindowsUpdateSettingsResponse {
     	      this.exclusivePatches = defaults.exclusivePatches;
         }
 
-        public Builder setClassifications(List<String> classifications) {
+        public Builder classifications(List<String> classifications) {
             this.classifications = Objects.requireNonNull(classifications);
             return this;
         }
 
-        public Builder setExcludes(List<String> excludes) {
+        public Builder excludes(List<String> excludes) {
             this.excludes = Objects.requireNonNull(excludes);
             return this;
         }
 
-        public Builder setExclusivePatches(List<String> exclusivePatches) {
+        public Builder exclusivePatches(List<String> exclusivePatches) {
             this.exclusivePatches = Objects.requireNonNull(exclusivePatches);
             return this;
         }

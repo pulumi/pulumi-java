@@ -52,12 +52,12 @@ public final class LifecyclePolicyPolicyDetailsScheduleRetainRuleArgs extends io
     	      this.count = defaults.count;
         }
 
-        public Builder setCount(Input<Integer> count) {
+        public Builder count(Input<Integer> count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Input.of(Objects.requireNonNull(count));
             return this;
         }

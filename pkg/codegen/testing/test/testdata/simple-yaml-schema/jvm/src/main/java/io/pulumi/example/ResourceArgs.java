@@ -49,12 +49,12 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.bar = defaults.bar;
         }
 
-        public Builder setBar(@Nullable Input<String> bar) {
+        public Builder bar(@Nullable Input<String> bar) {
             this.bar = Input.ofNullable(bar).asSecret();
             return this;
         }
 
-        public Builder setBar(@Nullable String bar) {
+        public Builder bar(@Nullable String bar) {
             this.bar = Input.ofNullable(bar).asSecret();
             return this;
         }

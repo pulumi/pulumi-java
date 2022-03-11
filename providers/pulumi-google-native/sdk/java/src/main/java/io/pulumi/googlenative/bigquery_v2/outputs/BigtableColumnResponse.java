@@ -37,14 +37,14 @@ public final class BigtableColumnResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encoding","fieldName","onlyReadLatest","qualifierEncoded","qualifierString","type"})
+    @OutputCustomType.Constructor
     private BigtableColumnResponse(
-        String encoding,
-        String fieldName,
-        Boolean onlyReadLatest,
-        String qualifierEncoded,
-        String qualifierString,
-        String type) {
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("fieldName") String fieldName,
+        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @OutputCustomType.Parameter("qualifierEncoded") String qualifierEncoded,
+        @OutputCustomType.Parameter("qualifierString") String qualifierString,
+        @OutputCustomType.Parameter("type") String type) {
         this.encoding = encoding;
         this.fieldName = fieldName;
         this.onlyReadLatest = onlyReadLatest;
@@ -122,32 +122,32 @@ public final class BigtableColumnResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFieldName(String fieldName) {
+        public Builder fieldName(String fieldName) {
             this.fieldName = Objects.requireNonNull(fieldName);
             return this;
         }
 
-        public Builder setOnlyReadLatest(Boolean onlyReadLatest) {
+        public Builder onlyReadLatest(Boolean onlyReadLatest) {
             this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
             return this;
         }
 
-        public Builder setQualifierEncoded(String qualifierEncoded) {
+        public Builder qualifierEncoded(String qualifierEncoded) {
             this.qualifierEncoded = Objects.requireNonNull(qualifierEncoded);
             return this;
         }
 
-        public Builder setQualifierString(String qualifierString) {
+        public Builder qualifierString(String qualifierString) {
             this.qualifierString = Objects.requireNonNull(qualifierString);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

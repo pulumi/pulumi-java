@@ -43,13 +43,13 @@ public final class FlexibleAppVersionNetwork {
      */
     private final @Nullable String subnetwork;
 
-    @OutputCustomType.Constructor({"forwardedPorts","instanceTag","name","sessionAffinity","subnetwork"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionNetwork(
-        @Nullable List<String> forwardedPorts,
-        @Nullable String instanceTag,
-        String name,
-        @Nullable Boolean sessionAffinity,
-        @Nullable String subnetwork) {
+        @OutputCustomType.Parameter("forwardedPorts") @Nullable List<String> forwardedPorts,
+        @OutputCustomType.Parameter("instanceTag") @Nullable String instanceTag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sessionAffinity") @Nullable Boolean sessionAffinity,
+        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;
@@ -125,27 +125,27 @@ public final class FlexibleAppVersionNetwork {
     	      this.subnetwork = defaults.subnetwork;
         }
 
-        public Builder setForwardedPorts(@Nullable List<String> forwardedPorts) {
+        public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
             this.forwardedPorts = forwardedPorts;
             return this;
         }
 
-        public Builder setInstanceTag(@Nullable String instanceTag) {
+        public Builder instanceTag(@Nullable String instanceTag) {
             this.instanceTag = instanceTag;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSessionAffinity(@Nullable Boolean sessionAffinity) {
+        public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
             this.sessionAffinity = sessionAffinity;
             return this;
         }
 
-        public Builder setSubnetwork(@Nullable String subnetwork) {
+        public Builder subnetwork(@Nullable String subnetwork) {
             this.subnetwork = subnetwork;
             return this;
         }

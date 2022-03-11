@@ -14,10 +14,10 @@ public final class ServiceAttachmentConnectedEndpoint {
     private final @Nullable String endpoint;
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"endpoint","status"})
+    @OutputCustomType.Constructor
     private ServiceAttachmentConnectedEndpoint(
-        @Nullable String endpoint,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.endpoint = endpoint;
         this.status = status;
     }
@@ -51,12 +51,12 @@ public final class ServiceAttachmentConnectedEndpoint {
     	      this.status = defaults.status;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

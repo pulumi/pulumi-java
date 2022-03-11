@@ -29,11 +29,11 @@ public final class WorkloadInquiryDetailsResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"inquiryValidation","itemCount","type"})
+    @OutputCustomType.Constructor
     private WorkloadInquiryDetailsResponse(
-        @Nullable InquiryValidationResponse inquiryValidation,
-        @Nullable Double itemCount,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("inquiryValidation") @Nullable InquiryValidationResponse inquiryValidation,
+        @OutputCustomType.Parameter("itemCount") @Nullable Double itemCount,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.inquiryValidation = inquiryValidation;
         this.itemCount = itemCount;
         this.type = type;
@@ -85,17 +85,17 @@ public final class WorkloadInquiryDetailsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
+        public Builder inquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
             this.inquiryValidation = inquiryValidation;
             return this;
         }
 
-        public Builder setItemCount(@Nullable Double itemCount) {
+        public Builder itemCount(@Nullable Double itemCount) {
             this.itemCount = itemCount;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

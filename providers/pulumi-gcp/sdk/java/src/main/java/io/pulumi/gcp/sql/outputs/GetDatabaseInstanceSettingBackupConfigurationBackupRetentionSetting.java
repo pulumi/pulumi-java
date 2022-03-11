@@ -13,10 +13,10 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     private final Integer retainedBackups;
     private final String retentionUnit;
 
-    @OutputCustomType.Constructor({"retainedBackups","retentionUnit"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting(
-        Integer retainedBackups,
-        String retentionUnit) {
+        @OutputCustomType.Parameter("retainedBackups") Integer retainedBackups,
+        @OutputCustomType.Parameter("retentionUnit") String retentionUnit) {
         this.retainedBackups = retainedBackups;
         this.retentionUnit = retentionUnit;
     }
@@ -50,12 +50,12 @@ public final class GetDatabaseInstanceSettingBackupConfigurationBackupRetentionS
     	      this.retentionUnit = defaults.retentionUnit;
         }
 
-        public Builder setRetainedBackups(Integer retainedBackups) {
+        public Builder retainedBackups(Integer retainedBackups) {
             this.retainedBackups = Objects.requireNonNull(retainedBackups);
             return this;
         }
 
-        public Builder setRetentionUnit(String retentionUnit) {
+        public Builder retentionUnit(String retentionUnit) {
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }

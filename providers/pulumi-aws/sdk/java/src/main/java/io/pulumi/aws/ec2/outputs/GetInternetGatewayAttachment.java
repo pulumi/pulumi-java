@@ -20,10 +20,10 @@ public final class GetInternetGatewayAttachment {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"state","vpcId"})
+    @OutputCustomType.Constructor
     private GetInternetGatewayAttachment(
-        String state,
-        String vpcId) {
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.state = state;
         this.vpcId = vpcId;
     }
@@ -65,12 +65,12 @@ public final class GetInternetGatewayAttachment {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

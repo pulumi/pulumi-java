@@ -80,21 +80,21 @@ public final class GetNotificationChannelResult {
      */
     private final @Nullable String webHookUrl;
 
-    @OutputCustomType.Constructor({"createdDate","description","emailRecipient","events","id","location","name","notificationLocale","provisioningState","tags","type","uniqueIdentifier","webHookUrl"})
+    @OutputCustomType.Constructor
     private GetNotificationChannelResult(
-        String createdDate,
-        @Nullable String description,
-        @Nullable String emailRecipient,
-        @Nullable List<EventResponse> events,
-        String id,
-        @Nullable String location,
-        String name,
-        @Nullable String notificationLocale,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type,
-        String uniqueIdentifier,
-        @Nullable String webHookUrl) {
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("emailRecipient") @Nullable String emailRecipient,
+        @OutputCustomType.Parameter("events") @Nullable List<EventResponse> events,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notificationLocale") @Nullable String notificationLocale,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") String uniqueIdentifier,
+        @OutputCustomType.Parameter("webHookUrl") @Nullable String webHookUrl) {
         this.createdDate = createdDate;
         this.description = description;
         this.emailRecipient = emailRecipient;
@@ -246,67 +246,67 @@ public final class GetNotificationChannelResult {
     	      this.webHookUrl = defaults.webHookUrl;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEmailRecipient(@Nullable String emailRecipient) {
+        public Builder emailRecipient(@Nullable String emailRecipient) {
             this.emailRecipient = emailRecipient;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<EventResponse> events) {
+        public Builder events(@Nullable List<EventResponse> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotificationLocale(@Nullable String notificationLocale) {
+        public Builder notificationLocale(@Nullable String notificationLocale) {
             this.notificationLocale = notificationLocale;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(String uniqueIdentifier) {
+        public Builder uniqueIdentifier(String uniqueIdentifier) {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
 
-        public Builder setWebHookUrl(@Nullable String webHookUrl) {
+        public Builder webHookUrl(@Nullable String webHookUrl) {
             this.webHookUrl = webHookUrl;
             return this;
         }

@@ -22,10 +22,10 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
      */
     private final @Nullable String imageType;
 
-    @OutputCustomType.Constructor({"imageIdOverride","imageType"})
+    @OutputCustomType.Constructor
     private ComputeEnvironmentComputeResourcesEc2Configuration(
-        @Nullable String imageIdOverride,
-        @Nullable String imageType) {
+        @OutputCustomType.Parameter("imageIdOverride") @Nullable String imageIdOverride,
+        @OutputCustomType.Parameter("imageType") @Nullable String imageType) {
         this.imageIdOverride = imageIdOverride;
         this.imageType = imageType;
     }
@@ -67,12 +67,12 @@ public final class ComputeEnvironmentComputeResourcesEc2Configuration {
     	      this.imageType = defaults.imageType;
         }
 
-        public Builder setImageIdOverride(@Nullable String imageIdOverride) {
+        public Builder imageIdOverride(@Nullable String imageIdOverride) {
             this.imageIdOverride = imageIdOverride;
             return this;
         }
 
-        public Builder setImageType(@Nullable String imageType) {
+        public Builder imageType(@Nullable String imageType) {
             this.imageType = imageType;
             return this;
         }

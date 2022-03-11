@@ -33,12 +33,12 @@ public final class WindowsSecurityContextOptions {
      */
     private final @Nullable String runAsUserName;
 
-    @OutputCustomType.Constructor({"gmsaCredentialSpec","gmsaCredentialSpecName","hostProcess","runAsUserName"})
+    @OutputCustomType.Constructor
     private WindowsSecurityContextOptions(
-        @Nullable String gmsaCredentialSpec,
-        @Nullable String gmsaCredentialSpecName,
-        @Nullable Boolean hostProcess,
-        @Nullable String runAsUserName) {
+        @OutputCustomType.Parameter("gmsaCredentialSpec") @Nullable String gmsaCredentialSpec,
+        @OutputCustomType.Parameter("gmsaCredentialSpecName") @Nullable String gmsaCredentialSpecName,
+        @OutputCustomType.Parameter("hostProcess") @Nullable Boolean hostProcess,
+        @OutputCustomType.Parameter("runAsUserName") @Nullable String runAsUserName) {
         this.gmsaCredentialSpec = gmsaCredentialSpec;
         this.gmsaCredentialSpecName = gmsaCredentialSpecName;
         this.hostProcess = hostProcess;
@@ -100,22 +100,22 @@ public final class WindowsSecurityContextOptions {
     	      this.runAsUserName = defaults.runAsUserName;
         }
 
-        public Builder setGmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
+        public Builder gmsaCredentialSpec(@Nullable String gmsaCredentialSpec) {
             this.gmsaCredentialSpec = gmsaCredentialSpec;
             return this;
         }
 
-        public Builder setGmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
+        public Builder gmsaCredentialSpecName(@Nullable String gmsaCredentialSpecName) {
             this.gmsaCredentialSpecName = gmsaCredentialSpecName;
             return this;
         }
 
-        public Builder setHostProcess(@Nullable Boolean hostProcess) {
+        public Builder hostProcess(@Nullable Boolean hostProcess) {
             this.hostProcess = hostProcess;
             return this;
         }
 
-        public Builder setRunAsUserName(@Nullable String runAsUserName) {
+        public Builder runAsUserName(@Nullable String runAsUserName) {
             this.runAsUserName = runAsUserName;
             return this;
         }

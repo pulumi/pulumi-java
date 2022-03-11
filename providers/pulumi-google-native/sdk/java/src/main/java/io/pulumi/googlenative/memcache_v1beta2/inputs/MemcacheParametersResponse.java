@@ -52,7 +52,7 @@ public final class MemcacheParametersResponse extends io.pulumi.resources.Invoke
     	      this.params = defaults.params;
         }
 
-        public Builder setParams(Map<String,String> params) {
+        public Builder params(Map<String,String> params) {
             this.params = Objects.requireNonNull(params);
             return this;
         }

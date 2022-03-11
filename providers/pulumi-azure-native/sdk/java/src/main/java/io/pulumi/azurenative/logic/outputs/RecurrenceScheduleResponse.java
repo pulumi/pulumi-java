@@ -39,13 +39,13 @@ public final class RecurrenceScheduleResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"hours","minutes","monthDays","monthlyOccurrences","weekDays"})
+    @OutputCustomType.Constructor
     private RecurrenceScheduleResponse(
-        @Nullable List<Integer> hours,
-        @Nullable List<Integer> minutes,
-        @Nullable List<Integer> monthDays,
-        @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("hours") @Nullable List<Integer> hours,
+        @OutputCustomType.Parameter("minutes") @Nullable List<Integer> minutes,
+        @OutputCustomType.Parameter("monthDays") @Nullable List<Integer> monthDays,
+        @OutputCustomType.Parameter("monthlyOccurrences") @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.hours = hours;
         this.minutes = minutes;
         this.monthDays = monthDays;
@@ -117,27 +117,27 @@ public final class RecurrenceScheduleResponse {
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setHours(@Nullable List<Integer> hours) {
+        public Builder hours(@Nullable List<Integer> hours) {
             this.hours = hours;
             return this;
         }
 
-        public Builder setMinutes(@Nullable List<Integer> minutes) {
+        public Builder minutes(@Nullable List<Integer> minutes) {
             this.minutes = minutes;
             return this;
         }
 
-        public Builder setMonthDays(@Nullable List<Integer> monthDays) {
+        public Builder monthDays(@Nullable List<Integer> monthDays) {
             this.monthDays = monthDays;
             return this;
         }
 
-        public Builder setMonthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
+        public Builder monthlyOccurrences(@Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences) {
             this.monthlyOccurrences = monthlyOccurrences;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

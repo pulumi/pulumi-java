@@ -37,14 +37,14 @@ public final class GetDirectoryConnectSetting {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"availabilityZones","connectIps","customerDnsIps","customerUsername","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetDirectoryConnectSetting(
-        List<String> availabilityZones,
-        List<String> connectIps,
-        List<String> customerDnsIps,
-        String customerUsername,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("connectIps") List<String> connectIps,
+        @OutputCustomType.Parameter("customerDnsIps") List<String> customerDnsIps,
+        @OutputCustomType.Parameter("customerUsername") String customerUsername,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.availabilityZones = availabilityZones;
         this.connectIps = connectIps;
         this.customerDnsIps = customerDnsIps;
@@ -122,32 +122,32 @@ public final class GetDirectoryConnectSetting {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setConnectIps(List<String> connectIps) {
+        public Builder connectIps(List<String> connectIps) {
             this.connectIps = Objects.requireNonNull(connectIps);
             return this;
         }
 
-        public Builder setCustomerDnsIps(List<String> customerDnsIps) {
+        public Builder customerDnsIps(List<String> customerDnsIps) {
             this.customerDnsIps = Objects.requireNonNull(customerDnsIps);
             return this;
         }
 
-        public Builder setCustomerUsername(String customerUsername) {
+        public Builder customerUsername(String customerUsername) {
             this.customerUsername = Objects.requireNonNull(customerUsername);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

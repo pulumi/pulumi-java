@@ -35,13 +35,13 @@ public final class BatchConfigurationPropertiesResponse {
      */
     private final BatchReleaseCriteriaResponse releaseCriteria;
 
-    @OutputCustomType.Constructor({"batchGroupName","changedTime","createdTime","metadata","releaseCriteria"})
+    @OutputCustomType.Constructor
     private BatchConfigurationPropertiesResponse(
-        String batchGroupName,
-        @Nullable String changedTime,
-        @Nullable String createdTime,
-        @Nullable Object metadata,
-        BatchReleaseCriteriaResponse releaseCriteria) {
+        @OutputCustomType.Parameter("batchGroupName") String batchGroupName,
+        @OutputCustomType.Parameter("changedTime") @Nullable String changedTime,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("metadata") @Nullable Object metadata,
+        @OutputCustomType.Parameter("releaseCriteria") BatchReleaseCriteriaResponse releaseCriteria) {
         this.batchGroupName = batchGroupName;
         this.changedTime = changedTime;
         this.createdTime = createdTime;
@@ -109,27 +109,27 @@ public final class BatchConfigurationPropertiesResponse {
     	      this.releaseCriteria = defaults.releaseCriteria;
         }
 
-        public Builder setBatchGroupName(String batchGroupName) {
+        public Builder batchGroupName(String batchGroupName) {
             this.batchGroupName = Objects.requireNonNull(batchGroupName);
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Object metadata) {
+        public Builder metadata(@Nullable Object metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setReleaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
+        public Builder releaseCriteria(BatchReleaseCriteriaResponse releaseCriteria) {
             this.releaseCriteria = Objects.requireNonNull(releaseCriteria);
             return this;
         }

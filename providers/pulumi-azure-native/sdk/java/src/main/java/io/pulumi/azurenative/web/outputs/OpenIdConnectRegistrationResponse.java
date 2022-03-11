@@ -29,11 +29,11 @@ public final class OpenIdConnectRegistrationResponse {
      */
     private final @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration;
 
-    @OutputCustomType.Constructor({"clientCredential","clientId","openIdConnectConfiguration"})
+    @OutputCustomType.Constructor
     private OpenIdConnectRegistrationResponse(
-        @Nullable OpenIdConnectClientCredentialResponse clientCredential,
-        @Nullable String clientId,
-        @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
+        @OutputCustomType.Parameter("clientCredential") @Nullable OpenIdConnectClientCredentialResponse clientCredential,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("openIdConnectConfiguration") @Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
         this.clientCredential = clientCredential;
         this.clientId = clientId;
         this.openIdConnectConfiguration = openIdConnectConfiguration;
@@ -85,17 +85,17 @@ public final class OpenIdConnectRegistrationResponse {
     	      this.openIdConnectConfiguration = defaults.openIdConnectConfiguration;
         }
 
-        public Builder setClientCredential(@Nullable OpenIdConnectClientCredentialResponse clientCredential) {
+        public Builder clientCredential(@Nullable OpenIdConnectClientCredentialResponse clientCredential) {
             this.clientCredential = clientCredential;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setOpenIdConnectConfiguration(@Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
+        public Builder openIdConnectConfiguration(@Nullable OpenIdConnectConfigResponse openIdConnectConfiguration) {
             this.openIdConnectConfiguration = openIdConnectConfiguration;
             return this;
         }

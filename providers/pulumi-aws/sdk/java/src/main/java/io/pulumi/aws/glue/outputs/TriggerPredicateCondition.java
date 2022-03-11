@@ -37,13 +37,13 @@ public final class TriggerPredicateCondition {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"crawlState","crawlerName","jobName","logicalOperator","state"})
+    @OutputCustomType.Constructor
     private TriggerPredicateCondition(
-        @Nullable String crawlState,
-        @Nullable String crawlerName,
-        @Nullable String jobName,
-        @Nullable String logicalOperator,
-        @Nullable String state) {
+        @OutputCustomType.Parameter("crawlState") @Nullable String crawlState,
+        @OutputCustomType.Parameter("crawlerName") @Nullable String crawlerName,
+        @OutputCustomType.Parameter("jobName") @Nullable String jobName,
+        @OutputCustomType.Parameter("logicalOperator") @Nullable String logicalOperator,
+        @OutputCustomType.Parameter("state") @Nullable String state) {
         this.crawlState = crawlState;
         this.crawlerName = crawlerName;
         this.jobName = jobName;
@@ -115,27 +115,27 @@ public final class TriggerPredicateCondition {
     	      this.state = defaults.state;
         }
 
-        public Builder setCrawlState(@Nullable String crawlState) {
+        public Builder crawlState(@Nullable String crawlState) {
             this.crawlState = crawlState;
             return this;
         }
 
-        public Builder setCrawlerName(@Nullable String crawlerName) {
+        public Builder crawlerName(@Nullable String crawlerName) {
             this.crawlerName = crawlerName;
             return this;
         }
 
-        public Builder setJobName(@Nullable String jobName) {
+        public Builder jobName(@Nullable String jobName) {
             this.jobName = jobName;
             return this;
         }
 
-        public Builder setLogicalOperator(@Nullable String logicalOperator) {
+        public Builder logicalOperator(@Nullable String logicalOperator) {
             this.logicalOperator = logicalOperator;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

@@ -22,10 +22,10 @@ public final class NodeSelectorTerm {
      */
     private final @Nullable List<NodeSelectorRequirement> matchFields;
 
-    @OutputCustomType.Constructor({"matchExpressions","matchFields"})
+    @OutputCustomType.Constructor
     private NodeSelectorTerm(
-        @Nullable List<NodeSelectorRequirement> matchExpressions,
-        @Nullable List<NodeSelectorRequirement> matchFields) {
+        @OutputCustomType.Parameter("matchExpressions") @Nullable List<NodeSelectorRequirement> matchExpressions,
+        @OutputCustomType.Parameter("matchFields") @Nullable List<NodeSelectorRequirement> matchFields) {
         this.matchExpressions = matchExpressions;
         this.matchFields = matchFields;
     }
@@ -67,12 +67,12 @@ public final class NodeSelectorTerm {
     	      this.matchFields = defaults.matchFields;
         }
 
-        public Builder setMatchExpressions(@Nullable List<NodeSelectorRequirement> matchExpressions) {
+        public Builder matchExpressions(@Nullable List<NodeSelectorRequirement> matchExpressions) {
             this.matchExpressions = matchExpressions;
             return this;
         }
 
-        public Builder setMatchFields(@Nullable List<NodeSelectorRequirement> matchFields) {
+        public Builder matchFields(@Nullable List<NodeSelectorRequirement> matchFields) {
             this.matchFields = matchFields;
             return this;
         }

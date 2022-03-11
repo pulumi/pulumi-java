@@ -31,12 +31,12 @@ public final class WorkerConfigResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","network","tag"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        NetworkResponse network,
-        String tag) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("network") NetworkResponse network,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.network = network;
@@ -98,22 +98,22 @@ public final class WorkerConfigResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setNetwork(NetworkResponse network) {
+        public Builder network(NetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

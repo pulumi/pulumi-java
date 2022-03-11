@@ -20,10 +20,10 @@ public final class DetectorModelPayload {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"contentExpression","type"})
+    @OutputCustomType.Constructor
     private DetectorModelPayload(
-        String contentExpression,
-        String type) {
+        @OutputCustomType.Parameter("contentExpression") String contentExpression,
+        @OutputCustomType.Parameter("type") String type) {
         this.contentExpression = contentExpression;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class DetectorModelPayload {
     	      this.type = defaults.type;
         }
 
-        public Builder setContentExpression(String contentExpression) {
+        public Builder contentExpression(String contentExpression) {
             this.contentExpression = Objects.requireNonNull(contentExpression);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

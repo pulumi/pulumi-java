@@ -57,7 +57,7 @@ public final class NodePlacementConfigurationResponse extends io.pulumi.resource
     	      this.policy = defaults.policy;
         }
 
-        public Builder setPolicy(@Nullable String policy) {
+        public Builder policy(@Nullable String policy) {
             this.policy = policy;
             return this;
         }

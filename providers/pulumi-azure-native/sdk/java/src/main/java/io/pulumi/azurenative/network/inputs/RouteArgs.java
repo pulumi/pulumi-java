@@ -157,72 +157,72 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(@Nullable Input<String> addressPrefix) {
+        public Builder addressPrefix(@Nullable Input<String> addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = Input.ofNullable(addressPrefix);
             return this;
         }
 
-        public Builder setHasBgpOverride(@Nullable Input<Boolean> hasBgpOverride) {
+        public Builder hasBgpOverride(@Nullable Input<Boolean> hasBgpOverride) {
             this.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
-        public Builder setHasBgpOverride(@Nullable Boolean hasBgpOverride) {
+        public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
             this.hasBgpOverride = Input.ofNullable(hasBgpOverride);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable Input<String> nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = Input.ofNullable(nextHopIpAddress);
             return this;
         }
 
-        public Builder setNextHopType(Input<Either<String,RouteNextHopType>> nextHopType) {
+        public Builder nextHopType(Input<Either<String,RouteNextHopType>> nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
-        public Builder setNextHopType(Either<String,RouteNextHopType> nextHopType) {
+        public Builder nextHopType(Either<String,RouteNextHopType> nextHopType) {
             this.nextHopType = Input.of(Objects.requireNonNull(nextHopType));
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

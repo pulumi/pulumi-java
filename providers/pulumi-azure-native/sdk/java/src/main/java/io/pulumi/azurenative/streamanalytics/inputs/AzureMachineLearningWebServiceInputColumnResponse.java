@@ -91,17 +91,17 @@ public final class AzureMachineLearningWebServiceInputColumnResponse extends io.
     	      this.name = defaults.name;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setMapTo(@Nullable Integer mapTo) {
+        public Builder mapTo(@Nullable Integer mapTo) {
             this.mapTo = mapTo;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

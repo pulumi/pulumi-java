@@ -20,10 +20,10 @@ public final class ListRemoteRenderingAccountKeysResult {
      */
     private final String secondaryKey;
 
-    @OutputCustomType.Constructor({"primaryKey","secondaryKey"})
+    @OutputCustomType.Constructor
     private ListRemoteRenderingAccountKeysResult(
-        String primaryKey,
-        String secondaryKey) {
+        @OutputCustomType.Parameter("primaryKey") String primaryKey,
+        @OutputCustomType.Parameter("secondaryKey") String secondaryKey) {
         this.primaryKey = primaryKey;
         this.secondaryKey = secondaryKey;
     }
@@ -65,12 +65,12 @@ public final class ListRemoteRenderingAccountKeysResult {
     	      this.secondaryKey = defaults.secondaryKey;
         }
 
-        public Builder setPrimaryKey(String primaryKey) {
+        public Builder primaryKey(String primaryKey) {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
 
-        public Builder setSecondaryKey(String secondaryKey) {
+        public Builder secondaryKey(String secondaryKey) {
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }

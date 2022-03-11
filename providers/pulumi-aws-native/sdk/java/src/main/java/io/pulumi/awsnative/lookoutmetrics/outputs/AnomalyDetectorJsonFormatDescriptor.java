@@ -15,10 +15,10 @@ public final class AnomalyDetectorJsonFormatDescriptor {
     private final @Nullable String charset;
     private final @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression;
 
-    @OutputCustomType.Constructor({"charset","fileCompression"})
+    @OutputCustomType.Constructor
     private AnomalyDetectorJsonFormatDescriptor(
-        @Nullable String charset,
-        @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
+        @OutputCustomType.Parameter("charset") @Nullable String charset,
+        @OutputCustomType.Parameter("fileCompression") @Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
         this.charset = charset;
         this.fileCompression = fileCompression;
     }
@@ -52,12 +52,12 @@ public final class AnomalyDetectorJsonFormatDescriptor {
     	      this.fileCompression = defaults.fileCompression;
         }
 
-        public Builder setCharset(@Nullable String charset) {
+        public Builder charset(@Nullable String charset) {
             this.charset = charset;
             return this;
         }
 
-        public Builder setFileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
+        public Builder fileCompression(@Nullable AnomalyDetectorJsonFormatDescriptorFileCompression fileCompression) {
             this.fileCompression = fileCompression;
             return this;
         }

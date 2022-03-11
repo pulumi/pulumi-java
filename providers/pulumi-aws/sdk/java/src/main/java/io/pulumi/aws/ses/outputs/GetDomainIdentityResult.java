@@ -30,12 +30,12 @@ public final class GetDomainIdentityResult {
      */
     private final String verificationToken;
 
-    @OutputCustomType.Constructor({"arn","domain","id","verificationToken"})
+    @OutputCustomType.Constructor
     private GetDomainIdentityResult(
-        String arn,
-        String domain,
-        String id,
-        String verificationToken) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("verificationToken") String verificationToken) {
         this.arn = arn;
         this.domain = domain;
         this.id = id;
@@ -97,22 +97,22 @@ public final class GetDomainIdentityResult {
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setVerificationToken(String verificationToken) {
+        public Builder verificationToken(String verificationToken) {
             this.verificationToken = Objects.requireNonNull(verificationToken);
             return this;
         }

@@ -290,152 +290,152 @@ public final class VpnSiteLinkConnectionArgs extends io.pulumi.resources.Resourc
     	      this.vpnSiteLink = defaults.vpnSiteLink;
         }
 
-        public Builder setConnectionBandwidth(@Nullable Input<Integer> connectionBandwidth) {
+        public Builder connectionBandwidth(@Nullable Input<Integer> connectionBandwidth) {
             this.connectionBandwidth = connectionBandwidth;
             return this;
         }
 
-        public Builder setConnectionBandwidth(@Nullable Integer connectionBandwidth) {
+        public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
             this.connectionBandwidth = Input.ofNullable(connectionBandwidth);
             return this;
         }
 
-        public Builder setEgressNatRules(@Nullable Input<List<SubResourceArgs>> egressNatRules) {
+        public Builder egressNatRules(@Nullable Input<List<SubResourceArgs>> egressNatRules) {
             this.egressNatRules = egressNatRules;
             return this;
         }
 
-        public Builder setEgressNatRules(@Nullable List<SubResourceArgs> egressNatRules) {
+        public Builder egressNatRules(@Nullable List<SubResourceArgs> egressNatRules) {
             this.egressNatRules = Input.ofNullable(egressNatRules);
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Input<Boolean> enableBgp) {
+        public Builder enableBgp(@Nullable Input<Boolean> enableBgp) {
             this.enableBgp = enableBgp;
             return this;
         }
 
-        public Builder setEnableBgp(@Nullable Boolean enableBgp) {
+        public Builder enableBgp(@Nullable Boolean enableBgp) {
             this.enableBgp = Input.ofNullable(enableBgp);
             return this;
         }
 
-        public Builder setEnableRateLimiting(@Nullable Input<Boolean> enableRateLimiting) {
+        public Builder enableRateLimiting(@Nullable Input<Boolean> enableRateLimiting) {
             this.enableRateLimiting = enableRateLimiting;
             return this;
         }
 
-        public Builder setEnableRateLimiting(@Nullable Boolean enableRateLimiting) {
+        public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
             this.enableRateLimiting = Input.ofNullable(enableRateLimiting);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIngressNatRules(@Nullable Input<List<SubResourceArgs>> ingressNatRules) {
+        public Builder ingressNatRules(@Nullable Input<List<SubResourceArgs>> ingressNatRules) {
             this.ingressNatRules = ingressNatRules;
             return this;
         }
 
-        public Builder setIngressNatRules(@Nullable List<SubResourceArgs> ingressNatRules) {
+        public Builder ingressNatRules(@Nullable List<SubResourceArgs> ingressNatRules) {
             this.ingressNatRules = Input.ofNullable(ingressNatRules);
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable Input<List<IpsecPolicyArgs>> ipsecPolicies) {
             this.ipsecPolicies = ipsecPolicies;
             return this;
         }
 
-        public Builder setIpsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
+        public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
             this.ipsecPolicies = Input.ofNullable(ipsecPolicies);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Input<Integer> routingWeight) {
+        public Builder routingWeight(@Nullable Input<Integer> routingWeight) {
             this.routingWeight = routingWeight;
             return this;
         }
 
-        public Builder setRoutingWeight(@Nullable Integer routingWeight) {
+        public Builder routingWeight(@Nullable Integer routingWeight) {
             this.routingWeight = Input.ofNullable(routingWeight);
             return this;
         }
 
-        public Builder setSharedKey(@Nullable Input<String> sharedKey) {
+        public Builder sharedKey(@Nullable Input<String> sharedKey) {
             this.sharedKey = sharedKey;
             return this;
         }
 
-        public Builder setSharedKey(@Nullable String sharedKey) {
+        public Builder sharedKey(@Nullable String sharedKey) {
             this.sharedKey = Input.ofNullable(sharedKey);
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Input<Boolean> useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Input<Boolean> useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = useLocalAzureIpAddress;
             return this;
         }
 
-        public Builder setUseLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
+        public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
             this.useLocalAzureIpAddress = Input.ofNullable(useLocalAzureIpAddress);
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Input<Boolean> usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Input<Boolean> usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = usePolicyBasedTrafficSelectors;
             return this;
         }
 
-        public Builder setUsePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
+        public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
             this.usePolicyBasedTrafficSelectors = Input.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
 
-        public Builder setVpnConnectionProtocolType(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
+        public Builder vpnConnectionProtocolType(@Nullable Input<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = vpnConnectionProtocolType;
             return this;
         }
 
-        public Builder setVpnConnectionProtocolType(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
+        public Builder vpnConnectionProtocolType(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
             this.vpnConnectionProtocolType = Input.ofNullable(vpnConnectionProtocolType);
             return this;
         }
 
-        public Builder setVpnLinkConnectionMode(@Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
+        public Builder vpnLinkConnectionMode(@Nullable Input<Either<String,VpnLinkConnectionMode>> vpnLinkConnectionMode) {
             this.vpnLinkConnectionMode = vpnLinkConnectionMode;
             return this;
         }
 
-        public Builder setVpnLinkConnectionMode(@Nullable Either<String,VpnLinkConnectionMode> vpnLinkConnectionMode) {
+        public Builder vpnLinkConnectionMode(@Nullable Either<String,VpnLinkConnectionMode> vpnLinkConnectionMode) {
             this.vpnLinkConnectionMode = Input.ofNullable(vpnLinkConnectionMode);
             return this;
         }
 
-        public Builder setVpnSiteLink(@Nullable Input<SubResourceArgs> vpnSiteLink) {
+        public Builder vpnSiteLink(@Nullable Input<SubResourceArgs> vpnSiteLink) {
             this.vpnSiteLink = vpnSiteLink;
             return this;
         }
 
-        public Builder setVpnSiteLink(@Nullable SubResourceArgs vpnSiteLink) {
+        public Builder vpnSiteLink(@Nullable SubResourceArgs vpnSiteLink) {
             this.vpnSiteLink = Input.ofNullable(vpnSiteLink);
             return this;
         }

@@ -26,11 +26,11 @@ public final class BuiltImageResponse {
      */
     private final TimeSpanResponse pushTiming;
 
-    @OutputCustomType.Constructor({"digest","name","pushTiming"})
+    @OutputCustomType.Constructor
     private BuiltImageResponse(
-        String digest,
-        String name,
-        TimeSpanResponse pushTiming) {
+        @OutputCustomType.Parameter("digest") String digest,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pushTiming") TimeSpanResponse pushTiming) {
         this.digest = digest;
         this.name = name;
         this.pushTiming = pushTiming;
@@ -82,17 +82,17 @@ public final class BuiltImageResponse {
     	      this.pushTiming = defaults.pushTiming;
         }
 
-        public Builder setDigest(String digest) {
+        public Builder digest(String digest) {
             this.digest = Objects.requireNonNull(digest);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPushTiming(TimeSpanResponse pushTiming) {
+        public Builder pushTiming(TimeSpanResponse pushTiming) {
             this.pushTiming = Objects.requireNonNull(pushTiming);
             return this;
         }

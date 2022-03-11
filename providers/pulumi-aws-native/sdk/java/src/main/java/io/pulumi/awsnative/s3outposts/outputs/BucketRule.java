@@ -42,14 +42,14 @@ public final class BucketRule {
     private final @Nullable String id;
     private final @Nullable BucketRuleStatus status;
 
-    @OutputCustomType.Constructor({"abortIncompleteMultipartUpload","expirationDate","expirationInDays","filter","id","status"})
+    @OutputCustomType.Constructor
     private BucketRule(
-        @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
-        @Nullable String expirationDate,
-        @Nullable Integer expirationInDays,
-        @Nullable BucketRuleFilterProperties filter,
-        @Nullable String id,
-        @Nullable BucketRuleStatus status) {
+        @OutputCustomType.Parameter("abortIncompleteMultipartUpload") @Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload,
+        @OutputCustomType.Parameter("expirationDate") @Nullable String expirationDate,
+        @OutputCustomType.Parameter("expirationInDays") @Nullable Integer expirationInDays,
+        @OutputCustomType.Parameter("filter") @Nullable BucketRuleFilterProperties filter,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("status") @Nullable BucketRuleStatus status) {
         this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
         this.expirationDate = expirationDate;
         this.expirationInDays = expirationInDays;
@@ -127,32 +127,32 @@ public final class BucketRule {
     	      this.status = defaults.status;
         }
 
-        public Builder setAbortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
+        public Builder abortIncompleteMultipartUpload(@Nullable BucketAbortIncompleteMultipartUpload abortIncompleteMultipartUpload) {
             this.abortIncompleteMultipartUpload = abortIncompleteMultipartUpload;
             return this;
         }
 
-        public Builder setExpirationDate(@Nullable String expirationDate) {
+        public Builder expirationDate(@Nullable String expirationDate) {
             this.expirationDate = expirationDate;
             return this;
         }
 
-        public Builder setExpirationInDays(@Nullable Integer expirationInDays) {
+        public Builder expirationInDays(@Nullable Integer expirationInDays) {
             this.expirationInDays = expirationInDays;
             return this;
         }
 
-        public Builder setFilter(@Nullable BucketRuleFilterProperties filter) {
+        public Builder filter(@Nullable BucketRuleFilterProperties filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setStatus(@Nullable BucketRuleStatus status) {
+        public Builder status(@Nullable BucketRuleStatus status) {
             this.status = status;
             return this;
         }

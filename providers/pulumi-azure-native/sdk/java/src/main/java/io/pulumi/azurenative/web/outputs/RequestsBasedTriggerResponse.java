@@ -23,10 +23,10 @@ public final class RequestsBasedTriggerResponse {
      */
     private final @Nullable String timeInterval;
 
-    @OutputCustomType.Constructor({"count","timeInterval"})
+    @OutputCustomType.Constructor
     private RequestsBasedTriggerResponse(
-        @Nullable Integer count,
-        @Nullable String timeInterval) {
+        @OutputCustomType.Parameter("count") @Nullable Integer count,
+        @OutputCustomType.Parameter("timeInterval") @Nullable String timeInterval) {
         this.count = count;
         this.timeInterval = timeInterval;
     }
@@ -68,12 +68,12 @@ public final class RequestsBasedTriggerResponse {
     	      this.timeInterval = defaults.timeInterval;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }
 
-        public Builder setTimeInterval(@Nullable String timeInterval) {
+        public Builder timeInterval(@Nullable String timeInterval) {
             this.timeInterval = timeInterval;
             return this;
         }

@@ -32,12 +32,12 @@ public final class SignatureResponse {
      */
     private final String userId;
 
-    @OutputCustomType.Constructor({"image","metadata","signatureTime","userId"})
+    @OutputCustomType.Constructor
     private SignatureResponse(
-        ImageResponse image,
-        Map<String,String> metadata,
-        String signatureTime,
-        String userId) {
+        @OutputCustomType.Parameter("image") ImageResponse image,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("signatureTime") String signatureTime,
+        @OutputCustomType.Parameter("userId") String userId) {
         this.image = image;
         this.metadata = metadata;
         this.signatureTime = signatureTime;
@@ -99,22 +99,22 @@ public final class SignatureResponse {
     	      this.userId = defaults.userId;
         }
 
-        public Builder setImage(ImageResponse image) {
+        public Builder image(ImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSignatureTime(String signatureTime) {
+        public Builder signatureTime(String signatureTime) {
             this.signatureTime = Objects.requireNonNull(signatureTime);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }

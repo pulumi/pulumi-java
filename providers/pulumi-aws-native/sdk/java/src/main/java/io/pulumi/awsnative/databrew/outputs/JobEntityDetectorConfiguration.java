@@ -16,10 +16,10 @@ public final class JobEntityDetectorConfiguration {
     private final @Nullable JobAllowedStatistics allowedStatistics;
     private final List<String> entityTypes;
 
-    @OutputCustomType.Constructor({"allowedStatistics","entityTypes"})
+    @OutputCustomType.Constructor
     private JobEntityDetectorConfiguration(
-        @Nullable JobAllowedStatistics allowedStatistics,
-        List<String> entityTypes) {
+        @OutputCustomType.Parameter("allowedStatistics") @Nullable JobAllowedStatistics allowedStatistics,
+        @OutputCustomType.Parameter("entityTypes") List<String> entityTypes) {
         this.allowedStatistics = allowedStatistics;
         this.entityTypes = entityTypes;
     }
@@ -53,12 +53,12 @@ public final class JobEntityDetectorConfiguration {
     	      this.entityTypes = defaults.entityTypes;
         }
 
-        public Builder setAllowedStatistics(@Nullable JobAllowedStatistics allowedStatistics) {
+        public Builder allowedStatistics(@Nullable JobAllowedStatistics allowedStatistics) {
             this.allowedStatistics = allowedStatistics;
             return this;
         }
 
-        public Builder setEntityTypes(List<String> entityTypes) {
+        public Builder entityTypes(List<String> entityTypes) {
             this.entityTypes = Objects.requireNonNull(entityTypes);
             return this;
         }

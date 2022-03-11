@@ -233,102 +233,102 @@ public final class TableExternalDataConfigurationArgs extends io.pulumi.resource
     	      this.sourceUris = defaults.sourceUris;
         }
 
-        public Builder setAutodetect(Input<Boolean> autodetect) {
+        public Builder autodetect(Input<Boolean> autodetect) {
             this.autodetect = Objects.requireNonNull(autodetect);
             return this;
         }
 
-        public Builder setAutodetect(Boolean autodetect) {
+        public Builder autodetect(Boolean autodetect) {
             this.autodetect = Input.of(Objects.requireNonNull(autodetect));
             return this;
         }
 
-        public Builder setCompression(@Nullable Input<String> compression) {
+        public Builder compression(@Nullable Input<String> compression) {
             this.compression = compression;
             return this;
         }
 
-        public Builder setCompression(@Nullable String compression) {
+        public Builder compression(@Nullable String compression) {
             this.compression = Input.ofNullable(compression);
             return this;
         }
 
-        public Builder setCsvOptions(@Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
+        public Builder csvOptions(@Nullable Input<TableExternalDataConfigurationCsvOptionsArgs> csvOptions) {
             this.csvOptions = csvOptions;
             return this;
         }
 
-        public Builder setCsvOptions(@Nullable TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
+        public Builder csvOptions(@Nullable TableExternalDataConfigurationCsvOptionsArgs csvOptions) {
             this.csvOptions = Input.ofNullable(csvOptions);
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(@Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable Input<TableExternalDataConfigurationGoogleSheetsOptionsArgs> googleSheetsOptions) {
             this.googleSheetsOptions = googleSheetsOptions;
             return this;
         }
 
-        public Builder setGoogleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
+        public Builder googleSheetsOptions(@Nullable TableExternalDataConfigurationGoogleSheetsOptionsArgs googleSheetsOptions) {
             this.googleSheetsOptions = Input.ofNullable(googleSheetsOptions);
             return this;
         }
 
-        public Builder setHivePartitioningOptions(@Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable Input<TableExternalDataConfigurationHivePartitioningOptionsArgs> hivePartitioningOptions) {
             this.hivePartitioningOptions = hivePartitioningOptions;
             return this;
         }
 
-        public Builder setHivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
+        public Builder hivePartitioningOptions(@Nullable TableExternalDataConfigurationHivePartitioningOptionsArgs hivePartitioningOptions) {
             this.hivePartitioningOptions = Input.ofNullable(hivePartitioningOptions);
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Input<Boolean> ignoreUnknownValues) {
             this.ignoreUnknownValues = ignoreUnknownValues;
             return this;
         }
 
-        public Builder setIgnoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
+        public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
             this.ignoreUnknownValues = Input.ofNullable(ignoreUnknownValues);
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Input<Integer> maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Input<Integer> maxBadRecords) {
             this.maxBadRecords = maxBadRecords;
             return this;
         }
 
-        public Builder setMaxBadRecords(@Nullable Integer maxBadRecords) {
+        public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
             this.maxBadRecords = Input.ofNullable(maxBadRecords);
             return this;
         }
 
-        public Builder setSchema(@Nullable Input<String> schema) {
+        public Builder schema(@Nullable Input<String> schema) {
             this.schema = schema;
             return this;
         }
 
-        public Builder setSchema(@Nullable String schema) {
+        public Builder schema(@Nullable String schema) {
             this.schema = Input.ofNullable(schema);
             return this;
         }
 
-        public Builder setSourceFormat(Input<String> sourceFormat) {
+        public Builder sourceFormat(Input<String> sourceFormat) {
             this.sourceFormat = Objects.requireNonNull(sourceFormat);
             return this;
         }
 
-        public Builder setSourceFormat(String sourceFormat) {
+        public Builder sourceFormat(String sourceFormat) {
             this.sourceFormat = Input.of(Objects.requireNonNull(sourceFormat));
             return this;
         }
 
-        public Builder setSourceUris(Input<List<String>> sourceUris) {
+        public Builder sourceUris(Input<List<String>> sourceUris) {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
 
-        public Builder setSourceUris(List<String> sourceUris) {
+        public Builder sourceUris(List<String> sourceUris) {
             this.sourceUris = Input.of(Objects.requireNonNull(sourceUris));
             return this;
         }

@@ -71,22 +71,22 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsCon
     	      this.returnConnectionPasswordEncrypted = defaults.returnConnectionPasswordEncrypted;
         }
 
-        public Builder setAwsKmsKeyId(@Nullable Input<String> awsKmsKeyId) {
+        public Builder awsKmsKeyId(@Nullable Input<String> awsKmsKeyId) {
             this.awsKmsKeyId = awsKmsKeyId;
             return this;
         }
 
-        public Builder setAwsKmsKeyId(@Nullable String awsKmsKeyId) {
+        public Builder awsKmsKeyId(@Nullable String awsKmsKeyId) {
             this.awsKmsKeyId = Input.ofNullable(awsKmsKeyId);
             return this;
         }
 
-        public Builder setReturnConnectionPasswordEncrypted(Input<Boolean> returnConnectionPasswordEncrypted) {
+        public Builder returnConnectionPasswordEncrypted(Input<Boolean> returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Objects.requireNonNull(returnConnectionPasswordEncrypted);
             return this;
         }
 
-        public Builder setReturnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
+        public Builder returnConnectionPasswordEncrypted(Boolean returnConnectionPasswordEncrypted) {
             this.returnConnectionPasswordEncrypted = Input.of(Objects.requireNonNull(returnConnectionPasswordEncrypted));
             return this;
         }

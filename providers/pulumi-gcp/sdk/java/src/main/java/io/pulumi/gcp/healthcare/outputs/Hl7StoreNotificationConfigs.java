@@ -35,10 +35,10 @@ public final class Hl7StoreNotificationConfigs {
      */
     private final String pubsubTopic;
 
-    @OutputCustomType.Constructor({"filter","pubsubTopic"})
+    @OutputCustomType.Constructor
     private Hl7StoreNotificationConfigs(
-        @Nullable String filter,
-        String pubsubTopic) {
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("pubsubTopic") String pubsubTopic) {
         this.filter = filter;
         this.pubsubTopic = pubsubTopic;
     }
@@ -93,12 +93,12 @@ public final class Hl7StoreNotificationConfigs {
     	      this.pubsubTopic = defaults.pubsubTopic;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setPubsubTopic(String pubsubTopic) {
+        public Builder pubsubTopic(String pubsubTopic) {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }

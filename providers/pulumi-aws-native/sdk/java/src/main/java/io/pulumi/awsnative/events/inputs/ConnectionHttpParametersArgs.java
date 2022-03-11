@@ -75,32 +75,32 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
     	      this.queryStringParameters = defaults.queryStringParameters;
         }
 
-        public Builder setBodyParameters(@Nullable Input<List<ConnectionParameterArgs>> bodyParameters) {
+        public Builder bodyParameters(@Nullable Input<List<ConnectionParameterArgs>> bodyParameters) {
             this.bodyParameters = bodyParameters;
             return this;
         }
 
-        public Builder setBodyParameters(@Nullable List<ConnectionParameterArgs> bodyParameters) {
+        public Builder bodyParameters(@Nullable List<ConnectionParameterArgs> bodyParameters) {
             this.bodyParameters = Input.ofNullable(bodyParameters);
             return this;
         }
 
-        public Builder setHeaderParameters(@Nullable Input<List<ConnectionParameterArgs>> headerParameters) {
+        public Builder headerParameters(@Nullable Input<List<ConnectionParameterArgs>> headerParameters) {
             this.headerParameters = headerParameters;
             return this;
         }
 
-        public Builder setHeaderParameters(@Nullable List<ConnectionParameterArgs> headerParameters) {
+        public Builder headerParameters(@Nullable List<ConnectionParameterArgs> headerParameters) {
             this.headerParameters = Input.ofNullable(headerParameters);
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable Input<List<ConnectionParameterArgs>> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable Input<List<ConnectionParameterArgs>> queryStringParameters) {
             this.queryStringParameters = queryStringParameters;
             return this;
         }
 
-        public Builder setQueryStringParameters(@Nullable List<ConnectionParameterArgs> queryStringParameters) {
+        public Builder queryStringParameters(@Nullable List<ConnectionParameterArgs> queryStringParameters) {
             this.queryStringParameters = Input.ofNullable(queryStringParameters);
             return this;
         }

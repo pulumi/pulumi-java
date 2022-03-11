@@ -21,10 +21,10 @@ public final class ContactTargetInfo {
      */
     private final Boolean isEssential;
 
-    @OutputCustomType.Constructor({"contactId","isEssential"})
+    @OutputCustomType.Constructor
     private ContactTargetInfo(
-        String contactId,
-        Boolean isEssential) {
+        @OutputCustomType.Parameter("contactId") String contactId,
+        @OutputCustomType.Parameter("isEssential") Boolean isEssential) {
         this.contactId = contactId;
         this.isEssential = isEssential;
     }
@@ -66,12 +66,12 @@ public final class ContactTargetInfo {
     	      this.isEssential = defaults.isEssential;
         }
 
-        public Builder setContactId(String contactId) {
+        public Builder contactId(String contactId) {
             this.contactId = Objects.requireNonNull(contactId);
             return this;
         }
 
-        public Builder setIsEssential(Boolean isEssential) {
+        public Builder isEssential(Boolean isEssential) {
             this.isEssential = Objects.requireNonNull(isEssential);
             return this;
         }

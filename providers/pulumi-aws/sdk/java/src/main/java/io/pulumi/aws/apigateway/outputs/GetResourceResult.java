@@ -27,13 +27,13 @@ public final class GetResourceResult {
     private final String pathPart;
     private final String restApiId;
 
-    @OutputCustomType.Constructor({"id","parentId","path","pathPart","restApiId"})
+    @OutputCustomType.Constructor
     private GetResourceResult(
-        String id,
-        String parentId,
-        String path,
-        String pathPart,
-        String restApiId) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("pathPart") String pathPart,
+        @OutputCustomType.Parameter("restApiId") String restApiId) {
         this.id = id;
         this.parentId = parentId;
         this.path = path;
@@ -97,27 +97,27 @@ public final class GetResourceResult {
     	      this.restApiId = defaults.restApiId;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setPathPart(String pathPart) {
+        public Builder pathPart(String pathPart) {
             this.pathPart = Objects.requireNonNull(pathPart);
             return this;
         }
 
-        public Builder setRestApiId(String restApiId) {
+        public Builder restApiId(String restApiId) {
             this.restApiId = Objects.requireNonNull(restApiId);
             return this;
         }

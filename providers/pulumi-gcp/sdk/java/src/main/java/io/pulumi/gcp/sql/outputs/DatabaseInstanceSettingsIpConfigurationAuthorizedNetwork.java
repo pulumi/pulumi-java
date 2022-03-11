@@ -30,11 +30,11 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"expirationTime","name","value"})
+    @OutputCustomType.Constructor
     private DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork(
-        @Nullable String expirationTime,
-        @Nullable String name,
-        String value) {
+        @OutputCustomType.Parameter("expirationTime") @Nullable String expirationTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.expirationTime = expirationTime;
         this.name = name;
         this.value = value;
@@ -89,17 +89,17 @@ public final class DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork {
     	      this.value = defaults.value;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

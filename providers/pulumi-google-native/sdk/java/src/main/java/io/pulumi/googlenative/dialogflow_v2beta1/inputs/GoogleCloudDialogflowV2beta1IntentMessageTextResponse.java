@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTextResponse extends
     	      this.text = defaults.text;
         }
 
-        public Builder setText(List<String> text) {
+        public Builder text(List<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

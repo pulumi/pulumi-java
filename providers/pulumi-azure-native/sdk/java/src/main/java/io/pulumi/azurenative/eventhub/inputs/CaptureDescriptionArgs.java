@@ -141,62 +141,62 @@ public final class CaptureDescriptionArgs extends io.pulumi.resources.ResourceAr
     	      this.skipEmptyArchives = defaults.skipEmptyArchives;
         }
 
-        public Builder setDestination(@Nullable Input<DestinationArgs> destination) {
+        public Builder destination(@Nullable Input<DestinationArgs> destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestination(@Nullable DestinationArgs destination) {
+        public Builder destination(@Nullable DestinationArgs destination) {
             this.destination = Input.ofNullable(destination);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEncoding(@Nullable Input<EncodingCaptureDescription> encoding) {
+        public Builder encoding(@Nullable Input<EncodingCaptureDescription> encoding) {
             this.encoding = encoding;
             return this;
         }
 
-        public Builder setEncoding(@Nullable EncodingCaptureDescription encoding) {
+        public Builder encoding(@Nullable EncodingCaptureDescription encoding) {
             this.encoding = Input.ofNullable(encoding);
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Input<Integer> intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = Input.ofNullable(intervalInSeconds);
             return this;
         }
 
-        public Builder setSizeLimitInBytes(@Nullable Input<Integer> sizeLimitInBytes) {
+        public Builder sizeLimitInBytes(@Nullable Input<Integer> sizeLimitInBytes) {
             this.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
 
-        public Builder setSizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
+        public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
             this.sizeLimitInBytes = Input.ofNullable(sizeLimitInBytes);
             return this;
         }
 
-        public Builder setSkipEmptyArchives(@Nullable Input<Boolean> skipEmptyArchives) {
+        public Builder skipEmptyArchives(@Nullable Input<Boolean> skipEmptyArchives) {
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
 
-        public Builder setSkipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
+        public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
             this.skipEmptyArchives = Input.ofNullable(skipEmptyArchives);
             return this;
         }

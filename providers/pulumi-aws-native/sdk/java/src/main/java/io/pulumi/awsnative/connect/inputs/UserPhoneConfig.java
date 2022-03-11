@@ -93,22 +93,22 @@ public final class UserPhoneConfig extends io.pulumi.resources.InvokeArgs {
     	      this.phoneType = defaults.phoneType;
         }
 
-        public Builder setAfterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
+        public Builder afterContactWorkTimeLimit(@Nullable Integer afterContactWorkTimeLimit) {
             this.afterContactWorkTimeLimit = afterContactWorkTimeLimit;
             return this;
         }
 
-        public Builder setAutoAccept(@Nullable Boolean autoAccept) {
+        public Builder autoAccept(@Nullable Boolean autoAccept) {
             this.autoAccept = autoAccept;
             return this;
         }
 
-        public Builder setDeskPhoneNumber(@Nullable String deskPhoneNumber) {
+        public Builder deskPhoneNumber(@Nullable String deskPhoneNumber) {
             this.deskPhoneNumber = deskPhoneNumber;
             return this;
         }
 
-        public Builder setPhoneType(UserPhoneType phoneType) {
+        public Builder phoneType(UserPhoneType phoneType) {
             this.phoneType = Objects.requireNonNull(phoneType);
             return this;
         }

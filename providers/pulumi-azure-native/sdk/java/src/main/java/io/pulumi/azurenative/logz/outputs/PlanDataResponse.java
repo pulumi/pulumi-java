@@ -32,12 +32,12 @@ public final class PlanDataResponse {
      */
     private final @Nullable String usageType;
 
-    @OutputCustomType.Constructor({"billingCycle","effectiveDate","planDetails","usageType"})
+    @OutputCustomType.Constructor
     private PlanDataResponse(
-        @Nullable String billingCycle,
-        @Nullable String effectiveDate,
-        @Nullable String planDetails,
-        @Nullable String usageType) {
+        @OutputCustomType.Parameter("billingCycle") @Nullable String billingCycle,
+        @OutputCustomType.Parameter("effectiveDate") @Nullable String effectiveDate,
+        @OutputCustomType.Parameter("planDetails") @Nullable String planDetails,
+        @OutputCustomType.Parameter("usageType") @Nullable String usageType) {
         this.billingCycle = billingCycle;
         this.effectiveDate = effectiveDate;
         this.planDetails = planDetails;
@@ -99,22 +99,22 @@ public final class PlanDataResponse {
     	      this.usageType = defaults.usageType;
         }
 
-        public Builder setBillingCycle(@Nullable String billingCycle) {
+        public Builder billingCycle(@Nullable String billingCycle) {
             this.billingCycle = billingCycle;
             return this;
         }
 
-        public Builder setEffectiveDate(@Nullable String effectiveDate) {
+        public Builder effectiveDate(@Nullable String effectiveDate) {
             this.effectiveDate = effectiveDate;
             return this;
         }
 
-        public Builder setPlanDetails(@Nullable String planDetails) {
+        public Builder planDetails(@Nullable String planDetails) {
             this.planDetails = planDetails;
             return this;
         }
 
-        public Builder setUsageType(@Nullable String usageType) {
+        public Builder usageType(@Nullable String usageType) {
             this.usageType = usageType;
             return this;
         }

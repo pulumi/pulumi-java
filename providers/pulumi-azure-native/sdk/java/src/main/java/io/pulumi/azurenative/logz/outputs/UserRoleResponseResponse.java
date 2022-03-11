@@ -17,8 +17,8 @@ public final class UserRoleResponseResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"role"})
-    private UserRoleResponseResponse(@Nullable String role) {
+    @OutputCustomType.Constructor
+    private UserRoleResponseResponse(@OutputCustomType.Parameter("role") @Nullable String role) {
         this.role = role;
     }
 
@@ -50,7 +50,7 @@ public final class UserRoleResponseResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

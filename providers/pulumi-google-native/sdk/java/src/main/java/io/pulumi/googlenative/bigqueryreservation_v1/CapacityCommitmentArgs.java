@@ -136,72 +136,72 @@ public final class CapacityCommitmentArgs extends io.pulumi.resources.ResourceAr
     	      this.slotCount = defaults.slotCount;
         }
 
-        public Builder setCapacityCommitmentId(@Nullable Input<String> capacityCommitmentId) {
+        public Builder capacityCommitmentId(@Nullable Input<String> capacityCommitmentId) {
             this.capacityCommitmentId = capacityCommitmentId;
             return this;
         }
 
-        public Builder setCapacityCommitmentId(@Nullable String capacityCommitmentId) {
+        public Builder capacityCommitmentId(@Nullable String capacityCommitmentId) {
             this.capacityCommitmentId = Input.ofNullable(capacityCommitmentId);
             return this;
         }
 
-        public Builder setEnforceSingleAdminProjectPerOrg(@Nullable Input<String> enforceSingleAdminProjectPerOrg) {
+        public Builder enforceSingleAdminProjectPerOrg(@Nullable Input<String> enforceSingleAdminProjectPerOrg) {
             this.enforceSingleAdminProjectPerOrg = enforceSingleAdminProjectPerOrg;
             return this;
         }
 
-        public Builder setEnforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
+        public Builder enforceSingleAdminProjectPerOrg(@Nullable String enforceSingleAdminProjectPerOrg) {
             this.enforceSingleAdminProjectPerOrg = Input.ofNullable(enforceSingleAdminProjectPerOrg);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPlan(@Nullable Input<CapacityCommitmentPlan> plan) {
+        public Builder plan(@Nullable Input<CapacityCommitmentPlan> plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setPlan(@Nullable CapacityCommitmentPlan plan) {
+        public Builder plan(@Nullable CapacityCommitmentPlan plan) {
             this.plan = Input.ofNullable(plan);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRenewalPlan(@Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan) {
+        public Builder renewalPlan(@Nullable Input<CapacityCommitmentRenewalPlan> renewalPlan) {
             this.renewalPlan = renewalPlan;
             return this;
         }
 
-        public Builder setRenewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
+        public Builder renewalPlan(@Nullable CapacityCommitmentRenewalPlan renewalPlan) {
             this.renewalPlan = Input.ofNullable(renewalPlan);
             return this;
         }
 
-        public Builder setSlotCount(@Nullable Input<String> slotCount) {
+        public Builder slotCount(@Nullable Input<String> slotCount) {
             this.slotCount = slotCount;
             return this;
         }
 
-        public Builder setSlotCount(@Nullable String slotCount) {
+        public Builder slotCount(@Nullable String slotCount) {
             this.slotCount = Input.ofNullable(slotCount);
             return this;
         }

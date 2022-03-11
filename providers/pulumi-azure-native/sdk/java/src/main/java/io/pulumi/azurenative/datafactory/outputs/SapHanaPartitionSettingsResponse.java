@@ -17,8 +17,8 @@ public final class SapHanaPartitionSettingsResponse {
      */
     private final @Nullable Object partitionColumnName;
 
-    @OutputCustomType.Constructor({"partitionColumnName"})
-    private SapHanaPartitionSettingsResponse(@Nullable Object partitionColumnName) {
+    @OutputCustomType.Constructor
+    private SapHanaPartitionSettingsResponse(@OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName) {
         this.partitionColumnName = partitionColumnName;
     }
 
@@ -50,7 +50,7 @@ public final class SapHanaPartitionSettingsResponse {
     	      this.partitionColumnName = defaults.partitionColumnName;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }

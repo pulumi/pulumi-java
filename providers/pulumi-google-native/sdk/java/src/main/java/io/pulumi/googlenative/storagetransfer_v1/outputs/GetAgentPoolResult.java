@@ -31,12 +31,12 @@ public final class GetAgentPoolResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"bandwidthLimit","displayName","name","state"})
+    @OutputCustomType.Constructor
     private GetAgentPoolResult(
-        BandwidthLimitResponse bandwidthLimit,
-        String displayName,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("bandwidthLimit") BandwidthLimitResponse bandwidthLimit,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.bandwidthLimit = bandwidthLimit;
         this.displayName = displayName;
         this.name = name;
@@ -98,22 +98,22 @@ public final class GetAgentPoolResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setBandwidthLimit(BandwidthLimitResponse bandwidthLimit) {
+        public Builder bandwidthLimit(BandwidthLimitResponse bandwidthLimit) {
             this.bandwidthLimit = Objects.requireNonNull(bandwidthLimit);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

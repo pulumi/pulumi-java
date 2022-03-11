@@ -17,8 +17,8 @@ public final class FhirServiceAcrConfigurationResponse {
      */
     private final @Nullable List<String> loginServers;
 
-    @OutputCustomType.Constructor({"loginServers"})
-    private FhirServiceAcrConfigurationResponse(@Nullable List<String> loginServers) {
+    @OutputCustomType.Constructor
+    private FhirServiceAcrConfigurationResponse(@OutputCustomType.Parameter("loginServers") @Nullable List<String> loginServers) {
         this.loginServers = loginServers;
     }
 
@@ -50,7 +50,7 @@ public final class FhirServiceAcrConfigurationResponse {
     	      this.loginServers = defaults.loginServers;
         }
 
-        public Builder setLoginServers(@Nullable List<String> loginServers) {
+        public Builder loginServers(@Nullable List<String> loginServers) {
             this.loginServers = loginServers;
             return this;
         }

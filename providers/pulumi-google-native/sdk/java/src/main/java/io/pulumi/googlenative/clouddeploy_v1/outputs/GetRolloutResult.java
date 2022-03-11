@@ -96,25 +96,25 @@ public final class GetRolloutResult {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","approvalState","approveTime","createTime","deployEndTime","deployFailureCause","deployStartTime","deployingBuild","description","enqueueTime","etag","failureReason","labels","name","state","targetId","uid"})
+    @OutputCustomType.Constructor
     private GetRolloutResult(
-        Map<String,String> annotations,
-        String approvalState,
-        String approveTime,
-        String createTime,
-        String deployEndTime,
-        String deployFailureCause,
-        String deployStartTime,
-        String deployingBuild,
-        String description,
-        String enqueueTime,
-        String etag,
-        String failureReason,
-        Map<String,String> labels,
-        String name,
-        String state,
-        String targetId,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("approvalState") String approvalState,
+        @OutputCustomType.Parameter("approveTime") String approveTime,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployEndTime") String deployEndTime,
+        @OutputCustomType.Parameter("deployFailureCause") String deployFailureCause,
+        @OutputCustomType.Parameter("deployStartTime") String deployStartTime,
+        @OutputCustomType.Parameter("deployingBuild") String deployingBuild,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("enqueueTime") String enqueueTime,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("failureReason") String failureReason,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("targetId") String targetId,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.approvalState = approvalState;
         this.approveTime = approveTime;
@@ -306,87 +306,87 @@ public final class GetRolloutResult {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setApprovalState(String approvalState) {
+        public Builder approvalState(String approvalState) {
             this.approvalState = Objects.requireNonNull(approvalState);
             return this;
         }
 
-        public Builder setApproveTime(String approveTime) {
+        public Builder approveTime(String approveTime) {
             this.approveTime = Objects.requireNonNull(approveTime);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployEndTime(String deployEndTime) {
+        public Builder deployEndTime(String deployEndTime) {
             this.deployEndTime = Objects.requireNonNull(deployEndTime);
             return this;
         }
 
-        public Builder setDeployFailureCause(String deployFailureCause) {
+        public Builder deployFailureCause(String deployFailureCause) {
             this.deployFailureCause = Objects.requireNonNull(deployFailureCause);
             return this;
         }
 
-        public Builder setDeployStartTime(String deployStartTime) {
+        public Builder deployStartTime(String deployStartTime) {
             this.deployStartTime = Objects.requireNonNull(deployStartTime);
             return this;
         }
 
-        public Builder setDeployingBuild(String deployingBuild) {
+        public Builder deployingBuild(String deployingBuild) {
             this.deployingBuild = Objects.requireNonNull(deployingBuild);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEnqueueTime(String enqueueTime) {
+        public Builder enqueueTime(String enqueueTime) {
             this.enqueueTime = Objects.requireNonNull(enqueueTime);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFailureReason(String failureReason) {
+        public Builder failureReason(String failureReason) {
             this.failureReason = Objects.requireNonNull(failureReason);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTargetId(String targetId) {
+        public Builder targetId(String targetId) {
             this.targetId = Objects.requireNonNull(targetId);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

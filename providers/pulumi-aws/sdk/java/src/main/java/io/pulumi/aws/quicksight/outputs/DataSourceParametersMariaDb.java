@@ -26,11 +26,11 @@ public final class DataSourceParametersMariaDb {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"database","host","port"})
+    @OutputCustomType.Constructor
     private DataSourceParametersMariaDb(
-        String database,
-        String host,
-        Integer port) {
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.database = database;
         this.host = host;
         this.port = port;
@@ -82,17 +82,17 @@ public final class DataSourceParametersMariaDb {
     	      this.port = defaults.port;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

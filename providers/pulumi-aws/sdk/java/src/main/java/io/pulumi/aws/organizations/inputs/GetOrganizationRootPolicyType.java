@@ -64,12 +64,12 @@ public final class GetOrganizationRootPolicyType extends io.pulumi.resources.Inv
     	      this.type = defaults.type;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

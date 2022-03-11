@@ -38,13 +38,13 @@ public final class BigtableColumnFamilyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"columns","encoding","familyId","onlyReadLatest","type"})
+    @OutputCustomType.Constructor
     private BigtableColumnFamilyResponse(
-        List<BigtableColumnResponse> columns,
-        String encoding,
-        String familyId,
-        Boolean onlyReadLatest,
-        String type) {
+        @OutputCustomType.Parameter("columns") List<BigtableColumnResponse> columns,
+        @OutputCustomType.Parameter("encoding") String encoding,
+        @OutputCustomType.Parameter("familyId") String familyId,
+        @OutputCustomType.Parameter("onlyReadLatest") Boolean onlyReadLatest,
+        @OutputCustomType.Parameter("type") String type) {
         this.columns = columns;
         this.encoding = encoding;
         this.familyId = familyId;
@@ -116,27 +116,27 @@ public final class BigtableColumnFamilyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setColumns(List<BigtableColumnResponse> columns) {
+        public Builder columns(List<BigtableColumnResponse> columns) {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
 
-        public Builder setEncoding(String encoding) {
+        public Builder encoding(String encoding) {
             this.encoding = Objects.requireNonNull(encoding);
             return this;
         }
 
-        public Builder setFamilyId(String familyId) {
+        public Builder familyId(String familyId) {
             this.familyId = Objects.requireNonNull(familyId);
             return this;
         }
 
-        public Builder setOnlyReadLatest(Boolean onlyReadLatest) {
+        public Builder onlyReadLatest(Boolean onlyReadLatest) {
             this.onlyReadLatest = Objects.requireNonNull(onlyReadLatest);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

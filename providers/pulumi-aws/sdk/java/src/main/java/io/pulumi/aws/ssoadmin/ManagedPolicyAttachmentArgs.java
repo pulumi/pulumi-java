@@ -85,32 +85,32 @@ public final class ManagedPolicyAttachmentArgs extends io.pulumi.resources.Resou
     	      this.permissionSetArn = defaults.permissionSetArn;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setManagedPolicyArn(Input<String> managedPolicyArn) {
+        public Builder managedPolicyArn(Input<String> managedPolicyArn) {
             this.managedPolicyArn = Objects.requireNonNull(managedPolicyArn);
             return this;
         }
 
-        public Builder setManagedPolicyArn(String managedPolicyArn) {
+        public Builder managedPolicyArn(String managedPolicyArn) {
             this.managedPolicyArn = Input.of(Objects.requireNonNull(managedPolicyArn));
             return this;
         }
 
-        public Builder setPermissionSetArn(Input<String> permissionSetArn) {
+        public Builder permissionSetArn(Input<String> permissionSetArn) {
             this.permissionSetArn = Objects.requireNonNull(permissionSetArn);
             return this;
         }
 
-        public Builder setPermissionSetArn(String permissionSetArn) {
+        public Builder permissionSetArn(String permissionSetArn) {
             this.permissionSetArn = Input.of(Objects.requireNonNull(permissionSetArn));
             return this;
         }

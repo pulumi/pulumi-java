@@ -142,62 +142,62 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     	      this.workerPool = defaults.workerPool;
         }
 
-        public Builder setArtifactStorage(@Nullable Input<String> artifactStorage) {
+        public Builder artifactStorage(@Nullable Input<String> artifactStorage) {
             this.artifactStorage = artifactStorage;
             return this;
         }
 
-        public Builder setArtifactStorage(@Nullable String artifactStorage) {
+        public Builder artifactStorage(@Nullable String artifactStorage) {
             this.artifactStorage = Input.ofNullable(artifactStorage);
             return this;
         }
 
-        public Builder setDefaultPool(@Nullable Input<DefaultPoolArgs> defaultPool) {
+        public Builder defaultPool(@Nullable Input<DefaultPoolArgs> defaultPool) {
             this.defaultPool = defaultPool;
             return this;
         }
 
-        public Builder setDefaultPool(@Nullable DefaultPoolArgs defaultPool) {
+        public Builder defaultPool(@Nullable DefaultPoolArgs defaultPool) {
             this.defaultPool = Input.ofNullable(defaultPool);
             return this;
         }
 
-        public Builder setPrivatePool(@Nullable Input<PrivatePoolArgs> privatePool) {
+        public Builder privatePool(@Nullable Input<PrivatePoolArgs> privatePool) {
             this.privatePool = privatePool;
             return this;
         }
 
-        public Builder setPrivatePool(@Nullable PrivatePoolArgs privatePool) {
+        public Builder privatePool(@Nullable PrivatePoolArgs privatePool) {
             this.privatePool = Input.ofNullable(privatePool);
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable Input<String> serviceAccount) {
+        public Builder serviceAccount(@Nullable Input<String> serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = Input.ofNullable(serviceAccount);
             return this;
         }
 
-        public Builder setUsages(Input<List<ExecutionConfigUsagesItem>> usages) {
+        public Builder usages(Input<List<ExecutionConfigUsagesItem>> usages) {
             this.usages = Objects.requireNonNull(usages);
             return this;
         }
 
-        public Builder setUsages(List<ExecutionConfigUsagesItem> usages) {
+        public Builder usages(List<ExecutionConfigUsagesItem> usages) {
             this.usages = Input.of(Objects.requireNonNull(usages));
             return this;
         }
 
-        public Builder setWorkerPool(@Nullable Input<String> workerPool) {
+        public Builder workerPool(@Nullable Input<String> workerPool) {
             this.workerPool = workerPool;
             return this;
         }
 
-        public Builder setWorkerPool(@Nullable String workerPool) {
+        public Builder workerPool(@Nullable String workerPool) {
             this.workerPool = Input.ofNullable(workerPool);
             return this;
         }

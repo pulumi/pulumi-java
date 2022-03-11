@@ -18,8 +18,8 @@ public final class ProviderDefaultTagsArgs {
      */
     private final @Nullable Input<Map<String,String>> tags;
 
-    @OutputCustomType.Constructor({"tags"})
-    private ProviderDefaultTagsArgs(@Nullable Input<Map<String,String>> tags) {
+    @OutputCustomType.Constructor
+    private ProviderDefaultTagsArgs(@OutputCustomType.Parameter("tags") @Nullable Input<Map<String,String>> tags) {
         this.tags = tags;
     }
 
@@ -51,7 +51,7 @@ public final class ProviderDefaultTagsArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }

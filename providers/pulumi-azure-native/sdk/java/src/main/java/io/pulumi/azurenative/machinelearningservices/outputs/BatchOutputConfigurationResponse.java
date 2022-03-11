@@ -22,10 +22,10 @@ public final class BatchOutputConfigurationResponse {
      */
     private final @Nullable String outputAction;
 
-    @OutputCustomType.Constructor({"appendRowFileName","outputAction"})
+    @OutputCustomType.Constructor
     private BatchOutputConfigurationResponse(
-        @Nullable String appendRowFileName,
-        @Nullable String outputAction) {
+        @OutputCustomType.Parameter("appendRowFileName") @Nullable String appendRowFileName,
+        @OutputCustomType.Parameter("outputAction") @Nullable String outputAction) {
         this.appendRowFileName = appendRowFileName;
         this.outputAction = outputAction;
     }
@@ -67,12 +67,12 @@ public final class BatchOutputConfigurationResponse {
     	      this.outputAction = defaults.outputAction;
         }
 
-        public Builder setAppendRowFileName(@Nullable String appendRowFileName) {
+        public Builder appendRowFileName(@Nullable String appendRowFileName) {
             this.appendRowFileName = appendRowFileName;
             return this;
         }
 
-        public Builder setOutputAction(@Nullable String outputAction) {
+        public Builder outputAction(@Nullable String outputAction) {
             this.outputAction = outputAction;
             return this;
         }

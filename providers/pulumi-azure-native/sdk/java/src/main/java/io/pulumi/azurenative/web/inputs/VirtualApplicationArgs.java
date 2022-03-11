@@ -109,42 +109,42 @@ public final class VirtualApplicationArgs extends io.pulumi.resources.ResourceAr
     	      this.virtualPath = defaults.virtualPath;
         }
 
-        public Builder setPhysicalPath(@Nullable Input<String> physicalPath) {
+        public Builder physicalPath(@Nullable Input<String> physicalPath) {
             this.physicalPath = physicalPath;
             return this;
         }
 
-        public Builder setPhysicalPath(@Nullable String physicalPath) {
+        public Builder physicalPath(@Nullable String physicalPath) {
             this.physicalPath = Input.ofNullable(physicalPath);
             return this;
         }
 
-        public Builder setPreloadEnabled(@Nullable Input<Boolean> preloadEnabled) {
+        public Builder preloadEnabled(@Nullable Input<Boolean> preloadEnabled) {
             this.preloadEnabled = preloadEnabled;
             return this;
         }
 
-        public Builder setPreloadEnabled(@Nullable Boolean preloadEnabled) {
+        public Builder preloadEnabled(@Nullable Boolean preloadEnabled) {
             this.preloadEnabled = Input.ofNullable(preloadEnabled);
             return this;
         }
 
-        public Builder setVirtualDirectories(@Nullable Input<List<VirtualDirectoryArgs>> virtualDirectories) {
+        public Builder virtualDirectories(@Nullable Input<List<VirtualDirectoryArgs>> virtualDirectories) {
             this.virtualDirectories = virtualDirectories;
             return this;
         }
 
-        public Builder setVirtualDirectories(@Nullable List<VirtualDirectoryArgs> virtualDirectories) {
+        public Builder virtualDirectories(@Nullable List<VirtualDirectoryArgs> virtualDirectories) {
             this.virtualDirectories = Input.ofNullable(virtualDirectories);
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable Input<String> virtualPath) {
+        public Builder virtualPath(@Nullable Input<String> virtualPath) {
             this.virtualPath = virtualPath;
             return this;
         }
 
-        public Builder setVirtualPath(@Nullable String virtualPath) {
+        public Builder virtualPath(@Nullable String virtualPath) {
             this.virtualPath = Input.ofNullable(virtualPath);
             return this;
         }

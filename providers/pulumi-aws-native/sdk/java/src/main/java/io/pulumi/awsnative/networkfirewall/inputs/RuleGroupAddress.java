@@ -47,7 +47,7 @@ public final class RuleGroupAddress extends io.pulumi.resources.InvokeArgs {
     	      this.addressDefinition = defaults.addressDefinition;
         }
 
-        public Builder setAddressDefinition(String addressDefinition) {
+        public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }

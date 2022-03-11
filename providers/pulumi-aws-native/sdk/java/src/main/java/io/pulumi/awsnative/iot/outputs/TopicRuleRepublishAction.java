@@ -16,11 +16,11 @@ public final class TopicRuleRepublishAction {
     private final String roleArn;
     private final String topic;
 
-    @OutputCustomType.Constructor({"qos","roleArn","topic"})
+    @OutputCustomType.Constructor
     private TopicRuleRepublishAction(
-        @Nullable Integer qos,
-        String roleArn,
-        String topic) {
+        @OutputCustomType.Parameter("qos") @Nullable Integer qos,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.qos = qos;
         this.roleArn = roleArn;
         this.topic = topic;
@@ -60,17 +60,17 @@ public final class TopicRuleRepublishAction {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setQos(@Nullable Integer qos) {
+        public Builder qos(@Nullable Integer qos) {
             this.qos = qos;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

@@ -37,12 +37,12 @@ public final class DockerBuildResponse {
      */
     private final @Nullable DockerImagePlatformResponse platform;
 
-    @OutputCustomType.Constructor({"context","dockerSpecificationType","dockerfile","platform"})
+    @OutputCustomType.Constructor
     private DockerBuildResponse(
-        @Nullable String context,
-        String dockerSpecificationType,
-        String dockerfile,
-        @Nullable DockerImagePlatformResponse platform) {
+        @OutputCustomType.Parameter("context") @Nullable String context,
+        @OutputCustomType.Parameter("dockerSpecificationType") String dockerSpecificationType,
+        @OutputCustomType.Parameter("dockerfile") String dockerfile,
+        @OutputCustomType.Parameter("platform") @Nullable DockerImagePlatformResponse platform) {
         this.context = context;
         this.dockerSpecificationType = dockerSpecificationType;
         this.dockerfile = dockerfile;
@@ -108,22 +108,22 @@ public final class DockerBuildResponse {
     	      this.platform = defaults.platform;
         }
 
-        public Builder setContext(@Nullable String context) {
+        public Builder context(@Nullable String context) {
             this.context = context;
             return this;
         }
 
-        public Builder setDockerSpecificationType(String dockerSpecificationType) {
+        public Builder dockerSpecificationType(String dockerSpecificationType) {
             this.dockerSpecificationType = Objects.requireNonNull(dockerSpecificationType);
             return this;
         }
 
-        public Builder setDockerfile(String dockerfile) {
+        public Builder dockerfile(String dockerfile) {
             this.dockerfile = Objects.requireNonNull(dockerfile);
             return this;
         }
 
-        public Builder setPlatform(@Nullable DockerImagePlatformResponse platform) {
+        public Builder platform(@Nullable DockerImagePlatformResponse platform) {
             this.platform = platform;
             return this;
         }

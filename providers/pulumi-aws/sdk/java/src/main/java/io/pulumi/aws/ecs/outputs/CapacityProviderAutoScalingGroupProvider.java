@@ -28,11 +28,11 @@ public final class CapacityProviderAutoScalingGroupProvider {
      */
     private final @Nullable String managedTerminationProtection;
 
-    @OutputCustomType.Constructor({"autoScalingGroupArn","managedScaling","managedTerminationProtection"})
+    @OutputCustomType.Constructor
     private CapacityProviderAutoScalingGroupProvider(
-        String autoScalingGroupArn,
-        @Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling,
-        @Nullable String managedTerminationProtection) {
+        @OutputCustomType.Parameter("autoScalingGroupArn") String autoScalingGroupArn,
+        @OutputCustomType.Parameter("managedScaling") @Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling,
+        @OutputCustomType.Parameter("managedTerminationProtection") @Nullable String managedTerminationProtection) {
         this.autoScalingGroupArn = autoScalingGroupArn;
         this.managedScaling = managedScaling;
         this.managedTerminationProtection = managedTerminationProtection;
@@ -84,17 +84,17 @@ public final class CapacityProviderAutoScalingGroupProvider {
     	      this.managedTerminationProtection = defaults.managedTerminationProtection;
         }
 
-        public Builder setAutoScalingGroupArn(String autoScalingGroupArn) {
+        public Builder autoScalingGroupArn(String autoScalingGroupArn) {
             this.autoScalingGroupArn = Objects.requireNonNull(autoScalingGroupArn);
             return this;
         }
 
-        public Builder setManagedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling) {
+        public Builder managedScaling(@Nullable CapacityProviderAutoScalingGroupProviderManagedScaling managedScaling) {
             this.managedScaling = managedScaling;
             return this;
         }
 
-        public Builder setManagedTerminationProtection(@Nullable String managedTerminationProtection) {
+        public Builder managedTerminationProtection(@Nullable String managedTerminationProtection) {
             this.managedTerminationProtection = managedTerminationProtection;
             return this;
         }

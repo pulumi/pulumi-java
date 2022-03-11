@@ -23,10 +23,10 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
      */
     private final @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration;
 
-    @OutputCustomType.Constructor({"applicationRestoreConfiguration","flinkRunConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationRunConfiguration(
-        @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
-        @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
+        @OutputCustomType.Parameter("applicationRestoreConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration,
+        @OutputCustomType.Parameter("flinkRunConfiguration") @Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
         this.applicationRestoreConfiguration = applicationRestoreConfiguration;
         this.flinkRunConfiguration = flinkRunConfiguration;
     }
@@ -68,12 +68,12 @@ public final class ApplicationApplicationConfigurationRunConfiguration {
     	      this.flinkRunConfiguration = defaults.flinkRunConfiguration;
         }
 
-        public Builder setApplicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration) {
+        public Builder applicationRestoreConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationApplicationRestoreConfiguration applicationRestoreConfiguration) {
             this.applicationRestoreConfiguration = applicationRestoreConfiguration;
             return this;
         }
 
-        public Builder setFlinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
+        public Builder flinkRunConfiguration(@Nullable ApplicationApplicationConfigurationRunConfigurationFlinkRunConfiguration flinkRunConfiguration) {
             this.flinkRunConfiguration = flinkRunConfiguration;
             return this;
         }

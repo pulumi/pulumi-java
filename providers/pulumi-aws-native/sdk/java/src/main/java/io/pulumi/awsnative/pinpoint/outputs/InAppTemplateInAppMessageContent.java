@@ -21,14 +21,14 @@ public final class InAppTemplateInAppMessageContent {
     private final @Nullable InAppTemplateButtonConfig primaryBtn;
     private final @Nullable InAppTemplateButtonConfig secondaryBtn;
 
-    @OutputCustomType.Constructor({"backgroundColor","bodyConfig","headerConfig","imageUrl","primaryBtn","secondaryBtn"})
+    @OutputCustomType.Constructor
     private InAppTemplateInAppMessageContent(
-        @Nullable String backgroundColor,
-        @Nullable InAppTemplateBodyConfig bodyConfig,
-        @Nullable InAppTemplateHeaderConfig headerConfig,
-        @Nullable String imageUrl,
-        @Nullable InAppTemplateButtonConfig primaryBtn,
-        @Nullable InAppTemplateButtonConfig secondaryBtn) {
+        @OutputCustomType.Parameter("backgroundColor") @Nullable String backgroundColor,
+        @OutputCustomType.Parameter("bodyConfig") @Nullable InAppTemplateBodyConfig bodyConfig,
+        @OutputCustomType.Parameter("headerConfig") @Nullable InAppTemplateHeaderConfig headerConfig,
+        @OutputCustomType.Parameter("imageUrl") @Nullable String imageUrl,
+        @OutputCustomType.Parameter("primaryBtn") @Nullable InAppTemplateButtonConfig primaryBtn,
+        @OutputCustomType.Parameter("secondaryBtn") @Nullable InAppTemplateButtonConfig secondaryBtn) {
         this.backgroundColor = backgroundColor;
         this.bodyConfig = bodyConfig;
         this.headerConfig = headerConfig;
@@ -86,32 +86,32 @@ public final class InAppTemplateInAppMessageContent {
     	      this.secondaryBtn = defaults.secondaryBtn;
         }
 
-        public Builder setBackgroundColor(@Nullable String backgroundColor) {
+        public Builder backgroundColor(@Nullable String backgroundColor) {
             this.backgroundColor = backgroundColor;
             return this;
         }
 
-        public Builder setBodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
+        public Builder bodyConfig(@Nullable InAppTemplateBodyConfig bodyConfig) {
             this.bodyConfig = bodyConfig;
             return this;
         }
 
-        public Builder setHeaderConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
+        public Builder headerConfig(@Nullable InAppTemplateHeaderConfig headerConfig) {
             this.headerConfig = headerConfig;
             return this;
         }
 
-        public Builder setImageUrl(@Nullable String imageUrl) {
+        public Builder imageUrl(@Nullable String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
 
-        public Builder setPrimaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
+        public Builder primaryBtn(@Nullable InAppTemplateButtonConfig primaryBtn) {
             this.primaryBtn = primaryBtn;
             return this;
         }
 
-        public Builder setSecondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
+        public Builder secondaryBtn(@Nullable InAppTemplateButtonConfig secondaryBtn) {
             this.secondaryBtn = secondaryBtn;
             return this;
         }

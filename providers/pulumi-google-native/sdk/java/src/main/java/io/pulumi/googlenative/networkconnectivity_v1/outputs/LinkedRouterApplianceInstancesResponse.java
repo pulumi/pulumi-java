@@ -22,10 +22,10 @@ public final class LinkedRouterApplianceInstancesResponse {
      */
     private final Boolean siteToSiteDataTransfer;
 
-    @OutputCustomType.Constructor({"instances","siteToSiteDataTransfer"})
+    @OutputCustomType.Constructor
     private LinkedRouterApplianceInstancesResponse(
-        List<RouterApplianceInstanceResponse> instances,
-        Boolean siteToSiteDataTransfer) {
+        @OutputCustomType.Parameter("instances") List<RouterApplianceInstanceResponse> instances,
+        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }
@@ -67,12 +67,12 @@ public final class LinkedRouterApplianceInstancesResponse {
     	      this.siteToSiteDataTransfer = defaults.siteToSiteDataTransfer;
         }
 
-        public Builder setInstances(List<RouterApplianceInstanceResponse> instances) {
+        public Builder instances(List<RouterApplianceInstanceResponse> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setSiteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
+        public Builder siteToSiteDataTransfer(Boolean siteToSiteDataTransfer) {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }

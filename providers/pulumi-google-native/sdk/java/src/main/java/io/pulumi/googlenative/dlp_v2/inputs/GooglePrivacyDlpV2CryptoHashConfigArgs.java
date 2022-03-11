@@ -57,12 +57,12 @@ public final class GooglePrivacyDlpV2CryptoHashConfigArgs extends io.pulumi.reso
     	      this.cryptoKey = defaults.cryptoKey;
         }
 
-        public Builder setCryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
+        public Builder cryptoKey(@Nullable Input<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
             this.cryptoKey = cryptoKey;
             return this;
         }
 
-        public Builder setCryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
+        public Builder cryptoKey(@Nullable GooglePrivacyDlpV2CryptoKeyArgs cryptoKey) {
             this.cryptoKey = Input.ofNullable(cryptoKey);
             return this;
         }

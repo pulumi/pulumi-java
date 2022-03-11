@@ -38,13 +38,13 @@ public final class MabContainerExtendedInfoResponse {
      */
     private final @Nullable String policyName;
 
-    @OutputCustomType.Constructor({"backupItemType","backupItems","lastBackupStatus","lastRefreshedAt","policyName"})
+    @OutputCustomType.Constructor
     private MabContainerExtendedInfoResponse(
-        @Nullable String backupItemType,
-        @Nullable List<String> backupItems,
-        @Nullable String lastBackupStatus,
-        @Nullable String lastRefreshedAt,
-        @Nullable String policyName) {
+        @OutputCustomType.Parameter("backupItemType") @Nullable String backupItemType,
+        @OutputCustomType.Parameter("backupItems") @Nullable List<String> backupItems,
+        @OutputCustomType.Parameter("lastBackupStatus") @Nullable String lastBackupStatus,
+        @OutputCustomType.Parameter("lastRefreshedAt") @Nullable String lastRefreshedAt,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName) {
         this.backupItemType = backupItemType;
         this.backupItems = backupItems;
         this.lastBackupStatus = lastBackupStatus;
@@ -116,27 +116,27 @@ public final class MabContainerExtendedInfoResponse {
     	      this.policyName = defaults.policyName;
         }
 
-        public Builder setBackupItemType(@Nullable String backupItemType) {
+        public Builder backupItemType(@Nullable String backupItemType) {
             this.backupItemType = backupItemType;
             return this;
         }
 
-        public Builder setBackupItems(@Nullable List<String> backupItems) {
+        public Builder backupItems(@Nullable List<String> backupItems) {
             this.backupItems = backupItems;
             return this;
         }
 
-        public Builder setLastBackupStatus(@Nullable String lastBackupStatus) {
+        public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
             this.lastBackupStatus = lastBackupStatus;
             return this;
         }
 
-        public Builder setLastRefreshedAt(@Nullable String lastRefreshedAt) {
+        public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
             this.lastRefreshedAt = lastRefreshedAt;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }

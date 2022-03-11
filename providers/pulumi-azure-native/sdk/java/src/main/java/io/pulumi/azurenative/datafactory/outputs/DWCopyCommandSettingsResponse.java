@@ -24,10 +24,10 @@ public final class DWCopyCommandSettingsResponse {
      */
     private final @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues;
 
-    @OutputCustomType.Constructor({"additionalOptions","defaultValues"})
+    @OutputCustomType.Constructor
     private DWCopyCommandSettingsResponse(
-        @Nullable Map<String,String> additionalOptions,
-        @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
+        @OutputCustomType.Parameter("additionalOptions") @Nullable Map<String,String> additionalOptions,
+        @OutputCustomType.Parameter("defaultValues") @Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
         this.additionalOptions = additionalOptions;
         this.defaultValues = defaultValues;
     }
@@ -69,12 +69,12 @@ public final class DWCopyCommandSettingsResponse {
     	      this.defaultValues = defaults.defaultValues;
         }
 
-        public Builder setAdditionalOptions(@Nullable Map<String,String> additionalOptions) {
+        public Builder additionalOptions(@Nullable Map<String,String> additionalOptions) {
             this.additionalOptions = additionalOptions;
             return this;
         }
 
-        public Builder setDefaultValues(@Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
+        public Builder defaultValues(@Nullable List<DWCopyCommandDefaultValueResponse> defaultValues) {
             this.defaultValues = defaultValues;
             return this;
         }

@@ -40,12 +40,12 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor({"algorithm","keyLength","keyType","kind"})
+    @OutputCustomType.Constructor
     private ManagedZoneDnssecConfigDefaultKeySpec(
-        @Nullable String algorithm,
-        @Nullable Integer keyLength,
-        @Nullable String keyType,
-        @Nullable String kind) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("keyLength") @Nullable Integer keyLength,
+        @OutputCustomType.Parameter("keyType") @Nullable String keyType,
+        @OutputCustomType.Parameter("kind") @Nullable String kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;
@@ -114,22 +114,22 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setKeyLength(@Nullable Integer keyLength) {
+        public Builder keyLength(@Nullable Integer keyLength) {
             this.keyLength = keyLength;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }

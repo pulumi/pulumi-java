@@ -35,11 +35,11 @@ public final class ImageRawDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"containerType","sha1","source"})
+    @OutputCustomType.Constructor
     private ImageRawDisk(
-        @Nullable String containerType,
-        @Nullable String sha1,
-        String source) {
+        @OutputCustomType.Parameter("containerType") @Nullable String containerType,
+        @OutputCustomType.Parameter("sha1") @Nullable String sha1,
+        @OutputCustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.sha1 = sha1;
         this.source = source;
@@ -99,17 +99,17 @@ public final class ImageRawDisk {
     	      this.source = defaults.source;
         }
 
-        public Builder setContainerType(@Nullable String containerType) {
+        public Builder containerType(@Nullable String containerType) {
             this.containerType = containerType;
             return this;
         }
 
-        public Builder setSha1(@Nullable String sha1) {
+        public Builder sha1(@Nullable String sha1) {
             this.sha1 = sha1;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

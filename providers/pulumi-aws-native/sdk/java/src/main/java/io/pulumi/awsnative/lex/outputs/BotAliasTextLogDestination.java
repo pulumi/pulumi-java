@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BotAliasTextLogDestination {
     private final @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch;
 
-    @OutputCustomType.Constructor({"cloudWatch"})
-    private BotAliasTextLogDestination(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
+    @OutputCustomType.Constructor
+    private BotAliasTextLogDestination(@OutputCustomType.Parameter("cloudWatch") @Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
         this.cloudWatch = cloudWatch;
     }
 
@@ -42,7 +42,7 @@ public final class BotAliasTextLogDestination {
     	      this.cloudWatch = defaults.cloudWatch;
         }
 
-        public Builder setCloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
+        public Builder cloudWatch(@Nullable BotAliasCloudWatchLogGroupLogDestination cloudWatch) {
             this.cloudWatch = cloudWatch;
             return this;
         }

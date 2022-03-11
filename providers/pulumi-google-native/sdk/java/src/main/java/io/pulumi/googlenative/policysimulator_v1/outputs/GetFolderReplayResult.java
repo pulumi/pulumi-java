@@ -32,12 +32,12 @@ public final class GetFolderReplayResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"config","name","resultsSummary","state"})
+    @OutputCustomType.Constructor
     private GetFolderReplayResult(
-        GoogleCloudPolicysimulatorV1ReplayConfigResponse config,
-        String name,
-        GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary,
-        String state) {
+        @OutputCustomType.Parameter("config") GoogleCloudPolicysimulatorV1ReplayConfigResponse config,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resultsSummary") GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary,
+        @OutputCustomType.Parameter("state") String state) {
         this.config = config;
         this.name = name;
         this.resultsSummary = resultsSummary;
@@ -99,22 +99,22 @@ public final class GetFolderReplayResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setConfig(GoogleCloudPolicysimulatorV1ReplayConfigResponse config) {
+        public Builder config(GoogleCloudPolicysimulatorV1ReplayConfigResponse config) {
             this.config = Objects.requireNonNull(config);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResultsSummary(GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary) {
+        public Builder resultsSummary(GoogleCloudPolicysimulatorV1ReplayResultsSummaryResponse resultsSummary) {
             this.resultsSummary = Objects.requireNonNull(resultsSummary);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

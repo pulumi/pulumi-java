@@ -34,12 +34,12 @@ public final class RecurrencePatternResponse {
      */
     private final @Nullable List<String> weekDays;
 
-    @OutputCustomType.Constructor({"expirationDate","frequency","interval","weekDays"})
+    @OutputCustomType.Constructor
     private RecurrencePatternResponse(
-        String expirationDate,
-        String frequency,
-        @Nullable Integer interval,
-        @Nullable List<String> weekDays) {
+        @OutputCustomType.Parameter("expirationDate") String expirationDate,
+        @OutputCustomType.Parameter("frequency") String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("weekDays") @Nullable List<String> weekDays) {
         this.expirationDate = expirationDate;
         this.frequency = frequency;
         this.interval = interval;
@@ -101,22 +101,22 @@ public final class RecurrencePatternResponse {
     	      this.weekDays = defaults.weekDays;
         }
 
-        public Builder setExpirationDate(String expirationDate) {
+        public Builder expirationDate(String expirationDate) {
             this.expirationDate = Objects.requireNonNull(expirationDate);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setWeekDays(@Nullable List<String> weekDays) {
+        public Builder weekDays(@Nullable List<String> weekDays) {
             this.weekDays = weekDays;
             return this;
         }

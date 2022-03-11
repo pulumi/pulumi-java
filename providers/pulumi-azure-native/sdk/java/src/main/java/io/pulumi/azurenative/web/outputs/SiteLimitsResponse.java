@@ -27,11 +27,11 @@ public final class SiteLimitsResponse {
      */
     private final @Nullable Double maxPercentageCpu;
 
-    @OutputCustomType.Constructor({"maxDiskSizeInMb","maxMemoryInMb","maxPercentageCpu"})
+    @OutputCustomType.Constructor
     private SiteLimitsResponse(
-        @Nullable Double maxDiskSizeInMb,
-        @Nullable Double maxMemoryInMb,
-        @Nullable Double maxPercentageCpu) {
+        @OutputCustomType.Parameter("maxDiskSizeInMb") @Nullable Double maxDiskSizeInMb,
+        @OutputCustomType.Parameter("maxMemoryInMb") @Nullable Double maxMemoryInMb,
+        @OutputCustomType.Parameter("maxPercentageCpu") @Nullable Double maxPercentageCpu) {
         this.maxDiskSizeInMb = maxDiskSizeInMb;
         this.maxMemoryInMb = maxMemoryInMb;
         this.maxPercentageCpu = maxPercentageCpu;
@@ -83,17 +83,17 @@ public final class SiteLimitsResponse {
     	      this.maxPercentageCpu = defaults.maxPercentageCpu;
         }
 
-        public Builder setMaxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
+        public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
             this.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
 
-        public Builder setMaxMemoryInMb(@Nullable Double maxMemoryInMb) {
+        public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             this.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
 
-        public Builder setMaxPercentageCpu(@Nullable Double maxPercentageCpu) {
+        public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }

@@ -30,12 +30,12 @@ public final class GetGroupUser {
      */
     private final String userName;
 
-    @OutputCustomType.Constructor({"arn","path","userId","userName"})
+    @OutputCustomType.Constructor
     private GetGroupUser(
-        String arn,
-        String path,
-        String userId,
-        String userName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("userId") String userId,
+        @OutputCustomType.Parameter("userName") String userName) {
         this.arn = arn;
         this.path = path;
         this.userId = userId;
@@ -97,22 +97,22 @@ public final class GetGroupUser {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setUserId(String userId) {
+        public Builder userId(String userId) {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
 
-        public Builder setUserName(String userName) {
+        public Builder userName(String userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

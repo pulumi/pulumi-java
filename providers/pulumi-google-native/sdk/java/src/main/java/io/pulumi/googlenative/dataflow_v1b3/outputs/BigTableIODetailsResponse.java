@@ -25,11 +25,11 @@ public final class BigTableIODetailsResponse {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"instanceId","project","tableId"})
+    @OutputCustomType.Constructor
     private BigTableIODetailsResponse(
-        String instanceId,
-        String project,
-        String tableId) {
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.instanceId = instanceId;
         this.project = project;
         this.tableId = tableId;
@@ -81,17 +81,17 @@ public final class BigTableIODetailsResponse {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

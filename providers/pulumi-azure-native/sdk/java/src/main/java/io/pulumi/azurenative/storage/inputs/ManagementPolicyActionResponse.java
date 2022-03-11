@@ -92,17 +92,17 @@ public final class ManagementPolicyActionResponse extends io.pulumi.resources.In
     	      this.version = defaults.version;
         }
 
-        public Builder setBaseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
+        public Builder baseBlob(@Nullable ManagementPolicyBaseBlobResponse baseBlob) {
             this.baseBlob = baseBlob;
             return this;
         }
 
-        public Builder setSnapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
+        public Builder snapshot(@Nullable ManagementPolicySnapShotResponse snapshot) {
             this.snapshot = snapshot;
             return this;
         }
 
-        public Builder setVersion(@Nullable ManagementPolicyVersionResponse version) {
+        public Builder version(@Nullable ManagementPolicyVersionResponse version) {
             this.version = version;
             return this;
         }

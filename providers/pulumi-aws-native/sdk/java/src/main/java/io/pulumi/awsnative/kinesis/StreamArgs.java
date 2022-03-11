@@ -139,62 +139,62 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRetentionPeriodHours(@Nullable Input<Integer> retentionPeriodHours) {
+        public Builder retentionPeriodHours(@Nullable Input<Integer> retentionPeriodHours) {
             this.retentionPeriodHours = retentionPeriodHours;
             return this;
         }
 
-        public Builder setRetentionPeriodHours(@Nullable Integer retentionPeriodHours) {
+        public Builder retentionPeriodHours(@Nullable Integer retentionPeriodHours) {
             this.retentionPeriodHours = Input.ofNullable(retentionPeriodHours);
             return this;
         }
 
-        public Builder setShardCount(@Nullable Input<Integer> shardCount) {
+        public Builder shardCount(@Nullable Input<Integer> shardCount) {
             this.shardCount = shardCount;
             return this;
         }
 
-        public Builder setShardCount(@Nullable Integer shardCount) {
+        public Builder shardCount(@Nullable Integer shardCount) {
             this.shardCount = Input.ofNullable(shardCount);
             return this;
         }
 
-        public Builder setStreamEncryption(@Nullable Input<StreamEncryptionArgs> streamEncryption) {
+        public Builder streamEncryption(@Nullable Input<StreamEncryptionArgs> streamEncryption) {
             this.streamEncryption = streamEncryption;
             return this;
         }
 
-        public Builder setStreamEncryption(@Nullable StreamEncryptionArgs streamEncryption) {
+        public Builder streamEncryption(@Nullable StreamEncryptionArgs streamEncryption) {
             this.streamEncryption = Input.ofNullable(streamEncryption);
             return this;
         }
 
-        public Builder setStreamModeDetails(@Nullable Input<StreamModeDetailsArgs> streamModeDetails) {
+        public Builder streamModeDetails(@Nullable Input<StreamModeDetailsArgs> streamModeDetails) {
             this.streamModeDetails = streamModeDetails;
             return this;
         }
 
-        public Builder setStreamModeDetails(@Nullable StreamModeDetailsArgs streamModeDetails) {
+        public Builder streamModeDetails(@Nullable StreamModeDetailsArgs streamModeDetails) {
             this.streamModeDetails = Input.ofNullable(streamModeDetails);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<StreamTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<StreamTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StreamTagArgs> tags) {
+        public Builder tags(@Nullable List<StreamTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

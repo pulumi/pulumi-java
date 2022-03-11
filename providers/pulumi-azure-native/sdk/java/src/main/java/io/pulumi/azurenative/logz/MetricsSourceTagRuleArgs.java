@@ -115,52 +115,52 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
     	      this.ruleSetName = defaults.ruleSetName;
         }
 
-        public Builder setMetricsSourceName(Input<String> metricsSourceName) {
+        public Builder metricsSourceName(Input<String> metricsSourceName) {
             this.metricsSourceName = Objects.requireNonNull(metricsSourceName);
             return this;
         }
 
-        public Builder setMetricsSourceName(String metricsSourceName) {
+        public Builder metricsSourceName(String metricsSourceName) {
             this.metricsSourceName = Input.of(Objects.requireNonNull(metricsSourceName));
             return this;
         }
 
-        public Builder setMonitorName(Input<String> monitorName) {
+        public Builder monitorName(Input<String> monitorName) {
             this.monitorName = Objects.requireNonNull(monitorName);
             return this;
         }
 
-        public Builder setMonitorName(String monitorName) {
+        public Builder monitorName(String monitorName) {
             this.monitorName = Input.of(Objects.requireNonNull(monitorName));
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<MetricsTagRulesPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<MetricsTagRulesPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable MetricsTagRulesPropertiesArgs properties) {
+        public Builder properties(@Nullable MetricsTagRulesPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setRuleSetName(@Nullable Input<String> ruleSetName) {
+        public Builder ruleSetName(@Nullable Input<String> ruleSetName) {
             this.ruleSetName = ruleSetName;
             return this;
         }
 
-        public Builder setRuleSetName(@Nullable String ruleSetName) {
+        public Builder ruleSetName(@Nullable String ruleSetName) {
             this.ruleSetName = Input.ofNullable(ruleSetName);
             return this;
         }

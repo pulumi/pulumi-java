@@ -27,11 +27,11 @@ public final class RouteWarningsItemResponse {
      */
     private final String message;
 
-    @OutputCustomType.Constructor({"code","data","message"})
+    @OutputCustomType.Constructor
     private RouteWarningsItemResponse(
-        String code,
-        List<RouteWarningsItemDataItemResponse> data,
-        String message) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("data") List<RouteWarningsItemDataItemResponse> data,
+        @OutputCustomType.Parameter("message") String message) {
         this.code = code;
         this.data = data;
         this.message = message;
@@ -83,17 +83,17 @@ public final class RouteWarningsItemResponse {
     	      this.message = defaults.message;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setData(List<RouteWarningsItemDataItemResponse> data) {
+        public Builder data(List<RouteWarningsItemDataItemResponse> data) {
             this.data = Objects.requireNonNull(data);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }

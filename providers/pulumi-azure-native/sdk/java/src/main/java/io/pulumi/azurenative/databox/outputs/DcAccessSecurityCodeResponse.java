@@ -22,10 +22,10 @@ public final class DcAccessSecurityCodeResponse {
      */
     private final @Nullable String reverseDCAccessCode;
 
-    @OutputCustomType.Constructor({"forwardDCAccessCode","reverseDCAccessCode"})
+    @OutputCustomType.Constructor
     private DcAccessSecurityCodeResponse(
-        @Nullable String forwardDCAccessCode,
-        @Nullable String reverseDCAccessCode) {
+        @OutputCustomType.Parameter("forwardDCAccessCode") @Nullable String forwardDCAccessCode,
+        @OutputCustomType.Parameter("reverseDCAccessCode") @Nullable String reverseDCAccessCode) {
         this.forwardDCAccessCode = forwardDCAccessCode;
         this.reverseDCAccessCode = reverseDCAccessCode;
     }
@@ -67,12 +67,12 @@ public final class DcAccessSecurityCodeResponse {
     	      this.reverseDCAccessCode = defaults.reverseDCAccessCode;
         }
 
-        public Builder setForwardDCAccessCode(@Nullable String forwardDCAccessCode) {
+        public Builder forwardDCAccessCode(@Nullable String forwardDCAccessCode) {
             this.forwardDCAccessCode = forwardDCAccessCode;
             return this;
         }
 
-        public Builder setReverseDCAccessCode(@Nullable String reverseDCAccessCode) {
+        public Builder reverseDCAccessCode(@Nullable String reverseDCAccessCode) {
             this.reverseDCAccessCode = reverseDCAccessCode;
             return this;
         }

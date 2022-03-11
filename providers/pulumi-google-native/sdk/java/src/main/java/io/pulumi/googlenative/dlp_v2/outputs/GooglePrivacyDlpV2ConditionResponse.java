@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2ConditionResponse {
      */
     private final GooglePrivacyDlpV2ValueResponse value;
 
-    @OutputCustomType.Constructor({"field","operator","value"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2ConditionResponse(
-        GooglePrivacyDlpV2FieldIdResponse field,
-        String operator,
-        GooglePrivacyDlpV2ValueResponse value) {
+        @OutputCustomType.Parameter("field") GooglePrivacyDlpV2FieldIdResponse field,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("value") GooglePrivacyDlpV2ValueResponse value) {
         this.field = field;
         this.operator = operator;
         this.value = value;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2ConditionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setField(GooglePrivacyDlpV2FieldIdResponse field) {
+        public Builder field(GooglePrivacyDlpV2FieldIdResponse field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setValue(GooglePrivacyDlpV2ValueResponse value) {
+        public Builder value(GooglePrivacyDlpV2ValueResponse value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

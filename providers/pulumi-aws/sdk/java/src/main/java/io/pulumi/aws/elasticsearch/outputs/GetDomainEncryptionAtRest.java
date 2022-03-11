@@ -21,10 +21,10 @@ public final class GetDomainEncryptionAtRest {
      */
     private final String kmsKeyId;
 
-    @OutputCustomType.Constructor({"enabled","kmsKeyId"})
+    @OutputCustomType.Constructor
     private GetDomainEncryptionAtRest(
-        Boolean enabled,
-        String kmsKeyId) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("kmsKeyId") String kmsKeyId) {
         this.enabled = enabled;
         this.kmsKeyId = kmsKeyId;
     }
@@ -66,12 +66,12 @@ public final class GetDomainEncryptionAtRest {
     	      this.kmsKeyId = defaults.kmsKeyId;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setKmsKeyId(String kmsKeyId) {
+        public Builder kmsKeyId(String kmsKeyId) {
             this.kmsKeyId = Objects.requireNonNull(kmsKeyId);
             return this;
         }

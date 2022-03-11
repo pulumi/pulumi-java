@@ -108,42 +108,42 @@ public final class GooglePrivacyDlpV2TimespanConfigArgs extends io.pulumi.resour
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder setEnableAutoPopulationOfTimespanConfig(@Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
             return this;
         }
 
-        public Builder setEnableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(@Nullable Boolean enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = Input.ofNullable(enableAutoPopulationOfTimespanConfig);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTimestampField(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
+        public Builder timestampField(@Nullable Input<GooglePrivacyDlpV2FieldIdArgs> timestampField) {
             this.timestampField = timestampField;
             return this;
         }
 
-        public Builder setTimestampField(@Nullable GooglePrivacyDlpV2FieldIdArgs timestampField) {
+        public Builder timestampField(@Nullable GooglePrivacyDlpV2FieldIdArgs timestampField) {
             this.timestampField = Input.ofNullable(timestampField);
             return this;
         }

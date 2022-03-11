@@ -26,11 +26,11 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
      */
     private final String lastUpdatedTimestamp;
 
-    @OutputCustomType.Constructor({"currentVolumeFreeSpacePercent","effectiveVolumeFreeSpacePolicy","lastUpdatedTimestamp"})
+    @OutputCustomType.Constructor
     private CloudTieringVolumeFreeSpacePolicyStatusResponse(
-        Integer currentVolumeFreeSpacePercent,
-        Integer effectiveVolumeFreeSpacePolicy,
-        String lastUpdatedTimestamp) {
+        @OutputCustomType.Parameter("currentVolumeFreeSpacePercent") Integer currentVolumeFreeSpacePercent,
+        @OutputCustomType.Parameter("effectiveVolumeFreeSpacePolicy") Integer effectiveVolumeFreeSpacePolicy,
+        @OutputCustomType.Parameter("lastUpdatedTimestamp") String lastUpdatedTimestamp) {
         this.currentVolumeFreeSpacePercent = currentVolumeFreeSpacePercent;
         this.effectiveVolumeFreeSpacePolicy = effectiveVolumeFreeSpacePolicy;
         this.lastUpdatedTimestamp = lastUpdatedTimestamp;
@@ -82,17 +82,17 @@ public final class CloudTieringVolumeFreeSpacePolicyStatusResponse {
     	      this.lastUpdatedTimestamp = defaults.lastUpdatedTimestamp;
         }
 
-        public Builder setCurrentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
+        public Builder currentVolumeFreeSpacePercent(Integer currentVolumeFreeSpacePercent) {
             this.currentVolumeFreeSpacePercent = Objects.requireNonNull(currentVolumeFreeSpacePercent);
             return this;
         }
 
-        public Builder setEffectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
+        public Builder effectiveVolumeFreeSpacePolicy(Integer effectiveVolumeFreeSpacePolicy) {
             this.effectiveVolumeFreeSpacePolicy = Objects.requireNonNull(effectiveVolumeFreeSpacePolicy);
             return this;
         }
 
-        public Builder setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
+        public Builder lastUpdatedTimestamp(String lastUpdatedTimestamp) {
             this.lastUpdatedTimestamp = Objects.requireNonNull(lastUpdatedTimestamp);
             return this;
         }

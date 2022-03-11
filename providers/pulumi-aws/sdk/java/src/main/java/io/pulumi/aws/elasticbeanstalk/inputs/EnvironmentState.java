@@ -440,237 +440,237 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     	      this.waitForReadyTimeout = defaults.waitForReadyTimeout;
         }
 
-        public Builder setAllSettings(@Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings) {
+        public Builder allSettings(@Nullable Input<List<EnvironmentAllSettingGetArgs>> allSettings) {
             this.allSettings = allSettings;
             return this;
         }
 
-        public Builder setAllSettings(@Nullable List<EnvironmentAllSettingGetArgs> allSettings) {
+        public Builder allSettings(@Nullable List<EnvironmentAllSettingGetArgs> allSettings) {
             this.allSettings = Input.ofNullable(allSettings);
             return this;
         }
 
-        public Builder setApplication(@Nullable Input<String> application) {
+        public Builder application(@Nullable Input<String> application) {
             this.application = application;
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAutoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable Input<List<String>> autoscalingGroups) {
             this.autoscalingGroups = autoscalingGroups;
             return this;
         }
 
-        public Builder setAutoscalingGroups(@Nullable List<String> autoscalingGroups) {
+        public Builder autoscalingGroups(@Nullable List<String> autoscalingGroups) {
             this.autoscalingGroups = Input.ofNullable(autoscalingGroups);
             return this;
         }
 
-        public Builder setCname(@Nullable Input<String> cname) {
+        public Builder cname(@Nullable Input<String> cname) {
             this.cname = cname;
             return this;
         }
 
-        public Builder setCname(@Nullable String cname) {
+        public Builder cname(@Nullable String cname) {
             this.cname = Input.ofNullable(cname);
             return this;
         }
 
-        public Builder setCnamePrefix(@Nullable Input<String> cnamePrefix) {
+        public Builder cnamePrefix(@Nullable Input<String> cnamePrefix) {
             this.cnamePrefix = cnamePrefix;
             return this;
         }
 
-        public Builder setCnamePrefix(@Nullable String cnamePrefix) {
+        public Builder cnamePrefix(@Nullable String cnamePrefix) {
             this.cnamePrefix = Input.ofNullable(cnamePrefix);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEndpointUrl(@Nullable Input<String> endpointUrl) {
+        public Builder endpointUrl(@Nullable Input<String> endpointUrl) {
             this.endpointUrl = endpointUrl;
             return this;
         }
 
-        public Builder setEndpointUrl(@Nullable String endpointUrl) {
+        public Builder endpointUrl(@Nullable String endpointUrl) {
             this.endpointUrl = Input.ofNullable(endpointUrl);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<String>> instances) {
+        public Builder instances(@Nullable Input<List<String>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<String> instances) {
+        public Builder instances(@Nullable List<String> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setLaunchConfigurations(@Nullable Input<List<String>> launchConfigurations) {
+        public Builder launchConfigurations(@Nullable Input<List<String>> launchConfigurations) {
             this.launchConfigurations = launchConfigurations;
             return this;
         }
 
-        public Builder setLaunchConfigurations(@Nullable List<String> launchConfigurations) {
+        public Builder launchConfigurations(@Nullable List<String> launchConfigurations) {
             this.launchConfigurations = Input.ofNullable(launchConfigurations);
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable Input<List<String>> loadBalancers) {
+        public Builder loadBalancers(@Nullable Input<List<String>> loadBalancers) {
             this.loadBalancers = loadBalancers;
             return this;
         }
 
-        public Builder setLoadBalancers(@Nullable List<String> loadBalancers) {
+        public Builder loadBalancers(@Nullable List<String> loadBalancers) {
             this.loadBalancers = Input.ofNullable(loadBalancers);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatformArn(@Nullable Input<String> platformArn) {
+        public Builder platformArn(@Nullable Input<String> platformArn) {
             this.platformArn = platformArn;
             return this;
         }
 
-        public Builder setPlatformArn(@Nullable String platformArn) {
+        public Builder platformArn(@Nullable String platformArn) {
             this.platformArn = Input.ofNullable(platformArn);
             return this;
         }
 
-        public Builder setPollInterval(@Nullable Input<String> pollInterval) {
+        public Builder pollInterval(@Nullable Input<String> pollInterval) {
             this.pollInterval = pollInterval;
             return this;
         }
 
-        public Builder setPollInterval(@Nullable String pollInterval) {
+        public Builder pollInterval(@Nullable String pollInterval) {
             this.pollInterval = Input.ofNullable(pollInterval);
             return this;
         }
 
-        public Builder setQueues(@Nullable Input<List<String>> queues) {
+        public Builder queues(@Nullable Input<List<String>> queues) {
             this.queues = queues;
             return this;
         }
 
-        public Builder setQueues(@Nullable List<String> queues) {
+        public Builder queues(@Nullable List<String> queues) {
             this.queues = Input.ofNullable(queues);
             return this;
         }
 
-        public Builder setSettings(@Nullable Input<List<EnvironmentSettingGetArgs>> settings) {
+        public Builder settings(@Nullable Input<List<EnvironmentSettingGetArgs>> settings) {
             this.settings = settings;
             return this;
         }
 
-        public Builder setSettings(@Nullable List<EnvironmentSettingGetArgs> settings) {
+        public Builder settings(@Nullable List<EnvironmentSettingGetArgs> settings) {
             this.settings = Input.ofNullable(settings);
             return this;
         }
 
-        public Builder setSolutionStackName(@Nullable Input<String> solutionStackName) {
+        public Builder solutionStackName(@Nullable Input<String> solutionStackName) {
             this.solutionStackName = solutionStackName;
             return this;
         }
 
-        public Builder setSolutionStackName(@Nullable String solutionStackName) {
+        public Builder solutionStackName(@Nullable String solutionStackName) {
             this.solutionStackName = Input.ofNullable(solutionStackName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setTemplateName(@Nullable Input<String> templateName) {
+        public Builder templateName(@Nullable Input<String> templateName) {
             this.templateName = templateName;
             return this;
         }
 
-        public Builder setTemplateName(@Nullable String templateName) {
+        public Builder templateName(@Nullable String templateName) {
             this.templateName = Input.ofNullable(templateName);
             return this;
         }
 
-        public Builder setTier(@Nullable Input<String> tier) {
+        public Builder tier(@Nullable Input<String> tier) {
             this.tier = tier;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = Input.ofNullable(tier);
             return this;
         }
 
-        public Builder setTriggers(@Nullable Input<List<String>> triggers) {
+        public Builder triggers(@Nullable Input<List<String>> triggers) {
             this.triggers = triggers;
             return this;
         }
 
-        public Builder setTriggers(@Nullable List<String> triggers) {
+        public Builder triggers(@Nullable List<String> triggers) {
             this.triggers = Input.ofNullable(triggers);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }
 
-        public Builder setWaitForReadyTimeout(@Nullable Input<String> waitForReadyTimeout) {
+        public Builder waitForReadyTimeout(@Nullable Input<String> waitForReadyTimeout) {
             this.waitForReadyTimeout = waitForReadyTimeout;
             return this;
         }
 
-        public Builder setWaitForReadyTimeout(@Nullable String waitForReadyTimeout) {
+        public Builder waitForReadyTimeout(@Nullable String waitForReadyTimeout) {
             this.waitForReadyTimeout = Input.ofNullable(waitForReadyTimeout);
             return this;
         }

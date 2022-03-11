@@ -28,11 +28,11 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
      */
     private final @Nullable String keyType;
 
-    @OutputCustomType.Constructor({"enabled","keyArn","keyType"})
+    @OutputCustomType.Constructor
     private FirehoseDeliveryStreamServerSideEncryption(
-        @Nullable Boolean enabled,
-        @Nullable String keyArn,
-        @Nullable String keyType) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
+        @OutputCustomType.Parameter("keyType") @Nullable String keyType) {
         this.enabled = enabled;
         this.keyArn = keyArn;
         this.keyType = keyType;
@@ -84,17 +84,17 @@ public final class FirehoseDeliveryStreamServerSideEncryption {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyType(@Nullable String keyType) {
+        public Builder keyType(@Nullable String keyType) {
             this.keyType = keyType;
             return this;
         }

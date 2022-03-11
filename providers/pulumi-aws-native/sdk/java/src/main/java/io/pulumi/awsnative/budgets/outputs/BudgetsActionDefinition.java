@@ -17,11 +17,11 @@ public final class BudgetsActionDefinition {
     private final @Nullable BudgetsActionScpActionDefinition scpActionDefinition;
     private final @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition;
 
-    @OutputCustomType.Constructor({"iamActionDefinition","scpActionDefinition","ssmActionDefinition"})
+    @OutputCustomType.Constructor
     private BudgetsActionDefinition(
-        @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
-        @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
-        @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
+        @OutputCustomType.Parameter("iamActionDefinition") @Nullable BudgetsActionIamActionDefinition iamActionDefinition,
+        @OutputCustomType.Parameter("scpActionDefinition") @Nullable BudgetsActionScpActionDefinition scpActionDefinition,
+        @OutputCustomType.Parameter("ssmActionDefinition") @Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
         this.iamActionDefinition = iamActionDefinition;
         this.scpActionDefinition = scpActionDefinition;
         this.ssmActionDefinition = ssmActionDefinition;
@@ -61,17 +61,17 @@ public final class BudgetsActionDefinition {
     	      this.ssmActionDefinition = defaults.ssmActionDefinition;
         }
 
-        public Builder setIamActionDefinition(@Nullable BudgetsActionIamActionDefinition iamActionDefinition) {
+        public Builder iamActionDefinition(@Nullable BudgetsActionIamActionDefinition iamActionDefinition) {
             this.iamActionDefinition = iamActionDefinition;
             return this;
         }
 
-        public Builder setScpActionDefinition(@Nullable BudgetsActionScpActionDefinition scpActionDefinition) {
+        public Builder scpActionDefinition(@Nullable BudgetsActionScpActionDefinition scpActionDefinition) {
             this.scpActionDefinition = scpActionDefinition;
             return this;
         }
 
-        public Builder setSsmActionDefinition(@Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
+        public Builder ssmActionDefinition(@Nullable BudgetsActionSsmActionDefinition ssmActionDefinition) {
             this.ssmActionDefinition = ssmActionDefinition;
             return this;
         }

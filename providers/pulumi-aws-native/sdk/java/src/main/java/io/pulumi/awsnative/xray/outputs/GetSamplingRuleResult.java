@@ -23,14 +23,14 @@ public final class GetSamplingRuleResult {
     private final @Nullable SamplingRuleUpdate samplingRuleUpdate;
     private final @Nullable List<TagsItemProperties> tags;
 
-    @OutputCustomType.Constructor({"ruleARN","ruleName","samplingRule","samplingRuleRecord","samplingRuleUpdate","tags"})
+    @OutputCustomType.Constructor
     private GetSamplingRuleResult(
-        @Nullable String ruleARN,
-        @Nullable String ruleName,
-        @Nullable SamplingRule samplingRule,
-        @Nullable SamplingRuleRecord samplingRuleRecord,
-        @Nullable SamplingRuleUpdate samplingRuleUpdate,
-        @Nullable List<TagsItemProperties> tags) {
+        @OutputCustomType.Parameter("ruleARN") @Nullable String ruleARN,
+        @OutputCustomType.Parameter("ruleName") @Nullable String ruleName,
+        @OutputCustomType.Parameter("samplingRule") @Nullable SamplingRule samplingRule,
+        @OutputCustomType.Parameter("samplingRuleRecord") @Nullable SamplingRuleRecord samplingRuleRecord,
+        @OutputCustomType.Parameter("samplingRuleUpdate") @Nullable SamplingRuleUpdate samplingRuleUpdate,
+        @OutputCustomType.Parameter("tags") @Nullable List<TagsItemProperties> tags) {
         this.ruleARN = ruleARN;
         this.ruleName = ruleName;
         this.samplingRule = samplingRule;
@@ -88,32 +88,32 @@ public final class GetSamplingRuleResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setRuleARN(@Nullable String ruleARN) {
+        public Builder ruleARN(@Nullable String ruleARN) {
             this.ruleARN = ruleARN;
             return this;
         }
 
-        public Builder setRuleName(@Nullable String ruleName) {
+        public Builder ruleName(@Nullable String ruleName) {
             this.ruleName = ruleName;
             return this;
         }
 
-        public Builder setSamplingRule(@Nullable SamplingRule samplingRule) {
+        public Builder samplingRule(@Nullable SamplingRule samplingRule) {
             this.samplingRule = samplingRule;
             return this;
         }
 
-        public Builder setSamplingRuleRecord(@Nullable SamplingRuleRecord samplingRuleRecord) {
+        public Builder samplingRuleRecord(@Nullable SamplingRuleRecord samplingRuleRecord) {
             this.samplingRuleRecord = samplingRuleRecord;
             return this;
         }
 
-        public Builder setSamplingRuleUpdate(@Nullable SamplingRuleUpdate samplingRuleUpdate) {
+        public Builder samplingRuleUpdate(@Nullable SamplingRuleUpdate samplingRuleUpdate) {
             this.samplingRuleUpdate = samplingRuleUpdate;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TagsItemProperties> tags) {
+        public Builder tags(@Nullable List<TagsItemProperties> tags) {
             this.tags = tags;
             return this;
         }

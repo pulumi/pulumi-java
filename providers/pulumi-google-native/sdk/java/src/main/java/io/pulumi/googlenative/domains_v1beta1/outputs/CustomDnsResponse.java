@@ -22,10 +22,10 @@ public final class CustomDnsResponse {
      */
     private final List<String> nameServers;
 
-    @OutputCustomType.Constructor({"dsRecords","nameServers"})
+    @OutputCustomType.Constructor
     private CustomDnsResponse(
-        List<DsRecordResponse> dsRecords,
-        List<String> nameServers) {
+        @OutputCustomType.Parameter("dsRecords") List<DsRecordResponse> dsRecords,
+        @OutputCustomType.Parameter("nameServers") List<String> nameServers) {
         this.dsRecords = dsRecords;
         this.nameServers = nameServers;
     }
@@ -67,12 +67,12 @@ public final class CustomDnsResponse {
     	      this.nameServers = defaults.nameServers;
         }
 
-        public Builder setDsRecords(List<DsRecordResponse> dsRecords) {
+        public Builder dsRecords(List<DsRecordResponse> dsRecords) {
             this.dsRecords = Objects.requireNonNull(dsRecords);
             return this;
         }
 
-        public Builder setNameServers(List<String> nameServers) {
+        public Builder nameServers(List<String> nameServers) {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }

@@ -15,10 +15,10 @@ public final class FlowEventBridgeDestinationProperties {
     private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
     private final String object;
 
-    @OutputCustomType.Constructor({"errorHandlingConfig","object"})
+    @OutputCustomType.Constructor
     private FlowEventBridgeDestinationProperties(
-        @Nullable FlowErrorHandlingConfig errorHandlingConfig,
-        String object) {
+        @OutputCustomType.Parameter("errorHandlingConfig") @Nullable FlowErrorHandlingConfig errorHandlingConfig,
+        @OutputCustomType.Parameter("object") String object) {
         this.errorHandlingConfig = errorHandlingConfig;
         this.object = object;
     }
@@ -52,12 +52,12 @@ public final class FlowEventBridgeDestinationProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setErrorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
+        public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfig errorHandlingConfig) {
             this.errorHandlingConfig = errorHandlingConfig;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

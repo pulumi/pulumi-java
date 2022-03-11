@@ -83,21 +83,21 @@ public final class GetUptimeCheckConfigResult {
      */
     private final String timeout;
 
-    @OutputCustomType.Constructor({"checkerType","contentMatchers","displayName","httpCheck","internalCheckers","isInternal","monitoredResource","name","period","resourceGroup","selectedRegions","tcpCheck","timeout"})
+    @OutputCustomType.Constructor
     private GetUptimeCheckConfigResult(
-        String checkerType,
-        List<ContentMatcherResponse> contentMatchers,
-        String displayName,
-        HttpCheckResponse httpCheck,
-        List<InternalCheckerResponse> internalCheckers,
-        Boolean isInternal,
-        MonitoredResourceResponse monitoredResource,
-        String name,
-        String period,
-        ResourceGroupResponse resourceGroup,
-        List<String> selectedRegions,
-        TcpCheckResponse tcpCheck,
-        String timeout) {
+        @OutputCustomType.Parameter("checkerType") String checkerType,
+        @OutputCustomType.Parameter("contentMatchers") List<ContentMatcherResponse> contentMatchers,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("httpCheck") HttpCheckResponse httpCheck,
+        @OutputCustomType.Parameter("internalCheckers") List<InternalCheckerResponse> internalCheckers,
+        @OutputCustomType.Parameter("isInternal") Boolean isInternal,
+        @OutputCustomType.Parameter("monitoredResource") MonitoredResourceResponse monitoredResource,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("period") String period,
+        @OutputCustomType.Parameter("resourceGroup") ResourceGroupResponse resourceGroup,
+        @OutputCustomType.Parameter("selectedRegions") List<String> selectedRegions,
+        @OutputCustomType.Parameter("tcpCheck") TcpCheckResponse tcpCheck,
+        @OutputCustomType.Parameter("timeout") String timeout) {
         this.checkerType = checkerType;
         this.contentMatchers = contentMatchers;
         this.displayName = displayName;
@@ -249,67 +249,67 @@ public final class GetUptimeCheckConfigResult {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCheckerType(String checkerType) {
+        public Builder checkerType(String checkerType) {
             this.checkerType = Objects.requireNonNull(checkerType);
             return this;
         }
 
-        public Builder setContentMatchers(List<ContentMatcherResponse> contentMatchers) {
+        public Builder contentMatchers(List<ContentMatcherResponse> contentMatchers) {
             this.contentMatchers = Objects.requireNonNull(contentMatchers);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHttpCheck(HttpCheckResponse httpCheck) {
+        public Builder httpCheck(HttpCheckResponse httpCheck) {
             this.httpCheck = Objects.requireNonNull(httpCheck);
             return this;
         }
 
-        public Builder setInternalCheckers(List<InternalCheckerResponse> internalCheckers) {
+        public Builder internalCheckers(List<InternalCheckerResponse> internalCheckers) {
             this.internalCheckers = Objects.requireNonNull(internalCheckers);
             return this;
         }
 
-        public Builder setIsInternal(Boolean isInternal) {
+        public Builder isInternal(Boolean isInternal) {
             this.isInternal = Objects.requireNonNull(isInternal);
             return this;
         }
 
-        public Builder setMonitoredResource(MonitoredResourceResponse monitoredResource) {
+        public Builder monitoredResource(MonitoredResourceResponse monitoredResource) {
             this.monitoredResource = Objects.requireNonNull(monitoredResource);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeriod(String period) {
+        public Builder period(String period) {
             this.period = Objects.requireNonNull(period);
             return this;
         }
 
-        public Builder setResourceGroup(ResourceGroupResponse resourceGroup) {
+        public Builder resourceGroup(ResourceGroupResponse resourceGroup) {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
 
-        public Builder setSelectedRegions(List<String> selectedRegions) {
+        public Builder selectedRegions(List<String> selectedRegions) {
             this.selectedRegions = Objects.requireNonNull(selectedRegions);
             return this;
         }
 
-        public Builder setTcpCheck(TcpCheckResponse tcpCheck) {
+        public Builder tcpCheck(TcpCheckResponse tcpCheck) {
             this.tcpCheck = Objects.requireNonNull(tcpCheck);
             return this;
         }
 
-        public Builder setTimeout(String timeout) {
+        public Builder timeout(String timeout) {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }

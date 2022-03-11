@@ -28,11 +28,11 @@ public final class StateMachineLoggingConfiguration {
      */
     private final @Nullable String logDestination;
 
-    @OutputCustomType.Constructor({"includeExecutionData","level","logDestination"})
+    @OutputCustomType.Constructor
     private StateMachineLoggingConfiguration(
-        @Nullable Boolean includeExecutionData,
-        @Nullable String level,
-        @Nullable String logDestination) {
+        @OutputCustomType.Parameter("includeExecutionData") @Nullable Boolean includeExecutionData,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("logDestination") @Nullable String logDestination) {
         this.includeExecutionData = includeExecutionData;
         this.level = level;
         this.logDestination = logDestination;
@@ -84,17 +84,17 @@ public final class StateMachineLoggingConfiguration {
     	      this.logDestination = defaults.logDestination;
         }
 
-        public Builder setIncludeExecutionData(@Nullable Boolean includeExecutionData) {
+        public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
             this.includeExecutionData = includeExecutionData;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setLogDestination(@Nullable String logDestination) {
+        public Builder logDestination(@Nullable String logDestination) {
             this.logDestination = logDestination;
             return this;
         }

@@ -21,10 +21,10 @@ public final class ApkResponse {
      */
     private final String packageName;
 
-    @OutputCustomType.Constructor({"location","packageName"})
+    @OutputCustomType.Constructor
     private ApkResponse(
-        FileReferenceResponse location,
-        String packageName) {
+        @OutputCustomType.Parameter("location") FileReferenceResponse location,
+        @OutputCustomType.Parameter("packageName") String packageName) {
         this.location = location;
         this.packageName = packageName;
     }
@@ -66,12 +66,12 @@ public final class ApkResponse {
     	      this.packageName = defaults.packageName;
         }
 
-        public Builder setLocation(FileReferenceResponse location) {
+        public Builder location(FileReferenceResponse location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }

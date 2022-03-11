@@ -14,10 +14,10 @@ public final class GatewayCapabilitySummary {
     private final @Nullable String capabilityConfiguration;
     private final String capabilityNamespace;
 
-    @OutputCustomType.Constructor({"capabilityConfiguration","capabilityNamespace"})
+    @OutputCustomType.Constructor
     private GatewayCapabilitySummary(
-        @Nullable String capabilityConfiguration,
-        String capabilityNamespace) {
+        @OutputCustomType.Parameter("capabilityConfiguration") @Nullable String capabilityConfiguration,
+        @OutputCustomType.Parameter("capabilityNamespace") String capabilityNamespace) {
         this.capabilityConfiguration = capabilityConfiguration;
         this.capabilityNamespace = capabilityNamespace;
     }
@@ -51,12 +51,12 @@ public final class GatewayCapabilitySummary {
     	      this.capabilityNamespace = defaults.capabilityNamespace;
         }
 
-        public Builder setCapabilityConfiguration(@Nullable String capabilityConfiguration) {
+        public Builder capabilityConfiguration(@Nullable String capabilityConfiguration) {
             this.capabilityConfiguration = capabilityConfiguration;
             return this;
         }
 
-        public Builder setCapabilityNamespace(String capabilityNamespace) {
+        public Builder capabilityNamespace(String capabilityNamespace) {
             this.capabilityNamespace = Objects.requireNonNull(capabilityNamespace);
             return this;
         }

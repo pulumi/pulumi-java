@@ -86,21 +86,21 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","annotations","connectVia","dataLakeAnalyticsUri","description","encryptedCredential","parameters","resourceGroupName","servicePrincipalId","servicePrincipalKey","subscriptionId","tenant","type"})
+    @OutputCustomType.Constructor
     private AzureDataLakeAnalyticsLinkedServiceResponse(
-        Object accountName,
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object dataLakeAnalyticsUri,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Object resourceGroupName,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object subscriptionId,
-        Object tenant,
-        String type) {
+        @OutputCustomType.Parameter("accountName") Object accountName,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("dataLakeAnalyticsUri") @Nullable Object dataLakeAnalyticsUri,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("resourceGroupName") @Nullable Object resourceGroupName,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable Object subscriptionId,
+        @OutputCustomType.Parameter("tenant") Object tenant,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.annotations = annotations;
         this.connectVia = connectVia;
@@ -253,67 +253,67 @@ public final class AzureDataLakeAnalyticsLinkedServiceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(Object accountName) {
+        public Builder accountName(Object accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
+        public Builder dataLakeAnalyticsUri(@Nullable Object dataLakeAnalyticsUri) {
             this.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setResourceGroupName(@Nullable Object resourceGroupName) {
+        public Builder resourceGroupName(@Nullable Object resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Object subscriptionId) {
+        public Builder subscriptionId(@Nullable Object subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTenant(Object tenant) {
+        public Builder tenant(Object tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

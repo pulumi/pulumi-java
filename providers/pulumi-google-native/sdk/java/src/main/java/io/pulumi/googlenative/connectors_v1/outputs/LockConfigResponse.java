@@ -21,10 +21,10 @@ public final class LockConfigResponse {
      */
     private final String reason;
 
-    @OutputCustomType.Constructor({"locked","reason"})
+    @OutputCustomType.Constructor
     private LockConfigResponse(
-        Boolean locked,
-        String reason) {
+        @OutputCustomType.Parameter("locked") Boolean locked,
+        @OutputCustomType.Parameter("reason") String reason) {
         this.locked = locked;
         this.reason = reason;
     }
@@ -66,12 +66,12 @@ public final class LockConfigResponse {
     	      this.reason = defaults.reason;
         }
 
-        public Builder setLocked(Boolean locked) {
+        public Builder locked(Boolean locked) {
             this.locked = Objects.requireNonNull(locked);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }

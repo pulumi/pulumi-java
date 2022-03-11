@@ -16,8 +16,8 @@ public final class InstanceParamsResponse {
      */
     private final Map<String,String> resourceManagerTags;
 
-    @OutputCustomType.Constructor({"resourceManagerTags"})
-    private InstanceParamsResponse(Map<String,String> resourceManagerTags) {
+    @OutputCustomType.Constructor
+    private InstanceParamsResponse(@OutputCustomType.Parameter("resourceManagerTags") Map<String,String> resourceManagerTags) {
         this.resourceManagerTags = resourceManagerTags;
     }
 
@@ -49,7 +49,7 @@ public final class InstanceParamsResponse {
     	      this.resourceManagerTags = defaults.resourceManagerTags;
         }
 
-        public Builder setResourceManagerTags(Map<String,String> resourceManagerTags) {
+        public Builder resourceManagerTags(Map<String,String> resourceManagerTags) {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }

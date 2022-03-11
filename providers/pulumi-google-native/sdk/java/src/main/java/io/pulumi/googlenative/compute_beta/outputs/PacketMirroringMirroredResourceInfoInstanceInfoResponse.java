@@ -20,10 +20,10 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"canonicalUrl","url"})
+    @OutputCustomType.Constructor
     private PacketMirroringMirroredResourceInfoInstanceInfoResponse(
-        String canonicalUrl,
-        String url) {
+        @OutputCustomType.Parameter("canonicalUrl") String canonicalUrl,
+        @OutputCustomType.Parameter("url") String url) {
         this.canonicalUrl = canonicalUrl;
         this.url = url;
     }
@@ -65,12 +65,12 @@ public final class PacketMirroringMirroredResourceInfoInstanceInfoResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setCanonicalUrl(String canonicalUrl) {
+        public Builder canonicalUrl(String canonicalUrl) {
             this.canonicalUrl = Objects.requireNonNull(canonicalUrl);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

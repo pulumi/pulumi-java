@@ -37,13 +37,13 @@ public final class NetworkResponse {
      */
     private final String subnetworkName;
 
-    @OutputCustomType.Constructor({"forwardedPorts","instanceTag","name","sessionAffinity","subnetworkName"})
+    @OutputCustomType.Constructor
     private NetworkResponse(
-        List<String> forwardedPorts,
-        String instanceTag,
-        String name,
-        Boolean sessionAffinity,
-        String subnetworkName) {
+        @OutputCustomType.Parameter("forwardedPorts") List<String> forwardedPorts,
+        @OutputCustomType.Parameter("instanceTag") String instanceTag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("sessionAffinity") Boolean sessionAffinity,
+        @OutputCustomType.Parameter("subnetworkName") String subnetworkName) {
         this.forwardedPorts = forwardedPorts;
         this.instanceTag = instanceTag;
         this.name = name;
@@ -115,27 +115,27 @@ public final class NetworkResponse {
     	      this.subnetworkName = defaults.subnetworkName;
         }
 
-        public Builder setForwardedPorts(List<String> forwardedPorts) {
+        public Builder forwardedPorts(List<String> forwardedPorts) {
             this.forwardedPorts = Objects.requireNonNull(forwardedPorts);
             return this;
         }
 
-        public Builder setInstanceTag(String instanceTag) {
+        public Builder instanceTag(String instanceTag) {
             this.instanceTag = Objects.requireNonNull(instanceTag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSessionAffinity(Boolean sessionAffinity) {
+        public Builder sessionAffinity(Boolean sessionAffinity) {
             this.sessionAffinity = Objects.requireNonNull(sessionAffinity);
             return this;
         }
 
-        public Builder setSubnetworkName(String subnetworkName) {
+        public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }

@@ -23,10 +23,10 @@ public final class ListSpacecraftAvailableContactsResult {
      */
     private final @Nullable List<AvailableContactsResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListSpacecraftAvailableContactsResult(
-        String nextLink,
-        @Nullable List<AvailableContactsResponse> value) {
+        @OutputCustomType.Parameter("nextLink") String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<AvailableContactsResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -68,12 +68,12 @@ public final class ListSpacecraftAvailableContactsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(String nextLink) {
+        public Builder nextLink(String nextLink) {
             this.nextLink = Objects.requireNonNull(nextLink);
             return this;
         }
 
-        public Builder setValue(@Nullable List<AvailableContactsResponse> value) {
+        public Builder value(@Nullable List<AvailableContactsResponse> value) {
             this.value = value;
             return this;
         }

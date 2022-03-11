@@ -27,11 +27,11 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
      */
     private final @Nullable String schemaName;
 
-    @OutputCustomType.Constructor({"registryName","schemaArn","schemaName"})
+    @OutputCustomType.Constructor
     private CatalogTableStorageDescriptorSchemaReferenceSchemaId(
-        @Nullable String registryName,
-        @Nullable String schemaArn,
-        @Nullable String schemaName) {
+        @OutputCustomType.Parameter("registryName") @Nullable String registryName,
+        @OutputCustomType.Parameter("schemaArn") @Nullable String schemaArn,
+        @OutputCustomType.Parameter("schemaName") @Nullable String schemaName) {
         this.registryName = registryName;
         this.schemaArn = schemaArn;
         this.schemaName = schemaName;
@@ -83,17 +83,17 @@ public final class CatalogTableStorageDescriptorSchemaReferenceSchemaId {
     	      this.schemaName = defaults.schemaName;
         }
 
-        public Builder setRegistryName(@Nullable String registryName) {
+        public Builder registryName(@Nullable String registryName) {
             this.registryName = registryName;
             return this;
         }
 
-        public Builder setSchemaArn(@Nullable String schemaArn) {
+        public Builder schemaArn(@Nullable String schemaArn) {
             this.schemaArn = schemaArn;
             return this;
         }
 
-        public Builder setSchemaName(@Nullable String schemaName) {
+        public Builder schemaName(@Nullable String schemaName) {
             this.schemaName = schemaName;
             return this;
         }

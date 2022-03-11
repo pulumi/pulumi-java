@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
      */
     private final List<GooglePrivacyDlpV2InspectionRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"infoTypes","rules"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InspectionRuleSetResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
+        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @OutputCustomType.Parameter("rules") List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
         this.infoTypes = infoTypes;
         this.rules = rules;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setInfoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
-        public Builder setRules(List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
+        public Builder rules(List<GooglePrivacyDlpV2InspectionRuleResponse> rules) {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }

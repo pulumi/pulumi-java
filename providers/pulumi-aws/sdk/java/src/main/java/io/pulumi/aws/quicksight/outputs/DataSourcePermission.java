@@ -21,10 +21,10 @@ public final class DataSourcePermission {
      */
     private final String principal;
 
-    @OutputCustomType.Constructor({"actions","principal"})
+    @OutputCustomType.Constructor
     private DataSourcePermission(
-        List<String> actions,
-        String principal) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("principal") String principal) {
         this.actions = actions;
         this.principal = principal;
     }
@@ -66,12 +66,12 @@ public final class DataSourcePermission {
     	      this.principal = defaults.principal;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setPrincipal(String principal) {
+        public Builder principal(String principal) {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }

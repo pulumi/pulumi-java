@@ -27,11 +27,11 @@ public final class KeyVaultPropertiesResponse {
      */
     private final @Nullable String keyvaultUri;
 
-    @OutputCustomType.Constructor({"keyName","keyVersion","keyvaultUri"})
+    @OutputCustomType.Constructor
     private KeyVaultPropertiesResponse(
-        @Nullable String keyName,
-        @Nullable String keyVersion,
-        @Nullable String keyvaultUri) {
+        @OutputCustomType.Parameter("keyName") @Nullable String keyName,
+        @OutputCustomType.Parameter("keyVersion") @Nullable String keyVersion,
+        @OutputCustomType.Parameter("keyvaultUri") @Nullable String keyvaultUri) {
         this.keyName = keyName;
         this.keyVersion = keyVersion;
         this.keyvaultUri = keyvaultUri;
@@ -83,17 +83,17 @@ public final class KeyVaultPropertiesResponse {
     	      this.keyvaultUri = defaults.keyvaultUri;
         }
 
-        public Builder setKeyName(@Nullable String keyName) {
+        public Builder keyName(@Nullable String keyName) {
             this.keyName = keyName;
             return this;
         }
 
-        public Builder setKeyVersion(@Nullable String keyVersion) {
+        public Builder keyVersion(@Nullable String keyVersion) {
             this.keyVersion = keyVersion;
             return this;
         }
 
-        public Builder setKeyvaultUri(@Nullable String keyvaultUri) {
+        public Builder keyvaultUri(@Nullable String keyvaultUri) {
             this.keyvaultUri = keyvaultUri;
             return this;
         }

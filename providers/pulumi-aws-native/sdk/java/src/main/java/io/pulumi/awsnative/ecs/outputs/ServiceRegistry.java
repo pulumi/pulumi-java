@@ -17,12 +17,12 @@ public final class ServiceRegistry {
     private final @Nullable Integer port;
     private final @Nullable String registryArn;
 
-    @OutputCustomType.Constructor({"containerName","containerPort","port","registryArn"})
+    @OutputCustomType.Constructor
     private ServiceRegistry(
-        @Nullable String containerName,
-        @Nullable Integer containerPort,
-        @Nullable Integer port,
-        @Nullable String registryArn) {
+        @OutputCustomType.Parameter("containerName") @Nullable String containerName,
+        @OutputCustomType.Parameter("containerPort") @Nullable Integer containerPort,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("registryArn") @Nullable String registryArn) {
         this.containerName = containerName;
         this.containerPort = containerPort;
         this.port = port;
@@ -68,22 +68,22 @@ public final class ServiceRegistry {
     	      this.registryArn = defaults.registryArn;
         }
 
-        public Builder setContainerName(@Nullable String containerName) {
+        public Builder containerName(@Nullable String containerName) {
             this.containerName = containerName;
             return this;
         }
 
-        public Builder setContainerPort(@Nullable Integer containerPort) {
+        public Builder containerPort(@Nullable Integer containerPort) {
             this.containerPort = containerPort;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRegistryArn(@Nullable String registryArn) {
+        public Builder registryArn(@Nullable String registryArn) {
             this.registryArn = registryArn;
             return this;
         }

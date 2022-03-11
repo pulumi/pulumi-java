@@ -31,11 +31,11 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
      */
     private final String script;
 
-    @OutputCustomType.Constructor({"allowedExitCodes","interpreter","script"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeInstallStepScriptRun(
-        @Nullable List<Integer> allowedExitCodes,
-        @Nullable String interpreter,
-        String script) {
+        @OutputCustomType.Parameter("allowedExitCodes") @Nullable List<Integer> allowedExitCodes,
+        @OutputCustomType.Parameter("interpreter") @Nullable String interpreter,
+        @OutputCustomType.Parameter("script") String script) {
         this.allowedExitCodes = allowedExitCodes;
         this.interpreter = interpreter;
         this.script = script;
@@ -89,17 +89,17 @@ public final class GuestPoliciesRecipeInstallStepScriptRun {
     	      this.script = defaults.script;
         }
 
-        public Builder setAllowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
+        public Builder allowedExitCodes(@Nullable List<Integer> allowedExitCodes) {
             this.allowedExitCodes = allowedExitCodes;
             return this;
         }
 
-        public Builder setInterpreter(@Nullable String interpreter) {
+        public Builder interpreter(@Nullable String interpreter) {
             this.interpreter = interpreter;
             return this;
         }
 
-        public Builder setScript(String script) {
+        public Builder script(String script) {
             this.script = Objects.requireNonNull(script);
             return this;
         }

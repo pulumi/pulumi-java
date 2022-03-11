@@ -109,42 +109,42 @@ public final class ContainerNetworkInterfaceConfigurationArgs extends io.pulumi.
     	      this.name = defaults.name;
         }
 
-        public Builder setContainerNetworkInterfaces(@Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces) {
+        public Builder containerNetworkInterfaces(@Nullable Input<List<SubResourceArgs>> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = containerNetworkInterfaces;
             return this;
         }
 
-        public Builder setContainerNetworkInterfaces(@Nullable List<SubResourceArgs> containerNetworkInterfaces) {
+        public Builder containerNetworkInterfaces(@Nullable List<SubResourceArgs> containerNetworkInterfaces) {
             this.containerNetworkInterfaces = Input.ofNullable(containerNetworkInterfaces);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable Input<List<IPConfigurationProfileArgs>> ipConfigurations) {
             this.ipConfigurations = ipConfigurations;
             return this;
         }
 
-        public Builder setIpConfigurations(@Nullable List<IPConfigurationProfileArgs> ipConfigurations) {
+        public Builder ipConfigurations(@Nullable List<IPConfigurationProfileArgs> ipConfigurations) {
             this.ipConfigurations = Input.ofNullable(ipConfigurations);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

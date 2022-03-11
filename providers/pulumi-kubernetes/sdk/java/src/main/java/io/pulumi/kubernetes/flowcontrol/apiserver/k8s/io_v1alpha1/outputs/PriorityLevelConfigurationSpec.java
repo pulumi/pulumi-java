@@ -23,10 +23,10 @@ public final class PriorityLevelConfigurationSpec {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"limited","type"})
+    @OutputCustomType.Constructor
     private PriorityLevelConfigurationSpec(
-        @Nullable LimitedPriorityLevelConfiguration limited,
-        String type) {
+        @OutputCustomType.Parameter("limited") @Nullable LimitedPriorityLevelConfiguration limited,
+        @OutputCustomType.Parameter("type") String type) {
         this.limited = limited;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class PriorityLevelConfigurationSpec {
     	      this.type = defaults.type;
         }
 
-        public Builder setLimited(@Nullable LimitedPriorityLevelConfiguration limited) {
+        public Builder limited(@Nullable LimitedPriorityLevelConfiguration limited) {
             this.limited = limited;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

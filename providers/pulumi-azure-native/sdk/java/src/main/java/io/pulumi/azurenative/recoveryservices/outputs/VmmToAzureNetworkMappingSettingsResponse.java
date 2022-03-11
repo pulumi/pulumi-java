@@ -16,8 +16,8 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
      */
     private final String instanceType;
 
-    @OutputCustomType.Constructor({"instanceType"})
-    private VmmToAzureNetworkMappingSettingsResponse(String instanceType) {
+    @OutputCustomType.Constructor
+    private VmmToAzureNetworkMappingSettingsResponse(@OutputCustomType.Parameter("instanceType") String instanceType) {
         this.instanceType = instanceType;
     }
 
@@ -50,7 +50,7 @@ public final class VmmToAzureNetworkMappingSettingsResponse {
     	      this.instanceType = defaults.instanceType;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }

@@ -57,12 +57,12 @@ public final class FirewallPolicyTransportSecurityArgs extends io.pulumi.resourc
     	      this.certificateAuthority = defaults.certificateAuthority;
         }
 
-        public Builder setCertificateAuthority(@Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
+        public Builder certificateAuthority(@Nullable Input<FirewallPolicyCertificateAuthorityArgs> certificateAuthority) {
             this.certificateAuthority = certificateAuthority;
             return this;
         }
 
-        public Builder setCertificateAuthority(@Nullable FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
+        public Builder certificateAuthority(@Nullable FirewallPolicyCertificateAuthorityArgs certificateAuthority) {
             this.certificateAuthority = Input.ofNullable(certificateAuthority);
             return this;
         }

@@ -76,23 +76,23 @@ public final class GetOriginEndpointResult {
      */
     private final @Nullable List<String> whitelist;
 
-    @OutputCustomType.Constructor({"arn","authorization","channelId","cmafPackage","dashPackage","description","hlsPackage","manifestName","mssPackage","origination","startoverWindowSeconds","tags","timeDelaySeconds","url","whitelist"})
+    @OutputCustomType.Constructor
     private GetOriginEndpointResult(
-        @Nullable String arn,
-        @Nullable OriginEndpointAuthorization authorization,
-        @Nullable String channelId,
-        @Nullable OriginEndpointCmafPackage cmafPackage,
-        @Nullable OriginEndpointDashPackage dashPackage,
-        @Nullable String description,
-        @Nullable OriginEndpointHlsPackage hlsPackage,
-        @Nullable String manifestName,
-        @Nullable OriginEndpointMssPackage mssPackage,
-        @Nullable OriginEndpointOrigination origination,
-        @Nullable Integer startoverWindowSeconds,
-        @Nullable List<OriginEndpointTag> tags,
-        @Nullable Integer timeDelaySeconds,
-        @Nullable String url,
-        @Nullable List<String> whitelist) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorization") @Nullable OriginEndpointAuthorization authorization,
+        @OutputCustomType.Parameter("channelId") @Nullable String channelId,
+        @OutputCustomType.Parameter("cmafPackage") @Nullable OriginEndpointCmafPackage cmafPackage,
+        @OutputCustomType.Parameter("dashPackage") @Nullable OriginEndpointDashPackage dashPackage,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hlsPackage") @Nullable OriginEndpointHlsPackage hlsPackage,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("mssPackage") @Nullable OriginEndpointMssPackage mssPackage,
+        @OutputCustomType.Parameter("origination") @Nullable OriginEndpointOrigination origination,
+        @OutputCustomType.Parameter("startoverWindowSeconds") @Nullable Integer startoverWindowSeconds,
+        @OutputCustomType.Parameter("tags") @Nullable List<OriginEndpointTag> tags,
+        @OutputCustomType.Parameter("timeDelaySeconds") @Nullable Integer timeDelaySeconds,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("whitelist") @Nullable List<String> whitelist) {
         this.arn = arn;
         this.authorization = authorization;
         this.channelId = channelId;
@@ -244,77 +244,77 @@ public final class GetOriginEndpointResult {
     	      this.whitelist = defaults.whitelist;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorization(@Nullable OriginEndpointAuthorization authorization) {
+        public Builder authorization(@Nullable OriginEndpointAuthorization authorization) {
             this.authorization = authorization;
             return this;
         }
 
-        public Builder setChannelId(@Nullable String channelId) {
+        public Builder channelId(@Nullable String channelId) {
             this.channelId = channelId;
             return this;
         }
 
-        public Builder setCmafPackage(@Nullable OriginEndpointCmafPackage cmafPackage) {
+        public Builder cmafPackage(@Nullable OriginEndpointCmafPackage cmafPackage) {
             this.cmafPackage = cmafPackage;
             return this;
         }
 
-        public Builder setDashPackage(@Nullable OriginEndpointDashPackage dashPackage) {
+        public Builder dashPackage(@Nullable OriginEndpointDashPackage dashPackage) {
             this.dashPackage = dashPackage;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHlsPackage(@Nullable OriginEndpointHlsPackage hlsPackage) {
+        public Builder hlsPackage(@Nullable OriginEndpointHlsPackage hlsPackage) {
             this.hlsPackage = hlsPackage;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setMssPackage(@Nullable OriginEndpointMssPackage mssPackage) {
+        public Builder mssPackage(@Nullable OriginEndpointMssPackage mssPackage) {
             this.mssPackage = mssPackage;
             return this;
         }
 
-        public Builder setOrigination(@Nullable OriginEndpointOrigination origination) {
+        public Builder origination(@Nullable OriginEndpointOrigination origination) {
             this.origination = origination;
             return this;
         }
 
-        public Builder setStartoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
+        public Builder startoverWindowSeconds(@Nullable Integer startoverWindowSeconds) {
             this.startoverWindowSeconds = startoverWindowSeconds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<OriginEndpointTag> tags) {
+        public Builder tags(@Nullable List<OriginEndpointTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeDelaySeconds(@Nullable Integer timeDelaySeconds) {
+        public Builder timeDelaySeconds(@Nullable Integer timeDelaySeconds) {
             this.timeDelaySeconds = timeDelaySeconds;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setWhitelist(@Nullable List<String> whitelist) {
+        public Builder whitelist(@Nullable List<String> whitelist) {
             this.whitelist = whitelist;
             return this;
         }

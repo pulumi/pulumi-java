@@ -21,10 +21,10 @@ public final class AzureResourceDetailsResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"id","source"})
+    @OutputCustomType.Constructor
     private AzureResourceDetailsResponse(
-        String id,
-        String source) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("source") String source) {
         this.id = id;
         this.source = source;
     }
@@ -67,12 +67,12 @@ public final class AzureResourceDetailsResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

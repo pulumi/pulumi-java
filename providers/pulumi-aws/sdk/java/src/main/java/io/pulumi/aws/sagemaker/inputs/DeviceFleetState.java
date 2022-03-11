@@ -181,92 +181,92 @@ public final class DeviceFleetState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable Input<String> deviceFleetName) {
+        public Builder deviceFleetName(@Nullable Input<String> deviceFleetName) {
             this.deviceFleetName = deviceFleetName;
             return this;
         }
 
-        public Builder setDeviceFleetName(@Nullable String deviceFleetName) {
+        public Builder deviceFleetName(@Nullable String deviceFleetName) {
             this.deviceFleetName = Input.ofNullable(deviceFleetName);
             return this;
         }
 
-        public Builder setEnableIotRoleAlias(@Nullable Input<Boolean> enableIotRoleAlias) {
+        public Builder enableIotRoleAlias(@Nullable Input<Boolean> enableIotRoleAlias) {
             this.enableIotRoleAlias = enableIotRoleAlias;
             return this;
         }
 
-        public Builder setEnableIotRoleAlias(@Nullable Boolean enableIotRoleAlias) {
+        public Builder enableIotRoleAlias(@Nullable Boolean enableIotRoleAlias) {
             this.enableIotRoleAlias = Input.ofNullable(enableIotRoleAlias);
             return this;
         }
 
-        public Builder setIotRoleAlias(@Nullable Input<String> iotRoleAlias) {
+        public Builder iotRoleAlias(@Nullable Input<String> iotRoleAlias) {
             this.iotRoleAlias = iotRoleAlias;
             return this;
         }
 
-        public Builder setIotRoleAlias(@Nullable String iotRoleAlias) {
+        public Builder iotRoleAlias(@Nullable String iotRoleAlias) {
             this.iotRoleAlias = Input.ofNullable(iotRoleAlias);
             return this;
         }
 
-        public Builder setOutputConfig(@Nullable Input<DeviceFleetOutputConfigGetArgs> outputConfig) {
+        public Builder outputConfig(@Nullable Input<DeviceFleetOutputConfigGetArgs> outputConfig) {
             this.outputConfig = outputConfig;
             return this;
         }
 
-        public Builder setOutputConfig(@Nullable DeviceFleetOutputConfigGetArgs outputConfig) {
+        public Builder outputConfig(@Nullable DeviceFleetOutputConfigGetArgs outputConfig) {
             this.outputConfig = Input.ofNullable(outputConfig);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable Input<String> roleArn) {
+        public Builder roleArn(@Nullable Input<String> roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

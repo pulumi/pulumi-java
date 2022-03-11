@@ -20,10 +20,10 @@ public final class GetExposureControlFeatureValueResult {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"featureName","value"})
+    @OutputCustomType.Constructor
     private GetExposureControlFeatureValueResult(
-        String featureName,
-        String value) {
+        @OutputCustomType.Parameter("featureName") String featureName,
+        @OutputCustomType.Parameter("value") String value) {
         this.featureName = featureName;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class GetExposureControlFeatureValueResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setFeatureName(String featureName) {
+        public Builder featureName(String featureName) {
             this.featureName = Objects.requireNonNull(featureName);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

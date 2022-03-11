@@ -27,11 +27,11 @@ public final class DeploymentUpdateResponse {
      */
     private final String manifest;
 
-    @OutputCustomType.Constructor({"description","labels","manifest"})
+    @OutputCustomType.Constructor
     private DeploymentUpdateResponse(
-        String description,
-        List<DeploymentUpdateLabelEntryResponse> labels,
-        String manifest) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("labels") List<DeploymentUpdateLabelEntryResponse> labels,
+        @OutputCustomType.Parameter("manifest") String manifest) {
         this.description = description;
         this.labels = labels;
         this.manifest = manifest;
@@ -83,17 +83,17 @@ public final class DeploymentUpdateResponse {
     	      this.manifest = defaults.manifest;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLabels(List<DeploymentUpdateLabelEntryResponse> labels) {
+        public Builder labels(List<DeploymentUpdateLabelEntryResponse> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setManifest(String manifest) {
+        public Builder manifest(String manifest) {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }

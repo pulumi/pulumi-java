@@ -13,10 +13,10 @@ public final class GetAcceleratorIpSet {
     private final List<String> ipAddresses;
     private final String ipFamily;
 
-    @OutputCustomType.Constructor({"ipAddresses","ipFamily"})
+    @OutputCustomType.Constructor
     private GetAcceleratorIpSet(
-        List<String> ipAddresses,
-        String ipFamily) {
+        @OutputCustomType.Parameter("ipAddresses") List<String> ipAddresses,
+        @OutputCustomType.Parameter("ipFamily") String ipFamily) {
         this.ipAddresses = ipAddresses;
         this.ipFamily = ipFamily;
     }
@@ -50,12 +50,12 @@ public final class GetAcceleratorIpSet {
     	      this.ipFamily = defaults.ipFamily;
         }
 
-        public Builder setIpAddresses(List<String> ipAddresses) {
+        public Builder ipAddresses(List<String> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setIpFamily(String ipFamily) {
+        public Builder ipFamily(String ipFamily) {
             this.ipFamily = Objects.requireNonNull(ipFamily);
             return this;
         }

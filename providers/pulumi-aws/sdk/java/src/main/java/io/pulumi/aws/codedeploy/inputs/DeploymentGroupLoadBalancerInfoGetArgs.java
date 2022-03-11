@@ -89,32 +89,32 @@ public final class DeploymentGroupLoadBalancerInfoGetArgs extends io.pulumi.reso
     	      this.targetGroupPairInfo = defaults.targetGroupPairInfo;
         }
 
-        public Builder setElbInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> elbInfos) {
+        public Builder elbInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs>> elbInfos) {
             this.elbInfos = elbInfos;
             return this;
         }
 
-        public Builder setElbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs> elbInfos) {
+        public Builder elbInfos(@Nullable List<DeploymentGroupLoadBalancerInfoElbInfoGetArgs> elbInfos) {
             this.elbInfos = Input.ofNullable(elbInfos);
             return this;
         }
 
-        public Builder setTargetGroupInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> targetGroupInfos) {
+        public Builder targetGroupInfos(@Nullable Input<List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs>> targetGroupInfos) {
             this.targetGroupInfos = targetGroupInfos;
             return this;
         }
 
-        public Builder setTargetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs> targetGroupInfos) {
+        public Builder targetGroupInfos(@Nullable List<DeploymentGroupLoadBalancerInfoTargetGroupInfoGetArgs> targetGroupInfos) {
             this.targetGroupInfos = Input.ofNullable(targetGroupInfos);
             return this;
         }
 
-        public Builder setTargetGroupPairInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> targetGroupPairInfo) {
+        public Builder targetGroupPairInfo(@Nullable Input<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs> targetGroupPairInfo) {
             this.targetGroupPairInfo = targetGroupPairInfo;
             return this;
         }
 
-        public Builder setTargetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs targetGroupPairInfo) {
+        public Builder targetGroupPairInfo(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoGetArgs targetGroupPairInfo) {
             this.targetGroupPairInfo = Input.ofNullable(targetGroupPairInfo);
             return this;
         }

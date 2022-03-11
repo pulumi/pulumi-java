@@ -126,28 +126,28 @@ public final class GetJobResult {
      */
     private final List<YarnApplicationResponse> yarnApplications;
 
-    @OutputCustomType.Constructor({"done","driverControlFilesUri","driverOutputResourceUri","hadoopJob","hiveJob","jobUuid","labels","pigJob","placement","prestoJob","pysparkJob","reference","scheduling","sparkJob","sparkRJob","sparkSqlJob","status","statusHistory","submittedBy","yarnApplications"})
+    @OutputCustomType.Constructor
     private GetJobResult(
-        Boolean done,
-        String driverControlFilesUri,
-        String driverOutputResourceUri,
-        HadoopJobResponse hadoopJob,
-        HiveJobResponse hiveJob,
-        String jobUuid,
-        Map<String,String> labels,
-        PigJobResponse pigJob,
-        JobPlacementResponse placement,
-        PrestoJobResponse prestoJob,
-        PySparkJobResponse pysparkJob,
-        JobReferenceResponse reference,
-        JobSchedulingResponse scheduling,
-        SparkJobResponse sparkJob,
-        SparkRJobResponse sparkRJob,
-        SparkSqlJobResponse sparkSqlJob,
-        JobStatusResponse status,
-        List<JobStatusResponse> statusHistory,
-        String submittedBy,
-        List<YarnApplicationResponse> yarnApplications) {
+        @OutputCustomType.Parameter("done") Boolean done,
+        @OutputCustomType.Parameter("driverControlFilesUri") String driverControlFilesUri,
+        @OutputCustomType.Parameter("driverOutputResourceUri") String driverOutputResourceUri,
+        @OutputCustomType.Parameter("hadoopJob") HadoopJobResponse hadoopJob,
+        @OutputCustomType.Parameter("hiveJob") HiveJobResponse hiveJob,
+        @OutputCustomType.Parameter("jobUuid") String jobUuid,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("pigJob") PigJobResponse pigJob,
+        @OutputCustomType.Parameter("placement") JobPlacementResponse placement,
+        @OutputCustomType.Parameter("prestoJob") PrestoJobResponse prestoJob,
+        @OutputCustomType.Parameter("pysparkJob") PySparkJobResponse pysparkJob,
+        @OutputCustomType.Parameter("reference") JobReferenceResponse reference,
+        @OutputCustomType.Parameter("scheduling") JobSchedulingResponse scheduling,
+        @OutputCustomType.Parameter("sparkJob") SparkJobResponse sparkJob,
+        @OutputCustomType.Parameter("sparkRJob") SparkRJobResponse sparkRJob,
+        @OutputCustomType.Parameter("sparkSqlJob") SparkSqlJobResponse sparkSqlJob,
+        @OutputCustomType.Parameter("status") JobStatusResponse status,
+        @OutputCustomType.Parameter("statusHistory") List<JobStatusResponse> statusHistory,
+        @OutputCustomType.Parameter("submittedBy") String submittedBy,
+        @OutputCustomType.Parameter("yarnApplications") List<YarnApplicationResponse> yarnApplications) {
         this.done = done;
         this.driverControlFilesUri = driverControlFilesUri;
         this.driverOutputResourceUri = driverOutputResourceUri;
@@ -369,102 +369,102 @@ public final class GetJobResult {
     	      this.yarnApplications = defaults.yarnApplications;
         }
 
-        public Builder setDone(Boolean done) {
+        public Builder done(Boolean done) {
             this.done = Objects.requireNonNull(done);
             return this;
         }
 
-        public Builder setDriverControlFilesUri(String driverControlFilesUri) {
+        public Builder driverControlFilesUri(String driverControlFilesUri) {
             this.driverControlFilesUri = Objects.requireNonNull(driverControlFilesUri);
             return this;
         }
 
-        public Builder setDriverOutputResourceUri(String driverOutputResourceUri) {
+        public Builder driverOutputResourceUri(String driverOutputResourceUri) {
             this.driverOutputResourceUri = Objects.requireNonNull(driverOutputResourceUri);
             return this;
         }
 
-        public Builder setHadoopJob(HadoopJobResponse hadoopJob) {
+        public Builder hadoopJob(HadoopJobResponse hadoopJob) {
             this.hadoopJob = Objects.requireNonNull(hadoopJob);
             return this;
         }
 
-        public Builder setHiveJob(HiveJobResponse hiveJob) {
+        public Builder hiveJob(HiveJobResponse hiveJob) {
             this.hiveJob = Objects.requireNonNull(hiveJob);
             return this;
         }
 
-        public Builder setJobUuid(String jobUuid) {
+        public Builder jobUuid(String jobUuid) {
             this.jobUuid = Objects.requireNonNull(jobUuid);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setPigJob(PigJobResponse pigJob) {
+        public Builder pigJob(PigJobResponse pigJob) {
             this.pigJob = Objects.requireNonNull(pigJob);
             return this;
         }
 
-        public Builder setPlacement(JobPlacementResponse placement) {
+        public Builder placement(JobPlacementResponse placement) {
             this.placement = Objects.requireNonNull(placement);
             return this;
         }
 
-        public Builder setPrestoJob(PrestoJobResponse prestoJob) {
+        public Builder prestoJob(PrestoJobResponse prestoJob) {
             this.prestoJob = Objects.requireNonNull(prestoJob);
             return this;
         }
 
-        public Builder setPysparkJob(PySparkJobResponse pysparkJob) {
+        public Builder pysparkJob(PySparkJobResponse pysparkJob) {
             this.pysparkJob = Objects.requireNonNull(pysparkJob);
             return this;
         }
 
-        public Builder setReference(JobReferenceResponse reference) {
+        public Builder reference(JobReferenceResponse reference) {
             this.reference = Objects.requireNonNull(reference);
             return this;
         }
 
-        public Builder setScheduling(JobSchedulingResponse scheduling) {
+        public Builder scheduling(JobSchedulingResponse scheduling) {
             this.scheduling = Objects.requireNonNull(scheduling);
             return this;
         }
 
-        public Builder setSparkJob(SparkJobResponse sparkJob) {
+        public Builder sparkJob(SparkJobResponse sparkJob) {
             this.sparkJob = Objects.requireNonNull(sparkJob);
             return this;
         }
 
-        public Builder setSparkRJob(SparkRJobResponse sparkRJob) {
+        public Builder sparkRJob(SparkRJobResponse sparkRJob) {
             this.sparkRJob = Objects.requireNonNull(sparkRJob);
             return this;
         }
 
-        public Builder setSparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
+        public Builder sparkSqlJob(SparkSqlJobResponse sparkSqlJob) {
             this.sparkSqlJob = Objects.requireNonNull(sparkSqlJob);
             return this;
         }
 
-        public Builder setStatus(JobStatusResponse status) {
+        public Builder status(JobStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusHistory(List<JobStatusResponse> statusHistory) {
+        public Builder statusHistory(List<JobStatusResponse> statusHistory) {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
 
-        public Builder setSubmittedBy(String submittedBy) {
+        public Builder submittedBy(String submittedBy) {
             this.submittedBy = Objects.requireNonNull(submittedBy);
             return this;
         }
 
-        public Builder setYarnApplications(List<YarnApplicationResponse> yarnApplications) {
+        public Builder yarnApplications(List<YarnApplicationResponse> yarnApplications) {
             this.yarnApplications = Objects.requireNonNull(yarnApplications);
             return this;
         }

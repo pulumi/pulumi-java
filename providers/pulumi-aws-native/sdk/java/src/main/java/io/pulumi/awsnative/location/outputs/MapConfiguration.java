@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class MapConfiguration {
     private final String style;
 
-    @OutputCustomType.Constructor({"style"})
-    private MapConfiguration(String style) {
+    @OutputCustomType.Constructor
+    private MapConfiguration(@OutputCustomType.Parameter("style") String style) {
         this.style = style;
     }
 
@@ -40,7 +40,7 @@ public final class MapConfiguration {
     	      this.style = defaults.style;
         }
 
-        public Builder setStyle(String style) {
+        public Builder style(String style) {
             this.style = Objects.requireNonNull(style);
             return this;
         }

@@ -23,10 +23,10 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
      */
     private final @Nullable Integer maxIssuerPathLength;
 
-    @OutputCustomType.Constructor({"isCa","maxIssuerPathLength"})
+    @OutputCustomType.Constructor
     private CertificateTemplatePredefinedValuesCaOptions(
-        @Nullable Boolean isCa,
-        @Nullable Integer maxIssuerPathLength) {
+        @OutputCustomType.Parameter("isCa") @Nullable Boolean isCa,
+        @OutputCustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
     }
@@ -68,12 +68,12 @@ public final class CertificateTemplatePredefinedValuesCaOptions {
     	      this.maxIssuerPathLength = defaults.maxIssuerPathLength;
         }
 
-        public Builder setIsCa(@Nullable Boolean isCa) {
+        public Builder isCa(@Nullable Boolean isCa) {
             this.isCa = isCa;
             return this;
         }
 
-        public Builder setMaxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
+        public Builder maxIssuerPathLength(@Nullable Integer maxIssuerPathLength) {
             this.maxIssuerPathLength = maxIssuerPathLength;
             return this;
         }

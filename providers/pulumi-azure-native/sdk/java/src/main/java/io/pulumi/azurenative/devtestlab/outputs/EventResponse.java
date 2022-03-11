@@ -17,8 +17,8 @@ public final class EventResponse {
      */
     private final @Nullable String eventName;
 
-    @OutputCustomType.Constructor({"eventName"})
-    private EventResponse(@Nullable String eventName) {
+    @OutputCustomType.Constructor
+    private EventResponse(@OutputCustomType.Parameter("eventName") @Nullable String eventName) {
         this.eventName = eventName;
     }
 
@@ -50,7 +50,7 @@ public final class EventResponse {
     	      this.eventName = defaults.eventName;
         }
 
-        public Builder setEventName(@Nullable String eventName) {
+        public Builder eventName(@Nullable String eventName) {
             this.eventName = eventName;
             return this;
         }

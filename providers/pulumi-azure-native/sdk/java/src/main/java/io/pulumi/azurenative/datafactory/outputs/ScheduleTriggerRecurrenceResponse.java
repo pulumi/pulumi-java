@@ -44,14 +44,14 @@ public final class ScheduleTriggerRecurrenceResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"endTime","frequency","interval","schedule","startTime","timeZone"})
+    @OutputCustomType.Constructor
     private ScheduleTriggerRecurrenceResponse(
-        @Nullable String endTime,
-        @Nullable String frequency,
-        @Nullable Integer interval,
-        @Nullable RecurrenceScheduleResponse schedule,
-        @Nullable String startTime,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("frequency") @Nullable String frequency,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("schedule") @Nullable RecurrenceScheduleResponse schedule,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.endTime = endTime;
         this.frequency = frequency;
         this.interval = interval;
@@ -133,32 +133,32 @@ public final class ScheduleTriggerRecurrenceResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setFrequency(@Nullable String frequency) {
+        public Builder frequency(@Nullable String frequency) {
             this.frequency = frequency;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setSchedule(@Nullable RecurrenceScheduleResponse schedule) {
+        public Builder schedule(@Nullable RecurrenceScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

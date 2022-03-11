@@ -15,8 +15,8 @@ public final class InventoryDestination {
      */
     private final InventoryDestinationBucket bucket;
 
-    @OutputCustomType.Constructor({"bucket"})
-    private InventoryDestination(InventoryDestinationBucket bucket) {
+    @OutputCustomType.Constructor
+    private InventoryDestination(@OutputCustomType.Parameter("bucket") InventoryDestinationBucket bucket) {
         this.bucket = bucket;
     }
 
@@ -48,7 +48,7 @@ public final class InventoryDestination {
     	      this.bucket = defaults.bucket;
         }
 
-        public Builder setBucket(InventoryDestinationBucket bucket) {
+        public Builder bucket(InventoryDestinationBucket bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }

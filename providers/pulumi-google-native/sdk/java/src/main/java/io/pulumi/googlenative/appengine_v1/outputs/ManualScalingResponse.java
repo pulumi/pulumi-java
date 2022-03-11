@@ -15,8 +15,8 @@ public final class ManualScalingResponse {
      */
     private final Integer instances;
 
-    @OutputCustomType.Constructor({"instances"})
-    private ManualScalingResponse(Integer instances) {
+    @OutputCustomType.Constructor
+    private ManualScalingResponse(@OutputCustomType.Parameter("instances") Integer instances) {
         this.instances = instances;
     }
 
@@ -48,7 +48,7 @@ public final class ManualScalingResponse {
     	      this.instances = defaults.instances;
         }
 
-        public Builder setInstances(Integer instances) {
+        public Builder instances(Integer instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }

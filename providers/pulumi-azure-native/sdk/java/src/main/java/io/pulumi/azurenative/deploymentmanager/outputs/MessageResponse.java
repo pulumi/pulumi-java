@@ -20,10 +20,10 @@ public final class MessageResponse {
      */
     private final String timeStamp;
 
-    @OutputCustomType.Constructor({"message","timeStamp"})
+    @OutputCustomType.Constructor
     private MessageResponse(
-        String message,
-        String timeStamp) {
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("timeStamp") String timeStamp) {
         this.message = message;
         this.timeStamp = timeStamp;
     }
@@ -65,12 +65,12 @@ public final class MessageResponse {
     	      this.timeStamp = defaults.timeStamp;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setTimeStamp(String timeStamp) {
+        public Builder timeStamp(String timeStamp) {
             this.timeStamp = Objects.requireNonNull(timeStamp);
             return this;
         }

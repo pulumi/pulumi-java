@@ -24,10 +24,10 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      */
     private final @Nullable List<KeyVaultKeyResponse> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListIntegrationAccountKeyVaultKeysResult(
-        @Nullable String skipToken,
-        @Nullable List<KeyVaultKeyResponse> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<KeyVaultKeyResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setValue(@Nullable List<KeyVaultKeyResponse> value) {
+        public Builder value(@Nullable List<KeyVaultKeyResponse> value) {
             this.value = value;
             return this;
         }

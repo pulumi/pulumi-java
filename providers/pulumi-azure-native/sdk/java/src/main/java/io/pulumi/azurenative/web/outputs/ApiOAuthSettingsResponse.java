@@ -51,15 +51,15 @@ public final class ApiOAuthSettingsResponse {
      */
     private final @Nullable List<String> scopes;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","customParameters","identityProvider","properties","redirectUrl","scopes"})
+    @OutputCustomType.Constructor
     private ApiOAuthSettingsResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
-        @Nullable String identityProvider,
-        @Nullable Object properties,
-        @Nullable String redirectUrl,
-        @Nullable List<String> scopes) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("customParameters") @Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters,
+        @OutputCustomType.Parameter("identityProvider") @Nullable String identityProvider,
+        @OutputCustomType.Parameter("properties") @Nullable Object properties,
+        @OutputCustomType.Parameter("redirectUrl") @Nullable String redirectUrl,
+        @OutputCustomType.Parameter("scopes") @Nullable List<String> scopes) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.customParameters = customParameters;
@@ -151,37 +151,37 @@ public final class ApiOAuthSettingsResponse {
     	      this.scopes = defaults.scopes;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setCustomParameters(@Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters) {
+        public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterResponse> customParameters) {
             this.customParameters = customParameters;
             return this;
         }
 
-        public Builder setIdentityProvider(@Nullable String identityProvider) {
+        public Builder identityProvider(@Nullable String identityProvider) {
             this.identityProvider = identityProvider;
             return this;
         }
 
-        public Builder setProperties(@Nullable Object properties) {
+        public Builder properties(@Nullable Object properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setRedirectUrl(@Nullable String redirectUrl) {
+        public Builder redirectUrl(@Nullable String redirectUrl) {
             this.redirectUrl = redirectUrl;
             return this;
         }
 
-        public Builder setScopes(@Nullable List<String> scopes) {
+        public Builder scopes(@Nullable List<String> scopes) {
             this.scopes = scopes;
             return this;
         }

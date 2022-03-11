@@ -20,10 +20,10 @@ public final class HostedZoneVPC {
      */
     private final String vPCRegion;
 
-    @OutputCustomType.Constructor({"vPCId","vPCRegion"})
+    @OutputCustomType.Constructor
     private HostedZoneVPC(
-        String vPCId,
-        String vPCRegion) {
+        @OutputCustomType.Parameter("vPCId") String vPCId,
+        @OutputCustomType.Parameter("vPCRegion") String vPCRegion) {
         this.vPCId = vPCId;
         this.vPCRegion = vPCRegion;
     }
@@ -65,12 +65,12 @@ public final class HostedZoneVPC {
     	      this.vPCRegion = defaults.vPCRegion;
         }
 
-        public Builder setVPCId(String vPCId) {
+        public Builder vPCId(String vPCId) {
             this.vPCId = Objects.requireNonNull(vPCId);
             return this;
         }
 
-        public Builder setVPCRegion(String vPCRegion) {
+        public Builder vPCRegion(String vPCRegion) {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }

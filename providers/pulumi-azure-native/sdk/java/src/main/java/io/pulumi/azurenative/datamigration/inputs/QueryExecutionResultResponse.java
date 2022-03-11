@@ -106,22 +106,22 @@ public final class QueryExecutionResultResponse extends io.pulumi.resources.Invo
     	      this.targetResult = defaults.targetResult;
         }
 
-        public Builder setQueryText(String queryText) {
+        public Builder queryText(String queryText) {
             this.queryText = Objects.requireNonNull(queryText);
             return this;
         }
 
-        public Builder setSourceResult(ExecutionStatisticsResponse sourceResult) {
+        public Builder sourceResult(ExecutionStatisticsResponse sourceResult) {
             this.sourceResult = Objects.requireNonNull(sourceResult);
             return this;
         }
 
-        public Builder setStatementsInBatch(Double statementsInBatch) {
+        public Builder statementsInBatch(Double statementsInBatch) {
             this.statementsInBatch = Objects.requireNonNull(statementsInBatch);
             return this;
         }
 
-        public Builder setTargetResult(ExecutionStatisticsResponse targetResult) {
+        public Builder targetResult(ExecutionStatisticsResponse targetResult) {
             this.targetResult = Objects.requireNonNull(targetResult);
             return this;
         }

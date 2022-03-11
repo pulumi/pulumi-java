@@ -78,21 +78,21 @@ public final class TaskOptions {
      */
     private final @Nullable String verifyMode;
 
-    @OutputCustomType.Constructor({"atime","bytesPerSecond","gid","logLevel","mtime","overwriteMode","posixPermissions","preserveDeletedFiles","preserveDevices","taskQueueing","transferMode","uid","verifyMode"})
+    @OutputCustomType.Constructor
     private TaskOptions(
-        @Nullable String atime,
-        @Nullable Integer bytesPerSecond,
-        @Nullable String gid,
-        @Nullable String logLevel,
-        @Nullable String mtime,
-        @Nullable String overwriteMode,
-        @Nullable String posixPermissions,
-        @Nullable String preserveDeletedFiles,
-        @Nullable String preserveDevices,
-        @Nullable String taskQueueing,
-        @Nullable String transferMode,
-        @Nullable String uid,
-        @Nullable String verifyMode) {
+        @OutputCustomType.Parameter("atime") @Nullable String atime,
+        @OutputCustomType.Parameter("bytesPerSecond") @Nullable Integer bytesPerSecond,
+        @OutputCustomType.Parameter("gid") @Nullable String gid,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel,
+        @OutputCustomType.Parameter("mtime") @Nullable String mtime,
+        @OutputCustomType.Parameter("overwriteMode") @Nullable String overwriteMode,
+        @OutputCustomType.Parameter("posixPermissions") @Nullable String posixPermissions,
+        @OutputCustomType.Parameter("preserveDeletedFiles") @Nullable String preserveDeletedFiles,
+        @OutputCustomType.Parameter("preserveDevices") @Nullable String preserveDevices,
+        @OutputCustomType.Parameter("taskQueueing") @Nullable String taskQueueing,
+        @OutputCustomType.Parameter("transferMode") @Nullable String transferMode,
+        @OutputCustomType.Parameter("uid") @Nullable String uid,
+        @OutputCustomType.Parameter("verifyMode") @Nullable String verifyMode) {
         this.atime = atime;
         this.bytesPerSecond = bytesPerSecond;
         this.gid = gid;
@@ -244,67 +244,67 @@ public final class TaskOptions {
     	      this.verifyMode = defaults.verifyMode;
         }
 
-        public Builder setAtime(@Nullable String atime) {
+        public Builder atime(@Nullable String atime) {
             this.atime = atime;
             return this;
         }
 
-        public Builder setBytesPerSecond(@Nullable Integer bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
 
-        public Builder setGid(@Nullable String gid) {
+        public Builder gid(@Nullable String gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setMtime(@Nullable String mtime) {
+        public Builder mtime(@Nullable String mtime) {
             this.mtime = mtime;
             return this;
         }
 
-        public Builder setOverwriteMode(@Nullable String overwriteMode) {
+        public Builder overwriteMode(@Nullable String overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
 
-        public Builder setPosixPermissions(@Nullable String posixPermissions) {
+        public Builder posixPermissions(@Nullable String posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
 
-        public Builder setPreserveDeletedFiles(@Nullable String preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable String preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
 
-        public Builder setPreserveDevices(@Nullable String preserveDevices) {
+        public Builder preserveDevices(@Nullable String preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
 
-        public Builder setTaskQueueing(@Nullable String taskQueueing) {
+        public Builder taskQueueing(@Nullable String taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
 
-        public Builder setTransferMode(@Nullable String transferMode) {
+        public Builder transferMode(@Nullable String transferMode) {
             this.transferMode = transferMode;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setVerifyMode(@Nullable String verifyMode) {
+        public Builder verifyMode(@Nullable String verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }

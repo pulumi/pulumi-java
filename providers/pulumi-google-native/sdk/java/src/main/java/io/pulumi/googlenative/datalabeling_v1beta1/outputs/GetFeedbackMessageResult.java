@@ -34,14 +34,14 @@ public final class GetFeedbackMessageResult {
     private final GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata;
     private final GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata;
 
-    @OutputCustomType.Constructor({"body","createTime","image","name","operatorFeedbackMetadata","requesterFeedbackMetadata"})
+    @OutputCustomType.Constructor
     private GetFeedbackMessageResult(
-        String body,
-        String createTime,
-        String image,
-        String name,
-        GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
-        GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
+        @OutputCustomType.Parameter("body") String body,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("image") String image,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operatorFeedbackMetadata") GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata,
+        @OutputCustomType.Parameter("requesterFeedbackMetadata") GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
         this.body = body;
         this.createTime = createTime;
         this.image = image;
@@ -115,32 +115,32 @@ public final class GetFeedbackMessageResult {
     	      this.requesterFeedbackMetadata = defaults.requesterFeedbackMetadata;
         }
 
-        public Builder setBody(String body) {
+        public Builder body(String body) {
             this.body = Objects.requireNonNull(body);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setImage(String image) {
+        public Builder image(String image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperatorFeedbackMetadata(GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata) {
+        public Builder operatorFeedbackMetadata(GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse operatorFeedbackMetadata) {
             this.operatorFeedbackMetadata = Objects.requireNonNull(operatorFeedbackMetadata);
             return this;
         }
 
-        public Builder setRequesterFeedbackMetadata(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
+        public Builder requesterFeedbackMetadata(GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse requesterFeedbackMetadata) {
             this.requesterFeedbackMetadata = Objects.requireNonNull(requesterFeedbackMetadata);
             return this;
         }

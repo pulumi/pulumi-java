@@ -37,14 +37,14 @@ public final class GetCustomPluginResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"arn","description","id","latestRevision","name","state"})
+    @OutputCustomType.Constructor
     private GetCustomPluginResult(
-        String arn,
-        String description,
-        String id,
-        Integer latestRevision,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("latestRevision") Integer latestRevision,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.arn = arn;
         this.description = description;
         this.id = id;
@@ -122,32 +122,32 @@ public final class GetCustomPluginResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLatestRevision(Integer latestRevision) {
+        public Builder latestRevision(Integer latestRevision) {
             this.latestRevision = Objects.requireNonNull(latestRevision);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

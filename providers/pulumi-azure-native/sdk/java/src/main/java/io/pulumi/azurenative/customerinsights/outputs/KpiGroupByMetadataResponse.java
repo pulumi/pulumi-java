@@ -28,11 +28,11 @@ public final class KpiGroupByMetadataResponse {
      */
     private final @Nullable String fieldType;
 
-    @OutputCustomType.Constructor({"displayName","fieldName","fieldType"})
+    @OutputCustomType.Constructor
     private KpiGroupByMetadataResponse(
-        @Nullable Map<String,String> displayName,
-        @Nullable String fieldName,
-        @Nullable String fieldType) {
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("fieldName") @Nullable String fieldName,
+        @OutputCustomType.Parameter("fieldType") @Nullable String fieldType) {
         this.displayName = displayName;
         this.fieldName = fieldName;
         this.fieldType = fieldType;
@@ -84,17 +84,17 @@ public final class KpiGroupByMetadataResponse {
     	      this.fieldType = defaults.fieldType;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setFieldName(@Nullable String fieldName) {
+        public Builder fieldName(@Nullable String fieldName) {
             this.fieldName = fieldName;
             return this;
         }
 
-        public Builder setFieldType(@Nullable String fieldType) {
+        public Builder fieldType(@Nullable String fieldType) {
             this.fieldType = fieldType;
             return this;
         }

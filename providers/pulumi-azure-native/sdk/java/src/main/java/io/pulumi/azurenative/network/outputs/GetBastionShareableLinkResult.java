@@ -24,10 +24,10 @@ public final class GetBastionShareableLinkResult {
      */
     private final @Nullable List<BastionShareableLinkResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private GetBastionShareableLinkResult(
-        @Nullable String nextLink,
-        @Nullable List<BastionShareableLinkResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<BastionShareableLinkResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class GetBastionShareableLinkResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<BastionShareableLinkResponse> value) {
+        public Builder value(@Nullable List<BastionShareableLinkResponse> value) {
             this.value = value;
             return this;
         }

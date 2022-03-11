@@ -86,32 +86,32 @@ public final class RecordAliasArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zoneId = defaults.zoneId;
         }
 
-        public Builder setEvaluateTargetHealth(Input<Boolean> evaluateTargetHealth) {
+        public Builder evaluateTargetHealth(Input<Boolean> evaluateTargetHealth) {
             this.evaluateTargetHealth = Objects.requireNonNull(evaluateTargetHealth);
             return this;
         }
 
-        public Builder setEvaluateTargetHealth(Boolean evaluateTargetHealth) {
+        public Builder evaluateTargetHealth(Boolean evaluateTargetHealth) {
             this.evaluateTargetHealth = Input.of(Objects.requireNonNull(evaluateTargetHealth));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setZoneId(Input<String> zoneId) {
+        public Builder zoneId(Input<String> zoneId) {
             this.zoneId = Objects.requireNonNull(zoneId);
             return this;
         }
 
-        public Builder setZoneId(String zoneId) {
+        public Builder zoneId(String zoneId) {
             this.zoneId = Input.of(Objects.requireNonNull(zoneId));
             return this;
         }

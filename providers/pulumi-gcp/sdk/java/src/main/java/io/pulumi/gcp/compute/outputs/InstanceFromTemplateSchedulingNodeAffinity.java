@@ -14,11 +14,11 @@ public final class InstanceFromTemplateSchedulingNodeAffinity {
     private final String operator;
     private final List<String> values;
 
-    @OutputCustomType.Constructor({"key","operator","values"})
+    @OutputCustomType.Constructor
     private InstanceFromTemplateSchedulingNodeAffinity(
-        String key,
-        String operator,
-        List<String> values) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("values") List<String> values) {
         this.key = key;
         this.operator = operator;
         this.values = values;
@@ -58,17 +58,17 @@ public final class InstanceFromTemplateSchedulingNodeAffinity {
     	      this.values = defaults.values;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setValues(List<String> values) {
+        public Builder values(List<String> values) {
             this.values = Objects.requireNonNull(values);
             return this;
         }

@@ -204,102 +204,102 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
     	      this.to = defaults.to;
         }
 
-        public Builder setContentType(@Nullable Input<String> contentType) {
+        public Builder contentType(@Nullable Input<String> contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = Input.ofNullable(contentType);
             return this;
         }
 
-        public Builder setCorrelationId(@Nullable Input<String> correlationId) {
+        public Builder correlationId(@Nullable Input<String> correlationId) {
             this.correlationId = correlationId;
             return this;
         }
 
-        public Builder setCorrelationId(@Nullable String correlationId) {
+        public Builder correlationId(@Nullable String correlationId) {
             this.correlationId = Input.ofNullable(correlationId);
             return this;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }
 
-        public Builder setMessageId(@Nullable Input<String> messageId) {
+        public Builder messageId(@Nullable Input<String> messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = Input.ofNullable(messageId);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setReplyTo(@Nullable Input<String> replyTo) {
+        public Builder replyTo(@Nullable Input<String> replyTo) {
             this.replyTo = replyTo;
             return this;
         }
 
-        public Builder setReplyTo(@Nullable String replyTo) {
+        public Builder replyTo(@Nullable String replyTo) {
             this.replyTo = Input.ofNullable(replyTo);
             return this;
         }
 
-        public Builder setReplyToSessionId(@Nullable Input<String> replyToSessionId) {
+        public Builder replyToSessionId(@Nullable Input<String> replyToSessionId) {
             this.replyToSessionId = replyToSessionId;
             return this;
         }
 
-        public Builder setReplyToSessionId(@Nullable String replyToSessionId) {
+        public Builder replyToSessionId(@Nullable String replyToSessionId) {
             this.replyToSessionId = Input.ofNullable(replyToSessionId);
             return this;
         }
 
-        public Builder setRequiresPreprocessing(@Nullable Input<Boolean> requiresPreprocessing) {
+        public Builder requiresPreprocessing(@Nullable Input<Boolean> requiresPreprocessing) {
             this.requiresPreprocessing = requiresPreprocessing;
             return this;
         }
 
-        public Builder setRequiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
+        public Builder requiresPreprocessing(@Nullable Boolean requiresPreprocessing) {
             this.requiresPreprocessing = Input.ofNullable(requiresPreprocessing);
             return this;
         }
 
-        public Builder setSessionId(@Nullable Input<String> sessionId) {
+        public Builder sessionId(@Nullable Input<String> sessionId) {
             this.sessionId = sessionId;
             return this;
         }
 
-        public Builder setSessionId(@Nullable String sessionId) {
+        public Builder sessionId(@Nullable String sessionId) {
             this.sessionId = Input.ofNullable(sessionId);
             return this;
         }
 
-        public Builder setTo(@Nullable Input<String> to) {
+        public Builder to(@Nullable Input<String> to) {
             this.to = to;
             return this;
         }
 
-        public Builder setTo(@Nullable String to) {
+        public Builder to(@Nullable String to) {
             this.to = Input.ofNullable(to);
             return this;
         }

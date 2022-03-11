@@ -17,8 +17,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
      */
     private final @Nullable List<String> timestampFormats;
 
-    @OutputCustomType.Constructor({"timestampFormats"})
-    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe(@Nullable List<String> timestampFormats) {
+    @OutputCustomType.Constructor
+    private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerHiveJsonSerDe(@OutputCustomType.Parameter("timestampFormats") @Nullable List<String> timestampFormats) {
         this.timestampFormats = timestampFormats;
     }
 
@@ -50,7 +50,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     	      this.timestampFormats = defaults.timestampFormats;
         }
 
-        public Builder setTimestampFormats(@Nullable List<String> timestampFormats) {
+        public Builder timestampFormats(@Nullable List<String> timestampFormats) {
             this.timestampFormats = timestampFormats;
             return this;
         }

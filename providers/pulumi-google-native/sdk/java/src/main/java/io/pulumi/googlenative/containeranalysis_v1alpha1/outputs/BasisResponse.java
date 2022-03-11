@@ -21,10 +21,10 @@ public final class BasisResponse {
      */
     private final String resourceUrl;
 
-    @OutputCustomType.Constructor({"fingerprint","resourceUrl"})
+    @OutputCustomType.Constructor
     private BasisResponse(
-        FingerprintResponse fingerprint,
-        String resourceUrl) {
+        @OutputCustomType.Parameter("fingerprint") FingerprintResponse fingerprint,
+        @OutputCustomType.Parameter("resourceUrl") String resourceUrl) {
         this.fingerprint = fingerprint;
         this.resourceUrl = resourceUrl;
     }
@@ -66,12 +66,12 @@ public final class BasisResponse {
     	      this.resourceUrl = defaults.resourceUrl;
         }
 
-        public Builder setFingerprint(FingerprintResponse fingerprint) {
+        public Builder fingerprint(FingerprintResponse fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setResourceUrl(String resourceUrl) {
+        public Builder resourceUrl(String resourceUrl) {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }

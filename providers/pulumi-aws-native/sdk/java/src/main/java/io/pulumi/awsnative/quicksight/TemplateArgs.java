@@ -145,72 +145,72 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versionDescription = defaults.versionDescription;
         }
 
-        public Builder setAwsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Input<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<TemplateResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<TemplateResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<TemplateResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setSourceEntity(Input<TemplateSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Input<TemplateSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
-        public Builder setSourceEntity(TemplateSourceEntityArgs sourceEntity) {
+        public Builder sourceEntity(TemplateSourceEntityArgs sourceEntity) {
             this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<TemplateTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<TemplateTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TemplateTagArgs> tags) {
+        public Builder tags(@Nullable List<TemplateTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTemplateId(Input<String> templateId) {
+        public Builder templateId(Input<String> templateId) {
             this.templateId = Objects.requireNonNull(templateId);
             return this;
         }
 
-        public Builder setTemplateId(String templateId) {
+        public Builder templateId(String templateId) {
             this.templateId = Input.of(Objects.requireNonNull(templateId));
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable Input<String> versionDescription) {
+        public Builder versionDescription(@Nullable Input<String> versionDescription) {
             this.versionDescription = versionDescription;
             return this;
         }
 
-        public Builder setVersionDescription(@Nullable String versionDescription) {
+        public Builder versionDescription(@Nullable String versionDescription) {
             this.versionDescription = Input.ofNullable(versionDescription);
             return this;
         }

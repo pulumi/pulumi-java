@@ -47,15 +47,15 @@ public final class ResourceAttributes {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"group","name","namespace","resource","subresource","verb","version"})
+    @OutputCustomType.Constructor
     private ResourceAttributes(
-        @Nullable String group,
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable String resource,
-        @Nullable String subresource,
-        @Nullable String verb,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("resource") @Nullable String resource,
+        @OutputCustomType.Parameter("subresource") @Nullable String subresource,
+        @OutputCustomType.Parameter("verb") @Nullable String verb,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.group = group;
         this.name = name;
         this.namespace = namespace;
@@ -147,37 +147,37 @@ public final class ResourceAttributes {
     	      this.version = defaults.version;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setResource(@Nullable String resource) {
+        public Builder resource(@Nullable String resource) {
             this.resource = resource;
             return this;
         }
 
-        public Builder setSubresource(@Nullable String subresource) {
+        public Builder subresource(@Nullable String subresource) {
             this.subresource = subresource;
             return this;
         }
 
-        public Builder setVerb(@Nullable String verb) {
+        public Builder verb(@Nullable String verb) {
             this.verb = verb;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

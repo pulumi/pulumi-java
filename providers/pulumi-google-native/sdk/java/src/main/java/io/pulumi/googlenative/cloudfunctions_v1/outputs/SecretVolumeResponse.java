@@ -32,12 +32,12 @@ public final class SecretVolumeResponse {
      */
     private final List<SecretVersionResponse> versions;
 
-    @OutputCustomType.Constructor({"mountPath","project","secret","versions"})
+    @OutputCustomType.Constructor
     private SecretVolumeResponse(
-        String mountPath,
-        String project,
-        String secret,
-        List<SecretVersionResponse> versions) {
+        @OutputCustomType.Parameter("mountPath") String mountPath,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("versions") List<SecretVersionResponse> versions) {
         this.mountPath = mountPath;
         this.project = project;
         this.secret = secret;
@@ -99,22 +99,22 @@ public final class SecretVolumeResponse {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setMountPath(String mountPath) {
+        public Builder mountPath(String mountPath) {
             this.mountPath = Objects.requireNonNull(mountPath);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setVersions(List<SecretVersionResponse> versions) {
+        public Builder versions(List<SecretVersionResponse> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }

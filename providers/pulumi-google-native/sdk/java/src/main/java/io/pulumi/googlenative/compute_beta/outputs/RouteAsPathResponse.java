@@ -22,10 +22,10 @@ public final class RouteAsPathResponse {
      */
     private final String pathSegmentType;
 
-    @OutputCustomType.Constructor({"asLists","pathSegmentType"})
+    @OutputCustomType.Constructor
     private RouteAsPathResponse(
-        List<Integer> asLists,
-        String pathSegmentType) {
+        @OutputCustomType.Parameter("asLists") List<Integer> asLists,
+        @OutputCustomType.Parameter("pathSegmentType") String pathSegmentType) {
         this.asLists = asLists;
         this.pathSegmentType = pathSegmentType;
     }
@@ -67,12 +67,12 @@ public final class RouteAsPathResponse {
     	      this.pathSegmentType = defaults.pathSegmentType;
         }
 
-        public Builder setAsLists(List<Integer> asLists) {
+        public Builder asLists(List<Integer> asLists) {
             this.asLists = Objects.requireNonNull(asLists);
             return this;
         }
 
-        public Builder setPathSegmentType(String pathSegmentType) {
+        public Builder pathSegmentType(String pathSegmentType) {
             this.pathSegmentType = Objects.requireNonNull(pathSegmentType);
             return this;
         }

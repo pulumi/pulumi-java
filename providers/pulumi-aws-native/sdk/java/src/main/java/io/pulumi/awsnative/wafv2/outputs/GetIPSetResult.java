@@ -25,14 +25,14 @@ public final class GetIPSetResult {
     private final @Nullable String id;
     private final @Nullable List<IPSetTag> tags;
 
-    @OutputCustomType.Constructor({"addresses","arn","description","iPAddressVersion","id","tags"})
+    @OutputCustomType.Constructor
     private GetIPSetResult(
-        @Nullable List<String> addresses,
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable IPSetIPAddressVersion iPAddressVersion,
-        @Nullable String id,
-        @Nullable List<IPSetTag> tags) {
+        @OutputCustomType.Parameter("addresses") @Nullable List<String> addresses,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("iPAddressVersion") @Nullable IPSetIPAddressVersion iPAddressVersion,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("tags") @Nullable List<IPSetTag> tags) {
         this.addresses = addresses;
         this.arn = arn;
         this.description = description;
@@ -94,32 +94,32 @@ public final class GetIPSetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddresses(@Nullable List<String> addresses) {
+        public Builder addresses(@Nullable List<String> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIPAddressVersion(@Nullable IPSetIPAddressVersion iPAddressVersion) {
+        public Builder iPAddressVersion(@Nullable IPSetIPAddressVersion iPAddressVersion) {
             this.iPAddressVersion = iPAddressVersion;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setTags(@Nullable List<IPSetTag> tags) {
+        public Builder tags(@Nullable List<IPSetTag> tags) {
             this.tags = tags;
             return this;
         }

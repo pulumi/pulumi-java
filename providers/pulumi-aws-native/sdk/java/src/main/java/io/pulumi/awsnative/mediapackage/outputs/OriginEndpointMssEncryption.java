@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class OriginEndpointMssEncryption {
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"spekeKeyProvider"})
-    private OriginEndpointMssEncryption(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+    @OutputCustomType.Constructor
+    private OriginEndpointMssEncryption(@OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.spekeKeyProvider = spekeKeyProvider;
     }
 
@@ -40,7 +40,7 @@ public final class OriginEndpointMssEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

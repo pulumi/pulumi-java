@@ -219,47 +219,47 @@ public final class HDInsightOnDemandLinkedServiceResponse {
      */
     private final @Nullable Object zookeeperNodeSize;
 
-    @OutputCustomType.Constructor({"additionalLinkedServiceNames","annotations","clusterNamePrefix","clusterPassword","clusterResourceGroup","clusterSize","clusterSshPassword","clusterSshUserName","clusterType","clusterUserName","connectVia","coreConfiguration","credential","dataNodeSize","description","encryptedCredential","hBaseConfiguration","hcatalogLinkedServiceName","hdfsConfiguration","headNodeSize","hiveConfiguration","hostSubscriptionId","linkedServiceName","mapReduceConfiguration","oozieConfiguration","parameters","scriptActions","servicePrincipalId","servicePrincipalKey","sparkVersion","stormConfiguration","subnetName","tenant","timeToLive","type","version","virtualNetworkId","yarnConfiguration","zookeeperNodeSize"})
+    @OutputCustomType.Constructor
     private HDInsightOnDemandLinkedServiceResponse(
-        @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames,
-        @Nullable List<Object> annotations,
-        @Nullable Object clusterNamePrefix,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword,
-        Object clusterResourceGroup,
-        Object clusterSize,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword,
-        @Nullable Object clusterSshUserName,
-        @Nullable Object clusterType,
-        @Nullable Object clusterUserName,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable Object coreConfiguration,
-        @Nullable CredentialReferenceResponse credential,
-        @Nullable Object dataNodeSize,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object hBaseConfiguration,
-        @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
-        @Nullable Object hdfsConfiguration,
-        @Nullable Object headNodeSize,
-        @Nullable Object hiveConfiguration,
-        Object hostSubscriptionId,
-        LinkedServiceReferenceResponse linkedServiceName,
-        @Nullable Object mapReduceConfiguration,
-        @Nullable Object oozieConfiguration,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable List<ScriptActionResponse> scriptActions,
-        @Nullable Object servicePrincipalId,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
-        @Nullable Object sparkVersion,
-        @Nullable Object stormConfiguration,
-        @Nullable Object subnetName,
-        Object tenant,
-        Object timeToLive,
-        String type,
-        Object version,
-        @Nullable Object virtualNetworkId,
-        @Nullable Object yarnConfiguration,
-        @Nullable Object zookeeperNodeSize) {
+        @OutputCustomType.Parameter("additionalLinkedServiceNames") @Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames,
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("clusterNamePrefix") @Nullable Object clusterNamePrefix,
+        @OutputCustomType.Parameter("clusterPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword,
+        @OutputCustomType.Parameter("clusterResourceGroup") Object clusterResourceGroup,
+        @OutputCustomType.Parameter("clusterSize") Object clusterSize,
+        @OutputCustomType.Parameter("clusterSshPassword") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword,
+        @OutputCustomType.Parameter("clusterSshUserName") @Nullable Object clusterSshUserName,
+        @OutputCustomType.Parameter("clusterType") @Nullable Object clusterType,
+        @OutputCustomType.Parameter("clusterUserName") @Nullable Object clusterUserName,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("coreConfiguration") @Nullable Object coreConfiguration,
+        @OutputCustomType.Parameter("credential") @Nullable CredentialReferenceResponse credential,
+        @OutputCustomType.Parameter("dataNodeSize") @Nullable Object dataNodeSize,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("hBaseConfiguration") @Nullable Object hBaseConfiguration,
+        @OutputCustomType.Parameter("hcatalogLinkedServiceName") @Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName,
+        @OutputCustomType.Parameter("hdfsConfiguration") @Nullable Object hdfsConfiguration,
+        @OutputCustomType.Parameter("headNodeSize") @Nullable Object headNodeSize,
+        @OutputCustomType.Parameter("hiveConfiguration") @Nullable Object hiveConfiguration,
+        @OutputCustomType.Parameter("hostSubscriptionId") Object hostSubscriptionId,
+        @OutputCustomType.Parameter("linkedServiceName") LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("mapReduceConfiguration") @Nullable Object mapReduceConfiguration,
+        @OutputCustomType.Parameter("oozieConfiguration") @Nullable Object oozieConfiguration,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("scriptActions") @Nullable List<ScriptActionResponse> scriptActions,
+        @OutputCustomType.Parameter("servicePrincipalId") @Nullable Object servicePrincipalId,
+        @OutputCustomType.Parameter("servicePrincipalKey") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey,
+        @OutputCustomType.Parameter("sparkVersion") @Nullable Object sparkVersion,
+        @OutputCustomType.Parameter("stormConfiguration") @Nullable Object stormConfiguration,
+        @OutputCustomType.Parameter("subnetName") @Nullable Object subnetName,
+        @OutputCustomType.Parameter("tenant") Object tenant,
+        @OutputCustomType.Parameter("timeToLive") Object timeToLive,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") Object version,
+        @OutputCustomType.Parameter("virtualNetworkId") @Nullable Object virtualNetworkId,
+        @OutputCustomType.Parameter("yarnConfiguration") @Nullable Object yarnConfiguration,
+        @OutputCustomType.Parameter("zookeeperNodeSize") @Nullable Object zookeeperNodeSize) {
         this.additionalLinkedServiceNames = additionalLinkedServiceNames;
         this.annotations = annotations;
         this.clusterNamePrefix = clusterNamePrefix;
@@ -672,197 +672,197 @@ public final class HDInsightOnDemandLinkedServiceResponse {
     	      this.zookeeperNodeSize = defaults.zookeeperNodeSize;
         }
 
-        public Builder setAdditionalLinkedServiceNames(@Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames) {
+        public Builder additionalLinkedServiceNames(@Nullable List<LinkedServiceReferenceResponse> additionalLinkedServiceNames) {
             this.additionalLinkedServiceNames = additionalLinkedServiceNames;
             return this;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setClusterNamePrefix(@Nullable Object clusterNamePrefix) {
+        public Builder clusterNamePrefix(@Nullable Object clusterNamePrefix) {
             this.clusterNamePrefix = clusterNamePrefix;
             return this;
         }
 
-        public Builder setClusterPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword) {
+        public Builder clusterPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterPassword) {
             this.clusterPassword = clusterPassword;
             return this;
         }
 
-        public Builder setClusterResourceGroup(Object clusterResourceGroup) {
+        public Builder clusterResourceGroup(Object clusterResourceGroup) {
             this.clusterResourceGroup = Objects.requireNonNull(clusterResourceGroup);
             return this;
         }
 
-        public Builder setClusterSize(Object clusterSize) {
+        public Builder clusterSize(Object clusterSize) {
             this.clusterSize = Objects.requireNonNull(clusterSize);
             return this;
         }
 
-        public Builder setClusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword) {
+        public Builder clusterSshPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clusterSshPassword) {
             this.clusterSshPassword = clusterSshPassword;
             return this;
         }
 
-        public Builder setClusterSshUserName(@Nullable Object clusterSshUserName) {
+        public Builder clusterSshUserName(@Nullable Object clusterSshUserName) {
             this.clusterSshUserName = clusterSshUserName;
             return this;
         }
 
-        public Builder setClusterType(@Nullable Object clusterType) {
+        public Builder clusterType(@Nullable Object clusterType) {
             this.clusterType = clusterType;
             return this;
         }
 
-        public Builder setClusterUserName(@Nullable Object clusterUserName) {
+        public Builder clusterUserName(@Nullable Object clusterUserName) {
             this.clusterUserName = clusterUserName;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setCoreConfiguration(@Nullable Object coreConfiguration) {
+        public Builder coreConfiguration(@Nullable Object coreConfiguration) {
             this.coreConfiguration = coreConfiguration;
             return this;
         }
 
-        public Builder setCredential(@Nullable CredentialReferenceResponse credential) {
+        public Builder credential(@Nullable CredentialReferenceResponse credential) {
             this.credential = credential;
             return this;
         }
 
-        public Builder setDataNodeSize(@Nullable Object dataNodeSize) {
+        public Builder dataNodeSize(@Nullable Object dataNodeSize) {
             this.dataNodeSize = dataNodeSize;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setHBaseConfiguration(@Nullable Object hBaseConfiguration) {
+        public Builder hBaseConfiguration(@Nullable Object hBaseConfiguration) {
             this.hBaseConfiguration = hBaseConfiguration;
             return this;
         }
 
-        public Builder setHcatalogLinkedServiceName(@Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName) {
+        public Builder hcatalogLinkedServiceName(@Nullable LinkedServiceReferenceResponse hcatalogLinkedServiceName) {
             this.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
 
-        public Builder setHdfsConfiguration(@Nullable Object hdfsConfiguration) {
+        public Builder hdfsConfiguration(@Nullable Object hdfsConfiguration) {
             this.hdfsConfiguration = hdfsConfiguration;
             return this;
         }
 
-        public Builder setHeadNodeSize(@Nullable Object headNodeSize) {
+        public Builder headNodeSize(@Nullable Object headNodeSize) {
             this.headNodeSize = headNodeSize;
             return this;
         }
 
-        public Builder setHiveConfiguration(@Nullable Object hiveConfiguration) {
+        public Builder hiveConfiguration(@Nullable Object hiveConfiguration) {
             this.hiveConfiguration = hiveConfiguration;
             return this;
         }
 
-        public Builder setHostSubscriptionId(Object hostSubscriptionId) {
+        public Builder hostSubscriptionId(Object hostSubscriptionId) {
             this.hostSubscriptionId = Objects.requireNonNull(hostSubscriptionId);
             return this;
         }
 
-        public Builder setLinkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = Objects.requireNonNull(linkedServiceName);
             return this;
         }
 
-        public Builder setMapReduceConfiguration(@Nullable Object mapReduceConfiguration) {
+        public Builder mapReduceConfiguration(@Nullable Object mapReduceConfiguration) {
             this.mapReduceConfiguration = mapReduceConfiguration;
             return this;
         }
 
-        public Builder setOozieConfiguration(@Nullable Object oozieConfiguration) {
+        public Builder oozieConfiguration(@Nullable Object oozieConfiguration) {
             this.oozieConfiguration = oozieConfiguration;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setScriptActions(@Nullable List<ScriptActionResponse> scriptActions) {
+        public Builder scriptActions(@Nullable List<ScriptActionResponse> scriptActions) {
             this.scriptActions = scriptActions;
             return this;
         }
 
-        public Builder setServicePrincipalId(@Nullable Object servicePrincipalId) {
+        public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             this.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
-        public Builder setServicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
+        public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
-        public Builder setSparkVersion(@Nullable Object sparkVersion) {
+        public Builder sparkVersion(@Nullable Object sparkVersion) {
             this.sparkVersion = sparkVersion;
             return this;
         }
 
-        public Builder setStormConfiguration(@Nullable Object stormConfiguration) {
+        public Builder stormConfiguration(@Nullable Object stormConfiguration) {
             this.stormConfiguration = stormConfiguration;
             return this;
         }
 
-        public Builder setSubnetName(@Nullable Object subnetName) {
+        public Builder subnetName(@Nullable Object subnetName) {
             this.subnetName = subnetName;
             return this;
         }
 
-        public Builder setTenant(Object tenant) {
+        public Builder tenant(Object tenant) {
             this.tenant = Objects.requireNonNull(tenant);
             return this;
         }
 
-        public Builder setTimeToLive(Object timeToLive) {
+        public Builder timeToLive(Object timeToLive) {
             this.timeToLive = Objects.requireNonNull(timeToLive);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(Object version) {
+        public Builder version(Object version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVirtualNetworkId(@Nullable Object virtualNetworkId) {
+        public Builder virtualNetworkId(@Nullable Object virtualNetworkId) {
             this.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
-        public Builder setYarnConfiguration(@Nullable Object yarnConfiguration) {
+        public Builder yarnConfiguration(@Nullable Object yarnConfiguration) {
             this.yarnConfiguration = yarnConfiguration;
             return this;
         }
 
-        public Builder setZookeeperNodeSize(@Nullable Object zookeeperNodeSize) {
+        public Builder zookeeperNodeSize(@Nullable Object zookeeperNodeSize) {
             this.zookeeperNodeSize = zookeeperNodeSize;
             return this;
         }

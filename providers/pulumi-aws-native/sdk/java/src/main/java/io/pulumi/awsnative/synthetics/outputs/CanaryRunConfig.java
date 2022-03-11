@@ -34,12 +34,12 @@ public final class CanaryRunConfig {
      */
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"activeTracing","environmentVariables","memoryInMB","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private CanaryRunConfig(
-        @Nullable Boolean activeTracing,
-        @Nullable Object environmentVariables,
-        @Nullable Integer memoryInMB,
-        @Nullable Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Object environmentVariables,
+        @OutputCustomType.Parameter("memoryInMB") @Nullable Integer memoryInMB,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.activeTracing = activeTracing;
         this.environmentVariables = environmentVariables;
         this.memoryInMB = memoryInMB;
@@ -101,22 +101,22 @@ public final class CanaryRunConfig {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Object environmentVariables) {
+        public Builder environmentVariables(@Nullable Object environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setMemoryInMB(@Nullable Integer memoryInMB) {
+        public Builder memoryInMB(@Nullable Integer memoryInMB) {
             this.memoryInMB = memoryInMB;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }

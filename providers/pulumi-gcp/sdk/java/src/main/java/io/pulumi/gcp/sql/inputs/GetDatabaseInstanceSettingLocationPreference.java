@@ -60,12 +60,12 @@ public final class GetDatabaseInstanceSettingLocationPreference extends io.pulum
     	      this.zone = defaults.zone;
         }
 
-        public Builder setFollowGaeApplication(String followGaeApplication) {
+        public Builder followGaeApplication(String followGaeApplication) {
             this.followGaeApplication = Objects.requireNonNull(followGaeApplication);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

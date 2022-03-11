@@ -51,14 +51,14 @@ public final class RegionBackendServiceCircuitBreakers {
      */
     private final @Nullable Integer maxRetries;
 
-    @OutputCustomType.Constructor({"connectTimeout","maxConnections","maxPendingRequests","maxRequests","maxRequestsPerConnection","maxRetries"})
+    @OutputCustomType.Constructor
     private RegionBackendServiceCircuitBreakers(
-        @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
-        @Nullable Integer maxConnections,
-        @Nullable Integer maxPendingRequests,
-        @Nullable Integer maxRequests,
-        @Nullable Integer maxRequestsPerConnection,
-        @Nullable Integer maxRetries) {
+        @OutputCustomType.Parameter("connectTimeout") @Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout,
+        @OutputCustomType.Parameter("maxConnections") @Nullable Integer maxConnections,
+        @OutputCustomType.Parameter("maxPendingRequests") @Nullable Integer maxPendingRequests,
+        @OutputCustomType.Parameter("maxRequests") @Nullable Integer maxRequests,
+        @OutputCustomType.Parameter("maxRequestsPerConnection") @Nullable Integer maxRequestsPerConnection,
+        @OutputCustomType.Parameter("maxRetries") @Nullable Integer maxRetries) {
         this.connectTimeout = connectTimeout;
         this.maxConnections = maxConnections;
         this.maxPendingRequests = maxPendingRequests;
@@ -148,32 +148,32 @@ public final class RegionBackendServiceCircuitBreakers {
     	      this.maxRetries = defaults.maxRetries;
         }
 
-        public Builder setConnectTimeout(@Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout) {
+        public Builder connectTimeout(@Nullable RegionBackendServiceCircuitBreakersConnectTimeout connectTimeout) {
             this.connectTimeout = connectTimeout;
             return this;
         }
 
-        public Builder setMaxConnections(@Nullable Integer maxConnections) {
+        public Builder maxConnections(@Nullable Integer maxConnections) {
             this.maxConnections = maxConnections;
             return this;
         }
 
-        public Builder setMaxPendingRequests(@Nullable Integer maxPendingRequests) {
+        public Builder maxPendingRequests(@Nullable Integer maxPendingRequests) {
             this.maxPendingRequests = maxPendingRequests;
             return this;
         }
 
-        public Builder setMaxRequests(@Nullable Integer maxRequests) {
+        public Builder maxRequests(@Nullable Integer maxRequests) {
             this.maxRequests = maxRequests;
             return this;
         }
 
-        public Builder setMaxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
+        public Builder maxRequestsPerConnection(@Nullable Integer maxRequestsPerConnection) {
             this.maxRequestsPerConnection = maxRequestsPerConnection;
             return this;
         }
 
-        public Builder setMaxRetries(@Nullable Integer maxRetries) {
+        public Builder maxRetries(@Nullable Integer maxRetries) {
             this.maxRetries = maxRetries;
             return this;
         }

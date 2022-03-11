@@ -25,11 +25,11 @@ public final class RemediationDeploymentSummaryResponse {
      */
     private final Integer totalDeployments;
 
-    @OutputCustomType.Constructor({"failedDeployments","successfulDeployments","totalDeployments"})
+    @OutputCustomType.Constructor
     private RemediationDeploymentSummaryResponse(
-        Integer failedDeployments,
-        Integer successfulDeployments,
-        Integer totalDeployments) {
+        @OutputCustomType.Parameter("failedDeployments") Integer failedDeployments,
+        @OutputCustomType.Parameter("successfulDeployments") Integer successfulDeployments,
+        @OutputCustomType.Parameter("totalDeployments") Integer totalDeployments) {
         this.failedDeployments = failedDeployments;
         this.successfulDeployments = successfulDeployments;
         this.totalDeployments = totalDeployments;
@@ -81,17 +81,17 @@ public final class RemediationDeploymentSummaryResponse {
     	      this.totalDeployments = defaults.totalDeployments;
         }
 
-        public Builder setFailedDeployments(Integer failedDeployments) {
+        public Builder failedDeployments(Integer failedDeployments) {
             this.failedDeployments = Objects.requireNonNull(failedDeployments);
             return this;
         }
 
-        public Builder setSuccessfulDeployments(Integer successfulDeployments) {
+        public Builder successfulDeployments(Integer successfulDeployments) {
             this.successfulDeployments = Objects.requireNonNull(successfulDeployments);
             return this;
         }
 
-        public Builder setTotalDeployments(Integer totalDeployments) {
+        public Builder totalDeployments(Integer totalDeployments) {
             this.totalDeployments = Objects.requireNonNull(totalDeployments);
             return this;
         }

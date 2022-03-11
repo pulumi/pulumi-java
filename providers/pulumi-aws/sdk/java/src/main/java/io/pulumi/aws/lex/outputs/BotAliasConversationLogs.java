@@ -23,10 +23,10 @@ public final class BotAliasConversationLogs {
      */
     private final @Nullable List<BotAliasConversationLogsLogSetting> logSettings;
 
-    @OutputCustomType.Constructor({"iamRoleArn","logSettings"})
+    @OutputCustomType.Constructor
     private BotAliasConversationLogs(
-        String iamRoleArn,
-        @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("logSettings") @Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
         this.iamRoleArn = iamRoleArn;
         this.logSettings = logSettings;
     }
@@ -68,12 +68,12 @@ public final class BotAliasConversationLogs {
     	      this.logSettings = defaults.logSettings;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setLogSettings(@Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
+        public Builder logSettings(@Nullable List<BotAliasConversationLogsLogSetting> logSettings) {
             this.logSettings = logSettings;
             return this;
         }

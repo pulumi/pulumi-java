@@ -22,10 +22,10 @@ public final class MysqlDatabaseResponse {
      */
     private final List<MysqlTableResponse> mysqlTables;
 
-    @OutputCustomType.Constructor({"databaseName","mysqlTables"})
+    @OutputCustomType.Constructor
     private MysqlDatabaseResponse(
-        String databaseName,
-        List<MysqlTableResponse> mysqlTables) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("mysqlTables") List<MysqlTableResponse> mysqlTables) {
         this.databaseName = databaseName;
         this.mysqlTables = mysqlTables;
     }
@@ -67,12 +67,12 @@ public final class MysqlDatabaseResponse {
     	      this.mysqlTables = defaults.mysqlTables;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setMysqlTables(List<MysqlTableResponse> mysqlTables) {
+        public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
             this.mysqlTables = Objects.requireNonNull(mysqlTables);
             return this;
         }

@@ -27,11 +27,11 @@ public final class AadAuthenticationParametersResponse {
      */
     private final @Nullable String aadTenant;
 
-    @OutputCustomType.Constructor({"aadAudience","aadIssuer","aadTenant"})
+    @OutputCustomType.Constructor
     private AadAuthenticationParametersResponse(
-        @Nullable String aadAudience,
-        @Nullable String aadIssuer,
-        @Nullable String aadTenant) {
+        @OutputCustomType.Parameter("aadAudience") @Nullable String aadAudience,
+        @OutputCustomType.Parameter("aadIssuer") @Nullable String aadIssuer,
+        @OutputCustomType.Parameter("aadTenant") @Nullable String aadTenant) {
         this.aadAudience = aadAudience;
         this.aadIssuer = aadIssuer;
         this.aadTenant = aadTenant;
@@ -83,17 +83,17 @@ public final class AadAuthenticationParametersResponse {
     	      this.aadTenant = defaults.aadTenant;
         }
 
-        public Builder setAadAudience(@Nullable String aadAudience) {
+        public Builder aadAudience(@Nullable String aadAudience) {
             this.aadAudience = aadAudience;
             return this;
         }
 
-        public Builder setAadIssuer(@Nullable String aadIssuer) {
+        public Builder aadIssuer(@Nullable String aadIssuer) {
             this.aadIssuer = aadIssuer;
             return this;
         }
 
-        public Builder setAadTenant(@Nullable String aadTenant) {
+        public Builder aadTenant(@Nullable String aadTenant) {
             this.aadTenant = aadTenant;
             return this;
         }

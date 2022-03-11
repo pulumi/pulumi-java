@@ -50,15 +50,15 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"dnsIps","domainName","fileSystemAdministratorsGroup","organizationalUnitDistinguidshedName","organizationalUnitDistinguishedName","password","username"})
+    @OutputCustomType.Constructor
     private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfiguration(
-        List<String> dnsIps,
-        String domainName,
-        @Nullable String fileSystemAdministratorsGroup,
-        @Nullable String organizationalUnitDistinguidshedName,
-        @Nullable String organizationalUnitDistinguishedName,
-        String password,
-        String username) {
+        @OutputCustomType.Parameter("dnsIps") List<String> dnsIps,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("fileSystemAdministratorsGroup") @Nullable String fileSystemAdministratorsGroup,
+        @OutputCustomType.Parameter("organizationalUnitDistinguidshedName") @Nullable String organizationalUnitDistinguidshedName,
+        @OutputCustomType.Parameter("organizationalUnitDistinguishedName") @Nullable String organizationalUnitDistinguishedName,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("username") String username) {
         this.dnsIps = dnsIps;
         this.domainName = domainName;
         this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
@@ -152,37 +152,37 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     	      this.username = defaults.username;
         }
 
-        public Builder setDnsIps(List<String> dnsIps) {
+        public Builder dnsIps(List<String> dnsIps) {
             this.dnsIps = Objects.requireNonNull(dnsIps);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setFileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
+        public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
             this.fileSystemAdministratorsGroup = fileSystemAdministratorsGroup;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
+        public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
             this.organizationalUnitDistinguidshedName = organizationalUnitDistinguidshedName;
             return this;
         }
 
-        public Builder setOrganizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
+        public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

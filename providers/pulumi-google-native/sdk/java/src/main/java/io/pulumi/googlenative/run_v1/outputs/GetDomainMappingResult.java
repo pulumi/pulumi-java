@@ -38,13 +38,13 @@ public final class GetDomainMappingResult {
      */
     private final DomainMappingStatusResponse status;
 
-    @OutputCustomType.Constructor({"apiVersion","kind","metadata","spec","status"})
+    @OutputCustomType.Constructor
     private GetDomainMappingResult(
-        String apiVersion,
-        String kind,
-        ObjectMetaResponse metadata,
-        DomainMappingSpecResponse spec,
-        DomainMappingStatusResponse status) {
+        @OutputCustomType.Parameter("apiVersion") String apiVersion,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("metadata") ObjectMetaResponse metadata,
+        @OutputCustomType.Parameter("spec") DomainMappingSpecResponse spec,
+        @OutputCustomType.Parameter("status") DomainMappingStatusResponse status) {
         this.apiVersion = apiVersion;
         this.kind = kind;
         this.metadata = metadata;
@@ -116,27 +116,27 @@ public final class GetDomainMappingResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setApiVersion(String apiVersion) {
+        public Builder apiVersion(String apiVersion) {
             this.apiVersion = Objects.requireNonNull(apiVersion);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMetadata(ObjectMetaResponse metadata) {
+        public Builder metadata(ObjectMetaResponse metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setSpec(DomainMappingSpecResponse spec) {
+        public Builder spec(DomainMappingSpecResponse spec) {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
 
-        public Builder setStatus(DomainMappingStatusResponse status) {
+        public Builder status(DomainMappingStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

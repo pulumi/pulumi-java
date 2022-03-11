@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecLogging {
      */
     private final @Nullable VirtualGatewaySpecLoggingAccessLog accessLog;
 
-    @OutputCustomType.Constructor({"accessLog"})
-    private VirtualGatewaySpecLogging(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecLogging(@OutputCustomType.Parameter("accessLog") @Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
         this.accessLog = accessLog;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecLogging {
     	      this.accessLog = defaults.accessLog;
         }
 
-        public Builder setAccessLog(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
+        public Builder accessLog(@Nullable VirtualGatewaySpecLoggingAccessLog accessLog) {
             this.accessLog = accessLog;
             return this;
         }

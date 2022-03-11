@@ -63,12 +63,12 @@ public final class NotebookPreparationErrorResponse extends io.pulumi.resources.
     	      this.statusCode = defaults.statusCode;
         }
 
-        public Builder setErrorMessage(@Nullable String errorMessage) {
+        public Builder errorMessage(@Nullable String errorMessage) {
             this.errorMessage = errorMessage;
             return this;
         }
 
-        public Builder setStatusCode(@Nullable Integer statusCode) {
+        public Builder statusCode(@Nullable Integer statusCode) {
             this.statusCode = statusCode;
             return this;
         }

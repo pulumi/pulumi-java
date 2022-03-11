@@ -31,12 +31,12 @@ public final class AlexaChannelPropertiesResponse {
      */
     private final String urlFragment;
 
-    @OutputCustomType.Constructor({"alexaSkillId","isEnabled","serviceEndpointUri","urlFragment"})
+    @OutputCustomType.Constructor
     private AlexaChannelPropertiesResponse(
-        String alexaSkillId,
-        Boolean isEnabled,
-        String serviceEndpointUri,
-        String urlFragment) {
+        @OutputCustomType.Parameter("alexaSkillId") String alexaSkillId,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("serviceEndpointUri") String serviceEndpointUri,
+        @OutputCustomType.Parameter("urlFragment") String urlFragment) {
         this.alexaSkillId = alexaSkillId;
         this.isEnabled = isEnabled;
         this.serviceEndpointUri = serviceEndpointUri;
@@ -98,22 +98,22 @@ public final class AlexaChannelPropertiesResponse {
     	      this.urlFragment = defaults.urlFragment;
         }
 
-        public Builder setAlexaSkillId(String alexaSkillId) {
+        public Builder alexaSkillId(String alexaSkillId) {
             this.alexaSkillId = Objects.requireNonNull(alexaSkillId);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setServiceEndpointUri(String serviceEndpointUri) {
+        public Builder serviceEndpointUri(String serviceEndpointUri) {
             this.serviceEndpointUri = Objects.requireNonNull(serviceEndpointUri);
             return this;
         }
 
-        public Builder setUrlFragment(String urlFragment) {
+        public Builder urlFragment(String urlFragment) {
             this.urlFragment = Objects.requireNonNull(urlFragment);
             return this;
         }

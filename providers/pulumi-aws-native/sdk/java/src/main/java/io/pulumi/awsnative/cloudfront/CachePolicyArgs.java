@@ -48,12 +48,12 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.cachePolicyConfig = defaults.cachePolicyConfig;
         }
 
-        public Builder setCachePolicyConfig(Input<CachePolicyConfigArgs> cachePolicyConfig) {
+        public Builder cachePolicyConfig(Input<CachePolicyConfigArgs> cachePolicyConfig) {
             this.cachePolicyConfig = Objects.requireNonNull(cachePolicyConfig);
             return this;
         }
 
-        public Builder setCachePolicyConfig(CachePolicyConfigArgs cachePolicyConfig) {
+        public Builder cachePolicyConfig(CachePolicyConfigArgs cachePolicyConfig) {
             this.cachePolicyConfig = Input.of(Objects.requireNonNull(cachePolicyConfig));
             return this;
         }

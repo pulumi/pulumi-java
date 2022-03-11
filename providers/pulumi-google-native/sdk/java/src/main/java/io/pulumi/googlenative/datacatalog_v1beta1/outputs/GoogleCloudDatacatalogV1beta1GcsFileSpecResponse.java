@@ -26,11 +26,11 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
      */
     private final String sizeBytes;
 
-    @OutputCustomType.Constructor({"filePath","gcsTimestamps","sizeBytes"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1beta1GcsFileSpecResponse(
-        String filePath,
-        GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps,
-        String sizeBytes) {
+        @OutputCustomType.Parameter("filePath") String filePath,
+        @OutputCustomType.Parameter("gcsTimestamps") GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps,
+        @OutputCustomType.Parameter("sizeBytes") String sizeBytes) {
         this.filePath = filePath;
         this.gcsTimestamps = gcsTimestamps;
         this.sizeBytes = sizeBytes;
@@ -82,17 +82,17 @@ public final class GoogleCloudDatacatalogV1beta1GcsFileSpecResponse {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setFilePath(String filePath) {
+        public Builder filePath(String filePath) {
             this.filePath = Objects.requireNonNull(filePath);
             return this;
         }
 
-        public Builder setGcsTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps) {
+        public Builder gcsTimestamps(GoogleCloudDatacatalogV1beta1SystemTimestampsResponse gcsTimestamps) {
             this.gcsTimestamps = Objects.requireNonNull(gcsTimestamps);
             return this;
         }
 
-        public Builder setSizeBytes(String sizeBytes) {
+        public Builder sizeBytes(String sizeBytes) {
             this.sizeBytes = Objects.requireNonNull(sizeBytes);
             return this;
         }

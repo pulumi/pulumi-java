@@ -104,22 +104,22 @@ public final class GitFileSourceResponse extends io.pulumi.resources.InvokeArgs 
     	      this.uri = defaults.uri;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRepoType(String repoType) {
+        public Builder repoType(String repoType) {
             this.repoType = Objects.requireNonNull(repoType);
             return this;
         }
 
-        public Builder setRevision(String revision) {
+        public Builder revision(String revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

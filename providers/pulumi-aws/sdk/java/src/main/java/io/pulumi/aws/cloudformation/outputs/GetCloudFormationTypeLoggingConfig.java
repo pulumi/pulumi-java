@@ -20,10 +20,10 @@ public final class GetCloudFormationTypeLoggingConfig {
      */
     private final String logRoleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","logRoleArn"})
+    @OutputCustomType.Constructor
     private GetCloudFormationTypeLoggingConfig(
-        String logGroupName,
-        String logRoleArn) {
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("logRoleArn") String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }
@@ -65,12 +65,12 @@ public final class GetCloudFormationTypeLoggingConfig {
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setLogRoleArn(String logRoleArn) {
+        public Builder logRoleArn(String logRoleArn) {
             this.logRoleArn = Objects.requireNonNull(logRoleArn);
             return this;
         }

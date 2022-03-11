@@ -17,8 +17,8 @@ public final class ScopeClusterResponse {
      */
     private final @Nullable String releaseNamespace;
 
-    @OutputCustomType.Constructor({"releaseNamespace"})
-    private ScopeClusterResponse(@Nullable String releaseNamespace) {
+    @OutputCustomType.Constructor
+    private ScopeClusterResponse(@OutputCustomType.Parameter("releaseNamespace") @Nullable String releaseNamespace) {
         this.releaseNamespace = releaseNamespace;
     }
 
@@ -50,7 +50,7 @@ public final class ScopeClusterResponse {
     	      this.releaseNamespace = defaults.releaseNamespace;
         }
 
-        public Builder setReleaseNamespace(@Nullable String releaseNamespace) {
+        public Builder releaseNamespace(@Nullable String releaseNamespace) {
             this.releaseNamespace = releaseNamespace;
             return this;
         }

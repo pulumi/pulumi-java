@@ -20,10 +20,10 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"target","type"})
+    @OutputCustomType.Constructor
     private SecurityPolicyRuleRedirectOptionsResponse(
-        String target,
-        String type) {
+        @OutputCustomType.Parameter("target") String target,
+        @OutputCustomType.Parameter("type") String type) {
         this.target = target;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class SecurityPolicyRuleRedirectOptionsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

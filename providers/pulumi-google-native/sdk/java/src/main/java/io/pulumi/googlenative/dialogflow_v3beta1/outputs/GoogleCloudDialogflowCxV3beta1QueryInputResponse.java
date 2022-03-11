@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
-    @OutputCustomType.Constructor({"audio","dtmf","event","intent","languageCode","text"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1QueryInputResponse(
-        GoogleCloudDialogflowCxV3beta1AudioInputResponse audio,
-        GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf,
-        GoogleCloudDialogflowCxV3beta1EventInputResponse event,
-        GoogleCloudDialogflowCxV3beta1IntentInputResponse intent,
-        String languageCode,
-        GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
+        @OutputCustomType.Parameter("audio") GoogleCloudDialogflowCxV3beta1AudioInputResponse audio,
+        @OutputCustomType.Parameter("dtmf") GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf,
+        @OutputCustomType.Parameter("event") GoogleCloudDialogflowCxV3beta1EventInputResponse event,
+        @OutputCustomType.Parameter("intent") GoogleCloudDialogflowCxV3beta1IntentInputResponse intent,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("text") GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
         this.audio = audio;
         this.dtmf = dtmf;
         this.event = event;
@@ -134,32 +134,32 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setAudio(GoogleCloudDialogflowCxV3beta1AudioInputResponse audio) {
+        public Builder audio(GoogleCloudDialogflowCxV3beta1AudioInputResponse audio) {
             this.audio = Objects.requireNonNull(audio);
             return this;
         }
 
-        public Builder setDtmf(GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf) {
+        public Builder dtmf(GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf) {
             this.dtmf = Objects.requireNonNull(dtmf);
             return this;
         }
 
-        public Builder setEvent(GoogleCloudDialogflowCxV3beta1EventInputResponse event) {
+        public Builder event(GoogleCloudDialogflowCxV3beta1EventInputResponse event) {
             this.event = Objects.requireNonNull(event);
             return this;
         }
 
-        public Builder setIntent(GoogleCloudDialogflowCxV3beta1IntentInputResponse intent) {
+        public Builder intent(GoogleCloudDialogflowCxV3beta1IntentInputResponse intent) {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setText(GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
+        public Builder text(GoogleCloudDialogflowCxV3beta1TextInputResponse text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

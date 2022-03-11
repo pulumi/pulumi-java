@@ -23,11 +23,11 @@ public final class GetDataCatalogEncryptionSettingsResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"catalogId","dataCatalogEncryptionSettings","id"})
+    @OutputCustomType.Constructor
     private GetDataCatalogEncryptionSettingsResult(
-        String catalogId,
-        List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
-        String id) {
+        @OutputCustomType.Parameter("catalogId") String catalogId,
+        @OutputCustomType.Parameter("dataCatalogEncryptionSettings") List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings,
+        @OutputCustomType.Parameter("id") String id) {
         this.catalogId = catalogId;
         this.dataCatalogEncryptionSettings = dataCatalogEncryptionSettings;
         this.id = id;
@@ -75,17 +75,17 @@ public final class GetDataCatalogEncryptionSettingsResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setCatalogId(String catalogId) {
+        public Builder catalogId(String catalogId) {
             this.catalogId = Objects.requireNonNull(catalogId);
             return this;
         }
 
-        public Builder setDataCatalogEncryptionSettings(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings) {
+        public Builder dataCatalogEncryptionSettings(List<GetDataCatalogEncryptionSettingsDataCatalogEncryptionSetting> dataCatalogEncryptionSettings) {
             this.dataCatalogEncryptionSettings = Objects.requireNonNull(dataCatalogEncryptionSettings);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

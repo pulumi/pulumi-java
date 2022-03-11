@@ -27,11 +27,11 @@ public final class UserArtifactManageResponse {
      */
     private final @Nullable String update;
 
-    @OutputCustomType.Constructor({"install","remove","update"})
+    @OutputCustomType.Constructor
     private UserArtifactManageResponse(
-        String install,
-        String remove,
-        @Nullable String update) {
+        @OutputCustomType.Parameter("install") String install,
+        @OutputCustomType.Parameter("remove") String remove,
+        @OutputCustomType.Parameter("update") @Nullable String update) {
         this.install = install;
         this.remove = remove;
         this.update = update;
@@ -83,17 +83,17 @@ public final class UserArtifactManageResponse {
     	      this.update = defaults.update;
         }
 
-        public Builder setInstall(String install) {
+        public Builder install(String install) {
             this.install = Objects.requireNonNull(install);
             return this;
         }
 
-        public Builder setRemove(String remove) {
+        public Builder remove(String remove) {
             this.remove = Objects.requireNonNull(remove);
             return this;
         }
 
-        public Builder setUpdate(@Nullable String update) {
+        public Builder update(@Nullable String update) {
             this.update = update;
             return this;
         }

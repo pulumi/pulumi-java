@@ -26,11 +26,11 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
      */
     private final Double score;
 
-    @OutputCustomType.Constructor({"displayName","issue","score"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(
-        String displayName,
-        String issue,
-        Double score) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("issue") String issue,
+        @OutputCustomType.Parameter("score") Double score) {
         this.displayName = displayName;
         this.issue = issue;
         this.score = score;
@@ -82,17 +82,17 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
     	      this.score = defaults.score;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIssue(String issue) {
+        public Builder issue(String issue) {
             this.issue = Objects.requireNonNull(issue);
             return this;
         }
 
-        public Builder setScore(Double score) {
+        public Builder score(Double score) {
             this.score = Objects.requireNonNull(score);
             return this;
         }

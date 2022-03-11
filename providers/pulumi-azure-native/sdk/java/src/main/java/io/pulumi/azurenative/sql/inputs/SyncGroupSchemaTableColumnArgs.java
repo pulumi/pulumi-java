@@ -90,32 +90,32 @@ public final class SyncGroupSchemaTableColumnArgs extends io.pulumi.resources.Re
     	      this.quotedName = defaults.quotedName;
         }
 
-        public Builder setDataSize(@Nullable Input<String> dataSize) {
+        public Builder dataSize(@Nullable Input<String> dataSize) {
             this.dataSize = dataSize;
             return this;
         }
 
-        public Builder setDataSize(@Nullable String dataSize) {
+        public Builder dataSize(@Nullable String dataSize) {
             this.dataSize = Input.ofNullable(dataSize);
             return this;
         }
 
-        public Builder setDataType(@Nullable Input<String> dataType) {
+        public Builder dataType(@Nullable Input<String> dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = Input.ofNullable(dataType);
             return this;
         }
 
-        public Builder setQuotedName(@Nullable Input<String> quotedName) {
+        public Builder quotedName(@Nullable Input<String> quotedName) {
             this.quotedName = quotedName;
             return this;
         }
 
-        public Builder setQuotedName(@Nullable String quotedName) {
+        public Builder quotedName(@Nullable String quotedName) {
             this.quotedName = Input.ofNullable(quotedName);
             return this;
         }

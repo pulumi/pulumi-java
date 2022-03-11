@@ -139,62 +139,62 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastTransitionTime(Input<String> lastTransitionTime) {
+        public Builder lastTransitionTime(Input<String> lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
-        public Builder setLastTransitionTime(String lastTransitionTime) {
+        public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Input.of(Objects.requireNonNull(lastTransitionTime));
             return this;
         }
 
-        public Builder setMessage(Input<String> message) {
+        public Builder message(Input<String> message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Input.of(Objects.requireNonNull(message));
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Input<Integer> observedGeneration) {
+        public Builder observedGeneration(@Nullable Input<Integer> observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = Input.ofNullable(observedGeneration);
             return this;
         }
 
-        public Builder setReason(Input<String> reason) {
+        public Builder reason(Input<String> reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Input.of(Objects.requireNonNull(reason));
             return this;
         }
 
-        public Builder setStatus(Input<String> status) {
+        public Builder status(Input<String> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

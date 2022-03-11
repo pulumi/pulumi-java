@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class LogAnalyticsConfigurationResponse {
     private final @Nullable String customerId;
 
-    @OutputCustomType.Constructor({"customerId"})
-    private LogAnalyticsConfigurationResponse(@Nullable String customerId) {
+    @OutputCustomType.Constructor
+    private LogAnalyticsConfigurationResponse(@OutputCustomType.Parameter("customerId") @Nullable String customerId) {
         this.customerId = customerId;
     }
 
@@ -42,7 +42,7 @@ public final class LogAnalyticsConfigurationResponse {
     	      this.customerId = defaults.customerId;
         }
 
-        public Builder setCustomerId(@Nullable String customerId) {
+        public Builder customerId(@Nullable String customerId) {
             this.customerId = customerId;
             return this;
         }

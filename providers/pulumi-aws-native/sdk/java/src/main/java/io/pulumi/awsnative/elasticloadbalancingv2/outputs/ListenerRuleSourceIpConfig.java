@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListenerRuleSourceIpConfig {
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"values"})
-    private ListenerRuleSourceIpConfig(@Nullable List<String> values) {
+    @OutputCustomType.Constructor
+    private ListenerRuleSourceIpConfig(@OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.values = values;
     }
 
@@ -42,7 +42,7 @@ public final class ListenerRuleSourceIpConfig {
     	      this.values = defaults.values;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

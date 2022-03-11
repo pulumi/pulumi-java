@@ -200,7 +200,7 @@ public class EndpointVariant extends io.pulumi.resources.CustomResource {
     private static EndpointVariantArgs makeArgs(EndpointVariantArgs args) {
         var builder = args == null ? EndpointVariantArgs.builder() : EndpointVariantArgs.builder(args);
         return builder
-            .setComputeType("Custom")
+            .computeType("Custom")
             .build();
     }
 

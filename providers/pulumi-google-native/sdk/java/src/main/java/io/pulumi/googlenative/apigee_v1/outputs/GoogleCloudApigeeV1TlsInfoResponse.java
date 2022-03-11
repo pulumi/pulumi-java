@@ -58,17 +58,17 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
      */
     private final String trustStore;
 
-    @OutputCustomType.Constructor({"ciphers","clientAuthEnabled","commonName","enabled","ignoreValidationErrors","keyAlias","keyStore","protocols","trustStore"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1TlsInfoResponse(
-        List<String> ciphers,
-        Boolean clientAuthEnabled,
-        GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
-        Boolean enabled,
-        Boolean ignoreValidationErrors,
-        String keyAlias,
-        String keyStore,
-        List<String> protocols,
-        String trustStore) {
+        @OutputCustomType.Parameter("ciphers") List<String> ciphers,
+        @OutputCustomType.Parameter("clientAuthEnabled") Boolean clientAuthEnabled,
+        @OutputCustomType.Parameter("commonName") GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("ignoreValidationErrors") Boolean ignoreValidationErrors,
+        @OutputCustomType.Parameter("keyAlias") String keyAlias,
+        @OutputCustomType.Parameter("keyStore") String keyStore,
+        @OutputCustomType.Parameter("protocols") List<String> protocols,
+        @OutputCustomType.Parameter("trustStore") String trustStore) {
         this.ciphers = ciphers;
         this.clientAuthEnabled = clientAuthEnabled;
         this.commonName = commonName;
@@ -180,47 +180,47 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
     	      this.trustStore = defaults.trustStore;
         }
 
-        public Builder setCiphers(List<String> ciphers) {
+        public Builder ciphers(List<String> ciphers) {
             this.ciphers = Objects.requireNonNull(ciphers);
             return this;
         }
 
-        public Builder setClientAuthEnabled(Boolean clientAuthEnabled) {
+        public Builder clientAuthEnabled(Boolean clientAuthEnabled) {
             this.clientAuthEnabled = Objects.requireNonNull(clientAuthEnabled);
             return this;
         }
 
-        public Builder setCommonName(GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName) {
+        public Builder commonName(GoogleCloudApigeeV1TlsInfoCommonNameResponse commonName) {
             this.commonName = Objects.requireNonNull(commonName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setIgnoreValidationErrors(Boolean ignoreValidationErrors) {
+        public Builder ignoreValidationErrors(Boolean ignoreValidationErrors) {
             this.ignoreValidationErrors = Objects.requireNonNull(ignoreValidationErrors);
             return this;
         }
 
-        public Builder setKeyAlias(String keyAlias) {
+        public Builder keyAlias(String keyAlias) {
             this.keyAlias = Objects.requireNonNull(keyAlias);
             return this;
         }
 
-        public Builder setKeyStore(String keyStore) {
+        public Builder keyStore(String keyStore) {
             this.keyStore = Objects.requireNonNull(keyStore);
             return this;
         }
 
-        public Builder setProtocols(List<String> protocols) {
+        public Builder protocols(List<String> protocols) {
             this.protocols = Objects.requireNonNull(protocols);
             return this;
         }
 
-        public Builder setTrustStore(String trustStore) {
+        public Builder trustStore(String trustStore) {
             this.trustStore = Objects.requireNonNull(trustStore);
             return this;
         }

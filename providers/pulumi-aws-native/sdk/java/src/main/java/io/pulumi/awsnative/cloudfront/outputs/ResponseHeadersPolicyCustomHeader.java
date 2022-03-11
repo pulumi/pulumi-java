@@ -14,11 +14,11 @@ public final class ResponseHeadersPolicyCustomHeader {
     private final Boolean override;
     private final String value;
 
-    @OutputCustomType.Constructor({"header","override","value"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicyCustomHeader(
-        String header,
-        Boolean override,
-        String value) {
+        @OutputCustomType.Parameter("header") String header,
+        @OutputCustomType.Parameter("override") Boolean override,
+        @OutputCustomType.Parameter("value") String value) {
         this.header = header;
         this.override = override;
         this.value = value;
@@ -58,17 +58,17 @@ public final class ResponseHeadersPolicyCustomHeader {
     	      this.value = defaults.value;
         }
 
-        public Builder setHeader(String header) {
+        public Builder header(String header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

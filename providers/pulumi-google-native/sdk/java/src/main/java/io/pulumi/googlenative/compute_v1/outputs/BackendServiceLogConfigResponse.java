@@ -21,10 +21,10 @@ public final class BackendServiceLogConfigResponse {
      */
     private final Double sampleRate;
 
-    @OutputCustomType.Constructor({"enable","sampleRate"})
+    @OutputCustomType.Constructor
     private BackendServiceLogConfigResponse(
-        Boolean enable,
-        Double sampleRate) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("sampleRate") Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }
@@ -66,12 +66,12 @@ public final class BackendServiceLogConfigResponse {
     	      this.sampleRate = defaults.sampleRate;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setSampleRate(Double sampleRate) {
+        public Builder sampleRate(Double sampleRate) {
             this.sampleRate = Objects.requireNonNull(sampleRate);
             return this;
         }

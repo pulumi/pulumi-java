@@ -15,11 +15,11 @@ public final class EnvelopeResponse {
     private final String payloadType;
     private final List<EnvelopeSignatureResponse> signatures;
 
-    @OutputCustomType.Constructor({"payload","payloadType","signatures"})
+    @OutputCustomType.Constructor
     private EnvelopeResponse(
-        String payload,
-        String payloadType,
-        List<EnvelopeSignatureResponse> signatures) {
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("payloadType") String payloadType,
+        @OutputCustomType.Parameter("signatures") List<EnvelopeSignatureResponse> signatures) {
         this.payload = payload;
         this.payloadType = payloadType;
         this.signatures = signatures;
@@ -59,17 +59,17 @@ public final class EnvelopeResponse {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setPayloadType(String payloadType) {
+        public Builder payloadType(String payloadType) {
             this.payloadType = Objects.requireNonNull(payloadType);
             return this;
         }
 
-        public Builder setSignatures(List<EnvelopeSignatureResponse> signatures) {
+        public Builder signatures(List<EnvelopeSignatureResponse> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

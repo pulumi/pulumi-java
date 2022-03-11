@@ -86,42 +86,42 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sortable = defaults.sortable;
         }
 
-        public Builder setDisplayable(@Nullable Input<Boolean> displayable) {
+        public Builder displayable(@Nullable Input<Boolean> displayable) {
             this.displayable = displayable;
             return this;
         }
 
-        public Builder setDisplayable(@Nullable Boolean displayable) {
+        public Builder displayable(@Nullable Boolean displayable) {
             this.displayable = Input.ofNullable(displayable);
             return this;
         }
 
-        public Builder setFacetable(@Nullable Input<Boolean> facetable) {
+        public Builder facetable(@Nullable Input<Boolean> facetable) {
             this.facetable = facetable;
             return this;
         }
 
-        public Builder setFacetable(@Nullable Boolean facetable) {
+        public Builder facetable(@Nullable Boolean facetable) {
             this.facetable = Input.ofNullable(facetable);
             return this;
         }
 
-        public Builder setSearchable(@Nullable Input<Boolean> searchable) {
+        public Builder searchable(@Nullable Input<Boolean> searchable) {
             this.searchable = searchable;
             return this;
         }
 
-        public Builder setSearchable(@Nullable Boolean searchable) {
+        public Builder searchable(@Nullable Boolean searchable) {
             this.searchable = Input.ofNullable(searchable);
             return this;
         }
 
-        public Builder setSortable(@Nullable Input<Boolean> sortable) {
+        public Builder sortable(@Nullable Input<Boolean> sortable) {
             this.sortable = sortable;
             return this;
         }
 
-        public Builder setSortable(@Nullable Boolean sortable) {
+        public Builder sortable(@Nullable Boolean sortable) {
             this.sortable = Input.ofNullable(sortable);
             return this;
         }

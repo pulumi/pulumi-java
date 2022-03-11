@@ -53,16 +53,16 @@ public final class ApiReferenceResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"brandColor","description","displayName","iconUri","id","name","swagger","type"})
+    @OutputCustomType.Constructor
     private ApiReferenceResponse(
-        @Nullable String brandColor,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable String iconUri,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Object swagger,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("brandColor") @Nullable String brandColor,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("iconUri") @Nullable String iconUri,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("swagger") @Nullable Object swagger,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.brandColor = brandColor;
         this.description = description;
         this.displayName = displayName;
@@ -164,42 +164,42 @@ public final class ApiReferenceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBrandColor(@Nullable String brandColor) {
+        public Builder brandColor(@Nullable String brandColor) {
             this.brandColor = brandColor;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIconUri(@Nullable String iconUri) {
+        public Builder iconUri(@Nullable String iconUri) {
             this.iconUri = iconUri;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSwagger(@Nullable Object swagger) {
+        public Builder swagger(@Nullable Object swagger) {
             this.swagger = swagger;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

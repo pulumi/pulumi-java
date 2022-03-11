@@ -23,10 +23,10 @@ public final class WebAclRuleOverrideAction {
      */
     private final @Nullable WebAclRuleOverrideActionNone none;
 
-    @OutputCustomType.Constructor({"count","none"})
+    @OutputCustomType.Constructor
     private WebAclRuleOverrideAction(
-        @Nullable WebAclRuleOverrideActionCount count,
-        @Nullable WebAclRuleOverrideActionNone none) {
+        @OutputCustomType.Parameter("count") @Nullable WebAclRuleOverrideActionCount count,
+        @OutputCustomType.Parameter("none") @Nullable WebAclRuleOverrideActionNone none) {
         this.count = count;
         this.none = none;
     }
@@ -68,12 +68,12 @@ public final class WebAclRuleOverrideAction {
     	      this.none = defaults.none;
         }
 
-        public Builder setCount(@Nullable WebAclRuleOverrideActionCount count) {
+        public Builder count(@Nullable WebAclRuleOverrideActionCount count) {
             this.count = count;
             return this;
         }
 
-        public Builder setNone(@Nullable WebAclRuleOverrideActionNone none) {
+        public Builder none(@Nullable WebAclRuleOverrideActionNone none) {
             this.none = none;
             return this;
         }

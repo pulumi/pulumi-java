@@ -37,13 +37,13 @@ public final class BaseImageDependencyResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"digest","registry","repository","tag","type"})
+    @OutputCustomType.Constructor
     private BaseImageDependencyResponse(
-        @Nullable String digest,
-        @Nullable String registry,
-        @Nullable String repository,
-        @Nullable String tag,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("registry") @Nullable String registry,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.digest = digest;
         this.registry = registry;
         this.repository = repository;
@@ -115,27 +115,27 @@ public final class BaseImageDependencyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setRegistry(@Nullable String registry) {
+        public Builder registry(@Nullable String registry) {
             this.registry = registry;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

@@ -21,10 +21,10 @@ public final class TlsContextResponse {
      */
     private final TlsValidationContextResponse validationContext;
 
-    @OutputCustomType.Constructor({"certificateContext","validationContext"})
+    @OutputCustomType.Constructor
     private TlsContextResponse(
-        TlsCertificateContextResponse certificateContext,
-        TlsValidationContextResponse validationContext) {
+        @OutputCustomType.Parameter("certificateContext") TlsCertificateContextResponse certificateContext,
+        @OutputCustomType.Parameter("validationContext") TlsValidationContextResponse validationContext) {
         this.certificateContext = certificateContext;
         this.validationContext = validationContext;
     }
@@ -66,12 +66,12 @@ public final class TlsContextResponse {
     	      this.validationContext = defaults.validationContext;
         }
 
-        public Builder setCertificateContext(TlsCertificateContextResponse certificateContext) {
+        public Builder certificateContext(TlsCertificateContextResponse certificateContext) {
             this.certificateContext = Objects.requireNonNull(certificateContext);
             return this;
         }
 
-        public Builder setValidationContext(TlsValidationContextResponse validationContext) {
+        public Builder validationContext(TlsValidationContextResponse validationContext) {
             this.validationContext = Objects.requireNonNull(validationContext);
             return this;
         }

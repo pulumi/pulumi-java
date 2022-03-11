@@ -92,32 +92,32 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleArgs extends
     	      this.query = defaults.query;
         }
 
-        public Builder setConfig(@Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
+        public Builder config(@Nullable Input<GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
+        public Builder config(@Nullable GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setNegated(@Nullable Input<Boolean> negated) {
+        public Builder negated(@Nullable Input<Boolean> negated) {
             this.negated = negated;
             return this;
         }
 
-        public Builder setNegated(@Nullable Boolean negated) {
+        public Builder negated(@Nullable Boolean negated) {
             this.negated = Input.ofNullable(negated);
             return this;
         }
 
-        public Builder setQuery(Input<String> query) {
+        public Builder query(Input<String> query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Input.of(Objects.requireNonNull(query));
             return this;
         }

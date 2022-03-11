@@ -20,10 +20,10 @@ public final class BotButton {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"text","value"})
+    @OutputCustomType.Constructor
     private BotButton(
-        String text,
-        String value) {
+        @OutputCustomType.Parameter("text") String text,
+        @OutputCustomType.Parameter("value") String value) {
         this.text = text;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class BotButton {
     	      this.value = defaults.value;
         }
 
-        public Builder setText(String text) {
+        public Builder text(String text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

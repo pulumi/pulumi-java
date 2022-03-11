@@ -25,11 +25,11 @@ public final class DataIntegrationScheduleConfig {
      */
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"firstExecutionFrom","object","scheduleExpression"})
+    @OutputCustomType.Constructor
     private DataIntegrationScheduleConfig(
-        String firstExecutionFrom,
-        String object,
-        String scheduleExpression) {
+        @OutputCustomType.Parameter("firstExecutionFrom") String firstExecutionFrom,
+        @OutputCustomType.Parameter("object") String object,
+        @OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.firstExecutionFrom = firstExecutionFrom;
         this.object = object;
         this.scheduleExpression = scheduleExpression;
@@ -81,17 +81,17 @@ public final class DataIntegrationScheduleConfig {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setFirstExecutionFrom(String firstExecutionFrom) {
+        public Builder firstExecutionFrom(String firstExecutionFrom) {
             this.firstExecutionFrom = Objects.requireNonNull(firstExecutionFrom);
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

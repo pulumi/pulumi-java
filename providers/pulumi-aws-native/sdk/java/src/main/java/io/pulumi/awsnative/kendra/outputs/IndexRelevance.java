@@ -22,13 +22,13 @@ public final class IndexRelevance {
     private final @Nullable IndexOrder rankOrder;
     private final @Nullable List<IndexValueImportanceItem> valueImportanceItems;
 
-    @OutputCustomType.Constructor({"duration","freshness","importance","rankOrder","valueImportanceItems"})
+    @OutputCustomType.Constructor
     private IndexRelevance(
-        @Nullable String duration,
-        @Nullable Boolean freshness,
-        @Nullable Integer importance,
-        @Nullable IndexOrder rankOrder,
-        @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("freshness") @Nullable Boolean freshness,
+        @OutputCustomType.Parameter("importance") @Nullable Integer importance,
+        @OutputCustomType.Parameter("rankOrder") @Nullable IndexOrder rankOrder,
+        @OutputCustomType.Parameter("valueImportanceItems") @Nullable List<IndexValueImportanceItem> valueImportanceItems) {
         this.duration = duration;
         this.freshness = freshness;
         this.importance = importance;
@@ -80,27 +80,27 @@ public final class IndexRelevance {
     	      this.valueImportanceItems = defaults.valueImportanceItems;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setFreshness(@Nullable Boolean freshness) {
+        public Builder freshness(@Nullable Boolean freshness) {
             this.freshness = freshness;
             return this;
         }
 
-        public Builder setImportance(@Nullable Integer importance) {
+        public Builder importance(@Nullable Integer importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setRankOrder(@Nullable IndexOrder rankOrder) {
+        public Builder rankOrder(@Nullable IndexOrder rankOrder) {
             this.rankOrder = rankOrder;
             return this;
         }
 
-        public Builder setValueImportanceItems(@Nullable List<IndexValueImportanceItem> valueImportanceItems) {
+        public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItem> valueImportanceItems) {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }

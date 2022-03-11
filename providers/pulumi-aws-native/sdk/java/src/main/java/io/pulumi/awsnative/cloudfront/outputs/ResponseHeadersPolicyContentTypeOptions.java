@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyContentTypeOptions {
     private final Boolean override;
 
-    @OutputCustomType.Constructor({"override"})
-    private ResponseHeadersPolicyContentTypeOptions(Boolean override) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyContentTypeOptions(@OutputCustomType.Parameter("override") Boolean override) {
         this.override = override;
     }
 
@@ -40,7 +40,7 @@ public final class ResponseHeadersPolicyContentTypeOptions {
     	      this.override = defaults.override;
         }
 
-        public Builder setOverride(Boolean override) {
+        public Builder override(Boolean override) {
             this.override = Objects.requireNonNull(override);
             return this;
         }

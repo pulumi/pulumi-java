@@ -190,92 +190,92 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.timePeriod = defaults.timePeriod;
         }
 
-        public Builder setAmount(Input<Double> amount) {
+        public Builder amount(Input<Double> amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setAmount(Double amount) {
+        public Builder amount(Double amount) {
             this.amount = Input.of(Objects.requireNonNull(amount));
             return this;
         }
 
-        public Builder setBudgetName(@Nullable Input<String> budgetName) {
+        public Builder budgetName(@Nullable Input<String> budgetName) {
             this.budgetName = budgetName;
             return this;
         }
 
-        public Builder setBudgetName(@Nullable String budgetName) {
+        public Builder budgetName(@Nullable String budgetName) {
             this.budgetName = Input.ofNullable(budgetName);
             return this;
         }
 
-        public Builder setCategory(Input<Either<String,CategoryType>> category) {
+        public Builder category(Input<Either<String,CategoryType>> category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setCategory(Either<String,CategoryType> category) {
+        public Builder category(Either<String,CategoryType> category) {
             this.category = Input.of(Objects.requireNonNull(category));
             return this;
         }
 
-        public Builder setETag(@Nullable Input<String> eTag) {
+        public Builder eTag(@Nullable Input<String> eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = Input.ofNullable(eTag);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<BudgetFilterArgs> filter) {
+        public Builder filter(@Nullable Input<BudgetFilterArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable BudgetFilterArgs filter) {
+        public Builder filter(@Nullable BudgetFilterArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setNotifications(@Nullable Input<Map<String,NotificationArgs>> notifications) {
+        public Builder notifications(@Nullable Input<Map<String,NotificationArgs>> notifications) {
             this.notifications = notifications;
             return this;
         }
 
-        public Builder setNotifications(@Nullable Map<String,NotificationArgs> notifications) {
+        public Builder notifications(@Nullable Map<String,NotificationArgs> notifications) {
             this.notifications = Input.ofNullable(notifications);
             return this;
         }
 
-        public Builder setScope(Input<String> scope) {
+        public Builder scope(Input<String> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setTimeGrain(Input<Either<String,TimeGrainType>> timeGrain) {
+        public Builder timeGrain(Input<Either<String,TimeGrainType>> timeGrain) {
             this.timeGrain = Objects.requireNonNull(timeGrain);
             return this;
         }
 
-        public Builder setTimeGrain(Either<String,TimeGrainType> timeGrain) {
+        public Builder timeGrain(Either<String,TimeGrainType> timeGrain) {
             this.timeGrain = Input.of(Objects.requireNonNull(timeGrain));
             return this;
         }
 
-        public Builder setTimePeriod(Input<BudgetTimePeriodArgs> timePeriod) {
+        public Builder timePeriod(Input<BudgetTimePeriodArgs> timePeriod) {
             this.timePeriod = Objects.requireNonNull(timePeriod);
             return this;
         }
 
-        public Builder setTimePeriod(BudgetTimePeriodArgs timePeriod) {
+        public Builder timePeriod(BudgetTimePeriodArgs timePeriod) {
             this.timePeriod = Input.of(Objects.requireNonNull(timePeriod));
             return this;
         }

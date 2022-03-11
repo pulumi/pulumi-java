@@ -75,22 +75,22 @@ public final class DashboardPartsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.position = defaults.position;
         }
 
-        public Builder setMetadata(@Nullable Input<MarkdownPartMetadataArgs> metadata) {
+        public Builder metadata(@Nullable Input<MarkdownPartMetadataArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable MarkdownPartMetadataArgs metadata) {
+        public Builder metadata(@Nullable MarkdownPartMetadataArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPosition(Input<DashboardPartsPositionArgs> position) {
+        public Builder position(Input<DashboardPartsPositionArgs> position) {
             this.position = Objects.requireNonNull(position);
             return this;
         }
 
-        public Builder setPosition(DashboardPartsPositionArgs position) {
+        public Builder position(DashboardPartsPositionArgs position) {
             this.position = Input.of(Objects.requireNonNull(position));
             return this;
         }

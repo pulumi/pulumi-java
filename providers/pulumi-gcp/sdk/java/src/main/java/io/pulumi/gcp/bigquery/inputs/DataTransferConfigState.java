@@ -313,152 +313,152 @@ public final class DataTransferConfigState extends io.pulumi.resources.ResourceA
     	      this.serviceAccountName = defaults.serviceAccountName;
         }
 
-        public Builder setDataRefreshWindowDays(@Nullable Input<Integer> dataRefreshWindowDays) {
+        public Builder dataRefreshWindowDays(@Nullable Input<Integer> dataRefreshWindowDays) {
             this.dataRefreshWindowDays = dataRefreshWindowDays;
             return this;
         }
 
-        public Builder setDataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
+        public Builder dataRefreshWindowDays(@Nullable Integer dataRefreshWindowDays) {
             this.dataRefreshWindowDays = Input.ofNullable(dataRefreshWindowDays);
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable Input<String> dataSourceId) {
+        public Builder dataSourceId(@Nullable Input<String> dataSourceId) {
             this.dataSourceId = dataSourceId;
             return this;
         }
 
-        public Builder setDataSourceId(@Nullable String dataSourceId) {
+        public Builder dataSourceId(@Nullable String dataSourceId) {
             this.dataSourceId = Input.ofNullable(dataSourceId);
             return this;
         }
 
-        public Builder setDestinationDatasetId(@Nullable Input<String> destinationDatasetId) {
+        public Builder destinationDatasetId(@Nullable Input<String> destinationDatasetId) {
             this.destinationDatasetId = destinationDatasetId;
             return this;
         }
 
-        public Builder setDestinationDatasetId(@Nullable String destinationDatasetId) {
+        public Builder destinationDatasetId(@Nullable String destinationDatasetId) {
             this.destinationDatasetId = Input.ofNullable(destinationDatasetId);
             return this;
         }
 
-        public Builder setDisabled(@Nullable Input<Boolean> disabled) {
+        public Builder disabled(@Nullable Input<Boolean> disabled) {
             this.disabled = disabled;
             return this;
         }
 
-        public Builder setDisabled(@Nullable Boolean disabled) {
+        public Builder disabled(@Nullable Boolean disabled) {
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setEmailPreferences(@Nullable Input<DataTransferConfigEmailPreferencesGetArgs> emailPreferences) {
+        public Builder emailPreferences(@Nullable Input<DataTransferConfigEmailPreferencesGetArgs> emailPreferences) {
             this.emailPreferences = emailPreferences;
             return this;
         }
 
-        public Builder setEmailPreferences(@Nullable DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
+        public Builder emailPreferences(@Nullable DataTransferConfigEmailPreferencesGetArgs emailPreferences) {
             this.emailPreferences = Input.ofNullable(emailPreferences);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationPubsubTopic(@Nullable Input<String> notificationPubsubTopic) {
+        public Builder notificationPubsubTopic(@Nullable Input<String> notificationPubsubTopic) {
             this.notificationPubsubTopic = notificationPubsubTopic;
             return this;
         }
 
-        public Builder setNotificationPubsubTopic(@Nullable String notificationPubsubTopic) {
+        public Builder notificationPubsubTopic(@Nullable String notificationPubsubTopic) {
             this.notificationPubsubTopic = Input.ofNullable(notificationPubsubTopic);
             return this;
         }
 
-        public Builder setParams(@Nullable Input<Map<String,String>> params) {
+        public Builder params(@Nullable Input<Map<String,String>> params) {
             this.params = params;
             return this;
         }
 
-        public Builder setParams(@Nullable Map<String,String> params) {
+        public Builder params(@Nullable Map<String,String> params) {
             this.params = Input.ofNullable(params);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setScheduleOptions(@Nullable Input<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions) {
+        public Builder scheduleOptions(@Nullable Input<DataTransferConfigScheduleOptionsGetArgs> scheduleOptions) {
             this.scheduleOptions = scheduleOptions;
             return this;
         }
 
-        public Builder setScheduleOptions(@Nullable DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
+        public Builder scheduleOptions(@Nullable DataTransferConfigScheduleOptionsGetArgs scheduleOptions) {
             this.scheduleOptions = Input.ofNullable(scheduleOptions);
             return this;
         }
 
-        public Builder setSensitiveParams(@Nullable Input<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams) {
+        public Builder sensitiveParams(@Nullable Input<DataTransferConfigSensitiveParamsGetArgs> sensitiveParams) {
             this.sensitiveParams = sensitiveParams;
             return this;
         }
 
-        public Builder setSensitiveParams(@Nullable DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
+        public Builder sensitiveParams(@Nullable DataTransferConfigSensitiveParamsGetArgs sensitiveParams) {
             this.sensitiveParams = Input.ofNullable(sensitiveParams);
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }

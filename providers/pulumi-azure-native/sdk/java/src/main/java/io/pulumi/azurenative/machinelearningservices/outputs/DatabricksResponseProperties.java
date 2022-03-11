@@ -22,10 +22,10 @@ public final class DatabricksResponseProperties {
      */
     private final @Nullable String workspaceUrl;
 
-    @OutputCustomType.Constructor({"databricksAccessToken","workspaceUrl"})
+    @OutputCustomType.Constructor
     private DatabricksResponseProperties(
-        @Nullable String databricksAccessToken,
-        @Nullable String workspaceUrl) {
+        @OutputCustomType.Parameter("databricksAccessToken") @Nullable String databricksAccessToken,
+        @OutputCustomType.Parameter("workspaceUrl") @Nullable String workspaceUrl) {
         this.databricksAccessToken = databricksAccessToken;
         this.workspaceUrl = workspaceUrl;
     }
@@ -67,12 +67,12 @@ public final class DatabricksResponseProperties {
     	      this.workspaceUrl = defaults.workspaceUrl;
         }
 
-        public Builder setDatabricksAccessToken(@Nullable String databricksAccessToken) {
+        public Builder databricksAccessToken(@Nullable String databricksAccessToken) {
             this.databricksAccessToken = databricksAccessToken;
             return this;
         }
 
-        public Builder setWorkspaceUrl(@Nullable String workspaceUrl) {
+        public Builder workspaceUrl(@Nullable String workspaceUrl) {
             this.workspaceUrl = workspaceUrl;
             return this;
         }

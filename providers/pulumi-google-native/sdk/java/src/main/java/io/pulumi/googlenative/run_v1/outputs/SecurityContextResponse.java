@@ -15,8 +15,8 @@ public final class SecurityContextResponse {
      */
     private final Integer runAsUser;
 
-    @OutputCustomType.Constructor({"runAsUser"})
-    private SecurityContextResponse(Integer runAsUser) {
+    @OutputCustomType.Constructor
+    private SecurityContextResponse(@OutputCustomType.Parameter("runAsUser") Integer runAsUser) {
         this.runAsUser = runAsUser;
     }
 
@@ -48,7 +48,7 @@ public final class SecurityContextResponse {
     	      this.runAsUser = defaults.runAsUser;
         }
 
-        public Builder setRunAsUser(Integer runAsUser) {
+        public Builder runAsUser(Integer runAsUser) {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }

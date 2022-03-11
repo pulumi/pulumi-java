@@ -23,10 +23,10 @@ public final class PortResponse {
      */
     private final @Nullable String transportProtocol;
 
-    @OutputCustomType.Constructor({"backendPort","transportProtocol"})
+    @OutputCustomType.Constructor
     private PortResponse(
-        @Nullable Integer backendPort,
-        @Nullable String transportProtocol) {
+        @OutputCustomType.Parameter("backendPort") @Nullable Integer backendPort,
+        @OutputCustomType.Parameter("transportProtocol") @Nullable String transportProtocol) {
         this.backendPort = backendPort;
         this.transportProtocol = transportProtocol;
     }
@@ -68,12 +68,12 @@ public final class PortResponse {
     	      this.transportProtocol = defaults.transportProtocol;
         }
 
-        public Builder setBackendPort(@Nullable Integer backendPort) {
+        public Builder backendPort(@Nullable Integer backendPort) {
             this.backendPort = backendPort;
             return this;
         }
 
-        public Builder setTransportProtocol(@Nullable String transportProtocol) {
+        public Builder transportProtocol(@Nullable String transportProtocol) {
             this.transportProtocol = transportProtocol;
             return this;
         }

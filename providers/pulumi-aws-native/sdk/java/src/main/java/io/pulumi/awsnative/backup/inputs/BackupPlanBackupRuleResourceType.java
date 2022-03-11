@@ -152,47 +152,47 @@ public final class BackupPlanBackupRuleResourceType extends io.pulumi.resources.
     	      this.targetBackupVault = defaults.targetBackupVault;
         }
 
-        public Builder setCompletionWindowMinutes(@Nullable Double completionWindowMinutes) {
+        public Builder completionWindowMinutes(@Nullable Double completionWindowMinutes) {
             this.completionWindowMinutes = completionWindowMinutes;
             return this;
         }
 
-        public Builder setCopyActions(@Nullable List<BackupPlanCopyActionResourceType> copyActions) {
+        public Builder copyActions(@Nullable List<BackupPlanCopyActionResourceType> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable BackupPlanLifecycleResourceType lifecycle) {
+        public Builder lifecycle(@Nullable BackupPlanLifecycleResourceType lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Object recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Object recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
-        public Builder setScheduleExpression(@Nullable String scheduleExpression) {
+        public Builder scheduleExpression(@Nullable String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
 
-        public Builder setStartWindowMinutes(@Nullable Double startWindowMinutes) {
+        public Builder startWindowMinutes(@Nullable Double startWindowMinutes) {
             this.startWindowMinutes = startWindowMinutes;
             return this;
         }
 
-        public Builder setTargetBackupVault(String targetBackupVault) {
+        public Builder targetBackupVault(String targetBackupVault) {
             this.targetBackupVault = Objects.requireNonNull(targetBackupVault);
             return this;
         }

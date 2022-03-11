@@ -92,17 +92,17 @@ public final class ScheduleRecurrenceResponse extends io.pulumi.resources.Invoke
     	      this.weeklyDaysList = defaults.weeklyDaysList;
         }
 
-        public Builder setRecurrenceType(String recurrenceType) {
+        public Builder recurrenceType(String recurrenceType) {
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
 
-        public Builder setRecurrenceValue(Integer recurrenceValue) {
+        public Builder recurrenceValue(Integer recurrenceValue) {
             this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
             return this;
         }
 
-        public Builder setWeeklyDaysList(@Nullable List<String> weeklyDaysList) {
+        public Builder weeklyDaysList(@Nullable List<String> weeklyDaysList) {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }

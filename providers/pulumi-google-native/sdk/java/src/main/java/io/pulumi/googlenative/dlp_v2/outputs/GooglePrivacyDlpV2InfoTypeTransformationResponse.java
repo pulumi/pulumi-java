@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
      */
     private final GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation;
 
-    @OutputCustomType.Constructor({"infoTypes","primitiveTransformation"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeTransformationResponse(
-        List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
-        GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        @OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes,
+        @OutputCustomType.Parameter("primitiveTransformation") GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
         this.infoTypes = infoTypes;
         this.primitiveTransformation = primitiveTransformation;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationResponse {
     	      this.primitiveTransformation = defaults.primitiveTransformation;
         }
 
-        public Builder setInfoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
 
-        public Builder setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
+        public Builder primitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformationResponse primitiveTransformation) {
             this.primitiveTransformation = Objects.requireNonNull(primitiveTransformation);
             return this;
         }

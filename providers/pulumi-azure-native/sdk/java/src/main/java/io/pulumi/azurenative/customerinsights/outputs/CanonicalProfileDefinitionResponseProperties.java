@@ -38,13 +38,13 @@ public final class CanonicalProfileDefinitionResponseProperties {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"profileName","profilePropertyName","rank","type","value"})
+    @OutputCustomType.Constructor
     private CanonicalProfileDefinitionResponseProperties(
-        @Nullable String profileName,
-        @Nullable String profilePropertyName,
-        @Nullable Integer rank,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("profileName") @Nullable String profileName,
+        @OutputCustomType.Parameter("profilePropertyName") @Nullable String profilePropertyName,
+        @OutputCustomType.Parameter("rank") @Nullable Integer rank,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.profileName = profileName;
         this.profilePropertyName = profilePropertyName;
         this.rank = rank;
@@ -116,27 +116,27 @@ public final class CanonicalProfileDefinitionResponseProperties {
     	      this.value = defaults.value;
         }
 
-        public Builder setProfileName(@Nullable String profileName) {
+        public Builder profileName(@Nullable String profileName) {
             this.profileName = profileName;
             return this;
         }
 
-        public Builder setProfilePropertyName(@Nullable String profilePropertyName) {
+        public Builder profilePropertyName(@Nullable String profilePropertyName) {
             this.profilePropertyName = profilePropertyName;
             return this;
         }
 
-        public Builder setRank(@Nullable Integer rank) {
+        public Builder rank(@Nullable Integer rank) {
             this.rank = rank;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

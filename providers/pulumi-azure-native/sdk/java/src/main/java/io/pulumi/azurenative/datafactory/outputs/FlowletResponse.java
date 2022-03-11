@@ -64,17 +64,17 @@ public final class FlowletResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"annotations","description","folder","script","scriptLines","sinks","sources","transformations","type"})
+    @OutputCustomType.Constructor
     private FlowletResponse(
-        @Nullable List<Object> annotations,
-        @Nullable String description,
-        @Nullable DataFlowResponseFolder folder,
-        @Nullable String script,
-        @Nullable List<String> scriptLines,
-        @Nullable List<DataFlowSinkResponse> sinks,
-        @Nullable List<DataFlowSourceResponse> sources,
-        @Nullable List<TransformationResponse> transformations,
-        String type) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("folder") @Nullable DataFlowResponseFolder folder,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("scriptLines") @Nullable List<String> scriptLines,
+        @OutputCustomType.Parameter("sinks") @Nullable List<DataFlowSinkResponse> sinks,
+        @OutputCustomType.Parameter("sources") @Nullable List<DataFlowSourceResponse> sources,
+        @OutputCustomType.Parameter("transformations") @Nullable List<TransformationResponse> transformations,
+        @OutputCustomType.Parameter("type") String type) {
         this.annotations = annotations;
         this.description = description;
         this.folder = folder;
@@ -187,47 +187,47 @@ public final class FlowletResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFolder(@Nullable DataFlowResponseFolder folder) {
+        public Builder folder(@Nullable DataFlowResponseFolder folder) {
             this.folder = folder;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScriptLines(@Nullable List<String> scriptLines) {
+        public Builder scriptLines(@Nullable List<String> scriptLines) {
             this.scriptLines = scriptLines;
             return this;
         }
 
-        public Builder setSinks(@Nullable List<DataFlowSinkResponse> sinks) {
+        public Builder sinks(@Nullable List<DataFlowSinkResponse> sinks) {
             this.sinks = sinks;
             return this;
         }
 
-        public Builder setSources(@Nullable List<DataFlowSourceResponse> sources) {
+        public Builder sources(@Nullable List<DataFlowSourceResponse> sources) {
             this.sources = sources;
             return this;
         }
 
-        public Builder setTransformations(@Nullable List<TransformationResponse> transformations) {
+        public Builder transformations(@Nullable List<TransformationResponse> transformations) {
             this.transformations = transformations;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

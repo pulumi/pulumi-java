@@ -30,12 +30,12 @@ public final class GetJobCredentialResult {
      */
     private final String username;
 
-    @OutputCustomType.Constructor({"id","name","type","username"})
+    @OutputCustomType.Constructor
     private GetJobCredentialResult(
-        String id,
-        String name,
-        String type,
-        String username) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") String username) {
         this.id = id;
         this.name = name;
         this.type = type;
@@ -97,22 +97,22 @@ public final class GetJobCredentialResult {
     	      this.username = defaults.username;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class RuleGroupRuleActionAllowProperties {
     private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private RuleGroupRuleActionAllowProperties(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private RuleGroupRuleActionAllowProperties(@OutputCustomType.Parameter("customRequestHandling") @Nullable RuleGroupCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -42,7 +42,7 @@ public final class RuleGroupRuleActionAllowProperties {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable RuleGroupCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

@@ -20,10 +20,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      */
     private final Integer customerChannel;
 
-    @OutputCustomType.Constructor({"agentChannel","customerChannel"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(
-        Integer agentChannel,
-        Integer customerChannel) {
+        @OutputCustomType.Parameter("agentChannel") Integer agentChannel,
+        @OutputCustomType.Parameter("customerChannel") Integer customerChannel) {
         this.agentChannel = agentChannel;
         this.customerChannel = customerChannel;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
     	      this.customerChannel = defaults.customerChannel;
         }
 
-        public Builder setAgentChannel(Integer agentChannel) {
+        public Builder agentChannel(Integer agentChannel) {
             this.agentChannel = Objects.requireNonNull(agentChannel);
             return this;
         }
 
-        public Builder setCustomerChannel(Integer customerChannel) {
+        public Builder customerChannel(Integer customerChannel) {
             this.customerChannel = Objects.requireNonNull(customerChannel);
             return this;
         }

@@ -30,15 +30,15 @@ public final class RuleGroupRule {
     private final RuleGroupStatement statement;
     private final RuleGroupVisibilityConfig visibilityConfig;
 
-    @OutputCustomType.Constructor({"action","captchaConfig","name","priority","ruleLabels","statement","visibilityConfig"})
+    @OutputCustomType.Constructor
     private RuleGroupRule(
-        @Nullable RuleGroupRuleAction action,
-        @Nullable RuleGroupCaptchaConfig captchaConfig,
-        String name,
-        Integer priority,
-        @Nullable List<RuleGroupLabel> ruleLabels,
-        RuleGroupStatement statement,
-        RuleGroupVisibilityConfig visibilityConfig) {
+        @OutputCustomType.Parameter("action") @Nullable RuleGroupRuleAction action,
+        @OutputCustomType.Parameter("captchaConfig") @Nullable RuleGroupCaptchaConfig captchaConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("ruleLabels") @Nullable List<RuleGroupLabel> ruleLabels,
+        @OutputCustomType.Parameter("statement") RuleGroupStatement statement,
+        @OutputCustomType.Parameter("visibilityConfig") RuleGroupVisibilityConfig visibilityConfig) {
         this.action = action;
         this.captchaConfig = captchaConfig;
         this.name = name;
@@ -106,37 +106,37 @@ public final class RuleGroupRule {
     	      this.visibilityConfig = defaults.visibilityConfig;
         }
 
-        public Builder setAction(@Nullable RuleGroupRuleAction action) {
+        public Builder action(@Nullable RuleGroupRuleAction action) {
             this.action = action;
             return this;
         }
 
-        public Builder setCaptchaConfig(@Nullable RuleGroupCaptchaConfig captchaConfig) {
+        public Builder captchaConfig(@Nullable RuleGroupCaptchaConfig captchaConfig) {
             this.captchaConfig = captchaConfig;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setRuleLabels(@Nullable List<RuleGroupLabel> ruleLabels) {
+        public Builder ruleLabels(@Nullable List<RuleGroupLabel> ruleLabels) {
             this.ruleLabels = ruleLabels;
             return this;
         }
 
-        public Builder setStatement(RuleGroupStatement statement) {
+        public Builder statement(RuleGroupStatement statement) {
             this.statement = Objects.requireNonNull(statement);
             return this;
         }
 
-        public Builder setVisibilityConfig(RuleGroupVisibilityConfig visibilityConfig) {
+        public Builder visibilityConfig(RuleGroupVisibilityConfig visibilityConfig) {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }

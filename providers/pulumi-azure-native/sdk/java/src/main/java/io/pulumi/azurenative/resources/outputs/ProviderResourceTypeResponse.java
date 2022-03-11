@@ -64,18 +64,18 @@ public final class ProviderResourceTypeResponse {
     private final @Nullable String resourceType;
     private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
-    @OutputCustomType.Constructor({"aliases","apiProfiles","apiVersions","capabilities","defaultApiVersion","locationMappings","locations","properties","resourceType","zoneMappings"})
+    @OutputCustomType.Constructor
     private ProviderResourceTypeResponse(
-        @Nullable List<AliasResponse> aliases,
-        List<ApiProfileResponse> apiProfiles,
-        @Nullable List<String> apiVersions,
-        @Nullable String capabilities,
-        String defaultApiVersion,
-        @Nullable List<ProviderExtendedLocationResponse> locationMappings,
-        @Nullable List<String> locations,
-        @Nullable Map<String,String> properties,
-        @Nullable String resourceType,
-        @Nullable List<ZoneMappingResponse> zoneMappings) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<AliasResponse> aliases,
+        @OutputCustomType.Parameter("apiProfiles") List<ApiProfileResponse> apiProfiles,
+        @OutputCustomType.Parameter("apiVersions") @Nullable List<String> apiVersions,
+        @OutputCustomType.Parameter("capabilities") @Nullable String capabilities,
+        @OutputCustomType.Parameter("defaultApiVersion") String defaultApiVersion,
+        @OutputCustomType.Parameter("locationMappings") @Nullable List<ProviderExtendedLocationResponse> locationMappings,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("zoneMappings") @Nullable List<ZoneMappingResponse> zoneMappings) {
         this.aliases = aliases;
         this.apiProfiles = apiProfiles;
         this.apiVersions = apiVersions;
@@ -193,52 +193,52 @@ public final class ProviderResourceTypeResponse {
     	      this.zoneMappings = defaults.zoneMappings;
         }
 
-        public Builder setAliases(@Nullable List<AliasResponse> aliases) {
+        public Builder aliases(@Nullable List<AliasResponse> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setApiProfiles(List<ApiProfileResponse> apiProfiles) {
+        public Builder apiProfiles(List<ApiProfileResponse> apiProfiles) {
             this.apiProfiles = Objects.requireNonNull(apiProfiles);
             return this;
         }
 
-        public Builder setApiVersions(@Nullable List<String> apiVersions) {
+        public Builder apiVersions(@Nullable List<String> apiVersions) {
             this.apiVersions = apiVersions;
             return this;
         }
 
-        public Builder setCapabilities(@Nullable String capabilities) {
+        public Builder capabilities(@Nullable String capabilities) {
             this.capabilities = capabilities;
             return this;
         }
 
-        public Builder setDefaultApiVersion(String defaultApiVersion) {
+        public Builder defaultApiVersion(String defaultApiVersion) {
             this.defaultApiVersion = Objects.requireNonNull(defaultApiVersion);
             return this;
         }
 
-        public Builder setLocationMappings(@Nullable List<ProviderExtendedLocationResponse> locationMappings) {
+        public Builder locationMappings(@Nullable List<ProviderExtendedLocationResponse> locationMappings) {
             this.locationMappings = locationMappings;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setZoneMappings(@Nullable List<ZoneMappingResponse> zoneMappings) {
+        public Builder zoneMappings(@Nullable List<ZoneMappingResponse> zoneMappings) {
             this.zoneMappings = zoneMappings;
             return this;
         }

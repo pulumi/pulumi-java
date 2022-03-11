@@ -68,19 +68,19 @@ public final class GetControllerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataPlaneFqdn","hostSuffix","id","location","name","provisioningState","sku","tags","targetContainerHostApiServerFqdn","targetContainerHostResourceId","type"})
+    @OutputCustomType.Constructor
     private GetControllerResult(
-        String dataPlaneFqdn,
-        String hostSuffix,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String targetContainerHostApiServerFqdn,
-        String targetContainerHostResourceId,
-        String type) {
+        @OutputCustomType.Parameter("dataPlaneFqdn") String dataPlaneFqdn,
+        @OutputCustomType.Parameter("hostSuffix") String hostSuffix,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetContainerHostApiServerFqdn") String targetContainerHostApiServerFqdn,
+        @OutputCustomType.Parameter("targetContainerHostResourceId") String targetContainerHostResourceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataPlaneFqdn = dataPlaneFqdn;
         this.hostSuffix = hostSuffix;
         this.id = id;
@@ -212,57 +212,57 @@ public final class GetControllerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataPlaneFqdn(String dataPlaneFqdn) {
+        public Builder dataPlaneFqdn(String dataPlaneFqdn) {
             this.dataPlaneFqdn = Objects.requireNonNull(dataPlaneFqdn);
             return this;
         }
 
-        public Builder setHostSuffix(String hostSuffix) {
+        public Builder hostSuffix(String hostSuffix) {
             this.hostSuffix = Objects.requireNonNull(hostSuffix);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetContainerHostApiServerFqdn(String targetContainerHostApiServerFqdn) {
+        public Builder targetContainerHostApiServerFqdn(String targetContainerHostApiServerFqdn) {
             this.targetContainerHostApiServerFqdn = Objects.requireNonNull(targetContainerHostApiServerFqdn);
             return this;
         }
 
-        public Builder setTargetContainerHostResourceId(String targetContainerHostResourceId) {
+        public Builder targetContainerHostResourceId(String targetContainerHostResourceId) {
             this.targetContainerHostResourceId = Objects.requireNonNull(targetContainerHostResourceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

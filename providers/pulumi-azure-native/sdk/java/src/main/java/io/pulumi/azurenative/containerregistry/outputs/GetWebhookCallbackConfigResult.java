@@ -22,10 +22,10 @@ public final class GetWebhookCallbackConfigResult {
      */
     private final String serviceUri;
 
-    @OutputCustomType.Constructor({"customHeaders","serviceUri"})
+    @OutputCustomType.Constructor
     private GetWebhookCallbackConfigResult(
-        @Nullable Map<String,String> customHeaders,
-        String serviceUri) {
+        @OutputCustomType.Parameter("customHeaders") @Nullable Map<String,String> customHeaders,
+        @OutputCustomType.Parameter("serviceUri") String serviceUri) {
         this.customHeaders = customHeaders;
         this.serviceUri = serviceUri;
     }
@@ -67,12 +67,12 @@ public final class GetWebhookCallbackConfigResult {
     	      this.serviceUri = defaults.serviceUri;
         }
 
-        public Builder setCustomHeaders(@Nullable Map<String,String> customHeaders) {
+        public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
             this.customHeaders = customHeaders;
             return this;
         }
 
-        public Builder setServiceUri(String serviceUri) {
+        public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }

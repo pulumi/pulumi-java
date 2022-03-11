@@ -15,8 +15,8 @@ public final class SSISExecutionParameterResponse {
      */
     private final Object value;
 
-    @OutputCustomType.Constructor({"value"})
-    private SSISExecutionParameterResponse(Object value) {
+    @OutputCustomType.Constructor
+    private SSISExecutionParameterResponse(@OutputCustomType.Parameter("value") Object value) {
         this.value = value;
     }
 
@@ -48,7 +48,7 @@ public final class SSISExecutionParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(Object value) {
+        public Builder value(Object value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

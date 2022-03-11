@@ -15,8 +15,8 @@ public final class GatewayRouteSpecGrpcRouteAction {
      */
     private final GatewayRouteSpecGrpcRouteActionTarget target;
 
-    @OutputCustomType.Constructor({"target"})
-    private GatewayRouteSpecGrpcRouteAction(GatewayRouteSpecGrpcRouteActionTarget target) {
+    @OutputCustomType.Constructor
+    private GatewayRouteSpecGrpcRouteAction(@OutputCustomType.Parameter("target") GatewayRouteSpecGrpcRouteActionTarget target) {
         this.target = target;
     }
 
@@ -48,7 +48,7 @@ public final class GatewayRouteSpecGrpcRouteAction {
     	      this.target = defaults.target;
         }
 
-        public Builder setTarget(GatewayRouteSpecGrpcRouteActionTarget target) {
+        public Builder target(GatewayRouteSpecGrpcRouteActionTarget target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

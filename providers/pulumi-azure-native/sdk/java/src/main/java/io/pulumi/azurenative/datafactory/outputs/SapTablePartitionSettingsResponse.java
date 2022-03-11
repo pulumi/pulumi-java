@@ -32,12 +32,12 @@ public final class SapTablePartitionSettingsResponse {
      */
     private final @Nullable Object partitionUpperBound;
 
-    @OutputCustomType.Constructor({"maxPartitionsNumber","partitionColumnName","partitionLowerBound","partitionUpperBound"})
+    @OutputCustomType.Constructor
     private SapTablePartitionSettingsResponse(
-        @Nullable Object maxPartitionsNumber,
-        @Nullable Object partitionColumnName,
-        @Nullable Object partitionLowerBound,
-        @Nullable Object partitionUpperBound) {
+        @OutputCustomType.Parameter("maxPartitionsNumber") @Nullable Object maxPartitionsNumber,
+        @OutputCustomType.Parameter("partitionColumnName") @Nullable Object partitionColumnName,
+        @OutputCustomType.Parameter("partitionLowerBound") @Nullable Object partitionLowerBound,
+        @OutputCustomType.Parameter("partitionUpperBound") @Nullable Object partitionUpperBound) {
         this.maxPartitionsNumber = maxPartitionsNumber;
         this.partitionColumnName = partitionColumnName;
         this.partitionLowerBound = partitionLowerBound;
@@ -99,22 +99,22 @@ public final class SapTablePartitionSettingsResponse {
     	      this.partitionUpperBound = defaults.partitionUpperBound;
         }
 
-        public Builder setMaxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
+        public Builder maxPartitionsNumber(@Nullable Object maxPartitionsNumber) {
             this.maxPartitionsNumber = maxPartitionsNumber;
             return this;
         }
 
-        public Builder setPartitionColumnName(@Nullable Object partitionColumnName) {
+        public Builder partitionColumnName(@Nullable Object partitionColumnName) {
             this.partitionColumnName = partitionColumnName;
             return this;
         }
 
-        public Builder setPartitionLowerBound(@Nullable Object partitionLowerBound) {
+        public Builder partitionLowerBound(@Nullable Object partitionLowerBound) {
             this.partitionLowerBound = partitionLowerBound;
             return this;
         }
 
-        public Builder setPartitionUpperBound(@Nullable Object partitionUpperBound) {
+        public Builder partitionUpperBound(@Nullable Object partitionUpperBound) {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }

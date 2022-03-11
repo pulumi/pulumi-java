@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetClusterAuthenticatorGroupsConfig {
     private final String securityGroup;
 
-    @OutputCustomType.Constructor({"securityGroup"})
-    private GetClusterAuthenticatorGroupsConfig(String securityGroup) {
+    @OutputCustomType.Constructor
+    private GetClusterAuthenticatorGroupsConfig(@OutputCustomType.Parameter("securityGroup") String securityGroup) {
         this.securityGroup = securityGroup;
     }
 
@@ -40,7 +40,7 @@ public final class GetClusterAuthenticatorGroupsConfig {
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

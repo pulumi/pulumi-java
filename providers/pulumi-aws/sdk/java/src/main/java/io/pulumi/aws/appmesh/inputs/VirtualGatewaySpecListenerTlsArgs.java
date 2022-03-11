@@ -88,32 +88,32 @@ public final class VirtualGatewaySpecListenerTlsArgs extends io.pulumi.resources
     	      this.validation = defaults.validation;
         }
 
-        public Builder setCertificate(Input<VirtualGatewaySpecListenerTlsCertificateArgs> certificate) {
+        public Builder certificate(Input<VirtualGatewaySpecListenerTlsCertificateArgs> certificate) {
             this.certificate = Objects.requireNonNull(certificate);
             return this;
         }
 
-        public Builder setCertificate(VirtualGatewaySpecListenerTlsCertificateArgs certificate) {
+        public Builder certificate(VirtualGatewaySpecListenerTlsCertificateArgs certificate) {
             this.certificate = Input.of(Objects.requireNonNull(certificate));
             return this;
         }
 
-        public Builder setMode(Input<String> mode) {
+        public Builder mode(Input<String> mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
 
-        public Builder setValidation(@Nullable Input<VirtualGatewaySpecListenerTlsValidationArgs> validation) {
+        public Builder validation(@Nullable Input<VirtualGatewaySpecListenerTlsValidationArgs> validation) {
             this.validation = validation;
             return this;
         }
 
-        public Builder setValidation(@Nullable VirtualGatewaySpecListenerTlsValidationArgs validation) {
+        public Builder validation(@Nullable VirtualGatewaySpecListenerTlsValidationArgs validation) {
             this.validation = Input.ofNullable(validation);
             return this;
         }

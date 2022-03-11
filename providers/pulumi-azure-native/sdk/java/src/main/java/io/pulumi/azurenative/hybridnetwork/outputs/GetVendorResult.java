@@ -37,13 +37,13 @@ public final class GetVendorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","provisioningState","skus","type"})
+    @OutputCustomType.Constructor
     private GetVendorResult(
-        String id,
-        String name,
-        String provisioningState,
-        List<SubResourceResponse> skus,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("skus") List<SubResourceResponse> skus,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.provisioningState = provisioningState;
@@ -115,27 +115,27 @@ public final class GetVendorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSkus(List<SubResourceResponse> skus) {
+        public Builder skus(List<SubResourceResponse> skus) {
             this.skus = Objects.requireNonNull(skus);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

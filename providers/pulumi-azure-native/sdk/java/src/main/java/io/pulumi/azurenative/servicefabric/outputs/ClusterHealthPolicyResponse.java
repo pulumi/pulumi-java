@@ -42,11 +42,11 @@ public final class ClusterHealthPolicyResponse {
      */
     private final @Nullable Integer maxPercentUnhealthyNodes;
 
-    @OutputCustomType.Constructor({"applicationHealthPolicies","maxPercentUnhealthyApplications","maxPercentUnhealthyNodes"})
+    @OutputCustomType.Constructor
     private ClusterHealthPolicyResponse(
-        @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies,
-        @Nullable Integer maxPercentUnhealthyApplications,
-        @Nullable Integer maxPercentUnhealthyNodes) {
+        @OutputCustomType.Parameter("applicationHealthPolicies") @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies,
+        @OutputCustomType.Parameter("maxPercentUnhealthyApplications") @Nullable Integer maxPercentUnhealthyApplications,
+        @OutputCustomType.Parameter("maxPercentUnhealthyNodes") @Nullable Integer maxPercentUnhealthyNodes) {
         this.applicationHealthPolicies = applicationHealthPolicies;
         this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
         this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
@@ -110,17 +110,17 @@ public final class ClusterHealthPolicyResponse {
     	      this.maxPercentUnhealthyNodes = defaults.maxPercentUnhealthyNodes;
         }
 
-        public Builder setApplicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
+        public Builder applicationHealthPolicies(@Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies) {
             this.applicationHealthPolicies = applicationHealthPolicies;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
+        public Builder maxPercentUnhealthyApplications(@Nullable Integer maxPercentUnhealthyApplications) {
             this.maxPercentUnhealthyApplications = maxPercentUnhealthyApplications;
             return this;
         }
 
-        public Builder setMaxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
+        public Builder maxPercentUnhealthyNodes(@Nullable Integer maxPercentUnhealthyNodes) {
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }

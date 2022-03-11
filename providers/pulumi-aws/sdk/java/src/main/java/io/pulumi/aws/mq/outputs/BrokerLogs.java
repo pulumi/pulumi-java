@@ -22,10 +22,10 @@ public final class BrokerLogs {
      */
     private final @Nullable Boolean general;
 
-    @OutputCustomType.Constructor({"audit","general"})
+    @OutputCustomType.Constructor
     private BrokerLogs(
-        @Nullable Boolean audit,
-        @Nullable Boolean general) {
+        @OutputCustomType.Parameter("audit") @Nullable Boolean audit,
+        @OutputCustomType.Parameter("general") @Nullable Boolean general) {
         this.audit = audit;
         this.general = general;
     }
@@ -67,12 +67,12 @@ public final class BrokerLogs {
     	      this.general = defaults.general;
         }
 
-        public Builder setAudit(@Nullable Boolean audit) {
+        public Builder audit(@Nullable Boolean audit) {
             this.audit = audit;
             return this;
         }
 
-        public Builder setGeneral(@Nullable Boolean general) {
+        public Builder general(@Nullable Boolean general) {
             this.general = general;
             return this;
         }

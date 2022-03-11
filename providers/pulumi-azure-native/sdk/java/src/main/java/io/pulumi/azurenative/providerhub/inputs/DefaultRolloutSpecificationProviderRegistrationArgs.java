@@ -49,12 +49,12 @@ public final class DefaultRolloutSpecificationProviderRegistrationArgs extends i
     	      this.properties = defaults.properties;
         }
 
-        public Builder setProperties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
+        public Builder properties(@Nullable Input<ProviderRegistrationPropertiesArgs> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable ProviderRegistrationPropertiesArgs properties) {
+        public Builder properties(@Nullable ProviderRegistrationPropertiesArgs properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }

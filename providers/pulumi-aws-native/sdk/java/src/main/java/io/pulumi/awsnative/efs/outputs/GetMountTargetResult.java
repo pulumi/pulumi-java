@@ -15,10 +15,10 @@ public final class GetMountTargetResult {
     private final @Nullable String id;
     private final @Nullable List<String> securityGroups;
 
-    @OutputCustomType.Constructor({"id","securityGroups"})
+    @OutputCustomType.Constructor
     private GetMountTargetResult(
-        @Nullable String id,
-        @Nullable List<String> securityGroups) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("securityGroups") @Nullable List<String> securityGroups) {
         this.id = id;
         this.securityGroups = securityGroups;
     }
@@ -52,12 +52,12 @@ public final class GetMountTargetResult {
     	      this.securityGroups = defaults.securityGroups;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }

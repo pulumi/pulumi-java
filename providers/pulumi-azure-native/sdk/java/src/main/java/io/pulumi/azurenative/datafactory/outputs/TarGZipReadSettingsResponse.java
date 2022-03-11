@@ -24,10 +24,10 @@ public final class TarGZipReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"preserveCompressionFileNameAsFolder","type"})
+    @OutputCustomType.Constructor
     private TarGZipReadSettingsResponse(
-        @Nullable Object preserveCompressionFileNameAsFolder,
-        String type) {
+        @OutputCustomType.Parameter("preserveCompressionFileNameAsFolder") @Nullable Object preserveCompressionFileNameAsFolder,
+        @OutputCustomType.Parameter("type") String type) {
         this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
         this.type = type;
     }
@@ -70,12 +70,12 @@ public final class TarGZipReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPreserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
+        public Builder preserveCompressionFileNameAsFolder(@Nullable Object preserveCompressionFileNameAsFolder) {
             this.preserveCompressionFileNameAsFolder = preserveCompressionFileNameAsFolder;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

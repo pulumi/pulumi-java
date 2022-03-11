@@ -34,12 +34,12 @@ public final class LogRulesResponse {
      */
     private final @Nullable Boolean sendSubscriptionLogs;
 
-    @OutputCustomType.Constructor({"filteringTags","sendAadLogs","sendActivityLogs","sendSubscriptionLogs"})
+    @OutputCustomType.Constructor
     private LogRulesResponse(
-        @Nullable List<FilteringTagResponse> filteringTags,
-        @Nullable Boolean sendAadLogs,
-        @Nullable Boolean sendActivityLogs,
-        @Nullable Boolean sendSubscriptionLogs) {
+        @OutputCustomType.Parameter("filteringTags") @Nullable List<FilteringTagResponse> filteringTags,
+        @OutputCustomType.Parameter("sendAadLogs") @Nullable Boolean sendAadLogs,
+        @OutputCustomType.Parameter("sendActivityLogs") @Nullable Boolean sendActivityLogs,
+        @OutputCustomType.Parameter("sendSubscriptionLogs") @Nullable Boolean sendSubscriptionLogs) {
         this.filteringTags = filteringTags;
         this.sendAadLogs = sendAadLogs;
         this.sendActivityLogs = sendActivityLogs;
@@ -101,22 +101,22 @@ public final class LogRulesResponse {
     	      this.sendSubscriptionLogs = defaults.sendSubscriptionLogs;
         }
 
-        public Builder setFilteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
+        public Builder filteringTags(@Nullable List<FilteringTagResponse> filteringTags) {
             this.filteringTags = filteringTags;
             return this;
         }
 
-        public Builder setSendAadLogs(@Nullable Boolean sendAadLogs) {
+        public Builder sendAadLogs(@Nullable Boolean sendAadLogs) {
             this.sendAadLogs = sendAadLogs;
             return this;
         }
 
-        public Builder setSendActivityLogs(@Nullable Boolean sendActivityLogs) {
+        public Builder sendActivityLogs(@Nullable Boolean sendActivityLogs) {
             this.sendActivityLogs = sendActivityLogs;
             return this;
         }
 
-        public Builder setSendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
+        public Builder sendSubscriptionLogs(@Nullable Boolean sendSubscriptionLogs) {
             this.sendSubscriptionLogs = sendSubscriptionLogs;
             return this;
         }

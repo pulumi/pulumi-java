@@ -70,22 +70,22 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEnc
     	      this.sseAwsKmsKeyId = defaults.sseAwsKmsKeyId;
         }
 
-        public Builder setCatalogEncryptionMode(Input<String> catalogEncryptionMode) {
+        public Builder catalogEncryptionMode(Input<String> catalogEncryptionMode) {
             this.catalogEncryptionMode = Objects.requireNonNull(catalogEncryptionMode);
             return this;
         }
 
-        public Builder setCatalogEncryptionMode(String catalogEncryptionMode) {
+        public Builder catalogEncryptionMode(String catalogEncryptionMode) {
             this.catalogEncryptionMode = Input.of(Objects.requireNonNull(catalogEncryptionMode));
             return this;
         }
 
-        public Builder setSseAwsKmsKeyId(@Nullable Input<String> sseAwsKmsKeyId) {
+        public Builder sseAwsKmsKeyId(@Nullable Input<String> sseAwsKmsKeyId) {
             this.sseAwsKmsKeyId = sseAwsKmsKeyId;
             return this;
         }
 
-        public Builder setSseAwsKmsKeyId(@Nullable String sseAwsKmsKeyId) {
+        public Builder sseAwsKmsKeyId(@Nullable String sseAwsKmsKeyId) {
             this.sseAwsKmsKeyId = Input.ofNullable(sseAwsKmsKeyId);
             return this;
         }

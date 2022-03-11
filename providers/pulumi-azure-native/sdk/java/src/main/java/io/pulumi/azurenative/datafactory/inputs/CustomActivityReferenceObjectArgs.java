@@ -76,22 +76,22 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
     	      this.linkedServices = defaults.linkedServices;
         }
 
-        public Builder setDatasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
+        public Builder datasets(@Nullable Input<List<DatasetReferenceArgs>> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceArgs> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
             this.datasets = Input.ofNullable(datasets);
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
+        public Builder linkedServices(@Nullable Input<List<LinkedServiceReferenceArgs>> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
+        public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
             this.linkedServices = Input.ofNullable(linkedServices);
             return this;
         }

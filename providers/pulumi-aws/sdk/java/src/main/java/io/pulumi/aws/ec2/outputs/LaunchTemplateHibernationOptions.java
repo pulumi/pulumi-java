@@ -15,8 +15,8 @@ public final class LaunchTemplateHibernationOptions {
      */
     private final Boolean configured;
 
-    @OutputCustomType.Constructor({"configured"})
-    private LaunchTemplateHibernationOptions(Boolean configured) {
+    @OutputCustomType.Constructor
+    private LaunchTemplateHibernationOptions(@OutputCustomType.Parameter("configured") Boolean configured) {
         this.configured = configured;
     }
 
@@ -48,7 +48,7 @@ public final class LaunchTemplateHibernationOptions {
     	      this.configured = defaults.configured;
         }
 
-        public Builder setConfigured(Boolean configured) {
+        public Builder configured(Boolean configured) {
             this.configured = Objects.requireNonNull(configured);
             return this;
         }

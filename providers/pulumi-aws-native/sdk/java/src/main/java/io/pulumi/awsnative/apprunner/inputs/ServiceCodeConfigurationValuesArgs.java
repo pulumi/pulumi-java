@@ -121,52 +121,52 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setBuildCommand(@Nullable Input<String> buildCommand) {
+        public Builder buildCommand(@Nullable Input<String> buildCommand) {
             this.buildCommand = buildCommand;
             return this;
         }
 
-        public Builder setBuildCommand(@Nullable String buildCommand) {
+        public Builder buildCommand(@Nullable String buildCommand) {
             this.buildCommand = Input.ofNullable(buildCommand);
             return this;
         }
 
-        public Builder setPort(@Nullable Input<String> port) {
+        public Builder port(@Nullable Input<String> port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = Input.ofNullable(port);
             return this;
         }
 
-        public Builder setRuntime(Input<ServiceCodeConfigurationValuesRuntime> runtime) {
+        public Builder runtime(Input<ServiceCodeConfigurationValuesRuntime> runtime) {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
 
-        public Builder setRuntime(ServiceCodeConfigurationValuesRuntime runtime) {
+        public Builder runtime(ServiceCodeConfigurationValuesRuntime runtime) {
             this.runtime = Input.of(Objects.requireNonNull(runtime));
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable List<ServiceKeyValuePairArgs> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = Input.ofNullable(runtimeEnvironmentVariables);
             return this;
         }
 
-        public Builder setStartCommand(@Nullable Input<String> startCommand) {
+        public Builder startCommand(@Nullable Input<String> startCommand) {
             this.startCommand = startCommand;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = Input.ofNullable(startCommand);
             return this;
         }

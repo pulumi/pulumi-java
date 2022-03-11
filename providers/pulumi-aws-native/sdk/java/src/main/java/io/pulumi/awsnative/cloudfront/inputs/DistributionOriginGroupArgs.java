@@ -75,32 +75,32 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     	      this.members = defaults.members;
         }
 
-        public Builder setFailoverCriteria(Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria) {
+        public Builder failoverCriteria(Input<DistributionOriginGroupFailoverCriteriaArgs> failoverCriteria) {
             this.failoverCriteria = Objects.requireNonNull(failoverCriteria);
             return this;
         }
 
-        public Builder setFailoverCriteria(DistributionOriginGroupFailoverCriteriaArgs failoverCriteria) {
+        public Builder failoverCriteria(DistributionOriginGroupFailoverCriteriaArgs failoverCriteria) {
             this.failoverCriteria = Input.of(Objects.requireNonNull(failoverCriteria));
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setMembers(Input<DistributionOriginGroupMembersArgs> members) {
+        public Builder members(Input<DistributionOriginGroupMembersArgs> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setMembers(DistributionOriginGroupMembersArgs members) {
+        public Builder members(DistributionOriginGroupMembersArgs members) {
             this.members = Input.of(Objects.requireNonNull(members));
             return this;
         }

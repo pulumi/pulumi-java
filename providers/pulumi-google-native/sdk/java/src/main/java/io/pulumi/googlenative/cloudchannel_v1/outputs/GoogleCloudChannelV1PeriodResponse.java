@@ -21,10 +21,10 @@ public final class GoogleCloudChannelV1PeriodResponse {
      */
     private final String periodType;
 
-    @OutputCustomType.Constructor({"duration","periodType"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1PeriodResponse(
-        Integer duration,
-        String periodType) {
+        @OutputCustomType.Parameter("duration") Integer duration,
+        @OutputCustomType.Parameter("periodType") String periodType) {
         this.duration = duration;
         this.periodType = periodType;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudChannelV1PeriodResponse {
     	      this.periodType = defaults.periodType;
         }
 
-        public Builder setDuration(Integer duration) {
+        public Builder duration(Integer duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setPeriodType(String periodType) {
+        public Builder periodType(String periodType) {
             this.periodType = Objects.requireNonNull(periodType);
             return this;
         }

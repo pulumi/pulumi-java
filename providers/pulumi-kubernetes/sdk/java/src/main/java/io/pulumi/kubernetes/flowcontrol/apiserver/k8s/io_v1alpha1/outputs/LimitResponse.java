@@ -23,10 +23,10 @@ public final class LimitResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"queuing","type"})
+    @OutputCustomType.Constructor
     private LimitResponse(
-        @Nullable QueuingConfiguration queuing,
-        String type) {
+        @OutputCustomType.Parameter("queuing") @Nullable QueuingConfiguration queuing,
+        @OutputCustomType.Parameter("type") String type) {
         this.queuing = queuing;
         this.type = type;
     }
@@ -68,12 +68,12 @@ public final class LimitResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setQueuing(@Nullable QueuingConfiguration queuing) {
+        public Builder queuing(@Nullable QueuingConfiguration queuing) {
             this.queuing = queuing;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

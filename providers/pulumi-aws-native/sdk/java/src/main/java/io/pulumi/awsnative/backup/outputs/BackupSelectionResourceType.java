@@ -21,14 +21,14 @@ public final class BackupSelectionResourceType {
     private final @Nullable List<String> resources;
     private final String selectionName;
 
-    @OutputCustomType.Constructor({"conditions","iamRoleArn","listOfTags","notResources","resources","selectionName"})
+    @OutputCustomType.Constructor
     private BackupSelectionResourceType(
-        @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
-        String iamRoleArn,
-        @Nullable List<BackupSelectionConditionResourceType> listOfTags,
-        @Nullable List<String> notResources,
-        @Nullable List<String> resources,
-        String selectionName) {
+        @OutputCustomType.Parameter("conditions") @Nullable BackupSelectionResourceTypeConditionsProperties conditions,
+        @OutputCustomType.Parameter("iamRoleArn") String iamRoleArn,
+        @OutputCustomType.Parameter("listOfTags") @Nullable List<BackupSelectionConditionResourceType> listOfTags,
+        @OutputCustomType.Parameter("notResources") @Nullable List<String> notResources,
+        @OutputCustomType.Parameter("resources") @Nullable List<String> resources,
+        @OutputCustomType.Parameter("selectionName") String selectionName) {
         this.conditions = conditions;
         this.iamRoleArn = iamRoleArn;
         this.listOfTags = listOfTags;
@@ -86,32 +86,32 @@ public final class BackupSelectionResourceType {
     	      this.selectionName = defaults.selectionName;
         }
 
-        public Builder setConditions(@Nullable BackupSelectionResourceTypeConditionsProperties conditions) {
+        public Builder conditions(@Nullable BackupSelectionResourceTypeConditionsProperties conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setIamRoleArn(String iamRoleArn) {
+        public Builder iamRoleArn(String iamRoleArn) {
             this.iamRoleArn = Objects.requireNonNull(iamRoleArn);
             return this;
         }
 
-        public Builder setListOfTags(@Nullable List<BackupSelectionConditionResourceType> listOfTags) {
+        public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceType> listOfTags) {
             this.listOfTags = listOfTags;
             return this;
         }
 
-        public Builder setNotResources(@Nullable List<String> notResources) {
+        public Builder notResources(@Nullable List<String> notResources) {
             this.notResources = notResources;
             return this;
         }
 
-        public Builder setResources(@Nullable List<String> resources) {
+        public Builder resources(@Nullable List<String> resources) {
             this.resources = resources;
             return this;
         }
 
-        public Builder setSelectionName(String selectionName) {
+        public Builder selectionName(String selectionName) {
             this.selectionName = Objects.requireNonNull(selectionName);
             return this;
         }

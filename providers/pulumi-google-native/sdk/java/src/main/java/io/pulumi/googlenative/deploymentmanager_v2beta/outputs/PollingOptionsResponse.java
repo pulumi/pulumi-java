@@ -37,13 +37,13 @@ public final class PollingOptionsResponse {
      */
     private final String targetLink;
 
-    @OutputCustomType.Constructor({"diagnostics","failCondition","finishCondition","pollingLink","targetLink"})
+    @OutputCustomType.Constructor
     private PollingOptionsResponse(
-        List<DiagnosticResponse> diagnostics,
-        String failCondition,
-        String finishCondition,
-        String pollingLink,
-        String targetLink) {
+        @OutputCustomType.Parameter("diagnostics") List<DiagnosticResponse> diagnostics,
+        @OutputCustomType.Parameter("failCondition") String failCondition,
+        @OutputCustomType.Parameter("finishCondition") String finishCondition,
+        @OutputCustomType.Parameter("pollingLink") String pollingLink,
+        @OutputCustomType.Parameter("targetLink") String targetLink) {
         this.diagnostics = diagnostics;
         this.failCondition = failCondition;
         this.finishCondition = finishCondition;
@@ -115,27 +115,27 @@ public final class PollingOptionsResponse {
     	      this.targetLink = defaults.targetLink;
         }
 
-        public Builder setDiagnostics(List<DiagnosticResponse> diagnostics) {
+        public Builder diagnostics(List<DiagnosticResponse> diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
 
-        public Builder setFailCondition(String failCondition) {
+        public Builder failCondition(String failCondition) {
             this.failCondition = Objects.requireNonNull(failCondition);
             return this;
         }
 
-        public Builder setFinishCondition(String finishCondition) {
+        public Builder finishCondition(String finishCondition) {
             this.finishCondition = Objects.requireNonNull(finishCondition);
             return this;
         }
 
-        public Builder setPollingLink(String pollingLink) {
+        public Builder pollingLink(String pollingLink) {
             this.pollingLink = Objects.requireNonNull(pollingLink);
             return this;
         }
 
-        public Builder setTargetLink(String targetLink) {
+        public Builder targetLink(String targetLink) {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }

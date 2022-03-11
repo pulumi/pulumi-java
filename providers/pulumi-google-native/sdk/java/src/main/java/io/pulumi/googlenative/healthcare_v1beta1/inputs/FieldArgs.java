@@ -123,52 +123,52 @@ public final class FieldArgs extends io.pulumi.resources.ResourceArgs {
     	      this.type = defaults.type;
         }
 
-        public Builder setMaxOccurs(@Nullable Input<Integer> maxOccurs) {
+        public Builder maxOccurs(@Nullable Input<Integer> maxOccurs) {
             this.maxOccurs = maxOccurs;
             return this;
         }
 
-        public Builder setMaxOccurs(@Nullable Integer maxOccurs) {
+        public Builder maxOccurs(@Nullable Integer maxOccurs) {
             this.maxOccurs = Input.ofNullable(maxOccurs);
             return this;
         }
 
-        public Builder setMinOccurs(@Nullable Input<Integer> minOccurs) {
+        public Builder minOccurs(@Nullable Input<Integer> minOccurs) {
             this.minOccurs = minOccurs;
             return this;
         }
 
-        public Builder setMinOccurs(@Nullable Integer minOccurs) {
+        public Builder minOccurs(@Nullable Integer minOccurs) {
             this.minOccurs = Input.ofNullable(minOccurs);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<String> table) {
+        public Builder table(@Nullable Input<String> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable String table) {
+        public Builder table(@Nullable String table) {
             this.table = Input.ofNullable(table);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }

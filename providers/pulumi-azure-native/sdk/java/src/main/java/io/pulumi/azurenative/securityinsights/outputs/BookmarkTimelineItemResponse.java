@@ -60,17 +60,17 @@ public final class BookmarkTimelineItemResponse {
      */
     private final @Nullable String startTimeUtc;
 
-    @OutputCustomType.Constructor({"azureResourceId","createdBy","displayName","endTimeUtc","eventTime","kind","labels","notes","startTimeUtc"})
+    @OutputCustomType.Constructor
     private BookmarkTimelineItemResponse(
-        String azureResourceId,
-        @Nullable UserInfoResponse createdBy,
-        @Nullable String displayName,
-        @Nullable String endTimeUtc,
-        @Nullable String eventTime,
-        String kind,
-        @Nullable List<String> labels,
-        @Nullable String notes,
-        @Nullable String startTimeUtc) {
+        @OutputCustomType.Parameter("azureResourceId") String azureResourceId,
+        @OutputCustomType.Parameter("createdBy") @Nullable UserInfoResponse createdBy,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("endTimeUtc") @Nullable String endTimeUtc,
+        @OutputCustomType.Parameter("eventTime") @Nullable String eventTime,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") @Nullable List<String> labels,
+        @OutputCustomType.Parameter("notes") @Nullable String notes,
+        @OutputCustomType.Parameter("startTimeUtc") @Nullable String startTimeUtc) {
         this.azureResourceId = azureResourceId;
         this.createdBy = createdBy;
         this.displayName = displayName;
@@ -183,47 +183,47 @@ public final class BookmarkTimelineItemResponse {
     	      this.startTimeUtc = defaults.startTimeUtc;
         }
 
-        public Builder setAzureResourceId(String azureResourceId) {
+        public Builder azureResourceId(String azureResourceId) {
             this.azureResourceId = Objects.requireNonNull(azureResourceId);
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable UserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEndTimeUtc(@Nullable String endTimeUtc) {
+        public Builder endTimeUtc(@Nullable String endTimeUtc) {
             this.endTimeUtc = endTimeUtc;
             return this;
         }
 
-        public Builder setEventTime(@Nullable String eventTime) {
+        public Builder eventTime(@Nullable String eventTime) {
             this.eventTime = eventTime;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(@Nullable List<String> labels) {
+        public Builder labels(@Nullable List<String> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNotes(@Nullable String notes) {
+        public Builder notes(@Nullable String notes) {
             this.notes = notes;
             return this;
         }
 
-        public Builder setStartTimeUtc(@Nullable String startTimeUtc) {
+        public Builder startTimeUtc(@Nullable String startTimeUtc) {
             this.startTimeUtc = startTimeUtc;
             return this;
         }

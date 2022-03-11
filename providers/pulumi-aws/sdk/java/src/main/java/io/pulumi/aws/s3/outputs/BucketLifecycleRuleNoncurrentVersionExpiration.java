@@ -17,8 +17,8 @@ public final class BucketLifecycleRuleNoncurrentVersionExpiration {
      */
     private final @Nullable Integer days;
 
-    @OutputCustomType.Constructor({"days"})
-    private BucketLifecycleRuleNoncurrentVersionExpiration(@Nullable Integer days) {
+    @OutputCustomType.Constructor
+    private BucketLifecycleRuleNoncurrentVersionExpiration(@OutputCustomType.Parameter("days") @Nullable Integer days) {
         this.days = days;
     }
 
@@ -50,7 +50,7 @@ public final class BucketLifecycleRuleNoncurrentVersionExpiration {
     	      this.days = defaults.days;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = days;
             return this;
         }

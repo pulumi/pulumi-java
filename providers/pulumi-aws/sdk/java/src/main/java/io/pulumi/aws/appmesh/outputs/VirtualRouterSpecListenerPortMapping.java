@@ -21,10 +21,10 @@ public final class VirtualRouterSpecListenerPortMapping {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"port","protocol"})
+    @OutputCustomType.Constructor
     private VirtualRouterSpecListenerPortMapping(
-        Integer port,
-        String protocol) {
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.port = port;
         this.protocol = protocol;
     }
@@ -66,12 +66,12 @@ public final class VirtualRouterSpecListenerPortMapping {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

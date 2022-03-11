@@ -75,22 +75,22 @@ public final class OriginGroupOverrideActionArgs extends io.pulumi.resources.Res
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setParameters(Input<OriginGroupOverrideActionParametersArgs> parameters) {
+        public Builder parameters(Input<OriginGroupOverrideActionParametersArgs> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParameters(OriginGroupOverrideActionParametersArgs parameters) {
+        public Builder parameters(OriginGroupOverrideActionParametersArgs parameters) {
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }

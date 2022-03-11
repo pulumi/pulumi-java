@@ -56,16 +56,16 @@ public final class VirtualNicResponse {
      */
     private final String virtualNicName;
 
-    @OutputCustomType.Constructor({"customization","ipAddresses","macAddress","network","nicType","powerOnBoot","virtualNicId","virtualNicName"})
+    @OutputCustomType.Constructor
     private VirtualNicResponse(
-        @Nullable GuestOSNICCustomizationResponse customization,
-        @Nullable List<String> ipAddresses,
-        @Nullable String macAddress,
-        VirtualNetworkResponse network,
-        String nicType,
-        @Nullable Boolean powerOnBoot,
-        @Nullable String virtualNicId,
-        String virtualNicName) {
+        @OutputCustomType.Parameter("customization") @Nullable GuestOSNICCustomizationResponse customization,
+        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @OutputCustomType.Parameter("macAddress") @Nullable String macAddress,
+        @OutputCustomType.Parameter("network") VirtualNetworkResponse network,
+        @OutputCustomType.Parameter("nicType") String nicType,
+        @OutputCustomType.Parameter("powerOnBoot") @Nullable Boolean powerOnBoot,
+        @OutputCustomType.Parameter("virtualNicId") @Nullable String virtualNicId,
+        @OutputCustomType.Parameter("virtualNicName") String virtualNicName) {
         this.customization = customization;
         this.ipAddresses = ipAddresses;
         this.macAddress = macAddress;
@@ -167,42 +167,42 @@ public final class VirtualNicResponse {
     	      this.virtualNicName = defaults.virtualNicName;
         }
 
-        public Builder setCustomization(@Nullable GuestOSNICCustomizationResponse customization) {
+        public Builder customization(@Nullable GuestOSNICCustomizationResponse customization) {
             this.customization = customization;
             return this;
         }
 
-        public Builder setIpAddresses(@Nullable List<String> ipAddresses) {
+        public Builder ipAddresses(@Nullable List<String> ipAddresses) {
             this.ipAddresses = ipAddresses;
             return this;
         }
 
-        public Builder setMacAddress(@Nullable String macAddress) {
+        public Builder macAddress(@Nullable String macAddress) {
             this.macAddress = macAddress;
             return this;
         }
 
-        public Builder setNetwork(VirtualNetworkResponse network) {
+        public Builder network(VirtualNetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setNicType(String nicType) {
+        public Builder nicType(String nicType) {
             this.nicType = Objects.requireNonNull(nicType);
             return this;
         }
 
-        public Builder setPowerOnBoot(@Nullable Boolean powerOnBoot) {
+        public Builder powerOnBoot(@Nullable Boolean powerOnBoot) {
             this.powerOnBoot = powerOnBoot;
             return this;
         }
 
-        public Builder setVirtualNicId(@Nullable String virtualNicId) {
+        public Builder virtualNicId(@Nullable String virtualNicId) {
             this.virtualNicId = virtualNicId;
             return this;
         }
 
-        public Builder setVirtualNicName(String virtualNicName) {
+        public Builder virtualNicName(String virtualNicName) {
             this.virtualNicName = Objects.requireNonNull(virtualNicName);
             return this;
         }

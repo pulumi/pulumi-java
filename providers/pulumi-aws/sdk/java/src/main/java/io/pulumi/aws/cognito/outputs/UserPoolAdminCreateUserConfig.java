@@ -23,10 +23,10 @@ public final class UserPoolAdminCreateUserConfig {
      */
     private final @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate;
 
-    @OutputCustomType.Constructor({"allowAdminCreateUserOnly","inviteMessageTemplate"})
+    @OutputCustomType.Constructor
     private UserPoolAdminCreateUserConfig(
-        @Nullable Boolean allowAdminCreateUserOnly,
-        @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
+        @OutputCustomType.Parameter("allowAdminCreateUserOnly") @Nullable Boolean allowAdminCreateUserOnly,
+        @OutputCustomType.Parameter("inviteMessageTemplate") @Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
         this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
         this.inviteMessageTemplate = inviteMessageTemplate;
     }
@@ -68,12 +68,12 @@ public final class UserPoolAdminCreateUserConfig {
     	      this.inviteMessageTemplate = defaults.inviteMessageTemplate;
         }
 
-        public Builder setAllowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
+        public Builder allowAdminCreateUserOnly(@Nullable Boolean allowAdminCreateUserOnly) {
             this.allowAdminCreateUserOnly = allowAdminCreateUserOnly;
             return this;
         }
 
-        public Builder setInviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
+        public Builder inviteMessageTemplate(@Nullable UserPoolAdminCreateUserConfigInviteMessageTemplate inviteMessageTemplate) {
             this.inviteMessageTemplate = inviteMessageTemplate;
             return this;
         }

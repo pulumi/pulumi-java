@@ -28,11 +28,11 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"dataType","mapTo","name"})
+    @OutputCustomType.Constructor
     private AzureMachineLearningWebServiceInputColumnResponse(
-        @Nullable String dataType,
-        @Nullable Integer mapTo,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("dataType") @Nullable String dataType,
+        @OutputCustomType.Parameter("mapTo") @Nullable Integer mapTo,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.dataType = dataType;
         this.mapTo = mapTo;
         this.name = name;
@@ -84,17 +84,17 @@ public final class AzureMachineLearningWebServiceInputColumnResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataType(@Nullable String dataType) {
+        public Builder dataType(@Nullable String dataType) {
             this.dataType = dataType;
             return this;
         }
 
-        public Builder setMapTo(@Nullable Integer mapTo) {
+        public Builder mapTo(@Nullable Integer mapTo) {
             this.mapTo = mapTo;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

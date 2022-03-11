@@ -22,10 +22,10 @@ public final class BucketRoutingRuleCondition {
      */
     private final @Nullable String keyPrefixEquals;
 
-    @OutputCustomType.Constructor({"httpErrorCodeReturnedEquals","keyPrefixEquals"})
+    @OutputCustomType.Constructor
     private BucketRoutingRuleCondition(
-        @Nullable String httpErrorCodeReturnedEquals,
-        @Nullable String keyPrefixEquals) {
+        @OutputCustomType.Parameter("httpErrorCodeReturnedEquals") @Nullable String httpErrorCodeReturnedEquals,
+        @OutputCustomType.Parameter("keyPrefixEquals") @Nullable String keyPrefixEquals) {
         this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
         this.keyPrefixEquals = keyPrefixEquals;
     }
@@ -67,12 +67,12 @@ public final class BucketRoutingRuleCondition {
     	      this.keyPrefixEquals = defaults.keyPrefixEquals;
         }
 
-        public Builder setHttpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
+        public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
             this.httpErrorCodeReturnedEquals = httpErrorCodeReturnedEquals;
             return this;
         }
 
-        public Builder setKeyPrefixEquals(@Nullable String keyPrefixEquals) {
+        public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }

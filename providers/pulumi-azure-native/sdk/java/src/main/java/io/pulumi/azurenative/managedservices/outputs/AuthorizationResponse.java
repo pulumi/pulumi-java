@@ -33,12 +33,12 @@ public final class AuthorizationResponse {
      */
     private final String roleDefinitionId;
 
-    @OutputCustomType.Constructor({"delegatedRoleDefinitionIds","principalId","principalIdDisplayName","roleDefinitionId"})
+    @OutputCustomType.Constructor
     private AuthorizationResponse(
-        @Nullable List<String> delegatedRoleDefinitionIds,
-        String principalId,
-        @Nullable String principalIdDisplayName,
-        String roleDefinitionId) {
+        @OutputCustomType.Parameter("delegatedRoleDefinitionIds") @Nullable List<String> delegatedRoleDefinitionIds,
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("principalIdDisplayName") @Nullable String principalIdDisplayName,
+        @OutputCustomType.Parameter("roleDefinitionId") String roleDefinitionId) {
         this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
         this.principalId = principalId;
         this.principalIdDisplayName = principalIdDisplayName;
@@ -100,22 +100,22 @@ public final class AuthorizationResponse {
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setDelegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
+        public Builder delegatedRoleDefinitionIds(@Nullable List<String> delegatedRoleDefinitionIds) {
             this.delegatedRoleDefinitionIds = delegatedRoleDefinitionIds;
             return this;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setPrincipalIdDisplayName(@Nullable String principalIdDisplayName) {
+        public Builder principalIdDisplayName(@Nullable String principalIdDisplayName) {
             this.principalIdDisplayName = principalIdDisplayName;
             return this;
         }
 
-        public Builder setRoleDefinitionId(String roleDefinitionId) {
+        public Builder roleDefinitionId(String roleDefinitionId) {
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }

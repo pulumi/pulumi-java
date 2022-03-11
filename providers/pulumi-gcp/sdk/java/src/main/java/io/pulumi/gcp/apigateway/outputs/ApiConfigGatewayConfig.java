@@ -16,8 +16,8 @@ public final class ApiConfigGatewayConfig {
      */
     private final ApiConfigGatewayConfigBackendConfig backendConfig;
 
-    @OutputCustomType.Constructor({"backendConfig"})
-    private ApiConfigGatewayConfig(ApiConfigGatewayConfigBackendConfig backendConfig) {
+    @OutputCustomType.Constructor
+    private ApiConfigGatewayConfig(@OutputCustomType.Parameter("backendConfig") ApiConfigGatewayConfigBackendConfig backendConfig) {
         this.backendConfig = backendConfig;
     }
 
@@ -50,7 +50,7 @@ public final class ApiConfigGatewayConfig {
     	      this.backendConfig = defaults.backendConfig;
         }
 
-        public Builder setBackendConfig(ApiConfigGatewayConfigBackendConfig backendConfig) {
+        public Builder backendConfig(ApiConfigGatewayConfigBackendConfig backendConfig) {
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }

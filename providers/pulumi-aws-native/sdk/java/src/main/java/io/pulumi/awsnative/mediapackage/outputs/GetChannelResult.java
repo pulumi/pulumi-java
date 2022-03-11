@@ -39,13 +39,13 @@ public final class GetChannelResult {
      */
     private final @Nullable ChannelLogConfiguration ingressAccessLogs;
 
-    @OutputCustomType.Constructor({"arn","description","egressAccessLogs","hlsIngest","ingressAccessLogs"})
+    @OutputCustomType.Constructor
     private GetChannelResult(
-        @Nullable String arn,
-        @Nullable String description,
-        @Nullable ChannelLogConfiguration egressAccessLogs,
-        @Nullable ChannelHlsIngest hlsIngest,
-        @Nullable ChannelLogConfiguration ingressAccessLogs) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("egressAccessLogs") @Nullable ChannelLogConfiguration egressAccessLogs,
+        @OutputCustomType.Parameter("hlsIngest") @Nullable ChannelHlsIngest hlsIngest,
+        @OutputCustomType.Parameter("ingressAccessLogs") @Nullable ChannelLogConfiguration ingressAccessLogs) {
         this.arn = arn;
         this.description = description;
         this.egressAccessLogs = egressAccessLogs;
@@ -117,27 +117,27 @@ public final class GetChannelResult {
     	      this.ingressAccessLogs = defaults.ingressAccessLogs;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEgressAccessLogs(@Nullable ChannelLogConfiguration egressAccessLogs) {
+        public Builder egressAccessLogs(@Nullable ChannelLogConfiguration egressAccessLogs) {
             this.egressAccessLogs = egressAccessLogs;
             return this;
         }
 
-        public Builder setHlsIngest(@Nullable ChannelHlsIngest hlsIngest) {
+        public Builder hlsIngest(@Nullable ChannelHlsIngest hlsIngest) {
             this.hlsIngest = hlsIngest;
             return this;
         }
 
-        public Builder setIngressAccessLogs(@Nullable ChannelLogConfiguration ingressAccessLogs) {
+        public Builder ingressAccessLogs(@Nullable ChannelLogConfiguration ingressAccessLogs) {
             this.ingressAccessLogs = ingressAccessLogs;
             return this;
         }

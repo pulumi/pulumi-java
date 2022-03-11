@@ -27,11 +27,11 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
      */
     private final @Nullable String scriptUri;
 
-    @OutputCustomType.Constructor({"commandId","script","scriptUri"})
+    @OutputCustomType.Constructor
     private VirtualMachineRunCommandScriptSourceResponse(
-        @Nullable String commandId,
-        @Nullable String script,
-        @Nullable String scriptUri) {
+        @OutputCustomType.Parameter("commandId") @Nullable String commandId,
+        @OutputCustomType.Parameter("script") @Nullable String script,
+        @OutputCustomType.Parameter("scriptUri") @Nullable String scriptUri) {
         this.commandId = commandId;
         this.script = script;
         this.scriptUri = scriptUri;
@@ -83,17 +83,17 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
     	      this.scriptUri = defaults.scriptUri;
         }
 
-        public Builder setCommandId(@Nullable String commandId) {
+        public Builder commandId(@Nullable String commandId) {
             this.commandId = commandId;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScriptUri(@Nullable String scriptUri) {
+        public Builder scriptUri(@Nullable String scriptUri) {
             this.scriptUri = scriptUri;
             return this;
         }

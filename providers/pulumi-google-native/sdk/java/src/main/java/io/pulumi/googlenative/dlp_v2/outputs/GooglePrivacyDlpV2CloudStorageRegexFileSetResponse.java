@@ -26,11 +26,11 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
      */
     private final List<String> includeRegex;
 
-    @OutputCustomType.Constructor({"bucketName","excludeRegex","includeRegex"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(
-        String bucketName,
-        List<String> excludeRegex,
-        List<String> includeRegex) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("excludeRegex") List<String> excludeRegex,
+        @OutputCustomType.Parameter("includeRegex") List<String> includeRegex) {
         this.bucketName = bucketName;
         this.excludeRegex = excludeRegex;
         this.includeRegex = includeRegex;
@@ -82,17 +82,17 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
     	      this.includeRegex = defaults.includeRegex;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setExcludeRegex(List<String> excludeRegex) {
+        public Builder excludeRegex(List<String> excludeRegex) {
             this.excludeRegex = Objects.requireNonNull(excludeRegex);
             return this;
         }
 
-        public Builder setIncludeRegex(List<String> includeRegex) {
+        public Builder includeRegex(List<String> includeRegex) {
             this.includeRegex = Objects.requireNonNull(includeRegex);
             return this;
         }

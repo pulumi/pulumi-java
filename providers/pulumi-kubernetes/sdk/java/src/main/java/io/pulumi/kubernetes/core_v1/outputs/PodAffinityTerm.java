@@ -34,12 +34,12 @@ public final class PodAffinityTerm {
      */
     private final String topologyKey;
 
-    @OutputCustomType.Constructor({"labelSelector","namespaceSelector","namespaces","topologyKey"})
+    @OutputCustomType.Constructor
     private PodAffinityTerm(
-        @Nullable LabelSelector labelSelector,
-        @Nullable LabelSelector namespaceSelector,
-        @Nullable List<String> namespaces,
-        String topologyKey) {
+        @OutputCustomType.Parameter("labelSelector") @Nullable LabelSelector labelSelector,
+        @OutputCustomType.Parameter("namespaceSelector") @Nullable LabelSelector namespaceSelector,
+        @OutputCustomType.Parameter("namespaces") @Nullable List<String> namespaces,
+        @OutputCustomType.Parameter("topologyKey") String topologyKey) {
         this.labelSelector = labelSelector;
         this.namespaceSelector = namespaceSelector;
         this.namespaces = namespaces;
@@ -101,22 +101,22 @@ public final class PodAffinityTerm {
     	      this.topologyKey = defaults.topologyKey;
         }
 
-        public Builder setLabelSelector(@Nullable LabelSelector labelSelector) {
+        public Builder labelSelector(@Nullable LabelSelector labelSelector) {
             this.labelSelector = labelSelector;
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelector namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelector namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setNamespaces(@Nullable List<String> namespaces) {
+        public Builder namespaces(@Nullable List<String> namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
-        public Builder setTopologyKey(String topologyKey) {
+        public Builder topologyKey(String topologyKey) {
             this.topologyKey = Objects.requireNonNull(topologyKey);
             return this;
         }

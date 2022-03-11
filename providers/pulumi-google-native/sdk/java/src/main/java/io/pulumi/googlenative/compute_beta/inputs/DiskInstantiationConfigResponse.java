@@ -105,22 +105,22 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
     	      this.instantiateFrom = defaults.instantiateFrom;
         }
 
-        public Builder setAutoDelete(Boolean autoDelete) {
+        public Builder autoDelete(Boolean autoDelete) {
             this.autoDelete = Objects.requireNonNull(autoDelete);
             return this;
         }
 
-        public Builder setCustomImage(String customImage) {
+        public Builder customImage(String customImage) {
             this.customImage = Objects.requireNonNull(customImage);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setInstantiateFrom(String instantiateFrom) {
+        public Builder instantiateFrom(String instantiateFrom) {
             this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
             return this;
         }

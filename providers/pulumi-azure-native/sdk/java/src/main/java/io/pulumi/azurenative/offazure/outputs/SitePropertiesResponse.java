@@ -39,13 +39,13 @@ public final class SitePropertiesResponse {
      */
     private final @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails;
 
-    @OutputCustomType.Constructor({"agentDetails","applianceName","discoverySolutionId","serviceEndpoint","servicePrincipalIdentityDetails"})
+    @OutputCustomType.Constructor
     private SitePropertiesResponse(
-        @Nullable SiteAgentPropertiesResponse agentDetails,
-        @Nullable String applianceName,
-        @Nullable String discoverySolutionId,
-        String serviceEndpoint,
-        @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
+        @OutputCustomType.Parameter("agentDetails") @Nullable SiteAgentPropertiesResponse agentDetails,
+        @OutputCustomType.Parameter("applianceName") @Nullable String applianceName,
+        @OutputCustomType.Parameter("discoverySolutionId") @Nullable String discoverySolutionId,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("servicePrincipalIdentityDetails") @Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
         this.agentDetails = agentDetails;
         this.applianceName = applianceName;
         this.discoverySolutionId = discoverySolutionId;
@@ -117,27 +117,27 @@ public final class SitePropertiesResponse {
     	      this.servicePrincipalIdentityDetails = defaults.servicePrincipalIdentityDetails;
         }
 
-        public Builder setAgentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
+        public Builder agentDetails(@Nullable SiteAgentPropertiesResponse agentDetails) {
             this.agentDetails = agentDetails;
             return this;
         }
 
-        public Builder setApplianceName(@Nullable String applianceName) {
+        public Builder applianceName(@Nullable String applianceName) {
             this.applianceName = applianceName;
             return this;
         }
 
-        public Builder setDiscoverySolutionId(@Nullable String discoverySolutionId) {
+        public Builder discoverySolutionId(@Nullable String discoverySolutionId) {
             this.discoverySolutionId = discoverySolutionId;
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setServicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
+        public Builder servicePrincipalIdentityDetails(@Nullable SiteSpnPropertiesResponse servicePrincipalIdentityDetails) {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }

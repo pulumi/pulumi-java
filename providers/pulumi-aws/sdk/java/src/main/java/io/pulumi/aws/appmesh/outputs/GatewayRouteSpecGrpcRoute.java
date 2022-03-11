@@ -21,10 +21,10 @@ public final class GatewayRouteSpecGrpcRoute {
      */
     private final GatewayRouteSpecGrpcRouteMatch match;
 
-    @OutputCustomType.Constructor({"action","match"})
+    @OutputCustomType.Constructor
     private GatewayRouteSpecGrpcRoute(
-        GatewayRouteSpecGrpcRouteAction action,
-        GatewayRouteSpecGrpcRouteMatch match) {
+        @OutputCustomType.Parameter("action") GatewayRouteSpecGrpcRouteAction action,
+        @OutputCustomType.Parameter("match") GatewayRouteSpecGrpcRouteMatch match) {
         this.action = action;
         this.match = match;
     }
@@ -66,12 +66,12 @@ public final class GatewayRouteSpecGrpcRoute {
     	      this.match = defaults.match;
         }
 
-        public Builder setAction(GatewayRouteSpecGrpcRouteAction action) {
+        public Builder action(GatewayRouteSpecGrpcRouteAction action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setMatch(GatewayRouteSpecGrpcRouteMatch match) {
+        public Builder match(GatewayRouteSpecGrpcRouteMatch match) {
             this.match = Objects.requireNonNull(match);
             return this;
         }

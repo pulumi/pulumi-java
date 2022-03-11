@@ -46,15 +46,15 @@ public final class GetMetadataImportResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","databaseDump","description","endTime","name","state","updateTime"})
+    @OutputCustomType.Constructor
     private GetMetadataImportResult(
-        String createTime,
-        DatabaseDumpResponse databaseDump,
-        String description,
-        String endTime,
-        String name,
-        String state,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("databaseDump") DatabaseDumpResponse databaseDump,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.databaseDump = databaseDump;
         this.description = description;
@@ -146,37 +146,37 @@ public final class GetMetadataImportResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDatabaseDump(DatabaseDumpResponse databaseDump) {
+        public Builder databaseDump(DatabaseDumpResponse databaseDump) {
             this.databaseDump = Objects.requireNonNull(databaseDump);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

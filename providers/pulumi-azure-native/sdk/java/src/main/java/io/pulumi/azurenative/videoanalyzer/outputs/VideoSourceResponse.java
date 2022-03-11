@@ -32,12 +32,12 @@ public final class VideoSourceResponse {
      */
     private final String videoName;
 
-    @OutputCustomType.Constructor({"name","timeSequences","type","videoName"})
+    @OutputCustomType.Constructor
     private VideoSourceResponse(
-        String name,
-        VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
-        String type,
-        String videoName) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("timeSequences") VideoSequenceAbsoluteTimeMarkersResponse timeSequences,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("videoName") String videoName) {
         this.name = name;
         this.timeSequences = timeSequences;
         this.type = type;
@@ -100,22 +100,22 @@ public final class VideoSourceResponse {
     	      this.videoName = defaults.videoName;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTimeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
+        public Builder timeSequences(VideoSequenceAbsoluteTimeMarkersResponse timeSequences) {
             this.timeSequences = Objects.requireNonNull(timeSequences);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVideoName(String videoName) {
+        public Builder videoName(String videoName) {
             this.videoName = Objects.requireNonNull(videoName);
             return this;
         }

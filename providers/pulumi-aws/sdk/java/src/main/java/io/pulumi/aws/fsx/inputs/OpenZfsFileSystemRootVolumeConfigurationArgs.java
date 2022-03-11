@@ -122,52 +122,52 @@ public final class OpenZfsFileSystemRootVolumeConfigurationArgs extends io.pulum
     	      this.userAndGroupQuotas = defaults.userAndGroupQuotas;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Input<Boolean> copyTagsToSnapshots) {
             this.copyTagsToSnapshots = copyTagsToSnapshots;
             return this;
         }
 
-        public Builder setCopyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
+        public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
             this.copyTagsToSnapshots = Input.ofNullable(copyTagsToSnapshots);
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable Input<String> dataCompressionType) {
+        public Builder dataCompressionType(@Nullable Input<String> dataCompressionType) {
             this.dataCompressionType = dataCompressionType;
             return this;
         }
 
-        public Builder setDataCompressionType(@Nullable String dataCompressionType) {
+        public Builder dataCompressionType(@Nullable String dataCompressionType) {
             this.dataCompressionType = Input.ofNullable(dataCompressionType);
             return this;
         }
 
-        public Builder setNfsExports(@Nullable Input<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports) {
+        public Builder nfsExports(@Nullable Input<OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs> nfsExports) {
             this.nfsExports = nfsExports;
             return this;
         }
 
-        public Builder setNfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs nfsExports) {
+        public Builder nfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExportsArgs nfsExports) {
             this.nfsExports = Input.ofNullable(nfsExports);
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Input<Boolean> readOnly) {
+        public Builder readOnly(@Nullable Input<Boolean> readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable Input<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable Input<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs>> userAndGroupQuotas) {
             this.userAndGroupQuotas = userAndGroupQuotas;
             return this;
         }
 
-        public Builder setUserAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs> userAndGroupQuotas) {
+        public Builder userAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaArgs> userAndGroupQuotas) {
             this.userAndGroupQuotas = Input.ofNullable(userAndGroupQuotas);
             return this;
         }

@@ -22,10 +22,10 @@ public final class LoggingPropertiesResponse {
      */
     private final @Nullable String logLevel;
 
-    @OutputCustomType.Constructor({"auditLogStatus","logLevel"})
+    @OutputCustomType.Constructor
     private LoggingPropertiesResponse(
-        @Nullable String auditLogStatus,
-        @Nullable String logLevel) {
+        @OutputCustomType.Parameter("auditLogStatus") @Nullable String auditLogStatus,
+        @OutputCustomType.Parameter("logLevel") @Nullable String logLevel) {
         this.auditLogStatus = auditLogStatus;
         this.logLevel = logLevel;
     }
@@ -67,12 +67,12 @@ public final class LoggingPropertiesResponse {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setAuditLogStatus(@Nullable String auditLogStatus) {
+        public Builder auditLogStatus(@Nullable String auditLogStatus) {
             this.auditLogStatus = auditLogStatus;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable String logLevel) {
+        public Builder logLevel(@Nullable String logLevel) {
             this.logLevel = logLevel;
             return this;
         }

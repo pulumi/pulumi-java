@@ -22,10 +22,10 @@ public final class TrafficMirrorFilterRuleDestinationPortRange {
      */
     private final @Nullable Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","toPort"})
+    @OutputCustomType.Constructor
     private TrafficMirrorFilterRuleDestinationPortRange(
-        @Nullable Integer fromPort,
-        @Nullable Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") @Nullable Integer fromPort,
+        @OutputCustomType.Parameter("toPort") @Nullable Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }
@@ -67,12 +67,12 @@ public final class TrafficMirrorFilterRuleDestinationPortRange {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(@Nullable Integer fromPort) {
+        public Builder fromPort(@Nullable Integer fromPort) {
             this.fromPort = fromPort;
             return this;
         }
 
-        public Builder setToPort(@Nullable Integer toPort) {
+        public Builder toPort(@Nullable Integer toPort) {
             this.toPort = toPort;
             return this;
         }

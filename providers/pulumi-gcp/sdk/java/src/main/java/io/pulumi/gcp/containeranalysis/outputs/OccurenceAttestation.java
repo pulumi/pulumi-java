@@ -28,10 +28,10 @@ public final class OccurenceAttestation {
      */
     private final List<OccurenceAttestationSignature> signatures;
 
-    @OutputCustomType.Constructor({"serializedPayload","signatures"})
+    @OutputCustomType.Constructor
     private OccurenceAttestation(
-        String serializedPayload,
-        List<OccurenceAttestationSignature> signatures) {
+        @OutputCustomType.Parameter("serializedPayload") String serializedPayload,
+        @OutputCustomType.Parameter("signatures") List<OccurenceAttestationSignature> signatures) {
         this.serializedPayload = serializedPayload;
         this.signatures = signatures;
     }
@@ -79,12 +79,12 @@ public final class OccurenceAttestation {
     	      this.signatures = defaults.signatures;
         }
 
-        public Builder setSerializedPayload(String serializedPayload) {
+        public Builder serializedPayload(String serializedPayload) {
             this.serializedPayload = Objects.requireNonNull(serializedPayload);
             return this;
         }
 
-        public Builder setSignatures(List<OccurenceAttestationSignature> signatures) {
+        public Builder signatures(List<OccurenceAttestationSignature> signatures) {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }

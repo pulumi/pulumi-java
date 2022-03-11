@@ -14,10 +14,10 @@ public final class GetListenerDefaultActionForward {
     private final List<GetListenerDefaultActionForwardStickiness> stickinesses;
     private final List<GetListenerDefaultActionForwardTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"stickinesses","targetGroups"})
+    @OutputCustomType.Constructor
     private GetListenerDefaultActionForward(
-        List<GetListenerDefaultActionForwardStickiness> stickinesses,
-        List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
+        @OutputCustomType.Parameter("stickinesses") List<GetListenerDefaultActionForwardStickiness> stickinesses,
+        @OutputCustomType.Parameter("targetGroups") List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
         this.stickinesses = stickinesses;
         this.targetGroups = targetGroups;
     }
@@ -51,12 +51,12 @@ public final class GetListenerDefaultActionForward {
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setStickinesses(List<GetListenerDefaultActionForwardStickiness> stickinesses) {
+        public Builder stickinesses(List<GetListenerDefaultActionForwardStickiness> stickinesses) {
             this.stickinesses = Objects.requireNonNull(stickinesses);
             return this;
         }
 
-        public Builder setTargetGroups(List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
+        public Builder targetGroups(List<GetListenerDefaultActionForwardTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }

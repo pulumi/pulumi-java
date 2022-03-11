@@ -30,12 +30,12 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
      */
     private final Double minimum;
 
-    @OutputCustomType.Constructor({"exclusiveMaximum","exclusiveMinimum","maximum","minimum"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaIntervalResponse(
-        Double exclusiveMaximum,
-        Double exclusiveMinimum,
-        Double maximum,
-        Double minimum) {
+        @OutputCustomType.Parameter("exclusiveMaximum") Double exclusiveMaximum,
+        @OutputCustomType.Parameter("exclusiveMinimum") Double exclusiveMinimum,
+        @OutputCustomType.Parameter("maximum") Double maximum,
+        @OutputCustomType.Parameter("minimum") Double minimum) {
         this.exclusiveMaximum = exclusiveMaximum;
         this.exclusiveMinimum = exclusiveMinimum;
         this.maximum = maximum;
@@ -97,22 +97,22 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
     	      this.minimum = defaults.minimum;
         }
 
-        public Builder setExclusiveMaximum(Double exclusiveMaximum) {
+        public Builder exclusiveMaximum(Double exclusiveMaximum) {
             this.exclusiveMaximum = Objects.requireNonNull(exclusiveMaximum);
             return this;
         }
 
-        public Builder setExclusiveMinimum(Double exclusiveMinimum) {
+        public Builder exclusiveMinimum(Double exclusiveMinimum) {
             this.exclusiveMinimum = Objects.requireNonNull(exclusiveMinimum);
             return this;
         }
 
-        public Builder setMaximum(Double maximum) {
+        public Builder maximum(Double maximum) {
             this.maximum = Objects.requireNonNull(maximum);
             return this;
         }
 
-        public Builder setMinimum(Double minimum) {
+        public Builder minimum(Double minimum) {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }

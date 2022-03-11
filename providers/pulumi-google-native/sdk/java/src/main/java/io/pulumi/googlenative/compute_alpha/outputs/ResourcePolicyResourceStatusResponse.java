@@ -15,8 +15,8 @@ public final class ResourcePolicyResourceStatusResponse {
      */
     private final ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy;
 
-    @OutputCustomType.Constructor({"instanceSchedulePolicy"})
-    private ResourcePolicyResourceStatusResponse(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
+    @OutputCustomType.Constructor
+    private ResourcePolicyResourceStatusResponse(@OutputCustomType.Parameter("instanceSchedulePolicy") ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
         this.instanceSchedulePolicy = instanceSchedulePolicy;
     }
 
@@ -48,7 +48,7 @@ public final class ResourcePolicyResourceStatusResponse {
     	      this.instanceSchedulePolicy = defaults.instanceSchedulePolicy;
         }
 
-        public Builder setInstanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
+        public Builder instanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatusResponse instanceSchedulePolicy) {
             this.instanceSchedulePolicy = Objects.requireNonNull(instanceSchedulePolicy);
             return this;
         }

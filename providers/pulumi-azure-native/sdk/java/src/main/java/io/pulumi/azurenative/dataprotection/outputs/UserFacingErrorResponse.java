@@ -57,17 +57,17 @@ public final class UserFacingErrorResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"code","details","innerError","isRetryable","isUserError","message","properties","recommendedAction","target"})
+    @OutputCustomType.Constructor
     private UserFacingErrorResponse(
-        @Nullable String code,
-        @Nullable List<UserFacingErrorResponse> details,
-        @Nullable InnerErrorResponse innerError,
-        @Nullable Boolean isRetryable,
-        @Nullable Boolean isUserError,
-        @Nullable String message,
-        @Nullable Map<String,String> properties,
-        @Nullable List<String> recommendedAction,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("code") @Nullable String code,
+        @OutputCustomType.Parameter("details") @Nullable List<UserFacingErrorResponse> details,
+        @OutputCustomType.Parameter("innerError") @Nullable InnerErrorResponse innerError,
+        @OutputCustomType.Parameter("isRetryable") @Nullable Boolean isRetryable,
+        @OutputCustomType.Parameter("isUserError") @Nullable Boolean isUserError,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @OutputCustomType.Parameter("recommendedAction") @Nullable List<String> recommendedAction,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.code = code;
         this.details = details;
         this.innerError = innerError;
@@ -175,47 +175,47 @@ public final class UserFacingErrorResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<UserFacingErrorResponse> details) {
+        public Builder details(@Nullable List<UserFacingErrorResponse> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setInnerError(@Nullable InnerErrorResponse innerError) {
+        public Builder innerError(@Nullable InnerErrorResponse innerError) {
             this.innerError = innerError;
             return this;
         }
 
-        public Builder setIsRetryable(@Nullable Boolean isRetryable) {
+        public Builder isRetryable(@Nullable Boolean isRetryable) {
             this.isRetryable = isRetryable;
             return this;
         }
 
-        public Builder setIsUserError(@Nullable Boolean isUserError) {
+        public Builder isUserError(@Nullable Boolean isUserError) {
             this.isUserError = isUserError;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setRecommendedAction(@Nullable List<String> recommendedAction) {
+        public Builder recommendedAction(@Nullable List<String> recommendedAction) {
             this.recommendedAction = recommendedAction;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

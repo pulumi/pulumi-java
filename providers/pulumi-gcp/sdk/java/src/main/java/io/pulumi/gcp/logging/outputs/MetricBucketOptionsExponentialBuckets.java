@@ -28,11 +28,11 @@ public final class MetricBucketOptionsExponentialBuckets {
      */
     private final @Nullable Double scale;
 
-    @OutputCustomType.Constructor({"growthFactor","numFiniteBuckets","scale"})
+    @OutputCustomType.Constructor
     private MetricBucketOptionsExponentialBuckets(
-        @Nullable Double growthFactor,
-        @Nullable Integer numFiniteBuckets,
-        @Nullable Double scale) {
+        @OutputCustomType.Parameter("growthFactor") @Nullable Double growthFactor,
+        @OutputCustomType.Parameter("numFiniteBuckets") @Nullable Integer numFiniteBuckets,
+        @OutputCustomType.Parameter("scale") @Nullable Double scale) {
         this.growthFactor = growthFactor;
         this.numFiniteBuckets = numFiniteBuckets;
         this.scale = scale;
@@ -84,17 +84,17 @@ public final class MetricBucketOptionsExponentialBuckets {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setGrowthFactor(@Nullable Double growthFactor) {
+        public Builder growthFactor(@Nullable Double growthFactor) {
             this.growthFactor = growthFactor;
             return this;
         }
 
-        public Builder setNumFiniteBuckets(@Nullable Integer numFiniteBuckets) {
+        public Builder numFiniteBuckets(@Nullable Integer numFiniteBuckets) {
             this.numFiniteBuckets = numFiniteBuckets;
             return this;
         }
 
-        public Builder setScale(@Nullable Double scale) {
+        public Builder scale(@Nullable Double scale) {
             this.scale = scale;
             return this;
         }

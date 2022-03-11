@@ -201,102 +201,102 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
     	      this.terms = defaults.terms;
         }
 
-        public Builder setApprovalRequired(@Nullable Input<Boolean> approvalRequired) {
+        public Builder approvalRequired(@Nullable Input<Boolean> approvalRequired) {
             this.approvalRequired = approvalRequired;
             return this;
         }
 
-        public Builder setApprovalRequired(@Nullable Boolean approvalRequired) {
+        public Builder approvalRequired(@Nullable Boolean approvalRequired) {
             this.approvalRequired = Input.ofNullable(approvalRequired);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(Input<String> displayName) {
+        public Builder displayName(Input<String> displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
 
-        public Builder setProductId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Input<String> productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = Input.ofNullable(productId);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
 
-        public Builder setState(@Nullable Input<ProductState> state) {
+        public Builder state(@Nullable Input<ProductState> state) {
             this.state = state;
             return this;
         }
 
-        public Builder setState(@Nullable ProductState state) {
+        public Builder state(@Nullable ProductState state) {
             this.state = Input.ofNullable(state);
             return this;
         }
 
-        public Builder setSubscriptionRequired(@Nullable Input<Boolean> subscriptionRequired) {
+        public Builder subscriptionRequired(@Nullable Input<Boolean> subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
 
-        public Builder setSubscriptionRequired(@Nullable Boolean subscriptionRequired) {
+        public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = Input.ofNullable(subscriptionRequired);
             return this;
         }
 
-        public Builder setSubscriptionsLimit(@Nullable Input<Integer> subscriptionsLimit) {
+        public Builder subscriptionsLimit(@Nullable Input<Integer> subscriptionsLimit) {
             this.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
 
-        public Builder setSubscriptionsLimit(@Nullable Integer subscriptionsLimit) {
+        public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
             this.subscriptionsLimit = Input.ofNullable(subscriptionsLimit);
             return this;
         }
 
-        public Builder setTerms(@Nullable Input<String> terms) {
+        public Builder terms(@Nullable Input<String> terms) {
             this.terms = terms;
             return this;
         }
 
-        public Builder setTerms(@Nullable String terms) {
+        public Builder terms(@Nullable String terms) {
             this.terms = Input.ofNullable(terms);
             return this;
         }

@@ -31,12 +31,12 @@ public final class FleetEc2InboundPermission {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","ipRange","protocol","toPort"})
+    @OutputCustomType.Constructor
     private FleetEc2InboundPermission(
-        Integer fromPort,
-        String ipRange,
-        String protocol,
-        Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("ipRange") String ipRange,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.ipRange = ipRange;
         this.protocol = protocol;
@@ -98,22 +98,22 @@ public final class FleetEc2InboundPermission {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIpRange(String ipRange) {
+        public Builder ipRange(String ipRange) {
             this.ipRange = Objects.requireNonNull(ipRange);
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

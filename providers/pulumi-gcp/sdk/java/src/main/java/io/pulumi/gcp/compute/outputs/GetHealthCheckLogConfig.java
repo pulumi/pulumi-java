@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetHealthCheckLogConfig {
     private final Boolean enable;
 
-    @OutputCustomType.Constructor({"enable"})
-    private GetHealthCheckLogConfig(Boolean enable) {
+    @OutputCustomType.Constructor
+    private GetHealthCheckLogConfig(@OutputCustomType.Parameter("enable") Boolean enable) {
         this.enable = enable;
     }
 
@@ -40,7 +40,7 @@ public final class GetHealthCheckLogConfig {
     	      this.enable = defaults.enable;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }

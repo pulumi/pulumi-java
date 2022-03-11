@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class SpotFleetTargetGroupsConfig {
     private final List<SpotFleetTargetGroup> targetGroups;
 
-    @OutputCustomType.Constructor({"targetGroups"})
-    private SpotFleetTargetGroupsConfig(List<SpotFleetTargetGroup> targetGroups) {
+    @OutputCustomType.Constructor
+    private SpotFleetTargetGroupsConfig(@OutputCustomType.Parameter("targetGroups") List<SpotFleetTargetGroup> targetGroups) {
         this.targetGroups = targetGroups;
     }
 
@@ -41,7 +41,7 @@ public final class SpotFleetTargetGroupsConfig {
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setTargetGroups(List<SpotFleetTargetGroup> targetGroups) {
+        public Builder targetGroups(List<SpotFleetTargetGroup> targetGroups) {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }

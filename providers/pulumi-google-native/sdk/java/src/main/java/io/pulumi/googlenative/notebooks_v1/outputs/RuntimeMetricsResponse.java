@@ -16,8 +16,8 @@ public final class RuntimeMetricsResponse {
      */
     private final Map<String,String> systemMetrics;
 
-    @OutputCustomType.Constructor({"systemMetrics"})
-    private RuntimeMetricsResponse(Map<String,String> systemMetrics) {
+    @OutputCustomType.Constructor
+    private RuntimeMetricsResponse(@OutputCustomType.Parameter("systemMetrics") Map<String,String> systemMetrics) {
         this.systemMetrics = systemMetrics;
     }
 
@@ -49,7 +49,7 @@ public final class RuntimeMetricsResponse {
     	      this.systemMetrics = defaults.systemMetrics;
         }
 
-        public Builder setSystemMetrics(Map<String,String> systemMetrics) {
+        public Builder systemMetrics(Map<String,String> systemMetrics) {
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
         }

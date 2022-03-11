@@ -22,10 +22,10 @@ public final class ExportRecurrencePeriodResponse {
      */
     private final @Nullable String to;
 
-    @OutputCustomType.Constructor({"from","to"})
+    @OutputCustomType.Constructor
     private ExportRecurrencePeriodResponse(
-        String from,
-        @Nullable String to) {
+        @OutputCustomType.Parameter("from") String from,
+        @OutputCustomType.Parameter("to") @Nullable String to) {
         this.from = from;
         this.to = to;
     }
@@ -67,12 +67,12 @@ public final class ExportRecurrencePeriodResponse {
     	      this.to = defaults.to;
         }
 
-        public Builder setFrom(String from) {
+        public Builder from(String from) {
             this.from = Objects.requireNonNull(from);
             return this;
         }
 
-        public Builder setTo(@Nullable String to) {
+        public Builder to(@Nullable String to) {
             this.to = to;
             return this;
         }

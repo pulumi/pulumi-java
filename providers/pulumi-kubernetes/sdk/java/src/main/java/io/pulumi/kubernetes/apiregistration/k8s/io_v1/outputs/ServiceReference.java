@@ -28,11 +28,11 @@ public final class ServiceReference {
      */
     private final @Nullable Integer port;
 
-    @OutputCustomType.Constructor({"name","namespace","port"})
+    @OutputCustomType.Constructor
     private ServiceReference(
-        @Nullable String name,
-        @Nullable String namespace,
-        @Nullable Integer port) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("port") @Nullable Integer port) {
         this.name = name;
         this.namespace = namespace;
         this.port = port;
@@ -84,17 +84,17 @@ public final class ServiceReference {
     	      this.port = defaults.port;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }

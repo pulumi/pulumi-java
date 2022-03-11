@@ -146,32 +146,32 @@ public final class GetUserTablesSqlTaskPropertiesResponse extends io.pulumi.reso
     	      this.taskType = defaults.taskType;
         }
 
-        public Builder setCommands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
+        public Builder commands(List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setErrors(List<ODataErrorResponse> errors) {
+        public Builder errors(List<ODataErrorResponse> errors) {
             this.errors = Objects.requireNonNull(errors);
             return this;
         }
 
-        public Builder setInput(@Nullable GetUserTablesSqlTaskInputResponse input) {
+        public Builder input(@Nullable GetUserTablesSqlTaskInputResponse input) {
             this.input = input;
             return this;
         }
 
-        public Builder setOutput(List<GetUserTablesSqlTaskOutputResponse> output) {
+        public Builder output(List<GetUserTablesSqlTaskOutputResponse> output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTaskType(String taskType) {
+        public Builder taskType(String taskType) {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }

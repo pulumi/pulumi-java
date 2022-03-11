@@ -14,10 +14,10 @@ public final class TaskDefinitionKernelCapabilities {
     private final @Nullable List<String> add;
     private final @Nullable List<String> drop;
 
-    @OutputCustomType.Constructor({"add","drop"})
+    @OutputCustomType.Constructor
     private TaskDefinitionKernelCapabilities(
-        @Nullable List<String> add,
-        @Nullable List<String> drop) {
+        @OutputCustomType.Parameter("add") @Nullable List<String> add,
+        @OutputCustomType.Parameter("drop") @Nullable List<String> drop) {
         this.add = add;
         this.drop = drop;
     }
@@ -51,12 +51,12 @@ public final class TaskDefinitionKernelCapabilities {
     	      this.drop = defaults.drop;
         }
 
-        public Builder setAdd(@Nullable List<String> add) {
+        public Builder add(@Nullable List<String> add) {
             this.add = add;
             return this;
         }
 
-        public Builder setDrop(@Nullable List<String> drop) {
+        public Builder drop(@Nullable List<String> drop) {
             this.drop = drop;
             return this;
         }

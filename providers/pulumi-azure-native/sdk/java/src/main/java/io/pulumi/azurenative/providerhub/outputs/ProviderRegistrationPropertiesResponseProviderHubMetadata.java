@@ -18,11 +18,11 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
     private final @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations;
     private final @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization;
 
-    @OutputCustomType.Constructor({"providerAuthentication","providerAuthorizations","thirdPartyProviderAuthorization"})
+    @OutputCustomType.Constructor
     private ProviderRegistrationPropertiesResponseProviderHubMetadata(
-        @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
-        @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
-        @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
+        @OutputCustomType.Parameter("providerAuthentication") @Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication,
+        @OutputCustomType.Parameter("providerAuthorizations") @Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations,
+        @OutputCustomType.Parameter("thirdPartyProviderAuthorization") @Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
         this.providerAuthentication = providerAuthentication;
         this.providerAuthorizations = providerAuthorizations;
         this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
@@ -62,17 +62,17 @@ public final class ProviderRegistrationPropertiesResponseProviderHubMetadata {
     	      this.thirdPartyProviderAuthorization = defaults.thirdPartyProviderAuthorization;
         }
 
-        public Builder setProviderAuthentication(@Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication) {
+        public Builder providerAuthentication(@Nullable ProviderHubMetadataResponseProviderAuthentication providerAuthentication) {
             this.providerAuthentication = providerAuthentication;
             return this;
         }
 
-        public Builder setProviderAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
+        public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationResponse> providerAuthorizations) {
             this.providerAuthorizations = providerAuthorizations;
             return this;
         }
 
-        public Builder setThirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
+        public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataResponseThirdPartyProviderAuthorization thirdPartyProviderAuthorization) {
             this.thirdPartyProviderAuthorization = thirdPartyProviderAuthorization;
             return this;
         }

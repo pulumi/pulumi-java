@@ -32,12 +32,12 @@ public final class ShareSettingsResponse {
      */
     private final String shareType;
 
-    @OutputCustomType.Constructor({"folderMap","projectMap","projects","shareType"})
+    @OutputCustomType.Constructor
     private ShareSettingsResponse(
-        Map<String,String> folderMap,
-        Map<String,String> projectMap,
-        List<String> projects,
-        String shareType) {
+        @OutputCustomType.Parameter("folderMap") Map<String,String> folderMap,
+        @OutputCustomType.Parameter("projectMap") Map<String,String> projectMap,
+        @OutputCustomType.Parameter("projects") List<String> projects,
+        @OutputCustomType.Parameter("shareType") String shareType) {
         this.folderMap = folderMap;
         this.projectMap = projectMap;
         this.projects = projects;
@@ -99,22 +99,22 @@ public final class ShareSettingsResponse {
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder setFolderMap(Map<String,String> folderMap) {
+        public Builder folderMap(Map<String,String> folderMap) {
             this.folderMap = Objects.requireNonNull(folderMap);
             return this;
         }
 
-        public Builder setProjectMap(Map<String,String> projectMap) {
+        public Builder projectMap(Map<String,String> projectMap) {
             this.projectMap = Objects.requireNonNull(projectMap);
             return this;
         }
 
-        public Builder setProjects(List<String> projects) {
+        public Builder projects(List<String> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
 
-        public Builder setShareType(String shareType) {
+        public Builder shareType(String shareType) {
             this.shareType = Objects.requireNonNull(shareType);
             return this;
         }

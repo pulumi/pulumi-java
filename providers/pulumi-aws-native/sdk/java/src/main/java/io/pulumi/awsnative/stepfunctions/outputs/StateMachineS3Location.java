@@ -15,11 +15,11 @@ public final class StateMachineS3Location {
     private final String key;
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"bucket","key","version"})
+    @OutputCustomType.Constructor
     private StateMachineS3Location(
-        String bucket,
-        String key,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.bucket = bucket;
         this.key = key;
         this.version = version;
@@ -59,17 +59,17 @@ public final class StateMachineS3Location {
     	      this.version = defaults.version;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupImmunityTimeProperty {
     private final Integer immunityTime;
 
-    @OutputCustomType.Constructor({"immunityTime"})
-    private RuleGroupImmunityTimeProperty(Integer immunityTime) {
+    @OutputCustomType.Constructor
+    private RuleGroupImmunityTimeProperty(@OutputCustomType.Parameter("immunityTime") Integer immunityTime) {
         this.immunityTime = immunityTime;
     }
 
@@ -40,7 +40,7 @@ public final class RuleGroupImmunityTimeProperty {
     	      this.immunityTime = defaults.immunityTime;
         }
 
-        public Builder setImmunityTime(Integer immunityTime) {
+        public Builder immunityTime(Integer immunityTime) {
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }

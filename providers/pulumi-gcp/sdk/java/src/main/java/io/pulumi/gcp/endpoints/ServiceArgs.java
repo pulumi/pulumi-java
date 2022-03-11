@@ -121,52 +121,52 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setGrpcConfig(@Nullable Input<String> grpcConfig) {
+        public Builder grpcConfig(@Nullable Input<String> grpcConfig) {
             this.grpcConfig = grpcConfig;
             return this;
         }
 
-        public Builder setGrpcConfig(@Nullable String grpcConfig) {
+        public Builder grpcConfig(@Nullable String grpcConfig) {
             this.grpcConfig = Input.ofNullable(grpcConfig);
             return this;
         }
 
-        public Builder setOpenapiConfig(@Nullable Input<String> openapiConfig) {
+        public Builder openapiConfig(@Nullable Input<String> openapiConfig) {
             this.openapiConfig = openapiConfig;
             return this;
         }
 
-        public Builder setOpenapiConfig(@Nullable String openapiConfig) {
+        public Builder openapiConfig(@Nullable String openapiConfig) {
             this.openapiConfig = Input.ofNullable(openapiConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setProtocOutputBase64(@Nullable Input<String> protocOutputBase64) {
+        public Builder protocOutputBase64(@Nullable Input<String> protocOutputBase64) {
             this.protocOutputBase64 = protocOutputBase64;
             return this;
         }
 
-        public Builder setProtocOutputBase64(@Nullable String protocOutputBase64) {
+        public Builder protocOutputBase64(@Nullable String protocOutputBase64) {
             this.protocOutputBase64 = Input.ofNullable(protocOutputBase64);
             return this;
         }
 
-        public Builder setServiceName(Input<String> serviceName) {
+        public Builder serviceName(Input<String> serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }

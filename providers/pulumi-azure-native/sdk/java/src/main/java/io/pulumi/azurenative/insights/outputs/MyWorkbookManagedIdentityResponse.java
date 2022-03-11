@@ -23,10 +23,10 @@ public final class MyWorkbookManagedIdentityResponse {
      */
     private final @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities;
 
-    @OutputCustomType.Constructor({"type","userAssignedIdentities"})
+    @OutputCustomType.Constructor
     private MyWorkbookManagedIdentityResponse(
-        @Nullable String type,
-        @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("userAssignedIdentities") @Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
         this.type = type;
         this.userAssignedIdentities = userAssignedIdentities;
     }
@@ -68,12 +68,12 @@ public final class MyWorkbookManagedIdentityResponse {
     	      this.userAssignedIdentities = defaults.userAssignedIdentities;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUserAssignedIdentities(@Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
+        public Builder userAssignedIdentities(@Nullable MyWorkbookUserAssignedIdentitiesResponse userAssignedIdentities) {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }

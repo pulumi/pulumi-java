@@ -70,18 +70,18 @@ public final class JobConfigResponse {
      */
     private final List<SpriteSheetResponse> spriteSheets;
 
-    @OutputCustomType.Constructor({"adBreaks","editList","elementaryStreams","inputs","manifests","muxStreams","output","overlays","pubsubDestination","spriteSheets"})
+    @OutputCustomType.Constructor
     private JobConfigResponse(
-        List<AdBreakResponse> adBreaks,
-        List<EditAtomResponse> editList,
-        List<ElementaryStreamResponse> elementaryStreams,
-        List<InputResponse> inputs,
-        List<ManifestResponse> manifests,
-        List<MuxStreamResponse> muxStreams,
-        OutputResponse output,
-        List<OverlayResponse> overlays,
-        PubsubDestinationResponse pubsubDestination,
-        List<SpriteSheetResponse> spriteSheets) {
+        @OutputCustomType.Parameter("adBreaks") List<AdBreakResponse> adBreaks,
+        @OutputCustomType.Parameter("editList") List<EditAtomResponse> editList,
+        @OutputCustomType.Parameter("elementaryStreams") List<ElementaryStreamResponse> elementaryStreams,
+        @OutputCustomType.Parameter("inputs") List<InputResponse> inputs,
+        @OutputCustomType.Parameter("manifests") List<ManifestResponse> manifests,
+        @OutputCustomType.Parameter("muxStreams") List<MuxStreamResponse> muxStreams,
+        @OutputCustomType.Parameter("output") OutputResponse output,
+        @OutputCustomType.Parameter("overlays") List<OverlayResponse> overlays,
+        @OutputCustomType.Parameter("pubsubDestination") PubsubDestinationResponse pubsubDestination,
+        @OutputCustomType.Parameter("spriteSheets") List<SpriteSheetResponse> spriteSheets) {
         this.adBreaks = adBreaks;
         this.editList = editList;
         this.elementaryStreams = elementaryStreams;
@@ -203,52 +203,52 @@ public final class JobConfigResponse {
     	      this.spriteSheets = defaults.spriteSheets;
         }
 
-        public Builder setAdBreaks(List<AdBreakResponse> adBreaks) {
+        public Builder adBreaks(List<AdBreakResponse> adBreaks) {
             this.adBreaks = Objects.requireNonNull(adBreaks);
             return this;
         }
 
-        public Builder setEditList(List<EditAtomResponse> editList) {
+        public Builder editList(List<EditAtomResponse> editList) {
             this.editList = Objects.requireNonNull(editList);
             return this;
         }
 
-        public Builder setElementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
+        public Builder elementaryStreams(List<ElementaryStreamResponse> elementaryStreams) {
             this.elementaryStreams = Objects.requireNonNull(elementaryStreams);
             return this;
         }
 
-        public Builder setInputs(List<InputResponse> inputs) {
+        public Builder inputs(List<InputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setManifests(List<ManifestResponse> manifests) {
+        public Builder manifests(List<ManifestResponse> manifests) {
             this.manifests = Objects.requireNonNull(manifests);
             return this;
         }
 
-        public Builder setMuxStreams(List<MuxStreamResponse> muxStreams) {
+        public Builder muxStreams(List<MuxStreamResponse> muxStreams) {
             this.muxStreams = Objects.requireNonNull(muxStreams);
             return this;
         }
 
-        public Builder setOutput(OutputResponse output) {
+        public Builder output(OutputResponse output) {
             this.output = Objects.requireNonNull(output);
             return this;
         }
 
-        public Builder setOverlays(List<OverlayResponse> overlays) {
+        public Builder overlays(List<OverlayResponse> overlays) {
             this.overlays = Objects.requireNonNull(overlays);
             return this;
         }
 
-        public Builder setPubsubDestination(PubsubDestinationResponse pubsubDestination) {
+        public Builder pubsubDestination(PubsubDestinationResponse pubsubDestination) {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
 
-        public Builder setSpriteSheets(List<SpriteSheetResponse> spriteSheets) {
+        public Builder spriteSheets(List<SpriteSheetResponse> spriteSheets) {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }

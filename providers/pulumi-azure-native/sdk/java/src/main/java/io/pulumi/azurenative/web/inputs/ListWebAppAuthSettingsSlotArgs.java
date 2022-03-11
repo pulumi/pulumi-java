@@ -84,17 +84,17 @@ public final class ListWebAppAuthSettingsSlotArgs extends io.pulumi.resources.In
     	      this.slot = defaults.slot;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setSlot(String slot) {
+        public Builder slot(String slot) {
             this.slot = Objects.requireNonNull(slot);
             return this;
         }

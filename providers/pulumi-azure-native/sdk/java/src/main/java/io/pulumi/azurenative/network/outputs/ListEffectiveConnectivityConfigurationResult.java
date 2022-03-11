@@ -24,10 +24,10 @@ public final class ListEffectiveConnectivityConfigurationResult {
      */
     private final @Nullable List<EffectiveConnectivityConfigurationResponse> value;
 
-    @OutputCustomType.Constructor({"skipToken","value"})
+    @OutputCustomType.Constructor
     private ListEffectiveConnectivityConfigurationResult(
-        @Nullable String skipToken,
-        @Nullable List<EffectiveConnectivityConfigurationResponse> value) {
+        @OutputCustomType.Parameter("skipToken") @Nullable String skipToken,
+        @OutputCustomType.Parameter("value") @Nullable List<EffectiveConnectivityConfigurationResponse> value) {
         this.skipToken = skipToken;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListEffectiveConnectivityConfigurationResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setSkipToken(@Nullable String skipToken) {
+        public Builder skipToken(@Nullable String skipToken) {
             this.skipToken = skipToken;
             return this;
         }
 
-        public Builder setValue(@Nullable List<EffectiveConnectivityConfigurationResponse> value) {
+        public Builder value(@Nullable List<EffectiveConnectivityConfigurationResponse> value) {
             this.value = value;
             return this;
         }

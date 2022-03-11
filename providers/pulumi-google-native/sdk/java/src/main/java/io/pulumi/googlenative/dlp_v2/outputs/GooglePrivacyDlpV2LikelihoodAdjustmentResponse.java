@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
      */
     private final Integer relativeLikelihood;
 
-    @OutputCustomType.Constructor({"fixedLikelihood","relativeLikelihood"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2LikelihoodAdjustmentResponse(
-        String fixedLikelihood,
-        Integer relativeLikelihood) {
+        @OutputCustomType.Parameter("fixedLikelihood") String fixedLikelihood,
+        @OutputCustomType.Parameter("relativeLikelihood") Integer relativeLikelihood) {
         this.fixedLikelihood = fixedLikelihood;
         this.relativeLikelihood = relativeLikelihood;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
     	      this.relativeLikelihood = defaults.relativeLikelihood;
         }
 
-        public Builder setFixedLikelihood(String fixedLikelihood) {
+        public Builder fixedLikelihood(String fixedLikelihood) {
             this.fixedLikelihood = Objects.requireNonNull(fixedLikelihood);
             return this;
         }
 
-        public Builder setRelativeLikelihood(Integer relativeLikelihood) {
+        public Builder relativeLikelihood(Integer relativeLikelihood) {
             this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
             return this;
         }

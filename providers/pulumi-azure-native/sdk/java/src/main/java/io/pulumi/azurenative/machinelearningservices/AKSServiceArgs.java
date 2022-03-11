@@ -467,262 +467,262 @@ public final class AKSServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workspaceName = defaults.workspaceName;
         }
 
-        public Builder setAadAuthEnabled(@Nullable Input<Boolean> aadAuthEnabled) {
+        public Builder aadAuthEnabled(@Nullable Input<Boolean> aadAuthEnabled) {
             this.aadAuthEnabled = aadAuthEnabled;
             return this;
         }
 
-        public Builder setAadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
+        public Builder aadAuthEnabled(@Nullable Boolean aadAuthEnabled) {
             this.aadAuthEnabled = Input.ofNullable(aadAuthEnabled);
             return this;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Input<Boolean> appInsightsEnabled) {
             this.appInsightsEnabled = appInsightsEnabled;
             return this;
         }
 
-        public Builder setAppInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
+        public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
             this.appInsightsEnabled = Input.ofNullable(appInsightsEnabled);
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Input<Boolean> authEnabled) {
+        public Builder authEnabled(@Nullable Input<Boolean> authEnabled) {
             this.authEnabled = authEnabled;
             return this;
         }
 
-        public Builder setAuthEnabled(@Nullable Boolean authEnabled) {
+        public Builder authEnabled(@Nullable Boolean authEnabled) {
             this.authEnabled = Input.ofNullable(authEnabled);
             return this;
         }
 
-        public Builder setAutoScaler(@Nullable Input<AKSServiceCreateRequestAutoScalerArgs> autoScaler) {
+        public Builder autoScaler(@Nullable Input<AKSServiceCreateRequestAutoScalerArgs> autoScaler) {
             this.autoScaler = autoScaler;
             return this;
         }
 
-        public Builder setAutoScaler(@Nullable AKSServiceCreateRequestAutoScalerArgs autoScaler) {
+        public Builder autoScaler(@Nullable AKSServiceCreateRequestAutoScalerArgs autoScaler) {
             this.autoScaler = Input.ofNullable(autoScaler);
             return this;
         }
 
-        public Builder setComputeName(@Nullable Input<String> computeName) {
+        public Builder computeName(@Nullable Input<String> computeName) {
             this.computeName = computeName;
             return this;
         }
 
-        public Builder setComputeName(@Nullable String computeName) {
+        public Builder computeName(@Nullable String computeName) {
             this.computeName = Input.ofNullable(computeName);
             return this;
         }
 
-        public Builder setComputeType(Input<String> computeType) {
+        public Builder computeType(Input<String> computeType) {
             this.computeType = Objects.requireNonNull(computeType);
             return this;
         }
 
-        public Builder setComputeType(String computeType) {
+        public Builder computeType(String computeType) {
             this.computeType = Input.of(Objects.requireNonNull(computeType));
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable Input<ContainerResourceRequirementsArgs> containerResourceRequirements) {
             this.containerResourceRequirements = containerResourceRequirements;
             return this;
         }
 
-        public Builder setContainerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
+        public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
             this.containerResourceRequirements = Input.ofNullable(containerResourceRequirements);
             return this;
         }
 
-        public Builder setDataCollection(@Nullable Input<AKSServiceCreateRequestDataCollectionArgs> dataCollection) {
+        public Builder dataCollection(@Nullable Input<AKSServiceCreateRequestDataCollectionArgs> dataCollection) {
             this.dataCollection = dataCollection;
             return this;
         }
 
-        public Builder setDataCollection(@Nullable AKSServiceCreateRequestDataCollectionArgs dataCollection) {
+        public Builder dataCollection(@Nullable AKSServiceCreateRequestDataCollectionArgs dataCollection) {
             this.dataCollection = Input.ofNullable(dataCollection);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             this.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
-        public Builder setEnvironmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
+        public Builder environmentImageRequest(@Nullable CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             this.environmentImageRequest = Input.ofNullable(environmentImageRequest);
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Input<Boolean> isDefault) {
+        public Builder isDefault(@Nullable Input<Boolean> isDefault) {
             this.isDefault = isDefault;
             return this;
         }
 
-        public Builder setIsDefault(@Nullable Boolean isDefault) {
+        public Builder isDefault(@Nullable Boolean isDefault) {
             this.isDefault = Input.ofNullable(isDefault);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
+        public Builder keys(@Nullable Input<CreateServiceRequestKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable CreateServiceRequestKeysArgs keys) {
+        public Builder keys(@Nullable CreateServiceRequestKeysArgs keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setKvTags(@Nullable Input<Map<String,String>> kvTags) {
+        public Builder kvTags(@Nullable Input<Map<String,String>> kvTags) {
             this.kvTags = kvTags;
             return this;
         }
 
-        public Builder setKvTags(@Nullable Map<String,String> kvTags) {
+        public Builder kvTags(@Nullable Map<String,String> kvTags) {
             this.kvTags = Input.ofNullable(kvTags);
             return this;
         }
 
-        public Builder setLivenessProbeRequirements(@Nullable Input<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements) {
+        public Builder livenessProbeRequirements(@Nullable Input<AKSServiceCreateRequestLivenessProbeRequirementsArgs> livenessProbeRequirements) {
             this.livenessProbeRequirements = livenessProbeRequirements;
             return this;
         }
 
-        public Builder setLivenessProbeRequirements(@Nullable AKSServiceCreateRequestLivenessProbeRequirementsArgs livenessProbeRequirements) {
+        public Builder livenessProbeRequirements(@Nullable AKSServiceCreateRequestLivenessProbeRequirementsArgs livenessProbeRequirements) {
             this.livenessProbeRequirements = Input.ofNullable(livenessProbeRequirements);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setMaxConcurrentRequestsPerContainer(@Nullable Input<Integer> maxConcurrentRequestsPerContainer) {
+        public Builder maxConcurrentRequestsPerContainer(@Nullable Input<Integer> maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = maxConcurrentRequestsPerContainer;
             return this;
         }
 
-        public Builder setMaxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
+        public Builder maxConcurrentRequestsPerContainer(@Nullable Integer maxConcurrentRequestsPerContainer) {
             this.maxConcurrentRequestsPerContainer = Input.ofNullable(maxConcurrentRequestsPerContainer);
             return this;
         }
 
-        public Builder setMaxQueueWaitMs(@Nullable Input<Integer> maxQueueWaitMs) {
+        public Builder maxQueueWaitMs(@Nullable Input<Integer> maxQueueWaitMs) {
             this.maxQueueWaitMs = maxQueueWaitMs;
             return this;
         }
 
-        public Builder setMaxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
+        public Builder maxQueueWaitMs(@Nullable Integer maxQueueWaitMs) {
             this.maxQueueWaitMs = Input.ofNullable(maxQueueWaitMs);
             return this;
         }
 
-        public Builder setNamespace(@Nullable Input<String> namespace) {
+        public Builder namespace(@Nullable Input<String> namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = Input.ofNullable(namespace);
             return this;
         }
 
-        public Builder setNumReplicas(@Nullable Input<Integer> numReplicas) {
+        public Builder numReplicas(@Nullable Input<Integer> numReplicas) {
             this.numReplicas = numReplicas;
             return this;
         }
 
-        public Builder setNumReplicas(@Nullable Integer numReplicas) {
+        public Builder numReplicas(@Nullable Integer numReplicas) {
             this.numReplicas = Input.ofNullable(numReplicas);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScoringTimeoutMs(@Nullable Input<Integer> scoringTimeoutMs) {
+        public Builder scoringTimeoutMs(@Nullable Input<Integer> scoringTimeoutMs) {
             this.scoringTimeoutMs = scoringTimeoutMs;
             return this;
         }
 
-        public Builder setScoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
+        public Builder scoringTimeoutMs(@Nullable Integer scoringTimeoutMs) {
             this.scoringTimeoutMs = Input.ofNullable(scoringTimeoutMs);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setTrafficPercentile(@Nullable Input<Double> trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Input<Double> trafficPercentile) {
             this.trafficPercentile = trafficPercentile;
             return this;
         }
 
-        public Builder setTrafficPercentile(@Nullable Double trafficPercentile) {
+        public Builder trafficPercentile(@Nullable Double trafficPercentile) {
             this.trafficPercentile = Input.ofNullable(trafficPercentile);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,VariantType>> type) {
+        public Builder type(@Nullable Input<Either<String,VariantType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,VariantType> type) {
+        public Builder type(@Nullable Either<String,VariantType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setWorkspaceName(Input<String> workspaceName) {
+        public Builder workspaceName(Input<String> workspaceName) {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
 
-        public Builder setWorkspaceName(String workspaceName) {
+        public Builder workspaceName(String workspaceName) {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }

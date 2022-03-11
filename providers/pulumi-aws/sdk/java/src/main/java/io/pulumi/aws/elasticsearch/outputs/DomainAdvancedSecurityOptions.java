@@ -28,11 +28,11 @@ public final class DomainAdvancedSecurityOptions {
      */
     private final @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions;
 
-    @OutputCustomType.Constructor({"enabled","internalUserDatabaseEnabled","masterUserOptions"})
+    @OutputCustomType.Constructor
     private DomainAdvancedSecurityOptions(
-        Boolean enabled,
-        @Nullable Boolean internalUserDatabaseEnabled,
-        @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("internalUserDatabaseEnabled") @Nullable Boolean internalUserDatabaseEnabled,
+        @OutputCustomType.Parameter("masterUserOptions") @Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
         this.enabled = enabled;
         this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
         this.masterUserOptions = masterUserOptions;
@@ -84,17 +84,17 @@ public final class DomainAdvancedSecurityOptions {
     	      this.masterUserOptions = defaults.masterUserOptions;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setInternalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
+        public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
             this.internalUserDatabaseEnabled = internalUserDatabaseEnabled;
             return this;
         }
 
-        public Builder setMasterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
+        public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptions masterUserOptions) {
             this.masterUserOptions = masterUserOptions;
             return this;
         }

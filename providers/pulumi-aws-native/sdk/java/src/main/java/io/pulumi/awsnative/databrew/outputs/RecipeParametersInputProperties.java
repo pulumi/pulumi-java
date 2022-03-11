@@ -15,10 +15,10 @@ public final class RecipeParametersInputProperties {
     private final @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition;
     private final @Nullable RecipeS3Location s3InputDefinition;
 
-    @OutputCustomType.Constructor({"dataCatalogInputDefinition","s3InputDefinition"})
+    @OutputCustomType.Constructor
     private RecipeParametersInputProperties(
-        @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
-        @Nullable RecipeS3Location s3InputDefinition) {
+        @OutputCustomType.Parameter("dataCatalogInputDefinition") @Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition,
+        @OutputCustomType.Parameter("s3InputDefinition") @Nullable RecipeS3Location s3InputDefinition) {
         this.dataCatalogInputDefinition = dataCatalogInputDefinition;
         this.s3InputDefinition = s3InputDefinition;
     }
@@ -52,12 +52,12 @@ public final class RecipeParametersInputProperties {
     	      this.s3InputDefinition = defaults.s3InputDefinition;
         }
 
-        public Builder setDataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition) {
+        public Builder dataCatalogInputDefinition(@Nullable RecipeDataCatalogInputDefinition dataCatalogInputDefinition) {
             this.dataCatalogInputDefinition = dataCatalogInputDefinition;
             return this;
         }
 
-        public Builder setS3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
+        public Builder s3InputDefinition(@Nullable RecipeS3Location s3InputDefinition) {
             this.s3InputDefinition = s3InputDefinition;
             return this;
         }

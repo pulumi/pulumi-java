@@ -15,8 +15,8 @@ public final class VirtualNodeSpecListenerTlsValidationTrustSds {
      */
     private final String secretName;
 
-    @OutputCustomType.Constructor({"secretName"})
-    private VirtualNodeSpecListenerTlsValidationTrustSds(String secretName) {
+    @OutputCustomType.Constructor
+    private VirtualNodeSpecListenerTlsValidationTrustSds(@OutputCustomType.Parameter("secretName") String secretName) {
         this.secretName = secretName;
     }
 
@@ -48,7 +48,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustSds {
     	      this.secretName = defaults.secretName;
         }
 
-        public Builder setSecretName(String secretName) {
+        public Builder secretName(String secretName) {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }

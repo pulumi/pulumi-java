@@ -21,10 +21,10 @@ public final class TriggerResponse {
      */
     private final Double percent;
 
-    @OutputCustomType.Constructor({"count","percent"})
+    @OutputCustomType.Constructor
     private TriggerResponse(
-        Integer count,
-        Double percent) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("percent") Double percent) {
         this.count = count;
         this.percent = percent;
     }
@@ -66,12 +66,12 @@ public final class TriggerResponse {
     	      this.percent = defaults.percent;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setPercent(Double percent) {
+        public Builder percent(Double percent) {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }

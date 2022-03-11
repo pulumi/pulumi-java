@@ -32,12 +32,12 @@ public final class MaintenancePolicyResponse {
      */
     private final List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow;
 
-    @OutputCustomType.Constructor({"createTime","description","updateTime","weeklyMaintenanceWindow"})
+    @OutputCustomType.Constructor
     private MaintenancePolicyResponse(
-        String createTime,
-        String description,
-        String updateTime,
-        List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("weeklyMaintenanceWindow") List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;
@@ -99,22 +99,22 @@ public final class MaintenancePolicyResponse {
     	      this.weeklyMaintenanceWindow = defaults.weeklyMaintenanceWindow;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setWeeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
+        public Builder weeklyMaintenanceWindow(List<WeeklyMaintenanceWindowResponse> weeklyMaintenanceWindow) {
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }

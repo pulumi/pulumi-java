@@ -28,11 +28,11 @@ public final class ConnectionStatusDefinitionResponse {
      */
     private final @Nullable String target;
 
-    @OutputCustomType.Constructor({"error","status","target"})
+    @OutputCustomType.Constructor
     private ConnectionStatusDefinitionResponse(
-        @Nullable ConnectionErrorResponse error,
-        @Nullable String status,
-        @Nullable String target) {
+        @OutputCustomType.Parameter("error") @Nullable ConnectionErrorResponse error,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("target") @Nullable String target) {
         this.error = error;
         this.status = status;
         this.target = target;
@@ -84,17 +84,17 @@ public final class ConnectionStatusDefinitionResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setError(@Nullable ConnectionErrorResponse error) {
+        public Builder error(@Nullable ConnectionErrorResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = target;
             return this;
         }

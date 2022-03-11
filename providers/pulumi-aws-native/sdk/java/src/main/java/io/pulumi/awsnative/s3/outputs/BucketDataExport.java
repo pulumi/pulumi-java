@@ -17,10 +17,10 @@ public final class BucketDataExport {
      */
     private final String outputSchemaVersion;
 
-    @OutputCustomType.Constructor({"destination","outputSchemaVersion"})
+    @OutputCustomType.Constructor
     private BucketDataExport(
-        BucketDestination destination,
-        String outputSchemaVersion) {
+        @OutputCustomType.Parameter("destination") BucketDestination destination,
+        @OutputCustomType.Parameter("outputSchemaVersion") String outputSchemaVersion) {
         this.destination = destination;
         this.outputSchemaVersion = outputSchemaVersion;
     }
@@ -58,12 +58,12 @@ public final class BucketDataExport {
     	      this.outputSchemaVersion = defaults.outputSchemaVersion;
         }
 
-        public Builder setDestination(BucketDestination destination) {
+        public Builder destination(BucketDestination destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOutputSchemaVersion(String outputSchemaVersion) {
+        public Builder outputSchemaVersion(String outputSchemaVersion) {
             this.outputSchemaVersion = Objects.requireNonNull(outputSchemaVersion);
             return this;
         }

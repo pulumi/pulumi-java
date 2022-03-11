@@ -49,15 +49,15 @@ public final class GetCompositeAlarmResult {
      */
     private final @Nullable List<String> oKActions;
 
-    @OutputCustomType.Constructor({"actionsEnabled","alarmActions","alarmDescription","alarmRule","arn","insufficientDataActions","oKActions"})
+    @OutputCustomType.Constructor
     private GetCompositeAlarmResult(
-        @Nullable Boolean actionsEnabled,
-        @Nullable List<String> alarmActions,
-        @Nullable String alarmDescription,
-        @Nullable String alarmRule,
-        @Nullable String arn,
-        @Nullable List<String> insufficientDataActions,
-        @Nullable List<String> oKActions) {
+        @OutputCustomType.Parameter("actionsEnabled") @Nullable Boolean actionsEnabled,
+        @OutputCustomType.Parameter("alarmActions") @Nullable List<String> alarmActions,
+        @OutputCustomType.Parameter("alarmDescription") @Nullable String alarmDescription,
+        @OutputCustomType.Parameter("alarmRule") @Nullable String alarmRule,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("insufficientDataActions") @Nullable List<String> insufficientDataActions,
+        @OutputCustomType.Parameter("oKActions") @Nullable List<String> oKActions) {
         this.actionsEnabled = actionsEnabled;
         this.alarmActions = alarmActions;
         this.alarmDescription = alarmDescription;
@@ -149,37 +149,37 @@ public final class GetCompositeAlarmResult {
     	      this.oKActions = defaults.oKActions;
         }
 
-        public Builder setActionsEnabled(@Nullable Boolean actionsEnabled) {
+        public Builder actionsEnabled(@Nullable Boolean actionsEnabled) {
             this.actionsEnabled = actionsEnabled;
             return this;
         }
 
-        public Builder setAlarmActions(@Nullable List<String> alarmActions) {
+        public Builder alarmActions(@Nullable List<String> alarmActions) {
             this.alarmActions = alarmActions;
             return this;
         }
 
-        public Builder setAlarmDescription(@Nullable String alarmDescription) {
+        public Builder alarmDescription(@Nullable String alarmDescription) {
             this.alarmDescription = alarmDescription;
             return this;
         }
 
-        public Builder setAlarmRule(@Nullable String alarmRule) {
+        public Builder alarmRule(@Nullable String alarmRule) {
             this.alarmRule = alarmRule;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setInsufficientDataActions(@Nullable List<String> insufficientDataActions) {
+        public Builder insufficientDataActions(@Nullable List<String> insufficientDataActions) {
             this.insufficientDataActions = insufficientDataActions;
             return this;
         }
 
-        public Builder setOKActions(@Nullable List<String> oKActions) {
+        public Builder oKActions(@Nullable List<String> oKActions) {
             this.oKActions = oKActions;
             return this;
         }

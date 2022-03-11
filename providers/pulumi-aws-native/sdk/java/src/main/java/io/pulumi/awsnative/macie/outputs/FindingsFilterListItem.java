@@ -14,10 +14,10 @@ public final class FindingsFilterListItem {
     private final @Nullable String id;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"id","name"})
+    @OutputCustomType.Constructor
     private FindingsFilterListItem(
-        @Nullable String id,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.id = id;
         this.name = name;
     }
@@ -51,12 +51,12 @@ public final class FindingsFilterListItem {
     	      this.name = defaults.name;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -15,8 +15,8 @@ public final class NodeInputResponse {
      */
     private final String nodeName;
 
-    @OutputCustomType.Constructor({"nodeName"})
-    private NodeInputResponse(String nodeName) {
+    @OutputCustomType.Constructor
+    private NodeInputResponse(@OutputCustomType.Parameter("nodeName") String nodeName) {
         this.nodeName = nodeName;
     }
 
@@ -48,7 +48,7 @@ public final class NodeInputResponse {
     	      this.nodeName = defaults.nodeName;
         }
 
-        public Builder setNodeName(String nodeName) {
+        public Builder nodeName(String nodeName) {
             this.nodeName = Objects.requireNonNull(nodeName);
             return this;
         }

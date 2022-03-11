@@ -40,13 +40,13 @@ public final class LiveEventInputResponse {
      */
     private final String streamingProtocol;
 
-    @OutputCustomType.Constructor({"accessControl","accessToken","endpoints","keyFrameIntervalDuration","streamingProtocol"})
+    @OutputCustomType.Constructor
     private LiveEventInputResponse(
-        @Nullable LiveEventInputAccessControlResponse accessControl,
-        @Nullable String accessToken,
-        @Nullable List<LiveEventEndpointResponse> endpoints,
-        @Nullable String keyFrameIntervalDuration,
-        String streamingProtocol) {
+        @OutputCustomType.Parameter("accessControl") @Nullable LiveEventInputAccessControlResponse accessControl,
+        @OutputCustomType.Parameter("accessToken") @Nullable String accessToken,
+        @OutputCustomType.Parameter("endpoints") @Nullable List<LiveEventEndpointResponse> endpoints,
+        @OutputCustomType.Parameter("keyFrameIntervalDuration") @Nullable String keyFrameIntervalDuration,
+        @OutputCustomType.Parameter("streamingProtocol") String streamingProtocol) {
         this.accessControl = accessControl;
         this.accessToken = accessToken;
         this.endpoints = endpoints;
@@ -118,27 +118,27 @@ public final class LiveEventInputResponse {
     	      this.streamingProtocol = defaults.streamingProtocol;
         }
 
-        public Builder setAccessControl(@Nullable LiveEventInputAccessControlResponse accessControl) {
+        public Builder accessControl(@Nullable LiveEventInputAccessControlResponse accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessToken(@Nullable String accessToken) {
+        public Builder accessToken(@Nullable String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
 
-        public Builder setEndpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
+        public Builder endpoints(@Nullable List<LiveEventEndpointResponse> endpoints) {
             this.endpoints = endpoints;
             return this;
         }
 
-        public Builder setKeyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
+        public Builder keyFrameIntervalDuration(@Nullable String keyFrameIntervalDuration) {
             this.keyFrameIntervalDuration = keyFrameIntervalDuration;
             return this;
         }
 
-        public Builder setStreamingProtocol(String streamingProtocol) {
+        public Builder streamingProtocol(String streamingProtocol) {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }

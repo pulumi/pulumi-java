@@ -201,102 +201,102 @@ public final class PrivateLinkForAzureAdArgs extends io.pulumi.resources.Resourc
     	      this.tenants = defaults.tenants;
         }
 
-        public Builder setAllTenants(@Nullable Input<Boolean> allTenants) {
+        public Builder allTenants(@Nullable Input<Boolean> allTenants) {
             this.allTenants = allTenants;
             return this;
         }
 
-        public Builder setAllTenants(@Nullable Boolean allTenants) {
+        public Builder allTenants(@Nullable Boolean allTenants) {
             this.allTenants = Input.ofNullable(allTenants);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwnerTenantId(@Nullable Input<String> ownerTenantId) {
+        public Builder ownerTenantId(@Nullable Input<String> ownerTenantId) {
             this.ownerTenantId = ownerTenantId;
             return this;
         }
 
-        public Builder setOwnerTenantId(@Nullable String ownerTenantId) {
+        public Builder ownerTenantId(@Nullable String ownerTenantId) {
             this.ownerTenantId = Input.ofNullable(ownerTenantId);
             return this;
         }
 
-        public Builder setPolicyName(@Nullable Input<String> policyName) {
+        public Builder policyName(@Nullable Input<String> policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = Input.ofNullable(policyName);
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable Input<String> resourceGroup) {
+        public Builder resourceGroup(@Nullable Input<String> resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = Input.ofNullable(resourceGroup);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setResourceName(@Nullable Input<String> resourceName) {
+        public Builder resourceName(@Nullable Input<String> resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = Input.ofNullable(resourceName);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTenants(@Nullable Input<List<String>> tenants) {
+        public Builder tenants(@Nullable Input<List<String>> tenants) {
             this.tenants = tenants;
             return this;
         }
 
-        public Builder setTenants(@Nullable List<String> tenants) {
+        public Builder tenants(@Nullable List<String> tenants) {
             this.tenants = Input.ofNullable(tenants);
             return this;
         }

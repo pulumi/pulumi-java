@@ -12,10 +12,10 @@ public final class SubscriptionStateOverrideActionResponse {
     private final String action;
     private final String state;
 
-    @OutputCustomType.Constructor({"action","state"})
+    @OutputCustomType.Constructor
     private SubscriptionStateOverrideActionResponse(
-        String action,
-        String state) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("state") String state) {
         this.action = action;
         this.state = state;
     }
@@ -49,12 +49,12 @@ public final class SubscriptionStateOverrideActionResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

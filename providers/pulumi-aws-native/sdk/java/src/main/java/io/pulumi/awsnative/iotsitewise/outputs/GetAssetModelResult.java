@@ -57,16 +57,16 @@ public final class GetAssetModelResult {
      */
     private final @Nullable List<AssetModelTag> tags;
 
-    @OutputCustomType.Constructor({"assetModelArn","assetModelCompositeModels","assetModelDescription","assetModelHierarchies","assetModelId","assetModelName","assetModelProperties","tags"})
+    @OutputCustomType.Constructor
     private GetAssetModelResult(
-        @Nullable String assetModelArn,
-        @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
-        @Nullable String assetModelDescription,
-        @Nullable List<AssetModelHierarchy> assetModelHierarchies,
-        @Nullable String assetModelId,
-        @Nullable String assetModelName,
-        @Nullable List<AssetModelProperty> assetModelProperties,
-        @Nullable List<AssetModelTag> tags) {
+        @OutputCustomType.Parameter("assetModelArn") @Nullable String assetModelArn,
+        @OutputCustomType.Parameter("assetModelCompositeModels") @Nullable List<AssetModelCompositeModel> assetModelCompositeModels,
+        @OutputCustomType.Parameter("assetModelDescription") @Nullable String assetModelDescription,
+        @OutputCustomType.Parameter("assetModelHierarchies") @Nullable List<AssetModelHierarchy> assetModelHierarchies,
+        @OutputCustomType.Parameter("assetModelId") @Nullable String assetModelId,
+        @OutputCustomType.Parameter("assetModelName") @Nullable String assetModelName,
+        @OutputCustomType.Parameter("assetModelProperties") @Nullable List<AssetModelProperty> assetModelProperties,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetModelTag> tags) {
         this.assetModelArn = assetModelArn;
         this.assetModelCompositeModels = assetModelCompositeModels;
         this.assetModelDescription = assetModelDescription;
@@ -168,42 +168,42 @@ public final class GetAssetModelResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAssetModelArn(@Nullable String assetModelArn) {
+        public Builder assetModelArn(@Nullable String assetModelArn) {
             this.assetModelArn = assetModelArn;
             return this;
         }
 
-        public Builder setAssetModelCompositeModels(@Nullable List<AssetModelCompositeModel> assetModelCompositeModels) {
+        public Builder assetModelCompositeModels(@Nullable List<AssetModelCompositeModel> assetModelCompositeModels) {
             this.assetModelCompositeModels = assetModelCompositeModels;
             return this;
         }
 
-        public Builder setAssetModelDescription(@Nullable String assetModelDescription) {
+        public Builder assetModelDescription(@Nullable String assetModelDescription) {
             this.assetModelDescription = assetModelDescription;
             return this;
         }
 
-        public Builder setAssetModelHierarchies(@Nullable List<AssetModelHierarchy> assetModelHierarchies) {
+        public Builder assetModelHierarchies(@Nullable List<AssetModelHierarchy> assetModelHierarchies) {
             this.assetModelHierarchies = assetModelHierarchies;
             return this;
         }
 
-        public Builder setAssetModelId(@Nullable String assetModelId) {
+        public Builder assetModelId(@Nullable String assetModelId) {
             this.assetModelId = assetModelId;
             return this;
         }
 
-        public Builder setAssetModelName(@Nullable String assetModelName) {
+        public Builder assetModelName(@Nullable String assetModelName) {
             this.assetModelName = assetModelName;
             return this;
         }
 
-        public Builder setAssetModelProperties(@Nullable List<AssetModelProperty> assetModelProperties) {
+        public Builder assetModelProperties(@Nullable List<AssetModelProperty> assetModelProperties) {
             this.assetModelProperties = assetModelProperties;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetModelTag> tags) {
+        public Builder tags(@Nullable List<AssetModelTag> tags) {
             this.tags = tags;
             return this;
         }

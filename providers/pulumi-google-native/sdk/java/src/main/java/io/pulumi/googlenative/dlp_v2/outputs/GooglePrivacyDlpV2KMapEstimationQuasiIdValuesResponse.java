@@ -22,10 +22,10 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
      */
     private final List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues;
 
-    @OutputCustomType.Constructor({"estimatedAnonymity","quasiIdsValues"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse(
-        String estimatedAnonymity,
-        List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        @OutputCustomType.Parameter("estimatedAnonymity") String estimatedAnonymity,
+        @OutputCustomType.Parameter("quasiIdsValues") List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
         this.estimatedAnonymity = estimatedAnonymity;
         this.quasiIdsValues = quasiIdsValues;
     }
@@ -67,12 +67,12 @@ public final class GooglePrivacyDlpV2KMapEstimationQuasiIdValuesResponse {
     	      this.quasiIdsValues = defaults.quasiIdsValues;
         }
 
-        public Builder setEstimatedAnonymity(String estimatedAnonymity) {
+        public Builder estimatedAnonymity(String estimatedAnonymity) {
             this.estimatedAnonymity = Objects.requireNonNull(estimatedAnonymity);
             return this;
         }
 
-        public Builder setQuasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
+        public Builder quasiIdsValues(List<GooglePrivacyDlpV2ValueResponse> quasiIdsValues) {
             this.quasiIdsValues = Objects.requireNonNull(quasiIdsValues);
             return this;
         }

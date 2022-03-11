@@ -53,12 +53,12 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
     	      this.dataLakeStoreAccountName = defaults.dataLakeStoreAccountName;
         }
 
-        public Builder setDataLakeStoreAccountName(@Nullable Input<String> dataLakeStoreAccountName) {
+        public Builder dataLakeStoreAccountName(@Nullable Input<String> dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
 
-        public Builder setDataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
+        public Builder dataLakeStoreAccountName(@Nullable String dataLakeStoreAccountName) {
             this.dataLakeStoreAccountName = Input.ofNullable(dataLakeStoreAccountName);
             return this;
         }

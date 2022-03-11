@@ -108,27 +108,27 @@ public final class AzurePostgreSqlSectionResponse {
      */
     private final @Nullable String userPassword;
 
-    @OutputCustomType.Constructor({"authorityUrl","certificate","clientId","clientSecret","credentialType","databaseName","enableSsl","endpoint","isCertAuth","portNumber","resourceGroup","resourceUri","serverName","serviceDataAccessAuthIdentity","subscriptionId","tenantId","thumbprint","userId","userPassword"})
+    @OutputCustomType.Constructor
     private AzurePostgreSqlSectionResponse(
-        @Nullable String authorityUrl,
-        @Nullable String certificate,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String credentialType,
-        @Nullable String databaseName,
-        @Nullable Boolean enableSsl,
-        @Nullable String endpoint,
-        @Nullable Boolean isCertAuth,
-        @Nullable String portNumber,
-        @Nullable String resourceGroup,
-        @Nullable String resourceUri,
-        @Nullable String serverName,
-        @Nullable String serviceDataAccessAuthIdentity,
-        @Nullable String subscriptionId,
-        @Nullable String tenantId,
-        @Nullable String thumbprint,
-        @Nullable String userId,
-        @Nullable String userPassword) {
+        @OutputCustomType.Parameter("authorityUrl") @Nullable String authorityUrl,
+        @OutputCustomType.Parameter("certificate") @Nullable String certificate,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("credentialType") @Nullable String credentialType,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("enableSsl") @Nullable Boolean enableSsl,
+        @OutputCustomType.Parameter("endpoint") @Nullable String endpoint,
+        @OutputCustomType.Parameter("isCertAuth") @Nullable Boolean isCertAuth,
+        @OutputCustomType.Parameter("portNumber") @Nullable String portNumber,
+        @OutputCustomType.Parameter("resourceGroup") @Nullable String resourceGroup,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri,
+        @OutputCustomType.Parameter("serverName") @Nullable String serverName,
+        @OutputCustomType.Parameter("serviceDataAccessAuthIdentity") @Nullable String serviceDataAccessAuthIdentity,
+        @OutputCustomType.Parameter("subscriptionId") @Nullable String subscriptionId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("userId") @Nullable String userId,
+        @OutputCustomType.Parameter("userPassword") @Nullable String userPassword) {
         this.authorityUrl = authorityUrl;
         this.certificate = certificate;
         this.clientId = clientId;
@@ -340,97 +340,97 @@ public final class AzurePostgreSqlSectionResponse {
     	      this.userPassword = defaults.userPassword;
         }
 
-        public Builder setAuthorityUrl(@Nullable String authorityUrl) {
+        public Builder authorityUrl(@Nullable String authorityUrl) {
             this.authorityUrl = authorityUrl;
             return this;
         }
 
-        public Builder setCertificate(@Nullable String certificate) {
+        public Builder certificate(@Nullable String certificate) {
             this.certificate = certificate;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setCredentialType(@Nullable String credentialType) {
+        public Builder credentialType(@Nullable String credentialType) {
             this.credentialType = credentialType;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setEnableSsl(@Nullable Boolean enableSsl) {
+        public Builder enableSsl(@Nullable Boolean enableSsl) {
             this.enableSsl = enableSsl;
             return this;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setIsCertAuth(@Nullable Boolean isCertAuth) {
+        public Builder isCertAuth(@Nullable Boolean isCertAuth) {
             this.isCertAuth = isCertAuth;
             return this;
         }
 
-        public Builder setPortNumber(@Nullable String portNumber) {
+        public Builder portNumber(@Nullable String portNumber) {
             this.portNumber = portNumber;
             return this;
         }
 
-        public Builder setResourceGroup(@Nullable String resourceGroup) {
+        public Builder resourceGroup(@Nullable String resourceGroup) {
             this.resourceGroup = resourceGroup;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }
 
-        public Builder setServerName(@Nullable String serverName) {
+        public Builder serverName(@Nullable String serverName) {
             this.serverName = serverName;
             return this;
         }
 
-        public Builder setServiceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
+        public Builder serviceDataAccessAuthIdentity(@Nullable String serviceDataAccessAuthIdentity) {
             this.serviceDataAccessAuthIdentity = serviceDataAccessAuthIdentity;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setUserId(@Nullable String userId) {
+        public Builder userId(@Nullable String userId) {
             this.userId = userId;
             return this;
         }
 
-        public Builder setUserPassword(@Nullable String userPassword) {
+        public Builder userPassword(@Nullable String userPassword) {
             this.userPassword = userPassword;
             return this;
         }

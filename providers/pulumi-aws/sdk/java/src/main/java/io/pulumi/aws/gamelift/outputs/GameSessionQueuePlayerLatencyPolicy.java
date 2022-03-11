@@ -22,10 +22,10 @@ public final class GameSessionQueuePlayerLatencyPolicy {
      */
     private final @Nullable Integer policyDurationSeconds;
 
-    @OutputCustomType.Constructor({"maximumIndividualPlayerLatencyMilliseconds","policyDurationSeconds"})
+    @OutputCustomType.Constructor
     private GameSessionQueuePlayerLatencyPolicy(
-        Integer maximumIndividualPlayerLatencyMilliseconds,
-        @Nullable Integer policyDurationSeconds) {
+        @OutputCustomType.Parameter("maximumIndividualPlayerLatencyMilliseconds") Integer maximumIndividualPlayerLatencyMilliseconds,
+        @OutputCustomType.Parameter("policyDurationSeconds") @Nullable Integer policyDurationSeconds) {
         this.maximumIndividualPlayerLatencyMilliseconds = maximumIndividualPlayerLatencyMilliseconds;
         this.policyDurationSeconds = policyDurationSeconds;
     }
@@ -67,12 +67,12 @@ public final class GameSessionQueuePlayerLatencyPolicy {
     	      this.policyDurationSeconds = defaults.policyDurationSeconds;
         }
 
-        public Builder setMaximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
+        public Builder maximumIndividualPlayerLatencyMilliseconds(Integer maximumIndividualPlayerLatencyMilliseconds) {
             this.maximumIndividualPlayerLatencyMilliseconds = Objects.requireNonNull(maximumIndividualPlayerLatencyMilliseconds);
             return this;
         }
 
-        public Builder setPolicyDurationSeconds(@Nullable Integer policyDurationSeconds) {
+        public Builder policyDurationSeconds(@Nullable Integer policyDurationSeconds) {
             this.policyDurationSeconds = policyDurationSeconds;
             return this;
         }

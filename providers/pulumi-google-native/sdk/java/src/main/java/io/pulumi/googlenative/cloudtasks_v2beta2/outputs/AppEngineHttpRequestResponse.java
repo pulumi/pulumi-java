@@ -37,13 +37,13 @@ public final class AppEngineHttpRequestResponse {
      */
     private final String relativeUrl;
 
-    @OutputCustomType.Constructor({"appEngineRouting","headers","httpMethod","payload","relativeUrl"})
+    @OutputCustomType.Constructor
     private AppEngineHttpRequestResponse(
-        AppEngineRoutingResponse appEngineRouting,
-        Map<String,String> headers,
-        String httpMethod,
-        String payload,
-        String relativeUrl) {
+        @OutputCustomType.Parameter("appEngineRouting") AppEngineRoutingResponse appEngineRouting,
+        @OutputCustomType.Parameter("headers") Map<String,String> headers,
+        @OutputCustomType.Parameter("httpMethod") String httpMethod,
+        @OutputCustomType.Parameter("payload") String payload,
+        @OutputCustomType.Parameter("relativeUrl") String relativeUrl) {
         this.appEngineRouting = appEngineRouting;
         this.headers = headers;
         this.httpMethod = httpMethod;
@@ -115,27 +115,27 @@ public final class AppEngineHttpRequestResponse {
     	      this.relativeUrl = defaults.relativeUrl;
         }
 
-        public Builder setAppEngineRouting(AppEngineRoutingResponse appEngineRouting) {
+        public Builder appEngineRouting(AppEngineRoutingResponse appEngineRouting) {
             this.appEngineRouting = Objects.requireNonNull(appEngineRouting);
             return this;
         }
 
-        public Builder setHeaders(Map<String,String> headers) {
+        public Builder headers(Map<String,String> headers) {
             this.headers = Objects.requireNonNull(headers);
             return this;
         }
 
-        public Builder setHttpMethod(String httpMethod) {
+        public Builder httpMethod(String httpMethod) {
             this.httpMethod = Objects.requireNonNull(httpMethod);
             return this;
         }
 
-        public Builder setPayload(String payload) {
+        public Builder payload(String payload) {
             this.payload = Objects.requireNonNull(payload);
             return this;
         }
 
-        public Builder setRelativeUrl(String relativeUrl) {
+        public Builder relativeUrl(String relativeUrl) {
             this.relativeUrl = Objects.requireNonNull(relativeUrl);
             return this;
         }

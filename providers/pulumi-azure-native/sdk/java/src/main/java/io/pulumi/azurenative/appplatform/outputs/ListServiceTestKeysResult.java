@@ -38,13 +38,13 @@ public final class ListServiceTestKeysResult {
      */
     private final @Nullable String secondaryTestEndpoint;
 
-    @OutputCustomType.Constructor({"enabled","primaryKey","primaryTestEndpoint","secondaryKey","secondaryTestEndpoint"})
+    @OutputCustomType.Constructor
     private ListServiceTestKeysResult(
-        @Nullable Boolean enabled,
-        @Nullable String primaryKey,
-        @Nullable String primaryTestEndpoint,
-        @Nullable String secondaryKey,
-        @Nullable String secondaryTestEndpoint) {
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("primaryKey") @Nullable String primaryKey,
+        @OutputCustomType.Parameter("primaryTestEndpoint") @Nullable String primaryTestEndpoint,
+        @OutputCustomType.Parameter("secondaryKey") @Nullable String secondaryKey,
+        @OutputCustomType.Parameter("secondaryTestEndpoint") @Nullable String secondaryTestEndpoint) {
         this.enabled = enabled;
         this.primaryKey = primaryKey;
         this.primaryTestEndpoint = primaryTestEndpoint;
@@ -116,27 +116,27 @@ public final class ListServiceTestKeysResult {
     	      this.secondaryTestEndpoint = defaults.secondaryTestEndpoint;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setPrimaryKey(@Nullable String primaryKey) {
+        public Builder primaryKey(@Nullable String primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }
 
-        public Builder setPrimaryTestEndpoint(@Nullable String primaryTestEndpoint) {
+        public Builder primaryTestEndpoint(@Nullable String primaryTestEndpoint) {
             this.primaryTestEndpoint = primaryTestEndpoint;
             return this;
         }
 
-        public Builder setSecondaryKey(@Nullable String secondaryKey) {
+        public Builder secondaryKey(@Nullable String secondaryKey) {
             this.secondaryKey = secondaryKey;
             return this;
         }
 
-        public Builder setSecondaryTestEndpoint(@Nullable String secondaryTestEndpoint) {
+        public Builder secondaryTestEndpoint(@Nullable String secondaryTestEndpoint) {
             this.secondaryTestEndpoint = secondaryTestEndpoint;
             return this;
         }

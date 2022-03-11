@@ -14,10 +14,10 @@ public final class AccessPointTransformationConfiguration {
     private final List<String> actions;
     private final Object contentTransformation;
 
-    @OutputCustomType.Constructor({"actions","contentTransformation"})
+    @OutputCustomType.Constructor
     private AccessPointTransformationConfiguration(
-        List<String> actions,
-        Object contentTransformation) {
+        @OutputCustomType.Parameter("actions") List<String> actions,
+        @OutputCustomType.Parameter("contentTransformation") Object contentTransformation) {
         this.actions = actions;
         this.contentTransformation = contentTransformation;
     }
@@ -51,12 +51,12 @@ public final class AccessPointTransformationConfiguration {
     	      this.contentTransformation = defaults.contentTransformation;
         }
 
-        public Builder setActions(List<String> actions) {
+        public Builder actions(List<String> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setContentTransformation(Object contentTransformation) {
+        public Builder contentTransformation(Object contentTransformation) {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }

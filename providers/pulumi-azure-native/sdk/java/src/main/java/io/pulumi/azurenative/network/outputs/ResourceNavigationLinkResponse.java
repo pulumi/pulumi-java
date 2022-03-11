@@ -47,15 +47,15 @@ public final class ResourceNavigationLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","link","linkedResourceType","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ResourceNavigationLinkResponse(
-        String etag,
-        String id,
-        @Nullable String link,
-        @Nullable String linkedResourceType,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.link = link;
@@ -147,37 +147,37 @@ public final class ResourceNavigationLinkResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLinkedResourceType(@Nullable String linkedResourceType) {
+        public Builder linkedResourceType(@Nullable String linkedResourceType) {
             this.linkedResourceType = linkedResourceType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

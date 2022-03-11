@@ -52,16 +52,16 @@ public final class GetRepositoryResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","description","format","kmsKeyName","labels","mavenConfig","name","updateTime"})
+    @OutputCustomType.Constructor
     private GetRepositoryResult(
-        String createTime,
-        String description,
-        String format,
-        String kmsKeyName,
-        Map<String,String> labels,
-        MavenRepositoryConfigResponse mavenConfig,
-        String name,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("mavenConfig") MavenRepositoryConfigResponse mavenConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.description = description;
         this.format = format;
@@ -163,42 +163,42 @@ public final class GetRepositoryResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMavenConfig(MavenRepositoryConfigResponse mavenConfig) {
+        public Builder mavenConfig(MavenRepositoryConfigResponse mavenConfig) {
             this.mavenConfig = Objects.requireNonNull(mavenConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

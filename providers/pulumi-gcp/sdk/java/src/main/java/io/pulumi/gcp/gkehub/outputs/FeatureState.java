@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FeatureState {
     private final @Nullable List<FeatureStateState> states;
 
-    @OutputCustomType.Constructor({"states"})
-    private FeatureState(@Nullable List<FeatureStateState> states) {
+    @OutputCustomType.Constructor
+    private FeatureState(@OutputCustomType.Parameter("states") @Nullable List<FeatureStateState> states) {
         this.states = states;
     }
 
@@ -42,7 +42,7 @@ public final class FeatureState {
     	      this.states = defaults.states;
         }
 
-        public Builder setStates(@Nullable List<FeatureStateState> states) {
+        public Builder states(@Nullable List<FeatureStateState> states) {
             this.states = states;
             return this;
         }

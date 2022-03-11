@@ -21,10 +21,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"projectRepoId","uid"})
+    @OutputCustomType.Constructor
     private GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse(
-        GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId,
-        String uid) {
+        @OutputCustomType.Parameter("projectRepoId") GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.projectRepoId = projectRepoId;
         this.uid = uid;
     }
@@ -66,12 +66,12 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1RepoIdResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setProjectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId) {
+        public Builder projectRepoId(GoogleDevtoolsContaineranalysisV1alpha1ProjectRepoIdResponse projectRepoId) {
             this.projectRepoId = Objects.requireNonNull(projectRepoId);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

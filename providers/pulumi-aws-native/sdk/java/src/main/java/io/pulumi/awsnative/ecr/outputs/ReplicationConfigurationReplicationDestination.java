@@ -12,10 +12,10 @@ public final class ReplicationConfigurationReplicationDestination {
     private final String region;
     private final String registryId;
 
-    @OutputCustomType.Constructor({"region","registryId"})
+    @OutputCustomType.Constructor
     private ReplicationConfigurationReplicationDestination(
-        String region,
-        String registryId) {
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("registryId") String registryId) {
         this.region = region;
         this.registryId = registryId;
     }
@@ -49,12 +49,12 @@ public final class ReplicationConfigurationReplicationDestination {
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }

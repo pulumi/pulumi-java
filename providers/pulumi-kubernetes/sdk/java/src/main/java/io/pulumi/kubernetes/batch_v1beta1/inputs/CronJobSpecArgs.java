@@ -157,72 +157,72 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.suspend = defaults.suspend;
         }
 
-        public Builder setConcurrencyPolicy(@Nullable Input<String> concurrencyPolicy) {
+        public Builder concurrencyPolicy(@Nullable Input<String> concurrencyPolicy) {
             this.concurrencyPolicy = concurrencyPolicy;
             return this;
         }
 
-        public Builder setConcurrencyPolicy(@Nullable String concurrencyPolicy) {
+        public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
             this.concurrencyPolicy = Input.ofNullable(concurrencyPolicy);
             return this;
         }
 
-        public Builder setFailedJobsHistoryLimit(@Nullable Input<Integer> failedJobsHistoryLimit) {
+        public Builder failedJobsHistoryLimit(@Nullable Input<Integer> failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = failedJobsHistoryLimit;
             return this;
         }
 
-        public Builder setFailedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
+        public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
             this.failedJobsHistoryLimit = Input.ofNullable(failedJobsHistoryLimit);
             return this;
         }
 
-        public Builder setJobTemplate(Input<JobTemplateSpecArgs> jobTemplate) {
+        public Builder jobTemplate(Input<JobTemplateSpecArgs> jobTemplate) {
             this.jobTemplate = Objects.requireNonNull(jobTemplate);
             return this;
         }
 
-        public Builder setJobTemplate(JobTemplateSpecArgs jobTemplate) {
+        public Builder jobTemplate(JobTemplateSpecArgs jobTemplate) {
             this.jobTemplate = Input.of(Objects.requireNonNull(jobTemplate));
             return this;
         }
 
-        public Builder setSchedule(Input<String> schedule) {
+        public Builder schedule(Input<String> schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSchedule(String schedule) {
+        public Builder schedule(String schedule) {
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
 
-        public Builder setStartingDeadlineSeconds(@Nullable Input<Integer> startingDeadlineSeconds) {
+        public Builder startingDeadlineSeconds(@Nullable Input<Integer> startingDeadlineSeconds) {
             this.startingDeadlineSeconds = startingDeadlineSeconds;
             return this;
         }
 
-        public Builder setStartingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
+        public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
             this.startingDeadlineSeconds = Input.ofNullable(startingDeadlineSeconds);
             return this;
         }
 
-        public Builder setSuccessfulJobsHistoryLimit(@Nullable Input<Integer> successfulJobsHistoryLimit) {
+        public Builder successfulJobsHistoryLimit(@Nullable Input<Integer> successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = successfulJobsHistoryLimit;
             return this;
         }
 
-        public Builder setSuccessfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
+        public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
             this.successfulJobsHistoryLimit = Input.ofNullable(successfulJobsHistoryLimit);
             return this;
         }
 
-        public Builder setSuspend(@Nullable Input<Boolean> suspend) {
+        public Builder suspend(@Nullable Input<Boolean> suspend) {
             this.suspend = suspend;
             return this;
         }
 
-        public Builder setSuspend(@Nullable Boolean suspend) {
+        public Builder suspend(@Nullable Boolean suspend) {
             this.suspend = Input.ofNullable(suspend);
             return this;
         }

@@ -25,11 +25,11 @@ public final class DeviceDetailsResponse {
      */
     private final String serialNumber;
 
-    @OutputCustomType.Constructor({"managementResourceId","managementResourceTenantId","serialNumber"})
+    @OutputCustomType.Constructor
     private DeviceDetailsResponse(
-        String managementResourceId,
-        String managementResourceTenantId,
-        String serialNumber) {
+        @OutputCustomType.Parameter("managementResourceId") String managementResourceId,
+        @OutputCustomType.Parameter("managementResourceTenantId") String managementResourceTenantId,
+        @OutputCustomType.Parameter("serialNumber") String serialNumber) {
         this.managementResourceId = managementResourceId;
         this.managementResourceTenantId = managementResourceTenantId;
         this.serialNumber = serialNumber;
@@ -81,17 +81,17 @@ public final class DeviceDetailsResponse {
     	      this.serialNumber = defaults.serialNumber;
         }
 
-        public Builder setManagementResourceId(String managementResourceId) {
+        public Builder managementResourceId(String managementResourceId) {
             this.managementResourceId = Objects.requireNonNull(managementResourceId);
             return this;
         }
 
-        public Builder setManagementResourceTenantId(String managementResourceTenantId) {
+        public Builder managementResourceTenantId(String managementResourceTenantId) {
             this.managementResourceTenantId = Objects.requireNonNull(managementResourceTenantId);
             return this;
         }
 
-        public Builder setSerialNumber(String serialNumber) {
+        public Builder serialNumber(String serialNumber) {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }

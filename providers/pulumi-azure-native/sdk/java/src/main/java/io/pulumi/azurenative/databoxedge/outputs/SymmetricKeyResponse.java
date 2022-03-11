@@ -17,8 +17,8 @@ public final class SymmetricKeyResponse {
      */
     private final @Nullable AsymmetricEncryptedSecretResponse connectionString;
 
-    @OutputCustomType.Constructor({"connectionString"})
-    private SymmetricKeyResponse(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
+    @OutputCustomType.Constructor
+    private SymmetricKeyResponse(@OutputCustomType.Parameter("connectionString") @Nullable AsymmetricEncryptedSecretResponse connectionString) {
         this.connectionString = connectionString;
     }
 
@@ -50,7 +50,7 @@ public final class SymmetricKeyResponse {
     	      this.connectionString = defaults.connectionString;
         }
 
-        public Builder setConnectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
+        public Builder connectionString(@Nullable AsymmetricEncryptedSecretResponse connectionString) {
             this.connectionString = connectionString;
             return this;
         }

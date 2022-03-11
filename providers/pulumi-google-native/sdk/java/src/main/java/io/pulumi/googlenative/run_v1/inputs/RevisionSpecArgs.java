@@ -156,72 +156,72 @@ public final class RevisionSpecArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerConcurrency(@Nullable Input<Integer> containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Input<Integer> containerConcurrency) {
             this.containerConcurrency = containerConcurrency;
             return this;
         }
 
-        public Builder setContainerConcurrency(@Nullable Integer containerConcurrency) {
+        public Builder containerConcurrency(@Nullable Integer containerConcurrency) {
             this.containerConcurrency = Input.ofNullable(containerConcurrency);
             return this;
         }
 
-        public Builder setContainers(@Nullable Input<List<ContainerArgs>> containers) {
+        public Builder containers(@Nullable Input<List<ContainerArgs>> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setContainers(@Nullable List<ContainerArgs> containers) {
+        public Builder containers(@Nullable List<ContainerArgs> containers) {
             this.containers = Input.ofNullable(containers);
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Input<Boolean> enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Boolean enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = Input.ofNullable(enableServiceLinks);
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReferenceArgs> imagePullSecrets) {
             this.imagePullSecrets = Input.ofNullable(imagePullSecrets);
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable Input<String> serviceAccountName) {
+        public Builder serviceAccountName(@Nullable Input<String> serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
 
-        public Builder setVolumes(@Nullable Input<List<VolumeArgs>> volumes) {
+        public Builder volumes(@Nullable Input<List<VolumeArgs>> volumes) {
             this.volumes = volumes;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<VolumeArgs> volumes) {
+        public Builder volumes(@Nullable List<VolumeArgs> volumes) {
             this.volumes = Input.ofNullable(volumes);
             return this;
         }

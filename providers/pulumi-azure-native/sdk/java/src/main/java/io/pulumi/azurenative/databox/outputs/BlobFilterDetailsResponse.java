@@ -27,11 +27,11 @@ public final class BlobFilterDetailsResponse {
      */
     private final @Nullable List<String> containerList;
 
-    @OutputCustomType.Constructor({"blobPathList","blobPrefixList","containerList"})
+    @OutputCustomType.Constructor
     private BlobFilterDetailsResponse(
-        @Nullable List<String> blobPathList,
-        @Nullable List<String> blobPrefixList,
-        @Nullable List<String> containerList) {
+        @OutputCustomType.Parameter("blobPathList") @Nullable List<String> blobPathList,
+        @OutputCustomType.Parameter("blobPrefixList") @Nullable List<String> blobPrefixList,
+        @OutputCustomType.Parameter("containerList") @Nullable List<String> containerList) {
         this.blobPathList = blobPathList;
         this.blobPrefixList = blobPrefixList;
         this.containerList = containerList;
@@ -83,17 +83,17 @@ public final class BlobFilterDetailsResponse {
     	      this.containerList = defaults.containerList;
         }
 
-        public Builder setBlobPathList(@Nullable List<String> blobPathList) {
+        public Builder blobPathList(@Nullable List<String> blobPathList) {
             this.blobPathList = blobPathList;
             return this;
         }
 
-        public Builder setBlobPrefixList(@Nullable List<String> blobPrefixList) {
+        public Builder blobPrefixList(@Nullable List<String> blobPrefixList) {
             this.blobPrefixList = blobPrefixList;
             return this;
         }
 
-        public Builder setContainerList(@Nullable List<String> containerList) {
+        public Builder containerList(@Nullable List<String> containerList) {
             this.containerList = containerList;
             return this;
         }

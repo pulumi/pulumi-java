@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class GetClusterLoggingConfig {
     private final List<String> enableComponents;
 
-    @OutputCustomType.Constructor({"enableComponents"})
-    private GetClusterLoggingConfig(List<String> enableComponents) {
+    @OutputCustomType.Constructor
+    private GetClusterLoggingConfig(@OutputCustomType.Parameter("enableComponents") List<String> enableComponents) {
         this.enableComponents = enableComponents;
     }
 
@@ -41,7 +41,7 @@ public final class GetClusterLoggingConfig {
     	      this.enableComponents = defaults.enableComponents;
         }
 
-        public Builder setEnableComponents(List<String> enableComponents) {
+        public Builder enableComponents(List<String> enableComponents) {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }

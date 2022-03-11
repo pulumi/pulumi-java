@@ -20,10 +20,10 @@ public final class DirectoryConfigServiceAccountCredentials {
      */
     private final String accountPassword;
 
-    @OutputCustomType.Constructor({"accountName","accountPassword"})
+    @OutputCustomType.Constructor
     private DirectoryConfigServiceAccountCredentials(
-        String accountName,
-        String accountPassword) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("accountPassword") String accountPassword) {
         this.accountName = accountName;
         this.accountPassword = accountPassword;
     }
@@ -65,12 +65,12 @@ public final class DirectoryConfigServiceAccountCredentials {
     	      this.accountPassword = defaults.accountPassword;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAccountPassword(String accountPassword) {
+        public Builder accountPassword(String accountPassword) {
             this.accountPassword = Objects.requireNonNull(accountPassword);
             return this;
         }

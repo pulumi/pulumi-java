@@ -26,11 +26,11 @@ public final class MigrationPropertiesResponse {
      */
     private final String oldVnetSiteId;
 
-    @OutputCustomType.Constructor({"migrationProgress","oldSubnetId","oldVnetSiteId"})
+    @OutputCustomType.Constructor
     private MigrationPropertiesResponse(
-        MigrationProgressResponse migrationProgress,
-        String oldSubnetId,
-        String oldVnetSiteId) {
+        @OutputCustomType.Parameter("migrationProgress") MigrationProgressResponse migrationProgress,
+        @OutputCustomType.Parameter("oldSubnetId") String oldSubnetId,
+        @OutputCustomType.Parameter("oldVnetSiteId") String oldVnetSiteId) {
         this.migrationProgress = migrationProgress;
         this.oldSubnetId = oldSubnetId;
         this.oldVnetSiteId = oldVnetSiteId;
@@ -82,17 +82,17 @@ public final class MigrationPropertiesResponse {
     	      this.oldVnetSiteId = defaults.oldVnetSiteId;
         }
 
-        public Builder setMigrationProgress(MigrationProgressResponse migrationProgress) {
+        public Builder migrationProgress(MigrationProgressResponse migrationProgress) {
             this.migrationProgress = Objects.requireNonNull(migrationProgress);
             return this;
         }
 
-        public Builder setOldSubnetId(String oldSubnetId) {
+        public Builder oldSubnetId(String oldSubnetId) {
             this.oldSubnetId = Objects.requireNonNull(oldSubnetId);
             return this;
         }
 
-        public Builder setOldVnetSiteId(String oldVnetSiteId) {
+        public Builder oldVnetSiteId(String oldVnetSiteId) {
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
         }

@@ -17,8 +17,8 @@ public final class DataSourceParametersAthena {
      */
     private final @Nullable String workGroup;
 
-    @OutputCustomType.Constructor({"workGroup"})
-    private DataSourceParametersAthena(@Nullable String workGroup) {
+    @OutputCustomType.Constructor
+    private DataSourceParametersAthena(@OutputCustomType.Parameter("workGroup") @Nullable String workGroup) {
         this.workGroup = workGroup;
     }
 
@@ -50,7 +50,7 @@ public final class DataSourceParametersAthena {
     	      this.workGroup = defaults.workGroup;
         }
 
-        public Builder setWorkGroup(@Nullable String workGroup) {
+        public Builder workGroup(@Nullable String workGroup) {
             this.workGroup = workGroup;
             return this;
         }

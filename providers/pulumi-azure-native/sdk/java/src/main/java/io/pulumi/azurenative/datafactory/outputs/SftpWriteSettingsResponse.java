@@ -44,14 +44,14 @@ public final class SftpWriteSettingsResponse {
      */
     private final @Nullable Object useTempFileRename;
 
-    @OutputCustomType.Constructor({"copyBehavior","disableMetricsCollection","maxConcurrentConnections","operationTimeout","type","useTempFileRename"})
+    @OutputCustomType.Constructor
     private SftpWriteSettingsResponse(
-        @Nullable Object copyBehavior,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object operationTimeout,
-        String type,
-        @Nullable Object useTempFileRename) {
+        @OutputCustomType.Parameter("copyBehavior") @Nullable Object copyBehavior,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("operationTimeout") @Nullable Object operationTimeout,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("useTempFileRename") @Nullable Object useTempFileRename) {
         this.copyBehavior = copyBehavior;
         this.disableMetricsCollection = disableMetricsCollection;
         this.maxConcurrentConnections = maxConcurrentConnections;
@@ -134,32 +134,32 @@ public final class SftpWriteSettingsResponse {
     	      this.useTempFileRename = defaults.useTempFileRename;
         }
 
-        public Builder setCopyBehavior(@Nullable Object copyBehavior) {
+        public Builder copyBehavior(@Nullable Object copyBehavior) {
             this.copyBehavior = copyBehavior;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setOperationTimeout(@Nullable Object operationTimeout) {
+        public Builder operationTimeout(@Nullable Object operationTimeout) {
             this.operationTimeout = operationTimeout;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUseTempFileRename(@Nullable Object useTempFileRename) {
+        public Builder useTempFileRename(@Nullable Object useTempFileRename) {
             this.useTempFileRename = useTempFileRename;
             return this;
         }

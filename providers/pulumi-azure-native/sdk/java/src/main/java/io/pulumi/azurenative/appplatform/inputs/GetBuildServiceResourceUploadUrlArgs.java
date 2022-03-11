@@ -84,17 +84,17 @@ public final class GetBuildServiceResourceUploadUrlArgs extends io.pulumi.resour
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setBuildServiceName(String buildServiceName) {
+        public Builder buildServiceName(String buildServiceName) {
             this.buildServiceName = Objects.requireNonNull(buildServiceName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

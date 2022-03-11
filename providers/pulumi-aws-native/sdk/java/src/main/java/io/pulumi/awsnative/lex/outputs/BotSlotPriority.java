@@ -17,10 +17,10 @@ public final class BotSlotPriority {
      */
     private final String slotName;
 
-    @OutputCustomType.Constructor({"priority","slotName"})
+    @OutputCustomType.Constructor
     private BotSlotPriority(
-        Integer priority,
-        String slotName) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("slotName") String slotName) {
         this.priority = priority;
         this.slotName = slotName;
     }
@@ -58,12 +58,12 @@ public final class BotSlotPriority {
     	      this.slotName = defaults.slotName;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setSlotName(String slotName) {
+        public Builder slotName(String slotName) {
             this.slotName = Objects.requireNonNull(slotName);
             return this;
         }

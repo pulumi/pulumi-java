@@ -105,42 +105,42 @@ public final class RandomPetState extends io.pulumi.resources.ResourceArgs {
     	      this.separator = defaults.separator;
         }
 
-        public Builder setKeepers(@Nullable Input<Map<String,Object>> keepers) {
+        public Builder keepers(@Nullable Input<Map<String,Object>> keepers) {
             this.keepers = keepers;
             return this;
         }
 
-        public Builder setKeepers(@Nullable Map<String,Object> keepers) {
+        public Builder keepers(@Nullable Map<String,Object> keepers) {
             this.keepers = Input.ofNullable(keepers);
             return this;
         }
 
-        public Builder setLength(@Nullable Input<Integer> length) {
+        public Builder length(@Nullable Input<Integer> length) {
             this.length = length;
             return this;
         }
 
-        public Builder setLength(@Nullable Integer length) {
+        public Builder length(@Nullable Integer length) {
             this.length = Input.ofNullable(length);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setSeparator(@Nullable Input<String> separator) {
+        public Builder separator(@Nullable Input<String> separator) {
             this.separator = separator;
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = Input.ofNullable(separator);
             return this;
         }

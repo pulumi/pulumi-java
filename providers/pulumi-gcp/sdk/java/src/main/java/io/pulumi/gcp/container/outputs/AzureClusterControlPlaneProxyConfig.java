@@ -20,10 +20,10 @@ public final class AzureClusterControlPlaneProxyConfig {
      */
     private final String secretId;
 
-    @OutputCustomType.Constructor({"resourceGroupId","secretId"})
+    @OutputCustomType.Constructor
     private AzureClusterControlPlaneProxyConfig(
-        String resourceGroupId,
-        String secretId) {
+        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @OutputCustomType.Parameter("secretId") String secretId) {
         this.resourceGroupId = resourceGroupId;
         this.secretId = secretId;
     }
@@ -65,12 +65,12 @@ public final class AzureClusterControlPlaneProxyConfig {
     	      this.secretId = defaults.secretId;
         }
 
-        public Builder setResourceGroupId(String resourceGroupId) {
+        public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = Objects.requireNonNull(resourceGroupId);
             return this;
         }
 
-        public Builder setSecretId(String secretId) {
+        public Builder secretId(String secretId) {
             this.secretId = Objects.requireNonNull(secretId);
             return this;
         }

@@ -15,10 +15,10 @@ public final class IndexValueImportanceItem {
     private final @Nullable String key;
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private IndexValueImportanceItem(
-        @Nullable String key,
-        @Nullable Integer value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable Integer value) {
         this.key = key;
         this.value = value;
     }
@@ -52,12 +52,12 @@ public final class IndexValueImportanceItem {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

@@ -90,17 +90,17 @@ public final class ClusterVersionDetailsResponse extends io.pulumi.resources.Inv
     	      this.supportExpiryUtc = defaults.supportExpiryUtc;
         }
 
-        public Builder setCodeVersion(@Nullable String codeVersion) {
+        public Builder codeVersion(@Nullable String codeVersion) {
             this.codeVersion = codeVersion;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable String environment) {
+        public Builder environment(@Nullable String environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setSupportExpiryUtc(@Nullable String supportExpiryUtc) {
+        public Builder supportExpiryUtc(@Nullable String supportExpiryUtc) {
             this.supportExpiryUtc = supportExpiryUtc;
             return this;
         }

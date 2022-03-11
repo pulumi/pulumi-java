@@ -155,72 +155,72 @@ public final class WorkflowTemplateJobPrestoJobArgs extends io.pulumi.resources.
     	      this.queryList = defaults.queryList;
         }
 
-        public Builder setClientTags(@Nullable Input<List<String>> clientTags) {
+        public Builder clientTags(@Nullable Input<List<String>> clientTags) {
             this.clientTags = clientTags;
             return this;
         }
 
-        public Builder setClientTags(@Nullable List<String> clientTags) {
+        public Builder clientTags(@Nullable List<String> clientTags) {
             this.clientTags = Input.ofNullable(clientTags);
             return this;
         }
 
-        public Builder setContinueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Input<Boolean> continueOnFailure) {
             this.continueOnFailure = continueOnFailure;
             return this;
         }
 
-        public Builder setContinueOnFailure(@Nullable Boolean continueOnFailure) {
+        public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
             this.continueOnFailure = Input.ofNullable(continueOnFailure);
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigArgs> loggingConfig) {
+        public Builder loggingConfig(@Nullable Input<WorkflowTemplateJobPrestoJobLoggingConfigArgs> loggingConfig) {
             this.loggingConfig = loggingConfig;
             return this;
         }
 
-        public Builder setLoggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigArgs loggingConfig) {
+        public Builder loggingConfig(@Nullable WorkflowTemplateJobPrestoJobLoggingConfigArgs loggingConfig) {
             this.loggingConfig = Input.ofNullable(loggingConfig);
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable Input<String> outputFormat) {
+        public Builder outputFormat(@Nullable Input<String> outputFormat) {
             this.outputFormat = outputFormat;
             return this;
         }
 
-        public Builder setOutputFormat(@Nullable String outputFormat) {
+        public Builder outputFormat(@Nullable String outputFormat) {
             this.outputFormat = Input.ofNullable(outputFormat);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable Input<String> queryFileUri) {
+        public Builder queryFileUri(@Nullable Input<String> queryFileUri) {
             this.queryFileUri = queryFileUri;
             return this;
         }
 
-        public Builder setQueryFileUri(@Nullable String queryFileUri) {
+        public Builder queryFileUri(@Nullable String queryFileUri) {
             this.queryFileUri = Input.ofNullable(queryFileUri);
             return this;
         }
 
-        public Builder setQueryList(@Nullable Input<WorkflowTemplateJobPrestoJobQueryListArgs> queryList) {
+        public Builder queryList(@Nullable Input<WorkflowTemplateJobPrestoJobQueryListArgs> queryList) {
             this.queryList = queryList;
             return this;
         }
 
-        public Builder setQueryList(@Nullable WorkflowTemplateJobPrestoJobQueryListArgs queryList) {
+        public Builder queryList(@Nullable WorkflowTemplateJobPrestoJobQueryListArgs queryList) {
             this.queryList = Input.ofNullable(queryList);
             return this;
         }

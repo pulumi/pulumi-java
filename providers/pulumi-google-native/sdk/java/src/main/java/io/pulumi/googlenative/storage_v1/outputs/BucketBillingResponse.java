@@ -15,8 +15,8 @@ public final class BucketBillingResponse {
      */
     private final Boolean requesterPays;
 
-    @OutputCustomType.Constructor({"requesterPays"})
-    private BucketBillingResponse(Boolean requesterPays) {
+    @OutputCustomType.Constructor
+    private BucketBillingResponse(@OutputCustomType.Parameter("requesterPays") Boolean requesterPays) {
         this.requesterPays = requesterPays;
     }
 
@@ -48,7 +48,7 @@ public final class BucketBillingResponse {
     	      this.requesterPays = defaults.requesterPays;
         }
 
-        public Builder setRequesterPays(Boolean requesterPays) {
+        public Builder requesterPays(Boolean requesterPays) {
             this.requesterPays = Objects.requireNonNull(requesterPays);
             return this;
         }

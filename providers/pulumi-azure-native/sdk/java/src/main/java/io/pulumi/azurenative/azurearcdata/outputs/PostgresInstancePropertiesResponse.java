@@ -40,14 +40,14 @@ public final class PostgresInstancePropertiesResponse {
     private final @Nullable String lastUploadedDate;
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"admin","basicLoginInformation","dataControllerId","k8sRaw","lastUploadedDate","provisioningState"})
+    @OutputCustomType.Constructor
     private PostgresInstancePropertiesResponse(
-        @Nullable String admin,
-        @Nullable BasicLoginInformationResponse basicLoginInformation,
-        @Nullable String dataControllerId,
-        @Nullable Object k8sRaw,
-        @Nullable String lastUploadedDate,
-        String provisioningState) {
+        @OutputCustomType.Parameter("admin") @Nullable String admin,
+        @OutputCustomType.Parameter("basicLoginInformation") @Nullable BasicLoginInformationResponse basicLoginInformation,
+        @OutputCustomType.Parameter("dataControllerId") @Nullable String dataControllerId,
+        @OutputCustomType.Parameter("k8sRaw") @Nullable Object k8sRaw,
+        @OutputCustomType.Parameter("lastUploadedDate") @Nullable String lastUploadedDate,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.admin = admin;
         this.basicLoginInformation = basicLoginInformation;
         this.dataControllerId = dataControllerId;
@@ -125,32 +125,32 @@ public final class PostgresInstancePropertiesResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setAdmin(@Nullable String admin) {
+        public Builder admin(@Nullable String admin) {
             this.admin = admin;
             return this;
         }
 
-        public Builder setBasicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
+        public Builder basicLoginInformation(@Nullable BasicLoginInformationResponse basicLoginInformation) {
             this.basicLoginInformation = basicLoginInformation;
             return this;
         }
 
-        public Builder setDataControllerId(@Nullable String dataControllerId) {
+        public Builder dataControllerId(@Nullable String dataControllerId) {
             this.dataControllerId = dataControllerId;
             return this;
         }
 
-        public Builder setK8sRaw(@Nullable Object k8sRaw) {
+        public Builder k8sRaw(@Nullable Object k8sRaw) {
             this.k8sRaw = k8sRaw;
             return this;
         }
 
-        public Builder setLastUploadedDate(@Nullable String lastUploadedDate) {
+        public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
             this.lastUploadedDate = lastUploadedDate;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

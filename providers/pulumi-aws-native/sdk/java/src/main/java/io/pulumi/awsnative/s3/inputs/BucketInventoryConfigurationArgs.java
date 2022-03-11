@@ -152,72 +152,72 @@ public final class BucketInventoryConfigurationArgs extends io.pulumi.resources.
     	      this.scheduleFrequency = defaults.scheduleFrequency;
         }
 
-        public Builder setDestination(Input<BucketDestinationArgs> destination) {
+        public Builder destination(Input<BucketDestinationArgs> destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setDestination(BucketDestinationArgs destination) {
+        public Builder destination(BucketDestinationArgs destination) {
             this.destination = Input.of(Objects.requireNonNull(destination));
             return this;
         }
 
-        public Builder setEnabled(Input<Boolean> enabled) {
+        public Builder enabled(Input<Boolean> enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
 
-        public Builder setId(Input<String> id) {
+        public Builder id(Input<String> id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
 
-        public Builder setIncludedObjectVersions(Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
+        public Builder includedObjectVersions(Input<BucketInventoryConfigurationIncludedObjectVersions> includedObjectVersions) {
             this.includedObjectVersions = Objects.requireNonNull(includedObjectVersions);
             return this;
         }
 
-        public Builder setIncludedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
+        public Builder includedObjectVersions(BucketInventoryConfigurationIncludedObjectVersions includedObjectVersions) {
             this.includedObjectVersions = Input.of(Objects.requireNonNull(includedObjectVersions));
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
+        public Builder optionalFields(@Nullable Input<List<BucketInventoryConfigurationOptionalFieldsItem>> optionalFields) {
             this.optionalFields = optionalFields;
             return this;
         }
 
-        public Builder setOptionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
+        public Builder optionalFields(@Nullable List<BucketInventoryConfigurationOptionalFieldsItem> optionalFields) {
             this.optionalFields = Input.ofNullable(optionalFields);
             return this;
         }
 
-        public Builder setPrefix(@Nullable Input<String> prefix) {
+        public Builder prefix(@Nullable Input<String> prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
 
-        public Builder setScheduleFrequency(Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
+        public Builder scheduleFrequency(Input<BucketInventoryConfigurationScheduleFrequency> scheduleFrequency) {
             this.scheduleFrequency = Objects.requireNonNull(scheduleFrequency);
             return this;
         }
 
-        public Builder setScheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
+        public Builder scheduleFrequency(BucketInventoryConfigurationScheduleFrequency scheduleFrequency) {
             this.scheduleFrequency = Input.of(Objects.requireNonNull(scheduleFrequency));
             return this;
         }

@@ -15,8 +15,8 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private OSPolicyResourcePackageResourceYUMResponse(String name) {
+    @OutputCustomType.Constructor
+    private OSPolicyResourcePackageResourceYUMResponse(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -48,7 +48,7 @@ public final class OSPolicyResourcePackageResourceYUMResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -53,12 +53,12 @@ public final class DashboardSheetControlsOptionArgs extends io.pulumi.resources.
     	      this.visibilityState = defaults.visibilityState;
         }
 
-        public Builder setVisibilityState(@Nullable Input<DashboardUIState> visibilityState) {
+        public Builder visibilityState(@Nullable Input<DashboardUIState> visibilityState) {
             this.visibilityState = visibilityState;
             return this;
         }
 
-        public Builder setVisibilityState(@Nullable DashboardUIState visibilityState) {
+        public Builder visibilityState(@Nullable DashboardUIState visibilityState) {
             this.visibilityState = Input.ofNullable(visibilityState);
             return this;
         }

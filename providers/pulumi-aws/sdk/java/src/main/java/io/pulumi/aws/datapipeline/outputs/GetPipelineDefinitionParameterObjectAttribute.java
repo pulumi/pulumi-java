@@ -20,10 +20,10 @@ public final class GetPipelineDefinitionParameterObjectAttribute {
      */
     private final String stringValue;
 
-    @OutputCustomType.Constructor({"key","stringValue"})
+    @OutputCustomType.Constructor
     private GetPipelineDefinitionParameterObjectAttribute(
-        String key,
-        String stringValue) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("stringValue") String stringValue) {
         this.key = key;
         this.stringValue = stringValue;
     }
@@ -65,12 +65,12 @@ public final class GetPipelineDefinitionParameterObjectAttribute {
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

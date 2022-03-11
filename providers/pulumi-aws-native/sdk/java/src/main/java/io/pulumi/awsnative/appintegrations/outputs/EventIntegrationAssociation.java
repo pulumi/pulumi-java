@@ -39,13 +39,13 @@ public final class EventIntegrationAssociation {
      */
     private final @Nullable String eventIntegrationAssociationId;
 
-    @OutputCustomType.Constructor({"clientAssociationMetadata","clientId","eventBridgeRuleName","eventIntegrationAssociationArn","eventIntegrationAssociationId"})
+    @OutputCustomType.Constructor
     private EventIntegrationAssociation(
-        @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
-        @Nullable String clientId,
-        @Nullable String eventBridgeRuleName,
-        @Nullable String eventIntegrationAssociationArn,
-        @Nullable String eventIntegrationAssociationId) {
+        @OutputCustomType.Parameter("clientAssociationMetadata") @Nullable List<EventIntegrationMetadata> clientAssociationMetadata,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("eventBridgeRuleName") @Nullable String eventBridgeRuleName,
+        @OutputCustomType.Parameter("eventIntegrationAssociationArn") @Nullable String eventIntegrationAssociationArn,
+        @OutputCustomType.Parameter("eventIntegrationAssociationId") @Nullable String eventIntegrationAssociationId) {
         this.clientAssociationMetadata = clientAssociationMetadata;
         this.clientId = clientId;
         this.eventBridgeRuleName = eventBridgeRuleName;
@@ -117,27 +117,27 @@ public final class EventIntegrationAssociation {
     	      this.eventIntegrationAssociationId = defaults.eventIntegrationAssociationId;
         }
 
-        public Builder setClientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
+        public Builder clientAssociationMetadata(@Nullable List<EventIntegrationMetadata> clientAssociationMetadata) {
             this.clientAssociationMetadata = clientAssociationMetadata;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setEventBridgeRuleName(@Nullable String eventBridgeRuleName) {
+        public Builder eventBridgeRuleName(@Nullable String eventBridgeRuleName) {
             this.eventBridgeRuleName = eventBridgeRuleName;
             return this;
         }
 
-        public Builder setEventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
+        public Builder eventIntegrationAssociationArn(@Nullable String eventIntegrationAssociationArn) {
             this.eventIntegrationAssociationArn = eventIntegrationAssociationArn;
             return this;
         }
 
-        public Builder setEventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
+        public Builder eventIntegrationAssociationId(@Nullable String eventIntegrationAssociationId) {
             this.eventIntegrationAssociationId = eventIntegrationAssociationId;
             return this;
         }

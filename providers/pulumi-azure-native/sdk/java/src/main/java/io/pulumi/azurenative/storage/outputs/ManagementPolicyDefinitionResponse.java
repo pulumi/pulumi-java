@@ -23,10 +23,10 @@ public final class ManagementPolicyDefinitionResponse {
      */
     private final @Nullable ManagementPolicyFilterResponse filters;
 
-    @OutputCustomType.Constructor({"actions","filters"})
+    @OutputCustomType.Constructor
     private ManagementPolicyDefinitionResponse(
-        ManagementPolicyActionResponse actions,
-        @Nullable ManagementPolicyFilterResponse filters) {
+        @OutputCustomType.Parameter("actions") ManagementPolicyActionResponse actions,
+        @OutputCustomType.Parameter("filters") @Nullable ManagementPolicyFilterResponse filters) {
         this.actions = actions;
         this.filters = filters;
     }
@@ -68,12 +68,12 @@ public final class ManagementPolicyDefinitionResponse {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setActions(ManagementPolicyActionResponse actions) {
+        public Builder actions(ManagementPolicyActionResponse actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setFilters(@Nullable ManagementPolicyFilterResponse filters) {
+        public Builder filters(@Nullable ManagementPolicyFilterResponse filters) {
             this.filters = filters;
             return this;
         }

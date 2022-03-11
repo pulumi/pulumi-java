@@ -212,102 +212,102 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder setContactDetails(Input<ContactDetailsArgs> contactDetails) {
+        public Builder contactDetails(Input<ContactDetailsArgs> contactDetails) {
             this.contactDetails = Objects.requireNonNull(contactDetails);
             return this;
         }
 
-        public Builder setContactDetails(ContactDetailsArgs contactDetails) {
+        public Builder contactDetails(ContactDetailsArgs contactDetails) {
             this.contactDetails = Input.of(Objects.requireNonNull(contactDetails));
             return this;
         }
 
-        public Builder setDataExportDetails(@Nullable Input<List<DataExportDetailsArgs>> dataExportDetails) {
+        public Builder dataExportDetails(@Nullable Input<List<DataExportDetailsArgs>> dataExportDetails) {
             this.dataExportDetails = dataExportDetails;
             return this;
         }
 
-        public Builder setDataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
+        public Builder dataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
             this.dataExportDetails = Input.ofNullable(dataExportDetails);
             return this;
         }
 
-        public Builder setDataImportDetails(@Nullable Input<List<DataImportDetailsArgs>> dataImportDetails) {
+        public Builder dataImportDetails(@Nullable Input<List<DataImportDetailsArgs>> dataImportDetails) {
             this.dataImportDetails = dataImportDetails;
             return this;
         }
 
-        public Builder setDataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
+        public Builder dataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
             this.dataImportDetails = Input.ofNullable(dataImportDetails);
             return this;
         }
 
-        public Builder setExpectedDataSizeInTeraBytes(@Nullable Input<Integer> expectedDataSizeInTeraBytes) {
+        public Builder expectedDataSizeInTeraBytes(@Nullable Input<Integer> expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = expectedDataSizeInTeraBytes;
             return this;
         }
 
-        public Builder setExpectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
+        public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
             this.expectedDataSizeInTeraBytes = Input.ofNullable(expectedDataSizeInTeraBytes);
             return this;
         }
 
-        public Builder setJobDetailsType(Input<String> jobDetailsType) {
+        public Builder jobDetailsType(Input<String> jobDetailsType) {
             this.jobDetailsType = Objects.requireNonNull(jobDetailsType);
             return this;
         }
 
-        public Builder setJobDetailsType(String jobDetailsType) {
+        public Builder jobDetailsType(String jobDetailsType) {
             this.jobDetailsType = Input.of(Objects.requireNonNull(jobDetailsType));
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable Input<KeyEncryptionKeyArgs> keyEncryptionKey) {
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
 
-        public Builder setKeyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
+        public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
             this.keyEncryptionKey = Input.ofNullable(keyEncryptionKey);
             return this;
         }
 
-        public Builder setPasskey(@Nullable Input<String> passkey) {
+        public Builder passkey(@Nullable Input<String> passkey) {
             this.passkey = passkey;
             return this;
         }
 
-        public Builder setPasskey(@Nullable String passkey) {
+        public Builder passkey(@Nullable String passkey) {
             this.passkey = Input.ofNullable(passkey);
             return this;
         }
 
-        public Builder setPreferences(@Nullable Input<PreferencesArgs> preferences) {
+        public Builder preferences(@Nullable Input<PreferencesArgs> preferences) {
             this.preferences = preferences;
             return this;
         }
 
-        public Builder setPreferences(@Nullable PreferencesArgs preferences) {
+        public Builder preferences(@Nullable PreferencesArgs preferences) {
             this.preferences = Input.ofNullable(preferences);
             return this;
         }
 
-        public Builder setPreferredDisks(@Nullable Input<Map<String,Integer>> preferredDisks) {
+        public Builder preferredDisks(@Nullable Input<Map<String,Integer>> preferredDisks) {
             this.preferredDisks = preferredDisks;
             return this;
         }
 
-        public Builder setPreferredDisks(@Nullable Map<String,Integer> preferredDisks) {
+        public Builder preferredDisks(@Nullable Map<String,Integer> preferredDisks) {
             this.preferredDisks = Input.ofNullable(preferredDisks);
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Input<ShippingAddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
+        public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
             this.shippingAddress = Input.ofNullable(shippingAddress);
             return this;
         }

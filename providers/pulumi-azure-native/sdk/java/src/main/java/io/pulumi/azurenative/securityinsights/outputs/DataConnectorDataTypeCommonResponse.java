@@ -17,8 +17,8 @@ public final class DataConnectorDataTypeCommonResponse {
      */
     private final @Nullable String state;
 
-    @OutputCustomType.Constructor({"state"})
-    private DataConnectorDataTypeCommonResponse(@Nullable String state) {
+    @OutputCustomType.Constructor
+    private DataConnectorDataTypeCommonResponse(@OutputCustomType.Parameter("state") @Nullable String state) {
         this.state = state;
     }
 
@@ -50,7 +50,7 @@ public final class DataConnectorDataTypeCommonResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }

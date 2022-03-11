@@ -29,11 +29,11 @@ public final class ScheduledActionTargetAction {
      */
     private final @Nullable ScheduledActionTargetActionResumeCluster resumeCluster;
 
-    @OutputCustomType.Constructor({"pauseCluster","resizeCluster","resumeCluster"})
+    @OutputCustomType.Constructor
     private ScheduledActionTargetAction(
-        @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
-        @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
-        @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
+        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionTargetActionPauseCluster pauseCluster,
+        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionTargetActionResizeCluster resizeCluster,
+        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;
@@ -85,17 +85,17 @@ public final class ScheduledActionTargetAction {
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder setPauseCluster(@Nullable ScheduledActionTargetActionPauseCluster pauseCluster) {
+        public Builder pauseCluster(@Nullable ScheduledActionTargetActionPauseCluster pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable ScheduledActionTargetActionResizeCluster resizeCluster) {
+        public Builder resizeCluster(@Nullable ScheduledActionTargetActionResizeCluster resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
+        public Builder resumeCluster(@Nullable ScheduledActionTargetActionResumeCluster resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }

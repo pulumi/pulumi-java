@@ -81,21 +81,21 @@ public final class GetApplianceResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"distro","id","identity","infrastructureConfig","location","name","provisioningState","publicKey","status","systemData","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetApplianceResult(
-        @Nullable String distro,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable String publicKey,
-        String status,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("distro") @Nullable String distro,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("infrastructureConfig") @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicKey") @Nullable String publicKey,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.distro = distro;
         this.id = id;
         this.identity = identity;
@@ -247,67 +247,67 @@ public final class GetApplianceResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setDistro(@Nullable String distro) {
+        public Builder distro(@Nullable String distro) {
             this.distro = distro;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setInfrastructureConfig(@Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig) {
+        public Builder infrastructureConfig(@Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig) {
             this.infrastructureConfig = infrastructureConfig;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicKey(@Nullable String publicKey) {
+        public Builder publicKey(@Nullable String publicKey) {
             this.publicKey = publicKey;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

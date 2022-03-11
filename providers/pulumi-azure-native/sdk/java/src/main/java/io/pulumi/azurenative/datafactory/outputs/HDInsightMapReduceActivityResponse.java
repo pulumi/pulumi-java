@@ -95,23 +95,23 @@ public final class HDInsightMapReduceActivityResponse {
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
 
-    @OutputCustomType.Constructor({"arguments","className","defines","dependsOn","description","getDebugInfo","jarFilePath","jarLibs","jarLinkedService","linkedServiceName","name","policy","storageLinkedServices","type","userProperties"})
+    @OutputCustomType.Constructor
     private HDInsightMapReduceActivityResponse(
-        @Nullable List<Object> arguments,
-        Object className,
-        @Nullable Map<String,Object> defines,
-        @Nullable List<ActivityDependencyResponse> dependsOn,
-        @Nullable String description,
-        @Nullable String getDebugInfo,
-        Object jarFilePath,
-        @Nullable List<Object> jarLibs,
-        @Nullable LinkedServiceReferenceResponse jarLinkedService,
-        @Nullable LinkedServiceReferenceResponse linkedServiceName,
-        String name,
-        @Nullable ActivityPolicyResponse policy,
-        @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
-        String type,
-        @Nullable List<UserPropertyResponse> userProperties) {
+        @OutputCustomType.Parameter("arguments") @Nullable List<Object> arguments,
+        @OutputCustomType.Parameter("className") Object className,
+        @OutputCustomType.Parameter("defines") @Nullable Map<String,Object> defines,
+        @OutputCustomType.Parameter("dependsOn") @Nullable List<ActivityDependencyResponse> dependsOn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("getDebugInfo") @Nullable String getDebugInfo,
+        @OutputCustomType.Parameter("jarFilePath") Object jarFilePath,
+        @OutputCustomType.Parameter("jarLibs") @Nullable List<Object> jarLibs,
+        @OutputCustomType.Parameter("jarLinkedService") @Nullable LinkedServiceReferenceResponse jarLinkedService,
+        @OutputCustomType.Parameter("linkedServiceName") @Nullable LinkedServiceReferenceResponse linkedServiceName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") @Nullable ActivityPolicyResponse policy,
+        @OutputCustomType.Parameter("storageLinkedServices") @Nullable List<LinkedServiceReferenceResponse> storageLinkedServices,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userProperties") @Nullable List<UserPropertyResponse> userProperties) {
         this.arguments = arguments;
         this.className = className;
         this.defines = defines;
@@ -284,77 +284,77 @@ public final class HDInsightMapReduceActivityResponse {
     	      this.userProperties = defaults.userProperties;
         }
 
-        public Builder setArguments(@Nullable List<Object> arguments) {
+        public Builder arguments(@Nullable List<Object> arguments) {
             this.arguments = arguments;
             return this;
         }
 
-        public Builder setClassName(Object className) {
+        public Builder className(Object className) {
             this.className = Objects.requireNonNull(className);
             return this;
         }
 
-        public Builder setDefines(@Nullable Map<String,Object> defines) {
+        public Builder defines(@Nullable Map<String,Object> defines) {
             this.defines = defines;
             return this;
         }
 
-        public Builder setDependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
+        public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             this.dependsOn = dependsOn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setGetDebugInfo(@Nullable String getDebugInfo) {
+        public Builder getDebugInfo(@Nullable String getDebugInfo) {
             this.getDebugInfo = getDebugInfo;
             return this;
         }
 
-        public Builder setJarFilePath(Object jarFilePath) {
+        public Builder jarFilePath(Object jarFilePath) {
             this.jarFilePath = Objects.requireNonNull(jarFilePath);
             return this;
         }
 
-        public Builder setJarLibs(@Nullable List<Object> jarLibs) {
+        public Builder jarLibs(@Nullable List<Object> jarLibs) {
             this.jarLibs = jarLibs;
             return this;
         }
 
-        public Builder setJarLinkedService(@Nullable LinkedServiceReferenceResponse jarLinkedService) {
+        public Builder jarLinkedService(@Nullable LinkedServiceReferenceResponse jarLinkedService) {
             this.jarLinkedService = jarLinkedService;
             return this;
         }
 
-        public Builder setLinkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
+        public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             this.linkedServiceName = linkedServiceName;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(@Nullable ActivityPolicyResponse policy) {
+        public Builder policy(@Nullable ActivityPolicyResponse policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setStorageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
+        public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceResponse> storageLinkedServices) {
             this.storageLinkedServices = storageLinkedServices;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserProperties(@Nullable List<UserPropertyResponse> userProperties) {
+        public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             this.userProperties = userProperties;
             return this;
         }

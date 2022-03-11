@@ -27,11 +27,11 @@ public final class CertificateConfigResponse {
      */
     private final X509ParametersResponse x509Config;
 
-    @OutputCustomType.Constructor({"publicKey","subjectConfig","x509Config"})
+    @OutputCustomType.Constructor
     private CertificateConfigResponse(
-        PublicKeyResponse publicKey,
-        SubjectConfigResponse subjectConfig,
-        X509ParametersResponse x509Config) {
+        @OutputCustomType.Parameter("publicKey") PublicKeyResponse publicKey,
+        @OutputCustomType.Parameter("subjectConfig") SubjectConfigResponse subjectConfig,
+        @OutputCustomType.Parameter("x509Config") X509ParametersResponse x509Config) {
         this.publicKey = publicKey;
         this.subjectConfig = subjectConfig;
         this.x509Config = x509Config;
@@ -83,17 +83,17 @@ public final class CertificateConfigResponse {
     	      this.x509Config = defaults.x509Config;
         }
 
-        public Builder setPublicKey(PublicKeyResponse publicKey) {
+        public Builder publicKey(PublicKeyResponse publicKey) {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
 
-        public Builder setSubjectConfig(SubjectConfigResponse subjectConfig) {
+        public Builder subjectConfig(SubjectConfigResponse subjectConfig) {
             this.subjectConfig = Objects.requireNonNull(subjectConfig);
             return this;
         }
 
-        public Builder setX509Config(X509ParametersResponse x509Config) {
+        public Builder x509Config(X509ParametersResponse x509Config) {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }

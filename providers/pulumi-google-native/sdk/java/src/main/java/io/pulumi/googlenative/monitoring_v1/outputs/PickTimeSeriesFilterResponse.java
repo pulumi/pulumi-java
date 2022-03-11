@@ -26,11 +26,11 @@ public final class PickTimeSeriesFilterResponse {
      */
     private final String rankingMethod;
 
-    @OutputCustomType.Constructor({"direction","numTimeSeries","rankingMethod"})
+    @OutputCustomType.Constructor
     private PickTimeSeriesFilterResponse(
-        String direction,
-        Integer numTimeSeries,
-        String rankingMethod) {
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("numTimeSeries") Integer numTimeSeries,
+        @OutputCustomType.Parameter("rankingMethod") String rankingMethod) {
         this.direction = direction;
         this.numTimeSeries = numTimeSeries;
         this.rankingMethod = rankingMethod;
@@ -82,17 +82,17 @@ public final class PickTimeSeriesFilterResponse {
     	      this.rankingMethod = defaults.rankingMethod;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setNumTimeSeries(Integer numTimeSeries) {
+        public Builder numTimeSeries(Integer numTimeSeries) {
             this.numTimeSeries = Objects.requireNonNull(numTimeSeries);
             return this;
         }
 
-        public Builder setRankingMethod(String rankingMethod) {
+        public Builder rankingMethod(String rankingMethod) {
             this.rankingMethod = Objects.requireNonNull(rankingMethod);
             return this;
         }

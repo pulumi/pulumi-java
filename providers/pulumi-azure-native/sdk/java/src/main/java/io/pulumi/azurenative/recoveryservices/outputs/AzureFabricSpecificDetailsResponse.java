@@ -29,11 +29,11 @@ public final class AzureFabricSpecificDetailsResponse {
      */
     private final @Nullable String location;
 
-    @OutputCustomType.Constructor({"containerIds","instanceType","location"})
+    @OutputCustomType.Constructor
     private AzureFabricSpecificDetailsResponse(
-        @Nullable List<String> containerIds,
-        String instanceType,
-        @Nullable String location) {
+        @OutputCustomType.Parameter("containerIds") @Nullable List<String> containerIds,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("location") @Nullable String location) {
         this.containerIds = containerIds;
         this.instanceType = instanceType;
         this.location = location;
@@ -86,17 +86,17 @@ public final class AzureFabricSpecificDetailsResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setContainerIds(@Nullable List<String> containerIds) {
+        public Builder containerIds(@Nullable List<String> containerIds) {
             this.containerIds = containerIds;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }

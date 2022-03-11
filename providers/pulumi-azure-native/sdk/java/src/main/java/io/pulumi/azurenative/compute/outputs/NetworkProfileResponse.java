@@ -30,11 +30,11 @@ public final class NetworkProfileResponse {
      */
     private final @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces;
 
-    @OutputCustomType.Constructor({"networkApiVersion","networkInterfaceConfigurations","networkInterfaces"})
+    @OutputCustomType.Constructor
     private NetworkProfileResponse(
-        @Nullable String networkApiVersion,
-        @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
-        @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
+        @OutputCustomType.Parameter("networkApiVersion") @Nullable String networkApiVersion,
+        @OutputCustomType.Parameter("networkInterfaceConfigurations") @Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations,
+        @OutputCustomType.Parameter("networkInterfaces") @Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
         this.networkApiVersion = networkApiVersion;
         this.networkInterfaceConfigurations = networkInterfaceConfigurations;
         this.networkInterfaces = networkInterfaces;
@@ -86,17 +86,17 @@ public final class NetworkProfileResponse {
     	      this.networkInterfaces = defaults.networkInterfaces;
         }
 
-        public Builder setNetworkApiVersion(@Nullable String networkApiVersion) {
+        public Builder networkApiVersion(@Nullable String networkApiVersion) {
             this.networkApiVersion = networkApiVersion;
             return this;
         }
 
-        public Builder setNetworkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
+        public Builder networkInterfaceConfigurations(@Nullable List<VirtualMachineNetworkInterfaceConfigurationResponse> networkInterfaceConfigurations) {
             this.networkInterfaceConfigurations = networkInterfaceConfigurations;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceReferenceResponse> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }

@@ -19,12 +19,12 @@ public final class WebACLRateBasedStatement {
     private final Integer limit;
     private final @Nullable WebACLStatement scopeDownStatement;
 
-    @OutputCustomType.Constructor({"aggregateKeyType","forwardedIPConfig","limit","scopeDownStatement"})
+    @OutputCustomType.Constructor
     private WebACLRateBasedStatement(
-        WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
-        @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
-        Integer limit,
-        @Nullable WebACLStatement scopeDownStatement) {
+        @OutputCustomType.Parameter("aggregateKeyType") WebACLRateBasedStatementAggregateKeyType aggregateKeyType,
+        @OutputCustomType.Parameter("forwardedIPConfig") @Nullable WebACLForwardedIPConfiguration forwardedIPConfig,
+        @OutputCustomType.Parameter("limit") Integer limit,
+        @OutputCustomType.Parameter("scopeDownStatement") @Nullable WebACLStatement scopeDownStatement) {
         this.aggregateKeyType = aggregateKeyType;
         this.forwardedIPConfig = forwardedIPConfig;
         this.limit = limit;
@@ -70,22 +70,22 @@ public final class WebACLRateBasedStatement {
     	      this.scopeDownStatement = defaults.scopeDownStatement;
         }
 
-        public Builder setAggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
+        public Builder aggregateKeyType(WebACLRateBasedStatementAggregateKeyType aggregateKeyType) {
             this.aggregateKeyType = Objects.requireNonNull(aggregateKeyType);
             return this;
         }
 
-        public Builder setForwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
+        public Builder forwardedIPConfig(@Nullable WebACLForwardedIPConfiguration forwardedIPConfig) {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
 
-        public Builder setLimit(Integer limit) {
+        public Builder limit(Integer limit) {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
 
-        public Builder setScopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
+        public Builder scopeDownStatement(@Nullable WebACLStatement scopeDownStatement) {
             this.scopeDownStatement = scopeDownStatement;
             return this;
         }

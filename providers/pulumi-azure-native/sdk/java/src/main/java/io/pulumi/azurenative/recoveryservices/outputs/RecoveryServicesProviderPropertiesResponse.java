@@ -97,24 +97,24 @@ public final class RecoveryServicesProviderPropertiesResponse {
      */
     private final @Nullable String serverVersion;
 
-    @OutputCustomType.Constructor({"allowedScenarios","authenticationIdentityDetails","connectionStatus","draIdentifier","fabricFriendlyName","fabricType","friendlyName","healthErrorDetails","lastHeartBeat","protectedItemCount","providerVersion","providerVersionDetails","providerVersionExpiryDate","providerVersionState","resourceAccessIdentityDetails","serverVersion"})
+    @OutputCustomType.Constructor
     private RecoveryServicesProviderPropertiesResponse(
-        @Nullable List<String> allowedScenarios,
-        @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
-        @Nullable String connectionStatus,
-        @Nullable String draIdentifier,
-        @Nullable String fabricFriendlyName,
-        @Nullable String fabricType,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String lastHeartBeat,
-        @Nullable Integer protectedItemCount,
-        @Nullable String providerVersion,
-        @Nullable VersionDetailsResponse providerVersionDetails,
-        @Nullable String providerVersionExpiryDate,
-        @Nullable String providerVersionState,
-        @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
-        @Nullable String serverVersion) {
+        @OutputCustomType.Parameter("allowedScenarios") @Nullable List<String> allowedScenarios,
+        @OutputCustomType.Parameter("authenticationIdentityDetails") @Nullable IdentityProviderDetailsResponse authenticationIdentityDetails,
+        @OutputCustomType.Parameter("connectionStatus") @Nullable String connectionStatus,
+        @OutputCustomType.Parameter("draIdentifier") @Nullable String draIdentifier,
+        @OutputCustomType.Parameter("fabricFriendlyName") @Nullable String fabricFriendlyName,
+        @OutputCustomType.Parameter("fabricType") @Nullable String fabricType,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @OutputCustomType.Parameter("protectedItemCount") @Nullable Integer protectedItemCount,
+        @OutputCustomType.Parameter("providerVersion") @Nullable String providerVersion,
+        @OutputCustomType.Parameter("providerVersionDetails") @Nullable VersionDetailsResponse providerVersionDetails,
+        @OutputCustomType.Parameter("providerVersionExpiryDate") @Nullable String providerVersionExpiryDate,
+        @OutputCustomType.Parameter("providerVersionState") @Nullable String providerVersionState,
+        @OutputCustomType.Parameter("resourceAccessIdentityDetails") @Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails,
+        @OutputCustomType.Parameter("serverVersion") @Nullable String serverVersion) {
         this.allowedScenarios = allowedScenarios;
         this.authenticationIdentityDetails = authenticationIdentityDetails;
         this.connectionStatus = connectionStatus;
@@ -296,82 +296,82 @@ public final class RecoveryServicesProviderPropertiesResponse {
     	      this.serverVersion = defaults.serverVersion;
         }
 
-        public Builder setAllowedScenarios(@Nullable List<String> allowedScenarios) {
+        public Builder allowedScenarios(@Nullable List<String> allowedScenarios) {
             this.allowedScenarios = allowedScenarios;
             return this;
         }
 
-        public Builder setAuthenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
+        public Builder authenticationIdentityDetails(@Nullable IdentityProviderDetailsResponse authenticationIdentityDetails) {
             this.authenticationIdentityDetails = authenticationIdentityDetails;
             return this;
         }
 
-        public Builder setConnectionStatus(@Nullable String connectionStatus) {
+        public Builder connectionStatus(@Nullable String connectionStatus) {
             this.connectionStatus = connectionStatus;
             return this;
         }
 
-        public Builder setDraIdentifier(@Nullable String draIdentifier) {
+        public Builder draIdentifier(@Nullable String draIdentifier) {
             this.draIdentifier = draIdentifier;
             return this;
         }
 
-        public Builder setFabricFriendlyName(@Nullable String fabricFriendlyName) {
+        public Builder fabricFriendlyName(@Nullable String fabricFriendlyName) {
             this.fabricFriendlyName = fabricFriendlyName;
             return this;
         }
 
-        public Builder setFabricType(@Nullable String fabricType) {
+        public Builder fabricType(@Nullable String fabricType) {
             this.fabricType = fabricType;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
+        public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
-        public Builder setLastHeartBeat(@Nullable String lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
-        public Builder setProtectedItemCount(@Nullable Integer protectedItemCount) {
+        public Builder protectedItemCount(@Nullable Integer protectedItemCount) {
             this.protectedItemCount = protectedItemCount;
             return this;
         }
 
-        public Builder setProviderVersion(@Nullable String providerVersion) {
+        public Builder providerVersion(@Nullable String providerVersion) {
             this.providerVersion = providerVersion;
             return this;
         }
 
-        public Builder setProviderVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
+        public Builder providerVersionDetails(@Nullable VersionDetailsResponse providerVersionDetails) {
             this.providerVersionDetails = providerVersionDetails;
             return this;
         }
 
-        public Builder setProviderVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
+        public Builder providerVersionExpiryDate(@Nullable String providerVersionExpiryDate) {
             this.providerVersionExpiryDate = providerVersionExpiryDate;
             return this;
         }
 
-        public Builder setProviderVersionState(@Nullable String providerVersionState) {
+        public Builder providerVersionState(@Nullable String providerVersionState) {
             this.providerVersionState = providerVersionState;
             return this;
         }
 
-        public Builder setResourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
+        public Builder resourceAccessIdentityDetails(@Nullable IdentityProviderDetailsResponse resourceAccessIdentityDetails) {
             this.resourceAccessIdentityDetails = resourceAccessIdentityDetails;
             return this;
         }
 
-        public Builder setServerVersion(@Nullable String serverVersion) {
+        public Builder serverVersion(@Nullable String serverVersion) {
             this.serverVersion = serverVersion;
             return this;
         }

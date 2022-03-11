@@ -70,22 +70,22 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArg
     	      this.encryptionAtRest = defaults.encryptionAtRest;
         }
 
-        public Builder setConnectionPasswordEncryption(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption) {
+        public Builder connectionPasswordEncryption(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs> connectionPasswordEncryption) {
             this.connectionPasswordEncryption = Objects.requireNonNull(connectionPasswordEncryption);
             return this;
         }
 
-        public Builder setConnectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs connectionPasswordEncryption) {
+        public Builder connectionPasswordEncryption(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsConnectionPasswordEncryptionArgs connectionPasswordEncryption) {
             this.connectionPasswordEncryption = Input.of(Objects.requireNonNull(connectionPasswordEncryption));
             return this;
         }
 
-        public Builder setEncryptionAtRest(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest) {
+        public Builder encryptionAtRest(Input<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs> encryptionAtRest) {
             this.encryptionAtRest = Objects.requireNonNull(encryptionAtRest);
             return this;
         }
 
-        public Builder setEncryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs encryptionAtRest) {
+        public Builder encryptionAtRest(DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs encryptionAtRest) {
             this.encryptionAtRest = Input.of(Objects.requireNonNull(encryptionAtRest));
             return this;
         }

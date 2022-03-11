@@ -39,13 +39,13 @@ public final class GetTransitGatewayConnectResult {
      */
     private final @Nullable String transitGatewayId;
 
-    @OutputCustomType.Constructor({"creationTime","state","tags","transitGatewayAttachmentId","transitGatewayId"})
+    @OutputCustomType.Constructor
     private GetTransitGatewayConnectResult(
-        @Nullable String creationTime,
-        @Nullable String state,
-        @Nullable List<TransitGatewayConnectTag> tags,
-        @Nullable String transitGatewayAttachmentId,
-        @Nullable String transitGatewayId) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable List<TransitGatewayConnectTag> tags,
+        @OutputCustomType.Parameter("transitGatewayAttachmentId") @Nullable String transitGatewayAttachmentId,
+        @OutputCustomType.Parameter("transitGatewayId") @Nullable String transitGatewayId) {
         this.creationTime = creationTime;
         this.state = state;
         this.tags = tags;
@@ -117,27 +117,27 @@ public final class GetTransitGatewayConnectResult {
     	      this.transitGatewayId = defaults.transitGatewayId;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TransitGatewayConnectTag> tags) {
+        public Builder tags(@Nullable List<TransitGatewayConnectTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
+        public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
             this.transitGatewayAttachmentId = transitGatewayAttachmentId;
             return this;
         }
 
-        public Builder setTransitGatewayId(@Nullable String transitGatewayId) {
+        public Builder transitGatewayId(@Nullable String transitGatewayId) {
             this.transitGatewayId = transitGatewayId;
             return this;
         }

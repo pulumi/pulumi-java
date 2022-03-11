@@ -45,16 +45,16 @@ public final class GetPortfolioResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"acceptLanguage","arn","createdTime","description","id","name","providerName","tags"})
+    @OutputCustomType.Constructor
     private GetPortfolioResult(
-        @Nullable String acceptLanguage,
-        String arn,
-        String createdTime,
-        String description,
-        String id,
-        String name,
-        String providerName,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("acceptLanguage") @Nullable String acceptLanguage,
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerName") String providerName,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.acceptLanguage = acceptLanguage;
         this.arn = arn;
         this.createdTime = createdTime;
@@ -148,42 +148,42 @@ public final class GetPortfolioResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviderName(String providerName) {
+        public Builder providerName(String providerName) {
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

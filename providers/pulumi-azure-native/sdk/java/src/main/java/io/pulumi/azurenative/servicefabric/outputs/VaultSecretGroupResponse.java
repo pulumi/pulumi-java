@@ -22,10 +22,10 @@ public final class VaultSecretGroupResponse {
      */
     private final List<VaultCertificateResponse> vaultCertificates;
 
-    @OutputCustomType.Constructor({"sourceVault","vaultCertificates"})
+    @OutputCustomType.Constructor
     private VaultSecretGroupResponse(
-        SubResourceResponse sourceVault,
-        List<VaultCertificateResponse> vaultCertificates) {
+        @OutputCustomType.Parameter("sourceVault") SubResourceResponse sourceVault,
+        @OutputCustomType.Parameter("vaultCertificates") List<VaultCertificateResponse> vaultCertificates) {
         this.sourceVault = sourceVault;
         this.vaultCertificates = vaultCertificates;
     }
@@ -67,12 +67,12 @@ public final class VaultSecretGroupResponse {
     	      this.vaultCertificates = defaults.vaultCertificates;
         }
 
-        public Builder setSourceVault(SubResourceResponse sourceVault) {
+        public Builder sourceVault(SubResourceResponse sourceVault) {
             this.sourceVault = Objects.requireNonNull(sourceVault);
             return this;
         }
 
-        public Builder setVaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
+        public Builder vaultCertificates(List<VaultCertificateResponse> vaultCertificates) {
             this.vaultCertificates = Objects.requireNonNull(vaultCertificates);
             return this;
         }

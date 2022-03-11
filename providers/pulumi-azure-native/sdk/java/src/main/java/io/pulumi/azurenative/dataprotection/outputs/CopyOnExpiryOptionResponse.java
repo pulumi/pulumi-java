@@ -16,8 +16,8 @@ public final class CopyOnExpiryOptionResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"objectType"})
-    private CopyOnExpiryOptionResponse(String objectType) {
+    @OutputCustomType.Constructor
+    private CopyOnExpiryOptionResponse(@OutputCustomType.Parameter("objectType") String objectType) {
         this.objectType = objectType;
     }
 
@@ -50,7 +50,7 @@ public final class CopyOnExpiryOptionResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

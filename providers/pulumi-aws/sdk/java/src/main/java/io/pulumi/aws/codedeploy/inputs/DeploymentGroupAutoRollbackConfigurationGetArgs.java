@@ -72,22 +72,22 @@ public final class DeploymentGroupAutoRollbackConfigurationGetArgs extends io.pu
     	      this.events = defaults.events;
         }
 
-        public Builder setEnabled(@Nullable Input<Boolean> enabled) {
+        public Builder enabled(@Nullable Input<Boolean> enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
 
-        public Builder setEvents(@Nullable Input<List<String>> events) {
+        public Builder events(@Nullable Input<List<String>> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<String> events) {
+        public Builder events(@Nullable List<String> events) {
             this.events = Input.ofNullable(events);
             return this;
         }

@@ -48,15 +48,15 @@ public final class ColumnResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"dataTypeHint","description","displayName","isDefaultDisplay","isHidden","name","type"})
+    @OutputCustomType.Constructor
     private ColumnResponse(
-        @Nullable String dataTypeHint,
-        @Nullable String description,
-        @Nullable String displayName,
-        Boolean isDefaultDisplay,
-        Boolean isHidden,
-        @Nullable String name,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("dataTypeHint") @Nullable String dataTypeHint,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("isDefaultDisplay") Boolean isDefaultDisplay,
+        @OutputCustomType.Parameter("isHidden") Boolean isHidden,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.dataTypeHint = dataTypeHint;
         this.description = description;
         this.displayName = displayName;
@@ -148,37 +148,37 @@ public final class ColumnResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataTypeHint(@Nullable String dataTypeHint) {
+        public Builder dataTypeHint(@Nullable String dataTypeHint) {
             this.dataTypeHint = dataTypeHint;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setIsDefaultDisplay(Boolean isDefaultDisplay) {
+        public Builder isDefaultDisplay(Boolean isDefaultDisplay) {
             this.isDefaultDisplay = Objects.requireNonNull(isDefaultDisplay);
             return this;
         }
 
-        public Builder setIsHidden(Boolean isHidden) {
+        public Builder isHidden(Boolean isHidden) {
             this.isHidden = Objects.requireNonNull(isHidden);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

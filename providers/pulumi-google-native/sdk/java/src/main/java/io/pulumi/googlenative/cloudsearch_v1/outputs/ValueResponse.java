@@ -19,14 +19,14 @@ public final class ValueResponse {
     private final String stringValue;
     private final String timestampValue;
 
-    @OutputCustomType.Constructor({"booleanValue","dateValue","doubleValue","integerValue","stringValue","timestampValue"})
+    @OutputCustomType.Constructor
     private ValueResponse(
-        Boolean booleanValue,
-        DateResponse dateValue,
-        Double doubleValue,
-        String integerValue,
-        String stringValue,
-        String timestampValue) {
+        @OutputCustomType.Parameter("booleanValue") Boolean booleanValue,
+        @OutputCustomType.Parameter("dateValue") DateResponse dateValue,
+        @OutputCustomType.Parameter("doubleValue") Double doubleValue,
+        @OutputCustomType.Parameter("integerValue") String integerValue,
+        @OutputCustomType.Parameter("stringValue") String stringValue,
+        @OutputCustomType.Parameter("timestampValue") String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.doubleValue = doubleValue;
@@ -84,32 +84,32 @@ public final class ValueResponse {
     	      this.timestampValue = defaults.timestampValue;
         }
 
-        public Builder setBooleanValue(Boolean booleanValue) {
+        public Builder booleanValue(Boolean booleanValue) {
             this.booleanValue = Objects.requireNonNull(booleanValue);
             return this;
         }
 
-        public Builder setDateValue(DateResponse dateValue) {
+        public Builder dateValue(DateResponse dateValue) {
             this.dateValue = Objects.requireNonNull(dateValue);
             return this;
         }
 
-        public Builder setDoubleValue(Double doubleValue) {
+        public Builder doubleValue(Double doubleValue) {
             this.doubleValue = Objects.requireNonNull(doubleValue);
             return this;
         }
 
-        public Builder setIntegerValue(String integerValue) {
+        public Builder integerValue(String integerValue) {
             this.integerValue = Objects.requireNonNull(integerValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
 
-        public Builder setTimestampValue(String timestampValue) {
+        public Builder timestampValue(String timestampValue) {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }

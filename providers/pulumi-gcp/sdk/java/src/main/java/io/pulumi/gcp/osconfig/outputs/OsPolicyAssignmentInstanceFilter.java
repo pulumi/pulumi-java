@@ -36,12 +36,12 @@ public final class OsPolicyAssignmentInstanceFilter {
      */
     private final @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories;
 
-    @OutputCustomType.Constructor({"all","exclusionLabels","inclusionLabels","inventories"})
+    @OutputCustomType.Constructor
     private OsPolicyAssignmentInstanceFilter(
-        @Nullable Boolean all,
-        @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
-        @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
-        @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
+        @OutputCustomType.Parameter("all") @Nullable Boolean all,
+        @OutputCustomType.Parameter("exclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels,
+        @OutputCustomType.Parameter("inclusionLabels") @Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels,
+        @OutputCustomType.Parameter("inventories") @Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
         this.all = all;
         this.exclusionLabels = exclusionLabels;
         this.inclusionLabels = inclusionLabels;
@@ -103,22 +103,22 @@ public final class OsPolicyAssignmentInstanceFilter {
     	      this.inventories = defaults.inventories;
         }
 
-        public Builder setAll(@Nullable Boolean all) {
+        public Builder all(@Nullable Boolean all) {
             this.all = all;
             return this;
         }
 
-        public Builder setExclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels) {
+        public Builder exclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterExclusionLabel> exclusionLabels) {
             this.exclusionLabels = exclusionLabels;
             return this;
         }
 
-        public Builder setInclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels) {
+        public Builder inclusionLabels(@Nullable List<OsPolicyAssignmentInstanceFilterInclusionLabel> inclusionLabels) {
             this.inclusionLabels = inclusionLabels;
             return this;
         }
 
-        public Builder setInventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
+        public Builder inventories(@Nullable List<OsPolicyAssignmentInstanceFilterInventory> inventories) {
             this.inventories = inventories;
             return this;
         }

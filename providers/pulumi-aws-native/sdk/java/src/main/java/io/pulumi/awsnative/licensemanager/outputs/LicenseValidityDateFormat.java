@@ -20,10 +20,10 @@ public final class LicenseValidityDateFormat {
      */
     private final String end;
 
-    @OutputCustomType.Constructor({"begin","end"})
+    @OutputCustomType.Constructor
     private LicenseValidityDateFormat(
-        String begin,
-        String end) {
+        @OutputCustomType.Parameter("begin") String begin,
+        @OutputCustomType.Parameter("end") String end) {
         this.begin = begin;
         this.end = end;
     }
@@ -65,12 +65,12 @@ public final class LicenseValidityDateFormat {
     	      this.end = defaults.end;
         }
 
-        public Builder setBegin(String begin) {
+        public Builder begin(String begin) {
             this.begin = Objects.requireNonNull(begin);
             return this;
         }
 
-        public Builder setEnd(String end) {
+        public Builder end(String end) {
             this.end = Objects.requireNonNull(end);
             return this;
         }

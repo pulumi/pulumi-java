@@ -27,11 +27,11 @@ public final class EncryptionKeyDetailsResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor({"kekType","kekUrl","kekVaultResourceID"})
+    @OutputCustomType.Constructor
     private EncryptionKeyDetailsResponse(
-        @Nullable String kekType,
-        @Nullable String kekUrl,
-        @Nullable String kekVaultResourceID) {
+        @OutputCustomType.Parameter("kekType") @Nullable String kekType,
+        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.kekType = kekType;
         this.kekUrl = kekUrl;
         this.kekVaultResourceID = kekVaultResourceID;
@@ -83,17 +83,17 @@ public final class EncryptionKeyDetailsResponse {
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setKekType(@Nullable String kekType) {
+        public Builder kekType(@Nullable String kekType) {
             this.kekType = kekType;
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }

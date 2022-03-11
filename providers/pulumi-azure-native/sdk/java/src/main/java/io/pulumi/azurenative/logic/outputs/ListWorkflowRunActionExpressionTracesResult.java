@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ListWorkflowRunActionExpressionTracesResult {
     private final @Nullable List<ExpressionRootResponse> inputs;
 
-    @OutputCustomType.Constructor({"inputs"})
-    private ListWorkflowRunActionExpressionTracesResult(@Nullable List<ExpressionRootResponse> inputs) {
+    @OutputCustomType.Constructor
+    private ListWorkflowRunActionExpressionTracesResult(@OutputCustomType.Parameter("inputs") @Nullable List<ExpressionRootResponse> inputs) {
         this.inputs = inputs;
     }
 
@@ -42,7 +42,7 @@ public final class ListWorkflowRunActionExpressionTracesResult {
     	      this.inputs = defaults.inputs;
         }
 
-        public Builder setInputs(@Nullable List<ExpressionRootResponse> inputs) {
+        public Builder inputs(@Nullable List<ExpressionRootResponse> inputs) {
             this.inputs = inputs;
             return this;
         }

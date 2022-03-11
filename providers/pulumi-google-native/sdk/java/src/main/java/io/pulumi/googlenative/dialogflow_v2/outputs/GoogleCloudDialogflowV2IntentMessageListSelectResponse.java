@@ -27,11 +27,11 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"items","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2IntentMessageListSelectResponse(
-        List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("items") List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.items = items;
         this.subtitle = subtitle;
         this.title = title;
@@ -83,17 +83,17 @@ public final class GoogleCloudDialogflowV2IntentMessageListSelectResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setItems(List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items) {
+        public Builder items(List<GoogleCloudDialogflowV2IntentMessageListSelectItemResponse> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

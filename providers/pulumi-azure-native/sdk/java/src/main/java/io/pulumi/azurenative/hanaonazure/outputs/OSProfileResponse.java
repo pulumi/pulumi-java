@@ -32,12 +32,12 @@ public final class OSProfileResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"computerName","osType","sshPublicKey","version"})
+    @OutputCustomType.Constructor
     private OSProfileResponse(
-        @Nullable String computerName,
-        String osType,
-        @Nullable String sshPublicKey,
-        String version) {
+        @OutputCustomType.Parameter("computerName") @Nullable String computerName,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("sshPublicKey") @Nullable String sshPublicKey,
+        @OutputCustomType.Parameter("version") String version) {
         this.computerName = computerName;
         this.osType = osType;
         this.sshPublicKey = sshPublicKey;
@@ -99,22 +99,22 @@ public final class OSProfileResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setComputerName(@Nullable String computerName) {
+        public Builder computerName(@Nullable String computerName) {
             this.computerName = computerName;
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setSshPublicKey(@Nullable String sshPublicKey) {
+        public Builder sshPublicKey(@Nullable String sshPublicKey) {
             this.sshPublicKey = sshPublicKey;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

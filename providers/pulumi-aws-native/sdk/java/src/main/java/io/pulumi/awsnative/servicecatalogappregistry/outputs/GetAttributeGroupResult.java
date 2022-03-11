@@ -28,14 +28,14 @@ public final class GetAttributeGroupResult {
     private final @Nullable String name;
     private final @Nullable AttributeGroupTags tags;
 
-    @OutputCustomType.Constructor({"arn","attributes","description","id","name","tags"})
+    @OutputCustomType.Constructor
     private GetAttributeGroupResult(
-        @Nullable String arn,
-        @Nullable Object attributes,
-        @Nullable String description,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable AttributeGroupTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("attributes") @Nullable Object attributes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tags") @Nullable AttributeGroupTags tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.description = description;
@@ -101,32 +101,32 @@ public final class GetAttributeGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAttributes(@Nullable Object attributes) {
+        public Builder attributes(@Nullable Object attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTags(@Nullable AttributeGroupTags tags) {
+        public Builder tags(@Nullable AttributeGroupTags tags) {
             this.tags = tags;
             return this;
         }

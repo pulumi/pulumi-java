@@ -17,8 +17,8 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
      */
     private final @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls;
 
-    @OutputCustomType.Constructor({"tls"})
-    private VirtualGatewaySpecBackendDefaultsClientPolicy(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
+    @OutputCustomType.Constructor
+    private VirtualGatewaySpecBackendDefaultsClientPolicy(@OutputCustomType.Parameter("tls") @Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
         this.tls = tls;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicy {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setTls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
+        public Builder tls(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTls tls) {
             this.tls = tls;
             return this;
         }

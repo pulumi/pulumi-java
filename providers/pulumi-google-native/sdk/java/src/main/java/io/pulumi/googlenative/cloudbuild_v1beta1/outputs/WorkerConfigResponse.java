@@ -26,11 +26,11 @@ public final class WorkerConfigResponse {
      */
     private final Boolean noExternalIp;
 
-    @OutputCustomType.Constructor({"diskSizeGb","machineType","noExternalIp"})
+    @OutputCustomType.Constructor
     private WorkerConfigResponse(
-        String diskSizeGb,
-        String machineType,
-        Boolean noExternalIp) {
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("noExternalIp") Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;
@@ -82,17 +82,17 @@ public final class WorkerConfigResponse {
     	      this.noExternalIp = defaults.noExternalIp;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setNoExternalIp(Boolean noExternalIp) {
+        public Builder noExternalIp(Boolean noExternalIp) {
             this.noExternalIp = Objects.requireNonNull(noExternalIp);
             return this;
         }

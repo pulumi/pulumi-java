@@ -71,22 +71,22 @@ public final class WebAclLoggingConfigurationArgs extends io.pulumi.resources.Re
     	      this.redactedFields = defaults.redactedFields;
         }
 
-        public Builder setLogDestination(Input<String> logDestination) {
+        public Builder logDestination(Input<String> logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestination(String logDestination) {
+        public Builder logDestination(String logDestination) {
             this.logDestination = Input.of(Objects.requireNonNull(logDestination));
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable Input<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields) {
+        public Builder redactedFields(@Nullable Input<WebAclLoggingConfigurationRedactedFieldsArgs> redactedFields) {
             this.redactedFields = redactedFields;
             return this;
         }
 
-        public Builder setRedactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsArgs redactedFields) {
+        public Builder redactedFields(@Nullable WebAclLoggingConfigurationRedactedFieldsArgs redactedFields) {
             this.redactedFields = Input.ofNullable(redactedFields);
             return this;
         }

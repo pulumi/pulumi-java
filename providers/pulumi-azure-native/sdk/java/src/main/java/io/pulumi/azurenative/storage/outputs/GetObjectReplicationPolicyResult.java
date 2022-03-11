@@ -53,16 +53,16 @@ public final class GetObjectReplicationPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destinationAccount","enabledTime","id","name","policyId","rules","sourceAccount","type"})
+    @OutputCustomType.Constructor
     private GetObjectReplicationPolicyResult(
-        String destinationAccount,
-        String enabledTime,
-        String id,
-        String name,
-        String policyId,
-        @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
-        String sourceAccount,
-        String type) {
+        @OutputCustomType.Parameter("destinationAccount") String destinationAccount,
+        @OutputCustomType.Parameter("enabledTime") String enabledTime,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyId") String policyId,
+        @OutputCustomType.Parameter("rules") @Nullable List<ObjectReplicationPolicyRuleResponse> rules,
+        @OutputCustomType.Parameter("sourceAccount") String sourceAccount,
+        @OutputCustomType.Parameter("type") String type) {
         this.destinationAccount = destinationAccount;
         this.enabledTime = enabledTime;
         this.id = id;
@@ -164,42 +164,42 @@ public final class GetObjectReplicationPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestinationAccount(String destinationAccount) {
+        public Builder destinationAccount(String destinationAccount) {
             this.destinationAccount = Objects.requireNonNull(destinationAccount);
             return this;
         }
 
-        public Builder setEnabledTime(String enabledTime) {
+        public Builder enabledTime(String enabledTime) {
             this.enabledTime = Objects.requireNonNull(enabledTime);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyId(String policyId) {
+        public Builder policyId(String policyId) {
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
 
-        public Builder setRules(@Nullable List<ObjectReplicationPolicyRuleResponse> rules) {
+        public Builder rules(@Nullable List<ObjectReplicationPolicyRuleResponse> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setSourceAccount(String sourceAccount) {
+        public Builder sourceAccount(String sourceAccount) {
             this.sourceAccount = Objects.requireNonNull(sourceAccount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

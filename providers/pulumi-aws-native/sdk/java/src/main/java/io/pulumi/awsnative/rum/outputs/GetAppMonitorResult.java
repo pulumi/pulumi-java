@@ -28,12 +28,12 @@ public final class GetAppMonitorResult {
     private final @Nullable String domain;
     private final @Nullable List<AppMonitorTag> tags;
 
-    @OutputCustomType.Constructor({"appMonitorConfiguration","cwLogEnabled","domain","tags"})
+    @OutputCustomType.Constructor
     private GetAppMonitorResult(
-        @Nullable AppMonitorConfiguration appMonitorConfiguration,
-        @Nullable Boolean cwLogEnabled,
-        @Nullable String domain,
-        @Nullable List<AppMonitorTag> tags) {
+        @OutputCustomType.Parameter("appMonitorConfiguration") @Nullable AppMonitorConfiguration appMonitorConfiguration,
+        @OutputCustomType.Parameter("cwLogEnabled") @Nullable Boolean cwLogEnabled,
+        @OutputCustomType.Parameter("domain") @Nullable String domain,
+        @OutputCustomType.Parameter("tags") @Nullable List<AppMonitorTag> tags) {
         this.appMonitorConfiguration = appMonitorConfiguration;
         this.cwLogEnabled = cwLogEnabled;
         this.domain = domain;
@@ -87,22 +87,22 @@ public final class GetAppMonitorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppMonitorConfiguration(@Nullable AppMonitorConfiguration appMonitorConfiguration) {
+        public Builder appMonitorConfiguration(@Nullable AppMonitorConfiguration appMonitorConfiguration) {
             this.appMonitorConfiguration = appMonitorConfiguration;
             return this;
         }
 
-        public Builder setCwLogEnabled(@Nullable Boolean cwLogEnabled) {
+        public Builder cwLogEnabled(@Nullable Boolean cwLogEnabled) {
             this.cwLogEnabled = cwLogEnabled;
             return this;
         }
 
-        public Builder setDomain(@Nullable String domain) {
+        public Builder domain(@Nullable String domain) {
             this.domain = domain;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppMonitorTag> tags) {
+        public Builder tags(@Nullable List<AppMonitorTag> tags) {
             this.tags = tags;
             return this;
         }

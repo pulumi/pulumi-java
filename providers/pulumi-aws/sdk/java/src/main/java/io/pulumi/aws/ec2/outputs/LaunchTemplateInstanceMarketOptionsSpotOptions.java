@@ -39,13 +39,13 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
      */
     private final @Nullable String validUntil;
 
-    @OutputCustomType.Constructor({"blockDurationMinutes","instanceInterruptionBehavior","maxPrice","spotInstanceType","validUntil"})
+    @OutputCustomType.Constructor
     private LaunchTemplateInstanceMarketOptionsSpotOptions(
-        @Nullable Integer blockDurationMinutes,
-        @Nullable String instanceInterruptionBehavior,
-        @Nullable String maxPrice,
-        @Nullable String spotInstanceType,
-        @Nullable String validUntil) {
+        @OutputCustomType.Parameter("blockDurationMinutes") @Nullable Integer blockDurationMinutes,
+        @OutputCustomType.Parameter("instanceInterruptionBehavior") @Nullable String instanceInterruptionBehavior,
+        @OutputCustomType.Parameter("maxPrice") @Nullable String maxPrice,
+        @OutputCustomType.Parameter("spotInstanceType") @Nullable String spotInstanceType,
+        @OutputCustomType.Parameter("validUntil") @Nullable String validUntil) {
         this.blockDurationMinutes = blockDurationMinutes;
         this.instanceInterruptionBehavior = instanceInterruptionBehavior;
         this.maxPrice = maxPrice;
@@ -118,27 +118,27 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptions {
     	      this.validUntil = defaults.validUntil;
         }
 
-        public Builder setBlockDurationMinutes(@Nullable Integer blockDurationMinutes) {
+        public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
             this.blockDurationMinutes = blockDurationMinutes;
             return this;
         }
 
-        public Builder setInstanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
+        public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
             this.instanceInterruptionBehavior = instanceInterruptionBehavior;
             return this;
         }
 
-        public Builder setMaxPrice(@Nullable String maxPrice) {
+        public Builder maxPrice(@Nullable String maxPrice) {
             this.maxPrice = maxPrice;
             return this;
         }
 
-        public Builder setSpotInstanceType(@Nullable String spotInstanceType) {
+        public Builder spotInstanceType(@Nullable String spotInstanceType) {
             this.spotInstanceType = spotInstanceType;
             return this;
         }
 
-        public Builder setValidUntil(@Nullable String validUntil) {
+        public Builder validUntil(@Nullable String validUntil) {
             this.validUntil = validUntil;
             return this;
         }

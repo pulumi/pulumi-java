@@ -23,10 +23,10 @@ public final class ConnectorMappingErrorManagementResponse {
      */
     private final String errorManagementType;
 
-    @OutputCustomType.Constructor({"errorLimit","errorManagementType"})
+    @OutputCustomType.Constructor
     private ConnectorMappingErrorManagementResponse(
-        @Nullable Integer errorLimit,
-        String errorManagementType) {
+        @OutputCustomType.Parameter("errorLimit") @Nullable Integer errorLimit,
+        @OutputCustomType.Parameter("errorManagementType") String errorManagementType) {
         this.errorLimit = errorLimit;
         this.errorManagementType = errorManagementType;
     }
@@ -68,12 +68,12 @@ public final class ConnectorMappingErrorManagementResponse {
     	      this.errorManagementType = defaults.errorManagementType;
         }
 
-        public Builder setErrorLimit(@Nullable Integer errorLimit) {
+        public Builder errorLimit(@Nullable Integer errorLimit) {
             this.errorLimit = errorLimit;
             return this;
         }
 
-        public Builder setErrorManagementType(String errorManagementType) {
+        public Builder errorManagementType(String errorManagementType) {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }

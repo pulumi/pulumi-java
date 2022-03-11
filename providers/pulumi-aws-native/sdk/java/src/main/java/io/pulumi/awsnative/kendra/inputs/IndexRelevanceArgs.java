@@ -103,52 +103,52 @@ public final class IndexRelevanceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.valueImportanceItems = defaults.valueImportanceItems;
         }
 
-        public Builder setDuration(@Nullable Input<String> duration) {
+        public Builder duration(@Nullable Input<String> duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = Input.ofNullable(duration);
             return this;
         }
 
-        public Builder setFreshness(@Nullable Input<Boolean> freshness) {
+        public Builder freshness(@Nullable Input<Boolean> freshness) {
             this.freshness = freshness;
             return this;
         }
 
-        public Builder setFreshness(@Nullable Boolean freshness) {
+        public Builder freshness(@Nullable Boolean freshness) {
             this.freshness = Input.ofNullable(freshness);
             return this;
         }
 
-        public Builder setImportance(@Nullable Input<Integer> importance) {
+        public Builder importance(@Nullable Input<Integer> importance) {
             this.importance = importance;
             return this;
         }
 
-        public Builder setImportance(@Nullable Integer importance) {
+        public Builder importance(@Nullable Integer importance) {
             this.importance = Input.ofNullable(importance);
             return this;
         }
 
-        public Builder setRankOrder(@Nullable Input<IndexOrder> rankOrder) {
+        public Builder rankOrder(@Nullable Input<IndexOrder> rankOrder) {
             this.rankOrder = rankOrder;
             return this;
         }
 
-        public Builder setRankOrder(@Nullable IndexOrder rankOrder) {
+        public Builder rankOrder(@Nullable IndexOrder rankOrder) {
             this.rankOrder = Input.ofNullable(rankOrder);
             return this;
         }
 
-        public Builder setValueImportanceItems(@Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
+        public Builder valueImportanceItems(@Nullable Input<List<IndexValueImportanceItemArgs>> valueImportanceItems) {
             this.valueImportanceItems = valueImportanceItems;
             return this;
         }
 
-        public Builder setValueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
+        public Builder valueImportanceItems(@Nullable List<IndexValueImportanceItemArgs> valueImportanceItems) {
             this.valueImportanceItems = Input.ofNullable(valueImportanceItems);
             return this;
         }

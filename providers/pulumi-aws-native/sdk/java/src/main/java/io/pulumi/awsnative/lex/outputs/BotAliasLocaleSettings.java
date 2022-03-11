@@ -19,10 +19,10 @@ public final class BotAliasLocaleSettings {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"codeHookSpecification","enabled"})
+    @OutputCustomType.Constructor
     private BotAliasLocaleSettings(
-        @Nullable BotAliasCodeHookSpecification codeHookSpecification,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("codeHookSpecification") @Nullable BotAliasCodeHookSpecification codeHookSpecification,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.codeHookSpecification = codeHookSpecification;
         this.enabled = enabled;
     }
@@ -60,12 +60,12 @@ public final class BotAliasLocaleSettings {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setCodeHookSpecification(@Nullable BotAliasCodeHookSpecification codeHookSpecification) {
+        public Builder codeHookSpecification(@Nullable BotAliasCodeHookSpecification codeHookSpecification) {
             this.codeHookSpecification = codeHookSpecification;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

@@ -55,7 +55,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse extends io.
     	      this.utilizationTarget = defaults.utilizationTarget;
         }
 
-        public Builder setUtilizationTarget(Double utilizationTarget) {
+        public Builder utilizationTarget(Double utilizationTarget) {
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }

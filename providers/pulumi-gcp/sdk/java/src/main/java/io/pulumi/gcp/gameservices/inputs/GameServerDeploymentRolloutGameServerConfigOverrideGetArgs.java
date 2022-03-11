@@ -72,22 +72,22 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideGetArgs ex
     	      this.realmsSelector = defaults.realmsSelector;
         }
 
-        public Builder setConfigVersion(@Nullable Input<String> configVersion) {
+        public Builder configVersion(@Nullable Input<String> configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable String configVersion) {
+        public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = Input.ofNullable(configVersion);
             return this;
         }
 
-        public Builder setRealmsSelector(@Nullable Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs> realmsSelector) {
+        public Builder realmsSelector(@Nullable Input<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs> realmsSelector) {
             this.realmsSelector = realmsSelector;
             return this;
         }
 
-        public Builder setRealmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs realmsSelector) {
+        public Builder realmsSelector(@Nullable GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs realmsSelector) {
             this.realmsSelector = Input.ofNullable(realmsSelector);
             return this;
         }

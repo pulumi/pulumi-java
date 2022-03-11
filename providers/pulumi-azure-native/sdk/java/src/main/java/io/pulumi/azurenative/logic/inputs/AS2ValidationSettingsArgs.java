@@ -207,102 +207,102 @@ public final class AS2ValidationSettingsArgs extends io.pulumi.resources.Resourc
     	      this.signingAlgorithm = defaults.signingAlgorithm;
         }
 
-        public Builder setCheckCertificateRevocationListOnReceive(Input<Boolean> checkCertificateRevocationListOnReceive) {
+        public Builder checkCertificateRevocationListOnReceive(Input<Boolean> checkCertificateRevocationListOnReceive) {
             this.checkCertificateRevocationListOnReceive = Objects.requireNonNull(checkCertificateRevocationListOnReceive);
             return this;
         }
 
-        public Builder setCheckCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
+        public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
             this.checkCertificateRevocationListOnReceive = Input.of(Objects.requireNonNull(checkCertificateRevocationListOnReceive));
             return this;
         }
 
-        public Builder setCheckCertificateRevocationListOnSend(Input<Boolean> checkCertificateRevocationListOnSend) {
+        public Builder checkCertificateRevocationListOnSend(Input<Boolean> checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Objects.requireNonNull(checkCertificateRevocationListOnSend);
             return this;
         }
 
-        public Builder setCheckCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
+        public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             this.checkCertificateRevocationListOnSend = Input.of(Objects.requireNonNull(checkCertificateRevocationListOnSend));
             return this;
         }
 
-        public Builder setCheckDuplicateMessage(Input<Boolean> checkDuplicateMessage) {
+        public Builder checkDuplicateMessage(Input<Boolean> checkDuplicateMessage) {
             this.checkDuplicateMessage = Objects.requireNonNull(checkDuplicateMessage);
             return this;
         }
 
-        public Builder setCheckDuplicateMessage(Boolean checkDuplicateMessage) {
+        public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             this.checkDuplicateMessage = Input.of(Objects.requireNonNull(checkDuplicateMessage));
             return this;
         }
 
-        public Builder setCompressMessage(Input<Boolean> compressMessage) {
+        public Builder compressMessage(Input<Boolean> compressMessage) {
             this.compressMessage = Objects.requireNonNull(compressMessage);
             return this;
         }
 
-        public Builder setCompressMessage(Boolean compressMessage) {
+        public Builder compressMessage(Boolean compressMessage) {
             this.compressMessage = Input.of(Objects.requireNonNull(compressMessage));
             return this;
         }
 
-        public Builder setEncryptMessage(Input<Boolean> encryptMessage) {
+        public Builder encryptMessage(Input<Boolean> encryptMessage) {
             this.encryptMessage = Objects.requireNonNull(encryptMessage);
             return this;
         }
 
-        public Builder setEncryptMessage(Boolean encryptMessage) {
+        public Builder encryptMessage(Boolean encryptMessage) {
             this.encryptMessage = Input.of(Objects.requireNonNull(encryptMessage));
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(Input<Either<String,EncryptionAlgorithm>> encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setEncryptionAlgorithm(Either<String,EncryptionAlgorithm> encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(Either<String,EncryptionAlgorithm> encryptionAlgorithm) {
             this.encryptionAlgorithm = Input.of(Objects.requireNonNull(encryptionAlgorithm));
             return this;
         }
 
-        public Builder setInterchangeDuplicatesValidityDays(Input<Integer> interchangeDuplicatesValidityDays) {
+        public Builder interchangeDuplicatesValidityDays(Input<Integer> interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Objects.requireNonNull(interchangeDuplicatesValidityDays);
             return this;
         }
 
-        public Builder setInterchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
+        public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             this.interchangeDuplicatesValidityDays = Input.of(Objects.requireNonNull(interchangeDuplicatesValidityDays));
             return this;
         }
 
-        public Builder setOverrideMessageProperties(Input<Boolean> overrideMessageProperties) {
+        public Builder overrideMessageProperties(Input<Boolean> overrideMessageProperties) {
             this.overrideMessageProperties = Objects.requireNonNull(overrideMessageProperties);
             return this;
         }
 
-        public Builder setOverrideMessageProperties(Boolean overrideMessageProperties) {
+        public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             this.overrideMessageProperties = Input.of(Objects.requireNonNull(overrideMessageProperties));
             return this;
         }
 
-        public Builder setSignMessage(Input<Boolean> signMessage) {
+        public Builder signMessage(Input<Boolean> signMessage) {
             this.signMessage = Objects.requireNonNull(signMessage);
             return this;
         }
 
-        public Builder setSignMessage(Boolean signMessage) {
+        public Builder signMessage(Boolean signMessage) {
             this.signMessage = Input.of(Objects.requireNonNull(signMessage));
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Input<Either<String,SigningAlgorithm>> signingAlgorithm) {
             this.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
-        public Builder setSigningAlgorithm(@Nullable Either<String,SigningAlgorithm> signingAlgorithm) {
+        public Builder signingAlgorithm(@Nullable Either<String,SigningAlgorithm> signingAlgorithm) {
             this.signingAlgorithm = Input.ofNullable(signingAlgorithm);
             return this;
         }

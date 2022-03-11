@@ -73,22 +73,22 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
     	      this.storageSource = defaults.storageSource;
         }
 
-        public Builder setRepoSource(@Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource) {
+        public Builder repoSource(@Nullable Input<TriggerBuildSourceRepoSourceArgs> repoSource) {
             this.repoSource = repoSource;
             return this;
         }
 
-        public Builder setRepoSource(@Nullable TriggerBuildSourceRepoSourceArgs repoSource) {
+        public Builder repoSource(@Nullable TriggerBuildSourceRepoSourceArgs repoSource) {
             this.repoSource = Input.ofNullable(repoSource);
             return this;
         }
 
-        public Builder setStorageSource(@Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource) {
+        public Builder storageSource(@Nullable Input<TriggerBuildSourceStorageSourceArgs> storageSource) {
             this.storageSource = storageSource;
             return this;
         }
 
-        public Builder setStorageSource(@Nullable TriggerBuildSourceStorageSourceArgs storageSource) {
+        public Builder storageSource(@Nullable TriggerBuildSourceStorageSourceArgs storageSource) {
             this.storageSource = Input.ofNullable(storageSource);
             return this;
         }

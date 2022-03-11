@@ -125,52 +125,52 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
     	      this.squashMode = defaults.squashMode;
         }
 
-        public Builder setAccessMode(@Nullable Input<NfsExportOptionsAccessMode> accessMode) {
+        public Builder accessMode(@Nullable Input<NfsExportOptionsAccessMode> accessMode) {
             this.accessMode = accessMode;
             return this;
         }
 
-        public Builder setAccessMode(@Nullable NfsExportOptionsAccessMode accessMode) {
+        public Builder accessMode(@Nullable NfsExportOptionsAccessMode accessMode) {
             this.accessMode = Input.ofNullable(accessMode);
             return this;
         }
 
-        public Builder setAnonGid(@Nullable Input<String> anonGid) {
+        public Builder anonGid(@Nullable Input<String> anonGid) {
             this.anonGid = anonGid;
             return this;
         }
 
-        public Builder setAnonGid(@Nullable String anonGid) {
+        public Builder anonGid(@Nullable String anonGid) {
             this.anonGid = Input.ofNullable(anonGid);
             return this;
         }
 
-        public Builder setAnonUid(@Nullable Input<String> anonUid) {
+        public Builder anonUid(@Nullable Input<String> anonUid) {
             this.anonUid = anonUid;
             return this;
         }
 
-        public Builder setAnonUid(@Nullable String anonUid) {
+        public Builder anonUid(@Nullable String anonUid) {
             this.anonUid = Input.ofNullable(anonUid);
             return this;
         }
 
-        public Builder setIpRanges(@Nullable Input<List<String>> ipRanges) {
+        public Builder ipRanges(@Nullable Input<List<String>> ipRanges) {
             this.ipRanges = ipRanges;
             return this;
         }
 
-        public Builder setIpRanges(@Nullable List<String> ipRanges) {
+        public Builder ipRanges(@Nullable List<String> ipRanges) {
             this.ipRanges = Input.ofNullable(ipRanges);
             return this;
         }
 
-        public Builder setSquashMode(@Nullable Input<NfsExportOptionsSquashMode> squashMode) {
+        public Builder squashMode(@Nullable Input<NfsExportOptionsSquashMode> squashMode) {
             this.squashMode = squashMode;
             return this;
         }
 
-        public Builder setSquashMode(@Nullable NfsExportOptionsSquashMode squashMode) {
+        public Builder squashMode(@Nullable NfsExportOptionsSquashMode squashMode) {
             this.squashMode = Input.ofNullable(squashMode);
             return this;
         }

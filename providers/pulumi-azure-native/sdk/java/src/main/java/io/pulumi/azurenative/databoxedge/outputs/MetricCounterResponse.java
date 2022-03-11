@@ -34,12 +34,12 @@ public final class MetricCounterResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"additionalDimensions","dimensionFilter","instance","name"})
+    @OutputCustomType.Constructor
     private MetricCounterResponse(
-        @Nullable List<MetricDimensionResponse> additionalDimensions,
-        @Nullable List<MetricDimensionResponse> dimensionFilter,
-        @Nullable String instance,
-        String name) {
+        @OutputCustomType.Parameter("additionalDimensions") @Nullable List<MetricDimensionResponse> additionalDimensions,
+        @OutputCustomType.Parameter("dimensionFilter") @Nullable List<MetricDimensionResponse> dimensionFilter,
+        @OutputCustomType.Parameter("instance") @Nullable String instance,
+        @OutputCustomType.Parameter("name") String name) {
         this.additionalDimensions = additionalDimensions;
         this.dimensionFilter = dimensionFilter;
         this.instance = instance;
@@ -101,22 +101,22 @@ public final class MetricCounterResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setAdditionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
+        public Builder additionalDimensions(@Nullable List<MetricDimensionResponse> additionalDimensions) {
             this.additionalDimensions = additionalDimensions;
             return this;
         }
 
-        public Builder setDimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
+        public Builder dimensionFilter(@Nullable List<MetricDimensionResponse> dimensionFilter) {
             this.dimensionFilter = dimensionFilter;
             return this;
         }
 
-        public Builder setInstance(@Nullable String instance) {
+        public Builder instance(@Nullable String instance) {
             this.instance = instance;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

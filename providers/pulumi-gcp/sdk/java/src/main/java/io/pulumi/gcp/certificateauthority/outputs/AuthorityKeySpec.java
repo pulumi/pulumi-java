@@ -25,10 +25,10 @@ public final class AuthorityKeySpec {
      */
     private final @Nullable String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor({"algorithm","cloudKmsKeyVersion"})
+    @OutputCustomType.Constructor
     private AuthorityKeySpec(
-        @Nullable String algorithm,
-        @Nullable String cloudKmsKeyVersion) {
+        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
+        @OutputCustomType.Parameter("cloudKmsKeyVersion") @Nullable String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }
@@ -73,12 +73,12 @@ public final class AuthorityKeySpec {
     	      this.cloudKmsKeyVersion = defaults.cloudKmsKeyVersion;
         }
 
-        public Builder setAlgorithm(@Nullable String algorithm) {
+        public Builder algorithm(@Nullable String algorithm) {
             this.algorithm = algorithm;
             return this;
         }
 
-        public Builder setCloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
+        public Builder cloudKmsKeyVersion(@Nullable String cloudKmsKeyVersion) {
             this.cloudKmsKeyVersion = cloudKmsKeyVersion;
             return this;
         }

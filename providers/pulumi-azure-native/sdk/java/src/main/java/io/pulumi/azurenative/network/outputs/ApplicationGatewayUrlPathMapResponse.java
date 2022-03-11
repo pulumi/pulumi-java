@@ -65,18 +65,18 @@ public final class ApplicationGatewayUrlPathMapResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"defaultBackendAddressPool","defaultBackendHttpSettings","defaultRedirectConfiguration","defaultRewriteRuleSet","etag","id","name","pathRules","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayUrlPathMapResponse(
-        @Nullable SubResourceResponse defaultBackendAddressPool,
-        @Nullable SubResourceResponse defaultBackendHttpSettings,
-        @Nullable SubResourceResponse defaultRedirectConfiguration,
-        @Nullable SubResourceResponse defaultRewriteRuleSet,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("defaultBackendAddressPool") @Nullable SubResourceResponse defaultBackendAddressPool,
+        @OutputCustomType.Parameter("defaultBackendHttpSettings") @Nullable SubResourceResponse defaultBackendHttpSettings,
+        @OutputCustomType.Parameter("defaultRedirectConfiguration") @Nullable SubResourceResponse defaultRedirectConfiguration,
+        @OutputCustomType.Parameter("defaultRewriteRuleSet") @Nullable SubResourceResponse defaultRewriteRuleSet,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("pathRules") @Nullable List<ApplicationGatewayPathRuleResponse> pathRules,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.defaultBackendAddressPool = defaultBackendAddressPool;
         this.defaultBackendHttpSettings = defaultBackendHttpSettings;
         this.defaultRedirectConfiguration = defaultRedirectConfiguration;
@@ -198,52 +198,52 @@ public final class ApplicationGatewayUrlPathMapResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultBackendAddressPool(@Nullable SubResourceResponse defaultBackendAddressPool) {
+        public Builder defaultBackendAddressPool(@Nullable SubResourceResponse defaultBackendAddressPool) {
             this.defaultBackendAddressPool = defaultBackendAddressPool;
             return this;
         }
 
-        public Builder setDefaultBackendHttpSettings(@Nullable SubResourceResponse defaultBackendHttpSettings) {
+        public Builder defaultBackendHttpSettings(@Nullable SubResourceResponse defaultBackendHttpSettings) {
             this.defaultBackendHttpSettings = defaultBackendHttpSettings;
             return this;
         }
 
-        public Builder setDefaultRedirectConfiguration(@Nullable SubResourceResponse defaultRedirectConfiguration) {
+        public Builder defaultRedirectConfiguration(@Nullable SubResourceResponse defaultRedirectConfiguration) {
             this.defaultRedirectConfiguration = defaultRedirectConfiguration;
             return this;
         }
 
-        public Builder setDefaultRewriteRuleSet(@Nullable SubResourceResponse defaultRewriteRuleSet) {
+        public Builder defaultRewriteRuleSet(@Nullable SubResourceResponse defaultRewriteRuleSet) {
             this.defaultRewriteRuleSet = defaultRewriteRuleSet;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPathRules(@Nullable List<ApplicationGatewayPathRuleResponse> pathRules) {
+        public Builder pathRules(@Nullable List<ApplicationGatewayPathRuleResponse> pathRules) {
             this.pathRules = pathRules;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

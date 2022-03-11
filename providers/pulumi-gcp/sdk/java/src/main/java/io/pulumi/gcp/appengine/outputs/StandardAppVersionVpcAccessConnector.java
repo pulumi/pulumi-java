@@ -15,8 +15,8 @@ public final class StandardAppVersionVpcAccessConnector {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private StandardAppVersionVpcAccessConnector(String name) {
+    @OutputCustomType.Constructor
+    private StandardAppVersionVpcAccessConnector(@OutputCustomType.Parameter("name") String name) {
         this.name = name;
     }
 
@@ -48,7 +48,7 @@ public final class StandardAppVersionVpcAccessConnector {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -51,7 +51,7 @@ public final class GetInternetGatewayArgs extends io.pulumi.resources.InvokeArgs
     	      this.internetGatewayId = defaults.internetGatewayId;
         }
 
-        public Builder setInternetGatewayId(String internetGatewayId) {
+        public Builder internetGatewayId(String internetGatewayId) {
             this.internetGatewayId = Objects.requireNonNull(internetGatewayId);
             return this;
         }

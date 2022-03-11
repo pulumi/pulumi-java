@@ -20,10 +20,10 @@ public final class AccessHomeDirectoryMapping {
      */
     private final String target;
 
-    @OutputCustomType.Constructor({"entry","target"})
+    @OutputCustomType.Constructor
     private AccessHomeDirectoryMapping(
-        String entry,
-        String target) {
+        @OutputCustomType.Parameter("entry") String entry,
+        @OutputCustomType.Parameter("target") String target) {
         this.entry = entry;
         this.target = target;
     }
@@ -65,12 +65,12 @@ public final class AccessHomeDirectoryMapping {
     	      this.target = defaults.target;
         }
 
-        public Builder setEntry(String entry) {
+        public Builder entry(String entry) {
             this.entry = Objects.requireNonNull(entry);
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

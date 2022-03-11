@@ -18,10 +18,10 @@ public final class InstanceNode {
     private final @Nullable String id;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor({"id","zone"})
+    @OutputCustomType.Constructor
     private InstanceNode(
-        @Nullable String id,
-        @Nullable String zone) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("zone") @Nullable String zone) {
         this.id = id;
         this.zone = zone;
     }
@@ -59,12 +59,12 @@ public final class InstanceNode {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = zone;
             return this;
         }

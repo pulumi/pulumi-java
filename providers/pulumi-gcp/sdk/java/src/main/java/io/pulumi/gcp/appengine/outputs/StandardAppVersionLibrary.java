@@ -22,10 +22,10 @@ public final class StandardAppVersionLibrary {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private StandardAppVersionLibrary(
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.name = name;
         this.version = version;
     }
@@ -67,12 +67,12 @@ public final class StandardAppVersionLibrary {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

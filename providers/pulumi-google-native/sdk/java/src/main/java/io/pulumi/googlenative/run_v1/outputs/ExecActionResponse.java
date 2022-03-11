@@ -16,8 +16,8 @@ public final class ExecActionResponse {
      */
     private final List<String> command;
 
-    @OutputCustomType.Constructor({"command"})
-    private ExecActionResponse(List<String> command) {
+    @OutputCustomType.Constructor
+    private ExecActionResponse(@OutputCustomType.Parameter("command") List<String> command) {
         this.command = command;
     }
 
@@ -49,7 +49,7 @@ public final class ExecActionResponse {
     	      this.command = defaults.command;
         }
 
-        public Builder setCommand(List<String> command) {
+        public Builder command(List<String> command) {
             this.command = Objects.requireNonNull(command);
             return this;
         }

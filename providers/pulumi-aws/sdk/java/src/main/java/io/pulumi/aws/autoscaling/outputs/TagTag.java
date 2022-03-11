@@ -26,11 +26,11 @@ public final class TagTag {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"key","propagateAtLaunch","value"})
+    @OutputCustomType.Constructor
     private TagTag(
-        String key,
-        Boolean propagateAtLaunch,
-        String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("propagateAtLaunch") Boolean propagateAtLaunch,
+        @OutputCustomType.Parameter("value") String value) {
         this.key = key;
         this.propagateAtLaunch = propagateAtLaunch;
         this.value = value;
@@ -82,17 +82,17 @@ public final class TagTag {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setPropagateAtLaunch(Boolean propagateAtLaunch) {
+        public Builder propagateAtLaunch(Boolean propagateAtLaunch) {
             this.propagateAtLaunch = Objects.requireNonNull(propagateAtLaunch);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

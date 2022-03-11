@@ -119,52 +119,52 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.state = defaults.state;
         }
 
-        public Builder setDatabaseName(Input<String> databaseName) {
+        public Builder databaseName(Input<String> databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Input.of(Objects.requireNonNull(databaseName));
             return this;
         }
 
-        public Builder setGeoBackupPolicyName(@Nullable Input<String> geoBackupPolicyName) {
+        public Builder geoBackupPolicyName(@Nullable Input<String> geoBackupPolicyName) {
             this.geoBackupPolicyName = geoBackupPolicyName;
             return this;
         }
 
-        public Builder setGeoBackupPolicyName(@Nullable String geoBackupPolicyName) {
+        public Builder geoBackupPolicyName(@Nullable String geoBackupPolicyName) {
             this.geoBackupPolicyName = Input.ofNullable(geoBackupPolicyName);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServerName(Input<String> serverName) {
+        public Builder serverName(Input<String> serverName) {
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
 
-        public Builder setServerName(String serverName) {
+        public Builder serverName(String serverName) {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
 
-        public Builder setState(Input<GeoBackupPolicyState> state) {
+        public Builder state(Input<GeoBackupPolicyState> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(GeoBackupPolicyState state) {
+        public Builder state(GeoBackupPolicyState state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }

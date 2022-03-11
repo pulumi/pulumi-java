@@ -42,14 +42,14 @@ public final class TableLevelSharingPropertiesResponse {
      */
     private final @Nullable List<String> tablesToInclude;
 
-    @OutputCustomType.Constructor({"externalTablesToExclude","externalTablesToInclude","materializedViewsToExclude","materializedViewsToInclude","tablesToExclude","tablesToInclude"})
+    @OutputCustomType.Constructor
     private TableLevelSharingPropertiesResponse(
-        @Nullable List<String> externalTablesToExclude,
-        @Nullable List<String> externalTablesToInclude,
-        @Nullable List<String> materializedViewsToExclude,
-        @Nullable List<String> materializedViewsToInclude,
-        @Nullable List<String> tablesToExclude,
-        @Nullable List<String> tablesToInclude) {
+        @OutputCustomType.Parameter("externalTablesToExclude") @Nullable List<String> externalTablesToExclude,
+        @OutputCustomType.Parameter("externalTablesToInclude") @Nullable List<String> externalTablesToInclude,
+        @OutputCustomType.Parameter("materializedViewsToExclude") @Nullable List<String> materializedViewsToExclude,
+        @OutputCustomType.Parameter("materializedViewsToInclude") @Nullable List<String> materializedViewsToInclude,
+        @OutputCustomType.Parameter("tablesToExclude") @Nullable List<String> tablesToExclude,
+        @OutputCustomType.Parameter("tablesToInclude") @Nullable List<String> tablesToInclude) {
         this.externalTablesToExclude = externalTablesToExclude;
         this.externalTablesToInclude = externalTablesToInclude;
         this.materializedViewsToExclude = materializedViewsToExclude;
@@ -131,32 +131,32 @@ public final class TableLevelSharingPropertiesResponse {
     	      this.tablesToInclude = defaults.tablesToInclude;
         }
 
-        public Builder setExternalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
+        public Builder externalTablesToExclude(@Nullable List<String> externalTablesToExclude) {
             this.externalTablesToExclude = externalTablesToExclude;
             return this;
         }
 
-        public Builder setExternalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
+        public Builder externalTablesToInclude(@Nullable List<String> externalTablesToInclude) {
             this.externalTablesToInclude = externalTablesToInclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
+        public Builder materializedViewsToExclude(@Nullable List<String> materializedViewsToExclude) {
             this.materializedViewsToExclude = materializedViewsToExclude;
             return this;
         }
 
-        public Builder setMaterializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
+        public Builder materializedViewsToInclude(@Nullable List<String> materializedViewsToInclude) {
             this.materializedViewsToInclude = materializedViewsToInclude;
             return this;
         }
 
-        public Builder setTablesToExclude(@Nullable List<String> tablesToExclude) {
+        public Builder tablesToExclude(@Nullable List<String> tablesToExclude) {
             this.tablesToExclude = tablesToExclude;
             return this;
         }
 
-        public Builder setTablesToInclude(@Nullable List<String> tablesToInclude) {
+        public Builder tablesToInclude(@Nullable List<String> tablesToInclude) {
             this.tablesToInclude = tablesToInclude;
             return this;
         }

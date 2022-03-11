@@ -122,52 +122,52 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shippingAddress = defaults.shippingAddress;
         }
 
-        public Builder setContactInformation(Input<ContactDetailsArgs> contactInformation) {
+        public Builder contactInformation(Input<ContactDetailsArgs> contactInformation) {
             this.contactInformation = Objects.requireNonNull(contactInformation);
             return this;
         }
 
-        public Builder setContactInformation(ContactDetailsArgs contactInformation) {
+        public Builder contactInformation(ContactDetailsArgs contactInformation) {
             this.contactInformation = Input.of(Objects.requireNonNull(contactInformation));
             return this;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setShipmentType(@Nullable Input<Either<String,ShipmentType>> shipmentType) {
+        public Builder shipmentType(@Nullable Input<Either<String,ShipmentType>> shipmentType) {
             this.shipmentType = shipmentType;
             return this;
         }
 
-        public Builder setShipmentType(@Nullable Either<String,ShipmentType> shipmentType) {
+        public Builder shipmentType(@Nullable Either<String,ShipmentType> shipmentType) {
             this.shipmentType = Input.ofNullable(shipmentType);
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable Input<AddressArgs> shippingAddress) {
+        public Builder shippingAddress(@Nullable Input<AddressArgs> shippingAddress) {
             this.shippingAddress = shippingAddress;
             return this;
         }
 
-        public Builder setShippingAddress(@Nullable AddressArgs shippingAddress) {
+        public Builder shippingAddress(@Nullable AddressArgs shippingAddress) {
             this.shippingAddress = Input.ofNullable(shippingAddress);
             return this;
         }

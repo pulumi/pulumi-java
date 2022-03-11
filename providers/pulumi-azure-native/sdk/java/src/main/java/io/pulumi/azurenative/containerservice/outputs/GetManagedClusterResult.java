@@ -214,44 +214,44 @@ public final class GetManagedClusterResult {
      */
     private final @Nullable ManagedClusterWindowsProfileResponse windowsProfile;
 
-    @OutputCustomType.Constructor({"aadProfile","addonProfiles","agentPoolProfiles","apiServerAccessProfile","autoScalerProfile","autoUpgradeProfile","azurePortalFQDN","disableLocalAccounts","diskEncryptionSetID","dnsPrefix","enablePodSecurityPolicy","enableRBAC","extendedLocation","fqdn","fqdnSubdomain","httpProxyConfig","id","identity","identityProfile","kubernetesVersion","linuxProfile","location","maxAgentPools","name","networkProfile","nodeResourceGroup","podIdentityProfile","powerState","privateFQDN","privateLinkResources","provisioningState","servicePrincipalProfile","sku","tags","type","windowsProfile"})
+    @OutputCustomType.Constructor
     private GetManagedClusterResult(
-        @Nullable ManagedClusterAADProfileResponse aadProfile,
-        @Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles,
-        @Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
-        @Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile,
-        @Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile,
-        @Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile,
-        String azurePortalFQDN,
-        @Nullable Boolean disableLocalAccounts,
-        @Nullable String diskEncryptionSetID,
-        @Nullable String dnsPrefix,
-        @Nullable Boolean enablePodSecurityPolicy,
-        @Nullable Boolean enableRBAC,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        String fqdn,
-        @Nullable String fqdnSubdomain,
-        @Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig,
-        String id,
-        @Nullable ManagedClusterIdentityResponse identity,
-        @Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile,
-        @Nullable String kubernetesVersion,
-        @Nullable ContainerServiceLinuxProfileResponse linuxProfile,
-        String location,
-        Integer maxAgentPools,
-        String name,
-        @Nullable ContainerServiceNetworkProfileResponse networkProfile,
-        @Nullable String nodeResourceGroup,
-        @Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile,
-        PowerStateResponse powerState,
-        String privateFQDN,
-        @Nullable List<PrivateLinkResourceResponse> privateLinkResources,
-        String provisioningState,
-        @Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile,
-        @Nullable ManagedClusterSKUResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
+        @OutputCustomType.Parameter("aadProfile") @Nullable ManagedClusterAADProfileResponse aadProfile,
+        @OutputCustomType.Parameter("addonProfiles") @Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles,
+        @OutputCustomType.Parameter("agentPoolProfiles") @Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles,
+        @OutputCustomType.Parameter("apiServerAccessProfile") @Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile,
+        @OutputCustomType.Parameter("autoScalerProfile") @Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile,
+        @OutputCustomType.Parameter("autoUpgradeProfile") @Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile,
+        @OutputCustomType.Parameter("azurePortalFQDN") String azurePortalFQDN,
+        @OutputCustomType.Parameter("disableLocalAccounts") @Nullable Boolean disableLocalAccounts,
+        @OutputCustomType.Parameter("diskEncryptionSetID") @Nullable String diskEncryptionSetID,
+        @OutputCustomType.Parameter("dnsPrefix") @Nullable String dnsPrefix,
+        @OutputCustomType.Parameter("enablePodSecurityPolicy") @Nullable Boolean enablePodSecurityPolicy,
+        @OutputCustomType.Parameter("enableRBAC") @Nullable Boolean enableRBAC,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("fqdnSubdomain") @Nullable String fqdnSubdomain,
+        @OutputCustomType.Parameter("httpProxyConfig") @Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedClusterIdentityResponse identity,
+        @OutputCustomType.Parameter("identityProfile") @Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile,
+        @OutputCustomType.Parameter("kubernetesVersion") @Nullable String kubernetesVersion,
+        @OutputCustomType.Parameter("linuxProfile") @Nullable ContainerServiceLinuxProfileResponse linuxProfile,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxAgentPools") Integer maxAgentPools,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkProfile") @Nullable ContainerServiceNetworkProfileResponse networkProfile,
+        @OutputCustomType.Parameter("nodeResourceGroup") @Nullable String nodeResourceGroup,
+        @OutputCustomType.Parameter("podIdentityProfile") @Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile,
+        @OutputCustomType.Parameter("powerState") PowerStateResponse powerState,
+        @OutputCustomType.Parameter("privateFQDN") String privateFQDN,
+        @OutputCustomType.Parameter("privateLinkResources") @Nullable List<PrivateLinkResourceResponse> privateLinkResources,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("servicePrincipalProfile") @Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile,
+        @OutputCustomType.Parameter("sku") @Nullable ManagedClusterSKUResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("windowsProfile") @Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
         this.aadProfile = aadProfile;
         this.addonProfiles = addonProfiles;
         this.agentPoolProfiles = agentPoolProfiles;
@@ -633,182 +633,182 @@ public final class GetManagedClusterResult {
     	      this.windowsProfile = defaults.windowsProfile;
         }
 
-        public Builder setAadProfile(@Nullable ManagedClusterAADProfileResponse aadProfile) {
+        public Builder aadProfile(@Nullable ManagedClusterAADProfileResponse aadProfile) {
             this.aadProfile = aadProfile;
             return this;
         }
 
-        public Builder setAddonProfiles(@Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles) {
+        public Builder addonProfiles(@Nullable Map<String,ManagedClusterAddonProfileResponse> addonProfiles) {
             this.addonProfiles = addonProfiles;
             return this;
         }
 
-        public Builder setAgentPoolProfiles(@Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
+        public Builder agentPoolProfiles(@Nullable List<ManagedClusterAgentPoolProfileResponse> agentPoolProfiles) {
             this.agentPoolProfiles = agentPoolProfiles;
             return this;
         }
 
-        public Builder setApiServerAccessProfile(@Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile) {
+        public Builder apiServerAccessProfile(@Nullable ManagedClusterAPIServerAccessProfileResponse apiServerAccessProfile) {
             this.apiServerAccessProfile = apiServerAccessProfile;
             return this;
         }
 
-        public Builder setAutoScalerProfile(@Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile) {
+        public Builder autoScalerProfile(@Nullable ManagedClusterPropertiesResponseAutoScalerProfile autoScalerProfile) {
             this.autoScalerProfile = autoScalerProfile;
             return this;
         }
 
-        public Builder setAutoUpgradeProfile(@Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile) {
+        public Builder autoUpgradeProfile(@Nullable ManagedClusterAutoUpgradeProfileResponse autoUpgradeProfile) {
             this.autoUpgradeProfile = autoUpgradeProfile;
             return this;
         }
 
-        public Builder setAzurePortalFQDN(String azurePortalFQDN) {
+        public Builder azurePortalFQDN(String azurePortalFQDN) {
             this.azurePortalFQDN = Objects.requireNonNull(azurePortalFQDN);
             return this;
         }
 
-        public Builder setDisableLocalAccounts(@Nullable Boolean disableLocalAccounts) {
+        public Builder disableLocalAccounts(@Nullable Boolean disableLocalAccounts) {
             this.disableLocalAccounts = disableLocalAccounts;
             return this;
         }
 
-        public Builder setDiskEncryptionSetID(@Nullable String diskEncryptionSetID) {
+        public Builder diskEncryptionSetID(@Nullable String diskEncryptionSetID) {
             this.diskEncryptionSetID = diskEncryptionSetID;
             return this;
         }
 
-        public Builder setDnsPrefix(@Nullable String dnsPrefix) {
+        public Builder dnsPrefix(@Nullable String dnsPrefix) {
             this.dnsPrefix = dnsPrefix;
             return this;
         }
 
-        public Builder setEnablePodSecurityPolicy(@Nullable Boolean enablePodSecurityPolicy) {
+        public Builder enablePodSecurityPolicy(@Nullable Boolean enablePodSecurityPolicy) {
             this.enablePodSecurityPolicy = enablePodSecurityPolicy;
             return this;
         }
 
-        public Builder setEnableRBAC(@Nullable Boolean enableRBAC) {
+        public Builder enableRBAC(@Nullable Boolean enableRBAC) {
             this.enableRBAC = enableRBAC;
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setFqdnSubdomain(@Nullable String fqdnSubdomain) {
+        public Builder fqdnSubdomain(@Nullable String fqdnSubdomain) {
             this.fqdnSubdomain = fqdnSubdomain;
             return this;
         }
 
-        public Builder setHttpProxyConfig(@Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig) {
+        public Builder httpProxyConfig(@Nullable ManagedClusterHTTPProxyConfigResponse httpProxyConfig) {
             this.httpProxyConfig = httpProxyConfig;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedClusterIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedClusterIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentityProfile(@Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile) {
+        public Builder identityProfile(@Nullable Map<String,ManagedClusterPropertiesResponseIdentityProfile> identityProfile) {
             this.identityProfile = identityProfile;
             return this;
         }
 
-        public Builder setKubernetesVersion(@Nullable String kubernetesVersion) {
+        public Builder kubernetesVersion(@Nullable String kubernetesVersion) {
             this.kubernetesVersion = kubernetesVersion;
             return this;
         }
 
-        public Builder setLinuxProfile(@Nullable ContainerServiceLinuxProfileResponse linuxProfile) {
+        public Builder linuxProfile(@Nullable ContainerServiceLinuxProfileResponse linuxProfile) {
             this.linuxProfile = linuxProfile;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxAgentPools(Integer maxAgentPools) {
+        public Builder maxAgentPools(Integer maxAgentPools) {
             this.maxAgentPools = Objects.requireNonNull(maxAgentPools);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable ContainerServiceNetworkProfileResponse networkProfile) {
+        public Builder networkProfile(@Nullable ContainerServiceNetworkProfileResponse networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNodeResourceGroup(@Nullable String nodeResourceGroup) {
+        public Builder nodeResourceGroup(@Nullable String nodeResourceGroup) {
             this.nodeResourceGroup = nodeResourceGroup;
             return this;
         }
 
-        public Builder setPodIdentityProfile(@Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile) {
+        public Builder podIdentityProfile(@Nullable ManagedClusterPodIdentityProfileResponse podIdentityProfile) {
             this.podIdentityProfile = podIdentityProfile;
             return this;
         }
 
-        public Builder setPowerState(PowerStateResponse powerState) {
+        public Builder powerState(PowerStateResponse powerState) {
             this.powerState = Objects.requireNonNull(powerState);
             return this;
         }
 
-        public Builder setPrivateFQDN(String privateFQDN) {
+        public Builder privateFQDN(String privateFQDN) {
             this.privateFQDN = Objects.requireNonNull(privateFQDN);
             return this;
         }
 
-        public Builder setPrivateLinkResources(@Nullable List<PrivateLinkResourceResponse> privateLinkResources) {
+        public Builder privateLinkResources(@Nullable List<PrivateLinkResourceResponse> privateLinkResources) {
             this.privateLinkResources = privateLinkResources;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServicePrincipalProfile(@Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile) {
+        public Builder servicePrincipalProfile(@Nullable ManagedClusterServicePrincipalProfileResponse servicePrincipalProfile) {
             this.servicePrincipalProfile = servicePrincipalProfile;
             return this;
         }
 
-        public Builder setSku(@Nullable ManagedClusterSKUResponse sku) {
+        public Builder sku(@Nullable ManagedClusterSKUResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWindowsProfile(@Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
+        public Builder windowsProfile(@Nullable ManagedClusterWindowsProfileResponse windowsProfile) {
             this.windowsProfile = windowsProfile;
             return this;
         }

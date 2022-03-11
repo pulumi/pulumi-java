@@ -51,16 +51,16 @@ public final class GetThemeResult {
     private final @Nullable ThemeType type;
     private final @Nullable ThemeVersion version;
 
-    @OutputCustomType.Constructor({"arn","createdTime","lastUpdatedTime","name","permissions","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetThemeResult(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<ThemeResourcePermission> permissions,
-        @Nullable List<ThemeTag> tags,
-        @Nullable ThemeType type,
-        @Nullable ThemeVersion version) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<ThemeResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<ThemeTag> tags,
+        @OutputCustomType.Parameter("type") @Nullable ThemeType type,
+        @OutputCustomType.Parameter("version") @Nullable ThemeVersion version) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.lastUpdatedTime = lastUpdatedTime;
@@ -156,42 +156,42 @@ public final class GetThemeResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<ThemeResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<ThemeResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ThemeTag> tags) {
+        public Builder tags(@Nullable List<ThemeTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(@Nullable ThemeType type) {
+        public Builder type(@Nullable ThemeType type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable ThemeVersion version) {
+        public Builder version(@Nullable ThemeVersion version) {
             this.version = version;
             return this;
         }

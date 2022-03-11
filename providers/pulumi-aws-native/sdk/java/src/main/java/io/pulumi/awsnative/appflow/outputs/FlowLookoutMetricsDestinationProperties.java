@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class FlowLookoutMetricsDestinationProperties {
     private final @Nullable String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowLookoutMetricsDestinationProperties(@Nullable String object) {
+    @OutputCustomType.Constructor
+    private FlowLookoutMetricsDestinationProperties(@OutputCustomType.Parameter("object") @Nullable String object) {
         this.object = object;
     }
 
@@ -42,7 +42,7 @@ public final class FlowLookoutMetricsDestinationProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }

@@ -118,27 +118,27 @@ public final class GetOccurrenceResult {
      */
     private final GrafeasV1beta1VulnerabilityDetailsResponse vulnerability;
 
-    @OutputCustomType.Constructor({"attestation","build","createTime","deployment","derivedImage","discovered","installation","intoto","kind","name","noteName","remediation","resource","sbom","spdxFile","spdxPackage","spdxRelationship","updateTime","vulnerability"})
+    @OutputCustomType.Constructor
     private GetOccurrenceResult(
-        DetailsResponse attestation,
-        GrafeasV1beta1BuildDetailsResponse build,
-        String createTime,
-        GrafeasV1beta1DeploymentDetailsResponse deployment,
-        GrafeasV1beta1ImageDetailsResponse derivedImage,
-        GrafeasV1beta1DiscoveryDetailsResponse discovered,
-        GrafeasV1beta1PackageDetailsResponse installation,
-        GrafeasV1beta1IntotoDetailsResponse intoto,
-        String kind,
-        String name,
-        String noteName,
-        String remediation,
-        ResourceResponse resource,
-        DocumentOccurrenceResponse sbom,
-        FileOccurrenceResponse spdxFile,
-        PackageInfoOccurrenceResponse spdxPackage,
-        RelationshipOccurrenceResponse spdxRelationship,
-        String updateTime,
-        GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
+        @OutputCustomType.Parameter("attestation") DetailsResponse attestation,
+        @OutputCustomType.Parameter("build") GrafeasV1beta1BuildDetailsResponse build,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("deployment") GrafeasV1beta1DeploymentDetailsResponse deployment,
+        @OutputCustomType.Parameter("derivedImage") GrafeasV1beta1ImageDetailsResponse derivedImage,
+        @OutputCustomType.Parameter("discovered") GrafeasV1beta1DiscoveryDetailsResponse discovered,
+        @OutputCustomType.Parameter("installation") GrafeasV1beta1PackageDetailsResponse installation,
+        @OutputCustomType.Parameter("intoto") GrafeasV1beta1IntotoDetailsResponse intoto,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("noteName") String noteName,
+        @OutputCustomType.Parameter("remediation") String remediation,
+        @OutputCustomType.Parameter("resource") ResourceResponse resource,
+        @OutputCustomType.Parameter("sbom") DocumentOccurrenceResponse sbom,
+        @OutputCustomType.Parameter("spdxFile") FileOccurrenceResponse spdxFile,
+        @OutputCustomType.Parameter("spdxPackage") PackageInfoOccurrenceResponse spdxPackage,
+        @OutputCustomType.Parameter("spdxRelationship") RelationshipOccurrenceResponse spdxRelationship,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vulnerability") GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
         this.attestation = attestation;
         this.build = build;
         this.createTime = createTime;
@@ -350,97 +350,97 @@ public final class GetOccurrenceResult {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestation(DetailsResponse attestation) {
+        public Builder attestation(DetailsResponse attestation) {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
 
-        public Builder setBuild(GrafeasV1beta1BuildDetailsResponse build) {
+        public Builder build(GrafeasV1beta1BuildDetailsResponse build) {
             this.build = Objects.requireNonNull(build);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDeployment(GrafeasV1beta1DeploymentDetailsResponse deployment) {
+        public Builder deployment(GrafeasV1beta1DeploymentDetailsResponse deployment) {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
 
-        public Builder setDerivedImage(GrafeasV1beta1ImageDetailsResponse derivedImage) {
+        public Builder derivedImage(GrafeasV1beta1ImageDetailsResponse derivedImage) {
             this.derivedImage = Objects.requireNonNull(derivedImage);
             return this;
         }
 
-        public Builder setDiscovered(GrafeasV1beta1DiscoveryDetailsResponse discovered) {
+        public Builder discovered(GrafeasV1beta1DiscoveryDetailsResponse discovered) {
             this.discovered = Objects.requireNonNull(discovered);
             return this;
         }
 
-        public Builder setInstallation(GrafeasV1beta1PackageDetailsResponse installation) {
+        public Builder installation(GrafeasV1beta1PackageDetailsResponse installation) {
             this.installation = Objects.requireNonNull(installation);
             return this;
         }
 
-        public Builder setIntoto(GrafeasV1beta1IntotoDetailsResponse intoto) {
+        public Builder intoto(GrafeasV1beta1IntotoDetailsResponse intoto) {
             this.intoto = Objects.requireNonNull(intoto);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNoteName(String noteName) {
+        public Builder noteName(String noteName) {
             this.noteName = Objects.requireNonNull(noteName);
             return this;
         }
 
-        public Builder setRemediation(String remediation) {
+        public Builder remediation(String remediation) {
             this.remediation = Objects.requireNonNull(remediation);
             return this;
         }
 
-        public Builder setResource(ResourceResponse resource) {
+        public Builder resource(ResourceResponse resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
 
-        public Builder setSbom(DocumentOccurrenceResponse sbom) {
+        public Builder sbom(DocumentOccurrenceResponse sbom) {
             this.sbom = Objects.requireNonNull(sbom);
             return this;
         }
 
-        public Builder setSpdxFile(FileOccurrenceResponse spdxFile) {
+        public Builder spdxFile(FileOccurrenceResponse spdxFile) {
             this.spdxFile = Objects.requireNonNull(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
+        public Builder spdxPackage(PackageInfoOccurrenceResponse spdxPackage) {
             this.spdxPackage = Objects.requireNonNull(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
+        public Builder spdxRelationship(RelationshipOccurrenceResponse spdxRelationship) {
             this.spdxRelationship = Objects.requireNonNull(spdxRelationship);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVulnerability(GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
+        public Builder vulnerability(GrafeasV1beta1VulnerabilityDetailsResponse vulnerability) {
             this.vulnerability = Objects.requireNonNull(vulnerability);
             return this;
         }

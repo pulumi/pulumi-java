@@ -58,17 +58,17 @@ public final class DatasetAccessItemResponse {
      */
     private final TableReferenceResponse view;
 
-    @OutputCustomType.Constructor({"dataset","domain","groupByEmail","iamMember","role","routine","specialGroup","userByEmail","view"})
+    @OutputCustomType.Constructor
     private DatasetAccessItemResponse(
-        DatasetAccessEntryResponse dataset,
-        String domain,
-        String groupByEmail,
-        String iamMember,
-        String role,
-        RoutineReferenceResponse routine,
-        String specialGroup,
-        String userByEmail,
-        TableReferenceResponse view) {
+        @OutputCustomType.Parameter("dataset") DatasetAccessEntryResponse dataset,
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("groupByEmail") String groupByEmail,
+        @OutputCustomType.Parameter("iamMember") String iamMember,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("routine") RoutineReferenceResponse routine,
+        @OutputCustomType.Parameter("specialGroup") String specialGroup,
+        @OutputCustomType.Parameter("userByEmail") String userByEmail,
+        @OutputCustomType.Parameter("view") TableReferenceResponse view) {
         this.dataset = dataset;
         this.domain = domain;
         this.groupByEmail = groupByEmail;
@@ -180,47 +180,47 @@ public final class DatasetAccessItemResponse {
     	      this.view = defaults.view;
         }
 
-        public Builder setDataset(DatasetAccessEntryResponse dataset) {
+        public Builder dataset(DatasetAccessEntryResponse dataset) {
             this.dataset = Objects.requireNonNull(dataset);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setGroupByEmail(String groupByEmail) {
+        public Builder groupByEmail(String groupByEmail) {
             this.groupByEmail = Objects.requireNonNull(groupByEmail);
             return this;
         }
 
-        public Builder setIamMember(String iamMember) {
+        public Builder iamMember(String iamMember) {
             this.iamMember = Objects.requireNonNull(iamMember);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRoutine(RoutineReferenceResponse routine) {
+        public Builder routine(RoutineReferenceResponse routine) {
             this.routine = Objects.requireNonNull(routine);
             return this;
         }
 
-        public Builder setSpecialGroup(String specialGroup) {
+        public Builder specialGroup(String specialGroup) {
             this.specialGroup = Objects.requireNonNull(specialGroup);
             return this;
         }
 
-        public Builder setUserByEmail(String userByEmail) {
+        public Builder userByEmail(String userByEmail) {
             this.userByEmail = Objects.requireNonNull(userByEmail);
             return this;
         }
 
-        public Builder setView(TableReferenceResponse view) {
+        public Builder view(TableReferenceResponse view) {
             this.view = Objects.requireNonNull(view);
             return this;
         }

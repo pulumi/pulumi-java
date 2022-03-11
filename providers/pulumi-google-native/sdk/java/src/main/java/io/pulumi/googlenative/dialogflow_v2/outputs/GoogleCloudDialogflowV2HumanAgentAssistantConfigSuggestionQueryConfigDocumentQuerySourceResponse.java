@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      */
     private final List<String> documents;
 
-    @OutputCustomType.Constructor({"documents"})
-    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(List<String> documents) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigDocumentQuerySourceResponse(@OutputCustomType.Parameter("documents") List<String> documents) {
         this.documents = documents;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
     	      this.documents = defaults.documents;
         }
 
-        public Builder setDocuments(List<String> documents) {
+        public Builder documents(List<String> documents) {
             this.documents = Objects.requireNonNull(documents);
             return this;
         }

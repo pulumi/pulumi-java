@@ -53,15 +53,15 @@ public final class GetWorkGroupResult {
      */
     private final @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates;
 
-    @OutputCustomType.Constructor({"creationTime","description","recursiveDeleteOption","state","tags","workGroupConfiguration","workGroupConfigurationUpdates"})
+    @OutputCustomType.Constructor
     private GetWorkGroupResult(
-        @Nullable String creationTime,
-        @Nullable String description,
-        @Nullable Boolean recursiveDeleteOption,
-        @Nullable WorkGroupState state,
-        @Nullable List<WorkGroupTag> tags,
-        @Nullable WorkGroupConfiguration workGroupConfiguration,
-        @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("recursiveDeleteOption") @Nullable Boolean recursiveDeleteOption,
+        @OutputCustomType.Parameter("state") @Nullable WorkGroupState state,
+        @OutputCustomType.Parameter("tags") @Nullable List<WorkGroupTag> tags,
+        @OutputCustomType.Parameter("workGroupConfiguration") @Nullable WorkGroupConfiguration workGroupConfiguration,
+        @OutputCustomType.Parameter("workGroupConfigurationUpdates") @Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
         this.creationTime = creationTime;
         this.description = description;
         this.recursiveDeleteOption = recursiveDeleteOption;
@@ -153,37 +153,37 @@ public final class GetWorkGroupResult {
     	      this.workGroupConfigurationUpdates = defaults.workGroupConfigurationUpdates;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRecursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
+        public Builder recursiveDeleteOption(@Nullable Boolean recursiveDeleteOption) {
             this.recursiveDeleteOption = recursiveDeleteOption;
             return this;
         }
 
-        public Builder setState(@Nullable WorkGroupState state) {
+        public Builder state(@Nullable WorkGroupState state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<WorkGroupTag> tags) {
+        public Builder tags(@Nullable List<WorkGroupTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setWorkGroupConfiguration(@Nullable WorkGroupConfiguration workGroupConfiguration) {
+        public Builder workGroupConfiguration(@Nullable WorkGroupConfiguration workGroupConfiguration) {
             this.workGroupConfiguration = workGroupConfiguration;
             return this;
         }
 
-        public Builder setWorkGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
+        public Builder workGroupConfigurationUpdates(@Nullable WorkGroupConfigurationUpdates workGroupConfigurationUpdates) {
             this.workGroupConfigurationUpdates = workGroupConfigurationUpdates;
             return this;
         }

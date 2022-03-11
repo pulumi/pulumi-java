@@ -15,11 +15,11 @@ public final class GetDomainNameResult {
     private final @Nullable String description;
     private final @Nullable String hostedZoneId;
 
-    @OutputCustomType.Constructor({"appSyncDomainName","description","hostedZoneId"})
+    @OutputCustomType.Constructor
     private GetDomainNameResult(
-        @Nullable String appSyncDomainName,
-        @Nullable String description,
-        @Nullable String hostedZoneId) {
+        @OutputCustomType.Parameter("appSyncDomainName") @Nullable String appSyncDomainName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("hostedZoneId") @Nullable String hostedZoneId) {
         this.appSyncDomainName = appSyncDomainName;
         this.description = description;
         this.hostedZoneId = hostedZoneId;
@@ -59,17 +59,17 @@ public final class GetDomainNameResult {
     	      this.hostedZoneId = defaults.hostedZoneId;
         }
 
-        public Builder setAppSyncDomainName(@Nullable String appSyncDomainName) {
+        public Builder appSyncDomainName(@Nullable String appSyncDomainName) {
             this.appSyncDomainName = appSyncDomainName;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setHostedZoneId(@Nullable String hostedZoneId) {
+        public Builder hostedZoneId(@Nullable String hostedZoneId) {
             this.hostedZoneId = hostedZoneId;
             return this;
         }

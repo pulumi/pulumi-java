@@ -58,20 +58,20 @@ public final class GetLicenseResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"beneficiary","consumptionConfiguration","entitlements","homeRegion","issuer","licenseArn","licenseMetadata","licenseName","productName","productSKU","validity","version"})
+    @OutputCustomType.Constructor
     private GetLicenseResult(
-        @Nullable String beneficiary,
-        @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
-        @Nullable List<LicenseEntitlement> entitlements,
-        @Nullable String homeRegion,
-        @Nullable LicenseIssuerData issuer,
-        @Nullable String licenseArn,
-        @Nullable List<LicenseMetadata> licenseMetadata,
-        @Nullable String licenseName,
-        @Nullable String productName,
-        @Nullable String productSKU,
-        @Nullable LicenseValidityDateFormat validity,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("beneficiary") @Nullable String beneficiary,
+        @OutputCustomType.Parameter("consumptionConfiguration") @Nullable LicenseConsumptionConfiguration consumptionConfiguration,
+        @OutputCustomType.Parameter("entitlements") @Nullable List<LicenseEntitlement> entitlements,
+        @OutputCustomType.Parameter("homeRegion") @Nullable String homeRegion,
+        @OutputCustomType.Parameter("issuer") @Nullable LicenseIssuerData issuer,
+        @OutputCustomType.Parameter("licenseArn") @Nullable String licenseArn,
+        @OutputCustomType.Parameter("licenseMetadata") @Nullable List<LicenseMetadata> licenseMetadata,
+        @OutputCustomType.Parameter("licenseName") @Nullable String licenseName,
+        @OutputCustomType.Parameter("productName") @Nullable String productName,
+        @OutputCustomType.Parameter("productSKU") @Nullable String productSKU,
+        @OutputCustomType.Parameter("validity") @Nullable LicenseValidityDateFormat validity,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.beneficiary = beneficiary;
         this.consumptionConfiguration = consumptionConfiguration;
         this.entitlements = entitlements;
@@ -193,62 +193,62 @@ public final class GetLicenseResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setBeneficiary(@Nullable String beneficiary) {
+        public Builder beneficiary(@Nullable String beneficiary) {
             this.beneficiary = beneficiary;
             return this;
         }
 
-        public Builder setConsumptionConfiguration(@Nullable LicenseConsumptionConfiguration consumptionConfiguration) {
+        public Builder consumptionConfiguration(@Nullable LicenseConsumptionConfiguration consumptionConfiguration) {
             this.consumptionConfiguration = consumptionConfiguration;
             return this;
         }
 
-        public Builder setEntitlements(@Nullable List<LicenseEntitlement> entitlements) {
+        public Builder entitlements(@Nullable List<LicenseEntitlement> entitlements) {
             this.entitlements = entitlements;
             return this;
         }
 
-        public Builder setHomeRegion(@Nullable String homeRegion) {
+        public Builder homeRegion(@Nullable String homeRegion) {
             this.homeRegion = homeRegion;
             return this;
         }
 
-        public Builder setIssuer(@Nullable LicenseIssuerData issuer) {
+        public Builder issuer(@Nullable LicenseIssuerData issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setLicenseArn(@Nullable String licenseArn) {
+        public Builder licenseArn(@Nullable String licenseArn) {
             this.licenseArn = licenseArn;
             return this;
         }
 
-        public Builder setLicenseMetadata(@Nullable List<LicenseMetadata> licenseMetadata) {
+        public Builder licenseMetadata(@Nullable List<LicenseMetadata> licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
             return this;
         }
 
-        public Builder setLicenseName(@Nullable String licenseName) {
+        public Builder licenseName(@Nullable String licenseName) {
             this.licenseName = licenseName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProductSKU(@Nullable String productSKU) {
+        public Builder productSKU(@Nullable String productSKU) {
             this.productSKU = productSKU;
             return this;
         }
 
-        public Builder setValidity(@Nullable LicenseValidityDateFormat validity) {
+        public Builder validity(@Nullable LicenseValidityDateFormat validity) {
             this.validity = validity;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

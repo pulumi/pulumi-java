@@ -41,13 +41,13 @@ public final class TaskDefinitionVolume {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dockerVolumeConfiguration","efsVolumeConfiguration","fsxWindowsFileServerVolumeConfiguration","hostPath","name"})
+    @OutputCustomType.Constructor
     private TaskDefinitionVolume(
-        @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
-        @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
-        @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
-        @Nullable String hostPath,
-        String name) {
+        @OutputCustomType.Parameter("dockerVolumeConfiguration") @Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration,
+        @OutputCustomType.Parameter("efsVolumeConfiguration") @Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration,
+        @OutputCustomType.Parameter("fsxWindowsFileServerVolumeConfiguration") @Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration,
+        @OutputCustomType.Parameter("hostPath") @Nullable String hostPath,
+        @OutputCustomType.Parameter("name") String name) {
         this.dockerVolumeConfiguration = dockerVolumeConfiguration;
         this.efsVolumeConfiguration = efsVolumeConfiguration;
         this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
@@ -120,27 +120,27 @@ public final class TaskDefinitionVolume {
     	      this.name = defaults.name;
         }
 
-        public Builder setDockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration) {
+        public Builder dockerVolumeConfiguration(@Nullable TaskDefinitionVolumeDockerVolumeConfiguration dockerVolumeConfiguration) {
             this.dockerVolumeConfiguration = dockerVolumeConfiguration;
             return this;
         }
 
-        public Builder setEfsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration) {
+        public Builder efsVolumeConfiguration(@Nullable TaskDefinitionVolumeEfsVolumeConfiguration efsVolumeConfiguration) {
             this.efsVolumeConfiguration = efsVolumeConfiguration;
             return this;
         }
 
-        public Builder setFsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration) {
+        public Builder fsxWindowsFileServerVolumeConfiguration(@Nullable TaskDefinitionVolumeFsxWindowsFileServerVolumeConfiguration fsxWindowsFileServerVolumeConfiguration) {
             this.fsxWindowsFileServerVolumeConfiguration = fsxWindowsFileServerVolumeConfiguration;
             return this;
         }
 
-        public Builder setHostPath(@Nullable String hostPath) {
+        public Builder hostPath(@Nullable String hostPath) {
             this.hostPath = hostPath;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

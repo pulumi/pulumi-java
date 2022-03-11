@@ -15,8 +15,8 @@ public final class BucketReplicaModifications {
      */
     private final BucketReplicaModificationsStatus status;
 
-    @OutputCustomType.Constructor({"status"})
-    private BucketReplicaModifications(BucketReplicaModificationsStatus status) {
+    @OutputCustomType.Constructor
+    private BucketReplicaModifications(@OutputCustomType.Parameter("status") BucketReplicaModificationsStatus status) {
         this.status = status;
     }
 
@@ -48,7 +48,7 @@ public final class BucketReplicaModifications {
     	      this.status = defaults.status;
         }
 
-        public Builder setStatus(BucketReplicaModificationsStatus status) {
+        public Builder status(BucketReplicaModificationsStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

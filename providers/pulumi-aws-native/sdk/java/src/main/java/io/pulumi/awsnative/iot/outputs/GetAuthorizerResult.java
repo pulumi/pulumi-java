@@ -22,14 +22,14 @@ public final class GetAuthorizerResult {
     private final @Nullable String tokenKeyName;
     private final @Nullable Object tokenSigningPublicKeys;
 
-    @OutputCustomType.Constructor({"arn","authorizerFunctionArn","status","tags","tokenKeyName","tokenSigningPublicKeys"})
+    @OutputCustomType.Constructor
     private GetAuthorizerResult(
-        @Nullable String arn,
-        @Nullable String authorizerFunctionArn,
-        @Nullable AuthorizerStatus status,
-        @Nullable List<AuthorizerTag> tags,
-        @Nullable String tokenKeyName,
-        @Nullable Object tokenSigningPublicKeys) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("authorizerFunctionArn") @Nullable String authorizerFunctionArn,
+        @OutputCustomType.Parameter("status") @Nullable AuthorizerStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<AuthorizerTag> tags,
+        @OutputCustomType.Parameter("tokenKeyName") @Nullable String tokenKeyName,
+        @OutputCustomType.Parameter("tokenSigningPublicKeys") @Nullable Object tokenSigningPublicKeys) {
         this.arn = arn;
         this.authorizerFunctionArn = authorizerFunctionArn;
         this.status = status;
@@ -87,32 +87,32 @@ public final class GetAuthorizerResult {
     	      this.tokenSigningPublicKeys = defaults.tokenSigningPublicKeys;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAuthorizerFunctionArn(@Nullable String authorizerFunctionArn) {
+        public Builder authorizerFunctionArn(@Nullable String authorizerFunctionArn) {
             this.authorizerFunctionArn = authorizerFunctionArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable AuthorizerStatus status) {
+        public Builder status(@Nullable AuthorizerStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AuthorizerTag> tags) {
+        public Builder tags(@Nullable List<AuthorizerTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTokenKeyName(@Nullable String tokenKeyName) {
+        public Builder tokenKeyName(@Nullable String tokenKeyName) {
             this.tokenKeyName = tokenKeyName;
             return this;
         }
 
-        public Builder setTokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
+        public Builder tokenSigningPublicKeys(@Nullable Object tokenSigningPublicKeys) {
             this.tokenSigningPublicKeys = tokenSigningPublicKeys;
             return this;
         }

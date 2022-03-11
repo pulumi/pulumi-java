@@ -17,8 +17,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
      */
     private final List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks;
 
-    @OutputCustomType.Constructor({"dayOfWeeks"})
-    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
+    @OutputCustomType.Constructor
+    private ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule(@OutputCustomType.Parameter("dayOfWeeks") List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
         this.dayOfWeeks = dayOfWeeks;
     }
 
@@ -51,7 +51,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule {
     	      this.dayOfWeeks = defaults.dayOfWeeks;
         }
 
-        public Builder setDayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
+        public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeek> dayOfWeeks) {
             this.dayOfWeeks = Objects.requireNonNull(dayOfWeeks);
             return this;
         }

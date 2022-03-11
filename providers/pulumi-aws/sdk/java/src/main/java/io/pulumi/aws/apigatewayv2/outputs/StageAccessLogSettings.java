@@ -20,10 +20,10 @@ public final class StageAccessLogSettings {
      */
     private final String format;
 
-    @OutputCustomType.Constructor({"destinationArn","format"})
+    @OutputCustomType.Constructor
     private StageAccessLogSettings(
-        String destinationArn,
-        String format) {
+        @OutputCustomType.Parameter("destinationArn") String destinationArn,
+        @OutputCustomType.Parameter("format") String format) {
         this.destinationArn = destinationArn;
         this.format = format;
     }
@@ -65,12 +65,12 @@ public final class StageAccessLogSettings {
     	      this.format = defaults.format;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }

@@ -28,11 +28,11 @@ public final class MetricValueStatus {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"averageUtilization","averageValue","value"})
+    @OutputCustomType.Constructor
     private MetricValueStatus(
-        @Nullable Integer averageUtilization,
-        @Nullable String averageValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("averageUtilization") @Nullable Integer averageUtilization,
+        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.averageUtilization = averageUtilization;
         this.averageValue = averageValue;
         this.value = value;
@@ -84,17 +84,17 @@ public final class MetricValueStatus {
     	      this.value = defaults.value;
         }
 
-        public Builder setAverageUtilization(@Nullable Integer averageUtilization) {
+        public Builder averageUtilization(@Nullable Integer averageUtilization) {
             this.averageUtilization = averageUtilization;
             return this;
         }
 
-        public Builder setAverageValue(@Nullable String averageValue) {
+        public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

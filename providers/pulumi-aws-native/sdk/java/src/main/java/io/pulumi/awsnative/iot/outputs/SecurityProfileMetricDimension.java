@@ -23,10 +23,10 @@ public final class SecurityProfileMetricDimension {
      */
     private final @Nullable SecurityProfileMetricDimensionOperator operator;
 
-    @OutputCustomType.Constructor({"dimensionName","operator"})
+    @OutputCustomType.Constructor
     private SecurityProfileMetricDimension(
-        String dimensionName,
-        @Nullable SecurityProfileMetricDimensionOperator operator) {
+        @OutputCustomType.Parameter("dimensionName") String dimensionName,
+        @OutputCustomType.Parameter("operator") @Nullable SecurityProfileMetricDimensionOperator operator) {
         this.dimensionName = dimensionName;
         this.operator = operator;
     }
@@ -68,12 +68,12 @@ public final class SecurityProfileMetricDimension {
     	      this.operator = defaults.operator;
         }
 
-        public Builder setDimensionName(String dimensionName) {
+        public Builder dimensionName(String dimensionName) {
             this.dimensionName = Objects.requireNonNull(dimensionName);
             return this;
         }
 
-        public Builder setOperator(@Nullable SecurityProfileMetricDimensionOperator operator) {
+        public Builder operator(@Nullable SecurityProfileMetricDimensionOperator operator) {
             this.operator = operator;
             return this;
         }

@@ -50,15 +50,15 @@ public final class GetContactFlowResult {
      */
     private final @Nullable List<ContactFlowTag> tags;
 
-    @OutputCustomType.Constructor({"contactFlowArn","content","description","instanceArn","name","state","tags"})
+    @OutputCustomType.Constructor
     private GetContactFlowResult(
-        @Nullable String contactFlowArn,
-        @Nullable String content,
-        @Nullable String description,
-        @Nullable String instanceArn,
-        @Nullable String name,
-        @Nullable ContactFlowState state,
-        @Nullable List<ContactFlowTag> tags) {
+        @OutputCustomType.Parameter("contactFlowArn") @Nullable String contactFlowArn,
+        @OutputCustomType.Parameter("content") @Nullable String content,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("instanceArn") @Nullable String instanceArn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("state") @Nullable ContactFlowState state,
+        @OutputCustomType.Parameter("tags") @Nullable List<ContactFlowTag> tags) {
         this.contactFlowArn = contactFlowArn;
         this.content = content;
         this.description = description;
@@ -150,37 +150,37 @@ public final class GetContactFlowResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setContactFlowArn(@Nullable String contactFlowArn) {
+        public Builder contactFlowArn(@Nullable String contactFlowArn) {
             this.contactFlowArn = contactFlowArn;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = content;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setInstanceArn(@Nullable String instanceArn) {
+        public Builder instanceArn(@Nullable String instanceArn) {
             this.instanceArn = instanceArn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setState(@Nullable ContactFlowState state) {
+        public Builder state(@Nullable ContactFlowState state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ContactFlowTag> tags) {
+        public Builder tags(@Nullable List<ContactFlowTag> tags) {
             this.tags = tags;
             return this;
         }

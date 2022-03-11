@@ -69,19 +69,19 @@ public final class GetMediaServiceResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryption","id","identity","location","mediaServiceId","name","storageAccounts","storageAuthentication","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetMediaServiceResult(
-        @Nullable AccountEncryptionResponse encryption,
-        String id,
-        @Nullable MediaServiceIdentityResponse identity,
-        String location,
-        String mediaServiceId,
-        String name,
-        @Nullable List<StorageAccountResponse> storageAccounts,
-        @Nullable String storageAuthentication,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("encryption") @Nullable AccountEncryptionResponse encryption,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable MediaServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("mediaServiceId") String mediaServiceId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccounts") @Nullable List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("storageAuthentication") @Nullable String storageAuthentication,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.id = id;
         this.identity = identity;
@@ -209,57 +209,57 @@ public final class GetMediaServiceResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncryption(@Nullable AccountEncryptionResponse encryption) {
+        public Builder encryption(@Nullable AccountEncryptionResponse encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable MediaServiceIdentityResponse identity) {
+        public Builder identity(@Nullable MediaServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMediaServiceId(String mediaServiceId) {
+        public Builder mediaServiceId(String mediaServiceId) {
             this.mediaServiceId = Objects.requireNonNull(mediaServiceId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStorageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
+        public Builder storageAccounts(@Nullable List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = storageAccounts;
             return this;
         }
 
-        public Builder setStorageAuthentication(@Nullable String storageAuthentication) {
+        public Builder storageAuthentication(@Nullable String storageAuthentication) {
             this.storageAuthentication = storageAuthentication;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

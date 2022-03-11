@@ -90,17 +90,17 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
     	      this.publicSubdomain = defaults.publicSubdomain;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPublicSubdomain(String publicSubdomain) {
+        public Builder publicSubdomain(String publicSubdomain) {
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }

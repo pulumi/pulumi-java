@@ -27,11 +27,11 @@ public final class TopicRuleErrorActionStepFunctions {
      */
     private final String stateMachineName;
 
-    @OutputCustomType.Constructor({"executionNamePrefix","roleArn","stateMachineName"})
+    @OutputCustomType.Constructor
     private TopicRuleErrorActionStepFunctions(
-        @Nullable String executionNamePrefix,
-        String roleArn,
-        String stateMachineName) {
+        @OutputCustomType.Parameter("executionNamePrefix") @Nullable String executionNamePrefix,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("stateMachineName") String stateMachineName) {
         this.executionNamePrefix = executionNamePrefix;
         this.roleArn = roleArn;
         this.stateMachineName = stateMachineName;
@@ -83,17 +83,17 @@ public final class TopicRuleErrorActionStepFunctions {
     	      this.stateMachineName = defaults.stateMachineName;
         }
 
-        public Builder setExecutionNamePrefix(@Nullable String executionNamePrefix) {
+        public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
             this.executionNamePrefix = executionNamePrefix;
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setStateMachineName(String stateMachineName) {
+        public Builder stateMachineName(String stateMachineName) {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
         }

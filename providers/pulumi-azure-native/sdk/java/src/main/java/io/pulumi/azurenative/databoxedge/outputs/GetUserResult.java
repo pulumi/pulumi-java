@@ -51,15 +51,15 @@ public final class GetUserResult {
      */
     private final String userType;
 
-    @OutputCustomType.Constructor({"encryptedPassword","id","name","shareAccessRights","systemData","type","userType"})
+    @OutputCustomType.Constructor
     private GetUserResult(
-        @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
-        String id,
-        String name,
-        List<ShareAccessRightResponse> shareAccessRights,
-        SystemDataResponse systemData,
-        String type,
-        String userType) {
+        @OutputCustomType.Parameter("encryptedPassword") @Nullable AsymmetricEncryptedSecretResponse encryptedPassword,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("shareAccessRights") List<ShareAccessRightResponse> shareAccessRights,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userType") String userType) {
         this.encryptedPassword = encryptedPassword;
         this.id = id;
         this.name = name;
@@ -151,37 +151,37 @@ public final class GetUserResult {
     	      this.userType = defaults.userType;
         }
 
-        public Builder setEncryptedPassword(@Nullable AsymmetricEncryptedSecretResponse encryptedPassword) {
+        public Builder encryptedPassword(@Nullable AsymmetricEncryptedSecretResponse encryptedPassword) {
             this.encryptedPassword = encryptedPassword;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setShareAccessRights(List<ShareAccessRightResponse> shareAccessRights) {
+        public Builder shareAccessRights(List<ShareAccessRightResponse> shareAccessRights) {
             this.shareAccessRights = Objects.requireNonNull(shareAccessRights);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserType(String userType) {
+        public Builder userType(String userType) {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }

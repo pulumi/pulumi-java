@@ -43,14 +43,14 @@ public final class ThresholdCustomAlertRuleResponse {
      */
     private final String ruleType;
 
-    @OutputCustomType.Constructor({"description","displayName","isEnabled","maxThreshold","minThreshold","ruleType"})
+    @OutputCustomType.Constructor
     private ThresholdCustomAlertRuleResponse(
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        Integer maxThreshold,
-        Integer minThreshold,
-        String ruleType) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("maxThreshold") Integer maxThreshold,
+        @OutputCustomType.Parameter("minThreshold") Integer minThreshold,
+        @OutputCustomType.Parameter("ruleType") String ruleType) {
         this.description = description;
         this.displayName = displayName;
         this.isEnabled = isEnabled;
@@ -133,32 +133,32 @@ public final class ThresholdCustomAlertRuleResponse {
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setMaxThreshold(Integer maxThreshold) {
+        public Builder maxThreshold(Integer maxThreshold) {
             this.maxThreshold = Objects.requireNonNull(maxThreshold);
             return this;
         }
 
-        public Builder setMinThreshold(Integer minThreshold) {
+        public Builder minThreshold(Integer minThreshold) {
             this.minThreshold = Objects.requireNonNull(minThreshold);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }

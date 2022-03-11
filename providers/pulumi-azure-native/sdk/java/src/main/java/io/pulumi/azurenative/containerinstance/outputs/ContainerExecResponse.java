@@ -17,8 +17,8 @@ public final class ContainerExecResponse {
      */
     private final @Nullable List<String> command;
 
-    @OutputCustomType.Constructor({"command"})
-    private ContainerExecResponse(@Nullable List<String> command) {
+    @OutputCustomType.Constructor
+    private ContainerExecResponse(@OutputCustomType.Parameter("command") @Nullable List<String> command) {
         this.command = command;
     }
 
@@ -50,7 +50,7 @@ public final class ContainerExecResponse {
     	      this.command = defaults.command;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }

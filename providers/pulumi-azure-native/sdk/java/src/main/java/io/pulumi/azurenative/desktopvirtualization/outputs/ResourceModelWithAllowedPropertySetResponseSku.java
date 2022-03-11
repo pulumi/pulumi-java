@@ -38,13 +38,13 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"capacity","family","name","size","tier"})
+    @OutputCustomType.Constructor
     private ResourceModelWithAllowedPropertySetResponseSku(
-        @Nullable Integer capacity,
-        @Nullable String family,
-        String name,
-        @Nullable String size,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("capacity") @Nullable Integer capacity,
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.capacity = capacity;
         this.family = family;
         this.name = name;
@@ -116,27 +116,27 @@ public final class ResourceModelWithAllowedPropertySetResponseSku {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setCapacity(@Nullable Integer capacity) {
+        public Builder capacity(@Nullable Integer capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

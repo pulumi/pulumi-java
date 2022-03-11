@@ -14,10 +14,10 @@ public final class ExternalDocumentation {
     private final @Nullable String description;
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"description","url"})
+    @OutputCustomType.Constructor
     private ExternalDocumentation(
-        @Nullable String description,
-        @Nullable String url) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("url") @Nullable String url) {
         this.description = description;
         this.url = url;
     }
@@ -51,12 +51,12 @@ public final class ExternalDocumentation {
     	      this.url = defaults.url;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

@@ -39,13 +39,13 @@ public final class ReportGroupExportConfigS3Destination {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor({"bucket","encryptionDisabled","encryptionKey","packaging","path"})
+    @OutputCustomType.Constructor
     private ReportGroupExportConfigS3Destination(
-        String bucket,
-        @Nullable Boolean encryptionDisabled,
-        String encryptionKey,
-        @Nullable String packaging,
-        @Nullable String path) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @OutputCustomType.Parameter("encryptionKey") String encryptionKey,
+        @OutputCustomType.Parameter("packaging") @Nullable String packaging,
+        @OutputCustomType.Parameter("path") @Nullable String path) {
         this.bucket = bucket;
         this.encryptionDisabled = encryptionDisabled;
         this.encryptionKey = encryptionKey;
@@ -118,27 +118,27 @@ public final class ReportGroupExportConfigS3Destination {
     	      this.path = defaults.path;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setEncryptionKey(String encryptionKey) {
+        public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = Objects.requireNonNull(encryptionKey);
             return this;
         }
 
-        public Builder setPackaging(@Nullable String packaging) {
+        public Builder packaging(@Nullable String packaging) {
             this.packaging = packaging;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }

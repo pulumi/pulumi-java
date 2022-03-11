@@ -89,32 +89,32 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAppImageConfigName(@Nullable Input<String> appImageConfigName) {
+        public Builder appImageConfigName(@Nullable Input<String> appImageConfigName) {
             this.appImageConfigName = appImageConfigName;
             return this;
         }
 
-        public Builder setAppImageConfigName(@Nullable String appImageConfigName) {
+        public Builder appImageConfigName(@Nullable String appImageConfigName) {
             this.appImageConfigName = Input.ofNullable(appImageConfigName);
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = kernelGatewayImageConfig;
             return this;
         }
 
-        public Builder setKernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
+        public Builder kernelGatewayImageConfig(@Nullable AppImageConfigKernelGatewayImageConfigArgs kernelGatewayImageConfig) {
             this.kernelGatewayImageConfig = Input.ofNullable(kernelGatewayImageConfig);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AppImageConfigTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AppImageConfigTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AppImageConfigTagArgs> tags) {
+        public Builder tags(@Nullable List<AppImageConfigTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

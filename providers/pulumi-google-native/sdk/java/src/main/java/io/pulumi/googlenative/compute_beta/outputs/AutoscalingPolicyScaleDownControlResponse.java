@@ -21,10 +21,10 @@ public final class AutoscalingPolicyScaleDownControlResponse {
      */
     private final Integer timeWindowSec;
 
-    @OutputCustomType.Constructor({"maxScaledDownReplicas","timeWindowSec"})
+    @OutputCustomType.Constructor
     private AutoscalingPolicyScaleDownControlResponse(
-        FixedOrPercentResponse maxScaledDownReplicas,
-        Integer timeWindowSec) {
+        @OutputCustomType.Parameter("maxScaledDownReplicas") FixedOrPercentResponse maxScaledDownReplicas,
+        @OutputCustomType.Parameter("timeWindowSec") Integer timeWindowSec) {
         this.maxScaledDownReplicas = maxScaledDownReplicas;
         this.timeWindowSec = timeWindowSec;
     }
@@ -66,12 +66,12 @@ public final class AutoscalingPolicyScaleDownControlResponse {
     	      this.timeWindowSec = defaults.timeWindowSec;
         }
 
-        public Builder setMaxScaledDownReplicas(FixedOrPercentResponse maxScaledDownReplicas) {
+        public Builder maxScaledDownReplicas(FixedOrPercentResponse maxScaledDownReplicas) {
             this.maxScaledDownReplicas = Objects.requireNonNull(maxScaledDownReplicas);
             return this;
         }
 
-        public Builder setTimeWindowSec(Integer timeWindowSec) {
+        public Builder timeWindowSec(Integer timeWindowSec) {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }

@@ -19,10 +19,10 @@ public final class DataSourceErrorInfo {
     private final @Nullable String message;
     private final @Nullable DataSourceErrorInfoType type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private DataSourceErrorInfo(
-        @Nullable String message,
-        @Nullable DataSourceErrorInfoType type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") @Nullable DataSourceErrorInfoType type) {
         this.message = message;
         this.type = type;
     }
@@ -60,12 +60,12 @@ public final class DataSourceErrorInfo {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(@Nullable DataSourceErrorInfoType type) {
+        public Builder type(@Nullable DataSourceErrorInfoType type) {
             this.type = type;
             return this;
         }

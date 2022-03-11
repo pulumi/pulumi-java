@@ -91,32 +91,32 @@ public final class ErrorHandlerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.staticFile = defaults.staticFile;
         }
 
-        public Builder setErrorCode(@Nullable Input<ErrorHandlerErrorCode> errorCode) {
+        public Builder errorCode(@Nullable Input<ErrorHandlerErrorCode> errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable ErrorHandlerErrorCode errorCode) {
+        public Builder errorCode(@Nullable ErrorHandlerErrorCode errorCode) {
             this.errorCode = Input.ofNullable(errorCode);
             return this;
         }
 
-        public Builder setMimeType(@Nullable Input<String> mimeType) {
+        public Builder mimeType(@Nullable Input<String> mimeType) {
             this.mimeType = mimeType;
             return this;
         }
 
-        public Builder setMimeType(@Nullable String mimeType) {
+        public Builder mimeType(@Nullable String mimeType) {
             this.mimeType = Input.ofNullable(mimeType);
             return this;
         }
 
-        public Builder setStaticFile(@Nullable Input<String> staticFile) {
+        public Builder staticFile(@Nullable Input<String> staticFile) {
             this.staticFile = staticFile;
             return this;
         }
 
-        public Builder setStaticFile(@Nullable String staticFile) {
+        public Builder staticFile(@Nullable String staticFile) {
             this.staticFile = Input.ofNullable(staticFile);
             return this;
         }

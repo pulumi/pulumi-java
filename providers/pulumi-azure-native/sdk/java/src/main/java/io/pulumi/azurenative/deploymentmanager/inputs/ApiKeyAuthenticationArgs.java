@@ -107,42 +107,42 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     	      this.value = defaults.value;
         }
 
-        public Builder setIn(Input<RestAuthLocation> in) {
+        public Builder in(Input<RestAuthLocation> in) {
             this.in = Objects.requireNonNull(in);
             return this;
         }
 
-        public Builder setIn(RestAuthLocation in) {
+        public Builder in(RestAuthLocation in) {
             this.in = Input.of(Objects.requireNonNull(in));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
 
-        public Builder setValue(Input<String> value) {
+        public Builder value(Input<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }

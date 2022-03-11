@@ -25,10 +25,10 @@ public final class AzureActiveDirectoryLoginResponse {
      */
     private final @Nullable List<String> loginParameters;
 
-    @OutputCustomType.Constructor({"disableWWWAuthenticate","loginParameters"})
+    @OutputCustomType.Constructor
     private AzureActiveDirectoryLoginResponse(
-        @Nullable Boolean disableWWWAuthenticate,
-        @Nullable List<String> loginParameters) {
+        @OutputCustomType.Parameter("disableWWWAuthenticate") @Nullable Boolean disableWWWAuthenticate,
+        @OutputCustomType.Parameter("loginParameters") @Nullable List<String> loginParameters) {
         this.disableWWWAuthenticate = disableWWWAuthenticate;
         this.loginParameters = loginParameters;
     }
@@ -71,12 +71,12 @@ public final class AzureActiveDirectoryLoginResponse {
     	      this.loginParameters = defaults.loginParameters;
         }
 
-        public Builder setDisableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
+        public Builder disableWWWAuthenticate(@Nullable Boolean disableWWWAuthenticate) {
             this.disableWWWAuthenticate = disableWWWAuthenticate;
             return this;
         }
 
-        public Builder setLoginParameters(@Nullable List<String> loginParameters) {
+        public Builder loginParameters(@Nullable List<String> loginParameters) {
             this.loginParameters = loginParameters;
             return this;
         }

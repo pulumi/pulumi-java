@@ -141,62 +141,62 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setShareSettings(@Nullable Input<ShareSettingsArgs> shareSettings) {
+        public Builder shareSettings(@Nullable Input<ShareSettingsArgs> shareSettings) {
             this.shareSettings = shareSettings;
             return this;
         }
 
-        public Builder setShareSettings(@Nullable ShareSettingsArgs shareSettings) {
+        public Builder shareSettings(@Nullable ShareSettingsArgs shareSettings) {
             this.shareSettings = Input.ofNullable(shareSettings);
             return this;
         }
 
-        public Builder setSpecificReservation(@Nullable Input<AllocationSpecificSKUReservationArgs> specificReservation) {
+        public Builder specificReservation(@Nullable Input<AllocationSpecificSKUReservationArgs> specificReservation) {
             this.specificReservation = specificReservation;
             return this;
         }
 
-        public Builder setSpecificReservation(@Nullable AllocationSpecificSKUReservationArgs specificReservation) {
+        public Builder specificReservation(@Nullable AllocationSpecificSKUReservationArgs specificReservation) {
             this.specificReservation = Input.ofNullable(specificReservation);
             return this;
         }
 
-        public Builder setSpecificReservationRequired(@Nullable Input<Boolean> specificReservationRequired) {
+        public Builder specificReservationRequired(@Nullable Input<Boolean> specificReservationRequired) {
             this.specificReservationRequired = specificReservationRequired;
             return this;
         }
 
-        public Builder setSpecificReservationRequired(@Nullable Boolean specificReservationRequired) {
+        public Builder specificReservationRequired(@Nullable Boolean specificReservationRequired) {
             this.specificReservationRequired = Input.ofNullable(specificReservationRequired);
             return this;
         }
 
-        public Builder setZone(@Nullable Input<String> zone) {
+        public Builder zone(@Nullable Input<String> zone) {
             this.zone = zone;
             return this;
         }
 
-        public Builder setZone(@Nullable String zone) {
+        public Builder zone(@Nullable String zone) {
             this.zone = Input.ofNullable(zone);
             return this;
         }

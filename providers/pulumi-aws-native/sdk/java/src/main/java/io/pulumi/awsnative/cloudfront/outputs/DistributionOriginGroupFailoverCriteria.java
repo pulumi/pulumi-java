@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DistributionOriginGroupFailoverCriteria {
     private final DistributionStatusCodes statusCodes;
 
-    @OutputCustomType.Constructor({"statusCodes"})
-    private DistributionOriginGroupFailoverCriteria(DistributionStatusCodes statusCodes) {
+    @OutputCustomType.Constructor
+    private DistributionOriginGroupFailoverCriteria(@OutputCustomType.Parameter("statusCodes") DistributionStatusCodes statusCodes) {
         this.statusCodes = statusCodes;
     }
 
@@ -40,7 +40,7 @@ public final class DistributionOriginGroupFailoverCriteria {
     	      this.statusCodes = defaults.statusCodes;
         }
 
-        public Builder setStatusCodes(DistributionStatusCodes statusCodes) {
+        public Builder statusCodes(DistributionStatusCodes statusCodes) {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }

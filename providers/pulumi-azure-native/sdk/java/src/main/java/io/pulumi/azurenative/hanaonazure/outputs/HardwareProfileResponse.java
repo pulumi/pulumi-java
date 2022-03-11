@@ -20,10 +20,10 @@ public final class HardwareProfileResponse {
      */
     private final String hardwareType;
 
-    @OutputCustomType.Constructor({"hanaInstanceSize","hardwareType"})
+    @OutputCustomType.Constructor
     private HardwareProfileResponse(
-        String hanaInstanceSize,
-        String hardwareType) {
+        @OutputCustomType.Parameter("hanaInstanceSize") String hanaInstanceSize,
+        @OutputCustomType.Parameter("hardwareType") String hardwareType) {
         this.hanaInstanceSize = hanaInstanceSize;
         this.hardwareType = hardwareType;
     }
@@ -65,12 +65,12 @@ public final class HardwareProfileResponse {
     	      this.hardwareType = defaults.hardwareType;
         }
 
-        public Builder setHanaInstanceSize(String hanaInstanceSize) {
+        public Builder hanaInstanceSize(String hanaInstanceSize) {
             this.hanaInstanceSize = Objects.requireNonNull(hanaInstanceSize);
             return this;
         }
 
-        public Builder setHardwareType(String hardwareType) {
+        public Builder hardwareType(String hardwareType) {
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }

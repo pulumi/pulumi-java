@@ -37,13 +37,13 @@ public final class GetWorkflowAccessKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","notAfter","notBefore","type"})
+    @OutputCustomType.Constructor
     private GetWorkflowAccessKeyResult(
-        @Nullable String id,
-        String name,
-        @Nullable String notAfter,
-        @Nullable String notBefore,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("notAfter") @Nullable String notAfter,
+        @OutputCustomType.Parameter("notBefore") @Nullable String notBefore,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.notAfter = notAfter;
@@ -115,27 +115,27 @@ public final class GetWorkflowAccessKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNotAfter(@Nullable String notAfter) {
+        public Builder notAfter(@Nullable String notAfter) {
             this.notAfter = notAfter;
             return this;
         }
 
-        public Builder setNotBefore(@Nullable String notBefore) {
+        public Builder notBefore(@Nullable String notBefore) {
             this.notBefore = notBefore;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

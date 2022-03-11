@@ -22,10 +22,10 @@ public final class JobDerivedInfoResponse {
      */
     private final List<LocationResponse> locations;
 
-    @OutputCustomType.Constructor({"jobCategories","locations"})
+    @OutputCustomType.Constructor
     private JobDerivedInfoResponse(
-        List<String> jobCategories,
-        List<LocationResponse> locations) {
+        @OutputCustomType.Parameter("jobCategories") List<String> jobCategories,
+        @OutputCustomType.Parameter("locations") List<LocationResponse> locations) {
         this.jobCategories = jobCategories;
         this.locations = locations;
     }
@@ -67,12 +67,12 @@ public final class JobDerivedInfoResponse {
     	      this.locations = defaults.locations;
         }
 
-        public Builder setJobCategories(List<String> jobCategories) {
+        public Builder jobCategories(List<String> jobCategories) {
             this.jobCategories = Objects.requireNonNull(jobCategories);
             return this;
         }
 
-        public Builder setLocations(List<LocationResponse> locations) {
+        public Builder locations(List<LocationResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }

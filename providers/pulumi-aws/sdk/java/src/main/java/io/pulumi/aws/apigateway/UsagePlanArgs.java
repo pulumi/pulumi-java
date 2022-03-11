@@ -155,72 +155,72 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.throttleSettings = defaults.throttleSettings;
         }
 
-        public Builder setApiStages(@Nullable Input<List<UsagePlanApiStageArgs>> apiStages) {
+        public Builder apiStages(@Nullable Input<List<UsagePlanApiStageArgs>> apiStages) {
             this.apiStages = apiStages;
             return this;
         }
 
-        public Builder setApiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
+        public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
             this.apiStages = Input.ofNullable(apiStages);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProductCode(@Nullable Input<String> productCode) {
+        public Builder productCode(@Nullable Input<String> productCode) {
             this.productCode = productCode;
             return this;
         }
 
-        public Builder setProductCode(@Nullable String productCode) {
+        public Builder productCode(@Nullable String productCode) {
             this.productCode = Input.ofNullable(productCode);
             return this;
         }
 
-        public Builder setQuotaSettings(@Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings) {
+        public Builder quotaSettings(@Nullable Input<UsagePlanQuotaSettingsArgs> quotaSettings) {
             this.quotaSettings = quotaSettings;
             return this;
         }
 
-        public Builder setQuotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
+        public Builder quotaSettings(@Nullable UsagePlanQuotaSettingsArgs quotaSettings) {
             this.quotaSettings = Input.ofNullable(quotaSettings);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThrottleSettings(@Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings) {
+        public Builder throttleSettings(@Nullable Input<UsagePlanThrottleSettingsArgs> throttleSettings) {
             this.throttleSettings = throttleSettings;
             return this;
         }
 
-        public Builder setThrottleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
+        public Builder throttleSettings(@Nullable UsagePlanThrottleSettingsArgs throttleSettings) {
             this.throttleSettings = Input.ofNullable(throttleSettings);
             return this;
         }

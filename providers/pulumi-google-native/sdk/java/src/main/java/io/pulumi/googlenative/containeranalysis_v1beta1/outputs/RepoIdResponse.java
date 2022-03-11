@@ -21,10 +21,10 @@ public final class RepoIdResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"projectRepoId","uid"})
+    @OutputCustomType.Constructor
     private RepoIdResponse(
-        ProjectRepoIdResponse projectRepoId,
-        String uid) {
+        @OutputCustomType.Parameter("projectRepoId") ProjectRepoIdResponse projectRepoId,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.projectRepoId = projectRepoId;
         this.uid = uid;
     }
@@ -66,12 +66,12 @@ public final class RepoIdResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setProjectRepoId(ProjectRepoIdResponse projectRepoId) {
+        public Builder projectRepoId(ProjectRepoIdResponse projectRepoId) {
             this.projectRepoId = Objects.requireNonNull(projectRepoId);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

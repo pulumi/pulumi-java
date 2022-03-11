@@ -74,22 +74,22 @@ public final class VirtualMachineScaleSetVMProtectionPolicyArgs extends io.pulum
     	      this.protectFromScaleSetActions = defaults.protectFromScaleSetActions;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Input<Boolean> protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Input<Boolean> protectFromScaleIn) {
             this.protectFromScaleIn = protectFromScaleIn;
             return this;
         }
 
-        public Builder setProtectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
+        public Builder protectFromScaleIn(@Nullable Boolean protectFromScaleIn) {
             this.protectFromScaleIn = Input.ofNullable(protectFromScaleIn);
             return this;
         }
 
-        public Builder setProtectFromScaleSetActions(@Nullable Input<Boolean> protectFromScaleSetActions) {
+        public Builder protectFromScaleSetActions(@Nullable Input<Boolean> protectFromScaleSetActions) {
             this.protectFromScaleSetActions = protectFromScaleSetActions;
             return this;
         }
 
-        public Builder setProtectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
+        public Builder protectFromScaleSetActions(@Nullable Boolean protectFromScaleSetActions) {
             this.protectFromScaleSetActions = Input.ofNullable(protectFromScaleSetActions);
             return this;
         }

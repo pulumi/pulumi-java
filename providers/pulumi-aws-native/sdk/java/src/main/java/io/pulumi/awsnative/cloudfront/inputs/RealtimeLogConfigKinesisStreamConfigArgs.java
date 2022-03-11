@@ -61,22 +61,22 @@ public final class RealtimeLogConfigKinesisStreamConfigArgs extends io.pulumi.re
     	      this.streamArn = defaults.streamArn;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setStreamArn(Input<String> streamArn) {
+        public Builder streamArn(Input<String> streamArn) {
             this.streamArn = Objects.requireNonNull(streamArn);
             return this;
         }
 
-        public Builder setStreamArn(String streamArn) {
+        public Builder streamArn(String streamArn) {
             this.streamArn = Input.of(Objects.requireNonNull(streamArn));
             return this;
         }

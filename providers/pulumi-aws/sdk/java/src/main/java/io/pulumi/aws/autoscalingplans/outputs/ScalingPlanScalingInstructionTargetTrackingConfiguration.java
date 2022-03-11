@@ -56,15 +56,15 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
      */
     private final Double targetValue;
 
-    @OutputCustomType.Constructor({"customizedScalingMetricSpecification","disableScaleIn","estimatedInstanceWarmup","predefinedScalingMetricSpecification","scaleInCooldown","scaleOutCooldown","targetValue"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfiguration(
-        @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
-        @Nullable Boolean disableScaleIn,
-        @Nullable Integer estimatedInstanceWarmup,
-        @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
-        @Nullable Integer scaleInCooldown,
-        @Nullable Integer scaleOutCooldown,
-        Double targetValue) {
+        @OutputCustomType.Parameter("customizedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification,
+        @OutputCustomType.Parameter("disableScaleIn") @Nullable Boolean disableScaleIn,
+        @OutputCustomType.Parameter("estimatedInstanceWarmup") @Nullable Integer estimatedInstanceWarmup,
+        @OutputCustomType.Parameter("predefinedScalingMetricSpecification") @Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification,
+        @OutputCustomType.Parameter("scaleInCooldown") @Nullable Integer scaleInCooldown,
+        @OutputCustomType.Parameter("scaleOutCooldown") @Nullable Integer scaleOutCooldown,
+        @OutputCustomType.Parameter("targetValue") Double targetValue) {
         this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
         this.disableScaleIn = disableScaleIn;
         this.estimatedInstanceWarmup = estimatedInstanceWarmup;
@@ -161,37 +161,37 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfiguration {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setCustomizedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification) {
+        public Builder customizedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationCustomizedScalingMetricSpecification customizedScalingMetricSpecification) {
             this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
             return this;
         }
 
-        public Builder setDisableScaleIn(@Nullable Boolean disableScaleIn) {
+        public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
             this.disableScaleIn = disableScaleIn;
             return this;
         }
 
-        public Builder setEstimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
+        public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
             this.estimatedInstanceWarmup = estimatedInstanceWarmup;
             return this;
         }
 
-        public Builder setPredefinedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification) {
+        public Builder predefinedScalingMetricSpecification(@Nullable ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification predefinedScalingMetricSpecification) {
             this.predefinedScalingMetricSpecification = predefinedScalingMetricSpecification;
             return this;
         }
 
-        public Builder setScaleInCooldown(@Nullable Integer scaleInCooldown) {
+        public Builder scaleInCooldown(@Nullable Integer scaleInCooldown) {
             this.scaleInCooldown = scaleInCooldown;
             return this;
         }
 
-        public Builder setScaleOutCooldown(@Nullable Integer scaleOutCooldown) {
+        public Builder scaleOutCooldown(@Nullable Integer scaleOutCooldown) {
             this.scaleOutCooldown = scaleOutCooldown;
             return this;
         }
 
-        public Builder setTargetValue(Double targetValue) {
+        public Builder targetValue(Double targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

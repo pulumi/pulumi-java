@@ -76,12 +76,12 @@ public final class BuildpacksGroupPropertiesResponse extends io.pulumi.resources
     	      this.name = defaults.name;
         }
 
-        public Builder setBuildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
+        public Builder buildpacks(@Nullable List<BuildpackPropertiesResponse> buildpacks) {
             this.buildpacks = buildpacks;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

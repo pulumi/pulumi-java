@@ -115,27 +115,27 @@ public final class GetWorkflowResult {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"accessControl","accessEndpoint","changedTime","createdTime","definition","endpointsConfiguration","id","identity","integrationAccount","integrationServiceEnvironment","location","name","parameters","provisioningState","sku","state","tags","type","version"})
+    @OutputCustomType.Constructor
     private GetWorkflowResult(
-        @Nullable FlowAccessControlConfigurationResponse accessControl,
-        String accessEndpoint,
-        String changedTime,
-        String createdTime,
-        @Nullable Object definition,
-        @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
-        String id,
-        @Nullable ManagedServiceIdentityResponse identity,
-        @Nullable ResourceReferenceResponse integrationAccount,
-        @Nullable ResourceReferenceResponse integrationServiceEnvironment,
-        @Nullable String location,
-        String name,
-        @Nullable Map<String,WorkflowParameterResponse> parameters,
-        String provisioningState,
-        SkuResponse sku,
-        @Nullable String state,
-        @Nullable Map<String,String> tags,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("accessControl") @Nullable FlowAccessControlConfigurationResponse accessControl,
+        @OutputCustomType.Parameter("accessEndpoint") String accessEndpoint,
+        @OutputCustomType.Parameter("changedTime") String changedTime,
+        @OutputCustomType.Parameter("createdTime") String createdTime,
+        @OutputCustomType.Parameter("definition") @Nullable Object definition,
+        @OutputCustomType.Parameter("endpointsConfiguration") @Nullable FlowEndpointsConfigurationResponse endpointsConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ManagedServiceIdentityResponse identity,
+        @OutputCustomType.Parameter("integrationAccount") @Nullable ResourceReferenceResponse integrationAccount,
+        @OutputCustomType.Parameter("integrationServiceEnvironment") @Nullable ResourceReferenceResponse integrationServiceEnvironment,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,WorkflowParameterResponse> parameters,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.accessControl = accessControl;
         this.accessEndpoint = accessEndpoint;
         this.changedTime = changedTime;
@@ -347,97 +347,97 @@ public final class GetWorkflowResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setAccessControl(@Nullable FlowAccessControlConfigurationResponse accessControl) {
+        public Builder accessControl(@Nullable FlowAccessControlConfigurationResponse accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAccessEndpoint(String accessEndpoint) {
+        public Builder accessEndpoint(String accessEndpoint) {
             this.accessEndpoint = Objects.requireNonNull(accessEndpoint);
             return this;
         }
 
-        public Builder setChangedTime(String changedTime) {
+        public Builder changedTime(String changedTime) {
             this.changedTime = Objects.requireNonNull(changedTime);
             return this;
         }
 
-        public Builder setCreatedTime(String createdTime) {
+        public Builder createdTime(String createdTime) {
             this.createdTime = Objects.requireNonNull(createdTime);
             return this;
         }
 
-        public Builder setDefinition(@Nullable Object definition) {
+        public Builder definition(@Nullable Object definition) {
             this.definition = definition;
             return this;
         }
 
-        public Builder setEndpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
+        public Builder endpointsConfiguration(@Nullable FlowEndpointsConfigurationResponse endpointsConfiguration) {
             this.endpointsConfiguration = endpointsConfiguration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedServiceIdentityResponse identity) {
+        public Builder identity(@Nullable ManagedServiceIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIntegrationAccount(@Nullable ResourceReferenceResponse integrationAccount) {
+        public Builder integrationAccount(@Nullable ResourceReferenceResponse integrationAccount) {
             this.integrationAccount = integrationAccount;
             return this;
         }
 
-        public Builder setIntegrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
+        public Builder integrationServiceEnvironment(@Nullable ResourceReferenceResponse integrationServiceEnvironment) {
             this.integrationServiceEnvironment = integrationServiceEnvironment;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,WorkflowParameterResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,WorkflowParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

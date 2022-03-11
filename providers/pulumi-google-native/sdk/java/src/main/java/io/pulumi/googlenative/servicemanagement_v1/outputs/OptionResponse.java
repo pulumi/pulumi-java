@@ -21,10 +21,10 @@ public final class OptionResponse {
      */
     private final Map<String,String> value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private OptionResponse(
-        String name,
-        Map<String,String> value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") Map<String,String> value) {
         this.name = name;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class OptionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(Map<String,String> value) {
+        public Builder value(Map<String,String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

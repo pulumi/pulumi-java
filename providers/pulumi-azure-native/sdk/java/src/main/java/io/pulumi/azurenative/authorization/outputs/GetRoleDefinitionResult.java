@@ -54,16 +54,16 @@ public final class GetRoleDefinitionResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"assignableScopes","description","id","name","permissions","roleName","roleType","type"})
+    @OutputCustomType.Constructor
     private GetRoleDefinitionResult(
-        @Nullable List<String> assignableScopes,
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable List<PermissionResponse> permissions,
-        @Nullable String roleName,
-        @Nullable String roleType,
-        String type) {
+        @OutputCustomType.Parameter("assignableScopes") @Nullable List<String> assignableScopes,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<PermissionResponse> permissions,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roleType") @Nullable String roleType,
+        @OutputCustomType.Parameter("type") String type) {
         this.assignableScopes = assignableScopes;
         this.description = description;
         this.id = id;
@@ -165,42 +165,42 @@ public final class GetRoleDefinitionResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAssignableScopes(@Nullable List<String> assignableScopes) {
+        public Builder assignableScopes(@Nullable List<String> assignableScopes) {
             this.assignableScopes = assignableScopes;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<PermissionResponse> permissions) {
+        public Builder permissions(@Nullable List<PermissionResponse> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleType(@Nullable String roleType) {
+        public Builder roleType(@Nullable String roleType) {
             this.roleType = roleType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

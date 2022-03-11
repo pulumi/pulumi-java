@@ -30,12 +30,12 @@ public final class CniConfigResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"podSubnet","serviceSubnet","type","version"})
+    @OutputCustomType.Constructor
     private CniConfigResponse(
-        String podSubnet,
-        String serviceSubnet,
-        String type,
-        String version) {
+        @OutputCustomType.Parameter("podSubnet") String podSubnet,
+        @OutputCustomType.Parameter("serviceSubnet") String serviceSubnet,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") String version) {
         this.podSubnet = podSubnet;
         this.serviceSubnet = serviceSubnet;
         this.type = type;
@@ -97,22 +97,22 @@ public final class CniConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setPodSubnet(String podSubnet) {
+        public Builder podSubnet(String podSubnet) {
             this.podSubnet = Objects.requireNonNull(podSubnet);
             return this;
         }
 
-        public Builder setServiceSubnet(String serviceSubnet) {
+        public Builder serviceSubnet(String serviceSubnet) {
             this.serviceSubnet = Objects.requireNonNull(serviceSubnet);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

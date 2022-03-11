@@ -76,12 +76,12 @@ public final class TargetEligibilityResultResponse extends io.pulumi.resources.I
     	      this.messages = defaults.messages;
         }
 
-        public Builder setEligibilityStatus(@Nullable String eligibilityStatus) {
+        public Builder eligibilityStatus(@Nullable String eligibilityStatus) {
             this.eligibilityStatus = eligibilityStatus;
             return this;
         }
 
-        public Builder setMessages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
+        public Builder messages(@Nullable List<TargetEligibilityErrorMessageResponse> messages) {
             this.messages = messages;
             return this;
         }

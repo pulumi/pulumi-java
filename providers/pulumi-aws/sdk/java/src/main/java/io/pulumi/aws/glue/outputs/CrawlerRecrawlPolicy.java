@@ -17,8 +17,8 @@ public final class CrawlerRecrawlPolicy {
      */
     private final @Nullable String recrawlBehavior;
 
-    @OutputCustomType.Constructor({"recrawlBehavior"})
-    private CrawlerRecrawlPolicy(@Nullable String recrawlBehavior) {
+    @OutputCustomType.Constructor
+    private CrawlerRecrawlPolicy(@OutputCustomType.Parameter("recrawlBehavior") @Nullable String recrawlBehavior) {
         this.recrawlBehavior = recrawlBehavior;
     }
 
@@ -50,7 +50,7 @@ public final class CrawlerRecrawlPolicy {
     	      this.recrawlBehavior = defaults.recrawlBehavior;
         }
 
-        public Builder setRecrawlBehavior(@Nullable String recrawlBehavior) {
+        public Builder recrawlBehavior(@Nullable String recrawlBehavior) {
             this.recrawlBehavior = recrawlBehavior;
             return this;
         }

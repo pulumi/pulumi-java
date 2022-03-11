@@ -55,7 +55,7 @@ public final class ConnectToTargetSqlDbTaskInputResponse extends io.pulumi.resou
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

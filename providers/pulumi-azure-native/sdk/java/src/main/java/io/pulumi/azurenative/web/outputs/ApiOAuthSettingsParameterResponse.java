@@ -28,11 +28,11 @@ public final class ApiOAuthSettingsParameterResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"options","uiDefinition","value"})
+    @OutputCustomType.Constructor
     private ApiOAuthSettingsParameterResponse(
-        @Nullable Object options,
-        @Nullable Object uiDefinition,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("options") @Nullable Object options,
+        @OutputCustomType.Parameter("uiDefinition") @Nullable Object uiDefinition,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.options = options;
         this.uiDefinition = uiDefinition;
         this.value = value;
@@ -84,17 +84,17 @@ public final class ApiOAuthSettingsParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setOptions(@Nullable Object options) {
+        public Builder options(@Nullable Object options) {
             this.options = options;
             return this;
         }
 
-        public Builder setUiDefinition(@Nullable Object uiDefinition) {
+        public Builder uiDefinition(@Nullable Object uiDefinition) {
             this.uiDefinition = uiDefinition;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

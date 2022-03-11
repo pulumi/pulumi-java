@@ -77,32 +77,32 @@ public final class ClusterCapacityProviderAssociationsCapacityProviderStrategyAr
     	      this.weight = defaults.weight;
         }
 
-        public Builder setBase(@Nullable Input<Integer> base) {
+        public Builder base(@Nullable Input<Integer> base) {
             this.base = base;
             return this;
         }
 
-        public Builder setBase(@Nullable Integer base) {
+        public Builder base(@Nullable Integer base) {
             this.base = Input.ofNullable(base);
             return this;
         }
 
-        public Builder setCapacityProvider(Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
+        public Builder capacityProvider(Input<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>> capacityProvider) {
             this.capacityProvider = Objects.requireNonNull(capacityProvider);
             return this;
         }
 
-        public Builder setCapacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
+        public Builder capacityProvider(Either<ClusterCapacityProviderAssociationsCapacityProvider,String> capacityProvider) {
             this.capacityProvider = Input.of(Objects.requireNonNull(capacityProvider));
             return this;
         }
 
-        public Builder setWeight(@Nullable Input<Integer> weight) {
+        public Builder weight(@Nullable Input<Integer> weight) {
             this.weight = weight;
             return this;
         }
 
-        public Builder setWeight(@Nullable Integer weight) {
+        public Builder weight(@Nullable Integer weight) {
             this.weight = Input.ofNullable(weight);
             return this;
         }

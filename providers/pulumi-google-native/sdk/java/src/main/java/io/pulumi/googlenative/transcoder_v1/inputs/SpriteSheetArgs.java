@@ -219,112 +219,112 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setColumnCount(@Nullable Input<Integer> columnCount) {
+        public Builder columnCount(@Nullable Input<Integer> columnCount) {
             this.columnCount = columnCount;
             return this;
         }
 
-        public Builder setColumnCount(@Nullable Integer columnCount) {
+        public Builder columnCount(@Nullable Integer columnCount) {
             this.columnCount = Input.ofNullable(columnCount);
             return this;
         }
 
-        public Builder setEndTimeOffset(@Nullable Input<String> endTimeOffset) {
+        public Builder endTimeOffset(@Nullable Input<String> endTimeOffset) {
             this.endTimeOffset = endTimeOffset;
             return this;
         }
 
-        public Builder setEndTimeOffset(@Nullable String endTimeOffset) {
+        public Builder endTimeOffset(@Nullable String endTimeOffset) {
             this.endTimeOffset = Input.ofNullable(endTimeOffset);
             return this;
         }
 
-        public Builder setFilePrefix(Input<String> filePrefix) {
+        public Builder filePrefix(Input<String> filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
 
-        public Builder setFilePrefix(String filePrefix) {
+        public Builder filePrefix(String filePrefix) {
             this.filePrefix = Input.of(Objects.requireNonNull(filePrefix));
             return this;
         }
 
-        public Builder setFormat(@Nullable Input<String> format) {
+        public Builder format(@Nullable Input<String> format) {
             this.format = format;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = Input.ofNullable(format);
             return this;
         }
 
-        public Builder setInterval(@Nullable Input<String> interval) {
+        public Builder interval(@Nullable Input<String> interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setInterval(@Nullable String interval) {
+        public Builder interval(@Nullable String interval) {
             this.interval = Input.ofNullable(interval);
             return this;
         }
 
-        public Builder setQuality(@Nullable Input<Integer> quality) {
+        public Builder quality(@Nullable Input<Integer> quality) {
             this.quality = quality;
             return this;
         }
 
-        public Builder setQuality(@Nullable Integer quality) {
+        public Builder quality(@Nullable Integer quality) {
             this.quality = Input.ofNullable(quality);
             return this;
         }
 
-        public Builder setRowCount(@Nullable Input<Integer> rowCount) {
+        public Builder rowCount(@Nullable Input<Integer> rowCount) {
             this.rowCount = rowCount;
             return this;
         }
 
-        public Builder setRowCount(@Nullable Integer rowCount) {
+        public Builder rowCount(@Nullable Integer rowCount) {
             this.rowCount = Input.ofNullable(rowCount);
             return this;
         }
 
-        public Builder setSpriteHeightPixels(Input<Integer> spriteHeightPixels) {
+        public Builder spriteHeightPixels(Input<Integer> spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
 
-        public Builder setSpriteHeightPixels(Integer spriteHeightPixels) {
+        public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             this.spriteHeightPixels = Input.of(Objects.requireNonNull(spriteHeightPixels));
             return this;
         }
 
-        public Builder setSpriteWidthPixels(Input<Integer> spriteWidthPixels) {
+        public Builder spriteWidthPixels(Input<Integer> spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
 
-        public Builder setSpriteWidthPixels(Integer spriteWidthPixels) {
+        public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             this.spriteWidthPixels = Input.of(Objects.requireNonNull(spriteWidthPixels));
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable Input<String> startTimeOffset) {
+        public Builder startTimeOffset(@Nullable Input<String> startTimeOffset) {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
 
-        public Builder setStartTimeOffset(@Nullable String startTimeOffset) {
+        public Builder startTimeOffset(@Nullable String startTimeOffset) {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
 
-        public Builder setTotalCount(@Nullable Input<Integer> totalCount) {
+        public Builder totalCount(@Nullable Input<Integer> totalCount) {
             this.totalCount = totalCount;
             return this;
         }
 
-        public Builder setTotalCount(@Nullable Integer totalCount) {
+        public Builder totalCount(@Nullable Integer totalCount) {
             this.totalCount = Input.ofNullable(totalCount);
             return this;
         }

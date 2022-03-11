@@ -185,92 +185,92 @@ public final class CachesIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     	      this.volumeSizeInBytes = defaults.volumeSizeInBytes;
         }
 
-        public Builder setGatewayArn(Input<String> gatewayArn) {
+        public Builder gatewayArn(Input<String> gatewayArn) {
             this.gatewayArn = Objects.requireNonNull(gatewayArn);
             return this;
         }
 
-        public Builder setGatewayArn(String gatewayArn) {
+        public Builder gatewayArn(String gatewayArn) {
             this.gatewayArn = Input.of(Objects.requireNonNull(gatewayArn));
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Input<Boolean> kmsEncrypted) {
             this.kmsEncrypted = kmsEncrypted;
             return this;
         }
 
-        public Builder setKmsEncrypted(@Nullable Boolean kmsEncrypted) {
+        public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
             this.kmsEncrypted = Input.ofNullable(kmsEncrypted);
             return this;
         }
 
-        public Builder setKmsKey(@Nullable Input<String> kmsKey) {
+        public Builder kmsKey(@Nullable Input<String> kmsKey) {
             this.kmsKey = kmsKey;
             return this;
         }
 
-        public Builder setKmsKey(@Nullable String kmsKey) {
+        public Builder kmsKey(@Nullable String kmsKey) {
             this.kmsKey = Input.ofNullable(kmsKey);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(Input<String> networkInterfaceId) {
             this.networkInterfaceId = Objects.requireNonNull(networkInterfaceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(String networkInterfaceId) {
+        public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = Input.of(Objects.requireNonNull(networkInterfaceId));
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable Input<String> snapshotId) {
+        public Builder snapshotId(@Nullable Input<String> snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
 
-        public Builder setSnapshotId(@Nullable String snapshotId) {
+        public Builder snapshotId(@Nullable String snapshotId) {
             this.snapshotId = Input.ofNullable(snapshotId);
             return this;
         }
 
-        public Builder setSourceVolumeArn(@Nullable Input<String> sourceVolumeArn) {
+        public Builder sourceVolumeArn(@Nullable Input<String> sourceVolumeArn) {
             this.sourceVolumeArn = sourceVolumeArn;
             return this;
         }
 
-        public Builder setSourceVolumeArn(@Nullable String sourceVolumeArn) {
+        public Builder sourceVolumeArn(@Nullable String sourceVolumeArn) {
             this.sourceVolumeArn = Input.ofNullable(sourceVolumeArn);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTargetName(Input<String> targetName) {
+        public Builder targetName(Input<String> targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setTargetName(String targetName) {
+        public Builder targetName(String targetName) {
             this.targetName = Input.of(Objects.requireNonNull(targetName));
             return this;
         }
 
-        public Builder setVolumeSizeInBytes(Input<Integer> volumeSizeInBytes) {
+        public Builder volumeSizeInBytes(Input<Integer> volumeSizeInBytes) {
             this.volumeSizeInBytes = Objects.requireNonNull(volumeSizeInBytes);
             return this;
         }
 
-        public Builder setVolumeSizeInBytes(Integer volumeSizeInBytes) {
+        public Builder volumeSizeInBytes(Integer volumeSizeInBytes) {
             this.volumeSizeInBytes = Input.of(Objects.requireNonNull(volumeSizeInBytes));
             return this;
         }

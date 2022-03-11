@@ -16,11 +16,11 @@ public final class SpotFleetSpotPlacement {
     private final @Nullable String groupName;
     private final @Nullable SpotFleetSpotPlacementTenancy tenancy;
 
-    @OutputCustomType.Constructor({"availabilityZone","groupName","tenancy"})
+    @OutputCustomType.Constructor
     private SpotFleetSpotPlacement(
-        @Nullable String availabilityZone,
-        @Nullable String groupName,
-        @Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        @OutputCustomType.Parameter("availabilityZone") @Nullable String availabilityZone,
+        @OutputCustomType.Parameter("groupName") @Nullable String groupName,
+        @OutputCustomType.Parameter("tenancy") @Nullable SpotFleetSpotPlacementTenancy tenancy) {
         this.availabilityZone = availabilityZone;
         this.groupName = groupName;
         this.tenancy = tenancy;
@@ -60,17 +60,17 @@ public final class SpotFleetSpotPlacement {
     	      this.tenancy = defaults.tenancy;
         }
 
-        public Builder setAvailabilityZone(@Nullable String availabilityZone) {
+        public Builder availabilityZone(@Nullable String availabilityZone) {
             this.availabilityZone = availabilityZone;
             return this;
         }
 
-        public Builder setGroupName(@Nullable String groupName) {
+        public Builder groupName(@Nullable String groupName) {
             this.groupName = groupName;
             return this;
         }
 
-        public Builder setTenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
+        public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
             this.tenancy = tenancy;
             return this;
         }

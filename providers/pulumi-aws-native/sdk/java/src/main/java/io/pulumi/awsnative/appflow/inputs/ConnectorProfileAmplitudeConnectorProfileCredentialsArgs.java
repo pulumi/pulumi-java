@@ -65,22 +65,22 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
     	      this.secretKey = defaults.secretKey;
         }
 
-        public Builder setApiKey(Input<String> apiKey) {
+        public Builder apiKey(Input<String> apiKey) {
             this.apiKey = Objects.requireNonNull(apiKey);
             return this;
         }
 
-        public Builder setApiKey(String apiKey) {
+        public Builder apiKey(String apiKey) {
             this.apiKey = Input.of(Objects.requireNonNull(apiKey));
             return this;
         }
 
-        public Builder setSecretKey(Input<String> secretKey) {
+        public Builder secretKey(Input<String> secretKey) {
             this.secretKey = Objects.requireNonNull(secretKey);
             return this;
         }
 
-        public Builder setSecretKey(String secretKey) {
+        public Builder secretKey(String secretKey) {
             this.secretKey = Input.of(Objects.requireNonNull(secretKey));
             return this;
         }

@@ -17,8 +17,8 @@ public final class ListDatabasePrincipalsResult {
      */
     private final @Nullable List<DatabasePrincipalResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListDatabasePrincipalsResult(@Nullable List<DatabasePrincipalResponse> value) {
+    @OutputCustomType.Constructor
+    private ListDatabasePrincipalsResult(@OutputCustomType.Parameter("value") @Nullable List<DatabasePrincipalResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListDatabasePrincipalsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<DatabasePrincipalResponse> value) {
+        public Builder value(@Nullable List<DatabasePrincipalResponse> value) {
             this.value = value;
             return this;
         }

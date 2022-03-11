@@ -22,10 +22,10 @@ public final class UncountedTerminatedPods {
      */
     private final @Nullable List<String> succeeded;
 
-    @OutputCustomType.Constructor({"failed","succeeded"})
+    @OutputCustomType.Constructor
     private UncountedTerminatedPods(
-        @Nullable List<String> failed,
-        @Nullable List<String> succeeded) {
+        @OutputCustomType.Parameter("failed") @Nullable List<String> failed,
+        @OutputCustomType.Parameter("succeeded") @Nullable List<String> succeeded) {
         this.failed = failed;
         this.succeeded = succeeded;
     }
@@ -67,12 +67,12 @@ public final class UncountedTerminatedPods {
     	      this.succeeded = defaults.succeeded;
         }
 
-        public Builder setFailed(@Nullable List<String> failed) {
+        public Builder failed(@Nullable List<String> failed) {
             this.failed = failed;
             return this;
         }
 
-        public Builder setSucceeded(@Nullable List<String> succeeded) {
+        public Builder succeeded(@Nullable List<String> succeeded) {
             this.succeeded = succeeded;
             return this;
         }

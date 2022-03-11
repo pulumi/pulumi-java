@@ -21,10 +21,10 @@ public final class DistributionCutResponse {
      */
     private final GoogleMonitoringV3RangeResponse range;
 
-    @OutputCustomType.Constructor({"distributionFilter","range"})
+    @OutputCustomType.Constructor
     private DistributionCutResponse(
-        String distributionFilter,
-        GoogleMonitoringV3RangeResponse range) {
+        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
+        @OutputCustomType.Parameter("range") GoogleMonitoringV3RangeResponse range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }
@@ -66,12 +66,12 @@ public final class DistributionCutResponse {
     	      this.range = defaults.range;
         }
 
-        public Builder setDistributionFilter(String distributionFilter) {
+        public Builder distributionFilter(String distributionFilter) {
             this.distributionFilter = Objects.requireNonNull(distributionFilter);
             return this;
         }
 
-        public Builder setRange(GoogleMonitoringV3RangeResponse range) {
+        public Builder range(GoogleMonitoringV3RangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }

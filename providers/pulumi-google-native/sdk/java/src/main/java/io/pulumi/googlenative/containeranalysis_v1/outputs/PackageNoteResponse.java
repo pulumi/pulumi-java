@@ -22,10 +22,10 @@ public final class PackageNoteResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"distribution","name"})
+    @OutputCustomType.Constructor
     private PackageNoteResponse(
-        List<DistributionResponse> distribution,
-        String name) {
+        @OutputCustomType.Parameter("distribution") List<DistributionResponse> distribution,
+        @OutputCustomType.Parameter("name") String name) {
         this.distribution = distribution;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class PackageNoteResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDistribution(List<DistributionResponse> distribution) {
+        public Builder distribution(List<DistributionResponse> distribution) {
             this.distribution = Objects.requireNonNull(distribution);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

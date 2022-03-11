@@ -32,12 +32,12 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
      */
     private final @Nullable Integer targetSentPacketsPerSecond;
 
-    @OutputCustomType.Constructor({"targetReceivedBytesPerSecond","targetReceivedPacketsPerSecond","targetSentBytesPerSecond","targetSentPacketsPerSecond"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionAutomaticScalingNetworkUtilization(
-        @Nullable Integer targetReceivedBytesPerSecond,
-        @Nullable Integer targetReceivedPacketsPerSecond,
-        @Nullable Integer targetSentBytesPerSecond,
-        @Nullable Integer targetSentPacketsPerSecond) {
+        @OutputCustomType.Parameter("targetReceivedBytesPerSecond") @Nullable Integer targetReceivedBytesPerSecond,
+        @OutputCustomType.Parameter("targetReceivedPacketsPerSecond") @Nullable Integer targetReceivedPacketsPerSecond,
+        @OutputCustomType.Parameter("targetSentBytesPerSecond") @Nullable Integer targetSentBytesPerSecond,
+        @OutputCustomType.Parameter("targetSentPacketsPerSecond") @Nullable Integer targetSentPacketsPerSecond) {
         this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
         this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
         this.targetSentBytesPerSecond = targetSentBytesPerSecond;
@@ -99,22 +99,22 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilization {
     	      this.targetSentPacketsPerSecond = defaults.targetSentPacketsPerSecond;
         }
 
-        public Builder setTargetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
+        public Builder targetReceivedBytesPerSecond(@Nullable Integer targetReceivedBytesPerSecond) {
             this.targetReceivedBytesPerSecond = targetReceivedBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
+        public Builder targetReceivedPacketsPerSecond(@Nullable Integer targetReceivedPacketsPerSecond) {
             this.targetReceivedPacketsPerSecond = targetReceivedPacketsPerSecond;
             return this;
         }
 
-        public Builder setTargetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
+        public Builder targetSentBytesPerSecond(@Nullable Integer targetSentBytesPerSecond) {
             this.targetSentBytesPerSecond = targetSentBytesPerSecond;
             return this;
         }
 
-        public Builder setTargetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
+        public Builder targetSentPacketsPerSecond(@Nullable Integer targetSentPacketsPerSecond) {
             this.targetSentPacketsPerSecond = targetSentPacketsPerSecond;
             return this;
         }

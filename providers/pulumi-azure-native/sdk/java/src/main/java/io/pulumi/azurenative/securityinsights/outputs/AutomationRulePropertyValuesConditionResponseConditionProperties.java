@@ -28,11 +28,11 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      */
     private final @Nullable List<String> propertyValues;
 
-    @OutputCustomType.Constructor({"operator","propertyName","propertyValues"})
+    @OutputCustomType.Constructor
     private AutomationRulePropertyValuesConditionResponseConditionProperties(
-        @Nullable String operator,
-        @Nullable String propertyName,
-        @Nullable List<String> propertyValues) {
+        @OutputCustomType.Parameter("operator") @Nullable String operator,
+        @OutputCustomType.Parameter("propertyName") @Nullable String propertyName,
+        @OutputCustomType.Parameter("propertyValues") @Nullable List<String> propertyValues) {
         this.operator = operator;
         this.propertyName = propertyName;
         this.propertyValues = propertyValues;
@@ -84,17 +84,17 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
     	      this.propertyValues = defaults.propertyValues;
         }
 
-        public Builder setOperator(@Nullable String operator) {
+        public Builder operator(@Nullable String operator) {
             this.operator = operator;
             return this;
         }
 
-        public Builder setPropertyName(@Nullable String propertyName) {
+        public Builder propertyName(@Nullable String propertyName) {
             this.propertyName = propertyName;
             return this;
         }
 
-        public Builder setPropertyValues(@Nullable List<String> propertyValues) {
+        public Builder propertyValues(@Nullable List<String> propertyValues) {
             this.propertyValues = propertyValues;
             return this;
         }

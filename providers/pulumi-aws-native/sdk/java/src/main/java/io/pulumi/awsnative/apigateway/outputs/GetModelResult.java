@@ -23,10 +23,10 @@ public final class GetModelResult {
      */
     private final @Nullable Object schema;
 
-    @OutputCustomType.Constructor({"description","schema"})
+    @OutputCustomType.Constructor
     private GetModelResult(
-        @Nullable String description,
-        @Nullable Object schema) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("schema") @Nullable Object schema) {
         this.description = description;
         this.schema = schema;
     }
@@ -68,12 +68,12 @@ public final class GetModelResult {
     	      this.schema = defaults.schema;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSchema(@Nullable Object schema) {
+        public Builder schema(@Nullable Object schema) {
             this.schema = schema;
             return this;
         }

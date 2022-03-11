@@ -154,72 +154,72 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setFileFormat(@Nullable Input<FaqFileFormat> fileFormat) {
+        public Builder fileFormat(@Nullable Input<FaqFileFormat> fileFormat) {
             this.fileFormat = fileFormat;
             return this;
         }
 
-        public Builder setFileFormat(@Nullable FaqFileFormat fileFormat) {
+        public Builder fileFormat(@Nullable FaqFileFormat fileFormat) {
             this.fileFormat = Input.ofNullable(fileFormat);
             return this;
         }
 
-        public Builder setIndexId(Input<String> indexId) {
+        public Builder indexId(Input<String> indexId) {
             this.indexId = Objects.requireNonNull(indexId);
             return this;
         }
 
-        public Builder setIndexId(String indexId) {
+        public Builder indexId(String indexId) {
             this.indexId = Input.of(Objects.requireNonNull(indexId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setS3Path(Input<FaqS3PathArgs> s3Path) {
+        public Builder s3Path(Input<FaqS3PathArgs> s3Path) {
             this.s3Path = Objects.requireNonNull(s3Path);
             return this;
         }
 
-        public Builder setS3Path(FaqS3PathArgs s3Path) {
+        public Builder s3Path(FaqS3PathArgs s3Path) {
             this.s3Path = Input.of(Objects.requireNonNull(s3Path));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<FaqTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<FaqTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FaqTagArgs> tags) {
+        public Builder tags(@Nullable List<FaqTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

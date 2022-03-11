@@ -12,10 +12,10 @@ public final class RegistryScanningConfigurationRuleRepositoryFilter {
     private final String filter;
     private final String filterType;
 
-    @OutputCustomType.Constructor({"filter","filterType"})
+    @OutputCustomType.Constructor
     private RegistryScanningConfigurationRuleRepositoryFilter(
-        String filter,
-        String filterType) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("filterType") String filterType) {
         this.filter = filter;
         this.filterType = filterType;
     }
@@ -49,12 +49,12 @@ public final class RegistryScanningConfigurationRuleRepositoryFilter {
     	      this.filterType = defaults.filterType;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilterType(String filterType) {
+        public Builder filterType(String filterType) {
             this.filterType = Objects.requireNonNull(filterType);
             return this;
         }

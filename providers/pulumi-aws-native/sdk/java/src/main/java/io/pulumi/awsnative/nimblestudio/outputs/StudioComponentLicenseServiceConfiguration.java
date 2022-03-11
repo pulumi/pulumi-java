@@ -17,8 +17,8 @@ public final class StudioComponentLicenseServiceConfiguration {
      */
     private final @Nullable String endpoint;
 
-    @OutputCustomType.Constructor({"endpoint"})
-    private StudioComponentLicenseServiceConfiguration(@Nullable String endpoint) {
+    @OutputCustomType.Constructor
+    private StudioComponentLicenseServiceConfiguration(@OutputCustomType.Parameter("endpoint") @Nullable String endpoint) {
         this.endpoint = endpoint;
     }
 
@@ -50,7 +50,7 @@ public final class StudioComponentLicenseServiceConfiguration {
     	      this.endpoint = defaults.endpoint;
         }
 
-        public Builder setEndpoint(@Nullable String endpoint) {
+        public Builder endpoint(@Nullable String endpoint) {
             this.endpoint = endpoint;
             return this;
         }

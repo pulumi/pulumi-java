@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class FilterFindingCriteria {
     private final List<FilterFindingCriteriaCriterion> criterions;
 
-    @OutputCustomType.Constructor({"criterions"})
-    private FilterFindingCriteria(List<FilterFindingCriteriaCriterion> criterions) {
+    @OutputCustomType.Constructor
+    private FilterFindingCriteria(@OutputCustomType.Parameter("criterions") List<FilterFindingCriteriaCriterion> criterions) {
         this.criterions = criterions;
     }
 
@@ -41,7 +41,7 @@ public final class FilterFindingCriteria {
     	      this.criterions = defaults.criterions;
         }
 
-        public Builder setCriterions(List<FilterFindingCriteriaCriterion> criterions) {
+        public Builder criterions(List<FilterFindingCriteriaCriterion> criterions) {
             this.criterions = Objects.requireNonNull(criterions);
             return this;
         }

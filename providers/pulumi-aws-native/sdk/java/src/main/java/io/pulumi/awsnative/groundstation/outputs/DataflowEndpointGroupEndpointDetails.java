@@ -15,10 +15,10 @@ public final class DataflowEndpointGroupEndpointDetails {
     private final @Nullable DataflowEndpointGroupDataflowEndpoint endpoint;
     private final @Nullable DataflowEndpointGroupSecurityDetails securityDetails;
 
-    @OutputCustomType.Constructor({"endpoint","securityDetails"})
+    @OutputCustomType.Constructor
     private DataflowEndpointGroupEndpointDetails(
-        @Nullable DataflowEndpointGroupDataflowEndpoint endpoint,
-        @Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
+        @OutputCustomType.Parameter("endpoint") @Nullable DataflowEndpointGroupDataflowEndpoint endpoint,
+        @OutputCustomType.Parameter("securityDetails") @Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
         this.endpoint = endpoint;
         this.securityDetails = securityDetails;
     }
@@ -52,12 +52,12 @@ public final class DataflowEndpointGroupEndpointDetails {
     	      this.securityDetails = defaults.securityDetails;
         }
 
-        public Builder setEndpoint(@Nullable DataflowEndpointGroupDataflowEndpoint endpoint) {
+        public Builder endpoint(@Nullable DataflowEndpointGroupDataflowEndpoint endpoint) {
             this.endpoint = endpoint;
             return this;
         }
 
-        public Builder setSecurityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
+        public Builder securityDetails(@Nullable DataflowEndpointGroupSecurityDetails securityDetails) {
             this.securityDetails = securityDetails;
             return this;
         }

@@ -26,11 +26,11 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
      */
     private final String thumbnailImageAlignment;
 
-    @OutputCustomType.Constructor({"cardContent","cardOrientation","thumbnailImageAlignment"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse(
-        GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
-        String cardOrientation,
-        String thumbnailImageAlignment) {
+        @OutputCustomType.Parameter("cardContent") GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent,
+        @OutputCustomType.Parameter("cardOrientation") String cardOrientation,
+        @OutputCustomType.Parameter("thumbnailImageAlignment") String thumbnailImageAlignment) {
         this.cardContent = cardContent;
         this.cardOrientation = cardOrientation;
         this.thumbnailImageAlignment = thumbnailImageAlignment;
@@ -82,17 +82,17 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardRes
     	      this.thumbnailImageAlignment = defaults.thumbnailImageAlignment;
         }
 
-        public Builder setCardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent) {
+        public Builder cardContent(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentResponse cardContent) {
             this.cardContent = Objects.requireNonNull(cardContent);
             return this;
         }
 
-        public Builder setCardOrientation(String cardOrientation) {
+        public Builder cardOrientation(String cardOrientation) {
             this.cardOrientation = Objects.requireNonNull(cardOrientation);
             return this;
         }
 
-        public Builder setThumbnailImageAlignment(String thumbnailImageAlignment) {
+        public Builder thumbnailImageAlignment(String thumbnailImageAlignment) {
             this.thumbnailImageAlignment = Objects.requireNonNull(thumbnailImageAlignment);
             return this;
         }

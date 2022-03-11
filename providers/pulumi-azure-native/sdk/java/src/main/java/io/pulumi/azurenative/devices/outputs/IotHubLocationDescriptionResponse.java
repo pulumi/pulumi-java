@@ -22,10 +22,10 @@ public final class IotHubLocationDescriptionResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"location","role"})
+    @OutputCustomType.Constructor
     private IotHubLocationDescriptionResponse(
-        @Nullable String location,
-        @Nullable String role) {
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("role") @Nullable String role) {
         this.location = location;
         this.role = role;
     }
@@ -67,12 +67,12 @@ public final class IotHubLocationDescriptionResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

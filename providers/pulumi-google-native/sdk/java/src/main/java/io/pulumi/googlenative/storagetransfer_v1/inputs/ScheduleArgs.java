@@ -124,52 +124,52 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.startTimeOfDay = defaults.startTimeOfDay;
         }
 
-        public Builder setEndTimeOfDay(@Nullable Input<TimeOfDayArgs> endTimeOfDay) {
+        public Builder endTimeOfDay(@Nullable Input<TimeOfDayArgs> endTimeOfDay) {
             this.endTimeOfDay = endTimeOfDay;
             return this;
         }
 
-        public Builder setEndTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
+        public Builder endTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
             this.endTimeOfDay = Input.ofNullable(endTimeOfDay);
             return this;
         }
 
-        public Builder setRepeatInterval(@Nullable Input<String> repeatInterval) {
+        public Builder repeatInterval(@Nullable Input<String> repeatInterval) {
             this.repeatInterval = repeatInterval;
             return this;
         }
 
-        public Builder setRepeatInterval(@Nullable String repeatInterval) {
+        public Builder repeatInterval(@Nullable String repeatInterval) {
             this.repeatInterval = Input.ofNullable(repeatInterval);
             return this;
         }
 
-        public Builder setScheduleEndDate(@Nullable Input<DateArgs> scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable Input<DateArgs> scheduleEndDate) {
             this.scheduleEndDate = scheduleEndDate;
             return this;
         }
 
-        public Builder setScheduleEndDate(@Nullable DateArgs scheduleEndDate) {
+        public Builder scheduleEndDate(@Nullable DateArgs scheduleEndDate) {
             this.scheduleEndDate = Input.ofNullable(scheduleEndDate);
             return this;
         }
 
-        public Builder setScheduleStartDate(Input<DateArgs> scheduleStartDate) {
+        public Builder scheduleStartDate(Input<DateArgs> scheduleStartDate) {
             this.scheduleStartDate = Objects.requireNonNull(scheduleStartDate);
             return this;
         }
 
-        public Builder setScheduleStartDate(DateArgs scheduleStartDate) {
+        public Builder scheduleStartDate(DateArgs scheduleStartDate) {
             this.scheduleStartDate = Input.of(Objects.requireNonNull(scheduleStartDate));
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable Input<TimeOfDayArgs> startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable Input<TimeOfDayArgs> startTimeOfDay) {
             this.startTimeOfDay = startTimeOfDay;
             return this;
         }
 
-        public Builder setStartTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
+        public Builder startTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
             this.startTimeOfDay = Input.ofNullable(startTimeOfDay);
             return this;
         }

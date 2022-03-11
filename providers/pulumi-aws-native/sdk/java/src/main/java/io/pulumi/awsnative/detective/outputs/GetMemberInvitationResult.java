@@ -28,11 +28,11 @@ public final class GetMemberInvitationResult {
      */
     private final @Nullable String message;
 
-    @OutputCustomType.Constructor({"disableEmailNotification","memberEmailAddress","message"})
+    @OutputCustomType.Constructor
     private GetMemberInvitationResult(
-        @Nullable Boolean disableEmailNotification,
-        @Nullable String memberEmailAddress,
-        @Nullable String message) {
+        @OutputCustomType.Parameter("disableEmailNotification") @Nullable Boolean disableEmailNotification,
+        @OutputCustomType.Parameter("memberEmailAddress") @Nullable String memberEmailAddress,
+        @OutputCustomType.Parameter("message") @Nullable String message) {
         this.disableEmailNotification = disableEmailNotification;
         this.memberEmailAddress = memberEmailAddress;
         this.message = message;
@@ -84,17 +84,17 @@ public final class GetMemberInvitationResult {
     	      this.message = defaults.message;
         }
 
-        public Builder setDisableEmailNotification(@Nullable Boolean disableEmailNotification) {
+        public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
             this.disableEmailNotification = disableEmailNotification;
             return this;
         }
 
-        public Builder setMemberEmailAddress(@Nullable String memberEmailAddress) {
+        public Builder memberEmailAddress(@Nullable String memberEmailAddress) {
             this.memberEmailAddress = memberEmailAddress;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }

@@ -45,14 +45,14 @@ public final class CephFSPersistentVolumeSource {
      */
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"monitors","path","readOnly","secretFile","secretRef","user"})
+    @OutputCustomType.Constructor
     private CephFSPersistentVolumeSource(
-        List<String> monitors,
-        @Nullable String path,
-        @Nullable Boolean readOnly,
-        @Nullable String secretFile,
-        @Nullable SecretReference secretRef,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("monitors") List<String> monitors,
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretFile") @Nullable String secretFile,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.monitors = monitors;
         this.path = path;
         this.readOnly = readOnly;
@@ -134,32 +134,32 @@ public final class CephFSPersistentVolumeSource {
     	      this.user = defaults.user;
         }
 
-        public Builder setMonitors(List<String> monitors) {
+        public Builder monitors(List<String> monitors) {
             this.monitors = Objects.requireNonNull(monitors);
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretFile(@Nullable String secretFile) {
+        public Builder secretFile(@Nullable String secretFile) {
             this.secretFile = secretFile;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretReference secretRef) {
+        public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

@@ -27,11 +27,11 @@ public final class BotGrammarSlotTypeSource {
      */
     private final String s3ObjectKey;
 
-    @OutputCustomType.Constructor({"kmsKeyArn","s3BucketName","s3ObjectKey"})
+    @OutputCustomType.Constructor
     private BotGrammarSlotTypeSource(
-        @Nullable String kmsKeyArn,
-        String s3BucketName,
-        String s3ObjectKey) {
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3ObjectKey") String s3ObjectKey) {
         this.kmsKeyArn = kmsKeyArn;
         this.s3BucketName = s3BucketName;
         this.s3ObjectKey = s3ObjectKey;
@@ -83,17 +83,17 @@ public final class BotGrammarSlotTypeSource {
     	      this.s3ObjectKey = defaults.s3ObjectKey;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3ObjectKey(String s3ObjectKey) {
+        public Builder s3ObjectKey(String s3ObjectKey) {
             this.s3ObjectKey = Objects.requireNonNull(s3ObjectKey);
             return this;
         }

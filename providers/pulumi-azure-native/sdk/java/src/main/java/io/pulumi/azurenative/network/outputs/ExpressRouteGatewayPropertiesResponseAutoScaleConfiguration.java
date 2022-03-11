@@ -17,8 +17,8 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
      */
     private final @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds;
 
-    @OutputCustomType.Constructor({"bounds"})
-    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
+    @OutputCustomType.Constructor
+    private ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(@OutputCustomType.Parameter("bounds") @Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
         this.bounds = bounds;
     }
 
@@ -50,7 +50,7 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder setBounds(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
+        public Builder bounds(@Nullable ExpressRouteGatewayPropertiesResponseBounds bounds) {
             this.bounds = bounds;
             return this;
         }

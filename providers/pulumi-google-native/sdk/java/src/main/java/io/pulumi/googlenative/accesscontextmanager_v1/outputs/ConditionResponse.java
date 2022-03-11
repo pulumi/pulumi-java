@@ -43,14 +43,14 @@ public final class ConditionResponse {
      */
     private final List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor({"devicePolicy","ipSubnetworks","members","negate","regions","requiredAccessLevels"})
+    @OutputCustomType.Constructor
     private ConditionResponse(
-        DevicePolicyResponse devicePolicy,
-        List<String> ipSubnetworks,
-        List<String> members,
-        Boolean negate,
-        List<String> regions,
-        List<String> requiredAccessLevels) {
+        @OutputCustomType.Parameter("devicePolicy") DevicePolicyResponse devicePolicy,
+        @OutputCustomType.Parameter("ipSubnetworks") List<String> ipSubnetworks,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("negate") Boolean negate,
+        @OutputCustomType.Parameter("regions") List<String> regions,
+        @OutputCustomType.Parameter("requiredAccessLevels") List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;
@@ -132,32 +132,32 @@ public final class ConditionResponse {
     	      this.requiredAccessLevels = defaults.requiredAccessLevels;
         }
 
-        public Builder setDevicePolicy(DevicePolicyResponse devicePolicy) {
+        public Builder devicePolicy(DevicePolicyResponse devicePolicy) {
             this.devicePolicy = Objects.requireNonNull(devicePolicy);
             return this;
         }
 
-        public Builder setIpSubnetworks(List<String> ipSubnetworks) {
+        public Builder ipSubnetworks(List<String> ipSubnetworks) {
             this.ipSubnetworks = Objects.requireNonNull(ipSubnetworks);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setNegate(Boolean negate) {
+        public Builder negate(Boolean negate) {
             this.negate = Objects.requireNonNull(negate);
             return this;
         }
 
-        public Builder setRegions(List<String> regions) {
+        public Builder regions(List<String> regions) {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
 
-        public Builder setRequiredAccessLevels(List<String> requiredAccessLevels) {
+        public Builder requiredAccessLevels(List<String> requiredAccessLevels) {
             this.requiredAccessLevels = Objects.requireNonNull(requiredAccessLevels);
             return this;
         }

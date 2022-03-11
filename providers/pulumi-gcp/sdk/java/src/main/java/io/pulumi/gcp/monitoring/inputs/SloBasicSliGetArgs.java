@@ -138,52 +138,52 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setAvailability(@Nullable Input<SloBasicSliAvailabilityGetArgs> availability) {
+        public Builder availability(@Nullable Input<SloBasicSliAvailabilityGetArgs> availability) {
             this.availability = availability;
             return this;
         }
 
-        public Builder setAvailability(@Nullable SloBasicSliAvailabilityGetArgs availability) {
+        public Builder availability(@Nullable SloBasicSliAvailabilityGetArgs availability) {
             this.availability = Input.ofNullable(availability);
             return this;
         }
 
-        public Builder setLatency(@Nullable Input<SloBasicSliLatencyGetArgs> latency) {
+        public Builder latency(@Nullable Input<SloBasicSliLatencyGetArgs> latency) {
             this.latency = latency;
             return this;
         }
 
-        public Builder setLatency(@Nullable SloBasicSliLatencyGetArgs latency) {
+        public Builder latency(@Nullable SloBasicSliLatencyGetArgs latency) {
             this.latency = Input.ofNullable(latency);
             return this;
         }
 
-        public Builder setLocations(@Nullable Input<List<String>> locations) {
+        public Builder locations(@Nullable Input<List<String>> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = Input.ofNullable(locations);
             return this;
         }
 
-        public Builder setMethods(@Nullable Input<List<String>> methods) {
+        public Builder methods(@Nullable Input<List<String>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<String> methods) {
+        public Builder methods(@Nullable List<String> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setVersions(@Nullable Input<List<String>> versions) {
+        public Builder versions(@Nullable Input<List<String>> versions) {
             this.versions = versions;
             return this;
         }
 
-        public Builder setVersions(@Nullable List<String> versions) {
+        public Builder versions(@Nullable List<String> versions) {
             this.versions = Input.ofNullable(versions);
             return this;
         }

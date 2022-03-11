@@ -62,17 +62,17 @@ public final class GetInstanceFailoverGroupResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","managedInstancePairs","name","partnerRegions","readOnlyEndpoint","readWriteEndpoint","replicationRole","replicationState","type"})
+    @OutputCustomType.Constructor
     private GetInstanceFailoverGroupResult(
-        String id,
-        List<ManagedInstancePairInfoResponse> managedInstancePairs,
-        String name,
-        List<PartnerRegionInfoResponse> partnerRegions,
-        @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
-        InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
-        String replicationRole,
-        String replicationState,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("managedInstancePairs") List<ManagedInstancePairInfoResponse> managedInstancePairs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("partnerRegions") List<PartnerRegionInfoResponse> partnerRegions,
+        @OutputCustomType.Parameter("readOnlyEndpoint") @Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint,
+        @OutputCustomType.Parameter("readWriteEndpoint") InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint,
+        @OutputCustomType.Parameter("replicationRole") String replicationRole,
+        @OutputCustomType.Parameter("replicationState") String replicationState,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.managedInstancePairs = managedInstancePairs;
         this.name = name;
@@ -184,47 +184,47 @@ public final class GetInstanceFailoverGroupResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setManagedInstancePairs(List<ManagedInstancePairInfoResponse> managedInstancePairs) {
+        public Builder managedInstancePairs(List<ManagedInstancePairInfoResponse> managedInstancePairs) {
             this.managedInstancePairs = Objects.requireNonNull(managedInstancePairs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPartnerRegions(List<PartnerRegionInfoResponse> partnerRegions) {
+        public Builder partnerRegions(List<PartnerRegionInfoResponse> partnerRegions) {
             this.partnerRegions = Objects.requireNonNull(partnerRegions);
             return this;
         }
 
-        public Builder setReadOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
+        public Builder readOnlyEndpoint(@Nullable InstanceFailoverGroupReadOnlyEndpointResponse readOnlyEndpoint) {
             this.readOnlyEndpoint = readOnlyEndpoint;
             return this;
         }
 
-        public Builder setReadWriteEndpoint(InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
+        public Builder readWriteEndpoint(InstanceFailoverGroupReadWriteEndpointResponse readWriteEndpoint) {
             this.readWriteEndpoint = Objects.requireNonNull(readWriteEndpoint);
             return this;
         }
 
-        public Builder setReplicationRole(String replicationRole) {
+        public Builder replicationRole(String replicationRole) {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
 
-        public Builder setReplicationState(String replicationState) {
+        public Builder replicationState(String replicationState) {
             this.replicationState = Objects.requireNonNull(replicationState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

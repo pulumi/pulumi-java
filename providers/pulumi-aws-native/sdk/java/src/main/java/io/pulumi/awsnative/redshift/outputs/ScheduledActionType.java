@@ -17,11 +17,11 @@ public final class ScheduledActionType {
     private final @Nullable ScheduledActionResizeClusterMessage resizeCluster;
     private final @Nullable ScheduledActionResumeClusterMessage resumeCluster;
 
-    @OutputCustomType.Constructor({"pauseCluster","resizeCluster","resumeCluster"})
+    @OutputCustomType.Constructor
     private ScheduledActionType(
-        @Nullable ScheduledActionPauseClusterMessage pauseCluster,
-        @Nullable ScheduledActionResizeClusterMessage resizeCluster,
-        @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
+        @OutputCustomType.Parameter("pauseCluster") @Nullable ScheduledActionPauseClusterMessage pauseCluster,
+        @OutputCustomType.Parameter("resizeCluster") @Nullable ScheduledActionResizeClusterMessage resizeCluster,
+        @OutputCustomType.Parameter("resumeCluster") @Nullable ScheduledActionResumeClusterMessage resumeCluster) {
         this.pauseCluster = pauseCluster;
         this.resizeCluster = resizeCluster;
         this.resumeCluster = resumeCluster;
@@ -61,17 +61,17 @@ public final class ScheduledActionType {
     	      this.resumeCluster = defaults.resumeCluster;
         }
 
-        public Builder setPauseCluster(@Nullable ScheduledActionPauseClusterMessage pauseCluster) {
+        public Builder pauseCluster(@Nullable ScheduledActionPauseClusterMessage pauseCluster) {
             this.pauseCluster = pauseCluster;
             return this;
         }
 
-        public Builder setResizeCluster(@Nullable ScheduledActionResizeClusterMessage resizeCluster) {
+        public Builder resizeCluster(@Nullable ScheduledActionResizeClusterMessage resizeCluster) {
             this.resizeCluster = resizeCluster;
             return this;
         }
 
-        public Builder setResumeCluster(@Nullable ScheduledActionResumeClusterMessage resumeCluster) {
+        public Builder resumeCluster(@Nullable ScheduledActionResumeClusterMessage resumeCluster) {
             this.resumeCluster = resumeCluster;
             return this;
         }

@@ -16,11 +16,11 @@ public final class IntegrationSalesforceSourceProperties {
     private final @Nullable Boolean includeDeletedRecords;
     private final String object;
 
-    @OutputCustomType.Constructor({"enableDynamicFieldUpdate","includeDeletedRecords","object"})
+    @OutputCustomType.Constructor
     private IntegrationSalesforceSourceProperties(
-        @Nullable Boolean enableDynamicFieldUpdate,
-        @Nullable Boolean includeDeletedRecords,
-        String object) {
+        @OutputCustomType.Parameter("enableDynamicFieldUpdate") @Nullable Boolean enableDynamicFieldUpdate,
+        @OutputCustomType.Parameter("includeDeletedRecords") @Nullable Boolean includeDeletedRecords,
+        @OutputCustomType.Parameter("object") String object) {
         this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
         this.includeDeletedRecords = includeDeletedRecords;
         this.object = object;
@@ -60,17 +60,17 @@ public final class IntegrationSalesforceSourceProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setEnableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
+        public Builder enableDynamicFieldUpdate(@Nullable Boolean enableDynamicFieldUpdate) {
             this.enableDynamicFieldUpdate = enableDynamicFieldUpdate;
             return this;
         }
 
-        public Builder setIncludeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
+        public Builder includeDeletedRecords(@Nullable Boolean includeDeletedRecords) {
             this.includeDeletedRecords = includeDeletedRecords;
             return this;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

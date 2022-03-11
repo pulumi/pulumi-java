@@ -27,11 +27,11 @@ public final class TcpConfigResponse {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor({"destination","name","port"})
+    @OutputCustomType.Constructor
     private TcpConfigResponse(
-        GatewayDestinationResponse destination,
-        String name,
-        Integer port) {
+        @OutputCustomType.Parameter("destination") GatewayDestinationResponse destination,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("port") Integer port) {
         this.destination = destination;
         this.name = name;
         this.port = port;
@@ -83,17 +83,17 @@ public final class TcpConfigResponse {
     	      this.port = defaults.port;
         }
 
-        public Builder setDestination(GatewayDestinationResponse destination) {
+        public Builder destination(GatewayDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }

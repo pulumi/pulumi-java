@@ -84,22 +84,22 @@ public final class GetPrivateZoneResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","id","internalId","location","maxNumberOfRecordSets","maxNumberOfVirtualNetworkLinks","maxNumberOfVirtualNetworkLinksWithRegistration","name","numberOfRecordSets","numberOfVirtualNetworkLinks","numberOfVirtualNetworkLinksWithRegistration","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetPrivateZoneResult(
-        @Nullable String etag,
-        String id,
-        String internalId,
-        @Nullable String location,
-        Double maxNumberOfRecordSets,
-        Double maxNumberOfVirtualNetworkLinks,
-        Double maxNumberOfVirtualNetworkLinksWithRegistration,
-        String name,
-        Double numberOfRecordSets,
-        Double numberOfVirtualNetworkLinks,
-        Double numberOfVirtualNetworkLinksWithRegistration,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("internalId") String internalId,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("maxNumberOfRecordSets") Double maxNumberOfRecordSets,
+        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinks") Double maxNumberOfVirtualNetworkLinks,
+        @OutputCustomType.Parameter("maxNumberOfVirtualNetworkLinksWithRegistration") Double maxNumberOfVirtualNetworkLinksWithRegistration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfRecordSets") Double numberOfRecordSets,
+        @OutputCustomType.Parameter("numberOfVirtualNetworkLinks") Double numberOfVirtualNetworkLinks,
+        @OutputCustomType.Parameter("numberOfVirtualNetworkLinksWithRegistration") Double numberOfVirtualNetworkLinksWithRegistration,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.id = id;
         this.internalId = internalId;
@@ -261,72 +261,72 @@ public final class GetPrivateZoneResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInternalId(String internalId) {
+        public Builder internalId(String internalId) {
             this.internalId = Objects.requireNonNull(internalId);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setMaxNumberOfRecordSets(Double maxNumberOfRecordSets) {
+        public Builder maxNumberOfRecordSets(Double maxNumberOfRecordSets) {
             this.maxNumberOfRecordSets = Objects.requireNonNull(maxNumberOfRecordSets);
             return this;
         }
 
-        public Builder setMaxNumberOfVirtualNetworkLinks(Double maxNumberOfVirtualNetworkLinks) {
+        public Builder maxNumberOfVirtualNetworkLinks(Double maxNumberOfVirtualNetworkLinks) {
             this.maxNumberOfVirtualNetworkLinks = Objects.requireNonNull(maxNumberOfVirtualNetworkLinks);
             return this;
         }
 
-        public Builder setMaxNumberOfVirtualNetworkLinksWithRegistration(Double maxNumberOfVirtualNetworkLinksWithRegistration) {
+        public Builder maxNumberOfVirtualNetworkLinksWithRegistration(Double maxNumberOfVirtualNetworkLinksWithRegistration) {
             this.maxNumberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(maxNumberOfVirtualNetworkLinksWithRegistration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfRecordSets(Double numberOfRecordSets) {
+        public Builder numberOfRecordSets(Double numberOfRecordSets) {
             this.numberOfRecordSets = Objects.requireNonNull(numberOfRecordSets);
             return this;
         }
 
-        public Builder setNumberOfVirtualNetworkLinks(Double numberOfVirtualNetworkLinks) {
+        public Builder numberOfVirtualNetworkLinks(Double numberOfVirtualNetworkLinks) {
             this.numberOfVirtualNetworkLinks = Objects.requireNonNull(numberOfVirtualNetworkLinks);
             return this;
         }
 
-        public Builder setNumberOfVirtualNetworkLinksWithRegistration(Double numberOfVirtualNetworkLinksWithRegistration) {
+        public Builder numberOfVirtualNetworkLinksWithRegistration(Double numberOfVirtualNetworkLinksWithRegistration) {
             this.numberOfVirtualNetworkLinksWithRegistration = Objects.requireNonNull(numberOfVirtualNetworkLinksWithRegistration);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

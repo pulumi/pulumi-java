@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
      */
     private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
-    @OutputCustomType.Constructor({"userInput","virtualAgentOutput"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3ConversationTurnResponse(
-        GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput,
-        GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
+        @OutputCustomType.Parameter("userInput") GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput,
+        @OutputCustomType.Parameter("virtualAgentOutput") GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
         this.userInput = userInput;
         this.virtualAgentOutput = virtualAgentOutput;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse {
     	      this.virtualAgentOutput = defaults.virtualAgentOutput;
         }
 
-        public Builder setUserInput(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput) {
+        public Builder userInput(GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput) {
             this.userInput = Objects.requireNonNull(userInput);
             return this;
         }
 
-        public Builder setVirtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
+        public Builder virtualAgentOutput(GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput) {
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
         }

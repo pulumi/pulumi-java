@@ -40,13 +40,13 @@ public final class GetSiteResult {
      */
     private final @Nullable List<SiteTag> tags;
 
-    @OutputCustomType.Constructor({"description","location","siteArn","siteId","tags"})
+    @OutputCustomType.Constructor
     private GetSiteResult(
-        @Nullable String description,
-        @Nullable SiteLocation location,
-        @Nullable String siteArn,
-        @Nullable String siteId,
-        @Nullable List<SiteTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("location") @Nullable SiteLocation location,
+        @OutputCustomType.Parameter("siteArn") @Nullable String siteArn,
+        @OutputCustomType.Parameter("siteId") @Nullable String siteId,
+        @OutputCustomType.Parameter("tags") @Nullable List<SiteTag> tags) {
         this.description = description;
         this.location = location;
         this.siteArn = siteArn;
@@ -118,27 +118,27 @@ public final class GetSiteResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLocation(@Nullable SiteLocation location) {
+        public Builder location(@Nullable SiteLocation location) {
             this.location = location;
             return this;
         }
 
-        public Builder setSiteArn(@Nullable String siteArn) {
+        public Builder siteArn(@Nullable String siteArn) {
             this.siteArn = siteArn;
             return this;
         }
 
-        public Builder setSiteId(@Nullable String siteId) {
+        public Builder siteId(@Nullable String siteId) {
             this.siteId = siteId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SiteTag> tags) {
+        public Builder tags(@Nullable List<SiteTag> tags) {
             this.tags = tags;
             return this;
         }

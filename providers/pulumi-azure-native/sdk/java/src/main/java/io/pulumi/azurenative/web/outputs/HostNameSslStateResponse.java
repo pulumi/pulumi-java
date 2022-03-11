@@ -43,14 +43,14 @@ public final class HostNameSslStateResponse {
      */
     private final @Nullable String virtualIP;
 
-    @OutputCustomType.Constructor({"hostType","name","sslState","thumbprint","toUpdate","virtualIP"})
+    @OutputCustomType.Constructor
     private HostNameSslStateResponse(
-        @Nullable String hostType,
-        @Nullable String name,
-        @Nullable String sslState,
-        @Nullable String thumbprint,
-        @Nullable Boolean toUpdate,
-        @Nullable String virtualIP) {
+        @OutputCustomType.Parameter("hostType") @Nullable String hostType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("sslState") @Nullable String sslState,
+        @OutputCustomType.Parameter("thumbprint") @Nullable String thumbprint,
+        @OutputCustomType.Parameter("toUpdate") @Nullable Boolean toUpdate,
+        @OutputCustomType.Parameter("virtualIP") @Nullable String virtualIP) {
         this.hostType = hostType;
         this.name = name;
         this.sslState = sslState;
@@ -132,32 +132,32 @@ public final class HostNameSslStateResponse {
     	      this.virtualIP = defaults.virtualIP;
         }
 
-        public Builder setHostType(@Nullable String hostType) {
+        public Builder hostType(@Nullable String hostType) {
             this.hostType = hostType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSslState(@Nullable String sslState) {
+        public Builder sslState(@Nullable String sslState) {
             this.sslState = sslState;
             return this;
         }
 
-        public Builder setThumbprint(@Nullable String thumbprint) {
+        public Builder thumbprint(@Nullable String thumbprint) {
             this.thumbprint = thumbprint;
             return this;
         }
 
-        public Builder setToUpdate(@Nullable Boolean toUpdate) {
+        public Builder toUpdate(@Nullable Boolean toUpdate) {
             this.toUpdate = toUpdate;
             return this;
         }
 
-        public Builder setVirtualIP(@Nullable String virtualIP) {
+        public Builder virtualIP(@Nullable String virtualIP) {
             this.virtualIP = virtualIP;
             return this;
         }

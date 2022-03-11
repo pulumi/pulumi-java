@@ -58,17 +58,17 @@ public final class NodeConfigResponse {
      */
     private final List<String> tags;
 
-    @OutputCustomType.Constructor({"diskSizeGb","ipAllocationPolicy","location","machineType","network","oauthScopes","serviceAccount","subnetwork","tags"})
+    @OutputCustomType.Constructor
     private NodeConfigResponse(
-        Integer diskSizeGb,
-        IPAllocationPolicyResponse ipAllocationPolicy,
-        String location,
-        String machineType,
-        String network,
-        List<String> oauthScopes,
-        String serviceAccount,
-        String subnetwork,
-        List<String> tags) {
+        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @OutputCustomType.Parameter("ipAllocationPolicy") IPAllocationPolicyResponse ipAllocationPolicy,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("machineType") String machineType,
+        @OutputCustomType.Parameter("network") String network,
+        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("subnetwork") String subnetwork,
+        @OutputCustomType.Parameter("tags") List<String> tags) {
         this.diskSizeGb = diskSizeGb;
         this.ipAllocationPolicy = ipAllocationPolicy;
         this.location = location;
@@ -180,47 +180,47 @@ public final class NodeConfigResponse {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDiskSizeGb(Integer diskSizeGb) {
+        public Builder diskSizeGb(Integer diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setIpAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
+        public Builder ipAllocationPolicy(IPAllocationPolicyResponse ipAllocationPolicy) {
             this.ipAllocationPolicy = Objects.requireNonNull(ipAllocationPolicy);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setOauthScopes(List<String> oauthScopes) {
+        public Builder oauthScopes(List<String> oauthScopes) {
             this.oauthScopes = Objects.requireNonNull(oauthScopes);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setSubnetwork(String subnetwork) {
+        public Builder subnetwork(String subnetwork) {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

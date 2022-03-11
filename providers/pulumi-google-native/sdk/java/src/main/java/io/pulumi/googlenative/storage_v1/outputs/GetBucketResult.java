@@ -172,37 +172,37 @@ public final class GetBucketResult {
      */
     private final BucketWebsiteResponse website;
 
-    @OutputCustomType.Constructor({"acl","autoclass","billing","cors","customPlacementConfig","defaultEventBasedHold","defaultObjectAcl","encryption","etag","iamConfiguration","kind","labels","lifecycle","location","locationType","logging","metageneration","name","owner","projectNumber","retentionPolicy","rpo","satisfiesPZS","selfLink","storageClass","timeCreated","updated","versioning","website"})
+    @OutputCustomType.Constructor
     private GetBucketResult(
-        List<BucketAccessControlResponse> acl,
-        BucketAutoclassResponse autoclass,
-        BucketBillingResponse billing,
-        List<BucketCorsItemResponse> cors,
-        BucketCustomPlacementConfigResponse customPlacementConfig,
-        Boolean defaultEventBasedHold,
-        List<ObjectAccessControlResponse> defaultObjectAcl,
-        BucketEncryptionResponse encryption,
-        String etag,
-        BucketIamConfigurationResponse iamConfiguration,
-        String kind,
-        Map<String,String> labels,
-        BucketLifecycleResponse lifecycle,
-        String location,
-        String locationType,
-        BucketLoggingResponse logging,
-        String metageneration,
-        String name,
-        BucketOwnerResponse owner,
-        String projectNumber,
-        BucketRetentionPolicyResponse retentionPolicy,
-        String rpo,
-        Boolean satisfiesPZS,
-        String selfLink,
-        String storageClass,
-        String timeCreated,
-        String updated,
-        BucketVersioningResponse versioning,
-        BucketWebsiteResponse website) {
+        @OutputCustomType.Parameter("acl") List<BucketAccessControlResponse> acl,
+        @OutputCustomType.Parameter("autoclass") BucketAutoclassResponse autoclass,
+        @OutputCustomType.Parameter("billing") BucketBillingResponse billing,
+        @OutputCustomType.Parameter("cors") List<BucketCorsItemResponse> cors,
+        @OutputCustomType.Parameter("customPlacementConfig") BucketCustomPlacementConfigResponse customPlacementConfig,
+        @OutputCustomType.Parameter("defaultEventBasedHold") Boolean defaultEventBasedHold,
+        @OutputCustomType.Parameter("defaultObjectAcl") List<ObjectAccessControlResponse> defaultObjectAcl,
+        @OutputCustomType.Parameter("encryption") BucketEncryptionResponse encryption,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("iamConfiguration") BucketIamConfigurationResponse iamConfiguration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("lifecycle") BucketLifecycleResponse lifecycle,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("locationType") String locationType,
+        @OutputCustomType.Parameter("logging") BucketLoggingResponse logging,
+        @OutputCustomType.Parameter("metageneration") String metageneration,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("owner") BucketOwnerResponse owner,
+        @OutputCustomType.Parameter("projectNumber") String projectNumber,
+        @OutputCustomType.Parameter("retentionPolicy") BucketRetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("rpo") String rpo,
+        @OutputCustomType.Parameter("satisfiesPZS") Boolean satisfiesPZS,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("storageClass") String storageClass,
+        @OutputCustomType.Parameter("timeCreated") String timeCreated,
+        @OutputCustomType.Parameter("updated") String updated,
+        @OutputCustomType.Parameter("versioning") BucketVersioningResponse versioning,
+        @OutputCustomType.Parameter("website") BucketWebsiteResponse website) {
         this.acl = acl;
         this.autoclass = autoclass;
         this.billing = billing;
@@ -514,147 +514,147 @@ public final class GetBucketResult {
     	      this.website = defaults.website;
         }
 
-        public Builder setAcl(List<BucketAccessControlResponse> acl) {
+        public Builder acl(List<BucketAccessControlResponse> acl) {
             this.acl = Objects.requireNonNull(acl);
             return this;
         }
 
-        public Builder setAutoclass(BucketAutoclassResponse autoclass) {
+        public Builder autoclass(BucketAutoclassResponse autoclass) {
             this.autoclass = Objects.requireNonNull(autoclass);
             return this;
         }
 
-        public Builder setBilling(BucketBillingResponse billing) {
+        public Builder billing(BucketBillingResponse billing) {
             this.billing = Objects.requireNonNull(billing);
             return this;
         }
 
-        public Builder setCors(List<BucketCorsItemResponse> cors) {
+        public Builder cors(List<BucketCorsItemResponse> cors) {
             this.cors = Objects.requireNonNull(cors);
             return this;
         }
 
-        public Builder setCustomPlacementConfig(BucketCustomPlacementConfigResponse customPlacementConfig) {
+        public Builder customPlacementConfig(BucketCustomPlacementConfigResponse customPlacementConfig) {
             this.customPlacementConfig = Objects.requireNonNull(customPlacementConfig);
             return this;
         }
 
-        public Builder setDefaultEventBasedHold(Boolean defaultEventBasedHold) {
+        public Builder defaultEventBasedHold(Boolean defaultEventBasedHold) {
             this.defaultEventBasedHold = Objects.requireNonNull(defaultEventBasedHold);
             return this;
         }
 
-        public Builder setDefaultObjectAcl(List<ObjectAccessControlResponse> defaultObjectAcl) {
+        public Builder defaultObjectAcl(List<ObjectAccessControlResponse> defaultObjectAcl) {
             this.defaultObjectAcl = Objects.requireNonNull(defaultObjectAcl);
             return this;
         }
 
-        public Builder setEncryption(BucketEncryptionResponse encryption) {
+        public Builder encryption(BucketEncryptionResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setIamConfiguration(BucketIamConfigurationResponse iamConfiguration) {
+        public Builder iamConfiguration(BucketIamConfigurationResponse iamConfiguration) {
             this.iamConfiguration = Objects.requireNonNull(iamConfiguration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLifecycle(BucketLifecycleResponse lifecycle) {
+        public Builder lifecycle(BucketLifecycleResponse lifecycle) {
             this.lifecycle = Objects.requireNonNull(lifecycle);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setLocationType(String locationType) {
+        public Builder locationType(String locationType) {
             this.locationType = Objects.requireNonNull(locationType);
             return this;
         }
 
-        public Builder setLogging(BucketLoggingResponse logging) {
+        public Builder logging(BucketLoggingResponse logging) {
             this.logging = Objects.requireNonNull(logging);
             return this;
         }
 
-        public Builder setMetageneration(String metageneration) {
+        public Builder metageneration(String metageneration) {
             this.metageneration = Objects.requireNonNull(metageneration);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOwner(BucketOwnerResponse owner) {
+        public Builder owner(BucketOwnerResponse owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setProjectNumber(String projectNumber) {
+        public Builder projectNumber(String projectNumber) {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
 
-        public Builder setRetentionPolicy(BucketRetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(BucketRetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
 
-        public Builder setRpo(String rpo) {
+        public Builder rpo(String rpo) {
             this.rpo = Objects.requireNonNull(rpo);
             return this;
         }
 
-        public Builder setSatisfiesPZS(Boolean satisfiesPZS) {
+        public Builder satisfiesPZS(Boolean satisfiesPZS) {
             this.satisfiesPZS = Objects.requireNonNull(satisfiesPZS);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStorageClass(String storageClass) {
+        public Builder storageClass(String storageClass) {
             this.storageClass = Objects.requireNonNull(storageClass);
             return this;
         }
 
-        public Builder setTimeCreated(String timeCreated) {
+        public Builder timeCreated(String timeCreated) {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
 
-        public Builder setUpdated(String updated) {
+        public Builder updated(String updated) {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
 
-        public Builder setVersioning(BucketVersioningResponse versioning) {
+        public Builder versioning(BucketVersioningResponse versioning) {
             this.versioning = Objects.requireNonNull(versioning);
             return this;
         }
 
-        public Builder setWebsite(BucketWebsiteResponse website) {
+        public Builder website(BucketWebsiteResponse website) {
             this.website = Objects.requireNonNull(website);
             return this;
         }

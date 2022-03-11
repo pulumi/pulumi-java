@@ -22,10 +22,10 @@ public final class ListWorkspaceKeysResult {
      */
     private final @Nullable String secondaryToken;
 
-    @OutputCustomType.Constructor({"primaryToken","secondaryToken"})
+    @OutputCustomType.Constructor
     private ListWorkspaceKeysResult(
-        @Nullable String primaryToken,
-        @Nullable String secondaryToken) {
+        @OutputCustomType.Parameter("primaryToken") @Nullable String primaryToken,
+        @OutputCustomType.Parameter("secondaryToken") @Nullable String secondaryToken) {
         this.primaryToken = primaryToken;
         this.secondaryToken = secondaryToken;
     }
@@ -67,12 +67,12 @@ public final class ListWorkspaceKeysResult {
     	      this.secondaryToken = defaults.secondaryToken;
         }
 
-        public Builder setPrimaryToken(@Nullable String primaryToken) {
+        public Builder primaryToken(@Nullable String primaryToken) {
             this.primaryToken = primaryToken;
             return this;
         }
 
-        public Builder setSecondaryToken(@Nullable String secondaryToken) {
+        public Builder secondaryToken(@Nullable String secondaryToken) {
             this.secondaryToken = secondaryToken;
             return this;
         }

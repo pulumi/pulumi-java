@@ -29,11 +29,11 @@ public final class ConsistencyPolicyResponse {
      */
     private final @Nullable Double maxStalenessPrefix;
 
-    @OutputCustomType.Constructor({"defaultConsistencyLevel","maxIntervalInSeconds","maxStalenessPrefix"})
+    @OutputCustomType.Constructor
     private ConsistencyPolicyResponse(
-        String defaultConsistencyLevel,
-        @Nullable Integer maxIntervalInSeconds,
-        @Nullable Double maxStalenessPrefix) {
+        @OutputCustomType.Parameter("defaultConsistencyLevel") String defaultConsistencyLevel,
+        @OutputCustomType.Parameter("maxIntervalInSeconds") @Nullable Integer maxIntervalInSeconds,
+        @OutputCustomType.Parameter("maxStalenessPrefix") @Nullable Double maxStalenessPrefix) {
         this.defaultConsistencyLevel = defaultConsistencyLevel;
         this.maxIntervalInSeconds = maxIntervalInSeconds;
         this.maxStalenessPrefix = maxStalenessPrefix;
@@ -85,17 +85,17 @@ public final class ConsistencyPolicyResponse {
     	      this.maxStalenessPrefix = defaults.maxStalenessPrefix;
         }
 
-        public Builder setDefaultConsistencyLevel(String defaultConsistencyLevel) {
+        public Builder defaultConsistencyLevel(String defaultConsistencyLevel) {
             this.defaultConsistencyLevel = Objects.requireNonNull(defaultConsistencyLevel);
             return this;
         }
 
-        public Builder setMaxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
+        public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
             this.maxIntervalInSeconds = maxIntervalInSeconds;
             return this;
         }
 
-        public Builder setMaxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
+        public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
             this.maxStalenessPrefix = maxStalenessPrefix;
             return this;
         }

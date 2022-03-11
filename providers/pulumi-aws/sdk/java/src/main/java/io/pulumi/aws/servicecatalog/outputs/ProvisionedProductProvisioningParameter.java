@@ -28,11 +28,11 @@ public final class ProvisionedProductProvisioningParameter {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","usePreviousValue","value"})
+    @OutputCustomType.Constructor
     private ProvisionedProductProvisioningParameter(
-        String key,
-        @Nullable Boolean usePreviousValue,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("usePreviousValue") @Nullable Boolean usePreviousValue,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.usePreviousValue = usePreviousValue;
         this.value = value;
@@ -84,17 +84,17 @@ public final class ProvisionedProductProvisioningParameter {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setUsePreviousValue(@Nullable Boolean usePreviousValue) {
+        public Builder usePreviousValue(@Nullable Boolean usePreviousValue) {
             this.usePreviousValue = usePreviousValue;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

@@ -15,11 +15,11 @@ public final class RRSetRoutingPolicyResponse {
     private final String kind;
     private final RRSetRoutingPolicyWrrPolicyResponse wrr;
 
-    @OutputCustomType.Constructor({"geo","kind","wrr"})
+    @OutputCustomType.Constructor
     private RRSetRoutingPolicyResponse(
-        RRSetRoutingPolicyGeoPolicyResponse geo,
-        String kind,
-        RRSetRoutingPolicyWrrPolicyResponse wrr) {
+        @OutputCustomType.Parameter("geo") RRSetRoutingPolicyGeoPolicyResponse geo,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("wrr") RRSetRoutingPolicyWrrPolicyResponse wrr) {
         this.geo = geo;
         this.kind = kind;
         this.wrr = wrr;
@@ -59,17 +59,17 @@ public final class RRSetRoutingPolicyResponse {
     	      this.wrr = defaults.wrr;
         }
 
-        public Builder setGeo(RRSetRoutingPolicyGeoPolicyResponse geo) {
+        public Builder geo(RRSetRoutingPolicyGeoPolicyResponse geo) {
             this.geo = Objects.requireNonNull(geo);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setWrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
+        public Builder wrr(RRSetRoutingPolicyWrrPolicyResponse wrr) {
             this.wrr = Objects.requireNonNull(wrr);
             return this;
         }

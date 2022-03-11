@@ -22,10 +22,10 @@ public final class WebhookThrottleConfig {
      */
     private final @Nullable Integer qps;
 
-    @OutputCustomType.Constructor({"burst","qps"})
+    @OutputCustomType.Constructor
     private WebhookThrottleConfig(
-        @Nullable Integer burst,
-        @Nullable Integer qps) {
+        @OutputCustomType.Parameter("burst") @Nullable Integer burst,
+        @OutputCustomType.Parameter("qps") @Nullable Integer qps) {
         this.burst = burst;
         this.qps = qps;
     }
@@ -67,12 +67,12 @@ public final class WebhookThrottleConfig {
     	      this.qps = defaults.qps;
         }
 
-        public Builder setBurst(@Nullable Integer burst) {
+        public Builder burst(@Nullable Integer burst) {
             this.burst = burst;
             return this;
         }
 
-        public Builder setQps(@Nullable Integer qps) {
+        public Builder qps(@Nullable Integer qps) {
             this.qps = qps;
             return this;
         }

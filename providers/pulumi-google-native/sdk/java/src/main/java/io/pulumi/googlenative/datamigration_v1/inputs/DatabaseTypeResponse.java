@@ -72,12 +72,12 @@ public final class DatabaseTypeResponse extends io.pulumi.resources.InvokeArgs {
     	      this.provider = defaults.provider;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }

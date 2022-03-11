@@ -74,22 +74,22 @@ public final class RequestUtilizationArgs extends io.pulumi.resources.ResourceAr
     	      this.targetRequestCountPerSecond = defaults.targetRequestCountPerSecond;
         }
 
-        public Builder setTargetConcurrentRequests(@Nullable Input<Integer> targetConcurrentRequests) {
+        public Builder targetConcurrentRequests(@Nullable Input<Integer> targetConcurrentRequests) {
             this.targetConcurrentRequests = targetConcurrentRequests;
             return this;
         }
 
-        public Builder setTargetConcurrentRequests(@Nullable Integer targetConcurrentRequests) {
+        public Builder targetConcurrentRequests(@Nullable Integer targetConcurrentRequests) {
             this.targetConcurrentRequests = Input.ofNullable(targetConcurrentRequests);
             return this;
         }
 
-        public Builder setTargetRequestCountPerSecond(@Nullable Input<Integer> targetRequestCountPerSecond) {
+        public Builder targetRequestCountPerSecond(@Nullable Input<Integer> targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
 
-        public Builder setTargetRequestCountPerSecond(@Nullable Integer targetRequestCountPerSecond) {
+        public Builder targetRequestCountPerSecond(@Nullable Integer targetRequestCountPerSecond) {
             this.targetRequestCountPerSecond = Input.ofNullable(targetRequestCountPerSecond);
             return this;
         }

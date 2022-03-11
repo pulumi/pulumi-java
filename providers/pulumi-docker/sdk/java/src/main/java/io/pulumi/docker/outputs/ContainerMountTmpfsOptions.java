@@ -14,10 +14,10 @@ public final class ContainerMountTmpfsOptions {
     private final @Nullable Integer mode;
     private final @Nullable Integer sizeBytes;
 
-    @OutputCustomType.Constructor({"mode","sizeBytes"})
+    @OutputCustomType.Constructor
     private ContainerMountTmpfsOptions(
-        @Nullable Integer mode,
-        @Nullable Integer sizeBytes) {
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("sizeBytes") @Nullable Integer sizeBytes) {
         this.mode = mode;
         this.sizeBytes = sizeBytes;
     }
@@ -51,12 +51,12 @@ public final class ContainerMountTmpfsOptions {
     	      this.sizeBytes = defaults.sizeBytes;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setSizeBytes(@Nullable Integer sizeBytes) {
+        public Builder sizeBytes(@Nullable Integer sizeBytes) {
             this.sizeBytes = sizeBytes;
             return this;
         }

@@ -14,10 +14,10 @@ public final class BotSlotTypeValue {
     private final BotSampleValue sampleValue;
     private final @Nullable List<BotSampleValue> synonyms;
 
-    @OutputCustomType.Constructor({"sampleValue","synonyms"})
+    @OutputCustomType.Constructor
     private BotSlotTypeValue(
-        BotSampleValue sampleValue,
-        @Nullable List<BotSampleValue> synonyms) {
+        @OutputCustomType.Parameter("sampleValue") BotSampleValue sampleValue,
+        @OutputCustomType.Parameter("synonyms") @Nullable List<BotSampleValue> synonyms) {
         this.sampleValue = sampleValue;
         this.synonyms = synonyms;
     }
@@ -51,12 +51,12 @@ public final class BotSlotTypeValue {
     	      this.synonyms = defaults.synonyms;
         }
 
-        public Builder setSampleValue(BotSampleValue sampleValue) {
+        public Builder sampleValue(BotSampleValue sampleValue) {
             this.sampleValue = Objects.requireNonNull(sampleValue);
             return this;
         }
 
-        public Builder setSynonyms(@Nullable List<BotSampleValue> synonyms) {
+        public Builder synonyms(@Nullable List<BotSampleValue> synonyms) {
             this.synonyms = synonyms;
             return this;
         }

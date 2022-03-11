@@ -37,13 +37,13 @@ public final class OriginEndpointHlsEncryption {
     private final @Nullable Boolean repeatExtXKey;
     private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
-    @OutputCustomType.Constructor({"constantInitializationVector","encryptionMethod","keyRotationIntervalSeconds","repeatExtXKey","spekeKeyProvider"})
+    @OutputCustomType.Constructor
     private OriginEndpointHlsEncryption(
-        @Nullable String constantInitializationVector,
-        @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
-        @Nullable Integer keyRotationIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        @OutputCustomType.Parameter("constantInitializationVector") @Nullable String constantInitializationVector,
+        @OutputCustomType.Parameter("encryptionMethod") @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod,
+        @OutputCustomType.Parameter("keyRotationIntervalSeconds") @Nullable Integer keyRotationIntervalSeconds,
+        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @OutputCustomType.Parameter("spekeKeyProvider") OriginEndpointSpekeKeyProvider spekeKeyProvider) {
         this.constantInitializationVector = constantInitializationVector;
         this.encryptionMethod = encryptionMethod;
         this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
@@ -111,27 +111,27 @@ public final class OriginEndpointHlsEncryption {
     	      this.spekeKeyProvider = defaults.spekeKeyProvider;
         }
 
-        public Builder setConstantInitializationVector(@Nullable String constantInitializationVector) {
+        public Builder constantInitializationVector(@Nullable String constantInitializationVector) {
             this.constantInitializationVector = constantInitializationVector;
             return this;
         }
 
-        public Builder setEncryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
+        public Builder encryptionMethod(@Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod) {
             this.encryptionMethod = encryptionMethod;
             return this;
         }
 
-        public Builder setKeyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
+        public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
             this.keyRotationIntervalSeconds = keyRotationIntervalSeconds;
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Boolean repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
-        public Builder setSpekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
+        public Builder spekeKeyProvider(OriginEndpointSpekeKeyProvider spekeKeyProvider) {
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }

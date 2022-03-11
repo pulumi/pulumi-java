@@ -62,16 +62,16 @@ public final class FabricPropertiesResponse {
      */
     private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
-    @OutputCustomType.Constructor({"bcdrState","customDetails","encryptionDetails","friendlyName","health","healthErrorDetails","internalIdentifier","rolloverEncryptionDetails"})
+    @OutputCustomType.Constructor
     private FabricPropertiesResponse(
-        @Nullable String bcdrState,
-        @Nullable Object customDetails,
-        @Nullable EncryptionDetailsResponse encryptionDetails,
-        @Nullable String friendlyName,
-        @Nullable String health,
-        @Nullable List<HealthErrorResponse> healthErrorDetails,
-        @Nullable String internalIdentifier,
-        @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
+        @OutputCustomType.Parameter("bcdrState") @Nullable String bcdrState,
+        @OutputCustomType.Parameter("customDetails") @Nullable Object customDetails,
+        @OutputCustomType.Parameter("encryptionDetails") @Nullable EncryptionDetailsResponse encryptionDetails,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthErrorDetails") @Nullable List<HealthErrorResponse> healthErrorDetails,
+        @OutputCustomType.Parameter("internalIdentifier") @Nullable String internalIdentifier,
+        @OutputCustomType.Parameter("rolloverEncryptionDetails") @Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
         this.bcdrState = bcdrState;
         this.customDetails = customDetails;
         this.encryptionDetails = encryptionDetails;
@@ -173,42 +173,42 @@ public final class FabricPropertiesResponse {
     	      this.rolloverEncryptionDetails = defaults.rolloverEncryptionDetails;
         }
 
-        public Builder setBcdrState(@Nullable String bcdrState) {
+        public Builder bcdrState(@Nullable String bcdrState) {
             this.bcdrState = bcdrState;
             return this;
         }
 
-        public Builder setCustomDetails(@Nullable Object customDetails) {
+        public Builder customDetails(@Nullable Object customDetails) {
             this.customDetails = customDetails;
             return this;
         }
 
-        public Builder setEncryptionDetails(@Nullable EncryptionDetailsResponse encryptionDetails) {
+        public Builder encryptionDetails(@Nullable EncryptionDetailsResponse encryptionDetails) {
             this.encryptionDetails = encryptionDetails;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealth(@Nullable String health) {
+        public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
+        public Builder healthErrorDetails(@Nullable List<HealthErrorResponse> healthErrorDetails) {
             this.healthErrorDetails = healthErrorDetails;
             return this;
         }
 
-        public Builder setInternalIdentifier(@Nullable String internalIdentifier) {
+        public Builder internalIdentifier(@Nullable String internalIdentifier) {
             this.internalIdentifier = internalIdentifier;
             return this;
         }
 
-        public Builder setRolloverEncryptionDetails(@Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
+        public Builder rolloverEncryptionDetails(@Nullable EncryptionDetailsResponse rolloverEncryptionDetails) {
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
         }

@@ -28,11 +28,11 @@ public final class PartitionStorageDescriptorSkewedInfo {
      */
     private final @Nullable List<String> skewedColumnValues;
 
-    @OutputCustomType.Constructor({"skewedColumnNames","skewedColumnValueLocationMaps","skewedColumnValues"})
+    @OutputCustomType.Constructor
     private PartitionStorageDescriptorSkewedInfo(
-        @Nullable List<String> skewedColumnNames,
-        @Nullable Map<String,String> skewedColumnValueLocationMaps,
-        @Nullable List<String> skewedColumnValues) {
+        @OutputCustomType.Parameter("skewedColumnNames") @Nullable List<String> skewedColumnNames,
+        @OutputCustomType.Parameter("skewedColumnValueLocationMaps") @Nullable Map<String,String> skewedColumnValueLocationMaps,
+        @OutputCustomType.Parameter("skewedColumnValues") @Nullable List<String> skewedColumnValues) {
         this.skewedColumnNames = skewedColumnNames;
         this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
         this.skewedColumnValues = skewedColumnValues;
@@ -84,17 +84,17 @@ public final class PartitionStorageDescriptorSkewedInfo {
     	      this.skewedColumnValues = defaults.skewedColumnValues;
         }
 
-        public Builder setSkewedColumnNames(@Nullable List<String> skewedColumnNames) {
+        public Builder skewedColumnNames(@Nullable List<String> skewedColumnNames) {
             this.skewedColumnNames = skewedColumnNames;
             return this;
         }
 
-        public Builder setSkewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
+        public Builder skewedColumnValueLocationMaps(@Nullable Map<String,String> skewedColumnValueLocationMaps) {
             this.skewedColumnValueLocationMaps = skewedColumnValueLocationMaps;
             return this;
         }
 
-        public Builder setSkewedColumnValues(@Nullable List<String> skewedColumnValues) {
+        public Builder skewedColumnValues(@Nullable List<String> skewedColumnValues) {
             this.skewedColumnValues = skewedColumnValues;
             return this;
         }

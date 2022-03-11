@@ -266,142 +266,142 @@ public final class NotebookInstanceArgs extends io.pulumi.resources.ResourceArgs
     	      this.volumeSize = defaults.volumeSize;
         }
 
-        public Builder setAdditionalCodeRepositories(@Nullable Input<List<String>> additionalCodeRepositories) {
+        public Builder additionalCodeRepositories(@Nullable Input<List<String>> additionalCodeRepositories) {
             this.additionalCodeRepositories = additionalCodeRepositories;
             return this;
         }
 
-        public Builder setAdditionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
+        public Builder additionalCodeRepositories(@Nullable List<String> additionalCodeRepositories) {
             this.additionalCodeRepositories = Input.ofNullable(additionalCodeRepositories);
             return this;
         }
 
-        public Builder setDefaultCodeRepository(@Nullable Input<String> defaultCodeRepository) {
+        public Builder defaultCodeRepository(@Nullable Input<String> defaultCodeRepository) {
             this.defaultCodeRepository = defaultCodeRepository;
             return this;
         }
 
-        public Builder setDefaultCodeRepository(@Nullable String defaultCodeRepository) {
+        public Builder defaultCodeRepository(@Nullable String defaultCodeRepository) {
             this.defaultCodeRepository = Input.ofNullable(defaultCodeRepository);
             return this;
         }
 
-        public Builder setDirectInternetAccess(@Nullable Input<String> directInternetAccess) {
+        public Builder directInternetAccess(@Nullable Input<String> directInternetAccess) {
             this.directInternetAccess = directInternetAccess;
             return this;
         }
 
-        public Builder setDirectInternetAccess(@Nullable String directInternetAccess) {
+        public Builder directInternetAccess(@Nullable String directInternetAccess) {
             this.directInternetAccess = Input.ofNullable(directInternetAccess);
             return this;
         }
 
-        public Builder setInstanceType(Input<String> instanceType) {
+        public Builder instanceType(Input<String> instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setLifecycleConfigName(@Nullable Input<String> lifecycleConfigName) {
+        public Builder lifecycleConfigName(@Nullable Input<String> lifecycleConfigName) {
             this.lifecycleConfigName = lifecycleConfigName;
             return this;
         }
 
-        public Builder setLifecycleConfigName(@Nullable String lifecycleConfigName) {
+        public Builder lifecycleConfigName(@Nullable String lifecycleConfigName) {
             this.lifecycleConfigName = Input.ofNullable(lifecycleConfigName);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPlatformIdentifier(@Nullable Input<String> platformIdentifier) {
+        public Builder platformIdentifier(@Nullable Input<String> platformIdentifier) {
             this.platformIdentifier = platformIdentifier;
             return this;
         }
 
-        public Builder setPlatformIdentifier(@Nullable String platformIdentifier) {
+        public Builder platformIdentifier(@Nullable String platformIdentifier) {
             this.platformIdentifier = Input.ofNullable(platformIdentifier);
             return this;
         }
 
-        public Builder setRoleArn(Input<String> roleArn) {
+        public Builder roleArn(Input<String> roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
 
-        public Builder setRootAccess(@Nullable Input<String> rootAccess) {
+        public Builder rootAccess(@Nullable Input<String> rootAccess) {
             this.rootAccess = rootAccess;
             return this;
         }
 
-        public Builder setRootAccess(@Nullable String rootAccess) {
+        public Builder rootAccess(@Nullable String rootAccess) {
             this.rootAccess = Input.ofNullable(rootAccess);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setSubnetId(@Nullable Input<String> subnetId) {
+        public Builder subnetId(@Nullable Input<String> subnetId) {
             this.subnetId = subnetId;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Input<Integer> volumeSize) {
+        public Builder volumeSize(@Nullable Input<Integer> volumeSize) {
             this.volumeSize = volumeSize;
             return this;
         }
 
-        public Builder setVolumeSize(@Nullable Integer volumeSize) {
+        public Builder volumeSize(@Nullable Integer volumeSize) {
             this.volumeSize = Input.ofNullable(volumeSize);
             return this;
         }

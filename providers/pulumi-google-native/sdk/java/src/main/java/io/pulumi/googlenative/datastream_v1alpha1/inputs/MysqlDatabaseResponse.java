@@ -74,12 +74,12 @@ public final class MysqlDatabaseResponse extends io.pulumi.resources.InvokeArgs 
     	      this.mysqlTables = defaults.mysqlTables;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setMysqlTables(List<MysqlTableResponse> mysqlTables) {
+        public Builder mysqlTables(List<MysqlTableResponse> mysqlTables) {
             this.mysqlTables = Objects.requireNonNull(mysqlTables);
             return this;
         }

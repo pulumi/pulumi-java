@@ -59,17 +59,17 @@ public final class GetDocumentResult {
      */
     private final String rawContent;
 
-    @OutputCustomType.Constructor({"contentUri","displayName","enableAutoReload","knowledgeTypes","latestReloadStatus","metadata","mimeType","name","rawContent"})
+    @OutputCustomType.Constructor
     private GetDocumentResult(
-        String contentUri,
-        String displayName,
-        Boolean enableAutoReload,
-        List<String> knowledgeTypes,
-        GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
-        Map<String,String> metadata,
-        String mimeType,
-        String name,
-        String rawContent) {
+        @OutputCustomType.Parameter("contentUri") String contentUri,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enableAutoReload") Boolean enableAutoReload,
+        @OutputCustomType.Parameter("knowledgeTypes") List<String> knowledgeTypes,
+        @OutputCustomType.Parameter("latestReloadStatus") GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus,
+        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
+        @OutputCustomType.Parameter("mimeType") String mimeType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rawContent") String rawContent) {
         this.contentUri = contentUri;
         this.displayName = displayName;
         this.enableAutoReload = enableAutoReload;
@@ -181,47 +181,47 @@ public final class GetDocumentResult {
     	      this.rawContent = defaults.rawContent;
         }
 
-        public Builder setContentUri(String contentUri) {
+        public Builder contentUri(String contentUri) {
             this.contentUri = Objects.requireNonNull(contentUri);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnableAutoReload(Boolean enableAutoReload) {
+        public Builder enableAutoReload(Boolean enableAutoReload) {
             this.enableAutoReload = Objects.requireNonNull(enableAutoReload);
             return this;
         }
 
-        public Builder setKnowledgeTypes(List<String> knowledgeTypes) {
+        public Builder knowledgeTypes(List<String> knowledgeTypes) {
             this.knowledgeTypes = Objects.requireNonNull(knowledgeTypes);
             return this;
         }
 
-        public Builder setLatestReloadStatus(GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus) {
+        public Builder latestReloadStatus(GoogleCloudDialogflowV2DocumentReloadStatusResponse latestReloadStatus) {
             this.latestReloadStatus = Objects.requireNonNull(latestReloadStatus);
             return this;
         }
 
-        public Builder setMetadata(Map<String,String> metadata) {
+        public Builder metadata(Map<String,String> metadata) {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
 
-        public Builder setMimeType(String mimeType) {
+        public Builder mimeType(String mimeType) {
             this.mimeType = Objects.requireNonNull(mimeType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRawContent(String rawContent) {
+        public Builder rawContent(String rawContent) {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
         }

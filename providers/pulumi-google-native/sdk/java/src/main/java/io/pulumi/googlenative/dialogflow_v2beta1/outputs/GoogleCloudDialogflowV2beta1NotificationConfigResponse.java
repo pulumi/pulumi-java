@@ -20,10 +20,10 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"messageFormat","topic"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1NotificationConfigResponse(
-        String messageFormat,
-        String topic) {
+        @OutputCustomType.Parameter("messageFormat") String messageFormat,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.messageFormat = messageFormat;
         this.topic = topic;
     }
@@ -65,12 +65,12 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setMessageFormat(String messageFormat) {
+        public Builder messageFormat(String messageFormat) {
             this.messageFormat = Objects.requireNonNull(messageFormat);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

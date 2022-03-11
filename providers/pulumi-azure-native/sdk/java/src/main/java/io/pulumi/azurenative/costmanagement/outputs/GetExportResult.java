@@ -66,18 +66,18 @@ public final class GetExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","deliveryInfo","eTag","format","id","name","nextRunTimeEstimate","runHistory","schedule","type"})
+    @OutputCustomType.Constructor
     private GetExportResult(
-        ExportDefinitionResponse definition,
-        ExportDeliveryInfoResponse deliveryInfo,
-        @Nullable String eTag,
-        @Nullable String format,
-        String id,
-        String name,
-        String nextRunTimeEstimate,
-        @Nullable ExportExecutionListResultResponse runHistory,
-        @Nullable ExportScheduleResponse schedule,
-        String type) {
+        @OutputCustomType.Parameter("definition") ExportDefinitionResponse definition,
+        @OutputCustomType.Parameter("deliveryInfo") ExportDeliveryInfoResponse deliveryInfo,
+        @OutputCustomType.Parameter("eTag") @Nullable String eTag,
+        @OutputCustomType.Parameter("format") @Nullable String format,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nextRunTimeEstimate") String nextRunTimeEstimate,
+        @OutputCustomType.Parameter("runHistory") @Nullable ExportExecutionListResultResponse runHistory,
+        @OutputCustomType.Parameter("schedule") @Nullable ExportScheduleResponse schedule,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.deliveryInfo = deliveryInfo;
         this.eTag = eTag;
@@ -199,52 +199,52 @@ public final class GetExportResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(ExportDefinitionResponse definition) {
+        public Builder definition(ExportDefinitionResponse definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setDeliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
+        public Builder deliveryInfo(ExportDeliveryInfoResponse deliveryInfo) {
             this.deliveryInfo = Objects.requireNonNull(deliveryInfo);
             return this;
         }
 
-        public Builder setETag(@Nullable String eTag) {
+        public Builder eTag(@Nullable String eTag) {
             this.eTag = eTag;
             return this;
         }
 
-        public Builder setFormat(@Nullable String format) {
+        public Builder format(@Nullable String format) {
             this.format = format;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNextRunTimeEstimate(String nextRunTimeEstimate) {
+        public Builder nextRunTimeEstimate(String nextRunTimeEstimate) {
             this.nextRunTimeEstimate = Objects.requireNonNull(nextRunTimeEstimate);
             return this;
         }
 
-        public Builder setRunHistory(@Nullable ExportExecutionListResultResponse runHistory) {
+        public Builder runHistory(@Nullable ExportExecutionListResultResponse runHistory) {
             this.runHistory = runHistory;
             return this;
         }
 
-        public Builder setSchedule(@Nullable ExportScheduleResponse schedule) {
+        public Builder schedule(@Nullable ExportScheduleResponse schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

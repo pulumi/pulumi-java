@@ -318,172 +318,172 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
     	      this.version = defaults.version;
         }
 
-        public Builder setAnalyzed(@Nullable Input<Boolean> analyzed) {
+        public Builder analyzed(@Nullable Input<Boolean> analyzed) {
             this.analyzed = analyzed;
             return this;
         }
 
-        public Builder setAnalyzed(@Nullable Boolean analyzed) {
+        public Builder analyzed(@Nullable Boolean analyzed) {
             this.analyzed = Input.ofNullable(analyzed);
             return this;
         }
 
-        public Builder setAttribution(@Nullable Input<String> attribution) {
+        public Builder attribution(@Nullable Input<String> attribution) {
             this.attribution = attribution;
             return this;
         }
 
-        public Builder setAttribution(@Nullable String attribution) {
+        public Builder attribution(@Nullable String attribution) {
             this.attribution = Input.ofNullable(attribution);
             return this;
         }
 
-        public Builder setChecksum(@Nullable Input<String> checksum) {
+        public Builder checksum(@Nullable Input<String> checksum) {
             this.checksum = checksum;
             return this;
         }
 
-        public Builder setChecksum(@Nullable String checksum) {
+        public Builder checksum(@Nullable String checksum) {
             this.checksum = Input.ofNullable(checksum);
             return this;
         }
 
-        public Builder setCopyright(@Nullable Input<String> copyright) {
+        public Builder copyright(@Nullable Input<String> copyright) {
             this.copyright = copyright;
             return this;
         }
 
-        public Builder setCopyright(@Nullable String copyright) {
+        public Builder copyright(@Nullable String copyright) {
             this.copyright = Input.ofNullable(copyright);
             return this;
         }
 
-        public Builder setDetailedDescription(@Nullable Input<String> detailedDescription) {
+        public Builder detailedDescription(@Nullable Input<String> detailedDescription) {
             this.detailedDescription = detailedDescription;
             return this;
         }
 
-        public Builder setDetailedDescription(@Nullable String detailedDescription) {
+        public Builder detailedDescription(@Nullable String detailedDescription) {
             this.detailedDescription = Input.ofNullable(detailedDescription);
             return this;
         }
 
-        public Builder setDownloadLocation(@Nullable Input<String> downloadLocation) {
+        public Builder downloadLocation(@Nullable Input<String> downloadLocation) {
             this.downloadLocation = downloadLocation;
             return this;
         }
 
-        public Builder setDownloadLocation(@Nullable String downloadLocation) {
+        public Builder downloadLocation(@Nullable String downloadLocation) {
             this.downloadLocation = Input.ofNullable(downloadLocation);
             return this;
         }
 
-        public Builder setExternalRefs(@Nullable Input<List<ExternalRefArgs>> externalRefs) {
+        public Builder externalRefs(@Nullable Input<List<ExternalRefArgs>> externalRefs) {
             this.externalRefs = externalRefs;
             return this;
         }
 
-        public Builder setExternalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
+        public Builder externalRefs(@Nullable List<ExternalRefArgs> externalRefs) {
             this.externalRefs = Input.ofNullable(externalRefs);
             return this;
         }
 
-        public Builder setFilesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable Input<List<String>> filesLicenseInfo) {
             this.filesLicenseInfo = filesLicenseInfo;
             return this;
         }
 
-        public Builder setFilesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
+        public Builder filesLicenseInfo(@Nullable List<String> filesLicenseInfo) {
             this.filesLicenseInfo = Input.ofNullable(filesLicenseInfo);
             return this;
         }
 
-        public Builder setHomePage(@Nullable Input<String> homePage) {
+        public Builder homePage(@Nullable Input<String> homePage) {
             this.homePage = homePage;
             return this;
         }
 
-        public Builder setHomePage(@Nullable String homePage) {
+        public Builder homePage(@Nullable String homePage) {
             this.homePage = Input.ofNullable(homePage);
             return this;
         }
 
-        public Builder setLicenseDeclared(@Nullable Input<LicenseArgs> licenseDeclared) {
+        public Builder licenseDeclared(@Nullable Input<LicenseArgs> licenseDeclared) {
             this.licenseDeclared = licenseDeclared;
             return this;
         }
 
-        public Builder setLicenseDeclared(@Nullable LicenseArgs licenseDeclared) {
+        public Builder licenseDeclared(@Nullable LicenseArgs licenseDeclared) {
             this.licenseDeclared = Input.ofNullable(licenseDeclared);
             return this;
         }
 
-        public Builder setOriginator(@Nullable Input<String> originator) {
+        public Builder originator(@Nullable Input<String> originator) {
             this.originator = originator;
             return this;
         }
 
-        public Builder setOriginator(@Nullable String originator) {
+        public Builder originator(@Nullable String originator) {
             this.originator = Input.ofNullable(originator);
             return this;
         }
 
-        public Builder setPackageType(@Nullable Input<String> packageType) {
+        public Builder packageType(@Nullable Input<String> packageType) {
             this.packageType = packageType;
             return this;
         }
 
-        public Builder setPackageType(@Nullable String packageType) {
+        public Builder packageType(@Nullable String packageType) {
             this.packageType = Input.ofNullable(packageType);
             return this;
         }
 
-        public Builder setSummaryDescription(@Nullable Input<String> summaryDescription) {
+        public Builder summaryDescription(@Nullable Input<String> summaryDescription) {
             this.summaryDescription = summaryDescription;
             return this;
         }
 
-        public Builder setSummaryDescription(@Nullable String summaryDescription) {
+        public Builder summaryDescription(@Nullable String summaryDescription) {
             this.summaryDescription = Input.ofNullable(summaryDescription);
             return this;
         }
 
-        public Builder setSupplier(@Nullable Input<String> supplier) {
+        public Builder supplier(@Nullable Input<String> supplier) {
             this.supplier = supplier;
             return this;
         }
 
-        public Builder setSupplier(@Nullable String supplier) {
+        public Builder supplier(@Nullable String supplier) {
             this.supplier = Input.ofNullable(supplier);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }
 
-        public Builder setVerificationCode(@Nullable Input<String> verificationCode) {
+        public Builder verificationCode(@Nullable Input<String> verificationCode) {
             this.verificationCode = verificationCode;
             return this;
         }
 
-        public Builder setVerificationCode(@Nullable String verificationCode) {
+        public Builder verificationCode(@Nullable String verificationCode) {
             this.verificationCode = Input.ofNullable(verificationCode);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

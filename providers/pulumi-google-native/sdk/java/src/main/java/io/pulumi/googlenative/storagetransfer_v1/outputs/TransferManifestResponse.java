@@ -15,8 +15,8 @@ public final class TransferManifestResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"location"})
-    private TransferManifestResponse(String location) {
+    @OutputCustomType.Constructor
+    private TransferManifestResponse(@OutputCustomType.Parameter("location") String location) {
         this.location = location;
     }
 
@@ -48,7 +48,7 @@ public final class TransferManifestResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

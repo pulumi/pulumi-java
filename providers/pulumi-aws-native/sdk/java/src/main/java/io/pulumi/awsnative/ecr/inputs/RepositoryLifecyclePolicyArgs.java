@@ -66,22 +66,22 @@ public final class RepositoryLifecyclePolicyArgs extends io.pulumi.resources.Res
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setLifecyclePolicyText(@Nullable Input<String> lifecyclePolicyText) {
+        public Builder lifecyclePolicyText(@Nullable Input<String> lifecyclePolicyText) {
             this.lifecyclePolicyText = lifecyclePolicyText;
             return this;
         }
 
-        public Builder setLifecyclePolicyText(@Nullable String lifecyclePolicyText) {
+        public Builder lifecyclePolicyText(@Nullable String lifecyclePolicyText) {
             this.lifecyclePolicyText = Input.ofNullable(lifecyclePolicyText);
             return this;
         }
 
-        public Builder setRegistryId(@Nullable Input<String> registryId) {
+        public Builder registryId(@Nullable Input<String> registryId) {
             this.registryId = registryId;
             return this;
         }
 
-        public Builder setRegistryId(@Nullable String registryId) {
+        public Builder registryId(@Nullable String registryId) {
             this.registryId = Input.ofNullable(registryId);
             return this;
         }

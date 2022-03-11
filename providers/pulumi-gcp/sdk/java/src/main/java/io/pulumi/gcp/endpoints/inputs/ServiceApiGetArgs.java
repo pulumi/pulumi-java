@@ -88,42 +88,42 @@ public final class ServiceApiGetArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setMethods(@Nullable Input<List<ServiceApiMethodGetArgs>> methods) {
+        public Builder methods(@Nullable Input<List<ServiceApiMethodGetArgs>> methods) {
             this.methods = methods;
             return this;
         }
 
-        public Builder setMethods(@Nullable List<ServiceApiMethodGetArgs> methods) {
+        public Builder methods(@Nullable List<ServiceApiMethodGetArgs> methods) {
             this.methods = Input.ofNullable(methods);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setSyntax(@Nullable Input<String> syntax) {
+        public Builder syntax(@Nullable Input<String> syntax) {
             this.syntax = syntax;
             return this;
         }
 
-        public Builder setSyntax(@Nullable String syntax) {
+        public Builder syntax(@Nullable String syntax) {
             this.syntax = Input.ofNullable(syntax);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<String> version) {
+        public Builder version(@Nullable Input<String> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = Input.ofNullable(version);
             return this;
         }

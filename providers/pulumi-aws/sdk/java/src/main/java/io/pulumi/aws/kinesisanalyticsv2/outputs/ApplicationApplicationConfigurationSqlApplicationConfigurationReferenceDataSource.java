@@ -30,12 +30,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
      */
     private final String tableName;
 
-    @OutputCustomType.Constructor({"referenceId","referenceSchema","s3ReferenceDataSource","tableName"})
+    @OutputCustomType.Constructor
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSource(
-        @Nullable String referenceId,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
-        ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
-        String tableName) {
+        @OutputCustomType.Parameter("referenceId") @Nullable String referenceId,
+        @OutputCustomType.Parameter("referenceSchema") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema,
+        @OutputCustomType.Parameter("s3ReferenceDataSource") ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource,
+        @OutputCustomType.Parameter("tableName") String tableName) {
         this.referenceId = referenceId;
         this.referenceSchema = referenceSchema;
         this.s3ReferenceDataSource = s3ReferenceDataSource;
@@ -93,22 +93,22 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     	      this.tableName = defaults.tableName;
         }
 
-        public Builder setReferenceId(@Nullable String referenceId) {
+        public Builder referenceId(@Nullable String referenceId) {
             this.referenceId = referenceId;
             return this;
         }
 
-        public Builder setReferenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema) {
+        public Builder referenceSchema(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchema referenceSchema) {
             this.referenceSchema = Objects.requireNonNull(referenceSchema);
             return this;
         }
 
-        public Builder setS3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource) {
+        public Builder s3ReferenceDataSource(ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceS3ReferenceDataSource s3ReferenceDataSource) {
             this.s3ReferenceDataSource = Objects.requireNonNull(s3ReferenceDataSource);
             return this;
         }
 
-        public Builder setTableName(String tableName) {
+        public Builder tableName(String tableName) {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }

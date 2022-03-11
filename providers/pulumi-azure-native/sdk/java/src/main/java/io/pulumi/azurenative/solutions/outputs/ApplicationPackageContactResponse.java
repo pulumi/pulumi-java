@@ -27,11 +27,11 @@ public final class ApplicationPackageContactResponse {
      */
     private final String phone;
 
-    @OutputCustomType.Constructor({"contactName","email","phone"})
+    @OutputCustomType.Constructor
     private ApplicationPackageContactResponse(
-        @Nullable String contactName,
-        String email,
-        String phone) {
+        @OutputCustomType.Parameter("contactName") @Nullable String contactName,
+        @OutputCustomType.Parameter("email") String email,
+        @OutputCustomType.Parameter("phone") String phone) {
         this.contactName = contactName;
         this.email = email;
         this.phone = phone;
@@ -83,17 +83,17 @@ public final class ApplicationPackageContactResponse {
     	      this.phone = defaults.phone;
         }
 
-        public Builder setContactName(@Nullable String contactName) {
+        public Builder contactName(@Nullable String contactName) {
             this.contactName = contactName;
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public Builder email(String email) {
             this.email = Objects.requireNonNull(email);
             return this;
         }
 
-        public Builder setPhone(String phone) {
+        public Builder phone(String phone) {
             this.phone = Objects.requireNonNull(phone);
             return this;
         }

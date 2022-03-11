@@ -15,8 +15,8 @@ public final class DatabaseInfoResponse {
      */
     private final String sourceDatabaseName;
 
-    @OutputCustomType.Constructor({"sourceDatabaseName"})
-    private DatabaseInfoResponse(String sourceDatabaseName) {
+    @OutputCustomType.Constructor
+    private DatabaseInfoResponse(@OutputCustomType.Parameter("sourceDatabaseName") String sourceDatabaseName) {
         this.sourceDatabaseName = sourceDatabaseName;
     }
 
@@ -48,7 +48,7 @@ public final class DatabaseInfoResponse {
     	      this.sourceDatabaseName = defaults.sourceDatabaseName;
         }
 
-        public Builder setSourceDatabaseName(String sourceDatabaseName) {
+        public Builder sourceDatabaseName(String sourceDatabaseName) {
             this.sourceDatabaseName = Objects.requireNonNull(sourceDatabaseName);
             return this;
         }

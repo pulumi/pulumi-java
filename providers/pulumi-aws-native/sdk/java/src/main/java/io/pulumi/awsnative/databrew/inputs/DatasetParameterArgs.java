@@ -110,52 +110,52 @@ public final class DatasetParameterArgs extends io.pulumi.resources.ResourceArgs
     	      this.type = defaults.type;
         }
 
-        public Builder setCreateColumn(@Nullable Input<Boolean> createColumn) {
+        public Builder createColumn(@Nullable Input<Boolean> createColumn) {
             this.createColumn = createColumn;
             return this;
         }
 
-        public Builder setCreateColumn(@Nullable Boolean createColumn) {
+        public Builder createColumn(@Nullable Boolean createColumn) {
             this.createColumn = Input.ofNullable(createColumn);
             return this;
         }
 
-        public Builder setDatetimeOptions(@Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions) {
+        public Builder datetimeOptions(@Nullable Input<DatasetDatetimeOptionsArgs> datetimeOptions) {
             this.datetimeOptions = datetimeOptions;
             return this;
         }
 
-        public Builder setDatetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
+        public Builder datetimeOptions(@Nullable DatasetDatetimeOptionsArgs datetimeOptions) {
             this.datetimeOptions = Input.ofNullable(datetimeOptions);
             return this;
         }
 
-        public Builder setFilter(@Nullable Input<DatasetFilterExpressionArgs> filter) {
+        public Builder filter(@Nullable Input<DatasetFilterExpressionArgs> filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFilter(@Nullable DatasetFilterExpressionArgs filter) {
+        public Builder filter(@Nullable DatasetFilterExpressionArgs filter) {
             this.filter = Input.ofNullable(filter);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setType(Input<DatasetParameterType> type) {
+        public Builder type(Input<DatasetParameterType> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(DatasetParameterType type) {
+        public Builder type(DatasetParameterType type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

@@ -38,13 +38,13 @@ public final class ProbeSettingsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"failureThreshold","initialDelay","period","successThreshold","timeout"})
+    @OutputCustomType.Constructor
     private ProbeSettingsResponse(
-        @Nullable Integer failureThreshold,
-        @Nullable String initialDelay,
-        @Nullable String period,
-        @Nullable Integer successThreshold,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("failureThreshold") @Nullable Integer failureThreshold,
+        @OutputCustomType.Parameter("initialDelay") @Nullable String initialDelay,
+        @OutputCustomType.Parameter("period") @Nullable String period,
+        @OutputCustomType.Parameter("successThreshold") @Nullable Integer successThreshold,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.failureThreshold = failureThreshold;
         this.initialDelay = initialDelay;
         this.period = period;
@@ -116,27 +116,27 @@ public final class ProbeSettingsResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFailureThreshold(@Nullable Integer failureThreshold) {
+        public Builder failureThreshold(@Nullable Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
 
-        public Builder setInitialDelay(@Nullable String initialDelay) {
+        public Builder initialDelay(@Nullable String initialDelay) {
             this.initialDelay = initialDelay;
             return this;
         }
 
-        public Builder setPeriod(@Nullable String period) {
+        public Builder period(@Nullable String period) {
             this.period = period;
             return this;
         }
 
-        public Builder setSuccessThreshold(@Nullable Integer successThreshold) {
+        public Builder successThreshold(@Nullable Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

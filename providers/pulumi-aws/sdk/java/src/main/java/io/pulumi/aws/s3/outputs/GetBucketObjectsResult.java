@@ -42,19 +42,19 @@ public final class GetBucketObjectsResult {
     private final @Nullable String prefix;
     private final @Nullable String startAfter;
 
-    @OutputCustomType.Constructor({"bucket","commonPrefixes","delimiter","encodingType","fetchOwner","id","keys","maxKeys","owners","prefix","startAfter"})
+    @OutputCustomType.Constructor
     private GetBucketObjectsResult(
-        String bucket,
-        List<String> commonPrefixes,
-        @Nullable String delimiter,
-        @Nullable String encodingType,
-        @Nullable Boolean fetchOwner,
-        String id,
-        List<String> keys,
-        @Nullable Integer maxKeys,
-        List<String> owners,
-        @Nullable String prefix,
-        @Nullable String startAfter) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("commonPrefixes") List<String> commonPrefixes,
+        @OutputCustomType.Parameter("delimiter") @Nullable String delimiter,
+        @OutputCustomType.Parameter("encodingType") @Nullable String encodingType,
+        @OutputCustomType.Parameter("fetchOwner") @Nullable Boolean fetchOwner,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keys") List<String> keys,
+        @OutputCustomType.Parameter("maxKeys") @Nullable Integer maxKeys,
+        @OutputCustomType.Parameter("owners") List<String> owners,
+        @OutputCustomType.Parameter("prefix") @Nullable String prefix,
+        @OutputCustomType.Parameter("startAfter") @Nullable String startAfter) {
         this.bucket = bucket;
         this.commonPrefixes = commonPrefixes;
         this.delimiter = delimiter;
@@ -158,57 +158,57 @@ public final class GetBucketObjectsResult {
     	      this.startAfter = defaults.startAfter;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setCommonPrefixes(List<String> commonPrefixes) {
+        public Builder commonPrefixes(List<String> commonPrefixes) {
             this.commonPrefixes = Objects.requireNonNull(commonPrefixes);
             return this;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }
 
-        public Builder setEncodingType(@Nullable String encodingType) {
+        public Builder encodingType(@Nullable String encodingType) {
             this.encodingType = encodingType;
             return this;
         }
 
-        public Builder setFetchOwner(@Nullable Boolean fetchOwner) {
+        public Builder fetchOwner(@Nullable Boolean fetchOwner) {
             this.fetchOwner = fetchOwner;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeys(List<String> keys) {
+        public Builder keys(List<String> keys) {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
 
-        public Builder setMaxKeys(@Nullable Integer maxKeys) {
+        public Builder maxKeys(@Nullable Integer maxKeys) {
             this.maxKeys = maxKeys;
             return this;
         }
 
-        public Builder setOwners(List<String> owners) {
+        public Builder owners(List<String> owners) {
             this.owners = Objects.requireNonNull(owners);
             return this;
         }
 
-        public Builder setPrefix(@Nullable String prefix) {
+        public Builder prefix(@Nullable String prefix) {
             this.prefix = prefix;
             return this;
         }
 
-        public Builder setStartAfter(@Nullable String startAfter) {
+        public Builder startAfter(@Nullable String startAfter) {
             this.startAfter = startAfter;
             return this;
         }

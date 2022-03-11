@@ -26,11 +26,11 @@ public final class ErrorDetailResponse {
      */
     private final List<String> recommendations;
 
-    @OutputCustomType.Constructor({"code","message","recommendations"})
+    @OutputCustomType.Constructor
     private ErrorDetailResponse(
-        String code,
-        String message,
-        List<String> recommendations) {
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("recommendations") List<String> recommendations) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;
@@ -82,17 +82,17 @@ public final class ErrorDetailResponse {
     	      this.recommendations = defaults.recommendations;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setRecommendations(List<String> recommendations) {
+        public Builder recommendations(List<String> recommendations) {
             this.recommendations = Objects.requireNonNull(recommendations);
             return this;
         }

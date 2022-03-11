@@ -16,8 +16,8 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse {
      */
     private final List<String> text;
 
-    @OutputCustomType.Constructor({"text"})
-    private GoogleCloudDialogflowV2IntentMessageTextResponse(List<String> text) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDialogflowV2IntentMessageTextResponse(@OutputCustomType.Parameter("text") List<String> text) {
         this.text = text;
     }
 
@@ -49,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTextResponse {
     	      this.text = defaults.text;
         }
 
-        public Builder setText(List<String> text) {
+        public Builder text(List<String> text) {
             this.text = Objects.requireNonNull(text);
             return this;
         }

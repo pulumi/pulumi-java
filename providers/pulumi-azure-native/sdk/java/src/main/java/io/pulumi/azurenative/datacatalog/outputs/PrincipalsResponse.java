@@ -22,10 +22,10 @@ public final class PrincipalsResponse {
      */
     private final @Nullable String upn;
 
-    @OutputCustomType.Constructor({"objectId","upn"})
+    @OutputCustomType.Constructor
     private PrincipalsResponse(
-        @Nullable String objectId,
-        @Nullable String upn) {
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("upn") @Nullable String upn) {
         this.objectId = objectId;
         this.upn = upn;
     }
@@ -67,12 +67,12 @@ public final class PrincipalsResponse {
     	      this.upn = defaults.upn;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setUpn(@Nullable String upn) {
+        public Builder upn(@Nullable String upn) {
             this.upn = upn;
             return this;
         }

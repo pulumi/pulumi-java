@@ -23,10 +23,10 @@ public final class ListUpgradableVersionDetailsResult {
      */
     private final @Nullable List<String> upgradableVersions;
 
-    @OutputCustomType.Constructor({"currentVersion","upgradableVersions"})
+    @OutputCustomType.Constructor
     private ListUpgradableVersionDetailsResult(
-        @Nullable String currentVersion,
-        @Nullable List<String> upgradableVersions) {
+        @OutputCustomType.Parameter("currentVersion") @Nullable String currentVersion,
+        @OutputCustomType.Parameter("upgradableVersions") @Nullable List<String> upgradableVersions) {
         this.currentVersion = currentVersion;
         this.upgradableVersions = upgradableVersions;
     }
@@ -68,12 +68,12 @@ public final class ListUpgradableVersionDetailsResult {
     	      this.upgradableVersions = defaults.upgradableVersions;
         }
 
-        public Builder setCurrentVersion(@Nullable String currentVersion) {
+        public Builder currentVersion(@Nullable String currentVersion) {
             this.currentVersion = currentVersion;
             return this;
         }
 
-        public Builder setUpgradableVersions(@Nullable List<String> upgradableVersions) {
+        public Builder upgradableVersions(@Nullable List<String> upgradableVersions) {
             this.upgradableVersions = upgradableVersions;
             return this;
         }

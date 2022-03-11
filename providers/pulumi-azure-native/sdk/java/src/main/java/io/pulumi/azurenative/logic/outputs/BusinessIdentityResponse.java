@@ -20,10 +20,10 @@ public final class BusinessIdentityResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"qualifier","value"})
+    @OutputCustomType.Constructor
     private BusinessIdentityResponse(
-        String qualifier,
-        String value) {
+        @OutputCustomType.Parameter("qualifier") String qualifier,
+        @OutputCustomType.Parameter("value") String value) {
         this.qualifier = qualifier;
         this.value = value;
     }
@@ -65,12 +65,12 @@ public final class BusinessIdentityResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setQualifier(String qualifier) {
+        public Builder qualifier(String qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

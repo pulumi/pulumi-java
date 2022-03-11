@@ -75,22 +75,22 @@ public final class ResourceRequirementsArgs extends io.pulumi.resources.Resource
     	      this.requests = defaults.requests;
         }
 
-        public Builder setLimits(@Nullable Input<ResourceLimitsArgs> limits) {
+        public Builder limits(@Nullable Input<ResourceLimitsArgs> limits) {
             this.limits = limits;
             return this;
         }
 
-        public Builder setLimits(@Nullable ResourceLimitsArgs limits) {
+        public Builder limits(@Nullable ResourceLimitsArgs limits) {
             this.limits = Input.ofNullable(limits);
             return this;
         }
 
-        public Builder setRequests(Input<ResourceRequestsArgs> requests) {
+        public Builder requests(Input<ResourceRequestsArgs> requests) {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
 
-        public Builder setRequests(ResourceRequestsArgs requests) {
+        public Builder requests(ResourceRequestsArgs requests) {
             this.requests = Input.of(Objects.requireNonNull(requests));
             return this;
         }

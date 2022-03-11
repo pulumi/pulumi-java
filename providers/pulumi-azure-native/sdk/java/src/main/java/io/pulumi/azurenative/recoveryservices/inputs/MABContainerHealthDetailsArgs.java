@@ -108,42 +108,42 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
     	      this.title = defaults.title;
         }
 
-        public Builder setCode(@Nullable Input<Integer> code) {
+        public Builder code(@Nullable Input<Integer> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setRecommendations(@Nullable Input<List<String>> recommendations) {
+        public Builder recommendations(@Nullable Input<List<String>> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
 
-        public Builder setRecommendations(@Nullable List<String> recommendations) {
+        public Builder recommendations(@Nullable List<String> recommendations) {
             this.recommendations = Input.ofNullable(recommendations);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

@@ -153,72 +153,72 @@ public final class DomainNameState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setApiMappingSelectionExpression(@Nullable Input<String> apiMappingSelectionExpression) {
+        public Builder apiMappingSelectionExpression(@Nullable Input<String> apiMappingSelectionExpression) {
             this.apiMappingSelectionExpression = apiMappingSelectionExpression;
             return this;
         }
 
-        public Builder setApiMappingSelectionExpression(@Nullable String apiMappingSelectionExpression) {
+        public Builder apiMappingSelectionExpression(@Nullable String apiMappingSelectionExpression) {
             this.apiMappingSelectionExpression = Input.ofNullable(apiMappingSelectionExpression);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setDomainName(@Nullable Input<String> domainName) {
+        public Builder domainName(@Nullable Input<String> domainName) {
             this.domainName = domainName;
             return this;
         }
 
-        public Builder setDomainName(@Nullable String domainName) {
+        public Builder domainName(@Nullable String domainName) {
             this.domainName = Input.ofNullable(domainName);
             return this;
         }
 
-        public Builder setDomainNameConfiguration(@Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
+        public Builder domainNameConfiguration(@Nullable Input<DomainNameDomainNameConfigurationGetArgs> domainNameConfiguration) {
             this.domainNameConfiguration = domainNameConfiguration;
             return this;
         }
 
-        public Builder setDomainNameConfiguration(@Nullable DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
+        public Builder domainNameConfiguration(@Nullable DomainNameDomainNameConfigurationGetArgs domainNameConfiguration) {
             this.domainNameConfiguration = Input.ofNullable(domainNameConfiguration);
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable Input<DomainNameMutualTlsAuthenticationGetArgs> mutualTlsAuthentication) {
             this.mutualTlsAuthentication = mutualTlsAuthentication;
             return this;
         }
 
-        public Builder setMutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
+        public Builder mutualTlsAuthentication(@Nullable DomainNameMutualTlsAuthenticationGetArgs mutualTlsAuthentication) {
             this.mutualTlsAuthentication = Input.ofNullable(mutualTlsAuthentication);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

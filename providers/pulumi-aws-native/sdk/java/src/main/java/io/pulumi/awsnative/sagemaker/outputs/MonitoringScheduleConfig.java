@@ -23,12 +23,12 @@ public final class MonitoringScheduleConfig {
     private final @Nullable MonitoringScheduleMonitoringType monitoringType;
     private final @Nullable MonitoringScheduleScheduleConfig scheduleConfig;
 
-    @OutputCustomType.Constructor({"monitoringJobDefinition","monitoringJobDefinitionName","monitoringType","scheduleConfig"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleConfig(
-        @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
-        @Nullable String monitoringJobDefinitionName,
-        @Nullable MonitoringScheduleMonitoringType monitoringType,
-        @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
+        @OutputCustomType.Parameter("monitoringJobDefinition") @Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition,
+        @OutputCustomType.Parameter("monitoringJobDefinitionName") @Nullable String monitoringJobDefinitionName,
+        @OutputCustomType.Parameter("monitoringType") @Nullable MonitoringScheduleMonitoringType monitoringType,
+        @OutputCustomType.Parameter("scheduleConfig") @Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
         this.monitoringJobDefinition = monitoringJobDefinition;
         this.monitoringJobDefinitionName = monitoringJobDefinitionName;
         this.monitoringType = monitoringType;
@@ -78,22 +78,22 @@ public final class MonitoringScheduleConfig {
     	      this.scheduleConfig = defaults.scheduleConfig;
         }
 
-        public Builder setMonitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition) {
+        public Builder monitoringJobDefinition(@Nullable MonitoringScheduleMonitoringJobDefinition monitoringJobDefinition) {
             this.monitoringJobDefinition = monitoringJobDefinition;
             return this;
         }
 
-        public Builder setMonitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
+        public Builder monitoringJobDefinitionName(@Nullable String monitoringJobDefinitionName) {
             this.monitoringJobDefinitionName = monitoringJobDefinitionName;
             return this;
         }
 
-        public Builder setMonitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
+        public Builder monitoringType(@Nullable MonitoringScheduleMonitoringType monitoringType) {
             this.monitoringType = monitoringType;
             return this;
         }
 
-        public Builder setScheduleConfig(@Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
+        public Builder scheduleConfig(@Nullable MonitoringScheduleScheduleConfig scheduleConfig) {
             this.scheduleConfig = scheduleConfig;
             return this;
         }

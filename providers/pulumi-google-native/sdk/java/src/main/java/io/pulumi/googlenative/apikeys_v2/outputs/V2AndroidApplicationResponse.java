@@ -20,10 +20,10 @@ public final class V2AndroidApplicationResponse {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor({"packageName","sha1Fingerprint"})
+    @OutputCustomType.Constructor
     private V2AndroidApplicationResponse(
-        String packageName,
-        String sha1Fingerprint) {
+        @OutputCustomType.Parameter("packageName") String packageName,
+        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.packageName = packageName;
         this.sha1Fingerprint = sha1Fingerprint;
     }
@@ -65,12 +65,12 @@ public final class V2AndroidApplicationResponse {
     	      this.sha1Fingerprint = defaults.sha1Fingerprint;
         }
 
-        public Builder setPackageName(String packageName) {
+        public Builder packageName(String packageName) {
             this.packageName = Objects.requireNonNull(packageName);
             return this;
         }
 
-        public Builder setSha1Fingerprint(String sha1Fingerprint) {
+        public Builder sha1Fingerprint(String sha1Fingerprint) {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }

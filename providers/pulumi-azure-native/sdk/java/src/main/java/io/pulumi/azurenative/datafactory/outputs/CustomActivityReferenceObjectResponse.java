@@ -23,10 +23,10 @@ public final class CustomActivityReferenceObjectResponse {
      */
     private final @Nullable List<LinkedServiceReferenceResponse> linkedServices;
 
-    @OutputCustomType.Constructor({"datasets","linkedServices"})
+    @OutputCustomType.Constructor
     private CustomActivityReferenceObjectResponse(
-        @Nullable List<DatasetReferenceResponse> datasets,
-        @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        @OutputCustomType.Parameter("datasets") @Nullable List<DatasetReferenceResponse> datasets,
+        @OutputCustomType.Parameter("linkedServices") @Nullable List<LinkedServiceReferenceResponse> linkedServices) {
         this.datasets = datasets;
         this.linkedServices = linkedServices;
     }
@@ -68,12 +68,12 @@ public final class CustomActivityReferenceObjectResponse {
     	      this.linkedServices = defaults.linkedServices;
         }
 
-        public Builder setDatasets(@Nullable List<DatasetReferenceResponse> datasets) {
+        public Builder datasets(@Nullable List<DatasetReferenceResponse> datasets) {
             this.datasets = datasets;
             return this;
         }
 
-        public Builder setLinkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
+        public Builder linkedServices(@Nullable List<LinkedServiceReferenceResponse> linkedServices) {
             this.linkedServices = linkedServices;
             return this;
         }

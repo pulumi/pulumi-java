@@ -140,62 +140,62 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
     	      this.push = defaults.push;
         }
 
-        public Builder setEnterpriseConfigResourceName(@Nullable Input<String> enterpriseConfigResourceName) {
+        public Builder enterpriseConfigResourceName(@Nullable Input<String> enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = enterpriseConfigResourceName;
             return this;
         }
 
-        public Builder setEnterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
+        public Builder enterpriseConfigResourceName(@Nullable String enterpriseConfigResourceName) {
             this.enterpriseConfigResourceName = Input.ofNullable(enterpriseConfigResourceName);
             return this;
         }
 
-        public Builder setInstallationId(@Nullable Input<String> installationId) {
+        public Builder installationId(@Nullable Input<String> installationId) {
             this.installationId = installationId;
             return this;
         }
 
-        public Builder setInstallationId(@Nullable String installationId) {
+        public Builder installationId(@Nullable String installationId) {
             this.installationId = Input.ofNullable(installationId);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOwner(@Nullable Input<String> owner) {
+        public Builder owner(@Nullable Input<String> owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = Input.ofNullable(owner);
             return this;
         }
 
-        public Builder setPullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
+        public Builder pullRequest(@Nullable Input<PullRequestFilterArgs> pullRequest) {
             this.pullRequest = pullRequest;
             return this;
         }
 
-        public Builder setPullRequest(@Nullable PullRequestFilterArgs pullRequest) {
+        public Builder pullRequest(@Nullable PullRequestFilterArgs pullRequest) {
             this.pullRequest = Input.ofNullable(pullRequest);
             return this;
         }
 
-        public Builder setPush(@Nullable Input<PushFilterArgs> push) {
+        public Builder push(@Nullable Input<PushFilterArgs> push) {
             this.push = push;
             return this;
         }
 
-        public Builder setPush(@Nullable PushFilterArgs push) {
+        public Builder push(@Nullable PushFilterArgs push) {
             this.push = Input.ofNullable(push);
             return this;
         }

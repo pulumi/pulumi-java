@@ -55,7 +55,7 @@ public final class VirtualMachineImageResponse extends io.pulumi.resources.Invok
     	      this.id = defaults.id;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

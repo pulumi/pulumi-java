@@ -124,52 +124,52 @@ public final class LocalDiskInitializeParamsArgs extends io.pulumi.resources.Res
     	      this.labels = defaults.labels;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDiskName(@Nullable Input<String> diskName) {
+        public Builder diskName(@Nullable Input<String> diskName) {
             this.diskName = diskName;
             return this;
         }
 
-        public Builder setDiskName(@Nullable String diskName) {
+        public Builder diskName(@Nullable String diskName) {
             this.diskName = Input.ofNullable(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable Input<String> diskSizeGb) {
+        public Builder diskSizeGb(@Nullable Input<String> diskSizeGb) {
             this.diskSizeGb = diskSizeGb;
             return this;
         }
 
-        public Builder setDiskSizeGb(@Nullable String diskSizeGb) {
+        public Builder diskSizeGb(@Nullable String diskSizeGb) {
             this.diskSizeGb = Input.ofNullable(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(@Nullable Input<LocalDiskInitializeParamsDiskType> diskType) {
+        public Builder diskType(@Nullable Input<LocalDiskInitializeParamsDiskType> diskType) {
             this.diskType = diskType;
             return this;
         }
 
-        public Builder setDiskType(@Nullable LocalDiskInitializeParamsDiskType diskType) {
+        public Builder diskType(@Nullable LocalDiskInitializeParamsDiskType diskType) {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }

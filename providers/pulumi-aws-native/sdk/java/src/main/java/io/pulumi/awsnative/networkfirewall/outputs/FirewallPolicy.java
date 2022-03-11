@@ -24,15 +24,15 @@ public final class FirewallPolicy {
     private final List<String> statelessFragmentDefaultActions;
     private final @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences;
 
-    @OutputCustomType.Constructor({"statefulDefaultActions","statefulEngineOptions","statefulRuleGroupReferences","statelessCustomActions","statelessDefaultActions","statelessFragmentDefaultActions","statelessRuleGroupReferences"})
+    @OutputCustomType.Constructor
     private FirewallPolicy(
-        @Nullable List<String> statefulDefaultActions,
-        @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions,
-        @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
-        @Nullable List<FirewallPolicyCustomAction> statelessCustomActions,
-        List<String> statelessDefaultActions,
-        List<String> statelessFragmentDefaultActions,
-        @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
+        @OutputCustomType.Parameter("statefulDefaultActions") @Nullable List<String> statefulDefaultActions,
+        @OutputCustomType.Parameter("statefulEngineOptions") @Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions,
+        @OutputCustomType.Parameter("statefulRuleGroupReferences") @Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences,
+        @OutputCustomType.Parameter("statelessCustomActions") @Nullable List<FirewallPolicyCustomAction> statelessCustomActions,
+        @OutputCustomType.Parameter("statelessDefaultActions") List<String> statelessDefaultActions,
+        @OutputCustomType.Parameter("statelessFragmentDefaultActions") List<String> statelessFragmentDefaultActions,
+        @OutputCustomType.Parameter("statelessRuleGroupReferences") @Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
         this.statefulDefaultActions = statefulDefaultActions;
         this.statefulEngineOptions = statefulEngineOptions;
         this.statefulRuleGroupReferences = statefulRuleGroupReferences;
@@ -96,37 +96,37 @@ public final class FirewallPolicy {
     	      this.statelessRuleGroupReferences = defaults.statelessRuleGroupReferences;
         }
 
-        public Builder setStatefulDefaultActions(@Nullable List<String> statefulDefaultActions) {
+        public Builder statefulDefaultActions(@Nullable List<String> statefulDefaultActions) {
             this.statefulDefaultActions = statefulDefaultActions;
             return this;
         }
 
-        public Builder setStatefulEngineOptions(@Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions) {
+        public Builder statefulEngineOptions(@Nullable FirewallPolicyStatefulEngineOptions statefulEngineOptions) {
             this.statefulEngineOptions = statefulEngineOptions;
             return this;
         }
 
-        public Builder setStatefulRuleGroupReferences(@Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences) {
+        public Builder statefulRuleGroupReferences(@Nullable List<FirewallPolicyStatefulRuleGroupReference> statefulRuleGroupReferences) {
             this.statefulRuleGroupReferences = statefulRuleGroupReferences;
             return this;
         }
 
-        public Builder setStatelessCustomActions(@Nullable List<FirewallPolicyCustomAction> statelessCustomActions) {
+        public Builder statelessCustomActions(@Nullable List<FirewallPolicyCustomAction> statelessCustomActions) {
             this.statelessCustomActions = statelessCustomActions;
             return this;
         }
 
-        public Builder setStatelessDefaultActions(List<String> statelessDefaultActions) {
+        public Builder statelessDefaultActions(List<String> statelessDefaultActions) {
             this.statelessDefaultActions = Objects.requireNonNull(statelessDefaultActions);
             return this;
         }
 
-        public Builder setStatelessFragmentDefaultActions(List<String> statelessFragmentDefaultActions) {
+        public Builder statelessFragmentDefaultActions(List<String> statelessFragmentDefaultActions) {
             this.statelessFragmentDefaultActions = Objects.requireNonNull(statelessFragmentDefaultActions);
             return this;
         }
 
-        public Builder setStatelessRuleGroupReferences(@Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
+        public Builder statelessRuleGroupReferences(@Nullable List<FirewallPolicyStatelessRuleGroupReference> statelessRuleGroupReferences) {
             this.statelessRuleGroupReferences = statelessRuleGroupReferences;
             return this;
         }

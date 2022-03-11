@@ -88,32 +88,32 @@ public final class FieldLevelEncryptionConfigArgs extends io.pulumi.resources.Re
     	      this.queryArgProfileConfig = defaults.queryArgProfileConfig;
         }
 
-        public Builder setComment(@Nullable Input<String> comment) {
+        public Builder comment(@Nullable Input<String> comment) {
             this.comment = comment;
             return this;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = Input.ofNullable(comment);
             return this;
         }
 
-        public Builder setContentTypeProfileConfig(Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(Input<FieldLevelEncryptionConfigContentTypeProfileConfigArgs> contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Objects.requireNonNull(contentTypeProfileConfig);
             return this;
         }
 
-        public Builder setContentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
+        public Builder contentTypeProfileConfig(FieldLevelEncryptionConfigContentTypeProfileConfigArgs contentTypeProfileConfig) {
             this.contentTypeProfileConfig = Input.of(Objects.requireNonNull(contentTypeProfileConfig));
             return this;
         }
 
-        public Builder setQueryArgProfileConfig(Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(Input<FieldLevelEncryptionConfigQueryArgProfileConfigArgs> queryArgProfileConfig) {
             this.queryArgProfileConfig = Objects.requireNonNull(queryArgProfileConfig);
             return this;
         }
 
-        public Builder setQueryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
+        public Builder queryArgProfileConfig(FieldLevelEncryptionConfigQueryArgProfileConfigArgs queryArgProfileConfig) {
             this.queryArgProfileConfig = Input.of(Objects.requireNonNull(queryArgProfileConfig));
             return this;
         }

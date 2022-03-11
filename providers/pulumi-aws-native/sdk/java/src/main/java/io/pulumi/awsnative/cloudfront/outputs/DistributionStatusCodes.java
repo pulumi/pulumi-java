@@ -13,10 +13,10 @@ public final class DistributionStatusCodes {
     private final List<Integer> items;
     private final Integer quantity;
 
-    @OutputCustomType.Constructor({"items","quantity"})
+    @OutputCustomType.Constructor
     private DistributionStatusCodes(
-        List<Integer> items,
-        Integer quantity) {
+        @OutputCustomType.Parameter("items") List<Integer> items,
+        @OutputCustomType.Parameter("quantity") Integer quantity) {
         this.items = items;
         this.quantity = quantity;
     }
@@ -50,12 +50,12 @@ public final class DistributionStatusCodes {
     	      this.quantity = defaults.quantity;
         }
 
-        public Builder setItems(List<Integer> items) {
+        public Builder items(List<Integer> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }
 
-        public Builder setQuantity(Integer quantity) {
+        public Builder quantity(Integer quantity) {
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }

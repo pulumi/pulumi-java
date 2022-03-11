@@ -15,10 +15,10 @@ public final class DatasetContentDeliveryRuleDestination {
     private final @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration;
     private final @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration;
 
-    @OutputCustomType.Constructor({"iotEventsDestinationConfiguration","s3DestinationConfiguration"})
+    @OutputCustomType.Constructor
     private DatasetContentDeliveryRuleDestination(
-        @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration,
-        @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
+        @OutputCustomType.Parameter("iotEventsDestinationConfiguration") @Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration,
+        @OutputCustomType.Parameter("s3DestinationConfiguration") @Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
         this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
         this.s3DestinationConfiguration = s3DestinationConfiguration;
     }
@@ -52,12 +52,12 @@ public final class DatasetContentDeliveryRuleDestination {
     	      this.s3DestinationConfiguration = defaults.s3DestinationConfiguration;
         }
 
-        public Builder setIotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration) {
+        public Builder iotEventsDestinationConfiguration(@Nullable DatasetIotEventsDestinationConfiguration iotEventsDestinationConfiguration) {
             this.iotEventsDestinationConfiguration = iotEventsDestinationConfiguration;
             return this;
         }
 
-        public Builder setS3DestinationConfiguration(@Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
+        public Builder s3DestinationConfiguration(@Nullable DatasetS3DestinationConfiguration s3DestinationConfiguration) {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }

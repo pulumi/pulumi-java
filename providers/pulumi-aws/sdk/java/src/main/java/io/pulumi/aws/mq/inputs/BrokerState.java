@@ -411,222 +411,222 @@ public final class BrokerState extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder setApplyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
-        public Builder setApplyImmediately(@Nullable Boolean applyImmediately) {
+        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Input.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setAuthenticationStrategy(@Nullable Input<String> authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable Input<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
-        public Builder setAuthenticationStrategy(@Nullable String authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
             this.authenticationStrategy = Input.ofNullable(authenticationStrategy);
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder setBrokerName(@Nullable Input<String> brokerName) {
+        public Builder brokerName(@Nullable Input<String> brokerName) {
             this.brokerName = brokerName;
             return this;
         }
 
-        public Builder setBrokerName(@Nullable String brokerName) {
+        public Builder brokerName(@Nullable String brokerName) {
             this.brokerName = Input.ofNullable(brokerName);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<BrokerConfigurationGetArgs> configuration) {
+        public Builder configuration(@Nullable Input<BrokerConfigurationGetArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable BrokerConfigurationGetArgs configuration) {
+        public Builder configuration(@Nullable BrokerConfigurationGetArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDeploymentMode(@Nullable Input<String> deploymentMode) {
+        public Builder deploymentMode(@Nullable Input<String> deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
 
-        public Builder setDeploymentMode(@Nullable String deploymentMode) {
+        public Builder deploymentMode(@Nullable String deploymentMode) {
             this.deploymentMode = Input.ofNullable(deploymentMode);
             return this;
         }
 
-        public Builder setEncryptionOptions(@Nullable Input<BrokerEncryptionOptionsGetArgs> encryptionOptions) {
+        public Builder encryptionOptions(@Nullable Input<BrokerEncryptionOptionsGetArgs> encryptionOptions) {
             this.encryptionOptions = encryptionOptions;
             return this;
         }
 
-        public Builder setEncryptionOptions(@Nullable BrokerEncryptionOptionsGetArgs encryptionOptions) {
+        public Builder encryptionOptions(@Nullable BrokerEncryptionOptionsGetArgs encryptionOptions) {
             this.encryptionOptions = Input.ofNullable(encryptionOptions);
             return this;
         }
 
-        public Builder setEngineType(@Nullable Input<String> engineType) {
+        public Builder engineType(@Nullable Input<String> engineType) {
             this.engineType = engineType;
             return this;
         }
 
-        public Builder setEngineType(@Nullable String engineType) {
+        public Builder engineType(@Nullable String engineType) {
             this.engineType = Input.ofNullable(engineType);
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable Input<String> engineVersion) {
+        public Builder engineVersion(@Nullable Input<String> engineVersion) {
             this.engineVersion = engineVersion;
             return this;
         }
 
-        public Builder setEngineVersion(@Nullable String engineVersion) {
+        public Builder engineVersion(@Nullable String engineVersion) {
             this.engineVersion = Input.ofNullable(engineVersion);
             return this;
         }
 
-        public Builder setHostInstanceType(@Nullable Input<String> hostInstanceType) {
+        public Builder hostInstanceType(@Nullable Input<String> hostInstanceType) {
             this.hostInstanceType = hostInstanceType;
             return this;
         }
 
-        public Builder setHostInstanceType(@Nullable String hostInstanceType) {
+        public Builder hostInstanceType(@Nullable String hostInstanceType) {
             this.hostInstanceType = Input.ofNullable(hostInstanceType);
             return this;
         }
 
-        public Builder setInstances(@Nullable Input<List<BrokerInstanceGetArgs>> instances) {
+        public Builder instances(@Nullable Input<List<BrokerInstanceGetArgs>> instances) {
             this.instances = instances;
             return this;
         }
 
-        public Builder setInstances(@Nullable List<BrokerInstanceGetArgs> instances) {
+        public Builder instances(@Nullable List<BrokerInstanceGetArgs> instances) {
             this.instances = Input.ofNullable(instances);
             return this;
         }
 
-        public Builder setLdapServerMetadata(@Nullable Input<BrokerLdapServerMetadataGetArgs> ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable Input<BrokerLdapServerMetadataGetArgs> ldapServerMetadata) {
             this.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
 
-        public Builder setLdapServerMetadata(@Nullable BrokerLdapServerMetadataGetArgs ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable BrokerLdapServerMetadataGetArgs ldapServerMetadata) {
             this.ldapServerMetadata = Input.ofNullable(ldapServerMetadata);
             return this;
         }
 
-        public Builder setLogs(@Nullable Input<BrokerLogsGetArgs> logs) {
+        public Builder logs(@Nullable Input<BrokerLogsGetArgs> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable BrokerLogsGetArgs logs) {
+        public Builder logs(@Nullable BrokerLogsGetArgs logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(@Nullable Input<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable Input<BrokerMaintenanceWindowStartTimeGetArgs> maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeGetArgs maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeGetArgs maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = Input.ofNullable(maintenanceWindowStartTime);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUsers(@Nullable Input<List<BrokerUserGetArgs>> users) {
+        public Builder users(@Nullable Input<List<BrokerUserGetArgs>> users) {
             this.users = users;
             return this;
         }
 
-        public Builder setUsers(@Nullable List<BrokerUserGetArgs> users) {
+        public Builder users(@Nullable List<BrokerUserGetArgs> users) {
             this.users = Input.ofNullable(users);
             return this;
         }

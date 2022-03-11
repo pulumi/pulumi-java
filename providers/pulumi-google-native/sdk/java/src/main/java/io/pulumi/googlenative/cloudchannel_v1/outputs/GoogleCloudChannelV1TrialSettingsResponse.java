@@ -21,10 +21,10 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
      */
     private final Boolean trial;
 
-    @OutputCustomType.Constructor({"endTime","trial"})
+    @OutputCustomType.Constructor
     private GoogleCloudChannelV1TrialSettingsResponse(
-        String endTime,
-        Boolean trial) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("trial") Boolean trial) {
         this.endTime = endTime;
         this.trial = trial;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudChannelV1TrialSettingsResponse {
     	      this.trial = defaults.trial;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setTrial(Boolean trial) {
+        public Builder trial(Boolean trial) {
             this.trial = Objects.requireNonNull(trial);
             return this;
         }

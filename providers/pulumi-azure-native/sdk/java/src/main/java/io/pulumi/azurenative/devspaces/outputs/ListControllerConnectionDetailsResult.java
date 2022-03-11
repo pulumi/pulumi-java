@@ -17,8 +17,8 @@ public final class ListControllerConnectionDetailsResult {
      */
     private final @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList;
 
-    @OutputCustomType.Constructor({"connectionDetailsList"})
-    private ListControllerConnectionDetailsResult(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
+    @OutputCustomType.Constructor
+    private ListControllerConnectionDetailsResult(@OutputCustomType.Parameter("connectionDetailsList") @Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
         this.connectionDetailsList = connectionDetailsList;
     }
 
@@ -50,7 +50,7 @@ public final class ListControllerConnectionDetailsResult {
     	      this.connectionDetailsList = defaults.connectionDetailsList;
         }
 
-        public Builder setConnectionDetailsList(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
+        public Builder connectionDetailsList(@Nullable List<ControllerConnectionDetailsResponse> connectionDetailsList) {
             this.connectionDetailsList = connectionDetailsList;
             return this;
         }

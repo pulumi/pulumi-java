@@ -17,11 +17,11 @@ public final class BotIntentConfirmationSetting {
     private final @Nullable Boolean isActive;
     private final BotPromptSpecification promptSpecification;
 
-    @OutputCustomType.Constructor({"declinationResponse","isActive","promptSpecification"})
+    @OutputCustomType.Constructor
     private BotIntentConfirmationSetting(
-        BotResponseSpecification declinationResponse,
-        @Nullable Boolean isActive,
-        BotPromptSpecification promptSpecification) {
+        @OutputCustomType.Parameter("declinationResponse") BotResponseSpecification declinationResponse,
+        @OutputCustomType.Parameter("isActive") @Nullable Boolean isActive,
+        @OutputCustomType.Parameter("promptSpecification") BotPromptSpecification promptSpecification) {
         this.declinationResponse = declinationResponse;
         this.isActive = isActive;
         this.promptSpecification = promptSpecification;
@@ -61,17 +61,17 @@ public final class BotIntentConfirmationSetting {
     	      this.promptSpecification = defaults.promptSpecification;
         }
 
-        public Builder setDeclinationResponse(BotResponseSpecification declinationResponse) {
+        public Builder declinationResponse(BotResponseSpecification declinationResponse) {
             this.declinationResponse = Objects.requireNonNull(declinationResponse);
             return this;
         }
 
-        public Builder setIsActive(@Nullable Boolean isActive) {
+        public Builder isActive(@Nullable Boolean isActive) {
             this.isActive = isActive;
             return this;
         }
 
-        public Builder setPromptSpecification(BotPromptSpecification promptSpecification) {
+        public Builder promptSpecification(BotPromptSpecification promptSpecification) {
             this.promptSpecification = Objects.requireNonNull(promptSpecification);
             return this;
         }

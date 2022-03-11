@@ -129,30 +129,30 @@ public final class GetKpiResult {
      */
     private final @Nullable String unit;
 
-    @OutputCustomType.Constructor({"aliases","calculationWindow","calculationWindowFieldName","description","displayName","entityType","entityTypeName","expression","extracts","filter","function","groupBy","groupByMetadata","id","kpiName","name","participantProfilesMetadata","provisioningState","tenantId","thresHolds","type","unit"})
+    @OutputCustomType.Constructor
     private GetKpiResult(
-        @Nullable List<KpiAliasResponse> aliases,
-        String calculationWindow,
-        @Nullable String calculationWindowFieldName,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String entityType,
-        String entityTypeName,
-        String expression,
-        @Nullable List<KpiExtractResponse> extracts,
-        @Nullable String filter,
-        String function,
-        @Nullable List<String> groupBy,
-        List<KpiGroupByMetadataResponse> groupByMetadata,
-        String id,
-        String kpiName,
-        String name,
-        List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
-        String provisioningState,
-        String tenantId,
-        @Nullable KpiThresholdsResponse thresHolds,
-        String type,
-        @Nullable String unit) {
+        @OutputCustomType.Parameter("aliases") @Nullable List<KpiAliasResponse> aliases,
+        @OutputCustomType.Parameter("calculationWindow") String calculationWindow,
+        @OutputCustomType.Parameter("calculationWindowFieldName") @Nullable String calculationWindowFieldName,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("entityType") String entityType,
+        @OutputCustomType.Parameter("entityTypeName") String entityTypeName,
+        @OutputCustomType.Parameter("expression") String expression,
+        @OutputCustomType.Parameter("extracts") @Nullable List<KpiExtractResponse> extracts,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("function") String function,
+        @OutputCustomType.Parameter("groupBy") @Nullable List<String> groupBy,
+        @OutputCustomType.Parameter("groupByMetadata") List<KpiGroupByMetadataResponse> groupByMetadata,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kpiName") String kpiName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("participantProfilesMetadata") List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("thresHolds") @Nullable KpiThresholdsResponse thresHolds,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unit") @Nullable String unit) {
         this.aliases = aliases;
         this.calculationWindow = calculationWindow;
         this.calculationWindowFieldName = calculationWindowFieldName;
@@ -394,112 +394,112 @@ public final class GetKpiResult {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAliases(@Nullable List<KpiAliasResponse> aliases) {
+        public Builder aliases(@Nullable List<KpiAliasResponse> aliases) {
             this.aliases = aliases;
             return this;
         }
 
-        public Builder setCalculationWindow(String calculationWindow) {
+        public Builder calculationWindow(String calculationWindow) {
             this.calculationWindow = Objects.requireNonNull(calculationWindow);
             return this;
         }
 
-        public Builder setCalculationWindowFieldName(@Nullable String calculationWindowFieldName) {
+        public Builder calculationWindowFieldName(@Nullable String calculationWindowFieldName) {
             this.calculationWindowFieldName = calculationWindowFieldName;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setEntityType(String entityType) {
+        public Builder entityType(String entityType) {
             this.entityType = Objects.requireNonNull(entityType);
             return this;
         }
 
-        public Builder setEntityTypeName(String entityTypeName) {
+        public Builder entityTypeName(String entityTypeName) {
             this.entityTypeName = Objects.requireNonNull(entityTypeName);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExtracts(@Nullable List<KpiExtractResponse> extracts) {
+        public Builder extracts(@Nullable List<KpiExtractResponse> extracts) {
             this.extracts = extracts;
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setFunction(String function) {
+        public Builder function(String function) {
             this.function = Objects.requireNonNull(function);
             return this;
         }
 
-        public Builder setGroupBy(@Nullable List<String> groupBy) {
+        public Builder groupBy(@Nullable List<String> groupBy) {
             this.groupBy = groupBy;
             return this;
         }
 
-        public Builder setGroupByMetadata(List<KpiGroupByMetadataResponse> groupByMetadata) {
+        public Builder groupByMetadata(List<KpiGroupByMetadataResponse> groupByMetadata) {
             this.groupByMetadata = Objects.requireNonNull(groupByMetadata);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKpiName(String kpiName) {
+        public Builder kpiName(String kpiName) {
             this.kpiName = Objects.requireNonNull(kpiName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParticipantProfilesMetadata(List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata) {
+        public Builder participantProfilesMetadata(List<KpiParticipantProfilesMetadataResponse> participantProfilesMetadata) {
             this.participantProfilesMetadata = Objects.requireNonNull(participantProfilesMetadata);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setThresHolds(@Nullable KpiThresholdsResponse thresHolds) {
+        public Builder thresHolds(@Nullable KpiThresholdsResponse thresHolds) {
             this.thresHolds = thresHolds;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnit(@Nullable String unit) {
+        public Builder unit(@Nullable String unit) {
             this.unit = unit;
             return this;
         }

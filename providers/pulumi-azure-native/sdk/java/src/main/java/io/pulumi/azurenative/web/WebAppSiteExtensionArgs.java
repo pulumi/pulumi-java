@@ -86,32 +86,32 @@ public final class WebAppSiteExtensionArgs extends io.pulumi.resources.ResourceA
     	      this.siteExtensionId = defaults.siteExtensionId;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setSiteExtensionId(@Nullable Input<String> siteExtensionId) {
+        public Builder siteExtensionId(@Nullable Input<String> siteExtensionId) {
             this.siteExtensionId = siteExtensionId;
             return this;
         }
 
-        public Builder setSiteExtensionId(@Nullable String siteExtensionId) {
+        public Builder siteExtensionId(@Nullable String siteExtensionId) {
             this.siteExtensionId = Input.ofNullable(siteExtensionId);
             return this;
         }

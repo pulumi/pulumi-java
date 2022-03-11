@@ -33,12 +33,12 @@ public final class BqmlTrainingRunResponse {
      */
     private final BqmlTrainingRunTrainingOptionsResponse trainingOptions;
 
-    @OutputCustomType.Constructor({"iterationResults","startTime","state","trainingOptions"})
+    @OutputCustomType.Constructor
     private BqmlTrainingRunResponse(
-        List<BqmlIterationResultResponse> iterationResults,
-        String startTime,
-        String state,
-        BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
+        @OutputCustomType.Parameter("iterationResults") List<BqmlIterationResultResponse> iterationResults,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trainingOptions") BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
         this.iterationResults = iterationResults;
         this.startTime = startTime;
         this.state = state;
@@ -100,22 +100,22 @@ public final class BqmlTrainingRunResponse {
     	      this.trainingOptions = defaults.trainingOptions;
         }
 
-        public Builder setIterationResults(List<BqmlIterationResultResponse> iterationResults) {
+        public Builder iterationResults(List<BqmlIterationResultResponse> iterationResults) {
             this.iterationResults = Objects.requireNonNull(iterationResults);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
+        public Builder trainingOptions(BqmlTrainingRunTrainingOptionsResponse trainingOptions) {
             this.trainingOptions = Objects.requireNonNull(trainingOptions);
             return this;
         }

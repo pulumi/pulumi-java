@@ -143,32 +143,32 @@ public final class XmlReadSettingsResponse extends io.pulumi.resources.InvokeArg
     	      this.validationMode = defaults.validationMode;
         }
 
-        public Builder setCompressionProperties(@Nullable Object compressionProperties) {
+        public Builder compressionProperties(@Nullable Object compressionProperties) {
             this.compressionProperties = compressionProperties;
             return this;
         }
 
-        public Builder setDetectDataType(@Nullable Object detectDataType) {
+        public Builder detectDataType(@Nullable Object detectDataType) {
             this.detectDataType = detectDataType;
             return this;
         }
 
-        public Builder setNamespacePrefixes(@Nullable Object namespacePrefixes) {
+        public Builder namespacePrefixes(@Nullable Object namespacePrefixes) {
             this.namespacePrefixes = namespacePrefixes;
             return this;
         }
 
-        public Builder setNamespaces(@Nullable Object namespaces) {
+        public Builder namespaces(@Nullable Object namespaces) {
             this.namespaces = namespaces;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationMode(@Nullable Object validationMode) {
+        public Builder validationMode(@Nullable Object validationMode) {
             this.validationMode = validationMode;
             return this;
         }

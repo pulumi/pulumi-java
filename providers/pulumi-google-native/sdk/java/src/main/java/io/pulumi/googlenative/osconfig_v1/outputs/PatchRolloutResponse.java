@@ -21,10 +21,10 @@ public final class PatchRolloutResponse {
      */
     private final String mode;
 
-    @OutputCustomType.Constructor({"disruptionBudget","mode"})
+    @OutputCustomType.Constructor
     private PatchRolloutResponse(
-        FixedOrPercentResponse disruptionBudget,
-        String mode) {
+        @OutputCustomType.Parameter("disruptionBudget") FixedOrPercentResponse disruptionBudget,
+        @OutputCustomType.Parameter("mode") String mode) {
         this.disruptionBudget = disruptionBudget;
         this.mode = mode;
     }
@@ -66,12 +66,12 @@ public final class PatchRolloutResponse {
     	      this.mode = defaults.mode;
         }
 
-        public Builder setDisruptionBudget(FixedOrPercentResponse disruptionBudget) {
+        public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }

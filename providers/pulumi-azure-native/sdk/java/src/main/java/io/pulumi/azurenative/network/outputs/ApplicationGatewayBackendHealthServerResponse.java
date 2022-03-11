@@ -33,12 +33,12 @@ public final class ApplicationGatewayBackendHealthServerResponse {
      */
     private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
-    @OutputCustomType.Constructor({"address","health","healthProbeLog","ipConfiguration"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayBackendHealthServerResponse(
-        @Nullable String address,
-        @Nullable String health,
-        @Nullable String healthProbeLog,
-        @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
+        @OutputCustomType.Parameter("address") @Nullable String address,
+        @OutputCustomType.Parameter("health") @Nullable String health,
+        @OutputCustomType.Parameter("healthProbeLog") @Nullable String healthProbeLog,
+        @OutputCustomType.Parameter("ipConfiguration") @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
         this.address = address;
         this.health = health;
         this.healthProbeLog = healthProbeLog;
@@ -100,22 +100,22 @@ public final class ApplicationGatewayBackendHealthServerResponse {
     	      this.ipConfiguration = defaults.ipConfiguration;
         }
 
-        public Builder setAddress(@Nullable String address) {
+        public Builder address(@Nullable String address) {
             this.address = address;
             return this;
         }
 
-        public Builder setHealth(@Nullable String health) {
+        public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealthProbeLog(@Nullable String healthProbeLog) {
+        public Builder healthProbeLog(@Nullable String healthProbeLog) {
             this.healthProbeLog = healthProbeLog;
             return this;
         }
 
-        public Builder setIpConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
+        public Builder ipConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
             this.ipConfiguration = ipConfiguration;
             return this;
         }

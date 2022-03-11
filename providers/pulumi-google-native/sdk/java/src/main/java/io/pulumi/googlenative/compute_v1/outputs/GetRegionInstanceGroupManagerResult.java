@@ -125,29 +125,29 @@ public final class GetRegionInstanceGroupManagerResult {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"autoHealingPolicies","baseInstanceName","creationTimestamp","currentActions","description","distributionPolicy","fingerprint","instanceGroup","instanceTemplate","kind","name","namedPorts","region","selfLink","statefulPolicy","status","targetPools","targetSize","updatePolicy","versions","zone"})
+    @OutputCustomType.Constructor
     private GetRegionInstanceGroupManagerResult(
-        List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
-        String baseInstanceName,
-        String creationTimestamp,
-        InstanceGroupManagerActionsSummaryResponse currentActions,
-        String description,
-        DistributionPolicyResponse distributionPolicy,
-        String fingerprint,
-        String instanceGroup,
-        String instanceTemplate,
-        String kind,
-        String name,
-        List<NamedPortResponse> namedPorts,
-        String region,
-        String selfLink,
-        StatefulPolicyResponse statefulPolicy,
-        InstanceGroupManagerStatusResponse status,
-        List<String> targetPools,
-        Integer targetSize,
-        InstanceGroupManagerUpdatePolicyResponse updatePolicy,
-        List<InstanceGroupManagerVersionResponse> versions,
-        String zone) {
+        @OutputCustomType.Parameter("autoHealingPolicies") List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies,
+        @OutputCustomType.Parameter("baseInstanceName") String baseInstanceName,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("currentActions") InstanceGroupManagerActionsSummaryResponse currentActions,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("distributionPolicy") DistributionPolicyResponse distributionPolicy,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("instanceGroup") String instanceGroup,
+        @OutputCustomType.Parameter("instanceTemplate") String instanceTemplate,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namedPorts") List<NamedPortResponse> namedPorts,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("statefulPolicy") StatefulPolicyResponse statefulPolicy,
+        @OutputCustomType.Parameter("status") InstanceGroupManagerStatusResponse status,
+        @OutputCustomType.Parameter("targetPools") List<String> targetPools,
+        @OutputCustomType.Parameter("targetSize") Integer targetSize,
+        @OutputCustomType.Parameter("updatePolicy") InstanceGroupManagerUpdatePolicyResponse updatePolicy,
+        @OutputCustomType.Parameter("versions") List<InstanceGroupManagerVersionResponse> versions,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.autoHealingPolicies = autoHealingPolicies;
         this.baseInstanceName = baseInstanceName;
         this.creationTimestamp = creationTimestamp;
@@ -379,107 +379,107 @@ public final class GetRegionInstanceGroupManagerResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setAutoHealingPolicies(List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies) {
+        public Builder autoHealingPolicies(List<InstanceGroupManagerAutoHealingPolicyResponse> autoHealingPolicies) {
             this.autoHealingPolicies = Objects.requireNonNull(autoHealingPolicies);
             return this;
         }
 
-        public Builder setBaseInstanceName(String baseInstanceName) {
+        public Builder baseInstanceName(String baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCurrentActions(InstanceGroupManagerActionsSummaryResponse currentActions) {
+        public Builder currentActions(InstanceGroupManagerActionsSummaryResponse currentActions) {
             this.currentActions = Objects.requireNonNull(currentActions);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDistributionPolicy(DistributionPolicyResponse distributionPolicy) {
+        public Builder distributionPolicy(DistributionPolicyResponse distributionPolicy) {
             this.distributionPolicy = Objects.requireNonNull(distributionPolicy);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setInstanceGroup(String instanceGroup) {
+        public Builder instanceGroup(String instanceGroup) {
             this.instanceGroup = Objects.requireNonNull(instanceGroup);
             return this;
         }
 
-        public Builder setInstanceTemplate(String instanceTemplate) {
+        public Builder instanceTemplate(String instanceTemplate) {
             this.instanceTemplate = Objects.requireNonNull(instanceTemplate);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamedPorts(List<NamedPortResponse> namedPorts) {
+        public Builder namedPorts(List<NamedPortResponse> namedPorts) {
             this.namedPorts = Objects.requireNonNull(namedPorts);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatefulPolicy(StatefulPolicyResponse statefulPolicy) {
+        public Builder statefulPolicy(StatefulPolicyResponse statefulPolicy) {
             this.statefulPolicy = Objects.requireNonNull(statefulPolicy);
             return this;
         }
 
-        public Builder setStatus(InstanceGroupManagerStatusResponse status) {
+        public Builder status(InstanceGroupManagerStatusResponse status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTargetPools(List<String> targetPools) {
+        public Builder targetPools(List<String> targetPools) {
             this.targetPools = Objects.requireNonNull(targetPools);
             return this;
         }
 
-        public Builder setTargetSize(Integer targetSize) {
+        public Builder targetSize(Integer targetSize) {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }
 
-        public Builder setUpdatePolicy(InstanceGroupManagerUpdatePolicyResponse updatePolicy) {
+        public Builder updatePolicy(InstanceGroupManagerUpdatePolicyResponse updatePolicy) {
             this.updatePolicy = Objects.requireNonNull(updatePolicy);
             return this;
         }
 
-        public Builder setVersions(List<InstanceGroupManagerVersionResponse> versions) {
+        public Builder versions(List<InstanceGroupManagerVersionResponse> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -33,12 +33,12 @@ public final class InputEndpointResponse {
      */
     private final @Nullable Integer publicPort;
 
-    @OutputCustomType.Constructor({"endpointName","privatePort","protocol","publicPort"})
+    @OutputCustomType.Constructor
     private InputEndpointResponse(
-        @Nullable String endpointName,
-        @Nullable Integer privatePort,
-        @Nullable String protocol,
-        @Nullable Integer publicPort) {
+        @OutputCustomType.Parameter("endpointName") @Nullable String endpointName,
+        @OutputCustomType.Parameter("privatePort") @Nullable Integer privatePort,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("publicPort") @Nullable Integer publicPort) {
         this.endpointName = endpointName;
         this.privatePort = privatePort;
         this.protocol = protocol;
@@ -100,22 +100,22 @@ public final class InputEndpointResponse {
     	      this.publicPort = defaults.publicPort;
         }
 
-        public Builder setEndpointName(@Nullable String endpointName) {
+        public Builder endpointName(@Nullable String endpointName) {
             this.endpointName = endpointName;
             return this;
         }
 
-        public Builder setPrivatePort(@Nullable Integer privatePort) {
+        public Builder privatePort(@Nullable Integer privatePort) {
             this.privatePort = privatePort;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setPublicPort(@Nullable Integer publicPort) {
+        public Builder publicPort(@Nullable Integer publicPort) {
             this.publicPort = publicPort;
             return this;
         }

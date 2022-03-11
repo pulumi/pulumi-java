@@ -105,22 +105,22 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setArgumentKind(String argumentKind) {
+        public Builder argumentKind(String argumentKind) {
             this.argumentKind = Objects.requireNonNull(argumentKind);
             return this;
         }
 
-        public Builder setDataType(StandardSqlDataTypeResponse dataType) {
+        public Builder dataType(StandardSqlDataTypeResponse dataType) {
             this.dataType = Objects.requireNonNull(dataType);
             return this;
         }
 
-        public Builder setMode(String mode) {
+        public Builder mode(String mode) {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

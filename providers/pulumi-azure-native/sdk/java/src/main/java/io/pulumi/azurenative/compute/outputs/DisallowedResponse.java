@@ -17,8 +17,8 @@ public final class DisallowedResponse {
      */
     private final @Nullable List<String> diskTypes;
 
-    @OutputCustomType.Constructor({"diskTypes"})
-    private DisallowedResponse(@Nullable List<String> diskTypes) {
+    @OutputCustomType.Constructor
+    private DisallowedResponse(@OutputCustomType.Parameter("diskTypes") @Nullable List<String> diskTypes) {
         this.diskTypes = diskTypes;
     }
 
@@ -50,7 +50,7 @@ public final class DisallowedResponse {
     	      this.diskTypes = defaults.diskTypes;
         }
 
-        public Builder setDiskTypes(@Nullable List<String> diskTypes) {
+        public Builder diskTypes(@Nullable List<String> diskTypes) {
             this.diskTypes = diskTypes;
             return this;
         }

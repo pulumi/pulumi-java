@@ -24,10 +24,10 @@ public final class GetProductsResult {
      */
     private final @Nullable List<ProductResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private GetProductsResult(
-        @Nullable String nextLink,
-        @Nullable List<ProductResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<ProductResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class GetProductsResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<ProductResponse> value) {
+        public Builder value(@Nullable List<ProductResponse> value) {
             this.value = value;
             return this;
         }

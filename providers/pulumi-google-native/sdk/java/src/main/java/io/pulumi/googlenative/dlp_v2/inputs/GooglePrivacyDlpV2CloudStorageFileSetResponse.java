@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2CloudStorageFileSetResponse extends io.pulu
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

@@ -43,14 +43,14 @@ public final class DenylistCustomAlertRuleResponse {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor({"denylistValues","description","displayName","isEnabled","ruleType","valueType"})
+    @OutputCustomType.Constructor
     private DenylistCustomAlertRuleResponse(
-        List<String> denylistValues,
-        String description,
-        String displayName,
-        Boolean isEnabled,
-        String ruleType,
-        String valueType) {
+        @OutputCustomType.Parameter("denylistValues") List<String> denylistValues,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("ruleType") String ruleType,
+        @OutputCustomType.Parameter("valueType") String valueType) {
         this.denylistValues = denylistValues;
         this.description = description;
         this.displayName = displayName;
@@ -133,32 +133,32 @@ public final class DenylistCustomAlertRuleResponse {
     	      this.valueType = defaults.valueType;
         }
 
-        public Builder setDenylistValues(List<String> denylistValues) {
+        public Builder denylistValues(List<String> denylistValues) {
             this.denylistValues = Objects.requireNonNull(denylistValues);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setValueType(String valueType) {
+        public Builder valueType(String valueType) {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }

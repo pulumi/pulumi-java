@@ -23,10 +23,10 @@ public final class WorkgroupConfigurationResultConfiguration {
      */
     private final @Nullable String outputLocation;
 
-    @OutputCustomType.Constructor({"encryptionConfiguration","outputLocation"})
+    @OutputCustomType.Constructor
     private WorkgroupConfigurationResultConfiguration(
-        @Nullable WorkgroupConfigurationResultConfigurationEncryptionConfiguration encryptionConfiguration,
-        @Nullable String outputLocation) {
+        @OutputCustomType.Parameter("encryptionConfiguration") @Nullable WorkgroupConfigurationResultConfigurationEncryptionConfiguration encryptionConfiguration,
+        @OutputCustomType.Parameter("outputLocation") @Nullable String outputLocation) {
         this.encryptionConfiguration = encryptionConfiguration;
         this.outputLocation = outputLocation;
     }
@@ -68,12 +68,12 @@ public final class WorkgroupConfigurationResultConfiguration {
     	      this.outputLocation = defaults.outputLocation;
         }
 
-        public Builder setEncryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfiguration encryptionConfiguration) {
+        public Builder encryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfiguration encryptionConfiguration) {
             this.encryptionConfiguration = encryptionConfiguration;
             return this;
         }
 
-        public Builder setOutputLocation(@Nullable String outputLocation) {
+        public Builder outputLocation(@Nullable String outputLocation) {
             this.outputLocation = outputLocation;
             return this;
         }

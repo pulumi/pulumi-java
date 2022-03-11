@@ -178,92 +178,92 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     	      this.themeArn = defaults.themeArn;
         }
 
-        public Builder setAnalysisId(Input<String> analysisId) {
+        public Builder analysisId(Input<String> analysisId) {
             this.analysisId = Objects.requireNonNull(analysisId);
             return this;
         }
 
-        public Builder setAnalysisId(String analysisId) {
+        public Builder analysisId(String analysisId) {
             this.analysisId = Input.of(Objects.requireNonNull(analysisId));
             return this;
         }
 
-        public Builder setAwsAccountId(Input<String> awsAccountId) {
+        public Builder awsAccountId(Input<String> awsAccountId) {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
 
-        public Builder setAwsAccountId(String awsAccountId) {
+        public Builder awsAccountId(String awsAccountId) {
             this.awsAccountId = Input.of(Objects.requireNonNull(awsAccountId));
             return this;
         }
 
-        public Builder setErrors(@Nullable Input<List<AnalysisErrorArgs>> errors) {
+        public Builder errors(@Nullable Input<List<AnalysisErrorArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<AnalysisErrorArgs> errors) {
+        public Builder errors(@Nullable List<AnalysisErrorArgs> errors) {
             this.errors = Input.ofNullable(errors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<AnalysisParametersArgs> parameters) {
+        public Builder parameters(@Nullable Input<AnalysisParametersArgs> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable AnalysisParametersArgs parameters) {
+        public Builder parameters(@Nullable AnalysisParametersArgs parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setPermissions(@Nullable Input<List<AnalysisResourcePermissionArgs>> permissions) {
+        public Builder permissions(@Nullable Input<List<AnalysisResourcePermissionArgs>> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
+        public Builder permissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
             this.permissions = Input.ofNullable(permissions);
             return this;
         }
 
-        public Builder setSourceEntity(Input<AnalysisSourceEntityArgs> sourceEntity) {
+        public Builder sourceEntity(Input<AnalysisSourceEntityArgs> sourceEntity) {
             this.sourceEntity = Objects.requireNonNull(sourceEntity);
             return this;
         }
 
-        public Builder setSourceEntity(AnalysisSourceEntityArgs sourceEntity) {
+        public Builder sourceEntity(AnalysisSourceEntityArgs sourceEntity) {
             this.sourceEntity = Input.of(Objects.requireNonNull(sourceEntity));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<AnalysisTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<AnalysisTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AnalysisTagArgs> tags) {
+        public Builder tags(@Nullable List<AnalysisTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThemeArn(@Nullable Input<String> themeArn) {
+        public Builder themeArn(@Nullable Input<String> themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = Input.ofNullable(themeArn);
             return this;
         }

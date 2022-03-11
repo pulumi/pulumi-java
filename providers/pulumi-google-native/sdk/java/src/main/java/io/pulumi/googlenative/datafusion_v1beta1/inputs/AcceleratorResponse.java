@@ -55,7 +55,7 @@ public final class AcceleratorResponse extends io.pulumi.resources.InvokeArgs {
     	      this.acceleratorType = defaults.acceleratorType;
         }
 
-        public Builder setAcceleratorType(String acceleratorType) {
+        public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = Objects.requireNonNull(acceleratorType);
             return this;
         }

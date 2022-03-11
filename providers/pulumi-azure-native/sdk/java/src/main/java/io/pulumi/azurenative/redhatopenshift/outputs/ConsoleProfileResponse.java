@@ -17,8 +17,8 @@ public final class ConsoleProfileResponse {
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor({"url"})
-    private ConsoleProfileResponse(@Nullable String url) {
+    @OutputCustomType.Constructor
+    private ConsoleProfileResponse(@OutputCustomType.Parameter("url") @Nullable String url) {
         this.url = url;
     }
 
@@ -50,7 +50,7 @@ public final class ConsoleProfileResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }

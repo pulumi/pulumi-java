@@ -23,10 +23,10 @@ public final class TableMagneticStoreWriteProperties {
      */
     private final @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation;
 
-    @OutputCustomType.Constructor({"enableMagneticStoreWrites","magneticStoreRejectedDataLocation"})
+    @OutputCustomType.Constructor
     private TableMagneticStoreWriteProperties(
-        @Nullable Boolean enableMagneticStoreWrites,
-        @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
+        @OutputCustomType.Parameter("enableMagneticStoreWrites") @Nullable Boolean enableMagneticStoreWrites,
+        @OutputCustomType.Parameter("magneticStoreRejectedDataLocation") @Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
         this.enableMagneticStoreWrites = enableMagneticStoreWrites;
         this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
     }
@@ -68,12 +68,12 @@ public final class TableMagneticStoreWriteProperties {
     	      this.magneticStoreRejectedDataLocation = defaults.magneticStoreRejectedDataLocation;
         }
 
-        public Builder setEnableMagneticStoreWrites(@Nullable Boolean enableMagneticStoreWrites) {
+        public Builder enableMagneticStoreWrites(@Nullable Boolean enableMagneticStoreWrites) {
             this.enableMagneticStoreWrites = enableMagneticStoreWrites;
             return this;
         }
 
-        public Builder setMagneticStoreRejectedDataLocation(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
+        public Builder magneticStoreRejectedDataLocation(@Nullable TableMagneticStoreWritePropertiesMagneticStoreRejectedDataLocation magneticStoreRejectedDataLocation) {
             this.magneticStoreRejectedDataLocation = magneticStoreRejectedDataLocation;
             return this;
         }

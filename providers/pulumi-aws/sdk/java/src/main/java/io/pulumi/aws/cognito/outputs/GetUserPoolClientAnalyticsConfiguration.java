@@ -33,13 +33,13 @@ public final class GetUserPoolClientAnalyticsConfiguration {
     private final String roleArn;
     private final Boolean userDataShared;
 
-    @OutputCustomType.Constructor({"applicationArn","applicationId","externalId","roleArn","userDataShared"})
+    @OutputCustomType.Constructor
     private GetUserPoolClientAnalyticsConfiguration(
-        String applicationArn,
-        String applicationId,
-        String externalId,
-        String roleArn,
-        Boolean userDataShared) {
+        @OutputCustomType.Parameter("applicationArn") String applicationArn,
+        @OutputCustomType.Parameter("applicationId") String applicationId,
+        @OutputCustomType.Parameter("externalId") String externalId,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("userDataShared") Boolean userDataShared) {
         this.applicationArn = applicationArn;
         this.applicationId = applicationId;
         this.externalId = externalId;
@@ -108,27 +108,27 @@ public final class GetUserPoolClientAnalyticsConfiguration {
     	      this.userDataShared = defaults.userDataShared;
         }
 
-        public Builder setApplicationArn(String applicationArn) {
+        public Builder applicationArn(String applicationArn) {
             this.applicationArn = Objects.requireNonNull(applicationArn);
             return this;
         }
 
-        public Builder setApplicationId(String applicationId) {
+        public Builder applicationId(String applicationId) {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
 
-        public Builder setExternalId(String externalId) {
+        public Builder externalId(String externalId) {
             this.externalId = Objects.requireNonNull(externalId);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setUserDataShared(Boolean userDataShared) {
+        public Builder userDataShared(Boolean userDataShared) {
             this.userDataShared = Objects.requireNonNull(userDataShared);
             return this;
         }

@@ -14,10 +14,10 @@ public final class InstantRPAdditionalDetailsResponse {
     private final @Nullable String azureBackupRGNamePrefix;
     private final @Nullable String azureBackupRGNameSuffix;
 
-    @OutputCustomType.Constructor({"azureBackupRGNamePrefix","azureBackupRGNameSuffix"})
+    @OutputCustomType.Constructor
     private InstantRPAdditionalDetailsResponse(
-        @Nullable String azureBackupRGNamePrefix,
-        @Nullable String azureBackupRGNameSuffix) {
+        @OutputCustomType.Parameter("azureBackupRGNamePrefix") @Nullable String azureBackupRGNamePrefix,
+        @OutputCustomType.Parameter("azureBackupRGNameSuffix") @Nullable String azureBackupRGNameSuffix) {
         this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
         this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
     }
@@ -51,12 +51,12 @@ public final class InstantRPAdditionalDetailsResponse {
     	      this.azureBackupRGNameSuffix = defaults.azureBackupRGNameSuffix;
         }
 
-        public Builder setAzureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
+        public Builder azureBackupRGNamePrefix(@Nullable String azureBackupRGNamePrefix) {
             this.azureBackupRGNamePrefix = azureBackupRGNamePrefix;
             return this;
         }
 
-        public Builder setAzureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
+        public Builder azureBackupRGNameSuffix(@Nullable String azureBackupRGNameSuffix) {
             this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
         }

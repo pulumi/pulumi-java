@@ -88,32 +88,32 @@ public final class AssetModelMetricArgs extends io.pulumi.resources.ResourceArgs
     	      this.window = defaults.window;
         }
 
-        public Builder setExpression(Input<String> expression) {
+        public Builder expression(Input<String> expression) {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
 
-        public Builder setExpression(String expression) {
+        public Builder expression(String expression) {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
 
-        public Builder setVariables(Input<List<AssetModelExpressionVariableArgs>> variables) {
+        public Builder variables(Input<List<AssetModelExpressionVariableArgs>> variables) {
             this.variables = Objects.requireNonNull(variables);
             return this;
         }
 
-        public Builder setVariables(List<AssetModelExpressionVariableArgs> variables) {
+        public Builder variables(List<AssetModelExpressionVariableArgs> variables) {
             this.variables = Input.of(Objects.requireNonNull(variables));
             return this;
         }
 
-        public Builder setWindow(Input<AssetModelMetricWindowArgs> window) {
+        public Builder window(Input<AssetModelMetricWindowArgs> window) {
             this.window = Objects.requireNonNull(window);
             return this;
         }
 
-        public Builder setWindow(AssetModelMetricWindowArgs window) {
+        public Builder window(AssetModelMetricWindowArgs window) {
             this.window = Input.of(Objects.requireNonNull(window));
             return this;
         }

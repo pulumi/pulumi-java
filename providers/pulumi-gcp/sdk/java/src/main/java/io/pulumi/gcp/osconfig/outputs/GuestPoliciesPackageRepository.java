@@ -39,12 +39,12 @@ public final class GuestPoliciesPackageRepository {
      */
     private final @Nullable GuestPoliciesPackageRepositoryZypper zypper;
 
-    @OutputCustomType.Constructor({"apt","goo","yum","zypper"})
+    @OutputCustomType.Constructor
     private GuestPoliciesPackageRepository(
-        @Nullable GuestPoliciesPackageRepositoryApt apt,
-        @Nullable GuestPoliciesPackageRepositoryGoo goo,
-        @Nullable GuestPoliciesPackageRepositoryYum yum,
-        @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
+        @OutputCustomType.Parameter("apt") @Nullable GuestPoliciesPackageRepositoryApt apt,
+        @OutputCustomType.Parameter("goo") @Nullable GuestPoliciesPackageRepositoryGoo goo,
+        @OutputCustomType.Parameter("yum") @Nullable GuestPoliciesPackageRepositoryYum yum,
+        @OutputCustomType.Parameter("zypper") @Nullable GuestPoliciesPackageRepositoryZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.yum = yum;
@@ -110,22 +110,22 @@ public final class GuestPoliciesPackageRepository {
     	      this.zypper = defaults.zypper;
         }
 
-        public Builder setApt(@Nullable GuestPoliciesPackageRepositoryApt apt) {
+        public Builder apt(@Nullable GuestPoliciesPackageRepositoryApt apt) {
             this.apt = apt;
             return this;
         }
 
-        public Builder setGoo(@Nullable GuestPoliciesPackageRepositoryGoo goo) {
+        public Builder goo(@Nullable GuestPoliciesPackageRepositoryGoo goo) {
             this.goo = goo;
             return this;
         }
 
-        public Builder setYum(@Nullable GuestPoliciesPackageRepositoryYum yum) {
+        public Builder yum(@Nullable GuestPoliciesPackageRepositoryYum yum) {
             this.yum = yum;
             return this;
         }
 
-        public Builder setZypper(@Nullable GuestPoliciesPackageRepositoryZypper zypper) {
+        public Builder zypper(@Nullable GuestPoliciesPackageRepositoryZypper zypper) {
             this.zypper = zypper;
             return this;
         }

@@ -74,22 +74,22 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
     	      this.minCapacity = defaults.minCapacity;
         }
 
-        public Builder setMaxCapacity(@Nullable Input<Double> maxCapacity) {
+        public Builder maxCapacity(@Nullable Input<Double> maxCapacity) {
             this.maxCapacity = maxCapacity;
             return this;
         }
 
-        public Builder setMaxCapacity(@Nullable Double maxCapacity) {
+        public Builder maxCapacity(@Nullable Double maxCapacity) {
             this.maxCapacity = Input.ofNullable(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Input<Double> minCapacity) {
+        public Builder minCapacity(@Nullable Input<Double> minCapacity) {
             this.minCapacity = minCapacity;
             return this;
         }
 
-        public Builder setMinCapacity(@Nullable Double minCapacity) {
+        public Builder minCapacity(@Nullable Double minCapacity) {
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }

@@ -37,15 +37,15 @@ public final class GetInstancesResult {
      */
     private final List<String> publicIps;
 
-    @OutputCustomType.Constructor({"filters","id","ids","instanceStateNames","instanceTags","privateIps","publicIps"})
+    @OutputCustomType.Constructor
     private GetInstancesResult(
-        @Nullable List<GetInstancesFilter> filters,
-        String id,
-        List<String> ids,
-        @Nullable List<String> instanceStateNames,
-        Map<String,String> instanceTags,
-        List<String> privateIps,
-        List<String> publicIps) {
+        @OutputCustomType.Parameter("filters") @Nullable List<GetInstancesFilter> filters,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids,
+        @OutputCustomType.Parameter("instanceStateNames") @Nullable List<String> instanceStateNames,
+        @OutputCustomType.Parameter("instanceTags") Map<String,String> instanceTags,
+        @OutputCustomType.Parameter("privateIps") List<String> privateIps,
+        @OutputCustomType.Parameter("publicIps") List<String> publicIps) {
         this.filters = filters;
         this.id = id;
         this.ids = ids;
@@ -125,37 +125,37 @@ public final class GetInstancesResult {
     	      this.publicIps = defaults.publicIps;
         }
 
-        public Builder setFilters(@Nullable List<GetInstancesFilter> filters) {
+        public Builder filters(@Nullable List<GetInstancesFilter> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }
 
-        public Builder setInstanceStateNames(@Nullable List<String> instanceStateNames) {
+        public Builder instanceStateNames(@Nullable List<String> instanceStateNames) {
             this.instanceStateNames = instanceStateNames;
             return this;
         }
 
-        public Builder setInstanceTags(Map<String,String> instanceTags) {
+        public Builder instanceTags(Map<String,String> instanceTags) {
             this.instanceTags = Objects.requireNonNull(instanceTags);
             return this;
         }
 
-        public Builder setPrivateIps(List<String> privateIps) {
+        public Builder privateIps(List<String> privateIps) {
             this.privateIps = Objects.requireNonNull(privateIps);
             return this;
         }
 
-        public Builder setPublicIps(List<String> publicIps) {
+        public Builder publicIps(List<String> publicIps) {
             this.publicIps = Objects.requireNonNull(publicIps);
             return this;
         }

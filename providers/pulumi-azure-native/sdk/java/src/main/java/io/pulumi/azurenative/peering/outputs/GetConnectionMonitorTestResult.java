@@ -65,18 +65,18 @@ public final class GetConnectionMonitorTestResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"destination","destinationPort","id","isTestSuccessful","name","path","provisioningState","sourceAgent","testFrequencyInSec","type"})
+    @OutputCustomType.Constructor
     private GetConnectionMonitorTestResult(
-        @Nullable String destination,
-        @Nullable Integer destinationPort,
-        String id,
-        Boolean isTestSuccessful,
-        String name,
-        List<String> path,
-        String provisioningState,
-        @Nullable String sourceAgent,
-        @Nullable Integer testFrequencyInSec,
-        String type) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("destinationPort") @Nullable Integer destinationPort,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isTestSuccessful") Boolean isTestSuccessful,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") List<String> path,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceAgent") @Nullable String sourceAgent,
+        @OutputCustomType.Parameter("testFrequencyInSec") @Nullable Integer testFrequencyInSec,
+        @OutputCustomType.Parameter("type") String type) {
         this.destination = destination;
         this.destinationPort = destinationPort;
         this.id = id;
@@ -198,52 +198,52 @@ public final class GetConnectionMonitorTestResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setDestinationPort(@Nullable Integer destinationPort) {
+        public Builder destinationPort(@Nullable Integer destinationPort) {
             this.destinationPort = destinationPort;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsTestSuccessful(Boolean isTestSuccessful) {
+        public Builder isTestSuccessful(Boolean isTestSuccessful) {
             this.isTestSuccessful = Objects.requireNonNull(isTestSuccessful);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(List<String> path) {
+        public Builder path(List<String> path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceAgent(@Nullable String sourceAgent) {
+        public Builder sourceAgent(@Nullable String sourceAgent) {
             this.sourceAgent = sourceAgent;
             return this;
         }
 
-        public Builder setTestFrequencyInSec(@Nullable Integer testFrequencyInSec) {
+        public Builder testFrequencyInSec(@Nullable Integer testFrequencyInSec) {
             this.testFrequencyInSec = testFrequencyInSec;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

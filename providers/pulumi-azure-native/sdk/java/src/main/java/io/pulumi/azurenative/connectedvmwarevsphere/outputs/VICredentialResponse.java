@@ -17,8 +17,8 @@ public final class VICredentialResponse {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"username"})
-    private VICredentialResponse(@Nullable String username) {
+    @OutputCustomType.Constructor
+    private VICredentialResponse(@OutputCustomType.Parameter("username") @Nullable String username) {
         this.username = username;
     }
 
@@ -50,7 +50,7 @@ public final class VICredentialResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

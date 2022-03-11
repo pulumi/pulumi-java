@@ -76,21 +76,21 @@ public final class EntityInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"displayName","id","inheritedPermissions","name","numberOfChildGroups","numberOfChildren","numberOfDescendants","parent","parentDisplayNameChain","parentNameChain","permissions","tenantId","type"})
+    @OutputCustomType.Constructor
     private EntityInfoResponse(
-        @Nullable String displayName,
-        String id,
-        @Nullable String inheritedPermissions,
-        String name,
-        @Nullable Integer numberOfChildGroups,
-        @Nullable Integer numberOfChildren,
-        @Nullable Integer numberOfDescendants,
-        @Nullable EntityParentGroupInfoResponse parent,
-        @Nullable List<String> parentDisplayNameChain,
-        @Nullable List<String> parentNameChain,
-        @Nullable String permissions,
-        @Nullable String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inheritedPermissions") @Nullable String inheritedPermissions,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numberOfChildGroups") @Nullable Integer numberOfChildGroups,
+        @OutputCustomType.Parameter("numberOfChildren") @Nullable Integer numberOfChildren,
+        @OutputCustomType.Parameter("numberOfDescendants") @Nullable Integer numberOfDescendants,
+        @OutputCustomType.Parameter("parent") @Nullable EntityParentGroupInfoResponse parent,
+        @OutputCustomType.Parameter("parentDisplayNameChain") @Nullable List<String> parentDisplayNameChain,
+        @OutputCustomType.Parameter("parentNameChain") @Nullable List<String> parentNameChain,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.displayName = displayName;
         this.id = id;
         this.inheritedPermissions = inheritedPermissions;
@@ -238,67 +238,67 @@ public final class EntityInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInheritedPermissions(@Nullable String inheritedPermissions) {
+        public Builder inheritedPermissions(@Nullable String inheritedPermissions) {
             this.inheritedPermissions = inheritedPermissions;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumberOfChildGroups(@Nullable Integer numberOfChildGroups) {
+        public Builder numberOfChildGroups(@Nullable Integer numberOfChildGroups) {
             this.numberOfChildGroups = numberOfChildGroups;
             return this;
         }
 
-        public Builder setNumberOfChildren(@Nullable Integer numberOfChildren) {
+        public Builder numberOfChildren(@Nullable Integer numberOfChildren) {
             this.numberOfChildren = numberOfChildren;
             return this;
         }
 
-        public Builder setNumberOfDescendants(@Nullable Integer numberOfDescendants) {
+        public Builder numberOfDescendants(@Nullable Integer numberOfDescendants) {
             this.numberOfDescendants = numberOfDescendants;
             return this;
         }
 
-        public Builder setParent(@Nullable EntityParentGroupInfoResponse parent) {
+        public Builder parent(@Nullable EntityParentGroupInfoResponse parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParentDisplayNameChain(@Nullable List<String> parentDisplayNameChain) {
+        public Builder parentDisplayNameChain(@Nullable List<String> parentDisplayNameChain) {
             this.parentDisplayNameChain = parentDisplayNameChain;
             return this;
         }
 
-        public Builder setParentNameChain(@Nullable List<String> parentNameChain) {
+        public Builder parentNameChain(@Nullable List<String> parentNameChain) {
             this.parentNameChain = parentNameChain;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

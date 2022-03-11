@@ -137,62 +137,62 @@ public final class DataIntegrationArgs extends io.pulumi.resources.ResourceArgs 
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKmsKey(Input<String> kmsKey) {
+        public Builder kmsKey(Input<String> kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Input.of(Objects.requireNonNull(kmsKey));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setScheduleConfig(Input<DataIntegrationScheduleConfigArgs> scheduleConfig) {
+        public Builder scheduleConfig(Input<DataIntegrationScheduleConfigArgs> scheduleConfig) {
             this.scheduleConfig = Objects.requireNonNull(scheduleConfig);
             return this;
         }
 
-        public Builder setScheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
+        public Builder scheduleConfig(DataIntegrationScheduleConfigArgs scheduleConfig) {
             this.scheduleConfig = Input.of(Objects.requireNonNull(scheduleConfig));
             return this;
         }
 
-        public Builder setSourceURI(Input<String> sourceURI) {
+        public Builder sourceURI(Input<String> sourceURI) {
             this.sourceURI = Objects.requireNonNull(sourceURI);
             return this;
         }
 
-        public Builder setSourceURI(String sourceURI) {
+        public Builder sourceURI(String sourceURI) {
             this.sourceURI = Input.of(Objects.requireNonNull(sourceURI));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DataIntegrationTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DataIntegrationTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataIntegrationTagArgs> tags) {
+        public Builder tags(@Nullable List<DataIntegrationTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

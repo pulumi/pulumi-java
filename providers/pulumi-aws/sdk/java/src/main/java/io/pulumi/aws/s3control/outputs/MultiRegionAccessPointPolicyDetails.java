@@ -20,10 +20,10 @@ public final class MultiRegionAccessPointPolicyDetails {
      */
     private final String policy;
 
-    @OutputCustomType.Constructor({"name","policy"})
+    @OutputCustomType.Constructor
     private MultiRegionAccessPointPolicyDetails(
-        String name,
-        String policy) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policy") String policy) {
         this.name = name;
         this.policy = policy;
     }
@@ -65,12 +65,12 @@ public final class MultiRegionAccessPointPolicyDetails {
     	      this.policy = defaults.policy;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicy(String policy) {
+        public Builder policy(String policy) {
             this.policy = Objects.requireNonNull(policy);
             return this;
         }

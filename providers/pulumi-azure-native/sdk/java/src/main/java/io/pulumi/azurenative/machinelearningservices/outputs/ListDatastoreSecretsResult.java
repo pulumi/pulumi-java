@@ -15,8 +15,8 @@ public final class ListDatastoreSecretsResult {
      */
     private final String secretsType;
 
-    @OutputCustomType.Constructor({"secretsType"})
-    private ListDatastoreSecretsResult(String secretsType) {
+    @OutputCustomType.Constructor
+    private ListDatastoreSecretsResult(@OutputCustomType.Parameter("secretsType") String secretsType) {
         this.secretsType = secretsType;
     }
 
@@ -48,7 +48,7 @@ public final class ListDatastoreSecretsResult {
     	      this.secretsType = defaults.secretsType;
         }
 
-        public Builder setSecretsType(String secretsType) {
+        public Builder secretsType(String secretsType) {
             this.secretsType = Objects.requireNonNull(secretsType);
             return this;
         }

@@ -66,18 +66,18 @@ public final class SuppressionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"conditions","createdAt","createdBy","description","lastModifiedAt","lastModifiedBy","scope","status","suppressionConfig","type"})
+    @OutputCustomType.Constructor
     private SuppressionResponse(
-        @Nullable ConditionsResponse conditions,
-        String createdAt,
-        String createdBy,
-        @Nullable String description,
-        String lastModifiedAt,
-        String lastModifiedBy,
-        @Nullable ScopeResponse scope,
-        @Nullable String status,
-        SuppressionConfigResponse suppressionConfig,
-        String type) {
+        @OutputCustomType.Parameter("conditions") @Nullable ConditionsResponse conditions,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("scope") @Nullable ScopeResponse scope,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("suppressionConfig") SuppressionConfigResponse suppressionConfig,
+        @OutputCustomType.Parameter("type") String type) {
         this.conditions = conditions;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
@@ -200,52 +200,52 @@ public final class SuppressionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setConditions(@Nullable ConditionsResponse conditions) {
+        public Builder conditions(@Nullable ConditionsResponse conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setLastModifiedBy(String lastModifiedBy) {
+        public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setScope(@Nullable ScopeResponse scope) {
+        public Builder scope(@Nullable ScopeResponse scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSuppressionConfig(SuppressionConfigResponse suppressionConfig) {
+        public Builder suppressionConfig(SuppressionConfigResponse suppressionConfig) {
             this.suppressionConfig = Objects.requireNonNull(suppressionConfig);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

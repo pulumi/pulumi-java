@@ -36,12 +36,12 @@ public final class RuleGroupRuleGroupRulesSource {
      */
     private final @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions;
 
-    @OutputCustomType.Constructor({"rulesSourceList","rulesString","statefulRules","statelessRulesAndCustomActions"})
+    @OutputCustomType.Constructor
     private RuleGroupRuleGroupRulesSource(
-        @Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList,
-        @Nullable String rulesString,
-        @Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules,
-        @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        @OutputCustomType.Parameter("rulesSourceList") @Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList,
+        @OutputCustomType.Parameter("rulesString") @Nullable String rulesString,
+        @OutputCustomType.Parameter("statefulRules") @Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules,
+        @OutputCustomType.Parameter("statelessRulesAndCustomActions") @Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
         this.rulesSourceList = rulesSourceList;
         this.rulesString = rulesString;
         this.statefulRules = statefulRules;
@@ -103,22 +103,22 @@ public final class RuleGroupRuleGroupRulesSource {
     	      this.statelessRulesAndCustomActions = defaults.statelessRulesAndCustomActions;
         }
 
-        public Builder setRulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList) {
+        public Builder rulesSourceList(@Nullable RuleGroupRuleGroupRulesSourceRulesSourceList rulesSourceList) {
             this.rulesSourceList = rulesSourceList;
             return this;
         }
 
-        public Builder setRulesString(@Nullable String rulesString) {
+        public Builder rulesString(@Nullable String rulesString) {
             this.rulesString = rulesString;
             return this;
         }
 
-        public Builder setStatefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules) {
+        public Builder statefulRules(@Nullable List<RuleGroupRuleGroupRulesSourceStatefulRule> statefulRules) {
             this.statefulRules = statefulRules;
             return this;
         }
 
-        public Builder setStatelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
+        public Builder statelessRulesAndCustomActions(@Nullable RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActions statelessRulesAndCustomActions) {
             this.statelessRulesAndCustomActions = statelessRulesAndCustomActions;
             return this;
         }

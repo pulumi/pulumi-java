@@ -31,11 +31,11 @@ public final class GuestPoliciesRecipeArtifactGcs {
      */
     private final @Nullable String object;
 
-    @OutputCustomType.Constructor({"bucket","generation","object"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeArtifactGcs(
-        @Nullable String bucket,
-        @Nullable Integer generation,
-        @Nullable String object) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("generation") @Nullable Integer generation,
+        @OutputCustomType.Parameter("object") @Nullable String object) {
         this.bucket = bucket;
         this.generation = generation;
         this.object = object;
@@ -90,17 +90,17 @@ public final class GuestPoliciesRecipeArtifactGcs {
     	      this.object = defaults.object;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setGeneration(@Nullable Integer generation) {
+        public Builder generation(@Nullable Integer generation) {
             this.generation = generation;
             return this;
         }
 
-        public Builder setObject(@Nullable String object) {
+        public Builder object(@Nullable String object) {
             this.object = object;
             return this;
         }

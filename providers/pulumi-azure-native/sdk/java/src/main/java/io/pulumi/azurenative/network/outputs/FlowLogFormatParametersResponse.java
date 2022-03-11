@@ -23,10 +23,10 @@ public final class FlowLogFormatParametersResponse {
      */
     private final @Nullable Integer version;
 
-    @OutputCustomType.Constructor({"type","version"})
+    @OutputCustomType.Constructor
     private FlowLogFormatParametersResponse(
-        @Nullable String type,
-        @Nullable Integer version) {
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("version") @Nullable Integer version) {
         this.type = type;
         this.version = version;
     }
@@ -68,12 +68,12 @@ public final class FlowLogFormatParametersResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = version;
             return this;
         }

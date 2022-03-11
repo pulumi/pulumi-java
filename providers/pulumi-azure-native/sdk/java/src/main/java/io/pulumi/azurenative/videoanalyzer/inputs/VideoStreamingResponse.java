@@ -63,7 +63,7 @@ public final class VideoStreamingResponse extends io.pulumi.resources.InvokeArgs
     	      this.archiveBaseUrl = defaults.archiveBaseUrl;
         }
 
-        public Builder setArchiveBaseUrl(@Nullable String archiveBaseUrl) {
+        public Builder archiveBaseUrl(@Nullable String archiveBaseUrl) {
             this.archiveBaseUrl = archiveBaseUrl;
             return this;
         }

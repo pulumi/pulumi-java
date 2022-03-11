@@ -160,8 +160,8 @@ public class Ingress extends io.pulumi.resources.CustomResource {
     private static IngressArgs makeArgs(@Nullable IngressArgs args) {
         var builder = args == null ? IngressArgs.builder() : IngressArgs.builder(args);
         return builder
-            .setApiVersion("extensions/v1beta1")
-            .setKind("Ingress")
+            .apiVersion("extensions/v1beta1")
+            .kind("Ingress")
             .build();
     }
 

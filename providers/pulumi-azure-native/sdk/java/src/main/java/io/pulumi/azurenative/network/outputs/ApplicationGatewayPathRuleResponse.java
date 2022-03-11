@@ -69,19 +69,19 @@ public final class ApplicationGatewayPathRuleResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"backendAddressPool","backendHttpSettings","etag","firewallPolicy","id","name","paths","provisioningState","redirectConfiguration","rewriteRuleSet","type"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayPathRuleResponse(
-        @Nullable SubResourceResponse backendAddressPool,
-        @Nullable SubResourceResponse backendHttpSettings,
-        String etag,
-        @Nullable SubResourceResponse firewallPolicy,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable List<String> paths,
-        String provisioningState,
-        @Nullable SubResourceResponse redirectConfiguration,
-        @Nullable SubResourceResponse rewriteRuleSet,
-        String type) {
+        @OutputCustomType.Parameter("backendAddressPool") @Nullable SubResourceResponse backendAddressPool,
+        @OutputCustomType.Parameter("backendHttpSettings") @Nullable SubResourceResponse backendHttpSettings,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("firewallPolicy") @Nullable SubResourceResponse firewallPolicy,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("redirectConfiguration") @Nullable SubResourceResponse redirectConfiguration,
+        @OutputCustomType.Parameter("rewriteRuleSet") @Nullable SubResourceResponse rewriteRuleSet,
+        @OutputCustomType.Parameter("type") String type) {
         this.backendAddressPool = backendAddressPool;
         this.backendHttpSettings = backendHttpSettings;
         this.etag = etag;
@@ -213,57 +213,57 @@ public final class ApplicationGatewayPathRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setBackendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
+        public Builder backendAddressPool(@Nullable SubResourceResponse backendAddressPool) {
             this.backendAddressPool = backendAddressPool;
             return this;
         }
 
-        public Builder setBackendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
+        public Builder backendHttpSettings(@Nullable SubResourceResponse backendHttpSettings) {
             this.backendHttpSettings = backendHttpSettings;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setFirewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
+        public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             this.firewallPolicy = firewallPolicy;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPaths(@Nullable List<String> paths) {
+        public Builder paths(@Nullable List<String> paths) {
             this.paths = paths;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRedirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
+        public Builder redirectConfiguration(@Nullable SubResourceResponse redirectConfiguration) {
             this.redirectConfiguration = redirectConfiguration;
             return this;
         }
 
-        public Builder setRewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
+        public Builder rewriteRuleSet(@Nullable SubResourceResponse rewriteRuleSet) {
             this.rewriteRuleSet = rewriteRuleSet;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

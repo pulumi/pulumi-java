@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2TriggerResponse {
      */
     private final GooglePrivacyDlpV2ScheduleResponse schedule;
 
-    @OutputCustomType.Constructor({"manual","schedule"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TriggerResponse(
-        GooglePrivacyDlpV2ManualResponse manual,
-        GooglePrivacyDlpV2ScheduleResponse schedule) {
+        @OutputCustomType.Parameter("manual") GooglePrivacyDlpV2ManualResponse manual,
+        @OutputCustomType.Parameter("schedule") GooglePrivacyDlpV2ScheduleResponse schedule) {
         this.manual = manual;
         this.schedule = schedule;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2TriggerResponse {
     	      this.schedule = defaults.schedule;
         }
 
-        public Builder setManual(GooglePrivacyDlpV2ManualResponse manual) {
+        public Builder manual(GooglePrivacyDlpV2ManualResponse manual) {
             this.manual = Objects.requireNonNull(manual);
             return this;
         }
 
-        public Builder setSchedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
+        public Builder schedule(GooglePrivacyDlpV2ScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }

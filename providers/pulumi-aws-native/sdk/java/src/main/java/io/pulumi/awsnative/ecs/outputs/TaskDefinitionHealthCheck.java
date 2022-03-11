@@ -39,13 +39,13 @@ public final class TaskDefinitionHealthCheck {
      */
     private final @Nullable Integer timeout;
 
-    @OutputCustomType.Constructor({"command","interval","retries","startPeriod","timeout"})
+    @OutputCustomType.Constructor
     private TaskDefinitionHealthCheck(
-        @Nullable List<String> command,
-        @Nullable Integer interval,
-        @Nullable Integer retries,
-        @Nullable Integer startPeriod,
-        @Nullable Integer timeout) {
+        @OutputCustomType.Parameter("command") @Nullable List<String> command,
+        @OutputCustomType.Parameter("interval") @Nullable Integer interval,
+        @OutputCustomType.Parameter("retries") @Nullable Integer retries,
+        @OutputCustomType.Parameter("startPeriod") @Nullable Integer startPeriod,
+        @OutputCustomType.Parameter("timeout") @Nullable Integer timeout) {
         this.command = command;
         this.interval = interval;
         this.retries = retries;
@@ -117,27 +117,27 @@ public final class TaskDefinitionHealthCheck {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setInterval(@Nullable Integer interval) {
+        public Builder interval(@Nullable Integer interval) {
             this.interval = interval;
             return this;
         }
 
-        public Builder setRetries(@Nullable Integer retries) {
+        public Builder retries(@Nullable Integer retries) {
             this.retries = retries;
             return this;
         }
 
-        public Builder setStartPeriod(@Nullable Integer startPeriod) {
+        public Builder startPeriod(@Nullable Integer startPeriod) {
             this.startPeriod = startPeriod;
             return this;
         }
 
-        public Builder setTimeout(@Nullable Integer timeout) {
+        public Builder timeout(@Nullable Integer timeout) {
             this.timeout = timeout;
             return this;
         }

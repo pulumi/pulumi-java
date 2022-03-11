@@ -44,14 +44,14 @@ public final class ImageTemplatePlatformImageSourceResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"offer","planInfo","publisher","sku","type","version"})
+    @OutputCustomType.Constructor
     private ImageTemplatePlatformImageSourceResponse(
-        @Nullable String offer,
-        @Nullable PlatformImagePurchasePlanResponse planInfo,
-        @Nullable String publisher,
-        @Nullable String sku,
-        String type,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("planInfo") @Nullable PlatformImagePurchasePlanResponse planInfo,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.offer = offer;
         this.planInfo = planInfo;
         this.publisher = publisher;
@@ -134,32 +134,32 @@ public final class ImageTemplatePlatformImageSourceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setPlanInfo(@Nullable PlatformImagePurchasePlanResponse planInfo) {
+        public Builder planInfo(@Nullable PlatformImagePurchasePlanResponse planInfo) {
             this.planInfo = planInfo;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

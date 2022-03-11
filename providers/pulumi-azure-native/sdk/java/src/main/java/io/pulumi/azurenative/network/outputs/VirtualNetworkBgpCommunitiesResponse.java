@@ -20,10 +20,10 @@ public final class VirtualNetworkBgpCommunitiesResponse {
      */
     private final String virtualNetworkCommunity;
 
-    @OutputCustomType.Constructor({"regionalCommunity","virtualNetworkCommunity"})
+    @OutputCustomType.Constructor
     private VirtualNetworkBgpCommunitiesResponse(
-        String regionalCommunity,
-        String virtualNetworkCommunity) {
+        @OutputCustomType.Parameter("regionalCommunity") String regionalCommunity,
+        @OutputCustomType.Parameter("virtualNetworkCommunity") String virtualNetworkCommunity) {
         this.regionalCommunity = regionalCommunity;
         this.virtualNetworkCommunity = virtualNetworkCommunity;
     }
@@ -65,12 +65,12 @@ public final class VirtualNetworkBgpCommunitiesResponse {
     	      this.virtualNetworkCommunity = defaults.virtualNetworkCommunity;
         }
 
-        public Builder setRegionalCommunity(String regionalCommunity) {
+        public Builder regionalCommunity(String regionalCommunity) {
             this.regionalCommunity = Objects.requireNonNull(regionalCommunity);
             return this;
         }
 
-        public Builder setVirtualNetworkCommunity(String virtualNetworkCommunity) {
+        public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
             this.virtualNetworkCommunity = Objects.requireNonNull(virtualNetworkCommunity);
             return this;
         }

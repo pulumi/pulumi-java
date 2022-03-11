@@ -20,10 +20,10 @@ public final class ReturnShippingResponse {
      */
     private final String carrierName;
 
-    @OutputCustomType.Constructor({"carrierAccountNumber","carrierName"})
+    @OutputCustomType.Constructor
     private ReturnShippingResponse(
-        String carrierAccountNumber,
-        String carrierName) {
+        @OutputCustomType.Parameter("carrierAccountNumber") String carrierAccountNumber,
+        @OutputCustomType.Parameter("carrierName") String carrierName) {
         this.carrierAccountNumber = carrierAccountNumber;
         this.carrierName = carrierName;
     }
@@ -65,12 +65,12 @@ public final class ReturnShippingResponse {
     	      this.carrierName = defaults.carrierName;
         }
 
-        public Builder setCarrierAccountNumber(String carrierAccountNumber) {
+        public Builder carrierAccountNumber(String carrierAccountNumber) {
             this.carrierAccountNumber = Objects.requireNonNull(carrierAccountNumber);
             return this;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }

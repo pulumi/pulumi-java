@@ -38,13 +38,13 @@ public final class MonitoringScheduleMonitoringAppSpecification {
      */
     private final @Nullable String recordPreprocessorSourceUri;
 
-    @OutputCustomType.Constructor({"containerArguments","containerEntrypoint","imageUri","postAnalyticsProcessorSourceUri","recordPreprocessorSourceUri"})
+    @OutputCustomType.Constructor
     private MonitoringScheduleMonitoringAppSpecification(
-        @Nullable List<String> containerArguments,
-        @Nullable List<String> containerEntrypoint,
-        String imageUri,
-        @Nullable String postAnalyticsProcessorSourceUri,
-        @Nullable String recordPreprocessorSourceUri) {
+        @OutputCustomType.Parameter("containerArguments") @Nullable List<String> containerArguments,
+        @OutputCustomType.Parameter("containerEntrypoint") @Nullable List<String> containerEntrypoint,
+        @OutputCustomType.Parameter("imageUri") String imageUri,
+        @OutputCustomType.Parameter("postAnalyticsProcessorSourceUri") @Nullable String postAnalyticsProcessorSourceUri,
+        @OutputCustomType.Parameter("recordPreprocessorSourceUri") @Nullable String recordPreprocessorSourceUri) {
         this.containerArguments = containerArguments;
         this.containerEntrypoint = containerEntrypoint;
         this.imageUri = imageUri;
@@ -116,27 +116,27 @@ public final class MonitoringScheduleMonitoringAppSpecification {
     	      this.recordPreprocessorSourceUri = defaults.recordPreprocessorSourceUri;
         }
 
-        public Builder setContainerArguments(@Nullable List<String> containerArguments) {
+        public Builder containerArguments(@Nullable List<String> containerArguments) {
             this.containerArguments = containerArguments;
             return this;
         }
 
-        public Builder setContainerEntrypoint(@Nullable List<String> containerEntrypoint) {
+        public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
             this.containerEntrypoint = containerEntrypoint;
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
 
-        public Builder setPostAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
+        public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
             this.postAnalyticsProcessorSourceUri = postAnalyticsProcessorSourceUri;
             return this;
         }
 
-        public Builder setRecordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
+        public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
             this.recordPreprocessorSourceUri = recordPreprocessorSourceUri;
             return this;
         }

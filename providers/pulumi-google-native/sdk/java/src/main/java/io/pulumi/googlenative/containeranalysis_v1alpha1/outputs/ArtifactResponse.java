@@ -21,10 +21,10 @@ public final class ArtifactResponse {
      */
     private final List<String> names;
 
-    @OutputCustomType.Constructor({"checksum","names"})
+    @OutputCustomType.Constructor
     private ArtifactResponse(
-        String checksum,
-        List<String> names) {
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("names") List<String> names) {
         this.checksum = checksum;
         this.names = names;
     }
@@ -66,12 +66,12 @@ public final class ArtifactResponse {
     	      this.names = defaults.names;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }

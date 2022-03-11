@@ -27,11 +27,11 @@ public final class CustomImagePropertiesFromPlanResponse {
      */
     private final @Nullable String publisher;
 
-    @OutputCustomType.Constructor({"id","offer","publisher"})
+    @OutputCustomType.Constructor
     private CustomImagePropertiesFromPlanResponse(
-        @Nullable String id,
-        @Nullable String offer,
-        @Nullable String publisher) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("offer") @Nullable String offer,
+        @OutputCustomType.Parameter("publisher") @Nullable String publisher) {
         this.id = id;
         this.offer = offer;
         this.publisher = publisher;
@@ -83,17 +83,17 @@ public final class CustomImagePropertiesFromPlanResponse {
     	      this.publisher = defaults.publisher;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setOffer(@Nullable String offer) {
+        public Builder offer(@Nullable String offer) {
             this.offer = offer;
             return this;
         }
 
-        public Builder setPublisher(@Nullable String publisher) {
+        public Builder publisher(@Nullable String publisher) {
             this.publisher = publisher;
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataQualityJobDefinitionMonitoringResources {
     private final DataQualityJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private DataQualityJobDefinitionMonitoringResources(DataQualityJobDefinitionClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private DataQualityJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") DataQualityJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 
@@ -40,7 +40,7 @@ public final class DataQualityJobDefinitionMonitoringResources {
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(DataQualityJobDefinitionClusterConfig clusterConfig) {
+        public Builder clusterConfig(DataQualityJobDefinitionClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }

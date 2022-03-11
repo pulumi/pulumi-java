@@ -22,10 +22,10 @@ public final class WsdlServiceResponse {
      */
     private final String qualifiedName;
 
-    @OutputCustomType.Constructor({"endpointQualifiedNames","qualifiedName"})
+    @OutputCustomType.Constructor
     private WsdlServiceResponse(
-        @Nullable List<String> endpointQualifiedNames,
-        String qualifiedName) {
+        @OutputCustomType.Parameter("endpointQualifiedNames") @Nullable List<String> endpointQualifiedNames,
+        @OutputCustomType.Parameter("qualifiedName") String qualifiedName) {
         this.endpointQualifiedNames = endpointQualifiedNames;
         this.qualifiedName = qualifiedName;
     }
@@ -67,12 +67,12 @@ public final class WsdlServiceResponse {
     	      this.qualifiedName = defaults.qualifiedName;
         }
 
-        public Builder setEndpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
+        public Builder endpointQualifiedNames(@Nullable List<String> endpointQualifiedNames) {
             this.endpointQualifiedNames = endpointQualifiedNames;
             return this;
         }
 
-        public Builder setQualifiedName(String qualifiedName) {
+        public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }

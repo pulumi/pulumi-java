@@ -107,42 +107,42 @@ public final class ObjectReplicationPolicyRuleArgs extends io.pulumi.resources.R
     	      this.sourceContainer = defaults.sourceContainer;
         }
 
-        public Builder setDestinationContainer(Input<String> destinationContainer) {
+        public Builder destinationContainer(Input<String> destinationContainer) {
             this.destinationContainer = Objects.requireNonNull(destinationContainer);
             return this;
         }
 
-        public Builder setDestinationContainer(String destinationContainer) {
+        public Builder destinationContainer(String destinationContainer) {
             this.destinationContainer = Input.of(Objects.requireNonNull(destinationContainer));
             return this;
         }
 
-        public Builder setFilters(@Nullable Input<ObjectReplicationPolicyFilterArgs> filters) {
+        public Builder filters(@Nullable Input<ObjectReplicationPolicyFilterArgs> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
+        public Builder filters(@Nullable ObjectReplicationPolicyFilterArgs filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setRuleId(@Nullable Input<String> ruleId) {
+        public Builder ruleId(@Nullable Input<String> ruleId) {
             this.ruleId = ruleId;
             return this;
         }
 
-        public Builder setRuleId(@Nullable String ruleId) {
+        public Builder ruleId(@Nullable String ruleId) {
             this.ruleId = Input.ofNullable(ruleId);
             return this;
         }
 
-        public Builder setSourceContainer(Input<String> sourceContainer) {
+        public Builder sourceContainer(Input<String> sourceContainer) {
             this.sourceContainer = Objects.requireNonNull(sourceContainer);
             return this;
         }
 
-        public Builder setSourceContainer(String sourceContainer) {
+        public Builder sourceContainer(String sourceContainer) {
             this.sourceContainer = Input.of(Objects.requireNonNull(sourceContainer));
             return this;
         }

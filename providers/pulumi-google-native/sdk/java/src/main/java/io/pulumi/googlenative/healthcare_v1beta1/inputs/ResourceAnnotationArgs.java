@@ -57,12 +57,12 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
     	      this.label = defaults.label;
         }
 
-        public Builder setLabel(@Nullable Input<String> label) {
+        public Builder label(@Nullable Input<String> label) {
             this.label = label;
             return this;
         }
 
-        public Builder setLabel(@Nullable String label) {
+        public Builder label(@Nullable String label) {
             this.label = Input.ofNullable(label);
             return this;
         }

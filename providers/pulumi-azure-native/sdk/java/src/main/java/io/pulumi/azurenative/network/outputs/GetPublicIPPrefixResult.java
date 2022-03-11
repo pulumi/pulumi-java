@@ -116,27 +116,27 @@ public final class GetPublicIPPrefixResult {
      */
     private final @Nullable List<String> zones;
 
-    @OutputCustomType.Constructor({"customIPPrefix","etag","extendedLocation","id","ipPrefix","ipTags","loadBalancerFrontendIpConfiguration","location","name","natGateway","prefixLength","provisioningState","publicIPAddressVersion","publicIPAddresses","resourceGuid","sku","tags","type","zones"})
+    @OutputCustomType.Constructor
     private GetPublicIPPrefixResult(
-        @Nullable SubResourceResponse customIPPrefix,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        String ipPrefix,
-        @Nullable List<IpTagResponse> ipTags,
-        SubResourceResponse loadBalancerFrontendIpConfiguration,
-        @Nullable String location,
-        String name,
-        @Nullable NatGatewayResponse natGateway,
-        @Nullable Integer prefixLength,
-        String provisioningState,
-        @Nullable String publicIPAddressVersion,
-        List<ReferencedPublicIpAddressResponse> publicIPAddresses,
-        String resourceGuid,
-        @Nullable PublicIPPrefixSkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<String> zones) {
+        @OutputCustomType.Parameter("customIPPrefix") @Nullable SubResourceResponse customIPPrefix,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("ipPrefix") String ipPrefix,
+        @OutputCustomType.Parameter("ipTags") @Nullable List<IpTagResponse> ipTags,
+        @OutputCustomType.Parameter("loadBalancerFrontendIpConfiguration") SubResourceResponse loadBalancerFrontendIpConfiguration,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("natGateway") @Nullable NatGatewayResponse natGateway,
+        @OutputCustomType.Parameter("prefixLength") @Nullable Integer prefixLength,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicIPAddressVersion") @Nullable String publicIPAddressVersion,
+        @OutputCustomType.Parameter("publicIPAddresses") List<ReferencedPublicIpAddressResponse> publicIPAddresses,
+        @OutputCustomType.Parameter("resourceGuid") String resourceGuid,
+        @OutputCustomType.Parameter("sku") @Nullable PublicIPPrefixSkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("zones") @Nullable List<String> zones) {
         this.customIPPrefix = customIPPrefix;
         this.etag = etag;
         this.extendedLocation = extendedLocation;
@@ -348,97 +348,97 @@ public final class GetPublicIPPrefixResult {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setCustomIPPrefix(@Nullable SubResourceResponse customIPPrefix) {
+        public Builder customIPPrefix(@Nullable SubResourceResponse customIPPrefix) {
             this.customIPPrefix = customIPPrefix;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setIpPrefix(String ipPrefix) {
+        public Builder ipPrefix(String ipPrefix) {
             this.ipPrefix = Objects.requireNonNull(ipPrefix);
             return this;
         }
 
-        public Builder setIpTags(@Nullable List<IpTagResponse> ipTags) {
+        public Builder ipTags(@Nullable List<IpTagResponse> ipTags) {
             this.ipTags = ipTags;
             return this;
         }
 
-        public Builder setLoadBalancerFrontendIpConfiguration(SubResourceResponse loadBalancerFrontendIpConfiguration) {
+        public Builder loadBalancerFrontendIpConfiguration(SubResourceResponse loadBalancerFrontendIpConfiguration) {
             this.loadBalancerFrontendIpConfiguration = Objects.requireNonNull(loadBalancerFrontendIpConfiguration);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNatGateway(@Nullable NatGatewayResponse natGateway) {
+        public Builder natGateway(@Nullable NatGatewayResponse natGateway) {
             this.natGateway = natGateway;
             return this;
         }
 
-        public Builder setPrefixLength(@Nullable Integer prefixLength) {
+        public Builder prefixLength(@Nullable Integer prefixLength) {
             this.prefixLength = prefixLength;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicIPAddressVersion(@Nullable String publicIPAddressVersion) {
+        public Builder publicIPAddressVersion(@Nullable String publicIPAddressVersion) {
             this.publicIPAddressVersion = publicIPAddressVersion;
             return this;
         }
 
-        public Builder setPublicIPAddresses(List<ReferencedPublicIpAddressResponse> publicIPAddresses) {
+        public Builder publicIPAddresses(List<ReferencedPublicIpAddressResponse> publicIPAddresses) {
             this.publicIPAddresses = Objects.requireNonNull(publicIPAddresses);
             return this;
         }
 
-        public Builder setResourceGuid(String resourceGuid) {
+        public Builder resourceGuid(String resourceGuid) {
             this.resourceGuid = Objects.requireNonNull(resourceGuid);
             return this;
         }
 
-        public Builder setSku(@Nullable PublicIPPrefixSkuResponse sku) {
+        public Builder sku(@Nullable PublicIPPrefixSkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setZones(@Nullable List<String> zones) {
+        public Builder zones(@Nullable List<String> zones) {
             this.zones = zones;
             return this;
         }

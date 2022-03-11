@@ -17,8 +17,8 @@ public final class VolumeNodeResources {
      */
     private final @Nullable Integer count;
 
-    @OutputCustomType.Constructor({"count"})
-    private VolumeNodeResources(@Nullable Integer count) {
+    @OutputCustomType.Constructor
+    private VolumeNodeResources(@OutputCustomType.Parameter("count") @Nullable Integer count) {
         this.count = count;
     }
 
@@ -50,7 +50,7 @@ public final class VolumeNodeResources {
     	      this.count = defaults.count;
         }
 
-        public Builder setCount(@Nullable Integer count) {
+        public Builder count(@Nullable Integer count) {
             this.count = count;
             return this;
         }

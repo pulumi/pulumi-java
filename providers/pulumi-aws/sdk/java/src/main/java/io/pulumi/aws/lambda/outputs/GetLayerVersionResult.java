@@ -82,24 +82,24 @@ public final class GetLayerVersionResult {
      */
     private final Integer version;
 
-    @OutputCustomType.Constructor({"arn","compatibleArchitecture","compatibleArchitectures","compatibleRuntime","compatibleRuntimes","createdDate","description","id","layerArn","layerName","licenseInfo","signingJobArn","signingProfileVersionArn","sourceCodeHash","sourceCodeSize","version"})
+    @OutputCustomType.Constructor
     private GetLayerVersionResult(
-        String arn,
-        @Nullable String compatibleArchitecture,
-        List<String> compatibleArchitectures,
-        @Nullable String compatibleRuntime,
-        List<String> compatibleRuntimes,
-        String createdDate,
-        String description,
-        String id,
-        String layerArn,
-        String layerName,
-        String licenseInfo,
-        String signingJobArn,
-        String signingProfileVersionArn,
-        String sourceCodeHash,
-        Integer sourceCodeSize,
-        Integer version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("compatibleArchitecture") @Nullable String compatibleArchitecture,
+        @OutputCustomType.Parameter("compatibleArchitectures") List<String> compatibleArchitectures,
+        @OutputCustomType.Parameter("compatibleRuntime") @Nullable String compatibleRuntime,
+        @OutputCustomType.Parameter("compatibleRuntimes") List<String> compatibleRuntimes,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("layerArn") String layerArn,
+        @OutputCustomType.Parameter("layerName") String layerName,
+        @OutputCustomType.Parameter("licenseInfo") String licenseInfo,
+        @OutputCustomType.Parameter("signingJobArn") String signingJobArn,
+        @OutputCustomType.Parameter("signingProfileVersionArn") String signingProfileVersionArn,
+        @OutputCustomType.Parameter("sourceCodeHash") String sourceCodeHash,
+        @OutputCustomType.Parameter("sourceCodeSize") Integer sourceCodeSize,
+        @OutputCustomType.Parameter("version") Integer version) {
         this.arn = arn;
         this.compatibleArchitecture = compatibleArchitecture;
         this.compatibleArchitectures = compatibleArchitectures;
@@ -269,82 +269,82 @@ public final class GetLayerVersionResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCompatibleArchitecture(@Nullable String compatibleArchitecture) {
+        public Builder compatibleArchitecture(@Nullable String compatibleArchitecture) {
             this.compatibleArchitecture = compatibleArchitecture;
             return this;
         }
 
-        public Builder setCompatibleArchitectures(List<String> compatibleArchitectures) {
+        public Builder compatibleArchitectures(List<String> compatibleArchitectures) {
             this.compatibleArchitectures = Objects.requireNonNull(compatibleArchitectures);
             return this;
         }
 
-        public Builder setCompatibleRuntime(@Nullable String compatibleRuntime) {
+        public Builder compatibleRuntime(@Nullable String compatibleRuntime) {
             this.compatibleRuntime = compatibleRuntime;
             return this;
         }
 
-        public Builder setCompatibleRuntimes(List<String> compatibleRuntimes) {
+        public Builder compatibleRuntimes(List<String> compatibleRuntimes) {
             this.compatibleRuntimes = Objects.requireNonNull(compatibleRuntimes);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLayerArn(String layerArn) {
+        public Builder layerArn(String layerArn) {
             this.layerArn = Objects.requireNonNull(layerArn);
             return this;
         }
 
-        public Builder setLayerName(String layerName) {
+        public Builder layerName(String layerName) {
             this.layerName = Objects.requireNonNull(layerName);
             return this;
         }
 
-        public Builder setLicenseInfo(String licenseInfo) {
+        public Builder licenseInfo(String licenseInfo) {
             this.licenseInfo = Objects.requireNonNull(licenseInfo);
             return this;
         }
 
-        public Builder setSigningJobArn(String signingJobArn) {
+        public Builder signingJobArn(String signingJobArn) {
             this.signingJobArn = Objects.requireNonNull(signingJobArn);
             return this;
         }
 
-        public Builder setSigningProfileVersionArn(String signingProfileVersionArn) {
+        public Builder signingProfileVersionArn(String signingProfileVersionArn) {
             this.signingProfileVersionArn = Objects.requireNonNull(signingProfileVersionArn);
             return this;
         }
 
-        public Builder setSourceCodeHash(String sourceCodeHash) {
+        public Builder sourceCodeHash(String sourceCodeHash) {
             this.sourceCodeHash = Objects.requireNonNull(sourceCodeHash);
             return this;
         }
 
-        public Builder setSourceCodeSize(Integer sourceCodeSize) {
+        public Builder sourceCodeSize(Integer sourceCodeSize) {
             this.sourceCodeSize = Objects.requireNonNull(sourceCodeSize);
             return this;
         }
 
-        public Builder setVersion(Integer version) {
+        public Builder version(Integer version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

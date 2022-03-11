@@ -87,22 +87,22 @@ public final class ConnectionAliasAssociation extends io.pulumi.resources.Invoke
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setAssociatedAccountId(@Nullable String associatedAccountId) {
+        public Builder associatedAccountId(@Nullable String associatedAccountId) {
             this.associatedAccountId = associatedAccountId;
             return this;
         }
 
-        public Builder setAssociationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
+        public Builder associationStatus(@Nullable ConnectionAliasAssociationAssociationStatus associationStatus) {
             this.associationStatus = associationStatus;
             return this;
         }
 
-        public Builder setConnectionIdentifier(@Nullable String connectionIdentifier) {
+        public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             this.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }

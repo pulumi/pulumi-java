@@ -21,10 +21,10 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse {
      */
     private final GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants;
 
-    @OutputCustomType.Constructor({"condition","versionVariants"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse(
-        String condition,
-        GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
+        @OutputCustomType.Parameter("condition") String condition,
+        @OutputCustomType.Parameter("versionVariants") GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
         this.condition = condition;
         this.versionVariants = versionVariants;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse {
     	      this.versionVariants = defaults.versionVariants;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setVersionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
+        public Builder versionVariants(GoogleCloudDialogflowCxV3beta1VersionVariantsResponse versionVariants) {
             this.versionVariants = Objects.requireNonNull(versionVariants);
             return this;
         }

@@ -126,52 +126,52 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     	      this.products = defaults.products;
         }
 
-        public Builder setByproducts(@Nullable Input<ByProductsArgs> byproducts) {
+        public Builder byproducts(@Nullable Input<ByProductsArgs> byproducts) {
             this.byproducts = byproducts;
             return this;
         }
 
-        public Builder setByproducts(@Nullable ByProductsArgs byproducts) {
+        public Builder byproducts(@Nullable ByProductsArgs byproducts) {
             this.byproducts = Input.ofNullable(byproducts);
             return this;
         }
 
-        public Builder setCommand(@Nullable Input<List<String>> command) {
+        public Builder command(@Nullable Input<List<String>> command) {
             this.command = command;
             return this;
         }
 
-        public Builder setCommand(@Nullable List<String> command) {
+        public Builder command(@Nullable List<String> command) {
             this.command = Input.ofNullable(command);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Input<EnvironmentArgs> environment) {
+        public Builder environment(@Nullable Input<EnvironmentArgs> environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setEnvironment(@Nullable EnvironmentArgs environment) {
+        public Builder environment(@Nullable EnvironmentArgs environment) {
             this.environment = Input.ofNullable(environment);
             return this;
         }
 
-        public Builder setMaterials(@Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
+        public Builder materials(@Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> materials) {
             this.materials = materials;
             return this;
         }
 
-        public Builder setMaterials(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> materials) {
+        public Builder materials(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> materials) {
             this.materials = Input.ofNullable(materials);
             return this;
         }
 
-        public Builder setProducts(@Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
+        public Builder products(@Nullable Input<List<GrafeasV1beta1IntotoArtifactArgs>> products) {
             this.products = products;
             return this;
         }
 
-        public Builder setProducts(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> products) {
+        public Builder products(@Nullable List<GrafeasV1beta1IntotoArtifactArgs> products) {
             this.products = Input.ofNullable(products);
             return this;
         }

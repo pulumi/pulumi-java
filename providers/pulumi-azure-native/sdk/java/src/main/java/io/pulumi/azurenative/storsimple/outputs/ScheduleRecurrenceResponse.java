@@ -28,11 +28,11 @@ public final class ScheduleRecurrenceResponse {
      */
     private final @Nullable List<String> weeklyDaysList;
 
-    @OutputCustomType.Constructor({"recurrenceType","recurrenceValue","weeklyDaysList"})
+    @OutputCustomType.Constructor
     private ScheduleRecurrenceResponse(
-        String recurrenceType,
-        Integer recurrenceValue,
-        @Nullable List<String> weeklyDaysList) {
+        @OutputCustomType.Parameter("recurrenceType") String recurrenceType,
+        @OutputCustomType.Parameter("recurrenceValue") Integer recurrenceValue,
+        @OutputCustomType.Parameter("weeklyDaysList") @Nullable List<String> weeklyDaysList) {
         this.recurrenceType = recurrenceType;
         this.recurrenceValue = recurrenceValue;
         this.weeklyDaysList = weeklyDaysList;
@@ -84,17 +84,17 @@ public final class ScheduleRecurrenceResponse {
     	      this.weeklyDaysList = defaults.weeklyDaysList;
         }
 
-        public Builder setRecurrenceType(String recurrenceType) {
+        public Builder recurrenceType(String recurrenceType) {
             this.recurrenceType = Objects.requireNonNull(recurrenceType);
             return this;
         }
 
-        public Builder setRecurrenceValue(Integer recurrenceValue) {
+        public Builder recurrenceValue(Integer recurrenceValue) {
             this.recurrenceValue = Objects.requireNonNull(recurrenceValue);
             return this;
         }
 
-        public Builder setWeeklyDaysList(@Nullable List<String> weeklyDaysList) {
+        public Builder weeklyDaysList(@Nullable List<String> weeklyDaysList) {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }

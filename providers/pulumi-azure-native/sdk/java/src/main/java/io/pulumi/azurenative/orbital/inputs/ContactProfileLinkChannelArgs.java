@@ -156,72 +156,72 @@ public final class ContactProfileLinkChannelArgs extends io.pulumi.resources.Res
     	      this.modulationConfiguration = defaults.modulationConfiguration;
         }
 
-        public Builder setBandwidthMHz(Input<Double> bandwidthMHz) {
+        public Builder bandwidthMHz(Input<Double> bandwidthMHz) {
             this.bandwidthMHz = Objects.requireNonNull(bandwidthMHz);
             return this;
         }
 
-        public Builder setBandwidthMHz(Double bandwidthMHz) {
+        public Builder bandwidthMHz(Double bandwidthMHz) {
             this.bandwidthMHz = Input.of(Objects.requireNonNull(bandwidthMHz));
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Input<Double> centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Input<Double> centerFrequencyMHz) {
             this.centerFrequencyMHz = Objects.requireNonNull(centerFrequencyMHz);
             return this;
         }
 
-        public Builder setCenterFrequencyMHz(Double centerFrequencyMHz) {
+        public Builder centerFrequencyMHz(Double centerFrequencyMHz) {
             this.centerFrequencyMHz = Input.of(Objects.requireNonNull(centerFrequencyMHz));
             return this;
         }
 
-        public Builder setDecodingConfiguration(@Nullable Input<String> decodingConfiguration) {
+        public Builder decodingConfiguration(@Nullable Input<String> decodingConfiguration) {
             this.decodingConfiguration = decodingConfiguration;
             return this;
         }
 
-        public Builder setDecodingConfiguration(@Nullable String decodingConfiguration) {
+        public Builder decodingConfiguration(@Nullable String decodingConfiguration) {
             this.decodingConfiguration = Input.ofNullable(decodingConfiguration);
             return this;
         }
 
-        public Builder setDemodulationConfiguration(@Nullable Input<String> demodulationConfiguration) {
+        public Builder demodulationConfiguration(@Nullable Input<String> demodulationConfiguration) {
             this.demodulationConfiguration = demodulationConfiguration;
             return this;
         }
 
-        public Builder setDemodulationConfiguration(@Nullable String demodulationConfiguration) {
+        public Builder demodulationConfiguration(@Nullable String demodulationConfiguration) {
             this.demodulationConfiguration = Input.ofNullable(demodulationConfiguration);
             return this;
         }
 
-        public Builder setEncodingConfiguration(@Nullable Input<String> encodingConfiguration) {
+        public Builder encodingConfiguration(@Nullable Input<String> encodingConfiguration) {
             this.encodingConfiguration = encodingConfiguration;
             return this;
         }
 
-        public Builder setEncodingConfiguration(@Nullable String encodingConfiguration) {
+        public Builder encodingConfiguration(@Nullable String encodingConfiguration) {
             this.encodingConfiguration = Input.ofNullable(encodingConfiguration);
             return this;
         }
 
-        public Builder setEndPoint(Input<EndPointArgs> endPoint) {
+        public Builder endPoint(Input<EndPointArgs> endPoint) {
             this.endPoint = Objects.requireNonNull(endPoint);
             return this;
         }
 
-        public Builder setEndPoint(EndPointArgs endPoint) {
+        public Builder endPoint(EndPointArgs endPoint) {
             this.endPoint = Input.of(Objects.requireNonNull(endPoint));
             return this;
         }
 
-        public Builder setModulationConfiguration(@Nullable Input<String> modulationConfiguration) {
+        public Builder modulationConfiguration(@Nullable Input<String> modulationConfiguration) {
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }
 
-        public Builder setModulationConfiguration(@Nullable String modulationConfiguration) {
+        public Builder modulationConfiguration(@Nullable String modulationConfiguration) {
             this.modulationConfiguration = Input.ofNullable(modulationConfiguration);
             return this;
         }

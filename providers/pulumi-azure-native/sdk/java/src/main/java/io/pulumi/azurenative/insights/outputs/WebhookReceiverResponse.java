@@ -48,15 +48,15 @@ public final class WebhookReceiverResponse {
      */
     private final @Nullable Boolean useCommonAlertSchema;
 
-    @OutputCustomType.Constructor({"identifierUri","name","objectId","serviceUri","tenantId","useAadAuth","useCommonAlertSchema"})
+    @OutputCustomType.Constructor
     private WebhookReceiverResponse(
-        @Nullable String identifierUri,
-        String name,
-        @Nullable String objectId,
-        String serviceUri,
-        @Nullable String tenantId,
-        @Nullable Boolean useAadAuth,
-        @Nullable Boolean useCommonAlertSchema) {
+        @OutputCustomType.Parameter("identifierUri") @Nullable String identifierUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") @Nullable String objectId,
+        @OutputCustomType.Parameter("serviceUri") String serviceUri,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("useAadAuth") @Nullable Boolean useAadAuth,
+        @OutputCustomType.Parameter("useCommonAlertSchema") @Nullable Boolean useCommonAlertSchema) {
         this.identifierUri = identifierUri;
         this.name = name;
         this.objectId = objectId;
@@ -148,37 +148,37 @@ public final class WebhookReceiverResponse {
     	      this.useCommonAlertSchema = defaults.useCommonAlertSchema;
         }
 
-        public Builder setIdentifierUri(@Nullable String identifierUri) {
+        public Builder identifierUri(@Nullable String identifierUri) {
             this.identifierUri = identifierUri;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setServiceUri(String serviceUri) {
+        public Builder serviceUri(String serviceUri) {
             this.serviceUri = Objects.requireNonNull(serviceUri);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setUseAadAuth(@Nullable Boolean useAadAuth) {
+        public Builder useAadAuth(@Nullable Boolean useAadAuth) {
             this.useAadAuth = useAadAuth;
             return this;
         }
 
-        public Builder setUseCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
+        public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }

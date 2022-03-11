@@ -66,18 +66,18 @@ public final class GetImageResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"extendedLocation","hyperVGeneration","id","location","name","provisioningState","sourceVirtualMachine","storageProfile","tags","type"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String hyperVGeneration,
-        String id,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable SubResourceResponse sourceVirtualMachine,
-        @Nullable ImageStorageProfileResponse storageProfile,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("hyperVGeneration") @Nullable String hyperVGeneration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sourceVirtualMachine") @Nullable SubResourceResponse sourceVirtualMachine,
+        @OutputCustomType.Parameter("storageProfile") @Nullable ImageStorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.extendedLocation = extendedLocation;
         this.hyperVGeneration = hyperVGeneration;
         this.id = id;
@@ -199,52 +199,52 @@ public final class GetImageResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setHyperVGeneration(@Nullable String hyperVGeneration) {
+        public Builder hyperVGeneration(@Nullable String hyperVGeneration) {
             this.hyperVGeneration = hyperVGeneration;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSourceVirtualMachine(@Nullable SubResourceResponse sourceVirtualMachine) {
+        public Builder sourceVirtualMachine(@Nullable SubResourceResponse sourceVirtualMachine) {
             this.sourceVirtualMachine = sourceVirtualMachine;
             return this;
         }
 
-        public Builder setStorageProfile(@Nullable ImageStorageProfileResponse storageProfile) {
+        public Builder storageProfile(@Nullable ImageStorageProfileResponse storageProfile) {
             this.storageProfile = storageProfile;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

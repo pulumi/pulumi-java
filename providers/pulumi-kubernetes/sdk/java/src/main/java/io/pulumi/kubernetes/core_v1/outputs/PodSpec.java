@@ -223,44 +223,44 @@ public final class PodSpec {
      */
     private final @Nullable List<Volume> volumes;
 
-    @OutputCustomType.Constructor({"activeDeadlineSeconds","affinity","automountServiceAccountToken","containers","dnsConfig","dnsPolicy","enableServiceLinks","ephemeralContainers","hostAliases","hostIPC","hostNetwork","hostPID","hostname","imagePullSecrets","initContainers","nodeName","nodeSelector","os","overhead","preemptionPolicy","priority","priorityClassName","readinessGates","restartPolicy","runtimeClassName","schedulerName","securityContext","serviceAccount","serviceAccountName","setHostnameAsFQDN","shareProcessNamespace","subdomain","terminationGracePeriodSeconds","tolerations","topologySpreadConstraints","volumes"})
+    @OutputCustomType.Constructor
     private PodSpec(
-        @Nullable Integer activeDeadlineSeconds,
-        @Nullable Affinity affinity,
-        @Nullable Boolean automountServiceAccountToken,
-        List<Container> containers,
-        @Nullable PodDNSConfig dnsConfig,
-        @Nullable String dnsPolicy,
-        @Nullable Boolean enableServiceLinks,
-        @Nullable List<EphemeralContainer> ephemeralContainers,
-        @Nullable List<HostAlias> hostAliases,
-        @Nullable Boolean hostIPC,
-        @Nullable Boolean hostNetwork,
-        @Nullable Boolean hostPID,
-        @Nullable String hostname,
-        @Nullable List<LocalObjectReference> imagePullSecrets,
-        @Nullable List<Container> initContainers,
-        @Nullable String nodeName,
-        @Nullable Map<String,String> nodeSelector,
-        @Nullable PodOS os,
-        @Nullable Map<String,String> overhead,
-        @Nullable String preemptionPolicy,
-        @Nullable Integer priority,
-        @Nullable String priorityClassName,
-        @Nullable List<PodReadinessGate> readinessGates,
-        @Nullable String restartPolicy,
-        @Nullable String runtimeClassName,
-        @Nullable String schedulerName,
-        @Nullable PodSecurityContext securityContext,
-        @Nullable String serviceAccount,
-        @Nullable String serviceAccountName,
-        @Nullable Boolean setHostnameAsFQDN,
-        @Nullable Boolean shareProcessNamespace,
-        @Nullable String subdomain,
-        @Nullable Integer terminationGracePeriodSeconds,
-        @Nullable List<Toleration> tolerations,
-        @Nullable List<TopologySpreadConstraint> topologySpreadConstraints,
-        @Nullable List<Volume> volumes) {
+        @OutputCustomType.Parameter("activeDeadlineSeconds") @Nullable Integer activeDeadlineSeconds,
+        @OutputCustomType.Parameter("affinity") @Nullable Affinity affinity,
+        @OutputCustomType.Parameter("automountServiceAccountToken") @Nullable Boolean automountServiceAccountToken,
+        @OutputCustomType.Parameter("containers") List<Container> containers,
+        @OutputCustomType.Parameter("dnsConfig") @Nullable PodDNSConfig dnsConfig,
+        @OutputCustomType.Parameter("dnsPolicy") @Nullable String dnsPolicy,
+        @OutputCustomType.Parameter("enableServiceLinks") @Nullable Boolean enableServiceLinks,
+        @OutputCustomType.Parameter("ephemeralContainers") @Nullable List<EphemeralContainer> ephemeralContainers,
+        @OutputCustomType.Parameter("hostAliases") @Nullable List<HostAlias> hostAliases,
+        @OutputCustomType.Parameter("hostIPC") @Nullable Boolean hostIPC,
+        @OutputCustomType.Parameter("hostNetwork") @Nullable Boolean hostNetwork,
+        @OutputCustomType.Parameter("hostPID") @Nullable Boolean hostPID,
+        @OutputCustomType.Parameter("hostname") @Nullable String hostname,
+        @OutputCustomType.Parameter("imagePullSecrets") @Nullable List<LocalObjectReference> imagePullSecrets,
+        @OutputCustomType.Parameter("initContainers") @Nullable List<Container> initContainers,
+        @OutputCustomType.Parameter("nodeName") @Nullable String nodeName,
+        @OutputCustomType.Parameter("nodeSelector") @Nullable Map<String,String> nodeSelector,
+        @OutputCustomType.Parameter("os") @Nullable PodOS os,
+        @OutputCustomType.Parameter("overhead") @Nullable Map<String,String> overhead,
+        @OutputCustomType.Parameter("preemptionPolicy") @Nullable String preemptionPolicy,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("priorityClassName") @Nullable String priorityClassName,
+        @OutputCustomType.Parameter("readinessGates") @Nullable List<PodReadinessGate> readinessGates,
+        @OutputCustomType.Parameter("restartPolicy") @Nullable String restartPolicy,
+        @OutputCustomType.Parameter("runtimeClassName") @Nullable String runtimeClassName,
+        @OutputCustomType.Parameter("schedulerName") @Nullable String schedulerName,
+        @OutputCustomType.Parameter("securityContext") @Nullable PodSecurityContext securityContext,
+        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @OutputCustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
+        @OutputCustomType.Parameter("setHostnameAsFQDN") @Nullable Boolean setHostnameAsFQDN,
+        @OutputCustomType.Parameter("shareProcessNamespace") @Nullable Boolean shareProcessNamespace,
+        @OutputCustomType.Parameter("subdomain") @Nullable String subdomain,
+        @OutputCustomType.Parameter("terminationGracePeriodSeconds") @Nullable Integer terminationGracePeriodSeconds,
+        @OutputCustomType.Parameter("tolerations") @Nullable List<Toleration> tolerations,
+        @OutputCustomType.Parameter("topologySpreadConstraints") @Nullable List<TopologySpreadConstraint> topologySpreadConstraints,
+        @OutputCustomType.Parameter("volumes") @Nullable List<Volume> volumes) {
         this.activeDeadlineSeconds = activeDeadlineSeconds;
         this.affinity = affinity;
         this.automountServiceAccountToken = automountServiceAccountToken;
@@ -657,182 +657,182 @@ public final class PodSpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setActiveDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
+        public Builder activeDeadlineSeconds(@Nullable Integer activeDeadlineSeconds) {
             this.activeDeadlineSeconds = activeDeadlineSeconds;
             return this;
         }
 
-        public Builder setAffinity(@Nullable Affinity affinity) {
+        public Builder affinity(@Nullable Affinity affinity) {
             this.affinity = affinity;
             return this;
         }
 
-        public Builder setAutomountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
+        public Builder automountServiceAccountToken(@Nullable Boolean automountServiceAccountToken) {
             this.automountServiceAccountToken = automountServiceAccountToken;
             return this;
         }
 
-        public Builder setContainers(List<Container> containers) {
+        public Builder containers(List<Container> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setDnsConfig(@Nullable PodDNSConfig dnsConfig) {
+        public Builder dnsConfig(@Nullable PodDNSConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
 
-        public Builder setDnsPolicy(@Nullable String dnsPolicy) {
+        public Builder dnsPolicy(@Nullable String dnsPolicy) {
             this.dnsPolicy = dnsPolicy;
             return this;
         }
 
-        public Builder setEnableServiceLinks(@Nullable Boolean enableServiceLinks) {
+        public Builder enableServiceLinks(@Nullable Boolean enableServiceLinks) {
             this.enableServiceLinks = enableServiceLinks;
             return this;
         }
 
-        public Builder setEphemeralContainers(@Nullable List<EphemeralContainer> ephemeralContainers) {
+        public Builder ephemeralContainers(@Nullable List<EphemeralContainer> ephemeralContainers) {
             this.ephemeralContainers = ephemeralContainers;
             return this;
         }
 
-        public Builder setHostAliases(@Nullable List<HostAlias> hostAliases) {
+        public Builder hostAliases(@Nullable List<HostAlias> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
 
-        public Builder setHostIPC(@Nullable Boolean hostIPC) {
+        public Builder hostIPC(@Nullable Boolean hostIPC) {
             this.hostIPC = hostIPC;
             return this;
         }
 
-        public Builder setHostNetwork(@Nullable Boolean hostNetwork) {
+        public Builder hostNetwork(@Nullable Boolean hostNetwork) {
             this.hostNetwork = hostNetwork;
             return this;
         }
 
-        public Builder setHostPID(@Nullable Boolean hostPID) {
+        public Builder hostPID(@Nullable Boolean hostPID) {
             this.hostPID = hostPID;
             return this;
         }
 
-        public Builder setHostname(@Nullable String hostname) {
+        public Builder hostname(@Nullable String hostname) {
             this.hostname = hostname;
             return this;
         }
 
-        public Builder setImagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
+        public Builder imagePullSecrets(@Nullable List<LocalObjectReference> imagePullSecrets) {
             this.imagePullSecrets = imagePullSecrets;
             return this;
         }
 
-        public Builder setInitContainers(@Nullable List<Container> initContainers) {
+        public Builder initContainers(@Nullable List<Container> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
 
-        public Builder setNodeName(@Nullable String nodeName) {
+        public Builder nodeName(@Nullable String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
 
-        public Builder setNodeSelector(@Nullable Map<String,String> nodeSelector) {
+        public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
             this.nodeSelector = nodeSelector;
             return this;
         }
 
-        public Builder setOs(@Nullable PodOS os) {
+        public Builder os(@Nullable PodOS os) {
             this.os = os;
             return this;
         }
 
-        public Builder setOverhead(@Nullable Map<String,String> overhead) {
+        public Builder overhead(@Nullable Map<String,String> overhead) {
             this.overhead = overhead;
             return this;
         }
 
-        public Builder setPreemptionPolicy(@Nullable String preemptionPolicy) {
+        public Builder preemptionPolicy(@Nullable String preemptionPolicy) {
             this.preemptionPolicy = preemptionPolicy;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setPriorityClassName(@Nullable String priorityClassName) {
+        public Builder priorityClassName(@Nullable String priorityClassName) {
             this.priorityClassName = priorityClassName;
             return this;
         }
 
-        public Builder setReadinessGates(@Nullable List<PodReadinessGate> readinessGates) {
+        public Builder readinessGates(@Nullable List<PodReadinessGate> readinessGates) {
             this.readinessGates = readinessGates;
             return this;
         }
 
-        public Builder setRestartPolicy(@Nullable String restartPolicy) {
+        public Builder restartPolicy(@Nullable String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
 
-        public Builder setRuntimeClassName(@Nullable String runtimeClassName) {
+        public Builder runtimeClassName(@Nullable String runtimeClassName) {
             this.runtimeClassName = runtimeClassName;
             return this;
         }
 
-        public Builder setSchedulerName(@Nullable String schedulerName) {
+        public Builder schedulerName(@Nullable String schedulerName) {
             this.schedulerName = schedulerName;
             return this;
         }
 
-        public Builder setSecurityContext(@Nullable PodSecurityContext securityContext) {
+        public Builder securityContext(@Nullable PodSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
 
-        public Builder setServiceAccount(@Nullable String serviceAccount) {
+        public Builder serviceAccount(@Nullable String serviceAccount) {
             this.serviceAccount = serviceAccount;
             return this;
         }
 
-        public Builder setServiceAccountName(@Nullable String serviceAccountName) {
+        public Builder serviceAccountName(@Nullable String serviceAccountName) {
             this.serviceAccountName = serviceAccountName;
             return this;
         }
 
-        public Builder setSetHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
+        public Builder setHostnameAsFQDN(@Nullable Boolean setHostnameAsFQDN) {
             this.setHostnameAsFQDN = setHostnameAsFQDN;
             return this;
         }
 
-        public Builder setShareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
+        public Builder shareProcessNamespace(@Nullable Boolean shareProcessNamespace) {
             this.shareProcessNamespace = shareProcessNamespace;
             return this;
         }
 
-        public Builder setSubdomain(@Nullable String subdomain) {
+        public Builder subdomain(@Nullable String subdomain) {
             this.subdomain = subdomain;
             return this;
         }
 
-        public Builder setTerminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
+        public Builder terminationGracePeriodSeconds(@Nullable Integer terminationGracePeriodSeconds) {
             this.terminationGracePeriodSeconds = terminationGracePeriodSeconds;
             return this;
         }
 
-        public Builder setTolerations(@Nullable List<Toleration> tolerations) {
+        public Builder tolerations(@Nullable List<Toleration> tolerations) {
             this.tolerations = tolerations;
             return this;
         }
 
-        public Builder setTopologySpreadConstraints(@Nullable List<TopologySpreadConstraint> topologySpreadConstraints) {
+        public Builder topologySpreadConstraints(@Nullable List<TopologySpreadConstraint> topologySpreadConstraints) {
             this.topologySpreadConstraints = topologySpreadConstraints;
             return this;
         }
 
-        public Builder setVolumes(@Nullable List<Volume> volumes) {
+        public Builder volumes(@Nullable List<Volume> volumes) {
             this.volumes = volumes;
             return this;
         }

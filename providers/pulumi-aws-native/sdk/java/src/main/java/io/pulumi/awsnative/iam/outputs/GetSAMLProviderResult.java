@@ -21,11 +21,11 @@ public final class GetSAMLProviderResult {
     private final @Nullable String samlMetadataDocument;
     private final @Nullable List<SAMLProviderTag> tags;
 
-    @OutputCustomType.Constructor({"arn","samlMetadataDocument","tags"})
+    @OutputCustomType.Constructor
     private GetSAMLProviderResult(
-        @Nullable String arn,
-        @Nullable String samlMetadataDocument,
-        @Nullable List<SAMLProviderTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("samlMetadataDocument") @Nullable String samlMetadataDocument,
+        @OutputCustomType.Parameter("tags") @Nullable List<SAMLProviderTag> tags) {
         this.arn = arn;
         this.samlMetadataDocument = samlMetadataDocument;
         this.tags = tags;
@@ -69,17 +69,17 @@ public final class GetSAMLProviderResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setSamlMetadataDocument(@Nullable String samlMetadataDocument) {
+        public Builder samlMetadataDocument(@Nullable String samlMetadataDocument) {
             this.samlMetadataDocument = samlMetadataDocument;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SAMLProviderTag> tags) {
+        public Builder tags(@Nullable List<SAMLProviderTag> tags) {
             this.tags = tags;
             return this;
         }

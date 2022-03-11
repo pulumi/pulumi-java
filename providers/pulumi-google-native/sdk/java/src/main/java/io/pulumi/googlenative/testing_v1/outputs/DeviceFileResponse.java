@@ -21,10 +21,10 @@ public final class DeviceFileResponse {
      */
     private final RegularFileResponse regularFile;
 
-    @OutputCustomType.Constructor({"obbFile","regularFile"})
+    @OutputCustomType.Constructor
     private DeviceFileResponse(
-        ObbFileResponse obbFile,
-        RegularFileResponse regularFile) {
+        @OutputCustomType.Parameter("obbFile") ObbFileResponse obbFile,
+        @OutputCustomType.Parameter("regularFile") RegularFileResponse regularFile) {
         this.obbFile = obbFile;
         this.regularFile = regularFile;
     }
@@ -66,12 +66,12 @@ public final class DeviceFileResponse {
     	      this.regularFile = defaults.regularFile;
         }
 
-        public Builder setObbFile(ObbFileResponse obbFile) {
+        public Builder obbFile(ObbFileResponse obbFile) {
             this.obbFile = Objects.requireNonNull(obbFile);
             return this;
         }
 
-        public Builder setRegularFile(RegularFileResponse regularFile) {
+        public Builder regularFile(RegularFileResponse regularFile) {
             this.regularFile = Objects.requireNonNull(regularFile);
             return this;
         }

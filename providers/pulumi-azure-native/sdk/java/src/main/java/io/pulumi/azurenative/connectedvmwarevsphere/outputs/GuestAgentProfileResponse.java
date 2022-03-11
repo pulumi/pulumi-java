@@ -37,13 +37,13 @@ public final class GuestAgentProfileResponse {
      */
     private final String vmUuid;
 
-    @OutputCustomType.Constructor({"agentVersion","errorDetails","lastStatusChange","status","vmUuid"})
+    @OutputCustomType.Constructor
     private GuestAgentProfileResponse(
-        String agentVersion,
-        List<ErrorDetailResponse> errorDetails,
-        String lastStatusChange,
-        String status,
-        String vmUuid) {
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("errorDetails") List<ErrorDetailResponse> errorDetails,
+        @OutputCustomType.Parameter("lastStatusChange") String lastStatusChange,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("vmUuid") String vmUuid) {
         this.agentVersion = agentVersion;
         this.errorDetails = errorDetails;
         this.lastStatusChange = lastStatusChange;
@@ -115,27 +115,27 @@ public final class GuestAgentProfileResponse {
     	      this.vmUuid = defaults.vmUuid;
         }
 
-        public Builder setAgentVersion(String agentVersion) {
+        public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
 
-        public Builder setErrorDetails(List<ErrorDetailResponse> errorDetails) {
+        public Builder errorDetails(List<ErrorDetailResponse> errorDetails) {
             this.errorDetails = Objects.requireNonNull(errorDetails);
             return this;
         }
 
-        public Builder setLastStatusChange(String lastStatusChange) {
+        public Builder lastStatusChange(String lastStatusChange) {
             this.lastStatusChange = Objects.requireNonNull(lastStatusChange);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setVmUuid(String vmUuid) {
+        public Builder vmUuid(String vmUuid) {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }

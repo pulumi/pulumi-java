@@ -67,19 +67,19 @@ public final class PostalAddressResponse {
      */
     private final String sublocality;
 
-    @OutputCustomType.Constructor({"addressLines","administrativeArea","languageCode","locality","organization","postalCode","recipients","regionCode","revision","sortingCode","sublocality"})
+    @OutputCustomType.Constructor
     private PostalAddressResponse(
-        List<String> addressLines,
-        String administrativeArea,
-        String languageCode,
-        String locality,
-        String organization,
-        String postalCode,
-        List<String> recipients,
-        String regionCode,
-        Integer revision,
-        String sortingCode,
-        String sublocality) {
+        @OutputCustomType.Parameter("addressLines") List<String> addressLines,
+        @OutputCustomType.Parameter("administrativeArea") String administrativeArea,
+        @OutputCustomType.Parameter("languageCode") String languageCode,
+        @OutputCustomType.Parameter("locality") String locality,
+        @OutputCustomType.Parameter("organization") String organization,
+        @OutputCustomType.Parameter("postalCode") String postalCode,
+        @OutputCustomType.Parameter("recipients") List<String> recipients,
+        @OutputCustomType.Parameter("regionCode") String regionCode,
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("sortingCode") String sortingCode,
+        @OutputCustomType.Parameter("sublocality") String sublocality) {
         this.addressLines = addressLines;
         this.administrativeArea = administrativeArea;
         this.languageCode = languageCode;
@@ -211,57 +211,57 @@ public final class PostalAddressResponse {
     	      this.sublocality = defaults.sublocality;
         }
 
-        public Builder setAddressLines(List<String> addressLines) {
+        public Builder addressLines(List<String> addressLines) {
             this.addressLines = Objects.requireNonNull(addressLines);
             return this;
         }
 
-        public Builder setAdministrativeArea(String administrativeArea) {
+        public Builder administrativeArea(String administrativeArea) {
             this.administrativeArea = Objects.requireNonNull(administrativeArea);
             return this;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }
 
-        public Builder setLocality(String locality) {
+        public Builder locality(String locality) {
             this.locality = Objects.requireNonNull(locality);
             return this;
         }
 
-        public Builder setOrganization(String organization) {
+        public Builder organization(String organization) {
             this.organization = Objects.requireNonNull(organization);
             return this;
         }
 
-        public Builder setPostalCode(String postalCode) {
+        public Builder postalCode(String postalCode) {
             this.postalCode = Objects.requireNonNull(postalCode);
             return this;
         }
 
-        public Builder setRecipients(List<String> recipients) {
+        public Builder recipients(List<String> recipients) {
             this.recipients = Objects.requireNonNull(recipients);
             return this;
         }
 
-        public Builder setRegionCode(String regionCode) {
+        public Builder regionCode(String regionCode) {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setSortingCode(String sortingCode) {
+        public Builder sortingCode(String sortingCode) {
             this.sortingCode = Objects.requireNonNull(sortingCode);
             return this;
         }
 
-        public Builder setSublocality(String sublocality) {
+        public Builder sublocality(String sublocality) {
             this.sublocality = Objects.requireNonNull(sublocality);
             return this;
         }

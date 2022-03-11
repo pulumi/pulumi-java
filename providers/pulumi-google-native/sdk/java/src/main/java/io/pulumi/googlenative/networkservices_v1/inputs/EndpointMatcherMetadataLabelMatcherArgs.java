@@ -76,22 +76,22 @@ public final class EndpointMatcherMetadataLabelMatcherArgs extends io.pulumi.res
     	      this.metadataLabels = defaults.metadataLabels;
         }
 
-        public Builder setMetadataLabelMatchCriteria(@Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(@Nullable Input<EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria> metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = metadataLabelMatchCriteria;
             return this;
         }
 
-        public Builder setMetadataLabelMatchCriteria(@Nullable EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
+        public Builder metadataLabelMatchCriteria(@Nullable EndpointMatcherMetadataLabelMatcherMetadataLabelMatchCriteria metadataLabelMatchCriteria) {
             this.metadataLabelMatchCriteria = Input.ofNullable(metadataLabelMatchCriteria);
             return this;
         }
 
-        public Builder setMetadataLabels(@Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
+        public Builder metadataLabels(@Nullable Input<List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs>> metadataLabels) {
             this.metadataLabels = metadataLabels;
             return this;
         }
 
-        public Builder setMetadataLabels(@Nullable List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs> metadataLabels) {
+        public Builder metadataLabels(@Nullable List<EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs> metadataLabels) {
             this.metadataLabels = Input.ofNullable(metadataLabels);
             return this;
         }

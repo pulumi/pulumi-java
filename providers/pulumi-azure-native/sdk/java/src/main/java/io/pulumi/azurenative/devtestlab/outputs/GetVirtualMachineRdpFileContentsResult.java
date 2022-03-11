@@ -17,8 +17,8 @@ public final class GetVirtualMachineRdpFileContentsResult {
      */
     private final @Nullable String contents;
 
-    @OutputCustomType.Constructor({"contents"})
-    private GetVirtualMachineRdpFileContentsResult(@Nullable String contents) {
+    @OutputCustomType.Constructor
+    private GetVirtualMachineRdpFileContentsResult(@OutputCustomType.Parameter("contents") @Nullable String contents) {
         this.contents = contents;
     }
 
@@ -50,7 +50,7 @@ public final class GetVirtualMachineRdpFileContentsResult {
     	      this.contents = defaults.contents;
         }
 
-        public Builder setContents(@Nullable String contents) {
+        public Builder contents(@Nullable String contents) {
             this.contents = contents;
             return this;
         }

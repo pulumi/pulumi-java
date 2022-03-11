@@ -20,14 +20,14 @@ public final class GetServiceTemplateSpec {
     private final Integer timeoutSeconds;
     private final List<GetServiceTemplateSpecVolume> volumes;
 
-    @OutputCustomType.Constructor({"containerConcurrency","containers","serviceAccountName","servingState","timeoutSeconds","volumes"})
+    @OutputCustomType.Constructor
     private GetServiceTemplateSpec(
-        Integer containerConcurrency,
-        List<GetServiceTemplateSpecContainer> containers,
-        String serviceAccountName,
-        String servingState,
-        Integer timeoutSeconds,
-        List<GetServiceTemplateSpecVolume> volumes) {
+        @OutputCustomType.Parameter("containerConcurrency") Integer containerConcurrency,
+        @OutputCustomType.Parameter("containers") List<GetServiceTemplateSpecContainer> containers,
+        @OutputCustomType.Parameter("serviceAccountName") String serviceAccountName,
+        @OutputCustomType.Parameter("servingState") String servingState,
+        @OutputCustomType.Parameter("timeoutSeconds") Integer timeoutSeconds,
+        @OutputCustomType.Parameter("volumes") List<GetServiceTemplateSpecVolume> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.serviceAccountName = serviceAccountName;
@@ -85,32 +85,32 @@ public final class GetServiceTemplateSpec {
     	      this.volumes = defaults.volumes;
         }
 
-        public Builder setContainerConcurrency(Integer containerConcurrency) {
+        public Builder containerConcurrency(Integer containerConcurrency) {
             this.containerConcurrency = Objects.requireNonNull(containerConcurrency);
             return this;
         }
 
-        public Builder setContainers(List<GetServiceTemplateSpecContainer> containers) {
+        public Builder containers(List<GetServiceTemplateSpecContainer> containers) {
             this.containers = Objects.requireNonNull(containers);
             return this;
         }
 
-        public Builder setServiceAccountName(String serviceAccountName) {
+        public Builder serviceAccountName(String serviceAccountName) {
             this.serviceAccountName = Objects.requireNonNull(serviceAccountName);
             return this;
         }
 
-        public Builder setServingState(String servingState) {
+        public Builder servingState(String servingState) {
             this.servingState = Objects.requireNonNull(servingState);
             return this;
         }
 
-        public Builder setTimeoutSeconds(Integer timeoutSeconds) {
+        public Builder timeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
 
-        public Builder setVolumes(List<GetServiceTemplateSpecVolume> volumes) {
+        public Builder volumes(List<GetServiceTemplateSpecVolume> volumes) {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }

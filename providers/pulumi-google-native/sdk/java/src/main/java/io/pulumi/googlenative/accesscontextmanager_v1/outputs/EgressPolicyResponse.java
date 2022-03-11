@@ -21,10 +21,10 @@ public final class EgressPolicyResponse {
      */
     private final EgressToResponse egressTo;
 
-    @OutputCustomType.Constructor({"egressFrom","egressTo"})
+    @OutputCustomType.Constructor
     private EgressPolicyResponse(
-        EgressFromResponse egressFrom,
-        EgressToResponse egressTo) {
+        @OutputCustomType.Parameter("egressFrom") EgressFromResponse egressFrom,
+        @OutputCustomType.Parameter("egressTo") EgressToResponse egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }
@@ -66,12 +66,12 @@ public final class EgressPolicyResponse {
     	      this.egressTo = defaults.egressTo;
         }
 
-        public Builder setEgressFrom(EgressFromResponse egressFrom) {
+        public Builder egressFrom(EgressFromResponse egressFrom) {
             this.egressFrom = Objects.requireNonNull(egressFrom);
             return this;
         }
 
-        public Builder setEgressTo(EgressToResponse egressTo) {
+        public Builder egressTo(EgressToResponse egressTo) {
             this.egressTo = Objects.requireNonNull(egressTo);
             return this;
         }

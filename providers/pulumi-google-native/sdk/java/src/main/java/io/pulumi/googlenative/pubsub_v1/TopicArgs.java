@@ -178,92 +178,92 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicId = defaults.topicId;
         }
 
-        public Builder setKmsKeyName(@Nullable Input<String> kmsKeyName) {
+        public Builder kmsKeyName(@Nullable Input<String> kmsKeyName) {
             this.kmsKeyName = kmsKeyName;
             return this;
         }
 
-        public Builder setKmsKeyName(@Nullable String kmsKeyName) {
+        public Builder kmsKeyName(@Nullable String kmsKeyName) {
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable Input<String> messageRetentionDuration) {
             this.messageRetentionDuration = messageRetentionDuration;
             return this;
         }
 
-        public Builder setMessageRetentionDuration(@Nullable String messageRetentionDuration) {
+        public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
             this.messageRetentionDuration = Input.ofNullable(messageRetentionDuration);
             return this;
         }
 
-        public Builder setMessageStoragePolicy(@Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy) {
             this.messageStoragePolicy = messageStoragePolicy;
             return this;
         }
 
-        public Builder setMessageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
+        public Builder messageStoragePolicy(@Nullable MessageStoragePolicyArgs messageStoragePolicy) {
             this.messageStoragePolicy = Input.ofNullable(messageStoragePolicy);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Input<Boolean> satisfiesPzs) {
             this.satisfiesPzs = satisfiesPzs;
             return this;
         }
 
-        public Builder setSatisfiesPzs(@Nullable Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(@Nullable Boolean satisfiesPzs) {
             this.satisfiesPzs = Input.ofNullable(satisfiesPzs);
             return this;
         }
 
-        public Builder setSchemaSettings(@Nullable Input<SchemaSettingsArgs> schemaSettings) {
+        public Builder schemaSettings(@Nullable Input<SchemaSettingsArgs> schemaSettings) {
             this.schemaSettings = schemaSettings;
             return this;
         }
 
-        public Builder setSchemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
+        public Builder schemaSettings(@Nullable SchemaSettingsArgs schemaSettings) {
             this.schemaSettings = Input.ofNullable(schemaSettings);
             return this;
         }
 
-        public Builder setTopicId(Input<String> topicId) {
+        public Builder topicId(Input<String> topicId) {
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
 
-        public Builder setTopicId(String topicId) {
+        public Builder topicId(String topicId) {
             this.topicId = Input.of(Objects.requireNonNull(topicId));
             return this;
         }

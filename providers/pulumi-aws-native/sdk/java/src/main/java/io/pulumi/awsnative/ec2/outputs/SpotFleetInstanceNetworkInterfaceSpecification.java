@@ -28,19 +28,19 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
     private final @Nullable Integer secondaryPrivateIpAddressCount;
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"associatePublicIpAddress","deleteOnTermination","description","deviceIndex","groups","ipv6AddressCount","ipv6Addresses","networkInterfaceId","privateIpAddresses","secondaryPrivateIpAddressCount","subnetId"})
+    @OutputCustomType.Constructor
     private SpotFleetInstanceNetworkInterfaceSpecification(
-        @Nullable Boolean associatePublicIpAddress,
-        @Nullable Boolean deleteOnTermination,
-        @Nullable String description,
-        @Nullable Integer deviceIndex,
-        @Nullable List<String> groups,
-        @Nullable Integer ipv6AddressCount,
-        @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
-        @Nullable String networkInterfaceId,
-        @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
-        @Nullable Integer secondaryPrivateIpAddressCount,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("associatePublicIpAddress") @Nullable Boolean associatePublicIpAddress,
+        @OutputCustomType.Parameter("deleteOnTermination") @Nullable Boolean deleteOnTermination,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceIndex") @Nullable Integer deviceIndex,
+        @OutputCustomType.Parameter("groups") @Nullable List<String> groups,
+        @OutputCustomType.Parameter("ipv6AddressCount") @Nullable Integer ipv6AddressCount,
+        @OutputCustomType.Parameter("ipv6Addresses") @Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses,
+        @OutputCustomType.Parameter("networkInterfaceId") @Nullable String networkInterfaceId,
+        @OutputCustomType.Parameter("privateIpAddresses") @Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses,
+        @OutputCustomType.Parameter("secondaryPrivateIpAddressCount") @Nullable Integer secondaryPrivateIpAddressCount,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.associatePublicIpAddress = associatePublicIpAddress;
         this.deleteOnTermination = deleteOnTermination;
         this.description = description;
@@ -128,57 +128,57 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setAssociatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
+        public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
             this.associatePublicIpAddress = associatePublicIpAddress;
             return this;
         }
 
-        public Builder setDeleteOnTermination(@Nullable Boolean deleteOnTermination) {
+        public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
             this.deleteOnTermination = deleteOnTermination;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setGroups(@Nullable List<String> groups) {
+        public Builder groups(@Nullable List<String> groups) {
             this.groups = groups;
             return this;
         }
 
-        public Builder setIpv6AddressCount(@Nullable Integer ipv6AddressCount) {
+        public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
             this.ipv6AddressCount = ipv6AddressCount;
             return this;
         }
 
-        public Builder setIpv6Addresses(@Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses) {
+        public Builder ipv6Addresses(@Nullable List<SpotFleetInstanceIpv6Address> ipv6Addresses) {
             this.ipv6Addresses = ipv6Addresses;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setPrivateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses) {
+        public Builder privateIpAddresses(@Nullable List<SpotFleetPrivateIpAddressSpecification> privateIpAddresses) {
             this.privateIpAddresses = privateIpAddresses;
             return this;
         }
 
-        public Builder setSecondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
+        public Builder secondaryPrivateIpAddressCount(@Nullable Integer secondaryPrivateIpAddressCount) {
             this.secondaryPrivateIpAddressCount = secondaryPrivateIpAddressCount;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

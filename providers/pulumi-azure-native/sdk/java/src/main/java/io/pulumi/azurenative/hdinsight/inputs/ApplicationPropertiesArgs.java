@@ -160,72 +160,72 @@ public final class ApplicationPropertiesArgs extends io.pulumi.resources.Resourc
     	      this.uninstallScriptActions = defaults.uninstallScriptActions;
         }
 
-        public Builder setApplicationType(@Nullable Input<String> applicationType) {
+        public Builder applicationType(@Nullable Input<String> applicationType) {
             this.applicationType = applicationType;
             return this;
         }
 
-        public Builder setApplicationType(@Nullable String applicationType) {
+        public Builder applicationType(@Nullable String applicationType) {
             this.applicationType = Input.ofNullable(applicationType);
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable Input<ComputeProfileArgs> computeProfile) {
+        public Builder computeProfile(@Nullable Input<ComputeProfileArgs> computeProfile) {
             this.computeProfile = computeProfile;
             return this;
         }
 
-        public Builder setComputeProfile(@Nullable ComputeProfileArgs computeProfile) {
+        public Builder computeProfile(@Nullable ComputeProfileArgs computeProfile) {
             this.computeProfile = Input.ofNullable(computeProfile);
             return this;
         }
 
-        public Builder setErrors(@Nullable Input<List<ErrorsArgs>> errors) {
+        public Builder errors(@Nullable Input<List<ErrorsArgs>> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<ErrorsArgs> errors) {
+        public Builder errors(@Nullable List<ErrorsArgs> errors) {
             this.errors = Input.ofNullable(errors);
             return this;
         }
 
-        public Builder setHttpsEndpoints(@Nullable Input<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints) {
+        public Builder httpsEndpoints(@Nullable Input<List<ApplicationGetHttpsEndpointArgs>> httpsEndpoints) {
             this.httpsEndpoints = httpsEndpoints;
             return this;
         }
 
-        public Builder setHttpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
+        public Builder httpsEndpoints(@Nullable List<ApplicationGetHttpsEndpointArgs> httpsEndpoints) {
             this.httpsEndpoints = Input.ofNullable(httpsEndpoints);
             return this;
         }
 
-        public Builder setInstallScriptActions(@Nullable Input<List<RuntimeScriptActionArgs>> installScriptActions) {
+        public Builder installScriptActions(@Nullable Input<List<RuntimeScriptActionArgs>> installScriptActions) {
             this.installScriptActions = installScriptActions;
             return this;
         }
 
-        public Builder setInstallScriptActions(@Nullable List<RuntimeScriptActionArgs> installScriptActions) {
+        public Builder installScriptActions(@Nullable List<RuntimeScriptActionArgs> installScriptActions) {
             this.installScriptActions = Input.ofNullable(installScriptActions);
             return this;
         }
 
-        public Builder setSshEndpoints(@Nullable Input<List<ApplicationGetEndpointArgs>> sshEndpoints) {
+        public Builder sshEndpoints(@Nullable Input<List<ApplicationGetEndpointArgs>> sshEndpoints) {
             this.sshEndpoints = sshEndpoints;
             return this;
         }
 
-        public Builder setSshEndpoints(@Nullable List<ApplicationGetEndpointArgs> sshEndpoints) {
+        public Builder sshEndpoints(@Nullable List<ApplicationGetEndpointArgs> sshEndpoints) {
             this.sshEndpoints = Input.ofNullable(sshEndpoints);
             return this;
         }
 
-        public Builder setUninstallScriptActions(@Nullable Input<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
+        public Builder uninstallScriptActions(@Nullable Input<List<RuntimeScriptActionArgs>> uninstallScriptActions) {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
 
-        public Builder setUninstallScriptActions(@Nullable List<RuntimeScriptActionArgs> uninstallScriptActions) {
+        public Builder uninstallScriptActions(@Nullable List<RuntimeScriptActionArgs> uninstallScriptActions) {
             this.uninstallScriptActions = Input.ofNullable(uninstallScriptActions);
             return this;
         }

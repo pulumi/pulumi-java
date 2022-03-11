@@ -17,8 +17,8 @@ public final class PolicyParametersResponse {
      */
     private final @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList;
 
-    @OutputCustomType.Constructor({"dataStoreParametersList"})
-    private PolicyParametersResponse(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
+    @OutputCustomType.Constructor
+    private PolicyParametersResponse(@OutputCustomType.Parameter("dataStoreParametersList") @Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
         this.dataStoreParametersList = dataStoreParametersList;
     }
 
@@ -50,7 +50,7 @@ public final class PolicyParametersResponse {
     	      this.dataStoreParametersList = defaults.dataStoreParametersList;
         }
 
-        public Builder setDataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
+        public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersResponse> dataStoreParametersList) {
             this.dataStoreParametersList = dataStoreParametersList;
             return this;
         }

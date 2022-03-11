@@ -26,11 +26,11 @@ public final class PageResponse {
      */
     private final List<PageResponse> subpages;
 
-    @OutputCustomType.Constructor({"content","name","subpages"})
+    @OutputCustomType.Constructor
     private PageResponse(
-        String content,
-        String name,
-        List<PageResponse> subpages) {
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("subpages") List<PageResponse> subpages) {
         this.content = content;
         this.name = name;
         this.subpages = subpages;
@@ -82,17 +82,17 @@ public final class PageResponse {
     	      this.subpages = defaults.subpages;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSubpages(List<PageResponse> subpages) {
+        public Builder subpages(List<PageResponse> subpages) {
             this.subpages = Objects.requireNonNull(subpages);
             return this;
         }

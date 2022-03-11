@@ -17,8 +17,8 @@ public final class VirtualHubRouteTableResponse {
      */
     private final @Nullable List<VirtualHubRouteResponse> routes;
 
-    @OutputCustomType.Constructor({"routes"})
-    private VirtualHubRouteTableResponse(@Nullable List<VirtualHubRouteResponse> routes) {
+    @OutputCustomType.Constructor
+    private VirtualHubRouteTableResponse(@OutputCustomType.Parameter("routes") @Nullable List<VirtualHubRouteResponse> routes) {
         this.routes = routes;
     }
 
@@ -50,7 +50,7 @@ public final class VirtualHubRouteTableResponse {
     	      this.routes = defaults.routes;
         }
 
-        public Builder setRoutes(@Nullable List<VirtualHubRouteResponse> routes) {
+        public Builder routes(@Nullable List<VirtualHubRouteResponse> routes) {
             this.routes = routes;
             return this;
         }

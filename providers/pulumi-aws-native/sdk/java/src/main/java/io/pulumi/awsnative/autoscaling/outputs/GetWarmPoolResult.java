@@ -18,12 +18,12 @@ public final class GetWarmPoolResult {
     private final @Nullable Integer minSize;
     private final @Nullable String poolState;
 
-    @OutputCustomType.Constructor({"instanceReusePolicy","maxGroupPreparedCapacity","minSize","poolState"})
+    @OutputCustomType.Constructor
     private GetWarmPoolResult(
-        @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
-        @Nullable Integer maxGroupPreparedCapacity,
-        @Nullable Integer minSize,
-        @Nullable String poolState) {
+        @OutputCustomType.Parameter("instanceReusePolicy") @Nullable WarmPoolInstanceReusePolicy instanceReusePolicy,
+        @OutputCustomType.Parameter("maxGroupPreparedCapacity") @Nullable Integer maxGroupPreparedCapacity,
+        @OutputCustomType.Parameter("minSize") @Nullable Integer minSize,
+        @OutputCustomType.Parameter("poolState") @Nullable String poolState) {
         this.instanceReusePolicy = instanceReusePolicy;
         this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
         this.minSize = minSize;
@@ -69,22 +69,22 @@ public final class GetWarmPoolResult {
     	      this.poolState = defaults.poolState;
         }
 
-        public Builder setInstanceReusePolicy(@Nullable WarmPoolInstanceReusePolicy instanceReusePolicy) {
+        public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicy instanceReusePolicy) {
             this.instanceReusePolicy = instanceReusePolicy;
             return this;
         }
 
-        public Builder setMaxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
+        public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
             this.maxGroupPreparedCapacity = maxGroupPreparedCapacity;
             return this;
         }
 
-        public Builder setMinSize(@Nullable Integer minSize) {
+        public Builder minSize(@Nullable Integer minSize) {
             this.minSize = minSize;
             return this;
         }
 
-        public Builder setPoolState(@Nullable String poolState) {
+        public Builder poolState(@Nullable String poolState) {
             this.poolState = poolState;
             return this;
         }

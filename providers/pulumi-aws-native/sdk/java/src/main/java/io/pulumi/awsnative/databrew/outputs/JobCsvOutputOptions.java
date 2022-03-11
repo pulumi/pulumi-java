@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class JobCsvOutputOptions {
     private final @Nullable String delimiter;
 
-    @OutputCustomType.Constructor({"delimiter"})
-    private JobCsvOutputOptions(@Nullable String delimiter) {
+    @OutputCustomType.Constructor
+    private JobCsvOutputOptions(@OutputCustomType.Parameter("delimiter") @Nullable String delimiter) {
         this.delimiter = delimiter;
     }
 
@@ -42,7 +42,7 @@ public final class JobCsvOutputOptions {
     	      this.delimiter = defaults.delimiter;
         }
 
-        public Builder setDelimiter(@Nullable String delimiter) {
+        public Builder delimiter(@Nullable String delimiter) {
             this.delimiter = delimiter;
             return this;
         }

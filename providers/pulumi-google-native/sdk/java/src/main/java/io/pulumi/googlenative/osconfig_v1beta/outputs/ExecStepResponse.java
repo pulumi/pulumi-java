@@ -20,10 +20,10 @@ public final class ExecStepResponse {
      */
     private final ExecStepConfigResponse windowsExecStepConfig;
 
-    @OutputCustomType.Constructor({"linuxExecStepConfig","windowsExecStepConfig"})
+    @OutputCustomType.Constructor
     private ExecStepResponse(
-        ExecStepConfigResponse linuxExecStepConfig,
-        ExecStepConfigResponse windowsExecStepConfig) {
+        @OutputCustomType.Parameter("linuxExecStepConfig") ExecStepConfigResponse linuxExecStepConfig,
+        @OutputCustomType.Parameter("windowsExecStepConfig") ExecStepConfigResponse windowsExecStepConfig) {
         this.linuxExecStepConfig = linuxExecStepConfig;
         this.windowsExecStepConfig = windowsExecStepConfig;
     }
@@ -65,12 +65,12 @@ public final class ExecStepResponse {
     	      this.windowsExecStepConfig = defaults.windowsExecStepConfig;
         }
 
-        public Builder setLinuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
+        public Builder linuxExecStepConfig(ExecStepConfigResponse linuxExecStepConfig) {
             this.linuxExecStepConfig = Objects.requireNonNull(linuxExecStepConfig);
             return this;
         }
 
-        public Builder setWindowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
+        public Builder windowsExecStepConfig(ExecStepConfigResponse windowsExecStepConfig) {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
         }

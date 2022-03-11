@@ -60,17 +60,17 @@ public final class GetAssetResult {
      */
     private final @Nullable List<AssetTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdAt","egressEndpoints","id","packagingGroupId","resourceId","sourceArn","sourceRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetAssetResult(
-        @Nullable String arn,
-        @Nullable String createdAt,
-        @Nullable List<AssetEgressEndpoint> egressEndpoints,
-        @Nullable String id,
-        @Nullable String packagingGroupId,
-        @Nullable String resourceId,
-        @Nullable String sourceArn,
-        @Nullable String sourceRoleArn,
-        @Nullable List<AssetTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdAt") @Nullable String createdAt,
+        @OutputCustomType.Parameter("egressEndpoints") @Nullable List<AssetEgressEndpoint> egressEndpoints,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("packagingGroupId") @Nullable String packagingGroupId,
+        @OutputCustomType.Parameter("resourceId") @Nullable String resourceId,
+        @OutputCustomType.Parameter("sourceArn") @Nullable String sourceArn,
+        @OutputCustomType.Parameter("sourceRoleArn") @Nullable String sourceRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssetTag> tags) {
         this.arn = arn;
         this.createdAt = createdAt;
         this.egressEndpoints = egressEndpoints;
@@ -182,47 +182,47 @@ public final class GetAssetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedAt(@Nullable String createdAt) {
+        public Builder createdAt(@Nullable String createdAt) {
             this.createdAt = createdAt;
             return this;
         }
 
-        public Builder setEgressEndpoints(@Nullable List<AssetEgressEndpoint> egressEndpoints) {
+        public Builder egressEndpoints(@Nullable List<AssetEgressEndpoint> egressEndpoints) {
             this.egressEndpoints = egressEndpoints;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setPackagingGroupId(@Nullable String packagingGroupId) {
+        public Builder packagingGroupId(@Nullable String packagingGroupId) {
             this.packagingGroupId = packagingGroupId;
             return this;
         }
 
-        public Builder setResourceId(@Nullable String resourceId) {
+        public Builder resourceId(@Nullable String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
 
-        public Builder setSourceArn(@Nullable String sourceArn) {
+        public Builder sourceArn(@Nullable String sourceArn) {
             this.sourceArn = sourceArn;
             return this;
         }
 
-        public Builder setSourceRoleArn(@Nullable String sourceRoleArn) {
+        public Builder sourceRoleArn(@Nullable String sourceRoleArn) {
             this.sourceRoleArn = sourceRoleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssetTag> tags) {
+        public Builder tags(@Nullable List<AssetTag> tags) {
             this.tags = tags;
             return this;
         }

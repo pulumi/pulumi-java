@@ -18,10 +18,10 @@ public final class GetInstanceReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"specificReservations","type"})
+    @OutputCustomType.Constructor
     private GetInstanceReservationAffinity(
-        List<GetInstanceReservationAffinitySpecificReservation> specificReservations,
-        String type) {
+        @OutputCustomType.Parameter("specificReservations") List<GetInstanceReservationAffinitySpecificReservation> specificReservations,
+        @OutputCustomType.Parameter("type") String type) {
         this.specificReservations = specificReservations;
         this.type = type;
     }
@@ -59,12 +59,12 @@ public final class GetInstanceReservationAffinity {
     	      this.type = defaults.type;
         }
 
-        public Builder setSpecificReservations(List<GetInstanceReservationAffinitySpecificReservation> specificReservations) {
+        public Builder specificReservations(List<GetInstanceReservationAffinitySpecificReservation> specificReservations) {
             this.specificReservations = Objects.requireNonNull(specificReservations);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

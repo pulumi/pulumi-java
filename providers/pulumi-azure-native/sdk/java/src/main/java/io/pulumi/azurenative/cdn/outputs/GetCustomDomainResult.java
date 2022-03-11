@@ -71,19 +71,19 @@ public final class GetCustomDomainResult {
      */
     private final @Nullable String validationData;
 
-    @OutputCustomType.Constructor({"customHttpsParameters","customHttpsProvisioningState","customHttpsProvisioningSubstate","hostName","id","name","provisioningState","resourceState","systemData","type","validationData"})
+    @OutputCustomType.Constructor
     private GetCustomDomainResult(
-        @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
-        String customHttpsProvisioningState,
-        String customHttpsProvisioningSubstate,
-        String hostName,
-        String id,
-        String name,
-        String provisioningState,
-        String resourceState,
-        SystemDataResponse systemData,
-        String type,
-        @Nullable String validationData) {
+        @OutputCustomType.Parameter("customHttpsParameters") @Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters,
+        @OutputCustomType.Parameter("customHttpsProvisioningState") String customHttpsProvisioningState,
+        @OutputCustomType.Parameter("customHttpsProvisioningSubstate") String customHttpsProvisioningSubstate,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("validationData") @Nullable String validationData) {
         this.customHttpsParameters = customHttpsParameters;
         this.customHttpsProvisioningState = customHttpsProvisioningState;
         this.customHttpsProvisioningSubstate = customHttpsProvisioningSubstate;
@@ -215,57 +215,57 @@ public final class GetCustomDomainResult {
     	      this.validationData = defaults.validationData;
         }
 
-        public Builder setCustomHttpsParameters(@Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters) {
+        public Builder customHttpsParameters(@Nullable Either<CdnManagedHttpsParametersResponse,UserManagedHttpsParametersResponse> customHttpsParameters) {
             this.customHttpsParameters = customHttpsParameters;
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningState(String customHttpsProvisioningState) {
+        public Builder customHttpsProvisioningState(String customHttpsProvisioningState) {
             this.customHttpsProvisioningState = Objects.requireNonNull(customHttpsProvisioningState);
             return this;
         }
 
-        public Builder setCustomHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
+        public Builder customHttpsProvisioningSubstate(String customHttpsProvisioningSubstate) {
             this.customHttpsProvisioningSubstate = Objects.requireNonNull(customHttpsProvisioningSubstate);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValidationData(@Nullable String validationData) {
+        public Builder validationData(@Nullable String validationData) {
             this.validationData = validationData;
             return this;
         }

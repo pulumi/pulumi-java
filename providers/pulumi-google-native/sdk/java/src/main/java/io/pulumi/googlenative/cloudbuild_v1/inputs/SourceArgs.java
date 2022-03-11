@@ -92,32 +92,32 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.storageSourceManifest = defaults.storageSourceManifest;
         }
 
-        public Builder setRepoSource(@Nullable Input<RepoSourceArgs> repoSource) {
+        public Builder repoSource(@Nullable Input<RepoSourceArgs> repoSource) {
             this.repoSource = repoSource;
             return this;
         }
 
-        public Builder setRepoSource(@Nullable RepoSourceArgs repoSource) {
+        public Builder repoSource(@Nullable RepoSourceArgs repoSource) {
             this.repoSource = Input.ofNullable(repoSource);
             return this;
         }
 
-        public Builder setStorageSource(@Nullable Input<StorageSourceArgs> storageSource) {
+        public Builder storageSource(@Nullable Input<StorageSourceArgs> storageSource) {
             this.storageSource = storageSource;
             return this;
         }
 
-        public Builder setStorageSource(@Nullable StorageSourceArgs storageSource) {
+        public Builder storageSource(@Nullable StorageSourceArgs storageSource) {
             this.storageSource = Input.ofNullable(storageSource);
             return this;
         }
 
-        public Builder setStorageSourceManifest(@Nullable Input<StorageSourceManifestArgs> storageSourceManifest) {
+        public Builder storageSourceManifest(@Nullable Input<StorageSourceManifestArgs> storageSourceManifest) {
             this.storageSourceManifest = storageSourceManifest;
             return this;
         }
 
-        public Builder setStorageSourceManifest(@Nullable StorageSourceManifestArgs storageSourceManifest) {
+        public Builder storageSourceManifest(@Nullable StorageSourceManifestArgs storageSourceManifest) {
             this.storageSourceManifest = Input.ofNullable(storageSourceManifest);
             return this;
         }

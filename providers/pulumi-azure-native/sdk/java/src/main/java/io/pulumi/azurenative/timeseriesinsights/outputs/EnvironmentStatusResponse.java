@@ -21,10 +21,10 @@ public final class EnvironmentStatusResponse {
      */
     private final WarmStorageEnvironmentStatusResponse warmStorage;
 
-    @OutputCustomType.Constructor({"ingress","warmStorage"})
+    @OutputCustomType.Constructor
     private EnvironmentStatusResponse(
-        IngressEnvironmentStatusResponse ingress,
-        WarmStorageEnvironmentStatusResponse warmStorage) {
+        @OutputCustomType.Parameter("ingress") IngressEnvironmentStatusResponse ingress,
+        @OutputCustomType.Parameter("warmStorage") WarmStorageEnvironmentStatusResponse warmStorage) {
         this.ingress = ingress;
         this.warmStorage = warmStorage;
     }
@@ -66,12 +66,12 @@ public final class EnvironmentStatusResponse {
     	      this.warmStorage = defaults.warmStorage;
         }
 
-        public Builder setIngress(IngressEnvironmentStatusResponse ingress) {
+        public Builder ingress(IngressEnvironmentStatusResponse ingress) {
             this.ingress = Objects.requireNonNull(ingress);
             return this;
         }
 
-        public Builder setWarmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
+        public Builder warmStorage(WarmStorageEnvironmentStatusResponse warmStorage) {
             this.warmStorage = Objects.requireNonNull(warmStorage);
             return this;
         }

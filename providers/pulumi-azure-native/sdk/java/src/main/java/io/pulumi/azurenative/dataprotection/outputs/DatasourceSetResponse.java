@@ -47,15 +47,15 @@ public final class DatasourceSetResponse {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor({"datasourceType","objectType","resourceID","resourceLocation","resourceName","resourceType","resourceUri"})
+    @OutputCustomType.Constructor
     private DatasourceSetResponse(
-        @Nullable String datasourceType,
-        @Nullable String objectType,
-        String resourceID,
-        @Nullable String resourceLocation,
-        @Nullable String resourceName,
-        @Nullable String resourceType,
-        @Nullable String resourceUri) {
+        @OutputCustomType.Parameter("datasourceType") @Nullable String datasourceType,
+        @OutputCustomType.Parameter("objectType") @Nullable String objectType,
+        @OutputCustomType.Parameter("resourceID") String resourceID,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("resourceName") @Nullable String resourceName,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType,
+        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.datasourceType = datasourceType;
         this.objectType = objectType;
         this.resourceID = resourceID;
@@ -147,37 +147,37 @@ public final class DatasourceSetResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setDatasourceType(@Nullable String datasourceType) {
+        public Builder datasourceType(@Nullable String datasourceType) {
             this.datasourceType = datasourceType;
             return this;
         }
 
-        public Builder setObjectType(@Nullable String objectType) {
+        public Builder objectType(@Nullable String objectType) {
             this.objectType = objectType;
             return this;
         }
 
-        public Builder setResourceID(String resourceID) {
+        public Builder resourceID(String resourceID) {
             this.resourceID = Objects.requireNonNull(resourceID);
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setResourceName(@Nullable String resourceName) {
+        public Builder resourceName(@Nullable String resourceName) {
             this.resourceName = resourceName;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }
 
-        public Builder setResourceUri(@Nullable String resourceUri) {
+        public Builder resourceUri(@Nullable String resourceUri) {
             this.resourceUri = resourceUri;
             return this;
         }

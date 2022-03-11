@@ -277,50 +277,50 @@ public final class ListWebAppAuthSettingsSlotResult {
      */
     private final @Nullable Boolean validateIssuer;
 
-    @OutputCustomType.Constructor({"aadClaimsAuthorization","additionalLoginParams","allowedAudiences","allowedExternalRedirectUrls","authFilePath","clientId","clientSecret","clientSecretCertificateThumbprint","clientSecretSettingName","configVersion","defaultProvider","enabled","facebookAppId","facebookAppSecret","facebookAppSecretSettingName","facebookOAuthScopes","gitHubClientId","gitHubClientSecret","gitHubClientSecretSettingName","gitHubOAuthScopes","googleClientId","googleClientSecret","googleClientSecretSettingName","googleOAuthScopes","id","isAuthFromFile","issuer","kind","microsoftAccountClientId","microsoftAccountClientSecret","microsoftAccountClientSecretSettingName","microsoftAccountOAuthScopes","name","runtimeVersion","tokenRefreshExtensionHours","tokenStoreEnabled","twitterConsumerKey","twitterConsumerSecret","twitterConsumerSecretSettingName","type","unauthenticatedClientAction","validateIssuer"})
+    @OutputCustomType.Constructor
     private ListWebAppAuthSettingsSlotResult(
-        @Nullable String aadClaimsAuthorization,
-        @Nullable List<String> additionalLoginParams,
-        @Nullable List<String> allowedAudiences,
-        @Nullable List<String> allowedExternalRedirectUrls,
-        @Nullable String authFilePath,
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        @Nullable String clientSecretCertificateThumbprint,
-        @Nullable String clientSecretSettingName,
-        @Nullable String configVersion,
-        @Nullable String defaultProvider,
-        @Nullable Boolean enabled,
-        @Nullable String facebookAppId,
-        @Nullable String facebookAppSecret,
-        @Nullable String facebookAppSecretSettingName,
-        @Nullable List<String> facebookOAuthScopes,
-        @Nullable String gitHubClientId,
-        @Nullable String gitHubClientSecret,
-        @Nullable String gitHubClientSecretSettingName,
-        @Nullable List<String> gitHubOAuthScopes,
-        @Nullable String googleClientId,
-        @Nullable String googleClientSecret,
-        @Nullable String googleClientSecretSettingName,
-        @Nullable List<String> googleOAuthScopes,
-        String id,
-        @Nullable String isAuthFromFile,
-        @Nullable String issuer,
-        @Nullable String kind,
-        @Nullable String microsoftAccountClientId,
-        @Nullable String microsoftAccountClientSecret,
-        @Nullable String microsoftAccountClientSecretSettingName,
-        @Nullable List<String> microsoftAccountOAuthScopes,
-        String name,
-        @Nullable String runtimeVersion,
-        @Nullable Double tokenRefreshExtensionHours,
-        @Nullable Boolean tokenStoreEnabled,
-        @Nullable String twitterConsumerKey,
-        @Nullable String twitterConsumerSecret,
-        @Nullable String twitterConsumerSecretSettingName,
-        String type,
-        @Nullable String unauthenticatedClientAction,
-        @Nullable Boolean validateIssuer) {
+        @OutputCustomType.Parameter("aadClaimsAuthorization") @Nullable String aadClaimsAuthorization,
+        @OutputCustomType.Parameter("additionalLoginParams") @Nullable List<String> additionalLoginParams,
+        @OutputCustomType.Parameter("allowedAudiences") @Nullable List<String> allowedAudiences,
+        @OutputCustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
+        @OutputCustomType.Parameter("authFilePath") @Nullable String authFilePath,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("clientSecretCertificateThumbprint") @Nullable String clientSecretCertificateThumbprint,
+        @OutputCustomType.Parameter("clientSecretSettingName") @Nullable String clientSecretSettingName,
+        @OutputCustomType.Parameter("configVersion") @Nullable String configVersion,
+        @OutputCustomType.Parameter("defaultProvider") @Nullable String defaultProvider,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("facebookAppId") @Nullable String facebookAppId,
+        @OutputCustomType.Parameter("facebookAppSecret") @Nullable String facebookAppSecret,
+        @OutputCustomType.Parameter("facebookAppSecretSettingName") @Nullable String facebookAppSecretSettingName,
+        @OutputCustomType.Parameter("facebookOAuthScopes") @Nullable List<String> facebookOAuthScopes,
+        @OutputCustomType.Parameter("gitHubClientId") @Nullable String gitHubClientId,
+        @OutputCustomType.Parameter("gitHubClientSecret") @Nullable String gitHubClientSecret,
+        @OutputCustomType.Parameter("gitHubClientSecretSettingName") @Nullable String gitHubClientSecretSettingName,
+        @OutputCustomType.Parameter("gitHubOAuthScopes") @Nullable List<String> gitHubOAuthScopes,
+        @OutputCustomType.Parameter("googleClientId") @Nullable String googleClientId,
+        @OutputCustomType.Parameter("googleClientSecret") @Nullable String googleClientSecret,
+        @OutputCustomType.Parameter("googleClientSecretSettingName") @Nullable String googleClientSecretSettingName,
+        @OutputCustomType.Parameter("googleOAuthScopes") @Nullable List<String> googleOAuthScopes,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isAuthFromFile") @Nullable String isAuthFromFile,
+        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("microsoftAccountClientId") @Nullable String microsoftAccountClientId,
+        @OutputCustomType.Parameter("microsoftAccountClientSecret") @Nullable String microsoftAccountClientSecret,
+        @OutputCustomType.Parameter("microsoftAccountClientSecretSettingName") @Nullable String microsoftAccountClientSecretSettingName,
+        @OutputCustomType.Parameter("microsoftAccountOAuthScopes") @Nullable List<String> microsoftAccountOAuthScopes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("runtimeVersion") @Nullable String runtimeVersion,
+        @OutputCustomType.Parameter("tokenRefreshExtensionHours") @Nullable Double tokenRefreshExtensionHours,
+        @OutputCustomType.Parameter("tokenStoreEnabled") @Nullable Boolean tokenStoreEnabled,
+        @OutputCustomType.Parameter("twitterConsumerKey") @Nullable String twitterConsumerKey,
+        @OutputCustomType.Parameter("twitterConsumerSecret") @Nullable String twitterConsumerSecret,
+        @OutputCustomType.Parameter("twitterConsumerSecretSettingName") @Nullable String twitterConsumerSecretSettingName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unauthenticatedClientAction") @Nullable String unauthenticatedClientAction,
+        @OutputCustomType.Parameter("validateIssuer") @Nullable Boolean validateIssuer) {
         this.aadClaimsAuthorization = aadClaimsAuthorization;
         this.additionalLoginParams = additionalLoginParams;
         this.allowedAudiences = allowedAudiences;
@@ -814,212 +814,212 @@ public final class ListWebAppAuthSettingsSlotResult {
     	      this.validateIssuer = defaults.validateIssuer;
         }
 
-        public Builder setAadClaimsAuthorization(@Nullable String aadClaimsAuthorization) {
+        public Builder aadClaimsAuthorization(@Nullable String aadClaimsAuthorization) {
             this.aadClaimsAuthorization = aadClaimsAuthorization;
             return this;
         }
 
-        public Builder setAdditionalLoginParams(@Nullable List<String> additionalLoginParams) {
+        public Builder additionalLoginParams(@Nullable List<String> additionalLoginParams) {
             this.additionalLoginParams = additionalLoginParams;
             return this;
         }
 
-        public Builder setAllowedAudiences(@Nullable List<String> allowedAudiences) {
+        public Builder allowedAudiences(@Nullable List<String> allowedAudiences) {
             this.allowedAudiences = allowedAudiences;
             return this;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
-        public Builder setAuthFilePath(@Nullable String authFilePath) {
+        public Builder authFilePath(@Nullable String authFilePath) {
             this.authFilePath = authFilePath;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setClientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
+        public Builder clientSecretCertificateThumbprint(@Nullable String clientSecretCertificateThumbprint) {
             this.clientSecretCertificateThumbprint = clientSecretCertificateThumbprint;
             return this;
         }
 
-        public Builder setClientSecretSettingName(@Nullable String clientSecretSettingName) {
+        public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
             this.clientSecretSettingName = clientSecretSettingName;
             return this;
         }
 
-        public Builder setConfigVersion(@Nullable String configVersion) {
+        public Builder configVersion(@Nullable String configVersion) {
             this.configVersion = configVersion;
             return this;
         }
 
-        public Builder setDefaultProvider(@Nullable String defaultProvider) {
+        public Builder defaultProvider(@Nullable String defaultProvider) {
             this.defaultProvider = defaultProvider;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setFacebookAppId(@Nullable String facebookAppId) {
+        public Builder facebookAppId(@Nullable String facebookAppId) {
             this.facebookAppId = facebookAppId;
             return this;
         }
 
-        public Builder setFacebookAppSecret(@Nullable String facebookAppSecret) {
+        public Builder facebookAppSecret(@Nullable String facebookAppSecret) {
             this.facebookAppSecret = facebookAppSecret;
             return this;
         }
 
-        public Builder setFacebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
+        public Builder facebookAppSecretSettingName(@Nullable String facebookAppSecretSettingName) {
             this.facebookAppSecretSettingName = facebookAppSecretSettingName;
             return this;
         }
 
-        public Builder setFacebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
+        public Builder facebookOAuthScopes(@Nullable List<String> facebookOAuthScopes) {
             this.facebookOAuthScopes = facebookOAuthScopes;
             return this;
         }
 
-        public Builder setGitHubClientId(@Nullable String gitHubClientId) {
+        public Builder gitHubClientId(@Nullable String gitHubClientId) {
             this.gitHubClientId = gitHubClientId;
             return this;
         }
 
-        public Builder setGitHubClientSecret(@Nullable String gitHubClientSecret) {
+        public Builder gitHubClientSecret(@Nullable String gitHubClientSecret) {
             this.gitHubClientSecret = gitHubClientSecret;
             return this;
         }
 
-        public Builder setGitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
+        public Builder gitHubClientSecretSettingName(@Nullable String gitHubClientSecretSettingName) {
             this.gitHubClientSecretSettingName = gitHubClientSecretSettingName;
             return this;
         }
 
-        public Builder setGitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
+        public Builder gitHubOAuthScopes(@Nullable List<String> gitHubOAuthScopes) {
             this.gitHubOAuthScopes = gitHubOAuthScopes;
             return this;
         }
 
-        public Builder setGoogleClientId(@Nullable String googleClientId) {
+        public Builder googleClientId(@Nullable String googleClientId) {
             this.googleClientId = googleClientId;
             return this;
         }
 
-        public Builder setGoogleClientSecret(@Nullable String googleClientSecret) {
+        public Builder googleClientSecret(@Nullable String googleClientSecret) {
             this.googleClientSecret = googleClientSecret;
             return this;
         }
 
-        public Builder setGoogleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
+        public Builder googleClientSecretSettingName(@Nullable String googleClientSecretSettingName) {
             this.googleClientSecretSettingName = googleClientSecretSettingName;
             return this;
         }
 
-        public Builder setGoogleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
+        public Builder googleOAuthScopes(@Nullable List<String> googleOAuthScopes) {
             this.googleOAuthScopes = googleOAuthScopes;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsAuthFromFile(@Nullable String isAuthFromFile) {
+        public Builder isAuthFromFile(@Nullable String isAuthFromFile) {
             this.isAuthFromFile = isAuthFromFile;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientId(@Nullable String microsoftAccountClientId) {
+        public Builder microsoftAccountClientId(@Nullable String microsoftAccountClientId) {
             this.microsoftAccountClientId = microsoftAccountClientId;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
+        public Builder microsoftAccountClientSecret(@Nullable String microsoftAccountClientSecret) {
             this.microsoftAccountClientSecret = microsoftAccountClientSecret;
             return this;
         }
 
-        public Builder setMicrosoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
+        public Builder microsoftAccountClientSecretSettingName(@Nullable String microsoftAccountClientSecretSettingName) {
             this.microsoftAccountClientSecretSettingName = microsoftAccountClientSecretSettingName;
             return this;
         }
 
-        public Builder setMicrosoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
+        public Builder microsoftAccountOAuthScopes(@Nullable List<String> microsoftAccountOAuthScopes) {
             this.microsoftAccountOAuthScopes = microsoftAccountOAuthScopes;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRuntimeVersion(@Nullable String runtimeVersion) {
+        public Builder runtimeVersion(@Nullable String runtimeVersion) {
             this.runtimeVersion = runtimeVersion;
             return this;
         }
 
-        public Builder setTokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
+        public Builder tokenRefreshExtensionHours(@Nullable Double tokenRefreshExtensionHours) {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
 
-        public Builder setTokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
+        public Builder tokenStoreEnabled(@Nullable Boolean tokenStoreEnabled) {
             this.tokenStoreEnabled = tokenStoreEnabled;
             return this;
         }
 
-        public Builder setTwitterConsumerKey(@Nullable String twitterConsumerKey) {
+        public Builder twitterConsumerKey(@Nullable String twitterConsumerKey) {
             this.twitterConsumerKey = twitterConsumerKey;
             return this;
         }
 
-        public Builder setTwitterConsumerSecret(@Nullable String twitterConsumerSecret) {
+        public Builder twitterConsumerSecret(@Nullable String twitterConsumerSecret) {
             this.twitterConsumerSecret = twitterConsumerSecret;
             return this;
         }
 
-        public Builder setTwitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
+        public Builder twitterConsumerSecretSettingName(@Nullable String twitterConsumerSecretSettingName) {
             this.twitterConsumerSecretSettingName = twitterConsumerSecretSettingName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
+        public Builder unauthenticatedClientAction(@Nullable String unauthenticatedClientAction) {
             this.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
-        public Builder setValidateIssuer(@Nullable Boolean validateIssuer) {
+        public Builder validateIssuer(@Nullable Boolean validateIssuer) {
             this.validateIssuer = validateIssuer;
             return this;
         }

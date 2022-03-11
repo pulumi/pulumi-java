@@ -63,18 +63,18 @@ public final class SlackChannelPropertiesResponse {
      */
     private final @Nullable String verificationToken;
 
-    @OutputCustomType.Constructor({"clientId","clientSecret","isEnabled","isValidated","landingPageUrl","lastSubmissionId","redirectAction","registerBeforeOAuthFlow","signingSecret","verificationToken"})
+    @OutputCustomType.Constructor
     private SlackChannelPropertiesResponse(
-        @Nullable String clientId,
-        @Nullable String clientSecret,
-        Boolean isEnabled,
-        Boolean isValidated,
-        @Nullable String landingPageUrl,
-        String lastSubmissionId,
-        String redirectAction,
-        Boolean registerBeforeOAuthFlow,
-        @Nullable String signingSecret,
-        @Nullable String verificationToken) {
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable String clientSecret,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("isValidated") Boolean isValidated,
+        @OutputCustomType.Parameter("landingPageUrl") @Nullable String landingPageUrl,
+        @OutputCustomType.Parameter("lastSubmissionId") String lastSubmissionId,
+        @OutputCustomType.Parameter("redirectAction") String redirectAction,
+        @OutputCustomType.Parameter("registerBeforeOAuthFlow") Boolean registerBeforeOAuthFlow,
+        @OutputCustomType.Parameter("signingSecret") @Nullable String signingSecret,
+        @OutputCustomType.Parameter("verificationToken") @Nullable String verificationToken) {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
         this.isEnabled = isEnabled;
@@ -196,52 +196,52 @@ public final class SlackChannelPropertiesResponse {
     	      this.verificationToken = defaults.verificationToken;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable String clientSecret) {
+        public Builder clientSecret(@Nullable String clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsValidated(Boolean isValidated) {
+        public Builder isValidated(Boolean isValidated) {
             this.isValidated = Objects.requireNonNull(isValidated);
             return this;
         }
 
-        public Builder setLandingPageUrl(@Nullable String landingPageUrl) {
+        public Builder landingPageUrl(@Nullable String landingPageUrl) {
             this.landingPageUrl = landingPageUrl;
             return this;
         }
 
-        public Builder setLastSubmissionId(String lastSubmissionId) {
+        public Builder lastSubmissionId(String lastSubmissionId) {
             this.lastSubmissionId = Objects.requireNonNull(lastSubmissionId);
             return this;
         }
 
-        public Builder setRedirectAction(String redirectAction) {
+        public Builder redirectAction(String redirectAction) {
             this.redirectAction = Objects.requireNonNull(redirectAction);
             return this;
         }
 
-        public Builder setRegisterBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
+        public Builder registerBeforeOAuthFlow(Boolean registerBeforeOAuthFlow) {
             this.registerBeforeOAuthFlow = Objects.requireNonNull(registerBeforeOAuthFlow);
             return this;
         }
 
-        public Builder setSigningSecret(@Nullable String signingSecret) {
+        public Builder signingSecret(@Nullable String signingSecret) {
             this.signingSecret = signingSecret;
             return this;
         }
 
-        public Builder setVerificationToken(@Nullable String verificationToken) {
+        public Builder verificationToken(@Nullable String verificationToken) {
             this.verificationToken = verificationToken;
             return this;
         }

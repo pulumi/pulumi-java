@@ -23,10 +23,10 @@ public final class GlobalReplicationGroupReshardingConfiguration {
      */
     private final @Nullable List<String> preferredAvailabilityZones;
 
-    @OutputCustomType.Constructor({"nodeGroupId","preferredAvailabilityZones"})
+    @OutputCustomType.Constructor
     private GlobalReplicationGroupReshardingConfiguration(
-        @Nullable String nodeGroupId,
-        @Nullable List<String> preferredAvailabilityZones) {
+        @OutputCustomType.Parameter("nodeGroupId") @Nullable String nodeGroupId,
+        @OutputCustomType.Parameter("preferredAvailabilityZones") @Nullable List<String> preferredAvailabilityZones) {
         this.nodeGroupId = nodeGroupId;
         this.preferredAvailabilityZones = preferredAvailabilityZones;
     }
@@ -68,12 +68,12 @@ public final class GlobalReplicationGroupReshardingConfiguration {
     	      this.preferredAvailabilityZones = defaults.preferredAvailabilityZones;
         }
 
-        public Builder setNodeGroupId(@Nullable String nodeGroupId) {
+        public Builder nodeGroupId(@Nullable String nodeGroupId) {
             this.nodeGroupId = nodeGroupId;
             return this;
         }
 
-        public Builder setPreferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
+        public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
             this.preferredAvailabilityZones = preferredAvailabilityZones;
             return this;
         }

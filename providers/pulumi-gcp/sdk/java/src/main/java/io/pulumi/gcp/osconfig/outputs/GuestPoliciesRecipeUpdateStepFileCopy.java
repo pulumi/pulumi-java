@@ -39,12 +39,12 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor({"artifactId","destination","overwrite","permissions"})
+    @OutputCustomType.Constructor
     private GuestPoliciesRecipeUpdateStepFileCopy(
-        String artifactId,
-        String destination,
-        @Nullable Boolean overwrite,
-        @Nullable String permissions) {
+        @OutputCustomType.Parameter("artifactId") String artifactId,
+        @OutputCustomType.Parameter("destination") String destination,
+        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;
@@ -112,22 +112,22 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
     	      this.permissions = defaults.permissions;
         }
 
-        public Builder setArtifactId(String artifactId) {
+        public Builder artifactId(String artifactId) {
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
 
-        public Builder setDestination(String destination) {
+        public Builder destination(String destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
 
-        public Builder setOverwrite(@Nullable Boolean overwrite) {
+        public Builder overwrite(@Nullable Boolean overwrite) {
             this.overwrite = overwrite;
             return this;
         }
 
-        public Builder setPermissions(@Nullable String permissions) {
+        public Builder permissions(@Nullable String permissions) {
             this.permissions = permissions;
             return this;
         }

@@ -17,8 +17,8 @@ public final class PowerStateResponse {
      */
     private final @Nullable String code;
 
-    @OutputCustomType.Constructor({"code"})
-    private PowerStateResponse(@Nullable String code) {
+    @OutputCustomType.Constructor
+    private PowerStateResponse(@OutputCustomType.Parameter("code") @Nullable String code) {
         this.code = code;
     }
 
@@ -50,7 +50,7 @@ public final class PowerStateResponse {
     	      this.code = defaults.code;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = code;
             return this;
         }

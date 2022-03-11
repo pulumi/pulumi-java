@@ -17,8 +17,8 @@ public final class TrackSelectionResponse {
      */
     private final @Nullable List<TrackPropertyConditionResponse> trackSelections;
 
-    @OutputCustomType.Constructor({"trackSelections"})
-    private TrackSelectionResponse(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
+    @OutputCustomType.Constructor
+    private TrackSelectionResponse(@OutputCustomType.Parameter("trackSelections") @Nullable List<TrackPropertyConditionResponse> trackSelections) {
         this.trackSelections = trackSelections;
     }
 
@@ -50,7 +50,7 @@ public final class TrackSelectionResponse {
     	      this.trackSelections = defaults.trackSelections;
         }
 
-        public Builder setTrackSelections(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
+        public Builder trackSelections(@Nullable List<TrackPropertyConditionResponse> trackSelections) {
             this.trackSelections = trackSelections;
             return this;
         }

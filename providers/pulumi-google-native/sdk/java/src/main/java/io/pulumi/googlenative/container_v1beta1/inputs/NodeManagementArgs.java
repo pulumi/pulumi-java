@@ -91,32 +91,32 @@ public final class NodeManagementArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upgradeOptions = defaults.upgradeOptions;
         }
 
-        public Builder setAutoRepair(@Nullable Input<Boolean> autoRepair) {
+        public Builder autoRepair(@Nullable Input<Boolean> autoRepair) {
             this.autoRepair = autoRepair;
             return this;
         }
 
-        public Builder setAutoRepair(@Nullable Boolean autoRepair) {
+        public Builder autoRepair(@Nullable Boolean autoRepair) {
             this.autoRepair = Input.ofNullable(autoRepair);
             return this;
         }
 
-        public Builder setAutoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Input<Boolean> autoUpgrade) {
             this.autoUpgrade = autoUpgrade;
             return this;
         }
 
-        public Builder setAutoUpgrade(@Nullable Boolean autoUpgrade) {
+        public Builder autoUpgrade(@Nullable Boolean autoUpgrade) {
             this.autoUpgrade = Input.ofNullable(autoUpgrade);
             return this;
         }
 
-        public Builder setUpgradeOptions(@Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions) {
+        public Builder upgradeOptions(@Nullable Input<AutoUpgradeOptionsArgs> upgradeOptions) {
             this.upgradeOptions = upgradeOptions;
             return this;
         }
 
-        public Builder setUpgradeOptions(@Nullable AutoUpgradeOptionsArgs upgradeOptions) {
+        public Builder upgradeOptions(@Nullable AutoUpgradeOptionsArgs upgradeOptions) {
             this.upgradeOptions = Input.ofNullable(upgradeOptions);
             return this;
         }

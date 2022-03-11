@@ -43,14 +43,14 @@ public final class ServerExternalAdministratorResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"administratorType","azureADOnlyAuthentication","login","principalType","sid","tenantId"})
+    @OutputCustomType.Constructor
     private ServerExternalAdministratorResponse(
-        @Nullable String administratorType,
-        @Nullable Boolean azureADOnlyAuthentication,
-        @Nullable String login,
-        @Nullable String principalType,
-        @Nullable String sid,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("administratorType") @Nullable String administratorType,
+        @OutputCustomType.Parameter("azureADOnlyAuthentication") @Nullable Boolean azureADOnlyAuthentication,
+        @OutputCustomType.Parameter("login") @Nullable String login,
+        @OutputCustomType.Parameter("principalType") @Nullable String principalType,
+        @OutputCustomType.Parameter("sid") @Nullable String sid,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.administratorType = administratorType;
         this.azureADOnlyAuthentication = azureADOnlyAuthentication;
         this.login = login;
@@ -132,32 +132,32 @@ public final class ServerExternalAdministratorResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAdministratorType(@Nullable String administratorType) {
+        public Builder administratorType(@Nullable String administratorType) {
             this.administratorType = administratorType;
             return this;
         }
 
-        public Builder setAzureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
+        public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
             this.azureADOnlyAuthentication = azureADOnlyAuthentication;
             return this;
         }
 
-        public Builder setLogin(@Nullable String login) {
+        public Builder login(@Nullable String login) {
             this.login = login;
             return this;
         }
 
-        public Builder setPrincipalType(@Nullable String principalType) {
+        public Builder principalType(@Nullable String principalType) {
             this.principalType = principalType;
             return this;
         }
 
-        public Builder setSid(@Nullable String sid) {
+        public Builder sid(@Nullable String sid) {
             this.sid = sid;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

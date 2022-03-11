@@ -15,8 +15,8 @@ public final class ReplicaResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"location"})
-    private ReplicaResponse(String location) {
+    @OutputCustomType.Constructor
+    private ReplicaResponse(@OutputCustomType.Parameter("location") String location) {
         this.location = location;
     }
 
@@ -48,7 +48,7 @@ public final class ReplicaResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

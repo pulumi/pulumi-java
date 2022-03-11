@@ -31,11 +31,11 @@ public final class CustomScaleRuleResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"auth","metadata","type"})
+    @OutputCustomType.Constructor
     private CustomScaleRuleResponse(
-        @Nullable List<ScaleRuleAuthResponse> auth,
-        @Nullable Map<String,String> metadata,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("auth") @Nullable List<ScaleRuleAuthResponse> auth,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.auth = auth;
         this.metadata = metadata;
         this.type = type;
@@ -88,17 +88,17 @@ public final class CustomScaleRuleResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuth(@Nullable List<ScaleRuleAuthResponse> auth) {
+        public Builder auth(@Nullable List<ScaleRuleAuthResponse> auth) {
             this.auth = auth;
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

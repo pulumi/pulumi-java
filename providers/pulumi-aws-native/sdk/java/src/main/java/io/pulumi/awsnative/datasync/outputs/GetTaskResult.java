@@ -59,21 +59,21 @@ public final class GetTaskResult {
      */
     private final @Nullable String taskArn;
 
-    @OutputCustomType.Constructor({"cloudWatchLogGroupArn","destinationNetworkInterfaceArns","errorCode","errorDetail","excludes","includes","name","options","schedule","sourceNetworkInterfaceArns","status","tags","taskArn"})
+    @OutputCustomType.Constructor
     private GetTaskResult(
-        @Nullable String cloudWatchLogGroupArn,
-        @Nullable List<String> destinationNetworkInterfaceArns,
-        @Nullable String errorCode,
-        @Nullable String errorDetail,
-        @Nullable List<TaskFilterRule> excludes,
-        @Nullable List<TaskFilterRule> includes,
-        @Nullable String name,
-        @Nullable TaskOptions options,
-        @Nullable TaskSchedule schedule,
-        @Nullable List<String> sourceNetworkInterfaceArns,
-        @Nullable TaskStatus status,
-        @Nullable List<TaskTag> tags,
-        @Nullable String taskArn) {
+        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @OutputCustomType.Parameter("destinationNetworkInterfaceArns") @Nullable List<String> destinationNetworkInterfaceArns,
+        @OutputCustomType.Parameter("errorCode") @Nullable String errorCode,
+        @OutputCustomType.Parameter("errorDetail") @Nullable String errorDetail,
+        @OutputCustomType.Parameter("excludes") @Nullable List<TaskFilterRule> excludes,
+        @OutputCustomType.Parameter("includes") @Nullable List<TaskFilterRule> includes,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("options") @Nullable TaskOptions options,
+        @OutputCustomType.Parameter("schedule") @Nullable TaskSchedule schedule,
+        @OutputCustomType.Parameter("sourceNetworkInterfaceArns") @Nullable List<String> sourceNetworkInterfaceArns,
+        @OutputCustomType.Parameter("status") @Nullable TaskStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<TaskTag> tags,
+        @OutputCustomType.Parameter("taskArn") @Nullable String taskArn) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
         this.errorCode = errorCode;
@@ -201,67 +201,67 @@ public final class GetTaskResult {
     	      this.taskArn = defaults.taskArn;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setDestinationNetworkInterfaceArns(@Nullable List<String> destinationNetworkInterfaceArns) {
+        public Builder destinationNetworkInterfaceArns(@Nullable List<String> destinationNetworkInterfaceArns) {
             this.destinationNetworkInterfaceArns = destinationNetworkInterfaceArns;
             return this;
         }
 
-        public Builder setErrorCode(@Nullable String errorCode) {
+        public Builder errorCode(@Nullable String errorCode) {
             this.errorCode = errorCode;
             return this;
         }
 
-        public Builder setErrorDetail(@Nullable String errorDetail) {
+        public Builder errorDetail(@Nullable String errorDetail) {
             this.errorDetail = errorDetail;
             return this;
         }
 
-        public Builder setExcludes(@Nullable List<TaskFilterRule> excludes) {
+        public Builder excludes(@Nullable List<TaskFilterRule> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setIncludes(@Nullable List<TaskFilterRule> includes) {
+        public Builder includes(@Nullable List<TaskFilterRule> includes) {
             this.includes = includes;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setOptions(@Nullable TaskOptions options) {
+        public Builder options(@Nullable TaskOptions options) {
             this.options = options;
             return this;
         }
 
-        public Builder setSchedule(@Nullable TaskSchedule schedule) {
+        public Builder schedule(@Nullable TaskSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSourceNetworkInterfaceArns(@Nullable List<String> sourceNetworkInterfaceArns) {
+        public Builder sourceNetworkInterfaceArns(@Nullable List<String> sourceNetworkInterfaceArns) {
             this.sourceNetworkInterfaceArns = sourceNetworkInterfaceArns;
             return this;
         }
 
-        public Builder setStatus(@Nullable TaskStatus status) {
+        public Builder status(@Nullable TaskStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TaskTag> tags) {
+        public Builder tags(@Nullable List<TaskTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTaskArn(@Nullable String taskArn) {
+        public Builder taskArn(@Nullable String taskArn) {
             this.taskArn = taskArn;
             return this;
         }

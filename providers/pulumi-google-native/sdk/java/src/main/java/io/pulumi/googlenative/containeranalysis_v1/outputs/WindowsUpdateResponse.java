@@ -48,15 +48,15 @@ public final class WindowsUpdateResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"categories","description","identity","kbArticleIds","lastPublishedTimestamp","supportUrl","title"})
+    @OutputCustomType.Constructor
     private WindowsUpdateResponse(
-        List<CategoryResponse> categories,
-        String description,
-        IdentityResponse identity,
-        List<String> kbArticleIds,
-        String lastPublishedTimestamp,
-        String supportUrl,
-        String title) {
+        @OutputCustomType.Parameter("categories") List<CategoryResponse> categories,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("identity") IdentityResponse identity,
+        @OutputCustomType.Parameter("kbArticleIds") List<String> kbArticleIds,
+        @OutputCustomType.Parameter("lastPublishedTimestamp") String lastPublishedTimestamp,
+        @OutputCustomType.Parameter("supportUrl") String supportUrl,
+        @OutputCustomType.Parameter("title") String title) {
         this.categories = categories;
         this.description = description;
         this.identity = identity;
@@ -148,37 +148,37 @@ public final class WindowsUpdateResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setCategories(List<CategoryResponse> categories) {
+        public Builder categories(List<CategoryResponse> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setIdentity(IdentityResponse identity) {
+        public Builder identity(IdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setKbArticleIds(List<String> kbArticleIds) {
+        public Builder kbArticleIds(List<String> kbArticleIds) {
             this.kbArticleIds = Objects.requireNonNull(kbArticleIds);
             return this;
         }
 
-        public Builder setLastPublishedTimestamp(String lastPublishedTimestamp) {
+        public Builder lastPublishedTimestamp(String lastPublishedTimestamp) {
             this.lastPublishedTimestamp = Objects.requireNonNull(lastPublishedTimestamp);
             return this;
         }
 
-        public Builder setSupportUrl(String supportUrl) {
+        public Builder supportUrl(String supportUrl) {
             this.supportUrl = Objects.requireNonNull(supportUrl);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

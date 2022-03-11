@@ -69,17 +69,17 @@ public final class IntentSlot {
      */
     private final @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt;
 
-    @OutputCustomType.Constructor({"description","name","priority","responseCard","sampleUtterances","slotConstraint","slotType","slotTypeVersion","valueElicitationPrompt"})
+    @OutputCustomType.Constructor
     private IntentSlot(
-        @Nullable String description,
-        String name,
-        @Nullable Integer priority,
-        @Nullable String responseCard,
-        @Nullable List<String> sampleUtterances,
-        String slotConstraint,
-        String slotType,
-        @Nullable String slotTypeVersion,
-        @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("responseCard") @Nullable String responseCard,
+        @OutputCustomType.Parameter("sampleUtterances") @Nullable List<String> sampleUtterances,
+        @OutputCustomType.Parameter("slotConstraint") String slotConstraint,
+        @OutputCustomType.Parameter("slotType") String slotType,
+        @OutputCustomType.Parameter("slotTypeVersion") @Nullable String slotTypeVersion,
+        @OutputCustomType.Parameter("valueElicitationPrompt") @Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
         this.description = description;
         this.name = name;
         this.priority = priority;
@@ -200,47 +200,47 @@ public final class IntentSlot {
     	      this.valueElicitationPrompt = defaults.valueElicitationPrompt;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setResponseCard(@Nullable String responseCard) {
+        public Builder responseCard(@Nullable String responseCard) {
             this.responseCard = responseCard;
             return this;
         }
 
-        public Builder setSampleUtterances(@Nullable List<String> sampleUtterances) {
+        public Builder sampleUtterances(@Nullable List<String> sampleUtterances) {
             this.sampleUtterances = sampleUtterances;
             return this;
         }
 
-        public Builder setSlotConstraint(String slotConstraint) {
+        public Builder slotConstraint(String slotConstraint) {
             this.slotConstraint = Objects.requireNonNull(slotConstraint);
             return this;
         }
 
-        public Builder setSlotType(String slotType) {
+        public Builder slotType(String slotType) {
             this.slotType = Objects.requireNonNull(slotType);
             return this;
         }
 
-        public Builder setSlotTypeVersion(@Nullable String slotTypeVersion) {
+        public Builder slotTypeVersion(@Nullable String slotTypeVersion) {
             this.slotTypeVersion = slotTypeVersion;
             return this;
         }
 
-        public Builder setValueElicitationPrompt(@Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
+        public Builder valueElicitationPrompt(@Nullable IntentSlotValueElicitationPrompt valueElicitationPrompt) {
             this.valueElicitationPrompt = valueElicitationPrompt;
             return this;
         }

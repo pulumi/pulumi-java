@@ -88,23 +88,23 @@ public final class GetBackupRunResult {
      */
     private final String windowStartTime;
 
-    @OutputCustomType.Constructor({"backupKind","description","diskEncryptionConfiguration","diskEncryptionStatus","endTime","enqueuedTime","error","instance","kind","location","selfLink","startTime","status","type","windowStartTime"})
+    @OutputCustomType.Constructor
     private GetBackupRunResult(
-        String backupKind,
-        String description,
-        DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        DiskEncryptionStatusResponse diskEncryptionStatus,
-        String endTime,
-        String enqueuedTime,
-        OperationErrorResponse error,
-        String instance,
-        String kind,
-        String location,
-        String selfLink,
-        String startTime,
-        String status,
-        String type,
-        String windowStartTime) {
+        @OutputCustomType.Parameter("backupKind") String backupKind,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @OutputCustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("enqueuedTime") String enqueuedTime,
+        @OutputCustomType.Parameter("error") OperationErrorResponse error,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("windowStartTime") String windowStartTime) {
         this.backupKind = backupKind;
         this.description = description;
         this.diskEncryptionConfiguration = diskEncryptionConfiguration;
@@ -276,77 +276,77 @@ public final class GetBackupRunResult {
     	      this.windowStartTime = defaults.windowStartTime;
         }
 
-        public Builder setBackupKind(String backupKind) {
+        public Builder backupKind(String backupKind) {
             this.backupKind = Objects.requireNonNull(backupKind);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Objects.requireNonNull(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(DiskEncryptionStatusResponse diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(DiskEncryptionStatusResponse diskEncryptionStatus) {
             this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setEnqueuedTime(String enqueuedTime) {
+        public Builder enqueuedTime(String enqueuedTime) {
             this.enqueuedTime = Objects.requireNonNull(enqueuedTime);
             return this;
         }
 
-        public Builder setError(OperationErrorResponse error) {
+        public Builder error(OperationErrorResponse error) {
             this.error = Objects.requireNonNull(error);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWindowStartTime(String windowStartTime) {
+        public Builder windowStartTime(String windowStartTime) {
             this.windowStartTime = Objects.requireNonNull(windowStartTime);
             return this;
         }

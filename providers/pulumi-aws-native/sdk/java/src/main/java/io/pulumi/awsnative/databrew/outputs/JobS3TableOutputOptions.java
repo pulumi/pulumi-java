@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class JobS3TableOutputOptions {
     private final JobS3Location location;
 
-    @OutputCustomType.Constructor({"location"})
-    private JobS3TableOutputOptions(JobS3Location location) {
+    @OutputCustomType.Constructor
+    private JobS3TableOutputOptions(@OutputCustomType.Parameter("location") JobS3Location location) {
         this.location = location;
     }
 
@@ -40,7 +40,7 @@ public final class JobS3TableOutputOptions {
     	      this.location = defaults.location;
         }
 
-        public Builder setLocation(JobS3Location location) {
+        public Builder location(JobS3Location location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

@@ -47,15 +47,15 @@ public final class TrailAdvancedEventSelectorFieldSelector {
      */
     private final @Nullable List<String> startsWiths;
 
-    @OutputCustomType.Constructor({"endsWiths","equals","field","notEndsWiths","notEquals","notStartsWiths","startsWiths"})
+    @OutputCustomType.Constructor
     private TrailAdvancedEventSelectorFieldSelector(
-        @Nullable List<String> endsWiths,
-        @Nullable List<String> equals,
-        String field,
-        @Nullable List<String> notEndsWiths,
-        @Nullable List<String> notEquals,
-        @Nullable List<String> notStartsWiths,
-        @Nullable List<String> startsWiths) {
+        @OutputCustomType.Parameter("endsWiths") @Nullable List<String> endsWiths,
+        @OutputCustomType.Parameter("equals") @Nullable List<String> equals,
+        @OutputCustomType.Parameter("field") String field,
+        @OutputCustomType.Parameter("notEndsWiths") @Nullable List<String> notEndsWiths,
+        @OutputCustomType.Parameter("notEquals") @Nullable List<String> notEquals,
+        @OutputCustomType.Parameter("notStartsWiths") @Nullable List<String> notStartsWiths,
+        @OutputCustomType.Parameter("startsWiths") @Nullable List<String> startsWiths) {
         this.endsWiths = endsWiths;
         this.equals = equals;
         this.field = field;
@@ -147,37 +147,37 @@ public final class TrailAdvancedEventSelectorFieldSelector {
     	      this.startsWiths = defaults.startsWiths;
         }
 
-        public Builder setEndsWiths(@Nullable List<String> endsWiths) {
+        public Builder endsWiths(@Nullable List<String> endsWiths) {
             this.endsWiths = endsWiths;
             return this;
         }
 
-        public Builder setEquals(@Nullable List<String> equals) {
+        public Builder equals(@Nullable List<String> equals) {
             this.equals = equals;
             return this;
         }
 
-        public Builder setField(String field) {
+        public Builder field(String field) {
             this.field = Objects.requireNonNull(field);
             return this;
         }
 
-        public Builder setNotEndsWiths(@Nullable List<String> notEndsWiths) {
+        public Builder notEndsWiths(@Nullable List<String> notEndsWiths) {
             this.notEndsWiths = notEndsWiths;
             return this;
         }
 
-        public Builder setNotEquals(@Nullable List<String> notEquals) {
+        public Builder notEquals(@Nullable List<String> notEquals) {
             this.notEquals = notEquals;
             return this;
         }
 
-        public Builder setNotStartsWiths(@Nullable List<String> notStartsWiths) {
+        public Builder notStartsWiths(@Nullable List<String> notStartsWiths) {
             this.notStartsWiths = notStartsWiths;
             return this;
         }
 
-        public Builder setStartsWiths(@Nullable List<String> startsWiths) {
+        public Builder startsWiths(@Nullable List<String> startsWiths) {
             this.startsWiths = startsWiths;
             return this;
         }

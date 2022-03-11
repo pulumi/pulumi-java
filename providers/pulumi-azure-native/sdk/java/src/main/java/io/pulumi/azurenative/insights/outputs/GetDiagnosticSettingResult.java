@@ -70,19 +70,19 @@ public final class GetDiagnosticSettingResult {
      */
     private final @Nullable String workspaceId;
 
-    @OutputCustomType.Constructor({"eventHubAuthorizationRuleId","eventHubName","id","logAnalyticsDestinationType","logs","metrics","name","serviceBusRuleId","storageAccountId","type","workspaceId"})
+    @OutputCustomType.Constructor
     private GetDiagnosticSettingResult(
-        @Nullable String eventHubAuthorizationRuleId,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String logAnalyticsDestinationType,
-        @Nullable List<LogSettingsResponse> logs,
-        @Nullable List<MetricSettingsResponse> metrics,
-        String name,
-        @Nullable String serviceBusRuleId,
-        @Nullable String storageAccountId,
-        String type,
-        @Nullable String workspaceId) {
+        @OutputCustomType.Parameter("eventHubAuthorizationRuleId") @Nullable String eventHubAuthorizationRuleId,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("logAnalyticsDestinationType") @Nullable String logAnalyticsDestinationType,
+        @OutputCustomType.Parameter("logs") @Nullable List<LogSettingsResponse> logs,
+        @OutputCustomType.Parameter("metrics") @Nullable List<MetricSettingsResponse> metrics,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceBusRuleId") @Nullable String serviceBusRuleId,
+        @OutputCustomType.Parameter("storageAccountId") @Nullable String storageAccountId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("workspaceId") @Nullable String workspaceId) {
         this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
         this.eventHubName = eventHubName;
         this.id = id;
@@ -214,57 +214,57 @@ public final class GetDiagnosticSettingResult {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setEventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
+        public Builder eventHubAuthorizationRuleId(@Nullable String eventHubAuthorizationRuleId) {
             this.eventHubAuthorizationRuleId = eventHubAuthorizationRuleId;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLogAnalyticsDestinationType(@Nullable String logAnalyticsDestinationType) {
+        public Builder logAnalyticsDestinationType(@Nullable String logAnalyticsDestinationType) {
             this.logAnalyticsDestinationType = logAnalyticsDestinationType;
             return this;
         }
 
-        public Builder setLogs(@Nullable List<LogSettingsResponse> logs) {
+        public Builder logs(@Nullable List<LogSettingsResponse> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<MetricSettingsResponse> metrics) {
+        public Builder metrics(@Nullable List<MetricSettingsResponse> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceBusRuleId(@Nullable String serviceBusRuleId) {
+        public Builder serviceBusRuleId(@Nullable String serviceBusRuleId) {
             this.serviceBusRuleId = serviceBusRuleId;
             return this;
         }
 
-        public Builder setStorageAccountId(@Nullable String storageAccountId) {
+        public Builder storageAccountId(@Nullable String storageAccountId) {
             this.storageAccountId = storageAccountId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWorkspaceId(@Nullable String workspaceId) {
+        public Builder workspaceId(@Nullable String workspaceId) {
             this.workspaceId = workspaceId;
             return this;
         }

@@ -75,20 +75,20 @@ public final class BuildProvenanceResponse {
      */
     private final String triggerId;
 
-    @OutputCustomType.Constructor({"buildOptions","builderVersion","builtArtifacts","commands","createTime","creator","finishTime","logsBucket","project","sourceProvenance","startTime","triggerId"})
+    @OutputCustomType.Constructor
     private BuildProvenanceResponse(
-        Map<String,String> buildOptions,
-        String builderVersion,
-        List<ArtifactResponse> builtArtifacts,
-        List<CommandResponse> commands,
-        String createTime,
-        String creator,
-        String finishTime,
-        String logsBucket,
-        String project,
-        SourceResponse sourceProvenance,
-        String startTime,
-        String triggerId) {
+        @OutputCustomType.Parameter("buildOptions") Map<String,String> buildOptions,
+        @OutputCustomType.Parameter("builderVersion") String builderVersion,
+        @OutputCustomType.Parameter("builtArtifacts") List<ArtifactResponse> builtArtifacts,
+        @OutputCustomType.Parameter("commands") List<CommandResponse> commands,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("creator") String creator,
+        @OutputCustomType.Parameter("finishTime") String finishTime,
+        @OutputCustomType.Parameter("logsBucket") String logsBucket,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("sourceProvenance") SourceResponse sourceProvenance,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("triggerId") String triggerId) {
         this.buildOptions = buildOptions;
         this.builderVersion = builderVersion;
         this.builtArtifacts = builtArtifacts;
@@ -230,62 +230,62 @@ public final class BuildProvenanceResponse {
     	      this.triggerId = defaults.triggerId;
         }
 
-        public Builder setBuildOptions(Map<String,String> buildOptions) {
+        public Builder buildOptions(Map<String,String> buildOptions) {
             this.buildOptions = Objects.requireNonNull(buildOptions);
             return this;
         }
 
-        public Builder setBuilderVersion(String builderVersion) {
+        public Builder builderVersion(String builderVersion) {
             this.builderVersion = Objects.requireNonNull(builderVersion);
             return this;
         }
 
-        public Builder setBuiltArtifacts(List<ArtifactResponse> builtArtifacts) {
+        public Builder builtArtifacts(List<ArtifactResponse> builtArtifacts) {
             this.builtArtifacts = Objects.requireNonNull(builtArtifacts);
             return this;
         }
 
-        public Builder setCommands(List<CommandResponse> commands) {
+        public Builder commands(List<CommandResponse> commands) {
             this.commands = Objects.requireNonNull(commands);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCreator(String creator) {
+        public Builder creator(String creator) {
             this.creator = Objects.requireNonNull(creator);
             return this;
         }
 
-        public Builder setFinishTime(String finishTime) {
+        public Builder finishTime(String finishTime) {
             this.finishTime = Objects.requireNonNull(finishTime);
             return this;
         }
 
-        public Builder setLogsBucket(String logsBucket) {
+        public Builder logsBucket(String logsBucket) {
             this.logsBucket = Objects.requireNonNull(logsBucket);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSourceProvenance(SourceResponse sourceProvenance) {
+        public Builder sourceProvenance(SourceResponse sourceProvenance) {
             this.sourceProvenance = Objects.requireNonNull(sourceProvenance);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTriggerId(String triggerId) {
+        public Builder triggerId(String triggerId) {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }

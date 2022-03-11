@@ -23,10 +23,10 @@ public final class DataDiskImageEncryptionResponse {
      */
     private final Integer lun;
 
-    @OutputCustomType.Constructor({"diskEncryptionSetId","lun"})
+    @OutputCustomType.Constructor
     private DataDiskImageEncryptionResponse(
-        @Nullable String diskEncryptionSetId,
-        Integer lun) {
+        @OutputCustomType.Parameter("diskEncryptionSetId") @Nullable String diskEncryptionSetId,
+        @OutputCustomType.Parameter("lun") Integer lun) {
         this.diskEncryptionSetId = diskEncryptionSetId;
         this.lun = lun;
     }
@@ -68,12 +68,12 @@ public final class DataDiskImageEncryptionResponse {
     	      this.lun = defaults.lun;
         }
 
-        public Builder setDiskEncryptionSetId(@Nullable String diskEncryptionSetId) {
+        public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
             this.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
-        public Builder setLun(Integer lun) {
+        public Builder lun(Integer lun) {
             this.lun = Objects.requireNonNull(lun);
             return this;
         }

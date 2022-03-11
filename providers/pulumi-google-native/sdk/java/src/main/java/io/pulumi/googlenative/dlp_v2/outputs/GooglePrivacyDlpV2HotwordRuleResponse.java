@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
      */
     private final GooglePrivacyDlpV2ProximityResponse proximity;
 
-    @OutputCustomType.Constructor({"hotwordRegex","likelihoodAdjustment","proximity"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2HotwordRuleResponse(
-        GooglePrivacyDlpV2RegexResponse hotwordRegex,
-        GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
-        GooglePrivacyDlpV2ProximityResponse proximity) {
+        @OutputCustomType.Parameter("hotwordRegex") GooglePrivacyDlpV2RegexResponse hotwordRegex,
+        @OutputCustomType.Parameter("likelihoodAdjustment") GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment,
+        @OutputCustomType.Parameter("proximity") GooglePrivacyDlpV2ProximityResponse proximity) {
         this.hotwordRegex = hotwordRegex;
         this.likelihoodAdjustment = likelihoodAdjustment;
         this.proximity = proximity;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
     	      this.proximity = defaults.proximity;
         }
 
-        public Builder setHotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
+        public Builder hotwordRegex(GooglePrivacyDlpV2RegexResponse hotwordRegex) {
             this.hotwordRegex = Objects.requireNonNull(hotwordRegex);
             return this;
         }
 
-        public Builder setLikelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
+        public Builder likelihoodAdjustment(GooglePrivacyDlpV2LikelihoodAdjustmentResponse likelihoodAdjustment) {
             this.likelihoodAdjustment = Objects.requireNonNull(likelihoodAdjustment);
             return this;
         }
 
-        public Builder setProximity(GooglePrivacyDlpV2ProximityResponse proximity) {
+        public Builder proximity(GooglePrivacyDlpV2ProximityResponse proximity) {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }

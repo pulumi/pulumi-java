@@ -58,17 +58,17 @@ public final class GetDataSourceResult {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor({"disableModifications","disableServing","displayName","indexingServiceAccounts","itemsVisibility","name","operationIds","returnThumbnailUrls","shortName"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        Boolean disableModifications,
-        Boolean disableServing,
-        String displayName,
-        List<String> indexingServiceAccounts,
-        List<GSuitePrincipalResponse> itemsVisibility,
-        String name,
-        List<String> operationIds,
-        Boolean returnThumbnailUrls,
-        String shortName) {
+        @OutputCustomType.Parameter("disableModifications") Boolean disableModifications,
+        @OutputCustomType.Parameter("disableServing") Boolean disableServing,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("indexingServiceAccounts") List<String> indexingServiceAccounts,
+        @OutputCustomType.Parameter("itemsVisibility") List<GSuitePrincipalResponse> itemsVisibility,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationIds") List<String> operationIds,
+        @OutputCustomType.Parameter("returnThumbnailUrls") Boolean returnThumbnailUrls,
+        @OutputCustomType.Parameter("shortName") String shortName) {
         this.disableModifications = disableModifications;
         this.disableServing = disableServing;
         this.displayName = displayName;
@@ -180,47 +180,47 @@ public final class GetDataSourceResult {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setDisableModifications(Boolean disableModifications) {
+        public Builder disableModifications(Boolean disableModifications) {
             this.disableModifications = Objects.requireNonNull(disableModifications);
             return this;
         }
 
-        public Builder setDisableServing(Boolean disableServing) {
+        public Builder disableServing(Boolean disableServing) {
             this.disableServing = Objects.requireNonNull(disableServing);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIndexingServiceAccounts(List<String> indexingServiceAccounts) {
+        public Builder indexingServiceAccounts(List<String> indexingServiceAccounts) {
             this.indexingServiceAccounts = Objects.requireNonNull(indexingServiceAccounts);
             return this;
         }
 
-        public Builder setItemsVisibility(List<GSuitePrincipalResponse> itemsVisibility) {
+        public Builder itemsVisibility(List<GSuitePrincipalResponse> itemsVisibility) {
             this.itemsVisibility = Objects.requireNonNull(itemsVisibility);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationIds(List<String> operationIds) {
+        public Builder operationIds(List<String> operationIds) {
             this.operationIds = Objects.requireNonNull(operationIds);
             return this;
         }
 
-        public Builder setReturnThumbnailUrls(Boolean returnThumbnailUrls) {
+        public Builder returnThumbnailUrls(Boolean returnThumbnailUrls) {
             this.returnThumbnailUrls = Objects.requireNonNull(returnThumbnailUrls);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }

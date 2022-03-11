@@ -142,62 +142,62 @@ public final class RouteFilterRuleArgs extends io.pulumi.resources.ResourceArgs 
     	      this.routeFilterRuleType = defaults.routeFilterRuleType;
         }
 
-        public Builder setAccess(Input<Either<String,Access>> access) {
+        public Builder access(Input<Either<String,Access>> access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setAccess(Either<String,Access> access) {
+        public Builder access(Either<String,Access> access) {
             this.access = Input.of(Objects.requireNonNull(access));
             return this;
         }
 
-        public Builder setCommunities(Input<List<String>> communities) {
+        public Builder communities(Input<List<String>> communities) {
             this.communities = Objects.requireNonNull(communities);
             return this;
         }
 
-        public Builder setCommunities(List<String> communities) {
+        public Builder communities(List<String> communities) {
             this.communities = Input.of(Objects.requireNonNull(communities));
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setRouteFilterRuleType(Input<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
+        public Builder routeFilterRuleType(Input<Either<String,RouteFilterRuleType>> routeFilterRuleType) {
             this.routeFilterRuleType = Objects.requireNonNull(routeFilterRuleType);
             return this;
         }
 
-        public Builder setRouteFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
+        public Builder routeFilterRuleType(Either<String,RouteFilterRuleType> routeFilterRuleType) {
             this.routeFilterRuleType = Input.of(Objects.requireNonNull(routeFilterRuleType));
             return this;
         }

@@ -50,15 +50,15 @@ public final class P2SConnectionConfigurationResponse {
      */
     private final @Nullable AddressSpaceResponse vpnClientAddressPool;
 
-    @OutputCustomType.Constructor({"enableInternetSecurity","etag","id","name","provisioningState","routingConfiguration","vpnClientAddressPool"})
+    @OutputCustomType.Constructor
     private P2SConnectionConfigurationResponse(
-        @Nullable Boolean enableInternetSecurity,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        String provisioningState,
-        @Nullable RoutingConfigurationResponse routingConfiguration,
-        @Nullable AddressSpaceResponse vpnClientAddressPool) {
+        @OutputCustomType.Parameter("enableInternetSecurity") @Nullable Boolean enableInternetSecurity,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("routingConfiguration") @Nullable RoutingConfigurationResponse routingConfiguration,
+        @OutputCustomType.Parameter("vpnClientAddressPool") @Nullable AddressSpaceResponse vpnClientAddressPool) {
         this.enableInternetSecurity = enableInternetSecurity;
         this.etag = etag;
         this.id = id;
@@ -150,37 +150,37 @@ public final class P2SConnectionConfigurationResponse {
     	      this.vpnClientAddressPool = defaults.vpnClientAddressPool;
         }
 
-        public Builder setEnableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
+        public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
             this.enableInternetSecurity = enableInternetSecurity;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRoutingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
+        public Builder routingConfiguration(@Nullable RoutingConfigurationResponse routingConfiguration) {
             this.routingConfiguration = routingConfiguration;
             return this;
         }
 
-        public Builder setVpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
+        public Builder vpnClientAddressPool(@Nullable AddressSpaceResponse vpnClientAddressPool) {
             this.vpnClientAddressPool = vpnClientAddressPool;
             return this;
         }

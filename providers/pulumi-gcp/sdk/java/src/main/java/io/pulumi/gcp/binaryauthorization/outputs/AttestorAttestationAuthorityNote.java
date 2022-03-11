@@ -51,11 +51,11 @@ public final class AttestorAttestationAuthorityNote {
      */
     private final @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys;
 
-    @OutputCustomType.Constructor({"delegationServiceAccountEmail","noteReference","publicKeys"})
+    @OutputCustomType.Constructor
     private AttestorAttestationAuthorityNote(
-        @Nullable String delegationServiceAccountEmail,
-        String noteReference,
-        @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
+        @OutputCustomType.Parameter("delegationServiceAccountEmail") @Nullable String delegationServiceAccountEmail,
+        @OutputCustomType.Parameter("noteReference") String noteReference,
+        @OutputCustomType.Parameter("publicKeys") @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;
@@ -129,17 +129,17 @@ public final class AttestorAttestationAuthorityNote {
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setDelegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
+        public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = delegationServiceAccountEmail;
             return this;
         }
 
-        public Builder setNoteReference(String noteReference) {
+        public Builder noteReference(String noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
-        public Builder setPublicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
+        public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
             this.publicKeys = publicKeys;
             return this;
         }

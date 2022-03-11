@@ -16,11 +16,11 @@ public final class DeliveryStreamOpenXJsonSerDe {
     private final @Nullable Object columnToJsonKeyMappings;
     private final @Nullable Boolean convertDotsInJsonKeysToUnderscores;
 
-    @OutputCustomType.Constructor({"caseInsensitive","columnToJsonKeyMappings","convertDotsInJsonKeysToUnderscores"})
+    @OutputCustomType.Constructor
     private DeliveryStreamOpenXJsonSerDe(
-        @Nullable Boolean caseInsensitive,
-        @Nullable Object columnToJsonKeyMappings,
-        @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        @OutputCustomType.Parameter("caseInsensitive") @Nullable Boolean caseInsensitive,
+        @OutputCustomType.Parameter("columnToJsonKeyMappings") @Nullable Object columnToJsonKeyMappings,
+        @OutputCustomType.Parameter("convertDotsInJsonKeysToUnderscores") @Nullable Boolean convertDotsInJsonKeysToUnderscores) {
         this.caseInsensitive = caseInsensitive;
         this.columnToJsonKeyMappings = columnToJsonKeyMappings;
         this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
@@ -60,17 +60,17 @@ public final class DeliveryStreamOpenXJsonSerDe {
     	      this.convertDotsInJsonKeysToUnderscores = defaults.convertDotsInJsonKeysToUnderscores;
         }
 
-        public Builder setCaseInsensitive(@Nullable Boolean caseInsensitive) {
+        public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
             this.caseInsensitive = caseInsensitive;
             return this;
         }
 
-        public Builder setColumnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
+        public Builder columnToJsonKeyMappings(@Nullable Object columnToJsonKeyMappings) {
             this.columnToJsonKeyMappings = columnToJsonKeyMappings;
             return this;
         }
 
-        public Builder setConvertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
+        public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
             this.convertDotsInJsonKeysToUnderscores = convertDotsInJsonKeysToUnderscores;
             return this;
         }

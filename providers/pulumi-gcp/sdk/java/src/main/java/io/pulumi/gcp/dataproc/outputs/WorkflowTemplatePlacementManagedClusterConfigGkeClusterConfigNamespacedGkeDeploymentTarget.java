@@ -22,10 +22,10 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      */
     private final @Nullable String targetGkeCluster;
 
-    @OutputCustomType.Constructor({"clusterNamespace","targetGkeCluster"})
+    @OutputCustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigNamespacedGkeDeploymentTarget(
-        @Nullable String clusterNamespace,
-        @Nullable String targetGkeCluster) {
+        @OutputCustomType.Parameter("clusterNamespace") @Nullable String clusterNamespace,
+        @OutputCustomType.Parameter("targetGkeCluster") @Nullable String targetGkeCluster) {
         this.clusterNamespace = clusterNamespace;
         this.targetGkeCluster = targetGkeCluster;
     }
@@ -67,12 +67,12 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
     	      this.targetGkeCluster = defaults.targetGkeCluster;
         }
 
-        public Builder setClusterNamespace(@Nullable String clusterNamespace) {
+        public Builder clusterNamespace(@Nullable String clusterNamespace) {
             this.clusterNamespace = clusterNamespace;
             return this;
         }
 
-        public Builder setTargetGkeCluster(@Nullable String targetGkeCluster) {
+        public Builder targetGkeCluster(@Nullable String targetGkeCluster) {
             this.targetGkeCluster = targetGkeCluster;
             return this;
         }

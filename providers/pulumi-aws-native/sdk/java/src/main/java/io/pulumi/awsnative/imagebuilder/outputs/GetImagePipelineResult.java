@@ -72,19 +72,19 @@ public final class GetImagePipelineResult {
      */
     private final @Nullable Object tags;
 
-    @OutputCustomType.Constructor({"arn","containerRecipeArn","description","distributionConfigurationArn","enhancedImageMetadataEnabled","imageRecipeArn","imageTestsConfiguration","infrastructureConfigurationArn","schedule","status","tags"})
+    @OutputCustomType.Constructor
     private GetImagePipelineResult(
-        @Nullable String arn,
-        @Nullable String containerRecipeArn,
-        @Nullable String description,
-        @Nullable String distributionConfigurationArn,
-        @Nullable Boolean enhancedImageMetadataEnabled,
-        @Nullable String imageRecipeArn,
-        @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
-        @Nullable String infrastructureConfigurationArn,
-        @Nullable ImagePipelineSchedule schedule,
-        @Nullable ImagePipelineStatus status,
-        @Nullable Object tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("containerRecipeArn") @Nullable String containerRecipeArn,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("distributionConfigurationArn") @Nullable String distributionConfigurationArn,
+        @OutputCustomType.Parameter("enhancedImageMetadataEnabled") @Nullable Boolean enhancedImageMetadataEnabled,
+        @OutputCustomType.Parameter("imageRecipeArn") @Nullable String imageRecipeArn,
+        @OutputCustomType.Parameter("imageTestsConfiguration") @Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration,
+        @OutputCustomType.Parameter("infrastructureConfigurationArn") @Nullable String infrastructureConfigurationArn,
+        @OutputCustomType.Parameter("schedule") @Nullable ImagePipelineSchedule schedule,
+        @OutputCustomType.Parameter("status") @Nullable ImagePipelineStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable Object tags) {
         this.arn = arn;
         this.containerRecipeArn = containerRecipeArn;
         this.description = description;
@@ -216,57 +216,57 @@ public final class GetImagePipelineResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setContainerRecipeArn(@Nullable String containerRecipeArn) {
+        public Builder containerRecipeArn(@Nullable String containerRecipeArn) {
             this.containerRecipeArn = containerRecipeArn;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDistributionConfigurationArn(@Nullable String distributionConfigurationArn) {
+        public Builder distributionConfigurationArn(@Nullable String distributionConfigurationArn) {
             this.distributionConfigurationArn = distributionConfigurationArn;
             return this;
         }
 
-        public Builder setEnhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
+        public Builder enhancedImageMetadataEnabled(@Nullable Boolean enhancedImageMetadataEnabled) {
             this.enhancedImageMetadataEnabled = enhancedImageMetadataEnabled;
             return this;
         }
 
-        public Builder setImageRecipeArn(@Nullable String imageRecipeArn) {
+        public Builder imageRecipeArn(@Nullable String imageRecipeArn) {
             this.imageRecipeArn = imageRecipeArn;
             return this;
         }
 
-        public Builder setImageTestsConfiguration(@Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration) {
+        public Builder imageTestsConfiguration(@Nullable ImagePipelineImageTestsConfiguration imageTestsConfiguration) {
             this.imageTestsConfiguration = imageTestsConfiguration;
             return this;
         }
 
-        public Builder setInfrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
+        public Builder infrastructureConfigurationArn(@Nullable String infrastructureConfigurationArn) {
             this.infrastructureConfigurationArn = infrastructureConfigurationArn;
             return this;
         }
 
-        public Builder setSchedule(@Nullable ImagePipelineSchedule schedule) {
+        public Builder schedule(@Nullable ImagePipelineSchedule schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setStatus(@Nullable ImagePipelineStatus status) {
+        public Builder status(@Nullable ImagePipelineStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable Object tags) {
+        public Builder tags(@Nullable Object tags) {
             this.tags = tags;
             return this;
         }

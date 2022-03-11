@@ -38,13 +38,13 @@ public final class ServerEndpointDetails {
      */
     private final @Nullable String vpcId;
 
-    @OutputCustomType.Constructor({"addressAllocationIds","securityGroupIds","subnetIds","vpcEndpointId","vpcId"})
+    @OutputCustomType.Constructor
     private ServerEndpointDetails(
-        @Nullable List<String> addressAllocationIds,
-        @Nullable List<String> securityGroupIds,
-        @Nullable List<String> subnetIds,
-        @Nullable String vpcEndpointId,
-        @Nullable String vpcId) {
+        @OutputCustomType.Parameter("addressAllocationIds") @Nullable List<String> addressAllocationIds,
+        @OutputCustomType.Parameter("securityGroupIds") @Nullable List<String> securityGroupIds,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcEndpointId") @Nullable String vpcEndpointId,
+        @OutputCustomType.Parameter("vpcId") @Nullable String vpcId) {
         this.addressAllocationIds = addressAllocationIds;
         this.securityGroupIds = securityGroupIds;
         this.subnetIds = subnetIds;
@@ -116,27 +116,27 @@ public final class ServerEndpointDetails {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setAddressAllocationIds(@Nullable List<String> addressAllocationIds) {
+        public Builder addressAllocationIds(@Nullable List<String> addressAllocationIds) {
             this.addressAllocationIds = addressAllocationIds;
             return this;
         }
 
-        public Builder setSecurityGroupIds(@Nullable List<String> securityGroupIds) {
+        public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setVpcEndpointId(@Nullable String vpcEndpointId) {
+        public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
             this.vpcEndpointId = vpcEndpointId;
             return this;
         }
 
-        public Builder setVpcId(@Nullable String vpcId) {
+        public Builder vpcId(@Nullable String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

@@ -157,82 +157,82 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setAppEngineHttpRequest(@Nullable Input<AppEngineHttpRequestArgs> appEngineHttpRequest) {
+        public Builder appEngineHttpRequest(@Nullable Input<AppEngineHttpRequestArgs> appEngineHttpRequest) {
             this.appEngineHttpRequest = appEngineHttpRequest;
             return this;
         }
 
-        public Builder setAppEngineHttpRequest(@Nullable AppEngineHttpRequestArgs appEngineHttpRequest) {
+        public Builder appEngineHttpRequest(@Nullable AppEngineHttpRequestArgs appEngineHttpRequest) {
             this.appEngineHttpRequest = Input.ofNullable(appEngineHttpRequest);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setPullMessage(@Nullable Input<PullMessageArgs> pullMessage) {
+        public Builder pullMessage(@Nullable Input<PullMessageArgs> pullMessage) {
             this.pullMessage = pullMessage;
             return this;
         }
 
-        public Builder setPullMessage(@Nullable PullMessageArgs pullMessage) {
+        public Builder pullMessage(@Nullable PullMessageArgs pullMessage) {
             this.pullMessage = Input.ofNullable(pullMessage);
             return this;
         }
 
-        public Builder setQueueId(Input<String> queueId) {
+        public Builder queueId(Input<String> queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Input.of(Objects.requireNonNull(queueId));
             return this;
         }
 
-        public Builder setResponseView(@Nullable Input<TaskResponseView> responseView) {
+        public Builder responseView(@Nullable Input<TaskResponseView> responseView) {
             this.responseView = responseView;
             return this;
         }
 
-        public Builder setResponseView(@Nullable TaskResponseView responseView) {
+        public Builder responseView(@Nullable TaskResponseView responseView) {
             this.responseView = Input.ofNullable(responseView);
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable Input<String> scheduleTime) {
+        public Builder scheduleTime(@Nullable Input<String> scheduleTime) {
             this.scheduleTime = scheduleTime;
             return this;
         }
 
-        public Builder setScheduleTime(@Nullable String scheduleTime) {
+        public Builder scheduleTime(@Nullable String scheduleTime) {
             this.scheduleTime = Input.ofNullable(scheduleTime);
             return this;
         }

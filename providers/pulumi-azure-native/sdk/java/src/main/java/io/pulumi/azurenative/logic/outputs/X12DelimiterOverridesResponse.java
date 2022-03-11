@@ -59,17 +59,17 @@ public final class X12DelimiterOverridesResponse {
      */
     private final @Nullable String targetNamespace;
 
-    @OutputCustomType.Constructor({"componentSeparator","dataElementSeparator","messageId","protocolVersion","replaceCharacter","replaceSeparatorsInPayload","segmentTerminator","segmentTerminatorSuffix","targetNamespace"})
+    @OutputCustomType.Constructor
     private X12DelimiterOverridesResponse(
-        Integer componentSeparator,
-        Integer dataElementSeparator,
-        @Nullable String messageId,
-        @Nullable String protocolVersion,
-        Integer replaceCharacter,
-        Boolean replaceSeparatorsInPayload,
-        Integer segmentTerminator,
-        String segmentTerminatorSuffix,
-        @Nullable String targetNamespace) {
+        @OutputCustomType.Parameter("componentSeparator") Integer componentSeparator,
+        @OutputCustomType.Parameter("dataElementSeparator") Integer dataElementSeparator,
+        @OutputCustomType.Parameter("messageId") @Nullable String messageId,
+        @OutputCustomType.Parameter("protocolVersion") @Nullable String protocolVersion,
+        @OutputCustomType.Parameter("replaceCharacter") Integer replaceCharacter,
+        @OutputCustomType.Parameter("replaceSeparatorsInPayload") Boolean replaceSeparatorsInPayload,
+        @OutputCustomType.Parameter("segmentTerminator") Integer segmentTerminator,
+        @OutputCustomType.Parameter("segmentTerminatorSuffix") String segmentTerminatorSuffix,
+        @OutputCustomType.Parameter("targetNamespace") @Nullable String targetNamespace) {
         this.componentSeparator = componentSeparator;
         this.dataElementSeparator = dataElementSeparator;
         this.messageId = messageId;
@@ -181,47 +181,47 @@ public final class X12DelimiterOverridesResponse {
     	      this.targetNamespace = defaults.targetNamespace;
         }
 
-        public Builder setComponentSeparator(Integer componentSeparator) {
+        public Builder componentSeparator(Integer componentSeparator) {
             this.componentSeparator = Objects.requireNonNull(componentSeparator);
             return this;
         }
 
-        public Builder setDataElementSeparator(Integer dataElementSeparator) {
+        public Builder dataElementSeparator(Integer dataElementSeparator) {
             this.dataElementSeparator = Objects.requireNonNull(dataElementSeparator);
             return this;
         }
 
-        public Builder setMessageId(@Nullable String messageId) {
+        public Builder messageId(@Nullable String messageId) {
             this.messageId = messageId;
             return this;
         }
 
-        public Builder setProtocolVersion(@Nullable String protocolVersion) {
+        public Builder protocolVersion(@Nullable String protocolVersion) {
             this.protocolVersion = protocolVersion;
             return this;
         }
 
-        public Builder setReplaceCharacter(Integer replaceCharacter) {
+        public Builder replaceCharacter(Integer replaceCharacter) {
             this.replaceCharacter = Objects.requireNonNull(replaceCharacter);
             return this;
         }
 
-        public Builder setReplaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
+        public Builder replaceSeparatorsInPayload(Boolean replaceSeparatorsInPayload) {
             this.replaceSeparatorsInPayload = Objects.requireNonNull(replaceSeparatorsInPayload);
             return this;
         }
 
-        public Builder setSegmentTerminator(Integer segmentTerminator) {
+        public Builder segmentTerminator(Integer segmentTerminator) {
             this.segmentTerminator = Objects.requireNonNull(segmentTerminator);
             return this;
         }
 
-        public Builder setSegmentTerminatorSuffix(String segmentTerminatorSuffix) {
+        public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             this.segmentTerminatorSuffix = Objects.requireNonNull(segmentTerminatorSuffix);
             return this;
         }
 
-        public Builder setTargetNamespace(@Nullable String targetNamespace) {
+        public Builder targetNamespace(@Nullable String targetNamespace) {
             this.targetNamespace = targetNamespace;
             return this;
         }

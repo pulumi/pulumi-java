@@ -28,11 +28,11 @@ public final class TransferJobTransferSpecAwsS3DataSource {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor({"awsAccessKey","bucketName","roleArn"})
+    @OutputCustomType.Constructor
     private TransferJobTransferSpecAwsS3DataSource(
-        @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
-        String bucketName,
-        @Nullable String roleArn) {
+        @OutputCustomType.Parameter("awsAccessKey") @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.roleArn = roleArn;
@@ -84,17 +84,17 @@ public final class TransferJobTransferSpecAwsS3DataSource {
     	      this.roleArn = defaults.roleArn;
         }
 
-        public Builder setAwsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey) {
+        public Builder awsAccessKey(@Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey) {
             this.awsAccessKey = awsAccessKey;
             return this;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }

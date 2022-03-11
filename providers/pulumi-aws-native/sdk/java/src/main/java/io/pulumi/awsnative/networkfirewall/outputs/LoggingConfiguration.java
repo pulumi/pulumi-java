@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class LoggingConfiguration {
     private final List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs;
 
-    @OutputCustomType.Constructor({"logDestinationConfigs"})
-    private LoggingConfiguration(List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+    @OutputCustomType.Constructor
+    private LoggingConfiguration(@OutputCustomType.Parameter("logDestinationConfigs") List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
         this.logDestinationConfigs = logDestinationConfigs;
     }
 
@@ -41,7 +41,7 @@ public final class LoggingConfiguration {
     	      this.logDestinationConfigs = defaults.logDestinationConfigs;
         }
 
-        public Builder setLogDestinationConfigs(List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
+        public Builder logDestinationConfigs(List<LoggingConfigurationLogDestinationConfig> logDestinationConfigs) {
             this.logDestinationConfigs = Objects.requireNonNull(logDestinationConfigs);
             return this;
         }

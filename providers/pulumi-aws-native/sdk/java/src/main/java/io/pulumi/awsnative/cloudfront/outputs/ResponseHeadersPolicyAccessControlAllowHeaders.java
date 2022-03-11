@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class ResponseHeadersPolicyAccessControlAllowHeaders {
     private final List<String> items;
 
-    @OutputCustomType.Constructor({"items"})
-    private ResponseHeadersPolicyAccessControlAllowHeaders(List<String> items) {
+    @OutputCustomType.Constructor
+    private ResponseHeadersPolicyAccessControlAllowHeaders(@OutputCustomType.Parameter("items") List<String> items) {
         this.items = items;
     }
 
@@ -41,7 +41,7 @@ public final class ResponseHeadersPolicyAccessControlAllowHeaders {
     	      this.items = defaults.items;
         }
 
-        public Builder setItems(List<String> items) {
+        public Builder items(List<String> items) {
             this.items = Objects.requireNonNull(items);
             return this;
         }

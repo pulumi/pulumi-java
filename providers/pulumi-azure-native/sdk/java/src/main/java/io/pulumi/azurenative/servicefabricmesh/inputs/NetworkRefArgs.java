@@ -76,22 +76,22 @@ public final class NetworkRefArgs extends io.pulumi.resources.ResourceArgs {
     	      this.name = defaults.name;
         }
 
-        public Builder setEndpointRefs(@Nullable Input<List<EndpointRefArgs>> endpointRefs) {
+        public Builder endpointRefs(@Nullable Input<List<EndpointRefArgs>> endpointRefs) {
             this.endpointRefs = endpointRefs;
             return this;
         }
 
-        public Builder setEndpointRefs(@Nullable List<EndpointRefArgs> endpointRefs) {
+        public Builder endpointRefs(@Nullable List<EndpointRefArgs> endpointRefs) {
             this.endpointRefs = Input.ofNullable(endpointRefs);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

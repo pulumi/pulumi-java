@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
      */
     private final GooglePrivacyDlpV2FieldIdResponse timestampField;
 
-    @OutputCustomType.Constructor({"enableAutoPopulationOfTimespanConfig","endTime","startTime","timestampField"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2TimespanConfigResponse(
-        Boolean enableAutoPopulationOfTimespanConfig,
-        String endTime,
-        String startTime,
-        GooglePrivacyDlpV2FieldIdResponse timestampField) {
+        @OutputCustomType.Parameter("enableAutoPopulationOfTimespanConfig") Boolean enableAutoPopulationOfTimespanConfig,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime,
+        @OutputCustomType.Parameter("timestampField") GooglePrivacyDlpV2FieldIdResponse timestampField) {
         this.enableAutoPopulationOfTimespanConfig = enableAutoPopulationOfTimespanConfig;
         this.endTime = endTime;
         this.startTime = startTime;
@@ -99,22 +99,22 @@ public final class GooglePrivacyDlpV2TimespanConfigResponse {
     	      this.timestampField = defaults.timestampField;
         }
 
-        public Builder setEnableAutoPopulationOfTimespanConfig(Boolean enableAutoPopulationOfTimespanConfig) {
+        public Builder enableAutoPopulationOfTimespanConfig(Boolean enableAutoPopulationOfTimespanConfig) {
             this.enableAutoPopulationOfTimespanConfig = Objects.requireNonNull(enableAutoPopulationOfTimespanConfig);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
 
-        public Builder setTimestampField(GooglePrivacyDlpV2FieldIdResponse timestampField) {
+        public Builder timestampField(GooglePrivacyDlpV2FieldIdResponse timestampField) {
             this.timestampField = Objects.requireNonNull(timestampField);
             return this;
         }

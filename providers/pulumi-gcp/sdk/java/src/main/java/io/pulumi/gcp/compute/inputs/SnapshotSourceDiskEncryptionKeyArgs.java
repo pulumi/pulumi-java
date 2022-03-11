@@ -73,22 +73,22 @@ public final class SnapshotSourceDiskEncryptionKeyArgs extends io.pulumi.resourc
     	      this.rawKey = defaults.rawKey;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable Input<String> kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = kmsKeyServiceAccount;
             return this;
         }
 
-        public Builder setKmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
+        public Builder kmsKeyServiceAccount(@Nullable String kmsKeyServiceAccount) {
             this.kmsKeyServiceAccount = Input.ofNullable(kmsKeyServiceAccount);
             return this;
         }
 
-        public Builder setRawKey(@Nullable Input<String> rawKey) {
+        public Builder rawKey(@Nullable Input<String> rawKey) {
             this.rawKey = rawKey;
             return this;
         }
 
-        public Builder setRawKey(@Nullable String rawKey) {
+        public Builder rawKey(@Nullable String rawKey) {
             this.rawKey = Input.ofNullable(rawKey);
             return this;
         }

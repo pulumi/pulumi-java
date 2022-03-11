@@ -69,22 +69,22 @@ public final class FleetIdentityProviderArgs extends io.pulumi.resources.Resourc
     	      this.type = defaults.type;
         }
 
-        public Builder setSamlMetadata(Input<String> samlMetadata) {
+        public Builder samlMetadata(Input<String> samlMetadata) {
             this.samlMetadata = Objects.requireNonNull(samlMetadata);
             return this;
         }
 
-        public Builder setSamlMetadata(String samlMetadata) {
+        public Builder samlMetadata(String samlMetadata) {
             this.samlMetadata = Input.of(Objects.requireNonNull(samlMetadata));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

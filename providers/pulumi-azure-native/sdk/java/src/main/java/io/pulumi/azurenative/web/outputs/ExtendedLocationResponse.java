@@ -22,10 +22,10 @@ public final class ExtendedLocationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","type"})
+    @OutputCustomType.Constructor
     private ExtendedLocationResponse(
-        @Nullable String name,
-        String type) {
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class ExtendedLocationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

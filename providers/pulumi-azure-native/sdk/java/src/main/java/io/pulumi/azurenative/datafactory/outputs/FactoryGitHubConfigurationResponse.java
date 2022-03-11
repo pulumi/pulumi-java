@@ -59,17 +59,17 @@ public final class FactoryGitHubConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accountName","clientId","clientSecret","collaborationBranch","hostName","lastCommitId","repositoryName","rootFolder","type"})
+    @OutputCustomType.Constructor
     private FactoryGitHubConfigurationResponse(
-        String accountName,
-        @Nullable String clientId,
-        @Nullable GitHubClientSecretResponse clientSecret,
-        String collaborationBranch,
-        @Nullable String hostName,
-        @Nullable String lastCommitId,
-        String repositoryName,
-        String rootFolder,
-        String type) {
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("clientSecret") @Nullable GitHubClientSecretResponse clientSecret,
+        @OutputCustomType.Parameter("collaborationBranch") String collaborationBranch,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("lastCommitId") @Nullable String lastCommitId,
+        @OutputCustomType.Parameter("repositoryName") String repositoryName,
+        @OutputCustomType.Parameter("rootFolder") String rootFolder,
+        @OutputCustomType.Parameter("type") String type) {
         this.accountName = accountName;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
@@ -182,47 +182,47 @@ public final class FactoryGitHubConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setClientSecret(@Nullable GitHubClientSecretResponse clientSecret) {
+        public Builder clientSecret(@Nullable GitHubClientSecretResponse clientSecret) {
             this.clientSecret = clientSecret;
             return this;
         }
 
-        public Builder setCollaborationBranch(String collaborationBranch) {
+        public Builder collaborationBranch(String collaborationBranch) {
             this.collaborationBranch = Objects.requireNonNull(collaborationBranch);
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setLastCommitId(@Nullable String lastCommitId) {
+        public Builder lastCommitId(@Nullable String lastCommitId) {
             this.lastCommitId = lastCommitId;
             return this;
         }
 
-        public Builder setRepositoryName(String repositoryName) {
+        public Builder repositoryName(String repositoryName) {
             this.repositoryName = Objects.requireNonNull(repositoryName);
             return this;
         }
 
-        public Builder setRootFolder(String rootFolder) {
+        public Builder rootFolder(String rootFolder) {
             this.rootFolder = Objects.requireNonNull(rootFolder);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

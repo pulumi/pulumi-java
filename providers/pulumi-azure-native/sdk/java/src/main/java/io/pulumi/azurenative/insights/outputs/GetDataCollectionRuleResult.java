@@ -83,21 +83,21 @@ public final class GetDataCollectionRuleResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"dataFlows","dataSources","description","destinations","etag","id","immutableId","kind","location","name","provisioningState","tags","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectionRuleResult(
-        @Nullable List<DataFlowResponse> dataFlows,
-        @Nullable DataCollectionRuleResponseDataSources dataSources,
-        @Nullable String description,
-        @Nullable DataCollectionRuleResponseDestinations destinations,
-        String etag,
-        String id,
-        String immutableId,
-        @Nullable String kind,
-        String location,
-        String name,
-        String provisioningState,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("dataFlows") @Nullable List<DataFlowResponse> dataFlows,
+        @OutputCustomType.Parameter("dataSources") @Nullable DataCollectionRuleResponseDataSources dataSources,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinations") @Nullable DataCollectionRuleResponseDestinations destinations,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("immutableId") String immutableId,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.dataFlows = dataFlows;
         this.dataSources = dataSources;
         this.description = description;
@@ -250,67 +250,67 @@ public final class GetDataCollectionRuleResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDataFlows(@Nullable List<DataFlowResponse> dataFlows) {
+        public Builder dataFlows(@Nullable List<DataFlowResponse> dataFlows) {
             this.dataFlows = dataFlows;
             return this;
         }
 
-        public Builder setDataSources(@Nullable DataCollectionRuleResponseDataSources dataSources) {
+        public Builder dataSources(@Nullable DataCollectionRuleResponseDataSources dataSources) {
             this.dataSources = dataSources;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinations(@Nullable DataCollectionRuleResponseDestinations destinations) {
+        public Builder destinations(@Nullable DataCollectionRuleResponseDestinations destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setImmutableId(String immutableId) {
+        public Builder immutableId(String immutableId) {
             this.immutableId = Objects.requireNonNull(immutableId);
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

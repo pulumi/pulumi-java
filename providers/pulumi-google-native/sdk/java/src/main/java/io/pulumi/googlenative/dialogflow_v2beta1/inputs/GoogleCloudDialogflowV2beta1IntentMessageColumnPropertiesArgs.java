@@ -75,22 +75,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
     	      this.horizontalAlignment = defaults.horizontalAlignment;
         }
 
-        public Builder setHeader(Input<String> header) {
+        public Builder header(Input<String> header) {
             this.header = Objects.requireNonNull(header);
             return this;
         }
 
-        public Builder setHeader(String header) {
+        public Builder header(String header) {
             this.header = Input.of(Objects.requireNonNull(header));
             return this;
         }
 
-        public Builder setHorizontalAlignment(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment) {
+        public Builder horizontalAlignment(@Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment) {
             this.horizontalAlignment = horizontalAlignment;
             return this;
         }
 
-        public Builder setHorizontalAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
+        public Builder horizontalAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment horizontalAlignment) {
             this.horizontalAlignment = Input.ofNullable(horizontalAlignment);
             return this;
         }

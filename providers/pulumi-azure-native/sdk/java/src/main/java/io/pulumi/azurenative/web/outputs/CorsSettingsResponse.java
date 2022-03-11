@@ -27,10 +27,10 @@ public final class CorsSettingsResponse {
      */
     private final @Nullable Boolean supportCredentials;
 
-    @OutputCustomType.Constructor({"allowedOrigins","supportCredentials"})
+    @OutputCustomType.Constructor
     private CorsSettingsResponse(
-        @Nullable List<String> allowedOrigins,
-        @Nullable Boolean supportCredentials) {
+        @OutputCustomType.Parameter("allowedOrigins") @Nullable List<String> allowedOrigins,
+        @OutputCustomType.Parameter("supportCredentials") @Nullable Boolean supportCredentials) {
         this.allowedOrigins = allowedOrigins;
         this.supportCredentials = supportCredentials;
     }
@@ -75,12 +75,12 @@ public final class CorsSettingsResponse {
     	      this.supportCredentials = defaults.supportCredentials;
         }
 
-        public Builder setAllowedOrigins(@Nullable List<String> allowedOrigins) {
+        public Builder allowedOrigins(@Nullable List<String> allowedOrigins) {
             this.allowedOrigins = allowedOrigins;
             return this;
         }
 
-        public Builder setSupportCredentials(@Nullable Boolean supportCredentials) {
+        public Builder supportCredentials(@Nullable Boolean supportCredentials) {
             this.supportCredentials = supportCredentials;
             return this;
         }

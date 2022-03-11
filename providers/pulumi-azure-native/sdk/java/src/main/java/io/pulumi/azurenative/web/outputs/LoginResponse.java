@@ -50,14 +50,14 @@ public final class LoginResponse {
      */
     private final @Nullable TokenStoreResponse tokenStore;
 
-    @OutputCustomType.Constructor({"allowedExternalRedirectUrls","cookieExpiration","nonce","preserveUrlFragmentsForLogins","routes","tokenStore"})
+    @OutputCustomType.Constructor
     private LoginResponse(
-        @Nullable List<String> allowedExternalRedirectUrls,
-        @Nullable CookieExpirationResponse cookieExpiration,
-        @Nullable NonceResponse nonce,
-        @Nullable Boolean preserveUrlFragmentsForLogins,
-        @Nullable LoginRoutesResponse routes,
-        @Nullable TokenStoreResponse tokenStore) {
+        @OutputCustomType.Parameter("allowedExternalRedirectUrls") @Nullable List<String> allowedExternalRedirectUrls,
+        @OutputCustomType.Parameter("cookieExpiration") @Nullable CookieExpirationResponse cookieExpiration,
+        @OutputCustomType.Parameter("nonce") @Nullable NonceResponse nonce,
+        @OutputCustomType.Parameter("preserveUrlFragmentsForLogins") @Nullable Boolean preserveUrlFragmentsForLogins,
+        @OutputCustomType.Parameter("routes") @Nullable LoginRoutesResponse routes,
+        @OutputCustomType.Parameter("tokenStore") @Nullable TokenStoreResponse tokenStore) {
         this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
         this.cookieExpiration = cookieExpiration;
         this.nonce = nonce;
@@ -141,32 +141,32 @@ public final class LoginResponse {
     	      this.tokenStore = defaults.tokenStore;
         }
 
-        public Builder setAllowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
+        public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
             this.allowedExternalRedirectUrls = allowedExternalRedirectUrls;
             return this;
         }
 
-        public Builder setCookieExpiration(@Nullable CookieExpirationResponse cookieExpiration) {
+        public Builder cookieExpiration(@Nullable CookieExpirationResponse cookieExpiration) {
             this.cookieExpiration = cookieExpiration;
             return this;
         }
 
-        public Builder setNonce(@Nullable NonceResponse nonce) {
+        public Builder nonce(@Nullable NonceResponse nonce) {
             this.nonce = nonce;
             return this;
         }
 
-        public Builder setPreserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
+        public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
             this.preserveUrlFragmentsForLogins = preserveUrlFragmentsForLogins;
             return this;
         }
 
-        public Builder setRoutes(@Nullable LoginRoutesResponse routes) {
+        public Builder routes(@Nullable LoginRoutesResponse routes) {
             this.routes = routes;
             return this;
         }
 
-        public Builder setTokenStore(@Nullable TokenStoreResponse tokenStore) {
+        public Builder tokenStore(@Nullable TokenStoreResponse tokenStore) {
             this.tokenStore = tokenStore;
             return this;
         }

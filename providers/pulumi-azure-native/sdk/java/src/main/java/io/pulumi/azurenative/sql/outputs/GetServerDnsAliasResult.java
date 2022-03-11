@@ -30,12 +30,12 @@ public final class GetServerDnsAliasResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"azureDnsRecord","id","name","type"})
+    @OutputCustomType.Constructor
     private GetServerDnsAliasResult(
-        String azureDnsRecord,
-        String id,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("azureDnsRecord") String azureDnsRecord,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.azureDnsRecord = azureDnsRecord;
         this.id = id;
         this.name = name;
@@ -97,22 +97,22 @@ public final class GetServerDnsAliasResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAzureDnsRecord(String azureDnsRecord) {
+        public Builder azureDnsRecord(String azureDnsRecord) {
             this.azureDnsRecord = Objects.requireNonNull(azureDnsRecord);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

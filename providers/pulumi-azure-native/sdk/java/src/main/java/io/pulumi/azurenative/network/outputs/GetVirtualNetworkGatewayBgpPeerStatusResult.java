@@ -17,8 +17,8 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
      */
     private final @Nullable List<BgpPeerStatusResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetVirtualNetworkGatewayBgpPeerStatusResult(@Nullable List<BgpPeerStatusResponse> value) {
+    @OutputCustomType.Constructor
+    private GetVirtualNetworkGatewayBgpPeerStatusResult(@OutputCustomType.Parameter("value") @Nullable List<BgpPeerStatusResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class GetVirtualNetworkGatewayBgpPeerStatusResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<BgpPeerStatusResponse> value) {
+        public Builder value(@Nullable List<BgpPeerStatusResponse> value) {
             this.value = value;
             return this;
         }

@@ -15,11 +15,11 @@ public final class DeliveryStreamHttpEndpointConfiguration {
     private final @Nullable String name;
     private final String url;
 
-    @OutputCustomType.Constructor({"accessKey","name","url"})
+    @OutputCustomType.Constructor
     private DeliveryStreamHttpEndpointConfiguration(
-        @Nullable String accessKey,
-        @Nullable String name,
-        String url) {
+        @OutputCustomType.Parameter("accessKey") @Nullable String accessKey,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("url") String url) {
         this.accessKey = accessKey;
         this.name = name;
         this.url = url;
@@ -59,17 +59,17 @@ public final class DeliveryStreamHttpEndpointConfiguration {
     	      this.url = defaults.url;
         }
 
-        public Builder setAccessKey(@Nullable String accessKey) {
+        public Builder accessKey(@Nullable String accessKey) {
             this.accessKey = accessKey;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

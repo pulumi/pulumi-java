@@ -51,7 +51,7 @@ public final class GetAcceleratorArgs extends io.pulumi.resources.InvokeArgs {
     	      this.acceleratorArn = defaults.acceleratorArn;
         }
 
-        public Builder setAcceleratorArn(String acceleratorArn) {
+        public Builder acceleratorArn(String acceleratorArn) {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }

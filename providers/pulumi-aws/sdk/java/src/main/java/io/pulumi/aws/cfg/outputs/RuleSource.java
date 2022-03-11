@@ -28,11 +28,11 @@ public final class RuleSource {
      */
     private final String sourceIdentifier;
 
-    @OutputCustomType.Constructor({"owner","sourceDetails","sourceIdentifier"})
+    @OutputCustomType.Constructor
     private RuleSource(
-        String owner,
-        @Nullable List<RuleSourceSourceDetail> sourceDetails,
-        String sourceIdentifier) {
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("sourceDetails") @Nullable List<RuleSourceSourceDetail> sourceDetails,
+        @OutputCustomType.Parameter("sourceIdentifier") String sourceIdentifier) {
         this.owner = owner;
         this.sourceDetails = sourceDetails;
         this.sourceIdentifier = sourceIdentifier;
@@ -84,17 +84,17 @@ public final class RuleSource {
     	      this.sourceIdentifier = defaults.sourceIdentifier;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setSourceDetails(@Nullable List<RuleSourceSourceDetail> sourceDetails) {
+        public Builder sourceDetails(@Nullable List<RuleSourceSourceDetail> sourceDetails) {
             this.sourceDetails = sourceDetails;
             return this;
         }
 
-        public Builder setSourceIdentifier(String sourceIdentifier) {
+        public Builder sourceIdentifier(String sourceIdentifier) {
             this.sourceIdentifier = Objects.requireNonNull(sourceIdentifier);
             return this;
         }

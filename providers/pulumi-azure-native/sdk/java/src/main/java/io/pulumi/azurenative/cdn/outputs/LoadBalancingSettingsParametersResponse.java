@@ -27,11 +27,11 @@ public final class LoadBalancingSettingsParametersResponse {
      */
     private final @Nullable Integer successfulSamplesRequired;
 
-    @OutputCustomType.Constructor({"additionalLatencyInMilliseconds","sampleSize","successfulSamplesRequired"})
+    @OutputCustomType.Constructor
     private LoadBalancingSettingsParametersResponse(
-        @Nullable Integer additionalLatencyInMilliseconds,
-        @Nullable Integer sampleSize,
-        @Nullable Integer successfulSamplesRequired) {
+        @OutputCustomType.Parameter("additionalLatencyInMilliseconds") @Nullable Integer additionalLatencyInMilliseconds,
+        @OutputCustomType.Parameter("sampleSize") @Nullable Integer sampleSize,
+        @OutputCustomType.Parameter("successfulSamplesRequired") @Nullable Integer successfulSamplesRequired) {
         this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
         this.sampleSize = sampleSize;
         this.successfulSamplesRequired = successfulSamplesRequired;
@@ -83,17 +83,17 @@ public final class LoadBalancingSettingsParametersResponse {
     	      this.successfulSamplesRequired = defaults.successfulSamplesRequired;
         }
 
-        public Builder setAdditionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
+        public Builder additionalLatencyInMilliseconds(@Nullable Integer additionalLatencyInMilliseconds) {
             this.additionalLatencyInMilliseconds = additionalLatencyInMilliseconds;
             return this;
         }
 
-        public Builder setSampleSize(@Nullable Integer sampleSize) {
+        public Builder sampleSize(@Nullable Integer sampleSize) {
             this.sampleSize = sampleSize;
             return this;
         }
 
-        public Builder setSuccessfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
+        public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }

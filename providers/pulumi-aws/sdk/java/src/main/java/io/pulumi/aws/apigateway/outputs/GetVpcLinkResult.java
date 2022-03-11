@@ -43,15 +43,15 @@ public final class GetVpcLinkResult {
      */
     private final List<String> targetArns;
 
-    @OutputCustomType.Constructor({"description","id","name","status","statusMessage","tags","targetArns"})
+    @OutputCustomType.Constructor
     private GetVpcLinkResult(
-        String description,
-        String id,
-        String name,
-        String status,
-        String statusMessage,
-        Map<String,String> tags,
-        List<String> targetArns) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("statusMessage") String statusMessage,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags,
+        @OutputCustomType.Parameter("targetArns") List<String> targetArns) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -139,37 +139,37 @@ public final class GetVpcLinkResult {
     	      this.targetArns = defaults.targetArns;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatusMessage(String statusMessage) {
+        public Builder statusMessage(String statusMessage) {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTargetArns(List<String> targetArns) {
+        public Builder targetArns(List<String> targetArns) {
             this.targetArns = Objects.requireNonNull(targetArns);
             return this;
         }

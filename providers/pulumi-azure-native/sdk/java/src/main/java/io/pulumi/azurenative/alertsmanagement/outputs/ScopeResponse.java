@@ -23,10 +23,10 @@ public final class ScopeResponse {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"scopeType","values"})
+    @OutputCustomType.Constructor
     private ScopeResponse(
-        @Nullable String scopeType,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("scopeType") @Nullable String scopeType,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.scopeType = scopeType;
         this.values = values;
     }
@@ -68,12 +68,12 @@ public final class ScopeResponse {
     	      this.values = defaults.values;
         }
 
-        public Builder setScopeType(@Nullable String scopeType) {
+        public Builder scopeType(@Nullable String scopeType) {
             this.scopeType = scopeType;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

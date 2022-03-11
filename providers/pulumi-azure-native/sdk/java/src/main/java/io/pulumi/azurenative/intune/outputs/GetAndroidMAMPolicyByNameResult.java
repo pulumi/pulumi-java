@@ -59,33 +59,33 @@ public final class GetAndroidMAMPolicyByNameResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessRecheckOfflineTimeout","accessRecheckOnlineTimeout","appSharingFromLevel","appSharingToLevel","authentication","clipboardSharingLevel","dataBackup","description","deviceCompliance","fileEncryption","fileSharingSaveAs","friendlyName","groupStatus","id","lastModifiedTime","location","managedBrowser","name","numOfApps","offlineWipeTimeout","pin","pinNumRetry","screenCapture","tags","type"})
+    @OutputCustomType.Constructor
     private GetAndroidMAMPolicyByNameResult(
-        @Nullable String accessRecheckOfflineTimeout,
-        @Nullable String accessRecheckOnlineTimeout,
-        @Nullable String appSharingFromLevel,
-        @Nullable String appSharingToLevel,
-        @Nullable String authentication,
-        @Nullable String clipboardSharingLevel,
-        @Nullable String dataBackup,
-        @Nullable String description,
-        @Nullable String deviceCompliance,
-        @Nullable String fileEncryption,
-        @Nullable String fileSharingSaveAs,
-        String friendlyName,
-        String groupStatus,
-        String id,
-        String lastModifiedTime,
-        @Nullable String location,
-        @Nullable String managedBrowser,
-        String name,
-        Integer numOfApps,
-        @Nullable String offlineWipeTimeout,
-        @Nullable String pin,
-        @Nullable Integer pinNumRetry,
-        @Nullable String screenCapture,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accessRecheckOfflineTimeout") @Nullable String accessRecheckOfflineTimeout,
+        @OutputCustomType.Parameter("accessRecheckOnlineTimeout") @Nullable String accessRecheckOnlineTimeout,
+        @OutputCustomType.Parameter("appSharingFromLevel") @Nullable String appSharingFromLevel,
+        @OutputCustomType.Parameter("appSharingToLevel") @Nullable String appSharingToLevel,
+        @OutputCustomType.Parameter("authentication") @Nullable String authentication,
+        @OutputCustomType.Parameter("clipboardSharingLevel") @Nullable String clipboardSharingLevel,
+        @OutputCustomType.Parameter("dataBackup") @Nullable String dataBackup,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("deviceCompliance") @Nullable String deviceCompliance,
+        @OutputCustomType.Parameter("fileEncryption") @Nullable String fileEncryption,
+        @OutputCustomType.Parameter("fileSharingSaveAs") @Nullable String fileSharingSaveAs,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("groupStatus") String groupStatus,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBrowser") @Nullable String managedBrowser,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("numOfApps") Integer numOfApps,
+        @OutputCustomType.Parameter("offlineWipeTimeout") @Nullable String offlineWipeTimeout,
+        @OutputCustomType.Parameter("pin") @Nullable String pin,
+        @OutputCustomType.Parameter("pinNumRetry") @Nullable Integer pinNumRetry,
+        @OutputCustomType.Parameter("screenCapture") @Nullable String screenCapture,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
         this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
         this.appSharingFromLevel = appSharingFromLevel;
@@ -277,127 +277,127 @@ public final class GetAndroidMAMPolicyByNameResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
+        public Builder accessRecheckOfflineTimeout(@Nullable String accessRecheckOfflineTimeout) {
             this.accessRecheckOfflineTimeout = accessRecheckOfflineTimeout;
             return this;
         }
 
-        public Builder setAccessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
+        public Builder accessRecheckOnlineTimeout(@Nullable String accessRecheckOnlineTimeout) {
             this.accessRecheckOnlineTimeout = accessRecheckOnlineTimeout;
             return this;
         }
 
-        public Builder setAppSharingFromLevel(@Nullable String appSharingFromLevel) {
+        public Builder appSharingFromLevel(@Nullable String appSharingFromLevel) {
             this.appSharingFromLevel = appSharingFromLevel;
             return this;
         }
 
-        public Builder setAppSharingToLevel(@Nullable String appSharingToLevel) {
+        public Builder appSharingToLevel(@Nullable String appSharingToLevel) {
             this.appSharingToLevel = appSharingToLevel;
             return this;
         }
 
-        public Builder setAuthentication(@Nullable String authentication) {
+        public Builder authentication(@Nullable String authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setClipboardSharingLevel(@Nullable String clipboardSharingLevel) {
+        public Builder clipboardSharingLevel(@Nullable String clipboardSharingLevel) {
             this.clipboardSharingLevel = clipboardSharingLevel;
             return this;
         }
 
-        public Builder setDataBackup(@Nullable String dataBackup) {
+        public Builder dataBackup(@Nullable String dataBackup) {
             this.dataBackup = dataBackup;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDeviceCompliance(@Nullable String deviceCompliance) {
+        public Builder deviceCompliance(@Nullable String deviceCompliance) {
             this.deviceCompliance = deviceCompliance;
             return this;
         }
 
-        public Builder setFileEncryption(@Nullable String fileEncryption) {
+        public Builder fileEncryption(@Nullable String fileEncryption) {
             this.fileEncryption = fileEncryption;
             return this;
         }
 
-        public Builder setFileSharingSaveAs(@Nullable String fileSharingSaveAs) {
+        public Builder fileSharingSaveAs(@Nullable String fileSharingSaveAs) {
             this.fileSharingSaveAs = fileSharingSaveAs;
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setGroupStatus(String groupStatus) {
+        public Builder groupStatus(String groupStatus) {
             this.groupStatus = Objects.requireNonNull(groupStatus);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBrowser(@Nullable String managedBrowser) {
+        public Builder managedBrowser(@Nullable String managedBrowser) {
             this.managedBrowser = managedBrowser;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNumOfApps(Integer numOfApps) {
+        public Builder numOfApps(Integer numOfApps) {
             this.numOfApps = Objects.requireNonNull(numOfApps);
             return this;
         }
 
-        public Builder setOfflineWipeTimeout(@Nullable String offlineWipeTimeout) {
+        public Builder offlineWipeTimeout(@Nullable String offlineWipeTimeout) {
             this.offlineWipeTimeout = offlineWipeTimeout;
             return this;
         }
 
-        public Builder setPin(@Nullable String pin) {
+        public Builder pin(@Nullable String pin) {
             this.pin = pin;
             return this;
         }
 
-        public Builder setPinNumRetry(@Nullable Integer pinNumRetry) {
+        public Builder pinNumRetry(@Nullable Integer pinNumRetry) {
             this.pinNumRetry = pinNumRetry;
             return this;
         }
 
-        public Builder setScreenCapture(@Nullable String screenCapture) {
+        public Builder screenCapture(@Nullable String screenCapture) {
             this.screenCapture = screenCapture;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

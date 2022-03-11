@@ -21,10 +21,10 @@ public final class AnimationStaticResponse {
      */
     private final NormalizedCoordinateResponse xy;
 
-    @OutputCustomType.Constructor({"startTimeOffset","xy"})
+    @OutputCustomType.Constructor
     private AnimationStaticResponse(
-        String startTimeOffset,
-        NormalizedCoordinateResponse xy) {
+        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @OutputCustomType.Parameter("xy") NormalizedCoordinateResponse xy) {
         this.startTimeOffset = startTimeOffset;
         this.xy = xy;
     }
@@ -66,12 +66,12 @@ public final class AnimationStaticResponse {
     	      this.xy = defaults.xy;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
 
-        public Builder setXy(NormalizedCoordinateResponse xy) {
+        public Builder xy(NormalizedCoordinateResponse xy) {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }

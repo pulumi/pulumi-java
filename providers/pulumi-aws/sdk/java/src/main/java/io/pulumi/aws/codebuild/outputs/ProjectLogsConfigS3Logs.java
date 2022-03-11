@@ -33,12 +33,12 @@ public final class ProjectLogsConfigS3Logs {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"bucketOwnerAccess","encryptionDisabled","location","status"})
+    @OutputCustomType.Constructor
     private ProjectLogsConfigS3Logs(
-        @Nullable String bucketOwnerAccess,
-        @Nullable Boolean encryptionDisabled,
-        @Nullable String location,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("bucketOwnerAccess") @Nullable String bucketOwnerAccess,
+        @OutputCustomType.Parameter("encryptionDisabled") @Nullable Boolean encryptionDisabled,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.bucketOwnerAccess = bucketOwnerAccess;
         this.encryptionDisabled = encryptionDisabled;
         this.location = location;
@@ -100,22 +100,22 @@ public final class ProjectLogsConfigS3Logs {
     	      this.status = defaults.status;
         }
 
-        public Builder setBucketOwnerAccess(@Nullable String bucketOwnerAccess) {
+        public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
             this.bucketOwnerAccess = bucketOwnerAccess;
             return this;
         }
 
-        public Builder setEncryptionDisabled(@Nullable Boolean encryptionDisabled) {
+        public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
             this.encryptionDisabled = encryptionDisabled;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

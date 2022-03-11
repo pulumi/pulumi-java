@@ -25,10 +25,10 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor({"abort","delay"})
+    @OutputCustomType.Constructor
     private URLMapDefaultRouteActionFaultInjectionPolicy(
-        @Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort,
-        @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        @OutputCustomType.Parameter("abort") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort,
+        @OutputCustomType.Parameter("delay") @Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }
@@ -72,12 +72,12 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicy {
     	      this.delay = defaults.delay;
         }
 
-        public Builder setAbort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort) {
+        public Builder abort(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyAbort abort) {
             this.abort = abort;
             return this;
         }
 
-        public Builder setDelay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        public Builder delay(@Nullable URLMapDefaultRouteActionFaultInjectionPolicyDelay delay) {
             this.delay = delay;
             return this;
         }

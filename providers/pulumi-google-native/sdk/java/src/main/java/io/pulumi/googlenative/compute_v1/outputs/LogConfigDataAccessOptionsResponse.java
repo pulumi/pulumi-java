@@ -15,8 +15,8 @@ public final class LogConfigDataAccessOptionsResponse {
      */
     private final String logMode;
 
-    @OutputCustomType.Constructor({"logMode"})
-    private LogConfigDataAccessOptionsResponse(String logMode) {
+    @OutputCustomType.Constructor
+    private LogConfigDataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 
@@ -48,7 +48,7 @@ public final class LogConfigDataAccessOptionsResponse {
     	      this.logMode = defaults.logMode;
         }
 
-        public Builder setLogMode(String logMode) {
+        public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }

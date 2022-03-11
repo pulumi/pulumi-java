@@ -32,12 +32,12 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ContainerNetworkInterfaceIpConfigurationResponse(
-        String etag,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.name = name;
         this.provisioningState = provisioningState;
@@ -99,22 +99,22 @@ public final class ContainerNetworkInterfaceIpConfigurationResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

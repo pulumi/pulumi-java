@@ -40,13 +40,13 @@ public final class TransformationResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"dataset","description","flowlet","linkedService","name"})
+    @OutputCustomType.Constructor
     private TransformationResponse(
-        @Nullable DatasetReferenceResponse dataset,
-        @Nullable String description,
-        @Nullable DataFlowReferenceResponse flowlet,
-        @Nullable LinkedServiceReferenceResponse linkedService,
-        String name) {
+        @OutputCustomType.Parameter("dataset") @Nullable DatasetReferenceResponse dataset,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("flowlet") @Nullable DataFlowReferenceResponse flowlet,
+        @OutputCustomType.Parameter("linkedService") @Nullable LinkedServiceReferenceResponse linkedService,
+        @OutputCustomType.Parameter("name") String name) {
         this.dataset = dataset;
         this.description = description;
         this.flowlet = flowlet;
@@ -118,27 +118,27 @@ public final class TransformationResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDataset(@Nullable DatasetReferenceResponse dataset) {
+        public Builder dataset(@Nullable DatasetReferenceResponse dataset) {
             this.dataset = dataset;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFlowlet(@Nullable DataFlowReferenceResponse flowlet) {
+        public Builder flowlet(@Nullable DataFlowReferenceResponse flowlet) {
             this.flowlet = flowlet;
             return this;
         }
 
-        public Builder setLinkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
+        public Builder linkedService(@Nullable LinkedServiceReferenceResponse linkedService) {
             this.linkedService = linkedService;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

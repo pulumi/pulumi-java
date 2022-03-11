@@ -26,11 +26,11 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
      */
     private final String answerAggregationType;
 
-    @OutputCustomType.Constructor({"allowMultiLabel","annotationSpecSet","answerAggregationType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(
-        Boolean allowMultiLabel,
-        String annotationSpecSet,
-        String answerAggregationType) {
+        @OutputCustomType.Parameter("allowMultiLabel") Boolean allowMultiLabel,
+        @OutputCustomType.Parameter("annotationSpecSet") String annotationSpecSet,
+        @OutputCustomType.Parameter("answerAggregationType") String answerAggregationType) {
         this.allowMultiLabel = allowMultiLabel;
         this.annotationSpecSet = annotationSpecSet;
         this.answerAggregationType = answerAggregationType;
@@ -82,17 +82,17 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
     	      this.answerAggregationType = defaults.answerAggregationType;
         }
 
-        public Builder setAllowMultiLabel(Boolean allowMultiLabel) {
+        public Builder allowMultiLabel(Boolean allowMultiLabel) {
             this.allowMultiLabel = Objects.requireNonNull(allowMultiLabel);
             return this;
         }
 
-        public Builder setAnnotationSpecSet(String annotationSpecSet) {
+        public Builder annotationSpecSet(String annotationSpecSet) {
             this.annotationSpecSet = Objects.requireNonNull(annotationSpecSet);
             return this;
         }
 
-        public Builder setAnswerAggregationType(String answerAggregationType) {
+        public Builder answerAggregationType(String answerAggregationType) {
             this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
             return this;
         }

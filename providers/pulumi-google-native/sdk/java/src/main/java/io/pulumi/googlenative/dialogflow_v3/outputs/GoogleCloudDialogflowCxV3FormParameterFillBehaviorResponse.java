@@ -22,10 +22,10 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse {
      */
     private final List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers;
 
-    @OutputCustomType.Constructor({"initialPromptFulfillment","repromptEventHandlers"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse(
-        GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment,
-        List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
+        @OutputCustomType.Parameter("initialPromptFulfillment") GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment,
+        @OutputCustomType.Parameter("repromptEventHandlers") List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
         this.initialPromptFulfillment = initialPromptFulfillment;
         this.repromptEventHandlers = repromptEventHandlers;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse {
     	      this.repromptEventHandlers = defaults.repromptEventHandlers;
         }
 
-        public Builder setInitialPromptFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment) {
+        public Builder initialPromptFulfillment(GoogleCloudDialogflowCxV3FulfillmentResponse initialPromptFulfillment) {
             this.initialPromptFulfillment = Objects.requireNonNull(initialPromptFulfillment);
             return this;
         }
 
-        public Builder setRepromptEventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
+        public Builder repromptEventHandlers(List<GoogleCloudDialogflowCxV3EventHandlerResponse> repromptEventHandlers) {
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }

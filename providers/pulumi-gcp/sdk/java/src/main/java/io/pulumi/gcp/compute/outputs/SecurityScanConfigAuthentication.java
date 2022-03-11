@@ -25,10 +25,10 @@ public final class SecurityScanConfigAuthentication {
      */
     private final @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount"})
+    @OutputCustomType.Constructor
     private SecurityScanConfigAuthentication(
-        @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
-        @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
+        @OutputCustomType.Parameter("customAccount") @Nullable SecurityScanConfigAuthenticationCustomAccount customAccount,
+        @OutputCustomType.Parameter("googleAccount") @Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }
@@ -72,12 +72,12 @@ public final class SecurityScanConfigAuthentication {
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder setCustomAccount(@Nullable SecurityScanConfigAuthenticationCustomAccount customAccount) {
+        public Builder customAccount(@Nullable SecurityScanConfigAuthenticationCustomAccount customAccount) {
             this.customAccount = customAccount;
             return this;
         }
 
-        public Builder setGoogleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
+        public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccount googleAccount) {
             this.googleAccount = googleAccount;
             return this;
         }

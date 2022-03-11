@@ -45,14 +45,14 @@ public final class OptionGroupOption {
      */
     private final @Nullable List<String> vpcSecurityGroupMemberships;
 
-    @OutputCustomType.Constructor({"dbSecurityGroupMemberships","optionName","optionSettings","port","version","vpcSecurityGroupMemberships"})
+    @OutputCustomType.Constructor
     private OptionGroupOption(
-        @Nullable List<String> dbSecurityGroupMemberships,
-        String optionName,
-        @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
-        @Nullable Integer port,
-        @Nullable String version,
-        @Nullable List<String> vpcSecurityGroupMemberships) {
+        @OutputCustomType.Parameter("dbSecurityGroupMemberships") @Nullable List<String> dbSecurityGroupMemberships,
+        @OutputCustomType.Parameter("optionName") String optionName,
+        @OutputCustomType.Parameter("optionSettings") @Nullable List<OptionGroupOptionOptionSetting> optionSettings,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("version") @Nullable String version,
+        @OutputCustomType.Parameter("vpcSecurityGroupMemberships") @Nullable List<String> vpcSecurityGroupMemberships) {
         this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
         this.optionName = optionName;
         this.optionSettings = optionSettings;
@@ -134,32 +134,32 @@ public final class OptionGroupOption {
     	      this.vpcSecurityGroupMemberships = defaults.vpcSecurityGroupMemberships;
         }
 
-        public Builder setDbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
+        public Builder dbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
             this.dbSecurityGroupMemberships = dbSecurityGroupMemberships;
             return this;
         }
 
-        public Builder setOptionName(String optionName) {
+        public Builder optionName(String optionName) {
             this.optionName = Objects.requireNonNull(optionName);
             return this;
         }
 
-        public Builder setOptionSettings(@Nullable List<OptionGroupOptionOptionSetting> optionSettings) {
+        public Builder optionSettings(@Nullable List<OptionGroupOptionOptionSetting> optionSettings) {
             this.optionSettings = optionSettings;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
+        public Builder vpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
             this.vpcSecurityGroupMemberships = vpcSecurityGroupMemberships;
             return this;
         }

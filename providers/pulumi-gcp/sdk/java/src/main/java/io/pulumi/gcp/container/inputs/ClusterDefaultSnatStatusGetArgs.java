@@ -53,12 +53,12 @@ public final class ClusterDefaultSnatStatusGetArgs extends io.pulumi.resources.R
     	      this.disabled = defaults.disabled;
         }
 
-        public Builder setDisabled(Input<Boolean> disabled) {
+        public Builder disabled(Input<Boolean> disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Input.of(Objects.requireNonNull(disabled));
             return this;
         }

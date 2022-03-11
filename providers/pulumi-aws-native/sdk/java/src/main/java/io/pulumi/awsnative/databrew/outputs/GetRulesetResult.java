@@ -26,11 +26,11 @@ public final class GetRulesetResult {
     private final @Nullable List<RulesetRule> rules;
     private final @Nullable List<RulesetTag> tags;
 
-    @OutputCustomType.Constructor({"description","rules","tags"})
+    @OutputCustomType.Constructor
     private GetRulesetResult(
-        @Nullable String description,
-        @Nullable List<RulesetRule> rules,
-        @Nullable List<RulesetTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("rules") @Nullable List<RulesetRule> rules,
+        @OutputCustomType.Parameter("tags") @Nullable List<RulesetTag> tags) {
         this.description = description;
         this.rules = rules;
         this.tags = tags;
@@ -78,17 +78,17 @@ public final class GetRulesetResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RulesetRule> rules) {
+        public Builder rules(@Nullable List<RulesetRule> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RulesetTag> tags) {
+        public Builder tags(@Nullable List<RulesetTag> tags) {
             this.tags = tags;
             return this;
         }

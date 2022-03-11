@@ -108,22 +108,22 @@ public final class DetectorModelTransitionEvent extends io.pulumi.resources.Invo
     	      this.nextState = defaults.nextState;
         }
 
-        public Builder setActions(@Nullable List<DetectorModelAction> actions) {
+        public Builder actions(@Nullable List<DetectorModelAction> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setCondition(String condition) {
+        public Builder condition(String condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setNextState(String nextState) {
+        public Builder nextState(String nextState) {
             this.nextState = Objects.requireNonNull(nextState);
             return this;
         }

@@ -23,10 +23,10 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
      */
     private final @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource;
 
-    @OutputCustomType.Constructor({"nlbResource","r53Resource"})
+    @OutputCustomType.Constructor
     private ResourceSetResourceDnsTargetResourceTargetResource(
-        @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
-        @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
+        @OutputCustomType.Parameter("nlbResource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource,
+        @OutputCustomType.Parameter("r53Resource") @Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
         this.nlbResource = nlbResource;
         this.r53Resource = r53Resource;
     }
@@ -68,12 +68,12 @@ public final class ResourceSetResourceDnsTargetResourceTargetResource {
     	      this.r53Resource = defaults.r53Resource;
         }
 
-        public Builder setNlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource) {
+        public Builder nlbResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceNlbResource nlbResource) {
             this.nlbResource = nlbResource;
             return this;
         }
 
-        public Builder setR53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
+        public Builder r53Resource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceR53Resource r53Resource) {
             this.r53Resource = r53Resource;
             return this;
         }

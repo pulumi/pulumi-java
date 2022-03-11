@@ -26,11 +26,11 @@ public final class GetReplicationSetResult {
      */
     private final @Nullable List<ReplicationSetReplicationRegion> regions;
 
-    @OutputCustomType.Constructor({"arn","deletionProtected","regions"})
+    @OutputCustomType.Constructor
     private GetReplicationSetResult(
-        @Nullable String arn,
-        @Nullable Boolean deletionProtected,
-        @Nullable List<ReplicationSetReplicationRegion> regions) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("deletionProtected") @Nullable Boolean deletionProtected,
+        @OutputCustomType.Parameter("regions") @Nullable List<ReplicationSetReplicationRegion> regions) {
         this.arn = arn;
         this.deletionProtected = deletionProtected;
         this.regions = regions;
@@ -78,17 +78,17 @@ public final class GetReplicationSetResult {
     	      this.regions = defaults.regions;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setDeletionProtected(@Nullable Boolean deletionProtected) {
+        public Builder deletionProtected(@Nullable Boolean deletionProtected) {
             this.deletionProtected = deletionProtected;
             return this;
         }
 
-        public Builder setRegions(@Nullable List<ReplicationSetReplicationRegion> regions) {
+        public Builder regions(@Nullable List<ReplicationSetReplicationRegion> regions) {
             this.regions = regions;
             return this;
         }

@@ -111,27 +111,27 @@ public final class GetConnectedClusterResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentPublicKeyCertificate","agentVersion","connectivityStatus","distribution","id","identity","infrastructure","kubernetesVersion","lastConnectivityTime","location","managedIdentityCertificateExpirationTime","name","offering","provisioningState","systemData","tags","totalCoreCount","totalNodeCount","type"})
+    @OutputCustomType.Constructor
     private GetConnectedClusterResult(
-        String agentPublicKeyCertificate,
-        String agentVersion,
-        String connectivityStatus,
-        @Nullable String distribution,
-        String id,
-        ConnectedClusterIdentityResponse identity,
-        @Nullable String infrastructure,
-        String kubernetesVersion,
-        String lastConnectivityTime,
-        String location,
-        String managedIdentityCertificateExpirationTime,
-        String name,
-        String offering,
-        @Nullable String provisioningState,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        Integer totalCoreCount,
-        Integer totalNodeCount,
-        String type) {
+        @OutputCustomType.Parameter("agentPublicKeyCertificate") String agentPublicKeyCertificate,
+        @OutputCustomType.Parameter("agentVersion") String agentVersion,
+        @OutputCustomType.Parameter("connectivityStatus") String connectivityStatus,
+        @OutputCustomType.Parameter("distribution") @Nullable String distribution,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") ConnectedClusterIdentityResponse identity,
+        @OutputCustomType.Parameter("infrastructure") @Nullable String infrastructure,
+        @OutputCustomType.Parameter("kubernetesVersion") String kubernetesVersion,
+        @OutputCustomType.Parameter("lastConnectivityTime") String lastConnectivityTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("managedIdentityCertificateExpirationTime") String managedIdentityCertificateExpirationTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("offering") String offering,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("totalCoreCount") Integer totalCoreCount,
+        @OutputCustomType.Parameter("totalNodeCount") Integer totalNodeCount,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentPublicKeyCertificate = agentPublicKeyCertificate;
         this.agentVersion = agentVersion;
         this.connectivityStatus = connectivityStatus;
@@ -343,97 +343,97 @@ public final class GetConnectedClusterResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentPublicKeyCertificate(String agentPublicKeyCertificate) {
+        public Builder agentPublicKeyCertificate(String agentPublicKeyCertificate) {
             this.agentPublicKeyCertificate = Objects.requireNonNull(agentPublicKeyCertificate);
             return this;
         }
 
-        public Builder setAgentVersion(String agentVersion) {
+        public Builder agentVersion(String agentVersion) {
             this.agentVersion = Objects.requireNonNull(agentVersion);
             return this;
         }
 
-        public Builder setConnectivityStatus(String connectivityStatus) {
+        public Builder connectivityStatus(String connectivityStatus) {
             this.connectivityStatus = Objects.requireNonNull(connectivityStatus);
             return this;
         }
 
-        public Builder setDistribution(@Nullable String distribution) {
+        public Builder distribution(@Nullable String distribution) {
             this.distribution = distribution;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(ConnectedClusterIdentityResponse identity) {
+        public Builder identity(ConnectedClusterIdentityResponse identity) {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
 
-        public Builder setInfrastructure(@Nullable String infrastructure) {
+        public Builder infrastructure(@Nullable String infrastructure) {
             this.infrastructure = infrastructure;
             return this;
         }
 
-        public Builder setKubernetesVersion(String kubernetesVersion) {
+        public Builder kubernetesVersion(String kubernetesVersion) {
             this.kubernetesVersion = Objects.requireNonNull(kubernetesVersion);
             return this;
         }
 
-        public Builder setLastConnectivityTime(String lastConnectivityTime) {
+        public Builder lastConnectivityTime(String lastConnectivityTime) {
             this.lastConnectivityTime = Objects.requireNonNull(lastConnectivityTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setManagedIdentityCertificateExpirationTime(String managedIdentityCertificateExpirationTime) {
+        public Builder managedIdentityCertificateExpirationTime(String managedIdentityCertificateExpirationTime) {
             this.managedIdentityCertificateExpirationTime = Objects.requireNonNull(managedIdentityCertificateExpirationTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOffering(String offering) {
+        public Builder offering(String offering) {
             this.offering = Objects.requireNonNull(offering);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTotalCoreCount(Integer totalCoreCount) {
+        public Builder totalCoreCount(Integer totalCoreCount) {
             this.totalCoreCount = Objects.requireNonNull(totalCoreCount);
             return this;
         }
 
-        public Builder setTotalNodeCount(Integer totalNodeCount) {
+        public Builder totalNodeCount(Integer totalNodeCount) {
             this.totalNodeCount = Objects.requireNonNull(totalNodeCount);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -12,10 +12,10 @@ public final class ConnectionApiKeyAuthParameters {
     private final String apiKeyName;
     private final String apiKeyValue;
 
-    @OutputCustomType.Constructor({"apiKeyName","apiKeyValue"})
+    @OutputCustomType.Constructor
     private ConnectionApiKeyAuthParameters(
-        String apiKeyName,
-        String apiKeyValue) {
+        @OutputCustomType.Parameter("apiKeyName") String apiKeyName,
+        @OutputCustomType.Parameter("apiKeyValue") String apiKeyValue) {
         this.apiKeyName = apiKeyName;
         this.apiKeyValue = apiKeyValue;
     }
@@ -49,12 +49,12 @@ public final class ConnectionApiKeyAuthParameters {
     	      this.apiKeyValue = defaults.apiKeyValue;
         }
 
-        public Builder setApiKeyName(String apiKeyName) {
+        public Builder apiKeyName(String apiKeyName) {
             this.apiKeyName = Objects.requireNonNull(apiKeyName);
             return this;
         }
 
-        public Builder setApiKeyValue(String apiKeyValue) {
+        public Builder apiKeyValue(String apiKeyValue) {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }

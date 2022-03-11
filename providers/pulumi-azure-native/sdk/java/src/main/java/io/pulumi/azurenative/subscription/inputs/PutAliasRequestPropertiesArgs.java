@@ -124,52 +124,52 @@ public final class PutAliasRequestPropertiesArgs extends io.pulumi.resources.Res
     	      this.workload = defaults.workload;
         }
 
-        public Builder setBillingScope(@Nullable Input<String> billingScope) {
+        public Builder billingScope(@Nullable Input<String> billingScope) {
             this.billingScope = billingScope;
             return this;
         }
 
-        public Builder setBillingScope(@Nullable String billingScope) {
+        public Builder billingScope(@Nullable String billingScope) {
             this.billingScope = Input.ofNullable(billingScope);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setResellerId(@Nullable Input<String> resellerId) {
+        public Builder resellerId(@Nullable Input<String> resellerId) {
             this.resellerId = resellerId;
             return this;
         }
 
-        public Builder setResellerId(@Nullable String resellerId) {
+        public Builder resellerId(@Nullable String resellerId) {
             this.resellerId = Input.ofNullable(resellerId);
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable Input<String> subscriptionId) {
+        public Builder subscriptionId(@Nullable Input<String> subscriptionId) {
             this.subscriptionId = subscriptionId;
             return this;
         }
 
-        public Builder setSubscriptionId(@Nullable String subscriptionId) {
+        public Builder subscriptionId(@Nullable String subscriptionId) {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
 
-        public Builder setWorkload(@Nullable Input<Either<String,Workload>> workload) {
+        public Builder workload(@Nullable Input<Either<String,Workload>> workload) {
             this.workload = workload;
             return this;
         }
 
-        public Builder setWorkload(@Nullable Either<String,Workload> workload) {
+        public Builder workload(@Nullable Either<String,Workload> workload) {
             this.workload = Input.ofNullable(workload);
             return this;
         }

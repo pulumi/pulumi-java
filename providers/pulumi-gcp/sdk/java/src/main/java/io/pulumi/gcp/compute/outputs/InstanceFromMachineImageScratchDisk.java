@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class InstanceFromMachineImageScratchDisk {
     private final String $interface;
 
-    @OutputCustomType.Constructor({"$interface"})
-    private InstanceFromMachineImageScratchDisk(String $interface) {
+    @OutputCustomType.Constructor
+    private InstanceFromMachineImageScratchDisk(@OutputCustomType.Parameter("interface") String $interface) {
         this.$interface = $interface;
     }
 
@@ -40,7 +40,7 @@ public final class InstanceFromMachineImageScratchDisk {
     	      this.$interface = defaults.$interface;
         }
 
-        public Builder set$interface(String $interface) {
+        public Builder $interface(String $interface) {
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }

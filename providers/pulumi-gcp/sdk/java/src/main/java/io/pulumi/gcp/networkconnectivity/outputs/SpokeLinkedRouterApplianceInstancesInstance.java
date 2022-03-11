@@ -22,10 +22,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
      */
     private final @Nullable String virtualMachine;
 
-    @OutputCustomType.Constructor({"ipAddress","virtualMachine"})
+    @OutputCustomType.Constructor
     private SpokeLinkedRouterApplianceInstancesInstance(
-        @Nullable String ipAddress,
-        @Nullable String virtualMachine) {
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("virtualMachine") @Nullable String virtualMachine) {
         this.ipAddress = ipAddress;
         this.virtualMachine = virtualMachine;
     }
@@ -67,12 +67,12 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
     	      this.virtualMachine = defaults.virtualMachine;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setVirtualMachine(@Nullable String virtualMachine) {
+        public Builder virtualMachine(@Nullable String virtualMachine) {
             this.virtualMachine = virtualMachine;
             return this;
         }

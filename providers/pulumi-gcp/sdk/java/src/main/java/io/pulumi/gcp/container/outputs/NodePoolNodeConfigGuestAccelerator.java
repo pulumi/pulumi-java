@@ -16,11 +16,11 @@ public final class NodePoolNodeConfigGuestAccelerator {
     private final @Nullable String gpuPartitionSize;
     private final String type;
 
-    @OutputCustomType.Constructor({"count","gpuPartitionSize","type"})
+    @OutputCustomType.Constructor
     private NodePoolNodeConfigGuestAccelerator(
-        Integer count,
-        @Nullable String gpuPartitionSize,
-        String type) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("gpuPartitionSize") @Nullable String gpuPartitionSize,
+        @OutputCustomType.Parameter("type") String type) {
         this.count = count;
         this.gpuPartitionSize = gpuPartitionSize;
         this.type = type;
@@ -60,17 +60,17 @@ public final class NodePoolNodeConfigGuestAccelerator {
     	      this.type = defaults.type;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setGpuPartitionSize(@Nullable String gpuPartitionSize) {
+        public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
             this.gpuPartitionSize = gpuPartitionSize;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

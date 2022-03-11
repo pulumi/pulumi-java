@@ -110,27 +110,27 @@ public final class AttachedDiskInitializeParamsResponse {
      */
     private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
-    @OutputCustomType.Constructor({"architecture","description","diskName","diskSizeGb","diskType","guestOsFeatures","labels","licenseCodes","licenses","multiWriter","onUpdateAction","provisionedIops","replicaZones","resourcePolicies","sourceImage","sourceImageEncryptionKey","sourceInstantSnapshot","sourceSnapshot","sourceSnapshotEncryptionKey"})
+    @OutputCustomType.Constructor
     private AttachedDiskInitializeParamsResponse(
-        String architecture,
-        String description,
-        String diskName,
-        String diskSizeGb,
-        String diskType,
-        List<GuestOsFeatureResponse> guestOsFeatures,
-        Map<String,String> labels,
-        List<String> licenseCodes,
-        List<String> licenses,
-        Boolean multiWriter,
-        String onUpdateAction,
-        String provisionedIops,
-        List<String> replicaZones,
-        List<String> resourcePolicies,
-        String sourceImage,
-        CustomerEncryptionKeyResponse sourceImageEncryptionKey,
-        String sourceInstantSnapshot,
-        String sourceSnapshot,
-        CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("diskSizeGb") String diskSizeGb,
+        @OutputCustomType.Parameter("diskType") String diskType,
+        @OutputCustomType.Parameter("guestOsFeatures") List<GuestOsFeatureResponse> guestOsFeatures,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("licenseCodes") List<String> licenseCodes,
+        @OutputCustomType.Parameter("licenses") List<String> licenses,
+        @OutputCustomType.Parameter("multiWriter") Boolean multiWriter,
+        @OutputCustomType.Parameter("onUpdateAction") String onUpdateAction,
+        @OutputCustomType.Parameter("provisionedIops") String provisionedIops,
+        @OutputCustomType.Parameter("replicaZones") List<String> replicaZones,
+        @OutputCustomType.Parameter("resourcePolicies") List<String> resourcePolicies,
+        @OutputCustomType.Parameter("sourceImage") String sourceImage,
+        @OutputCustomType.Parameter("sourceImageEncryptionKey") CustomerEncryptionKeyResponse sourceImageEncryptionKey,
+        @OutputCustomType.Parameter("sourceInstantSnapshot") String sourceInstantSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshot") String sourceSnapshot,
+        @OutputCustomType.Parameter("sourceSnapshotEncryptionKey") CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
         this.architecture = architecture;
         this.description = description;
         this.diskName = diskName;
@@ -342,97 +342,97 @@ public final class AttachedDiskInitializeParamsResponse {
     	      this.sourceSnapshotEncryptionKey = defaults.sourceSnapshotEncryptionKey;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setDiskType(String diskType) {
+        public Builder diskType(String diskType) {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
 
-        public Builder setGuestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
+        public Builder guestOsFeatures(List<GuestOsFeatureResponse> guestOsFeatures) {
             this.guestOsFeatures = Objects.requireNonNull(guestOsFeatures);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLicenseCodes(List<String> licenseCodes) {
+        public Builder licenseCodes(List<String> licenseCodes) {
             this.licenseCodes = Objects.requireNonNull(licenseCodes);
             return this;
         }
 
-        public Builder setLicenses(List<String> licenses) {
+        public Builder licenses(List<String> licenses) {
             this.licenses = Objects.requireNonNull(licenses);
             return this;
         }
 
-        public Builder setMultiWriter(Boolean multiWriter) {
+        public Builder multiWriter(Boolean multiWriter) {
             this.multiWriter = Objects.requireNonNull(multiWriter);
             return this;
         }
 
-        public Builder setOnUpdateAction(String onUpdateAction) {
+        public Builder onUpdateAction(String onUpdateAction) {
             this.onUpdateAction = Objects.requireNonNull(onUpdateAction);
             return this;
         }
 
-        public Builder setProvisionedIops(String provisionedIops) {
+        public Builder provisionedIops(String provisionedIops) {
             this.provisionedIops = Objects.requireNonNull(provisionedIops);
             return this;
         }
 
-        public Builder setReplicaZones(List<String> replicaZones) {
+        public Builder replicaZones(List<String> replicaZones) {
             this.replicaZones = Objects.requireNonNull(replicaZones);
             return this;
         }
 
-        public Builder setResourcePolicies(List<String> resourcePolicies) {
+        public Builder resourcePolicies(List<String> resourcePolicies) {
             this.resourcePolicies = Objects.requireNonNull(resourcePolicies);
             return this;
         }
 
-        public Builder setSourceImage(String sourceImage) {
+        public Builder sourceImage(String sourceImage) {
             this.sourceImage = Objects.requireNonNull(sourceImage);
             return this;
         }
 
-        public Builder setSourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
+        public Builder sourceImageEncryptionKey(CustomerEncryptionKeyResponse sourceImageEncryptionKey) {
             this.sourceImageEncryptionKey = Objects.requireNonNull(sourceImageEncryptionKey);
             return this;
         }
 
-        public Builder setSourceInstantSnapshot(String sourceInstantSnapshot) {
+        public Builder sourceInstantSnapshot(String sourceInstantSnapshot) {
             this.sourceInstantSnapshot = Objects.requireNonNull(sourceInstantSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshot(String sourceSnapshot) {
+        public Builder sourceSnapshot(String sourceSnapshot) {
             this.sourceSnapshot = Objects.requireNonNull(sourceSnapshot);
             return this;
         }
 
-        public Builder setSourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
+        public Builder sourceSnapshotEncryptionKey(CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey) {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }

@@ -329,182 +329,182 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable Input<String> autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = Input.ofNullable(autoDeleteOnIdle);
             return this;
         }
 
-        public Builder setDeadLetteringOnMessageExpiration(@Nullable Input<Boolean> deadLetteringOnMessageExpiration) {
+        public Builder deadLetteringOnMessageExpiration(@Nullable Input<Boolean> deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = deadLetteringOnMessageExpiration;
             return this;
         }
 
-        public Builder setDeadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
+        public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
             this.deadLetteringOnMessageExpiration = Input.ofNullable(deadLetteringOnMessageExpiration);
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable Input<String> defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = Input.ofNullable(defaultMessageTimeToLive);
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable Input<String> duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = Input.ofNullable(duplicateDetectionHistoryTimeWindow);
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Input<Boolean> enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = Input.ofNullable(enableBatchedOperations);
             return this;
         }
 
-        public Builder setEnableExpress(@Nullable Input<Boolean> enableExpress) {
+        public Builder enableExpress(@Nullable Input<Boolean> enableExpress) {
             this.enableExpress = enableExpress;
             return this;
         }
 
-        public Builder setEnableExpress(@Nullable Boolean enableExpress) {
+        public Builder enableExpress(@Nullable Boolean enableExpress) {
             this.enableExpress = Input.ofNullable(enableExpress);
             return this;
         }
 
-        public Builder setEnablePartitioning(@Nullable Input<Boolean> enablePartitioning) {
+        public Builder enablePartitioning(@Nullable Input<Boolean> enablePartitioning) {
             this.enablePartitioning = enablePartitioning;
             return this;
         }
 
-        public Builder setEnablePartitioning(@Nullable Boolean enablePartitioning) {
+        public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
             this.enablePartitioning = Input.ofNullable(enablePartitioning);
             return this;
         }
 
-        public Builder setForwardDeadLetteredMessagesTo(@Nullable Input<String> forwardDeadLetteredMessagesTo) {
+        public Builder forwardDeadLetteredMessagesTo(@Nullable Input<String> forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = forwardDeadLetteredMessagesTo;
             return this;
         }
 
-        public Builder setForwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
+        public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
             this.forwardDeadLetteredMessagesTo = Input.ofNullable(forwardDeadLetteredMessagesTo);
             return this;
         }
 
-        public Builder setForwardTo(@Nullable Input<String> forwardTo) {
+        public Builder forwardTo(@Nullable Input<String> forwardTo) {
             this.forwardTo = forwardTo;
             return this;
         }
 
-        public Builder setForwardTo(@Nullable String forwardTo) {
+        public Builder forwardTo(@Nullable String forwardTo) {
             this.forwardTo = Input.ofNullable(forwardTo);
             return this;
         }
 
-        public Builder setLockDuration(@Nullable Input<String> lockDuration) {
+        public Builder lockDuration(@Nullable Input<String> lockDuration) {
             this.lockDuration = lockDuration;
             return this;
         }
 
-        public Builder setLockDuration(@Nullable String lockDuration) {
+        public Builder lockDuration(@Nullable String lockDuration) {
             this.lockDuration = Input.ofNullable(lockDuration);
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Input<Integer> maxDeliveryCount) {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
-        public Builder setMaxDeliveryCount(@Nullable Integer maxDeliveryCount) {
+        public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
             this.maxDeliveryCount = Input.ofNullable(maxDeliveryCount);
             return this;
         }
 
-        public Builder setMaxSizeInMegabytes(@Nullable Input<Integer> maxSizeInMegabytes) {
+        public Builder maxSizeInMegabytes(@Nullable Input<Integer> maxSizeInMegabytes) {
             this.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
 
-        public Builder setMaxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
+        public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
             this.maxSizeInMegabytes = Input.ofNullable(maxSizeInMegabytes);
             return this;
         }
 
-        public Builder setNamespaceName(Input<String> namespaceName) {
+        public Builder namespaceName(Input<String> namespaceName) {
             this.namespaceName = Objects.requireNonNull(namespaceName);
             return this;
         }
 
-        public Builder setNamespaceName(String namespaceName) {
+        public Builder namespaceName(String namespaceName) {
             this.namespaceName = Input.of(Objects.requireNonNull(namespaceName));
             return this;
         }
 
-        public Builder setQueueName(@Nullable Input<String> queueName) {
+        public Builder queueName(@Nullable Input<String> queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = Input.ofNullable(queueName);
             return this;
         }
 
-        public Builder setRequiresDuplicateDetection(@Nullable Input<Boolean> requiresDuplicateDetection) {
+        public Builder requiresDuplicateDetection(@Nullable Input<Boolean> requiresDuplicateDetection) {
             this.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
 
-        public Builder setRequiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
+        public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
             this.requiresDuplicateDetection = Input.ofNullable(requiresDuplicateDetection);
             return this;
         }
 
-        public Builder setRequiresSession(@Nullable Input<Boolean> requiresSession) {
+        public Builder requiresSession(@Nullable Input<Boolean> requiresSession) {
             this.requiresSession = requiresSession;
             return this;
         }
 
-        public Builder setRequiresSession(@Nullable Boolean requiresSession) {
+        public Builder requiresSession(@Nullable Boolean requiresSession) {
             this.requiresSession = Input.ofNullable(requiresSession);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<EntityStatus> status) {
+        public Builder status(@Nullable Input<EntityStatus> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable EntityStatus status) {
+        public Builder status(@Nullable EntityStatus status) {
             this.status = Input.ofNullable(status);
             return this;
         }

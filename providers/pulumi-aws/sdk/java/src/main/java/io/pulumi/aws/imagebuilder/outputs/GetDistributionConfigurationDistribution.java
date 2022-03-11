@@ -27,11 +27,11 @@ public final class GetDistributionConfigurationDistribution {
      */
     private final String region;
 
-    @OutputCustomType.Constructor({"amiDistributionConfigurations","licenseConfigurationArns","region"})
+    @OutputCustomType.Constructor
     private GetDistributionConfigurationDistribution(
-        List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
-        List<String> licenseConfigurationArns,
-        String region) {
+        @OutputCustomType.Parameter("amiDistributionConfigurations") List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations,
+        @OutputCustomType.Parameter("licenseConfigurationArns") List<String> licenseConfigurationArns,
+        @OutputCustomType.Parameter("region") String region) {
         this.amiDistributionConfigurations = amiDistributionConfigurations;
         this.licenseConfigurationArns = licenseConfigurationArns;
         this.region = region;
@@ -83,17 +83,17 @@ public final class GetDistributionConfigurationDistribution {
     	      this.region = defaults.region;
         }
 
-        public Builder setAmiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
+        public Builder amiDistributionConfigurations(List<GetDistributionConfigurationDistributionAmiDistributionConfiguration> amiDistributionConfigurations) {
             this.amiDistributionConfigurations = Objects.requireNonNull(amiDistributionConfigurations);
             return this;
         }
 
-        public Builder setLicenseConfigurationArns(List<String> licenseConfigurationArns) {
+        public Builder licenseConfigurationArns(List<String> licenseConfigurationArns) {
             this.licenseConfigurationArns = Objects.requireNonNull(licenseConfigurationArns);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }

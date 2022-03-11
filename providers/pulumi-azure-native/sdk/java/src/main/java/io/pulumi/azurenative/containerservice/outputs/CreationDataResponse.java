@@ -17,8 +17,8 @@ public final class CreationDataResponse {
      */
     private final @Nullable String sourceResourceId;
 
-    @OutputCustomType.Constructor({"sourceResourceId"})
-    private CreationDataResponse(@Nullable String sourceResourceId) {
+    @OutputCustomType.Constructor
+    private CreationDataResponse(@OutputCustomType.Parameter("sourceResourceId") @Nullable String sourceResourceId) {
         this.sourceResourceId = sourceResourceId;
     }
 
@@ -50,7 +50,7 @@ public final class CreationDataResponse {
     	      this.sourceResourceId = defaults.sourceResourceId;
         }
 
-        public Builder setSourceResourceId(@Nullable String sourceResourceId) {
+        public Builder sourceResourceId(@Nullable String sourceResourceId) {
             this.sourceResourceId = sourceResourceId;
             return this;
         }

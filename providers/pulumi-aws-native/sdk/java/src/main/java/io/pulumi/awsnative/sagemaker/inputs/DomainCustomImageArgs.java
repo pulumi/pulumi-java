@@ -91,32 +91,32 @@ public final class DomainCustomImageArgs extends io.pulumi.resources.ResourceArg
     	      this.imageVersionNumber = defaults.imageVersionNumber;
         }
 
-        public Builder setAppImageConfigName(Input<String> appImageConfigName) {
+        public Builder appImageConfigName(Input<String> appImageConfigName) {
             this.appImageConfigName = Objects.requireNonNull(appImageConfigName);
             return this;
         }
 
-        public Builder setAppImageConfigName(String appImageConfigName) {
+        public Builder appImageConfigName(String appImageConfigName) {
             this.appImageConfigName = Input.of(Objects.requireNonNull(appImageConfigName));
             return this;
         }
 
-        public Builder setImageName(Input<String> imageName) {
+        public Builder imageName(Input<String> imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Input.of(Objects.requireNonNull(imageName));
             return this;
         }
 
-        public Builder setImageVersionNumber(@Nullable Input<Integer> imageVersionNumber) {
+        public Builder imageVersionNumber(@Nullable Input<Integer> imageVersionNumber) {
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
 
-        public Builder setImageVersionNumber(@Nullable Integer imageVersionNumber) {
+        public Builder imageVersionNumber(@Nullable Integer imageVersionNumber) {
             this.imageVersionNumber = Input.ofNullable(imageVersionNumber);
             return this;
         }

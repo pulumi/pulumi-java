@@ -17,8 +17,8 @@ public final class TriggerActionNotificationProperty {
      */
     private final @Nullable Integer notifyDelayAfter;
 
-    @OutputCustomType.Constructor({"notifyDelayAfter"})
-    private TriggerActionNotificationProperty(@Nullable Integer notifyDelayAfter) {
+    @OutputCustomType.Constructor
+    private TriggerActionNotificationProperty(@OutputCustomType.Parameter("notifyDelayAfter") @Nullable Integer notifyDelayAfter) {
         this.notifyDelayAfter = notifyDelayAfter;
     }
 
@@ -50,7 +50,7 @@ public final class TriggerActionNotificationProperty {
     	      this.notifyDelayAfter = defaults.notifyDelayAfter;
         }
 
-        public Builder setNotifyDelayAfter(@Nullable Integer notifyDelayAfter) {
+        public Builder notifyDelayAfter(@Nullable Integer notifyDelayAfter) {
             this.notifyDelayAfter = notifyDelayAfter;
             return this;
         }

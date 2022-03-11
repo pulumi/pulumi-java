@@ -32,12 +32,12 @@ public final class SolutionPropertiesResponse {
      */
     private final String workspaceResourceId;
 
-    @OutputCustomType.Constructor({"containedResources","provisioningState","referencedResources","workspaceResourceId"})
+    @OutputCustomType.Constructor
     private SolutionPropertiesResponse(
-        @Nullable List<String> containedResources,
-        String provisioningState,
-        @Nullable List<String> referencedResources,
-        String workspaceResourceId) {
+        @OutputCustomType.Parameter("containedResources") @Nullable List<String> containedResources,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("referencedResources") @Nullable List<String> referencedResources,
+        @OutputCustomType.Parameter("workspaceResourceId") String workspaceResourceId) {
         this.containedResources = containedResources;
         this.provisioningState = provisioningState;
         this.referencedResources = referencedResources;
@@ -99,22 +99,22 @@ public final class SolutionPropertiesResponse {
     	      this.workspaceResourceId = defaults.workspaceResourceId;
         }
 
-        public Builder setContainedResources(@Nullable List<String> containedResources) {
+        public Builder containedResources(@Nullable List<String> containedResources) {
             this.containedResources = containedResources;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setReferencedResources(@Nullable List<String> referencedResources) {
+        public Builder referencedResources(@Nullable List<String> referencedResources) {
             this.referencedResources = referencedResources;
             return this;
         }
 
-        public Builder setWorkspaceResourceId(String workspaceResourceId) {
+        public Builder workspaceResourceId(String workspaceResourceId) {
             this.workspaceResourceId = Objects.requireNonNull(workspaceResourceId);
             return this;
         }

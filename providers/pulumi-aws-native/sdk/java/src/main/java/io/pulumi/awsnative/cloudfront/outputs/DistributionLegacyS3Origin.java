@@ -14,10 +14,10 @@ public final class DistributionLegacyS3Origin {
     private final String dNSName;
     private final @Nullable String originAccessIdentity;
 
-    @OutputCustomType.Constructor({"dNSName","originAccessIdentity"})
+    @OutputCustomType.Constructor
     private DistributionLegacyS3Origin(
-        String dNSName,
-        @Nullable String originAccessIdentity) {
+        @OutputCustomType.Parameter("dNSName") String dNSName,
+        @OutputCustomType.Parameter("originAccessIdentity") @Nullable String originAccessIdentity) {
         this.dNSName = dNSName;
         this.originAccessIdentity = originAccessIdentity;
     }
@@ -51,12 +51,12 @@ public final class DistributionLegacyS3Origin {
     	      this.originAccessIdentity = defaults.originAccessIdentity;
         }
 
-        public Builder setDNSName(String dNSName) {
+        public Builder dNSName(String dNSName) {
             this.dNSName = Objects.requireNonNull(dNSName);
             return this;
         }
 
-        public Builder setOriginAccessIdentity(@Nullable String originAccessIdentity) {
+        public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }

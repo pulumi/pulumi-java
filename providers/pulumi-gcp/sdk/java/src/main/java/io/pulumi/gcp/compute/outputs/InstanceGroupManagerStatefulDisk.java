@@ -22,10 +22,10 @@ public final class InstanceGroupManagerStatefulDisk {
      */
     private final String deviceName;
 
-    @OutputCustomType.Constructor({"deleteRule","deviceName"})
+    @OutputCustomType.Constructor
     private InstanceGroupManagerStatefulDisk(
-        @Nullable String deleteRule,
-        String deviceName) {
+        @OutputCustomType.Parameter("deleteRule") @Nullable String deleteRule,
+        @OutputCustomType.Parameter("deviceName") String deviceName) {
         this.deleteRule = deleteRule;
         this.deviceName = deviceName;
     }
@@ -67,12 +67,12 @@ public final class InstanceGroupManagerStatefulDisk {
     	      this.deviceName = defaults.deviceName;
         }
 
-        public Builder setDeleteRule(@Nullable String deleteRule) {
+        public Builder deleteRule(@Nullable String deleteRule) {
             this.deleteRule = deleteRule;
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }

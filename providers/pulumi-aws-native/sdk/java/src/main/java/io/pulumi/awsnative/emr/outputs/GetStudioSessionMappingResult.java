@@ -17,8 +17,8 @@ public final class GetStudioSessionMappingResult {
      */
     private final @Nullable String sessionPolicyArn;
 
-    @OutputCustomType.Constructor({"sessionPolicyArn"})
-    private GetStudioSessionMappingResult(@Nullable String sessionPolicyArn) {
+    @OutputCustomType.Constructor
+    private GetStudioSessionMappingResult(@OutputCustomType.Parameter("sessionPolicyArn") @Nullable String sessionPolicyArn) {
         this.sessionPolicyArn = sessionPolicyArn;
     }
 
@@ -50,7 +50,7 @@ public final class GetStudioSessionMappingResult {
     	      this.sessionPolicyArn = defaults.sessionPolicyArn;
         }
 
-        public Builder setSessionPolicyArn(@Nullable String sessionPolicyArn) {
+        public Builder sessionPolicyArn(@Nullable String sessionPolicyArn) {
             this.sessionPolicyArn = sessionPolicyArn;
             return this;
         }

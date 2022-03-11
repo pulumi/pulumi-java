@@ -269,132 +269,132 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsName(Input<String> dnsName) {
+        public Builder dnsName(Input<String> dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Input.of(Objects.requireNonNull(dnsName));
             return this;
         }
 
-        public Builder setDnssecConfig(@Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig) {
+        public Builder dnssecConfig(@Nullable Input<ManagedZoneDnssecConfigArgs> dnssecConfig) {
             this.dnssecConfig = dnssecConfig;
             return this;
         }
 
-        public Builder setDnssecConfig(@Nullable ManagedZoneDnssecConfigArgs dnssecConfig) {
+        public Builder dnssecConfig(@Nullable ManagedZoneDnssecConfigArgs dnssecConfig) {
             this.dnssecConfig = Input.ofNullable(dnssecConfig);
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Input<Boolean> forceDestroy) {
+        public Builder forceDestroy(@Nullable Input<Boolean> forceDestroy) {
             this.forceDestroy = forceDestroy;
             return this;
         }
 
-        public Builder setForceDestroy(@Nullable Boolean forceDestroy) {
+        public Builder forceDestroy(@Nullable Boolean forceDestroy) {
             this.forceDestroy = Input.ofNullable(forceDestroy);
             return this;
         }
 
-        public Builder setForwardingConfig(@Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig) {
+        public Builder forwardingConfig(@Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig) {
             this.forwardingConfig = forwardingConfig;
             return this;
         }
 
-        public Builder setForwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
+        public Builder forwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
             this.forwardingConfig = Input.ofNullable(forwardingConfig);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPeeringConfig(@Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig) {
+        public Builder peeringConfig(@Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig) {
             this.peeringConfig = peeringConfig;
             return this;
         }
 
-        public Builder setPeeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
+        public Builder peeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
             this.peeringConfig = Input.ofNullable(peeringConfig);
             return this;
         }
 
-        public Builder setPrivateVisibilityConfig(@Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
             this.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
 
-        public Builder setPrivateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
             this.privateVisibilityConfig = Input.ofNullable(privateVisibilityConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReverseLookup(@Nullable Input<Boolean> reverseLookup) {
+        public Builder reverseLookup(@Nullable Input<Boolean> reverseLookup) {
             this.reverseLookup = reverseLookup;
             return this;
         }
 
-        public Builder setReverseLookup(@Nullable Boolean reverseLookup) {
+        public Builder reverseLookup(@Nullable Boolean reverseLookup) {
             this.reverseLookup = Input.ofNullable(reverseLookup);
             return this;
         }
 
-        public Builder setServiceDirectoryConfig(@Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
             this.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
 
-        public Builder setServiceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
             this.serviceDirectoryConfig = Input.ofNullable(serviceDirectoryConfig);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<String> visibility) {
+        public Builder visibility(@Nullable Input<String> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable String visibility) {
+        public Builder visibility(@Nullable String visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

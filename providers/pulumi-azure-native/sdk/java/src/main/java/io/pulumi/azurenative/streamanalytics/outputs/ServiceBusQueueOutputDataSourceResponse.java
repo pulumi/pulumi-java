@@ -44,14 +44,14 @@ public final class ServiceBusQueueOutputDataSourceResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"propertyColumns","queueName","serviceBusNamespace","sharedAccessPolicyKey","sharedAccessPolicyName","type"})
+    @OutputCustomType.Constructor
     private ServiceBusQueueOutputDataSourceResponse(
-        @Nullable List<String> propertyColumns,
-        @Nullable String queueName,
-        @Nullable String serviceBusNamespace,
-        @Nullable String sharedAccessPolicyKey,
-        @Nullable String sharedAccessPolicyName,
-        String type) {
+        @OutputCustomType.Parameter("propertyColumns") @Nullable List<String> propertyColumns,
+        @OutputCustomType.Parameter("queueName") @Nullable String queueName,
+        @OutputCustomType.Parameter("serviceBusNamespace") @Nullable String serviceBusNamespace,
+        @OutputCustomType.Parameter("sharedAccessPolicyKey") @Nullable String sharedAccessPolicyKey,
+        @OutputCustomType.Parameter("sharedAccessPolicyName") @Nullable String sharedAccessPolicyName,
+        @OutputCustomType.Parameter("type") String type) {
         this.propertyColumns = propertyColumns;
         this.queueName = queueName;
         this.serviceBusNamespace = serviceBusNamespace;
@@ -134,32 +134,32 @@ public final class ServiceBusQueueOutputDataSourceResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPropertyColumns(@Nullable List<String> propertyColumns) {
+        public Builder propertyColumns(@Nullable List<String> propertyColumns) {
             this.propertyColumns = propertyColumns;
             return this;
         }
 
-        public Builder setQueueName(@Nullable String queueName) {
+        public Builder queueName(@Nullable String queueName) {
             this.queueName = queueName;
             return this;
         }
 
-        public Builder setServiceBusNamespace(@Nullable String serviceBusNamespace) {
+        public Builder serviceBusNamespace(@Nullable String serviceBusNamespace) {
             this.serviceBusNamespace = serviceBusNamespace;
             return this;
         }
 
-        public Builder setSharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
+        public Builder sharedAccessPolicyKey(@Nullable String sharedAccessPolicyKey) {
             this.sharedAccessPolicyKey = sharedAccessPolicyKey;
             return this;
         }
 
-        public Builder setSharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
+        public Builder sharedAccessPolicyName(@Nullable String sharedAccessPolicyName) {
             this.sharedAccessPolicyName = sharedAccessPolicyName;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

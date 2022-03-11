@@ -51,15 +51,15 @@ public final class SolutionPropertiesResponse {
      */
     private final @Nullable String tool;
 
-    @OutputCustomType.Constructor({"cleanupState","details","goal","purpose","status","summary","tool"})
+    @OutputCustomType.Constructor
     private SolutionPropertiesResponse(
-        @Nullable String cleanupState,
-        @Nullable SolutionDetailsResponse details,
-        @Nullable String goal,
-        @Nullable String purpose,
-        @Nullable String status,
-        @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
-        @Nullable String tool) {
+        @OutputCustomType.Parameter("cleanupState") @Nullable String cleanupState,
+        @OutputCustomType.Parameter("details") @Nullable SolutionDetailsResponse details,
+        @OutputCustomType.Parameter("goal") @Nullable String goal,
+        @OutputCustomType.Parameter("purpose") @Nullable String purpose,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("summary") @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary,
+        @OutputCustomType.Parameter("tool") @Nullable String tool) {
         this.cleanupState = cleanupState;
         this.details = details;
         this.goal = goal;
@@ -151,37 +151,37 @@ public final class SolutionPropertiesResponse {
     	      this.tool = defaults.tool;
         }
 
-        public Builder setCleanupState(@Nullable String cleanupState) {
+        public Builder cleanupState(@Nullable String cleanupState) {
             this.cleanupState = cleanupState;
             return this;
         }
 
-        public Builder setDetails(@Nullable SolutionDetailsResponse details) {
+        public Builder details(@Nullable SolutionDetailsResponse details) {
             this.details = details;
             return this;
         }
 
-        public Builder setGoal(@Nullable String goal) {
+        public Builder goal(@Nullable String goal) {
             this.goal = goal;
             return this;
         }
 
-        public Builder setPurpose(@Nullable String purpose) {
+        public Builder purpose(@Nullable String purpose) {
             this.purpose = purpose;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSummary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
+        public Builder summary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
             this.summary = summary;
             return this;
         }
 
-        public Builder setTool(@Nullable String tool) {
+        public Builder tool(@Nullable String tool) {
             this.tool = tool;
             return this;
         }

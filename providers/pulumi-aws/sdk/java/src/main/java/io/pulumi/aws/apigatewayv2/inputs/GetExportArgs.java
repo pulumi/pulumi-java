@@ -135,32 +135,32 @@ public final class GetExportArgs extends io.pulumi.resources.InvokeArgs {
     	      this.stageName = defaults.stageName;
         }
 
-        public Builder setApiId(String apiId) {
+        public Builder apiId(String apiId) {
             this.apiId = Objects.requireNonNull(apiId);
             return this;
         }
 
-        public Builder setExportVersion(@Nullable String exportVersion) {
+        public Builder exportVersion(@Nullable String exportVersion) {
             this.exportVersion = exportVersion;
             return this;
         }
 
-        public Builder setIncludeExtensions(@Nullable Boolean includeExtensions) {
+        public Builder includeExtensions(@Nullable Boolean includeExtensions) {
             this.includeExtensions = includeExtensions;
             return this;
         }
 
-        public Builder setOutputType(String outputType) {
+        public Builder outputType(String outputType) {
             this.outputType = Objects.requireNonNull(outputType);
             return this;
         }
 
-        public Builder setSpecification(String specification) {
+        public Builder specification(String specification) {
             this.specification = Objects.requireNonNull(specification);
             return this;
         }
 
-        public Builder setStageName(@Nullable String stageName) {
+        public Builder stageName(@Nullable String stageName) {
             this.stageName = stageName;
             return this;
         }

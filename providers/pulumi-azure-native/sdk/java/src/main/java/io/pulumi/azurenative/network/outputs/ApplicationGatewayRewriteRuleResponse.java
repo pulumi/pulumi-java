@@ -36,12 +36,12 @@ public final class ApplicationGatewayRewriteRuleResponse {
      */
     private final @Nullable Integer ruleSequence;
 
-    @OutputCustomType.Constructor({"actionSet","conditions","name","ruleSequence"})
+    @OutputCustomType.Constructor
     private ApplicationGatewayRewriteRuleResponse(
-        @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
-        @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
-        @Nullable String name,
-        @Nullable Integer ruleSequence) {
+        @OutputCustomType.Parameter("actionSet") @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet,
+        @OutputCustomType.Parameter("conditions") @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleSequence") @Nullable Integer ruleSequence) {
         this.actionSet = actionSet;
         this.conditions = conditions;
         this.name = name;
@@ -103,22 +103,22 @@ public final class ApplicationGatewayRewriteRuleResponse {
     	      this.ruleSequence = defaults.ruleSequence;
         }
 
-        public Builder setActionSet(@Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet) {
+        public Builder actionSet(@Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet) {
             this.actionSet = actionSet;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
+        public Builder conditions(@Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRuleSequence(@Nullable Integer ruleSequence) {
+        public Builder ruleSequence(@Nullable Integer ruleSequence) {
             this.ruleSequence = ruleSequence;
             return this;
         }

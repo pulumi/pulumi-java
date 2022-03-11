@@ -22,11 +22,11 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
     private final Integer storageCapacityQuotaGib;
     private final String type;
 
-    @OutputCustomType.Constructor({"id","storageCapacityQuotaGib","type"})
+    @OutputCustomType.Constructor
     private OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota(
-        Integer id,
-        Integer storageCapacityQuotaGib,
-        String type) {
+        @OutputCustomType.Parameter("id") Integer id,
+        @OutputCustomType.Parameter("storageCapacityQuotaGib") Integer storageCapacityQuotaGib,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.storageCapacityQuotaGib = storageCapacityQuotaGib;
         this.type = type;
@@ -74,17 +74,17 @@ public final class OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuota {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(Integer id) {
+        public Builder id(Integer id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setStorageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
+        public Builder storageCapacityQuotaGib(Integer storageCapacityQuotaGib) {
             this.storageCapacityQuotaGib = Objects.requireNonNull(storageCapacityQuotaGib);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

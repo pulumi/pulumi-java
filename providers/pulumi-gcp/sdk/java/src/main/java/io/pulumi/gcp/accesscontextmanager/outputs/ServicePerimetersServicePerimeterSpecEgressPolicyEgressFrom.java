@@ -28,10 +28,10 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
      */
     private final @Nullable String identityType;
 
-    @OutputCustomType.Constructor({"identities","identityType"})
+    @OutputCustomType.Constructor
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom(
-        @Nullable List<String> identities,
-        @Nullable String identityType) {
+        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
+        @OutputCustomType.Parameter("identityType") @Nullable String identityType) {
         this.identities = identities;
         this.identityType = identityType;
     }
@@ -78,12 +78,12 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFrom {
     	      this.identityType = defaults.identityType;
         }
 
-        public Builder setIdentities(@Nullable List<String> identities) {
+        public Builder identities(@Nullable List<String> identities) {
             this.identities = identities;
             return this;
         }
 
-        public Builder setIdentityType(@Nullable String identityType) {
+        public Builder identityType(@Nullable String identityType) {
             this.identityType = identityType;
             return this;
         }

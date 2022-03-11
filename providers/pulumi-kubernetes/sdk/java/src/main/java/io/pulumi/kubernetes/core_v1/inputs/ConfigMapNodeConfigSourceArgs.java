@@ -122,52 +122,52 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
     	      this.uid = defaults.uid;
         }
 
-        public Builder setKubeletConfigKey(Input<String> kubeletConfigKey) {
+        public Builder kubeletConfigKey(Input<String> kubeletConfigKey) {
             this.kubeletConfigKey = Objects.requireNonNull(kubeletConfigKey);
             return this;
         }
 
-        public Builder setKubeletConfigKey(String kubeletConfigKey) {
+        public Builder kubeletConfigKey(String kubeletConfigKey) {
             this.kubeletConfigKey = Input.of(Objects.requireNonNull(kubeletConfigKey));
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNamespace(Input<String> namespace) {
+        public Builder namespace(Input<String> namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable Input<String> resourceVersion) {
+        public Builder resourceVersion(@Nullable Input<String> resourceVersion) {
             this.resourceVersion = resourceVersion;
             return this;
         }
 
-        public Builder setResourceVersion(@Nullable String resourceVersion) {
+        public Builder resourceVersion(@Nullable String resourceVersion) {
             this.resourceVersion = Input.ofNullable(resourceVersion);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<String> uid) {
+        public Builder uid(@Nullable Input<String> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable String uid) {
+        public Builder uid(@Nullable String uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }

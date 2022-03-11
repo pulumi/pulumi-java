@@ -15,11 +15,11 @@ public final class GetClusterResourceUsageExportConfig {
     private final Boolean enableNetworkEgressMetering;
     private final Boolean enableResourceConsumptionMetering;
 
-    @OutputCustomType.Constructor({"bigqueryDestinations","enableNetworkEgressMetering","enableResourceConsumptionMetering"})
+    @OutputCustomType.Constructor
     private GetClusterResourceUsageExportConfig(
-        List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
-        Boolean enableNetworkEgressMetering,
-        Boolean enableResourceConsumptionMetering) {
+        @OutputCustomType.Parameter("bigqueryDestinations") List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations,
+        @OutputCustomType.Parameter("enableNetworkEgressMetering") Boolean enableNetworkEgressMetering,
+        @OutputCustomType.Parameter("enableResourceConsumptionMetering") Boolean enableResourceConsumptionMetering) {
         this.bigqueryDestinations = bigqueryDestinations;
         this.enableNetworkEgressMetering = enableNetworkEgressMetering;
         this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
@@ -59,17 +59,17 @@ public final class GetClusterResourceUsageExportConfig {
     	      this.enableResourceConsumptionMetering = defaults.enableResourceConsumptionMetering;
         }
 
-        public Builder setBigqueryDestinations(List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations) {
+        public Builder bigqueryDestinations(List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations) {
             this.bigqueryDestinations = Objects.requireNonNull(bigqueryDestinations);
             return this;
         }
 
-        public Builder setEnableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
+        public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
 
-        public Builder setEnableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
+        public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
             this.enableResourceConsumptionMetering = Objects.requireNonNull(enableResourceConsumptionMetering);
             return this;
         }

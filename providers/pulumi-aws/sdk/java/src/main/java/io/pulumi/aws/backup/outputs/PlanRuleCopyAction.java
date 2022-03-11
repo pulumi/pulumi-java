@@ -23,10 +23,10 @@ public final class PlanRuleCopyAction {
      */
     private final @Nullable PlanRuleCopyActionLifecycle lifecycle;
 
-    @OutputCustomType.Constructor({"destinationVaultArn","lifecycle"})
+    @OutputCustomType.Constructor
     private PlanRuleCopyAction(
-        String destinationVaultArn,
-        @Nullable PlanRuleCopyActionLifecycle lifecycle) {
+        @OutputCustomType.Parameter("destinationVaultArn") String destinationVaultArn,
+        @OutputCustomType.Parameter("lifecycle") @Nullable PlanRuleCopyActionLifecycle lifecycle) {
         this.destinationVaultArn = destinationVaultArn;
         this.lifecycle = lifecycle;
     }
@@ -68,12 +68,12 @@ public final class PlanRuleCopyAction {
     	      this.lifecycle = defaults.lifecycle;
         }
 
-        public Builder setDestinationVaultArn(String destinationVaultArn) {
+        public Builder destinationVaultArn(String destinationVaultArn) {
             this.destinationVaultArn = Objects.requireNonNull(destinationVaultArn);
             return this;
         }
 
-        public Builder setLifecycle(@Nullable PlanRuleCopyActionLifecycle lifecycle) {
+        public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycle lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }

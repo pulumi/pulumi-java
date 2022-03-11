@@ -13,10 +13,10 @@ public final class CertificatePolicyQualifierInfo {
     private final String policyQualifierId;
     private final CertificateQualifier qualifier;
 
-    @OutputCustomType.Constructor({"policyQualifierId","qualifier"})
+    @OutputCustomType.Constructor
     private CertificatePolicyQualifierInfo(
-        String policyQualifierId,
-        CertificateQualifier qualifier) {
+        @OutputCustomType.Parameter("policyQualifierId") String policyQualifierId,
+        @OutputCustomType.Parameter("qualifier") CertificateQualifier qualifier) {
         this.policyQualifierId = policyQualifierId;
         this.qualifier = qualifier;
     }
@@ -50,12 +50,12 @@ public final class CertificatePolicyQualifierInfo {
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setPolicyQualifierId(String policyQualifierId) {
+        public Builder policyQualifierId(String policyQualifierId) {
             this.policyQualifierId = Objects.requireNonNull(policyQualifierId);
             return this;
         }
 
-        public Builder setQualifier(CertificateQualifier qualifier) {
+        public Builder qualifier(CertificateQualifier qualifier) {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }

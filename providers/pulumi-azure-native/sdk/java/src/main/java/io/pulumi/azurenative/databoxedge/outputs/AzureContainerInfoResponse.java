@@ -25,11 +25,11 @@ public final class AzureContainerInfoResponse {
      */
     private final String storageAccountCredentialId;
 
-    @OutputCustomType.Constructor({"containerName","dataFormat","storageAccountCredentialId"})
+    @OutputCustomType.Constructor
     private AzureContainerInfoResponse(
-        String containerName,
-        String dataFormat,
-        String storageAccountCredentialId) {
+        @OutputCustomType.Parameter("containerName") String containerName,
+        @OutputCustomType.Parameter("dataFormat") String dataFormat,
+        @OutputCustomType.Parameter("storageAccountCredentialId") String storageAccountCredentialId) {
         this.containerName = containerName;
         this.dataFormat = dataFormat;
         this.storageAccountCredentialId = storageAccountCredentialId;
@@ -81,17 +81,17 @@ public final class AzureContainerInfoResponse {
     	      this.storageAccountCredentialId = defaults.storageAccountCredentialId;
         }
 
-        public Builder setContainerName(String containerName) {
+        public Builder containerName(String containerName) {
             this.containerName = Objects.requireNonNull(containerName);
             return this;
         }
 
-        public Builder setDataFormat(String dataFormat) {
+        public Builder dataFormat(String dataFormat) {
             this.dataFormat = Objects.requireNonNull(dataFormat);
             return this;
         }
 
-        public Builder setStorageAccountCredentialId(String storageAccountCredentialId) {
+        public Builder storageAccountCredentialId(String storageAccountCredentialId) {
             this.storageAccountCredentialId = Objects.requireNonNull(storageAccountCredentialId);
             return this;
         }

@@ -27,11 +27,11 @@ public final class ApplicationClientDetailsResponse {
      */
     private final @Nullable String puid;
 
-    @OutputCustomType.Constructor({"applicationId","oid","puid"})
+    @OutputCustomType.Constructor
     private ApplicationClientDetailsResponse(
-        @Nullable String applicationId,
-        @Nullable String oid,
-        @Nullable String puid) {
+        @OutputCustomType.Parameter("applicationId") @Nullable String applicationId,
+        @OutputCustomType.Parameter("oid") @Nullable String oid,
+        @OutputCustomType.Parameter("puid") @Nullable String puid) {
         this.applicationId = applicationId;
         this.oid = oid;
         this.puid = puid;
@@ -83,17 +83,17 @@ public final class ApplicationClientDetailsResponse {
     	      this.puid = defaults.puid;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setOid(@Nullable String oid) {
+        public Builder oid(@Nullable String oid) {
             this.oid = oid;
             return this;
         }
 
-        public Builder setPuid(@Nullable String puid) {
+        public Builder puid(@Nullable String puid) {
             this.puid = puid;
             return this;
         }

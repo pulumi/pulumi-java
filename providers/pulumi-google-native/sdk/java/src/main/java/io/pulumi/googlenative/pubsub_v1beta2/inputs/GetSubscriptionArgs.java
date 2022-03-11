@@ -62,12 +62,12 @@ public final class GetSubscriptionArgs extends io.pulumi.resources.InvokeArgs {
     	      this.subscriptionId = defaults.subscriptionId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setSubscriptionId(String subscriptionId) {
+        public Builder subscriptionId(String subscriptionId) {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }

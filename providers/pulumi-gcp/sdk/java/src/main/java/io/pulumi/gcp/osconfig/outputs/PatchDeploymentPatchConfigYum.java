@@ -36,12 +36,12 @@ public final class PatchDeploymentPatchConfigYum {
      */
     private final @Nullable Boolean security;
 
-    @OutputCustomType.Constructor({"excludes","exclusivePackages","minimal","security"})
+    @OutputCustomType.Constructor
     private PatchDeploymentPatchConfigYum(
-        @Nullable List<String> excludes,
-        @Nullable List<String> exclusivePackages,
-        @Nullable Boolean minimal,
-        @Nullable Boolean security) {
+        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @OutputCustomType.Parameter("exclusivePackages") @Nullable List<String> exclusivePackages,
+        @OutputCustomType.Parameter("minimal") @Nullable Boolean minimal,
+        @OutputCustomType.Parameter("security") @Nullable Boolean security) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.minimal = minimal;
@@ -105,22 +105,22 @@ public final class PatchDeploymentPatchConfigYum {
     	      this.security = defaults.security;
         }
 
-        public Builder setExcludes(@Nullable List<String> excludes) {
+        public Builder excludes(@Nullable List<String> excludes) {
             this.excludes = excludes;
             return this;
         }
 
-        public Builder setExclusivePackages(@Nullable List<String> exclusivePackages) {
+        public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
             this.exclusivePackages = exclusivePackages;
             return this;
         }
 
-        public Builder setMinimal(@Nullable Boolean minimal) {
+        public Builder minimal(@Nullable Boolean minimal) {
             this.minimal = minimal;
             return this;
         }
 
-        public Builder setSecurity(@Nullable Boolean security) {
+        public Builder security(@Nullable Boolean security) {
             this.security = security;
             return this;
         }

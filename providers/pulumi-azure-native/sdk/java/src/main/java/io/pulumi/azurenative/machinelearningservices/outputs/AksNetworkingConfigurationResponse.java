@@ -32,12 +32,12 @@ public final class AksNetworkingConfigurationResponse {
      */
     private final @Nullable String subnetId;
 
-    @OutputCustomType.Constructor({"dnsServiceIP","dockerBridgeCidr","serviceCidr","subnetId"})
+    @OutputCustomType.Constructor
     private AksNetworkingConfigurationResponse(
-        @Nullable String dnsServiceIP,
-        @Nullable String dockerBridgeCidr,
-        @Nullable String serviceCidr,
-        @Nullable String subnetId) {
+        @OutputCustomType.Parameter("dnsServiceIP") @Nullable String dnsServiceIP,
+        @OutputCustomType.Parameter("dockerBridgeCidr") @Nullable String dockerBridgeCidr,
+        @OutputCustomType.Parameter("serviceCidr") @Nullable String serviceCidr,
+        @OutputCustomType.Parameter("subnetId") @Nullable String subnetId) {
         this.dnsServiceIP = dnsServiceIP;
         this.dockerBridgeCidr = dockerBridgeCidr;
         this.serviceCidr = serviceCidr;
@@ -99,22 +99,22 @@ public final class AksNetworkingConfigurationResponse {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setDnsServiceIP(@Nullable String dnsServiceIP) {
+        public Builder dnsServiceIP(@Nullable String dnsServiceIP) {
             this.dnsServiceIP = dnsServiceIP;
             return this;
         }
 
-        public Builder setDockerBridgeCidr(@Nullable String dockerBridgeCidr) {
+        public Builder dockerBridgeCidr(@Nullable String dockerBridgeCidr) {
             this.dockerBridgeCidr = dockerBridgeCidr;
             return this;
         }
 
-        public Builder setServiceCidr(@Nullable String serviceCidr) {
+        public Builder serviceCidr(@Nullable String serviceCidr) {
             this.serviceCidr = serviceCidr;
             return this;
         }
 
-        public Builder setSubnetId(@Nullable String subnetId) {
+        public Builder subnetId(@Nullable String subnetId) {
             this.subnetId = subnetId;
             return this;
         }

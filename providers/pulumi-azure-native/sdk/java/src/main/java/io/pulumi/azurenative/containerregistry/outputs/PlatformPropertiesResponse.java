@@ -27,11 +27,11 @@ public final class PlatformPropertiesResponse {
      */
     private final @Nullable String variant;
 
-    @OutputCustomType.Constructor({"architecture","os","variant"})
+    @OutputCustomType.Constructor
     private PlatformPropertiesResponse(
-        @Nullable String architecture,
-        String os,
-        @Nullable String variant) {
+        @OutputCustomType.Parameter("architecture") @Nullable String architecture,
+        @OutputCustomType.Parameter("os") String os,
+        @OutputCustomType.Parameter("variant") @Nullable String variant) {
         this.architecture = architecture;
         this.os = os;
         this.variant = variant;
@@ -83,17 +83,17 @@ public final class PlatformPropertiesResponse {
     	      this.variant = defaults.variant;
         }
 
-        public Builder setArchitecture(@Nullable String architecture) {
+        public Builder architecture(@Nullable String architecture) {
             this.architecture = architecture;
             return this;
         }
 
-        public Builder setOs(String os) {
+        public Builder os(String os) {
             this.os = Objects.requireNonNull(os);
             return this;
         }
 
-        public Builder setVariant(@Nullable String variant) {
+        public Builder variant(@Nullable String variant) {
             this.variant = variant;
             return this;
         }

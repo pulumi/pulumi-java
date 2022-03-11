@@ -23,14 +23,14 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
     private final @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity;
     private final @Nullable ResponseHeadersPolicyXSSProtection xSSProtection;
 
-    @OutputCustomType.Constructor({"contentSecurityPolicy","contentTypeOptions","frameOptions","referrerPolicy","strictTransportSecurity","xSSProtection"})
+    @OutputCustomType.Constructor
     private ResponseHeadersPolicySecurityHeadersConfig(
-        @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy,
-        @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions,
-        @Nullable ResponseHeadersPolicyFrameOptions frameOptions,
-        @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy,
-        @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity,
-        @Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
+        @OutputCustomType.Parameter("contentSecurityPolicy") @Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy,
+        @OutputCustomType.Parameter("contentTypeOptions") @Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions,
+        @OutputCustomType.Parameter("frameOptions") @Nullable ResponseHeadersPolicyFrameOptions frameOptions,
+        @OutputCustomType.Parameter("referrerPolicy") @Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy,
+        @OutputCustomType.Parameter("strictTransportSecurity") @Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity,
+        @OutputCustomType.Parameter("xSSProtection") @Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
         this.contentSecurityPolicy = contentSecurityPolicy;
         this.contentTypeOptions = contentTypeOptions;
         this.frameOptions = frameOptions;
@@ -88,32 +88,32 @@ public final class ResponseHeadersPolicySecurityHeadersConfig {
     	      this.xSSProtection = defaults.xSSProtection;
         }
 
-        public Builder setContentSecurityPolicy(@Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy) {
+        public Builder contentSecurityPolicy(@Nullable ResponseHeadersPolicyContentSecurityPolicy contentSecurityPolicy) {
             this.contentSecurityPolicy = contentSecurityPolicy;
             return this;
         }
 
-        public Builder setContentTypeOptions(@Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions) {
+        public Builder contentTypeOptions(@Nullable ResponseHeadersPolicyContentTypeOptions contentTypeOptions) {
             this.contentTypeOptions = contentTypeOptions;
             return this;
         }
 
-        public Builder setFrameOptions(@Nullable ResponseHeadersPolicyFrameOptions frameOptions) {
+        public Builder frameOptions(@Nullable ResponseHeadersPolicyFrameOptions frameOptions) {
             this.frameOptions = frameOptions;
             return this;
         }
 
-        public Builder setReferrerPolicy(@Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy) {
+        public Builder referrerPolicy(@Nullable ResponseHeadersPolicyReferrerPolicy referrerPolicy) {
             this.referrerPolicy = referrerPolicy;
             return this;
         }
 
-        public Builder setStrictTransportSecurity(@Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity) {
+        public Builder strictTransportSecurity(@Nullable ResponseHeadersPolicyStrictTransportSecurity strictTransportSecurity) {
             this.strictTransportSecurity = strictTransportSecurity;
             return this;
         }
 
-        public Builder setXSSProtection(@Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
+        public Builder xSSProtection(@Nullable ResponseHeadersPolicyXSSProtection xSSProtection) {
             this.xSSProtection = xSSProtection;
             return this;
         }

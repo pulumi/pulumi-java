@@ -64,18 +64,18 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"databaseName","endedOn","exceptionsAndWarnings","id","message","resultType","sizeMB","stage","startedOn","state"})
+    @OutputCustomType.Constructor
     private MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse(
-        String databaseName,
-        String endedOn,
-        List<ReportableExceptionResponse> exceptionsAndWarnings,
-        String id,
-        String message,
-        String resultType,
-        Double sizeMB,
-        String stage,
-        String startedOn,
-        String state) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("endedOn") String endedOn,
+        @OutputCustomType.Parameter("exceptionsAndWarnings") List<ReportableExceptionResponse> exceptionsAndWarnings,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("resultType") String resultType,
+        @OutputCustomType.Parameter("sizeMB") Double sizeMB,
+        @OutputCustomType.Parameter("stage") String stage,
+        @OutputCustomType.Parameter("startedOn") String startedOn,
+        @OutputCustomType.Parameter("state") String state) {
         this.databaseName = databaseName;
         this.endedOn = endedOn;
         this.exceptionsAndWarnings = exceptionsAndWarnings;
@@ -198,52 +198,52 @@ public final class MigrateSqlServerSqlMITaskOutputDatabaseLevelResponse {
     	      this.state = defaults.state;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setEndedOn(String endedOn) {
+        public Builder endedOn(String endedOn) {
             this.endedOn = Objects.requireNonNull(endedOn);
             return this;
         }
 
-        public Builder setExceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
+        public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             this.exceptionsAndWarnings = Objects.requireNonNull(exceptionsAndWarnings);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setResultType(String resultType) {
+        public Builder resultType(String resultType) {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
 
-        public Builder setSizeMB(Double sizeMB) {
+        public Builder sizeMB(Double sizeMB) {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }
 
-        public Builder setStage(String stage) {
+        public Builder stage(String stage) {
             this.stage = Objects.requireNonNull(stage);
             return this;
         }
 
-        public Builder setStartedOn(String startedOn) {
+        public Builder startedOn(String startedOn) {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

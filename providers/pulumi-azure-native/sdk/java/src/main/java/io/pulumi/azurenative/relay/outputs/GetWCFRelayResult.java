@@ -69,19 +69,19 @@ public final class GetWCFRelayResult {
      */
     private final @Nullable String userMetadata;
 
-    @OutputCustomType.Constructor({"createdAt","id","isDynamic","listenerCount","name","relayType","requiresClientAuthorization","requiresTransportSecurity","type","updatedAt","userMetadata"})
+    @OutputCustomType.Constructor
     private GetWCFRelayResult(
-        String createdAt,
-        String id,
-        Boolean isDynamic,
-        Integer listenerCount,
-        String name,
-        @Nullable String relayType,
-        @Nullable Boolean requiresClientAuthorization,
-        @Nullable Boolean requiresTransportSecurity,
-        String type,
-        String updatedAt,
-        @Nullable String userMetadata) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDynamic") Boolean isDynamic,
+        @OutputCustomType.Parameter("listenerCount") Integer listenerCount,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relayType") @Nullable String relayType,
+        @OutputCustomType.Parameter("requiresClientAuthorization") @Nullable Boolean requiresClientAuthorization,
+        @OutputCustomType.Parameter("requiresTransportSecurity") @Nullable Boolean requiresTransportSecurity,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt,
+        @OutputCustomType.Parameter("userMetadata") @Nullable String userMetadata) {
         this.createdAt = createdAt;
         this.id = id;
         this.isDynamic = isDynamic;
@@ -213,57 +213,57 @@ public final class GetWCFRelayResult {
     	      this.userMetadata = defaults.userMetadata;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsDynamic(Boolean isDynamic) {
+        public Builder isDynamic(Boolean isDynamic) {
             this.isDynamic = Objects.requireNonNull(isDynamic);
             return this;
         }
 
-        public Builder setListenerCount(Integer listenerCount) {
+        public Builder listenerCount(Integer listenerCount) {
             this.listenerCount = Objects.requireNonNull(listenerCount);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelayType(@Nullable String relayType) {
+        public Builder relayType(@Nullable String relayType) {
             this.relayType = relayType;
             return this;
         }
 
-        public Builder setRequiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
+        public Builder requiresClientAuthorization(@Nullable Boolean requiresClientAuthorization) {
             this.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
-        public Builder setRequiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
+        public Builder requiresTransportSecurity(@Nullable Boolean requiresTransportSecurity) {
             this.requiresTransportSecurity = requiresTransportSecurity;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
 
-        public Builder setUserMetadata(@Nullable String userMetadata) {
+        public Builder userMetadata(@Nullable String userMetadata) {
             this.userMetadata = userMetadata;
             return this;
         }

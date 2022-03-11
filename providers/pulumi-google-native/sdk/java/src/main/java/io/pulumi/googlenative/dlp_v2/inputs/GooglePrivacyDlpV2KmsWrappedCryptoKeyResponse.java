@@ -72,12 +72,12 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse extends io.pulu
     	      this.wrappedKey = defaults.wrappedKey;
         }
 
-        public Builder setCryptoKeyName(String cryptoKeyName) {
+        public Builder cryptoKeyName(String cryptoKeyName) {
             this.cryptoKeyName = Objects.requireNonNull(cryptoKeyName);
             return this;
         }
 
-        public Builder setWrappedKey(String wrappedKey) {
+        public Builder wrappedKey(String wrappedKey) {
             this.wrappedKey = Objects.requireNonNull(wrappedKey);
             return this;
         }

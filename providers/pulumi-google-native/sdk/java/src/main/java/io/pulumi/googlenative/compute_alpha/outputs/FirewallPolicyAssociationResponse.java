@@ -35,13 +35,13 @@ public final class FirewallPolicyAssociationResponse {
      */
     private final String shortName;
 
-    @OutputCustomType.Constructor({"attachmentTarget","displayName","firewallPolicyId","name","shortName"})
+    @OutputCustomType.Constructor
     private FirewallPolicyAssociationResponse(
-        String attachmentTarget,
-        String displayName,
-        String firewallPolicyId,
-        String name,
-        String shortName) {
+        @OutputCustomType.Parameter("attachmentTarget") String attachmentTarget,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("firewallPolicyId") String firewallPolicyId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("shortName") String shortName) {
         this.attachmentTarget = attachmentTarget;
         this.displayName = displayName;
         this.firewallPolicyId = firewallPolicyId;
@@ -113,27 +113,27 @@ public final class FirewallPolicyAssociationResponse {
     	      this.shortName = defaults.shortName;
         }
 
-        public Builder setAttachmentTarget(String attachmentTarget) {
+        public Builder attachmentTarget(String attachmentTarget) {
             this.attachmentTarget = Objects.requireNonNull(attachmentTarget);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFirewallPolicyId(String firewallPolicyId) {
+        public Builder firewallPolicyId(String firewallPolicyId) {
             this.firewallPolicyId = Objects.requireNonNull(firewallPolicyId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setShortName(String shortName) {
+        public Builder shortName(String shortName) {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }

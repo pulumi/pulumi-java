@@ -68,12 +68,12 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
     	      this.resourceId = defaults.resourceId;
         }
 
-        public Builder setDeviceSecurityGroupName(String deviceSecurityGroupName) {
+        public Builder deviceSecurityGroupName(String deviceSecurityGroupName) {
             this.deviceSecurityGroupName = Objects.requireNonNull(deviceSecurityGroupName);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }

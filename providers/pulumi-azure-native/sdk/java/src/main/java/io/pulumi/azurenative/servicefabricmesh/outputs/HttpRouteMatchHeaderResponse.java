@@ -27,11 +27,11 @@ public final class HttpRouteMatchHeaderResponse {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"name","type","value"})
+    @OutputCustomType.Constructor
     private HttpRouteMatchHeaderResponse(
-        String name,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.name = name;
         this.type = type;
         this.value = value;
@@ -83,17 +83,17 @@ public final class HttpRouteMatchHeaderResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

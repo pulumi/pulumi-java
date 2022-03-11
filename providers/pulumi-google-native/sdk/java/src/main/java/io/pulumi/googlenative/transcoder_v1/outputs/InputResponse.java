@@ -26,11 +26,11 @@ public final class InputResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"key","preprocessingConfig","uri"})
+    @OutputCustomType.Constructor
     private InputResponse(
-        String key,
-        PreprocessingConfigResponse preprocessingConfig,
-        String uri) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("preprocessingConfig") PreprocessingConfigResponse preprocessingConfig,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.key = key;
         this.preprocessingConfig = preprocessingConfig;
         this.uri = uri;
@@ -82,17 +82,17 @@ public final class InputResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setPreprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
+        public Builder preprocessingConfig(PreprocessingConfigResponse preprocessingConfig) {
             this.preprocessingConfig = Objects.requireNonNull(preprocessingConfig);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

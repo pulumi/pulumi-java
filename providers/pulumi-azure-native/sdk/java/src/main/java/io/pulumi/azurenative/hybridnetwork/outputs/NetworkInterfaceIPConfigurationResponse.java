@@ -43,14 +43,14 @@ public final class NetworkInterfaceIPConfigurationResponse {
      */
     private final @Nullable String subnet;
 
-    @OutputCustomType.Constructor({"dnsServers","gateway","ipAddress","ipAllocationMethod","ipVersion","subnet"})
+    @OutputCustomType.Constructor
     private NetworkInterfaceIPConfigurationResponse(
-        @Nullable List<String> dnsServers,
-        @Nullable String gateway,
-        @Nullable String ipAddress,
-        @Nullable String ipAllocationMethod,
-        @Nullable String ipVersion,
-        @Nullable String subnet) {
+        @OutputCustomType.Parameter("dnsServers") @Nullable List<String> dnsServers,
+        @OutputCustomType.Parameter("gateway") @Nullable String gateway,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("ipAllocationMethod") @Nullable String ipAllocationMethod,
+        @OutputCustomType.Parameter("ipVersion") @Nullable String ipVersion,
+        @OutputCustomType.Parameter("subnet") @Nullable String subnet) {
         this.dnsServers = dnsServers;
         this.gateway = gateway;
         this.ipAddress = ipAddress;
@@ -132,32 +132,32 @@ public final class NetworkInterfaceIPConfigurationResponse {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setGateway(@Nullable String gateway) {
+        public Builder gateway(@Nullable String gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAllocationMethod(@Nullable String ipAllocationMethod) {
+        public Builder ipAllocationMethod(@Nullable String ipAllocationMethod) {
             this.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
 
-        public Builder setIpVersion(@Nullable String ipVersion) {
+        public Builder ipVersion(@Nullable String ipVersion) {
             this.ipVersion = ipVersion;
             return this;
         }
 
-        public Builder setSubnet(@Nullable String subnet) {
+        public Builder subnet(@Nullable String subnet) {
             this.subnet = subnet;
             return this;
         }

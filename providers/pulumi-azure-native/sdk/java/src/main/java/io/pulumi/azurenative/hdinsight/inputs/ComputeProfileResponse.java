@@ -58,7 +58,7 @@ public final class ComputeProfileResponse extends io.pulumi.resources.InvokeArgs
     	      this.roles = defaults.roles;
         }
 
-        public Builder setRoles(@Nullable List<RoleResponse> roles) {
+        public Builder roles(@Nullable List<RoleResponse> roles) {
             this.roles = roles;
             return this;
         }

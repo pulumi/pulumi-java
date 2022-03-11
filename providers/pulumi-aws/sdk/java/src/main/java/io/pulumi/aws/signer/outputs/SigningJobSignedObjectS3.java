@@ -22,10 +22,10 @@ public final class SigningJobSignedObjectS3 {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"bucket","key"})
+    @OutputCustomType.Constructor
     private SigningJobSignedObjectS3(
-        @Nullable String bucket,
-        @Nullable String key) {
+        @OutputCustomType.Parameter("bucket") @Nullable String bucket,
+        @OutputCustomType.Parameter("key") @Nullable String key) {
         this.bucket = bucket;
         this.key = key;
     }
@@ -67,12 +67,12 @@ public final class SigningJobSignedObjectS3 {
     	      this.key = defaults.key;
         }
 
-        public Builder setBucket(@Nullable String bucket) {
+        public Builder bucket(@Nullable String bucket) {
             this.bucket = bucket;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

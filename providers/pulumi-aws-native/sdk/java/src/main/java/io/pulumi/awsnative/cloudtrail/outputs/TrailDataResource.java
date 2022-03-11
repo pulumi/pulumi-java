@@ -22,10 +22,10 @@ public final class TrailDataResource {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"type","values"})
+    @OutputCustomType.Constructor
     private TrailDataResource(
-        String type,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.type = type;
         this.values = values;
     }
@@ -67,12 +67,12 @@ public final class TrailDataResource {
     	      this.values = defaults.values;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

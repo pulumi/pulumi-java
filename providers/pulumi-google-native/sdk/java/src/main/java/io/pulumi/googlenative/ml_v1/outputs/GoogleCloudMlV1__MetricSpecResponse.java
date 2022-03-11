@@ -21,10 +21,10 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
      */
     private final Integer target;
 
-    @OutputCustomType.Constructor({"name","target"})
+    @OutputCustomType.Constructor
     private GoogleCloudMlV1__MetricSpecResponse(
-        String name,
-        Integer target) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("target") Integer target) {
         this.name = name;
         this.target = target;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudMlV1__MetricSpecResponse {
     	      this.target = defaults.target;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTarget(Integer target) {
+        public Builder target(Integer target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

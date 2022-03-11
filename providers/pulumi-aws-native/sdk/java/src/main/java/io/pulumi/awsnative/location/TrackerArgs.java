@@ -112,62 +112,62 @@ public final class TrackerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.trackerName = defaults.trackerName;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable Input<String> kmsKeyId) {
+        public Builder kmsKeyId(@Nullable Input<String> kmsKeyId) {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
 
-        public Builder setKmsKeyId(@Nullable String kmsKeyId) {
+        public Builder kmsKeyId(@Nullable String kmsKeyId) {
             this.kmsKeyId = Input.ofNullable(kmsKeyId);
             return this;
         }
 
-        public Builder setPositionFiltering(@Nullable Input<TrackerPositionFiltering> positionFiltering) {
+        public Builder positionFiltering(@Nullable Input<TrackerPositionFiltering> positionFiltering) {
             this.positionFiltering = positionFiltering;
             return this;
         }
 
-        public Builder setPositionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
+        public Builder positionFiltering(@Nullable TrackerPositionFiltering positionFiltering) {
             this.positionFiltering = Input.ofNullable(positionFiltering);
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable Input<TrackerPricingPlan> pricingPlan) {
+        public Builder pricingPlan(@Nullable Input<TrackerPricingPlan> pricingPlan) {
             this.pricingPlan = pricingPlan;
             return this;
         }
 
-        public Builder setPricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
+        public Builder pricingPlan(@Nullable TrackerPricingPlan pricingPlan) {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
 
-        public Builder setPricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable Input<String> pricingPlanDataSource) {
             this.pricingPlanDataSource = pricingPlanDataSource;
             return this;
         }
 
-        public Builder setPricingPlanDataSource(@Nullable String pricingPlanDataSource) {
+        public Builder pricingPlanDataSource(@Nullable String pricingPlanDataSource) {
             this.pricingPlanDataSource = Input.ofNullable(pricingPlanDataSource);
             return this;
         }
 
-        public Builder setTrackerName(@Nullable Input<String> trackerName) {
+        public Builder trackerName(@Nullable Input<String> trackerName) {
             this.trackerName = trackerName;
             return this;
         }
 
-        public Builder setTrackerName(@Nullable String trackerName) {
+        public Builder trackerName(@Nullable String trackerName) {
             this.trackerName = Input.ofNullable(trackerName);
             return this;
         }

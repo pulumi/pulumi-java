@@ -56,7 +56,7 @@ public final class RegexValidationResponse extends io.pulumi.resources.InvokeArg
     	      this.regexes = defaults.regexes;
         }
 
-        public Builder setRegexes(List<String> regexes) {
+        public Builder regexes(List<String> regexes) {
             this.regexes = Objects.requireNonNull(regexes);
             return this;
         }

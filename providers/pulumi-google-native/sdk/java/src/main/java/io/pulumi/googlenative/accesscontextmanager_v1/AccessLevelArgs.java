@@ -132,62 +132,62 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     	      this.title = defaults.title;
         }
 
-        public Builder setAccessPolicyId(Input<String> accessPolicyId) {
+        public Builder accessPolicyId(Input<String> accessPolicyId) {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
 
-        public Builder setAccessPolicyId(String accessPolicyId) {
+        public Builder accessPolicyId(String accessPolicyId) {
             this.accessPolicyId = Input.of(Objects.requireNonNull(accessPolicyId));
             return this;
         }
 
-        public Builder setBasic(@Nullable Input<BasicLevelArgs> basic) {
+        public Builder basic(@Nullable Input<BasicLevelArgs> basic) {
             this.basic = basic;
             return this;
         }
 
-        public Builder setBasic(@Nullable BasicLevelArgs basic) {
+        public Builder basic(@Nullable BasicLevelArgs basic) {
             this.basic = Input.ofNullable(basic);
             return this;
         }
 
-        public Builder setCustom(@Nullable Input<CustomLevelArgs> custom) {
+        public Builder custom(@Nullable Input<CustomLevelArgs> custom) {
             this.custom = custom;
             return this;
         }
 
-        public Builder setCustom(@Nullable CustomLevelArgs custom) {
+        public Builder custom(@Nullable CustomLevelArgs custom) {
             this.custom = Input.ofNullable(custom);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTitle(@Nullable Input<String> title) {
+        public Builder title(@Nullable Input<String> title) {
             this.title = title;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = Input.ofNullable(title);
             return this;
         }

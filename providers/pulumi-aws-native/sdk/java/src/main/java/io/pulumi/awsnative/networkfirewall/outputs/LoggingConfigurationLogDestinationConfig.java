@@ -19,11 +19,11 @@ public final class LoggingConfigurationLogDestinationConfig {
     private final LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType;
     private final LoggingConfigurationLogDestinationConfigLogType logType;
 
-    @OutputCustomType.Constructor({"logDestination","logDestinationType","logType"})
+    @OutputCustomType.Constructor
     private LoggingConfigurationLogDestinationConfig(
-        Object logDestination,
-        LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
-        LoggingConfigurationLogDestinationConfigLogType logType) {
+        @OutputCustomType.Parameter("logDestination") Object logDestination,
+        @OutputCustomType.Parameter("logDestinationType") LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType,
+        @OutputCustomType.Parameter("logType") LoggingConfigurationLogDestinationConfigLogType logType) {
         this.logDestination = logDestination;
         this.logDestinationType = logDestinationType;
         this.logType = logType;
@@ -67,17 +67,17 @@ public final class LoggingConfigurationLogDestinationConfig {
     	      this.logType = defaults.logType;
         }
 
-        public Builder setLogDestination(Object logDestination) {
+        public Builder logDestination(Object logDestination) {
             this.logDestination = Objects.requireNonNull(logDestination);
             return this;
         }
 
-        public Builder setLogDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
+        public Builder logDestinationType(LoggingConfigurationLogDestinationConfigLogDestinationType logDestinationType) {
             this.logDestinationType = Objects.requireNonNull(logDestinationType);
             return this;
         }
 
-        public Builder setLogType(LoggingConfigurationLogDestinationConfigLogType logType) {
+        public Builder logType(LoggingConfigurationLogDestinationConfigLogType logType) {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }

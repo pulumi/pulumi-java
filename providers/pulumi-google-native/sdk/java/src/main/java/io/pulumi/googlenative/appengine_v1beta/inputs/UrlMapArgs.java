@@ -177,82 +177,82 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
     	      this.urlRegex = defaults.urlRegex;
         }
 
-        public Builder setApiEndpoint(@Nullable Input<ApiEndpointHandlerArgs> apiEndpoint) {
+        public Builder apiEndpoint(@Nullable Input<ApiEndpointHandlerArgs> apiEndpoint) {
             this.apiEndpoint = apiEndpoint;
             return this;
         }
 
-        public Builder setApiEndpoint(@Nullable ApiEndpointHandlerArgs apiEndpoint) {
+        public Builder apiEndpoint(@Nullable ApiEndpointHandlerArgs apiEndpoint) {
             this.apiEndpoint = Input.ofNullable(apiEndpoint);
             return this;
         }
 
-        public Builder setAuthFailAction(@Nullable Input<UrlMapAuthFailAction> authFailAction) {
+        public Builder authFailAction(@Nullable Input<UrlMapAuthFailAction> authFailAction) {
             this.authFailAction = authFailAction;
             return this;
         }
 
-        public Builder setAuthFailAction(@Nullable UrlMapAuthFailAction authFailAction) {
+        public Builder authFailAction(@Nullable UrlMapAuthFailAction authFailAction) {
             this.authFailAction = Input.ofNullable(authFailAction);
             return this;
         }
 
-        public Builder setLogin(@Nullable Input<UrlMapLogin> login) {
+        public Builder login(@Nullable Input<UrlMapLogin> login) {
             this.login = login;
             return this;
         }
 
-        public Builder setLogin(@Nullable UrlMapLogin login) {
+        public Builder login(@Nullable UrlMapLogin login) {
             this.login = Input.ofNullable(login);
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(@Nullable Input<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(@Nullable Input<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode) {
             this.redirectHttpResponseCode = redirectHttpResponseCode;
             return this;
         }
 
-        public Builder setRedirectHttpResponseCode(@Nullable UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
+        public Builder redirectHttpResponseCode(@Nullable UrlMapRedirectHttpResponseCode redirectHttpResponseCode) {
             this.redirectHttpResponseCode = Input.ofNullable(redirectHttpResponseCode);
             return this;
         }
 
-        public Builder setScript(@Nullable Input<ScriptHandlerArgs> script) {
+        public Builder script(@Nullable Input<ScriptHandlerArgs> script) {
             this.script = script;
             return this;
         }
 
-        public Builder setScript(@Nullable ScriptHandlerArgs script) {
+        public Builder script(@Nullable ScriptHandlerArgs script) {
             this.script = Input.ofNullable(script);
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable Input<UrlMapSecurityLevel> securityLevel) {
+        public Builder securityLevel(@Nullable Input<UrlMapSecurityLevel> securityLevel) {
             this.securityLevel = securityLevel;
             return this;
         }
 
-        public Builder setSecurityLevel(@Nullable UrlMapSecurityLevel securityLevel) {
+        public Builder securityLevel(@Nullable UrlMapSecurityLevel securityLevel) {
             this.securityLevel = Input.ofNullable(securityLevel);
             return this;
         }
 
-        public Builder setStaticFiles(@Nullable Input<StaticFilesHandlerArgs> staticFiles) {
+        public Builder staticFiles(@Nullable Input<StaticFilesHandlerArgs> staticFiles) {
             this.staticFiles = staticFiles;
             return this;
         }
 
-        public Builder setStaticFiles(@Nullable StaticFilesHandlerArgs staticFiles) {
+        public Builder staticFiles(@Nullable StaticFilesHandlerArgs staticFiles) {
             this.staticFiles = Input.ofNullable(staticFiles);
             return this;
         }
 
-        public Builder setUrlRegex(@Nullable Input<String> urlRegex) {
+        public Builder urlRegex(@Nullable Input<String> urlRegex) {
             this.urlRegex = urlRegex;
             return this;
         }
 
-        public Builder setUrlRegex(@Nullable String urlRegex) {
+        public Builder urlRegex(@Nullable String urlRegex) {
             this.urlRegex = Input.ofNullable(urlRegex);
             return this;
         }

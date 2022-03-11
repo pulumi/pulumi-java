@@ -310,7 +310,7 @@ public class ActivityCustomEntityQuery extends io.pulumi.resources.CustomResourc
     private static ActivityCustomEntityQueryArgs makeArgs(ActivityCustomEntityQueryArgs args) {
         var builder = args == null ? ActivityCustomEntityQueryArgs.builder() : ActivityCustomEntityQueryArgs.builder(args);
         return builder
-            .setKind("Activity")
+            .kind("Activity")
             .build();
     }
 

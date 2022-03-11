@@ -20,10 +20,10 @@ public final class GetFargateProfileResult {
      */
     private final @Nullable List<FargateProfileTag> tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetFargateProfileResult(
-        @Nullable String arn,
-        @Nullable List<FargateProfileTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<FargateProfileTag> tags) {
         this.arn = arn;
         this.tags = tags;
     }
@@ -61,12 +61,12 @@ public final class GetFargateProfileResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<FargateProfileTag> tags) {
+        public Builder tags(@Nullable List<FargateProfileTag> tags) {
             this.tags = tags;
             return this;
         }

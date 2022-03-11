@@ -17,8 +17,8 @@ public final class PartnerContentResponse {
      */
     private final @Nullable B2BPartnerContentResponse b2b;
 
-    @OutputCustomType.Constructor({"b2b"})
-    private PartnerContentResponse(@Nullable B2BPartnerContentResponse b2b) {
+    @OutputCustomType.Constructor
+    private PartnerContentResponse(@OutputCustomType.Parameter("b2b") @Nullable B2BPartnerContentResponse b2b) {
         this.b2b = b2b;
     }
 
@@ -50,7 +50,7 @@ public final class PartnerContentResponse {
     	      this.b2b = defaults.b2b;
         }
 
-        public Builder setB2b(@Nullable B2BPartnerContentResponse b2b) {
+        public Builder b2b(@Nullable B2BPartnerContentResponse b2b) {
             this.b2b = b2b;
             return this;
         }

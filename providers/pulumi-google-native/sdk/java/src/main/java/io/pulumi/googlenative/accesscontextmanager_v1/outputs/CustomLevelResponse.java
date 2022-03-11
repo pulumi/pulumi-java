@@ -15,8 +15,8 @@ public final class CustomLevelResponse {
      */
     private final ExprResponse expr;
 
-    @OutputCustomType.Constructor({"expr"})
-    private CustomLevelResponse(ExprResponse expr) {
+    @OutputCustomType.Constructor
+    private CustomLevelResponse(@OutputCustomType.Parameter("expr") ExprResponse expr) {
         this.expr = expr;
     }
 
@@ -48,7 +48,7 @@ public final class CustomLevelResponse {
     	      this.expr = defaults.expr;
         }
 
-        public Builder setExpr(ExprResponse expr) {
+        public Builder expr(ExprResponse expr) {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }

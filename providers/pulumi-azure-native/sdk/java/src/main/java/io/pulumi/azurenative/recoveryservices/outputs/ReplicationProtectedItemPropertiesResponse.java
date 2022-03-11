@@ -159,35 +159,35 @@ public final class ReplicationProtectedItemPropertiesResponse {
      */
     private final @Nullable String testFailoverStateDescription;
 
-    @OutputCustomType.Constructor({"activeLocation","allowedOperations","currentScenario","failoverHealth","failoverRecoveryPointId","friendlyName","healthErrors","lastSuccessfulFailoverTime","lastSuccessfulTestFailoverTime","policyFriendlyName","policyId","primaryFabricFriendlyName","primaryFabricProvider","primaryProtectionContainerFriendlyName","protectableItemId","protectedItemType","protectionState","protectionStateDescription","providerSpecificDetails","recoveryContainerId","recoveryFabricFriendlyName","recoveryFabricId","recoveryProtectionContainerFriendlyName","recoveryServicesProviderId","replicationHealth","testFailoverState","testFailoverStateDescription"})
+    @OutputCustomType.Constructor
     private ReplicationProtectedItemPropertiesResponse(
-        @Nullable String activeLocation,
-        @Nullable List<String> allowedOperations,
-        @Nullable CurrentScenarioDetailsResponse currentScenario,
-        @Nullable String failoverHealth,
-        @Nullable String failoverRecoveryPointId,
-        @Nullable String friendlyName,
-        @Nullable List<HealthErrorResponse> healthErrors,
-        @Nullable String lastSuccessfulFailoverTime,
-        @Nullable String lastSuccessfulTestFailoverTime,
-        @Nullable String policyFriendlyName,
-        @Nullable String policyId,
-        @Nullable String primaryFabricFriendlyName,
-        @Nullable String primaryFabricProvider,
-        @Nullable String primaryProtectionContainerFriendlyName,
-        @Nullable String protectableItemId,
-        @Nullable String protectedItemType,
-        @Nullable String protectionState,
-        @Nullable String protectionStateDescription,
-        @Nullable Object providerSpecificDetails,
-        @Nullable String recoveryContainerId,
-        @Nullable String recoveryFabricFriendlyName,
-        @Nullable String recoveryFabricId,
-        @Nullable String recoveryProtectionContainerFriendlyName,
-        @Nullable String recoveryServicesProviderId,
-        @Nullable String replicationHealth,
-        @Nullable String testFailoverState,
-        @Nullable String testFailoverStateDescription) {
+        @OutputCustomType.Parameter("activeLocation") @Nullable String activeLocation,
+        @OutputCustomType.Parameter("allowedOperations") @Nullable List<String> allowedOperations,
+        @OutputCustomType.Parameter("currentScenario") @Nullable CurrentScenarioDetailsResponse currentScenario,
+        @OutputCustomType.Parameter("failoverHealth") @Nullable String failoverHealth,
+        @OutputCustomType.Parameter("failoverRecoveryPointId") @Nullable String failoverRecoveryPointId,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("healthErrors") @Nullable List<HealthErrorResponse> healthErrors,
+        @OutputCustomType.Parameter("lastSuccessfulFailoverTime") @Nullable String lastSuccessfulFailoverTime,
+        @OutputCustomType.Parameter("lastSuccessfulTestFailoverTime") @Nullable String lastSuccessfulTestFailoverTime,
+        @OutputCustomType.Parameter("policyFriendlyName") @Nullable String policyFriendlyName,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("primaryFabricFriendlyName") @Nullable String primaryFabricFriendlyName,
+        @OutputCustomType.Parameter("primaryFabricProvider") @Nullable String primaryFabricProvider,
+        @OutputCustomType.Parameter("primaryProtectionContainerFriendlyName") @Nullable String primaryProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("protectableItemId") @Nullable String protectableItemId,
+        @OutputCustomType.Parameter("protectedItemType") @Nullable String protectedItemType,
+        @OutputCustomType.Parameter("protectionState") @Nullable String protectionState,
+        @OutputCustomType.Parameter("protectionStateDescription") @Nullable String protectionStateDescription,
+        @OutputCustomType.Parameter("providerSpecificDetails") @Nullable Object providerSpecificDetails,
+        @OutputCustomType.Parameter("recoveryContainerId") @Nullable String recoveryContainerId,
+        @OutputCustomType.Parameter("recoveryFabricFriendlyName") @Nullable String recoveryFabricFriendlyName,
+        @OutputCustomType.Parameter("recoveryFabricId") @Nullable String recoveryFabricId,
+        @OutputCustomType.Parameter("recoveryProtectionContainerFriendlyName") @Nullable String recoveryProtectionContainerFriendlyName,
+        @OutputCustomType.Parameter("recoveryServicesProviderId") @Nullable String recoveryServicesProviderId,
+        @OutputCustomType.Parameter("replicationHealth") @Nullable String replicationHealth,
+        @OutputCustomType.Parameter("testFailoverState") @Nullable String testFailoverState,
+        @OutputCustomType.Parameter("testFailoverStateDescription") @Nullable String testFailoverStateDescription) {
         this.activeLocation = activeLocation;
         this.allowedOperations = allowedOperations;
         this.currentScenario = currentScenario;
@@ -479,137 +479,137 @@ public final class ReplicationProtectedItemPropertiesResponse {
     	      this.testFailoverStateDescription = defaults.testFailoverStateDescription;
         }
 
-        public Builder setActiveLocation(@Nullable String activeLocation) {
+        public Builder activeLocation(@Nullable String activeLocation) {
             this.activeLocation = activeLocation;
             return this;
         }
 
-        public Builder setAllowedOperations(@Nullable List<String> allowedOperations) {
+        public Builder allowedOperations(@Nullable List<String> allowedOperations) {
             this.allowedOperations = allowedOperations;
             return this;
         }
 
-        public Builder setCurrentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
+        public Builder currentScenario(@Nullable CurrentScenarioDetailsResponse currentScenario) {
             this.currentScenario = currentScenario;
             return this;
         }
 
-        public Builder setFailoverHealth(@Nullable String failoverHealth) {
+        public Builder failoverHealth(@Nullable String failoverHealth) {
             this.failoverHealth = failoverHealth;
             return this;
         }
 
-        public Builder setFailoverRecoveryPointId(@Nullable String failoverRecoveryPointId) {
+        public Builder failoverRecoveryPointId(@Nullable String failoverRecoveryPointId) {
             this.failoverRecoveryPointId = failoverRecoveryPointId;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHealthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
+        public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             this.healthErrors = healthErrors;
             return this;
         }
 
-        public Builder setLastSuccessfulFailoverTime(@Nullable String lastSuccessfulFailoverTime) {
+        public Builder lastSuccessfulFailoverTime(@Nullable String lastSuccessfulFailoverTime) {
             this.lastSuccessfulFailoverTime = lastSuccessfulFailoverTime;
             return this;
         }
 
-        public Builder setLastSuccessfulTestFailoverTime(@Nullable String lastSuccessfulTestFailoverTime) {
+        public Builder lastSuccessfulTestFailoverTime(@Nullable String lastSuccessfulTestFailoverTime) {
             this.lastSuccessfulTestFailoverTime = lastSuccessfulTestFailoverTime;
             return this;
         }
 
-        public Builder setPolicyFriendlyName(@Nullable String policyFriendlyName) {
+        public Builder policyFriendlyName(@Nullable String policyFriendlyName) {
             this.policyFriendlyName = policyFriendlyName;
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setPrimaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
+        public Builder primaryFabricFriendlyName(@Nullable String primaryFabricFriendlyName) {
             this.primaryFabricFriendlyName = primaryFabricFriendlyName;
             return this;
         }
 
-        public Builder setPrimaryFabricProvider(@Nullable String primaryFabricProvider) {
+        public Builder primaryFabricProvider(@Nullable String primaryFabricProvider) {
             this.primaryFabricProvider = primaryFabricProvider;
             return this;
         }
 
-        public Builder setPrimaryProtectionContainerFriendlyName(@Nullable String primaryProtectionContainerFriendlyName) {
+        public Builder primaryProtectionContainerFriendlyName(@Nullable String primaryProtectionContainerFriendlyName) {
             this.primaryProtectionContainerFriendlyName = primaryProtectionContainerFriendlyName;
             return this;
         }
 
-        public Builder setProtectableItemId(@Nullable String protectableItemId) {
+        public Builder protectableItemId(@Nullable String protectableItemId) {
             this.protectableItemId = protectableItemId;
             return this;
         }
 
-        public Builder setProtectedItemType(@Nullable String protectedItemType) {
+        public Builder protectedItemType(@Nullable String protectedItemType) {
             this.protectedItemType = protectedItemType;
             return this;
         }
 
-        public Builder setProtectionState(@Nullable String protectionState) {
+        public Builder protectionState(@Nullable String protectionState) {
             this.protectionState = protectionState;
             return this;
         }
 
-        public Builder setProtectionStateDescription(@Nullable String protectionStateDescription) {
+        public Builder protectionStateDescription(@Nullable String protectionStateDescription) {
             this.protectionStateDescription = protectionStateDescription;
             return this;
         }
 
-        public Builder setProviderSpecificDetails(@Nullable Object providerSpecificDetails) {
+        public Builder providerSpecificDetails(@Nullable Object providerSpecificDetails) {
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
 
-        public Builder setRecoveryContainerId(@Nullable String recoveryContainerId) {
+        public Builder recoveryContainerId(@Nullable String recoveryContainerId) {
             this.recoveryContainerId = recoveryContainerId;
             return this;
         }
 
-        public Builder setRecoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
+        public Builder recoveryFabricFriendlyName(@Nullable String recoveryFabricFriendlyName) {
             this.recoveryFabricFriendlyName = recoveryFabricFriendlyName;
             return this;
         }
 
-        public Builder setRecoveryFabricId(@Nullable String recoveryFabricId) {
+        public Builder recoveryFabricId(@Nullable String recoveryFabricId) {
             this.recoveryFabricId = recoveryFabricId;
             return this;
         }
 
-        public Builder setRecoveryProtectionContainerFriendlyName(@Nullable String recoveryProtectionContainerFriendlyName) {
+        public Builder recoveryProtectionContainerFriendlyName(@Nullable String recoveryProtectionContainerFriendlyName) {
             this.recoveryProtectionContainerFriendlyName = recoveryProtectionContainerFriendlyName;
             return this;
         }
 
-        public Builder setRecoveryServicesProviderId(@Nullable String recoveryServicesProviderId) {
+        public Builder recoveryServicesProviderId(@Nullable String recoveryServicesProviderId) {
             this.recoveryServicesProviderId = recoveryServicesProviderId;
             return this;
         }
 
-        public Builder setReplicationHealth(@Nullable String replicationHealth) {
+        public Builder replicationHealth(@Nullable String replicationHealth) {
             this.replicationHealth = replicationHealth;
             return this;
         }
 
-        public Builder setTestFailoverState(@Nullable String testFailoverState) {
+        public Builder testFailoverState(@Nullable String testFailoverState) {
             this.testFailoverState = testFailoverState;
             return this;
         }
 
-        public Builder setTestFailoverStateDescription(@Nullable String testFailoverStateDescription) {
+        public Builder testFailoverStateDescription(@Nullable String testFailoverStateDescription) {
             this.testFailoverStateDescription = testFailoverStateDescription;
             return this;
         }

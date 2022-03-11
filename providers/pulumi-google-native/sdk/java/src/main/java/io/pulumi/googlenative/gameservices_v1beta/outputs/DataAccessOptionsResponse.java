@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DataAccessOptionsResponse {
     private final String logMode;
 
-    @OutputCustomType.Constructor({"logMode"})
-    private DataAccessOptionsResponse(String logMode) {
+    @OutputCustomType.Constructor
+    private DataAccessOptionsResponse(@OutputCustomType.Parameter("logMode") String logMode) {
         this.logMode = logMode;
     }
 
@@ -40,7 +40,7 @@ public final class DataAccessOptionsResponse {
     	      this.logMode = defaults.logMode;
         }
 
-        public Builder setLogMode(String logMode) {
+        public Builder logMode(String logMode) {
             this.logMode = Objects.requireNonNull(logMode);
             return this;
         }

@@ -27,11 +27,11 @@ public final class DeploymentGroupEc2TagSetEc2TagFilter {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"key","type","value"})
+    @OutputCustomType.Constructor
     private DeploymentGroupEc2TagSetEc2TagFilter(
-        @Nullable String key,
-        @Nullable String type,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.key = key;
         this.type = type;
         this.value = value;
@@ -83,17 +83,17 @@ public final class DeploymentGroupEc2TagSetEc2TagFilter {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

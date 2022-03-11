@@ -15,8 +15,8 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
      */
     private final GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination;
 
-    @OutputCustomType.Constructor({"bigqueryDestination"})
-    private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
+    @OutputCustomType.Constructor
+    private GoogleCloudHealthcareV1beta1DicomStreamConfigResponse(@OutputCustomType.Parameter("bigqueryDestination") GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
         this.bigqueryDestination = bigqueryDestination;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigResponse {
     	      this.bigqueryDestination = defaults.bigqueryDestination;
         }
 
-        public Builder setBigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
+        public Builder bigqueryDestination(GoogleCloudHealthcareV1beta1DicomBigQueryDestinationResponse bigqueryDestination) {
             this.bigqueryDestination = Objects.requireNonNull(bigqueryDestination);
             return this;
         }

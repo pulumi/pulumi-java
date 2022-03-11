@@ -28,11 +28,11 @@ public final class DomainResourceSpec {
      */
     private final @Nullable String sageMakerImageVersionArn;
 
-    @OutputCustomType.Constructor({"instanceType","sageMakerImageArn","sageMakerImageVersionArn"})
+    @OutputCustomType.Constructor
     private DomainResourceSpec(
-        @Nullable DomainResourceSpecInstanceType instanceType,
-        @Nullable String sageMakerImageArn,
-        @Nullable String sageMakerImageVersionArn) {
+        @OutputCustomType.Parameter("instanceType") @Nullable DomainResourceSpecInstanceType instanceType,
+        @OutputCustomType.Parameter("sageMakerImageArn") @Nullable String sageMakerImageArn,
+        @OutputCustomType.Parameter("sageMakerImageVersionArn") @Nullable String sageMakerImageVersionArn) {
         this.instanceType = instanceType;
         this.sageMakerImageArn = sageMakerImageArn;
         this.sageMakerImageVersionArn = sageMakerImageVersionArn;
@@ -84,17 +84,17 @@ public final class DomainResourceSpec {
     	      this.sageMakerImageVersionArn = defaults.sageMakerImageVersionArn;
         }
 
-        public Builder setInstanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
+        public Builder instanceType(@Nullable DomainResourceSpecInstanceType instanceType) {
             this.instanceType = instanceType;
             return this;
         }
 
-        public Builder setSageMakerImageArn(@Nullable String sageMakerImageArn) {
+        public Builder sageMakerImageArn(@Nullable String sageMakerImageArn) {
             this.sageMakerImageArn = sageMakerImageArn;
             return this;
         }
 
-        public Builder setSageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
+        public Builder sageMakerImageVersionArn(@Nullable String sageMakerImageVersionArn) {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }

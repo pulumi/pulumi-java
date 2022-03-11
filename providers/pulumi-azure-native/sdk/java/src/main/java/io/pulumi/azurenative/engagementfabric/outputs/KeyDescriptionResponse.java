@@ -25,11 +25,11 @@ public final class KeyDescriptionResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"name","rank","value"})
+    @OutputCustomType.Constructor
     private KeyDescriptionResponse(
-        String name,
-        String rank,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("rank") String rank,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.rank = rank;
         this.value = value;
@@ -81,17 +81,17 @@ public final class KeyDescriptionResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRank(String rank) {
+        public Builder rank(String rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

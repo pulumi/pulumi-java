@@ -26,11 +26,11 @@ public final class ApplicationLogPattern {
      */
     private final Integer rank;
 
-    @OutputCustomType.Constructor({"pattern","patternName","rank"})
+    @OutputCustomType.Constructor
     private ApplicationLogPattern(
-        String pattern,
-        String patternName,
-        Integer rank) {
+        @OutputCustomType.Parameter("pattern") String pattern,
+        @OutputCustomType.Parameter("patternName") String patternName,
+        @OutputCustomType.Parameter("rank") Integer rank) {
         this.pattern = pattern;
         this.patternName = patternName;
         this.rank = rank;
@@ -82,17 +82,17 @@ public final class ApplicationLogPattern {
     	      this.rank = defaults.rank;
         }
 
-        public Builder setPattern(String pattern) {
+        public Builder pattern(String pattern) {
             this.pattern = Objects.requireNonNull(pattern);
             return this;
         }
 
-        public Builder setPatternName(String patternName) {
+        public Builder patternName(String patternName) {
             this.patternName = Objects.requireNonNull(patternName);
             return this;
         }
 
-        public Builder setRank(Integer rank) {
+        public Builder rank(Integer rank) {
             this.rank = Objects.requireNonNull(rank);
             return this;
         }

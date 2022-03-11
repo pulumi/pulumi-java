@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ApplicationInstanceManifestPayload {
     private final @Nullable String payloadData;
 
-    @OutputCustomType.Constructor({"payloadData"})
-    private ApplicationInstanceManifestPayload(@Nullable String payloadData) {
+    @OutputCustomType.Constructor
+    private ApplicationInstanceManifestPayload(@OutputCustomType.Parameter("payloadData") @Nullable String payloadData) {
         this.payloadData = payloadData;
     }
 
@@ -42,7 +42,7 @@ public final class ApplicationInstanceManifestPayload {
     	      this.payloadData = defaults.payloadData;
         }
 
-        public Builder setPayloadData(@Nullable String payloadData) {
+        public Builder payloadData(@Nullable String payloadData) {
             this.payloadData = payloadData;
             return this;
         }

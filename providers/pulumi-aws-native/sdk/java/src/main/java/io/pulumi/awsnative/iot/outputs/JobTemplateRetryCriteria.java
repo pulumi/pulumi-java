@@ -15,10 +15,10 @@ public final class JobTemplateRetryCriteria {
     private final @Nullable JobTemplateJobRetryFailureType failureType;
     private final @Nullable Integer numberOfRetries;
 
-    @OutputCustomType.Constructor({"failureType","numberOfRetries"})
+    @OutputCustomType.Constructor
     private JobTemplateRetryCriteria(
-        @Nullable JobTemplateJobRetryFailureType failureType,
-        @Nullable Integer numberOfRetries) {
+        @OutputCustomType.Parameter("failureType") @Nullable JobTemplateJobRetryFailureType failureType,
+        @OutputCustomType.Parameter("numberOfRetries") @Nullable Integer numberOfRetries) {
         this.failureType = failureType;
         this.numberOfRetries = numberOfRetries;
     }
@@ -52,12 +52,12 @@ public final class JobTemplateRetryCriteria {
     	      this.numberOfRetries = defaults.numberOfRetries;
         }
 
-        public Builder setFailureType(@Nullable JobTemplateJobRetryFailureType failureType) {
+        public Builder failureType(@Nullable JobTemplateJobRetryFailureType failureType) {
             this.failureType = failureType;
             return this;
         }
 
-        public Builder setNumberOfRetries(@Nullable Integer numberOfRetries) {
+        public Builder numberOfRetries(@Nullable Integer numberOfRetries) {
             this.numberOfRetries = numberOfRetries;
             return this;
         }

@@ -33,12 +33,12 @@ public final class AutomationActionEventHubResponse {
      */
     private final String sasPolicyName;
 
-    @OutputCustomType.Constructor({"actionType","connectionString","eventHubResourceId","sasPolicyName"})
+    @OutputCustomType.Constructor
     private AutomationActionEventHubResponse(
-        String actionType,
-        @Nullable String connectionString,
-        @Nullable String eventHubResourceId,
-        String sasPolicyName) {
+        @OutputCustomType.Parameter("actionType") String actionType,
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("eventHubResourceId") @Nullable String eventHubResourceId,
+        @OutputCustomType.Parameter("sasPolicyName") String sasPolicyName) {
         this.actionType = actionType;
         this.connectionString = connectionString;
         this.eventHubResourceId = eventHubResourceId;
@@ -101,22 +101,22 @@ public final class AutomationActionEventHubResponse {
     	      this.sasPolicyName = defaults.sasPolicyName;
         }
 
-        public Builder setActionType(String actionType) {
+        public Builder actionType(String actionType) {
             this.actionType = Objects.requireNonNull(actionType);
             return this;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setEventHubResourceId(@Nullable String eventHubResourceId) {
+        public Builder eventHubResourceId(@Nullable String eventHubResourceId) {
             this.eventHubResourceId = eventHubResourceId;
             return this;
         }
 
-        public Builder setSasPolicyName(String sasPolicyName) {
+        public Builder sasPolicyName(String sasPolicyName) {
             this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
             return this;
         }

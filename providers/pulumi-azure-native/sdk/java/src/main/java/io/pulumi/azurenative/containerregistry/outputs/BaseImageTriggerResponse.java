@@ -37,13 +37,13 @@ public final class BaseImageTriggerResponse {
      */
     private final @Nullable String updateTriggerPayloadType;
 
-    @OutputCustomType.Constructor({"baseImageTriggerType","name","status","updateTriggerEndpoint","updateTriggerPayloadType"})
+    @OutputCustomType.Constructor
     private BaseImageTriggerResponse(
-        String baseImageTriggerType,
-        String name,
-        @Nullable String status,
-        @Nullable String updateTriggerEndpoint,
-        @Nullable String updateTriggerPayloadType) {
+        @OutputCustomType.Parameter("baseImageTriggerType") String baseImageTriggerType,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("updateTriggerEndpoint") @Nullable String updateTriggerEndpoint,
+        @OutputCustomType.Parameter("updateTriggerPayloadType") @Nullable String updateTriggerPayloadType) {
         this.baseImageTriggerType = baseImageTriggerType;
         this.name = name;
         this.status = status;
@@ -115,27 +115,27 @@ public final class BaseImageTriggerResponse {
     	      this.updateTriggerPayloadType = defaults.updateTriggerPayloadType;
         }
 
-        public Builder setBaseImageTriggerType(String baseImageTriggerType) {
+        public Builder baseImageTriggerType(String baseImageTriggerType) {
             this.baseImageTriggerType = Objects.requireNonNull(baseImageTriggerType);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setUpdateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
+        public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
             this.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
 
-        public Builder setUpdateTriggerPayloadType(@Nullable String updateTriggerPayloadType) {
+        public Builder updateTriggerPayloadType(@Nullable String updateTriggerPayloadType) {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }

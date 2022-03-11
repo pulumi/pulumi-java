@@ -69,18 +69,18 @@ public final class GetVideoAnalyzerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"encryption","endpoints","id","identity","location","name","storageAccounts","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetVideoAnalyzerResult(
-        AccountEncryptionResponse encryption,
-        List<EndpointResponse> endpoints,
-        String id,
-        @Nullable VideoAnalyzerIdentityResponse identity,
-        String location,
-        String name,
-        List<StorageAccountResponse> storageAccounts,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("encryption") AccountEncryptionResponse encryption,
+        @OutputCustomType.Parameter("endpoints") List<EndpointResponse> endpoints,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable VideoAnalyzerIdentityResponse identity,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("storageAccounts") List<StorageAccountResponse> storageAccounts,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.encryption = encryption;
         this.endpoints = endpoints;
         this.id = id;
@@ -202,52 +202,52 @@ public final class GetVideoAnalyzerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setEncryption(AccountEncryptionResponse encryption) {
+        public Builder encryption(AccountEncryptionResponse encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setEndpoints(List<EndpointResponse> endpoints) {
+        public Builder endpoints(List<EndpointResponse> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable VideoAnalyzerIdentityResponse identity) {
+        public Builder identity(@Nullable VideoAnalyzerIdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStorageAccounts(List<StorageAccountResponse> storageAccounts) {
+        public Builder storageAccounts(List<StorageAccountResponse> storageAccounts) {
             this.storageAccounts = Objects.requireNonNull(storageAccounts);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -33,12 +33,12 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
      */
     private final @Nullable Double targetThroughputUtilization;
 
-    @OutputCustomType.Constructor({"maxInstances","minInstances","targetCpuUtilization","targetThroughputUtilization"})
+    @OutputCustomType.Constructor
     private StandardAppVersionAutomaticScalingStandardSchedulerSettings(
-        @Nullable Integer maxInstances,
-        @Nullable Integer minInstances,
-        @Nullable Double targetCpuUtilization,
-        @Nullable Double targetThroughputUtilization) {
+        @OutputCustomType.Parameter("maxInstances") @Nullable Integer maxInstances,
+        @OutputCustomType.Parameter("minInstances") @Nullable Integer minInstances,
+        @OutputCustomType.Parameter("targetCpuUtilization") @Nullable Double targetCpuUtilization,
+        @OutputCustomType.Parameter("targetThroughputUtilization") @Nullable Double targetThroughputUtilization) {
         this.maxInstances = maxInstances;
         this.minInstances = minInstances;
         this.targetCpuUtilization = targetCpuUtilization;
@@ -100,22 +100,22 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
     	      this.targetThroughputUtilization = defaults.targetThroughputUtilization;
         }
 
-        public Builder setMaxInstances(@Nullable Integer maxInstances) {
+        public Builder maxInstances(@Nullable Integer maxInstances) {
             this.maxInstances = maxInstances;
             return this;
         }
 
-        public Builder setMinInstances(@Nullable Integer minInstances) {
+        public Builder minInstances(@Nullable Integer minInstances) {
             this.minInstances = minInstances;
             return this;
         }
 
-        public Builder setTargetCpuUtilization(@Nullable Double targetCpuUtilization) {
+        public Builder targetCpuUtilization(@Nullable Double targetCpuUtilization) {
             this.targetCpuUtilization = targetCpuUtilization;
             return this;
         }
 
-        public Builder setTargetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
+        public Builder targetThroughputUtilization(@Nullable Double targetThroughputUtilization) {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }

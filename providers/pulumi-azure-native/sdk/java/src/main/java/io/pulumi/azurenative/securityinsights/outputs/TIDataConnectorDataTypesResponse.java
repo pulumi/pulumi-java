@@ -17,8 +17,8 @@ public final class TIDataConnectorDataTypesResponse {
      */
     private final @Nullable TIDataConnectorDataTypesResponseIndicators indicators;
 
-    @OutputCustomType.Constructor({"indicators"})
-    private TIDataConnectorDataTypesResponse(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
+    @OutputCustomType.Constructor
+    private TIDataConnectorDataTypesResponse(@OutputCustomType.Parameter("indicators") @Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
         this.indicators = indicators;
     }
 
@@ -50,7 +50,7 @@ public final class TIDataConnectorDataTypesResponse {
     	      this.indicators = defaults.indicators;
         }
 
-        public Builder setIndicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
+        public Builder indicators(@Nullable TIDataConnectorDataTypesResponseIndicators indicators) {
             this.indicators = indicators;
             return this;
         }

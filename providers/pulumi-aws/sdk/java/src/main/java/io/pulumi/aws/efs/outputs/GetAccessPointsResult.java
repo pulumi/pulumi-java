@@ -27,12 +27,12 @@ public final class GetAccessPointsResult {
      */
     private final List<String> ids;
 
-    @OutputCustomType.Constructor({"arns","fileSystemId","id","ids"})
+    @OutputCustomType.Constructor
     private GetAccessPointsResult(
-        List<String> arns,
-        String fileSystemId,
-        String id,
-        List<String> ids) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("fileSystemId") String fileSystemId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ids") List<String> ids) {
         this.arns = arns;
         this.fileSystemId = fileSystemId;
         this.id = id;
@@ -90,22 +90,22 @@ public final class GetAccessPointsResult {
     	      this.ids = defaults.ids;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setFileSystemId(String fileSystemId) {
+        public Builder fileSystemId(String fileSystemId) {
             this.fileSystemId = Objects.requireNonNull(fileSystemId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIds(List<String> ids) {
+        public Builder ids(List<String> ids) {
             this.ids = Objects.requireNonNull(ids);
             return this;
         }

@@ -182,40 +182,40 @@ public final class GetInstanceResult {
      */
     private final List<String> suspensionReason;
 
-    @OutputCustomType.Constructor({"backendType","connectionName","createTime","currentDiskSize","databaseInstalledVersion","databaseVersion","diskEncryptionConfiguration","diskEncryptionStatus","failoverReplica","gceZone","instanceType","ipAddresses","kind","masterInstanceName","maxDiskSize","name","onPremisesConfiguration","outOfDiskReport","project","region","replicaConfiguration","replicaNames","rootPassword","satisfiesPzs","scheduledMaintenance","secondaryGceZone","selfLink","serverCaCert","serviceAccountEmailAddress","settings","state","suspensionReason"})
+    @OutputCustomType.Constructor
     private GetInstanceResult(
-        String backendType,
-        String connectionName,
-        String createTime,
-        String currentDiskSize,
-        String databaseInstalledVersion,
-        String databaseVersion,
-        DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
-        DiskEncryptionStatusResponse diskEncryptionStatus,
-        InstanceFailoverReplicaResponse failoverReplica,
-        String gceZone,
-        String instanceType,
-        List<IpMappingResponse> ipAddresses,
-        String kind,
-        String masterInstanceName,
-        String maxDiskSize,
-        String name,
-        OnPremisesConfigurationResponse onPremisesConfiguration,
-        SqlOutOfDiskReportResponse outOfDiskReport,
-        String project,
-        String region,
-        ReplicaConfigurationResponse replicaConfiguration,
-        List<String> replicaNames,
-        String rootPassword,
-        Boolean satisfiesPzs,
-        SqlScheduledMaintenanceResponse scheduledMaintenance,
-        String secondaryGceZone,
-        String selfLink,
-        SslCertResponse serverCaCert,
-        String serviceAccountEmailAddress,
-        SettingsResponse settings,
-        String state,
-        List<String> suspensionReason) {
+        @OutputCustomType.Parameter("backendType") String backendType,
+        @OutputCustomType.Parameter("connectionName") String connectionName,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("currentDiskSize") String currentDiskSize,
+        @OutputCustomType.Parameter("databaseInstalledVersion") String databaseInstalledVersion,
+        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
+        @OutputCustomType.Parameter("diskEncryptionConfiguration") DiskEncryptionConfigurationResponse diskEncryptionConfiguration,
+        @OutputCustomType.Parameter("diskEncryptionStatus") DiskEncryptionStatusResponse diskEncryptionStatus,
+        @OutputCustomType.Parameter("failoverReplica") InstanceFailoverReplicaResponse failoverReplica,
+        @OutputCustomType.Parameter("gceZone") String gceZone,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("ipAddresses") List<IpMappingResponse> ipAddresses,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("masterInstanceName") String masterInstanceName,
+        @OutputCustomType.Parameter("maxDiskSize") String maxDiskSize,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("onPremisesConfiguration") OnPremisesConfigurationResponse onPremisesConfiguration,
+        @OutputCustomType.Parameter("outOfDiskReport") SqlOutOfDiskReportResponse outOfDiskReport,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("replicaConfiguration") ReplicaConfigurationResponse replicaConfiguration,
+        @OutputCustomType.Parameter("replicaNames") List<String> replicaNames,
+        @OutputCustomType.Parameter("rootPassword") String rootPassword,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("scheduledMaintenance") SqlScheduledMaintenanceResponse scheduledMaintenance,
+        @OutputCustomType.Parameter("secondaryGceZone") String secondaryGceZone,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("serverCaCert") SslCertResponse serverCaCert,
+        @OutputCustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
+        @OutputCustomType.Parameter("settings") SettingsResponse settings,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("suspensionReason") List<String> suspensionReason) {
         this.backendType = backendType;
         this.connectionName = connectionName;
         this.createTime = createTime;
@@ -557,162 +557,162 @@ public final class GetInstanceResult {
     	      this.suspensionReason = defaults.suspensionReason;
         }
 
-        public Builder setBackendType(String backendType) {
+        public Builder backendType(String backendType) {
             this.backendType = Objects.requireNonNull(backendType);
             return this;
         }
 
-        public Builder setConnectionName(String connectionName) {
+        public Builder connectionName(String connectionName) {
             this.connectionName = Objects.requireNonNull(connectionName);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setCurrentDiskSize(String currentDiskSize) {
+        public Builder currentDiskSize(String currentDiskSize) {
             this.currentDiskSize = Objects.requireNonNull(currentDiskSize);
             return this;
         }
 
-        public Builder setDatabaseInstalledVersion(String databaseInstalledVersion) {
+        public Builder databaseInstalledVersion(String databaseInstalledVersion) {
             this.databaseInstalledVersion = Objects.requireNonNull(databaseInstalledVersion);
             return this;
         }
 
-        public Builder setDatabaseVersion(String databaseVersion) {
+        public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
-        public Builder setDiskEncryptionConfiguration(DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
+        public Builder diskEncryptionConfiguration(DiskEncryptionConfigurationResponse diskEncryptionConfiguration) {
             this.diskEncryptionConfiguration = Objects.requireNonNull(diskEncryptionConfiguration);
             return this;
         }
 
-        public Builder setDiskEncryptionStatus(DiskEncryptionStatusResponse diskEncryptionStatus) {
+        public Builder diskEncryptionStatus(DiskEncryptionStatusResponse diskEncryptionStatus) {
             this.diskEncryptionStatus = Objects.requireNonNull(diskEncryptionStatus);
             return this;
         }
 
-        public Builder setFailoverReplica(InstanceFailoverReplicaResponse failoverReplica) {
+        public Builder failoverReplica(InstanceFailoverReplicaResponse failoverReplica) {
             this.failoverReplica = Objects.requireNonNull(failoverReplica);
             return this;
         }
 
-        public Builder setGceZone(String gceZone) {
+        public Builder gceZone(String gceZone) {
             this.gceZone = Objects.requireNonNull(gceZone);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpAddresses(List<IpMappingResponse> ipAddresses) {
+        public Builder ipAddresses(List<IpMappingResponse> ipAddresses) {
             this.ipAddresses = Objects.requireNonNull(ipAddresses);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMasterInstanceName(String masterInstanceName) {
+        public Builder masterInstanceName(String masterInstanceName) {
             this.masterInstanceName = Objects.requireNonNull(masterInstanceName);
             return this;
         }
 
-        public Builder setMaxDiskSize(String maxDiskSize) {
+        public Builder maxDiskSize(String maxDiskSize) {
             this.maxDiskSize = Objects.requireNonNull(maxDiskSize);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOnPremisesConfiguration(OnPremisesConfigurationResponse onPremisesConfiguration) {
+        public Builder onPremisesConfiguration(OnPremisesConfigurationResponse onPremisesConfiguration) {
             this.onPremisesConfiguration = Objects.requireNonNull(onPremisesConfiguration);
             return this;
         }
 
-        public Builder setOutOfDiskReport(SqlOutOfDiskReportResponse outOfDiskReport) {
+        public Builder outOfDiskReport(SqlOutOfDiskReportResponse outOfDiskReport) {
             this.outOfDiskReport = Objects.requireNonNull(outOfDiskReport);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setReplicaConfiguration(ReplicaConfigurationResponse replicaConfiguration) {
+        public Builder replicaConfiguration(ReplicaConfigurationResponse replicaConfiguration) {
             this.replicaConfiguration = Objects.requireNonNull(replicaConfiguration);
             return this;
         }
 
-        public Builder setReplicaNames(List<String> replicaNames) {
+        public Builder replicaNames(List<String> replicaNames) {
             this.replicaNames = Objects.requireNonNull(replicaNames);
             return this;
         }
 
-        public Builder setRootPassword(String rootPassword) {
+        public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setScheduledMaintenance(SqlScheduledMaintenanceResponse scheduledMaintenance) {
+        public Builder scheduledMaintenance(SqlScheduledMaintenanceResponse scheduledMaintenance) {
             this.scheduledMaintenance = Objects.requireNonNull(scheduledMaintenance);
             return this;
         }
 
-        public Builder setSecondaryGceZone(String secondaryGceZone) {
+        public Builder secondaryGceZone(String secondaryGceZone) {
             this.secondaryGceZone = Objects.requireNonNull(secondaryGceZone);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setServerCaCert(SslCertResponse serverCaCert) {
+        public Builder serverCaCert(SslCertResponse serverCaCert) {
             this.serverCaCert = Objects.requireNonNull(serverCaCert);
             return this;
         }
 
-        public Builder setServiceAccountEmailAddress(String serviceAccountEmailAddress) {
+        public Builder serviceAccountEmailAddress(String serviceAccountEmailAddress) {
             this.serviceAccountEmailAddress = Objects.requireNonNull(serviceAccountEmailAddress);
             return this;
         }
 
-        public Builder setSettings(SettingsResponse settings) {
+        public Builder settings(SettingsResponse settings) {
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setSuspensionReason(List<String> suspensionReason) {
+        public Builder suspensionReason(List<String> suspensionReason) {
             this.suspensionReason = Objects.requireNonNull(suspensionReason);
             return this;
         }

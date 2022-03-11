@@ -27,11 +27,11 @@ public final class AsymmetricEncryptedSecretResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"encryptionAlgorithm","encryptionCertThumbprint","value"})
+    @OutputCustomType.Constructor
     private AsymmetricEncryptedSecretResponse(
-        String encryptionAlgorithm,
-        @Nullable String encryptionCertThumbprint,
-        String value) {
+        @OutputCustomType.Parameter("encryptionAlgorithm") String encryptionAlgorithm,
+        @OutputCustomType.Parameter("encryptionCertThumbprint") @Nullable String encryptionCertThumbprint,
+        @OutputCustomType.Parameter("value") String value) {
         this.encryptionAlgorithm = encryptionAlgorithm;
         this.encryptionCertThumbprint = encryptionCertThumbprint;
         this.value = value;
@@ -83,17 +83,17 @@ public final class AsymmetricEncryptedSecretResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setEncryptionAlgorithm(String encryptionAlgorithm) {
+        public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             this.encryptionAlgorithm = Objects.requireNonNull(encryptionAlgorithm);
             return this;
         }
 
-        public Builder setEncryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
+        public Builder encryptionCertThumbprint(@Nullable String encryptionCertThumbprint) {
             this.encryptionCertThumbprint = encryptionCertThumbprint;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

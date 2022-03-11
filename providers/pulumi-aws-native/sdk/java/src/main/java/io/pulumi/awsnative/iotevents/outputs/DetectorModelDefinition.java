@@ -22,10 +22,10 @@ public final class DetectorModelDefinition {
      */
     private final List<DetectorModelState> states;
 
-    @OutputCustomType.Constructor({"initialStateName","states"})
+    @OutputCustomType.Constructor
     private DetectorModelDefinition(
-        String initialStateName,
-        List<DetectorModelState> states) {
+        @OutputCustomType.Parameter("initialStateName") String initialStateName,
+        @OutputCustomType.Parameter("states") List<DetectorModelState> states) {
         this.initialStateName = initialStateName;
         this.states = states;
     }
@@ -67,12 +67,12 @@ public final class DetectorModelDefinition {
     	      this.states = defaults.states;
         }
 
-        public Builder setInitialStateName(String initialStateName) {
+        public Builder initialStateName(String initialStateName) {
             this.initialStateName = Objects.requireNonNull(initialStateName);
             return this;
         }
 
-        public Builder setStates(List<DetectorModelState> states) {
+        public Builder states(List<DetectorModelState> states) {
             this.states = Objects.requireNonNull(states);
             return this;
         }

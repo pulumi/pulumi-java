@@ -41,17 +41,17 @@ public final class GetAssessmentResult {
      */
     private final @Nullable List<AssessmentTag> tags;
 
-    @OutputCustomType.Constructor({"arn","assessmentId","assessmentReportsDestination","creationTime","delegations","roles","scope","status","tags"})
+    @OutputCustomType.Constructor
     private GetAssessmentResult(
-        @Nullable String arn,
-        @Nullable String assessmentId,
-        @Nullable AssessmentReportsDestination assessmentReportsDestination,
-        @Nullable Double creationTime,
-        @Nullable List<AssessmentDelegation> delegations,
-        @Nullable List<AssessmentRole> roles,
-        @Nullable AssessmentScope scope,
-        @Nullable AssessmentStatus status,
-        @Nullable List<AssessmentTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("assessmentId") @Nullable String assessmentId,
+        @OutputCustomType.Parameter("assessmentReportsDestination") @Nullable AssessmentReportsDestination assessmentReportsDestination,
+        @OutputCustomType.Parameter("creationTime") @Nullable Double creationTime,
+        @OutputCustomType.Parameter("delegations") @Nullable List<AssessmentDelegation> delegations,
+        @OutputCustomType.Parameter("roles") @Nullable List<AssessmentRole> roles,
+        @OutputCustomType.Parameter("scope") @Nullable AssessmentScope scope,
+        @OutputCustomType.Parameter("status") @Nullable AssessmentStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<AssessmentTag> tags) {
         this.arn = arn;
         this.assessmentId = assessmentId;
         this.assessmentReportsDestination = assessmentReportsDestination;
@@ -139,47 +139,47 @@ public final class GetAssessmentResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssessmentId(@Nullable String assessmentId) {
+        public Builder assessmentId(@Nullable String assessmentId) {
             this.assessmentId = assessmentId;
             return this;
         }
 
-        public Builder setAssessmentReportsDestination(@Nullable AssessmentReportsDestination assessmentReportsDestination) {
+        public Builder assessmentReportsDestination(@Nullable AssessmentReportsDestination assessmentReportsDestination) {
             this.assessmentReportsDestination = assessmentReportsDestination;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Double creationTime) {
+        public Builder creationTime(@Nullable Double creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setDelegations(@Nullable List<AssessmentDelegation> delegations) {
+        public Builder delegations(@Nullable List<AssessmentDelegation> delegations) {
             this.delegations = delegations;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<AssessmentRole> roles) {
+        public Builder roles(@Nullable List<AssessmentRole> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setScope(@Nullable AssessmentScope scope) {
+        public Builder scope(@Nullable AssessmentScope scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setStatus(@Nullable AssessmentStatus status) {
+        public Builder status(@Nullable AssessmentStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AssessmentTag> tags) {
+        public Builder tags(@Nullable List<AssessmentTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -22,10 +22,10 @@ public final class InitialReplicationDetailsResponse {
      */
     private final @Nullable String initialReplicationType;
 
-    @OutputCustomType.Constructor({"initialReplicationProgressPercentage","initialReplicationType"})
+    @OutputCustomType.Constructor
     private InitialReplicationDetailsResponse(
-        @Nullable String initialReplicationProgressPercentage,
-        @Nullable String initialReplicationType) {
+        @OutputCustomType.Parameter("initialReplicationProgressPercentage") @Nullable String initialReplicationProgressPercentage,
+        @OutputCustomType.Parameter("initialReplicationType") @Nullable String initialReplicationType) {
         this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
         this.initialReplicationType = initialReplicationType;
     }
@@ -67,12 +67,12 @@ public final class InitialReplicationDetailsResponse {
     	      this.initialReplicationType = defaults.initialReplicationType;
         }
 
-        public Builder setInitialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
+        public Builder initialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
             this.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
 
-        public Builder setInitialReplicationType(@Nullable String initialReplicationType) {
+        public Builder initialReplicationType(@Nullable String initialReplicationType) {
             this.initialReplicationType = initialReplicationType;
             return this;
         }

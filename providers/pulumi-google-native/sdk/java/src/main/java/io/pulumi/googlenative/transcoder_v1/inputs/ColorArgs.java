@@ -90,32 +90,32 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
     	      this.saturation = defaults.saturation;
         }
 
-        public Builder setBrightness(@Nullable Input<Double> brightness) {
+        public Builder brightness(@Nullable Input<Double> brightness) {
             this.brightness = brightness;
             return this;
         }
 
-        public Builder setBrightness(@Nullable Double brightness) {
+        public Builder brightness(@Nullable Double brightness) {
             this.brightness = Input.ofNullable(brightness);
             return this;
         }
 
-        public Builder setContrast(@Nullable Input<Double> contrast) {
+        public Builder contrast(@Nullable Input<Double> contrast) {
             this.contrast = contrast;
             return this;
         }
 
-        public Builder setContrast(@Nullable Double contrast) {
+        public Builder contrast(@Nullable Double contrast) {
             this.contrast = Input.ofNullable(contrast);
             return this;
         }
 
-        public Builder setSaturation(@Nullable Input<Double> saturation) {
+        public Builder saturation(@Nullable Input<Double> saturation) {
             this.saturation = saturation;
             return this;
         }
 
-        public Builder setSaturation(@Nullable Double saturation) {
+        public Builder saturation(@Nullable Double saturation) {
             this.saturation = Input.ofNullable(saturation);
             return this;
         }

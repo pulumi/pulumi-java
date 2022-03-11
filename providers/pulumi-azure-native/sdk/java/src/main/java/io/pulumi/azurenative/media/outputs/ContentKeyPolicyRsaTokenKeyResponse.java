@@ -26,11 +26,11 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"exponent","modulus","odataType"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyRsaTokenKeyResponse(
-        String exponent,
-        String modulus,
-        String odataType) {
+        @OutputCustomType.Parameter("exponent") String exponent,
+        @OutputCustomType.Parameter("modulus") String modulus,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.exponent = exponent;
         this.modulus = modulus;
         this.odataType = odataType;
@@ -83,17 +83,17 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setExponent(String exponent) {
+        public Builder exponent(String exponent) {
             this.exponent = Objects.requireNonNull(exponent);
             return this;
         }
 
-        public Builder setModulus(String modulus) {
+        public Builder modulus(String modulus) {
             this.modulus = Objects.requireNonNull(modulus);
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

@@ -24,10 +24,10 @@ public final class FlowAccessControlConfigurationPolicyResponse {
      */
     private final @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies;
 
-    @OutputCustomType.Constructor({"allowedCallerIpAddresses","openAuthenticationPolicies"})
+    @OutputCustomType.Constructor
     private FlowAccessControlConfigurationPolicyResponse(
-        @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
-        @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
+        @OutputCustomType.Parameter("allowedCallerIpAddresses") @Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses,
+        @OutputCustomType.Parameter("openAuthenticationPolicies") @Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
         this.allowedCallerIpAddresses = allowedCallerIpAddresses;
         this.openAuthenticationPolicies = openAuthenticationPolicies;
     }
@@ -69,12 +69,12 @@ public final class FlowAccessControlConfigurationPolicyResponse {
     	      this.openAuthenticationPolicies = defaults.openAuthenticationPolicies;
         }
 
-        public Builder setAllowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
+        public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeResponse> allowedCallerIpAddresses) {
             this.allowedCallerIpAddresses = allowedCallerIpAddresses;
             return this;
         }
 
-        public Builder setOpenAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
+        public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesResponse openAuthenticationPolicies) {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }

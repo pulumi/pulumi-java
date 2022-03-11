@@ -28,11 +28,11 @@ public final class SqlDatabaseResourceSettingsResponse {
      */
     private final @Nullable String zoneRedundant;
 
-    @OutputCustomType.Constructor({"resourceType","targetResourceName","zoneRedundant"})
+    @OutputCustomType.Constructor
     private SqlDatabaseResourceSettingsResponse(
-        String resourceType,
-        String targetResourceName,
-        @Nullable String zoneRedundant) {
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zoneRedundant") @Nullable String zoneRedundant) {
         this.resourceType = resourceType;
         this.targetResourceName = targetResourceName;
         this.zoneRedundant = zoneRedundant;
@@ -85,17 +85,17 @@ public final class SqlDatabaseResourceSettingsResponse {
     	      this.zoneRedundant = defaults.zoneRedundant;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setZoneRedundant(@Nullable String zoneRedundant) {
+        public Builder zoneRedundant(@Nullable String zoneRedundant) {
             this.zoneRedundant = zoneRedundant;
             return this;
         }

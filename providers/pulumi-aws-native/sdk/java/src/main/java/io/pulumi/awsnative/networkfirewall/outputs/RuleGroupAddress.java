@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class RuleGroupAddress {
     private final String addressDefinition;
 
-    @OutputCustomType.Constructor({"addressDefinition"})
-    private RuleGroupAddress(String addressDefinition) {
+    @OutputCustomType.Constructor
+    private RuleGroupAddress(@OutputCustomType.Parameter("addressDefinition") String addressDefinition) {
         this.addressDefinition = addressDefinition;
     }
 
@@ -40,7 +40,7 @@ public final class RuleGroupAddress {
     	      this.addressDefinition = defaults.addressDefinition;
         }
 
-        public Builder setAddressDefinition(String addressDefinition) {
+        public Builder addressDefinition(String addressDefinition) {
             this.addressDefinition = Objects.requireNonNull(addressDefinition);
             return this;
         }

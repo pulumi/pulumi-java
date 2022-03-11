@@ -49,15 +49,15 @@ public final class ConfigurationGroupResponse {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"conditionalMembership","description","displayName","groupMembers","id","memberType","provisioningState"})
+    @OutputCustomType.Constructor
     private ConfigurationGroupResponse(
-        @Nullable String conditionalMembership,
-        @Nullable String description,
-        @Nullable String displayName,
-        @Nullable List<GroupMembersItemResponse> groupMembers,
-        @Nullable String id,
-        @Nullable String memberType,
-        String provisioningState) {
+        @OutputCustomType.Parameter("conditionalMembership") @Nullable String conditionalMembership,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("groupMembers") @Nullable List<GroupMembersItemResponse> groupMembers,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("memberType") @Nullable String memberType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.conditionalMembership = conditionalMembership;
         this.description = description;
         this.displayName = displayName;
@@ -149,37 +149,37 @@ public final class ConfigurationGroupResponse {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setConditionalMembership(@Nullable String conditionalMembership) {
+        public Builder conditionalMembership(@Nullable String conditionalMembership) {
             this.conditionalMembership = conditionalMembership;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setGroupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
+        public Builder groupMembers(@Nullable List<GroupMembersItemResponse> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setMemberType(@Nullable String memberType) {
+        public Builder memberType(@Nullable String memberType) {
             this.memberType = memberType;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

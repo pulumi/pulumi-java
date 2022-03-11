@@ -34,12 +34,12 @@ public final class ApplicationWindowsEvent {
      */
     private final @Nullable String patternSet;
 
-    @OutputCustomType.Constructor({"eventLevels","eventName","logGroupName","patternSet"})
+    @OutputCustomType.Constructor
     private ApplicationWindowsEvent(
-        List<ApplicationEventLevel> eventLevels,
-        String eventName,
-        String logGroupName,
-        @Nullable String patternSet) {
+        @OutputCustomType.Parameter("eventLevels") List<ApplicationEventLevel> eventLevels,
+        @OutputCustomType.Parameter("eventName") String eventName,
+        @OutputCustomType.Parameter("logGroupName") String logGroupName,
+        @OutputCustomType.Parameter("patternSet") @Nullable String patternSet) {
         this.eventLevels = eventLevels;
         this.eventName = eventName;
         this.logGroupName = logGroupName;
@@ -101,22 +101,22 @@ public final class ApplicationWindowsEvent {
     	      this.patternSet = defaults.patternSet;
         }
 
-        public Builder setEventLevels(List<ApplicationEventLevel> eventLevels) {
+        public Builder eventLevels(List<ApplicationEventLevel> eventLevels) {
             this.eventLevels = Objects.requireNonNull(eventLevels);
             return this;
         }
 
-        public Builder setEventName(String eventName) {
+        public Builder eventName(String eventName) {
             this.eventName = Objects.requireNonNull(eventName);
             return this;
         }
 
-        public Builder setLogGroupName(String logGroupName) {
+        public Builder logGroupName(String logGroupName) {
             this.logGroupName = Objects.requireNonNull(logGroupName);
             return this;
         }
 
-        public Builder setPatternSet(@Nullable String patternSet) {
+        public Builder patternSet(@Nullable String patternSet) {
             this.patternSet = patternSet;
             return this;
         }

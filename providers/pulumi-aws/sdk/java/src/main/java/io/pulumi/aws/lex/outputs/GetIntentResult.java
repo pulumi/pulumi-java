@@ -61,17 +61,17 @@ public final class GetIntentResult {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"arn","checksum","createdDate","description","id","lastUpdatedDate","name","parentIntentSignature","version"})
+    @OutputCustomType.Constructor
     private GetIntentResult(
-        String arn,
-        String checksum,
-        String createdDate,
-        String description,
-        String id,
-        String lastUpdatedDate,
-        String name,
-        String parentIntentSignature,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentIntentSignature") String parentIntentSignature,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.arn = arn;
         this.checksum = checksum;
         this.createdDate = createdDate;
@@ -187,47 +187,47 @@ public final class GetIntentResult {
     	      this.version = defaults.version;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedDate(String lastUpdatedDate) {
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentIntentSignature(String parentIntentSignature) {
+        public Builder parentIntentSignature(String parentIntentSignature) {
             this.parentIntentSignature = Objects.requireNonNull(parentIntentSignature);
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

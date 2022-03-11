@@ -26,11 +26,11 @@ public final class QueryParameterTypeStructTypesItemResponse {
      */
     private final QueryParameterTypeResponse type;
 
-    @OutputCustomType.Constructor({"description","name","type"})
+    @OutputCustomType.Constructor
     private QueryParameterTypeStructTypesItemResponse(
-        String description,
-        String name,
-        QueryParameterTypeResponse type) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") QueryParameterTypeResponse type) {
         this.description = description;
         this.name = name;
         this.type = type;
@@ -82,17 +82,17 @@ public final class QueryParameterTypeStructTypesItemResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(QueryParameterTypeResponse type) {
+        public Builder type(QueryParameterTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

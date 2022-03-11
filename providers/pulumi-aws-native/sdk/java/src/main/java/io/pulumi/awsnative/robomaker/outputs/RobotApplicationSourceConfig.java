@@ -26,11 +26,11 @@ public final class RobotApplicationSourceConfig {
      */
     private final String s3Key;
 
-    @OutputCustomType.Constructor({"architecture","s3Bucket","s3Key"})
+    @OutputCustomType.Constructor
     private RobotApplicationSourceConfig(
-        RobotApplicationSourceConfigArchitecture architecture,
-        String s3Bucket,
-        String s3Key) {
+        @OutputCustomType.Parameter("architecture") RobotApplicationSourceConfigArchitecture architecture,
+        @OutputCustomType.Parameter("s3Bucket") String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") String s3Key) {
         this.architecture = architecture;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
@@ -82,17 +82,17 @@ public final class RobotApplicationSourceConfig {
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setArchitecture(RobotApplicationSourceConfigArchitecture architecture) {
+        public Builder architecture(RobotApplicationSourceConfigArchitecture architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3Key(String s3Key) {
+        public Builder s3Key(String s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }

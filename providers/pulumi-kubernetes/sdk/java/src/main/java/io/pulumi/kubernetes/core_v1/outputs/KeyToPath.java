@@ -28,11 +28,11 @@ public final class KeyToPath {
      */
     private final String path;
 
-    @OutputCustomType.Constructor({"key","mode","path"})
+    @OutputCustomType.Constructor
     private KeyToPath(
-        String key,
-        @Nullable Integer mode,
-        String path) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("path") String path) {
         this.key = key;
         this.mode = mode;
         this.path = path;
@@ -84,17 +84,17 @@ public final class KeyToPath {
     	      this.path = defaults.path;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }

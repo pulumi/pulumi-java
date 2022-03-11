@@ -71,22 +71,22 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
     	      this.filter = defaults.filter;
         }
 
-        public Builder setEnable(Input<Boolean> enable) {
+        public Builder enable(Input<Boolean> enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Input.of(Objects.requireNonNull(enable));
             return this;
         }
 
-        public Builder setFilter(Input<String> filter) {
+        public Builder filter(Input<String> filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }

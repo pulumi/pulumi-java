@@ -14,10 +14,10 @@ public final class TaskDefinitionPlacementConstraint {
     private final @Nullable String expression;
     private final String type;
 
-    @OutputCustomType.Constructor({"expression","type"})
+    @OutputCustomType.Constructor
     private TaskDefinitionPlacementConstraint(
-        @Nullable String expression,
-        String type) {
+        @OutputCustomType.Parameter("expression") @Nullable String expression,
+        @OutputCustomType.Parameter("type") String type) {
         this.expression = expression;
         this.type = type;
     }
@@ -51,12 +51,12 @@ public final class TaskDefinitionPlacementConstraint {
     	      this.type = defaults.type;
         }
 
-        public Builder setExpression(@Nullable String expression) {
+        public Builder expression(@Nullable String expression) {
             this.expression = expression;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

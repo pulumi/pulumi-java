@@ -26,11 +26,11 @@ public final class ScheduleResponse {
      */
     private final Integer retentionCount;
 
-    @OutputCustomType.Constructor({"crontabSpec","prefix","retentionCount"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        String crontabSpec,
-        String prefix,
-        Integer retentionCount) {
+        @OutputCustomType.Parameter("crontabSpec") String crontabSpec,
+        @OutputCustomType.Parameter("prefix") String prefix,
+        @OutputCustomType.Parameter("retentionCount") Integer retentionCount) {
         this.crontabSpec = crontabSpec;
         this.prefix = prefix;
         this.retentionCount = retentionCount;
@@ -82,17 +82,17 @@ public final class ScheduleResponse {
     	      this.retentionCount = defaults.retentionCount;
         }
 
-        public Builder setCrontabSpec(String crontabSpec) {
+        public Builder crontabSpec(String crontabSpec) {
             this.crontabSpec = Objects.requireNonNull(crontabSpec);
             return this;
         }
 
-        public Builder setPrefix(String prefix) {
+        public Builder prefix(String prefix) {
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
 
-        public Builder setRetentionCount(Integer retentionCount) {
+        public Builder retentionCount(Integer retentionCount) {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }

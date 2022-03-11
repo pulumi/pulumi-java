@@ -20,10 +20,10 @@ public final class JobSchedulingResponse {
      */
     private final Integer maxFailuresTotal;
 
-    @OutputCustomType.Constructor({"maxFailuresPerHour","maxFailuresTotal"})
+    @OutputCustomType.Constructor
     private JobSchedulingResponse(
-        Integer maxFailuresPerHour,
-        Integer maxFailuresTotal) {
+        @OutputCustomType.Parameter("maxFailuresPerHour") Integer maxFailuresPerHour,
+        @OutputCustomType.Parameter("maxFailuresTotal") Integer maxFailuresTotal) {
         this.maxFailuresPerHour = maxFailuresPerHour;
         this.maxFailuresTotal = maxFailuresTotal;
     }
@@ -65,12 +65,12 @@ public final class JobSchedulingResponse {
     	      this.maxFailuresTotal = defaults.maxFailuresTotal;
         }
 
-        public Builder setMaxFailuresPerHour(Integer maxFailuresPerHour) {
+        public Builder maxFailuresPerHour(Integer maxFailuresPerHour) {
             this.maxFailuresPerHour = Objects.requireNonNull(maxFailuresPerHour);
             return this;
         }
 
-        public Builder setMaxFailuresTotal(Integer maxFailuresTotal) {
+        public Builder maxFailuresTotal(Integer maxFailuresTotal) {
             this.maxFailuresTotal = Objects.requireNonNull(maxFailuresTotal);
             return this;
         }

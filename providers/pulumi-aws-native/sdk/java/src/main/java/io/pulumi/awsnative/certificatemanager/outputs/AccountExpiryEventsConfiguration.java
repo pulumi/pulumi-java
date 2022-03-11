@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class AccountExpiryEventsConfiguration {
     private final @Nullable Integer daysBeforeExpiry;
 
-    @OutputCustomType.Constructor({"daysBeforeExpiry"})
-    private AccountExpiryEventsConfiguration(@Nullable Integer daysBeforeExpiry) {
+    @OutputCustomType.Constructor
+    private AccountExpiryEventsConfiguration(@OutputCustomType.Parameter("daysBeforeExpiry") @Nullable Integer daysBeforeExpiry) {
         this.daysBeforeExpiry = daysBeforeExpiry;
     }
 
@@ -42,7 +42,7 @@ public final class AccountExpiryEventsConfiguration {
     	      this.daysBeforeExpiry = defaults.daysBeforeExpiry;
         }
 
-        public Builder setDaysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
+        public Builder daysBeforeExpiry(@Nullable Integer daysBeforeExpiry) {
             this.daysBeforeExpiry = daysBeforeExpiry;
             return this;
         }

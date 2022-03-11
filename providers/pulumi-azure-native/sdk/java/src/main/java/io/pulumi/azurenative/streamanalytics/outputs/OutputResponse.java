@@ -61,15 +61,15 @@ public final class OutputResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"datasource","diagnostics","etag","id","name","serialization","type"})
+    @OutputCustomType.Constructor
     private OutputResponse(
-        @Nullable Object datasource,
-        DiagnosticsResponse diagnostics,
-        String etag,
-        String id,
-        @Nullable String name,
-        @Nullable Object serialization,
-        String type) {
+        @OutputCustomType.Parameter("datasource") @Nullable Object datasource,
+        @OutputCustomType.Parameter("diagnostics") DiagnosticsResponse diagnostics,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("serialization") @Nullable Object serialization,
+        @OutputCustomType.Parameter("type") String type) {
         this.datasource = datasource;
         this.diagnostics = diagnostics;
         this.etag = etag;
@@ -161,37 +161,37 @@ public final class OutputResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDatasource(@Nullable Object datasource) {
+        public Builder datasource(@Nullable Object datasource) {
             this.datasource = datasource;
             return this;
         }
 
-        public Builder setDiagnostics(DiagnosticsResponse diagnostics) {
+        public Builder diagnostics(DiagnosticsResponse diagnostics) {
             this.diagnostics = Objects.requireNonNull(diagnostics);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSerialization(@Nullable Object serialization) {
+        public Builder serialization(@Nullable Object serialization) {
             this.serialization = serialization;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

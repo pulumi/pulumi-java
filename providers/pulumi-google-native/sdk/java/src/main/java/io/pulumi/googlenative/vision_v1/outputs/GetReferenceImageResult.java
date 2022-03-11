@@ -27,11 +27,11 @@ public final class GetReferenceImageResult {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"boundingPolys","name","uri"})
+    @OutputCustomType.Constructor
     private GetReferenceImageResult(
-        List<BoundingPolyResponse> boundingPolys,
-        String name,
-        String uri) {
+        @OutputCustomType.Parameter("boundingPolys") List<BoundingPolyResponse> boundingPolys,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.boundingPolys = boundingPolys;
         this.name = name;
         this.uri = uri;
@@ -83,17 +83,17 @@ public final class GetReferenceImageResult {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setBoundingPolys(List<BoundingPolyResponse> boundingPolys) {
+        public Builder boundingPolys(List<BoundingPolyResponse> boundingPolys) {
             this.boundingPolys = Objects.requireNonNull(boundingPolys);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

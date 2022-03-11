@@ -37,13 +37,13 @@ public final class IngressClassParametersReference {
      */
     private final @Nullable String scope;
 
-    @OutputCustomType.Constructor({"apiGroup","kind","name","namespace","scope"})
+    @OutputCustomType.Constructor
     private IngressClassParametersReference(
-        @Nullable String apiGroup,
-        String kind,
-        String name,
-        @Nullable String namespace,
-        @Nullable String scope) {
+        @OutputCustomType.Parameter("apiGroup") @Nullable String apiGroup,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("scope") @Nullable String scope) {
         this.apiGroup = apiGroup;
         this.kind = kind;
         this.name = name;
@@ -115,27 +115,27 @@ public final class IngressClassParametersReference {
     	      this.scope = defaults.scope;
         }
 
-        public Builder setApiGroup(@Nullable String apiGroup) {
+        public Builder apiGroup(@Nullable String apiGroup) {
             this.apiGroup = apiGroup;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }

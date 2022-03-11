@@ -20,10 +20,10 @@ public final class CryptoKeyVersionTemplateResponse {
      */
     private final String protectionLevel;
 
-    @OutputCustomType.Constructor({"algorithm","protectionLevel"})
+    @OutputCustomType.Constructor
     private CryptoKeyVersionTemplateResponse(
-        String algorithm,
-        String protectionLevel) {
+        @OutputCustomType.Parameter("algorithm") String algorithm,
+        @OutputCustomType.Parameter("protectionLevel") String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }
@@ -65,12 +65,12 @@ public final class CryptoKeyVersionTemplateResponse {
     	      this.protectionLevel = defaults.protectionLevel;
         }
 
-        public Builder setAlgorithm(String algorithm) {
+        public Builder algorithm(String algorithm) {
             this.algorithm = Objects.requireNonNull(algorithm);
             return this;
         }
 
-        public Builder setProtectionLevel(String protectionLevel) {
+        public Builder protectionLevel(String protectionLevel) {
             this.protectionLevel = Objects.requireNonNull(protectionLevel);
             return this;
         }

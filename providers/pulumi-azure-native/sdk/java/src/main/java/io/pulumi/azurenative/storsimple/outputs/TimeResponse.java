@@ -25,11 +25,11 @@ public final class TimeResponse {
      */
     private final Integer seconds;
 
-    @OutputCustomType.Constructor({"hours","minutes","seconds"})
+    @OutputCustomType.Constructor
     private TimeResponse(
-        Integer hours,
-        Integer minutes,
-        Integer seconds) {
+        @OutputCustomType.Parameter("hours") Integer hours,
+        @OutputCustomType.Parameter("minutes") Integer minutes,
+        @OutputCustomType.Parameter("seconds") Integer seconds) {
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
@@ -81,17 +81,17 @@ public final class TimeResponse {
     	      this.seconds = defaults.seconds;
         }
 
-        public Builder setHours(Integer hours) {
+        public Builder hours(Integer hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setMinutes(Integer minutes) {
+        public Builder minutes(Integer minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
-        public Builder setSeconds(Integer seconds) {
+        public Builder seconds(Integer seconds) {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }

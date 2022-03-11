@@ -22,10 +22,10 @@ public final class GetAccountResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"cloudWatchRoleArn","id"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable String cloudWatchRoleArn,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("cloudWatchRoleArn") @Nullable String cloudWatchRoleArn,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.cloudWatchRoleArn = cloudWatchRoleArn;
         this.id = id;
     }
@@ -67,12 +67,12 @@ public final class GetAccountResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setCloudWatchRoleArn(@Nullable String cloudWatchRoleArn) {
+        public Builder cloudWatchRoleArn(@Nullable String cloudWatchRoleArn) {
             this.cloudWatchRoleArn = cloudWatchRoleArn;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

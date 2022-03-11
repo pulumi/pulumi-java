@@ -29,11 +29,11 @@ public final class SettingsResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"isCompression","issqlcompression","timeZone"})
+    @OutputCustomType.Constructor
     private SettingsResponse(
-        @Nullable Boolean isCompression,
-        @Nullable Boolean issqlcompression,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("isCompression") @Nullable Boolean isCompression,
+        @OutputCustomType.Parameter("issqlcompression") @Nullable Boolean issqlcompression,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.isCompression = isCompression;
         this.issqlcompression = issqlcompression;
         this.timeZone = timeZone;
@@ -86,17 +86,17 @@ public final class SettingsResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setIsCompression(@Nullable Boolean isCompression) {
+        public Builder isCompression(@Nullable Boolean isCompression) {
             this.isCompression = isCompression;
             return this;
         }
 
-        public Builder setIssqlcompression(@Nullable Boolean issqlcompression) {
+        public Builder issqlcompression(@Nullable Boolean issqlcompression) {
             this.issqlcompression = issqlcompression;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

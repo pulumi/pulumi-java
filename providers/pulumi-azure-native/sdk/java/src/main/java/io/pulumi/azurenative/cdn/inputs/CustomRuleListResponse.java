@@ -58,7 +58,7 @@ public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs
     	      this.rules = defaults.rules;
         }
 
-        public Builder setRules(@Nullable List<CustomRuleResponse> rules) {
+        public Builder rules(@Nullable List<CustomRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

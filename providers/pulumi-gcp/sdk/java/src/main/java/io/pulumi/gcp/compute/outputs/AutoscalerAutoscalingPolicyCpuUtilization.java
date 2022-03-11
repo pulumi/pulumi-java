@@ -27,10 +27,10 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
      */
     private final Double target;
 
-    @OutputCustomType.Constructor({"predictiveMethod","target"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicyCpuUtilization(
-        @Nullable String predictiveMethod,
-        Double target) {
+        @OutputCustomType.Parameter("predictiveMethod") @Nullable String predictiveMethod,
+        @OutputCustomType.Parameter("target") Double target) {
         this.predictiveMethod = predictiveMethod;
         this.target = target;
     }
@@ -76,12 +76,12 @@ public final class AutoscalerAutoscalingPolicyCpuUtilization {
     	      this.target = defaults.target;
         }
 
-        public Builder setPredictiveMethod(@Nullable String predictiveMethod) {
+        public Builder predictiveMethod(@Nullable String predictiveMethod) {
             this.predictiveMethod = predictiveMethod;
             return this;
         }
 
-        public Builder setTarget(Double target) {
+        public Builder target(Double target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

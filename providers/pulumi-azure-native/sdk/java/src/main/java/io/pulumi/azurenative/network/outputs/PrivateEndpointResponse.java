@@ -84,21 +84,21 @@ public final class PrivateEndpointResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"customDnsConfigs","etag","extendedLocation","id","location","manualPrivateLinkServiceConnections","name","networkInterfaces","privateLinkServiceConnections","provisioningState","subnet","tags","type"})
+    @OutputCustomType.Constructor
     private PrivateEndpointResponse(
-        @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
-        String etag,
-        @Nullable ExtendedLocationResponse extendedLocation,
-        @Nullable String id,
-        @Nullable String location,
-        @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
-        String name,
-        List<NetworkInterfaceResponse> networkInterfaces,
-        @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
-        String provisioningState,
-        @Nullable SubnetResponse subnet,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("customDnsConfigs") @Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("extendedLocation") @Nullable ExtendedLocationResponse extendedLocation,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("manualPrivateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterfaces") List<NetworkInterfaceResponse> networkInterfaces,
+        @OutputCustomType.Parameter("privateLinkServiceConnections") @Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("subnet") @Nullable SubnetResponse subnet,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.customDnsConfigs = customDnsConfigs;
         this.etag = etag;
         this.extendedLocation = extendedLocation;
@@ -250,67 +250,67 @@ public final class PrivateEndpointResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCustomDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs) {
+        public Builder customDnsConfigs(@Nullable List<CustomDnsConfigPropertiesFormatResponse> customDnsConfigs) {
             this.customDnsConfigs = customDnsConfigs;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExtendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
+        public Builder extendedLocation(@Nullable ExtendedLocationResponse extendedLocation) {
             this.extendedLocation = extendedLocation;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
+        public Builder manualPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> manualPrivateLinkServiceConnections) {
             this.manualPrivateLinkServiceConnections = manualPrivateLinkServiceConnections;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
+        public Builder networkInterfaces(List<NetworkInterfaceResponse> networkInterfaces) {
             this.networkInterfaces = Objects.requireNonNull(networkInterfaces);
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
+        public Builder privateLinkServiceConnections(@Nullable List<PrivateLinkServiceConnectionResponse> privateLinkServiceConnections) {
             this.privateLinkServiceConnections = privateLinkServiceConnections;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetResponse subnet) {
+        public Builder subnet(@Nullable SubnetResponse subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -78,22 +78,22 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     	      this.type = defaults.type;
         }
 
-        public Builder setClaims(@Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims) {
+        public Builder claims(@Nullable Input<List<OpenAuthenticationPolicyClaimArgs>> claims) {
             this.claims = claims;
             return this;
         }
 
-        public Builder setClaims(@Nullable List<OpenAuthenticationPolicyClaimArgs> claims) {
+        public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimArgs> claims) {
             this.claims = Input.ofNullable(claims);
             return this;
         }
 
-        public Builder setType(@Nullable Input<Either<String,OpenAuthenticationProviderType>> type) {
+        public Builder type(@Nullable Input<Either<String,OpenAuthenticationProviderType>> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable Either<String,OpenAuthenticationProviderType> type) {
+        public Builder type(@Nullable Either<String,OpenAuthenticationProviderType> type) {
             this.type = Input.ofNullable(type);
             return this;
         }

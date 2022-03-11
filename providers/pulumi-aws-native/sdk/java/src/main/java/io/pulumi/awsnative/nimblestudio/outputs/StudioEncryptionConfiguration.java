@@ -19,10 +19,10 @@ public final class StudioEncryptionConfiguration {
     private final @Nullable String keyArn;
     private final StudioEncryptionConfigurationKeyType keyType;
 
-    @OutputCustomType.Constructor({"keyArn","keyType"})
+    @OutputCustomType.Constructor
     private StudioEncryptionConfiguration(
-        @Nullable String keyArn,
-        StudioEncryptionConfigurationKeyType keyType) {
+        @OutputCustomType.Parameter("keyArn") @Nullable String keyArn,
+        @OutputCustomType.Parameter("keyType") StudioEncryptionConfigurationKeyType keyType) {
         this.keyArn = keyArn;
         this.keyType = keyType;
     }
@@ -60,12 +60,12 @@ public final class StudioEncryptionConfiguration {
     	      this.keyType = defaults.keyType;
         }
 
-        public Builder setKeyArn(@Nullable String keyArn) {
+        public Builder keyArn(@Nullable String keyArn) {
             this.keyArn = keyArn;
             return this;
         }
 
-        public Builder setKeyType(StudioEncryptionConfigurationKeyType keyType) {
+        public Builder keyType(StudioEncryptionConfigurationKeyType keyType) {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }

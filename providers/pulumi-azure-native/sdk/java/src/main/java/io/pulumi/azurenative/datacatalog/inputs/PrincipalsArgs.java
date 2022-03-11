@@ -74,22 +74,22 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upn = defaults.upn;
         }
 
-        public Builder setObjectId(@Nullable Input<String> objectId) {
+        public Builder objectId(@Nullable Input<String> objectId) {
             this.objectId = objectId;
             return this;
         }
 
-        public Builder setObjectId(@Nullable String objectId) {
+        public Builder objectId(@Nullable String objectId) {
             this.objectId = Input.ofNullable(objectId);
             return this;
         }
 
-        public Builder setUpn(@Nullable Input<String> upn) {
+        public Builder upn(@Nullable Input<String> upn) {
             this.upn = upn;
             return this;
         }
 
-        public Builder setUpn(@Nullable String upn) {
+        public Builder upn(@Nullable String upn) {
             this.upn = Input.ofNullable(upn);
             return this;
         }

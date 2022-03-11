@@ -142,62 +142,62 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
     	      this.sourceInstance = defaults.sourceInstance;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Input<Boolean> guestFlush) {
+        public Builder guestFlush(@Nullable Input<Boolean> guestFlush) {
             this.guestFlush = guestFlush;
             return this;
         }
 
-        public Builder setGuestFlush(@Nullable Boolean guestFlush) {
+        public Builder guestFlush(@Nullable Boolean guestFlush) {
             this.guestFlush = Input.ofNullable(guestFlush);
             return this;
         }
 
-        public Builder setMachineImageEncryptionKey(@Nullable Input<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(@Nullable Input<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey) {
             this.machineImageEncryptionKey = machineImageEncryptionKey;
             return this;
         }
 
-        public Builder setMachineImageEncryptionKey(@Nullable MachineImageMachineImageEncryptionKeyArgs machineImageEncryptionKey) {
+        public Builder machineImageEncryptionKey(@Nullable MachineImageMachineImageEncryptionKeyArgs machineImageEncryptionKey) {
             this.machineImageEncryptionKey = Input.ofNullable(machineImageEncryptionKey);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setSourceInstance(Input<String> sourceInstance) {
+        public Builder sourceInstance(Input<String> sourceInstance) {
             this.sourceInstance = Objects.requireNonNull(sourceInstance);
             return this;
         }
 
-        public Builder setSourceInstance(String sourceInstance) {
+        public Builder sourceInstance(String sourceInstance) {
             this.sourceInstance = Input.of(Objects.requireNonNull(sourceInstance));
             return this;
         }

@@ -75,12 +75,12 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
     	      this.numberOfVms = defaults.numberOfVms;
         }
 
-        public Builder setIssue(@Nullable String issue) {
+        public Builder issue(@Nullable String issue) {
             this.issue = issue;
             return this;
         }
 
-        public Builder setNumberOfVms(@Nullable Double numberOfVms) {
+        public Builder numberOfVms(@Nullable Double numberOfVms) {
             this.numberOfVms = numberOfVms;
             return this;
         }

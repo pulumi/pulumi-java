@@ -20,10 +20,10 @@ public final class ComplianceVersionResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"cpeUri","version"})
+    @OutputCustomType.Constructor
     private ComplianceVersionResponse(
-        String cpeUri,
-        String version) {
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("version") String version) {
         this.cpeUri = cpeUri;
         this.version = version;
     }
@@ -65,12 +65,12 @@ public final class ComplianceVersionResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

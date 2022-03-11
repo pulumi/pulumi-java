@@ -118,52 +118,52 @@ public final class RepositoryPermissionsPolicyArgs extends io.pulumi.resources.R
     	      this.repository = defaults.repository;
         }
 
-        public Builder setDomain(Input<String> domain) {
+        public Builder domain(Input<String> domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Input.of(Objects.requireNonNull(domain));
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable Input<String> domainOwner) {
+        public Builder domainOwner(@Nullable Input<String> domainOwner) {
             this.domainOwner = domainOwner;
             return this;
         }
 
-        public Builder setDomainOwner(@Nullable String domainOwner) {
+        public Builder domainOwner(@Nullable String domainOwner) {
             this.domainOwner = Input.ofNullable(domainOwner);
             return this;
         }
 
-        public Builder setPolicyDocument(Input<String> policyDocument) {
+        public Builder policyDocument(Input<String> policyDocument) {
             this.policyDocument = Objects.requireNonNull(policyDocument);
             return this;
         }
 
-        public Builder setPolicyDocument(String policyDocument) {
+        public Builder policyDocument(String policyDocument) {
             this.policyDocument = Input.of(Objects.requireNonNull(policyDocument));
             return this;
         }
 
-        public Builder setPolicyRevision(@Nullable Input<String> policyRevision) {
+        public Builder policyRevision(@Nullable Input<String> policyRevision) {
             this.policyRevision = policyRevision;
             return this;
         }
 
-        public Builder setPolicyRevision(@Nullable String policyRevision) {
+        public Builder policyRevision(@Nullable String policyRevision) {
             this.policyRevision = Input.ofNullable(policyRevision);
             return this;
         }
 
-        public Builder setRepository(Input<String> repository) {
+        public Builder repository(Input<String> repository) {
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
 
-        public Builder setRepository(String repository) {
+        public Builder repository(String repository) {
             this.repository = Input.of(Objects.requireNonNull(repository));
             return this;
         }

@@ -27,11 +27,11 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
      */
     private final ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties;
 
-    @OutputCustomType.Constructor({"retentionPolicy","schedule","snapshotProperties"})
+    @OutputCustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyResponse(
-        ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
-        ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
-        ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
+        @OutputCustomType.Parameter("retentionPolicy") ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy,
+        @OutputCustomType.Parameter("schedule") ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule,
+        @OutputCustomType.Parameter("snapshotProperties") ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
         this.retentionPolicy = retentionPolicy;
         this.schedule = schedule;
         this.snapshotProperties = snapshotProperties;
@@ -83,17 +83,17 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
     	      this.snapshotProperties = defaults.snapshotProperties;
         }
 
-        public Builder setRetentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy) {
+        public Builder retentionPolicy(ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse retentionPolicy) {
             this.retentionPolicy = Objects.requireNonNull(retentionPolicy);
             return this;
         }
 
-        public Builder setSchedule(ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule) {
+        public Builder schedule(ResourcePolicySnapshotSchedulePolicyScheduleResponse schedule) {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
 
-        public Builder setSnapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
+        public Builder snapshotProperties(ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse snapshotProperties) {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }

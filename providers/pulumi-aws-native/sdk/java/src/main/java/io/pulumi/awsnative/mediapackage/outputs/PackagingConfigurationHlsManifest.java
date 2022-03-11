@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsManifest {
     private final @Nullable Boolean repeatExtXKey;
     private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
-    @OutputCustomType.Constructor({"adMarkers","includeIframeOnlyStream","manifestName","programDateTimeIntervalSeconds","repeatExtXKey","streamSelection"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsManifest(
-        @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
-        @Nullable Boolean includeIframeOnlyStream,
-        @Nullable String manifestName,
-        @Nullable Integer programDateTimeIntervalSeconds,
-        @Nullable Boolean repeatExtXKey,
-        @Nullable PackagingConfigurationStreamSelection streamSelection) {
+        @OutputCustomType.Parameter("adMarkers") @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers,
+        @OutputCustomType.Parameter("includeIframeOnlyStream") @Nullable Boolean includeIframeOnlyStream,
+        @OutputCustomType.Parameter("manifestName") @Nullable String manifestName,
+        @OutputCustomType.Parameter("programDateTimeIntervalSeconds") @Nullable Integer programDateTimeIntervalSeconds,
+        @OutputCustomType.Parameter("repeatExtXKey") @Nullable Boolean repeatExtXKey,
+        @OutputCustomType.Parameter("streamSelection") @Nullable PackagingConfigurationStreamSelection streamSelection) {
         this.adMarkers = adMarkers;
         this.includeIframeOnlyStream = includeIframeOnlyStream;
         this.manifestName = manifestName;
@@ -119,32 +119,32 @@ public final class PackagingConfigurationHlsManifest {
     	      this.streamSelection = defaults.streamSelection;
         }
 
-        public Builder setAdMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
+        public Builder adMarkers(@Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers) {
             this.adMarkers = adMarkers;
             return this;
         }
 
-        public Builder setIncludeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
+        public Builder includeIframeOnlyStream(@Nullable Boolean includeIframeOnlyStream) {
             this.includeIframeOnlyStream = includeIframeOnlyStream;
             return this;
         }
 
-        public Builder setManifestName(@Nullable String manifestName) {
+        public Builder manifestName(@Nullable String manifestName) {
             this.manifestName = manifestName;
             return this;
         }
 
-        public Builder setProgramDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
+        public Builder programDateTimeIntervalSeconds(@Nullable Integer programDateTimeIntervalSeconds) {
             this.programDateTimeIntervalSeconds = programDateTimeIntervalSeconds;
             return this;
         }
 
-        public Builder setRepeatExtXKey(@Nullable Boolean repeatExtXKey) {
+        public Builder repeatExtXKey(@Nullable Boolean repeatExtXKey) {
             this.repeatExtXKey = repeatExtXKey;
             return this;
         }
 
-        public Builder setStreamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
+        public Builder streamSelection(@Nullable PackagingConfigurationStreamSelection streamSelection) {
             this.streamSelection = streamSelection;
             return this;
         }

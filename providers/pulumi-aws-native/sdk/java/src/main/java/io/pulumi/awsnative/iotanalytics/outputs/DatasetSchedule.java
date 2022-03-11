@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class DatasetSchedule {
     private final String scheduleExpression;
 
-    @OutputCustomType.Constructor({"scheduleExpression"})
-    private DatasetSchedule(String scheduleExpression) {
+    @OutputCustomType.Constructor
+    private DatasetSchedule(@OutputCustomType.Parameter("scheduleExpression") String scheduleExpression) {
         this.scheduleExpression = scheduleExpression;
     }
 
@@ -40,7 +40,7 @@ public final class DatasetSchedule {
     	      this.scheduleExpression = defaults.scheduleExpression;
         }
 
-        public Builder setScheduleExpression(String scheduleExpression) {
+        public Builder scheduleExpression(String scheduleExpression) {
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }

@@ -70,12 +70,12 @@ public final class AlertPolicyConditionConditionAbsent {
      */
     private final @Nullable AlertPolicyConditionConditionAbsentTrigger trigger;
 
-    @OutputCustomType.Constructor({"aggregations","duration","filter","trigger"})
+    @OutputCustomType.Constructor
     private AlertPolicyConditionConditionAbsent(
-        @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
-        String duration,
-        @Nullable String filter,
-        @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
+        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
+        @OutputCustomType.Parameter("duration") String duration,
+        @OutputCustomType.Parameter("filter") @Nullable String filter,
+        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;
@@ -172,22 +172,22 @@ public final class AlertPolicyConditionConditionAbsent {
     	      this.trigger = defaults.trigger;
         }
 
-        public Builder setAggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations) {
+        public Builder aggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations) {
             this.aggregations = aggregations;
             return this;
         }
 
-        public Builder setDuration(String duration) {
+        public Builder duration(String duration) {
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
 
-        public Builder setFilter(@Nullable String filter) {
+        public Builder filter(@Nullable String filter) {
             this.filter = filter;
             return this;
         }
 
-        public Builder setTrigger(@Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
+        public Builder trigger(@Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
             this.trigger = trigger;
             return this;
         }

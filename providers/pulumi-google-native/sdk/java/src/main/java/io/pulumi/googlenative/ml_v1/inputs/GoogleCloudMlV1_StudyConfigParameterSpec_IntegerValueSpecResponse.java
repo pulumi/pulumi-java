@@ -68,12 +68,12 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResp
     	      this.minValue = defaults.minValue;
         }
 
-        public Builder setMaxValue(String maxValue) {
+        public Builder maxValue(String maxValue) {
             this.maxValue = Objects.requireNonNull(maxValue);
             return this;
         }
 
-        public Builder setMinValue(String minValue) {
+        public Builder minValue(String minValue) {
             this.minValue = Objects.requireNonNull(minValue);
             return this;
         }

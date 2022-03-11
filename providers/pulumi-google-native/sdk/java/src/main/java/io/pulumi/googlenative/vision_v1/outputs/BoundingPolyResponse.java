@@ -22,10 +22,10 @@ public final class BoundingPolyResponse {
      */
     private final List<VertexResponse> vertices;
 
-    @OutputCustomType.Constructor({"normalizedVertices","vertices"})
+    @OutputCustomType.Constructor
     private BoundingPolyResponse(
-        List<NormalizedVertexResponse> normalizedVertices,
-        List<VertexResponse> vertices) {
+        @OutputCustomType.Parameter("normalizedVertices") List<NormalizedVertexResponse> normalizedVertices,
+        @OutputCustomType.Parameter("vertices") List<VertexResponse> vertices) {
         this.normalizedVertices = normalizedVertices;
         this.vertices = vertices;
     }
@@ -67,12 +67,12 @@ public final class BoundingPolyResponse {
     	      this.vertices = defaults.vertices;
         }
 
-        public Builder setNormalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
+        public Builder normalizedVertices(List<NormalizedVertexResponse> normalizedVertices) {
             this.normalizedVertices = Objects.requireNonNull(normalizedVertices);
             return this;
         }
 
-        public Builder setVertices(List<VertexResponse> vertices) {
+        public Builder vertices(List<VertexResponse> vertices) {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }

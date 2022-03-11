@@ -64,22 +64,22 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
     	      this.targetGroups = defaults.targetGroups;
         }
 
-        public Builder setTargetGroupStickinessConfig(@Nullable Input<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
+        public Builder targetGroupStickinessConfig(@Nullable Input<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig) {
             this.targetGroupStickinessConfig = targetGroupStickinessConfig;
             return this;
         }
 
-        public Builder setTargetGroupStickinessConfig(@Nullable ListenerTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
+        public Builder targetGroupStickinessConfig(@Nullable ListenerTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
             this.targetGroupStickinessConfig = Input.ofNullable(targetGroupStickinessConfig);
             return this;
         }
 
-        public Builder setTargetGroups(@Nullable Input<List<ListenerTargetGroupTupleArgs>> targetGroups) {
+        public Builder targetGroups(@Nullable Input<List<ListenerTargetGroupTupleArgs>> targetGroups) {
             this.targetGroups = targetGroups;
             return this;
         }
 
-        public Builder setTargetGroups(@Nullable List<ListenerTargetGroupTupleArgs> targetGroups) {
+        public Builder targetGroups(@Nullable List<ListenerTargetGroupTupleArgs> targetGroups) {
             this.targetGroups = Input.ofNullable(targetGroups);
             return this;
         }

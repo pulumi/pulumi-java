@@ -20,10 +20,10 @@ public final class DomainRedirectResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"domainName","type"})
+    @OutputCustomType.Constructor
     private DomainRedirectResponse(
-        String domainName,
-        String type) {
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("type") String type) {
         this.domainName = domainName;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class DomainRedirectResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

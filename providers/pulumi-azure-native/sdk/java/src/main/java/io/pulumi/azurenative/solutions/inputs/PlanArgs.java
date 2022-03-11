@@ -122,52 +122,52 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setProduct(Input<String> product) {
+        public Builder product(Input<String> product) {
             this.product = Objects.requireNonNull(product);
             return this;
         }
 
-        public Builder setProduct(String product) {
+        public Builder product(String product) {
             this.product = Input.of(Objects.requireNonNull(product));
             return this;
         }
 
-        public Builder setPromotionCode(@Nullable Input<String> promotionCode) {
+        public Builder promotionCode(@Nullable Input<String> promotionCode) {
             this.promotionCode = promotionCode;
             return this;
         }
 
-        public Builder setPromotionCode(@Nullable String promotionCode) {
+        public Builder promotionCode(@Nullable String promotionCode) {
             this.promotionCode = Input.ofNullable(promotionCode);
             return this;
         }
 
-        public Builder setPublisher(Input<String> publisher) {
+        public Builder publisher(Input<String> publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Input.of(Objects.requireNonNull(publisher));
             return this;
         }
 
-        public Builder setVersion(Input<String> version) {
+        public Builder version(Input<String> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }

@@ -21,10 +21,10 @@ public final class AuthenticatorGroupsConfigResponse {
      */
     private final String securityGroup;
 
-    @OutputCustomType.Constructor({"enabled","securityGroup"})
+    @OutputCustomType.Constructor
     private AuthenticatorGroupsConfigResponse(
-        Boolean enabled,
-        String securityGroup) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("securityGroup") String securityGroup) {
         this.enabled = enabled;
         this.securityGroup = securityGroup;
     }
@@ -66,12 +66,12 @@ public final class AuthenticatorGroupsConfigResponse {
     	      this.securityGroup = defaults.securityGroup;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setSecurityGroup(String securityGroup) {
+        public Builder securityGroup(String securityGroup) {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }

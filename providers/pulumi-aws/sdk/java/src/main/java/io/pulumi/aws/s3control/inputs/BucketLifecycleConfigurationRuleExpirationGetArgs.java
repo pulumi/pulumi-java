@@ -88,32 +88,32 @@ public final class BucketLifecycleConfigurationRuleExpirationGetArgs extends io.
     	      this.expiredObjectDeleteMarker = defaults.expiredObjectDeleteMarker;
         }
 
-        public Builder setDate(@Nullable Input<String> date) {
+        public Builder date(@Nullable Input<String> date) {
             this.date = date;
             return this;
         }
 
-        public Builder setDate(@Nullable String date) {
+        public Builder date(@Nullable String date) {
             this.date = Input.ofNullable(date);
             return this;
         }
 
-        public Builder setDays(@Nullable Input<Integer> days) {
+        public Builder days(@Nullable Input<Integer> days) {
             this.days = days;
             return this;
         }
 
-        public Builder setDays(@Nullable Integer days) {
+        public Builder days(@Nullable Integer days) {
             this.days = Input.ofNullable(days);
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Input<Boolean> expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Input<Boolean> expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = expiredObjectDeleteMarker;
             return this;
         }
 
-        public Builder setExpiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
+        public Builder expiredObjectDeleteMarker(@Nullable Boolean expiredObjectDeleteMarker) {
             this.expiredObjectDeleteMarker = Input.ofNullable(expiredObjectDeleteMarker);
             return this;
         }

@@ -15,8 +15,8 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
      */
     private final AnalyticsConfigurationStorageClassAnalysisDataExport dataExport;
 
-    @OutputCustomType.Constructor({"dataExport"})
-    private AnalyticsConfigurationStorageClassAnalysis(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
+    @OutputCustomType.Constructor
+    private AnalyticsConfigurationStorageClassAnalysis(@OutputCustomType.Parameter("dataExport") AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
         this.dataExport = dataExport;
     }
 
@@ -48,7 +48,7 @@ public final class AnalyticsConfigurationStorageClassAnalysis {
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder setDataExport(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
+        public Builder dataExport(AnalyticsConfigurationStorageClassAnalysisDataExport dataExport) {
             this.dataExport = Objects.requireNonNull(dataExport);
             return this;
         }

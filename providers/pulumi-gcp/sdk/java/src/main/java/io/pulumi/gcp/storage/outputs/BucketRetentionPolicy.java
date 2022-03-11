@@ -23,10 +23,10 @@ public final class BucketRetentionPolicy {
      */
     private final Integer retentionPeriod;
 
-    @OutputCustomType.Constructor({"isLocked","retentionPeriod"})
+    @OutputCustomType.Constructor
     private BucketRetentionPolicy(
-        @Nullable Boolean isLocked,
-        Integer retentionPeriod) {
+        @OutputCustomType.Parameter("isLocked") @Nullable Boolean isLocked,
+        @OutputCustomType.Parameter("retentionPeriod") Integer retentionPeriod) {
         this.isLocked = isLocked;
         this.retentionPeriod = retentionPeriod;
     }
@@ -68,12 +68,12 @@ public final class BucketRetentionPolicy {
     	      this.retentionPeriod = defaults.retentionPeriod;
         }
 
-        public Builder setIsLocked(@Nullable Boolean isLocked) {
+        public Builder isLocked(@Nullable Boolean isLocked) {
             this.isLocked = isLocked;
             return this;
         }
 
-        public Builder setRetentionPeriod(Integer retentionPeriod) {
+        public Builder retentionPeriod(Integer retentionPeriod) {
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }

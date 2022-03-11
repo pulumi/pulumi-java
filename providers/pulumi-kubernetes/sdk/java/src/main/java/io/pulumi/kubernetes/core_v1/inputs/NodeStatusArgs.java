@@ -232,112 +232,112 @@ public final class NodeStatusArgs extends io.pulumi.resources.ResourceArgs {
     	      this.volumesInUse = defaults.volumesInUse;
         }
 
-        public Builder setAddresses(@Nullable Input<List<NodeAddressArgs>> addresses) {
+        public Builder addresses(@Nullable Input<List<NodeAddressArgs>> addresses) {
             this.addresses = addresses;
             return this;
         }
 
-        public Builder setAddresses(@Nullable List<NodeAddressArgs> addresses) {
+        public Builder addresses(@Nullable List<NodeAddressArgs> addresses) {
             this.addresses = Input.ofNullable(addresses);
             return this;
         }
 
-        public Builder setAllocatable(@Nullable Input<Map<String,String>> allocatable) {
+        public Builder allocatable(@Nullable Input<Map<String,String>> allocatable) {
             this.allocatable = allocatable;
             return this;
         }
 
-        public Builder setAllocatable(@Nullable Map<String,String> allocatable) {
+        public Builder allocatable(@Nullable Map<String,String> allocatable) {
             this.allocatable = Input.ofNullable(allocatable);
             return this;
         }
 
-        public Builder setCapacity(@Nullable Input<Map<String,String>> capacity) {
+        public Builder capacity(@Nullable Input<Map<String,String>> capacity) {
             this.capacity = capacity;
             return this;
         }
 
-        public Builder setCapacity(@Nullable Map<String,String> capacity) {
+        public Builder capacity(@Nullable Map<String,String> capacity) {
             this.capacity = Input.ofNullable(capacity);
             return this;
         }
 
-        public Builder setConditions(@Nullable Input<List<NodeConditionArgs>> conditions) {
+        public Builder conditions(@Nullable Input<List<NodeConditionArgs>> conditions) {
             this.conditions = conditions;
             return this;
         }
 
-        public Builder setConditions(@Nullable List<NodeConditionArgs> conditions) {
+        public Builder conditions(@Nullable List<NodeConditionArgs> conditions) {
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
 
-        public Builder setConfig(@Nullable Input<NodeConfigStatusArgs> config) {
+        public Builder config(@Nullable Input<NodeConfigStatusArgs> config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfig(@Nullable NodeConfigStatusArgs config) {
+        public Builder config(@Nullable NodeConfigStatusArgs config) {
             this.config = Input.ofNullable(config);
             return this;
         }
 
-        public Builder setDaemonEndpoints(@Nullable Input<NodeDaemonEndpointsArgs> daemonEndpoints) {
+        public Builder daemonEndpoints(@Nullable Input<NodeDaemonEndpointsArgs> daemonEndpoints) {
             this.daemonEndpoints = daemonEndpoints;
             return this;
         }
 
-        public Builder setDaemonEndpoints(@Nullable NodeDaemonEndpointsArgs daemonEndpoints) {
+        public Builder daemonEndpoints(@Nullable NodeDaemonEndpointsArgs daemonEndpoints) {
             this.daemonEndpoints = Input.ofNullable(daemonEndpoints);
             return this;
         }
 
-        public Builder setImages(@Nullable Input<List<ContainerImageArgs>> images) {
+        public Builder images(@Nullable Input<List<ContainerImageArgs>> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setImages(@Nullable List<ContainerImageArgs> images) {
+        public Builder images(@Nullable List<ContainerImageArgs> images) {
             this.images = Input.ofNullable(images);
             return this;
         }
 
-        public Builder setNodeInfo(@Nullable Input<NodeSystemInfoArgs> nodeInfo) {
+        public Builder nodeInfo(@Nullable Input<NodeSystemInfoArgs> nodeInfo) {
             this.nodeInfo = nodeInfo;
             return this;
         }
 
-        public Builder setNodeInfo(@Nullable NodeSystemInfoArgs nodeInfo) {
+        public Builder nodeInfo(@Nullable NodeSystemInfoArgs nodeInfo) {
             this.nodeInfo = Input.ofNullable(nodeInfo);
             return this;
         }
 
-        public Builder setPhase(@Nullable Input<String> phase) {
+        public Builder phase(@Nullable Input<String> phase) {
             this.phase = phase;
             return this;
         }
 
-        public Builder setPhase(@Nullable String phase) {
+        public Builder phase(@Nullable String phase) {
             this.phase = Input.ofNullable(phase);
             return this;
         }
 
-        public Builder setVolumesAttached(@Nullable Input<List<AttachedVolumeArgs>> volumesAttached) {
+        public Builder volumesAttached(@Nullable Input<List<AttachedVolumeArgs>> volumesAttached) {
             this.volumesAttached = volumesAttached;
             return this;
         }
 
-        public Builder setVolumesAttached(@Nullable List<AttachedVolumeArgs> volumesAttached) {
+        public Builder volumesAttached(@Nullable List<AttachedVolumeArgs> volumesAttached) {
             this.volumesAttached = Input.ofNullable(volumesAttached);
             return this;
         }
 
-        public Builder setVolumesInUse(@Nullable Input<List<String>> volumesInUse) {
+        public Builder volumesInUse(@Nullable Input<List<String>> volumesInUse) {
             this.volumesInUse = volumesInUse;
             return this;
         }
 
-        public Builder setVolumesInUse(@Nullable List<String> volumesInUse) {
+        public Builder volumesInUse(@Nullable List<String> volumesInUse) {
             this.volumesInUse = Input.ofNullable(volumesInUse);
             return this;
         }

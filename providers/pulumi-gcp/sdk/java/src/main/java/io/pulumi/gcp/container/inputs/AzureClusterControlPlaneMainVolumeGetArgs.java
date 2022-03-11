@@ -53,12 +53,12 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends io.pulumi.r
     	      this.sizeGib = defaults.sizeGib;
         }
 
-        public Builder setSizeGib(@Nullable Input<Integer> sizeGib) {
+        public Builder sizeGib(@Nullable Input<Integer> sizeGib) {
             this.sizeGib = sizeGib;
             return this;
         }
 
-        public Builder setSizeGib(@Nullable Integer sizeGib) {
+        public Builder sizeGib(@Nullable Integer sizeGib) {
             this.sizeGib = Input.ofNullable(sizeGib);
             return this;
         }

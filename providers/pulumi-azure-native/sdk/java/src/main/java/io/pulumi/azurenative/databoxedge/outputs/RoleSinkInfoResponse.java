@@ -15,8 +15,8 @@ public final class RoleSinkInfoResponse {
      */
     private final String roleId;
 
-    @OutputCustomType.Constructor({"roleId"})
-    private RoleSinkInfoResponse(String roleId) {
+    @OutputCustomType.Constructor
+    private RoleSinkInfoResponse(@OutputCustomType.Parameter("roleId") String roleId) {
         this.roleId = roleId;
     }
 
@@ -48,7 +48,7 @@ public final class RoleSinkInfoResponse {
     	      this.roleId = defaults.roleId;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }

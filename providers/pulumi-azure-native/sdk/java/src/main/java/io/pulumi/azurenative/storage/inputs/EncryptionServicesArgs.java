@@ -106,42 +106,42 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     	      this.table = defaults.table;
         }
 
-        public Builder setBlob(@Nullable Input<EncryptionServiceArgs> blob) {
+        public Builder blob(@Nullable Input<EncryptionServiceArgs> blob) {
             this.blob = blob;
             return this;
         }
 
-        public Builder setBlob(@Nullable EncryptionServiceArgs blob) {
+        public Builder blob(@Nullable EncryptionServiceArgs blob) {
             this.blob = Input.ofNullable(blob);
             return this;
         }
 
-        public Builder setFile(@Nullable Input<EncryptionServiceArgs> file) {
+        public Builder file(@Nullable Input<EncryptionServiceArgs> file) {
             this.file = file;
             return this;
         }
 
-        public Builder setFile(@Nullable EncryptionServiceArgs file) {
+        public Builder file(@Nullable EncryptionServiceArgs file) {
             this.file = Input.ofNullable(file);
             return this;
         }
 
-        public Builder setQueue(@Nullable Input<EncryptionServiceArgs> queue) {
+        public Builder queue(@Nullable Input<EncryptionServiceArgs> queue) {
             this.queue = queue;
             return this;
         }
 
-        public Builder setQueue(@Nullable EncryptionServiceArgs queue) {
+        public Builder queue(@Nullable EncryptionServiceArgs queue) {
             this.queue = Input.ofNullable(queue);
             return this;
         }
 
-        public Builder setTable(@Nullable Input<EncryptionServiceArgs> table) {
+        public Builder table(@Nullable Input<EncryptionServiceArgs> table) {
             this.table = table;
             return this;
         }
 
-        public Builder setTable(@Nullable EncryptionServiceArgs table) {
+        public Builder table(@Nullable EncryptionServiceArgs table) {
             this.table = Input.ofNullable(table);
             return this;
         }

@@ -12,10 +12,10 @@ public final class GetManagedPrefixListEntry {
     private final String cidr;
     private final String description;
 
-    @OutputCustomType.Constructor({"cidr","description"})
+    @OutputCustomType.Constructor
     private GetManagedPrefixListEntry(
-        String cidr,
-        String description) {
+        @OutputCustomType.Parameter("cidr") String cidr,
+        @OutputCustomType.Parameter("description") String description) {
         this.cidr = cidr;
         this.description = description;
     }
@@ -49,12 +49,12 @@ public final class GetManagedPrefixListEntry {
     	      this.description = defaults.description;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }

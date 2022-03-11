@@ -75,22 +75,22 @@ public final class UserPasswordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable Input<SecretArgs> password) {
+        public Builder password(@Nullable Input<SecretArgs> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setPassword(@Nullable SecretArgs password) {
+        public Builder password(@Nullable SecretArgs password) {
             this.password = Input.ofNullable(password);
             return this;
         }
 
-        public Builder setUsername(@Nullable Input<String> username) {
+        public Builder username(@Nullable Input<String> username) {
             this.username = username;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = Input.ofNullable(username);
             return this;
         }

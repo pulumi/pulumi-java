@@ -22,10 +22,10 @@ public final class RoleResponse {
      */
     private final @Nullable String role;
 
-    @OutputCustomType.Constructor({"db","role"})
+    @OutputCustomType.Constructor
     private RoleResponse(
-        @Nullable String db,
-        @Nullable String role) {
+        @OutputCustomType.Parameter("db") @Nullable String db,
+        @OutputCustomType.Parameter("role") @Nullable String role) {
         this.db = db;
         this.role = role;
     }
@@ -67,12 +67,12 @@ public final class RoleResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setDb(@Nullable String db) {
+        public Builder db(@Nullable String db) {
             this.db = db;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }

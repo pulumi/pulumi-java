@@ -27,11 +27,11 @@ public final class UploadServicePrincipalResponse {
      */
     private final @Nullable String tenantId;
 
-    @OutputCustomType.Constructor({"authority","clientId","tenantId"})
+    @OutputCustomType.Constructor
     private UploadServicePrincipalResponse(
-        @Nullable String authority,
-        @Nullable String clientId,
-        @Nullable String tenantId) {
+        @OutputCustomType.Parameter("authority") @Nullable String authority,
+        @OutputCustomType.Parameter("clientId") @Nullable String clientId,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId) {
         this.authority = authority;
         this.clientId = clientId;
         this.tenantId = tenantId;
@@ -83,17 +83,17 @@ public final class UploadServicePrincipalResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setAuthority(@Nullable String authority) {
+        public Builder authority(@Nullable String authority) {
             this.authority = authority;
             return this;
         }
 
-        public Builder setClientId(@Nullable String clientId) {
+        public Builder clientId(@Nullable String clientId) {
             this.clientId = clientId;
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }

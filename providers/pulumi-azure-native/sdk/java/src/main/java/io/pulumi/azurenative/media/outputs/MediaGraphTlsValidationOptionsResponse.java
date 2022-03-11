@@ -20,10 +20,10 @@ public final class MediaGraphTlsValidationOptionsResponse {
      */
     private final Boolean ignoreSignature;
 
-    @OutputCustomType.Constructor({"ignoreHostname","ignoreSignature"})
+    @OutputCustomType.Constructor
     private MediaGraphTlsValidationOptionsResponse(
-        Boolean ignoreHostname,
-        Boolean ignoreSignature) {
+        @OutputCustomType.Parameter("ignoreHostname") Boolean ignoreHostname,
+        @OutputCustomType.Parameter("ignoreSignature") Boolean ignoreSignature) {
         this.ignoreHostname = ignoreHostname;
         this.ignoreSignature = ignoreSignature;
     }
@@ -65,12 +65,12 @@ public final class MediaGraphTlsValidationOptionsResponse {
     	      this.ignoreSignature = defaults.ignoreSignature;
         }
 
-        public Builder setIgnoreHostname(Boolean ignoreHostname) {
+        public Builder ignoreHostname(Boolean ignoreHostname) {
             this.ignoreHostname = Objects.requireNonNull(ignoreHostname);
             return this;
         }
 
-        public Builder setIgnoreSignature(Boolean ignoreSignature) {
+        public Builder ignoreSignature(Boolean ignoreSignature) {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }

@@ -168,82 +168,82 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     	      this.targetAction = defaults.targetAction;
         }
 
-        public Builder setEnable(@Nullable Input<Boolean> enable) {
+        public Builder enable(@Nullable Input<Boolean> enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = Input.ofNullable(enable);
             return this;
         }
 
-        public Builder setEndTime(@Nullable Input<String> endTime) {
+        public Builder endTime(@Nullable Input<String> endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = Input.ofNullable(endTime);
             return this;
         }
 
-        public Builder setIamRole(@Nullable Input<String> iamRole) {
+        public Builder iamRole(@Nullable Input<String> iamRole) {
             this.iamRole = iamRole;
             return this;
         }
 
-        public Builder setIamRole(@Nullable String iamRole) {
+        public Builder iamRole(@Nullable String iamRole) {
             this.iamRole = Input.ofNullable(iamRole);
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setScheduledActionDescription(@Nullable Input<String> scheduledActionDescription) {
+        public Builder scheduledActionDescription(@Nullable Input<String> scheduledActionDescription) {
             this.scheduledActionDescription = scheduledActionDescription;
             return this;
         }
 
-        public Builder setScheduledActionDescription(@Nullable String scheduledActionDescription) {
+        public Builder scheduledActionDescription(@Nullable String scheduledActionDescription) {
             this.scheduledActionDescription = Input.ofNullable(scheduledActionDescription);
             return this;
         }
 
-        public Builder setScheduledActionName(@Nullable Input<String> scheduledActionName) {
+        public Builder scheduledActionName(@Nullable Input<String> scheduledActionName) {
             this.scheduledActionName = scheduledActionName;
             return this;
         }
 
-        public Builder setScheduledActionName(@Nullable String scheduledActionName) {
+        public Builder scheduledActionName(@Nullable String scheduledActionName) {
             this.scheduledActionName = Input.ofNullable(scheduledActionName);
             return this;
         }
 
-        public Builder setStartTime(@Nullable Input<String> startTime) {
+        public Builder startTime(@Nullable Input<String> startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
 
-        public Builder setTargetAction(@Nullable Input<ScheduledActionTypeArgs> targetAction) {
+        public Builder targetAction(@Nullable Input<ScheduledActionTypeArgs> targetAction) {
             this.targetAction = targetAction;
             return this;
         }
 
-        public Builder setTargetAction(@Nullable ScheduledActionTypeArgs targetAction) {
+        public Builder targetAction(@Nullable ScheduledActionTypeArgs targetAction) {
             this.targetAction = Input.ofNullable(targetAction);
             return this;
         }

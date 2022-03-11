@@ -22,10 +22,10 @@ public final class AutomationRulePropertyValuesConditionResponse {
      */
     private final String conditionType;
 
-    @OutputCustomType.Constructor({"conditionProperties","conditionType"})
+    @OutputCustomType.Constructor
     private AutomationRulePropertyValuesConditionResponse(
-        AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
-        String conditionType) {
+        @OutputCustomType.Parameter("conditionProperties") AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties,
+        @OutputCustomType.Parameter("conditionType") String conditionType) {
         this.conditionProperties = conditionProperties;
         this.conditionType = conditionType;
     }
@@ -68,12 +68,12 @@ public final class AutomationRulePropertyValuesConditionResponse {
     	      this.conditionType = defaults.conditionType;
         }
 
-        public Builder setConditionProperties(AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties) {
+        public Builder conditionProperties(AutomationRulePropertyValuesConditionResponseConditionProperties conditionProperties) {
             this.conditionProperties = Objects.requireNonNull(conditionProperties);
             return this;
         }
 
-        public Builder setConditionType(String conditionType) {
+        public Builder conditionType(String conditionType) {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }

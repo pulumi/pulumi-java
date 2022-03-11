@@ -27,11 +27,11 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
      */
     private final String requirement;
 
-    @OutputCustomType.Constructor({"behavior","conditions","requirement"})
+    @OutputCustomType.Constructor
     private WebAclLoggingConfigurationLoggingFilterFilter(
-        String behavior,
-        List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions,
-        String requirement) {
+        @OutputCustomType.Parameter("behavior") String behavior,
+        @OutputCustomType.Parameter("conditions") List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions,
+        @OutputCustomType.Parameter("requirement") String requirement) {
         this.behavior = behavior;
         this.conditions = conditions;
         this.requirement = requirement;
@@ -83,17 +83,17 @@ public final class WebAclLoggingConfigurationLoggingFilterFilter {
     	      this.requirement = defaults.requirement;
         }
 
-        public Builder setBehavior(String behavior) {
+        public Builder behavior(String behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
-        public Builder setConditions(List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions) {
+        public Builder conditions(List<WebAclLoggingConfigurationLoggingFilterFilterCondition> conditions) {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
 
-        public Builder setRequirement(String requirement) {
+        public Builder requirement(String requirement) {
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }

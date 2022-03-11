@@ -74,22 +74,22 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
     	      this.originalPrice = defaults.originalPrice;
         }
 
-        public Builder setDisplayPrice(@Nullable Input<Double> displayPrice) {
+        public Builder displayPrice(@Nullable Input<Double> displayPrice) {
             this.displayPrice = displayPrice;
             return this;
         }
 
-        public Builder setDisplayPrice(@Nullable Double displayPrice) {
+        public Builder displayPrice(@Nullable Double displayPrice) {
             this.displayPrice = Input.ofNullable(displayPrice);
             return this;
         }
 
-        public Builder setOriginalPrice(@Nullable Input<Double> originalPrice) {
+        public Builder originalPrice(@Nullable Input<Double> originalPrice) {
             this.originalPrice = originalPrice;
             return this;
         }
 
-        public Builder setOriginalPrice(@Nullable Double originalPrice) {
+        public Builder originalPrice(@Nullable Double originalPrice) {
             this.originalPrice = Input.ofNullable(originalPrice);
             return this;
         }

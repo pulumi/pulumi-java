@@ -14,10 +14,10 @@ public final class SpotFleetMemoryMiBRequest {
     private final @Nullable Integer max;
     private final @Nullable Integer min;
 
-    @OutputCustomType.Constructor({"max","min"})
+    @OutputCustomType.Constructor
     private SpotFleetMemoryMiBRequest(
-        @Nullable Integer max,
-        @Nullable Integer min) {
+        @OutputCustomType.Parameter("max") @Nullable Integer max,
+        @OutputCustomType.Parameter("min") @Nullable Integer min) {
         this.max = max;
         this.min = min;
     }
@@ -51,12 +51,12 @@ public final class SpotFleetMemoryMiBRequest {
     	      this.min = defaults.min;
         }
 
-        public Builder setMax(@Nullable Integer max) {
+        public Builder max(@Nullable Integer max) {
             this.max = max;
             return this;
         }
 
-        public Builder setMin(@Nullable Integer min) {
+        public Builder min(@Nullable Integer min) {
             this.min = min;
             return this;
         }

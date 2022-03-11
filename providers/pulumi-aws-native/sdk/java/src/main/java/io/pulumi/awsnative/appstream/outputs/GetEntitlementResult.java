@@ -19,13 +19,13 @@ public final class GetEntitlementResult {
     private final @Nullable String description;
     private final @Nullable String lastModifiedTime;
 
-    @OutputCustomType.Constructor({"appVisibility","attributes","createdTime","description","lastModifiedTime"})
+    @OutputCustomType.Constructor
     private GetEntitlementResult(
-        @Nullable String appVisibility,
-        @Nullable List<EntitlementAttribute> attributes,
-        @Nullable String createdTime,
-        @Nullable String description,
-        @Nullable String lastModifiedTime) {
+        @OutputCustomType.Parameter("appVisibility") @Nullable String appVisibility,
+        @OutputCustomType.Parameter("attributes") @Nullable List<EntitlementAttribute> attributes,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime) {
         this.appVisibility = appVisibility;
         this.attributes = attributes;
         this.createdTime = createdTime;
@@ -77,27 +77,27 @@ public final class GetEntitlementResult {
     	      this.lastModifiedTime = defaults.lastModifiedTime;
         }
 
-        public Builder setAppVisibility(@Nullable String appVisibility) {
+        public Builder appVisibility(@Nullable String appVisibility) {
             this.appVisibility = appVisibility;
             return this;
         }
 
-        public Builder setAttributes(@Nullable List<EntitlementAttribute> attributes) {
+        public Builder attributes(@Nullable List<EntitlementAttribute> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }

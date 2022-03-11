@@ -15,8 +15,8 @@ public final class WebServerConfigResponse {
      */
     private final String machineType;
 
-    @OutputCustomType.Constructor({"machineType"})
-    private WebServerConfigResponse(String machineType) {
+    @OutputCustomType.Constructor
+    private WebServerConfigResponse(@OutputCustomType.Parameter("machineType") String machineType) {
         this.machineType = machineType;
     }
 
@@ -48,7 +48,7 @@ public final class WebServerConfigResponse {
     	      this.machineType = defaults.machineType;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }

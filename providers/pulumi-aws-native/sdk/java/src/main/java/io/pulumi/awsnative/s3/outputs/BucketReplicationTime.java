@@ -13,10 +13,10 @@ public final class BucketReplicationTime {
     private final BucketReplicationTimeStatus status;
     private final BucketReplicationTimeValue time;
 
-    @OutputCustomType.Constructor({"status","time"})
+    @OutputCustomType.Constructor
     private BucketReplicationTime(
-        BucketReplicationTimeStatus status,
-        BucketReplicationTimeValue time) {
+        @OutputCustomType.Parameter("status") BucketReplicationTimeStatus status,
+        @OutputCustomType.Parameter("time") BucketReplicationTimeValue time) {
         this.status = status;
         this.time = time;
     }
@@ -50,12 +50,12 @@ public final class BucketReplicationTime {
     	      this.time = defaults.time;
         }
 
-        public Builder setStatus(BucketReplicationTimeStatus status) {
+        public Builder status(BucketReplicationTimeStatus status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setTime(BucketReplicationTimeValue time) {
+        public Builder time(BucketReplicationTimeValue time) {
             this.time = Objects.requireNonNull(time);
             return this;
         }

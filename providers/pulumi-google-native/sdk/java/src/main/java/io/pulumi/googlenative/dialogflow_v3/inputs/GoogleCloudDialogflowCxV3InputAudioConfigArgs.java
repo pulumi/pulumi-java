@@ -159,72 +159,72 @@ public final class GoogleCloudDialogflowCxV3InputAudioConfigArgs extends io.pulu
     	      this.singleUtterance = defaults.singleUtterance;
         }
 
-        public Builder setAudioEncoding(Input<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding) {
+        public Builder audioEncoding(Input<GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding> audioEncoding) {
             this.audioEncoding = Objects.requireNonNull(audioEncoding);
             return this;
         }
 
-        public Builder setAudioEncoding(GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding audioEncoding) {
+        public Builder audioEncoding(GoogleCloudDialogflowCxV3InputAudioConfigAudioEncoding audioEncoding) {
             this.audioEncoding = Input.of(Objects.requireNonNull(audioEncoding));
             return this;
         }
 
-        public Builder setEnableWordInfo(@Nullable Input<Boolean> enableWordInfo) {
+        public Builder enableWordInfo(@Nullable Input<Boolean> enableWordInfo) {
             this.enableWordInfo = enableWordInfo;
             return this;
         }
 
-        public Builder setEnableWordInfo(@Nullable Boolean enableWordInfo) {
+        public Builder enableWordInfo(@Nullable Boolean enableWordInfo) {
             this.enableWordInfo = Input.ofNullable(enableWordInfo);
             return this;
         }
 
-        public Builder setModel(@Nullable Input<String> model) {
+        public Builder model(@Nullable Input<String> model) {
             this.model = model;
             return this;
         }
 
-        public Builder setModel(@Nullable String model) {
+        public Builder model(@Nullable String model) {
             this.model = Input.ofNullable(model);
             return this;
         }
 
-        public Builder setModelVariant(@Nullable Input<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant) {
+        public Builder modelVariant(@Nullable Input<GoogleCloudDialogflowCxV3InputAudioConfigModelVariant> modelVariant) {
             this.modelVariant = modelVariant;
             return this;
         }
 
-        public Builder setModelVariant(@Nullable GoogleCloudDialogflowCxV3InputAudioConfigModelVariant modelVariant) {
+        public Builder modelVariant(@Nullable GoogleCloudDialogflowCxV3InputAudioConfigModelVariant modelVariant) {
             this.modelVariant = Input.ofNullable(modelVariant);
             return this;
         }
 
-        public Builder setPhraseHints(@Nullable Input<List<String>> phraseHints) {
+        public Builder phraseHints(@Nullable Input<List<String>> phraseHints) {
             this.phraseHints = phraseHints;
             return this;
         }
 
-        public Builder setPhraseHints(@Nullable List<String> phraseHints) {
+        public Builder phraseHints(@Nullable List<String> phraseHints) {
             this.phraseHints = Input.ofNullable(phraseHints);
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Input<Integer> sampleRateHertz) {
             this.sampleRateHertz = sampleRateHertz;
             return this;
         }
 
-        public Builder setSampleRateHertz(@Nullable Integer sampleRateHertz) {
+        public Builder sampleRateHertz(@Nullable Integer sampleRateHertz) {
             this.sampleRateHertz = Input.ofNullable(sampleRateHertz);
             return this;
         }
 
-        public Builder setSingleUtterance(@Nullable Input<Boolean> singleUtterance) {
+        public Builder singleUtterance(@Nullable Input<Boolean> singleUtterance) {
             this.singleUtterance = singleUtterance;
             return this;
         }
 
-        public Builder setSingleUtterance(@Nullable Boolean singleUtterance) {
+        public Builder singleUtterance(@Nullable Boolean singleUtterance) {
             this.singleUtterance = Input.ofNullable(singleUtterance);
             return this;
         }

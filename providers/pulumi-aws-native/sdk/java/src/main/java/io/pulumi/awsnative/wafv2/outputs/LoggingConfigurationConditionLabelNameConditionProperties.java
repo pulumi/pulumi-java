@@ -15,8 +15,8 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties {
      */
     private final String labelName;
 
-    @OutputCustomType.Constructor({"labelName"})
-    private LoggingConfigurationConditionLabelNameConditionProperties(String labelName) {
+    @OutputCustomType.Constructor
+    private LoggingConfigurationConditionLabelNameConditionProperties(@OutputCustomType.Parameter("labelName") String labelName) {
         this.labelName = labelName;
     }
 
@@ -48,7 +48,7 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties {
     	      this.labelName = defaults.labelName;
         }
 
-        public Builder setLabelName(String labelName) {
+        public Builder labelName(String labelName) {
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }

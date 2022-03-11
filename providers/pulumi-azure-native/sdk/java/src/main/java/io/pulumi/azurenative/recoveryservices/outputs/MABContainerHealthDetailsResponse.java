@@ -34,12 +34,12 @@ public final class MABContainerHealthDetailsResponse {
      */
     private final @Nullable String title;
 
-    @OutputCustomType.Constructor({"code","message","recommendations","title"})
+    @OutputCustomType.Constructor
     private MABContainerHealthDetailsResponse(
-        @Nullable Integer code,
-        @Nullable String message,
-        @Nullable List<String> recommendations,
-        @Nullable String title) {
+        @OutputCustomType.Parameter("code") @Nullable Integer code,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("recommendations") @Nullable List<String> recommendations,
+        @OutputCustomType.Parameter("title") @Nullable String title) {
         this.code = code;
         this.message = message;
         this.recommendations = recommendations;
@@ -101,22 +101,22 @@ public final class MABContainerHealthDetailsResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setCode(@Nullable Integer code) {
+        public Builder code(@Nullable Integer code) {
             this.code = code;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setRecommendations(@Nullable List<String> recommendations) {
+        public Builder recommendations(@Nullable List<String> recommendations) {
             this.recommendations = recommendations;
             return this;
         }
 
-        public Builder setTitle(@Nullable String title) {
+        public Builder title(@Nullable String title) {
             this.title = title;
             return this;
         }

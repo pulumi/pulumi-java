@@ -23,10 +23,10 @@ public final class TokenRequest {
      */
     private final @Nullable Integer expirationSeconds;
 
-    @OutputCustomType.Constructor({"audience","expirationSeconds"})
+    @OutputCustomType.Constructor
     private TokenRequest(
-        String audience,
-        @Nullable Integer expirationSeconds) {
+        @OutputCustomType.Parameter("audience") String audience,
+        @OutputCustomType.Parameter("expirationSeconds") @Nullable Integer expirationSeconds) {
         this.audience = audience;
         this.expirationSeconds = expirationSeconds;
     }
@@ -68,12 +68,12 @@ public final class TokenRequest {
     	      this.expirationSeconds = defaults.expirationSeconds;
         }
 
-        public Builder setAudience(String audience) {
+        public Builder audience(String audience) {
             this.audience = Objects.requireNonNull(audience);
             return this;
         }
 
-        public Builder setExpirationSeconds(@Nullable Integer expirationSeconds) {
+        public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
             this.expirationSeconds = expirationSeconds;
             return this;
         }

@@ -23,10 +23,10 @@ public final class TableTtl {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor({"attributeName","enabled"})
+    @OutputCustomType.Constructor
     private TableTtl(
-        String attributeName,
-        @Nullable Boolean enabled) {
+        @OutputCustomType.Parameter("attributeName") String attributeName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.attributeName = attributeName;
         this.enabled = enabled;
     }
@@ -68,12 +68,12 @@ public final class TableTtl {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setAttributeName(String attributeName) {
+        public Builder attributeName(String attributeName) {
             this.attributeName = Objects.requireNonNull(attributeName);
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }

@@ -20,10 +20,10 @@ public final class GitSourceContextResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"revisionId","url"})
+    @OutputCustomType.Constructor
     private GitSourceContextResponse(
-        String revisionId,
-        String url) {
+        @OutputCustomType.Parameter("revisionId") String revisionId,
+        @OutputCustomType.Parameter("url") String url) {
         this.revisionId = revisionId;
         this.url = url;
     }
@@ -65,12 +65,12 @@ public final class GitSourceContextResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setRevisionId(String revisionId) {
+        public Builder revisionId(String revisionId) {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

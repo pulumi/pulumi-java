@@ -31,12 +31,12 @@ public final class AzureBlobStorageDataResponse {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor({"azureCredentials","container","path","storageAccount"})
+    @OutputCustomType.Constructor
     private AzureBlobStorageDataResponse(
-        AzureCredentialsResponse azureCredentials,
-        String container,
-        String path,
-        String storageAccount) {
+        @OutputCustomType.Parameter("azureCredentials") AzureCredentialsResponse azureCredentials,
+        @OutputCustomType.Parameter("container") String container,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;
@@ -98,22 +98,22 @@ public final class AzureBlobStorageDataResponse {
     	      this.storageAccount = defaults.storageAccount;
         }
 
-        public Builder setAzureCredentials(AzureCredentialsResponse azureCredentials) {
+        public Builder azureCredentials(AzureCredentialsResponse azureCredentials) {
             this.azureCredentials = Objects.requireNonNull(azureCredentials);
             return this;
         }
 
-        public Builder setContainer(String container) {
+        public Builder container(String container) {
             this.container = Objects.requireNonNull(container);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setStorageAccount(String storageAccount) {
+        public Builder storageAccount(String storageAccount) {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }

@@ -62,12 +62,12 @@ public final class GetWorkerPoolArgs extends io.pulumi.resources.InvokeArgs {
     	      this.workerPoolId = defaults.workerPoolId;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWorkerPoolId(String workerPoolId) {
+        public Builder workerPoolId(String workerPoolId) {
             this.workerPoolId = Objects.requireNonNull(workerPoolId);
             return this;
         }

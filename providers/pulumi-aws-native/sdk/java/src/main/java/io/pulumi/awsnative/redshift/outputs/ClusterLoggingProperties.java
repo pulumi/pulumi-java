@@ -14,10 +14,10 @@ public final class ClusterLoggingProperties {
     private final String bucketName;
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"bucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ClusterLoggingProperties(
-        String bucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("bucketName") String bucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.bucketName = bucketName;
         this.s3KeyPrefix = s3KeyPrefix;
     }
@@ -51,12 +51,12 @@ public final class ClusterLoggingProperties {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setBucketName(String bucketName) {
+        public Builder bucketName(String bucketName) {
             this.bucketName = Objects.requireNonNull(bucketName);
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

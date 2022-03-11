@@ -21,13 +21,13 @@ public final class InstanceFromMachineImageScheduling {
     private final @Nullable String onHostMaintenance;
     private final @Nullable Boolean preemptible;
 
-    @OutputCustomType.Constructor({"automaticRestart","minNodeCpus","nodeAffinities","onHostMaintenance","preemptible"})
+    @OutputCustomType.Constructor
     private InstanceFromMachineImageScheduling(
-        @Nullable Boolean automaticRestart,
-        @Nullable Integer minNodeCpus,
-        @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities,
-        @Nullable String onHostMaintenance,
-        @Nullable Boolean preemptible) {
+        @OutputCustomType.Parameter("automaticRestart") @Nullable Boolean automaticRestart,
+        @OutputCustomType.Parameter("minNodeCpus") @Nullable Integer minNodeCpus,
+        @OutputCustomType.Parameter("nodeAffinities") @Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities,
+        @OutputCustomType.Parameter("onHostMaintenance") @Nullable String onHostMaintenance,
+        @OutputCustomType.Parameter("preemptible") @Nullable Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;
@@ -79,27 +79,27 @@ public final class InstanceFromMachineImageScheduling {
     	      this.preemptible = defaults.preemptible;
         }
 
-        public Builder setAutomaticRestart(@Nullable Boolean automaticRestart) {
+        public Builder automaticRestart(@Nullable Boolean automaticRestart) {
             this.automaticRestart = automaticRestart;
             return this;
         }
 
-        public Builder setMinNodeCpus(@Nullable Integer minNodeCpus) {
+        public Builder minNodeCpus(@Nullable Integer minNodeCpus) {
             this.minNodeCpus = minNodeCpus;
             return this;
         }
 
-        public Builder setNodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities) {
+        public Builder nodeAffinities(@Nullable List<InstanceFromMachineImageSchedulingNodeAffinity> nodeAffinities) {
             this.nodeAffinities = nodeAffinities;
             return this;
         }
 
-        public Builder setOnHostMaintenance(@Nullable String onHostMaintenance) {
+        public Builder onHostMaintenance(@Nullable String onHostMaintenance) {
             this.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
-        public Builder setPreemptible(@Nullable Boolean preemptible) {
+        public Builder preemptible(@Nullable Boolean preemptible) {
             this.preemptible = preemptible;
             return this;
         }

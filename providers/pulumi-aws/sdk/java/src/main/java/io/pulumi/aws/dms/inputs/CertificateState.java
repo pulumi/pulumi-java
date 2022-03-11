@@ -135,62 +135,62 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
     	      this.tagsAll = defaults.tagsAll;
         }
 
-        public Builder setCertificateArn(@Nullable Input<String> certificateArn) {
+        public Builder certificateArn(@Nullable Input<String> certificateArn) {
             this.certificateArn = certificateArn;
             return this;
         }
 
-        public Builder setCertificateArn(@Nullable String certificateArn) {
+        public Builder certificateArn(@Nullable String certificateArn) {
             this.certificateArn = Input.ofNullable(certificateArn);
             return this;
         }
 
-        public Builder setCertificateId(@Nullable Input<String> certificateId) {
+        public Builder certificateId(@Nullable Input<String> certificateId) {
             this.certificateId = certificateId;
             return this;
         }
 
-        public Builder setCertificateId(@Nullable String certificateId) {
+        public Builder certificateId(@Nullable String certificateId) {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable Input<String> certificatePem) {
+        public Builder certificatePem(@Nullable Input<String> certificatePem) {
             this.certificatePem = certificatePem;
             return this;
         }
 
-        public Builder setCertificatePem(@Nullable String certificatePem) {
+        public Builder certificatePem(@Nullable String certificatePem) {
             this.certificatePem = Input.ofNullable(certificatePem);
             return this;
         }
 
-        public Builder setCertificateWallet(@Nullable Input<String> certificateWallet) {
+        public Builder certificateWallet(@Nullable Input<String> certificateWallet) {
             this.certificateWallet = certificateWallet;
             return this;
         }
 
-        public Builder setCertificateWallet(@Nullable String certificateWallet) {
+        public Builder certificateWallet(@Nullable String certificateWallet) {
             this.certificateWallet = Input.ofNullable(certificateWallet);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }

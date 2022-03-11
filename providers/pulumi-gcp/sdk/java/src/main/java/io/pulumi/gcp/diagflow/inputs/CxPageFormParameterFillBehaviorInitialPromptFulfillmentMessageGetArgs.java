@@ -53,12 +53,12 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
     	      this.text = defaults.text;
         }
 
-        public Builder setText(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text) {
+        public Builder text(@Nullable Input<CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs> text) {
             this.text = text;
             return this;
         }
 
-        public Builder setText(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs text) {
+        public Builder text(@Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageTextGetArgs text) {
             this.text = Input.ofNullable(text);
             return this;
         }

@@ -119,52 +119,52 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
     	      this.status = defaults.status;
         }
 
-        public Builder setAttachmentId(@Nullable Input<String> attachmentId) {
+        public Builder attachmentId(@Nullable Input<String> attachmentId) {
             this.attachmentId = attachmentId;
             return this;
         }
 
-        public Builder setAttachmentId(@Nullable String attachmentId) {
+        public Builder attachmentId(@Nullable String attachmentId) {
             this.attachmentId = Input.ofNullable(attachmentId);
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Input<Integer> deviceIndex) {
+        public Builder deviceIndex(@Nullable Input<Integer> deviceIndex) {
             this.deviceIndex = deviceIndex;
             return this;
         }
 
-        public Builder setDeviceIndex(@Nullable Integer deviceIndex) {
+        public Builder deviceIndex(@Nullable Integer deviceIndex) {
             this.deviceIndex = Input.ofNullable(deviceIndex);
             return this;
         }
 
-        public Builder setInstanceId(@Nullable Input<String> instanceId) {
+        public Builder instanceId(@Nullable Input<String> instanceId) {
             this.instanceId = instanceId;
             return this;
         }
 
-        public Builder setInstanceId(@Nullable String instanceId) {
+        public Builder instanceId(@Nullable String instanceId) {
             this.instanceId = Input.ofNullable(instanceId);
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable Input<String> networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable Input<String> networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 
-        public Builder setNetworkInterfaceId(@Nullable String networkInterfaceId) {
+        public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
             this.networkInterfaceId = Input.ofNullable(networkInterfaceId);
             return this;
         }
 
-        public Builder setStatus(@Nullable Input<String> status) {
+        public Builder status(@Nullable Input<String> status) {
             this.status = status;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = Input.ofNullable(status);
             return this;
         }

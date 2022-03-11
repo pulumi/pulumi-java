@@ -93,32 +93,32 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
     	      this.remotePrivateLinkServiceConnectionState = defaults.remotePrivateLinkServiceConnectionState;
         }
 
-        public Builder setGroupConnectivityInformation(@Nullable Input<List<GroupConnectivityInformationArgs>> groupConnectivityInformation) {
+        public Builder groupConnectivityInformation(@Nullable Input<List<GroupConnectivityInformationArgs>> groupConnectivityInformation) {
             this.groupConnectivityInformation = groupConnectivityInformation;
             return this;
         }
 
-        public Builder setGroupConnectivityInformation(@Nullable List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
+        public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
             this.groupConnectivityInformation = Input.ofNullable(groupConnectivityInformation);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setRemotePrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
+        public Builder remotePrivateLinkServiceConnectionState(@Nullable Input<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setRemotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
+        public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
             this.remotePrivateLinkServiceConnectionState = Input.ofNullable(remotePrivateLinkServiceConnectionState);
             return this;
         }

@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class BucketNotificationFilter {
     private final BucketS3KeyFilter s3Key;
 
-    @OutputCustomType.Constructor({"s3Key"})
-    private BucketNotificationFilter(BucketS3KeyFilter s3Key) {
+    @OutputCustomType.Constructor
+    private BucketNotificationFilter(@OutputCustomType.Parameter("s3Key") BucketS3KeyFilter s3Key) {
         this.s3Key = s3Key;
     }
 
@@ -40,7 +40,7 @@ public final class BucketNotificationFilter {
     	      this.s3Key = defaults.s3Key;
         }
 
-        public Builder setS3Key(BucketS3KeyFilter s3Key) {
+        public Builder s3Key(BucketS3KeyFilter s3Key) {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }

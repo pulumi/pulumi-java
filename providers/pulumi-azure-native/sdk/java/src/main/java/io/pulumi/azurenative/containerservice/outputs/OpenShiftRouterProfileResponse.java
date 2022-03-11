@@ -27,11 +27,11 @@ public final class OpenShiftRouterProfileResponse {
      */
     private final String publicSubdomain;
 
-    @OutputCustomType.Constructor({"fqdn","name","publicSubdomain"})
+    @OutputCustomType.Constructor
     private OpenShiftRouterProfileResponse(
-        String fqdn,
-        @Nullable String name,
-        String publicSubdomain) {
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("publicSubdomain") String publicSubdomain) {
         this.fqdn = fqdn;
         this.name = name;
         this.publicSubdomain = publicSubdomain;
@@ -83,17 +83,17 @@ public final class OpenShiftRouterProfileResponse {
     	      this.publicSubdomain = defaults.publicSubdomain;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPublicSubdomain(String publicSubdomain) {
+        public Builder publicSubdomain(String publicSubdomain) {
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }

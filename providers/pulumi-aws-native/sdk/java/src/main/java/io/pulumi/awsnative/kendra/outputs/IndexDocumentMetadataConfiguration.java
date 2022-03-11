@@ -19,12 +19,12 @@ public final class IndexDocumentMetadataConfiguration {
     private final @Nullable IndexSearch search;
     private final IndexDocumentAttributeValueType type;
 
-    @OutputCustomType.Constructor({"name","relevance","search","type"})
+    @OutputCustomType.Constructor
     private IndexDocumentMetadataConfiguration(
-        String name,
-        @Nullable IndexRelevance relevance,
-        @Nullable IndexSearch search,
-        IndexDocumentAttributeValueType type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relevance") @Nullable IndexRelevance relevance,
+        @OutputCustomType.Parameter("search") @Nullable IndexSearch search,
+        @OutputCustomType.Parameter("type") IndexDocumentAttributeValueType type) {
         this.name = name;
         this.relevance = relevance;
         this.search = search;
@@ -70,22 +70,22 @@ public final class IndexDocumentMetadataConfiguration {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelevance(@Nullable IndexRelevance relevance) {
+        public Builder relevance(@Nullable IndexRelevance relevance) {
             this.relevance = relevance;
             return this;
         }
 
-        public Builder setSearch(@Nullable IndexSearch search) {
+        public Builder search(@Nullable IndexSearch search) {
             this.search = search;
             return this;
         }
 
-        public Builder setType(IndexDocumentAttributeValueType type) {
+        public Builder type(IndexDocumentAttributeValueType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -63,18 +63,18 @@ public final class ShareSynchronizationResponse {
      */
     private final String synchronizationMode;
 
-    @OutputCustomType.Constructor({"consumerEmail","consumerName","consumerTenantName","durationMs","endTime","message","startTime","status","synchronizationId","synchronizationMode"})
+    @OutputCustomType.Constructor
     private ShareSynchronizationResponse(
-        @Nullable String consumerEmail,
-        @Nullable String consumerName,
-        @Nullable String consumerTenantName,
-        @Nullable Integer durationMs,
-        @Nullable String endTime,
-        @Nullable String message,
-        @Nullable String startTime,
-        @Nullable String status,
-        @Nullable String synchronizationId,
-        String synchronizationMode) {
+        @OutputCustomType.Parameter("consumerEmail") @Nullable String consumerEmail,
+        @OutputCustomType.Parameter("consumerName") @Nullable String consumerName,
+        @OutputCustomType.Parameter("consumerTenantName") @Nullable String consumerTenantName,
+        @OutputCustomType.Parameter("durationMs") @Nullable Integer durationMs,
+        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("startTime") @Nullable String startTime,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("synchronizationId") @Nullable String synchronizationId,
+        @OutputCustomType.Parameter("synchronizationMode") String synchronizationMode) {
         this.consumerEmail = consumerEmail;
         this.consumerName = consumerName;
         this.consumerTenantName = consumerTenantName;
@@ -196,52 +196,52 @@ public final class ShareSynchronizationResponse {
     	      this.synchronizationMode = defaults.synchronizationMode;
         }
 
-        public Builder setConsumerEmail(@Nullable String consumerEmail) {
+        public Builder consumerEmail(@Nullable String consumerEmail) {
             this.consumerEmail = consumerEmail;
             return this;
         }
 
-        public Builder setConsumerName(@Nullable String consumerName) {
+        public Builder consumerName(@Nullable String consumerName) {
             this.consumerName = consumerName;
             return this;
         }
 
-        public Builder setConsumerTenantName(@Nullable String consumerTenantName) {
+        public Builder consumerTenantName(@Nullable String consumerTenantName) {
             this.consumerTenantName = consumerTenantName;
             return this;
         }
 
-        public Builder setDurationMs(@Nullable Integer durationMs) {
+        public Builder durationMs(@Nullable Integer durationMs) {
             this.durationMs = durationMs;
             return this;
         }
 
-        public Builder setEndTime(@Nullable String endTime) {
+        public Builder endTime(@Nullable String endTime) {
             this.endTime = endTime;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setStartTime(@Nullable String startTime) {
+        public Builder startTime(@Nullable String startTime) {
             this.startTime = startTime;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSynchronizationId(@Nullable String synchronizationId) {
+        public Builder synchronizationId(@Nullable String synchronizationId) {
             this.synchronizationId = synchronizationId;
             return this;
         }
 
-        public Builder setSynchronizationMode(String synchronizationMode) {
+        public Builder synchronizationMode(String synchronizationMode) {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }

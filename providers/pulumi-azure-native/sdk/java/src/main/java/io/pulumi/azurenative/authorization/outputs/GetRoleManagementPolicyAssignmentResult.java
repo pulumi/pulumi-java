@@ -48,15 +48,15 @@ public final class GetRoleManagementPolicyAssignmentResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","policyAssignmentProperties","policyId","roleDefinitionId","scope","type"})
+    @OutputCustomType.Constructor
     private GetRoleManagementPolicyAssignmentResult(
-        String id,
-        String name,
-        PolicyAssignmentPropertiesResponse policyAssignmentProperties,
-        @Nullable String policyId,
-        @Nullable String roleDefinitionId,
-        @Nullable String scope,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("policyAssignmentProperties") PolicyAssignmentPropertiesResponse policyAssignmentProperties,
+        @OutputCustomType.Parameter("policyId") @Nullable String policyId,
+        @OutputCustomType.Parameter("roleDefinitionId") @Nullable String roleDefinitionId,
+        @OutputCustomType.Parameter("scope") @Nullable String scope,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.policyAssignmentProperties = policyAssignmentProperties;
@@ -148,37 +148,37 @@ public final class GetRoleManagementPolicyAssignmentResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPolicyAssignmentProperties(PolicyAssignmentPropertiesResponse policyAssignmentProperties) {
+        public Builder policyAssignmentProperties(PolicyAssignmentPropertiesResponse policyAssignmentProperties) {
             this.policyAssignmentProperties = Objects.requireNonNull(policyAssignmentProperties);
             return this;
         }
 
-        public Builder setPolicyId(@Nullable String policyId) {
+        public Builder policyId(@Nullable String policyId) {
             this.policyId = policyId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
-        public Builder setScope(@Nullable String scope) {
+        public Builder scope(@Nullable String scope) {
             this.scope = scope;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

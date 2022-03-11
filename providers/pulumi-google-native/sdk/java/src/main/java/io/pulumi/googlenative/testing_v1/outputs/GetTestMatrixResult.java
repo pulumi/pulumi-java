@@ -83,21 +83,21 @@ public final class GetTestMatrixResult {
      */
     private final String timestamp;
 
-    @OutputCustomType.Constructor({"clientInfo","environmentMatrix","failFast","flakyTestAttempts","invalidMatrixDetails","outcomeSummary","project","resultStorage","state","testExecutions","testMatrixId","testSpecification","timestamp"})
+    @OutputCustomType.Constructor
     private GetTestMatrixResult(
-        ClientInfoResponse clientInfo,
-        EnvironmentMatrixResponse environmentMatrix,
-        Boolean failFast,
-        Integer flakyTestAttempts,
-        String invalidMatrixDetails,
-        String outcomeSummary,
-        String project,
-        ResultStorageResponse resultStorage,
-        String state,
-        List<TestExecutionResponse> testExecutions,
-        String testMatrixId,
-        TestSpecificationResponse testSpecification,
-        String timestamp) {
+        @OutputCustomType.Parameter("clientInfo") ClientInfoResponse clientInfo,
+        @OutputCustomType.Parameter("environmentMatrix") EnvironmentMatrixResponse environmentMatrix,
+        @OutputCustomType.Parameter("failFast") Boolean failFast,
+        @OutputCustomType.Parameter("flakyTestAttempts") Integer flakyTestAttempts,
+        @OutputCustomType.Parameter("invalidMatrixDetails") String invalidMatrixDetails,
+        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("resultStorage") ResultStorageResponse resultStorage,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("testExecutions") List<TestExecutionResponse> testExecutions,
+        @OutputCustomType.Parameter("testMatrixId") String testMatrixId,
+        @OutputCustomType.Parameter("testSpecification") TestSpecificationResponse testSpecification,
+        @OutputCustomType.Parameter("timestamp") String timestamp) {
         this.clientInfo = clientInfo;
         this.environmentMatrix = environmentMatrix;
         this.failFast = failFast;
@@ -249,67 +249,67 @@ public final class GetTestMatrixResult {
     	      this.timestamp = defaults.timestamp;
         }
 
-        public Builder setClientInfo(ClientInfoResponse clientInfo) {
+        public Builder clientInfo(ClientInfoResponse clientInfo) {
             this.clientInfo = Objects.requireNonNull(clientInfo);
             return this;
         }
 
-        public Builder setEnvironmentMatrix(EnvironmentMatrixResponse environmentMatrix) {
+        public Builder environmentMatrix(EnvironmentMatrixResponse environmentMatrix) {
             this.environmentMatrix = Objects.requireNonNull(environmentMatrix);
             return this;
         }
 
-        public Builder setFailFast(Boolean failFast) {
+        public Builder failFast(Boolean failFast) {
             this.failFast = Objects.requireNonNull(failFast);
             return this;
         }
 
-        public Builder setFlakyTestAttempts(Integer flakyTestAttempts) {
+        public Builder flakyTestAttempts(Integer flakyTestAttempts) {
             this.flakyTestAttempts = Objects.requireNonNull(flakyTestAttempts);
             return this;
         }
 
-        public Builder setInvalidMatrixDetails(String invalidMatrixDetails) {
+        public Builder invalidMatrixDetails(String invalidMatrixDetails) {
             this.invalidMatrixDetails = Objects.requireNonNull(invalidMatrixDetails);
             return this;
         }
 
-        public Builder setOutcomeSummary(String outcomeSummary) {
+        public Builder outcomeSummary(String outcomeSummary) {
             this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setResultStorage(ResultStorageResponse resultStorage) {
+        public Builder resultStorage(ResultStorageResponse resultStorage) {
             this.resultStorage = Objects.requireNonNull(resultStorage);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTestExecutions(List<TestExecutionResponse> testExecutions) {
+        public Builder testExecutions(List<TestExecutionResponse> testExecutions) {
             this.testExecutions = Objects.requireNonNull(testExecutions);
             return this;
         }
 
-        public Builder setTestMatrixId(String testMatrixId) {
+        public Builder testMatrixId(String testMatrixId) {
             this.testMatrixId = Objects.requireNonNull(testMatrixId);
             return this;
         }
 
-        public Builder setTestSpecification(TestSpecificationResponse testSpecification) {
+        public Builder testSpecification(TestSpecificationResponse testSpecification) {
             this.testSpecification = Objects.requireNonNull(testSpecification);
             return this;
         }
 
-        public Builder setTimestamp(String timestamp) {
+        public Builder timestamp(String timestamp) {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }

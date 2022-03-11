@@ -20,10 +20,10 @@ public final class CertificateTemplateResponse {
      */
     private final Integer minorVersion;
 
-    @OutputCustomType.Constructor({"majorVersion","minorVersion"})
+    @OutputCustomType.Constructor
     private CertificateTemplateResponse(
-        Integer majorVersion,
-        Integer minorVersion) {
+        @OutputCustomType.Parameter("majorVersion") Integer majorVersion,
+        @OutputCustomType.Parameter("minorVersion") Integer minorVersion) {
         this.majorVersion = majorVersion;
         this.minorVersion = minorVersion;
     }
@@ -65,12 +65,12 @@ public final class CertificateTemplateResponse {
     	      this.minorVersion = defaults.minorVersion;
         }
 
-        public Builder setMajorVersion(Integer majorVersion) {
+        public Builder majorVersion(Integer majorVersion) {
             this.majorVersion = Objects.requireNonNull(majorVersion);
             return this;
         }
 
-        public Builder setMinorVersion(Integer minorVersion) {
+        public Builder minorVersion(Integer minorVersion) {
             this.minorVersion = Objects.requireNonNull(minorVersion);
             return this;
         }

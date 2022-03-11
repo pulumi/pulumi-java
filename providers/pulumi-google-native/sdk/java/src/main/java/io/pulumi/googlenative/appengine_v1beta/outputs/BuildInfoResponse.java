@@ -15,8 +15,8 @@ public final class BuildInfoResponse {
      */
     private final String cloudBuildId;
 
-    @OutputCustomType.Constructor({"cloudBuildId"})
-    private BuildInfoResponse(String cloudBuildId) {
+    @OutputCustomType.Constructor
+    private BuildInfoResponse(@OutputCustomType.Parameter("cloudBuildId") String cloudBuildId) {
         this.cloudBuildId = cloudBuildId;
     }
 
@@ -48,7 +48,7 @@ public final class BuildInfoResponse {
     	      this.cloudBuildId = defaults.cloudBuildId;
         }
 
-        public Builder setCloudBuildId(String cloudBuildId) {
+        public Builder cloudBuildId(String cloudBuildId) {
             this.cloudBuildId = Objects.requireNonNull(cloudBuildId);
             return this;
         }

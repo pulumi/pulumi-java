@@ -27,11 +27,11 @@ public final class PubSubResponse {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"enabled","filter","topic"})
+    @OutputCustomType.Constructor
     private PubSubResponse(
-        Boolean enabled,
-        FilterResponse filter,
-        String topic) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("filter") FilterResponse filter,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.enabled = enabled;
         this.filter = filter;
         this.topic = topic;
@@ -83,17 +83,17 @@ public final class PubSubResponse {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setFilter(FilterResponse filter) {
+        public Builder filter(FilterResponse filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

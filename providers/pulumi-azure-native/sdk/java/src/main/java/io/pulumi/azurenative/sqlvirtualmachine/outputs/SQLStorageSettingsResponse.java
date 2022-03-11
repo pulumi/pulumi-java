@@ -24,10 +24,10 @@ public final class SQLStorageSettingsResponse {
      */
     private final @Nullable List<Integer> luns;
 
-    @OutputCustomType.Constructor({"defaultFilePath","luns"})
+    @OutputCustomType.Constructor
     private SQLStorageSettingsResponse(
-        @Nullable String defaultFilePath,
-        @Nullable List<Integer> luns) {
+        @OutputCustomType.Parameter("defaultFilePath") @Nullable String defaultFilePath,
+        @OutputCustomType.Parameter("luns") @Nullable List<Integer> luns) {
         this.defaultFilePath = defaultFilePath;
         this.luns = luns;
     }
@@ -69,12 +69,12 @@ public final class SQLStorageSettingsResponse {
     	      this.luns = defaults.luns;
         }
 
-        public Builder setDefaultFilePath(@Nullable String defaultFilePath) {
+        public Builder defaultFilePath(@Nullable String defaultFilePath) {
             this.defaultFilePath = defaultFilePath;
             return this;
         }
 
-        public Builder setLuns(@Nullable List<Integer> luns) {
+        public Builder luns(@Nullable List<Integer> luns) {
             this.luns = luns;
             return this;
         }

@@ -16,8 +16,8 @@ public final class GetAmiResult {
      */
     private final String kernelId;
 
-    @OutputCustomType.Constructor({"kernelId"})
-    private GetAmiResult(String kernelId) {
+    @OutputCustomType.Constructor
+    private GetAmiResult(@OutputCustomType.Parameter("kernelId") String kernelId) {
         this.kernelId = kernelId;
     }
 
@@ -50,7 +50,7 @@ public final class GetAmiResult {
     	      this.kernelId = defaults.kernelId;
         }
 
-        public Builder setKernelId(String kernelId) {
+        public Builder kernelId(String kernelId) {
             this.kernelId = Objects.requireNonNull(kernelId);
             return this;
         }

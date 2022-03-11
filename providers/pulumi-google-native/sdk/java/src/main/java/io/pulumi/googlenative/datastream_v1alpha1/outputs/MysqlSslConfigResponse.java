@@ -41,14 +41,14 @@ public final class MysqlSslConfigResponse {
      */
     private final Boolean clientKeySet;
 
-    @OutputCustomType.Constructor({"caCertificate","caCertificateSet","clientCertificate","clientCertificateSet","clientKey","clientKeySet"})
+    @OutputCustomType.Constructor
     private MysqlSslConfigResponse(
-        String caCertificate,
-        Boolean caCertificateSet,
-        String clientCertificate,
-        Boolean clientCertificateSet,
-        String clientKey,
-        Boolean clientKeySet) {
+        @OutputCustomType.Parameter("caCertificate") String caCertificate,
+        @OutputCustomType.Parameter("caCertificateSet") Boolean caCertificateSet,
+        @OutputCustomType.Parameter("clientCertificate") String clientCertificate,
+        @OutputCustomType.Parameter("clientCertificateSet") Boolean clientCertificateSet,
+        @OutputCustomType.Parameter("clientKey") String clientKey,
+        @OutputCustomType.Parameter("clientKeySet") Boolean clientKeySet) {
         this.caCertificate = caCertificate;
         this.caCertificateSet = caCertificateSet;
         this.clientCertificate = clientCertificate;
@@ -130,32 +130,32 @@ public final class MysqlSslConfigResponse {
     	      this.clientKeySet = defaults.clientKeySet;
         }
 
-        public Builder setCaCertificate(String caCertificate) {
+        public Builder caCertificate(String caCertificate) {
             this.caCertificate = Objects.requireNonNull(caCertificate);
             return this;
         }
 
-        public Builder setCaCertificateSet(Boolean caCertificateSet) {
+        public Builder caCertificateSet(Boolean caCertificateSet) {
             this.caCertificateSet = Objects.requireNonNull(caCertificateSet);
             return this;
         }
 
-        public Builder setClientCertificate(String clientCertificate) {
+        public Builder clientCertificate(String clientCertificate) {
             this.clientCertificate = Objects.requireNonNull(clientCertificate);
             return this;
         }
 
-        public Builder setClientCertificateSet(Boolean clientCertificateSet) {
+        public Builder clientCertificateSet(Boolean clientCertificateSet) {
             this.clientCertificateSet = Objects.requireNonNull(clientCertificateSet);
             return this;
         }
 
-        public Builder setClientKey(String clientKey) {
+        public Builder clientKey(String clientKey) {
             this.clientKey = Objects.requireNonNull(clientKey);
             return this;
         }
 
-        public Builder setClientKeySet(Boolean clientKeySet) {
+        public Builder clientKeySet(Boolean clientKeySet) {
             this.clientKeySet = Objects.requireNonNull(clientKeySet);
             return this;
         }

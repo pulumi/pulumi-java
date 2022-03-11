@@ -23,10 +23,10 @@ public final class OpenIdAuthenticationSettingsContractResponse {
      */
     private final @Nullable String openidProviderId;
 
-    @OutputCustomType.Constructor({"bearerTokenSendingMethods","openidProviderId"})
+    @OutputCustomType.Constructor
     private OpenIdAuthenticationSettingsContractResponse(
-        @Nullable List<String> bearerTokenSendingMethods,
-        @Nullable String openidProviderId) {
+        @OutputCustomType.Parameter("bearerTokenSendingMethods") @Nullable List<String> bearerTokenSendingMethods,
+        @OutputCustomType.Parameter("openidProviderId") @Nullable String openidProviderId) {
         this.bearerTokenSendingMethods = bearerTokenSendingMethods;
         this.openidProviderId = openidProviderId;
     }
@@ -68,12 +68,12 @@ public final class OpenIdAuthenticationSettingsContractResponse {
     	      this.openidProviderId = defaults.openidProviderId;
         }
 
-        public Builder setBearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
+        public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
             this.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
-        public Builder setOpenidProviderId(@Nullable String openidProviderId) {
+        public Builder openidProviderId(@Nullable String openidProviderId) {
             this.openidProviderId = openidProviderId;
             return this;
         }

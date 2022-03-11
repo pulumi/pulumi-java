@@ -238,122 +238,122 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
     	      this.throttling = defaults.throttling;
         }
 
-        public Builder setActionGroups(Input<ActionGroupsInformationArgs> actionGroups) {
+        public Builder actionGroups(Input<ActionGroupsInformationArgs> actionGroups) {
             this.actionGroups = Objects.requireNonNull(actionGroups);
             return this;
         }
 
-        public Builder setActionGroups(ActionGroupsInformationArgs actionGroups) {
+        public Builder actionGroups(ActionGroupsInformationArgs actionGroups) {
             this.actionGroups = Input.of(Objects.requireNonNull(actionGroups));
             return this;
         }
 
-        public Builder setAlertRuleName(@Nullable Input<String> alertRuleName) {
+        public Builder alertRuleName(@Nullable Input<String> alertRuleName) {
             this.alertRuleName = alertRuleName;
             return this;
         }
 
-        public Builder setAlertRuleName(@Nullable String alertRuleName) {
+        public Builder alertRuleName(@Nullable String alertRuleName) {
             this.alertRuleName = Input.ofNullable(alertRuleName);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDetector(Input<DetectorArgs> detector) {
+        public Builder detector(Input<DetectorArgs> detector) {
             this.detector = Objects.requireNonNull(detector);
             return this;
         }
 
-        public Builder setDetector(DetectorArgs detector) {
+        public Builder detector(DetectorArgs detector) {
             this.detector = Input.of(Objects.requireNonNull(detector));
             return this;
         }
 
-        public Builder setFrequency(Input<String> frequency) {
+        public Builder frequency(Input<String> frequency) {
             this.frequency = Objects.requireNonNull(frequency);
             return this;
         }
 
-        public Builder setFrequency(String frequency) {
+        public Builder frequency(String frequency) {
             this.frequency = Input.of(Objects.requireNonNull(frequency));
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setScope(Input<List<String>> scope) {
+        public Builder scope(Input<List<String>> scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setScope(List<String> scope) {
+        public Builder scope(List<String> scope) {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
 
-        public Builder setSeverity(Input<Either<String,Severity>> severity) {
+        public Builder severity(Input<Either<String,Severity>> severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setSeverity(Either<String,Severity> severity) {
+        public Builder severity(Either<String,Severity> severity) {
             this.severity = Input.of(Objects.requireNonNull(severity));
             return this;
         }
 
-        public Builder setState(Input<Either<String,AlertRuleState>> state) {
+        public Builder state(Input<Either<String,AlertRuleState>> state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setState(Either<String,AlertRuleState> state) {
+        public Builder state(Either<String,AlertRuleState> state) {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThrottling(@Nullable Input<ThrottlingInformationArgs> throttling) {
+        public Builder throttling(@Nullable Input<ThrottlingInformationArgs> throttling) {
             this.throttling = throttling;
             return this;
         }
 
-        public Builder setThrottling(@Nullable ThrottlingInformationArgs throttling) {
+        public Builder throttling(@Nullable ThrottlingInformationArgs throttling) {
             this.throttling = Input.ofNullable(throttling);
             return this;
         }

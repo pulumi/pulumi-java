@@ -32,12 +32,12 @@ public final class FileShareConfigResponse {
      */
     private final String sourceBackup;
 
-    @OutputCustomType.Constructor({"capacityGb","name","nfsExportOptions","sourceBackup"})
+    @OutputCustomType.Constructor
     private FileShareConfigResponse(
-        String capacityGb,
-        String name,
-        List<NfsExportOptionsResponse> nfsExportOptions,
-        String sourceBackup) {
+        @OutputCustomType.Parameter("capacityGb") String capacityGb,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("nfsExportOptions") List<NfsExportOptionsResponse> nfsExportOptions,
+        @OutputCustomType.Parameter("sourceBackup") String sourceBackup) {
         this.capacityGb = capacityGb;
         this.name = name;
         this.nfsExportOptions = nfsExportOptions;
@@ -99,22 +99,22 @@ public final class FileShareConfigResponse {
     	      this.sourceBackup = defaults.sourceBackup;
         }
 
-        public Builder setCapacityGb(String capacityGb) {
+        public Builder capacityGb(String capacityGb) {
             this.capacityGb = Objects.requireNonNull(capacityGb);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
+        public Builder nfsExportOptions(List<NfsExportOptionsResponse> nfsExportOptions) {
             this.nfsExportOptions = Objects.requireNonNull(nfsExportOptions);
             return this;
         }
 
-        public Builder setSourceBackup(String sourceBackup) {
+        public Builder sourceBackup(String sourceBackup) {
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
         }

@@ -17,8 +17,8 @@ public final class FilterCriteriaProperties {
      */
     private final @Nullable List<EventSourceMappingFilter> filters;
 
-    @OutputCustomType.Constructor({"filters"})
-    private FilterCriteriaProperties(@Nullable List<EventSourceMappingFilter> filters) {
+    @OutputCustomType.Constructor
+    private FilterCriteriaProperties(@OutputCustomType.Parameter("filters") @Nullable List<EventSourceMappingFilter> filters) {
         this.filters = filters;
     }
 
@@ -50,7 +50,7 @@ public final class FilterCriteriaProperties {
     	      this.filters = defaults.filters;
         }
 
-        public Builder setFilters(@Nullable List<EventSourceMappingFilter> filters) {
+        public Builder filters(@Nullable List<EventSourceMappingFilter> filters) {
             this.filters = filters;
             return this;
         }

@@ -23,16 +23,16 @@ public final class CertificateGeneralName {
     private final @Nullable String rfc822Name;
     private final @Nullable String uniformResourceIdentifier;
 
-    @OutputCustomType.Constructor({"directoryName","dnsName","ediPartyName","ipAddress","otherName","registeredId","rfc822Name","uniformResourceIdentifier"})
+    @OutputCustomType.Constructor
     private CertificateGeneralName(
-        @Nullable CertificateSubject directoryName,
-        @Nullable String dnsName,
-        @Nullable CertificateEdiPartyName ediPartyName,
-        @Nullable String ipAddress,
-        @Nullable CertificateOtherName otherName,
-        @Nullable String registeredId,
-        @Nullable String rfc822Name,
-        @Nullable String uniformResourceIdentifier) {
+        @OutputCustomType.Parameter("directoryName") @Nullable CertificateSubject directoryName,
+        @OutputCustomType.Parameter("dnsName") @Nullable String dnsName,
+        @OutputCustomType.Parameter("ediPartyName") @Nullable CertificateEdiPartyName ediPartyName,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("otherName") @Nullable CertificateOtherName otherName,
+        @OutputCustomType.Parameter("registeredId") @Nullable String registeredId,
+        @OutputCustomType.Parameter("rfc822Name") @Nullable String rfc822Name,
+        @OutputCustomType.Parameter("uniformResourceIdentifier") @Nullable String uniformResourceIdentifier) {
         this.directoryName = directoryName;
         this.dnsName = dnsName;
         this.ediPartyName = ediPartyName;
@@ -102,42 +102,42 @@ public final class CertificateGeneralName {
     	      this.uniformResourceIdentifier = defaults.uniformResourceIdentifier;
         }
 
-        public Builder setDirectoryName(@Nullable CertificateSubject directoryName) {
+        public Builder directoryName(@Nullable CertificateSubject directoryName) {
             this.directoryName = directoryName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setEdiPartyName(@Nullable CertificateEdiPartyName ediPartyName) {
+        public Builder ediPartyName(@Nullable CertificateEdiPartyName ediPartyName) {
             this.ediPartyName = ediPartyName;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setOtherName(@Nullable CertificateOtherName otherName) {
+        public Builder otherName(@Nullable CertificateOtherName otherName) {
             this.otherName = otherName;
             return this;
         }
 
-        public Builder setRegisteredId(@Nullable String registeredId) {
+        public Builder registeredId(@Nullable String registeredId) {
             this.registeredId = registeredId;
             return this;
         }
 
-        public Builder setRfc822Name(@Nullable String rfc822Name) {
+        public Builder rfc822Name(@Nullable String rfc822Name) {
             this.rfc822Name = rfc822Name;
             return this;
         }
 
-        public Builder setUniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
+        public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }

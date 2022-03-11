@@ -20,10 +20,10 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
      */
     private final String queueId;
 
-    @OutputCustomType.Constructor({"contactFlowId","queueId"})
+    @OutputCustomType.Constructor
     private QuickConnectQuickConnectConfigQueueConfig(
-        String contactFlowId,
-        String queueId) {
+        @OutputCustomType.Parameter("contactFlowId") String contactFlowId,
+        @OutputCustomType.Parameter("queueId") String queueId) {
         this.contactFlowId = contactFlowId;
         this.queueId = queueId;
     }
@@ -65,12 +65,12 @@ public final class QuickConnectQuickConnectConfigQueueConfig {
     	      this.queueId = defaults.queueId;
         }
 
-        public Builder setContactFlowId(String contactFlowId) {
+        public Builder contactFlowId(String contactFlowId) {
             this.contactFlowId = Objects.requireNonNull(contactFlowId);
             return this;
         }
 
-        public Builder setQueueId(String queueId) {
+        public Builder queueId(String queueId) {
             this.queueId = Objects.requireNonNull(queueId);
             return this;
         }

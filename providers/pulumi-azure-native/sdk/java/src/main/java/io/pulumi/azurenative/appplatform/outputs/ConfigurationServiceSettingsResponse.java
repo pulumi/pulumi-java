@@ -17,8 +17,8 @@ public final class ConfigurationServiceSettingsResponse {
      */
     private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
-    @OutputCustomType.Constructor({"gitProperty"})
-    private ConfigurationServiceSettingsResponse(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
+    @OutputCustomType.Constructor
+    private ConfigurationServiceSettingsResponse(@OutputCustomType.Parameter("gitProperty") @Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
         this.gitProperty = gitProperty;
     }
 
@@ -50,7 +50,7 @@ public final class ConfigurationServiceSettingsResponse {
     	      this.gitProperty = defaults.gitProperty;
         }
 
-        public Builder setGitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
+        public Builder gitProperty(@Nullable ConfigurationServiceGitPropertyResponse gitProperty) {
             this.gitProperty = gitProperty;
             return this;
         }

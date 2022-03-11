@@ -16,10 +16,10 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
     private final String name;
     private final String value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private GetDatabaseInstanceSettingDatabaseFlag(
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.name = name;
         this.value = value;
     }
@@ -57,12 +57,12 @@ public final class GetDatabaseInstanceSettingDatabaseFlag {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

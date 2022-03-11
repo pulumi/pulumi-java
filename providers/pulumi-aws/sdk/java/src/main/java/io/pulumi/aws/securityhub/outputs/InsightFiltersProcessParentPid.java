@@ -27,11 +27,11 @@ public final class InsightFiltersProcessParentPid {
      */
     private final @Nullable String lte;
 
-    @OutputCustomType.Constructor({"eq","gte","lte"})
+    @OutputCustomType.Constructor
     private InsightFiltersProcessParentPid(
-        @Nullable String eq,
-        @Nullable String gte,
-        @Nullable String lte) {
+        @OutputCustomType.Parameter("eq") @Nullable String eq,
+        @OutputCustomType.Parameter("gte") @Nullable String gte,
+        @OutputCustomType.Parameter("lte") @Nullable String lte) {
         this.eq = eq;
         this.gte = gte;
         this.lte = lte;
@@ -83,17 +83,17 @@ public final class InsightFiltersProcessParentPid {
     	      this.lte = defaults.lte;
         }
 
-        public Builder setEq(@Nullable String eq) {
+        public Builder eq(@Nullable String eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setGte(@Nullable String gte) {
+        public Builder gte(@Nullable String gte) {
             this.gte = gte;
             return this;
         }
 
-        public Builder setLte(@Nullable String lte) {
+        public Builder lte(@Nullable String lte) {
             this.lte = lte;
             return this;
         }

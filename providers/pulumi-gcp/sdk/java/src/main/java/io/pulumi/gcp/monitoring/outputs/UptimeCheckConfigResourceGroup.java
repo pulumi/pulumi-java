@@ -23,10 +23,10 @@ public final class UptimeCheckConfigResourceGroup {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor({"groupId","resourceType"})
+    @OutputCustomType.Constructor
     private UptimeCheckConfigResourceGroup(
-        @Nullable String groupId,
-        @Nullable String resourceType) {
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }
@@ -69,12 +69,12 @@ public final class UptimeCheckConfigResourceGroup {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setResourceType(@Nullable String resourceType) {
+        public Builder resourceType(@Nullable String resourceType) {
             this.resourceType = resourceType;
             return this;
         }

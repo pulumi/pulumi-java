@@ -29,18 +29,18 @@ public final class GetAcceleratorResult {
     private final String name;
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","attributes","dnsName","enabled","hostedZoneId","id","ipAddressType","ipSets","name","tags"})
+    @OutputCustomType.Constructor
     private GetAcceleratorResult(
-        String arn,
-        List<GetAcceleratorAttribute> attributes,
-        String dnsName,
-        Boolean enabled,
-        String hostedZoneId,
-        String id,
-        String ipAddressType,
-        List<GetAcceleratorIpSet> ipSets,
-        String name,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("attributes") List<GetAcceleratorAttribute> attributes,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("hostedZoneId") String hostedZoneId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("ipAddressType") String ipAddressType,
+        @OutputCustomType.Parameter("ipSets") List<GetAcceleratorIpSet> ipSets,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.attributes = attributes;
         this.dnsName = dnsName;
@@ -126,52 +126,52 @@ public final class GetAcceleratorResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAttributes(List<GetAcceleratorAttribute> attributes) {
+        public Builder attributes(List<GetAcceleratorAttribute> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setHostedZoneId(String hostedZoneId) {
+        public Builder hostedZoneId(String hostedZoneId) {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIpAddressType(String ipAddressType) {
+        public Builder ipAddressType(String ipAddressType) {
             this.ipAddressType = Objects.requireNonNull(ipAddressType);
             return this;
         }
 
-        public Builder setIpSets(List<GetAcceleratorIpSet> ipSets) {
+        public Builder ipSets(List<GetAcceleratorIpSet> ipSets) {
             this.ipSets = Objects.requireNonNull(ipSets);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

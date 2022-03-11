@@ -32,12 +32,12 @@ public final class PlacementProfileResponse {
      */
     private final @Nullable String resourcePoolId;
 
-    @OutputCustomType.Constructor({"clusterId","datastoreId","hostId","resourcePoolId"})
+    @OutputCustomType.Constructor
     private PlacementProfileResponse(
-        @Nullable String clusterId,
-        @Nullable String datastoreId,
-        @Nullable String hostId,
-        @Nullable String resourcePoolId) {
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("datastoreId") @Nullable String datastoreId,
+        @OutputCustomType.Parameter("hostId") @Nullable String hostId,
+        @OutputCustomType.Parameter("resourcePoolId") @Nullable String resourcePoolId) {
         this.clusterId = clusterId;
         this.datastoreId = datastoreId;
         this.hostId = hostId;
@@ -99,22 +99,22 @@ public final class PlacementProfileResponse {
     	      this.resourcePoolId = defaults.resourcePoolId;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setDatastoreId(@Nullable String datastoreId) {
+        public Builder datastoreId(@Nullable String datastoreId) {
             this.datastoreId = datastoreId;
             return this;
         }
 
-        public Builder setHostId(@Nullable String hostId) {
+        public Builder hostId(@Nullable String hostId) {
             this.hostId = hostId;
             return this;
         }
 
-        public Builder setResourcePoolId(@Nullable String resourcePoolId) {
+        public Builder resourcePoolId(@Nullable String resourcePoolId) {
             this.resourcePoolId = resourcePoolId;
             return this;
         }

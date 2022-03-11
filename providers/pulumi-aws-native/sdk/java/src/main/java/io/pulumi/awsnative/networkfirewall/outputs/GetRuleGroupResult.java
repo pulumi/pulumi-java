@@ -20,13 +20,13 @@ public final class GetRuleGroupResult {
     private final @Nullable String ruleGroupId;
     private final @Nullable List<RuleGroupTag> tags;
 
-    @OutputCustomType.Constructor({"description","ruleGroup","ruleGroupArn","ruleGroupId","tags"})
+    @OutputCustomType.Constructor
     private GetRuleGroupResult(
-        @Nullable String description,
-        @Nullable RuleGroup ruleGroup,
-        @Nullable String ruleGroupArn,
-        @Nullable String ruleGroupId,
-        @Nullable List<RuleGroupTag> tags) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("ruleGroup") @Nullable RuleGroup ruleGroup,
+        @OutputCustomType.Parameter("ruleGroupArn") @Nullable String ruleGroupArn,
+        @OutputCustomType.Parameter("ruleGroupId") @Nullable String ruleGroupId,
+        @OutputCustomType.Parameter("tags") @Nullable List<RuleGroupTag> tags) {
         this.description = description;
         this.ruleGroup = ruleGroup;
         this.ruleGroupArn = ruleGroupArn;
@@ -78,27 +78,27 @@ public final class GetRuleGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setRuleGroup(@Nullable RuleGroup ruleGroup) {
+        public Builder ruleGroup(@Nullable RuleGroup ruleGroup) {
             this.ruleGroup = ruleGroup;
             return this;
         }
 
-        public Builder setRuleGroupArn(@Nullable String ruleGroupArn) {
+        public Builder ruleGroupArn(@Nullable String ruleGroupArn) {
             this.ruleGroupArn = ruleGroupArn;
             return this;
         }
 
-        public Builder setRuleGroupId(@Nullable String ruleGroupId) {
+        public Builder ruleGroupId(@Nullable String ruleGroupId) {
             this.ruleGroupId = ruleGroupId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RuleGroupTag> tags) {
+        public Builder tags(@Nullable List<RuleGroupTag> tags) {
             this.tags = tags;
             return this;
         }

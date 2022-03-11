@@ -48,15 +48,15 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
      */
     private final Boolean update;
 
-    @OutputCustomType.Constructor({"containerSpecGcsPath","environment","jobName","launchOptions","parameters","transformNameMappings","update"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse(
-        String containerSpecGcsPath,
-        GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
-        String jobName,
-        Map<String,String> launchOptions,
-        Map<String,String> parameters,
-        Map<String,String> transformNameMappings,
-        Boolean update) {
+        @OutputCustomType.Parameter("containerSpecGcsPath") String containerSpecGcsPath,
+        @OutputCustomType.Parameter("environment") GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment,
+        @OutputCustomType.Parameter("jobName") String jobName,
+        @OutputCustomType.Parameter("launchOptions") Map<String,String> launchOptions,
+        @OutputCustomType.Parameter("parameters") Map<String,String> parameters,
+        @OutputCustomType.Parameter("transformNameMappings") Map<String,String> transformNameMappings,
+        @OutputCustomType.Parameter("update") Boolean update) {
         this.containerSpecGcsPath = containerSpecGcsPath;
         this.environment = environment;
         this.jobName = jobName;
@@ -148,37 +148,37 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterResponse
     	      this.update = defaults.update;
         }
 
-        public Builder setContainerSpecGcsPath(String containerSpecGcsPath) {
+        public Builder containerSpecGcsPath(String containerSpecGcsPath) {
             this.containerSpecGcsPath = Objects.requireNonNull(containerSpecGcsPath);
             return this;
         }
 
-        public Builder setEnvironment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment) {
+        public Builder environment(GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentResponse environment) {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
 
-        public Builder setJobName(String jobName) {
+        public Builder jobName(String jobName) {
             this.jobName = Objects.requireNonNull(jobName);
             return this;
         }
 
-        public Builder setLaunchOptions(Map<String,String> launchOptions) {
+        public Builder launchOptions(Map<String,String> launchOptions) {
             this.launchOptions = Objects.requireNonNull(launchOptions);
             return this;
         }
 
-        public Builder setParameters(Map<String,String> parameters) {
+        public Builder parameters(Map<String,String> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setTransformNameMappings(Map<String,String> transformNameMappings) {
+        public Builder transformNameMappings(Map<String,String> transformNameMappings) {
             this.transformNameMappings = Objects.requireNonNull(transformNameMappings);
             return this;
         }
 
-        public Builder setUpdate(Boolean update) {
+        public Builder update(Boolean update) {
             this.update = Objects.requireNonNull(update);
             return this;
         }

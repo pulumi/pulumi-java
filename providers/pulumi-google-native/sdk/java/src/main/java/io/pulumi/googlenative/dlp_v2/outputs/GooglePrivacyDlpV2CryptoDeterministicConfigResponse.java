@@ -27,11 +27,11 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
-    @OutputCustomType.Constructor({"context","cryptoKey","surrogateInfoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2CryptoDeterministicConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("surrogateInfoType") GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.surrogateInfoType = surrogateInfoType;
@@ -83,17 +83,17 @@ public final class GooglePrivacyDlpV2CryptoDeterministicConfigResponse {
     	      this.surrogateInfoType = defaults.surrogateInfoType;
         }
 
-        public Builder setContext(GooglePrivacyDlpV2FieldIdResponse context) {
+        public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setSurrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
+        public Builder surrogateInfoType(GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType) {
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }

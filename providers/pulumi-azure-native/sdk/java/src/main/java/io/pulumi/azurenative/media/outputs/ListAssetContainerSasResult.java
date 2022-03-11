@@ -17,8 +17,8 @@ public final class ListAssetContainerSasResult {
      */
     private final @Nullable List<String> assetContainerSasUrls;
 
-    @OutputCustomType.Constructor({"assetContainerSasUrls"})
-    private ListAssetContainerSasResult(@Nullable List<String> assetContainerSasUrls) {
+    @OutputCustomType.Constructor
+    private ListAssetContainerSasResult(@OutputCustomType.Parameter("assetContainerSasUrls") @Nullable List<String> assetContainerSasUrls) {
         this.assetContainerSasUrls = assetContainerSasUrls;
     }
 
@@ -50,7 +50,7 @@ public final class ListAssetContainerSasResult {
     	      this.assetContainerSasUrls = defaults.assetContainerSasUrls;
         }
 
-        public Builder setAssetContainerSasUrls(@Nullable List<String> assetContainerSasUrls) {
+        public Builder assetContainerSasUrls(@Nullable List<String> assetContainerSasUrls) {
             this.assetContainerSasUrls = assetContainerSasUrls;
             return this;
         }

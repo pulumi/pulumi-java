@@ -45,15 +45,15 @@ public final class GetClusterResult {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor({"clusterCertificates","clusterId","clusterState","id","securityGroupId","subnetIds","vpcId"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        GetClusterClusterCertificates clusterCertificates,
-        String clusterId,
-        String clusterState,
-        String id,
-        String securityGroupId,
-        List<String> subnetIds,
-        String vpcId) {
+        @OutputCustomType.Parameter("clusterCertificates") GetClusterClusterCertificates clusterCertificates,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("clusterState") String clusterState,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("securityGroupId") String securityGroupId,
+        @OutputCustomType.Parameter("subnetIds") List<String> subnetIds,
+        @OutputCustomType.Parameter("vpcId") String vpcId) {
         this.clusterCertificates = clusterCertificates;
         this.clusterId = clusterId;
         this.clusterState = clusterState;
@@ -143,37 +143,37 @@ public final class GetClusterResult {
     	      this.vpcId = defaults.vpcId;
         }
 
-        public Builder setClusterCertificates(GetClusterClusterCertificates clusterCertificates) {
+        public Builder clusterCertificates(GetClusterClusterCertificates clusterCertificates) {
             this.clusterCertificates = Objects.requireNonNull(clusterCertificates);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setClusterState(String clusterState) {
+        public Builder clusterState(String clusterState) {
             this.clusterState = Objects.requireNonNull(clusterState);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSecurityGroupId(String securityGroupId) {
+        public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = Objects.requireNonNull(securityGroupId);
             return this;
         }
 
-        public Builder setSubnetIds(List<String> subnetIds) {
+        public Builder subnetIds(List<String> subnetIds) {
             this.subnetIds = Objects.requireNonNull(subnetIds);
             return this;
         }
 
-        public Builder setVpcId(String vpcId) {
+        public Builder vpcId(String vpcId) {
             this.vpcId = Objects.requireNonNull(vpcId);
             return this;
         }

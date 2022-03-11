@@ -57,12 +57,12 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
     	      this.include = defaults.include;
         }
 
-        public Builder setInclude(@Nullable Input<TransferAllDetailsArgs> include) {
+        public Builder include(@Nullable Input<TransferAllDetailsArgs> include) {
             this.include = include;
             return this;
         }
 
-        public Builder setInclude(@Nullable TransferAllDetailsArgs include) {
+        public Builder include(@Nullable TransferAllDetailsArgs include) {
             this.include = Input.ofNullable(include);
             return this;
         }

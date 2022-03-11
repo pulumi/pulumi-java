@@ -27,11 +27,11 @@ public final class PushConfigResponse {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor({"attributes","oidcToken","pushEndpoint"})
+    @OutputCustomType.Constructor
     private PushConfigResponse(
-        Map<String,String> attributes,
-        OidcTokenResponse oidcToken,
-        String pushEndpoint) {
+        @OutputCustomType.Parameter("attributes") Map<String,String> attributes,
+        @OutputCustomType.Parameter("oidcToken") OidcTokenResponse oidcToken,
+        @OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
         this.pushEndpoint = pushEndpoint;
@@ -83,17 +83,17 @@ public final class PushConfigResponse {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setAttributes(Map<String,String> attributes) {
+        public Builder attributes(Map<String,String> attributes) {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
 
-        public Builder setOidcToken(OidcTokenResponse oidcToken) {
+        public Builder oidcToken(OidcTokenResponse oidcToken) {
             this.oidcToken = Objects.requireNonNull(oidcToken);
             return this;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

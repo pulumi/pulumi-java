@@ -32,11 +32,11 @@ public final class FleetServerProcess {
      */
     private final @Nullable String parameters;
 
-    @OutputCustomType.Constructor({"concurrentExecutions","launchPath","parameters"})
+    @OutputCustomType.Constructor
     private FleetServerProcess(
-        Integer concurrentExecutions,
-        String launchPath,
-        @Nullable String parameters) {
+        @OutputCustomType.Parameter("concurrentExecutions") Integer concurrentExecutions,
+        @OutputCustomType.Parameter("launchPath") String launchPath,
+        @OutputCustomType.Parameter("parameters") @Nullable String parameters) {
         this.concurrentExecutions = concurrentExecutions;
         this.launchPath = launchPath;
         this.parameters = parameters;
@@ -92,17 +92,17 @@ public final class FleetServerProcess {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setConcurrentExecutions(Integer concurrentExecutions) {
+        public Builder concurrentExecutions(Integer concurrentExecutions) {
             this.concurrentExecutions = Objects.requireNonNull(concurrentExecutions);
             return this;
         }
 
-        public Builder setLaunchPath(String launchPath) {
+        public Builder launchPath(String launchPath) {
             this.launchPath = Objects.requireNonNull(launchPath);
             return this;
         }
 
-        public Builder setParameters(@Nullable String parameters) {
+        public Builder parameters(@Nullable String parameters) {
             this.parameters = parameters;
             return this;
         }

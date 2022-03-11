@@ -28,12 +28,12 @@ public final class PackagingConfigurationHlsPackage {
      */
     private final @Nullable Boolean useAudioRenditionGroup;
 
-    @OutputCustomType.Constructor({"encryption","hlsManifests","segmentDurationSeconds","useAudioRenditionGroup"})
+    @OutputCustomType.Constructor
     private PackagingConfigurationHlsPackage(
-        @Nullable PackagingConfigurationHlsEncryption encryption,
-        List<PackagingConfigurationHlsManifest> hlsManifests,
-        @Nullable Integer segmentDurationSeconds,
-        @Nullable Boolean useAudioRenditionGroup) {
+        @OutputCustomType.Parameter("encryption") @Nullable PackagingConfigurationHlsEncryption encryption,
+        @OutputCustomType.Parameter("hlsManifests") List<PackagingConfigurationHlsManifest> hlsManifests,
+        @OutputCustomType.Parameter("segmentDurationSeconds") @Nullable Integer segmentDurationSeconds,
+        @OutputCustomType.Parameter("useAudioRenditionGroup") @Nullable Boolean useAudioRenditionGroup) {
         this.encryption = encryption;
         this.hlsManifests = hlsManifests;
         this.segmentDurationSeconds = segmentDurationSeconds;
@@ -87,22 +87,22 @@ public final class PackagingConfigurationHlsPackage {
     	      this.useAudioRenditionGroup = defaults.useAudioRenditionGroup;
         }
 
-        public Builder setEncryption(@Nullable PackagingConfigurationHlsEncryption encryption) {
+        public Builder encryption(@Nullable PackagingConfigurationHlsEncryption encryption) {
             this.encryption = encryption;
             return this;
         }
 
-        public Builder setHlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
+        public Builder hlsManifests(List<PackagingConfigurationHlsManifest> hlsManifests) {
             this.hlsManifests = Objects.requireNonNull(hlsManifests);
             return this;
         }
 
-        public Builder setSegmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
+        public Builder segmentDurationSeconds(@Nullable Integer segmentDurationSeconds) {
             this.segmentDurationSeconds = segmentDurationSeconds;
             return this;
         }
 
-        public Builder setUseAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
+        public Builder useAudioRenditionGroup(@Nullable Boolean useAudioRenditionGroup) {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }

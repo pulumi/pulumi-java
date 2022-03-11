@@ -17,8 +17,8 @@ public final class ListStreamingLocatorContentKeysResult {
      */
     private final @Nullable List<StreamingLocatorContentKeyResponse> contentKeys;
 
-    @OutputCustomType.Constructor({"contentKeys"})
-    private ListStreamingLocatorContentKeysResult(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
+    @OutputCustomType.Constructor
+    private ListStreamingLocatorContentKeysResult(@OutputCustomType.Parameter("contentKeys") @Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
         this.contentKeys = contentKeys;
     }
 
@@ -50,7 +50,7 @@ public final class ListStreamingLocatorContentKeysResult {
     	      this.contentKeys = defaults.contentKeys;
         }
 
-        public Builder setContentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
+        public Builder contentKeys(@Nullable List<StreamingLocatorContentKeyResponse> contentKeys) {
             this.contentKeys = contentKeys;
             return this;
         }

@@ -75,22 +75,22 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
     	      this.organizationalUnitIds = defaults.organizationalUnitIds;
         }
 
-        public Builder setAccounts(@Nullable Input<List<String>> accounts) {
+        public Builder accounts(@Nullable Input<List<String>> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setAccounts(@Nullable List<String> accounts) {
+        public Builder accounts(@Nullable List<String> accounts) {
             this.accounts = Input.ofNullable(accounts);
             return this;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable Input<List<String>> organizationalUnitIds) {
             this.organizationalUnitIds = organizationalUnitIds;
             return this;
         }
 
-        public Builder setOrganizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
+        public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
             this.organizationalUnitIds = Input.ofNullable(organizationalUnitIds);
             return this;
         }

@@ -60,17 +60,17 @@ public final class GetGuestPolicyResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"assignment","createTime","description","etag","name","packageRepositories","packages","recipes","updateTime"})
+    @OutputCustomType.Constructor
     private GetGuestPolicyResult(
-        AssignmentResponse assignment,
-        String createTime,
-        String description,
-        String etag,
-        String name,
-        List<PackageRepositoryResponse> packageRepositories,
-        List<PackageResponse> packages,
-        List<SoftwareRecipeResponse> recipes,
-        String updateTime) {
+        @OutputCustomType.Parameter("assignment") AssignmentResponse assignment,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("packageRepositories") List<PackageRepositoryResponse> packageRepositories,
+        @OutputCustomType.Parameter("packages") List<PackageResponse> packages,
+        @OutputCustomType.Parameter("recipes") List<SoftwareRecipeResponse> recipes,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.assignment = assignment;
         this.createTime = createTime;
         this.description = description;
@@ -182,47 +182,47 @@ public final class GetGuestPolicyResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setAssignment(AssignmentResponse assignment) {
+        public Builder assignment(AssignmentResponse assignment) {
             this.assignment = Objects.requireNonNull(assignment);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPackageRepositories(List<PackageRepositoryResponse> packageRepositories) {
+        public Builder packageRepositories(List<PackageRepositoryResponse> packageRepositories) {
             this.packageRepositories = Objects.requireNonNull(packageRepositories);
             return this;
         }
 
-        public Builder setPackages(List<PackageResponse> packages) {
+        public Builder packages(List<PackageResponse> packages) {
             this.packages = Objects.requireNonNull(packages);
             return this;
         }
 
-        public Builder setRecipes(List<SoftwareRecipeResponse> recipes) {
+        public Builder recipes(List<SoftwareRecipeResponse> recipes) {
             this.recipes = Objects.requireNonNull(recipes);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

@@ -20,10 +20,10 @@ public final class SchedulingConfigResponse {
      */
     private final Boolean reserved;
 
-    @OutputCustomType.Constructor({"preemptible","reserved"})
+    @OutputCustomType.Constructor
     private SchedulingConfigResponse(
-        Boolean preemptible,
-        Boolean reserved) {
+        @OutputCustomType.Parameter("preemptible") Boolean preemptible,
+        @OutputCustomType.Parameter("reserved") Boolean reserved) {
         this.preemptible = preemptible;
         this.reserved = reserved;
     }
@@ -65,12 +65,12 @@ public final class SchedulingConfigResponse {
     	      this.reserved = defaults.reserved;
         }
 
-        public Builder setPreemptible(Boolean preemptible) {
+        public Builder preemptible(Boolean preemptible) {
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
 
-        public Builder setReserved(Boolean reserved) {
+        public Builder reserved(Boolean reserved) {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }

@@ -216,112 +216,112 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     	      this.timeUnit = defaults.timeUnit;
         }
 
-        public Builder setAdditionalArtifacts(@Nullable Input<List<String>> additionalArtifacts) {
+        public Builder additionalArtifacts(@Nullable Input<List<String>> additionalArtifacts) {
             this.additionalArtifacts = additionalArtifacts;
             return this;
         }
 
-        public Builder setAdditionalArtifacts(@Nullable List<String> additionalArtifacts) {
+        public Builder additionalArtifacts(@Nullable List<String> additionalArtifacts) {
             this.additionalArtifacts = Input.ofNullable(additionalArtifacts);
             return this;
         }
 
-        public Builder setAdditionalSchemaElements(Input<List<String>> additionalSchemaElements) {
+        public Builder additionalSchemaElements(Input<List<String>> additionalSchemaElements) {
             this.additionalSchemaElements = Objects.requireNonNull(additionalSchemaElements);
             return this;
         }
 
-        public Builder setAdditionalSchemaElements(List<String> additionalSchemaElements) {
+        public Builder additionalSchemaElements(List<String> additionalSchemaElements) {
             this.additionalSchemaElements = Input.of(Objects.requireNonNull(additionalSchemaElements));
             return this;
         }
 
-        public Builder setCompression(Input<String> compression) {
+        public Builder compression(Input<String> compression) {
             this.compression = Objects.requireNonNull(compression);
             return this;
         }
 
-        public Builder setCompression(String compression) {
+        public Builder compression(String compression) {
             this.compression = Input.of(Objects.requireNonNull(compression));
             return this;
         }
 
-        public Builder setFormat(Input<String> format) {
+        public Builder format(Input<String> format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Input.of(Objects.requireNonNull(format));
             return this;
         }
 
-        public Builder setRefreshClosedReports(@Nullable Input<Boolean> refreshClosedReports) {
+        public Builder refreshClosedReports(@Nullable Input<Boolean> refreshClosedReports) {
             this.refreshClosedReports = refreshClosedReports;
             return this;
         }
 
-        public Builder setRefreshClosedReports(@Nullable Boolean refreshClosedReports) {
+        public Builder refreshClosedReports(@Nullable Boolean refreshClosedReports) {
             this.refreshClosedReports = Input.ofNullable(refreshClosedReports);
             return this;
         }
 
-        public Builder setReportName(Input<String> reportName) {
+        public Builder reportName(Input<String> reportName) {
             this.reportName = Objects.requireNonNull(reportName);
             return this;
         }
 
-        public Builder setReportName(String reportName) {
+        public Builder reportName(String reportName) {
             this.reportName = Input.of(Objects.requireNonNull(reportName));
             return this;
         }
 
-        public Builder setReportVersioning(@Nullable Input<String> reportVersioning) {
+        public Builder reportVersioning(@Nullable Input<String> reportVersioning) {
             this.reportVersioning = reportVersioning;
             return this;
         }
 
-        public Builder setReportVersioning(@Nullable String reportVersioning) {
+        public Builder reportVersioning(@Nullable String reportVersioning) {
             this.reportVersioning = Input.ofNullable(reportVersioning);
             return this;
         }
 
-        public Builder setS3Bucket(Input<String> s3Bucket) {
+        public Builder s3Bucket(Input<String> s3Bucket) {
             this.s3Bucket = Objects.requireNonNull(s3Bucket);
             return this;
         }
 
-        public Builder setS3Bucket(String s3Bucket) {
+        public Builder s3Bucket(String s3Bucket) {
             this.s3Bucket = Input.of(Objects.requireNonNull(s3Bucket));
             return this;
         }
 
-        public Builder setS3Prefix(@Nullable Input<String> s3Prefix) {
+        public Builder s3Prefix(@Nullable Input<String> s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }
 
-        public Builder setS3Prefix(@Nullable String s3Prefix) {
+        public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = Input.ofNullable(s3Prefix);
             return this;
         }
 
-        public Builder setS3Region(Input<String> s3Region) {
+        public Builder s3Region(Input<String> s3Region) {
             this.s3Region = Objects.requireNonNull(s3Region);
             return this;
         }
 
-        public Builder setS3Region(String s3Region) {
+        public Builder s3Region(String s3Region) {
             this.s3Region = Input.of(Objects.requireNonNull(s3Region));
             return this;
         }
 
-        public Builder setTimeUnit(Input<String> timeUnit) {
+        public Builder timeUnit(Input<String> timeUnit) {
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
 
-        public Builder setTimeUnit(String timeUnit) {
+        public Builder timeUnit(String timeUnit) {
             this.timeUnit = Input.of(Objects.requireNonNull(timeUnit));
             return this;
         }

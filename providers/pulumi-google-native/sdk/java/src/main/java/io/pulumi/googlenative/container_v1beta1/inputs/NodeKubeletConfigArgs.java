@@ -91,32 +91,32 @@ public final class NodeKubeletConfigArgs extends io.pulumi.resources.ResourceArg
     	      this.cpuManagerPolicy = defaults.cpuManagerPolicy;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Input<Boolean> cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Input<Boolean> cpuCfsQuota) {
             this.cpuCfsQuota = cpuCfsQuota;
             return this;
         }
 
-        public Builder setCpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
+        public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
             this.cpuCfsQuota = Input.ofNullable(cpuCfsQuota);
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable Input<String> cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable Input<String> cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
             return this;
         }
 
-        public Builder setCpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
+        public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
             this.cpuCfsQuotaPeriod = Input.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
 
-        public Builder setCpuManagerPolicy(@Nullable Input<String> cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(@Nullable Input<String> cpuManagerPolicy) {
             this.cpuManagerPolicy = cpuManagerPolicy;
             return this;
         }
 
-        public Builder setCpuManagerPolicy(@Nullable String cpuManagerPolicy) {
+        public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
             this.cpuManagerPolicy = Input.ofNullable(cpuManagerPolicy);
             return this;
         }

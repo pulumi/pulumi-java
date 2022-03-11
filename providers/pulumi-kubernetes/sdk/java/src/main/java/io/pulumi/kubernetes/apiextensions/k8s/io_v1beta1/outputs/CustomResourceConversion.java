@@ -30,11 +30,11 @@ public final class CustomResourceConversion {
      */
     private final @Nullable WebhookClientConfig webhookClientConfig;
 
-    @OutputCustomType.Constructor({"conversionReviewVersions","strategy","webhookClientConfig"})
+    @OutputCustomType.Constructor
     private CustomResourceConversion(
-        @Nullable List<String> conversionReviewVersions,
-        String strategy,
-        @Nullable WebhookClientConfig webhookClientConfig) {
+        @OutputCustomType.Parameter("conversionReviewVersions") @Nullable List<String> conversionReviewVersions,
+        @OutputCustomType.Parameter("strategy") String strategy,
+        @OutputCustomType.Parameter("webhookClientConfig") @Nullable WebhookClientConfig webhookClientConfig) {
         this.conversionReviewVersions = conversionReviewVersions;
         this.strategy = strategy;
         this.webhookClientConfig = webhookClientConfig;
@@ -87,17 +87,17 @@ public final class CustomResourceConversion {
     	      this.webhookClientConfig = defaults.webhookClientConfig;
         }
 
-        public Builder setConversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
+        public Builder conversionReviewVersions(@Nullable List<String> conversionReviewVersions) {
             this.conversionReviewVersions = conversionReviewVersions;
             return this;
         }
 
-        public Builder setStrategy(String strategy) {
+        public Builder strategy(String strategy) {
             this.strategy = Objects.requireNonNull(strategy);
             return this;
         }
 
-        public Builder setWebhookClientConfig(@Nullable WebhookClientConfig webhookClientConfig) {
+        public Builder webhookClientConfig(@Nullable WebhookClientConfig webhookClientConfig) {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }

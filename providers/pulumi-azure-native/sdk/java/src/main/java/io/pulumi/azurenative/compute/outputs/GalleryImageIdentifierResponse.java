@@ -25,11 +25,11 @@ public final class GalleryImageIdentifierResponse {
      */
     private final String sku;
 
-    @OutputCustomType.Constructor({"offer","publisher","sku"})
+    @OutputCustomType.Constructor
     private GalleryImageIdentifierResponse(
-        String offer,
-        String publisher,
-        String sku) {
+        @OutputCustomType.Parameter("offer") String offer,
+        @OutputCustomType.Parameter("publisher") String publisher,
+        @OutputCustomType.Parameter("sku") String sku) {
         this.offer = offer;
         this.publisher = publisher;
         this.sku = sku;
@@ -81,17 +81,17 @@ public final class GalleryImageIdentifierResponse {
     	      this.sku = defaults.sku;
         }
 
-        public Builder setOffer(String offer) {
+        public Builder offer(String offer) {
             this.offer = Objects.requireNonNull(offer);
             return this;
         }
 
-        public Builder setPublisher(String publisher) {
+        public Builder publisher(String publisher) {
             this.publisher = Objects.requireNonNull(publisher);
             return this;
         }
 
-        public Builder setSku(String sku) {
+        public Builder sku(String sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }

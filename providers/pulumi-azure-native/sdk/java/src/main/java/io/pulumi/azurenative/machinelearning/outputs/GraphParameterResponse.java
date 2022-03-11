@@ -29,11 +29,11 @@ public final class GraphParameterResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","links","type"})
+    @OutputCustomType.Constructor
     private GraphParameterResponse(
-        @Nullable String description,
-        List<GraphParameterLinkResponse> links,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("links") List<GraphParameterLinkResponse> links,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.links = links;
         this.type = type;
@@ -85,17 +85,17 @@ public final class GraphParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setLinks(List<GraphParameterLinkResponse> links) {
+        public Builder links(List<GraphParameterLinkResponse> links) {
             this.links = Objects.requireNonNull(links);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

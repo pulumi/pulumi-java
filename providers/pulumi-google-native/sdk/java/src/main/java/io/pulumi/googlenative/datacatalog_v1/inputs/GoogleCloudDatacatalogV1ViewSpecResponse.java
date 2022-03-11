@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1ViewSpecResponse extends io.pulumi.re
     	      this.viewQuery = defaults.viewQuery;
         }
 
-        public Builder setViewQuery(String viewQuery) {
+        public Builder viewQuery(String viewQuery) {
             this.viewQuery = Objects.requireNonNull(viewQuery);
             return this;
         }

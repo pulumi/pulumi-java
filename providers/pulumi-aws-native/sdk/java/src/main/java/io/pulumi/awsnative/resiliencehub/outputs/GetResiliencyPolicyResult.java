@@ -43,15 +43,15 @@ public final class GetResiliencyPolicyResult {
      */
     private final @Nullable ResiliencyPolicyTier tier;
 
-    @OutputCustomType.Constructor({"dataLocationConstraint","policy","policyArn","policyDescription","policyName","tags","tier"})
+    @OutputCustomType.Constructor
     private GetResiliencyPolicyResult(
-        @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
-        @Nullable ResiliencyPolicyPolicyMap policy,
-        @Nullable String policyArn,
-        @Nullable String policyDescription,
-        @Nullable String policyName,
-        @Nullable ResiliencyPolicyTagMap tags,
-        @Nullable ResiliencyPolicyTier tier) {
+        @OutputCustomType.Parameter("dataLocationConstraint") @Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint,
+        @OutputCustomType.Parameter("policy") @Nullable ResiliencyPolicyPolicyMap policy,
+        @OutputCustomType.Parameter("policyArn") @Nullable String policyArn,
+        @OutputCustomType.Parameter("policyDescription") @Nullable String policyDescription,
+        @OutputCustomType.Parameter("policyName") @Nullable String policyName,
+        @OutputCustomType.Parameter("tags") @Nullable ResiliencyPolicyTagMap tags,
+        @OutputCustomType.Parameter("tier") @Nullable ResiliencyPolicyTier tier) {
         this.dataLocationConstraint = dataLocationConstraint;
         this.policy = policy;
         this.policyArn = policyArn;
@@ -135,37 +135,37 @@ public final class GetResiliencyPolicyResult {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setDataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
+        public Builder dataLocationConstraint(@Nullable ResiliencyPolicyDataLocationConstraint dataLocationConstraint) {
             this.dataLocationConstraint = dataLocationConstraint;
             return this;
         }
 
-        public Builder setPolicy(@Nullable ResiliencyPolicyPolicyMap policy) {
+        public Builder policy(@Nullable ResiliencyPolicyPolicyMap policy) {
             this.policy = policy;
             return this;
         }
 
-        public Builder setPolicyArn(@Nullable String policyArn) {
+        public Builder policyArn(@Nullable String policyArn) {
             this.policyArn = policyArn;
             return this;
         }
 
-        public Builder setPolicyDescription(@Nullable String policyDescription) {
+        public Builder policyDescription(@Nullable String policyDescription) {
             this.policyDescription = policyDescription;
             return this;
         }
 
-        public Builder setPolicyName(@Nullable String policyName) {
+        public Builder policyName(@Nullable String policyName) {
             this.policyName = policyName;
             return this;
         }
 
-        public Builder setTags(@Nullable ResiliencyPolicyTagMap tags) {
+        public Builder tags(@Nullable ResiliencyPolicyTagMap tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTier(@Nullable ResiliencyPolicyTier tier) {
+        public Builder tier(@Nullable ResiliencyPolicyTier tier) {
             this.tier = tier;
             return this;
         }

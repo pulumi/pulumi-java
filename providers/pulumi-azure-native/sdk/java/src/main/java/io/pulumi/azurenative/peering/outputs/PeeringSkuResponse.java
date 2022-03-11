@@ -32,12 +32,12 @@ public final class PeeringSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"family","name","size","tier"})
+    @OutputCustomType.Constructor
     private PeeringSkuResponse(
-        @Nullable String family,
-        @Nullable String name,
-        @Nullable String size,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("size") @Nullable String size,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.family = family;
         this.name = name;
         this.size = size;
@@ -99,22 +99,22 @@ public final class PeeringSkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSize(@Nullable String size) {
+        public Builder size(@Nullable String size) {
             this.size = size;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

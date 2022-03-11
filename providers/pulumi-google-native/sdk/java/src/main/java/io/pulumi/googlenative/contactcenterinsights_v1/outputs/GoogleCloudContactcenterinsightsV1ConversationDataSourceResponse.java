@@ -21,10 +21,10 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
      */
     private final GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource;
 
-    @OutputCustomType.Constructor({"dialogflowSource","gcsSource"})
+    @OutputCustomType.Constructor
     private GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse(
-        GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
-        GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
+        @OutputCustomType.Parameter("dialogflowSource") GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource,
+        @OutputCustomType.Parameter("gcsSource") GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
         this.dialogflowSource = dialogflowSource;
         this.gcsSource = gcsSource;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudContactcenterinsightsV1ConversationDataSourceRespo
     	      this.gcsSource = defaults.gcsSource;
         }
 
-        public Builder setDialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource) {
+        public Builder dialogflowSource(GoogleCloudContactcenterinsightsV1DialogflowSourceResponse dialogflowSource) {
             this.dialogflowSource = Objects.requireNonNull(dialogflowSource);
             return this;
         }
 
-        public Builder setGcsSource(GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
+        public Builder gcsSource(GoogleCloudContactcenterinsightsV1GcsSourceResponse gcsSource) {
             this.gcsSource = Objects.requireNonNull(gcsSource);
             return this;
         }

@@ -49,7 +49,7 @@ public final class DataSourceSqlConfiguration extends io.pulumi.resources.Invoke
     	      this.queryIdentifiersEnclosingOption = defaults.queryIdentifiersEnclosingOption;
         }
 
-        public Builder setQueryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
+        public Builder queryIdentifiersEnclosingOption(@Nullable DataSourceQueryIdentifiersEnclosingOption queryIdentifiersEnclosingOption) {
             this.queryIdentifiersEnclosingOption = queryIdentifiersEnclosingOption;
             return this;
         }

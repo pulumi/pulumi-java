@@ -19,10 +19,10 @@ public final class DashboardError {
     private final @Nullable String message;
     private final @Nullable DashboardErrorType type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private DashboardError(
-        @Nullable String message,
-        @Nullable DashboardErrorType type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") @Nullable DashboardErrorType type) {
         this.message = message;
         this.type = type;
     }
@@ -60,12 +60,12 @@ public final class DashboardError {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(@Nullable DashboardErrorType type) {
+        public Builder type(@Nullable DashboardErrorType type) {
             this.type = type;
             return this;
         }

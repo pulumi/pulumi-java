@@ -16,11 +16,11 @@ public final class GetKnowledgeBaseResult {
     private final @Nullable String knowledgeBaseId;
     private final @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration;
 
-    @OutputCustomType.Constructor({"knowledgeBaseArn","knowledgeBaseId","renderingConfiguration"})
+    @OutputCustomType.Constructor
     private GetKnowledgeBaseResult(
-        @Nullable String knowledgeBaseArn,
-        @Nullable String knowledgeBaseId,
-        @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
+        @OutputCustomType.Parameter("knowledgeBaseArn") @Nullable String knowledgeBaseArn,
+        @OutputCustomType.Parameter("knowledgeBaseId") @Nullable String knowledgeBaseId,
+        @OutputCustomType.Parameter("renderingConfiguration") @Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
         this.knowledgeBaseArn = knowledgeBaseArn;
         this.knowledgeBaseId = knowledgeBaseId;
         this.renderingConfiguration = renderingConfiguration;
@@ -60,17 +60,17 @@ public final class GetKnowledgeBaseResult {
     	      this.renderingConfiguration = defaults.renderingConfiguration;
         }
 
-        public Builder setKnowledgeBaseArn(@Nullable String knowledgeBaseArn) {
+        public Builder knowledgeBaseArn(@Nullable String knowledgeBaseArn) {
             this.knowledgeBaseArn = knowledgeBaseArn;
             return this;
         }
 
-        public Builder setKnowledgeBaseId(@Nullable String knowledgeBaseId) {
+        public Builder knowledgeBaseId(@Nullable String knowledgeBaseId) {
             this.knowledgeBaseId = knowledgeBaseId;
             return this;
         }
 
-        public Builder setRenderingConfiguration(@Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
+        public Builder renderingConfiguration(@Nullable KnowledgeBaseRenderingConfiguration renderingConfiguration) {
             this.renderingConfiguration = renderingConfiguration;
             return this;
         }

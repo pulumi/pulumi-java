@@ -15,8 +15,8 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
      */
     private final String languageCode;
 
-    @OutputCustomType.Constructor({"languageCode"})
-    private GoogleCloudDatalabelingV1beta1TextMetadataResponse(String languageCode) {
+    @OutputCustomType.Constructor
+    private GoogleCloudDatalabelingV1beta1TextMetadataResponse(@OutputCustomType.Parameter("languageCode") String languageCode) {
         this.languageCode = languageCode;
     }
 
@@ -48,7 +48,7 @@ public final class GoogleCloudDatalabelingV1beta1TextMetadataResponse {
     	      this.languageCode = defaults.languageCode;
         }
 
-        public Builder setLanguageCode(String languageCode) {
+        public Builder languageCode(String languageCode) {
             this.languageCode = Objects.requireNonNull(languageCode);
             return this;
         }

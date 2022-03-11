@@ -74,17 +74,17 @@ public final class GetWaiterArgs extends io.pulumi.resources.InvokeArgs {
     	      this.waiterId = defaults.waiterId;
         }
 
-        public Builder setConfigId(String configId) {
+        public Builder configId(String configId) {
             this.configId = Objects.requireNonNull(configId);
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = project;
             return this;
         }
 
-        public Builder setWaiterId(String waiterId) {
+        public Builder waiterId(String waiterId) {
             this.waiterId = Objects.requireNonNull(waiterId);
             return this;
         }

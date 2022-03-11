@@ -34,12 +34,12 @@ public final class UserManagedHttpsParametersResponse {
      */
     private final String protocolType;
 
-    @OutputCustomType.Constructor({"certificateSource","certificateSourceParameters","minimumTlsVersion","protocolType"})
+    @OutputCustomType.Constructor
     private UserManagedHttpsParametersResponse(
-        String certificateSource,
-        KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
-        @Nullable String minimumTlsVersion,
-        String protocolType) {
+        @OutputCustomType.Parameter("certificateSource") String certificateSource,
+        @OutputCustomType.Parameter("certificateSourceParameters") KeyVaultCertificateSourceParametersResponse certificateSourceParameters,
+        @OutputCustomType.Parameter("minimumTlsVersion") @Nullable String minimumTlsVersion,
+        @OutputCustomType.Parameter("protocolType") String protocolType) {
         this.certificateSource = certificateSource;
         this.certificateSourceParameters = certificateSourceParameters;
         this.minimumTlsVersion = minimumTlsVersion;
@@ -102,22 +102,22 @@ public final class UserManagedHttpsParametersResponse {
     	      this.protocolType = defaults.protocolType;
         }
 
-        public Builder setCertificateSource(String certificateSource) {
+        public Builder certificateSource(String certificateSource) {
             this.certificateSource = Objects.requireNonNull(certificateSource);
             return this;
         }
 
-        public Builder setCertificateSourceParameters(KeyVaultCertificateSourceParametersResponse certificateSourceParameters) {
+        public Builder certificateSourceParameters(KeyVaultCertificateSourceParametersResponse certificateSourceParameters) {
             this.certificateSourceParameters = Objects.requireNonNull(certificateSourceParameters);
             return this;
         }
 
-        public Builder setMinimumTlsVersion(@Nullable String minimumTlsVersion) {
+        public Builder minimumTlsVersion(@Nullable String minimumTlsVersion) {
             this.minimumTlsVersion = minimumTlsVersion;
             return this;
         }
 
-        public Builder setProtocolType(String protocolType) {
+        public Builder protocolType(String protocolType) {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }

@@ -20,10 +20,10 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
      */
     private final Boolean allowCsrBasedIssuance;
 
-    @OutputCustomType.Constructor({"allowConfigBasedIssuance","allowCsrBasedIssuance"})
+    @OutputCustomType.Constructor
     private CaPoolIssuancePolicyAllowedIssuanceModes(
-        Boolean allowConfigBasedIssuance,
-        Boolean allowCsrBasedIssuance) {
+        @OutputCustomType.Parameter("allowConfigBasedIssuance") Boolean allowConfigBasedIssuance,
+        @OutputCustomType.Parameter("allowCsrBasedIssuance") Boolean allowCsrBasedIssuance) {
         this.allowConfigBasedIssuance = allowConfigBasedIssuance;
         this.allowCsrBasedIssuance = allowCsrBasedIssuance;
     }
@@ -65,12 +65,12 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModes {
     	      this.allowCsrBasedIssuance = defaults.allowCsrBasedIssuance;
         }
 
-        public Builder setAllowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
+        public Builder allowConfigBasedIssuance(Boolean allowConfigBasedIssuance) {
             this.allowConfigBasedIssuance = Objects.requireNonNull(allowConfigBasedIssuance);
             return this;
         }
 
-        public Builder setAllowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
+        public Builder allowCsrBasedIssuance(Boolean allowCsrBasedIssuance) {
             this.allowCsrBasedIssuance = Objects.requireNonNull(allowCsrBasedIssuance);
             return this;
         }

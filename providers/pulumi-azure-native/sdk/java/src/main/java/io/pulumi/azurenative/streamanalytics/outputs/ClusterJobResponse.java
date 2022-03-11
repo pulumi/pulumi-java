@@ -26,11 +26,11 @@ public final class ClusterJobResponse {
      */
     private final Integer streamingUnits;
 
-    @OutputCustomType.Constructor({"id","jobState","streamingUnits"})
+    @OutputCustomType.Constructor
     private ClusterJobResponse(
-        String id,
-        String jobState,
-        Integer streamingUnits) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("jobState") String jobState,
+        @OutputCustomType.Parameter("streamingUnits") Integer streamingUnits) {
         this.id = id;
         this.jobState = jobState;
         this.streamingUnits = streamingUnits;
@@ -82,17 +82,17 @@ public final class ClusterJobResponse {
     	      this.streamingUnits = defaults.streamingUnits;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setJobState(String jobState) {
+        public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
 
-        public Builder setStreamingUnits(Integer streamingUnits) {
+        public Builder streamingUnits(Integer streamingUnits) {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }

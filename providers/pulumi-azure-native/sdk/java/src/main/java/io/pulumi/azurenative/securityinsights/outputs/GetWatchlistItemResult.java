@@ -91,23 +91,23 @@ public final class GetWatchlistItemResult {
      */
     private final @Nullable String watchlistItemType;
 
-    @OutputCustomType.Constructor({"created","createdBy","entityMapping","etag","id","isDeleted","itemsKeyValue","name","systemData","tenantId","type","updated","updatedBy","watchlistItemId","watchlistItemType"})
+    @OutputCustomType.Constructor
     private GetWatchlistItemResult(
-        @Nullable String created,
-        @Nullable WatchlistUserInfoResponse createdBy,
-        @Nullable Object entityMapping,
-        @Nullable String etag,
-        String id,
-        @Nullable Boolean isDeleted,
-        Object itemsKeyValue,
-        String name,
-        SystemDataResponse systemData,
-        @Nullable String tenantId,
-        String type,
-        @Nullable String updated,
-        @Nullable WatchlistUserInfoResponse updatedBy,
-        @Nullable String watchlistItemId,
-        @Nullable String watchlistItemType) {
+        @OutputCustomType.Parameter("created") @Nullable String created,
+        @OutputCustomType.Parameter("createdBy") @Nullable WatchlistUserInfoResponse createdBy,
+        @OutputCustomType.Parameter("entityMapping") @Nullable Object entityMapping,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isDeleted") @Nullable Boolean isDeleted,
+        @OutputCustomType.Parameter("itemsKeyValue") Object itemsKeyValue,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tenantId") @Nullable String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updated") @Nullable String updated,
+        @OutputCustomType.Parameter("updatedBy") @Nullable WatchlistUserInfoResponse updatedBy,
+        @OutputCustomType.Parameter("watchlistItemId") @Nullable String watchlistItemId,
+        @OutputCustomType.Parameter("watchlistItemType") @Nullable String watchlistItemType) {
         this.created = created;
         this.createdBy = createdBy;
         this.entityMapping = entityMapping;
@@ -279,77 +279,77 @@ public final class GetWatchlistItemResult {
     	      this.watchlistItemType = defaults.watchlistItemType;
         }
 
-        public Builder setCreated(@Nullable String created) {
+        public Builder created(@Nullable String created) {
             this.created = created;
             return this;
         }
 
-        public Builder setCreatedBy(@Nullable WatchlistUserInfoResponse createdBy) {
+        public Builder createdBy(@Nullable WatchlistUserInfoResponse createdBy) {
             this.createdBy = createdBy;
             return this;
         }
 
-        public Builder setEntityMapping(@Nullable Object entityMapping) {
+        public Builder entityMapping(@Nullable Object entityMapping) {
             this.entityMapping = entityMapping;
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsDeleted(@Nullable Boolean isDeleted) {
+        public Builder isDeleted(@Nullable Boolean isDeleted) {
             this.isDeleted = isDeleted;
             return this;
         }
 
-        public Builder setItemsKeyValue(Object itemsKeyValue) {
+        public Builder itemsKeyValue(Object itemsKeyValue) {
             this.itemsKeyValue = Objects.requireNonNull(itemsKeyValue);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTenantId(@Nullable String tenantId) {
+        public Builder tenantId(@Nullable String tenantId) {
             this.tenantId = tenantId;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdated(@Nullable String updated) {
+        public Builder updated(@Nullable String updated) {
             this.updated = updated;
             return this;
         }
 
-        public Builder setUpdatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
+        public Builder updatedBy(@Nullable WatchlistUserInfoResponse updatedBy) {
             this.updatedBy = updatedBy;
             return this;
         }
 
-        public Builder setWatchlistItemId(@Nullable String watchlistItemId) {
+        public Builder watchlistItemId(@Nullable String watchlistItemId) {
             this.watchlistItemId = watchlistItemId;
             return this;
         }
 
-        public Builder setWatchlistItemType(@Nullable String watchlistItemType) {
+        public Builder watchlistItemType(@Nullable String watchlistItemType) {
             this.watchlistItemType = watchlistItemType;
             return this;
         }

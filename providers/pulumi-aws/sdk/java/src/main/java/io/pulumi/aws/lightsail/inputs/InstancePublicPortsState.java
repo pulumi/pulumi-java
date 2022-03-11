@@ -72,22 +72,22 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
     	      this.portInfos = defaults.portInfos;
         }
 
-        public Builder setInstanceName(@Nullable Input<String> instanceName) {
+        public Builder instanceName(@Nullable Input<String> instanceName) {
             this.instanceName = instanceName;
             return this;
         }
 
-        public Builder setInstanceName(@Nullable String instanceName) {
+        public Builder instanceName(@Nullable String instanceName) {
             this.instanceName = Input.ofNullable(instanceName);
             return this;
         }
 
-        public Builder setPortInfos(@Nullable Input<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
+        public Builder portInfos(@Nullable Input<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
             this.portInfos = portInfos;
             return this;
         }
 
-        public Builder setPortInfos(@Nullable List<InstancePublicPortsPortInfoGetArgs> portInfos) {
+        public Builder portInfos(@Nullable List<InstancePublicPortsPortInfoGetArgs> portInfos) {
             this.portInfos = Input.ofNullable(portInfos);
             return this;
         }

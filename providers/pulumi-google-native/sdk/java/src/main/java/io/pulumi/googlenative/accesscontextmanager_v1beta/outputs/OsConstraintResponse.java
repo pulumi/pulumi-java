@@ -26,11 +26,11 @@ public final class OsConstraintResponse {
      */
     private final Boolean requireVerifiedChromeOs;
 
-    @OutputCustomType.Constructor({"minimumVersion","osType","requireVerifiedChromeOs"})
+    @OutputCustomType.Constructor
     private OsConstraintResponse(
-        String minimumVersion,
-        String osType,
-        Boolean requireVerifiedChromeOs) {
+        @OutputCustomType.Parameter("minimumVersion") String minimumVersion,
+        @OutputCustomType.Parameter("osType") String osType,
+        @OutputCustomType.Parameter("requireVerifiedChromeOs") Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;
@@ -82,17 +82,17 @@ public final class OsConstraintResponse {
     	      this.requireVerifiedChromeOs = defaults.requireVerifiedChromeOs;
         }
 
-        public Builder setMinimumVersion(String minimumVersion) {
+        public Builder minimumVersion(String minimumVersion) {
             this.minimumVersion = Objects.requireNonNull(minimumVersion);
             return this;
         }
 
-        public Builder setOsType(String osType) {
+        public Builder osType(String osType) {
             this.osType = Objects.requireNonNull(osType);
             return this;
         }
 
-        public Builder setRequireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
+        public Builder requireVerifiedChromeOs(Boolean requireVerifiedChromeOs) {
             this.requireVerifiedChromeOs = Objects.requireNonNull(requireVerifiedChromeOs);
             return this;
         }

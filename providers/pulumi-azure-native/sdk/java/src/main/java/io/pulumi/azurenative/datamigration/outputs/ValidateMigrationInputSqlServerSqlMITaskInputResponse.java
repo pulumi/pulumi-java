@@ -52,15 +52,15 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
      */
     private final SqlConnectionInfoResponse targetConnectionInfo;
 
-    @OutputCustomType.Constructor({"backupBlobShare","backupFileShare","backupMode","selectedDatabases","selectedLogins","sourceConnectionInfo","targetConnectionInfo"})
+    @OutputCustomType.Constructor
     private ValidateMigrationInputSqlServerSqlMITaskInputResponse(
-        BlobShareResponse backupBlobShare,
-        @Nullable FileShareResponse backupFileShare,
-        @Nullable String backupMode,
-        List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
-        @Nullable List<String> selectedLogins,
-        SqlConnectionInfoResponse sourceConnectionInfo,
-        SqlConnectionInfoResponse targetConnectionInfo) {
+        @OutputCustomType.Parameter("backupBlobShare") BlobShareResponse backupBlobShare,
+        @OutputCustomType.Parameter("backupFileShare") @Nullable FileShareResponse backupFileShare,
+        @OutputCustomType.Parameter("backupMode") @Nullable String backupMode,
+        @OutputCustomType.Parameter("selectedDatabases") List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases,
+        @OutputCustomType.Parameter("selectedLogins") @Nullable List<String> selectedLogins,
+        @OutputCustomType.Parameter("sourceConnectionInfo") SqlConnectionInfoResponse sourceConnectionInfo,
+        @OutputCustomType.Parameter("targetConnectionInfo") SqlConnectionInfoResponse targetConnectionInfo) {
         this.backupBlobShare = backupBlobShare;
         this.backupFileShare = backupFileShare;
         this.backupMode = backupMode;
@@ -152,37 +152,37 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse {
     	      this.targetConnectionInfo = defaults.targetConnectionInfo;
         }
 
-        public Builder setBackupBlobShare(BlobShareResponse backupBlobShare) {
+        public Builder backupBlobShare(BlobShareResponse backupBlobShare) {
             this.backupBlobShare = Objects.requireNonNull(backupBlobShare);
             return this;
         }
 
-        public Builder setBackupFileShare(@Nullable FileShareResponse backupFileShare) {
+        public Builder backupFileShare(@Nullable FileShareResponse backupFileShare) {
             this.backupFileShare = backupFileShare;
             return this;
         }
 
-        public Builder setBackupMode(@Nullable String backupMode) {
+        public Builder backupMode(@Nullable String backupMode) {
             this.backupMode = backupMode;
             return this;
         }
 
-        public Builder setSelectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
+        public Builder selectedDatabases(List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases) {
             this.selectedDatabases = Objects.requireNonNull(selectedDatabases);
             return this;
         }
 
-        public Builder setSelectedLogins(@Nullable List<String> selectedLogins) {
+        public Builder selectedLogins(@Nullable List<String> selectedLogins) {
             this.selectedLogins = selectedLogins;
             return this;
         }
 
-        public Builder setSourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
+        public Builder sourceConnectionInfo(SqlConnectionInfoResponse sourceConnectionInfo) {
             this.sourceConnectionInfo = Objects.requireNonNull(sourceConnectionInfo);
             return this;
         }
 
-        public Builder setTargetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
+        public Builder targetConnectionInfo(SqlConnectionInfoResponse targetConnectionInfo) {
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }

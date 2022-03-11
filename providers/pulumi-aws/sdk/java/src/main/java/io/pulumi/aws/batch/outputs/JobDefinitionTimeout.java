@@ -17,8 +17,8 @@ public final class JobDefinitionTimeout {
      */
     private final @Nullable Integer attemptDurationSeconds;
 
-    @OutputCustomType.Constructor({"attemptDurationSeconds"})
-    private JobDefinitionTimeout(@Nullable Integer attemptDurationSeconds) {
+    @OutputCustomType.Constructor
+    private JobDefinitionTimeout(@OutputCustomType.Parameter("attemptDurationSeconds") @Nullable Integer attemptDurationSeconds) {
         this.attemptDurationSeconds = attemptDurationSeconds;
     }
 
@@ -50,7 +50,7 @@ public final class JobDefinitionTimeout {
     	      this.attemptDurationSeconds = defaults.attemptDurationSeconds;
         }
 
-        public Builder setAttemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
+        public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
             this.attemptDurationSeconds = attemptDurationSeconds;
             return this;
         }

@@ -34,12 +34,12 @@ public final class AudioAnalyzerPresetResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"audioLanguage","experimentalOptions","mode","odataType"})
+    @OutputCustomType.Constructor
     private AudioAnalyzerPresetResponse(
-        @Nullable String audioLanguage,
-        @Nullable Map<String,String> experimentalOptions,
-        @Nullable String mode,
-        String odataType) {
+        @OutputCustomType.Parameter("audioLanguage") @Nullable String audioLanguage,
+        @OutputCustomType.Parameter("experimentalOptions") @Nullable Map<String,String> experimentalOptions,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("odataType") String odataType) {
         this.audioLanguage = audioLanguage;
         this.experimentalOptions = experimentalOptions;
         this.mode = mode;
@@ -102,22 +102,22 @@ public final class AudioAnalyzerPresetResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setAudioLanguage(@Nullable String audioLanguage) {
+        public Builder audioLanguage(@Nullable String audioLanguage) {
             this.audioLanguage = audioLanguage;
             return this;
         }
 
-        public Builder setExperimentalOptions(@Nullable Map<String,String> experimentalOptions) {
+        public Builder experimentalOptions(@Nullable Map<String,String> experimentalOptions) {
             this.experimentalOptions = experimentalOptions;
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

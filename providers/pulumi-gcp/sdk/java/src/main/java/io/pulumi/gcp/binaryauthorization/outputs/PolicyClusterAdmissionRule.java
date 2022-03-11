@@ -41,12 +41,12 @@ public final class PolicyClusterAdmissionRule {
      */
     private final @Nullable List<String> requireAttestationsBies;
 
-    @OutputCustomType.Constructor({"cluster","enforcementMode","evaluationMode","requireAttestationsBies"})
+    @OutputCustomType.Constructor
     private PolicyClusterAdmissionRule(
-        String cluster,
-        String enforcementMode,
-        String evaluationMode,
-        @Nullable List<String> requireAttestationsBies) {
+        @OutputCustomType.Parameter("cluster") String cluster,
+        @OutputCustomType.Parameter("enforcementMode") String enforcementMode,
+        @OutputCustomType.Parameter("evaluationMode") String evaluationMode,
+        @OutputCustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
         this.cluster = cluster;
         this.enforcementMode = enforcementMode;
         this.evaluationMode = evaluationMode;
@@ -117,22 +117,22 @@ public final class PolicyClusterAdmissionRule {
     	      this.requireAttestationsBies = defaults.requireAttestationsBies;
         }
 
-        public Builder setCluster(String cluster) {
+        public Builder cluster(String cluster) {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
 
-        public Builder setEnforcementMode(String enforcementMode) {
+        public Builder enforcementMode(String enforcementMode) {
             this.enforcementMode = Objects.requireNonNull(enforcementMode);
             return this;
         }
 
-        public Builder setEvaluationMode(String evaluationMode) {
+        public Builder evaluationMode(String evaluationMode) {
             this.evaluationMode = Objects.requireNonNull(evaluationMode);
             return this;
         }
 
-        public Builder setRequireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
+        public Builder requireAttestationsBies(@Nullable List<String> requireAttestationsBies) {
             this.requireAttestationsBies = requireAttestationsBies;
             return this;
         }

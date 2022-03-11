@@ -48,15 +48,15 @@ public final class GetFeedResult {
      */
     private final List<String> relationshipTypes;
 
-    @OutputCustomType.Constructor({"assetNames","assetTypes","condition","contentType","feedOutputConfig","name","relationshipTypes"})
+    @OutputCustomType.Constructor
     private GetFeedResult(
-        List<String> assetNames,
-        List<String> assetTypes,
-        ExprResponse condition,
-        String contentType,
-        FeedOutputConfigResponse feedOutputConfig,
-        String name,
-        List<String> relationshipTypes) {
+        @OutputCustomType.Parameter("assetNames") List<String> assetNames,
+        @OutputCustomType.Parameter("assetTypes") List<String> assetTypes,
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("contentType") String contentType,
+        @OutputCustomType.Parameter("feedOutputConfig") FeedOutputConfigResponse feedOutputConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("relationshipTypes") List<String> relationshipTypes) {
         this.assetNames = assetNames;
         this.assetTypes = assetTypes;
         this.condition = condition;
@@ -148,37 +148,37 @@ public final class GetFeedResult {
     	      this.relationshipTypes = defaults.relationshipTypes;
         }
 
-        public Builder setAssetNames(List<String> assetNames) {
+        public Builder assetNames(List<String> assetNames) {
             this.assetNames = Objects.requireNonNull(assetNames);
             return this;
         }
 
-        public Builder setAssetTypes(List<String> assetTypes) {
+        public Builder assetTypes(List<String> assetTypes) {
             this.assetTypes = Objects.requireNonNull(assetTypes);
             return this;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setContentType(String contentType) {
+        public Builder contentType(String contentType) {
             this.contentType = Objects.requireNonNull(contentType);
             return this;
         }
 
-        public Builder setFeedOutputConfig(FeedOutputConfigResponse feedOutputConfig) {
+        public Builder feedOutputConfig(FeedOutputConfigResponse feedOutputConfig) {
             this.feedOutputConfig = Objects.requireNonNull(feedOutputConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRelationshipTypes(List<String> relationshipTypes) {
+        public Builder relationshipTypes(List<String> relationshipTypes) {
             this.relationshipTypes = Objects.requireNonNull(relationshipTypes);
             return this;
         }

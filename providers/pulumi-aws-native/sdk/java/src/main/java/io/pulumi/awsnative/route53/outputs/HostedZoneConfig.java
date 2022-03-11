@@ -17,8 +17,8 @@ public final class HostedZoneConfig {
      */
     private final @Nullable String comment;
 
-    @OutputCustomType.Constructor({"comment"})
-    private HostedZoneConfig(@Nullable String comment) {
+    @OutputCustomType.Constructor
+    private HostedZoneConfig(@OutputCustomType.Parameter("comment") @Nullable String comment) {
         this.comment = comment;
     }
 
@@ -50,7 +50,7 @@ public final class HostedZoneConfig {
     	      this.comment = defaults.comment;
         }
 
-        public Builder setComment(@Nullable String comment) {
+        public Builder comment(@Nullable String comment) {
             this.comment = comment;
             return this;
         }

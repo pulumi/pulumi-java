@@ -30,12 +30,12 @@ public final class IosDeviceResponse {
      */
     private final String orientation;
 
-    @OutputCustomType.Constructor({"iosModelId","iosVersionId","locale","orientation"})
+    @OutputCustomType.Constructor
     private IosDeviceResponse(
-        String iosModelId,
-        String iosVersionId,
-        String locale,
-        String orientation) {
+        @OutputCustomType.Parameter("iosModelId") String iosModelId,
+        @OutputCustomType.Parameter("iosVersionId") String iosVersionId,
+        @OutputCustomType.Parameter("locale") String locale,
+        @OutputCustomType.Parameter("orientation") String orientation) {
         this.iosModelId = iosModelId;
         this.iosVersionId = iosVersionId;
         this.locale = locale;
@@ -97,22 +97,22 @@ public final class IosDeviceResponse {
     	      this.orientation = defaults.orientation;
         }
 
-        public Builder setIosModelId(String iosModelId) {
+        public Builder iosModelId(String iosModelId) {
             this.iosModelId = Objects.requireNonNull(iosModelId);
             return this;
         }
 
-        public Builder setIosVersionId(String iosVersionId) {
+        public Builder iosVersionId(String iosVersionId) {
             this.iosVersionId = Objects.requireNonNull(iosVersionId);
             return this;
         }
 
-        public Builder setLocale(String locale) {
+        public Builder locale(String locale) {
             this.locale = Objects.requireNonNull(locale);
             return this;
         }
 
-        public Builder setOrientation(String orientation) {
+        public Builder orientation(String orientation) {
             this.orientation = Objects.requireNonNull(orientation);
             return this;
         }

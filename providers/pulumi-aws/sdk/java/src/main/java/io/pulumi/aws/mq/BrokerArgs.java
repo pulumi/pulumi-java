@@ -351,192 +351,192 @@ public final class BrokerArgs extends io.pulumi.resources.ResourceArgs {
     	      this.users = defaults.users;
         }
 
-        public Builder setApplyImmediately(@Nullable Input<Boolean> applyImmediately) {
+        public Builder applyImmediately(@Nullable Input<Boolean> applyImmediately) {
             this.applyImmediately = applyImmediately;
             return this;
         }
 
-        public Builder setApplyImmediately(@Nullable Boolean applyImmediately) {
+        public Builder applyImmediately(@Nullable Boolean applyImmediately) {
             this.applyImmediately = Input.ofNullable(applyImmediately);
             return this;
         }
 
-        public Builder setAuthenticationStrategy(@Nullable Input<String> authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable Input<String> authenticationStrategy) {
             this.authenticationStrategy = authenticationStrategy;
             return this;
         }
 
-        public Builder setAuthenticationStrategy(@Nullable String authenticationStrategy) {
+        public Builder authenticationStrategy(@Nullable String authenticationStrategy) {
             this.authenticationStrategy = Input.ofNullable(authenticationStrategy);
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Input<Boolean> autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = autoMinorVersionUpgrade;
             return this;
         }
 
-        public Builder setAutoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
+        public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
             this.autoMinorVersionUpgrade = Input.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
 
-        public Builder setBrokerName(@Nullable Input<String> brokerName) {
+        public Builder brokerName(@Nullable Input<String> brokerName) {
             this.brokerName = brokerName;
             return this;
         }
 
-        public Builder setBrokerName(@Nullable String brokerName) {
+        public Builder brokerName(@Nullable String brokerName) {
             this.brokerName = Input.ofNullable(brokerName);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Input<BrokerConfigurationArgs> configuration) {
+        public Builder configuration(@Nullable Input<BrokerConfigurationArgs> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setConfiguration(@Nullable BrokerConfigurationArgs configuration) {
+        public Builder configuration(@Nullable BrokerConfigurationArgs configuration) {
             this.configuration = Input.ofNullable(configuration);
             return this;
         }
 
-        public Builder setDeploymentMode(@Nullable Input<String> deploymentMode) {
+        public Builder deploymentMode(@Nullable Input<String> deploymentMode) {
             this.deploymentMode = deploymentMode;
             return this;
         }
 
-        public Builder setDeploymentMode(@Nullable String deploymentMode) {
+        public Builder deploymentMode(@Nullable String deploymentMode) {
             this.deploymentMode = Input.ofNullable(deploymentMode);
             return this;
         }
 
-        public Builder setEncryptionOptions(@Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions) {
+        public Builder encryptionOptions(@Nullable Input<BrokerEncryptionOptionsArgs> encryptionOptions) {
             this.encryptionOptions = encryptionOptions;
             return this;
         }
 
-        public Builder setEncryptionOptions(@Nullable BrokerEncryptionOptionsArgs encryptionOptions) {
+        public Builder encryptionOptions(@Nullable BrokerEncryptionOptionsArgs encryptionOptions) {
             this.encryptionOptions = Input.ofNullable(encryptionOptions);
             return this;
         }
 
-        public Builder setEngineType(Input<String> engineType) {
+        public Builder engineType(Input<String> engineType) {
             this.engineType = Objects.requireNonNull(engineType);
             return this;
         }
 
-        public Builder setEngineType(String engineType) {
+        public Builder engineType(String engineType) {
             this.engineType = Input.of(Objects.requireNonNull(engineType));
             return this;
         }
 
-        public Builder setEngineVersion(Input<String> engineVersion) {
+        public Builder engineVersion(Input<String> engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Input.of(Objects.requireNonNull(engineVersion));
             return this;
         }
 
-        public Builder setHostInstanceType(Input<String> hostInstanceType) {
+        public Builder hostInstanceType(Input<String> hostInstanceType) {
             this.hostInstanceType = Objects.requireNonNull(hostInstanceType);
             return this;
         }
 
-        public Builder setHostInstanceType(String hostInstanceType) {
+        public Builder hostInstanceType(String hostInstanceType) {
             this.hostInstanceType = Input.of(Objects.requireNonNull(hostInstanceType));
             return this;
         }
 
-        public Builder setLdapServerMetadata(@Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable Input<BrokerLdapServerMetadataArgs> ldapServerMetadata) {
             this.ldapServerMetadata = ldapServerMetadata;
             return this;
         }
 
-        public Builder setLdapServerMetadata(@Nullable BrokerLdapServerMetadataArgs ldapServerMetadata) {
+        public Builder ldapServerMetadata(@Nullable BrokerLdapServerMetadataArgs ldapServerMetadata) {
             this.ldapServerMetadata = Input.ofNullable(ldapServerMetadata);
             return this;
         }
 
-        public Builder setLogs(@Nullable Input<BrokerLogsArgs> logs) {
+        public Builder logs(@Nullable Input<BrokerLogsArgs> logs) {
             this.logs = logs;
             return this;
         }
 
-        public Builder setLogs(@Nullable BrokerLogsArgs logs) {
+        public Builder logs(@Nullable BrokerLogsArgs logs) {
             this.logs = Input.ofNullable(logs);
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(@Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable Input<BrokerMaintenanceWindowStartTimeArgs> maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
-        public Builder setMaintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeArgs maintenanceWindowStartTime) {
+        public Builder maintenanceWindowStartTime(@Nullable BrokerMaintenanceWindowStartTimeArgs maintenanceWindowStartTime) {
             this.maintenanceWindowStartTime = Input.ofNullable(maintenanceWindowStartTime);
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Input<Boolean> publiclyAccessible) {
             this.publiclyAccessible = publiclyAccessible;
             return this;
         }
 
-        public Builder setPubliclyAccessible(@Nullable Boolean publiclyAccessible) {
+        public Builder publiclyAccessible(@Nullable Boolean publiclyAccessible) {
             this.publiclyAccessible = Input.ofNullable(publiclyAccessible);
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable Input<List<String>> securityGroups) {
+        public Builder securityGroups(@Nullable Input<List<String>> securityGroups) {
             this.securityGroups = securityGroups;
             return this;
         }
 
-        public Builder setSecurityGroups(@Nullable List<String> securityGroups) {
+        public Builder securityGroups(@Nullable List<String> securityGroups) {
             this.securityGroups = Input.ofNullable(securityGroups);
             return this;
         }
 
-        public Builder setStorageType(@Nullable Input<String> storageType) {
+        public Builder storageType(@Nullable Input<String> storageType) {
             this.storageType = storageType;
             return this;
         }
 
-        public Builder setStorageType(@Nullable String storageType) {
+        public Builder storageType(@Nullable String storageType) {
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable Input<List<String>> subnetIds) {
+        public Builder subnetIds(@Nullable Input<List<String>> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = Input.ofNullable(subnetIds);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setUsers(Input<List<BrokerUserArgs>> users) {
+        public Builder users(Input<List<BrokerUserArgs>> users) {
             this.users = Objects.requireNonNull(users);
             return this;
         }
 
-        public Builder setUsers(List<BrokerUserArgs> users) {
+        public Builder users(List<BrokerUserArgs> users) {
             this.users = Input.of(Objects.requireNonNull(users));
             return this;
         }

@@ -157,72 +157,72 @@ public final class TagTemplateFieldGetArgs extends io.pulumi.resources.ResourceA
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setFieldId(Input<String> fieldId) {
+        public Builder fieldId(Input<String> fieldId) {
             this.fieldId = Objects.requireNonNull(fieldId);
             return this;
         }
 
-        public Builder setFieldId(String fieldId) {
+        public Builder fieldId(String fieldId) {
             this.fieldId = Input.of(Objects.requireNonNull(fieldId));
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Input<Boolean> isRequired) {
+        public Builder isRequired(@Nullable Input<Boolean> isRequired) {
             this.isRequired = isRequired;
             return this;
         }
 
-        public Builder setIsRequired(@Nullable Boolean isRequired) {
+        public Builder isRequired(@Nullable Boolean isRequired) {
             this.isRequired = Input.ofNullable(isRequired);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOrder(@Nullable Input<Integer> order) {
+        public Builder order(@Nullable Input<Integer> order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = Input.ofNullable(order);
             return this;
         }
 
-        public Builder setType(Input<TagTemplateFieldTypeGetArgs> type) {
+        public Builder type(Input<TagTemplateFieldTypeGetArgs> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(TagTemplateFieldTypeGetArgs type) {
+        public Builder type(TagTemplateFieldTypeGetArgs type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

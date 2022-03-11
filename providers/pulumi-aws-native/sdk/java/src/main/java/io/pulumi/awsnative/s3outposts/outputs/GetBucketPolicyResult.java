@@ -17,8 +17,8 @@ public final class GetBucketPolicyResult {
      */
     private final @Nullable Object policyDocument;
 
-    @OutputCustomType.Constructor({"policyDocument"})
-    private GetBucketPolicyResult(@Nullable Object policyDocument) {
+    @OutputCustomType.Constructor
+    private GetBucketPolicyResult(@OutputCustomType.Parameter("policyDocument") @Nullable Object policyDocument) {
         this.policyDocument = policyDocument;
     }
 
@@ -50,7 +50,7 @@ public final class GetBucketPolicyResult {
     	      this.policyDocument = defaults.policyDocument;
         }
 
-        public Builder setPolicyDocument(@Nullable Object policyDocument) {
+        public Builder policyDocument(@Nullable Object policyDocument) {
             this.policyDocument = policyDocument;
             return this;
         }

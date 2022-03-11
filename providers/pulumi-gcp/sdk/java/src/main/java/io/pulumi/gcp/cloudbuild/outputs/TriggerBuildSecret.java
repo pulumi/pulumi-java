@@ -24,10 +24,10 @@ public final class TriggerBuildSecret {
      */
     private final @Nullable Map<String,String> secretEnv;
 
-    @OutputCustomType.Constructor({"kmsKeyName","secretEnv"})
+    @OutputCustomType.Constructor
     private TriggerBuildSecret(
-        String kmsKeyName,
-        @Nullable Map<String,String> secretEnv) {
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @OutputCustomType.Parameter("secretEnv") @Nullable Map<String,String> secretEnv) {
         this.kmsKeyName = kmsKeyName;
         this.secretEnv = secretEnv;
     }
@@ -71,12 +71,12 @@ public final class TriggerBuildSecret {
     	      this.secretEnv = defaults.secretEnv;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }
 
-        public Builder setSecretEnv(@Nullable Map<String,String> secretEnv) {
+        public Builder secretEnv(@Nullable Map<String,String> secretEnv) {
             this.secretEnv = secretEnv;
             return this;
         }

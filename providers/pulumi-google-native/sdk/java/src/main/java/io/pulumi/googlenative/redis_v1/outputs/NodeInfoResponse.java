@@ -15,8 +15,8 @@ public final class NodeInfoResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"zone"})
-    private NodeInfoResponse(String zone) {
+    @OutputCustomType.Constructor
+    private NodeInfoResponse(@OutputCustomType.Parameter("zone") String zone) {
         this.zone = zone;
     }
 
@@ -48,7 +48,7 @@ public final class NodeInfoResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

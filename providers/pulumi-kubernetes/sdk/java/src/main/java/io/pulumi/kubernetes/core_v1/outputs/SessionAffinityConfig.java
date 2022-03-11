@@ -17,8 +17,8 @@ public final class SessionAffinityConfig {
      */
     private final @Nullable ClientIPConfig clientIP;
 
-    @OutputCustomType.Constructor({"clientIP"})
-    private SessionAffinityConfig(@Nullable ClientIPConfig clientIP) {
+    @OutputCustomType.Constructor
+    private SessionAffinityConfig(@OutputCustomType.Parameter("clientIP") @Nullable ClientIPConfig clientIP) {
         this.clientIP = clientIP;
     }
 
@@ -50,7 +50,7 @@ public final class SessionAffinityConfig {
     	      this.clientIP = defaults.clientIP;
         }
 
-        public Builder setClientIP(@Nullable ClientIPConfig clientIP) {
+        public Builder clientIP(@Nullable ClientIPConfig clientIP) {
             this.clientIP = clientIP;
             return this;
         }

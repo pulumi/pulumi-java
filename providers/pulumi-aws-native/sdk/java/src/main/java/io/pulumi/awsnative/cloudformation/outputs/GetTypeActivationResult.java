@@ -34,12 +34,12 @@ public final class GetTypeActivationResult {
      */
     private final @Nullable TypeActivationVersionBump versionBump;
 
-    @OutputCustomType.Constructor({"arn","autoUpdate","majorVersion","versionBump"})
+    @OutputCustomType.Constructor
     private GetTypeActivationResult(
-        @Nullable String arn,
-        @Nullable Boolean autoUpdate,
-        @Nullable String majorVersion,
-        @Nullable TypeActivationVersionBump versionBump) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("autoUpdate") @Nullable Boolean autoUpdate,
+        @OutputCustomType.Parameter("majorVersion") @Nullable String majorVersion,
+        @OutputCustomType.Parameter("versionBump") @Nullable TypeActivationVersionBump versionBump) {
         this.arn = arn;
         this.autoUpdate = autoUpdate;
         this.majorVersion = majorVersion;
@@ -101,22 +101,22 @@ public final class GetTypeActivationResult {
     	      this.versionBump = defaults.versionBump;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAutoUpdate(@Nullable Boolean autoUpdate) {
+        public Builder autoUpdate(@Nullable Boolean autoUpdate) {
             this.autoUpdate = autoUpdate;
             return this;
         }
 
-        public Builder setMajorVersion(@Nullable String majorVersion) {
+        public Builder majorVersion(@Nullable String majorVersion) {
             this.majorVersion = majorVersion;
             return this;
         }
 
-        public Builder setVersionBump(@Nullable TypeActivationVersionBump versionBump) {
+        public Builder versionBump(@Nullable TypeActivationVersionBump versionBump) {
             this.versionBump = versionBump;
             return this;
         }

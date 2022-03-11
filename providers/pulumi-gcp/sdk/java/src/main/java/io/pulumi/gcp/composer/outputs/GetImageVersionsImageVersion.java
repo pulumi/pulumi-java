@@ -21,10 +21,10 @@ public final class GetImageVersionsImageVersion {
      */
     private final List<String> supportedPythonVersions;
 
-    @OutputCustomType.Constructor({"imageVersionId","supportedPythonVersions"})
+    @OutputCustomType.Constructor
     private GetImageVersionsImageVersion(
-        String imageVersionId,
-        List<String> supportedPythonVersions) {
+        @OutputCustomType.Parameter("imageVersionId") String imageVersionId,
+        @OutputCustomType.Parameter("supportedPythonVersions") List<String> supportedPythonVersions) {
         this.imageVersionId = imageVersionId;
         this.supportedPythonVersions = supportedPythonVersions;
     }
@@ -66,12 +66,12 @@ public final class GetImageVersionsImageVersion {
     	      this.supportedPythonVersions = defaults.supportedPythonVersions;
         }
 
-        public Builder setImageVersionId(String imageVersionId) {
+        public Builder imageVersionId(String imageVersionId) {
             this.imageVersionId = Objects.requireNonNull(imageVersionId);
             return this;
         }
 
-        public Builder setSupportedPythonVersions(List<String> supportedPythonVersions) {
+        public Builder supportedPythonVersions(List<String> supportedPythonVersions) {
             this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
             return this;
         }

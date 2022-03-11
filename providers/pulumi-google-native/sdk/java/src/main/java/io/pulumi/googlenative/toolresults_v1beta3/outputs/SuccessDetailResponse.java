@@ -15,8 +15,8 @@ public final class SuccessDetailResponse {
      */
     private final Boolean otherNativeCrash;
 
-    @OutputCustomType.Constructor({"otherNativeCrash"})
-    private SuccessDetailResponse(Boolean otherNativeCrash) {
+    @OutputCustomType.Constructor
+    private SuccessDetailResponse(@OutputCustomType.Parameter("otherNativeCrash") Boolean otherNativeCrash) {
         this.otherNativeCrash = otherNativeCrash;
     }
 
@@ -48,7 +48,7 @@ public final class SuccessDetailResponse {
     	      this.otherNativeCrash = defaults.otherNativeCrash;
         }
 
-        public Builder setOtherNativeCrash(Boolean otherNativeCrash) {
+        public Builder otherNativeCrash(Boolean otherNativeCrash) {
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }

@@ -24,10 +24,10 @@ public final class GetParameterGroupResult {
      */
     private final @Nullable List<ParameterGroupTag> tags;
 
-    @OutputCustomType.Constructor({"aRN","tags"})
+    @OutputCustomType.Constructor
     private GetParameterGroupResult(
-        @Nullable String aRN,
-        @Nullable List<ParameterGroupTag> tags) {
+        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
+        @OutputCustomType.Parameter("tags") @Nullable List<ParameterGroupTag> tags) {
         this.aRN = aRN;
         this.tags = tags;
     }
@@ -69,12 +69,12 @@ public final class GetParameterGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setARN(@Nullable String aRN) {
+        public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ParameterGroupTag> tags) {
+        public Builder tags(@Nullable List<ParameterGroupTag> tags) {
             this.tags = tags;
             return this;
         }

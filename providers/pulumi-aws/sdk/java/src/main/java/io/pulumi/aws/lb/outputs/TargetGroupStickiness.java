@@ -34,12 +34,12 @@ public final class TargetGroupStickiness {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cookieDuration","cookieName","enabled","type"})
+    @OutputCustomType.Constructor
     private TargetGroupStickiness(
-        @Nullable Integer cookieDuration,
-        @Nullable String cookieName,
-        @Nullable Boolean enabled,
-        String type) {
+        @OutputCustomType.Parameter("cookieDuration") @Nullable Integer cookieDuration,
+        @OutputCustomType.Parameter("cookieName") @Nullable String cookieName,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("type") String type) {
         this.cookieDuration = cookieDuration;
         this.cookieName = cookieName;
         this.enabled = enabled;
@@ -101,22 +101,22 @@ public final class TargetGroupStickiness {
     	      this.type = defaults.type;
         }
 
-        public Builder setCookieDuration(@Nullable Integer cookieDuration) {
+        public Builder cookieDuration(@Nullable Integer cookieDuration) {
             this.cookieDuration = cookieDuration;
             return this;
         }
 
-        public Builder setCookieName(@Nullable String cookieName) {
+        public Builder cookieName(@Nullable String cookieName) {
             this.cookieName = cookieName;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

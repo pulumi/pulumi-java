@@ -22,10 +22,10 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
      */
     private final @Nullable String kmsKeyArn;
 
-    @OutputCustomType.Constructor({"encryptionOption","kmsKeyArn"})
+    @OutputCustomType.Constructor
     private WorkgroupConfigurationResultConfigurationEncryptionConfiguration(
-        @Nullable String encryptionOption,
-        @Nullable String kmsKeyArn) {
+        @OutputCustomType.Parameter("encryptionOption") @Nullable String encryptionOption,
+        @OutputCustomType.Parameter("kmsKeyArn") @Nullable String kmsKeyArn) {
         this.encryptionOption = encryptionOption;
         this.kmsKeyArn = kmsKeyArn;
     }
@@ -67,12 +67,12 @@ public final class WorkgroupConfigurationResultConfigurationEncryptionConfigurat
     	      this.kmsKeyArn = defaults.kmsKeyArn;
         }
 
-        public Builder setEncryptionOption(@Nullable String encryptionOption) {
+        public Builder encryptionOption(@Nullable String encryptionOption) {
             this.encryptionOption = encryptionOption;
             return this;
         }
 
-        public Builder setKmsKeyArn(@Nullable String kmsKeyArn) {
+        public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
             this.kmsKeyArn = kmsKeyArn;
             return this;
         }

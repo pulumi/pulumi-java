@@ -22,14 +22,14 @@ public final class DataSourceServiceNowConfiguration {
     private final @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration;
     private final DataSourceServiceNowBuildVersionType serviceNowBuildVersion;
 
-    @OutputCustomType.Constructor({"authenticationType","hostUrl","knowledgeArticleConfiguration","secretArn","serviceCatalogConfiguration","serviceNowBuildVersion"})
+    @OutputCustomType.Constructor
     private DataSourceServiceNowConfiguration(
-        @Nullable DataSourceServiceNowAuthenticationType authenticationType,
-        String hostUrl,
-        @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
-        String secretArn,
-        @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
-        DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        @OutputCustomType.Parameter("authenticationType") @Nullable DataSourceServiceNowAuthenticationType authenticationType,
+        @OutputCustomType.Parameter("hostUrl") String hostUrl,
+        @OutputCustomType.Parameter("knowledgeArticleConfiguration") @Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration,
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("serviceCatalogConfiguration") @Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration,
+        @OutputCustomType.Parameter("serviceNowBuildVersion") DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
         this.authenticationType = authenticationType;
         this.hostUrl = hostUrl;
         this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
@@ -87,32 +87,32 @@ public final class DataSourceServiceNowConfiguration {
     	      this.serviceNowBuildVersion = defaults.serviceNowBuildVersion;
         }
 
-        public Builder setAuthenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
+        public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setHostUrl(String hostUrl) {
+        public Builder hostUrl(String hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setServiceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
+        public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
 
-        public Builder setServiceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }

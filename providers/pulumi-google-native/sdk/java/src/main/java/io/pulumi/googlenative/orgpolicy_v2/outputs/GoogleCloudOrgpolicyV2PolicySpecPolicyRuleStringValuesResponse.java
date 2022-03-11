@@ -21,10 +21,10 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
      */
     private final List<String> deniedValues;
 
-    @OutputCustomType.Constructor({"allowedValues","deniedValues"})
+    @OutputCustomType.Constructor
     private GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse(
-        List<String> allowedValues,
-        List<String> deniedValues) {
+        @OutputCustomType.Parameter("allowedValues") List<String> allowedValues,
+        @OutputCustomType.Parameter("deniedValues") List<String> deniedValues) {
         this.allowedValues = allowedValues;
         this.deniedValues = deniedValues;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesRespons
     	      this.deniedValues = defaults.deniedValues;
         }
 
-        public Builder setAllowedValues(List<String> allowedValues) {
+        public Builder allowedValues(List<String> allowedValues) {
             this.allowedValues = Objects.requireNonNull(allowedValues);
             return this;
         }
 
-        public Builder setDeniedValues(List<String> deniedValues) {
+        public Builder deniedValues(List<String> deniedValues) {
             this.deniedValues = Objects.requireNonNull(deniedValues);
             return this;
         }

@@ -68,20 +68,20 @@ public final class GetDataSourceResult {
     private final @Nullable List<DataSourceTag> tags;
     private final @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties;
 
-    @OutputCustomType.Constructor({"alternateDataSourceParameters","arn","createdTime","dataSourceParameters","errorInfo","lastUpdatedTime","name","permissions","sslProperties","status","tags","vpcConnectionProperties"})
+    @OutputCustomType.Constructor
     private GetDataSourceResult(
-        @Nullable List<DataSourceParameters> alternateDataSourceParameters,
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable DataSourceParameters dataSourceParameters,
-        @Nullable DataSourceErrorInfo errorInfo,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable List<DataSourceResourcePermission> permissions,
-        @Nullable DataSourceSslProperties sslProperties,
-        @Nullable DataSourceResourceStatus status,
-        @Nullable List<DataSourceTag> tags,
-        @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
+        @OutputCustomType.Parameter("alternateDataSourceParameters") @Nullable List<DataSourceParameters> alternateDataSourceParameters,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSourceParameters") @Nullable DataSourceParameters dataSourceParameters,
+        @OutputCustomType.Parameter("errorInfo") @Nullable DataSourceErrorInfo errorInfo,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<DataSourceResourcePermission> permissions,
+        @OutputCustomType.Parameter("sslProperties") @Nullable DataSourceSslProperties sslProperties,
+        @OutputCustomType.Parameter("status") @Nullable DataSourceResourceStatus status,
+        @OutputCustomType.Parameter("tags") @Nullable List<DataSourceTag> tags,
+        @OutputCustomType.Parameter("vpcConnectionProperties") @Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
         this.alternateDataSourceParameters = alternateDataSourceParameters;
         this.arn = arn;
         this.createdTime = createdTime;
@@ -211,62 +211,62 @@ public final class GetDataSourceResult {
     	      this.vpcConnectionProperties = defaults.vpcConnectionProperties;
         }
 
-        public Builder setAlternateDataSourceParameters(@Nullable List<DataSourceParameters> alternateDataSourceParameters) {
+        public Builder alternateDataSourceParameters(@Nullable List<DataSourceParameters> alternateDataSourceParameters) {
             this.alternateDataSourceParameters = alternateDataSourceParameters;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSourceParameters(@Nullable DataSourceParameters dataSourceParameters) {
+        public Builder dataSourceParameters(@Nullable DataSourceParameters dataSourceParameters) {
             this.dataSourceParameters = dataSourceParameters;
             return this;
         }
 
-        public Builder setErrorInfo(@Nullable DataSourceErrorInfo errorInfo) {
+        public Builder errorInfo(@Nullable DataSourceErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<DataSourceResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<DataSourceResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setSslProperties(@Nullable DataSourceSslProperties sslProperties) {
+        public Builder sslProperties(@Nullable DataSourceSslProperties sslProperties) {
             this.sslProperties = sslProperties;
             return this;
         }
 
-        public Builder setStatus(@Nullable DataSourceResourceStatus status) {
+        public Builder status(@Nullable DataSourceResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DataSourceTag> tags) {
+        public Builder tags(@Nullable List<DataSourceTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setVpcConnectionProperties(@Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
+        public Builder vpcConnectionProperties(@Nullable DataSourceVpcConnectionProperties vpcConnectionProperties) {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }

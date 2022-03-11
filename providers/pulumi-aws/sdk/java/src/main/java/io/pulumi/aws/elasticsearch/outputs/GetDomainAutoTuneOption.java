@@ -27,11 +27,11 @@ public final class GetDomainAutoTuneOption {
      */
     private final String rollbackOnDisable;
 
-    @OutputCustomType.Constructor({"desiredState","maintenanceSchedules","rollbackOnDisable"})
+    @OutputCustomType.Constructor
     private GetDomainAutoTuneOption(
-        String desiredState,
-        List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules,
-        String rollbackOnDisable) {
+        @OutputCustomType.Parameter("desiredState") String desiredState,
+        @OutputCustomType.Parameter("maintenanceSchedules") List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules,
+        @OutputCustomType.Parameter("rollbackOnDisable") String rollbackOnDisable) {
         this.desiredState = desiredState;
         this.maintenanceSchedules = maintenanceSchedules;
         this.rollbackOnDisable = rollbackOnDisable;
@@ -83,17 +83,17 @@ public final class GetDomainAutoTuneOption {
     	      this.rollbackOnDisable = defaults.rollbackOnDisable;
         }
 
-        public Builder setDesiredState(String desiredState) {
+        public Builder desiredState(String desiredState) {
             this.desiredState = Objects.requireNonNull(desiredState);
             return this;
         }
 
-        public Builder setMaintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
+        public Builder maintenanceSchedules(List<GetDomainAutoTuneOptionMaintenanceSchedule> maintenanceSchedules) {
             this.maintenanceSchedules = Objects.requireNonNull(maintenanceSchedules);
             return this;
         }
 
-        public Builder setRollbackOnDisable(String rollbackOnDisable) {
+        public Builder rollbackOnDisable(String rollbackOnDisable) {
             this.rollbackOnDisable = Objects.requireNonNull(rollbackOnDisable);
             return this;
         }

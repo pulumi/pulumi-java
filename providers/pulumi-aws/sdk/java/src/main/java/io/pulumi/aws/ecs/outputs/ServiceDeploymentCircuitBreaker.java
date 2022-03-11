@@ -20,10 +20,10 @@ public final class ServiceDeploymentCircuitBreaker {
      */
     private final Boolean rollback;
 
-    @OutputCustomType.Constructor({"enable","rollback"})
+    @OutputCustomType.Constructor
     private ServiceDeploymentCircuitBreaker(
-        Boolean enable,
-        Boolean rollback) {
+        @OutputCustomType.Parameter("enable") Boolean enable,
+        @OutputCustomType.Parameter("rollback") Boolean rollback) {
         this.enable = enable;
         this.rollback = rollback;
     }
@@ -65,12 +65,12 @@ public final class ServiceDeploymentCircuitBreaker {
     	      this.rollback = defaults.rollback;
         }
 
-        public Builder setEnable(Boolean enable) {
+        public Builder enable(Boolean enable) {
             this.enable = Objects.requireNonNull(enable);
             return this;
         }
 
-        public Builder setRollback(Boolean rollback) {
+        public Builder rollback(Boolean rollback) {
             this.rollback = Objects.requireNonNull(rollback);
             return this;
         }

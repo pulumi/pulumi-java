@@ -89,32 +89,32 @@ public final class RuleGroupRuleActionBlockCustomResponseArgs extends io.pulumi.
     	      this.responseHeaders = defaults.responseHeaders;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable Input<String> customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable Input<String> customResponseBodyKey) {
             this.customResponseBodyKey = customResponseBodyKey;
             return this;
         }
 
-        public Builder setCustomResponseBodyKey(@Nullable String customResponseBodyKey) {
+        public Builder customResponseBodyKey(@Nullable String customResponseBodyKey) {
             this.customResponseBodyKey = Input.ofNullable(customResponseBodyKey);
             return this;
         }
 
-        public Builder setResponseCode(Input<Integer> responseCode) {
+        public Builder responseCode(Input<Integer> responseCode) {
             this.responseCode = Objects.requireNonNull(responseCode);
             return this;
         }
 
-        public Builder setResponseCode(Integer responseCode) {
+        public Builder responseCode(Integer responseCode) {
             this.responseCode = Input.of(Objects.requireNonNull(responseCode));
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
+        public Builder responseHeaders(@Nullable Input<List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs>> responseHeaders) {
             this.responseHeaders = responseHeaders;
             return this;
         }
 
-        public Builder setResponseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
+        public Builder responseHeaders(@Nullable List<RuleGroupRuleActionBlockCustomResponseResponseHeaderArgs> responseHeaders) {
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }

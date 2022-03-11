@@ -130,30 +130,30 @@ public final class GetStreamingEndpointResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accessControl","availabilitySetName","cdnEnabled","cdnProfile","cdnProvider","created","crossSiteAccessPolicies","customHostNames","description","freeTrialEndTime","hostName","id","lastModified","location","maxCacheAge","name","provisioningState","resourceState","scaleUnits","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetStreamingEndpointResult(
-        @Nullable StreamingEndpointAccessControlResponse accessControl,
-        @Nullable String availabilitySetName,
-        @Nullable Boolean cdnEnabled,
-        @Nullable String cdnProfile,
-        @Nullable String cdnProvider,
-        String created,
-        @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
-        @Nullable List<String> customHostNames,
-        @Nullable String description,
-        String freeTrialEndTime,
-        String hostName,
-        String id,
-        String lastModified,
-        String location,
-        @Nullable Double maxCacheAge,
-        String name,
-        String provisioningState,
-        String resourceState,
-        Integer scaleUnits,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("accessControl") @Nullable StreamingEndpointAccessControlResponse accessControl,
+        @OutputCustomType.Parameter("availabilitySetName") @Nullable String availabilitySetName,
+        @OutputCustomType.Parameter("cdnEnabled") @Nullable Boolean cdnEnabled,
+        @OutputCustomType.Parameter("cdnProfile") @Nullable String cdnProfile,
+        @OutputCustomType.Parameter("cdnProvider") @Nullable String cdnProvider,
+        @OutputCustomType.Parameter("created") String created,
+        @OutputCustomType.Parameter("crossSiteAccessPolicies") @Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies,
+        @OutputCustomType.Parameter("customHostNames") @Nullable List<String> customHostNames,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("freeTrialEndTime") String freeTrialEndTime,
+        @OutputCustomType.Parameter("hostName") String hostName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("maxCacheAge") @Nullable Double maxCacheAge,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("resourceState") String resourceState,
+        @OutputCustomType.Parameter("scaleUnits") Integer scaleUnits,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.accessControl = accessControl;
         this.availabilitySetName = availabilitySetName;
         this.cdnEnabled = cdnEnabled;
@@ -395,112 +395,112 @@ public final class GetStreamingEndpointResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccessControl(@Nullable StreamingEndpointAccessControlResponse accessControl) {
+        public Builder accessControl(@Nullable StreamingEndpointAccessControlResponse accessControl) {
             this.accessControl = accessControl;
             return this;
         }
 
-        public Builder setAvailabilitySetName(@Nullable String availabilitySetName) {
+        public Builder availabilitySetName(@Nullable String availabilitySetName) {
             this.availabilitySetName = availabilitySetName;
             return this;
         }
 
-        public Builder setCdnEnabled(@Nullable Boolean cdnEnabled) {
+        public Builder cdnEnabled(@Nullable Boolean cdnEnabled) {
             this.cdnEnabled = cdnEnabled;
             return this;
         }
 
-        public Builder setCdnProfile(@Nullable String cdnProfile) {
+        public Builder cdnProfile(@Nullable String cdnProfile) {
             this.cdnProfile = cdnProfile;
             return this;
         }
 
-        public Builder setCdnProvider(@Nullable String cdnProvider) {
+        public Builder cdnProvider(@Nullable String cdnProvider) {
             this.cdnProvider = cdnProvider;
             return this;
         }
 
-        public Builder setCreated(String created) {
+        public Builder created(String created) {
             this.created = Objects.requireNonNull(created);
             return this;
         }
 
-        public Builder setCrossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
+        public Builder crossSiteAccessPolicies(@Nullable CrossSiteAccessPoliciesResponse crossSiteAccessPolicies) {
             this.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
-        public Builder setCustomHostNames(@Nullable List<String> customHostNames) {
+        public Builder customHostNames(@Nullable List<String> customHostNames) {
             this.customHostNames = customHostNames;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setFreeTrialEndTime(String freeTrialEndTime) {
+        public Builder freeTrialEndTime(String freeTrialEndTime) {
             this.freeTrialEndTime = Objects.requireNonNull(freeTrialEndTime);
             return this;
         }
 
-        public Builder setHostName(String hostName) {
+        public Builder hostName(String hostName) {
             this.hostName = Objects.requireNonNull(hostName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setMaxCacheAge(@Nullable Double maxCacheAge) {
+        public Builder maxCacheAge(@Nullable Double maxCacheAge) {
             this.maxCacheAge = maxCacheAge;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setResourceState(String resourceState) {
+        public Builder resourceState(String resourceState) {
             this.resourceState = Objects.requireNonNull(resourceState);
             return this;
         }
 
-        public Builder setScaleUnits(Integer scaleUnits) {
+        public Builder scaleUnits(Integer scaleUnits) {
             this.scaleUnits = Objects.requireNonNull(scaleUnits);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

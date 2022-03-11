@@ -122,52 +122,52 @@ public final class ManagedPrefixListArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAddressFamily(Input<String> addressFamily) {
+        public Builder addressFamily(Input<String> addressFamily) {
             this.addressFamily = Objects.requireNonNull(addressFamily);
             return this;
         }
 
-        public Builder setAddressFamily(String addressFamily) {
+        public Builder addressFamily(String addressFamily) {
             this.addressFamily = Input.of(Objects.requireNonNull(addressFamily));
             return this;
         }
 
-        public Builder setEntries(@Nullable Input<List<ManagedPrefixListEntryArgs>> entries) {
+        public Builder entries(@Nullable Input<List<ManagedPrefixListEntryArgs>> entries) {
             this.entries = entries;
             return this;
         }
 
-        public Builder setEntries(@Nullable List<ManagedPrefixListEntryArgs> entries) {
+        public Builder entries(@Nullable List<ManagedPrefixListEntryArgs> entries) {
             this.entries = Input.ofNullable(entries);
             return this;
         }
 
-        public Builder setMaxEntries(Input<Integer> maxEntries) {
+        public Builder maxEntries(Input<Integer> maxEntries) {
             this.maxEntries = Objects.requireNonNull(maxEntries);
             return this;
         }
 
-        public Builder setMaxEntries(Integer maxEntries) {
+        public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = Input.of(Objects.requireNonNull(maxEntries));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

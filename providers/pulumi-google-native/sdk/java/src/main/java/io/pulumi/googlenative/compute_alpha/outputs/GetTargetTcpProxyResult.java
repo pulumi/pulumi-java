@@ -51,16 +51,16 @@ public final class GetTargetTcpProxyResult {
      */
     private final String service;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","kind","name","proxyBind","proxyHeader","selfLink","service"})
+    @OutputCustomType.Constructor
     private GetTargetTcpProxyResult(
-        String creationTimestamp,
-        String description,
-        String kind,
-        String name,
-        Boolean proxyBind,
-        String proxyHeader,
-        String selfLink,
-        String service) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("proxyBind") Boolean proxyBind,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("service") String service) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.kind = kind;
@@ -162,42 +162,42 @@ public final class GetTargetTcpProxyResult {
     	      this.service = defaults.service;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProxyBind(Boolean proxyBind) {
+        public Builder proxyBind(Boolean proxyBind) {
             this.proxyBind = Objects.requireNonNull(proxyBind);
             return this;
         }
 
-        public Builder setProxyHeader(String proxyHeader) {
+        public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setService(String service) {
+        public Builder service(String service) {
             this.service = Objects.requireNonNull(service);
             return this;
         }

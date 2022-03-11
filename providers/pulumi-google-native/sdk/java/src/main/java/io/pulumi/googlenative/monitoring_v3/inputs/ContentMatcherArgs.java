@@ -75,22 +75,22 @@ public final class ContentMatcherArgs extends io.pulumi.resources.ResourceArgs {
     	      this.matcher = defaults.matcher;
         }
 
-        public Builder setContent(@Nullable Input<String> content) {
+        public Builder content(@Nullable Input<String> content) {
             this.content = content;
             return this;
         }
 
-        public Builder setContent(@Nullable String content) {
+        public Builder content(@Nullable String content) {
             this.content = Input.ofNullable(content);
             return this;
         }
 
-        public Builder setMatcher(@Nullable Input<ContentMatcherMatcher> matcher) {
+        public Builder matcher(@Nullable Input<ContentMatcherMatcher> matcher) {
             this.matcher = matcher;
             return this;
         }
 
-        public Builder setMatcher(@Nullable ContentMatcherMatcher matcher) {
+        public Builder matcher(@Nullable ContentMatcherMatcher matcher) {
             this.matcher = Input.ofNullable(matcher);
             return this;
         }

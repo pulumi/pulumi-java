@@ -27,11 +27,11 @@ public final class ParameterGroupParameter {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"applyMethod","name","value"})
+    @OutputCustomType.Constructor
     private ParameterGroupParameter(
-        @Nullable String applyMethod,
-        String name,
-        String value) {
+        @OutputCustomType.Parameter("applyMethod") @Nullable String applyMethod,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.applyMethod = applyMethod;
         this.name = name;
         this.value = value;
@@ -83,17 +83,17 @@ public final class ParameterGroupParameter {
     	      this.value = defaults.value;
         }
 
-        public Builder setApplyMethod(@Nullable String applyMethod) {
+        public Builder applyMethod(@Nullable String applyMethod) {
             this.applyMethod = applyMethod;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

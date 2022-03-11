@@ -24,10 +24,10 @@ public final class AutoscaleRecurrenceResponse {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor({"schedule","timeZone"})
+    @OutputCustomType.Constructor
     private AutoscaleRecurrenceResponse(
-        @Nullable List<AutoscaleScheduleResponse> schedule,
-        @Nullable String timeZone) {
+        @OutputCustomType.Parameter("schedule") @Nullable List<AutoscaleScheduleResponse> schedule,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.schedule = schedule;
         this.timeZone = timeZone;
     }
@@ -69,12 +69,12 @@ public final class AutoscaleRecurrenceResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setSchedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
+        public Builder schedule(@Nullable List<AutoscaleScheduleResponse> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }

@@ -31,13 +31,13 @@ public final class GetProjectResult {
      */
     private final @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails;
 
-    @OutputCustomType.Constructor({"creationTime","projectArn","projectId","projectStatus","serviceCatalogProvisionedProductDetails"})
+    @OutputCustomType.Constructor
     private GetProjectResult(
-        @Nullable String creationTime,
-        @Nullable String projectArn,
-        @Nullable String projectId,
-        @Nullable ProjectStatus projectStatus,
-        @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("projectArn") @Nullable String projectArn,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("projectStatus") @Nullable ProjectStatus projectStatus,
+        @OutputCustomType.Parameter("serviceCatalogProvisionedProductDetails") @Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
         this.creationTime = creationTime;
         this.projectArn = projectArn;
         this.projectId = projectId;
@@ -101,27 +101,27 @@ public final class GetProjectResult {
     	      this.serviceCatalogProvisionedProductDetails = defaults.serviceCatalogProvisionedProductDetails;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setProjectArn(@Nullable String projectArn) {
+        public Builder projectArn(@Nullable String projectArn) {
             this.projectArn = projectArn;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setProjectStatus(@Nullable ProjectStatus projectStatus) {
+        public Builder projectStatus(@Nullable ProjectStatus projectStatus) {
             this.projectStatus = projectStatus;
             return this;
         }
 
-        public Builder setServiceCatalogProvisionedProductDetails(@Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
+        public Builder serviceCatalogProvisionedProductDetails(@Nullable ServiceCatalogProvisionedProductDetailsProperties serviceCatalogProvisionedProductDetails) {
             this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
             return this;
         }

@@ -17,8 +17,8 @@ public final class TriggerBuildAvailableSecrets {
      */
     private final List<TriggerBuildAvailableSecretsSecretManager> secretManagers;
 
-    @OutputCustomType.Constructor({"secretManagers"})
-    private TriggerBuildAvailableSecrets(List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
+    @OutputCustomType.Constructor
+    private TriggerBuildAvailableSecrets(@OutputCustomType.Parameter("secretManagers") List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
         this.secretManagers = secretManagers;
     }
 
@@ -51,7 +51,7 @@ public final class TriggerBuildAvailableSecrets {
     	      this.secretManagers = defaults.secretManagers;
         }
 
-        public Builder setSecretManagers(List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
+        public Builder secretManagers(List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
             this.secretManagers = Objects.requireNonNull(secretManagers);
             return this;
         }

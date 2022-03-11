@@ -17,11 +17,11 @@ public final class DefaultRolloutResponseProperties {
     private final @Nullable DefaultRolloutPropertiesResponseSpecification specification;
     private final @Nullable DefaultRolloutPropertiesResponseStatus status;
 
-    @OutputCustomType.Constructor({"provisioningState","specification","status"})
+    @OutputCustomType.Constructor
     private DefaultRolloutResponseProperties(
-        @Nullable String provisioningState,
-        @Nullable DefaultRolloutPropertiesResponseSpecification specification,
-        @Nullable DefaultRolloutPropertiesResponseStatus status) {
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("specification") @Nullable DefaultRolloutPropertiesResponseSpecification specification,
+        @OutputCustomType.Parameter("status") @Nullable DefaultRolloutPropertiesResponseStatus status) {
         this.provisioningState = provisioningState;
         this.specification = specification;
         this.status = status;
@@ -61,17 +61,17 @@ public final class DefaultRolloutResponseProperties {
     	      this.status = defaults.status;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setSpecification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
+        public Builder specification(@Nullable DefaultRolloutPropertiesResponseSpecification specification) {
             this.specification = specification;
             return this;
         }
 
-        public Builder setStatus(@Nullable DefaultRolloutPropertiesResponseStatus status) {
+        public Builder status(@Nullable DefaultRolloutPropertiesResponseStatus status) {
             this.status = status;
             return this;
         }

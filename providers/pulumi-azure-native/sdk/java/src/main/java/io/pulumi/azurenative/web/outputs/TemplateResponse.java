@@ -36,12 +36,12 @@ public final class TemplateResponse {
      */
     private final @Nullable ScaleResponse scale;
 
-    @OutputCustomType.Constructor({"containers","dapr","revisionSuffix","scale"})
+    @OutputCustomType.Constructor
     private TemplateResponse(
-        @Nullable List<ContainerResponse> containers,
-        @Nullable DaprResponse dapr,
-        @Nullable String revisionSuffix,
-        @Nullable ScaleResponse scale) {
+        @OutputCustomType.Parameter("containers") @Nullable List<ContainerResponse> containers,
+        @OutputCustomType.Parameter("dapr") @Nullable DaprResponse dapr,
+        @OutputCustomType.Parameter("revisionSuffix") @Nullable String revisionSuffix,
+        @OutputCustomType.Parameter("scale") @Nullable ScaleResponse scale) {
         this.containers = containers;
         this.dapr = dapr;
         this.revisionSuffix = revisionSuffix;
@@ -103,22 +103,22 @@ public final class TemplateResponse {
     	      this.scale = defaults.scale;
         }
 
-        public Builder setContainers(@Nullable List<ContainerResponse> containers) {
+        public Builder containers(@Nullable List<ContainerResponse> containers) {
             this.containers = containers;
             return this;
         }
 
-        public Builder setDapr(@Nullable DaprResponse dapr) {
+        public Builder dapr(@Nullable DaprResponse dapr) {
             this.dapr = dapr;
             return this;
         }
 
-        public Builder setRevisionSuffix(@Nullable String revisionSuffix) {
+        public Builder revisionSuffix(@Nullable String revisionSuffix) {
             this.revisionSuffix = revisionSuffix;
             return this;
         }
 
-        public Builder setScale(@Nullable ScaleResponse scale) {
+        public Builder scale(@Nullable ScaleResponse scale) {
             this.scale = scale;
             return this;
         }

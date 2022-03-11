@@ -22,10 +22,10 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
      */
     private final @Nullable String successTopic;
 
-    @OutputCustomType.Constructor({"errorTopic","successTopic"})
+    @OutputCustomType.Constructor
     private EndpointConfigurationAsyncInferenceConfigOutputConfigNotificationConfig(
-        @Nullable String errorTopic,
-        @Nullable String successTopic) {
+        @OutputCustomType.Parameter("errorTopic") @Nullable String errorTopic,
+        @OutputCustomType.Parameter("successTopic") @Nullable String successTopic) {
         this.errorTopic = errorTopic;
         this.successTopic = successTopic;
     }
@@ -67,12 +67,12 @@ public final class EndpointConfigurationAsyncInferenceConfigOutputConfigNotifica
     	      this.successTopic = defaults.successTopic;
         }
 
-        public Builder setErrorTopic(@Nullable String errorTopic) {
+        public Builder errorTopic(@Nullable String errorTopic) {
             this.errorTopic = errorTopic;
             return this;
         }
 
-        public Builder setSuccessTopic(@Nullable String successTopic) {
+        public Builder successTopic(@Nullable String successTopic) {
             this.successTopic = successTopic;
             return this;
         }

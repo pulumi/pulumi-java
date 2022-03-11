@@ -34,12 +34,12 @@ public final class GetSubnetGroupResult {
      */
     private final @Nullable List<SubnetGroupTag> tags;
 
-    @OutputCustomType.Constructor({"aRN","description","subnetIds","tags"})
+    @OutputCustomType.Constructor
     private GetSubnetGroupResult(
-        @Nullable String aRN,
-        @Nullable String description,
-        @Nullable List<String> subnetIds,
-        @Nullable List<SubnetGroupTag> tags) {
+        @OutputCustomType.Parameter("aRN") @Nullable String aRN,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("subnetIds") @Nullable List<String> subnetIds,
+        @OutputCustomType.Parameter("tags") @Nullable List<SubnetGroupTag> tags) {
         this.aRN = aRN;
         this.description = description;
         this.subnetIds = subnetIds;
@@ -101,22 +101,22 @@ public final class GetSubnetGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setARN(@Nullable String aRN) {
+        public Builder aRN(@Nullable String aRN) {
             this.aRN = aRN;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSubnetIds(@Nullable List<String> subnetIds) {
+        public Builder subnetIds(@Nullable List<String> subnetIds) {
             this.subnetIds = subnetIds;
             return this;
         }
 
-        public Builder setTags(@Nullable List<SubnetGroupTag> tags) {
+        public Builder tags(@Nullable List<SubnetGroupTag> tags) {
             this.tags = tags;
             return this;
         }

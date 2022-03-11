@@ -24,10 +24,10 @@ public final class ListMonitoredResourceResult {
      */
     private final @Nullable List<MonitoredResourceResponse> value;
 
-    @OutputCustomType.Constructor({"nextLink","value"})
+    @OutputCustomType.Constructor
     private ListMonitoredResourceResult(
-        @Nullable String nextLink,
-        @Nullable List<MonitoredResourceResponse> value) {
+        @OutputCustomType.Parameter("nextLink") @Nullable String nextLink,
+        @OutputCustomType.Parameter("value") @Nullable List<MonitoredResourceResponse> value) {
         this.nextLink = nextLink;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ListMonitoredResourceResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setNextLink(@Nullable String nextLink) {
+        public Builder nextLink(@Nullable String nextLink) {
             this.nextLink = nextLink;
             return this;
         }
 
-        public Builder setValue(@Nullable List<MonitoredResourceResponse> value) {
+        public Builder value(@Nullable List<MonitoredResourceResponse> value) {
             this.value = value;
             return this;
         }

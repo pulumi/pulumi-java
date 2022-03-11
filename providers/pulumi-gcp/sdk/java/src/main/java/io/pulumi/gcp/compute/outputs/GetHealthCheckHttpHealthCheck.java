@@ -18,15 +18,15 @@ public final class GetHealthCheckHttpHealthCheck {
     private final String requestPath;
     private final String response;
 
-    @OutputCustomType.Constructor({"host","port","portName","portSpecification","proxyHeader","requestPath","response"})
+    @OutputCustomType.Constructor
     private GetHealthCheckHttpHealthCheck(
-        String host,
-        Integer port,
-        String portName,
-        String portSpecification,
-        String proxyHeader,
-        String requestPath,
-        String response) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("portName") String portName,
+        @OutputCustomType.Parameter("portSpecification") String portSpecification,
+        @OutputCustomType.Parameter("proxyHeader") String proxyHeader,
+        @OutputCustomType.Parameter("requestPath") String requestPath,
+        @OutputCustomType.Parameter("response") String response) {
         this.host = host;
         this.port = port;
         this.portName = portName;
@@ -90,37 +90,37 @@ public final class GetHealthCheckHttpHealthCheck {
     	      this.response = defaults.response;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPortName(String portName) {
+        public Builder portName(String portName) {
             this.portName = Objects.requireNonNull(portName);
             return this;
         }
 
-        public Builder setPortSpecification(String portSpecification) {
+        public Builder portSpecification(String portSpecification) {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
 
-        public Builder setProxyHeader(String proxyHeader) {
+        public Builder proxyHeader(String proxyHeader) {
             this.proxyHeader = Objects.requireNonNull(proxyHeader);
             return this;
         }
 
-        public Builder setRequestPath(String requestPath) {
+        public Builder requestPath(String requestPath) {
             this.requestPath = Objects.requireNonNull(requestPath);
             return this;
         }
 
-        public Builder setResponse(String response) {
+        public Builder response(String response) {
             this.response = Objects.requireNonNull(response);
             return this;
         }

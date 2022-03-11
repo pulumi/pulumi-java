@@ -32,12 +32,12 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"description","image","info","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemResponse(
-        String description,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info,
-        String title) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("info") GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info,
+        @OutputCustomType.Parameter("title") String title) {
         this.description = description;
         this.image = image;
         this.info = info;
@@ -99,22 +99,22 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectItemRe
     	      this.title = defaults.title;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setInfo(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info) {
+        public Builder info(GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfoResponse info) {
             this.info = Objects.requireNonNull(info);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

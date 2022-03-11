@@ -36,12 +36,12 @@ public final class PreferencesResponse {
      */
     private final @Nullable TransportPreferencesResponse transportPreferences;
 
-    @OutputCustomType.Constructor({"encryptionPreferences","managementResourcePreferences","notificationPreferences","transportPreferences"})
+    @OutputCustomType.Constructor
     private PreferencesResponse(
-        @Nullable EncryptionPreferencesResponse encryptionPreferences,
-        @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
-        @Nullable List<NotificationPreferenceResponse> notificationPreferences,
-        @Nullable TransportPreferencesResponse transportPreferences) {
+        @OutputCustomType.Parameter("encryptionPreferences") @Nullable EncryptionPreferencesResponse encryptionPreferences,
+        @OutputCustomType.Parameter("managementResourcePreferences") @Nullable ManagementResourcePreferencesResponse managementResourcePreferences,
+        @OutputCustomType.Parameter("notificationPreferences") @Nullable List<NotificationPreferenceResponse> notificationPreferences,
+        @OutputCustomType.Parameter("transportPreferences") @Nullable TransportPreferencesResponse transportPreferences) {
         this.encryptionPreferences = encryptionPreferences;
         this.managementResourcePreferences = managementResourcePreferences;
         this.notificationPreferences = notificationPreferences;
@@ -103,22 +103,22 @@ public final class PreferencesResponse {
     	      this.transportPreferences = defaults.transportPreferences;
         }
 
-        public Builder setEncryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
+        public Builder encryptionPreferences(@Nullable EncryptionPreferencesResponse encryptionPreferences) {
             this.encryptionPreferences = encryptionPreferences;
             return this;
         }
 
-        public Builder setManagementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
+        public Builder managementResourcePreferences(@Nullable ManagementResourcePreferencesResponse managementResourcePreferences) {
             this.managementResourcePreferences = managementResourcePreferences;
             return this;
         }
 
-        public Builder setNotificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
+        public Builder notificationPreferences(@Nullable List<NotificationPreferenceResponse> notificationPreferences) {
             this.notificationPreferences = notificationPreferences;
             return this;
         }
 
-        public Builder setTransportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
+        public Builder transportPreferences(@Nullable TransportPreferencesResponse transportPreferences) {
             this.transportPreferences = transportPreferences;
             return this;
         }

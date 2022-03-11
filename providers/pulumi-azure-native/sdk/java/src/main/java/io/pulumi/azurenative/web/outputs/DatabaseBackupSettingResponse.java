@@ -29,12 +29,12 @@ public final class DatabaseBackupSettingResponse {
     private final String databaseType;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"connectionString","connectionStringName","databaseType","name"})
+    @OutputCustomType.Constructor
     private DatabaseBackupSettingResponse(
-        @Nullable String connectionString,
-        @Nullable String connectionStringName,
-        String databaseType,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("connectionString") @Nullable String connectionString,
+        @OutputCustomType.Parameter("connectionStringName") @Nullable String connectionStringName,
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.connectionString = connectionString;
         this.connectionStringName = connectionStringName;
         this.databaseType = databaseType;
@@ -93,22 +93,22 @@ public final class DatabaseBackupSettingResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setConnectionString(@Nullable String connectionString) {
+        public Builder connectionString(@Nullable String connectionString) {
             this.connectionString = connectionString;
             return this;
         }
 
-        public Builder setConnectionStringName(@Nullable String connectionStringName) {
+        public Builder connectionStringName(@Nullable String connectionStringName) {
             this.connectionStringName = connectionStringName;
             return this;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

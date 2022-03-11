@@ -16,8 +16,8 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse {
      */
     private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
-    @OutputCustomType.Constructor({"infoTypes"})
-    private GooglePrivacyDlpV2ExcludeInfoTypesResponse(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+    @OutputCustomType.Constructor
+    private GooglePrivacyDlpV2ExcludeInfoTypesResponse(@OutputCustomType.Parameter("infoTypes") List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
         this.infoTypes = infoTypes;
     }
 
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse {
     	      this.infoTypes = defaults.infoTypes;
         }
 
-        public Builder setInfoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
+        public Builder infoTypes(List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes) {
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }

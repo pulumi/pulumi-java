@@ -68,18 +68,18 @@ public final class GetMethodResult {
      */
     private final @Nullable String requestValidatorId;
 
-    @OutputCustomType.Constructor({"apiKeyRequired","authorizationScopes","authorizationType","authorizerId","integration","methodResponses","operationName","requestModels","requestParameters","requestValidatorId"})
+    @OutputCustomType.Constructor
     private GetMethodResult(
-        @Nullable Boolean apiKeyRequired,
-        @Nullable List<String> authorizationScopes,
-        @Nullable MethodAuthorizationType authorizationType,
-        @Nullable String authorizerId,
-        @Nullable MethodIntegration integration,
-        @Nullable List<MethodResponse> methodResponses,
-        @Nullable String operationName,
-        @Nullable Object requestModels,
-        @Nullable Object requestParameters,
-        @Nullable String requestValidatorId) {
+        @OutputCustomType.Parameter("apiKeyRequired") @Nullable Boolean apiKeyRequired,
+        @OutputCustomType.Parameter("authorizationScopes") @Nullable List<String> authorizationScopes,
+        @OutputCustomType.Parameter("authorizationType") @Nullable MethodAuthorizationType authorizationType,
+        @OutputCustomType.Parameter("authorizerId") @Nullable String authorizerId,
+        @OutputCustomType.Parameter("integration") @Nullable MethodIntegration integration,
+        @OutputCustomType.Parameter("methodResponses") @Nullable List<MethodResponse> methodResponses,
+        @OutputCustomType.Parameter("operationName") @Nullable String operationName,
+        @OutputCustomType.Parameter("requestModels") @Nullable Object requestModels,
+        @OutputCustomType.Parameter("requestParameters") @Nullable Object requestParameters,
+        @OutputCustomType.Parameter("requestValidatorId") @Nullable String requestValidatorId) {
         this.apiKeyRequired = apiKeyRequired;
         this.authorizationScopes = authorizationScopes;
         this.authorizationType = authorizationType;
@@ -201,52 +201,52 @@ public final class GetMethodResult {
     	      this.requestValidatorId = defaults.requestValidatorId;
         }
 
-        public Builder setApiKeyRequired(@Nullable Boolean apiKeyRequired) {
+        public Builder apiKeyRequired(@Nullable Boolean apiKeyRequired) {
             this.apiKeyRequired = apiKeyRequired;
             return this;
         }
 
-        public Builder setAuthorizationScopes(@Nullable List<String> authorizationScopes) {
+        public Builder authorizationScopes(@Nullable List<String> authorizationScopes) {
             this.authorizationScopes = authorizationScopes;
             return this;
         }
 
-        public Builder setAuthorizationType(@Nullable MethodAuthorizationType authorizationType) {
+        public Builder authorizationType(@Nullable MethodAuthorizationType authorizationType) {
             this.authorizationType = authorizationType;
             return this;
         }
 
-        public Builder setAuthorizerId(@Nullable String authorizerId) {
+        public Builder authorizerId(@Nullable String authorizerId) {
             this.authorizerId = authorizerId;
             return this;
         }
 
-        public Builder setIntegration(@Nullable MethodIntegration integration) {
+        public Builder integration(@Nullable MethodIntegration integration) {
             this.integration = integration;
             return this;
         }
 
-        public Builder setMethodResponses(@Nullable List<MethodResponse> methodResponses) {
+        public Builder methodResponses(@Nullable List<MethodResponse> methodResponses) {
             this.methodResponses = methodResponses;
             return this;
         }
 
-        public Builder setOperationName(@Nullable String operationName) {
+        public Builder operationName(@Nullable String operationName) {
             this.operationName = operationName;
             return this;
         }
 
-        public Builder setRequestModels(@Nullable Object requestModels) {
+        public Builder requestModels(@Nullable Object requestModels) {
             this.requestModels = requestModels;
             return this;
         }
 
-        public Builder setRequestParameters(@Nullable Object requestParameters) {
+        public Builder requestParameters(@Nullable Object requestParameters) {
             this.requestParameters = requestParameters;
             return this;
         }
 
-        public Builder setRequestValidatorId(@Nullable String requestValidatorId) {
+        public Builder requestValidatorId(@Nullable String requestValidatorId) {
             this.requestValidatorId = requestValidatorId;
             return this;
         }

@@ -15,8 +15,8 @@ public final class ShareInfoElementResponse {
      */
     private final String vmUri;
 
-    @OutputCustomType.Constructor({"vmUri"})
-    private ShareInfoElementResponse(String vmUri) {
+    @OutputCustomType.Constructor
+    private ShareInfoElementResponse(@OutputCustomType.Parameter("vmUri") String vmUri) {
         this.vmUri = vmUri;
     }
 
@@ -48,7 +48,7 @@ public final class ShareInfoElementResponse {
     	      this.vmUri = defaults.vmUri;
         }
 
-        public Builder setVmUri(String vmUri) {
+        public Builder vmUri(String vmUri) {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
         }

@@ -19,10 +19,10 @@ public final class DetectorModelIotEvents {
     private final String inputName;
     private final @Nullable DetectorModelPayload payload;
 
-    @OutputCustomType.Constructor({"inputName","payload"})
+    @OutputCustomType.Constructor
     private DetectorModelIotEvents(
-        String inputName,
-        @Nullable DetectorModelPayload payload) {
+        @OutputCustomType.Parameter("inputName") String inputName,
+        @OutputCustomType.Parameter("payload") @Nullable DetectorModelPayload payload) {
         this.inputName = inputName;
         this.payload = payload;
     }
@@ -60,12 +60,12 @@ public final class DetectorModelIotEvents {
     	      this.payload = defaults.payload;
         }
 
-        public Builder setInputName(String inputName) {
+        public Builder inputName(String inputName) {
             this.inputName = Objects.requireNonNull(inputName);
             return this;
         }
 
-        public Builder setPayload(@Nullable DetectorModelPayload payload) {
+        public Builder payload(@Nullable DetectorModelPayload payload) {
             this.payload = payload;
             return this;
         }

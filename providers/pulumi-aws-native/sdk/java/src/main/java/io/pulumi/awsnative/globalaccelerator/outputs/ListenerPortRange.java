@@ -12,10 +12,10 @@ public final class ListenerPortRange {
     private final Integer fromPort;
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"fromPort","toPort"})
+    @OutputCustomType.Constructor
     private ListenerPortRange(
-        Integer fromPort,
-        Integer toPort) {
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.fromPort = fromPort;
         this.toPort = toPort;
     }
@@ -49,12 +49,12 @@ public final class ListenerPortRange {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

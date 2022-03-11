@@ -44,14 +44,14 @@ public final class ServersSolutionSummaryResponse {
      */
     private final @Nullable Integer testMigratedCount;
 
-    @OutputCustomType.Constructor({"assessedCount","discoveredCount","instanceType","migratedCount","replicatingCount","testMigratedCount"})
+    @OutputCustomType.Constructor
     private ServersSolutionSummaryResponse(
-        @Nullable Integer assessedCount,
-        @Nullable Integer discoveredCount,
-        String instanceType,
-        @Nullable Integer migratedCount,
-        @Nullable Integer replicatingCount,
-        @Nullable Integer testMigratedCount) {
+        @OutputCustomType.Parameter("assessedCount") @Nullable Integer assessedCount,
+        @OutputCustomType.Parameter("discoveredCount") @Nullable Integer discoveredCount,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("migratedCount") @Nullable Integer migratedCount,
+        @OutputCustomType.Parameter("replicatingCount") @Nullable Integer replicatingCount,
+        @OutputCustomType.Parameter("testMigratedCount") @Nullable Integer testMigratedCount) {
         this.assessedCount = assessedCount;
         this.discoveredCount = discoveredCount;
         this.instanceType = instanceType;
@@ -134,32 +134,32 @@ public final class ServersSolutionSummaryResponse {
     	      this.testMigratedCount = defaults.testMigratedCount;
         }
 
-        public Builder setAssessedCount(@Nullable Integer assessedCount) {
+        public Builder assessedCount(@Nullable Integer assessedCount) {
             this.assessedCount = assessedCount;
             return this;
         }
 
-        public Builder setDiscoveredCount(@Nullable Integer discoveredCount) {
+        public Builder discoveredCount(@Nullable Integer discoveredCount) {
             this.discoveredCount = discoveredCount;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setMigratedCount(@Nullable Integer migratedCount) {
+        public Builder migratedCount(@Nullable Integer migratedCount) {
             this.migratedCount = migratedCount;
             return this;
         }
 
-        public Builder setReplicatingCount(@Nullable Integer replicatingCount) {
+        public Builder replicatingCount(@Nullable Integer replicatingCount) {
             this.replicatingCount = replicatingCount;
             return this;
         }
 
-        public Builder setTestMigratedCount(@Nullable Integer testMigratedCount) {
+        public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
             this.testMigratedCount = testMigratedCount;
             return this;
         }

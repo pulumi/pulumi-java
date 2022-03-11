@@ -16,12 +16,12 @@ public final class AppPhysicalResourceId {
     private final String identifier;
     private final String type;
 
-    @OutputCustomType.Constructor({"awsAccountId","awsRegion","identifier","type"})
+    @OutputCustomType.Constructor
     private AppPhysicalResourceId(
-        @Nullable String awsAccountId,
-        @Nullable String awsRegion,
-        String identifier,
-        String type) {
+        @OutputCustomType.Parameter("awsAccountId") @Nullable String awsAccountId,
+        @OutputCustomType.Parameter("awsRegion") @Nullable String awsRegion,
+        @OutputCustomType.Parameter("identifier") String identifier,
+        @OutputCustomType.Parameter("type") String type) {
         this.awsAccountId = awsAccountId;
         this.awsRegion = awsRegion;
         this.identifier = identifier;
@@ -67,22 +67,22 @@ public final class AppPhysicalResourceId {
     	      this.type = defaults.type;
         }
 
-        public Builder setAwsAccountId(@Nullable String awsAccountId) {
+        public Builder awsAccountId(@Nullable String awsAccountId) {
             this.awsAccountId = awsAccountId;
             return this;
         }
 
-        public Builder setAwsRegion(@Nullable String awsRegion) {
+        public Builder awsRegion(@Nullable String awsRegion) {
             this.awsRegion = awsRegion;
             return this;
         }
 
-        public Builder setIdentifier(String identifier) {
+        public Builder identifier(String identifier) {
             this.identifier = Objects.requireNonNull(identifier);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

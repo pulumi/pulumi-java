@@ -15,10 +15,10 @@ public final class GetSpotFleetResult {
     private final @Nullable String id;
     private final @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData;
 
-    @OutputCustomType.Constructor({"id","spotFleetRequestConfigData"})
+    @OutputCustomType.Constructor
     private GetSpotFleetResult(
-        @Nullable String id,
-        @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("spotFleetRequestConfigData") @Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
         this.id = id;
         this.spotFleetRequestConfigData = spotFleetRequestConfigData;
     }
@@ -52,12 +52,12 @@ public final class GetSpotFleetResult {
     	      this.spotFleetRequestConfigData = defaults.spotFleetRequestConfigData;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setSpotFleetRequestConfigData(@Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
+        public Builder spotFleetRequestConfigData(@Nullable SpotFleetRequestConfigData spotFleetRequestConfigData) {
             this.spotFleetRequestConfigData = spotFleetRequestConfigData;
             return this;
         }

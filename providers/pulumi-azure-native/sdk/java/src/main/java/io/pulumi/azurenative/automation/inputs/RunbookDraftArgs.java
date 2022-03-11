@@ -139,62 +139,62 @@ public final class RunbookDraftArgs extends io.pulumi.resources.ResourceArgs {
     	      this.parameters = defaults.parameters;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDraftContentLink(@Nullable Input<ContentLinkArgs> draftContentLink) {
+        public Builder draftContentLink(@Nullable Input<ContentLinkArgs> draftContentLink) {
             this.draftContentLink = draftContentLink;
             return this;
         }
 
-        public Builder setDraftContentLink(@Nullable ContentLinkArgs draftContentLink) {
+        public Builder draftContentLink(@Nullable ContentLinkArgs draftContentLink) {
             this.draftContentLink = Input.ofNullable(draftContentLink);
             return this;
         }
 
-        public Builder setInEdit(@Nullable Input<Boolean> inEdit) {
+        public Builder inEdit(@Nullable Input<Boolean> inEdit) {
             this.inEdit = inEdit;
             return this;
         }
 
-        public Builder setInEdit(@Nullable Boolean inEdit) {
+        public Builder inEdit(@Nullable Boolean inEdit) {
             this.inEdit = Input.ofNullable(inEdit);
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable Input<String> lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable Input<String> lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = Input.ofNullable(lastModifiedTime);
             return this;
         }
 
-        public Builder setOutputTypes(@Nullable Input<List<String>> outputTypes) {
+        public Builder outputTypes(@Nullable Input<List<String>> outputTypes) {
             this.outputTypes = outputTypes;
             return this;
         }
 
-        public Builder setOutputTypes(@Nullable List<String> outputTypes) {
+        public Builder outputTypes(@Nullable List<String> outputTypes) {
             this.outputTypes = Input.ofNullable(outputTypes);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,RunbookParameterArgs>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,RunbookParameterArgs>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,RunbookParameterArgs> parameters) {
+        public Builder parameters(@Nullable Map<String,RunbookParameterArgs> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }

@@ -75,22 +75,22 @@ public final class GoogleCloudRetailV2ColorInfoArgs extends io.pulumi.resources.
     	      this.colors = defaults.colors;
         }
 
-        public Builder setColorFamilies(@Nullable Input<List<String>> colorFamilies) {
+        public Builder colorFamilies(@Nullable Input<List<String>> colorFamilies) {
             this.colorFamilies = colorFamilies;
             return this;
         }
 
-        public Builder setColorFamilies(@Nullable List<String> colorFamilies) {
+        public Builder colorFamilies(@Nullable List<String> colorFamilies) {
             this.colorFamilies = Input.ofNullable(colorFamilies);
             return this;
         }
 
-        public Builder setColors(@Nullable Input<List<String>> colors) {
+        public Builder colors(@Nullable Input<List<String>> colors) {
             this.colors = colors;
             return this;
         }
 
-        public Builder setColors(@Nullable List<String> colors) {
+        public Builder colors(@Nullable List<String> colors) {
             this.colors = Input.ofNullable(colors);
             return this;
         }

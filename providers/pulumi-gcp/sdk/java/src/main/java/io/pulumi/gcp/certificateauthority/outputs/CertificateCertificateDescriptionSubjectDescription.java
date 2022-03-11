@@ -37,14 +37,14 @@ public final class CertificateCertificateDescriptionSubjectDescription {
      */
     private final @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects;
 
-    @OutputCustomType.Constructor({"hexSerialNumber","lifetime","notAfterTime","notBeforeTime","subjectAltNames","subjects"})
+    @OutputCustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescription(
-        @Nullable String hexSerialNumber,
-        @Nullable String lifetime,
-        @Nullable String notAfterTime,
-        @Nullable String notBeforeTime,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
-        @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
+        @OutputCustomType.Parameter("hexSerialNumber") @Nullable String hexSerialNumber,
+        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
+        @OutputCustomType.Parameter("notAfterTime") @Nullable String notAfterTime,
+        @OutputCustomType.Parameter("notBeforeTime") @Nullable String notBeforeTime,
+        @OutputCustomType.Parameter("subjectAltNames") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames,
+        @OutputCustomType.Parameter("subjects") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
         this.hexSerialNumber = hexSerialNumber;
         this.lifetime = lifetime;
         this.notAfterTime = notAfterTime;
@@ -118,32 +118,32 @@ public final class CertificateCertificateDescriptionSubjectDescription {
     	      this.subjects = defaults.subjects;
         }
 
-        public Builder setHexSerialNumber(@Nullable String hexSerialNumber) {
+        public Builder hexSerialNumber(@Nullable String hexSerialNumber) {
             this.hexSerialNumber = hexSerialNumber;
             return this;
         }
 
-        public Builder setLifetime(@Nullable String lifetime) {
+        public Builder lifetime(@Nullable String lifetime) {
             this.lifetime = lifetime;
             return this;
         }
 
-        public Builder setNotAfterTime(@Nullable String notAfterTime) {
+        public Builder notAfterTime(@Nullable String notAfterTime) {
             this.notAfterTime = notAfterTime;
             return this;
         }
 
-        public Builder setNotBeforeTime(@Nullable String notBeforeTime) {
+        public Builder notBeforeTime(@Nullable String notBeforeTime) {
             this.notBeforeTime = notBeforeTime;
             return this;
         }
 
-        public Builder setSubjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames) {
+        public Builder subjectAltNames(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltName> subjectAltNames) {
             this.subjectAltNames = subjectAltNames;
             return this;
         }
 
-        public Builder setSubjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
+        public Builder subjects(@Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubject> subjects) {
             this.subjects = subjects;
             return this;
         }

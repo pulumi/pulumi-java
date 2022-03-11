@@ -25,10 +25,10 @@ public final class HorizontalPodAutoscalerBehavior {
      */
     private final @Nullable HPAScalingRules scaleUp;
 
-    @OutputCustomType.Constructor({"scaleDown","scaleUp"})
+    @OutputCustomType.Constructor
     private HorizontalPodAutoscalerBehavior(
-        @Nullable HPAScalingRules scaleDown,
-        @Nullable HPAScalingRules scaleUp) {
+        @OutputCustomType.Parameter("scaleDown") @Nullable HPAScalingRules scaleDown,
+        @OutputCustomType.Parameter("scaleUp") @Nullable HPAScalingRules scaleUp) {
         this.scaleDown = scaleDown;
         this.scaleUp = scaleUp;
     }
@@ -73,12 +73,12 @@ public final class HorizontalPodAutoscalerBehavior {
     	      this.scaleUp = defaults.scaleUp;
         }
 
-        public Builder setScaleDown(@Nullable HPAScalingRules scaleDown) {
+        public Builder scaleDown(@Nullable HPAScalingRules scaleDown) {
             this.scaleDown = scaleDown;
             return this;
         }
 
-        public Builder setScaleUp(@Nullable HPAScalingRules scaleUp) {
+        public Builder scaleUp(@Nullable HPAScalingRules scaleUp) {
             this.scaleUp = scaleUp;
             return this;
         }

@@ -23,16 +23,16 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
     private final @Nullable List<String> schemaOwners;
     private final @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos;
 
-    @OutputCustomType.Constructor({"incidentContactEmail","incidentRoutingService","incidentRoutingTeam","manifestOwners","resourceAccessPolicy","resourceAccessRoles","schemaOwners","serviceTreeInfos"})
+    @OutputCustomType.Constructor
     private ResourceProviderManifestPropertiesResponseManagement(
-        @Nullable String incidentContactEmail,
-        @Nullable String incidentRoutingService,
-        @Nullable String incidentRoutingTeam,
-        @Nullable List<String> manifestOwners,
-        @Nullable String resourceAccessPolicy,
-        @Nullable List<Object> resourceAccessRoles,
-        @Nullable List<String> schemaOwners,
-        @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
+        @OutputCustomType.Parameter("incidentContactEmail") @Nullable String incidentContactEmail,
+        @OutputCustomType.Parameter("incidentRoutingService") @Nullable String incidentRoutingService,
+        @OutputCustomType.Parameter("incidentRoutingTeam") @Nullable String incidentRoutingTeam,
+        @OutputCustomType.Parameter("manifestOwners") @Nullable List<String> manifestOwners,
+        @OutputCustomType.Parameter("resourceAccessPolicy") @Nullable String resourceAccessPolicy,
+        @OutputCustomType.Parameter("resourceAccessRoles") @Nullable List<Object> resourceAccessRoles,
+        @OutputCustomType.Parameter("schemaOwners") @Nullable List<String> schemaOwners,
+        @OutputCustomType.Parameter("serviceTreeInfos") @Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
         this.incidentContactEmail = incidentContactEmail;
         this.incidentRoutingService = incidentRoutingService;
         this.incidentRoutingTeam = incidentRoutingTeam;
@@ -102,42 +102,42 @@ public final class ResourceProviderManifestPropertiesResponseManagement {
     	      this.serviceTreeInfos = defaults.serviceTreeInfos;
         }
 
-        public Builder setIncidentContactEmail(@Nullable String incidentContactEmail) {
+        public Builder incidentContactEmail(@Nullable String incidentContactEmail) {
             this.incidentContactEmail = incidentContactEmail;
             return this;
         }
 
-        public Builder setIncidentRoutingService(@Nullable String incidentRoutingService) {
+        public Builder incidentRoutingService(@Nullable String incidentRoutingService) {
             this.incidentRoutingService = incidentRoutingService;
             return this;
         }
 
-        public Builder setIncidentRoutingTeam(@Nullable String incidentRoutingTeam) {
+        public Builder incidentRoutingTeam(@Nullable String incidentRoutingTeam) {
             this.incidentRoutingTeam = incidentRoutingTeam;
             return this;
         }
 
-        public Builder setManifestOwners(@Nullable List<String> manifestOwners) {
+        public Builder manifestOwners(@Nullable List<String> manifestOwners) {
             this.manifestOwners = manifestOwners;
             return this;
         }
 
-        public Builder setResourceAccessPolicy(@Nullable String resourceAccessPolicy) {
+        public Builder resourceAccessPolicy(@Nullable String resourceAccessPolicy) {
             this.resourceAccessPolicy = resourceAccessPolicy;
             return this;
         }
 
-        public Builder setResourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
+        public Builder resourceAccessRoles(@Nullable List<Object> resourceAccessRoles) {
             this.resourceAccessRoles = resourceAccessRoles;
             return this;
         }
 
-        public Builder setSchemaOwners(@Nullable List<String> schemaOwners) {
+        public Builder schemaOwners(@Nullable List<String> schemaOwners) {
             this.schemaOwners = schemaOwners;
             return this;
         }
 
-        public Builder setServiceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
+        public Builder serviceTreeInfos(@Nullable List<ServiceTreeInfoResponse> serviceTreeInfos) {
             this.serviceTreeInfos = serviceTreeInfos;
             return this;
         }

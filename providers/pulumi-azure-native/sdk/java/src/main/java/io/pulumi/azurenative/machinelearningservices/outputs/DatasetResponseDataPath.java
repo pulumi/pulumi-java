@@ -62,17 +62,17 @@ public final class DatasetResponseDataPath {
      */
     private final @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
-    @OutputCustomType.Constructor({"additionalProperties","azureFilePath","datastoreName","httpUrl","partitionFormat","partitionFormatIgnoreError","paths","relativePath","sqlDataPath"})
+    @OutputCustomType.Constructor
     private DatasetResponseDataPath(
-        @Nullable Map<String,Object> additionalProperties,
-        String azureFilePath,
-        String datastoreName,
-        String httpUrl,
-        String partitionFormat,
-        Boolean partitionFormatIgnoreError,
-        List<String> paths,
-        String relativePath,
-        @Nullable DatasetResponseSqlDataPath sqlDataPath) {
+        @OutputCustomType.Parameter("additionalProperties") @Nullable Map<String,Object> additionalProperties,
+        @OutputCustomType.Parameter("azureFilePath") String azureFilePath,
+        @OutputCustomType.Parameter("datastoreName") String datastoreName,
+        @OutputCustomType.Parameter("httpUrl") String httpUrl,
+        @OutputCustomType.Parameter("partitionFormat") String partitionFormat,
+        @OutputCustomType.Parameter("partitionFormatIgnoreError") Boolean partitionFormatIgnoreError,
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("relativePath") String relativePath,
+        @OutputCustomType.Parameter("sqlDataPath") @Nullable DatasetResponseSqlDataPath sqlDataPath) {
         this.additionalProperties = additionalProperties;
         this.azureFilePath = azureFilePath;
         this.datastoreName = datastoreName;
@@ -184,47 +184,47 @@ public final class DatasetResponseDataPath {
     	      this.sqlDataPath = defaults.sqlDataPath;
         }
 
-        public Builder setAdditionalProperties(@Nullable Map<String,Object> additionalProperties) {
+        public Builder additionalProperties(@Nullable Map<String,Object> additionalProperties) {
             this.additionalProperties = additionalProperties;
             return this;
         }
 
-        public Builder setAzureFilePath(String azureFilePath) {
+        public Builder azureFilePath(String azureFilePath) {
             this.azureFilePath = Objects.requireNonNull(azureFilePath);
             return this;
         }
 
-        public Builder setDatastoreName(String datastoreName) {
+        public Builder datastoreName(String datastoreName) {
             this.datastoreName = Objects.requireNonNull(datastoreName);
             return this;
         }
 
-        public Builder setHttpUrl(String httpUrl) {
+        public Builder httpUrl(String httpUrl) {
             this.httpUrl = Objects.requireNonNull(httpUrl);
             return this;
         }
 
-        public Builder setPartitionFormat(String partitionFormat) {
+        public Builder partitionFormat(String partitionFormat) {
             this.partitionFormat = Objects.requireNonNull(partitionFormat);
             return this;
         }
 
-        public Builder setPartitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
+        public Builder partitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
             this.partitionFormatIgnoreError = Objects.requireNonNull(partitionFormatIgnoreError);
             return this;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setRelativePath(String relativePath) {
+        public Builder relativePath(String relativePath) {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
 
-        public Builder setSqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
+        public Builder sqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
             this.sqlDataPath = sqlDataPath;
             return this;
         }

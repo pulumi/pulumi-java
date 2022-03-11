@@ -21,10 +21,10 @@ public final class GetRulesPackagesResult {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"arns","id"})
+    @OutputCustomType.Constructor
     private GetRulesPackagesResult(
-        List<String> arns,
-        String id) {
+        @OutputCustomType.Parameter("arns") List<String> arns,
+        @OutputCustomType.Parameter("id") String id) {
         this.arns = arns;
         this.id = id;
     }
@@ -66,12 +66,12 @@ public final class GetRulesPackagesResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setArns(List<String> arns) {
+        public Builder arns(List<String> arns) {
             this.arns = Objects.requireNonNull(arns);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

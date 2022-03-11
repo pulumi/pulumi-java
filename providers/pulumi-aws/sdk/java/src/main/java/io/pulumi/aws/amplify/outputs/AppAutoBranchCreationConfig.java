@@ -64,18 +64,18 @@ public final class AppAutoBranchCreationConfig {
      */
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"basicAuthCredentials","buildSpec","enableAutoBuild","enableBasicAuth","enablePerformanceMode","enablePullRequestPreview","environmentVariables","framework","pullRequestEnvironmentName","stage"})
+    @OutputCustomType.Constructor
     private AppAutoBranchCreationConfig(
-        @Nullable String basicAuthCredentials,
-        @Nullable String buildSpec,
-        @Nullable Boolean enableAutoBuild,
-        @Nullable Boolean enableBasicAuth,
-        @Nullable Boolean enablePerformanceMode,
-        @Nullable Boolean enablePullRequestPreview,
-        @Nullable Map<String,String> environmentVariables,
-        @Nullable String framework,
-        @Nullable String pullRequestEnvironmentName,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("basicAuthCredentials") @Nullable String basicAuthCredentials,
+        @OutputCustomType.Parameter("buildSpec") @Nullable String buildSpec,
+        @OutputCustomType.Parameter("enableAutoBuild") @Nullable Boolean enableAutoBuild,
+        @OutputCustomType.Parameter("enableBasicAuth") @Nullable Boolean enableBasicAuth,
+        @OutputCustomType.Parameter("enablePerformanceMode") @Nullable Boolean enablePerformanceMode,
+        @OutputCustomType.Parameter("enablePullRequestPreview") @Nullable Boolean enablePullRequestPreview,
+        @OutputCustomType.Parameter("environmentVariables") @Nullable Map<String,String> environmentVariables,
+        @OutputCustomType.Parameter("framework") @Nullable String framework,
+        @OutputCustomType.Parameter("pullRequestEnvironmentName") @Nullable String pullRequestEnvironmentName,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.basicAuthCredentials = basicAuthCredentials;
         this.buildSpec = buildSpec;
         this.enableAutoBuild = enableAutoBuild;
@@ -197,52 +197,52 @@ public final class AppAutoBranchCreationConfig {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setBasicAuthCredentials(@Nullable String basicAuthCredentials) {
+        public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
             this.basicAuthCredentials = basicAuthCredentials;
             return this;
         }
 
-        public Builder setBuildSpec(@Nullable String buildSpec) {
+        public Builder buildSpec(@Nullable String buildSpec) {
             this.buildSpec = buildSpec;
             return this;
         }
 
-        public Builder setEnableAutoBuild(@Nullable Boolean enableAutoBuild) {
+        public Builder enableAutoBuild(@Nullable Boolean enableAutoBuild) {
             this.enableAutoBuild = enableAutoBuild;
             return this;
         }
 
-        public Builder setEnableBasicAuth(@Nullable Boolean enableBasicAuth) {
+        public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
             this.enableBasicAuth = enableBasicAuth;
             return this;
         }
 
-        public Builder setEnablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
+        public Builder enablePerformanceMode(@Nullable Boolean enablePerformanceMode) {
             this.enablePerformanceMode = enablePerformanceMode;
             return this;
         }
 
-        public Builder setEnablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
+        public Builder enablePullRequestPreview(@Nullable Boolean enablePullRequestPreview) {
             this.enablePullRequestPreview = enablePullRequestPreview;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Map<String,String> environmentVariables) {
+        public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setFramework(@Nullable String framework) {
+        public Builder framework(@Nullable String framework) {
             this.framework = framework;
             return this;
         }
 
-        public Builder setPullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
+        public Builder pullRequestEnvironmentName(@Nullable String pullRequestEnvironmentName) {
             this.pullRequestEnvironmentName = pullRequestEnvironmentName;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }

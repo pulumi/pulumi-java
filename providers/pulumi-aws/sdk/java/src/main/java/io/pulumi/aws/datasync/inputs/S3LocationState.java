@@ -181,92 +181,92 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAgentArns(@Nullable Input<List<String>> agentArns) {
+        public Builder agentArns(@Nullable Input<List<String>> agentArns) {
             this.agentArns = agentArns;
             return this;
         }
 
-        public Builder setAgentArns(@Nullable List<String> agentArns) {
+        public Builder agentArns(@Nullable List<String> agentArns) {
             this.agentArns = Input.ofNullable(agentArns);
             return this;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setS3BucketArn(@Nullable Input<String> s3BucketArn) {
+        public Builder s3BucketArn(@Nullable Input<String> s3BucketArn) {
             this.s3BucketArn = s3BucketArn;
             return this;
         }
 
-        public Builder setS3BucketArn(@Nullable String s3BucketArn) {
+        public Builder s3BucketArn(@Nullable String s3BucketArn) {
             this.s3BucketArn = Input.ofNullable(s3BucketArn);
             return this;
         }
 
-        public Builder setS3Config(@Nullable Input<S3LocationS3ConfigGetArgs> s3Config) {
+        public Builder s3Config(@Nullable Input<S3LocationS3ConfigGetArgs> s3Config) {
             this.s3Config = s3Config;
             return this;
         }
 
-        public Builder setS3Config(@Nullable S3LocationS3ConfigGetArgs s3Config) {
+        public Builder s3Config(@Nullable S3LocationS3ConfigGetArgs s3Config) {
             this.s3Config = Input.ofNullable(s3Config);
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable Input<String> s3StorageClass) {
+        public Builder s3StorageClass(@Nullable Input<String> s3StorageClass) {
             this.s3StorageClass = s3StorageClass;
             return this;
         }
 
-        public Builder setS3StorageClass(@Nullable String s3StorageClass) {
+        public Builder s3StorageClass(@Nullable String s3StorageClass) {
             this.s3StorageClass = Input.ofNullable(s3StorageClass);
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable Input<String> subdirectory) {
+        public Builder subdirectory(@Nullable Input<String> subdirectory) {
             this.subdirectory = subdirectory;
             return this;
         }
 
-        public Builder setSubdirectory(@Nullable String subdirectory) {
+        public Builder subdirectory(@Nullable String subdirectory) {
             this.subdirectory = Input.ofNullable(subdirectory);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Input<Map<String,String>> tagsAll) {
+        public Builder tagsAll(@Nullable Input<Map<String,String>> tagsAll) {
             this.tagsAll = tagsAll;
             return this;
         }
 
-        public Builder setTagsAll(@Nullable Map<String,String> tagsAll) {
+        public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
             this.tagsAll = Input.ofNullable(tagsAll);
             return this;
         }
 
-        public Builder setUri(@Nullable Input<String> uri) {
+        public Builder uri(@Nullable Input<String> uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = Input.ofNullable(uri);
             return this;
         }

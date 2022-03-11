@@ -34,12 +34,12 @@ public final class RunbookParameterResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"defaultValue","isMandatory","position","type"})
+    @OutputCustomType.Constructor
     private RunbookParameterResponse(
-        @Nullable String defaultValue,
-        @Nullable Boolean isMandatory,
-        @Nullable Integer position,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("defaultValue") @Nullable String defaultValue,
+        @OutputCustomType.Parameter("isMandatory") @Nullable Boolean isMandatory,
+        @OutputCustomType.Parameter("position") @Nullable Integer position,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.defaultValue = defaultValue;
         this.isMandatory = isMandatory;
         this.position = position;
@@ -101,22 +101,22 @@ public final class RunbookParameterResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefaultValue(@Nullable String defaultValue) {
+        public Builder defaultValue(@Nullable String defaultValue) {
             this.defaultValue = defaultValue;
             return this;
         }
 
-        public Builder setIsMandatory(@Nullable Boolean isMandatory) {
+        public Builder isMandatory(@Nullable Boolean isMandatory) {
             this.isMandatory = isMandatory;
             return this;
         }
 
-        public Builder setPosition(@Nullable Integer position) {
+        public Builder position(@Nullable Integer position) {
             this.position = position;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

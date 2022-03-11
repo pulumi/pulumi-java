@@ -76,20 +76,20 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
      */
     private final UpdateConfigurationResponse updateConfiguration;
 
-    @OutputCustomType.Constructor({"createdBy","creationTime","error","id","lastModifiedBy","lastModifiedTime","name","provisioningState","scheduleInfo","tasks","type","updateConfiguration"})
+    @OutputCustomType.Constructor
     private GetSoftwareUpdateConfigurationByNameResult(
-        String createdBy,
-        String creationTime,
-        @Nullable ErrorResponseResponse error,
-        String id,
-        String lastModifiedBy,
-        String lastModifiedTime,
-        String name,
-        String provisioningState,
-        SUCSchedulePropertiesResponse scheduleInfo,
-        @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
-        String type,
-        UpdateConfigurationResponse updateConfiguration) {
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("error") @Nullable ErrorResponseResponse error,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedBy") String lastModifiedBy,
+        @OutputCustomType.Parameter("lastModifiedTime") String lastModifiedTime,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("scheduleInfo") SUCSchedulePropertiesResponse scheduleInfo,
+        @OutputCustomType.Parameter("tasks") @Nullable SoftwareUpdateConfigurationTasksResponse tasks,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updateConfiguration") UpdateConfigurationResponse updateConfiguration) {
         this.createdBy = createdBy;
         this.creationTime = creationTime;
         this.error = error;
@@ -231,62 +231,62 @@ public final class GetSoftwareUpdateConfigurationByNameResult {
     	      this.updateConfiguration = defaults.updateConfiguration;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setError(@Nullable ErrorResponseResponse error) {
+        public Builder error(@Nullable ErrorResponseResponse error) {
             this.error = error;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedBy(String lastModifiedBy) {
+        public Builder lastModifiedBy(String lastModifiedBy) {
             this.lastModifiedBy = Objects.requireNonNull(lastModifiedBy);
             return this;
         }
 
-        public Builder setLastModifiedTime(String lastModifiedTime) {
+        public Builder lastModifiedTime(String lastModifiedTime) {
             this.lastModifiedTime = Objects.requireNonNull(lastModifiedTime);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setScheduleInfo(SUCSchedulePropertiesResponse scheduleInfo) {
+        public Builder scheduleInfo(SUCSchedulePropertiesResponse scheduleInfo) {
             this.scheduleInfo = Objects.requireNonNull(scheduleInfo);
             return this;
         }
 
-        public Builder setTasks(@Nullable SoftwareUpdateConfigurationTasksResponse tasks) {
+        public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksResponse tasks) {
             this.tasks = tasks;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdateConfiguration(UpdateConfigurationResponse updateConfiguration) {
+        public Builder updateConfiguration(UpdateConfigurationResponse updateConfiguration) {
             this.updateConfiguration = Objects.requireNonNull(updateConfiguration);
             return this;
         }

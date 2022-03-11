@@ -28,11 +28,11 @@ public final class JobLoadDestinationTable {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor({"datasetId","projectId","tableId"})
+    @OutputCustomType.Constructor
     private JobLoadDestinationTable(
-        @Nullable String datasetId,
-        @Nullable String projectId,
-        String tableId) {
+        @OutputCustomType.Parameter("datasetId") @Nullable String datasetId,
+        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
+        @OutputCustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;
@@ -85,17 +85,17 @@ public final class JobLoadDestinationTable {
     	      this.tableId = defaults.tableId;
         }
 
-        public Builder setDatasetId(@Nullable String datasetId) {
+        public Builder datasetId(@Nullable String datasetId) {
             this.datasetId = datasetId;
             return this;
         }
 
-        public Builder setProjectId(@Nullable String projectId) {
+        public Builder projectId(@Nullable String projectId) {
             this.projectId = projectId;
             return this;
         }
 
-        public Builder setTableId(String tableId) {
+        public Builder tableId(String tableId) {
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }

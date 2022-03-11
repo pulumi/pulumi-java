@@ -15,10 +15,10 @@ public final class SpotFleetSpotCapacityRebalance {
     private final @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy;
     private final @Nullable Integer terminationDelay;
 
-    @OutputCustomType.Constructor({"replacementStrategy","terminationDelay"})
+    @OutputCustomType.Constructor
     private SpotFleetSpotCapacityRebalance(
-        @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy,
-        @Nullable Integer terminationDelay) {
+        @OutputCustomType.Parameter("replacementStrategy") @Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy,
+        @OutputCustomType.Parameter("terminationDelay") @Nullable Integer terminationDelay) {
         this.replacementStrategy = replacementStrategy;
         this.terminationDelay = terminationDelay;
     }
@@ -52,12 +52,12 @@ public final class SpotFleetSpotCapacityRebalance {
     	      this.terminationDelay = defaults.terminationDelay;
         }
 
-        public Builder setReplacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
+        public Builder replacementStrategy(@Nullable SpotFleetSpotCapacityRebalanceReplacementStrategy replacementStrategy) {
             this.replacementStrategy = replacementStrategy;
             return this;
         }
 
-        public Builder setTerminationDelay(@Nullable Integer terminationDelay) {
+        public Builder terminationDelay(@Nullable Integer terminationDelay) {
             this.terminationDelay = terminationDelay;
             return this;
         }

@@ -12,10 +12,10 @@ public final class TopicRuleTimestreamTimestamp {
     private final String unit;
     private final String value;
 
-    @OutputCustomType.Constructor({"unit","value"})
+    @OutputCustomType.Constructor
     private TopicRuleTimestreamTimestamp(
-        String unit,
-        String value) {
+        @OutputCustomType.Parameter("unit") String unit,
+        @OutputCustomType.Parameter("value") String value) {
         this.unit = unit;
         this.value = value;
     }
@@ -49,12 +49,12 @@ public final class TopicRuleTimestreamTimestamp {
     	      this.value = defaults.value;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

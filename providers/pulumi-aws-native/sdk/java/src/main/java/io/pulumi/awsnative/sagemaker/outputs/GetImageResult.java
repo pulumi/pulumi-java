@@ -23,13 +23,13 @@ public final class GetImageResult {
      */
     private final @Nullable List<ImageTag> tags;
 
-    @OutputCustomType.Constructor({"imageArn","imageDescription","imageDisplayName","imageRoleArn","tags"})
+    @OutputCustomType.Constructor
     private GetImageResult(
-        @Nullable String imageArn,
-        @Nullable String imageDescription,
-        @Nullable String imageDisplayName,
-        @Nullable String imageRoleArn,
-        @Nullable List<ImageTag> tags) {
+        @OutputCustomType.Parameter("imageArn") @Nullable String imageArn,
+        @OutputCustomType.Parameter("imageDescription") @Nullable String imageDescription,
+        @OutputCustomType.Parameter("imageDisplayName") @Nullable String imageDisplayName,
+        @OutputCustomType.Parameter("imageRoleArn") @Nullable String imageRoleArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<ImageTag> tags) {
         this.imageArn = imageArn;
         this.imageDescription = imageDescription;
         this.imageDisplayName = imageDisplayName;
@@ -85,27 +85,27 @@ public final class GetImageResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setImageArn(@Nullable String imageArn) {
+        public Builder imageArn(@Nullable String imageArn) {
             this.imageArn = imageArn;
             return this;
         }
 
-        public Builder setImageDescription(@Nullable String imageDescription) {
+        public Builder imageDescription(@Nullable String imageDescription) {
             this.imageDescription = imageDescription;
             return this;
         }
 
-        public Builder setImageDisplayName(@Nullable String imageDisplayName) {
+        public Builder imageDisplayName(@Nullable String imageDisplayName) {
             this.imageDisplayName = imageDisplayName;
             return this;
         }
 
-        public Builder setImageRoleArn(@Nullable String imageRoleArn) {
+        public Builder imageRoleArn(@Nullable String imageRoleArn) {
             this.imageRoleArn = imageRoleArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<ImageTag> tags) {
+        public Builder tags(@Nullable List<ImageTag> tags) {
             this.tags = tags;
             return this;
         }

@@ -27,12 +27,12 @@ public final class PrivateEndpointConnectionResponseProperties {
      */
     private final String provisioningState;
 
-    @OutputCustomType.Constructor({"groupIds","privateEndpoint","privateLinkServiceConnectionState","provisioningState"})
+    @OutputCustomType.Constructor
     private PrivateEndpointConnectionResponseProperties(
-        @Nullable List<String> groupIds,
-        @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
-        @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
-        String provisioningState) {
+        @OutputCustomType.Parameter("groupIds") @Nullable List<String> groupIds,
+        @OutputCustomType.Parameter("privateEndpoint") @Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint,
+        @OutputCustomType.Parameter("privateLinkServiceConnectionState") @Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState) {
         this.groupIds = groupIds;
         this.privateEndpoint = privateEndpoint;
         this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
@@ -86,22 +86,22 @@ public final class PrivateEndpointConnectionResponseProperties {
     	      this.provisioningState = defaults.provisioningState;
         }
 
-        public Builder setGroupIds(@Nullable List<String> groupIds) {
+        public Builder groupIds(@Nullable List<String> groupIds) {
             this.groupIds = groupIds;
             return this;
         }
 
-        public Builder setPrivateEndpoint(@Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
+        public Builder privateEndpoint(@Nullable ConnectionPropertiesResponsePrivateEndpoint privateEndpoint) {
             this.privateEndpoint = privateEndpoint;
             return this;
         }
 
-        public Builder setPrivateLinkServiceConnectionState(@Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
+        public Builder privateLinkServiceConnectionState(@Nullable ConnectionPropertiesResponsePrivateLinkServiceConnectionState privateLinkServiceConnectionState) {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }

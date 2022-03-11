@@ -69,22 +69,22 @@ public final class TaskDefinitionInferenceAcceleratorArgs extends io.pulumi.reso
     	      this.deviceType = defaults.deviceType;
         }
 
-        public Builder setDeviceName(Input<String> deviceName) {
+        public Builder deviceName(Input<String> deviceName) {
             this.deviceName = Objects.requireNonNull(deviceName);
             return this;
         }
 
-        public Builder setDeviceName(String deviceName) {
+        public Builder deviceName(String deviceName) {
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
 
-        public Builder setDeviceType(Input<String> deviceType) {
+        public Builder deviceType(Input<String> deviceType) {
             this.deviceType = Objects.requireNonNull(deviceType);
             return this;
         }
 
-        public Builder setDeviceType(String deviceType) {
+        public Builder deviceType(String deviceType) {
             this.deviceType = Input.of(Objects.requireNonNull(deviceType));
             return this;
         }

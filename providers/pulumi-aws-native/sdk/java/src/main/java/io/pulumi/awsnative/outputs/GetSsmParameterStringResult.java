@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class GetSsmParameterStringResult {
     private final String value;
 
-    @OutputCustomType.Constructor({"value"})
-    private GetSsmParameterStringResult(String value) {
+    @OutputCustomType.Constructor
+    private GetSsmParameterStringResult(@OutputCustomType.Parameter("value") String value) {
         this.value = value;
     }
 
@@ -40,7 +40,7 @@ public final class GetSsmParameterStringResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

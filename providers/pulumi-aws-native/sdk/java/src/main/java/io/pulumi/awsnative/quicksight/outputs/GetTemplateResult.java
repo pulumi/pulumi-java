@@ -35,12 +35,12 @@ public final class GetTemplateResult {
      */
     private final @Nullable List<TemplateTag> tags;
 
-    @OutputCustomType.Constructor({"arn","name","permissions","tags"})
+    @OutputCustomType.Constructor
     private GetTemplateResult(
-        @Nullable String arn,
-        @Nullable String name,
-        @Nullable List<TemplateResourcePermission> permissions,
-        @Nullable List<TemplateTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("permissions") @Nullable List<TemplateResourcePermission> permissions,
+        @OutputCustomType.Parameter("tags") @Nullable List<TemplateTag> tags) {
         this.arn = arn;
         this.name = name;
         this.permissions = permissions;
@@ -102,22 +102,22 @@ public final class GetTemplateResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPermissions(@Nullable List<TemplateResourcePermission> permissions) {
+        public Builder permissions(@Nullable List<TemplateResourcePermission> permissions) {
             this.permissions = permissions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<TemplateTag> tags) {
+        public Builder tags(@Nullable List<TemplateTag> tags) {
             this.tags = tags;
             return this;
         }

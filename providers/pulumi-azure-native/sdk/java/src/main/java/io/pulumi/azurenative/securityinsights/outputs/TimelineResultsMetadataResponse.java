@@ -29,11 +29,11 @@ public final class TimelineResultsMetadataResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"aggregations","errors","totalCount"})
+    @OutputCustomType.Constructor
     private TimelineResultsMetadataResponse(
-        List<TimelineAggregationResponse> aggregations,
-        @Nullable List<TimelineErrorResponse> errors,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("aggregations") List<TimelineAggregationResponse> aggregations,
+        @OutputCustomType.Parameter("errors") @Nullable List<TimelineErrorResponse> errors,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.aggregations = aggregations;
         this.errors = errors;
         this.totalCount = totalCount;
@@ -85,17 +85,17 @@ public final class TimelineResultsMetadataResponse {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setAggregations(List<TimelineAggregationResponse> aggregations) {
+        public Builder aggregations(List<TimelineAggregationResponse> aggregations) {
             this.aggregations = Objects.requireNonNull(aggregations);
             return this;
         }
 
-        public Builder setErrors(@Nullable List<TimelineErrorResponse> errors) {
+        public Builder errors(@Nullable List<TimelineErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

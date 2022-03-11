@@ -27,11 +27,11 @@ public final class AccessPointPosixUser {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"gid","secondaryGids","uid"})
+    @OutputCustomType.Constructor
     private AccessPointPosixUser(
-        String gid,
-        @Nullable List<String> secondaryGids,
-        String uid) {
+        @OutputCustomType.Parameter("gid") String gid,
+        @OutputCustomType.Parameter("secondaryGids") @Nullable List<String> secondaryGids,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.gid = gid;
         this.secondaryGids = secondaryGids;
         this.uid = uid;
@@ -83,17 +83,17 @@ public final class AccessPointPosixUser {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setGid(String gid) {
+        public Builder gid(String gid) {
             this.gid = Objects.requireNonNull(gid);
             return this;
         }
 
-        public Builder setSecondaryGids(@Nullable List<String> secondaryGids) {
+        public Builder secondaryGids(@Nullable List<String> secondaryGids) {
             this.secondaryGids = secondaryGids;
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

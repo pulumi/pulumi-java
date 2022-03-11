@@ -16,8 +16,8 @@ public final class GetDomainNameEndpointConfiguration {
      */
     private final List<String> types;
 
-    @OutputCustomType.Constructor({"types"})
-    private GetDomainNameEndpointConfiguration(List<String> types) {
+    @OutputCustomType.Constructor
+    private GetDomainNameEndpointConfiguration(@OutputCustomType.Parameter("types") List<String> types) {
         this.types = types;
     }
 
@@ -49,7 +49,7 @@ public final class GetDomainNameEndpointConfiguration {
     	      this.types = defaults.types;
         }
 
-        public Builder setTypes(List<String> types) {
+        public Builder types(List<String> types) {
             this.types = Objects.requireNonNull(types);
             return this;
         }

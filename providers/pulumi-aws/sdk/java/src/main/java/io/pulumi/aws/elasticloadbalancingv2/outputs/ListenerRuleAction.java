@@ -54,16 +54,16 @@ public final class ListenerRuleAction {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"authenticateCognito","authenticateOidc","fixedResponse","forward","order","redirect","targetGroupArn","type"})
+    @OutputCustomType.Constructor
     private ListenerRuleAction(
-        @Nullable ListenerRuleActionAuthenticateCognito authenticateCognito,
-        @Nullable ListenerRuleActionAuthenticateOidc authenticateOidc,
-        @Nullable ListenerRuleActionFixedResponse fixedResponse,
-        @Nullable ListenerRuleActionForward forward,
-        @Nullable Integer order,
-        @Nullable ListenerRuleActionRedirect redirect,
-        @Nullable String targetGroupArn,
-        String type) {
+        @OutputCustomType.Parameter("authenticateCognito") @Nullable ListenerRuleActionAuthenticateCognito authenticateCognito,
+        @OutputCustomType.Parameter("authenticateOidc") @Nullable ListenerRuleActionAuthenticateOidc authenticateOidc,
+        @OutputCustomType.Parameter("fixedResponse") @Nullable ListenerRuleActionFixedResponse fixedResponse,
+        @OutputCustomType.Parameter("forward") @Nullable ListenerRuleActionForward forward,
+        @OutputCustomType.Parameter("order") @Nullable Integer order,
+        @OutputCustomType.Parameter("redirect") @Nullable ListenerRuleActionRedirect redirect,
+        @OutputCustomType.Parameter("targetGroupArn") @Nullable String targetGroupArn,
+        @OutputCustomType.Parameter("type") String type) {
         this.authenticateCognito = authenticateCognito;
         this.authenticateOidc = authenticateOidc;
         this.fixedResponse = fixedResponse;
@@ -161,42 +161,42 @@ public final class ListenerRuleAction {
     	      this.type = defaults.type;
         }
 
-        public Builder setAuthenticateCognito(@Nullable ListenerRuleActionAuthenticateCognito authenticateCognito) {
+        public Builder authenticateCognito(@Nullable ListenerRuleActionAuthenticateCognito authenticateCognito) {
             this.authenticateCognito = authenticateCognito;
             return this;
         }
 
-        public Builder setAuthenticateOidc(@Nullable ListenerRuleActionAuthenticateOidc authenticateOidc) {
+        public Builder authenticateOidc(@Nullable ListenerRuleActionAuthenticateOidc authenticateOidc) {
             this.authenticateOidc = authenticateOidc;
             return this;
         }
 
-        public Builder setFixedResponse(@Nullable ListenerRuleActionFixedResponse fixedResponse) {
+        public Builder fixedResponse(@Nullable ListenerRuleActionFixedResponse fixedResponse) {
             this.fixedResponse = fixedResponse;
             return this;
         }
 
-        public Builder setForward(@Nullable ListenerRuleActionForward forward) {
+        public Builder forward(@Nullable ListenerRuleActionForward forward) {
             this.forward = forward;
             return this;
         }
 
-        public Builder setOrder(@Nullable Integer order) {
+        public Builder order(@Nullable Integer order) {
             this.order = order;
             return this;
         }
 
-        public Builder setRedirect(@Nullable ListenerRuleActionRedirect redirect) {
+        public Builder redirect(@Nullable ListenerRuleActionRedirect redirect) {
             this.redirect = redirect;
             return this;
         }
 
-        public Builder setTargetGroupArn(@Nullable String targetGroupArn) {
+        public Builder targetGroupArn(@Nullable String targetGroupArn) {
             this.targetGroupArn = targetGroupArn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

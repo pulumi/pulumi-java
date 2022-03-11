@@ -15,8 +15,8 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
      */
     private final String key;
 
-    @OutputCustomType.Constructor({"key"})
-    private GetManagerDevicePublicEncryptionKeyResult(String key) {
+    @OutputCustomType.Constructor
+    private GetManagerDevicePublicEncryptionKeyResult(@OutputCustomType.Parameter("key") String key) {
         this.key = key;
     }
 
@@ -48,7 +48,7 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }

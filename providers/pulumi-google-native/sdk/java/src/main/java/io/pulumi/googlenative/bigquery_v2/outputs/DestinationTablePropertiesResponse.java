@@ -31,12 +31,12 @@ public final class DestinationTablePropertiesResponse {
      */
     private final Map<String,String> labels;
 
-    @OutputCustomType.Constructor({"description","expirationTime","friendlyName","labels"})
+    @OutputCustomType.Constructor
     private DestinationTablePropertiesResponse(
-        String description,
-        String expirationTime,
-        String friendlyName,
-        Map<String,String> labels) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expirationTime") String expirationTime,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels) {
         this.description = description;
         this.expirationTime = expirationTime;
         this.friendlyName = friendlyName;
@@ -98,22 +98,22 @@ public final class DestinationTablePropertiesResponse {
     	      this.labels = defaults.labels;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpirationTime(String expirationTime) {
+        public Builder expirationTime(String expirationTime) {
             this.expirationTime = Objects.requireNonNull(expirationTime);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }

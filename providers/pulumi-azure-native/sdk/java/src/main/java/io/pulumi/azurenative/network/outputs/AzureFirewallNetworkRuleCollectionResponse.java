@@ -51,15 +51,15 @@ public final class AzureFirewallNetworkRuleCollectionResponse {
      */
     private final @Nullable List<AzureFirewallNetworkRuleResponse> rules;
 
-    @OutputCustomType.Constructor({"action","etag","id","name","priority","provisioningState","rules"})
+    @OutputCustomType.Constructor
     private AzureFirewallNetworkRuleCollectionResponse(
-        @Nullable AzureFirewallRCActionResponse action,
-        String etag,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable Integer priority,
-        String provisioningState,
-        @Nullable List<AzureFirewallNetworkRuleResponse> rules) {
+        @OutputCustomType.Parameter("action") @Nullable AzureFirewallRCActionResponse action,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("rules") @Nullable List<AzureFirewallNetworkRuleResponse> rules) {
         this.action = action;
         this.etag = etag;
         this.id = id;
@@ -151,37 +151,37 @@ public final class AzureFirewallNetworkRuleCollectionResponse {
     	      this.rules = defaults.rules;
         }
 
-        public Builder setAction(@Nullable AzureFirewallRCActionResponse action) {
+        public Builder action(@Nullable AzureFirewallRCActionResponse action) {
             this.action = action;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRules(@Nullable List<AzureFirewallNetworkRuleResponse> rules) {
+        public Builder rules(@Nullable List<AzureFirewallNetworkRuleResponse> rules) {
             this.rules = rules;
             return this;
         }

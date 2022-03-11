@@ -17,8 +17,8 @@ public final class StandardComponentPropertiesResponse {
      */
     private final @Nullable String key;
 
-    @OutputCustomType.Constructor({"key"})
-    private StandardComponentPropertiesResponse(@Nullable String key) {
+    @OutputCustomType.Constructor
+    private StandardComponentPropertiesResponse(@OutputCustomType.Parameter("key") @Nullable String key) {
         this.key = key;
     }
 
@@ -50,7 +50,7 @@ public final class StandardComponentPropertiesResponse {
     	      this.key = defaults.key;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }

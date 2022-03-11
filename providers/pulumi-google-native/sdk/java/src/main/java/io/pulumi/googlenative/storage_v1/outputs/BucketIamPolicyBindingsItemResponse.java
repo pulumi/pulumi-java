@@ -46,11 +46,11 @@ public final class BucketIamPolicyBindingsItemResponse {
      */
     private final String role;
 
-    @OutputCustomType.Constructor({"condition","members","role"})
+    @OutputCustomType.Constructor
     private BucketIamPolicyBindingsItemResponse(
-        ExprResponse condition,
-        List<String> members,
-        String role) {
+        @OutputCustomType.Parameter("condition") ExprResponse condition,
+        @OutputCustomType.Parameter("members") List<String> members,
+        @OutputCustomType.Parameter("role") String role) {
         this.condition = condition;
         this.members = members;
         this.role = role;
@@ -121,17 +121,17 @@ public final class BucketIamPolicyBindingsItemResponse {
     	      this.role = defaults.role;
         }
 
-        public Builder setCondition(ExprResponse condition) {
+        public Builder condition(ExprResponse condition) {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
 
-        public Builder setMembers(List<String> members) {
+        public Builder members(List<String> members) {
             this.members = Objects.requireNonNull(members);
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }

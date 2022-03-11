@@ -28,11 +28,11 @@ public final class DataDiskResponse {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"createOption","diskSizeGB","name"})
+    @OutputCustomType.Constructor
     private DataDiskResponse(
-        @Nullable String createOption,
-        @Nullable Integer diskSizeGB,
-        @Nullable String name) {
+        @OutputCustomType.Parameter("createOption") @Nullable String createOption,
+        @OutputCustomType.Parameter("diskSizeGB") @Nullable Integer diskSizeGB,
+        @OutputCustomType.Parameter("name") @Nullable String name) {
         this.createOption = createOption;
         this.diskSizeGB = diskSizeGB;
         this.name = name;
@@ -84,17 +84,17 @@ public final class DataDiskResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setCreateOption(@Nullable String createOption) {
+        public Builder createOption(@Nullable String createOption) {
             this.createOption = createOption;
             return this;
         }
 
-        public Builder setDiskSizeGB(@Nullable Integer diskSizeGB) {
+        public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
             this.diskSizeGB = diskSizeGB;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

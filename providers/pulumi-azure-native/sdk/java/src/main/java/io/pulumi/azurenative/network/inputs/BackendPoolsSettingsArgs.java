@@ -77,22 +77,22 @@ public final class BackendPoolsSettingsArgs extends io.pulumi.resources.Resource
     	      this.sendRecvTimeoutSeconds = defaults.sendRecvTimeoutSeconds;
         }
 
-        public Builder setEnforceCertificateNameCheck(@Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck) {
+        public Builder enforceCertificateNameCheck(@Nullable Input<Either<String,EnforceCertificateNameCheckEnabledState>> enforceCertificateNameCheck) {
             this.enforceCertificateNameCheck = enforceCertificateNameCheck;
             return this;
         }
 
-        public Builder setEnforceCertificateNameCheck(@Nullable Either<String,EnforceCertificateNameCheckEnabledState> enforceCertificateNameCheck) {
+        public Builder enforceCertificateNameCheck(@Nullable Either<String,EnforceCertificateNameCheckEnabledState> enforceCertificateNameCheck) {
             this.enforceCertificateNameCheck = Input.ofNullable(enforceCertificateNameCheck);
             return this;
         }
 
-        public Builder setSendRecvTimeoutSeconds(@Nullable Input<Integer> sendRecvTimeoutSeconds) {
+        public Builder sendRecvTimeoutSeconds(@Nullable Input<Integer> sendRecvTimeoutSeconds) {
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }
 
-        public Builder setSendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
+        public Builder sendRecvTimeoutSeconds(@Nullable Integer sendRecvTimeoutSeconds) {
             this.sendRecvTimeoutSeconds = Input.ofNullable(sendRecvTimeoutSeconds);
             return this;
         }

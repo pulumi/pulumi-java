@@ -35,12 +35,12 @@ public final class ContainerInstanceViewResponse {
      */
     private final @Nullable Integer restartCount;
 
-    @OutputCustomType.Constructor({"currentState","events","previousState","restartCount"})
+    @OutputCustomType.Constructor
     private ContainerInstanceViewResponse(
-        @Nullable ContainerStateResponse currentState,
-        @Nullable List<ContainerEventResponse> events,
-        @Nullable ContainerStateResponse previousState,
-        @Nullable Integer restartCount) {
+        @OutputCustomType.Parameter("currentState") @Nullable ContainerStateResponse currentState,
+        @OutputCustomType.Parameter("events") @Nullable List<ContainerEventResponse> events,
+        @OutputCustomType.Parameter("previousState") @Nullable ContainerStateResponse previousState,
+        @OutputCustomType.Parameter("restartCount") @Nullable Integer restartCount) {
         this.currentState = currentState;
         this.events = events;
         this.previousState = previousState;
@@ -102,22 +102,22 @@ public final class ContainerInstanceViewResponse {
     	      this.restartCount = defaults.restartCount;
         }
 
-        public Builder setCurrentState(@Nullable ContainerStateResponse currentState) {
+        public Builder currentState(@Nullable ContainerStateResponse currentState) {
             this.currentState = currentState;
             return this;
         }
 
-        public Builder setEvents(@Nullable List<ContainerEventResponse> events) {
+        public Builder events(@Nullable List<ContainerEventResponse> events) {
             this.events = events;
             return this;
         }
 
-        public Builder setPreviousState(@Nullable ContainerStateResponse previousState) {
+        public Builder previousState(@Nullable ContainerStateResponse previousState) {
             this.previousState = previousState;
             return this;
         }
 
-        public Builder setRestartCount(@Nullable Integer restartCount) {
+        public Builder restartCount(@Nullable Integer restartCount) {
             this.restartCount = restartCount;
             return this;
         }

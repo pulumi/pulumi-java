@@ -57,12 +57,12 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     	      this.logRules = defaults.logRules;
         }
 
-        public Builder setLogRules(@Nullable Input<LogRulesArgs> logRules) {
+        public Builder logRules(@Nullable Input<LogRulesArgs> logRules) {
             this.logRules = logRules;
             return this;
         }
 
-        public Builder setLogRules(@Nullable LogRulesArgs logRules) {
+        public Builder logRules(@Nullable LogRulesArgs logRules) {
             this.logRules = Input.ofNullable(logRules);
             return this;
         }

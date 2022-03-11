@@ -58,17 +58,17 @@ public final class DefaultNetworkAclEgress {
      */
     private final Integer toPort;
 
-    @OutputCustomType.Constructor({"action","cidrBlock","fromPort","icmpCode","icmpType","ipv6CidrBlock","protocol","ruleNo","toPort"})
+    @OutputCustomType.Constructor
     private DefaultNetworkAclEgress(
-        String action,
-        @Nullable String cidrBlock,
-        Integer fromPort,
-        @Nullable Integer icmpCode,
-        @Nullable Integer icmpType,
-        @Nullable String ipv6CidrBlock,
-        String protocol,
-        Integer ruleNo,
-        Integer toPort) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("cidrBlock") @Nullable String cidrBlock,
+        @OutputCustomType.Parameter("fromPort") Integer fromPort,
+        @OutputCustomType.Parameter("icmpCode") @Nullable Integer icmpCode,
+        @OutputCustomType.Parameter("icmpType") @Nullable Integer icmpType,
+        @OutputCustomType.Parameter("ipv6CidrBlock") @Nullable String ipv6CidrBlock,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("ruleNo") Integer ruleNo,
+        @OutputCustomType.Parameter("toPort") Integer toPort) {
         this.action = action;
         this.cidrBlock = cidrBlock;
         this.fromPort = fromPort;
@@ -180,47 +180,47 @@ public final class DefaultNetworkAclEgress {
     	      this.toPort = defaults.toPort;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCidrBlock(@Nullable String cidrBlock) {
+        public Builder cidrBlock(@Nullable String cidrBlock) {
             this.cidrBlock = cidrBlock;
             return this;
         }
 
-        public Builder setFromPort(Integer fromPort) {
+        public Builder fromPort(Integer fromPort) {
             this.fromPort = Objects.requireNonNull(fromPort);
             return this;
         }
 
-        public Builder setIcmpCode(@Nullable Integer icmpCode) {
+        public Builder icmpCode(@Nullable Integer icmpCode) {
             this.icmpCode = icmpCode;
             return this;
         }
 
-        public Builder setIcmpType(@Nullable Integer icmpType) {
+        public Builder icmpType(@Nullable Integer icmpType) {
             this.icmpType = icmpType;
             return this;
         }
 
-        public Builder setIpv6CidrBlock(@Nullable String ipv6CidrBlock) {
+        public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
             this.ipv6CidrBlock = ipv6CidrBlock;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setRuleNo(Integer ruleNo) {
+        public Builder ruleNo(Integer ruleNo) {
             this.ruleNo = Objects.requireNonNull(ruleNo);
             return this;
         }
 
-        public Builder setToPort(Integer toPort) {
+        public Builder toPort(Integer toPort) {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }

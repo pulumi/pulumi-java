@@ -24,10 +24,10 @@ public final class ProfileEnumValidValuesFormatResponse {
      */
     private final @Nullable Integer value;
 
-    @OutputCustomType.Constructor({"localizedValueNames","value"})
+    @OutputCustomType.Constructor
     private ProfileEnumValidValuesFormatResponse(
-        @Nullable Map<String,String> localizedValueNames,
-        @Nullable Integer value) {
+        @OutputCustomType.Parameter("localizedValueNames") @Nullable Map<String,String> localizedValueNames,
+        @OutputCustomType.Parameter("value") @Nullable Integer value) {
         this.localizedValueNames = localizedValueNames;
         this.value = value;
     }
@@ -69,12 +69,12 @@ public final class ProfileEnumValidValuesFormatResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setLocalizedValueNames(@Nullable Map<String,String> localizedValueNames) {
+        public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
             this.localizedValueNames = localizedValueNames;
             return this;
         }
 
-        public Builder setValue(@Nullable Integer value) {
+        public Builder value(@Nullable Integer value) {
             this.value = value;
             return this;
         }

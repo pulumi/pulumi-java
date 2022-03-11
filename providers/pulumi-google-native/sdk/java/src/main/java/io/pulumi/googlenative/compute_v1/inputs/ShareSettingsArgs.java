@@ -76,22 +76,22 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.shareType = defaults.shareType;
         }
 
-        public Builder setProjectMap(@Nullable Input<Map<String,String>> projectMap) {
+        public Builder projectMap(@Nullable Input<Map<String,String>> projectMap) {
             this.projectMap = projectMap;
             return this;
         }
 
-        public Builder setProjectMap(@Nullable Map<String,String> projectMap) {
+        public Builder projectMap(@Nullable Map<String,String> projectMap) {
             this.projectMap = Input.ofNullable(projectMap);
             return this;
         }
 
-        public Builder setShareType(@Nullable Input<ShareSettingsShareType> shareType) {
+        public Builder shareType(@Nullable Input<ShareSettingsShareType> shareType) {
             this.shareType = shareType;
             return this;
         }
 
-        public Builder setShareType(@Nullable ShareSettingsShareType shareType) {
+        public Builder shareType(@Nullable ShareSettingsShareType shareType) {
             this.shareType = Input.ofNullable(shareType);
             return this;
         }

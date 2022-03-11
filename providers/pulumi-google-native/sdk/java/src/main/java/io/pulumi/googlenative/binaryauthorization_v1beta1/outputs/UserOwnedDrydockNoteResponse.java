@@ -27,11 +27,11 @@ public final class UserOwnedDrydockNoteResponse {
      */
     private final List<AttestorPublicKeyResponse> publicKeys;
 
-    @OutputCustomType.Constructor({"delegationServiceAccountEmail","noteReference","publicKeys"})
+    @OutputCustomType.Constructor
     private UserOwnedDrydockNoteResponse(
-        String delegationServiceAccountEmail,
-        String noteReference,
-        List<AttestorPublicKeyResponse> publicKeys) {
+        @OutputCustomType.Parameter("delegationServiceAccountEmail") String delegationServiceAccountEmail,
+        @OutputCustomType.Parameter("noteReference") String noteReference,
+        @OutputCustomType.Parameter("publicKeys") List<AttestorPublicKeyResponse> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;
@@ -83,17 +83,17 @@ public final class UserOwnedDrydockNoteResponse {
     	      this.publicKeys = defaults.publicKeys;
         }
 
-        public Builder setDelegationServiceAccountEmail(String delegationServiceAccountEmail) {
+        public Builder delegationServiceAccountEmail(String delegationServiceAccountEmail) {
             this.delegationServiceAccountEmail = Objects.requireNonNull(delegationServiceAccountEmail);
             return this;
         }
 
-        public Builder setNoteReference(String noteReference) {
+        public Builder noteReference(String noteReference) {
             this.noteReference = Objects.requireNonNull(noteReference);
             return this;
         }
 
-        public Builder setPublicKeys(List<AttestorPublicKeyResponse> publicKeys) {
+        public Builder publicKeys(List<AttestorPublicKeyResponse> publicKeys) {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }

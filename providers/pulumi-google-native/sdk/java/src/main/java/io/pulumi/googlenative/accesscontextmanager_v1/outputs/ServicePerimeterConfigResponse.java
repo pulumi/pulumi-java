@@ -44,14 +44,14 @@ public final class ServicePerimeterConfigResponse {
      */
     private final VpcAccessibleServicesResponse vpcAccessibleServices;
 
-    @OutputCustomType.Constructor({"accessLevels","egressPolicies","ingressPolicies","resources","restrictedServices","vpcAccessibleServices"})
+    @OutputCustomType.Constructor
     private ServicePerimeterConfigResponse(
-        List<String> accessLevels,
-        List<EgressPolicyResponse> egressPolicies,
-        List<IngressPolicyResponse> ingressPolicies,
-        List<String> resources,
-        List<String> restrictedServices,
-        VpcAccessibleServicesResponse vpcAccessibleServices) {
+        @OutputCustomType.Parameter("accessLevels") List<String> accessLevels,
+        @OutputCustomType.Parameter("egressPolicies") List<EgressPolicyResponse> egressPolicies,
+        @OutputCustomType.Parameter("ingressPolicies") List<IngressPolicyResponse> ingressPolicies,
+        @OutputCustomType.Parameter("resources") List<String> resources,
+        @OutputCustomType.Parameter("restrictedServices") List<String> restrictedServices,
+        @OutputCustomType.Parameter("vpcAccessibleServices") VpcAccessibleServicesResponse vpcAccessibleServices) {
         this.accessLevels = accessLevels;
         this.egressPolicies = egressPolicies;
         this.ingressPolicies = ingressPolicies;
@@ -133,32 +133,32 @@ public final class ServicePerimeterConfigResponse {
     	      this.vpcAccessibleServices = defaults.vpcAccessibleServices;
         }
 
-        public Builder setAccessLevels(List<String> accessLevels) {
+        public Builder accessLevels(List<String> accessLevels) {
             this.accessLevels = Objects.requireNonNull(accessLevels);
             return this;
         }
 
-        public Builder setEgressPolicies(List<EgressPolicyResponse> egressPolicies) {
+        public Builder egressPolicies(List<EgressPolicyResponse> egressPolicies) {
             this.egressPolicies = Objects.requireNonNull(egressPolicies);
             return this;
         }
 
-        public Builder setIngressPolicies(List<IngressPolicyResponse> ingressPolicies) {
+        public Builder ingressPolicies(List<IngressPolicyResponse> ingressPolicies) {
             this.ingressPolicies = Objects.requireNonNull(ingressPolicies);
             return this;
         }
 
-        public Builder setResources(List<String> resources) {
+        public Builder resources(List<String> resources) {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
 
-        public Builder setRestrictedServices(List<String> restrictedServices) {
+        public Builder restrictedServices(List<String> restrictedServices) {
             this.restrictedServices = Objects.requireNonNull(restrictedServices);
             return this;
         }
 
-        public Builder setVpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
+        public Builder vpcAccessibleServices(VpcAccessibleServicesResponse vpcAccessibleServices) {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }

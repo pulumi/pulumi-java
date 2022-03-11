@@ -36,13 +36,13 @@ public final class CommandResponse {
      */
     private final List<String> waitFor;
 
-    @OutputCustomType.Constructor({"args","dir","env","name","waitFor"})
+    @OutputCustomType.Constructor
     private CommandResponse(
-        List<String> args,
-        String dir,
-        List<String> env,
-        String name,
-        List<String> waitFor) {
+        @OutputCustomType.Parameter("args") List<String> args,
+        @OutputCustomType.Parameter("dir") String dir,
+        @OutputCustomType.Parameter("env") List<String> env,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("waitFor") List<String> waitFor) {
         this.args = args;
         this.dir = dir;
         this.env = env;
@@ -114,27 +114,27 @@ public final class CommandResponse {
     	      this.waitFor = defaults.waitFor;
         }
 
-        public Builder setArgs(List<String> args) {
+        public Builder args(List<String> args) {
             this.args = Objects.requireNonNull(args);
             return this;
         }
 
-        public Builder setDir(String dir) {
+        public Builder dir(String dir) {
             this.dir = Objects.requireNonNull(dir);
             return this;
         }
 
-        public Builder setEnv(List<String> env) {
+        public Builder env(List<String> env) {
             this.env = Objects.requireNonNull(env);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setWaitFor(List<String> waitFor) {
+        public Builder waitFor(List<String> waitFor) {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }

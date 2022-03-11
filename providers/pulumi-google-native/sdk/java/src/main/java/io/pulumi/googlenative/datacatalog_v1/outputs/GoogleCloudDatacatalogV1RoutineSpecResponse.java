@@ -43,14 +43,14 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
      */
     private final String routineType;
 
-    @OutputCustomType.Constructor({"bigqueryRoutineSpec","definitionBody","language","returnType","routineArguments","routineType"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1RoutineSpecResponse(
-        GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
-        String definitionBody,
-        String language,
-        String returnType,
-        List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
-        String routineType) {
+        @OutputCustomType.Parameter("bigqueryRoutineSpec") GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec,
+        @OutputCustomType.Parameter("definitionBody") String definitionBody,
+        @OutputCustomType.Parameter("language") String language,
+        @OutputCustomType.Parameter("returnType") String returnType,
+        @OutputCustomType.Parameter("routineArguments") List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments,
+        @OutputCustomType.Parameter("routineType") String routineType) {
         this.bigqueryRoutineSpec = bigqueryRoutineSpec;
         this.definitionBody = definitionBody;
         this.language = language;
@@ -132,32 +132,32 @@ public final class GoogleCloudDatacatalogV1RoutineSpecResponse {
     	      this.routineType = defaults.routineType;
         }
 
-        public Builder setBigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec) {
+        public Builder bigqueryRoutineSpec(GoogleCloudDatacatalogV1BigQueryRoutineSpecResponse bigqueryRoutineSpec) {
             this.bigqueryRoutineSpec = Objects.requireNonNull(bigqueryRoutineSpec);
             return this;
         }
 
-        public Builder setDefinitionBody(String definitionBody) {
+        public Builder definitionBody(String definitionBody) {
             this.definitionBody = Objects.requireNonNull(definitionBody);
             return this;
         }
 
-        public Builder setLanguage(String language) {
+        public Builder language(String language) {
             this.language = Objects.requireNonNull(language);
             return this;
         }
 
-        public Builder setReturnType(String returnType) {
+        public Builder returnType(String returnType) {
             this.returnType = Objects.requireNonNull(returnType);
             return this;
         }
 
-        public Builder setRoutineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments) {
+        public Builder routineArguments(List<GoogleCloudDatacatalogV1RoutineSpecArgumentResponse> routineArguments) {
             this.routineArguments = Objects.requireNonNull(routineArguments);
             return this;
         }
 
-        public Builder setRoutineType(String routineType) {
+        public Builder routineType(String routineType) {
             this.routineType = Objects.requireNonNull(routineType);
             return this;
         }

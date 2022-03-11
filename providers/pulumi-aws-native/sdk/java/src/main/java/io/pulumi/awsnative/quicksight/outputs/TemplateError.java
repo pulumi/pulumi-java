@@ -19,10 +19,10 @@ public final class TemplateError {
     private final @Nullable String message;
     private final @Nullable TemplateErrorType type;
 
-    @OutputCustomType.Constructor({"message","type"})
+    @OutputCustomType.Constructor
     private TemplateError(
-        @Nullable String message,
-        @Nullable TemplateErrorType type) {
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("type") @Nullable TemplateErrorType type) {
         this.message = message;
         this.type = type;
     }
@@ -60,12 +60,12 @@ public final class TemplateError {
     	      this.type = defaults.type;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setType(@Nullable TemplateErrorType type) {
+        public Builder type(@Nullable TemplateErrorType type) {
             this.type = type;
             return this;
         }

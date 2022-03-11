@@ -90,17 +90,17 @@ public final class MetadataSourceResponse extends io.pulumi.resources.InvokeArgs
     	      this.sourceId = defaults.sourceId;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setSourceId(@Nullable String sourceId) {
+        public Builder sourceId(@Nullable String sourceId) {
             this.sourceId = sourceId;
             return this;
         }

@@ -86,32 +86,32 @@ public final class CertificateAuthorityCertificateAuthorityConfigurationGetArgs 
     	      this.subject = defaults.subject;
         }
 
-        public Builder setKeyAlgorithm(Input<String> keyAlgorithm) {
+        public Builder keyAlgorithm(Input<String> keyAlgorithm) {
             this.keyAlgorithm = Objects.requireNonNull(keyAlgorithm);
             return this;
         }
 
-        public Builder setKeyAlgorithm(String keyAlgorithm) {
+        public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = Input.of(Objects.requireNonNull(keyAlgorithm));
             return this;
         }
 
-        public Builder setSigningAlgorithm(Input<String> signingAlgorithm) {
+        public Builder signingAlgorithm(Input<String> signingAlgorithm) {
             this.signingAlgorithm = Objects.requireNonNull(signingAlgorithm);
             return this;
         }
 
-        public Builder setSigningAlgorithm(String signingAlgorithm) {
+        public Builder signingAlgorithm(String signingAlgorithm) {
             this.signingAlgorithm = Input.of(Objects.requireNonNull(signingAlgorithm));
             return this;
         }
 
-        public Builder setSubject(Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
+        public Builder subject(Input<CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs> subject) {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
 
-        public Builder setSubject(CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs subject) {
+        public Builder subject(CertificateAuthorityCertificateAuthorityConfigurationSubjectGetArgs subject) {
             this.subject = Input.of(Objects.requireNonNull(subject));
             return this;
         }

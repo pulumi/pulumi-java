@@ -28,11 +28,11 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
      */
     private final String imageUri;
 
-    @OutputCustomType.Constructor({"configUri","environment","imageUri"})
+    @OutputCustomType.Constructor
     private ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification(
-        String configUri,
-        @Nullable Object environment,
-        String imageUri) {
+        @OutputCustomType.Parameter("configUri") String configUri,
+        @OutputCustomType.Parameter("environment") @Nullable Object environment,
+        @OutputCustomType.Parameter("imageUri") String imageUri) {
         this.configUri = configUri;
         this.environment = environment;
         this.imageUri = imageUri;
@@ -84,17 +84,17 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
     	      this.imageUri = defaults.imageUri;
         }
 
-        public Builder setConfigUri(String configUri) {
+        public Builder configUri(String configUri) {
             this.configUri = Objects.requireNonNull(configUri);
             return this;
         }
 
-        public Builder setEnvironment(@Nullable Object environment) {
+        public Builder environment(@Nullable Object environment) {
             this.environment = environment;
             return this;
         }
 
-        public Builder setImageUri(String imageUri) {
+        public Builder imageUri(String imageUri) {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }

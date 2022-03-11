@@ -13,10 +13,10 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
     private final ArtifactHashesResponse hashes;
     private final String resourceUri;
 
-    @OutputCustomType.Constructor({"hashes","resourceUri"})
+    @OutputCustomType.Constructor
     private GrafeasV1beta1IntotoArtifactResponse(
-        ArtifactHashesResponse hashes,
-        String resourceUri) {
+        @OutputCustomType.Parameter("hashes") ArtifactHashesResponse hashes,
+        @OutputCustomType.Parameter("resourceUri") String resourceUri) {
         this.hashes = hashes;
         this.resourceUri = resourceUri;
     }
@@ -50,12 +50,12 @@ public final class GrafeasV1beta1IntotoArtifactResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setHashes(ArtifactHashesResponse hashes) {
+        public Builder hashes(ArtifactHashesResponse hashes) {
             this.hashes = Objects.requireNonNull(hashes);
             return this;
         }
 
-        public Builder setResourceUri(String resourceUri) {
+        public Builder resourceUri(String resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

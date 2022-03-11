@@ -28,11 +28,11 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
      */
     private final @Nullable String startCommand;
 
-    @OutputCustomType.Constructor({"port","runtimeEnvironmentVariables","startCommand"})
+    @OutputCustomType.Constructor
     private ServiceSourceConfigurationImageRepositoryImageConfiguration(
-        @Nullable String port,
-        @Nullable Map<String,String> runtimeEnvironmentVariables,
-        @Nullable String startCommand) {
+        @OutputCustomType.Parameter("port") @Nullable String port,
+        @OutputCustomType.Parameter("runtimeEnvironmentVariables") @Nullable Map<String,String> runtimeEnvironmentVariables,
+        @OutputCustomType.Parameter("startCommand") @Nullable String startCommand) {
         this.port = port;
         this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
         this.startCommand = startCommand;
@@ -84,17 +84,17 @@ public final class ServiceSourceConfigurationImageRepositoryImageConfiguration {
     	      this.startCommand = defaults.startCommand;
         }
 
-        public Builder setPort(@Nullable String port) {
+        public Builder port(@Nullable String port) {
             this.port = port;
             return this;
         }
 
-        public Builder setRuntimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
+        public Builder runtimeEnvironmentVariables(@Nullable Map<String,String> runtimeEnvironmentVariables) {
             this.runtimeEnvironmentVariables = runtimeEnvironmentVariables;
             return this;
         }
 
-        public Builder setStartCommand(@Nullable String startCommand) {
+        public Builder startCommand(@Nullable String startCommand) {
             this.startCommand = startCommand;
             return this;
         }

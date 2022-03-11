@@ -25,11 +25,11 @@ public final class KeyVaultMetaInfoResponse {
      */
     private final String keyVaultResourceId;
 
-    @OutputCustomType.Constructor({"encryptionKeyName","encryptionKeyVersion","keyVaultResourceId"})
+    @OutputCustomType.Constructor
     private KeyVaultMetaInfoResponse(
-        String encryptionKeyName,
-        String encryptionKeyVersion,
-        String keyVaultResourceId) {
+        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @OutputCustomType.Parameter("encryptionKeyVersion") String encryptionKeyVersion,
+        @OutputCustomType.Parameter("keyVaultResourceId") String keyVaultResourceId) {
         this.encryptionKeyName = encryptionKeyName;
         this.encryptionKeyVersion = encryptionKeyVersion;
         this.keyVaultResourceId = keyVaultResourceId;
@@ -81,17 +81,17 @@ public final class KeyVaultMetaInfoResponse {
     	      this.keyVaultResourceId = defaults.keyVaultResourceId;
         }
 
-        public Builder setEncryptionKeyName(String encryptionKeyName) {
+        public Builder encryptionKeyName(String encryptionKeyName) {
             this.encryptionKeyName = Objects.requireNonNull(encryptionKeyName);
             return this;
         }
 
-        public Builder setEncryptionKeyVersion(String encryptionKeyVersion) {
+        public Builder encryptionKeyVersion(String encryptionKeyVersion) {
             this.encryptionKeyVersion = Objects.requireNonNull(encryptionKeyVersion);
             return this;
         }
 
-        public Builder setKeyVaultResourceId(String keyVaultResourceId) {
+        public Builder keyVaultResourceId(String keyVaultResourceId) {
             this.keyVaultResourceId = Objects.requireNonNull(keyVaultResourceId);
             return this;
         }

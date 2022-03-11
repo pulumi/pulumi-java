@@ -33,12 +33,12 @@ public final class KeyEncryptionKeyResponse {
      */
     private final @Nullable String kekVaultResourceID;
 
-    @OutputCustomType.Constructor({"identityProperties","kekType","kekUrl","kekVaultResourceID"})
+    @OutputCustomType.Constructor
     private KeyEncryptionKeyResponse(
-        @Nullable IdentityPropertiesResponse identityProperties,
-        String kekType,
-        @Nullable String kekUrl,
-        @Nullable String kekVaultResourceID) {
+        @OutputCustomType.Parameter("identityProperties") @Nullable IdentityPropertiesResponse identityProperties,
+        @OutputCustomType.Parameter("kekType") String kekType,
+        @OutputCustomType.Parameter("kekUrl") @Nullable String kekUrl,
+        @OutputCustomType.Parameter("kekVaultResourceID") @Nullable String kekVaultResourceID) {
         this.identityProperties = identityProperties;
         this.kekType = kekType;
         this.kekUrl = kekUrl;
@@ -100,22 +100,22 @@ public final class KeyEncryptionKeyResponse {
     	      this.kekVaultResourceID = defaults.kekVaultResourceID;
         }
 
-        public Builder setIdentityProperties(@Nullable IdentityPropertiesResponse identityProperties) {
+        public Builder identityProperties(@Nullable IdentityPropertiesResponse identityProperties) {
             this.identityProperties = identityProperties;
             return this;
         }
 
-        public Builder setKekType(String kekType) {
+        public Builder kekType(String kekType) {
             this.kekType = Objects.requireNonNull(kekType);
             return this;
         }
 
-        public Builder setKekUrl(@Nullable String kekUrl) {
+        public Builder kekUrl(@Nullable String kekUrl) {
             this.kekUrl = kekUrl;
             return this;
         }
 
-        public Builder setKekVaultResourceID(@Nullable String kekVaultResourceID) {
+        public Builder kekVaultResourceID(@Nullable String kekVaultResourceID) {
             this.kekVaultResourceID = kekVaultResourceID;
             return this;
         }

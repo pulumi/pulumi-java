@@ -23,11 +23,11 @@ public final class GetOrganizationalUnitsResult {
     private final String id;
     private final String parentId;
 
-    @OutputCustomType.Constructor({"childrens","id","parentId"})
+    @OutputCustomType.Constructor
     private GetOrganizationalUnitsResult(
-        List<GetOrganizationalUnitsChildren> childrens,
-        String id,
-        String parentId) {
+        @OutputCustomType.Parameter("childrens") List<GetOrganizationalUnitsChildren> childrens,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parentId") String parentId) {
         this.childrens = childrens;
         this.id = id;
         this.parentId = parentId;
@@ -75,17 +75,17 @@ public final class GetOrganizationalUnitsResult {
     	      this.parentId = defaults.parentId;
         }
 
-        public Builder setChildrens(List<GetOrganizationalUnitsChildren> childrens) {
+        public Builder childrens(List<GetOrganizationalUnitsChildren> childrens) {
             this.childrens = Objects.requireNonNull(childrens);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParentId(String parentId) {
+        public Builder parentId(String parentId) {
             this.parentId = Objects.requireNonNull(parentId);
             return this;
         }

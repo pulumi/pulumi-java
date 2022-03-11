@@ -47,14 +47,14 @@ public final class CustomResourceDefinitionSpec {
      */
     private final List<CustomResourceDefinitionVersion> versions;
 
-    @OutputCustomType.Constructor({"conversion","group","names","preserveUnknownFields","scope","versions"})
+    @OutputCustomType.Constructor
     private CustomResourceDefinitionSpec(
-        @Nullable CustomResourceConversion conversion,
-        String group,
-        CustomResourceDefinitionNames names,
-        @Nullable Boolean preserveUnknownFields,
-        String scope,
-        List<CustomResourceDefinitionVersion> versions) {
+        @OutputCustomType.Parameter("conversion") @Nullable CustomResourceConversion conversion,
+        @OutputCustomType.Parameter("group") String group,
+        @OutputCustomType.Parameter("names") CustomResourceDefinitionNames names,
+        @OutputCustomType.Parameter("preserveUnknownFields") @Nullable Boolean preserveUnknownFields,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("versions") List<CustomResourceDefinitionVersion> versions) {
         this.conversion = conversion;
         this.group = group;
         this.names = names;
@@ -136,32 +136,32 @@ public final class CustomResourceDefinitionSpec {
     	      this.versions = defaults.versions;
         }
 
-        public Builder setConversion(@Nullable CustomResourceConversion conversion) {
+        public Builder conversion(@Nullable CustomResourceConversion conversion) {
             this.conversion = conversion;
             return this;
         }
 
-        public Builder setGroup(String group) {
+        public Builder group(String group) {
             this.group = Objects.requireNonNull(group);
             return this;
         }
 
-        public Builder setNames(CustomResourceDefinitionNames names) {
+        public Builder names(CustomResourceDefinitionNames names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPreserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
+        public Builder preserveUnknownFields(@Nullable Boolean preserveUnknownFields) {
             this.preserveUnknownFields = preserveUnknownFields;
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setVersions(List<CustomResourceDefinitionVersion> versions) {
+        public Builder versions(List<CustomResourceDefinitionVersion> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }

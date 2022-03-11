@@ -25,13 +25,13 @@ public final class CIFSMountConfigurationResponse {
     private final String source;
     private final String username;
 
-    @OutputCustomType.Constructor({"mountOptions","password","relativeMountPath","source","username"})
+    @OutputCustomType.Constructor
     private CIFSMountConfigurationResponse(
-        @Nullable String mountOptions,
-        String password,
-        String relativeMountPath,
-        String source,
-        String username) {
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("password") String password,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("username") String username) {
         this.mountOptions = mountOptions;
         this.password = password;
         this.relativeMountPath = relativeMountPath;
@@ -91,27 +91,27 @@ public final class CIFSMountConfigurationResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setPassword(String password) {
+        public Builder password(String password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setUsername(String username) {
+        public Builder username(String username) {
             this.username = Objects.requireNonNull(username);
             return this;
         }

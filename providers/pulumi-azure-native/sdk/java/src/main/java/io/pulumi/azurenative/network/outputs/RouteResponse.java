@@ -58,17 +58,17 @@ public final class RouteResponse {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"addressPrefix","etag","hasBgpOverride","id","name","nextHopIpAddress","nextHopType","provisioningState","type"})
+    @OutputCustomType.Constructor
     private RouteResponse(
-        @Nullable String addressPrefix,
-        String etag,
-        @Nullable Boolean hasBgpOverride,
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String nextHopIpAddress,
-        String nextHopType,
-        String provisioningState,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("addressPrefix") @Nullable String addressPrefix,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hasBgpOverride") @Nullable Boolean hasBgpOverride,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("nextHopIpAddress") @Nullable String nextHopIpAddress,
+        @OutputCustomType.Parameter("nextHopType") String nextHopType,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.addressPrefix = addressPrefix;
         this.etag = etag;
         this.hasBgpOverride = hasBgpOverride;
@@ -180,47 +180,47 @@ public final class RouteResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddressPrefix(@Nullable String addressPrefix) {
+        public Builder addressPrefix(@Nullable String addressPrefix) {
             this.addressPrefix = addressPrefix;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHasBgpOverride(@Nullable Boolean hasBgpOverride) {
+        public Builder hasBgpOverride(@Nullable Boolean hasBgpOverride) {
             this.hasBgpOverride = hasBgpOverride;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setNextHopIpAddress(@Nullable String nextHopIpAddress) {
+        public Builder nextHopIpAddress(@Nullable String nextHopIpAddress) {
             this.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
-        public Builder setNextHopType(String nextHopType) {
+        public Builder nextHopType(String nextHopType) {
             this.nextHopType = Objects.requireNonNull(nextHopType);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

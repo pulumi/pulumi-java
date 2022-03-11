@@ -23,10 +23,10 @@ public final class InstanceNetworkConfig {
      */
     private final String network;
 
-    @OutputCustomType.Constructor({"ipAllocation","network"})
+    @OutputCustomType.Constructor
     private InstanceNetworkConfig(
-        String ipAllocation,
-        String network) {
+        @OutputCustomType.Parameter("ipAllocation") String ipAllocation,
+        @OutputCustomType.Parameter("network") String network) {
         this.ipAllocation = ipAllocation;
         this.network = network;
     }
@@ -71,12 +71,12 @@ public final class InstanceNetworkConfig {
     	      this.network = defaults.network;
         }
 
-        public Builder setIpAllocation(String ipAllocation) {
+        public Builder ipAllocation(String ipAllocation) {
             this.ipAllocation = Objects.requireNonNull(ipAllocation);
             return this;
         }
 
-        public Builder setNetwork(String network) {
+        public Builder network(String network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }

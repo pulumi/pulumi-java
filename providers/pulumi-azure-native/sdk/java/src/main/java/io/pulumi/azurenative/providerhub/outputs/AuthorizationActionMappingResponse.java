@@ -14,10 +14,10 @@ public final class AuthorizationActionMappingResponse {
     private final @Nullable String desired;
     private final @Nullable String original;
 
-    @OutputCustomType.Constructor({"desired","original"})
+    @OutputCustomType.Constructor
     private AuthorizationActionMappingResponse(
-        @Nullable String desired,
-        @Nullable String original) {
+        @OutputCustomType.Parameter("desired") @Nullable String desired,
+        @OutputCustomType.Parameter("original") @Nullable String original) {
         this.desired = desired;
         this.original = original;
     }
@@ -51,12 +51,12 @@ public final class AuthorizationActionMappingResponse {
     	      this.original = defaults.original;
         }
 
-        public Builder setDesired(@Nullable String desired) {
+        public Builder desired(@Nullable String desired) {
             this.desired = desired;
             return this;
         }
 
-        public Builder setOriginal(@Nullable String original) {
+        public Builder original(@Nullable String original) {
             this.original = original;
             return this;
         }

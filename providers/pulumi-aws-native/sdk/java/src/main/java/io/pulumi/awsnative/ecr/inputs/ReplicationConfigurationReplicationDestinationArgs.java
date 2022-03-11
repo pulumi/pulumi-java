@@ -65,22 +65,22 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
     	      this.registryId = defaults.registryId;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
 
-        public Builder setRegistryId(Input<String> registryId) {
+        public Builder registryId(Input<String> registryId) {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
 
-        public Builder setRegistryId(String registryId) {
+        public Builder registryId(String registryId) {
             this.registryId = Input.of(Objects.requireNonNull(registryId));
             return this;
         }

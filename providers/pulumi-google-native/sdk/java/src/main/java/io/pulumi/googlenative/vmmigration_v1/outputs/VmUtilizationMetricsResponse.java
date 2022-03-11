@@ -51,16 +51,16 @@ public final class VmUtilizationMetricsResponse {
      */
     private final String networkThroughputMaxKbps;
 
-    @OutputCustomType.Constructor({"cpuAveragePercent","cpuMaxPercent","diskIoRateAverageKbps","diskIoRateMaxKbps","memoryAveragePercent","memoryMaxPercent","networkThroughputAverageKbps","networkThroughputMaxKbps"})
+    @OutputCustomType.Constructor
     private VmUtilizationMetricsResponse(
-        Integer cpuAveragePercent,
-        Integer cpuMaxPercent,
-        String diskIoRateAverageKbps,
-        String diskIoRateMaxKbps,
-        Integer memoryAveragePercent,
-        Integer memoryMaxPercent,
-        String networkThroughputAverageKbps,
-        String networkThroughputMaxKbps) {
+        @OutputCustomType.Parameter("cpuAveragePercent") Integer cpuAveragePercent,
+        @OutputCustomType.Parameter("cpuMaxPercent") Integer cpuMaxPercent,
+        @OutputCustomType.Parameter("diskIoRateAverageKbps") String diskIoRateAverageKbps,
+        @OutputCustomType.Parameter("diskIoRateMaxKbps") String diskIoRateMaxKbps,
+        @OutputCustomType.Parameter("memoryAveragePercent") Integer memoryAveragePercent,
+        @OutputCustomType.Parameter("memoryMaxPercent") Integer memoryMaxPercent,
+        @OutputCustomType.Parameter("networkThroughputAverageKbps") String networkThroughputAverageKbps,
+        @OutputCustomType.Parameter("networkThroughputMaxKbps") String networkThroughputMaxKbps) {
         this.cpuAveragePercent = cpuAveragePercent;
         this.cpuMaxPercent = cpuMaxPercent;
         this.diskIoRateAverageKbps = diskIoRateAverageKbps;
@@ -162,42 +162,42 @@ public final class VmUtilizationMetricsResponse {
     	      this.networkThroughputMaxKbps = defaults.networkThroughputMaxKbps;
         }
 
-        public Builder setCpuAveragePercent(Integer cpuAveragePercent) {
+        public Builder cpuAveragePercent(Integer cpuAveragePercent) {
             this.cpuAveragePercent = Objects.requireNonNull(cpuAveragePercent);
             return this;
         }
 
-        public Builder setCpuMaxPercent(Integer cpuMaxPercent) {
+        public Builder cpuMaxPercent(Integer cpuMaxPercent) {
             this.cpuMaxPercent = Objects.requireNonNull(cpuMaxPercent);
             return this;
         }
 
-        public Builder setDiskIoRateAverageKbps(String diskIoRateAverageKbps) {
+        public Builder diskIoRateAverageKbps(String diskIoRateAverageKbps) {
             this.diskIoRateAverageKbps = Objects.requireNonNull(diskIoRateAverageKbps);
             return this;
         }
 
-        public Builder setDiskIoRateMaxKbps(String diskIoRateMaxKbps) {
+        public Builder diskIoRateMaxKbps(String diskIoRateMaxKbps) {
             this.diskIoRateMaxKbps = Objects.requireNonNull(diskIoRateMaxKbps);
             return this;
         }
 
-        public Builder setMemoryAveragePercent(Integer memoryAveragePercent) {
+        public Builder memoryAveragePercent(Integer memoryAveragePercent) {
             this.memoryAveragePercent = Objects.requireNonNull(memoryAveragePercent);
             return this;
         }
 
-        public Builder setMemoryMaxPercent(Integer memoryMaxPercent) {
+        public Builder memoryMaxPercent(Integer memoryMaxPercent) {
             this.memoryMaxPercent = Objects.requireNonNull(memoryMaxPercent);
             return this;
         }
 
-        public Builder setNetworkThroughputAverageKbps(String networkThroughputAverageKbps) {
+        public Builder networkThroughputAverageKbps(String networkThroughputAverageKbps) {
             this.networkThroughputAverageKbps = Objects.requireNonNull(networkThroughputAverageKbps);
             return this;
         }
 
-        public Builder setNetworkThroughputMaxKbps(String networkThroughputMaxKbps) {
+        public Builder networkThroughputMaxKbps(String networkThroughputMaxKbps) {
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }

@@ -15,11 +15,11 @@ public final class SigningJobRevocationRecord {
     private final @Nullable String revokedAt;
     private final @Nullable String revokedBy;
 
-    @OutputCustomType.Constructor({"reason","revokedAt","revokedBy"})
+    @OutputCustomType.Constructor
     private SigningJobRevocationRecord(
-        @Nullable String reason,
-        @Nullable String revokedAt,
-        @Nullable String revokedBy) {
+        @OutputCustomType.Parameter("reason") @Nullable String reason,
+        @OutputCustomType.Parameter("revokedAt") @Nullable String revokedAt,
+        @OutputCustomType.Parameter("revokedBy") @Nullable String revokedBy) {
         this.reason = reason;
         this.revokedAt = revokedAt;
         this.revokedBy = revokedBy;
@@ -59,17 +59,17 @@ public final class SigningJobRevocationRecord {
     	      this.revokedBy = defaults.revokedBy;
         }
 
-        public Builder setReason(@Nullable String reason) {
+        public Builder reason(@Nullable String reason) {
             this.reason = reason;
             return this;
         }
 
-        public Builder setRevokedAt(@Nullable String revokedAt) {
+        public Builder revokedAt(@Nullable String revokedAt) {
             this.revokedAt = revokedAt;
             return this;
         }
 
-        public Builder setRevokedBy(@Nullable String revokedBy) {
+        public Builder revokedBy(@Nullable String revokedBy) {
             this.revokedBy = revokedBy;
             return this;
         }

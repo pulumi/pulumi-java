@@ -17,8 +17,8 @@ public final class ClusterCertificateAuthority {
      */
     private final @Nullable String data;
 
-    @OutputCustomType.Constructor({"data"})
-    private ClusterCertificateAuthority(@Nullable String data) {
+    @OutputCustomType.Constructor
+    private ClusterCertificateAuthority(@OutputCustomType.Parameter("data") @Nullable String data) {
         this.data = data;
     }
 
@@ -50,7 +50,7 @@ public final class ClusterCertificateAuthority {
     	      this.data = defaults.data;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }

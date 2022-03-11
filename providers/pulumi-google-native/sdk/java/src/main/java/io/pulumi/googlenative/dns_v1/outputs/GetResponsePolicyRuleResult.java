@@ -32,13 +32,13 @@ public final class GetResponsePolicyRuleResult {
      */
     private final String ruleName;
 
-    @OutputCustomType.Constructor({"behavior","dnsName","kind","localData","ruleName"})
+    @OutputCustomType.Constructor
     private GetResponsePolicyRuleResult(
-        String behavior,
-        String dnsName,
-        String kind,
-        ResponsePolicyRuleLocalDataResponse localData,
-        String ruleName) {
+        @OutputCustomType.Parameter("behavior") String behavior,
+        @OutputCustomType.Parameter("dnsName") String dnsName,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("localData") ResponsePolicyRuleLocalDataResponse localData,
+        @OutputCustomType.Parameter("ruleName") String ruleName) {
         this.behavior = behavior;
         this.dnsName = dnsName;
         this.kind = kind;
@@ -106,27 +106,27 @@ public final class GetResponsePolicyRuleResult {
     	      this.ruleName = defaults.ruleName;
         }
 
-        public Builder setBehavior(String behavior) {
+        public Builder behavior(String behavior) {
             this.behavior = Objects.requireNonNull(behavior);
             return this;
         }
 
-        public Builder setDnsName(String dnsName) {
+        public Builder dnsName(String dnsName) {
             this.dnsName = Objects.requireNonNull(dnsName);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setLocalData(ResponsePolicyRuleLocalDataResponse localData) {
+        public Builder localData(ResponsePolicyRuleLocalDataResponse localData) {
             this.localData = Objects.requireNonNull(localData);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }

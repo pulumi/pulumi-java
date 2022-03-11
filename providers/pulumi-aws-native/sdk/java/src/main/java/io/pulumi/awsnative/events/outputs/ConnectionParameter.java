@@ -16,11 +16,11 @@ public final class ConnectionParameter {
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor({"isValueSecret","key","value"})
+    @OutputCustomType.Constructor
     private ConnectionParameter(
-        @Nullable Boolean isValueSecret,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("isValueSecret") @Nullable Boolean isValueSecret,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.isValueSecret = isValueSecret;
         this.key = key;
         this.value = value;
@@ -60,17 +60,17 @@ public final class ConnectionParameter {
     	      this.value = defaults.value;
         }
 
-        public Builder setIsValueSecret(@Nullable Boolean isValueSecret) {
+        public Builder isValueSecret(@Nullable Boolean isValueSecret) {
             this.isValueSecret = isValueSecret;
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

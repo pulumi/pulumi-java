@@ -43,14 +43,14 @@ public final class ServiceProviderPropertiesResponse {
      */
     private final String serviceProviderName;
 
-    @OutputCustomType.Constructor({"devPortalUrl","displayName","iconUrl","id","parameters","serviceProviderName"})
+    @OutputCustomType.Constructor
     private ServiceProviderPropertiesResponse(
-        String devPortalUrl,
-        String displayName,
-        String iconUrl,
-        String id,
-        @Nullable List<ServiceProviderParameterResponse> parameters,
-        String serviceProviderName) {
+        @OutputCustomType.Parameter("devPortalUrl") String devPortalUrl,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("iconUrl") String iconUrl,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ServiceProviderParameterResponse> parameters,
+        @OutputCustomType.Parameter("serviceProviderName") String serviceProviderName) {
         this.devPortalUrl = devPortalUrl;
         this.displayName = displayName;
         this.iconUrl = iconUrl;
@@ -132,32 +132,32 @@ public final class ServiceProviderPropertiesResponse {
     	      this.serviceProviderName = defaults.serviceProviderName;
         }
 
-        public Builder setDevPortalUrl(String devPortalUrl) {
+        public Builder devPortalUrl(String devPortalUrl) {
             this.devPortalUrl = Objects.requireNonNull(devPortalUrl);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setIconUrl(String iconUrl) {
+        public Builder iconUrl(String iconUrl) {
             this.iconUrl = Objects.requireNonNull(iconUrl);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ServiceProviderParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<ServiceProviderParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setServiceProviderName(String serviceProviderName) {
+        public Builder serviceProviderName(String serviceProviderName) {
             this.serviceProviderName = Objects.requireNonNull(serviceProviderName);
             return this;
         }

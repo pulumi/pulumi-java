@@ -21,10 +21,10 @@ public final class ImageRecipeComponentParameter {
      */
     private final List<String> value;
 
-    @OutputCustomType.Constructor({"name","value"})
+    @OutputCustomType.Constructor
     private ImageRecipeComponentParameter(
-        String name,
-        List<String> value) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("value") List<String> value) {
         this.name = name;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class ImageRecipeComponentParameter {
     	      this.value = defaults.value;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setValue(List<String> value) {
+        public Builder value(List<String> value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

@@ -21,13 +21,13 @@ public final class GetPackageResult {
     private final @Nullable PackageStorageLocation storageLocation;
     private final @Nullable List<PackageTag> tags;
 
-    @OutputCustomType.Constructor({"arn","createdTime","packageId","storageLocation","tags"})
+    @OutputCustomType.Constructor
     private GetPackageResult(
-        @Nullable String arn,
-        @Nullable Integer createdTime,
-        @Nullable String packageId,
-        @Nullable PackageStorageLocation storageLocation,
-        @Nullable List<PackageTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable Integer createdTime,
+        @OutputCustomType.Parameter("packageId") @Nullable String packageId,
+        @OutputCustomType.Parameter("storageLocation") @Nullable PackageStorageLocation storageLocation,
+        @OutputCustomType.Parameter("tags") @Nullable List<PackageTag> tags) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.packageId = packageId;
@@ -79,27 +79,27 @@ public final class GetPackageResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Integer createdTime) {
+        public Builder createdTime(@Nullable Integer createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setPackageId(@Nullable String packageId) {
+        public Builder packageId(@Nullable String packageId) {
             this.packageId = packageId;
             return this;
         }
 
-        public Builder setStorageLocation(@Nullable PackageStorageLocation storageLocation) {
+        public Builder storageLocation(@Nullable PackageStorageLocation storageLocation) {
             this.storageLocation = storageLocation;
             return this;
         }
 
-        public Builder setTags(@Nullable List<PackageTag> tags) {
+        public Builder tags(@Nullable List<PackageTag> tags) {
             this.tags = tags;
             return this;
         }

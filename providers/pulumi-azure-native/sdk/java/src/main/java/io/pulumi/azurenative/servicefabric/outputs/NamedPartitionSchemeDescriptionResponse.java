@@ -28,11 +28,11 @@ public final class NamedPartitionSchemeDescriptionResponse {
      */
     private final String partitionScheme;
 
-    @OutputCustomType.Constructor({"count","names","partitionScheme"})
+    @OutputCustomType.Constructor
     private NamedPartitionSchemeDescriptionResponse(
-        Integer count,
-        List<String> names,
-        String partitionScheme) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("names") List<String> names,
+        @OutputCustomType.Parameter("partitionScheme") String partitionScheme) {
         this.count = count;
         this.names = names;
         this.partitionScheme = partitionScheme;
@@ -85,17 +85,17 @@ public final class NamedPartitionSchemeDescriptionResponse {
     	      this.partitionScheme = defaults.partitionScheme;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setNames(List<String> names) {
+        public Builder names(List<String> names) {
             this.names = Objects.requireNonNull(names);
             return this;
         }
 
-        public Builder setPartitionScheme(String partitionScheme) {
+        public Builder partitionScheme(String partitionScheme) {
             this.partitionScheme = Objects.requireNonNull(partitionScheme);
             return this;
         }

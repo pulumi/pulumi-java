@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class FlowAmplitudeSourceProperties {
     private final String object;
 
-    @OutputCustomType.Constructor({"object"})
-    private FlowAmplitudeSourceProperties(String object) {
+    @OutputCustomType.Constructor
+    private FlowAmplitudeSourceProperties(@OutputCustomType.Parameter("object") String object) {
         this.object = object;
     }
 
@@ -40,7 +40,7 @@ public final class FlowAmplitudeSourceProperties {
     	      this.object = defaults.object;
         }
 
-        public Builder setObject(String object) {
+        public Builder object(String object) {
             this.object = Objects.requireNonNull(object);
             return this;
         }

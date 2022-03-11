@@ -34,11 +34,11 @@ public final class JobPubsubTarget {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor({"attributes","data","topicName"})
+    @OutputCustomType.Constructor
     private JobPubsubTarget(
-        @Nullable Map<String,String> attributes,
-        @Nullable String data,
-        String topicName) {
+        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;
@@ -96,17 +96,17 @@ public final class JobPubsubTarget {
     	      this.topicName = defaults.topicName;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-        public Builder setTopicName(String topicName) {
+        public Builder topicName(String topicName) {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }

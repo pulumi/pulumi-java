@@ -22,14 +22,14 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
     private final @Nullable String componentVersion;
     private final @Nullable String lambdaArn;
 
-    @OutputCustomType.Constructor({"componentDependencies","componentLambdaParameters","componentName","componentPlatforms","componentVersion","lambdaArn"})
+    @OutputCustomType.Constructor
     private ComponentVersionLambdaFunctionRecipeSource(
-        @Nullable Object componentDependencies,
-        @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
-        @Nullable String componentName,
-        @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
-        @Nullable String componentVersion,
-        @Nullable String lambdaArn) {
+        @OutputCustomType.Parameter("componentDependencies") @Nullable Object componentDependencies,
+        @OutputCustomType.Parameter("componentLambdaParameters") @Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters,
+        @OutputCustomType.Parameter("componentName") @Nullable String componentName,
+        @OutputCustomType.Parameter("componentPlatforms") @Nullable List<ComponentVersionComponentPlatform> componentPlatforms,
+        @OutputCustomType.Parameter("componentVersion") @Nullable String componentVersion,
+        @OutputCustomType.Parameter("lambdaArn") @Nullable String lambdaArn) {
         this.componentDependencies = componentDependencies;
         this.componentLambdaParameters = componentLambdaParameters;
         this.componentName = componentName;
@@ -87,32 +87,32 @@ public final class ComponentVersionLambdaFunctionRecipeSource {
     	      this.lambdaArn = defaults.lambdaArn;
         }
 
-        public Builder setComponentDependencies(@Nullable Object componentDependencies) {
+        public Builder componentDependencies(@Nullable Object componentDependencies) {
             this.componentDependencies = componentDependencies;
             return this;
         }
 
-        public Builder setComponentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters) {
+        public Builder componentLambdaParameters(@Nullable ComponentVersionLambdaExecutionParameters componentLambdaParameters) {
             this.componentLambdaParameters = componentLambdaParameters;
             return this;
         }
 
-        public Builder setComponentName(@Nullable String componentName) {
+        public Builder componentName(@Nullable String componentName) {
             this.componentName = componentName;
             return this;
         }
 
-        public Builder setComponentPlatforms(@Nullable List<ComponentVersionComponentPlatform> componentPlatforms) {
+        public Builder componentPlatforms(@Nullable List<ComponentVersionComponentPlatform> componentPlatforms) {
             this.componentPlatforms = componentPlatforms;
             return this;
         }
 
-        public Builder setComponentVersion(@Nullable String componentVersion) {
+        public Builder componentVersion(@Nullable String componentVersion) {
             this.componentVersion = componentVersion;
             return this;
         }
 
-        public Builder setLambdaArn(@Nullable String lambdaArn) {
+        public Builder lambdaArn(@Nullable String lambdaArn) {
             this.lambdaArn = lambdaArn;
             return this;
         }

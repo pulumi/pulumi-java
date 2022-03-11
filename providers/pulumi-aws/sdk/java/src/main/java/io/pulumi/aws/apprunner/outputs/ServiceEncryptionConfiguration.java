@@ -15,8 +15,8 @@ public final class ServiceEncryptionConfiguration {
      */
     private final String kmsKey;
 
-    @OutputCustomType.Constructor({"kmsKey"})
-    private ServiceEncryptionConfiguration(String kmsKey) {
+    @OutputCustomType.Constructor
+    private ServiceEncryptionConfiguration(@OutputCustomType.Parameter("kmsKey") String kmsKey) {
         this.kmsKey = kmsKey;
     }
 
@@ -48,7 +48,7 @@ public final class ServiceEncryptionConfiguration {
     	      this.kmsKey = defaults.kmsKey;
         }
 
-        public Builder setKmsKey(String kmsKey) {
+        public Builder kmsKey(String kmsKey) {
             this.kmsKey = Objects.requireNonNull(kmsKey);
             return this;
         }

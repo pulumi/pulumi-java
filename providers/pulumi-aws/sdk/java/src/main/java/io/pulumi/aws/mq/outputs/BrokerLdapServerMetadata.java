@@ -69,19 +69,19 @@ public final class BrokerLdapServerMetadata {
      */
     private final @Nullable Boolean userSearchSubtree;
 
-    @OutputCustomType.Constructor({"hosts","roleBase","roleName","roleSearchMatching","roleSearchSubtree","serviceAccountPassword","serviceAccountUsername","userBase","userRoleName","userSearchMatching","userSearchSubtree"})
+    @OutputCustomType.Constructor
     private BrokerLdapServerMetadata(
-        @Nullable List<String> hosts,
-        @Nullable String roleBase,
-        @Nullable String roleName,
-        @Nullable String roleSearchMatching,
-        @Nullable Boolean roleSearchSubtree,
-        @Nullable String serviceAccountPassword,
-        @Nullable String serviceAccountUsername,
-        @Nullable String userBase,
-        @Nullable String userRoleName,
-        @Nullable String userSearchMatching,
-        @Nullable Boolean userSearchSubtree) {
+        @OutputCustomType.Parameter("hosts") @Nullable List<String> hosts,
+        @OutputCustomType.Parameter("roleBase") @Nullable String roleBase,
+        @OutputCustomType.Parameter("roleName") @Nullable String roleName,
+        @OutputCustomType.Parameter("roleSearchMatching") @Nullable String roleSearchMatching,
+        @OutputCustomType.Parameter("roleSearchSubtree") @Nullable Boolean roleSearchSubtree,
+        @OutputCustomType.Parameter("serviceAccountPassword") @Nullable String serviceAccountPassword,
+        @OutputCustomType.Parameter("serviceAccountUsername") @Nullable String serviceAccountUsername,
+        @OutputCustomType.Parameter("userBase") @Nullable String userBase,
+        @OutputCustomType.Parameter("userRoleName") @Nullable String userRoleName,
+        @OutputCustomType.Parameter("userSearchMatching") @Nullable String userSearchMatching,
+        @OutputCustomType.Parameter("userSearchSubtree") @Nullable Boolean userSearchSubtree) {
         this.hosts = hosts;
         this.roleBase = roleBase;
         this.roleName = roleName;
@@ -213,57 +213,57 @@ public final class BrokerLdapServerMetadata {
     	      this.userSearchSubtree = defaults.userSearchSubtree;
         }
 
-        public Builder setHosts(@Nullable List<String> hosts) {
+        public Builder hosts(@Nullable List<String> hosts) {
             this.hosts = hosts;
             return this;
         }
 
-        public Builder setRoleBase(@Nullable String roleBase) {
+        public Builder roleBase(@Nullable String roleBase) {
             this.roleBase = roleBase;
             return this;
         }
 
-        public Builder setRoleName(@Nullable String roleName) {
+        public Builder roleName(@Nullable String roleName) {
             this.roleName = roleName;
             return this;
         }
 
-        public Builder setRoleSearchMatching(@Nullable String roleSearchMatching) {
+        public Builder roleSearchMatching(@Nullable String roleSearchMatching) {
             this.roleSearchMatching = roleSearchMatching;
             return this;
         }
 
-        public Builder setRoleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
+        public Builder roleSearchSubtree(@Nullable Boolean roleSearchSubtree) {
             this.roleSearchSubtree = roleSearchSubtree;
             return this;
         }
 
-        public Builder setServiceAccountPassword(@Nullable String serviceAccountPassword) {
+        public Builder serviceAccountPassword(@Nullable String serviceAccountPassword) {
             this.serviceAccountPassword = serviceAccountPassword;
             return this;
         }
 
-        public Builder setServiceAccountUsername(@Nullable String serviceAccountUsername) {
+        public Builder serviceAccountUsername(@Nullable String serviceAccountUsername) {
             this.serviceAccountUsername = serviceAccountUsername;
             return this;
         }
 
-        public Builder setUserBase(@Nullable String userBase) {
+        public Builder userBase(@Nullable String userBase) {
             this.userBase = userBase;
             return this;
         }
 
-        public Builder setUserRoleName(@Nullable String userRoleName) {
+        public Builder userRoleName(@Nullable String userRoleName) {
             this.userRoleName = userRoleName;
             return this;
         }
 
-        public Builder setUserSearchMatching(@Nullable String userSearchMatching) {
+        public Builder userSearchMatching(@Nullable String userSearchMatching) {
             this.userSearchMatching = userSearchMatching;
             return this;
         }
 
-        public Builder setUserSearchSubtree(@Nullable Boolean userSearchSubtree) {
+        public Builder userSearchSubtree(@Nullable Boolean userSearchSubtree) {
             this.userSearchSubtree = userSearchSubtree;
             return this;
         }

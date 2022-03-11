@@ -15,10 +15,10 @@ public final class AppLogsConfigurationResponse {
     private final @Nullable String destination;
     private final @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration;
 
-    @OutputCustomType.Constructor({"destination","logAnalyticsConfiguration"})
+    @OutputCustomType.Constructor
     private AppLogsConfigurationResponse(
-        @Nullable String destination,
-        @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
+        @OutputCustomType.Parameter("destination") @Nullable String destination,
+        @OutputCustomType.Parameter("logAnalyticsConfiguration") @Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
         this.destination = destination;
         this.logAnalyticsConfiguration = logAnalyticsConfiguration;
     }
@@ -52,12 +52,12 @@ public final class AppLogsConfigurationResponse {
     	      this.logAnalyticsConfiguration = defaults.logAnalyticsConfiguration;
         }
 
-        public Builder setDestination(@Nullable String destination) {
+        public Builder destination(@Nullable String destination) {
             this.destination = destination;
             return this;
         }
 
-        public Builder setLogAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
+        public Builder logAnalyticsConfiguration(@Nullable LogAnalyticsConfigurationResponse logAnalyticsConfiguration) {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }

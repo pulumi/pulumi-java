@@ -32,12 +32,12 @@ public final class NfsFileShareNfsFileShareDefaults {
      */
     private final @Nullable String ownerId;
 
-    @OutputCustomType.Constructor({"directoryMode","fileMode","groupId","ownerId"})
+    @OutputCustomType.Constructor
     private NfsFileShareNfsFileShareDefaults(
-        @Nullable String directoryMode,
-        @Nullable String fileMode,
-        @Nullable String groupId,
-        @Nullable String ownerId) {
+        @OutputCustomType.Parameter("directoryMode") @Nullable String directoryMode,
+        @OutputCustomType.Parameter("fileMode") @Nullable String fileMode,
+        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
+        @OutputCustomType.Parameter("ownerId") @Nullable String ownerId) {
         this.directoryMode = directoryMode;
         this.fileMode = fileMode;
         this.groupId = groupId;
@@ -99,22 +99,22 @@ public final class NfsFileShareNfsFileShareDefaults {
     	      this.ownerId = defaults.ownerId;
         }
 
-        public Builder setDirectoryMode(@Nullable String directoryMode) {
+        public Builder directoryMode(@Nullable String directoryMode) {
             this.directoryMode = directoryMode;
             return this;
         }
 
-        public Builder setFileMode(@Nullable String fileMode) {
+        public Builder fileMode(@Nullable String fileMode) {
             this.fileMode = fileMode;
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setOwnerId(@Nullable String ownerId) {
+        public Builder ownerId(@Nullable String ownerId) {
             this.ownerId = ownerId;
             return this;
         }

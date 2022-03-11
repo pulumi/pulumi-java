@@ -122,27 +122,27 @@ public final class ConfigVariableResponse extends io.pulumi.resources.InvokeArgs
     	      this.stringValue = defaults.stringValue;
         }
 
-        public Builder setBoolValue(Boolean boolValue) {
+        public Builder boolValue(Boolean boolValue) {
             this.boolValue = Objects.requireNonNull(boolValue);
             return this;
         }
 
-        public Builder setIntValue(String intValue) {
+        public Builder intValue(String intValue) {
             this.intValue = Objects.requireNonNull(intValue);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setSecretValue(SecretResponse secretValue) {
+        public Builder secretValue(SecretResponse secretValue) {
             this.secretValue = Objects.requireNonNull(secretValue);
             return this;
         }
 
-        public Builder setStringValue(String stringValue) {
+        public Builder stringValue(String stringValue) {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }

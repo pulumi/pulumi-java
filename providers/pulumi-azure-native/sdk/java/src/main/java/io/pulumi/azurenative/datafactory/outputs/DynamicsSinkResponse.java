@@ -64,18 +64,18 @@ public final class DynamicsSinkResponse {
      */
     private final String writeBehavior;
 
-    @OutputCustomType.Constructor({"alternateKeyName","disableMetricsCollection","ignoreNullValues","maxConcurrentConnections","sinkRetryCount","sinkRetryWait","type","writeBatchSize","writeBatchTimeout","writeBehavior"})
+    @OutputCustomType.Constructor
     private DynamicsSinkResponse(
-        @Nullable Object alternateKeyName,
-        @Nullable Object disableMetricsCollection,
-        @Nullable Object ignoreNullValues,
-        @Nullable Object maxConcurrentConnections,
-        @Nullable Object sinkRetryCount,
-        @Nullable Object sinkRetryWait,
-        String type,
-        @Nullable Object writeBatchSize,
-        @Nullable Object writeBatchTimeout,
-        String writeBehavior) {
+        @OutputCustomType.Parameter("alternateKeyName") @Nullable Object alternateKeyName,
+        @OutputCustomType.Parameter("disableMetricsCollection") @Nullable Object disableMetricsCollection,
+        @OutputCustomType.Parameter("ignoreNullValues") @Nullable Object ignoreNullValues,
+        @OutputCustomType.Parameter("maxConcurrentConnections") @Nullable Object maxConcurrentConnections,
+        @OutputCustomType.Parameter("sinkRetryCount") @Nullable Object sinkRetryCount,
+        @OutputCustomType.Parameter("sinkRetryWait") @Nullable Object sinkRetryWait,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("writeBatchSize") @Nullable Object writeBatchSize,
+        @OutputCustomType.Parameter("writeBatchTimeout") @Nullable Object writeBatchTimeout,
+        @OutputCustomType.Parameter("writeBehavior") String writeBehavior) {
         this.alternateKeyName = alternateKeyName;
         this.disableMetricsCollection = disableMetricsCollection;
         this.ignoreNullValues = ignoreNullValues;
@@ -198,52 +198,52 @@ public final class DynamicsSinkResponse {
     	      this.writeBehavior = defaults.writeBehavior;
         }
 
-        public Builder setAlternateKeyName(@Nullable Object alternateKeyName) {
+        public Builder alternateKeyName(@Nullable Object alternateKeyName) {
             this.alternateKeyName = alternateKeyName;
             return this;
         }
 
-        public Builder setDisableMetricsCollection(@Nullable Object disableMetricsCollection) {
+        public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
             this.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
-        public Builder setIgnoreNullValues(@Nullable Object ignoreNullValues) {
+        public Builder ignoreNullValues(@Nullable Object ignoreNullValues) {
             this.ignoreNullValues = ignoreNullValues;
             return this;
         }
 
-        public Builder setMaxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
+        public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
             this.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
-        public Builder setSinkRetryCount(@Nullable Object sinkRetryCount) {
+        public Builder sinkRetryCount(@Nullable Object sinkRetryCount) {
             this.sinkRetryCount = sinkRetryCount;
             return this;
         }
 
-        public Builder setSinkRetryWait(@Nullable Object sinkRetryWait) {
+        public Builder sinkRetryWait(@Nullable Object sinkRetryWait) {
             this.sinkRetryWait = sinkRetryWait;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWriteBatchSize(@Nullable Object writeBatchSize) {
+        public Builder writeBatchSize(@Nullable Object writeBatchSize) {
             this.writeBatchSize = writeBatchSize;
             return this;
         }
 
-        public Builder setWriteBatchTimeout(@Nullable Object writeBatchTimeout) {
+        public Builder writeBatchTimeout(@Nullable Object writeBatchTimeout) {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
 
-        public Builder setWriteBehavior(String writeBehavior) {
+        public Builder writeBehavior(String writeBehavior) {
             this.writeBehavior = Objects.requireNonNull(writeBehavior);
             return this;
         }

@@ -32,12 +32,12 @@ public final class GetApplicationAppversionLifecycle {
      */
     private final String serviceRole;
 
-    @OutputCustomType.Constructor({"deleteSourceFromS3","maxAgeInDays","maxCount","serviceRole"})
+    @OutputCustomType.Constructor
     private GetApplicationAppversionLifecycle(
-        Boolean deleteSourceFromS3,
-        Integer maxAgeInDays,
-        Integer maxCount,
-        String serviceRole) {
+        @OutputCustomType.Parameter("deleteSourceFromS3") Boolean deleteSourceFromS3,
+        @OutputCustomType.Parameter("maxAgeInDays") Integer maxAgeInDays,
+        @OutputCustomType.Parameter("maxCount") Integer maxCount,
+        @OutputCustomType.Parameter("serviceRole") String serviceRole) {
         this.deleteSourceFromS3 = deleteSourceFromS3;
         this.maxAgeInDays = maxAgeInDays;
         this.maxCount = maxCount;
@@ -99,22 +99,22 @@ public final class GetApplicationAppversionLifecycle {
     	      this.serviceRole = defaults.serviceRole;
         }
 
-        public Builder setDeleteSourceFromS3(Boolean deleteSourceFromS3) {
+        public Builder deleteSourceFromS3(Boolean deleteSourceFromS3) {
             this.deleteSourceFromS3 = Objects.requireNonNull(deleteSourceFromS3);
             return this;
         }
 
-        public Builder setMaxAgeInDays(Integer maxAgeInDays) {
+        public Builder maxAgeInDays(Integer maxAgeInDays) {
             this.maxAgeInDays = Objects.requireNonNull(maxAgeInDays);
             return this;
         }
 
-        public Builder setMaxCount(Integer maxCount) {
+        public Builder maxCount(Integer maxCount) {
             this.maxCount = Objects.requireNonNull(maxCount);
             return this;
         }
 
-        public Builder setServiceRole(String serviceRole) {
+        public Builder serviceRole(String serviceRole) {
             this.serviceRole = Objects.requireNonNull(serviceRole);
             return this;
         }

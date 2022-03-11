@@ -75,22 +75,22 @@ public final class ResourceSetDescriptionArgs extends io.pulumi.resources.Resour
     	      this.exceptions = defaults.exceptions;
         }
 
-        public Builder setElements(@Nullable Input<List<String>> elements) {
+        public Builder elements(@Nullable Input<List<String>> elements) {
             this.elements = elements;
             return this;
         }
 
-        public Builder setElements(@Nullable List<String> elements) {
+        public Builder elements(@Nullable List<String> elements) {
             this.elements = Input.ofNullable(elements);
             return this;
         }
 
-        public Builder setExceptions(@Nullable Input<List<String>> exceptions) {
+        public Builder exceptions(@Nullable Input<List<String>> exceptions) {
             this.exceptions = exceptions;
             return this;
         }
 
-        public Builder setExceptions(@Nullable List<String> exceptions) {
+        public Builder exceptions(@Nullable List<String> exceptions) {
             this.exceptions = Input.ofNullable(exceptions);
             return this;
         }

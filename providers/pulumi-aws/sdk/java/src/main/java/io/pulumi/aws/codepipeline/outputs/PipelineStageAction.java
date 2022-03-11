@@ -75,20 +75,20 @@ public final class PipelineStageAction {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"category","configuration","inputArtifacts","name","namespace","outputArtifacts","owner","provider","region","roleArn","runOrder","version"})
+    @OutputCustomType.Constructor
     private PipelineStageAction(
-        String category,
-        @Nullable Map<String,String> configuration,
-        @Nullable List<String> inputArtifacts,
-        String name,
-        @Nullable String namespace,
-        @Nullable List<String> outputArtifacts,
-        String owner,
-        String provider,
-        @Nullable String region,
-        @Nullable String roleArn,
-        @Nullable Integer runOrder,
-        String version) {
+        @OutputCustomType.Parameter("category") String category,
+        @OutputCustomType.Parameter("configuration") @Nullable Map<String,String> configuration,
+        @OutputCustomType.Parameter("inputArtifacts") @Nullable List<String> inputArtifacts,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("outputArtifacts") @Nullable List<String> outputArtifacts,
+        @OutputCustomType.Parameter("owner") String owner,
+        @OutputCustomType.Parameter("provider") String provider,
+        @OutputCustomType.Parameter("region") @Nullable String region,
+        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn,
+        @OutputCustomType.Parameter("runOrder") @Nullable Integer runOrder,
+        @OutputCustomType.Parameter("version") String version) {
         this.category = category;
         this.configuration = configuration;
         this.inputArtifacts = inputArtifacts;
@@ -230,62 +230,62 @@ public final class PipelineStageAction {
     	      this.version = defaults.version;
         }
 
-        public Builder setCategory(String category) {
+        public Builder category(String category) {
             this.category = Objects.requireNonNull(category);
             return this;
         }
 
-        public Builder setConfiguration(@Nullable Map<String,String> configuration) {
+        public Builder configuration(@Nullable Map<String,String> configuration) {
             this.configuration = configuration;
             return this;
         }
 
-        public Builder setInputArtifacts(@Nullable List<String> inputArtifacts) {
+        public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
             this.inputArtifacts = inputArtifacts;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setOutputArtifacts(@Nullable List<String> outputArtifacts) {
+        public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
             this.outputArtifacts = outputArtifacts;
             return this;
         }
 
-        public Builder setOwner(String owner) {
+        public Builder owner(String owner) {
             this.owner = Objects.requireNonNull(owner);
             return this;
         }
 
-        public Builder setProvider(String provider) {
+        public Builder provider(String provider) {
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRoleArn(@Nullable String roleArn) {
+        public Builder roleArn(@Nullable String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
 
-        public Builder setRunOrder(@Nullable Integer runOrder) {
+        public Builder runOrder(@Nullable Integer runOrder) {
             this.runOrder = runOrder;
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

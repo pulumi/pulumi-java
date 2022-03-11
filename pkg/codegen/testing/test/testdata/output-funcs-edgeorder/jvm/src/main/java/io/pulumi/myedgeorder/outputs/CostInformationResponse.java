@@ -22,10 +22,10 @@ public final class CostInformationResponse {
      */
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
-    @OutputCustomType.Constructor({"billingInfoUrl","billingMeterDetails"})
+    @OutputCustomType.Constructor
     private CostInformationResponse(
-        String billingInfoUrl,
-        List<BillingMeterDetailsResponse> billingMeterDetails) {
+        @OutputCustomType.Parameter("billingInfoUrl") String billingInfoUrl,
+        @OutputCustomType.Parameter("billingMeterDetails") List<BillingMeterDetailsResponse> billingMeterDetails) {
         this.billingInfoUrl = billingInfoUrl;
         this.billingMeterDetails = billingMeterDetails;
     }
@@ -67,12 +67,12 @@ public final class CostInformationResponse {
     	      this.billingMeterDetails = defaults.billingMeterDetails;
         }
 
-        public Builder setBillingInfoUrl(String billingInfoUrl) {
+        public Builder billingInfoUrl(String billingInfoUrl) {
             this.billingInfoUrl = Objects.requireNonNull(billingInfoUrl);
             return this;
         }
 
-        public Builder setBillingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
+        public Builder billingMeterDetails(List<BillingMeterDetailsResponse> billingMeterDetails) {
             this.billingMeterDetails = Objects.requireNonNull(billingMeterDetails);
             return this;
         }

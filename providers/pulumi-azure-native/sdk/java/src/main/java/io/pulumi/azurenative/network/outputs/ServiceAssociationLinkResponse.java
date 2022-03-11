@@ -59,17 +59,17 @@ public final class ServiceAssociationLinkResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allowDelete","etag","id","link","linkedResourceType","locations","name","provisioningState","type"})
+    @OutputCustomType.Constructor
     private ServiceAssociationLinkResponse(
-        @Nullable Boolean allowDelete,
-        String etag,
-        @Nullable String id,
-        @Nullable String link,
-        @Nullable String linkedResourceType,
-        @Nullable List<String> locations,
-        @Nullable String name,
-        String provisioningState,
-        String type) {
+        @OutputCustomType.Parameter("allowDelete") @Nullable Boolean allowDelete,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("link") @Nullable String link,
+        @OutputCustomType.Parameter("linkedResourceType") @Nullable String linkedResourceType,
+        @OutputCustomType.Parameter("locations") @Nullable List<String> locations,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("type") String type) {
         this.allowDelete = allowDelete;
         this.etag = etag;
         this.id = id;
@@ -181,47 +181,47 @@ public final class ServiceAssociationLinkResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllowDelete(@Nullable Boolean allowDelete) {
+        public Builder allowDelete(@Nullable Boolean allowDelete) {
             this.allowDelete = allowDelete;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLink(@Nullable String link) {
+        public Builder link(@Nullable String link) {
             this.link = link;
             return this;
         }
 
-        public Builder setLinkedResourceType(@Nullable String linkedResourceType) {
+        public Builder linkedResourceType(@Nullable String linkedResourceType) {
             this.linkedResourceType = linkedResourceType;
             return this;
         }
 
-        public Builder setLocations(@Nullable List<String> locations) {
+        public Builder locations(@Nullable List<String> locations) {
             this.locations = locations;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

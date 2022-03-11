@@ -46,15 +46,15 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
      */
     private final String targetLocation;
 
-    @OutputCustomType.Constructor({"instanceType","keyVaultId","keyVaultUri","serviceBusConnectionStringSecretName","storageAccountId","storageAccountSasSecretName","targetLocation"})
+    @OutputCustomType.Constructor
     private VMwareCbtProtectionContainerMappingDetailsResponse(
-        String instanceType,
-        String keyVaultId,
-        String keyVaultUri,
-        String serviceBusConnectionStringSecretName,
-        String storageAccountId,
-        String storageAccountSasSecretName,
-        String targetLocation) {
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("keyVaultId") String keyVaultId,
+        @OutputCustomType.Parameter("keyVaultUri") String keyVaultUri,
+        @OutputCustomType.Parameter("serviceBusConnectionStringSecretName") String serviceBusConnectionStringSecretName,
+        @OutputCustomType.Parameter("storageAccountId") String storageAccountId,
+        @OutputCustomType.Parameter("storageAccountSasSecretName") String storageAccountSasSecretName,
+        @OutputCustomType.Parameter("targetLocation") String targetLocation) {
         this.instanceType = instanceType;
         this.keyVaultId = keyVaultId;
         this.keyVaultUri = keyVaultUri;
@@ -147,37 +147,37 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
     	      this.targetLocation = defaults.targetLocation;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setKeyVaultId(String keyVaultId) {
+        public Builder keyVaultId(String keyVaultId) {
             this.keyVaultId = Objects.requireNonNull(keyVaultId);
             return this;
         }
 
-        public Builder setKeyVaultUri(String keyVaultUri) {
+        public Builder keyVaultUri(String keyVaultUri) {
             this.keyVaultUri = Objects.requireNonNull(keyVaultUri);
             return this;
         }
 
-        public Builder setServiceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
+        public Builder serviceBusConnectionStringSecretName(String serviceBusConnectionStringSecretName) {
             this.serviceBusConnectionStringSecretName = Objects.requireNonNull(serviceBusConnectionStringSecretName);
             return this;
         }
 
-        public Builder setStorageAccountId(String storageAccountId) {
+        public Builder storageAccountId(String storageAccountId) {
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
 
-        public Builder setStorageAccountSasSecretName(String storageAccountSasSecretName) {
+        public Builder storageAccountSasSecretName(String storageAccountSasSecretName) {
             this.storageAccountSasSecretName = Objects.requireNonNull(storageAccountSasSecretName);
             return this;
         }
 
-        public Builder setTargetLocation(String targetLocation) {
+        public Builder targetLocation(String targetLocation) {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }

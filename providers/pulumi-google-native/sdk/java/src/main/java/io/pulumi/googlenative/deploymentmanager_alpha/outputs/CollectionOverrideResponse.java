@@ -27,11 +27,11 @@ public final class CollectionOverrideResponse {
      */
     private final OptionsResponse options;
 
-    @OutputCustomType.Constructor({"collection","methodMap","options"})
+    @OutputCustomType.Constructor
     private CollectionOverrideResponse(
-        String collection,
-        MethodMapResponse methodMap,
-        OptionsResponse options) {
+        @OutputCustomType.Parameter("collection") String collection,
+        @OutputCustomType.Parameter("methodMap") MethodMapResponse methodMap,
+        @OutputCustomType.Parameter("options") OptionsResponse options) {
         this.collection = collection;
         this.methodMap = methodMap;
         this.options = options;
@@ -83,17 +83,17 @@ public final class CollectionOverrideResponse {
     	      this.options = defaults.options;
         }
 
-        public Builder setCollection(String collection) {
+        public Builder collection(String collection) {
             this.collection = Objects.requireNonNull(collection);
             return this;
         }
 
-        public Builder setMethodMap(MethodMapResponse methodMap) {
+        public Builder methodMap(MethodMapResponse methodMap) {
             this.methodMap = Objects.requireNonNull(methodMap);
             return this;
         }
 
-        public Builder setOptions(OptionsResponse options) {
+        public Builder options(OptionsResponse options) {
             this.options = Objects.requireNonNull(options);
             return this;
         }

@@ -160,72 +160,72 @@ public final class TestSetupArgs extends io.pulumi.resources.ResourceArgs {
     	      this.networkProfile = defaults.networkProfile;
         }
 
-        public Builder setAccount(@Nullable Input<AccountArgs> account) {
+        public Builder account(@Nullable Input<AccountArgs> account) {
             this.account = account;
             return this;
         }
 
-        public Builder setAccount(@Nullable AccountArgs account) {
+        public Builder account(@Nullable AccountArgs account) {
             this.account = Input.ofNullable(account);
             return this;
         }
 
-        public Builder setAdditionalApks(@Nullable Input<List<ApkArgs>> additionalApks) {
+        public Builder additionalApks(@Nullable Input<List<ApkArgs>> additionalApks) {
             this.additionalApks = additionalApks;
             return this;
         }
 
-        public Builder setAdditionalApks(@Nullable List<ApkArgs> additionalApks) {
+        public Builder additionalApks(@Nullable List<ApkArgs> additionalApks) {
             this.additionalApks = Input.ofNullable(additionalApks);
             return this;
         }
 
-        public Builder setDirectoriesToPull(@Nullable Input<List<String>> directoriesToPull) {
+        public Builder directoriesToPull(@Nullable Input<List<String>> directoriesToPull) {
             this.directoriesToPull = directoriesToPull;
             return this;
         }
 
-        public Builder setDirectoriesToPull(@Nullable List<String> directoriesToPull) {
+        public Builder directoriesToPull(@Nullable List<String> directoriesToPull) {
             this.directoriesToPull = Input.ofNullable(directoriesToPull);
             return this;
         }
 
-        public Builder setDontAutograntPermissions(@Nullable Input<Boolean> dontAutograntPermissions) {
+        public Builder dontAutograntPermissions(@Nullable Input<Boolean> dontAutograntPermissions) {
             this.dontAutograntPermissions = dontAutograntPermissions;
             return this;
         }
 
-        public Builder setDontAutograntPermissions(@Nullable Boolean dontAutograntPermissions) {
+        public Builder dontAutograntPermissions(@Nullable Boolean dontAutograntPermissions) {
             this.dontAutograntPermissions = Input.ofNullable(dontAutograntPermissions);
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
+        public Builder environmentVariables(@Nullable Input<List<EnvironmentVariableArgs>> environmentVariables) {
             this.environmentVariables = environmentVariables;
             return this;
         }
 
-        public Builder setEnvironmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
+        public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
             this.environmentVariables = Input.ofNullable(environmentVariables);
             return this;
         }
 
-        public Builder setFilesToPush(@Nullable Input<List<DeviceFileArgs>> filesToPush) {
+        public Builder filesToPush(@Nullable Input<List<DeviceFileArgs>> filesToPush) {
             this.filesToPush = filesToPush;
             return this;
         }
 
-        public Builder setFilesToPush(@Nullable List<DeviceFileArgs> filesToPush) {
+        public Builder filesToPush(@Nullable List<DeviceFileArgs> filesToPush) {
             this.filesToPush = Input.ofNullable(filesToPush);
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable Input<String> networkProfile) {
+        public Builder networkProfile(@Nullable Input<String> networkProfile) {
             this.networkProfile = networkProfile;
             return this;
         }
 
-        public Builder setNetworkProfile(@Nullable String networkProfile) {
+        public Builder networkProfile(@Nullable String networkProfile) {
             this.networkProfile = Input.ofNullable(networkProfile);
             return this;
         }

@@ -20,12 +20,12 @@ public final class JobProfileConfiguration {
     private final @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration;
     private final @Nullable List<JobColumnSelector> profileColumns;
 
-    @OutputCustomType.Constructor({"columnStatisticsConfigurations","datasetStatisticsConfiguration","entityDetectorConfiguration","profileColumns"})
+    @OutputCustomType.Constructor
     private JobProfileConfiguration(
-        @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
-        @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
-        @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
-        @Nullable List<JobColumnSelector> profileColumns) {
+        @OutputCustomType.Parameter("columnStatisticsConfigurations") @Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations,
+        @OutputCustomType.Parameter("datasetStatisticsConfiguration") @Nullable JobStatisticsConfiguration datasetStatisticsConfiguration,
+        @OutputCustomType.Parameter("entityDetectorConfiguration") @Nullable JobEntityDetectorConfiguration entityDetectorConfiguration,
+        @OutputCustomType.Parameter("profileColumns") @Nullable List<JobColumnSelector> profileColumns) {
         this.columnStatisticsConfigurations = columnStatisticsConfigurations;
         this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
         this.entityDetectorConfiguration = entityDetectorConfiguration;
@@ -71,22 +71,22 @@ public final class JobProfileConfiguration {
     	      this.profileColumns = defaults.profileColumns;
         }
 
-        public Builder setColumnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations) {
+        public Builder columnStatisticsConfigurations(@Nullable List<JobColumnStatisticsConfiguration> columnStatisticsConfigurations) {
             this.columnStatisticsConfigurations = columnStatisticsConfigurations;
             return this;
         }
 
-        public Builder setDatasetStatisticsConfiguration(@Nullable JobStatisticsConfiguration datasetStatisticsConfiguration) {
+        public Builder datasetStatisticsConfiguration(@Nullable JobStatisticsConfiguration datasetStatisticsConfiguration) {
             this.datasetStatisticsConfiguration = datasetStatisticsConfiguration;
             return this;
         }
 
-        public Builder setEntityDetectorConfiguration(@Nullable JobEntityDetectorConfiguration entityDetectorConfiguration) {
+        public Builder entityDetectorConfiguration(@Nullable JobEntityDetectorConfiguration entityDetectorConfiguration) {
             this.entityDetectorConfiguration = entityDetectorConfiguration;
             return this;
         }
 
-        public Builder setProfileColumns(@Nullable List<JobColumnSelector> profileColumns) {
+        public Builder profileColumns(@Nullable List<JobColumnSelector> profileColumns) {
             this.profileColumns = profileColumns;
             return this;
         }

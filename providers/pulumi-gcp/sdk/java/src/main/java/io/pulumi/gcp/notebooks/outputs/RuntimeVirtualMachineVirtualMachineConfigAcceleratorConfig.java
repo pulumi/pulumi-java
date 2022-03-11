@@ -25,10 +25,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"coreCount","type"})
+    @OutputCustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(
-        @Nullable Integer coreCount,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.coreCount = coreCount;
         this.type = type;
     }
@@ -72,12 +72,12 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
     	      this.type = defaults.type;
         }
 
-        public Builder setCoreCount(@Nullable Integer coreCount) {
+        public Builder coreCount(@Nullable Integer coreCount) {
             this.coreCount = coreCount;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

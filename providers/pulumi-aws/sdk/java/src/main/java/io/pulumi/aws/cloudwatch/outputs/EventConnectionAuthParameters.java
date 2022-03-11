@@ -35,12 +35,12 @@ public final class EventConnectionAuthParameters {
      */
     private final @Nullable EventConnectionAuthParametersOauth oauth;
 
-    @OutputCustomType.Constructor({"apiKey","basic","invocationHttpParameters","oauth"})
+    @OutputCustomType.Constructor
     private EventConnectionAuthParameters(
-        @Nullable EventConnectionAuthParametersApiKey apiKey,
-        @Nullable EventConnectionAuthParametersBasic basic,
-        @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
-        @Nullable EventConnectionAuthParametersOauth oauth) {
+        @OutputCustomType.Parameter("apiKey") @Nullable EventConnectionAuthParametersApiKey apiKey,
+        @OutputCustomType.Parameter("basic") @Nullable EventConnectionAuthParametersBasic basic,
+        @OutputCustomType.Parameter("invocationHttpParameters") @Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters,
+        @OutputCustomType.Parameter("oauth") @Nullable EventConnectionAuthParametersOauth oauth) {
         this.apiKey = apiKey;
         this.basic = basic;
         this.invocationHttpParameters = invocationHttpParameters;
@@ -102,22 +102,22 @@ public final class EventConnectionAuthParameters {
     	      this.oauth = defaults.oauth;
         }
 
-        public Builder setApiKey(@Nullable EventConnectionAuthParametersApiKey apiKey) {
+        public Builder apiKey(@Nullable EventConnectionAuthParametersApiKey apiKey) {
             this.apiKey = apiKey;
             return this;
         }
 
-        public Builder setBasic(@Nullable EventConnectionAuthParametersBasic basic) {
+        public Builder basic(@Nullable EventConnectionAuthParametersBasic basic) {
             this.basic = basic;
             return this;
         }
 
-        public Builder setInvocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters) {
+        public Builder invocationHttpParameters(@Nullable EventConnectionAuthParametersInvocationHttpParameters invocationHttpParameters) {
             this.invocationHttpParameters = invocationHttpParameters;
             return this;
         }
 
-        public Builder setOauth(@Nullable EventConnectionAuthParametersOauth oauth) {
+        public Builder oauth(@Nullable EventConnectionAuthParametersOauth oauth) {
             this.oauth = oauth;
             return this;
         }

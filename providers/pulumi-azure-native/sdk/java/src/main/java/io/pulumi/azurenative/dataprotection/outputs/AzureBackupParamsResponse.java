@@ -21,10 +21,10 @@ public final class AzureBackupParamsResponse {
      */
     private final String objectType;
 
-    @OutputCustomType.Constructor({"backupType","objectType"})
+    @OutputCustomType.Constructor
     private AzureBackupParamsResponse(
-        String backupType,
-        String objectType) {
+        @OutputCustomType.Parameter("backupType") String backupType,
+        @OutputCustomType.Parameter("objectType") String objectType) {
         this.backupType = backupType;
         this.objectType = objectType;
     }
@@ -67,12 +67,12 @@ public final class AzureBackupParamsResponse {
     	      this.objectType = defaults.objectType;
         }
 
-        public Builder setBackupType(String backupType) {
+        public Builder backupType(String backupType) {
             this.backupType = Objects.requireNonNull(backupType);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }

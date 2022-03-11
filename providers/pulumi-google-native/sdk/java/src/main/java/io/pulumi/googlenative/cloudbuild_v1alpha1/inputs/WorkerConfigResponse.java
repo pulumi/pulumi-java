@@ -105,22 +105,22 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setDiskSizeGb(String diskSizeGb) {
+        public Builder diskSizeGb(String diskSizeGb) {
             this.diskSizeGb = Objects.requireNonNull(diskSizeGb);
             return this;
         }
 
-        public Builder setMachineType(String machineType) {
+        public Builder machineType(String machineType) {
             this.machineType = Objects.requireNonNull(machineType);
             return this;
         }
 
-        public Builder setNetwork(NetworkResponse network) {
+        public Builder network(NetworkResponse network) {
             this.network = Objects.requireNonNull(network);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

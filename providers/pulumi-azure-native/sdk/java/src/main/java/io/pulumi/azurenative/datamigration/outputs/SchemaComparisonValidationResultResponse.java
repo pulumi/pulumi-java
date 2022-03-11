@@ -35,12 +35,12 @@ public final class SchemaComparisonValidationResultResponse {
      */
     private final ValidationErrorResponse validationErrors;
 
-    @OutputCustomType.Constructor({"schemaDifferences","sourceDatabaseObjectCount","targetDatabaseObjectCount","validationErrors"})
+    @OutputCustomType.Constructor
     private SchemaComparisonValidationResultResponse(
-        SchemaComparisonValidationResultTypeResponse schemaDifferences,
-        @Nullable Map<String,Double> sourceDatabaseObjectCount,
-        @Nullable Map<String,Double> targetDatabaseObjectCount,
-        ValidationErrorResponse validationErrors) {
+        @OutputCustomType.Parameter("schemaDifferences") SchemaComparisonValidationResultTypeResponse schemaDifferences,
+        @OutputCustomType.Parameter("sourceDatabaseObjectCount") @Nullable Map<String,Double> sourceDatabaseObjectCount,
+        @OutputCustomType.Parameter("targetDatabaseObjectCount") @Nullable Map<String,Double> targetDatabaseObjectCount,
+        @OutputCustomType.Parameter("validationErrors") ValidationErrorResponse validationErrors) {
         this.schemaDifferences = schemaDifferences;
         this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
         this.targetDatabaseObjectCount = targetDatabaseObjectCount;
@@ -102,22 +102,22 @@ public final class SchemaComparisonValidationResultResponse {
     	      this.validationErrors = defaults.validationErrors;
         }
 
-        public Builder setSchemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
+        public Builder schemaDifferences(SchemaComparisonValidationResultTypeResponse schemaDifferences) {
             this.schemaDifferences = Objects.requireNonNull(schemaDifferences);
             return this;
         }
 
-        public Builder setSourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
+        public Builder sourceDatabaseObjectCount(@Nullable Map<String,Double> sourceDatabaseObjectCount) {
             this.sourceDatabaseObjectCount = sourceDatabaseObjectCount;
             return this;
         }
 
-        public Builder setTargetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
+        public Builder targetDatabaseObjectCount(@Nullable Map<String,Double> targetDatabaseObjectCount) {
             this.targetDatabaseObjectCount = targetDatabaseObjectCount;
             return this;
         }
 
-        public Builder setValidationErrors(ValidationErrorResponse validationErrors) {
+        public Builder validationErrors(ValidationErrorResponse validationErrors) {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }

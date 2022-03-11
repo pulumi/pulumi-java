@@ -278,142 +278,142 @@ public final class NetworkInterfaceIPConfigurationArgs extends io.pulumi.resourc
     	      this.virtualNetworkTaps = defaults.virtualNetworkTaps;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable Input<List<ApplicationGatewayBackendAddressPoolArgs>> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = applicationGatewayBackendAddressPools;
             return this;
         }
 
-        public Builder setApplicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
+        public Builder applicationGatewayBackendAddressPools(@Nullable List<ApplicationGatewayBackendAddressPoolArgs> applicationGatewayBackendAddressPools) {
             this.applicationGatewayBackendAddressPools = Input.ofNullable(applicationGatewayBackendAddressPools);
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable Input<List<ApplicationSecurityGroupArgs>> applicationSecurityGroups) {
             this.applicationSecurityGroups = applicationSecurityGroups;
             return this;
         }
 
-        public Builder setApplicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
+        public Builder applicationSecurityGroups(@Nullable List<ApplicationSecurityGroupArgs> applicationSecurityGroups) {
             this.applicationSecurityGroups = Input.ofNullable(applicationSecurityGroups);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable Input<List<BackendAddressPoolArgs>> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = loadBalancerBackendAddressPools;
             return this;
         }
 
-        public Builder setLoadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
+        public Builder loadBalancerBackendAddressPools(@Nullable List<BackendAddressPoolArgs> loadBalancerBackendAddressPools) {
             this.loadBalancerBackendAddressPools = Input.ofNullable(loadBalancerBackendAddressPools);
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
+        public Builder loadBalancerInboundNatRules(@Nullable Input<List<InboundNatRuleArgs>> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = loadBalancerInboundNatRules;
             return this;
         }
 
-        public Builder setLoadBalancerInboundNatRules(@Nullable List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
+        public Builder loadBalancerInboundNatRules(@Nullable List<InboundNatRuleArgs> loadBalancerInboundNatRules) {
             this.loadBalancerInboundNatRules = Input.ofNullable(loadBalancerInboundNatRules);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setPrimary(@Nullable Input<Boolean> primary) {
+        public Builder primary(@Nullable Input<Boolean> primary) {
             this.primary = primary;
             return this;
         }
 
-        public Builder setPrimary(@Nullable Boolean primary) {
+        public Builder primary(@Nullable Boolean primary) {
             this.primary = Input.ofNullable(primary);
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable Input<String> privateIPAddress) {
+        public Builder privateIPAddress(@Nullable Input<String> privateIPAddress) {
             this.privateIPAddress = privateIPAddress;
             return this;
         }
 
-        public Builder setPrivateIPAddress(@Nullable String privateIPAddress) {
+        public Builder privateIPAddress(@Nullable String privateIPAddress) {
             this.privateIPAddress = Input.ofNullable(privateIPAddress);
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Input<Either<String,IPVersion>> privateIPAddressVersion) {
             this.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
-        public Builder setPrivateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
+        public Builder privateIPAddressVersion(@Nullable Either<String,IPVersion> privateIPAddressVersion) {
             this.privateIPAddressVersion = Input.ofNullable(privateIPAddressVersion);
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
-        public Builder setPrivateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
+        public Builder privateIPAllocationMethod(@Nullable Either<String,IPAllocationMethod> privateIPAllocationMethod) {
             this.privateIPAllocationMethod = Input.ofNullable(privateIPAllocationMethod);
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
+        public Builder publicIPAddress(@Nullable Input<PublicIPAddressArgs> publicIPAddress) {
             this.publicIPAddress = publicIPAddress;
             return this;
         }
 
-        public Builder setPublicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
+        public Builder publicIPAddress(@Nullable PublicIPAddressArgs publicIPAddress) {
             this.publicIPAddress = Input.ofNullable(publicIPAddress);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<SubnetArgs> subnet) {
+        public Builder subnet(@Nullable Input<SubnetArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable SubnetArgs subnet) {
+        public Builder subnet(@Nullable SubnetArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
 
-        public Builder setType(@Nullable Input<String> type) {
+        public Builder type(@Nullable Input<String> type) {
             this.type = type;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = Input.ofNullable(type);
             return this;
         }
 
-        public Builder setVirtualNetworkTaps(@Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
+        public Builder virtualNetworkTaps(@Nullable Input<List<VirtualNetworkTapArgs>> virtualNetworkTaps) {
             this.virtualNetworkTaps = virtualNetworkTaps;
             return this;
         }
 
-        public Builder setVirtualNetworkTaps(@Nullable List<VirtualNetworkTapArgs> virtualNetworkTaps) {
+        public Builder virtualNetworkTaps(@Nullable List<VirtualNetworkTapArgs> virtualNetworkTaps) {
             this.virtualNetworkTaps = Input.ofNullable(virtualNetworkTaps);
             return this;
         }

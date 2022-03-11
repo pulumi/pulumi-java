@@ -49,12 +49,12 @@ public final class RuleGroupPublishMetricActionArgs extends io.pulumi.resources.
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(Input<List<RuleGroupDimensionArgs>> dimensions) {
+        public Builder dimensions(Input<List<RuleGroupDimensionArgs>> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }
 
-        public Builder setDimensions(List<RuleGroupDimensionArgs> dimensions) {
+        public Builder dimensions(List<RuleGroupDimensionArgs> dimensions) {
             this.dimensions = Input.of(Objects.requireNonNull(dimensions));
             return this;
         }

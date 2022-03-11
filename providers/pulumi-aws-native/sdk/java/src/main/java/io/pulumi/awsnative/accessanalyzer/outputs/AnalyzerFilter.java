@@ -19,13 +19,13 @@ public final class AnalyzerFilter {
     private final @Nullable List<String> neq;
     private final String property;
 
-    @OutputCustomType.Constructor({"contains","eq","exists","neq","property"})
+    @OutputCustomType.Constructor
     private AnalyzerFilter(
-        @Nullable List<String> contains,
-        @Nullable List<String> eq,
-        @Nullable Boolean exists,
-        @Nullable List<String> neq,
-        String property) {
+        @OutputCustomType.Parameter("contains") @Nullable List<String> contains,
+        @OutputCustomType.Parameter("eq") @Nullable List<String> eq,
+        @OutputCustomType.Parameter("exists") @Nullable Boolean exists,
+        @OutputCustomType.Parameter("neq") @Nullable List<String> neq,
+        @OutputCustomType.Parameter("property") String property) {
         this.contains = contains;
         this.eq = eq;
         this.exists = exists;
@@ -77,27 +77,27 @@ public final class AnalyzerFilter {
     	      this.property = defaults.property;
         }
 
-        public Builder setContains(@Nullable List<String> contains) {
+        public Builder contains(@Nullable List<String> contains) {
             this.contains = contains;
             return this;
         }
 
-        public Builder setEq(@Nullable List<String> eq) {
+        public Builder eq(@Nullable List<String> eq) {
             this.eq = eq;
             return this;
         }
 
-        public Builder setExists(@Nullable Boolean exists) {
+        public Builder exists(@Nullable Boolean exists) {
             this.exists = exists;
             return this;
         }
 
-        public Builder setNeq(@Nullable List<String> neq) {
+        public Builder neq(@Nullable List<String> neq) {
             this.neq = neq;
             return this;
         }
 
-        public Builder setProperty(String property) {
+        public Builder property(String property) {
             this.property = Objects.requireNonNull(property);
             return this;
         }

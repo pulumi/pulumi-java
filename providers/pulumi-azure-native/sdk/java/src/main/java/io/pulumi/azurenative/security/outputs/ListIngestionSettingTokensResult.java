@@ -15,8 +15,8 @@ public final class ListIngestionSettingTokensResult {
      */
     private final String token;
 
-    @OutputCustomType.Constructor({"token"})
-    private ListIngestionSettingTokensResult(String token) {
+    @OutputCustomType.Constructor
+    private ListIngestionSettingTokensResult(@OutputCustomType.Parameter("token") String token) {
         this.token = token;
     }
 
@@ -48,7 +48,7 @@ public final class ListIngestionSettingTokensResult {
     	      this.token = defaults.token;
         }
 
-        public Builder setToken(String token) {
+        public Builder token(String token) {
             this.token = Objects.requireNonNull(token);
             return this;
         }

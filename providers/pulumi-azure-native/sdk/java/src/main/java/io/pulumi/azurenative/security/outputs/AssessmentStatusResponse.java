@@ -27,11 +27,11 @@ public final class AssessmentStatusResponse {
      */
     private final @Nullable String description;
 
-    @OutputCustomType.Constructor({"cause","code","description"})
+    @OutputCustomType.Constructor
     private AssessmentStatusResponse(
-        @Nullable String cause,
-        String code,
-        @Nullable String description) {
+        @OutputCustomType.Parameter("cause") @Nullable String cause,
+        @OutputCustomType.Parameter("code") String code,
+        @OutputCustomType.Parameter("description") @Nullable String description) {
         this.cause = cause;
         this.code = code;
         this.description = description;
@@ -83,17 +83,17 @@ public final class AssessmentStatusResponse {
     	      this.description = defaults.description;
         }
 
-        public Builder setCause(@Nullable String cause) {
+        public Builder cause(@Nullable String cause) {
             this.cause = cause;
             return this;
         }
 
-        public Builder setCode(String code) {
+        public Builder code(String code) {
             this.code = Objects.requireNonNull(code);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }

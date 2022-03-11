@@ -20,10 +20,10 @@ public final class OriginEndpointAuthorization {
      */
     private final String secretsRoleArn;
 
-    @OutputCustomType.Constructor({"cdnIdentifierSecret","secretsRoleArn"})
+    @OutputCustomType.Constructor
     private OriginEndpointAuthorization(
-        String cdnIdentifierSecret,
-        String secretsRoleArn) {
+        @OutputCustomType.Parameter("cdnIdentifierSecret") String cdnIdentifierSecret,
+        @OutputCustomType.Parameter("secretsRoleArn") String secretsRoleArn) {
         this.cdnIdentifierSecret = cdnIdentifierSecret;
         this.secretsRoleArn = secretsRoleArn;
     }
@@ -65,12 +65,12 @@ public final class OriginEndpointAuthorization {
     	      this.secretsRoleArn = defaults.secretsRoleArn;
         }
 
-        public Builder setCdnIdentifierSecret(String cdnIdentifierSecret) {
+        public Builder cdnIdentifierSecret(String cdnIdentifierSecret) {
             this.cdnIdentifierSecret = Objects.requireNonNull(cdnIdentifierSecret);
             return this;
         }
 
-        public Builder setSecretsRoleArn(String secretsRoleArn) {
+        public Builder secretsRoleArn(String secretsRoleArn) {
             this.secretsRoleArn = Objects.requireNonNull(secretsRoleArn);
             return this;
         }

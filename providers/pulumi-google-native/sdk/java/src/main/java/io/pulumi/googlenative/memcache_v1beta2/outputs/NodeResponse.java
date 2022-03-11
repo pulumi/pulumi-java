@@ -48,15 +48,15 @@ public final class NodeResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"host","nodeId","parameters","port","state","updateAvailable","zone"})
+    @OutputCustomType.Constructor
     private NodeResponse(
-        String host,
-        String nodeId,
-        MemcacheParametersResponse parameters,
-        Integer port,
-        String state,
-        Boolean updateAvailable,
-        String zone) {
+        @OutputCustomType.Parameter("host") String host,
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("parameters") MemcacheParametersResponse parameters,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("updateAvailable") Boolean updateAvailable,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.host = host;
         this.nodeId = nodeId;
         this.parameters = parameters;
@@ -148,37 +148,37 @@ public final class NodeResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setHost(String host) {
+        public Builder host(String host) {
             this.host = Objects.requireNonNull(host);
             return this;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setParameters(MemcacheParametersResponse parameters) {
+        public Builder parameters(MemcacheParametersResponse parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setUpdateAvailable(Boolean updateAvailable) {
+        public Builder updateAvailable(Boolean updateAvailable) {
             this.updateAvailable = Objects.requireNonNull(updateAvailable);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

@@ -102,25 +102,25 @@ public final class GetEnvironmentResult {
      */
     private final @Nullable String uniqueIdentifier;
 
-    @OutputCustomType.Constructor({"claimedByUserName","claimedByUserObjectId","claimedByUserPrincipalId","id","isClaimed","lastKnownPowerState","latestOperationResult","location","name","networkInterface","passwordLastReset","provisioningState","resourceSets","tags","totalUsage","type","uniqueIdentifier"})
+    @OutputCustomType.Constructor
     private GetEnvironmentResult(
-        String claimedByUserName,
-        String claimedByUserObjectId,
-        String claimedByUserPrincipalId,
-        String id,
-        Boolean isClaimed,
-        String lastKnownPowerState,
-        LatestOperationResultResponse latestOperationResult,
-        @Nullable String location,
-        String name,
-        NetworkInterfaceResponse networkInterface,
-        String passwordLastReset,
-        @Nullable String provisioningState,
-        @Nullable ResourceSetResponse resourceSets,
-        @Nullable Map<String,String> tags,
-        String totalUsage,
-        String type,
-        @Nullable String uniqueIdentifier) {
+        @OutputCustomType.Parameter("claimedByUserName") String claimedByUserName,
+        @OutputCustomType.Parameter("claimedByUserObjectId") String claimedByUserObjectId,
+        @OutputCustomType.Parameter("claimedByUserPrincipalId") String claimedByUserPrincipalId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isClaimed") Boolean isClaimed,
+        @OutputCustomType.Parameter("lastKnownPowerState") String lastKnownPowerState,
+        @OutputCustomType.Parameter("latestOperationResult") LatestOperationResultResponse latestOperationResult,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkInterface") NetworkInterfaceResponse networkInterface,
+        @OutputCustomType.Parameter("passwordLastReset") String passwordLastReset,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceSets") @Nullable ResourceSetResponse resourceSets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("totalUsage") String totalUsage,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("uniqueIdentifier") @Nullable String uniqueIdentifier) {
         this.claimedByUserName = claimedByUserName;
         this.claimedByUserObjectId = claimedByUserObjectId;
         this.claimedByUserPrincipalId = claimedByUserPrincipalId;
@@ -312,87 +312,87 @@ public final class GetEnvironmentResult {
     	      this.uniqueIdentifier = defaults.uniqueIdentifier;
         }
 
-        public Builder setClaimedByUserName(String claimedByUserName) {
+        public Builder claimedByUserName(String claimedByUserName) {
             this.claimedByUserName = Objects.requireNonNull(claimedByUserName);
             return this;
         }
 
-        public Builder setClaimedByUserObjectId(String claimedByUserObjectId) {
+        public Builder claimedByUserObjectId(String claimedByUserObjectId) {
             this.claimedByUserObjectId = Objects.requireNonNull(claimedByUserObjectId);
             return this;
         }
 
-        public Builder setClaimedByUserPrincipalId(String claimedByUserPrincipalId) {
+        public Builder claimedByUserPrincipalId(String claimedByUserPrincipalId) {
             this.claimedByUserPrincipalId = Objects.requireNonNull(claimedByUserPrincipalId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsClaimed(Boolean isClaimed) {
+        public Builder isClaimed(Boolean isClaimed) {
             this.isClaimed = Objects.requireNonNull(isClaimed);
             return this;
         }
 
-        public Builder setLastKnownPowerState(String lastKnownPowerState) {
+        public Builder lastKnownPowerState(String lastKnownPowerState) {
             this.lastKnownPowerState = Objects.requireNonNull(lastKnownPowerState);
             return this;
         }
 
-        public Builder setLatestOperationResult(LatestOperationResultResponse latestOperationResult) {
+        public Builder latestOperationResult(LatestOperationResultResponse latestOperationResult) {
             this.latestOperationResult = Objects.requireNonNull(latestOperationResult);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkInterface(NetworkInterfaceResponse networkInterface) {
+        public Builder networkInterface(NetworkInterfaceResponse networkInterface) {
             this.networkInterface = Objects.requireNonNull(networkInterface);
             return this;
         }
 
-        public Builder setPasswordLastReset(String passwordLastReset) {
+        public Builder passwordLastReset(String passwordLastReset) {
             this.passwordLastReset = Objects.requireNonNull(passwordLastReset);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setResourceSets(@Nullable ResourceSetResponse resourceSets) {
+        public Builder resourceSets(@Nullable ResourceSetResponse resourceSets) {
             this.resourceSets = resourceSets;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTotalUsage(String totalUsage) {
+        public Builder totalUsage(String totalUsage) {
             this.totalUsage = Objects.requireNonNull(totalUsage);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUniqueIdentifier(@Nullable String uniqueIdentifier) {
+        public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }

@@ -28,11 +28,11 @@ public final class LifecyclePolicyPolicyDetails {
      */
     private final Map<String,String> targetTags;
 
-    @OutputCustomType.Constructor({"resourceTypes","schedules","targetTags"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetails(
-        List<String> resourceTypes,
-        List<LifecyclePolicyPolicyDetailsSchedule> schedules,
-        Map<String,String> targetTags) {
+        @OutputCustomType.Parameter("resourceTypes") List<String> resourceTypes,
+        @OutputCustomType.Parameter("schedules") List<LifecyclePolicyPolicyDetailsSchedule> schedules,
+        @OutputCustomType.Parameter("targetTags") Map<String,String> targetTags) {
         this.resourceTypes = resourceTypes;
         this.schedules = schedules;
         this.targetTags = targetTags;
@@ -84,17 +84,17 @@ public final class LifecyclePolicyPolicyDetails {
     	      this.targetTags = defaults.targetTags;
         }
 
-        public Builder setResourceTypes(List<String> resourceTypes) {
+        public Builder resourceTypes(List<String> resourceTypes) {
             this.resourceTypes = Objects.requireNonNull(resourceTypes);
             return this;
         }
 
-        public Builder setSchedules(List<LifecyclePolicyPolicyDetailsSchedule> schedules) {
+        public Builder schedules(List<LifecyclePolicyPolicyDetailsSchedule> schedules) {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
 
-        public Builder setTargetTags(Map<String,String> targetTags) {
+        public Builder targetTags(Map<String,String> targetTags) {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }

@@ -80,22 +80,22 @@ public final class GetAppResult {
      */
     private final String servingStatus;
 
-    @OutputCustomType.Constructor({"authDomain","codeBucket","databaseType","defaultBucket","defaultCookieExpiration","defaultHostname","dispatchRules","featureSettings","gcrDomain","iap","location","name","serviceAccount","servingStatus"})
+    @OutputCustomType.Constructor
     private GetAppResult(
-        String authDomain,
-        String codeBucket,
-        String databaseType,
-        String defaultBucket,
-        String defaultCookieExpiration,
-        String defaultHostname,
-        List<UrlDispatchRuleResponse> dispatchRules,
-        FeatureSettingsResponse featureSettings,
-        String gcrDomain,
-        IdentityAwareProxyResponse iap,
-        String location,
-        String name,
-        String serviceAccount,
-        String servingStatus) {
+        @OutputCustomType.Parameter("authDomain") String authDomain,
+        @OutputCustomType.Parameter("codeBucket") String codeBucket,
+        @OutputCustomType.Parameter("databaseType") String databaseType,
+        @OutputCustomType.Parameter("defaultBucket") String defaultBucket,
+        @OutputCustomType.Parameter("defaultCookieExpiration") String defaultCookieExpiration,
+        @OutputCustomType.Parameter("defaultHostname") String defaultHostname,
+        @OutputCustomType.Parameter("dispatchRules") List<UrlDispatchRuleResponse> dispatchRules,
+        @OutputCustomType.Parameter("featureSettings") FeatureSettingsResponse featureSettings,
+        @OutputCustomType.Parameter("gcrDomain") String gcrDomain,
+        @OutputCustomType.Parameter("iap") IdentityAwareProxyResponse iap,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("servingStatus") String servingStatus) {
         this.authDomain = authDomain;
         this.codeBucket = codeBucket;
         this.databaseType = databaseType;
@@ -253,72 +253,72 @@ public final class GetAppResult {
     	      this.servingStatus = defaults.servingStatus;
         }
 
-        public Builder setAuthDomain(String authDomain) {
+        public Builder authDomain(String authDomain) {
             this.authDomain = Objects.requireNonNull(authDomain);
             return this;
         }
 
-        public Builder setCodeBucket(String codeBucket) {
+        public Builder codeBucket(String codeBucket) {
             this.codeBucket = Objects.requireNonNull(codeBucket);
             return this;
         }
 
-        public Builder setDatabaseType(String databaseType) {
+        public Builder databaseType(String databaseType) {
             this.databaseType = Objects.requireNonNull(databaseType);
             return this;
         }
 
-        public Builder setDefaultBucket(String defaultBucket) {
+        public Builder defaultBucket(String defaultBucket) {
             this.defaultBucket = Objects.requireNonNull(defaultBucket);
             return this;
         }
 
-        public Builder setDefaultCookieExpiration(String defaultCookieExpiration) {
+        public Builder defaultCookieExpiration(String defaultCookieExpiration) {
             this.defaultCookieExpiration = Objects.requireNonNull(defaultCookieExpiration);
             return this;
         }
 
-        public Builder setDefaultHostname(String defaultHostname) {
+        public Builder defaultHostname(String defaultHostname) {
             this.defaultHostname = Objects.requireNonNull(defaultHostname);
             return this;
         }
 
-        public Builder setDispatchRules(List<UrlDispatchRuleResponse> dispatchRules) {
+        public Builder dispatchRules(List<UrlDispatchRuleResponse> dispatchRules) {
             this.dispatchRules = Objects.requireNonNull(dispatchRules);
             return this;
         }
 
-        public Builder setFeatureSettings(FeatureSettingsResponse featureSettings) {
+        public Builder featureSettings(FeatureSettingsResponse featureSettings) {
             this.featureSettings = Objects.requireNonNull(featureSettings);
             return this;
         }
 
-        public Builder setGcrDomain(String gcrDomain) {
+        public Builder gcrDomain(String gcrDomain) {
             this.gcrDomain = Objects.requireNonNull(gcrDomain);
             return this;
         }
 
-        public Builder setIap(IdentityAwareProxyResponse iap) {
+        public Builder iap(IdentityAwareProxyResponse iap) {
             this.iap = Objects.requireNonNull(iap);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setServingStatus(String servingStatus) {
+        public Builder servingStatus(String servingStatus) {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }

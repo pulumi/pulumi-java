@@ -37,13 +37,13 @@ public final class UserPropertiesResponse {
      */
     private final TerminalSettingsResponse terminalSettings;
 
-    @OutputCustomType.Constructor({"preferredLocation","preferredOsType","preferredShellType","storageProfile","terminalSettings"})
+    @OutputCustomType.Constructor
     private UserPropertiesResponse(
-        String preferredLocation,
-        String preferredOsType,
-        String preferredShellType,
-        StorageProfileResponse storageProfile,
-        TerminalSettingsResponse terminalSettings) {
+        @OutputCustomType.Parameter("preferredLocation") String preferredLocation,
+        @OutputCustomType.Parameter("preferredOsType") String preferredOsType,
+        @OutputCustomType.Parameter("preferredShellType") String preferredShellType,
+        @OutputCustomType.Parameter("storageProfile") StorageProfileResponse storageProfile,
+        @OutputCustomType.Parameter("terminalSettings") TerminalSettingsResponse terminalSettings) {
         this.preferredLocation = preferredLocation;
         this.preferredOsType = preferredOsType;
         this.preferredShellType = preferredShellType;
@@ -115,27 +115,27 @@ public final class UserPropertiesResponse {
     	      this.terminalSettings = defaults.terminalSettings;
         }
 
-        public Builder setPreferredLocation(String preferredLocation) {
+        public Builder preferredLocation(String preferredLocation) {
             this.preferredLocation = Objects.requireNonNull(preferredLocation);
             return this;
         }
 
-        public Builder setPreferredOsType(String preferredOsType) {
+        public Builder preferredOsType(String preferredOsType) {
             this.preferredOsType = Objects.requireNonNull(preferredOsType);
             return this;
         }
 
-        public Builder setPreferredShellType(String preferredShellType) {
+        public Builder preferredShellType(String preferredShellType) {
             this.preferredShellType = Objects.requireNonNull(preferredShellType);
             return this;
         }
 
-        public Builder setStorageProfile(StorageProfileResponse storageProfile) {
+        public Builder storageProfile(StorageProfileResponse storageProfile) {
             this.storageProfile = Objects.requireNonNull(storageProfile);
             return this;
         }
 
-        public Builder setTerminalSettings(TerminalSettingsResponse terminalSettings) {
+        public Builder terminalSettings(TerminalSettingsResponse terminalSettings) {
             this.terminalSettings = Objects.requireNonNull(terminalSettings);
             return this;
         }

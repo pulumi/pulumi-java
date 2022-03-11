@@ -17,8 +17,8 @@ public final class SeedNodeResponse {
      */
     private final @Nullable String ipAddress;
 
-    @OutputCustomType.Constructor({"ipAddress"})
-    private SeedNodeResponse(@Nullable String ipAddress) {
+    @OutputCustomType.Constructor
+    private SeedNodeResponse(@OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress) {
         this.ipAddress = ipAddress;
     }
 
@@ -50,7 +50,7 @@ public final class SeedNodeResponse {
     	      this.ipAddress = defaults.ipAddress;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }

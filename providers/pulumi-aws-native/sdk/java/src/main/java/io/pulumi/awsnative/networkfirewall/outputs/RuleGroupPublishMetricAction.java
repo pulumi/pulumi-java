@@ -12,8 +12,8 @@ import java.util.Objects;
 public final class RuleGroupPublishMetricAction {
     private final List<RuleGroupDimension> dimensions;
 
-    @OutputCustomType.Constructor({"dimensions"})
-    private RuleGroupPublishMetricAction(List<RuleGroupDimension> dimensions) {
+    @OutputCustomType.Constructor
+    private RuleGroupPublishMetricAction(@OutputCustomType.Parameter("dimensions") List<RuleGroupDimension> dimensions) {
         this.dimensions = dimensions;
     }
 
@@ -41,7 +41,7 @@ public final class RuleGroupPublishMetricAction {
     	      this.dimensions = defaults.dimensions;
         }
 
-        public Builder setDimensions(List<RuleGroupDimension> dimensions) {
+        public Builder dimensions(List<RuleGroupDimension> dimensions) {
             this.dimensions = Objects.requireNonNull(dimensions);
             return this;
         }

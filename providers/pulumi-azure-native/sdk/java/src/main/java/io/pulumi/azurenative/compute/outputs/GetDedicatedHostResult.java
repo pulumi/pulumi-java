@@ -89,22 +89,22 @@ public final class GetDedicatedHostResult {
      */
     private final List<SubResourceReadOnlyResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"autoReplaceOnFailure","hostId","id","instanceView","licenseType","location","name","platformFaultDomain","provisioningState","provisioningTime","sku","tags","type","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetDedicatedHostResult(
-        @Nullable Boolean autoReplaceOnFailure,
-        String hostId,
-        String id,
-        DedicatedHostInstanceViewResponse instanceView,
-        @Nullable String licenseType,
-        String location,
-        String name,
-        @Nullable Integer platformFaultDomain,
-        String provisioningState,
-        String provisioningTime,
-        SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        String type,
-        List<SubResourceReadOnlyResponse> virtualMachines) {
+        @OutputCustomType.Parameter("autoReplaceOnFailure") @Nullable Boolean autoReplaceOnFailure,
+        @OutputCustomType.Parameter("hostId") String hostId,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instanceView") DedicatedHostInstanceViewResponse instanceView,
+        @OutputCustomType.Parameter("licenseType") @Nullable String licenseType,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformFaultDomain") @Nullable Integer platformFaultDomain,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("provisioningTime") String provisioningTime,
+        @OutputCustomType.Parameter("sku") SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachines") List<SubResourceReadOnlyResponse> virtualMachines) {
         this.autoReplaceOnFailure = autoReplaceOnFailure;
         this.hostId = hostId;
         this.id = id;
@@ -266,72 +266,72 @@ public final class GetDedicatedHostResult {
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setAutoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
+        public Builder autoReplaceOnFailure(@Nullable Boolean autoReplaceOnFailure) {
             this.autoReplaceOnFailure = autoReplaceOnFailure;
             return this;
         }
 
-        public Builder setHostId(String hostId) {
+        public Builder hostId(String hostId) {
             this.hostId = Objects.requireNonNull(hostId);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstanceView(DedicatedHostInstanceViewResponse instanceView) {
+        public Builder instanceView(DedicatedHostInstanceViewResponse instanceView) {
             this.instanceView = Objects.requireNonNull(instanceView);
             return this;
         }
 
-        public Builder setLicenseType(@Nullable String licenseType) {
+        public Builder licenseType(@Nullable String licenseType) {
             this.licenseType = licenseType;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlatformFaultDomain(@Nullable Integer platformFaultDomain) {
+        public Builder platformFaultDomain(@Nullable Integer platformFaultDomain) {
             this.platformFaultDomain = platformFaultDomain;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setProvisioningTime(String provisioningTime) {
+        public Builder provisioningTime(String provisioningTime) {
             this.provisioningTime = Objects.requireNonNull(provisioningTime);
             return this;
         }
 
-        public Builder setSku(SkuResponse sku) {
+        public Builder sku(SkuResponse sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachines(List<SubResourceReadOnlyResponse> virtualMachines) {
+        public Builder virtualMachines(List<SubResourceReadOnlyResponse> virtualMachines) {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }

@@ -93,24 +93,24 @@ public final class CloudSqlSettingsResponse {
      */
     private final String zone;
 
-    @OutputCustomType.Constructor({"activationPolicy","autoStorageIncrease","cmekKeyName","collation","dataDiskSizeGb","dataDiskType","databaseFlags","databaseVersion","ipConfig","rootPassword","rootPasswordSet","sourceId","storageAutoResizeLimit","tier","userLabels","zone"})
+    @OutputCustomType.Constructor
     private CloudSqlSettingsResponse(
-        String activationPolicy,
-        Boolean autoStorageIncrease,
-        String cmekKeyName,
-        String collation,
-        String dataDiskSizeGb,
-        String dataDiskType,
-        Map<String,String> databaseFlags,
-        String databaseVersion,
-        SqlIpConfigResponse ipConfig,
-        String rootPassword,
-        Boolean rootPasswordSet,
-        String sourceId,
-        String storageAutoResizeLimit,
-        String tier,
-        Map<String,String> userLabels,
-        String zone) {
+        @OutputCustomType.Parameter("activationPolicy") String activationPolicy,
+        @OutputCustomType.Parameter("autoStorageIncrease") Boolean autoStorageIncrease,
+        @OutputCustomType.Parameter("cmekKeyName") String cmekKeyName,
+        @OutputCustomType.Parameter("collation") String collation,
+        @OutputCustomType.Parameter("dataDiskSizeGb") String dataDiskSizeGb,
+        @OutputCustomType.Parameter("dataDiskType") String dataDiskType,
+        @OutputCustomType.Parameter("databaseFlags") Map<String,String> databaseFlags,
+        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
+        @OutputCustomType.Parameter("ipConfig") SqlIpConfigResponse ipConfig,
+        @OutputCustomType.Parameter("rootPassword") String rootPassword,
+        @OutputCustomType.Parameter("rootPasswordSet") Boolean rootPasswordSet,
+        @OutputCustomType.Parameter("sourceId") String sourceId,
+        @OutputCustomType.Parameter("storageAutoResizeLimit") String storageAutoResizeLimit,
+        @OutputCustomType.Parameter("tier") String tier,
+        @OutputCustomType.Parameter("userLabels") Map<String,String> userLabels,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.activationPolicy = activationPolicy;
         this.autoStorageIncrease = autoStorageIncrease;
         this.cmekKeyName = cmekKeyName;
@@ -292,82 +292,82 @@ public final class CloudSqlSettingsResponse {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setActivationPolicy(String activationPolicy) {
+        public Builder activationPolicy(String activationPolicy) {
             this.activationPolicy = Objects.requireNonNull(activationPolicy);
             return this;
         }
 
-        public Builder setAutoStorageIncrease(Boolean autoStorageIncrease) {
+        public Builder autoStorageIncrease(Boolean autoStorageIncrease) {
             this.autoStorageIncrease = Objects.requireNonNull(autoStorageIncrease);
             return this;
         }
 
-        public Builder setCmekKeyName(String cmekKeyName) {
+        public Builder cmekKeyName(String cmekKeyName) {
             this.cmekKeyName = Objects.requireNonNull(cmekKeyName);
             return this;
         }
 
-        public Builder setCollation(String collation) {
+        public Builder collation(String collation) {
             this.collation = Objects.requireNonNull(collation);
             return this;
         }
 
-        public Builder setDataDiskSizeGb(String dataDiskSizeGb) {
+        public Builder dataDiskSizeGb(String dataDiskSizeGb) {
             this.dataDiskSizeGb = Objects.requireNonNull(dataDiskSizeGb);
             return this;
         }
 
-        public Builder setDataDiskType(String dataDiskType) {
+        public Builder dataDiskType(String dataDiskType) {
             this.dataDiskType = Objects.requireNonNull(dataDiskType);
             return this;
         }
 
-        public Builder setDatabaseFlags(Map<String,String> databaseFlags) {
+        public Builder databaseFlags(Map<String,String> databaseFlags) {
             this.databaseFlags = Objects.requireNonNull(databaseFlags);
             return this;
         }
 
-        public Builder setDatabaseVersion(String databaseVersion) {
+        public Builder databaseVersion(String databaseVersion) {
             this.databaseVersion = Objects.requireNonNull(databaseVersion);
             return this;
         }
 
-        public Builder setIpConfig(SqlIpConfigResponse ipConfig) {
+        public Builder ipConfig(SqlIpConfigResponse ipConfig) {
             this.ipConfig = Objects.requireNonNull(ipConfig);
             return this;
         }
 
-        public Builder setRootPassword(String rootPassword) {
+        public Builder rootPassword(String rootPassword) {
             this.rootPassword = Objects.requireNonNull(rootPassword);
             return this;
         }
 
-        public Builder setRootPasswordSet(Boolean rootPasswordSet) {
+        public Builder rootPasswordSet(Boolean rootPasswordSet) {
             this.rootPasswordSet = Objects.requireNonNull(rootPasswordSet);
             return this;
         }
 
-        public Builder setSourceId(String sourceId) {
+        public Builder sourceId(String sourceId) {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
 
-        public Builder setStorageAutoResizeLimit(String storageAutoResizeLimit) {
+        public Builder storageAutoResizeLimit(String storageAutoResizeLimit) {
             this.storageAutoResizeLimit = Objects.requireNonNull(storageAutoResizeLimit);
             return this;
         }
 
-        public Builder setTier(String tier) {
+        public Builder tier(String tier) {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
 
-        public Builder setUserLabels(Map<String,String> userLabels) {
+        public Builder userLabels(Map<String,String> userLabels) {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

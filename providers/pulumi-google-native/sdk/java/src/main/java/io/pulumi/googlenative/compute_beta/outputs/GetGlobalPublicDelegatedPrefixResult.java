@@ -73,20 +73,20 @@ public final class GetGlobalPublicDelegatedPrefixResult {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTimestamp","description","fingerprint","ipCidrRange","isLiveMigration","kind","name","parentPrefix","publicDelegatedSubPrefixs","region","selfLink","status"})
+    @OutputCustomType.Constructor
     private GetGlobalPublicDelegatedPrefixResult(
-        String creationTimestamp,
-        String description,
-        String fingerprint,
-        String ipCidrRange,
-        Boolean isLiveMigration,
-        String kind,
-        String name,
-        String parentPrefix,
-        List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs,
-        String region,
-        String selfLink,
-        String status) {
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("fingerprint") String fingerprint,
+        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @OutputCustomType.Parameter("isLiveMigration") Boolean isLiveMigration,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parentPrefix") String parentPrefix,
+        @OutputCustomType.Parameter("publicDelegatedSubPrefixs") List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTimestamp = creationTimestamp;
         this.description = description;
         this.fingerprint = fingerprint;
@@ -228,62 +228,62 @@ public final class GetGlobalPublicDelegatedPrefixResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setFingerprint(String fingerprint) {
+        public Builder fingerprint(String fingerprint) {
             this.fingerprint = Objects.requireNonNull(fingerprint);
             return this;
         }
 
-        public Builder setIpCidrRange(String ipCidrRange) {
+        public Builder ipCidrRange(String ipCidrRange) {
             this.ipCidrRange = Objects.requireNonNull(ipCidrRange);
             return this;
         }
 
-        public Builder setIsLiveMigration(Boolean isLiveMigration) {
+        public Builder isLiveMigration(Boolean isLiveMigration) {
             this.isLiveMigration = Objects.requireNonNull(isLiveMigration);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParentPrefix(String parentPrefix) {
+        public Builder parentPrefix(String parentPrefix) {
             this.parentPrefix = Objects.requireNonNull(parentPrefix);
             return this;
         }
 
-        public Builder setPublicDelegatedSubPrefixs(List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs) {
+        public Builder publicDelegatedSubPrefixs(List<PublicDelegatedPrefixPublicDelegatedSubPrefixResponse> publicDelegatedSubPrefixs) {
             this.publicDelegatedSubPrefixs = Objects.requireNonNull(publicDelegatedSubPrefixs);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

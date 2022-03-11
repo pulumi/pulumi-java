@@ -89,23 +89,23 @@ public final class ObjectMetaResponse {
      */
     private final String uid;
 
-    @OutputCustomType.Constructor({"annotations","clusterName","creationTimestamp","deletionGracePeriodSeconds","deletionTimestamp","finalizers","generateName","generation","labels","name","namespace","ownerReferences","resourceVersion","selfLink","uid"})
+    @OutputCustomType.Constructor
     private ObjectMetaResponse(
-        Map<String,String> annotations,
-        String clusterName,
-        String creationTimestamp,
-        Integer deletionGracePeriodSeconds,
-        String deletionTimestamp,
-        List<String> finalizers,
-        String generateName,
-        Integer generation,
-        Map<String,String> labels,
-        String name,
-        String namespace,
-        List<OwnerReferenceResponse> ownerReferences,
-        String resourceVersion,
-        String selfLink,
-        String uid) {
+        @OutputCustomType.Parameter("annotations") Map<String,String> annotations,
+        @OutputCustomType.Parameter("clusterName") String clusterName,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("deletionGracePeriodSeconds") Integer deletionGracePeriodSeconds,
+        @OutputCustomType.Parameter("deletionTimestamp") String deletionTimestamp,
+        @OutputCustomType.Parameter("finalizers") List<String> finalizers,
+        @OutputCustomType.Parameter("generateName") String generateName,
+        @OutputCustomType.Parameter("generation") Integer generation,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("namespace") String namespace,
+        @OutputCustomType.Parameter("ownerReferences") List<OwnerReferenceResponse> ownerReferences,
+        @OutputCustomType.Parameter("resourceVersion") String resourceVersion,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("uid") String uid) {
         this.annotations = annotations;
         this.clusterName = clusterName;
         this.creationTimestamp = creationTimestamp;
@@ -277,77 +277,77 @@ public final class ObjectMetaResponse {
     	      this.uid = defaults.uid;
         }
 
-        public Builder setAnnotations(Map<String,String> annotations) {
+        public Builder annotations(Map<String,String> annotations) {
             this.annotations = Objects.requireNonNull(annotations);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setDeletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
+        public Builder deletionGracePeriodSeconds(Integer deletionGracePeriodSeconds) {
             this.deletionGracePeriodSeconds = Objects.requireNonNull(deletionGracePeriodSeconds);
             return this;
         }
 
-        public Builder setDeletionTimestamp(String deletionTimestamp) {
+        public Builder deletionTimestamp(String deletionTimestamp) {
             this.deletionTimestamp = Objects.requireNonNull(deletionTimestamp);
             return this;
         }
 
-        public Builder setFinalizers(List<String> finalizers) {
+        public Builder finalizers(List<String> finalizers) {
             this.finalizers = Objects.requireNonNull(finalizers);
             return this;
         }
 
-        public Builder setGenerateName(String generateName) {
+        public Builder generateName(String generateName) {
             this.generateName = Objects.requireNonNull(generateName);
             return this;
         }
 
-        public Builder setGeneration(Integer generation) {
+        public Builder generation(Integer generation) {
             this.generation = Objects.requireNonNull(generation);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
 
-        public Builder setOwnerReferences(List<OwnerReferenceResponse> ownerReferences) {
+        public Builder ownerReferences(List<OwnerReferenceResponse> ownerReferences) {
             this.ownerReferences = Objects.requireNonNull(ownerReferences);
             return this;
         }
 
-        public Builder setResourceVersion(String resourceVersion) {
+        public Builder resourceVersion(String resourceVersion) {
             this.resourceVersion = Objects.requireNonNull(resourceVersion);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setUid(String uid) {
+        public Builder uid(String uid) {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }

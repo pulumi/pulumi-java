@@ -15,8 +15,8 @@ public final class GetBundleRootStorage {
      */
     private final String capacity;
 
-    @OutputCustomType.Constructor({"capacity"})
-    private GetBundleRootStorage(String capacity) {
+    @OutputCustomType.Constructor
+    private GetBundleRootStorage(@OutputCustomType.Parameter("capacity") String capacity) {
         this.capacity = capacity;
     }
 
@@ -48,7 +48,7 @@ public final class GetBundleRootStorage {
     	      this.capacity = defaults.capacity;
         }
 
-        public Builder setCapacity(String capacity) {
+        public Builder capacity(String capacity) {
             this.capacity = Objects.requireNonNull(capacity);
             return this;
         }

@@ -20,10 +20,10 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
      */
     private final String tenantId;
 
-    @OutputCustomType.Constructor({"principalId","tenantId"})
+    @OutputCustomType.Constructor
     private MyWorkbookUserAssignedIdentitiesResponse(
-        String principalId,
-        String tenantId) {
+        @OutputCustomType.Parameter("principalId") String principalId,
+        @OutputCustomType.Parameter("tenantId") String tenantId) {
         this.principalId = principalId;
         this.tenantId = tenantId;
     }
@@ -65,12 +65,12 @@ public final class MyWorkbookUserAssignedIdentitiesResponse {
     	      this.tenantId = defaults.tenantId;
         }
 
-        public Builder setPrincipalId(String principalId) {
+        public Builder principalId(String principalId) {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }

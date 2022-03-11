@@ -57,7 +57,7 @@ public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
     	      this.show = defaults.show;
         }
 
-        public Builder setShow(@Nullable Boolean show) {
+        public Builder show(@Nullable Boolean show) {
             this.show = show;
             return this;
         }

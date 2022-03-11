@@ -114,32 +114,32 @@ public final class DataSourceServiceNowConfiguration extends io.pulumi.resources
     	      this.serviceNowBuildVersion = defaults.serviceNowBuildVersion;
         }
 
-        public Builder setAuthenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
+        public Builder authenticationType(@Nullable DataSourceServiceNowAuthenticationType authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setHostUrl(String hostUrl) {
+        public Builder hostUrl(String hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
 
-        public Builder setKnowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
+        public Builder knowledgeArticleConfiguration(@Nullable DataSourceServiceNowKnowledgeArticleConfiguration knowledgeArticleConfiguration) {
             this.knowledgeArticleConfiguration = knowledgeArticleConfiguration;
             return this;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setServiceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
+        public Builder serviceCatalogConfiguration(@Nullable DataSourceServiceNowServiceCatalogConfiguration serviceCatalogConfiguration) {
             this.serviceCatalogConfiguration = serviceCatalogConfiguration;
             return this;
         }
 
-        public Builder setServiceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
+        public Builder serviceNowBuildVersion(DataSourceServiceNowBuildVersionType serviceNowBuildVersion) {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }

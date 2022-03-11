@@ -81,20 +81,20 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
      */
     private final @Nullable Object username;
 
-    @OutputCustomType.Constructor({"annotations","apiVersion","connectVia","description","encryptedCredential","environmentUrl","extendedProperties","parameters","password","securityToken","type","username"})
+    @OutputCustomType.Constructor
     private SalesforceServiceCloudLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable Object apiVersion,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Object environmentUrl,
-        @Nullable Object extendedProperties,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken,
-        String type,
-        @Nullable Object username) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("apiVersion") @Nullable Object apiVersion,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("environmentUrl") @Nullable Object environmentUrl,
+        @OutputCustomType.Parameter("extendedProperties") @Nullable Object extendedProperties,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("password") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("securityToken") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("username") @Nullable Object username) {
         this.annotations = annotations;
         this.apiVersion = apiVersion;
         this.connectVia = connectVia;
@@ -237,62 +237,62 @@ public final class SalesforceServiceCloudLinkedServiceResponse {
     	      this.username = defaults.username;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setApiVersion(@Nullable Object apiVersion) {
+        public Builder apiVersion(@Nullable Object apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setEnvironmentUrl(@Nullable Object environmentUrl) {
+        public Builder environmentUrl(@Nullable Object environmentUrl) {
             this.environmentUrl = environmentUrl;
             return this;
         }
 
-        public Builder setExtendedProperties(@Nullable Object extendedProperties) {
+        public Builder extendedProperties(@Nullable Object extendedProperties) {
             this.extendedProperties = extendedProperties;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setPassword(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = password;
             return this;
         }
 
-        public Builder setSecurityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
+        public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> securityToken) {
             this.securityToken = securityToken;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUsername(@Nullable Object username) {
+        public Builder username(@Nullable Object username) {
             this.username = username;
             return this;
         }

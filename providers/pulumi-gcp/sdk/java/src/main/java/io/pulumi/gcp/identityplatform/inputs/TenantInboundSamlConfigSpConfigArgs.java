@@ -90,32 +90,32 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
     	      this.spEntityId = defaults.spEntityId;
         }
 
-        public Builder setCallbackUri(Input<String> callbackUri) {
+        public Builder callbackUri(Input<String> callbackUri) {
             this.callbackUri = Objects.requireNonNull(callbackUri);
             return this;
         }
 
-        public Builder setCallbackUri(String callbackUri) {
+        public Builder callbackUri(String callbackUri) {
             this.callbackUri = Input.of(Objects.requireNonNull(callbackUri));
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
+        public Builder spCertificates(@Nullable Input<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
             this.spCertificates = spCertificates;
             return this;
         }
 
-        public Builder setSpCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
+        public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
             this.spCertificates = Input.ofNullable(spCertificates);
             return this;
         }
 
-        public Builder setSpEntityId(Input<String> spEntityId) {
+        public Builder spEntityId(Input<String> spEntityId) {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }
 
-        public Builder setSpEntityId(String spEntityId) {
+        public Builder spEntityId(String spEntityId) {
             this.spEntityId = Input.of(Objects.requireNonNull(spEntityId));
             return this;
         }

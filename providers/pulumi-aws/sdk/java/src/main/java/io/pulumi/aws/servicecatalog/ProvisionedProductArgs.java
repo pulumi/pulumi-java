@@ -267,142 +267,142 @@ public final class ProvisionedProductArgs extends io.pulumi.resources.ResourceAr
     	      this.tags = defaults.tags;
         }
 
-        public Builder setAcceptLanguage(@Nullable Input<String> acceptLanguage) {
+        public Builder acceptLanguage(@Nullable Input<String> acceptLanguage) {
             this.acceptLanguage = acceptLanguage;
             return this;
         }
 
-        public Builder setAcceptLanguage(@Nullable String acceptLanguage) {
+        public Builder acceptLanguage(@Nullable String acceptLanguage) {
             this.acceptLanguage = Input.ofNullable(acceptLanguage);
             return this;
         }
 
-        public Builder setIgnoreErrors(@Nullable Input<Boolean> ignoreErrors) {
+        public Builder ignoreErrors(@Nullable Input<Boolean> ignoreErrors) {
             this.ignoreErrors = ignoreErrors;
             return this;
         }
 
-        public Builder setIgnoreErrors(@Nullable Boolean ignoreErrors) {
+        public Builder ignoreErrors(@Nullable Boolean ignoreErrors) {
             this.ignoreErrors = Input.ofNullable(ignoreErrors);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable Input<List<String>> notificationArns) {
+        public Builder notificationArns(@Nullable Input<List<String>> notificationArns) {
             this.notificationArns = notificationArns;
             return this;
         }
 
-        public Builder setNotificationArns(@Nullable List<String> notificationArns) {
+        public Builder notificationArns(@Nullable List<String> notificationArns) {
             this.notificationArns = Input.ofNullable(notificationArns);
             return this;
         }
 
-        public Builder setPathId(@Nullable Input<String> pathId) {
+        public Builder pathId(@Nullable Input<String> pathId) {
             this.pathId = pathId;
             return this;
         }
 
-        public Builder setPathId(@Nullable String pathId) {
+        public Builder pathId(@Nullable String pathId) {
             this.pathId = Input.ofNullable(pathId);
             return this;
         }
 
-        public Builder setPathName(@Nullable Input<String> pathName) {
+        public Builder pathName(@Nullable Input<String> pathName) {
             this.pathName = pathName;
             return this;
         }
 
-        public Builder setPathName(@Nullable String pathName) {
+        public Builder pathName(@Nullable String pathName) {
             this.pathName = Input.ofNullable(pathName);
             return this;
         }
 
-        public Builder setProductId(@Nullable Input<String> productId) {
+        public Builder productId(@Nullable Input<String> productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setProductId(@Nullable String productId) {
+        public Builder productId(@Nullable String productId) {
             this.productId = Input.ofNullable(productId);
             return this;
         }
 
-        public Builder setProductName(@Nullable Input<String> productName) {
+        public Builder productName(@Nullable Input<String> productName) {
             this.productName = productName;
             return this;
         }
 
-        public Builder setProductName(@Nullable String productName) {
+        public Builder productName(@Nullable String productName) {
             this.productName = Input.ofNullable(productName);
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable Input<String> provisioningArtifactId) {
             this.provisioningArtifactId = provisioningArtifactId;
             return this;
         }
 
-        public Builder setProvisioningArtifactId(@Nullable String provisioningArtifactId) {
+        public Builder provisioningArtifactId(@Nullable String provisioningArtifactId) {
             this.provisioningArtifactId = Input.ofNullable(provisioningArtifactId);
             return this;
         }
 
-        public Builder setProvisioningArtifactName(@Nullable Input<String> provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable Input<String> provisioningArtifactName) {
             this.provisioningArtifactName = provisioningArtifactName;
             return this;
         }
 
-        public Builder setProvisioningArtifactName(@Nullable String provisioningArtifactName) {
+        public Builder provisioningArtifactName(@Nullable String provisioningArtifactName) {
             this.provisioningArtifactName = Input.ofNullable(provisioningArtifactName);
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable Input<List<ProvisionedProductProvisioningParameterArgs>> provisioningParameters) {
             this.provisioningParameters = provisioningParameters;
             return this;
         }
 
-        public Builder setProvisioningParameters(@Nullable List<ProvisionedProductProvisioningParameterArgs> provisioningParameters) {
+        public Builder provisioningParameters(@Nullable List<ProvisionedProductProvisioningParameterArgs> provisioningParameters) {
             this.provisioningParameters = Input.ofNullable(provisioningParameters);
             return this;
         }
 
-        public Builder setRetainPhysicalResources(@Nullable Input<Boolean> retainPhysicalResources) {
+        public Builder retainPhysicalResources(@Nullable Input<Boolean> retainPhysicalResources) {
             this.retainPhysicalResources = retainPhysicalResources;
             return this;
         }
 
-        public Builder setRetainPhysicalResources(@Nullable Boolean retainPhysicalResources) {
+        public Builder retainPhysicalResources(@Nullable Boolean retainPhysicalResources) {
             this.retainPhysicalResources = Input.ofNullable(retainPhysicalResources);
             return this;
         }
 
-        public Builder setStackSetProvisioningPreferences(@Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
+        public Builder stackSetProvisioningPreferences(@Nullable Input<ProvisionedProductStackSetProvisioningPreferencesArgs> stackSetProvisioningPreferences) {
             this.stackSetProvisioningPreferences = stackSetProvisioningPreferences;
             return this;
         }
 
-        public Builder setStackSetProvisioningPreferences(@Nullable ProvisionedProductStackSetProvisioningPreferencesArgs stackSetProvisioningPreferences) {
+        public Builder stackSetProvisioningPreferences(@Nullable ProvisionedProductStackSetProvisioningPreferencesArgs stackSetProvisioningPreferences) {
             this.stackSetProvisioningPreferences = Input.ofNullable(stackSetProvisioningPreferences);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

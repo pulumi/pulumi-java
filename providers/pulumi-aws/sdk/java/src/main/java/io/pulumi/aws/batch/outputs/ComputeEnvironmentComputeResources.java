@@ -97,24 +97,24 @@ public final class ComputeEnvironmentComputeResources {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"allocationStrategy","bidPercentage","desiredVcpus","ec2Configuration","ec2KeyPair","imageId","instanceRole","instanceTypes","launchTemplate","maxVcpus","minVcpus","securityGroupIds","spotIamFleetRole","subnets","tags","type"})
+    @OutputCustomType.Constructor
     private ComputeEnvironmentComputeResources(
-        @Nullable String allocationStrategy,
-        @Nullable Integer bidPercentage,
-        @Nullable Integer desiredVcpus,
-        @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
-        @Nullable String ec2KeyPair,
-        @Nullable String imageId,
-        @Nullable String instanceRole,
-        @Nullable List<String> instanceTypes,
-        @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
-        Integer maxVcpus,
-        @Nullable Integer minVcpus,
-        List<String> securityGroupIds,
-        @Nullable String spotIamFleetRole,
-        List<String> subnets,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("allocationStrategy") @Nullable String allocationStrategy,
+        @OutputCustomType.Parameter("bidPercentage") @Nullable Integer bidPercentage,
+        @OutputCustomType.Parameter("desiredVcpus") @Nullable Integer desiredVcpus,
+        @OutputCustomType.Parameter("ec2Configuration") @Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration,
+        @OutputCustomType.Parameter("ec2KeyPair") @Nullable String ec2KeyPair,
+        @OutputCustomType.Parameter("imageId") @Nullable String imageId,
+        @OutputCustomType.Parameter("instanceRole") @Nullable String instanceRole,
+        @OutputCustomType.Parameter("instanceTypes") @Nullable List<String> instanceTypes,
+        @OutputCustomType.Parameter("launchTemplate") @Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate,
+        @OutputCustomType.Parameter("maxVcpus") Integer maxVcpus,
+        @OutputCustomType.Parameter("minVcpus") @Nullable Integer minVcpus,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("spotIamFleetRole") @Nullable String spotIamFleetRole,
+        @OutputCustomType.Parameter("subnets") List<String> subnets,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.allocationStrategy = allocationStrategy;
         this.bidPercentage = bidPercentage;
         this.desiredVcpus = desiredVcpus;
@@ -296,82 +296,82 @@ public final class ComputeEnvironmentComputeResources {
     	      this.type = defaults.type;
         }
 
-        public Builder setAllocationStrategy(@Nullable String allocationStrategy) {
+        public Builder allocationStrategy(@Nullable String allocationStrategy) {
             this.allocationStrategy = allocationStrategy;
             return this;
         }
 
-        public Builder setBidPercentage(@Nullable Integer bidPercentage) {
+        public Builder bidPercentage(@Nullable Integer bidPercentage) {
             this.bidPercentage = bidPercentage;
             return this;
         }
 
-        public Builder setDesiredVcpus(@Nullable Integer desiredVcpus) {
+        public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
             this.desiredVcpus = desiredVcpus;
             return this;
         }
 
-        public Builder setEc2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration) {
+        public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2Configuration ec2Configuration) {
             this.ec2Configuration = ec2Configuration;
             return this;
         }
 
-        public Builder setEc2KeyPair(@Nullable String ec2KeyPair) {
+        public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
             this.ec2KeyPair = ec2KeyPair;
             return this;
         }
 
-        public Builder setImageId(@Nullable String imageId) {
+        public Builder imageId(@Nullable String imageId) {
             this.imageId = imageId;
             return this;
         }
 
-        public Builder setInstanceRole(@Nullable String instanceRole) {
+        public Builder instanceRole(@Nullable String instanceRole) {
             this.instanceRole = instanceRole;
             return this;
         }
 
-        public Builder setInstanceTypes(@Nullable List<String> instanceTypes) {
+        public Builder instanceTypes(@Nullable List<String> instanceTypes) {
             this.instanceTypes = instanceTypes;
             return this;
         }
 
-        public Builder setLaunchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate) {
+        public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplate launchTemplate) {
             this.launchTemplate = launchTemplate;
             return this;
         }
 
-        public Builder setMaxVcpus(Integer maxVcpus) {
+        public Builder maxVcpus(Integer maxVcpus) {
             this.maxVcpus = Objects.requireNonNull(maxVcpus);
             return this;
         }
 
-        public Builder setMinVcpus(@Nullable Integer minVcpus) {
+        public Builder minVcpus(@Nullable Integer minVcpus) {
             this.minVcpus = minVcpus;
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSpotIamFleetRole(@Nullable String spotIamFleetRole) {
+        public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
             this.spotIamFleetRole = spotIamFleetRole;
             return this;
         }
 
-        public Builder setSubnets(List<String> subnets) {
+        public Builder subnets(List<String> subnets) {
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

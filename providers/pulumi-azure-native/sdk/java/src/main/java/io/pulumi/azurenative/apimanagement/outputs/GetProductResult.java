@@ -64,18 +64,18 @@ public final class GetProductResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"approvalRequired","description","displayName","id","name","state","subscriptionRequired","subscriptionsLimit","terms","type"})
+    @OutputCustomType.Constructor
     private GetProductResult(
-        @Nullable Boolean approvalRequired,
-        @Nullable String description,
-        String displayName,
-        String id,
-        String name,
-        @Nullable String state,
-        @Nullable Boolean subscriptionRequired,
-        @Nullable Integer subscriptionsLimit,
-        @Nullable String terms,
-        String type) {
+        @OutputCustomType.Parameter("approvalRequired") @Nullable Boolean approvalRequired,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") @Nullable String state,
+        @OutputCustomType.Parameter("subscriptionRequired") @Nullable Boolean subscriptionRequired,
+        @OutputCustomType.Parameter("subscriptionsLimit") @Nullable Integer subscriptionsLimit,
+        @OutputCustomType.Parameter("terms") @Nullable String terms,
+        @OutputCustomType.Parameter("type") String type) {
         this.approvalRequired = approvalRequired;
         this.description = description;
         this.displayName = displayName;
@@ -197,52 +197,52 @@ public final class GetProductResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setApprovalRequired(@Nullable Boolean approvalRequired) {
+        public Builder approvalRequired(@Nullable Boolean approvalRequired) {
             this.approvalRequired = approvalRequired;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(@Nullable String state) {
+        public Builder state(@Nullable String state) {
             this.state = state;
             return this;
         }
 
-        public Builder setSubscriptionRequired(@Nullable Boolean subscriptionRequired) {
+        public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
             this.subscriptionRequired = subscriptionRequired;
             return this;
         }
 
-        public Builder setSubscriptionsLimit(@Nullable Integer subscriptionsLimit) {
+        public Builder subscriptionsLimit(@Nullable Integer subscriptionsLimit) {
             this.subscriptionsLimit = subscriptionsLimit;
             return this;
         }
 
-        public Builder setTerms(@Nullable String terms) {
+        public Builder terms(@Nullable String terms) {
             this.terms = terms;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

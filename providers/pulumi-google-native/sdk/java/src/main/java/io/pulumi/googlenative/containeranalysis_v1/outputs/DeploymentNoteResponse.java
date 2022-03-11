@@ -16,8 +16,8 @@ public final class DeploymentNoteResponse {
      */
     private final List<String> resourceUri;
 
-    @OutputCustomType.Constructor({"resourceUri"})
-    private DeploymentNoteResponse(List<String> resourceUri) {
+    @OutputCustomType.Constructor
+    private DeploymentNoteResponse(@OutputCustomType.Parameter("resourceUri") List<String> resourceUri) {
         this.resourceUri = resourceUri;
     }
 
@@ -49,7 +49,7 @@ public final class DeploymentNoteResponse {
     	      this.resourceUri = defaults.resourceUri;
         }
 
-        public Builder setResourceUri(List<String> resourceUri) {
+        public Builder resourceUri(List<String> resourceUri) {
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }

@@ -22,10 +22,10 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
      */
     private final @Nullable String resourceLabel;
 
-    @OutputCustomType.Constructor({"predefinedScalingMetricType","resourceLabel"})
+    @OutputCustomType.Constructor
     private ScalingPlanScalingInstructionTargetTrackingConfigurationPredefinedScalingMetricSpecification(
-        String predefinedScalingMetricType,
-        @Nullable String resourceLabel) {
+        @OutputCustomType.Parameter("predefinedScalingMetricType") String predefinedScalingMetricType,
+        @OutputCustomType.Parameter("resourceLabel") @Nullable String resourceLabel) {
         this.predefinedScalingMetricType = predefinedScalingMetricType;
         this.resourceLabel = resourceLabel;
     }
@@ -67,12 +67,12 @@ public final class ScalingPlanScalingInstructionTargetTrackingConfigurationPrede
     	      this.resourceLabel = defaults.resourceLabel;
         }
 
-        public Builder setPredefinedScalingMetricType(String predefinedScalingMetricType) {
+        public Builder predefinedScalingMetricType(String predefinedScalingMetricType) {
             this.predefinedScalingMetricType = Objects.requireNonNull(predefinedScalingMetricType);
             return this;
         }
 
-        public Builder setResourceLabel(@Nullable String resourceLabel) {
+        public Builder resourceLabel(@Nullable String resourceLabel) {
             this.resourceLabel = resourceLabel;
             return this;
         }

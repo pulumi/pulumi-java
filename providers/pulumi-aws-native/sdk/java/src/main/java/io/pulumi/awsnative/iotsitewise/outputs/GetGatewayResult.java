@@ -35,12 +35,12 @@ public final class GetGatewayResult {
      */
     private final @Nullable List<GatewayTag> tags;
 
-    @OutputCustomType.Constructor({"gatewayCapabilitySummaries","gatewayId","gatewayName","tags"})
+    @OutputCustomType.Constructor
     private GetGatewayResult(
-        @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
-        @Nullable String gatewayId,
-        @Nullable String gatewayName,
-        @Nullable List<GatewayTag> tags) {
+        @OutputCustomType.Parameter("gatewayCapabilitySummaries") @Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries,
+        @OutputCustomType.Parameter("gatewayId") @Nullable String gatewayId,
+        @OutputCustomType.Parameter("gatewayName") @Nullable String gatewayName,
+        @OutputCustomType.Parameter("tags") @Nullable List<GatewayTag> tags) {
         this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
         this.gatewayId = gatewayId;
         this.gatewayName = gatewayName;
@@ -102,22 +102,22 @@ public final class GetGatewayResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setGatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries) {
+        public Builder gatewayCapabilitySummaries(@Nullable List<GatewayCapabilitySummary> gatewayCapabilitySummaries) {
             this.gatewayCapabilitySummaries = gatewayCapabilitySummaries;
             return this;
         }
 
-        public Builder setGatewayId(@Nullable String gatewayId) {
+        public Builder gatewayId(@Nullable String gatewayId) {
             this.gatewayId = gatewayId;
             return this;
         }
 
-        public Builder setGatewayName(@Nullable String gatewayName) {
+        public Builder gatewayName(@Nullable String gatewayName) {
             this.gatewayName = gatewayName;
             return this;
         }
 
-        public Builder setTags(@Nullable List<GatewayTag> tags) {
+        public Builder tags(@Nullable List<GatewayTag> tags) {
             this.tags = tags;
             return this;
         }

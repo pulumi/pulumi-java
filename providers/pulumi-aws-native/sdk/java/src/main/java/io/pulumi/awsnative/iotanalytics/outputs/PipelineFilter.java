@@ -15,11 +15,11 @@ public final class PipelineFilter {
     private final String name;
     private final @Nullable String next;
 
-    @OutputCustomType.Constructor({"filter","name","next"})
+    @OutputCustomType.Constructor
     private PipelineFilter(
-        String filter,
-        String name,
-        @Nullable String next) {
+        @OutputCustomType.Parameter("filter") String filter,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("next") @Nullable String next) {
         this.filter = filter;
         this.name = name;
         this.next = next;
@@ -59,17 +59,17 @@ public final class PipelineFilter {
     	      this.next = defaults.next;
         }
 
-        public Builder setFilter(String filter) {
+        public Builder filter(String filter) {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNext(@Nullable String next) {
+        public Builder next(@Nullable String next) {
             this.next = next;
             return this;
         }

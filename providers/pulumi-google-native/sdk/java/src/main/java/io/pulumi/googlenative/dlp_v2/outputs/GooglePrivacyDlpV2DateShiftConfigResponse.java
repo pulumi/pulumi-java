@@ -32,12 +32,12 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
      */
     private final Integer upperBoundDays;
 
-    @OutputCustomType.Constructor({"context","cryptoKey","lowerBoundDays","upperBoundDays"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2DateShiftConfigResponse(
-        GooglePrivacyDlpV2FieldIdResponse context,
-        GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
-        Integer lowerBoundDays,
-        Integer upperBoundDays) {
+        @OutputCustomType.Parameter("context") GooglePrivacyDlpV2FieldIdResponse context,
+        @OutputCustomType.Parameter("cryptoKey") GooglePrivacyDlpV2CryptoKeyResponse cryptoKey,
+        @OutputCustomType.Parameter("lowerBoundDays") Integer lowerBoundDays,
+        @OutputCustomType.Parameter("upperBoundDays") Integer upperBoundDays) {
         this.context = context;
         this.cryptoKey = cryptoKey;
         this.lowerBoundDays = lowerBoundDays;
@@ -99,22 +99,22 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
     	      this.upperBoundDays = defaults.upperBoundDays;
         }
 
-        public Builder setContext(GooglePrivacyDlpV2FieldIdResponse context) {
+        public Builder context(GooglePrivacyDlpV2FieldIdResponse context) {
             this.context = Objects.requireNonNull(context);
             return this;
         }
 
-        public Builder setCryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
+        public Builder cryptoKey(GooglePrivacyDlpV2CryptoKeyResponse cryptoKey) {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
 
-        public Builder setLowerBoundDays(Integer lowerBoundDays) {
+        public Builder lowerBoundDays(Integer lowerBoundDays) {
             this.lowerBoundDays = Objects.requireNonNull(lowerBoundDays);
             return this;
         }
 
-        public Builder setUpperBoundDays(Integer upperBoundDays) {
+        public Builder upperBoundDays(Integer upperBoundDays) {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }

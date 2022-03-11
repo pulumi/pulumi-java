@@ -74,22 +74,22 @@ public final class HelmOperatorPropertiesArgs extends io.pulumi.resources.Resour
     	      this.chartVersion = defaults.chartVersion;
         }
 
-        public Builder setChartValues(@Nullable Input<String> chartValues) {
+        public Builder chartValues(@Nullable Input<String> chartValues) {
             this.chartValues = chartValues;
             return this;
         }
 
-        public Builder setChartValues(@Nullable String chartValues) {
+        public Builder chartValues(@Nullable String chartValues) {
             this.chartValues = Input.ofNullable(chartValues);
             return this;
         }
 
-        public Builder setChartVersion(@Nullable Input<String> chartVersion) {
+        public Builder chartVersion(@Nullable Input<String> chartVersion) {
             this.chartVersion = chartVersion;
             return this;
         }
 
-        public Builder setChartVersion(@Nullable String chartVersion) {
+        public Builder chartVersion(@Nullable String chartVersion) {
             this.chartVersion = Input.ofNullable(chartVersion);
             return this;
         }

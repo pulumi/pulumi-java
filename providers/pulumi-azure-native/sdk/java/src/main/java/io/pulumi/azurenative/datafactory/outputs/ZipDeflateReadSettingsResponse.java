@@ -24,10 +24,10 @@ public final class ZipDeflateReadSettingsResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"preserveZipFileNameAsFolder","type"})
+    @OutputCustomType.Constructor
     private ZipDeflateReadSettingsResponse(
-        @Nullable Object preserveZipFileNameAsFolder,
-        String type) {
+        @OutputCustomType.Parameter("preserveZipFileNameAsFolder") @Nullable Object preserveZipFileNameAsFolder,
+        @OutputCustomType.Parameter("type") String type) {
         this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
         this.type = type;
     }
@@ -70,12 +70,12 @@ public final class ZipDeflateReadSettingsResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setPreserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
+        public Builder preserveZipFileNameAsFolder(@Nullable Object preserveZipFileNameAsFolder) {
             this.preserveZipFileNameAsFolder = preserveZipFileNameAsFolder;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

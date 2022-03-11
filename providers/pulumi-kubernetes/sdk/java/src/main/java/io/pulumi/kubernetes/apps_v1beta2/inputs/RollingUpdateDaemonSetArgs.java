@@ -59,12 +59,12 @@ public final class RollingUpdateDaemonSetArgs extends io.pulumi.resources.Resour
     	      this.maxUnavailable = defaults.maxUnavailable;
         }
 
-        public Builder setMaxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Input<Either<Integer,String>> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Either<Integer,String> maxUnavailable) {
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }

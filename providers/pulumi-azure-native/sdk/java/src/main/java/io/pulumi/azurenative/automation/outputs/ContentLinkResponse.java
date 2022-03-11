@@ -28,11 +28,11 @@ public final class ContentLinkResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"contentHash","uri","version"})
+    @OutputCustomType.Constructor
     private ContentLinkResponse(
-        @Nullable ContentHashResponse contentHash,
-        @Nullable String uri,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("contentHash") @Nullable ContentHashResponse contentHash,
+        @OutputCustomType.Parameter("uri") @Nullable String uri,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.contentHash = contentHash;
         this.uri = uri;
         this.version = version;
@@ -84,17 +84,17 @@ public final class ContentLinkResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setContentHash(@Nullable ContentHashResponse contentHash) {
+        public Builder contentHash(@Nullable ContentHashResponse contentHash) {
             this.contentHash = contentHash;
             return this;
         }
 
-        public Builder setUri(@Nullable String uri) {
+        public Builder uri(@Nullable String uri) {
             this.uri = uri;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

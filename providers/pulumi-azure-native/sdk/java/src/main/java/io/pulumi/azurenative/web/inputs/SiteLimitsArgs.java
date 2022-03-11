@@ -90,32 +90,32 @@ public final class SiteLimitsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.maxPercentageCpu = defaults.maxPercentageCpu;
         }
 
-        public Builder setMaxDiskSizeInMb(@Nullable Input<Double> maxDiskSizeInMb) {
+        public Builder maxDiskSizeInMb(@Nullable Input<Double> maxDiskSizeInMb) {
             this.maxDiskSizeInMb = maxDiskSizeInMb;
             return this;
         }
 
-        public Builder setMaxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
+        public Builder maxDiskSizeInMb(@Nullable Double maxDiskSizeInMb) {
             this.maxDiskSizeInMb = Input.ofNullable(maxDiskSizeInMb);
             return this;
         }
 
-        public Builder setMaxMemoryInMb(@Nullable Input<Double> maxMemoryInMb) {
+        public Builder maxMemoryInMb(@Nullable Input<Double> maxMemoryInMb) {
             this.maxMemoryInMb = maxMemoryInMb;
             return this;
         }
 
-        public Builder setMaxMemoryInMb(@Nullable Double maxMemoryInMb) {
+        public Builder maxMemoryInMb(@Nullable Double maxMemoryInMb) {
             this.maxMemoryInMb = Input.ofNullable(maxMemoryInMb);
             return this;
         }
 
-        public Builder setMaxPercentageCpu(@Nullable Input<Double> maxPercentageCpu) {
+        public Builder maxPercentageCpu(@Nullable Input<Double> maxPercentageCpu) {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
 
-        public Builder setMaxPercentageCpu(@Nullable Double maxPercentageCpu) {
+        public Builder maxPercentageCpu(@Nullable Double maxPercentageCpu) {
             this.maxPercentageCpu = Input.ofNullable(maxPercentageCpu);
             return this;
         }

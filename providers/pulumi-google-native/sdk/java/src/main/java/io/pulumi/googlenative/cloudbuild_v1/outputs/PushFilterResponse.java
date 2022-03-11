@@ -26,11 +26,11 @@ public final class PushFilterResponse {
      */
     private final String tag;
 
-    @OutputCustomType.Constructor({"branch","invertRegex","tag"})
+    @OutputCustomType.Constructor
     private PushFilterResponse(
-        String branch,
-        Boolean invertRegex,
-        String tag) {
+        @OutputCustomType.Parameter("branch") String branch,
+        @OutputCustomType.Parameter("invertRegex") Boolean invertRegex,
+        @OutputCustomType.Parameter("tag") String tag) {
         this.branch = branch;
         this.invertRegex = invertRegex;
         this.tag = tag;
@@ -82,17 +82,17 @@ public final class PushFilterResponse {
     	      this.tag = defaults.tag;
         }
 
-        public Builder setBranch(String branch) {
+        public Builder branch(String branch) {
             this.branch = Objects.requireNonNull(branch);
             return this;
         }
 
-        public Builder setInvertRegex(Boolean invertRegex) {
+        public Builder invertRegex(Boolean invertRegex) {
             this.invertRegex = Objects.requireNonNull(invertRegex);
             return this;
         }
 
-        public Builder setTag(String tag) {
+        public Builder tag(String tag) {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }

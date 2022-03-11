@@ -20,10 +20,10 @@ public final class EndpointGroupPortOverride {
      */
     private final Integer listenerPort;
 
-    @OutputCustomType.Constructor({"endpointPort","listenerPort"})
+    @OutputCustomType.Constructor
     private EndpointGroupPortOverride(
-        Integer endpointPort,
-        Integer listenerPort) {
+        @OutputCustomType.Parameter("endpointPort") Integer endpointPort,
+        @OutputCustomType.Parameter("listenerPort") Integer listenerPort) {
         this.endpointPort = endpointPort;
         this.listenerPort = listenerPort;
     }
@@ -65,12 +65,12 @@ public final class EndpointGroupPortOverride {
     	      this.listenerPort = defaults.listenerPort;
         }
 
-        public Builder setEndpointPort(Integer endpointPort) {
+        public Builder endpointPort(Integer endpointPort) {
             this.endpointPort = Objects.requireNonNull(endpointPort);
             return this;
         }
 
-        public Builder setListenerPort(Integer listenerPort) {
+        public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = Objects.requireNonNull(listenerPort);
             return this;
         }

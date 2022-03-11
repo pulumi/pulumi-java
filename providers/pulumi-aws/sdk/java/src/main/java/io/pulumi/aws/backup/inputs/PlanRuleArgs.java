@@ -188,92 +188,92 @@ public final class PlanRuleArgs extends io.pulumi.resources.ResourceArgs {
     	      this.targetVaultName = defaults.targetVaultName;
         }
 
-        public Builder setCompletionWindow(@Nullable Input<Integer> completionWindow) {
+        public Builder completionWindow(@Nullable Input<Integer> completionWindow) {
             this.completionWindow = completionWindow;
             return this;
         }
 
-        public Builder setCompletionWindow(@Nullable Integer completionWindow) {
+        public Builder completionWindow(@Nullable Integer completionWindow) {
             this.completionWindow = Input.ofNullable(completionWindow);
             return this;
         }
 
-        public Builder setCopyActions(@Nullable Input<List<PlanRuleCopyActionArgs>> copyActions) {
+        public Builder copyActions(@Nullable Input<List<PlanRuleCopyActionArgs>> copyActions) {
             this.copyActions = copyActions;
             return this;
         }
 
-        public Builder setCopyActions(@Nullable List<PlanRuleCopyActionArgs> copyActions) {
+        public Builder copyActions(@Nullable List<PlanRuleCopyActionArgs> copyActions) {
             this.copyActions = Input.ofNullable(copyActions);
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Input<Boolean> enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Input<Boolean> enableContinuousBackup) {
             this.enableContinuousBackup = enableContinuousBackup;
             return this;
         }
 
-        public Builder setEnableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
+        public Builder enableContinuousBackup(@Nullable Boolean enableContinuousBackup) {
             this.enableContinuousBackup = Input.ofNullable(enableContinuousBackup);
             return this;
         }
 
-        public Builder setLifecycle(@Nullable Input<PlanRuleLifecycleArgs> lifecycle) {
+        public Builder lifecycle(@Nullable Input<PlanRuleLifecycleArgs> lifecycle) {
             this.lifecycle = lifecycle;
             return this;
         }
 
-        public Builder setLifecycle(@Nullable PlanRuleLifecycleArgs lifecycle) {
+        public Builder lifecycle(@Nullable PlanRuleLifecycleArgs lifecycle) {
             this.lifecycle = Input.ofNullable(lifecycle);
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Input<Map<String,String>> recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Input<Map<String,String>> recoveryPointTags) {
             this.recoveryPointTags = recoveryPointTags;
             return this;
         }
 
-        public Builder setRecoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
+        public Builder recoveryPointTags(@Nullable Map<String,String> recoveryPointTags) {
             this.recoveryPointTags = Input.ofNullable(recoveryPointTags);
             return this;
         }
 
-        public Builder setRuleName(Input<String> ruleName) {
+        public Builder ruleName(Input<String> ruleName) {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
 
-        public Builder setRuleName(String ruleName) {
+        public Builder ruleName(String ruleName) {
             this.ruleName = Input.of(Objects.requireNonNull(ruleName));
             return this;
         }
 
-        public Builder setSchedule(@Nullable Input<String> schedule) {
+        public Builder schedule(@Nullable Input<String> schedule) {
             this.schedule = schedule;
             return this;
         }
 
-        public Builder setSchedule(@Nullable String schedule) {
+        public Builder schedule(@Nullable String schedule) {
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
 
-        public Builder setStartWindow(@Nullable Input<Integer> startWindow) {
+        public Builder startWindow(@Nullable Input<Integer> startWindow) {
             this.startWindow = startWindow;
             return this;
         }
 
-        public Builder setStartWindow(@Nullable Integer startWindow) {
+        public Builder startWindow(@Nullable Integer startWindow) {
             this.startWindow = Input.ofNullable(startWindow);
             return this;
         }
 
-        public Builder setTargetVaultName(Input<String> targetVaultName) {
+        public Builder targetVaultName(Input<String> targetVaultName) {
             this.targetVaultName = Objects.requireNonNull(targetVaultName);
             return this;
         }
 
-        public Builder setTargetVaultName(String targetVaultName) {
+        public Builder targetVaultName(String targetVaultName) {
             this.targetVaultName = Input.of(Objects.requireNonNull(targetVaultName));
             return this;
         }

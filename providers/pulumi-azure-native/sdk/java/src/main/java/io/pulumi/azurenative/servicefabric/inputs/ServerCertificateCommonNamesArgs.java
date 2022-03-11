@@ -76,22 +76,22 @@ public final class ServerCertificateCommonNamesArgs extends io.pulumi.resources.
     	      this.x509StoreName = defaults.x509StoreName;
         }
 
-        public Builder setCommonNames(@Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames) {
+        public Builder commonNames(@Nullable Input<List<ServerCertificateCommonNameArgs>> commonNames) {
             this.commonNames = commonNames;
             return this;
         }
 
-        public Builder setCommonNames(@Nullable List<ServerCertificateCommonNameArgs> commonNames) {
+        public Builder commonNames(@Nullable List<ServerCertificateCommonNameArgs> commonNames) {
             this.commonNames = Input.ofNullable(commonNames);
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable Input<String> x509StoreName) {
+        public Builder x509StoreName(@Nullable Input<String> x509StoreName) {
             this.x509StoreName = x509StoreName;
             return this;
         }
 
-        public Builder setX509StoreName(@Nullable String x509StoreName) {
+        public Builder x509StoreName(@Nullable String x509StoreName) {
             this.x509StoreName = Input.ofNullable(x509StoreName);
             return this;
         }

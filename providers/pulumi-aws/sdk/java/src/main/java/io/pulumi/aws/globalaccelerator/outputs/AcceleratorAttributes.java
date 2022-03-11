@@ -28,11 +28,11 @@ public final class AcceleratorAttributes {
      */
     private final @Nullable String flowLogsS3Prefix;
 
-    @OutputCustomType.Constructor({"flowLogsEnabled","flowLogsS3Bucket","flowLogsS3Prefix"})
+    @OutputCustomType.Constructor
     private AcceleratorAttributes(
-        @Nullable Boolean flowLogsEnabled,
-        @Nullable String flowLogsS3Bucket,
-        @Nullable String flowLogsS3Prefix) {
+        @OutputCustomType.Parameter("flowLogsEnabled") @Nullable Boolean flowLogsEnabled,
+        @OutputCustomType.Parameter("flowLogsS3Bucket") @Nullable String flowLogsS3Bucket,
+        @OutputCustomType.Parameter("flowLogsS3Prefix") @Nullable String flowLogsS3Prefix) {
         this.flowLogsEnabled = flowLogsEnabled;
         this.flowLogsS3Bucket = flowLogsS3Bucket;
         this.flowLogsS3Prefix = flowLogsS3Prefix;
@@ -84,17 +84,17 @@ public final class AcceleratorAttributes {
     	      this.flowLogsS3Prefix = defaults.flowLogsS3Prefix;
         }
 
-        public Builder setFlowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
+        public Builder flowLogsEnabled(@Nullable Boolean flowLogsEnabled) {
             this.flowLogsEnabled = flowLogsEnabled;
             return this;
         }
 
-        public Builder setFlowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
+        public Builder flowLogsS3Bucket(@Nullable String flowLogsS3Bucket) {
             this.flowLogsS3Bucket = flowLogsS3Bucket;
             return this;
         }
 
-        public Builder setFlowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
+        public Builder flowLogsS3Prefix(@Nullable String flowLogsS3Prefix) {
             this.flowLogsS3Prefix = flowLogsS3Prefix;
             return this;
         }

@@ -31,14 +31,14 @@ public final class BotLocale {
     private final @Nullable List<BotSlotType> slotTypes;
     private final @Nullable BotVoiceSettings voiceSettings;
 
-    @OutputCustomType.Constructor({"description","intents","localeId","nluConfidenceThreshold","slotTypes","voiceSettings"})
+    @OutputCustomType.Constructor
     private BotLocale(
-        @Nullable String description,
-        @Nullable List<BotIntent> intents,
-        String localeId,
-        Double nluConfidenceThreshold,
-        @Nullable List<BotSlotType> slotTypes,
-        @Nullable BotVoiceSettings voiceSettings) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("intents") @Nullable List<BotIntent> intents,
+        @OutputCustomType.Parameter("localeId") String localeId,
+        @OutputCustomType.Parameter("nluConfidenceThreshold") Double nluConfidenceThreshold,
+        @OutputCustomType.Parameter("slotTypes") @Nullable List<BotSlotType> slotTypes,
+        @OutputCustomType.Parameter("voiceSettings") @Nullable BotVoiceSettings voiceSettings) {
         this.description = description;
         this.intents = intents;
         this.localeId = localeId;
@@ -104,32 +104,32 @@ public final class BotLocale {
     	      this.voiceSettings = defaults.voiceSettings;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIntents(@Nullable List<BotIntent> intents) {
+        public Builder intents(@Nullable List<BotIntent> intents) {
             this.intents = intents;
             return this;
         }
 
-        public Builder setLocaleId(String localeId) {
+        public Builder localeId(String localeId) {
             this.localeId = Objects.requireNonNull(localeId);
             return this;
         }
 
-        public Builder setNluConfidenceThreshold(Double nluConfidenceThreshold) {
+        public Builder nluConfidenceThreshold(Double nluConfidenceThreshold) {
             this.nluConfidenceThreshold = Objects.requireNonNull(nluConfidenceThreshold);
             return this;
         }
 
-        public Builder setSlotTypes(@Nullable List<BotSlotType> slotTypes) {
+        public Builder slotTypes(@Nullable List<BotSlotType> slotTypes) {
             this.slotTypes = slotTypes;
             return this;
         }
 
-        public Builder setVoiceSettings(@Nullable BotVoiceSettings voiceSettings) {
+        public Builder voiceSettings(@Nullable BotVoiceSettings voiceSettings) {
             this.voiceSettings = voiceSettings;
             return this;
         }

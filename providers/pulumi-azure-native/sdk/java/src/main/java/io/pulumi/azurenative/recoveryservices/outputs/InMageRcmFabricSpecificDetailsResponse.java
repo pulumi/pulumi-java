@@ -94,23 +94,23 @@ public final class InMageRcmFabricSpecificDetailsResponse {
      */
     private final String vmwareSiteId;
 
-    @OutputCustomType.Constructor({"agentDetails","controlPlaneUri","dataPlaneUri","dras","instanceType","physicalSiteId","processServers","pushInstallers","rcmProxies","replicationAgents","reprotectAgents","serviceContainerId","serviceEndpoint","serviceResourceId","vmwareSiteId"})
+    @OutputCustomType.Constructor
     private InMageRcmFabricSpecificDetailsResponse(
-        List<AgentDetailsResponse> agentDetails,
-        String controlPlaneUri,
-        String dataPlaneUri,
-        List<DraDetailsResponse> dras,
-        String instanceType,
-        String physicalSiteId,
-        List<ProcessServerDetailsResponse> processServers,
-        List<PushInstallerDetailsResponse> pushInstallers,
-        List<RcmProxyDetailsResponse> rcmProxies,
-        List<ReplicationAgentDetailsResponse> replicationAgents,
-        List<ReprotectAgentDetailsResponse> reprotectAgents,
-        String serviceContainerId,
-        String serviceEndpoint,
-        String serviceResourceId,
-        String vmwareSiteId) {
+        @OutputCustomType.Parameter("agentDetails") List<AgentDetailsResponse> agentDetails,
+        @OutputCustomType.Parameter("controlPlaneUri") String controlPlaneUri,
+        @OutputCustomType.Parameter("dataPlaneUri") String dataPlaneUri,
+        @OutputCustomType.Parameter("dras") List<DraDetailsResponse> dras,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("physicalSiteId") String physicalSiteId,
+        @OutputCustomType.Parameter("processServers") List<ProcessServerDetailsResponse> processServers,
+        @OutputCustomType.Parameter("pushInstallers") List<PushInstallerDetailsResponse> pushInstallers,
+        @OutputCustomType.Parameter("rcmProxies") List<RcmProxyDetailsResponse> rcmProxies,
+        @OutputCustomType.Parameter("replicationAgents") List<ReplicationAgentDetailsResponse> replicationAgents,
+        @OutputCustomType.Parameter("reprotectAgents") List<ReprotectAgentDetailsResponse> reprotectAgents,
+        @OutputCustomType.Parameter("serviceContainerId") String serviceContainerId,
+        @OutputCustomType.Parameter("serviceEndpoint") String serviceEndpoint,
+        @OutputCustomType.Parameter("serviceResourceId") String serviceResourceId,
+        @OutputCustomType.Parameter("vmwareSiteId") String vmwareSiteId) {
         this.agentDetails = agentDetails;
         this.controlPlaneUri = controlPlaneUri;
         this.dataPlaneUri = dataPlaneUri;
@@ -283,77 +283,77 @@ public final class InMageRcmFabricSpecificDetailsResponse {
     	      this.vmwareSiteId = defaults.vmwareSiteId;
         }
 
-        public Builder setAgentDetails(List<AgentDetailsResponse> agentDetails) {
+        public Builder agentDetails(List<AgentDetailsResponse> agentDetails) {
             this.agentDetails = Objects.requireNonNull(agentDetails);
             return this;
         }
 
-        public Builder setControlPlaneUri(String controlPlaneUri) {
+        public Builder controlPlaneUri(String controlPlaneUri) {
             this.controlPlaneUri = Objects.requireNonNull(controlPlaneUri);
             return this;
         }
 
-        public Builder setDataPlaneUri(String dataPlaneUri) {
+        public Builder dataPlaneUri(String dataPlaneUri) {
             this.dataPlaneUri = Objects.requireNonNull(dataPlaneUri);
             return this;
         }
 
-        public Builder setDras(List<DraDetailsResponse> dras) {
+        public Builder dras(List<DraDetailsResponse> dras) {
             this.dras = Objects.requireNonNull(dras);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPhysicalSiteId(String physicalSiteId) {
+        public Builder physicalSiteId(String physicalSiteId) {
             this.physicalSiteId = Objects.requireNonNull(physicalSiteId);
             return this;
         }
 
-        public Builder setProcessServers(List<ProcessServerDetailsResponse> processServers) {
+        public Builder processServers(List<ProcessServerDetailsResponse> processServers) {
             this.processServers = Objects.requireNonNull(processServers);
             return this;
         }
 
-        public Builder setPushInstallers(List<PushInstallerDetailsResponse> pushInstallers) {
+        public Builder pushInstallers(List<PushInstallerDetailsResponse> pushInstallers) {
             this.pushInstallers = Objects.requireNonNull(pushInstallers);
             return this;
         }
 
-        public Builder setRcmProxies(List<RcmProxyDetailsResponse> rcmProxies) {
+        public Builder rcmProxies(List<RcmProxyDetailsResponse> rcmProxies) {
             this.rcmProxies = Objects.requireNonNull(rcmProxies);
             return this;
         }
 
-        public Builder setReplicationAgents(List<ReplicationAgentDetailsResponse> replicationAgents) {
+        public Builder replicationAgents(List<ReplicationAgentDetailsResponse> replicationAgents) {
             this.replicationAgents = Objects.requireNonNull(replicationAgents);
             return this;
         }
 
-        public Builder setReprotectAgents(List<ReprotectAgentDetailsResponse> reprotectAgents) {
+        public Builder reprotectAgents(List<ReprotectAgentDetailsResponse> reprotectAgents) {
             this.reprotectAgents = Objects.requireNonNull(reprotectAgents);
             return this;
         }
 
-        public Builder setServiceContainerId(String serviceContainerId) {
+        public Builder serviceContainerId(String serviceContainerId) {
             this.serviceContainerId = Objects.requireNonNull(serviceContainerId);
             return this;
         }
 
-        public Builder setServiceEndpoint(String serviceEndpoint) {
+        public Builder serviceEndpoint(String serviceEndpoint) {
             this.serviceEndpoint = Objects.requireNonNull(serviceEndpoint);
             return this;
         }
 
-        public Builder setServiceResourceId(String serviceResourceId) {
+        public Builder serviceResourceId(String serviceResourceId) {
             this.serviceResourceId = Objects.requireNonNull(serviceResourceId);
             return this;
         }
 
-        public Builder setVmwareSiteId(String vmwareSiteId) {
+        public Builder vmwareSiteId(String vmwareSiteId) {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }

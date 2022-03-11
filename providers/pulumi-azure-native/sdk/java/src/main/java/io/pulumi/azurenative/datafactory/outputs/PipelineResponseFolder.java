@@ -17,8 +17,8 @@ public final class PipelineResponseFolder {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor({"name"})
-    private PipelineResponseFolder(@Nullable String name) {
+    @OutputCustomType.Constructor
+    private PipelineResponseFolder(@OutputCustomType.Parameter("name") @Nullable String name) {
         this.name = name;
     }
 
@@ -50,7 +50,7 @@ public final class PipelineResponseFolder {
     	      this.name = defaults.name;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }

@@ -70,19 +70,19 @@ public final class SingleQueryResultResponse {
      */
     private final @Nullable List<String> sourcePorts;
 
-    @OutputCustomType.Constructor({"description","destinationPorts","direction","group","inheritedFromParentPolicy","lastUpdated","mode","protocol","severity","signatureId","sourcePorts"})
+    @OutputCustomType.Constructor
     private SingleQueryResultResponse(
-        @Nullable String description,
-        @Nullable List<String> destinationPorts,
-        @Nullable Integer direction,
-        @Nullable String group,
-        @Nullable Boolean inheritedFromParentPolicy,
-        @Nullable String lastUpdated,
-        @Nullable Integer mode,
-        @Nullable String protocol,
-        @Nullable Integer severity,
-        @Nullable Integer signatureId,
-        @Nullable List<String> sourcePorts) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationPorts") @Nullable List<String> destinationPorts,
+        @OutputCustomType.Parameter("direction") @Nullable Integer direction,
+        @OutputCustomType.Parameter("group") @Nullable String group,
+        @OutputCustomType.Parameter("inheritedFromParentPolicy") @Nullable Boolean inheritedFromParentPolicy,
+        @OutputCustomType.Parameter("lastUpdated") @Nullable String lastUpdated,
+        @OutputCustomType.Parameter("mode") @Nullable Integer mode,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("severity") @Nullable Integer severity,
+        @OutputCustomType.Parameter("signatureId") @Nullable Integer signatureId,
+        @OutputCustomType.Parameter("sourcePorts") @Nullable List<String> sourcePorts) {
         this.description = description;
         this.destinationPorts = destinationPorts;
         this.direction = direction;
@@ -214,57 +214,57 @@ public final class SingleQueryResultResponse {
     	      this.sourcePorts = defaults.sourcePorts;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationPorts(@Nullable List<String> destinationPorts) {
+        public Builder destinationPorts(@Nullable List<String> destinationPorts) {
             this.destinationPorts = destinationPorts;
             return this;
         }
 
-        public Builder setDirection(@Nullable Integer direction) {
+        public Builder direction(@Nullable Integer direction) {
             this.direction = direction;
             return this;
         }
 
-        public Builder setGroup(@Nullable String group) {
+        public Builder group(@Nullable String group) {
             this.group = group;
             return this;
         }
 
-        public Builder setInheritedFromParentPolicy(@Nullable Boolean inheritedFromParentPolicy) {
+        public Builder inheritedFromParentPolicy(@Nullable Boolean inheritedFromParentPolicy) {
             this.inheritedFromParentPolicy = inheritedFromParentPolicy;
             return this;
         }
 
-        public Builder setLastUpdated(@Nullable String lastUpdated) {
+        public Builder lastUpdated(@Nullable String lastUpdated) {
             this.lastUpdated = lastUpdated;
             return this;
         }
 
-        public Builder setMode(@Nullable Integer mode) {
+        public Builder mode(@Nullable Integer mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSeverity(@Nullable Integer severity) {
+        public Builder severity(@Nullable Integer severity) {
             this.severity = severity;
             return this;
         }
 
-        public Builder setSignatureId(@Nullable Integer signatureId) {
+        public Builder signatureId(@Nullable Integer signatureId) {
             this.signatureId = signatureId;
             return this;
         }
 
-        public Builder setSourcePorts(@Nullable List<String> sourcePorts) {
+        public Builder sourcePorts(@Nullable List<String> sourcePorts) {
             this.sourcePorts = sourcePorts;
             return this;
         }

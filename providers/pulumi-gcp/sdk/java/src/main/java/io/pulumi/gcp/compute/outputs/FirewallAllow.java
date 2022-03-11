@@ -30,10 +30,10 @@ public final class FirewallAllow {
      */
     private final String protocol;
 
-    @OutputCustomType.Constructor({"ports","protocol"})
+    @OutputCustomType.Constructor
     private FirewallAllow(
-        @Nullable List<String> ports,
-        String protocol) {
+        @OutputCustomType.Parameter("ports") @Nullable List<String> ports,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.ports = ports;
         this.protocol = protocol;
     }
@@ -83,12 +83,12 @@ public final class FirewallAllow {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setPorts(@Nullable List<String> ports) {
+        public Builder ports(@Nullable List<String> ports) {
             this.ports = ports;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

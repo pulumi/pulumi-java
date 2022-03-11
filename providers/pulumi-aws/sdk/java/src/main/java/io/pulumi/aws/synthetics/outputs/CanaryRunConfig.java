@@ -28,11 +28,11 @@ public final class CanaryRunConfig {
      */
     private final @Nullable Integer timeoutInSeconds;
 
-    @OutputCustomType.Constructor({"activeTracing","memoryInMb","timeoutInSeconds"})
+    @OutputCustomType.Constructor
     private CanaryRunConfig(
-        @Nullable Boolean activeTracing,
-        @Nullable Integer memoryInMb,
-        @Nullable Integer timeoutInSeconds) {
+        @OutputCustomType.Parameter("activeTracing") @Nullable Boolean activeTracing,
+        @OutputCustomType.Parameter("memoryInMb") @Nullable Integer memoryInMb,
+        @OutputCustomType.Parameter("timeoutInSeconds") @Nullable Integer timeoutInSeconds) {
         this.activeTracing = activeTracing;
         this.memoryInMb = memoryInMb;
         this.timeoutInSeconds = timeoutInSeconds;
@@ -84,17 +84,17 @@ public final class CanaryRunConfig {
     	      this.timeoutInSeconds = defaults.timeoutInSeconds;
         }
 
-        public Builder setActiveTracing(@Nullable Boolean activeTracing) {
+        public Builder activeTracing(@Nullable Boolean activeTracing) {
             this.activeTracing = activeTracing;
             return this;
         }
 
-        public Builder setMemoryInMb(@Nullable Integer memoryInMb) {
+        public Builder memoryInMb(@Nullable Integer memoryInMb) {
             this.memoryInMb = memoryInMb;
             return this;
         }
 
-        public Builder setTimeoutInSeconds(@Nullable Integer timeoutInSeconds) {
+        public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }

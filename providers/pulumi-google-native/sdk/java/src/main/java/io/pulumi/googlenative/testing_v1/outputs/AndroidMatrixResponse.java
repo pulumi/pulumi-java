@@ -31,12 +31,12 @@ public final class AndroidMatrixResponse {
      */
     private final List<String> orientations;
 
-    @OutputCustomType.Constructor({"androidModelIds","androidVersionIds","locales","orientations"})
+    @OutputCustomType.Constructor
     private AndroidMatrixResponse(
-        List<String> androidModelIds,
-        List<String> androidVersionIds,
-        List<String> locales,
-        List<String> orientations) {
+        @OutputCustomType.Parameter("androidModelIds") List<String> androidModelIds,
+        @OutputCustomType.Parameter("androidVersionIds") List<String> androidVersionIds,
+        @OutputCustomType.Parameter("locales") List<String> locales,
+        @OutputCustomType.Parameter("orientations") List<String> orientations) {
         this.androidModelIds = androidModelIds;
         this.androidVersionIds = androidVersionIds;
         this.locales = locales;
@@ -98,22 +98,22 @@ public final class AndroidMatrixResponse {
     	      this.orientations = defaults.orientations;
         }
 
-        public Builder setAndroidModelIds(List<String> androidModelIds) {
+        public Builder androidModelIds(List<String> androidModelIds) {
             this.androidModelIds = Objects.requireNonNull(androidModelIds);
             return this;
         }
 
-        public Builder setAndroidVersionIds(List<String> androidVersionIds) {
+        public Builder androidVersionIds(List<String> androidVersionIds) {
             this.androidVersionIds = Objects.requireNonNull(androidVersionIds);
             return this;
         }
 
-        public Builder setLocales(List<String> locales) {
+        public Builder locales(List<String> locales) {
             this.locales = Objects.requireNonNull(locales);
             return this;
         }
 
-        public Builder setOrientations(List<String> orientations) {
+        public Builder orientations(List<String> orientations) {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }

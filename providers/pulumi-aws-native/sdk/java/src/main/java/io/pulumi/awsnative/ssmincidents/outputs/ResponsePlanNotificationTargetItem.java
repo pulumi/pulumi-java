@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ResponsePlanNotificationTargetItem {
     private final @Nullable String snsTopicArn;
 
-    @OutputCustomType.Constructor({"snsTopicArn"})
-    private ResponsePlanNotificationTargetItem(@Nullable String snsTopicArn) {
+    @OutputCustomType.Constructor
+    private ResponsePlanNotificationTargetItem(@OutputCustomType.Parameter("snsTopicArn") @Nullable String snsTopicArn) {
         this.snsTopicArn = snsTopicArn;
     }
 
@@ -42,7 +42,7 @@ public final class ResponsePlanNotificationTargetItem {
     	      this.snsTopicArn = defaults.snsTopicArn;
         }
 
-        public Builder setSnsTopicArn(@Nullable String snsTopicArn) {
+        public Builder snsTopicArn(@Nullable String snsTopicArn) {
             this.snsTopicArn = snsTopicArn;
             return this;
         }

@@ -17,8 +17,8 @@ public final class GetContainerRecipeResult {
      */
     private final @Nullable String arn;
 
-    @OutputCustomType.Constructor({"arn"})
-    private GetContainerRecipeResult(@Nullable String arn) {
+    @OutputCustomType.Constructor
+    private GetContainerRecipeResult(@OutputCustomType.Parameter("arn") @Nullable String arn) {
         this.arn = arn;
     }
 
@@ -50,7 +50,7 @@ public final class GetContainerRecipeResult {
     	      this.arn = defaults.arn;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }

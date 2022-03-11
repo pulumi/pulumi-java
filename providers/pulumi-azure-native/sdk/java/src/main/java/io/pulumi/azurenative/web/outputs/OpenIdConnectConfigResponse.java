@@ -37,13 +37,13 @@ public final class OpenIdConnectConfigResponse {
      */
     private final @Nullable String wellKnownOpenIdConfiguration;
 
-    @OutputCustomType.Constructor({"authorizationEndpoint","certificationUri","issuer","tokenEndpoint","wellKnownOpenIdConfiguration"})
+    @OutputCustomType.Constructor
     private OpenIdConnectConfigResponse(
-        @Nullable String authorizationEndpoint,
-        @Nullable String certificationUri,
-        @Nullable String issuer,
-        @Nullable String tokenEndpoint,
-        @Nullable String wellKnownOpenIdConfiguration) {
+        @OutputCustomType.Parameter("authorizationEndpoint") @Nullable String authorizationEndpoint,
+        @OutputCustomType.Parameter("certificationUri") @Nullable String certificationUri,
+        @OutputCustomType.Parameter("issuer") @Nullable String issuer,
+        @OutputCustomType.Parameter("tokenEndpoint") @Nullable String tokenEndpoint,
+        @OutputCustomType.Parameter("wellKnownOpenIdConfiguration") @Nullable String wellKnownOpenIdConfiguration) {
         this.authorizationEndpoint = authorizationEndpoint;
         this.certificationUri = certificationUri;
         this.issuer = issuer;
@@ -115,27 +115,27 @@ public final class OpenIdConnectConfigResponse {
     	      this.wellKnownOpenIdConfiguration = defaults.wellKnownOpenIdConfiguration;
         }
 
-        public Builder setAuthorizationEndpoint(@Nullable String authorizationEndpoint) {
+        public Builder authorizationEndpoint(@Nullable String authorizationEndpoint) {
             this.authorizationEndpoint = authorizationEndpoint;
             return this;
         }
 
-        public Builder setCertificationUri(@Nullable String certificationUri) {
+        public Builder certificationUri(@Nullable String certificationUri) {
             this.certificationUri = certificationUri;
             return this;
         }
 
-        public Builder setIssuer(@Nullable String issuer) {
+        public Builder issuer(@Nullable String issuer) {
             this.issuer = issuer;
             return this;
         }
 
-        public Builder setTokenEndpoint(@Nullable String tokenEndpoint) {
+        public Builder tokenEndpoint(@Nullable String tokenEndpoint) {
             this.tokenEndpoint = tokenEndpoint;
             return this;
         }
 
-        public Builder setWellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
+        public Builder wellKnownOpenIdConfiguration(@Nullable String wellKnownOpenIdConfiguration) {
             this.wellKnownOpenIdConfiguration = wellKnownOpenIdConfiguration;
             return this;
         }

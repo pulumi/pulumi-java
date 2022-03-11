@@ -17,12 +17,12 @@ public final class TopicRuleFirehoseAction {
     private final String roleArn;
     private final @Nullable String separator;
 
-    @OutputCustomType.Constructor({"batchMode","deliveryStreamName","roleArn","separator"})
+    @OutputCustomType.Constructor
     private TopicRuleFirehoseAction(
-        @Nullable Boolean batchMode,
-        String deliveryStreamName,
-        String roleArn,
-        @Nullable String separator) {
+        @OutputCustomType.Parameter("batchMode") @Nullable Boolean batchMode,
+        @OutputCustomType.Parameter("deliveryStreamName") String deliveryStreamName,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("separator") @Nullable String separator) {
         this.batchMode = batchMode;
         this.deliveryStreamName = deliveryStreamName;
         this.roleArn = roleArn;
@@ -68,22 +68,22 @@ public final class TopicRuleFirehoseAction {
     	      this.separator = defaults.separator;
         }
 
-        public Builder setBatchMode(@Nullable Boolean batchMode) {
+        public Builder batchMode(@Nullable Boolean batchMode) {
             this.batchMode = batchMode;
             return this;
         }
 
-        public Builder setDeliveryStreamName(String deliveryStreamName) {
+        public Builder deliveryStreamName(String deliveryStreamName) {
             this.deliveryStreamName = Objects.requireNonNull(deliveryStreamName);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setSeparator(@Nullable String separator) {
+        public Builder separator(@Nullable String separator) {
             this.separator = separator;
             return this;
         }

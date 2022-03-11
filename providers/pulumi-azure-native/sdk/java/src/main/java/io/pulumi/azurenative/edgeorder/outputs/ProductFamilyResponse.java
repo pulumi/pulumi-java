@@ -65,17 +65,17 @@ public final class ProductFamilyResponse {
      */
     private final @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails;
 
-    @OutputCustomType.Constructor({"availabilityInformation","costInformation","description","displayName","filterableProperties","hierarchyInformation","imageInformation","productLines","resourceProviderDetails"})
+    @OutputCustomType.Constructor
     private ProductFamilyResponse(
-        AvailabilityInformationResponse availabilityInformation,
-        CostInformationResponse costInformation,
-        DescriptionResponse description,
-        String displayName,
-        List<FilterablePropertyResponse> filterableProperties,
-        HierarchyInformationResponse hierarchyInformation,
-        List<ImageInformationResponse> imageInformation,
-        List<ProductLineResponse> productLines,
-        @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
+        @OutputCustomType.Parameter("availabilityInformation") AvailabilityInformationResponse availabilityInformation,
+        @OutputCustomType.Parameter("costInformation") CostInformationResponse costInformation,
+        @OutputCustomType.Parameter("description") DescriptionResponse description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("filterableProperties") List<FilterablePropertyResponse> filterableProperties,
+        @OutputCustomType.Parameter("hierarchyInformation") HierarchyInformationResponse hierarchyInformation,
+        @OutputCustomType.Parameter("imageInformation") List<ImageInformationResponse> imageInformation,
+        @OutputCustomType.Parameter("productLines") List<ProductLineResponse> productLines,
+        @OutputCustomType.Parameter("resourceProviderDetails") @Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
         this.availabilityInformation = availabilityInformation;
         this.costInformation = costInformation;
         this.description = description;
@@ -187,47 +187,47 @@ public final class ProductFamilyResponse {
     	      this.resourceProviderDetails = defaults.resourceProviderDetails;
         }
 
-        public Builder setAvailabilityInformation(AvailabilityInformationResponse availabilityInformation) {
+        public Builder availabilityInformation(AvailabilityInformationResponse availabilityInformation) {
             this.availabilityInformation = Objects.requireNonNull(availabilityInformation);
             return this;
         }
 
-        public Builder setCostInformation(CostInformationResponse costInformation) {
+        public Builder costInformation(CostInformationResponse costInformation) {
             this.costInformation = Objects.requireNonNull(costInformation);
             return this;
         }
 
-        public Builder setDescription(DescriptionResponse description) {
+        public Builder description(DescriptionResponse description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setFilterableProperties(List<FilterablePropertyResponse> filterableProperties) {
+        public Builder filterableProperties(List<FilterablePropertyResponse> filterableProperties) {
             this.filterableProperties = Objects.requireNonNull(filterableProperties);
             return this;
         }
 
-        public Builder setHierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
+        public Builder hierarchyInformation(HierarchyInformationResponse hierarchyInformation) {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
 
-        public Builder setImageInformation(List<ImageInformationResponse> imageInformation) {
+        public Builder imageInformation(List<ImageInformationResponse> imageInformation) {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
 
-        public Builder setProductLines(List<ProductLineResponse> productLines) {
+        public Builder productLines(List<ProductLineResponse> productLines) {
             this.productLines = Objects.requireNonNull(productLines);
             return this;
         }
 
-        public Builder setResourceProviderDetails(@Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
+        public Builder resourceProviderDetails(@Nullable List<ResourceProviderDetailsResponse> resourceProviderDetails) {
             this.resourceProviderDetails = resourceProviderDetails;
             return this;
         }

@@ -52,12 +52,12 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     	      this.action = defaults.action;
         }
 
-        public Builder setAction(Input<MitigationActionUpdateCACertificateParamsAction> action) {
+        public Builder action(Input<MitigationActionUpdateCACertificateParamsAction> action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setAction(MitigationActionUpdateCACertificateParamsAction action) {
+        public Builder action(MitigationActionUpdateCACertificateParamsAction action) {
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }

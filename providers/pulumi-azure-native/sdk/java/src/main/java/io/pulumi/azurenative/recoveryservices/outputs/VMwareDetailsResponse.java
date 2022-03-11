@@ -185,41 +185,41 @@ public final class VMwareDetailsResponse {
      */
     private final @Nullable String webLoadStatus;
 
-    @OutputCustomType.Constructor({"agentCount","agentExpiryDate","agentVersion","agentVersionDetails","availableMemoryInBytes","availableSpaceInBytes","cpuLoad","cpuLoadStatus","csServiceStatus","databaseServerLoad","databaseServerLoadStatus","hostName","instanceType","ipAddress","lastHeartbeat","masterTargetServers","memoryUsageStatus","processServerCount","processServers","protectedServers","psTemplateVersion","replicationPairCount","runAsAccounts","spaceUsageStatus","sslCertExpiryDate","sslCertExpiryRemainingDays","systemLoad","systemLoadStatus","totalMemoryInBytes","totalSpaceInBytes","versionStatus","webLoad","webLoadStatus"})
+    @OutputCustomType.Constructor
     private VMwareDetailsResponse(
-        @Nullable String agentCount,
-        @Nullable String agentExpiryDate,
-        @Nullable String agentVersion,
-        @Nullable VersionDetailsResponse agentVersionDetails,
-        @Nullable Double availableMemoryInBytes,
-        @Nullable Double availableSpaceInBytes,
-        @Nullable String cpuLoad,
-        @Nullable String cpuLoadStatus,
-        @Nullable String csServiceStatus,
-        @Nullable String databaseServerLoad,
-        @Nullable String databaseServerLoadStatus,
-        @Nullable String hostName,
-        String instanceType,
-        @Nullable String ipAddress,
-        @Nullable String lastHeartbeat,
-        @Nullable List<MasterTargetServerResponse> masterTargetServers,
-        @Nullable String memoryUsageStatus,
-        @Nullable String processServerCount,
-        @Nullable List<ProcessServerResponse> processServers,
-        @Nullable String protectedServers,
-        @Nullable String psTemplateVersion,
-        @Nullable String replicationPairCount,
-        @Nullable List<RunAsAccountResponse> runAsAccounts,
-        @Nullable String spaceUsageStatus,
-        @Nullable String sslCertExpiryDate,
-        @Nullable Integer sslCertExpiryRemainingDays,
-        @Nullable String systemLoad,
-        @Nullable String systemLoadStatus,
-        @Nullable Double totalMemoryInBytes,
-        @Nullable Double totalSpaceInBytes,
-        @Nullable String versionStatus,
-        @Nullable String webLoad,
-        @Nullable String webLoadStatus) {
+        @OutputCustomType.Parameter("agentCount") @Nullable String agentCount,
+        @OutputCustomType.Parameter("agentExpiryDate") @Nullable String agentExpiryDate,
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("agentVersionDetails") @Nullable VersionDetailsResponse agentVersionDetails,
+        @OutputCustomType.Parameter("availableMemoryInBytes") @Nullable Double availableMemoryInBytes,
+        @OutputCustomType.Parameter("availableSpaceInBytes") @Nullable Double availableSpaceInBytes,
+        @OutputCustomType.Parameter("cpuLoad") @Nullable String cpuLoad,
+        @OutputCustomType.Parameter("cpuLoadStatus") @Nullable String cpuLoadStatus,
+        @OutputCustomType.Parameter("csServiceStatus") @Nullable String csServiceStatus,
+        @OutputCustomType.Parameter("databaseServerLoad") @Nullable String databaseServerLoad,
+        @OutputCustomType.Parameter("databaseServerLoadStatus") @Nullable String databaseServerLoadStatus,
+        @OutputCustomType.Parameter("hostName") @Nullable String hostName,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @OutputCustomType.Parameter("lastHeartbeat") @Nullable String lastHeartbeat,
+        @OutputCustomType.Parameter("masterTargetServers") @Nullable List<MasterTargetServerResponse> masterTargetServers,
+        @OutputCustomType.Parameter("memoryUsageStatus") @Nullable String memoryUsageStatus,
+        @OutputCustomType.Parameter("processServerCount") @Nullable String processServerCount,
+        @OutputCustomType.Parameter("processServers") @Nullable List<ProcessServerResponse> processServers,
+        @OutputCustomType.Parameter("protectedServers") @Nullable String protectedServers,
+        @OutputCustomType.Parameter("psTemplateVersion") @Nullable String psTemplateVersion,
+        @OutputCustomType.Parameter("replicationPairCount") @Nullable String replicationPairCount,
+        @OutputCustomType.Parameter("runAsAccounts") @Nullable List<RunAsAccountResponse> runAsAccounts,
+        @OutputCustomType.Parameter("spaceUsageStatus") @Nullable String spaceUsageStatus,
+        @OutputCustomType.Parameter("sslCertExpiryDate") @Nullable String sslCertExpiryDate,
+        @OutputCustomType.Parameter("sslCertExpiryRemainingDays") @Nullable Integer sslCertExpiryRemainingDays,
+        @OutputCustomType.Parameter("systemLoad") @Nullable String systemLoad,
+        @OutputCustomType.Parameter("systemLoadStatus") @Nullable String systemLoadStatus,
+        @OutputCustomType.Parameter("totalMemoryInBytes") @Nullable Double totalMemoryInBytes,
+        @OutputCustomType.Parameter("totalSpaceInBytes") @Nullable Double totalSpaceInBytes,
+        @OutputCustomType.Parameter("versionStatus") @Nullable String versionStatus,
+        @OutputCustomType.Parameter("webLoad") @Nullable String webLoad,
+        @OutputCustomType.Parameter("webLoadStatus") @Nullable String webLoadStatus) {
         this.agentCount = agentCount;
         this.agentExpiryDate = agentExpiryDate;
         this.agentVersion = agentVersion;
@@ -572,167 +572,167 @@ public final class VMwareDetailsResponse {
     	      this.webLoadStatus = defaults.webLoadStatus;
         }
 
-        public Builder setAgentCount(@Nullable String agentCount) {
+        public Builder agentCount(@Nullable String agentCount) {
             this.agentCount = agentCount;
             return this;
         }
 
-        public Builder setAgentExpiryDate(@Nullable String agentExpiryDate) {
+        public Builder agentExpiryDate(@Nullable String agentExpiryDate) {
             this.agentExpiryDate = agentExpiryDate;
             return this;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
+        public Builder agentVersionDetails(@Nullable VersionDetailsResponse agentVersionDetails) {
             this.agentVersionDetails = agentVersionDetails;
             return this;
         }
 
-        public Builder setAvailableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
+        public Builder availableMemoryInBytes(@Nullable Double availableMemoryInBytes) {
             this.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
-        public Builder setAvailableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
+        public Builder availableSpaceInBytes(@Nullable Double availableSpaceInBytes) {
             this.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
-        public Builder setCpuLoad(@Nullable String cpuLoad) {
+        public Builder cpuLoad(@Nullable String cpuLoad) {
             this.cpuLoad = cpuLoad;
             return this;
         }
 
-        public Builder setCpuLoadStatus(@Nullable String cpuLoadStatus) {
+        public Builder cpuLoadStatus(@Nullable String cpuLoadStatus) {
             this.cpuLoadStatus = cpuLoadStatus;
             return this;
         }
 
-        public Builder setCsServiceStatus(@Nullable String csServiceStatus) {
+        public Builder csServiceStatus(@Nullable String csServiceStatus) {
             this.csServiceStatus = csServiceStatus;
             return this;
         }
 
-        public Builder setDatabaseServerLoad(@Nullable String databaseServerLoad) {
+        public Builder databaseServerLoad(@Nullable String databaseServerLoad) {
             this.databaseServerLoad = databaseServerLoad;
             return this;
         }
 
-        public Builder setDatabaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
+        public Builder databaseServerLoadStatus(@Nullable String databaseServerLoadStatus) {
             this.databaseServerLoadStatus = databaseServerLoadStatus;
             return this;
         }
 
-        public Builder setHostName(@Nullable String hostName) {
+        public Builder hostName(@Nullable String hostName) {
             this.hostName = hostName;
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setLastHeartbeat(@Nullable String lastHeartbeat) {
+        public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             this.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
-        public Builder setMasterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
+        public Builder masterTargetServers(@Nullable List<MasterTargetServerResponse> masterTargetServers) {
             this.masterTargetServers = masterTargetServers;
             return this;
         }
 
-        public Builder setMemoryUsageStatus(@Nullable String memoryUsageStatus) {
+        public Builder memoryUsageStatus(@Nullable String memoryUsageStatus) {
             this.memoryUsageStatus = memoryUsageStatus;
             return this;
         }
 
-        public Builder setProcessServerCount(@Nullable String processServerCount) {
+        public Builder processServerCount(@Nullable String processServerCount) {
             this.processServerCount = processServerCount;
             return this;
         }
 
-        public Builder setProcessServers(@Nullable List<ProcessServerResponse> processServers) {
+        public Builder processServers(@Nullable List<ProcessServerResponse> processServers) {
             this.processServers = processServers;
             return this;
         }
 
-        public Builder setProtectedServers(@Nullable String protectedServers) {
+        public Builder protectedServers(@Nullable String protectedServers) {
             this.protectedServers = protectedServers;
             return this;
         }
 
-        public Builder setPsTemplateVersion(@Nullable String psTemplateVersion) {
+        public Builder psTemplateVersion(@Nullable String psTemplateVersion) {
             this.psTemplateVersion = psTemplateVersion;
             return this;
         }
 
-        public Builder setReplicationPairCount(@Nullable String replicationPairCount) {
+        public Builder replicationPairCount(@Nullable String replicationPairCount) {
             this.replicationPairCount = replicationPairCount;
             return this;
         }
 
-        public Builder setRunAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
+        public Builder runAsAccounts(@Nullable List<RunAsAccountResponse> runAsAccounts) {
             this.runAsAccounts = runAsAccounts;
             return this;
         }
 
-        public Builder setSpaceUsageStatus(@Nullable String spaceUsageStatus) {
+        public Builder spaceUsageStatus(@Nullable String spaceUsageStatus) {
             this.spaceUsageStatus = spaceUsageStatus;
             return this;
         }
 
-        public Builder setSslCertExpiryDate(@Nullable String sslCertExpiryDate) {
+        public Builder sslCertExpiryDate(@Nullable String sslCertExpiryDate) {
             this.sslCertExpiryDate = sslCertExpiryDate;
             return this;
         }
 
-        public Builder setSslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
+        public Builder sslCertExpiryRemainingDays(@Nullable Integer sslCertExpiryRemainingDays) {
             this.sslCertExpiryRemainingDays = sslCertExpiryRemainingDays;
             return this;
         }
 
-        public Builder setSystemLoad(@Nullable String systemLoad) {
+        public Builder systemLoad(@Nullable String systemLoad) {
             this.systemLoad = systemLoad;
             return this;
         }
 
-        public Builder setSystemLoadStatus(@Nullable String systemLoadStatus) {
+        public Builder systemLoadStatus(@Nullable String systemLoadStatus) {
             this.systemLoadStatus = systemLoadStatus;
             return this;
         }
 
-        public Builder setTotalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
+        public Builder totalMemoryInBytes(@Nullable Double totalMemoryInBytes) {
             this.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
-        public Builder setTotalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
+        public Builder totalSpaceInBytes(@Nullable Double totalSpaceInBytes) {
             this.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
-        public Builder setVersionStatus(@Nullable String versionStatus) {
+        public Builder versionStatus(@Nullable String versionStatus) {
             this.versionStatus = versionStatus;
             return this;
         }
 
-        public Builder setWebLoad(@Nullable String webLoad) {
+        public Builder webLoad(@Nullable String webLoad) {
             this.webLoad = webLoad;
             return this;
         }
 
-        public Builder setWebLoadStatus(@Nullable String webLoadStatus) {
+        public Builder webLoadStatus(@Nullable String webLoadStatus) {
             this.webLoadStatus = webLoadStatus;
             return this;
         }

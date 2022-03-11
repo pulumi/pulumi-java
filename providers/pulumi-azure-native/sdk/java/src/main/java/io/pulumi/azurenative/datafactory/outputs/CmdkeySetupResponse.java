@@ -35,12 +35,12 @@ public final class CmdkeySetupResponse {
      */
     private final Object userName;
 
-    @OutputCustomType.Constructor({"password","targetName","type","userName"})
+    @OutputCustomType.Constructor
     private CmdkeySetupResponse(
-        Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
-        Object targetName,
-        String type,
-        Object userName) {
+        @OutputCustomType.Parameter("password") Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password,
+        @OutputCustomType.Parameter("targetName") Object targetName,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("userName") Object userName) {
         this.password = password;
         this.targetName = targetName;
         this.type = type;
@@ -103,22 +103,22 @@ public final class CmdkeySetupResponse {
     	      this.userName = defaults.userName;
         }
 
-        public Builder setPassword(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
+        public Builder password(Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             this.password = Objects.requireNonNull(password);
             return this;
         }
 
-        public Builder setTargetName(Object targetName) {
+        public Builder targetName(Object targetName) {
             this.targetName = Objects.requireNonNull(targetName);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUserName(Object userName) {
+        public Builder userName(Object userName) {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }

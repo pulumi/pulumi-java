@@ -15,8 +15,8 @@ public final class RedisLinkedServerResponse {
      */
     private final String id;
 
-    @OutputCustomType.Constructor({"id"})
-    private RedisLinkedServerResponse(String id) {
+    @OutputCustomType.Constructor
+    private RedisLinkedServerResponse(@OutputCustomType.Parameter("id") String id) {
         this.id = id;
     }
 
@@ -48,7 +48,7 @@ public final class RedisLinkedServerResponse {
     	      this.id = defaults.id;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }

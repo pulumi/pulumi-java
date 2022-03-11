@@ -18,13 +18,13 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     private final @Nullable String type;
     private final @Nullable String user;
 
-    @OutputCustomType.Constructor({"disable","level","role","type","user"})
+    @OutputCustomType.Constructor
     private ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext(
-        @Nullable Boolean disable,
-        @Nullable String level,
-        @Nullable String role,
-        @Nullable String type,
-        @Nullable String user) {
+        @OutputCustomType.Parameter("disable") @Nullable Boolean disable,
+        @OutputCustomType.Parameter("level") @Nullable String level,
+        @OutputCustomType.Parameter("role") @Nullable String role,
+        @OutputCustomType.Parameter("type") @Nullable String type,
+        @OutputCustomType.Parameter("user") @Nullable String user) {
         this.disable = disable;
         this.level = level;
         this.role = role;
@@ -76,27 +76,27 @@ public final class ServiceTaskSpecContainerSpecPrivilegesSeLinuxContext {
     	      this.user = defaults.user;
         }
 
-        public Builder setDisable(@Nullable Boolean disable) {
+        public Builder disable(@Nullable Boolean disable) {
             this.disable = disable;
             return this;
         }
 
-        public Builder setLevel(@Nullable String level) {
+        public Builder level(@Nullable String level) {
             this.level = level;
             return this;
         }
 
-        public Builder setRole(@Nullable String role) {
+        public Builder role(@Nullable String role) {
             this.role = role;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }
 
-        public Builder setUser(@Nullable String user) {
+        public Builder user(@Nullable String user) {
             this.user = user;
             return this;
         }

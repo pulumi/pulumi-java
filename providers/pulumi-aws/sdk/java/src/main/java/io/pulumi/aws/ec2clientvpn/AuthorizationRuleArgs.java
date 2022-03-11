@@ -119,52 +119,52 @@ public final class AuthorizationRuleArgs extends io.pulumi.resources.ResourceArg
     	      this.targetNetworkCidr = defaults.targetNetworkCidr;
         }
 
-        public Builder setAccessGroupId(@Nullable Input<String> accessGroupId) {
+        public Builder accessGroupId(@Nullable Input<String> accessGroupId) {
             this.accessGroupId = accessGroupId;
             return this;
         }
 
-        public Builder setAccessGroupId(@Nullable String accessGroupId) {
+        public Builder accessGroupId(@Nullable String accessGroupId) {
             this.accessGroupId = Input.ofNullable(accessGroupId);
             return this;
         }
 
-        public Builder setAuthorizeAllGroups(@Nullable Input<Boolean> authorizeAllGroups) {
+        public Builder authorizeAllGroups(@Nullable Input<Boolean> authorizeAllGroups) {
             this.authorizeAllGroups = authorizeAllGroups;
             return this;
         }
 
-        public Builder setAuthorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
+        public Builder authorizeAllGroups(@Nullable Boolean authorizeAllGroups) {
             this.authorizeAllGroups = Input.ofNullable(authorizeAllGroups);
             return this;
         }
 
-        public Builder setClientVpnEndpointId(Input<String> clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(Input<String> clientVpnEndpointId) {
             this.clientVpnEndpointId = Objects.requireNonNull(clientVpnEndpointId);
             return this;
         }
 
-        public Builder setClientVpnEndpointId(String clientVpnEndpointId) {
+        public Builder clientVpnEndpointId(String clientVpnEndpointId) {
             this.clientVpnEndpointId = Input.of(Objects.requireNonNull(clientVpnEndpointId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setTargetNetworkCidr(Input<String> targetNetworkCidr) {
+        public Builder targetNetworkCidr(Input<String> targetNetworkCidr) {
             this.targetNetworkCidr = Objects.requireNonNull(targetNetworkCidr);
             return this;
         }
 
-        public Builder setTargetNetworkCidr(String targetNetworkCidr) {
+        public Builder targetNetworkCidr(String targetNetworkCidr) {
             this.targetNetworkCidr = Input.of(Objects.requireNonNull(targetNetworkCidr));
             return this;
         }

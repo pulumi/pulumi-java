@@ -42,15 +42,15 @@ public final class GetConnectionResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","connectionStatus","hostArn","id","name","providerType","tags"})
+    @OutputCustomType.Constructor
     private GetConnectionResult(
-        String arn,
-        String connectionStatus,
-        String hostArn,
-        String id,
-        String name,
-        String providerType,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("connectionStatus") String connectionStatus,
+        @OutputCustomType.Parameter("hostArn") String hostArn,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("providerType") String providerType,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.connectionStatus = connectionStatus;
         this.hostArn = hostArn;
@@ -138,37 +138,37 @@ public final class GetConnectionResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setConnectionStatus(String connectionStatus) {
+        public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = Objects.requireNonNull(connectionStatus);
             return this;
         }
 
-        public Builder setHostArn(String hostArn) {
+        public Builder hostArn(String hostArn) {
             this.hostArn = Objects.requireNonNull(hostArn);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProviderType(String providerType) {
+        public Builder providerType(String providerType) {
             this.providerType = Objects.requireNonNull(providerType);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

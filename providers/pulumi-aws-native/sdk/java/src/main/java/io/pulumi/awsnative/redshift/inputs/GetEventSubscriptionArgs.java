@@ -51,7 +51,7 @@ public final class GetEventSubscriptionArgs extends io.pulumi.resources.InvokeAr
     	      this.subscriptionName = defaults.subscriptionName;
         }
 
-        public Builder setSubscriptionName(String subscriptionName) {
+        public Builder subscriptionName(String subscriptionName) {
             this.subscriptionName = Objects.requireNonNull(subscriptionName);
             return this;
         }

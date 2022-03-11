@@ -67,19 +67,19 @@ public final class BudgetCostTypes {
      */
     private final @Nullable Boolean useBlended;
 
-    @OutputCustomType.Constructor({"includeCredit","includeDiscount","includeOtherSubscription","includeRecurring","includeRefund","includeSubscription","includeSupport","includeTax","includeUpfront","useAmortized","useBlended"})
+    @OutputCustomType.Constructor
     private BudgetCostTypes(
-        @Nullable Boolean includeCredit,
-        @Nullable Boolean includeDiscount,
-        @Nullable Boolean includeOtherSubscription,
-        @Nullable Boolean includeRecurring,
-        @Nullable Boolean includeRefund,
-        @Nullable Boolean includeSubscription,
-        @Nullable Boolean includeSupport,
-        @Nullable Boolean includeTax,
-        @Nullable Boolean includeUpfront,
-        @Nullable Boolean useAmortized,
-        @Nullable Boolean useBlended) {
+        @OutputCustomType.Parameter("includeCredit") @Nullable Boolean includeCredit,
+        @OutputCustomType.Parameter("includeDiscount") @Nullable Boolean includeDiscount,
+        @OutputCustomType.Parameter("includeOtherSubscription") @Nullable Boolean includeOtherSubscription,
+        @OutputCustomType.Parameter("includeRecurring") @Nullable Boolean includeRecurring,
+        @OutputCustomType.Parameter("includeRefund") @Nullable Boolean includeRefund,
+        @OutputCustomType.Parameter("includeSubscription") @Nullable Boolean includeSubscription,
+        @OutputCustomType.Parameter("includeSupport") @Nullable Boolean includeSupport,
+        @OutputCustomType.Parameter("includeTax") @Nullable Boolean includeTax,
+        @OutputCustomType.Parameter("includeUpfront") @Nullable Boolean includeUpfront,
+        @OutputCustomType.Parameter("useAmortized") @Nullable Boolean useAmortized,
+        @OutputCustomType.Parameter("useBlended") @Nullable Boolean useBlended) {
         this.includeCredit = includeCredit;
         this.includeDiscount = includeDiscount;
         this.includeOtherSubscription = includeOtherSubscription;
@@ -211,57 +211,57 @@ public final class BudgetCostTypes {
     	      this.useBlended = defaults.useBlended;
         }
 
-        public Builder setIncludeCredit(@Nullable Boolean includeCredit) {
+        public Builder includeCredit(@Nullable Boolean includeCredit) {
             this.includeCredit = includeCredit;
             return this;
         }
 
-        public Builder setIncludeDiscount(@Nullable Boolean includeDiscount) {
+        public Builder includeDiscount(@Nullable Boolean includeDiscount) {
             this.includeDiscount = includeDiscount;
             return this;
         }
 
-        public Builder setIncludeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
+        public Builder includeOtherSubscription(@Nullable Boolean includeOtherSubscription) {
             this.includeOtherSubscription = includeOtherSubscription;
             return this;
         }
 
-        public Builder setIncludeRecurring(@Nullable Boolean includeRecurring) {
+        public Builder includeRecurring(@Nullable Boolean includeRecurring) {
             this.includeRecurring = includeRecurring;
             return this;
         }
 
-        public Builder setIncludeRefund(@Nullable Boolean includeRefund) {
+        public Builder includeRefund(@Nullable Boolean includeRefund) {
             this.includeRefund = includeRefund;
             return this;
         }
 
-        public Builder setIncludeSubscription(@Nullable Boolean includeSubscription) {
+        public Builder includeSubscription(@Nullable Boolean includeSubscription) {
             this.includeSubscription = includeSubscription;
             return this;
         }
 
-        public Builder setIncludeSupport(@Nullable Boolean includeSupport) {
+        public Builder includeSupport(@Nullable Boolean includeSupport) {
             this.includeSupport = includeSupport;
             return this;
         }
 
-        public Builder setIncludeTax(@Nullable Boolean includeTax) {
+        public Builder includeTax(@Nullable Boolean includeTax) {
             this.includeTax = includeTax;
             return this;
         }
 
-        public Builder setIncludeUpfront(@Nullable Boolean includeUpfront) {
+        public Builder includeUpfront(@Nullable Boolean includeUpfront) {
             this.includeUpfront = includeUpfront;
             return this;
         }
 
-        public Builder setUseAmortized(@Nullable Boolean useAmortized) {
+        public Builder useAmortized(@Nullable Boolean useAmortized) {
             this.useAmortized = useAmortized;
             return this;
         }
 
-        public Builder setUseBlended(@Nullable Boolean useBlended) {
+        public Builder useBlended(@Nullable Boolean useBlended) {
             this.useBlended = useBlended;
             return this;
         }

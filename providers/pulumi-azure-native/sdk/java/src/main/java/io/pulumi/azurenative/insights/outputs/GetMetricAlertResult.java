@@ -111,26 +111,26 @@ public final class GetMetricAlertResult {
      */
     private final String windowSize;
 
-    @OutputCustomType.Constructor({"actions","autoMitigate","criteria","description","enabled","evaluationFrequency","id","isMigrated","lastUpdatedTime","location","name","scopes","severity","tags","targetResourceRegion","targetResourceType","type","windowSize"})
+    @OutputCustomType.Constructor
     private GetMetricAlertResult(
-        @Nullable List<MetricAlertActionResponse> actions,
-        @Nullable Boolean autoMitigate,
-        Object criteria,
-        @Nullable String description,
-        Boolean enabled,
-        String evaluationFrequency,
-        String id,
-        Boolean isMigrated,
-        String lastUpdatedTime,
-        String location,
-        String name,
-        List<String> scopes,
-        Integer severity,
-        @Nullable Map<String,String> tags,
-        @Nullable String targetResourceRegion,
-        @Nullable String targetResourceType,
-        String type,
-        String windowSize) {
+        @OutputCustomType.Parameter("actions") @Nullable List<MetricAlertActionResponse> actions,
+        @OutputCustomType.Parameter("autoMitigate") @Nullable Boolean autoMitigate,
+        @OutputCustomType.Parameter("criteria") Object criteria,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("evaluationFrequency") String evaluationFrequency,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("isMigrated") Boolean isMigrated,
+        @OutputCustomType.Parameter("lastUpdatedTime") String lastUpdatedTime,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scopes") List<String> scopes,
+        @OutputCustomType.Parameter("severity") Integer severity,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("targetResourceRegion") @Nullable String targetResourceRegion,
+        @OutputCustomType.Parameter("targetResourceType") @Nullable String targetResourceType,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("windowSize") String windowSize) {
         this.actions = actions;
         this.autoMitigate = autoMitigate;
         this.criteria = criteria;
@@ -332,92 +332,92 @@ public final class GetMetricAlertResult {
     	      this.windowSize = defaults.windowSize;
         }
 
-        public Builder setActions(@Nullable List<MetricAlertActionResponse> actions) {
+        public Builder actions(@Nullable List<MetricAlertActionResponse> actions) {
             this.actions = actions;
             return this;
         }
 
-        public Builder setAutoMitigate(@Nullable Boolean autoMitigate) {
+        public Builder autoMitigate(@Nullable Boolean autoMitigate) {
             this.autoMitigate = autoMitigate;
             return this;
         }
 
-        public Builder setCriteria(Object criteria) {
+        public Builder criteria(Object criteria) {
             this.criteria = Objects.requireNonNull(criteria);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEvaluationFrequency(String evaluationFrequency) {
+        public Builder evaluationFrequency(String evaluationFrequency) {
             this.evaluationFrequency = Objects.requireNonNull(evaluationFrequency);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIsMigrated(Boolean isMigrated) {
+        public Builder isMigrated(Boolean isMigrated) {
             this.isMigrated = Objects.requireNonNull(isMigrated);
             return this;
         }
 
-        public Builder setLastUpdatedTime(String lastUpdatedTime) {
+        public Builder lastUpdatedTime(String lastUpdatedTime) {
             this.lastUpdatedTime = Objects.requireNonNull(lastUpdatedTime);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScopes(List<String> scopes) {
+        public Builder scopes(List<String> scopes) {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
 
-        public Builder setSeverity(Integer severity) {
+        public Builder severity(Integer severity) {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTargetResourceRegion(@Nullable String targetResourceRegion) {
+        public Builder targetResourceRegion(@Nullable String targetResourceRegion) {
             this.targetResourceRegion = targetResourceRegion;
             return this;
         }
 
-        public Builder setTargetResourceType(@Nullable String targetResourceType) {
+        public Builder targetResourceType(@Nullable String targetResourceType) {
             this.targetResourceType = targetResourceType;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setWindowSize(String windowSize) {
+        public Builder windowSize(String windowSize) {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }

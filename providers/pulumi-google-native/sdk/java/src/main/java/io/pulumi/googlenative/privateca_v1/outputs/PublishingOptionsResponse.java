@@ -20,10 +20,10 @@ public final class PublishingOptionsResponse {
      */
     private final Boolean publishCrl;
 
-    @OutputCustomType.Constructor({"publishCaCert","publishCrl"})
+    @OutputCustomType.Constructor
     private PublishingOptionsResponse(
-        Boolean publishCaCert,
-        Boolean publishCrl) {
+        @OutputCustomType.Parameter("publishCaCert") Boolean publishCaCert,
+        @OutputCustomType.Parameter("publishCrl") Boolean publishCrl) {
         this.publishCaCert = publishCaCert;
         this.publishCrl = publishCrl;
     }
@@ -65,12 +65,12 @@ public final class PublishingOptionsResponse {
     	      this.publishCrl = defaults.publishCrl;
         }
 
-        public Builder setPublishCaCert(Boolean publishCaCert) {
+        public Builder publishCaCert(Boolean publishCaCert) {
             this.publishCaCert = Objects.requireNonNull(publishCaCert);
             return this;
         }
 
-        public Builder setPublishCrl(Boolean publishCrl) {
+        public Builder publishCrl(Boolean publishCrl) {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }

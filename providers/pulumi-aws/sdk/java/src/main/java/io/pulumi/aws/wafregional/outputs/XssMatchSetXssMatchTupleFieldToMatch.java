@@ -22,10 +22,10 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"data","type"})
+    @OutputCustomType.Constructor
     private XssMatchSetXssMatchTupleFieldToMatch(
-        @Nullable String data,
-        String type) {
+        @OutputCustomType.Parameter("data") @Nullable String data,
+        @OutputCustomType.Parameter("type") String type) {
         this.data = data;
         this.type = type;
     }
@@ -67,12 +67,12 @@ public final class XssMatchSetXssMatchTupleFieldToMatch {
     	      this.type = defaults.type;
         }
 
-        public Builder setData(@Nullable String data) {
+        public Builder data(@Nullable String data) {
             this.data = data;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

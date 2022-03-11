@@ -336,192 +336,192 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
     	      this.visibility = defaults.visibility;
         }
 
-        public Builder setClientOperationId(@Nullable Input<String> clientOperationId) {
+        public Builder clientOperationId(@Nullable Input<String> clientOperationId) {
             this.clientOperationId = clientOperationId;
             return this;
         }
 
-        public Builder setClientOperationId(@Nullable String clientOperationId) {
+        public Builder clientOperationId(@Nullable String clientOperationId) {
             this.clientOperationId = Input.ofNullable(clientOperationId);
             return this;
         }
 
-        public Builder setCloudLoggingConfig(@Nullable Input<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig) {
+        public Builder cloudLoggingConfig(@Nullable Input<ManagedZoneCloudLoggingConfigArgs> cloudLoggingConfig) {
             this.cloudLoggingConfig = cloudLoggingConfig;
             return this;
         }
 
-        public Builder setCloudLoggingConfig(@Nullable ManagedZoneCloudLoggingConfigArgs cloudLoggingConfig) {
+        public Builder cloudLoggingConfig(@Nullable ManagedZoneCloudLoggingConfigArgs cloudLoggingConfig) {
             this.cloudLoggingConfig = Input.ofNullable(cloudLoggingConfig);
             return this;
         }
 
-        public Builder setCreationTime(@Nullable Input<String> creationTime) {
+        public Builder creationTime(@Nullable Input<String> creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = Input.ofNullable(creationTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDnsName(@Nullable Input<String> dnsName) {
+        public Builder dnsName(@Nullable Input<String> dnsName) {
             this.dnsName = dnsName;
             return this;
         }
 
-        public Builder setDnsName(@Nullable String dnsName) {
+        public Builder dnsName(@Nullable String dnsName) {
             this.dnsName = Input.ofNullable(dnsName);
             return this;
         }
 
-        public Builder setDnssecConfig(@Nullable Input<ManagedZoneDnsSecConfigArgs> dnssecConfig) {
+        public Builder dnssecConfig(@Nullable Input<ManagedZoneDnsSecConfigArgs> dnssecConfig) {
             this.dnssecConfig = dnssecConfig;
             return this;
         }
 
-        public Builder setDnssecConfig(@Nullable ManagedZoneDnsSecConfigArgs dnssecConfig) {
+        public Builder dnssecConfig(@Nullable ManagedZoneDnsSecConfigArgs dnssecConfig) {
             this.dnssecConfig = Input.ofNullable(dnssecConfig);
             return this;
         }
 
-        public Builder setForwardingConfig(@Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig) {
+        public Builder forwardingConfig(@Nullable Input<ManagedZoneForwardingConfigArgs> forwardingConfig) {
             this.forwardingConfig = forwardingConfig;
             return this;
         }
 
-        public Builder setForwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
+        public Builder forwardingConfig(@Nullable ManagedZoneForwardingConfigArgs forwardingConfig) {
             this.forwardingConfig = Input.ofNullable(forwardingConfig);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNameServerSet(@Nullable Input<String> nameServerSet) {
+        public Builder nameServerSet(@Nullable Input<String> nameServerSet) {
             this.nameServerSet = nameServerSet;
             return this;
         }
 
-        public Builder setNameServerSet(@Nullable String nameServerSet) {
+        public Builder nameServerSet(@Nullable String nameServerSet) {
             this.nameServerSet = Input.ofNullable(nameServerSet);
             return this;
         }
 
-        public Builder setNameServers(@Nullable Input<List<String>> nameServers) {
+        public Builder nameServers(@Nullable Input<List<String>> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
 
-        public Builder setNameServers(@Nullable List<String> nameServers) {
+        public Builder nameServers(@Nullable List<String> nameServers) {
             this.nameServers = Input.ofNullable(nameServers);
             return this;
         }
 
-        public Builder setPeeringConfig(@Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig) {
+        public Builder peeringConfig(@Nullable Input<ManagedZonePeeringConfigArgs> peeringConfig) {
             this.peeringConfig = peeringConfig;
             return this;
         }
 
-        public Builder setPeeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
+        public Builder peeringConfig(@Nullable ManagedZonePeeringConfigArgs peeringConfig) {
             this.peeringConfig = Input.ofNullable(peeringConfig);
             return this;
         }
 
-        public Builder setPrivateVisibilityConfig(@Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable Input<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig) {
             this.privateVisibilityConfig = privateVisibilityConfig;
             return this;
         }
 
-        public Builder setPrivateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
+        public Builder privateVisibilityConfig(@Nullable ManagedZonePrivateVisibilityConfigArgs privateVisibilityConfig) {
             this.privateVisibilityConfig = Input.ofNullable(privateVisibilityConfig);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setReverseLookupConfig(@Nullable Input<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig) {
+        public Builder reverseLookupConfig(@Nullable Input<ManagedZoneReverseLookupConfigArgs> reverseLookupConfig) {
             this.reverseLookupConfig = reverseLookupConfig;
             return this;
         }
 
-        public Builder setReverseLookupConfig(@Nullable ManagedZoneReverseLookupConfigArgs reverseLookupConfig) {
+        public Builder reverseLookupConfig(@Nullable ManagedZoneReverseLookupConfigArgs reverseLookupConfig) {
             this.reverseLookupConfig = Input.ofNullable(reverseLookupConfig);
             return this;
         }
 
-        public Builder setServiceDirectoryConfig(@Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable Input<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig) {
             this.serviceDirectoryConfig = serviceDirectoryConfig;
             return this;
         }
 
-        public Builder setServiceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
+        public Builder serviceDirectoryConfig(@Nullable ManagedZoneServiceDirectoryConfigArgs serviceDirectoryConfig) {
             this.serviceDirectoryConfig = Input.ofNullable(serviceDirectoryConfig);
             return this;
         }
 
-        public Builder setVisibility(@Nullable Input<ManagedZoneVisibility> visibility) {
+        public Builder visibility(@Nullable Input<ManagedZoneVisibility> visibility) {
             this.visibility = visibility;
             return this;
         }
 
-        public Builder setVisibility(@Nullable ManagedZoneVisibility visibility) {
+        public Builder visibility(@Nullable ManagedZoneVisibility visibility) {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }

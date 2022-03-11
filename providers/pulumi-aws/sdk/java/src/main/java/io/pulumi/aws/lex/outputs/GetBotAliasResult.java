@@ -55,17 +55,17 @@ public final class GetBotAliasResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","botName","botVersion","checksum","createdDate","description","id","lastUpdatedDate","name"})
+    @OutputCustomType.Constructor
     private GetBotAliasResult(
-        String arn,
-        String botName,
-        String botVersion,
-        String checksum,
-        String createdDate,
-        String description,
-        String id,
-        String lastUpdatedDate,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("botName") String botName,
+        @OutputCustomType.Parameter("botVersion") String botVersion,
+        @OutputCustomType.Parameter("checksum") String checksum,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastUpdatedDate") String lastUpdatedDate,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.botName = botName;
         this.botVersion = botVersion;
@@ -177,47 +177,47 @@ public final class GetBotAliasResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setBotName(String botName) {
+        public Builder botName(String botName) {
             this.botName = Objects.requireNonNull(botName);
             return this;
         }
 
-        public Builder setBotVersion(String botVersion) {
+        public Builder botVersion(String botVersion) {
             this.botVersion = Objects.requireNonNull(botVersion);
             return this;
         }
 
-        public Builder setChecksum(String checksum) {
+        public Builder checksum(String checksum) {
             this.checksum = Objects.requireNonNull(checksum);
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastUpdatedDate(String lastUpdatedDate) {
+        public Builder lastUpdatedDate(String lastUpdatedDate) {
             this.lastUpdatedDate = Objects.requireNonNull(lastUpdatedDate);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

@@ -118,52 +118,52 @@ public final class InstanceGroupManagerAutoHealingPolicyArgs extends io.pulumi.r
     	      this.updateInstances = defaults.updateInstances;
         }
 
-        public Builder setAutoHealingTriggers(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers) {
+        public Builder autoHealingTriggers(@Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs> autoHealingTriggers) {
             this.autoHealingTriggers = autoHealingTriggers;
             return this;
         }
 
-        public Builder setAutoHealingTriggers(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs autoHealingTriggers) {
+        public Builder autoHealingTriggers(@Nullable InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs autoHealingTriggers) {
             this.autoHealingTriggers = Input.ofNullable(autoHealingTriggers);
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable Input<String> healthCheck) {
+        public Builder healthCheck(@Nullable Input<String> healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable String healthCheck) {
+        public Builder healthCheck(@Nullable String healthCheck) {
             this.healthCheck = Input.ofNullable(healthCheck);
             return this;
         }
 
-        public Builder setInitialDelaySec(@Nullable Input<Integer> initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Input<Integer> initialDelaySec) {
             this.initialDelaySec = initialDelaySec;
             return this;
         }
 
-        public Builder setInitialDelaySec(@Nullable Integer initialDelaySec) {
+        public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
             this.initialDelaySec = Input.ofNullable(initialDelaySec);
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable Input<FixedOrPercentArgs> maxUnavailable) {
+        public Builder maxUnavailable(@Nullable Input<FixedOrPercentArgs> maxUnavailable) {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
 
-        public Builder setMaxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
+        public Builder maxUnavailable(@Nullable FixedOrPercentArgs maxUnavailable) {
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }
 
-        public Builder setUpdateInstances(@Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
+        public Builder updateInstances(@Nullable Input<InstanceGroupManagerAutoHealingPolicyUpdateInstances> updateInstances) {
             this.updateInstances = updateInstances;
             return this;
         }
 
-        public Builder setUpdateInstances(@Nullable InstanceGroupManagerAutoHealingPolicyUpdateInstances updateInstances) {
+        public Builder updateInstances(@Nullable InstanceGroupManagerAutoHealingPolicyUpdateInstances updateInstances) {
             this.updateInstances = Input.ofNullable(updateInstances);
             return this;
         }

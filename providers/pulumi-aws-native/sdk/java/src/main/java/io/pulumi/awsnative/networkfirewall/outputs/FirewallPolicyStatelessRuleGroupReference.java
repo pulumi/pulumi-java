@@ -13,10 +13,10 @@ public final class FirewallPolicyStatelessRuleGroupReference {
     private final Integer priority;
     private final String resourceArn;
 
-    @OutputCustomType.Constructor({"priority","resourceArn"})
+    @OutputCustomType.Constructor
     private FirewallPolicyStatelessRuleGroupReference(
-        Integer priority,
-        String resourceArn) {
+        @OutputCustomType.Parameter("priority") Integer priority,
+        @OutputCustomType.Parameter("resourceArn") String resourceArn) {
         this.priority = priority;
         this.resourceArn = resourceArn;
     }
@@ -50,12 +50,12 @@ public final class FirewallPolicyStatelessRuleGroupReference {
     	      this.resourceArn = defaults.resourceArn;
         }
 
-        public Builder setPriority(Integer priority) {
+        public Builder priority(Integer priority) {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
 
-        public Builder setResourceArn(String resourceArn) {
+        public Builder resourceArn(String resourceArn) {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }

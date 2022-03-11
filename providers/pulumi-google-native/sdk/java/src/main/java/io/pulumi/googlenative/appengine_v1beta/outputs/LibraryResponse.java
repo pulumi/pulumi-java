@@ -20,10 +20,10 @@ public final class LibraryResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"name","version"})
+    @OutputCustomType.Constructor
     private LibraryResponse(
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.name = name;
         this.version = version;
     }
@@ -65,12 +65,12 @@ public final class LibraryResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

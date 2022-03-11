@@ -23,13 +23,13 @@ public final class GetStoredQueryResult {
      */
     private final @Nullable List<StoredQueryTag> tags;
 
-    @OutputCustomType.Constructor({"queryArn","queryDescription","queryExpression","queryId","tags"})
+    @OutputCustomType.Constructor
     private GetStoredQueryResult(
-        @Nullable String queryArn,
-        @Nullable String queryDescription,
-        @Nullable String queryExpression,
-        @Nullable String queryId,
-        @Nullable List<StoredQueryTag> tags) {
+        @OutputCustomType.Parameter("queryArn") @Nullable String queryArn,
+        @OutputCustomType.Parameter("queryDescription") @Nullable String queryDescription,
+        @OutputCustomType.Parameter("queryExpression") @Nullable String queryExpression,
+        @OutputCustomType.Parameter("queryId") @Nullable String queryId,
+        @OutputCustomType.Parameter("tags") @Nullable List<StoredQueryTag> tags) {
         this.queryArn = queryArn;
         this.queryDescription = queryDescription;
         this.queryExpression = queryExpression;
@@ -85,27 +85,27 @@ public final class GetStoredQueryResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setQueryArn(@Nullable String queryArn) {
+        public Builder queryArn(@Nullable String queryArn) {
             this.queryArn = queryArn;
             return this;
         }
 
-        public Builder setQueryDescription(@Nullable String queryDescription) {
+        public Builder queryDescription(@Nullable String queryDescription) {
             this.queryDescription = queryDescription;
             return this;
         }
 
-        public Builder setQueryExpression(@Nullable String queryExpression) {
+        public Builder queryExpression(@Nullable String queryExpression) {
             this.queryExpression = queryExpression;
             return this;
         }
 
-        public Builder setQueryId(@Nullable String queryId) {
+        public Builder queryId(@Nullable String queryId) {
             this.queryId = queryId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StoredQueryTag> tags) {
+        public Builder tags(@Nullable List<StoredQueryTag> tags) {
             this.tags = tags;
             return this;
         }

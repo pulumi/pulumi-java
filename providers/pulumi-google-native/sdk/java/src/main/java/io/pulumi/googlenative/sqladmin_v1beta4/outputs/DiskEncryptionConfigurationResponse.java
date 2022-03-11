@@ -20,10 +20,10 @@ public final class DiskEncryptionConfigurationResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"kind","kmsKeyName"})
+    @OutputCustomType.Constructor
     private DiskEncryptionConfigurationResponse(
-        String kind,
-        String kmsKeyName) {
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kind = kind;
         this.kmsKeyName = kmsKeyName;
     }
@@ -65,12 +65,12 @@ public final class DiskEncryptionConfigurationResponse {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

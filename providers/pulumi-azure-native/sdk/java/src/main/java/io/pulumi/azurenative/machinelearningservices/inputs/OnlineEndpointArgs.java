@@ -145,62 +145,62 @@ public final class OnlineEndpointArgs extends io.pulumi.resources.ResourceArgs {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder setAuthMode(Input<Either<String,EndpointAuthMode>> authMode) {
+        public Builder authMode(Input<Either<String,EndpointAuthMode>> authMode) {
             this.authMode = Objects.requireNonNull(authMode);
             return this;
         }
 
-        public Builder setAuthMode(Either<String,EndpointAuthMode> authMode) {
+        public Builder authMode(Either<String,EndpointAuthMode> authMode) {
             this.authMode = Input.of(Objects.requireNonNull(authMode));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setKeys(@Nullable Input<EndpointAuthKeysArgs> keys) {
+        public Builder keys(@Nullable Input<EndpointAuthKeysArgs> keys) {
             this.keys = keys;
             return this;
         }
 
-        public Builder setKeys(@Nullable EndpointAuthKeysArgs keys) {
+        public Builder keys(@Nullable EndpointAuthKeysArgs keys) {
             this.keys = Input.ofNullable(keys);
             return this;
         }
 
-        public Builder setProperties(@Nullable Input<Map<String,String>> properties) {
+        public Builder properties(@Nullable Input<Map<String,String>> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setProperties(@Nullable Map<String,String> properties) {
+        public Builder properties(@Nullable Map<String,String> properties) {
             this.properties = Input.ofNullable(properties);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }
 
-        public Builder setTraffic(@Nullable Input<Map<String,Integer>> traffic) {
+        public Builder traffic(@Nullable Input<Map<String,Integer>> traffic) {
             this.traffic = traffic;
             return this;
         }
 
-        public Builder setTraffic(@Nullable Map<String,Integer> traffic) {
+        public Builder traffic(@Nullable Map<String,Integer> traffic) {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }

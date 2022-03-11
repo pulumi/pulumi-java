@@ -185,82 +185,82 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
     	      this.region = defaults.region;
         }
 
-        public Builder setAppEngine(@Nullable Input<RegionNetworkEndpointGroupAppEngineArgs> appEngine) {
+        public Builder appEngine(@Nullable Input<RegionNetworkEndpointGroupAppEngineArgs> appEngine) {
             this.appEngine = appEngine;
             return this;
         }
 
-        public Builder setAppEngine(@Nullable RegionNetworkEndpointGroupAppEngineArgs appEngine) {
+        public Builder appEngine(@Nullable RegionNetworkEndpointGroupAppEngineArgs appEngine) {
             this.appEngine = Input.ofNullable(appEngine);
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable Input<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
+        public Builder cloudFunction(@Nullable Input<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction) {
             this.cloudFunction = cloudFunction;
             return this;
         }
 
-        public Builder setCloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionArgs cloudFunction) {
+        public Builder cloudFunction(@Nullable RegionNetworkEndpointGroupCloudFunctionArgs cloudFunction) {
             this.cloudFunction = Input.ofNullable(cloudFunction);
             return this;
         }
 
-        public Builder setCloudRun(@Nullable Input<RegionNetworkEndpointGroupCloudRunArgs> cloudRun) {
+        public Builder cloudRun(@Nullable Input<RegionNetworkEndpointGroupCloudRunArgs> cloudRun) {
             this.cloudRun = cloudRun;
             return this;
         }
 
-        public Builder setCloudRun(@Nullable RegionNetworkEndpointGroupCloudRunArgs cloudRun) {
+        public Builder cloudRun(@Nullable RegionNetworkEndpointGroupCloudRunArgs cloudRun) {
             this.cloudRun = Input.ofNullable(cloudRun);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable Input<String> networkEndpointType) {
+        public Builder networkEndpointType(@Nullable Input<String> networkEndpointType) {
             this.networkEndpointType = networkEndpointType;
             return this;
         }
 
-        public Builder setNetworkEndpointType(@Nullable String networkEndpointType) {
+        public Builder networkEndpointType(@Nullable String networkEndpointType) {
             this.networkEndpointType = Input.ofNullable(networkEndpointType);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(Input<String> region) {
+        public Builder region(Input<String> region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }

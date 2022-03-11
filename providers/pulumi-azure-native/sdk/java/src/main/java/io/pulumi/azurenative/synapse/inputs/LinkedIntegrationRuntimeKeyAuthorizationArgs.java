@@ -75,22 +75,22 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationArgs extends io.pulum
     	      this.key = defaults.key;
         }
 
-        public Builder setAuthorizationType(Input<String> authorizationType) {
+        public Builder authorizationType(Input<String> authorizationType) {
             this.authorizationType = Objects.requireNonNull(authorizationType);
             return this;
         }
 
-        public Builder setAuthorizationType(String authorizationType) {
+        public Builder authorizationType(String authorizationType) {
             this.authorizationType = Input.of(Objects.requireNonNull(authorizationType));
             return this;
         }
 
-        public Builder setKey(Input<SecureStringArgs> key) {
+        public Builder key(Input<SecureStringArgs> key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setKey(SecureStringArgs key) {
+        public Builder key(SecureStringArgs key) {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }

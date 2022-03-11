@@ -23,10 +23,10 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
      */
     private final @Nullable SecureStringResponse sasToken;
 
-    @OutputCustomType.Constructor({"blobContainerUri","sasToken"})
+    @OutputCustomType.Constructor
     private IntegrationRuntimeCustomSetupScriptPropertiesResponse(
-        @Nullable String blobContainerUri,
-        @Nullable SecureStringResponse sasToken) {
+        @OutputCustomType.Parameter("blobContainerUri") @Nullable String blobContainerUri,
+        @OutputCustomType.Parameter("sasToken") @Nullable SecureStringResponse sasToken) {
         this.blobContainerUri = blobContainerUri;
         this.sasToken = sasToken;
     }
@@ -68,12 +68,12 @@ public final class IntegrationRuntimeCustomSetupScriptPropertiesResponse {
     	      this.sasToken = defaults.sasToken;
         }
 
-        public Builder setBlobContainerUri(@Nullable String blobContainerUri) {
+        public Builder blobContainerUri(@Nullable String blobContainerUri) {
             this.blobContainerUri = blobContainerUri;
             return this;
         }
 
-        public Builder setSasToken(@Nullable SecureStringResponse sasToken) {
+        public Builder sasToken(@Nullable SecureStringResponse sasToken) {
             this.sasToken = sasToken;
             return this;
         }

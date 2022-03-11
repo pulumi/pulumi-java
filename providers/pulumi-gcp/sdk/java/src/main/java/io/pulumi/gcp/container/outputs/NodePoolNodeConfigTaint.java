@@ -13,11 +13,11 @@ public final class NodePoolNodeConfigTaint {
     private final String key;
     private final String value;
 
-    @OutputCustomType.Constructor({"effect","key","value"})
+    @OutputCustomType.Constructor
     private NodePoolNodeConfigTaint(
-        String effect,
-        String key,
-        String value) {
+        @OutputCustomType.Parameter("effect") String effect,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("value") String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;
@@ -57,17 +57,17 @@ public final class NodePoolNodeConfigTaint {
     	      this.value = defaults.value;
         }
 
-        public Builder setEffect(String effect) {
+        public Builder effect(String effect) {
             this.effect = Objects.requireNonNull(effect);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

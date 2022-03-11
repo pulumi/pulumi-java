@@ -15,8 +15,8 @@ public final class FirewallSubnetMapping {
      */
     private final String subnetId;
 
-    @OutputCustomType.Constructor({"subnetId"})
-    private FirewallSubnetMapping(String subnetId) {
+    @OutputCustomType.Constructor
+    private FirewallSubnetMapping(@OutputCustomType.Parameter("subnetId") String subnetId) {
         this.subnetId = subnetId;
     }
 
@@ -48,7 +48,7 @@ public final class FirewallSubnetMapping {
     	      this.subnetId = defaults.subnetId;
         }
 
-        public Builder setSubnetId(String subnetId) {
+        public Builder subnetId(String subnetId) {
             this.subnetId = Objects.requireNonNull(subnetId);
             return this;
         }

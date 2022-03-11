@@ -41,14 +41,14 @@ public final class GetWebAppResult {
      */
     private final String webId;
 
-    @OutputCustomType.Constructor({"appId","appUrls","displayName","name","project","webId"})
+    @OutputCustomType.Constructor
     private GetWebAppResult(
-        String appId,
-        List<String> appUrls,
-        String displayName,
-        String name,
-        String project,
-        String webId) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("appUrls") List<String> appUrls,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("webId") String webId) {
         this.appId = appId;
         this.appUrls = appUrls;
         this.displayName = displayName;
@@ -130,32 +130,32 @@ public final class GetWebAppResult {
     	      this.webId = defaults.webId;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setAppUrls(List<String> appUrls) {
+        public Builder appUrls(List<String> appUrls) {
             this.appUrls = Objects.requireNonNull(appUrls);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setWebId(String webId) {
+        public Builder webId(String webId) {
             this.webId = Objects.requireNonNull(webId);
             return this;
         }

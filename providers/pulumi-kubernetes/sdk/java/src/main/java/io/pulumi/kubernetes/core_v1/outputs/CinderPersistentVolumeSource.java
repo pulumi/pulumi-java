@@ -34,12 +34,12 @@ public final class CinderPersistentVolumeSource {
      */
     private final String volumeID;
 
-    @OutputCustomType.Constructor({"fsType","readOnly","secretRef","volumeID"})
+    @OutputCustomType.Constructor
     private CinderPersistentVolumeSource(
-        @Nullable String fsType,
-        @Nullable Boolean readOnly,
-        @Nullable SecretReference secretRef,
-        String volumeID) {
+        @OutputCustomType.Parameter("fsType") @Nullable String fsType,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly,
+        @OutputCustomType.Parameter("secretRef") @Nullable SecretReference secretRef,
+        @OutputCustomType.Parameter("volumeID") String volumeID) {
         this.fsType = fsType;
         this.readOnly = readOnly;
         this.secretRef = secretRef;
@@ -101,22 +101,22 @@ public final class CinderPersistentVolumeSource {
     	      this.volumeID = defaults.volumeID;
         }
 
-        public Builder setFsType(@Nullable String fsType) {
+        public Builder fsType(@Nullable String fsType) {
             this.fsType = fsType;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
 
-        public Builder setSecretRef(@Nullable SecretReference secretRef) {
+        public Builder secretRef(@Nullable SecretReference secretRef) {
             this.secretRef = secretRef;
             return this;
         }
 
-        public Builder setVolumeID(String volumeID) {
+        public Builder volumeID(String volumeID) {
             this.volumeID = Objects.requireNonNull(volumeID);
             return this;
         }

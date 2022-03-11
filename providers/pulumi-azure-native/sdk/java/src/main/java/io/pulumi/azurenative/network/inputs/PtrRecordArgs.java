@@ -57,12 +57,12 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
     	      this.ptrdname = defaults.ptrdname;
         }
 
-        public Builder setPtrdname(@Nullable Input<String> ptrdname) {
+        public Builder ptrdname(@Nullable Input<String> ptrdname) {
             this.ptrdname = ptrdname;
             return this;
         }
 
-        public Builder setPtrdname(@Nullable String ptrdname) {
+        public Builder ptrdname(@Nullable String ptrdname) {
             this.ptrdname = Input.ofNullable(ptrdname);
             return this;
         }

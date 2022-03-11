@@ -23,10 +23,10 @@ public final class GetGlobalUserPersonalPreferencesResult {
      */
     private final @Nullable String id;
 
-    @OutputCustomType.Constructor({"favoriteLabResourceIds","id"})
+    @OutputCustomType.Constructor
     private GetGlobalUserPersonalPreferencesResult(
-        @Nullable List<String> favoriteLabResourceIds,
-        @Nullable String id) {
+        @OutputCustomType.Parameter("favoriteLabResourceIds") @Nullable List<String> favoriteLabResourceIds,
+        @OutputCustomType.Parameter("id") @Nullable String id) {
         this.favoriteLabResourceIds = favoriteLabResourceIds;
         this.id = id;
     }
@@ -68,12 +68,12 @@ public final class GetGlobalUserPersonalPreferencesResult {
     	      this.id = defaults.id;
         }
 
-        public Builder setFavoriteLabResourceIds(@Nullable List<String> favoriteLabResourceIds) {
+        public Builder favoriteLabResourceIds(@Nullable List<String> favoriteLabResourceIds) {
             this.favoriteLabResourceIds = favoriteLabResourceIds;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }

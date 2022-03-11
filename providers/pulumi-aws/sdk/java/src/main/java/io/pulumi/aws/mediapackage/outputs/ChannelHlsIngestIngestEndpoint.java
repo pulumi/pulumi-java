@@ -27,11 +27,11 @@ public final class ChannelHlsIngestIngestEndpoint {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor({"password","url","username"})
+    @OutputCustomType.Constructor
     private ChannelHlsIngestIngestEndpoint(
-        @Nullable String password,
-        @Nullable String url,
-        @Nullable String username) {
+        @OutputCustomType.Parameter("password") @Nullable String password,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.url = url;
         this.username = username;
@@ -83,17 +83,17 @@ public final class ChannelHlsIngestIngestEndpoint {
     	      this.username = defaults.username;
         }
 
-        public Builder setPassword(@Nullable String password) {
+        public Builder password(@Nullable String password) {
             this.password = password;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setUsername(@Nullable String username) {
+        public Builder username(@Nullable String username) {
             this.username = username;
             return this;
         }

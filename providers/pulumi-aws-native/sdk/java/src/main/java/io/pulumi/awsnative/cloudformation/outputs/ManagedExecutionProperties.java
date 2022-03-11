@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class ManagedExecutionProperties {
     private final @Nullable Boolean active;
 
-    @OutputCustomType.Constructor({"active"})
-    private ManagedExecutionProperties(@Nullable Boolean active) {
+    @OutputCustomType.Constructor
+    private ManagedExecutionProperties(@OutputCustomType.Parameter("active") @Nullable Boolean active) {
         this.active = active;
     }
 
@@ -42,7 +42,7 @@ public final class ManagedExecutionProperties {
     	      this.active = defaults.active;
         }
 
-        public Builder setActive(@Nullable Boolean active) {
+        public Builder active(@Nullable Boolean active) {
             this.active = active;
             return this;
         }

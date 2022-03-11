@@ -21,10 +21,10 @@ public final class ScheduleResponse {
      */
     private final String scheduleTime;
 
-    @OutputCustomType.Constructor({"intervalDurationDays","scheduleTime"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        Integer intervalDurationDays,
-        String scheduleTime) {
+        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @OutputCustomType.Parameter("scheduleTime") String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }
@@ -66,12 +66,12 @@ public final class ScheduleResponse {
     	      this.scheduleTime = defaults.scheduleTime;
         }
 
-        public Builder setIntervalDurationDays(Integer intervalDurationDays) {
+        public Builder intervalDurationDays(Integer intervalDurationDays) {
             this.intervalDurationDays = Objects.requireNonNull(intervalDurationDays);
             return this;
         }
 
-        public Builder setScheduleTime(String scheduleTime) {
+        public Builder scheduleTime(String scheduleTime) {
             this.scheduleTime = Objects.requireNonNull(scheduleTime);
             return this;
         }

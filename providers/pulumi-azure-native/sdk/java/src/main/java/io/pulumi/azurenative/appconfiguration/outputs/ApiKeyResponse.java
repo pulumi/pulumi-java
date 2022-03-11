@@ -41,14 +41,14 @@ public final class ApiKeyResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"connectionString","id","lastModified","name","readOnly","value"})
+    @OutputCustomType.Constructor
     private ApiKeyResponse(
-        String connectionString,
-        String id,
-        String lastModified,
-        String name,
-        Boolean readOnly,
-        String value) {
+        @OutputCustomType.Parameter("connectionString") String connectionString,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModified") String lastModified,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("readOnly") Boolean readOnly,
+        @OutputCustomType.Parameter("value") String value) {
         this.connectionString = connectionString;
         this.id = id;
         this.lastModified = lastModified;
@@ -130,32 +130,32 @@ public final class ApiKeyResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setConnectionString(String connectionString) {
+        public Builder connectionString(String connectionString) {
             this.connectionString = Objects.requireNonNull(connectionString);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModified(String lastModified) {
+        public Builder lastModified(String lastModified) {
             this.lastModified = Objects.requireNonNull(lastModified);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setReadOnly(Boolean readOnly) {
+        public Builder readOnly(Boolean readOnly) {
             this.readOnly = Objects.requireNonNull(readOnly);
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

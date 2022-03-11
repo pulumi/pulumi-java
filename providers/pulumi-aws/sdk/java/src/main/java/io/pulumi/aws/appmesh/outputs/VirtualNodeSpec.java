@@ -42,13 +42,13 @@ public final class VirtualNodeSpec {
      */
     private final @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery;
 
-    @OutputCustomType.Constructor({"backendDefaults","backends","listener","logging","serviceDiscovery"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpec(
-        @Nullable VirtualNodeSpecBackendDefaults backendDefaults,
-        @Nullable List<VirtualNodeSpecBackend> backends,
-        @Nullable VirtualNodeSpecListener listener,
-        @Nullable VirtualNodeSpecLogging logging,
-        @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
+        @OutputCustomType.Parameter("backendDefaults") @Nullable VirtualNodeSpecBackendDefaults backendDefaults,
+        @OutputCustomType.Parameter("backends") @Nullable List<VirtualNodeSpecBackend> backends,
+        @OutputCustomType.Parameter("listener") @Nullable VirtualNodeSpecListener listener,
+        @OutputCustomType.Parameter("logging") @Nullable VirtualNodeSpecLogging logging,
+        @OutputCustomType.Parameter("serviceDiscovery") @Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
         this.backendDefaults = backendDefaults;
         this.backends = backends;
         this.listener = listener;
@@ -120,27 +120,27 @@ public final class VirtualNodeSpec {
     	      this.serviceDiscovery = defaults.serviceDiscovery;
         }
 
-        public Builder setBackendDefaults(@Nullable VirtualNodeSpecBackendDefaults backendDefaults) {
+        public Builder backendDefaults(@Nullable VirtualNodeSpecBackendDefaults backendDefaults) {
             this.backendDefaults = backendDefaults;
             return this;
         }
 
-        public Builder setBackends(@Nullable List<VirtualNodeSpecBackend> backends) {
+        public Builder backends(@Nullable List<VirtualNodeSpecBackend> backends) {
             this.backends = backends;
             return this;
         }
 
-        public Builder setListener(@Nullable VirtualNodeSpecListener listener) {
+        public Builder listener(@Nullable VirtualNodeSpecListener listener) {
             this.listener = listener;
             return this;
         }
 
-        public Builder setLogging(@Nullable VirtualNodeSpecLogging logging) {
+        public Builder logging(@Nullable VirtualNodeSpecLogging logging) {
             this.logging = logging;
             return this;
         }
 
-        public Builder setServiceDiscovery(@Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
+        public Builder serviceDiscovery(@Nullable VirtualNodeSpecServiceDiscovery serviceDiscovery) {
             this.serviceDiscovery = serviceDiscovery;
             return this;
         }

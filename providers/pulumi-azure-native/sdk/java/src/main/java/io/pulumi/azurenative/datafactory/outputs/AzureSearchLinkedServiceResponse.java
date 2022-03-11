@@ -61,16 +61,16 @@ public final class AzureSearchLinkedServiceResponse {
      */
     private final Object url;
 
-    @OutputCustomType.Constructor({"annotations","connectVia","description","encryptedCredential","key","parameters","type","url"})
+    @OutputCustomType.Constructor
     private AzureSearchLinkedServiceResponse(
-        @Nullable List<Object> annotations,
-        @Nullable IntegrationRuntimeReferenceResponse connectVia,
-        @Nullable String description,
-        @Nullable Object encryptedCredential,
-        @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key,
-        @Nullable Map<String,ParameterSpecificationResponse> parameters,
-        String type,
-        Object url) {
+        @OutputCustomType.Parameter("annotations") @Nullable List<Object> annotations,
+        @OutputCustomType.Parameter("connectVia") @Nullable IntegrationRuntimeReferenceResponse connectVia,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("encryptedCredential") @Nullable Object encryptedCredential,
+        @OutputCustomType.Parameter("key") @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key,
+        @OutputCustomType.Parameter("parameters") @Nullable Map<String,ParameterSpecificationResponse> parameters,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("url") Object url) {
         this.annotations = annotations;
         this.connectVia = connectVia;
         this.description = description;
@@ -173,42 +173,42 @@ public final class AzureSearchLinkedServiceResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setAnnotations(@Nullable List<Object> annotations) {
+        public Builder annotations(@Nullable List<Object> annotations) {
             this.annotations = annotations;
             return this;
         }
 
-        public Builder setConnectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
+        public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             this.connectVia = connectVia;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEncryptedCredential(@Nullable Object encryptedCredential) {
+        public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             this.encryptedCredential = encryptedCredential;
             return this;
         }
 
-        public Builder setKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key) {
+        public Builder key(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> key) {
             this.key = key;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
+        public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUrl(Object url) {
+        public Builder url(Object url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

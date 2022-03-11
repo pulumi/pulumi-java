@@ -73,18 +73,18 @@ public final class PodSecurityContext {
      */
     private final @Nullable WindowsSecurityContextOptions windowsOptions;
 
-    @OutputCustomType.Constructor({"fsGroup","fsGroupChangePolicy","runAsGroup","runAsNonRoot","runAsUser","seLinuxOptions","seccompProfile","supplementalGroups","sysctls","windowsOptions"})
+    @OutputCustomType.Constructor
     private PodSecurityContext(
-        @Nullable Integer fsGroup,
-        @Nullable String fsGroupChangePolicy,
-        @Nullable Integer runAsGroup,
-        @Nullable Boolean runAsNonRoot,
-        @Nullable Integer runAsUser,
-        @Nullable SELinuxOptions seLinuxOptions,
-        @Nullable SeccompProfile seccompProfile,
-        @Nullable List<Integer> supplementalGroups,
-        @Nullable List<Sysctl> sysctls,
-        @Nullable WindowsSecurityContextOptions windowsOptions) {
+        @OutputCustomType.Parameter("fsGroup") @Nullable Integer fsGroup,
+        @OutputCustomType.Parameter("fsGroupChangePolicy") @Nullable String fsGroupChangePolicy,
+        @OutputCustomType.Parameter("runAsGroup") @Nullable Integer runAsGroup,
+        @OutputCustomType.Parameter("runAsNonRoot") @Nullable Boolean runAsNonRoot,
+        @OutputCustomType.Parameter("runAsUser") @Nullable Integer runAsUser,
+        @OutputCustomType.Parameter("seLinuxOptions") @Nullable SELinuxOptions seLinuxOptions,
+        @OutputCustomType.Parameter("seccompProfile") @Nullable SeccompProfile seccompProfile,
+        @OutputCustomType.Parameter("supplementalGroups") @Nullable List<Integer> supplementalGroups,
+        @OutputCustomType.Parameter("sysctls") @Nullable List<Sysctl> sysctls,
+        @OutputCustomType.Parameter("windowsOptions") @Nullable WindowsSecurityContextOptions windowsOptions) {
         this.fsGroup = fsGroup;
         this.fsGroupChangePolicy = fsGroupChangePolicy;
         this.runAsGroup = runAsGroup;
@@ -210,52 +210,52 @@ public final class PodSecurityContext {
     	      this.windowsOptions = defaults.windowsOptions;
         }
 
-        public Builder setFsGroup(@Nullable Integer fsGroup) {
+        public Builder fsGroup(@Nullable Integer fsGroup) {
             this.fsGroup = fsGroup;
             return this;
         }
 
-        public Builder setFsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
+        public Builder fsGroupChangePolicy(@Nullable String fsGroupChangePolicy) {
             this.fsGroupChangePolicy = fsGroupChangePolicy;
             return this;
         }
 
-        public Builder setRunAsGroup(@Nullable Integer runAsGroup) {
+        public Builder runAsGroup(@Nullable Integer runAsGroup) {
             this.runAsGroup = runAsGroup;
             return this;
         }
 
-        public Builder setRunAsNonRoot(@Nullable Boolean runAsNonRoot) {
+        public Builder runAsNonRoot(@Nullable Boolean runAsNonRoot) {
             this.runAsNonRoot = runAsNonRoot;
             return this;
         }
 
-        public Builder setRunAsUser(@Nullable Integer runAsUser) {
+        public Builder runAsUser(@Nullable Integer runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
 
-        public Builder setSeLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
+        public Builder seLinuxOptions(@Nullable SELinuxOptions seLinuxOptions) {
             this.seLinuxOptions = seLinuxOptions;
             return this;
         }
 
-        public Builder setSeccompProfile(@Nullable SeccompProfile seccompProfile) {
+        public Builder seccompProfile(@Nullable SeccompProfile seccompProfile) {
             this.seccompProfile = seccompProfile;
             return this;
         }
 
-        public Builder setSupplementalGroups(@Nullable List<Integer> supplementalGroups) {
+        public Builder supplementalGroups(@Nullable List<Integer> supplementalGroups) {
             this.supplementalGroups = supplementalGroups;
             return this;
         }
 
-        public Builder setSysctls(@Nullable List<Sysctl> sysctls) {
+        public Builder sysctls(@Nullable List<Sysctl> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
 
-        public Builder setWindowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
+        public Builder windowsOptions(@Nullable WindowsSecurityContextOptions windowsOptions) {
             this.windowsOptions = windowsOptions;
             return this;
         }

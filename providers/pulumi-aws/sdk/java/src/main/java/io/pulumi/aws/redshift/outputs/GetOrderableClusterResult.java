@@ -26,14 +26,14 @@ public final class GetOrderableClusterResult {
     private final String nodeType;
     private final @Nullable List<String> preferredNodeTypes;
 
-    @OutputCustomType.Constructor({"availabilityZones","clusterType","clusterVersion","id","nodeType","preferredNodeTypes"})
+    @OutputCustomType.Constructor
     private GetOrderableClusterResult(
-        List<String> availabilityZones,
-        String clusterType,
-        String clusterVersion,
-        String id,
-        String nodeType,
-        @Nullable List<String> preferredNodeTypes) {
+        @OutputCustomType.Parameter("availabilityZones") List<String> availabilityZones,
+        @OutputCustomType.Parameter("clusterType") String clusterType,
+        @OutputCustomType.Parameter("clusterVersion") String clusterVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("preferredNodeTypes") @Nullable List<String> preferredNodeTypes) {
         this.availabilityZones = availabilityZones;
         this.clusterType = clusterType;
         this.clusterVersion = clusterVersion;
@@ -99,32 +99,32 @@ public final class GetOrderableClusterResult {
     	      this.preferredNodeTypes = defaults.preferredNodeTypes;
         }
 
-        public Builder setAvailabilityZones(List<String> availabilityZones) {
+        public Builder availabilityZones(List<String> availabilityZones) {
             this.availabilityZones = Objects.requireNonNull(availabilityZones);
             return this;
         }
 
-        public Builder setClusterType(String clusterType) {
+        public Builder clusterType(String clusterType) {
             this.clusterType = Objects.requireNonNull(clusterType);
             return this;
         }
 
-        public Builder setClusterVersion(String clusterVersion) {
+        public Builder clusterVersion(String clusterVersion) {
             this.clusterVersion = Objects.requireNonNull(clusterVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setPreferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
+        public Builder preferredNodeTypes(@Nullable List<String> preferredNodeTypes) {
             this.preferredNodeTypes = preferredNodeTypes;
             return this;
         }

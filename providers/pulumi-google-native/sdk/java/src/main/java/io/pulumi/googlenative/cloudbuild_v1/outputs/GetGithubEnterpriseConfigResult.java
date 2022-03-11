@@ -56,17 +56,17 @@ public final class GetGithubEnterpriseConfigResult {
      */
     private final String webhookKey;
 
-    @OutputCustomType.Constructor({"appId","createTime","displayName","hostUrl","name","peeredNetwork","secrets","sslCa","webhookKey"})
+    @OutputCustomType.Constructor
     private GetGithubEnterpriseConfigResult(
-        String appId,
-        String createTime,
-        String displayName,
-        String hostUrl,
-        String name,
-        String peeredNetwork,
-        GitHubEnterpriseSecretsResponse secrets,
-        String sslCa,
-        String webhookKey) {
+        @OutputCustomType.Parameter("appId") String appId,
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("hostUrl") String hostUrl,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("peeredNetwork") String peeredNetwork,
+        @OutputCustomType.Parameter("secrets") GitHubEnterpriseSecretsResponse secrets,
+        @OutputCustomType.Parameter("sslCa") String sslCa,
+        @OutputCustomType.Parameter("webhookKey") String webhookKey) {
         this.appId = appId;
         this.createTime = createTime;
         this.displayName = displayName;
@@ -178,47 +178,47 @@ public final class GetGithubEnterpriseConfigResult {
     	      this.webhookKey = defaults.webhookKey;
         }
 
-        public Builder setAppId(String appId) {
+        public Builder appId(String appId) {
             this.appId = Objects.requireNonNull(appId);
             return this;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setHostUrl(String hostUrl) {
+        public Builder hostUrl(String hostUrl) {
             this.hostUrl = Objects.requireNonNull(hostUrl);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPeeredNetwork(String peeredNetwork) {
+        public Builder peeredNetwork(String peeredNetwork) {
             this.peeredNetwork = Objects.requireNonNull(peeredNetwork);
             return this;
         }
 
-        public Builder setSecrets(GitHubEnterpriseSecretsResponse secrets) {
+        public Builder secrets(GitHubEnterpriseSecretsResponse secrets) {
             this.secrets = Objects.requireNonNull(secrets);
             return this;
         }
 
-        public Builder setSslCa(String sslCa) {
+        public Builder sslCa(String sslCa) {
             this.sslCa = Objects.requireNonNull(sslCa);
             return this;
         }
 
-        public Builder setWebhookKey(String webhookKey) {
+        public Builder webhookKey(String webhookKey) {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }

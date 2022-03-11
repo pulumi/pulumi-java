@@ -109,42 +109,42 @@ public final class ExpressRouteLinkArgs extends io.pulumi.resources.ResourceArgs
     	      this.name = defaults.name;
         }
 
-        public Builder setAdminState(@Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState) {
+        public Builder adminState(@Nullable Input<Either<String,ExpressRouteLinkAdminState>> adminState) {
             this.adminState = adminState;
             return this;
         }
 
-        public Builder setAdminState(@Nullable Either<String,ExpressRouteLinkAdminState> adminState) {
+        public Builder adminState(@Nullable Either<String,ExpressRouteLinkAdminState> adminState) {
             this.adminState = Input.ofNullable(adminState);
             return this;
         }
 
-        public Builder setId(@Nullable Input<String> id) {
+        public Builder id(@Nullable Input<String> id) {
             this.id = id;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = Input.ofNullable(id);
             return this;
         }
 
-        public Builder setMacSecConfig(@Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
+        public Builder macSecConfig(@Nullable Input<ExpressRouteLinkMacSecConfigArgs> macSecConfig) {
             this.macSecConfig = macSecConfig;
             return this;
         }
 
-        public Builder setMacSecConfig(@Nullable ExpressRouteLinkMacSecConfigArgs macSecConfig) {
+        public Builder macSecConfig(@Nullable ExpressRouteLinkMacSecConfigArgs macSecConfig) {
             this.macSecConfig = Input.ofNullable(macSecConfig);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }

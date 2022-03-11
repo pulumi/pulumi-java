@@ -100,52 +100,52 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     	      this.target = defaults.target;
         }
 
-        public Builder setAdditionalInfo(@Nullable Input<List<TypedErrorInfoArgs>> additionalInfo) {
+        public Builder additionalInfo(@Nullable Input<List<TypedErrorInfoArgs>> additionalInfo) {
             this.additionalInfo = additionalInfo;
             return this;
         }
 
-        public Builder setAdditionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
+        public Builder additionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
             this.additionalInfo = Input.ofNullable(additionalInfo);
             return this;
         }
 
-        public Builder setCode(@Nullable Input<String> code) {
+        public Builder code(@Nullable Input<String> code) {
             this.code = code;
             return this;
         }
 
-        public Builder setCode(@Nullable String code) {
+        public Builder code(@Nullable String code) {
             this.code = Input.ofNullable(code);
             return this;
         }
 
-        public Builder setDetails(@Nullable Input<List<ExtendedErrorInfoArgs>> details) {
+        public Builder details(@Nullable Input<List<ExtendedErrorInfoArgs>> details) {
             this.details = details;
             return this;
         }
 
-        public Builder setDetails(@Nullable List<ExtendedErrorInfoArgs> details) {
+        public Builder details(@Nullable List<ExtendedErrorInfoArgs> details) {
             this.details = Input.ofNullable(details);
             return this;
         }
 
-        public Builder setMessage(@Nullable Input<String> message) {
+        public Builder message(@Nullable Input<String> message) {
             this.message = message;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = Input.ofNullable(message);
             return this;
         }
 
-        public Builder setTarget(@Nullable Input<String> target) {
+        public Builder target(@Nullable Input<String> target) {
             this.target = target;
             return this;
         }
 
-        public Builder setTarget(@Nullable String target) {
+        public Builder target(@Nullable String target) {
             this.target = Input.ofNullable(target);
             return this;
         }

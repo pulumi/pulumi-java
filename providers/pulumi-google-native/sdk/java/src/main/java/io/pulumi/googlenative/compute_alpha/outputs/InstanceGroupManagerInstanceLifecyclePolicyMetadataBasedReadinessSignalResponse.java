@@ -15,8 +15,8 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
      */
     private final Integer timeoutSec;
 
-    @OutputCustomType.Constructor({"timeoutSec"})
-    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(Integer timeoutSec) {
+    @OutputCustomType.Constructor
+    private InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalResponse(@OutputCustomType.Parameter("timeoutSec") Integer timeoutSec) {
         this.timeoutSec = timeoutSec;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadi
     	      this.timeoutSec = defaults.timeoutSec;
         }
 
-        public Builder setTimeoutSec(Integer timeoutSec) {
+        public Builder timeoutSec(Integer timeoutSec) {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }

@@ -23,10 +23,10 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable Boolean cloudwatchOutputEnabled;
 
-    @OutputCustomType.Constructor({"cloudwatchLogGroupName","cloudwatchOutputEnabled"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersCloudwatchConfig(
-        @Nullable String cloudwatchLogGroupName,
-        @Nullable Boolean cloudwatchOutputEnabled) {
+        @OutputCustomType.Parameter("cloudwatchLogGroupName") @Nullable String cloudwatchLogGroupName,
+        @OutputCustomType.Parameter("cloudwatchOutputEnabled") @Nullable Boolean cloudwatchOutputEnabled) {
         this.cloudwatchLogGroupName = cloudwatchLogGroupName;
         this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
     }
@@ -68,12 +68,12 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.cloudwatchOutputEnabled = defaults.cloudwatchOutputEnabled;
         }
 
-        public Builder setCloudwatchLogGroupName(@Nullable String cloudwatchLogGroupName) {
+        public Builder cloudwatchLogGroupName(@Nullable String cloudwatchLogGroupName) {
             this.cloudwatchLogGroupName = cloudwatchLogGroupName;
             return this;
         }
 
-        public Builder setCloudwatchOutputEnabled(@Nullable Boolean cloudwatchOutputEnabled) {
+        public Builder cloudwatchOutputEnabled(@Nullable Boolean cloudwatchOutputEnabled) {
             this.cloudwatchOutputEnabled = cloudwatchOutputEnabled;
             return this;
         }

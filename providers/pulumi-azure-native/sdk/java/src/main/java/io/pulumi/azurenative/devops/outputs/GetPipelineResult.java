@@ -61,17 +61,17 @@ public final class GetPipelineResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"bootstrapConfiguration","id","location","name","pipelineId","pipelineType","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetPipelineResult(
-        BootstrapConfigurationResponse bootstrapConfiguration,
-        String id,
-        @Nullable String location,
-        String name,
-        Integer pipelineId,
-        String pipelineType,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("bootstrapConfiguration") BootstrapConfigurationResponse bootstrapConfiguration,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("pipelineId") Integer pipelineId,
+        @OutputCustomType.Parameter("pipelineType") String pipelineType,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.bootstrapConfiguration = bootstrapConfiguration;
         this.id = id;
         this.location = location;
@@ -183,47 +183,47 @@ public final class GetPipelineResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setBootstrapConfiguration(BootstrapConfigurationResponse bootstrapConfiguration) {
+        public Builder bootstrapConfiguration(BootstrapConfigurationResponse bootstrapConfiguration) {
             this.bootstrapConfiguration = Objects.requireNonNull(bootstrapConfiguration);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPipelineId(Integer pipelineId) {
+        public Builder pipelineId(Integer pipelineId) {
             this.pipelineId = Objects.requireNonNull(pipelineId);
             return this;
         }
 
-        public Builder setPipelineType(String pipelineType) {
+        public Builder pipelineType(String pipelineType) {
             this.pipelineType = Objects.requireNonNull(pipelineType);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -151,62 +151,62 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAdmissionWhitelistPatterns(@Nullable Input<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(@Nullable Input<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns) {
             this.admissionWhitelistPatterns = admissionWhitelistPatterns;
             return this;
         }
 
-        public Builder setAdmissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
+        public Builder admissionWhitelistPatterns(@Nullable List<PolicyAdmissionWhitelistPatternArgs> admissionWhitelistPatterns) {
             this.admissionWhitelistPatterns = Input.ofNullable(admissionWhitelistPatterns);
             return this;
         }
 
-        public Builder setClusterAdmissionRules(@Nullable Input<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(@Nullable Input<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules) {
             this.clusterAdmissionRules = clusterAdmissionRules;
             return this;
         }
 
-        public Builder setClusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
+        public Builder clusterAdmissionRules(@Nullable List<PolicyClusterAdmissionRuleArgs> clusterAdmissionRules) {
             this.clusterAdmissionRules = Input.ofNullable(clusterAdmissionRules);
             return this;
         }
 
-        public Builder setDefaultAdmissionRule(Input<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule) {
+        public Builder defaultAdmissionRule(Input<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule) {
             this.defaultAdmissionRule = Objects.requireNonNull(defaultAdmissionRule);
             return this;
         }
 
-        public Builder setDefaultAdmissionRule(PolicyDefaultAdmissionRuleArgs defaultAdmissionRule) {
+        public Builder defaultAdmissionRule(PolicyDefaultAdmissionRuleArgs defaultAdmissionRule) {
             this.defaultAdmissionRule = Input.of(Objects.requireNonNull(defaultAdmissionRule));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setGlobalPolicyEvaluationMode(@Nullable Input<String> globalPolicyEvaluationMode) {
+        public Builder globalPolicyEvaluationMode(@Nullable Input<String> globalPolicyEvaluationMode) {
             this.globalPolicyEvaluationMode = globalPolicyEvaluationMode;
             return this;
         }
 
-        public Builder setGlobalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
+        public Builder globalPolicyEvaluationMode(@Nullable String globalPolicyEvaluationMode) {
             this.globalPolicyEvaluationMode = Input.ofNullable(globalPolicyEvaluationMode);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

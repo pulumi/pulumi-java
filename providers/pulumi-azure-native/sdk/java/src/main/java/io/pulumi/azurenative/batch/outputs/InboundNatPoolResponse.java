@@ -40,14 +40,14 @@ public final class InboundNatPoolResponse {
     private final @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules;
     private final String protocol;
 
-    @OutputCustomType.Constructor({"backendPort","frontendPortRangeEnd","frontendPortRangeStart","name","networkSecurityGroupRules","protocol"})
+    @OutputCustomType.Constructor
     private InboundNatPoolResponse(
-        Integer backendPort,
-        Integer frontendPortRangeEnd,
-        Integer frontendPortRangeStart,
-        String name,
-        @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
-        String protocol) {
+        @OutputCustomType.Parameter("backendPort") Integer backendPort,
+        @OutputCustomType.Parameter("frontendPortRangeEnd") Integer frontendPortRangeEnd,
+        @OutputCustomType.Parameter("frontendPortRangeStart") Integer frontendPortRangeStart,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("networkSecurityGroupRules") @Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules,
+        @OutputCustomType.Parameter("protocol") String protocol) {
         this.backendPort = backendPort;
         this.frontendPortRangeEnd = frontendPortRangeEnd;
         this.frontendPortRangeStart = frontendPortRangeStart;
@@ -125,32 +125,32 @@ public final class InboundNatPoolResponse {
     	      this.protocol = defaults.protocol;
         }
 
-        public Builder setBackendPort(Integer backendPort) {
+        public Builder backendPort(Integer backendPort) {
             this.backendPort = Objects.requireNonNull(backendPort);
             return this;
         }
 
-        public Builder setFrontendPortRangeEnd(Integer frontendPortRangeEnd) {
+        public Builder frontendPortRangeEnd(Integer frontendPortRangeEnd) {
             this.frontendPortRangeEnd = Objects.requireNonNull(frontendPortRangeEnd);
             return this;
         }
 
-        public Builder setFrontendPortRangeStart(Integer frontendPortRangeStart) {
+        public Builder frontendPortRangeStart(Integer frontendPortRangeStart) {
             this.frontendPortRangeStart = Objects.requireNonNull(frontendPortRangeStart);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setNetworkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules) {
+        public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleResponse> networkSecurityGroupRules) {
             this.networkSecurityGroupRules = networkSecurityGroupRules;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }

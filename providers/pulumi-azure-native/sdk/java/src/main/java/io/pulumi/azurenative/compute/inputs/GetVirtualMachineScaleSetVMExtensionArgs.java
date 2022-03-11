@@ -118,27 +118,27 @@ public final class GetVirtualMachineScaleSetVMExtensionArgs extends io.pulumi.re
     	      this.vmScaleSetName = defaults.vmScaleSetName;
         }
 
-        public Builder setExpand(@Nullable String expand) {
+        public Builder expand(@Nullable String expand) {
             this.expand = expand;
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setVmExtensionName(String vmExtensionName) {
+        public Builder vmExtensionName(String vmExtensionName) {
             this.vmExtensionName = Objects.requireNonNull(vmExtensionName);
             return this;
         }
 
-        public Builder setVmScaleSetName(String vmScaleSetName) {
+        public Builder vmScaleSetName(String vmScaleSetName) {
             this.vmScaleSetName = Objects.requireNonNull(vmScaleSetName);
             return this;
         }

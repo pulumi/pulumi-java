@@ -24,11 +24,11 @@ public final class GetLoadBalancerTlsCertificateResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"isAttached","loadBalancerTlsCertificateArn","status"})
+    @OutputCustomType.Constructor
     private GetLoadBalancerTlsCertificateResult(
-        @Nullable Boolean isAttached,
-        @Nullable String loadBalancerTlsCertificateArn,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("isAttached") @Nullable Boolean isAttached,
+        @OutputCustomType.Parameter("loadBalancerTlsCertificateArn") @Nullable String loadBalancerTlsCertificateArn,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.isAttached = isAttached;
         this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
         this.status = status;
@@ -76,17 +76,17 @@ public final class GetLoadBalancerTlsCertificateResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setIsAttached(@Nullable Boolean isAttached) {
+        public Builder isAttached(@Nullable Boolean isAttached) {
             this.isAttached = isAttached;
             return this;
         }
 
-        public Builder setLoadBalancerTlsCertificateArn(@Nullable String loadBalancerTlsCertificateArn) {
+        public Builder loadBalancerTlsCertificateArn(@Nullable String loadBalancerTlsCertificateArn) {
             this.loadBalancerTlsCertificateArn = loadBalancerTlsCertificateArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

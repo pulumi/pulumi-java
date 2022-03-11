@@ -321,162 +321,162 @@ public final class RegionInstanceGroupManagerArgs extends io.pulumi.resources.Re
     	      this.waitForInstancesStatus = defaults.waitForInstancesStatus;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable Input<RegionInstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable Input<RegionInstanceGroupManagerAutoHealingPoliciesArgs> autoHealingPolicies) {
             this.autoHealingPolicies = autoHealingPolicies;
             return this;
         }
 
-        public Builder setAutoHealingPolicies(@Nullable RegionInstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
+        public Builder autoHealingPolicies(@Nullable RegionInstanceGroupManagerAutoHealingPoliciesArgs autoHealingPolicies) {
             this.autoHealingPolicies = Input.ofNullable(autoHealingPolicies);
             return this;
         }
 
-        public Builder setBaseInstanceName(Input<String> baseInstanceName) {
+        public Builder baseInstanceName(Input<String> baseInstanceName) {
             this.baseInstanceName = Objects.requireNonNull(baseInstanceName);
             return this;
         }
 
-        public Builder setBaseInstanceName(String baseInstanceName) {
+        public Builder baseInstanceName(String baseInstanceName) {
             this.baseInstanceName = Input.of(Objects.requireNonNull(baseInstanceName));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDistributionPolicyTargetShape(@Nullable Input<String> distributionPolicyTargetShape) {
+        public Builder distributionPolicyTargetShape(@Nullable Input<String> distributionPolicyTargetShape) {
             this.distributionPolicyTargetShape = distributionPolicyTargetShape;
             return this;
         }
 
-        public Builder setDistributionPolicyTargetShape(@Nullable String distributionPolicyTargetShape) {
+        public Builder distributionPolicyTargetShape(@Nullable String distributionPolicyTargetShape) {
             this.distributionPolicyTargetShape = Input.ofNullable(distributionPolicyTargetShape);
             return this;
         }
 
-        public Builder setDistributionPolicyZones(@Nullable Input<List<String>> distributionPolicyZones) {
+        public Builder distributionPolicyZones(@Nullable Input<List<String>> distributionPolicyZones) {
             this.distributionPolicyZones = distributionPolicyZones;
             return this;
         }
 
-        public Builder setDistributionPolicyZones(@Nullable List<String> distributionPolicyZones) {
+        public Builder distributionPolicyZones(@Nullable List<String> distributionPolicyZones) {
             this.distributionPolicyZones = Input.ofNullable(distributionPolicyZones);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable Input<List<RegionInstanceGroupManagerNamedPortArgs>> namedPorts) {
+        public Builder namedPorts(@Nullable Input<List<RegionInstanceGroupManagerNamedPortArgs>> namedPorts) {
             this.namedPorts = namedPorts;
             return this;
         }
 
-        public Builder setNamedPorts(@Nullable List<RegionInstanceGroupManagerNamedPortArgs> namedPorts) {
+        public Builder namedPorts(@Nullable List<RegionInstanceGroupManagerNamedPortArgs> namedPorts) {
             this.namedPorts = Input.ofNullable(namedPorts);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRegion(@Nullable Input<String> region) {
+        public Builder region(@Nullable Input<String> region) {
             this.region = region;
             return this;
         }
 
-        public Builder setRegion(@Nullable String region) {
+        public Builder region(@Nullable String region) {
             this.region = Input.ofNullable(region);
             return this;
         }
 
-        public Builder setStatefulDisks(@Nullable Input<List<RegionInstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
+        public Builder statefulDisks(@Nullable Input<List<RegionInstanceGroupManagerStatefulDiskArgs>> statefulDisks) {
             this.statefulDisks = statefulDisks;
             return this;
         }
 
-        public Builder setStatefulDisks(@Nullable List<RegionInstanceGroupManagerStatefulDiskArgs> statefulDisks) {
+        public Builder statefulDisks(@Nullable List<RegionInstanceGroupManagerStatefulDiskArgs> statefulDisks) {
             this.statefulDisks = Input.ofNullable(statefulDisks);
             return this;
         }
 
-        public Builder setTargetPools(@Nullable Input<List<String>> targetPools) {
+        public Builder targetPools(@Nullable Input<List<String>> targetPools) {
             this.targetPools = targetPools;
             return this;
         }
 
-        public Builder setTargetPools(@Nullable List<String> targetPools) {
+        public Builder targetPools(@Nullable List<String> targetPools) {
             this.targetPools = Input.ofNullable(targetPools);
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Input<Integer> targetSize) {
+        public Builder targetSize(@Nullable Input<Integer> targetSize) {
             this.targetSize = targetSize;
             return this;
         }
 
-        public Builder setTargetSize(@Nullable Integer targetSize) {
+        public Builder targetSize(@Nullable Integer targetSize) {
             this.targetSize = Input.ofNullable(targetSize);
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable Input<RegionInstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
+        public Builder updatePolicy(@Nullable Input<RegionInstanceGroupManagerUpdatePolicyArgs> updatePolicy) {
             this.updatePolicy = updatePolicy;
             return this;
         }
 
-        public Builder setUpdatePolicy(@Nullable RegionInstanceGroupManagerUpdatePolicyArgs updatePolicy) {
+        public Builder updatePolicy(@Nullable RegionInstanceGroupManagerUpdatePolicyArgs updatePolicy) {
             this.updatePolicy = Input.ofNullable(updatePolicy);
             return this;
         }
 
-        public Builder setVersions(Input<List<RegionInstanceGroupManagerVersionArgs>> versions) {
+        public Builder versions(Input<List<RegionInstanceGroupManagerVersionArgs>> versions) {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
 
-        public Builder setVersions(List<RegionInstanceGroupManagerVersionArgs> versions) {
+        public Builder versions(List<RegionInstanceGroupManagerVersionArgs> versions) {
             this.versions = Input.of(Objects.requireNonNull(versions));
             return this;
         }
 
-        public Builder setWaitForInstances(@Nullable Input<Boolean> waitForInstances) {
+        public Builder waitForInstances(@Nullable Input<Boolean> waitForInstances) {
             this.waitForInstances = waitForInstances;
             return this;
         }
 
-        public Builder setWaitForInstances(@Nullable Boolean waitForInstances) {
+        public Builder waitForInstances(@Nullable Boolean waitForInstances) {
             this.waitForInstances = Input.ofNullable(waitForInstances);
             return this;
         }
 
-        public Builder setWaitForInstancesStatus(@Nullable Input<String> waitForInstancesStatus) {
+        public Builder waitForInstancesStatus(@Nullable Input<String> waitForInstancesStatus) {
             this.waitForInstancesStatus = waitForInstancesStatus;
             return this;
         }
 
-        public Builder setWaitForInstancesStatus(@Nullable String waitForInstancesStatus) {
+        public Builder waitForInstancesStatus(@Nullable String waitForInstancesStatus) {
             this.waitForInstancesStatus = Input.ofNullable(waitForInstancesStatus);
             return this;
         }

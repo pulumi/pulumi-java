@@ -140,32 +140,32 @@ public final class GetStreamingJobResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"compatibilityLevel","createdDate","dataLocale","etag","eventsLateArrivalMaxDelayInSeconds","eventsOutOfOrderMaxDelayInSeconds","eventsOutOfOrderPolicy","functions","id","inputs","jobId","jobState","lastOutputEventTime","location","name","outputErrorPolicy","outputStartMode","outputStartTime","outputs","provisioningState","sku","tags","transformation","type"})
+    @OutputCustomType.Constructor
     private GetStreamingJobResult(
-        @Nullable String compatibilityLevel,
-        String createdDate,
-        @Nullable String dataLocale,
-        String etag,
-        @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
-        @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
-        @Nullable String eventsOutOfOrderPolicy,
-        @Nullable List<FunctionResponse> functions,
-        String id,
-        @Nullable List<InputResponse> inputs,
-        String jobId,
-        String jobState,
-        String lastOutputEventTime,
-        @Nullable String location,
-        String name,
-        @Nullable String outputErrorPolicy,
-        @Nullable String outputStartMode,
-        @Nullable String outputStartTime,
-        @Nullable List<OutputResponse> outputs,
-        String provisioningState,
-        @Nullable SkuResponse sku,
-        @Nullable Map<String,String> tags,
-        @Nullable TransformationResponse transformation,
-        String type) {
+        @OutputCustomType.Parameter("compatibilityLevel") @Nullable String compatibilityLevel,
+        @OutputCustomType.Parameter("createdDate") String createdDate,
+        @OutputCustomType.Parameter("dataLocale") @Nullable String dataLocale,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("eventsLateArrivalMaxDelayInSeconds") @Nullable Integer eventsLateArrivalMaxDelayInSeconds,
+        @OutputCustomType.Parameter("eventsOutOfOrderMaxDelayInSeconds") @Nullable Integer eventsOutOfOrderMaxDelayInSeconds,
+        @OutputCustomType.Parameter("eventsOutOfOrderPolicy") @Nullable String eventsOutOfOrderPolicy,
+        @OutputCustomType.Parameter("functions") @Nullable List<FunctionResponse> functions,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("inputs") @Nullable List<InputResponse> inputs,
+        @OutputCustomType.Parameter("jobId") String jobId,
+        @OutputCustomType.Parameter("jobState") String jobState,
+        @OutputCustomType.Parameter("lastOutputEventTime") String lastOutputEventTime,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputErrorPolicy") @Nullable String outputErrorPolicy,
+        @OutputCustomType.Parameter("outputStartMode") @Nullable String outputStartMode,
+        @OutputCustomType.Parameter("outputStartTime") @Nullable String outputStartTime,
+        @OutputCustomType.Parameter("outputs") @Nullable List<OutputResponse> outputs,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("transformation") @Nullable TransformationResponse transformation,
+        @OutputCustomType.Parameter("type") String type) {
         this.compatibilityLevel = compatibilityLevel;
         this.createdDate = createdDate;
         this.dataLocale = dataLocale;
@@ -427,122 +427,122 @@ public final class GetStreamingJobResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCompatibilityLevel(@Nullable String compatibilityLevel) {
+        public Builder compatibilityLevel(@Nullable String compatibilityLevel) {
             this.compatibilityLevel = compatibilityLevel;
             return this;
         }
 
-        public Builder setCreatedDate(String createdDate) {
+        public Builder createdDate(String createdDate) {
             this.createdDate = Objects.requireNonNull(createdDate);
             return this;
         }
 
-        public Builder setDataLocale(@Nullable String dataLocale) {
+        public Builder dataLocale(@Nullable String dataLocale) {
             this.dataLocale = dataLocale;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setEventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
+        public Builder eventsLateArrivalMaxDelayInSeconds(@Nullable Integer eventsLateArrivalMaxDelayInSeconds) {
             this.eventsLateArrivalMaxDelayInSeconds = eventsLateArrivalMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
+        public Builder eventsOutOfOrderMaxDelayInSeconds(@Nullable Integer eventsOutOfOrderMaxDelayInSeconds) {
             this.eventsOutOfOrderMaxDelayInSeconds = eventsOutOfOrderMaxDelayInSeconds;
             return this;
         }
 
-        public Builder setEventsOutOfOrderPolicy(@Nullable String eventsOutOfOrderPolicy) {
+        public Builder eventsOutOfOrderPolicy(@Nullable String eventsOutOfOrderPolicy) {
             this.eventsOutOfOrderPolicy = eventsOutOfOrderPolicy;
             return this;
         }
 
-        public Builder setFunctions(@Nullable List<FunctionResponse> functions) {
+        public Builder functions(@Nullable List<FunctionResponse> functions) {
             this.functions = functions;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInputs(@Nullable List<InputResponse> inputs) {
+        public Builder inputs(@Nullable List<InputResponse> inputs) {
             this.inputs = inputs;
             return this;
         }
 
-        public Builder setJobId(String jobId) {
+        public Builder jobId(String jobId) {
             this.jobId = Objects.requireNonNull(jobId);
             return this;
         }
 
-        public Builder setJobState(String jobState) {
+        public Builder jobState(String jobState) {
             this.jobState = Objects.requireNonNull(jobState);
             return this;
         }
 
-        public Builder setLastOutputEventTime(String lastOutputEventTime) {
+        public Builder lastOutputEventTime(String lastOutputEventTime) {
             this.lastOutputEventTime = Objects.requireNonNull(lastOutputEventTime);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputErrorPolicy(@Nullable String outputErrorPolicy) {
+        public Builder outputErrorPolicy(@Nullable String outputErrorPolicy) {
             this.outputErrorPolicy = outputErrorPolicy;
             return this;
         }
 
-        public Builder setOutputStartMode(@Nullable String outputStartMode) {
+        public Builder outputStartMode(@Nullable String outputStartMode) {
             this.outputStartMode = outputStartMode;
             return this;
         }
 
-        public Builder setOutputStartTime(@Nullable String outputStartTime) {
+        public Builder outputStartTime(@Nullable String outputStartTime) {
             this.outputStartTime = outputStartTime;
             return this;
         }
 
-        public Builder setOutputs(@Nullable List<OutputResponse> outputs) {
+        public Builder outputs(@Nullable List<OutputResponse> outputs) {
             this.outputs = outputs;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTransformation(@Nullable TransformationResponse transformation) {
+        public Builder transformation(@Nullable TransformationResponse transformation) {
             this.transformation = transformation;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

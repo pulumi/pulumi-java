@@ -73,19 +73,19 @@ public final class GetAvailabilitySetResult {
      */
     private final @Nullable List<SubResourceResponse> virtualMachines;
 
-    @OutputCustomType.Constructor({"id","location","name","platformFaultDomainCount","platformUpdateDomainCount","proximityPlacementGroup","sku","statuses","tags","type","virtualMachines"})
+    @OutputCustomType.Constructor
     private GetAvailabilitySetResult(
-        String id,
-        String location,
-        String name,
-        @Nullable Integer platformFaultDomainCount,
-        @Nullable Integer platformUpdateDomainCount,
-        @Nullable SubResourceResponse proximityPlacementGroup,
-        @Nullable SkuResponse sku,
-        List<InstanceViewStatusResponse> statuses,
-        @Nullable Map<String,String> tags,
-        String type,
-        @Nullable List<SubResourceResponse> virtualMachines) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("platformFaultDomainCount") @Nullable Integer platformFaultDomainCount,
+        @OutputCustomType.Parameter("platformUpdateDomainCount") @Nullable Integer platformUpdateDomainCount,
+        @OutputCustomType.Parameter("proximityPlacementGroup") @Nullable SubResourceResponse proximityPlacementGroup,
+        @OutputCustomType.Parameter("sku") @Nullable SkuResponse sku,
+        @OutputCustomType.Parameter("statuses") List<InstanceViewStatusResponse> statuses,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("virtualMachines") @Nullable List<SubResourceResponse> virtualMachines) {
         this.id = id;
         this.location = location;
         this.name = name;
@@ -217,57 +217,57 @@ public final class GetAvailabilitySetResult {
     	      this.virtualMachines = defaults.virtualMachines;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPlatformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
+        public Builder platformFaultDomainCount(@Nullable Integer platformFaultDomainCount) {
             this.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
-        public Builder setPlatformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
+        public Builder platformUpdateDomainCount(@Nullable Integer platformUpdateDomainCount) {
             this.platformUpdateDomainCount = platformUpdateDomainCount;
             return this;
         }
 
-        public Builder setProximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
+        public Builder proximityPlacementGroup(@Nullable SubResourceResponse proximityPlacementGroup) {
             this.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
-        public Builder setSku(@Nullable SkuResponse sku) {
+        public Builder sku(@Nullable SkuResponse sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setStatuses(List<InstanceViewStatusResponse> statuses) {
+        public Builder statuses(List<InstanceViewStatusResponse> statuses) {
             this.statuses = Objects.requireNonNull(statuses);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVirtualMachines(@Nullable List<SubResourceResponse> virtualMachines) {
+        public Builder virtualMachines(@Nullable List<SubResourceResponse> virtualMachines) {
             this.virtualMachines = virtualMachines;
             return this;
         }

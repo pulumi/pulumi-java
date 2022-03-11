@@ -139,62 +139,62 @@ public final class UsagePlanArgs extends io.pulumi.resources.ResourceArgs {
     	      this.usagePlanName = defaults.usagePlanName;
         }
 
-        public Builder setApiStages(@Nullable Input<List<UsagePlanApiStageArgs>> apiStages) {
+        public Builder apiStages(@Nullable Input<List<UsagePlanApiStageArgs>> apiStages) {
             this.apiStages = apiStages;
             return this;
         }
 
-        public Builder setApiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
+        public Builder apiStages(@Nullable List<UsagePlanApiStageArgs> apiStages) {
             this.apiStages = Input.ofNullable(apiStages);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setQuota(@Nullable Input<UsagePlanQuotaSettingsArgs> quota) {
+        public Builder quota(@Nullable Input<UsagePlanQuotaSettingsArgs> quota) {
             this.quota = quota;
             return this;
         }
 
-        public Builder setQuota(@Nullable UsagePlanQuotaSettingsArgs quota) {
+        public Builder quota(@Nullable UsagePlanQuotaSettingsArgs quota) {
             this.quota = Input.ofNullable(quota);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<UsagePlanTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<UsagePlanTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<UsagePlanTagArgs> tags) {
+        public Builder tags(@Nullable List<UsagePlanTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setThrottle(@Nullable Input<UsagePlanThrottleSettingsArgs> throttle) {
+        public Builder throttle(@Nullable Input<UsagePlanThrottleSettingsArgs> throttle) {
             this.throttle = throttle;
             return this;
         }
 
-        public Builder setThrottle(@Nullable UsagePlanThrottleSettingsArgs throttle) {
+        public Builder throttle(@Nullable UsagePlanThrottleSettingsArgs throttle) {
             this.throttle = Input.ofNullable(throttle);
             return this;
         }
 
-        public Builder setUsagePlanName(@Nullable Input<String> usagePlanName) {
+        public Builder usagePlanName(@Nullable Input<String> usagePlanName) {
             this.usagePlanName = usagePlanName;
             return this;
         }
 
-        public Builder setUsagePlanName(@Nullable String usagePlanName) {
+        public Builder usagePlanName(@Nullable String usagePlanName) {
             this.usagePlanName = Input.ofNullable(usagePlanName);
             return this;
         }

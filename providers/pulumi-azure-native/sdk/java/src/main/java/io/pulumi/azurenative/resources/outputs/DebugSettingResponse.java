@@ -17,8 +17,8 @@ public final class DebugSettingResponse {
      */
     private final @Nullable String detailLevel;
 
-    @OutputCustomType.Constructor({"detailLevel"})
-    private DebugSettingResponse(@Nullable String detailLevel) {
+    @OutputCustomType.Constructor
+    private DebugSettingResponse(@OutputCustomType.Parameter("detailLevel") @Nullable String detailLevel) {
         this.detailLevel = detailLevel;
     }
 
@@ -50,7 +50,7 @@ public final class DebugSettingResponse {
     	      this.detailLevel = defaults.detailLevel;
         }
 
-        public Builder setDetailLevel(@Nullable String detailLevel) {
+        public Builder detailLevel(@Nullable String detailLevel) {
             this.detailLevel = detailLevel;
             return this;
         }

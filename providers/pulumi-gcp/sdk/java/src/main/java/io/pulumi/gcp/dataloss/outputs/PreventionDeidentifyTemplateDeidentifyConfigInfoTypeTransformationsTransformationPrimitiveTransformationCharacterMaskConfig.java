@@ -40,12 +40,12 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Boolean reverseOrder;
 
-    @OutputCustomType.Constructor({"charactersToIgnores","maskingCharacter","numberToMask","reverseOrder"})
+    @OutputCustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfig(
-        @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
-        @Nullable String maskingCharacter,
-        @Nullable Integer numberToMask,
-        @Nullable Boolean reverseOrder) {
+        @OutputCustomType.Parameter("charactersToIgnores") @Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores,
+        @OutputCustomType.Parameter("maskingCharacter") @Nullable String maskingCharacter,
+        @OutputCustomType.Parameter("numberToMask") @Nullable Integer numberToMask,
+        @OutputCustomType.Parameter("reverseOrder") @Nullable Boolean reverseOrder) {
         this.charactersToIgnores = charactersToIgnores;
         this.maskingCharacter = maskingCharacter;
         this.numberToMask = numberToMask;
@@ -111,22 +111,22 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     	      this.reverseOrder = defaults.reverseOrder;
         }
 
-        public Builder setCharactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores) {
+        public Builder charactersToIgnores(@Nullable List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore> charactersToIgnores) {
             this.charactersToIgnores = charactersToIgnores;
             return this;
         }
 
-        public Builder setMaskingCharacter(@Nullable String maskingCharacter) {
+        public Builder maskingCharacter(@Nullable String maskingCharacter) {
             this.maskingCharacter = maskingCharacter;
             return this;
         }
 
-        public Builder setNumberToMask(@Nullable Integer numberToMask) {
+        public Builder numberToMask(@Nullable Integer numberToMask) {
             this.numberToMask = numberToMask;
             return this;
         }
 
-        public Builder setReverseOrder(@Nullable Boolean reverseOrder) {
+        public Builder reverseOrder(@Nullable Boolean reverseOrder) {
             this.reverseOrder = reverseOrder;
             return this;
         }

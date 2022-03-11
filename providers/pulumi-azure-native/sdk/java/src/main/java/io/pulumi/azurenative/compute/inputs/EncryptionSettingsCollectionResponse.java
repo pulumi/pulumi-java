@@ -93,17 +93,17 @@ public final class EncryptionSettingsCollectionResponse extends io.pulumi.resour
     	      this.encryptionSettingsVersion = defaults.encryptionSettingsVersion;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setEncryptionSettings(@Nullable List<EncryptionSettingsElementResponse> encryptionSettings) {
+        public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementResponse> encryptionSettings) {
             this.encryptionSettings = encryptionSettings;
             return this;
         }
 
-        public Builder setEncryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
+        public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
             this.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }

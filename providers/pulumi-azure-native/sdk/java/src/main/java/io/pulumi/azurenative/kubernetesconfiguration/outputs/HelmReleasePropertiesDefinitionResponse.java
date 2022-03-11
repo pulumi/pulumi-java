@@ -38,13 +38,13 @@ public final class HelmReleasePropertiesDefinitionResponse {
      */
     private final @Nullable Double upgradeFailureCount;
 
-    @OutputCustomType.Constructor({"failureCount","helmChartRef","installFailureCount","lastRevisionApplied","upgradeFailureCount"})
+    @OutputCustomType.Constructor
     private HelmReleasePropertiesDefinitionResponse(
-        @Nullable Double failureCount,
-        @Nullable ObjectReferenceDefinitionResponse helmChartRef,
-        @Nullable Double installFailureCount,
-        @Nullable Double lastRevisionApplied,
-        @Nullable Double upgradeFailureCount) {
+        @OutputCustomType.Parameter("failureCount") @Nullable Double failureCount,
+        @OutputCustomType.Parameter("helmChartRef") @Nullable ObjectReferenceDefinitionResponse helmChartRef,
+        @OutputCustomType.Parameter("installFailureCount") @Nullable Double installFailureCount,
+        @OutputCustomType.Parameter("lastRevisionApplied") @Nullable Double lastRevisionApplied,
+        @OutputCustomType.Parameter("upgradeFailureCount") @Nullable Double upgradeFailureCount) {
         this.failureCount = failureCount;
         this.helmChartRef = helmChartRef;
         this.installFailureCount = installFailureCount;
@@ -116,27 +116,27 @@ public final class HelmReleasePropertiesDefinitionResponse {
     	      this.upgradeFailureCount = defaults.upgradeFailureCount;
         }
 
-        public Builder setFailureCount(@Nullable Double failureCount) {
+        public Builder failureCount(@Nullable Double failureCount) {
             this.failureCount = failureCount;
             return this;
         }
 
-        public Builder setHelmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
+        public Builder helmChartRef(@Nullable ObjectReferenceDefinitionResponse helmChartRef) {
             this.helmChartRef = helmChartRef;
             return this;
         }
 
-        public Builder setInstallFailureCount(@Nullable Double installFailureCount) {
+        public Builder installFailureCount(@Nullable Double installFailureCount) {
             this.installFailureCount = installFailureCount;
             return this;
         }
 
-        public Builder setLastRevisionApplied(@Nullable Double lastRevisionApplied) {
+        public Builder lastRevisionApplied(@Nullable Double lastRevisionApplied) {
             this.lastRevisionApplied = lastRevisionApplied;
             return this;
         }
 
-        public Builder setUpgradeFailureCount(@Nullable Double upgradeFailureCount) {
+        public Builder upgradeFailureCount(@Nullable Double upgradeFailureCount) {
             this.upgradeFailureCount = upgradeFailureCount;
             return this;
         }

@@ -122,30 +122,30 @@ public final class GetClusterResult {
      */
     private final Map<String,String> tags;
 
-    @OutputCustomType.Constructor({"arn","availabilityZone","cacheNodes","clusterAddress","clusterId","configurationEndpoint","engine","engineVersion","id","maintenanceWindow","nodeType","notificationTopicArn","numCacheNodes","parameterGroupName","port","replicationGroupId","securityGroupIds","securityGroupNames","snapshotRetentionLimit","snapshotWindow","subnetGroupName","tags"})
+    @OutputCustomType.Constructor
     private GetClusterResult(
-        String arn,
-        String availabilityZone,
-        List<GetClusterCacheNode> cacheNodes,
-        String clusterAddress,
-        String clusterId,
-        String configurationEndpoint,
-        String engine,
-        String engineVersion,
-        String id,
-        String maintenanceWindow,
-        String nodeType,
-        String notificationTopicArn,
-        Integer numCacheNodes,
-        String parameterGroupName,
-        Integer port,
-        String replicationGroupId,
-        List<String> securityGroupIds,
-        List<String> securityGroupNames,
-        Integer snapshotRetentionLimit,
-        String snapshotWindow,
-        String subnetGroupName,
-        Map<String,String> tags) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("availabilityZone") String availabilityZone,
+        @OutputCustomType.Parameter("cacheNodes") List<GetClusterCacheNode> cacheNodes,
+        @OutputCustomType.Parameter("clusterAddress") String clusterAddress,
+        @OutputCustomType.Parameter("clusterId") String clusterId,
+        @OutputCustomType.Parameter("configurationEndpoint") String configurationEndpoint,
+        @OutputCustomType.Parameter("engine") String engine,
+        @OutputCustomType.Parameter("engineVersion") String engineVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maintenanceWindow") String maintenanceWindow,
+        @OutputCustomType.Parameter("nodeType") String nodeType,
+        @OutputCustomType.Parameter("notificationTopicArn") String notificationTopicArn,
+        @OutputCustomType.Parameter("numCacheNodes") Integer numCacheNodes,
+        @OutputCustomType.Parameter("parameterGroupName") String parameterGroupName,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("replicationGroupId") String replicationGroupId,
+        @OutputCustomType.Parameter("securityGroupIds") List<String> securityGroupIds,
+        @OutputCustomType.Parameter("securityGroupNames") List<String> securityGroupNames,
+        @OutputCustomType.Parameter("snapshotRetentionLimit") Integer snapshotRetentionLimit,
+        @OutputCustomType.Parameter("snapshotWindow") String snapshotWindow,
+        @OutputCustomType.Parameter("subnetGroupName") String subnetGroupName,
+        @OutputCustomType.Parameter("tags") Map<String,String> tags) {
         this.arn = arn;
         this.availabilityZone = availabilityZone;
         this.cacheNodes = cacheNodes;
@@ -385,112 +385,112 @@ public final class GetClusterResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setAvailabilityZone(String availabilityZone) {
+        public Builder availabilityZone(String availabilityZone) {
             this.availabilityZone = Objects.requireNonNull(availabilityZone);
             return this;
         }
 
-        public Builder setCacheNodes(List<GetClusterCacheNode> cacheNodes) {
+        public Builder cacheNodes(List<GetClusterCacheNode> cacheNodes) {
             this.cacheNodes = Objects.requireNonNull(cacheNodes);
             return this;
         }
 
-        public Builder setClusterAddress(String clusterAddress) {
+        public Builder clusterAddress(String clusterAddress) {
             this.clusterAddress = Objects.requireNonNull(clusterAddress);
             return this;
         }
 
-        public Builder setClusterId(String clusterId) {
+        public Builder clusterId(String clusterId) {
             this.clusterId = Objects.requireNonNull(clusterId);
             return this;
         }
 
-        public Builder setConfigurationEndpoint(String configurationEndpoint) {
+        public Builder configurationEndpoint(String configurationEndpoint) {
             this.configurationEndpoint = Objects.requireNonNull(configurationEndpoint);
             return this;
         }
 
-        public Builder setEngine(String engine) {
+        public Builder engine(String engine) {
             this.engine = Objects.requireNonNull(engine);
             return this;
         }
 
-        public Builder setEngineVersion(String engineVersion) {
+        public Builder engineVersion(String engineVersion) {
             this.engineVersion = Objects.requireNonNull(engineVersion);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaintenanceWindow(String maintenanceWindow) {
+        public Builder maintenanceWindow(String maintenanceWindow) {
             this.maintenanceWindow = Objects.requireNonNull(maintenanceWindow);
             return this;
         }
 
-        public Builder setNodeType(String nodeType) {
+        public Builder nodeType(String nodeType) {
             this.nodeType = Objects.requireNonNull(nodeType);
             return this;
         }
 
-        public Builder setNotificationTopicArn(String notificationTopicArn) {
+        public Builder notificationTopicArn(String notificationTopicArn) {
             this.notificationTopicArn = Objects.requireNonNull(notificationTopicArn);
             return this;
         }
 
-        public Builder setNumCacheNodes(Integer numCacheNodes) {
+        public Builder numCacheNodes(Integer numCacheNodes) {
             this.numCacheNodes = Objects.requireNonNull(numCacheNodes);
             return this;
         }
 
-        public Builder setParameterGroupName(String parameterGroupName) {
+        public Builder parameterGroupName(String parameterGroupName) {
             this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setReplicationGroupId(String replicationGroupId) {
+        public Builder replicationGroupId(String replicationGroupId) {
             this.replicationGroupId = Objects.requireNonNull(replicationGroupId);
             return this;
         }
 
-        public Builder setSecurityGroupIds(List<String> securityGroupIds) {
+        public Builder securityGroupIds(List<String> securityGroupIds) {
             this.securityGroupIds = Objects.requireNonNull(securityGroupIds);
             return this;
         }
 
-        public Builder setSecurityGroupNames(List<String> securityGroupNames) {
+        public Builder securityGroupNames(List<String> securityGroupNames) {
             this.securityGroupNames = Objects.requireNonNull(securityGroupNames);
             return this;
         }
 
-        public Builder setSnapshotRetentionLimit(Integer snapshotRetentionLimit) {
+        public Builder snapshotRetentionLimit(Integer snapshotRetentionLimit) {
             this.snapshotRetentionLimit = Objects.requireNonNull(snapshotRetentionLimit);
             return this;
         }
 
-        public Builder setSnapshotWindow(String snapshotWindow) {
+        public Builder snapshotWindow(String snapshotWindow) {
             this.snapshotWindow = Objects.requireNonNull(snapshotWindow);
             return this;
         }
 
-        public Builder setSubnetGroupName(String subnetGroupName) {
+        public Builder subnetGroupName(String subnetGroupName) {
             this.subnetGroupName = Objects.requireNonNull(subnetGroupName);
             return this;
         }
 
-        public Builder setTags(Map<String,String> tags) {
+        public Builder tags(Map<String,String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }

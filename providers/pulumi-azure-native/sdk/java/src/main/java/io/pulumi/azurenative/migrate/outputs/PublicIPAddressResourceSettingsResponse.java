@@ -48,15 +48,15 @@ public final class PublicIPAddressResourceSettingsResponse {
      */
     private final @Nullable String zones;
 
-    @OutputCustomType.Constructor({"domainNameLabel","fqdn","publicIpAllocationMethod","resourceType","sku","targetResourceName","zones"})
+    @OutputCustomType.Constructor
     private PublicIPAddressResourceSettingsResponse(
-        @Nullable String domainNameLabel,
-        @Nullable String fqdn,
-        @Nullable String publicIpAllocationMethod,
-        String resourceType,
-        @Nullable String sku,
-        String targetResourceName,
-        @Nullable String zones) {
+        @OutputCustomType.Parameter("domainNameLabel") @Nullable String domainNameLabel,
+        @OutputCustomType.Parameter("fqdn") @Nullable String fqdn,
+        @OutputCustomType.Parameter("publicIpAllocationMethod") @Nullable String publicIpAllocationMethod,
+        @OutputCustomType.Parameter("resourceType") String resourceType,
+        @OutputCustomType.Parameter("sku") @Nullable String sku,
+        @OutputCustomType.Parameter("targetResourceName") String targetResourceName,
+        @OutputCustomType.Parameter("zones") @Nullable String zones) {
         this.domainNameLabel = domainNameLabel;
         this.fqdn = fqdn;
         this.publicIpAllocationMethod = publicIpAllocationMethod;
@@ -149,37 +149,37 @@ public final class PublicIPAddressResourceSettingsResponse {
     	      this.zones = defaults.zones;
         }
 
-        public Builder setDomainNameLabel(@Nullable String domainNameLabel) {
+        public Builder domainNameLabel(@Nullable String domainNameLabel) {
             this.domainNameLabel = domainNameLabel;
             return this;
         }
 
-        public Builder setFqdn(@Nullable String fqdn) {
+        public Builder fqdn(@Nullable String fqdn) {
             this.fqdn = fqdn;
             return this;
         }
 
-        public Builder setPublicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
+        public Builder publicIpAllocationMethod(@Nullable String publicIpAllocationMethod) {
             this.publicIpAllocationMethod = publicIpAllocationMethod;
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
 
-        public Builder setSku(@Nullable String sku) {
+        public Builder sku(@Nullable String sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTargetResourceName(String targetResourceName) {
+        public Builder targetResourceName(String targetResourceName) {
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
 
-        public Builder setZones(@Nullable String zones) {
+        public Builder zones(@Nullable String zones) {
             this.zones = zones;
             return this;
         }

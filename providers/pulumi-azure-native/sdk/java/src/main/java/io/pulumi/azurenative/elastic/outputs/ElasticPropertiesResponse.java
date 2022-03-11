@@ -23,10 +23,10 @@ public final class ElasticPropertiesResponse {
      */
     private final @Nullable ElasticCloudUserResponse elasticCloudUser;
 
-    @OutputCustomType.Constructor({"elasticCloudDeployment","elasticCloudUser"})
+    @OutputCustomType.Constructor
     private ElasticPropertiesResponse(
-        @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment,
-        @Nullable ElasticCloudUserResponse elasticCloudUser) {
+        @OutputCustomType.Parameter("elasticCloudDeployment") @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment,
+        @OutputCustomType.Parameter("elasticCloudUser") @Nullable ElasticCloudUserResponse elasticCloudUser) {
         this.elasticCloudDeployment = elasticCloudDeployment;
         this.elasticCloudUser = elasticCloudUser;
     }
@@ -68,12 +68,12 @@ public final class ElasticPropertiesResponse {
     	      this.elasticCloudUser = defaults.elasticCloudUser;
         }
 
-        public Builder setElasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
+        public Builder elasticCloudDeployment(@Nullable ElasticCloudDeploymentResponse elasticCloudDeployment) {
             this.elasticCloudDeployment = elasticCloudDeployment;
             return this;
         }
 
-        public Builder setElasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
+        public Builder elasticCloudUser(@Nullable ElasticCloudUserResponse elasticCloudUser) {
             this.elasticCloudUser = elasticCloudUser;
             return this;
         }

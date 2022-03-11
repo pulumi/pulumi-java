@@ -29,11 +29,11 @@ public final class DatasetFilesLimit {
      */
     private final @Nullable DatasetFilesLimitOrderedBy orderedBy;
 
-    @OutputCustomType.Constructor({"maxFiles","order","orderedBy"})
+    @OutputCustomType.Constructor
     private DatasetFilesLimit(
-        Integer maxFiles,
-        @Nullable DatasetFilesLimitOrder order,
-        @Nullable DatasetFilesLimitOrderedBy orderedBy) {
+        @OutputCustomType.Parameter("maxFiles") Integer maxFiles,
+        @OutputCustomType.Parameter("order") @Nullable DatasetFilesLimitOrder order,
+        @OutputCustomType.Parameter("orderedBy") @Nullable DatasetFilesLimitOrderedBy orderedBy) {
         this.maxFiles = maxFiles;
         this.order = order;
         this.orderedBy = orderedBy;
@@ -85,17 +85,17 @@ public final class DatasetFilesLimit {
     	      this.orderedBy = defaults.orderedBy;
         }
 
-        public Builder setMaxFiles(Integer maxFiles) {
+        public Builder maxFiles(Integer maxFiles) {
             this.maxFiles = Objects.requireNonNull(maxFiles);
             return this;
         }
 
-        public Builder setOrder(@Nullable DatasetFilesLimitOrder order) {
+        public Builder order(@Nullable DatasetFilesLimitOrder order) {
             this.order = order;
             return this;
         }
 
-        public Builder setOrderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
+        public Builder orderedBy(@Nullable DatasetFilesLimitOrderedBy orderedBy) {
             this.orderedBy = orderedBy;
             return this;
         }

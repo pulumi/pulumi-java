@@ -16,8 +16,8 @@ public final class DataplexConfigResponse {
      */
     private final Map<String,String> lakeResources;
 
-    @OutputCustomType.Constructor({"lakeResources"})
-    private DataplexConfigResponse(Map<String,String> lakeResources) {
+    @OutputCustomType.Constructor
+    private DataplexConfigResponse(@OutputCustomType.Parameter("lakeResources") Map<String,String> lakeResources) {
         this.lakeResources = lakeResources;
     }
 
@@ -49,7 +49,7 @@ public final class DataplexConfigResponse {
     	      this.lakeResources = defaults.lakeResources;
         }
 
-        public Builder setLakeResources(Map<String,String> lakeResources) {
+        public Builder lakeResources(Map<String,String> lakeResources) {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
         }

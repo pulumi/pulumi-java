@@ -31,12 +31,12 @@ public final class CloudSqlPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"credential","database","instanceId","type"})
+    @OutputCustomType.Constructor
     private CloudSqlPropertiesResponse(
-        CloudSqlCredentialResponse credential,
-        String database,
-        String instanceId,
-        String type) {
+        @OutputCustomType.Parameter("credential") CloudSqlCredentialResponse credential,
+        @OutputCustomType.Parameter("database") String database,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("type") String type) {
         this.credential = credential;
         this.database = database;
         this.instanceId = instanceId;
@@ -98,22 +98,22 @@ public final class CloudSqlPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setCredential(CloudSqlCredentialResponse credential) {
+        public Builder credential(CloudSqlCredentialResponse credential) {
             this.credential = Objects.requireNonNull(credential);
             return this;
         }
 
-        public Builder setDatabase(String database) {
+        public Builder database(String database) {
             this.database = Objects.requireNonNull(database);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

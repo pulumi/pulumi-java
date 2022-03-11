@@ -56,12 +56,12 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
     	      this.eventBridgeEnabled = defaults.eventBridgeEnabled;
         }
 
-        public Builder setEventBridgeEnabled(Input<Boolean> eventBridgeEnabled) {
+        public Builder eventBridgeEnabled(Input<Boolean> eventBridgeEnabled) {
             this.eventBridgeEnabled = Objects.requireNonNull(eventBridgeEnabled);
             return this;
         }
 
-        public Builder setEventBridgeEnabled(Boolean eventBridgeEnabled) {
+        public Builder eventBridgeEnabled(Boolean eventBridgeEnabled) {
             this.eventBridgeEnabled = Input.of(Objects.requireNonNull(eventBridgeEnabled));
             return this;
         }

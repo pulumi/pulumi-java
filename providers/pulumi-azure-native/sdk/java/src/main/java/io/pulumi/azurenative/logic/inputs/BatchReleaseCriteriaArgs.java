@@ -91,32 +91,32 @@ public final class BatchReleaseCriteriaArgs extends io.pulumi.resources.Resource
     	      this.recurrence = defaults.recurrence;
         }
 
-        public Builder setBatchSize(@Nullable Input<Integer> batchSize) {
+        public Builder batchSize(@Nullable Input<Integer> batchSize) {
             this.batchSize = batchSize;
             return this;
         }
 
-        public Builder setBatchSize(@Nullable Integer batchSize) {
+        public Builder batchSize(@Nullable Integer batchSize) {
             this.batchSize = Input.ofNullable(batchSize);
             return this;
         }
 
-        public Builder setMessageCount(@Nullable Input<Integer> messageCount) {
+        public Builder messageCount(@Nullable Input<Integer> messageCount) {
             this.messageCount = messageCount;
             return this;
         }
 
-        public Builder setMessageCount(@Nullable Integer messageCount) {
+        public Builder messageCount(@Nullable Integer messageCount) {
             this.messageCount = Input.ofNullable(messageCount);
             return this;
         }
 
-        public Builder setRecurrence(@Nullable Input<WorkflowTriggerRecurrenceArgs> recurrence) {
+        public Builder recurrence(@Nullable Input<WorkflowTriggerRecurrenceArgs> recurrence) {
             this.recurrence = recurrence;
             return this;
         }
 
-        public Builder setRecurrence(@Nullable WorkflowTriggerRecurrenceArgs recurrence) {
+        public Builder recurrence(@Nullable WorkflowTriggerRecurrenceArgs recurrence) {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }

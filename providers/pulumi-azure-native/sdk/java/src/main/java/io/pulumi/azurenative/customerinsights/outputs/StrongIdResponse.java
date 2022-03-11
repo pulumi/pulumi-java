@@ -33,12 +33,12 @@ public final class StrongIdResponse {
      */
     private final String strongIdName;
 
-    @OutputCustomType.Constructor({"description","displayName","keyPropertyNames","strongIdName"})
+    @OutputCustomType.Constructor
     private StrongIdResponse(
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        List<String> keyPropertyNames,
-        String strongIdName) {
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("keyPropertyNames") List<String> keyPropertyNames,
+        @OutputCustomType.Parameter("strongIdName") String strongIdName) {
         this.description = description;
         this.displayName = displayName;
         this.keyPropertyNames = keyPropertyNames;
@@ -100,22 +100,22 @@ public final class StrongIdResponse {
     	      this.strongIdName = defaults.strongIdName;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setKeyPropertyNames(List<String> keyPropertyNames) {
+        public Builder keyPropertyNames(List<String> keyPropertyNames) {
             this.keyPropertyNames = Objects.requireNonNull(keyPropertyNames);
             return this;
         }
 
-        public Builder setStrongIdName(String strongIdName) {
+        public Builder strongIdName(String strongIdName) {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }

@@ -15,8 +15,8 @@ public final class CryptoKeyConfigResponse {
      */
     private final String keyReference;
 
-    @OutputCustomType.Constructor({"keyReference"})
-    private CryptoKeyConfigResponse(String keyReference) {
+    @OutputCustomType.Constructor
+    private CryptoKeyConfigResponse(@OutputCustomType.Parameter("keyReference") String keyReference) {
         this.keyReference = keyReference;
     }
 
@@ -48,7 +48,7 @@ public final class CryptoKeyConfigResponse {
     	      this.keyReference = defaults.keyReference;
         }
 
-        public Builder setKeyReference(String keyReference) {
+        public Builder keyReference(String keyReference) {
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
         }

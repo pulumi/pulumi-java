@@ -23,10 +23,10 @@ public final class DistributionTrustedSignerItem {
      */
     private final @Nullable List<String> keyPairIds;
 
-    @OutputCustomType.Constructor({"awsAccountNumber","keyPairIds"})
+    @OutputCustomType.Constructor
     private DistributionTrustedSignerItem(
-        @Nullable String awsAccountNumber,
-        @Nullable List<String> keyPairIds) {
+        @OutputCustomType.Parameter("awsAccountNumber") @Nullable String awsAccountNumber,
+        @OutputCustomType.Parameter("keyPairIds") @Nullable List<String> keyPairIds) {
         this.awsAccountNumber = awsAccountNumber;
         this.keyPairIds = keyPairIds;
     }
@@ -68,12 +68,12 @@ public final class DistributionTrustedSignerItem {
     	      this.keyPairIds = defaults.keyPairIds;
         }
 
-        public Builder setAwsAccountNumber(@Nullable String awsAccountNumber) {
+        public Builder awsAccountNumber(@Nullable String awsAccountNumber) {
             this.awsAccountNumber = awsAccountNumber;
             return this;
         }
 
-        public Builder setKeyPairIds(@Nullable List<String> keyPairIds) {
+        public Builder keyPairIds(@Nullable List<String> keyPairIds) {
             this.keyPairIds = keyPairIds;
             return this;
         }

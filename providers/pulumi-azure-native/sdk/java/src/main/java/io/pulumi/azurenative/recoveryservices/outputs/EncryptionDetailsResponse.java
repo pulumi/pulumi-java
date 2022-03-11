@@ -27,11 +27,11 @@ public final class EncryptionDetailsResponse {
      */
     private final @Nullable String kekState;
 
-    @OutputCustomType.Constructor({"kekCertExpiryDate","kekCertThumbprint","kekState"})
+    @OutputCustomType.Constructor
     private EncryptionDetailsResponse(
-        @Nullable String kekCertExpiryDate,
-        @Nullable String kekCertThumbprint,
-        @Nullable String kekState) {
+        @OutputCustomType.Parameter("kekCertExpiryDate") @Nullable String kekCertExpiryDate,
+        @OutputCustomType.Parameter("kekCertThumbprint") @Nullable String kekCertThumbprint,
+        @OutputCustomType.Parameter("kekState") @Nullable String kekState) {
         this.kekCertExpiryDate = kekCertExpiryDate;
         this.kekCertThumbprint = kekCertThumbprint;
         this.kekState = kekState;
@@ -83,17 +83,17 @@ public final class EncryptionDetailsResponse {
     	      this.kekState = defaults.kekState;
         }
 
-        public Builder setKekCertExpiryDate(@Nullable String kekCertExpiryDate) {
+        public Builder kekCertExpiryDate(@Nullable String kekCertExpiryDate) {
             this.kekCertExpiryDate = kekCertExpiryDate;
             return this;
         }
 
-        public Builder setKekCertThumbprint(@Nullable String kekCertThumbprint) {
+        public Builder kekCertThumbprint(@Nullable String kekCertThumbprint) {
             this.kekCertThumbprint = kekCertThumbprint;
             return this;
         }
 
-        public Builder setKekState(@Nullable String kekState) {
+        public Builder kekState(@Nullable String kekState) {
             this.kekState = kekState;
             return this;
         }

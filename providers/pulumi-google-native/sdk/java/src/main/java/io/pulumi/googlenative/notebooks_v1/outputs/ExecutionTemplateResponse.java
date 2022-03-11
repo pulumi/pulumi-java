@@ -79,21 +79,21 @@ public final class ExecutionTemplateResponse {
      */
     private final VertexAIParametersResponse vertexAiParameters;
 
-    @OutputCustomType.Constructor({"acceleratorConfig","containerImageUri","dataprocParameters","inputNotebookFile","jobType","kernelSpec","labels","masterType","outputNotebookFolder","parameters","paramsYamlFile","serviceAccount","vertexAiParameters"})
+    @OutputCustomType.Constructor
     private ExecutionTemplateResponse(
-        SchedulerAcceleratorConfigResponse acceleratorConfig,
-        String containerImageUri,
-        DataprocParametersResponse dataprocParameters,
-        String inputNotebookFile,
-        String jobType,
-        String kernelSpec,
-        Map<String,String> labels,
-        String masterType,
-        String outputNotebookFolder,
-        String parameters,
-        String paramsYamlFile,
-        String serviceAccount,
-        VertexAIParametersResponse vertexAiParameters) {
+        @OutputCustomType.Parameter("acceleratorConfig") SchedulerAcceleratorConfigResponse acceleratorConfig,
+        @OutputCustomType.Parameter("containerImageUri") String containerImageUri,
+        @OutputCustomType.Parameter("dataprocParameters") DataprocParametersResponse dataprocParameters,
+        @OutputCustomType.Parameter("inputNotebookFile") String inputNotebookFile,
+        @OutputCustomType.Parameter("jobType") String jobType,
+        @OutputCustomType.Parameter("kernelSpec") String kernelSpec,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("masterType") String masterType,
+        @OutputCustomType.Parameter("outputNotebookFolder") String outputNotebookFolder,
+        @OutputCustomType.Parameter("parameters") String parameters,
+        @OutputCustomType.Parameter("paramsYamlFile") String paramsYamlFile,
+        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
+        @OutputCustomType.Parameter("vertexAiParameters") VertexAIParametersResponse vertexAiParameters) {
         this.acceleratorConfig = acceleratorConfig;
         this.containerImageUri = containerImageUri;
         this.dataprocParameters = dataprocParameters;
@@ -245,67 +245,67 @@ public final class ExecutionTemplateResponse {
     	      this.vertexAiParameters = defaults.vertexAiParameters;
         }
 
-        public Builder setAcceleratorConfig(SchedulerAcceleratorConfigResponse acceleratorConfig) {
+        public Builder acceleratorConfig(SchedulerAcceleratorConfigResponse acceleratorConfig) {
             this.acceleratorConfig = Objects.requireNonNull(acceleratorConfig);
             return this;
         }
 
-        public Builder setContainerImageUri(String containerImageUri) {
+        public Builder containerImageUri(String containerImageUri) {
             this.containerImageUri = Objects.requireNonNull(containerImageUri);
             return this;
         }
 
-        public Builder setDataprocParameters(DataprocParametersResponse dataprocParameters) {
+        public Builder dataprocParameters(DataprocParametersResponse dataprocParameters) {
             this.dataprocParameters = Objects.requireNonNull(dataprocParameters);
             return this;
         }
 
-        public Builder setInputNotebookFile(String inputNotebookFile) {
+        public Builder inputNotebookFile(String inputNotebookFile) {
             this.inputNotebookFile = Objects.requireNonNull(inputNotebookFile);
             return this;
         }
 
-        public Builder setJobType(String jobType) {
+        public Builder jobType(String jobType) {
             this.jobType = Objects.requireNonNull(jobType);
             return this;
         }
 
-        public Builder setKernelSpec(String kernelSpec) {
+        public Builder kernelSpec(String kernelSpec) {
             this.kernelSpec = Objects.requireNonNull(kernelSpec);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setMasterType(String masterType) {
+        public Builder masterType(String masterType) {
             this.masterType = Objects.requireNonNull(masterType);
             return this;
         }
 
-        public Builder setOutputNotebookFolder(String outputNotebookFolder) {
+        public Builder outputNotebookFolder(String outputNotebookFolder) {
             this.outputNotebookFolder = Objects.requireNonNull(outputNotebookFolder);
             return this;
         }
 
-        public Builder setParameters(String parameters) {
+        public Builder parameters(String parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setParamsYamlFile(String paramsYamlFile) {
+        public Builder paramsYamlFile(String paramsYamlFile) {
             this.paramsYamlFile = Objects.requireNonNull(paramsYamlFile);
             return this;
         }
 
-        public Builder setServiceAccount(String serviceAccount) {
+        public Builder serviceAccount(String serviceAccount) {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
 
-        public Builder setVertexAiParameters(VertexAIParametersResponse vertexAiParameters) {
+        public Builder vertexAiParameters(VertexAIParametersResponse vertexAiParameters) {
             this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
             return this;
         }

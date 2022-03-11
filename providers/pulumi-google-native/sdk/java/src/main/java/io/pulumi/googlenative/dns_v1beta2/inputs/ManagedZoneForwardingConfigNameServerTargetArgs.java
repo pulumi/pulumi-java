@@ -99,42 +99,42 @@ public final class ManagedZoneForwardingConfigNameServerTargetArgs extends io.pu
     	      this.kind = defaults.kind;
         }
 
-        public Builder setForwardingPath(@Nullable Input<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath) {
+        public Builder forwardingPath(@Nullable Input<ManagedZoneForwardingConfigNameServerTargetForwardingPath> forwardingPath) {
             this.forwardingPath = forwardingPath;
             return this;
         }
 
-        public Builder setForwardingPath(@Nullable ManagedZoneForwardingConfigNameServerTargetForwardingPath forwardingPath) {
+        public Builder forwardingPath(@Nullable ManagedZoneForwardingConfigNameServerTargetForwardingPath forwardingPath) {
             this.forwardingPath = Input.ofNullable(forwardingPath);
             return this;
         }
 
-        public Builder setIpv4Address(@Nullable Input<String> ipv4Address) {
+        public Builder ipv4Address(@Nullable Input<String> ipv4Address) {
             this.ipv4Address = ipv4Address;
             return this;
         }
 
-        public Builder setIpv4Address(@Nullable String ipv4Address) {
+        public Builder ipv4Address(@Nullable String ipv4Address) {
             this.ipv4Address = Input.ofNullable(ipv4Address);
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable Input<String> ipv6Address) {
+        public Builder ipv6Address(@Nullable Input<String> ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
 
-        public Builder setIpv6Address(@Nullable String ipv6Address) {
+        public Builder ipv6Address(@Nullable String ipv6Address) {
             this.ipv6Address = Input.ofNullable(ipv6Address);
             return this;
         }
 
-        public Builder setKind(@Nullable Input<String> kind) {
+        public Builder kind(@Nullable Input<String> kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = Input.ofNullable(kind);
             return this;
         }

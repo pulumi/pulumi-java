@@ -15,8 +15,8 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
      */
     private final String cidr;
 
-    @OutputCustomType.Constructor({"cidr"})
-    private InsightFiltersResourceAwsEc2InstanceIpv4Address(String cidr) {
+    @OutputCustomType.Constructor
+    private InsightFiltersResourceAwsEc2InstanceIpv4Address(@OutputCustomType.Parameter("cidr") String cidr) {
         this.cidr = cidr;
     }
 
@@ -48,7 +48,7 @@ public final class InsightFiltersResourceAwsEc2InstanceIpv4Address {
     	      this.cidr = defaults.cidr;
         }
 
-        public Builder setCidr(String cidr) {
+        public Builder cidr(String cidr) {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }

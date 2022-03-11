@@ -58,16 +58,16 @@ public final class AssetItemResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","inputPorts","locationInfo","metadata","name","outputPorts","parameters","type"})
+    @OutputCustomType.Constructor
     private AssetItemResponse(
-        @Nullable String id,
-        @Nullable Map<String,InputPortResponse> inputPorts,
-        BlobLocationResponse locationInfo,
-        @Nullable Map<String,String> metadata,
-        String name,
-        @Nullable Map<String,OutputPortResponse> outputPorts,
-        @Nullable List<ModuleAssetParameterResponse> parameters,
-        String type) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("inputPorts") @Nullable Map<String,InputPortResponse> inputPorts,
+        @OutputCustomType.Parameter("locationInfo") BlobLocationResponse locationInfo,
+        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("outputPorts") @Nullable Map<String,OutputPortResponse> outputPorts,
+        @OutputCustomType.Parameter("parameters") @Nullable List<ModuleAssetParameterResponse> parameters,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.inputPorts = inputPorts;
         this.locationInfo = locationInfo;
@@ -169,42 +169,42 @@ public final class AssetItemResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setInputPorts(@Nullable Map<String,InputPortResponse> inputPorts) {
+        public Builder inputPorts(@Nullable Map<String,InputPortResponse> inputPorts) {
             this.inputPorts = inputPorts;
             return this;
         }
 
-        public Builder setLocationInfo(BlobLocationResponse locationInfo) {
+        public Builder locationInfo(BlobLocationResponse locationInfo) {
             this.locationInfo = Objects.requireNonNull(locationInfo);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Map<String,String> metadata) {
+        public Builder metadata(@Nullable Map<String,String> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOutputPorts(@Nullable Map<String,OutputPortResponse> outputPorts) {
+        public Builder outputPorts(@Nullable Map<String,OutputPortResponse> outputPorts) {
             this.outputPorts = outputPorts;
             return this;
         }
 
-        public Builder setParameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
+        public Builder parameters(@Nullable List<ModuleAssetParameterResponse> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

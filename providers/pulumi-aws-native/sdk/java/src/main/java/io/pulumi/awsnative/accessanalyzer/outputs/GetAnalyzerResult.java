@@ -26,11 +26,11 @@ public final class GetAnalyzerResult {
      */
     private final @Nullable List<AnalyzerTag> tags;
 
-    @OutputCustomType.Constructor({"archiveRules","arn","tags"})
+    @OutputCustomType.Constructor
     private GetAnalyzerResult(
-        @Nullable List<AnalyzerArchiveRule> archiveRules,
-        @Nullable String arn,
-        @Nullable List<AnalyzerTag> tags) {
+        @OutputCustomType.Parameter("archiveRules") @Nullable List<AnalyzerArchiveRule> archiveRules,
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<AnalyzerTag> tags) {
         this.archiveRules = archiveRules;
         this.arn = arn;
         this.tags = tags;
@@ -78,17 +78,17 @@ public final class GetAnalyzerResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArchiveRules(@Nullable List<AnalyzerArchiveRule> archiveRules) {
+        public Builder archiveRules(@Nullable List<AnalyzerArchiveRule> archiveRules) {
             this.archiveRules = archiveRules;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<AnalyzerTag> tags) {
+        public Builder tags(@Nullable List<AnalyzerTag> tags) {
             this.tags = tags;
             return this;
         }

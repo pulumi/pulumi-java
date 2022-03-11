@@ -21,10 +21,10 @@ public final class SourceDiskEncryptionKeyResponse {
      */
     private final String sourceDisk;
 
-    @OutputCustomType.Constructor({"diskEncryptionKey","sourceDisk"})
+    @OutputCustomType.Constructor
     private SourceDiskEncryptionKeyResponse(
-        CustomerEncryptionKeyResponse diskEncryptionKey,
-        String sourceDisk) {
+        @OutputCustomType.Parameter("diskEncryptionKey") CustomerEncryptionKeyResponse diskEncryptionKey,
+        @OutputCustomType.Parameter("sourceDisk") String sourceDisk) {
         this.diskEncryptionKey = diskEncryptionKey;
         this.sourceDisk = sourceDisk;
     }
@@ -66,12 +66,12 @@ public final class SourceDiskEncryptionKeyResponse {
     	      this.sourceDisk = defaults.sourceDisk;
         }
 
-        public Builder setDiskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
+        public Builder diskEncryptionKey(CustomerEncryptionKeyResponse diskEncryptionKey) {
             this.diskEncryptionKey = Objects.requireNonNull(diskEncryptionKey);
             return this;
         }
 
-        public Builder setSourceDisk(String sourceDisk) {
+        public Builder sourceDisk(String sourceDisk) {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }

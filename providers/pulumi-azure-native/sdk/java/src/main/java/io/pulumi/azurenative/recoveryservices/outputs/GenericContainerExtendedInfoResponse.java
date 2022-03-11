@@ -29,11 +29,11 @@ public final class GenericContainerExtendedInfoResponse {
      */
     private final @Nullable Map<String,String> serviceEndpoints;
 
-    @OutputCustomType.Constructor({"containerIdentityInfo","rawCertData","serviceEndpoints"})
+    @OutputCustomType.Constructor
     private GenericContainerExtendedInfoResponse(
-        @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
-        @Nullable String rawCertData,
-        @Nullable Map<String,String> serviceEndpoints) {
+        @OutputCustomType.Parameter("containerIdentityInfo") @Nullable ContainerIdentityInfoResponse containerIdentityInfo,
+        @OutputCustomType.Parameter("rawCertData") @Nullable String rawCertData,
+        @OutputCustomType.Parameter("serviceEndpoints") @Nullable Map<String,String> serviceEndpoints) {
         this.containerIdentityInfo = containerIdentityInfo;
         this.rawCertData = rawCertData;
         this.serviceEndpoints = serviceEndpoints;
@@ -85,17 +85,17 @@ public final class GenericContainerExtendedInfoResponse {
     	      this.serviceEndpoints = defaults.serviceEndpoints;
         }
 
-        public Builder setContainerIdentityInfo(@Nullable ContainerIdentityInfoResponse containerIdentityInfo) {
+        public Builder containerIdentityInfo(@Nullable ContainerIdentityInfoResponse containerIdentityInfo) {
             this.containerIdentityInfo = containerIdentityInfo;
             return this;
         }
 
-        public Builder setRawCertData(@Nullable String rawCertData) {
+        public Builder rawCertData(@Nullable String rawCertData) {
             this.rawCertData = rawCertData;
             return this;
         }
 
-        public Builder setServiceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
+        public Builder serviceEndpoints(@Nullable Map<String,String> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }

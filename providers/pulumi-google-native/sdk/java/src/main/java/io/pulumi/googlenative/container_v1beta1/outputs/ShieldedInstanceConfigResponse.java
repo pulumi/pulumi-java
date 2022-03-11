@@ -20,10 +20,10 @@ public final class ShieldedInstanceConfigResponse {
      */
     private final Boolean enableSecureBoot;
 
-    @OutputCustomType.Constructor({"enableIntegrityMonitoring","enableSecureBoot"})
+    @OutputCustomType.Constructor
     private ShieldedInstanceConfigResponse(
-        Boolean enableIntegrityMonitoring,
-        Boolean enableSecureBoot) {
+        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
     }
@@ -65,12 +65,12 @@ public final class ShieldedInstanceConfigResponse {
     	      this.enableSecureBoot = defaults.enableSecureBoot;
         }
 
-        public Builder setEnableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
+        public Builder enableIntegrityMonitoring(Boolean enableIntegrityMonitoring) {
             this.enableIntegrityMonitoring = Objects.requireNonNull(enableIntegrityMonitoring);
             return this;
         }
 
-        public Builder setEnableSecureBoot(Boolean enableSecureBoot) {
+        public Builder enableSecureBoot(Boolean enableSecureBoot) {
             this.enableSecureBoot = Objects.requireNonNull(enableSecureBoot);
             return this;
         }

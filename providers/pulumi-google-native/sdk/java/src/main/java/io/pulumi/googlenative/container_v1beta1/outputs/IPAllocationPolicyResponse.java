@@ -61,18 +61,18 @@ public final class IPAllocationPolicyResponse {
      */
     private final Boolean useRoutes;
 
-    @OutputCustomType.Constructor({"allowRouteOverlap","clusterIpv4CidrBlock","clusterSecondaryRangeName","createSubnetwork","nodeIpv4CidrBlock","servicesIpv4CidrBlock","servicesSecondaryRangeName","subnetworkName","useIpAliases","useRoutes"})
+    @OutputCustomType.Constructor
     private IPAllocationPolicyResponse(
-        Boolean allowRouteOverlap,
-        String clusterIpv4CidrBlock,
-        String clusterSecondaryRangeName,
-        Boolean createSubnetwork,
-        String nodeIpv4CidrBlock,
-        String servicesIpv4CidrBlock,
-        String servicesSecondaryRangeName,
-        String subnetworkName,
-        Boolean useIpAliases,
-        Boolean useRoutes) {
+        @OutputCustomType.Parameter("allowRouteOverlap") Boolean allowRouteOverlap,
+        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @OutputCustomType.Parameter("createSubnetwork") Boolean createSubnetwork,
+        @OutputCustomType.Parameter("nodeIpv4CidrBlock") String nodeIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName,
+        @OutputCustomType.Parameter("subnetworkName") String subnetworkName,
+        @OutputCustomType.Parameter("useIpAliases") Boolean useIpAliases,
+        @OutputCustomType.Parameter("useRoutes") Boolean useRoutes) {
         this.allowRouteOverlap = allowRouteOverlap;
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
@@ -194,52 +194,52 @@ public final class IPAllocationPolicyResponse {
     	      this.useRoutes = defaults.useRoutes;
         }
 
-        public Builder setAllowRouteOverlap(Boolean allowRouteOverlap) {
+        public Builder allowRouteOverlap(Boolean allowRouteOverlap) {
             this.allowRouteOverlap = Objects.requireNonNull(allowRouteOverlap);
             return this;
         }
 
-        public Builder setClusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
+        public Builder clusterIpv4CidrBlock(String clusterIpv4CidrBlock) {
             this.clusterIpv4CidrBlock = Objects.requireNonNull(clusterIpv4CidrBlock);
             return this;
         }
 
-        public Builder setClusterSecondaryRangeName(String clusterSecondaryRangeName) {
+        public Builder clusterSecondaryRangeName(String clusterSecondaryRangeName) {
             this.clusterSecondaryRangeName = Objects.requireNonNull(clusterSecondaryRangeName);
             return this;
         }
 
-        public Builder setCreateSubnetwork(Boolean createSubnetwork) {
+        public Builder createSubnetwork(Boolean createSubnetwork) {
             this.createSubnetwork = Objects.requireNonNull(createSubnetwork);
             return this;
         }
 
-        public Builder setNodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
+        public Builder nodeIpv4CidrBlock(String nodeIpv4CidrBlock) {
             this.nodeIpv4CidrBlock = Objects.requireNonNull(nodeIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
+        public Builder servicesIpv4CidrBlock(String servicesIpv4CidrBlock) {
             this.servicesIpv4CidrBlock = Objects.requireNonNull(servicesIpv4CidrBlock);
             return this;
         }
 
-        public Builder setServicesSecondaryRangeName(String servicesSecondaryRangeName) {
+        public Builder servicesSecondaryRangeName(String servicesSecondaryRangeName) {
             this.servicesSecondaryRangeName = Objects.requireNonNull(servicesSecondaryRangeName);
             return this;
         }
 
-        public Builder setSubnetworkName(String subnetworkName) {
+        public Builder subnetworkName(String subnetworkName) {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
 
-        public Builder setUseIpAliases(Boolean useIpAliases) {
+        public Builder useIpAliases(Boolean useIpAliases) {
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
 
-        public Builder setUseRoutes(Boolean useRoutes) {
+        public Builder useRoutes(Boolean useRoutes) {
             this.useRoutes = Objects.requireNonNull(useRoutes);
             return this;
         }

@@ -35,13 +35,13 @@ public final class ItsmReceiverResponse {
      */
     private final String workspaceId;
 
-    @OutputCustomType.Constructor({"connectionId","name","region","ticketConfiguration","workspaceId"})
+    @OutputCustomType.Constructor
     private ItsmReceiverResponse(
-        String connectionId,
-        String name,
-        String region,
-        String ticketConfiguration,
-        String workspaceId) {
+        @OutputCustomType.Parameter("connectionId") String connectionId,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("ticketConfiguration") String ticketConfiguration,
+        @OutputCustomType.Parameter("workspaceId") String workspaceId) {
         this.connectionId = connectionId;
         this.name = name;
         this.region = region;
@@ -113,27 +113,27 @@ public final class ItsmReceiverResponse {
     	      this.workspaceId = defaults.workspaceId;
         }
 
-        public Builder setConnectionId(String connectionId) {
+        public Builder connectionId(String connectionId) {
             this.connectionId = Objects.requireNonNull(connectionId);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setTicketConfiguration(String ticketConfiguration) {
+        public Builder ticketConfiguration(String ticketConfiguration) {
             this.ticketConfiguration = Objects.requireNonNull(ticketConfiguration);
             return this;
         }
 
-        public Builder setWorkspaceId(String workspaceId) {
+        public Builder workspaceId(String workspaceId) {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }

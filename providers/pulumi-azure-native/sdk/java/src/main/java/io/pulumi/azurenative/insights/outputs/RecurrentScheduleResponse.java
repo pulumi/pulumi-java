@@ -32,12 +32,12 @@ public final class RecurrentScheduleResponse {
      */
     private final String timeZone;
 
-    @OutputCustomType.Constructor({"days","hours","minutes","timeZone"})
+    @OutputCustomType.Constructor
     private RecurrentScheduleResponse(
-        List<String> days,
-        List<Integer> hours,
-        List<Integer> minutes,
-        String timeZone) {
+        @OutputCustomType.Parameter("days") List<String> days,
+        @OutputCustomType.Parameter("hours") List<Integer> hours,
+        @OutputCustomType.Parameter("minutes") List<Integer> minutes,
+        @OutputCustomType.Parameter("timeZone") String timeZone) {
         this.days = days;
         this.hours = hours;
         this.minutes = minutes;
@@ -99,22 +99,22 @@ public final class RecurrentScheduleResponse {
     	      this.timeZone = defaults.timeZone;
         }
 
-        public Builder setDays(List<String> days) {
+        public Builder days(List<String> days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setHours(List<Integer> hours) {
+        public Builder hours(List<Integer> hours) {
             this.hours = Objects.requireNonNull(hours);
             return this;
         }
 
-        public Builder setMinutes(List<Integer> minutes) {
+        public Builder minutes(List<Integer> minutes) {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
 
-        public Builder setTimeZone(String timeZone) {
+        public Builder timeZone(String timeZone) {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }

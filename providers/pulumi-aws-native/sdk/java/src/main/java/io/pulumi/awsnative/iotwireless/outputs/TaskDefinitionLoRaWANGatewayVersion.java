@@ -15,11 +15,11 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
     private final @Nullable String packageVersion;
     private final @Nullable String station;
 
-    @OutputCustomType.Constructor({"model","packageVersion","station"})
+    @OutputCustomType.Constructor
     private TaskDefinitionLoRaWANGatewayVersion(
-        @Nullable String model,
-        @Nullable String packageVersion,
-        @Nullable String station) {
+        @OutputCustomType.Parameter("model") @Nullable String model,
+        @OutputCustomType.Parameter("packageVersion") @Nullable String packageVersion,
+        @OutputCustomType.Parameter("station") @Nullable String station) {
         this.model = model;
         this.packageVersion = packageVersion;
         this.station = station;
@@ -59,17 +59,17 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
     	      this.station = defaults.station;
         }
 
-        public Builder setModel(@Nullable String model) {
+        public Builder model(@Nullable String model) {
             this.model = model;
             return this;
         }
 
-        public Builder setPackageVersion(@Nullable String packageVersion) {
+        public Builder packageVersion(@Nullable String packageVersion) {
             this.packageVersion = packageVersion;
             return this;
         }
 
-        public Builder setStation(@Nullable String station) {
+        public Builder station(@Nullable String station) {
             this.station = station;
             return this;
         }

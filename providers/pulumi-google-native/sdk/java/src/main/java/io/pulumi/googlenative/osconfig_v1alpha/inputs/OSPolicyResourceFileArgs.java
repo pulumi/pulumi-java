@@ -109,42 +109,42 @@ public final class OSPolicyResourceFileArgs extends io.pulumi.resources.Resource
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(@Nullable Input<Boolean> allowInsecure) {
+        public Builder allowInsecure(@Nullable Input<Boolean> allowInsecure) {
             this.allowInsecure = allowInsecure;
             return this;
         }
 
-        public Builder setAllowInsecure(@Nullable Boolean allowInsecure) {
+        public Builder allowInsecure(@Nullable Boolean allowInsecure) {
             this.allowInsecure = Input.ofNullable(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(@Nullable Input<OSPolicyResourceFileGcsArgs> gcs) {
+        public Builder gcs(@Nullable Input<OSPolicyResourceFileGcsArgs> gcs) {
             this.gcs = gcs;
             return this;
         }
 
-        public Builder setGcs(@Nullable OSPolicyResourceFileGcsArgs gcs) {
+        public Builder gcs(@Nullable OSPolicyResourceFileGcsArgs gcs) {
             this.gcs = Input.ofNullable(gcs);
             return this;
         }
 
-        public Builder setLocalPath(@Nullable Input<String> localPath) {
+        public Builder localPath(@Nullable Input<String> localPath) {
             this.localPath = localPath;
             return this;
         }
 
-        public Builder setLocalPath(@Nullable String localPath) {
+        public Builder localPath(@Nullable String localPath) {
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
 
-        public Builder setRemote(@Nullable Input<OSPolicyResourceFileRemoteArgs> remote) {
+        public Builder remote(@Nullable Input<OSPolicyResourceFileRemoteArgs> remote) {
             this.remote = remote;
             return this;
         }
 
-        public Builder setRemote(@Nullable OSPolicyResourceFileRemoteArgs remote) {
+        public Builder remote(@Nullable OSPolicyResourceFileRemoteArgs remote) {
             this.remote = Input.ofNullable(remote);
             return this;
         }

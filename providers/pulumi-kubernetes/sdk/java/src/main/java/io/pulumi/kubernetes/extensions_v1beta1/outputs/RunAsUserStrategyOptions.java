@@ -23,10 +23,10 @@ public final class RunAsUserStrategyOptions {
      */
     private final String rule;
 
-    @OutputCustomType.Constructor({"ranges","rule"})
+    @OutputCustomType.Constructor
     private RunAsUserStrategyOptions(
-        @Nullable List<IDRange> ranges,
-        String rule) {
+        @OutputCustomType.Parameter("ranges") @Nullable List<IDRange> ranges,
+        @OutputCustomType.Parameter("rule") String rule) {
         this.ranges = ranges;
         this.rule = rule;
     }
@@ -68,12 +68,12 @@ public final class RunAsUserStrategyOptions {
     	      this.rule = defaults.rule;
         }
 
-        public Builder setRanges(@Nullable List<IDRange> ranges) {
+        public Builder ranges(@Nullable List<IDRange> ranges) {
             this.ranges = ranges;
             return this;
         }
 
-        public Builder setRule(String rule) {
+        public Builder rule(String rule) {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }

@@ -70,22 +70,22 @@ public final class UptimeCheckConfigMonitoredResourceGetArgs extends io.pulumi.r
     	      this.type = defaults.type;
         }
 
-        public Builder setLabels(Input<Map<String,String>> labels) {
+        public Builder labels(Input<Map<String,String>> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Input.of(Objects.requireNonNull(labels));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

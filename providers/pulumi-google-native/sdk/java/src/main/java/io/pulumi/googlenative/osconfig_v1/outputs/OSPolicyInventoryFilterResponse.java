@@ -20,10 +20,10 @@ public final class OSPolicyInventoryFilterResponse {
      */
     private final String osVersion;
 
-    @OutputCustomType.Constructor({"osShortName","osVersion"})
+    @OutputCustomType.Constructor
     private OSPolicyInventoryFilterResponse(
-        String osShortName,
-        String osVersion) {
+        @OutputCustomType.Parameter("osShortName") String osShortName,
+        @OutputCustomType.Parameter("osVersion") String osVersion) {
         this.osShortName = osShortName;
         this.osVersion = osVersion;
     }
@@ -65,12 +65,12 @@ public final class OSPolicyInventoryFilterResponse {
     	      this.osVersion = defaults.osVersion;
         }
 
-        public Builder setOsShortName(String osShortName) {
+        public Builder osShortName(String osShortName) {
             this.osShortName = Objects.requireNonNull(osShortName);
             return this;
         }
 
-        public Builder setOsVersion(String osVersion) {
+        public Builder osVersion(String osVersion) {
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }

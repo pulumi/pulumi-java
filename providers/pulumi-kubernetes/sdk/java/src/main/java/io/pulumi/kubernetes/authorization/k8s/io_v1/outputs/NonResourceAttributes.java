@@ -22,10 +22,10 @@ public final class NonResourceAttributes {
      */
     private final @Nullable String verb;
 
-    @OutputCustomType.Constructor({"path","verb"})
+    @OutputCustomType.Constructor
     private NonResourceAttributes(
-        @Nullable String path,
-        @Nullable String verb) {
+        @OutputCustomType.Parameter("path") @Nullable String path,
+        @OutputCustomType.Parameter("verb") @Nullable String verb) {
         this.path = path;
         this.verb = verb;
     }
@@ -67,12 +67,12 @@ public final class NonResourceAttributes {
     	      this.verb = defaults.verb;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = path;
             return this;
         }
 
-        public Builder setVerb(@Nullable String verb) {
+        public Builder verb(@Nullable String verb) {
             this.verb = verb;
             return this;
         }

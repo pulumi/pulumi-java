@@ -92,32 +92,32 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
     	      this.userObjectReceiverValue = defaults.userObjectReceiverValue;
         }
 
-        public Builder setDistributionGroupListReceiverValue(@Nullable Input<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue) {
+        public Builder distributionGroupListReceiverValue(@Nullable Input<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue) {
             this.distributionGroupListReceiverValue = distributionGroupListReceiverValue;
             return this;
         }
 
-        public Builder setDistributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
+        public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
             this.distributionGroupListReceiverValue = Input.ofNullable(distributionGroupListReceiverValue);
             return this;
         }
 
-        public Builder setSubscriptionReceiverValue(@Nullable Input<SubscriptionReceiverValueArgs> subscriptionReceiverValue) {
+        public Builder subscriptionReceiverValue(@Nullable Input<SubscriptionReceiverValueArgs> subscriptionReceiverValue) {
             this.subscriptionReceiverValue = subscriptionReceiverValue;
             return this;
         }
 
-        public Builder setSubscriptionReceiverValue(@Nullable SubscriptionReceiverValueArgs subscriptionReceiverValue) {
+        public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueArgs subscriptionReceiverValue) {
             this.subscriptionReceiverValue = Input.ofNullable(subscriptionReceiverValue);
             return this;
         }
 
-        public Builder setUserObjectReceiverValue(@Nullable Input<UserObjectReceiverValueArgs> userObjectReceiverValue) {
+        public Builder userObjectReceiverValue(@Nullable Input<UserObjectReceiverValueArgs> userObjectReceiverValue) {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
 
-        public Builder setUserObjectReceiverValue(@Nullable UserObjectReceiverValueArgs userObjectReceiverValue) {
+        public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueArgs userObjectReceiverValue) {
             this.userObjectReceiverValue = Input.ofNullable(userObjectReceiverValue);
             return this;
         }

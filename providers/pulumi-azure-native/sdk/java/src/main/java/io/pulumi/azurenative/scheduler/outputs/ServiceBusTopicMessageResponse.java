@@ -50,15 +50,15 @@ public final class ServiceBusTopicMessageResponse {
      */
     private final @Nullable String transportType;
 
-    @OutputCustomType.Constructor({"authentication","brokeredMessageProperties","customMessageProperties","message","namespace","topicPath","transportType"})
+    @OutputCustomType.Constructor
     private ServiceBusTopicMessageResponse(
-        @Nullable ServiceBusAuthenticationResponse authentication,
-        @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
-        @Nullable Map<String,String> customMessageProperties,
-        @Nullable String message,
-        @Nullable String namespace,
-        @Nullable String topicPath,
-        @Nullable String transportType) {
+        @OutputCustomType.Parameter("authentication") @Nullable ServiceBusAuthenticationResponse authentication,
+        @OutputCustomType.Parameter("brokeredMessageProperties") @Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties,
+        @OutputCustomType.Parameter("customMessageProperties") @Nullable Map<String,String> customMessageProperties,
+        @OutputCustomType.Parameter("message") @Nullable String message,
+        @OutputCustomType.Parameter("namespace") @Nullable String namespace,
+        @OutputCustomType.Parameter("topicPath") @Nullable String topicPath,
+        @OutputCustomType.Parameter("transportType") @Nullable String transportType) {
         this.authentication = authentication;
         this.brokeredMessageProperties = brokeredMessageProperties;
         this.customMessageProperties = customMessageProperties;
@@ -150,37 +150,37 @@ public final class ServiceBusTopicMessageResponse {
     	      this.transportType = defaults.transportType;
         }
 
-        public Builder setAuthentication(@Nullable ServiceBusAuthenticationResponse authentication) {
+        public Builder authentication(@Nullable ServiceBusAuthenticationResponse authentication) {
             this.authentication = authentication;
             return this;
         }
 
-        public Builder setBrokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
+        public Builder brokeredMessageProperties(@Nullable ServiceBusBrokeredMessagePropertiesResponse brokeredMessageProperties) {
             this.brokeredMessageProperties = brokeredMessageProperties;
             return this;
         }
 
-        public Builder setCustomMessageProperties(@Nullable Map<String,String> customMessageProperties) {
+        public Builder customMessageProperties(@Nullable Map<String,String> customMessageProperties) {
             this.customMessageProperties = customMessageProperties;
             return this;
         }
 
-        public Builder setMessage(@Nullable String message) {
+        public Builder message(@Nullable String message) {
             this.message = message;
             return this;
         }
 
-        public Builder setNamespace(@Nullable String namespace) {
+        public Builder namespace(@Nullable String namespace) {
             this.namespace = namespace;
             return this;
         }
 
-        public Builder setTopicPath(@Nullable String topicPath) {
+        public Builder topicPath(@Nullable String topicPath) {
             this.topicPath = topicPath;
             return this;
         }
 
-        public Builder setTransportType(@Nullable String transportType) {
+        public Builder transportType(@Nullable String transportType) {
             this.transportType = transportType;
             return this;
         }

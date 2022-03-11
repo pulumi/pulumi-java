@@ -14,10 +14,10 @@ public final class ServiceConvergeConfig {
     private final @Nullable String delay;
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"delay","timeout"})
+    @OutputCustomType.Constructor
     private ServiceConvergeConfig(
-        @Nullable String delay,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("delay") @Nullable String delay,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.delay = delay;
         this.timeout = timeout;
     }
@@ -51,12 +51,12 @@ public final class ServiceConvergeConfig {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setDelay(@Nullable String delay) {
+        public Builder delay(@Nullable String delay) {
             this.delay = delay;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

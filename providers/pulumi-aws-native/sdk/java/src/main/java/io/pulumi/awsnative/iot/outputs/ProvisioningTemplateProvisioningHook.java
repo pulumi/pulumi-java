@@ -14,10 +14,10 @@ public final class ProvisioningTemplateProvisioningHook {
     private final @Nullable String payloadVersion;
     private final @Nullable String targetArn;
 
-    @OutputCustomType.Constructor({"payloadVersion","targetArn"})
+    @OutputCustomType.Constructor
     private ProvisioningTemplateProvisioningHook(
-        @Nullable String payloadVersion,
-        @Nullable String targetArn) {
+        @OutputCustomType.Parameter("payloadVersion") @Nullable String payloadVersion,
+        @OutputCustomType.Parameter("targetArn") @Nullable String targetArn) {
         this.payloadVersion = payloadVersion;
         this.targetArn = targetArn;
     }
@@ -51,12 +51,12 @@ public final class ProvisioningTemplateProvisioningHook {
     	      this.targetArn = defaults.targetArn;
         }
 
-        public Builder setPayloadVersion(@Nullable String payloadVersion) {
+        public Builder payloadVersion(@Nullable String payloadVersion) {
             this.payloadVersion = payloadVersion;
             return this;
         }
 
-        public Builder setTargetArn(@Nullable String targetArn) {
+        public Builder targetArn(@Nullable String targetArn) {
             this.targetArn = targetArn;
             return this;
         }

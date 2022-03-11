@@ -17,11 +17,11 @@ public final class DatastoreStorage {
     private final @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage;
     private final @Nullable DatastoreServiceManagedS3 serviceManagedS3;
 
-    @OutputCustomType.Constructor({"customerManagedS3","iotSiteWiseMultiLayerStorage","serviceManagedS3"})
+    @OutputCustomType.Constructor
     private DatastoreStorage(
-        @Nullable DatastoreCustomerManagedS3 customerManagedS3,
-        @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
-        @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
+        @OutputCustomType.Parameter("customerManagedS3") @Nullable DatastoreCustomerManagedS3 customerManagedS3,
+        @OutputCustomType.Parameter("iotSiteWiseMultiLayerStorage") @Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage,
+        @OutputCustomType.Parameter("serviceManagedS3") @Nullable DatastoreServiceManagedS3 serviceManagedS3) {
         this.customerManagedS3 = customerManagedS3;
         this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
         this.serviceManagedS3 = serviceManagedS3;
@@ -61,17 +61,17 @@ public final class DatastoreStorage {
     	      this.serviceManagedS3 = defaults.serviceManagedS3;
         }
 
-        public Builder setCustomerManagedS3(@Nullable DatastoreCustomerManagedS3 customerManagedS3) {
+        public Builder customerManagedS3(@Nullable DatastoreCustomerManagedS3 customerManagedS3) {
             this.customerManagedS3 = customerManagedS3;
             return this;
         }
 
-        public Builder setIotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage) {
+        public Builder iotSiteWiseMultiLayerStorage(@Nullable DatastoreIotSiteWiseMultiLayerStorage iotSiteWiseMultiLayerStorage) {
             this.iotSiteWiseMultiLayerStorage = iotSiteWiseMultiLayerStorage;
             return this;
         }
 
-        public Builder setServiceManagedS3(@Nullable DatastoreServiceManagedS3 serviceManagedS3) {
+        public Builder serviceManagedS3(@Nullable DatastoreServiceManagedS3 serviceManagedS3) {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }

@@ -62,17 +62,17 @@ public final class GetRoleResult {
      */
     private final @Nullable List<RoleTag> tags;
 
-    @OutputCustomType.Constructor({"arn","assumeRolePolicyDocument","description","managedPolicyArns","maxSessionDuration","permissionsBoundary","policies","roleId","tags"})
+    @OutputCustomType.Constructor
     private GetRoleResult(
-        @Nullable String arn,
-        @Nullable Object assumeRolePolicyDocument,
-        @Nullable String description,
-        @Nullable List<String> managedPolicyArns,
-        @Nullable Integer maxSessionDuration,
-        @Nullable String permissionsBoundary,
-        @Nullable List<RolePolicy> policies,
-        @Nullable String roleId,
-        @Nullable List<RoleTag> tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("assumeRolePolicyDocument") @Nullable Object assumeRolePolicyDocument,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("managedPolicyArns") @Nullable List<String> managedPolicyArns,
+        @OutputCustomType.Parameter("maxSessionDuration") @Nullable Integer maxSessionDuration,
+        @OutputCustomType.Parameter("permissionsBoundary") @Nullable String permissionsBoundary,
+        @OutputCustomType.Parameter("policies") @Nullable List<RolePolicy> policies,
+        @OutputCustomType.Parameter("roleId") @Nullable String roleId,
+        @OutputCustomType.Parameter("tags") @Nullable List<RoleTag> tags) {
         this.arn = arn;
         this.assumeRolePolicyDocument = assumeRolePolicyDocument;
         this.description = description;
@@ -184,47 +184,47 @@ public final class GetRoleResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setAssumeRolePolicyDocument(@Nullable Object assumeRolePolicyDocument) {
+        public Builder assumeRolePolicyDocument(@Nullable Object assumeRolePolicyDocument) {
             this.assumeRolePolicyDocument = assumeRolePolicyDocument;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setManagedPolicyArns(@Nullable List<String> managedPolicyArns) {
+        public Builder managedPolicyArns(@Nullable List<String> managedPolicyArns) {
             this.managedPolicyArns = managedPolicyArns;
             return this;
         }
 
-        public Builder setMaxSessionDuration(@Nullable Integer maxSessionDuration) {
+        public Builder maxSessionDuration(@Nullable Integer maxSessionDuration) {
             this.maxSessionDuration = maxSessionDuration;
             return this;
         }
 
-        public Builder setPermissionsBoundary(@Nullable String permissionsBoundary) {
+        public Builder permissionsBoundary(@Nullable String permissionsBoundary) {
             this.permissionsBoundary = permissionsBoundary;
             return this;
         }
 
-        public Builder setPolicies(@Nullable List<RolePolicy> policies) {
+        public Builder policies(@Nullable List<RolePolicy> policies) {
             this.policies = policies;
             return this;
         }
 
-        public Builder setRoleId(@Nullable String roleId) {
+        public Builder roleId(@Nullable String roleId) {
             this.roleId = roleId;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RoleTag> tags) {
+        public Builder tags(@Nullable List<RoleTag> tags) {
             this.tags = tags;
             return this;
         }

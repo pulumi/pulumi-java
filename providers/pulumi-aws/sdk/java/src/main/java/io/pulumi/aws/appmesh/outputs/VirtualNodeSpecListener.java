@@ -47,14 +47,14 @@ public final class VirtualNodeSpecListener {
      */
     private final @Nullable VirtualNodeSpecListenerTls tls;
 
-    @OutputCustomType.Constructor({"connectionPool","healthCheck","outlierDetection","portMapping","timeout","tls"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListener(
-        @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
-        @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
-        @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
-        VirtualNodeSpecListenerPortMapping portMapping,
-        @Nullable VirtualNodeSpecListenerTimeout timeout,
-        @Nullable VirtualNodeSpecListenerTls tls) {
+        @OutputCustomType.Parameter("connectionPool") @Nullable VirtualNodeSpecListenerConnectionPool connectionPool,
+        @OutputCustomType.Parameter("healthCheck") @Nullable VirtualNodeSpecListenerHealthCheck healthCheck,
+        @OutputCustomType.Parameter("outlierDetection") @Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection,
+        @OutputCustomType.Parameter("portMapping") VirtualNodeSpecListenerPortMapping portMapping,
+        @OutputCustomType.Parameter("timeout") @Nullable VirtualNodeSpecListenerTimeout timeout,
+        @OutputCustomType.Parameter("tls") @Nullable VirtualNodeSpecListenerTls tls) {
         this.connectionPool = connectionPool;
         this.healthCheck = healthCheck;
         this.outlierDetection = outlierDetection;
@@ -136,32 +136,32 @@ public final class VirtualNodeSpecListener {
     	      this.tls = defaults.tls;
         }
 
-        public Builder setConnectionPool(@Nullable VirtualNodeSpecListenerConnectionPool connectionPool) {
+        public Builder connectionPool(@Nullable VirtualNodeSpecListenerConnectionPool connectionPool) {
             this.connectionPool = connectionPool;
             return this;
         }
 
-        public Builder setHealthCheck(@Nullable VirtualNodeSpecListenerHealthCheck healthCheck) {
+        public Builder healthCheck(@Nullable VirtualNodeSpecListenerHealthCheck healthCheck) {
             this.healthCheck = healthCheck;
             return this;
         }
 
-        public Builder setOutlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection) {
+        public Builder outlierDetection(@Nullable VirtualNodeSpecListenerOutlierDetection outlierDetection) {
             this.outlierDetection = outlierDetection;
             return this;
         }
 
-        public Builder setPortMapping(VirtualNodeSpecListenerPortMapping portMapping) {
+        public Builder portMapping(VirtualNodeSpecListenerPortMapping portMapping) {
             this.portMapping = Objects.requireNonNull(portMapping);
             return this;
         }
 
-        public Builder setTimeout(@Nullable VirtualNodeSpecListenerTimeout timeout) {
+        public Builder timeout(@Nullable VirtualNodeSpecListenerTimeout timeout) {
             this.timeout = timeout;
             return this;
         }
 
-        public Builder setTls(@Nullable VirtualNodeSpecListenerTls tls) {
+        public Builder tls(@Nullable VirtualNodeSpecListenerTls tls) {
             this.tls = tls;
             return this;
         }

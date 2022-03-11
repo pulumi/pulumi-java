@@ -35,12 +35,12 @@ public final class BucketWebsite {
      */
     private final @Nullable Either<String,List<String>> routingRules;
 
-    @OutputCustomType.Constructor({"errorDocument","indexDocument","redirectAllRequestsTo","routingRules"})
+    @OutputCustomType.Constructor
     private BucketWebsite(
-        @Nullable String errorDocument,
-        @Nullable String indexDocument,
-        @Nullable String redirectAllRequestsTo,
-        @Nullable Either<String,List<String>> routingRules) {
+        @OutputCustomType.Parameter("errorDocument") @Nullable String errorDocument,
+        @OutputCustomType.Parameter("indexDocument") @Nullable String indexDocument,
+        @OutputCustomType.Parameter("redirectAllRequestsTo") @Nullable String redirectAllRequestsTo,
+        @OutputCustomType.Parameter("routingRules") @Nullable Either<String,List<String>> routingRules) {
         this.errorDocument = errorDocument;
         this.indexDocument = indexDocument;
         this.redirectAllRequestsTo = redirectAllRequestsTo;
@@ -103,22 +103,22 @@ public final class BucketWebsite {
     	      this.routingRules = defaults.routingRules;
         }
 
-        public Builder setErrorDocument(@Nullable String errorDocument) {
+        public Builder errorDocument(@Nullable String errorDocument) {
             this.errorDocument = errorDocument;
             return this;
         }
 
-        public Builder setIndexDocument(@Nullable String indexDocument) {
+        public Builder indexDocument(@Nullable String indexDocument) {
             this.indexDocument = indexDocument;
             return this;
         }
 
-        public Builder setRedirectAllRequestsTo(@Nullable String redirectAllRequestsTo) {
+        public Builder redirectAllRequestsTo(@Nullable String redirectAllRequestsTo) {
             this.redirectAllRequestsTo = redirectAllRequestsTo;
             return this;
         }
 
-        public Builder setRoutingRules(@Nullable Either<String,List<String>> routingRules) {
+        public Builder routingRules(@Nullable Either<String,List<String>> routingRules) {
             this.routingRules = routingRules;
             return this;
         }

@@ -91,23 +91,23 @@ public final class GetOuContainerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"accounts","containerId","deploymentId","distinguishedName","domainName","etag","id","location","name","provisioningState","serviceStatus","systemData","tags","tenantId","type"})
+    @OutputCustomType.Constructor
     private GetOuContainerResult(
-        @Nullable List<ContainerAccountResponse> accounts,
-        String containerId,
-        String deploymentId,
-        String distinguishedName,
-        String domainName,
-        @Nullable String etag,
-        String id,
-        @Nullable String location,
-        String name,
-        String provisioningState,
-        String serviceStatus,
-        SystemDataResponse systemData,
-        @Nullable Map<String,String> tags,
-        String tenantId,
-        String type) {
+        @OutputCustomType.Parameter("accounts") @Nullable List<ContainerAccountResponse> accounts,
+        @OutputCustomType.Parameter("containerId") String containerId,
+        @OutputCustomType.Parameter("deploymentId") String deploymentId,
+        @OutputCustomType.Parameter("distinguishedName") String distinguishedName,
+        @OutputCustomType.Parameter("domainName") String domainName,
+        @OutputCustomType.Parameter("etag") @Nullable String etag,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("serviceStatus") String serviceStatus,
+        @OutputCustomType.Parameter("systemData") SystemDataResponse systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type) {
         this.accounts = accounts;
         this.containerId = containerId;
         this.deploymentId = deploymentId;
@@ -279,77 +279,77 @@ public final class GetOuContainerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAccounts(@Nullable List<ContainerAccountResponse> accounts) {
+        public Builder accounts(@Nullable List<ContainerAccountResponse> accounts) {
             this.accounts = accounts;
             return this;
         }
 
-        public Builder setContainerId(String containerId) {
+        public Builder containerId(String containerId) {
             this.containerId = Objects.requireNonNull(containerId);
             return this;
         }
 
-        public Builder setDeploymentId(String deploymentId) {
+        public Builder deploymentId(String deploymentId) {
             this.deploymentId = Objects.requireNonNull(deploymentId);
             return this;
         }
 
-        public Builder setDistinguishedName(String distinguishedName) {
+        public Builder distinguishedName(String distinguishedName) {
             this.distinguishedName = Objects.requireNonNull(distinguishedName);
             return this;
         }
 
-        public Builder setDomainName(String domainName) {
+        public Builder domainName(String domainName) {
             this.domainName = Objects.requireNonNull(domainName);
             return this;
         }
 
-        public Builder setEtag(@Nullable String etag) {
+        public Builder etag(@Nullable String etag) {
             this.etag = etag;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setServiceStatus(String serviceStatus) {
+        public Builder serviceStatus(String serviceStatus) {
             this.serviceStatus = Objects.requireNonNull(serviceStatus);
             return this;
         }
 
-        public Builder setSystemData(SystemDataResponse systemData) {
+        public Builder systemData(SystemDataResponse systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

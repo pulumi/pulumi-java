@@ -17,8 +17,8 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
      */
     private final @Nullable String ref;
 
-    @OutputCustomType.Constructor({"ref"})
-    private IntegrationAccountMapPropertiesResponseParametersSchema(@Nullable String ref) {
+    @OutputCustomType.Constructor
+    private IntegrationAccountMapPropertiesResponseParametersSchema(@OutputCustomType.Parameter("ref") @Nullable String ref) {
         this.ref = ref;
     }
 
@@ -50,7 +50,7 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema {
     	      this.ref = defaults.ref;
         }
 
-        public Builder setRef(@Nullable String ref) {
+        public Builder ref(@Nullable String ref) {
             this.ref = ref;
             return this;
         }

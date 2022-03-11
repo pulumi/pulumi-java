@@ -45,14 +45,14 @@ public final class GetProactiveDetectionConfigurationResult {
      */
     private final @Nullable Boolean sendEmailsToSubscriptionOwners;
 
-    @OutputCustomType.Constructor({"customEmails","enabled","lastUpdatedTime","name","ruleDefinitions","sendEmailsToSubscriptionOwners"})
+    @OutputCustomType.Constructor
     private GetProactiveDetectionConfigurationResult(
-        @Nullable List<String> customEmails,
-        @Nullable Boolean enabled,
-        @Nullable String lastUpdatedTime,
-        @Nullable String name,
-        @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
-        @Nullable Boolean sendEmailsToSubscriptionOwners) {
+        @OutputCustomType.Parameter("customEmails") @Nullable List<String> customEmails,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("lastUpdatedTime") @Nullable String lastUpdatedTime,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("ruleDefinitions") @Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions,
+        @OutputCustomType.Parameter("sendEmailsToSubscriptionOwners") @Nullable Boolean sendEmailsToSubscriptionOwners) {
         this.customEmails = customEmails;
         this.enabled = enabled;
         this.lastUpdatedTime = lastUpdatedTime;
@@ -134,32 +134,32 @@ public final class GetProactiveDetectionConfigurationResult {
     	      this.sendEmailsToSubscriptionOwners = defaults.sendEmailsToSubscriptionOwners;
         }
 
-        public Builder setCustomEmails(@Nullable List<String> customEmails) {
+        public Builder customEmails(@Nullable List<String> customEmails) {
             this.customEmails = customEmails;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRuleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions) {
+        public Builder ruleDefinitions(@Nullable ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions ruleDefinitions) {
             this.ruleDefinitions = ruleDefinitions;
             return this;
         }
 
-        public Builder setSendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
+        public Builder sendEmailsToSubscriptionOwners(@Nullable Boolean sendEmailsToSubscriptionOwners) {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }

@@ -15,8 +15,8 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
      */
     private final String topic;
 
-    @OutputCustomType.Constructor({"topic"})
-    private FolderFeedFeedOutputConfigPubsubDestination(String topic) {
+    @OutputCustomType.Constructor
+    private FolderFeedFeedOutputConfigPubsubDestination(@OutputCustomType.Parameter("topic") String topic) {
         this.topic = topic;
     }
 
@@ -48,7 +48,7 @@ public final class FolderFeedFeedOutputConfigPubsubDestination {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

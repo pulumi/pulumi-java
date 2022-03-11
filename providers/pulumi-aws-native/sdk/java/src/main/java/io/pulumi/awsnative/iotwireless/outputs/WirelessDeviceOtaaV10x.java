@@ -12,10 +12,10 @@ public final class WirelessDeviceOtaaV10x {
     private final String appEui;
     private final String appKey;
 
-    @OutputCustomType.Constructor({"appEui","appKey"})
+    @OutputCustomType.Constructor
     private WirelessDeviceOtaaV10x(
-        String appEui,
-        String appKey) {
+        @OutputCustomType.Parameter("appEui") String appEui,
+        @OutputCustomType.Parameter("appKey") String appKey) {
         this.appEui = appEui;
         this.appKey = appKey;
     }
@@ -49,12 +49,12 @@ public final class WirelessDeviceOtaaV10x {
     	      this.appKey = defaults.appKey;
         }
 
-        public Builder setAppEui(String appEui) {
+        public Builder appEui(String appEui) {
             this.appEui = Objects.requireNonNull(appEui);
             return this;
         }
 
-        public Builder setAppKey(String appKey) {
+        public Builder appKey(String appKey) {
             this.appKey = Objects.requireNonNull(appKey);
             return this;
         }

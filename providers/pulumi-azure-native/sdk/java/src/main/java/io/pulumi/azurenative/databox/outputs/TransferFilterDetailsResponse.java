@@ -36,12 +36,12 @@ public final class TransferFilterDetailsResponse {
      */
     private final @Nullable List<FilterFileDetailsResponse> filterFileDetails;
 
-    @OutputCustomType.Constructor({"azureFileFilterDetails","blobFilterDetails","dataAccountType","filterFileDetails"})
+    @OutputCustomType.Constructor
     private TransferFilterDetailsResponse(
-        @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
-        @Nullable BlobFilterDetailsResponse blobFilterDetails,
-        String dataAccountType,
-        @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
+        @OutputCustomType.Parameter("azureFileFilterDetails") @Nullable AzureFileFilterDetailsResponse azureFileFilterDetails,
+        @OutputCustomType.Parameter("blobFilterDetails") @Nullable BlobFilterDetailsResponse blobFilterDetails,
+        @OutputCustomType.Parameter("dataAccountType") String dataAccountType,
+        @OutputCustomType.Parameter("filterFileDetails") @Nullable List<FilterFileDetailsResponse> filterFileDetails) {
         this.azureFileFilterDetails = azureFileFilterDetails;
         this.blobFilterDetails = blobFilterDetails;
         this.dataAccountType = dataAccountType;
@@ -103,22 +103,22 @@ public final class TransferFilterDetailsResponse {
     	      this.filterFileDetails = defaults.filterFileDetails;
         }
 
-        public Builder setAzureFileFilterDetails(@Nullable AzureFileFilterDetailsResponse azureFileFilterDetails) {
+        public Builder azureFileFilterDetails(@Nullable AzureFileFilterDetailsResponse azureFileFilterDetails) {
             this.azureFileFilterDetails = azureFileFilterDetails;
             return this;
         }
 
-        public Builder setBlobFilterDetails(@Nullable BlobFilterDetailsResponse blobFilterDetails) {
+        public Builder blobFilterDetails(@Nullable BlobFilterDetailsResponse blobFilterDetails) {
             this.blobFilterDetails = blobFilterDetails;
             return this;
         }
 
-        public Builder setDataAccountType(String dataAccountType) {
+        public Builder dataAccountType(String dataAccountType) {
             this.dataAccountType = Objects.requireNonNull(dataAccountType);
             return this;
         }
 
-        public Builder setFilterFileDetails(@Nullable List<FilterFileDetailsResponse> filterFileDetails) {
+        public Builder filterFileDetails(@Nullable List<FilterFileDetailsResponse> filterFileDetails) {
             this.filterFileDetails = filterFileDetails;
             return this;
         }

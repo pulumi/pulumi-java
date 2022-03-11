@@ -49,15 +49,15 @@ public final class GetCatalogItemResult {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"categoryHierarchies","description","itemAttributes","itemGroupId","productMetadata","tags","title"})
+    @OutputCustomType.Constructor
     private GetCatalogItemResult(
-        List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
-        String description,
-        GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
-        String itemGroupId,
-        GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
-        List<String> tags,
-        String title) {
+        @OutputCustomType.Parameter("categoryHierarchies") List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("itemAttributes") GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes,
+        @OutputCustomType.Parameter("itemGroupId") String itemGroupId,
+        @OutputCustomType.Parameter("productMetadata") GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata,
+        @OutputCustomType.Parameter("tags") List<String> tags,
+        @OutputCustomType.Parameter("title") String title) {
         this.categoryHierarchies = categoryHierarchies;
         this.description = description;
         this.itemAttributes = itemAttributes;
@@ -149,37 +149,37 @@ public final class GetCatalogItemResult {
     	      this.title = defaults.title;
         }
 
-        public Builder setCategoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies) {
+        public Builder categoryHierarchies(List<GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse> categoryHierarchies) {
             this.categoryHierarchies = Objects.requireNonNull(categoryHierarchies);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setItemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes) {
+        public Builder itemAttributes(GoogleCloudRecommendationengineV1beta1FeatureMapResponse itemAttributes) {
             this.itemAttributes = Objects.requireNonNull(itemAttributes);
             return this;
         }
 
-        public Builder setItemGroupId(String itemGroupId) {
+        public Builder itemGroupId(String itemGroupId) {
             this.itemGroupId = Objects.requireNonNull(itemGroupId);
             return this;
         }
 
-        public Builder setProductMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
+        public Builder productMetadata(GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse productMetadata) {
             this.productMetadata = Objects.requireNonNull(productMetadata);
             return this;
         }
 
-        public Builder setTags(List<String> tags) {
+        public Builder tags(List<String> tags) {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

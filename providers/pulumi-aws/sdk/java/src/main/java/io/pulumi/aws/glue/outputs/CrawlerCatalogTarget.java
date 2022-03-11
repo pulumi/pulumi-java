@@ -21,10 +21,10 @@ public final class CrawlerCatalogTarget {
      */
     private final List<String> tables;
 
-    @OutputCustomType.Constructor({"databaseName","tables"})
+    @OutputCustomType.Constructor
     private CrawlerCatalogTarget(
-        String databaseName,
-        List<String> tables) {
+        @OutputCustomType.Parameter("databaseName") String databaseName,
+        @OutputCustomType.Parameter("tables") List<String> tables) {
         this.databaseName = databaseName;
         this.tables = tables;
     }
@@ -66,12 +66,12 @@ public final class CrawlerCatalogTarget {
     	      this.tables = defaults.tables;
         }
 
-        public Builder setDatabaseName(String databaseName) {
+        public Builder databaseName(String databaseName) {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
 
-        public Builder setTables(List<String> tables) {
+        public Builder tables(List<String> tables) {
             this.tables = Objects.requireNonNull(tables);
             return this;
         }

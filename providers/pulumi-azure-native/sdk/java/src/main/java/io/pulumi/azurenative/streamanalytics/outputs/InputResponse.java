@@ -35,12 +35,12 @@ public final class InputResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"id","name","properties","type"})
+    @OutputCustomType.Constructor
     private InputResponse(
-        String id,
-        @Nullable String name,
-        @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
-        String type) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("properties") @Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties,
+        @OutputCustomType.Parameter("type") String type) {
         this.id = id;
         this.name = name;
         this.properties = properties;
@@ -102,22 +102,22 @@ public final class InputResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setProperties(@Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
+        public Builder properties(@Nullable Either<ReferenceInputPropertiesResponse,StreamInputPropertiesResponse> properties) {
             this.properties = properties;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

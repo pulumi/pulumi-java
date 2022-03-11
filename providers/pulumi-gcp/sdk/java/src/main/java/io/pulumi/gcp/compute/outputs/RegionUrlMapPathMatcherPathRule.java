@@ -47,12 +47,12 @@ public final class RegionUrlMapPathMatcherPathRule {
      */
     private final @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect;
 
-    @OutputCustomType.Constructor({"paths","routeAction","service","urlRedirect"})
+    @OutputCustomType.Constructor
     private RegionUrlMapPathMatcherPathRule(
-        List<String> paths,
-        @Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction,
-        @Nullable String service,
-        @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        @OutputCustomType.Parameter("paths") List<String> paths,
+        @OutputCustomType.Parameter("routeAction") @Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction,
+        @OutputCustomType.Parameter("service") @Nullable String service,
+        @OutputCustomType.Parameter("urlRedirect") @Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
         this.paths = paths;
         this.routeAction = routeAction;
         this.service = service;
@@ -126,22 +126,22 @@ public final class RegionUrlMapPathMatcherPathRule {
     	      this.urlRedirect = defaults.urlRedirect;
         }
 
-        public Builder setPaths(List<String> paths) {
+        public Builder paths(List<String> paths) {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
 
-        public Builder setRouteAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction) {
+        public Builder routeAction(@Nullable RegionUrlMapPathMatcherPathRuleRouteAction routeAction) {
             this.routeAction = routeAction;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = service;
             return this;
         }
 
-        public Builder setUrlRedirect(@Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
+        public Builder urlRedirect(@Nullable RegionUrlMapPathMatcherPathRuleUrlRedirect urlRedirect) {
             this.urlRedirect = urlRedirect;
             return this;
         }

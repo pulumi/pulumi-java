@@ -33,12 +33,12 @@ public final class RecoveryPlanScriptActionDetailsResponse {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"fabricLocation","instanceType","path","timeout"})
+    @OutputCustomType.Constructor
     private RecoveryPlanScriptActionDetailsResponse(
-        String fabricLocation,
-        String instanceType,
-        String path,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("fabricLocation") String fabricLocation,
+        @OutputCustomType.Parameter("instanceType") String instanceType,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.fabricLocation = fabricLocation;
         this.instanceType = instanceType;
         this.path = path;
@@ -101,22 +101,22 @@ public final class RecoveryPlanScriptActionDetailsResponse {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setFabricLocation(String fabricLocation) {
+        public Builder fabricLocation(String fabricLocation) {
             this.fabricLocation = Objects.requireNonNull(fabricLocation);
             return this;
         }
 
-        public Builder setInstanceType(String instanceType) {
+        public Builder instanceType(String instanceType) {
             this.instanceType = Objects.requireNonNull(instanceType);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

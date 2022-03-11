@@ -47,16 +47,16 @@ public final class GetInstanceProfileResult {
      */
     private final String roleName;
 
-    @OutputCustomType.Constructor({"arn","createDate","id","name","path","roleArn","roleId","roleName"})
+    @OutputCustomType.Constructor
     private GetInstanceProfileResult(
-        String arn,
-        String createDate,
-        String id,
-        String name,
-        String path,
-        String roleArn,
-        String roleId,
-        String roleName) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("createDate") String createDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("roleArn") String roleArn,
+        @OutputCustomType.Parameter("roleId") String roleId,
+        @OutputCustomType.Parameter("roleName") String roleName) {
         this.arn = arn;
         this.createDate = createDate;
         this.id = id;
@@ -155,42 +155,42 @@ public final class GetInstanceProfileResult {
     	      this.roleName = defaults.roleName;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setCreateDate(String createDate) {
+        public Builder createDate(String createDate) {
             this.createDate = Objects.requireNonNull(createDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setRoleArn(String roleArn) {
+        public Builder roleArn(String roleArn) {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
 
-        public Builder setRoleId(String roleId) {
+        public Builder roleId(String roleId) {
             this.roleId = Objects.requireNonNull(roleId);
             return this;
         }
 
-        public Builder setRoleName(String roleName) {
+        public Builder roleName(String roleName) {
             this.roleName = Objects.requireNonNull(roleName);
             return this;
         }

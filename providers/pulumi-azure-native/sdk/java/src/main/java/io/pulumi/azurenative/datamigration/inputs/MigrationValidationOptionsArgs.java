@@ -90,32 +90,32 @@ public final class MigrationValidationOptionsArgs extends io.pulumi.resources.Re
     	      this.enableSchemaValidation = defaults.enableSchemaValidation;
         }
 
-        public Builder setEnableDataIntegrityValidation(@Nullable Input<Boolean> enableDataIntegrityValidation) {
+        public Builder enableDataIntegrityValidation(@Nullable Input<Boolean> enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = enableDataIntegrityValidation;
             return this;
         }
 
-        public Builder setEnableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
+        public Builder enableDataIntegrityValidation(@Nullable Boolean enableDataIntegrityValidation) {
             this.enableDataIntegrityValidation = Input.ofNullable(enableDataIntegrityValidation);
             return this;
         }
 
-        public Builder setEnableQueryAnalysisValidation(@Nullable Input<Boolean> enableQueryAnalysisValidation) {
+        public Builder enableQueryAnalysisValidation(@Nullable Input<Boolean> enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = enableQueryAnalysisValidation;
             return this;
         }
 
-        public Builder setEnableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
+        public Builder enableQueryAnalysisValidation(@Nullable Boolean enableQueryAnalysisValidation) {
             this.enableQueryAnalysisValidation = Input.ofNullable(enableQueryAnalysisValidation);
             return this;
         }
 
-        public Builder setEnableSchemaValidation(@Nullable Input<Boolean> enableSchemaValidation) {
+        public Builder enableSchemaValidation(@Nullable Input<Boolean> enableSchemaValidation) {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
 
-        public Builder setEnableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
+        public Builder enableSchemaValidation(@Nullable Boolean enableSchemaValidation) {
             this.enableSchemaValidation = Input.ofNullable(enableSchemaValidation);
             return this;
         }

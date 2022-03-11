@@ -146,72 +146,72 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
     	      this.vpcNetworkScope = defaults.vpcNetworkScope;
         }
 
-        public Builder setAssociations(@Nullable Input<List<FirewallPolicyAssociationArgs>> associations) {
+        public Builder associations(@Nullable Input<List<FirewallPolicyAssociationArgs>> associations) {
             this.associations = associations;
             return this;
         }
 
-        public Builder setAssociations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
+        public Builder associations(@Nullable List<FirewallPolicyAssociationArgs> associations) {
             this.associations = Input.ofNullable(associations);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRequestId(@Nullable Input<String> requestId) {
+        public Builder requestId(@Nullable Input<String> requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public Builder setRequestId(@Nullable String requestId) {
+        public Builder requestId(@Nullable String requestId) {
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<FirewallPolicyRuleArgs>> rules) {
+        public Builder rules(@Nullable Input<List<FirewallPolicyRuleArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<FirewallPolicyRuleArgs> rules) {
+        public Builder rules(@Nullable List<FirewallPolicyRuleArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setShortName(@Nullable Input<String> shortName) {
+        public Builder shortName(@Nullable Input<String> shortName) {
             this.shortName = shortName;
             return this;
         }
 
-        public Builder setShortName(@Nullable String shortName) {
+        public Builder shortName(@Nullable String shortName) {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
 
-        public Builder setVpcNetworkScope(@Nullable Input<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
+        public Builder vpcNetworkScope(@Nullable Input<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope) {
             this.vpcNetworkScope = vpcNetworkScope;
             return this;
         }
 
-        public Builder setVpcNetworkScope(@Nullable NetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
+        public Builder vpcNetworkScope(@Nullable NetworkFirewallPolicyVpcNetworkScope vpcNetworkScope) {
             this.vpcNetworkScope = Input.ofNullable(vpcNetworkScope);
             return this;
         }

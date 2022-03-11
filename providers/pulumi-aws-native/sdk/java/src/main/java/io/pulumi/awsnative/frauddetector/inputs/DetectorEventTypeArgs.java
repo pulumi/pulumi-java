@@ -188,102 +188,102 @@ public final class DetectorEventTypeArgs extends io.pulumi.resources.ResourceArg
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable Input<String> arn) {
+        public Builder arn(@Nullable Input<String> arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = Input.ofNullable(arn);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setEntityTypes(@Nullable Input<List<DetectorEntityTypeArgs>> entityTypes) {
+        public Builder entityTypes(@Nullable Input<List<DetectorEntityTypeArgs>> entityTypes) {
             this.entityTypes = entityTypes;
             return this;
         }
 
-        public Builder setEntityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
+        public Builder entityTypes(@Nullable List<DetectorEntityTypeArgs> entityTypes) {
             this.entityTypes = Input.ofNullable(entityTypes);
             return this;
         }
 
-        public Builder setEventVariables(@Nullable Input<List<DetectorEventVariableArgs>> eventVariables) {
+        public Builder eventVariables(@Nullable Input<List<DetectorEventVariableArgs>> eventVariables) {
             this.eventVariables = eventVariables;
             return this;
         }
 
-        public Builder setEventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
+        public Builder eventVariables(@Nullable List<DetectorEventVariableArgs> eventVariables) {
             this.eventVariables = Input.ofNullable(eventVariables);
             return this;
         }
 
-        public Builder setInline(@Nullable Input<Boolean> inline) {
+        public Builder inline(@Nullable Input<Boolean> inline) {
             this.inline = inline;
             return this;
         }
 
-        public Builder setInline(@Nullable Boolean inline) {
+        public Builder inline(@Nullable Boolean inline) {
             this.inline = Input.ofNullable(inline);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<List<DetectorLabelArgs>> labels) {
+        public Builder labels(@Nullable Input<List<DetectorLabelArgs>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable List<DetectorLabelArgs> labels) {
+        public Builder labels(@Nullable List<DetectorLabelArgs> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable Input<String> lastUpdatedTime) {
             this.lastUpdatedTime = lastUpdatedTime;
             return this;
         }
 
-        public Builder setLastUpdatedTime(@Nullable String lastUpdatedTime) {
+        public Builder lastUpdatedTime(@Nullable String lastUpdatedTime) {
             this.lastUpdatedTime = Input.ofNullable(lastUpdatedTime);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<List<DetectorTagArgs>> tags) {
+        public Builder tags(@Nullable Input<List<DetectorTagArgs>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable List<DetectorTagArgs> tags) {
+        public Builder tags(@Nullable List<DetectorTagArgs> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

@@ -22,10 +22,10 @@ public final class RuleResponse {
      */
     private final List<SourceResponse> sources;
 
-    @OutputCustomType.Constructor({"destinations","sources"})
+    @OutputCustomType.Constructor
     private RuleResponse(
-        List<DestinationResponse> destinations,
-        List<SourceResponse> sources) {
+        @OutputCustomType.Parameter("destinations") List<DestinationResponse> destinations,
+        @OutputCustomType.Parameter("sources") List<SourceResponse> sources) {
         this.destinations = destinations;
         this.sources = sources;
     }
@@ -67,12 +67,12 @@ public final class RuleResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setDestinations(List<DestinationResponse> destinations) {
+        public Builder destinations(List<DestinationResponse> destinations) {
             this.destinations = Objects.requireNonNull(destinations);
             return this;
         }
 
-        public Builder setSources(List<SourceResponse> sources) {
+        public Builder sources(List<SourceResponse> sources) {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }

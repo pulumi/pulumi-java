@@ -45,14 +45,14 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
      */
     private final String title;
 
-    @OutputCustomType.Constructor({"buttons","columnProperties","image","rows","subtitle","title"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse(
-        List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
-        List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties,
-        GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
-        List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows,
-        String subtitle,
-        String title) {
+        @OutputCustomType.Parameter("buttons") List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons,
+        @OutputCustomType.Parameter("columnProperties") List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties,
+        @OutputCustomType.Parameter("image") GoogleCloudDialogflowV2beta1IntentMessageImageResponse image,
+        @OutputCustomType.Parameter("rows") List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows,
+        @OutputCustomType.Parameter("subtitle") String subtitle,
+        @OutputCustomType.Parameter("title") String title) {
         this.buttons = buttons;
         this.columnProperties = columnProperties;
         this.image = image;
@@ -134,32 +134,32 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse {
     	      this.title = defaults.title;
         }
 
-        public Builder setButtons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons) {
+        public Builder buttons(List<GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonResponse> buttons) {
             this.buttons = Objects.requireNonNull(buttons);
             return this;
         }
 
-        public Builder setColumnProperties(List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties) {
+        public Builder columnProperties(List<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesResponse> columnProperties) {
             this.columnProperties = Objects.requireNonNull(columnProperties);
             return this;
         }
 
-        public Builder setImage(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
+        public Builder image(GoogleCloudDialogflowV2beta1IntentMessageImageResponse image) {
             this.image = Objects.requireNonNull(image);
             return this;
         }
 
-        public Builder setRows(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows) {
+        public Builder rows(List<GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse> rows) {
             this.rows = Objects.requireNonNull(rows);
             return this;
         }
 
-        public Builder setSubtitle(String subtitle) {
+        public Builder subtitle(String subtitle) {
             this.subtitle = Objects.requireNonNull(subtitle);
             return this;
         }
 
-        public Builder setTitle(String title) {
+        public Builder title(String title) {
             this.title = Objects.requireNonNull(title);
             return this;
         }

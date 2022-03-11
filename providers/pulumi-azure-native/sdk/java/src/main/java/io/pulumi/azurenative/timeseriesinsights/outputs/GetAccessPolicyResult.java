@@ -43,14 +43,14 @@ public final class GetAccessPolicyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","id","name","principalObjectId","roles","type"})
+    @OutputCustomType.Constructor
     private GetAccessPolicyResult(
-        @Nullable String description,
-        String id,
-        String name,
-        @Nullable String principalObjectId,
-        @Nullable List<String> roles,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principalObjectId") @Nullable String principalObjectId,
+        @OutputCustomType.Parameter("roles") @Nullable List<String> roles,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.id = id;
         this.name = name;
@@ -132,32 +132,32 @@ public final class GetAccessPolicyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipalObjectId(@Nullable String principalObjectId) {
+        public Builder principalObjectId(@Nullable String principalObjectId) {
             this.principalObjectId = principalObjectId;
             return this;
         }
 
-        public Builder setRoles(@Nullable List<String> roles) {
+        public Builder roles(@Nullable List<String> roles) {
             this.roles = roles;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

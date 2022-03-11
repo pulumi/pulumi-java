@@ -279,142 +279,142 @@ public final class TaskOptionsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.verifyMode = defaults.verifyMode;
         }
 
-        public Builder setAtime(@Nullable Input<TaskOptionsAtime> atime) {
+        public Builder atime(@Nullable Input<TaskOptionsAtime> atime) {
             this.atime = atime;
             return this;
         }
 
-        public Builder setAtime(@Nullable TaskOptionsAtime atime) {
+        public Builder atime(@Nullable TaskOptionsAtime atime) {
             this.atime = Input.ofNullable(atime);
             return this;
         }
 
-        public Builder setBytesPerSecond(@Nullable Input<Integer> bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Input<Integer> bytesPerSecond) {
             this.bytesPerSecond = bytesPerSecond;
             return this;
         }
 
-        public Builder setBytesPerSecond(@Nullable Integer bytesPerSecond) {
+        public Builder bytesPerSecond(@Nullable Integer bytesPerSecond) {
             this.bytesPerSecond = Input.ofNullable(bytesPerSecond);
             return this;
         }
 
-        public Builder setGid(@Nullable Input<TaskOptionsGid> gid) {
+        public Builder gid(@Nullable Input<TaskOptionsGid> gid) {
             this.gid = gid;
             return this;
         }
 
-        public Builder setGid(@Nullable TaskOptionsGid gid) {
+        public Builder gid(@Nullable TaskOptionsGid gid) {
             this.gid = Input.ofNullable(gid);
             return this;
         }
 
-        public Builder setLogLevel(@Nullable Input<TaskOptionsLogLevel> logLevel) {
+        public Builder logLevel(@Nullable Input<TaskOptionsLogLevel> logLevel) {
             this.logLevel = logLevel;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable TaskOptionsLogLevel logLevel) {
+        public Builder logLevel(@Nullable TaskOptionsLogLevel logLevel) {
             this.logLevel = Input.ofNullable(logLevel);
             return this;
         }
 
-        public Builder setMtime(@Nullable Input<TaskOptionsMtime> mtime) {
+        public Builder mtime(@Nullable Input<TaskOptionsMtime> mtime) {
             this.mtime = mtime;
             return this;
         }
 
-        public Builder setMtime(@Nullable TaskOptionsMtime mtime) {
+        public Builder mtime(@Nullable TaskOptionsMtime mtime) {
             this.mtime = Input.ofNullable(mtime);
             return this;
         }
 
-        public Builder setOverwriteMode(@Nullable Input<TaskOptionsOverwriteMode> overwriteMode) {
+        public Builder overwriteMode(@Nullable Input<TaskOptionsOverwriteMode> overwriteMode) {
             this.overwriteMode = overwriteMode;
             return this;
         }
 
-        public Builder setOverwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
+        public Builder overwriteMode(@Nullable TaskOptionsOverwriteMode overwriteMode) {
             this.overwriteMode = Input.ofNullable(overwriteMode);
             return this;
         }
 
-        public Builder setPosixPermissions(@Nullable Input<TaskOptionsPosixPermissions> posixPermissions) {
+        public Builder posixPermissions(@Nullable Input<TaskOptionsPosixPermissions> posixPermissions) {
             this.posixPermissions = posixPermissions;
             return this;
         }
 
-        public Builder setPosixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
+        public Builder posixPermissions(@Nullable TaskOptionsPosixPermissions posixPermissions) {
             this.posixPermissions = Input.ofNullable(posixPermissions);
             return this;
         }
 
-        public Builder setPreserveDeletedFiles(@Nullable Input<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable Input<TaskOptionsPreserveDeletedFiles> preserveDeletedFiles) {
             this.preserveDeletedFiles = preserveDeletedFiles;
             return this;
         }
 
-        public Builder setPreserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
+        public Builder preserveDeletedFiles(@Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles) {
             this.preserveDeletedFiles = Input.ofNullable(preserveDeletedFiles);
             return this;
         }
 
-        public Builder setPreserveDevices(@Nullable Input<TaskOptionsPreserveDevices> preserveDevices) {
+        public Builder preserveDevices(@Nullable Input<TaskOptionsPreserveDevices> preserveDevices) {
             this.preserveDevices = preserveDevices;
             return this;
         }
 
-        public Builder setPreserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
+        public Builder preserveDevices(@Nullable TaskOptionsPreserveDevices preserveDevices) {
             this.preserveDevices = Input.ofNullable(preserveDevices);
             return this;
         }
 
-        public Builder setSecurityDescriptorCopyFlags(@Nullable Input<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags) {
+        public Builder securityDescriptorCopyFlags(@Nullable Input<TaskOptionsSecurityDescriptorCopyFlags> securityDescriptorCopyFlags) {
             this.securityDescriptorCopyFlags = securityDescriptorCopyFlags;
             return this;
         }
 
-        public Builder setSecurityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
+        public Builder securityDescriptorCopyFlags(@Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags) {
             this.securityDescriptorCopyFlags = Input.ofNullable(securityDescriptorCopyFlags);
             return this;
         }
 
-        public Builder setTaskQueueing(@Nullable Input<TaskOptionsTaskQueueing> taskQueueing) {
+        public Builder taskQueueing(@Nullable Input<TaskOptionsTaskQueueing> taskQueueing) {
             this.taskQueueing = taskQueueing;
             return this;
         }
 
-        public Builder setTaskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
+        public Builder taskQueueing(@Nullable TaskOptionsTaskQueueing taskQueueing) {
             this.taskQueueing = Input.ofNullable(taskQueueing);
             return this;
         }
 
-        public Builder setTransferMode(@Nullable Input<TaskOptionsTransferMode> transferMode) {
+        public Builder transferMode(@Nullable Input<TaskOptionsTransferMode> transferMode) {
             this.transferMode = transferMode;
             return this;
         }
 
-        public Builder setTransferMode(@Nullable TaskOptionsTransferMode transferMode) {
+        public Builder transferMode(@Nullable TaskOptionsTransferMode transferMode) {
             this.transferMode = Input.ofNullable(transferMode);
             return this;
         }
 
-        public Builder setUid(@Nullable Input<TaskOptionsUid> uid) {
+        public Builder uid(@Nullable Input<TaskOptionsUid> uid) {
             this.uid = uid;
             return this;
         }
 
-        public Builder setUid(@Nullable TaskOptionsUid uid) {
+        public Builder uid(@Nullable TaskOptionsUid uid) {
             this.uid = Input.ofNullable(uid);
             return this;
         }
 
-        public Builder setVerifyMode(@Nullable Input<TaskOptionsVerifyMode> verifyMode) {
+        public Builder verifyMode(@Nullable Input<TaskOptionsVerifyMode> verifyMode) {
             this.verifyMode = verifyMode;
             return this;
         }
 
-        public Builder setVerifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
+        public Builder verifyMode(@Nullable TaskOptionsVerifyMode verifyMode) {
             this.verifyMode = Input.ofNullable(verifyMode);
             return this;
         }

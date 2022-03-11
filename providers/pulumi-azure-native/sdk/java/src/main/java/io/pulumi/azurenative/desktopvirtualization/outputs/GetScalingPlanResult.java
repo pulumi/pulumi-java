@@ -108,28 +108,28 @@ public final class GetScalingPlanResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"description","etag","exclusionTag","friendlyName","hostPoolReferences","hostPoolType","id","identity","kind","location","managedBy","name","objectId","plan","ring","schedules","sku","tags","timeZone","type"})
+    @OutputCustomType.Constructor
     private GetScalingPlanResult(
-        @Nullable String description,
-        String etag,
-        @Nullable String exclusionTag,
-        @Nullable String friendlyName,
-        @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
-        @Nullable String hostPoolType,
-        String id,
-        @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
-        @Nullable String kind,
-        @Nullable String location,
-        @Nullable String managedBy,
-        String name,
-        String objectId,
-        @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
-        @Nullable Integer ring,
-        @Nullable List<ScalingScheduleResponse> schedules,
-        @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
-        @Nullable Map<String,String> tags,
-        @Nullable String timeZone,
-        String type) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("exclusionTag") @Nullable String exclusionTag,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("hostPoolReferences") @Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences,
+        @OutputCustomType.Parameter("hostPoolType") @Nullable String hostPoolType,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedBy") @Nullable String managedBy,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("objectId") String objectId,
+        @OutputCustomType.Parameter("plan") @Nullable ResourceModelWithAllowedPropertySetResponsePlan plan,
+        @OutputCustomType.Parameter("ring") @Nullable Integer ring,
+        @OutputCustomType.Parameter("schedules") @Nullable List<ScalingScheduleResponse> schedules,
+        @OutputCustomType.Parameter("sku") @Nullable ResourceModelWithAllowedPropertySetResponseSku sku,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone,
+        @OutputCustomType.Parameter("type") String type) {
         this.description = description;
         this.etag = etag;
         this.exclusionTag = exclusionTag;
@@ -339,102 +339,102 @@ public final class GetScalingPlanResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setExclusionTag(@Nullable String exclusionTag) {
+        public Builder exclusionTag(@Nullable String exclusionTag) {
             this.exclusionTag = exclusionTag;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setHostPoolReferences(@Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences) {
+        public Builder hostPoolReferences(@Nullable List<ScalingHostPoolReferenceResponse> hostPoolReferences) {
             this.hostPoolReferences = hostPoolReferences;
             return this;
         }
 
-        public Builder setHostPoolType(@Nullable String hostPoolType) {
+        public Builder hostPoolType(@Nullable String hostPoolType) {
             this.hostPoolType = hostPoolType;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
+        public Builder identity(@Nullable ResourceModelWithAllowedPropertySetResponseIdentity identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedBy(@Nullable String managedBy) {
+        public Builder managedBy(@Nullable String managedBy) {
             this.managedBy = managedBy;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setObjectId(String objectId) {
+        public Builder objectId(String objectId) {
             this.objectId = Objects.requireNonNull(objectId);
             return this;
         }
 
-        public Builder setPlan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
+        public Builder plan(@Nullable ResourceModelWithAllowedPropertySetResponsePlan plan) {
             this.plan = plan;
             return this;
         }
 
-        public Builder setRing(@Nullable Integer ring) {
+        public Builder ring(@Nullable Integer ring) {
             this.ring = ring;
             return this;
         }
 
-        public Builder setSchedules(@Nullable List<ScalingScheduleResponse> schedules) {
+        public Builder schedules(@Nullable List<ScalingScheduleResponse> schedules) {
             this.schedules = schedules;
             return this;
         }
 
-        public Builder setSku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
+        public Builder sku(@Nullable ResourceModelWithAllowedPropertySetResponseSku sku) {
             this.sku = sku;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeZone(@Nullable String timeZone) {
+        public Builder timeZone(@Nullable String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

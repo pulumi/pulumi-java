@@ -31,12 +31,12 @@ public final class InitialStateConfigResponse {
      */
     private final FileContentBufferResponse pk;
 
-    @OutputCustomType.Constructor({"dbs","dbxs","keks","pk"})
+    @OutputCustomType.Constructor
     private InitialStateConfigResponse(
-        List<FileContentBufferResponse> dbs,
-        List<FileContentBufferResponse> dbxs,
-        List<FileContentBufferResponse> keks,
-        FileContentBufferResponse pk) {
+        @OutputCustomType.Parameter("dbs") List<FileContentBufferResponse> dbs,
+        @OutputCustomType.Parameter("dbxs") List<FileContentBufferResponse> dbxs,
+        @OutputCustomType.Parameter("keks") List<FileContentBufferResponse> keks,
+        @OutputCustomType.Parameter("pk") FileContentBufferResponse pk) {
         this.dbs = dbs;
         this.dbxs = dbxs;
         this.keks = keks;
@@ -98,22 +98,22 @@ public final class InitialStateConfigResponse {
     	      this.pk = defaults.pk;
         }
 
-        public Builder setDbs(List<FileContentBufferResponse> dbs) {
+        public Builder dbs(List<FileContentBufferResponse> dbs) {
             this.dbs = Objects.requireNonNull(dbs);
             return this;
         }
 
-        public Builder setDbxs(List<FileContentBufferResponse> dbxs) {
+        public Builder dbxs(List<FileContentBufferResponse> dbxs) {
             this.dbxs = Objects.requireNonNull(dbxs);
             return this;
         }
 
-        public Builder setKeks(List<FileContentBufferResponse> keks) {
+        public Builder keks(List<FileContentBufferResponse> keks) {
             this.keks = Objects.requireNonNull(keks);
             return this;
         }
 
-        public Builder setPk(FileContentBufferResponse pk) {
+        public Builder pk(FileContentBufferResponse pk) {
             this.pk = Objects.requireNonNull(pk);
             return this;
         }

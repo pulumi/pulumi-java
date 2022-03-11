@@ -22,10 +22,10 @@ public final class GetCertificateAuthorityActivationResult {
      */
     private final @Nullable String status;
 
-    @OutputCustomType.Constructor({"completeCertificateChain","status"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityActivationResult(
-        @Nullable String completeCertificateChain,
-        @Nullable String status) {
+        @OutputCustomType.Parameter("completeCertificateChain") @Nullable String completeCertificateChain,
+        @OutputCustomType.Parameter("status") @Nullable String status) {
         this.completeCertificateChain = completeCertificateChain;
         this.status = status;
     }
@@ -67,12 +67,12 @@ public final class GetCertificateAuthorityActivationResult {
     	      this.status = defaults.status;
         }
 
-        public Builder setCompleteCertificateChain(@Nullable String completeCertificateChain) {
+        public Builder completeCertificateChain(@Nullable String completeCertificateChain) {
             this.completeCertificateChain = completeCertificateChain;
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }

@@ -20,10 +20,10 @@ public final class ResourceGroupResponse {
      */
     private final String resourceType;
 
-    @OutputCustomType.Constructor({"groupId","resourceType"})
+    @OutputCustomType.Constructor
     private ResourceGroupResponse(
-        String groupId,
-        String resourceType) {
+        @OutputCustomType.Parameter("groupId") String groupId,
+        @OutputCustomType.Parameter("resourceType") String resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }
@@ -65,12 +65,12 @@ public final class ResourceGroupResponse {
     	      this.resourceType = defaults.resourceType;
         }
 
-        public Builder setGroupId(String groupId) {
+        public Builder groupId(String groupId) {
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
 
-        public Builder setResourceType(String resourceType) {
+        public Builder resourceType(String resourceType) {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }

@@ -26,11 +26,11 @@ public final class CertificateChainsResponse {
      */
     private final List<String> googlePartitionCerts;
 
-    @OutputCustomType.Constructor({"caviumCerts","googleCardCerts","googlePartitionCerts"})
+    @OutputCustomType.Constructor
     private CertificateChainsResponse(
-        List<String> caviumCerts,
-        List<String> googleCardCerts,
-        List<String> googlePartitionCerts) {
+        @OutputCustomType.Parameter("caviumCerts") List<String> caviumCerts,
+        @OutputCustomType.Parameter("googleCardCerts") List<String> googleCardCerts,
+        @OutputCustomType.Parameter("googlePartitionCerts") List<String> googlePartitionCerts) {
         this.caviumCerts = caviumCerts;
         this.googleCardCerts = googleCardCerts;
         this.googlePartitionCerts = googlePartitionCerts;
@@ -82,17 +82,17 @@ public final class CertificateChainsResponse {
     	      this.googlePartitionCerts = defaults.googlePartitionCerts;
         }
 
-        public Builder setCaviumCerts(List<String> caviumCerts) {
+        public Builder caviumCerts(List<String> caviumCerts) {
             this.caviumCerts = Objects.requireNonNull(caviumCerts);
             return this;
         }
 
-        public Builder setGoogleCardCerts(List<String> googleCardCerts) {
+        public Builder googleCardCerts(List<String> googleCardCerts) {
             this.googleCardCerts = Objects.requireNonNull(googleCardCerts);
             return this;
         }
 
-        public Builder setGooglePartitionCerts(List<String> googlePartitionCerts) {
+        public Builder googlePartitionCerts(List<String> googlePartitionCerts) {
             this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
             return this;
         }

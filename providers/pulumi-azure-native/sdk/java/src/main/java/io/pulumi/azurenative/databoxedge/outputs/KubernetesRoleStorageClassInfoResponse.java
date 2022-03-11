@@ -25,11 +25,11 @@ public final class KubernetesRoleStorageClassInfoResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","posixCompliant","type"})
+    @OutputCustomType.Constructor
     private KubernetesRoleStorageClassInfoResponse(
-        String name,
-        String posixCompliant,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("posixCompliant") String posixCompliant,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.posixCompliant = posixCompliant;
         this.type = type;
@@ -81,17 +81,17 @@ public final class KubernetesRoleStorageClassInfoResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPosixCompliant(String posixCompliant) {
+        public Builder posixCompliant(String posixCompliant) {
             this.posixCompliant = Objects.requireNonNull(posixCompliant);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

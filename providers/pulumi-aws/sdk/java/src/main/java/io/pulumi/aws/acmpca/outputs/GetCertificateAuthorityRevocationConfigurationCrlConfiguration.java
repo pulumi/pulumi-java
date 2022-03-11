@@ -17,13 +17,13 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     private final String s3BucketName;
     private final String s3ObjectAcl;
 
-    @OutputCustomType.Constructor({"customCname","enabled","expirationInDays","s3BucketName","s3ObjectAcl"})
+    @OutputCustomType.Constructor
     private GetCertificateAuthorityRevocationConfigurationCrlConfiguration(
-        String customCname,
-        Boolean enabled,
-        Integer expirationInDays,
-        String s3BucketName,
-        String s3ObjectAcl) {
+        @OutputCustomType.Parameter("customCname") String customCname,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("expirationInDays") Integer expirationInDays,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3ObjectAcl") String s3ObjectAcl) {
         this.customCname = customCname;
         this.enabled = enabled;
         this.expirationInDays = expirationInDays;
@@ -75,27 +75,27 @@ public final class GetCertificateAuthorityRevocationConfigurationCrlConfiguratio
     	      this.s3ObjectAcl = defaults.s3ObjectAcl;
         }
 
-        public Builder setCustomCname(String customCname) {
+        public Builder customCname(String customCname) {
             this.customCname = Objects.requireNonNull(customCname);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setExpirationInDays(Integer expirationInDays) {
+        public Builder expirationInDays(Integer expirationInDays) {
             this.expirationInDays = Objects.requireNonNull(expirationInDays);
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3ObjectAcl(String s3ObjectAcl) {
+        public Builder s3ObjectAcl(String s3ObjectAcl) {
             this.s3ObjectAcl = Objects.requireNonNull(s3ObjectAcl);
             return this;
         }

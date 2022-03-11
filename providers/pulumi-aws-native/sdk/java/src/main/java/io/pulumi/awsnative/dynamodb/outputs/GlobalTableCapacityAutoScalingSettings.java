@@ -17,12 +17,12 @@ public final class GlobalTableCapacityAutoScalingSettings {
     private final @Nullable Integer seedCapacity;
     private final GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration;
 
-    @OutputCustomType.Constructor({"maxCapacity","minCapacity","seedCapacity","targetTrackingScalingPolicyConfiguration"})
+    @OutputCustomType.Constructor
     private GlobalTableCapacityAutoScalingSettings(
-        Integer maxCapacity,
-        Integer minCapacity,
-        @Nullable Integer seedCapacity,
-        GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
+        @OutputCustomType.Parameter("maxCapacity") Integer maxCapacity,
+        @OutputCustomType.Parameter("minCapacity") Integer minCapacity,
+        @OutputCustomType.Parameter("seedCapacity") @Nullable Integer seedCapacity,
+        @OutputCustomType.Parameter("targetTrackingScalingPolicyConfiguration") GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
         this.maxCapacity = maxCapacity;
         this.minCapacity = minCapacity;
         this.seedCapacity = seedCapacity;
@@ -68,22 +68,22 @@ public final class GlobalTableCapacityAutoScalingSettings {
     	      this.targetTrackingScalingPolicyConfiguration = defaults.targetTrackingScalingPolicyConfiguration;
         }
 
-        public Builder setMaxCapacity(Integer maxCapacity) {
+        public Builder maxCapacity(Integer maxCapacity) {
             this.maxCapacity = Objects.requireNonNull(maxCapacity);
             return this;
         }
 
-        public Builder setMinCapacity(Integer minCapacity) {
+        public Builder minCapacity(Integer minCapacity) {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
 
-        public Builder setSeedCapacity(@Nullable Integer seedCapacity) {
+        public Builder seedCapacity(@Nullable Integer seedCapacity) {
             this.seedCapacity = seedCapacity;
             return this;
         }
 
-        public Builder setTargetTrackingScalingPolicyConfiguration(GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
+        public Builder targetTrackingScalingPolicyConfiguration(GlobalTableTargetTrackingScalingPolicyConfiguration targetTrackingScalingPolicyConfiguration) {
             this.targetTrackingScalingPolicyConfiguration = Objects.requireNonNull(targetTrackingScalingPolicyConfiguration);
             return this;
         }

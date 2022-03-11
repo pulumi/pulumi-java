@@ -44,14 +44,14 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"etag","hub","mesh","provisioningState","spokes","type"})
+    @OutputCustomType.Constructor
     private ManagedNetworkPeeringPolicyPropertiesResponse(
-        String etag,
-        @Nullable ResourceIdResponse hub,
-        @Nullable List<ResourceIdResponse> mesh,
-        String provisioningState,
-        @Nullable List<ResourceIdResponse> spokes,
-        String type) {
+        @OutputCustomType.Parameter("etag") String etag,
+        @OutputCustomType.Parameter("hub") @Nullable ResourceIdResponse hub,
+        @OutputCustomType.Parameter("mesh") @Nullable List<ResourceIdResponse> mesh,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("spokes") @Nullable List<ResourceIdResponse> spokes,
+        @OutputCustomType.Parameter("type") String type) {
         this.etag = etag;
         this.hub = hub;
         this.mesh = mesh;
@@ -133,32 +133,32 @@ public final class ManagedNetworkPeeringPolicyPropertiesResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setEtag(String etag) {
+        public Builder etag(String etag) {
             this.etag = Objects.requireNonNull(etag);
             return this;
         }
 
-        public Builder setHub(@Nullable ResourceIdResponse hub) {
+        public Builder hub(@Nullable ResourceIdResponse hub) {
             this.hub = hub;
             return this;
         }
 
-        public Builder setMesh(@Nullable List<ResourceIdResponse> mesh) {
+        public Builder mesh(@Nullable List<ResourceIdResponse> mesh) {
             this.mesh = mesh;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setSpokes(@Nullable List<ResourceIdResponse> spokes) {
+        public Builder spokes(@Nullable List<ResourceIdResponse> spokes) {
             this.spokes = spokes;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

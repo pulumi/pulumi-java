@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class TimeoutConfigProperties {
     private final Integer inProgressTimeoutInMinutes;
 
-    @OutputCustomType.Constructor({"inProgressTimeoutInMinutes"})
-    private TimeoutConfigProperties(Integer inProgressTimeoutInMinutes) {
+    @OutputCustomType.Constructor
+    private TimeoutConfigProperties(@OutputCustomType.Parameter("inProgressTimeoutInMinutes") Integer inProgressTimeoutInMinutes) {
         this.inProgressTimeoutInMinutes = inProgressTimeoutInMinutes;
     }
 
@@ -40,7 +40,7 @@ public final class TimeoutConfigProperties {
     	      this.inProgressTimeoutInMinutes = defaults.inProgressTimeoutInMinutes;
         }
 
-        public Builder setInProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
+        public Builder inProgressTimeoutInMinutes(Integer inProgressTimeoutInMinutes) {
             this.inProgressTimeoutInMinutes = Objects.requireNonNull(inProgressTimeoutInMinutes);
             return this;
         }

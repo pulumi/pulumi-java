@@ -18,13 +18,13 @@ public final class TopicRuleKafkaAction {
     private final @Nullable String partition;
     private final String topic;
 
-    @OutputCustomType.Constructor({"clientProperties","destinationArn","key","partition","topic"})
+    @OutputCustomType.Constructor
     private TopicRuleKafkaAction(
-        Object clientProperties,
-        String destinationArn,
-        @Nullable String key,
-        @Nullable String partition,
-        String topic) {
+        @OutputCustomType.Parameter("clientProperties") Object clientProperties,
+        @OutputCustomType.Parameter("destinationArn") String destinationArn,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("partition") @Nullable String partition,
+        @OutputCustomType.Parameter("topic") String topic) {
         this.clientProperties = clientProperties;
         this.destinationArn = destinationArn;
         this.key = key;
@@ -76,27 +76,27 @@ public final class TopicRuleKafkaAction {
     	      this.topic = defaults.topic;
         }
 
-        public Builder setClientProperties(Object clientProperties) {
+        public Builder clientProperties(Object clientProperties) {
             this.clientProperties = Objects.requireNonNull(clientProperties);
             return this;
         }
 
-        public Builder setDestinationArn(String destinationArn) {
+        public Builder destinationArn(String destinationArn) {
             this.destinationArn = Objects.requireNonNull(destinationArn);
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setPartition(@Nullable String partition) {
+        public Builder partition(@Nullable String partition) {
             this.partition = partition;
             return this;
         }
 
-        public Builder setTopic(String topic) {
+        public Builder topic(String topic) {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }

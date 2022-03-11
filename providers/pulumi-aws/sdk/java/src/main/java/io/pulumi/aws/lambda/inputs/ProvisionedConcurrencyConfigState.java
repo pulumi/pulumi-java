@@ -87,32 +87,32 @@ public final class ProvisionedConcurrencyConfigState extends io.pulumi.resources
     	      this.qualifier = defaults.qualifier;
         }
 
-        public Builder setFunctionName(@Nullable Input<String> functionName) {
+        public Builder functionName(@Nullable Input<String> functionName) {
             this.functionName = functionName;
             return this;
         }
 
-        public Builder setFunctionName(@Nullable String functionName) {
+        public Builder functionName(@Nullable String functionName) {
             this.functionName = Input.ofNullable(functionName);
             return this;
         }
 
-        public Builder setProvisionedConcurrentExecutions(@Nullable Input<Integer> provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(@Nullable Input<Integer> provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = provisionedConcurrentExecutions;
             return this;
         }
 
-        public Builder setProvisionedConcurrentExecutions(@Nullable Integer provisionedConcurrentExecutions) {
+        public Builder provisionedConcurrentExecutions(@Nullable Integer provisionedConcurrentExecutions) {
             this.provisionedConcurrentExecutions = Input.ofNullable(provisionedConcurrentExecutions);
             return this;
         }
 
-        public Builder setQualifier(@Nullable Input<String> qualifier) {
+        public Builder qualifier(@Nullable Input<String> qualifier) {
             this.qualifier = qualifier;
             return this;
         }
 
-        public Builder setQualifier(@Nullable String qualifier) {
+        public Builder qualifier(@Nullable String qualifier) {
             this.qualifier = Input.ofNullable(qualifier);
             return this;
         }

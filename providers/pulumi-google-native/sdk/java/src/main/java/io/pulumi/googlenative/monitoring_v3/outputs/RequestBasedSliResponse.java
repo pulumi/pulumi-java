@@ -21,10 +21,10 @@ public final class RequestBasedSliResponse {
      */
     private final TimeSeriesRatioResponse goodTotalRatio;
 
-    @OutputCustomType.Constructor({"distributionCut","goodTotalRatio"})
+    @OutputCustomType.Constructor
     private RequestBasedSliResponse(
-        DistributionCutResponse distributionCut,
-        TimeSeriesRatioResponse goodTotalRatio) {
+        @OutputCustomType.Parameter("distributionCut") DistributionCutResponse distributionCut,
+        @OutputCustomType.Parameter("goodTotalRatio") TimeSeriesRatioResponse goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }
@@ -66,12 +66,12 @@ public final class RequestBasedSliResponse {
     	      this.goodTotalRatio = defaults.goodTotalRatio;
         }
 
-        public Builder setDistributionCut(DistributionCutResponse distributionCut) {
+        public Builder distributionCut(DistributionCutResponse distributionCut) {
             this.distributionCut = Objects.requireNonNull(distributionCut);
             return this;
         }
 
-        public Builder setGoodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
+        public Builder goodTotalRatio(TimeSeriesRatioResponse goodTotalRatio) {
             this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
             return this;
         }

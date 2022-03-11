@@ -57,12 +57,12 @@ public final class DiagnosticsProfileArgs extends io.pulumi.resources.ResourceAr
     	      this.bootDiagnostics = defaults.bootDiagnostics;
         }
 
-        public Builder setBootDiagnostics(@Nullable Input<BootDiagnosticsArgs> bootDiagnostics) {
+        public Builder bootDiagnostics(@Nullable Input<BootDiagnosticsArgs> bootDiagnostics) {
             this.bootDiagnostics = bootDiagnostics;
             return this;
         }
 
-        public Builder setBootDiagnostics(@Nullable BootDiagnosticsArgs bootDiagnostics) {
+        public Builder bootDiagnostics(@Nullable BootDiagnosticsArgs bootDiagnostics) {
             this.bootDiagnostics = Input.ofNullable(bootDiagnostics);
             return this;
         }

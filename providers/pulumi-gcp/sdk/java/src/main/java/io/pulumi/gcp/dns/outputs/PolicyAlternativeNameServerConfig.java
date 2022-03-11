@@ -19,8 +19,8 @@ public final class PolicyAlternativeNameServerConfig {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers;
 
-    @OutputCustomType.Constructor({"targetNameServers"})
-    private PolicyAlternativeNameServerConfig(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
+    @OutputCustomType.Constructor
+    private PolicyAlternativeNameServerConfig(@OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
         this.targetNameServers = targetNameServers;
     }
 
@@ -55,7 +55,7 @@ public final class PolicyAlternativeNameServerConfig {
     	      this.targetNameServers = defaults.targetNameServers;
         }
 
-        public Builder setTargetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
+        public Builder targetNameServers(List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }

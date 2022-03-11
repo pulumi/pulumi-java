@@ -30,11 +30,11 @@ public final class HttpMessageDiagnosticResponse {
      */
     private final @Nullable List<String> headers;
 
-    @OutputCustomType.Constructor({"body","dataMasking","headers"})
+    @OutputCustomType.Constructor
     private HttpMessageDiagnosticResponse(
-        @Nullable BodyDiagnosticSettingsResponse body,
-        @Nullable DataMaskingResponse dataMasking,
-        @Nullable List<String> headers) {
+        @OutputCustomType.Parameter("body") @Nullable BodyDiagnosticSettingsResponse body,
+        @OutputCustomType.Parameter("dataMasking") @Nullable DataMaskingResponse dataMasking,
+        @OutputCustomType.Parameter("headers") @Nullable List<String> headers) {
         this.body = body;
         this.dataMasking = dataMasking;
         this.headers = headers;
@@ -86,17 +86,17 @@ public final class HttpMessageDiagnosticResponse {
     	      this.headers = defaults.headers;
         }
 
-        public Builder setBody(@Nullable BodyDiagnosticSettingsResponse body) {
+        public Builder body(@Nullable BodyDiagnosticSettingsResponse body) {
             this.body = body;
             return this;
         }
 
-        public Builder setDataMasking(@Nullable DataMaskingResponse dataMasking) {
+        public Builder dataMasking(@Nullable DataMaskingResponse dataMasking) {
             this.dataMasking = dataMasking;
             return this;
         }
 
-        public Builder setHeaders(@Nullable List<String> headers) {
+        public Builder headers(@Nullable List<String> headers) {
             this.headers = headers;
             return this;
         }

@@ -29,11 +29,11 @@ public final class MediaGraphClearEndpointResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"credentials","odataType","url"})
+    @OutputCustomType.Constructor
     private MediaGraphClearEndpointResponse(
-        @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
-        String odataType,
-        String url) {
+        @OutputCustomType.Parameter("credentials") @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials,
+        @OutputCustomType.Parameter("odataType") String odataType,
+        @OutputCustomType.Parameter("url") String url) {
         this.credentials = credentials;
         this.odataType = odataType;
         this.url = url;
@@ -86,17 +86,17 @@ public final class MediaGraphClearEndpointResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setCredentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
+        public Builder credentials(@Nullable MediaGraphUsernamePasswordCredentialsResponse credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

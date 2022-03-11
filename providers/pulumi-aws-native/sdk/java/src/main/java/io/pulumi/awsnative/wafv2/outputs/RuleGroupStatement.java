@@ -37,21 +37,21 @@ public final class RuleGroupStatement {
     private final @Nullable RuleGroupSqliMatchStatement sqliMatchStatement;
     private final @Nullable RuleGroupXssMatchStatement xssMatchStatement;
 
-    @OutputCustomType.Constructor({"andStatement","byteMatchStatement","geoMatchStatement","iPSetReferenceStatement","labelMatchStatement","notStatement","orStatement","rateBasedStatement","regexMatchStatement","regexPatternSetReferenceStatement","sizeConstraintStatement","sqliMatchStatement","xssMatchStatement"})
+    @OutputCustomType.Constructor
     private RuleGroupStatement(
-        @Nullable RuleGroupAndStatement andStatement,
-        @Nullable RuleGroupByteMatchStatement byteMatchStatement,
-        @Nullable RuleGroupGeoMatchStatement geoMatchStatement,
-        @Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement,
-        @Nullable RuleGroupLabelMatchStatement labelMatchStatement,
-        @Nullable RuleGroupNotStatement notStatement,
-        @Nullable RuleGroupOrStatement orStatement,
-        @Nullable RuleGroupRateBasedStatement rateBasedStatement,
-        @Nullable RuleGroupRegexMatchStatement regexMatchStatement,
-        @Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
-        @Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement,
-        @Nullable RuleGroupSqliMatchStatement sqliMatchStatement,
-        @Nullable RuleGroupXssMatchStatement xssMatchStatement) {
+        @OutputCustomType.Parameter("andStatement") @Nullable RuleGroupAndStatement andStatement,
+        @OutputCustomType.Parameter("byteMatchStatement") @Nullable RuleGroupByteMatchStatement byteMatchStatement,
+        @OutputCustomType.Parameter("geoMatchStatement") @Nullable RuleGroupGeoMatchStatement geoMatchStatement,
+        @OutputCustomType.Parameter("iPSetReferenceStatement") @Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement,
+        @OutputCustomType.Parameter("labelMatchStatement") @Nullable RuleGroupLabelMatchStatement labelMatchStatement,
+        @OutputCustomType.Parameter("notStatement") @Nullable RuleGroupNotStatement notStatement,
+        @OutputCustomType.Parameter("orStatement") @Nullable RuleGroupOrStatement orStatement,
+        @OutputCustomType.Parameter("rateBasedStatement") @Nullable RuleGroupRateBasedStatement rateBasedStatement,
+        @OutputCustomType.Parameter("regexMatchStatement") @Nullable RuleGroupRegexMatchStatement regexMatchStatement,
+        @OutputCustomType.Parameter("regexPatternSetReferenceStatement") @Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement,
+        @OutputCustomType.Parameter("sizeConstraintStatement") @Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement,
+        @OutputCustomType.Parameter("sqliMatchStatement") @Nullable RuleGroupSqliMatchStatement sqliMatchStatement,
+        @OutputCustomType.Parameter("xssMatchStatement") @Nullable RuleGroupXssMatchStatement xssMatchStatement) {
         this.andStatement = andStatement;
         this.byteMatchStatement = byteMatchStatement;
         this.geoMatchStatement = geoMatchStatement;
@@ -151,67 +151,67 @@ public final class RuleGroupStatement {
     	      this.xssMatchStatement = defaults.xssMatchStatement;
         }
 
-        public Builder setAndStatement(@Nullable RuleGroupAndStatement andStatement) {
+        public Builder andStatement(@Nullable RuleGroupAndStatement andStatement) {
             this.andStatement = andStatement;
             return this;
         }
 
-        public Builder setByteMatchStatement(@Nullable RuleGroupByteMatchStatement byteMatchStatement) {
+        public Builder byteMatchStatement(@Nullable RuleGroupByteMatchStatement byteMatchStatement) {
             this.byteMatchStatement = byteMatchStatement;
             return this;
         }
 
-        public Builder setGeoMatchStatement(@Nullable RuleGroupGeoMatchStatement geoMatchStatement) {
+        public Builder geoMatchStatement(@Nullable RuleGroupGeoMatchStatement geoMatchStatement) {
             this.geoMatchStatement = geoMatchStatement;
             return this;
         }
 
-        public Builder setIPSetReferenceStatement(@Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement) {
+        public Builder iPSetReferenceStatement(@Nullable RuleGroupIPSetReferenceStatement iPSetReferenceStatement) {
             this.iPSetReferenceStatement = iPSetReferenceStatement;
             return this;
         }
 
-        public Builder setLabelMatchStatement(@Nullable RuleGroupLabelMatchStatement labelMatchStatement) {
+        public Builder labelMatchStatement(@Nullable RuleGroupLabelMatchStatement labelMatchStatement) {
             this.labelMatchStatement = labelMatchStatement;
             return this;
         }
 
-        public Builder setNotStatement(@Nullable RuleGroupNotStatement notStatement) {
+        public Builder notStatement(@Nullable RuleGroupNotStatement notStatement) {
             this.notStatement = notStatement;
             return this;
         }
 
-        public Builder setOrStatement(@Nullable RuleGroupOrStatement orStatement) {
+        public Builder orStatement(@Nullable RuleGroupOrStatement orStatement) {
             this.orStatement = orStatement;
             return this;
         }
 
-        public Builder setRateBasedStatement(@Nullable RuleGroupRateBasedStatement rateBasedStatement) {
+        public Builder rateBasedStatement(@Nullable RuleGroupRateBasedStatement rateBasedStatement) {
             this.rateBasedStatement = rateBasedStatement;
             return this;
         }
 
-        public Builder setRegexMatchStatement(@Nullable RuleGroupRegexMatchStatement regexMatchStatement) {
+        public Builder regexMatchStatement(@Nullable RuleGroupRegexMatchStatement regexMatchStatement) {
             this.regexMatchStatement = regexMatchStatement;
             return this;
         }
 
-        public Builder setRegexPatternSetReferenceStatement(@Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
+        public Builder regexPatternSetReferenceStatement(@Nullable RuleGroupRegexPatternSetReferenceStatement regexPatternSetReferenceStatement) {
             this.regexPatternSetReferenceStatement = regexPatternSetReferenceStatement;
             return this;
         }
 
-        public Builder setSizeConstraintStatement(@Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement) {
+        public Builder sizeConstraintStatement(@Nullable RuleGroupSizeConstraintStatement sizeConstraintStatement) {
             this.sizeConstraintStatement = sizeConstraintStatement;
             return this;
         }
 
-        public Builder setSqliMatchStatement(@Nullable RuleGroupSqliMatchStatement sqliMatchStatement) {
+        public Builder sqliMatchStatement(@Nullable RuleGroupSqliMatchStatement sqliMatchStatement) {
             this.sqliMatchStatement = sqliMatchStatement;
             return this;
         }
 
-        public Builder setXssMatchStatement(@Nullable RuleGroupXssMatchStatement xssMatchStatement) {
+        public Builder xssMatchStatement(@Nullable RuleGroupXssMatchStatement xssMatchStatement) {
             this.xssMatchStatement = xssMatchStatement;
             return this;
         }

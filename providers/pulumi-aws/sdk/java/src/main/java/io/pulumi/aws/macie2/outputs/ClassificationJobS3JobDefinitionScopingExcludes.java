@@ -17,8 +17,8 @@ public final class ClassificationJobS3JobDefinitionScopingExcludes {
      */
     private final @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands;
 
-    @OutputCustomType.Constructor({"ands"})
-    private ClassificationJobS3JobDefinitionScopingExcludes(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
+    @OutputCustomType.Constructor
+    private ClassificationJobS3JobDefinitionScopingExcludes(@OutputCustomType.Parameter("ands") @Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
         this.ands = ands;
     }
 
@@ -50,7 +50,7 @@ public final class ClassificationJobS3JobDefinitionScopingExcludes {
     	      this.ands = defaults.ands;
         }
 
-        public Builder setAnds(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
+        public Builder ands(@Nullable List<ClassificationJobS3JobDefinitionScopingExcludesAnd> ands) {
             this.ands = ands;
             return this;
         }

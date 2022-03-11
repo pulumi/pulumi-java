@@ -96,18 +96,18 @@ public final class AutoscalerAutoscalingPolicy {
      */
     private final @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules;
 
-    @OutputCustomType.Constructor({"cooldownPeriod","cpuUtilization","loadBalancingUtilization","maxReplicas","metrics","minReplicas","mode","scaleDownControl","scaleInControl","scalingSchedules"})
+    @OutputCustomType.Constructor
     private AutoscalerAutoscalingPolicy(
-        @Nullable Integer cooldownPeriod,
-        @Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
-        @Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
-        Integer maxReplicas,
-        @Nullable List<AutoscalerAutoscalingPolicyMetric> metrics,
-        Integer minReplicas,
-        @Nullable String mode,
-        @Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
-        @Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl,
-        @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        @OutputCustomType.Parameter("cooldownPeriod") @Nullable Integer cooldownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") @Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization,
+        @OutputCustomType.Parameter("loadBalancingUtilization") @Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization,
+        @OutputCustomType.Parameter("maxReplicas") Integer maxReplicas,
+        @OutputCustomType.Parameter("metrics") @Nullable List<AutoscalerAutoscalingPolicyMetric> metrics,
+        @OutputCustomType.Parameter("minReplicas") Integer minReplicas,
+        @OutputCustomType.Parameter("mode") @Nullable String mode,
+        @OutputCustomType.Parameter("scaleDownControl") @Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl,
+        @OutputCustomType.Parameter("scaleInControl") @Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl,
+        @OutputCustomType.Parameter("scalingSchedules") @Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
         this.cooldownPeriod = cooldownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.loadBalancingUtilization = loadBalancingUtilization;
@@ -255,52 +255,52 @@ public final class AutoscalerAutoscalingPolicy {
     	      this.scalingSchedules = defaults.scalingSchedules;
         }
 
-        public Builder setCooldownPeriod(@Nullable Integer cooldownPeriod) {
+        public Builder cooldownPeriod(@Nullable Integer cooldownPeriod) {
             this.cooldownPeriod = cooldownPeriod;
             return this;
         }
 
-        public Builder setCpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization) {
+        public Builder cpuUtilization(@Nullable AutoscalerAutoscalingPolicyCpuUtilization cpuUtilization) {
             this.cpuUtilization = cpuUtilization;
             return this;
         }
 
-        public Builder setLoadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
+        public Builder loadBalancingUtilization(@Nullable AutoscalerAutoscalingPolicyLoadBalancingUtilization loadBalancingUtilization) {
             this.loadBalancingUtilization = loadBalancingUtilization;
             return this;
         }
 
-        public Builder setMaxReplicas(Integer maxReplicas) {
+        public Builder maxReplicas(Integer maxReplicas) {
             this.maxReplicas = Objects.requireNonNull(maxReplicas);
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<AutoscalerAutoscalingPolicyMetric> metrics) {
+        public Builder metrics(@Nullable List<AutoscalerAutoscalingPolicyMetric> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMinReplicas(Integer minReplicas) {
+        public Builder minReplicas(Integer minReplicas) {
             this.minReplicas = Objects.requireNonNull(minReplicas);
             return this;
         }
 
-        public Builder setMode(@Nullable String mode) {
+        public Builder mode(@Nullable String mode) {
             this.mode = mode;
             return this;
         }
 
-        public Builder setScaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl) {
+        public Builder scaleDownControl(@Nullable AutoscalerAutoscalingPolicyScaleDownControl scaleDownControl) {
             this.scaleDownControl = scaleDownControl;
             return this;
         }
 
-        public Builder setScaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl) {
+        public Builder scaleInControl(@Nullable AutoscalerAutoscalingPolicyScaleInControl scaleInControl) {
             this.scaleInControl = scaleInControl;
             return this;
         }
 
-        public Builder setScalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
+        public Builder scalingSchedules(@Nullable List<AutoscalerAutoscalingPolicyScalingSchedule> scalingSchedules) {
             this.scalingSchedules = scalingSchedules;
             return this;
         }

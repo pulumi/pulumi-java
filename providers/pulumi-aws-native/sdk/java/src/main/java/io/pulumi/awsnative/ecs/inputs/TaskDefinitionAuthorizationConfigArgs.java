@@ -63,22 +63,22 @@ public final class TaskDefinitionAuthorizationConfigArgs extends io.pulumi.resou
     	      this.iAM = defaults.iAM;
         }
 
-        public Builder setAccessPointId(@Nullable Input<String> accessPointId) {
+        public Builder accessPointId(@Nullable Input<String> accessPointId) {
             this.accessPointId = accessPointId;
             return this;
         }
 
-        public Builder setAccessPointId(@Nullable String accessPointId) {
+        public Builder accessPointId(@Nullable String accessPointId) {
             this.accessPointId = Input.ofNullable(accessPointId);
             return this;
         }
 
-        public Builder setIAM(@Nullable Input<TaskDefinitionAuthorizationConfigIAM> iAM) {
+        public Builder iAM(@Nullable Input<TaskDefinitionAuthorizationConfigIAM> iAM) {
             this.iAM = iAM;
             return this;
         }
 
-        public Builder setIAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
+        public Builder iAM(@Nullable TaskDefinitionAuthorizationConfigIAM iAM) {
             this.iAM = Input.ofNullable(iAM);
             return this;
         }

@@ -64,22 +64,22 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     	      this.sqlQuery = defaults.sqlQuery;
         }
 
-        public Builder setFilters(@Nullable Input<List<DatasetFilterArgs>> filters) {
+        public Builder filters(@Nullable Input<List<DatasetFilterArgs>> filters) {
             this.filters = filters;
             return this;
         }
 
-        public Builder setFilters(@Nullable List<DatasetFilterArgs> filters) {
+        public Builder filters(@Nullable List<DatasetFilterArgs> filters) {
             this.filters = Input.ofNullable(filters);
             return this;
         }
 
-        public Builder setSqlQuery(Input<String> sqlQuery) {
+        public Builder sqlQuery(Input<String> sqlQuery) {
             this.sqlQuery = Objects.requireNonNull(sqlQuery);
             return this;
         }
 
-        public Builder setSqlQuery(String sqlQuery) {
+        public Builder sqlQuery(String sqlQuery) {
             this.sqlQuery = Input.of(Objects.requireNonNull(sqlQuery));
             return this;
         }

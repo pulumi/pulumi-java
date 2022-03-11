@@ -37,13 +37,13 @@ public final class HelmReleaseSettingsArgs {
      */
     private final @Nullable Input<String> repositoryConfigPath;
 
-    @OutputCustomType.Constructor({"driver","pluginsPath","registryConfigPath","repositoryCache","repositoryConfigPath"})
+    @OutputCustomType.Constructor
     private HelmReleaseSettingsArgs(
-        @Nullable Input<String> driver,
-        @Nullable Input<String> pluginsPath,
-        @Nullable Input<String> registryConfigPath,
-        @Nullable Input<String> repositoryCache,
-        @Nullable Input<String> repositoryConfigPath) {
+        @OutputCustomType.Parameter("driver") @Nullable Input<String> driver,
+        @OutputCustomType.Parameter("pluginsPath") @Nullable Input<String> pluginsPath,
+        @OutputCustomType.Parameter("registryConfigPath") @Nullable Input<String> registryConfigPath,
+        @OutputCustomType.Parameter("repositoryCache") @Nullable Input<String> repositoryCache,
+        @OutputCustomType.Parameter("repositoryConfigPath") @Nullable Input<String> repositoryConfigPath) {
         this.driver = driver;
         this.pluginsPath = pluginsPath;
         this.registryConfigPath = registryConfigPath;
@@ -115,27 +115,27 @@ public final class HelmReleaseSettingsArgs {
     	      this.repositoryConfigPath = defaults.repositoryConfigPath;
         }
 
-        public Builder setDriver(@Nullable Input<String> driver) {
+        public Builder driver(@Nullable Input<String> driver) {
             this.driver = driver;
             return this;
         }
 
-        public Builder setPluginsPath(@Nullable Input<String> pluginsPath) {
+        public Builder pluginsPath(@Nullable Input<String> pluginsPath) {
             this.pluginsPath = pluginsPath;
             return this;
         }
 
-        public Builder setRegistryConfigPath(@Nullable Input<String> registryConfigPath) {
+        public Builder registryConfigPath(@Nullable Input<String> registryConfigPath) {
             this.registryConfigPath = registryConfigPath;
             return this;
         }
 
-        public Builder setRepositoryCache(@Nullable Input<String> repositoryCache) {
+        public Builder repositoryCache(@Nullable Input<String> repositoryCache) {
             this.repositoryCache = repositoryCache;
             return this;
         }
 
-        public Builder setRepositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
+        public Builder repositoryConfigPath(@Nullable Input<String> repositoryConfigPath) {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }

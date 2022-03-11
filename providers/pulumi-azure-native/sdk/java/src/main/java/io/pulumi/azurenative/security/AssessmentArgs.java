@@ -158,72 +158,72 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     	      this.status = defaults.status;
         }
 
-        public Builder setAdditionalData(@Nullable Input<Map<String,String>> additionalData) {
+        public Builder additionalData(@Nullable Input<Map<String,String>> additionalData) {
             this.additionalData = additionalData;
             return this;
         }
 
-        public Builder setAdditionalData(@Nullable Map<String,String> additionalData) {
+        public Builder additionalData(@Nullable Map<String,String> additionalData) {
             this.additionalData = Input.ofNullable(additionalData);
             return this;
         }
 
-        public Builder setAssessmentName(@Nullable Input<String> assessmentName) {
+        public Builder assessmentName(@Nullable Input<String> assessmentName) {
             this.assessmentName = assessmentName;
             return this;
         }
 
-        public Builder setAssessmentName(@Nullable String assessmentName) {
+        public Builder assessmentName(@Nullable String assessmentName) {
             this.assessmentName = Input.ofNullable(assessmentName);
             return this;
         }
 
-        public Builder setMetadata(@Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata) {
+        public Builder metadata(@Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setMetadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
+        public Builder metadata(@Nullable SecurityAssessmentMetadataPropertiesArgs metadata) {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
 
-        public Builder setPartnersData(@Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData) {
+        public Builder partnersData(@Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData) {
             this.partnersData = partnersData;
             return this;
         }
 
-        public Builder setPartnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
+        public Builder partnersData(@Nullable SecurityAssessmentPartnerDataArgs partnersData) {
             this.partnersData = Input.ofNullable(partnersData);
             return this;
         }
 
-        public Builder setResourceDetails(Input<Object> resourceDetails) {
+        public Builder resourceDetails(Input<Object> resourceDetails) {
             this.resourceDetails = Objects.requireNonNull(resourceDetails);
             return this;
         }
 
-        public Builder setResourceDetails(Object resourceDetails) {
+        public Builder resourceDetails(Object resourceDetails) {
             this.resourceDetails = Input.of(Objects.requireNonNull(resourceDetails));
             return this;
         }
 
-        public Builder setResourceId(Input<String> resourceId) {
+        public Builder resourceId(Input<String> resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
 
-        public Builder setStatus(Input<AssessmentStatusArgs> status) {
+        public Builder status(Input<AssessmentStatusArgs> status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setStatus(AssessmentStatusArgs status) {
+        public Builder status(AssessmentStatusArgs status) {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }

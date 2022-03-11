@@ -30,12 +30,12 @@ public final class ScheduleResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"cronJobDuration","cronSpec","endTime","startTime"})
+    @OutputCustomType.Constructor
     private ScheduleResponse(
-        String cronJobDuration,
-        String cronSpec,
-        String endTime,
-        String startTime) {
+        @OutputCustomType.Parameter("cronJobDuration") String cronJobDuration,
+        @OutputCustomType.Parameter("cronSpec") String cronSpec,
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.cronJobDuration = cronJobDuration;
         this.cronSpec = cronSpec;
         this.endTime = endTime;
@@ -97,22 +97,22 @@ public final class ScheduleResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setCronJobDuration(String cronJobDuration) {
+        public Builder cronJobDuration(String cronJobDuration) {
             this.cronJobDuration = Objects.requireNonNull(cronJobDuration);
             return this;
         }
 
-        public Builder setCronSpec(String cronSpec) {
+        public Builder cronSpec(String cronSpec) {
             this.cronSpec = Objects.requireNonNull(cronSpec);
             return this;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

@@ -16,8 +16,8 @@ public final class PreventionJobTriggerInspectJobAction {
      */
     private final PreventionJobTriggerInspectJobActionSaveFindings saveFindings;
 
-    @OutputCustomType.Constructor({"saveFindings"})
-    private PreventionJobTriggerInspectJobAction(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
+    @OutputCustomType.Constructor
+    private PreventionJobTriggerInspectJobAction(@OutputCustomType.Parameter("saveFindings") PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
         this.saveFindings = saveFindings;
     }
 
@@ -50,7 +50,7 @@ public final class PreventionJobTriggerInspectJobAction {
     	      this.saveFindings = defaults.saveFindings;
         }
 
-        public Builder setSaveFindings(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
+        public Builder saveFindings(PreventionJobTriggerInspectJobActionSaveFindings saveFindings) {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }

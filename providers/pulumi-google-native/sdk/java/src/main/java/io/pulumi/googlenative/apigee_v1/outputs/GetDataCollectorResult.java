@@ -35,13 +35,13 @@ public final class GetDataCollectorResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdAt","description","lastModifiedAt","name","type"})
+    @OutputCustomType.Constructor
     private GetDataCollectorResult(
-        String createdAt,
-        String description,
-        String lastModifiedAt,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("lastModifiedAt") String lastModifiedAt,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdAt = createdAt;
         this.description = description;
         this.lastModifiedAt = lastModifiedAt;
@@ -113,27 +113,27 @@ public final class GetDataCollectorResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLastModifiedAt(String lastModifiedAt) {
+        public Builder lastModifiedAt(String lastModifiedAt) {
             this.lastModifiedAt = Objects.requireNonNull(lastModifiedAt);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

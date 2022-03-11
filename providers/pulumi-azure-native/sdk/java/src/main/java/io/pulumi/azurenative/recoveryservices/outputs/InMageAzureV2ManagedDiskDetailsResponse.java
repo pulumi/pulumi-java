@@ -27,11 +27,11 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
      */
     private final @Nullable String seedManagedDiskId;
 
-    @OutputCustomType.Constructor({"diskId","replicaDiskType","seedManagedDiskId"})
+    @OutputCustomType.Constructor
     private InMageAzureV2ManagedDiskDetailsResponse(
-        @Nullable String diskId,
-        @Nullable String replicaDiskType,
-        @Nullable String seedManagedDiskId) {
+        @OutputCustomType.Parameter("diskId") @Nullable String diskId,
+        @OutputCustomType.Parameter("replicaDiskType") @Nullable String replicaDiskType,
+        @OutputCustomType.Parameter("seedManagedDiskId") @Nullable String seedManagedDiskId) {
         this.diskId = diskId;
         this.replicaDiskType = replicaDiskType;
         this.seedManagedDiskId = seedManagedDiskId;
@@ -83,17 +83,17 @@ public final class InMageAzureV2ManagedDiskDetailsResponse {
     	      this.seedManagedDiskId = defaults.seedManagedDiskId;
         }
 
-        public Builder setDiskId(@Nullable String diskId) {
+        public Builder diskId(@Nullable String diskId) {
             this.diskId = diskId;
             return this;
         }
 
-        public Builder setReplicaDiskType(@Nullable String replicaDiskType) {
+        public Builder replicaDiskType(@Nullable String replicaDiskType) {
             this.replicaDiskType = replicaDiskType;
             return this;
         }
 
-        public Builder setSeedManagedDiskId(@Nullable String seedManagedDiskId) {
+        public Builder seedManagedDiskId(@Nullable String seedManagedDiskId) {
             this.seedManagedDiskId = seedManagedDiskId;
             return this;
         }

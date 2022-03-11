@@ -49,15 +49,15 @@ public final class GetSettingResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cache","id","kind","name","scope","startOn","type"})
+    @OutputCustomType.Constructor
     private GetSettingResult(
-        @Nullable List<SettingsPropertiesResponseCache> cache,
-        String id,
-        String kind,
-        String name,
-        String scope,
-        @Nullable String startOn,
-        String type) {
+        @OutputCustomType.Parameter("cache") @Nullable List<SettingsPropertiesResponseCache> cache,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("scope") String scope,
+        @OutputCustomType.Parameter("startOn") @Nullable String startOn,
+        @OutputCustomType.Parameter("type") String type) {
         this.cache = cache;
         this.id = id;
         this.kind = kind;
@@ -149,37 +149,37 @@ public final class GetSettingResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCache(@Nullable List<SettingsPropertiesResponseCache> cache) {
+        public Builder cache(@Nullable List<SettingsPropertiesResponseCache> cache) {
             this.cache = cache;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setScope(String scope) {
+        public Builder scope(String scope) {
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
 
-        public Builder setStartOn(@Nullable String startOn) {
+        public Builder startOn(@Nullable String startOn) {
             this.startOn = startOn;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

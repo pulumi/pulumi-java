@@ -25,14 +25,14 @@ public final class GetInstanceSerialPortResult {
     private final String project;
     private final String zone;
 
-    @OutputCustomType.Constructor({"contents","id","instance","port","project","zone"})
+    @OutputCustomType.Constructor
     private GetInstanceSerialPortResult(
-        String contents,
-        String id,
-        String instance,
-        Integer port,
-        String project,
-        String zone) {
+        @OutputCustomType.Parameter("contents") String contents,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instance") String instance,
+        @OutputCustomType.Parameter("port") Integer port,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("zone") String zone) {
         this.contents = contents;
         this.id = id;
         this.instance = instance;
@@ -98,32 +98,32 @@ public final class GetInstanceSerialPortResult {
     	      this.zone = defaults.zone;
         }
 
-        public Builder setContents(String contents) {
+        public Builder contents(String contents) {
             this.contents = Objects.requireNonNull(contents);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstance(String instance) {
+        public Builder instance(String instance) {
             this.instance = Objects.requireNonNull(instance);
             return this;
         }
 
-        public Builder setPort(Integer port) {
+        public Builder port(Integer port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setZone(String zone) {
+        public Builder zone(String zone) {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }

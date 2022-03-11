@@ -38,13 +38,13 @@ public final class StaticSiteTemplateOptionsResponse {
      */
     private final @Nullable String templateRepositoryUrl;
 
-    @OutputCustomType.Constructor({"description","isPrivate","owner","repositoryName","templateRepositoryUrl"})
+    @OutputCustomType.Constructor
     private StaticSiteTemplateOptionsResponse(
-        @Nullable String description,
-        @Nullable Boolean isPrivate,
-        @Nullable String owner,
-        @Nullable String repositoryName,
-        @Nullable String templateRepositoryUrl) {
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("isPrivate") @Nullable Boolean isPrivate,
+        @OutputCustomType.Parameter("owner") @Nullable String owner,
+        @OutputCustomType.Parameter("repositoryName") @Nullable String repositoryName,
+        @OutputCustomType.Parameter("templateRepositoryUrl") @Nullable String templateRepositoryUrl) {
         this.description = description;
         this.isPrivate = isPrivate;
         this.owner = owner;
@@ -116,27 +116,27 @@ public final class StaticSiteTemplateOptionsResponse {
     	      this.templateRepositoryUrl = defaults.templateRepositoryUrl;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setIsPrivate(@Nullable Boolean isPrivate) {
+        public Builder isPrivate(@Nullable Boolean isPrivate) {
             this.isPrivate = isPrivate;
             return this;
         }
 
-        public Builder setOwner(@Nullable String owner) {
+        public Builder owner(@Nullable String owner) {
             this.owner = owner;
             return this;
         }
 
-        public Builder setRepositoryName(@Nullable String repositoryName) {
+        public Builder repositoryName(@Nullable String repositoryName) {
             this.repositoryName = repositoryName;
             return this;
         }
 
-        public Builder setTemplateRepositoryUrl(@Nullable String templateRepositoryUrl) {
+        public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
             this.templateRepositoryUrl = templateRepositoryUrl;
             return this;
         }

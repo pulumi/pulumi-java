@@ -19,13 +19,13 @@ public final class GetFunctionResult {
     private final @Nullable String name;
     private final @Nullable String stage;
 
-    @OutputCustomType.Constructor({"functionARN","functionConfig","functionMetadata","name","stage"})
+    @OutputCustomType.Constructor
     private GetFunctionResult(
-        @Nullable String functionARN,
-        @Nullable FunctionConfig functionConfig,
-        @Nullable FunctionMetadata functionMetadata,
-        @Nullable String name,
-        @Nullable String stage) {
+        @OutputCustomType.Parameter("functionARN") @Nullable String functionARN,
+        @OutputCustomType.Parameter("functionConfig") @Nullable FunctionConfig functionConfig,
+        @OutputCustomType.Parameter("functionMetadata") @Nullable FunctionMetadata functionMetadata,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("stage") @Nullable String stage) {
         this.functionARN = functionARN;
         this.functionConfig = functionConfig;
         this.functionMetadata = functionMetadata;
@@ -77,27 +77,27 @@ public final class GetFunctionResult {
     	      this.stage = defaults.stage;
         }
 
-        public Builder setFunctionARN(@Nullable String functionARN) {
+        public Builder functionARN(@Nullable String functionARN) {
             this.functionARN = functionARN;
             return this;
         }
 
-        public Builder setFunctionConfig(@Nullable FunctionConfig functionConfig) {
+        public Builder functionConfig(@Nullable FunctionConfig functionConfig) {
             this.functionConfig = functionConfig;
             return this;
         }
 
-        public Builder setFunctionMetadata(@Nullable FunctionMetadata functionMetadata) {
+        public Builder functionMetadata(@Nullable FunctionMetadata functionMetadata) {
             this.functionMetadata = functionMetadata;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setStage(@Nullable String stage) {
+        public Builder stage(@Nullable String stage) {
             this.stage = stage;
             return this;
         }

@@ -25,11 +25,11 @@ public final class SpannerIODetailsResponse {
      */
     private final String project;
 
-    @OutputCustomType.Constructor({"databaseId","instanceId","project"})
+    @OutputCustomType.Constructor
     private SpannerIODetailsResponse(
-        String databaseId,
-        String instanceId,
-        String project) {
+        @OutputCustomType.Parameter("databaseId") String databaseId,
+        @OutputCustomType.Parameter("instanceId") String instanceId,
+        @OutputCustomType.Parameter("project") String project) {
         this.databaseId = databaseId;
         this.instanceId = instanceId;
         this.project = project;
@@ -81,17 +81,17 @@ public final class SpannerIODetailsResponse {
     	      this.project = defaults.project;
         }
 
-        public Builder setDatabaseId(String databaseId) {
+        public Builder databaseId(String databaseId) {
             this.databaseId = Objects.requireNonNull(databaseId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

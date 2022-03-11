@@ -64,18 +64,18 @@ public final class GetDataExportResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"createdDate","dataExportId","enable","eventHubName","id","lastModifiedDate","name","resourceId","tableNames","type"})
+    @OutputCustomType.Constructor
     private GetDataExportResult(
-        @Nullable String createdDate,
-        @Nullable String dataExportId,
-        @Nullable Boolean enable,
-        @Nullable String eventHubName,
-        String id,
-        @Nullable String lastModifiedDate,
-        String name,
-        String resourceId,
-        List<String> tableNames,
-        String type) {
+        @OutputCustomType.Parameter("createdDate") @Nullable String createdDate,
+        @OutputCustomType.Parameter("dataExportId") @Nullable String dataExportId,
+        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
+        @OutputCustomType.Parameter("eventHubName") @Nullable String eventHubName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastModifiedDate") @Nullable String lastModifiedDate,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("resourceId") String resourceId,
+        @OutputCustomType.Parameter("tableNames") List<String> tableNames,
+        @OutputCustomType.Parameter("type") String type) {
         this.createdDate = createdDate;
         this.dataExportId = dataExportId;
         this.enable = enable;
@@ -197,52 +197,52 @@ public final class GetDataExportResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCreatedDate(@Nullable String createdDate) {
+        public Builder createdDate(@Nullable String createdDate) {
             this.createdDate = createdDate;
             return this;
         }
 
-        public Builder setDataExportId(@Nullable String dataExportId) {
+        public Builder dataExportId(@Nullable String dataExportId) {
             this.dataExportId = dataExportId;
             return this;
         }
 
-        public Builder setEnable(@Nullable Boolean enable) {
+        public Builder enable(@Nullable Boolean enable) {
             this.enable = enable;
             return this;
         }
 
-        public Builder setEventHubName(@Nullable String eventHubName) {
+        public Builder eventHubName(@Nullable String eventHubName) {
             this.eventHubName = eventHubName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastModifiedDate(@Nullable String lastModifiedDate) {
+        public Builder lastModifiedDate(@Nullable String lastModifiedDate) {
             this.lastModifiedDate = lastModifiedDate;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setResourceId(String resourceId) {
+        public Builder resourceId(String resourceId) {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
 
-        public Builder setTableNames(List<String> tableNames) {
+        public Builder tableNames(List<String> tableNames) {
             this.tableNames = Objects.requireNonNull(tableNames);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

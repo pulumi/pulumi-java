@@ -25,11 +25,11 @@ public final class GetSchemaResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"definition","name","type"})
+    @OutputCustomType.Constructor
     private GetSchemaResult(
-        String definition,
-        String name,
-        String type) {
+        @OutputCustomType.Parameter("definition") String definition,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("type") String type) {
         this.definition = definition;
         this.name = name;
         this.type = type;
@@ -81,17 +81,17 @@ public final class GetSchemaResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setDefinition(String definition) {
+        public Builder definition(String definition) {
             this.definition = Objects.requireNonNull(definition);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

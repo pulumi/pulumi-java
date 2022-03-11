@@ -20,13 +20,13 @@ public final class SuiteDefinitionConfigurationProperties {
     private final String rootGroup;
     private final @Nullable String suiteDefinitionName;
 
-    @OutputCustomType.Constructor({"devicePermissionRoleArn","devices","intendedForQualification","rootGroup","suiteDefinitionName"})
+    @OutputCustomType.Constructor
     private SuiteDefinitionConfigurationProperties(
-        String devicePermissionRoleArn,
-        @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
-        @Nullable Boolean intendedForQualification,
-        String rootGroup,
-        @Nullable String suiteDefinitionName) {
+        @OutputCustomType.Parameter("devicePermissionRoleArn") String devicePermissionRoleArn,
+        @OutputCustomType.Parameter("devices") @Nullable List<SuiteDefinitionDeviceUnderTest> devices,
+        @OutputCustomType.Parameter("intendedForQualification") @Nullable Boolean intendedForQualification,
+        @OutputCustomType.Parameter("rootGroup") String rootGroup,
+        @OutputCustomType.Parameter("suiteDefinitionName") @Nullable String suiteDefinitionName) {
         this.devicePermissionRoleArn = devicePermissionRoleArn;
         this.devices = devices;
         this.intendedForQualification = intendedForQualification;
@@ -78,27 +78,27 @@ public final class SuiteDefinitionConfigurationProperties {
     	      this.suiteDefinitionName = defaults.suiteDefinitionName;
         }
 
-        public Builder setDevicePermissionRoleArn(String devicePermissionRoleArn) {
+        public Builder devicePermissionRoleArn(String devicePermissionRoleArn) {
             this.devicePermissionRoleArn = Objects.requireNonNull(devicePermissionRoleArn);
             return this;
         }
 
-        public Builder setDevices(@Nullable List<SuiteDefinitionDeviceUnderTest> devices) {
+        public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTest> devices) {
             this.devices = devices;
             return this;
         }
 
-        public Builder setIntendedForQualification(@Nullable Boolean intendedForQualification) {
+        public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
             this.intendedForQualification = intendedForQualification;
             return this;
         }
 
-        public Builder setRootGroup(String rootGroup) {
+        public Builder rootGroup(String rootGroup) {
             this.rootGroup = Objects.requireNonNull(rootGroup);
             return this;
         }
 
-        public Builder setSuiteDefinitionName(@Nullable String suiteDefinitionName) {
+        public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
             this.suiteDefinitionName = suiteDefinitionName;
             return this;
         }

@@ -16,12 +16,12 @@ public final class AppCustomRule {
     private final @Nullable String status;
     private final String target;
 
-    @OutputCustomType.Constructor({"condition","source","status","target"})
+    @OutputCustomType.Constructor
     private AppCustomRule(
-        @Nullable String condition,
-        String source,
-        @Nullable String status,
-        String target) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("source") String source,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("target") String target) {
         this.condition = condition;
         this.source = source;
         this.status = status;
@@ -67,22 +67,22 @@ public final class AppCustomRule {
     	      this.target = defaults.target;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setTarget(String target) {
+        public Builder target(String target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }

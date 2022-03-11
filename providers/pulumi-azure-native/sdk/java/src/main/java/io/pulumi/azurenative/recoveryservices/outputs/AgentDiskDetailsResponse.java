@@ -37,13 +37,13 @@ public final class AgentDiskDetailsResponse {
      */
     private final Integer lunId;
 
-    @OutputCustomType.Constructor({"capacityInBytes","diskId","diskName","isOSDisk","lunId"})
+    @OutputCustomType.Constructor
     private AgentDiskDetailsResponse(
-        Double capacityInBytes,
-        String diskId,
-        String diskName,
-        String isOSDisk,
-        Integer lunId) {
+        @OutputCustomType.Parameter("capacityInBytes") Double capacityInBytes,
+        @OutputCustomType.Parameter("diskId") String diskId,
+        @OutputCustomType.Parameter("diskName") String diskName,
+        @OutputCustomType.Parameter("isOSDisk") String isOSDisk,
+        @OutputCustomType.Parameter("lunId") Integer lunId) {
         this.capacityInBytes = capacityInBytes;
         this.diskId = diskId;
         this.diskName = diskName;
@@ -115,27 +115,27 @@ public final class AgentDiskDetailsResponse {
     	      this.lunId = defaults.lunId;
         }
 
-        public Builder setCapacityInBytes(Double capacityInBytes) {
+        public Builder capacityInBytes(Double capacityInBytes) {
             this.capacityInBytes = Objects.requireNonNull(capacityInBytes);
             return this;
         }
 
-        public Builder setDiskId(String diskId) {
+        public Builder diskId(String diskId) {
             this.diskId = Objects.requireNonNull(diskId);
             return this;
         }
 
-        public Builder setDiskName(String diskName) {
+        public Builder diskName(String diskName) {
             this.diskName = Objects.requireNonNull(diskName);
             return this;
         }
 
-        public Builder setIsOSDisk(String isOSDisk) {
+        public Builder isOSDisk(String isOSDisk) {
             this.isOSDisk = Objects.requireNonNull(isOSDisk);
             return this;
         }
 
-        public Builder setLunId(Integer lunId) {
+        public Builder lunId(Integer lunId) {
             this.lunId = Objects.requireNonNull(lunId);
             return this;
         }

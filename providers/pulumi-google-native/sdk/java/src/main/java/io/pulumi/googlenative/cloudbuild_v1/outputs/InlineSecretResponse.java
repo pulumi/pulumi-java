@@ -21,10 +21,10 @@ public final class InlineSecretResponse {
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor({"envMap","kmsKeyName"})
+    @OutputCustomType.Constructor
     private InlineSecretResponse(
-        Map<String,String> envMap,
-        String kmsKeyName) {
+        @OutputCustomType.Parameter("envMap") Map<String,String> envMap,
+        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.envMap = envMap;
         this.kmsKeyName = kmsKeyName;
     }
@@ -66,12 +66,12 @@ public final class InlineSecretResponse {
     	      this.kmsKeyName = defaults.kmsKeyName;
         }
 
-        public Builder setEnvMap(Map<String,String> envMap) {
+        public Builder envMap(Map<String,String> envMap) {
             this.envMap = Objects.requireNonNull(envMap);
             return this;
         }
 
-        public Builder setKmsKeyName(String kmsKeyName) {
+        public Builder kmsKeyName(String kmsKeyName) {
             this.kmsKeyName = Objects.requireNonNull(kmsKeyName);
             return this;
         }

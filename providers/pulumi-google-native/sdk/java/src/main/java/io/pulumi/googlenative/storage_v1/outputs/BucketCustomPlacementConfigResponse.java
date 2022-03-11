@@ -16,8 +16,8 @@ public final class BucketCustomPlacementConfigResponse {
      */
     private final List<String> dataLocations;
 
-    @OutputCustomType.Constructor({"dataLocations"})
-    private BucketCustomPlacementConfigResponse(List<String> dataLocations) {
+    @OutputCustomType.Constructor
+    private BucketCustomPlacementConfigResponse(@OutputCustomType.Parameter("dataLocations") List<String> dataLocations) {
         this.dataLocations = dataLocations;
     }
 
@@ -49,7 +49,7 @@ public final class BucketCustomPlacementConfigResponse {
     	      this.dataLocations = defaults.dataLocations;
         }
 
-        public Builder setDataLocations(List<String> dataLocations) {
+        public Builder dataLocations(List<String> dataLocations) {
             this.dataLocations = Objects.requireNonNull(dataLocations);
             return this;
         }

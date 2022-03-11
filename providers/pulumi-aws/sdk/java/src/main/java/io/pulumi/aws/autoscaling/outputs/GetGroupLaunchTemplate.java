@@ -21,11 +21,11 @@ public final class GetGroupLaunchTemplate {
     private final String name;
     private final String version;
 
-    @OutputCustomType.Constructor({"id","name","version"})
+    @OutputCustomType.Constructor
     private GetGroupLaunchTemplate(
-        String id,
-        String name,
-        String version) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("version") String version) {
         this.id = id;
         this.name = name;
         this.version = version;
@@ -73,17 +73,17 @@ public final class GetGroupLaunchTemplate {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -17,8 +17,8 @@ public final class FlowDefinitionHumanLoopActivationConfig {
      */
     private final @Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig;
 
-    @OutputCustomType.Constructor({"humanLoopActivationConditionsConfig"})
-    private FlowDefinitionHumanLoopActivationConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
+    @OutputCustomType.Constructor
+    private FlowDefinitionHumanLoopActivationConfig(@OutputCustomType.Parameter("humanLoopActivationConditionsConfig") @Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
         this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
     }
 
@@ -50,7 +50,7 @@ public final class FlowDefinitionHumanLoopActivationConfig {
     	      this.humanLoopActivationConditionsConfig = defaults.humanLoopActivationConditionsConfig;
         }
 
-        public Builder setHumanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
+        public Builder humanLoopActivationConditionsConfig(@Nullable FlowDefinitionHumanLoopActivationConfigHumanLoopActivationConditionsConfig humanLoopActivationConditionsConfig) {
             this.humanLoopActivationConditionsConfig = humanLoopActivationConditionsConfig;
             return this;
         }

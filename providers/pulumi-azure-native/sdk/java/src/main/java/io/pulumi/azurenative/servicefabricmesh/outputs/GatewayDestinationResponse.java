@@ -25,11 +25,11 @@ public final class GatewayDestinationResponse {
      */
     private final String serviceName;
 
-    @OutputCustomType.Constructor({"applicationName","endpointName","serviceName"})
+    @OutputCustomType.Constructor
     private GatewayDestinationResponse(
-        String applicationName,
-        String endpointName,
-        String serviceName) {
+        @OutputCustomType.Parameter("applicationName") String applicationName,
+        @OutputCustomType.Parameter("endpointName") String endpointName,
+        @OutputCustomType.Parameter("serviceName") String serviceName) {
         this.applicationName = applicationName;
         this.endpointName = endpointName;
         this.serviceName = serviceName;
@@ -81,17 +81,17 @@ public final class GatewayDestinationResponse {
     	      this.serviceName = defaults.serviceName;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setEndpointName(String endpointName) {
+        public Builder endpointName(String endpointName) {
             this.endpointName = Objects.requireNonNull(endpointName);
             return this;
         }
 
-        public Builder setServiceName(String serviceName) {
+        public Builder serviceName(String serviceName) {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }

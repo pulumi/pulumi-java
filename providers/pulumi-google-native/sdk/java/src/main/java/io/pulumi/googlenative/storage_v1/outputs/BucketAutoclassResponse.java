@@ -21,10 +21,10 @@ public final class BucketAutoclassResponse {
      */
     private final String toggleTime;
 
-    @OutputCustomType.Constructor({"enabled","toggleTime"})
+    @OutputCustomType.Constructor
     private BucketAutoclassResponse(
-        Boolean enabled,
-        String toggleTime) {
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("toggleTime") String toggleTime) {
         this.enabled = enabled;
         this.toggleTime = toggleTime;
     }
@@ -66,12 +66,12 @@ public final class BucketAutoclassResponse {
     	      this.toggleTime = defaults.toggleTime;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setToggleTime(String toggleTime) {
+        public Builder toggleTime(String toggleTime) {
             this.toggleTime = Objects.requireNonNull(toggleTime);
             return this;
         }

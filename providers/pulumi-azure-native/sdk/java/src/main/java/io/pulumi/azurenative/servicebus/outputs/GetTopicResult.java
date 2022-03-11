@@ -111,27 +111,27 @@ public final class GetTopicResult {
      */
     private final String updatedAt;
 
-    @OutputCustomType.Constructor({"accessedAt","autoDeleteOnIdle","countDetails","createdAt","defaultMessageTimeToLive","duplicateDetectionHistoryTimeWindow","enableBatchedOperations","enableExpress","enablePartitioning","id","maxSizeInMegabytes","name","requiresDuplicateDetection","sizeInBytes","status","subscriptionCount","supportOrdering","type","updatedAt"})
+    @OutputCustomType.Constructor
     private GetTopicResult(
-        String accessedAt,
-        @Nullable String autoDeleteOnIdle,
-        MessageCountDetailsResponse countDetails,
-        String createdAt,
-        @Nullable String defaultMessageTimeToLive,
-        @Nullable String duplicateDetectionHistoryTimeWindow,
-        @Nullable Boolean enableBatchedOperations,
-        @Nullable Boolean enableExpress,
-        @Nullable Boolean enablePartitioning,
-        String id,
-        @Nullable Integer maxSizeInMegabytes,
-        String name,
-        @Nullable Boolean requiresDuplicateDetection,
-        Double sizeInBytes,
-        @Nullable String status,
-        Integer subscriptionCount,
-        @Nullable Boolean supportOrdering,
-        String type,
-        String updatedAt) {
+        @OutputCustomType.Parameter("accessedAt") String accessedAt,
+        @OutputCustomType.Parameter("autoDeleteOnIdle") @Nullable String autoDeleteOnIdle,
+        @OutputCustomType.Parameter("countDetails") MessageCountDetailsResponse countDetails,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("defaultMessageTimeToLive") @Nullable String defaultMessageTimeToLive,
+        @OutputCustomType.Parameter("duplicateDetectionHistoryTimeWindow") @Nullable String duplicateDetectionHistoryTimeWindow,
+        @OutputCustomType.Parameter("enableBatchedOperations") @Nullable Boolean enableBatchedOperations,
+        @OutputCustomType.Parameter("enableExpress") @Nullable Boolean enableExpress,
+        @OutputCustomType.Parameter("enablePartitioning") @Nullable Boolean enablePartitioning,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("maxSizeInMegabytes") @Nullable Integer maxSizeInMegabytes,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("requiresDuplicateDetection") @Nullable Boolean requiresDuplicateDetection,
+        @OutputCustomType.Parameter("sizeInBytes") Double sizeInBytes,
+        @OutputCustomType.Parameter("status") @Nullable String status,
+        @OutputCustomType.Parameter("subscriptionCount") Integer subscriptionCount,
+        @OutputCustomType.Parameter("supportOrdering") @Nullable Boolean supportOrdering,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("updatedAt") String updatedAt) {
         this.accessedAt = accessedAt;
         this.autoDeleteOnIdle = autoDeleteOnIdle;
         this.countDetails = countDetails;
@@ -343,97 +343,97 @@ public final class GetTopicResult {
     	      this.updatedAt = defaults.updatedAt;
         }
 
-        public Builder setAccessedAt(String accessedAt) {
+        public Builder accessedAt(String accessedAt) {
             this.accessedAt = Objects.requireNonNull(accessedAt);
             return this;
         }
 
-        public Builder setAutoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
+        public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
             this.autoDeleteOnIdle = autoDeleteOnIdle;
             return this;
         }
 
-        public Builder setCountDetails(MessageCountDetailsResponse countDetails) {
+        public Builder countDetails(MessageCountDetailsResponse countDetails) {
             this.countDetails = Objects.requireNonNull(countDetails);
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setDefaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
+        public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
             this.defaultMessageTimeToLive = defaultMessageTimeToLive;
             return this;
         }
 
-        public Builder setDuplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
+        public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
             this.duplicateDetectionHistoryTimeWindow = duplicateDetectionHistoryTimeWindow;
             return this;
         }
 
-        public Builder setEnableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
+        public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
             this.enableBatchedOperations = enableBatchedOperations;
             return this;
         }
 
-        public Builder setEnableExpress(@Nullable Boolean enableExpress) {
+        public Builder enableExpress(@Nullable Boolean enableExpress) {
             this.enableExpress = enableExpress;
             return this;
         }
 
-        public Builder setEnablePartitioning(@Nullable Boolean enablePartitioning) {
+        public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
             this.enablePartitioning = enablePartitioning;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setMaxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
+        public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
             this.maxSizeInMegabytes = maxSizeInMegabytes;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setRequiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
+        public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
             this.requiresDuplicateDetection = requiresDuplicateDetection;
             return this;
         }
 
-        public Builder setSizeInBytes(Double sizeInBytes) {
+        public Builder sizeInBytes(Double sizeInBytes) {
             this.sizeInBytes = Objects.requireNonNull(sizeInBytes);
             return this;
         }
 
-        public Builder setStatus(@Nullable String status) {
+        public Builder status(@Nullable String status) {
             this.status = status;
             return this;
         }
 
-        public Builder setSubscriptionCount(Integer subscriptionCount) {
+        public Builder subscriptionCount(Integer subscriptionCount) {
             this.subscriptionCount = Objects.requireNonNull(subscriptionCount);
             return this;
         }
 
-        public Builder setSupportOrdering(@Nullable Boolean supportOrdering) {
+        public Builder supportOrdering(@Nullable Boolean supportOrdering) {
             this.supportOrdering = supportOrdering;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUpdatedAt(String updatedAt) {
+        public Builder updatedAt(String updatedAt) {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }

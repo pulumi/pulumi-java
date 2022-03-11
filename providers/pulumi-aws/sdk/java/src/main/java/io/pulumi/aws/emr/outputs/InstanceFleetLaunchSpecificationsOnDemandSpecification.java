@@ -15,8 +15,8 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecification {
      */
     private final String allocationStrategy;
 
-    @OutputCustomType.Constructor({"allocationStrategy"})
-    private InstanceFleetLaunchSpecificationsOnDemandSpecification(String allocationStrategy) {
+    @OutputCustomType.Constructor
+    private InstanceFleetLaunchSpecificationsOnDemandSpecification(@OutputCustomType.Parameter("allocationStrategy") String allocationStrategy) {
         this.allocationStrategy = allocationStrategy;
     }
 
@@ -48,7 +48,7 @@ public final class InstanceFleetLaunchSpecificationsOnDemandSpecification {
     	      this.allocationStrategy = defaults.allocationStrategy;
         }
 
-        public Builder setAllocationStrategy(String allocationStrategy) {
+        public Builder allocationStrategy(String allocationStrategy) {
             this.allocationStrategy = Objects.requireNonNull(allocationStrategy);
             return this;
         }

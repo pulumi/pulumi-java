@@ -28,11 +28,11 @@ public final class ReportDeliveryChannelProperties {
      */
     private final @Nullable String s3KeyPrefix;
 
-    @OutputCustomType.Constructor({"formats","s3BucketName","s3KeyPrefix"})
+    @OutputCustomType.Constructor
     private ReportDeliveryChannelProperties(
-        @Nullable List<String> formats,
-        String s3BucketName,
-        @Nullable String s3KeyPrefix) {
+        @OutputCustomType.Parameter("formats") @Nullable List<String> formats,
+        @OutputCustomType.Parameter("s3BucketName") String s3BucketName,
+        @OutputCustomType.Parameter("s3KeyPrefix") @Nullable String s3KeyPrefix) {
         this.formats = formats;
         this.s3BucketName = s3BucketName;
         this.s3KeyPrefix = s3KeyPrefix;
@@ -84,17 +84,17 @@ public final class ReportDeliveryChannelProperties {
     	      this.s3KeyPrefix = defaults.s3KeyPrefix;
         }
 
-        public Builder setFormats(@Nullable List<String> formats) {
+        public Builder formats(@Nullable List<String> formats) {
             this.formats = formats;
             return this;
         }
 
-        public Builder setS3BucketName(String s3BucketName) {
+        public Builder s3BucketName(String s3BucketName) {
             this.s3BucketName = Objects.requireNonNull(s3BucketName);
             return this;
         }
 
-        public Builder setS3KeyPrefix(@Nullable String s3KeyPrefix) {
+        public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }

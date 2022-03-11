@@ -21,10 +21,10 @@ public final class WorkspaceCustomBooleanParameterResponse {
      */
     private final Boolean value;
 
-    @OutputCustomType.Constructor({"type","value"})
+    @OutputCustomType.Constructor
     private WorkspaceCustomBooleanParameterResponse(
-        String type,
-        Boolean value) {
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("value") Boolean value) {
         this.type = type;
         this.value = value;
     }
@@ -66,12 +66,12 @@ public final class WorkspaceCustomBooleanParameterResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setValue(Boolean value) {
+        public Builder value(Boolean value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

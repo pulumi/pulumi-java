@@ -24,10 +24,10 @@ public final class CanonicalProfileDefinitionResponse {
      */
     private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
-    @OutputCustomType.Constructor({"canonicalProfileId","properties"})
+    @OutputCustomType.Constructor
     private CanonicalProfileDefinitionResponse(
-        @Nullable Integer canonicalProfileId,
-        @Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
+        @OutputCustomType.Parameter("canonicalProfileId") @Nullable Integer canonicalProfileId,
+        @OutputCustomType.Parameter("properties") @Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
         this.canonicalProfileId = canonicalProfileId;
         this.properties = properties;
     }
@@ -69,12 +69,12 @@ public final class CanonicalProfileDefinitionResponse {
     	      this.properties = defaults.properties;
         }
 
-        public Builder setCanonicalProfileId(@Nullable Integer canonicalProfileId) {
+        public Builder canonicalProfileId(@Nullable Integer canonicalProfileId) {
             this.canonicalProfileId = canonicalProfileId;
             return this;
         }
 
-        public Builder setProperties(@Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
+        public Builder properties(@Nullable List<CanonicalProfileDefinitionResponseProperties> properties) {
             this.properties = properties;
             return this;
         }

@@ -73,12 +73,12 @@ public final class AzureResourceDetailsResponse extends io.pulumi.resources.Invo
     	      this.source = defaults.source;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

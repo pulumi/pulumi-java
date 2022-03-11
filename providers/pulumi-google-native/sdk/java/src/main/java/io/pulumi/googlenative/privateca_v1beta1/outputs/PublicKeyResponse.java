@@ -20,10 +20,10 @@ public final class PublicKeyResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"key","type"})
+    @OutputCustomType.Constructor
     private PublicKeyResponse(
-        String key,
-        String type) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("type") String type) {
         this.key = key;
         this.type = type;
     }
@@ -65,12 +65,12 @@ public final class PublicKeyResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

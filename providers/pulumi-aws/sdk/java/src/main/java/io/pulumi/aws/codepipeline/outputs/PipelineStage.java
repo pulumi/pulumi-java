@@ -22,10 +22,10 @@ public final class PipelineStage {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"actions","name"})
+    @OutputCustomType.Constructor
     private PipelineStage(
-        List<PipelineStageAction> actions,
-        String name) {
+        @OutputCustomType.Parameter("actions") List<PipelineStageAction> actions,
+        @OutputCustomType.Parameter("name") String name) {
         this.actions = actions;
         this.name = name;
     }
@@ -67,12 +67,12 @@ public final class PipelineStage {
     	      this.name = defaults.name;
         }
 
-        public Builder setActions(List<PipelineStageAction> actions) {
+        public Builder actions(List<PipelineStageAction> actions) {
             this.actions = Objects.requireNonNull(actions);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

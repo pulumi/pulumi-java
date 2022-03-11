@@ -21,10 +21,10 @@ public final class RetentionPolicyResponse {
      */
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor({"days","enabled"})
+    @OutputCustomType.Constructor
     private RetentionPolicyResponse(
-        Integer days,
-        Boolean enabled) {
+        @OutputCustomType.Parameter("days") Integer days,
+        @OutputCustomType.Parameter("enabled") Boolean enabled) {
         this.days = days;
         this.enabled = enabled;
     }
@@ -66,12 +66,12 @@ public final class RetentionPolicyResponse {
     	      this.enabled = defaults.enabled;
         }
 
-        public Builder setDays(Integer days) {
+        public Builder days(Integer days) {
             this.days = Objects.requireNonNull(days);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }

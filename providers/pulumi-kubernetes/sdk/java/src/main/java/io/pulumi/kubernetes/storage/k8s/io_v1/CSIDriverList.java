@@ -126,8 +126,8 @@ public class CSIDriverList extends io.pulumi.resources.CustomResource {
     private static CSIDriverListArgs makeArgs(CSIDriverListArgs args) {
         var builder = args == null ? CSIDriverListArgs.builder() : CSIDriverListArgs.builder(args);
         return builder
-            .setApiVersion("storage.k8s.io/v1")
-            .setKind("CSIDriverList")
+            .apiVersion("storage.k8s.io/v1")
+            .kind("CSIDriverList")
             .build();
     }
 

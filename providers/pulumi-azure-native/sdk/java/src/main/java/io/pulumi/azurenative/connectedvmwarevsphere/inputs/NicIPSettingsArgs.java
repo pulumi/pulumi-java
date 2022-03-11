@@ -125,52 +125,52 @@ public final class NicIPSettingsArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnetMask = defaults.subnetMask;
         }
 
-        public Builder setAllocationMethod(@Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod) {
+        public Builder allocationMethod(@Nullable Input<Either<String,IPAddressAllocationMethod>> allocationMethod) {
             this.allocationMethod = allocationMethod;
             return this;
         }
 
-        public Builder setAllocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
+        public Builder allocationMethod(@Nullable Either<String,IPAddressAllocationMethod> allocationMethod) {
             this.allocationMethod = Input.ofNullable(allocationMethod);
             return this;
         }
 
-        public Builder setDnsServers(@Nullable Input<List<String>> dnsServers) {
+        public Builder dnsServers(@Nullable Input<List<String>> dnsServers) {
             this.dnsServers = dnsServers;
             return this;
         }
 
-        public Builder setDnsServers(@Nullable List<String> dnsServers) {
+        public Builder dnsServers(@Nullable List<String> dnsServers) {
             this.dnsServers = Input.ofNullable(dnsServers);
             return this;
         }
 
-        public Builder setGateway(@Nullable Input<List<String>> gateway) {
+        public Builder gateway(@Nullable Input<List<String>> gateway) {
             this.gateway = gateway;
             return this;
         }
 
-        public Builder setGateway(@Nullable List<String> gateway) {
+        public Builder gateway(@Nullable List<String> gateway) {
             this.gateway = Input.ofNullable(gateway);
             return this;
         }
 
-        public Builder setIpAddress(@Nullable Input<String> ipAddress) {
+        public Builder ipAddress(@Nullable Input<String> ipAddress) {
             this.ipAddress = ipAddress;
             return this;
         }
 
-        public Builder setIpAddress(@Nullable String ipAddress) {
+        public Builder ipAddress(@Nullable String ipAddress) {
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable Input<String> subnetMask) {
+        public Builder subnetMask(@Nullable Input<String> subnetMask) {
             this.subnetMask = subnetMask;
             return this;
         }
 
-        public Builder setSubnetMask(@Nullable String subnetMask) {
+        public Builder subnetMask(@Nullable String subnetMask) {
             this.subnetMask = Input.ofNullable(subnetMask);
             return this;
         }

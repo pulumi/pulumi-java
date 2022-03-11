@@ -28,11 +28,11 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
      */
     private final @Nullable String times;
 
-    @OutputCustomType.Constructor({"interval","intervalUnit","times"})
+    @OutputCustomType.Constructor
     private LifecyclePolicyPolicyDetailsScheduleCreateRule(
-        Integer interval,
-        @Nullable String intervalUnit,
-        @Nullable String times) {
+        @OutputCustomType.Parameter("interval") Integer interval,
+        @OutputCustomType.Parameter("intervalUnit") @Nullable String intervalUnit,
+        @OutputCustomType.Parameter("times") @Nullable String times) {
         this.interval = interval;
         this.intervalUnit = intervalUnit;
         this.times = times;
@@ -84,17 +84,17 @@ public final class LifecyclePolicyPolicyDetailsScheduleCreateRule {
     	      this.times = defaults.times;
         }
 
-        public Builder setInterval(Integer interval) {
+        public Builder interval(Integer interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setIntervalUnit(@Nullable String intervalUnit) {
+        public Builder intervalUnit(@Nullable String intervalUnit) {
             this.intervalUnit = intervalUnit;
             return this;
         }
 
-        public Builder setTimes(@Nullable String times) {
+        public Builder times(@Nullable String times) {
             this.times = times;
             return this;
         }

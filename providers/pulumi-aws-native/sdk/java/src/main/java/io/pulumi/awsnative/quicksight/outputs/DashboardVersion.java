@@ -64,18 +64,18 @@ public final class DashboardVersion {
      */
     private final @Nullable Double versionNumber;
 
-    @OutputCustomType.Constructor({"arn","createdTime","dataSetArns","description","errors","sheets","sourceEntityArn","status","themeArn","versionNumber"})
+    @OutputCustomType.Constructor
     private DashboardVersion(
-        @Nullable String arn,
-        @Nullable String createdTime,
-        @Nullable List<String> dataSetArns,
-        @Nullable String description,
-        @Nullable List<DashboardError> errors,
-        @Nullable List<DashboardSheet> sheets,
-        @Nullable String sourceEntityArn,
-        @Nullable DashboardResourceStatus status,
-        @Nullable String themeArn,
-        @Nullable Double versionNumber) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("createdTime") @Nullable String createdTime,
+        @OutputCustomType.Parameter("dataSetArns") @Nullable List<String> dataSetArns,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("errors") @Nullable List<DashboardError> errors,
+        @OutputCustomType.Parameter("sheets") @Nullable List<DashboardSheet> sheets,
+        @OutputCustomType.Parameter("sourceEntityArn") @Nullable String sourceEntityArn,
+        @OutputCustomType.Parameter("status") @Nullable DashboardResourceStatus status,
+        @OutputCustomType.Parameter("themeArn") @Nullable String themeArn,
+        @OutputCustomType.Parameter("versionNumber") @Nullable Double versionNumber) {
         this.arn = arn;
         this.createdTime = createdTime;
         this.dataSetArns = dataSetArns;
@@ -194,52 +194,52 @@ public final class DashboardVersion {
     	      this.versionNumber = defaults.versionNumber;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setDataSetArns(@Nullable List<String> dataSetArns) {
+        public Builder dataSetArns(@Nullable List<String> dataSetArns) {
             this.dataSetArns = dataSetArns;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setErrors(@Nullable List<DashboardError> errors) {
+        public Builder errors(@Nullable List<DashboardError> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setSheets(@Nullable List<DashboardSheet> sheets) {
+        public Builder sheets(@Nullable List<DashboardSheet> sheets) {
             this.sheets = sheets;
             return this;
         }
 
-        public Builder setSourceEntityArn(@Nullable String sourceEntityArn) {
+        public Builder sourceEntityArn(@Nullable String sourceEntityArn) {
             this.sourceEntityArn = sourceEntityArn;
             return this;
         }
 
-        public Builder setStatus(@Nullable DashboardResourceStatus status) {
+        public Builder status(@Nullable DashboardResourceStatus status) {
             this.status = status;
             return this;
         }
 
-        public Builder setThemeArn(@Nullable String themeArn) {
+        public Builder themeArn(@Nullable String themeArn) {
             this.themeArn = themeArn;
             return this;
         }
 
-        public Builder setVersionNumber(@Nullable Double versionNumber) {
+        public Builder versionNumber(@Nullable Double versionNumber) {
             this.versionNumber = versionNumber;
             return this;
         }

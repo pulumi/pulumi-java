@@ -22,10 +22,10 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
      */
     private final List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor({"allowAllBundleIds","allowedBundleIds"})
+    @OutputCustomType.Constructor
     private GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(
-        Boolean allowAllBundleIds,
-        List<String> allowedBundleIds) {
+        @OutputCustomType.Parameter("allowAllBundleIds") Boolean allowAllBundleIds,
+        @OutputCustomType.Parameter("allowedBundleIds") List<String> allowedBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         this.allowedBundleIds = allowedBundleIds;
     }
@@ -67,12 +67,12 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse {
     	      this.allowedBundleIds = defaults.allowedBundleIds;
         }
 
-        public Builder setAllowAllBundleIds(Boolean allowAllBundleIds) {
+        public Builder allowAllBundleIds(Boolean allowAllBundleIds) {
             this.allowAllBundleIds = Objects.requireNonNull(allowAllBundleIds);
             return this;
         }
 
-        public Builder setAllowedBundleIds(List<String> allowedBundleIds) {
+        public Builder allowedBundleIds(List<String> allowedBundleIds) {
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }

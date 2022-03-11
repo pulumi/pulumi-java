@@ -79,20 +79,20 @@ public final class GetStageResult {
      */
     private final @Nullable Object variables;
 
-    @OutputCustomType.Constructor({"accessLogSetting","cacheClusterEnabled","cacheClusterSize","canarySetting","clientCertificateId","deploymentId","description","documentationVersion","methodSettings","tags","tracingEnabled","variables"})
+    @OutputCustomType.Constructor
     private GetStageResult(
-        @Nullable StageAccessLogSetting accessLogSetting,
-        @Nullable Boolean cacheClusterEnabled,
-        @Nullable String cacheClusterSize,
-        @Nullable StageCanarySetting canarySetting,
-        @Nullable String clientCertificateId,
-        @Nullable String deploymentId,
-        @Nullable String description,
-        @Nullable String documentationVersion,
-        @Nullable List<StageMethodSetting> methodSettings,
-        @Nullable List<StageTag> tags,
-        @Nullable Boolean tracingEnabled,
-        @Nullable Object variables) {
+        @OutputCustomType.Parameter("accessLogSetting") @Nullable StageAccessLogSetting accessLogSetting,
+        @OutputCustomType.Parameter("cacheClusterEnabled") @Nullable Boolean cacheClusterEnabled,
+        @OutputCustomType.Parameter("cacheClusterSize") @Nullable String cacheClusterSize,
+        @OutputCustomType.Parameter("canarySetting") @Nullable StageCanarySetting canarySetting,
+        @OutputCustomType.Parameter("clientCertificateId") @Nullable String clientCertificateId,
+        @OutputCustomType.Parameter("deploymentId") @Nullable String deploymentId,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("documentationVersion") @Nullable String documentationVersion,
+        @OutputCustomType.Parameter("methodSettings") @Nullable List<StageMethodSetting> methodSettings,
+        @OutputCustomType.Parameter("tags") @Nullable List<StageTag> tags,
+        @OutputCustomType.Parameter("tracingEnabled") @Nullable Boolean tracingEnabled,
+        @OutputCustomType.Parameter("variables") @Nullable Object variables) {
         this.accessLogSetting = accessLogSetting;
         this.cacheClusterEnabled = cacheClusterEnabled;
         this.cacheClusterSize = cacheClusterSize;
@@ -234,62 +234,62 @@ public final class GetStageResult {
     	      this.variables = defaults.variables;
         }
 
-        public Builder setAccessLogSetting(@Nullable StageAccessLogSetting accessLogSetting) {
+        public Builder accessLogSetting(@Nullable StageAccessLogSetting accessLogSetting) {
             this.accessLogSetting = accessLogSetting;
             return this;
         }
 
-        public Builder setCacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
+        public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
             this.cacheClusterEnabled = cacheClusterEnabled;
             return this;
         }
 
-        public Builder setCacheClusterSize(@Nullable String cacheClusterSize) {
+        public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
             this.cacheClusterSize = cacheClusterSize;
             return this;
         }
 
-        public Builder setCanarySetting(@Nullable StageCanarySetting canarySetting) {
+        public Builder canarySetting(@Nullable StageCanarySetting canarySetting) {
             this.canarySetting = canarySetting;
             return this;
         }
 
-        public Builder setClientCertificateId(@Nullable String clientCertificateId) {
+        public Builder clientCertificateId(@Nullable String clientCertificateId) {
             this.clientCertificateId = clientCertificateId;
             return this;
         }
 
-        public Builder setDeploymentId(@Nullable String deploymentId) {
+        public Builder deploymentId(@Nullable String deploymentId) {
             this.deploymentId = deploymentId;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDocumentationVersion(@Nullable String documentationVersion) {
+        public Builder documentationVersion(@Nullable String documentationVersion) {
             this.documentationVersion = documentationVersion;
             return this;
         }
 
-        public Builder setMethodSettings(@Nullable List<StageMethodSetting> methodSettings) {
+        public Builder methodSettings(@Nullable List<StageMethodSetting> methodSettings) {
             this.methodSettings = methodSettings;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StageTag> tags) {
+        public Builder tags(@Nullable List<StageTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTracingEnabled(@Nullable Boolean tracingEnabled) {
+        public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
             this.tracingEnabled = tracingEnabled;
             return this;
         }
 
-        public Builder setVariables(@Nullable Object variables) {
+        public Builder variables(@Nullable Object variables) {
             this.variables = variables;
             return this;
         }

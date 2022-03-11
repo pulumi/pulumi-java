@@ -53,16 +53,16 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
      */
     private final List<String> subaccounts;
 
-    @OutputCustomType.Constructor({"calendarPeriod","creditTypes","creditTypesTreatment","customPeriod","labels","projects","services","subaccounts"})
+    @OutputCustomType.Constructor
     private GoogleCloudBillingBudgetsV1beta1FilterResponse(
-        String calendarPeriod,
-        List<String> creditTypes,
-        String creditTypesTreatment,
-        GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod,
-        Map<String,String> labels,
-        List<String> projects,
-        List<String> services,
-        List<String> subaccounts) {
+        @OutputCustomType.Parameter("calendarPeriod") String calendarPeriod,
+        @OutputCustomType.Parameter("creditTypes") List<String> creditTypes,
+        @OutputCustomType.Parameter("creditTypesTreatment") String creditTypesTreatment,
+        @OutputCustomType.Parameter("customPeriod") GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod,
+        @OutputCustomType.Parameter("labels") Map<String,String> labels,
+        @OutputCustomType.Parameter("projects") List<String> projects,
+        @OutputCustomType.Parameter("services") List<String> services,
+        @OutputCustomType.Parameter("subaccounts") List<String> subaccounts) {
         this.calendarPeriod = calendarPeriod;
         this.creditTypes = creditTypes;
         this.creditTypesTreatment = creditTypesTreatment;
@@ -164,42 +164,42 @@ public final class GoogleCloudBillingBudgetsV1beta1FilterResponse {
     	      this.subaccounts = defaults.subaccounts;
         }
 
-        public Builder setCalendarPeriod(String calendarPeriod) {
+        public Builder calendarPeriod(String calendarPeriod) {
             this.calendarPeriod = Objects.requireNonNull(calendarPeriod);
             return this;
         }
 
-        public Builder setCreditTypes(List<String> creditTypes) {
+        public Builder creditTypes(List<String> creditTypes) {
             this.creditTypes = Objects.requireNonNull(creditTypes);
             return this;
         }
 
-        public Builder setCreditTypesTreatment(String creditTypesTreatment) {
+        public Builder creditTypesTreatment(String creditTypesTreatment) {
             this.creditTypesTreatment = Objects.requireNonNull(creditTypesTreatment);
             return this;
         }
 
-        public Builder setCustomPeriod(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod) {
+        public Builder customPeriod(GoogleCloudBillingBudgetsV1beta1CustomPeriodResponse customPeriod) {
             this.customPeriod = Objects.requireNonNull(customPeriod);
             return this;
         }
 
-        public Builder setLabels(Map<String,String> labels) {
+        public Builder labels(Map<String,String> labels) {
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
 
-        public Builder setProjects(List<String> projects) {
+        public Builder projects(List<String> projects) {
             this.projects = Objects.requireNonNull(projects);
             return this;
         }
 
-        public Builder setServices(List<String> services) {
+        public Builder services(List<String> services) {
             this.services = Objects.requireNonNull(services);
             return this;
         }
 
-        public Builder setSubaccounts(List<String> subaccounts) {
+        public Builder subaccounts(List<String> subaccounts) {
             this.subaccounts = Objects.requireNonNull(subaccounts);
             return this;
         }

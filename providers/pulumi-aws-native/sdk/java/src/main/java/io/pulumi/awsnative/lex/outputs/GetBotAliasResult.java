@@ -30,17 +30,17 @@ public final class GetBotAliasResult {
      */
     private final @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings;
 
-    @OutputCustomType.Constructor({"arn","botAliasId","botAliasLocaleSettings","botAliasName","botAliasStatus","botVersion","conversationLogSettings","description","sentimentAnalysisSettings"})
+    @OutputCustomType.Constructor
     private GetBotAliasResult(
-        @Nullable String arn,
-        @Nullable String botAliasId,
-        @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
-        @Nullable String botAliasName,
-        @Nullable BotAliasStatus botAliasStatus,
-        @Nullable String botVersion,
-        @Nullable BotAliasConversationLogSettings conversationLogSettings,
-        @Nullable String description,
-        @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("botAliasId") @Nullable String botAliasId,
+        @OutputCustomType.Parameter("botAliasLocaleSettings") @Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings,
+        @OutputCustomType.Parameter("botAliasName") @Nullable String botAliasName,
+        @OutputCustomType.Parameter("botAliasStatus") @Nullable BotAliasStatus botAliasStatus,
+        @OutputCustomType.Parameter("botVersion") @Nullable String botVersion,
+        @OutputCustomType.Parameter("conversationLogSettings") @Nullable BotAliasConversationLogSettings conversationLogSettings,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("sentimentAnalysisSettings") @Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
         this.arn = arn;
         this.botAliasId = botAliasId;
         this.botAliasLocaleSettings = botAliasLocaleSettings;
@@ -120,47 +120,47 @@ public final class GetBotAliasResult {
     	      this.sentimentAnalysisSettings = defaults.sentimentAnalysisSettings;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setBotAliasId(@Nullable String botAliasId) {
+        public Builder botAliasId(@Nullable String botAliasId) {
             this.botAliasId = botAliasId;
             return this;
         }
 
-        public Builder setBotAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings) {
+        public Builder botAliasLocaleSettings(@Nullable List<BotAliasLocaleSettingsItem> botAliasLocaleSettings) {
             this.botAliasLocaleSettings = botAliasLocaleSettings;
             return this;
         }
 
-        public Builder setBotAliasName(@Nullable String botAliasName) {
+        public Builder botAliasName(@Nullable String botAliasName) {
             this.botAliasName = botAliasName;
             return this;
         }
 
-        public Builder setBotAliasStatus(@Nullable BotAliasStatus botAliasStatus) {
+        public Builder botAliasStatus(@Nullable BotAliasStatus botAliasStatus) {
             this.botAliasStatus = botAliasStatus;
             return this;
         }
 
-        public Builder setBotVersion(@Nullable String botVersion) {
+        public Builder botVersion(@Nullable String botVersion) {
             this.botVersion = botVersion;
             return this;
         }
 
-        public Builder setConversationLogSettings(@Nullable BotAliasConversationLogSettings conversationLogSettings) {
+        public Builder conversationLogSettings(@Nullable BotAliasConversationLogSettings conversationLogSettings) {
             this.conversationLogSettings = conversationLogSettings;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setSentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
+        public Builder sentimentAnalysisSettings(@Nullable SentimentAnalysisSettingsProperties sentimentAnalysisSettings) {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }

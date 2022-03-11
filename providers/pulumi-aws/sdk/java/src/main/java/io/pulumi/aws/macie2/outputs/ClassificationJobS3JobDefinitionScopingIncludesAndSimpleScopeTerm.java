@@ -28,11 +28,11 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"comparator","key","values"})
+    @OutputCustomType.Constructor
     private ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScopeTerm(
-        @Nullable String comparator,
-        @Nullable String key,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("comparator") @Nullable String comparator,
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.comparator = comparator;
         this.key = key;
         this.values = values;
@@ -84,17 +84,17 @@ public final class ClassificationJobS3JobDefinitionScopingIncludesAndSimpleScope
     	      this.values = defaults.values;
         }
 
-        public Builder setComparator(@Nullable String comparator) {
+        public Builder comparator(@Nullable String comparator) {
             this.comparator = comparator;
             return this;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

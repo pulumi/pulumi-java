@@ -35,20 +35,20 @@ public final class ConnectorProfileProperties {
     private final @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva;
     private final @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk;
 
-    @OutputCustomType.Constructor({"datadog","dynatrace","inforNexus","marketo","redshift","sAPOData","salesforce","serviceNow","slack","snowflake","veeva","zendesk"})
+    @OutputCustomType.Constructor
     private ConnectorProfileProperties(
-        @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
-        @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
-        @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
-        @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
-        @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
-        @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
-        @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
-        @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
-        @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
-        @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
-        @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
-        @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
+        @OutputCustomType.Parameter("datadog") @Nullable ConnectorProfileDatadogConnectorProfileProperties datadog,
+        @OutputCustomType.Parameter("dynatrace") @Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace,
+        @OutputCustomType.Parameter("inforNexus") @Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus,
+        @OutputCustomType.Parameter("marketo") @Nullable ConnectorProfileMarketoConnectorProfileProperties marketo,
+        @OutputCustomType.Parameter("redshift") @Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift,
+        @OutputCustomType.Parameter("sAPOData") @Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData,
+        @OutputCustomType.Parameter("salesforce") @Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce,
+        @OutputCustomType.Parameter("serviceNow") @Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow,
+        @OutputCustomType.Parameter("slack") @Nullable ConnectorProfileSlackConnectorProfileProperties slack,
+        @OutputCustomType.Parameter("snowflake") @Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake,
+        @OutputCustomType.Parameter("veeva") @Nullable ConnectorProfileVeevaConnectorProfileProperties veeva,
+        @OutputCustomType.Parameter("zendesk") @Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
         this.datadog = datadog;
         this.dynatrace = dynatrace;
         this.inforNexus = inforNexus;
@@ -142,62 +142,62 @@ public final class ConnectorProfileProperties {
     	      this.zendesk = defaults.zendesk;
         }
 
-        public Builder setDatadog(@Nullable ConnectorProfileDatadogConnectorProfileProperties datadog) {
+        public Builder datadog(@Nullable ConnectorProfileDatadogConnectorProfileProperties datadog) {
             this.datadog = datadog;
             return this;
         }
 
-        public Builder setDynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace) {
+        public Builder dynatrace(@Nullable ConnectorProfileDynatraceConnectorProfileProperties dynatrace) {
             this.dynatrace = dynatrace;
             return this;
         }
 
-        public Builder setInforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus) {
+        public Builder inforNexus(@Nullable ConnectorProfileInforNexusConnectorProfileProperties inforNexus) {
             this.inforNexus = inforNexus;
             return this;
         }
 
-        public Builder setMarketo(@Nullable ConnectorProfileMarketoConnectorProfileProperties marketo) {
+        public Builder marketo(@Nullable ConnectorProfileMarketoConnectorProfileProperties marketo) {
             this.marketo = marketo;
             return this;
         }
 
-        public Builder setRedshift(@Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift) {
+        public Builder redshift(@Nullable ConnectorProfileRedshiftConnectorProfileProperties redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setSAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData) {
+        public Builder sAPOData(@Nullable ConnectorProfileSAPODataConnectorProfileProperties sAPOData) {
             this.sAPOData = sAPOData;
             return this;
         }
 
-        public Builder setSalesforce(@Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce) {
+        public Builder salesforce(@Nullable ConnectorProfileSalesforceConnectorProfileProperties salesforce) {
             this.salesforce = salesforce;
             return this;
         }
 
-        public Builder setServiceNow(@Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow) {
+        public Builder serviceNow(@Nullable ConnectorProfileServiceNowConnectorProfileProperties serviceNow) {
             this.serviceNow = serviceNow;
             return this;
         }
 
-        public Builder setSlack(@Nullable ConnectorProfileSlackConnectorProfileProperties slack) {
+        public Builder slack(@Nullable ConnectorProfileSlackConnectorProfileProperties slack) {
             this.slack = slack;
             return this;
         }
 
-        public Builder setSnowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake) {
+        public Builder snowflake(@Nullable ConnectorProfileSnowflakeConnectorProfileProperties snowflake) {
             this.snowflake = snowflake;
             return this;
         }
 
-        public Builder setVeeva(@Nullable ConnectorProfileVeevaConnectorProfileProperties veeva) {
+        public Builder veeva(@Nullable ConnectorProfileVeevaConnectorProfileProperties veeva) {
             this.veeva = veeva;
             return this;
         }
 
-        public Builder setZendesk(@Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
+        public Builder zendesk(@Nullable ConnectorProfileZendeskConnectorProfileProperties zendesk) {
             this.zendesk = zendesk;
             return this;
         }

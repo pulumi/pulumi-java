@@ -25,11 +25,11 @@ public final class SystemServiceResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"publicIpAddress","systemServiceType","version"})
+    @OutputCustomType.Constructor
     private SystemServiceResponse(
-        String publicIpAddress,
-        String systemServiceType,
-        String version) {
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("systemServiceType") String systemServiceType,
+        @OutputCustomType.Parameter("version") String version) {
         this.publicIpAddress = publicIpAddress;
         this.systemServiceType = systemServiceType;
         this.version = version;
@@ -81,17 +81,17 @@ public final class SystemServiceResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
 
-        public Builder setSystemServiceType(String systemServiceType) {
+        public Builder systemServiceType(String systemServiceType) {
             this.systemServiceType = Objects.requireNonNull(systemServiceType);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

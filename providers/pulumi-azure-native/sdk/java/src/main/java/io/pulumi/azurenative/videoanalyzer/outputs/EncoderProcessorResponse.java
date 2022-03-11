@@ -36,12 +36,12 @@ public final class EncoderProcessorResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"inputs","name","preset","type"})
+    @OutputCustomType.Constructor
     private EncoderProcessorResponse(
-        List<NodeInputResponse> inputs,
-        String name,
-        Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
-        String type) {
+        @OutputCustomType.Parameter("inputs") List<NodeInputResponse> inputs,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("preset") Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset,
+        @OutputCustomType.Parameter("type") String type) {
         this.inputs = inputs;
         this.name = name;
         this.preset = preset;
@@ -104,22 +104,22 @@ public final class EncoderProcessorResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setInputs(List<NodeInputResponse> inputs) {
+        public Builder inputs(List<NodeInputResponse> inputs) {
             this.inputs = Objects.requireNonNull(inputs);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPreset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
+        public Builder preset(Either<EncoderCustomPresetResponse,EncoderSystemPresetResponse> preset) {
             this.preset = Objects.requireNonNull(preset);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

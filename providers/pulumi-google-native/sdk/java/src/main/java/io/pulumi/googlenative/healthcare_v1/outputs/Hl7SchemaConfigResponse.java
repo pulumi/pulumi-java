@@ -23,10 +23,10 @@ public final class Hl7SchemaConfigResponse {
      */
     private final List<VersionSourceResponse> version;
 
-    @OutputCustomType.Constructor({"messageSchemaConfigs","version"})
+    @OutputCustomType.Constructor
     private Hl7SchemaConfigResponse(
-        Map<String,String> messageSchemaConfigs,
-        List<VersionSourceResponse> version) {
+        @OutputCustomType.Parameter("messageSchemaConfigs") Map<String,String> messageSchemaConfigs,
+        @OutputCustomType.Parameter("version") List<VersionSourceResponse> version) {
         this.messageSchemaConfigs = messageSchemaConfigs;
         this.version = version;
     }
@@ -68,12 +68,12 @@ public final class Hl7SchemaConfigResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setMessageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
+        public Builder messageSchemaConfigs(Map<String,String> messageSchemaConfigs) {
             this.messageSchemaConfigs = Objects.requireNonNull(messageSchemaConfigs);
             return this;
         }
 
-        public Builder setVersion(List<VersionSourceResponse> version) {
+        public Builder version(List<VersionSourceResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

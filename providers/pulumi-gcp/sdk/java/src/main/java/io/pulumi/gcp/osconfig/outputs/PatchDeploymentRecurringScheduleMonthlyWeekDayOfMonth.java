@@ -22,10 +22,10 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
      */
     private final Integer weekOrdinal;
 
-    @OutputCustomType.Constructor({"dayOfWeek","weekOrdinal"})
+    @OutputCustomType.Constructor
     private PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(
-        String dayOfWeek,
-        Integer weekOrdinal) {
+        @OutputCustomType.Parameter("dayOfWeek") String dayOfWeek,
+        @OutputCustomType.Parameter("weekOrdinal") Integer weekOrdinal) {
         this.dayOfWeek = dayOfWeek;
         this.weekOrdinal = weekOrdinal;
     }
@@ -68,12 +68,12 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
     	      this.weekOrdinal = defaults.weekOrdinal;
         }
 
-        public Builder setDayOfWeek(String dayOfWeek) {
+        public Builder dayOfWeek(String dayOfWeek) {
             this.dayOfWeek = Objects.requireNonNull(dayOfWeek);
             return this;
         }
 
-        public Builder setWeekOrdinal(Integer weekOrdinal) {
+        public Builder weekOrdinal(Integer weekOrdinal) {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }

@@ -286,152 +286,152 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     	      this.upgradePolicy = defaults.upgradePolicy;
         }
 
-        public Builder setApplicationName(@Nullable Input<String> applicationName) {
+        public Builder applicationName(@Nullable Input<String> applicationName) {
             this.applicationName = applicationName;
             return this;
         }
 
-        public Builder setApplicationName(@Nullable String applicationName) {
+        public Builder applicationName(@Nullable String applicationName) {
             this.applicationName = Input.ofNullable(applicationName);
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setIdentity(@Nullable Input<ManagedIdentityArgs> identity) {
+        public Builder identity(@Nullable Input<ManagedIdentityArgs> identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setIdentity(@Nullable ManagedIdentityArgs identity) {
+        public Builder identity(@Nullable ManagedIdentityArgs identity) {
             this.identity = Input.ofNullable(identity);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setManagedIdentities(@Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
+        public Builder managedIdentities(@Nullable Input<List<ApplicationUserAssignedIdentityArgs>> managedIdentities) {
             this.managedIdentities = managedIdentities;
             return this;
         }
 
-        public Builder setManagedIdentities(@Nullable List<ApplicationUserAssignedIdentityArgs> managedIdentities) {
+        public Builder managedIdentities(@Nullable List<ApplicationUserAssignedIdentityArgs> managedIdentities) {
             this.managedIdentities = Input.ofNullable(managedIdentities);
             return this;
         }
 
-        public Builder setMaximumNodes(@Nullable Input<Double> maximumNodes) {
+        public Builder maximumNodes(@Nullable Input<Double> maximumNodes) {
             this.maximumNodes = maximumNodes;
             return this;
         }
 
-        public Builder setMaximumNodes(@Nullable Double maximumNodes) {
+        public Builder maximumNodes(@Nullable Double maximumNodes) {
             this.maximumNodes = Input.ofNullable(maximumNodes);
             return this;
         }
 
-        public Builder setMetrics(@Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics) {
+        public Builder metrics(@Nullable Input<List<ApplicationMetricDescriptionArgs>> metrics) {
             this.metrics = metrics;
             return this;
         }
 
-        public Builder setMetrics(@Nullable List<ApplicationMetricDescriptionArgs> metrics) {
+        public Builder metrics(@Nullable List<ApplicationMetricDescriptionArgs> metrics) {
             this.metrics = Input.ofNullable(metrics);
             return this;
         }
 
-        public Builder setMinimumNodes(@Nullable Input<Double> minimumNodes) {
+        public Builder minimumNodes(@Nullable Input<Double> minimumNodes) {
             this.minimumNodes = minimumNodes;
             return this;
         }
 
-        public Builder setMinimumNodes(@Nullable Double minimumNodes) {
+        public Builder minimumNodes(@Nullable Double minimumNodes) {
             this.minimumNodes = Input.ofNullable(minimumNodes);
             return this;
         }
 
-        public Builder setParameters(@Nullable Input<Map<String,String>> parameters) {
+        public Builder parameters(@Nullable Input<Map<String,String>> parameters) {
             this.parameters = parameters;
             return this;
         }
 
-        public Builder setParameters(@Nullable Map<String,String> parameters) {
+        public Builder parameters(@Nullable Map<String,String> parameters) {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
 
-        public Builder setRemoveApplicationCapacity(@Nullable Input<Boolean> removeApplicationCapacity) {
+        public Builder removeApplicationCapacity(@Nullable Input<Boolean> removeApplicationCapacity) {
             this.removeApplicationCapacity = removeApplicationCapacity;
             return this;
         }
 
-        public Builder setRemoveApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
+        public Builder removeApplicationCapacity(@Nullable Boolean removeApplicationCapacity) {
             this.removeApplicationCapacity = Input.ofNullable(removeApplicationCapacity);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }
 
-        public Builder setTypeName(@Nullable Input<String> typeName) {
+        public Builder typeName(@Nullable Input<String> typeName) {
             this.typeName = typeName;
             return this;
         }
 
-        public Builder setTypeName(@Nullable String typeName) {
+        public Builder typeName(@Nullable String typeName) {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
 
-        public Builder setTypeVersion(@Nullable Input<String> typeVersion) {
+        public Builder typeVersion(@Nullable Input<String> typeVersion) {
             this.typeVersion = typeVersion;
             return this;
         }
 
-        public Builder setTypeVersion(@Nullable String typeVersion) {
+        public Builder typeVersion(@Nullable String typeVersion) {
             this.typeVersion = Input.ofNullable(typeVersion);
             return this;
         }
 
-        public Builder setUpgradePolicy(@Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy) {
+        public Builder upgradePolicy(@Nullable Input<ApplicationUpgradePolicyArgs> upgradePolicy) {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
 
-        public Builder setUpgradePolicy(@Nullable ApplicationUpgradePolicyArgs upgradePolicy) {
+        public Builder upgradePolicy(@Nullable ApplicationUpgradePolicyArgs upgradePolicy) {
             this.upgradePolicy = Input.ofNullable(upgradePolicy);
             return this;
         }

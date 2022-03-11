@@ -138,62 +138,62 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
     	      this.version = defaults.version;
         }
 
-        public Builder setBooleanPolicy(@Nullable Input<OrganizationPolicyBooleanPolicyArgs> booleanPolicy) {
+        public Builder booleanPolicy(@Nullable Input<OrganizationPolicyBooleanPolicyArgs> booleanPolicy) {
             this.booleanPolicy = booleanPolicy;
             return this;
         }
 
-        public Builder setBooleanPolicy(@Nullable OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
+        public Builder booleanPolicy(@Nullable OrganizationPolicyBooleanPolicyArgs booleanPolicy) {
             this.booleanPolicy = Input.ofNullable(booleanPolicy);
             return this;
         }
 
-        public Builder setConstraint(Input<String> constraint) {
+        public Builder constraint(Input<String> constraint) {
             this.constraint = Objects.requireNonNull(constraint);
             return this;
         }
 
-        public Builder setConstraint(String constraint) {
+        public Builder constraint(String constraint) {
             this.constraint = Input.of(Objects.requireNonNull(constraint));
             return this;
         }
 
-        public Builder setListPolicy(@Nullable Input<OrganizationPolicyListPolicyArgs> listPolicy) {
+        public Builder listPolicy(@Nullable Input<OrganizationPolicyListPolicyArgs> listPolicy) {
             this.listPolicy = listPolicy;
             return this;
         }
 
-        public Builder setListPolicy(@Nullable OrganizationPolicyListPolicyArgs listPolicy) {
+        public Builder listPolicy(@Nullable OrganizationPolicyListPolicyArgs listPolicy) {
             this.listPolicy = Input.ofNullable(listPolicy);
             return this;
         }
 
-        public Builder setProject(Input<String> project) {
+        public Builder project(Input<String> project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable Input<OrganizationPolicyRestorePolicyArgs> restorePolicy) {
+        public Builder restorePolicy(@Nullable Input<OrganizationPolicyRestorePolicyArgs> restorePolicy) {
             this.restorePolicy = restorePolicy;
             return this;
         }
 
-        public Builder setRestorePolicy(@Nullable OrganizationPolicyRestorePolicyArgs restorePolicy) {
+        public Builder restorePolicy(@Nullable OrganizationPolicyRestorePolicyArgs restorePolicy) {
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
 
-        public Builder setVersion(@Nullable Input<Integer> version) {
+        public Builder version(@Nullable Input<Integer> version) {
             this.version = version;
             return this;
         }
 
-        public Builder setVersion(@Nullable Integer version) {
+        public Builder version(@Nullable Integer version) {
             this.version = Input.ofNullable(version);
             return this;
         }

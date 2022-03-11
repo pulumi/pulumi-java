@@ -75,22 +75,22 @@ public final class VertexAIParametersArgs extends io.pulumi.resources.ResourceAr
     	      this.network = defaults.network;
         }
 
-        public Builder setEnv(@Nullable Input<Map<String,String>> env) {
+        public Builder env(@Nullable Input<Map<String,String>> env) {
             this.env = env;
             return this;
         }
 
-        public Builder setEnv(@Nullable Map<String,String> env) {
+        public Builder env(@Nullable Map<String,String> env) {
             this.env = Input.ofNullable(env);
             return this;
         }
 
-        public Builder setNetwork(@Nullable Input<String> network) {
+        public Builder network(@Nullable Input<String> network) {
             this.network = network;
             return this;
         }
 
-        public Builder setNetwork(@Nullable String network) {
+        public Builder network(@Nullable String network) {
             this.network = Input.ofNullable(network);
             return this;
         }

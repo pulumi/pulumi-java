@@ -28,11 +28,11 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
      */
     private final @Nullable String notificationType;
 
-    @OutputCustomType.Constructor({"notificationArn","notificationEvents","notificationType"})
+    @OutputCustomType.Constructor
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfig(
-        @Nullable String notificationArn,
-        @Nullable List<String> notificationEvents,
-        @Nullable String notificationType) {
+        @OutputCustomType.Parameter("notificationArn") @Nullable String notificationArn,
+        @OutputCustomType.Parameter("notificationEvents") @Nullable List<String> notificationEvents,
+        @OutputCustomType.Parameter("notificationType") @Nullable String notificationType) {
         this.notificationArn = notificationArn;
         this.notificationEvents = notificationEvents;
         this.notificationType = notificationType;
@@ -84,17 +84,17 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.notificationType = defaults.notificationType;
         }
 
-        public Builder setNotificationArn(@Nullable String notificationArn) {
+        public Builder notificationArn(@Nullable String notificationArn) {
             this.notificationArn = notificationArn;
             return this;
         }
 
-        public Builder setNotificationEvents(@Nullable List<String> notificationEvents) {
+        public Builder notificationEvents(@Nullable List<String> notificationEvents) {
             this.notificationEvents = notificationEvents;
             return this;
         }
 
-        public Builder setNotificationType(@Nullable String notificationType) {
+        public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = notificationType;
             return this;
         }

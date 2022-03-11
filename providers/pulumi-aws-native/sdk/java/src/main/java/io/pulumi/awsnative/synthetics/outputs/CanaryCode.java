@@ -17,13 +17,13 @@ public final class CanaryCode {
     private final @Nullable String s3ObjectVersion;
     private final @Nullable String script;
 
-    @OutputCustomType.Constructor({"handler","s3Bucket","s3Key","s3ObjectVersion","script"})
+    @OutputCustomType.Constructor
     private CanaryCode(
-        String handler,
-        @Nullable String s3Bucket,
-        @Nullable String s3Key,
-        @Nullable String s3ObjectVersion,
-        @Nullable String script) {
+        @OutputCustomType.Parameter("handler") String handler,
+        @OutputCustomType.Parameter("s3Bucket") @Nullable String s3Bucket,
+        @OutputCustomType.Parameter("s3Key") @Nullable String s3Key,
+        @OutputCustomType.Parameter("s3ObjectVersion") @Nullable String s3ObjectVersion,
+        @OutputCustomType.Parameter("script") @Nullable String script) {
         this.handler = handler;
         this.s3Bucket = s3Bucket;
         this.s3Key = s3Key;
@@ -75,27 +75,27 @@ public final class CanaryCode {
     	      this.script = defaults.script;
         }
 
-        public Builder setHandler(String handler) {
+        public Builder handler(String handler) {
             this.handler = Objects.requireNonNull(handler);
             return this;
         }
 
-        public Builder setS3Bucket(@Nullable String s3Bucket) {
+        public Builder s3Bucket(@Nullable String s3Bucket) {
             this.s3Bucket = s3Bucket;
             return this;
         }
 
-        public Builder setS3Key(@Nullable String s3Key) {
+        public Builder s3Key(@Nullable String s3Key) {
             this.s3Key = s3Key;
             return this;
         }
 
-        public Builder setS3ObjectVersion(@Nullable String s3ObjectVersion) {
+        public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
 
-        public Builder setScript(@Nullable String script) {
+        public Builder script(@Nullable String script) {
             this.script = script;
             return this;
         }

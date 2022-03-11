@@ -32,12 +32,12 @@ public final class TokenPasswordResponse {
      */
     private final String value;
 
-    @OutputCustomType.Constructor({"creationTime","expiry","name","value"})
+    @OutputCustomType.Constructor
     private TokenPasswordResponse(
-        @Nullable String creationTime,
-        @Nullable String expiry,
-        @Nullable String name,
-        String value) {
+        @OutputCustomType.Parameter("creationTime") @Nullable String creationTime,
+        @OutputCustomType.Parameter("expiry") @Nullable String expiry,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("value") String value) {
         this.creationTime = creationTime;
         this.expiry = expiry;
         this.name = name;
@@ -99,22 +99,22 @@ public final class TokenPasswordResponse {
     	      this.value = defaults.value;
         }
 
-        public Builder setCreationTime(@Nullable String creationTime) {
+        public Builder creationTime(@Nullable String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
 
-        public Builder setExpiry(@Nullable String expiry) {
+        public Builder expiry(@Nullable String expiry) {
             this.expiry = expiry;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setValue(String value) {
+        public Builder value(String value) {
             this.value = Objects.requireNonNull(value);
             return this;
         }

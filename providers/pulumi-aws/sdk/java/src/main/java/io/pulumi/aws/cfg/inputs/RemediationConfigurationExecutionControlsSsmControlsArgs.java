@@ -70,22 +70,22 @@ public final class RemediationConfigurationExecutionControlsSsmControlsArgs exte
     	      this.errorPercentage = defaults.errorPercentage;
         }
 
-        public Builder setConcurrentExecutionRatePercentage(@Nullable Input<Integer> concurrentExecutionRatePercentage) {
+        public Builder concurrentExecutionRatePercentage(@Nullable Input<Integer> concurrentExecutionRatePercentage) {
             this.concurrentExecutionRatePercentage = concurrentExecutionRatePercentage;
             return this;
         }
 
-        public Builder setConcurrentExecutionRatePercentage(@Nullable Integer concurrentExecutionRatePercentage) {
+        public Builder concurrentExecutionRatePercentage(@Nullable Integer concurrentExecutionRatePercentage) {
             this.concurrentExecutionRatePercentage = Input.ofNullable(concurrentExecutionRatePercentage);
             return this;
         }
 
-        public Builder setErrorPercentage(@Nullable Input<Integer> errorPercentage) {
+        public Builder errorPercentage(@Nullable Input<Integer> errorPercentage) {
             this.errorPercentage = errorPercentage;
             return this;
         }
 
-        public Builder setErrorPercentage(@Nullable Integer errorPercentage) {
+        public Builder errorPercentage(@Nullable Integer errorPercentage) {
             this.errorPercentage = Input.ofNullable(errorPercentage);
             return this;
         }

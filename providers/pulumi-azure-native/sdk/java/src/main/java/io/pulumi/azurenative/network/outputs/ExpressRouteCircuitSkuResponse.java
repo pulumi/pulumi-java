@@ -27,11 +27,11 @@ public final class ExpressRouteCircuitSkuResponse {
      */
     private final @Nullable String tier;
 
-    @OutputCustomType.Constructor({"family","name","tier"})
+    @OutputCustomType.Constructor
     private ExpressRouteCircuitSkuResponse(
-        @Nullable String family,
-        @Nullable String name,
-        @Nullable String tier) {
+        @OutputCustomType.Parameter("family") @Nullable String family,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("tier") @Nullable String tier) {
         this.family = family;
         this.name = name;
         this.tier = tier;
@@ -83,17 +83,17 @@ public final class ExpressRouteCircuitSkuResponse {
     	      this.tier = defaults.tier;
         }
 
-        public Builder setFamily(@Nullable String family) {
+        public Builder family(@Nullable String family) {
             this.family = family;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setTier(@Nullable String tier) {
+        public Builder tier(@Nullable String tier) {
             this.tier = tier;
             return this;
         }

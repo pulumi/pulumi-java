@@ -174,92 +174,92 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     	      this.sni = defaults.sni;
         }
 
-        public Builder setClientCertificate(@Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate) {
+        public Builder clientCertificate(@Nullable Input<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate) {
             this.clientCertificate = clientCertificate;
             return this;
         }
 
-        public Builder setClientCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs clientCertificate) {
+        public Builder clientCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs clientCertificate) {
             this.clientCertificate = Input.ofNullable(clientCertificate);
             return this;
         }
 
-        public Builder setClientTlsPolicyId(Input<String> clientTlsPolicyId) {
+        public Builder clientTlsPolicyId(Input<String> clientTlsPolicyId) {
             this.clientTlsPolicyId = Objects.requireNonNull(clientTlsPolicyId);
             return this;
         }
 
-        public Builder setClientTlsPolicyId(String clientTlsPolicyId) {
+        public Builder clientTlsPolicyId(String clientTlsPolicyId) {
             this.clientTlsPolicyId = Input.of(Objects.requireNonNull(clientTlsPolicyId));
             return this;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setServerValidationCa(@Nullable Input<List<ValidationCAArgs>> serverValidationCa) {
+        public Builder serverValidationCa(@Nullable Input<List<ValidationCAArgs>> serverValidationCa) {
             this.serverValidationCa = serverValidationCa;
             return this;
         }
 
-        public Builder setServerValidationCa(@Nullable List<ValidationCAArgs> serverValidationCa) {
+        public Builder serverValidationCa(@Nullable List<ValidationCAArgs> serverValidationCa) {
             this.serverValidationCa = Input.ofNullable(serverValidationCa);
             return this;
         }
 
-        public Builder setSni(@Nullable Input<String> sni) {
+        public Builder sni(@Nullable Input<String> sni) {
             this.sni = sni;
             return this;
         }
 
-        public Builder setSni(@Nullable String sni) {
+        public Builder sni(@Nullable String sni) {
             this.sni = Input.ofNullable(sni);
             return this;
         }

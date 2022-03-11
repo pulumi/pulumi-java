@@ -21,10 +21,10 @@ public final class OSPolicyAssignmentRolloutResponse {
      */
     private final String minWaitDuration;
 
-    @OutputCustomType.Constructor({"disruptionBudget","minWaitDuration"})
+    @OutputCustomType.Constructor
     private OSPolicyAssignmentRolloutResponse(
-        FixedOrPercentResponse disruptionBudget,
-        String minWaitDuration) {
+        @OutputCustomType.Parameter("disruptionBudget") FixedOrPercentResponse disruptionBudget,
+        @OutputCustomType.Parameter("minWaitDuration") String minWaitDuration) {
         this.disruptionBudget = disruptionBudget;
         this.minWaitDuration = minWaitDuration;
     }
@@ -66,12 +66,12 @@ public final class OSPolicyAssignmentRolloutResponse {
     	      this.minWaitDuration = defaults.minWaitDuration;
         }
 
-        public Builder setDisruptionBudget(FixedOrPercentResponse disruptionBudget) {
+        public Builder disruptionBudget(FixedOrPercentResponse disruptionBudget) {
             this.disruptionBudget = Objects.requireNonNull(disruptionBudget);
             return this;
         }
 
-        public Builder setMinWaitDuration(String minWaitDuration) {
+        public Builder minWaitDuration(String minWaitDuration) {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }

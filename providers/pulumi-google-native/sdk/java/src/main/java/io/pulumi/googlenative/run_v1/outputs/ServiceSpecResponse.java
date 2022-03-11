@@ -22,10 +22,10 @@ public final class ServiceSpecResponse {
      */
     private final List<TrafficTargetResponse> traffic;
 
-    @OutputCustomType.Constructor({"template","traffic"})
+    @OutputCustomType.Constructor
     private ServiceSpecResponse(
-        RevisionTemplateResponse template,
-        List<TrafficTargetResponse> traffic) {
+        @OutputCustomType.Parameter("template") RevisionTemplateResponse template,
+        @OutputCustomType.Parameter("traffic") List<TrafficTargetResponse> traffic) {
         this.template = template;
         this.traffic = traffic;
     }
@@ -67,12 +67,12 @@ public final class ServiceSpecResponse {
     	      this.traffic = defaults.traffic;
         }
 
-        public Builder setTemplate(RevisionTemplateResponse template) {
+        public Builder template(RevisionTemplateResponse template) {
             this.template = Objects.requireNonNull(template);
             return this;
         }
 
-        public Builder setTraffic(List<TrafficTargetResponse> traffic) {
+        public Builder traffic(List<TrafficTargetResponse> traffic) {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }

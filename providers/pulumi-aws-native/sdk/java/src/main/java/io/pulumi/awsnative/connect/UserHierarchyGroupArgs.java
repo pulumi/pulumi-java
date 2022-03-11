@@ -86,32 +86,32 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
     	      this.parentGroupArn = defaults.parentGroupArn;
         }
 
-        public Builder setInstanceArn(Input<String> instanceArn) {
+        public Builder instanceArn(Input<String> instanceArn) {
             this.instanceArn = Objects.requireNonNull(instanceArn);
             return this;
         }
 
-        public Builder setInstanceArn(String instanceArn) {
+        public Builder instanceArn(String instanceArn) {
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParentGroupArn(@Nullable Input<String> parentGroupArn) {
+        public Builder parentGroupArn(@Nullable Input<String> parentGroupArn) {
             this.parentGroupArn = parentGroupArn;
             return this;
         }
 
-        public Builder setParentGroupArn(@Nullable String parentGroupArn) {
+        public Builder parentGroupArn(@Nullable String parentGroupArn) {
             this.parentGroupArn = Input.ofNullable(parentGroupArn);
             return this;
         }

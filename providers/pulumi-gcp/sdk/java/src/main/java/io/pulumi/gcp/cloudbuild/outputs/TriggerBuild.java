@@ -97,20 +97,20 @@ public final class TriggerBuild {
      */
     private final @Nullable String timeout;
 
-    @OutputCustomType.Constructor({"artifacts","availableSecrets","images","logsBucket","options","queueTtl","secrets","source","steps","substitutions","tags","timeout"})
+    @OutputCustomType.Constructor
     private TriggerBuild(
-        @Nullable TriggerBuildArtifacts artifacts,
-        @Nullable TriggerBuildAvailableSecrets availableSecrets,
-        @Nullable List<String> images,
-        @Nullable String logsBucket,
-        @Nullable TriggerBuildOptions options,
-        @Nullable String queueTtl,
-        @Nullable List<TriggerBuildSecret> secrets,
-        @Nullable TriggerBuildSource source,
-        List<TriggerBuildStep> steps,
-        @Nullable Map<String,String> substitutions,
-        @Nullable List<String> tags,
-        @Nullable String timeout) {
+        @OutputCustomType.Parameter("artifacts") @Nullable TriggerBuildArtifacts artifacts,
+        @OutputCustomType.Parameter("availableSecrets") @Nullable TriggerBuildAvailableSecrets availableSecrets,
+        @OutputCustomType.Parameter("images") @Nullable List<String> images,
+        @OutputCustomType.Parameter("logsBucket") @Nullable String logsBucket,
+        @OutputCustomType.Parameter("options") @Nullable TriggerBuildOptions options,
+        @OutputCustomType.Parameter("queueTtl") @Nullable String queueTtl,
+        @OutputCustomType.Parameter("secrets") @Nullable List<TriggerBuildSecret> secrets,
+        @OutputCustomType.Parameter("source") @Nullable TriggerBuildSource source,
+        @OutputCustomType.Parameter("steps") List<TriggerBuildStep> steps,
+        @OutputCustomType.Parameter("substitutions") @Nullable Map<String,String> substitutions,
+        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
+        @OutputCustomType.Parameter("timeout") @Nullable String timeout) {
         this.artifacts = artifacts;
         this.availableSecrets = availableSecrets;
         this.images = images;
@@ -269,62 +269,62 @@ public final class TriggerBuild {
     	      this.timeout = defaults.timeout;
         }
 
-        public Builder setArtifacts(@Nullable TriggerBuildArtifacts artifacts) {
+        public Builder artifacts(@Nullable TriggerBuildArtifacts artifacts) {
             this.artifacts = artifacts;
             return this;
         }
 
-        public Builder setAvailableSecrets(@Nullable TriggerBuildAvailableSecrets availableSecrets) {
+        public Builder availableSecrets(@Nullable TriggerBuildAvailableSecrets availableSecrets) {
             this.availableSecrets = availableSecrets;
             return this;
         }
 
-        public Builder setImages(@Nullable List<String> images) {
+        public Builder images(@Nullable List<String> images) {
             this.images = images;
             return this;
         }
 
-        public Builder setLogsBucket(@Nullable String logsBucket) {
+        public Builder logsBucket(@Nullable String logsBucket) {
             this.logsBucket = logsBucket;
             return this;
         }
 
-        public Builder setOptions(@Nullable TriggerBuildOptions options) {
+        public Builder options(@Nullable TriggerBuildOptions options) {
             this.options = options;
             return this;
         }
 
-        public Builder setQueueTtl(@Nullable String queueTtl) {
+        public Builder queueTtl(@Nullable String queueTtl) {
             this.queueTtl = queueTtl;
             return this;
         }
 
-        public Builder setSecrets(@Nullable List<TriggerBuildSecret> secrets) {
+        public Builder secrets(@Nullable List<TriggerBuildSecret> secrets) {
             this.secrets = secrets;
             return this;
         }
 
-        public Builder setSource(@Nullable TriggerBuildSource source) {
+        public Builder source(@Nullable TriggerBuildSource source) {
             this.source = source;
             return this;
         }
 
-        public Builder setSteps(List<TriggerBuildStep> steps) {
+        public Builder steps(List<TriggerBuildStep> steps) {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
 
-        public Builder setSubstitutions(@Nullable Map<String,String> substitutions) {
+        public Builder substitutions(@Nullable Map<String,String> substitutions) {
             this.substitutions = substitutions;
             return this;
         }
 
-        public Builder setTags(@Nullable List<String> tags) {
+        public Builder tags(@Nullable List<String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTimeout(@Nullable String timeout) {
+        public Builder timeout(@Nullable String timeout) {
             this.timeout = timeout;
             return this;
         }

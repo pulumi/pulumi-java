@@ -19,12 +19,12 @@ public final class GetInstanceTypeGpus {
     private final Integer memorySize;
     private final String name;
 
-    @OutputCustomType.Constructor({"count","manufacturer","memorySize","name"})
+    @OutputCustomType.Constructor
     private GetInstanceTypeGpus(
-        Integer count,
-        String manufacturer,
-        Integer memorySize,
-        String name) {
+        @OutputCustomType.Parameter("count") Integer count,
+        @OutputCustomType.Parameter("manufacturer") String manufacturer,
+        @OutputCustomType.Parameter("memorySize") Integer memorySize,
+        @OutputCustomType.Parameter("name") String name) {
         this.count = count;
         this.manufacturer = manufacturer;
         this.memorySize = memorySize;
@@ -74,22 +74,22 @@ public final class GetInstanceTypeGpus {
     	      this.name = defaults.name;
         }
 
-        public Builder setCount(Integer count) {
+        public Builder count(Integer count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setManufacturer(String manufacturer) {
+        public Builder manufacturer(String manufacturer) {
             this.manufacturer = Objects.requireNonNull(manufacturer);
             return this;
         }
 
-        public Builder setMemorySize(Integer memorySize) {
+        public Builder memorySize(Integer memorySize) {
             this.memorySize = Objects.requireNonNull(memorySize);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

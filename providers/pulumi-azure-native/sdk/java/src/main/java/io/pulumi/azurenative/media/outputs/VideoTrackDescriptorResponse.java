@@ -16,8 +16,8 @@ public final class VideoTrackDescriptorResponse {
      */
     private final String odataType;
 
-    @OutputCustomType.Constructor({"odataType"})
-    private VideoTrackDescriptorResponse(String odataType) {
+    @OutputCustomType.Constructor
+    private VideoTrackDescriptorResponse(@OutputCustomType.Parameter("odataType") String odataType) {
         this.odataType = odataType;
     }
 
@@ -50,7 +50,7 @@ public final class VideoTrackDescriptorResponse {
     	      this.odataType = defaults.odataType;
         }
 
-        public Builder setOdataType(String odataType) {
+        public Builder odataType(String odataType) {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }

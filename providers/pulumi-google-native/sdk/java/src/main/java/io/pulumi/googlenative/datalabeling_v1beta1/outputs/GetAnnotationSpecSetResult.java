@@ -37,13 +37,13 @@ public final class GetAnnotationSpecSetResult {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"annotationSpecs","blockingResources","description","displayName","name"})
+    @OutputCustomType.Constructor
     private GetAnnotationSpecSetResult(
-        List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
-        List<String> blockingResources,
-        String description,
-        String displayName,
-        String name) {
+        @OutputCustomType.Parameter("annotationSpecs") List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs,
+        @OutputCustomType.Parameter("blockingResources") List<String> blockingResources,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name) {
         this.annotationSpecs = annotationSpecs;
         this.blockingResources = blockingResources;
         this.description = description;
@@ -115,27 +115,27 @@ public final class GetAnnotationSpecSetResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setAnnotationSpecs(List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs) {
+        public Builder annotationSpecs(List<GoogleCloudDatalabelingV1beta1AnnotationSpecResponse> annotationSpecs) {
             this.annotationSpecs = Objects.requireNonNull(annotationSpecs);
             return this;
         }
 
-        public Builder setBlockingResources(List<String> blockingResources) {
+        public Builder blockingResources(List<String> blockingResources) {
             this.blockingResources = Objects.requireNonNull(blockingResources);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

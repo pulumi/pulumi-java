@@ -66,19 +66,19 @@ public final class SpriteSheetResponse {
      */
     private final Integer totalCount;
 
-    @OutputCustomType.Constructor({"columnCount","endTimeOffset","filePrefix","format","interval","quality","rowCount","spriteHeightPixels","spriteWidthPixels","startTimeOffset","totalCount"})
+    @OutputCustomType.Constructor
     private SpriteSheetResponse(
-        Integer columnCount,
-        String endTimeOffset,
-        String filePrefix,
-        String format,
-        String interval,
-        Integer quality,
-        Integer rowCount,
-        Integer spriteHeightPixels,
-        Integer spriteWidthPixels,
-        String startTimeOffset,
-        Integer totalCount) {
+        @OutputCustomType.Parameter("columnCount") Integer columnCount,
+        @OutputCustomType.Parameter("endTimeOffset") String endTimeOffset,
+        @OutputCustomType.Parameter("filePrefix") String filePrefix,
+        @OutputCustomType.Parameter("format") String format,
+        @OutputCustomType.Parameter("interval") String interval,
+        @OutputCustomType.Parameter("quality") Integer quality,
+        @OutputCustomType.Parameter("rowCount") Integer rowCount,
+        @OutputCustomType.Parameter("spriteHeightPixels") Integer spriteHeightPixels,
+        @OutputCustomType.Parameter("spriteWidthPixels") Integer spriteWidthPixels,
+        @OutputCustomType.Parameter("startTimeOffset") String startTimeOffset,
+        @OutputCustomType.Parameter("totalCount") Integer totalCount) {
         this.columnCount = columnCount;
         this.endTimeOffset = endTimeOffset;
         this.filePrefix = filePrefix;
@@ -210,57 +210,57 @@ public final class SpriteSheetResponse {
     	      this.totalCount = defaults.totalCount;
         }
 
-        public Builder setColumnCount(Integer columnCount) {
+        public Builder columnCount(Integer columnCount) {
             this.columnCount = Objects.requireNonNull(columnCount);
             return this;
         }
 
-        public Builder setEndTimeOffset(String endTimeOffset) {
+        public Builder endTimeOffset(String endTimeOffset) {
             this.endTimeOffset = Objects.requireNonNull(endTimeOffset);
             return this;
         }
 
-        public Builder setFilePrefix(String filePrefix) {
+        public Builder filePrefix(String filePrefix) {
             this.filePrefix = Objects.requireNonNull(filePrefix);
             return this;
         }
 
-        public Builder setFormat(String format) {
+        public Builder format(String format) {
             this.format = Objects.requireNonNull(format);
             return this;
         }
 
-        public Builder setInterval(String interval) {
+        public Builder interval(String interval) {
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
 
-        public Builder setQuality(Integer quality) {
+        public Builder quality(Integer quality) {
             this.quality = Objects.requireNonNull(quality);
             return this;
         }
 
-        public Builder setRowCount(Integer rowCount) {
+        public Builder rowCount(Integer rowCount) {
             this.rowCount = Objects.requireNonNull(rowCount);
             return this;
         }
 
-        public Builder setSpriteHeightPixels(Integer spriteHeightPixels) {
+        public Builder spriteHeightPixels(Integer spriteHeightPixels) {
             this.spriteHeightPixels = Objects.requireNonNull(spriteHeightPixels);
             return this;
         }
 
-        public Builder setSpriteWidthPixels(Integer spriteWidthPixels) {
+        public Builder spriteWidthPixels(Integer spriteWidthPixels) {
             this.spriteWidthPixels = Objects.requireNonNull(spriteWidthPixels);
             return this;
         }
 
-        public Builder setStartTimeOffset(String startTimeOffset) {
+        public Builder startTimeOffset(String startTimeOffset) {
             this.startTimeOffset = Objects.requireNonNull(startTimeOffset);
             return this;
         }
 
-        public Builder setTotalCount(Integer totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }

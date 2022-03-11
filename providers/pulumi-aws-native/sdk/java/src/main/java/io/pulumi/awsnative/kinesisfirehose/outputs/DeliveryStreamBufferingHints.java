@@ -14,10 +14,10 @@ public final class DeliveryStreamBufferingHints {
     private final @Nullable Integer intervalInSeconds;
     private final @Nullable Integer sizeInMBs;
 
-    @OutputCustomType.Constructor({"intervalInSeconds","sizeInMBs"})
+    @OutputCustomType.Constructor
     private DeliveryStreamBufferingHints(
-        @Nullable Integer intervalInSeconds,
-        @Nullable Integer sizeInMBs) {
+        @OutputCustomType.Parameter("intervalInSeconds") @Nullable Integer intervalInSeconds,
+        @OutputCustomType.Parameter("sizeInMBs") @Nullable Integer sizeInMBs) {
         this.intervalInSeconds = intervalInSeconds;
         this.sizeInMBs = sizeInMBs;
     }
@@ -51,12 +51,12 @@ public final class DeliveryStreamBufferingHints {
     	      this.sizeInMBs = defaults.sizeInMBs;
         }
 
-        public Builder setIntervalInSeconds(@Nullable Integer intervalInSeconds) {
+        public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             this.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
-        public Builder setSizeInMBs(@Nullable Integer sizeInMBs) {
+        public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
             this.sizeInMBs = sizeInMBs;
             return this;
         }

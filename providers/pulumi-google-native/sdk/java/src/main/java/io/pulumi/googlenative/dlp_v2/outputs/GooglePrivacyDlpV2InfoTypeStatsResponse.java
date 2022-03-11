@@ -21,10 +21,10 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
      */
     private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
-    @OutputCustomType.Constructor({"count","infoType"})
+    @OutputCustomType.Constructor
     private GooglePrivacyDlpV2InfoTypeStatsResponse(
-        String count,
-        GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        @OutputCustomType.Parameter("count") String count,
+        @OutputCustomType.Parameter("infoType") GooglePrivacyDlpV2InfoTypeResponse infoType) {
         this.count = count;
         this.infoType = infoType;
     }
@@ -66,12 +66,12 @@ public final class GooglePrivacyDlpV2InfoTypeStatsResponse {
     	      this.infoType = defaults.infoType;
         }
 
-        public Builder setCount(String count) {
+        public Builder count(String count) {
             this.count = Objects.requireNonNull(count);
             return this;
         }
 
-        public Builder setInfoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
+        public Builder infoType(GooglePrivacyDlpV2InfoTypeResponse infoType) {
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }

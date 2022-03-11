@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class DataSourceDocumentsMetadataConfiguration {
     private final @Nullable String s3Prefix;
 
-    @OutputCustomType.Constructor({"s3Prefix"})
-    private DataSourceDocumentsMetadataConfiguration(@Nullable String s3Prefix) {
+    @OutputCustomType.Constructor
+    private DataSourceDocumentsMetadataConfiguration(@OutputCustomType.Parameter("s3Prefix") @Nullable String s3Prefix) {
         this.s3Prefix = s3Prefix;
     }
 
@@ -42,7 +42,7 @@ public final class DataSourceDocumentsMetadataConfiguration {
     	      this.s3Prefix = defaults.s3Prefix;
         }
 
-        public Builder setS3Prefix(@Nullable String s3Prefix) {
+        public Builder s3Prefix(@Nullable String s3Prefix) {
             this.s3Prefix = s3Prefix;
             return this;
         }

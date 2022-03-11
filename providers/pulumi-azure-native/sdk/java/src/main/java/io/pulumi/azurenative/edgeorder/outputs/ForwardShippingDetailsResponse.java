@@ -30,12 +30,12 @@ public final class ForwardShippingDetailsResponse {
      */
     private final String trackingUrl;
 
-    @OutputCustomType.Constructor({"carrierDisplayName","carrierName","trackingId","trackingUrl"})
+    @OutputCustomType.Constructor
     private ForwardShippingDetailsResponse(
-        String carrierDisplayName,
-        String carrierName,
-        String trackingId,
-        String trackingUrl) {
+        @OutputCustomType.Parameter("carrierDisplayName") String carrierDisplayName,
+        @OutputCustomType.Parameter("carrierName") String carrierName,
+        @OutputCustomType.Parameter("trackingId") String trackingId,
+        @OutputCustomType.Parameter("trackingUrl") String trackingUrl) {
         this.carrierDisplayName = carrierDisplayName;
         this.carrierName = carrierName;
         this.trackingId = trackingId;
@@ -97,22 +97,22 @@ public final class ForwardShippingDetailsResponse {
     	      this.trackingUrl = defaults.trackingUrl;
         }
 
-        public Builder setCarrierDisplayName(String carrierDisplayName) {
+        public Builder carrierDisplayName(String carrierDisplayName) {
             this.carrierDisplayName = Objects.requireNonNull(carrierDisplayName);
             return this;
         }
 
-        public Builder setCarrierName(String carrierName) {
+        public Builder carrierName(String carrierName) {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
 
-        public Builder setTrackingId(String trackingId) {
+        public Builder trackingId(String trackingId) {
             this.trackingId = Objects.requireNonNull(trackingId);
             return this;
         }
 
-        public Builder setTrackingUrl(String trackingUrl) {
+        public Builder trackingUrl(String trackingUrl) {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }

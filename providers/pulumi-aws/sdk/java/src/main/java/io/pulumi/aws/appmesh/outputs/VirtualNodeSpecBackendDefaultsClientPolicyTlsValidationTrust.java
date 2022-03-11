@@ -29,11 +29,11 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust 
      */
     private final @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds;
 
-    @OutputCustomType.Constructor({"acm","file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust(
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
-        @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
+        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm,
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;
@@ -85,17 +85,17 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrust 
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm) {
+        public Builder acm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcm acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file) {
+        public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSds sds) {
             this.sds = sds;
             return this;
         }

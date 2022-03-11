@@ -111,52 +111,52 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setAuthorizedNetwork(Input<String> authorizedNetwork) {
+        public Builder authorizedNetwork(Input<String> authorizedNetwork) {
             this.authorizedNetwork = Objects.requireNonNull(authorizedNetwork);
             return this;
         }
 
-        public Builder setAuthorizedNetwork(String authorizedNetwork) {
+        public Builder authorizedNetwork(String authorizedNetwork) {
             this.authorizedNetwork = Input.of(Objects.requireNonNull(authorizedNetwork));
             return this;
         }
 
-        public Builder setDomainResource(Input<String> domainResource) {
+        public Builder domainResource(Input<String> domainResource) {
             this.domainResource = Objects.requireNonNull(domainResource);
             return this;
         }
 
-        public Builder setDomainResource(String domainResource) {
+        public Builder domainResource(String domainResource) {
             this.domainResource = Input.of(Objects.requireNonNull(domainResource));
             return this;
         }
 
-        public Builder setLabels(@Nullable Input<Map<String,String>> labels) {
+        public Builder labels(@Nullable Input<Map<String,String>> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setLabels(@Nullable Map<String,String> labels) {
+        public Builder labels(@Nullable Map<String,String> labels) {
             this.labels = Input.ofNullable(labels);
             return this;
         }
 
-        public Builder setPeeringId(Input<String> peeringId) {
+        public Builder peeringId(Input<String> peeringId) {
             this.peeringId = Objects.requireNonNull(peeringId);
             return this;
         }
 
-        public Builder setPeeringId(String peeringId) {
+        public Builder peeringId(String peeringId) {
             this.peeringId = Input.of(Objects.requireNonNull(peeringId));
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }

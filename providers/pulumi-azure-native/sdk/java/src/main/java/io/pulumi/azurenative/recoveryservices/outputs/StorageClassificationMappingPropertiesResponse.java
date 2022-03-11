@@ -17,8 +17,8 @@ public final class StorageClassificationMappingPropertiesResponse {
      */
     private final @Nullable String targetStorageClassificationId;
 
-    @OutputCustomType.Constructor({"targetStorageClassificationId"})
-    private StorageClassificationMappingPropertiesResponse(@Nullable String targetStorageClassificationId) {
+    @OutputCustomType.Constructor
+    private StorageClassificationMappingPropertiesResponse(@OutputCustomType.Parameter("targetStorageClassificationId") @Nullable String targetStorageClassificationId) {
         this.targetStorageClassificationId = targetStorageClassificationId;
     }
 
@@ -50,7 +50,7 @@ public final class StorageClassificationMappingPropertiesResponse {
     	      this.targetStorageClassificationId = defaults.targetStorageClassificationId;
         }
 
-        public Builder setTargetStorageClassificationId(@Nullable String targetStorageClassificationId) {
+        public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
             this.targetStorageClassificationId = targetStorageClassificationId;
             return this;
         }

@@ -29,11 +29,11 @@ public final class VirtualNodeSpecListenerTlsCertificate {
      */
     private final @Nullable VirtualNodeSpecListenerTlsCertificateSds sds;
 
-    @OutputCustomType.Constructor({"acm","file","sds"})
+    @OutputCustomType.Constructor
     private VirtualNodeSpecListenerTlsCertificate(
-        @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
-        @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
-        @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
+        @OutputCustomType.Parameter("acm") @Nullable VirtualNodeSpecListenerTlsCertificateAcm acm,
+        @OutputCustomType.Parameter("file") @Nullable VirtualNodeSpecListenerTlsCertificateFile file,
+        @OutputCustomType.Parameter("sds") @Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
         this.acm = acm;
         this.file = file;
         this.sds = sds;
@@ -85,17 +85,17 @@ public final class VirtualNodeSpecListenerTlsCertificate {
     	      this.sds = defaults.sds;
         }
 
-        public Builder setAcm(@Nullable VirtualNodeSpecListenerTlsCertificateAcm acm) {
+        public Builder acm(@Nullable VirtualNodeSpecListenerTlsCertificateAcm acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setFile(@Nullable VirtualNodeSpecListenerTlsCertificateFile file) {
+        public Builder file(@Nullable VirtualNodeSpecListenerTlsCertificateFile file) {
             this.file = file;
             return this;
         }
 
-        public Builder setSds(@Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
+        public Builder sds(@Nullable VirtualNodeSpecListenerTlsCertificateSds sds) {
             this.sds = sds;
             return this;
         }

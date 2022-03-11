@@ -28,22 +28,22 @@ public final class DeviceProfileLoRaWANDeviceProfile {
     private final @Nullable Boolean supportsClassC;
     private final @Nullable Boolean supportsJoin;
 
-    @OutputCustomType.Constructor({"classBTimeout","classCTimeout","macVersion","maxDutyCycle","maxEirp","pingSlotDr","pingSlotFreq","pingSlotPeriod","regParamsRevision","rfRegion","supports32BitFCnt","supportsClassB","supportsClassC","supportsJoin"})
+    @OutputCustomType.Constructor
     private DeviceProfileLoRaWANDeviceProfile(
-        @Nullable Integer classBTimeout,
-        @Nullable Integer classCTimeout,
-        @Nullable String macVersion,
-        @Nullable Integer maxDutyCycle,
-        @Nullable Integer maxEirp,
-        @Nullable Integer pingSlotDr,
-        @Nullable Integer pingSlotFreq,
-        @Nullable Integer pingSlotPeriod,
-        @Nullable String regParamsRevision,
-        @Nullable String rfRegion,
-        @Nullable Boolean supports32BitFCnt,
-        @Nullable Boolean supportsClassB,
-        @Nullable Boolean supportsClassC,
-        @Nullable Boolean supportsJoin) {
+        @OutputCustomType.Parameter("classBTimeout") @Nullable Integer classBTimeout,
+        @OutputCustomType.Parameter("classCTimeout") @Nullable Integer classCTimeout,
+        @OutputCustomType.Parameter("macVersion") @Nullable String macVersion,
+        @OutputCustomType.Parameter("maxDutyCycle") @Nullable Integer maxDutyCycle,
+        @OutputCustomType.Parameter("maxEirp") @Nullable Integer maxEirp,
+        @OutputCustomType.Parameter("pingSlotDr") @Nullable Integer pingSlotDr,
+        @OutputCustomType.Parameter("pingSlotFreq") @Nullable Integer pingSlotFreq,
+        @OutputCustomType.Parameter("pingSlotPeriod") @Nullable Integer pingSlotPeriod,
+        @OutputCustomType.Parameter("regParamsRevision") @Nullable String regParamsRevision,
+        @OutputCustomType.Parameter("rfRegion") @Nullable String rfRegion,
+        @OutputCustomType.Parameter("supports32BitFCnt") @Nullable Boolean supports32BitFCnt,
+        @OutputCustomType.Parameter("supportsClassB") @Nullable Boolean supportsClassB,
+        @OutputCustomType.Parameter("supportsClassC") @Nullable Boolean supportsClassC,
+        @OutputCustomType.Parameter("supportsJoin") @Nullable Boolean supportsJoin) {
         this.classBTimeout = classBTimeout;
         this.classCTimeout = classCTimeout;
         this.macVersion = macVersion;
@@ -149,72 +149,72 @@ public final class DeviceProfileLoRaWANDeviceProfile {
     	      this.supportsJoin = defaults.supportsJoin;
         }
 
-        public Builder setClassBTimeout(@Nullable Integer classBTimeout) {
+        public Builder classBTimeout(@Nullable Integer classBTimeout) {
             this.classBTimeout = classBTimeout;
             return this;
         }
 
-        public Builder setClassCTimeout(@Nullable Integer classCTimeout) {
+        public Builder classCTimeout(@Nullable Integer classCTimeout) {
             this.classCTimeout = classCTimeout;
             return this;
         }
 
-        public Builder setMacVersion(@Nullable String macVersion) {
+        public Builder macVersion(@Nullable String macVersion) {
             this.macVersion = macVersion;
             return this;
         }
 
-        public Builder setMaxDutyCycle(@Nullable Integer maxDutyCycle) {
+        public Builder maxDutyCycle(@Nullable Integer maxDutyCycle) {
             this.maxDutyCycle = maxDutyCycle;
             return this;
         }
 
-        public Builder setMaxEirp(@Nullable Integer maxEirp) {
+        public Builder maxEirp(@Nullable Integer maxEirp) {
             this.maxEirp = maxEirp;
             return this;
         }
 
-        public Builder setPingSlotDr(@Nullable Integer pingSlotDr) {
+        public Builder pingSlotDr(@Nullable Integer pingSlotDr) {
             this.pingSlotDr = pingSlotDr;
             return this;
         }
 
-        public Builder setPingSlotFreq(@Nullable Integer pingSlotFreq) {
+        public Builder pingSlotFreq(@Nullable Integer pingSlotFreq) {
             this.pingSlotFreq = pingSlotFreq;
             return this;
         }
 
-        public Builder setPingSlotPeriod(@Nullable Integer pingSlotPeriod) {
+        public Builder pingSlotPeriod(@Nullable Integer pingSlotPeriod) {
             this.pingSlotPeriod = pingSlotPeriod;
             return this;
         }
 
-        public Builder setRegParamsRevision(@Nullable String regParamsRevision) {
+        public Builder regParamsRevision(@Nullable String regParamsRevision) {
             this.regParamsRevision = regParamsRevision;
             return this;
         }
 
-        public Builder setRfRegion(@Nullable String rfRegion) {
+        public Builder rfRegion(@Nullable String rfRegion) {
             this.rfRegion = rfRegion;
             return this;
         }
 
-        public Builder setSupports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
+        public Builder supports32BitFCnt(@Nullable Boolean supports32BitFCnt) {
             this.supports32BitFCnt = supports32BitFCnt;
             return this;
         }
 
-        public Builder setSupportsClassB(@Nullable Boolean supportsClassB) {
+        public Builder supportsClassB(@Nullable Boolean supportsClassB) {
             this.supportsClassB = supportsClassB;
             return this;
         }
 
-        public Builder setSupportsClassC(@Nullable Boolean supportsClassC) {
+        public Builder supportsClassC(@Nullable Boolean supportsClassC) {
             this.supportsClassC = supportsClassC;
             return this;
         }
 
-        public Builder setSupportsJoin(@Nullable Boolean supportsJoin) {
+        public Builder supportsJoin(@Nullable Boolean supportsJoin) {
             this.supportsJoin = supportsJoin;
             return this;
         }

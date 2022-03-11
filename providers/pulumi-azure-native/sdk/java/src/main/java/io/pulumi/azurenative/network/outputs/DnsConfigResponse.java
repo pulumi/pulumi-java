@@ -28,11 +28,11 @@ public final class DnsConfigResponse {
      */
     private final @Nullable Double ttl;
 
-    @OutputCustomType.Constructor({"fqdn","relativeName","ttl"})
+    @OutputCustomType.Constructor
     private DnsConfigResponse(
-        String fqdn,
-        @Nullable String relativeName,
-        @Nullable Double ttl) {
+        @OutputCustomType.Parameter("fqdn") String fqdn,
+        @OutputCustomType.Parameter("relativeName") @Nullable String relativeName,
+        @OutputCustomType.Parameter("ttl") @Nullable Double ttl) {
         this.fqdn = fqdn;
         this.relativeName = relativeName;
         this.ttl = ttl;
@@ -84,17 +84,17 @@ public final class DnsConfigResponse {
     	      this.ttl = defaults.ttl;
         }
 
-        public Builder setFqdn(String fqdn) {
+        public Builder fqdn(String fqdn) {
             this.fqdn = Objects.requireNonNull(fqdn);
             return this;
         }
 
-        public Builder setRelativeName(@Nullable String relativeName) {
+        public Builder relativeName(@Nullable String relativeName) {
             this.relativeName = relativeName;
             return this;
         }
 
-        public Builder setTtl(@Nullable Double ttl) {
+        public Builder ttl(@Nullable Double ttl) {
             this.ttl = ttl;
             return this;
         }

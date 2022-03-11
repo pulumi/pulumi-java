@@ -29,13 +29,13 @@ public final class AzureFileShareConfigurationResponse {
      */
     private final String relativeMountPath;
 
-    @OutputCustomType.Constructor({"accountKey","accountName","azureFileUrl","mountOptions","relativeMountPath"})
+    @OutputCustomType.Constructor
     private AzureFileShareConfigurationResponse(
-        String accountKey,
-        String accountName,
-        String azureFileUrl,
-        @Nullable String mountOptions,
-        String relativeMountPath) {
+        @OutputCustomType.Parameter("accountKey") String accountKey,
+        @OutputCustomType.Parameter("accountName") String accountName,
+        @OutputCustomType.Parameter("azureFileUrl") String azureFileUrl,
+        @OutputCustomType.Parameter("mountOptions") @Nullable String mountOptions,
+        @OutputCustomType.Parameter("relativeMountPath") String relativeMountPath) {
         this.accountKey = accountKey;
         this.accountName = accountName;
         this.azureFileUrl = azureFileUrl;
@@ -99,27 +99,27 @@ public final class AzureFileShareConfigurationResponse {
     	      this.relativeMountPath = defaults.relativeMountPath;
         }
 
-        public Builder setAccountKey(String accountKey) {
+        public Builder accountKey(String accountKey) {
             this.accountKey = Objects.requireNonNull(accountKey);
             return this;
         }
 
-        public Builder setAccountName(String accountName) {
+        public Builder accountName(String accountName) {
             this.accountName = Objects.requireNonNull(accountName);
             return this;
         }
 
-        public Builder setAzureFileUrl(String azureFileUrl) {
+        public Builder azureFileUrl(String azureFileUrl) {
             this.azureFileUrl = Objects.requireNonNull(azureFileUrl);
             return this;
         }
 
-        public Builder setMountOptions(@Nullable String mountOptions) {
+        public Builder mountOptions(@Nullable String mountOptions) {
             this.mountOptions = mountOptions;
             return this;
         }
 
-        public Builder setRelativeMountPath(String relativeMountPath) {
+        public Builder relativeMountPath(String relativeMountPath) {
             this.relativeMountPath = Objects.requireNonNull(relativeMountPath);
             return this;
         }

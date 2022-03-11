@@ -17,8 +17,8 @@ public final class ListClusterFollowerDatabasesResult {
      */
     private final @Nullable List<FollowerDatabaseDefinitionResponse> value;
 
-    @OutputCustomType.Constructor({"value"})
-    private ListClusterFollowerDatabasesResult(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+    @OutputCustomType.Constructor
+    private ListClusterFollowerDatabasesResult(@OutputCustomType.Parameter("value") @Nullable List<FollowerDatabaseDefinitionResponse> value) {
         this.value = value;
     }
 
@@ -50,7 +50,7 @@ public final class ListClusterFollowerDatabasesResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setValue(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
+        public Builder value(@Nullable List<FollowerDatabaseDefinitionResponse> value) {
             this.value = value;
             return this;
         }

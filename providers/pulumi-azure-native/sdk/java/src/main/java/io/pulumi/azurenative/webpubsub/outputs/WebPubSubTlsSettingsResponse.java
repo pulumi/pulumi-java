@@ -17,8 +17,8 @@ public final class WebPubSubTlsSettingsResponse {
      */
     private final @Nullable Boolean clientCertEnabled;
 
-    @OutputCustomType.Constructor({"clientCertEnabled"})
-    private WebPubSubTlsSettingsResponse(@Nullable Boolean clientCertEnabled) {
+    @OutputCustomType.Constructor
+    private WebPubSubTlsSettingsResponse(@OutputCustomType.Parameter("clientCertEnabled") @Nullable Boolean clientCertEnabled) {
         this.clientCertEnabled = clientCertEnabled;
     }
 
@@ -50,7 +50,7 @@ public final class WebPubSubTlsSettingsResponse {
     	      this.clientCertEnabled = defaults.clientCertEnabled;
         }
 
-        public Builder setClientCertEnabled(@Nullable Boolean clientCertEnabled) {
+        public Builder clientCertEnabled(@Nullable Boolean clientCertEnabled) {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }

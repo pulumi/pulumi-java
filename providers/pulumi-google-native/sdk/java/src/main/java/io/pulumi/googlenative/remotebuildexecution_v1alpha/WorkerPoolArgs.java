@@ -176,92 +176,92 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     	      this.workerCount = defaults.workerCount;
         }
 
-        public Builder setAutoscale(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
+        public Builder autoscale(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs> autoscale) {
             this.autoscale = autoscale;
             return this;
         }
 
-        public Builder setAutoscale(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
+        public Builder autoscale(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleArgs autoscale) {
             this.autoscale = Input.ofNullable(autoscale);
             return this;
         }
 
-        public Builder setChannel(@Nullable Input<String> channel) {
+        public Builder channel(@Nullable Input<String> channel) {
             this.channel = channel;
             return this;
         }
 
-        public Builder setChannel(@Nullable String channel) {
+        public Builder channel(@Nullable String channel) {
             this.channel = Input.ofNullable(channel);
             return this;
         }
 
-        public Builder setInstanceId(Input<String> instanceId) {
+        public Builder instanceId(Input<String> instanceId) {
             this.instanceId = Objects.requireNonNull(instanceId);
             return this;
         }
 
-        public Builder setInstanceId(String instanceId) {
+        public Builder instanceId(String instanceId) {
             this.instanceId = Input.of(Objects.requireNonNull(instanceId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setPoolId(@Nullable Input<String> poolId) {
+        public Builder poolId(@Nullable Input<String> poolId) {
             this.poolId = poolId;
             return this;
         }
 
-        public Builder setPoolId(@Nullable String poolId) {
+        public Builder poolId(@Nullable String poolId) {
             this.poolId = Input.ofNullable(poolId);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
+        public Builder workerConfig(@Nullable Input<GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs> workerConfig) {
             this.workerConfig = workerConfig;
             return this;
         }
 
-        public Builder setWorkerConfig(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
+        public Builder workerConfig(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigArgs workerConfig) {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable Input<String> workerCount) {
+        public Builder workerCount(@Nullable Input<String> workerCount) {
             this.workerCount = workerCount;
             return this;
         }
 
-        public Builder setWorkerCount(@Nullable String workerCount) {
+        public Builder workerCount(@Nullable String workerCount) {
             this.workerCount = Input.ofNullable(workerCount);
             return this;
         }

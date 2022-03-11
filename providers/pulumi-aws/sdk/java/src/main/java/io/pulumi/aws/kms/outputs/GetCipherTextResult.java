@@ -25,13 +25,13 @@ public final class GetCipherTextResult {
     private final String keyId;
     private final String plaintext;
 
-    @OutputCustomType.Constructor({"ciphertextBlob","context","id","keyId","plaintext"})
+    @OutputCustomType.Constructor
     private GetCipherTextResult(
-        String ciphertextBlob,
-        @Nullable Map<String,String> context,
-        String id,
-        String keyId,
-        String plaintext) {
+        @OutputCustomType.Parameter("ciphertextBlob") String ciphertextBlob,
+        @OutputCustomType.Parameter("context") @Nullable Map<String,String> context,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("keyId") String keyId,
+        @OutputCustomType.Parameter("plaintext") String plaintext) {
         this.ciphertextBlob = ciphertextBlob;
         this.context = context;
         this.id = id;
@@ -91,27 +91,27 @@ public final class GetCipherTextResult {
     	      this.plaintext = defaults.plaintext;
         }
 
-        public Builder setCiphertextBlob(String ciphertextBlob) {
+        public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = Objects.requireNonNull(ciphertextBlob);
             return this;
         }
 
-        public Builder setContext(@Nullable Map<String,String> context) {
+        public Builder context(@Nullable Map<String,String> context) {
             this.context = context;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setPlaintext(String plaintext) {
+        public Builder plaintext(String plaintext) {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }

@@ -41,14 +41,14 @@ public final class DistributionResponse {
      */
     private final String url;
 
-    @OutputCustomType.Constructor({"architecture","cpeUri","description","latestVersion","maintainer","url"})
+    @OutputCustomType.Constructor
     private DistributionResponse(
-        String architecture,
-        String cpeUri,
-        String description,
-        VersionResponse latestVersion,
-        String maintainer,
-        String url) {
+        @OutputCustomType.Parameter("architecture") String architecture,
+        @OutputCustomType.Parameter("cpeUri") String cpeUri,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("latestVersion") VersionResponse latestVersion,
+        @OutputCustomType.Parameter("maintainer") String maintainer,
+        @OutputCustomType.Parameter("url") String url) {
         this.architecture = architecture;
         this.cpeUri = cpeUri;
         this.description = description;
@@ -130,32 +130,32 @@ public final class DistributionResponse {
     	      this.url = defaults.url;
         }
 
-        public Builder setArchitecture(String architecture) {
+        public Builder architecture(String architecture) {
             this.architecture = Objects.requireNonNull(architecture);
             return this;
         }
 
-        public Builder setCpeUri(String cpeUri) {
+        public Builder cpeUri(String cpeUri) {
             this.cpeUri = Objects.requireNonNull(cpeUri);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setLatestVersion(VersionResponse latestVersion) {
+        public Builder latestVersion(VersionResponse latestVersion) {
             this.latestVersion = Objects.requireNonNull(latestVersion);
             return this;
         }
 
-        public Builder setMaintainer(String maintainer) {
+        public Builder maintainer(String maintainer) {
             this.maintainer = Objects.requireNonNull(maintainer);
             return this;
         }
 
-        public Builder setUrl(String url) {
+        public Builder url(String url) {
             this.url = Objects.requireNonNull(url);
             return this;
         }

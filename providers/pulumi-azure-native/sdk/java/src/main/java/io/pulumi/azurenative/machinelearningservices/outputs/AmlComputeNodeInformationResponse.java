@@ -41,14 +41,14 @@ public final class AmlComputeNodeInformationResponse {
      */
     private final String runId;
 
-    @OutputCustomType.Constructor({"nodeId","nodeState","port","privateIpAddress","publicIpAddress","runId"})
+    @OutputCustomType.Constructor
     private AmlComputeNodeInformationResponse(
-        String nodeId,
-        String nodeState,
-        Double port,
-        String privateIpAddress,
-        String publicIpAddress,
-        String runId) {
+        @OutputCustomType.Parameter("nodeId") String nodeId,
+        @OutputCustomType.Parameter("nodeState") String nodeState,
+        @OutputCustomType.Parameter("port") Double port,
+        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @OutputCustomType.Parameter("runId") String runId) {
         this.nodeId = nodeId;
         this.nodeState = nodeState;
         this.port = port;
@@ -130,32 +130,32 @@ public final class AmlComputeNodeInformationResponse {
     	      this.runId = defaults.runId;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setNodeState(String nodeState) {
+        public Builder nodeState(String nodeState) {
             this.nodeState = Objects.requireNonNull(nodeState);
             return this;
         }
 
-        public Builder setPort(Double port) {
+        public Builder port(Double port) {
             this.port = Objects.requireNonNull(port);
             return this;
         }
 
-        public Builder setPrivateIpAddress(String privateIpAddress) {
+        public Builder privateIpAddress(String privateIpAddress) {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
 
-        public Builder setPublicIpAddress(String publicIpAddress) {
+        public Builder publicIpAddress(String publicIpAddress) {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
 
-        public Builder setRunId(String runId) {
+        public Builder runId(String runId) {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }

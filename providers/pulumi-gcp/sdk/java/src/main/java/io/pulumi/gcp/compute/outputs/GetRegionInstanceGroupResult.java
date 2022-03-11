@@ -36,15 +36,15 @@ public final class GetRegionInstanceGroupResult {
      */
     private final Integer size;
 
-    @OutputCustomType.Constructor({"id","instances","name","project","region","selfLink","size"})
+    @OutputCustomType.Constructor
     private GetRegionInstanceGroupResult(
-        String id,
-        List<GetRegionInstanceGroupInstance> instances,
-        String name,
-        String project,
-        String region,
-        String selfLink,
-        Integer size) {
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("instances") List<GetRegionInstanceGroupInstance> instances,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("size") Integer size) {
         this.id = id;
         this.instances = instances;
         this.name = name;
@@ -124,37 +124,37 @@ public final class GetRegionInstanceGroupResult {
     	      this.size = defaults.size;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInstances(List<GetRegionInstanceGroupInstance> instances) {
+        public Builder instances(List<GetRegionInstanceGroupInstance> instances) {
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setSize(Integer size) {
+        public Builder size(Integer size) {
             this.size = Objects.requireNonNull(size);
             return this;
         }

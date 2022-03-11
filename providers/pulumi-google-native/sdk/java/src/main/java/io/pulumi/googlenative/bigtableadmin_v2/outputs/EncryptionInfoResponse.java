@@ -26,11 +26,11 @@ public final class EncryptionInfoResponse {
      */
     private final String kmsKeyVersion;
 
-    @OutputCustomType.Constructor({"encryptionStatus","encryptionType","kmsKeyVersion"})
+    @OutputCustomType.Constructor
     private EncryptionInfoResponse(
-        StatusResponse encryptionStatus,
-        String encryptionType,
-        String kmsKeyVersion) {
+        @OutputCustomType.Parameter("encryptionStatus") StatusResponse encryptionStatus,
+        @OutputCustomType.Parameter("encryptionType") String encryptionType,
+        @OutputCustomType.Parameter("kmsKeyVersion") String kmsKeyVersion) {
         this.encryptionStatus = encryptionStatus;
         this.encryptionType = encryptionType;
         this.kmsKeyVersion = kmsKeyVersion;
@@ -82,17 +82,17 @@ public final class EncryptionInfoResponse {
     	      this.kmsKeyVersion = defaults.kmsKeyVersion;
         }
 
-        public Builder setEncryptionStatus(StatusResponse encryptionStatus) {
+        public Builder encryptionStatus(StatusResponse encryptionStatus) {
             this.encryptionStatus = Objects.requireNonNull(encryptionStatus);
             return this;
         }
 
-        public Builder setEncryptionType(String encryptionType) {
+        public Builder encryptionType(String encryptionType) {
             this.encryptionType = Objects.requireNonNull(encryptionType);
             return this;
         }
 
-        public Builder setKmsKeyVersion(String kmsKeyVersion) {
+        public Builder kmsKeyVersion(String kmsKeyVersion) {
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
         }

@@ -43,14 +43,14 @@ public final class Condition {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"lastTransitionTime","message","observedGeneration","reason","status","type"})
+    @OutputCustomType.Constructor
     private Condition(
-        String lastTransitionTime,
-        String message,
-        @Nullable Integer observedGeneration,
-        String reason,
-        String status,
-        String type) {
+        @OutputCustomType.Parameter("lastTransitionTime") String lastTransitionTime,
+        @OutputCustomType.Parameter("message") String message,
+        @OutputCustomType.Parameter("observedGeneration") @Nullable Integer observedGeneration,
+        @OutputCustomType.Parameter("reason") String reason,
+        @OutputCustomType.Parameter("status") String status,
+        @OutputCustomType.Parameter("type") String type) {
         this.lastTransitionTime = lastTransitionTime;
         this.message = message;
         this.observedGeneration = observedGeneration;
@@ -132,32 +132,32 @@ public final class Condition {
     	      this.type = defaults.type;
         }
 
-        public Builder setLastTransitionTime(String lastTransitionTime) {
+        public Builder lastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = Objects.requireNonNull(lastTransitionTime);
             return this;
         }
 
-        public Builder setMessage(String message) {
+        public Builder message(String message) {
             this.message = Objects.requireNonNull(message);
             return this;
         }
 
-        public Builder setObservedGeneration(@Nullable Integer observedGeneration) {
+        public Builder observedGeneration(@Nullable Integer observedGeneration) {
             this.observedGeneration = observedGeneration;
             return this;
         }
 
-        public Builder setReason(String reason) {
+        public Builder reason(String reason) {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -74,17 +74,17 @@ public final class ResourceProviderAuthorizationResponse extends io.pulumi.resou
     	      this.roleDefinitionId = defaults.roleDefinitionId;
         }
 
-        public Builder setApplicationId(@Nullable String applicationId) {
+        public Builder applicationId(@Nullable String applicationId) {
             this.applicationId = applicationId;
             return this;
         }
 
-        public Builder setManagedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
+        public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
             this.managedByRoleDefinitionId = managedByRoleDefinitionId;
             return this;
         }
 
-        public Builder setRoleDefinitionId(@Nullable String roleDefinitionId) {
+        public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
             this.roleDefinitionId = roleDefinitionId;
             return this;
         }

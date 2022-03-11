@@ -117,27 +117,27 @@ public final class GetAccountResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"cloudConnectors","createdAt","createdBy","createdByObjectId","endpoints","friendlyName","id","identity","location","managedResourceGroupName","managedResources","name","privateEndpointConnections","provisioningState","publicNetworkAccess","sku","systemData","tags","type"})
+    @OutputCustomType.Constructor
     private GetAccountResult(
-        @Nullable CloudConnectorsResponse cloudConnectors,
-        String createdAt,
-        String createdBy,
-        String createdByObjectId,
-        AccountPropertiesResponseEndpoints endpoints,
-        String friendlyName,
-        String id,
-        @Nullable IdentityResponse identity,
-        @Nullable String location,
-        @Nullable String managedResourceGroupName,
-        AccountPropertiesResponseManagedResources managedResources,
-        String name,
-        List<PrivateEndpointConnectionResponse> privateEndpointConnections,
-        String provisioningState,
-        @Nullable String publicNetworkAccess,
-        AccountResponseSku sku,
-        AccountPropertiesResponseSystemData systemData,
-        @Nullable Map<String,String> tags,
-        String type) {
+        @OutputCustomType.Parameter("cloudConnectors") @Nullable CloudConnectorsResponse cloudConnectors,
+        @OutputCustomType.Parameter("createdAt") String createdAt,
+        @OutputCustomType.Parameter("createdBy") String createdBy,
+        @OutputCustomType.Parameter("createdByObjectId") String createdByObjectId,
+        @OutputCustomType.Parameter("endpoints") AccountPropertiesResponseEndpoints endpoints,
+        @OutputCustomType.Parameter("friendlyName") String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("identity") @Nullable IdentityResponse identity,
+        @OutputCustomType.Parameter("location") @Nullable String location,
+        @OutputCustomType.Parameter("managedResourceGroupName") @Nullable String managedResourceGroupName,
+        @OutputCustomType.Parameter("managedResources") AccountPropertiesResponseManagedResources managedResources,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("privateEndpointConnections") List<PrivateEndpointConnectionResponse> privateEndpointConnections,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("publicNetworkAccess") @Nullable String publicNetworkAccess,
+        @OutputCustomType.Parameter("sku") AccountResponseSku sku,
+        @OutputCustomType.Parameter("systemData") AccountPropertiesResponseSystemData systemData,
+        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @OutputCustomType.Parameter("type") String type) {
         this.cloudConnectors = cloudConnectors;
         this.createdAt = createdAt;
         this.createdBy = createdBy;
@@ -350,97 +350,97 @@ public final class GetAccountResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setCloudConnectors(@Nullable CloudConnectorsResponse cloudConnectors) {
+        public Builder cloudConnectors(@Nullable CloudConnectorsResponse cloudConnectors) {
             this.cloudConnectors = cloudConnectors;
             return this;
         }
 
-        public Builder setCreatedAt(String createdAt) {
+        public Builder createdAt(String createdAt) {
             this.createdAt = Objects.requireNonNull(createdAt);
             return this;
         }
 
-        public Builder setCreatedBy(String createdBy) {
+        public Builder createdBy(String createdBy) {
             this.createdBy = Objects.requireNonNull(createdBy);
             return this;
         }
 
-        public Builder setCreatedByObjectId(String createdByObjectId) {
+        public Builder createdByObjectId(String createdByObjectId) {
             this.createdByObjectId = Objects.requireNonNull(createdByObjectId);
             return this;
         }
 
-        public Builder setEndpoints(AccountPropertiesResponseEndpoints endpoints) {
+        public Builder endpoints(AccountPropertiesResponseEndpoints endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setFriendlyName(String friendlyName) {
+        public Builder friendlyName(String friendlyName) {
             this.friendlyName = Objects.requireNonNull(friendlyName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setIdentity(@Nullable IdentityResponse identity) {
+        public Builder identity(@Nullable IdentityResponse identity) {
             this.identity = identity;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setManagedResourceGroupName(@Nullable String managedResourceGroupName) {
+        public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
             this.managedResourceGroupName = managedResourceGroupName;
             return this;
         }
 
-        public Builder setManagedResources(AccountPropertiesResponseManagedResources managedResources) {
+        public Builder managedResources(AccountPropertiesResponseManagedResources managedResources) {
             this.managedResources = Objects.requireNonNull(managedResources);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrivateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
+        public Builder privateEndpointConnections(List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             this.privateEndpointConnections = Objects.requireNonNull(privateEndpointConnections);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setPublicNetworkAccess(@Nullable String publicNetworkAccess) {
+        public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
-        public Builder setSku(AccountResponseSku sku) {
+        public Builder sku(AccountResponseSku sku) {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
 
-        public Builder setSystemData(AccountPropertiesResponseSystemData systemData) {
+        public Builder systemData(AccountPropertiesResponseSystemData systemData) {
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

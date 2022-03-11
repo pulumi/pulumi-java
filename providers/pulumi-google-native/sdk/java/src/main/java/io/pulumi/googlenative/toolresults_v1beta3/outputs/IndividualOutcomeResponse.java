@@ -24,12 +24,12 @@ public final class IndividualOutcomeResponse {
     private final DurationResponse runDuration;
     private final String stepId;
 
-    @OutputCustomType.Constructor({"multistepNumber","outcomeSummary","runDuration","stepId"})
+    @OutputCustomType.Constructor
     private IndividualOutcomeResponse(
-        Integer multistepNumber,
-        String outcomeSummary,
-        DurationResponse runDuration,
-        String stepId) {
+        @OutputCustomType.Parameter("multistepNumber") Integer multistepNumber,
+        @OutputCustomType.Parameter("outcomeSummary") String outcomeSummary,
+        @OutputCustomType.Parameter("runDuration") DurationResponse runDuration,
+        @OutputCustomType.Parameter("stepId") String stepId) {
         this.multistepNumber = multistepNumber;
         this.outcomeSummary = outcomeSummary;
         this.runDuration = runDuration;
@@ -83,22 +83,22 @@ public final class IndividualOutcomeResponse {
     	      this.stepId = defaults.stepId;
         }
 
-        public Builder setMultistepNumber(Integer multistepNumber) {
+        public Builder multistepNumber(Integer multistepNumber) {
             this.multistepNumber = Objects.requireNonNull(multistepNumber);
             return this;
         }
 
-        public Builder setOutcomeSummary(String outcomeSummary) {
+        public Builder outcomeSummary(String outcomeSummary) {
             this.outcomeSummary = Objects.requireNonNull(outcomeSummary);
             return this;
         }
 
-        public Builder setRunDuration(DurationResponse runDuration) {
+        public Builder runDuration(DurationResponse runDuration) {
             this.runDuration = Objects.requireNonNull(runDuration);
             return this;
         }
 
-        public Builder setStepId(String stepId) {
+        public Builder stepId(String stepId) {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }

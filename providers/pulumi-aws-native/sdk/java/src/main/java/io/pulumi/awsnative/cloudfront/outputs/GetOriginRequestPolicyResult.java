@@ -16,11 +16,11 @@ public final class GetOriginRequestPolicyResult {
     private final @Nullable String lastModifiedTime;
     private final @Nullable OriginRequestPolicyConfig originRequestPolicyConfig;
 
-    @OutputCustomType.Constructor({"id","lastModifiedTime","originRequestPolicyConfig"})
+    @OutputCustomType.Constructor
     private GetOriginRequestPolicyResult(
-        @Nullable String id,
-        @Nullable String lastModifiedTime,
-        @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("lastModifiedTime") @Nullable String lastModifiedTime,
+        @OutputCustomType.Parameter("originRequestPolicyConfig") @Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
         this.id = id;
         this.lastModifiedTime = lastModifiedTime;
         this.originRequestPolicyConfig = originRequestPolicyConfig;
@@ -60,17 +60,17 @@ public final class GetOriginRequestPolicyResult {
     	      this.originRequestPolicyConfig = defaults.originRequestPolicyConfig;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLastModifiedTime(@Nullable String lastModifiedTime) {
+        public Builder lastModifiedTime(@Nullable String lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
-        public Builder setOriginRequestPolicyConfig(@Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
+        public Builder originRequestPolicyConfig(@Nullable OriginRequestPolicyConfig originRequestPolicyConfig) {
             this.originRequestPolicyConfig = originRequestPolicyConfig;
             return this;
         }

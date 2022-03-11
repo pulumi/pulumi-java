@@ -74,22 +74,22 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     	      this.type = defaults.type;
         }
 
-        public Builder setSasUri(Input<String> sasUri) {
+        public Builder sasUri(Input<String> sasUri) {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
 
-        public Builder setSasUri(String sasUri) {
+        public Builder sasUri(String sasUri) {
             this.sasUri = Input.of(Objects.requireNonNull(sasUri));
             return this;
         }
 
-        public Builder setType(Input<String> type) {
+        public Builder type(Input<String> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }

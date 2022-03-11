@@ -13,11 +13,11 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion {
     private final String exclusionName;
     private final String startTime;
 
-    @OutputCustomType.Constructor({"endTime","exclusionName","startTime"})
+    @OutputCustomType.Constructor
     private GetClusterMaintenancePolicyMaintenanceExclusion(
-        String endTime,
-        String exclusionName,
-        String startTime) {
+        @OutputCustomType.Parameter("endTime") String endTime,
+        @OutputCustomType.Parameter("exclusionName") String exclusionName,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.exclusionName = exclusionName;
         this.startTime = startTime;
@@ -57,17 +57,17 @@ public final class GetClusterMaintenancePolicyMaintenanceExclusion {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setEndTime(String endTime) {
+        public Builder endTime(String endTime) {
             this.endTime = Objects.requireNonNull(endTime);
             return this;
         }
 
-        public Builder setExclusionName(String exclusionName) {
+        public Builder exclusionName(String exclusionName) {
             this.exclusionName = Objects.requireNonNull(exclusionName);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

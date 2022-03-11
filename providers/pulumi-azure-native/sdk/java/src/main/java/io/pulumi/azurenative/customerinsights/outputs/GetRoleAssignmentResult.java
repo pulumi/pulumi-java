@@ -131,31 +131,31 @@ public final class GetRoleAssignmentResult {
      */
     private final @Nullable ResourceSetDescriptionResponse widgetTypes;
 
-    @OutputCustomType.Constructor({"assignmentName","conflationPolicies","connectors","description","displayName","id","interactions","kpis","links","name","principals","profiles","provisioningState","relationshipLinks","relationships","role","roleAssignments","sasPolicies","segments","tenantId","type","views","widgetTypes"})
+    @OutputCustomType.Constructor
     private GetRoleAssignmentResult(
-        String assignmentName,
-        @Nullable ResourceSetDescriptionResponse conflationPolicies,
-        @Nullable ResourceSetDescriptionResponse connectors,
-        @Nullable Map<String,String> description,
-        @Nullable Map<String,String> displayName,
-        String id,
-        @Nullable ResourceSetDescriptionResponse interactions,
-        @Nullable ResourceSetDescriptionResponse kpis,
-        @Nullable ResourceSetDescriptionResponse links,
-        String name,
-        List<AssignmentPrincipalResponse> principals,
-        @Nullable ResourceSetDescriptionResponse profiles,
-        String provisioningState,
-        @Nullable ResourceSetDescriptionResponse relationshipLinks,
-        @Nullable ResourceSetDescriptionResponse relationships,
-        String role,
-        @Nullable ResourceSetDescriptionResponse roleAssignments,
-        @Nullable ResourceSetDescriptionResponse sasPolicies,
-        @Nullable ResourceSetDescriptionResponse segments,
-        String tenantId,
-        String type,
-        @Nullable ResourceSetDescriptionResponse views,
-        @Nullable ResourceSetDescriptionResponse widgetTypes) {
+        @OutputCustomType.Parameter("assignmentName") String assignmentName,
+        @OutputCustomType.Parameter("conflationPolicies") @Nullable ResourceSetDescriptionResponse conflationPolicies,
+        @OutputCustomType.Parameter("connectors") @Nullable ResourceSetDescriptionResponse connectors,
+        @OutputCustomType.Parameter("description") @Nullable Map<String,String> description,
+        @OutputCustomType.Parameter("displayName") @Nullable Map<String,String> displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("interactions") @Nullable ResourceSetDescriptionResponse interactions,
+        @OutputCustomType.Parameter("kpis") @Nullable ResourceSetDescriptionResponse kpis,
+        @OutputCustomType.Parameter("links") @Nullable ResourceSetDescriptionResponse links,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("principals") List<AssignmentPrincipalResponse> principals,
+        @OutputCustomType.Parameter("profiles") @Nullable ResourceSetDescriptionResponse profiles,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("relationshipLinks") @Nullable ResourceSetDescriptionResponse relationshipLinks,
+        @OutputCustomType.Parameter("relationships") @Nullable ResourceSetDescriptionResponse relationships,
+        @OutputCustomType.Parameter("role") String role,
+        @OutputCustomType.Parameter("roleAssignments") @Nullable ResourceSetDescriptionResponse roleAssignments,
+        @OutputCustomType.Parameter("sasPolicies") @Nullable ResourceSetDescriptionResponse sasPolicies,
+        @OutputCustomType.Parameter("segments") @Nullable ResourceSetDescriptionResponse segments,
+        @OutputCustomType.Parameter("tenantId") String tenantId,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("views") @Nullable ResourceSetDescriptionResponse views,
+        @OutputCustomType.Parameter("widgetTypes") @Nullable ResourceSetDescriptionResponse widgetTypes) {
         this.assignmentName = assignmentName;
         this.conflationPolicies = conflationPolicies;
         this.connectors = connectors;
@@ -407,117 +407,117 @@ public final class GetRoleAssignmentResult {
     	      this.widgetTypes = defaults.widgetTypes;
         }
 
-        public Builder setAssignmentName(String assignmentName) {
+        public Builder assignmentName(String assignmentName) {
             this.assignmentName = Objects.requireNonNull(assignmentName);
             return this;
         }
 
-        public Builder setConflationPolicies(@Nullable ResourceSetDescriptionResponse conflationPolicies) {
+        public Builder conflationPolicies(@Nullable ResourceSetDescriptionResponse conflationPolicies) {
             this.conflationPolicies = conflationPolicies;
             return this;
         }
 
-        public Builder setConnectors(@Nullable ResourceSetDescriptionResponse connectors) {
+        public Builder connectors(@Nullable ResourceSetDescriptionResponse connectors) {
             this.connectors = connectors;
             return this;
         }
 
-        public Builder setDescription(@Nullable Map<String,String> description) {
+        public Builder description(@Nullable Map<String,String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Map<String,String> displayName) {
+        public Builder displayName(@Nullable Map<String,String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setInteractions(@Nullable ResourceSetDescriptionResponse interactions) {
+        public Builder interactions(@Nullable ResourceSetDescriptionResponse interactions) {
             this.interactions = interactions;
             return this;
         }
 
-        public Builder setKpis(@Nullable ResourceSetDescriptionResponse kpis) {
+        public Builder kpis(@Nullable ResourceSetDescriptionResponse kpis) {
             this.kpis = kpis;
             return this;
         }
 
-        public Builder setLinks(@Nullable ResourceSetDescriptionResponse links) {
+        public Builder links(@Nullable ResourceSetDescriptionResponse links) {
             this.links = links;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setPrincipals(List<AssignmentPrincipalResponse> principals) {
+        public Builder principals(List<AssignmentPrincipalResponse> principals) {
             this.principals = Objects.requireNonNull(principals);
             return this;
         }
 
-        public Builder setProfiles(@Nullable ResourceSetDescriptionResponse profiles) {
+        public Builder profiles(@Nullable ResourceSetDescriptionResponse profiles) {
             this.profiles = profiles;
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRelationshipLinks(@Nullable ResourceSetDescriptionResponse relationshipLinks) {
+        public Builder relationshipLinks(@Nullable ResourceSetDescriptionResponse relationshipLinks) {
             this.relationshipLinks = relationshipLinks;
             return this;
         }
 
-        public Builder setRelationships(@Nullable ResourceSetDescriptionResponse relationships) {
+        public Builder relationships(@Nullable ResourceSetDescriptionResponse relationships) {
             this.relationships = relationships;
             return this;
         }
 
-        public Builder setRole(String role) {
+        public Builder role(String role) {
             this.role = Objects.requireNonNull(role);
             return this;
         }
 
-        public Builder setRoleAssignments(@Nullable ResourceSetDescriptionResponse roleAssignments) {
+        public Builder roleAssignments(@Nullable ResourceSetDescriptionResponse roleAssignments) {
             this.roleAssignments = roleAssignments;
             return this;
         }
 
-        public Builder setSasPolicies(@Nullable ResourceSetDescriptionResponse sasPolicies) {
+        public Builder sasPolicies(@Nullable ResourceSetDescriptionResponse sasPolicies) {
             this.sasPolicies = sasPolicies;
             return this;
         }
 
-        public Builder setSegments(@Nullable ResourceSetDescriptionResponse segments) {
+        public Builder segments(@Nullable ResourceSetDescriptionResponse segments) {
             this.segments = segments;
             return this;
         }
 
-        public Builder setTenantId(String tenantId) {
+        public Builder tenantId(String tenantId) {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setViews(@Nullable ResourceSetDescriptionResponse views) {
+        public Builder views(@Nullable ResourceSetDescriptionResponse views) {
             this.views = views;
             return this;
         }
 
-        public Builder setWidgetTypes(@Nullable ResourceSetDescriptionResponse widgetTypes) {
+        public Builder widgetTypes(@Nullable ResourceSetDescriptionResponse widgetTypes) {
             this.widgetTypes = widgetTypes;
             return this;
         }

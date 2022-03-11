@@ -41,14 +41,14 @@ public final class KubernetesMetadataResponse {
      */
     private final Integer vcpuCount;
 
-    @OutputCustomType.Constructor({"kubernetesApiServerVersion","memoryMb","nodeCount","nodeProviderId","updateTime","vcpuCount"})
+    @OutputCustomType.Constructor
     private KubernetesMetadataResponse(
-        String kubernetesApiServerVersion,
-        Integer memoryMb,
-        Integer nodeCount,
-        String nodeProviderId,
-        String updateTime,
-        Integer vcpuCount) {
+        @OutputCustomType.Parameter("kubernetesApiServerVersion") String kubernetesApiServerVersion,
+        @OutputCustomType.Parameter("memoryMb") Integer memoryMb,
+        @OutputCustomType.Parameter("nodeCount") Integer nodeCount,
+        @OutputCustomType.Parameter("nodeProviderId") String nodeProviderId,
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("vcpuCount") Integer vcpuCount) {
         this.kubernetesApiServerVersion = kubernetesApiServerVersion;
         this.memoryMb = memoryMb;
         this.nodeCount = nodeCount;
@@ -130,32 +130,32 @@ public final class KubernetesMetadataResponse {
     	      this.vcpuCount = defaults.vcpuCount;
         }
 
-        public Builder setKubernetesApiServerVersion(String kubernetesApiServerVersion) {
+        public Builder kubernetesApiServerVersion(String kubernetesApiServerVersion) {
             this.kubernetesApiServerVersion = Objects.requireNonNull(kubernetesApiServerVersion);
             return this;
         }
 
-        public Builder setMemoryMb(Integer memoryMb) {
+        public Builder memoryMb(Integer memoryMb) {
             this.memoryMb = Objects.requireNonNull(memoryMb);
             return this;
         }
 
-        public Builder setNodeCount(Integer nodeCount) {
+        public Builder nodeCount(Integer nodeCount) {
             this.nodeCount = Objects.requireNonNull(nodeCount);
             return this;
         }
 
-        public Builder setNodeProviderId(String nodeProviderId) {
+        public Builder nodeProviderId(String nodeProviderId) {
             this.nodeProviderId = Objects.requireNonNull(nodeProviderId);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setVcpuCount(Integer vcpuCount) {
+        public Builder vcpuCount(Integer vcpuCount) {
             this.vcpuCount = Objects.requireNonNull(vcpuCount);
             return this;
         }

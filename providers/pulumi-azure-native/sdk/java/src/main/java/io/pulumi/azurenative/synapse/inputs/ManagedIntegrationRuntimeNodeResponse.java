@@ -92,17 +92,17 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
     	      this.status = defaults.status;
         }
 
-        public Builder setErrors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
+        public Builder errors(@Nullable List<ManagedIntegrationRuntimeErrorResponse> errors) {
             this.errors = errors;
             return this;
         }
 
-        public Builder setNodeId(String nodeId) {
+        public Builder nodeId(String nodeId) {
             this.nodeId = Objects.requireNonNull(nodeId);
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

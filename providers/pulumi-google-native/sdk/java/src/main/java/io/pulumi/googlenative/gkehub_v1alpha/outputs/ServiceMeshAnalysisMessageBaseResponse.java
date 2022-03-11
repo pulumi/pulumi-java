@@ -26,11 +26,11 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
      */
     private final ServiceMeshTypeResponse type;
 
-    @OutputCustomType.Constructor({"documentationUrl","level","type"})
+    @OutputCustomType.Constructor
     private ServiceMeshAnalysisMessageBaseResponse(
-        String documentationUrl,
-        String level,
-        ServiceMeshTypeResponse type) {
+        @OutputCustomType.Parameter("documentationUrl") String documentationUrl,
+        @OutputCustomType.Parameter("level") String level,
+        @OutputCustomType.Parameter("type") ServiceMeshTypeResponse type) {
         this.documentationUrl = documentationUrl;
         this.level = level;
         this.type = type;
@@ -82,17 +82,17 @@ public final class ServiceMeshAnalysisMessageBaseResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setDocumentationUrl(String documentationUrl) {
+        public Builder documentationUrl(String documentationUrl) {
             this.documentationUrl = Objects.requireNonNull(documentationUrl);
             return this;
         }
 
-        public Builder setLevel(String level) {
+        public Builder level(String level) {
             this.level = Objects.requireNonNull(level);
             return this;
         }
 
-        public Builder setType(ServiceMeshTypeResponse type) {
+        public Builder type(ServiceMeshTypeResponse type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -39,13 +39,13 @@ public final class RoutePropertiesResponse {
      */
     private final String source;
 
-    @OutputCustomType.Constructor({"condition","endpointNames","isEnabled","name","source"})
+    @OutputCustomType.Constructor
     private RoutePropertiesResponse(
-        @Nullable String condition,
-        List<String> endpointNames,
-        Boolean isEnabled,
-        String name,
-        String source) {
+        @OutputCustomType.Parameter("condition") @Nullable String condition,
+        @OutputCustomType.Parameter("endpointNames") List<String> endpointNames,
+        @OutputCustomType.Parameter("isEnabled") Boolean isEnabled,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("source") String source) {
         this.condition = condition;
         this.endpointNames = endpointNames;
         this.isEnabled = isEnabled;
@@ -117,27 +117,27 @@ public final class RoutePropertiesResponse {
     	      this.source = defaults.source;
         }
 
-        public Builder setCondition(@Nullable String condition) {
+        public Builder condition(@Nullable String condition) {
             this.condition = condition;
             return this;
         }
 
-        public Builder setEndpointNames(List<String> endpointNames) {
+        public Builder endpointNames(List<String> endpointNames) {
             this.endpointNames = Objects.requireNonNull(endpointNames);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setSource(String source) {
+        public Builder source(String source) {
             this.source = Objects.requireNonNull(source);
             return this;
         }

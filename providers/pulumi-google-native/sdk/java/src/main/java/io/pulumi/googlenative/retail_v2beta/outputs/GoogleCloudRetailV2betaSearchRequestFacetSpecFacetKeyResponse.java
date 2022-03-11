@@ -47,15 +47,15 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
      */
     private final List<String> restrictedValues;
 
-    @OutputCustomType.Constructor({"contains","intervals","key","orderBy","prefixes","query","restrictedValues"})
+    @OutputCustomType.Constructor
     private GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse(
-        List<String> contains,
-        List<GoogleCloudRetailV2betaIntervalResponse> intervals,
-        String key,
-        String orderBy,
-        List<String> prefixes,
-        String query,
-        List<String> restrictedValues) {
+        @OutputCustomType.Parameter("contains") List<String> contains,
+        @OutputCustomType.Parameter("intervals") List<GoogleCloudRetailV2betaIntervalResponse> intervals,
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("orderBy") String orderBy,
+        @OutputCustomType.Parameter("prefixes") List<String> prefixes,
+        @OutputCustomType.Parameter("query") String query,
+        @OutputCustomType.Parameter("restrictedValues") List<String> restrictedValues) {
         this.contains = contains;
         this.intervals = intervals;
         this.key = key;
@@ -147,37 +147,37 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse
     	      this.restrictedValues = defaults.restrictedValues;
         }
 
-        public Builder setContains(List<String> contains) {
+        public Builder contains(List<String> contains) {
             this.contains = Objects.requireNonNull(contains);
             return this;
         }
 
-        public Builder setIntervals(List<GoogleCloudRetailV2betaIntervalResponse> intervals) {
+        public Builder intervals(List<GoogleCloudRetailV2betaIntervalResponse> intervals) {
             this.intervals = Objects.requireNonNull(intervals);
             return this;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setOrderBy(String orderBy) {
+        public Builder orderBy(String orderBy) {
             this.orderBy = Objects.requireNonNull(orderBy);
             return this;
         }
 
-        public Builder setPrefixes(List<String> prefixes) {
+        public Builder prefixes(List<String> prefixes) {
             this.prefixes = Objects.requireNonNull(prefixes);
             return this;
         }
 
-        public Builder setQuery(String query) {
+        public Builder query(String query) {
             this.query = Objects.requireNonNull(query);
             return this;
         }
 
-        public Builder setRestrictedValues(List<String> restrictedValues) {
+        public Builder restrictedValues(List<String> restrictedValues) {
             this.restrictedValues = Objects.requireNonNull(restrictedValues);
             return this;
         }

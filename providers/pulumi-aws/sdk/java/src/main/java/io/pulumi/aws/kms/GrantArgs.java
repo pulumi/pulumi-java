@@ -170,82 +170,82 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     	      this.retiringPrincipal = defaults.retiringPrincipal;
         }
 
-        public Builder setConstraints(@Nullable Input<List<GrantConstraintArgs>> constraints) {
+        public Builder constraints(@Nullable Input<List<GrantConstraintArgs>> constraints) {
             this.constraints = constraints;
             return this;
         }
 
-        public Builder setConstraints(@Nullable List<GrantConstraintArgs> constraints) {
+        public Builder constraints(@Nullable List<GrantConstraintArgs> constraints) {
             this.constraints = Input.ofNullable(constraints);
             return this;
         }
 
-        public Builder setGrantCreationTokens(@Nullable Input<List<String>> grantCreationTokens) {
+        public Builder grantCreationTokens(@Nullable Input<List<String>> grantCreationTokens) {
             this.grantCreationTokens = grantCreationTokens;
             return this;
         }
 
-        public Builder setGrantCreationTokens(@Nullable List<String> grantCreationTokens) {
+        public Builder grantCreationTokens(@Nullable List<String> grantCreationTokens) {
             this.grantCreationTokens = Input.ofNullable(grantCreationTokens);
             return this;
         }
 
-        public Builder setGranteePrincipal(Input<String> granteePrincipal) {
+        public Builder granteePrincipal(Input<String> granteePrincipal) {
             this.granteePrincipal = Objects.requireNonNull(granteePrincipal);
             return this;
         }
 
-        public Builder setGranteePrincipal(String granteePrincipal) {
+        public Builder granteePrincipal(String granteePrincipal) {
             this.granteePrincipal = Input.of(Objects.requireNonNull(granteePrincipal));
             return this;
         }
 
-        public Builder setKeyId(Input<String> keyId) {
+        public Builder keyId(Input<String> keyId) {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
 
-        public Builder setKeyId(String keyId) {
+        public Builder keyId(String keyId) {
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setOperations(Input<List<String>> operations) {
+        public Builder operations(Input<List<String>> operations) {
             this.operations = Objects.requireNonNull(operations);
             return this;
         }
 
-        public Builder setOperations(List<String> operations) {
+        public Builder operations(List<String> operations) {
             this.operations = Input.of(Objects.requireNonNull(operations));
             return this;
         }
 
-        public Builder setRetireOnDelete(@Nullable Input<Boolean> retireOnDelete) {
+        public Builder retireOnDelete(@Nullable Input<Boolean> retireOnDelete) {
             this.retireOnDelete = retireOnDelete;
             return this;
         }
 
-        public Builder setRetireOnDelete(@Nullable Boolean retireOnDelete) {
+        public Builder retireOnDelete(@Nullable Boolean retireOnDelete) {
             this.retireOnDelete = Input.ofNullable(retireOnDelete);
             return this;
         }
 
-        public Builder setRetiringPrincipal(@Nullable Input<String> retiringPrincipal) {
+        public Builder retiringPrincipal(@Nullable Input<String> retiringPrincipal) {
             this.retiringPrincipal = retiringPrincipal;
             return this;
         }
 
-        public Builder setRetiringPrincipal(@Nullable String retiringPrincipal) {
+        public Builder retiringPrincipal(@Nullable String retiringPrincipal) {
             this.retiringPrincipal = Input.ofNullable(retiringPrincipal);
             return this;
         }

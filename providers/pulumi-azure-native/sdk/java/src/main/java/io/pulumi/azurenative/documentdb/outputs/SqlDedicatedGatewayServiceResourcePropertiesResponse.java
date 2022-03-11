@@ -51,15 +51,15 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
      */
     private final String status;
 
-    @OutputCustomType.Constructor({"creationTime","instanceCount","instanceSize","locations","serviceType","sqlDedicatedGatewayEndpoint","status"})
+    @OutputCustomType.Constructor
     private SqlDedicatedGatewayServiceResourcePropertiesResponse(
-        String creationTime,
-        @Nullable Integer instanceCount,
-        @Nullable String instanceSize,
-        List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
-        String serviceType,
-        @Nullable String sqlDedicatedGatewayEndpoint,
-        String status) {
+        @OutputCustomType.Parameter("creationTime") String creationTime,
+        @OutputCustomType.Parameter("instanceCount") @Nullable Integer instanceCount,
+        @OutputCustomType.Parameter("instanceSize") @Nullable String instanceSize,
+        @OutputCustomType.Parameter("locations") List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations,
+        @OutputCustomType.Parameter("serviceType") String serviceType,
+        @OutputCustomType.Parameter("sqlDedicatedGatewayEndpoint") @Nullable String sqlDedicatedGatewayEndpoint,
+        @OutputCustomType.Parameter("status") String status) {
         this.creationTime = creationTime;
         this.instanceCount = instanceCount;
         this.instanceSize = instanceSize;
@@ -152,37 +152,37 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
     	      this.status = defaults.status;
         }
 
-        public Builder setCreationTime(String creationTime) {
+        public Builder creationTime(String creationTime) {
             this.creationTime = Objects.requireNonNull(creationTime);
             return this;
         }
 
-        public Builder setInstanceCount(@Nullable Integer instanceCount) {
+        public Builder instanceCount(@Nullable Integer instanceCount) {
             this.instanceCount = instanceCount;
             return this;
         }
 
-        public Builder setInstanceSize(@Nullable String instanceSize) {
+        public Builder instanceSize(@Nullable String instanceSize) {
             this.instanceSize = instanceSize;
             return this;
         }
 
-        public Builder setLocations(List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations) {
+        public Builder locations(List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations) {
             this.locations = Objects.requireNonNull(locations);
             return this;
         }
 
-        public Builder setServiceType(String serviceType) {
+        public Builder serviceType(String serviceType) {
             this.serviceType = Objects.requireNonNull(serviceType);
             return this;
         }
 
-        public Builder setSqlDedicatedGatewayEndpoint(@Nullable String sqlDedicatedGatewayEndpoint) {
+        public Builder sqlDedicatedGatewayEndpoint(@Nullable String sqlDedicatedGatewayEndpoint) {
             this.sqlDedicatedGatewayEndpoint = sqlDedicatedGatewayEndpoint;
             return this;
         }
 
-        public Builder setStatus(String status) {
+        public Builder status(String status) {
             this.status = Objects.requireNonNull(status);
             return this;
         }

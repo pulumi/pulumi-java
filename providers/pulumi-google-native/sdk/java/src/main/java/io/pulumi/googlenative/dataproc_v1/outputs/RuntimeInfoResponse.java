@@ -26,11 +26,11 @@ public final class RuntimeInfoResponse {
      */
     private final String outputUri;
 
-    @OutputCustomType.Constructor({"diagnosticOutputUri","endpoints","outputUri"})
+    @OutputCustomType.Constructor
     private RuntimeInfoResponse(
-        String diagnosticOutputUri,
-        Map<String,String> endpoints,
-        String outputUri) {
+        @OutputCustomType.Parameter("diagnosticOutputUri") String diagnosticOutputUri,
+        @OutputCustomType.Parameter("endpoints") Map<String,String> endpoints,
+        @OutputCustomType.Parameter("outputUri") String outputUri) {
         this.diagnosticOutputUri = diagnosticOutputUri;
         this.endpoints = endpoints;
         this.outputUri = outputUri;
@@ -82,17 +82,17 @@ public final class RuntimeInfoResponse {
     	      this.outputUri = defaults.outputUri;
         }
 
-        public Builder setDiagnosticOutputUri(String diagnosticOutputUri) {
+        public Builder diagnosticOutputUri(String diagnosticOutputUri) {
             this.diagnosticOutputUri = Objects.requireNonNull(diagnosticOutputUri);
             return this;
         }
 
-        public Builder setEndpoints(Map<String,String> endpoints) {
+        public Builder endpoints(Map<String,String> endpoints) {
             this.endpoints = Objects.requireNonNull(endpoints);
             return this;
         }
 
-        public Builder setOutputUri(String outputUri) {
+        public Builder outputUri(String outputUri) {
             this.outputUri = Objects.requireNonNull(outputUri);
             return this;
         }

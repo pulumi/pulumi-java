@@ -88,17 +88,17 @@ public final class VmImageResponse extends io.pulumi.resources.InvokeArgs {
     	      this.project = defaults.project;
         }
 
-        public Builder setImageFamily(String imageFamily) {
+        public Builder imageFamily(String imageFamily) {
             this.imageFamily = Objects.requireNonNull(imageFamily);
             return this;
         }
 
-        public Builder setImageName(String imageName) {
+        public Builder imageName(String imageName) {
             this.imageName = Objects.requireNonNull(imageName);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }

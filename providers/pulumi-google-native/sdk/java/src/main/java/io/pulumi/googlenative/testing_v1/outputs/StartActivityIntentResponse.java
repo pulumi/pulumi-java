@@ -26,11 +26,11 @@ public final class StartActivityIntentResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"action","categories","uri"})
+    @OutputCustomType.Constructor
     private StartActivityIntentResponse(
-        String action,
-        List<String> categories,
-        String uri) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("categories") List<String> categories,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.action = action;
         this.categories = categories;
         this.uri = uri;
@@ -82,17 +82,17 @@ public final class StartActivityIntentResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setCategories(List<String> categories) {
+        public Builder categories(List<String> categories) {
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

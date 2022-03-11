@@ -36,13 +36,13 @@ public final class GetWorkloadIdentityPoolResult {
      */
     private final String state;
 
-    @OutputCustomType.Constructor({"description","disabled","displayName","name","state"})
+    @OutputCustomType.Constructor
     private GetWorkloadIdentityPoolResult(
-        String description,
-        Boolean disabled,
-        String displayName,
-        String name,
-        String state) {
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("disabled") Boolean disabled,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state) {
         this.description = description;
         this.disabled = disabled;
         this.displayName = displayName;
@@ -114,27 +114,27 @@ public final class GetWorkloadIdentityPoolResult {
     	      this.state = defaults.state;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setDisabled(Boolean disabled) {
+        public Builder disabled(Boolean disabled) {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }

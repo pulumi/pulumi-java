@@ -41,11 +41,11 @@ public final class ScopedResourceSelectorRequirement {
      */
     private final @Nullable List<String> values;
 
-    @OutputCustomType.Constructor({"operator","scopeName","values"})
+    @OutputCustomType.Constructor
     private ScopedResourceSelectorRequirement(
-        String operator,
-        String scopeName,
-        @Nullable List<String> values) {
+        @OutputCustomType.Parameter("operator") String operator,
+        @OutputCustomType.Parameter("scopeName") String scopeName,
+        @OutputCustomType.Parameter("values") @Nullable List<String> values) {
         this.operator = operator;
         this.scopeName = scopeName;
         this.values = values;
@@ -111,17 +111,17 @@ public final class ScopedResourceSelectorRequirement {
     	      this.values = defaults.values;
         }
 
-        public Builder setOperator(String operator) {
+        public Builder operator(String operator) {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
 
-        public Builder setScopeName(String scopeName) {
+        public Builder scopeName(String scopeName) {
             this.scopeName = Objects.requireNonNull(scopeName);
             return this;
         }
 
-        public Builder setValues(@Nullable List<String> values) {
+        public Builder values(@Nullable List<String> values) {
             this.values = values;
             return this;
         }

@@ -26,11 +26,11 @@ public final class TextMappingResponse {
      */
     private final Integer inputTrack;
 
-    @OutputCustomType.Constructor({"atomKey","inputKey","inputTrack"})
+    @OutputCustomType.Constructor
     private TextMappingResponse(
-        String atomKey,
-        String inputKey,
-        Integer inputTrack) {
+        @OutputCustomType.Parameter("atomKey") String atomKey,
+        @OutputCustomType.Parameter("inputKey") String inputKey,
+        @OutputCustomType.Parameter("inputTrack") Integer inputTrack) {
         this.atomKey = atomKey;
         this.inputKey = inputKey;
         this.inputTrack = inputTrack;
@@ -82,17 +82,17 @@ public final class TextMappingResponse {
     	      this.inputTrack = defaults.inputTrack;
         }
 
-        public Builder setAtomKey(String atomKey) {
+        public Builder atomKey(String atomKey) {
             this.atomKey = Objects.requireNonNull(atomKey);
             return this;
         }
 
-        public Builder setInputKey(String inputKey) {
+        public Builder inputKey(String inputKey) {
             this.inputKey = Objects.requireNonNull(inputKey);
             return this;
         }
 
-        public Builder setInputTrack(Integer inputTrack) {
+        public Builder inputTrack(Integer inputTrack) {
             this.inputTrack = Objects.requireNonNull(inputTrack);
             return this;
         }

@@ -180,41 +180,41 @@ public final class GetInterconnectAttachmentResult {
      */
     private final Integer vlanTag8021q;
 
-    @OutputCustomType.Constructor({"adminEnabled","bandwidth","candidateIpv6Subnets","candidateSubnets","cloudRouterIpAddress","cloudRouterIpv6Address","cloudRouterIpv6InterfaceId","creationTimestamp","customerRouterIpAddress","customerRouterIpv6Address","customerRouterIpv6InterfaceId","dataplaneVersion","description","edgeAvailabilityDomain","encryption","interconnect","ipsecInternalAddresses","kind","mtu","name","operationalStatus","pairingKey","partnerAsn","partnerMetadata","privateInterconnectInfo","region","router","satisfiesPzs","selfLink","stackType","state","type","vlanTag8021q"})
+    @OutputCustomType.Constructor
     private GetInterconnectAttachmentResult(
-        Boolean adminEnabled,
-        String bandwidth,
-        List<String> candidateIpv6Subnets,
-        List<String> candidateSubnets,
-        String cloudRouterIpAddress,
-        String cloudRouterIpv6Address,
-        String cloudRouterIpv6InterfaceId,
-        String creationTimestamp,
-        String customerRouterIpAddress,
-        String customerRouterIpv6Address,
-        String customerRouterIpv6InterfaceId,
-        Integer dataplaneVersion,
-        String description,
-        String edgeAvailabilityDomain,
-        String encryption,
-        String interconnect,
-        List<String> ipsecInternalAddresses,
-        String kind,
-        Integer mtu,
-        String name,
-        String operationalStatus,
-        String pairingKey,
-        String partnerAsn,
-        InterconnectAttachmentPartnerMetadataResponse partnerMetadata,
-        InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo,
-        String region,
-        String router,
-        Boolean satisfiesPzs,
-        String selfLink,
-        String stackType,
-        String state,
-        String type,
-        Integer vlanTag8021q) {
+        @OutputCustomType.Parameter("adminEnabled") Boolean adminEnabled,
+        @OutputCustomType.Parameter("bandwidth") String bandwidth,
+        @OutputCustomType.Parameter("candidateIpv6Subnets") List<String> candidateIpv6Subnets,
+        @OutputCustomType.Parameter("candidateSubnets") List<String> candidateSubnets,
+        @OutputCustomType.Parameter("cloudRouterIpAddress") String cloudRouterIpAddress,
+        @OutputCustomType.Parameter("cloudRouterIpv6Address") String cloudRouterIpv6Address,
+        @OutputCustomType.Parameter("cloudRouterIpv6InterfaceId") String cloudRouterIpv6InterfaceId,
+        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @OutputCustomType.Parameter("customerRouterIpAddress") String customerRouterIpAddress,
+        @OutputCustomType.Parameter("customerRouterIpv6Address") String customerRouterIpv6Address,
+        @OutputCustomType.Parameter("customerRouterIpv6InterfaceId") String customerRouterIpv6InterfaceId,
+        @OutputCustomType.Parameter("dataplaneVersion") Integer dataplaneVersion,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("edgeAvailabilityDomain") String edgeAvailabilityDomain,
+        @OutputCustomType.Parameter("encryption") String encryption,
+        @OutputCustomType.Parameter("interconnect") String interconnect,
+        @OutputCustomType.Parameter("ipsecInternalAddresses") List<String> ipsecInternalAddresses,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("mtu") Integer mtu,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("operationalStatus") String operationalStatus,
+        @OutputCustomType.Parameter("pairingKey") String pairingKey,
+        @OutputCustomType.Parameter("partnerAsn") String partnerAsn,
+        @OutputCustomType.Parameter("partnerMetadata") InterconnectAttachmentPartnerMetadataResponse partnerMetadata,
+        @OutputCustomType.Parameter("privateInterconnectInfo") InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("router") String router,
+        @OutputCustomType.Parameter("satisfiesPzs") Boolean satisfiesPzs,
+        @OutputCustomType.Parameter("selfLink") String selfLink,
+        @OutputCustomType.Parameter("stackType") String stackType,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("vlanTag8021q") Integer vlanTag8021q) {
         this.adminEnabled = adminEnabled;
         this.bandwidth = bandwidth;
         this.candidateIpv6Subnets = candidateIpv6Subnets;
@@ -566,167 +566,167 @@ public final class GetInterconnectAttachmentResult {
     	      this.vlanTag8021q = defaults.vlanTag8021q;
         }
 
-        public Builder setAdminEnabled(Boolean adminEnabled) {
+        public Builder adminEnabled(Boolean adminEnabled) {
             this.adminEnabled = Objects.requireNonNull(adminEnabled);
             return this;
         }
 
-        public Builder setBandwidth(String bandwidth) {
+        public Builder bandwidth(String bandwidth) {
             this.bandwidth = Objects.requireNonNull(bandwidth);
             return this;
         }
 
-        public Builder setCandidateIpv6Subnets(List<String> candidateIpv6Subnets) {
+        public Builder candidateIpv6Subnets(List<String> candidateIpv6Subnets) {
             this.candidateIpv6Subnets = Objects.requireNonNull(candidateIpv6Subnets);
             return this;
         }
 
-        public Builder setCandidateSubnets(List<String> candidateSubnets) {
+        public Builder candidateSubnets(List<String> candidateSubnets) {
             this.candidateSubnets = Objects.requireNonNull(candidateSubnets);
             return this;
         }
 
-        public Builder setCloudRouterIpAddress(String cloudRouterIpAddress) {
+        public Builder cloudRouterIpAddress(String cloudRouterIpAddress) {
             this.cloudRouterIpAddress = Objects.requireNonNull(cloudRouterIpAddress);
             return this;
         }
 
-        public Builder setCloudRouterIpv6Address(String cloudRouterIpv6Address) {
+        public Builder cloudRouterIpv6Address(String cloudRouterIpv6Address) {
             this.cloudRouterIpv6Address = Objects.requireNonNull(cloudRouterIpv6Address);
             return this;
         }
 
-        public Builder setCloudRouterIpv6InterfaceId(String cloudRouterIpv6InterfaceId) {
+        public Builder cloudRouterIpv6InterfaceId(String cloudRouterIpv6InterfaceId) {
             this.cloudRouterIpv6InterfaceId = Objects.requireNonNull(cloudRouterIpv6InterfaceId);
             return this;
         }
 
-        public Builder setCreationTimestamp(String creationTimestamp) {
+        public Builder creationTimestamp(String creationTimestamp) {
             this.creationTimestamp = Objects.requireNonNull(creationTimestamp);
             return this;
         }
 
-        public Builder setCustomerRouterIpAddress(String customerRouterIpAddress) {
+        public Builder customerRouterIpAddress(String customerRouterIpAddress) {
             this.customerRouterIpAddress = Objects.requireNonNull(customerRouterIpAddress);
             return this;
         }
 
-        public Builder setCustomerRouterIpv6Address(String customerRouterIpv6Address) {
+        public Builder customerRouterIpv6Address(String customerRouterIpv6Address) {
             this.customerRouterIpv6Address = Objects.requireNonNull(customerRouterIpv6Address);
             return this;
         }
 
-        public Builder setCustomerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
+        public Builder customerRouterIpv6InterfaceId(String customerRouterIpv6InterfaceId) {
             this.customerRouterIpv6InterfaceId = Objects.requireNonNull(customerRouterIpv6InterfaceId);
             return this;
         }
 
-        public Builder setDataplaneVersion(Integer dataplaneVersion) {
+        public Builder dataplaneVersion(Integer dataplaneVersion) {
             this.dataplaneVersion = Objects.requireNonNull(dataplaneVersion);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setEdgeAvailabilityDomain(String edgeAvailabilityDomain) {
+        public Builder edgeAvailabilityDomain(String edgeAvailabilityDomain) {
             this.edgeAvailabilityDomain = Objects.requireNonNull(edgeAvailabilityDomain);
             return this;
         }
 
-        public Builder setEncryption(String encryption) {
+        public Builder encryption(String encryption) {
             this.encryption = Objects.requireNonNull(encryption);
             return this;
         }
 
-        public Builder setInterconnect(String interconnect) {
+        public Builder interconnect(String interconnect) {
             this.interconnect = Objects.requireNonNull(interconnect);
             return this;
         }
 
-        public Builder setIpsecInternalAddresses(List<String> ipsecInternalAddresses) {
+        public Builder ipsecInternalAddresses(List<String> ipsecInternalAddresses) {
             this.ipsecInternalAddresses = Objects.requireNonNull(ipsecInternalAddresses);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setMtu(Integer mtu) {
+        public Builder mtu(Integer mtu) {
             this.mtu = Objects.requireNonNull(mtu);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setOperationalStatus(String operationalStatus) {
+        public Builder operationalStatus(String operationalStatus) {
             this.operationalStatus = Objects.requireNonNull(operationalStatus);
             return this;
         }
 
-        public Builder setPairingKey(String pairingKey) {
+        public Builder pairingKey(String pairingKey) {
             this.pairingKey = Objects.requireNonNull(pairingKey);
             return this;
         }
 
-        public Builder setPartnerAsn(String partnerAsn) {
+        public Builder partnerAsn(String partnerAsn) {
             this.partnerAsn = Objects.requireNonNull(partnerAsn);
             return this;
         }
 
-        public Builder setPartnerMetadata(InterconnectAttachmentPartnerMetadataResponse partnerMetadata) {
+        public Builder partnerMetadata(InterconnectAttachmentPartnerMetadataResponse partnerMetadata) {
             this.partnerMetadata = Objects.requireNonNull(partnerMetadata);
             return this;
         }
 
-        public Builder setPrivateInterconnectInfo(InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo) {
+        public Builder privateInterconnectInfo(InterconnectAttachmentPrivateInfoResponse privateInterconnectInfo) {
             this.privateInterconnectInfo = Objects.requireNonNull(privateInterconnectInfo);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setRouter(String router) {
+        public Builder router(String router) {
             this.router = Objects.requireNonNull(router);
             return this;
         }
 
-        public Builder setSatisfiesPzs(Boolean satisfiesPzs) {
+        public Builder satisfiesPzs(Boolean satisfiesPzs) {
             this.satisfiesPzs = Objects.requireNonNull(satisfiesPzs);
             return this;
         }
 
-        public Builder setSelfLink(String selfLink) {
+        public Builder selfLink(String selfLink) {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
 
-        public Builder setStackType(String stackType) {
+        public Builder stackType(String stackType) {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVlanTag8021q(Integer vlanTag8021q) {
+        public Builder vlanTag8021q(Integer vlanTag8021q) {
             this.vlanTag8021q = Objects.requireNonNull(vlanTag8021q);
             return this;
         }

@@ -43,14 +43,14 @@ public final class CompensationEntryResponse {
      */
     private final String unit;
 
-    @OutputCustomType.Constructor({"amount","description","expectedUnitsPerYear","range","type","unit"})
+    @OutputCustomType.Constructor
     private CompensationEntryResponse(
-        MoneyResponse amount,
-        String description,
-        Double expectedUnitsPerYear,
-        CompensationRangeResponse range,
-        String type,
-        String unit) {
+        @OutputCustomType.Parameter("amount") MoneyResponse amount,
+        @OutputCustomType.Parameter("description") String description,
+        @OutputCustomType.Parameter("expectedUnitsPerYear") Double expectedUnitsPerYear,
+        @OutputCustomType.Parameter("range") CompensationRangeResponse range,
+        @OutputCustomType.Parameter("type") String type,
+        @OutputCustomType.Parameter("unit") String unit) {
         this.amount = amount;
         this.description = description;
         this.expectedUnitsPerYear = expectedUnitsPerYear;
@@ -132,32 +132,32 @@ public final class CompensationEntryResponse {
     	      this.unit = defaults.unit;
         }
 
-        public Builder setAmount(MoneyResponse amount) {
+        public Builder amount(MoneyResponse amount) {
             this.amount = Objects.requireNonNull(amount);
             return this;
         }
 
-        public Builder setDescription(String description) {
+        public Builder description(String description) {
             this.description = Objects.requireNonNull(description);
             return this;
         }
 
-        public Builder setExpectedUnitsPerYear(Double expectedUnitsPerYear) {
+        public Builder expectedUnitsPerYear(Double expectedUnitsPerYear) {
             this.expectedUnitsPerYear = Objects.requireNonNull(expectedUnitsPerYear);
             return this;
         }
 
-        public Builder setRange(CompensationRangeResponse range) {
+        public Builder range(CompensationRangeResponse range) {
             this.range = Objects.requireNonNull(range);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setUnit(String unit) {
+        public Builder unit(String unit) {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }

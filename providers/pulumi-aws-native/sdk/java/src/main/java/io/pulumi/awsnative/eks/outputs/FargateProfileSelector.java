@@ -15,10 +15,10 @@ public final class FargateProfileSelector {
     private final @Nullable List<FargateProfileLabel> labels;
     private final String namespace;
 
-    @OutputCustomType.Constructor({"labels","namespace"})
+    @OutputCustomType.Constructor
     private FargateProfileSelector(
-        @Nullable List<FargateProfileLabel> labels,
-        String namespace) {
+        @OutputCustomType.Parameter("labels") @Nullable List<FargateProfileLabel> labels,
+        @OutputCustomType.Parameter("namespace") String namespace) {
         this.labels = labels;
         this.namespace = namespace;
     }
@@ -52,12 +52,12 @@ public final class FargateProfileSelector {
     	      this.namespace = defaults.namespace;
         }
 
-        public Builder setLabels(@Nullable List<FargateProfileLabel> labels) {
+        public Builder labels(@Nullable List<FargateProfileLabel> labels) {
             this.labels = labels;
             return this;
         }
 
-        public Builder setNamespace(String namespace) {
+        public Builder namespace(String namespace) {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }

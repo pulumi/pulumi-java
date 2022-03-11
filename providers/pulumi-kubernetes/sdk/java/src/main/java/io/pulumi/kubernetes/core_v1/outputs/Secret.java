@@ -50,15 +50,15 @@ public final class Secret {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor({"apiVersion","data","immutable","kind","metadata","stringData","type"})
+    @OutputCustomType.Constructor
     private Secret(
-        @Nullable String apiVersion,
-        @Nullable Map<String,String> data,
-        @Nullable Boolean immutable,
-        @Nullable String kind,
-        @Nullable ObjectMeta metadata,
-        @Nullable Map<String,String> stringData,
-        @Nullable String type) {
+        @OutputCustomType.Parameter("apiVersion") @Nullable String apiVersion,
+        @OutputCustomType.Parameter("data") @Nullable Map<String,String> data,
+        @OutputCustomType.Parameter("immutable") @Nullable Boolean immutable,
+        @OutputCustomType.Parameter("kind") @Nullable String kind,
+        @OutputCustomType.Parameter("metadata") @Nullable ObjectMeta metadata,
+        @OutputCustomType.Parameter("stringData") @Nullable Map<String,String> stringData,
+        @OutputCustomType.Parameter("type") @Nullable String type) {
         this.apiVersion = apiVersion;
         this.data = data;
         this.immutable = immutable;
@@ -150,37 +150,37 @@ public final class Secret {
     	      this.type = defaults.type;
         }
 
-        public Builder setApiVersion(@Nullable String apiVersion) {
+        public Builder apiVersion(@Nullable String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
 
-        public Builder setData(@Nullable Map<String,String> data) {
+        public Builder data(@Nullable Map<String,String> data) {
             this.data = data;
             return this;
         }
 
-        public Builder setImmutable(@Nullable Boolean immutable) {
+        public Builder immutable(@Nullable Boolean immutable) {
             this.immutable = immutable;
             return this;
         }
 
-        public Builder setKind(@Nullable String kind) {
+        public Builder kind(@Nullable String kind) {
             this.kind = kind;
             return this;
         }
 
-        public Builder setMetadata(@Nullable ObjectMeta metadata) {
+        public Builder metadata(@Nullable ObjectMeta metadata) {
             this.metadata = metadata;
             return this;
         }
 
-        public Builder setStringData(@Nullable Map<String,String> stringData) {
+        public Builder stringData(@Nullable Map<String,String> stringData) {
             this.stringData = stringData;
             return this;
         }
 
-        public Builder setType(@Nullable String type) {
+        public Builder type(@Nullable String type) {
             this.type = type;
             return this;
         }

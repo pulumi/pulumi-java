@@ -29,12 +29,12 @@ public final class DatasetDataCatalogInputDefinition {
     private final @Nullable String tableName;
     private final @Nullable DatasetS3Location tempDirectory;
 
-    @OutputCustomType.Constructor({"catalogId","databaseName","tableName","tempDirectory"})
+    @OutputCustomType.Constructor
     private DatasetDataCatalogInputDefinition(
-        @Nullable String catalogId,
-        @Nullable String databaseName,
-        @Nullable String tableName,
-        @Nullable DatasetS3Location tempDirectory) {
+        @OutputCustomType.Parameter("catalogId") @Nullable String catalogId,
+        @OutputCustomType.Parameter("databaseName") @Nullable String databaseName,
+        @OutputCustomType.Parameter("tableName") @Nullable String tableName,
+        @OutputCustomType.Parameter("tempDirectory") @Nullable DatasetS3Location tempDirectory) {
         this.catalogId = catalogId;
         this.databaseName = databaseName;
         this.tableName = tableName;
@@ -92,22 +92,22 @@ public final class DatasetDataCatalogInputDefinition {
     	      this.tempDirectory = defaults.tempDirectory;
         }
 
-        public Builder setCatalogId(@Nullable String catalogId) {
+        public Builder catalogId(@Nullable String catalogId) {
             this.catalogId = catalogId;
             return this;
         }
 
-        public Builder setDatabaseName(@Nullable String databaseName) {
+        public Builder databaseName(@Nullable String databaseName) {
             this.databaseName = databaseName;
             return this;
         }
 
-        public Builder setTableName(@Nullable String tableName) {
+        public Builder tableName(@Nullable String tableName) {
             this.tableName = tableName;
             return this;
         }
 
-        public Builder setTempDirectory(@Nullable DatasetS3Location tempDirectory) {
+        public Builder tempDirectory(@Nullable DatasetS3Location tempDirectory) {
             this.tempDirectory = tempDirectory;
             return this;
         }

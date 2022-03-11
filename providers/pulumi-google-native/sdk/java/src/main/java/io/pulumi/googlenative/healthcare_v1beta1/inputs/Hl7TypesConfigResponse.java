@@ -74,12 +74,12 @@ public final class Hl7TypesConfigResponse extends io.pulumi.resources.InvokeArgs
     	      this.version = defaults.version;
         }
 
-        public Builder setType(List<TypeResponse> type) {
+        public Builder type(List<TypeResponse> type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }
 
-        public Builder setVersion(List<VersionSourceResponse> version) {
+        public Builder version(List<VersionSourceResponse> version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

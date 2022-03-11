@@ -20,10 +20,10 @@ public final class AwsClusterControlPlaneProxyConfig {
      */
     private final String secretVersion;
 
-    @OutputCustomType.Constructor({"secretArn","secretVersion"})
+    @OutputCustomType.Constructor
     private AwsClusterControlPlaneProxyConfig(
-        String secretArn,
-        String secretVersion) {
+        @OutputCustomType.Parameter("secretArn") String secretArn,
+        @OutputCustomType.Parameter("secretVersion") String secretVersion) {
         this.secretArn = secretArn;
         this.secretVersion = secretVersion;
     }
@@ -65,12 +65,12 @@ public final class AwsClusterControlPlaneProxyConfig {
     	      this.secretVersion = defaults.secretVersion;
         }
 
-        public Builder setSecretArn(String secretArn) {
+        public Builder secretArn(String secretArn) {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
 
-        public Builder setSecretVersion(String secretVersion) {
+        public Builder secretVersion(String secretVersion) {
             this.secretVersion = Objects.requireNonNull(secretVersion);
             return this;
         }

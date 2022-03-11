@@ -157,72 +157,72 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     	      this.topicEndpoint = defaults.topicEndpoint;
         }
 
-        public Builder setAccessKey1(Input<String> accessKey1) {
+        public Builder accessKey1(Input<String> accessKey1) {
             this.accessKey1 = Objects.requireNonNull(accessKey1);
             return this;
         }
 
-        public Builder setAccessKey1(String accessKey1) {
+        public Builder accessKey1(String accessKey1) {
             this.accessKey1 = Input.of(Objects.requireNonNull(accessKey1));
             return this;
         }
 
-        public Builder setAccessKey2(@Nullable Input<String> accessKey2) {
+        public Builder accessKey2(@Nullable Input<String> accessKey2) {
             this.accessKey2 = accessKey2;
             return this;
         }
 
-        public Builder setAccessKey2(@Nullable String accessKey2) {
+        public Builder accessKey2(@Nullable String accessKey2) {
             this.accessKey2 = Input.ofNullable(accessKey2);
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
+        public Builder authenticationType(@Nullable Input<Either<String,AuthenticationType>> authenticationType) {
             this.authenticationType = authenticationType;
             return this;
         }
 
-        public Builder setAuthenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
+        public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
             this.authenticationType = Input.ofNullable(authenticationType);
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable Input<String> deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable Input<String> deadLetterSecret) {
             this.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
-        public Builder setDeadLetterSecret(@Nullable String deadLetterSecret) {
+        public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             this.deadLetterSecret = Input.ofNullable(deadLetterSecret);
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable Input<String> deadLetterUri) {
+        public Builder deadLetterUri(@Nullable Input<String> deadLetterUri) {
             this.deadLetterUri = deadLetterUri;
             return this;
         }
 
-        public Builder setDeadLetterUri(@Nullable String deadLetterUri) {
+        public Builder deadLetterUri(@Nullable String deadLetterUri) {
             this.deadLetterUri = Input.ofNullable(deadLetterUri);
             return this;
         }
 
-        public Builder setEndpointType(Input<String> endpointType) {
+        public Builder endpointType(Input<String> endpointType) {
             this.endpointType = Objects.requireNonNull(endpointType);
             return this;
         }
 
-        public Builder setEndpointType(String endpointType) {
+        public Builder endpointType(String endpointType) {
             this.endpointType = Input.of(Objects.requireNonNull(endpointType));
             return this;
         }
 
-        public Builder setTopicEndpoint(Input<String> topicEndpoint) {
+        public Builder topicEndpoint(Input<String> topicEndpoint) {
             this.topicEndpoint = Objects.requireNonNull(topicEndpoint);
             return this;
         }
 
-        public Builder setTopicEndpoint(String topicEndpoint) {
+        public Builder topicEndpoint(String topicEndpoint) {
             this.topicEndpoint = Input.of(Objects.requireNonNull(topicEndpoint));
             return this;
         }

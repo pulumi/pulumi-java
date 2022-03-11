@@ -17,11 +17,11 @@ public final class EnvironmentModuleLoggingConfiguration {
     private final @Nullable Boolean enabled;
     private final @Nullable EnvironmentLoggingLevel logLevel;
 
-    @OutputCustomType.Constructor({"cloudWatchLogGroupArn","enabled","logLevel"})
+    @OutputCustomType.Constructor
     private EnvironmentModuleLoggingConfiguration(
-        @Nullable String cloudWatchLogGroupArn,
-        @Nullable Boolean enabled,
-        @Nullable EnvironmentLoggingLevel logLevel) {
+        @OutputCustomType.Parameter("cloudWatchLogGroupArn") @Nullable String cloudWatchLogGroupArn,
+        @OutputCustomType.Parameter("enabled") @Nullable Boolean enabled,
+        @OutputCustomType.Parameter("logLevel") @Nullable EnvironmentLoggingLevel logLevel) {
         this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
         this.enabled = enabled;
         this.logLevel = logLevel;
@@ -61,17 +61,17 @@ public final class EnvironmentModuleLoggingConfiguration {
     	      this.logLevel = defaults.logLevel;
         }
 
-        public Builder setCloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
+        public Builder cloudWatchLogGroupArn(@Nullable String cloudWatchLogGroupArn) {
             this.cloudWatchLogGroupArn = cloudWatchLogGroupArn;
             return this;
         }
 
-        public Builder setEnabled(@Nullable Boolean enabled) {
+        public Builder enabled(@Nullable Boolean enabled) {
             this.enabled = enabled;
             return this;
         }
 
-        public Builder setLogLevel(@Nullable EnvironmentLoggingLevel logLevel) {
+        public Builder logLevel(@Nullable EnvironmentLoggingLevel logLevel) {
             this.logLevel = logLevel;
             return this;
         }

@@ -160,72 +160,72 @@ public final class PreventionStoredInfoTypeState extends io.pulumi.resources.Res
     	      this.regex = defaults.regex;
         }
 
-        public Builder setDescription(@Nullable Input<String> description) {
+        public Builder description(@Nullable Input<String> description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = Input.ofNullable(description);
             return this;
         }
 
-        public Builder setDictionary(@Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
+        public Builder dictionary(@Nullable Input<PreventionStoredInfoTypeDictionaryGetArgs> dictionary) {
             this.dictionary = dictionary;
             return this;
         }
 
-        public Builder setDictionary(@Nullable PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
+        public Builder dictionary(@Nullable PreventionStoredInfoTypeDictionaryGetArgs dictionary) {
             this.dictionary = Input.ofNullable(dictionary);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setLargeCustomDictionary(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryGetArgs> largeCustomDictionary) {
             this.largeCustomDictionary = largeCustomDictionary;
             return this;
         }
 
-        public Builder setLargeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
+        public Builder largeCustomDictionary(@Nullable PreventionStoredInfoTypeLargeCustomDictionaryGetArgs largeCustomDictionary) {
             this.largeCustomDictionary = Input.ofNullable(largeCustomDictionary);
             return this;
         }
 
-        public Builder setName(@Nullable Input<String> name) {
+        public Builder name(@Nullable Input<String> name) {
             this.name = name;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = Input.ofNullable(name);
             return this;
         }
 
-        public Builder setParent(@Nullable Input<String> parent) {
+        public Builder parent(@Nullable Input<String> parent) {
             this.parent = parent;
             return this;
         }
 
-        public Builder setParent(@Nullable String parent) {
+        public Builder parent(@Nullable String parent) {
             this.parent = Input.ofNullable(parent);
             return this;
         }
 
-        public Builder setRegex(@Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex) {
+        public Builder regex(@Nullable Input<PreventionStoredInfoTypeRegexGetArgs> regex) {
             this.regex = regex;
             return this;
         }
 
-        public Builder setRegex(@Nullable PreventionStoredInfoTypeRegexGetArgs regex) {
+        public Builder regex(@Nullable PreventionStoredInfoTypeRegexGetArgs regex) {
             this.regex = Input.ofNullable(regex);
             return this;
         }

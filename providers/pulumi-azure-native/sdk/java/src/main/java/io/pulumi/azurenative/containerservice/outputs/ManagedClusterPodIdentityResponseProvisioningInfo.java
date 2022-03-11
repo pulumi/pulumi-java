@@ -17,8 +17,8 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
      */
     private final @Nullable CloudErrorResponse error;
 
-    @OutputCustomType.Constructor({"error"})
-    private ManagedClusterPodIdentityResponseProvisioningInfo(@Nullable CloudErrorResponse error) {
+    @OutputCustomType.Constructor
+    private ManagedClusterPodIdentityResponseProvisioningInfo(@OutputCustomType.Parameter("error") @Nullable CloudErrorResponse error) {
         this.error = error;
     }
 
@@ -50,7 +50,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
     	      this.error = defaults.error;
         }
 
-        public Builder setError(@Nullable CloudErrorResponse error) {
+        public Builder error(@Nullable CloudErrorResponse error) {
             this.error = error;
             return this;
         }

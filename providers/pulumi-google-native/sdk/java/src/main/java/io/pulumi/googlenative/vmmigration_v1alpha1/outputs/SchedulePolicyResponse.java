@@ -21,10 +21,10 @@ public final class SchedulePolicyResponse {
      */
     private final Boolean skipOsAdaptation;
 
-    @OutputCustomType.Constructor({"idleDuration","skipOsAdaptation"})
+    @OutputCustomType.Constructor
     private SchedulePolicyResponse(
-        String idleDuration,
-        Boolean skipOsAdaptation) {
+        @OutputCustomType.Parameter("idleDuration") String idleDuration,
+        @OutputCustomType.Parameter("skipOsAdaptation") Boolean skipOsAdaptation) {
         this.idleDuration = idleDuration;
         this.skipOsAdaptation = skipOsAdaptation;
     }
@@ -66,12 +66,12 @@ public final class SchedulePolicyResponse {
     	      this.skipOsAdaptation = defaults.skipOsAdaptation;
         }
 
-        public Builder setIdleDuration(String idleDuration) {
+        public Builder idleDuration(String idleDuration) {
             this.idleDuration = Objects.requireNonNull(idleDuration);
             return this;
         }
 
-        public Builder setSkipOsAdaptation(Boolean skipOsAdaptation) {
+        public Builder skipOsAdaptation(Boolean skipOsAdaptation) {
             this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
             return this;
         }

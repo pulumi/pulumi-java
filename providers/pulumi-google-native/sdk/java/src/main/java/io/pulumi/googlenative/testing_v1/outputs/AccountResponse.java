@@ -15,8 +15,8 @@ public final class AccountResponse {
      */
     private final GoogleAutoResponse googleAuto;
 
-    @OutputCustomType.Constructor({"googleAuto"})
-    private AccountResponse(GoogleAutoResponse googleAuto) {
+    @OutputCustomType.Constructor
+    private AccountResponse(@OutputCustomType.Parameter("googleAuto") GoogleAutoResponse googleAuto) {
         this.googleAuto = googleAuto;
     }
 
@@ -48,7 +48,7 @@ public final class AccountResponse {
     	      this.googleAuto = defaults.googleAuto;
         }
 
-        public Builder setGoogleAuto(GoogleAutoResponse googleAuto) {
+        public Builder googleAuto(GoogleAutoResponse googleAuto) {
             this.googleAuto = Objects.requireNonNull(googleAuto);
             return this;
         }

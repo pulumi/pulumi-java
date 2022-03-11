@@ -32,12 +32,12 @@ public final class TableDataSetResponse {
      */
     private final TimeSeriesQueryResponse timeSeriesQuery;
 
-    @OutputCustomType.Constructor({"minAlignmentPeriod","tableDisplayOptions","tableTemplate","timeSeriesQuery"})
+    @OutputCustomType.Constructor
     private TableDataSetResponse(
-        String minAlignmentPeriod,
-        TableDisplayOptionsResponse tableDisplayOptions,
-        String tableTemplate,
-        TimeSeriesQueryResponse timeSeriesQuery) {
+        @OutputCustomType.Parameter("minAlignmentPeriod") String minAlignmentPeriod,
+        @OutputCustomType.Parameter("tableDisplayOptions") TableDisplayOptionsResponse tableDisplayOptions,
+        @OutputCustomType.Parameter("tableTemplate") String tableTemplate,
+        @OutputCustomType.Parameter("timeSeriesQuery") TimeSeriesQueryResponse timeSeriesQuery) {
         this.minAlignmentPeriod = minAlignmentPeriod;
         this.tableDisplayOptions = tableDisplayOptions;
         this.tableTemplate = tableTemplate;
@@ -99,22 +99,22 @@ public final class TableDataSetResponse {
     	      this.timeSeriesQuery = defaults.timeSeriesQuery;
         }
 
-        public Builder setMinAlignmentPeriod(String minAlignmentPeriod) {
+        public Builder minAlignmentPeriod(String minAlignmentPeriod) {
             this.minAlignmentPeriod = Objects.requireNonNull(minAlignmentPeriod);
             return this;
         }
 
-        public Builder setTableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
+        public Builder tableDisplayOptions(TableDisplayOptionsResponse tableDisplayOptions) {
             this.tableDisplayOptions = Objects.requireNonNull(tableDisplayOptions);
             return this;
         }
 
-        public Builder setTableTemplate(String tableTemplate) {
+        public Builder tableTemplate(String tableTemplate) {
             this.tableTemplate = Objects.requireNonNull(tableTemplate);
             return this;
         }
 
-        public Builder setTimeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
+        public Builder timeSeriesQuery(TimeSeriesQueryResponse timeSeriesQuery) {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }

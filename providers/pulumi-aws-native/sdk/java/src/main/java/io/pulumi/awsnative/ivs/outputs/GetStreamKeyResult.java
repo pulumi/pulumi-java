@@ -29,11 +29,11 @@ public final class GetStreamKeyResult {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor({"arn","tags","value"})
+    @OutputCustomType.Constructor
     private GetStreamKeyResult(
-        @Nullable String arn,
-        @Nullable List<StreamKeyTag> tags,
-        @Nullable String value) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable List<StreamKeyTag> tags,
+        @OutputCustomType.Parameter("value") @Nullable String value) {
         this.arn = arn;
         this.tags = tags;
         this.value = value;
@@ -85,17 +85,17 @@ public final class GetStreamKeyResult {
     	      this.value = defaults.value;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<StreamKeyTag> tags) {
+        public Builder tags(@Nullable List<StreamKeyTag> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setValue(@Nullable String value) {
+        public Builder value(@Nullable String value) {
             this.value = value;
             return this;
         }

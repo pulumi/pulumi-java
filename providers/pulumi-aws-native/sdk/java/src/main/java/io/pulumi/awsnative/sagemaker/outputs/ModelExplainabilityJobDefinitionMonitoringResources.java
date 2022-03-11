@@ -11,8 +11,8 @@ import java.util.Objects;
 public final class ModelExplainabilityJobDefinitionMonitoringResources {
     private final ModelExplainabilityJobDefinitionClusterConfig clusterConfig;
 
-    @OutputCustomType.Constructor({"clusterConfig"})
-    private ModelExplainabilityJobDefinitionMonitoringResources(ModelExplainabilityJobDefinitionClusterConfig clusterConfig) {
+    @OutputCustomType.Constructor
+    private ModelExplainabilityJobDefinitionMonitoringResources(@OutputCustomType.Parameter("clusterConfig") ModelExplainabilityJobDefinitionClusterConfig clusterConfig) {
         this.clusterConfig = clusterConfig;
     }
 
@@ -40,7 +40,7 @@ public final class ModelExplainabilityJobDefinitionMonitoringResources {
     	      this.clusterConfig = defaults.clusterConfig;
         }
 
-        public Builder setClusterConfig(ModelExplainabilityJobDefinitionClusterConfig clusterConfig) {
+        public Builder clusterConfig(ModelExplainabilityJobDefinitionClusterConfig clusterConfig) {
             this.clusterConfig = Objects.requireNonNull(clusterConfig);
             return this;
         }

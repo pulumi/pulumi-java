@@ -19,13 +19,13 @@ public final class GetClientResult {
     private final String id;
     private final String secret;
 
-    @OutputCustomType.Constructor({"brand","clientId","displayName","id","secret"})
+    @OutputCustomType.Constructor
     private GetClientResult(
-        String brand,
-        String clientId,
-        String displayName,
-        String id,
-        String secret) {
+        @OutputCustomType.Parameter("brand") String brand,
+        @OutputCustomType.Parameter("clientId") String clientId,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("secret") String secret) {
         this.brand = brand;
         this.clientId = clientId;
         this.displayName = displayName;
@@ -81,27 +81,27 @@ public final class GetClientResult {
     	      this.secret = defaults.secret;
         }
 
-        public Builder setBrand(String brand) {
+        public Builder brand(String brand) {
             this.brand = Objects.requireNonNull(brand);
             return this;
         }
 
-        public Builder setClientId(String clientId) {
+        public Builder clientId(String clientId) {
             this.clientId = Objects.requireNonNull(clientId);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }

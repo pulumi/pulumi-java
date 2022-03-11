@@ -16,8 +16,8 @@ public final class TrafficPortSelectorResponse {
      */
     private final List<String> ports;
 
-    @OutputCustomType.Constructor({"ports"})
-    private TrafficPortSelectorResponse(List<String> ports) {
+    @OutputCustomType.Constructor
+    private TrafficPortSelectorResponse(@OutputCustomType.Parameter("ports") List<String> ports) {
         this.ports = ports;
     }
 
@@ -49,7 +49,7 @@ public final class TrafficPortSelectorResponse {
     	      this.ports = defaults.ports;
         }
 
-        public Builder setPorts(List<String> ports) {
+        public Builder ports(List<String> ports) {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }

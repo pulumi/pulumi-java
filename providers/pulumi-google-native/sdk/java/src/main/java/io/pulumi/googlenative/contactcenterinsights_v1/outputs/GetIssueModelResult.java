@@ -47,15 +47,15 @@ public final class GetIssueModelResult {
      */
     private final String updateTime;
 
-    @OutputCustomType.Constructor({"createTime","displayName","inputDataConfig","name","state","trainingStats","updateTime"})
+    @OutputCustomType.Constructor
     private GetIssueModelResult(
-        String createTime,
-        String displayName,
-        GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
-        String name,
-        String state,
-        GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
-        String updateTime) {
+        @OutputCustomType.Parameter("createTime") String createTime,
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("inputDataConfig") GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("state") String state,
+        @OutputCustomType.Parameter("trainingStats") GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats,
+        @OutputCustomType.Parameter("updateTime") String updateTime) {
         this.createTime = createTime;
         this.displayName = displayName;
         this.inputDataConfig = inputDataConfig;
@@ -147,37 +147,37 @@ public final class GetIssueModelResult {
     	      this.updateTime = defaults.updateTime;
         }
 
-        public Builder setCreateTime(String createTime) {
+        public Builder createTime(String createTime) {
             this.createTime = Objects.requireNonNull(createTime);
             return this;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setInputDataConfig(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig) {
+        public Builder inputDataConfig(GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse inputDataConfig) {
             this.inputDataConfig = Objects.requireNonNull(inputDataConfig);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setState(String state) {
+        public Builder state(String state) {
             this.state = Objects.requireNonNull(state);
             return this;
         }
 
-        public Builder setTrainingStats(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats) {
+        public Builder trainingStats(GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse trainingStats) {
             this.trainingStats = Objects.requireNonNull(trainingStats);
             return this;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }

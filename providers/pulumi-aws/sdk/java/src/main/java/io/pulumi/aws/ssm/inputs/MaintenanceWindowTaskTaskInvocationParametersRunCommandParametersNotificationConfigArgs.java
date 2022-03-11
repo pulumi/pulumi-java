@@ -87,32 +87,32 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     	      this.notificationType = defaults.notificationType;
         }
 
-        public Builder setNotificationArn(@Nullable Input<String> notificationArn) {
+        public Builder notificationArn(@Nullable Input<String> notificationArn) {
             this.notificationArn = notificationArn;
             return this;
         }
 
-        public Builder setNotificationArn(@Nullable String notificationArn) {
+        public Builder notificationArn(@Nullable String notificationArn) {
             this.notificationArn = Input.ofNullable(notificationArn);
             return this;
         }
 
-        public Builder setNotificationEvents(@Nullable Input<List<String>> notificationEvents) {
+        public Builder notificationEvents(@Nullable Input<List<String>> notificationEvents) {
             this.notificationEvents = notificationEvents;
             return this;
         }
 
-        public Builder setNotificationEvents(@Nullable List<String> notificationEvents) {
+        public Builder notificationEvents(@Nullable List<String> notificationEvents) {
             this.notificationEvents = Input.ofNullable(notificationEvents);
             return this;
         }
 
-        public Builder setNotificationType(@Nullable Input<String> notificationType) {
+        public Builder notificationType(@Nullable Input<String> notificationType) {
             this.notificationType = notificationType;
             return this;
         }
 
-        public Builder setNotificationType(@Nullable String notificationType) {
+        public Builder notificationType(@Nullable String notificationType) {
             this.notificationType = Input.ofNullable(notificationType);
             return this;
         }

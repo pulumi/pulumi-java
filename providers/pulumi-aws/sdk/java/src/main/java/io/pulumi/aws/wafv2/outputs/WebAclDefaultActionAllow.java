@@ -17,8 +17,8 @@ public final class WebAclDefaultActionAllow {
      */
     private final @Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling;
 
-    @OutputCustomType.Constructor({"customRequestHandling"})
-    private WebAclDefaultActionAllow(@Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling) {
+    @OutputCustomType.Constructor
+    private WebAclDefaultActionAllow(@OutputCustomType.Parameter("customRequestHandling") @Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling) {
         this.customRequestHandling = customRequestHandling;
     }
 
@@ -50,7 +50,7 @@ public final class WebAclDefaultActionAllow {
     	      this.customRequestHandling = defaults.customRequestHandling;
         }
 
-        public Builder setCustomRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling) {
+        public Builder customRequestHandling(@Nullable WebAclDefaultActionAllowCustomRequestHandling customRequestHandling) {
             this.customRequestHandling = customRequestHandling;
             return this;
         }

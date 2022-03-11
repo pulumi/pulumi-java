@@ -22,10 +22,10 @@ public final class ResourceVersionLoggingConfig {
      */
     private final @Nullable String logRoleArn;
 
-    @OutputCustomType.Constructor({"logGroupName","logRoleArn"})
+    @OutputCustomType.Constructor
     private ResourceVersionLoggingConfig(
-        @Nullable String logGroupName,
-        @Nullable String logRoleArn) {
+        @OutputCustomType.Parameter("logGroupName") @Nullable String logGroupName,
+        @OutputCustomType.Parameter("logRoleArn") @Nullable String logRoleArn) {
         this.logGroupName = logGroupName;
         this.logRoleArn = logRoleArn;
     }
@@ -67,12 +67,12 @@ public final class ResourceVersionLoggingConfig {
     	      this.logRoleArn = defaults.logRoleArn;
         }
 
-        public Builder setLogGroupName(@Nullable String logGroupName) {
+        public Builder logGroupName(@Nullable String logGroupName) {
             this.logGroupName = logGroupName;
             return this;
         }
 
-        public Builder setLogRoleArn(@Nullable String logRoleArn) {
+        public Builder logRoleArn(@Nullable String logRoleArn) {
             this.logRoleArn = logRoleArn;
             return this;
         }

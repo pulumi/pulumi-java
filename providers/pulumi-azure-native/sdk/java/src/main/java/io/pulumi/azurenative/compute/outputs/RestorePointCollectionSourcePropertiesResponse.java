@@ -22,10 +22,10 @@ public final class RestorePointCollectionSourcePropertiesResponse {
      */
     private final String location;
 
-    @OutputCustomType.Constructor({"id","location"})
+    @OutputCustomType.Constructor
     private RestorePointCollectionSourcePropertiesResponse(
-        @Nullable String id,
-        String location) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("location") String location) {
         this.id = id;
         this.location = location;
     }
@@ -67,12 +67,12 @@ public final class RestorePointCollectionSourcePropertiesResponse {
     	      this.location = defaults.location;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setLocation(String location) {
+        public Builder location(String location) {
             this.location = Objects.requireNonNull(location);
             return this;
         }

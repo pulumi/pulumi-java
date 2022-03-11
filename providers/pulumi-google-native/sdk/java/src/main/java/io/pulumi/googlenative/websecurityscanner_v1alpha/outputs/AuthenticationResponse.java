@@ -21,10 +21,10 @@ public final class AuthenticationResponse {
      */
     private final GoogleAccountResponse googleAccount;
 
-    @OutputCustomType.Constructor({"customAccount","googleAccount"})
+    @OutputCustomType.Constructor
     private AuthenticationResponse(
-        CustomAccountResponse customAccount,
-        GoogleAccountResponse googleAccount) {
+        @OutputCustomType.Parameter("customAccount") CustomAccountResponse customAccount,
+        @OutputCustomType.Parameter("googleAccount") GoogleAccountResponse googleAccount) {
         this.customAccount = customAccount;
         this.googleAccount = googleAccount;
     }
@@ -66,12 +66,12 @@ public final class AuthenticationResponse {
     	      this.googleAccount = defaults.googleAccount;
         }
 
-        public Builder setCustomAccount(CustomAccountResponse customAccount) {
+        public Builder customAccount(CustomAccountResponse customAccount) {
             this.customAccount = Objects.requireNonNull(customAccount);
             return this;
         }
 
-        public Builder setGoogleAccount(GoogleAccountResponse googleAccount) {
+        public Builder googleAccount(GoogleAccountResponse googleAccount) {
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
         }

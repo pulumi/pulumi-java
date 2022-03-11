@@ -33,12 +33,12 @@ public final class DiscreteActionResponse {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"name","parameters","selectorId","type"})
+    @OutputCustomType.Constructor
     private DiscreteActionResponse(
-        String name,
-        List<KeyValuePairResponse> parameters,
-        String selectorId,
-        String type) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("parameters") List<KeyValuePairResponse> parameters,
+        @OutputCustomType.Parameter("selectorId") String selectorId,
+        @OutputCustomType.Parameter("type") String type) {
         this.name = name;
         this.parameters = parameters;
         this.selectorId = selectorId;
@@ -101,22 +101,22 @@ public final class DiscreteActionResponse {
     	      this.type = defaults.type;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setParameters(List<KeyValuePairResponse> parameters) {
+        public Builder parameters(List<KeyValuePairResponse> parameters) {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
 
-        public Builder setSelectorId(String selectorId) {
+        public Builder selectorId(String selectorId) {
             this.selectorId = Objects.requireNonNull(selectorId);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

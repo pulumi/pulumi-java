@@ -29,11 +29,11 @@ public final class VaultPropertiesResponseEncryption {
      */
     private final @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties;
 
-    @OutputCustomType.Constructor({"infrastructureEncryption","kekIdentity","keyVaultProperties"})
+    @OutputCustomType.Constructor
     private VaultPropertiesResponseEncryption(
-        @Nullable String infrastructureEncryption,
-        @Nullable CmkKekIdentityResponse kekIdentity,
-        @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
+        @OutputCustomType.Parameter("infrastructureEncryption") @Nullable String infrastructureEncryption,
+        @OutputCustomType.Parameter("kekIdentity") @Nullable CmkKekIdentityResponse kekIdentity,
+        @OutputCustomType.Parameter("keyVaultProperties") @Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
         this.infrastructureEncryption = infrastructureEncryption;
         this.kekIdentity = kekIdentity;
         this.keyVaultProperties = keyVaultProperties;
@@ -85,17 +85,17 @@ public final class VaultPropertiesResponseEncryption {
     	      this.keyVaultProperties = defaults.keyVaultProperties;
         }
 
-        public Builder setInfrastructureEncryption(@Nullable String infrastructureEncryption) {
+        public Builder infrastructureEncryption(@Nullable String infrastructureEncryption) {
             this.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
-        public Builder setKekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
+        public Builder kekIdentity(@Nullable CmkKekIdentityResponse kekIdentity) {
             this.kekIdentity = kekIdentity;
             return this;
         }
 
-        public Builder setKeyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
+        public Builder keyVaultProperties(@Nullable CmkKeyVaultPropertiesResponse keyVaultProperties) {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }

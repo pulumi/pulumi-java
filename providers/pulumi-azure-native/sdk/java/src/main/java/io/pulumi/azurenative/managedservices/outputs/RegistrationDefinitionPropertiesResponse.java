@@ -44,14 +44,14 @@ public final class RegistrationDefinitionPropertiesResponse {
      */
     private final @Nullable String registrationDefinitionName;
 
-    @OutputCustomType.Constructor({"authorizations","description","managedByTenantId","managedByTenantName","provisioningState","registrationDefinitionName"})
+    @OutputCustomType.Constructor
     private RegistrationDefinitionPropertiesResponse(
-        List<AuthorizationResponse> authorizations,
-        @Nullable String description,
-        String managedByTenantId,
-        String managedByTenantName,
-        String provisioningState,
-        @Nullable String registrationDefinitionName) {
+        @OutputCustomType.Parameter("authorizations") List<AuthorizationResponse> authorizations,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("managedByTenantId") String managedByTenantId,
+        @OutputCustomType.Parameter("managedByTenantName") String managedByTenantName,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("registrationDefinitionName") @Nullable String registrationDefinitionName) {
         this.authorizations = authorizations;
         this.description = description;
         this.managedByTenantId = managedByTenantId;
@@ -133,32 +133,32 @@ public final class RegistrationDefinitionPropertiesResponse {
     	      this.registrationDefinitionName = defaults.registrationDefinitionName;
         }
 
-        public Builder setAuthorizations(List<AuthorizationResponse> authorizations) {
+        public Builder authorizations(List<AuthorizationResponse> authorizations) {
             this.authorizations = Objects.requireNonNull(authorizations);
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setManagedByTenantId(String managedByTenantId) {
+        public Builder managedByTenantId(String managedByTenantId) {
             this.managedByTenantId = Objects.requireNonNull(managedByTenantId);
             return this;
         }
 
-        public Builder setManagedByTenantName(String managedByTenantName) {
+        public Builder managedByTenantName(String managedByTenantName) {
             this.managedByTenantName = Objects.requireNonNull(managedByTenantName);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRegistrationDefinitionName(@Nullable String registrationDefinitionName) {
+        public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }

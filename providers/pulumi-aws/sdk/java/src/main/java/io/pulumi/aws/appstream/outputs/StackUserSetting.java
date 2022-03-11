@@ -20,10 +20,10 @@ public final class StackUserSetting {
      */
     private final String permission;
 
-    @OutputCustomType.Constructor({"action","permission"})
+    @OutputCustomType.Constructor
     private StackUserSetting(
-        String action,
-        String permission) {
+        @OutputCustomType.Parameter("action") String action,
+        @OutputCustomType.Parameter("permission") String permission) {
         this.action = action;
         this.permission = permission;
     }
@@ -65,12 +65,12 @@ public final class StackUserSetting {
     	      this.permission = defaults.permission;
         }
 
-        public Builder setAction(String action) {
+        public Builder action(String action) {
             this.action = Objects.requireNonNull(action);
             return this;
         }
 
-        public Builder setPermission(String permission) {
+        public Builder permission(String permission) {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }

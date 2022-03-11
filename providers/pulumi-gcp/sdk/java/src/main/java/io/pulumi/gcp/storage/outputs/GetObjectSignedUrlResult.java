@@ -31,18 +31,18 @@ public final class GetObjectSignedUrlResult {
      */
     private final String signedUrl;
 
-    @OutputCustomType.Constructor({"bucket","contentMd5","contentType","credentials","duration","extensionHeaders","httpMethod","id","path","signedUrl"})
+    @OutputCustomType.Constructor
     private GetObjectSignedUrlResult(
-        String bucket,
-        @Nullable String contentMd5,
-        @Nullable String contentType,
-        @Nullable String credentials,
-        @Nullable String duration,
-        @Nullable Map<String,String> extensionHeaders,
-        @Nullable String httpMethod,
-        String id,
-        String path,
-        String signedUrl) {
+        @OutputCustomType.Parameter("bucket") String bucket,
+        @OutputCustomType.Parameter("contentMd5") @Nullable String contentMd5,
+        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
+        @OutputCustomType.Parameter("credentials") @Nullable String credentials,
+        @OutputCustomType.Parameter("duration") @Nullable String duration,
+        @OutputCustomType.Parameter("extensionHeaders") @Nullable Map<String,String> extensionHeaders,
+        @OutputCustomType.Parameter("httpMethod") @Nullable String httpMethod,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("path") String path,
+        @OutputCustomType.Parameter("signedUrl") String signedUrl) {
         this.bucket = bucket;
         this.contentMd5 = contentMd5;
         this.contentType = contentType;
@@ -132,52 +132,52 @@ public final class GetObjectSignedUrlResult {
     	      this.signedUrl = defaults.signedUrl;
         }
 
-        public Builder setBucket(String bucket) {
+        public Builder bucket(String bucket) {
             this.bucket = Objects.requireNonNull(bucket);
             return this;
         }
 
-        public Builder setContentMd5(@Nullable String contentMd5) {
+        public Builder contentMd5(@Nullable String contentMd5) {
             this.contentMd5 = contentMd5;
             return this;
         }
 
-        public Builder setContentType(@Nullable String contentType) {
+        public Builder contentType(@Nullable String contentType) {
             this.contentType = contentType;
             return this;
         }
 
-        public Builder setCredentials(@Nullable String credentials) {
+        public Builder credentials(@Nullable String credentials) {
             this.credentials = credentials;
             return this;
         }
 
-        public Builder setDuration(@Nullable String duration) {
+        public Builder duration(@Nullable String duration) {
             this.duration = duration;
             return this;
         }
 
-        public Builder setExtensionHeaders(@Nullable Map<String,String> extensionHeaders) {
+        public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
             this.extensionHeaders = extensionHeaders;
             return this;
         }
 
-        public Builder setHttpMethod(@Nullable String httpMethod) {
+        public Builder httpMethod(@Nullable String httpMethod) {
             this.httpMethod = httpMethod;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setPath(String path) {
+        public Builder path(String path) {
             this.path = Objects.requireNonNull(path);
             return this;
         }
 
-        public Builder setSignedUrl(String signedUrl) {
+        public Builder signedUrl(String signedUrl) {
             this.signedUrl = Objects.requireNonNull(signedUrl);
             return this;
         }

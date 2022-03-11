@@ -27,11 +27,11 @@ public final class GroupLaunchTemplate {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"id","name","version"})
+    @OutputCustomType.Constructor
     private GroupLaunchTemplate(
-        @Nullable String id,
-        @Nullable String name,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.id = id;
         this.name = name;
         this.version = version;
@@ -83,17 +83,17 @@ public final class GroupLaunchTemplate {
     	      this.version = defaults.version;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

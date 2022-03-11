@@ -33,27 +33,27 @@ public final class ServiceProfileLoRaWANServiceProfile {
     private final @Nullable Integer ulRate;
     private final @Nullable String ulRatePolicy;
 
-    @OutputCustomType.Constructor({"addGwMetadata","channelMask","devStatusReqFreq","dlBucketSize","dlRate","dlRatePolicy","drMax","drMin","hrAllowed","minGwDiversity","nwkGeoLoc","prAllowed","raAllowed","reportDevStatusBattery","reportDevStatusMargin","targetPer","ulBucketSize","ulRate","ulRatePolicy"})
+    @OutputCustomType.Constructor
     private ServiceProfileLoRaWANServiceProfile(
-        @Nullable Boolean addGwMetadata,
-        @Nullable String channelMask,
-        @Nullable Integer devStatusReqFreq,
-        @Nullable Integer dlBucketSize,
-        @Nullable Integer dlRate,
-        @Nullable String dlRatePolicy,
-        @Nullable Integer drMax,
-        @Nullable Integer drMin,
-        @Nullable Boolean hrAllowed,
-        @Nullable Integer minGwDiversity,
-        @Nullable Boolean nwkGeoLoc,
-        @Nullable Boolean prAllowed,
-        @Nullable Boolean raAllowed,
-        @Nullable Boolean reportDevStatusBattery,
-        @Nullable Boolean reportDevStatusMargin,
-        @Nullable Integer targetPer,
-        @Nullable Integer ulBucketSize,
-        @Nullable Integer ulRate,
-        @Nullable String ulRatePolicy) {
+        @OutputCustomType.Parameter("addGwMetadata") @Nullable Boolean addGwMetadata,
+        @OutputCustomType.Parameter("channelMask") @Nullable String channelMask,
+        @OutputCustomType.Parameter("devStatusReqFreq") @Nullable Integer devStatusReqFreq,
+        @OutputCustomType.Parameter("dlBucketSize") @Nullable Integer dlBucketSize,
+        @OutputCustomType.Parameter("dlRate") @Nullable Integer dlRate,
+        @OutputCustomType.Parameter("dlRatePolicy") @Nullable String dlRatePolicy,
+        @OutputCustomType.Parameter("drMax") @Nullable Integer drMax,
+        @OutputCustomType.Parameter("drMin") @Nullable Integer drMin,
+        @OutputCustomType.Parameter("hrAllowed") @Nullable Boolean hrAllowed,
+        @OutputCustomType.Parameter("minGwDiversity") @Nullable Integer minGwDiversity,
+        @OutputCustomType.Parameter("nwkGeoLoc") @Nullable Boolean nwkGeoLoc,
+        @OutputCustomType.Parameter("prAllowed") @Nullable Boolean prAllowed,
+        @OutputCustomType.Parameter("raAllowed") @Nullable Boolean raAllowed,
+        @OutputCustomType.Parameter("reportDevStatusBattery") @Nullable Boolean reportDevStatusBattery,
+        @OutputCustomType.Parameter("reportDevStatusMargin") @Nullable Boolean reportDevStatusMargin,
+        @OutputCustomType.Parameter("targetPer") @Nullable Integer targetPer,
+        @OutputCustomType.Parameter("ulBucketSize") @Nullable Integer ulBucketSize,
+        @OutputCustomType.Parameter("ulRate") @Nullable Integer ulRate,
+        @OutputCustomType.Parameter("ulRatePolicy") @Nullable String ulRatePolicy) {
         this.addGwMetadata = addGwMetadata;
         this.channelMask = channelMask;
         this.devStatusReqFreq = devStatusReqFreq;
@@ -189,97 +189,97 @@ public final class ServiceProfileLoRaWANServiceProfile {
     	      this.ulRatePolicy = defaults.ulRatePolicy;
         }
 
-        public Builder setAddGwMetadata(@Nullable Boolean addGwMetadata) {
+        public Builder addGwMetadata(@Nullable Boolean addGwMetadata) {
             this.addGwMetadata = addGwMetadata;
             return this;
         }
 
-        public Builder setChannelMask(@Nullable String channelMask) {
+        public Builder channelMask(@Nullable String channelMask) {
             this.channelMask = channelMask;
             return this;
         }
 
-        public Builder setDevStatusReqFreq(@Nullable Integer devStatusReqFreq) {
+        public Builder devStatusReqFreq(@Nullable Integer devStatusReqFreq) {
             this.devStatusReqFreq = devStatusReqFreq;
             return this;
         }
 
-        public Builder setDlBucketSize(@Nullable Integer dlBucketSize) {
+        public Builder dlBucketSize(@Nullable Integer dlBucketSize) {
             this.dlBucketSize = dlBucketSize;
             return this;
         }
 
-        public Builder setDlRate(@Nullable Integer dlRate) {
+        public Builder dlRate(@Nullable Integer dlRate) {
             this.dlRate = dlRate;
             return this;
         }
 
-        public Builder setDlRatePolicy(@Nullable String dlRatePolicy) {
+        public Builder dlRatePolicy(@Nullable String dlRatePolicy) {
             this.dlRatePolicy = dlRatePolicy;
             return this;
         }
 
-        public Builder setDrMax(@Nullable Integer drMax) {
+        public Builder drMax(@Nullable Integer drMax) {
             this.drMax = drMax;
             return this;
         }
 
-        public Builder setDrMin(@Nullable Integer drMin) {
+        public Builder drMin(@Nullable Integer drMin) {
             this.drMin = drMin;
             return this;
         }
 
-        public Builder setHrAllowed(@Nullable Boolean hrAllowed) {
+        public Builder hrAllowed(@Nullable Boolean hrAllowed) {
             this.hrAllowed = hrAllowed;
             return this;
         }
 
-        public Builder setMinGwDiversity(@Nullable Integer minGwDiversity) {
+        public Builder minGwDiversity(@Nullable Integer minGwDiversity) {
             this.minGwDiversity = minGwDiversity;
             return this;
         }
 
-        public Builder setNwkGeoLoc(@Nullable Boolean nwkGeoLoc) {
+        public Builder nwkGeoLoc(@Nullable Boolean nwkGeoLoc) {
             this.nwkGeoLoc = nwkGeoLoc;
             return this;
         }
 
-        public Builder setPrAllowed(@Nullable Boolean prAllowed) {
+        public Builder prAllowed(@Nullable Boolean prAllowed) {
             this.prAllowed = prAllowed;
             return this;
         }
 
-        public Builder setRaAllowed(@Nullable Boolean raAllowed) {
+        public Builder raAllowed(@Nullable Boolean raAllowed) {
             this.raAllowed = raAllowed;
             return this;
         }
 
-        public Builder setReportDevStatusBattery(@Nullable Boolean reportDevStatusBattery) {
+        public Builder reportDevStatusBattery(@Nullable Boolean reportDevStatusBattery) {
             this.reportDevStatusBattery = reportDevStatusBattery;
             return this;
         }
 
-        public Builder setReportDevStatusMargin(@Nullable Boolean reportDevStatusMargin) {
+        public Builder reportDevStatusMargin(@Nullable Boolean reportDevStatusMargin) {
             this.reportDevStatusMargin = reportDevStatusMargin;
             return this;
         }
 
-        public Builder setTargetPer(@Nullable Integer targetPer) {
+        public Builder targetPer(@Nullable Integer targetPer) {
             this.targetPer = targetPer;
             return this;
         }
 
-        public Builder setUlBucketSize(@Nullable Integer ulBucketSize) {
+        public Builder ulBucketSize(@Nullable Integer ulBucketSize) {
             this.ulBucketSize = ulBucketSize;
             return this;
         }
 
-        public Builder setUlRate(@Nullable Integer ulRate) {
+        public Builder ulRate(@Nullable Integer ulRate) {
             this.ulRate = ulRate;
             return this;
         }
 
-        public Builder setUlRatePolicy(@Nullable String ulRatePolicy) {
+        public Builder ulRatePolicy(@Nullable String ulRatePolicy) {
             this.ulRatePolicy = ulRatePolicy;
             return this;
         }

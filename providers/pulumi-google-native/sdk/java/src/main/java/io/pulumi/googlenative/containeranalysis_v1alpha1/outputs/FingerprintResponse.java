@@ -26,11 +26,11 @@ public final class FingerprintResponse {
      */
     private final String v2Name;
 
-    @OutputCustomType.Constructor({"v1Name","v2Blob","v2Name"})
+    @OutputCustomType.Constructor
     private FingerprintResponse(
-        String v1Name,
-        List<String> v2Blob,
-        String v2Name) {
+        @OutputCustomType.Parameter("v1Name") String v1Name,
+        @OutputCustomType.Parameter("v2Blob") List<String> v2Blob,
+        @OutputCustomType.Parameter("v2Name") String v2Name) {
         this.v1Name = v1Name;
         this.v2Blob = v2Blob;
         this.v2Name = v2Name;
@@ -82,17 +82,17 @@ public final class FingerprintResponse {
     	      this.v2Name = defaults.v2Name;
         }
 
-        public Builder setV1Name(String v1Name) {
+        public Builder v1Name(String v1Name) {
             this.v1Name = Objects.requireNonNull(v1Name);
             return this;
         }
 
-        public Builder setV2Blob(List<String> v2Blob) {
+        public Builder v2Blob(List<String> v2Blob) {
             this.v2Blob = Objects.requireNonNull(v2Blob);
             return this;
         }
 
-        public Builder setV2Name(String v2Name) {
+        public Builder v2Name(String v2Name) {
             this.v2Name = Objects.requireNonNull(v2Name);
             return this;
         }

@@ -21,10 +21,10 @@ public final class ConnectorWorkerConfiguration {
      */
     private final String workerConfigurationArn;
 
-    @OutputCustomType.Constructor({"revision","workerConfigurationArn"})
+    @OutputCustomType.Constructor
     private ConnectorWorkerConfiguration(
-        Integer revision,
-        String workerConfigurationArn) {
+        @OutputCustomType.Parameter("revision") Integer revision,
+        @OutputCustomType.Parameter("workerConfigurationArn") String workerConfigurationArn) {
         this.revision = revision;
         this.workerConfigurationArn = workerConfigurationArn;
     }
@@ -66,12 +66,12 @@ public final class ConnectorWorkerConfiguration {
     	      this.workerConfigurationArn = defaults.workerConfigurationArn;
         }
 
-        public Builder setRevision(Integer revision) {
+        public Builder revision(Integer revision) {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
 
-        public Builder setWorkerConfigurationArn(String workerConfigurationArn) {
+        public Builder workerConfigurationArn(String workerConfigurationArn) {
             this.workerConfigurationArn = Objects.requireNonNull(workerConfigurationArn);
             return this;
         }

@@ -47,7 +47,7 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
     	      this.channelName = defaults.channelName;
         }
 
-        public Builder setChannelName(String channelName) {
+        public Builder channelName(String channelName) {
             this.channelName = Objects.requireNonNull(channelName);
             return this;
         }

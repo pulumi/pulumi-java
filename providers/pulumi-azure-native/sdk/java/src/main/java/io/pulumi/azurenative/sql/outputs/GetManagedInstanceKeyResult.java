@@ -46,15 +46,15 @@ public final class GetManagedInstanceKeyResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"autoRotationEnabled","creationDate","id","kind","name","thumbprint","type"})
+    @OutputCustomType.Constructor
     private GetManagedInstanceKeyResult(
-        Boolean autoRotationEnabled,
-        String creationDate,
-        String id,
-        String kind,
-        String name,
-        String thumbprint,
-        String type) {
+        @OutputCustomType.Parameter("autoRotationEnabled") Boolean autoRotationEnabled,
+        @OutputCustomType.Parameter("creationDate") String creationDate,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("thumbprint") String thumbprint,
+        @OutputCustomType.Parameter("type") String type) {
         this.autoRotationEnabled = autoRotationEnabled;
         this.creationDate = creationDate;
         this.id = id;
@@ -146,37 +146,37 @@ public final class GetManagedInstanceKeyResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAutoRotationEnabled(Boolean autoRotationEnabled) {
+        public Builder autoRotationEnabled(Boolean autoRotationEnabled) {
             this.autoRotationEnabled = Objects.requireNonNull(autoRotationEnabled);
             return this;
         }
 
-        public Builder setCreationDate(String creationDate) {
+        public Builder creationDate(String creationDate) {
             this.creationDate = Objects.requireNonNull(creationDate);
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setThumbprint(String thumbprint) {
+        public Builder thumbprint(String thumbprint) {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

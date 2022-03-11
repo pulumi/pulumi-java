@@ -108,42 +108,42 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
     	      this.scheme = defaults.scheme;
         }
 
-        public Builder setHost(@Nullable Input<String> host) {
+        public Builder host(@Nullable Input<String> host) {
             this.host = host;
             return this;
         }
 
-        public Builder setHost(@Nullable String host) {
+        public Builder host(@Nullable String host) {
             this.host = Input.ofNullable(host);
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable Input<List<HTTPHeaderArgs>> httpHeaders) {
+        public Builder httpHeaders(@Nullable Input<List<HTTPHeaderArgs>> httpHeaders) {
             this.httpHeaders = httpHeaders;
             return this;
         }
 
-        public Builder setHttpHeaders(@Nullable List<HTTPHeaderArgs> httpHeaders) {
+        public Builder httpHeaders(@Nullable List<HTTPHeaderArgs> httpHeaders) {
             this.httpHeaders = Input.ofNullable(httpHeaders);
             return this;
         }
 
-        public Builder setPath(@Nullable Input<String> path) {
+        public Builder path(@Nullable Input<String> path) {
             this.path = path;
             return this;
         }
 
-        public Builder setPath(@Nullable String path) {
+        public Builder path(@Nullable String path) {
             this.path = Input.ofNullable(path);
             return this;
         }
 
-        public Builder setScheme(@Nullable Input<String> scheme) {
+        public Builder scheme(@Nullable Input<String> scheme) {
             this.scheme = scheme;
             return this;
         }
 
-        public Builder setScheme(@Nullable String scheme) {
+        public Builder scheme(@Nullable String scheme) {
             this.scheme = Input.ofNullable(scheme);
             return this;
         }

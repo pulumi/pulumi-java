@@ -16,8 +16,8 @@ public final class MetricBucketOptionsExplicitBuckets {
      */
     private final List<Double> bounds;
 
-    @OutputCustomType.Constructor({"bounds"})
-    private MetricBucketOptionsExplicitBuckets(List<Double> bounds) {
+    @OutputCustomType.Constructor
+    private MetricBucketOptionsExplicitBuckets(@OutputCustomType.Parameter("bounds") List<Double> bounds) {
         this.bounds = bounds;
     }
 
@@ -49,7 +49,7 @@ public final class MetricBucketOptionsExplicitBuckets {
     	      this.bounds = defaults.bounds;
         }
 
-        public Builder setBounds(List<Double> bounds) {
+        public Builder bounds(List<Double> bounds) {
             this.bounds = Objects.requireNonNull(bounds);
             return this;
         }

@@ -57,7 +57,7 @@ public final class PipelinePolicyResponse extends io.pulumi.resources.InvokeArgs
     	      this.elapsedTimeMetric = defaults.elapsedTimeMetric;
         }
 
-        public Builder setElapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
+        public Builder elapsedTimeMetric(@Nullable PipelineElapsedTimeMetricPolicyResponse elapsedTimeMetric) {
             this.elapsedTimeMetric = elapsedTimeMetric;
             return this;
         }

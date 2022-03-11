@@ -72,22 +72,22 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
     	      this.subnet = defaults.subnet;
         }
 
-        public Builder setNetworkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces) {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
 
-        public Builder setNetworkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
+        public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
             this.networkInterfaces = Input.ofNullable(networkInterfaces);
             return this;
         }
 
-        public Builder setSubnet(@Nullable Input<ApiEntityReferenceArgs> subnet) {
+        public Builder subnet(@Nullable Input<ApiEntityReferenceArgs> subnet) {
             this.subnet = subnet;
             return this;
         }
 
-        public Builder setSubnet(@Nullable ApiEntityReferenceArgs subnet) {
+        public Builder subnet(@Nullable ApiEntityReferenceArgs subnet) {
             this.subnet = Input.ofNullable(subnet);
             return this;
         }

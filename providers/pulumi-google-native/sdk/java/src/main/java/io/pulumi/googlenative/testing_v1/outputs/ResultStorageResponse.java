@@ -33,12 +33,12 @@ public final class ResultStorageResponse {
      */
     private final ToolResultsHistoryResponse toolResultsHistory;
 
-    @OutputCustomType.Constructor({"googleCloudStorage","resultsUrl","toolResultsExecution","toolResultsHistory"})
+    @OutputCustomType.Constructor
     private ResultStorageResponse(
-        GoogleCloudStorageResponse googleCloudStorage,
-        String resultsUrl,
-        ToolResultsExecutionResponse toolResultsExecution,
-        ToolResultsHistoryResponse toolResultsHistory) {
+        @OutputCustomType.Parameter("googleCloudStorage") GoogleCloudStorageResponse googleCloudStorage,
+        @OutputCustomType.Parameter("resultsUrl") String resultsUrl,
+        @OutputCustomType.Parameter("toolResultsExecution") ToolResultsExecutionResponse toolResultsExecution,
+        @OutputCustomType.Parameter("toolResultsHistory") ToolResultsHistoryResponse toolResultsHistory) {
         this.googleCloudStorage = googleCloudStorage;
         this.resultsUrl = resultsUrl;
         this.toolResultsExecution = toolResultsExecution;
@@ -100,22 +100,22 @@ public final class ResultStorageResponse {
     	      this.toolResultsHistory = defaults.toolResultsHistory;
         }
 
-        public Builder setGoogleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
+        public Builder googleCloudStorage(GoogleCloudStorageResponse googleCloudStorage) {
             this.googleCloudStorage = Objects.requireNonNull(googleCloudStorage);
             return this;
         }
 
-        public Builder setResultsUrl(String resultsUrl) {
+        public Builder resultsUrl(String resultsUrl) {
             this.resultsUrl = Objects.requireNonNull(resultsUrl);
             return this;
         }
 
-        public Builder setToolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
+        public Builder toolResultsExecution(ToolResultsExecutionResponse toolResultsExecution) {
             this.toolResultsExecution = Objects.requireNonNull(toolResultsExecution);
             return this;
         }
 
-        public Builder setToolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
+        public Builder toolResultsHistory(ToolResultsHistoryResponse toolResultsHistory) {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }

@@ -29,11 +29,11 @@ public final class BackupPolicyResponse {
      */
     private final List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules;
 
-    @OutputCustomType.Constructor({"datasourceTypes","objectType","policyRules"})
+    @OutputCustomType.Constructor
     private BackupPolicyResponse(
-        List<String> datasourceTypes,
-        String objectType,
-        List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
+        @OutputCustomType.Parameter("datasourceTypes") List<String> datasourceTypes,
+        @OutputCustomType.Parameter("objectType") String objectType,
+        @OutputCustomType.Parameter("policyRules") List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
         this.datasourceTypes = datasourceTypes;
         this.objectType = objectType;
         this.policyRules = policyRules;
@@ -85,17 +85,17 @@ public final class BackupPolicyResponse {
     	      this.policyRules = defaults.policyRules;
         }
 
-        public Builder setDatasourceTypes(List<String> datasourceTypes) {
+        public Builder datasourceTypes(List<String> datasourceTypes) {
             this.datasourceTypes = Objects.requireNonNull(datasourceTypes);
             return this;
         }
 
-        public Builder setObjectType(String objectType) {
+        public Builder objectType(String objectType) {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
 
-        public Builder setPolicyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
+        public Builder policyRules(List<Either<AzureBackupRuleResponse,AzureRetentionRuleResponse>> policyRules) {
             this.policyRules = Objects.requireNonNull(policyRules);
             return this;
         }

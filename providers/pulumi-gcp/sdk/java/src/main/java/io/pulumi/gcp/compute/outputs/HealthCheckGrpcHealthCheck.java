@@ -50,12 +50,12 @@ public final class HealthCheckGrpcHealthCheck {
      */
     private final @Nullable String portSpecification;
 
-    @OutputCustomType.Constructor({"grpcServiceName","port","portName","portSpecification"})
+    @OutputCustomType.Constructor
     private HealthCheckGrpcHealthCheck(
-        @Nullable String grpcServiceName,
-        @Nullable Integer port,
-        @Nullable String portName,
-        @Nullable String portSpecification) {
+        @OutputCustomType.Parameter("grpcServiceName") @Nullable String grpcServiceName,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("portName") @Nullable String portName,
+        @OutputCustomType.Parameter("portSpecification") @Nullable String portSpecification) {
         this.grpcServiceName = grpcServiceName;
         this.port = port;
         this.portName = portName;
@@ -134,22 +134,22 @@ public final class HealthCheckGrpcHealthCheck {
     	      this.portSpecification = defaults.portSpecification;
         }
 
-        public Builder setGrpcServiceName(@Nullable String grpcServiceName) {
+        public Builder grpcServiceName(@Nullable String grpcServiceName) {
             this.grpcServiceName = grpcServiceName;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setPortName(@Nullable String portName) {
+        public Builder portName(@Nullable String portName) {
             this.portName = portName;
             return this;
         }
 
-        public Builder setPortSpecification(@Nullable String portSpecification) {
+        public Builder portSpecification(@Nullable String portSpecification) {
             this.portSpecification = portSpecification;
             return this;
         }

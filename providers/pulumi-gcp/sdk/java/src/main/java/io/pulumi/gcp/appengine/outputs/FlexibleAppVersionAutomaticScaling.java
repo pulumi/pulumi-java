@@ -84,20 +84,20 @@ public final class FlexibleAppVersionAutomaticScaling {
      */
     private final @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization;
 
-    @OutputCustomType.Constructor({"coolDownPeriod","cpuUtilization","diskUtilization","maxConcurrentRequests","maxIdleInstances","maxPendingLatency","maxTotalInstances","minIdleInstances","minPendingLatency","minTotalInstances","networkUtilization","requestUtilization"})
+    @OutputCustomType.Constructor
     private FlexibleAppVersionAutomaticScaling(
-        @Nullable String coolDownPeriod,
-        FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
-        @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
-        @Nullable Integer maxConcurrentRequests,
-        @Nullable Integer maxIdleInstances,
-        @Nullable String maxPendingLatency,
-        @Nullable Integer maxTotalInstances,
-        @Nullable Integer minIdleInstances,
-        @Nullable String minPendingLatency,
-        @Nullable Integer minTotalInstances,
-        @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
-        @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
+        @OutputCustomType.Parameter("coolDownPeriod") @Nullable String coolDownPeriod,
+        @OutputCustomType.Parameter("cpuUtilization") FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
+        @OutputCustomType.Parameter("diskUtilization") @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
+        @OutputCustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
+        @OutputCustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
+        @OutputCustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
+        @OutputCustomType.Parameter("maxTotalInstances") @Nullable Integer maxTotalInstances,
+        @OutputCustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
+        @OutputCustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
+        @OutputCustomType.Parameter("minTotalInstances") @Nullable Integer minTotalInstances,
+        @OutputCustomType.Parameter("networkUtilization") @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
+        @OutputCustomType.Parameter("requestUtilization") @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.diskUtilization = diskUtilization;
@@ -246,62 +246,62 @@ public final class FlexibleAppVersionAutomaticScaling {
     	      this.requestUtilization = defaults.requestUtilization;
         }
 
-        public Builder setCoolDownPeriod(@Nullable String coolDownPeriod) {
+        public Builder coolDownPeriod(@Nullable String coolDownPeriod) {
             this.coolDownPeriod = coolDownPeriod;
             return this;
         }
 
-        public Builder setCpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization) {
+        public Builder cpuUtilization(FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization) {
             this.cpuUtilization = Objects.requireNonNull(cpuUtilization);
             return this;
         }
 
-        public Builder setDiskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization) {
+        public Builder diskUtilization(@Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization) {
             this.diskUtilization = diskUtilization;
             return this;
         }
 
-        public Builder setMaxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
+        public Builder maxConcurrentRequests(@Nullable Integer maxConcurrentRequests) {
             this.maxConcurrentRequests = maxConcurrentRequests;
             return this;
         }
 
-        public Builder setMaxIdleInstances(@Nullable Integer maxIdleInstances) {
+        public Builder maxIdleInstances(@Nullable Integer maxIdleInstances) {
             this.maxIdleInstances = maxIdleInstances;
             return this;
         }
 
-        public Builder setMaxPendingLatency(@Nullable String maxPendingLatency) {
+        public Builder maxPendingLatency(@Nullable String maxPendingLatency) {
             this.maxPendingLatency = maxPendingLatency;
             return this;
         }
 
-        public Builder setMaxTotalInstances(@Nullable Integer maxTotalInstances) {
+        public Builder maxTotalInstances(@Nullable Integer maxTotalInstances) {
             this.maxTotalInstances = maxTotalInstances;
             return this;
         }
 
-        public Builder setMinIdleInstances(@Nullable Integer minIdleInstances) {
+        public Builder minIdleInstances(@Nullable Integer minIdleInstances) {
             this.minIdleInstances = minIdleInstances;
             return this;
         }
 
-        public Builder setMinPendingLatency(@Nullable String minPendingLatency) {
+        public Builder minPendingLatency(@Nullable String minPendingLatency) {
             this.minPendingLatency = minPendingLatency;
             return this;
         }
 
-        public Builder setMinTotalInstances(@Nullable Integer minTotalInstances) {
+        public Builder minTotalInstances(@Nullable Integer minTotalInstances) {
             this.minTotalInstances = minTotalInstances;
             return this;
         }
 
-        public Builder setNetworkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization) {
+        public Builder networkUtilization(@Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization) {
             this.networkUtilization = networkUtilization;
             return this;
         }
 
-        public Builder setRequestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
+        public Builder requestUtilization(@Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
             this.requestUtilization = requestUtilization;
             return this;
         }

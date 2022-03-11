@@ -265,112 +265,112 @@ public final class MutatingWebhookArgs extends io.pulumi.resources.ResourceArgs 
     	      this.timeoutSeconds = defaults.timeoutSeconds;
         }
 
-        public Builder setAdmissionReviewVersions(@Nullable Input<List<String>> admissionReviewVersions) {
+        public Builder admissionReviewVersions(@Nullable Input<List<String>> admissionReviewVersions) {
             this.admissionReviewVersions = admissionReviewVersions;
             return this;
         }
 
-        public Builder setAdmissionReviewVersions(@Nullable List<String> admissionReviewVersions) {
+        public Builder admissionReviewVersions(@Nullable List<String> admissionReviewVersions) {
             this.admissionReviewVersions = Input.ofNullable(admissionReviewVersions);
             return this;
         }
 
-        public Builder setClientConfig(Input<WebhookClientConfigArgs> clientConfig) {
+        public Builder clientConfig(Input<WebhookClientConfigArgs> clientConfig) {
             this.clientConfig = Objects.requireNonNull(clientConfig);
             return this;
         }
 
-        public Builder setClientConfig(WebhookClientConfigArgs clientConfig) {
+        public Builder clientConfig(WebhookClientConfigArgs clientConfig) {
             this.clientConfig = Input.of(Objects.requireNonNull(clientConfig));
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable Input<String> failurePolicy) {
+        public Builder failurePolicy(@Nullable Input<String> failurePolicy) {
             this.failurePolicy = failurePolicy;
             return this;
         }
 
-        public Builder setFailurePolicy(@Nullable String failurePolicy) {
+        public Builder failurePolicy(@Nullable String failurePolicy) {
             this.failurePolicy = Input.ofNullable(failurePolicy);
             return this;
         }
 
-        public Builder setMatchPolicy(@Nullable Input<String> matchPolicy) {
+        public Builder matchPolicy(@Nullable Input<String> matchPolicy) {
             this.matchPolicy = matchPolicy;
             return this;
         }
 
-        public Builder setMatchPolicy(@Nullable String matchPolicy) {
+        public Builder matchPolicy(@Nullable String matchPolicy) {
             this.matchPolicy = Input.ofNullable(matchPolicy);
             return this;
         }
 
-        public Builder setName(Input<String> name) {
+        public Builder name(Input<String> name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
+        public Builder namespaceSelector(@Nullable Input<LabelSelectorArgs> namespaceSelector) {
             this.namespaceSelector = namespaceSelector;
             return this;
         }
 
-        public Builder setNamespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
+        public Builder namespaceSelector(@Nullable LabelSelectorArgs namespaceSelector) {
             this.namespaceSelector = Input.ofNullable(namespaceSelector);
             return this;
         }
 
-        public Builder setObjectSelector(@Nullable Input<LabelSelectorArgs> objectSelector) {
+        public Builder objectSelector(@Nullable Input<LabelSelectorArgs> objectSelector) {
             this.objectSelector = objectSelector;
             return this;
         }
 
-        public Builder setObjectSelector(@Nullable LabelSelectorArgs objectSelector) {
+        public Builder objectSelector(@Nullable LabelSelectorArgs objectSelector) {
             this.objectSelector = Input.ofNullable(objectSelector);
             return this;
         }
 
-        public Builder setReinvocationPolicy(@Nullable Input<String> reinvocationPolicy) {
+        public Builder reinvocationPolicy(@Nullable Input<String> reinvocationPolicy) {
             this.reinvocationPolicy = reinvocationPolicy;
             return this;
         }
 
-        public Builder setReinvocationPolicy(@Nullable String reinvocationPolicy) {
+        public Builder reinvocationPolicy(@Nullable String reinvocationPolicy) {
             this.reinvocationPolicy = Input.ofNullable(reinvocationPolicy);
             return this;
         }
 
-        public Builder setRules(@Nullable Input<List<RuleWithOperationsArgs>> rules) {
+        public Builder rules(@Nullable Input<List<RuleWithOperationsArgs>> rules) {
             this.rules = rules;
             return this;
         }
 
-        public Builder setRules(@Nullable List<RuleWithOperationsArgs> rules) {
+        public Builder rules(@Nullable List<RuleWithOperationsArgs> rules) {
             this.rules = Input.ofNullable(rules);
             return this;
         }
 
-        public Builder setSideEffects(@Nullable Input<String> sideEffects) {
+        public Builder sideEffects(@Nullable Input<String> sideEffects) {
             this.sideEffects = sideEffects;
             return this;
         }
 
-        public Builder setSideEffects(@Nullable String sideEffects) {
+        public Builder sideEffects(@Nullable String sideEffects) {
             this.sideEffects = Input.ofNullable(sideEffects);
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Input<Integer> timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
-        public Builder setTimeoutSeconds(@Nullable Integer timeoutSeconds) {
+        public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }

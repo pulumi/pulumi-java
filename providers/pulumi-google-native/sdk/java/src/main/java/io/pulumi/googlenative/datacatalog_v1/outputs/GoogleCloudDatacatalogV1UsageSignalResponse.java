@@ -21,10 +21,10 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
      */
     private final Map<String,String> usageWithinTimeRange;
 
-    @OutputCustomType.Constructor({"updateTime","usageWithinTimeRange"})
+    @OutputCustomType.Constructor
     private GoogleCloudDatacatalogV1UsageSignalResponse(
-        String updateTime,
-        Map<String,String> usageWithinTimeRange) {
+        @OutputCustomType.Parameter("updateTime") String updateTime,
+        @OutputCustomType.Parameter("usageWithinTimeRange") Map<String,String> usageWithinTimeRange) {
         this.updateTime = updateTime;
         this.usageWithinTimeRange = usageWithinTimeRange;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudDatacatalogV1UsageSignalResponse {
     	      this.usageWithinTimeRange = defaults.usageWithinTimeRange;
         }
 
-        public Builder setUpdateTime(String updateTime) {
+        public Builder updateTime(String updateTime) {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
 
-        public Builder setUsageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
+        public Builder usageWithinTimeRange(Map<String,String> usageWithinTimeRange) {
             this.usageWithinTimeRange = Objects.requireNonNull(usageWithinTimeRange);
             return this;
         }

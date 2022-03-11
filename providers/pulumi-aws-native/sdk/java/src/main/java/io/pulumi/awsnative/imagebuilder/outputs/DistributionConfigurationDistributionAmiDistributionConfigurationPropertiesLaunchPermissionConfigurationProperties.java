@@ -32,12 +32,12 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
      */
     private final @Nullable List<String> userIds;
 
-    @OutputCustomType.Constructor({"organizationArns","organizationalUnitArns","userGroups","userIds"})
+    @OutputCustomType.Constructor
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationProperties(
-        @Nullable List<String> organizationArns,
-        @Nullable List<String> organizationalUnitArns,
-        @Nullable List<String> userGroups,
-        @Nullable List<String> userIds) {
+        @OutputCustomType.Parameter("organizationArns") @Nullable List<String> organizationArns,
+        @OutputCustomType.Parameter("organizationalUnitArns") @Nullable List<String> organizationalUnitArns,
+        @OutputCustomType.Parameter("userGroups") @Nullable List<String> userGroups,
+        @OutputCustomType.Parameter("userIds") @Nullable List<String> userIds) {
         this.organizationArns = organizationArns;
         this.organizationalUnitArns = organizationalUnitArns;
         this.userGroups = userGroups;
@@ -99,22 +99,22 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     	      this.userIds = defaults.userIds;
         }
 
-        public Builder setOrganizationArns(@Nullable List<String> organizationArns) {
+        public Builder organizationArns(@Nullable List<String> organizationArns) {
             this.organizationArns = organizationArns;
             return this;
         }
 
-        public Builder setOrganizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
+        public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
             this.organizationalUnitArns = organizationalUnitArns;
             return this;
         }
 
-        public Builder setUserGroups(@Nullable List<String> userGroups) {
+        public Builder userGroups(@Nullable List<String> userGroups) {
             this.userGroups = userGroups;
             return this;
         }
 
-        public Builder setUserIds(@Nullable List<String> userIds) {
+        public Builder userIds(@Nullable List<String> userIds) {
             this.userIds = userIds;
             return this;
         }

@@ -30,12 +30,12 @@ public final class SecretEnvVarResponse {
      */
     private final String version;
 
-    @OutputCustomType.Constructor({"key","project","secret","version"})
+    @OutputCustomType.Constructor
     private SecretEnvVarResponse(
-        String key,
-        String project,
-        String secret,
-        String version) {
+        @OutputCustomType.Parameter("key") String key,
+        @OutputCustomType.Parameter("project") String project,
+        @OutputCustomType.Parameter("secret") String secret,
+        @OutputCustomType.Parameter("version") String version) {
         this.key = key;
         this.project = project;
         this.secret = secret;
@@ -97,22 +97,22 @@ public final class SecretEnvVarResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setKey(String key) {
+        public Builder key(String key) {
             this.key = Objects.requireNonNull(key);
             return this;
         }
 
-        public Builder setProject(String project) {
+        public Builder project(String project) {
             this.project = Objects.requireNonNull(project);
             return this;
         }
 
-        public Builder setSecret(String secret) {
+        public Builder secret(String secret) {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
 
-        public Builder setVersion(String version) {
+        public Builder version(String version) {
             this.version = Objects.requireNonNull(version);
             return this;
         }

@@ -35,12 +35,12 @@ public final class NetworkPolicySpec {
      */
     private final @Nullable List<String> policyTypes;
 
-    @OutputCustomType.Constructor({"egress","ingress","podSelector","policyTypes"})
+    @OutputCustomType.Constructor
     private NetworkPolicySpec(
-        @Nullable List<NetworkPolicyEgressRule> egress,
-        @Nullable List<NetworkPolicyIngressRule> ingress,
-        LabelSelector podSelector,
-        @Nullable List<String> policyTypes) {
+        @OutputCustomType.Parameter("egress") @Nullable List<NetworkPolicyEgressRule> egress,
+        @OutputCustomType.Parameter("ingress") @Nullable List<NetworkPolicyIngressRule> ingress,
+        @OutputCustomType.Parameter("podSelector") LabelSelector podSelector,
+        @OutputCustomType.Parameter("policyTypes") @Nullable List<String> policyTypes) {
         this.egress = egress;
         this.ingress = ingress;
         this.podSelector = podSelector;
@@ -102,22 +102,22 @@ public final class NetworkPolicySpec {
     	      this.policyTypes = defaults.policyTypes;
         }
 
-        public Builder setEgress(@Nullable List<NetworkPolicyEgressRule> egress) {
+        public Builder egress(@Nullable List<NetworkPolicyEgressRule> egress) {
             this.egress = egress;
             return this;
         }
 
-        public Builder setIngress(@Nullable List<NetworkPolicyIngressRule> ingress) {
+        public Builder ingress(@Nullable List<NetworkPolicyIngressRule> ingress) {
             this.ingress = ingress;
             return this;
         }
 
-        public Builder setPodSelector(LabelSelector podSelector) {
+        public Builder podSelector(LabelSelector podSelector) {
             this.podSelector = Objects.requireNonNull(podSelector);
             return this;
         }
 
-        public Builder setPolicyTypes(@Nullable List<String> policyTypes) {
+        public Builder policyTypes(@Nullable List<String> policyTypes) {
             this.policyTypes = policyTypes;
             return this;
         }

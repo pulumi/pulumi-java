@@ -25,10 +25,10 @@ public final class AllowedHostPath {
      */
     private final @Nullable Boolean readOnly;
 
-    @OutputCustomType.Constructor({"pathPrefix","readOnly"})
+    @OutputCustomType.Constructor
     private AllowedHostPath(
-        @Nullable String pathPrefix,
-        @Nullable Boolean readOnly) {
+        @OutputCustomType.Parameter("pathPrefix") @Nullable String pathPrefix,
+        @OutputCustomType.Parameter("readOnly") @Nullable Boolean readOnly) {
         this.pathPrefix = pathPrefix;
         this.readOnly = readOnly;
     }
@@ -72,12 +72,12 @@ public final class AllowedHostPath {
     	      this.readOnly = defaults.readOnly;
         }
 
-        public Builder setPathPrefix(@Nullable String pathPrefix) {
+        public Builder pathPrefix(@Nullable String pathPrefix) {
             this.pathPrefix = pathPrefix;
             return this;
         }
 
-        public Builder setReadOnly(@Nullable Boolean readOnly) {
+        public Builder readOnly(@Nullable Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }

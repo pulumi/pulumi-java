@@ -14,10 +14,10 @@ public final class FilterPortRangeFilter {
     private final @Nullable Integer beginInclusive;
     private final @Nullable Integer endInclusive;
 
-    @OutputCustomType.Constructor({"beginInclusive","endInclusive"})
+    @OutputCustomType.Constructor
     private FilterPortRangeFilter(
-        @Nullable Integer beginInclusive,
-        @Nullable Integer endInclusive) {
+        @OutputCustomType.Parameter("beginInclusive") @Nullable Integer beginInclusive,
+        @OutputCustomType.Parameter("endInclusive") @Nullable Integer endInclusive) {
         this.beginInclusive = beginInclusive;
         this.endInclusive = endInclusive;
     }
@@ -51,12 +51,12 @@ public final class FilterPortRangeFilter {
     	      this.endInclusive = defaults.endInclusive;
         }
 
-        public Builder setBeginInclusive(@Nullable Integer beginInclusive) {
+        public Builder beginInclusive(@Nullable Integer beginInclusive) {
             this.beginInclusive = beginInclusive;
             return this;
         }
 
-        public Builder setEndInclusive(@Nullable Integer endInclusive) {
+        public Builder endInclusive(@Nullable Integer endInclusive) {
             this.endInclusive = endInclusive;
             return this;
         }

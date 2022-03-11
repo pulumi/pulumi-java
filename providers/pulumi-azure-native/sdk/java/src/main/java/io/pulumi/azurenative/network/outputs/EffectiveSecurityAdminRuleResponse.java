@@ -113,27 +113,27 @@ public final class EffectiveSecurityAdminRuleResponse {
      */
     private final @Nullable List<AddressPrefixItemResponse> sources;
 
-    @OutputCustomType.Constructor({"access","configurationDescription","configurationDisplayName","description","destinationPortRanges","destinations","direction","displayName","id","kind","priority","protocol","provisioningState","ruleCollectionAppliesToGroups","ruleCollectionDescription","ruleCollectionDisplayName","ruleGroups","sourcePortRanges","sources"})
+    @OutputCustomType.Constructor
     private EffectiveSecurityAdminRuleResponse(
-        String access,
-        @Nullable String configurationDescription,
-        @Nullable String configurationDisplayName,
-        @Nullable String description,
-        @Nullable List<String> destinationPortRanges,
-        @Nullable List<AddressPrefixItemResponse> destinations,
-        String direction,
-        @Nullable String displayName,
-        @Nullable String id,
-        String kind,
-        @Nullable Integer priority,
-        String protocol,
-        String provisioningState,
-        @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
-        @Nullable String ruleCollectionDescription,
-        @Nullable String ruleCollectionDisplayName,
-        @Nullable List<ConfigurationGroupResponse> ruleGroups,
-        @Nullable List<String> sourcePortRanges,
-        @Nullable List<AddressPrefixItemResponse> sources) {
+        @OutputCustomType.Parameter("access") String access,
+        @OutputCustomType.Parameter("configurationDescription") @Nullable String configurationDescription,
+        @OutputCustomType.Parameter("configurationDisplayName") @Nullable String configurationDisplayName,
+        @OutputCustomType.Parameter("description") @Nullable String description,
+        @OutputCustomType.Parameter("destinationPortRanges") @Nullable List<String> destinationPortRanges,
+        @OutputCustomType.Parameter("destinations") @Nullable List<AddressPrefixItemResponse> destinations,
+        @OutputCustomType.Parameter("direction") String direction,
+        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
+        @OutputCustomType.Parameter("id") @Nullable String id,
+        @OutputCustomType.Parameter("kind") String kind,
+        @OutputCustomType.Parameter("priority") @Nullable Integer priority,
+        @OutputCustomType.Parameter("protocol") String protocol,
+        @OutputCustomType.Parameter("provisioningState") String provisioningState,
+        @OutputCustomType.Parameter("ruleCollectionAppliesToGroups") @Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups,
+        @OutputCustomType.Parameter("ruleCollectionDescription") @Nullable String ruleCollectionDescription,
+        @OutputCustomType.Parameter("ruleCollectionDisplayName") @Nullable String ruleCollectionDisplayName,
+        @OutputCustomType.Parameter("ruleGroups") @Nullable List<ConfigurationGroupResponse> ruleGroups,
+        @OutputCustomType.Parameter("sourcePortRanges") @Nullable List<String> sourcePortRanges,
+        @OutputCustomType.Parameter("sources") @Nullable List<AddressPrefixItemResponse> sources) {
         this.access = access;
         this.configurationDescription = configurationDescription;
         this.configurationDisplayName = configurationDisplayName;
@@ -346,97 +346,97 @@ public final class EffectiveSecurityAdminRuleResponse {
     	      this.sources = defaults.sources;
         }
 
-        public Builder setAccess(String access) {
+        public Builder access(String access) {
             this.access = Objects.requireNonNull(access);
             return this;
         }
 
-        public Builder setConfigurationDescription(@Nullable String configurationDescription) {
+        public Builder configurationDescription(@Nullable String configurationDescription) {
             this.configurationDescription = configurationDescription;
             return this;
         }
 
-        public Builder setConfigurationDisplayName(@Nullable String configurationDisplayName) {
+        public Builder configurationDisplayName(@Nullable String configurationDisplayName) {
             this.configurationDisplayName = configurationDisplayName;
             return this;
         }
 
-        public Builder setDescription(@Nullable String description) {
+        public Builder description(@Nullable String description) {
             this.description = description;
             return this;
         }
 
-        public Builder setDestinationPortRanges(@Nullable List<String> destinationPortRanges) {
+        public Builder destinationPortRanges(@Nullable List<String> destinationPortRanges) {
             this.destinationPortRanges = destinationPortRanges;
             return this;
         }
 
-        public Builder setDestinations(@Nullable List<AddressPrefixItemResponse> destinations) {
+        public Builder destinations(@Nullable List<AddressPrefixItemResponse> destinations) {
             this.destinations = destinations;
             return this;
         }
 
-        public Builder setDirection(String direction) {
+        public Builder direction(String direction) {
             this.direction = Objects.requireNonNull(direction);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setId(@Nullable String id) {
+        public Builder id(@Nullable String id) {
             this.id = id;
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
 
-        public Builder setPriority(@Nullable Integer priority) {
+        public Builder priority(@Nullable Integer priority) {
             this.priority = priority;
             return this;
         }
 
-        public Builder setProtocol(String protocol) {
+        public Builder protocol(String protocol) {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
 
-        public Builder setProvisioningState(String provisioningState) {
+        public Builder provisioningState(String provisioningState) {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
 
-        public Builder setRuleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
+        public Builder ruleCollectionAppliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemResponse> ruleCollectionAppliesToGroups) {
             this.ruleCollectionAppliesToGroups = ruleCollectionAppliesToGroups;
             return this;
         }
 
-        public Builder setRuleCollectionDescription(@Nullable String ruleCollectionDescription) {
+        public Builder ruleCollectionDescription(@Nullable String ruleCollectionDescription) {
             this.ruleCollectionDescription = ruleCollectionDescription;
             return this;
         }
 
-        public Builder setRuleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
+        public Builder ruleCollectionDisplayName(@Nullable String ruleCollectionDisplayName) {
             this.ruleCollectionDisplayName = ruleCollectionDisplayName;
             return this;
         }
 
-        public Builder setRuleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
+        public Builder ruleGroups(@Nullable List<ConfigurationGroupResponse> ruleGroups) {
             this.ruleGroups = ruleGroups;
             return this;
         }
 
-        public Builder setSourcePortRanges(@Nullable List<String> sourcePortRanges) {
+        public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
 
-        public Builder setSources(@Nullable List<AddressPrefixItemResponse> sources) {
+        public Builder sources(@Nullable List<AddressPrefixItemResponse> sources) {
             this.sources = sources;
             return this;
         }

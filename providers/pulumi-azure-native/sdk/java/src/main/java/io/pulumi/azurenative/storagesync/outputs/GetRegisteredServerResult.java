@@ -138,33 +138,33 @@ public final class GetRegisteredServerResult {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"agentVersion","agentVersionExpirationDate","agentVersionStatus","clusterId","clusterName","discoveryEndpointUri","friendlyName","id","lastHeartBeat","lastOperationName","lastWorkflowId","managementEndpointUri","monitoringConfiguration","monitoringEndpointUri","name","provisioningState","resourceLocation","serverCertificate","serverId","serverManagementErrorCode","serverOSVersion","serverRole","serviceLocation","storageSyncServiceUid","type"})
+    @OutputCustomType.Constructor
     private GetRegisteredServerResult(
-        @Nullable String agentVersion,
-        String agentVersionExpirationDate,
-        String agentVersionStatus,
-        @Nullable String clusterId,
-        @Nullable String clusterName,
-        @Nullable String discoveryEndpointUri,
-        @Nullable String friendlyName,
-        String id,
-        @Nullable String lastHeartBeat,
-        @Nullable String lastOperationName,
-        @Nullable String lastWorkflowId,
-        @Nullable String managementEndpointUri,
-        @Nullable String monitoringConfiguration,
-        @Nullable String monitoringEndpointUri,
-        String name,
-        @Nullable String provisioningState,
-        @Nullable String resourceLocation,
-        @Nullable String serverCertificate,
-        @Nullable String serverId,
-        @Nullable Integer serverManagementErrorCode,
-        @Nullable String serverOSVersion,
-        @Nullable String serverRole,
-        @Nullable String serviceLocation,
-        @Nullable String storageSyncServiceUid,
-        String type) {
+        @OutputCustomType.Parameter("agentVersion") @Nullable String agentVersion,
+        @OutputCustomType.Parameter("agentVersionExpirationDate") String agentVersionExpirationDate,
+        @OutputCustomType.Parameter("agentVersionStatus") String agentVersionStatus,
+        @OutputCustomType.Parameter("clusterId") @Nullable String clusterId,
+        @OutputCustomType.Parameter("clusterName") @Nullable String clusterName,
+        @OutputCustomType.Parameter("discoveryEndpointUri") @Nullable String discoveryEndpointUri,
+        @OutputCustomType.Parameter("friendlyName") @Nullable String friendlyName,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("lastHeartBeat") @Nullable String lastHeartBeat,
+        @OutputCustomType.Parameter("lastOperationName") @Nullable String lastOperationName,
+        @OutputCustomType.Parameter("lastWorkflowId") @Nullable String lastWorkflowId,
+        @OutputCustomType.Parameter("managementEndpointUri") @Nullable String managementEndpointUri,
+        @OutputCustomType.Parameter("monitoringConfiguration") @Nullable String monitoringConfiguration,
+        @OutputCustomType.Parameter("monitoringEndpointUri") @Nullable String monitoringEndpointUri,
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("provisioningState") @Nullable String provisioningState,
+        @OutputCustomType.Parameter("resourceLocation") @Nullable String resourceLocation,
+        @OutputCustomType.Parameter("serverCertificate") @Nullable String serverCertificate,
+        @OutputCustomType.Parameter("serverId") @Nullable String serverId,
+        @OutputCustomType.Parameter("serverManagementErrorCode") @Nullable Integer serverManagementErrorCode,
+        @OutputCustomType.Parameter("serverOSVersion") @Nullable String serverOSVersion,
+        @OutputCustomType.Parameter("serverRole") @Nullable String serverRole,
+        @OutputCustomType.Parameter("serviceLocation") @Nullable String serviceLocation,
+        @OutputCustomType.Parameter("storageSyncServiceUid") @Nullable String storageSyncServiceUid,
+        @OutputCustomType.Parameter("type") String type) {
         this.agentVersion = agentVersion;
         this.agentVersionExpirationDate = agentVersionExpirationDate;
         this.agentVersionStatus = agentVersionStatus;
@@ -436,127 +436,127 @@ public final class GetRegisteredServerResult {
     	      this.type = defaults.type;
         }
 
-        public Builder setAgentVersion(@Nullable String agentVersion) {
+        public Builder agentVersion(@Nullable String agentVersion) {
             this.agentVersion = agentVersion;
             return this;
         }
 
-        public Builder setAgentVersionExpirationDate(String agentVersionExpirationDate) {
+        public Builder agentVersionExpirationDate(String agentVersionExpirationDate) {
             this.agentVersionExpirationDate = Objects.requireNonNull(agentVersionExpirationDate);
             return this;
         }
 
-        public Builder setAgentVersionStatus(String agentVersionStatus) {
+        public Builder agentVersionStatus(String agentVersionStatus) {
             this.agentVersionStatus = Objects.requireNonNull(agentVersionStatus);
             return this;
         }
 
-        public Builder setClusterId(@Nullable String clusterId) {
+        public Builder clusterId(@Nullable String clusterId) {
             this.clusterId = clusterId;
             return this;
         }
 
-        public Builder setClusterName(@Nullable String clusterName) {
+        public Builder clusterName(@Nullable String clusterName) {
             this.clusterName = clusterName;
             return this;
         }
 
-        public Builder setDiscoveryEndpointUri(@Nullable String discoveryEndpointUri) {
+        public Builder discoveryEndpointUri(@Nullable String discoveryEndpointUri) {
             this.discoveryEndpointUri = discoveryEndpointUri;
             return this;
         }
 
-        public Builder setFriendlyName(@Nullable String friendlyName) {
+        public Builder friendlyName(@Nullable String friendlyName) {
             this.friendlyName = friendlyName;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setLastHeartBeat(@Nullable String lastHeartBeat) {
+        public Builder lastHeartBeat(@Nullable String lastHeartBeat) {
             this.lastHeartBeat = lastHeartBeat;
             return this;
         }
 
-        public Builder setLastOperationName(@Nullable String lastOperationName) {
+        public Builder lastOperationName(@Nullable String lastOperationName) {
             this.lastOperationName = lastOperationName;
             return this;
         }
 
-        public Builder setLastWorkflowId(@Nullable String lastWorkflowId) {
+        public Builder lastWorkflowId(@Nullable String lastWorkflowId) {
             this.lastWorkflowId = lastWorkflowId;
             return this;
         }
 
-        public Builder setManagementEndpointUri(@Nullable String managementEndpointUri) {
+        public Builder managementEndpointUri(@Nullable String managementEndpointUri) {
             this.managementEndpointUri = managementEndpointUri;
             return this;
         }
 
-        public Builder setMonitoringConfiguration(@Nullable String monitoringConfiguration) {
+        public Builder monitoringConfiguration(@Nullable String monitoringConfiguration) {
             this.monitoringConfiguration = monitoringConfiguration;
             return this;
         }
 
-        public Builder setMonitoringEndpointUri(@Nullable String monitoringEndpointUri) {
+        public Builder monitoringEndpointUri(@Nullable String monitoringEndpointUri) {
             this.monitoringEndpointUri = monitoringEndpointUri;
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setProvisioningState(@Nullable String provisioningState) {
+        public Builder provisioningState(@Nullable String provisioningState) {
             this.provisioningState = provisioningState;
             return this;
         }
 
-        public Builder setResourceLocation(@Nullable String resourceLocation) {
+        public Builder resourceLocation(@Nullable String resourceLocation) {
             this.resourceLocation = resourceLocation;
             return this;
         }
 
-        public Builder setServerCertificate(@Nullable String serverCertificate) {
+        public Builder serverCertificate(@Nullable String serverCertificate) {
             this.serverCertificate = serverCertificate;
             return this;
         }
 
-        public Builder setServerId(@Nullable String serverId) {
+        public Builder serverId(@Nullable String serverId) {
             this.serverId = serverId;
             return this;
         }
 
-        public Builder setServerManagementErrorCode(@Nullable Integer serverManagementErrorCode) {
+        public Builder serverManagementErrorCode(@Nullable Integer serverManagementErrorCode) {
             this.serverManagementErrorCode = serverManagementErrorCode;
             return this;
         }
 
-        public Builder setServerOSVersion(@Nullable String serverOSVersion) {
+        public Builder serverOSVersion(@Nullable String serverOSVersion) {
             this.serverOSVersion = serverOSVersion;
             return this;
         }
 
-        public Builder setServerRole(@Nullable String serverRole) {
+        public Builder serverRole(@Nullable String serverRole) {
             this.serverRole = serverRole;
             return this;
         }
 
-        public Builder setServiceLocation(@Nullable String serviceLocation) {
+        public Builder serviceLocation(@Nullable String serviceLocation) {
             this.serviceLocation = serviceLocation;
             return this;
         }
 
-        public Builder setStorageSyncServiceUid(@Nullable String storageSyncServiceUid) {
+        public Builder storageSyncServiceUid(@Nullable String storageSyncServiceUid) {
             this.storageSyncServiceUid = storageSyncServiceUid;
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

@@ -50,11 +50,11 @@ public final class SubscriptionPushConfig {
      */
     private final String pushEndpoint;
 
-    @OutputCustomType.Constructor({"attributes","oidcToken","pushEndpoint"})
+    @OutputCustomType.Constructor
     private SubscriptionPushConfig(
-        @Nullable Map<String,String> attributes,
-        @Nullable SubscriptionPushConfigOidcToken oidcToken,
-        String pushEndpoint) {
+        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @OutputCustomType.Parameter("oidcToken") @Nullable SubscriptionPushConfigOidcToken oidcToken,
+        @OutputCustomType.Parameter("pushEndpoint") String pushEndpoint) {
         this.attributes = attributes;
         this.oidcToken = oidcToken;
         this.pushEndpoint = pushEndpoint;
@@ -127,17 +127,17 @@ public final class SubscriptionPushConfig {
     	      this.pushEndpoint = defaults.pushEndpoint;
         }
 
-        public Builder setAttributes(@Nullable Map<String,String> attributes) {
+        public Builder attributes(@Nullable Map<String,String> attributes) {
             this.attributes = attributes;
             return this;
         }
 
-        public Builder setOidcToken(@Nullable SubscriptionPushConfigOidcToken oidcToken) {
+        public Builder oidcToken(@Nullable SubscriptionPushConfigOidcToken oidcToken) {
             this.oidcToken = oidcToken;
             return this;
         }
 
-        public Builder setPushEndpoint(String pushEndpoint) {
+        public Builder pushEndpoint(String pushEndpoint) {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }

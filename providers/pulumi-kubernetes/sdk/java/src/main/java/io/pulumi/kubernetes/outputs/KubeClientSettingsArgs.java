@@ -23,10 +23,10 @@ public final class KubeClientSettingsArgs {
      */
     private final @Nullable Input<Double> qps;
 
-    @OutputCustomType.Constructor({"burst","qps"})
+    @OutputCustomType.Constructor
     private KubeClientSettingsArgs(
-        @Nullable Input<Integer> burst,
-        @Nullable Input<Double> qps) {
+        @OutputCustomType.Parameter("burst") @Nullable Input<Integer> burst,
+        @OutputCustomType.Parameter("qps") @Nullable Input<Double> qps) {
         this.burst = burst;
         this.qps = qps;
     }
@@ -68,12 +68,12 @@ public final class KubeClientSettingsArgs {
     	      this.qps = defaults.qps;
         }
 
-        public Builder setBurst(@Nullable Input<Integer> burst) {
+        public Builder burst(@Nullable Input<Integer> burst) {
             this.burst = burst;
             return this;
         }
 
-        public Builder setQps(@Nullable Input<Double> qps) {
+        public Builder qps(@Nullable Input<Double> qps) {
             this.qps = qps;
             return this;
         }

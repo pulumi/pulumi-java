@@ -32,12 +32,12 @@ public final class HttpHeaderActionResponse {
      */
     private final List<String> responseHeadersToRemove;
 
-    @OutputCustomType.Constructor({"requestHeadersToAdd","requestHeadersToRemove","responseHeadersToAdd","responseHeadersToRemove"})
+    @OutputCustomType.Constructor
     private HttpHeaderActionResponse(
-        List<HttpHeaderOptionResponse> requestHeadersToAdd,
-        List<String> requestHeadersToRemove,
-        List<HttpHeaderOptionResponse> responseHeadersToAdd,
-        List<String> responseHeadersToRemove) {
+        @OutputCustomType.Parameter("requestHeadersToAdd") List<HttpHeaderOptionResponse> requestHeadersToAdd,
+        @OutputCustomType.Parameter("requestHeadersToRemove") List<String> requestHeadersToRemove,
+        @OutputCustomType.Parameter("responseHeadersToAdd") List<HttpHeaderOptionResponse> responseHeadersToAdd,
+        @OutputCustomType.Parameter("responseHeadersToRemove") List<String> responseHeadersToRemove) {
         this.requestHeadersToAdd = requestHeadersToAdd;
         this.requestHeadersToRemove = requestHeadersToRemove;
         this.responseHeadersToAdd = responseHeadersToAdd;
@@ -99,22 +99,22 @@ public final class HttpHeaderActionResponse {
     	      this.responseHeadersToRemove = defaults.responseHeadersToRemove;
         }
 
-        public Builder setRequestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
+        public Builder requestHeadersToAdd(List<HttpHeaderOptionResponse> requestHeadersToAdd) {
             this.requestHeadersToAdd = Objects.requireNonNull(requestHeadersToAdd);
             return this;
         }
 
-        public Builder setRequestHeadersToRemove(List<String> requestHeadersToRemove) {
+        public Builder requestHeadersToRemove(List<String> requestHeadersToRemove) {
             this.requestHeadersToRemove = Objects.requireNonNull(requestHeadersToRemove);
             return this;
         }
 
-        public Builder setResponseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
+        public Builder responseHeadersToAdd(List<HttpHeaderOptionResponse> responseHeadersToAdd) {
             this.responseHeadersToAdd = Objects.requireNonNull(responseHeadersToAdd);
             return this;
         }
 
-        public Builder setResponseHeadersToRemove(List<String> responseHeadersToRemove) {
+        public Builder responseHeadersToRemove(List<String> responseHeadersToRemove) {
             this.responseHeadersToRemove = Objects.requireNonNull(responseHeadersToRemove);
             return this;
         }

@@ -15,8 +15,8 @@ public final class ReportDeliveryInfoResponse {
      */
     private final ReportDeliveryDestinationResponse destination;
 
-    @OutputCustomType.Constructor({"destination"})
-    private ReportDeliveryInfoResponse(ReportDeliveryDestinationResponse destination) {
+    @OutputCustomType.Constructor
+    private ReportDeliveryInfoResponse(@OutputCustomType.Parameter("destination") ReportDeliveryDestinationResponse destination) {
         this.destination = destination;
     }
 
@@ -48,7 +48,7 @@ public final class ReportDeliveryInfoResponse {
     	      this.destination = defaults.destination;
         }
 
-        public Builder setDestination(ReportDeliveryDestinationResponse destination) {
+        public Builder destination(ReportDeliveryDestinationResponse destination) {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }

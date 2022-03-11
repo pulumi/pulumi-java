@@ -88,17 +88,17 @@ public final class GetGroupArgs extends io.pulumi.resources.InvokeArgs {
     	      this.identityStoreId = defaults.identityStoreId;
         }
 
-        public Builder setFilters(List<GetGroupFilter> filters) {
+        public Builder filters(List<GetGroupFilter> filters) {
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
 
-        public Builder setGroupId(@Nullable String groupId) {
+        public Builder groupId(@Nullable String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Builder setIdentityStoreId(String identityStoreId) {
+        public Builder identityStoreId(String identityStoreId) {
             this.identityStoreId = Objects.requireNonNull(identityStoreId);
             return this;
         }

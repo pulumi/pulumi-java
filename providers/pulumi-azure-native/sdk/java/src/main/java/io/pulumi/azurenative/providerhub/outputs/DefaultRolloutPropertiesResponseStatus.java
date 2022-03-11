@@ -20,13 +20,13 @@ public final class DefaultRolloutPropertiesResponseStatus {
     private final @Nullable String nextTrafficRegionScheduledTime;
     private final @Nullable String subscriptionReregistrationResult;
 
-    @OutputCustomType.Constructor({"completedRegions","failedOrSkippedRegions","nextTrafficRegion","nextTrafficRegionScheduledTime","subscriptionReregistrationResult"})
+    @OutputCustomType.Constructor
     private DefaultRolloutPropertiesResponseStatus(
-        @Nullable List<String> completedRegions,
-        @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
-        @Nullable String nextTrafficRegion,
-        @Nullable String nextTrafficRegionScheduledTime,
-        @Nullable String subscriptionReregistrationResult) {
+        @OutputCustomType.Parameter("completedRegions") @Nullable List<String> completedRegions,
+        @OutputCustomType.Parameter("failedOrSkippedRegions") @Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions,
+        @OutputCustomType.Parameter("nextTrafficRegion") @Nullable String nextTrafficRegion,
+        @OutputCustomType.Parameter("nextTrafficRegionScheduledTime") @Nullable String nextTrafficRegionScheduledTime,
+        @OutputCustomType.Parameter("subscriptionReregistrationResult") @Nullable String subscriptionReregistrationResult) {
         this.completedRegions = completedRegions;
         this.failedOrSkippedRegions = failedOrSkippedRegions;
         this.nextTrafficRegion = nextTrafficRegion;
@@ -78,27 +78,27 @@ public final class DefaultRolloutPropertiesResponseStatus {
     	      this.subscriptionReregistrationResult = defaults.subscriptionReregistrationResult;
         }
 
-        public Builder setCompletedRegions(@Nullable List<String> completedRegions) {
+        public Builder completedRegions(@Nullable List<String> completedRegions) {
             this.completedRegions = completedRegions;
             return this;
         }
 
-        public Builder setFailedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
+        public Builder failedOrSkippedRegions(@Nullable Map<String,ExtendedErrorInfoResponse> failedOrSkippedRegions) {
             this.failedOrSkippedRegions = failedOrSkippedRegions;
             return this;
         }
 
-        public Builder setNextTrafficRegion(@Nullable String nextTrafficRegion) {
+        public Builder nextTrafficRegion(@Nullable String nextTrafficRegion) {
             this.nextTrafficRegion = nextTrafficRegion;
             return this;
         }
 
-        public Builder setNextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
+        public Builder nextTrafficRegionScheduledTime(@Nullable String nextTrafficRegionScheduledTime) {
             this.nextTrafficRegionScheduledTime = nextTrafficRegionScheduledTime;
             return this;
         }
 
-        public Builder setSubscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
+        public Builder subscriptionReregistrationResult(@Nullable String subscriptionReregistrationResult) {
             this.subscriptionReregistrationResult = subscriptionReregistrationResult;
             return this;
         }

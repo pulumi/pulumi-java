@@ -40,14 +40,14 @@ public final class CloudSQLInstanceInfoResponse {
      */
     private final String uri;
 
-    @OutputCustomType.Constructor({"displayName","externalIp","internalIp","networkUri","region","uri"})
+    @OutputCustomType.Constructor
     private CloudSQLInstanceInfoResponse(
-        String displayName,
-        String externalIp,
-        String internalIp,
-        String networkUri,
-        String region,
-        String uri) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("externalIp") String externalIp,
+        @OutputCustomType.Parameter("internalIp") String internalIp,
+        @OutputCustomType.Parameter("networkUri") String networkUri,
+        @OutputCustomType.Parameter("region") String region,
+        @OutputCustomType.Parameter("uri") String uri) {
         this.displayName = displayName;
         this.externalIp = externalIp;
         this.internalIp = internalIp;
@@ -129,32 +129,32 @@ public final class CloudSQLInstanceInfoResponse {
     	      this.uri = defaults.uri;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setExternalIp(String externalIp) {
+        public Builder externalIp(String externalIp) {
             this.externalIp = Objects.requireNonNull(externalIp);
             return this;
         }
 
-        public Builder setInternalIp(String internalIp) {
+        public Builder internalIp(String internalIp) {
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
 
-        public Builder setNetworkUri(String networkUri) {
+        public Builder networkUri(String networkUri) {
             this.networkUri = Objects.requireNonNull(networkUri);
             return this;
         }
 
-        public Builder setRegion(String region) {
+        public Builder region(String region) {
             this.region = Objects.requireNonNull(region);
             return this;
         }
 
-        public Builder setUri(String uri) {
+        public Builder uri(String uri) {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }

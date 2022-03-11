@@ -75,22 +75,22 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.principals = defaults.principals;
         }
 
-        public Builder setIpBlocks(@Nullable Input<List<String>> ipBlocks) {
+        public Builder ipBlocks(@Nullable Input<List<String>> ipBlocks) {
             this.ipBlocks = ipBlocks;
             return this;
         }
 
-        public Builder setIpBlocks(@Nullable List<String> ipBlocks) {
+        public Builder ipBlocks(@Nullable List<String> ipBlocks) {
             this.ipBlocks = Input.ofNullable(ipBlocks);
             return this;
         }
 
-        public Builder setPrincipals(@Nullable Input<List<String>> principals) {
+        public Builder principals(@Nullable Input<List<String>> principals) {
             this.principals = principals;
             return this;
         }
 
-        public Builder setPrincipals(@Nullable List<String> principals) {
+        public Builder principals(@Nullable List<String> principals) {
             this.principals = Input.ofNullable(principals);
             return this;
         }

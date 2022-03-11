@@ -307,162 +307,162 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setApplicationName(Input<String> applicationName) {
+        public Builder applicationName(Input<String> applicationName) {
             this.applicationName = Objects.requireNonNull(applicationName);
             return this;
         }
 
-        public Builder setApplicationName(String applicationName) {
+        public Builder applicationName(String applicationName) {
             this.applicationName = Input.of(Objects.requireNonNull(applicationName));
             return this;
         }
 
-        public Builder setClusterName(Input<String> clusterName) {
+        public Builder clusterName(Input<String> clusterName) {
             this.clusterName = Objects.requireNonNull(clusterName);
             return this;
         }
 
-        public Builder setClusterName(String clusterName) {
+        public Builder clusterName(String clusterName) {
             this.clusterName = Input.of(Objects.requireNonNull(clusterName));
             return this;
         }
 
-        public Builder setCorrelationScheme(@Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
+        public Builder correlationScheme(@Nullable Input<List<ServiceCorrelationDescriptionArgs>> correlationScheme) {
             this.correlationScheme = correlationScheme;
             return this;
         }
 
-        public Builder setCorrelationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
+        public Builder correlationScheme(@Nullable List<ServiceCorrelationDescriptionArgs> correlationScheme) {
             this.correlationScheme = Input.ofNullable(correlationScheme);
             return this;
         }
 
-        public Builder setDefaultMoveCost(@Nullable Input<Either<String,MoveCost>> defaultMoveCost) {
+        public Builder defaultMoveCost(@Nullable Input<Either<String,MoveCost>> defaultMoveCost) {
             this.defaultMoveCost = defaultMoveCost;
             return this;
         }
 
-        public Builder setDefaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
+        public Builder defaultMoveCost(@Nullable Either<String,MoveCost> defaultMoveCost) {
             this.defaultMoveCost = Input.ofNullable(defaultMoveCost);
             return this;
         }
 
-        public Builder setLocation(@Nullable Input<String> location) {
+        public Builder location(@Nullable Input<String> location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = Input.ofNullable(location);
             return this;
         }
 
-        public Builder setPartitionDescription(@Nullable Input<Object> partitionDescription) {
+        public Builder partitionDescription(@Nullable Input<Object> partitionDescription) {
             this.partitionDescription = partitionDescription;
             return this;
         }
 
-        public Builder setPartitionDescription(@Nullable Object partitionDescription) {
+        public Builder partitionDescription(@Nullable Object partitionDescription) {
             this.partitionDescription = Input.ofNullable(partitionDescription);
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable Input<String> placementConstraints) {
+        public Builder placementConstraints(@Nullable Input<String> placementConstraints) {
             this.placementConstraints = placementConstraints;
             return this;
         }
 
-        public Builder setPlacementConstraints(@Nullable String placementConstraints) {
+        public Builder placementConstraints(@Nullable String placementConstraints) {
             this.placementConstraints = Input.ofNullable(placementConstraints);
             return this;
         }
 
-        public Builder setResourceGroupName(Input<String> resourceGroupName) {
+        public Builder resourceGroupName(Input<String> resourceGroupName) {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
 
-        public Builder setResourceGroupName(String resourceGroupName) {
+        public Builder resourceGroupName(String resourceGroupName) {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
 
-        public Builder setServiceDnsName(@Nullable Input<String> serviceDnsName) {
+        public Builder serviceDnsName(@Nullable Input<String> serviceDnsName) {
             this.serviceDnsName = serviceDnsName;
             return this;
         }
 
-        public Builder setServiceDnsName(@Nullable String serviceDnsName) {
+        public Builder serviceDnsName(@Nullable String serviceDnsName) {
             this.serviceDnsName = Input.ofNullable(serviceDnsName);
             return this;
         }
 
-        public Builder setServiceKind(Input<Either<String,ServiceKind>> serviceKind) {
+        public Builder serviceKind(Input<Either<String,ServiceKind>> serviceKind) {
             this.serviceKind = Objects.requireNonNull(serviceKind);
             return this;
         }
 
-        public Builder setServiceKind(Either<String,ServiceKind> serviceKind) {
+        public Builder serviceKind(Either<String,ServiceKind> serviceKind) {
             this.serviceKind = Input.of(Objects.requireNonNull(serviceKind));
             return this;
         }
 
-        public Builder setServiceLoadMetrics(@Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
+        public Builder serviceLoadMetrics(@Nullable Input<List<ServiceLoadMetricDescriptionArgs>> serviceLoadMetrics) {
             this.serviceLoadMetrics = serviceLoadMetrics;
             return this;
         }
 
-        public Builder setServiceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
+        public Builder serviceLoadMetrics(@Nullable List<ServiceLoadMetricDescriptionArgs> serviceLoadMetrics) {
             this.serviceLoadMetrics = Input.ofNullable(serviceLoadMetrics);
             return this;
         }
 
-        public Builder setServiceName(@Nullable Input<String> serviceName) {
+        public Builder serviceName(@Nullable Input<String> serviceName) {
             this.serviceName = serviceName;
             return this;
         }
 
-        public Builder setServiceName(@Nullable String serviceName) {
+        public Builder serviceName(@Nullable String serviceName) {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
 
-        public Builder setServicePackageActivationMode(@Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
+        public Builder servicePackageActivationMode(@Nullable Input<Either<String,ArmServicePackageActivationMode>> servicePackageActivationMode) {
             this.servicePackageActivationMode = servicePackageActivationMode;
             return this;
         }
 
-        public Builder setServicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
+        public Builder servicePackageActivationMode(@Nullable Either<String,ArmServicePackageActivationMode> servicePackageActivationMode) {
             this.servicePackageActivationMode = Input.ofNullable(servicePackageActivationMode);
             return this;
         }
 
-        public Builder setServicePlacementPolicies(@Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
+        public Builder servicePlacementPolicies(@Nullable Input<List<ServicePlacementPolicyDescriptionArgs>> servicePlacementPolicies) {
             this.servicePlacementPolicies = servicePlacementPolicies;
             return this;
         }
 
-        public Builder setServicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
+        public Builder servicePlacementPolicies(@Nullable List<ServicePlacementPolicyDescriptionArgs> servicePlacementPolicies) {
             this.servicePlacementPolicies = Input.ofNullable(servicePlacementPolicies);
             return this;
         }
 
-        public Builder setServiceTypeName(@Nullable Input<String> serviceTypeName) {
+        public Builder serviceTypeName(@Nullable Input<String> serviceTypeName) {
             this.serviceTypeName = serviceTypeName;
             return this;
         }
 
-        public Builder setServiceTypeName(@Nullable String serviceTypeName) {
+        public Builder serviceTypeName(@Nullable String serviceTypeName) {
             this.serviceTypeName = Input.ofNullable(serviceTypeName);
             return this;
         }
 
-        public Builder setTags(@Nullable Input<Map<String,String>> tags) {
+        public Builder tags(@Nullable Input<Map<String,String>> tags) {
             this.tags = tags;
             return this;
         }
 
-        public Builder setTags(@Nullable Map<String,String> tags) {
+        public Builder tags(@Nullable Map<String,String> tags) {
             this.tags = Input.ofNullable(tags);
             return this;
         }

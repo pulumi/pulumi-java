@@ -92,32 +92,32 @@ public final class DenylistCustomAlertRuleArgs extends io.pulumi.resources.Resou
     	      this.ruleType = defaults.ruleType;
         }
 
-        public Builder setDenylistValues(Input<List<String>> denylistValues) {
+        public Builder denylistValues(Input<List<String>> denylistValues) {
             this.denylistValues = Objects.requireNonNull(denylistValues);
             return this;
         }
 
-        public Builder setDenylistValues(List<String> denylistValues) {
+        public Builder denylistValues(List<String> denylistValues) {
             this.denylistValues = Input.of(Objects.requireNonNull(denylistValues));
             return this;
         }
 
-        public Builder setIsEnabled(Input<Boolean> isEnabled) {
+        public Builder isEnabled(Input<Boolean> isEnabled) {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
 
-        public Builder setIsEnabled(Boolean isEnabled) {
+        public Builder isEnabled(Boolean isEnabled) {
             this.isEnabled = Input.of(Objects.requireNonNull(isEnabled));
             return this;
         }
 
-        public Builder setRuleType(Input<String> ruleType) {
+        public Builder ruleType(Input<String> ruleType) {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
 
-        public Builder setRuleType(String ruleType) {
+        public Builder ruleType(String ruleType) {
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }

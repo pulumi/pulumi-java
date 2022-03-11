@@ -22,10 +22,10 @@ public final class DateAfterModificationResponse {
      */
     private final @Nullable Double daysAfterModificationGreaterThan;
 
-    @OutputCustomType.Constructor({"daysAfterLastAccessTimeGreaterThan","daysAfterModificationGreaterThan"})
+    @OutputCustomType.Constructor
     private DateAfterModificationResponse(
-        @Nullable Double daysAfterLastAccessTimeGreaterThan,
-        @Nullable Double daysAfterModificationGreaterThan) {
+        @OutputCustomType.Parameter("daysAfterLastAccessTimeGreaterThan") @Nullable Double daysAfterLastAccessTimeGreaterThan,
+        @OutputCustomType.Parameter("daysAfterModificationGreaterThan") @Nullable Double daysAfterModificationGreaterThan) {
         this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
         this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
     }
@@ -67,12 +67,12 @@ public final class DateAfterModificationResponse {
     	      this.daysAfterModificationGreaterThan = defaults.daysAfterModificationGreaterThan;
         }
 
-        public Builder setDaysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
+        public Builder daysAfterLastAccessTimeGreaterThan(@Nullable Double daysAfterLastAccessTimeGreaterThan) {
             this.daysAfterLastAccessTimeGreaterThan = daysAfterLastAccessTimeGreaterThan;
             return this;
         }
 
-        public Builder setDaysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
+        public Builder daysAfterModificationGreaterThan(@Nullable Double daysAfterModificationGreaterThan) {
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }

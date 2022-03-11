@@ -183,92 +183,92 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     	      this.testLinks = defaults.testLinks;
         }
 
-        public Builder setApi(@Nullable Input<ApiReferenceArgs> api) {
+        public Builder api(@Nullable Input<ApiReferenceArgs> api) {
             this.api = api;
             return this;
         }
 
-        public Builder setApi(@Nullable ApiReferenceArgs api) {
+        public Builder api(@Nullable ApiReferenceArgs api) {
             this.api = Input.ofNullable(api);
             return this;
         }
 
-        public Builder setChangedTime(@Nullable Input<String> changedTime) {
+        public Builder changedTime(@Nullable Input<String> changedTime) {
             this.changedTime = changedTime;
             return this;
         }
 
-        public Builder setChangedTime(@Nullable String changedTime) {
+        public Builder changedTime(@Nullable String changedTime) {
             this.changedTime = Input.ofNullable(changedTime);
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable Input<String> createdTime) {
+        public Builder createdTime(@Nullable Input<String> createdTime) {
             this.createdTime = createdTime;
             return this;
         }
 
-        public Builder setCreatedTime(@Nullable String createdTime) {
+        public Builder createdTime(@Nullable String createdTime) {
             this.createdTime = Input.ofNullable(createdTime);
             return this;
         }
 
-        public Builder setCustomParameterValues(@Nullable Input<Map<String,String>> customParameterValues) {
+        public Builder customParameterValues(@Nullable Input<Map<String,String>> customParameterValues) {
             this.customParameterValues = customParameterValues;
             return this;
         }
 
-        public Builder setCustomParameterValues(@Nullable Map<String,String> customParameterValues) {
+        public Builder customParameterValues(@Nullable Map<String,String> customParameterValues) {
             this.customParameterValues = Input.ofNullable(customParameterValues);
             return this;
         }
 
-        public Builder setDisplayName(@Nullable Input<String> displayName) {
+        public Builder displayName(@Nullable Input<String> displayName) {
             this.displayName = displayName;
             return this;
         }
 
-        public Builder setDisplayName(@Nullable String displayName) {
+        public Builder displayName(@Nullable String displayName) {
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
 
-        public Builder setNonSecretParameterValues(@Nullable Input<Map<String,String>> nonSecretParameterValues) {
+        public Builder nonSecretParameterValues(@Nullable Input<Map<String,String>> nonSecretParameterValues) {
             this.nonSecretParameterValues = nonSecretParameterValues;
             return this;
         }
 
-        public Builder setNonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
+        public Builder nonSecretParameterValues(@Nullable Map<String,String> nonSecretParameterValues) {
             this.nonSecretParameterValues = Input.ofNullable(nonSecretParameterValues);
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Input<Map<String,String>> parameterValues) {
+        public Builder parameterValues(@Nullable Input<Map<String,String>> parameterValues) {
             this.parameterValues = parameterValues;
             return this;
         }
 
-        public Builder setParameterValues(@Nullable Map<String,String> parameterValues) {
+        public Builder parameterValues(@Nullable Map<String,String> parameterValues) {
             this.parameterValues = Input.ofNullable(parameterValues);
             return this;
         }
 
-        public Builder setStatuses(@Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses) {
+        public Builder statuses(@Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses) {
             this.statuses = statuses;
             return this;
         }
 
-        public Builder setStatuses(@Nullable List<ConnectionStatusDefinitionArgs> statuses) {
+        public Builder statuses(@Nullable List<ConnectionStatusDefinitionArgs> statuses) {
             this.statuses = Input.ofNullable(statuses);
             return this;
         }
 
-        public Builder setTestLinks(@Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks) {
+        public Builder testLinks(@Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks) {
             this.testLinks = testLinks;
             return this;
         }
 
-        public Builder setTestLinks(@Nullable List<ApiConnectionTestLinkArgs> testLinks) {
+        public Builder testLinks(@Nullable List<ApiConnectionTestLinkArgs> testLinks) {
             this.testLinks = Input.ofNullable(testLinks);
             return this;
         }

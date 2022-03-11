@@ -29,11 +29,11 @@ public final class GetRecoveryGroupResult {
      */
     private final @Nullable List<RecoveryGroupTag> tags;
 
-    @OutputCustomType.Constructor({"cells","recoveryGroupArn","tags"})
+    @OutputCustomType.Constructor
     private GetRecoveryGroupResult(
-        @Nullable List<String> cells,
-        @Nullable String recoveryGroupArn,
-        @Nullable List<RecoveryGroupTag> tags) {
+        @OutputCustomType.Parameter("cells") @Nullable List<String> cells,
+        @OutputCustomType.Parameter("recoveryGroupArn") @Nullable String recoveryGroupArn,
+        @OutputCustomType.Parameter("tags") @Nullable List<RecoveryGroupTag> tags) {
         this.cells = cells;
         this.recoveryGroupArn = recoveryGroupArn;
         this.tags = tags;
@@ -85,17 +85,17 @@ public final class GetRecoveryGroupResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setCells(@Nullable List<String> cells) {
+        public Builder cells(@Nullable List<String> cells) {
             this.cells = cells;
             return this;
         }
 
-        public Builder setRecoveryGroupArn(@Nullable String recoveryGroupArn) {
+        public Builder recoveryGroupArn(@Nullable String recoveryGroupArn) {
             this.recoveryGroupArn = recoveryGroupArn;
             return this;
         }
 
-        public Builder setTags(@Nullable List<RecoveryGroupTag> tags) {
+        public Builder tags(@Nullable List<RecoveryGroupTag> tags) {
             this.tags = tags;
             return this;
         }

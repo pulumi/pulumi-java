@@ -12,10 +12,10 @@ public final class EnvelopeSignatureResponse {
     private final String keyid;
     private final String sig;
 
-    @OutputCustomType.Constructor({"keyid","sig"})
+    @OutputCustomType.Constructor
     private EnvelopeSignatureResponse(
-        String keyid,
-        String sig) {
+        @OutputCustomType.Parameter("keyid") String keyid,
+        @OutputCustomType.Parameter("sig") String sig) {
         this.keyid = keyid;
         this.sig = sig;
     }
@@ -49,12 +49,12 @@ public final class EnvelopeSignatureResponse {
     	      this.sig = defaults.sig;
         }
 
-        public Builder setKeyid(String keyid) {
+        public Builder keyid(String keyid) {
             this.keyid = Objects.requireNonNull(keyid);
             return this;
         }
 
-        public Builder setSig(String sig) {
+        public Builder sig(String sig) {
             this.sig = Objects.requireNonNull(sig);
             return this;
         }

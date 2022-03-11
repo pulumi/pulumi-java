@@ -17,8 +17,8 @@ public final class CrawlerLineageConfiguration {
      */
     private final @Nullable String crawlerLineageSettings;
 
-    @OutputCustomType.Constructor({"crawlerLineageSettings"})
-    private CrawlerLineageConfiguration(@Nullable String crawlerLineageSettings) {
+    @OutputCustomType.Constructor
+    private CrawlerLineageConfiguration(@OutputCustomType.Parameter("crawlerLineageSettings") @Nullable String crawlerLineageSettings) {
         this.crawlerLineageSettings = crawlerLineageSettings;
     }
 
@@ -50,7 +50,7 @@ public final class CrawlerLineageConfiguration {
     	      this.crawlerLineageSettings = defaults.crawlerLineageSettings;
         }
 
-        public Builder setCrawlerLineageSettings(@Nullable String crawlerLineageSettings) {
+        public Builder crawlerLineageSettings(@Nullable String crawlerLineageSettings) {
             this.crawlerLineageSettings = crawlerLineageSettings;
             return this;
         }

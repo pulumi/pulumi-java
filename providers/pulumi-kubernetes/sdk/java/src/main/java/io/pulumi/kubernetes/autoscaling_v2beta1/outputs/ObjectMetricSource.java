@@ -39,13 +39,13 @@ public final class ObjectMetricSource {
      */
     private final String targetValue;
 
-    @OutputCustomType.Constructor({"averageValue","metricName","selector","target","targetValue"})
+    @OutputCustomType.Constructor
     private ObjectMetricSource(
-        @Nullable String averageValue,
-        String metricName,
-        @Nullable LabelSelector selector,
-        CrossVersionObjectReference target,
-        String targetValue) {
+        @OutputCustomType.Parameter("averageValue") @Nullable String averageValue,
+        @OutputCustomType.Parameter("metricName") String metricName,
+        @OutputCustomType.Parameter("selector") @Nullable LabelSelector selector,
+        @OutputCustomType.Parameter("target") CrossVersionObjectReference target,
+        @OutputCustomType.Parameter("targetValue") String targetValue) {
         this.averageValue = averageValue;
         this.metricName = metricName;
         this.selector = selector;
@@ -117,27 +117,27 @@ public final class ObjectMetricSource {
     	      this.targetValue = defaults.targetValue;
         }
 
-        public Builder setAverageValue(@Nullable String averageValue) {
+        public Builder averageValue(@Nullable String averageValue) {
             this.averageValue = averageValue;
             return this;
         }
 
-        public Builder setMetricName(String metricName) {
+        public Builder metricName(String metricName) {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
 
-        public Builder setSelector(@Nullable LabelSelector selector) {
+        public Builder selector(@Nullable LabelSelector selector) {
             this.selector = selector;
             return this;
         }
 
-        public Builder setTarget(CrossVersionObjectReference target) {
+        public Builder target(CrossVersionObjectReference target) {
             this.target = Objects.requireNonNull(target);
             return this;
         }
 
-        public Builder setTargetValue(String targetValue) {
+        public Builder targetValue(String targetValue) {
             this.targetValue = Objects.requireNonNull(targetValue);
             return this;
         }

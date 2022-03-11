@@ -21,10 +21,10 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
      */
     private final Integer configurationData;
 
-    @OutputCustomType.Constructor({"bestEffort","configurationData"})
+    @OutputCustomType.Constructor
     private ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(
-        Boolean bestEffort,
-        Integer configurationData) {
+        @OutputCustomType.Parameter("bestEffort") Boolean bestEffort,
+        @OutputCustomType.Parameter("configurationData") Integer configurationData) {
         this.bestEffort = bestEffort;
         this.configurationData = configurationData;
     }
@@ -66,12 +66,12 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     	      this.configurationData = defaults.configurationData;
         }
 
-        public Builder setBestEffort(Boolean bestEffort) {
+        public Builder bestEffort(Boolean bestEffort) {
             this.bestEffort = Objects.requireNonNull(bestEffort);
             return this;
         }
 
-        public Builder setConfigurationData(Integer configurationData) {
+        public Builder configurationData(Integer configurationData) {
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }

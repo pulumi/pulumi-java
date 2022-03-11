@@ -3046,1507 +3046,1507 @@ public final class Endpoints extends io.pulumi.resources.InvokeArgs {
     	      this.xray = defaults.xray;
         }
 
-        public Builder setAccessanalyzer(@Nullable String accessanalyzer) {
+        public Builder accessanalyzer(@Nullable String accessanalyzer) {
             this.accessanalyzer = accessanalyzer;
             return this;
         }
 
-        public Builder setAccount(@Nullable String account) {
+        public Builder account(@Nullable String account) {
             this.account = account;
             return this;
         }
 
-        public Builder setAcm(@Nullable String acm) {
+        public Builder acm(@Nullable String acm) {
             this.acm = acm;
             return this;
         }
 
-        public Builder setAcmpca(@Nullable String acmpca) {
+        public Builder acmpca(@Nullable String acmpca) {
             this.acmpca = acmpca;
             return this;
         }
 
-        public Builder setAlexaforbusiness(@Nullable String alexaforbusiness) {
+        public Builder alexaforbusiness(@Nullable String alexaforbusiness) {
             this.alexaforbusiness = alexaforbusiness;
             return this;
         }
 
-        public Builder setAmp(@Nullable String amp) {
+        public Builder amp(@Nullable String amp) {
             this.amp = amp;
             return this;
         }
 
-        public Builder setAmplify(@Nullable String amplify) {
+        public Builder amplify(@Nullable String amplify) {
             this.amplify = amplify;
             return this;
         }
 
-        public Builder setAmplifybackend(@Nullable String amplifybackend) {
+        public Builder amplifybackend(@Nullable String amplifybackend) {
             this.amplifybackend = amplifybackend;
             return this;
         }
 
-        public Builder setApigateway(@Nullable String apigateway) {
+        public Builder apigateway(@Nullable String apigateway) {
             this.apigateway = apigateway;
             return this;
         }
 
-        public Builder setApigatewayv2(@Nullable String apigatewayv2) {
+        public Builder apigatewayv2(@Nullable String apigatewayv2) {
             this.apigatewayv2 = apigatewayv2;
             return this;
         }
 
-        public Builder setAppautoscaling(@Nullable String appautoscaling) {
+        public Builder appautoscaling(@Nullable String appautoscaling) {
             this.appautoscaling = appautoscaling;
             return this;
         }
 
-        public Builder setAppconfig(@Nullable String appconfig) {
+        public Builder appconfig(@Nullable String appconfig) {
             this.appconfig = appconfig;
             return this;
         }
 
-        public Builder setAppflow(@Nullable String appflow) {
+        public Builder appflow(@Nullable String appflow) {
             this.appflow = appflow;
             return this;
         }
 
-        public Builder setAppintegrations(@Nullable String appintegrations) {
+        public Builder appintegrations(@Nullable String appintegrations) {
             this.appintegrations = appintegrations;
             return this;
         }
 
-        public Builder setAppintegrationsservice(@Nullable String appintegrationsservice) {
+        public Builder appintegrationsservice(@Nullable String appintegrationsservice) {
             this.appintegrationsservice = appintegrationsservice;
             return this;
         }
 
-        public Builder setApplicationautoscaling(@Nullable String applicationautoscaling) {
+        public Builder applicationautoscaling(@Nullable String applicationautoscaling) {
             this.applicationautoscaling = applicationautoscaling;
             return this;
         }
 
-        public Builder setApplicationcostprofiler(@Nullable String applicationcostprofiler) {
+        public Builder applicationcostprofiler(@Nullable String applicationcostprofiler) {
             this.applicationcostprofiler = applicationcostprofiler;
             return this;
         }
 
-        public Builder setApplicationdiscovery(@Nullable String applicationdiscovery) {
+        public Builder applicationdiscovery(@Nullable String applicationdiscovery) {
             this.applicationdiscovery = applicationdiscovery;
             return this;
         }
 
-        public Builder setApplicationdiscoveryservice(@Nullable String applicationdiscoveryservice) {
+        public Builder applicationdiscoveryservice(@Nullable String applicationdiscoveryservice) {
             this.applicationdiscoveryservice = applicationdiscoveryservice;
             return this;
         }
 
-        public Builder setApplicationinsights(@Nullable String applicationinsights) {
+        public Builder applicationinsights(@Nullable String applicationinsights) {
             this.applicationinsights = applicationinsights;
             return this;
         }
 
-        public Builder setAppmesh(@Nullable String appmesh) {
+        public Builder appmesh(@Nullable String appmesh) {
             this.appmesh = appmesh;
             return this;
         }
 
-        public Builder setAppregistry(@Nullable String appregistry) {
+        public Builder appregistry(@Nullable String appregistry) {
             this.appregistry = appregistry;
             return this;
         }
 
-        public Builder setApprunner(@Nullable String apprunner) {
+        public Builder apprunner(@Nullable String apprunner) {
             this.apprunner = apprunner;
             return this;
         }
 
-        public Builder setAppstream(@Nullable String appstream) {
+        public Builder appstream(@Nullable String appstream) {
             this.appstream = appstream;
             return this;
         }
 
-        public Builder setAppsync(@Nullable String appsync) {
+        public Builder appsync(@Nullable String appsync) {
             this.appsync = appsync;
             return this;
         }
 
-        public Builder setAthena(@Nullable String athena) {
+        public Builder athena(@Nullable String athena) {
             this.athena = athena;
             return this;
         }
 
-        public Builder setAuditmanager(@Nullable String auditmanager) {
+        public Builder auditmanager(@Nullable String auditmanager) {
             this.auditmanager = auditmanager;
             return this;
         }
 
-        public Builder setAugmentedairuntime(@Nullable String augmentedairuntime) {
+        public Builder augmentedairuntime(@Nullable String augmentedairuntime) {
             this.augmentedairuntime = augmentedairuntime;
             return this;
         }
 
-        public Builder setAutoscaling(@Nullable String autoscaling) {
+        public Builder autoscaling(@Nullable String autoscaling) {
             this.autoscaling = autoscaling;
             return this;
         }
 
-        public Builder setAutoscalingplans(@Nullable String autoscalingplans) {
+        public Builder autoscalingplans(@Nullable String autoscalingplans) {
             this.autoscalingplans = autoscalingplans;
             return this;
         }
 
-        public Builder setBackup(@Nullable String backup) {
+        public Builder backup(@Nullable String backup) {
             this.backup = backup;
             return this;
         }
 
-        public Builder setBatch(@Nullable String batch) {
+        public Builder batch(@Nullable String batch) {
             this.batch = batch;
             return this;
         }
 
-        public Builder setBraket(@Nullable String braket) {
+        public Builder braket(@Nullable String braket) {
             this.braket = braket;
             return this;
         }
 
-        public Builder setBudgets(@Nullable String budgets) {
+        public Builder budgets(@Nullable String budgets) {
             this.budgets = budgets;
             return this;
         }
 
-        public Builder setChime(@Nullable String chime) {
+        public Builder chime(@Nullable String chime) {
             this.chime = chime;
             return this;
         }
 
-        public Builder setCloud9(@Nullable String cloud9) {
+        public Builder cloud9(@Nullable String cloud9) {
             this.cloud9 = cloud9;
             return this;
         }
 
-        public Builder setCloudcontrol(@Nullable String cloudcontrol) {
+        public Builder cloudcontrol(@Nullable String cloudcontrol) {
             this.cloudcontrol = cloudcontrol;
             return this;
         }
 
-        public Builder setCloudcontrolapi(@Nullable String cloudcontrolapi) {
+        public Builder cloudcontrolapi(@Nullable String cloudcontrolapi) {
             this.cloudcontrolapi = cloudcontrolapi;
             return this;
         }
 
-        public Builder setClouddirectory(@Nullable String clouddirectory) {
+        public Builder clouddirectory(@Nullable String clouddirectory) {
             this.clouddirectory = clouddirectory;
             return this;
         }
 
-        public Builder setCloudformation(@Nullable String cloudformation) {
+        public Builder cloudformation(@Nullable String cloudformation) {
             this.cloudformation = cloudformation;
             return this;
         }
 
-        public Builder setCloudfront(@Nullable String cloudfront) {
+        public Builder cloudfront(@Nullable String cloudfront) {
             this.cloudfront = cloudfront;
             return this;
         }
 
-        public Builder setCloudhsm(@Nullable String cloudhsm) {
+        public Builder cloudhsm(@Nullable String cloudhsm) {
             this.cloudhsm = cloudhsm;
             return this;
         }
 
-        public Builder setCloudhsmv2(@Nullable String cloudhsmv2) {
+        public Builder cloudhsmv2(@Nullable String cloudhsmv2) {
             this.cloudhsmv2 = cloudhsmv2;
             return this;
         }
 
-        public Builder setCloudsearch(@Nullable String cloudsearch) {
+        public Builder cloudsearch(@Nullable String cloudsearch) {
             this.cloudsearch = cloudsearch;
             return this;
         }
 
-        public Builder setCloudsearchdomain(@Nullable String cloudsearchdomain) {
+        public Builder cloudsearchdomain(@Nullable String cloudsearchdomain) {
             this.cloudsearchdomain = cloudsearchdomain;
             return this;
         }
 
-        public Builder setCloudtrail(@Nullable String cloudtrail) {
+        public Builder cloudtrail(@Nullable String cloudtrail) {
             this.cloudtrail = cloudtrail;
             return this;
         }
 
-        public Builder setCloudwatch(@Nullable String cloudwatch) {
+        public Builder cloudwatch(@Nullable String cloudwatch) {
             this.cloudwatch = cloudwatch;
             return this;
         }
 
-        public Builder setCloudwatchevents(@Nullable String cloudwatchevents) {
+        public Builder cloudwatchevents(@Nullable String cloudwatchevents) {
             this.cloudwatchevents = cloudwatchevents;
             return this;
         }
 
-        public Builder setCloudwatchlogs(@Nullable String cloudwatchlogs) {
+        public Builder cloudwatchlogs(@Nullable String cloudwatchlogs) {
             this.cloudwatchlogs = cloudwatchlogs;
             return this;
         }
 
-        public Builder setCodeartifact(@Nullable String codeartifact) {
+        public Builder codeartifact(@Nullable String codeartifact) {
             this.codeartifact = codeartifact;
             return this;
         }
 
-        public Builder setCodebuild(@Nullable String codebuild) {
+        public Builder codebuild(@Nullable String codebuild) {
             this.codebuild = codebuild;
             return this;
         }
 
-        public Builder setCodecommit(@Nullable String codecommit) {
+        public Builder codecommit(@Nullable String codecommit) {
             this.codecommit = codecommit;
             return this;
         }
 
-        public Builder setCodedeploy(@Nullable String codedeploy) {
+        public Builder codedeploy(@Nullable String codedeploy) {
             this.codedeploy = codedeploy;
             return this;
         }
 
-        public Builder setCodeguruprofiler(@Nullable String codeguruprofiler) {
+        public Builder codeguruprofiler(@Nullable String codeguruprofiler) {
             this.codeguruprofiler = codeguruprofiler;
             return this;
         }
 
-        public Builder setCodegurureviewer(@Nullable String codegurureviewer) {
+        public Builder codegurureviewer(@Nullable String codegurureviewer) {
             this.codegurureviewer = codegurureviewer;
             return this;
         }
 
-        public Builder setCodepipeline(@Nullable String codepipeline) {
+        public Builder codepipeline(@Nullable String codepipeline) {
             this.codepipeline = codepipeline;
             return this;
         }
 
-        public Builder setCodestar(@Nullable String codestar) {
+        public Builder codestar(@Nullable String codestar) {
             this.codestar = codestar;
             return this;
         }
 
-        public Builder setCodestarconnections(@Nullable String codestarconnections) {
+        public Builder codestarconnections(@Nullable String codestarconnections) {
             this.codestarconnections = codestarconnections;
             return this;
         }
 
-        public Builder setCodestarnotifications(@Nullable String codestarnotifications) {
+        public Builder codestarnotifications(@Nullable String codestarnotifications) {
             this.codestarnotifications = codestarnotifications;
             return this;
         }
 
-        public Builder setCognitoidentity(@Nullable String cognitoidentity) {
+        public Builder cognitoidentity(@Nullable String cognitoidentity) {
             this.cognitoidentity = cognitoidentity;
             return this;
         }
 
-        public Builder setCognitoidentityprovider(@Nullable String cognitoidentityprovider) {
+        public Builder cognitoidentityprovider(@Nullable String cognitoidentityprovider) {
             this.cognitoidentityprovider = cognitoidentityprovider;
             return this;
         }
 
-        public Builder setCognitoidp(@Nullable String cognitoidp) {
+        public Builder cognitoidp(@Nullable String cognitoidp) {
             this.cognitoidp = cognitoidp;
             return this;
         }
 
-        public Builder setCognitosync(@Nullable String cognitosync) {
+        public Builder cognitosync(@Nullable String cognitosync) {
             this.cognitosync = cognitosync;
             return this;
         }
 
-        public Builder setComprehend(@Nullable String comprehend) {
+        public Builder comprehend(@Nullable String comprehend) {
             this.comprehend = comprehend;
             return this;
         }
 
-        public Builder setComprehendmedical(@Nullable String comprehendmedical) {
+        public Builder comprehendmedical(@Nullable String comprehendmedical) {
             this.comprehendmedical = comprehendmedical;
             return this;
         }
 
-        public Builder setConfig(@Nullable String config) {
+        public Builder config(@Nullable String config) {
             this.config = config;
             return this;
         }
 
-        public Builder setConfigservice(@Nullable String configservice) {
+        public Builder configservice(@Nullable String configservice) {
             this.configservice = configservice;
             return this;
         }
 
-        public Builder setConnect(@Nullable String connect) {
+        public Builder connect(@Nullable String connect) {
             this.connect = connect;
             return this;
         }
 
-        public Builder setConnectcontactlens(@Nullable String connectcontactlens) {
+        public Builder connectcontactlens(@Nullable String connectcontactlens) {
             this.connectcontactlens = connectcontactlens;
             return this;
         }
 
-        public Builder setConnectparticipant(@Nullable String connectparticipant) {
+        public Builder connectparticipant(@Nullable String connectparticipant) {
             this.connectparticipant = connectparticipant;
             return this;
         }
 
-        public Builder setCostandusagereportservice(@Nullable String costandusagereportservice) {
+        public Builder costandusagereportservice(@Nullable String costandusagereportservice) {
             this.costandusagereportservice = costandusagereportservice;
             return this;
         }
 
-        public Builder setCostexplorer(@Nullable String costexplorer) {
+        public Builder costexplorer(@Nullable String costexplorer) {
             this.costexplorer = costexplorer;
             return this;
         }
 
-        public Builder setCur(@Nullable String cur) {
+        public Builder cur(@Nullable String cur) {
             this.cur = cur;
             return this;
         }
 
-        public Builder setDatabasemigration(@Nullable String databasemigration) {
+        public Builder databasemigration(@Nullable String databasemigration) {
             this.databasemigration = databasemigration;
             return this;
         }
 
-        public Builder setDatabasemigrationservice(@Nullable String databasemigrationservice) {
+        public Builder databasemigrationservice(@Nullable String databasemigrationservice) {
             this.databasemigrationservice = databasemigrationservice;
             return this;
         }
 
-        public Builder setDataexchange(@Nullable String dataexchange) {
+        public Builder dataexchange(@Nullable String dataexchange) {
             this.dataexchange = dataexchange;
             return this;
         }
 
-        public Builder setDatapipeline(@Nullable String datapipeline) {
+        public Builder datapipeline(@Nullable String datapipeline) {
             this.datapipeline = datapipeline;
             return this;
         }
 
-        public Builder setDatasync(@Nullable String datasync) {
+        public Builder datasync(@Nullable String datasync) {
             this.datasync = datasync;
             return this;
         }
 
-        public Builder setDax(@Nullable String dax) {
+        public Builder dax(@Nullable String dax) {
             this.dax = dax;
             return this;
         }
 
-        public Builder setDetective(@Nullable String detective) {
+        public Builder detective(@Nullable String detective) {
             this.detective = detective;
             return this;
         }
 
-        public Builder setDevicefarm(@Nullable String devicefarm) {
+        public Builder devicefarm(@Nullable String devicefarm) {
             this.devicefarm = devicefarm;
             return this;
         }
 
-        public Builder setDevopsguru(@Nullable String devopsguru) {
+        public Builder devopsguru(@Nullable String devopsguru) {
             this.devopsguru = devopsguru;
             return this;
         }
 
-        public Builder setDirectconnect(@Nullable String directconnect) {
+        public Builder directconnect(@Nullable String directconnect) {
             this.directconnect = directconnect;
             return this;
         }
 
-        public Builder setDlm(@Nullable String dlm) {
+        public Builder dlm(@Nullable String dlm) {
             this.dlm = dlm;
             return this;
         }
 
-        public Builder setDms(@Nullable String dms) {
+        public Builder dms(@Nullable String dms) {
             this.dms = dms;
             return this;
         }
 
-        public Builder setDocdb(@Nullable String docdb) {
+        public Builder docdb(@Nullable String docdb) {
             this.docdb = docdb;
             return this;
         }
 
-        public Builder setDs(@Nullable String ds) {
+        public Builder ds(@Nullable String ds) {
             this.ds = ds;
             return this;
         }
 
-        public Builder setDynamodb(@Nullable String dynamodb) {
+        public Builder dynamodb(@Nullable String dynamodb) {
             this.dynamodb = dynamodb;
             return this;
         }
 
-        public Builder setDynamodbstreams(@Nullable String dynamodbstreams) {
+        public Builder dynamodbstreams(@Nullable String dynamodbstreams) {
             this.dynamodbstreams = dynamodbstreams;
             return this;
         }
 
-        public Builder setEc2(@Nullable String ec2) {
+        public Builder ec2(@Nullable String ec2) {
             this.ec2 = ec2;
             return this;
         }
 
-        public Builder setEc2instanceconnect(@Nullable String ec2instanceconnect) {
+        public Builder ec2instanceconnect(@Nullable String ec2instanceconnect) {
             this.ec2instanceconnect = ec2instanceconnect;
             return this;
         }
 
-        public Builder setEcr(@Nullable String ecr) {
+        public Builder ecr(@Nullable String ecr) {
             this.ecr = ecr;
             return this;
         }
 
-        public Builder setEcrpublic(@Nullable String ecrpublic) {
+        public Builder ecrpublic(@Nullable String ecrpublic) {
             this.ecrpublic = ecrpublic;
             return this;
         }
 
-        public Builder setEcs(@Nullable String ecs) {
+        public Builder ecs(@Nullable String ecs) {
             this.ecs = ecs;
             return this;
         }
 
-        public Builder setEfs(@Nullable String efs) {
+        public Builder efs(@Nullable String efs) {
             this.efs = efs;
             return this;
         }
 
-        public Builder setEks(@Nullable String eks) {
+        public Builder eks(@Nullable String eks) {
             this.eks = eks;
             return this;
         }
 
-        public Builder setElasticache(@Nullable String elasticache) {
+        public Builder elasticache(@Nullable String elasticache) {
             this.elasticache = elasticache;
             return this;
         }
 
-        public Builder setElasticbeanstalk(@Nullable String elasticbeanstalk) {
+        public Builder elasticbeanstalk(@Nullable String elasticbeanstalk) {
             this.elasticbeanstalk = elasticbeanstalk;
             return this;
         }
 
-        public Builder setElasticinference(@Nullable String elasticinference) {
+        public Builder elasticinference(@Nullable String elasticinference) {
             this.elasticinference = elasticinference;
             return this;
         }
 
-        public Builder setElasticsearch(@Nullable String elasticsearch) {
+        public Builder elasticsearch(@Nullable String elasticsearch) {
             this.elasticsearch = elasticsearch;
             return this;
         }
 
-        public Builder setElasticsearchservice(@Nullable String elasticsearchservice) {
+        public Builder elasticsearchservice(@Nullable String elasticsearchservice) {
             this.elasticsearchservice = elasticsearchservice;
             return this;
         }
 
-        public Builder setElastictranscoder(@Nullable String elastictranscoder) {
+        public Builder elastictranscoder(@Nullable String elastictranscoder) {
             this.elastictranscoder = elastictranscoder;
             return this;
         }
 
-        public Builder setElb(@Nullable String elb) {
+        public Builder elb(@Nullable String elb) {
             this.elb = elb;
             return this;
         }
 
-        public Builder setElbv2(@Nullable String elbv2) {
+        public Builder elbv2(@Nullable String elbv2) {
             this.elbv2 = elbv2;
             return this;
         }
 
-        public Builder setEmr(@Nullable String emr) {
+        public Builder emr(@Nullable String emr) {
             this.emr = emr;
             return this;
         }
 
-        public Builder setEmrcontainers(@Nullable String emrcontainers) {
+        public Builder emrcontainers(@Nullable String emrcontainers) {
             this.emrcontainers = emrcontainers;
             return this;
         }
 
-        public Builder setEs(@Nullable String es) {
+        public Builder es(@Nullable String es) {
             this.es = es;
             return this;
         }
 
-        public Builder setEventbridge(@Nullable String eventbridge) {
+        public Builder eventbridge(@Nullable String eventbridge) {
             this.eventbridge = eventbridge;
             return this;
         }
 
-        public Builder setEvents(@Nullable String events) {
+        public Builder events(@Nullable String events) {
             this.events = events;
             return this;
         }
 
-        public Builder setFinspace(@Nullable String finspace) {
+        public Builder finspace(@Nullable String finspace) {
             this.finspace = finspace;
             return this;
         }
 
-        public Builder setFinspacedata(@Nullable String finspacedata) {
+        public Builder finspacedata(@Nullable String finspacedata) {
             this.finspacedata = finspacedata;
             return this;
         }
 
-        public Builder setFirehose(@Nullable String firehose) {
+        public Builder firehose(@Nullable String firehose) {
             this.firehose = firehose;
             return this;
         }
 
-        public Builder setFis(@Nullable String fis) {
+        public Builder fis(@Nullable String fis) {
             this.fis = fis;
             return this;
         }
 
-        public Builder setFms(@Nullable String fms) {
+        public Builder fms(@Nullable String fms) {
             this.fms = fms;
             return this;
         }
 
-        public Builder setForecast(@Nullable String forecast) {
+        public Builder forecast(@Nullable String forecast) {
             this.forecast = forecast;
             return this;
         }
 
-        public Builder setForecastquery(@Nullable String forecastquery) {
+        public Builder forecastquery(@Nullable String forecastquery) {
             this.forecastquery = forecastquery;
             return this;
         }
 
-        public Builder setForecastqueryservice(@Nullable String forecastqueryservice) {
+        public Builder forecastqueryservice(@Nullable String forecastqueryservice) {
             this.forecastqueryservice = forecastqueryservice;
             return this;
         }
 
-        public Builder setForecastservice(@Nullable String forecastservice) {
+        public Builder forecastservice(@Nullable String forecastservice) {
             this.forecastservice = forecastservice;
             return this;
         }
 
-        public Builder setFrauddetector(@Nullable String frauddetector) {
+        public Builder frauddetector(@Nullable String frauddetector) {
             this.frauddetector = frauddetector;
             return this;
         }
 
-        public Builder setFsx(@Nullable String fsx) {
+        public Builder fsx(@Nullable String fsx) {
             this.fsx = fsx;
             return this;
         }
 
-        public Builder setGamelift(@Nullable String gamelift) {
+        public Builder gamelift(@Nullable String gamelift) {
             this.gamelift = gamelift;
             return this;
         }
 
-        public Builder setGlacier(@Nullable String glacier) {
+        public Builder glacier(@Nullable String glacier) {
             this.glacier = glacier;
             return this;
         }
 
-        public Builder setGlobalaccelerator(@Nullable String globalaccelerator) {
+        public Builder globalaccelerator(@Nullable String globalaccelerator) {
             this.globalaccelerator = globalaccelerator;
             return this;
         }
 
-        public Builder setGlue(@Nullable String glue) {
+        public Builder glue(@Nullable String glue) {
             this.glue = glue;
             return this;
         }
 
-        public Builder setGluedatabrew(@Nullable String gluedatabrew) {
+        public Builder gluedatabrew(@Nullable String gluedatabrew) {
             this.gluedatabrew = gluedatabrew;
             return this;
         }
 
-        public Builder setGreengrass(@Nullable String greengrass) {
+        public Builder greengrass(@Nullable String greengrass) {
             this.greengrass = greengrass;
             return this;
         }
 
-        public Builder setGreengrassv2(@Nullable String greengrassv2) {
+        public Builder greengrassv2(@Nullable String greengrassv2) {
             this.greengrassv2 = greengrassv2;
             return this;
         }
 
-        public Builder setGroundstation(@Nullable String groundstation) {
+        public Builder groundstation(@Nullable String groundstation) {
             this.groundstation = groundstation;
             return this;
         }
 
-        public Builder setGuardduty(@Nullable String guardduty) {
+        public Builder guardduty(@Nullable String guardduty) {
             this.guardduty = guardduty;
             return this;
         }
 
-        public Builder setHealth(@Nullable String health) {
+        public Builder health(@Nullable String health) {
             this.health = health;
             return this;
         }
 
-        public Builder setHealthlake(@Nullable String healthlake) {
+        public Builder healthlake(@Nullable String healthlake) {
             this.healthlake = healthlake;
             return this;
         }
 
-        public Builder setHoneycode(@Nullable String honeycode) {
+        public Builder honeycode(@Nullable String honeycode) {
             this.honeycode = honeycode;
             return this;
         }
 
-        public Builder setIam(@Nullable String iam) {
+        public Builder iam(@Nullable String iam) {
             this.iam = iam;
             return this;
         }
 
-        public Builder setIdentitystore(@Nullable String identitystore) {
+        public Builder identitystore(@Nullable String identitystore) {
             this.identitystore = identitystore;
             return this;
         }
 
-        public Builder setImagebuilder(@Nullable String imagebuilder) {
+        public Builder imagebuilder(@Nullable String imagebuilder) {
             this.imagebuilder = imagebuilder;
             return this;
         }
 
-        public Builder setInspector(@Nullable String inspector) {
+        public Builder inspector(@Nullable String inspector) {
             this.inspector = inspector;
             return this;
         }
 
-        public Builder setIot(@Nullable String iot) {
+        public Builder iot(@Nullable String iot) {
             this.iot = iot;
             return this;
         }
 
-        public Builder setIot1clickdevices(@Nullable String iot1clickdevices) {
+        public Builder iot1clickdevices(@Nullable String iot1clickdevices) {
             this.iot1clickdevices = iot1clickdevices;
             return this;
         }
 
-        public Builder setIot1clickdevicesservice(@Nullable String iot1clickdevicesservice) {
+        public Builder iot1clickdevicesservice(@Nullable String iot1clickdevicesservice) {
             this.iot1clickdevicesservice = iot1clickdevicesservice;
             return this;
         }
 
-        public Builder setIot1clickprojects(@Nullable String iot1clickprojects) {
+        public Builder iot1clickprojects(@Nullable String iot1clickprojects) {
             this.iot1clickprojects = iot1clickprojects;
             return this;
         }
 
-        public Builder setIotanalytics(@Nullable String iotanalytics) {
+        public Builder iotanalytics(@Nullable String iotanalytics) {
             this.iotanalytics = iotanalytics;
             return this;
         }
 
-        public Builder setIotdataplane(@Nullable String iotdataplane) {
+        public Builder iotdataplane(@Nullable String iotdataplane) {
             this.iotdataplane = iotdataplane;
             return this;
         }
 
-        public Builder setIotdeviceadvisor(@Nullable String iotdeviceadvisor) {
+        public Builder iotdeviceadvisor(@Nullable String iotdeviceadvisor) {
             this.iotdeviceadvisor = iotdeviceadvisor;
             return this;
         }
 
-        public Builder setIotevents(@Nullable String iotevents) {
+        public Builder iotevents(@Nullable String iotevents) {
             this.iotevents = iotevents;
             return this;
         }
 
-        public Builder setIoteventsdata(@Nullable String ioteventsdata) {
+        public Builder ioteventsdata(@Nullable String ioteventsdata) {
             this.ioteventsdata = ioteventsdata;
             return this;
         }
 
-        public Builder setIotfleethub(@Nullable String iotfleethub) {
+        public Builder iotfleethub(@Nullable String iotfleethub) {
             this.iotfleethub = iotfleethub;
             return this;
         }
 
-        public Builder setIotjobsdataplane(@Nullable String iotjobsdataplane) {
+        public Builder iotjobsdataplane(@Nullable String iotjobsdataplane) {
             this.iotjobsdataplane = iotjobsdataplane;
             return this;
         }
 
-        public Builder setIotsecuretunneling(@Nullable String iotsecuretunneling) {
+        public Builder iotsecuretunneling(@Nullable String iotsecuretunneling) {
             this.iotsecuretunneling = iotsecuretunneling;
             return this;
         }
 
-        public Builder setIotsitewise(@Nullable String iotsitewise) {
+        public Builder iotsitewise(@Nullable String iotsitewise) {
             this.iotsitewise = iotsitewise;
             return this;
         }
 
-        public Builder setIotthingsgraph(@Nullable String iotthingsgraph) {
+        public Builder iotthingsgraph(@Nullable String iotthingsgraph) {
             this.iotthingsgraph = iotthingsgraph;
             return this;
         }
 
-        public Builder setIotwireless(@Nullable String iotwireless) {
+        public Builder iotwireless(@Nullable String iotwireless) {
             this.iotwireless = iotwireless;
             return this;
         }
 
-        public Builder setKafka(@Nullable String kafka) {
+        public Builder kafka(@Nullable String kafka) {
             this.kafka = kafka;
             return this;
         }
 
-        public Builder setKafkaconnect(@Nullable String kafkaconnect) {
+        public Builder kafkaconnect(@Nullable String kafkaconnect) {
             this.kafkaconnect = kafkaconnect;
             return this;
         }
 
-        public Builder setKendra(@Nullable String kendra) {
+        public Builder kendra(@Nullable String kendra) {
             this.kendra = kendra;
             return this;
         }
 
-        public Builder setKinesis(@Nullable String kinesis) {
+        public Builder kinesis(@Nullable String kinesis) {
             this.kinesis = kinesis;
             return this;
         }
 
-        public Builder setKinesisanalytics(@Nullable String kinesisanalytics) {
+        public Builder kinesisanalytics(@Nullable String kinesisanalytics) {
             this.kinesisanalytics = kinesisanalytics;
             return this;
         }
 
-        public Builder setKinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
+        public Builder kinesisanalyticsv2(@Nullable String kinesisanalyticsv2) {
             this.kinesisanalyticsv2 = kinesisanalyticsv2;
             return this;
         }
 
-        public Builder setKinesisvideo(@Nullable String kinesisvideo) {
+        public Builder kinesisvideo(@Nullable String kinesisvideo) {
             this.kinesisvideo = kinesisvideo;
             return this;
         }
 
-        public Builder setKinesisvideoarchivedmedia(@Nullable String kinesisvideoarchivedmedia) {
+        public Builder kinesisvideoarchivedmedia(@Nullable String kinesisvideoarchivedmedia) {
             this.kinesisvideoarchivedmedia = kinesisvideoarchivedmedia;
             return this;
         }
 
-        public Builder setKinesisvideomedia(@Nullable String kinesisvideomedia) {
+        public Builder kinesisvideomedia(@Nullable String kinesisvideomedia) {
             this.kinesisvideomedia = kinesisvideomedia;
             return this;
         }
 
-        public Builder setKinesisvideosignalingchannels(@Nullable String kinesisvideosignalingchannels) {
+        public Builder kinesisvideosignalingchannels(@Nullable String kinesisvideosignalingchannels) {
             this.kinesisvideosignalingchannels = kinesisvideosignalingchannels;
             return this;
         }
 
-        public Builder setKms(@Nullable String kms) {
+        public Builder kms(@Nullable String kms) {
             this.kms = kms;
             return this;
         }
 
-        public Builder setLakeformation(@Nullable String lakeformation) {
+        public Builder lakeformation(@Nullable String lakeformation) {
             this.lakeformation = lakeformation;
             return this;
         }
 
-        public Builder setLambda(@Nullable String lambda) {
+        public Builder lambda(@Nullable String lambda) {
             this.lambda = lambda;
             return this;
         }
 
-        public Builder setLexmodelbuilding(@Nullable String lexmodelbuilding) {
+        public Builder lexmodelbuilding(@Nullable String lexmodelbuilding) {
             this.lexmodelbuilding = lexmodelbuilding;
             return this;
         }
 
-        public Builder setLexmodelbuildingservice(@Nullable String lexmodelbuildingservice) {
+        public Builder lexmodelbuildingservice(@Nullable String lexmodelbuildingservice) {
             this.lexmodelbuildingservice = lexmodelbuildingservice;
             return this;
         }
 
-        public Builder setLexmodels(@Nullable String lexmodels) {
+        public Builder lexmodels(@Nullable String lexmodels) {
             this.lexmodels = lexmodels;
             return this;
         }
 
-        public Builder setLexmodelsv2(@Nullable String lexmodelsv2) {
+        public Builder lexmodelsv2(@Nullable String lexmodelsv2) {
             this.lexmodelsv2 = lexmodelsv2;
             return this;
         }
 
-        public Builder setLexruntime(@Nullable String lexruntime) {
+        public Builder lexruntime(@Nullable String lexruntime) {
             this.lexruntime = lexruntime;
             return this;
         }
 
-        public Builder setLexruntimeservice(@Nullable String lexruntimeservice) {
+        public Builder lexruntimeservice(@Nullable String lexruntimeservice) {
             this.lexruntimeservice = lexruntimeservice;
             return this;
         }
 
-        public Builder setLexruntimev2(@Nullable String lexruntimev2) {
+        public Builder lexruntimev2(@Nullable String lexruntimev2) {
             this.lexruntimev2 = lexruntimev2;
             return this;
         }
 
-        public Builder setLicensemanager(@Nullable String licensemanager) {
+        public Builder licensemanager(@Nullable String licensemanager) {
             this.licensemanager = licensemanager;
             return this;
         }
 
-        public Builder setLightsail(@Nullable String lightsail) {
+        public Builder lightsail(@Nullable String lightsail) {
             this.lightsail = lightsail;
             return this;
         }
 
-        public Builder setLocation(@Nullable String location) {
+        public Builder location(@Nullable String location) {
             this.location = location;
             return this;
         }
 
-        public Builder setLookoutequipment(@Nullable String lookoutequipment) {
+        public Builder lookoutequipment(@Nullable String lookoutequipment) {
             this.lookoutequipment = lookoutequipment;
             return this;
         }
 
-        public Builder setLookoutforvision(@Nullable String lookoutforvision) {
+        public Builder lookoutforvision(@Nullable String lookoutforvision) {
             this.lookoutforvision = lookoutforvision;
             return this;
         }
 
-        public Builder setLookoutmetrics(@Nullable String lookoutmetrics) {
+        public Builder lookoutmetrics(@Nullable String lookoutmetrics) {
             this.lookoutmetrics = lookoutmetrics;
             return this;
         }
 
-        public Builder setMachinelearning(@Nullable String machinelearning) {
+        public Builder machinelearning(@Nullable String machinelearning) {
             this.machinelearning = machinelearning;
             return this;
         }
 
-        public Builder setMacie(@Nullable String macie) {
+        public Builder macie(@Nullable String macie) {
             this.macie = macie;
             return this;
         }
 
-        public Builder setMacie2(@Nullable String macie2) {
+        public Builder macie2(@Nullable String macie2) {
             this.macie2 = macie2;
             return this;
         }
 
-        public Builder setManagedblockchain(@Nullable String managedblockchain) {
+        public Builder managedblockchain(@Nullable String managedblockchain) {
             this.managedblockchain = managedblockchain;
             return this;
         }
 
-        public Builder setMarketplacecatalog(@Nullable String marketplacecatalog) {
+        public Builder marketplacecatalog(@Nullable String marketplacecatalog) {
             this.marketplacecatalog = marketplacecatalog;
             return this;
         }
 
-        public Builder setMarketplacecommerceanalytics(@Nullable String marketplacecommerceanalytics) {
+        public Builder marketplacecommerceanalytics(@Nullable String marketplacecommerceanalytics) {
             this.marketplacecommerceanalytics = marketplacecommerceanalytics;
             return this;
         }
 
-        public Builder setMarketplaceentitlement(@Nullable String marketplaceentitlement) {
+        public Builder marketplaceentitlement(@Nullable String marketplaceentitlement) {
             this.marketplaceentitlement = marketplaceentitlement;
             return this;
         }
 
-        public Builder setMarketplaceentitlementservice(@Nullable String marketplaceentitlementservice) {
+        public Builder marketplaceentitlementservice(@Nullable String marketplaceentitlementservice) {
             this.marketplaceentitlementservice = marketplaceentitlementservice;
             return this;
         }
 
-        public Builder setMarketplacemetering(@Nullable String marketplacemetering) {
+        public Builder marketplacemetering(@Nullable String marketplacemetering) {
             this.marketplacemetering = marketplacemetering;
             return this;
         }
 
-        public Builder setMediaconnect(@Nullable String mediaconnect) {
+        public Builder mediaconnect(@Nullable String mediaconnect) {
             this.mediaconnect = mediaconnect;
             return this;
         }
 
-        public Builder setMediaconvert(@Nullable String mediaconvert) {
+        public Builder mediaconvert(@Nullable String mediaconvert) {
             this.mediaconvert = mediaconvert;
             return this;
         }
 
-        public Builder setMedialive(@Nullable String medialive) {
+        public Builder medialive(@Nullable String medialive) {
             this.medialive = medialive;
             return this;
         }
 
-        public Builder setMediapackage(@Nullable String mediapackage) {
+        public Builder mediapackage(@Nullable String mediapackage) {
             this.mediapackage = mediapackage;
             return this;
         }
 
-        public Builder setMediapackagevod(@Nullable String mediapackagevod) {
+        public Builder mediapackagevod(@Nullable String mediapackagevod) {
             this.mediapackagevod = mediapackagevod;
             return this;
         }
 
-        public Builder setMediastore(@Nullable String mediastore) {
+        public Builder mediastore(@Nullable String mediastore) {
             this.mediastore = mediastore;
             return this;
         }
 
-        public Builder setMediastoredata(@Nullable String mediastoredata) {
+        public Builder mediastoredata(@Nullable String mediastoredata) {
             this.mediastoredata = mediastoredata;
             return this;
         }
 
-        public Builder setMediatailor(@Nullable String mediatailor) {
+        public Builder mediatailor(@Nullable String mediatailor) {
             this.mediatailor = mediatailor;
             return this;
         }
 
-        public Builder setMemorydb(@Nullable String memorydb) {
+        public Builder memorydb(@Nullable String memorydb) {
             this.memorydb = memorydb;
             return this;
         }
 
-        public Builder setMgn(@Nullable String mgn) {
+        public Builder mgn(@Nullable String mgn) {
             this.mgn = mgn;
             return this;
         }
 
-        public Builder setMigrationhub(@Nullable String migrationhub) {
+        public Builder migrationhub(@Nullable String migrationhub) {
             this.migrationhub = migrationhub;
             return this;
         }
 
-        public Builder setMigrationhubconfig(@Nullable String migrationhubconfig) {
+        public Builder migrationhubconfig(@Nullable String migrationhubconfig) {
             this.migrationhubconfig = migrationhubconfig;
             return this;
         }
 
-        public Builder setMobile(@Nullable String mobile) {
+        public Builder mobile(@Nullable String mobile) {
             this.mobile = mobile;
             return this;
         }
 
-        public Builder setMobileanalytics(@Nullable String mobileanalytics) {
+        public Builder mobileanalytics(@Nullable String mobileanalytics) {
             this.mobileanalytics = mobileanalytics;
             return this;
         }
 
-        public Builder setMq(@Nullable String mq) {
+        public Builder mq(@Nullable String mq) {
             this.mq = mq;
             return this;
         }
 
-        public Builder setMturk(@Nullable String mturk) {
+        public Builder mturk(@Nullable String mturk) {
             this.mturk = mturk;
             return this;
         }
 
-        public Builder setMwaa(@Nullable String mwaa) {
+        public Builder mwaa(@Nullable String mwaa) {
             this.mwaa = mwaa;
             return this;
         }
 
-        public Builder setNeptune(@Nullable String neptune) {
+        public Builder neptune(@Nullable String neptune) {
             this.neptune = neptune;
             return this;
         }
 
-        public Builder setNetworkfirewall(@Nullable String networkfirewall) {
+        public Builder networkfirewall(@Nullable String networkfirewall) {
             this.networkfirewall = networkfirewall;
             return this;
         }
 
-        public Builder setNetworkmanager(@Nullable String networkmanager) {
+        public Builder networkmanager(@Nullable String networkmanager) {
             this.networkmanager = networkmanager;
             return this;
         }
 
-        public Builder setNimblestudio(@Nullable String nimblestudio) {
+        public Builder nimblestudio(@Nullable String nimblestudio) {
             this.nimblestudio = nimblestudio;
             return this;
         }
 
-        public Builder setOpsworks(@Nullable String opsworks) {
+        public Builder opsworks(@Nullable String opsworks) {
             this.opsworks = opsworks;
             return this;
         }
 
-        public Builder setOpsworkscm(@Nullable String opsworkscm) {
+        public Builder opsworkscm(@Nullable String opsworkscm) {
             this.opsworkscm = opsworkscm;
             return this;
         }
 
-        public Builder setOrganizations(@Nullable String organizations) {
+        public Builder organizations(@Nullable String organizations) {
             this.organizations = organizations;
             return this;
         }
 
-        public Builder setOutposts(@Nullable String outposts) {
+        public Builder outposts(@Nullable String outposts) {
             this.outposts = outposts;
             return this;
         }
 
-        public Builder setPersonalize(@Nullable String personalize) {
+        public Builder personalize(@Nullable String personalize) {
             this.personalize = personalize;
             return this;
         }
 
-        public Builder setPersonalizeevents(@Nullable String personalizeevents) {
+        public Builder personalizeevents(@Nullable String personalizeevents) {
             this.personalizeevents = personalizeevents;
             return this;
         }
 
-        public Builder setPersonalizeruntime(@Nullable String personalizeruntime) {
+        public Builder personalizeruntime(@Nullable String personalizeruntime) {
             this.personalizeruntime = personalizeruntime;
             return this;
         }
 
-        public Builder setPi(@Nullable String pi) {
+        public Builder pi(@Nullable String pi) {
             this.pi = pi;
             return this;
         }
 
-        public Builder setPinpoint(@Nullable String pinpoint) {
+        public Builder pinpoint(@Nullable String pinpoint) {
             this.pinpoint = pinpoint;
             return this;
         }
 
-        public Builder setPinpointemail(@Nullable String pinpointemail) {
+        public Builder pinpointemail(@Nullable String pinpointemail) {
             this.pinpointemail = pinpointemail;
             return this;
         }
 
-        public Builder setPinpointsmsvoice(@Nullable String pinpointsmsvoice) {
+        public Builder pinpointsmsvoice(@Nullable String pinpointsmsvoice) {
             this.pinpointsmsvoice = pinpointsmsvoice;
             return this;
         }
 
-        public Builder setPolly(@Nullable String polly) {
+        public Builder polly(@Nullable String polly) {
             this.polly = polly;
             return this;
         }
 
-        public Builder setPricing(@Nullable String pricing) {
+        public Builder pricing(@Nullable String pricing) {
             this.pricing = pricing;
             return this;
         }
 
-        public Builder setPrometheus(@Nullable String prometheus) {
+        public Builder prometheus(@Nullable String prometheus) {
             this.prometheus = prometheus;
             return this;
         }
 
-        public Builder setPrometheusservice(@Nullable String prometheusservice) {
+        public Builder prometheusservice(@Nullable String prometheusservice) {
             this.prometheusservice = prometheusservice;
             return this;
         }
 
-        public Builder setProton(@Nullable String proton) {
+        public Builder proton(@Nullable String proton) {
             this.proton = proton;
             return this;
         }
 
-        public Builder setQldb(@Nullable String qldb) {
+        public Builder qldb(@Nullable String qldb) {
             this.qldb = qldb;
             return this;
         }
 
-        public Builder setQldbsession(@Nullable String qldbsession) {
+        public Builder qldbsession(@Nullable String qldbsession) {
             this.qldbsession = qldbsession;
             return this;
         }
 
-        public Builder setQuicksight(@Nullable String quicksight) {
+        public Builder quicksight(@Nullable String quicksight) {
             this.quicksight = quicksight;
             return this;
         }
 
-        public Builder setRam(@Nullable String ram) {
+        public Builder ram(@Nullable String ram) {
             this.ram = ram;
             return this;
         }
 
-        public Builder setRds(@Nullable String rds) {
+        public Builder rds(@Nullable String rds) {
             this.rds = rds;
             return this;
         }
 
-        public Builder setRdsdata(@Nullable String rdsdata) {
+        public Builder rdsdata(@Nullable String rdsdata) {
             this.rdsdata = rdsdata;
             return this;
         }
 
-        public Builder setRdsdataservice(@Nullable String rdsdataservice) {
+        public Builder rdsdataservice(@Nullable String rdsdataservice) {
             this.rdsdataservice = rdsdataservice;
             return this;
         }
 
-        public Builder setRedshift(@Nullable String redshift) {
+        public Builder redshift(@Nullable String redshift) {
             this.redshift = redshift;
             return this;
         }
 
-        public Builder setRedshiftdata(@Nullable String redshiftdata) {
+        public Builder redshiftdata(@Nullable String redshiftdata) {
             this.redshiftdata = redshiftdata;
             return this;
         }
 
-        public Builder setRekognition(@Nullable String rekognition) {
+        public Builder rekognition(@Nullable String rekognition) {
             this.rekognition = rekognition;
             return this;
         }
 
-        public Builder setResourcegroups(@Nullable String resourcegroups) {
+        public Builder resourcegroups(@Nullable String resourcegroups) {
             this.resourcegroups = resourcegroups;
             return this;
         }
 
-        public Builder setResourcegroupstagging(@Nullable String resourcegroupstagging) {
+        public Builder resourcegroupstagging(@Nullable String resourcegroupstagging) {
             this.resourcegroupstagging = resourcegroupstagging;
             return this;
         }
 
-        public Builder setResourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
+        public Builder resourcegroupstaggingapi(@Nullable String resourcegroupstaggingapi) {
             this.resourcegroupstaggingapi = resourcegroupstaggingapi;
             return this;
         }
 
-        public Builder setRobomaker(@Nullable String robomaker) {
+        public Builder robomaker(@Nullable String robomaker) {
             this.robomaker = robomaker;
             return this;
         }
 
-        public Builder setRoute53(@Nullable String route53) {
+        public Builder route53(@Nullable String route53) {
             this.route53 = route53;
             return this;
         }
 
-        public Builder setRoute53domains(@Nullable String route53domains) {
+        public Builder route53domains(@Nullable String route53domains) {
             this.route53domains = route53domains;
             return this;
         }
 
-        public Builder setRoute53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
+        public Builder route53recoverycontrolconfig(@Nullable String route53recoverycontrolconfig) {
             this.route53recoverycontrolconfig = route53recoverycontrolconfig;
             return this;
         }
 
-        public Builder setRoute53recoveryreadiness(@Nullable String route53recoveryreadiness) {
+        public Builder route53recoveryreadiness(@Nullable String route53recoveryreadiness) {
             this.route53recoveryreadiness = route53recoveryreadiness;
             return this;
         }
 
-        public Builder setRoute53resolver(@Nullable String route53resolver) {
+        public Builder route53resolver(@Nullable String route53resolver) {
             this.route53resolver = route53resolver;
             return this;
         }
 
-        public Builder setS3(@Nullable String s3) {
+        public Builder s3(@Nullable String s3) {
             this.s3 = s3;
             return this;
         }
 
-        public Builder setS3control(@Nullable String s3control) {
+        public Builder s3control(@Nullable String s3control) {
             this.s3control = s3control;
             return this;
         }
 
-        public Builder setS3outposts(@Nullable String s3outposts) {
+        public Builder s3outposts(@Nullable String s3outposts) {
             this.s3outposts = s3outposts;
             return this;
         }
 
-        public Builder setSagemaker(@Nullable String sagemaker) {
+        public Builder sagemaker(@Nullable String sagemaker) {
             this.sagemaker = sagemaker;
             return this;
         }
 
-        public Builder setSagemakeredgemanager(@Nullable String sagemakeredgemanager) {
+        public Builder sagemakeredgemanager(@Nullable String sagemakeredgemanager) {
             this.sagemakeredgemanager = sagemakeredgemanager;
             return this;
         }
 
-        public Builder setSagemakerfeaturestoreruntime(@Nullable String sagemakerfeaturestoreruntime) {
+        public Builder sagemakerfeaturestoreruntime(@Nullable String sagemakerfeaturestoreruntime) {
             this.sagemakerfeaturestoreruntime = sagemakerfeaturestoreruntime;
             return this;
         }
 
-        public Builder setSagemakerruntime(@Nullable String sagemakerruntime) {
+        public Builder sagemakerruntime(@Nullable String sagemakerruntime) {
             this.sagemakerruntime = sagemakerruntime;
             return this;
         }
 
-        public Builder setSavingsplans(@Nullable String savingsplans) {
+        public Builder savingsplans(@Nullable String savingsplans) {
             this.savingsplans = savingsplans;
             return this;
         }
 
-        public Builder setSchemas(@Nullable String schemas) {
+        public Builder schemas(@Nullable String schemas) {
             this.schemas = schemas;
             return this;
         }
 
-        public Builder setSdb(@Nullable String sdb) {
+        public Builder sdb(@Nullable String sdb) {
             this.sdb = sdb;
             return this;
         }
 
-        public Builder setSecretsmanager(@Nullable String secretsmanager) {
+        public Builder secretsmanager(@Nullable String secretsmanager) {
             this.secretsmanager = secretsmanager;
             return this;
         }
 
-        public Builder setSecurityhub(@Nullable String securityhub) {
+        public Builder securityhub(@Nullable String securityhub) {
             this.securityhub = securityhub;
             return this;
         }
 
-        public Builder setServerlessapplicationrepository(@Nullable String serverlessapplicationrepository) {
+        public Builder serverlessapplicationrepository(@Nullable String serverlessapplicationrepository) {
             this.serverlessapplicationrepository = serverlessapplicationrepository;
             return this;
         }
 
-        public Builder setServerlessapprepo(@Nullable String serverlessapprepo) {
+        public Builder serverlessapprepo(@Nullable String serverlessapprepo) {
             this.serverlessapprepo = serverlessapprepo;
             return this;
         }
 
-        public Builder setServerlessrepo(@Nullable String serverlessrepo) {
+        public Builder serverlessrepo(@Nullable String serverlessrepo) {
             this.serverlessrepo = serverlessrepo;
             return this;
         }
 
-        public Builder setServicecatalog(@Nullable String servicecatalog) {
+        public Builder servicecatalog(@Nullable String servicecatalog) {
             this.servicecatalog = servicecatalog;
             return this;
         }
 
-        public Builder setServicediscovery(@Nullable String servicediscovery) {
+        public Builder servicediscovery(@Nullable String servicediscovery) {
             this.servicediscovery = servicediscovery;
             return this;
         }
 
-        public Builder setServicequotas(@Nullable String servicequotas) {
+        public Builder servicequotas(@Nullable String servicequotas) {
             this.servicequotas = servicequotas;
             return this;
         }
 
-        public Builder setSes(@Nullable String ses) {
+        public Builder ses(@Nullable String ses) {
             this.ses = ses;
             return this;
         }
 
-        public Builder setSesv2(@Nullable String sesv2) {
+        public Builder sesv2(@Nullable String sesv2) {
             this.sesv2 = sesv2;
             return this;
         }
 
-        public Builder setSfn(@Nullable String sfn) {
+        public Builder sfn(@Nullable String sfn) {
             this.sfn = sfn;
             return this;
         }
 
-        public Builder setShield(@Nullable String shield) {
+        public Builder shield(@Nullable String shield) {
             this.shield = shield;
             return this;
         }
 
-        public Builder setSigner(@Nullable String signer) {
+        public Builder signer(@Nullable String signer) {
             this.signer = signer;
             return this;
         }
 
-        public Builder setSimpledb(@Nullable String simpledb) {
+        public Builder simpledb(@Nullable String simpledb) {
             this.simpledb = simpledb;
             return this;
         }
 
-        public Builder setSms(@Nullable String sms) {
+        public Builder sms(@Nullable String sms) {
             this.sms = sms;
             return this;
         }
 
-        public Builder setSnowball(@Nullable String snowball) {
+        public Builder snowball(@Nullable String snowball) {
             this.snowball = snowball;
             return this;
         }
 
-        public Builder setSns(@Nullable String sns) {
+        public Builder sns(@Nullable String sns) {
             this.sns = sns;
             return this;
         }
 
-        public Builder setSqs(@Nullable String sqs) {
+        public Builder sqs(@Nullable String sqs) {
             this.sqs = sqs;
             return this;
         }
 
-        public Builder setSsm(@Nullable String ssm) {
+        public Builder ssm(@Nullable String ssm) {
             this.ssm = ssm;
             return this;
         }
 
-        public Builder setSsmcontacts(@Nullable String ssmcontacts) {
+        public Builder ssmcontacts(@Nullable String ssmcontacts) {
             this.ssmcontacts = ssmcontacts;
             return this;
         }
 
-        public Builder setSsmincidents(@Nullable String ssmincidents) {
+        public Builder ssmincidents(@Nullable String ssmincidents) {
             this.ssmincidents = ssmincidents;
             return this;
         }
 
-        public Builder setSso(@Nullable String sso) {
+        public Builder sso(@Nullable String sso) {
             this.sso = sso;
             return this;
         }
 
-        public Builder setSsoadmin(@Nullable String ssoadmin) {
+        public Builder ssoadmin(@Nullable String ssoadmin) {
             this.ssoadmin = ssoadmin;
             return this;
         }
 
-        public Builder setSsooidc(@Nullable String ssooidc) {
+        public Builder ssooidc(@Nullable String ssooidc) {
             this.ssooidc = ssooidc;
             return this;
         }
 
-        public Builder setStepfunctions(@Nullable String stepfunctions) {
+        public Builder stepfunctions(@Nullable String stepfunctions) {
             this.stepfunctions = stepfunctions;
             return this;
         }
 
-        public Builder setStoragegateway(@Nullable String storagegateway) {
+        public Builder storagegateway(@Nullable String storagegateway) {
             this.storagegateway = storagegateway;
             return this;
         }
 
-        public Builder setSts(@Nullable String sts) {
+        public Builder sts(@Nullable String sts) {
             this.sts = sts;
             return this;
         }
 
-        public Builder setSupport(@Nullable String support) {
+        public Builder support(@Nullable String support) {
             this.support = support;
             return this;
         }
 
-        public Builder setSwf(@Nullable String swf) {
+        public Builder swf(@Nullable String swf) {
             this.swf = swf;
             return this;
         }
 
-        public Builder setSynthetics(@Nullable String synthetics) {
+        public Builder synthetics(@Nullable String synthetics) {
             this.synthetics = synthetics;
             return this;
         }
 
-        public Builder setTextract(@Nullable String textract) {
+        public Builder textract(@Nullable String textract) {
             this.textract = textract;
             return this;
         }
 
-        public Builder setTimestreamquery(@Nullable String timestreamquery) {
+        public Builder timestreamquery(@Nullable String timestreamquery) {
             this.timestreamquery = timestreamquery;
             return this;
         }
 
-        public Builder setTimestreamwrite(@Nullable String timestreamwrite) {
+        public Builder timestreamwrite(@Nullable String timestreamwrite) {
             this.timestreamwrite = timestreamwrite;
             return this;
         }
 
-        public Builder setTranscribe(@Nullable String transcribe) {
+        public Builder transcribe(@Nullable String transcribe) {
             this.transcribe = transcribe;
             return this;
         }
 
-        public Builder setTranscribeservice(@Nullable String transcribeservice) {
+        public Builder transcribeservice(@Nullable String transcribeservice) {
             this.transcribeservice = transcribeservice;
             return this;
         }
 
-        public Builder setTranscribestreaming(@Nullable String transcribestreaming) {
+        public Builder transcribestreaming(@Nullable String transcribestreaming) {
             this.transcribestreaming = transcribestreaming;
             return this;
         }
 
-        public Builder setTranscribestreamingservice(@Nullable String transcribestreamingservice) {
+        public Builder transcribestreamingservice(@Nullable String transcribestreamingservice) {
             this.transcribestreamingservice = transcribestreamingservice;
             return this;
         }
 
-        public Builder setTransfer(@Nullable String transfer) {
+        public Builder transfer(@Nullable String transfer) {
             this.transfer = transfer;
             return this;
         }
 
-        public Builder setTranslate(@Nullable String translate) {
+        public Builder translate(@Nullable String translate) {
             this.translate = translate;
             return this;
         }
 
-        public Builder setWaf(@Nullable String waf) {
+        public Builder waf(@Nullable String waf) {
             this.waf = waf;
             return this;
         }
 
-        public Builder setWafregional(@Nullable String wafregional) {
+        public Builder wafregional(@Nullable String wafregional) {
             this.wafregional = wafregional;
             return this;
         }
 
-        public Builder setWafv2(@Nullable String wafv2) {
+        public Builder wafv2(@Nullable String wafv2) {
             this.wafv2 = wafv2;
             return this;
         }
 
-        public Builder setWellarchitected(@Nullable String wellarchitected) {
+        public Builder wellarchitected(@Nullable String wellarchitected) {
             this.wellarchitected = wellarchitected;
             return this;
         }
 
-        public Builder setWorkdocs(@Nullable String workdocs) {
+        public Builder workdocs(@Nullable String workdocs) {
             this.workdocs = workdocs;
             return this;
         }
 
-        public Builder setWorklink(@Nullable String worklink) {
+        public Builder worklink(@Nullable String worklink) {
             this.worklink = worklink;
             return this;
         }
 
-        public Builder setWorkmail(@Nullable String workmail) {
+        public Builder workmail(@Nullable String workmail) {
             this.workmail = workmail;
             return this;
         }
 
-        public Builder setWorkmailmessageflow(@Nullable String workmailmessageflow) {
+        public Builder workmailmessageflow(@Nullable String workmailmessageflow) {
             this.workmailmessageflow = workmailmessageflow;
             return this;
         }
 
-        public Builder setWorkspaces(@Nullable String workspaces) {
+        public Builder workspaces(@Nullable String workspaces) {
             this.workspaces = workspaces;
             return this;
         }
 
-        public Builder setXray(@Nullable String xray) {
+        public Builder xray(@Nullable String xray) {
             this.xray = xray;
             return this;
         }

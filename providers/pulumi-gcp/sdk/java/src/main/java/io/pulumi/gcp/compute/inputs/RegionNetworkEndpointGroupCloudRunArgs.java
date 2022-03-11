@@ -96,32 +96,32 @@ public final class RegionNetworkEndpointGroupCloudRunArgs extends io.pulumi.reso
     	      this.urlMask = defaults.urlMask;
         }
 
-        public Builder setService(@Nullable Input<String> service) {
+        public Builder service(@Nullable Input<String> service) {
             this.service = service;
             return this;
         }
 
-        public Builder setService(@Nullable String service) {
+        public Builder service(@Nullable String service) {
             this.service = Input.ofNullable(service);
             return this;
         }
 
-        public Builder setTag(@Nullable Input<String> tag) {
+        public Builder tag(@Nullable Input<String> tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = Input.ofNullable(tag);
             return this;
         }
 
-        public Builder setUrlMask(@Nullable Input<String> urlMask) {
+        public Builder urlMask(@Nullable Input<String> urlMask) {
             this.urlMask = urlMask;
             return this;
         }
 
-        public Builder setUrlMask(@Nullable String urlMask) {
+        public Builder urlMask(@Nullable String urlMask) {
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }

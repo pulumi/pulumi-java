@@ -13,8 +13,8 @@ import javax.annotation.Nullable;
 public final class BucketStorageClassAnalysis {
     private final @Nullable BucketDataExport dataExport;
 
-    @OutputCustomType.Constructor({"dataExport"})
-    private BucketStorageClassAnalysis(@Nullable BucketDataExport dataExport) {
+    @OutputCustomType.Constructor
+    private BucketStorageClassAnalysis(@OutputCustomType.Parameter("dataExport") @Nullable BucketDataExport dataExport) {
         this.dataExport = dataExport;
     }
 
@@ -42,7 +42,7 @@ public final class BucketStorageClassAnalysis {
     	      this.dataExport = defaults.dataExport;
         }
 
-        public Builder setDataExport(@Nullable BucketDataExport dataExport) {
+        public Builder dataExport(@Nullable BucketDataExport dataExport) {
             this.dataExport = dataExport;
             return this;
         }

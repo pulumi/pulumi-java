@@ -20,10 +20,10 @@ public final class SqlActiveDirectoryConfigResponse {
      */
     private final String kind;
 
-    @OutputCustomType.Constructor({"domain","kind"})
+    @OutputCustomType.Constructor
     private SqlActiveDirectoryConfigResponse(
-        String domain,
-        String kind) {
+        @OutputCustomType.Parameter("domain") String domain,
+        @OutputCustomType.Parameter("kind") String kind) {
         this.domain = domain;
         this.kind = kind;
     }
@@ -65,12 +65,12 @@ public final class SqlActiveDirectoryConfigResponse {
     	      this.kind = defaults.kind;
         }
 
-        public Builder setDomain(String domain) {
+        public Builder domain(String domain) {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
 
-        public Builder setKind(String kind) {
+        public Builder kind(String kind) {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }

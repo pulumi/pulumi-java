@@ -16,8 +16,8 @@ public final class EndpointVerificationSpecificAttributesResponse {
      */
     private final List<CertificateAttributesResponse> certificateAttributes;
 
-    @OutputCustomType.Constructor({"certificateAttributes"})
-    private EndpointVerificationSpecificAttributesResponse(List<CertificateAttributesResponse> certificateAttributes) {
+    @OutputCustomType.Constructor
+    private EndpointVerificationSpecificAttributesResponse(@OutputCustomType.Parameter("certificateAttributes") List<CertificateAttributesResponse> certificateAttributes) {
         this.certificateAttributes = certificateAttributes;
     }
 
@@ -49,7 +49,7 @@ public final class EndpointVerificationSpecificAttributesResponse {
     	      this.certificateAttributes = defaults.certificateAttributes;
         }
 
-        public Builder setCertificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
+        public Builder certificateAttributes(List<CertificateAttributesResponse> certificateAttributes) {
             this.certificateAttributes = Objects.requireNonNull(certificateAttributes);
             return this;
         }

@@ -58,17 +58,17 @@ public final class TargetResponse {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor({"digest","length","mediaType","name","repository","size","tag","url","version"})
+    @OutputCustomType.Constructor
     private TargetResponse(
-        @Nullable String digest,
-        @Nullable Double length,
-        @Nullable String mediaType,
-        @Nullable String name,
-        @Nullable String repository,
-        @Nullable Double size,
-        @Nullable String tag,
-        @Nullable String url,
-        @Nullable String version) {
+        @OutputCustomType.Parameter("digest") @Nullable String digest,
+        @OutputCustomType.Parameter("length") @Nullable Double length,
+        @OutputCustomType.Parameter("mediaType") @Nullable String mediaType,
+        @OutputCustomType.Parameter("name") @Nullable String name,
+        @OutputCustomType.Parameter("repository") @Nullable String repository,
+        @OutputCustomType.Parameter("size") @Nullable Double size,
+        @OutputCustomType.Parameter("tag") @Nullable String tag,
+        @OutputCustomType.Parameter("url") @Nullable String url,
+        @OutputCustomType.Parameter("version") @Nullable String version) {
         this.digest = digest;
         this.length = length;
         this.mediaType = mediaType;
@@ -180,47 +180,47 @@ public final class TargetResponse {
     	      this.version = defaults.version;
         }
 
-        public Builder setDigest(@Nullable String digest) {
+        public Builder digest(@Nullable String digest) {
             this.digest = digest;
             return this;
         }
 
-        public Builder setLength(@Nullable Double length) {
+        public Builder length(@Nullable Double length) {
             this.length = length;
             return this;
         }
 
-        public Builder setMediaType(@Nullable String mediaType) {
+        public Builder mediaType(@Nullable String mediaType) {
             this.mediaType = mediaType;
             return this;
         }
 
-        public Builder setName(@Nullable String name) {
+        public Builder name(@Nullable String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setRepository(@Nullable String repository) {
+        public Builder repository(@Nullable String repository) {
             this.repository = repository;
             return this;
         }
 
-        public Builder setSize(@Nullable Double size) {
+        public Builder size(@Nullable Double size) {
             this.size = size;
             return this;
         }
 
-        public Builder setTag(@Nullable String tag) {
+        public Builder tag(@Nullable String tag) {
             this.tag = tag;
             return this;
         }
 
-        public Builder setUrl(@Nullable String url) {
+        public Builder url(@Nullable String url) {
             this.url = url;
             return this;
         }
 
-        public Builder setVersion(@Nullable String version) {
+        public Builder version(@Nullable String version) {
             this.version = version;
             return this;
         }

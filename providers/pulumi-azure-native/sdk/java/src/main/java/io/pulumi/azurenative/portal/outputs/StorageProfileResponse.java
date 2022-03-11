@@ -28,11 +28,11 @@ public final class StorageProfileResponse {
      */
     private final @Nullable String storageAccountResourceId;
 
-    @OutputCustomType.Constructor({"diskSizeInGB","fileShareName","storageAccountResourceId"})
+    @OutputCustomType.Constructor
     private StorageProfileResponse(
-        @Nullable Integer diskSizeInGB,
-        @Nullable String fileShareName,
-        @Nullable String storageAccountResourceId) {
+        @OutputCustomType.Parameter("diskSizeInGB") @Nullable Integer diskSizeInGB,
+        @OutputCustomType.Parameter("fileShareName") @Nullable String fileShareName,
+        @OutputCustomType.Parameter("storageAccountResourceId") @Nullable String storageAccountResourceId) {
         this.diskSizeInGB = diskSizeInGB;
         this.fileShareName = fileShareName;
         this.storageAccountResourceId = storageAccountResourceId;
@@ -84,17 +84,17 @@ public final class StorageProfileResponse {
     	      this.storageAccountResourceId = defaults.storageAccountResourceId;
         }
 
-        public Builder setDiskSizeInGB(@Nullable Integer diskSizeInGB) {
+        public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
             this.diskSizeInGB = diskSizeInGB;
             return this;
         }
 
-        public Builder setFileShareName(@Nullable String fileShareName) {
+        public Builder fileShareName(@Nullable String fileShareName) {
             this.fileShareName = fileShareName;
             return this;
         }
 
-        public Builder setStorageAccountResourceId(@Nullable String storageAccountResourceId) {
+        public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }

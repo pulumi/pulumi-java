@@ -348,192 +348,192 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
     	      this.vulnerability = defaults.vulnerability;
         }
 
-        public Builder setAttestationAuthority(@Nullable Input<AuthorityArgs> attestationAuthority) {
+        public Builder attestationAuthority(@Nullable Input<AuthorityArgs> attestationAuthority) {
             this.attestationAuthority = attestationAuthority;
             return this;
         }
 
-        public Builder setAttestationAuthority(@Nullable AuthorityArgs attestationAuthority) {
+        public Builder attestationAuthority(@Nullable AuthorityArgs attestationAuthority) {
             this.attestationAuthority = Input.ofNullable(attestationAuthority);
             return this;
         }
 
-        public Builder setBaseImage(@Nullable Input<BasisArgs> baseImage) {
+        public Builder baseImage(@Nullable Input<BasisArgs> baseImage) {
             this.baseImage = baseImage;
             return this;
         }
 
-        public Builder setBaseImage(@Nullable BasisArgs baseImage) {
+        public Builder baseImage(@Nullable BasisArgs baseImage) {
             this.baseImage = Input.ofNullable(baseImage);
             return this;
         }
 
-        public Builder setBuild(@Nullable Input<BuildArgs> build) {
+        public Builder build(@Nullable Input<BuildArgs> build) {
             this.build = build;
             return this;
         }
 
-        public Builder setBuild(@Nullable BuildArgs build) {
+        public Builder build(@Nullable BuildArgs build) {
             this.build = Input.ofNullable(build);
             return this;
         }
 
-        public Builder setDeployable(@Nullable Input<DeployableArgs> deployable) {
+        public Builder deployable(@Nullable Input<DeployableArgs> deployable) {
             this.deployable = deployable;
             return this;
         }
 
-        public Builder setDeployable(@Nullable DeployableArgs deployable) {
+        public Builder deployable(@Nullable DeployableArgs deployable) {
             this.deployable = Input.ofNullable(deployable);
             return this;
         }
 
-        public Builder setDiscovery(@Nullable Input<DiscoveryArgs> discovery) {
+        public Builder discovery(@Nullable Input<DiscoveryArgs> discovery) {
             this.discovery = discovery;
             return this;
         }
 
-        public Builder setDiscovery(@Nullable DiscoveryArgs discovery) {
+        public Builder discovery(@Nullable DiscoveryArgs discovery) {
             this.discovery = Input.ofNullable(discovery);
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable Input<String> expirationTime) {
+        public Builder expirationTime(@Nullable Input<String> expirationTime) {
             this.expirationTime = expirationTime;
             return this;
         }
 
-        public Builder setExpirationTime(@Nullable String expirationTime) {
+        public Builder expirationTime(@Nullable String expirationTime) {
             this.expirationTime = Input.ofNullable(expirationTime);
             return this;
         }
 
-        public Builder setIntoto(@Nullable Input<InTotoArgs> intoto) {
+        public Builder intoto(@Nullable Input<InTotoArgs> intoto) {
             this.intoto = intoto;
             return this;
         }
 
-        public Builder setIntoto(@Nullable InTotoArgs intoto) {
+        public Builder intoto(@Nullable InTotoArgs intoto) {
             this.intoto = Input.ofNullable(intoto);
             return this;
         }
 
-        public Builder setLongDescription(@Nullable Input<String> longDescription) {
+        public Builder longDescription(@Nullable Input<String> longDescription) {
             this.longDescription = longDescription;
             return this;
         }
 
-        public Builder setLongDescription(@Nullable String longDescription) {
+        public Builder longDescription(@Nullable String longDescription) {
             this.longDescription = Input.ofNullable(longDescription);
             return this;
         }
 
-        public Builder setNoteId(Input<String> noteId) {
+        public Builder noteId(Input<String> noteId) {
             this.noteId = Objects.requireNonNull(noteId);
             return this;
         }
 
-        public Builder setNoteId(String noteId) {
+        public Builder noteId(String noteId) {
             this.noteId = Input.of(Objects.requireNonNull(noteId));
             return this;
         }
 
-        public Builder set$package(@Nullable Input<PackageArgs> $package) {
+        public Builder $package(@Nullable Input<PackageArgs> $package) {
             this.$package = $package;
             return this;
         }
 
-        public Builder set$package(@Nullable PackageArgs $package) {
+        public Builder $package(@Nullable PackageArgs $package) {
             this.$package = Input.ofNullable($package);
             return this;
         }
 
-        public Builder setProject(@Nullable Input<String> project) {
+        public Builder project(@Nullable Input<String> project) {
             this.project = project;
             return this;
         }
 
-        public Builder setProject(@Nullable String project) {
+        public Builder project(@Nullable String project) {
             this.project = Input.ofNullable(project);
             return this;
         }
 
-        public Builder setRelatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable Input<List<String>> relatedNoteNames) {
             this.relatedNoteNames = relatedNoteNames;
             return this;
         }
 
-        public Builder setRelatedNoteNames(@Nullable List<String> relatedNoteNames) {
+        public Builder relatedNoteNames(@Nullable List<String> relatedNoteNames) {
             this.relatedNoteNames = Input.ofNullable(relatedNoteNames);
             return this;
         }
 
-        public Builder setRelatedUrl(@Nullable Input<List<RelatedUrlArgs>> relatedUrl) {
+        public Builder relatedUrl(@Nullable Input<List<RelatedUrlArgs>> relatedUrl) {
             this.relatedUrl = relatedUrl;
             return this;
         }
 
-        public Builder setRelatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
+        public Builder relatedUrl(@Nullable List<RelatedUrlArgs> relatedUrl) {
             this.relatedUrl = Input.ofNullable(relatedUrl);
             return this;
         }
 
-        public Builder setSbom(@Nullable Input<DocumentNoteArgs> sbom) {
+        public Builder sbom(@Nullable Input<DocumentNoteArgs> sbom) {
             this.sbom = sbom;
             return this;
         }
 
-        public Builder setSbom(@Nullable DocumentNoteArgs sbom) {
+        public Builder sbom(@Nullable DocumentNoteArgs sbom) {
             this.sbom = Input.ofNullable(sbom);
             return this;
         }
 
-        public Builder setShortDescription(@Nullable Input<String> shortDescription) {
+        public Builder shortDescription(@Nullable Input<String> shortDescription) {
             this.shortDescription = shortDescription;
             return this;
         }
 
-        public Builder setShortDescription(@Nullable String shortDescription) {
+        public Builder shortDescription(@Nullable String shortDescription) {
             this.shortDescription = Input.ofNullable(shortDescription);
             return this;
         }
 
-        public Builder setSpdxFile(@Nullable Input<FileNoteArgs> spdxFile) {
+        public Builder spdxFile(@Nullable Input<FileNoteArgs> spdxFile) {
             this.spdxFile = spdxFile;
             return this;
         }
 
-        public Builder setSpdxFile(@Nullable FileNoteArgs spdxFile) {
+        public Builder spdxFile(@Nullable FileNoteArgs spdxFile) {
             this.spdxFile = Input.ofNullable(spdxFile);
             return this;
         }
 
-        public Builder setSpdxPackage(@Nullable Input<PackageInfoNoteArgs> spdxPackage) {
+        public Builder spdxPackage(@Nullable Input<PackageInfoNoteArgs> spdxPackage) {
             this.spdxPackage = spdxPackage;
             return this;
         }
 
-        public Builder setSpdxPackage(@Nullable PackageInfoNoteArgs spdxPackage) {
+        public Builder spdxPackage(@Nullable PackageInfoNoteArgs spdxPackage) {
             this.spdxPackage = Input.ofNullable(spdxPackage);
             return this;
         }
 
-        public Builder setSpdxRelationship(@Nullable Input<RelationshipNoteArgs> spdxRelationship) {
+        public Builder spdxRelationship(@Nullable Input<RelationshipNoteArgs> spdxRelationship) {
             this.spdxRelationship = spdxRelationship;
             return this;
         }
 
-        public Builder setSpdxRelationship(@Nullable RelationshipNoteArgs spdxRelationship) {
+        public Builder spdxRelationship(@Nullable RelationshipNoteArgs spdxRelationship) {
             this.spdxRelationship = Input.ofNullable(spdxRelationship);
             return this;
         }
 
-        public Builder setVulnerability(@Nullable Input<VulnerabilityArgs> vulnerability) {
+        public Builder vulnerability(@Nullable Input<VulnerabilityArgs> vulnerability) {
             this.vulnerability = vulnerability;
             return this;
         }
 
-        public Builder setVulnerability(@Nullable VulnerabilityArgs vulnerability) {
+        public Builder vulnerability(@Nullable VulnerabilityArgs vulnerability) {
             this.vulnerability = Input.ofNullable(vulnerability);
             return this;
         }

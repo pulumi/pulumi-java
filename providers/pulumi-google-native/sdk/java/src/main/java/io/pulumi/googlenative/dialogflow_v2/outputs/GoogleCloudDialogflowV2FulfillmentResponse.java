@@ -39,13 +39,13 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
      */
     private final String name;
 
-    @OutputCustomType.Constructor({"displayName","enabled","features","genericWebService","name"})
+    @OutputCustomType.Constructor
     private GoogleCloudDialogflowV2FulfillmentResponse(
-        String displayName,
-        Boolean enabled,
-        List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
-        GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
-        String name) {
+        @OutputCustomType.Parameter("displayName") String displayName,
+        @OutputCustomType.Parameter("enabled") Boolean enabled,
+        @OutputCustomType.Parameter("features") List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features,
+        @OutputCustomType.Parameter("genericWebService") GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService,
+        @OutputCustomType.Parameter("name") String name) {
         this.displayName = displayName;
         this.enabled = enabled;
         this.features = features;
@@ -117,27 +117,27 @@ public final class GoogleCloudDialogflowV2FulfillmentResponse {
     	      this.name = defaults.name;
         }
 
-        public Builder setDisplayName(String displayName) {
+        public Builder displayName(String displayName) {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
 
-        public Builder setEnabled(Boolean enabled) {
+        public Builder enabled(Boolean enabled) {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
 
-        public Builder setFeatures(List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features) {
+        public Builder features(List<GoogleCloudDialogflowV2FulfillmentFeatureResponse> features) {
             this.features = Objects.requireNonNull(features);
             return this;
         }
 
-        public Builder setGenericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService) {
+        public Builder genericWebService(GoogleCloudDialogflowV2FulfillmentGenericWebServiceResponse genericWebService) {
             this.genericWebService = Objects.requireNonNull(genericWebService);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

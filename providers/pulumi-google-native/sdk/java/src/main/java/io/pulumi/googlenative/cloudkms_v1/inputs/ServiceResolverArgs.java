@@ -108,42 +108,42 @@ public final class ServiceResolverArgs extends io.pulumi.resources.ResourceArgs 
     	      this.serviceDirectoryService = defaults.serviceDirectoryService;
         }
 
-        public Builder setEndpointFilter(@Nullable Input<String> endpointFilter) {
+        public Builder endpointFilter(@Nullable Input<String> endpointFilter) {
             this.endpointFilter = endpointFilter;
             return this;
         }
 
-        public Builder setEndpointFilter(@Nullable String endpointFilter) {
+        public Builder endpointFilter(@Nullable String endpointFilter) {
             this.endpointFilter = Input.ofNullable(endpointFilter);
             return this;
         }
 
-        public Builder setHostname(Input<String> hostname) {
+        public Builder hostname(Input<String> hostname) {
             this.hostname = Objects.requireNonNull(hostname);
             return this;
         }
 
-        public Builder setHostname(String hostname) {
+        public Builder hostname(String hostname) {
             this.hostname = Input.of(Objects.requireNonNull(hostname));
             return this;
         }
 
-        public Builder setServerCertificates(Input<List<CertificateArgs>> serverCertificates) {
+        public Builder serverCertificates(Input<List<CertificateArgs>> serverCertificates) {
             this.serverCertificates = Objects.requireNonNull(serverCertificates);
             return this;
         }
 
-        public Builder setServerCertificates(List<CertificateArgs> serverCertificates) {
+        public Builder serverCertificates(List<CertificateArgs> serverCertificates) {
             this.serverCertificates = Input.of(Objects.requireNonNull(serverCertificates));
             return this;
         }
 
-        public Builder setServiceDirectoryService(Input<String> serviceDirectoryService) {
+        public Builder serviceDirectoryService(Input<String> serviceDirectoryService) {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
 
-        public Builder setServiceDirectoryService(String serviceDirectoryService) {
+        public Builder serviceDirectoryService(String serviceDirectoryService) {
             this.serviceDirectoryService = Input.of(Objects.requireNonNull(serviceDirectoryService));
             return this;
         }

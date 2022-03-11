@@ -15,10 +15,10 @@ public final class GetRobotResult {
     private final @Nullable String arn;
     private final @Nullable RobotTags tags;
 
-    @OutputCustomType.Constructor({"arn","tags"})
+    @OutputCustomType.Constructor
     private GetRobotResult(
-        @Nullable String arn,
-        @Nullable RobotTags tags) {
+        @OutputCustomType.Parameter("arn") @Nullable String arn,
+        @OutputCustomType.Parameter("tags") @Nullable RobotTags tags) {
         this.arn = arn;
         this.tags = tags;
     }
@@ -52,12 +52,12 @@ public final class GetRobotResult {
     	      this.tags = defaults.tags;
         }
 
-        public Builder setArn(@Nullable String arn) {
+        public Builder arn(@Nullable String arn) {
             this.arn = arn;
             return this;
         }
 
-        public Builder setTags(@Nullable RobotTags tags) {
+        public Builder tags(@Nullable RobotTags tags) {
             this.tags = tags;
             return this;
         }

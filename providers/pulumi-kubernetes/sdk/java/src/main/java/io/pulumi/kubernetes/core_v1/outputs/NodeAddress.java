@@ -27,10 +27,10 @@ public final class NodeAddress {
      */
     private final String type;
 
-    @OutputCustomType.Constructor({"address","type"})
+    @OutputCustomType.Constructor
     private NodeAddress(
-        String address,
-        String type) {
+        @OutputCustomType.Parameter("address") String address,
+        @OutputCustomType.Parameter("type") String type) {
         this.address = address;
         this.type = type;
     }
@@ -79,12 +79,12 @@ public final class NodeAddress {
     	      this.type = defaults.type;
         }
 
-        public Builder setAddress(String address) {
+        public Builder address(String address) {
             this.address = Objects.requireNonNull(address);
             return this;
         }
 
-        public Builder setType(String type) {
+        public Builder type(String type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

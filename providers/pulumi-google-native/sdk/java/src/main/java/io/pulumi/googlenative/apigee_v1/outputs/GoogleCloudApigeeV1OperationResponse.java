@@ -21,10 +21,10 @@ public final class GoogleCloudApigeeV1OperationResponse {
      */
     private final String resource;
 
-    @OutputCustomType.Constructor({"methods","resource"})
+    @OutputCustomType.Constructor
     private GoogleCloudApigeeV1OperationResponse(
-        List<String> methods,
-        String resource) {
+        @OutputCustomType.Parameter("methods") List<String> methods,
+        @OutputCustomType.Parameter("resource") String resource) {
         this.methods = methods;
         this.resource = resource;
     }
@@ -66,12 +66,12 @@ public final class GoogleCloudApigeeV1OperationResponse {
     	      this.resource = defaults.resource;
         }
 
-        public Builder setMethods(List<String> methods) {
+        public Builder methods(List<String> methods) {
             this.methods = Objects.requireNonNull(methods);
             return this;
         }
 
-        public Builder setResource(String resource) {
+        public Builder resource(String resource) {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }

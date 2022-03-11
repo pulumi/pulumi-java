@@ -20,10 +20,10 @@ public final class InterconnectMacsecPreSharedKeyResponse {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor({"name","startTime"})
+    @OutputCustomType.Constructor
     private InterconnectMacsecPreSharedKeyResponse(
-        String name,
-        String startTime) {
+        @OutputCustomType.Parameter("name") String name,
+        @OutputCustomType.Parameter("startTime") String startTime) {
         this.name = name;
         this.startTime = startTime;
     }
@@ -65,12 +65,12 @@ public final class InterconnectMacsecPreSharedKeyResponse {
     	      this.startTime = defaults.startTime;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }
 
-        public Builder setStartTime(String startTime) {
+        public Builder startTime(String startTime) {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }

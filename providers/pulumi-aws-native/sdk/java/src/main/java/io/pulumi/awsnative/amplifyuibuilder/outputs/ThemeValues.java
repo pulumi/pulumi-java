@@ -15,10 +15,10 @@ public final class ThemeValues {
     private final @Nullable String key;
     private final @Nullable ThemeValue value;
 
-    @OutputCustomType.Constructor({"key","value"})
+    @OutputCustomType.Constructor
     private ThemeValues(
-        @Nullable String key,
-        @Nullable ThemeValue value) {
+        @OutputCustomType.Parameter("key") @Nullable String key,
+        @OutputCustomType.Parameter("value") @Nullable ThemeValue value) {
         this.key = key;
         this.value = value;
     }
@@ -52,12 +52,12 @@ public final class ThemeValues {
     	      this.value = defaults.value;
         }
 
-        public Builder setKey(@Nullable String key) {
+        public Builder key(@Nullable String key) {
             this.key = key;
             return this;
         }
 
-        public Builder setValue(@Nullable ThemeValue value) {
+        public Builder value(@Nullable ThemeValue value) {
             this.value = value;
             return this;
         }

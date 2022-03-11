@@ -15,10 +15,10 @@ public final class SecurityServicePolicyDataProperties {
     private final @Nullable String managedServiceData;
     private final PolicySecurityServicePolicyDataPropertiesType type;
 
-    @OutputCustomType.Constructor({"managedServiceData","type"})
+    @OutputCustomType.Constructor
     private SecurityServicePolicyDataProperties(
-        @Nullable String managedServiceData,
-        PolicySecurityServicePolicyDataPropertiesType type) {
+        @OutputCustomType.Parameter("managedServiceData") @Nullable String managedServiceData,
+        @OutputCustomType.Parameter("type") PolicySecurityServicePolicyDataPropertiesType type) {
         this.managedServiceData = managedServiceData;
         this.type = type;
     }
@@ -52,12 +52,12 @@ public final class SecurityServicePolicyDataProperties {
     	      this.type = defaults.type;
         }
 
-        public Builder setManagedServiceData(@Nullable String managedServiceData) {
+        public Builder managedServiceData(@Nullable String managedServiceData) {
             this.managedServiceData = managedServiceData;
             return this;
         }
 
-        public Builder setType(PolicySecurityServicePolicyDataPropertiesType type) {
+        public Builder type(PolicySecurityServicePolicyDataPropertiesType type) {
             this.type = Objects.requireNonNull(type);
             return this;
         }

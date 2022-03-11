@@ -23,15 +23,15 @@ public final class GetListenerResult {
     private final @Nullable String protocol;
     private final @Nullable String sslPolicy;
 
-    @OutputCustomType.Constructor({"alpnPolicy","certificates","defaultActions","listenerArn","port","protocol","sslPolicy"})
+    @OutputCustomType.Constructor
     private GetListenerResult(
-        @Nullable List<String> alpnPolicy,
-        @Nullable List<ListenerCertificate> certificates,
-        @Nullable List<ListenerAction> defaultActions,
-        @Nullable String listenerArn,
-        @Nullable Integer port,
-        @Nullable String protocol,
-        @Nullable String sslPolicy) {
+        @OutputCustomType.Parameter("alpnPolicy") @Nullable List<String> alpnPolicy,
+        @OutputCustomType.Parameter("certificates") @Nullable List<ListenerCertificate> certificates,
+        @OutputCustomType.Parameter("defaultActions") @Nullable List<ListenerAction> defaultActions,
+        @OutputCustomType.Parameter("listenerArn") @Nullable String listenerArn,
+        @OutputCustomType.Parameter("port") @Nullable Integer port,
+        @OutputCustomType.Parameter("protocol") @Nullable String protocol,
+        @OutputCustomType.Parameter("sslPolicy") @Nullable String sslPolicy) {
         this.alpnPolicy = alpnPolicy;
         this.certificates = certificates;
         this.defaultActions = defaultActions;
@@ -95,37 +95,37 @@ public final class GetListenerResult {
     	      this.sslPolicy = defaults.sslPolicy;
         }
 
-        public Builder setAlpnPolicy(@Nullable List<String> alpnPolicy) {
+        public Builder alpnPolicy(@Nullable List<String> alpnPolicy) {
             this.alpnPolicy = alpnPolicy;
             return this;
         }
 
-        public Builder setCertificates(@Nullable List<ListenerCertificate> certificates) {
+        public Builder certificates(@Nullable List<ListenerCertificate> certificates) {
             this.certificates = certificates;
             return this;
         }
 
-        public Builder setDefaultActions(@Nullable List<ListenerAction> defaultActions) {
+        public Builder defaultActions(@Nullable List<ListenerAction> defaultActions) {
             this.defaultActions = defaultActions;
             return this;
         }
 
-        public Builder setListenerArn(@Nullable String listenerArn) {
+        public Builder listenerArn(@Nullable String listenerArn) {
             this.listenerArn = listenerArn;
             return this;
         }
 
-        public Builder setPort(@Nullable Integer port) {
+        public Builder port(@Nullable Integer port) {
             this.port = port;
             return this;
         }
 
-        public Builder setProtocol(@Nullable String protocol) {
+        public Builder protocol(@Nullable String protocol) {
             this.protocol = protocol;
             return this;
         }
 
-        public Builder setSslPolicy(@Nullable String sslPolicy) {
+        public Builder sslPolicy(@Nullable String sslPolicy) {
             this.sslPolicy = sslPolicy;
             return this;
         }

@@ -35,15 +35,15 @@ public final class GetDocumentResult {
     private final String id;
     private final String name;
 
-    @OutputCustomType.Constructor({"arn","content","documentFormat","documentType","documentVersion","id","name"})
+    @OutputCustomType.Constructor
     private GetDocumentResult(
-        String arn,
-        String content,
-        @Nullable String documentFormat,
-        String documentType,
-        @Nullable String documentVersion,
-        String id,
-        String name) {
+        @OutputCustomType.Parameter("arn") String arn,
+        @OutputCustomType.Parameter("content") String content,
+        @OutputCustomType.Parameter("documentFormat") @Nullable String documentFormat,
+        @OutputCustomType.Parameter("documentType") String documentType,
+        @OutputCustomType.Parameter("documentVersion") @Nullable String documentVersion,
+        @OutputCustomType.Parameter("id") String id,
+        @OutputCustomType.Parameter("name") String name) {
         this.arn = arn;
         this.content = content;
         this.documentFormat = documentFormat;
@@ -123,37 +123,37 @@ public final class GetDocumentResult {
     	      this.name = defaults.name;
         }
 
-        public Builder setArn(String arn) {
+        public Builder arn(String arn) {
             this.arn = Objects.requireNonNull(arn);
             return this;
         }
 
-        public Builder setContent(String content) {
+        public Builder content(String content) {
             this.content = Objects.requireNonNull(content);
             return this;
         }
 
-        public Builder setDocumentFormat(@Nullable String documentFormat) {
+        public Builder documentFormat(@Nullable String documentFormat) {
             this.documentFormat = documentFormat;
             return this;
         }
 
-        public Builder setDocumentType(String documentType) {
+        public Builder documentType(String documentType) {
             this.documentType = Objects.requireNonNull(documentType);
             return this;
         }
 
-        public Builder setDocumentVersion(@Nullable String documentVersion) {
+        public Builder documentVersion(@Nullable String documentVersion) {
             this.documentVersion = documentVersion;
             return this;
         }
 
-        public Builder setId(String id) {
+        public Builder id(String id) {
             this.id = Objects.requireNonNull(id);
             return this;
         }
 
-        public Builder setName(String name) {
+        public Builder name(String name) {
             this.name = Objects.requireNonNull(name);
             return this;
         }

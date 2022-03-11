@@ -27,11 +27,11 @@ public final class SoftwareRecipeArtifactResponse {
      */
     private final SoftwareRecipeArtifactRemoteResponse remote;
 
-    @OutputCustomType.Constructor({"allowInsecure","gcs","remote"})
+    @OutputCustomType.Constructor
     private SoftwareRecipeArtifactResponse(
-        Boolean allowInsecure,
-        SoftwareRecipeArtifactGcsResponse gcs,
-        SoftwareRecipeArtifactRemoteResponse remote) {
+        @OutputCustomType.Parameter("allowInsecure") Boolean allowInsecure,
+        @OutputCustomType.Parameter("gcs") SoftwareRecipeArtifactGcsResponse gcs,
+        @OutputCustomType.Parameter("remote") SoftwareRecipeArtifactRemoteResponse remote) {
         this.allowInsecure = allowInsecure;
         this.gcs = gcs;
         this.remote = remote;
@@ -83,17 +83,17 @@ public final class SoftwareRecipeArtifactResponse {
     	      this.remote = defaults.remote;
         }
 
-        public Builder setAllowInsecure(Boolean allowInsecure) {
+        public Builder allowInsecure(Boolean allowInsecure) {
             this.allowInsecure = Objects.requireNonNull(allowInsecure);
             return this;
         }
 
-        public Builder setGcs(SoftwareRecipeArtifactGcsResponse gcs) {
+        public Builder gcs(SoftwareRecipeArtifactGcsResponse gcs) {
             this.gcs = Objects.requireNonNull(gcs);
             return this;
         }
 
-        public Builder setRemote(SoftwareRecipeArtifactRemoteResponse remote) {
+        public Builder remote(SoftwareRecipeArtifactRemoteResponse remote) {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }

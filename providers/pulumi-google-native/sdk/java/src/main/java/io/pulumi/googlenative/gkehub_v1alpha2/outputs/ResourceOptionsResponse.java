@@ -26,11 +26,11 @@ public final class ResourceOptionsResponse {
      */
     private final Boolean v1beta1Crd;
 
-    @OutputCustomType.Constructor({"connectVersion","k8sVersion","v1beta1Crd"})
+    @OutputCustomType.Constructor
     private ResourceOptionsResponse(
-        String connectVersion,
-        String k8sVersion,
-        Boolean v1beta1Crd) {
+        @OutputCustomType.Parameter("connectVersion") String connectVersion,
+        @OutputCustomType.Parameter("k8sVersion") String k8sVersion,
+        @OutputCustomType.Parameter("v1beta1Crd") Boolean v1beta1Crd) {
         this.connectVersion = connectVersion;
         this.k8sVersion = k8sVersion;
         this.v1beta1Crd = v1beta1Crd;
@@ -82,17 +82,17 @@ public final class ResourceOptionsResponse {
     	      this.v1beta1Crd = defaults.v1beta1Crd;
         }
 
-        public Builder setConnectVersion(String connectVersion) {
+        public Builder connectVersion(String connectVersion) {
             this.connectVersion = Objects.requireNonNull(connectVersion);
             return this;
         }
 
-        public Builder setK8sVersion(String k8sVersion) {
+        public Builder k8sVersion(String k8sVersion) {
             this.k8sVersion = Objects.requireNonNull(k8sVersion);
             return this;
         }
 
-        public Builder setV1beta1Crd(Boolean v1beta1Crd) {
+        public Builder v1beta1Crd(Boolean v1beta1Crd) {
             this.v1beta1Crd = Objects.requireNonNull(v1beta1Crd);
             return this;
         }
